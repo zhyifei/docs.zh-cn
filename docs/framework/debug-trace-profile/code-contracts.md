@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 84526045-496f-489d-8517-a258cf76f040
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 09bfa08589bda68258883e6f080392f534e8c5df
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a444b7eace18fa579324f540e8cf7537c420a6a8
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33365873"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43425751"
 ---
 # <a name="code-contracts"></a>代码协定
 代码协定提供了在代码中指定前置条件、后置条件和对象固定的方法。 前置条件是输入方法或属性时必须满足的要求。 后置条件描述在方法或属性代码退出时的预期。 对象固定描述处于良好状态的类的预期状态。  
@@ -35,7 +35,7 @@ ms.locfileid: "33365873"
   
  协定类中的大多数方法都进行条件编译；即，编译器仅在你定义特殊符号 CONTRACTS_FULL 时才使用 `#define` 指令发出对这些方法的调用。 借助 CONTRACTS_FULL，你无需需使用 `#ifdef` 指令就可将协定写入代码；还可生成两种不同的版本：一种带有协定，一种未带协定。  
   
- 有关使用代码协定的工具和详细说明，请参阅 MSDN DevLabs 网站上的[代码协定](http://go.microsoft.com/fwlink/?LinkId=152461)。  
+ 有关使用代码协定的工具和详细说明，请参阅 MSDN DevLabs 网站上的[代码协定](https://go.microsoft.com/fwlink/?LinkId=152461)。  
   
 ## <a name="preconditions"></a>前置条件  
  可使用 <xref:System.Diagnostics.Contracts.Contract.Requires%2A?displayProperty=nameWithType> 方法表达前置条件。 前置条件在方法被调用时指定状态。 它们通常用于指定有效的参数值。 前置条件中提到的所有成员至少都必须与方法本身一样可以访问；否则，方法的调用方可能无法理解此前置条件。 条件必须无副作用。 运行时分析器确定前置条件失败时的运行时行为。  

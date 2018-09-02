@@ -7,17 +7,17 @@ dev_langs:
 ms.assetid: 99770573-c815-4428-a38c-e4335c8bd7ce
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: 570c7763da912de4e0d2729e7579a200f35c4941
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7aad53e9c6d5708bceca9831264c112f885fb889
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33494688"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43419045"
 ---
 # <a name="message-security-with-a-certificate-client"></a>使用证书客户端的消息安全
-下面的方案演示 Windows Communication Foundation (WCF) 客户端和服务使用消息安全模式保护。 使用证书对客户端和服务进行身份验证。 有关详细信息，请参阅[分布式应用程序安全性](../../../../docs/framework/wcf/feature-details/distributed-application-security.md)。  
+以下方案演示了 Windows Communication Foundation (WCF) 客户端和服务使用消息安全模式保护。 使用证书对客户端和服务进行身份验证。 有关详细信息，请参阅[分布式应用程序安全性](../../../../docs/framework/wcf/feature-details/distributed-application-security.md)。  
   
- 有关示例应用程序，请参阅[消息安全证书](../../../../docs/framework/wcf/samples/message-security-certificate.md)。  
+ 示例应用程序，请参阅[消息安全证书](../../../../docs/framework/wcf/samples/message-security-certificate.md)。  
   
  ![使用证书的客户端](../../../../docs/framework/wcf/feature-details/media/clientwithcertificate.gif "ClientWithCertificate")  
   
@@ -103,7 +103,7 @@ ms.locfileid: "33494688"
  [!code-vb[C_SecurityScenarios#17](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#17)]  
   
 ### <a name="configuration"></a>配置  
- 下面的配置使用终结点行为指定客户端证书。 有关证书的详细信息，请参阅[使用证书](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)。 代码还使用 <`identity`> 元素，用于指定域名系统 (DNS) 的预期的服务器标识。 有关标识的详细信息，请参阅[服务标识和身份验证](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)。  
+ 下面的配置使用终结点行为指定客户端证书。 有关证书的详细信息，请参阅[使用证书](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)。 该代码还使用 <`identity`> 元素来指定域名系统 (DNS) 的预期的服务器标识。 有关标识的详细信息，请参阅[服务标识和身份验证](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)。  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  
@@ -149,4 +149,4 @@ ms.locfileid: "33494688"
  [安全性概述](../../../../docs/framework/wcf/feature-details/security-overview.md)  
  [服务标识和身份验证](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)  
  [使用证书](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)  
- [Windows Server App Fabric 的安全模型](http://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+ [Windows Server App Fabric 的安全模型](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

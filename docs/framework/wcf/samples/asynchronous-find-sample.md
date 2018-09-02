@@ -2,12 +2,12 @@
 title: 异步查找示例
 ms.date: 03/30/2017
 ms.assetid: 7a713a25-c1f4-42e1-8c4a-93d64ca45a3b
-ms.openlocfilehash: ed900ba3cd1b55f4e35ec0d2b92ef6b7283b498e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 37edcb4d1f04eb56d3f24ca3acc3543d7f9696f5
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33500260"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43424386"
 ---
 # <a name="asynchronous-find-sample"></a>异步查找示例
 此示例演示如何使用客户端应用程序中的异步查找操作。  
@@ -35,7 +35,7 @@ ms.locfileid: "33500260"
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目录不存在，请转到[Windows Communication Foundation (WCF) 和针对.NET Framework 4 的 Windows Workflow Foundation (WF) 示例](http://go.microsoft.com/fwlink/?LinkId=150780)下载所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
+>  如果此目录不存在，请转到[Windows Communication Foundation (WCF) 和.NET Framework 4 的 Windows Workflow Foundation (WF) 示例](https://go.microsoft.com/fwlink/?LinkId=150780)若要下载所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Discovery\AsyncFind`  
   

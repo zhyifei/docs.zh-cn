@@ -9,51 +9,51 @@ helpviewer_keywords:
 - Windows Forms controls, adding to form
 - controls [Windows Forms], adding
 ms.assetid: 2af86001-9d62-4154-87fb-66db2c3cd9fd
-ms.openlocfilehash: 2dd048fb074d1ec5bb7bc0a67f196d5d51281545
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1b803a93f865eaa4db6751187213c4bb01d2a5ee
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33528472"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43422544"
 ---
 # <a name="how-to-add-controls-to-windows-forms"></a>如何：向 Windows 窗体添加控件
-大多数窗体旨在通过将控件添加到窗体表面，以定义用户界面 (UI) 中。 A*控件*是用于显示信息或接受用户输入的窗体上的组件。 有关控件的详细信息，请参阅[Windows 窗体控件](../../../../docs/framework/winforms/controls/index.md)。  
+大多数窗体旨在通过将控件添加到窗体的面，用于定义用户界面 (UI) 中。 一个*控制*是用于显示信息或接受用户输入的窗体上的组件。 有关控件的详细信息，请参阅[Windows 窗体控件](../../../../docs/framework/winforms/controls/index.md)。  
   
 > [!NOTE]
->  显示的对话框和菜单命令可能会与“帮助”中的描述不同，具体取决于你现用的设置或版本。 若要更改设置，请在 **“工具”** 菜单上选择 **“导入和导出设置”** 。 有关详细信息，请参阅[在 Visual Studio 中自定义开发设置](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3)。  
+>  显示的对话框和菜单命令可能会与“帮助”中的描述不同，具体取决于你现用的设置或版本。 若要更改设置，请在 **“工具”** 菜单上选择 **“导入和导出设置”** 。 有关详细信息，请参阅[个性化设置 Visual Studio IDE](/visualstudio/ide/personalizing-the-visual-studio-ide)。  
   
-### <a name="to-draw-a-control-on-a-form"></a>若要绘制窗体上控件  
+### <a name="to-draw-a-control-on-a-form"></a>若要绘制的控件在窗体上  
   
-1.  打开窗体。 有关详细信息，请参阅[如何： 显示 Windows 窗体设计器中](http://msdn.microsoft.com/library/bf3f1e5b-ea07-4529-85c6-6af3ded0cec5)。  
+1.  打开窗体。 有关详细信息，请参阅[如何： 在设计器中显示 Windows 窗体](https://msdn.microsoft.com/library/bf3f1e5b-ea07-4529-85c6-6af3ded0cec5)。  
   
-2.  在**工具箱**，单击你想要添加到你的窗体的控件。  
+2.  在中**工具箱**，单击你想要添加到窗体的控件。  
   
-3.  在表单上，单击希望要位于，该控件的左上角拖到所需的控件，使其位于右下角的位置。  
+3.  在表单上，单击希望要定位，控件的左上角的位置和拖动到希望要定位的控件的右下角。  
   
      该控件添加到具有指定的位置和大小的窗体。  
   
     > [!NOTE]
-    >  每个控件具有定义的默认大小。 你可以向窗体控件的默认大小添加控件，通过拖动从**工具箱**到窗体。  
+    >  每个控件具有定义的默认大小。 可以向控件的默认大小在窗体添加控件，通过将其从**工具箱**到窗体。  
   
 ### <a name="to-drag-a-control-to-a-form"></a>若要将控件拖动到窗体  
   
-1.  打开窗体。 有关详细信息，请参阅[如何： 显示 Windows 窗体设计器中](http://msdn.microsoft.com/library/bf3f1e5b-ea07-4529-85c6-6af3ded0cec5)。  
+1.  打开窗体。 有关详细信息，请参阅[如何： 在设计器中显示 Windows 窗体](https://msdn.microsoft.com/library/bf3f1e5b-ea07-4529-85c6-6af3ded0cec5)。  
   
-2.  在**工具箱**，单击所需的控件并将其拖到窗体。  
+2.  在中**工具箱**，单击所需的控件并将其拖动到窗体。  
   
-     该控件添加到窗体中在其默认大小中的指定位置。  
-  
-    > [!NOTE]
-    >  你可以双击中的控件**工具箱**将其添加到在其默认大小的窗体的左上角。  
-  
-     你可以在运行时动态将控件添加到窗体中。 在下面的代码示例中，<xref:System.Windows.Forms.TextBox>控件将被添加到窗体时<xref:System.Windows.Forms.Button>控件被单击。  
+     该控件添加到窗体，请在其默认大小的指定位置。  
   
     > [!NOTE]
-    >  以下过程，则需要存在带有的窗体**按钮**控件， `Button1`、 已放置在其上。  
+    >  你可以双击中的控件**工具箱**将其添加到其默认大小中的窗体的左上角。  
   
-### <a name="to-add-a-control-to-a-form-programmatically"></a>以编程方式添加到窗体控件  
+     您可以在运行时动态地将控件添加到窗体中。 在下面的代码示例中，<xref:System.Windows.Forms.TextBox>控件将被添加到窗体时<xref:System.Windows.Forms.Button>单击控件。  
   
-1.  处理按钮的方法中`Click`设置控件的窗体的类，类似于以下要添加到您的控制变量的引用插入代码中的事件`Location`，然后添加该控件。  
+    > [!NOTE]
+    >  下面的过程需要一个具有窗体是否存在**按钮**控件， `Button1`、 已放置在其上。  
+  
+### <a name="to-add-a-control-to-a-form-programmatically"></a>若要以编程方式向窗体添加控件  
+  
+1.  处理按钮的方法中`Click`事件在窗体的类，类似于以下内容，以添加到您的控制变量的引用插入代码中设置控件的`Location`，并添加控件。  
   
     ```vb  
     Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click  
@@ -84,10 +84,10 @@ ms.locfileid: "33528472"
     ```  
   
     > [!NOTE]
-    >  你还可以添加代码以初始化控件的其他属性。  
+    >  此外可以添加代码以初始化控件的其他属性。  
   
     > [!IMPORTANT]
-    >  通过引用了恶意，您可能会公开您的本地计算机通过网络安全风险`UserControl`。 这仅会在恶意的用户创建破坏性的自定义控件，跟你错误地将其添加到你的项目的情况下是问题。  
+    >  可能会通过引用恶意公开您的本地计算机通过网络安全风险`UserControl`。 这只能在恶意的用户创建一个具有破坏性的自定义控件，跟您错误地将其添加到你的项目的情况下一个问题。  
   
 ## <a name="see-also"></a>请参阅  
  [Windows 窗体控件](../../../../docs/framework/winforms/controls/index.md)  

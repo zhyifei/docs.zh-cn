@@ -5,22 +5,22 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 2d45cf41-d8ae-4409-af3e-a96a7e476d85
-ms.openlocfilehash: a389f75ca6516f8bad55934717bee056aca65f1f
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: ccf95ff250cc7c23b1ff981087de0f1310472880
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32757055"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43418747"
 ---
 # <a name="creating-a-datatable-from-a-dataview"></a>从数据视图中创建数据表
-如果从数据源检索到数据，并且使用该数据填充了 <xref:System.Data.DataTable>，则在可能需要对返回的数据进行排序和筛选，或者通过其他方式限制返回的数据时，不必重新检索该数据。 <xref:System.Data.DataView> 类可以实现此目的。 此外，如果你需要创建一个新<xref:System.Data.DataTable>从<xref:System.Data.DataView>，你可以使用<xref:System.Data.DataView.ToTable%2A>方法将所有行和列或者数据的子集复制到新<xref:System.Data.DataTable>。 <xref:System.Data.DataView.ToTable%2A> 方法使您可以：  
+如果从数据源检索到数据，并且使用该数据填充了 <xref:System.Data.DataTable>，则在可能需要对返回的数据进行排序和筛选，或者通过其他方式限制返回的数据时，不必重新检索该数据。 <xref:System.Data.DataView> 类可以实现此目的。 此外，如果您需要创建一个新<xref:System.Data.DataTable>从<xref:System.Data.DataView>，可以使用<xref:System.Data.DataView.ToTable%2A>方法将所有行和列，或者数据的一个子集复制到一个新<xref:System.Data.DataTable>。 <xref:System.Data.DataView.ToTable%2A> 方法使您可以：  
   
 -   创建一个 <xref:System.Data.DataTable>，包含属于 <xref:System.Data.DataView> 中的一个列子集。  
   
--   创建<xref:System.Data.DataTable>包括仅非重复行从<xref:System.Data.DataView>，类似地到 TRANSACT-SQL 中的 DISTINCT 关键字。  
+-   创建<xref:System.Data.DataTable>包括仅非重复行从<xref:System.Data.DataView>，与 TRANSACT-SQL 中的 DISTINCT 关键字类似。  
   
 ## <a name="example"></a>示例  
- 下面的控制台应用程序示例创建<xref:System.Data.DataTable>包含从数据**Person.Contact**表中**AdventureWorks**示例数据库。 接下来，该示例创建一个经过排序和筛选<xref:System.Data.DataView>基于<xref:System.Data.DataTable>。 在显示的内容后<xref:System.Data.DataTable>和<xref:System.Data.DataView>，示例创建一个新<xref:System.Data.DataTable>从<xref:System.Data.DataView>通过调用<xref:System.Data.DataView.ToTable%2A>方法，选择可用的列的一个子集。 最后，该示例显示新的 <xref:System.Data.DataTable> 的内容。  
+ 以下控制台应用程序示例创建<xref:System.Data.DataTable>，其中包含从数据**Person.Contact**表中**AdventureWorks**示例数据库。 接下来，该示例将创建一个经过排序和筛选<xref:System.Data.DataView>基于<xref:System.Data.DataTable>。 在显示的内容后<xref:System.Data.DataTable>并<xref:System.Data.DataView>，该示例创建一个新<xref:System.Data.DataTable>从<xref:System.Data.DataView>通过调用<xref:System.Data.DataView.ToTable%2A>方法中，选择可用列的子集。 最后，该示例显示新的 <xref:System.Data.DataTable> 的内容。  
   
 ```vb  
 Private Sub DemonstrateDataView()  
@@ -208,4 +208,4 @@ Console.WriteLine();
 ## <a name="see-also"></a>请参阅  
  <xref:System.Data.DataView.ToTable%2A>  
  [数据视图](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataviews.md)  
- [ADO.NET 托管提供程序和数据集开发人员中心](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)

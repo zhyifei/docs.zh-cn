@@ -2,15 +2,15 @@
 title: 带自定义类型的切换活动的用法
 ms.date: 03/30/2017
 ms.assetid: 482a48c4-eb83-40c3-a4e2-2f9a8af88b75
-ms.openlocfilehash: 2b6f3109324064cb5e746de9c61e5a70c4c4d60b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b24a03573b31f3fb1c34d4aa6e03bc11f5b25455
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33517876"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43423560"
 ---
 # <a name="usage-of-the-switch-activity-with-custom-types"></a>带自定义类型的切换活动的用法
-此示例介绍如何使 <xref:System.Activities.Statements.Switch%601> 活动能够在运行时计算用户定义的复杂类型。 在大多数传统的过程性编程语言，[切换](http://go.microsoft.com/fwlink/?LinkId=180521)语句选择执行逻辑基于变量的条件评估。 传统上，`switch` 语句会操作可静态计算的表达式。 例如，在 C# 中，这表示仅支持基元类型（如 <xref:System.Boolean>、<xref:System.Int32>、<xref:System.String>）和枚举类型。  
+此示例介绍如何使 <xref:System.Activities.Statements.Switch%601> 活动能够在运行时计算用户定义的复杂类型。 在大多数传统的过程性编程语言，[切换](https://go.microsoft.com/fwlink/?LinkId=180521)语句选择执行逻辑基于变量的条件评估。 传统上，`switch` 语句会操作可静态计算的表达式。 例如，在 C# 中，这表示仅支持基元类型（如 <xref:System.Boolean>、<xref:System.Int32>、<xref:System.String>）和枚举类型。  
   
  若要启用针对自定义类的切换，则必须实现逻辑以在运行时计算自定义复杂类型的值。 此示例演示如何启用针对名为 `Person` 的自定义复杂类型的切换。  
   
@@ -107,7 +107,7 @@ ms.locfileid: "33517876"
   
 -   **Person.cs**： 定义`Person`类。  
   
--   **PersonConverter.cs**： 的类型转换器`Person`类。  
+-   **PersonConverter.cs**： 为的类型转换器`Person`类。  
   
 -   **Sequence.xaml**： 切换工作流`Person`类型。  
   
@@ -126,7 +126,7 @@ ms.locfileid: "33517876"
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目录不存在，请转到[Windows Communication Foundation (WCF) 和针对.NET Framework 4 的 Windows Workflow Foundation (WF) 示例](http://go.microsoft.com/fwlink/?LinkId=150780)下载所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
+>  如果此目录不存在，请转到[Windows Communication Foundation (WCF) 和.NET Framework 4 的 Windows Workflow Foundation (WF) 示例](https://go.microsoft.com/fwlink/?LinkId=150780)若要下载所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Built-InActivities\Switch`  
   

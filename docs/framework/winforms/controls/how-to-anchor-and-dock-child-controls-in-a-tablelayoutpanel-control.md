@@ -12,12 +12,12 @@ helpviewer_keywords:
 - child controls [Windows Forms], anchoring and docking
 - TableLayoutPanel control [Windows Forms], child controls
 ms.assetid: 0d267c35-25f1-49b8-8976-c64e8f0ddc0b
-ms.openlocfilehash: eee67d739de13b125aa1eb8ee86de19ba645a2f5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ad09c30b2118a08f4249433c4f531e5bcef4acd5
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33529092"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43418947"
 ---
 # <a name="how-to-anchor-and-dock-child-controls-in-a-tablelayoutpanel-control"></a>如何：在 TableLayoutPanel 控件中锚定和停靠子控件
 <xref:System.Windows.Forms.TableLayoutPanel> 控件支持其子控件中的 <xref:System.Windows.Forms.Control.Anchor%2A> 和 <xref:System.Windows.Forms.Control.Dock%2A> 属性。  
@@ -26,7 +26,7 @@ ms.locfileid: "33529092"
   
 1.  在窗体上创建一个 <xref:System.Windows.Forms.TableLayoutPanel> 控件。  
   
-2.  设置的值<xref:System.Windows.Forms.TableLayoutPanel>控件的<xref:System.Windows.Forms.TableLayoutPanel.ColumnCount%2A>和<xref:System.Windows.Forms.TableLayoutPanel.RowCount%2A>属性设置为**1**。  
+2.  设置的值<xref:System.Windows.Forms.TableLayoutPanel>控件的<xref:System.Windows.Forms.TableLayoutPanel.ColumnCount%2A>并<xref:System.Windows.Forms.TableLayoutPanel.RowCount%2A>属性设置为**1**。  
   
 3.  在 <xref:System.Windows.Forms.TableLayoutPanel> 控件中创建一个 <xref:System.Windows.Forms.Button> 控件。 <xref:System.Windows.Forms.Button> 占据单元格的左上角。  
   
@@ -37,14 +37,14 @@ ms.locfileid: "33529092"
   
 5.  将 <xref:System.Windows.Forms.Button> 控件的 <xref:System.Windows.Forms.Control.Anchor%2A> 属性值更改为 `Top, Left`。 <xref:System.Windows.Forms.Button> 控件移动，以占据单元格的左上角。  
   
-6.  具有值的有重复步骤 5`Top, Right`移动<xref:System.Windows.Forms.Button>到右上角单元格的控件。 使用 `Bottom, Left` 和 `Bottom, Right` 值重复步骤。  
+6.  值的有重复步骤 5`Top, Right`移动<xref:System.Windows.Forms.Button>到单元格的右上角的控件。 使用 `Bottom, Left` 和 `Bottom, Right` 值重复步骤。  
   
 ### <a name="to-stretch-a-child-control-in-a-tablelayoutpanel-cell"></a>若要对齐 TableLayoutPanel 单元格中的某个子控件  
   
 1.  将 <xref:System.Windows.Forms.Button> 控件的 <xref:System.Windows.Forms.Control.Anchor%2A> 属性值更改为 `Left, Right`。 调整 <xref:System.Windows.Forms.Button> 控件的大小，以便在单元格中拉伸。  
   
     > [!NOTE]
-    >  此行为与其他容器控件的行为不同。 在其他容器控件中，子控件不调整<xref:System.Windows.Forms.Control.Anchor%2A>属性设置为`Left, Right`或`Top, Bottom`。  
+    >  此行为与其他容器控件的行为不同。 在其他容器控件中，子控件不是调整<xref:System.Windows.Forms.Control.Anchor%2A>属性设置为`Left, Right`或`Top, Bottom`。  
   
 2.  将 <xref:System.Windows.Forms.Button> 控件的 <xref:System.Windows.Forms.Control.Anchor%2A> 属性值更改为 `Top, Bottom`。 调整 <xref:System.Windows.Forms.Button> 控件的大小，以便在单元格中自上而下进行拉伸。  
   
@@ -82,7 +82,7 @@ ms.locfileid: "33529092"
   
 -   对 System、System.Data、System.Drawing 和 System.Windows.Forms 程序集的引用。  
   
- 有关生成此示例从 visual Basic 或 Visual C# 的命令行的信息，请参阅[从命令行生成](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md)或[命令行上使用 csc.exe 生成](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)。 你也可以通过将代码粘贴到新项目中生成 Visual Studio 中的此示例。  另请参阅 [如何：使用 Visual Studio 编译和运行完整的 Windows 窗体代码示例](http://msdn.microsoft.com/library/Bb129228\(v=vs.110\))。  
+ 生成此示例的 visual Basic 或 Visual C# 命令行中的信息，请参阅[从命令行生成](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md)或[命令行上使用 csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)。 也可以通过将代码粘贴到新的项目中生成此示例在 Visual Studio 中。  另请参阅[如何：使用 Visual Studio 编译和运行完整的 Windows 窗体代码示例](https://msdn.microsoft.com/library/Bb129228\(v=vs.110\))。  
   
 ## <a name="see-also"></a>请参阅  
  <xref:System.Windows.Forms.TableLayoutPanel>  

@@ -14,15 +14,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1b07318406268023e2d66259b2cb68750d64613e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 72c45e821a59c1e910b5c8422df02978046eb56b
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33408159"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43425219"
 ---
 # <a name="iclrdatatarget3getexceptioncontextrecord-method"></a>ICLRDataTarget3::GetExceptionContextRecord 方法
-由公共语言运行时 (CLR) 数据访问服务调用，以检索与目标进程关联的上下文记录。 例如，对于转储目标时，这将是等效于通过传入的上下文记录`ExceptionParam`参数[MiniDumpWriteDump](http://msdn.microsoft.com/library/windows/desktop/ms680360\(v=vs.85\).aspx) Windows 调试帮助库中 (DbgHelp) 的函数。  
+由公共语言运行时 (CLR) 数据访问服务调用，以检索与目标进程关联的上下文记录。 例如，对于转储目标，这将是等效于上下文记录通过传入`ExceptionParam`自变量[MiniDumpWriteDump](/windows/desktop/api/minidumpapiset/nf-minidumpapiset-minidumpwritedump) Windows 调试帮助库 (DbgHelp) 中的函数。  
   
 ## <a name="syntax"></a>语法  
   
@@ -42,7 +42,7 @@ HRESULT GetExceptionContextRecord(
  [out] 指向接收实际写入缓冲区的字节数的 `ULONG32` 类型的指针。  
   
  `buffer`  
- [out] 指向接收上下文记录副本的内存缓冲区的指针。 异常记录将作为[上下文](http://msdn.microsoft.com/library/windows/desktop/ms679284\(v=vs.85\).aspx)类型。  
+ [out] 指向接收上下文记录副本的内存缓冲区的指针。 作为返回的异常记录[上下文](/windows/desktop/api/winnt/ns-winnt-_arm64_nt_context)类型。  
   
 ## <a name="return-value"></a>返回值  
  如果成功，则返回值是 `S_OK`；如果失败，则返回失败 `HRESULT` 代码。 `HRESULT` 代码可以包括但不限于以下代码：  
@@ -54,7 +54,7 @@ HRESULT GetExceptionContextRecord(
 |`HRESULT_FROM_WIN32(ERROR_BAD_LENGTH)`|输入缓冲区大小不足以容纳上下文记录。|  
   
 ## <a name="remarks"></a>备注  
- [上下文](http://msdn.microsoft.com/library/windows/desktop/ms679284\(v=vs.85\).aspx)是由 Windows SDK 提供的标头中定义的特定于平台的结构。  
+ [上下文](/windows/desktop/api/winnt/ns-winnt-_arm64_nt_context)是由 Windows SDK 提供的标头中定义的特定于平台的结构。  
   
  此方法由调试应用程序的编写器实现。  
   
@@ -65,7 +65,7 @@ HRESULT GetExceptionContextRecord(
   
  **库：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[v451_update](../../../../includes/v451-update-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[v451_update](../../../../includes/v451-update-md.md)]  
   
 ## <a name="see-also"></a>请参阅  
  [ICLRDataTarget3 接口](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget3-interface.md)  

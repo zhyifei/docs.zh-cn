@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: ad4ba56d-3bcb-4c10-ba90-1cc66e2175a1
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8a857523b15631aa9c112c9c0d208d96b0ec0d4a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 47ed75d377814a740edece2b6a69e44acbd8ef0c
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33396454"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43424367"
 ---
 # <a name="ltpropertygt-element-net-native"></a>&lt;属性&gt;元素 (.NET Native)
 将运行时反射策略应用到一个属性。  
@@ -75,7 +75,7 @@ ms.locfileid: "33396454"
   
  该文件将 `All` 值应用到允许通过反射访问类构造函数的 `Activate` 的类的 `Book` 策略。 `Browse` 类的 `Book` 策略是从其父命名空间继承的。 这已设置为 `Required Public`，这使得元数据在运行时可用。  
   
- 以下是该实例的源代码。 `outputBlock` 变量表示 [TextBlock](http://msdn.microsoft.com/library/windows.ui.xaml.controls.textblock.aspx) 控件。  
+ 以下是该实例的源代码。 `outputBlock` 变量表示 [TextBlock](https://msdn.microsoft.com/library/windows.ui.xaml.controls.textblock.aspx) 控件。  
   
  [!code-csharp[ProjectN_Reflection#6](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn_reflection/cs/property1.cs#6)]  
   

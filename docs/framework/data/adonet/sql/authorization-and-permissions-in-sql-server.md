@@ -2,12 +2,12 @@
 title: SQL Server 中的授权和权限
 ms.date: 03/30/2017
 ms.assetid: d340405c-91f4-4837-a3cc-a238ee89888a
-ms.openlocfilehash: bddbbd7eac29d33801042276e5f4ca9a05a83c1a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: bdf5112e3f0e2cada4885b0b66adf248f0ffe808
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33364218"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43424142"
 ---
 # <a name="authorization-and-permissions-in-sql-server"></a>SQL Server 中的授权和权限
 在创建数据库对象时，必须显式授予权限以使用户可以访问它们。 每个可保护对象都具有可使用权限语句授予主体的权限。  
@@ -56,7 +56,7 @@ ms.locfileid: "33364218"
   
 |资源|描述|  
 |--------------|-----------------|  
-|[权限](http://msdn.microsoft.com/library/ms191291.aspx)SQL Server 联机丛书中|包含说明权限层次结构、目录视图以及固定服务器角色权限和数据库角色权限的主题。|  
+|[权限](/sql/relational-databases/security/permissions-database-engine)|包含说明权限层次结构、目录视图以及固定服务器角色权限和数据库角色权限的主题。|
   
 ## <a name="see-also"></a>请参阅  
  [保证 ADO.NET 应用程序的安全](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
@@ -64,4 +64,4 @@ ms.locfileid: "33364218"
  [SQL Server 中的身份验证](../../../../../docs/framework/data/adonet/sql/authentication-in-sql-server.md)  
  [SQL Server 中的服务器和数据库角色](../../../../../docs/framework/data/adonet/sql/server-and-database-roles-in-sql-server.md)  
  [SQL Server 中的所有权和用户架构分离](../../../../../docs/framework/data/adonet/sql/ownership-and-user-schema-separation-in-sql-server.md)  
- [ADO.NET 托管提供程序和数据集开发人员中心](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)

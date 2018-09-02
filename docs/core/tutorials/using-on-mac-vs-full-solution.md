@@ -4,12 +4,12 @@ description: 本主题演示了构建包含可重用的库和单元测试的 .NE
 author: guardrex
 ms.author: mairaw
 ms.date: 06/12/2017
-ms.openlocfilehash: f8dfbb712957d22e5b4aa16920e7b003a79c4444
-ms.sourcegitcommit: e8dc507cfdaad504fc9d4c83d28d24569dcef91c
+ms.openlocfilehash: 17d7cc5b085b4d47ebf1e5ed9a766be9d5d8b01f
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/03/2018
-ms.locfileid: "36314693"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43457038"
 ---
 # <a name="building-a-complete-net-core-solution-on-macos-using-visual-studio-for-mac"></a>使用 Visual Studio for Mac 在 macOS 上构建完整的 .NET Core 解决方案
 
@@ -32,7 +32,7 @@ Visual Studio for Mac 提供用于开发 .NET Core 应用程序的功能全面�
 
 ## <a name="building-a-library"></a>生成库
 
-1. 在欢迎屏幕上，选择“新建项目”。 在“多平台”节点下的“新建项目”对话框中，选择“.NET Standard 库”模板。 选择“下一步”。
+1. 在欢迎屏幕上，选择“新建项目”。 在“多平台”节点下的“新建项目”对话框中，选择“.NET 标准库”模板。 选择“下一步”。
 
    ![“新建项目”对话框](./media/using-on-mac-vs-full-solution/vsmacfull01.png)
 
@@ -95,7 +95,7 @@ Visual Studio for Mac 提供用于开发 .NET Core 应用程序的功能全面�
            public void IgnoreCasing()
            {
                var wordCount = WordCount.GetWordCount("Jack", "Jack jack");
-   
+
                Assert.NotEqual(2, wordCount);
            }
        }
@@ -117,7 +117,7 @@ Visual Studio for Mac 提供用于开发 .NET Core 应用程序的功能全面�
    ![“单元测试”面板“停靠”图标](./media/using-on-mac-vs-full-solution/vsmacfull_UnitTestPanelDockIcon.png)
 
 1. 单击“全部运行”按钮。
-   
+
    测试失败，这是正确的结果。 测试方法断言不会从提供给 `GetWordCount` 的方法的字符串“Jack jack”中返回 `inputString`“Jack”的两个实例。 因为已在 `GetWordCount` 方法中对单词的大小写进行了分解，所以返回了两个实例。 2 *不等于* 2 的断言失败。 这是正确的结果，且测试的逻辑良好。
 
    ![测试失败](./media/using-on-mac-vs-full-solution/vsmacfull09.png)
@@ -135,8 +135,8 @@ Visual Studio for Mac 提供用于开发 .NET Core 应用程序的功能全面�
    [InlineData(0, "Ting", "Does not appear in the string.")]
    [InlineData(1, "Ting", "Ting appears once.")]
    [InlineData(2, "Ting", "Ting appears twice with Ting.")]
-   public void CountInstancesCorrectly(int count, 
-                                       string searchWord, 
+   public void CountInstancesCorrectly(int count,
+                                       string searchWord,
                                        string inputString)
    {
        Assert.NotEqual(count, WordCount.GetWordCount(searchWord,
@@ -145,7 +145,7 @@ Visual Studio for Mac 提供用于开发 .NET Core 应用程序的功能全面�
    ```
 
    `CountInstancesCorrectly` 检查 `GetWordCount` 方法计数是否正确。 `InlineData` 提供计数、搜索词和要检查的输入字符串。 测试方法为数据的每行运行一次。 请再次注意，使用 `Assert.NotEqual` 首先声明失败，即使知道数据中的计数是正确的，且这些值与 `GetWordCount` 方法所返回的计数相匹配。 有意执行测试失败的步骤起初看起来像是浪费时间，但是首先通过失败测试检查测试的逻辑对于测试逻辑而言，是一项重要检查。 如果在预期失败时找到一种可通过的测试方法，则你已在测试逻辑中找到 bug。 每次创建测试方法时，都值得采取此步骤。
-   
+
 1. 保存文件并重新运行测试。 大小写测试通过，但三个计数测试失败。 这与我们预期的结果完全一致。
 
    ![测试失败](./media/using-on-mac-vs-full-solution/vsmacfull11.png)
@@ -192,4 +192,4 @@ Visual Studio for Mac 提供用于开发 .NET Core 应用程序的功能全面�
 
 ## <a name="see-also"></a>请参阅
 
-[Visual Studio 2017 for Mac 发行说明](/visualstudio/releasenotes/vs2017-mac-relnotes)
+* [Visual Studio 2017 for Mac 发行说明](/visualstudio/releasenotes/vs2017-mac-relnotes)

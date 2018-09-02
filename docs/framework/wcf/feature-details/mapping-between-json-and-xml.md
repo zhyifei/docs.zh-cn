@@ -2,12 +2,12 @@
 title: JSON 和 XML 之间的映射
 ms.date: 03/30/2017
 ms.assetid: 22ee1f52-c708-4024-bbf0-572e0dae64af
-ms.openlocfilehash: e8cc356a30d11a6f07cf4444efbeda2faf5b0471
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.openlocfilehash: 079ca9cebefcc96bffdb0ec4601a675ed83adefe
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42931464"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43421718"
 ---
 # <a name="mapping-between-json-and-xml"></a>JSON 和 XML 之间的映射
 <xref:System.Runtime.Serialization.Json.JsonReaderWriterFactory> 生成的读取器和编写器通过 JavaScript 对象表示法 (JSON) 内容提供 XML API。 JSON 使用 JavaScript 的对象文字子集对数据进行编码。 读取器和编写器生成的此工厂时也可使用 JSON 内容时使用的 Windows Communication Foundation (WCF) 应用程序由发送或接收<xref:System.ServiceModel.Channels.WebMessageEncodingBindingElement>或<xref:System.ServiceModel.WebHttpBinding>。  
@@ -38,7 +38,7 @@ ms.locfileid: "42931464"
  此外，如果在示例中的 JSON 消息是由 WCF 接收并记录，则会看到在前面的日志中的 XML 片段。  
   
 ## <a name="mapping-between-json-and-the-xml-infoset"></a>JSON 和 XML Infoset 之间的映射  
- 正式情况下，映射是之间 JSON 中所述[RFC 4627](http://go.microsoft.com/fwlink/?LinkId=98808) （除非有某些限制宽松和某些添加其他限制） 和 XML 信息集 （以及不是文本 XML） 中所述[XML 信息设置](http://go.microsoft.com/fwlink/?LinkId=98809)。 请参阅本主题的定义面向*信息项*和 [方括号] 中的字段。  
+ 正式情况下，映射是之间 JSON 中所述[RFC 4627](https://go.microsoft.com/fwlink/?LinkId=98808) （除非有某些限制宽松和某些添加其他限制） 和 XML 信息集 （以及不是文本 XML） 中所述[XML 信息设置](https://go.microsoft.com/fwlink/?LinkId=98809)。 请参阅本主题的定义面向*信息项*和 [方括号] 中的字段。  
   
  空 JSON 文档映射到一个空白的 XML 文档，而空 XML 文档映射到空 JSON 文档。 在 XML 到 JSON 的映射上不允许前导空白和，文档之后尾随的空白区域。  
   

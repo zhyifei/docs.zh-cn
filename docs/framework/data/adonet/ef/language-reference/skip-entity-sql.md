@@ -2,12 +2,12 @@
 title: SKIP (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: e2139412-8ea4-451b-8f10-91af18dfa3ec
-ms.openlocfilehash: 3b63ca6ade93331b9d1c3ef3e8de15ed520864dc
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 321f6c5ae62ce21249ae4c1081b8e98427bc3df2
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32766577"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43425733"
 ---
 # <a name="skip-entity-sql"></a>SKIP (Entity SQL)
 在 ORDER BY 子句中使用 SKIP 子子句可执行物理分页。 SKIP 不能脱离 ORDER BY 子句单独使用。  
@@ -37,6 +37,6 @@ ms.locfileid: "32766577"
   
 ## <a name="see-also"></a>请参阅  
  [ORDER BY](../../../../../../docs/framework/data/adonet/ef/language-reference/order-by-entity-sql.md)  
- [如何： 查询结果分页](http://msdn.microsoft.com/library/ffc0f920-e7de-42e0-9b12-ef356421d030)  
+ [如何： 查询结果分页](https://msdn.microsoft.com/library/ffc0f920-e7de-42e0-9b12-ef356421d030)  
  [分页](../../../../../../docs/framework/data/adonet/ef/language-reference/paging-entity-sql.md)  
  [TOP](../../../../../../docs/framework/data/adonet/ef/language-reference/top-entity-sql.md)

@@ -1,15 +1,15 @@
 ---
-title: 联接运算 (Visual Basic)
+title: 联接操作 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 39ab4854-ac84-4738-9d0b-3cb79be84db4
-ms.openlocfilehash: 4f375946b69eadb885873889b28790730943a3d5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2c7d6592f0dee221eb2f6fb3a2f2c484064364ce
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33645598"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43425369"
 ---
-# <a name="join-operations-visual-basic"></a>联接运算 (Visual Basic)
+# <a name="join-operations-visual-basic"></a>联接操作 (Visual Basic)
 联接两个数据源就是将一个数据源中的对象与另一个数据源中具有相同公共属性的对象相关联。  
   
  当查询所面向的数据源相互之间具有无法直接领会的关系时，联接就成为一项重要的运算。 在面向对象的编程中，这可能意味着在未建模对象之间进行关联，例如对单向关系进行反向推理。 下面是单向关系的一个示例：Customer 类有一个类型为 City 的属性，但 City 类没有作为 Customer 对象集合的属性。 如果你具有一个 City 对象列表，并且要查找每个城市中的所有客户，则可以使用联接运算完成此项查找。  
@@ -31,7 +31,7 @@ ms.locfileid: "33645598"
  <xref:System.Linq>  
  [标准查询运算符概述 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)  
  [匿名类型](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)  
- [构建联接和叉积查询](http://msdn.microsoft.com/library/d8072ede-0521-4670-9bec-1778ceeb875b)  
+ [构建联接和叉积查询](https://msdn.microsoft.com/library/d8072ede-0521-4670-9bec-1778ceeb875b)  
  [Join 子句](../../../../visual-basic/language-reference/queries/join-clause.md)  
- [如何： 联接不同文件 (LINQ) (Visual Basic) 的内容](../../../../visual-basic/programming-guide/concepts/linq/how-to-join-content-from-dissimilar-files-linq.md)  
+ [如何： 联接不同文件 (LINQ) (Visual Basic 中) 的内容](../../../../visual-basic/programming-guide/concepts/linq/how-to-join-content-from-dissimilar-files-linq.md)  
  [如何： 从多个源 (LINQ) (Visual Basic) 填充对象集合](../../../../visual-basic/programming-guide/concepts/linq/how-to-populate-object-collections-from-multiple-sources-linq.md)

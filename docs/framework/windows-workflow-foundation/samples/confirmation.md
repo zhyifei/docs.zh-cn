@@ -2,12 +2,12 @@
 title: 确认
 ms.date: 03/30/2017
 ms.assetid: 8637aeaf-ac9e-49b8-93f4-da15dee45277
-ms.openlocfilehash: 334ac362333565626dd2bb8dcaede27fbab16f33
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: caa712aa52da01ce44335a361fd6c9f5215316bf
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33518840"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43419485"
 ---
 # <a name="confirmation"></a>确认
 此示例演示针对 <xref:System.Activities.Statements.CompensableActivity> 的使用和确认的四种常见方案。 此示例运行四个工作流以显示确认。 此示例具有声明性版本和命令性版本。  
@@ -32,13 +32,13 @@ ms.locfileid: "33518840"
   
 3.  观察以下输出：  
   
- **显式确认： 开始 workflowCompensableActivity1: BodyCompensableActivity2: BodyCompensableActivity1： 确认 HandlerEnd 的 workflowCompensableActivity2： 确认 HandlerExplicit 补偿： 开始workflowCompensableActivity1: BodyCompensableActivity2: BodyCompensableActivity1: workflowCompensableActivity2 的补偿 HandlerEnd： 确认 HandlerCustom 确认处理程序： 开始 workflowCompensableActivity1:BodyCompensableActivity2: BodyCompensableActivity3: BodyEnd workflowCompensableActivity1： 确认 HandlerCompensableActivity2： 确认 HandlerCompensableActivity3： 确认处理程序中的确认 HandlerVariable 访问：开始 workflowCompensableActivity1: BodyCompensableActivity1： 总和是： 15CompensableActivity2: BodyCompensableActivity2： 到 sumCompensableActivity2 添加 7： 总和现在是： 22End workflowCompensableActivity2： 确认HandlerCompensableActivity1： 确认 HandlerCompensableActivity2： 总和是： 22CompensableActivity2： 减去 12 后总和是现在： 10Press ENTER 退出。**  
+ **显式确认： Start workflowCompensableActivity1: BodyCompensableActivity2: BodyCompensableActivity1： 确认 HandlerEnd 的 workflowCompensableActivity2： 确认 HandlerExplicit 补偿： StartworkflowCompensableActivity1: BodyCompensableActivity2: BodyCompensableActivity1: workflowCompensableActivity2 的补偿 HandlerEnd： 确认 HandlerCustom 确认处理程序： Start workflowCompensableActivity1 的：BodyCompensableActivity2: BodyCompensableActivity3: BodyEnd workflowCompensableActivity1： 确认 HandlerCompensableActivity2： 确认 HandlerCompensableActivity3： 确认 HandlerVariable 中确认处理程序的访问权限：开始 workflowCompensableActivity1: BodyCompensableActivity1： 之和： 15CompensableActivity2: BodyCompensableActivity2： 到 sumCompensableActivity2 添加 7： 现在之和： 22End workflowCompensableActivity2： 确认HandlerCompensableActivity1： 确认 HandlerCompensableActivity2： 之和： 22CompensableActivity2： 减去 12 后之现在： 10Press ENTER 退出。**  
   
 > [!IMPORTANT]
 >  您的计算机上可能已安装这些示例。 在继续操作之前，请先检查以下（默认）目录：  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目录不存在，请转到[Windows Communication Foundation (WCF) 和针对.NET Framework 4 的 Windows Workflow Foundation (WF) 示例](http://go.microsoft.com/fwlink/?LinkId=150780)下载所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
+>  如果此目录不存在，请转到[Windows Communication Foundation (WCF) 和.NET Framework 4 的 Windows Workflow Foundation (WF) 示例](https://go.microsoft.com/fwlink/?LinkId=150780)若要下载所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Compensation\Confirmation`

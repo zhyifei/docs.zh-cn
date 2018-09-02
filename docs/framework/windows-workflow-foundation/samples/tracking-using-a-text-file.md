@@ -2,15 +2,15 @@
 title: 使用文本文件跟踪
 ms.date: 03/30/2017
 ms.assetid: 56a82682-73c2-4b91-a206-4d8bb12c561b
-ms.openlocfilehash: aa59ab8304c68873c938f42fc585be883b234ecc
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: 19b4d544bc1d1c5bc9ebfa51b4ba28eb82c525d0
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33805793"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43422884"
 ---
 # <a name="tracking-using-a-text-file"></a>使用文本文件跟踪
-此示例演示如何通过创建自定义跟踪参与者扩展跟踪在 Windows Workflow Foundation (WF)。 跟踪参与者是一些 .NET Framework 类，这些类将接收从运行时发出的跟踪记录。 可以创建一个跟踪参与者以将跟踪事件传输给方案所需的任何目标。 例如，ETW（Windows 事件跟踪）跟踪参与者将作为 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 的一部分提供。 此示例中的跟踪参与者以 XML 格式将记录写入文本文件。  
+此示例演示如何通过创建自定义跟踪参与者扩展跟踪 Windows Workflow Foundation (WF) 中。 跟踪参与者是一些 .NET Framework 类，这些类将接收从运行时发出的跟踪记录。 可以创建一个跟踪参与者以将跟踪事件传输给方案所需的任何目标。 例如，ETW（Windows 事件跟踪）跟踪参与者将作为 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 的一部分提供。 此示例中的跟踪参与者以 XML 格式将记录写入文本文件。  
   
 ## <a name="sample-details"></a>示例详细信息  
  若要优化跟踪参与者的有用性和可靠性，则必须完成一些附加步骤以将跟踪参与者连接到运行时。 下表描述此示例中用于创建遵循最佳实践的跟踪参与者的类。  
@@ -55,7 +55,7 @@ ms.locfileid: "33805793"
   
 5.  浏览器将显示**StockPriceService**页，其中包含本地服务 wsdl 地址。 复制此地址。  
   
-     本地服务 wsdl 地址的一个示例是http://localhost:53797/StockPriceService.xamlx?wsdl。  
+     本地服务 wsdl 地址的一个示例是 http://localhost:53797/StockPriceService.xamlx?wsdl。  
   
 6.  通过使用[!INCLUDE[fileExplorer](../../../../includes/fileexplorer-md.md)]，转到 [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] 文件夹（默认安装文件夹为 %SystemDrive%\Program Files\Microsoft Visual Studio 10.0）。 然后找到 Common7\IDE\ 子文件夹。  
   
@@ -71,7 +71,7 @@ ms.locfileid: "33805793"
   
     1.  在 WCF 测试客户端中，双击**getstockprice （)** 下**IStockPriceService**节点。  
   
-         **Getstockprice （)** 方法将显示在右窗格中，带有一个参数。  
+         **Getstockprice （)** 方法将出现在右窗格中，具有一个参数。  
   
     2.  键入 Contoso 作为该参数的值。  
   
@@ -80,16 +80,16 @@ ms.locfileid: "33805793"
 12. 查看位于 %APPDATA%\trackingRecords.log 处的应用程序数据目录中的日志文件中的跟踪事件。  
   
     > [!NOTE]
-    >  %APPDATA%是一个环境变量，将解析为 %SystemDrive%\Users\\< 用户名\>中的 \AppData\Roaming [!INCLUDE[wv](../../../../includes/wv-md.md)]， [!INCLUDE[lserver](../../../../includes/lserver-md.md)]，或 Windows Server 2008。  
+    >  %APPDATA%是一个环境变量，将解析为 %SystemDrive%\Users\\< 用户名\>\AppData\Roaming 在[!INCLUDE[wv](../../../../includes/wv-md.md)]， [!INCLUDE[lserver](../../../../includes/lserver-md.md)]，或 Windows Server 2008。  
   
 > [!IMPORTANT]
 >  您的计算机上可能已安装这些示例。 在继续操作之前，请先检查以下（默认）目录：  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目录不存在，请转到[Windows Communication Foundation (WCF) 和针对.NET Framework 4 的 Windows Workflow Foundation (WF) 示例](http://go.microsoft.com/fwlink/?LinkId=150780)下载所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
+>  如果此目录不存在，请转到[Windows Communication Foundation (WCF) 和.NET Framework 4 的 Windows Workflow Foundation (WF) 示例](https://go.microsoft.com/fwlink/?LinkId=150780)若要下载所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Tracking\TextFileTracking`  
   
 ## <a name="see-also"></a>请参阅  
- [AppFabric 监视示例](http://go.microsoft.com/fwlink/?LinkId=193959)
+ [AppFabric 监视示例](https://go.microsoft.com/fwlink/?LinkId=193959)

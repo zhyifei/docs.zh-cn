@@ -4,17 +4,17 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - DataRepeater, topic list
 ms.assetid: 68e0cf5e-e2cb-480a-80cc-d13eb6c9b3dd
-ms.openlocfilehash: 91a0f8c3dcb4999d2b3d4491106c978de940344a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0d317310a7ae9369fab32acfe30a61d2c20c96c2
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33591015"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43422512"
 ---
 # <a name="datarepeater-control-visual-studio"></a>DataRepeater 控件 (Visual Studio)
 Visual Basic Power Pack <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> 控件是一个可滚动的控件容器，用于显示重复数据，例如数据库表中的行。 当你需要对数据布局具有更多控制权限时，可用它替代 <xref:System.Windows.Forms.DataGridView> 控件。  
   
- Visual Studio 中不再包含 PowerPack 控件，但你可以从 [下载中心](http://www.microsoft.com/en-us/download/details.aspx?id=25169)下载它们。  
+ 在 Visual Studio 中，不再包含 PowerPack 控件，但您可以下载它们从[下载中心](https://www.microsoft.com/en-us/download/details.aspx?id=25169)。  
   
 ## <a name="in-this-section"></a>本节内容  
  [DataRepeater 控件简介](../../../visual-basic/developing-apps/windows-forms/introduction-to-the-datarepeater-control-visual-studio.md)  
@@ -41,7 +41,7 @@ Visual Basic Power Pack <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> 控
  [如何：在 DataRepeater 控件中搜索数据](../../../visual-basic/developing-apps/windows-forms/how-to-search-data-in-a-datarepeater-control-visual-studio.md)  
  演示如何在 `DataRepeater` 控件中实现搜索功能。  
   
- [如何： 使用两个 DataRepeater 控件 (Visual Studio) 中创建主/从窗体](../../../visual-basic/developing-apps/windows-forms/how-to-create-a-master-detail-form-by-using-two-datarepeater-controls.md)  
+ [如何： 使用两个 DataRepeater 控件 (Visual Studio) 创建母版/详细信息窗体](../../../visual-basic/developing-apps/windows-forms/how-to-create-a-master-detail-form-by-using-two-datarepeater-controls.md)  
  演示如何通过使用两个 `DataRepeater` 控件显示相关记录。  
   
  [演练：在 DataRepeater 控件中显示数据](../../../visual-basic/developing-apps/windows-forms/walkthrough-displaying-data-in-a-datarepeater-control-visual-studio.md)  

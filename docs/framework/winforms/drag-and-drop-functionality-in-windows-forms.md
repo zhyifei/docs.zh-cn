@@ -5,15 +5,15 @@ helpviewer_keywords:
 - drag and drop [Windows Forms], Windows Forms
 - Windows Forms, drag and drop
 ms.assetid: 65cd2c03-8782-474e-b958-cbe43eeb902c
-ms.openlocfilehash: c43d5ad9203afad67601d9e36447db7c49a5a98e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b1189da9fa0b76ede3261cf6da5305a09147bba5
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33539395"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43452981"
 ---
 # <a name="drag-and-drop-functionality-in-windows-forms"></a>Windows 窗体中的拖放功能
-Windows 窗体包含一组实现拖放行为的方法、事件和类。 本主题概述了 Windows 窗体对拖放功能的支持。  另请参阅[拖放操作和剪贴板支持](http://msdn.microsoft.com/library/fe5ebfwe\(v=vs.110\))。  
+Windows 窗体包含一组实现拖放行为的方法、事件和类。 本主题概述了 Windows 窗体对拖放功能的支持。  另请参阅[拖放操作和剪贴板支持](https://msdn.microsoft.com/library/fe5ebfwe\(v=vs.110\))。  
   
 ## <a name="performing-drag-and-drop-operations"></a>执行拖放操作  
  若要执行拖放操作，请使用 <xref:System.Windows.Forms.Control> 类的 <xref:System.Windows.Forms.Control.DoDragDrop%2A> 方法。 有关如何执行拖放操作的详细信息，请参阅 <xref:System.Windows.Forms.Control.DoDragDrop%2A>。 若要获取拖放操作开始前鼠标指针必须拖动到的矩形，请使用 <xref:System.Windows.Forms.SystemInformation> 类的 <xref:System.Windows.Forms.SystemInformation.DragSize%2A> 属性。  

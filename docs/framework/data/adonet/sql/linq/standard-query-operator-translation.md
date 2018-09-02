@@ -5,19 +5,19 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: a60c30fa-1e68-45fe-b984-f6abb9ede40e
-ms.openlocfilehash: b05cd427bc1b3b13b68fe7c38a798c8c2baa0af1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: fb4910e48af58463c5c851173f8e3caf4594cc3a
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33365808"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43424225"
 ---
 # <a name="standard-query-operator-translation"></a>标准查询运算符转换
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 将标准查询运算符转换为 SQL 命令。 数据库的查询处理器决定了 SQL 转换的执行语义。  
   
- 标准查询运算符定义针对*序列*。 序列是*排序*，并依赖于序列的每个元素的引用标识。 有关详细信息，请参阅[标准查询运算符概述](http://msdn.microsoft.com/library/24cda21e-8af8-4632-b519-c404a839b9b2)。  
+ 标准查询运算符定义针对*序列*。 序列是*排序*和依赖于序列的每个元素的引用标识。 有关详细信息，请参阅[标准查询运算符概述](https://msdn.microsoft.com/library/24cda21e-8af8-4632-b519-c404a839b9b2)。  
   
- SQL 主要处理*无序值集*。 排序通常是显式声明的后续处理操作，应用于查询的最终结果而不是中间结果。 标识由值定义。 因此，SQL 查询理解为处理多重集 (*包*) 而不是*设置*。  
+ SQL 主要处理*无序值集的*。 排序通常是显式声明的后续处理操作，应用于查询的最终结果而不是中间结果。 标识由值定义。 出于此原因，SQL 查询理解为处理多重集 (*袋*) 而不是*设置*。  
   
  以下各段介绍了标准查询运算符与其针对用于 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 的 SQL Server 提供程序的 SQL 转换结果之间的差异。  
   
@@ -34,10 +34,10 @@ ms.locfileid: "33365808"
  <xref:System.Linq.Enumerable.Union%2A> 方法是为多重集定义的，定义为多重集的无序串联（实际上是 SQL 中的 UNION ALL 子句的执行结果）。  
   
 ### <a name="take-skip"></a>Take、Skip  
- <xref:System.Linq.Enumerable.Take%2A> 和<xref:System.Linq.Enumerable.Skip%2A>方法是定义完善的仅针对*有序集*。 未定义针对无序集或多重集的语义。  
+ <xref:System.Linq.Enumerable.Take%2A> 并<xref:System.Linq.Enumerable.Skip%2A>方法是仅针对定义完善*有序集*。 未定义针对无序集或多重集的语义。  
   
 > [!NOTE]
->  <xref:System.Linq.Enumerable.Take%2A> 和 <xref:System.Linq.Enumerable.Skip%2A> 用在针对 SQL Server 2000 的查询中时存在一定的限制。 有关详细信息，请参阅中的"跳过和 Take 异常在 SQL Server 2000"条目[故障排除](../../../../../../docs/framework/data/adonet/sql/linq/troubleshooting.md)。  
+>  <xref:System.Linq.Enumerable.Take%2A> 和 <xref:System.Linq.Enumerable.Skip%2A> 用在针对 SQL Server 2000 的查询中时存在一定的限制。 有关详细信息，请参阅中的"Skip 和 Take 异常在 SQL Server 2000"条目[故障排除](../../../../../../docs/framework/data/adonet/sql/linq/troubleshooting.md)。  
   
  由于 SQL 中的排序存在限制，因此 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 会设法将这些方法的参数的排序操作移到相应方法的结果中进行。 例如，请考虑下面这个 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 查询：  
   
@@ -80,7 +80,7 @@ ORDER BY [t0].[CustomerID]
 ## <a name="expression-translation"></a>表达式转换  
   
 ### <a name="null-semantics"></a>Null 语义  
- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 不会将 null 比较语义施加在 SQL 上。 比较运算符在语法上被转换为其 SQL 等效项。 因此，该语义反映了由服务器或连接设置定义的 SQL 语义。 例如，两个 null 值被视为在默认 SQL Server 设置下不相等，但你可以更改设置以改变语义。 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 在转换查询时不考虑服务器设置。  
+ [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 不会将 null 比较语义施加在 SQL 上。 比较运算符在语法上被转换为其 SQL 等效项。 因此，该语义反映了由服务器或连接设置定义的 SQL 语义。 例如，两个 null 值被视为默认 SQL Server 设置下不相等，但可以更改这些设置以更改语义。 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 在转换查询时不考虑服务器设置。  
   
  对文本型 null 的比较被转换为相应的 SQL 版本（`is null` 或 `is not null`）。  
   
@@ -112,7 +112,7 @@ ORDER BY [t0].[CustomerID]
   
  <xref:System.Linq.Enumerable.Except%2A>  
   
- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 支持相等和比较*平面*自变量，但不是能为自变量或包含序列。 平自变量是一种能映射到 SQL 行的类型。 可以静态方式确定不包含序列的一个或多个实体类型的投影被视为平参数。  
+ [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 支持相等性和比较*平面*参数，而不是或者包含序列的自变量。 平自变量是一种能映射到 SQL 行的类型。 可以静态方式确定不包含序列的一个或多个实体类型的投影被视为平参数。  
   
  以下是平参数的一些示例：  
   
@@ -170,7 +170,7 @@ ORDER BY [t0].[CustomerID]
   
 -   `Sum`  
   
- 有关映射到这些 SQL Server 日期和时间类型的信息的详细信息，请参阅[SQL CLR 类型映射](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md)。  
+ 有关映射到这些 SQL Server 日期和时间类型的详细信息，请参阅[SQL-CLR 类型映射](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md)。  
   
 ## <a name="sql-server-2005-support"></a>SQL Server 2005 支持  
  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 不支持以下 SQL Server 2005 功能：  
@@ -190,7 +190,7 @@ ORDER BY [t0].[CustomerID]
  `Cross Apply` 和 `Outer Apply` 是为关系导航生成的。 可以进行这种重写的查询集定义不完善。 因此，[!INCLUDE[ss2k](../../../../../../includes/ss2k-md.md)] 支持的最小查询集是不涉及关系导航的集合。  
   
 ### <a name="text--ntext"></a>text / ntext  
- 数据类型`text`  /  `ntext`无法针对某些查询操作中使用`varchar(max)`  /  `nvarchar(max)`，支持的[!INCLUDE[sqprsqext](../../../../../../includes/sqprsqext-md.md)]。  
+ 数据类型`text`  /  `ntext`不能针对某些查询操作中使用`varchar(max)`  /  `nvarchar(max)`，支持哪些[!INCLUDE[sqprsqext](../../../../../../includes/sqprsqext-md.md)]。  
   
  不存在解决此限制的方法。 具体而言，您不能对包含映射到 `Distinct()` 或 `text` 列的成员的任何结果使用 `ntext`。  
   
@@ -198,12 +198,12 @@ ORDER BY [t0].[CustomerID]
  [!INCLUDE[ss2k](../../../../../../includes/ss2k-md.md)]（一直到 SP4）联编程序具有由嵌套查询触发的一些特性。 触发这些特性的 SQL 查询集定义不完善。 因此，您不能定义可能会引发 SQL Server 异常的 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 查询集。  
   
 ### <a name="skip-and-take-operators"></a>Skip 和 Take 运算符  
- <xref:System.Linq.Enumerable.Take%2A> 和 <xref:System.Linq.Enumerable.Skip%2A> 用在针对 [!INCLUDE[ss2k](../../../../../../includes/ss2k-md.md)] 的查询中时存在一定的限制。 有关详细信息，请参阅中的"跳过和 Take 异常在 SQL Server 2000"条目[故障排除](../../../../../../docs/framework/data/adonet/sql/linq/troubleshooting.md)。  
+ <xref:System.Linq.Enumerable.Take%2A> 和 <xref:System.Linq.Enumerable.Skip%2A> 用在针对 [!INCLUDE[ss2k](../../../../../../includes/ss2k-md.md)] 的查询中时存在一定的限制。 有关详细信息，请参阅中的"Skip 和 Take 异常在 SQL Server 2000"条目[故障排除](../../../../../../docs/framework/data/adonet/sql/linq/troubleshooting.md)。  
   
 ## <a name="object-materialization"></a>对象具体化  
  具体化过程用一个或多个 SQL 查询返回的行创建 CLR 对象。  
   
--   以下调用*本地执行*作为具体化过程的一部分：  
+-   下面的调用都*本地执行*作为具体化过程的一部分：  
   
     -   构造函数  
   
@@ -211,13 +211,13 @@ ORDER BY [t0].[CustomerID]
   
     -   投影中的类型强制转换  
   
--   方法，它们遵循<xref:System.Linq.Enumerable.AsEnumerable%2A>方法*本地执行*。 此方法不会导致直接执行。  
+-   方法，它们遵循<xref:System.Linq.Enumerable.AsEnumerable%2A>方法都*本地执行*。 此方法不会导致直接执行。  
   
 -   您可以将 `struct` 用作查询结果的返回类型或结果类型的成员。 实体需要变成类。 匿名类型具体化为类的实例，但命名结构（非实体）可在投影中使用。  
   
 -   查询结果的返回类型的成员可以为 <xref:System.Linq.IQueryable%601> 类型。 它具体化为本地集合。  
   
--   以下方法导致*直接具体化*方法应用于序列的：  
+-   以下方法会导致*直接具体化*方法应用于序列的：  
   
     -   <xref:System.Linq.Enumerable.ToList%2A>  
   

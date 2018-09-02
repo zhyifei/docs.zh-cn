@@ -2,27 +2,27 @@
 title: DataTableReader
 ms.date: 03/30/2017
 ms.assetid: 97546ae2-0e42-4d26-961d-e0b244d81ded
-ms.openlocfilehash: 8305629bb267805cd79455e2edf990e72a12dc10
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: b3881ecfd895bd22a476bdac7dd0b7c1b112092e
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32756093"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43425180"
 ---
 # <a name="datatablereaders"></a>DataTableReader
 <xref:System.Data.DataTableReader> 以一个或多个只读、只进结果集的形式提供 <xref:System.Data.DataTable> 或的 <xref:System.Data.DataSet> 的内容。  
   
- 当你创建**DataTableReader**从**DataTable**，生成**DataTableReader**对象包含一个结果集具有相同的数据**DataTable**从创建它，除已标记为删除任何行。 列将显示在相同的顺序与在原始**DataTable**。  
+ 当您创建**DataTableReader**从**DataTable**，从而**DataTableReader**对象包含一个结果集具有相同的数据**DataTable**从创建它，但已标记为已删除任何行除外。 列的显示顺序与在原始**DataTable**。  
   
- A **DataTableReader**可能包含多个结果集，如果它由调用<xref:System.Data.DataSet.CreateDataReader%2A>。 结果采用的顺序相同**数据表**中**数据集**对象的<xref:System.Data.DataSet.Tables%2A>集合。  
+ 一个**DataTableReader**可能包含多个结果集，如果它通过调用创建<xref:System.Data.DataSet.CreateDataReader%2A>。 结果采用的顺序相同**DataTables**中**数据集**对象的<xref:System.Data.DataSet.Tables%2A>集合。  
   
 ## <a name="in-this-section"></a>本节内容  
  [创建 DataReader](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/creating-a-datareader.md)  
  讨论如何创建**DataTableReader**对象。  
   
  [导航数据表](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/navigating-datatables.md)  
- 描述如何使用**读取**方法来移动的内容通过**DataTableReader**。  
+ 介绍如何使用**读**方法来移动的内容通过**DataTableReader**。  
   
 ## <a name="see-also"></a>请参阅  
  [在 ADO.NET 中检索和修改数据](../../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)  
- [ADO.NET 托管提供程序和数据集开发人员中心](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)

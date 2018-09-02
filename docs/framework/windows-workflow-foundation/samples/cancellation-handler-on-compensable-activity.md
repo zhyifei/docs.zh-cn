@@ -2,12 +2,12 @@
 title: 可补偿活动上的取消处理程序
 ms.date: 03/30/2017
 ms.assetid: afd98bee-eccf-47e9-99c9-27cea84ce5ce
-ms.openlocfilehash: ce4d67b26a2b4c6a9b507715b48e75e328c5b100
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2f32d10e22be7fdd1e84229a214409df06efa918
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33514996"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43442702"
 ---
 # <a name="cancellation-handler-on-compensable-activity"></a>可补偿活动上的取消处理程序
 此示例演示如何对 <xref:System.Activities.Statements.CompensableActivity> 使用取消处理程序。  
@@ -83,6 +83,6 @@ Parallel
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目录不存在，请转到[Windows Communication Foundation (WCF) 和针对.NET Framework 4 的 Windows Workflow Foundation (WF) 示例](http://go.microsoft.com/fwlink/?LinkId=150780)下载所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
+>  如果此目录不存在，请转到[Windows Communication Foundation (WCF) 和.NET Framework 4 的 Windows Workflow Foundation (WF) 示例](https://go.microsoft.com/fwlink/?LinkId=150780)若要下载所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Compensation\CompensationCancellation`

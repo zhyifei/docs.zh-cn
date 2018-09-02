@@ -3,11 +3,11 @@ title: 映射为嵌套元素指定的关系
 ms.date: 03/30/2017
 ms.assetid: 24a2d3e5-4af7-4f9a-ab7a-fe6684c9e4fe
 ms.openlocfilehash: 0346ba04fd8af6b5abc81fe994dd40f9a6a37c1d
-ms.sourcegitcommit: a368166a51e5204c0224fbf5e46476e3ed122817
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/31/2018
-ms.locfileid: "43332463"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43423856"
 ---
 # <a name="map-relations-specified-for-nested-elements"></a>映射为嵌套元素指定的关系
 架构可以包含**msdata: relationship**批注来显式指定架构中任意两个元素之间的映射。 中指定的两个元素**msdata: relationship**可以嵌套在架构中，但不是一定要。 映射进程使用**msdata: relationship**架构以生成两个列之间主键/外的键关系中。  

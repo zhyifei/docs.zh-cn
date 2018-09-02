@@ -2,12 +2,12 @@
 title: CLR 存储过程
 ms.date: 03/30/2017
 ms.assetid: fd7eea9b-218a-4988-8c9a-8abcc6031c66
-ms.openlocfilehash: df323e2d1b50dcd1b2087141deefa1c86723b346
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.openlocfilehash: 1f8aa6fb9243706d07caa4527af0c4c880aa70a6
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42930107"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43424329"
 ---
 # <a name="clr-stored-procedures"></a>CLR 存储过程
 存储过程是可以用于标量表达式的例程。 它们可以将表格形式的结果和消息返回到客户端，调用数据定义语言 (DDL) 和数据操作语言 (DML) 语句，以及返回输出参数。  
@@ -23,8 +23,8 @@ Public Shared Sub ExecuteToClient( <Out()> ByRef number As Integer)
   
  **SQL Server 文档**
 
-1. [CLR 存储过程](http://go.microsoft.com/fwlink/?LinkId=115400)  
+1. [CLR 存储过程](https://go.microsoft.com/fwlink/?LinkId=115400)  
   
 ## <a name="see-also"></a>请参阅  
- [在托管代码中创建 SQL Server 2005 对象](http://msdn.microsoft.com/library/5358a825-e19b-49aa-8214-674ce5fed1da)  
- [ADO.NET 托管提供程序和数据集开发人员中心](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [在托管代码中创建 SQL Server 2005 对象](https://msdn.microsoft.com/library/5358a825-e19b-49aa-8214-674ce5fed1da)  
+ [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)

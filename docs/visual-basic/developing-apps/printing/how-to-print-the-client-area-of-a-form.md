@@ -4,17 +4,17 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - client area [Visual Basic], printing
 ms.assetid: c06c9c0e-bc07-48cd-9596-e29a2ff96236
-ms.openlocfilehash: 361db89f0880a03273aac7fc36b5c5faa825486f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b2f13d1ec151a5fd1967b522a601e0e19de04cbb
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33583986"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43419279"
 ---
 # <a name="how-to-print-the-client-area-of-a-form-visual-basic"></a>如何：打印窗体的工作区 (Visual Basic)
 通过 <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm> 组件，可以在不使用 <xref:System.Drawing.Printing.PrintDocument> 组件的情况下快速打印窗体的图像。 下面的过程演示如何只打印窗体的工作区而不打印标题栏、边框和滚动条。  
   
- Visual Studio 中不再包含 PowerPack 控件，但你可以从 [下载中心](http://www.microsoft.com/en-us/download/details.aspx?id=25169)下载它们。  
+ 在 Visual Studio 中，不再包含 PowerPack 控件，但您可以下载它们从[下载中心](https://www.microsoft.com/en-us/download/details.aspx?id=25169)。  
   
 ### <a name="to-print-the-client-area-of-a-form"></a>打印窗体的工作区  
   

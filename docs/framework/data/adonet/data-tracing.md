@@ -2,12 +2,12 @@
 title: ADO.NET 中的数据跟踪
 ms.date: 03/30/2017
 ms.assetid: a6a752a5-d2a9-4335-a382-b58690ccb79f
-ms.openlocfilehash: 6dd385cd58d1c8400c45139492d84e6ca4fe1bd7
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 037db6f4e5695e00401c81e1490953efe2fc9b99
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32758498"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43421094"
 ---
 # <a name="data-tracing-in-adonet"></a>ADO.NET 中的数据跟踪
 ADO.NET 具有内置数据跟踪功能的.NET 数据提供程序支持的 SQL Server、 Oracle、 OLE DB 和 ODBC，以及 ADO.NET <xref:System.Data.DataSet>，和 SQL Server 网络协议。  
@@ -26,12 +26,12 @@ ADO.NET 具有内置数据跟踪功能的.NET 数据提供程序支持的 SQL Se
   
  为了支持不同的跟踪技术，跟踪是可扩展的，这样，开发人员可以在任何应用程序堆栈级别上跟踪问题。 尽管跟踪不属于纯 ADO.NET 功能，但是，Microsoft 提供程序利用通用的跟踪和规范 API。  
   
- 有关设置和在 ADO.NET 中配置托管的跟踪的详细信息，请参阅[跟踪数据访问](http://msdn.microsoft.com/library/hh880086.aspx)。  
+ 有关设置和在 ADO.NET 中配置托管的跟踪的详细信息，请参阅[跟踪数据访问](https://msdn.microsoft.com/library/hh880086.aspx)。  
   
 ## <a name="accessing-diagnostic-information-in-the-extended-events-log"></a>访问扩展事件日志中的诊断信息  
- 在[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]对于 SQL Server 的数据提供程序，数据访问跟踪 ([数据访问跟踪](http://msdn.microsoft.com/library/hh880086.aspx)) 已更新，便于更轻松地将客户端事件与诊断信息，如连接失败，关联从服务器的连接环形缓冲区和应用程序性能信息在扩展的事件日志中。 有关读取扩展的事件日志的信息，请参阅[查看事件会话数据](http://msdn.microsoft.com/library/hh710068\(SQL.110\).aspx)。  
+ 在中[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]SQL Server 的数据提供程序，数据访问跟踪 ([数据访问跟踪](https://msdn.microsoft.com/library/hh880086.aspx)) 已更新以使其能够更轻松地更轻松地将客户端事件与诊断信息，如连接失败，关联从服务器的连接环形缓冲区和应用程序中扩展的事件日志的性能信息。 有关读取扩展的事件日志的信息，请参阅[查看事件会话数据](https://msdn.microsoft.com/library/hh710068\(SQL.110\).aspx)。  
   
- 对于连接操作，ADO.NET 将发送一个客户端连接 ID。 如果连接失败，你可以访问连接环形缓冲区 ([连接中使用连接环形缓冲区的 SQL Server 2008 的故障排除](http://go.microsoft.com/fwlink/?LinkId=207752)) 并查找`ClientConnectionID`字段和获取有关的诊断信息连接失败。 如果出现错误，则将客户端连接 ID 记录在环形缓冲区中。 （如果在发送预登录数据包之前连接失败，将不会生成客户端连接 ID。）客户端连接 ID 为 16 字节的 GUID。 如果 `client_connection_id` 操作已添加到扩展事件会话中的事件，则还可以在扩展事件目标输出中找到查找客户端连接 ID。 如果需要进一步的客户端驱动程序诊断帮助，可以启用数据访问跟踪并重新运行连接命令，然后观察 `ClientConnectionID` 字段。  
+ 对于连接操作，ADO.NET 将发送一个客户端连接 ID。 如果连接失败，可以访问连接环形缓冲区 ([在 SQL Server 2008 使用连接环形缓冲区解决连接问题](https://go.microsoft.com/fwlink/?LinkId=207752)) 并找到`ClientConnectionID`字段并获取的诊断信息连接失败。 如果出现错误，则将客户端连接 ID 记录在环形缓冲区中。 （如果在发送预登录数据包之前连接失败，将不会生成客户端连接 ID。）客户端连接 ID 为 16 字节的 GUID。 如果 `client_connection_id` 操作已添加到扩展事件会话中的事件，则还可以在扩展事件目标输出中找到查找客户端连接 ID。 如果需要进一步的客户端驱动程序诊断帮助，可以启用数据访问跟踪并重新运行连接命令，然后观察 `ClientConnectionID` 字段。  
   
  还可以通过使用 `SqlConnection.ClientConnectionID` 属性以编程方式获取客户端连接 ID。  
   
@@ -54,4 +54,4 @@ add target ring_buffer with (track_causality=on)
 ## <a name="see-also"></a>请参阅  
  [.NET Framework 中的网络跟踪](../../../../docs/framework/network-programming/network-tracing.md)  
  [跟踪应用程序和在应用程序中插入检测点](../../../../docs/framework/debug-trace-profile/tracing-and-instrumenting-applications.md)  
- [ADO.NET 托管提供程序和数据集开发人员中心](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)

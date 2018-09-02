@@ -4,17 +4,17 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - Form [Visual Basic], printing
 ms.assetid: df963bf6-3ee1-49f4-8b2e-1d95d1beb0be
-ms.openlocfilehash: 5f8e620fce2b85d3f3cdb66bf80967f8eb281361
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 723524c7c9876d353624ad47d504ea2528a31cfe
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33590008"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43422722"
 ---
 # <a name="how-to-print-a-form-by-using-the-printform-component-visual-basic"></a>如何：使用 PrintForm 组件打印窗体 (Visual Basic)
 通过 <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm> 组件，可以在不使用 <xref:System.Drawing.Printing.PrintDocument> 组件的情况下如实快速打印窗体的图像。 以下过程介绍如何将窗体打印到打印机、打印预览窗口和封装的 PostScript 文件。  
   
- Visual Studio 中不再包含 PowerPack 控件，但你可以从 [下载中心](http://www.microsoft.com/en-us/download/details.aspx?id=25169)下载它们。  
+ 在 Visual Studio 中，不再包含 PowerPack 控件，但您可以下载它们从[下载中心](https://www.microsoft.com/en-us/download/details.aspx?id=25169)。  
   
 ### <a name="to-print-a-form-to-the-default-printer"></a>将窗体打印到默认打印机  
   
