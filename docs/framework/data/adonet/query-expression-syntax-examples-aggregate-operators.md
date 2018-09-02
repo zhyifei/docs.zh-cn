@@ -5,98 +5,98 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 85dafa07-e102-46e7-ab78-37bf06f257a6
-ms.openlocfilehash: 899d059575bc08711d486eedfdfb61045bea833c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: fe3bd69b17b98e923c6c31fec2611e7390894e4a
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33359570"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43398532"
 ---
-# <a name="query-expression-syntax-examples-aggregate-operators-linq-to-dataset"></a><span data-ttu-id="bbf34-102">查询表达式语法示例：聚合运算符 (LINQ to DataSet)</span><span class="sxs-lookup"><span data-stu-id="bbf34-102">Query Expression Syntax Examples: Aggregate Operators (LINQ to DataSet)</span></span>
-<span data-ttu-id="bbf34-103">本主题中的示例演示如何使用 <xref:System.Linq.Enumerable.Average%2A>、<xref:System.Linq.Enumerable.Count%2A>、<xref:System.Linq.Enumerable.Max%2A>、<xref:System.Linq.Enumerable.Min%2A> 和 <xref:System.Linq.Enumerable.Sum%2A> 方法来查询 <xref:System.Data.DataSet> 并使用查询表达式语法聚合数据。</span><span class="sxs-lookup"><span data-stu-id="bbf34-103">The examples in this topic demonstrate how to use the <xref:System.Linq.Enumerable.Average%2A>, <xref:System.Linq.Enumerable.Count%2A>, <xref:System.Linq.Enumerable.Max%2A>, <xref:System.Linq.Enumerable.Min%2A>, and <xref:System.Linq.Enumerable.Sum%2A> methods to query a <xref:System.Data.DataSet> and aggregate data using query expression syntax.</span></span>  
+# <a name="query-expression-syntax-examples-aggregate-operators-linq-to-dataset"></a><span data-ttu-id="8bef1-102">查询表达式语法示例：聚合运算符 (LINQ to DataSet)</span><span class="sxs-lookup"><span data-stu-id="8bef1-102">Query Expression Syntax Examples: Aggregate Operators (LINQ to DataSet)</span></span>
+<span data-ttu-id="8bef1-103">本主题中的示例演示如何使用 <xref:System.Linq.Enumerable.Average%2A>、<xref:System.Linq.Enumerable.Count%2A>、<xref:System.Linq.Enumerable.Max%2A>、<xref:System.Linq.Enumerable.Min%2A> 和 <xref:System.Linq.Enumerable.Sum%2A> 方法来查询 <xref:System.Data.DataSet> 并使用查询表达式语法聚合数据。</span><span class="sxs-lookup"><span data-stu-id="8bef1-103">The examples in this topic demonstrate how to use the <xref:System.Linq.Enumerable.Average%2A>, <xref:System.Linq.Enumerable.Count%2A>, <xref:System.Linq.Enumerable.Max%2A>, <xref:System.Linq.Enumerable.Min%2A>, and <xref:System.Linq.Enumerable.Sum%2A> methods to query a <xref:System.Data.DataSet> and aggregate data using query expression syntax.</span></span>  
   
- <span data-ttu-id="bbf34-104">`FillDataSet`中指定这些示例中使用的方法[加载数据到数据集](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md)。</span><span class="sxs-lookup"><span data-stu-id="bbf34-104">The `FillDataSet` method used in these examples is specified in [Loading Data Into a DataSet](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md).</span></span>  
+ <span data-ttu-id="8bef1-104">`FillDataSet`中指定这些示例中使用的方法[加载数据到数据集](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md)。</span><span class="sxs-lookup"><span data-stu-id="8bef1-104">The `FillDataSet` method used in these examples is specified in [Loading Data Into a DataSet](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md).</span></span>  
   
- <span data-ttu-id="bbf34-105">本主题中的示例使用 AdventureWorks 示例数据库中的 Contact、Address、Product、SalesOrderHeader 和 SalesOrderDetail 表。</span><span class="sxs-lookup"><span data-stu-id="bbf34-105">The examples in this topic use the Contact, Address, Product, SalesOrderHeader, and SalesOrderDetail tables in the AdventureWorks sample database.</span></span>  
+ <span data-ttu-id="8bef1-105">本主题中的示例使用 AdventureWorks 示例数据库中的 Contact、Address、Product、SalesOrderHeader 和 SalesOrderDetail 表。</span><span class="sxs-lookup"><span data-stu-id="8bef1-105">The examples in this topic use the Contact, Address, Product, SalesOrderHeader, and SalesOrderDetail tables in the AdventureWorks sample database.</span></span>  
   
- <span data-ttu-id="bbf34-106">本主题中的示例使用以下`using` / `Imports`语句：</span><span class="sxs-lookup"><span data-stu-id="bbf34-106">The examples in this topic use the following `using`/`Imports` statements:</span></span>  
+ <span data-ttu-id="8bef1-106">本主题中的示例使用以下`using` / `Imports`语句：</span><span class="sxs-lookup"><span data-stu-id="8bef1-106">The examples in this topic use the following `using`/`Imports` statements:</span></span>  
   
  [!code-csharp[DP LINQ to DataSet Examples#ImportsUsing](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/CS/Program.cs#importsusing)]
  [!code-vb[DP LINQ to DataSet Examples#ImportsUsing](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/VB/Module1.vb#importsusing)]  
   
- <span data-ttu-id="bbf34-107">有关详细信息，请参阅[如何： 创建 LINQ to DataSet 项目在 Visual Studio 中](../../../../docs/framework/data/adonet/how-to-create-a-linq-to-dataset-project-in-vs.md)。</span><span class="sxs-lookup"><span data-stu-id="bbf34-107">For more information, see [How to: Create a LINQ to DataSet Project In Visual Studio](../../../../docs/framework/data/adonet/how-to-create-a-linq-to-dataset-project-in-vs.md).</span></span>  
+ <span data-ttu-id="8bef1-107">有关详细信息，请参阅[如何： 创建 LINQ to DataSet 项目在 Visual Studio 中](../../../../docs/framework/data/adonet/how-to-create-a-linq-to-dataset-project-in-vs.md)。</span><span class="sxs-lookup"><span data-stu-id="8bef1-107">For more information, see [How to: Create a LINQ to DataSet Project In Visual Studio](../../../../docs/framework/data/adonet/how-to-create-a-linq-to-dataset-project-in-vs.md).</span></span>  
   
-## <a name="average"></a><span data-ttu-id="bbf34-108">平均值</span><span class="sxs-lookup"><span data-stu-id="bbf34-108">Average</span></span>  
+## <a name="average"></a><span data-ttu-id="8bef1-108">平均值</span><span class="sxs-lookup"><span data-stu-id="8bef1-108">Average</span></span>  
   
-### <a name="example"></a><span data-ttu-id="bbf34-109">示例</span><span class="sxs-lookup"><span data-stu-id="bbf34-109">Example</span></span>  
- <span data-ttu-id="bbf34-110">此示例使用 <xref:System.Linq.Enumerable.Average%2A> 方法来计算每种款式的产品的平均定价。</span><span class="sxs-lookup"><span data-stu-id="bbf34-110">This example uses the <xref:System.Linq.Enumerable.Average%2A> method to find the average list price of the products of each style.</span></span>  
+### <a name="example"></a><span data-ttu-id="8bef1-109">示例</span><span class="sxs-lookup"><span data-stu-id="8bef1-109">Example</span></span>  
+ <span data-ttu-id="8bef1-110">此示例使用 <xref:System.Linq.Enumerable.Average%2A> 方法来计算每种款式的产品的平均定价。</span><span class="sxs-lookup"><span data-stu-id="8bef1-110">This example uses the <xref:System.Linq.Enumerable.Average%2A> method to find the average list price of the products of each style.</span></span>  
   
  [!code-csharp[DP LINQ to DataSet Examples#Average2_MQ](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/CS/Program.cs#average2_mq)]
  [!code-vb[DP LINQ to DataSet Examples#Average2_MQ](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/VB/Module1.vb#average2_mq)]  
   
-### <a name="example"></a><span data-ttu-id="bbf34-111">示例</span><span class="sxs-lookup"><span data-stu-id="bbf34-111">Example</span></span>  
- <span data-ttu-id="bbf34-112">此示例使用 <xref:System.Linq.Enumerable.Average%2A> 获取每个联系人 ID 的总平均应付金额。</span><span class="sxs-lookup"><span data-stu-id="bbf34-112">This example uses <xref:System.Linq.Enumerable.Average%2A> to get the average total due for each contact ID.</span></span>  
+### <a name="example"></a><span data-ttu-id="8bef1-111">示例</span><span class="sxs-lookup"><span data-stu-id="8bef1-111">Example</span></span>  
+ <span data-ttu-id="8bef1-112">此示例使用 <xref:System.Linq.Enumerable.Average%2A> 获取每个联系人 ID 的总平均应付金额。</span><span class="sxs-lookup"><span data-stu-id="8bef1-112">This example uses <xref:System.Linq.Enumerable.Average%2A> to get the average total due for each contact ID.</span></span>  
   
  [!code-csharp[DP LINQ to DataSet Examples#AverageGrouped_MQ](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/CS/Program.cs#averagegrouped_mq)]
  [!code-vb[DP LINQ to DataSet Examples#AverageGrouped_MQ](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/VB/Module1.vb#averagegrouped_mq)]  
   
-### <a name="example"></a><span data-ttu-id="bbf34-113">示例</span><span class="sxs-lookup"><span data-stu-id="bbf34-113">Example</span></span>  
- <span data-ttu-id="bbf34-114">此示例使用 <xref:System.Linq.Enumerable.Average%2A> 获取每个联系人的具有平均 `TotalDue` 的订单。</span><span class="sxs-lookup"><span data-stu-id="bbf34-114">This example uses <xref:System.Linq.Enumerable.Average%2A> to get the orders with the average `TotalDue` for each contact.</span></span>  
+### <a name="example"></a><span data-ttu-id="8bef1-113">示例</span><span class="sxs-lookup"><span data-stu-id="8bef1-113">Example</span></span>  
+ <span data-ttu-id="8bef1-114">此示例使用 <xref:System.Linq.Enumerable.Average%2A> 获取每个联系人的具有平均 `TotalDue` 的订单。</span><span class="sxs-lookup"><span data-stu-id="8bef1-114">This example uses <xref:System.Linq.Enumerable.Average%2A> to get the orders with the average `TotalDue` for each contact.</span></span>  
   
  [!code-csharp[DP LINQ to DataSet Examples#AverageElements_MQ](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/CS/Program.cs#averageelements_mq)]
  [!code-vb[DP LINQ to DataSet Examples#AverageElements_MQ](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/VB/Module1.vb#averageelements_mq)]  
   
-## <a name="count"></a><span data-ttu-id="bbf34-115">计数</span><span class="sxs-lookup"><span data-stu-id="bbf34-115">Count</span></span>  
+## <a name="count"></a><span data-ttu-id="8bef1-115">计数</span><span class="sxs-lookup"><span data-stu-id="8bef1-115">Count</span></span>  
   
-### <a name="example"></a><span data-ttu-id="bbf34-116">示例</span><span class="sxs-lookup"><span data-stu-id="bbf34-116">Example</span></span>  
- <span data-ttu-id="bbf34-117">此示例使用 <xref:System.Linq.Enumerable.Count%2A> 返回联系人 ID 的列表及每个联系人 ID 的订单数。</span><span class="sxs-lookup"><span data-stu-id="bbf34-117">This example uses <xref:System.Linq.Enumerable.Count%2A> to return a list of contact IDs and how many orders each has.</span></span>  
+### <a name="example"></a><span data-ttu-id="8bef1-116">示例</span><span class="sxs-lookup"><span data-stu-id="8bef1-116">Example</span></span>  
+ <span data-ttu-id="8bef1-117">此示例使用 <xref:System.Linq.Enumerable.Count%2A> 返回联系人 ID 的列表及每个联系人 ID 的订单数。</span><span class="sxs-lookup"><span data-stu-id="8bef1-117">This example uses <xref:System.Linq.Enumerable.Count%2A> to return a list of contact IDs and how many orders each has.</span></span>  
   
  [!code-csharp[DP LINQ to DataSet Examples#CountNested](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/CS/Program.cs#countnested)]
  [!code-vb[DP LINQ to DataSet Examples#CountNested](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/VB/Module1.vb#countnested)]  
   
-### <a name="example"></a><span data-ttu-id="bbf34-118">示例</span><span class="sxs-lookup"><span data-stu-id="bbf34-118">Example</span></span>  
- <span data-ttu-id="bbf34-119">此示例按颜色对产品分组并使用 <xref:System.Linq.Enumerable.Count%2A> 返回每个颜色组中的产品数目。</span><span class="sxs-lookup"><span data-stu-id="bbf34-119">This example groups products by color and uses <xref:System.Linq.Enumerable.Count%2A> to return the number of products in each color group.</span></span>  
+### <a name="example"></a><span data-ttu-id="8bef1-118">示例</span><span class="sxs-lookup"><span data-stu-id="8bef1-118">Example</span></span>  
+ <span data-ttu-id="8bef1-119">此示例按颜色对产品分组并使用 <xref:System.Linq.Enumerable.Count%2A> 返回每个颜色组中的产品数目。</span><span class="sxs-lookup"><span data-stu-id="8bef1-119">This example groups products by color and uses <xref:System.Linq.Enumerable.Count%2A> to return the number of products in each color group.</span></span>  
   
  [!code-csharp[DP LINQ to DataSet Examples#CountGrouped](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/CS/Program.cs#countgrouped)]
  [!code-vb[DP LINQ to DataSet Examples#CountGrouped](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/VB/Module1.vb#countgrouped)]  
   
-## <a name="max"></a><span data-ttu-id="bbf34-120">最大值</span><span class="sxs-lookup"><span data-stu-id="bbf34-120">Max</span></span>  
+## <a name="max"></a><span data-ttu-id="8bef1-120">最大值</span><span class="sxs-lookup"><span data-stu-id="8bef1-120">Max</span></span>  
   
-### <a name="example"></a><span data-ttu-id="bbf34-121">示例</span><span class="sxs-lookup"><span data-stu-id="bbf34-121">Example</span></span>  
- <span data-ttu-id="bbf34-122">此示例使用 <xref:System.Linq.Enumerable.Max%2A> 方法获取每个联系人 ID 的最大总应付金额。</span><span class="sxs-lookup"><span data-stu-id="bbf34-122">This example uses the <xref:System.Linq.Enumerable.Max%2A> method to get the largest total due for each contact ID.</span></span>  
+### <a name="example"></a><span data-ttu-id="8bef1-121">示例</span><span class="sxs-lookup"><span data-stu-id="8bef1-121">Example</span></span>  
+ <span data-ttu-id="8bef1-122">此示例使用 <xref:System.Linq.Enumerable.Max%2A> 方法获取每个联系人 ID 的最大总应付金额。</span><span class="sxs-lookup"><span data-stu-id="8bef1-122">This example uses the <xref:System.Linq.Enumerable.Max%2A> method to get the largest total due for each contact ID.</span></span>  
   
  [!code-csharp[DP LINQ to DataSet Examples#MaxGrouped_MQ](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/CS/Program.cs#maxgrouped_mq)]
  [!code-vb[DP LINQ to DataSet Examples#MaxGrouped_MQ](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/VB/Module1.vb#maxgrouped_mq)]  
   
-### <a name="example"></a><span data-ttu-id="bbf34-123">示例</span><span class="sxs-lookup"><span data-stu-id="bbf34-123">Example</span></span>  
- <span data-ttu-id="bbf34-124">此示例使用 <xref:System.Linq.Enumerable.Max%2A> 方法获取每个联系人 ID 的具有最大 `TotalDue` 的订单。</span><span class="sxs-lookup"><span data-stu-id="bbf34-124">This example uses the <xref:System.Linq.Enumerable.Max%2A> method to get the orders with the largest `TotalDue` for each contact ID.</span></span>  
+### <a name="example"></a><span data-ttu-id="8bef1-123">示例</span><span class="sxs-lookup"><span data-stu-id="8bef1-123">Example</span></span>  
+ <span data-ttu-id="8bef1-124">此示例使用 <xref:System.Linq.Enumerable.Max%2A> 方法获取每个联系人 ID 的具有最大 `TotalDue` 的订单。</span><span class="sxs-lookup"><span data-stu-id="8bef1-124">This example uses the <xref:System.Linq.Enumerable.Max%2A> method to get the orders with the largest `TotalDue` for each contact ID.</span></span>  
   
  [!code-csharp[DP LINQ to DataSet Examples#MaxElements_MQ](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/CS/Program.cs#maxelements_mq)]
  [!code-vb[DP LINQ to DataSet Examples#MaxElements_MQ](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/VB/Module1.vb#maxelements_mq)]  
   
-## <a name="min"></a><span data-ttu-id="bbf34-125">最小值</span><span class="sxs-lookup"><span data-stu-id="bbf34-125">Min</span></span>  
+## <a name="min"></a><span data-ttu-id="8bef1-125">最小值</span><span class="sxs-lookup"><span data-stu-id="8bef1-125">Min</span></span>  
   
-### <a name="example"></a><span data-ttu-id="bbf34-126">示例</span><span class="sxs-lookup"><span data-stu-id="bbf34-126">Example</span></span>  
- <span data-ttu-id="bbf34-127">此示例使用 <xref:System.Linq.Enumerable.Min%2A> 方法获取每个联系人 ID 的最小总应付金额。</span><span class="sxs-lookup"><span data-stu-id="bbf34-127">This example uses the <xref:System.Linq.Enumerable.Min%2A> method to get the smallest total due for each contact ID.</span></span>  
+### <a name="example"></a><span data-ttu-id="8bef1-126">示例</span><span class="sxs-lookup"><span data-stu-id="8bef1-126">Example</span></span>  
+ <span data-ttu-id="8bef1-127">此示例使用 <xref:System.Linq.Enumerable.Min%2A> 方法获取每个联系人 ID 的最小总应付金额。</span><span class="sxs-lookup"><span data-stu-id="8bef1-127">This example uses the <xref:System.Linq.Enumerable.Min%2A> method to get the smallest total due for each contact ID.</span></span>  
   
  [!code-csharp[DP LINQ to DataSet Examples#MinGrouped_MQ](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/CS/Program.cs#mingrouped_mq)]
  [!code-vb[DP LINQ to DataSet Examples#MinGrouped_MQ](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/VB/Module1.vb#mingrouped_mq)]  
   
-### <a name="example"></a><span data-ttu-id="bbf34-128">示例</span><span class="sxs-lookup"><span data-stu-id="bbf34-128">Example</span></span>  
- <span data-ttu-id="bbf34-129">此示例使用 <xref:System.Linq.Enumerable.Min%2A> 方法获取每个联系人的具有最小总应付金额的订单。</span><span class="sxs-lookup"><span data-stu-id="bbf34-129">This example uses the <xref:System.Linq.Enumerable.Min%2A> method to get the orders with the smallest total due for each contact.</span></span>  
+### <a name="example"></a><span data-ttu-id="8bef1-128">示例</span><span class="sxs-lookup"><span data-stu-id="8bef1-128">Example</span></span>  
+ <span data-ttu-id="8bef1-129">此示例使用 <xref:System.Linq.Enumerable.Min%2A> 方法获取每个联系人的具有最小总应付金额的订单。</span><span class="sxs-lookup"><span data-stu-id="8bef1-129">This example uses the <xref:System.Linq.Enumerable.Min%2A> method to get the orders with the smallest total due for each contact.</span></span>  
   
  [!code-csharp[DP LINQ to DataSet Examples#MinElements_MQ](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/CS/Program.cs#minelements_mq)]
  [!code-vb[DP LINQ to DataSet Examples#MinElements_MQ](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/VB/Module1.vb#minelements_mq)]  
   
-## <a name="sum"></a><span data-ttu-id="bbf34-130">Sum</span><span class="sxs-lookup"><span data-stu-id="bbf34-130">Sum</span></span>  
+## <a name="sum"></a><span data-ttu-id="8bef1-130">Sum</span><span class="sxs-lookup"><span data-stu-id="8bef1-130">Sum</span></span>  
   
-### <a name="example"></a><span data-ttu-id="bbf34-131">示例</span><span class="sxs-lookup"><span data-stu-id="bbf34-131">Example</span></span>  
- <span data-ttu-id="bbf34-132">此示例使用 <xref:System.Linq.Enumerable.Sum%2A> 方法获取每个联系人 ID 的总应付金额。</span><span class="sxs-lookup"><span data-stu-id="bbf34-132">This example uses the <xref:System.Linq.Enumerable.Sum%2A> method to get the total due for each contact ID.</span></span>  
+### <a name="example"></a><span data-ttu-id="8bef1-131">示例</span><span class="sxs-lookup"><span data-stu-id="8bef1-131">Example</span></span>  
+ <span data-ttu-id="8bef1-132">此示例使用 <xref:System.Linq.Enumerable.Sum%2A> 方法获取每个联系人 ID 的总应付金额。</span><span class="sxs-lookup"><span data-stu-id="8bef1-132">This example uses the <xref:System.Linq.Enumerable.Sum%2A> method to get the total due for each contact ID.</span></span>  
   
  [!code-csharp[DP LINQ to DataSet Examples#SumGrouped_MQ](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/CS/Program.cs#sumgrouped_mq)]
  [!code-vb[DP LINQ to DataSet Examples#SumGrouped_MQ](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/VB/Module1.vb#sumgrouped_mq)]  
   
-## <a name="see-also"></a><span data-ttu-id="bbf34-133">请参阅</span><span class="sxs-lookup"><span data-stu-id="bbf34-133">See Also</span></span>  
- [<span data-ttu-id="bbf34-134">将数据加载到数据集中</span><span class="sxs-lookup"><span data-stu-id="bbf34-134">Loading Data Into a DataSet</span></span>](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md)  
- [<span data-ttu-id="bbf34-135">LINQ to DataSet 示例</span><span class="sxs-lookup"><span data-stu-id="bbf34-135">LINQ to DataSet Examples</span></span>](../../../../docs/framework/data/adonet/linq-to-dataset-examples.md)  
- [<span data-ttu-id="bbf34-136">标准查询运算符概述</span><span class="sxs-lookup"><span data-stu-id="bbf34-136">Standard Query Operators Overview</span></span>](http://msdn.microsoft.com/library/24cda21e-8af8-4632-b519-c404a839b9b2)
+## <a name="see-also"></a><span data-ttu-id="8bef1-133">请参阅</span><span class="sxs-lookup"><span data-stu-id="8bef1-133">See Also</span></span>  
+ [<span data-ttu-id="8bef1-134">将数据加载到数据集中</span><span class="sxs-lookup"><span data-stu-id="8bef1-134">Loading Data Into a DataSet</span></span>](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md)  
+ [<span data-ttu-id="8bef1-135">LINQ to DataSet 示例</span><span class="sxs-lookup"><span data-stu-id="8bef1-135">LINQ to DataSet Examples</span></span>](../../../../docs/framework/data/adonet/linq-to-dataset-examples.md)  
+ [<span data-ttu-id="8bef1-136">标准查询运算符概述</span><span class="sxs-lookup"><span data-stu-id="8bef1-136">Standard Query Operators Overview</span></span>](https://msdn.microsoft.com/library/24cda21e-8af8-4632-b519-c404a839b9b2)

@@ -7,32 +7,32 @@ helpviewer_keywords:
 - controls [WPF], TextBox
 - TextBox control [WPF], how-to topics
 ms.assetid: 006aa461-fe37-4cd8-860a-d38d76e8b9f7
-ms.openlocfilehash: 9e43e5661d3e6b559a1f9c9acb52313ff0a37e31
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2319ea8522a90705cf65006ffb368801921cda57
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33555758"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43397522"
 ---
-# <a name="textbox-how-to-topics"></a><span data-ttu-id="1c25a-102">TextBox 帮助主题</span><span class="sxs-lookup"><span data-stu-id="1c25a-102">TextBox How-to Topics</span></span>
-<span data-ttu-id="1c25a-103">本节提供演示如何完成使用的常见任务的示例<xref:System.Windows.Controls.TextBox>控件。</span><span class="sxs-lookup"><span data-stu-id="1c25a-103">This section provides examples that demonstrate how to accomplish common tasks using the <xref:System.Windows.Controls.TextBox> control.</span></span>  
+# <a name="textbox-how-to-topics"></a><span data-ttu-id="a3e89-102">TextBox 帮助主题</span><span class="sxs-lookup"><span data-stu-id="a3e89-102">TextBox How-to Topics</span></span>
+<span data-ttu-id="a3e89-103">本部分提供示例来演示如何完成常见任务使用<xref:System.Windows.Controls.TextBox>控件。</span><span class="sxs-lookup"><span data-stu-id="a3e89-103">This section provides examples that demonstrate how to accomplish common tasks using the <xref:System.Windows.Controls.TextBox> control.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="1c25a-104">本节内容</span><span class="sxs-lookup"><span data-stu-id="1c25a-104">In This Section</span></span>  
- [<span data-ttu-id="1c25a-105">创建多行 TextBox 控件</span><span class="sxs-lookup"><span data-stu-id="1c25a-105">Create a Multiline TextBox Control</span></span>](../../../../docs/framework/wpf/controls/how-to-create-a-multiline-textbox-control.md)  
- [<span data-ttu-id="1c25a-106">检测 TextBox 中的文本何时更改</span><span class="sxs-lookup"><span data-stu-id="1c25a-106">Detect When Text in a TextBox Has Changed</span></span>](../../../../docs/framework/wpf/controls/how-to-detect-when-text-in-a-textbox-has-changed.md)  
- [<span data-ttu-id="1c25a-107">在 TextBox 控件中启用制表符</span><span class="sxs-lookup"><span data-stu-id="1c25a-107">Enable Tab Characters in a TextBox Control</span></span>](../../../../docs/framework/wpf/controls/how-to-enable-tab-characters-in-a-textbox-control.md)  
- [<span data-ttu-id="1c25a-108">从 TextBox 获取一系列文本行</span><span class="sxs-lookup"><span data-stu-id="1c25a-108">Get a Collection of Lines from a TextBox</span></span>](../../../../docs/framework/wpf/controls/how-to-get-a-collection-of-lines-from-a-textbox.md)  
- [<span data-ttu-id="1c25a-109">将 TextBox 控件设为只读</span><span class="sxs-lookup"><span data-stu-id="1c25a-109">Make a TextBox Control Read-Only</span></span>](../../../../docs/framework/wpf/controls/how-to-make-a-textbox-control-read-only.md)  
- [<span data-ttu-id="1c25a-110">将光标置于 TextBox 控件中文本的开头或结尾</span><span class="sxs-lookup"><span data-stu-id="1c25a-110">Position the Cursor at the Beginning or End of Text in a TextBox Control</span></span>](../../../../docs/framework/wpf/controls/position-the-cursor-at-the-beginning-or-end-of-text.md)  
- [<span data-ttu-id="1c25a-111">检索选定文本内容</span><span class="sxs-lookup"><span data-stu-id="1c25a-111">Retrieve a Text Selection</span></span>](../../../../docs/framework/wpf/controls/how-to-retrieve-a-text-selection.md)  
- [<span data-ttu-id="1c25a-112">在 TextBox 控件中设置焦点</span><span class="sxs-lookup"><span data-stu-id="1c25a-112">Set Focus in a TextBox Control</span></span>](../../../../docs/framework/wpf/controls/how-to-set-focus-in-a-textbox-control.md)  
- [<span data-ttu-id="1c25a-113">设置 TextBox 控件的文本内容</span><span class="sxs-lookup"><span data-stu-id="1c25a-113">Set the Text Content of a TextBox Control</span></span>](../../../../docs/framework/wpf/controls/how-to-set-the-text-content-of-a-textbox-control.md)  
- [<span data-ttu-id="1c25a-114">在文本编辑控件中启用拼写检查</span><span class="sxs-lookup"><span data-stu-id="1c25a-114">Enable Spell Checking in a Text Editing Control</span></span>](../../../../docs/framework/wpf/controls/how-to-enable-spell-checking-in-a-text-editing-control.md)  
- [<span data-ttu-id="1c25a-115">将自定义上下文菜单与 TextBox 结合使用</span><span class="sxs-lookup"><span data-stu-id="1c25a-115">Use a Custom Context Menu with a TextBox</span></span>](../../../../docs/framework/wpf/controls/how-to-use-a-custom-context-menu-with-a-textbox.md)  
- [<span data-ttu-id="1c25a-116">将拼写检查功能与上下文菜单结合使用</span><span class="sxs-lookup"><span data-stu-id="1c25a-116">Use Spell Checking with a Context Menu</span></span>](../../../../docs/framework/wpf/controls/how-to-use-spell-checking-with-a-context-menu.md)  
- [<span data-ttu-id="1c25a-117">向 TextBox 添加水印</span><span class="sxs-lookup"><span data-stu-id="1c25a-117">Add a Watermark to a TextBox</span></span>](../../../../docs/framework/wpf/controls/how-to-add-a-watermark-to-a-textbox.md)  
+## <a name="in-this-section"></a><span data-ttu-id="a3e89-104">本节内容</span><span class="sxs-lookup"><span data-stu-id="a3e89-104">In This Section</span></span>  
+ [<span data-ttu-id="a3e89-105">创建多行 TextBox 控件</span><span class="sxs-lookup"><span data-stu-id="a3e89-105">Create a Multiline TextBox Control</span></span>](../../../../docs/framework/wpf/controls/how-to-create-a-multiline-textbox-control.md)  
+ [<span data-ttu-id="a3e89-106">检测 TextBox 中的文本何时更改</span><span class="sxs-lookup"><span data-stu-id="a3e89-106">Detect When Text in a TextBox Has Changed</span></span>](../../../../docs/framework/wpf/controls/how-to-detect-when-text-in-a-textbox-has-changed.md)  
+ [<span data-ttu-id="a3e89-107">在 TextBox 控件中启用制表符</span><span class="sxs-lookup"><span data-stu-id="a3e89-107">Enable Tab Characters in a TextBox Control</span></span>](../../../../docs/framework/wpf/controls/how-to-enable-tab-characters-in-a-textbox-control.md)  
+ [<span data-ttu-id="a3e89-108">从 TextBox 获取一系列文本行</span><span class="sxs-lookup"><span data-stu-id="a3e89-108">Get a Collection of Lines from a TextBox</span></span>](../../../../docs/framework/wpf/controls/how-to-get-a-collection-of-lines-from-a-textbox.md)  
+ [<span data-ttu-id="a3e89-109">将 TextBox 控件设为只读</span><span class="sxs-lookup"><span data-stu-id="a3e89-109">Make a TextBox Control Read-Only</span></span>](../../../../docs/framework/wpf/controls/how-to-make-a-textbox-control-read-only.md)  
+ [<span data-ttu-id="a3e89-110">将光标置于 TextBox 控件中文本的开头或结尾</span><span class="sxs-lookup"><span data-stu-id="a3e89-110">Position the Cursor at the Beginning or End of Text in a TextBox Control</span></span>](../../../../docs/framework/wpf/controls/position-the-cursor-at-the-beginning-or-end-of-text.md)  
+ [<span data-ttu-id="a3e89-111">检索选定文本内容</span><span class="sxs-lookup"><span data-stu-id="a3e89-111">Retrieve a Text Selection</span></span>](../../../../docs/framework/wpf/controls/how-to-retrieve-a-text-selection.md)  
+ [<span data-ttu-id="a3e89-112">在 TextBox 控件中设置焦点</span><span class="sxs-lookup"><span data-stu-id="a3e89-112">Set Focus in a TextBox Control</span></span>](../../../../docs/framework/wpf/controls/how-to-set-focus-in-a-textbox-control.md)  
+ [<span data-ttu-id="a3e89-113">设置 TextBox 控件的文本内容</span><span class="sxs-lookup"><span data-stu-id="a3e89-113">Set the Text Content of a TextBox Control</span></span>](../../../../docs/framework/wpf/controls/how-to-set-the-text-content-of-a-textbox-control.md)  
+ [<span data-ttu-id="a3e89-114">在文本编辑控件中启用拼写检查</span><span class="sxs-lookup"><span data-stu-id="a3e89-114">Enable Spell Checking in a Text Editing Control</span></span>](../../../../docs/framework/wpf/controls/how-to-enable-spell-checking-in-a-text-editing-control.md)  
+ [<span data-ttu-id="a3e89-115">将自定义上下文菜单与 TextBox 结合使用</span><span class="sxs-lookup"><span data-stu-id="a3e89-115">Use a Custom Context Menu with a TextBox</span></span>](../../../../docs/framework/wpf/controls/how-to-use-a-custom-context-menu-with-a-textbox.md)  
+ [<span data-ttu-id="a3e89-116">将拼写检查功能与上下文菜单结合使用</span><span class="sxs-lookup"><span data-stu-id="a3e89-116">Use Spell Checking with a Context Menu</span></span>](../../../../docs/framework/wpf/controls/how-to-use-spell-checking-with-a-context-menu.md)  
+ [<span data-ttu-id="a3e89-117">向 TextBox 添加水印</span><span class="sxs-lookup"><span data-stu-id="a3e89-117">Add a Watermark to a TextBox</span></span>](../../../../docs/framework/wpf/controls/how-to-add-a-watermark-to-a-textbox.md)  
   
-## <a name="reference"></a><span data-ttu-id="1c25a-118">参考</span><span class="sxs-lookup"><span data-stu-id="1c25a-118">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="a3e89-118">参考</span><span class="sxs-lookup"><span data-stu-id="a3e89-118">Reference</span></span>  
  <xref:System.Windows.Controls.TextBox>  
   
  <xref:System.Windows.Controls.RichTextBox>  
@@ -41,6 +41,6 @@ ms.locfileid: "33555758"
   
  <xref:System.Windows.Controls.PasswordBox>  
   
-## <a name="see-also"></a><span data-ttu-id="1c25a-119">请参阅</span><span class="sxs-lookup"><span data-stu-id="1c25a-119">See Also</span></span>  
- [<span data-ttu-id="1c25a-120">WPF 控件库示例</span><span class="sxs-lookup"><span data-stu-id="1c25a-120">WPF Controls Gallery Sample</span></span>](http://go.microsoft.com/fwlink/?LinkID=160053)  
- [<span data-ttu-id="1c25a-121">TextBox 样式和模板</span><span class="sxs-lookup"><span data-stu-id="1c25a-121">TextBox Styles and Templates</span></span>](../../../../docs/framework/wpf/controls/textbox-styles-and-templates.md)
+## <a name="see-also"></a><span data-ttu-id="a3e89-119">请参阅</span><span class="sxs-lookup"><span data-stu-id="a3e89-119">See Also</span></span>  
+ [<span data-ttu-id="a3e89-120">WPF 控件库示例</span><span class="sxs-lookup"><span data-stu-id="a3e89-120">WPF Controls Gallery Sample</span></span>](https://go.microsoft.com/fwlink/?LinkID=160053)  
+ [<span data-ttu-id="a3e89-121">TextBox 样式和模板</span><span class="sxs-lookup"><span data-stu-id="a3e89-121">TextBox Styles and Templates</span></span>](../../../../docs/framework/wpf/controls/textbox-styles-and-templates.md)

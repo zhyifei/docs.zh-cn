@@ -11,27 +11,27 @@ ms.assetid: b51206f2-1281-4ad0-9820-ea39d88ae577
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: 6f26e547ba7dac824dbfdaaac01f54a40ef4ba8f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 31dacad6b2b7c891ff8c32151f9bf02e8639375f
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33406404"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43396359"
 ---
-# <a name="ui-automation-text-pattern"></a><span data-ttu-id="b369f-102">UI 自动化文本模式</span><span class="sxs-lookup"><span data-stu-id="b369f-102">UI Automation Text Pattern</span></span>
+# <a name="ui-automation-text-pattern"></a><span data-ttu-id="58a75-102">UI 自动化文本模式</span><span class="sxs-lookup"><span data-stu-id="58a75-102">UI Automation Text Pattern</span></span>
 > [!NOTE]
->  <span data-ttu-id="b369f-103">本文档适用于想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空间中定义的托管 <xref:System.Windows.Automation> 类的 .NET Framework 开发人员。</span><span class="sxs-lookup"><span data-stu-id="b369f-103">This documentation is intended for .NET Framework developers who want to use the managed [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] classes defined in the <xref:System.Windows.Automation> namespace.</span></span> <span data-ttu-id="b369f-104">有关 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]的最新信息，请参阅 [Windows 自动化 API：UI 自动化](http://go.microsoft.com/fwlink/?LinkID=156746)。</span><span class="sxs-lookup"><span data-stu-id="b369f-104">For the latest information about [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], see [Windows Automation API: UI Automation](http://go.microsoft.com/fwlink/?LinkID=156746).</span></span>  
+>  <span data-ttu-id="58a75-103">本文档适用于想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空间中定义的托管 <xref:System.Windows.Automation> 类的 .NET Framework 开发人员。</span><span class="sxs-lookup"><span data-stu-id="58a75-103">This documentation is intended for .NET Framework developers who want to use the managed [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] classes defined in the <xref:System.Windows.Automation> namespace.</span></span> <span data-ttu-id="58a75-104">有关最新信息[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]，请参阅[Windows 自动化 API: UI 自动化](https://go.microsoft.com/fwlink/?LinkID=156746)。</span><span class="sxs-lookup"><span data-stu-id="58a75-104">For the latest information about [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], see [Windows Automation API: UI Automation](https://go.microsoft.com/fwlink/?LinkID=156746).</span></span>  
   
- <span data-ttu-id="b369f-105">本主题包含概述和操作指南主题来帮助你开始在编程中的文本元素[!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)]。</span><span class="sxs-lookup"><span data-stu-id="b369f-105">This topic contains overviews and how-to topics to help you get started in programming for text elements in [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)].</span></span>  
+ <span data-ttu-id="58a75-105">本主题包含概述和操作指南主题来帮助你开始在编程中的文本元素[!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)]。</span><span class="sxs-lookup"><span data-stu-id="58a75-105">This topic contains overviews and how-to topics to help you get started in programming for text elements in [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)].</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="b369f-106">本节内容</span><span class="sxs-lookup"><span data-stu-id="b369f-106">In This Section</span></span>  
- [<span data-ttu-id="b369f-107">UI 自动化 TextPattern 概述</span><span class="sxs-lookup"><span data-stu-id="b369f-107">UI Automation TextPattern Overview</span></span>](../../../docs/framework/ui-automation/ui-automation-textpattern-overview.md)  
- [<span data-ttu-id="b369f-108">TextPattern 和嵌入式对象概述</span><span class="sxs-lookup"><span data-stu-id="b369f-108">TextPattern and Embedded Objects Overview</span></span>](../../../docs/framework/ui-automation/textpattern-and-embedded-objects-overview.md)  
- [<span data-ttu-id="b369f-109">帮助主题</span><span class="sxs-lookup"><span data-stu-id="b369f-109">How-to Topics</span></span>](../../../docs/framework/ui-automation/ui-automation-text-pattern-how-to-topics.md)  
+## <a name="in-this-section"></a><span data-ttu-id="58a75-106">本节内容</span><span class="sxs-lookup"><span data-stu-id="58a75-106">In This Section</span></span>  
+ [<span data-ttu-id="58a75-107">UI 自动化 TextPattern 概述</span><span class="sxs-lookup"><span data-stu-id="58a75-107">UI Automation TextPattern Overview</span></span>](../../../docs/framework/ui-automation/ui-automation-textpattern-overview.md)  
+ [<span data-ttu-id="58a75-108">TextPattern 和嵌入式对象概述</span><span class="sxs-lookup"><span data-stu-id="58a75-108">TextPattern and Embedded Objects Overview</span></span>](../../../docs/framework/ui-automation/textpattern-and-embedded-objects-overview.md)  
+ [<span data-ttu-id="58a75-109">帮助主题</span><span class="sxs-lookup"><span data-stu-id="58a75-109">How-to Topics</span></span>](../../../docs/framework/ui-automation/ui-automation-text-pattern-how-to-topics.md)  
   
-## <a name="reference"></a><span data-ttu-id="b369f-110">参考</span><span class="sxs-lookup"><span data-stu-id="b369f-110">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="58a75-110">参考</span><span class="sxs-lookup"><span data-stu-id="58a75-110">Reference</span></span>  
  <xref:System.Windows.Automation.Text>  
   
-## <a name="see-also"></a><span data-ttu-id="b369f-111">请参阅</span><span class="sxs-lookup"><span data-stu-id="b369f-111">See Also</span></span>  
- [<span data-ttu-id="b369f-112">UI 自动化控件模式</span><span class="sxs-lookup"><span data-stu-id="b369f-112">UI Automation Control Patterns</span></span>](../../../docs/framework/ui-automation/ui-automation-control-patterns.md)  
- [<span data-ttu-id="b369f-113">客户端的 UI 自动化控件模式</span><span class="sxs-lookup"><span data-stu-id="b369f-113">UI Automation Control Patterns for Clients</span></span>](../../../docs/framework/ui-automation/ui-automation-control-patterns-for-clients.md)
+## <a name="see-also"></a><span data-ttu-id="58a75-111">请参阅</span><span class="sxs-lookup"><span data-stu-id="58a75-111">See Also</span></span>  
+ [<span data-ttu-id="58a75-112">UI 自动化控件模式</span><span class="sxs-lookup"><span data-stu-id="58a75-112">UI Automation Control Patterns</span></span>](../../../docs/framework/ui-automation/ui-automation-control-patterns.md)  
+ [<span data-ttu-id="58a75-113">客户端的 UI 自动化控件模式</span><span class="sxs-lookup"><span data-stu-id="58a75-113">UI Automation Control Patterns for Clients</span></span>](../../../docs/framework/ui-automation/ui-automation-control-patterns-for-clients.md)
