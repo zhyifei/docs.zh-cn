@@ -10,11 +10,11 @@ ms.assetid: a2ca532d-91f7-426a-9303-417c2ee1247c
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 208dc3048b52cc895a5142a7686829390d1d4503
-ms.sourcegitcommit: a368166a51e5204c0224fbf5e46476e3ed122817
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/31/2018
-ms.locfileid: "43332515"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43468173"
 ---
 # <a name="net-framework-tools"></a>.NET Framework 工具
 您可以使用 .NET Framework 工具轻松创建、部署和管理面向 .NET Framework 的应用程序和组件。  
