@@ -5,12 +5,12 @@ author: mlacouture
 ms.author: johalex
 ms.date: 01/19/2018
 ms.custom: mvc
-ms.openlocfilehash: 5f744fd63116ac453a2a7db8eb94f12738c95f21
-ms.sourcegitcommit: c217b067985905cb21eafc5dd9a83568d7ff4e45
+ms.openlocfilehash: ba63ef6cdc092d06e267637112070e7cd5133a45
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/22/2018
-ms.locfileid: "36315194"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43456378"
 ---
 # <a name="net-core-additional-tools"></a>其他 .NET Core 工具
 
@@ -22,8 +22,8 @@ WCF (Windows Communication Foundation) Web 服务引用是一个 Visual Studio �
 
 ## <a name="wcf-dotnet-svcutil-tooldotnet-svcutil-guidemd"></a>[WCF dotnet-svcutil 工具](dotnet-svcutil-guide.md)
 
-WCF (Windows Communication Foundation) dotnet-svcutil 工具是一种 .NET Core CLI 工具，此工具从网络位置上的 Web 服务中或从 WSDL 文件中检索元数据，并生成与 .NET Core 兼容的源文件，此文件通过可用于访问 Web 服务操作的方法定义了 WCF 代理类。 dotnet-svcutil 工具是 [WCF Web 服务引用](/dotnet/core/additional-tools/wcf-web-service-reference-guide) Visual Studio 连接服务提供程序（随 Visual Studio 2017 v15.5 首次推出）的替代选项。 dotnet-svcutil 工具作为一种 .NET Core CLI 工具，可跨平台地用于 Linux、macOS 和 Windows。
+WCF (Windows Communication Foundation) dotnet-svcutil 工具是一种 .NET Core CLI 工具，此工具从网络位置上的 Web 服务中或从 WSDL 文件中检索元数据，并生成与 .NET Core 兼容的源文件，此文件通过可用于访问 Web 服务操作的方法定义了 WCF 代理类。 dotnet-svcutil 工具是 [WCF Web 服务引用](wcf-web-service-reference-guide.md) Visual Studio 连接服务提供程序（随 Visual Studio 2017 v15.5 首次推出）的替代选项。 dotnet-svcutil 工具作为一种 .NET Core CLI 工具，可跨平台地用于 Linux、macOS 和 Windows。
 
 ## <a name="xml-serializer-generatorxml-serializer-generatormd"></a>[XML 序列化程序生成器](xml-serializer-generator.md)
 
-正如 [Xml Serializer Generator (sgen.exe)](../../standard/serialization/xml-serializer-generator-tool-sgen-exe.md) 适用于 .NET Framework，[Microsoft.XmlSerializer.Generator NuGet 包](https://www.nuget.org/packages/Microsoft.XmlSerializer.Generator) 是适用于 .NET Core 和 .NET Standard 库的解决方案。 它为程序集中包含的类型创建 XML 序列化程序集，从而提高使用 <xref:System.Xml.Serialization.XmlSerializer> 序列化或反序列化这些类型对象时，XML 序列化的启动性能。
+正如 [Xml Serializer Generator (sgen.exe)](../../standard/serialization/xml-serializer-generator-tool-sgen-exe.md) 适用于 .NET Framework，[Microsoft.XmlSerializer.Generator NuGet 包](https://www.nuget.org/packages/Microsoft.XmlSerializer.Generator) 是适用于 .NET Core 和 .NET 标准库的解决方案。 它为程序集中包含的类型创建 XML 序列化程序集，从而提高使用 <xref:System.Xml.Serialization.XmlSerializer> 序列化或反序列化这些类型对象时，XML 序列化的启动性能。

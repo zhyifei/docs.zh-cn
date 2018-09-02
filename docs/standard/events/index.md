@@ -13,11 +13,11 @@ ms.assetid: b6f65241-e0ad-4590-a99f-200ce741bb1f
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 623700161ae4587daeb2c7348055d413512f7c87
-ms.sourcegitcommit: a1e35d4e94edab384a63406c0a5438306873031b
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/21/2018
-ms.locfileid: "42907774"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43452737"
 ---
 # <a name="handling-and-raising-events"></a>处理和引发事件
 .NET Framework 中的事件基于委托模型。 委托模型遵守观察者设计模式，使订阅者能够向提供方注册并接收相关通知。 事件发送方推送事件发生的通知，事件接收器接收该通知并定义对它的响应。 本文介绍委托模型的主要组件、如何在应用程序中使用事件以及如何在你的代码中实现事件。  
