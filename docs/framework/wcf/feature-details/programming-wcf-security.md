@@ -9,25 +9,25 @@ helpviewer_keywords:
 ms.assetid: 739ec222-4eda-4cc9-a470-67e64a7a3f10
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: 3eb645dcc5b8cc1c52818e290699ebadcd0943c6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1a58260ecf5a4126554c23f1a5f8d7b3ba43f215
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33495734"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43417745"
 ---
 # <a name="programming-wcf-security"></a>WCF 安全编程
-本主题介绍用于创建安全的 Windows Communication Foundation (WCF) 应用程序的基本编程任务。 本主题介绍身份验证、 保密性和完整性，统称为*传输安全*。 本主题不涉及授权 （资源或服务的访问控制）;有关授权的信息，请参阅[授权](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md)。  
+本主题介绍用于创建安全的 Windows Communication Foundation (WCF) 应用程序的基本编程任务。 本主题介绍身份验证、 保密性和完整性，统称为*传输安全*。 本主题不讨论授权 （资源或服务的访问控制）;有关授权的信息，请参阅[授权](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md)。  
   
 > [!NOTE]
->  有关安全性的基础概念，尤其是与 WCF，有关的有价值介绍在 MSDN 上查看的模式和实践教程集[方案、 模式和实施指导原则的 Web Services Enhancements (WSE) 3.0](http://go.microsoft.com/fwlink/?LinkID=88250)。  
+>  有关安全概念，尤其是关于 WCF 的有价值介绍在 MSDN 上看到的模式和实践教程组[方案、 模式和实施指南的 Web Services Enhancements (WSE) 3.0](https://go.microsoft.com/fwlink/?LinkID=88250)。  
   
- WCF 安全编程基于三个步骤，设置以下： 安全模式、 客户端凭据类型和凭据值。 可以通过代码或配置执行这些步骤。  
+ WCF 安全编程基于三个步骤设置以下： 安全模式、 客户端凭据类型和凭据值。 可以通过代码或配置执行这些步骤。  
   
 ## <a name="setting-the-security-mode"></a>设置安全模式  
- 以下说明在 WCF 中的安全模式编程的常规步骤：  
+ 下面解释了使用 WCF 中的安全模式进行编程的常规步骤：  
   
-1.  选择一个适合于应用程序需求的预定义绑定。 绑定选项列表，请参阅[系统提供的绑定](../../../../docs/framework/wcf/system-provided-bindings.md)。 默认情况下，几乎每个绑定都启用了安全。 一个例外是<xref:System.ServiceModel.BasicHttpBinding>类 (使用配置则[ \<basicHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md))。  
+1.  选择一个适合于应用程序需求的预定义绑定。 有关绑定选择的列表，请参阅[System-Provided Bindings](../../../../docs/framework/wcf/system-provided-bindings.md)。 默认情况下，几乎每个绑定都启用了安全。 是一个例外<xref:System.ServiceModel.BasicHttpBinding>类 (使用配置中， [ \<basicHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md))。  
   
      所选的绑定确定了传输协议。 例如，<xref:System.ServiceModel.WSHttpBinding> 使用 HTTP 传输协议；而 <xref:System.ServiceModel.NetTcpBinding> 使用 TCP 传输协议。  
   
@@ -37,7 +37,7 @@ ms.locfileid: "33495734"
   
     1.  `Transport`  
   
-         传输安全取决于所选绑定使用的机制。 例如，如果要使用 `WSHttpBinding`，则安全机制是安全套接字层 (SSL)（它也是 HTTPS 协议的机制）。 一般说来，传输安全的主要优点是它提供了较高的吞吐量，而无论您使用哪种传输协议。 但是，它确实具有两个限制：第一个限制是传输机制指示了用于对用户进行身份验证的凭据类型。 只有当服务需要与其他要求不同类型凭据的服务交互操作时，这才是一个缺点。 第二个限制是，因为安全不是在消息级应用的，所以安全是逐个跃点实现的，而不是以端对端方式实现的。 只有当客户端和服务之间的消息路径包含中介时，后一个限制才会成为问题。 要使用的传输有关的详细信息，请参阅[选择传输](../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)。 有关使用传输安全的详细信息，请参阅[传输安全概述](../../../../docs/framework/wcf/feature-details/transport-security-overview.md)。  
+         传输安全取决于所选绑定使用的机制。 例如，如果要使用 `WSHttpBinding`，则安全机制是安全套接字层 (SSL)（它也是 HTTPS 协议的机制）。 一般说来，传输安全的主要优点是它提供了较高的吞吐量，而无论您使用哪种传输协议。 但是，它确实具有两个限制：第一个限制是传输机制指示了用于对用户进行身份验证的凭据类型。 只有当服务需要与其他要求不同类型凭据的服务交互操作时，这才是一个缺点。 第二个限制是，因为安全不是在消息级应用的，所以安全是逐个跃点实现的，而不是以端对端方式实现的。 只有当客户端和服务之间的消息路径包含中介时，后一个限制才会成为问题。 要使用的传输有关的详细信息，请参阅[选择传输](../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)。 有关使用传输安全性的详细信息，请参阅[传输安全概述](../../../../docs/framework/wcf/feature-details/transport-security-overview.md)。  
   
     2.  `Message`  
   
@@ -49,7 +49,7 @@ ms.locfileid: "33495734"
   
          此选择使用传输层来保证消息传输的安全，同时每个消息都包含其他服务需要的丰富凭据。 这便将传输安全的性能优点与消息安全的丰富凭据优点结合起来。 使用下列绑定可实现这一点：<xref:System.ServiceModel.BasicHttpBinding>、<xref:System.ServiceModel.WSFederationHttpBinding>、<xref:System.ServiceModel.NetPeerTcpBinding> 和 <xref:System.ServiceModel.WSHttpBinding>。  
   
-3.  如果决定对 HTTP 使用传输安全（即 HTTPS），还必须用 SSL 证书配置主机并且在端口上启用 SSL。 有关详细信息，请参阅[HTTP 传输安全](../../../../docs/framework/wcf/feature-details/http-transport-security.md)。  
+3.  如果决定对 HTTP 使用传输安全（即 HTTPS），还必须用 SSL 证书配置主机并且在端口上启用 SSL。 有关详细信息，请参阅[HTTP 传输安全性](../../../../docs/framework/wcf/feature-details/http-transport-security.md)。  
   
 4.  如果您要使用 <xref:System.ServiceModel.WSHttpBinding> 并且不需要建立安全会话，请将 <xref:System.ServiceModel.NonDualMessageSecurityOverHttp.EstablishSecurityContext%2A> 属性设置为 `false`。  
   

@@ -6,18 +6,18 @@ helpviewer_keywords:
 - Windows Communication Foundation [WCF], addresses
 - WCF [WCF], addresses
 ms.assetid: 13f269e3-ebb1-433c-86cf-54fbd866a627
-ms.openlocfilehash: a2815c7c63e9ba9615904028081956b138b1befa
-ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
+ms.openlocfilehash: cc81e7ad45c308f5ecf476641dfd65fe47b36098
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2018
-ms.locfileid: "42925473"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43404562"
 ---
 # <a name="endpoint-addresses"></a>终结点地址
 每个终结点都具有与其关联的地址，该地址用于查找和标识终结点。 此地址主要包括指定终结点位置的统一资源标识符 (URI)。 通过 Windows Communication Foundation (WCF) 编程模型中表示终结点地址<xref:System.ServiceModel.EndpointAddress>类，该类包含一个可选<xref:System.ServiceModel.EndpointAddress.Identity%2A>进行身份验证的其他终结点的终结点的属性，交换消息，以及一组可选<xref:System.ServiceModel.EndpointAddress.Headers%2A>属性，用于定义访问的服务所需的任何其他 SOAP 头。 可选头提供其他的更详细寻址信息以标识服务终结点或与之交互。 终结点的地址在网络上表示为 WS-Addressing 终结点引用 (EPR)。  
   
 ## <a name="uri-structure-of-an-address"></a>地址的 URI 结构  
- 大多数传输的地址 URI 包含四个部分。 例如，URI 的四个部分http://www.fabrikam.com:322/mathservice.svc/secureEndpoint可以详细列举了，如下所示：  
+ 大多数传输的地址 URI 包含四个部分。 例如，URI 的四个部分 http://www.fabrikam.com:322/mathservice.svc/secureEndpoint可以详细列举了，如下所示：  
   
 -   方案：http:  
   
@@ -75,7 +75,7 @@ ms.locfileid: "42925473"
 </system.serviceModel>  
 ```  
   
- 在前面的示例中，net.tcp://payroll.myorg.com: 8000 和http://shipping.myorg.com:8000是通过传递其各自方案的唯一基址。  
+ 在前面的示例中，net.tcp://payroll.myorg.com: 8000 和 http://shipping.myorg.com:8000是通过传递其各自方案的唯一基址。  
   
  `baseAddressPrefixFilter` 不支持通配符。  
   
@@ -119,7 +119,7 @@ ms.locfileid: "42925473"
   
 -   在代码中，通过使用 <xref:System.ServiceModel.Channels.AddressHeader> 类创建自定义地址头，然后在构造 <xref:System.ServiceModel.EndpointAddress> 时使用它。  
   
--   在配置中，自定义[\<标头 >](../../../../docs/framework/configure-apps/file-schema/wcf/headers.md)指定为的子级[\<终结点 >](http://msdn.microsoft.com/library/13aa23b7-2f08-4add-8dbf-a99f8127c017)元素。  
+-   在配置中，自定义[\<标头 >](../../../../docs/framework/configure-apps/file-schema/wcf/headers.md)指定为的子级[\<终结点 >](https://msdn.microsoft.com/library/13aa23b7-2f08-4add-8dbf-a99f8127c017)元素。  
   
  配置通常比代码更可取，因为它允许你在部署后更改头。  
   
@@ -130,7 +130,7 @@ ms.locfileid: "42925473"
   
 -   在代码中，通过将 <xref:System.ServiceModel.Description.ClientViaBehavior> 类添加到终结点的行为集合指定自定义侦听地址。  
   
--   在配置中，指定使用自定义侦听地址`ListenUri`服务的特性[\<终结点 >](http://msdn.microsoft.com/library/13aa23b7-2f08-4add-8dbf-a99f8127c017)元素。  
+-   在配置中，指定使用自定义侦听地址`ListenUri`服务的特性[\<终结点 >](https://msdn.microsoft.com/library/13aa23b7-2f08-4add-8dbf-a99f8127c017)元素。  
   
 ### <a name="custom-soap-address-filter"></a>自定义 SOAP 地址筛选器  
  <xref:System.ServiceModel.EndpointAddress.Uri%2A> 与任何 <xref:System.ServiceModel.EndpointAddress.Headers%2A> 属性联合使用，以定义终结点的 SOAP 地址筛选器 (<xref:System.ServiceModel.Dispatcher.EndpointDispatcher.AddressFilter%2A>)。 默认情况下，此筛选器验证传入消息是否具有与终结点的 URI 匹配的 `To` 消息头，以及所有必需的终结点头是否存在于消息中。  

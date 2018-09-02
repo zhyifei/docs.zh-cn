@@ -2,12 +2,12 @@
 title: SQLStoreExtensibility
 ms.date: 03/30/2017
 ms.assetid: 5da1b5a3-f144-41ba-b9c4-02818b28b15d
-ms.openlocfilehash: 37c83a9c1062fe074e41ec5db211fd513355c045
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f49d05244cf9f65a8e06f39c7e40391aaebd9f77
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33518481"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43408760"
 ---
 # <a name="sqlstoreextensibility"></a>SQLStoreExtensibility
 此示例演示了 SQL 工作流实例存储中的已提升属性的使用和配置。 SQL 工作流实例存储是基于 SQL 的实例存储实现。 利用此存储，实例可保存其状态，并将其状态加载到 SQL Server 或 SQL Server Express 数据库中以及从 SQL Server 或 SQL Server Express 数据库中加载其状态。 用户可使用存储扩展性功能来定义存储在示例存储中的属性。 这些属性显示在已提升属性视图中，用户可利用该视图查询这些属性。  
@@ -48,11 +48,11 @@ ms.locfileid: "33518481"
     > [!WARNING]
     >  如果在 SQL Server 的非默认实例上安装了数据库，请在生成解决方案之前更新代码中的连接字符串。  
   
-3.  通过导航到项目的 bin 目录 (\WF\Basic\Persistence\SqlStoreExtensibility\bin\Debug) 中使用管理员特权运行该示例[!INCLUDE[fileExplorer](../../../../includes/fileexplorer-md.md)]，右击 SqlStoreExtensibility.exe 并选择**以运行管理员**。  
+3.  导航到项目的 bin 目录 (\WF\Basic\Persistence\SqlStoreExtensibility\bin\Debug) 中使用管理员特权运行该示例[!INCLUDE[fileExplorer](../../../../includes/fileexplorer-md.md)]中，右击 SqlStoreExtensibility.exe 并选择**以运行管理员**。  
   
 ### <a name="to-verify-the-sample-is-working-correctly"></a>验证此示例是否正常工作  
   
-1.  使用 SQL Server Management Studio 查看实例表的内容通过选择**数据库**， **InstanceStore**，，然后**System.ServiceModel.Activities.DurableInstancing.InstanceTable**在对象资源管理器，右键单击**System.ServiceModel.Activities.DurableInstancing.InstanceTable**和选择**选择前 1000年行**。 有关 SQL Server Management Studio 的详细信息，请参阅[SQL Server Management Studio 简介](http://go.microsoft.com/fwlink/?LinkId=165645)  
+1.  使用 SQL Server Management Studio 来选择查看实例表的内容**数据库**， **InstanceStore**，然后**System.ServiceModel.Activities.DurableInstancing.InstanceTable**在对象资源管理器，右键单击**System.ServiceModel.Activities.DurableInstancing.InstanceTable** ，然后选择**选择前 1000年行**。 有关 SQL Server Management Studio 的详细信息，请参阅[引入 SQL Server Management Studio](https://go.microsoft.com/fwlink/?LinkId=165645)  
   
 2.  观察列出的工作流实例。  
   
@@ -60,7 +60,7 @@ ms.locfileid: "33518481"
   
 4.  观察下显示的计数器值**CountStatus**。  
   
-5.  运行脚本几次以查看**CountStats**值的更改。  
+5.  运行脚本几次以查看**countstats**值的更改。  
   
 6.  按 Enter 以终止工作流应用程序。  
   
@@ -73,11 +73,11 @@ ms.locfileid: "33518481"
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目录不存在，请转到[Windows Communication Foundation (WCF) 和针对.NET Framework 4 的 Windows Workflow Foundation (WF) 示例](http://go.microsoft.com/fwlink/?LinkId=150780)下载所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
+>  如果此目录不存在，请转到[Windows Communication Foundation (WCF) 和.NET Framework 4 的 Windows Workflow Foundation (WF) 示例](https://go.microsoft.com/fwlink/?LinkId=150780)若要下载所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Persistence\SQLStoreExtensibility`  
   
 ## <a name="see-also"></a>请参阅  
  [工作流暂留](../../../../docs/framework/windows-workflow-foundation/workflow-persistence.md)  
  [工作流服务](../../../../docs/framework/wcf/feature-details/workflow-services.md)  
- [AppFabric 承载和持久性示例](http://go.microsoft.com/fwlink/?LinkId=193961)
+ [AppFabric 承载和持久性示例](https://go.microsoft.com/fwlink/?LinkId=193961)

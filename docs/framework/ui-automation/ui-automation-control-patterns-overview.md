@@ -8,16 +8,16 @@ ms.assetid: cc229b33-234b-469b-ad60-f0254f32d45d
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: 1b02618676a1162681c67d34a2c6f43def07893c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 73ac290c688436e7ce74e1baaf9f7dbbbecb66bf
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33409021"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43418734"
 ---
 # <a name="ui-automation-control-patterns-overview"></a>UI 自动化控件模式概述
 > [!NOTE]
->  本文档适用于想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空间中定义的托管 <xref:System.Windows.Automation> 类的 .NET Framework 开发人员。 有关 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]的最新信息，请参阅 [Windows 自动化 API：UI 自动化](http://go.microsoft.com/fwlink/?LinkID=156746)。  
+>  本文档适用于想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空间中定义的托管 <xref:System.Windows.Automation> 类的 .NET Framework 开发人员。 有关最新信息[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]，请参阅[Windows 自动化 API: UI 自动化](https://go.microsoft.com/fwlink/?LinkID=156746)。  
   
  此概述介绍 [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] 控件模式。 控件模式提供了一种方法，用于独立于控件类型或控件的外观对控件的功能进行分类和公开。  
   
@@ -44,7 +44,7 @@ ms.locfileid: "33409021"
   
  UI 自动化客户端访问 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 控件模式类的方法和属性并使用它们获取有关 [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)]的信息或操作 [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)]。 这些控件模式类位于 <xref:System.Windows.Automation> 命名空间（例如， <xref:System.Windows.Automation.InvokePattern> 和 <xref:System.Windows.Automation.SelectionPattern>）。  
   
- 客户端使用<xref:System.Windows.Automation.AutomationElement>方法 (如<xref:System.Windows.Automation.AutomationElement.GetCurrentPropertyValue%2A?displayProperty=nameWithType>或<xref:System.Windows.Automation.AutomationElement.GetCachedPropertyValue%2A?displayProperty=nameWithType>) 或[!INCLUDE[TLA#tla_clr](../../../includes/tlasharptla-clr-md.md)]访问器以访问[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]模式上的属性。 每个控件模式类具有字段成员 (例如， <xref:System.Windows.Automation.InvokePattern.Pattern?displayProperty=nameWithType>' 或<xref:System.Windows.Automation.SelectionPattern.Pattern?displayProperty=nameWithType>)，它标识该控件模式，并可以作为参数传递给传递<xref:System.Windows.Automation.AutomationElement.GetCachedPattern%2A>或<xref:System.Windows.Automation.AutomationElement.GetCurrentPattern%2A>检索该模式<xref:System.Windows.Automation.AutomationElement>。  
+ 客户端使用<xref:System.Windows.Automation.AutomationElement>方法 (如<xref:System.Windows.Automation.AutomationElement.GetCurrentPropertyValue%2A?displayProperty=nameWithType>或<xref:System.Windows.Automation.AutomationElement.GetCachedPropertyValue%2A?displayProperty=nameWithType>) 或[!INCLUDE[TLA#tla_clr](../../../includes/tlasharptla-clr-md.md)]访问器以访问[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]模式上的属性。 每个控件模式类有一个字段成员 (例如， <xref:System.Windows.Automation.InvokePattern.Pattern?displayProperty=nameWithType>' 或<xref:System.Windows.Automation.SelectionPattern.Pattern?displayProperty=nameWithType>)，它标识该控件模式，并可以作为参数传递<xref:System.Windows.Automation.AutomationElement.GetCachedPattern%2A>或<xref:System.Windows.Automation.AutomationElement.GetCurrentPattern%2A>若要检索有关该模式<xref:System.Windows.Automation.AutomationElement>。  
   
 <a name="uiautomation_control_patterns_dynamic"></a>   
 ## <a name="dynamic-control-patterns"></a>动态控件模式  

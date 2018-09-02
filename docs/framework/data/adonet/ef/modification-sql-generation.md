@@ -2,17 +2,17 @@
 title: 修改 SQL 生成
 ms.date: 03/30/2017
 ms.assetid: 2188a39d-46ed-4a8b-906a-c9f15e6fefd1
-ms.openlocfilehash: 1d24775a7a50da1008a5097e1a2caf4e72c946e2
-ms.sourcegitcommit: 9e18e4a18284ae9e54c515e30d019c0bbff9cd37
+ms.openlocfilehash: 8e0568e32094b6cc27137409f3d908928d82cebb
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37071947"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43417242"
 ---
 # <a name="modification-sql-generation"></a>修改 SQL 生成
 本节讨论如何开发用于（符合 SQL:1999 的数据库）提供程序的修改 SQL 生成模块。 此模块负责将修改命令目录树转换成适当的 SQL INSERT、UPDATE 或 DELETE 语句。  
   
- 有关生成 SQL select 语句的信息，请参阅[SQL 生成](../../../../../docs/framework/data/adonet/ef/sql-generation.md)。  
+ 有关 select 语句的 SQL 生成的信息，请参阅[SQL 生成](../../../../../docs/framework/data/adonet/ef/sql-generation.md)。  
   
 ## <a name="overview-of-modification-command-trees"></a>修改命令目录树的概述  
  修改 SQL 生成模块可基于给定的输入 DbModificationCommandTree 生成特定于数据库的修改 SQL 语句。  
@@ -25,11 +25,11 @@ ms.locfileid: "37071947"
   
 -   DbDeleteCommandTree  
   
- DbModificationCommandTree 及其实现生成的[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]始终表示单行操作。 本节将介绍这些类型及其在 .NET Framework 版本 3.5 中的约束。  
+ DbModificationCommandTree 及其实现所产生的[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]始终表示单行操作。 本节将介绍这些类型及其在 .NET Framework 版本 3.5 中的约束。  
   
  ![关系图](../../../../../docs/framework/data/adonet/ef/media/558ba7b3-dd19-48d0-b91e-30a76415bf5f.gif "558ba7b3-dd19-48d0-b91e-30a76415bf5f")  
   
- DbModificationCommandTree 具有 Target 属性，该属性表示修改操作的目标集。 Target 的 Expression 属性定义输入集，始终为 DbScanExpression。  DbScanExpression 可以代表一个表或视图，或一组数据使用查询定义如果元数据属性"Defining Query"其目标的非 null。  
+ DbModificationCommandTree 具有 Target 属性，该属性表示修改操作的目标集。 Target 的 Expression 属性定义输入集，始终为 DbScanExpression。  DbScanExpression 可以表示表或视图，或一组数据使用查询定义如果元数据属性"Defining Query"其目标的非 null。  
   
  DbScanExpression 表示一个查询，如果使用模型中的定义查询来定义集，但不提供相应的修改操作的功能，则它仅可以获取作为修改目标的提供程序。 提供程序也许不支持此类方案，例如 SqlClient 就不支持。  
   
@@ -83,7 +83,7 @@ The elements of the list are specified as type DbModificationClause, which speci
 -   DbOrExpression  
   
 ## <a name="modification-sql-generation-in-the-sample-provider"></a>示例提供程序中的修改 SQL 生成  
- [实体框架示例提供程序](http://go.microsoft.com/fwlink/?LinkId=180616)演示 ADO.NET 数据提供程序支持的组件[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]。 该示例提供程序以 SQL Server 2005 数据库为目标，并在 System.Data.SqlClient ADO.NET 2.0 数据提供程序之上作为一个包装实现。  
+ [实体框架示例提供程序](https://go.microsoft.com/fwlink/?LinkId=180616)演示了 ADO.NET 数据提供程序支持的组件[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]。 该示例提供程序以 SQL Server 2005 数据库为目标，并在 System.Data.SqlClient ADO.NET 2.0 数据提供程序之上作为一个包装实现。  
   
  该示例提供程序的修改 SQL 生成模块（位于 SQL Generation\DmlSqlGenerator.cs 文件中）采用一个输入 DbModificationCommandTree，并且生成可能带有 SELECT 语句的单个修改 SQL 语句以返回一个读取器（如果 DbModificationCommandTree 指定了读取器）。 请注意，生成的命令的形式受目标 SQL Server 数据库影响。  
   
@@ -104,7 +104,7 @@ The elements of the list are specified as type DbModificationClause, which speci
 ## <a name="generating-an-insert-sql-command"></a>生成插入 SQL 命令  
  对于示例提供程序中给定的 DbInsertCommandTree，生成的插入命令跟在下面两个插入模板中的一个后面。  
   
- 第一个模板包含一个命令来执行插入操作（假定值在 SetClauses 列表中）以及一个 SELECT 语句来为插入的行返回在 Returning 属性中指定的属性（如果 Returning 属性不为 null）。 谓词元素"\@ @ROWCOUNT > 0" 为 true，如果插入一行。 谓词元素"keyMemberI = keyValueI &#124; scope_identity （)"使用了的形状"keyMemberI = scope_identity （）"仅当 keyMemeberI 为存储生成的键，因为 scope_identity （） 返回插入到标识 （最后一个标识值存储生成的） 列。  
+ 第一个模板包含一个命令来执行插入操作（假定值在 SetClauses 列表中）以及一个 SELECT 语句来为插入的行返回在 Returning 属性中指定的属性（如果 Returning 属性不为 null）。 谓词元素"\@ @ROWCOUNT > 0" 是如果将行插入，则返回 true。 谓词元素"keyMemberI = keyValueI &#124; scope_identity （)"使用了的形状"keyMemberI = scope_identity （）"仅当 keyMemeberI 为存储生成的键，因为 scope_identity （） 返回插入到标识 （最后一个标识值存储生成的） 列。  
   
 ```  
 -- first insert Template  
@@ -199,7 +199,7 @@ WHERE <predicate>
  WHERE @@ROWCOUNT > 0 AND keyMember0 = keyValue0 AND .. keyMemberI =  keyValueI | scope_identity()  .. AND  keyMemberN = keyValueN]  
 ```  
   
- Set 子句具有假 set 子句 ("@i = 0") 仅当不指定任何 set 子句时。 这将确保重新计算所有存储计算的列。  
+ Set 子句具有假 set 子句 ("@i = 0") 仅当不指定了任何组子句。 这将确保重新计算所有存储计算的列。  
   
  仅当 Returning 属性不为 null 时，才生成 SELECT 语句以返回在 Returning 属性中指定的属性。  
   

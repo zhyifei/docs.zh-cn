@@ -2,15 +2,15 @@
 title: 推断元素文本
 ms.date: 03/30/2017
 ms.assetid: 789799e5-716f-459f-a168-76c5cf22178b
-ms.openlocfilehash: b32d8f3f89a16166ffc0e903ef1f63c3b97a249c
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: b70f76d2702ebcb098c64ea84900b723fbc137ab
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32762710"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43405783"
 ---
 # <a name="inferring-element-text"></a>推断元素文本
-如果元素包含文本但不包含任何子元素被推断为表如 （具有属性的元素） 或重复的元素名称的新列**TableName_Text**将添加到为该元素推断的表。 该元素中包含的文本将添加到此表中的一行，并存储在新列中。 **ColumnMapping**新列的属性将设置为**MappingType.SimpleContent**。  
+如果元素包含文本但不包含任何子元素被推断为表 （具有属性的元素） 或重复的元素，例如具有名称的新列**TableName_Text**将添加到为该元素推断的表。 该元素中包含的文本将添加到此表中的一行，并存储在新列中。 **ColumnMapping**的新列的属性将设置为**MappingType.SimpleContent**。  
   
  例如，考虑以下 XML。  
   
@@ -20,7 +20,7 @@ ms.locfileid: "32762710"
 </DocumentElement>  
 ```  
   
- 推断过程将生成名为的表**Element1**具有两列： **attr1**和**Element1_Text**。 **ColumnMapping**属性**attr1**列将设置为**MappingType.Attribute**。 **ColumnMapping**属性**Element1_Text**列将设置为**MappingType.SimpleContent**。  
+ 推断过程将生成名为的表**Element1**包含两个列： **attr1**并**Element1_Text**。 **ColumnMapping**的属性**attr1**列将设置为**MappingType.Attribute**。 **ColumnMapping**的属性**Element1_Text**列将设置为**MappingType.SimpleContent**。  
   
  **数据集：** DocumentElement  
   
@@ -40,7 +40,7 @@ ms.locfileid: "32762710"
 </Element1>  
 ```  
   
- 推断过程将生成名为的表**Element1**与名为的一个列**ChildElement1**。 文本**ChildElement1**元素将包括在表中的行。 其他文本则将被忽略。 **ColumnMapping**属性**ChildElement1**列将设置为**MappingType.Element**。  
+ 推断过程将生成名为的表**Element1**具有一个名为的列**ChildElement1**。 文本**ChildElement1**元素将包含在表中的行。 其他文本则将被忽略。 **ColumnMapping**的属性**ChildElement1**列将设置为**MappingType.Element**。  
   
  **数据集：** DocumentElement  
   
@@ -56,4 +56,4 @@ ms.locfileid: "32762710"
  [从 XML 加载数据集构架信息](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-dataset-schema-information-from-xml.md)  
  [在数据集中使用 XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)  
  [数据集、数据表和数据视图](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
- [ADO.NET 托管提供程序和数据集开发人员中心](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)

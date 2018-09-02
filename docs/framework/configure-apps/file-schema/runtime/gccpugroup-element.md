@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: c1fc7d6c-7220-475c-a312-5b8b201f66e0
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d4461667bdb47d410c857b4ac2c9dd268438a02f
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 21ab18cded2b9a16fe2520547287198d3cfe6b74
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32744013"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43416769"
 ---
 # <a name="ltgccpugroupgt-element"></a>&lt;GCCpuGroup&gt;元素
 指定垃圾回收是否支持多个 CPU 组。  
@@ -55,10 +55,10 @@ ms.locfileid: "32744013"
 |`runtime`|包含有关程序集绑定和垃圾回收的信息。|  
   
 ## <a name="remarks"></a>备注  
- 当一台计算机有多个 CPU 组，并启用服务器垃圾回收 (请参阅[ \<gcServer >](../../../../../docs/framework/configure-apps/file-schema/runtime/gcserver-element.md)元素)，启用此元素跨越所有的 CPU 组将扩展垃圾回收和采用到的所有核心创建和平衡堆时的帐户。  
+ 如果计算机有多个 CPU 组并且启用了服务器垃圾回收 (请参阅[ \<gcServer >](../../../../../docs/framework/configure-apps/file-schema/runtime/gcserver-element.md)元素)，启用此元素的所有 CPU 组扩展垃圾回收，并采用到的所有核心帐户创建和平衡堆时。  
   
 > [!NOTE]
->  此元素仅适用于垃圾回收线程。 若要启用运行时，将用户线程分布到所有的 CPU 组，你必须启用[< Thread_UseAllCpuGroups >](../../../../../docs/framework/configure-apps/file-schema/runtime/thread-useallcpugroups-element.md)元素。  
+>  此元素仅适用于垃圾回收线程。 若要启用要在所有 CPU 组分发用户线程的运行时，您还必须启用[< Thread_UseAllCpuGroups >](../../../../../docs/framework/configure-apps/file-schema/runtime/thread-useallcpugroups-element.md)元素。  
   
 ## <a name="example"></a>示例  
  下面的示例演示如何启用多个 CPU 组的垃圾回收。  
@@ -75,5 +75,5 @@ ms.locfileid: "32744013"
 ## <a name="see-also"></a>请参阅  
  [运行时设置架构](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
  [配置文件架构](../../../../../docs/framework/configure-apps/file-schema/index.md)  
- [如何： 禁用并发垃圾回收](http://msdn.microsoft.com/library/ba2c6c67-5778-497c-9fac-5f793b5500c7)  
+ [如何： 禁用并发垃圾回收](https://msdn.microsoft.com/library/ba2c6c67-5778-497c-9fac-5f793b5500c7)  
  [工作站和服务器垃圾回收](../../../../../docs/standard/garbage-collection/fundamentals.md#workstation_and_server_garbage_collection)

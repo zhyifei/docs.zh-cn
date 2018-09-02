@@ -10,17 +10,17 @@ ms.assetid: 8046bc5d-2fa9-4277-8a5e-6dcc96c281d9
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: 91971e4d41c3a54fa72ae73a3655dab650019676
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 3fdc3786be3307e8c882a33b5139ee34344733b8
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32758121"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43404405"
 ---
 # <a name="how-to-create-a-publisher-policy"></a>如何：创建发行者策略
-程序集的供应商可以状态应用程序应使用通过包括发布服务器策略文件与已升级的程序集的程序集的较新版本。 发布服务器策略文件指定程序集重定向和基本代码设置，并为应用程序配置文件使用相同的格式。 发布服务器策略文件编译成程序集和放入全局程序集缓存。  
+程序集的供应商可以声明应用程序应通过包括发布服务器策略文件与升级后的程序集使用的程序集的较新版本。 发布服务器策略文件指定程序集重定向和基本代码设置，并为应用程序配置文件使用相同的格式。 发布服务器策略文件编译到程序集中，放置在全局程序集缓存中。  
   
- 有三个步骤中创建发布服务器策略涉及：  
+ 创建发布者策略时涉及的是三个步骤：  
   
 1.  创建发布服务器策略文件。  
   
@@ -28,7 +28,7 @@ ms.locfileid: "32758121"
   
 3.  将发行者策略程序集添加到全局程序集缓存中。  
   
- 发布服务器策略的架构中所述[重定向程序集版本](../../../docs/framework/configure-apps/redirect-assembly-versions.md)。 下面的示例说明了一个发行者策略文件，将重定向的一个版本`myAssembly`到另一个。  
+ 发布服务器策略的架构所述[重定向程序集版本](../../../docs/framework/configure-apps/redirect-assembly-versions.md)。 下面的示例显示了发布服务器策略文件，将重定向的一个版本`myAssembly`到另一个。  
   
 ```xml  
 <configuration>  
@@ -47,7 +47,7 @@ ms.locfileid: "32758121"
 </configuration>  
 ```  
   
- 若要了解如何指定基本代码，请参阅[指定程序集的位置](../../../docs/framework/configure-apps/specify-assembly-location.md)。  
+ 若要了解如何指定基本代码，请参阅[指定程序集位置](../../../docs/framework/configure-apps/specify-assembly-location.md)。  
   
 ## <a name="creating-the-publisher-policy-assembly"></a>创建发行者策略程序集  
  使用[程序集链接器 (Al.exe)](../../../docs/framework/tools/al-exe-assembly-linker.md)创建发行者策略程序集。  
@@ -62,26 +62,26 @@ ms.locfileid: "32758121"
   
     -   *PublisherPolicyFile*参数是发布服务器策略文件的名称。  
   
-    -   *PublisherPolicyAssemblyFile*参数是导致此命令的发行者策略程序集的名称。 程序集文件名称必须遵循格式：  
+    -   *PublisherPolicyAssemblyFile*参数是此命令生成的发布服务器策略程序集的名称。 程序集文件名称必须遵循格式：  
   
          **策略。** *majorNumber* **。** *minorNumber* **。** *mainAssemblyName* **.dll**  
   
-    -   *KeyPairFile*参数是包含密钥对的文件的名称。 你必须签名的程序集和具有相同的密钥对的发行者策略程序集。  
+    -   *KeyPairFile*参数是包含密钥对的文件的名称。 您必须签署的程序集和发行者策略程序集具有相同的密钥对。  
   
     -   *ProcessorArchitecture*参数标识的特定于处理器的程序集的目标平台。  
   
         > [!NOTE]
-        >  面向特定的处理器体系结构的能力是.NET Framework 2.0 版中新增功能。  
+        >  面向特定的处理器体系结构的功能是.NET Framework 2.0 版中的新增功能。  
   
-     下面的命令创建名为的发行者策略程序集`policy.1.0.myAssembly`从发布服务器策略文件调用`pub.config`，对使用的密钥对中的程序集分配强名称`sgKey.snk`文件中，并指定该程序集针对 x86处理器体系结构。  
+     以下命令创建名为的发行者策略程序集`policy.1.0.myAssembly`发布服务器策略文件中名为`pub.config`，为使用的密钥对中的程序集分配强名称`sgKey.snk`文件，并指定该程序集针对 x86处理器体系结构。  
   
     ```  
     al /link:pub.config /out:policy.1.0.myAssembly.dll /keyfile:sgKey.snk /platform:x86  
     ```  
   
-     发行者策略程序集必须与它将应用于程序集的处理器体系结构匹配。 因此，如果你的程序集具有<xref:System.Reflection.AssemblyName.ProcessorArchitecture%2A>值<xref:System.Reflection.ProcessorArchitecture.MSIL>，该程序集的发布服务器策略程序集必须用来创建`/platform:anycpu`。 必须提供单独为每个特定于处理器的程序集的发行者策略程序集。  
+     发行者策略程序集必须与它适用于该程序集的处理器体系结构匹配。 因此，如果您的程序集具有<xref:System.Reflection.AssemblyName.ProcessorArchitecture%2A>的值<xref:System.Reflection.ProcessorArchitecture.MSIL>，该程序集的发布服务器策略程序集必须使用创建`/platform:anycpu`。 必须提供一个单独的每个特定于处理器的程序集的发行者策略程序集。  
   
-     此规则的结果是版本号的，若要更改的程序集的处理器体系结构，你必须更改的主要或次要组件，以便你可以提供具有正确的处理器体系结构的新发布服务器策略程序集。 程序集具有不同的处理器体系结构，旧的发行者策略程序集无法服务你的程序集。  
+     此规则的结果是版本号的，若要更改的程序集的处理器体系结构，必须更改的主要或次要组成部分，以便你可以提供具有正确的处理器体系结构的新发布服务器策略程序集。 一旦您的程序集具有不同处理器体系结构，旧的发行者策略程序集不能处理该程序集。  
   
      另一个后果是版本 2.0 链接器不能用于创建编译使用早期版本的.NET Framework 中，因为它始终指定处理器体系结构的程序集的发行者策略程序集。  
   
@@ -101,13 +101,13 @@ ms.locfileid: "32758121"
     ```  
   
     > [!IMPORTANT]
-    >  无法将发行者策略程序集添加到全局程序集缓存中，除非原始发布服务器策略文件位于与程序集位于同一目录中。  
+    >  发行者策略程序集不能添加到全局程序集缓存中，除非原始发布服务器策略文件位于与该程序集相同的目录中。  
   
 ## <a name="see-also"></a>请参阅  
  [使用程序集编程](../../../docs/framework/app-domains/programming-with-assemblies.md)  
  [运行时如何定位程序集](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)  
  [配置应用程序](../../../docs/framework/configure-apps/index.md)  
- [配置.NET Framework 应用](http://msdn.microsoft.com/library/d789b592-fcb5-4e3d-8ac9-e0299adaaa42)  
+ [配置.NET Framework 应用](https://msdn.microsoft.com/library/d789b592-fcb5-4e3d-8ac9-e0299adaaa42)  
  [运行时设置架构](../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
  [配置文件架构](../../../docs/framework/configure-apps/file-schema/index.md)  
  [重定向程序集版本](../../../docs/framework/configure-apps/redirect-assembly-versions.md)

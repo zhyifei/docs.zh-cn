@@ -5,19 +5,19 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: fa360c46-e5f8-411e-a711-46997771133d
-ms.openlocfilehash: 73475f8521b4112929339cc7f1116e36ffebedb7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5d86095586af273f62980fcf8ddf10804b1cfa5a
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33358963"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43406805"
 ---
 # <a name="paging-through-a-query-result"></a>通过查询结果分页
 查询结果分页是以较小数据子集（即页）的形式返回查询结果的过程。 它通常用于以易于管理的小块形式向用户显示结果。  
   
- **DataAdapter**为仅返回一页的数据，通过重载提供工具**填充**方法。 但是，这可能不是最适合进行大型查询结果分页，因为，虽然**DataAdapter**填充目标<xref:System.Data.DataTable>或<xref:System.Data.DataSet>仅的请求记录，若要返回的资源仍然用于将整个查询。 若要在从数据源中返回一页数据时不使用返回整个查询的资源，请为查询指定附加条件，使返回的行数减少到只返回所需的行。  
+ **DataAdapter**提供的工具，用于仅返回一页的数据，通过重载**填充**方法。 但是，这可能不是因为，通过大量的查询结果分页的最佳选择尽管**DataAdapter**填充目标<xref:System.Data.DataTable>或<xref:System.Data.DataSet>仅请求记录，若要返回的资源仍使用整个查询。 若要在从数据源中返回一页数据时不使用返回整个查询的资源，请为查询指定附加条件，使返回的行数减少到只返回所需的行。  
   
- 若要使用**填充**方法以返回一页数据，指定**startRecord**参数，第一条记录的页中的数据，和一个**maxRecords**参数的数目中的数据页的记录。  
+ 若要使用**填充**方法以返回一页数据，指定**startRecord**参数，第一个记录的页中的数据，和一个**maxRecords**参数的数目在数据页中的记录。  
   
  下面的代码示例演示如何使用**填充**方法以返回查询结果的第一页的页大小为 5 个记录的位置。  
   
@@ -46,7 +46,7 @@ DataSet dataSet = new DataSet();
 adapter.Fill(dataSet, currentIndex, pageSize, "Orders");  
 ```  
   
- 在前面的示例中，**数据集**只填充了 5 个记录，但整个**订单**返回表。 若要填充**数据集**具有相同的五个记录，但仅返回这 5 个记录，使用 TOP 和 WHERE 子句在 SQL 语句，如下面的代码示例所示。  
+ 在上一示例中，**数据集**只填充了 5 个记录，但整个**订单**返回表。 若要填充**数据集**这些相同的五个记录，但仅返回 5 个记录，同时使用 TOP 和 WHERE 子句中 SQL 语句，如以下代码示例所示。  
   
 ```vb  
 Dim pageSize As Integer = 5  
@@ -83,7 +83,7 @@ string lastRecord =
   dataSet.Tables["Orders"].Rows[pageSize - 1]["OrderID"].ToString();  
 ```  
   
- 若要返回下一页记录使用的重载**填充**采用的方法**startRecord**和**maxRecords**参数，递增的当前记录索引页大小和填充表。 请记住，数据库服务器将返回整个查询结果，即使只有一个页的记录添加到**数据集**。 在以下代码示例中，先清除表行，然后再用下一页数据填充这些表行。 您可能需要在本地缓存中保留一定数量的返回行，以减少与数据库服务器的往返次数。  
+ 若要返回下一页记录使用的重载**填充**采用的方法**startRecord**并**maxRecords**参数，递增的当前记录索引页大小和填充在表中。 请记住，数据库服务器将返回整个查询结果，即使只有一页的记录添加到**数据集**。 在以下代码示例中，先清除表行，然后再用下一页数据填充这些表行。 您可能需要在本地缓存中保留一定数量的返回行，以减少与数据库服务器的往返次数。  
   
 ```vb  
 currentIndex = currentIndex + pageSize  
@@ -125,4 +125,4 @@ adapter.Fill(dataSet, "Orders");
   
 ## <a name="see-also"></a>请参阅  
  [DataAdapters 和 DataReaders](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)  
- [ADO.NET 托管提供程序和数据集开发人员中心](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)

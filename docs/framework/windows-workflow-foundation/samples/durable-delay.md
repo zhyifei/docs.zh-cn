@@ -2,12 +2,12 @@
 title: 持久延迟
 ms.date: 03/30/2017
 ms.assetid: 220ec240-b958-430c-81ff-b734a6aa97ae
-ms.openlocfilehash: 5307b8144e17f91cd3ba8c2e385492f86c167820
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2a7692e28d60232913ae5d11a90025e59664c0e5
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33516017"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43406571"
 ---
 # <a name="durable-delay"></a>持久延迟
 此示例演示如何使用持久延迟，在持久延迟过程中，将把工作流保留到持久性设备。 示例工作流包含发送到控制台并由延迟分隔的两个消息。 触发延迟时，工作流会卸载，并在重新加载到内存中之前，在工作流实例存储中等待 5 秒。  
@@ -17,7 +17,7 @@ ms.locfileid: "33516017"
   
  下面的列表详细介绍初始化过程中工作流服务主机进行的设置。  
   
-1.  创建一个地址的服务主机 (http://localhost:8080/Client)。  
+1.  创建服务主机的地址 (http://localhost:8080/Client)。  
   
 2.  在该服务主机中创建一个终结点，以便与工作流内的 <xref:System.ServiceModel.Activities.Receive> 活动进行通信。  
   
@@ -45,7 +45,7 @@ ms.locfileid: "33516017"
   
     5.  运行 Setup.cmd。  
   
-2.  运行[!INCLUDE[vs2010](../../../../includes/vs2010-md.md)]使用提升的权限，请右键单击[!INCLUDE[vs2010](../../../../includes/vs2010-md.md)]图标并选择**以管理员身份运行**。  
+2.  运行[!INCLUDE[vs2010](../../../../includes/vs2010-md.md)]通过右键单击使用提升的权限[!INCLUDE[vs2010](../../../../includes/vs2010-md.md)]图标，然后选择**以管理员身份运行**。  
   
 3.  打开 Delay.sln 解决方案文件。  
   
@@ -66,6 +66,6 @@ ms.locfileid: "33516017"
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目录不存在，请转到[Windows Communication Foundation (WCF) 和针对.NET Framework 4 的 Windows Workflow Foundation (WF) 示例](http://go.microsoft.com/fwlink/?LinkId=150780)下载所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
+>  如果此目录不存在，请转到[Windows Communication Foundation (WCF) 和.NET Framework 4 的 Windows Workflow Foundation (WF) 示例](https://go.microsoft.com/fwlink/?LinkId=150780)若要下载所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Services\DurableDelay`

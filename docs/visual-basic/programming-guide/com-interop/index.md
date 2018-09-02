@@ -5,15 +5,15 @@ helpviewer_keywords:
 - Visual Basic code, COM interop
 - COM interop [Visual Basic], in Visual Basic
 ms.assetid: 3ffd1bdf-1b8d-47f5-87eb-75b659f64294
-ms.openlocfilehash: 08e7c488d6a546f3efd6098c38ca601b5f443a26
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b6da65a0c94875f73c8e1094448d76a72823404d
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33643560"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43405945"
 ---
 # <a name="com-interop-visual-basic"></a>COM 互操作 (Visual Basic)
-组件对象模型 (COM) 允许对象向其他组件和主机应用公开自己的功能。 如今的大部分软件都包含 COM 对象。 尽管 .NET 程序集是新应用的最佳选择，有时也建议使用 COM 对象。 本部分将介绍一些创建和使用 Visual Basic 中使用 COM 对象相关联的问题。  
+组件对象模型 (COM) 允许对象向其他组件和主机应用公开自己的功能。 如今的大部分软件都包含 COM 对象。 尽管 .NET 程序集是新应用的最佳选择，有时也建议使用 COM 对象。 本部分介绍了一些与创建和使用 Visual Basic 中使用 COM 对象相关的问题。  
   
 ## <a name="in-this-section"></a>本节内容  
  [COM 互操作介绍](../../../visual-basic/programming-guide/com-interop/introduction-to-com-interop.md)  
@@ -50,10 +50,10 @@ ms.locfileid: "33643560"
  [与非托管代码交互操作](../../../framework/interop/index.md)  
  描述由公共语言运行时提供的互操作性服务。  
   
- [向 .NET Framework 公开 COM 组件](http://msdn.microsoft.com/library/e78b14f1-e487-43cd-9c6d-1a07483f1730)  
+ [向 .NET Framework 公开 COM 组件](https://msdn.microsoft.com/library/e78b14f1-e487-43cd-9c6d-1a07483f1730)  
  介绍了如何通过 COM 互操作调用 COM 类型。  
   
- [向 COM 公开 .NET Framework 组件](http://msdn.microsoft.com/library/e42a65f7-1e61-411f-b09a-aca1bbce24c6)  
+ [向 COM 公开 .NET Framework 组件](https://msdn.microsoft.com/library/e42a65f7-1e61-411f-b09a-aca1bbce24c6)  
  介绍了如何准备和使用 COM 中的托管类型。  
   
  [应用互操作属性](../../../framework/interop/applying-interop-attributes.md)  

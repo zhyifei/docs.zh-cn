@@ -2,15 +2,15 @@
 title: HttpCookieSession
 ms.date: 03/30/2017
 ms.assetid: 101cb624-8303-448a-a3af-933247c1e109
-ms.openlocfilehash: 64a7cba7b1bbc55a4504e3af4784fcb2a84f0fa1
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: fdde238d4a4fd9291c520d4ef13694c3648c8298
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33807223"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43402628"
 ---
 # <a name="httpcookiesession"></a>HttpCookieSession
-此示例演示如何生成自定义协议通道，以便使用 HTTP Cookie 进行会话管理。 此通道功能，让 WCF 客户端和 ASMX 服务之间或 Windows Communication Foundation (WCF) 服务和 ASMX 客户端之间通信。  
+此示例演示如何生成自定义协议通道，以便使用 HTTP Cookie 进行会话管理。 此通道启用 WCF 客户端和 ASMX 服务之间或 Windows Communication Foundation (WCF) 服务和 ASMX 客户端之间的通信。  
   
  当客户端在基于会话的 ASMX Web 服务中调用 Web 方法时，[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 引擎将执行以下操作：  
   
@@ -29,7 +29,7 @@ ms.locfileid: "33807223"
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目录不存在，请转到[Windows Communication Foundation (WCF) 和针对.NET Framework 4 的 Windows Workflow Foundation (WF) 示例](http://go.microsoft.com/fwlink/?LinkId=150780)下载所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
+>  如果此目录不存在，请转到[Windows Communication Foundation (WCF) 和.NET Framework 4 的 Windows Workflow Foundation (WF) 示例](https://go.microsoft.com/fwlink/?LinkId=150780)若要下载所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Channels\HttpCookieSession`  
   
@@ -75,7 +75,7 @@ ms.locfileid: "33807223"
 InputQueue<RequestContext> requestQueue;  
 ```  
   
- 当有人调用 <xref:System.ServiceModel.Channels.IReplyChannel.ReceiveRequest%2A> 方法，而消息队列中没有消息时，通道将等待指定的时间量，然后自行关闭。 这会清理为非 WCF 客户端创建的会话通道。  
+ 当有人调用 <xref:System.ServiceModel.Channels.IReplyChannel.ReceiveRequest%2A> 方法，而消息队列中没有消息时，通道将等待指定的时间量，然后自行关闭。 这样将清除为非 WCF 客户端创建的会话通道。  
   
  我们使用 `channelMapping` 跟踪 `ReplySessionChannels`，并且在所有已接受的通道全部关闭之前不会关闭基础 `innerChannel`。 这样使 `HttpCookieReplySessionChannel` 的生存期可以超过 `HttpCookieReplySessionChannelListener`。 我们也无需担心侦听器会在我们下面收集垃圾，因为已接受的通道通过 `OnClosed` 回调保留对其侦听器的引用。  
   
@@ -83,7 +83,7 @@ InputQueue<RequestContext> requestQueue;
  对应的客户端通道位于 `HttpCookieSessionChannelFactory` 类中。 在创建通道的过程中，通道工厂使用 `HttpCookieRequestSessionChannel` 包装内部请求通道。 `HttpCookieRequestSessionChannel` 类将调用转发给基础请求通道。 当客户端关闭代理时，`HttpCookieRequestSessionChannel` 向服务发送一条指明该通道正在关闭的消息。 因此，服务通道堆栈可以正常关闭正在使用的会话通道。  
   
 ## <a name="binding-and-binding-element"></a>绑定和绑定元素  
- 在创建后的服务和客户端通道下, 一步是将其集成到 WCF 运行时。 通道通过绑定和绑定元素公开到 WCF。 绑定由一个或多个绑定元素组成。 WCF 提供了几个系统定义的绑定;例如，BasicHttpBinding 或 WSHttpBinding。 `HttpCookieSessionBindingElement` 类包含绑定元素的实现。 它重写通道侦听器和通道工厂创建方法，以进行必要的通道侦听器或通道工厂实例化。  
+ 在创建后的服务和客户端通道下, 一步是将它们集成到 WCF 运行时。 通道通过绑定和绑定元素公开到 WCF。 绑定由一个或多个绑定元素组成。 WCF 提供了几个系统定义的绑定;例如，BasicHttpBinding 或 WSHttpBinding。 `HttpCookieSessionBindingElement` 类包含绑定元素的实现。 它重写通道侦听器和通道工厂创建方法，以进行必要的通道侦听器或通道工厂实例化。  
   
  此示例使用策略断言作为服务说明。 这使得此示例能够将其通道要求发布给其他可以使用服务的客户端。 例如，此绑定元素发布策略断言，以使潜在的客户端知道它支持会话。 因为此示例在绑定元素配置中启用了 `ExchangeTerminateMessage` 属性，它增加了必要断言，以表明服务支持通过额外的消息交换操作终止会话对话。 客户端然后可以使用此操作。 下面的 WSDL 代码演示了从 `HttpCookieSessionBindingElement` 中创建的策略断言。  
   
@@ -164,10 +164,10 @@ Press <ENTER> to terminate client.
     %windir%\Microsoft.NET\Framework\v4.0.XXXXX\aspnet_regiis.exe /i /enable  
     ```  
   
-2.  确保已执行[的 Windows Communication Foundation 示例的一次性安装过程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
+2.  请确保您具有执行[的 Windows Communication Foundation 示例的一次性安装过程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
   
 3.  若要生成解决方案，请按照中的说明[生成 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/building-the-samples.md)。  
   
-4.  若要在单或跨计算机配置上运行示例，请按照中的说明[运行 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/running-the-samples.md)。  
+4.  若要在单或跨计算机配置中运行示例，请按照中的说明[运行 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/running-the-samples.md)。  
   
 ## <a name="see-also"></a>请参阅

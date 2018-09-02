@@ -2,12 +2,12 @@
 title: 'Visual Studio 中的 F # 入门'
 description: '了解如何使用 Visual Studio 中使用 F #。'
 ms.date: 07/03/2018
-ms.openlocfilehash: a4a12a322d7e5144f2d720541f6ef65ca12737dd
-ms.sourcegitcommit: 59b51cd7c95c75be85bd6ef715e9ef8c85720bac
+ms.openlocfilehash: 3dac8466501338873aeb308ceac9274a7934a8a9
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37874710"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43415729"
 ---
 # <a name="get-started-with-f-in-visual-studio"></a>Visual Studio 中的 F # 入门
 
@@ -47,7 +47,7 @@ val square: x:int -> int
 
 ## <a name="running-your-code"></a>运行代码
 
-可以运行该代码并查看结果，通过按**ctrl-f5**。  这将运行程序而不进行调试，并允许您以查看结果。  或者，你可以选择**调试**顶级菜单项在 Visual Studio 中，然后选择**启动但不调试**。
+可以运行该代码并查看结果，通过按**Ctrl**+**F5**。  这不进行调试直接运行该程序，并允许您以查看结果。  或者，你可以选择**调试**顶级菜单项在 Visual Studio 中，然后选择**启动但不调试**。
 
 现在应看到以下输出到控制台窗口的 Visual Studio 中：
 
@@ -62,4 +62,8 @@ val square: x:int -> int
 如果你尚未这样做，请查看[F # 教程](../tour.md)，其中介绍了一些 F # 语言的核心功能。  它将为您提供的一些 F # 的功能的概述，并提供足够的代码示例，你可以将复制到 Visual Studio 并运行。  此外，还有一些有用的外部资源，您可以使用，在演示[F # 指南](../index.md)。
 
 ## <a name="see-also"></a>请参阅
- [F # 教程](../tour.md) [F # 语言参考](../language-reference/index.md)[类型推理](../language-reference/type-inference.md)[符号和运算符参考](../language-reference/symbol-and-operator-reference/index.md)
+
+- [F# 教程](../tour.md)
+- [F # 语言参考](../language-reference/index.md)
+- [类型推理](../language-reference/type-inference.md)
+- [符号和运算符参考](../language-reference/symbol-and-operator-reference/index.md)

@@ -11,20 +11,20 @@ helpviewer_keywords:
 - StatusBar control [Windows Forms], refreshing panels
 - panels [Windows Forms], refreshing status bar
 ms.assetid: cc2abb06-c082-49f7-a5a3-2fd1bbcb58d1
-ms.openlocfilehash: 4b2d968aff157ac83b21823d546c052e140607a2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 49722d5dadf694e8ee3037646652b921ddda3e91
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33540259"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43401714"
 ---
 # <a name="walkthrough-updating-status-bar-information-at-run-time"></a>演练：在运行时更新状态栏信息
 > [!IMPORTANT]
->  <xref:System.Windows.Forms.StatusStrip>和<xref:System.Windows.Forms.ToolStripStatusLabel>控件替换，并将功能添加到<xref:System.Windows.Forms.StatusBar>和<xref:System.Windows.Forms.StatusBarPanel>控制; 但是，<xref:System.Windows.Forms.StatusBar>和<xref:System.Windows.Forms.StatusBarPanel>控件将保留用于向后兼容性和将来使用，如果你选择。  
+>  <xref:System.Windows.Forms.StatusStrip>并<xref:System.Windows.Forms.ToolStripStatusLabel>控件替换，并将功能添加到<xref:System.Windows.Forms.StatusBar>并<xref:System.Windows.Forms.StatusBarPanel>控制; 但是，<xref:System.Windows.Forms.StatusBar>和<xref:System.Windows.Forms.StatusBarPanel>控件将保留用于向后兼容性并供将来使用，如果你选择。  
   
  通常情况下，程序会要求根据应用程序状态的更改或其他用户交互情况，在运行时动态更新状态栏面板的内容。 这是一种用于执行以下任务的常用方式：通知用户启用了 CAPS LOCK、NUM LOCK 或 SCROLL LOCK 之类的键，或者将日期或时钟作为方便的引用提供。  
   
- 在以下示例中，你将使用的实例<xref:System.Windows.Forms.StatusBarPanel>类来承载时钟。  
+ 在以下示例中，您将使用的实例<xref:System.Windows.Forms.StatusBarPanel>类来承载时钟。  
   
 ### <a name="to-get-the-status-bar-ready-for-updating"></a>准备更新状态栏  
   
@@ -32,25 +32,25 @@ ms.locfileid: "33540259"
   
 2.  向窗体添加一个 <xref:System.Windows.Forms.StatusBar> 控件。 有关详细信息，请参阅[如何：向 Windows 窗体添加控件](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md)。  
   
-3.  状态栏将面板添加到你<xref:System.Windows.Forms.StatusBar>控件。 有关详细信息，请参阅[如何：向 StatusBar 控件添加面板](../../../../docs/framework/winforms/controls/how-to-add-panels-to-a-statusbar-control.md)。  
+3.  添加到状态栏面板在<xref:System.Windows.Forms.StatusBar>控件。 有关详细信息，请参阅[如何：向 StatusBar 控件添加面板](../../../../docs/framework/winforms/controls/how-to-add-panels-to-a-statusbar-control.md)。  
   
-4.  有关<xref:System.Windows.Forms.StatusBar>控件添加到窗体中，设置<xref:System.Windows.Forms.StatusBar.ShowPanels%2A>属性`true`。  
+4.  有关<xref:System.Windows.Forms.StatusBar>控件添加到窗体中，设置<xref:System.Windows.Forms.StatusBar.ShowPanels%2A>属性设置为`true`。  
   
 5.  添加 Windows 窗体<xref:System.Windows.Forms.Timer>组件到窗体。  
   
     > [!NOTE]
-    >  Windows 窗体<xref:System.Windows.Forms.Timer?displayProperty=nameWithType>组件为 Windows 窗体环境设计。 如果需要适合服务器环境的计时器，请参阅[基于服务器的计时器介绍](http://msdn.microsoft.com/library/adc0bc0a-a519-4812-bafc-fb9d1a5801fc)。  
+    >  Windows 窗体<xref:System.Windows.Forms.Timer?displayProperty=nameWithType>组件专为 Windows 窗体环境。 如果需要适合服务器环境的计时器，请参阅[基于服务器的计时器介绍](https://msdn.microsoft.com/library/adc0bc0a-a519-4812-bafc-fb9d1a5801fc)。  
   
 6.  将 <xref:System.Windows.Forms.Timer.Enabled%2A> 属性设置为 `true`。  
   
-7.  设置<xref:System.Windows.Forms.Timer.Interval%2A>属性<xref:System.Windows.Forms.Timer>30000 到。  
+7.  设置<xref:System.Windows.Forms.Timer.Interval%2A>属性的<xref:System.Windows.Forms.Timer>为 30000。  
   
     > [!NOTE]
-    >  <xref:System.Windows.Forms.Timer.Interval%2A>属性<xref:System.Windows.Forms.Timer>组件设置为 30 秒 （30000 毫秒） 以确保准确的时间将反映在显示的时间。  
+    >  <xref:System.Windows.Forms.Timer.Interval%2A>属性的<xref:System.Windows.Forms.Timer>成分设置为 30 秒 （30000 毫秒） 以确保显示的时间反映准确的时间。  
   
 ### <a name="to-implement-the-timer-to-update-the-status-bar"></a>通过实现计时器更新状态栏  
   
-1.  将下面的代码插入到的事件处理程序<xref:System.Windows.Forms.Timer>要更新的面板组件<xref:System.Windows.Forms.StatusBar>控件。  
+1.  将以下代码插入到的事件处理程序<xref:System.Windows.Forms.Timer>组件来更新的面板<xref:System.Windows.Forms.StatusBar>控件。  
   
     ```vb  
     Private Sub Timer1_Tick(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Timer1.Tick  
@@ -82,7 +82,7 @@ ms.locfileid: "33540259"
 1.  调试该应用程序，然后按 F5 运行。 有关调试的详细信息，请参阅[在 Visual Studio 中进行调试](/visualstudio/debugger/debugging-in-visual-studio)。  
   
     > [!NOTE]
-    >  大约 30 秒之后，时钟才会出现在状态栏上。 这样可以获得最精确的时间。 相反，若要使时钟会很快，你可以减少的值<xref:System.Windows.Forms.Timer.Interval%2A>在前面的过程中的步骤 7 中设置的属性。  
+    >  大约 30 秒之后，时钟才会出现在状态栏上。 这样可以获得最精确的时间。 相反，若要使时钟早些出现，可以减少的值<xref:System.Windows.Forms.Timer.Interval%2A>在前一过程中的步骤 7 中设置的属性。  
   
 ## <a name="see-also"></a>请参阅  
  <xref:System.Windows.Forms.StatusBar>  

@@ -2,24 +2,24 @@
 title: 筛选
 ms.date: 03/30/2017
 ms.assetid: 4002946c-e34a-4356-8cfb-e25912a4be63
-ms.openlocfilehash: 5f599ac74aa63951f59c5e5c79d3fe37b2ab5100
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 74915a45ed5ca1d13790f64c7921d1f750fa04d3
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33497238"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43409125"
 ---
 # <a name="filtering"></a>筛选
-Windows Communication Foundation (WCF) 筛选系统可以使用声明性筛选器与消息匹配以及做出操作决定。 使用筛选器，可以通过检查消息的某个部分来确定如何处理消息。 例如，查询过程可以使用 XPath 1.0 查询来检查已知标头的优先级元素，以确定是否将消息移动到队列的靠前位置。  
+Windows Communication Foundation (WCF) 筛选系统可以使用声明性筛选器匹配的消息以及做出操作决定。 使用筛选器，可以通过检查消息的某个部分来确定如何处理消息。 例如，查询过程可以使用 XPath 1.0 查询来检查已知标头的优先级元素，以确定是否将消息移动到队列的靠前位置。  
   
- 筛选系统组成一组类，可以有效地确定哪些一组筛选器是`true`的某个特定的 WCF 消息。  
+ 筛选系统由一组类，可以有效地确定哪些组筛选器是`true`某个特定的 WCF 消息。  
   
- 筛选系统是 WCF 消息传递; 的一个核心组件它旨在得速度非常快。 已针对特定类型的匹配对 WCF 消息而优化了每个筛选器实现。  
+ 筛选系统是 WCF 消息传送; 的核心组件它被设计得速度非常快。 每个筛选器实现经过优化的特定类型的与 WCF 消息相匹配。  
   
  筛选系统不是线程安全的。 应用程序必须处理所有锁定语义。 但是，筛选系统的确支持多读取器、单编写器操作模式。  
   
 ## <a name="where-filtering-fits"></a>筛选的适用范围  
- 筛选在接收到消息之后执行，并且是将消息调度到正确的应用程序组件这一过程的一部分。 筛选系统的设计满足几个 WCF 子系统，包括消息传送、 路由、 安全、 事件处理和系统管理的要求。  
+ 筛选在接收到消息之后执行，并且是将消息调度到正确的应用程序组件这一过程的一部分。 筛选系统的设计解决了多个 WCF 子系统，包括消息传送、 路由、 安全性、 事件处理和系统管理的要求。  
   
 ## <a name="filters"></a>筛选器  
  筛选器引擎具有两个主要组件，即筛选器和筛选器表。 筛选器基于用户指定的逻辑条件做出有关消息的布尔逻辑判定。 筛选器实现 <xref:System.ServiceModel.Dispatcher.MessageFilter> 类。  
@@ -42,10 +42,10 @@ Windows Communication Foundation (WCF) 筛选系统可以使用声明性筛选�
   
 ### <a name="prefix-endpoint-address-filters"></a>前缀终结点地址筛选器  
   
-1.  <xref:System.ServiceModel.Dispatcher.PrefixEndpointAddressMessageFilter> 的工作方式与 <xref:System.ServiceModel.Dispatcher.EndpointAddressMessageFilter> 筛选器非常类似，不同之处在于可以对消息 URI 的前缀进行匹配。 例如，指定地址的筛选器http://www.adatum.com匹配消息发送到http://www.adatum.com/userA。  
+1.  <xref:System.ServiceModel.Dispatcher.PrefixEndpointAddressMessageFilter> 的工作方式与 <xref:System.ServiceModel.Dispatcher.EndpointAddressMessageFilter> 筛选器非常类似，不同之处在于可以对消息 URI 的前缀进行匹配。 例如，指定地址的筛选器 http://www.adatum.com匹配消息发送到 http://www.adatum.com/userA。  
   
 ### <a name="xpath-message-filters"></a>XPath 消息筛选器  
- <xref:System.ServiceModel.Dispatcher.XPathMessageFilter> 使用 XPath 表达式来确定 XML 文档是否包含特定元素、属性、文本或其他 XML 语法构造。 该筛选器经过优化，可以非常高效地筛选 XPath 的严格子集。 中介绍了 XML 路径语言[W3C XML 路径语言 1.0 规范](http://go.microsoft.com/fwlink/?LinkId=94779)。  
+ <xref:System.ServiceModel.Dispatcher.XPathMessageFilter> 使用 XPath 表达式来确定 XML 文档是否包含特定元素、属性、文本或其他 XML 语法构造。 该筛选器经过优化，可以非常高效地筛选 XPath 的严格子集。 XML 路径语言中所述[W3C XML Path Language 1.0 规范](https://go.microsoft.com/fwlink/?LinkId=94779)。  
   
  通常，应用程序在终结点使用 <xref:System.ServiceModel.Dispatcher.XPathMessageFilter> 来查询 SOAP 消息的内容，然后基于该查询的结果采取适当的操作。 例如，查询过程可能使用 XPath 查询来检查已知标头的优先级元素，以决定是否将消息移动到队列的靠前位置。  
   
@@ -68,7 +68,7 @@ Windows Communication Foundation (WCF) 筛选系统可以使用声明性筛选�
   
  <xref:System.ServiceModel.Dispatcher.XPathMessageFilterTable%601> 类针对 XPath 的子集优化了匹配，该类适用于大多数消息处理方案，同时支持完整的 XPath 1.0 语法。 该类具有适合于高效并行匹配的优化算法。  
   
- 此表具有多个专用 `Match` 方法，这些方法对一个 <xref:System.Xml.XPath.XPathNavigator> 和一个 <xref:System.ServiceModel.Dispatcher.SeekableXPathNavigator> 进行操作。 通过添加 <xref:System.ServiceModel.Dispatcher.SeekableXPathNavigator> 属性，<xref:System.Xml.XPath.XPathNavigator> 扩展了 <xref:System.ServiceModel.Dispatcher.SeekableXPathNavigator.CurrentPosition%2A> 类。 利用此属性可以快速保存和加载 XML 文档内的位置，而无需克隆导航器 — 此克隆操作需要执行大量内存分配，并且是 <xref:System.Xml.XPath.XPathNavigator> 执行类似的保存和加载操作所需要的。 WCF XPath 引擎必须频繁地记录在 XML 文档，查询过程中光标的位置因此<xref:System.ServiceModel.Dispatcher.SeekableXPathNavigator>提供为消息处理了重要优化。  
+ 此表具有多个专用 `Match` 方法，这些方法对一个 <xref:System.Xml.XPath.XPathNavigator> 和一个 <xref:System.ServiceModel.Dispatcher.SeekableXPathNavigator> 进行操作。 通过添加 <xref:System.ServiceModel.Dispatcher.SeekableXPathNavigator> 属性，<xref:System.Xml.XPath.XPathNavigator> 扩展了 <xref:System.ServiceModel.Dispatcher.SeekableXPathNavigator.CurrentPosition%2A> 类。 利用此属性可以快速保存和加载 XML 文档内的位置，而无需克隆导航器 — 此克隆操作需要执行大量内存分配，并且是 <xref:System.Xml.XPath.XPathNavigator> 执行类似的保存和加载操作所需要的。 WCF XPath 引擎必须频繁地记录游标的查询过程中对 XML 文档的位置，因此<xref:System.ServiceModel.Dispatcher.SeekableXPathNavigator>提供消息处理了重要优化。  
   
 ## <a name="customer-scenarios"></a>客户方案  
  只要您希望根据消息中包含的数据将消息发送到不同处理模块，就可以使用筛选。 两种典型的方案是基于消息的操作代码对消息进行路由，以及基于消息的终结点地址对消息流进行多路分解。  

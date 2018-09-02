@@ -2,12 +2,12 @@
 title: 事务处理批处理
 ms.date: 03/30/2017
 ms.assetid: ecd328ed-332e-479c-a894-489609bcddd2
-ms.openlocfilehash: 7df65b8f3f149deac841010e392f3919b24506b4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: abada9aaf5fac8f05599467f385e708e1898832f
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33508873"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43416643"
 ---
 # <a name="transacted-batching"></a>事务处理批处理
 本示例演示如何通过使用消息队列 (MSMQ) 来批处理事务处理读取。 事务处理批处理是排队通信中事务处理读取的一种性能优化功能。  
@@ -21,7 +21,7 @@ ms.locfileid: "33508873"
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>设置、生成和运行示例  
   
-1.  确保已执行[的 Windows Communication Foundation 示例的一次性安装过程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
+1.  请确保您具有执行[的 Windows Communication Foundation 示例的一次性安装过程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
   
 2.  如果先运行服务，则它将检查以确保队列存在。 如果队列不存在，则服务将创建一个队列。 可以先运行服务以创建队列或通过 MSMQ 队列管理器创建一个队列。 执行下面的步骤来在 Windows 2008 中创建队列。  
   
@@ -31,7 +31,7 @@ ms.locfileid: "33508873"
   
     3.  右键单击**私有消息队列**，然后选择**新建**，**专用队列**。  
   
-    4.  检查**事务**框。  
+    4.  检查**事务性**框。  
   
     5.  输入`ServiceModelSamplesTransacted`作为新队列的名称。  
   
@@ -40,11 +40,11 @@ ms.locfileid: "33508873"
   
 3.  若要生成 C# 或 Visual Basic .NET 版本的解决方案，请按照 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)中的说明进行操作。  
   
-4.  若要在单或跨计算机配置上运行示例，请按照中的说明[运行 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/running-the-samples.md)。  
+4.  若要在单或跨计算机配置中运行示例，请按照中的说明[运行 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/running-the-samples.md)。  
   
 ### <a name="to-run-the-sample-on-a-computer-joined-to-a-workgroup-or-without-active-directory-integration"></a>在加入到工作组或在没有 Active Directory 集成的计算机上运行示例  
   
-1.  默认情况下使用 <xref:System.ServiceModel.NetMsmqBinding> 启用传输安全。 有两个相关属性对于 MSMQ 传输安全，<xref:System.ServiceModel.MsmqTransportSecurity.MsmqAuthenticationMode%2A>和<xref:System.ServiceModel.MsmqTransportSecurity.MsmqProtectionLevel%2A>`.`默认情况下，身份验证模式设置为`Windows`和保护级别设置为`Sign`。 为了使 MSMQ 提供身份验证和签名功能，MSMQ 必须是域的一部分，并且必须安装 MSMQ 的 Active Directory 集成选项。 如果在不满足这些条件的计算机上运行此示例，将会收到错误。  
+1.  默认情况下使用 <xref:System.ServiceModel.NetMsmqBinding> 启用传输安全。 有两个 MSMQ 传输安全相关的属性<xref:System.ServiceModel.MsmqTransportSecurity.MsmqAuthenticationMode%2A>并<xref:System.ServiceModel.MsmqTransportSecurity.MsmqProtectionLevel%2A>`.`默认情况下，身份验证模式设置为`Windows`和保护级别设置为`Sign`。 为了使 MSMQ 提供身份验证和签名功能，MSMQ 必须是域的一部分，并且必须安装 MSMQ 的 Active Directory 集成选项。 如果在不满足这些条件的计算机上运行此示例，将会收到错误。  
   
 2.  如果计算机不是域成员或尚未安装 Active Directory 集成，请将身份验证模式和保护级别设置为 `None` 以关闭传输安全性，如下面的示例配置所示：  
   
@@ -111,7 +111,7 @@ ms.locfileid: "33508873"
   
  当使用事务来发送和接收消息时，实际上有两个单独的事务。 当客户端在事务范围内发送消息时，事务相对于客户端和客户端队列管理器来说是本地事务。 当服务在事务范围内接收消息时，事务相对于服务和接收队列管理器来说是本地事务。 务必要记住的是，客户端和服务不会参与同一个事务；实际上，它们在对队列执行操作（如发送和接收）时使用的是不同的事务。  
   
- 在本示例中，我们将使用单个事务来执行多个服务操作。 这仅作为一种性能优化功能，并不影响应用程序的语义。 示例基于[事务性 MSMQ 绑定](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md)。  
+ 在本示例中，我们将使用单个事务来执行多个服务操作。 这仅作为一种性能优化功能，并不影响应用程序的语义。 该示例基于[事务处理 MSMQ 绑定](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md)。  
   
 ## <a name="comments"></a>注释  
  在本示例中，客户端在事务范围内向服务发送一批消息。 为了演示性能优化，我们将发送大量消息，在本例中，最多达 2500 条消息。  
@@ -370,7 +370,7 @@ Processing Purchase Order: ea94486b-7c86-4309-a42d-2f06c00656cd
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目录不存在，请转到[Windows Communication Foundation (WCF) 和针对.NET Framework 4 的 Windows Workflow Foundation (WF) 示例](http://go.microsoft.com/fwlink/?LinkId=150780)下载所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
+>  如果此目录不存在，请转到[Windows Communication Foundation (WCF) 和.NET Framework 4 的 Windows Workflow Foundation (WF) 示例](https://go.microsoft.com/fwlink/?LinkId=150780)若要下载所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\Net\MSMQ\Batching`  
   

@@ -7,15 +7,15 @@ dev_langs:
 ms.assetid: 97a10d79-3e7d-4bd1-9a99-fd9807fd70bc
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: 93bf7a038a46ff6c03f89e576f3e4150cd069dba
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b2c71af169018f272a6ca538bba9191f9ddbc0dd
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33491470"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43418124"
 ---
 # <a name="internet-unsecured-client-and-service"></a>不安全的 Internet 客户端和服务
-下图显示公共、 不安全的 Windows Communication Foundation (WCF) 客户端和服务的示例。  
+下图显示了 public、 不安全的 Windows Communication Foundation (WCF) 客户端和服务的示例。  
   
  ![不安全的 Internet 客户端和服务方案](../../../../docs/framework/wcf/feature-details/media/publicunsecured.gif "publicUnsecured")  
   
@@ -114,4 +114,4 @@ ms.locfileid: "33491470"
 ## <a name="see-also"></a>请参阅  
  [常用安全方案](../../../../docs/framework/wcf/feature-details/common-security-scenarios.md)  
  [安全性概述](../../../../docs/framework/wcf/feature-details/security-overview.md)  
- [Windows Server App Fabric 的安全模型](http://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+ [Windows Server App Fabric 的安全模型](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

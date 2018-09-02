@@ -5,18 +5,18 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: e6a58316-f005-4477-92e1-45cc2eb8c5b4
-ms.openlocfilehash: a25afbe0124f7870df886a1e26e0df2a0716b205
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 63d6a17e5aaf3e5d39ed0eda288e75c071be4d73
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33360185"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43405429"
 ---
 # <a name="detecting-changes-with-sqldependency"></a>使用 SqlDependency 检测更改
 <xref:System.Data.SqlClient.SqlDependency> 对象可以与 <xref:System.Data.SqlClient.SqlCommand> 关联，以便检测查询结果何时与最初检索的结果不同。 也可以向 `OnChange` 事件分配一个委托，当关联命令的结果更改时，将会触发该委托。 在执行命令前，必须将 <xref:System.Data.SqlClient.SqlDependency> 与该命令关联。 也可以使用 `HasChanges` 的 <xref:System.Data.SqlClient.SqlDependency> 属性来确定自从首次检索数据以来查询结果是否已经更改。  
   
 ## <a name="security-considerations"></a>安全注意事项  
- 依赖项基础结构依赖于 <xref:System.Data.SqlClient.SqlConnection>，它会在调用 <xref:System.Data.SqlClient.SqlDependency.Start%2A> 时打开，以便接收有关给定命令的基础数据已经更改的通知。 客户端启动对 `SqlDependency.Start` 的调用的能力是通过使用 <xref:System.Data.SqlClient.SqlClientPermission> 和代码访问安全性属性来控制的。 有关详细信息，请参阅[启用查询通知](../../../../../docs/framework/data/adonet/sql/enabling-query-notifications.md)和[代码访问安全性和 ADO.NET](../../../../../docs/framework/data/adonet/code-access-security.md)。  
+ 依赖项基础结构依赖于 <xref:System.Data.SqlClient.SqlConnection>，它会在调用 <xref:System.Data.SqlClient.SqlDependency.Start%2A> 时打开，以便接收有关给定命令的基础数据已经更改的通知。 客户端启动对 `SqlDependency.Start` 的调用的能力是通过使用 <xref:System.Data.SqlClient.SqlClientPermission> 和代码访问安全性属性来控制的。 有关详细信息，请参阅[启用查询通知](../../../../../docs/framework/data/adonet/sql/enabling-query-notifications.md)并[代码访问安全性和 ADO.NET](../../../../../docs/framework/data/adonet/code-access-security.md)。  
   
 ### <a name="example"></a>示例  
  下面的步骤演示如何声明依赖项、执行命令和在结果集更改时接收通知：  
@@ -94,7 +94,7 @@ void SomeMethod()
   
         // Create a dependency and associate it with the SqlCommand.  
         SqlDependency dependency=new SqlDependency(command);  
-        // Maintain the refence in a class member.  
+        // Maintain the reference in a class member.  
   
         // Subscribe to the SqlDependency event.  
         dependency.OnChange+=new  
@@ -124,4 +124,4 @@ void Termination()
   
 ## <a name="see-also"></a>请参阅  
  [SQL Server 中的查询通知](../../../../../docs/framework/data/adonet/sql/query-notifications-in-sql-server.md)  
- [ADO.NET 托管提供程序和数据集开发人员中心](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)

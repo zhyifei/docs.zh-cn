@@ -5,23 +5,24 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 1b612c7e-2381-4a7c-b07a-77030415f2a3
-ms.openlocfilehash: 6439a056ec1baccf6c059f779a577723761c489b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a9a83f64b7ea0de275631d7d3b8d2755671223ce
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43418073"
 ---
 # <a name="how-to-create-a-custom-tracking-participant"></a>如何：创建自定义跟踪参与者
-工作流跟踪用于查看工作流执行的状态。 工作流运行时发出跟踪记录，这些跟踪记录描述工作流生命周期事件、活动生命周期事件、书签摘要和故障。 这些跟踪记录供跟踪参与者使用。 Windows Workflow Foundation (WF) 包括一个标准跟踪参与者，将跟踪记录作为事件跟踪 Windows (ETW) 事件写入。 如果这不能满足您的需求，您还可以编写自定义跟踪参与者。 本教程步骤说明如何创建自定义跟踪参与者和跟踪配置文件，该配置文件捕获 `WriteLine` 活动的输出，以便将这些活动显示给用户。  
+工作流跟踪用于查看工作流执行的状态。 工作流运行时发出跟踪记录，这些跟踪记录描述工作流生命周期事件、活动生命周期事件、书签摘要和故障。 这些跟踪记录供跟踪参与者使用。 Windows Workflow Foundation (WF) 包括一个标准跟踪参与者，它将作为事件跟踪 Windows (ETW) 事件的跟踪记录写入。 如果这不能满足您的需求，您还可以编写自定义跟踪参与者。 本教程步骤说明如何创建自定义跟踪参与者和跟踪配置文件，该配置文件捕获 `WriteLine` 活动的输出，以便将这些活动显示给用户。  
   
 > [!NOTE]
->  入门教程中的每个主题都依赖于前面的主题。 若要完成本主题，必须先完成前面的主题。 若要下载完整的版本或观看教程视频演练，请参阅[Windows Workflow Foundation (WF45)-入门教程](http://go.microsoft.com/fwlink/?LinkID=248976)。  
+>  入门教程中的每个主题都依赖于前面的主题。 若要完成本主题，必须先完成前面的主题。 若要下载完整的版本或观看教程视频演练，请参阅[Windows Workflow Foundation (WF45)-入门教程](https://go.microsoft.com/fwlink/?LinkID=248976)。  
   
 ## <a name="in-this-topic"></a>在本主题中  
   
 -   [若要创建自定义跟踪参与者](../../../docs/framework/windows-workflow-foundation/how-to-create-a-custom-tracking-participant.md#BKMK_CustomTrackingParticipant)  
   
--   [创建跟踪配置文件并注册跟踪参与者](../../../docs/framework/windows-workflow-foundation/how-to-create-a-custom-tracking-participant.md#BKMK_TrackingProfile)  
+-   [若要创建跟踪配置文件并注册跟踪参与者](../../../docs/framework/windows-workflow-foundation/how-to-create-a-custom-tracking-participant.md#BKMK_TrackingProfile)  
   
 -   [若要显示的跟踪信息](../../../docs/framework/windows-workflow-foundation/how-to-create-a-custom-tracking-participant.md#BKMK_DisplayTracking)  
   
@@ -29,7 +30,7 @@ ms.lasthandoff: 05/04/2018
   
 ###  <a name="BKMK_CustomTrackingParticipant"></a> 若要创建自定义跟踪参与者  
   
-1.  右键单击**NumberGuessWorkflowHost**中**解决方案资源管理器**选择**添加**，**类**。 类型`StatusTrackingParticipant`到**名称**框中，然后单击**添加**。  
+1.  右键单击**NumberGuessWorkflowHost**中**解决方案资源管理器**，然后选择**添加**，**类**。 类型`StatusTrackingParticipant`成**名称**框中，然后单击**添加**。  
   
 2.  在包含其他 `using`（或 `Imports`）语句的文件的顶部添加以下 `using`（或 `Imports`）语句。  
   
@@ -101,11 +102,11 @@ ms.lasthandoff: 05/04/2018
     }  
     ```  
   
-     未指定跟踪配置文件时，使用默认跟踪配置文件。 使用默认跟踪配置文件时，将为所有 `ActivityStates` 发出跟踪记录。 因为我们只需在 `WriteLine` 活动的生命周期内捕获一次文本，所以我们仅从 `ActivityStates.Executing` 状态捕获文本。 在[创建跟踪配置文件并注册跟踪参与者](../../../docs/framework/windows-workflow-foundation/how-to-create-a-custom-tracking-participant.md#BKMK_TrackingProfile)，跟踪配置文件会创建一个仅指定`WriteLine``ActivityStates.Executing`发出跟踪记录。  
+     未指定跟踪配置文件时，使用默认跟踪配置文件。 使用默认跟踪配置文件时，将为所有 `ActivityStates` 发出跟踪记录。 因为我们只需在 `WriteLine` 活动的生命周期内捕获一次文本，所以我们仅从 `ActivityStates.Executing` 状态捕获文本。 在中[创建跟踪配置文件并注册跟踪参与者](../../../docs/framework/windows-workflow-foundation/how-to-create-a-custom-tracking-participant.md#BKMK_TrackingProfile)，创建一个跟踪配置文件指定仅`WriteLine``ActivityStates.Executing`发出跟踪记录。  
   
-###  <a name="BKMK_TrackingProfile"></a> 创建跟踪配置文件并注册跟踪参与者  
+###  <a name="BKMK_TrackingProfile"></a> 若要创建跟踪配置文件并注册跟踪参与者  
   
-1.  右键单击**WorkflowHostForm**中**解决方案资源管理器**选择**查看代码**。  
+1.  右键单击**WorkflowHostForm**中**解决方案资源管理器**，然后选择**查看代码**。  
   
 2.  在包含其他 `using`（或 `Imports`）语句的文件的顶部添加以下 `using`（或 `Imports`）语句。  
   
@@ -226,7 +227,7 @@ ms.lasthandoff: 05/04/2018
   
 ###  <a name="BKMK_DisplayTracking"></a> 若要显示的跟踪信息  
   
-1.  右键单击**WorkflowHostForm**中**解决方案资源管理器**选择**查看代码**。  
+1.  右键单击**WorkflowHostForm**中**解决方案资源管理器**，然后选择**查看代码**。  
   
 2.  在 `InstanceId_SelectedIndexChanged` 处理程序中，添加以下代码，紧接在清除状态窗口的代码之后。  
   
@@ -325,23 +326,23 @@ ms.lasthandoff: 05/04/2018
   
 2.  按 Ctrl+F5 启动应用程序。  
   
-3.  选择猜数游戏和工作流以启动，然后单击的类型的范围**新游戏**。 输入猜测值中的**猜测**框中，单击**转**提交该值。 可以看到，工作流的状态显示在状态窗口中。 此输出是从 `WriteLine` 活动捕获的。 切换到不同的工作流选择其中一个从**工作流实例 Id**组合框并记下的当前工作流的状态已删除。 切换回上一个工作流，可以看到其状态已恢复，与以下示例类似。  
+3.  选择一个范围的猜测和类型的工作流开始，然后单击**新游戏**。 输入在猜测**猜测**框，然后单击**转**提交该值。 可以看到，工作流的状态显示在状态窗口中。 此输出是从 `WriteLine` 活动捕获的。 通过选择一个从切换到不同的工作流**工作流实例 Id**组合框，请注意，删除当前工作流的状态。 切换回上一个工作流，可以看到其状态已恢复，与以下示例类似。  
   
     > [!NOTE]
     >  如果切换到启用跟踪之前启动的工作流，则不会显示状态。 但是，如果如果进行了其他猜数，则将保存其状态，因为现在启用了跟踪。  
   
  **请输入介于 1 和 10 之间的数字**  
-**该值是过高。**   
+**你猜得太高。**   
 **请输入介于 1 和 10 之间的数字**    
     > [!NOTE]
-    >  此信息对于确定随机数的范围十分有用，但它并不包含有关先前进行的猜数的任何信息。 此信息，请参阅下一步， [How to： 主机多个版本的工作流通过并行](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md)。  
+    >  此信息对于确定随机数的范围十分有用，但它并不包含有关先前进行的猜数的任何信息。 此信息位于下一步[如何： 主机的工作流的并排方案的多个版本](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md)。  
   
      记下工作流实例 ID，然后播放游戏，直到播完。  
   
-4.  打开 Windows 资源管理器并导航到**NumberGuessWorkflowHost\bin\debug**文件夹 (或**bin\release**具体取决于项目设置)。 可以看到，除了项目可执行文件之外，还有包含 guid 文件名的文件。 确定与上一步中已完成工作流的工作流实例 ID 对应的工作流，然后用记事本打开它。 跟踪信息所包含的内容类似于以下内容。  
+4.  打开 Windows 资源管理器并导航到**NumberGuessWorkflowHost\bin\debug**文件夹 (或**bin\release**取决于项目设置)。 可以看到，除了项目可执行文件之外，还有包含 guid 文件名的文件。 确定与上一步中已完成工作流的工作流实例 ID 对应的工作流，然后用记事本打开它。 跟踪信息所包含的内容类似于以下内容。  
   
  **请输入介于 1 和 10 之间的数字**  
-**该值是过高。**   
+**你猜得太高。**   
 **请输入介于 1 和 10 之间的数字**   
-**该值是过高。**   
-**请输入介于 1 和 10 之间的大量**除了缺少用户的猜测值，此跟踪数据不包含有关的最终猜数工作流的信息。 这是因为，跟踪信息仅包含工作流的 `WriteLine` 输出，而在工作流完成后从 `Completed` 显示的最终消息也是这样的。 在下一步的教程， [How to： 主机多个版本的工作流通过并行](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md)，现有`WriteLine`活动被修改，以显示用户的猜测和额外`WriteLine`添加活动显示的最终结果。 集成这些更改后， [How to： 主机多个版本的工作流通过并行](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md)演示如何同时承载多个版本的工作流。
+**你猜得太高。**   
+**请输入介于 1 和 10 之间的数字**除了缺少用户的猜数，此跟踪数据不包含有关的最终猜数工作流的信息。 这是因为，跟踪信息仅包含工作流的 `WriteLine` 输出，而在工作流完成后从 `Completed` 显示的最终消息也是这样的。 在本教程中下, 一步[如何： 主机的工作流的并排方案的多个版本](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md)，现有`WriteLine`活动被修改，以显示用户的猜数，和额外`WriteLine`添加活动显示最终结果。 合并这些更改后，[如何： 主机的工作流的并排方案的多个版本](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md)演示如何同时承载多个版本的工作流。

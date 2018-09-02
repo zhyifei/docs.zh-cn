@@ -8,12 +8,12 @@ helpviewer_keywords:
 - service contracts [WCF], synchronous operations
 - service contracts [WCF], asynchronous operations
 ms.assetid: db8a51cb-67e6-411b-9035-e5821ed350c9
-ms.openlocfilehash: 8f2d962f40f2b56b1d1dda68129f477e4277ae1d
-ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
+ms.openlocfilehash: c2948cf76f7763eae51689973346965bc6c720a8
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34728347"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43404211"
 ---
 # <a name="synchronous-and-asynchronous-operations"></a>同步和异步操作
 本主题讨论实现和调用异步服务操作。  
@@ -56,7 +56,7 @@ ms.locfileid: "34728347"
 3.  IAsyncResult 异步模式  
   
 #### <a name="task-based-asynchronous-pattern"></a>基于任务的异步模式  
- 基于任务的异步模式是实现异步操作的首选方法，因为它最简单且最直接。 若要使用此方法，只需实现服务操作并指定 Task\<T> 的返回类型，其中，T 是逻辑运算返回的类型。 例如:  
+ 基于任务的异步模式是实现异步操作的首选方法，因为它最简单且最直接。 若要使用此方法，只需实现服务操作并指定 Task\<T> 的返回类型，其中，T 是逻辑运算返回的类型。 例如：  
   
 ```csharp  
 public class SampleService:ISampleService   
@@ -73,7 +73,7 @@ public class SampleService:ISampleService
 }  
 ```  
   
- SampleMethodTaskAsync 操作返回 Task\<string>，因为逻辑运算返回字符串。 有关基于任务的异步模式的更多信息，请参见[基于任务的异步模式](http://go.microsoft.com/fwlink/?LinkId=232504)。  
+ SampleMethodTaskAsync 操作返回 Task\<string>，因为逻辑运算返回字符串。 有关基于任务的异步模式的更多信息，请参见[基于任务的异步模式](https://go.microsoft.com/fwlink/?LinkId=232504)。  
   
 > [!WARNING]
 >  在使用基于任务的异步模式时，如果在等待操作完成时发生异常，可能会引发 T:System.AggregateException。 该异常可在客户端或服务上发生  
@@ -107,7 +107,7 @@ public class AsyncExample
 }  
 ```  
   
- 有关基于事件的异步模式的更多信息，请参见[基于事件的异步模式](http://go.microsoft.com/fwlink/?LinkId=232515)。  
+ 有关基于事件的异步模式的更多信息，请参见[基于事件的异步模式](https://go.microsoft.com/fwlink/?LinkId=232515)。  
   
 #### <a name="iasyncresult-asynchronous-pattern"></a>IAsyncResult 异步模式  
  服务操作也可以按异步方式实现，具体方法是使用 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 异步编程模式，并标记 `<Begin>` 属性设置为 <xref:System.ServiceModel.OperationContractAttribute.AsyncPattern%2A> 的 `true` 方法。 在这种情况下，异步操作将以与同步操作相同的方式在元数据中公开，即作为单个操作随请求消息和相关的响应消息来公开。 随后，客户端编程模型可以进行选择。 客户端编程模型可以将这种模式表示为同步操作，也可以表示为异步操作，但前提是调用该服务时发生了请求-响应消息交换。  

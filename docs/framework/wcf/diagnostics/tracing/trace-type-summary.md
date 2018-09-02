@@ -2,17 +2,17 @@
 title: 跟踪类型摘要
 ms.date: 03/30/2017
 ms.assetid: e639410b-d1d1-479c-b78e-a4701d4e4085
-ms.openlocfilehash: e3bc66753dd44e1dc4c7417caf593820300f69a5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 73777df2b58b14947c416ce409bcb42d439499ec
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33486034"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43403838"
 ---
 # <a name="trace-type-summary"></a>跟踪类型摘要
-[源级别](http://go.microsoft.com/fwlink/?LinkID=94943)定义各种跟踪级别： 严重、 错误、 警告、 信息和详细，并提供说明`ActivityTracing`标志切换的输出以跟踪边界和活动传输事件。  
+[源级别](https://go.microsoft.com/fwlink/?LinkID=94943)定义各种跟踪级别： 严重、 错误、 警告、 信息和详细、 并提供的说明`ActivityTracing`标志切换的输出以跟踪边界和活动传输事件。  
   
- 此外可以查看[TraceEventType](http://go.microsoft.com/fwlink/?LinkId=95169)类型可以从发出的跟踪的<xref:System.Diagnostics>。  
+ 此外可以查看[TraceEventType](https://go.microsoft.com/fwlink/?LinkId=95169)可以从发出的跟踪类型<xref:System.Diagnostics>。  
   
  下表列出了最重要的跟踪类型。  
   

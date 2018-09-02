@@ -8,17 +8,17 @@ helpviewer_keywords:
 ms.assetid: 68dde024-8e51-40ba-804f-ec52d85e9ca9
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: 8024abdab01b2df151a6c0c2f5760e85ae119fd4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 72a2ea1393daa7435ae233d1e420cf88b6f5b6af
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33508301"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43402411"
 ---
 # <a name="wcf-security-terminology"></a>WCF 安全术语
 在讨论安全时使用的某些术语可能是您所不熟悉的。 本主题提供了一些安全术语的扼要解释，但并不试图提供每个术语的全面文档。  
   
- 有关 Windows Communication Foundation (WCF) 文档中的术语的详细信息，请参阅[基本 Windows Communication Foundation 概念](../../../../docs/framework/wcf/fundamental-concepts.md)。  
+ 有关使用 Windows Communication Foundation (WCF) 文档中的术语的详细信息，请参阅[基本 Windows Communication Foundation 概念](../../../../docs/framework/wcf/fundamental-concepts.md)。  
   
  Access Control List (ACL) — 访问控制列表 (ACL)  
  适用于某个对象的安全保护的列表。 （对象可以是文件、进程、事件或其他任何具有安全描述符的事物。）ACL 中的条目是访问控制项 (ACE)。 有两种类型的 ACL：自由和系统。  
@@ -33,7 +33,7 @@ ms.locfileid: "33508301"
  标识 CA，CA 将服务器和客户端身份验证证书颁发给请求这些证书的服务器和客户端。 因为它包含在数字签名中使用的公钥，它也称为*签名证书*。 如果 CA，根证书颁发机构的 CA 证书可能被称为*根证书*。 有时也称为*站点证书*。  
   
  CA 层次结构  
- 一个 CA 层次结构包含多个 CA。 它组织，以便每个 CA 认证由另一个 CA 层次结构中较高级别中之前在层次结构的顶部也称为*根颁发机构*，为止。  
+ 一个 CA 层次结构包含多个 CA。 它组织，以便每个 CA 经过认证的更高级别的层次结构中的另一个 CA 之前在层次结构的顶部也称为*根颁发机构*，达到。  
   
  证书  
  一个经过数字签名的声明，该声明包含与某个实体以及该实体的公钥有关的信息，从而将这两部分信息绑定在一起。 证书由称为证书颁发机构的受信任组织（或实体）颁发，颁发时间是在该颁发机构已验证实体声称具有的身份属实之后。  
@@ -92,7 +92,7 @@ ms.locfileid: "33508301"
  加密消息语法标准。 可以对其应用加密算法（如数字签名和加密）的数据的通用语法。 它还提供了用于向消息传播证书或证书吊销列表以及其他消息属性（如时间戳）的语法。  
   
  纯文本  
- 一个未加密的消息。 纯文本消息有时称为*明文形式*消息。  
+ 一个未加密的消息。 纯文本消息有时称为*明文*消息。  
   
  特权  
  用户用于执行各种系统相关操作（如关闭系统、加载设备驱动程序或更改系统时间）的权限。 用户的访问令牌包含用户或用户所属组拥有的特权的列表。  
@@ -175,10 +175,10 @@ ms.locfileid: "33508301"
  决定是否信任给定文件的软件。 此决定基于与该文件相关联的证书。  
   
  用户主体名称 (UPN)  
- 用户帐户名 (有时称为*用户登录名*) 和标识的用户帐户所在的域的域名。 这是登录到 Windows 域的标准用法。 格式： someone@example.com （对于电子邮件地址）。  
+ 用户帐户名 (有时称为*用户登录名*) 和标识的用户帐户所在的域的域名。 这是登录到 Windows 域的标准用法。 格式是： someone@example.com （与电子邮件地址）。  
   
 > [!NOTE]
->  除了标准 UPN 窗体中，WCF 低级别形式，例如 cohowinery.com\someone 接受 Upn。  
+>  除了标准 UPN 形式，WCF 在低级别形式中，例如 cohowinery.com\someone 接受的 Upn。  
   
  X.509  
  一种国际上认可的证书标准，用于定义证书的必需部分。  
@@ -186,4 +186,4 @@ ms.locfileid: "33508301"
 ## <a name="see-also"></a>请参阅  
  [Windows Communication Foundation 基础概念](../../../../docs/framework/wcf/fundamental-concepts.md)  
  [安全性概念](../../../../docs/framework/wcf/feature-details/security-concepts.md)  
- [Windows Server App Fabric 的安全模型](http://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+ [Windows Server App Fabric 的安全模型](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

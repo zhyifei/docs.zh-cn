@@ -9,20 +9,20 @@ helpviewer_keywords:
 - user controls [Windows Forms]
 - custom controls [Windows Forms]
 ms.assetid: e5a8e088-7ec8-4fd9-bcb3-9078fd134829
-ms.openlocfilehash: 267a56cbfd9025e2e20f1468535e5544146535a9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b58318a3e0e9881725d3c260251288c720fa4132
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33529853"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43406818"
 ---
 # <a name="developing-windows-forms-controls-at-design-time"></a>设计时开发 Windows 窗体控件
 .NET Framework 为控件创作者提供了丰富的控件创作技术。 作者不再局限于设计作为现有控件集合的复合控件。 通过继承，可根据现有复合控件或现有 Windows 窗体控件创建自己的控件。 还可以自己设计实现自定义绘制的控件。 这些选项对可视化界面的设计和功能赋予了很大的灵活性。 若要利用这些功能，应熟悉基于对象的编程概念。  
   
 > [!NOTE]
->  不需要透彻理解的继承，但您可能发现有用来指代[继承的基础知识 (Visual Basic 中)](~/docs/visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)。  
+>  不需要具有全面了解继承，但你可能会发现可以指代[继承的基础知识 (Visual Basic)](~/docs/visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)。  
   
- 如果要创建在 Web 窗体上使用的自定义控件，请参阅[开发自定义 ASP.NET 服务器控件](http://msdn.microsoft.com/library/fbe26c16-cff4-4089-b3dd-877411f0c0ef)。  
+ 如果要创建在 Web 窗体上使用的自定义控件，请参阅[开发自定义 ASP.NET 服务器控件](https://msdn.microsoft.com/library/fbe26c16-cff4-4089-b3dd-877411f0c0ef).。  
   
 ## <a name="in-this-section"></a>本节内容  
  [演练：使用 Visual Basic 创作复合控件](../../../../docs/framework/winforms/controls/walkthrough-authoring-a-composite-control-with-visual-basic.md)  
@@ -41,7 +41,7 @@ ms.locfileid: "33529853"
  演示如何在 Windows 窗体控件上使用智能标记功能。  
   
  [演练：使用 DesignerSerializationVisibilityAttribute 序列化标准类型的集合](../../../../docs/framework/winforms/controls/serializing-collections-designerserializationvisibilityattribute.md)  
- 演示如何使用<xref:System.ComponentModel.DesignerSerializationVisibilityAttribute.Content?displayProperty=nameWithType>以序列化集合的属性。  
+ 演示如何使用<xref:System.ComponentModel.DesignerSerializationVisibilityAttribute.Content?displayProperty=nameWithType>属性序列化集合。  
   
  [演练：设计时调试自定义 Windows 窗体控件](../../../../docs/framework/winforms/controls/walkthrough-debugging-custom-windows-forms-controls-at-design-time.md)  
  演示如何调试 Windows 窗体控件的设计时行为。  
@@ -65,13 +65,13 @@ ms.locfileid: "33529853"
  概述如何创建扩展的控件。  
   
  [如何：设计时将控件与窗体边缘对齐](../../../../docs/framework/winforms/controls/how-to-align-a-control-to-the-edges-of-forms-at-design-time.md)  
- 演示如何使用<xref:System.Windows.Forms.Control.Dock%2A>属性以你控件与它所占据窗体边缘对齐。  
+ 演示如何使用<xref:System.Windows.Forms.Control.Dock%2A>属性以将控件与它所占据窗体的边缘对齐。  
   
  [如何：在“选择工具箱项”对话框中显示控件](../../../../docs/framework/winforms/controls/how-to-display-a-control-in-the-choose-toolbox-items-dialog-box.md)  
  演示安装控件以将其显示在“自定义工具箱”对话框中的过程。  
   
  [如何：为控件提供工具箱位图](../../../../docs/framework/winforms/controls/how-to-provide-a-toolbox-bitmap-for-a-control.md)  
- 演示如何使用<xref:System.Drawing.ToolboxBitmapAttribute>来显示在你自定义控件旁边的图标**工具箱**。  
+ 演示如何使用<xref:System.Drawing.ToolboxBitmapAttribute>若要在自定义控件旁边显示一个图标**工具箱**。  
   
  [如何：测试 UserControl 的运行时行为](../../../../docs/framework/winforms/controls/how-to-test-the-run-time-behavior-of-a-usercontrol.md)  
  演示如何使用 **UserControl 测试容器**来测试组合控件的行为。  

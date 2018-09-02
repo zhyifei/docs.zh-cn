@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 3ee8ee7f-caba-4267-9343-e313fae2876d
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: 7e36ec5b824f60057ce7b1f18c695607cf9b88a3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d889b0662d0b2df29b7e1e76e281c760c8965aac
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33399660"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43406217"
 ---
 # <a name="building-my-first-claims-aware-aspnet-web-application"></a>生成我的第一个声明感知 ASP.NET Web 应用程序
 ## <a name="applies-to"></a>适用于  
@@ -34,11 +34,11 @@ ms.locfileid: "33399660"
   
  STS 是一项在身份验证成功后颁发令牌的服务。 Microsoft 提供两个行业标准 STS：  
   
--   [Active Directory 联合身份验证服务 (AD FS) 2.0](http://go.microsoft.com/fwlink/?LinkID=247516) (http://go.microsoft.com/fwlink/?LinkID=247516)  
+-   [Active Directory 联合身份验证服务 (AD FS) 2.0](https://go.microsoft.com/fwlink/?LinkID=247516)
   
--   [Windows Azure 访问控制服务 (ACS)](http://go.microsoft.com/fwlink/?LinkID=247517) (http://go.microsoft.com/fwlink/?LinkID=247517)。  
+-   [Windows Azure 访问控制服务 (ACS)](https://go.microsoft.com/fwlink/?LinkID=247517)
   
- AD FS 2.0 是 Windows Server R2 的一部分并可用作本地方案的 STS。 ACS 是一项云服务，它作为 Microsoft Azure 平台的一部分提供。 出于测试或教学目的，你还可以使用其他 STS 以生成声明感知应用程序。 例如，你可以使用属于本地开发 STS [Identity and Access Tool for Visual Studio](http://go.microsoft.com/fwlink/?LinkID=245849) (http://go.microsoft.com/fwlink/?LinkID=245849)这是免费提供联机。  
+ AD FS 2.0 是 Windows Server R2 的一部分并可用作本地方案的 STS。 ACS 是一项云服务，它作为 Microsoft Azure 平台的一部分提供。 出于测试或教学目的，你还可以使用其他 STS 以生成声明感知应用程序。 例如，可以使用属于本地开发 STS[标识和访问工具，用于 Visual Studio](https://go.microsoft.com/fwlink/?LinkID=245849)即联机免费提供。  
   
  若要使用 WIF 生成您的第一个声明感知 ASP.NET 应用程序，请按照下列主题之一中的说明进行操作：  
   

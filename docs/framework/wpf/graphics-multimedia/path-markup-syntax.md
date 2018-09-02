@@ -7,49 +7,49 @@ helpviewer_keywords:
 - graphics [WPF], PathGeometry class
 - XAML [WPF], object element usage
 ms.assetid: b8586241-a02d-486e-9223-e1e98e047f41
-ms.openlocfilehash: 86901f357c43dc7c0c1402bf313e674603eaccbe
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d681cd15fa3daa3698edc5e0ad3d3c2669c1dfdf
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33566764"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43403088"
 ---
 # <a name="path-markup-syntax"></a>路径标记语法
-路径中讨论了[形状和 WPF 概述中的基本绘图](../../../../docs/framework/wpf/graphics-multimedia/shapes-and-basic-drawing-in-wpf-overview.md)和[几何图形概述](../../../../docs/framework/wpf/graphics-multimedia/geometry-overview.md)，但是，本主题详细地介绍了功能强大且复杂的最小化语言，可用于指定路径几何图形更简洁使用[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]。  
+路径中讨论[形状和基本绘图中 WPF 概述](../../../../docs/framework/wpf/graphics-multimedia/shapes-and-basic-drawing-in-wpf-overview.md)和[几何概述](../../../../docs/framework/wpf/graphics-multimedia/geometry-overview.md)，但是，本主题详细介绍了功能强大且复杂的微型语言，可用于指定路径使用更简洁的几何图形[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]。  
   
 <a name="prerequisites"></a>   
 ## <a name="prerequisites"></a>系统必备  
- 若要了解本主题，你应该熟悉的基本功能<xref:System.Windows.Media.Geometry>对象。 有关详细信息，请参阅[几何图形概述](../../../../docs/framework/wpf/graphics-multimedia/geometry-overview.md)。  
+ 若要了解本主题，您应该熟悉的基本功能的<xref:System.Windows.Media.Geometry>对象。 有关详细信息，请参阅[几何概述](../../../../docs/framework/wpf/graphics-multimedia/geometry-overview.md)。  
   
 <a name="abouthisdocument"></a>   
 ## <a name="streamgeometry-and-pathfigurecollection-mini-languages"></a>StreamGeometry and PathFigureCollection Mini-Languages  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 提供用于描述几何路径提供迷你语言的两个类：<xref:System.Windows.Media.StreamGeometry>和<xref:System.Windows.Media.PathFigureCollection>。  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 提供用于描述几何路径提供微型语言的两个类：<xref:System.Windows.Media.StreamGeometry>和<xref:System.Windows.Media.PathFigureCollection>。  
   
--   你使用<xref:System.Windows.Media.StreamGeometry>设置类型的属性时的最小化语言<xref:System.Windows.Media.Geometry>，如<xref:System.Windows.UIElement.Clip%2A>属性<xref:System.Windows.UIElement>或<xref:System.Windows.Shapes.Path.Data%2A>属性<xref:System.Windows.Shapes.Path>元素。 下面的示例使用的特性语法创建<xref:System.Windows.Media.StreamGeometry>。  
+-   您使用<xref:System.Windows.Media.StreamGeometry>微型语言设置类型的属性时<xref:System.Windows.Media.Geometry>，如<xref:System.Windows.UIElement.Clip%2A>的属性<xref:System.Windows.UIElement>或<xref:System.Windows.Shapes.Path.Data%2A>属性<xref:System.Windows.Shapes.Path>元素。 下面的示例使用属性语法创建<xref:System.Windows.Media.StreamGeometry>。  
   
      [!code-xaml[GeometrySample_snip_XAML#GraphicsMMStreamGeometryAttributeSyntaxInline](../../../../samples/snippets/csharp/VS_Snippets_Wpf/GeometrySample_snip_XAML/CS/MiniLanguageExample.xaml#graphicsmmstreamgeometryattributesyntaxinline)]  
   
--   你使用<xref:System.Windows.Media.PathFigureCollection>最小化语言设置时<xref:System.Windows.Media.PathGeometry.Figures%2A>属性<xref:System.Windows.Media.PathGeometry>。 下面的示例使用的特性语法创建<xref:System.Windows.Media.PathFigureCollection>为<xref:System.Windows.Media.PathGeometry>。  
+-   您使用<xref:System.Windows.Media.PathFigureCollection>微型语言设置时<xref:System.Windows.Media.PathGeometry.Figures%2A>属性的<xref:System.Windows.Media.PathGeometry>。 下面的示例使用特性语法来创建<xref:System.Windows.Media.PathFigureCollection>为<xref:System.Windows.Media.PathGeometry>。  
   
      [!code-xaml[GeometrySample_snip_XAML#GraphicsMMPathFigureCollectionAttributeSyntaxInline](../../../../samples/snippets/csharp/VS_Snippets_Wpf/GeometrySample_snip_XAML/CS/MiniLanguageExample.xaml#graphicsmmpathfigurecollectionattributesyntaxinline)]  
   
- 从前面的示例中可以看出，两种微型语言非常相似。 它始终是可以使用<xref:System.Windows.Media.PathGeometry>在其中你可以使用任何情况下<xref:System.Windows.Media.StreamGeometry>; 因此您应使用哪一个？ 使用<xref:System.Windows.Media.StreamGeometry>当不需要在创建它; 后修改路径使用<xref:System.Windows.Media.PathGeometry>如果需要修改路径。  
+ 从前面的示例中可以看出，两种微型语言非常相似。 它始终是可以使用<xref:System.Windows.Media.PathGeometry>在任何情况下，可以使用<xref:System.Windows.Media.StreamGeometry>; 因此，您应使用哪一个？ 使用<xref:System.Windows.Media.StreamGeometry>不需要创建它; 后修改的路径时使用<xref:System.Windows.Media.PathGeometry>如果需要修改的路径。  
   
- 有关详细信息之间的差异<xref:System.Windows.Media.PathGeometry>和<xref:System.Windows.Media.StreamGeometry>对象，请参阅[几何图形概述](../../../../docs/framework/wpf/graphics-multimedia/geometry-overview.md)。  
+ 有关详细信息之间的差异<xref:System.Windows.Media.PathGeometry>并<xref:System.Windows.Media.StreamGeometry>对象，请参阅[几何概述](../../../../docs/framework/wpf/graphics-multimedia/geometry-overview.md)。  
   
 ### <a name="a-note-about-white-space"></a>有关空格的注意事项  
  为简洁起见，随后的语法部分中显示一个空格，但在显示一个空格的地方，多个空格也可以接受。  
   
- 两个数字之间不必用逗号或空格分隔，但仅适用于生成的字符串明确时。 例如，`2..3`实际两个数字:"2"。 和“.3”。 同样，`2-3`是"2"和"-3"。 命令前面或后面也无需加空格。  
+ 两个数字实际上无需分隔逗号或空格，但这仅可以生成的字符串不明确时。 例如，`2..3`是实际的两个数字:"2"。 和“.3”。 同样，`2-3`是"2"和"-3"。 命令前面或后面也无需加空格。  
   
 ### <a name="syntax"></a>语法  
- [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]属性使用情况语法<xref:System.Windows.Media.StreamGeometry>由组成一个可选<xref:System.Windows.Media.FillRule>值和一个或多个图说明。  
+ [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]属性使用语法<xref:System.Windows.Media.StreamGeometry>组成的可选<xref:System.Windows.Media.FillRule>值和一个或多个图说明。  
   
 |StreamGeometry XAML 属性用法|  
 |-----------------------------------------|  
 |`<` *对象**属性* `="`[ `fillRule`] `figureDescription`[ `figureDescription`] * `" ... />`|  
   
- [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]属性使用情况语法<xref:System.Windows.Media.PathFigureCollection>由组成一个或多个图说明。  
+ [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]属性使用语法<xref:System.Windows.Media.PathFigureCollection>由一个或多个图形说明组成。  
   
 |PathFigureCollection XAML Attribute Usage|  
 |-----------------------------------------------|  
@@ -57,7 +57,7 @@ ms.locfileid: "33566764"
   
 |术语|描述|  
 |----------|-----------------|  
-|*fillRule*|<xref:System.Windows.Media.FillRule?displayProperty=nameWithType><br /><br /> 指定是否<xref:System.Windows.Media.StreamGeometry>使用<xref:System.Windows.Media.FillRule.EvenOdd>或<xref:System.Windows.Media.FillRule.Nonzero> <xref:System.Windows.Media.PathGeometry.FillRule%2A>。<br /><br /> -   `F0` 指定<xref:System.Windows.Media.FillRule.EvenOdd>填充规则。<br />-   `F1` 指定<xref:System.Windows.Media.FillRule.Nonzero>填充规则。<br /><br /> 如果省略此命令，则子路径使用默认行为，即<xref:System.Windows.Media.FillRule.EvenOdd>。 如果指定该命令，须先设置命令。|  
+|*fillRule*|<xref:System.Windows.Media.FillRule?displayProperty=nameWithType><br /><br /> 指定是否<xref:System.Windows.Media.StreamGeometry>使用<xref:System.Windows.Media.FillRule.EvenOdd>或<xref:System.Windows.Media.FillRule.Nonzero> <xref:System.Windows.Media.PathGeometry.FillRule%2A>。<br /><br /> -   `F0` 指定<xref:System.Windows.Media.FillRule.EvenOdd>填充规则。<br />-   `F1` 指定<xref:System.Windows.Media.FillRule.Nonzero>填充规则。<br /><br /> 如果省略此命令时，子路径将使用默认行为，即<xref:System.Windows.Media.FillRule.EvenOdd>。 如果指定该命令，须先设置命令。|  
 |*figureDescription*|图形由一个移动命令，绘制命令和一个可选的关闭命令组成。<br /><br /> `moveCommand` `drawCommands`  `[` `closeCommand` `]`|  
 |*moveCommand*|用于指定图形起点的移动命令。 请参阅[移动命令](#themovecommand)部分。|  
 |*drawCommands*|用于描述图形内容的一个或多个绘图命令。 请参阅[绘制命令](#drawcommands)部分。|  
@@ -75,16 +75,16 @@ ms.locfileid: "33566764"
 |----------|-----------------|  
 |*startPoint*|<xref:System.Windows.Point?displayProperty=nameWithType><br /><br /> 新图形的起点。|  
   
- 大写`M`指示`startPoint`绝对值; 小写`m`指示`startPoint`是到以前的点的偏移量或 (0，0) 如果不存在。 如果在移动命令之后列出多个点，可以绘制一条连接到这些点的直线，尽管已指定了直线命令。  
+ 大写`M`指示`startPoint`是一个绝对值; 小写字母`m`指示`startPoint`是对前一点的偏移量或 (0，0) 如果不存在。 如果在移动命令之后列出多个点，可以绘制一条连接到这些点的直线，尽管已指定了直线命令。  
   
 <a name="drawcommands"></a>   
 ## <a name="draw-commands"></a>绘制命令  
  绘制命令可以由几个形状命令组成。 以下形状命令可用：直线、水平线、竖线、三次贝塞尔曲线、二次贝塞尔曲线、平滑三次贝塞尔曲线、平滑二次贝塞尔曲线和椭圆弧。  
   
- 可以使用大写或小写字母输入每个命令：大写字母表示绝对值，小写字母表示相对值：该线段的控制点相对于前面示例的终点。 在按顺序输入多个相同类型的命令，则可以省略重复命令项中;例如，`L 100,200 300,400`等效于`L 100,200 L 300,400`。 下表描述了**移动**和**绘制**命令。  
+ 可以使用大写或小写字母输入每个命令：大写字母表示绝对值，小写字母表示相对值：该线段的控制点相对于前面示例的终点。 当按顺序输入多个相同类型的命令，则可以省略重复的命令输入;例如，`L 100,200 300,400`等效于`L 100,200 L 300,400`。 下表描述了**移动**并**绘制**命令。  
   
 ### <a name="line-command"></a>直线命令  
- 在当前点和指定的终点之间创建一条直线。 `l 20 30` 和`L 20,30`是有效的示例**行**命令。  
+ 在当前点和指定的终点之间创建一条直线。 `l 20 30` 并`L 20,30`是有效的示例**行**命令。  
   
 |语法|  
 |------------|  
@@ -94,7 +94,7 @@ ms.locfileid: "33566764"
 |----------|-----------------|  
 |*endPoint*|<xref:System.Windows.Point?displayProperty=nameWithType><br /><br /> 线条的终点。|  
 
-大写`L`指示`endPoint`绝对值; 小写`l`指示`endPoint`是到以前的点的偏移量或 (0，0) 如果不存在。
+大写`L`指示`endPoint`是一个绝对值; 小写字母`l`指示`endPoint`是对前一点的偏移量或 (0，0) 如果不存在。
 
 ### <a name="horizontal-line-command"></a>水平线命令  
  在当前点和指定的 x 坐标之间创建一条水平线。 `H 90` 是有效水平线命令的示例。
@@ -108,7 +108,7 @@ ms.locfileid: "33566764"
 |----------|-----------------|  
 |*x*|<xref:System.Double?displayProperty=nameWithType><br /><br /> 线条终点的 x 坐标。|  
   
-大写`H`指示`x`绝对值; 小写`h`指示`x`是到以前的点的偏移量或 (0，0) 如果不存在。
+大写`H`指示`x`是一个绝对值; 小写字母`h`指示`x`是对前一点的偏移量或 (0，0) 如果不存在。
   
 ### <a name="vertical-line-command"></a>竖线命令  
  在当前点和指定的 y 坐标之间创建一条竖线。 `v 90` 是有效竖线命令的示例。
@@ -122,7 +122,7 @@ ms.locfileid: "33566764"
 |----------|-----------------|  
 |*y*|<xref:System.Double?displayProperty=nameWithType><br /><br /> 直线终点的 y 坐标。|  
 
-大写`V`指示`y`绝对值; 小写`v`指示`y`是到以前的点的偏移量或 (0，0) 如果不存在。  
+大写`V`指示`y`是一个绝对值; 小写字母`v`指示`y`是对前一点的偏移量或 (0，0) 如果不存在。  
     
 ### <a name="cubic-bezier-curve-command"></a>三次贝塞尔曲线命令  
  通过使用两个指定的控制点创建当前点和指定的终结点之间的三次方贝塞尔曲线 (`controlPoint`1 和`controlPoint`2)。 `C 100,200 200,400 300,200` 是有效曲线命令的示例。  
@@ -138,7 +138,7 @@ ms.locfileid: "33566764"
 |`endPoint`|<xref:System.Windows.Point?displayProperty=nameWithType><br /><br /> 绘制曲线将通过的点。|  
   
 ### <a name="quadratic-bezier-curve-command"></a>二次贝塞尔曲线命令  
- 通过使用指定的控制点创建二次贝塞尔曲线的当前点和指定的终结点之间 (`controlPoint`)。 `q 100,200 300,200` 为有效二次贝塞尔曲线命令的示例。  
+ 创建二次贝塞尔曲线的当前点和指定的终结点之间使用指定的控制点 (`controlPoint`)。 `q 100,200 300,200` 为有效二次贝塞尔曲线命令的示例。  
   
 |语法|  
 |------------|  
@@ -150,7 +150,7 @@ ms.locfileid: "33566764"
 |`endPoint`|<xref:System.Windows.Point?displayProperty=nameWithType><br /><br /> 绘制曲线将通过的点。|  
   
 ### <a name="smooth-cubic-bezier-curve-command"></a>平滑三次贝塞尔曲线命令  
- 在当前点和指定的终点之间创建三次贝塞尔曲线。 假设第一控制点为相对当前点前一命令的第二控制点的反射。 如果没有前一命令或如果前一命令不是三次贝塞尔曲线命令或平滑三次贝塞尔曲线命令，则假设第一个控制点与当前点重合。 第二个控制点，由指定的曲线，最终的控制点`controlPoint`2。 例如，`S 100,200 200,300`是一个有效的平滑三次方贝塞尔曲线命令。  
+ 在当前点和指定的终点之间创建三次贝塞尔曲线。 假设第一控制点为相对当前点前一命令的第二控制点的反射。 如果没有前一命令或如果前一命令不是三次贝塞尔曲线命令或平滑三次贝塞尔曲线命令，则假设第一个控制点与当前点重合。 第二个控制点，由指定的曲线末尾的控制点`controlPoint`2。 例如，`S 100,200 200,300`是一个有效的平滑三次方贝塞尔曲线命令。  
   
 |语法|  
 |------------|  

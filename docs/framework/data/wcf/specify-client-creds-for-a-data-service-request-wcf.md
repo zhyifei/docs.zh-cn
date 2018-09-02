@@ -7,20 +7,20 @@ dev_langs:
 helpviewer_keywords:
 - WCF Data Services, customizing requests
 ms.assetid: 1632f9af-e45f-4363-9222-03823daa8e28
-ms.openlocfilehash: cf3ba2a13d56aae56ed7a1444169056b9905a145
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d0fbf01de05a02c03782af9e392a79b6dd3e8bee
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33363961"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43402516"
 ---
 # <a name="how-to-specify-client-credentials-for-a-data-service-request-wcf-data-services"></a>如何：为数据服务请求（WCF 数据服务）指定客户端凭据
 默认情况下，客户端库在向 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 服务发送请求时不提供凭据。 但是，可以通过为 <xref:System.Net.NetworkCredential> 的 <xref:System.Data.Services.Client.DataServiceContext.Credentials%2A> 属性提供 <xref:System.Data.Services.Client.DataServiceContext> 以指定发送凭据，对发送到数据服务的请求进行身份验证。 有关更多信息，请参见 [Securing WCF Data Services](../../../../docs/framework/data/wcf/securing-wcf-data-services.md)。 本主题中的示例演示如何显式提供 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 客户端从数据服务请求数据时使用的凭据。  
   
- 本主题中的示例使用罗斯文示例数据服务和自动生成的客户端数据服务类。 在完成时创建此服务和客户端数据类[WCF 数据服务快速入门](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md)。 你还可以使用[Northwind 示例数据服务](http://go.microsoft.com/fwlink/?LinkId=187426)发布在[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]网站; 此示例数据服务是只读的并在尝试保存更改返回错误。 上的示例数据服务[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]网站允许匿名身份验证。  
+ 本主题中的示例使用罗斯文示例数据服务和自动生成的客户端数据服务类。 完成后，将创建此服务和客户端数据类[WCF Data Services 快速入门](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md)。 此外可以使用[Northwind 示例数据服务](https://go.microsoft.com/fwlink/?LinkId=187426)上发布的[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]网站; 该示例数据服务是只读的尝试保存更改返回错误。 示例数据服务上[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]网站允许匿名身份验证。  
   
 ## <a name="example"></a>示例  
- 下面的示例是从 Windows Presentation Framework 应用程序主页的可扩展应用程序标记语言 (XAML) 文件的代码隐藏页。 该示例显示了一个 `LoginWindow` 实例，用于收集用户的身份验证凭据，然后在向数据服务发出请求时使用了这些凭据。  
+ 下面的示例是从 Windows Presentation Framework 应用程序的主页的 Extensible Application Markup Language (XAML) 文件的代码隐藏页。 该示例显示了一个 `LoginWindow` 实例，用于收集用户的身份验证凭据，然后在向数据服务发出请求时使用了这些凭据。  
   
  [!code-csharp[Astoria Northwind Client#ClientCredentials](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/clientcredentials.xaml.cs#clientcredentials)]  
  [!code-vb[Astoria Northwind Client#ClientCredentials](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/clientcredentials.xaml.vb#clientcredentials)]

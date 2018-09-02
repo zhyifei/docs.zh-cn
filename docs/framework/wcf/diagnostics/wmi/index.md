@@ -2,12 +2,12 @@
 title: 使用 Windows Management Instrumentation 进行诊断
 ms.date: 03/30/2017
 ms.assetid: fe48738d-e31b-454d-b5ec-24c85c6bf79a
-ms.openlocfilehash: b1ebb6b438df6d7efb5342a82e42220a58ea5cbd
-ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
+ms.openlocfilehash: b7c898f1af91f639939e5480687b5967bf57d246
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42908141"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43406915"
 ---
 # <a name="using-windows-management-instrumentation-for-diagnostics"></a>使用 Windows Management Instrumentation 进行诊断
 Windows Communication Foundation (WCF) 公开在通过 WCF Windows Management Instrumentation (WMI) 提供程序的运行时服务的检测数据。  
@@ -30,7 +30,7 @@ Windows Communication Foundation (WCF) 公开在通过 WCF Windows Management In
  此配置项公开 WMI 接口。 现在，您可以通过此接口连接管理应用程序并访问应用程序的管理规范。  
   
 ## <a name="accessing-wmi-data"></a>访问 WMI 数据  
- 可以采用多种不同方式访问 WMI 数据。 Microsoft 提供脚本、 Visual Basic 应用程序、 c + + 应用程序的 WMI Api 和[!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)]。 有关详细信息，请参阅[使用 WMI](http://go.microsoft.com/fwlink/?LinkId=95183)。  
+ 可以采用多种不同方式访问 WMI 数据。 Microsoft 提供脚本、 Visual Basic 应用程序、 c + + 应用程序的 WMI Api 和[!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)]。 有关详细信息，请参阅[使用 WMI](https://go.microsoft.com/fwlink/?LinkId=95183)。  
   
 > [!CAUTION]
 >  如果您使用 .NET Framework 提供的方法以编程方式访问 WMI 数据，您应注意此类方法可能会在建立连接时引发异常。 连接并不是在构建 <xref:System.Management.ManagementObject> 实例的过程中建立的，而是在涉及实际数据交换的第一次请求时建立的。 因此，您应该使用 `try..catch` 块来捕捉可能的异常。  
@@ -147,13 +147,13 @@ Windows Communication Foundation (WCF) 公开在通过 WCF Windows Management In
 Whoami /user  
 ```  
   
- 此方法提供了当前用户的 SID，但是此方法不能用于获取任意用户的 SID。 若要获取 SID 的另一种方法是使用[getsid.exe](http://go.microsoft.com/fwlink/?LinkId=186467)工具[来执行管理任务的 Windows 2000 Resource Kit Tools](http://go.microsoft.com/fwlink/?LinkId=178660)。 此工具比较两个用户（本地用户或域用户）的 SID，其副功能是将两个 SID 显示到命令行。 有关详细信息，请参阅[熟知 Sid](http://go.microsoft.com/fwlink/?LinkId=186468)。  
+ 此方法提供了当前用户的 SID，但是此方法不能用于获取任意用户的 SID。 若要获取 SID 的另一种方法是使用[getsid.exe](https://go.microsoft.com/fwlink/?LinkId=186467)工具[来执行管理任务的 Windows 2000 Resource Kit Tools](https://go.microsoft.com/fwlink/?LinkId=178660)。 此工具比较两个用户（本地用户或域用户）的 SID，其副功能是将两个 SID 显示到命令行。 有关详细信息，请参阅[熟知 Sid](https://go.microsoft.com/fwlink/?LinkId=186468)。  
   
 ## <a name="accessing-remote-wmi-object-instances"></a>访问远程 WMI 对象实例  
  如果需要访问远程计算机上的 WCF WMI 实例，则必须启用数据包保密性，您将用于访问的工具。 以下部分描述如何通过使用 WMI CIM Studio、Windows Management Instrumentation 测试器以及 .NET SDK 2.0 实现这些目标。  
   
 ### <a name="wmi-cim-studio"></a>WMI CIM Studio  
- 如果已安装[WMI 管理工具](http://go.microsoft.com/fwlink/?LinkId=95185)，可以使用 WMI CIM Studio 访问 WMI 实例。 这些工具位于以下文件夹中  
+ 如果已安装[WMI 管理工具](https://go.microsoft.com/fwlink/?LinkId=95185)，可以使用 WMI CIM Studio 访问 WMI 实例。 这些工具位于以下文件夹中  
   
  **%windir%\Program Files\WMI 工具\\**  
   

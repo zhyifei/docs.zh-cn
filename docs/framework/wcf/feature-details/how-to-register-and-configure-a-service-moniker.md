@@ -5,19 +5,19 @@ helpviewer_keywords:
 - COM [WCF], configure service monikers
 - COM [WCF], register service monikers
 ms.assetid: e5e16c80-8a8e-4eef-af53-564933b651ef
-ms.openlocfilehash: 1d245327c1e7d53de9a88c93ff0399d8e231a1df
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: cd3b6bbb47dfd72bf70091c9ca4d6fc5e228d950
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33493309"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43406932"
 ---
 # <a name="how-to-register-and-configure-a-service-moniker"></a>如何：注册和配置服务标记
-在使用之前在 COM 应用程序中的 Windows Communication Foundation (WCF) 服务名字对象具有类型化协定，你必须向 COM 注册所需的特性化的类型并使用所需的绑定配置的 COM 应用程序和标记配置。  
+必须在使用之前在 COM 应用程序中的 Windows Communication Foundation (WCF) 服务名字对象具有类型化协定中, 所需的特性化的类型向 COM 注册，并使用所需的绑定配置的 COM 应用程序和标记配置。  
   
 ### <a name="to-register-the-required-attributed-types-with-com"></a>向 COM 注册所需的属性化类型  
   
-1.  使用[ServiceModel 元数据实用工具 (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)工具以检索从 WCF 服务的元数据协定。 这将为 WCF 客户端程序集和客户端应用程序配置文件生成源代码。  
+1.  使用[ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)工具，用于从 WCF 服务中检索元数据协定。 这将生成 WCF 客户端程序集和客户端应用程序配置文件的源代码。  
   
 2.  确保将程序集中的类型标记为 `ComVisible`。 为此，请将下面的属性添加到 Visual Studio 项目的 AssemblyInfo.cs 文件中。  
   
@@ -25,7 +25,7 @@ ms.locfileid: "33493309"
     [assembly: ComVisible(true)]  
     ```  
   
-3.  编译具有强名称程序集作为托管的 WCF 客户端。 这要求使用加密密钥对进行签名。 有关详细信息，请参阅[为程序集使用强名称签名](http://go.microsoft.com/fwlink/?LinkId=94874).NET 开发人员指南中。  
+3.  编译具有强名称程序集作为托管的 WCF 客户端。 这要求使用加密密钥对进行签名。 有关详细信息，请参阅[为程序集使用强名称签名](https://go.microsoft.com/fwlink/?LinkId=94874).NET 开发人员指南中。  
   
 4.  使用带有 `/tlb` 选项的程序集注册 (Regasm.exe) 工具向 COM 注册程序集中的类型。  
   
@@ -36,7 +36,7 @@ ms.locfileid: "33493309"
   
 ### <a name="to-configure-the-com-application-and-the-moniker-with-the-required-binding-configuration"></a>为 COM 应用程序和标记配置所需的绑定配置  
   
--   将绑定定义放置 (由生成[ServiceModel 元数据实用工具 (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)生成的客户端应用程序配置文件中) 在客户端应用程序的配置文件中。 例如，对于名为 CallCenterClient.exe 的 Visual Basic 6.0 可执行文件，配置应放置到该可执行文件所在目录中名为 CallCenterConfig.exe.config 的文件中。 此时，客户端应用程序就可以使用标记了。 请注意，如果使用的标准绑定 WCF 提供的类型之一，可能不是必需的绑定配置。  
+-   将绑定定义放置 (パ[ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)生成的客户端应用程序配置文件中) 客户端应用程序的配置文件中。 例如，对于名为 CallCenterClient.exe 的 Visual Basic 6.0 可执行文件，配置应放置到该可执行文件所在目录中名为 CallCenterConfig.exe.config 的文件中。 此时，客户端应用程序就可以使用标记了。 请注意，如果使用的标准绑定 WCF 提供的类型之一，可能不是必需的绑定配置。  
   
      注册下面的类型。  
   

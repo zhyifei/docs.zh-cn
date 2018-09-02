@@ -8,29 +8,29 @@ helpviewer_keywords:
 - animation [WPF], objects along paths (point animation)
 - point animation [WPF]
 ms.assetid: 1fa3f817-35bc-41a1-b366-f5a20b70da0c
-ms.openlocfilehash: 639e28d9b809d6fb5eed3a002bca1ffc40913896
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d6dc79cd7a15aef2a4168fffb293c5e1f33cde08
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33558776"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43416615"
 ---
 # <a name="how-to-animate-an-object-along-a-path-point-animation"></a>如何：沿着路径针对对象进行动画处理（点动画）
-此示例演示如何使用<xref:System.Windows.Media.Animation.PointAnimationUsingPath>对象要进行动画处理<xref:System.Windows.Point>沿曲线的路径。  
+此示例演示如何使用<xref:System.Windows.Media.Animation.PointAnimationUsingPath>对象进行动画处理<xref:System.Windows.Point>沿着曲线路径。  
   
 ## <a name="example"></a>示例  
- 下面的示例将<xref:System.Windows.Media.EllipseGeometry>沿路径由定义<xref:System.Windows.Media.PathGeometry>。 椭圆几何图形<xref:System.Windows.Media.EllipseGeometry.Center%2A>属性，采用<xref:System.Windows.Point>值时，请指定其位置; 若要移动的椭圆的几何图形，你动态显示其<xref:System.Windows.Media.EllipseGeometry.Center%2A>属性。 该示例使用<xref:System.Windows.Media.Animation.PointAnimationUsingPath>要进行动画处理<xref:System.Windows.Media.EllipseGeometry>对象的<xref:System.Windows.Media.EllipseGeometry.Center%2A>属性。  
+ 以下示例将移动<xref:System.Windows.Media.EllipseGeometry>沿着由定义路径<xref:System.Windows.Media.PathGeometry>。 椭圆几何图形<xref:System.Windows.Media.EllipseGeometry.Center%2A>属性，采用<xref:System.Windows.Point>值，指定其位置; 若要移动椭圆几何图形，您进行动画处理其<xref:System.Windows.Media.EllipseGeometry.Center%2A>属性。 该示例使用<xref:System.Windows.Media.Animation.PointAnimationUsingPath>进行动画处理<xref:System.Windows.Media.EllipseGeometry>对象的<xref:System.Windows.Media.EllipseGeometry.Center%2A>属性。  
   
  [!code-xaml[PathAnimationGallery_snippet#PointAnimationUsingPathWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PathAnimationGallery_snippet/CS/pointanimationusingpathexample.xaml#pointanimationusingpathwholepage)]  
   
  [!code-csharp[PathAnimationGallery_procedural_snip#PointAnimationUsingPathWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PathAnimationGallery_procedural_snip/CSharp/PointAnimationUsingPathExample.cs#pointanimationusingpathwholepage)]
  [!code-vb[PathAnimationGallery_procedural_snip#PointAnimationUsingPathWholePage](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/PathAnimationGallery_procedural_snip/VisualBasic/PointAnimationUsingPathExample.vb#pointanimationusingpathwholepage)]  
   
- 有关完整的示例，请参阅[路径动画示例](http://go.microsoft.com/fwlink/?LinkID=160028)。  
+ 有关完整示例，请参阅[路径动画示例](https://go.microsoft.com/fwlink/?LinkID=160028)。  
   
- 上面的示例使用的代码版本<xref:System.Windows.Media.Animation.Storyboard>要进行动画处理<xref:System.Windows.Media.EllipseGeometry>，即使只有一个动画已应用。 A<xref:System.Windows.Media.Animation.Storyboard>通常是因为这些动画可以控制由同一个应用的多个动画的最简单办法<xref:System.Windows.Media.Animation.Storyboard>。 但是，若要将单个动画应用到的属性，使用代码时更简单的方法是使用<xref:System.Windows.Media.Animation.Animatable.BeginAnimation%2A>方法。 有关示例，请参阅[在不使用情节提要的情况下对属性进行动画处理](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-property-without-using-a-storyboard.md)。  
+ 使用前面示例的代码版本<xref:System.Windows.Media.Animation.Storyboard>进行动画处理<xref:System.Windows.Media.EllipseGeometry>，即使只有一个动画已应用。 一个<xref:System.Windows.Media.Animation.Storyboard>通常是因为这些动画可以控制由同一个应用多个动画的最简单方式<xref:System.Windows.Media.Animation.Storyboard>。 但是，使用代码时，将一个动画应用到属性的更简单方法是使用<xref:System.Windows.Media.Animation.Animatable.BeginAnimation%2A>方法。 有关示例，请参阅[在不使用情节提要的情况下对属性进行动画处理](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-property-without-using-a-storyboard.md)。  
   
 ## <a name="see-also"></a>请参阅  
- [路径动画示例](http://go.microsoft.com/fwlink/?LinkID=160028)  
+ [路径动画示例](https://go.microsoft.com/fwlink/?LinkID=160028)  
  [动画概述](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)  
  [路径动画操作说明主题](../../../../docs/framework/wpf/graphics-multimedia/path-animation-how-to-topics.md)

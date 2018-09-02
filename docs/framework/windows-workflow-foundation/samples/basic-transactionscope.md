@@ -2,12 +2,12 @@
 title: 基本 TransactionScope
 ms.date: 03/30/2017
 ms.assetid: 1e22b76a-76de-43b4-9be7-7a86ed3d5a44
-ms.openlocfilehash: fe6877c4b2d72dc3d571740395fd4dc92ca8e99c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b3c673040d40ca91d8ab4a79e847d61e6f507ed1
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33516794"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43415418"
 ---
 # <a name="basic-transactionscope"></a>基本 TransactionScope
 此示例包含四个演示如何嵌套 <xref:System.Activities.Statements.TransactionScope> 实例的方案。 第一个方案演示如何嵌套作者不了解其构造的第三方活动。 第二个和第三个方案演示如何遵循超时限制，最后一个方案演示 <xref:System.Activities.Statements.TransactionScope.AbortInstanceOnTransactionFailure%2A> 设置。  
@@ -27,15 +27,15 @@ ms.locfileid: "33516794"
   
 1.  在 [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] 中打开 BasicTransactionScopeSample.sln 解决方案。  
   
-2.  若要生成解决方案，按 CTRL + SHIFT + B 或选择**生成解决方案**从**生成**菜单。  
+2.  若要生成解决方案，请按 CTRL + SHIFT + B 或选择**生成解决方案**从**生成**菜单。  
   
-3.  成功生成之后，按 F5，或选择**启动调试**从**调试**菜单。 或者，你可以按 CTRL + F5，或选择**启动但不调试**从**调试**菜单运行而不调试。  
+3.  成功生成之后，按 F5 或选择**开始调试**从**调试**菜单。 或者可以按 CTRL + F5 或选择**启动但不调试**从**调试**菜单运行而不进行调试。  
   
 > [!IMPORTANT]
 >  您的计算机上可能已安装这些示例。 在继续操作之前，请先检查以下（默认）目录：  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目录不存在，请转到[Windows Communication Foundation (WCF) 和针对.NET Framework 4 的 Windows Workflow Foundation (WF) 示例](http://go.microsoft.com/fwlink/?LinkId=150780)下载所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
+>  如果此目录不存在，请转到[Windows Communication Foundation (WCF) 和.NET Framework 4 的 Windows Workflow Foundation (WF) 示例](https://go.microsoft.com/fwlink/?LinkId=150780)若要下载所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Transactions\BasicTransactionScope`

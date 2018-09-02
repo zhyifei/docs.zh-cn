@@ -8,17 +8,17 @@ helpviewer_keywords:
 - entire form
 - non-client area [Visual Basic], printing
 ms.assetid: 856bb0e4-dbc3-47e2-81cd-4b376cf07757
-ms.openlocfilehash: 566cf295462945a6bc90bc96f8907de34646bd00
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5109993146a8d53d5cbeebcc52c018a6f0f57ed5
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33584737"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43408434"
 ---
 # <a name="how-to-print-client-and-non-client-areas-of-a-form-visual-basic"></a>如何：打印窗体的工作区和非工作区 (Visual Basic)
 通过 <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm> 组件，可以在不使用 <xref:System.Drawing.Printing.PrintDocument> 组件的情况下如实快速打印窗体的图像。 下面的过程演示如何打印窗体，包括工作区和非工作区。 非工作区包括标题栏、边框和滚动条。  
   
- Visual Studio 中不再包含 PowerPack 控件，但你可以从 [下载中心](http://www.microsoft.com/en-us/download/details.aspx?id=25169)下载它们。  
+ 在 Visual Studio 中，不再包含 PowerPack 控件，但您可以下载它们从[下载中心](https://www.microsoft.com/en-us/download/details.aspx?id=25169)。  
   
 ### <a name="to-print-both-the-client-and-the-non-client-areas-of-a-form"></a>同时打印窗体的工作区和非工作区  
   

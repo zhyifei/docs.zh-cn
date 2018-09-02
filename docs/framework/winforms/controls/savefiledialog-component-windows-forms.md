@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Save File dialog box
 - SaveFileDialog component
 ms.assetid: 6f5d9321-37d7-4448-ac4c-a33c42b2a766
-ms.openlocfilehash: 8fe9580114d6e21e698687ba398d60c0af72d57f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e402f9835f3ca03ac0632d7202000fa3208ed6e3
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33537133"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43403508"
 ---
 # <a name="savefiledialog-component-windows-forms"></a>SaveFileDialog 组件（Windows 窗体）
 Windows 窗体 <xref:System.Windows.Forms.SaveFileDialog> 组件是一个预配置的对话框。 它与 Windows 使用的标准保存文件对话框相同。 它继承自 <xref:System.Windows.Forms.CommonDialog> 类。  
@@ -33,5 +33,5 @@ Windows 窗体 <xref:System.Windows.Forms.SaveFileDialog> 组件是一个预配�
  [对话框控件和组件](../../../../docs/framework/winforms/controls/dialog-box-controls-and-components-windows-forms.md)  
  描述一组用户可用于执行与应用程序或系统的标准交互的控件和组件。  
   
- [Windows 窗体对话框的基本代码](http://go.microsoft.com/fwlink/?LinkID=102575)  
+ [Windows 窗体对话框的基本代码](https://go.microsoft.com/fwlink/?LinkID=102575)  
  讨论 Windows 窗体对话框控件和组件以及执行其基本功能必需的代码。 （MSDN 联机库技术文章）

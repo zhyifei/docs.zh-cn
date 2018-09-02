@@ -5,28 +5,28 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 9edd6b71-0fa5-4649-ae1d-ac1c12541019
-ms.openlocfilehash: da3eca875df9b80f66241a2ecb72c5ba5c1df309
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: ab96e8f3395a78c88184872a2c78b71fb2bf7b9e
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32758836"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43403456"
 ---
 # <a name="consuming-a-dataset-from-an-xml-web-service"></a>通过 XML Web 服务使用数据集
-<xref:System.Data.DataSet> 是用断开式设计来构建的，其部分目的是为了便于通过 Internet 来传输数据。 **数据集**在于它可以被指定为的输入或输出而无需任何其他编码的 XML Web 服务所需的内容流处理所显示"可序列化"**数据集**从 XML Web 服务为客户端以及反向。 **数据集**隐式转换为使用 DiffGram 格式的 XML 流，通过网络发送和从 XML 流作为然后重新构造**数据集**在接收端。 它为你使用 XML Web services 传输和返回关系数据提供了非常简单而灵活的方法。 有关 DiffGram 格式的详细信息，请参阅[Diffgram](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/diffgrams.md)。  
+<xref:System.Data.DataSet> 是用断开式设计来构建的，其部分目的是为了便于通过 Internet 来传输数据。 **数据集**是"可序列化"，它可以被指定为输入还是输出而无需任何其他编码的 XML Web services 所需流式传输的内容**数据集**从 XML Web 服务到客户端并返回。 **数据集**隐式转换为使用 DiffGram 格式的 XML 流、 通过网络发送和从 XML 流作为然后重新构造**数据集**在接收端。 它为你使用 XML Web services 传输和返回关系数据提供了非常简单而灵活的方法。 有关 DiffGram 格式的详细信息，请参阅[Diffgram](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/diffgrams.md)。  
   
- 下面的示例演示如何创建 XML Web 服务和客户端使用**数据集**传输关系数据 （包括修改后的数据） 和任何将更新解析回原始数据源。  
+ 下面的示例演示如何创建 XML Web 服务和使用客户端**数据集**传输关系数据 （包括修改后的数据） 并解决任何更新回原始数据源。  
   
 > [!NOTE]
->  我们建议你在创建 XML Web services 时，应始终考虑到安全问题。 有关保护的 XML Web 服务的信息，请参阅[保护 XML 创建使用 ASP.NET Web 服务](https://msdn.microsoft.com/library/354b2ab1-2782-4542-b32a-dc560178b90c)。  
+>  我们建议你在创建 XML Web services 时，应始终考虑到安全问题。 有关保护的 XML Web 服务的信息，请参阅[保护 ASP.NET XML Web Services 创建使用](https://msdn.microsoft.com/library/354b2ab1-2782-4542-b32a-dc560178b90c)。  
   
 ### <a name="to-create-an-xml-web-service-that-returns-and-consumes-a-dataset"></a>创建返回和使用 DataSet 的 XML Web services  
   
 1.  创建 XML Web services。  
   
-     在示例中，XML Web 服务创建返回数据，在这种情况下从客户列表**Northwind**数据库，并接收**数据集**更新的数据，该 XML Web 服务解析回原始数据源。  
+     在示例中，XML Web 服务创建返回数据，在此情况下从客户列表**Northwind**数据库，并接收**数据集**与更新数据，该 XML Web 服务解析回原始数据源。  
   
-     XML Web 服务公开两个方法： **GetCustomers**，则返回的客户，列表和**UpdateCustomers**、 将更新解析回数据源。 XML Web services 存储在 Web 服务器上名为 DataSetSample.asmx 的文件中。 下面的代码概括了 DataSetSample.asmx 的内容。  
+     XML Web 服务公开两个方法： **GetCustomers**，以返回客户列表，并**UpdateCustomers**，以将更新解析回数据源。 XML Web services 存储在 Web 服务器上名为 DataSetSample.asmx 的文件中。 下面的代码概括了 DataSetSample.asmx 的内容。  
   
     ```vb  
     <% @ WebService Language = "vb" Class = "Sample" %>  
@@ -157,13 +157,13 @@ ms.locfileid: "32758836"
     }  
     ```  
   
-     在典型方案中， **UpdateCustomers**方法，则会写入来捕获开放式并发冲突。 为了简单起见，以上示例没有包含此方法。 有关开放式并发的详细信息，请参阅[开放式并发](../../../../../docs/framework/data/adonet/optimistic-concurrency.md)。  
+     在典型方案中， **UpdateCustomers**会编写方法来捕获开放式并发冲突。 为了简单起见，以上示例没有包含此方法。 有关开放式并发的详细信息，请参阅[乐观并发](../../../../../docs/framework/data/adonet/optimistic-concurrency.md)。  
   
 2.  创建 XML Web services 代理。  
   
      XML Web services 的客户端将需要通过 SOAP 代理来使用公开的方法。 可以使用 Visual Studio 生成此代理。 通过从 Visual Studio 中设置对现有 Web 服务的 Web 引用，此步骤中所述的所有行为均将透明地发生。 如果要自己创建代理类，请继续阅读本讨论。 但是，在大多数情况下，使用 Visual Studio 足以为客户端应用程序创建代理类。  
   
-     代理可以使用 Web 服务描述语言工具来创建。 例如，如果 XML Web 服务公开在 URL http://myserver/data/DataSetSample.asmx，发出如下命令创建的命名空间的 Visual Basic.NET 代理**WebData.DSSample**并将其存储在文件 sample.vb 中。  
+     代理可以使用 Web 服务描述语言工具来创建。 例如，如果 XML Web 服务的 URL 公开 http://myserver/data/DataSetSample.asmx，发出的命令如下所示，若要使用的命名空间中创建的 Visual Basic.NET 代理**WebData.DSSample**并将其存储在文件 sample.vb 中。  
   
     ```console
     wsdl /l:VB -out:sample.vb http://myserver/data/DataSetSample.asmx /n:WebData.DSSample  
@@ -189,9 +189,9 @@ ms.locfileid: "32758836"
   
 3.  创建 XML Web services 客户端。  
   
-     如果你想要使用 Visual Studio 为你生成的 Web 服务代理类，只需创建客户端项目中，并且，在解决方案资源管理器窗口中，右键单击项目，单击**添加 Web 引用**，并选择从 Web 服务（这可能需要提供 Web 服务终结点地址，如果 Web 服务不在当前解决方案中，或在当前计算机上可用。） 的可用 Web 服务的列表如果自己创建 XML Web services 代理（按照前面的步骤所述），可以将其导入客户端代码并使用 XML Web services 方法。 下面的示例代码导入该代理库，调用**GetCustomers**来获取客户列表，添加新客户，然后返回**数据集**的更新的**UpdateCustomers**.  
+     如果你想要使用 Visual Studio 为你生成 Web 服务代理类，只需创建客户端项目中，并且，在解决方案资源管理器窗口中，右键单击项目，单击**添加 Web 引用**，并选择从 Web 服务（这可能需要提供的 Web 服务终结点地址，如果 Web 服务不可用当前解决方案中或在当前计算机上。） 的可用 Web 服务的列表如果自己创建 XML Web services 代理（按照前面的步骤所述），可以将其导入客户端代码并使用 XML Web services 方法。 下面的示例代码导入代理库，调用**GetCustomers**若要获取的客户，列表中添加新客户，然后返回**数据集**的更新的**UpdateCustomers**.  
   
-     请注意，该示例将**数据集**返回**DataSet.GetChanges**到**UpdateCustomers**因为仅修改后的行才需要传递给**UpdateCustomers**。 **UpdateCustomers**返回已解析**数据集**，然后，您可以**合并**到现有**数据集**以包含已解析的更改以及任何从更新的行错误信息。 以下代码假定你具有使用 Visual Studio 创建的 Web 引用，并且你已重命名为 DsSample 中的 Web 引用**添加 Web 引用**对话框。  
+     请注意，该示例将**数据集**返回的**DataSet.GetChanges**到**UpdateCustomers**因为修改的行需要传递给**UpdateCustomers**。 **UpdateCustomers**返回已解析**数据集**，然后，您可以**合并**到现有**数据集**合并的已解析的更改和任何从更新的行错误信息。 以下代码假定您已经使用 Visual Studio 创建的 Web 引用，并且你已重命名为 DsSample 中的 Web 引用**添加 Web 引用**对话框。  
   
     ```vb  
     Imports System  
@@ -267,4 +267,4 @@ ms.locfileid: "32758836"
  [使用 DataAdapter 更新数据源](../../../../../docs/framework/data/adonet/updating-data-sources-with-dataadapters.md)  
  [DataAdapter 参数](../../../../../docs/framework/data/adonet/dataadapter-parameters.md)  
  [Web 服务描述语言工具 (Wsdl.exe)](https://msdn.microsoft.com/library/b9210348-8bc2-4367-8c91-d1a04b403e88)  
- [ADO.NET 托管提供程序和数据集开发人员中心](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)

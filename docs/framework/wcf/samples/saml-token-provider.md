@@ -2,23 +2,23 @@
 title: SAML 令牌提供程序
 ms.date: 03/30/2017
 ms.assetid: eb16e5e2-4c8d-4f61-a479-9c965fcec80c
-ms.openlocfilehash: 519bde6b2849328efdeb2f295bde4749fbb652ca
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: 509469404e2c3866c26b5e1817a819519203c175
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33808775"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43418034"
 ---
 # <a name="saml-token-provider"></a>SAML 令牌提供程序
-本示例演示如何实现一个自定义客户端 SAML 令牌提供程序。 令牌提供程序在 Windows Communication Foundation (WCF) 用于为安全基础结构提供凭据。 令牌提供程序一般检查目标并颁发相应的凭据，以使安全基础结构能够确保消息的安全。 WCF 配有默认凭据管理器令牌提供程序。 WCF 还附带了[!INCLUDE[infocard](../../../../includes/infocard-md.md)]令牌提供程序。 自定义令牌提供程序在下列情况下有用：  
+本示例演示如何实现一个自定义客户端 SAML 令牌提供程序。 Windows Communication Foundation (WCF) 中的令牌提供程序来提供凭据的安全基础结构。 令牌提供程序一般检查目标并颁发相应的凭据，以使安全基础结构能够确保消息的安全。 WCF 附带了默认凭据管理器令牌提供程序。 WCF 还附带[!INCLUDE[infocard](../../../../includes/infocard-md.md)]令牌提供程序。 自定义令牌提供程序在下列情况下有用：  
   
 -   存在不能由这些令牌提供程序操作的凭据存储。  
   
--   如果你想要提供您自己自定义机制，用于在用户提供详细信息，以便当 WCF 客户端框架使用凭据时转换从点的凭据。  
+-   如果你想要提供您自己自定义机制，用于转换从点凭据时用户提供到 WCF 客户端框架时使用的凭据的详细信息。  
   
 -   要生成一个自定义令牌。  
   
- 此示例演示如何生成一个自定义令牌提供程序，允许从外部 WCF 客户端框架，用于获取的 SAML 令牌。  
+ 此示例演示如何生成自定义令牌提供程序允许从使用 WCF 客户端框架外部获取的 SAML 令牌。  
   
  总之，此示例将演示如下内容：  
   
@@ -111,7 +111,7 @@ ms.locfileid: "33808775"
 </system.serviceModel>  
 ```  
   
- 以下步骤显示如何开发自定义的 SAML 令牌提供程序并将其与 WCF 集成： 安全框架：  
+ 以下步骤演示如何开发自定义 SAML 令牌提供程序并将其与 WCF 集成： 安全框架：  
   
 1.  编写一个自定义 SAML 令牌提供程序。  
   
@@ -353,7 +353,7 @@ ms.locfileid: "33808775"
   
 #### <a name="to-set-up-and-build-the-sample"></a>设置和生成示例  
   
-1.  确保已执行[的 Windows Communication Foundation 示例的一次性安装过程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
+1.  请确保您具有执行[的 Windows Communication Foundation 示例的一次性安装过程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
   
 2.  若要生成解决方案，请按照中的说明[生成 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/building-the-samples.md)。  
   
@@ -371,7 +371,7 @@ ms.locfileid: "33808775"
   
 3.  启动 \client\bin 中的 Client.exe。 客户端活动将显示在客户端控制台应用程序上。  
   
-4.  如果客户端和服务不能够进行通信，请参阅[疑难解答提示](http://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b)。  
+4.  如果客户端和服务能够进行通信，请参见[故障排除提示](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b)。  
   
 #### <a name="to-run-the-sample-across-computers"></a>跨计算机运行示例  
   
@@ -393,7 +393,7 @@ ms.locfileid: "33808775"
   
 9. 在客户端计算机上，从命令提示窗口中启动 `Client.exe`。  
   
-10. 如果客户端和服务不能够进行通信，请参阅[疑难解答提示](http://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b)。  
+10. 如果客户端和服务能够进行通信，请参见[故障排除提示](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b)。  
   
 #### <a name="to-clean-up-after-the-sample"></a>运行示例后进行清理  
   

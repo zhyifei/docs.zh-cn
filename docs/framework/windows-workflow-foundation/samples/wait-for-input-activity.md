@@ -2,12 +2,12 @@
 title: 等待输入活动
 ms.date: 03/30/2017
 ms.assetid: d58c344e-9ee8-4ce2-b199-75b3fe45237f
-ms.openlocfilehash: 750a217699abe8b2eb2eaaa364002137d335a41a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2e878e8c91c5da12a68da848694ce790896517c7
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33518986"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43401204"
 ---
 # <a name="wait-for-input-activity"></a>等待输入活动
 此示例演示如何在工作流中创建命名书签。 Windows Workflow Foundation (WF) 不提供用于创建声明性书签的活动。 因此，当您需要在工作流中创建书签时，必须编写一个创建书签的自定义活动。 此示例中定义的 `WaitForInput` 活动提供了此项功能，以便用户可以通过声明方式在工作流内创建书签。  
@@ -38,7 +38,7 @@ ms.locfileid: "33518986"
 ## <a name="waitforinput-activity-designer"></a>WaitForInput 活动设计器  
  `WaitForInput` 活动设计器在 WaitForInputDesigner.xaml 文件中实现。 `WaitForInput` 活动及其设计器包含在同一个程序集中。 下图显示了工具箱中与程序集具有相同名称的类别中的 `WaitForInput` 活动。  
   
- ![WaitForInput 工具箱屏幕快照](../../../../docs/framework/windows-workflow-foundation/samples/media/waitforinputtoolbox.jpg "WaitForInputToolbox")  
+ ![WaitForInput 工具箱屏幕截图](../../../../docs/framework/windows-workflow-foundation/samples/media/waitforinputtoolbox.jpg "WaitForInputToolbox")  
   
  下图显示了 `WaitForInput` 设计器。 因为 `WaitForInput` 活动是最基本的，所以设计器允许在设计器图面上直接设置它的所有参数。  
   
@@ -57,6 +57,6 @@ ms.locfileid: "33518986"
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目录不存在，请转到[Windows Communication Foundation (WCF) 和针对.NET Framework 4 的 Windows Workflow Foundation (WF) 示例](http://go.microsoft.com/fwlink/?LinkId=150780)下载所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
+>  如果此目录不存在，请转到[Windows Communication Foundation (WCF) 和.NET Framework 4 的 Windows Workflow Foundation (WF) 示例](https://go.microsoft.com/fwlink/?LinkId=150780)若要下载所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\ActivityLibrary\WaitForInput`

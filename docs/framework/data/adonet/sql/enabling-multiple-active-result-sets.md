@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 576079e4-debe-4ab5-9204-fcbe2ca7a5e2
-ms.openlocfilehash: ab866356e979ec6c041d12620cfb6abfc8928668
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 073cd3a57f254f639fac44900ff6bf022e1fb165
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33364874"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43408394"
 ---
 # <a name="enabling-multiple-active-result-sets"></a>启用多个活动结果集
 多个活动结果集 (MARS) 是一项用于 SQL Server 的功能，可用来对单个连接执行多个批处理。 如果对 SQL Server 启用了 MARS，使用的每个命令对象将向该连接添加一个会话。  
@@ -21,7 +21,7 @@ ms.locfileid: "33364874"
 ## <a name="enabling-and-disabling-mars-in-the-connection-string"></a>在连接字符串中启用和禁用 MARS  
   
 > [!NOTE]
->  以下连接字符串使用示例**AdventureWorks**包含与 SQL Server 数据库。 提供的连接字符串假定数据库安装在名为 MSSQL1 的服务器上。 根据环境的需要修改连接字符串。  
+>  以下连接字符串使用示例**AdventureWorks** SQL Server 中包含的数据库。 提供的连接字符串假定数据库安装在名为 MSSQL1 的服务器上。 根据环境的需要修改连接字符串。  
   
  默认情况下禁用 MARS 功能。 可以通过在连接字符串中添加“MultipleActiveResultSets=True”关键字对来启用此功能。 “True”是启用 MARS 的唯一有效值。 以下示例演示如何连接到 SQL Server 实例以及如何指定应启用 MARS。  
   
@@ -62,7 +62,7 @@ string connectionString = "Data Source=MSSQL1;" +
  SELECT 语句中的 WAITFOR 语句在等待时不生成事务，即直到生成第一行时才生成事务。 这意味着在 WAITFOR 语句等待时，无法在相同连接内执行任何其他批处理。  
   
 ### <a name="mars-session-cache"></a>MARS 会话缓存  
- 如果打开启用了 MARS 的连接，将创建一个逻辑会话，这样会增加系统开销。 若要开销降到最低并提高性能， **SqlClient**缓存在连接内的 MARS 会话。 缓存最多可以包含 10 个 MARS 会话。 用户不可调整此值。 如果达到会话限制，将创建一个新会话 — 不会生成错误。 缓存及其包含的会话针对特定连接；不在连接之间共享。 会话释放后，除非已达到池的上限，否则，将返回池中。 如果缓存池已满，会话将关闭。 MARS 会话不会过期。 只在连接对象断开后才进行清理。 MARS 会话缓存不会预加载。 如果应用程序需要更多的会话，将加载该会话。  
+ 如果打开启用了 MARS 的连接，将创建一个逻辑会话，这样会增加系统开销。 若要尽量减少开销并提高性能， **SqlClient**缓存 MARS 会话在一个连接。 缓存最多可以包含 10 个 MARS 会话。 用户不可调整此值。 如果达到会话限制，将创建一个新会话 — 不会生成错误。 缓存及其包含的会话针对特定连接；不在连接之间共享。 会话释放后，除非已达到池的上限，否则，将返回池中。 如果缓存池已满，会话将关闭。 MARS 会话不会过期。 只在连接对象断开后才进行清理。 MARS 会话缓存不会预加载。 如果应用程序需要更多的会话，将加载该会话。  
   
 ### <a name="thread-safety"></a>线程安全  
  MARS 操作不是线程安全的。  
@@ -90,7 +90,7 @@ string connectionString = "Data Source=MSSQL1;" +
 ### <a name="parallel-execution"></a>并行执行  
  使用 MARS 后，并非不再需要在应用程序中使用多个连接。 如果应用程序需要对服务器真正地并行执行命令，应使用多个连接。  
   
- 例如，考虑以下方案。 创建了两个命令对象，一个用于处理结果集，另一个用于更新数据；这两个命令对象通过 MARS 共享公共连接。 在此方案中， `Transaction`。`Commit` 在更新时失败，直到在生成以下异常的第一个命令对象上读取了所有结果：  
+ 例如，考虑以下方案。 创建了两个命令对象，一个用于处理结果集，另一个用于更新数据；这两个命令对象通过 MARS 共享公共连接。 在此方案中， `Transaction`。`Commit` 在更新时失败，直到在第一个命令对象，并生成以下异常上读取了所有结果：  
   
  消息：其他会话正在使用事务的上下文。  
   
@@ -113,4 +113,4 @@ string connectionString = "Data Source=MSSQL1;" +
   
 ## <a name="see-also"></a>请参阅  
  [多重活动结果集 (MARS)](../../../../../docs/framework/data/adonet/sql/multiple-active-result-sets-mars.md)  
- [ADO.NET 托管提供程序和数据集开发人员中心](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)

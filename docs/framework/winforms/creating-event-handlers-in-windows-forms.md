@@ -8,12 +8,12 @@ helpviewer_keywords:
 - events [Windows Forms], event handlers
 - event handlers [Windows Forms]
 ms.assetid: 6514e530-c6b8-489c-a8d2-eda7b7072701
-ms.openlocfilehash: 96697fa54b569b6d1ce092ebfc76ef593f2ac66f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9095946d52360c69fd6c4dd6285039fb3e1874d5
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33539148"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43401591"
 ---
 # <a name="creating-event-handlers-in-windows-forms"></a>在 Windows 窗体中创建事件处理程序
 事件处理程序是代码中的过程，用于确定事件（例如用户单击按钮或消息队列收到消息）发生时要执行的操作。 引发事件时，将执行收到该事件的一个或多个事件处理程序。 可以将事件分配给多个处理程序，并且可以动态更改处理特定事件的方法。 还可以使用 Windows 窗体设计器来创建事件处理程序。  
@@ -34,7 +34,7 @@ ms.locfileid: "33539148"
  [Windows 窗体中的事件顺序](../../../docs/framework/winforms/order-of-events-in-windows-forms.md)  
  描述在 Windows 窗体控件中引发事件的顺序。  
   
- [如何：使用设计器创建事件处理程序](http://msdn.microsoft.com/library/8461e9b8-14e8-406f-936e-3726732b23d2)  
+ [如何：使用设计器创建事件处理程序](https://msdn.microsoft.com/library/8461e9b8-14e8-406f-936e-3726732b23d2)  
  描述如何使用 Windows 窗体设计器来创建事件处理程序。  
   
 ## <a name="related-sections"></a>相关章节  

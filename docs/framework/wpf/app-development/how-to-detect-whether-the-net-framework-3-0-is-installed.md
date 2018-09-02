@@ -6,22 +6,22 @@ helpviewer_keywords:
 - presence of WPT [WPF], detecting
 - detecting WPF presence [WPF]
 ms.assetid: 7f71d652-1749-4379-945a-aa2e3994cb43
-ms.openlocfilehash: 09de427980ecfb515b8d341d0d7833b878140286
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 27f856b895f48dc2365a1721dbc90294269899c7
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33546486"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43401844"
 ---
 # <a name="how-to-detect-whether-the-net-framework-30-is-installed"></a>如何：检测是否安装了 .NET Framework 3.0
-管理员可部署的系统上的 Microsoft.NET Framework 应用程序之前，它们必须首先确认存在的.NET Framework 运行时。 本主题提供了用 HTML/JavaScript 编写的脚本，可以使用管理员确定.NET Framework 是否存在的系统上。  
+管理员可部署的系统上的 Microsoft.NET Framework 应用程序之前，他们必须首先确认存在的.NET Framework 运行时。 本主题提供了 HTML/JavaScript 中编写的脚本管理员可用来确定.NET Framework 是否存在的系统上。  
   
 > [!NOTE]
->  有关详细安装信息，部署和检测 Microsoft.NET Framework，请参阅中的讨论[部署 Microsoft.NET Framework 版本 3.0](http://go.microsoft.com/fwlink/?LinkId=96739)。  
+>  有关详细安装信息，部署和检测 Microsoft.NET Framework，请参阅中的讨论[部署 Microsoft.NET Framework 版本 3.0](https://go.microsoft.com/fwlink/?LinkId=96739)。  
   
 <a name="content_expiration"></a>   
-## <a name="detect-the-net-clr-user-agent-string"></a>检测".NET CLR"用户代理字符串  
- 安装.NET Framework 时，MSI 将".NET CLR"和版本数添加到用户代理字符串。 下面的示例演示一个简单的 HTML 页中嵌入的脚本。 用户代理字符串以确定.NET Framework 安装，并显示一条状态消息上的搜索结果中搜索脚本。  
+## <a name="detect-the-net-clr-user-agent-string"></a>检测到".NET CLR"用户代理字符串  
+ 安装.NET Framework，MSI 将".NET CLR"和版本号添加到用户代理字符串。 下面的示例演示一个简单的 HTML 页面中嵌入的脚本。 该脚本将搜索用户代理字符串以确定是否安装.NET Framework，并在搜索结果中显示的状态消息。  
   
 ```  
 <HTML>  
@@ -113,7 +113,7 @@ ms.locfileid: "33546486"
 </HTML>  
 ```  
   
- 如果".NET CLR"版本搜索成功时，将显示以下类型的状态消息：  
+ 如果为".NET CLR"版本搜索成功，将显示以下类型的状态消息：  
   
  `This machine has the correct version of the .NET Framework 3.0: 3.0.04425.00`  
   

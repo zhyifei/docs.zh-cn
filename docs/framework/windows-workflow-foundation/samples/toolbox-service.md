@@ -2,12 +2,12 @@
 title: 工具箱服务
 ms.date: 03/30/2017
 ms.assetid: 742212d0-445e-41ed-9739-9ee848ce7f1b
-ms.openlocfilehash: 0b3ea56d28d202bd8356fea1783b6675a708631d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0b21f10c763f3f82591f947eb4cc48cf90f4ac79
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33516186"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43406457"
 ---
 # <a name="toolbox-service"></a>工具箱服务
 此示例演示如何根据工作流的上下文来更新 [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] 工具箱活动。 此示例包含一个工作流，此工作流基于是否选择了自定义活动来更改工具箱的内容。  
@@ -39,19 +39,19 @@ public interface IActivityToolboxService
   
 3.  打开 Workflow.xaml 文件。  
   
-4.  添加**CustomActivity**通过拖放工具箱中。 请注意，调用的附加工具箱类别：**新 WF 类别**包含一个附加活动**分配**。  
+4.  添加**CustomActivity**通过拖放工具箱中。 请注意，名为的附加工具箱类别：**新 WF 类别**包含一个附加活动**分配**。  
   
-5.  现在取消选择**CustomActivity**通过将另一个活动拖到它。  
+5.  现在请取消选中**CustomActivity**通过将另一个活动拖到其中。  
   
-6.  项**分配**类别中**新 WF 类别**现在移除工具箱下。 此外，由于该类别中没有剩下其他任何项，因此还将移除该类别。  
+6.  该项**分配**类别中**新 WF 类别**现在移除工具箱下。 此外，由于该类别中没有剩下其他任何项，因此还将移除该类别。  
   
-7.  选择**CustomActivity**再次和类别和**分配**活动添加回来。  
+7.  选择**CustomActivity**再次和类别并**分配**活动添加回来。  
   
 > [!IMPORTANT]
 >  您的计算机上可能已安装这些示例。 在继续操作之前，请先检查以下（默认）目录：  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目录不存在，请转到[Windows Communication Foundation (WCF) 和针对.NET Framework 4 的 Windows Workflow Foundation (WF) 示例](http://go.microsoft.com/fwlink/?LinkId=150780)下载所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
+>  如果此目录不存在，请转到[Windows Communication Foundation (WCF) 和.NET Framework 4 的 Windows Workflow Foundation (WF) 示例](https://go.microsoft.com/fwlink/?LinkId=150780)若要下载所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Designer\IActivityToolboxService`

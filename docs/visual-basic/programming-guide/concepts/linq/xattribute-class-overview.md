@@ -3,11 +3,11 @@ title: XAttribute 类概述 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 7781580a-9583-4a1b-ae1e-91c5936eb0b1
 ms.openlocfilehash: 08b8ebf31a39325c98023d4bb333f8e06bbdeb3f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33646960"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43406423"
 ---
 # <a name="xattribute-class-overview-visual-basic"></a>XAttribute 类概述 (Visual Basic)
 属性是与元素关联的名称/值对。 <xref:System.Xml.Linq.XAttribute> 类表示 XML 属性。  
@@ -25,7 +25,7 @@ ms.locfileid: "33646960"
 |`XAttribute(XName name, object content)`|创建一个 <xref:System.Xml.Linq.XAttribute> 对象。 `name` 参数指定属性的名称；`content` 指定属性的内容。|  
   
 ### <a name="creating-an-element-with-an-attribute"></a>创建具有属性的元素  
- 下面的代码演示一个包含属性在 Visual Basic 中使用 XML 文本的元素：  
+ 下面的代码演示一个包含 Visual Basic 中使用 XML 文本的属性的元素：  
   
 ```vb  
 Dim phone As XElement = <Phone Type="Home">555-555-5555</Phone>  

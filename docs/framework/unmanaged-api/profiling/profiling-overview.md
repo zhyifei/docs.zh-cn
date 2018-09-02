@@ -29,12 +29,12 @@ helpviewer_keywords:
 ms.assetid: 864c2344-71dc-46f9-96b2-ed59fb6427a8
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6d7b12004efce76f9ac591f18fd0f4e06fdd7fd0
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.openlocfilehash: dd0fef0e8a2c4b94cd5dd7beb140e669c52a07a8
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42934946"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43416955"
 ---
 # <a name="profiling-overview"></a>分析概述
 <a name="top"></a> 探查器是一种工具，监视另一个应用程序的执行。 公共语言运行时 (CLR) 探查器是一个动态链接库 (DLL)，具有使用分析 API 从 CLR 中接收消息以及向 CLR 发送消息的功能。 CLR 在运行时加载探查器 DLL。  
@@ -209,7 +209,7 @@ ms.locfileid: "42934946"
 ### <a name="stack-snapshot"></a>堆栈快照  
  堆栈快照是线程堆栈在某一时刻的跟踪。 分析 API 支持在堆栈上跟踪托管函数，但它会将跟踪非托管函数的工作交给探查器自己的堆栈审核器来完成。  
   
- 有关如何对探查器以审核托管的堆栈的详细信息，请参阅[ICorProfilerInfo2::DoStackSnapshot](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-dostacksnapshot-method.md)此文档集中的方法和[.NET Framework 2.0 中的 Profiler 堆栈审核：基础和超越](http://go.microsoft.com/fwlink/?LinkId=73638)。
+ 有关如何对探查器以审核托管的堆栈的详细信息，请参阅[ICorProfilerInfo2::DoStackSnapshot](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-dostacksnapshot-method.md)此文档集中的方法和[.NET Framework 2.0 中的 Profiler 堆栈审核：基础和超越](https://go.microsoft.com/fwlink/?LinkId=73638)。
   
 ### <a name="shadow-stack"></a>阴影堆栈  
  过度频繁使用快照方法很快就会产生性能问题。 如果你想要经常执行的堆栈跟踪，探查器而是应使用生成阴影堆栈[FunctionEnter2](../../../../docs/framework/unmanaged-api/profiling/functionenter2-function.md)， [FunctionLeave2](../../../../docs/framework/unmanaged-api/profiling/functionleave2-function.md)， [FunctionTailcall2](../../../../docs/framework/unmanaged-api/profiling/functiontailcall2-function.md)，并[ICorProfilerCallback2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-interface.md)异常回调。 阴影堆栈始终是最新的，并且在需要堆栈快照时可以快速复制到存储区。  

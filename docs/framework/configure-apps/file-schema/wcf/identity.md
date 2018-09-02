@@ -2,12 +2,12 @@
 title: '&lt;identity&gt;'
 ms.date: 03/30/2017
 ms.assetid: c1d2ae56-e231-4a07-9c3f-9f13381dc0d8
-ms.openlocfilehash: 1fc47b9595f409cf375dc75f2bf43e83f58491df
-ms.sourcegitcommit: 9e18e4a18284ae9e54c515e30d019c0bbff9cd37
+ms.openlocfilehash: c77f60badd80973f0eeb36f6195b1d4b7617c386
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37071287"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43404265"
 ---
 # <a name="ltidentitygt"></a>&lt;identity&gt;
 标识元素允许客户端开发人员在设计时指定服务的期望标识。 在客户端和服务之间的握手过程中，Windows Communication Foundation (WCF) 基础结构将确保预期的服务匹配此元素的值的标识，因此可以进行身份验证。 有关详细信息，请参阅[服务标识和身份验证](../../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)。  
@@ -48,14 +48,14 @@ ms.locfileid: "37071287"
 |dns|指定用于对服务进行身份验证的 X.509 证书的 DNS。 此元素包含一个字符串属性 `value`，并包含实际的标识。|  
 |rsa|指定用于向客户端验证服务身份的 X.509 证书的 RSA 字段的值。 此元素包含一个字符串属性 `value`，并包含实际的标识。|  
 |servicePrincipalName|指定服务器主体名称 (SPN) 标识，它是客户端用来唯一标识一个服务实例的主体名称。 此元素包含一个 `value` 属性，该属性是一个字符串，其中包含实际的主体名称。 此元素的类型为 <xref:System.ServiceModel.Configuration.ServicePrincipalNameElement>。|  
-|userPrincipalName|指定用户主体名称 (UPN) 标识，它是网络上的用户登录名类型。 用户主体名称包含 Active Directory 后, 跟中使用的用户对象名称 at 符号 (\@)，然后，通常情况下，域名系统父域。 例如，Fabrikam.com 域树中的 Jeff 可能具有用户主要名称[ jeff@fabrikam.com ](mailto:jeffsmith@fabrikam.com)。  此元素包含一个 `value` 属性，该属性是一个字符串，其中包含实际的主体名称。 此元素的类型为 <xref:System.ServiceModel.Configuration.UserPrincipalNameElement>。|  
+|userPrincipalName|指定用户主体名称 (UPN) 标识，它是网络上的用户登录名类型。 用户主体名称包含用户对象名称后跟的 Active Directory 中使用 at 符号 (\@)，然后，通常情况下，域名系统父域。 例如，Fabrikam.com 域树中的 Jeff 可能具有用户主体名称[ jeff@fabrikam.com ](mailto:jeffsmith@fabrikam.com)。  此元素包含一个 `value` 属性，该属性是一个字符串，其中包含实际的主体名称。 此元素的类型为 <xref:System.ServiceModel.Configuration.UserPrincipalNameElement>。|  
   
 ### <a name="parent-elements"></a>父元素  
   
 |元素|描述|  
 |-------------|-----------------|  
 |[\<custom>](../../../../../docs/framework/configure-apps/file-schema/wcf/custom.md)|指定 netPeerTcpBinding 的自定义对等解析程序。|  
-|[\<终结点 >](http://msdn.microsoft.com/library/13aa23b7-2f08-4add-8dbf-a99f8127c017)|配置不同类型的终结点。|  
+|[\<终结点 >](https://msdn.microsoft.com/library/13aa23b7-2f08-4add-8dbf-a99f8127c017)|配置不同类型的终结点。|  
 |[\<issuer>](../../../../../docs/framework/configure-apps/file-schema/wcf/issuer.md)|指定联合服务的安全令牌服务 (STS)。|  
 |[\<issuerMetadata>](../../../../../docs/framework/configure-apps/file-schema/wcf/issuermetadata.md)|指定联合服务的安全令牌服务 (STS) 的元数据终结点。|  
 |[\<issuedTokenParameters>](../../../../../docs/framework/configure-apps/file-schema/wcf/issuedtokenparameters.md)|定义自定义绑定中的已颁发令牌的参数。|  

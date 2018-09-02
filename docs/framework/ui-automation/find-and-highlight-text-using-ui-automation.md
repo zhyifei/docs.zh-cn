@@ -15,21 +15,21 @@ ms.assetid: b77693f5-87bb-4b29-a297-05ff882e2044
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: 2fe7ecd84c6b88e6ccc81188235a6735b926a04b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7229c9468948061726e81e3c79d2ab56e7497fa4
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33401081"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43408862"
 ---
 # <a name="find-and-highlight-text-using-ui-automation"></a>使用 UI 自动化查找和突出显示文本
 > [!NOTE]
->  本文档适用于想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空间中定义的托管 <xref:System.Windows.Automation> 类的 .NET Framework 开发人员。 有关 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]的最新信息，请参阅 [Windows 自动化 API：UI 自动化](http://go.microsoft.com/fwlink/?LinkID=156746)。  
+>  本文档适用于想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空间中定义的托管 <xref:System.Windows.Automation> 类的 .NET Framework 开发人员。 有关最新信息[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]，请参阅[Windows 自动化 API: UI 自动化](https://go.microsoft.com/fwlink/?LinkID=156746)。  
   
  本主题演示如何按顺序搜索并突出显示文本控件使用的内容中字符串的每个匹配项[!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)]。  
   
 ## <a name="example"></a>示例  
- 下面的示例获取<xref:System.Windows.Automation.TextPattern>从文本控件的对象。 A<xref:System.Windows.Automation.Text.TextPatternRange>对象，表示文本内容的整个文档，然后创建使用<xref:System.Windows.Automation.TextPattern.DocumentRange%2A>此属性<xref:System.Windows.Automation.TextPattern>。 两个附加<xref:System.Windows.Automation.Text.TextPatternRange>对象然后创建顺序搜索，并突出显示功能。  
+ 以下示例获取<xref:System.Windows.Automation.TextPattern>文本控件中的对象。 一个<xref:System.Windows.Automation.Text.TextPatternRange>则使用创建对象，表示整个文档的文本内容<xref:System.Windows.Automation.TextPattern.DocumentRange%2A>属性的<xref:System.Windows.Automation.TextPattern>。 两个附加<xref:System.Windows.Automation.Text.TextPatternRange>对象创建顺序搜索和突出显示功能。  
   
  [!code-csharp[FindText#StartApp](../../../samples/snippets/csharp/VS_Snippets_Wpf/FindText/CSharp/SearchWindow.cs#startapp)]
  [!code-vb[FindText#StartApp](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/FindText/VisualBasic/SearchWindow.vb#startapp)]  
