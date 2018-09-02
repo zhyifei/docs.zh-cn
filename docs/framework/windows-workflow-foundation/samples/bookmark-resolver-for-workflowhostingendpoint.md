@@ -2,12 +2,12 @@
 title: WorkflowHostingEndpoint 的书签解析程序
 ms.date: 03/30/2017
 ms.assetid: 97fd5816-935e-4625-ad04-e6f6befa07de
-ms.openlocfilehash: f8afb804525ecf36127e32441c92f43af70f5099
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 48053ec7882b2e742b61fdc293b6bc5f8a129ca5
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33514939"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43400471"
 ---
 # <a name="bookmark-resolver-for-workflowhostingendpoint"></a>WorkflowHostingEndpoint 的书签解析程序
 此示例演示如何将 <xref:System.ServiceModel.Activities.WorkflowHostingEndpoint> 与 <xref:System.ServiceModel.Activities.WorkflowServiceHost> 一起使用创建工作流实例。  
@@ -35,6 +35,6 @@ ms.locfileid: "33514939"
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目录不存在，请转到[Windows Communication Foundation (WCF) 和针对.NET Framework 4 的 Windows Workflow Foundation (WF) 示例](http://go.microsoft.com/fwlink/?LinkId=150780)下载所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
+>  如果此目录不存在，请转到[Windows Communication Foundation (WCF) 和.NET Framework 4 的 Windows Workflow Foundation (WF) 示例](https://go.microsoft.com/fwlink/?LinkId=150780)若要下载所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Execution\CreationEndpoint`

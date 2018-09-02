@@ -2,11 +2,12 @@
 title: 使用策略的订单处理
 ms.date: 03/30/2017
 ms.assetid: 66833724-dc36-4fad-86b0-59ffeaa3ba6a
-ms.openlocfilehash: 15e274a7a513a3208e3a54575dc354310743b731
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b927d8e7090f96b22c0510f9651070ab999c91be
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43398365"
 ---
 # <a name="order-processing-with-policy"></a>使用策略的订单处理
 订单处理策略示例演示了 Windows Workflow Foundation (WF) 的 [!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)] 中引入的一些主要功能。 以下功能对 WF 规则引擎而言是新功能：  
@@ -23,7 +24,7 @@ ms.lasthandoff: 05/04/2018
  此示例演示了一个 `OrderProcessingPolicy` 项目，在该项目中输入客户订单和邮政编码，订单包括一份可用项的编号列表。 如果两项输入均正确，则订单将成功处理；否则，策略会创建错误对象，并利用重载 `+` 运算符和预定义的扩展方法将该错误通知给用户。  
   
 > [!NOTE]
->  有关扩展方法的详细信息，请参阅[C# 3.0 版规范](http://go.microsoft.com/fwlink/?LinkId=95402)。  
+>  有关扩展方法的详细信息，请参阅[C# 3.0 版规范](https://go.microsoft.com/fwlink/?LinkId=95402)。  
   
  该示例由下列项目组成：  
   
@@ -63,7 +64,7 @@ ms.lasthandoff: 05/04/2018
   
          此规则检查前两个规则是否将任何错误添加到了两个 `OrderErrorCollection` 对象 `invalidItemNumErrorCollection` 和 `invalidIZipCodeErrorCollection` 中。 如果存在错误（`invalidItemNumErrorCollection` 或 `invalidZipCodeErrorCollection` 不为 `null`），则规则将进行下列操作：  
   
-        1.  调用重载`+`运算符的内容复制`invalidItemNumErrorCollection`和`invalidZipCodeErrorCollection`到`invalidOrdersCollection``OrderErrorCollection`实例。  
+        1.  调用重载`+`运算符将复制的内容`invalidItemNumErrorCollection`并`invalidZipCodeErrorCollection`到`invalidOrdersCollection``OrderErrorCollection`实例。  
   
         2.  调用 `PrintOrderErrors` 上的 `invalidOrdersCollection` 扩展方法，并输出 `ErrorText` 中所有 `orderError` 对象上的 `invalidOrdersCollection` 属性。  
   
@@ -139,6 +140,6 @@ Another Order? (Y/N): n
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目录不存在，请转到[Windows Communication Foundation (WCF) 和针对.NET Framework 4 的 Windows Workflow Foundation (WF) 示例](http://go.microsoft.com/fwlink/?LinkId=150780)下载所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
+>  如果此目录不存在，请转到[Windows Communication Foundation (WCF) 和.NET Framework 4 的 Windows Workflow Foundation (WF) 示例](https://go.microsoft.com/fwlink/?LinkId=150780)若要下载所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Rules\Policy\OrderProcessingPolicy`

@@ -4,15 +4,15 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Net profile TCP
 ms.assetid: e8475fe6-0ecd-407a-8e7e-45860561bb74
-ms.openlocfilehash: b51178c8ba84740598db62b9011fa33da318ca8a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d56c405fe9c46fcebaad8e5b217f44d709dc8db8
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33502272"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43397781"
 ---
 # <a name="default-nettcpbinding"></a>默认 NetTcpBinding
-本示例演示 <xref:System.ServiceModel.NetTcpBinding> 绑定的用法。 此示例基于[入门](../../../../docs/framework/wcf/samples/getting-started-sample.md)实现计算器服务。 在本示例中，服务是自承载服务。 客户端和服务都是控制台应用程序。  
+本示例演示 <xref:System.ServiceModel.NetTcpBinding> 绑定的用法。 此示例基于[Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md)实现计算器服务。 在本示例中，服务是自承载服务。 客户端和服务都是控制台应用程序。  
   
 > [!NOTE]
 >  本主题的最后介绍了此示例的设置过程和生成说明。  
@@ -22,11 +22,11 @@ ms.locfileid: "33502272"
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目录不存在，请转到[Windows Communication Foundation (WCF) 和针对.NET Framework 4 的 Windows Workflow Foundation (WF) 示例](http://go.microsoft.com/fwlink/?LinkId=150780)下载所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
+>  如果此目录不存在，请转到[Windows Communication Foundation (WCF) 和.NET Framework 4 的 Windows Workflow Foundation (WF) 示例](https://go.microsoft.com/fwlink/?LinkId=150780)若要下载所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\Net\TCP\Default`  
   
- 绑定是在客户端和服务的配置文件中指定的。 中指定的绑定类型`binding`属性[\<终结点 >](http://msdn.microsoft.com/library/13aa23b7-2f08-4add-8dbf-a99f8127c017)元素，如下面的示例配置所示。  
+ 绑定是在客户端和服务的配置文件中指定的。 中指定的绑定类型`binding`的属性[\<终结点 >](https://msdn.microsoft.com/library/13aa23b7-2f08-4add-8dbf-a99f8127c017)元素，如下面的示例配置所示。  
   
 ```xml  
 <endpoint address=""  
@@ -100,11 +100,11 @@ Press ENTER to terminate client.
     %windir%\Microsoft.NET\Framework\v4.0.XXXXX\aspnet_regiis.exe /i /enable  
     ```  
   
-2.  确保已执行[的 Windows Communication Foundation 示例的一次性安装过程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
+2.  请确保您具有执行[的 Windows Communication Foundation 示例的一次性安装过程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
   
 3.  若要生成 C# 或 Visual Basic .NET 版本的解决方案，请按照 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)中的说明进行操作。  
   
-4.  若要在单或跨计算机配置上运行示例，请按照中的说明[运行 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/running-the-samples.md)。  
+4.  若要在单或跨计算机配置中运行示例，请按照中的说明[运行 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/running-the-samples.md)。  
   
     > [!NOTE]
     >  由于该服务器是自承载的，因此必须在客户端的 App.config 文件中指定一个标识才能用跨计算机配置来运行该示例。  

@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: d6aa8474-7bde-48f7-949d-20dc38a1625b
-ms.openlocfilehash: c58f64dba0bceb4a35c67e16193a6627837436e0
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: c1ebe2d735924c559f450f4041884dc9845e4fe0
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32767123"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43396080"
 ---
 # <a name="adding-data-to-a-datatable"></a>将数据添加到数据表中
-在创建 <xref:System.Data.DataTable> 并使用列和约束定义其结构之后，您可以将新的数据行添加到表中。 要添加新行，可将一个新变量声明为 <xref:System.Data.DataRow> 类型。 一个新**DataRow**在调用时返回对象<xref:System.Data.DataTable.NewRow%2A>方法。 **DataTable**然后创建**DataRow**对象基于在表中，该结构，由定义<xref:System.Data.DataColumnCollection>。  
+在创建 <xref:System.Data.DataTable> 并使用列和约束定义其结构之后，您可以将新的数据行添加到表中。 要添加新行，可将一个新变量声明为 <xref:System.Data.DataRow> 类型。 一个新**DataRow**调用时返回对象<xref:System.Data.DataTable.NewRow%2A>方法。 **DataTable**然后创建**DataRow**对象基于的表的结构定义的<xref:System.Data.DataColumnCollection>。  
   
  下面的示例演示如何通过调用创建一个新行**NewRow**方法。  
   
@@ -37,7 +37,7 @@ workRow["CustLName"] = "Smith";
 workRow[1] = "Smith";  
 ```  
   
- 数据插入新行中后,**添加**方法用于向其中添加行<xref:System.Data.DataRowCollection>，下面的代码所示。  
+ 数据插入新行后**外**方法用于向其中添加行<xref:System.Data.DataRowCollection>，下面的代码中所示。  
   
 ```vb  
 workTable.Rows.Add(workRow)  
@@ -47,7 +47,7 @@ workTable.Rows.Add(workRow)
 workTable.Rows.Add(workRow);  
 ```  
   
- 你还可以调用**添加**方法来添加新行，通过传入的值，数组类型化为<xref:System.Object>，下面的示例中所示。  
+ 您还可以调用**外**方法来添加新行，通过传入一个值，数组类型化为<xref:System.Object>，如以下示例所示。  
   
 ```vb  
 workTable.Rows.Add(new Object() {1, "Smith"})  
@@ -57,7 +57,7 @@ workTable.Rows.Add(new Object() {1, "Smith"})
 workTable.Rows.Add(new Object[] {1, "Smith"});  
 ```  
   
- 传递的值，类型化为数组**对象**到**添加**方法创建一个新表内部行，并将其列的值设置为对象数组中的值。 请注意，数组中的值会根据它们在表中出现的顺序相继与各列匹配。  
+ 传递的值，类型化为数组**对象**给**添加**方法创建表中的新行并将其列的值设置为对象数组中的值。 请注意，数组中的值会根据它们在表中出现的顺序相继与各列匹配。  
   
  下面的示例将添加到新创建的 10 行**客户**表。  
   
@@ -91,4 +91,4 @@ for (int i = 0; i <= 9; i++)
  <xref:System.Data.DataRowCollection>  
  <xref:System.Data.DataTable>  
  [操作数据表中的数据](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/manipulating-data-in-a-datatable.md)  
- [ADO.NET 托管提供程序和数据集开发人员中心](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Inheritance Picker dialog box
 - inherited forms [Windows Forms], creating
 ms.assetid: 969b4c04-12aa-4297-93a2-0ae747447823
-ms.openlocfilehash: 49c24b12616834ecc532a5568c0971e3dd75cfd8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5bcd29531858f9cf014042db7ee447cecfdd89b1
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33527756"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43399785"
 ---
 # <a name="how-to-inherit-forms-using-the-inheritance-picker-dialog-box"></a>如何：使用“继承选择器”对话框继承窗体
 继承窗体或其他对象最简单的方法是使用“继承选择器”对话框。 通过该对话框，可以充分利用在其他解决方案中创建的代码或用户界面 (UI)。  
@@ -19,7 +19,7 @@ ms.locfileid: "33527756"
 > [!NOTE]
 >  若要使用“继承选择器”对话框继承窗体，必须先将包含该窗体的项目生成到可执行文件或 DLL 中。 若要生成项目，请从“生成”菜单选择“生成解决方案”。  
 >   
->  显示的对话框和菜单命令可能会与“帮助”中的描述不同，具体取决于你现用的设置或版本。 若要更改设置，请在 **“工具”** 菜单上选择 **“导入和导出设置”** 。 有关详细信息，请参阅[在 Visual Studio 中自定义开发设置](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3)。  
+>  显示的对话框和菜单命令可能会与“帮助”中的描述不同，具体取决于你现用的设置或版本。 若要更改设置，请在 **“工具”** 菜单上选择 **“导入和导出设置”** 。 有关详细信息，请参阅[个性化设置 Visual Studio IDE](/visualstudio/ide/personalizing-the-visual-studio-ide)。  
   
 ### <a name="to-create-a-windows-form-inherited-from-an-existing-form-by-using-the-inheritance-picker"></a>通过使用继承选择器创建继承自现有窗体的 Windows 窗体  
   

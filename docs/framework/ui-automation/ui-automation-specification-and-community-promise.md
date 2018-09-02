@@ -5,16 +5,16 @@ ms.assetid: b238fd69-2f62-499c-bea0-b91dfb9204f0
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: c65c66fb02594f366fefe5ea8908f97892a0da36
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 14a9f6215b8d45092bb0df5993dc62f1ef42efd2
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33401149"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43394761"
 ---
 # <a name="ui-automation-specification-and-community-promise"></a>UI 自动化规范和社区承诺
-UI 自动化提供以编程方式访问大多数用户界面 (UI) 元素在桌面上，使辅助技术产品，如屏幕读取器向最终用户提供有关 UI 的信息并通过标准输入以外的其他方式操作用户界面.  
+UI 自动化提供以编程方式访问大多数用户界面 (UI) 元素在桌面上，使向最终用户提供有关用户界面的信息以及标准输入以外的其他方式处理 UI 的屏幕阅读器等辅助技术产品.  
   
 ## <a name="see-also"></a>请参阅  
- [UI 自动化规范](http://go.microsoft.com/fwlink/?LinkId=108541)  
- [UI 自动化社区承诺](http://go.microsoft.com/fwlink/?LinkId=108542)
+ [UI 自动化规范](https://go.microsoft.com/fwlink/?LinkId=108541)  
+ [UI 自动化社区承诺](https://go.microsoft.com/fwlink/?LinkId=108542)

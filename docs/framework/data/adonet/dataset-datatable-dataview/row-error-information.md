@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 8b1f9070-d032-48c7-b030-bd8fbb2ca59a
-ms.openlocfilehash: 6f3f332d4b9bd0be9934c7bf7722e8ff71c4eb2f
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: cf798ac88ba83e890086cec7424c8c363980718f
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32767188"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43399032"
 ---
 # <a name="row-error-information"></a>行错误信息
-为了避免在编辑 <xref:System.Data.DataTable> 中的值时对行错误做出响应，可以将错误信息添加到该行，供以后使用。 因此，<xref:System.Data.DataRow> 对象在每行上提供 <xref:System.Data.DataRow.RowError%2A> 属性。 将数据添加到**RowError**属性**DataRow**设置<xref:System.Data.DataRow.HasErrors%2A>属性**DataRow**到**true**。 如果**DataRow**属于**DataTable**，和**DataRow.HasErrors**是**true**、 **DataTable.HasErrors**属性也为**true**。 这也适用于**数据集**到**DataTable**所属。 当测试是否有错误，可以检查**HasErrors**属性来确定是否已对任何行添加错误信息。 如果**HasErrors**是**true**，你可以使用<xref:System.Data.DataTable.GetErrors%2A>方法**DataTable**返回并检查仅包含错误的行，如下面的示例中所示。  
+为了避免在编辑 <xref:System.Data.DataTable> 中的值时对行错误做出响应，可以将错误信息添加到该行，供以后使用。 因此，<xref:System.Data.DataRow> 对象在每行上提供 <xref:System.Data.DataRow.RowError%2A> 属性。 将数据添加到**RowError**的属性**DataRow**设置<xref:System.Data.DataRow.HasErrors%2A>属性的**DataRow**到**true**。 如果**DataRow**属于**DataTable**，并**DataRow.HasErrors**是**true**，则**DataTable.HasErrors**属性也是**true**。 这也适用于**数据集**所属**DataTable**所属。 当测试是否有错误，您可以检查**HasErrors**属性来确定是否已添加任何行错误信息。 如果**HasErrors**是**true**，可以使用<xref:System.Data.DataTable.GetErrors%2A>方法**DataTable**返回和检查仅有错误的行，如下面的示例中所示。  
   
 ```vb  
 Dim workTable As DataTable = New DataTable("Customers")  
@@ -82,4 +82,4 @@ protected static void OnRowChanged(
  <xref:System.Data.DataRow>  
  <xref:System.Data.DataTable>  
  [操作数据表中的数据](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/manipulating-data-in-a-datatable.md)  
- [ADO.NET 托管提供程序和数据集开发人员中心](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)

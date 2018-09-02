@@ -9,19 +9,19 @@ helpviewer_keywords:
 - WCF, security mode
 - WCF, security
 ms.assetid: b8abcc8e-a5f5-4317-aca5-01e3c40ab24d
-ms.openlocfilehash: c3cede1eb90b963f4c0b567a8df48925bca9b02d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e0595bcbd3dcae7977c8734b7d3858df2412c962
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33494824"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43395301"
 ---
 # <a name="how-to-configure-a-port-with-an-ssl-certificate"></a>如何：使用 SSL 证书配置端口
-创建与自承载的 Windows Communication Foundation (WCF) 服务时<xref:System.ServiceModel.WSHttpBinding>类，它使用传输安全中，你还必须使用 X.509 证书配置端口。 如果不是在创建自承载服务，可以在 Internet 信息服务 (IIS) 上承载服务。 有关详细信息，请参阅[HTTP 传输安全](../../../../docs/framework/wcf/feature-details/http-transport-security.md)。  
+创建使用自承载的 Windows Communication Foundation (WCF) 服务时<xref:System.ServiceModel.WSHttpBinding>类，使用传输安全，还必须使用 X.509 证书配置端口。 如果不是在创建自承载服务，可以在 Internet 信息服务 (IIS) 上承载服务。 有关详细信息，请参阅[HTTP 传输安全性](../../../../docs/framework/wcf/feature-details/http-transport-security.md)。  
   
  若要配置端口，使用的工具取决于计算机运行的操作系统。  
   
- 如果运行的是 [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] 或 [!INCLUDE[wxp](../../../../includes/wxp-md.md)]，则使用 HttpCfg.exe 工具。 [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] 中已安装该工具。 与[!INCLUDE[wxp](../../../../includes/wxp-md.md)]，您可以下载该工具在[Windows XP Service Pack 2 支持工具](http://go.microsoft.com/fwlink/?LinkId=88606)。 有关详细信息，请参阅[Httpcfg 概述](http://go.microsoft.com/fwlink/?LinkId=88605)。 [Windows 支持工具文档](http://go.microsoft.com/fwlink/?LinkId=94840)说明了 Httpcfg.exe 工具的语法。  
+ 如果运行的是 [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] 或 [!INCLUDE[wxp](../../../../includes/wxp-md.md)]，则使用 HttpCfg.exe 工具。 [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] 中已安装该工具。 与[!INCLUDE[wxp](../../../../includes/wxp-md.md)]，可以下载该工具在[Windows XP Service Pack 2 支持工具](https://go.microsoft.com/fwlink/?LinkId=88606)。 有关详细信息，请参阅[Httpcfg 概述](https://go.microsoft.com/fwlink/?LinkId=88605)。 [Windows 支持工具文档](https://go.microsoft.com/fwlink/?LinkId=94840)说明了 Httpcfg.exe 工具的语法。  
   
  如果运行的是 [!INCLUDE[wv](../../../../includes/wv-md.md)]，则使用已安装的 Netsh.exe 工具。  
   
@@ -41,7 +41,7 @@ ms.locfileid: "33494824"
   
 ### <a name="to-determine-how-ports-are-configured"></a>确定如何配置端口  
   
-1.  在[!INCLUDE[ws2003](../../../../includes/ws2003-md.md)]或[!INCLUDE[wxp](../../../../includes/wxp-md.md)]，使用 HttpCfg.exe 工具查看当前端口配置，使用**查询**和**ssl**切换，如下面的示例中所示。  
+1.  在中[!INCLUDE[ws2003](../../../../includes/ws2003-md.md)]或[!INCLUDE[wxp](../../../../includes/wxp-md.md)]，使用 HttpCfg.exe 工具查看当前端口配置中，使用**查询**并**ssl**切换时，如下面的示例中所示。  
   
     ```  
     httpcfg query ssl  
@@ -55,7 +55,7 @@ ms.locfileid: "33494824"
   
 ### <a name="to-get-a-certificates-thumbprint"></a>获取证书的指纹  
   
-1.  使用证书 MMC 管理单元查找用于客户端身份验证的 X.509 证书。 有关详细信息，请参阅[如何： 使用 mmc 管理单元查看证书](../../../../docs/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in.md)。  
+1.  使用证书 MMC 管理单元查找用于客户端身份验证的 X.509 证书。 有关详细信息，请参阅[如何：使用 MMC 管理单元查看证书](../../../../docs/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in.md)。  
   
 2.  访问证书的指纹。 有关详细信息，请参阅[如何： 检索证书的指纹](../../../../docs/framework/wcf/feature-details/how-to-retrieve-the-thumbprint-of-a-certificate.md)。  
   
@@ -71,7 +71,7 @@ ms.locfileid: "33494824"
     httpcfg set ssl -i 0.0.0.0:8012 -h 0000000000003ed9cd0c315bbb6dc1c08da5e6  
     ```  
   
-    -   **-I**交换机具有的语法`IP`:`port`并指示该工具将证书设置到的计算机的端口 8012。 另外，也可将端口号前面的四个零替换为计算机的实际 IP 地址。  
+    -   **-I**交换机具有的语法`IP`:`port` ，指示该工具将证书设置为计算机的端口 8012。 另外，也可将端口号前面的四个零替换为计算机的实际 IP 地址。  
   
     -   **-H**开关指定证书的指纹。  
   
@@ -81,9 +81,9 @@ ms.locfileid: "33494824"
     netsh http add sslcert ipport=0.0.0.0:8000 certhash=0000000000003ed9cd0c315bbb6dc1c08da5e6 appid={00112233-4455-6677-8899-AABBCCDDEEFF}   
     ```  
   
-    -   **Certhash**参数指定证书的指纹。  
+    -   **Certhash**参数指定的证书的指纹。  
   
-    -   **Ipport**参数指定的 IP 地址和端口，并就像函数 **-i**于前述 Httpcfg.exe 工具的开关。  
+    -   **Ipport**参数指定的 IP 地址和端口，以及功能类似 **-i**前述 Httpcfg.exe 工具的开关。  
   
     -   **Appid**参数是一个 GUID，用于标识所属应用程序。  
   
@@ -95,7 +95,7 @@ ms.locfileid: "33494824"
     httpcfg set ssl -i 0.0.0.0:8012 -h 0000000000003ed9cd0c315bbb6dc1c08da5e6 -f 2  
     ```  
   
-     **-F**交换机具有的语法`n`其中 n 是介于 1 和 7 之间的数字。 值为 2 可在传输层启用客户端证书，如上面的示例所示。 值为 3 可启用客户端证书并将这些证书映射至 Windows 帐户。 请参见“HttpCfg.exe 帮助”以获取其他值的行为。  
+     **-F**开关的语法的`n`其中 n 是介于 1 和 7 之间的数字。 值为 2 可在传输层启用客户端证书，如上面的示例所示。 值为 3 可启用客户端证书并将这些证书映射至 Windows 帐户。 请参见“HttpCfg.exe 帮助”以获取其他值的行为。  
   
 2.  在 [!INCLUDE[wv](../../../../includes/wv-md.md)] 中，若要支持在传输层使用 X.509 证书进行身份验证的客户端，请按照前面的步骤进行操作，但要另外提供一个参数，如下面的示例所示。  
   
@@ -111,7 +111,7 @@ ms.locfileid: "33494824"
     httpcfg query ssl>myMachinePorts.txt  
     ```  
   
-2.  在[!INCLUDE[ws2003](../../../../includes/ws2003-md.md)]或[!INCLUDE[wxp](../../../../includes/wxp-md.md)]，使用 HttpCfg.exe 工具以及**删除**和**ssl**关键字。 使用 **-i**开关指定`IP`:`port`数，和 **-h**开关指定指纹。  
+2.  在中[!INCLUDE[ws2003](../../../../includes/ws2003-md.md)]或[!INCLUDE[wxp](../../../../includes/wxp-md.md)]，使用 HttpCfg.exe 工具以及**删除**并**ssl**关键字。 使用 **-i**开关指定`IP`:`port`数，并且 **-h**开关指定指纹。  
   
     ```  
     httpcfg delete ssl -i 0.0.0.0:8005 -h 0000000000003ed9cd0c315bbb6dc1c08da5e6  

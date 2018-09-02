@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 85dafa07-e102-46e7-ab78-37bf06f257a6
-ms.openlocfilehash: 899d059575bc08711d486eedfdfb61045bea833c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: fe3bd69b17b98e923c6c31fec2611e7390894e4a
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33359570"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43398532"
 ---
 # <a name="query-expression-syntax-examples-aggregate-operators-linq-to-dataset"></a>查询表达式语法示例：聚合运算符 (LINQ to DataSet)
 本主题中的示例演示如何使用 <xref:System.Linq.Enumerable.Average%2A>、<xref:System.Linq.Enumerable.Count%2A>、<xref:System.Linq.Enumerable.Max%2A>、<xref:System.Linq.Enumerable.Min%2A> 和 <xref:System.Linq.Enumerable.Sum%2A> 方法来查询 <xref:System.Data.DataSet> 并使用查询表达式语法聚合数据。  
@@ -99,4 +99,4 @@ ms.locfileid: "33359570"
 ## <a name="see-also"></a>请参阅  
  [将数据加载到数据集中](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md)  
  [LINQ to DataSet 示例](../../../../docs/framework/data/adonet/linq-to-dataset-examples.md)  
- [标准查询运算符概述](http://msdn.microsoft.com/library/24cda21e-8af8-4632-b519-c404a839b9b2)
+ [标准查询运算符概述](https://msdn.microsoft.com/library/24cda21e-8af8-4632-b519-c404a839b9b2)

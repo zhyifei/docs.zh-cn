@@ -36,12 +36,12 @@ helpviewer_keywords:
 - type arguments [Visual Basic], defining
 - arguments [Visual Basic], type
 ms.assetid: 89f771d9-ecbb-4737-88b8-116b63c6cf4d
-ms.openlocfilehash: a33e058b41629a2f01f2162dadd7a5f965a82548
-ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
+ms.openlocfilehash: c13bdc47568aa8bbd934bb2b86410e17bbc485dc
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2018
-ms.locfileid: "42925548"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43397359"
 ---
 # <a name="generic-types-in-visual-basic-visual-basic"></a>Visual Basic 中的泛型类型 (Visual Basic)
 *泛型类型* 是可适应对多种数据类型执行相同功能的单个编程元素。 定义泛型类或过程时，无需为可能需要对其执行该功能的每个数据类型定义单独版本。  
@@ -158,4 +158,4 @@ ms.locfileid: "42925548"
  [As](../../../../visual-basic/language-reference/statements/as-clause.md)  
  [Object 数据类型](../../../../visual-basic/language-reference/data-types/object-data-type.md)  
  [协变和逆变](../../concepts/covariance-contravariance/index.md)  
- [迭代器](http://msdn.microsoft.com/library/f45331db-d595-46ec-9142-551d3d1eb1a7)
+ [迭代器](https://msdn.microsoft.com/library/f45331db-d595-46ec-9142-551d3d1eb1a7)

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 1e88d368-a886-4f1e-8eb6-6127979a9fce
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ad20cf4528f5ca7d23f80570cc34712d33b74d93
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: aaf5103dfee366466ff701ce3669bbabb97233ac
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33398074"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43397187"
 ---
 # <a name="lttypegt-element-net-native"></a>&lt;Type&gt; 元素 (.NET Native)
 将运行时策略应用到一个特定类型，例如一个类或结构。  
@@ -98,7 +98,7 @@ ms.locfileid: "33398074"
  如果该类型是一个泛型类型，其名称包含一个重读音符 (\`)，后面还跟着其泛型参数的编号。 例如，<xref:System.Collections.Generic.List%601?displayProperty=nameWithType> 类的 `<Type>` 元素的 `Name` 属性显示为 `Name="System.Collections.Generic.List`1"`。  
   
 ## <a name="example"></a>示例  
- 以下实例使用反射来展示 <xref:System.Collections.Generic.List%601?displayProperty=nameWithType> 类的字段、属性和方法。 示例中的变量 `b` 是 [TextBlock](http://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.textblock.aspx) 控件。 因为实例仅仅检索了类型信息，元数据的可用性是由 `Browse` 策略设置控制的。  
+ 以下实例使用反射来展示 <xref:System.Collections.Generic.List%601?displayProperty=nameWithType> 类的字段、属性和方法。 示例中的变量 `b` 是 [TextBlock](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.textblock.aspx) 控件。 因为实例仅仅检索了类型信息，元数据的可用性是由 `Browse` 策略设置控制的。  
   
  [!code-csharp[ProjectN_Reflection#3](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn_reflection/cs/browsegenerictype1.cs#3)]  
   
@@ -116,7 +116,7 @@ ms.locfileid: "33398074"
 ```  
   
 ## <a name="example"></a>示例  
- 以下实例使用了反射来检索一个代表 <xref:System.Reflection.PropertyInfo> 属性的 <xref:System.String.Chars%2A?displayProperty=nameWithType> 对象。 它使用 <xref:System.Reflection.PropertyInfo.GetValue%28System.Object%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> 方法来检索一个字符串中的七个字符的值，并在该字符串中显示所有字符。 示例中的变量 `b` 是 [TextBlock](http://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.textblock.aspx) 控件。  
+ 以下实例使用了反射来检索一个代表 <xref:System.Reflection.PropertyInfo> 属性的 <xref:System.String.Chars%2A?displayProperty=nameWithType> 对象。 它使用 <xref:System.Reflection.PropertyInfo.GetValue%28System.Object%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> 方法来检索一个字符串中的七个字符的值，并在该字符串中显示所有字符。 示例中的变量 `b` 是 [TextBlock](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.textblock.aspx) 控件。  
   
  [!code-csharp[ProjectN_Reflection#1](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn_reflection/cs/propertyinfo1.cs#1)]  
   

@@ -16,15 +16,15 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d1bc31a4f074891149783dec647a592683564ba0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: e1380d03d4456e0695777775ae786a19982d691b
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33457914"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43394973"
 ---
 # <a name="blessiwbemservicesobject-function"></a>BlessIWbemServicesObject 函数
-指示用户凭据是否允许访问指定[IWbemServices](https://msdn.microsoft.com/library/aa392093(v=vs.85).aspx)对象。   
+指示用户凭据是否允许访问指定[IWbemServices](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemservices)对象。   
   
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
   
@@ -47,27 +47,27 @@ HRESULT BlessIWbemServicesObject (
 [in]指向 WMI 服务对象的指针。
 
 `strUser`  
-[in]用户名。
+[in]用户名称。
 
 `strPassword`  
 [in]与关联的密码`strUser`。
 
-`strAuthority` [in]用户的域名。 请参阅[ConnectServerWmi](connectserverwmi.md)有关详细信息的函数。
+`strAuthority` [in]用户的域名。 请参阅[ConnectServerWmi](connectserverwmi.md)函数的详细信息。
 
 `impLevel` [in]模拟级别。
 
-`authnLevel` [in]授权级别中。
+`authnLevel` [in]授权级别。
 
 ## <a name="return-value"></a>返回值
 
-此函数返回以下值中定义*WinError.h*标头文件，或者你可以定义它们常量作为在代码中：
+此函数返回以下值中定义*WinError.h*标头文件，也可以在定义它们为常量在代码中：
 
-|返回的常量  |值  |描述  |
+|返回的常量  |“值”  |描述  |
 |---------|---------|---------|
-| `E_INVALIDARG` | 0x80070057 | 一个或多个自变量均无效。 |
+| `E_INVALIDARG` | 0x80070057 | 一个或多个参数均无效。 |
 | `E_POINTER` | 0x80004003 | `pIWbemServices` 为 `null`。 | 
 | `E_FAIL` | 0x80000008 | 发生未知的错误。 |
-| `E_OUTOFMEMORY` | 0x80000002 | 内存不足是可用于执行该操作。 | 
+| `E_OUTOFMEMORY` | 0x80000002 | 没有足够的内存是可用于执行该操作。 | 
 | `S_OK` | 0 | 函数调用成功。 | 
 
 ## <a name="requirements"></a>要求  
@@ -75,7 +75,7 @@ HRESULT BlessIWbemServicesObject (
   
  **标头：** WMINet_Utils.idl  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>请参阅  
 [WMI 和性能计数器 （非托管 API 参考）](index.md)

@@ -10,16 +10,16 @@ ms.assetid: 93fdfbb9-0025-4b72-8ca0-0714adbb70d5
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: f2eb6d1b54e9565df1401c4a1d20698ff795f896
-ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
+ms.openlocfilehash: 4b846dfdd7c19a515c759fbeac1762cb47ca8876
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43258572"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43395473"
 ---
 # <a name="textpattern-and-embedded-objects-overview"></a>TextPattern 和嵌入式对象概述
 > [!NOTE]
->  本文档适用于想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空间中定义的托管 <xref:System.Windows.Automation> 类的 .NET Framework 开发人员。 有关 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]的最新信息，请参阅 [Windows 自动化 API：UI 自动化](http://go.microsoft.com/fwlink/?LinkID=156746)。  
+>  本文档适用于想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空间中定义的托管 <xref:System.Windows.Automation> 类的 .NET Framework 开发人员。 有关最新信息[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]，请参阅[Windows 自动化 API: UI 自动化](https://go.microsoft.com/fwlink/?LinkID=156746)。  
   
  本概述介绍 [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] 如何在文本文档或容器中公开嵌入对象或子元素。  
   
@@ -46,7 +46,7 @@ ms.locfileid: "43258572"
   
  如果需要遍历文本范围的内容，为使 <xref:System.Windows.Automation.Text.TextPatternRange.Move%2A> 方法成功执行，将在后台进行一系列步骤。  
   
-1.  对文本范围进行了规范化。也就是说，已在 <xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.Start> 终结点将文本范围折叠为退化范围，这使得 <xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.End> 终结点成为多余。 此步骤是必需的文本范围跨越的情况下消除歧义<xref:System.Windows.Automation.Text.TextUnit>边界： 例如，"{The U} RL [ http://www.microsoft.com ](http://www.microsoft.com)文本中嵌入"其中"{"和"}"是文本范围的终结点。  
+1.  对文本范围进行了规范化。也就是说，已在 <xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.Start> 终结点将文本范围折叠为退化范围，这使得 <xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.End> 终结点成为多余。 此步骤是必需的文本范围跨越的情况下消除歧义<xref:System.Windows.Automation.Text.TextUnit>边界： 例如，"{The U} RL [ http://www.microsoft.com ](https://www.microsoft.com)文本中嵌入"其中"{"和"}"是文本范围的终结点。  
   
 2.  生成的范围在 <xref:System.Windows.Automation.TextPattern.DocumentRange%2A> 中向后移动到所请求的 <xref:System.Windows.Automation.Text.TextUnit> 边界的开头。  
   
@@ -71,7 +71,7 @@ ms.locfileid: "43258572"
 ### <a name="hyperlink"></a>超链接  
  **示例 1 - 包含嵌入文本超链接的文本范围**  
   
- {URL [ http://www.microsoft.com ](http://www.microsoft.com)嵌入在文本}。  
+ {URL [ http://www.microsoft.com ](https://www.microsoft.com)嵌入在文本}。  
   
 |调用方法|结果|  
 |-------------------|------------|  
@@ -92,7 +92,7 @@ ms.locfileid: "43258572"
   
  **示例 3-部分跨越文本容器的内容的文本范围。文本容器包含不属于文本范围的嵌入的文本超链接。**  
   
- {URL}[ http://www.microsoft.com ](http://www.microsoft.com)嵌入在文本中。  
+ {URL}[ http://www.microsoft.com ](https://www.microsoft.com)嵌入在文本中。  
   
 |调用方法|结果|  
 |-------------------|------------|  
@@ -159,4 +159,4 @@ ms.locfileid: "43258572"
  [使用 UI 自动化访问嵌入式对象](../../../docs/framework/ui-automation/access-embedded-objects-using-ui-automation.md)  
  [使用 UI 自动化公开表的内容](../../../docs/framework/ui-automation/expose-the-content-of-a-table-using-ui-automation.md)  
  [使用 UI 自动化遍历文本](../../../docs/framework/ui-automation/traverse-text-using-ui-automation.md)  
- [TextPattern 搜索和选择示例](http://msdn.microsoft.com/library/0a3bca57-8b72-489d-a57c-da85b7a22c7f)
+ [TextPattern 搜索和选择示例](https://msdn.microsoft.com/library/0a3bca57-8b72-489d-a57c-da85b7a22c7f)

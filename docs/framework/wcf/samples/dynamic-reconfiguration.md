@@ -2,22 +2,22 @@
 title: 动态重新配置
 ms.date: 03/30/2017
 ms.assetid: b20786ae-cce6-4f91-b6cb-9cae116faf8b
-ms.openlocfilehash: 81a2b494c48476e683053e12e58264e756201124
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: a147a1d6cf61001832661376363ecc850ecad309
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33810375"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43401335"
 ---
 # <a name="dynamic-reconfiguration"></a>动态重新配置
-此示例演示 Windows Communication Foundation (WCF) 路由服务。 路由服务是可以轻松地在你的应用程序中包含基于内容的路由器的 WCF 组件。 此示例采用标准的 WCF 计算器示例，用于使用路由服务进行通信。 此示例演示如何在运行时动态重新配置路由服务。  
+此示例演示 Windows Communication Foundation (WCF) 路由服务。 路由服务是一个 WCF 组件，它可以轻松地在应用程序中包含基于内容的路由器。 此示例采用标准的 WCF 计算器示例，用于使用路由服务进行通信。 此示例演示如何在运行时动态重新配置路由服务。  
   
 > [!IMPORTANT]
 >  您的计算机上可能已安装这些示例。 在继续操作之前，请先检查以下（默认）目录：  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目录不存在，请转到[Windows Communication Foundation (WCF) 和针对.NET Framework 4 的 Windows Workflow Foundation (WF) 示例](http://go.microsoft.com/fwlink/?LinkId=150780)下载所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
+>  如果此目录不存在，请转到[Windows Communication Foundation (WCF) 和.NET Framework 4 的 Windows Workflow Foundation (WF) 示例](https://go.microsoft.com/fwlink/?LinkId=150780)若要下载所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\RoutingServices\DynamicReconfiguration`  
   
@@ -34,7 +34,7 @@ ms.locfileid: "33810375"
   
 3.  按**F5**或**CTRL + SHIFT + B** Visual Studio 中。  
   
-    1.  如果你想要自动启动所需的项目，当你按**F5**，右键单击该解决方案并选择**属性**。 选择**启动项目**节点下的**通用属性**的左窗格中。 选择**多启动项目**单选按钮，设置所有项目具有**启动**操作。  
+    1.  如果你想要自动启动所需的项目时，按**F5**，右键单击解决方案并选择**属性**。 选择**启动项目**节点下的**通用属性**的左窗格中。 选择**多个启动项目**单选按钮并设置的所有项目具有**启动**操作。  
   
     2.  如果生成该项目**CTRL + SHIFT + B**，则必须启动以下应用程序：  
   
@@ -72,7 +72,7 @@ ms.locfileid: "33810375"
   
 6.  计算器服务和舍入计算器服务也会向其各自的控制台窗口输出调用的操作的日志。  
   
-7.  在客户端控制台窗口中，键入"quit"并按 ENTER 以退出。  
+7.  在客户端控制台窗口中，键入"quit"并按 ENTER 退出。  
   
 8.  在服务控制台窗口中按 ENTER 终止服务。  
   
@@ -83,4 +83,4 @@ ms.locfileid: "33810375"
  Contoso 希望虚拟化其所有服务以仅公开一个终结点，这些服务通过该终结点可提供对多种不同类型的服务的访问。 在这种情况下，这些服务利用路由服务的基于内容的路由功能，以确定应将传入请求发送到哪个位置。  
   
 ## <a name="see-also"></a>请参阅  
- [AppFabric 承载和持久性示例](http://go.microsoft.com/fwlink/?LinkId=193961)
+ [AppFabric 承载和持久性示例](https://go.microsoft.com/fwlink/?LinkId=193961)

@@ -2,17 +2,17 @@
 title: SQL Server 安全性概述
 ms.date: 03/30/2017
 ms.assetid: ae66dd75-5c16-4cc0-9e12-774dd26d3fb9
-ms.openlocfilehash: 84b6724417d03a30c131700e197744839d3a020d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 25f9f96a550438d242ee409da0d09b7df06de33c
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33362229"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43395797"
 ---
 # <a name="overview-of-sql-server-security"></a>SQL Server 安全性概述
 具有重叠安全层的全面防御策略是抵御安全威胁的最佳方式。 SQL Server 提供的安全体系结构旨在允许数据库管理员和开发人员创建安全的数据库应用程序并抵御威胁。 通过引入新功能，SQL Server 的每个版本都在先前的 SQL Server 版本基础上得到改善。 但是，安全性并不是现成的。 每个应用程序都具有其独特的安全要求。 开发人员需要了解哪些功能组合最适合抵御已知的威胁，并需要预见未来可能出现的威胁。  
   
- SQL Server 实例包含以服务器为首的实体的分层集合。 每个服务器均包含多个数据库，而每个数据库均包含可保护对象的集合。 每个 SQL Server 安全对象具有关联*权限*，可授予*主体*，这是个人、 组或进程授予访问到 SQL Server。 SQL Server 安全框架管理对通过安全实体的访问*身份验证*和*授权*。  
+ SQL Server 实例包含以服务器为首的实体的分层集合。 每个服务器均包含多个数据库，而每个数据库均包含可保护对象的集合。 每个 SQL 服务器安全对象相关联*权限*，可以授予*主体*，这是个人、 组或进程授予访问 SQL Server 权限。 SQL Server 安全框架管理通过安全对象实体的访问权限*身份验证*并*授权*。  
   
 -   身份验证是指通过提交服务器评估的凭据以登录到主体请求访问的 SQL Server 的过程。 身份验证可以确定接受身份验证的用户或进程的标识。  
   
@@ -43,4 +43,4 @@ ms.locfileid: "33362229"
  [保证 ADO.NET 应用程序的安全](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
  [SQL Server 安全性](../../../../../docs/framework/data/adonet/sql/sql-server-security.md)  
  [SQL Server 中的应用程序安全性方案](../../../../../docs/framework/data/adonet/sql/application-security-scenarios-in-sql-server.md)  
- [ADO.NET 托管提供程序和数据集开发人员中心](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)

@@ -7,17 +7,17 @@ dev_langs:
 helpviewer_keywords:
 - certificates [WCF]
 ms.assetid: 6ffb8682-8f07-4a45-afbb-8d2487e9dbc3
-ms.openlocfilehash: f56445e9bdd030d591f9fc6300f9a24d330dbc20
-ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
+ms.openlocfilehash: d0e54aeda1ee51fe7ba87c3ac69c556ea25e320f
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43257365"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43395446"
 ---
 # <a name="working-with-certificates"></a>使用证书
 对 Windows Communication Foundation (WCF) 安全性进行编程时，通常使用 X.509 数字证书对客户端和服务器进行身份验证，以及对消息进行加密和数字签名。 本主题将简要说明 X.509 数字证书的功能以及如何在 WCF 中使用它们，并提供一些主题的链接，这些主题对这些概念进行了深入说明，或揭示了如何使用 WCF 和证书来完成常见任务。  
   
- 简言之，数字证书是公钥基础结构 (PKI) 的一部分，而公钥基础结构是数字证书、证书颁发机构和其他注册机构的系统，它使用公钥加密对电子事务所涉及的每一方的有效性进行确认和身份验证。 证书颁发机构颁发证书，每个证书都具有一组包含数据的字段，例如“使用者”（向其颁发证书的实体）、有效日期（证书的有效日期）、证书颁发者（颁发证书的实体）和公钥。 在 WCF 中，这些属性中的每一个都作为 <xref:System.IdentityModel.Claims.Claim> 进行处理，而每个声明又进一步分为两种类型：标识和权限。 有关 X.509 证书的详细信息，请参阅 [X.509 公钥证书](http://go.microsoft.com/fwlink/?LinkId=209952)。 有关 WCF 中的声明和授权的详细信息，请参阅[使用标识模型管理声明和授权](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md)。 有关实现 PKI 的详细信息，请参阅 [Windows Server 2008 R2 - 证书服务](http://go.microsoft.com/fwlink/?LinkId=209949)。  
+ 简言之，数字证书是公钥基础结构 (PKI) 的一部分，而公钥基础结构是数字证书、证书颁发机构和其他注册机构的系统，它使用公钥加密对电子事务所涉及的每一方的有效性进行确认和身份验证。 证书颁发机构颁发证书，每个证书都具有一组包含数据的字段，例如“使用者”（向其颁发证书的实体）、有效日期（证书的有效日期）、证书颁发者（颁发证书的实体）和公钥。 在 WCF 中，这些属性中的每一个都作为 <xref:System.IdentityModel.Claims.Claim> 进行处理，而每个声明又进一步分为两种类型：标识和权限。 有关 X.509 证书的详细信息，请参阅 [X.509 公钥证书](https://go.microsoft.com/fwlink/?LinkId=209952)。 有关 WCF 中的声明和授权的详细信息，请参阅[使用标识模型管理声明和授权](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md)。 有关实现 PKI 的详细信息，请参阅 [Windows Server 2008 R2 - 证书服务](https://go.microsoft.com/fwlink/?LinkId=209949)。  
   
  证书的主要功能是向其他各方验证证书所有者的身份。 证书包含所有者的公钥，所有者保留着私钥。 公钥可用来对发送给证书所有者的消息进行加密。 只有所有者才能访问私钥，因此，只有所有者才能解密这些消息。  
   
@@ -42,7 +42,7 @@ ms.locfileid: "43257365"
   
 -   **个人**。 此存储区用于放置与计算机用户关联的证书。 通常，此存储区用于存放在受信任的根证书颁发机构存储区中找到的证书颁发机构证书之一所颁发的证书。 此外，此处还可存放应用程序自行颁发并且信任的证书。  
   
- 有关证书存储的详细信息，请参阅[证书存储](http://go.microsoft.com/fwlink/?LinkId=88912)。  
+ 有关证书存储的详细信息，请参阅[证书存储](https://go.microsoft.com/fwlink/?LinkId=88912)。  
   
 ### <a name="selecting-a-store"></a>选择存储区  
  证书存储位置的选择，取决于服务或客户端运行的方式和时间。 适用以下一般规则：  
@@ -52,7 +52,7 @@ ms.locfileid: "43257365"
 -   如果服务或客户端是在某个用户帐户下运行的应用程序，则使用“当前用户”存储区。  
   
 ### <a name="accessing-stores"></a>访问存储区  
- 与计算机上的文件夹一样，存储区也受访问控制列表 (ACL) 保护。 在创建由 Internet 信息服务 (IIS) 承载的服务时，[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 进程运行在 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 帐户下。 该帐户必须有权访问包含服务所用证书的存储区。 每个主要存储区都由一个默认访问列表保护，但这些列表是可以修改的。 如果创建一个单独的角色访问存储区，则必须向该角色授予访问权限。 要了解如何使用 WinHttpCertConfig.exe 工具修改访问列表，请参阅[如何：创建开发期间使用的临时证书](../../../../docs/framework/wcf/feature-details/how-to-create-temporary-certificates-for-use-during-development.md)。 有关在 IIS 中使用客户端证书的详细信息，请参阅 [How to call a Web service by using a client certificate for authentication in an ASP.NET Web application](http://go.microsoft.com/fwlink/?LinkId=88914)（如何在 ASP.NET Web 应用程序中通过使用客户端证书进行身份验证来调用 Web 服务）。  
+ 与计算机上的文件夹一样，存储区也受访问控制列表 (ACL) 保护。 在创建由 Internet 信息服务 (IIS) 承载的服务时，[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 进程运行在 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 帐户下。 该帐户必须有权访问包含服务所用证书的存储区。 每个主要存储区都由一个默认访问列表保护，但这些列表是可以修改的。 如果创建一个单独的角色访问存储区，则必须向该角色授予访问权限。 要了解如何使用 WinHttpCertConfig.exe 工具修改访问列表，请参阅[如何：创建开发期间使用的临时证书](../../../../docs/framework/wcf/feature-details/how-to-create-temporary-certificates-for-use-during-development.md)。 有关在 IIS 中使用客户端证书的详细信息，请参阅 [How to call a Web service by using a client certificate for authentication in an ASP.NET Web application](https://go.microsoft.com/fwlink/?LinkId=88914)（如何在 ASP.NET Web 应用程序中通过使用客户端证书进行身份验证来调用 Web 服务）。  
   
 ## <a name="chain-trust-and-certificate-authorities"></a>链信任和证书颁发机构  
  证书是在某种层次结构中创建的，其中每个证书都链接到颁发该证书的 CA。 该链接指向 CA 的证书。 CA 的证书又链接到颁发原始 CA 证书的 CA。 这一过程不断重复，直至到达根 CA 的证书。 根 CA 的证书将以继承方式受到信任。  
@@ -146,9 +146,9 @@ ms.locfileid: "43257365"
  此外，通过配置也可以设置证书。 如果要创建服务，则在 [\<serviceBehaviors>](../../../../docs/framework/configure-apps/file-schema/wcf/servicebehaviors.md) 中指定凭据（包括证书）。 如果要编程客户端，则在 [\<endpointBehaviors>](../../../../docs/framework/configure-apps/file-schema/wcf/endpointbehaviors.md) 中指定证书。  
   
 ## <a name="mapping-a-certificate-to-a-user-account"></a>将证书映射到用户帐户  
- IIS 和 Active Directory 的一个功能是将证书映射到 Windows 用户帐户。 有关此功能的详细信息，请参阅 [Map certificates to user accounts](http://go.microsoft.com/fwlink/?LinkId=88917)（将证书映射到用户帐户）。  
+ IIS 和 Active Directory 的一个功能是将证书映射到 Windows 用户帐户。 有关此功能的详细信息，请参阅 [Map certificates to user accounts](https://go.microsoft.com/fwlink/?LinkId=88917)（将证书映射到用户帐户）。  
   
- 有关使用 Active Directory 映射的详细信息，请参阅 [Mapping Client Certificates with Directory Service Mapping](http://go.microsoft.com/fwlink/?LinkId=88918)（使用目录服务映射来映射客户端证书）。  
+ 有关使用 Active Directory 映射的详细信息，请参阅 [Mapping Client Certificates with Directory Service Mapping](https://go.microsoft.com/fwlink/?LinkId=88918)（使用目录服务映射来映射客户端证书）。  
   
  如果启用了这一功能，则可以将 <xref:System.ServiceModel.Security.X509ClientCertificateAuthentication.MapClientCertificateToWindowsAccount%2A> 类的 <xref:System.ServiceModel.Security.X509ClientCertificateAuthentication> 属性设置为 `true`。 在配置中，可以将 [\<authentication>](../../../../docs/framework/configure-apps/file-schema/wcf/authentication-of-servicecertificate-element.md) 元素的 `mapClientCertificateToWindowsAccount` 属性设置为 `true`，如下面的代码所示。  
   

@@ -5,27 +5,27 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: f6f0cbc9-f7bf-4d6e-875f-ad1ba0b4aa62
-ms.openlocfilehash: 9b485ac3f12587256a56fdfa44cf8b9c8b41a6bb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 24657f541daf5bb098f8db3b59a3241ecf832d39
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33365337"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43398860"
 ---
 # <a name="transaction-and-bulk-copy-operations"></a>事务和批量复制操作
 批量复制操作可以作为独立的操作执行，也可以作为多步事务的一部分执行。 后一种方式使您可以在同一事务中执行多个批量复制操作并执行其他数据库操作（例如插入、更新和删除），同时仍能够提交或回滚整个事务。  
   
- 默认情况下，批量复制操作作为独立的操作执行。 批量复制操作以非事务性方式发生，不可能使其回滚。 如果你需要回滚批量复制的全部或部分发生错误时，你可以使用<xref:System.Data.SqlClient.SqlBulkCopy>-托管的事务，执行批量复制操作在现有事务，或者在中登记**System.Transactions** <xref:System.Transactions.Transaction>.  
+ 默认情况下，批量复制操作作为独立的操作执行。 批量复制操作以非事务性方式发生，不可能使其回滚。 如果需要回滚全部或部分大容量复制发生错误时，可以使用<xref:System.Data.SqlClient.SqlBulkCopy>-托管的事务、 执行大容量复制操作中的现有事务，或者在中登记**System.Transactions** <xref:System.Transactions.Transaction>.  
   
 ## <a name="performing-a-non-transacted-bulk-copy-operation"></a>执行非事务性批量复制操作  
  下面的控制台应用程序演示非事务性批量复制操作在执行操作过程中遇到错误时发生的情况。  
   
- 在示例中，源表和目标表中每个包括`Identity`名为列**ProductID**。 代码首先通过删除所有行准备目标表，然后插入单个行其**ProductID**已知源表中存在。 默认情况下，在目标表中为添加的每一行都生成 `Identity` 列的新值。 在此示例中，在打开连接时设置一个选项，该选项强制批量加载进程改为使用来自源表的 `Identity` 值。  
+ 在示例中，源表和目标表中每个包括`Identity`名为的列**ProductID**。 代码首先通过删除所有行来准备目标表，然后插入的行**ProductID**源表中存在。 默认情况下，在目标表中为添加的每一行都生成 `Identity` 列的新值。 在此示例中，在打开连接时设置一个选项，该选项强制批量加载进程改为使用来自源表的 `Identity` 值。  
   
  批量复制操作在 <xref:System.Data.SqlClient.SqlBulkCopy.BatchSize%2A> 属性设置为 10 的情况下执行。 当操作遇到无效行时，将引发异常。 在此第一个示例中，批量复制操作是非事务性的。 在错误点之前复制的所有批次都被提交；回滚包含重复键的批次，并且在处理任何其他批次前中止批量复制操作。  
   
 > [!NOTE]
->  除非你已创建了工作表中所述，将不会运行此示例[批量复制示例设置](../../../../../docs/framework/data/adonet/sql/bulk-copy-example-setup.md)。 提供此代码是为了演示使用的语法**SqlBulkCopy**仅。 如果源和目标表位于相同的 SQL Server 实例，则更加容易和快速使用[!INCLUDE[tsql](../../../../../includes/tsql-md.md)]`INSERT … SELECT`语句复制数据。  
+>  此示例将不运行，除非你已创建的工作表中所述[大容量复制示例设置](../../../../../docs/framework/data/adonet/sql/bulk-copy-example-setup.md)。 提供此代码演示了使用语法**SqlBulkCopy**仅。 如果源和目标表位于同一个 SQL Server 实例，则更容易且更快速地使用[!INCLUDE[tsql](../../../../../includes/tsql-md.md)]`INSERT … SELECT`语句复制数据。  
   
  [!code-csharp[DataWorks SqlBulkCopy.DefaultTransaction#1](../../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SqlBulkCopy.DefaultTransaction/CS/source.cs#1)]
  [!code-vb[DataWorks SqlBulkCopy.DefaultTransaction#1](../../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SqlBulkCopy.DefaultTransaction/VB/source.vb#1)]  
@@ -41,7 +41,7 @@ ms.locfileid: "33365337"
  下面的控制台应用程序与前面的示例相似，只有一个例外：在此示例中，批量复制操作管理自己的事务。 在错误点之前复制的所有批次都被提交；回滚包含重复键的批次，并且在处理任何其他批次前中止批量复制操作。  
   
 > [!IMPORTANT]
->  除非你已创建了工作表中所述，将不会运行此示例[批量复制示例设置](../../../../../docs/framework/data/adonet/sql/bulk-copy-example-setup.md)。 提供此代码是为了演示使用的语法**SqlBulkCopy**仅。 如果源和目标表位于相同的 SQL Server 实例，则更加容易和快速使用[!INCLUDE[tsql](../../../../../includes/tsql-md.md)]`INSERT … SELECT`语句复制数据。  
+>  此示例将不运行，除非你已创建的工作表中所述[大容量复制示例设置](../../../../../docs/framework/data/adonet/sql/bulk-copy-example-setup.md)。 提供此代码演示了使用语法**SqlBulkCopy**仅。 如果源和目标表位于同一个 SQL Server 实例，则更容易且更快速地使用[!INCLUDE[tsql](../../../../../includes/tsql-md.md)]`INSERT … SELECT`语句复制数据。  
   
  [!code-csharp[DataWorks SqlBulkCopy.InternalTransaction#1](../../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SqlBulkCopy.InternalTransaction/CS/source.cs#1)]
  [!code-vb[DataWorks SqlBulkCopy.InternalTransaction#1](../../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SqlBulkCopy.InternalTransaction/VB/source.vb#1)]  
@@ -54,11 +54,11 @@ ms.locfileid: "33365337"
  下面的控制台应用程序与第一个（非事务性）示例相似，但有一个例外：在此示例中，批量复制操作包含在一个更大的外部事务中。 在发生了主键冲突错误时，回滚整个事务并且不会将任何行添加到目标表。  
   
 > [!IMPORTANT]
->  除非你已创建了工作表中所述，将不会运行此示例[批量复制示例设置](../../../../../docs/framework/data/adonet/sql/bulk-copy-example-setup.md)。 提供此代码是为了演示使用的语法**SqlBulkCopy**仅。 如果源和目标表位于相同的 SQL Server 实例，则更加容易和快速使用[!INCLUDE[tsql](../../../../../includes/tsql-md.md)]`INSERT … SELECT`语句复制数据。  
+>  此示例将不运行，除非你已创建的工作表中所述[大容量复制示例设置](../../../../../docs/framework/data/adonet/sql/bulk-copy-example-setup.md)。 提供此代码演示了使用语法**SqlBulkCopy**仅。 如果源和目标表位于同一个 SQL Server 实例，则更容易且更快速地使用[!INCLUDE[tsql](../../../../../includes/tsql-md.md)]`INSERT … SELECT`语句复制数据。  
   
  [!code-csharp[DataWorks SqlBulkCopy.SqlTransaction#1](../../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SqlBulkCopy.SqlTransaction/CS/source.cs#1)]
  [!code-vb[DataWorks SqlBulkCopy.SqlTransaction#1](../../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SqlBulkCopy.SqlTransaction/VB/source.vb#1)]  
   
 ## <a name="see-also"></a>请参阅  
  [SQL Server 中的大容量复制操作](../../../../../docs/framework/data/adonet/sql/bulk-copy-operations-in-sql-server.md)  
- [ADO.NET 托管提供程序和数据集开发人员中心](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)

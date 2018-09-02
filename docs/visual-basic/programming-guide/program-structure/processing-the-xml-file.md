@@ -5,11 +5,11 @@ helpviewer_keywords:
 - XML comments [Visual Basic], parsing [Visual Basic]
 ms.assetid: 78a15cd0-7708-4e79-85d1-c154b7a14a8c
 ms.openlocfilehash: 524a54443b8f2365252f11282ca29fc492bef351
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43000228"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43398568"
 ---
 # <a name="processing-the-xml-file-visual-basic"></a>处理 XML 文件 (Visual Basic)
 编译器为代码（已标记以生成文档）中的每个构造生成一个 ID 字符串。 (有关如何标记代码的信息，请参阅[XML 注释标记](../../../visual-basic/language-reference/xmldoc/index.md)。)ID 字符串唯一标识构造。 处理 XML 文件的程序可以使用 ID 字符串来标识对应[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]元数据/反射项目。  

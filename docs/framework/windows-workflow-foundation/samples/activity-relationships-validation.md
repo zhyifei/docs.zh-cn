@@ -2,11 +2,12 @@
 title: 活动关系验证
 ms.date: 03/30/2017
 ms.assetid: 6f11a34e-ed67-4bce-88ce-7e96bbb4d052
-ms.openlocfilehash: e6dd0e6a7b48444073ebae378e21c1b45977a1f0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 50f08118fb5ad4d9b8fe809e7ab3cc5d57f28149
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43394680"
 ---
 # <a name="activity-relationships-validation"></a>活动关系验证
 此示例由以下三个活动组成：`CreateCity`、`CreateState` 和 `CreateCountry`。 `CreateCity` 必须在 `CreateState` 活动内，并且`CreateState` 必须在 `CreateCountry` 活动内。  此示例出于演示的需要，对 `CreateState` 活动使用代码形式的验证逻辑，而对 `CreateCity` 活动使用 XAML 形式的验证逻辑。 这两个约束具有相同的行为。  
@@ -37,6 +38,6 @@ ms.lasthandoff: 05/04/2018
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目录不存在，请转到[Windows Communication Foundation (WCF) 和针对.NET Framework 4 的 Windows Workflow Foundation (WF) 示例](http://go.microsoft.com/fwlink/?LinkId=150780)下载所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
+>  如果此目录不存在，请转到[Windows Communication Foundation (WCF) 和.NET Framework 4 的 Windows Workflow Foundation (WF) 示例](https://go.microsoft.com/fwlink/?LinkId=150780)若要下载所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Validation\ActivityRelationships`
