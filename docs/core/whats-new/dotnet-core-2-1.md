@@ -4,12 +4,12 @@ description: 了解 .NET Core 2.1 的新增功能。
 author: rpetrusha
 ms.author: ronpet
 ms.date: 06/06/2018
-ms.openlocfilehash: ec9a8d238dc47f604a1ac0ee7628bf079e89b9c2
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.openlocfilehash: 2599908c81cbe046889778bbdf7aeb9f8272b215
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42935574"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43392844"
 ---
 # <a name="whats-new-in-net-core-21"></a>.NET Core 2.1 的新增功能
 
@@ -49,7 +49,7 @@ ms.locfileid: "42935574"
    ```console
    dotnet watch -- --verbose build
    ```
-  
+
    请注意 `--verbose` 选项前面的 `--` 选项。 它分隔从传递给子 `dotnet` 进程的参数直接传递到 `dotnet watch` 命令的选项。 如果没有该选项，`--verbose` 选项将适用于 `dotnet watch` 命令，而非 `dotnet build` 命令。
   
    有关详细信息，请参阅[使用 dotnet watch 开发 ASP.NET Core 应用](/aspnet/core/tutorials/dotnet-watch)
@@ -88,7 +88,7 @@ dotnet tool install -g dotnetsay
 
 ## <a name="roll-forward"></a>前滚
 
-从 .NET Core 2.0 开始，所有 .NET Core 应用程序都将自动前滚到系统上安装的最新次要版本。 
+从 .NET Core 2.0 开始，所有 .NET Core 应用程序都将自动前滚到系统上安装的最新次要版本。
 
 从 .NET Core 2.0 开始，如果在其中构建应用程序的 .NET Core 版本在运行时不存在，应用程序将针对最新安装的次要版本的 .NET Core 自动运行。 换而言之，如果应用程序在 .NET Core 2.0 中生成，而主机系统未安装 .NET Core 2.0 但安装了 .NET Core 2.1，则应用程序将通过 .NET Core 2.1 运行。
 
@@ -233,6 +233,6 @@ AppContext.SetSwitch("System.Net.Http.UseSocketsHttpHandler", False)
 
 ## <a name="see-also"></a>请参阅
 
-[.NET Core 的新增功能](index.md)  
-[EF Core 2.1 中的新增功能](/ef/core/what-is-new/ef-core-2.1)  
-[ASP.NET Core 2.1 的新增功能](/aspnet/core/aspnetcore-2.1)
+* [.NET Core 的新增功能](index.md)  
+* [EF Core 2.1 中的新增功能](/ef/core/what-is-new/ef-core-2.1)  
+* [ASP.NET Core 2.1 的新增功能](/aspnet/core/aspnetcore-2.1)

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - WS Profile binding
 ms.assetid: 22d85b19-0135-4141-9179-a0e9c343ad73
-ms.openlocfilehash: d76ec0292ea6f8143e641b771daeac8975e91b02
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6eccaaaa3ad941b16690afeecef618cdfb9040a1
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33505435"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43468746"
 ---
 # <a name="wshttpbinding"></a>WSHttpBinding
 此示例演示如何实现典型的服务和典型的客户端使用 Windows Communication Foundation (WCF)。 此示例由客户端控制台程序 (client.exe) 和 Internet 信息服务 (IIS) 所承载的服务库组成。 该服务实现定义“请求-答复”通信模式的协定。 该协定由 `ICalculator` 接口定义，此接口公开数学运算（加、减、乘和除）。 客户端向给定的数学运算发出同步请求，服务使用结果进行回复。 客户端活动显示在控制台窗口中。  
@@ -19,7 +19,7 @@ ms.locfileid: "33505435"
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目录不存在，请转到[Windows Communication Foundation (WCF) 和针对.NET Framework 4 的 Windows Workflow Foundation (WF) 示例](http://go.microsoft.com/fwlink/?LinkId=150780)下载所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
+>  如果此目录不存在，请转到[Windows Communication Foundation (WCF) 和.NET Framework 4 的 Windows Workflow Foundation (WF) 示例](https://go.microsoft.com/fwlink/?LinkId=150780)若要下载所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\WS\wsHttp`  
   
@@ -62,9 +62,9 @@ ms.locfileid: "33505435"
   
  在基 `binding` 元素上，通过 `maxReceivedMessageSize` 值可以配置传入消息的最大大小（以字节为单位）。 通过 `hostNameComparisonMode` 值，可以配置向服务多路分解消息时是否考虑主机名。 通过 `messageEncoding` 值可以配置是对消息使用文本还是 MTOM 编码。 通过 `textEncoding` 值可以为消息配置字符编码。 通过 `bypassProxyOnLocal` 值可以配置是否对本地通信使用 HTTP 协议。 通过 `transactionFlow` 值可以配置是否对当前事务进行流处理（如果为事务流配置了操作）。  
   
- 上[ \<reliableSession >](../../../../docs/framework/configure-apps/file-schema/wcf/reliablesession.md)元素，已启用的布尔值可以配置是否启用可靠会话。 `ordered` 值配置是否保留消息顺序。 `inactivityTimeout` 值配置会话在出错之前可以闲置的时间。  
+ 上[ \<reliableSession >](../../../../docs/framework/configure-apps/file-schema/wcf/reliablesession.md)元素中，已启用的布尔值配置是否启用可靠会话。 `ordered` 值配置是否保留消息顺序。 `inactivityTimeout` 值配置会话在出错之前可以闲置的时间。  
   
- 上[\<安全 >](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-wshttpbinding.md)、`mode`值配置应该使用的安全模式。 在此示例中，消息安全使用，这就是为什么[\<消息 >](../../../../docs/framework/configure-apps/file-schema/wcf/message-of-wshttpbinding.md)内指定[\<安全 >](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-wshttpbinding.md)。  
+ 上[\<安全 >](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-wshttpbinding.md)，则`mode`值配置应该使用的安全模式。 在此示例中，消息安全使用，这就是为什么[\<消息 >](../../../../docs/framework/configure-apps/file-schema/wcf/message-of-wshttpbinding.md)内指定[\<安全 >](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-wshttpbinding.md)。  
   
  运行示例时，操作请求和响应将显示在客户端控制台窗口中。 在客户端窗口中按 Enter 可以关闭客户端。  
   
@@ -85,10 +85,10 @@ Press <ENTER> to terminate client.
     %windir%\Microsoft.NET\Framework\v4.0.XXXXX\aspnet_regiis.exe /i /enable  
     ```  
   
-2.  确保已执行[的 Windows Communication Foundation 示例的一次性安装过程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
+2.  请确保您具有执行[的 Windows Communication Foundation 示例的一次性安装过程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
   
 3.  若要生成 C# 或 Visual Basic .NET 版本的解决方案，请按照 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)中的说明进行操作。  
   
-4.  若要在单或跨计算机配置上运行示例，请按照中的说明[运行 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/running-the-samples.md)。  
+4.  若要在单或跨计算机配置中运行示例，请按照中的说明[运行 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/running-the-samples.md)。  
   
 ## <a name="see-also"></a>请参阅

@@ -4,12 +4,12 @@ description: 了解如何在生成服务器上使用 .NET Core SDK 及其工具�
 author: guardrex
 ms.author: mairaw
 ms.date: 05/18/2017
-ms.openlocfilehash: 032d38ebe268503c8578aacbee4b9c342466fc7a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0835ffafc6c091c311b03c90f665cbd669cccfe9
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33216812"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43417959"
 ---
 # <a name="using-net-core-sdk-and-tools-in-continuous-integration-ci"></a>在持续集成 (CI) 中使用 .NET Core SDK 和工具
 
@@ -52,16 +52,16 @@ macOS 用户应使用 PKG 安装程序。 在 Linux 上，可选择使用基于�
 $ErrorActionPreference="Stop"
 $ProgressPreference="SilentlyContinue"
 
-# $LocalDotnet is the path to the locally-installed SDK to ensure the 
+# $LocalDotnet is the path to the locally-installed SDK to ensure the
 #   correct version of the tools are executed.
 $LocalDotnet=""
-# $InstallDir and $CliVersion variables can come from options to the 
+# $InstallDir and $CliVersion variables can come from options to the
 #   script.
 $InstallDir = "./cli-tools"
 $CliVersion = "1.0.1"
 
-# Test the path provided by $InstallDir to confirm it exists. If it 
-#   does, it's removed. This is not strictly required, but it's a 
+# Test the path provided by $InstallDir to confirm it exists. If it
+#   does, it's removed. This is not strictly required, but it's a
 #   good way to reset the environment.
 if (Test-Path $InstallDir)
 {
@@ -71,7 +71,7 @@ New-Item -Type "directory" -Path $InstallDir
 
 Write-Host "Downloading the CLI installer..."
 
-# Use the Invoke-WebRequest PowerShell cmdlet to obtain the 
+# Use the Invoke-WebRequest PowerShell cmdlet to obtain the
 #   installation script and save it into the installation directory.
 Invoke-WebRequest `
     -Uri "https://dot.net/v1/dotnet-install.ps1" `
@@ -79,14 +79,14 @@ Invoke-WebRequest `
 
 Write-Host "Installing the CLI requested version ($CliVersion) ..."
 
-# Install the SDK of the version specified in $CliVersion into the 
+# Install the SDK of the version specified in $CliVersion into the
 #   specified location ($InstallDir).
 & $InstallDir/dotnet-install.ps1 -Version $CliVersion `
     -InstallDir $InstallDir
 
 Write-Host "Downloading and installation of the SDK is complete."
 
-# $LocalDotnet holds the path to dotnet.exe for future use by the 
+# $LocalDotnet holds the path to dotnet.exe for future use by the
 #   script.
 $LocalDotnet = "$InstallDir/dotnet"
 
@@ -177,4 +177,4 @@ install:
 
 ## <a name="see-also"></a>请参阅
 
-[Ubuntu 获取步骤](https://www.microsoft.com/net/core#linuxubuntu)   
+* [Ubuntu 获取步骤](https://www.microsoft.com/net/core#linuxubuntu)
