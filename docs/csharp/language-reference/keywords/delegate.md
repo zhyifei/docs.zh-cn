@@ -9,47 +9,47 @@ helpviewer_keywords:
 - delegate keyword [C#]
 - function pointers [C#]
 ms.assetid: 0bb8cb6d-2f87-47c7-9d1f-d65c1cd01e9f
-ms.openlocfilehash: ba1cfdcc56b3d2301a07ffa4af793e7002da21bb
-ms.sourcegitcommit: ed7b4b9b77d35e94a35a2634e8c874f46603fb2b
+ms.openlocfilehash: 7a5f46d137e22da01b2ab6cd3eee57d66c411e8f
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36948418"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43442728"
 ---
-# <a name="delegate-c-reference"></a><span data-ttu-id="1b3f2-102">委托（C# 参考）</span><span class="sxs-lookup"><span data-stu-id="1b3f2-102">delegate (C# Reference)</span></span>
+# <a name="delegate-c-reference"></a><span data-ttu-id="1a531-102">委托（C# 参考）</span><span class="sxs-lookup"><span data-stu-id="1a531-102">delegate (C# Reference)</span></span>
 
-<span data-ttu-id="1b3f2-103">委托类型的声明与方法签名相似。</span><span class="sxs-lookup"><span data-stu-id="1b3f2-103">The declaration of a delegate type is similar to a method signature.</span></span> <span data-ttu-id="1b3f2-104">它有一个返回值和任意数目任意类型的参数：</span><span class="sxs-lookup"><span data-stu-id="1b3f2-104">It has a return value and any number of parameters of any type:</span></span>
+<span data-ttu-id="1a531-103">委托类型的声明与方法签名相似。</span><span class="sxs-lookup"><span data-stu-id="1a531-103">The declaration of a delegate type is similar to a method signature.</span></span> <span data-ttu-id="1a531-104">它有一个返回值和任意数目任意类型的参数：</span><span class="sxs-lookup"><span data-stu-id="1a531-104">It has a return value and any number of parameters of any type:</span></span>
 
 ```csharp
 public delegate void TestDelegate(string message);
 public delegate int TestDelegate(MyType m, long num);
 ```
 
-<span data-ttu-id="1b3f2-105">`delegate` 是一种可用于封装命名方法或匿名方法的引用类型。</span><span class="sxs-lookup"><span data-stu-id="1b3f2-105">A `delegate` is a reference type that can be used to encapsulate a named or an anonymous method.</span></span> <span data-ttu-id="1b3f2-106">委托类似于 C++ 中的函数指针；但是，委托是类型安全和可靠的。</span><span class="sxs-lookup"><span data-stu-id="1b3f2-106">Delegates are similar to function pointers in C++; however, delegates are type-safe and secure.</span></span> <span data-ttu-id="1b3f2-107">有关委托的应用，请参阅[委托](../../../csharp/programming-guide/delegates/index.md)和[泛型委托](../../../csharp/programming-guide/generics/generic-delegates.md)。</span><span class="sxs-lookup"><span data-stu-id="1b3f2-107">For applications of delegates, see [Delegates](../../../csharp/programming-guide/delegates/index.md) and [Generic Delegates](../../../csharp/programming-guide/generics/generic-delegates.md).</span></span>
+<span data-ttu-id="1a531-105">`delegate` 是一种可用于封装命名方法或匿名方法的引用类型。</span><span class="sxs-lookup"><span data-stu-id="1a531-105">A `delegate` is a reference type that can be used to encapsulate a named or an anonymous method.</span></span> <span data-ttu-id="1a531-106">委托类似于 C++ 中的函数指针；但是，委托是类型安全和可靠的。</span><span class="sxs-lookup"><span data-stu-id="1a531-106">Delegates are similar to function pointers in C++; however, delegates are type-safe and secure.</span></span> <span data-ttu-id="1a531-107">有关委托的应用，请参阅[委托](../../../csharp/programming-guide/delegates/index.md)和[泛型委托](../../../csharp/programming-guide/generics/generic-delegates.md)。</span><span class="sxs-lookup"><span data-stu-id="1a531-107">For applications of delegates, see [Delegates](../../../csharp/programming-guide/delegates/index.md) and [Generic Delegates](../../../csharp/programming-guide/generics/generic-delegates.md).</span></span>
 
-## <a name="remarks"></a><span data-ttu-id="1b3f2-108">备注</span><span class="sxs-lookup"><span data-stu-id="1b3f2-108">Remarks</span></span>
+## <a name="remarks"></a><span data-ttu-id="1a531-108">备注</span><span class="sxs-lookup"><span data-stu-id="1a531-108">Remarks</span></span>
 
-<span data-ttu-id="1b3f2-109">委托是[事件](../../../csharp/programming-guide/events/index.md)的基础。</span><span class="sxs-lookup"><span data-stu-id="1b3f2-109">Delegates are the basis for [Events](../../../csharp/programming-guide/events/index.md).</span></span>
+<span data-ttu-id="1a531-109">委托是[事件](../../../csharp/programming-guide/events/index.md)的基础。</span><span class="sxs-lookup"><span data-stu-id="1a531-109">Delegates are the basis for [Events](../../../csharp/programming-guide/events/index.md).</span></span>
 
-<span data-ttu-id="1b3f2-110">通过将委托与命名方法或匿名方法关联，可以实例化委托。</span><span class="sxs-lookup"><span data-stu-id="1b3f2-110">A delegate can be instantiated by associating it either with a named or anonymous method.</span></span> <span data-ttu-id="1b3f2-111">有关详细信息，请参阅[命名方法](../../../csharp/programming-guide/delegates/delegates-with-named-vs-anonymous-methods.md)和[匿名方法](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md)。</span><span class="sxs-lookup"><span data-stu-id="1b3f2-111">For more information, see [Named Methods](../../../csharp/programming-guide/delegates/delegates-with-named-vs-anonymous-methods.md) and [Anonymous Methods](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md).</span></span>
+<span data-ttu-id="1a531-110">通过将委托与命名方法或匿名方法关联，可以实例化委托。</span><span class="sxs-lookup"><span data-stu-id="1a531-110">A delegate can be instantiated by associating it either with a named or anonymous method.</span></span> <span data-ttu-id="1a531-111">有关详细信息，请参阅[命名方法](../../../csharp/programming-guide/delegates/delegates-with-named-vs-anonymous-methods.md)和[匿名方法](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md)。</span><span class="sxs-lookup"><span data-stu-id="1a531-111">For more information, see [Named Methods](../../../csharp/programming-guide/delegates/delegates-with-named-vs-anonymous-methods.md) and [Anonymous Methods](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md).</span></span>
 
-<span data-ttu-id="1b3f2-112">必须使用具有兼容返回类型和输入参数的方法或 lambda 表达式实例化委托。</span><span class="sxs-lookup"><span data-stu-id="1b3f2-112">The delegate must be instantiated with a method or lambda expression that has a compatible return type and input parameters.</span></span> <span data-ttu-id="1b3f2-113">有关方法签名中允许的差异程度的详细信息，请参阅[委托中的变体](../../programming-guide/concepts/covariance-contravariance/using-variance-in-delegates.md)。</span><span class="sxs-lookup"><span data-stu-id="1b3f2-113">For more information on the degree of variance that is allowed in the method signature, see [Variance in Delegates](../../programming-guide/concepts/covariance-contravariance/using-variance-in-delegates.md).</span></span> <span data-ttu-id="1b3f2-114">为了与匿名方法一起使用，委托和与之关联的代码必须一起声明。</span><span class="sxs-lookup"><span data-stu-id="1b3f2-114">For use with anonymous methods, the delegate and the code to be associated with it are declared together.</span></span> <span data-ttu-id="1b3f2-115">本节讨论这两种实例化委托的方法。</span><span class="sxs-lookup"><span data-stu-id="1b3f2-115">Both ways of instantiating delegates are discussed in this section.</span></span>
+<span data-ttu-id="1a531-112">必须使用具有兼容返回类型和输入参数的方法或 lambda 表达式实例化委托。</span><span class="sxs-lookup"><span data-stu-id="1a531-112">The delegate must be instantiated with a method or lambda expression that has a compatible return type and input parameters.</span></span> <span data-ttu-id="1a531-113">有关方法签名中允许的差异程度的详细信息，请参阅[委托中的变体](../../programming-guide/concepts/covariance-contravariance/using-variance-in-delegates.md)。</span><span class="sxs-lookup"><span data-stu-id="1a531-113">For more information on the degree of variance that is allowed in the method signature, see [Variance in Delegates](../../programming-guide/concepts/covariance-contravariance/using-variance-in-delegates.md).</span></span> <span data-ttu-id="1a531-114">为了与匿名方法一起使用，委托和与之关联的代码必须一起声明。</span><span class="sxs-lookup"><span data-stu-id="1a531-114">For use with anonymous methods, the delegate and the code to be associated with it are declared together.</span></span> <span data-ttu-id="1a531-115">本节讨论这两种实例化委托的方法。</span><span class="sxs-lookup"><span data-stu-id="1a531-115">Both ways of instantiating delegates are discussed in this section.</span></span>
 
-## <a name="example"></a><span data-ttu-id="1b3f2-116">示例</span><span class="sxs-lookup"><span data-stu-id="1b3f2-116">Example</span></span>
+## <a name="example"></a><span data-ttu-id="1a531-116">示例</span><span class="sxs-lookup"><span data-stu-id="1a531-116">Example</span></span>
 
 [!code-csharp[csrefKeywordsTypes#8](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsTypes/CS/keywordsTypes.cs#8)]
 
-## <a name="c-language-specification"></a><span data-ttu-id="1b3f2-117">C# 语言规范</span><span class="sxs-lookup"><span data-stu-id="1b3f2-117">C# language specification</span></span>
+## <a name="c-language-specification"></a><span data-ttu-id="1a531-117">C# 语言规范</span><span class="sxs-lookup"><span data-stu-id="1a531-117">C# language specification</span></span>
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
-## <a name="see-also"></a><span data-ttu-id="1b3f2-118">请参阅</span><span class="sxs-lookup"><span data-stu-id="1b3f2-118">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="1a531-118">请参阅</span><span class="sxs-lookup"><span data-stu-id="1a531-118">See also</span></span>
 
-[<span data-ttu-id="1b3f2-119">C# 参考</span><span class="sxs-lookup"><span data-stu-id="1b3f2-119">C# Reference</span></span>](../../../csharp/language-reference/index.md)  
-[<span data-ttu-id="1b3f2-120">C# 编程指南</span><span class="sxs-lookup"><span data-stu-id="1b3f2-120">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
-[<span data-ttu-id="1b3f2-121">C# 关键字</span><span class="sxs-lookup"><span data-stu-id="1b3f2-121">C# Keywords</span></span>](../../../csharp/language-reference/keywords/index.md)  
-[<span data-ttu-id="1b3f2-122">引用类型</span><span class="sxs-lookup"><span data-stu-id="1b3f2-122">Reference Types</span></span>](../../../csharp/language-reference/keywords/reference-types.md)  
-[<span data-ttu-id="1b3f2-123">委托</span><span class="sxs-lookup"><span data-stu-id="1b3f2-123">Delegates</span></span>](../../../csharp/programming-guide/delegates/index.md)  
-[<span data-ttu-id="1b3f2-124">事件</span><span class="sxs-lookup"><span data-stu-id="1b3f2-124">Events</span></span>](../../../csharp/programming-guide/events/index.md)  
-[<span data-ttu-id="1b3f2-125">带有命名方法的委托与带有匿名方法的委托</span><span class="sxs-lookup"><span data-stu-id="1b3f2-125">Delegates with Named vs. Anonymous Methods</span></span>](../../../csharp/programming-guide/delegates/delegates-with-named-vs-anonymous-methods.md)  
-[<span data-ttu-id="1b3f2-126">匿名方法</span><span class="sxs-lookup"><span data-stu-id="1b3f2-126">Anonymous Methods</span></span>](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md)
+- [<span data-ttu-id="1a531-119">C# 参考</span><span class="sxs-lookup"><span data-stu-id="1a531-119">C# Reference</span></span>](../../../csharp/language-reference/index.md)  
+- [<span data-ttu-id="1a531-120">C# 编程指南</span><span class="sxs-lookup"><span data-stu-id="1a531-120">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
+- [<span data-ttu-id="1a531-121">C# 关键字</span><span class="sxs-lookup"><span data-stu-id="1a531-121">C# Keywords</span></span>](../../../csharp/language-reference/keywords/index.md)  
+- [<span data-ttu-id="1a531-122">引用类型</span><span class="sxs-lookup"><span data-stu-id="1a531-122">Reference Types</span></span>](../../../csharp/language-reference/keywords/reference-types.md)  
+- [<span data-ttu-id="1a531-123">委托</span><span class="sxs-lookup"><span data-stu-id="1a531-123">Delegates</span></span>](../../../csharp/programming-guide/delegates/index.md)  
+- [<span data-ttu-id="1a531-124">事件</span><span class="sxs-lookup"><span data-stu-id="1a531-124">Events</span></span>](../../../csharp/programming-guide/events/index.md)  
+- [<span data-ttu-id="1a531-125">带有命名方法的委托与带有匿名方法的委托</span><span class="sxs-lookup"><span data-stu-id="1a531-125">Delegates with Named vs. Anonymous Methods</span></span>](../../../csharp/programming-guide/delegates/delegates-with-named-vs-anonymous-methods.md)  
+- [<span data-ttu-id="1a531-126">匿名方法</span><span class="sxs-lookup"><span data-stu-id="1a531-126">Anonymous Methods</span></span>](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md)

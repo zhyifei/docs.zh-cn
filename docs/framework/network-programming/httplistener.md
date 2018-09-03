@@ -7,25 +7,25 @@ ms.assetid: 5b89d3fb-3c9a-49e2-af1f-c34c020c68ac
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: db2c42dab15b4282c5474c50f970ffe47a101215
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 68c69de839ccbd51de9f0bfa74be018f877f7731
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33393447"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43416866"
 ---
-# <a name="httplistener"></a><span data-ttu-id="e30c7-102">HttpListener</span><span class="sxs-lookup"><span data-stu-id="e30c7-102">HttpListener</span></span>
-<span data-ttu-id="e30c7-103"><xref:System.Net.HttpListener> 类提供一个可通过编程方式控制的 HTTP 协议侦听器。</span><span class="sxs-lookup"><span data-stu-id="e30c7-103">The <xref:System.Net.HttpListener> class provides a programmatically controlled HTTP protocol listener.</span></span> <span data-ttu-id="e30c7-104">侦听器在 <xref:System.Net.HttpListener> 对象的生存期内处于活动状态，在你的应用程序中运行。</span><span class="sxs-lookup"><span data-stu-id="e30c7-104">The listener is active for the lifetime of the <xref:System.Net.HttpListener> object and runs within your application.</span></span>  
+# <a name="httplistener"></a><span data-ttu-id="c1129-102">HttpListener</span><span class="sxs-lookup"><span data-stu-id="c1129-102">HttpListener</span></span>
+<span data-ttu-id="c1129-103"><xref:System.Net.HttpListener> 类提供一个可通过编程方式控制的 HTTP 协议侦听器。</span><span class="sxs-lookup"><span data-stu-id="c1129-103">The <xref:System.Net.HttpListener> class provides a programmatically controlled HTTP protocol listener.</span></span> <span data-ttu-id="c1129-104">侦听器在 <xref:System.Net.HttpListener> 对象的生存期内处于活动状态，在你的应用程序中运行。</span><span class="sxs-lookup"><span data-stu-id="c1129-104">The listener is active for the lifetime of the <xref:System.Net.HttpListener> object and runs within your application.</span></span>  
   
-## <a name="httpsys"></a><span data-ttu-id="e30c7-105">HTTP.SYS</span><span class="sxs-lookup"><span data-stu-id="e30c7-105">HTTP.SYS</span></span>  
- <span data-ttu-id="e30c7-106"><xref:System.Net.HttpListener> 类在 HTTP.sys 的基础上构建，后者是为 Windows 处理所有 HTTP 流量的内核模式侦听器。</span><span class="sxs-lookup"><span data-stu-id="e30c7-106">The <xref:System.Net.HttpListener> class is built on top of HTTP.sys, which is the kernel mode listener that handles all HTTP traffic for Windows.</span></span> <span data-ttu-id="e30c7-107">HTTP.sys 提供连接管理、带宽限制以及 Web 服务器日志记录。</span><span class="sxs-lookup"><span data-stu-id="e30c7-107">HTTP.sys provides connection management, bandwidth throttling, and Web server logging.</span></span> <span data-ttu-id="e30c7-108">使用 `HttpCfg.exe` 工具可添加 SSL 证书。</span><span class="sxs-lookup"><span data-stu-id="e30c7-108">Use the `HttpCfg.exe` tool to add SSL certificates.</span></span> <span data-ttu-id="e30c7-109">有关详细信息，请参阅[服务器](http://go.microsoft.com/fwlink/?LinkID=178285)文档中的 [HttpCfg.exe](http://go.microsoft.com/fwlink/?LinkID=178284) 工具相关文档。</span><span class="sxs-lookup"><span data-stu-id="e30c7-109">For more information, see the documentation on the [HttpCfg.exe](http://go.microsoft.com/fwlink/?LinkID=178284) tool in the [Server](http://go.microsoft.com/fwlink/?LinkID=178285) documentation.</span></span>  
+## <a name="httpsys"></a><span data-ttu-id="c1129-105">HTTP.SYS</span><span class="sxs-lookup"><span data-stu-id="c1129-105">HTTP.SYS</span></span>  
+ <span data-ttu-id="c1129-106"><xref:System.Net.HttpListener> 类在 HTTP.sys 的基础上构建，后者是为 Windows 处理所有 HTTP 流量的内核模式侦听器。</span><span class="sxs-lookup"><span data-stu-id="c1129-106">The <xref:System.Net.HttpListener> class is built on top of HTTP.sys, which is the kernel mode listener that handles all HTTP traffic for Windows.</span></span> <span data-ttu-id="c1129-107">HTTP.sys 提供连接管理、带宽限制以及 Web 服务器日志记录。</span><span class="sxs-lookup"><span data-stu-id="c1129-107">HTTP.sys provides connection management, bandwidth throttling, and Web server logging.</span></span> <span data-ttu-id="c1129-108">使用 `HttpCfg.exe` 工具可添加 SSL 证书。</span><span class="sxs-lookup"><span data-stu-id="c1129-108">Use the `HttpCfg.exe` tool to add SSL certificates.</span></span> <span data-ttu-id="c1129-109">有关详细信息，请参阅[服务器](https://go.microsoft.com/fwlink/?LinkID=178285)文档中的 [HttpCfg.exe](https://go.microsoft.com/fwlink/?LinkID=178284) 工具相关文档。</span><span class="sxs-lookup"><span data-stu-id="c1129-109">For more information, see the documentation on the [HttpCfg.exe](https://go.microsoft.com/fwlink/?LinkID=178284) tool in the [Server](https://go.microsoft.com/fwlink/?LinkID=178285) documentation.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="e30c7-110">请参阅</span><span class="sxs-lookup"><span data-stu-id="e30c7-110">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="c1129-110">请参阅</span><span class="sxs-lookup"><span data-stu-id="c1129-110">See Also</span></span>  
  <xref:System.Net.HttpListener>  
  <xref:System.Net.HttpWebRequest>  
  <xref:System.Net.HttpWebResponse>  
- [<span data-ttu-id="e30c7-111">HTTP 服务器</span><span class="sxs-lookup"><span data-stu-id="e30c7-111">HTTP Server</span></span>](http://go.microsoft.com/fwlink/?LinkID=178285)  
- [<span data-ttu-id="e30c7-112">Internet 信息中的安全性增强功能</span><span class="sxs-lookup"><span data-stu-id="e30c7-112">Security Enhancements in Internet Information</span></span>](http://go.microsoft.com/fwlink/?LinkID=178286)  
- [<span data-ttu-id="e30c7-113">HttpListener ASPX 主机应用程序示例</span><span class="sxs-lookup"><span data-stu-id="e30c7-113">HttpListener ASPX Host Application Sample</span></span>](http://go.microsoft.com/fwlink/?LinkID=179560)  
- [<span data-ttu-id="e30c7-114">HttpListener 技术示例</span><span class="sxs-lookup"><span data-stu-id="e30c7-114">HttpListener Technology Sample</span></span>](http://go.microsoft.com/fwlink/?LinkID=179558)  
- [<span data-ttu-id="e30c7-115">网络编程示例</span><span class="sxs-lookup"><span data-stu-id="e30c7-115">Network Programming Samples</span></span>](../../../docs/framework/network-programming/network-programming-samples.md)
+ [<span data-ttu-id="c1129-111">HTTP 服务器</span><span class="sxs-lookup"><span data-stu-id="c1129-111">HTTP Server</span></span>](https://go.microsoft.com/fwlink/?LinkID=178285)  
+ [<span data-ttu-id="c1129-112">Internet 信息中的安全性增强功能</span><span class="sxs-lookup"><span data-stu-id="c1129-112">Security Enhancements in Internet Information</span></span>](https://go.microsoft.com/fwlink/?LinkID=178286)  
+ [<span data-ttu-id="c1129-113">HttpListener ASPX 主机应用程序示例</span><span class="sxs-lookup"><span data-stu-id="c1129-113">HttpListener ASPX Host Application Sample</span></span>](https://go.microsoft.com/fwlink/?LinkID=179560)  
+ [<span data-ttu-id="c1129-114">HttpListener 技术示例</span><span class="sxs-lookup"><span data-stu-id="c1129-114">HttpListener Technology Sample</span></span>](https://go.microsoft.com/fwlink/?LinkID=179558)  
+ [<span data-ttu-id="c1129-115">网络编程示例</span><span class="sxs-lookup"><span data-stu-id="c1129-115">Network Programming Samples</span></span>](../../../docs/framework/network-programming/network-programming-samples.md)

@@ -6,29 +6,29 @@ helpviewer_keywords:
 - loop structures [C#]
 ms.assetid: 7d494566-bf75-4ee8-979f-0f964209437e
 ms.openlocfilehash: c5b061b41591ecca0364c2ec940fbf09e223f5cb
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42935993"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43400017"
 ---
-# <a name="iteration-statements-c-reference"></a><span data-ttu-id="96999-102">迭代语句（C# 参考）</span><span class="sxs-lookup"><span data-stu-id="96999-102">Iteration Statements (C# Reference)</span></span>
+# <a name="iteration-statements-c-reference"></a><span data-ttu-id="c7357-102">迭代语句（C# 参考）</span><span class="sxs-lookup"><span data-stu-id="c7357-102">Iteration Statements (C# Reference)</span></span>
 
-<span data-ttu-id="96999-103">可使用迭代语句创建循环。</span><span class="sxs-lookup"><span data-stu-id="96999-103">You can create loops by using the iteration statements.</span></span> <span data-ttu-id="96999-104">根据循环终止条件，迭代语句可导致多次执行嵌入式语句。</span><span class="sxs-lookup"><span data-stu-id="96999-104">Iteration statements cause embedded statements to be executed a number of times, subject to the loop-termination criteria.</span></span> <span data-ttu-id="96999-105">除非遇到[跳转语句](jump-statements.md)，否则这些语句按顺序执行。</span><span class="sxs-lookup"><span data-stu-id="96999-105">These statements are executed in order, except when a [jump statement](jump-statements.md) is encountered.</span></span>
+<span data-ttu-id="c7357-103">可使用迭代语句创建循环。</span><span class="sxs-lookup"><span data-stu-id="c7357-103">You can create loops by using the iteration statements.</span></span> <span data-ttu-id="c7357-104">根据循环终止条件，迭代语句可导致多次执行嵌入式语句。</span><span class="sxs-lookup"><span data-stu-id="c7357-104">Iteration statements cause embedded statements to be executed a number of times, subject to the loop-termination criteria.</span></span> <span data-ttu-id="c7357-105">除非遇到[跳转语句](jump-statements.md)，否则这些语句按顺序执行。</span><span class="sxs-lookup"><span data-stu-id="c7357-105">These statements are executed in order, except when a [jump statement](jump-statements.md) is encountered.</span></span>
 
-<span data-ttu-id="96999-106">迭代语句中使用下列关键字：</span><span class="sxs-lookup"><span data-stu-id="96999-106">The following keywords are used in iteration statements:</span></span>
+<span data-ttu-id="c7357-106">迭代语句中使用下列关键字：</span><span class="sxs-lookup"><span data-stu-id="c7357-106">The following keywords are used in iteration statements:</span></span>
 
-- [<span data-ttu-id="96999-107">do</span><span class="sxs-lookup"><span data-stu-id="96999-107">do</span></span>](do.md)
+- [<span data-ttu-id="c7357-107">do</span><span class="sxs-lookup"><span data-stu-id="c7357-107">do</span></span>](do.md)
 
-- [<span data-ttu-id="96999-108">for</span><span class="sxs-lookup"><span data-stu-id="96999-108">for</span></span>](for.md)
+- [<span data-ttu-id="c7357-108">for</span><span class="sxs-lookup"><span data-stu-id="c7357-108">for</span></span>](for.md)
 
-- [<span data-ttu-id="96999-109">foreach, in</span><span class="sxs-lookup"><span data-stu-id="96999-109">foreach, in</span></span>](foreach-in.md)
+- [<span data-ttu-id="c7357-109">foreach, in</span><span class="sxs-lookup"><span data-stu-id="c7357-109">foreach, in</span></span>](foreach-in.md)
 
-- [<span data-ttu-id="96999-110">while</span><span class="sxs-lookup"><span data-stu-id="96999-110">while</span></span>](while.md)
+- [<span data-ttu-id="c7357-110">while</span><span class="sxs-lookup"><span data-stu-id="c7357-110">while</span></span>](while.md)
 
-## <a name="see-also"></a><span data-ttu-id="96999-111">请参阅</span><span class="sxs-lookup"><span data-stu-id="96999-111">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="c7357-111">请参阅</span><span class="sxs-lookup"><span data-stu-id="c7357-111">See also</span></span>
 
-- [<span data-ttu-id="96999-112">C# 参考</span><span class="sxs-lookup"><span data-stu-id="96999-112">C# Reference</span></span>](../index.md)  
-- [<span data-ttu-id="96999-113">C# 编程指南</span><span class="sxs-lookup"><span data-stu-id="96999-113">C# Programming Guide</span></span>](../../programming-guide/index.md)  
-- [<span data-ttu-id="96999-114">C# 关键字</span><span class="sxs-lookup"><span data-stu-id="96999-114">C# Keywords</span></span>](index.md)  
-- [<span data-ttu-id="96999-115">语句关键字</span><span class="sxs-lookup"><span data-stu-id="96999-115">Statement Keywords</span></span>](statement-keywords.md)
+- [<span data-ttu-id="c7357-112">C# 参考</span><span class="sxs-lookup"><span data-stu-id="c7357-112">C# Reference</span></span>](../index.md)  
+- [<span data-ttu-id="c7357-113">C# 编程指南</span><span class="sxs-lookup"><span data-stu-id="c7357-113">C# Programming Guide</span></span>](../../programming-guide/index.md)  
+- [<span data-ttu-id="c7357-114">C# 关键字</span><span class="sxs-lookup"><span data-stu-id="c7357-114">C# Keywords</span></span>](index.md)  
+- [<span data-ttu-id="c7357-115">语句关键字</span><span class="sxs-lookup"><span data-stu-id="c7357-115">Statement Keywords</span></span>](statement-keywords.md)

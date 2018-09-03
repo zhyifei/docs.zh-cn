@@ -2,50 +2,51 @@
 title: -target:winmdobj（C# 编译器选项）
 ms.date: 07/20/2015
 ms.assetid: 1819a045-659d-498a-9457-c466e902986f
-ms.openlocfilehash: b0b1ec0bed174484e9ed7b9ecddbe82b0c705325
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 38d0dedbca56475d4f2561c99e8b29e01e9d7a90
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33218653"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43473926"
 ---
-# <a name="-targetwinmdobj-c-compiler-options"></a><span data-ttu-id="1d1bb-102">-target:winmdobj（C# 编译器选项）</span><span class="sxs-lookup"><span data-stu-id="1d1bb-102">-target:winmdobj (C# Compiler Options)</span></span>
-<span data-ttu-id="1d1bb-103">如果使用 -target:winmdobj 编译器选项，则编译器会创建一个中间 .winmdobj 文件，你可以将这个文件转换为 Windows 运行时二进制 (.winmd) 文件。</span><span class="sxs-lookup"><span data-stu-id="1d1bb-103">If you use the **-target:winmdobj** compiler option, the compiler creates an intermediate .winmdobj file that you can convert to a Windows Runtime binary (.winmd) file.</span></span> <span data-ttu-id="1d1bb-104">之后，除了托管语言程序外，JavaScript 和 C++ 程序也可以使用该 .winmd 文件。</span><span class="sxs-lookup"><span data-stu-id="1d1bb-104">The .winmd file can then be consumed by JavaScript and C++ programs, in addition to managed language programs.</span></span>  
+# <a name="-targetwinmdobj-c-compiler-options"></a><span data-ttu-id="1737a-102">-target:winmdobj（C# 编译器选项）</span><span class="sxs-lookup"><span data-stu-id="1737a-102">-target:winmdobj (C# Compiler Options)</span></span>
+<span data-ttu-id="1737a-103">如果使用 -target:winmdobj 编译器选项，则编译器会创建一个中间 .winmdobj 文件，你可以将这个文件转换为 Windows 运行时二进制 (.winmd) 文件。</span><span class="sxs-lookup"><span data-stu-id="1737a-103">If you use the **-target:winmdobj** compiler option, the compiler creates an intermediate .winmdobj file that you can convert to a Windows Runtime binary (.winmd) file.</span></span> <span data-ttu-id="1737a-104">之后，除了托管语言程序外，JavaScript 和 C++ 程序也可以使用该 .winmd 文件。</span><span class="sxs-lookup"><span data-stu-id="1737a-104">The .winmd file can then be consumed by JavaScript and C++ programs, in addition to managed language programs.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="1d1bb-105">语法</span><span class="sxs-lookup"><span data-stu-id="1d1bb-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="1737a-105">语法</span><span class="sxs-lookup"><span data-stu-id="1737a-105">Syntax</span></span>  
   
 ```console  
 -target:winmdobj  
 ```  
   
-## <a name="remarks"></a><span data-ttu-id="1d1bb-106">备注</span><span class="sxs-lookup"><span data-stu-id="1d1bb-106">Remarks</span></span>  
- <span data-ttu-id="1d1bb-107">**winmdobj** 设置会向编译器发出信号，表示需要中间模块。</span><span class="sxs-lookup"><span data-stu-id="1d1bb-107">The **winmdobj** setting signals to the compiler that an intermediate module is required.</span></span> <span data-ttu-id="1d1bb-108">作为响应，Visual Studio 会将 C# 类库编译为 .winmdobj 文件。</span><span class="sxs-lookup"><span data-stu-id="1d1bb-108">In response, Visual Studio compiles the C# class library as a .winmdobj file.</span></span> <span data-ttu-id="1d1bb-109">随后，.winmdobj 文件可作为可作为 <xref:Microsoft.Build.Tasks.WinMDExp> 导出工具的输入，生成 Windows 元数据 (.winmd) 文件。</span><span class="sxs-lookup"><span data-stu-id="1d1bb-109">The .winmdobj file can then be fed through the <xref:Microsoft.Build.Tasks.WinMDExp> export tool to produce a Windows metadata (.winmd) file.</span></span> <span data-ttu-id="1d1bb-110">.winmd 文件既包含原始库的代码，也包括 JavaScript（或 C++）以及 Windows 运行时使用的 WinMD 元数据的代码。</span><span class="sxs-lookup"><span data-stu-id="1d1bb-110">The .winmd file contains both the code from the original library and the WinMD metadata that is used by JavaScript or C++ and by the Windows Runtime.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="1737a-106">备注</span><span class="sxs-lookup"><span data-stu-id="1737a-106">Remarks</span></span>  
+ <span data-ttu-id="1737a-107">**winmdobj** 设置会向编译器发出信号，表示需要中间模块。</span><span class="sxs-lookup"><span data-stu-id="1737a-107">The **winmdobj** setting signals to the compiler that an intermediate module is required.</span></span> <span data-ttu-id="1737a-108">作为响应，Visual Studio 会将 C# 类库编译为 .winmdobj 文件。</span><span class="sxs-lookup"><span data-stu-id="1737a-108">In response, Visual Studio compiles the C# class library as a .winmdobj file.</span></span> <span data-ttu-id="1737a-109">随后，.winmdobj 文件可作为可作为 <xref:Microsoft.Build.Tasks.WinMDExp> 导出工具的输入，生成 Windows 元数据 (.winmd) 文件。</span><span class="sxs-lookup"><span data-stu-id="1737a-109">The .winmdobj file can then be fed through the <xref:Microsoft.Build.Tasks.WinMDExp> export tool to produce a Windows metadata (.winmd) file.</span></span> <span data-ttu-id="1737a-110">.winmd 文件既包含原始库的代码，也包括 JavaScript（或 C++）以及 Windows 运行时使用的 WinMD 元数据的代码。</span><span class="sxs-lookup"><span data-stu-id="1737a-110">The .winmd file contains both the code from the original library and the WinMD metadata that is used by JavaScript or C++ and by the Windows Runtime.</span></span>  
   
- <span data-ttu-id="1d1bb-111">使用 -target:winmdobj 编译器选项所编译的文件，只能用作 WimMDExp 导出工具的输入；不能直接引用 .winmdobj 文件自身。</span><span class="sxs-lookup"><span data-stu-id="1d1bb-111">The output of a file that’s compiled by using the **-target:winmdobj** compiler option is designed to be used only as input for the WimMDExp export tool; the .winmdobj file itself isn’t referenced directly.</span></span>  
+ <span data-ttu-id="1737a-111">使用 -target:winmdobj 编译器选项所编译的文件，只能用作 WimMDExp 导出工具的输入；不能直接引用 .winmdobj 文件自身。</span><span class="sxs-lookup"><span data-stu-id="1737a-111">The output of a file that’s compiled by using the **-target:winmdobj** compiler option is designed to be used only as input for the WimMDExp export tool; the .winmdobj file itself isn’t referenced directly.</span></span>  
   
- <span data-ttu-id="1d1bb-112">除非使用 [-out](../../../csharp/language-reference/compiler-options/out-compiler-option.md) 选项，否则输出文件的名称采用第一个输入文件的名称。</span><span class="sxs-lookup"><span data-stu-id="1d1bb-112">Unless you use the [-out](../../../csharp/language-reference/compiler-options/out-compiler-option.md) option, the output file name takes the name of the first input file.</span></span> <span data-ttu-id="1d1bb-113">不需要使用 [Main](../../../csharp/programming-guide/main-and-command-args/index.md) 方法。</span><span class="sxs-lookup"><span data-stu-id="1d1bb-113">A [Main](../../../csharp/programming-guide/main-and-command-args/index.md) method isn’t required.</span></span>  
+ <span data-ttu-id="1737a-112">除非使用 [-out](../../../csharp/language-reference/compiler-options/out-compiler-option.md) 选项，否则输出文件的名称采用第一个输入文件的名称。</span><span class="sxs-lookup"><span data-stu-id="1737a-112">Unless you use the [-out](../../../csharp/language-reference/compiler-options/out-compiler-option.md) option, the output file name takes the name of the first input file.</span></span> <span data-ttu-id="1737a-113">不需要使用 [Main](../../../csharp/programming-guide/main-and-command-args/index.md) 方法。</span><span class="sxs-lookup"><span data-stu-id="1737a-113">A [Main](../../../csharp/programming-guide/main-and-command-args/index.md) method isn’t required.</span></span>  
   
- <span data-ttu-id="1d1bb-114">如果在命令提示符处指定 -target:winmdobj 选项，则在指定下一个 -out 或 [-target:module](../../../csharp/language-reference/compiler-options/target-module-compiler-option.md) 选项之前，会使用所有文件来创建 Windows 程序。</span><span class="sxs-lookup"><span data-stu-id="1d1bb-114">If you specify the -target:winmdobj option at a command prompt, all files until the next **-out** or [-target:module](../../../csharp/language-reference/compiler-options/target-module-compiler-option.md) option are used to create the Windows program.</span></span>  
+ <span data-ttu-id="1737a-114">如果在命令提示符处指定 -target:winmdobj 选项，则在指定下一个 -out 或 [-target:module](../../../csharp/language-reference/compiler-options/target-module-compiler-option.md) 选项之前，会使用所有文件来创建 Windows 程序。</span><span class="sxs-lookup"><span data-stu-id="1737a-114">If you specify the -target:winmdobj option at a command prompt, all files until the next **-out** or [-target:module](../../../csharp/language-reference/compiler-options/target-module-compiler-option.md) option are used to create the Windows program.</span></span>  
   
-### <a name="to-set-this-compiler-option-in-the-visual-studio-ide-for-a-windows-store-app"></a><span data-ttu-id="1d1bb-115">在 Visual Studio IDE 中为 Windows 应用商店应用程序设置此编译器选项</span><span class="sxs-lookup"><span data-stu-id="1d1bb-115">To set this compiler option in the Visual Studio IDE for a Windows Store app</span></span>  
+### <a name="to-set-this-compiler-option-in-the-visual-studio-ide-for-a-windows-store-app"></a><span data-ttu-id="1737a-115">在 Visual Studio IDE 中为 Windows 应用商店应用程序设置此编译器选项</span><span class="sxs-lookup"><span data-stu-id="1737a-115">To set this compiler option in the Visual Studio IDE for a Windows Store app</span></span>  
   
-1.  <span data-ttu-id="1d1bb-116">在“解决方案资源管理器”中，打开项目的快捷菜单，然后选择“属性”。</span><span class="sxs-lookup"><span data-stu-id="1d1bb-116">In **Solution Explorer**, open the shortcut menu for your project, and then choose **Properties**.</span></span>  
+1.  <span data-ttu-id="1737a-116">在“解决方案资源管理器”中，打开项目的快捷菜单，然后选择“属性”。</span><span class="sxs-lookup"><span data-stu-id="1737a-116">In **Solution Explorer**, open the shortcut menu for your project, and then choose **Properties**.</span></span>  
   
-2.  <span data-ttu-id="1d1bb-117">选择“应用程序”选项卡。</span><span class="sxs-lookup"><span data-stu-id="1d1bb-117">Choose the **Application** tab.</span></span>  
+2.  <span data-ttu-id="1737a-117">选择“应用程序”选项卡。</span><span class="sxs-lookup"><span data-stu-id="1737a-117">Choose the **Application** tab.</span></span>  
   
-3.  <span data-ttu-id="1d1bb-118">在“输出类型”列表中，选择“WinMD 文件”。</span><span class="sxs-lookup"><span data-stu-id="1d1bb-118">In the **Output type** list, choose **WinMD File**.</span></span>  
+3.  <span data-ttu-id="1737a-118">在“输出类型”列表中，选择“WinMD 文件”。</span><span class="sxs-lookup"><span data-stu-id="1737a-118">In the **Output type** list, choose **WinMD File**.</span></span>  
   
-     <span data-ttu-id="1d1bb-119">“WinMD 文件”选项只能用于 [!INCLUDE[win8_appname_long](~/includes/win8-appname-long-md.md)] 应用模板。</span><span class="sxs-lookup"><span data-stu-id="1d1bb-119">The **WinMD File** option is available only for [!INCLUDE[win8_appname_long](~/includes/win8-appname-long-md.md)] app templates.</span></span>  
+     <span data-ttu-id="1737a-119">“WinMD 文件”选项只能用于 [!INCLUDE[win8_appname_long](~/includes/win8-appname-long-md.md)] 应用模板。</span><span class="sxs-lookup"><span data-stu-id="1737a-119">The **WinMD File** option is available only for [!INCLUDE[win8_appname_long](~/includes/win8-appname-long-md.md)] app templates.</span></span>  
   
- <span data-ttu-id="1d1bb-120">有关如何以编程方式设置此编译器选项的信息，请参阅 <xref:VSLangProj80.ProjectProperties3.OutputType%2A>。</span><span class="sxs-lookup"><span data-stu-id="1d1bb-120">For information about how to set this compiler option programmatically, see <xref:VSLangProj80.ProjectProperties3.OutputType%2A>.</span></span>  
+ <span data-ttu-id="1737a-120">有关如何以编程方式设置此编译器选项的信息，请参阅 <xref:VSLangProj80.ProjectProperties3.OutputType%2A>。</span><span class="sxs-lookup"><span data-stu-id="1737a-120">For information about how to set this compiler option programmatically, see <xref:VSLangProj80.ProjectProperties3.OutputType%2A>.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="1d1bb-121">示例</span><span class="sxs-lookup"><span data-stu-id="1d1bb-121">Example</span></span>  
- <span data-ttu-id="1d1bb-122">以下命令将 `filename.cs` 编译为一个中间 .winmdobj 文件。</span><span class="sxs-lookup"><span data-stu-id="1d1bb-122">The following command compiles `filename.cs` into an intermediate .winmdobj file.</span></span>  
+## <a name="example"></a><span data-ttu-id="1737a-121">示例</span><span class="sxs-lookup"><span data-stu-id="1737a-121">Example</span></span>  
+ <span data-ttu-id="1737a-122">以下命令将 `filename.cs` 编译为一个中间 .winmdobj 文件。</span><span class="sxs-lookup"><span data-stu-id="1737a-122">The following command compiles `filename.cs` into an intermediate .winmdobj file.</span></span>  
   
 ```console  
 csc -target:winmdobj filename.cs  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="1d1bb-123">请参阅</span><span class="sxs-lookup"><span data-stu-id="1d1bb-123">See Also</span></span>  
- [<span data-ttu-id="1d1bb-124">-target（C# 编译器选项）</span><span class="sxs-lookup"><span data-stu-id="1d1bb-124">-target (C# Compiler Options)</span></span>](../../../csharp/language-reference/compiler-options/target-compiler-option.md)  
- [<span data-ttu-id="1d1bb-125">C# 编译器选项</span><span class="sxs-lookup"><span data-stu-id="1d1bb-125">C# Compiler Options</span></span>](../../../csharp/language-reference/compiler-options/index.md)
+## <a name="see-also"></a><span data-ttu-id="1737a-123">请参阅</span><span class="sxs-lookup"><span data-stu-id="1737a-123">See Also</span></span>  
+
+- [<span data-ttu-id="1737a-124">-target（C# 编译器选项）</span><span class="sxs-lookup"><span data-stu-id="1737a-124">-target (C# Compiler Options)</span></span>](../../../csharp/language-reference/compiler-options/target-compiler-option.md)  
+- [<span data-ttu-id="1737a-125">C# 编译器选项</span><span class="sxs-lookup"><span data-stu-id="1737a-125">C# Compiler Options</span></span>](../../../csharp/language-reference/compiler-options/index.md)

@@ -7,38 +7,38 @@ f1_keywords:
 helpviewer_keywords:
 - while keyword [C#]
 ms.assetid: 72a0765c-6852-4aca-b327-4a11cb7f5c59
-ms.openlocfilehash: c082107472ac53d05b3b43dd4d9d8afc508a16cb
-ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
+ms.openlocfilehash: e3e9493b5371fbd6f53a779ba73743efc6d6e05b
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34565860"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43390019"
 ---
-# <a name="while-c-reference"></a><span data-ttu-id="5ac2a-102">while（C# 参考）</span><span class="sxs-lookup"><span data-stu-id="5ac2a-102">while (C# Reference)</span></span>
+# <a name="while-c-reference"></a><span data-ttu-id="af99a-102">while（C# 参考）</span><span class="sxs-lookup"><span data-stu-id="af99a-102">while (C# Reference)</span></span>
 
-<span data-ttu-id="5ac2a-103">在指定的布尔表达式的计算结果为 `true` 时，`while` 语句会执行一条语句或一个语句块。</span><span class="sxs-lookup"><span data-stu-id="5ac2a-103">The `while` statement executes a statement or a block of statements while a specified boolean expression evaluates to `true`.</span></span> <span data-ttu-id="5ac2a-104">由于在每次执行循环之前都会计算此表达式，所以 `while` 循环会执行零次或多次。</span><span class="sxs-lookup"><span data-stu-id="5ac2a-104">Because that expression is evaluated before each execution of the loop, a `while` loop executes zero or more times.</span></span> <span data-ttu-id="5ac2a-105">这不同于 [do](do.md) 循环，该循环执行一次或多次。</span><span class="sxs-lookup"><span data-stu-id="5ac2a-105">This differs from the [do](do.md) loop, which executes one or more times.</span></span>
+<span data-ttu-id="af99a-103">在指定的布尔表达式的计算结果为 `true` 时，`while` 语句会执行一条语句或一个语句块。</span><span class="sxs-lookup"><span data-stu-id="af99a-103">The `while` statement executes a statement or a block of statements while a specified boolean expression evaluates to `true`.</span></span> <span data-ttu-id="af99a-104">由于在每次执行循环之前都会计算此表达式，所以 `while` 循环会执行零次或多次。</span><span class="sxs-lookup"><span data-stu-id="af99a-104">Because that expression is evaluated before each execution of the loop, a `while` loop executes zero or more times.</span></span> <span data-ttu-id="af99a-105">这不同于 [do](do.md) 循环，该循环执行一次或多次。</span><span class="sxs-lookup"><span data-stu-id="af99a-105">This differs from the [do](do.md) loop, which executes one or more times.</span></span>
 
-<span data-ttu-id="5ac2a-106">在 `while` 语句块中的任何点，都可使用 [break](break.md) 语句中断循环。</span><span class="sxs-lookup"><span data-stu-id="5ac2a-106">At any point within the `while` statement block, you can break out of the loop by using the [break](break.md) statement.</span></span>
+<span data-ttu-id="af99a-106">在 `while` 语句块中的任何点，都可使用 [break](break.md) 语句中断循环。</span><span class="sxs-lookup"><span data-stu-id="af99a-106">At any point within the `while` statement block, you can break out of the loop by using the [break](break.md) statement.</span></span>
 
-<span data-ttu-id="5ac2a-107">可通过使用 [continue](continue.md) 语句直接步入 `while` 表达式的计算部分。</span><span class="sxs-lookup"><span data-stu-id="5ac2a-107">You can step directly to the evaluation of the `while` expression by using the [continue](continue.md) statement.</span></span> <span data-ttu-id="5ac2a-108">如果表达式计算结果为 `true`，则继续执行循环中的第一个语句。</span><span class="sxs-lookup"><span data-stu-id="5ac2a-108">If the expression evaluates to `true`, execution continues at the first statement in the loop.</span></span> <span data-ttu-id="5ac2a-109">否则，将在循环后的第一个语句处继续执行。</span><span class="sxs-lookup"><span data-stu-id="5ac2a-109">Otherwise, execution continues at the first statement after the loop.</span></span>
+<span data-ttu-id="af99a-107">可通过使用 [continue](continue.md) 语句直接步入 `while` 表达式的计算部分。</span><span class="sxs-lookup"><span data-stu-id="af99a-107">You can step directly to the evaluation of the `while` expression by using the [continue](continue.md) statement.</span></span> <span data-ttu-id="af99a-108">如果表达式计算结果为 `true`，则继续执行循环中的第一个语句。</span><span class="sxs-lookup"><span data-stu-id="af99a-108">If the expression evaluates to `true`, execution continues at the first statement in the loop.</span></span> <span data-ttu-id="af99a-109">否则，将在循环后的第一个语句处继续执行。</span><span class="sxs-lookup"><span data-stu-id="af99a-109">Otherwise, execution continues at the first statement after the loop.</span></span>
 
-<span data-ttu-id="5ac2a-110">还可以使用 [goto](goto.md)、[return](return.md) 或 [throw](throw.md) 语句退出 `while` 循环。</span><span class="sxs-lookup"><span data-stu-id="5ac2a-110">You also can exit a `while` loop by the [goto](goto.md), [return](return.md), or [throw](throw.md) statements.</span></span>
+<span data-ttu-id="af99a-110">还可以使用 [goto](goto.md)、[return](return.md) 或 [throw](throw.md) 语句退出 `while` 循环。</span><span class="sxs-lookup"><span data-stu-id="af99a-110">You also can exit a `while` loop by the [goto](goto.md), [return](return.md), or [throw](throw.md) statements.</span></span>
 
-## <a name="example"></a><span data-ttu-id="5ac2a-111">示例</span><span class="sxs-lookup"><span data-stu-id="5ac2a-111">Example</span></span>
+## <a name="example"></a><span data-ttu-id="af99a-111">示例</span><span class="sxs-lookup"><span data-stu-id="af99a-111">Example</span></span>
 
-<span data-ttu-id="5ac2a-112">下面的示例演示 `while` 语句的用法。</span><span class="sxs-lookup"><span data-stu-id="5ac2a-112">The following example shows the usage of the `while` statement.</span></span> <span data-ttu-id="5ac2a-113">选择“运行”以运行示例代码。</span><span class="sxs-lookup"><span data-stu-id="5ac2a-113">Select **Run** to run the example code.</span></span> <span data-ttu-id="5ac2a-114">然后可以修改代码并再次运行它。</span><span class="sxs-lookup"><span data-stu-id="5ac2a-114">After that you can modify the code and run it again.</span></span>
+<span data-ttu-id="af99a-112">下面的示例演示 `while` 语句的用法。</span><span class="sxs-lookup"><span data-stu-id="af99a-112">The following example shows the usage of the `while` statement.</span></span> <span data-ttu-id="af99a-113">选择“运行”以运行示例代码。</span><span class="sxs-lookup"><span data-stu-id="af99a-113">Select **Run** to run the example code.</span></span> <span data-ttu-id="af99a-114">然后可以修改代码并再次运行它。</span><span class="sxs-lookup"><span data-stu-id="af99a-114">After that you can modify the code and run it again.</span></span>
 
 [!code-csharp-interactive[while loop example](~/samples/snippets/csharp/keywords/IterationKeywordsExamples.cs#3)]
 
-## <a name="c-language-specification"></a><span data-ttu-id="5ac2a-115">C# 语言规范</span><span class="sxs-lookup"><span data-stu-id="5ac2a-115">C# language specification</span></span>
+## <a name="c-language-specification"></a><span data-ttu-id="af99a-115">C# 语言规范</span><span class="sxs-lookup"><span data-stu-id="af99a-115">C# language specification</span></span>
 
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
-## <a name="see-also"></a><span data-ttu-id="5ac2a-116">请参阅</span><span class="sxs-lookup"><span data-stu-id="5ac2a-116">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="af99a-116">请参阅</span><span class="sxs-lookup"><span data-stu-id="af99a-116">See also</span></span>
 
- [<span data-ttu-id="5ac2a-117">C# 参考</span><span class="sxs-lookup"><span data-stu-id="5ac2a-117">C# Reference</span></span>](../index.md)  
- [<span data-ttu-id="5ac2a-118">C# 编程指南</span><span class="sxs-lookup"><span data-stu-id="5ac2a-118">C# Programming Guide</span></span>](../../programming-guide/index.md)  
- [<span data-ttu-id="5ac2a-119">C# 关键字</span><span class="sxs-lookup"><span data-stu-id="5ac2a-119">C# Keywords</span></span>](index.md)  
- [<span data-ttu-id="5ac2a-120">While 语句 (C++)</span><span class="sxs-lookup"><span data-stu-id="5ac2a-120">while Statement (C++)</span></span>](/cpp/cpp/while-statement-cpp)  
- [<span data-ttu-id="5ac2a-121">迭代语句</span><span class="sxs-lookup"><span data-stu-id="5ac2a-121">Iteration Statements</span></span>](iteration-statements.md)  
- [<span data-ttu-id="5ac2a-122">do 语句</span><span class="sxs-lookup"><span data-stu-id="5ac2a-122">do statement</span></span>](do.md)  
+- [<span data-ttu-id="af99a-117">C# 参考</span><span class="sxs-lookup"><span data-stu-id="af99a-117">C# Reference</span></span>](../index.md)  
+- [<span data-ttu-id="af99a-118">C# 编程指南</span><span class="sxs-lookup"><span data-stu-id="af99a-118">C# Programming Guide</span></span>](../../programming-guide/index.md)  
+- [<span data-ttu-id="af99a-119">C# 关键字</span><span class="sxs-lookup"><span data-stu-id="af99a-119">C# Keywords</span></span>](index.md)  
+- [<span data-ttu-id="af99a-120">While 语句 (C++)</span><span class="sxs-lookup"><span data-stu-id="af99a-120">while Statement (C++)</span></span>](/cpp/cpp/while-statement-cpp)  
+- [<span data-ttu-id="af99a-121">迭代语句</span><span class="sxs-lookup"><span data-stu-id="af99a-121">Iteration Statements</span></span>](iteration-statements.md)  
+- [<span data-ttu-id="af99a-122">do 语句</span><span class="sxs-lookup"><span data-stu-id="af99a-122">do statement</span></span>](do.md)  

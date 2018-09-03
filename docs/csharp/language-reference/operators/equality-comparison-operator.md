@@ -7,23 +7,24 @@ helpviewer_keywords:
 - == operator [C#]
 - equality operator [C#]
 ms.assetid: 34c6b597-caa2-4855-a7cd-38ecdd11bd07
-ms.openlocfilehash: f8356320817771cb559192c1ce720a80bf33bbf9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d9d7dcf3b38939e681fb51d6c674151cee78b3d0
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33273382"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43421107"
 ---
-# <a name="-operator-c-reference"></a><span data-ttu-id="afb4d-102">== 运算符（C# 参考）</span><span class="sxs-lookup"><span data-stu-id="afb4d-102">== Operator (C# Reference)</span></span>
-<span data-ttu-id="afb4d-103">对于预定义的值类型，如果其操作数的值相等，则相等运算符 (`==`) 返回 true，否则返回 `false`。</span><span class="sxs-lookup"><span data-stu-id="afb4d-103">For predefined value types, the equality operator (`==`) returns true if the values of its operands are equal, `false` otherwise.</span></span> <span data-ttu-id="afb4d-104">对于 [string](../../../csharp/language-reference/keywords/string.md) 外的引用类型，如果两个操作数引用同一对象，则 `==` 会返回 `true`。</span><span class="sxs-lookup"><span data-stu-id="afb4d-104">For reference types other than [string](../../../csharp/language-reference/keywords/string.md), `==` returns `true` if its two operands refer to the same object.</span></span> <span data-ttu-id="afb4d-105">对于 `string` 类型，`==` 会比较字符串的值。</span><span class="sxs-lookup"><span data-stu-id="afb4d-105">For the `string` type, `==` compares the values of the strings.</span></span>  
+# <a name="-operator-c-reference"></a><span data-ttu-id="5fe37-102">== 运算符（C# 参考）</span><span class="sxs-lookup"><span data-stu-id="5fe37-102">== Operator (C# Reference)</span></span>
+<span data-ttu-id="5fe37-103">对于预定义的值类型，如果其操作数的值相等，则相等运算符 (`==`) 返回 true，否则返回 `false`。</span><span class="sxs-lookup"><span data-stu-id="5fe37-103">For predefined value types, the equality operator (`==`) returns true if the values of its operands are equal, `false` otherwise.</span></span> <span data-ttu-id="5fe37-104">对于 [string](../../../csharp/language-reference/keywords/string.md) 外的引用类型，如果两个操作数引用同一对象，则 `==` 会返回 `true`。</span><span class="sxs-lookup"><span data-stu-id="5fe37-104">For reference types other than [string](../../../csharp/language-reference/keywords/string.md), `==` returns `true` if its two operands refer to the same object.</span></span> <span data-ttu-id="5fe37-105">对于 `string` 类型，`==` 会比较字符串的值。</span><span class="sxs-lookup"><span data-stu-id="5fe37-105">For the `string` type, `==` compares the values of the strings.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="afb4d-106">备注</span><span class="sxs-lookup"><span data-stu-id="afb4d-106">Remarks</span></span>  
- <span data-ttu-id="afb4d-107">用户定义的值类型可以重载 `==` 运算符（请参阅[运算符](../../../csharp/language-reference/keywords/operator.md)）。</span><span class="sxs-lookup"><span data-stu-id="afb4d-107">User-defined value types can overload the `==` operator (see [operator](../../../csharp/language-reference/keywords/operator.md)).</span></span> <span data-ttu-id="afb4d-108">用户定义的引用类型情况也相似，但是默认情况下，`==` 的行为如上述预定义和用户定义的引用类型所述。</span><span class="sxs-lookup"><span data-stu-id="afb4d-108">So can user-defined reference types, although by default `==` behaves as described above for both predefined and user-defined reference types.</span></span> <span data-ttu-id="afb4d-109">如果已重载 `==`，则必须同时重载 [!=](../../../csharp/language-reference/operators/not-equal-operator.md)。</span><span class="sxs-lookup"><span data-stu-id="afb4d-109">If `==` is overloaded, [!=](../../../csharp/language-reference/operators/not-equal-operator.md) must also be overloaded.</span></span> <span data-ttu-id="afb4d-110">对整数类型的操作通常可用于枚举。</span><span class="sxs-lookup"><span data-stu-id="afb4d-110">Operations on integral types are generally allowed on enumeration.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="5fe37-106">备注</span><span class="sxs-lookup"><span data-stu-id="5fe37-106">Remarks</span></span>  
+ <span data-ttu-id="5fe37-107">用户定义的值类型可以重载 `==` 运算符（请参阅[运算符](../../../csharp/language-reference/keywords/operator.md)）。</span><span class="sxs-lookup"><span data-stu-id="5fe37-107">User-defined value types can overload the `==` operator (see [operator](../../../csharp/language-reference/keywords/operator.md)).</span></span> <span data-ttu-id="5fe37-108">用户定义的引用类型情况也相似，但是默认情况下，`==` 的行为如上述预定义和用户定义的引用类型所述。</span><span class="sxs-lookup"><span data-stu-id="5fe37-108">So can user-defined reference types, although by default `==` behaves as described above for both predefined and user-defined reference types.</span></span> <span data-ttu-id="5fe37-109">如果已重载 `==`，则必须同时重载 [!=](../../../csharp/language-reference/operators/not-equal-operator.md)。</span><span class="sxs-lookup"><span data-stu-id="5fe37-109">If `==` is overloaded, [!=](../../../csharp/language-reference/operators/not-equal-operator.md) must also be overloaded.</span></span> <span data-ttu-id="5fe37-110">对整数类型的操作通常可用于枚举。</span><span class="sxs-lookup"><span data-stu-id="5fe37-110">Operations on integral types are generally allowed on enumeration.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="afb4d-111">示例</span><span class="sxs-lookup"><span data-stu-id="afb4d-111">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="5fe37-111">示例</span><span class="sxs-lookup"><span data-stu-id="5fe37-111">Example</span></span>  
  [!code-csharp[csRefOperators#36](../../../csharp/language-reference/operators/codesnippet/CSharp/equality-comparison-operator_1.cs)]  
   
-## <a name="see-also"></a><span data-ttu-id="afb4d-112">请参阅</span><span class="sxs-lookup"><span data-stu-id="afb4d-112">See Also</span></span>  
- [<span data-ttu-id="afb4d-113">C# 参考</span><span class="sxs-lookup"><span data-stu-id="afb4d-113">C# Reference</span></span>](../../../csharp/language-reference/index.md)  
- [<span data-ttu-id="afb4d-114">C# 编程指南</span><span class="sxs-lookup"><span data-stu-id="afb4d-114">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
- [<span data-ttu-id="afb4d-115">C# 运算符</span><span class="sxs-lookup"><span data-stu-id="afb4d-115">C# Operators</span></span>](../../../csharp/language-reference/operators/index.md)
+## <a name="see-also"></a><span data-ttu-id="5fe37-112">请参阅</span><span class="sxs-lookup"><span data-stu-id="5fe37-112">See Also</span></span>
+
+- [<span data-ttu-id="5fe37-113">C# 参考</span><span class="sxs-lookup"><span data-stu-id="5fe37-113">C# Reference</span></span>](../../../csharp/language-reference/index.md)  
+- [<span data-ttu-id="5fe37-114">C# 编程指南</span><span class="sxs-lookup"><span data-stu-id="5fe37-114">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
+- [<span data-ttu-id="5fe37-115">C# 运算符</span><span class="sxs-lookup"><span data-stu-id="5fe37-115">C# Operators</span></span>](../../../csharp/language-reference/operators/index.md)
