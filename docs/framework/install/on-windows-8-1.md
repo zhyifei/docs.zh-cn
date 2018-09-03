@@ -5,12 +5,12 @@ description: 了解如何在 Windows 8.1 上安装 .NET Framework
 author: rlander
 ms.author: mairaw
 ms.date: 10/22/2017
-ms.openlocfilehash: 761441798ff1f8261b573aa734580aec5849489b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a44471e16729468983b76febea7704bf2a0518ff
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33391659"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43488061"
 ---
 # <a name="install-the-net-framework-on-windows-81-and-windows-server-2012-r2"></a>在 Windows 8.1 和 Windows Server 2012 R2 上安装 .NET Framework
 
@@ -18,7 +18,7 @@ ms.locfileid: "33391659"
 
 ![无法启动此应用程序](./media/this-application-could-not-be-started.png)
 
-这些说明可帮助安装所需的 .NET Framework 版本。 [.NET Framework 4.7.2](http://go.microsoft.com/fwlink/?LinkID=863255) 是最新版本。 Windows 8.1 和 Windows Server 2012 R2 支持它，且它包含在 [Windows 10 2018 年 4 月更新](https://www.microsoft.com/software-download/windows10)中。
+这些说明可帮助安装所需的 .NET Framework 版本。 [.NET Framework 4.7.2](https://go.microsoft.com/fwlink/?LinkID=863255) 是最新版本。 Windows 8.1 和 Windows Server 2012 R2 支持它，且它包含在 [Windows 10 2018 年 4 月更新](https://www.microsoft.com/software-download/windows10)中。
 
 ## <a name="net-framework-472"></a>.NET Framework 4.7.2
 
@@ -28,7 +28,7 @@ ms.locfileid: "33391659"
 
 <!-- (https://www.microsoft.com/net/framework/versions/net472?utm_source=ms-docs&utm_medium=referral) -->
 
-[.NET Framework 4.7.2](http://go.microsoft.com/fwlink/?LinkID=863255) 可用于运行针对 .NET Framework 4.0 或更高版本生成的应用程序。
+[.NET Framework 4.7.2](https://go.microsoft.com/fwlink/?LinkID=863255) 可用于运行针对 .NET Framework 4.0 或更高版本生成的应用程序。
 
 ## <a name="net-framework-35"></a>.NET Framework 3.5
 
