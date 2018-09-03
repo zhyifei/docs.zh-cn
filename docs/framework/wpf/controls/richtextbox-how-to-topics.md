@@ -7,24 +7,24 @@ helpviewer_keywords:
 - controls [WPF], RichTextBox
 - RichTextBox control [WPF], how-to topics
 ms.assetid: 36e9f98e-f968-42d8-adb6-9e78c814aec0
-ms.openlocfilehash: 412c3af39af33ab52d2a255b03c6452adf7a2637
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8542076ca9552ae0d5ace74f1a287f5cd39aff21
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33555046"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43481797"
 ---
-# <a name="richtextbox-how-to-topics"></a><span data-ttu-id="4d821-102">RichTextBox 帮助主题</span><span class="sxs-lookup"><span data-stu-id="4d821-102">RichTextBox How-to Topics</span></span>
-<span data-ttu-id="4d821-103">本节提供演示如何完成使用的常见任务的示例<xref:System.Windows.Controls.RichTextBox>控件。</span><span class="sxs-lookup"><span data-stu-id="4d821-103">This section provides examples that demonstrate how to accomplish common tasks using the <xref:System.Windows.Controls.RichTextBox> control.</span></span>  
+# <a name="richtextbox-how-to-topics"></a><span data-ttu-id="dc551-102">RichTextBox 帮助主题</span><span class="sxs-lookup"><span data-stu-id="dc551-102">RichTextBox How-to Topics</span></span>
+<span data-ttu-id="dc551-103">本部分提供示例来演示如何完成常见任务使用<xref:System.Windows.Controls.RichTextBox>控件。</span><span class="sxs-lookup"><span data-stu-id="dc551-103">This section provides examples that demonstrate how to accomplish common tasks using the <xref:System.Windows.Controls.RichTextBox> control.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="4d821-104">本节内容</span><span class="sxs-lookup"><span data-stu-id="4d821-104">In This Section</span></span>  
- [<span data-ttu-id="4d821-105">从 RichTextBox 提取文本内容</span><span class="sxs-lookup"><span data-stu-id="4d821-105">Extract the Text Content from a RichTextBox</span></span>](../../../../docs/framework/wpf/controls/how-to-extract-the-text-content-from-a-richtextbox.md)  
- [<span data-ttu-id="4d821-106">以编程方式在 RichTextBox 中更改选定内容</span><span class="sxs-lookup"><span data-stu-id="4d821-106">Change Selection in a RichTextBox Programmatically</span></span>](../../../../docs/framework/wpf/controls/change-selection-in-a-richtextbox-programmatically.md)  
- [<span data-ttu-id="4d821-107">保存、加载和打印 RichTextBox 内容</span><span class="sxs-lookup"><span data-stu-id="4d821-107">Save, Load, and Print RichTextBox Content</span></span>](../../../../docs/framework/wpf/controls/how-to-save-load-and-print-richtextbox-content.md)  
- [<span data-ttu-id="4d821-108">在 RichTextBox 中确定自定义上下文菜单的位置</span><span class="sxs-lookup"><span data-stu-id="4d821-108">Position a Custom Context Menu in a RichTextBox</span></span>](../../../../docs/framework/wpf/controls/how-to-position-a-custom-context-menu-in-a-richtextbox.md)  
- [<span data-ttu-id="4d821-109">如何： 替换 RichTextBox 的默认内容主机</span><span class="sxs-lookup"><span data-stu-id="4d821-109">How to: Replace the Default Content Host for a RichTextBox</span></span>](http://msdn.microsoft.com/library/dec1b2ce-9ca5-4bb2-bf54-f8a80a3c8beb)  
+## <a name="in-this-section"></a><span data-ttu-id="dc551-104">本节内容</span><span class="sxs-lookup"><span data-stu-id="dc551-104">In This Section</span></span>  
+ [<span data-ttu-id="dc551-105">从 RichTextBox 提取文本内容</span><span class="sxs-lookup"><span data-stu-id="dc551-105">Extract the Text Content from a RichTextBox</span></span>](../../../../docs/framework/wpf/controls/how-to-extract-the-text-content-from-a-richtextbox.md)  
+ [<span data-ttu-id="dc551-106">以编程方式在 RichTextBox 中更改选定内容</span><span class="sxs-lookup"><span data-stu-id="dc551-106">Change Selection in a RichTextBox Programmatically</span></span>](../../../../docs/framework/wpf/controls/change-selection-in-a-richtextbox-programmatically.md)  
+ [<span data-ttu-id="dc551-107">保存、加载和打印 RichTextBox 内容</span><span class="sxs-lookup"><span data-stu-id="dc551-107">Save, Load, and Print RichTextBox Content</span></span>](../../../../docs/framework/wpf/controls/how-to-save-load-and-print-richtextbox-content.md)  
+ [<span data-ttu-id="dc551-108">在 RichTextBox 中确定自定义上下文菜单的位置</span><span class="sxs-lookup"><span data-stu-id="dc551-108">Position a Custom Context Menu in a RichTextBox</span></span>](../../../../docs/framework/wpf/controls/how-to-position-a-custom-context-menu-in-a-richtextbox.md)  
+ [<span data-ttu-id="dc551-109">如何： 将 RichTextBox 的默认内容主机</span><span class="sxs-lookup"><span data-stu-id="dc551-109">How to: Replace the Default Content Host for a RichTextBox</span></span>](https://msdn.microsoft.com/library/dec1b2ce-9ca5-4bb2-bf54-f8a80a3c8beb)  
   
-## <a name="see-also"></a><span data-ttu-id="4d821-110">请参阅</span><span class="sxs-lookup"><span data-stu-id="4d821-110">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="dc551-110">请参阅</span><span class="sxs-lookup"><span data-stu-id="dc551-110">See Also</span></span>  
  <xref:System.Windows.Controls.TextBox>  
- [<span data-ttu-id="4d821-111">WPF 中的文档</span><span class="sxs-lookup"><span data-stu-id="4d821-111">Documents in WPF</span></span>](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)  
- [<span data-ttu-id="4d821-112">流文档概述</span><span class="sxs-lookup"><span data-stu-id="4d821-112">Flow Document Overview</span></span>](../../../../docs/framework/wpf/advanced/flow-document-overview.md)
+ [<span data-ttu-id="dc551-111">WPF 中的文档</span><span class="sxs-lookup"><span data-stu-id="dc551-111">Documents in WPF</span></span>](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)  
+ [<span data-ttu-id="dc551-112">流文档概述</span><span class="sxs-lookup"><span data-stu-id="dc551-112">Flow Document Overview</span></span>](../../../../docs/framework/wpf/advanced/flow-document-overview.md)

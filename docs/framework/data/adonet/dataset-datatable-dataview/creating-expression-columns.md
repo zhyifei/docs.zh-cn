@@ -5,25 +5,25 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 0af3bd64-92a2-4b47-ae62-f5df35f131a6
-ms.openlocfilehash: 11bacf436daf2a77a9cf46b4883d282143572e27
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 9c7a656e82198568c39b9bb58f8708f563d6caa2
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32756392"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43482310"
 ---
-# <a name="creating-expression-columns"></a><span data-ttu-id="682db-102">创建表达式列</span><span class="sxs-lookup"><span data-stu-id="682db-102">Creating Expression Columns</span></span>
-<span data-ttu-id="682db-103">您可以为列定义表达式，让它能够包含根据同一行中其他列值或根据表中多行的列值计算而得的值。</span><span class="sxs-lookup"><span data-stu-id="682db-103">You can define an expression for a column, enabling it to contain a value calculated from other column values in the same row or from the column values of multiple rows in the table.</span></span> <span data-ttu-id="682db-104">要定义要计算的表达式，可使用目标列的 <xref:System.Data.DataColumn.Expression%2A> 属性，并使用 <xref:System.Data.DataColumn.ColumnName%2A> 属性在表达式中引用其他列。</span><span class="sxs-lookup"><span data-stu-id="682db-104">To define the expression to be evaluated, use the <xref:System.Data.DataColumn.Expression%2A> property of the target column, and use the <xref:System.Data.DataColumn.ColumnName%2A> property to refer to other columns in the expression.</span></span> <span data-ttu-id="682db-105">用于表达式列的 <xref:System.Data.DataColumn.DataType%2A> 必须适合于表达式将返回的值。</span><span class="sxs-lookup"><span data-stu-id="682db-105">The <xref:System.Data.DataColumn.DataType%2A> for the expression column must be appropriate for the value that the expression returns.</span></span>  
+# <a name="creating-expression-columns"></a><span data-ttu-id="caff2-102">创建表达式列</span><span class="sxs-lookup"><span data-stu-id="caff2-102">Creating Expression Columns</span></span>
+<span data-ttu-id="caff2-103">您可以为列定义表达式，让它能够包含根据同一行中其他列值或根据表中多行的列值计算而得的值。</span><span class="sxs-lookup"><span data-stu-id="caff2-103">You can define an expression for a column, enabling it to contain a value calculated from other column values in the same row or from the column values of multiple rows in the table.</span></span> <span data-ttu-id="caff2-104">要定义要计算的表达式，可使用目标列的 <xref:System.Data.DataColumn.Expression%2A> 属性，并使用 <xref:System.Data.DataColumn.ColumnName%2A> 属性在表达式中引用其他列。</span><span class="sxs-lookup"><span data-stu-id="caff2-104">To define the expression to be evaluated, use the <xref:System.Data.DataColumn.Expression%2A> property of the target column, and use the <xref:System.Data.DataColumn.ColumnName%2A> property to refer to other columns in the expression.</span></span> <span data-ttu-id="caff2-105">用于表达式列的 <xref:System.Data.DataColumn.DataType%2A> 必须适合于表达式将返回的值。</span><span class="sxs-lookup"><span data-stu-id="caff2-105">The <xref:System.Data.DataColumn.DataType%2A> for the expression column must be appropriate for the value that the expression returns.</span></span>  
   
- <span data-ttu-id="682db-106">下表列出了表中表达式列的几种可能用法。</span><span class="sxs-lookup"><span data-stu-id="682db-106">The following table lists several possible uses for expression columns in a table.</span></span>  
+ <span data-ttu-id="caff2-106">下表列出了表中表达式列的几种可能用法。</span><span class="sxs-lookup"><span data-stu-id="caff2-106">The following table lists several possible uses for expression columns in a table.</span></span>  
   
-|<span data-ttu-id="682db-107">表达式类型</span><span class="sxs-lookup"><span data-stu-id="682db-107">Expression type</span></span>|<span data-ttu-id="682db-108">示例</span><span class="sxs-lookup"><span data-stu-id="682db-108">Example</span></span>|  
+|<span data-ttu-id="caff2-107">表达式类型</span><span class="sxs-lookup"><span data-stu-id="caff2-107">Expression type</span></span>|<span data-ttu-id="caff2-108">示例</span><span class="sxs-lookup"><span data-stu-id="caff2-108">Example</span></span>|  
 |---------------------|-------------|  
-|<span data-ttu-id="682db-109">比较</span><span class="sxs-lookup"><span data-stu-id="682db-109">Comparison</span></span>|<span data-ttu-id="682db-110">"Total >= 500"</span><span class="sxs-lookup"><span data-stu-id="682db-110">"Total >= 500"</span></span>|  
-|<span data-ttu-id="682db-111">计算</span><span class="sxs-lookup"><span data-stu-id="682db-111">Computation</span></span>|<span data-ttu-id="682db-112">"UnitPrice \* Quantity"</span><span class="sxs-lookup"><span data-stu-id="682db-112">"UnitPrice \* Quantity"</span></span>|  
-|<span data-ttu-id="682db-113">聚合</span><span class="sxs-lookup"><span data-stu-id="682db-113">Aggregation</span></span>|<span data-ttu-id="682db-114">Sum(Price)</span><span class="sxs-lookup"><span data-stu-id="682db-114">Sum(Price)</span></span>|  
+|<span data-ttu-id="caff2-109">比较</span><span class="sxs-lookup"><span data-stu-id="caff2-109">Comparison</span></span>|<span data-ttu-id="caff2-110">"Total >= 500"</span><span class="sxs-lookup"><span data-stu-id="caff2-110">"Total >= 500"</span></span>|  
+|<span data-ttu-id="caff2-111">计算</span><span class="sxs-lookup"><span data-stu-id="caff2-111">Computation</span></span>|<span data-ttu-id="caff2-112">"UnitPrice \* Quantity"</span><span class="sxs-lookup"><span data-stu-id="caff2-112">"UnitPrice \* Quantity"</span></span>|  
+|<span data-ttu-id="caff2-113">聚合</span><span class="sxs-lookup"><span data-stu-id="caff2-113">Aggregation</span></span>|<span data-ttu-id="caff2-114">Sum(Price)</span><span class="sxs-lookup"><span data-stu-id="caff2-114">Sum(Price)</span></span>|  
   
- <span data-ttu-id="682db-115">你可以设置**表达式**在现有的属性**DataColumn**对象，也可以将该属性用作第三个自变量传递给<xref:System.Data.DataColumn>构造函数，如下面的示例中所示。</span><span class="sxs-lookup"><span data-stu-id="682db-115">You can set the **Expression** property on an existing **DataColumn** object, or you can include the property as the third argument passed to the <xref:System.Data.DataColumn> constructor, as shown in the following example.</span></span>  
+ <span data-ttu-id="caff2-115">可以设置**表达式**上的现有属性**DataColumn**对象，或者您可以将该属性用作第三个参数传递给<xref:System.Data.DataColumn>构造函数，如下面的示例中所示。</span><span class="sxs-lookup"><span data-stu-id="caff2-115">You can set the **Expression** property on an existing **DataColumn** object, or you can include the property as the third argument passed to the <xref:System.Data.DataColumn> constructor, as shown in the following example.</span></span>  
   
 ```vb  
 workTable.Columns.Add("Total",Type.GetType("System.Double"))  
@@ -36,12 +36,12 @@ workTable.Columns.Add("Total", typeof(Double));
 workTable.Columns.Add("SalesTax", typeof(Double), "Total * 0.086");  
 ```  
   
- <span data-ttu-id="682db-116">表达式可以引用其他表达式列，但循环引用（其中两个表达式相互引用）将产生异常。</span><span class="sxs-lookup"><span data-stu-id="682db-116">Expressions can reference other expression columns; however, a circular reference, in which two expressions reference each other, will generate an exception.</span></span> <span data-ttu-id="682db-117">有关编写表达式的规则，请参阅<xref:System.Data.DataColumn.Expression%2A>属性**DataColumn**类。</span><span class="sxs-lookup"><span data-stu-id="682db-117">For rules about writing expressions, see the <xref:System.Data.DataColumn.Expression%2A> property of the **DataColumn** class.</span></span>  
+ <span data-ttu-id="caff2-116">表达式可以引用其他表达式列，但循环引用（其中两个表达式相互引用）将产生异常。</span><span class="sxs-lookup"><span data-stu-id="caff2-116">Expressions can reference other expression columns; however, a circular reference, in which two expressions reference each other, will generate an exception.</span></span> <span data-ttu-id="caff2-117">有关编写表达式的规则，请参阅<xref:System.Data.DataColumn.Expression%2A>的属性**DataColumn**类。</span><span class="sxs-lookup"><span data-stu-id="caff2-117">For rules about writing expressions, see the <xref:System.Data.DataColumn.Expression%2A> property of the **DataColumn** class.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="682db-118">请参阅</span><span class="sxs-lookup"><span data-stu-id="682db-118">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="caff2-118">请参阅</span><span class="sxs-lookup"><span data-stu-id="caff2-118">See Also</span></span>  
  <xref:System.Data.DataColumn>  
  <xref:System.Data.DataSet>  
  <xref:System.Data.DataTable>  
- [<span data-ttu-id="682db-119">数据表架构定义</span><span class="sxs-lookup"><span data-stu-id="682db-119">DataTable Schema Definition</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatable-schema-definition.md)  
- [<span data-ttu-id="682db-120">数据表</span><span class="sxs-lookup"><span data-stu-id="682db-120">DataTables</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatables.md)  
- [<span data-ttu-id="682db-121">ADO.NET 托管提供程序和数据集开发人员中心</span><span class="sxs-lookup"><span data-stu-id="682db-121">ADO.NET Managed Providers and DataSet Developer Center</span></span>](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [<span data-ttu-id="caff2-119">数据表架构定义</span><span class="sxs-lookup"><span data-stu-id="caff2-119">DataTable Schema Definition</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatable-schema-definition.md)  
+ [<span data-ttu-id="caff2-120">数据表</span><span class="sxs-lookup"><span data-stu-id="caff2-120">DataTables</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatables.md)  
+ [<span data-ttu-id="caff2-121">ADO.NET 托管提供程序和数据集开发人员中心</span><span class="sxs-lookup"><span data-stu-id="caff2-121">ADO.NET Managed Providers and DataSet Developer Center</span></span>](https://go.microsoft.com/fwlink/?LinkId=217917)
