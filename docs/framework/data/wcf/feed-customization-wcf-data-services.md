@@ -10,15 +10,15 @@ helpviewer_keywords:
 - Atom Publishing Protocol [WCF Data Services]
 - WCF Data Services, customizing feeds
 ms.assetid: 0d1a39bc-6462-4683-bd7d-e74e0fd28a85
-ms.openlocfilehash: 0b83369a00cdd21b64c53834a7f6e7bcea09a26a
-ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
+ms.openlocfilehash: 1922351ffb11d5ff6541ef22dee623c20d153d6a
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43258558"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43482917"
 ---
 # <a name="feed-customization-wcf-data-services"></a>源自定义（WCF 数据服务）
-[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 使用[!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]将数据作为源公开。 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 支持的数据馈送的 Atom 和 JavaScript 对象表示法 (JSON) 格式。 当使用 Atom 馈送，[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]提供序列化数据，如实体和关系，可以在 HTTP 消息的正文中包含 XML 格式的标准方法。 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 定义实体中包含的数据与 Atom 元素之间的默认实体-属性映射。 有关详细信息，请参阅[OData: Atom 格式](http://go.microsoft.com/fwlink/?LinkID=185794)。  
+[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 使用[!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]将数据作为源公开。 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 支持的数据馈送的 Atom 和 JavaScript 对象表示法 (JSON) 格式。 当使用 Atom 馈送，[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]提供序列化数据，如实体和关系，可以在 HTTP 消息的正文中包含 XML 格式的标准方法。 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 定义实体中包含的数据与 Atom 元素之间的默认实体-属性映射。 有关详细信息，请参阅[OData: Atom 格式](https://go.microsoft.com/fwlink/?LinkID=185794)。  
   
  您的应用程序方案可能要求以自定义方式而非标准源格式序列化数据服务返回的属性数据。 使用[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]，可以自定义数据源中的序列化，以便将实体属性可以映射到未使用的元素和属性的项或数据源中某项的自定义元素。  
   
@@ -31,7 +31,7 @@ ms.locfileid: "43258558"
 >  定义自定义源时，必须保证已定义自定义映射的所有实体属性都包含在投影中。 如果投影中不包含某个已映射的实体属性，则可能会丢失数据。 有关详细信息，请参阅[查询投影](../../../../docs/framework/data/wcf/query-projections-wcf-data-services.md)。  
   
 ## <a name="customizing-feeds-with-the-entity-framework-provider"></a>使用实体框架提供程序自定义源  
- 在 .edmx 文件中，用于[!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)]提供程序的数据模型以 XML 格式表示。 在这种情况下，用于定义自定义源的特性将会添加到表示数据模型中的实体类型和属性的 `EntityType` 和 `Property` 元素中。 这些源自的定义特性中未定义[ \[MC CSDL\]： 概念架构定义文件格式](http://go.microsoft.com/fwlink/?LinkId=159072)，这是的格式的[!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)]提供程序用于定义数据模型。 因此，必须在某个特定的架构命名空间中声明源自定义特性，此架构命名空间应按 `m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata"` 格式定义。 以下 XML 片段显示应用于 `Property` 实体类型的 `Products` 元素的源自定义特性，这些特性定义 `ProductName`、`ReorderLevel` 和 `UnitsInStock` 属性。  
+ 在 .edmx 文件中，用于[!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)]提供程序的数据模型以 XML 格式表示。 在这种情况下，用于定义自定义源的特性将会添加到表示数据模型中的实体类型和属性的 `EntityType` 和 `Property` 元素中。 这些源自的定义特性中未定义[ \[MC CSDL\]： 概念架构定义文件格式](https://go.microsoft.com/fwlink/?LinkId=159072)，这是的格式的[!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)]提供程序用于定义数据模型。 因此，必须在某个特定的架构命名空间中声明源自定义特性，此架构命名空间应按 `m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata"` 格式定义。 以下 XML 片段显示应用于 `Property` 实体类型的 `Products` 元素的源自定义特性，这些特性定义 `ProductName`、`ReorderLevel` 和 `UnitsInStock` 属性。  
   
  [!code-xml[Astoria Custom Feeds#EdmFeedAttributes](../../../../samples/snippets/xml/VS_Snippets_Misc/astoria custom feeds/xml/northwind.csdl#edmfeedattributes)]  
   
@@ -42,7 +42,7 @@ ms.locfileid: "43258558"
  有关详细信息，请参阅[如何： 使用实体框架提供程序自定义源](../../../../docs/framework/data/wcf/how-to-customize-feeds-with-ef-provider-wcf-data-services.md)。  
   
 > [!NOTE]
->  由于实体设计器不支持数据模型扩展，因此必须手动修改包含数据模型的 XML 文件。 有关.edmx 文件由生成的详细信息[!INCLUDE[adonet_edm](../../../../includes/adonet-edm-md.md)]工具，请参阅[.edmx 文件概述](http://msdn.microsoft.com/library/f4c8e7ce-1db6-417e-9759-15f8b55155d4)。  
+>  由于实体设计器不支持数据模型扩展，因此必须手动修改包含数据模型的 XML 文件。 有关.edmx 文件由生成的详细信息[!INCLUDE[adonet_edm](../../../../includes/adonet-edm-md.md)]工具，请参阅[.edmx 文件概述](https://msdn.microsoft.com/library/f4c8e7ce-1db6-417e-9759-15f8b55155d4)。  
   
 ### <a name="custom-feed-attributes"></a>自定义源特性  
  下表列出了一些 XML 特性，这些特性自定义可添加到用于定义数据模型的概念架构定义语言 (CSDL) 的源。 这些特性等效于用于反射提供程序的 <xref:System.Data.Services.Common.EntityPropertyMappingAttribute> 的属性。  

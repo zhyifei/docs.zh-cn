@@ -18,11 +18,11 @@ helpviewer_keywords:
 - declarations [Visual Basic], namespaces
 ms.assetid: 08ba2738-df52-4140-bc55-f57c871c9b73
 ms.openlocfilehash: cd07c883c576e917cf1aa5072505854bc906eb3f
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42933961"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43484650"
 ---
 # <a name="enumerations-and-name-qualification-visual-basic"></a>枚举和名称限定 (Visual Basic)
 通常情况下，在引用枚举成员，必须限定为枚举名称的成员名称。 例如，若要引用`Sunday`的成员在`Days`枚举，请使用以下语法：  

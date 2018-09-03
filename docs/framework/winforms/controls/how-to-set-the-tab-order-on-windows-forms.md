@@ -11,11 +11,11 @@ helpviewer_keywords:
 - Windows Forms, setting tab order
 ms.assetid: 71fa8e76-0472-414b-ad3c-0f90166e0ad7
 ms.openlocfilehash: 74244ae4e3692ed210b2a8f1513b035c85e98376
-ms.sourcegitcommit: a368166a51e5204c0224fbf5e46476e3ed122817
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/31/2018
-ms.locfileid: "43332560"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43486826"
 ---
 # <a name="how-to-set-the-tab-order-on-windows-forms"></a>如何：设置 Windows 窗体上的 Tab 键顺序
 Tab 键顺序是在其中用户焦点从一个控件移到另一个通过按 TAB 键顺序。 每个窗体具有其自己的 tab 键顺序。 默认情况下，tab 键顺序是在其中创建控件的顺序相同。 Tab 键顺序编号从 0 开始。  

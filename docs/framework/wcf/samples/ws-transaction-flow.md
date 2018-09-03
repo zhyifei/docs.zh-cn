@@ -4,15 +4,15 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Transactions
 ms.assetid: f8eecbcf-990a-4dbb-b29b-c3f9e3b396bd
-ms.openlocfilehash: bf78b679be84efa416d088d5addaaa25a593abf4
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: 35af3090c0f898578a5f8dfb81d02d22a0074ad2
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33807210"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43483877"
 ---
 # <a name="ws-transaction-flow"></a>WS 事务流
-本示例演示客户端协调事务和使用 WS-Atomic 事务或 OleTransactions 协议的事务流的客户端和服务器选项的用法。 此示例基于[入门](../../../../docs/framework/wcf/samples/getting-started-sample.md)实现计算器服务，但操作特性化，用于演示使用`TransactionFlowAttribute`与**TransactionFlowOption**若要确定何种程度事务到启用了流的枚举。 在流事务范围内，请求操作的日志将写入数据库并保存，直到客户端协调事务完成。如果客户端事务没有完成，则 Web 服务事务确保不提交对数据库的相应更新。  
+本示例演示客户端协调事务和使用 WS-Atomic 事务或 OleTransactions 协议的事务流的客户端和服务器选项的用法。 此示例基于[Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md)实现计算器服务，但操作经过属性化，以演示了如何使用`TransactionFlowAttribute`与**TransactionFlowOption**若要确定到什么程度事务启用流的枚举。 在流事务范围内，请求操作的日志将写入数据库并保存，直到客户端协调事务完成。如果客户端事务没有完成，则 Web 服务事务确保不提交对数据库的相应更新。  
   
 > [!NOTE]
 >  本主题的最后介绍了此示例的设置过程和生成说明。  
@@ -47,7 +47,7 @@ public interface ICalculator
   
 -   由于省略 `Divide` 属性，`TransactionFlow` 操作请求不得包括流事务。  
   
- 若要启用事务流，使用绑定[ \<transactionFlow >](../../../../docs/framework/configure-apps/file-schema/wcf/transactionflow.md)以及适当的操作属性必须使用启用的属性。 在本示例中，除了元数据交换终结点以外，服务的配置还公开 TCP 终结点和 HTTP 终结点。 TCP 终结点和 HTTP 终结点使用下列绑定，其中有两种[ \<transactionFlow >](../../../../docs/framework/configure-apps/file-schema/wcf/transactionflow.md)启用的属性。  
+ 若要启用事务流，使用绑定[ \<transactionFlow >](../../../../docs/framework/configure-apps/file-schema/wcf/transactionflow.md)除了适当的操作属性必须使用启用的属性。 在本示例中，除了元数据交换终结点以外，服务的配置还公开 TCP 终结点和 HTTP 终结点。 TCP 终结点和 HTTP 终结点使用以下绑定，其中有两种[ \<transactionFlow >](../../../../docs/framework/configure-apps/file-schema/wcf/transactionflow.md)启用的属性。  
   
 ```xml  
 <bindings>  
@@ -223,60 +223,60 @@ Press <ENTER> to terminate the service.
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>设置、生成和运行示例  
   
-1.  若要生成解决方案的 C# 或 Visual Basic.NET 版本，按照中的说明[生成 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/building-the-samples.md)  
+1.  若要生成 C# 或 Visual Basic.NET 版本的解决方案，请按照中的说明[生成 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/building-the-samples.md)  
   
 2.  确保已安装 SQL Server Express Edition 或 SQL Server，并确保已在服务的应用程序配置文件中正确设置连接字符串。 若要在不使用数据库的情况下运行示例，请将服务的应用程序配置文件中的 `usingSql` 值设置为 `false`  
   
-3.  若要在单或跨计算机配置上运行示例，请按照中的说明[运行 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/running-the-samples.md)。  
+3.  若要在单或跨计算机配置中运行示例，请按照中的说明[运行 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/running-the-samples.md)。  
   
     > [!NOTE]
-    >  对于跨计算机配置，请按照下面的说明操作来启用分布式事务处理协调器，并使用 Windows SDK 中的 WsatConfig.exe 工具来启用 WCF 事务网络支持。 请参阅[配置 Ws-atomic 事务支持](http://go.microsoft.com/fwlink/?LinkId=190370)有关设置 WsatConfig.exe 的信息。  
+    >  对于跨计算机配置，请按照下面的说明操作来启用分布式事务处理协调器，并使用 Windows SDK 中的 WsatConfig.exe 工具来启用 WCF 事务网络支持。 请参阅[配置 Ws-atomic 事务支持](https://go.microsoft.com/fwlink/?LinkId=190370)有关设置 WsatConfig.exe 的信息。  
   
- 是否在同一台计算机或不同计算机上运行示例，你必须配置 Microsoft 分布式事务处理协调器 (MSDTC) 以启用网络事务流并使用 WsatConfig.exe 工具来启用 WCF 事务网络支持。  
+ 是否在同一计算机上或不同计算机上运行示例，必须配置 Microsoft 分布式事务处理协调器 (MSDTC) 以启用网络事务流并使用 WsatConfig.exe 工具来启用 WCF 事务网络支持。  
   
 ### <a name="to-configure-the-microsoft-distributed-transaction-coordinator-msdtc-to-support-running-the-sample"></a>配置 Microsoft 分布式事务处理协调器 (MSDTC) 以支持运行示例  
   
 1.  在运行 Windows Server 2003 或 Windows XP 的服务计算机上，按以下说明配置 MSDTC 以允许传入网络事务。  
   
-    1.  从**启动**菜单上，导航到**控制面板**，然后**管理工具**，，然后**组件服务**。  
+    1.  从**启动**菜单中，导航到**控制面板**，然后**管理工具**，然后**组件服务**。  
   
     2.  展开**组件服务**。 打开**计算机**文件夹。  
   
-    3.  右键单击**我的电脑**和选择**属性**。  
+    3.  右键单击**我的电脑**，然后选择**属性**。  
   
-    4.  上**MSDTC**选项卡上，单击**安全配置**。  
+    4.  上**MSDTC**选项卡上，单击**的安全配置**。  
   
-    5.  检查**网络 DTC 访问**和**允许入站**。  
+    5.  检查**网络 DTC 访问**并**允许入站**。  
   
-    6.  单击**确定**，然后单击**是**重新启动 MSDTC 服务。  
+    6.  单击**确定**，然后单击**是**以重新启动 MSDTC 服务。  
   
     7.  单击“确定”关闭对话框。  
   
 2.  在运行 Windows Server 2008 或 Windows Vista 的服务计算机上，按以下说明配置 MSDTC 以允许传入网络事务。  
   
-    1.  从**启动**菜单上，导航到**控制面板**，然后**管理工具**，，然后**组件服务**。  
+    1.  从**启动**菜单中，导航到**控制面板**，然后**管理工具**，然后**组件服务**。  
   
     2.  展开**组件服务**。 打开**计算机**文件夹。 选择**分布式事务处理协调器**。  
   
-    3.  右键单击**DTC 协调器**和选择**属性**。  
+    3.  右键单击**DTC 协调器**，然后选择**属性**。  
   
-    4.  上**安全**选项卡上，选中**网络 DTC 访问**和**允许入站**。  
+    4.  上**安全**选项卡上，选中**网络 DTC 访问**并**允许入站**。  
   
-    5.  单击**确定**，然后单击**是**重新启动 MSDTC 服务。  
+    5.  单击**确定**，然后单击**是**以重新启动 MSDTC 服务。  
   
     6.  单击“确定”关闭对话框。  
   
 3.  在客户端计算机上，配置 MSDTC 以允许传出网络事务：  
   
-    1.  从**启动**菜单上，导航到`Control Panel`，然后**管理工具**，，然后**组件服务**。  
+    1.  从**启动**菜单中，导航到`Control Panel`，然后**管理工具**，，然后**组件服务**。  
   
-    2.  右键单击**我的电脑**和选择**属性**。  
+    2.  右键单击**我的电脑**，然后选择**属性**。  
   
-    3.  上**MSDTC**选项卡上，单击**安全配置**。  
+    3.  上**MSDTC**选项卡上，单击**的安全配置**。  
   
-    4.  检查**网络 DTC 访问**和**允许出站**。  
+    4.  检查**网络 DTC 访问**并**允许出站**。  
   
-    5.  单击**确定**，然后单击**是**重新启动 MSDTC 服务。  
+    5.  单击**确定**，然后单击**是**以重新启动 MSDTC 服务。  
   
     6.  单击“确定”关闭对话框。  
   
@@ -285,6 +285,6 @@ Press <ENTER> to terminate the service.
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目录不存在，请转到[Windows Communication Foundation (WCF) 和针对.NET Framework 4 的 Windows Workflow Foundation (WF) 示例](http://go.microsoft.com/fwlink/?LinkId=150780)下载所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
+>  如果此目录不存在，请转到[Windows Communication Foundation (WCF) 和.NET Framework 4 的 Windows Workflow Foundation (WF) 示例](https://go.microsoft.com/fwlink/?LinkId=150780)若要下载所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\WS\TransactionFlow`

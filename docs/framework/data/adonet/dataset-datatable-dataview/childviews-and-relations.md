@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: d475d356-6abb-4701-8fd1-2906fb93dfba
-ms.openlocfilehash: e55e28fd3acdb145e03f0916e3681e95cc7a041a
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: e27ef72f0341524524a8f267eeeb13a6f46deb52
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32755378"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43486537"
 ---
 # <a name="childviews-and-relations"></a>ChildView 和关系
-如果 <xref:System.Data.DataSet> 中的表之间存在关系，则可以使用 <xref:System.Data.DataView> 的 <xref:System.Data.DataRowView.CreateChildView%2A> 方法为父表中的行创建一个 <xref:System.Data.DataRowView>，包含相关子表中的行。 例如，下面的代码显示**类别**及其相关**产品**的字母顺序排序的**CategoryName**和**ProductName**.  
+如果 <xref:System.Data.DataSet> 中的表之间存在关系，则可以使用 <xref:System.Data.DataView> 的 <xref:System.Data.DataRowView.CreateChildView%2A> 方法为父表中的行创建一个 <xref:System.Data.DataRowView>，包含相关子表中的行。 例如，下面的代码显示**类别**及其相关**产品**按字母顺序**CategoryName**和**ProductName**.  
   
 ```vb  
 Dim catTable As DataTable = catDS.Tables("Categories")  
@@ -78,4 +78,4 @@ foreach (DataRowView catDRV in catView)
  <xref:System.Data.DataView>  
  <xref:System.Data.DataRowView>  
  [数据视图](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataviews.md)  
- [ADO.NET 托管提供程序和数据集开发人员中心](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)

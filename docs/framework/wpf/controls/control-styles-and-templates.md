@@ -10,17 +10,17 @@ helpviewer_keywords:
 - states [WPF]
 - templates [WPF]
 ms.assetid: c19049bb-5ceb-492d-afd2-751dca0ed8e3
-ms.openlocfilehash: 0fe20ffa19d14dcaecac30198c5c0e2d19fb9fa5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 58d65ee9842270b07a76ff438c975955689197e9
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33556908"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43482971"
 ---
 # <a name="control-styles-and-templates"></a>Control 样式和模板
-在 Windows Presentation Foundation (WPF) 控件具有<xref:System.Windows.Controls.ControlTemplate>，其中包含该控件的可视化树。 您可以通过修改更改的结构和控件的外观<xref:System.Windows.Controls.ControlTemplate>该控件。 没有方法来替换仅的控件，则的可视化树的一部分若要更改必须设置的控件的可视化树<xref:System.Windows.Controls.Control.Template%2A>到其新且完整的控件属性<xref:System.Windows.Controls.ControlTemplate>。  
+Windows Presentation Foundation (WPF) 中的控件具有<xref:System.Windows.Controls.ControlTemplate>，其中包含该控件的可视化树。 可以通过修改更改结构和控件的外观<xref:System.Windows.Controls.ControlTemplate>该控件。 无法替换可视化树的控件，则只有部分若要更改必须设置一个控件的可视化树<xref:System.Windows.Controls.Control.Template%2A>为新的完整控件属性<xref:System.Windows.Controls.ControlTemplate>。  
   
- 桌面主题确定使用的资源字典。 若要为桌面主题获取资源字典，请参阅[默认的 WPF 主题](http://go.microsoft.com/fwlink/?LinkID=158252)。  
+ 桌面主题确定使用的资源字典。 若要为桌面主题获取资源字典，请参阅[默认的 WPF 主题](https://go.microsoft.com/fwlink/?LinkID=158252)。  
   
  下表描述了资源字典文件名及其相应的桌面主题。  
   
@@ -61,7 +61,7 @@ ms.locfileid: "33556908"
  [TabControl 样式和模板](../../../../docs/framework/wpf/controls/tabcontrol-styles-and-templates.md)  
  [TextBox 样式和模板](../../../../docs/framework/wpf/controls/textbox-styles-and-templates.md)  
  [Thumb 样式和模板](../../../../docs/framework/wpf/controls/thumb-syles-and-templates.md)  
- [切换按钮样式和模板](../../../../docs/framework/wpf/controls/togglebutton-syles-and-templates.md)  
+ [ToggleButton 样式和模板](../../../../docs/framework/wpf/controls/togglebutton-syles-and-templates.md)  
  [ToolBar 样式和模板](../../../../docs/framework/wpf/controls/toolbar-styles-and-templates.md)  
  [ToolTip 样式和模板](../../../../docs/framework/wpf/controls/tooltip-styles-and-templates.md)  
  [TreeView 样式和模板](../../../../docs/framework/wpf/controls/treeview-styles-and-templates.md)  

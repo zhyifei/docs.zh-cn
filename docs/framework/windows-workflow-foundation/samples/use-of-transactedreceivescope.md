@@ -2,12 +2,12 @@
 title: 使用 TransactedReceiveScope
 ms.date: 03/30/2017
 ms.assetid: d455f1dc-bfc5-43d6-8ae9-bc3b3a3ea08a
-ms.openlocfilehash: 635235504a08a151053026cf25c68750dc335eef
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: bc1c418f3fa116f5e1c1647af3543a38122842f5
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33517301"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43481466"
 ---
 # <a name="use-of-transactedreceivescope"></a>使用 TransactedReceiveScope
 此示例演示如何使用 <xref:System.Activities.Statements.TransactionScope> 将事务从客户端流动到服务器，以在客户端上创建一个新的事务和一个 <xref:System.ServiceModel.Activities.TransactedReceiveScope>，从而接收具有流动的事务的消息，并确定事务在服务器上的生存期范围。 此示例由充当客户端和服务器角色的两个项目组成。  
@@ -22,11 +22,11 @@ ms.locfileid: "33517301"
   
 1.  在 [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] 中打开 TransactedReceiveScope.sln 解决方案。  
   
-2.  若要生成解决方案，按 CTRL + SHIFT + B 或选择**生成解决方案**从**生成**菜单。  
+2.  若要生成解决方案，请按 CTRL + SHIFT + B 或选择**生成解决方案**从**生成**菜单。  
   
-3.  成功生成之后，右键单击解决方案并选择**设置启动项目**。 在对话框中，选择**多启动项目**并确保这两个项目的操作是**启动**。  
+3.  成功生成之后，右键单击解决方案并选择**设置启动项目**。 从对话框中，选择**多个启动项目**，并确保这两个项目的操作是**启动**。  
   
-4.  按 F5，或选择**启动调试**从**调试**菜单。 或者，你可以按 CTRL + F5，或选择**启动但不调试**从**调试**菜单运行而不调试。  
+4.  按 F5 或选择**开始调试**从**调试**菜单。 或者，可以按 CTRL + F5 或选择**启动但不调试**从**调试**菜单运行而不进行调试。  
   
     > [!NOTE]
     >  在启动客户端之前，服务器必须正在运行。 承载服务的控制台窗口的输出将指示它启动的时间。  
@@ -36,6 +36,6 @@ ms.locfileid: "33517301"
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目录不存在，请转到[Windows Communication Foundation (WCF) 和针对.NET Framework 4 的 Windows Workflow Foundation (WF) 示例](http://go.microsoft.com/fwlink/?LinkId=150780)下载所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
+>  如果此目录不存在，请转到[Windows Communication Foundation (WCF) 和.NET Framework 4 的 Windows Workflow Foundation (WF) 示例](https://go.microsoft.com/fwlink/?LinkId=150780)若要下载所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Transactions\TransactedReceiveScope`

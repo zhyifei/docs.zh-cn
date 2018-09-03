@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 217b54a615d7c553e714ef87b3c2bb6a1919ae98
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 1571e43d6a89af453d6289ccb646c7222f0a5ad6
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33435370"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43483105"
 ---
 # <a name="iclrstrongnamestrongnamesignaturegeneration-method"></a>ICLRStrongName::StrongNameSignatureGeneration 方法
 为指定的程序集生成强名称签名。  
@@ -42,36 +42,36 @@ HRESULT StrongNameSignatureGeneration (
   
 #### <a name="parameters"></a>参数  
  `wszFilePath`  
- [in]包含将为其生成强名称签名的程序集清单文件的路径。  
+ [in]包含为其生成强名称签名的程序集的清单文件的路径。  
   
  `wszKeyContainer`  
  [in]包含公钥/私钥对的密钥容器的名称。  
   
- 如果`pbKeyBlob`为 null，`wszKeyContainer`必须指定加密服务提供商 (CSP) 中有效的容器。 在这种情况下，存储在容器的密钥对用于对文件进行签名。  
+ 如果`pbKeyBlob`为 null，`wszKeyContainer`必须指定加密服务提供商 (CSP) 内有效的容器。 在这种情况下，使用容器中存储的密钥对文件进行签名。  
   
- 如果`pbKeyBlob`不为 null，则假定的密钥对要包含在密钥二进制大型对象 (BLOB)。  
+ 如果`pbKeyBlob`不为 null，则假定为密钥对要包含在密钥二进制大型对象 (BLOB) 中。  
   
- 键必须为 1024年位 Rivest 仅使用 Adleman (RSA) 签名密钥。 这次不支持的密钥的任何其他类型。  
+ 键必须是 1024年位 Rivest 仅使用 Adleman (RSA) 签名密钥。 目前不支持任何其他类型的密钥。  
   
  `pbKeyBlob`  
- [in]指向公钥/私钥对的指针。 此对采用以下格式创建由 Win32`CryptExportKey`函数。 如果`pbKeyBlob`是 null，指定的密钥容器`wszKeyContainer`假定包含密钥对。  
+ [in]一个指向公钥/私钥对。 此对的格式创建的 Win32`CryptExportKey`函数。 如果`pbKeyBlob`是 null，指定的密钥容器`wszKeyContainer`假定包含密钥对。  
   
  `cbKeyBlob`  
  [in]大小，以字节为单位的`pbKeyBlob`。  
   
  `ppbSignatureBlob`  
- [out]指向公共语言运行时向其返回签名的位置的指针。 如果`ppbSignatureBlob`是 null，运行时将签名存储在指定的文件中`wszFilePath`。  
+ [out]指向该签名返回到公共语言运行时的位置的指针。 如果`ppbSignatureBlob`是 null，则运行时存储签名中指定的文件`wszFilePath`。  
   
- 如果`ppbSignatureBlob`是不为 null，公共语言运行时分配的空间内进行返回签名。 调用方必须使用释放此空间[iclrstrongname:: Strongnamefreebuffer](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamefreebuffer-method.md)方法。  
+ 如果`ppbSignatureBlob`是不为 null，公共语言运行时分配用于返回签名的空间。 调用方必须释放此空间使用[iclrstrongname:: Strongnamefreebuffer](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamefreebuffer-method.md)方法。  
   
  `pcbSignatureBlob`  
- [out]以字节为单位，返回签名的大小。  
+ [out]以字节为单位，返回的签名的大小。  
   
 ## <a name="return-value"></a>返回值  
- `S_OK` 如果成功，则完成的方法否则为该值指示失败的 HRESULT 值 (请参阅[常见的 HRESULT 值](http://go.microsoft.com/fwlink/?LinkId=213878)有关的列表)。  
+ `S_OK` 如果成功，则完成的方法否则为指示失败的 HRESULT 值 (请参阅[常见的 HRESULT 值](https://go.microsoft.com/fwlink/?LinkId=213878)列表)。  
   
 ## <a name="remarks"></a>备注  
- 指定为空`wszFilePath`来计算而无需创建签名的签名的大小。  
+ 指定为 null`wszFilePath`来计算而无需创建签名的签名的大小。  
   
  签名可以是直接存储在该文件，或返回到调用方。  
   
@@ -82,7 +82,7 @@ HRESULT StrongNameSignatureGeneration (
   
  **库：** 作为 MSCorEE.dll 中的资源  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅  
  [StrongNameSignatureGenerationEx 方法](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignaturegenerationex-method.md)  

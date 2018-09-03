@@ -2,15 +2,15 @@
 title: 分布式事务
 ms.date: 03/30/2017
 ms.assetid: 718b257c-bcb2-408e-b004-a7b0adb1c176
-ms.openlocfilehash: 7792a719a73ca5183d57bcecc5d346153d824570
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 1f45f572b4336e52f7eee224ec80d9b7f423f991
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32766083"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43486322"
 ---
 # <a name="distributed-transactions"></a>分布式事务
-事务是一组相关的任务，作为独立于其他任务的独立单元成功（提交）或失败（中止）。 A*分布式事务*是影响多个资源的事务。 要提交分布式事务，所有参与者都必须保证对数据的任何更改是永久的。 即使发生系统崩溃或其他不可预见的事件，更改也必须是永久的。 即使只有一个参与者无法保证这一点，整个事务也将失败，在事务范围内对数据的任何更改均将回滚。  
+事务是一组相关的任务，作为独立于其他任务的独立单元成功（提交）或失败（中止）。 一个*分布式事务，事务*是影响多个资源的事务。 要提交分布式事务，所有参与者都必须保证对数据的任何更改是永久的。 即使发生系统崩溃或其他不可预见的事件，更改也必须是永久的。 即使只有一个参与者无法保证这一点，整个事务也将失败，在事务范围内对数据的任何更改均将回滚。  
   
 > [!NOTE]
 >  如果 `DataReader` 在事务处于活动状态时启动，此时若尝试提交或回滚事务，将会引发异常。  
@@ -18,7 +18,7 @@ ms.locfileid: "32766083"
 ## <a name="working-with-systemtransactions"></a>使用 System.Transactions  
  在 .NET Framework 中，分布式事务通过 <xref:System.Transactions> 命名空间中的 API 进行管理。 如果涉及多个永久资源管理器，<xref:System.Transactions> API 会将分布式事务处理委托给事务监视器，例如 Microsoft 分布式事务协调程序 (MS DTC)。 有关详细信息，请参阅[事务基础知识](../../../../docs/framework/data/transactions/transaction-fundamentals.md)。  
   
- ADO.NET 2.0 引入了对使用 `EnlistTransaction` 方法在分布式事务中进行登记的支持，该方法会登记 <xref:System.Transactions.Transaction> 实例中的连接。 在以前版本的 ADO.NET 中，分布式事务中的显式登记使用连接的 `EnlistDistributedTransaction` 方法执行，以登记 <xref:System.EnterpriseServices.ITransaction> 实例中的连接，为了向后兼容，也支持该方法。 对企业服务中的事务的详细信息，请参阅[与企业服务和 COM + 事务互操作性](../../../../docs/framework/data/transactions/interoperability-with-enterprise-services-and-com-transactions.md)。  
+ ADO.NET 2.0 引入了对使用 `EnlistTransaction` 方法在分布式事务中进行登记的支持，该方法会登记 <xref:System.Transactions.Transaction> 实例中的连接。 在以前版本的 ADO.NET 中，分布式事务中的显式登记使用连接的 `EnlistDistributedTransaction` 方法执行，以登记 <xref:System.EnterpriseServices.ITransaction> 实例中的连接，为了向后兼容，也支持该方法。 有关企业服务事务的详细信息，请参阅[与企业服务和 COM + 事务的互操作性](../../../../docs/framework/data/transactions/interoperability-with-enterprise-services-and-com-transactions.md)。  
   
  在针对 SQL Server 数据库将 <xref:System.Transactions> 事务与用于 SQL Server 的 .NET Framework 提供程序结合使用时，将自动创建一个轻型 <xref:System.Transactions.Transaction>。 该事务可以根据需要提升为完全分布式事务。 有关详细信息，请参阅[System.Transactions 与 SQL Server 的集成](../../../../docs/framework/data/adonet/system-transactions-integration-with-sql-server.md)。  
   
@@ -33,7 +33,7 @@ ms.locfileid: "32766083"
   
  在分布式事务中登记尤其适用于为业务对象建立池连接。 如果业务对象使用打开的连接建立池连接，自动事务登记只有在该连接打开时才会进行。 如果使用池中的业务对象执行多个事务，则该对象的打开连接不自动登记在新启动的事务中。 在这种情况下，可以对该连接禁用自动事务登记，并使用 `EnlistTransaction` 在事务中登记连接。  
   
- `EnlistTransaction` 采用单个参数的类型<xref:System.Transactions.Transaction>，它是对现有的事务的引用。 在调用连接的 `EnlistTransaction` 方法之后，所有使用该连接在数据源上进行的修改均将加入事务中。 传递空值将取消该连接在当前分布式事务登记中的登记。 注意，在调用 `EnlistTransaction` 之前连接必须打开。  
+ `EnlistTransaction` 采用单个参数的类型<xref:System.Transactions.Transaction>，它是对现有事务的引用。 在调用连接的 `EnlistTransaction` 方法之后，所有使用该连接在数据源上进行的修改均将加入事务中。 传递空值将取消该连接在当前分布式事务登记中的登记。 注意，在调用 `EnlistTransaction` 之前连接必须打开。  
   
 > [!NOTE]
 >  在某个事务中显式登记了连接之后，在该事务完成之前，连接将无法取消登记或在另一个事务中登记。  
@@ -50,4 +50,4 @@ ms.locfileid: "32766083"
 ## <a name="see-also"></a>请参阅  
  [事务和并发性](../../../../docs/framework/data/adonet/transactions-and-concurrency.md)  
  [System.Transactions 与 SQL Server 的集成](../../../../docs/framework/data/adonet/system-transactions-integration-with-sql-server.md)  
- [ADO.NET 托管提供程序和数据集开发人员中心](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)

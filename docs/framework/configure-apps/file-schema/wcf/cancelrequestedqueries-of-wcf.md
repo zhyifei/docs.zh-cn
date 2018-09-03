@@ -2,12 +2,12 @@
 title: WCF 的 &lt;cancelRequestedQueries&gt;
 ms.date: 03/30/2017
 ms.assetid: a7cc7125-9ea3-4d3f-99c0-878cdeb1258a
-ms.openlocfilehash: 24970d0fa810db13423fa4c0fc37a4531feeb550
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: c9266d9ce1f6a61c4468fd95467e76730b966249
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32746810"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43480621"
 ---
 # <a name="ltcancelrequestedqueriesgt-of-wcf"></a>WCF 的 &lt;cancelRequestedQueries&gt;
 表示一个查询集合，这些查询用于跟踪父活动取消子活动的请求。 跟踪参与者需要用此查询来订阅取消请求记录对象。  
@@ -42,7 +42,7 @@ ms.locfileid: "32746810"
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<工作流 >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/workflow.md)|一个配置元素，包含 `a HYPERLINK "http://msdn.microsoft.com/library/system.servicemodel.activities.tracking.configuration.profileworkflowelement.activitydefinitionid(VS.100).aspx" ctivityDefinitionId` 属性所标识的特定工作流的所有查询。|  
+|[\<工作流 >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/workflow.md)|一个配置元素，包含 <xref:System.ServiceModel.Activities.Tracking.Configuration.ProfileWorkflowElement.ActivityDefinitionId> 属性所标识的特定工作流的所有查询。|  
   
 ## <a name="see-also"></a>请参阅  
  <xref:System.Activities.Tracking.CancelRequestedQuery>  

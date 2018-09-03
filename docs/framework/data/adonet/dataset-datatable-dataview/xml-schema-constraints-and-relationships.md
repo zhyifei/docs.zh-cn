@@ -2,22 +2,22 @@
 title: XML 架构约束和关系
 ms.date: 03/30/2017
 ms.assetid: 165bc2bc-60a1-40e0-9b89-7c68ef979079
-ms.openlocfilehash: 4b62b6bafa9ceeafd250e722314c4bd6c594bf82
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: bcb6e257a40040701612b73768a98e056bccd6c5
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32759837"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43479992"
 ---
 # <a name="xml-schema-constraints-and-relationships"></a>XML 架构约束和关系
-在 XML 架构定义语言 (XSD) 架构中，你可以指定约束 (唯一的键和 keyref 约束) 和关系 (使用**msdata: relationship**批注)。 本主题说明如何解释在 XML 架构中指定的约束和关系，以生成 <xref:System.Data.DataSet>。  
+在 XML 架构定义语言 (XSD) 架构中，可以指定约束 (唯一的键和 keyref 约束) 和关系 (使用**msdata: relationship**批注)。 本主题说明如何解释在 XML 架构中指定的约束和关系，以生成 <xref:System.Data.DataSet>。  
   
- 通常情况下，在 XML 架构中，你指定**msdata: relationship**批注，如果你想要生成仅中的关系**数据集**。 有关详细信息，请参阅[生成数据集关系从 XML 架构 (XSD)](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/generating-dataset-relations-from-xml-schema-xsd.md)。 指定约束 (唯一的键和 keyref) 如果你想要生成中的约束**数据集**。 请注意，如本主题稍后所述，键和 keyref 约束也可用于生成关系。  
+ 一般情况下，在 XML 架构中，您指定**msdata: relationship**如果你想要生成仅关系中的批注**数据集**。 有关详细信息，请参阅[生成数据集关系从 XML 架构 (XSD)](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/generating-dataset-relations-from-xml-schema-xsd.md)。 指定约束 (唯一的键和 keyref) 如果你想要生成中的约束**数据集**。 请注意，如本主题稍后所述，键和 keyref 约束也可用于生成关系。  
   
 ## <a name="generating-a-relationship-from-key-and-keyref-constraints"></a>从键和 keyref 约束生成关系  
- 而不是指定**msdata: relationship**批注，您可以指定键和 keyref 约束，用于在 XML 架构映射过程生成约束不仅关系中**数据集**。 但是，如果你指定`msdata:ConstraintOnly="true"`中**keyref**元素，**数据集**将包括仅约束并且不会包括关系。  
+ 而不是指定**msdata: relationship**批注，您可以指定键和 keyref 约束，用于在 XML 架构映射过程中生成约束不仅关系中**数据集**。 但是，如果您指定`msdata:ConstraintOnly="true"`中**keyref**元素，**数据集**将只包含约束，并且不会包括此关系。  
   
- 下面的示例显示包含一个 XML 架构**顺序**和**OrderDetail**不嵌套的元素。 该架构还指定键约束和 keyref 约束。  
+ 下面的示例显示包含一个 XML 架构**顺序**并**OrderDetail**不嵌套的元素。 该架构还指定键约束和 keyref 约束。  
   
 ```xml  
 <xs:schema id="MyDataSet" xmlns=""   
@@ -59,7 +59,7 @@ ms.locfileid: "32759837"
 </xs:schema>  
 ```  
   
- **数据集**生成在 XML 架构映射过程包括**顺序**和**OrderDetail**表。 此外，**数据集**包含关系和约束。 以下示例将显示这些关系和约束。 请注意，架构未指定**msdata: relationship**批注; 相反，使用键和 keyref 约束来生成关系。  
+ **数据集**生成 XML 架构映射过程包括期间**顺序**并**OrderDetail**表。 此外，**数据集**包含关系和约束。 以下示例将显示这些关系和约束。 请注意，该架构未指定**msdata: relationship**批注; 而使用键和 keyref 约束来生成关系。  
   
 ```  
 ....ConstraintName: OrderNumberKey  
@@ -85,7 +85,7 @@ ms.locfileid: "32759837"
 ..Nested: False  
 ```  
   
- 在以前的架构示例中，**顺序**和**OrderDetail**元素不嵌套。 在以下架构示例中，这些元素嵌套。 但是，没有**msdata: relationship**指定批注; 因此，假定一个隐式关系。 有关详细信息，请参阅[地图隐式关系之间嵌套架构元素](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/map-implicit-relations-between-nested-schema-elements.md)。 该架构还指定键约束和 keyref 约束。  
+ 在以前的架构示例中，**顺序**并**OrderDetail**元素不嵌套。 在以下架构示例中，这些元素嵌套。 但是，没有**msdata: relationship**指定批注; 因此，假定一个隐式关系。 有关详细信息，请参阅[地图隐式关系之间嵌套架构元素](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/map-implicit-relations-between-nested-schema-elements.md)。 该架构还指定键约束和 keyref 约束。  
   
 ```xml  
 <xs:schema id="MyDataSet" xmlns=""   
@@ -129,14 +129,14 @@ ms.locfileid: "32759837"
 </xs:schema>  
 ```  
   
- **数据集**导致 XML 架构映射过程包括两个表：  
+ **数据集**所得 XML 架构映射过程包括两个表：  
   
 ```  
 Order(OrderNumber, EmpNumber, Order_Id)  
 OrderDetail(OrderNumber, ItemNumber, Order_Id)  
 ```  
   
- **数据集**还包含两个关系 (基于一个**msdata: relationship**批注，另一个基于键和 keyref 约束) 和各种约束。 以下示例将显示这些关系和约束。  
+ **数据集**还包括两个关系 (一个基于**msdata: relationship**批注，另一个基于键和 keyref 约束) 和各种约束。 以下示例将显示这些关系和约束。  
   
 ```  
 ..RelationName: Order_OrderDetail  
@@ -188,4 +188,4 @@ OrderDetail(OrderNumber, ItemNumber, Order_Id)
   
 ## <a name="see-also"></a>请参阅  
  [从 XML 架构派生数据集关系结构 (XSD)](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/deriving-dataset-relational-structure-from-xml-schema-xsd.md)  
- [ADO.NET 托管提供程序和数据集开发人员中心](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)

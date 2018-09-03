@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: a5eada64-075b-4162-9655-ded84e4681f2
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 30802eff0b960c2a19e5cebb4757bfeff809d322
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a9fefa302a269e08300f0393434b66ca8738a27b
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33394727"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43481282"
 ---
 # <a name="lttypeinstantiationgt-element-net-native"></a>&lt;类型实例化&gt;元素 (.NET Native)
 将运行时反射策略应用到一个构造泛型类型。  
@@ -99,7 +99,7 @@ ms.locfileid: "33394727"
  如果 `<TypeInstantiation>` 元素是 [\<Assembly>](../../../docs/framework/net-native/assembly-element-net-native.md)、[\<Namespace>](../../../docs/framework/net-native/namespace-element-net-native.md)、或 [\<Type>](../../../docs/framework/net-native/type-element-net-native.md) 元素的子元素，它会重写由父元素定义的策略设置。 如果 [\<Type>](../../../docs/framework/net-native/type-element-net-native.md) 元素定义了相应的泛型类型定义，`<TypeInstantiation>` 元素只为指定构造泛型类型的实例化重写运行时反射策略。  
   
 ## <a name="example"></a>示例  
- 以下实例使用反射从一个构造的 <xref:System.Collections.Generic.Dictionary%602> 对象取回了泛型类型定义。 它还使用反射显示了代表构造泛型类型和构造类型定义的有关 <xref:System.Type> 对象的信息。 示例中的变量 `b` 是 [TextBlock](http://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.textblock.aspx) 控件。  
+ 以下实例使用反射从一个构造的 <xref:System.Collections.Generic.Dictionary%602> 对象取回了泛型类型定义。 它还使用反射显示了代表构造泛型类型和构造类型定义的有关 <xref:System.Type> 对象的信息。 示例中的变量 `b` 是 [TextBlock](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.textblock.aspx) 控件。  
   
  [!code-csharp[ProjectN_Reflection#2](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn_reflection/cs/makegenerictype1.cs#2)]  
   

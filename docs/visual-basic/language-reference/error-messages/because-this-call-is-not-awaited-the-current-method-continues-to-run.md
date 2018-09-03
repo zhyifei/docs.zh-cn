@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC42358
 ms.assetid: 43342515-c3c8-4155-9263-c302afabcbc2
-ms.openlocfilehash: 754fc6750e63f6d9f39da94041fc452829bca46d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a07955363ea5ca1ca8785c241b0de58149f329ba
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33591429"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43480888"
 ---
 # <a name="because-this-call-is-not-awaited-the-current-method-continues-to-run-before-the-call-is-completed"></a>由于不等待此调用，因此在调用完成之前，当前方法将继续运行
 在调用完成之前，会继续执行当前方法，原因是此调用不处于等待状态。 请考虑向调用结果应用“Await”运算符。  
@@ -23,7 +23,7 @@ ms.locfileid: "33591429"
   
  作为最佳做法，应始终等待调用。  
   
- 默认情况下，此消息是一个警告。 有关隐藏警告或将警告视为错误的详细信息，请参阅[在 Visual Basic 中的配置警告](/visualstudio/ide/configuring-warnings-in-visual-basic)。  
+ 默认情况下，此消息是一个警告。 有关隐藏警告或将警告视为错误的详细信息，请参阅[Configuring Warnings in Visual Basic](/visualstudio/ide/configuring-warnings-in-visual-basic)。  
   
  **错误 ID：** BC42358  
   
@@ -117,7 +117,7 @@ ms.locfileid: "33591429"
   
      MainWindow.xaml 的“设计”  视图中将显示一个简单的窗口，其中包含一个按钮和一个文本框。  
   
-     有关 XAML 设计器的详细信息，请参阅[使用 XAML 设计器创建 UI](/visualstudio/designers/creating-a-ui-by-using-xaml-designer-in-visual-studio)。 有关如何自行生成简单 UI 的信息，请参阅[演练：使用 Async 和 Await 访问 Web](http://msdn.microsoft.com/library/25879a6d-fdee-4a38-bc98-bb8c24d16042)的“创建 WPF 应用程序的步骤”和“设计简单的 WPF MainWindow 的步骤”两个章节。  
+     有关 XAML 设计器的详细信息，请参阅[使用 XAML 设计器创建 UI](/visualstudio/designers/creating-a-ui-by-using-xaml-designer-in-visual-studio)。 有关如何自行生成简单 UI 的信息，请参阅[演练：使用 Async 和 Await 访问 Web](https://msdn.microsoft.com/library/25879a6d-fdee-4a38-bc98-bb8c24d16042)的“创建 WPF 应用程序的步骤”和“设计简单的 WPF MainWindow 的步骤”两个章节。  
   
 4.  将 MainWindow.xaml.vb 中的代码替换为以下代码。  
   

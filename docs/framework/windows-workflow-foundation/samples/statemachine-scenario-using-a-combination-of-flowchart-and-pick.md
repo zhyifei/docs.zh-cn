@@ -2,12 +2,12 @@
 title: 使用 FlowChart 与 Pick 的组合的 StateMachine 方案
 ms.date: 03/30/2017
 ms.assetid: 88d81395-f7a3-41d8-8439-20a425c538a6
-ms.openlocfilehash: 0f7fc809b2fb7107de355546ca52a4d2ba2b39f0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b0f8e884a8a6c62c4e7edaf5cc9727bf7bfe8603
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33517931"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43485506"
 ---
 # <a name="statemachine-scenario-using-a-combination-of-flowchart-and-pick"></a>使用 FlowChart 与 Pick 的组合的 StateMachine 方案
 此示例演示如何使用 <xref:System.Activities.Statements.Flowchart> 和 <xref:System.Activities.Statements.Pick> 活动的组合实现一个简单的秒表方案。 它使用 Pick 活动中的 Receive 和 Send 来侦听秒表事件。  
@@ -39,11 +39,11 @@ ms.locfileid: "33517931"
   
     1.  导航到 StateMachineWithPick\CS\StopWatchService\bin\Debug 文件夹。  
   
-    2.  右击 StopWatchService.exe 文件并选择**以管理员身份运行**。  
+    2.  右击 StopWatchService.exe 文件，然后选择**以管理员身份运行**。  
   
 4.  从 [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] 中启动 StopWatchClient 客户端应用程序。  
   
-    1.  在**解决方案资源管理器**，选择**StopWatchClient**项目，然后右键单击**设为启动项目**。  
+    1.  在中**解决方案资源管理器**，选择**StopWatchClient**项目，然后右键单击**设为启动项目**。  
   
     2.  若要运行解决方案，请按 Ctrl+F5。  
   
@@ -54,6 +54,6 @@ ms.locfileid: "33517931"
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目录不存在，请转到[Windows Communication Foundation (WCF) 和针对.NET Framework 4 的 Windows Workflow Foundation (WF) 示例](http://go.microsoft.com/fwlink/?LinkId=150780)下载所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
+>  如果此目录不存在，请转到[Windows Communication Foundation (WCF) 和.NET Framework 4 的 Windows Workflow Foundation (WF) 示例](https://go.microsoft.com/fwlink/?LinkId=150780)若要下载所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\StateMachineWithPick`

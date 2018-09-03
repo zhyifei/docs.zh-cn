@@ -2,15 +2,15 @@
 title: 基于方法的查询示例 (LINQ to DataSet)
 ms.date: 03/30/2017
 ms.assetid: d340775c-7f39-4087-a290-5cbec6cfa68e
-ms.openlocfilehash: 0700711ece5cd8dda4688862e0ff19a3a63effdf
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 569292cc03f7cbcbaff2d8625849285ff6e2146e
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32765901"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43482530"
 ---
 # <a name="method-based-query-examples-linq-to-dataset"></a>基于方法的查询示例 (LINQ to DataSet)
-本节提供使用标准查询运算符的基于方法的查询语法中的 [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] 编程示例。 <xref:System.Data.DataSet>这些示例中使用填充使用`FillDataSet`方法，指定在[加载数据到数据集](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md)。 有关详细信息，请参阅[标准查询运算符概述](http://msdn.microsoft.com/library/24cda21e-8af8-4632-b519-c404a839b9b2)。  
+本节提供使用标准查询运算符的基于方法的查询语法中的 [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] 编程示例。 <xref:System.Data.DataSet>这些示例中使用通过使用填充`FillDataSet`方法中指定[加载数据到数据集](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md)。 有关详细信息，请参阅[标准查询运算符概述](https://msdn.microsoft.com/library/24cda21e-8af8-4632-b519-c404a839b9b2)。  
   
 ## <a name="in-this-section"></a>本节内容  
  [投影](../../../../docs/framework/data/adonet/method-based-query-syntax-examples-projection.md)  

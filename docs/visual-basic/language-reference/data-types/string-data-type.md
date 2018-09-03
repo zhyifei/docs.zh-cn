@@ -19,11 +19,11 @@ helpviewer_keywords:
 - identifier type characters [Visual Basic], $
 ms.assetid: 15ac03f5-cabd-42cc-a754-1df3893c25d9
 ms.openlocfilehash: 54f7dcd7de28e8aaa5376bb4ddd67fd53518511e
-ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43257947"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43481606"
 ---
 # <a name="string-data-type-visual-basic"></a>String 数据类型 (Visual Basic)
 存储无符号的 16 位 （2 个字节） 码位的序列该范围从 0 到 65535 之间的值中。 每个*代码点*，或字符代码，表示单个 Unicode 字符。 一个字符串，可包含从 0 到大约 20 亿 (2 ^31) 的 Unicode 字符。  

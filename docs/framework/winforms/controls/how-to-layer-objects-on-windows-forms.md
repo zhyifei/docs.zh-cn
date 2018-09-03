@@ -12,30 +12,30 @@ helpviewer_keywords:
 - controls [Windows Forms], positioning
 - z-order
 ms.assetid: 1acc4281-2976-4715-86f4-bda68134baaf
-ms.openlocfilehash: 1a2a25f2e7eaa6618c0bf535a34f7dc6a28d51fa
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d67d9b204c316dce5f3818496d791ed4c1b352f2
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33533681"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43478034"
 ---
 # <a name="how-to-layer-objects-on-windows-forms"></a>如何：对 Windows 窗体上的对象分层
-当你创建复杂的用户界面，或使用多个文档界面 (MDI) 窗体时，你通常需要进行分层控件和子窗体上来创建更复杂的用户界面 (UI)。 若要移动并跟踪控件和 windows 组的上下文中的可操作其 z 顺序。 *Z 顺序*是沿窗体的 z 轴 （深度） 窗体上控件的可视化分层。 在 z 顺序的顶层窗口重叠所有其他窗口之上。 所有其他 windows 重叠窗口底部的 z 顺序。  
+当您创建复杂的用户界面，或使用多文档界面 (MDI) 窗体时，通常想要层控件和子窗体以创建更复杂的用户界面 (UI)。 若要移动跟踪的控件和 windows 组的上下文中，可操作其 z 顺序。 *Z 顺序*是沿窗体的 z 轴 （深度） 窗体上控件的可视化分层。 在窗口顶部的 z 顺序重叠所有其他窗口之上。 所有其他窗口重叠窗口底部的 z 顺序。  
   
 > [!NOTE]
->  显示的对话框和菜单命令可能会与“帮助”中的描述不同，具体取决于你现用的设置或版本。 若要更改设置，请在 **“工具”** 菜单上选择 **“导入和导出设置”** 。 有关详细信息，请参阅[在 Visual Studio 中自定义开发设置](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3)。  
+>  显示的对话框和菜单命令可能会与“帮助”中的描述不同，具体取决于你现用的设置或版本。 若要更改设置，请在 **“工具”** 菜单上选择 **“导入和导出设置”** 。 有关详细信息，请参阅[个性化设置 Visual Studio IDE](/visualstudio/ide/personalizing-the-visual-studio-ide)。  
   
 ### <a name="to-layer-controls-at-design-time"></a>在设计时排列控件  
   
 1.  选择你想要层的控件。  
   
-2.  上**格式**菜单上，指向**顺序**，然后单击**置于顶层**或**置于底层**。  
+2.  上**格式**菜单，依次指向**顺序**，然后单击**置于顶层**或者**发送回**。  
   
 ### <a name="to-layer-controls-programmatically"></a>若要以编程方式对控件进行分层  
   
 -   使用<xref:System.Windows.Forms.Control.BringToFront%2A>和<xref:System.Windows.Forms.Control.SendToBack%2A>操作控件的 z 顺序的方法。  
   
-     例如，如果<xref:System.Windows.Forms.TextBox>控件， `txtFirstName`，是位于另一个控件，并且想要将其放在顶部，请使用以下代码：  
+     例如，如果<xref:System.Windows.Forms.TextBox>控件， `txtFirstName`，是其下方另一个控件，并想要将其放在顶部，请使用以下代码：  
   
     ```vb  
     txtFirstName.BringToFront()  
@@ -50,7 +50,7 @@ ms.locfileid: "33533681"
     ```  
   
 > [!NOTE]
->  Windows 窗体支持*控件包含*。 控件包含涉及放置多个在包含控件中，如大量的控件<xref:System.Windows.Forms.RadioButton>内控制<xref:System.Windows.Forms.GroupBox>控件。 然后可以层包含控件内的控件。 移动组框移动，这些控件，因为它们包含其内部。  
+>  Windows 窗体支持*控件包含*。 控件包含涉及到将放置多个控件内包含的控件，例如的数目<xref:System.Windows.Forms.RadioButton>控件的<xref:System.Windows.Forms.GroupBox>控件。 然后可以层中包含的控件的控件。 移动分组框移动，这些控件，因为它们包含其内部。  
   
 ## <a name="see-also"></a>请参阅  
  [Windows 窗体控件](../../../../docs/framework/winforms/controls/index.md)  

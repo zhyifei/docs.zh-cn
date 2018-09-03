@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 8ae3712f-ef5e-41a1-9ea9-b3d0399439f1
-ms.openlocfilehash: 40ba9085905869ca5d3d8f39a3d7ce11639b1504
-ms.sourcegitcommit: a1e35d4e94edab384a63406c0a5438306873031b
+ms.openlocfilehash: 17bf06864016ece571b21bee2c180b5781a62959
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/21/2018
-ms.locfileid: "42754568"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43480732"
 ---
 # <a name="local-transactions"></a>本地事务
 如果要将多项任务绑定在一起，使其作为单个工作单元来执行，可以使用 [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 中的事务。 例如，假设应用程序执行两个任务。 首先使用订单信息更新表。 然后更新包含库存信息的表，将已订购的商品记入借方。 如果任何一项任务失败，则这两个更新将回滚。  
@@ -51,4 +51,4 @@ ms.locfileid: "42754568"
  [事务和并发性](../../../../docs/framework/data/adonet/transactions-and-concurrency.md)  
  [分布式事务](../../../../docs/framework/data/adonet/distributed-transactions.md)  
  [System.Transactions 与 SQL Server 的集成](../../../../docs/framework/data/adonet/system-transactions-integration-with-sql-server.md)  
- [ADO.NET 托管提供程序和数据集开发人员中心](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)

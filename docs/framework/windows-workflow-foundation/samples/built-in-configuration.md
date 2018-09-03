@@ -2,12 +2,12 @@
 title: 内置配置
 ms.date: 03/30/2017
 ms.assetid: 34e85c9b-088d-4347-816c-0f77cb73ef2f
-ms.openlocfilehash: 8488a753cb1c540d9c34d9bcf7b2a3112302a122
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e76c019d9fc1b416e6fa8175a70b5fd01d9ff53e
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33518615"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43476113"
 ---
 # <a name="built-in-configuration"></a>内置配置
 此示例演示了 SQL 工作流实例存储的使用和配置。 SQL 工作流实例存储是基于 SQL 的实例存储实现。 它允许实例将状态保存到 SQL Server 或 SQL Server Express 数据库中以及从中加载状态。  
@@ -71,11 +71,11 @@ ms.locfileid: "33518615"
   
 3.  如果管理员权限不可用，则创建 SQL Server 登录。 转到`Security`，**登录名**。 右键单击**登录名**并创建新的登录名。  
   
-4.  向 SQL 角色添加您的 ACL 用户。 打开**数据库**， **InstanceStore**，**安全**。 右键单击**用户**和选择**新用户**。 设置**登录名**为上一步中创建的用户。 将用户添加到的数据库角色成员资格**System.Activities.DurableInstancing.InstanceStoreUsers** （及其他）。 请注意，该用户可能已经存在（例如，用户 dbo）。  
+4.  向 SQL 角色添加您的 ACL 用户。 打开**数据库**， **InstanceStore**，**安全**。 右键单击**用户**，然后选择**新用户**。 设置**登录名**到上一步中创建的用户。 将用户添加到数据库角色成员身份**System.Activities.DurableInstancing.InstanceStoreUsers** （和其他人）。 请注意，该用户可能已经存在（例如，用户 dbo）。  
   
 5.  在 [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] 中打开 InstanceStore.sln 文件，按 CTRL+SHIFT+B 生成解决方案。  
   
-6.  在[!INCLUDE[fileExplorer](../../../../includes/fileexplorer-md.md)]、 导航到示例的相应的 bin\debug 目录 (\WF\Basic\Persistence\BuiltInConfiguration\cs\InstanceStore(1 or 2)\bin\debug)、 右击 InstanceStore.exe 和选择**以管理员身份运行**. 必须使用管理特权来运行此示例，因为它要打开一个通道侦听器。  
+6.  在中[!INCLUDE[fileExplorer](../../../../includes/fileexplorer-md.md)]，导航到示例的相应的 bin\debug 目录 (\WF\Basic\Persistence\BuiltInConfiguration\cs\InstanceStore(1 or 2)\bin\debug) 中，右击 InstanceStore.exe 并选择**以管理员身份运行**. 必须使用管理特权来运行此示例，因为它要打开一个通道侦听器。  
   
 7.  如果已在数据库（而不是 SQL Server Express 的本地安装）中创建实例存储，则必须更新示例中的数据库连接字符串（InstanceStore1 项目的 Program.cs 中的 `const string ConnectionString` 和 InstanceStore2 项目的 App.config 中的 `connectionString` 特性），并重新编译示例。  
   
@@ -83,15 +83,15 @@ ms.locfileid: "33518615"
   
 1.  在此示例运行的过程中，启动 SQL Server Management Studio。  
   
-2.  在**对象资源管理器**，选择**数据库**， **InstanceStore**，**表**，，然后**System.Activities.DurableInstancing.InstanceTable**。  
+2.  在中**对象资源管理器**，选择**数据库**， **InstanceStore**，**表**，，然后**System.Activities.DurableInstancing.InstanceTable**。  
   
-3.  右键单击**InstanceTable**和选择**选择前 1000年行**。  
+3.  右键单击**InstanceTable** ，然后选择**选择前 1000年行**。  
   
-4.  观察是否存在一个新项，而且**锁定到期日**每 5 秒钟更改一次 (单击任务栏的**执行**按钮可刷新查询)。 这是设置的结果**宿主锁定续订期**为 5。  
+4.  观察是否有新项，而且**锁定到期日**每隔 5 秒更改一次 (单击任务栏**Execute**按钮可刷新查询)。 这是设置的结果**宿主锁定续订期**为 5。  
   
 5.  计数完成后，观察实例表中的项是否已移除。 这是设置的结果**实例完成操作**到**DeleteAll**。  
   
-6.  按 ENTER 以终止工作流主机应用程序，并观察**LockOwnersTable**被删除。  
+6.  按 ENTER 以终止工作流主机应用程序，并观察是否**LockOwnersTable**被删除。  
   
 #### <a name="to-uninstall-the-sample"></a>卸载此示例  
   
@@ -102,9 +102,9 @@ ms.locfileid: "33518615"
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目录不存在，请转到[Windows Communication Foundation (WCF) 和针对.NET Framework 4 的 Windows Workflow Foundation (WF) 示例](http://go.microsoft.com/fwlink/?LinkId=150780)下载所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
+>  如果此目录不存在，请转到[Windows Communication Foundation (WCF) 和.NET Framework 4 的 Windows Workflow Foundation (WF) 示例](https://go.microsoft.com/fwlink/?LinkId=150780)若要下载所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Persistence\BuiltInConfiguration`  
   
 ## <a name="see-also"></a>请参阅  
- [AppFabric 承载和持久性示例](http://go.microsoft.com/fwlink/?LinkId=193961)
+ [AppFabric 承载和持久性示例](https://go.microsoft.com/fwlink/?LinkId=193961)

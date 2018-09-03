@@ -2,12 +2,12 @@
 title: 实体 SQL 引用
 ms.date: 03/30/2017
 ms.assetid: 61ce7ee1-ffe2-477d-8a9f-835b0a11d900
-ms.openlocfilehash: d6b40d0c1662e18ed83c58bfdde7b6dac65220dd
-ms.sourcegitcommit: f6343b070f3c66877338a05c8bfb0be9985255e2
+ms.openlocfilehash: ae0aec999d30d099467be690b8920d1413b564f0
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/24/2018
-ms.locfileid: "39221044"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43487414"
 ---
 # <a name="entity-sql-reference"></a>实体 SQL 引用
 
@@ -67,7 +67,7 @@ ms.locfileid: "39221044"
 |[\! （逻辑非）](not-entity-sql.md)|逻辑非。|
 |[&#124;&#124;（逻辑或）](or-entity-sql.md)|逻辑“或”。|
 |[CASE](case-entity-sql.md)|求出一组布尔表达式的值以确定结果。|
-|[THEN](then-entity-sql.md)|结果[时](http://msdn.microsoft.com/library/6233fe9f-00b0-460e-8372-64e138a5f998)子句评估为 true 时。|
+|[THEN](then-entity-sql.md)|结果[时](https://msdn.microsoft.com/library/6233fe9f-00b0-460e-8372-64e138a5f998)子句评估为 true 时。|
 
 ## <a name="query-operators"></a>查询运算符
 

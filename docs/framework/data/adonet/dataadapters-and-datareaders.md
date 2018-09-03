@@ -2,15 +2,15 @@
 title: DataAdapter 和 DataReader
 ms.date: 03/30/2017
 ms.assetid: cc952ca2-ec19-46ab-9189-15174b52cb74
-ms.openlocfilehash: 7fd7013478bbf30c2a7e915045e3dd192ca92540
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 6e711b11ef9a3eca53806b825f1e721169ab662d
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32758095"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43476217"
 ---
 # <a name="dataadapters-and-datareaders"></a>DataAdapter 和 DataReader
-你可以使用 ADO.NET **DataReader**以从数据库中检索数据的只读、 只进流。 查询执行，以及存储在客户端上的网络缓冲区，直到你请求时，这些结果将返回使用**读取**方法**DataReader**。 使用**DataReader**可以提高应用程序性能，检索数据，只要它不可用，并且 （默认） 存储在内存，从而减少系统开销中一次只有一个行。  
+可以使用 ADO.NET **DataReader**若要从数据库中检索数据的只读、 只进流。 结果作为查询执行，并且存储在客户端上的网络缓冲区中，直到请求它们返回，使用**读**方法**DataReader**。 使用**DataReader**检索数据，只要它不可用，并且默认情况下，可以提高应用程序性能将只有一个行存储在内存中，从而降低系统开销，一次。  
   
  <xref:System.Data.Common.DataAdapter> 用于从数据源检索数据并填充 <xref:System.Data.DataSet> 中的表。 `DataAdapter` 还可将对 `DataSet` 所做的更改解析回数据源。 `DataAdapter` 使用 .NET Framework 数据提供程序的 `Connection` 对象连接到数据源，并使用 `Command` 对象从数据源检索数据以及将更改解析回数据源。  
   
@@ -18,7 +18,7 @@ ms.locfileid: "32758095"
   
 ## <a name="in-this-section"></a>本节内容  
  [使用 DataReader 检索 ADO 数据](../../../../docs/framework/data/adonet/retrieving-data-using-a-datareader.md)  
- 描述 ADO.NET **DataReader**对象以及如何使用它从数据源返回结果流。  
+ 描述 ADO.NET **DataReader**对象以及如何使用它来从数据源返回的结果流。  
   
  [从 DataAdapter 填充数据集](../../../../docs/framework/data/adonet/populating-a-dataset-from-a-dataadapter.md)  
  说明如何通过 `DataSet` 使用表、列和行填充 `DataAdapter`。  
@@ -49,4 +49,4 @@ ms.locfileid: "32758095"
  [命令和参数](../../../../docs/framework/data/adonet/commands-and-parameters.md)  
  [事务和并发性](../../../../docs/framework/data/adonet/transactions-and-concurrency.md)  
  [数据集、数据表和数据视图](../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
- [ADO.NET 托管提供程序和数据集开发人员中心](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 8dd45b02-7218-40f9-857d-40d7b98b850b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1f097a14486b9a07df867ffa5514da33f3db6d4b
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: eb2485f2ecf0426360dba80d443500a92b5a7af6
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32744520"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43482218"
 ---
 # <a name="add-ins-and-extensibility"></a>外接程序和扩展性
 <a name="top"></a> 外接程序为主机应用程序提供扩展功能或服务。 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 提供了一个编程模型，开发人员可利用此模型来开发外接程序并在其主机应用程序中激活。 该模型通过在主机与外接程序之间构造通信管道来实现此功能。 该模型通过使用 <xref:System.AddIn>、 <xref:System.AddIn.Hosting>、 <xref:System.AddIn.Pipeline>和 <xref:System.AddIn.Contract> 命名空间中的类实现。  
@@ -35,7 +35,7 @@ ms.locfileid: "32744520"
 -   [引用](#reference)  
   
 > [!NOTE]
->  有关其他示例代码以及生成外接程序管道的客户工具技术预览，请参阅 [CodePlex 上的托管扩展性和外接程序框架网站](http://go.microsoft.com/fwlink/?LinkId=121190)。  
+>  您可以找到其他示例代码和客户工具技术预览生成外接程序管道，用于在[CodePlex 上的托管扩展性和外接程序框架网站](https://go.microsoft.com/fwlink/?LinkId=121190)。  
   
 <a name="addin_model"></a>   
 ## <a name="add-in-model"></a>外接程序模型  
@@ -43,7 +43,7 @@ ms.locfileid: "32744520"
   
  下图显示外接程序管道。  
   
- ![添加&#45;管道模型中。] (../../../docs/framework/add-ins/media/addin1.png "AddIn1")  
+ ![添加&#45;管道模型中。](../../../docs/framework/add-ins/media/addin1.png "AddIn1")  
 外接程序管道  
   
  这些段的程序集不需要处于同一个应用程序域。 可以将外接程序加载至其自己的新应用程序域、现有应用程序域，甚至主机的应用程序域。 可以将多个外接程序加载到同一个应用程序域，这样外接程序便可以共享资源和安全性上下文。  
@@ -72,7 +72,7 @@ ms.locfileid: "32744520"
 ### <a name="discovery-and-activation"></a>发现和激活  
  可以使用表示从信息存储中找到的外接程序的集合中的令牌激活外接程序。 通过搜索定义主机的外接程序视图的类型找到外接程序。 还可以按定义外接程序的类型来查找特定的外接程序。 信息存储区包括两个缓存文件：管道存储区和外接程序存储区。  
   
- 有关更新和重新生成信息存储的信息，请参阅[外接程序中发现](http://msdn.microsoft.com/library/5d268dde-11df-4c4d-a022-f58d88bbc421)。 有关激活外接程序的信息，请参阅[外接程序中激活](http://msdn.microsoft.com/library/bedcbcdf-5964-4215-b5f3-3299798b2b3f)和[How to： 激活外接程序具有不同的隔离和安全性](http://msdn.microsoft.com/library/7afe7ec8-5158-4350-9119-5df0ecab8aa5)。  
+ 有关更新和重新生成的信息存储区的信息，请参阅[外接程序发现](https://msdn.microsoft.com/library/5d268dde-11df-4c4d-a022-f58d88bbc421)。 有关激活外接程序的信息，请参阅[外接程序激活](https://msdn.microsoft.com/library/bedcbcdf-5964-4215-b5f3-3299798b2b3f)并[如何： 激活外接程序具有不同的隔离和安全性](https://msdn.microsoft.com/library/7afe7ec8-5158-4350-9119-5df0ecab8aa5)。  
   
 ### <a name="isolation-levels-and-external-processes"></a>隔离级别和外部进程  
  外接程序模型在外接程序与其主机之间或者两个外接程序之间支持几个隔离级别。这些隔离级别如下所示（从低到高顺序）：  
@@ -87,16 +87,16 @@ ms.locfileid: "32744520"
   
 -   每个外接程序在外部进程中以独占方式加载到自己的应用程序域。 这是最高级别的隔离方案。  
   
- 有关使用外部进程的详细信息，请参阅[How to： 激活外接程序具有不同的隔离和安全性](http://msdn.microsoft.com/library/7afe7ec8-5158-4350-9119-5df0ecab8aa5)。  
+ 有关使用外部进程的详细信息，请参阅[如何： 激活外接程序具有不同的隔离和安全性](https://msdn.microsoft.com/library/7afe7ec8-5158-4350-9119-5df0ecab8aa5)。  
   
 ### <a name="lifetime-management"></a>生存期管理  
- 由于外接程序模型跨应用程序域和进程边界，因此自身的垃圾回收不足以释放和回收对象。 外接程序模型提供一种生存期管理机制，该机制使用令牌和引用计数，并且通常不需要额外的编程。 有关详细信息，请参阅[生命期管理](http://msdn.microsoft.com/library/57a9c87e-394c-4fef-89f2-aa4223a2aeb5)。  
+ 由于外接程序模型跨应用程序域和进程边界，因此自身的垃圾回收不足以释放和回收对象。 外接程序模型提供一种生存期管理机制，该机制使用令牌和引用计数，并且通常不需要额外的编程。 有关详细信息，请参阅[生存期管理](https://msdn.microsoft.com/library/57a9c87e-394c-4fef-89f2-aa4223a2aeb5)。  
   
  [返回页首](#top)  
   
 <a name="distinguishing_between_addins_and_hosts"></a>   
 ## <a name="distinguishing-between-add-ins-and-hosts"></a>区分外接程序和主机  
- 外接程序与主机的区别仅仅是主机能够激活外接程序。 主机可以是两个应用程序中较大的一个（如文字处理应用程序及其拼写检查器），也可以是两个应用程序中较小的一个（嵌入媒体播放中的即时消息客户端）。 外接程序模型支持客户端和服务器方案中的外接程序。 服务器外接程序的示例包括为电子邮件服务器提供病毒扫描、垃圾邮件过滤以及 IP 保护的外接程序。 客户端外接程序示例包括引用外接文字处理器、 图形程序和游戏和病毒扫描的本地电子邮件客户端的特殊功能。  
+ 外接程序与主机的区别仅仅是主机能够激活外接程序。 主机可以是两个应用程序中较大的一个（如文字处理应用程序及其拼写检查器），也可以是两个应用程序中较小的一个（嵌入媒体播放中的即时消息客户端）。 外接程序模型支持客户端和服务器方案中的外接程序。 服务器外接程序的示例包括为电子邮件服务器提供病毒扫描、垃圾邮件过滤以及 IP 保护的外接程序。 客户端外接程序示例包括引用的插件文字处理器、 图形程序和游戏和病毒扫描的本地电子邮件客户端的特殊功能。  
   
  [返回页首](#top)  
   
@@ -105,8 +105,8 @@ ms.locfileid: "32744520"
   
 |标题|描述|  
 |-----------|-----------------|  
-|[Pipeline Development](../../../docs/framework/add-ins/pipeline-development.md)|描述从主机应用程序到外接程序之间的段的通信管道。 提供描述如何构造管道以及如何将段部署到 Visual Studio 中的管道的演练主题中的代码示例。|  
-|[应用程序域和程序集](http://msdn.microsoft.com/library/433b04ae-4ba8-4849-9dbd-79194f240346)|描述（为安全性、可靠性和版本控制提供隔离边界的）应用程序域与程序集之间的关系。|  
+|[Pipeline Development](../../../docs/framework/add-ins/pipeline-development.md)|描述从主机应用程序到外接程序之间的段的通信管道。 提供介绍如何构造管道以及如何将段部署到 Visual Studio 中的管道的演练主题中的代码示例。|  
+|[应用程序域和程序集](https://msdn.microsoft.com/library/433b04ae-4ba8-4849-9dbd-79194f240346)|描述（为安全性、可靠性和版本控制提供隔离边界的）应用程序域与程序集之间的关系。|  
   
  [返回页首](#top)  
   

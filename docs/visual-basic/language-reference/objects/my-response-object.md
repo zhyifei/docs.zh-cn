@@ -8,11 +8,11 @@ helpviewer_keywords:
 - My.Response object
 ms.assetid: 626359bc-3165-40b4-bfaf-2c610e26eb5b
 ms.openlocfilehash: d5f49529a2593093a234babc22f64b591ea3cc61
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42929546"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43479807"
 ---
 # <a name="myresponse-object"></a>My.Response 对象
 获取<xref:System.Web.HttpResponse>对象与关联<xref:System.Web.UI.Page>。 使用此对象，可以将 HTTP 响应数据发送到客户端，并包含此响应的相关信息。  

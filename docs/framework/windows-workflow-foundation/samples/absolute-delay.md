@@ -2,11 +2,12 @@
 title: 绝对延迟
 ms.date: 03/30/2017
 ms.assetid: b483139a-39bb-4560-8003-8969a8fc2cd1
-ms.openlocfilehash: 3a104f6b879e9cdc899bad2201ad1ed320a38a2d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 30719a4340b738a7462584c4dca00f6d5d90ac72
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43486097"
 ---
 # <a name="absolute-delay"></a>绝对延迟
 此示例的主要方案是，通过在工作流应用程序中使用持久性计时器延迟到指定的 <xref:System.DateTime>。 这不同于使用内置 <xref:System.Activities.Statements.Delay> 活动，因为后者只允许延迟一段给定的 <xref:System.TimeSpan>（或分钟数/秒数）。  
@@ -38,7 +39,7 @@ ms.lasthandoff: 05/04/2018
   
  此示例还演示如何为 <xref:System.Activities.WorkflowApplication> 启用持久性。 在此特定示例中，我们将使用持久性计时器，在该计时器中，工作流数据将在等待计时器过期的空闲时间内卸载到持久性数据库中。 此实现还可用于其他持久性操作。 此示例演示如何使用 SQL Server 设置持久性连接字符串以及如何创建实例存储以便为工作流实例保留数据。 提供了有关如何在引发使工作流实例可运行的事件后恢复工作流的逻辑。  
   
- 逐句通过此示例时，你将看到的时间顺序内置延迟开始和完成，这反过来会导致发送的电子邮件。 从这里开始，AbsoluteDelay 活动将暂停直到指定的 <xref:System.DateTime>（如果 <xref:System.DateTime> 已过期，则为 0 秒），而后者会在过期后发送电子邮件。 这将显示内置 <xref:System.Activities.Statements.Delay> 功能与使用 AbsoluteDelay 活动的两种不同用例。  
+ 逐句通过此示例时，你将看到在其中内置延迟开始和完成的时间，这反过来会导致发送的电子邮件。 从这里开始，AbsoluteDelay 活动将暂停直到指定的 <xref:System.DateTime>（如果 <xref:System.DateTime> 已过期，则为 0 秒），而后者会在过期后发送电子邮件。 这将显示内置 <xref:System.Activities.Statements.Delay> 功能与使用 AbsoluteDelay 活动的两种不同用例。  
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>设置、生成和运行示例  
   
@@ -57,15 +58,15 @@ ms.lasthandoff: 05/04/2018
     > [!NOTE]
     >  如果未输入有效 SMTP 主机，则应用程序将引发 SMTP 异常。  
   
-7.  生成解决方案，通过选择**生成**，**生成解决方案**。  
+7.  通过选择生成解决方案**构建**，**生成解决方案**。  
   
-8.  运行解决方案，按**F5**。  
+8.  运行该解决方案通过按**F5**。  
   
 > [!IMPORTANT]
 >  您的计算机上可能已安装这些示例。 在继续操作之前，请先检查以下（默认）目录：  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目录不存在，请转到[Windows Communication Foundation (WCF) 和针对.NET Framework 4 的 Windows Workflow Foundation (WF) 示例](http://go.microsoft.com/fwlink/?LinkId=150780)下载所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
+>  如果此目录不存在，请转到[Windows Communication Foundation (WCF) 和.NET Framework 4 的 Windows Workflow Foundation (WF) 示例](https://go.microsoft.com/fwlink/?LinkId=150780)若要下载所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Services\AbsoluteDelay`

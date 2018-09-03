@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6d2ac3788b68626eb04a6f2cbac995b8e5b4ebf5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: e47c2ac69317b2d2db489dce9a0102b5fe304c05
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33442577"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43483050"
 ---
 # <a name="strongnamesignatureverificationex2-method"></a>StrongNameSignatureVerificationEx2 方法
-验证强名称程序集签名，并提供从 ECMA 键到真实键的映射。  
+签名验证证书的强名称程序集，并提供从 ECMA 键到真实键的映射。  
   
 ## <a name="syntax"></a>语法  
   
@@ -40,22 +40,22 @@ HRESULT StrongNameSignatureVerificationEx (
   
 #### <a name="parameters"></a>参数  
  `wszFilePath`  
- [in]要验证的程序集的可移植可执行 （.exe 或.dll） 文件路径。  
+ [in]要验证的程序集的可移植可执行 （.exe 或.dll） 文件的路径。  
   
  `fForceVerification`  
- [in]`true`执行验证，即使它是需要重写注册表设置; 否则为`false`。  
+ [in]`true`来执行验证，即使它是必须重写注册表设置; 否则为`false`。  
   
  `pbEcmaPublicKey`  
- [in]指向 ECMA 公共至关重要的真实键中的映射的用于验证。  
+ [in]指向到的真实键的 ECMA 公共密钥中的映射的使用进行验证。  
   
  `cbEcmaPublicKey`  
  [in]实际的 ECMA 公共密钥的长度。  
   
  `pfWasVerified`  
- [out]`true`强名称签名验证; 否则为如果`false`。 此参数也设置为`false`如果验证成功由于注册表设置。  
+ [out]`true`强名称签名是否已验证; 否则为`false`。 此参数也设置为`false`如果验证成功由于注册表设置。  
   
 ## <a name="return-value"></a>返回值  
- `S_OK` 如果验证成功，则否则为该值指示失败的 HRESULT 值 (请参阅[常见的 HRESULT 值](http://go.microsoft.com/fwlink/?LinkId=213878)有关的列表)。  
+ `S_OK` 如果验证成功;否则为指示失败的 HRESULT 值 (请参阅[常见的 HRESULT 值](https://go.microsoft.com/fwlink/?LinkId=213878)列表)。  
   
 ## <a name="requirements"></a>要求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
@@ -64,7 +64,7 @@ HRESULT StrongNameSignatureVerificationEx (
   
  **库：** 作为 MSCorEE.dll 中的资源  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅  
  [StrongNameSignatureVerification 方法](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignatureverification-method.md)  

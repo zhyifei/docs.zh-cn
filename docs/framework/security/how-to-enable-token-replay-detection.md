@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 5a9f5771-f5f6-4100-8501-406aa20d731a
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: b9c187998b4af41e1a56ed9a64625da7e4f95d5e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: dd5adf39c37fce92d4caf1d85e2a6a12e9e6b59b
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33408055"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43486506"
 ---
 # <a name="how-to-enable-token-replay-detection"></a>如何：启用令牌重播检测
 ## <a name="applies-to"></a>适用于  
@@ -19,7 +19,7 @@ ms.locfileid: "33408055"
 -   ASP.NET® Web 窗体  
   
 ## <a name="summary"></a>总结  
- 此“如何”主题提供了详细的分步过程，用于说明如何在使用 WIF 的 ASP.NET 应用程序中启用令牌重播检测。 还说明了如何测试应用程序，以验证是否启用令牌重播检测。 此“如何”主题未详细介绍如何创建安全令牌服务 (STS)，而是使用随标识和访问工具提供的开发 STS。 开发 STS 不执行实际的身份验证操作，只是用来进行测试。 你将需要安装标识和访问工具才能完成此“如何”主题。 此工具可以从下列位置下载：[标识和访问工具](http://go.microsoft.com/fwlink/?LinkID=245849)  
+ 此“如何”主题提供了详细的分步过程，用于说明如何在使用 WIF 的 ASP.NET 应用程序中启用令牌重播检测。 还说明了如何测试应用程序，以验证是否启用令牌重播检测。 此“如何”主题未详细介绍如何创建安全令牌服务 (STS)，而是使用随标识和访问工具提供的开发 STS。 开发 STS 不执行实际的身份验证操作，只是用来进行测试。 你将需要安装标识和访问工具才能完成此“如何”主题。 此工具可以从下列位置下载：[标识和访问工具](https://go.microsoft.com/fwlink/?LinkID=245849)  
   
 ## <a name="contents"></a>内容  
   

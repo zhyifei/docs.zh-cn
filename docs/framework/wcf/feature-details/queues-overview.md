@@ -4,22 +4,22 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - queues [WCF], MSMQ integration
 ms.assetid: b8757992-ffce-40ad-9e9b-3243f6d0fce1
-ms.openlocfilehash: 85c8cb1fbbda9be14754174c7cb7c76513bd94c7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c181a415c8702c3032077728139b23e86d85d1f0
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33497008"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43480399"
 ---
 # <a name="queues-overview"></a>队列概述
-本节介绍与排队通信相关的一般概念和核心概念。 后续部分将详细介绍如何在 Windows Communication Foundation (WCF) 显示此处所述的队列概念。  
+本节介绍与排队通信相关的一般概念和核心概念。 后续各节将有关此处所述的队列概念中如何显示在 Windows Communication Foundation (WCF) 的详细信息。  
   
 ## <a name="basic-queuing-concepts"></a>基本的队列概念  
  设计分布式应用程序时，在服务和客户端之间选择正确的通信传输是非常重要的。 使用的传输种类受几个因素影响。 一个重要的因素是服务、客户端和传输之间的隔离，它可确定是使用排队传输，还是使用直接传输（如 TCP 或 HTTP）。 由于直接传输（如 TCP 和 HTTP）的特性，如果服务或客户端停止工作或网络发生故障时，通信就会停止。 服务、客户端和网络必须同时运行，应用程序才能工作。 排队传输可提供隔离，即如果服务或客户端发生故障或它们之间的通信链接出现问题，客户端和服务还可以继续工作。  
   
- 即使通信方或网络出现故障，队列也可以提供可靠的通信。 队列捕获和传送在通信方之间交换的消息。 通常，某些种类的存储（可变或持久）可支持队列。 队列存储来自代表服务的客户端的消息，然后将这些消息转发给该服务。 间接寻址队列可确保隔离出现故障的任意一方，因此可将它作为高可用性系统和断开服务的首选通信机制。 间接寻址会产生因高延迟而引起的成本。 *延迟*是客户端发送一条消息的时间和服务接收它的时间之间的时间延迟。 这表示发送消息后，不知道何时会处理该消息。 大多数的排队应用程序都需要处理高延迟。 下面的插图显示了排队通信的概念模型。  
+ 即使通信方或网络出现故障，队列也可以提供可靠的通信。 队列捕获和传送在通信方之间交换的消息。 通常，某些种类的存储（可变或持久）可支持队列。 队列存储来自代表服务的客户端的消息，然后将这些消息转发给该服务。 间接寻址队列可确保隔离出现故障的任意一方，因此可将它作为高可用性系统和断开服务的首选通信机制。 间接寻址会产生因高延迟而引起的成本。 *延迟*是客户端发送一条消息的时间和服务接收的时间之间的时间延迟。 这表示发送消息后，不知道何时会处理该消息。 大多数的排队应用程序都需要处理高延迟。 下面的插图显示了排队通信的概念模型。  
   
- ![排队通信的模型](../../../../docs/framework/wcf/feature-details/media/qconceptual-figure1c.gif "QConceptual Figure1c")  
+ ![模型的排队通信](../../../../docs/framework/wcf/feature-details/media/qconceptual-figure1c.gif "QConceptual Figure1c")  
   
  排队通信概念模型  
   
@@ -46,7 +46,7 @@ ms.locfileid: "33497008"
   
  由于高延迟，因此发送消息后，您无法知道需要多长时间消息才能到达它的目标队列，也不会知道需要多长时间服务才能处理该消息。 因此，不要使用单个事务来发送消息、接收消息以及处理消息。 这样创建的事务才不会出现不确定的时间量。 客户端和服务通过队列使用事务进行通信时，会涉及两个事务：一个在客户端上，另一个在服务上。 下面的插图显示了在典型排队通信中的事务边界。  
   
- ![与事务的队列](../../../../docs/framework/wcf/feature-details/media/qwithtransactions-figure3.gif "QWithTransactions Figure3")  
+ ![与事务队列](../../../../docs/framework/wcf/feature-details/media/qwithtransactions-figure3.gif "QWithTransactions 图 3")  
   
  排队通信，其中分别显示了捕获和传送事务  
   
@@ -81,6 +81,6 @@ ms.locfileid: "33497008"
  [可变排队通信](../../../../docs/framework/wcf/samples/volatile-queued-communication.md)  
  [Windows Communication Foundation 到消息队列](../../../../docs/framework/wcf/samples/wcf-to-message-queuing.md)  
  [安装消息队列 (MSMQ)](../../../../docs/framework/wcf/samples/installing-message-queuing-msmq.md)  
- [消息队列集成绑定示例](http://msdn.microsoft.com/library/997d11cb-f2c5-4ba0-9209-92843d4d0e1a)  
+ [消息队列集成绑定示例](https://msdn.microsoft.com/library/997d11cb-f2c5-4ba0-9209-92843d4d0e1a)  
  [到 Windows Communication Foundation 的消息队列](../../../../docs/framework/wcf/samples/message-queuing-to-wcf.md)  
  [基于消息队列的消息安全性](../../../../docs/framework/wcf/samples/message-security-over-message-queuing.md)

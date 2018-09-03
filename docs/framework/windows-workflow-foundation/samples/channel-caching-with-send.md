@@ -2,12 +2,12 @@
 title: 使用 Send 的通道缓存
 ms.date: 03/30/2017
 ms.assetid: e69a2502-25cb-43bf-b8d2-95fbdecb41cb
-ms.openlocfilehash: c26d81b9cd85ba75189fafddd82c3fb4673c7fae
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 619088def1f5e443a31244516655d75d1e25c9cb
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33514034"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43475850"
 ---
 # <a name="channel-caching-with-send"></a>使用 Send 的通道缓存
 <xref:System.ServiceModel.Activities.SendMessageChannelCache> 使用户能够对 <xref:System.ServiceModel.Activities.Send> 和 <xref:System.ServiceModel.Activities.SendParametersContent> 活动使用不同级别的通道缓存。 默认情况下将启用实例级别的缓存，此示例将演示以下功能：  
@@ -36,6 +36,6 @@ ms.locfileid: "33514034"
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目录不存在，请转到[Windows Communication Foundation (WCF) 和针对.NET Framework 4 的 Windows Workflow Foundation (WF) 示例](http://go.microsoft.com/fwlink/?LinkId=150780)下载所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
+>  如果此目录不存在，请转到[Windows Communication Foundation (WCF) 和.NET Framework 4 的 Windows Workflow Foundation (WF) 示例](https://go.microsoft.com/fwlink/?LinkId=150780)若要下载所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Services\ChannelCache`

@@ -2,12 +2,12 @@
 title: 属性提升活动
 ms.date: 03/30/2017
 ms.assetid: 802196b7-1159-4c05-b41b-d3bfdfcc88d9
-ms.openlocfilehash: 46e74c8c479e545778db92e15de3cb8798dafa11
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6e059a0d344e6c62833feaa890c459c141a49673
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33519920"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43481132"
 ---
 # <a name="property-promotion-activity"></a>属性提升活动
 本示例提供了将 <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> 提升功能直接集成到工作流创作体验的端到端解决方案。 提供了一组用于简化对提升功能的使用的配置元素、工作流活动和工作流扩展。 此外，该示例包含一个演示如何使用此集合的简单工作流。  
@@ -23,9 +23,9 @@ ms.locfileid: "33519920"
   
 ## <a name="sample-projects"></a>示例项目  
   
--   **PropertyPromotionActivity**项目包含与特定于提升的配置元素、 工作流活动和工作流扩展相关的文件。  
+-   **PropertyPromotionActivity**项目包含与特定于升级的配置元素、 工作流活动和工作流扩展相关的文件。  
   
--   **CounterServiceApplication**项目包含使用的示例工作流**SqlWorkflowInstanceStorePromotion**项目。  
+-   **CounterServiceApplication**项目包含一个使用的示例工作流**SqlWorkflowInstanceStorePromotion**项目。  
   
 -   一个必须对 <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> 数据库运行的 SQL 脚本 (PropertyPromotionActivitySQLSample.sql)。  
   
@@ -37,11 +37,11 @@ ms.locfileid: "33519920"
   
     1.  导航到示例目录 (\WF\Basic\Persistence\PropertyPromotionActivity)，然后运行 CreateInstanceStore.cmd。  
   
-    2.  如果管理员权限不可用，则创建 SQL Server 登录。 在 SQL Server Management Studio，请转到**安全**，**登录名**。 右键单击**登录名**并创建新的登录名。 将您的 ACL 用户添加到 SQL 角色中，通过打开**数据库**， **InstanceStore**，**安全**。 右键单击**用户**和选择**新用户**。 设置**登录名**为上面创建的用户。 将该用户添加到数据库角色成员 System.Activities.DurableInstancing.InstanceStoreUsers（以及其他成员）。 请注意，该用户可能已经存在（例如，用户 dbo）。  
+    2.  如果管理员权限不可用，则创建 SQL Server 登录。 在 SQL Server Management Studio 中，转到**安全**，**登录名**。 右键单击**登录名**并创建新的登录名。 将 ACL 用户添加到 SQL 角色中，通过打开**数据库**， **InstanceStore**，**安全**。 右键单击**用户**，然后选择**新用户**。 设置**登录名**到上面创建的用户。 将该用户添加到数据库角色成员 System.Activities.DurableInstancing.InstanceStoreUsers（以及其他成员）。 请注意，该用户可能已经存在（例如，用户 dbo）。  
   
 2.  在 [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] 中打开解决方案文件 PropertyPromotionActivity.sln。  
   
-3.  如果已在 SQL Server Express 本地安装之外的数据库中创建实例存储区，则必须更新数据库连接字符串。 Alter 下的 App.config 文件**CounterServiceApplication**通过设置的值`connectionString`属性`sqlWorkflowInstanceStorePromotion`节点以使其指向到持久性数据库已初始化步骤 1 中。  
+3.  如果已在 SQL Server Express 本地安装之外的数据库中创建实例存储区，则必须更新数据库连接字符串。 下的 App.config 文件**CounterServiceApplication**的值设置`connectionString`特性，可以在`sqlWorkflowInstanceStorePromotion`节点，使其指向已初始化的持久性数据库步骤 1 中。  
   
 4.  生成和运行解决方案。 这将启动计数器 WF 服务并自动启动一个工作流实例。  
   
@@ -64,7 +64,7 @@ ms.locfileid: "33519920"
   
 -   **PropertyPromotionActivity**是一个包含配置元素、 工作流活动和工作流扩展的类库， **CounterServiceApplication**使用。  
   
--   **PropertyPromotionActivitySQLSample.sql**创建并添加视图 [dbo]。 [CounterService] 到数据库。  
+-   **PropertyPromotionActivitySQLSample.sql**创建，并将视图 [dbo]。 [CounterService] 到数据库。  
   
 ### <a name="counterserviceapplication"></a>CounterServiceApplication  
   
@@ -117,7 +117,7 @@ go
   
 5.  持久  
   
- 在第二次保留时，`Count` 的已提升的值将为 4。 但是，已提升的值`LastIncrementedAt`将`NULL`。 如果步骤 4 中未将 `ClearExistingPromotedData` 设置为 `true`，则在第二次保留之后，Count 的已提升的值将为 4。 因此，`LastIncrementedAt` 的已提升的值仍将为 1-1-2000。  
+ 在第二次保留时，`Count` 的已提升的值将为 4。 但是，已提升的值`LastIncrementedAt`将为`NULL`。 如果步骤 4 中未将 `ClearExistingPromotedData` 设置为 `true`，则在第二次保留之后，Count 的已提升的值将为 4。 因此，`LastIncrementedAt` 的已提升的值仍将为 1-1-2000。  
   
 ### <a name="propertypromotionactivity"></a>PropertyPromotionActivity  
  此类库包含以下用于简化对 <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> 提升功能的使用的公共类。  
@@ -142,7 +142,7 @@ public class PromoteValue<T> : CodeActivity
  清除在此活动之前已提升的所有值。  
   
  Name (string)  
- 表示此属性的名称。 这应匹配的名称属性\<promotedValue > 配置中的元素。  
+ 表示此属性的名称。 这应与匹配的 name 属性\<promotedValue > 配置中的元素。  
   
  值 (InArgument\<T >)  
  要存储在列中的变量/值。  
@@ -186,9 +186,9 @@ public class SqlWorkflowInstanceStorePromotionBehavior :
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目录不存在，请转到[Windows Communication Foundation (WCF) 和针对.NET Framework 4 的 Windows Workflow Foundation (WF) 示例](http://go.microsoft.com/fwlink/?LinkId=150780)下载所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
+>  如果此目录不存在，请转到[Windows Communication Foundation (WCF) 和.NET Framework 4 的 Windows Workflow Foundation (WF) 示例](https://go.microsoft.com/fwlink/?LinkId=150780)若要下载所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Persistence\PropertyPromotionActivity`  
   
 ## <a name="see-also"></a>请参阅  
- [AppFabric 承载和持久性示例](http://go.microsoft.com/fwlink/?LinkId=193961)
+ [AppFabric 承载和持久性示例](https://go.microsoft.com/fwlink/?LinkId=193961)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Windows Forms, grid options in designer
 - controls [Windows Forms], aligning
 ms.assetid: bb54bce5-880f-4a36-af68-8cf92058dc1c
-ms.openlocfilehash: 9b6a4dbf90ea3541c5919ac1d7c8470b6f0dfcc4
-ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
+ms.openlocfilehash: bbe6ae2adfe364e41f6627e6b067aa8e18e6e079
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43253386"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43488074"
 ---
 # <a name="how-to-arrange-controls-with-snaplines-and-the-grid-in-windows-forms"></a>如何：在 Windows 窗体中使用对齐线和网格排列控件
 使用 Visual Studio 的布局功能，可以精确地直接在窗体上控件的放置位置。 添加到窗体或窗体上移动的控件可以自动对齐到的行和列的 Windows 窗体设计器的网格中，或可以使用对齐线功能对齐控件。  
@@ -25,7 +25,7 @@ ms.locfileid: "43253386"
   
 -   选择**SnapToGrid**在 Windows 窗体设计器中的布局模式**选项**对话框。  
   
-     有关详细信息，请参阅[选项对话框常规 Windows 窗体设计器](http://msdn.microsoft.com/library/8dd170af-72f0-4212-b04b-034ceee92834)。 所有控件现在都对齐本身沿网格上的点。  
+     有关详细信息，请参阅[选项对话框常规 Windows 窗体设计器](https://msdn.microsoft.com/library/8dd170af-72f0-4212-b04b-034ceee92834)。 所有控件现在都对齐本身沿网格上的点。  
   
      可以通过就地锁定对齐到网格的各个控件。 但是，锁定后，它们不能移动或调整大小。 有关锁定控件的详细信息，请参阅[如何： 向 Windows 窗体的锁定控件](../../../../docs/framework/winforms/controls/how-to-lock-controls-to-windows-forms.md)。  
   
@@ -36,7 +36,7 @@ ms.locfileid: "43253386"
      有关详细信息，请参阅[演练： Windows 窗体使用对齐线上排列控件](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)。 现在可以使用对齐线对齐并排列窗体上的控件。  
   
 ## <a name="see-also"></a>请参阅  
- [通常，Windows 窗体设计器选项对话框](http://msdn.microsoft.com/library/8dd170af-72f0-4212-b04b-034ceee92834)  
+ [通常，Windows 窗体设计器选项对话框](https://msdn.microsoft.com/library/8dd170af-72f0-4212-b04b-034ceee92834)  
  [演练：使用对齐线在 Windows 窗体上排列控件](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)  
  [Windows 窗体控件](../../../../docs/framework/winforms/controls/index.md)  
  [如何：向 Windows 窗体添加控件](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md)  

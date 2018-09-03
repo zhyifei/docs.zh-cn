@@ -4,24 +4,24 @@ ms.date: 03/30/2017
 ms.assetid: 9029771a-097e-448a-a13a-55d2878330b8
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: 50e450f4241abc7d8b688c58a121f64c3ca0e709
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0ab04326404a4b90e30036594a7152e6118c2138
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33499458"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43482836"
 ---
 # <a name="securing-messages-using-transport-security"></a>使用传输安全保护消息
 本节讨论消息队列 (MSMQ) 传输安全，您可将其用于保护发送到队列的消息。  
   
 > [!NOTE]
->  在阅读之前通读本主题，建议你阅读[安全性的基础概念](../../../../docs/framework/wcf/feature-details/security-concepts.md)。  
+>  之前阅读此主题，建议先阅读[安全性概念](../../../../docs/framework/wcf/feature-details/security-concepts.md)。  
   
- 以下插图提供了使用 Windows Communication Foundation (WCF) 的排队通信的概念模型。 此插图和术语用于说明传输安全概念。  
+ 下图提供了使用 Windows Communication Foundation (WCF) 的排队通信的概念模型。 此插图和术语用于说明传输安全概念。  
   
  ![排队应用程序关系图](../../../../docs/framework/wcf/feature-details/media/distributed-queue-figure.jpg "分布式队列图")  
   
- 发送排队时使用的 WCF 消息<xref:System.ServiceModel.NetMsmqBinding>，WCF 消息附加作为 MSMQ 消息的正文。 传输安全可以保护全部 MSMQ 消息（MSMQ 消息头或属性和消息正文）的安全。 因为它是 MSMQ 消息的正文，使用传输安全还可以确保 WCF 消息。  
+ 发送排队时使用的 WCF 消息<xref:System.ServiceModel.NetMsmqBinding>，WCF 消息附加作为 MSMQ 消息正文。 传输安全可以保护全部 MSMQ 消息（MSMQ 消息头或属性和消息正文）的安全。 因为它是 MSMQ 消息的正文，使用传输安全还可以保护 WCF 消息。  
   
  传输安全的关键概念在于，客户端必须满足安全要求，才能使消息进入目标队列。 这与消息安全不同。在消息安全中，针对接收消息的应用程序来保护消息。  
   
@@ -40,14 +40,14 @@ ms.locfileid: "33499458"
   
  MSMQ 还能够将证书附加到未向 Active Directory 注册的消息中。 在这种情况下，它可以确保该消息已使用附加的证书进行签名。  
   
- WCF MSMQ 传输安全的一部分提供了这两个选项，并且它们是传输安全的关键核心。  
+ WCF MSMQ 传输安全的一部分提供了这两个选项，他们会获得传输安全的关键核心。  
   
  默认情况下将启用传输安全。  
   
  了解这些基本知识后，以下各节将详细介绍与 <xref:System.ServiceModel.NetMsmqBinding> 和 <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding> 绑定的传输安全属性。  
   
 #### <a name="msmq-authentication-mode"></a>MSMQ 身份验证模式  
- <xref:System.ServiceModel.MsmqTransportSecurity.MsmqAuthenticationMode%2A> 指示是使用 Windows 域安全还是基于外部证书的安全来保护消息。 在这两种身份验证模式，WCF 排队的传输通道使用`CertificateValidationMode`在服务配置中指定。 证书验证模式指定用于检查证书有效性的机制。  
+ <xref:System.ServiceModel.MsmqTransportSecurity.MsmqAuthenticationMode%2A> 指示是使用 Windows 域安全还是基于外部证书的安全来保护消息。 在这两种身份验证模式，WCF 排队的传输通道使用`CertificateValidationMode`服务配置中指定。 证书验证模式指定用于检查证书有效性的机制。  
   
  启用传输安全时，默认的设置为 <xref:System.ServiceModel.MsmqAuthenticationMode.WindowsDomain>。  
   
@@ -62,9 +62,9 @@ ms.locfileid: "33499458"
 #### <a name="certificate-authentication-mode"></a>证书身份验证模式  
  使用证书身份验证模式不需要 Active Directory 集成。 实际上，在某些情况下，例如在工作组模式（没有 Active Directory 集成）中安装 MSMQ 时，或使用 SOAP 可靠传送消息协议 (SRMP) 将消息发送到队列时，只有 <xref:System.ServiceModel.MsmqAuthenticationMode.Certificate> 才起作用。  
   
- 发送 WCF 消息与时<xref:System.ServiceModel.MsmqAuthenticationMode.Certificate>，WCF 通道不会附加到 MSMQ 消息的 Windows SID。 同样，目标队列 ACL 必须允许使用 `Anonymous` 用户权限向队列发送消息。 接收队列管理器检查 MSMQ 消息是否已使用证书进行签名，但不执行任何身份验证。  
+ 发送 WCF 消息时<xref:System.ServiceModel.MsmqAuthenticationMode.Certificate>，WCF 通道不会附加到 MSMQ 消息的 Windows SID。 同样，目标队列 ACL 必须允许使用 `Anonymous` 用户权限向队列发送消息。 接收队列管理器检查 MSMQ 消息是否已使用证书进行签名，但不执行任何身份验证。  
   
- 在填充包含其声明和标识信息的证书<xref:System.ServiceModel.ServiceSecurityContext>WCF 排队的传输通道。 服务可使用此信息来对发送方执行其自己的身份验证。  
+ 包含其声明和标识信息的证书中填充<xref:System.ServiceModel.ServiceSecurityContext>WCF 排队的传输通道。 服务可使用此信息来对发送方执行其自己的身份验证。  
   
 ### <a name="msmq-protection-level"></a>MSMQ 保护级别  
  保护级别指示如何保护 MSMQ 消息以确保该消息不会被篡改。 保护级别是在 <xref:System.ServiceModel.MsmqTransportSecurity.MsmqProtectionLevel%2A> 属性中指定的。 默认值为 <xref:System.Net.Security.ProtectionLevel.Sign>。  
@@ -99,6 +99,6 @@ ms.locfileid: "33499458"
  支持的算法包括 `MD5`、`SHA1`、`SHA256` 和 `SHA512`。 默认值为 `SHA1`。  
   
 ## <a name="see-also"></a>请参阅  
- [消息队列](http://msdn.microsoft.com/library/ff917e87-05d5-478f-9430-0f560675ece1)  
+ [消息队列](https://msdn.microsoft.com/library/ff917e87-05d5-478f-9430-0f560675ece1)  
  [安全性概念](../../../../docs/framework/wcf/feature-details/security-concepts.md)  
  [保护服务和客户端的安全](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
