@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Manifest Generation and Editing tool
 - MageUI.exe
 ms.assetid: f9e130a6-8117-49c4-839c-c988f641dc14
-ms.openlocfilehash: 0772fcb32ce4d7500b358db312241e489b3a24c1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: eb93e53e7b77ee2747bce3fb9a45d7061450e65c
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33404948"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43390255"
 ---
 # <a name="mageuiexe-manifest-generation-and-editing-tool-graphical-client"></a>MageUI.exe（图形化客户端中的清单生成和编辑工具）
 除了使用基于 Windows 的用户界面 (UI) 之外，MageUI.exe 与命令行工具 Mage.exe 支持的功能完全相同。 使用此工具，你可以对部署清单和应用程序清单执行创建、编辑和签名操作。 用 MageUI.exe 创建的新清单以 [!INCLUDE[net_client_v40_long](../../../includes/net-client-v40-long-md.md)] 为目标。 早期版本的 MageUI.exe 应用于以 .NET Framework 的早期版本为目标。 在清单中添加或删除程序集时或重新对现有清单签名时，MageUI.exe 不会将清单更新为以 [!INCLUDE[net_client_v40_long](../../../includes/net-client-v40-long-md.md)] 为目标。 有关详细信息，请参阅 [Mage.exe（清单生成和编辑工具）](../../../docs/framework/tools/mage-exe-manifest-generation-and-editing-tool.md)。  
@@ -65,7 +65,7 @@ ms.locfileid: "33404948"
 |**新建**|生成一个无法通过证书颁发机构 (CA) 验证的新 .pfx。 有关用于对 [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] 部署进行签名的证书类型的详细信息，请参阅[受信任的应用程序部署概述](/visualstudio/deployment/trusted-application-deployment-overview)。|  
 |**密码**|提供一个可以键入在使用此证书进行签名时所需要的密码的区域。 如果不适用，则可以保留为空白。|  
 |**使用存储的证书签名**|显示计算机的证书存储区中存储的可选数字证书的列表。|  
-|**时间戳 URI**|显示数字时间戳服务的统一资源定位器 (URI)。 如果数字证书在你部署应用程序的下一个版本之前过期，则为清单加盖时间戳可以让你不必对清单进行重新签名。 有关详细信息，请参阅 [Windows 根证书程序成员](http://go.microsoft.com/fwlink/?LinkId=159000)以及 [ClickOnce 和 Authenticode](/visualstudio/deployment/clickonce-and-authenticode)。|  
+|**时间戳 URI**|显示数字时间戳服务的统一资源定位器 (URI)。 如果数字证书在你部署应用程序的下一个版本之前过期，则为清单加盖时间戳可以让你不必对清单进行重新签名。 有关详细信息，请参阅 [Windows 根证书程序成员](https://go.microsoft.com/fwlink/?LinkId=159000)以及 [ClickOnce 和 Authenticode](/visualstudio/deployment/clickonce-and-authenticode)。|  
 |**不签名**|允许你保存清单，而无需添加数字证书签名。|  
   
 ## <a name="tab-and-panel-descriptions"></a>选项卡和面板的说明  
@@ -127,7 +127,7 @@ ms.locfileid: "33404948"
   
 |UI 元素|描述|  
 |----------------|-----------------|  
-|**权限集类型**|在客户端上运行此应用程序所需的最小权限集。 有关这些权限集以及需要的或不需要的权限的说明，请参阅 [NIB：命名的权限集](http://msdn.microsoft.com/library/08250d67-c99d-4ab0-8d2b-b0e12019f6e3)。|  
+|**权限集类型**|在客户端上运行此应用程序所需的最小权限集。 有关这些权限集以及需要的或不需要的权限的说明，请参阅 [NIB：命名的权限集](https://msdn.microsoft.com/library/08250d67-c99d-4ab0-8d2b-b0e12019f6e3)。|  
 |**详细信息**|为应用程序清单创建用于表示权限集的 XML。 除非充分理解应用程序清单 XML 格式，否则不应手动编辑此 XML。 有关详细信息，请参阅 [ClickOnce 应用程序清单](/visualstudio/deployment/clickonce-application-manifest)。|  
   
 ### <a name="deployment-manifest-tab"></a>部署清单选项卡  

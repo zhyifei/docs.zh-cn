@@ -4,15 +4,15 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - breaking changes [Visual Basic]
 ms.assetid: 708fb176-35eb-4cbc-a6e7-a04c6e3bdaff
-ms.openlocfilehash: e7f6791c56019508406448267237cf0d2d261205
-ms.sourcegitcommit: d8bf4976eafe3289275be3811e7cb721bfff7e1e
+ms.openlocfilehash: 008b887e96f077e64b012d224c7c031a9b65027e
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34753320"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43396003"
 ---
 # <a name="visual-basic-breaking-changes-in-visual-studio"></a>Visual Studio 中 Visual Basic 的重大更改
-若要了解有关 Visual Studio 2017 的最新文档，请参阅 [Visual Studio 2017 文档](http://docs.microsoft.com/visualstudio/)。
+若要了解有关 Visual Studio 2017 的最新文档，请参阅 [Visual Studio 2017 文档](https://docs.microsoft.com/visualstudio/)。
 
 Visual Studio 2015 中 Visual Basic 的任何改变都不能阻止在 Visual Studio 2013 中以 Visual Basic 创建的应用程序进行编译或更改此类应用程序的运行时行为。  
   

@@ -13,12 +13,12 @@ helpviewer_keywords:
 - security [.NET Framework], Internet
 - permissions [.NET Framework], Internet
 author: blowdart
-ms.openlocfilehash: adde8f3bd387a3e283ae1c3cd69e42b12b443b8c
-ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
+ms.openlocfilehash: a45d57af1069bba9e3afe8c2e6e6d463115a4e39
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2018
-ms.locfileid: "42925499"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43389772"
 ---
 # <a name="transport-layer-security-tls-best-practices-with-the-net-framework"></a>.NET Framework 中的传输层安全性 (TLS) 最佳做法
 
@@ -231,7 +231,7 @@ Windows Registry Editor Version 5.00
 
 ## <a name="configuring-schannel-protocols-in-the-windows-registry"></a>在 Windows 注册表中配置 Schannel 协议
 
-可以使用注册表细化控制你的客户端和/或服务器应用协商的协议。 你的应用的网络将遍历 Schannel（它是[安全通道](https://msdn.microsoft.com/library/windows/desktop/aa380123)的另一个名称）。 通过配置 `Schannel`，可以配置你的应用的行为。
+可以使用注册表细化控制你的客户端和/或服务器应用协商的协议。 你的应用的网络将遍历 Schannel（它是[安全通道](/windows/desktop/SecAuthN/secure-channel)的另一个名称）。 通过配置 `Schannel`，可以配置你的应用的行为。
 
 从 `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols` 注册表项开始。 在该注册表项下，可以在集 `SSL 2.0`、`SSL 3.0`、`TLS 1.0`、`TLS 1.1` 和 `TLS 1.2` 中创建任何子项。 在每个子项下，可以创建子项 `Client` 和/或 `Server`。 在 `Client` 和 `Server` 下，可以创建 DWORD 值 `DisabledByDefault`（0 或 1）和 `Enabled`（0 或 0xFFFFFFFF）。
 
@@ -239,8 +239,8 @@ Windows Registry Editor Version 5.00
 
 启用后（默认情况下，通过 `AppContext` 开关或 Windows 注册表启动），当你的应用请求 TLS 安全协议时，.NET Framework 将使用 `SCH_USE_STRONG_CRYPTO` 标志。 可以通过 `AppContext` 开关或注册表来默认启用 `SCH_USE_STRONG_CRYPTO` 标志。 操作系统将标志传递到 `Schannel`，以指示它禁用已知弱加密算法、密码套件和 TLS/SSL 协议版本（否则，可能会启用该协议以获得更好的互操作性）。 有关详细信息，请参见:
 
-- [安全通道](https://msdn.microsoft.com/library/windows/desktop/aa380123)
-- [SCHANNEL_CRED 结构](https://msdn.microsoft.com/library/windows/desktop/aa379810)
+- [安全通道](/windows/desktop/SecAuthN/secure-channel)
+- [SCHANNEL_CRED 结构](/windows/desktop/api/schannel/ns-schannel-_schannel_cred)
 
 当你显式使用 <xref:System.Net.SecurityProtocolType> 或 <xref:System.Security.Authentication.SslProtocols> 的 `Tls` (TLS 1.0)、`Tls11` 或 `Tls12` 枚举的值时，`SCH_USE_STRONG_CRYPTO` 标志还将被传递到 `Schannel`。
 

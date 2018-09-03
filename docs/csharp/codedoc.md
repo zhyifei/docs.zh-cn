@@ -3,23 +3,24 @@ title: 使用 XML 注释来记录代码
 description: 了解如何使用 XML 文档注释来记录代码和在编译时生成 XML 文档文件。
 ms.date: 02/14/2017
 ms.assetid: 8e75e317-4a55-45f2-a866-e76124171838
-ms.openlocfilehash: 1284f179c7debb323ea3bbd302df1f02bf8b31b1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4c94e98478e71449a3f9cc4bf1f21462e17a371b
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33218500"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43392491"
 ---
 # <a name="documenting-your-code-with-xml-comments"></a>使用 XML 注释来记录代码
 
-XML 文档注释是一种特殊注释，添加在任何用户定义的类型或成员的定义上方。 其特殊之处在于其可由编译器处理，由此在编译时生成 XML 文档文件。
+XML 文档注释是一种特殊注释，添加在任何用户定义的类型或成员的定义上方。
+其特殊之处在于其可由编译器处理，由此在编译时生成 XML 文档文件。
 编译器生成的 XML 文件可以与 .NET 程序集一起分发，以便 Visual Studio 和其他 IDE 可使用 IntelliSense 显示关于类型或成员的快速信息。 此外，可以通过 [DocFX](https://dotnet.github.io/docfx/) 和 [Sandcastle](https://github.com/EWSoftware/SHFB) 等工具运行 XML 文件，由此生成 API 引用网站。
 
 编译器会忽略 XML 文档注释，与对待其他注释一样。
 
 可通过执行下列操作之一在编译时生成 XML 文件：
 
-- 如果要使用 .NET Core 从命令行开发应用程序，可以将 [DocumentationFile 元素](http://docs.microsoft.com/visualstudio/msbuild/common-msbuild-project-properties)添加到 .csproj 项目文件的 `<PropertyGroup>` 部分。 下面的示例使用与程序集相同的根文件夹名在项目目录中生成 XML 文件：
+- 如果要使用 .NET Core 从命令行开发应用程序，可以将 [DocumentationFile 元素](https://docs.microsoft.com/visualstudio/msbuild/common-msbuild-project-properties)添加到 .csproj 项目文件的 `<PropertyGroup>` 部分。 下面的示例使用与程序集相同的根文件夹名在项目目录中生成 XML 文件：
 
    ```xml
    <DocumentationFile>bin\$(Configuration)\$(TargetFramework)\$(AssemblyName).xml</DocumentationFile>
@@ -27,11 +28,11 @@ XML 文档注释是一种特殊注释，添加在任何用户定义的类型或�
 
    还可以精确指定 XML 文件的绝对或相对路径及名称。 下面的示例在与调试版本的应用程序相同的目录中生成 XML 文件：
 
-    ```xml
+   ```xml
    <DocumentationFile>bin\Debug\netcoreapp1.0\App.xml</DocumentationFile>
    ```
 
-- 如果使用 Visual Studio 开发应用程序，右键单击项目并选择“属性”。 在属性对话框中，选择“生成”选项卡，然后选中“XML 文档文件”。 还可以更改编译器写入文件的位置。 
+- 如果使用 Visual Studio 开发应用程序，右键单击项目并选择“属性”。 在属性对话框中，选择“生成”选项卡，然后选中“XML 文档文件”。 还可以更改编译器写入文件的位置。
 
 - 如果是从命令行编译 .NET Framework 应用程序，编译时请添加 [/doc 编译器选项](language-reference/compiler-options/doc-compiler-option.md)。  
 
@@ -121,7 +122,8 @@ XML 文档注释使用三个正斜杠 (`///`) 和 XML 格式的注释正文。 �
 
 [!code-csharp[See Tag](../../samples/snippets/csharp/concepts/codedoc/see-tag.cs)]
 
-`cref` 是表示可从当前编译环境引用的类型或其成员的**必需**属性。 其类型可为项目中或引用的程序集中定义的任何类型。
+`cref` 是表示可从当前编译环境引用的类型或其成员的**必需**属性。
+其类型可为项目中或引用的程序集中定义的任何类型。
 
 ### <a name="ltseealsogt"></a>&lt;seealso&gt;
 
@@ -174,7 +176,8 @@ XML 文档注释使用三个正斜杠 (`///`) 和 XML 格式的注释正文。 �
 [!code-csharp[Tagged Library](../../samples/snippets/csharp/concepts/codedoc/tagged-library.cs)]
 
 可从代码中生成包括可单击的交叉引用的详细文档网站。 但将面临另一问题：代码变得难以阅读。
-需要筛查的信息浩如烟海，这对任何要参与此代码编写的开发人员都是噩梦。 幸好有一个 XML 标记，可帮助解决这个问题：
+需要筛查的信息浩如烟海，这对任何要参与此代码编写的开发人员都是噩梦。
+幸好有一个 XML 标记，可帮助解决这个问题：
 
 ### <a name="ltincludegt"></a>&lt;include&gt;
 
@@ -184,11 +187,12 @@ XML 文档注释使用三个正斜杠 (`///`) 和 XML 格式的注释正文。 �
 
 [!code-xml[Sample XML](../../samples/snippets/csharp/concepts/codedoc/include.xml)]
 
-在上面的 XML 中，每个成员的文档注释将直接显示在按其作用命名的标记中。 可选择自己的策略。 现在一个单独的文件中已具有 XML 注释，接下来来看看如何通过使用 `<include>` 标记使代码更易于阅读：
+在上面的 XML 中，每个成员的文档注释将直接显示在按其作用命名的标记中。 可选择自己的策略。
+现在一个单独的文件中已具有 XML 注释，接下来来看看如何通过使用 `<include>` 标记使代码更易于阅读：
 
 [!code-csharp[Include Tag](../../samples/snippets/csharp/concepts/codedoc/include-tag.cs)]
 
-现在好了，代码又变得可读了，并且未丢失任何文档信息。 
+现在好了，代码又变得可读了，并且未丢失任何文档信息。
 
 `filename` 属性表示包含文档的 XML 文件的名称。
 
@@ -217,6 +221,6 @@ Sandcastle 等工具支持其他标记，如 [`<event>`](http://ewsoftware.githu
 - 编译器验证某些参数，这些参数包含文件路径和对代码其余部分的引用。
 
 ## <a name="see-also"></a>请参阅
-[XML 文档注释（C# 编程指南）](programming-guide/xmldoc/xml-documentation-comments.md)
 
-[建议的文档注释标记（C# 编程指南）](programming-guide/xmldoc/recommended-tags-for-documentation-comments.md)
+* [XML 文档注释（C# 编程指南）](programming-guide/xmldoc/xml-documentation-comments.md)
+* [建议的文档注释标记（C# 编程指南）](programming-guide/xmldoc/recommended-tags-for-documentation-comments.md)

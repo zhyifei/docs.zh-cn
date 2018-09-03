@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - false operator keyword [C#]
 ms.assetid: 81a888fd-011e-4589-b242-6c261fea505e
-ms.openlocfilehash: e1c6da604f35031dd9d712125356243e1735f452
-ms.sourcegitcommit: f9e38d31288fe5962e6be5b0cc286da633482873
+ms.openlocfilehash: e73113bd37dbb68590267141ad037f78919520bc
+ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37027832"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43253244"
 ---
 # <a name="false-operator-c-reference"></a>false 运算符（C# 参考）
 
@@ -33,8 +33,8 @@ ms.locfileid: "37027832"
 
 ## <a name="see-also"></a>请参阅
 
-[C# 参考](../index.md)  
-[C# 编程指南](../../programming-guide/index.md)  
-[C# 关键字](index.md)  
-[C# 运算符](../operators/index.md)  
-[true](true.md)  
+- [C# 参考](../index.md)  
+- [C# 编程指南](../../programming-guide/index.md)  
+- [C# 关键字](index.md)  
+- [C# 运算符](../operators/index.md)  
+- [true](true.md)  

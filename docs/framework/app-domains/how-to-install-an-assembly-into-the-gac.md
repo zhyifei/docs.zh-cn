@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: a7e6f091-d02c-49ba-b736-7295cb0eb743
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ed6519cb6bb7006f62ef83cd6baf8f2e32a44d19
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 8c3bd568cf504125bc99801815d08764417b42cd
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32744377"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43468993"
 ---
 # <a name="how-to-install-an-assembly-into-the-global-assembly-cache"></a>如何：将程序集安装到全局程序集缓存
 可通过两种方法将强名称程序集安装到全局程序集缓存 (GAC) 中：  
@@ -23,7 +23,7 @@ ms.locfileid: "32744377"
 > [!IMPORTANT]
 >  仅强名称程序集可安装到 GAC 中。 若要了解如何创建强名称程序集，请参阅[如何：使用强名称为程序集签名](../../../docs/framework/app-domains/how-to-sign-an-assembly-with-a-strong-name.md)。  
   
--   使用 [Windows Installer](http://msdn.microsoft.com/library/windows/desktop/cc185688.aspx)。  
+-   使用 [Windows Installer](/windows/desktop/Msi/windows-installer-portal)。  
   
      通过创建 InstallShield Limited Edition 项目可在 Visual Studio 2012 和 Visual Studio 2013 中执行此操作。  
   
@@ -82,4 +82,4 @@ gacutil -i hello.dll
  [如何：从全局程序集缓存中删除程序集](../../../docs/framework/app-domains/how-to-remove-an-assembly-from-the-gac.md)  
  [Gacutil.exe（全局程序集缓存工具）](../../../docs/framework/tools/gacutil-exe-gac-tool.md)  
  [如何：使用强名称为程序集签名](../../../docs/framework/app-domains/how-to-sign-an-assembly-with-a-strong-name.md)  
- [Windows Installer 部署](http://msdn.microsoft.com/library/121be21b-b916-43e2-8f10-8b080516d2a0)
+ [Windows Installer 部署](https://msdn.microsoft.com/library/121be21b-b916-43e2-8f10-8b080516d2a0)

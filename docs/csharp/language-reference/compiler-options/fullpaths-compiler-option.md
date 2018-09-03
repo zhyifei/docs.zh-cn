@@ -10,12 +10,12 @@ helpviewer_keywords:
 - full paths [C#]
 - -fullpaths compiler option [C#]
 ms.assetid: d2a5f857-cbb2-430b-879c-d648aaf0b8c4
-ms.openlocfilehash: 29320ae2dc4b13381ecce76fb04101f18d214bba
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8f23bb683067c55f5b5213065c3082b843dd7dce
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33215305"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43388274"
 ---
 # <a name="-fullpaths-c-compiler-options"></a>-fullpaths（C# 编译器选项）
 -fullpaths 选项导致编译器在列出编译错误和警告时指定文件的完整路径。  
@@ -32,4 +32,5 @@ ms.locfileid: "33215305"
  此编译器选项在 Visual Studio 中不可用，并且无法以编程方式更改。  
   
 ## <a name="see-also"></a>请参阅  
- [C# 编译器选项](../../../csharp/language-reference/compiler-options/index.md)
+
+- [C# 编译器选项](../../../csharp/language-reference/compiler-options/index.md)

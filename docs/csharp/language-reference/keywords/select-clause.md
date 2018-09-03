@@ -8,12 +8,12 @@ helpviewer_keywords:
 - select keyword [C#]
 - select clause [C#]
 ms.assetid: df01e266-5781-4aaa-80c4-67cf28ea093f
-ms.openlocfilehash: 6e7277b5d714e48059fe1ed7e8b85e46a14a840c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: dcab29cdbe98b5e49463d9a2781d43d4b9ee9544
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33279979"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43467336"
 ---
 # <a name="select-clause-c-reference"></a>select 子句（C# 参考）
 在查询表达式中，`select` 子句指定在执行查询时产生的值的类型。 根据计算所有以前的子句以及根据 `select` 子句本身的所有表达式得出结果。 查询表达式必须以 `select` 子句或 [group](../../../csharp/language-reference/keywords/group-clause.md) 子句结尾。  
@@ -34,11 +34,12 @@ ms.locfileid: "33279979"
 ## <a name="remarks"></a>备注  
  在编译时，`select` 子句被转换为 <xref:System.Linq.Enumerable.Select%2A> 标准查询运算符的方法调用。  
   
-## <a name="see-also"></a>请参阅  
- [C# 参考](../../../csharp/language-reference/index.md)  
- [查询关键字 (LINQ)](../../../csharp/language-reference/keywords/query-keywords.md)  
- [from 子句](../../../csharp/language-reference/keywords/from-clause.md)  
- [分部（方法）（C# 参考）](../../../csharp/language-reference/keywords/partial-method.md)  
- [匿名类型](../../../csharp/programming-guide/classes-and-structs/anonymous-types.md)  
- [LINQ 查询表达式](../../../csharp/programming-guide/linq-query-expressions/index.md)  
- [C# 中的 LINQ 入门](../../../csharp/programming-guide/concepts/linq/getting-started-with-linq.md)
+## <a name="see-also"></a>请参阅
+
+- [C# 参考](../../../csharp/language-reference/index.md)  
+- [查询关键字 (LINQ)](../../../csharp/language-reference/keywords/query-keywords.md)  
+- [from 子句](../../../csharp/language-reference/keywords/from-clause.md)  
+- [分部（方法）（C# 参考）](../../../csharp/language-reference/keywords/partial-method.md)  
+- [匿名类型](../../../csharp/programming-guide/classes-and-structs/anonymous-types.md)  
+- [LINQ 查询表达式](../../../csharp/programming-guide/linq-query-expressions/index.md)  
+- [C# 中的 LINQ 入门](../../../csharp/programming-guide/concepts/linq/getting-started-with-linq.md)

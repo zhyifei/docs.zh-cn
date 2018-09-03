@@ -4,12 +4,12 @@ description: 适用于容器化 .NET 应用程序的 .NET 微服务体系结构 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 12/11/2017
-ms.openlocfilehash: 18ffbf56cf9d324e86fc288a2ba4a387831af925
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.openlocfilehash: 28955b2309b3efb321e40e19db821052b8ce42ab
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42935388"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43396111"
 ---
 # <a name="creating-a-simple-data-driven-crud-microservice"></a>创建简单的数据驱动 CRUD 微服务
 
@@ -326,7 +326,7 @@ Microsoft Flow、PowerApps 和 Azure 逻辑应用通过使用 Swagger 的元数�
 
 ### <a name="how-to-automate-api-swagger-metadata-generation-with-the-swashbuckle-nuget-package"></a>如何使用 Swashbuckle NuGet 包自动生成 API Swagger 元数据
 
-手动（在 JSON 或 YAML 文件中）生成 Swagger 元数据可能会耗时较长且较为枯燥。 但可使用 [Swashbuckle NuGet 包](http://aka.ms/swashbuckledotnetcore)动态生成 Swagger API 元数据，让 ASP.NET Web API 服务自动发现 API。
+手动（在 JSON 或 YAML 文件中）生成 Swagger 元数据可能会耗时较长且较为枯燥。 但可使用 [Swashbuckle NuGet 包](https://aka.ms/swashbuckledotnetcore)动态生成 Swagger API 元数据，让 ASP.NET Web API 服务自动发现 API。
 
 Swashbuckle 为 ASP.NET Web API 项目自动生成 Swagger 元数据。 它支持 ASP.NET Core Web API 项目和传统 ASP.NET Web API 以及任何其他风格，如 Azure API 应用、Azure 移动应用和基于 ASP.NET 的 Azure Service Fabric 微服务等。 它还支持容器上部署的普通 Web API，就像为引用应用程序提供支持那样。
 

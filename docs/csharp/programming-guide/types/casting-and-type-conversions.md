@@ -9,12 +9,12 @@ helpviewer_keywords:
 - casting [C#]
 - converting types [C#]
 ms.assetid: 568df58a-d292-4b55-93ba-601578722878
-ms.openlocfilehash: 971f85b2cabe79237ff62eb36de43873df1d2ae5
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.openlocfilehash: 5587708a6ce7218498e5e695466887c6146c75a4
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42933582"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43389961"
 ---
 # <a name="casting-and-type-conversions-c-programming-guide"></a>强制转换和类型转换（C# 编程指南）
 
@@ -91,6 +91,6 @@ Giraffe g2 = (Giraffe) a;
  [explicit](../../../csharp/language-reference/keywords/explicit.md)  
  [implicit](../../../csharp/language-reference/keywords/implicit.md)  
  [转换运算符](../../../csharp/programming-guide/statements-expressions-operators/conversion-operators.md)  
- [通用类型转换](http://msdn.microsoft.com/library/49253ae6-7657-4810-82ab-1176a6feeada)  
- [导出类型转换](http://msdn.microsoft.com/library/1dfe55f4-07a2-4b61-aabf-a8cf65783a6b)  
+ [通用类型转换](https://msdn.microsoft.com/library/49253ae6-7657-4810-82ab-1176a6feeada)  
+ [导出类型转换](https://msdn.microsoft.com/library/1dfe55f4-07a2-4b61-aabf-a8cf65783a6b)  
  [如何：将字符串转换为数字](../../../csharp/programming-guide/types/how-to-convert-a-string-to-a-number.md)

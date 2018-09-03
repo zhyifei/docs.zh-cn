@@ -8,12 +8,12 @@ helpviewer_keywords:
 - keycontainer compiler option [C#]
 - -keycontainer compiler option [C#]
 ms.assetid: b3982b6d-2382-4f7e-bebd-ce98eaa30763
-ms.openlocfilehash: 5a7b378cad7a1df9249fcbefa28bb9aa9a6a3da4
-ms.sourcegitcommit: 77d9a94dac4c05827ed0663d95e0f9ad35d6682e
+ms.openlocfilehash: 57d3acb4fe128e07020bfe7c85ed86563b16f40a
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/24/2018
-ms.locfileid: "34472563"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43467540"
 ---
 # <a name="-keycontainer-c-compiler-options"></a>-keycontainer（C# 编译器选项）
 指定加密密钥容器的名称。  
@@ -45,6 +45,8 @@ ms.locfileid: "34472563"
   
  可通过 <xref:VSLangProj.ProjectProperties.AssemblyKeyContainerName%2A> 以编程方式访问此编译器选项。  
   
-## <a name="see-also"></a>请参阅  
- [C# 编译器 -keyfile 选项](keyfile-compiler-option.md) [C# 编译器选项](index.md)  
- [管理项目和解决方案属性](/visualstudio/ide/managing-project-and-solution-properties)
+## <a name="see-also"></a>请参阅
+
+- [C# 编译器 -keyfile 选项](keyfile-compiler-option.md)
+- [C# 编译器选项](index.md)  
+- [管理项目和解决方案属性](/visualstudio/ide/managing-project-and-solution-properties)

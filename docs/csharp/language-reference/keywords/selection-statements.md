@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - statements [C#], selection
 ms.assetid: cf21cfa2-34fb-48b0-9cbc-8bb4537a9a05
-ms.openlocfilehash: 36ba4621ad0e8511105d8ce434c4ac140315bea7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: da3132a82e2cb0b3aaa55fbe82898414ebd31c12
+ms.sourcegitcommit: a368166a51e5204c0224fbf5e46476e3ed122817
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33267363"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43331975"
 ---
 # <a name="selection-statements-c-reference"></a>选择语句（C# 参考）
 选择语句会导致基于特定条件是否为 `true` 而将程序控件转移给特定的流。  
@@ -26,8 +26,9 @@ ms.locfileid: "33267363"
   
 -   [default](../../../csharp/language-reference/keywords/switch.md)  
 
-## <a name="see-also"></a>请参阅  
- [C# 参考](../../../csharp/language-reference/index.md)  
- [C# 编程指南](../../../csharp/programming-guide/index.md)  
- [C# 关键字](../../../csharp/language-reference/keywords/index.md)  
- [语句关键字](../../../csharp/language-reference/keywords/statement-keywords.md)
+## <a name="see-also"></a>请参阅
+
+- [C# 参考](../../../csharp/language-reference/index.md)  
+- [C# 编程指南](../../../csharp/programming-guide/index.md)  
+- [C# 关键字](../../../csharp/language-reference/keywords/index.md)  
+- [语句关键字](../../../csharp/language-reference/keywords/statement-keywords.md)

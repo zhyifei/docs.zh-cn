@@ -5,12 +5,12 @@ ms.custom: updateeachrelease
 author: rlander
 ms.author: mairaw
 ms.date: 08/03/2017
-ms.openlocfilehash: 595533b9f7c0dcc766914a1812001772d0ffa247
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c54679292fb8bce16ec572e5a2fee12c1b47292a
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33397840"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43393921"
 ---
 # <a name="install-the-net-framework-on-windows-vista-and-windows-server-2008"></a>在 Windows Vista 和 Windows Server 2008 上安装 .NET Framework
 
@@ -18,7 +18,7 @@ ms.locfileid: "33397840"
 
 ![无法启动此应用程序](./media/this-application-could-not-be-started.png)
 
-这些说明可帮助安装所需的 .NET Framework 版本。 [.NET Framework 4.7.2](http://go.microsoft.com/fwlink/?LinkID=863255) 是最新版本。 它在 Windows Vista 和 Windows Server 2008 上不受支持。 它包含在 [Windows 10 2018 年 4 月更新](https://www.microsoft.com/software-download/windows10)中。
+这些说明可帮助安装所需的 .NET Framework 版本。 [.NET Framework 4.7.2](https://go.microsoft.com/fwlink/?LinkID=863255) 是最新版本。 它在 Windows Vista 和 Windows Server 2008 上不受支持。 它包含在 [Windows 10 2018 年 4 月更新](https://www.microsoft.com/software-download/windows10)中。
 
 ## <a name="net-framework-46"></a>.NET Framework 4.6
 
@@ -28,7 +28,7 @@ ms.locfileid: "33397840"
 
 ## <a name="net-framework-35"></a>.NET Framework 3.5
 
-可以在 Windows Vista 上安装 [.NET Framework 3.5](http://go.microsoft.com/fwlink/?LinkID=213834&dotnetdocs)。
+可以在 Windows Vista 上安装 [.NET Framework 3.5](https://go.microsoft.com/fwlink/?LinkID=213834&dotnetdocs)。
 
 .NET Framework 3.5 支持为 .NET Framework 1.0 到 3.5 生成的应用。
 

@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 7d10d11f-680f-4721-b047-fb136316b4cd
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9fabf1a133ca3c3b3ba39a4898ce0aceb378f76d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: dbea588604ebd5ad39e134a4ecfe771c89fb1121
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33571977"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43390563"
 ---
 # <a name="miscellaneous-constructs-in-regular-expressions"></a>正则表达式中的其他构造
 .NET 中的正则表达式包括三个其他语言构造。 其中一个使你可以在正则表达式模式中间启用或禁用特定匹配选项。 其余两个使你可以在正则表达式中包含注释。  
@@ -63,7 +63,7 @@ ms.locfileid: "33571977"
 ## <a name="inline-comment"></a>内联注释  
  `(?#` comment`)` 构造可用于在正则表达式中添加内联注释。 正则表达式引擎在模式匹配中不使用注释的任何部分，尽管注释仍包含在 <xref:System.Text.RegularExpressions.Regex.ToString%2A?displayProperty=nameWithType> 方法返回的字符串中。 该注释在第一个右括号处终止。  
   
- 下面的示例重复了上一部分的示例中的第一个正则表达式模式。 它将两个内联注释添加到该正则表达式，以指示比较是否区分大小写。 正则表达式模式 `\b((?# case-sensitive comparison)D\w+)\s((?#case-insensitive comparison)d\w+)\b` 按以下方式定义。  
+ 下面的示例重复了上一部分的示例中的第一个正则表达式模式。 它将两个内联注释添加到该正则表达式，以指示比较是否区分大小写。 正则表达式模式 `\b((?# case-sensitive comparison)D\w+)\s(?ixn)((?#case-insensitive comparison)d\w+)\b` 按以下方式定义。  
   
 |模式|描述|  
 |-------------|-----------------|  
@@ -92,7 +92,6 @@ ms.locfileid: "33571977"
 |`\d+`|匹配一个或多个十进制数字。|  
 |`(,-*\d+)*`|与零个或一个后跟一个可选负号、再后跟一个或多个十进制数字的冒号匹配。|  
 |`(\:\w{1,4}?)*`|与零个或一个后跟一到四个（但尽可能少）空白字符的冒号匹配。|  
-|`(?#case insensitive comparison)`|内联注释。 它对模式匹配行为没有影响。|  
 |`\}`|匹配右大括号。|  
 |`(?x)`|启用忽略模式空格选项，以便识别行尾注释。|  
 |`# Looks for a composite format item.`|行尾注释。|  

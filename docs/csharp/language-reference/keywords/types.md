@@ -5,12 +5,12 @@ helpviewer_keywords:
 - types [C#]
 - data types [C#], type system
 ms.assetid: 16b984df-f417-4e02-b1e6-4589d4a614ea
-ms.openlocfilehash: d0fe09092b438af90658d599b6a5e63cb62af580
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c5c29f5d9a1a4e25e2d5f8816a0df31fa9a91fb1
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33270420"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43463307"
 ---
 # <a name="types-c-reference"></a>类型（C# 参考）
 C# 类型化系统包含以下类别：  
@@ -29,10 +29,11 @@ C# 类型化系统包含以下类别：
   
  值类型可为空，即是说它们可以存储其他非值状态。 有关详细信息，请参阅[可以为 null 的类型](../../../csharp/programming-guide/nullable-types/index.md)。  
   
-## <a name="see-also"></a>请参阅  
- [C# 参考](../../../csharp/language-reference/index.md)  
- [C# 编程指南](../../../csharp/programming-guide/index.md)  
- [C# 关键字](../../../csharp/language-reference/keywords/index.md)  
- [类型参考表](../../../csharp/language-reference/keywords/reference-tables-for-types.md)  
- [强制转换和类型转换](../../../csharp/programming-guide/types/casting-and-type-conversions.md)  
- [类型](../../../csharp/programming-guide/types/index.md)
+## <a name="see-also"></a>请参阅
+
+- [C# 参考](../../../csharp/language-reference/index.md)  
+- [C# 编程指南](../../../csharp/programming-guide/index.md)  
+- [C# 关键字](../../../csharp/language-reference/keywords/index.md)  
+- [类型参考表](../../../csharp/language-reference/keywords/reference-tables-for-types.md)  
+- [强制转换和类型转换](../../../csharp/programming-guide/types/casting-and-type-conversions.md)  
+- [类型](../../../csharp/programming-guide/types/index.md)

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - client application services, classes
 - client application services, about client application services
 ms.assetid: f0a2da13-e282-4fd7-88a1-f9102c9aeab1
-ms.openlocfilehash: 7ec8d2423c8f9d25ef48c0f0cc0d9627864c9c27
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 55d96039f430bece3cda6136d63dbf287e8fc744
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32744491"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43408556"
 ---
 # <a name="client-application-services-overview"></a>客户端应用程序服务概述
 使用客户端应用程序服务，可简便地从 Windows 窗体和 Windows Presentation Foundation (WPF) 应用程序访问 [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] 登录、角色和配置文件服务。 [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] 应用程序服务包含在 Microsoft ASP.NET 2.0 AJAX Extensions 中，而它又包含在 [!INCLUDE[vs_orcas_long](../../../includes/vs-orcas-long-md.md)] 和 [!INCLUDE[net_v35_long](../../../includes/net-v35-long-md.md)] 中。 这些服务使多个基于 Web 和 Windows 的应用程序共享来自单个服务器的用户信息和用户管理功能。  
@@ -25,7 +25,7 @@ ms.locfileid: "32744491"
   
 -   与 Visual Studio 应用程序设置设计器集成。 向 Visual Studio 项目添加设置时，可以指定哪些设置需要通过客户端设置服务提供程序进行访问。  
   
- 以下章节对这些功能进行了详细介绍。 有关 [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] 应用程序服务的详细信息，请参阅 [ASP.NET 应用程序服务概述](http://msdn.microsoft.com/library/1162e529-0d70-44b2-b3ab-83e60c695013)。  
+ 以下章节对这些功能进行了详细介绍。 有关 [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] 应用程序服务的详细信息，请参阅 [ASP.NET 应用程序服务概述](https://msdn.microsoft.com/library/1162e529-0d70-44b2-b3ab-83e60c695013)。  
   
 ## <a name="authentication"></a>身份验证  
  你可以通过现有 [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] 身份验证服务，使用客户端应用程序服务来验证用户。 你可以通过使用 Windows 或Forms 身份验证来验证用户。 Windows 身份验证表示用户标识是在用户登录到计算机或域时，由操作系统在提供的标识。 通常会在部署于公司 Intranet 上的应用程序中使用 Windows 身份验证。 Forms 身份验证表示你必须将登录控件包括在应用程序内，并将所需的凭据传递给身份验证提供程序。 通常会在部署于 Internet 上的应用程序中使用 Forms 身份验证。  
@@ -40,17 +40,17 @@ ms.locfileid: "32744491"
   
  配置应用程序以将凭据提供程序与 Forms 身份验证一起使用时，必须传递空字符串或 `null`，以作为 <xref:System.Web.Security.Membership.ValidateUser%2A> 方法的参数。 服务提供程序将调用 <xref:System.Web.ClientServices.Providers.IClientFormsAuthenticationCredentialsProvider.GetCredentials%2A?displayProperty=nameWithType> 方法实现。 通常情况下，您将实现此方法以显示对话框并返回填充的 <xref:System.Web.ClientServices.Providers.ClientFormsAuthenticationCredentials> 对象。  
   
- 有关身份验证的详细信息，请参阅 [ASP.NET 身份验证](http://msdn.microsoft.com/library/fc10b0ef-4ce4-4a7f-9174-886325221ee1)。 有关如何设置 [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] 身份验证服务的信息，请参阅[将 Forms 身份验证用于 Microsoft Ajax](http://msdn.microsoft.com/library/c50f7dc5-323c-4c63-b4f3-96edfc1e815e)。  
+ 有关身份验证的详细信息，请参阅 [ASP.NET 身份验证](https://msdn.microsoft.com/library/fc10b0ef-4ce4-4a7f-9174-886325221ee1)。 有关如何设置 [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] 身份验证服务的信息，请参阅[将 Forms 身份验证用于 Microsoft Ajax](https://msdn.microsoft.com/library/c50f7dc5-323c-4c63-b4f3-96edfc1e815e)。  
   
 ## <a name="roles"></a>角色  
  可以使用客户端应用程序服务从现有 [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] 角色服务中检索角色信息。 若要确定经过身份验证的当前用户是否属于特定角色，请调用 `static` <xref:System.Threading.Thread.CurrentPrincipal%2A?displayProperty=nameWithType> 属性中 <xref:System.Security.Principal.IPrincipal> 引用的 <xref:System.Security.Principal.IPrincipal.IsInRole%2A> 方法。 <xref:System.Security.Principal.IPrincipal.IsInRole%2A> 方法将角色名称作为参数，并返回 <xref:System.Boolean> 值以指示当前用户是否为指定角色。 如果用户未经过身份验证或不在指定的角色，则此方法将返回 `false`。  
   
- 有关如何设置 [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] 角色服务的信息，请参阅[将角色信息用于 Microsoft Ajax](http://msdn.microsoft.com/library/280f6ad9-ba1a-4fc9-b0cc-22e39e54a82d)。  
+ 有关如何设置 [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] 角色服务的信息，请参阅[将角色信息用于 Microsoft Ajax](https://msdn.microsoft.com/library/280f6ad9-ba1a-4fc9-b0cc-22e39e54a82d)。  
   
 ## <a name="settings"></a>设置  
  可以使用客户端应用程序服务从现有 [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] 配置文件服务中检索用户应用程序设置。 客户端应用程序服务 Web 设置功能与 [!INCLUDE[dnprdnlong](../../../includes/dnprdnlong-md.md)] 提供的应用程序设置功能集成。 若要检索 Web 设置，请先使用 Visual Studio 项目设计器的“设置”选项卡，为项目生成 `Settings` 类（在 C# 中作为 `Properties.Settings.Default` 访问，在 Visual Basic 中作为 `My.Settings` 访问）。 在“设置”选项卡上，可以使用“加载 Web 设置”按钮检索 Web 设置，并将它们添加到生成的 `Settings` 类。 你可以使用为所有已经过身份验证的用户或所有匿名用户的使用而配置的 Web 设置。  
   
- 有关应用程序设置的详细信息，请参阅[应用程序设置概述](../../../docs/framework/winforms/advanced/application-settings-overview.md)。 若要了解如何实现自己的设置类，而不是在 Visual Studio 中生成一个，请参阅[如何：创建应用程序设置](../../../docs/framework/winforms/advanced/how-to-create-application-settings.md)。 有关如何设置 [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] 配置文件服务的信息，请参阅[将配置文件信息用于 Microsoft Ajax](http://msdn.microsoft.com/library/91239ae6-d01c-4f4e-a433-eb9040dbed61)。  
+ 有关应用程序设置的详细信息，请参阅[应用程序设置概述](../../../docs/framework/winforms/advanced/application-settings-overview.md)。 若要了解如何实现自己的设置类，而不是在 Visual Studio 中生成一个，请参阅[如何：创建应用程序设置](../../../docs/framework/winforms/advanced/how-to-create-application-settings.md)。 有关如何设置 [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] 配置文件服务的信息，请参阅[将配置文件信息用于 Microsoft Ajax](https://msdn.microsoft.com/library/91239ae6-d01c-4f4e-a433-eb9040dbed61)。  
   
 ## <a name="client-application-services-classes"></a>客户端应用程序服务类  
  下表介绍了实现客户端应用程序服务功能的类。  
@@ -82,10 +82,10 @@ ms.locfileid: "32744491"
  [如何：使用客户端应用程序服务来实现用户登录](../../../docs/framework/common-client-technologies/how-to-implement-user-login-with-client-application-services.md)  
  [演练：使用客户端应用程序服务](../../../docs/framework/common-client-technologies/walkthrough-using-client-application-services.md)  
  [应用程序设置概述](../../../docs/framework/winforms/advanced/application-settings-overview.md)  
- [ASP.NET 应用程序服务概述](http://msdn.microsoft.com/library/1162e529-0d70-44b2-b3ab-83e60c695013)  
- [将 Forms 身份验证用于 Microsoft Ajax](http://msdn.microsoft.com/library/c50f7dc5-323c-4c63-b4f3-96edfc1e815e)  
- [将角色信息用于 Microsoft Ajax](http://msdn.microsoft.com/library/280f6ad9-ba1a-4fc9-b0cc-22e39e54a82d)  
- [将配置文件信息用于 Microsoft Ajax](http://msdn.microsoft.com/library/91239ae6-d01c-4f4e-a433-eb9040dbed61)  
- [ASP.NET 身份验证](http://msdn.microsoft.com/library/fc10b0ef-4ce4-4a7f-9174-886325221ee1)  
- [使用角色管理授权](http://msdn.microsoft.com/library/01954ce4-39a2-487f-8153-a69f6f6f3195)  
- [为 SQL Server 创建和配置应用程序服务数据库](http://msdn.microsoft.com/library/ab894e83-7e2f-4af8-a116-b1bff8f815b2)
+ [ASP.NET 应用程序服务概述](https://msdn.microsoft.com/library/1162e529-0d70-44b2-b3ab-83e60c695013)  
+ [将 Forms 身份验证用于 Microsoft Ajax](https://msdn.microsoft.com/library/c50f7dc5-323c-4c63-b4f3-96edfc1e815e)  
+ [将角色信息用于 Microsoft Ajax](https://msdn.microsoft.com/library/280f6ad9-ba1a-4fc9-b0cc-22e39e54a82d)  
+ [将配置文件信息用于 Microsoft Ajax](https://msdn.microsoft.com/library/91239ae6-d01c-4f4e-a433-eb9040dbed61)  
+ [ASP.NET 身份验证](https://msdn.microsoft.com/library/fc10b0ef-4ce4-4a7f-9174-886325221ee1)  
+ [使用角色管理授权](https://msdn.microsoft.com/library/01954ce4-39a2-487f-8153-a69f6f6f3195)  
+ [为 SQL Server 创建和配置应用程序服务数据库](https://msdn.microsoft.com/library/ab894e83-7e2f-4af8-a116-b1bff8f815b2)

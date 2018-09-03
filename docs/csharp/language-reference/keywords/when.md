@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - when keyword [C#]
 ms.assetid: dd543335-ae37-48ac-9560-bd5f047b9aea
-ms.openlocfilehash: 3168cf620eb3aaf206afbe5bc2efc297832503ec
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a71cbdce256b1c1bd5d101d66f216fb229d70adf
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33276576"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43403992"
 ---
  # <a name="when-c-reference"></a>when（C# 参考）
 
@@ -47,8 +47,8 @@ case (expr) when (when-condition):
 
  [!code-csharp[when-with-case#1](../../../../samples/snippets/csharp/language-reference/keywords/when/when.cs#1)]  
 
-## <a name="see-also"></a>请参阅 
-  [switch 语句](switch.md)  
-  [try/catch 语句](try-catch.md)  
-  [try/catch/finally 语句](try-catch-finally.md) 
+## <a name="see-also"></a>请参阅
 
+- [switch 语句](switch.md)  
+- [try/catch 语句](try-catch.md)  
+- [try/catch/finally 语句](try-catch-finally.md) 

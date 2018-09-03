@@ -5,12 +5,12 @@ ms.author: ronpet
 author: rpetrusha
 ms.date: 11/22/2016
 ms.assetid: b6a0539a-8ce5-4da7-adcf-44be345a2714
-ms.openlocfilehash: e37f0e72ee02915d16509fb2ff48bd114e8ad466
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2469e8a0fbf8181a720201637ab5ac5ef02055d4
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33217969"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43400860"
 ---
 # <a name="lambda-expressions"></a>Lambda 表达式 #
 
@@ -76,9 +76,9 @@ Lambda 表达式使用 [lambda 声明运算符](language-reference/operators/lam
 
 有关如何创建和使用异步方法的详细信息，请参阅[使用 Async 和 Await 的异步编程](programming-guide/concepts/async/index.md)。
 
-## <a name="lambda-expressions-and-tuples"></a>Lambda 表达式和元组 ##
+## <a name="lambda-expressions-and-tuples"></a>Lambda 表达式和元祖 ##
 
-从 C# 7.0 开始，C# 语言为元组提供内置支持。 可以提供一个元组作为 Lambda 表达式的参数，同时 Lambda 表达式也可以返回元组。 在某些情况下，C# 编译器使用类型推理来确定元组组件的类型。 
+从 C# 7.0 开始，C# 语言为元组提供内置支持。 可以提供一个元组作为 Lambda 表达式的参数，同时 Lambda 表达式也可以返回元组。 在某些情况下，C# 编译器使用类型推理来确定元组组件的类型。
 
 可通过用括号括住用逗号分隔的组件列表来定义元组。 以下示例使用包含 5 个组件的元组将一系列数字传递给 Lambda 表达式，此 Lambda 表达式将每个值加倍，然后返回包含乘法运算结果的 5 个组件的元组。
 
@@ -88,7 +88,7 @@ Lambda 表达式使用 [lambda 声明运算符](language-reference/operators/lam
 
 [!code-csharp[csSnippets.Lambdas](../../samples/snippets/csharp/concepts/lambda-expressions/tuples2.cs#1)]
 
-有关对 C# 中元组的支持的详细信息，请参阅 [C# 元组类型](tuples.md)。
+有关对 C# 中元祖的支持的详细信息，请参阅 [C# 元祖类型](tuples.md)。
 
 ## <a name="lambdas-with-the-standard-query-operators"></a>含标准查询运算符的 lambda ##
 
@@ -154,6 +154,6 @@ Lambda 类型推理的一般规则如下：
 
 ## <a name="see-also"></a>请参阅 ##
 
-[LINQ（语言集成查询）](../standard/using-linq.md)   
-[匿名方法](programming-guide/statements-expressions-operators/anonymous-methods.md)   
-[表达式树](expression-trees.md)
+- [LINQ（语言集成查询）](../standard/using-linq.md)
+- [匿名方法](programming-guide/statements-expressions-operators/anonymous-methods.md)
+- [表达式树](expression-trees.md)

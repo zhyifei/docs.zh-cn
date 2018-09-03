@@ -4,12 +4,12 @@ description: 适用于容器化 .NET 应用程序的 .NET 微服务体系结构 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.openlocfilehash: 4e1e1671238d3cc5944bfe53b49f7d0ddd969aff
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.openlocfilehash: 79b63c376d25725b2bcb6c16cdb4d06e107d5c07
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37105364"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43418635"
 ---
 # <a name="creating-composite-ui-based-on-microservices-including-visual-ui-shape-and-layout-generated-by-multiple-microservices"></a>根据微服务创建复合 UI，包括多个微服务生成的可视 UI 形状和布局
 
@@ -35,7 +35,7 @@ ms.locfileid: "37105364"
 
 由微服务驱动的复合 UI 方法的挑战性可能更大也可能更小，具体取决于使用的 UI 技术。 例如，对于用于生成 SPA 或本机移动应用的传统 Web 应用程序，则不会使用相同的构建技术（如开发 Xamarin 应用时，此方法可能更具挑战性）。
 
-出于多种原因，[eShopOnContainers](http://aka.ms/MicroservicesArchitecture) 示例应用程序使用整体式 UI 方法。 首先，其作用是引入微服务和容器。 虽然复合 UI 更高级，但该 UI 的设计和开发工作也更复杂。 其次，eShopOnContainers 还提供了基于 Xamarin 的本机移动应用，这增加了客户端 C\# 的复杂性。
+出于多种原因，[eShopOnContainers](https://aka.ms/MicroservicesArchitecture) 示例应用程序使用整体式 UI 方法。 首先，其作用是引入微服务和容器。 虽然复合 UI 更高级，但该 UI 的设计和开发工作也更复杂。 其次，eShopOnContainers 还提供了基于 Xamarin 的本机移动应用，这增加了客户端 C\# 的复杂性。
 
 不过，建议通过以下参考资料，深入了解基于微服务的复合 UI。
 

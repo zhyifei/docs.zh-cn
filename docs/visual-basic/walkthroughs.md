@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Visual Basic code, walkthroughs
 - walkthroughs [Visual Basic]
 ms.assetid: e4e1f849-e1ce-4cf7-8483-d9b4c4887a8e
-ms.openlocfilehash: 7248f352f95f2883fda9c92386f6ed769f9f2bf8
-ms.sourcegitcommit: bd4fa78f5a46133efdead1bc692a9aa2811d7868
+ms.openlocfilehash: 5211e1cc55c4af9735f59e4ddecc11acb24b8ea0
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "42792368"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43452789"
 ---
 # <a name="visual-basic-language-walkthroughs"></a>Visual Basic 语言演练
 演练提供有关常见方案的分步说明，这使它们成为了解产品或特定功能部分的良好开端。  
@@ -47,7 +47,7 @@ ms.locfileid: "42792368"
  [使用 COM 对象实现继承](../visual-basic/programming-guide/com-interop/walkthrough-implementing-inheritance-with-com-objects.md)  
  演示如何使用 Visual Basic 6.0 创建包含类的 COM 对象，然后将其用作 Visual Basic 中的基类。  
   
- [多线程处理](http://msdn.microsoft.com/library/2cbf5116-8499-4af9-818c-6f7c1c2ad2c9)  
+ [多线程处理](https://msdn.microsoft.com/library/2cbf5116-8499-4af9-818c-6f7c1c2ad2c9)  
  演示如何创建在文本文件中搜索单词出现次数的多线程应用程序。  
   
  [确定 My.Application.Log 写入信息的位置](../visual-basic/developing-apps/programming/log-info/walkthrough-determining-where-my-application-log-writes-information.md)  
@@ -62,7 +62,7 @@ ms.locfileid: "42792368"
  [创建自定义日志侦听器](../visual-basic/developing-apps/programming/log-info/walkthrough-creating-custom-log-listeners.md)  
  演示如何创建自定义日志侦听器，并将其配置为侦听 `My.Application.Log` 对象的输出。  
   
- [嵌入托管程序集中的类型](http://msdn.microsoft.com/library/b28ec92c-1867-4847-95c0-61adfe095e21)  
+ [嵌入托管程序集中的类型](https://msdn.microsoft.com/library/b28ec92c-1867-4847-95c0-61adfe095e21)  
  说明如何创建程序集和从其中嵌入类型的客户端程序。  
   
  [验证密码是否复杂 (Visual Basic)](../visual-basic/programming-guide/language-features/strings/walkthrough-validating-that-passwords-are-complex.md)  
@@ -77,8 +77,8 @@ ms.locfileid: "42792368"
  [使用 .NET Framework 方法操作文件](../visual-basic/developing-apps/programming/drives-directories-files/walkthrough-manipulating-files-by-using-net-framework-methods.md)  
  演示如何使用 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 方法确定文件信息，在文件中搜索字符串，以及对文件进行写入操作。  
   
- [在 Visual Basic 中保持对象](http://msdn.microsoft.com/library/cb0a0917-08d5-4578-ad2b-3764ccf6167f)  
+ [在 Visual Basic 中保持对象](https://msdn.microsoft.com/library/cb0a0917-08d5-4578-ad2b-3764ccf6167f)  
  演示如何创建简单的对象并将其数据保存到文件中。  
   
- [带有“使用时生成”功能的测试先行支持](http://msdn.microsoft.com/library/764c17a4-cd95-4c23-bf63-d92d9c5adfb2)  
+ [带有“使用时生成”功能的测试先行支持](https://msdn.microsoft.com/library/764c17a4-cd95-4c23-bf63-d92d9c5adfb2)  
  演示执行测试先行开发的方式，即首先编写单元测试，然后编写使测试成功的源代码。

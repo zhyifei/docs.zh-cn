@@ -11,12 +11,12 @@ ms.assetid: e6fa8ebd-010a-4c48-a5ec-a5102c53c06f
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: 8842bb47ad32ae1e26eaa503398ea91afb7fd1dd
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.openlocfilehash: 2c9b3b1c647d74444fed01e38b65c1b2fe8364c6
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43003198"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43480943"
 ---
 # <a name="internet-protocol-version-6"></a>Internet 协议版本 6
 Internet 协议版本 6 (IPv6) 是 Internet 的网络层的标准协议新套件。 IPv6 旨在解决当前版本的 Internet 协议套件（称作 IPv4）存在的许多问题，包括地址消耗、安全性、自动配置和扩展性等问题。 IPv6 扩展了 Internet 的功能以启用新型应用程序，包括对等和移动应用程序。 以下是当前 IPv4 协议的主要问题：  
@@ -58,7 +58,7 @@ Internet 协议版本 6 (IPv6) 是 Internet 的网络层的标准协议新套件
   
 -   RFC 2374，IPv6 可聚合全局单播地址格式。  
   
- 还可以在 [Technet 上的 IPv6 区域](http://go.microsoft.com/fwlink/?LinkID=179658)中找到 IPv6 相关信息。  
+ 还可以在 [Technet 上的 IPv6 区域](https://go.microsoft.com/fwlink/?LinkID=179658)中找到 IPv6 相关信息。  
   
 ## <a name="see-also"></a>请参阅  
  [IPv6 套接字示例](https://msdn.microsoft.com/library/ms180981(v=vs.85).aspx)  

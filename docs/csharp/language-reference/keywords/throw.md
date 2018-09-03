@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 5ac4feef-4b1a-4c61-aeb4-61d549e5dd42
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c7e944f224ff9bf6dc3b8cefc293182bb79f74f2
-ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
+ms.openlocfilehash: 831c4cce14e902697d84129e54cc54f07d26b9f3
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34457468"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43417353"
 ---
 # <a name="throw-c-reference"></a>throw（C# 参考）
 发出程序执行期间出现异常的信号。  
@@ -65,11 +65,12 @@ throw [e]
 ## <a name="c-language-specification"></a>C# 语言规范  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>请参阅  
- [C# 参考](../../../csharp/language-reference/index.md)  
- [C# 编程指南](../../../csharp/programming-guide/index.md)  
- [try-catch](../../../csharp/language-reference/keywords/try-catch.md)  
- [C++ 中的 try、catch 和 throw 语句](../../../csharp/language-reference/keywords/try-catch.md)  
- [C# 关键字](../../../csharp/language-reference/keywords/index.md)  
- [异常处理语句](../../../csharp/language-reference/keywords/exception-handling-statements.md)  
- [如何显式引发异常](../../../standard/exceptions/how-to-explicitly-throw-exceptions.md)
+## <a name="see-also"></a>请参阅
+
+- [C# 参考](../../../csharp/language-reference/index.md)  
+- [C# 编程指南](../../../csharp/programming-guide/index.md)  
+- [try-catch](../../../csharp/language-reference/keywords/try-catch.md)  
+- [C++ 中的 try、catch 和 throw 语句](../../../csharp/language-reference/keywords/try-catch.md)  
+- [C# 关键字](../../../csharp/language-reference/keywords/index.md)  
+- [异常处理语句](../../../csharp/language-reference/keywords/exception-handling-statements.md)  
+- [如何显式引发异常](../../../standard/exceptions/how-to-explicitly-throw-exceptions.md)

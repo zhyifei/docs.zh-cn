@@ -5,12 +5,12 @@ ms.assetid: 11940511-c124-4d91-ae31-d4ed6e81ee58
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: 01e0bd36b35319c90fc46d8f5f97161147852c7f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 70c49198c0198610eaa5001971b7de7efd2951aa
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33396995"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43482338"
 ---
 # <a name="peer-name-resolution-protocol"></a>对等名称解析协议
 在对等环境中，对等机使用特定的名称解析系统从名称或其他类型的标识符解析彼此的网络位置（地址、协议和端口）。 过去，由于本质上的短暂性连接以及域名系统 (DNS) 内的其他缺陷，造成对等名称解析十分复杂。  
@@ -65,4 +65,4 @@ ms.locfileid: "33396995"
  <xref:System.ServiceModel.PeerResolvers>  
  <xref:System.Net.PeerToPeer>  
  [网络编程示例](../../../docs/framework/network-programming/network-programming-samples.md)  
- [PeerToPeer 技术示例](http://go.microsoft.com/fwlink/?LinkID=179571)
+ [PeerToPeer 技术示例](https://go.microsoft.com/fwlink/?LinkID=179571)

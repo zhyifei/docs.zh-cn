@@ -12,12 +12,12 @@ helpviewer_keywords:
 - ?[] operator [C#]
 - ?[] operator [Visual Basic]
 ms.assetid: 9c7b2c8f-a785-44ca-836c-407bfb6d27f5
-ms.openlocfilehash: 28cf2633d74f047a751ffdad11f1e1db8328cd6f
-ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
+ms.openlocfilehash: f00d5e489931d9c1172a21ee5f0d3e3d0a6f4a4e
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34457795"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43408993"
 ---
 # <a name="-and--null-conditional-operators-c-and-visual-basic"></a>?. 和 ?[] NULL 条件运算符（C# 和 Visual Basic）
 执行成员访问 (`?.`) 或索引 (`?[]`) 操作之前，测试左侧操作数的值为 null，如果左侧操作数计算结果为 `null`，则返回 `null`。 
@@ -79,8 +79,9 @@ PropertyChanged?.Invoke(…)
   
  有关详细信息，请参阅 [Visual Basic 语言参考](../../../visual-basic/language-reference/index.md)。  
   
-## <a name="see-also"></a>请参阅  
- [??（空合运算符）](null-coalescing-operator.md)  
- [C# 参考](../../../csharp/language-reference/index.md)  
- [C# 编程指南](../../../csharp/programming-guide/index.md)  
- [Visual Basic 编程指南](../../../visual-basic/programming-guide/index.md)
+## <a name="see-also"></a>请参阅
+
+- [??（空合运算符）](null-coalescing-operator.md)  
+- [C# 参考](../../../csharp/language-reference/index.md)  
+- [C# 编程指南](../../../csharp/programming-guide/index.md)  
+- [Visual Basic 编程指南](../../../visual-basic/programming-guide/index.md)

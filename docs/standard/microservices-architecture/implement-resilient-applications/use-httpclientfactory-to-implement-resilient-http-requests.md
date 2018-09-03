@@ -4,12 +4,12 @@ description: 自 .NET Core 2.1 起可用的 HttpClientFactory 是一个“固执
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 07/03/2018
-ms.openlocfilehash: 89382f266eacc97b5e1ee5416c92dbd662427cd1
-ms.sourcegitcommit: 59b51cd7c95c75be85bd6ef715e9ef8c85720bac
+ms.openlocfilehash: 6fd30a9358ca9c07b2a6e2ec591e4c5d7db54ccb
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37878619"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43395535"
 ---
 # <a name="use-httpclientfactory-to-implement-resilient-http-requests"></a>使用 HttpClientFactory 实现复原 HTTP 请求
 
@@ -78,7 +78,7 @@ services.AddHttpClient<IOrderingService, OrderingService>();
 池中的 HttpMessageHandler 对象的生存期就是池中的 HttpMessageHandler 实例可重复使用的时间长度。 默认值为两分钟，但可基于每个命名客户端或类型化客户端重写此值。 若要重写，请对创建该客户端时返回的 IHttpClientBuilder 调用 SetHandlerLifetime()，如下面的代码所示。
 
 ```csharp
-//Set 5 min as the lifetime for the HttpMessageHandler objects in the pool used for the Basket Typed Client 
+//Set 5 min as the lifetime for the HttpMessageHandler objects in the pool used for the Catalog Typed Client 
 services.AddHttpClient<ICatalogService, CatalogService>()
                  .SetHandlerLifetime(TimeSpan.FromMinutes(5));  
 ```

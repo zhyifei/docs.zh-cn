@@ -4,11 +4,11 @@ description: 语法可视化工具提供了可视化工具，用于浏览 .NET C
 ms.date: 03/07/2018
 ms.custom: mvc
 ms.openlocfilehash: 3029c868ad9b0384cf11e57a00b123acd1177806
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33354655"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43456459"
 ---
 # <a name="explore-code-with-the-roslyn-syntax-visualizer-in-visual-studio"></a>使用 Visual Studio 中的 Roslyn 语法可视化工具浏览代码
 

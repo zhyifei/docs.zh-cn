@@ -5,12 +5,12 @@ helpviewer_keywords:
 - keywords [C#], operators
 - operators [C#], keywords
 ms.assetid: f745c81f-f8d8-4673-86a1-0f3a85cc63c3
-ms.openlocfilehash: 19be5aadf68f7812f2cb4a4e694a6600c5203af4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b6a7fbc08647ace73676403937f4b0f79e7ff585
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33273310"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43392693"
 ---
 # <a name="operator-keywords-c-reference"></a>运算符关键字（C# 参考）
 用于执行其他操作，例如创建对象、检查对象的运行时类型、获取类型的大小等等。 本部分介绍以下关键字：  
@@ -55,8 +55,9 @@ ms.locfileid: "33273310"
   
 -   [unchecked](../../../csharp/language-reference/keywords/unchecked.md) 指定未检查的上下文。  
   
-## <a name="see-also"></a>请参阅  
- [C# 参考](../../../csharp/language-reference/index.md)  
- [C# 编程指南](../../../csharp/programming-guide/index.md)  
- [C# 关键字](../../../csharp/language-reference/keywords/index.md)  
- [C# 运算符](../../../csharp/language-reference/operators/index.md)
+## <a name="see-also"></a>请参阅
+
+- [C# 参考](../../../csharp/language-reference/index.md)  
+- [C# 编程指南](../../../csharp/programming-guide/index.md)  
+- [C# 关键字](../../../csharp/language-reference/keywords/index.md)  
+- [C# 运算符](../../../csharp/language-reference/operators/index.md)

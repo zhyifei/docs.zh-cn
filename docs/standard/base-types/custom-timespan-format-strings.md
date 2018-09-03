@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: a63ebf55-7269-416b-b4f5-286f6c03bf0e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cd378798ad6909175b2342b0d79584e2667f1eea
-ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
+ms.openlocfilehash: 0cf81b5a86d55cf3d7872e0e5281c35f41ad1c31
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42911875"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43390658"
 ---
 # <a name="custom-timespan-format-strings"></a>自定义的 TimeSpan 格式字符串
 
@@ -67,11 +67,12 @@ ms.locfileid: "42911875"
 |“FFFFF”|时间间隔中的十万分之几秒。 不包含任何小数尾随零。<br /><br /> 有关详细信息，请参阅[“FFFFF”自定义格式说明符](#F5_Specifier)。|`TimeSpan.Parse("00:00:06.329179")`：<br /><br /> `FFFFF`: 32917<br /><br /> `TimeSpan.Parse("0:0:3.100009")`：<br /><br /> `ss\.FFFFF`: 03.1|
 |“FFFFFF”|时间间隔中的百万分之几秒。 不显示任何小数尾随零。<br /><br /> 有关详细信息，请参阅[“FFFFFF”自定义格式说明符](#F6_Specifier)。|`TimeSpan.Parse("00:00:06.3291791")`：<br /><br /> `FFFFFF`: 329179<br /><br /> `TimeSpan.Parse("0:0:3.1000009")`：<br /><br /> `ss\.FFFFFF`: 03.1|
 |“FFFFFFF”|时间间隔中的千万分之几秒。 不显示任何小数尾随零或七个零。<br /><br /> 有关详细信息，请参阅[“FFFFFFF”自定义格式说明符](#F7_Specifier)。|`TimeSpan.Parse("00:00:06.3291791")`：<br /><br /> `FFFFFF`: 3291791<br /><br /> `TimeSpan.Parse("0:0:3.1900000")`：<br /><br /> `ss\.FFFFFF`: 03.19|
-|'string'|文本字符串分隔符。<br /><br /> 有关详细信息，请参阅[其他字符](#Other)。|`new TimeSpan(14, 32, 17):`<br /><br /> `hh':'mm':'ss` --> "14:32:17"|
+|'*string*'|文本字符串分隔符。<br /><br /> 有关详细信息，请参阅[其他字符](#Other)。|`new TimeSpan(14, 32, 17):`<br /><br /> `hh':'mm':'ss` --> "14:32:17"|
 |\\|转义字符。<br /><br /> 有关详细信息，请参阅[其他字符](#Other)。|`new TimeSpan(14, 32, 17):`<br /><br /> `hh\:mm\:ss` --> "14:32:17"|
 |任何其他字符|任何其他未转义字符会解释为自定义格式说明符。<br /><br /> 有关详细信息，请参阅[其他字符](#Other)。|`new TimeSpan(14, 32, 17):`<br /><br /> `hh\:mm\:ss` --> "14:32:17"|
 
-<a name="dSpecifier"></a>
+<a name="dSpecifier"></a> 
+
 ## <a name="the-d-custom-format-specifier"></a>“d”自定义格式说明符
 
 "d" 自定义格式说明符输出 <xref:System.TimeSpan.Days%2A?displayProperty=nameWithType> 属性的值，表示时间间隔中的整天数。 它在 <xref:System.TimeSpan> 值中输出整天数（即使值有多位，也不例外）。 如果 <xref:System.TimeSpan.Days%2A?displayProperty=nameWithType> 属性的值为零，说明符输出“0”。
@@ -89,6 +90,7 @@ ms.locfileid: "42911875"
 [返回表首](#table)
 
 <a name="ddSpecifier"></a> 
+
 ## <a name="the-dd-dddddddd-custom-format-specifiers"></a>“dd”-“dddddddd”自定义格式说明符
 "dd"、"ddd"、"dddd"、"ddddd"、"dddddd"、"ddddddd" 和 "dddddddd" 自定义格式说明符输出 <xref:System.TimeSpan.Days%2A?displayProperty=nameWithType> 属性的值，表示时间间隔中的整天数。
 
@@ -102,6 +104,7 @@ ms.locfileid: "42911875"
 [返回表首](#table)
 
 <a name="hSpecifier"></a> 
+
 ## <a name="the-h-custom-format-specifier"></a>“h”自定义格式说明符
 "h" 自定义格式说明符输出 <xref:System.TimeSpan.Hours%2A?displayProperty=nameWithType> 属性的值，表示时间间隔中不计入天数的整小时数。 如果 <xref:System.TimeSpan.Hours%2A?displayProperty=nameWithType> 属性的值介于 0 和 9 之间，它返回一位数字符串值；如果 <xref:System.TimeSpan.Hours%2A?displayProperty=nameWithType> 属性的值介于 10 和 23 之间，它返回两位数字符串值。
 
@@ -123,6 +126,7 @@ ms.locfileid: "42911875"
 [返回表首](#table)
 
 <a name="hhSpecifier"></a> 
+
 ## <a name="the-hh-custom-format-specifier"></a>“hh”自定义格式说明符
 "hh" 自定义格式说明符输出 <xref:System.TimeSpan.Hours%2A?displayProperty=nameWithType> 属性的值，表示时间间隔中不计入天数的整小时数。 对于 0 到 9 的值，输出字符串包含一个前导零。
 
@@ -139,6 +143,7 @@ ms.locfileid: "42911875"
 [返回表首](#table)
 
 <a name="mSpecifier"></a> 
+
 ## <a name="the-m-custom-format-specifier"></a>“m”自定义格式说明符
 "m" 自定义格式说明符输出 <xref:System.TimeSpan.Minutes%2A?displayProperty=nameWithType> 属性的值，表示时间间隔中不计入天数的整分钟数。 如果 <xref:System.TimeSpan.Minutes%2A?displayProperty=nameWithType> 属性的值介于 0 和 9 之间，它返回一位数字符串值；如果 <xref:System.TimeSpan.Minutes%2A?displayProperty=nameWithType> 属性的值介于 10 和 59 之间，它返回两位数字符串值。
 
@@ -160,6 +165,7 @@ ms.locfileid: "42911875"
 [返回表首](#table)
 
 <a name="mmSpecifier"></a> 
+
 ## <a name="the-mm-custom-format-specifier"></a>“mm”自定义格式说明符
 "mm" 自定义格式说明符输出 <xref:System.TimeSpan.Minutes%2A?displayProperty=nameWithType> 属性的值，表示时间间隔中不计入小时数或天数的整分钟数。 对于 0 到 9 的值，输出字符串包含一个前导零。
 
@@ -176,6 +182,7 @@ ms.locfileid: "42911875"
 [返回表首](#table)
 
 <a name="sSpecifier"></a> 
+
 ## <a name="the-s-custom-format-specifier"></a>“s”自定义格式说明符
 "s" 自定义格式说明符输出 <xref:System.TimeSpan.Seconds%2A?displayProperty=nameWithType> 属性的值，表示时间间隔中不计入小时数、天数或分钟数的整秒数。 如果 <xref:System.TimeSpan.Seconds%2A?displayProperty=nameWithType> 属性的值介于 0 和 9 之间，它返回一位数字符串值；如果 <xref:System.TimeSpan.Seconds%2A?displayProperty=nameWithType> 属性的值介于 10 和 59 之间，它返回两位数字符串值。
 
@@ -197,6 +204,7 @@ ms.locfileid: "42911875"
 [返回表首](#table)
 
 <a name="ssSpecifier"></a> 
+
 ## <a name="the-ss-custom-format-specifier"></a>“ss”自定义格式说明符
 "ss" 自定义格式说明符输出 <xref:System.TimeSpan.Seconds%2A?displayProperty=nameWithType> 属性的值，表示时间间隔中不计入小时数、天数或分钟数的整秒数。 对于 0 到 9 的值，输出字符串包含一个前导零。
 
@@ -213,6 +221,7 @@ ms.locfileid: "42911875"
 [返回表首](#table)
 
 <a name="fSpecifier"></a> 
+
 ## <a name="thef-custom-format-specifier"></a>"f" 自定义格式说明符
 “f”自定义格式说明符输出时间间隔中的十分之几秒。 在格式设置操作中，会截断其余任何小数位数。 在调用 <xref:System.TimeSpan.ParseExact%2A?displayProperty=nameWithType> 或 <xref:System.TimeSpan.TryParseExact%2A?displayProperty=nameWithType> 方法的分析操作中，输入字符串必须只有一个小数位。
 
@@ -226,6 +235,7 @@ ms.locfileid: "42911875"
 [返回表首](#table)
 
 <a name="ffSpecifier"></a> 
+
 ## <a name="the-ff-custom-format-specifier"></a>“ff”自定义格式说明符
 “ff”自定义格式说明符输出时间间隔中的百分之几秒。 在格式设置操作中，会截断其余任何小数位数。 在调用 <xref:System.TimeSpan.ParseExact%2A?displayProperty=nameWithType> 或 <xref:System.TimeSpan.TryParseExact%2A?displayProperty=nameWithType> 方法的分析操作中，输入字符串必须只有两个小数位。
 
@@ -237,6 +247,7 @@ ms.locfileid: "42911875"
 [返回表首](#table)
 
 <a name="f3Specifier"></a> 
+
 ## <a name="the-fff-custom-format-specifier"></a>“fff”自定义格式说明符
 “fff”自定义格式说明符（包含三个“f”字符）输出时间间隔中的毫秒。 在格式设置操作中，会截断其余任何小数位数。 在调用 <xref:System.TimeSpan.ParseExact%2A?displayProperty=nameWithType> 或 <xref:System.TimeSpan.TryParseExact%2A?displayProperty=nameWithType> 方法的分析操作中，输入字符串必须只有三个小数位。
 
@@ -248,6 +259,7 @@ ms.locfileid: "42911875"
 [返回表首](#table)
 
 <a name="f4Specifier"></a> 
+
 ## <a name="the-ffff-custom-format-specifier"></a>“ffff”自定义格式说明符
 “ffff”自定义格式说明符（包含四个“f”字符）输出时间间隔中的万分之几秒。 在格式设置操作中，会截断其余任何小数位数。 在调用 <xref:System.TimeSpan.ParseExact%2A?displayProperty=nameWithType> 或 <xref:System.TimeSpan.TryParseExact%2A?displayProperty=nameWithType> 方法的分析操作中，输入字符串必须只有四个小数位。
 
@@ -259,6 +271,7 @@ ms.locfileid: "42911875"
 [返回表首](#table)
 
 <a name="f5Specifier"></a> 
+
 ## <a name="the-fffff-custom-format-specifier"></a>“fffff”自定义格式说明符
 “fffff”自定义格式说明符（包含五个“f”字符）输出时间间隔中的十万分之几秒。 在格式设置操作中，会截断其余任何小数位数。 在调用 <xref:System.TimeSpan.ParseExact%2A?displayProperty=nameWithType> 或 <xref:System.TimeSpan.TryParseExact%2A?displayProperty=nameWithType> 方法的分析操作中，输入字符串必须只有五个小数位。
 
@@ -270,6 +283,7 @@ ms.locfileid: "42911875"
 [返回表首](#table)
 
 <a name="f6Specifier"></a> 
+
 ## <a name="the-ffffff-custom-format-specifier"></a>“ffffff”自定义格式说明符
 “ffffff”自定义格式说明符（包含六个“f”字符）输出时间间隔中的百万分之几秒。 在格式设置操作中，会截断其余任何小数位数。 在调用 <xref:System.TimeSpan.ParseExact%2A?displayProperty=nameWithType> 或 <xref:System.TimeSpan.TryParseExact%2A?displayProperty=nameWithType> 方法的分析操作中，输入字符串必须只有六个小数位。
 
@@ -281,6 +295,7 @@ ms.locfileid: "42911875"
 [返回表首](#table)
 
 <a name="f7Specifier"></a> 
+
 ## <a name="the-fffffff-custom-format-specifier"></a>“fffffff”自定义格式说明符
 “fffffff”自定义格式说明符（包含六个“f”字符）输出时间间隔中的千万分之几秒（或时钟周期的小数）。 在调用 <xref:System.TimeSpan.ParseExact%2A?displayProperty=nameWithType> 或 <xref:System.TimeSpan.TryParseExact%2A?displayProperty=nameWithType> 方法的分析操作中，输入字符串必须只有七个小数位。
 
@@ -292,6 +307,7 @@ ms.locfileid: "42911875"
 [返回表首](#table)
 
 <a name="F_Specifier"></a> 
+
 ## <a name="the-f-custom-format-specifier"></a>“F”自定义格式说明符
 “F”自定义格式说明符输出时间间隔中的十分之几秒。 在格式设置操作中，会截断其余任何小数位数。 如果时间间隔的十分之几秒的值为零，则它不包含在结果字符串中。 在调用 <xref:System.TimeSpan.ParseExact%2A?displayProperty=nameWithType> 或 <xref:System.TimeSpan.TryParseExact%2A?displayProperty=nameWithType> 方法的分析操作中，可以视需要选择是否显示秒的十分之几。
 
@@ -305,6 +321,7 @@ ms.locfileid: "42911875"
 [返回表首](#table)
 
 <a name="FF_Specifier"></a> 
+
 ## <a name="the-ff-custom-format-specifier"></a>“FF”自定义格式说明符
 “FF”自定义格式说明符输出时间间隔中的百分之几秒。 在格式设置操作中，会截断其余任何小数位数。 如果存在任何尾随小数零，则它们不包含在结果字符串中。 在调用 <xref:System.TimeSpan.ParseExact%2A?displayProperty=nameWithType> 或 <xref:System.TimeSpan.TryParseExact%2A?displayProperty=nameWithType> 方法的分析操作中，可以视需要选择是否显示秒的十分之几和百分之几。
 
@@ -316,6 +333,7 @@ ms.locfileid: "42911875"
 [返回表首](#table)
 
 <a name="F3_Specifier"></a> 
+
 ## <a name="the-fff-custom-format-specifier"></a>“FFF”自定义格式说明符
 “FFF”自定义格式说明符（包含三个“F”字符）输出时间间隔中的毫秒。 在格式设置操作中，会截断其余任何小数位数。 如果存在任何尾随小数零，则它们不包含在结果字符串中。 在调用 <xref:System.TimeSpan.ParseExact%2A?displayProperty=nameWithType> 或 <xref:System.TimeSpan.TryParseExact%2A?displayProperty=nameWithType> 方法的分析操作中，可以视需要选择是否显示秒的十分之几、百分之几和千分之几。
 
@@ -327,6 +345,7 @@ ms.locfileid: "42911875"
 [返回表首](#table)
 
 <a name="F4_Specifier"></a> 
+
 ## <a name="the-ffff-custom-format-specifier"></a>“FFFF”自定义格式说明符
 “FFFF”自定义格式说明符（包含四个“F”字符）输出时间间隔中的万分之几秒。 在格式设置操作中，会截断其余任何小数位数。 如果存在任何尾随小数零，则它们不包含在结果字符串中。 在调用 <xref:System.TimeSpan.ParseExact%2A?displayProperty=nameWithType> 或 <xref:System.TimeSpan.TryParseExact%2A?displayProperty=nameWithType> 方法的分析操作中，可以视需要选择是否显示秒的十分之几、百分之几、千分之几和万分之几。
 
@@ -338,6 +357,7 @@ ms.locfileid: "42911875"
 [返回表首](#table)
 
 <a name="F5_Specifier"></a> 
+
 ## <a name="the-fffff-custom-format-specifier"></a>“FFFFF”自定义格式说明符
 “FFFFF”自定义格式说明符（包含五个“F”字符）输出时间间隔中的十万分之几秒。 在格式设置操作中，会截断其余任何小数位数。 如果存在任何尾随小数零，则它们不包含在结果字符串中。 在调用 <xref:System.TimeSpan.ParseExact%2A?displayProperty=nameWithType> 或 <xref:System.TimeSpan.TryParseExact%2A?displayProperty=nameWithType> 方法的分析操作中，可以视需要选择是否显示秒的十分之几、百分之几、千分之几、万分之几和十万分之几。
 
@@ -349,6 +369,7 @@ ms.locfileid: "42911875"
 [返回表首](#table)
 
 <a name="F6_Specifier"></a> 
+
 ## <a name="the-ffffff-custom-format-specifier"></a>“FFFFFF”自定义格式说明符
 “FFFFFF”自定义格式说明符（包含六个“F”字符）输出时间间隔中的百万分之几秒。 在格式设置操作中，会截断其余任何小数位数。 如果存在任何尾随小数零，则它们不包含在结果字符串中。 在调用 <xref:System.TimeSpan.ParseExact%2A?displayProperty=nameWithType> 或 <xref:System.TimeSpan.TryParseExact%2A?displayProperty=nameWithType> 方法的分析操作中，可以视需要选择是否显示秒的十分之几、百分之几、千分之几、万分之几、十万分之几和百万分之几。
 
@@ -360,6 +381,7 @@ ms.locfileid: "42911875"
 [返回表首](#table)
 
 <a name="F7_Specifier"></a> 
+
 ## <a name="the-fffffff-custom-format-specifier"></a>“FFFFFFF”自定义格式说明符
 “FFFFFFF”自定义格式说明符（包含六个“F”字符）输出时间间隔中的千万分之几秒（或时钟周期的小数）。 如果存在任何尾随小数零，则它们不包含在结果字符串中。 在调用 <xref:System.TimeSpan.ParseExact%2A?displayProperty=nameWithType> 或 <xref:System.TimeSpan.TryParseExact%2A?displayProperty=nameWithType> 方法的分析操作中，可以视需要选择是否在输入字符串中显示秒的千万分之一。
 
@@ -370,7 +392,8 @@ ms.locfileid: "42911875"
 
 [返回表首](#table)
 
-<a name="Other"></a>
+<a name="Other"></a> 
+
 ## <a name="other-characters"></a>其他字符
 
 格式字符串中的任何其他未转义字符（包括空白字符）都会解释为自定义格式说明符。 大多数情况下，若有其他任何未转义字符，便会导致 <xref:System.FormatException> 抛出。

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - /refonly compiler option [C#]
 - -refonly compiler option [C#]
 - refonly compiler option [C#]
-ms.openlocfilehash: c380df1cb473fcd187e56bb0a338a909dd3ac894
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c15308d27b504f22b266e28f6db0caf837ae36c5
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33217342"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43421206"
 ---
 # <a name="-refonly-c-compiler-options"></a>-refonly（C# 编译器选项）
 
@@ -41,5 +41,6 @@ ms.locfileid: "33217342"
 `-refonly` 和 [`-refout`](refout-compiler-option.md) 选项互斥。
 
 ## <a name="see-also"></a>请参阅
- [C# 编译器选项](../../../csharp/language-reference/compiler-options/index.md)  
- [管理项目和解决方案属性](/visualstudio/ide/managing-project-and-solution-properties)
+
+- [C# 编译器选项](../../../csharp/language-reference/compiler-options/index.md)  
+- [管理项目和解决方案属性](/visualstudio/ide/managing-project-and-solution-properties)

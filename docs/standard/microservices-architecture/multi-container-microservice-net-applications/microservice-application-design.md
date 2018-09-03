@@ -4,12 +4,12 @@ description: 适用于容器化 .NET 应用程序的 .NET 微服务体系结构 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.openlocfilehash: 6cbe4512c8ed89540599d1257046bd080b464165
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.openlocfilehash: 4adf7e759d4475d0bb9b3aa0abe8dbdc5e57edd3
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37105954"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43470111"
 ---
 # <a name="designing-a-microservice-oriented-application"></a>设计面向微服务的应用程序
 
@@ -63,7 +63,7 @@ ms.locfileid: "37105954"
 
 ### <a name="eshoponcontainers-a-reference-application-for-net-core-and-microservices-deployed-using-containers"></a>eShopOnContainers：使用容器部署的 .NET Core 和微服务的参考应用程序
 
-这样一来，你可专注于体系结构和技术，而无需考虑自己可能不知道的假设业务领域，我们已经选择了一个有名的业务领域，即简化的电子商务 (e-shop) 应用程序，其提供产品目录、处理客户订单、验证库存并执行其他业务功能。 此基于容器的应用程序源代码可通过 [eShopOnContainers](http://aka.ms/MicroservicesArchitecture) GitHub 存储库获取。
+这样一来，你可专注于体系结构和技术，而无需考虑自己可能不知道的假设业务领域，我们已经选择了一个有名的业务领域，即简化的电子商务 (e-shop) 应用程序，其提供产品目录、处理客户订单、验证库存并执行其他业务功能。 此基于容器的应用程序源代码可通过 [eShopOnContainers](https://aka.ms/MicroservicesArchitecture) GitHub 存储库获取。
 
 该应用程序包含多个子系统，包括多个应用商店 UI 前端（一个 Web 应用程序和本机移动应用），以及用于所有所需服务器端操作的后端微服务和容器。 图 8-1 显示了参考应用程序的体系结构。
 
@@ -171,7 +171,7 @@ ms.locfileid: "37105954"
 
 -   [域驱动设计 N 分层](https://blogs.msdn.microsoft.com/cesardelatorre/2011/07/03/published-first-alpha-version-of-domain-oriented-n-layered-architecture-v2-0/)。
 
--   [清洁体系结构](https://8thlight.com/blog/uncle-bob/2012/08/13/the-clean-architecture.html)（用于 [eShopOnWeb](http://aka.ms/WebAppArchitecture)）
+-   [清洁体系结构](https://8thlight.com/blog/uncle-bob/2012/08/13/the-clean-architecture.html)（用于 [eShopOnWeb](https://aka.ms/WebAppArchitecture)）
 
 -   [命令查询职责分离](https://martinfowler.com/bliki/CQRS.html) (CQRS)。
 

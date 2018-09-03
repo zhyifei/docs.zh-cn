@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: daf9d9d5-84ac-4bd9-a864-27665ffd0f5c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b428a23172539b959acd6fc9e9a56be3482f89d4
-ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
+ms.openlocfilehash: edc34eaa7704d788ff4b63328a2b6c0622d17e13
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2018
-ms.locfileid: "42925085"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43394950"
 ---
 # <a name="install-the-net-framework-for-developers"></a>安装面向开发人员的 .NET Framework
 
@@ -37,15 +37,15 @@ ms.locfileid: "42925085"
 
 |.NET Framework 版本|开发人员安装|可再发行组件安装|平台支持|
 |----------------------------|----------------------------|----------------------------------|----------------------|
-|**4.7.2**|[.NET Framework 4.7.2 开发人员工具包](http://go.microsoft.com/fwlink/?LinkId=874338)|[下载中心 4.7.2 Web 安装程序](http://go.microsoft.com/fwlink/?LinkId=863262)<br/><br/>[下载中心 4.7.2 脱机安装程序](http://go.microsoft.com/fwlink/?LinkId=863265)|包含于： <br/>Windows 10 2018 年 4 月更新<br /><br /> 可以安装于：<br/> <br/>Windows 10 Fall Creators Update<br/>Windows 10 创意者更新 <br /> Windows 10 周年更新<br /> Windows 8.1 和更早版本<br /> Windows Server 1709 和更低版本<br /> （有关完整列表，请参阅[系统要求](~/docs/framework/get-started/system-requirements.md)）||
-|**4.7.1**|[.NET Framework 4.7.1 开发人员工具包](http://go.microsoft.com/fwlink/?LinkId=852105)|[4.7.1 Web 安装程序下载页](http://go.microsoft.com/fwlink/?LinkId=852095)<br /><br /> [4.7.1 脱机安装程序下载页](http://go.microsoft.com/fwlink/?LinkId=852107)|包含于： <br/>Windows 10 Fall Creators Update<br/>Windows Server 版本 1709<br /><br /> 可以安装于：<br/> Windows 10 创意者更新 <br /> Windows 10 周年更新<br /> Windows 8.1 和更早版本<br /> Windows Server 2016 和更低版本<br /> （有关完整列表，请参阅[系统要求](~/docs/framework/get-started/system-requirements.md)）||
-|**4.7**|[.NET Framework 4.7 开发人员工具包](http://go.microsoft.com/fwlink/?LinkId=825319)|[4.7 Web 安装程序下载页](http://go.microsoft.com/fwlink/?LinkId=825299)<br /><br /> [4.7 脱机安装程序下载页](http://go.microsoft.com/fwlink/?LinkId=825303)|包含于： <br/>Windows 10 创意者更新<br /><br /> 可以安装于：<br /> Windows 10 周年更新<br /> Windows 8.1 和更早版本<br /> Windows Server 2016 和更低版本<br /> （有关完整列表，请参阅[系统要求](~/docs/framework/get-started/system-requirements.md)）||
-|**4.6.2**|[.NET Framework 4.6.2 开发人员工具包](http://go.microsoft.com/fwlink/?LinkId=780617)|[4.6.2 Web 安装程序下载页](http://go.microsoft.com/fwlink/?LinkId=780597)<br /><br /> [4.6.2 脱机安装程序下载页](http://go.microsoft.com/fwlink/?LinkId=780601)|包含于： <br /> Windows 10 周年更新<br /><br /> 可以安装于：<br /> Windows 10 November Update <br/> Windows 10 <br /> Windows 8.1 和更早版本<br /> Windows Server 2012 R2 和更早版本<br /> （有关完整列表，请参阅[系统要求](~/docs/framework/get-started/system-requirements.md)）|
-|**4.6.1**|[.NET Framework 4.6.1 开发人员工具包](http://go.microsoft.com/fwlink/?LinkId=690706)|[4.6.1 Web 安装程序下载页](http://go.microsoft.com/fwlink/?LinkId=671729)<br /><br /> [4.6.1 脱机安装程序下载页](http://go.microsoft.com/fwlink/?LinkId=671744)|可以安装于：<br /> Windows 10 <br /> Windows 8.1 和更早版本<br /> Windows Server 2012 R2 和更早版本<br /> （有关完整列表，请参阅[系统要求](~/docs/framework/get-started/system-requirements.md)）|
-|**4.6**|包含在 Visual Studio 2015 中。<br /><br /> [Microsoft .NET Framework 4.6 目标包](http://go.microsoft.com/fwlink/?LinkId=528261)|[4.6 Web 安装程序下载页](http://go.microsoft.com/fwlink/?LinkId=528259)<br /><br /> [4.6 脱机安装程序下载页](http://go.microsoft.com/fwlink/?LinkId=528233)|包含于： <br /> Windows 10 <br />[Visual Studio 2015](https://my.visualstudio.com/Downloads?q=visual%20studio%202015)<br /><br /> 还可以安装于：<br /> Windows 8.1 和更早版本<br /> Windows Server 2012 R2 和更早版本<br /> （有关完整列表，请参阅[系统要求](~/docs/framework/get-started/system-requirements.md)）|
-|**4.5.2**|[Microsoft .NET Framework 4.5.2 开发人员工具包](http://go.microsoft.com/fwlink/?LinkId=397702)<br /><br /> 适用于 Visual Studio 2013、Visual Studio 2012 或其他 IDE|[4.5.2 Web 安装程序下载页](http://go.microsoft.com/fwlink/p/?LinkId=397703)<br /><br /> [4.5.2 脱机安装程序下载页](http://go.microsoft.com/fwlink/p/?LinkId=397706)|可以安装于：<br /> Windows 8.1 和更早版本<br /> Windows Server 2012 R2 和更早版本<br /> （有关完整列表，请参阅[系统要求](~/docs/framework/get-started/system-requirements.md)）|
-|**4.5.1**|[Microsoft .NET Framework 4.5.1 开发人员工具包](http://go.microsoft.com/fwlink/?LinkId=324213)<br /><br /> 适用于 Visual Studio 2013、Visual Studio 2012 或其他 IDE|[4.5.1 Web 安装程序下载页](http://go.microsoft.com/fwlink/p/?LinkId=310158)<br /><br /> [4.5.1 脱机安装程序下载页](http://go.microsoft.com/fwlink/p/?LinkId=310159)|包含于：<br /> [!INCLUDE[win81](../../../includes/win81-md.md)]<br /> Windows Server 2012 R2<br /> [Visual Studio 2013](https://my.visualstudio.com/Downloads?q=visual%20studio%202013)<br /><br /> 还可以安装于：<br /> [!INCLUDE[win8](../../../includes/win8-md.md)] 和更早版本<br /> [!INCLUDE[winserver8](../../../includes/winserver8-md.md)] 和更早版本<br />（有关完整列表，请参阅[系统要求](~/docs/framework/get-started/system-requirements.md)）|
-|**4.5**|包含于 Visual Studio 2012 中<br /><br /> 也可作为 [Windows 8 SDK](http://msdn.microsoft.com/windows/hardware/hh852363) 的一部分提供|[4.5 Web 安装程序下载页](http://go.microsoft.com/fwlink/p/?LinkId=245484)|包含于： <br /> [!INCLUDE[win8](../../../includes/win8-md.md)]<br /> [!INCLUDE[winserver8](../../../includes/winserver8-md.md)]<br /> [Visual Studio 2012](https://my.visualstudio.com/Downloads?q=visual%20studio%202012)<br /><br /> 还可以安装于：<br /> Windows 7 和更早版本<br /> Windows Server 2008 SP2 和更早版本<br />（有关完整列表，请参阅[系统要求](~/docs/framework/get-started/system-requirements.md)）|
+|**4.7.2**|[.NET Framework 4.7.2 开发人员工具包](https://go.microsoft.com/fwlink/?LinkId=874338)|[下载中心 4.7.2 Web 安装程序](https://go.microsoft.com/fwlink/?LinkId=863262)<br/><br/>[下载中心 4.7.2 脱机安装程序](https://go.microsoft.com/fwlink/?LinkId=863265)|包含于： <br/>Windows 10 2018 年 4 月更新<br /><br /> 可以安装于：<br/> <br/>Windows 10 Fall Creators Update<br/>Windows 10 创意者更新 <br /> Windows 10 周年更新<br /> Windows 8.1 和更早版本<br /> Windows Server 1709 和更低版本<br /> （有关完整列表，请参阅[系统要求](~/docs/framework/get-started/system-requirements.md)）||
+|**4.7.1**|[.NET Framework 4.7.1 开发人员工具包](https://go.microsoft.com/fwlink/?LinkId=852105)|[4.7.1 Web 安装程序下载页](https://go.microsoft.com/fwlink/?LinkId=852095)<br /><br /> [4.7.1 脱机安装程序下载页](https://go.microsoft.com/fwlink/?LinkId=852107)|包含于： <br/>Windows 10 Fall Creators Update<br/>Windows Server 版本 1709<br /><br /> 可以安装于：<br/> Windows 10 创意者更新 <br /> Windows 10 周年更新<br /> Windows 8.1 和更早版本<br /> Windows Server 2016 和更低版本<br /> （有关完整列表，请参阅[系统要求](~/docs/framework/get-started/system-requirements.md)）||
+|**4.7**|[.NET Framework 4.7 开发人员工具包](https://go.microsoft.com/fwlink/?LinkId=825319)|[4.7 Web 安装程序下载页](https://go.microsoft.com/fwlink/?LinkId=825299)<br /><br /> [4.7 脱机安装程序下载页](https://go.microsoft.com/fwlink/?LinkId=825303)|包含于： <br/>Windows 10 创意者更新<br /><br /> 可以安装于：<br /> Windows 10 周年更新<br /> Windows 8.1 和更早版本<br /> Windows Server 2016 和更低版本<br /> （有关完整列表，请参阅[系统要求](~/docs/framework/get-started/system-requirements.md)）||
+|**4.6.2**|[.NET Framework 4.6.2 开发人员工具包](https://go.microsoft.com/fwlink/?LinkId=780617)|[4.6.2 Web 安装程序下载页](https://go.microsoft.com/fwlink/?LinkId=780597)<br /><br /> [4.6.2 脱机安装程序下载页](https://go.microsoft.com/fwlink/?LinkId=780601)|包含于： <br /> Windows 10 周年更新<br /><br /> 可以安装于：<br /> Windows 10 November Update <br/> Windows 10 <br /> Windows 8.1 和更早版本<br /> Windows Server 2012 R2 和更早版本<br /> （有关完整列表，请参阅[系统要求](~/docs/framework/get-started/system-requirements.md)）|
+|**4.6.1**|[.NET Framework 4.6.1 开发人员工具包](https://go.microsoft.com/fwlink/?LinkId=690706)|[4.6.1 Web 安装程序下载页](https://go.microsoft.com/fwlink/?LinkId=671729)<br /><br /> [4.6.1 脱机安装程序下载页](https://go.microsoft.com/fwlink/?LinkId=671744)|可以安装于：<br /> Windows 10 <br /> Windows 8.1 和更早版本<br /> Windows Server 2012 R2 和更早版本<br /> （有关完整列表，请参阅[系统要求](~/docs/framework/get-started/system-requirements.md)）|
+|**4.6**|包含在 Visual Studio 2015 中。<br /><br /> [Microsoft .NET Framework 4.6 目标包](https://go.microsoft.com/fwlink/?LinkId=528261)|[4.6 Web 安装程序下载页](https://go.microsoft.com/fwlink/?LinkId=528259)<br /><br /> [4.6 脱机安装程序下载页](https://go.microsoft.com/fwlink/?LinkId=528233)|包含于： <br /> Windows 10 <br />[Visual Studio 2015](https://my.visualstudio.com/Downloads?q=visual%20studio%202015)<br /><br /> 还可以安装于：<br /> Windows 8.1 和更早版本<br /> Windows Server 2012 R2 和更早版本<br /> （有关完整列表，请参阅[系统要求](~/docs/framework/get-started/system-requirements.md)）|
+|**4.5.2**|[Microsoft .NET Framework 4.5.2 开发人员工具包](https://go.microsoft.com/fwlink/?LinkId=397702)<br /><br /> 适用于 Visual Studio 2013、Visual Studio 2012 或其他 IDE|[4.5.2 Web 安装程序下载页](https://go.microsoft.com/fwlink/p/?LinkId=397703)<br /><br /> [4.5.2 脱机安装程序下载页](https://go.microsoft.com/fwlink/p/?LinkId=397706)|可以安装于：<br /> Windows 8.1 和更早版本<br /> Windows Server 2012 R2 和更早版本<br /> （有关完整列表，请参阅[系统要求](~/docs/framework/get-started/system-requirements.md)）|
+|**4.5.1**|[Microsoft .NET Framework 4.5.1 开发人员工具包](https://go.microsoft.com/fwlink/?LinkId=324213)<br /><br /> 适用于 Visual Studio 2013、Visual Studio 2012 或其他 IDE|[4.5.1 Web 安装程序下载页](https://go.microsoft.com/fwlink/p/?LinkId=310158)<br /><br /> [4.5.1 脱机安装程序下载页](https://go.microsoft.com/fwlink/p/?LinkId=310159)|包含于：<br /> [!INCLUDE[win81](../../../includes/win81-md.md)]<br /> Windows Server 2012 R2<br /> [Visual Studio 2013](https://my.visualstudio.com/Downloads?q=visual%20studio%202013)<br /><br /> 还可以安装于：<br /> [!INCLUDE[win8](../../../includes/win8-md.md)] 和更早版本<br /> [!INCLUDE[winserver8](../../../includes/winserver8-md.md)] 和更早版本<br />（有关完整列表，请参阅[系统要求](~/docs/framework/get-started/system-requirements.md)）|
+|**4.5**|包含于 Visual Studio 2012 中<br /><br /> 也可作为 [Windows 8 SDK](https://msdn.microsoft.com/windows/hardware/hh852363) 的一部分提供|[4.5 Web 安装程序下载页](https://go.microsoft.com/fwlink/p/?LinkId=245484)|包含于： <br /> [!INCLUDE[win8](../../../includes/win8-md.md)]<br /> [!INCLUDE[winserver8](../../../includes/winserver8-md.md)]<br /> [Visual Studio 2012](https://my.visualstudio.com/Downloads?q=visual%20studio%202012)<br /><br /> 还可以安装于：<br /> Windows 7 和更早版本<br /> Windows Server 2008 SP2 和更早版本<br />（有关完整列表，请参阅[系统要求](~/docs/framework/get-started/system-requirements.md)）|
 
 可以在所有支持的平台上针对特定版本的 .NET Framework（如果有）安装开发人员工具包。
 
@@ -69,21 +69,21 @@ ms.locfileid: "42925085"
 
 .NET Framework 4.5.1 或 4.5.2 开发人员工具包、.NET Framework 4.6 目标包以及 .NET Framework 4.6.1、4.6.2、4.7、4.7.1 或 4.7.2 开发人员工具包提供特定 .NET Framework 版本的引用程序集、语言包和 IntelliSense 文件，以供在集成开发环境（如 Visual Studio）中使用。  如果你使用的是 Visual Studio，则在你创建新项目时，开发人员包或目标包也将向目标选择添加 .NET Framework 的已安装版本。  选择以下选项之一：
 
-- [Microsoft .NET Framework 4.7.2 开发人员工具包](http://go.microsoft.com/fwlink/?LinkId=874338)
+- [Microsoft .NET Framework 4.7.2 开发人员工具包](https://go.microsoft.com/fwlink/?LinkId=874338)
 
-- [Microsoft .NET Framework 4.7.1 开发人员工具包](http://go.microsoft.com/fwlink/?LinkId=852105)
+- [Microsoft .NET Framework 4.7.1 开发人员工具包](https://go.microsoft.com/fwlink/?LinkId=852105)
 
-- [Microsoft .NET Framework 4.7 开发人员工具包](http://go.microsoft.com/fwlink/?LinkId=825319)
+- [Microsoft .NET Framework 4.7 开发人员工具包](https://go.microsoft.com/fwlink/?LinkId=825319)
 
-- [Microsoft .NET Framework 4.6.2 开发人员工具包](http://go.microsoft.com/fwlink/?LinkId=780617)
+- [Microsoft .NET Framework 4.6.2 开发人员工具包](https://go.microsoft.com/fwlink/?LinkId=780617)
 
-- [Microsoft .NET Framework 4.6.1 开发人员工具包](http://go.microsoft.com/fwlink/?LinkId=690706)
+- [Microsoft .NET Framework 4.6.1 开发人员工具包](https://go.microsoft.com/fwlink/?LinkId=690706)
 
-- [Microsoft .NET Framework 4.6 目标包](http://go.microsoft.com/fwlink/?LinkId=528261)
+- [Microsoft .NET Framework 4.6 目标包](https://go.microsoft.com/fwlink/?LinkId=528261)
 
-- [.NET Framework 4.5.2 开发人员工具包](http://go.microsoft.com/fwlink/?LinkId=397702)，用于在 Windows 8.1 或更早版本、Visual Studio 2013、Visual Studio 2012 或其他 IDE 上安装版本 4.5.2。
+- [.NET Framework 4.5.2 开发人员工具包](https://go.microsoft.com/fwlink/?LinkId=397702)，用于在 Windows 8.1 或更早版本、Visual Studio 2013、Visual Studio 2012 或其他 IDE 上安装版本 4.5.2。
 
-- [.NET Framework 4.5.1 开发人员工具包](http://go.microsoft.com/fwlink/?LinkId=324213)，用于在 Visual Studio 2012 或其他 IDE 上安装版本 4.5.1。
+- [.NET Framework 4.5.1 开发人员工具包](https://go.microsoft.com/fwlink/?LinkId=324213)，用于在 Visual Studio 2012 或其他 IDE 上安装版本 4.5.1。
 
 从开发人员工具包下载页中，选择“下载”。 随后选择“运行”或“保存”，并在出现提示时按照说明操作。 通过在 Visual Studio 安装程序的 .NET 桌面开发工作负载的可选组件中进行选择，还可以安装适用于特定版本的 .NET Framework 的开发人员工具包或目标包。
 
@@ -109,23 +109,23 @@ Web 和脱机安装程序均针对基于 x86 和 x64 的计算机而设计（请
 
 1.  打开要安装的 .NET Framework 版本的下载页：
 
-    - .NET Framework 4.7.2（[Web 安装程序](http://go.microsoft.com/fwlink/?LinkId=863262)或[脱机安装程序](http://go.microsoft.com/fwlink/p/?LinkId=863265)）
+    - .NET Framework 4.7.2（[Web 安装程序](https://go.microsoft.com/fwlink/?LinkId=863262)或[脱机安装程序](https://go.microsoft.com/fwlink/p/?LinkId=863265)）
 
-    - .NET Framework 4.7.1（[Web 安装程序](http://go.microsoft.com/fwlink/?LinkId=852095)或[脱机安装程序](http://go.microsoft.com/fwlink/p/?LinkId=852107)）
+    - .NET Framework 4.7.1（[Web 安装程序](https://go.microsoft.com/fwlink/?LinkId=852095)或[脱机安装程序](https://go.microsoft.com/fwlink/p/?LinkId=852107)）
 
-    - .NET Framework 4.7（[Web 安装程序](http://go.microsoft.com/fwlink/?LinkId=825299)或[脱机安装程序](http://go.microsoft.com/fwlink/p/?LinkId=825303)）
+    - .NET Framework 4.7（[Web 安装程序](https://go.microsoft.com/fwlink/?LinkId=825299)或[脱机安装程序](https://go.microsoft.com/fwlink/p/?LinkId=825303)）
 
-    - .NET Framework 4.6.2（[Web 安装程序](http://go.microsoft.com/fwlink/?LinkId=780597)或[脱机安装程序](http://go.microsoft.com/fwlink/p/?LinkId=780601)）
+    - .NET Framework 4.6.2（[Web 安装程序](https://go.microsoft.com/fwlink/?LinkId=780597)或[脱机安装程序](https://go.microsoft.com/fwlink/p/?LinkId=780601)）
 
-    - .NET Framework 4.6.1（[Web 安装程序](http://go.microsoft.com/fwlink/?LinkId=671729)或[脱机安装程序](http://go.microsoft.com/fwlink/p/?LinkId=671744)）
+    - .NET Framework 4.6.1（[Web 安装程序](https://go.microsoft.com/fwlink/?LinkId=671729)或[脱机安装程序](https://go.microsoft.com/fwlink/p/?LinkId=671744)）
 
-    - .NET Framework 4.6（[Web 安装程序](http://go.microsoft.com/fwlink/?LinkId=528259)或[脱机安装程序](http://go.microsoft.com/fwlink/p/?LinkId=528233)）
+    - .NET Framework 4.6（[Web 安装程序](https://go.microsoft.com/fwlink/?LinkId=528259)或[脱机安装程序](https://go.microsoft.com/fwlink/p/?LinkId=528233)）
 
-    - .NET Framework 4.5.2（[Web 安装程序](http://go.microsoft.com/fwlink/p/?LinkId=397703)或[脱机安装程序](http://go.microsoft.com/fwlink/p/?LinkId=397706)）
+    - .NET Framework 4.5.2（[Web 安装程序](https://go.microsoft.com/fwlink/p/?LinkId=397703)或[脱机安装程序](https://go.microsoft.com/fwlink/p/?LinkId=397706)）
 
-    - .NET Framework 4.5.1（[Web 安装程序](http://go.microsoft.com/fwlink/p/?LinkId=310158)或[脱机安装程序](http://go.microsoft.com/fwlink/p/?LinkId=310159)）
+    - .NET Framework 4.5.1（[Web 安装程序](https://go.microsoft.com/fwlink/p/?LinkId=310158)或[脱机安装程序](https://go.microsoft.com/fwlink/p/?LinkId=310159)）
 
-    - [.NET Framework 4.5](http://go.microsoft.com/fwlink/p/?LinkId=245484)
+    - [.NET Framework 4.5](https://go.microsoft.com/fwlink/p/?LinkId=245484)
 
 1. 选择下载页的语言。 此选项不会下载 .NET Framework 的本地化资源；它只影响下载页上显示的文本。
 
@@ -150,11 +150,11 @@ Web 和脱机安装程序均针对基于 x86 和 x64 的计算机而设计（请
 
 - [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 及其单点版本、[!INCLUDE[net_v46](../../../includes/net-v46-md.md)] 及其单点版本和 .NET Framework 4.7 及其单点版本将替换 [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)]。 在安装了 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] 的系统上安装这些版本时，将会替换这些程序集。
 
-- 卸载 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 及其单点版本、[!INCLUDE[net_v46](../../../includes/net-v46-md.md)] 及其单点版本或 .NET Framework 4.7 及其单点版本也会删除既有的 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] 文件。 若要返回到 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]，你必须重新安装它以及它的任何更新。 （请参阅 [安装 .NET Framework 4](http://go.microsoft.com/fwlink/p/?LinkId=230665)。）
+- 卸载 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 及其单点版本、[!INCLUDE[net_v46](../../../includes/net-v46-md.md)] 及其单点版本或 .NET Framework 4.7 及其单点版本也会删除既有的 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] 文件。 若要返回到 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]，你必须重新安装它以及它的任何更新。 （请参阅 [安装 .NET Framework 4](https://go.microsoft.com/fwlink/p/?LinkId=230665)。）
 
 - 必须拥有管理员凭据，才能安装 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 及其单点版本、.NET Framework 4.6 及其单点版本和 .NET Framework 4.7 及其单点版本。
 
-- .NET Framework 4.5 可再发行组件于 2012 年 10 月 9 日进行了更新，纠正了一个与数字证书中的错误时间戳相关的问题，此问题会导致 Microsoft 生成并签名的文件中的数字签名提前过期。 如果之前安装了日期为 2012 年 8 月 16 日的 .NET Framework 4.5 可再发行组件包，建议使用 [Microsoft 下载中心](http://go.microsoft.com/fwlink/p/?LinkId=245484)内的最新可再发行组件来更新副本。 有关此问题的详细信息，请参阅 [Microsoft 安全公告 2749655](http://technet.microsoft.com/security/advisory/2749655) 和[知识库文章 2770445](http://support.microsoft.com/kb/2770445)。
+- .NET Framework 4.5 可再发行组件于 2012 年 10 月 9 日进行了更新，纠正了一个与数字证书中的错误时间戳相关的问题，此问题会导致 Microsoft 生成并签名的文件中的数字签名提前过期。 如果之前安装了日期为 2012 年 8 月 16 日的 .NET Framework 4.5 可再发行组件包，建议使用 [Microsoft 下载中心](https://go.microsoft.com/fwlink/p/?LinkId=245484)内的最新可再发行组件来更新副本。 有关此问题的详细信息，请参阅 [Microsoft 安全公告 2749655](https://technet.microsoft.com/security/advisory/2749655) 和[知识库文章 2770445](https://support.microsoft.com/kb/2770445)。
 
 ## <a name="to-install-language-packs"></a>安装语言包
 
@@ -165,23 +165,23 @@ Web 和脱机安装程序均针对基于 x86 和 x64 的计算机而设计（请
 
 1.  打开已安装的 .NET Framework 版本的语言包下载页：
 
-    - [.NET Framework 4.7.2 语言包](http://go.microsoft.com/fwlink/?LinkID=863258)
+    - [.NET Framework 4.7.2 语言包](https://go.microsoft.com/fwlink/?LinkID=863258)
 
-    - [.NET Framework 4.7.1 语言包](http://go.microsoft.com/fwlink/?LinkID=852090)
+    - [.NET Framework 4.7.1 语言包](https://go.microsoft.com/fwlink/?LinkID=852090)
 
-    - [.NET Framework 4.7 语言包](http://go.microsoft.com/fwlink/?LinkID=825306)
+    - [.NET Framework 4.7 语言包](https://go.microsoft.com/fwlink/?LinkID=825306)
 
-    - [.NET Framework 4.6.2 语言包](http://go.microsoft.com/fwlink/?LinkID=780604)
+    - [.NET Framework 4.6.2 语言包](https://go.microsoft.com/fwlink/?LinkID=780604)
 
-    - [.NET Framework 4.6.1 语言包](http://go.microsoft.com/fwlink/?LinkID=671747)
+    - [.NET Framework 4.6.1 语言包](https://go.microsoft.com/fwlink/?LinkID=671747)
 
-    - [.NET Framework 4.6 语言包](http://go.microsoft.com/fwlink/?LinkID=528314)
+    - [.NET Framework 4.6 语言包](https://go.microsoft.com/fwlink/?LinkID=528314)
 
-    - [.NET Framework 4.5.2 语言包](http://go.microsoft.com/fwlink/?LinkId=397701)
+    - [.NET Framework 4.5.2 语言包](https://go.microsoft.com/fwlink/?LinkId=397701)
 
-    - [.NET Framework 4.5.1 语言包](http://go.microsoft.com/fwlink/?LinkId=322101)
+    - [.NET Framework 4.5.1 语言包](https://go.microsoft.com/fwlink/?LinkId=322101)
 
-    - [.NET Framework 4.5 语言包](http://go.microsoft.com/fwlink/p/?LinkId=245451)
+    - [.NET Framework 4.5 语言包](https://go.microsoft.com/fwlink/p/?LinkId=245451)
 
 2.  在语言列表中，选择要下载的语言，并等待几秒钟，以便使用该语言重新加载页面。
 
@@ -228,7 +228,7 @@ Web 和脱机安装程序均针对基于 x86 和 x64 的计算机而设计（请
 
 - 有关将应用从 .NET Framework 4 迁移到 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 或其单点版本之一的信息，请参阅[迁移指南](~/docs/framework/migration-guide/index.md)。
 
-- 请参阅 [.NET Framework 引用源](http://referencesource.microsoft.com/)以联机浏览 .NET Framework 源代码。 还可以在 [Github](https://github.com/Microsoft/referencesource) 上获取引用源。 可[下载引用源](http://referencesource.microsoft.com/download.html)以供脱机查看和在调试期间逐步执行源（包括修补程序和更新）。 有关详细信息，请参阅日志 [.NET 引用源的全新外观](http://blogs.msdn.com/b/dotnet/archive/2014/02/24/a-new-look-for-net-reference-source.aspx)。
+- 请参阅 [.NET Framework 引用源](https://referencesource.microsoft.com/)以联机浏览 .NET Framework 源代码。 还可以在 [Github](https://github.com/Microsoft/referencesource) 上获取引用源。 可[下载引用源](https://referencesource.microsoft.com/download.html)以供脱机查看和在调试期间逐步执行源（包括修补程序和更新）。 有关详细信息，请参阅日志 [.NET 引用源的全新外观](https://blogs.msdn.com/b/dotnet/archive/2014/02/24/a-new-look-for-net-reference-source.aspx)。
 
 ## <a name="see-also"></a>请参阅
 

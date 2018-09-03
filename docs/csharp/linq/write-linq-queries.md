@@ -3,12 +3,12 @@ title: 在 C# 中编写 LINQ 查询
 description: 了解如何在 C# 中编写 LINQ 查询。
 ms.date: 12/1/2016
 ms.assetid: 30703f79-cf3a-4d02-b892-c95d58a1d9ed
-ms.openlocfilehash: 5003d1a5e15e17bea4204941d1c43895e3fb91f4
-ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
+ms.openlocfilehash: 2ebba0d2d601932c976a88726fbe3ed37daffdcb
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37403929"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43463099"
 ---
 # <a name="write-linq-queries-in-c"></a>在 C# 中编写 LINQ 查询 #
 
@@ -81,6 +81,6 @@ int numCount = numbers.Where(n => n < 3 || n > 7).Count();
 
 ## <a name="see-also"></a>请参阅
 
-[演练：在 C# 中编写查询](../programming-guide/concepts/linq/walkthrough-writing-queries-linq.md)
-[语言集成查询 (LINQ)](index.md)
-[where 子句](../language-reference/keywords/where-clause.md)
+- [演练：用 C# 编写查询](../programming-guide/concepts/linq/walkthrough-writing-queries-linq.md)
+- [语言集成查询 (LINQ)](index.md)
+- [where 子句](../language-reference/keywords/where-clause.md)

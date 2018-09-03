@@ -4,12 +4,12 @@ description: 用于容器化 .NET 应用程序的 .NET 微服务体系结构 | �
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.openlocfilehash: aeafaa8e618e02cab127593a19dda1d72780e091
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.openlocfilehash: 7e539067b20f0e018496b0076582619cb88072e1
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "42998679"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43480660"
 ---
 # <a name="challenges-and-solutions-for-distributed-data-management"></a>分布式数据管理的挑战和解决方案
 
@@ -43,7 +43,7 @@ ms.locfileid: "42998679"
 
 如前所述，每个微服务拥有的数据是该微服务专有的，并且只能通过其本身的微服务 API 访问。 因此，面临的挑战是如何在保持多个微服务的一致性的同时实现端到端的业务进程。
 
-要分析此问题，请先查看来自 [eShopOnContainers 引用应用程序](http://aka.ms/eshoponcontainers)的一个示例。 目录微服务保存所有产品的相关信息，包括它们的库存水平。 订购微服务管理订单，并且必须验证新订单是否超过可用目录产品库存。 （或该方案是否可能涉及处理缺货产品的逻辑。）在该应用程序的假设单片版本中，订购子系统可简单地使用 ACID 事务来检查可用库存、在订单表中创建订单以及更新产品表中的可用库存。
+要分析此问题，请先查看来自 [eShopOnContainers 引用应用程序](https://aka.ms/eshoponcontainers)的一个示例。 目录微服务保存所有产品的相关信息，包括它们的库存水平。 订购微服务管理订单，并且必须验证新订单是否超过可用目录产品库存。 （或该方案是否可能涉及处理缺货产品的逻辑。）在该应用程序的假设单片版本中，订购子系统可简单地使用 ACID 事务来检查可用库存、在订单表中创建订单以及更新产品表中的可用库存。
 
 但是，在基于微服务的应用程序中，订单和产品表属于其各自的微服务。 如图 4-9 所示，微服务不应包含其他微服务在其事务或查询中所拥有的数据库。
 
@@ -51,7 +51,7 @@ ms.locfileid: "42998679"
 
 **图 4-9**. 微服务不能直接访问其他微服务中的表
 
-订购微服务不应直接更新产品表，因为产品表属于目录微服务。 要更新目录微服务，订购微服务应只使用异步通信，如集成事件（消息和基于事件的通信）。 这是 [eShopOnContainers](http://aka.ms/eshoponcontainers) 引用应用程序执行此更新类型的方式。
+订购微服务不应直接更新产品表，因为产品表属于目录微服务。 要更新目录微服务，订购微服务应只使用异步通信，如集成事件（消息和基于事件的通信）。 这是 [eShopOnContainers](https://aka.ms/eshoponcontainers) 引用应用程序执行此更新类型的方式。
 
 如 [CAP 定理](https://en.wikipedia.org/wiki/CAP_theorem)所阐述的，需要选择可用性或 ACID 非常一致性。 大多数基于微服务的方案都需要可用性和高可伸缩性，而不是非常一致性。 任务关键应用程序必须保持最新并且处于运行状态，开发人员可通过用于处理弱或最终一致性的技术来实现非常一致性。 这是大多数基于微服务的体系结构采用的方法。
 

@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 298275e2-da1d-4618-9f74-6a3567832350
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: aaa508963bc4920aae65b1d172e2dc15f13451bf
-ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
+ms.openlocfilehash: 909b9369aba6b22899ae3fe7ac15eb470c5c2697
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2018
-ms.locfileid: "42925111"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43390752"
 ---
 # <a name="net-framework-system-requirements"></a>.NET Framework 系统要求
 
@@ -73,7 +73,7 @@ ms.locfileid: "42925111"
 
 - .NET Framework 4 还支持 IA64 平台。
 
-- 对于所有平台，我们都建议升级到最新的 Windows Service Pack 并安装 [Windows Update 网站](http://go.microsoft.com/fwlink/?LinkId=168461)上提供的关键更新，从而确保实现最佳兼容性和安全性。
+- 对于所有平台，我们都建议升级到最新的 Windows Service Pack 并安装 [Windows Update 网站](https://go.microsoft.com/fwlink/?LinkId=168461)上提供的关键更新，从而确保实现最佳兼容性和安全性。
 
 - 在 64 位操作系统上，.NET Framework 支持 WOW64（在 64 位计算机上进行 32 位处理）和本机 64 位处理。
 
@@ -99,7 +99,7 @@ ms.locfileid: "42925111"
 
 - 在 Windows Server 2008 SP2 上，.NET Framework 在服务器核心角色中不受支持。
 
-- 对于所有平台，我们都建议升级到最新的 Windows Service Pack 并安装 [Windows Update 网站](http://go.microsoft.com/fwlink/?LinkId=168461)上提供的关键更新，从而确保实现最佳兼容性和安全性。 某些操作系统上可能需要安装最新的 Windows Service Pack。
+- 对于所有平台，我们都建议升级到最新的 Windows Service Pack 并安装 [Windows Update 网站](https://go.microsoft.com/fwlink/?LinkId=168461)上提供的关键更新，从而确保实现最佳兼容性和安全性。 某些操作系统上可能需要安装最新的 Windows Service Pack。
 
 - 在 64 位操作系统上，.NET Framework 支持 WOW64（在 64 位计算机上进行 32 位处理）和本机 64 位处理。
 

@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - char data type [C#]
 ms.assetid: b51cf4fb-124c-4067-af48-afbac122b228
-ms.openlocfilehash: ea465e240a1d74b3f473316ca63b05bd0ba90777
-ms.sourcegitcommit: f9e38d31288fe5962e6be5b0cc286da633482873
+ms.openlocfilehash: 95ecfaaf1397f7a4598faba6528b38170062145a
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37028027"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43463216"
 ---
 # <a name="char-c-reference"></a>char（C# 参考）
 
@@ -42,13 +42,13 @@ ms.locfileid: "37028027"
 
 ## <a name="see-also"></a>请参阅
 
-<xref:System.Char>  
-[C# 参考](../../../csharp/language-reference/index.md)  
-[C# 编程指南](../../../csharp/programming-guide/index.md)  
-[C# 关键字](../../../csharp/language-reference/keywords/index.md)  
-[整型表](../../../csharp/language-reference/keywords/integral-types-table.md)  
-[内置类型表](../../../csharp/language-reference/keywords/built-in-types-table.md)  
-[隐式数值转换表](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)  
-[显式数值转换表](../../../csharp/language-reference/keywords/explicit-numeric-conversions-table.md)  
-[可以为 null 的类型](../../../csharp/programming-guide/nullable-types/index.md)  
-[字符串](../../../csharp/programming-guide/strings/index.md)
+- <xref:System.Char>  
+- [C# 参考](../../../csharp/language-reference/index.md)  
+- [C# 编程指南](../../../csharp/programming-guide/index.md)  
+- [C# 关键字](../../../csharp/language-reference/keywords/index.md)  
+- [整型表](../../../csharp/language-reference/keywords/integral-types-table.md)  
+- [内置类型表](../../../csharp/language-reference/keywords/built-in-types-table.md)  
+- [隐式数值转换表](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)  
+- [显式数值转换表](../../../csharp/language-reference/keywords/explicit-numeric-conversions-table.md)  
+- [可以为 null 的类型](../../../csharp/programming-guide/nullable-types/index.md)  
+- [字符串](../../../csharp/programming-guide/strings/index.md)

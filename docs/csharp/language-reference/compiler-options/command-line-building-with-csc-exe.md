@@ -5,12 +5,12 @@ helpviewer_keywords:
 - builds [C#]
 - command line [C#]
 ms.assetid: 66e70056-dd20-453c-a9b3-507e0478b015
-ms.openlocfilehash: 3cd49a17991f3d7606b0364a83be2b2e30ba0cce
-ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
+ms.openlocfilehash: 4b6dfdbce131371553fc729206de29794266bfbe
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37961373"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43482504"
 ---
 # <a name="command-line-build-with-cscexe"></a>使用 csc.exe 实现命令行生成
 通过在命令提示符处键入 C# 编译器的可执行文件名称 (csc.exe)，可调用该编译器。
@@ -40,7 +40,7 @@ csc.exe 可执行文件通常位于 Windows 目录下的 Microsoft.NET\Framework
 
 在解释操作系统命令行上给出的参数时，C# 编译器使用下列规则：
 
-- 自变量用空白分隔，空白可以是一个空格或制表符。
+- 参数用空白分隔，空白可以是一个空格或制表符。
 
 - 插入符号 (^) 未被识别为转义符或者分隔符。 在传递给程序中的 `argv` 数组之前，该字符由操作系统中的命令行分析器处理。
 
@@ -96,11 +96,12 @@ csc -target:library -out:Something.xyz *.cs
 调用 C# 编译器时，不会创建任何对象 (.obj) 文件，而是直接创建输出文件。 因此，C# 编译器不需要链接器。
 
 ## <a name="see-also"></a>请参阅
- [C# 编译器选项](../../../csharp/language-reference/compiler-options/index.md)  
- [按字母顺序列出的 C# 编译器选项](../../../csharp/language-reference/compiler-options/listed-alphabetically.md)  
- [按类别列出的 C# 编译器选项](../../../csharp/language-reference/compiler-options/listed-by-category.md)  
- [Main() 和命令行参数](../../../csharp/programming-guide/main-and-command-args/index.md)  
- [命令行参数](../../../csharp/programming-guide/main-and-command-args/command-line-arguments.md)  
- [如何：显示命令行参数](../../../csharp/programming-guide/main-and-command-args/how-to-display-command-line-arguments.md)  
- [如何：使用 foreach 访问命令行参数](../../../csharp/programming-guide/main-and-command-args/how-to-access-command-line-arguments-using-foreach.md)  
- [Main() 返回值](../../../csharp/programming-guide/main-and-command-args/main-return-values.md)
+
+- [C# 编译器选项](../../../csharp/language-reference/compiler-options/index.md)  
+- [按字母顺序列出的 C# 编译器选项](../../../csharp/language-reference/compiler-options/listed-alphabetically.md)  
+- [按类别列出的 C# 编译器选项](../../../csharp/language-reference/compiler-options/listed-by-category.md)  
+- [Main() 和命令行参数](../../../csharp/programming-guide/main-and-command-args/index.md)  
+- [命令行参数](../../../csharp/programming-guide/main-and-command-args/command-line-arguments.md)  
+- [如何：显示命令行参数](../../../csharp/programming-guide/main-and-command-args/how-to-display-command-line-arguments.md)  
+- [如何：使用 foreach 访问命令行参数](../../../csharp/programming-guide/main-and-command-args/how-to-access-command-line-arguments-using-foreach.md)  
+- [Main() 返回值](../../../csharp/programming-guide/main-and-command-args/main-return-values.md)

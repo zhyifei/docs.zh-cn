@@ -2,12 +2,12 @@
 title: 线程同步 (C#)
 ms.date: 07/20/2015
 ms.assetid: e42b1be6-c93c-479f-a148-be0759f1a4e1
-ms.openlocfilehash: 138b94ef8ae5fc54e42277127f9b22f88803457f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4ed6cad647c965882a63282ce32c998cec138eec
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33338606"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43463151"
 ---
 # <a name="thread-synchronization-c"></a>线程同步 (C#)
 以下各节中描述的功能和类可用于同步访问多线程应用程序中的资源。  
@@ -160,7 +160,6 @@ class ThreadingExample
  <xref:System.Threading>  
  <xref:System.Threading.EventWaitHandle.Set%2A>  
  <xref:System.Threading.Monitor>  
- [多线程应用程序 (C#)](../../../../csharp/programming-guide/concepts/threading/multithreaded-applications.md)  
  [lock 语句](../../../../csharp/language-reference/keywords/lock-statement.md)  
  [Mutex](../../../../standard/threading/mutexes.md)  
  [互锁操作](../../../../standard/threading/interlocked-operations.md)  

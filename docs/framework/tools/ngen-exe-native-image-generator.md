@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 44bf97aa-a9a4-4eba-9a0d-cfaa6fc53a66
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f0811e32a9483238d1cd15084c19951075c8a36a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3875b4f44a2c2aad5cc5021d55e22e99bb00a91e
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33399529"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43405901"
 ---
 # <a name="ngenexe-native-image-generator"></a>Ngen.exe（本机映像生成器）
 本机映像生成器 (Ngen.exe) 是一种提高托管应用程序性能的工具。 Ngen.exe 创建本机映像（包含经编译的特定于处理器的机器代码的文件），并将它们安装到本地计算机上的本机映像缓存中。 运行时可从缓存中使用本机映像，而不必使用实时 (JIT) 编译器编译原始程序集。  
@@ -48,12 +48,12 @@ ms.locfileid: "33399529"
   
 -   消除了一些导致映像无效的因素。  
   
- 在 Windows 8 中，请参阅[本机映像任务](http://msdn.microsoft.com/library/9b1f7590-4e0d-4737-90ef-eaf696932afb)。  
+ 在 Windows 8 中，请参阅[本机映像任务](#native-image-task)。  
   
  有关使用 Ngen.exe 和本机映像服务的其他信息，请参阅[本机映像服务][Native Image Service]。  
   
 > [!NOTE]
->  在[本机映像生成器 (Ngen.exe) 旧式语法](http://msdn.microsoft.com/library/5a69fc7a-103f-4afc-8ab4-606adcb46324)中可以找到 .NET Framework 1.0 和 1.1 版的 Ngen.exe 语法。  
+>  在[本机映像生成器 (Ngen.exe) 旧式语法](https://msdn.microsoft.com/library/5a69fc7a-103f-4afc-8ab4-606adcb46324)中可以找到 .NET Framework 1.0 和 1.1 版的 Ngen.exe 语法。  
   
  此工具会自动随 Visual Studio 一起安装。 若要运行此工具，请使用开发人员命令提示（或 Windows 7 中的 Visual Studio 命令提示）。 有关详细信息，请参阅[命令提示](../../../docs/framework/tools/developer-command-prompt-for-vs.md)。  
   
@@ -514,7 +514,7 @@ ngen uninstall "ClientApp, Version=1.0.0.0, Culture=neutral,
  有关本机映像服务的相关示例，请参阅[本机映像服务][Native Image Service]。  
   
 ## <a name="native-image-task"></a>本机映像任务  
- 本机映像任务是生成和维护本机映像的 Windows 任务。 本机映像任务为支持方案自动生成并回收本机映像。 （请参阅[创建本机映像](http://msdn.microsoft.com/library/2bc8b678-dd8d-4742-ad82-319e9bf52418)。）它还使安装程序能使用 [Ngen.exe（本机映像生成器）](../../../docs/framework/tools/ngen-exe-native-image-generator.md)来创建和更新在延迟时间的本机映像。  
+ 本机映像任务是生成和维护本机映像的 Windows 任务。 本机映像任务为支持方案自动生成并回收本机映像。 （请参阅[创建本机映像](https://msdn.microsoft.com/library/2bc8b678-dd8d-4742-ad82-319e9bf52418)。）它还使安装程序能使用 [Ngen.exe（本机映像生成器）](../../../docs/framework/tools/ngen-exe-native-image-generator.md)来创建和更新在延迟时间的本机映像。  
   
  本机映像任务对计算机上受支持的每个 CPU 体系结构进行注册后，允许对以每个体系结构为目标的应用程序进行编译：  
   
