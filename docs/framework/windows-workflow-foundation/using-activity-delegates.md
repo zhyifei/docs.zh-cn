@@ -2,12 +2,12 @@
 title: 使用活动委托
 ms.date: 03/30/2017
 ms.assetid: e33cf876-8979-440b-9b23-4a12d1139960
-ms.openlocfilehash: 96a412a066342fb9c459e1388c5b58847ebac390
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: bb23f6a79b6f2390952f9aadc1cf08099acb289b
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33518947"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43489924"
 ---
 # <a name="using-activity-delegates"></a>使用活动委托
 通过活动委托，活动作者可以公开具有特定签名的回调，活动的用户可为其提供基于活动的处理程序。 可以使用两种类型的活动委托：<xref:System.Activities.ActivityAction%601> 用于定义没有返回值的活动委托，<xref:System.Activities.ActivityFunc%601> 用于定义有返回值的活动委托。  
@@ -27,9 +27,9 @@ ms.locfileid: "33518947"
   
  [!code-csharp[CFX_ActivityExample#7](../../../samples/snippets/csharp/VS_Snippets_CFX/CFX_ActivityExample/cs/Program.cs#7)]  
   
- 有关对象初始值设定项的详细信息，请参阅[如何： 初始化对象而不会调用构造函数 （C# 编程指南）](http://go.microsoft.com/fwlink/?LinkId=161015)和[如何： 使用对象初始值设定项声明对象](http://go.microsoft.com/fwlink/?LinkId=161016)。  
+ 有关对象初始值设定项的详细信息，请参阅[如何： 初始化对象而不会调用构造函数 （C# 编程指南）](https://go.microsoft.com/fwlink/?LinkId=161015)并[如何： 使用对象初始值设定项声明对象](https://go.microsoft.com/fwlink/?LinkId=161016)。  
   
- 在下面的示例中，在工作流中使用一个 <xref:System.Activities.Statements.TryCatch> 活动。 该工作流引发一个 <xref:System.ApplicationException>，并由 <xref:System.Activities.Statements.Catch%601> 活动对其进行处理。 处理程序<xref:System.Activities.Statements.Catch%601>活动的活动操作是<xref:System.Activities.Statements.WriteLine>活动和异常详细信息流动到使用`ex` <xref:System.Activities.DelegateInArgument%601>。  
+ 在下面的示例中，在工作流中使用一个 <xref:System.Activities.Statements.TryCatch> 活动。 该工作流引发一个 <xref:System.ApplicationException>，并由 <xref:System.Activities.Statements.Catch%601> 活动对其进行处理。 处理程序<xref:System.Activities.Statements.Catch%601>活动的活动执行任何操作<xref:System.Activities.Statements.WriteLine>活动和异常详细信息流动到使用其`ex` <xref:System.Activities.DelegateInArgument%601>。  
   
  [!code-csharp[CFX_WorkflowApplicationExample#33](../../../samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowapplicationexample/cs/program.cs#33)]  
   

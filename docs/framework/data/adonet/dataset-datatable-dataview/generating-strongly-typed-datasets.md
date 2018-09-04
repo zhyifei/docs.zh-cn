@@ -5,25 +5,25 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 54333cbf-bb43-4314-a7d4-6dc1dd1c44b3
-ms.openlocfilehash: 95bb536416a043fc392d0c4e94378239ae3ee37f
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
-ms.translationtype: MT
+ms.openlocfilehash: 9accfb68c57384e12a59bae40ebe30a2d3e22877
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32758024"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43489716"
 ---
 # <a name="generating-strongly-typed-datasets"></a>生成强类型化数据集
 如果给定符合 XML 架构定义语言 (XSD) 标准的 XML 架构，您就可以使用随 <xref:System.Data.DataSet> 提供的 XSD.exe 工具生成强类型 [!INCLUDE[winsdklong](../../../../../includes/winsdklong-md.md)]。  
   
- (若要从数据库表创建 xsd，请参阅<xref:System.Data.DataSet.WriteXmlSchema%2A>或[使用 Visual Studio 中的数据集](http://msdn.microsoft.com/library/8bw9ksd6.aspx))。  
+ (若要从数据库表创建 xsd，请参阅<xref:System.Data.DataSet.WriteXmlSchema%2A>或[使用 Visual Studio 中的数据集](https://msdn.microsoft.com/library/8bw9ksd6.aspx))。  
   
- 下面的代码演示生成的语法**数据集**使用此工具。  
+ 下面的代码显示了生成的语法**数据集**使用此工具。  
   
 ```  
 xsd.exe /d /l:CS XSDSchemaFileName.xsd /eld /n:XSDSchema.Namespace  
 ```  
   
- 在此语法中，`/d`指令指示该工具生成**数据集**，和`/l:`指示该工具 （例如，C# 或 Visual Basic.NET） 使用哪种语言。 可选`/eld`指令指定，你可以使用[!INCLUDE[linq_dataset](../../../../../includes/linq-dataset-md.md)]对生成查询**数据集。** 当同时指定 `/d` 选项时可使用此选项。 有关详细信息，请参阅[查询类型化数据集](../../../../../docs/framework/data/adonet/querying-typed-datasets.md)。 可选`/n:`指令指示该工具还生成的命名空间**数据集**调用**XSDSchema.Namespace**。 命令的输出为 XSDSchemaFileName.cs，该输出可以在 ADO.NET 应用程序中编译和使用。 所生成的代码可以编译成库或模块。  
+ 在此语法中，`/d`指令指示该工具以生成**数据集**，和`/l:`指示该工具 （例如，C# 或 Visual Basic.NET） 使用的语言。 可选`/eld`指令指定了可用于[!INCLUDE[linq_dataset](../../../../../includes/linq-dataset-md.md)]对生成的查询**数据集。** 当同时指定 `/d` 选项时可使用此选项。 有关详细信息，请参阅[查询类型化数据集](../../../../../docs/framework/data/adonet/querying-typed-datasets.md)。 可选`/n:`指令指示该工具还生成的命名空间**数据集**调用**XSDSchema.Namespace**。 命令的输出为 XSDSchemaFileName.cs，该输出可以在 ADO.NET 应用程序中编译和使用。 所生成的代码可以编译成库或模块。  
   
  以下代码显示使用 C# 编译器 (csc.exe) 将生成的代码编译成库的语法。  
   
@@ -43,7 +43,7 @@ Imports XSDSchema.Namespace
 using XSDSchema.Namespace;  
 ```  
   
- 下面的代码示例使用类型化**数据集**名为**CustomerDataSet**加载来自的客户列表**Northwind**数据库。 一旦加载数据使用**填充**方法，该示例循环访问每个客户**客户**表使用类型化**CustomersRow** (**DataRow**) 对象。 这提供直接访问权限**CustomerID**列，而不是通过**DataColumnCollection**。  
+ 下面的代码示例使用类型化**数据集**名为**CustomerDataSet**加载客户列表**Northwind**数据库。 使用加载数据后**填充**方法，该示例循环访问每个客户**客户**表可使用类型化**CustomersRow** (**DataRow**) 对象。 这提供了直接访问权限**CustomerID**列中，而不是通过**DataColumnCollection**。  
   
 ```vb  
 Dim customers As CustomerDataSet= New CustomerDataSet()  
@@ -99,4 +99,4 @@ foreach(CustomerDataSet.CustomersRow customerRow in customers.Customers)
  <xref:System.Data.DataSet>  
  [类型化数据集](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/typed-datasets.md)  
  [数据集、数据表和数据视图](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
- [ADO.NET 托管提供程序和数据集开发人员中心](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)
