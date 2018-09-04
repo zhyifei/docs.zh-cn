@@ -4,12 +4,12 @@ description: 了解如何定义和使用 ref 返回值和 ref 局部变量
 author: rpetrusha
 ms.author: ronpet
 ms.date: 04/04/2018
-ms.openlocfilehash: e749b9c9309a4b1a737a0c1d0b5e1cfe5748114a
-ms.sourcegitcommit: 78bcb629abdbdbde0e295b4e81f350a477864aba
+ms.openlocfilehash: a869cd50c5512c9893b6e5056aa58e1f92ee26f4
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "33339613"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43510560"
 ---
 # <a name="ref-returns-and-ref-locals"></a>ref 返回值和局部变量
 
@@ -124,5 +124,5 @@ refLocal = ref anotherVeryLargeStruct; // reassigned, refLocal refers to differe
 
 ## <a name="see-also"></a>请参阅
 
-[ref 关键字](../../language-reference/keywords/ref.md)  
-[具有值类型的引用语义](../../../csharp/reference-semantics-with-value-types.md)
+- [ref 关键字](../../language-reference/keywords/ref.md)  
+- [具有值类型的引用语义](../../../csharp/reference-semantics-with-value-types.md)
