@@ -5,24 +5,24 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 43ae5dd3-50f5-43a8-8d01-e37a61664176
-ms.openlocfilehash: b9167d7a92ba1b4951d0a9e3c9eea3565bbdc196
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 52c5dba1a21b0e8d8e5af1dc159941e5f4b4aa5f
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33365010"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43562765"
 ---
 # <a name="snapshot-isolation-in-sql-server"></a>SQL Server 中的快照隔离
 快照隔离可增强 OLTP 应用程序的并发性。  
   
 ## <a name="understanding-snapshot-isolation-and-row-versioning"></a>了解快照隔离和行版本控制  
- 一旦启用了快照隔离，每个事务更新的行版本均维护在**tempdb**。 唯一的事务序列号标识每个事务，并且为每个行版本记录这些唯一的编号。 事务使用序列号在事务序列号之前的最新行版本。 事务将忽略在事务开始之后创建的更新的行版本。  
+ 一旦启用快照隔离，每个事务的更新的行版本均维护在**tempdb**。 唯一的事务序列号标识每个事务，并且为每个行版本记录这些唯一的编号。 事务使用序列号在事务序列号之前的最新行版本。 事务将忽略在事务开始之后创建的更新的行版本。  
   
  “快照”一词反映的情况是：事务中的所有查询根据事务开始那一刻数据库的状态，看到数据库的相同版本（即快照）。 不会在快照事务中的基础数据行或数据页上获取锁，这样可以执行其他事务，而不会被以前未完成的事务所阻止。 修改数据的事务不会阻止读取数据的事务，读取数据的事务不会阻止写入数据的事务，就好像通常情况下在 SQL Server 中使用默认的 READ COMMITTED 隔离级别一样。 这种无阻止的行为也大大降低了复杂事务出现死锁的可能性。  
   
  快照隔离使用开放式并发模型。 如果快照事务尝试提交对事务开始后更改过的数据的修改，事务将回滚并将引发错误。 对访问要修改的数据的 SELECT 语句使用 UPDLOCK 提示，可以避免此问题。 有关更多信息，请参见“SQL Server 联机图书”中的“锁定提示”。  
   
- 在事务中使用快照隔离之前，必须先通过设置 ALLOW_SNAPSHOT_ISOLATION ON 数据库选项来启用快照隔离。 这样将激活在临时数据库中存储行版本的机制 (**tempdb**)。 在每个要将快照隔离与 Transact-SQL ALTER DATABASE 语句一起使用的数据库中，必须启用快照隔离。 从这个方面来说，快照隔离与传统的隔离级别 READ COMMITTED、REPEATABLE READ、SERIALIZABLE 和 READ UNCOMMITTED 不同，这些传统的隔离级别不需要任何配置。 下列语句激活快照隔离，并将默认的 READ COMMITTED 行为替换为 SNAPSHOT：  
+ 在事务中使用快照隔离之前，必须先通过设置 ALLOW_SNAPSHOT_ISOLATION ON 数据库选项来启用快照隔离。 这将激活在临时数据库中存储行版本的机制 (**tempdb**)。 在每个要将快照隔离与 Transact-SQL ALTER DATABASE 语句一起使用的数据库中，必须启用快照隔离。 从这个方面来说，快照隔离与传统的隔离级别 READ COMMITTED、REPEATABLE READ、SERIALIZABLE 和 READ UNCOMMITTED 不同，这些传统的隔离级别不需要任何配置。 下列语句激活快照隔离，并将默认的 READ COMMITTED 行为替换为 SNAPSHOT：  
   
 ```  
 ALTER DATABASE MyDatabase  
@@ -59,17 +59,17 @@ SET READ_COMMITTED_SNAPSHOT ON
 -   在数据库中启用快照隔离时，READ_COMMITTED_SNAPSHOT 数据库选项确定默认 READ COMMITTED 隔离级别的行为。 如果不显式指定 READ_COMMITTED_SNAPSHOT ON，READ COMMITTED 将应用于所有隐式事务。 此时的行为与设置 READ_COMMITTED_SNAPSHOT OFF（默认设置）相同。 当 READ_COMMITTED_SNAPSHOT OFF 生效时，数据库引擎使用共享锁强制使用默认隔离级别。 如果将 READ_COMMITTED_SNAPSHOT 数据库选项设置为 ON，数据库引擎将使用行版本化和快照隔离作为默认设置，而不是使用锁来保护数据。  
   
 ## <a name="how-snapshot-isolation-and-row-versioning-work"></a>快照隔离和行版本化的工作原理  
- SQL Server 数据库引擎启用快照隔离级别时，每次更新行时，存储中的原始行的副本**tempdb**，并为该行添加事务序列号。 以下是发生的事件序列：  
+ 启用快照隔离级别时，每次更新行时，SQL Server 数据库引擎存储中的原始行的副本**tempdb**，并将事务序列号添加到行。 以下是发生的事件序列：  
   
 -   新的事务启动，并为该事务分配一个事务序列号。  
   
--   数据库引擎读取在事务中的某行并检索的行版本**tempdb**其序列号为最接近，并且小于事务序列号。  
+-   数据库引擎读取在事务中的行，并检索中的行版本**tempdb**其序列号为最接近，并且小于事务序列号。  
   
 -   数据库引擎检查事务编号是否不在未提交事务的事务编号列表中，这些未提交事务是在快照事务开始时进入活动状态的。  
   
--   事务读取来自的行的版本**tempdb**这是自该事务的开始最新。 事务不会看到事务开始后插入的新行，因为这些序列号值将大于事务序列号的值。  
+-   事务将读取从行的版本**tempdb**这是自事务开始以来的。 事务不会看到事务开始后插入的新行，因为这些序列号值将大于事务序列号的值。  
   
--   当前事务将看到删除的行后对事务开始，因为将中的行版本**tempdb**具有较低的序列号值。  
+-   当前事务将看到开始后删除该事务，因为中的行版本的行**tempdb**具有较低的序列号值。  
   
  快照隔离的实际效果是事务看到在事务开始时存在的所有数据，不会在基础表上授予或放置任何锁。 在存在争用的情况下，这样可以改进性能。  
   
@@ -91,17 +91,17 @@ SqlTransaction sqlTran =
 ### <a name="example"></a>示例  
  以下示例通过尝试访问锁定的数据，演示不同隔离级别的行为，并非要在生产代码中使用。  
   
- 该代码连接到**AdventureWorks**示例 SQL Server 中的数据库，并创建名为的表**TestSnapshot**然后插入一行数据。 该代码使用 ALTER DATABASE Transact-SQL 语句对数据库启用快照隔离，但是不设置 READ_COMMITTED_SNAPSHOT 选项，让默认的 READ COMMITTED 隔离级别的行为生效。 然后，该代码执行下列操作：  
+ 该代码连接到**AdventureWorks**示例数据库在 SQL Server 中的，并创建一个名为表**TestSnapshot**并将其插入一行数据。 该代码使用 ALTER DATABASE Transact-SQL 语句对数据库启用快照隔离，但是不设置 READ_COMMITTED_SNAPSHOT 选项，让默认的 READ COMMITTED 隔离级别的行为生效。 然后，该代码执行下列操作：  
   
 -   开始但是不完成 sqlTransaction1，sqlTransaction1 使用 SERIALIZABLE 隔离级别开始更新事务。 这样做的结果是锁定表。  
   
--   打开第二个连接，并开始使用快照隔离级别读取中的数据的第二个事务**TestSnapshot**表。 因为启用了快照隔离，此事务可以读取在开始 sqlTransaction1 之前存在的数据。  
+-   打开第二个连接，并开始使用快照隔离级别来读取中的数据的第二个事务**TestSnapshot**表。 因为启用了快照隔离，此事务可以读取在开始 sqlTransaction1 之前存在的数据。  
   
 -   打开第三个连接，并使用 READ COMMITTED 隔离级别开始一个事务，尝试读取表中的数据。 在这种情况下，代码无法读取数据，因为代码在第一个事务中无法通过在表上放置的锁进行读取，因而超时。如果使用 REPEATABLE READ 和 SERIALIZABLE 隔离级别，因为这些隔离级别也无法通过第一个事务中放置的锁，因而会出现同样的结果。  
   
 -   打开第四个连接，并使用 READ UNCOMMITTED 隔离级别开始一个事务，对 sqlTransaction1 中未提交的值执行脏读。 如果第一个事务未提交，数据库中永远不会真正存在此值。  
   
--   回滚第一个事务，并通过删除清理**TestSnapshot**表以及禁用快照隔离来进行**AdventureWorks**数据库。  
+-   它将回滚的第一个事务，并通过删除清除**TestSnapshot**表以及禁用快照隔离**AdventureWorks**数据库。  
   
 > [!NOTE]
 >  以下示例使用同一连接字符串，且其连接池已关闭。 如果某个连接被汇集，则重置其隔离级别并不会重置服务器的隔离级别。 因此，使用同一内部池连接的后续连接将会启动，且其隔离级别将设置为该池连接的隔离级别。 关闭连接池的另一种方法是为每个连接显式设置隔离级别。  
@@ -112,19 +112,19 @@ SqlTransaction sqlTran =
 ### <a name="example"></a>示例  
  以下示例演示修改数据时的快照隔离行为。 该代码执行下列操作：  
   
--   连接到**AdventureWorks**示例数据库并启用 SNAPSHOT 隔离。  
+-   连接到**AdventureWorks**示例数据库并启用快照隔离。  
   
--   创建名为的表**TestSnapshotUpdate**并插入三行示例数据。  
+-   创建名为的表**TestSnapshotUpdate**并将其插入三行示例数据。  
   
 -   使用 SNAPSHOT 隔离开始但是不完成 sqlTransaction1。 在事务中选择三行数据。  
   
--   创建另一个**SqlConnection**到**AdventureWorks**并创建第二个事务使用 READ COMMITTED 隔离级别，更新在 sqlTransaction1 中选择的行之一的值。  
+-   创建另一个**SqlConnection**到**AdventureWorks**并创建第二个事务使用 READ COMMITTED 隔离级别的更新在 sqlTransaction1 中选择的行之一中的值。  
   
 -   提交 sqlTransaction2。  
   
--   返回 sqlTransaction1 并尝试更新 sqlTransaction1 已提交的相同的行。 将引发 3960 错误，sqlTransaction1 将自动回滚。 **SqlException.Number**和**SqlException.Message**将显示在控制台窗口。  
+-   返回 sqlTransaction1 并尝试更新 sqlTransaction1 已提交的相同的行。 将引发 3960 错误，sqlTransaction1 将自动回滚。 **SqlException.Number**并**SqlException.Message**将显示在控制台窗口。  
   
--   执行清理代码以禁用中的快照隔离**AdventureWorks**和删除**TestSnapshotUpdate**表。  
+-   执行清理代码，以关闭中的快照隔离**AdventureWorks**和删除**TestSnapshotUpdate**表。  
   
  [!code-csharp[DataWorks SnapshotIsolation.DemoUpdate#1](../../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SnapshotIsolation.DemoUpdate/CS/source.cs#1)]
  [!code-vb[DataWorks SnapshotIsolation.DemoUpdate#1](../../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SnapshotIsolation.DemoUpdate/VB/source.vb#1)]  
@@ -143,4 +143,4 @@ SELECT * FROM TestSnapshotUpdate WITH (UPDLOCK)
   
 ## <a name="see-also"></a>请参阅  
  [SQL Server 和 ADO.NET](../../../../../docs/framework/data/adonet/sql/index.md)  
- [ADO.NET 托管提供程序和数据集开发人员中心](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)

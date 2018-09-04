@@ -8,11 +8,11 @@ helpviewer_keywords:
 - WPF browser hosting support APIs [WPF]
 ms.assetid: 82c133a8-d760-45fb-a2b9-3a997537f1d4
 ms.openlocfilehash: f542da55b6cde2d140e1f9f391e6b2f3d6fe172f
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43464942"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43562385"
 ---
 # <a name="native-wpf-browser-hosting-support-apis"></a>承载支持 API 的本机 WPF 浏览器
 托管的[!INCLUDE[TLA#tla_titlewinclient](../../../../includes/tlasharptla-titlewinclient-md.md)]Web 浏览器中的应用程序可以通过注册从 WPF 宿主的活动文档服务器 (也称为 DocObject) 加速。 [!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)] 可以直接激活，并将与活动文档集成。 Xbap 和 Mozilla 浏览器中的松散 XAML 文档的托管[!INCLUDE[TLA#tla_titlewinclient](../../../../includes/tlasharptla-titlewinclient-md.md)]提供了一个 NPAPI 插件，它提供到类似的宿主环境[!INCLUDE[TLA#tla_titlewinclient](../../../../includes/tlasharptla-titlewinclient-md.md)]活动文档服务器作为[!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)]does。 但是，在其他浏览器中的最简单的实用方法，以承载 Xbap 和 XAML 文档，独立应用程序是通过 Internet Explorer Web 浏览器控件。 Web 浏览器控件提供复杂活动文档服务器宿主环境，但它使自己的主机以自定义和扩展该环境，并直接与当前活动文档对象进行通信。  

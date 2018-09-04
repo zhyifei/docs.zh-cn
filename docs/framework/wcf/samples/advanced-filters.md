@@ -2,22 +2,22 @@
 title: 高级筛选器
 ms.date: 03/30/2017
 ms.assetid: 8d81590f-e036-4f96-824a-4a187f462764
-ms.openlocfilehash: de8577be2d56ec3c942fd8736e350234daf6a35a
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: 7022384e8abe93f4276eec48785b3243ed926438
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33805611"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43564195"
 ---
 # <a name="advanced-filters"></a>高级筛选器
-此示例演示 Windows Communication Foundation (WCF) 路由服务。 路由服务是可以轻松地在你的应用程序中包含基于内容的路由器的 WCF 组件。 此示例采用标准的 WCF 计算器示例，用于使用路由服务进行通信。 此示例演示如何使用消息筛选器和消息筛选器表定义基于内容的路由逻辑。  
+此示例演示 Windows Communication Foundation (WCF) 路由服务。 路由服务是一个 WCF 组件，它可以轻松地在应用程序中包含基于内容的路由器。 此示例采用标准的 WCF 计算器示例，用于使用路由服务进行通信。 此示例演示如何使用消息筛选器和消息筛选器表定义基于内容的路由逻辑。  
   
 > [!IMPORTANT]
 >  您的计算机上可能已安装这些示例。 在继续操作之前，请先检查以下（默认）目录：  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目录不存在，请转到[Windows Communication Foundation (WCF) 和针对.NET Framework 4 的 Windows Workflow Foundation (WF) 示例](http://go.microsoft.com/fwlink/?LinkId=150780)下载所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
+>  如果此目录不存在，请转到[Windows Communication Foundation (WCF) 和.NET Framework 4 的 Windows Workflow Foundation (WF) 示例](https://go.microsoft.com/fwlink/?LinkId=150780)若要下载所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\RoutingServices\AdvancedFilters`  
   
@@ -49,7 +49,7 @@ XPathMessageFilter xpathFilter = new XPathMessageFilter("/s12:Envelope/s12:Heade
 EndpointNameMessageFilter endpointNameFilter = new EndpointNameMessageFilter("calculatorEndpoint");  
 ```  
   
- 第三个筛选器是 <xref:System.ServiceModel.Dispatcher.PrefixEndpointAddressMessageFilter>。 此筛选器与在地址匹配于所提供地址前缀（或前面部分）的终结点上出现的所有消息都匹配。 在此示例中的地址前缀定义为"http://localhost/routingservice/router/rounding/"。 这意味着，任何传入的消息发送到"http://localhost/routingservice/router/rounding/*"匹配此筛选器。 在这种情况下，它是在舍入计算器终结点显示的消息具有的地址"http://localhost/routingservice/router/rounding/calculator"。  
+ 第三个筛选器是 <xref:System.ServiceModel.Dispatcher.PrefixEndpointAddressMessageFilter>。 此筛选器与在地址匹配于所提供地址前缀（或前面部分）的终结点上出现的所有消息都匹配。 在此示例中的地址前缀定义为"http://localhost/routingservice/router/rounding/"。 这意味着，任何传入的消息发送到"http://localhost/routingservice/router/rounding/*"匹配此筛选器。 在这种情况下，它是消息中显示的舍入计算器终结点，其中包含的地址"http://localhost/routingservice/router/rounding/calculator"。  
   
 ```  
 PrefixEndpointAddressMessageFilter prefixAddressFilter = new PrefixEndpointAddressMessageFilter(new EndpointAddress("http://localhost/routingservice/router/rounding/"));  
@@ -82,7 +82,7 @@ RoundRobinMessageFilter roundRobinFilter2 = new RoundRobinMessageFilter("group1"
   
 3.  在 Visual Studio 中按 F5 或 CTRL + SHIFT + B。  
   
-    1.  如果你想要自动启动所需的项目，按 F5 时，右键单击该解决方案并选择**属性**。 选择**启动项目**节点下的**通用属性**的左窗格中。 选择**多启动项目**单选按钮，设置所有项目具有**启动**操作。  
+    1.  如果你想要自动启动所需的项目，按 F5 时，右键单击解决方案并选择**属性**。 选择**启动项目**节点下的**通用属性**的左窗格中。 选择**多个启动项目**单选按钮并设置的所有项目具有**启动**操作。  
   
     2.  如果使用 Ctrl+Shift+B 生成项目，则必须启动以下应用程序：  
   
@@ -154,4 +154,4 @@ RoundRobinMessageFilter roundRobinFilter2 = new RoundRobinMessageFilter("group1"
  Contoso 希望虚拟化其所有服务以仅公开一个终结点，这些服务通过该终结点可提供对多种不同类型的服务的访问。 在这种情况下，这些服务利用路由服务的基于内容的路由功能，以确定应将传入请求发送到哪个位置。  
   
 ## <a name="see-also"></a>请参阅  
- [AppFabric 承载和持久性示例](http://go.microsoft.com/fwlink/?LinkId=193961)
+ [AppFabric 承载和持久性示例](https://go.microsoft.com/fwlink/?LinkId=193961)

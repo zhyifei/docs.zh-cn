@@ -8,11 +8,11 @@ helpviewer_keywords:
 - ComboBox control [WPF]
 ms.assetid: fe0c2f62-fec2-4c41-a37e-5773d284170c
 ms.openlocfilehash: 40dc767d830b3834eedf3581d544aa53d40fae50
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43466351"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43554898"
 ---
 # <a name="combobox"></a>组合框
 <xref:System.Windows.Controls.ComboBox>控件向用户提供选项的列表。 显示或隐藏控件展开或折叠列表。 在其默认状态下，列表处于折叠状态，仅显示一个选项。 用户单击按钮以查看选项的完整列表。  

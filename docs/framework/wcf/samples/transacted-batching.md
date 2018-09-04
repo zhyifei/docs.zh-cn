@@ -3,11 +3,11 @@ title: 事务处理批处理
 ms.date: 03/30/2017
 ms.assetid: ecd328ed-332e-479c-a894-489609bcddd2
 ms.openlocfilehash: abada9aaf5fac8f05599467f385e708e1898832f
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43416643"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43558503"
 ---
 # <a name="transacted-batching"></a>事务处理批处理
 本示例演示如何通过使用消息队列 (MSMQ) 来批处理事务处理读取。 事务处理批处理是排队通信中事务处理读取的一种性能优化功能。  

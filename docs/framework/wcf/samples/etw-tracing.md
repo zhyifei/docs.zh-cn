@@ -3,11 +3,11 @@ title: ETW 跟踪
 ms.date: 03/30/2017
 ms.assetid: ac99a063-e2d2-40cc-b659-d23c2f783f92
 ms.openlocfilehash: 3e4dd141bd5f6a9d137b2fe981b3b412ec0c81e2
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43407162"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43558366"
 ---
 # <a name="etw-tracing"></a>ETW 跟踪
 本示例演示如何通过使用 Windows 事件跟踪 (ETW) 和本示例提供的 `ETWTraceListener` 来实现端对端 (E2E) 跟踪。 该示例基于[Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md)并包括 ETW 跟踪。  

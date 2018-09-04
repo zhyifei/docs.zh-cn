@@ -8,16 +8,16 @@ ms.assetid: 1d853695-973c-48ae-b382-4132ae702805
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: 293cee72e80e88215fccb3902eb88963814cb2ce
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f55112c5eead082eae10aa50590b915f5049d5a6
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33400193"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43565949"
 ---
 # <a name="ui-automation-security-overview"></a>UI 自动化安全性概述
 > [!NOTE]
->  本文档适用于想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空间中定义的托管 <xref:System.Windows.Automation> 类的 .NET Framework 开发人员。 有关 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]的最新信息，请参阅 [Windows 自动化 API：UI 自动化](http://go.microsoft.com/fwlink/?LinkID=156746)。  
+>  本文档适用于想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空间中定义的托管 <xref:System.Windows.Automation> 类的 .NET Framework 开发人员。 有关最新信息[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]，请参阅[Windows 自动化 API: UI 自动化](https://go.microsoft.com/fwlink/?LinkID=156746)。  
   
  此概述介绍了的安全模式 [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] 中 [!INCLUDE[TLA#tla_winvista](../../../includes/tlasharptla-winvista-md.md)]的安全模式。  
   
@@ -61,4 +61,4 @@ ms.locfileid: "33400193"
   
  默认情况下，`UIAccess` 为“false”；即，如果省略该属性或如果没有程序集清单，则应用程序将无法获取对受保护的 [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)]的访问权限。  
   
- 有关 [!INCLUDE[TLA#tla_longhorn2](../../../includes/tlasharptla-longhorn2-md.md)] 安全性、签名应用程序和创建程序集清单的详细信息，请参阅  [MSDN](http://msdn.microsoft.com/library/default.asp?url=/library/dnlong/html/AccProtVista.asp)上的“最小特权环境中应用程序开发人员的最佳做法和准则”。
+ 有关详细信息[!INCLUDE[TLA#tla_longhorn2](../../../includes/tlasharptla-longhorn2-md.md)]安全性、 签名应用程序和创建程序集清单，请参阅"开发人员最佳做法和准则的应用程序在 Least Privileged Environment" [MSDN](https://msdn.microsoft.com/library/default.asp?url=/library/dnlong/html/AccProtVista.asp)。

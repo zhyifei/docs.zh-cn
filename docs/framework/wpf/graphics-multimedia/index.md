@@ -12,16 +12,16 @@ helpviewer_keywords:
 - graphics features [WPF]
 - transition effects [WPF]
 ms.assetid: 1817d9dc-3d6c-46cb-afc8-63b0bae35e37
-ms.openlocfilehash: 74375c468170d58cfa79031ab0030477c29bd445
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c7cae5be1d7e52186752d67354927084d118beb9
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33566623"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43559006"
 ---
 # <a name="graphics-and-multimedia"></a>图形和多媒体
 <a name="introduction"></a>
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 为多媒体、 矢量图形、 动画和内容的组合，因此可以方便开发人员可以构建感兴趣的用户界面和内容提供支持。 使用 [!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)]，可以创建矢量图形或复杂动画，并将媒体集成到应用程序中。  
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 为多媒体、 矢量图形、 动画和内容复合，便于开发人员能够生成有趣的用户界面和内容提供支持。 使用 [!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)]，可以创建矢量图形或复杂动画，并将媒体集成到应用程序中。  
   
  本主题介绍 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 的图形、动画和媒体功能，可用于向应用程序添加图形、转换效果、声音和视频。  
   
@@ -34,19 +34,19 @@ ms.locfileid: "33566623"
   
 -   布局舍入  
   
-     当对象边缘落在像素设备中间位置时，与 DPI 无关的图形系统可以创建呈现项目，如模糊或半透明边缘。 WPF 的以前版本包含像素捕捉以帮助处理这种情况。 Silverlight 2 引入了布局舍入，这是移动元素以使边缘落在整个像素边界上的另一种方法。 WPF 现在支持使用舍入的布局<xref:System.Windows.FrameworkElement.UseLayoutRounding%2A>上附加属性<xref:System.Windows.FrameworkElement>。  
+     当对象边缘落在像素设备中间位置时，与 DPI 无关的图形系统可以创建呈现项目，如模糊或半透明边缘。 WPF 的以前版本包含像素捕捉以帮助处理这种情况。 Silverlight 2 引入了布局舍入，这是移动元素以使边缘落在整个像素边界上的另一种方法。 WPF 现在支持与舍入的布局<xref:System.Windows.FrameworkElement.UseLayoutRounding%2A>附加属性上<xref:System.Windows.FrameworkElement>。  
   
 -   缓存复合  
   
-     使用新的<xref:System.Windows.Media.BitmapCache>和<xref:System.Windows.Media.BitmapCacheBrush>类，可以缓存以位图格式的可视化树的复杂部分并极大地提高呈现时间。 位图仍然能够响应用户输入（如鼠标单击），并且可以像任何画笔一样将其绘制到其他元素上。  
+     使用新的<xref:System.Windows.Media.BitmapCache>和<xref:System.Windows.Media.BitmapCacheBrush>类，可以缓存为位图的可视化树的复杂部分并大幅缩短呈现时间。 位图仍然能够响应用户输入（如鼠标单击），并且可以像任何画笔一样将其绘制到其他元素上。  
   
 -   像素着色器 3 支持  
   
-     WPF 4 上的基础上生成<xref:System.Windows.Media.Effects.ShaderEffect>允许应用程序使用像素着色器 (PS) 版本 3.0 写入效果 WPF 3.5 SP1 中引入的支持。 PS 3.0 着色器模型比 PS 2.0 更复杂，从而允许在支持的硬件上使用更多效果。  
+     WPF 4 生成的<xref:System.Windows.Media.Effects.ShaderEffect>WPF 3.5 SP1 中引入应用程序使用像素着色器 (PS) 版本 3.0 写入效果，从而支持。 PS 3.0 着色器模型比 PS 2.0 更复杂，从而允许在支持的硬件上使用更多效果。  
   
 -   缓动函数  
   
-     可以使用缓动函数增强动画，从而提供对动画行为的额外控制。 例如，你可以将应用<xref:System.Windows.Media.Animation.ElasticEase>到动画以使弹出行为的动画。 有关详细信息，请参阅中的缓动类型<xref:System.Windows.Media.Animation>命名空间。  
+     可以使用缓动函数增强动画，从而提供对动画行为的额外控制。 例如，可以应用<xref:System.Windows.Media.Animation.ElasticEase>到动画，以提供类似弹簧的行为的动画。 有关详细信息，请参阅中的缓动类型<xref:System.Windows.Media.Animation>命名空间。  
   
 <a name="graphics_and_rendering"></a>   
 ## <a name="graphics-and-rendering"></a>图形和呈现  
@@ -91,21 +91,21 @@ End Class
   
  ![包含文本“你已单击省略号!”的窗口](../../../../docs/framework/wpf/graphics-multimedia/media/wpfintrofigure12.png "WPFIntroFigure12")  
   
- 有关详细信息，请参阅 [WPF 中的形状和基本绘图概述](../../../../docs/framework/wpf/graphics-multimedia/shapes-and-basic-drawing-in-wpf-overview.md)。 有关介绍性示例，请参阅[形状元素示例](http://go.microsoft.com/fwlink/?LinkID=160037)。  
+ 有关详细信息，请参阅 [WPF 中的形状和基本绘图概述](../../../../docs/framework/wpf/graphics-multimedia/shapes-and-basic-drawing-in-wpf-overview.md)。 有关介绍性示例，请参阅[形状元素示例](https://go.microsoft.com/fwlink/?LinkID=160037)。  
   
 ### <a name="2-d-geometries"></a>二维几何图形  
  当 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 提供的 [!INCLUDE[TLA2#tla_2d](../../../../includes/tla2sharptla-2d-md.md)] 形状不足时，可以使用对几何和路径的 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 支持来创建自己的形状。 下图显示如何使用几何创建形状作为图形画笔和剪裁其他 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 元素。  
   
  ![Path 的各种用法](../../../../docs/framework/wpf/graphics-multimedia/media/wpfintrofigure5.PNG "WPFIntroFigure5")  
   
- 有关详细信息，请参阅 [Geometry 概述](../../../../docs/framework/wpf/graphics-multimedia/geometry-overview.md)。 有关介绍性示例，请参阅 [Geometry 示例](http://go.microsoft.com/fwlink/?LinkID=159989)。  
+ 有关详细信息，请参阅 [Geometry 概述](../../../../docs/framework/wpf/graphics-multimedia/geometry-overview.md)。 有关介绍性示例，请参阅 [Geometry 示例](https://go.microsoft.com/fwlink/?LinkID=159989)。  
   
 ### <a name="2-d-effects"></a>二维效果  
  [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 提供了 [!INCLUDE[TLA2#tla_2d](../../../../includes/tla2sharptla-2d-md.md)] 类的库，可用于创建各种效果。 借助 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 的 [!INCLUDE[TLA2#tla_2d](../../../../includes/tla2sharptla-2d-md.md)] 呈现功能，可以绘制具有渐变、位图、绘图和视频的 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 元素，并且可以使用旋转、缩放和倾斜来操作它们。 下图演提供了可使用 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 画笔实现的许多效果的示例。  
   
  ![不同画笔的图示](../../../../docs/framework/wpf/graphics-multimedia/media/wpfintrofigure6.PNG "WPFIntroFigure6")  
   
- 有关详细信息，请参阅 [WPF 画笔概述](../../../../docs/framework/wpf/graphics-multimedia/wpf-brushes-overview.md)。 有关详细信息，请参阅[画笔示例](http://go.microsoft.com/fwlink/?LinkID=159973)。  
+ 有关详细信息，请参阅 [WPF 画笔概述](../../../../docs/framework/wpf/graphics-multimedia/wpf-brushes-overview.md)。 有关详细信息，请参阅[画笔示例](https://go.microsoft.com/fwlink/?LinkID=159973)。  
   
 <a name="rendering"></a>   
 ## <a name="3-d-rendering"></a>三维呈现  
@@ -113,7 +113,7 @@ End Class
   
  ![Visual3D 示例屏幕快照](../../../../docs/framework/wpf/graphics-multimedia/media/wpfintrofigure13.png "WPFIntroFigure13")  
   
- 有关详细信息，请参阅 [三维图形概述](../../../../docs/framework/wpf/graphics-multimedia/3-d-graphics-overview.md)。 有关介绍性示例，请参阅 [3-D 实体示例](http://go.microsoft.com/fwlink/?LinkID=159964)。  
+ 有关详细信息，请参阅 [三维图形概述](../../../../docs/framework/wpf/graphics-multimedia/3-d-graphics-overview.md)。 有关介绍性示例，请参阅 [3-D 实体示例](https://go.microsoft.com/fwlink/?LinkID=159964)。  
   
 <a name="animation"></a>   
 ## <a name="animation"></a>动画  
@@ -121,7 +121,7 @@ End Class
   
  ![具有动画多维数据集的图像](../../../../docs/framework/wpf/graphics-multimedia/media/wpfintrofigure7.png "WPFIntroFigure7")  
   
- 有关详细信息，请参阅 [动画概述](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)。 有关介绍性示例，请参阅[动画示例库](http://go.microsoft.com/fwlink/?LinkID=159969)。  
+ 有关详细信息，请参阅 [动画概述](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)。 有关介绍性示例，请参阅[动画示例库](https://go.microsoft.com/fwlink/?LinkID=159969)。  
   
 <a name="media"></a>   
 ## <a name="media"></a>媒体  
@@ -141,7 +141,7 @@ End Class
 <MediaElement Source="media\numbers.wmv" Width="450" Height="250" />  
 ```  
   
- <xref:System.Windows.Controls.MediaElement> 能够播放视频和音频，且可扩展，足以方便地创建的自定义[!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)]。  
+ <xref:System.Windows.Controls.MediaElement> 能够播放视频和音频，并且可扩展，足以允许轻松创建自定义[!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)]。  
   
  有关详细信息，请参阅[多媒体概述](../../../../docs/framework/wpf/graphics-multimedia/multimedia-overview.md)。  
   
@@ -153,6 +153,6 @@ End Class
  [WPF 中的形状和基本绘图概述](../../../../docs/framework/wpf/graphics-multimedia/shapes-and-basic-drawing-in-wpf-overview.md)  
  [使用纯色和渐变进行绘制概述](../../../../docs/framework/wpf/graphics-multimedia/painting-with-solid-colors-and-gradients-overview.md)  
  [使用图像、绘图和视觉对象进行绘制](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md)  
- [动画和计时](http://msdn.microsoft.com/library/7d83765b-d5ae-41b1-b423-80206e1124aa)  
- [3d 图形](http://msdn.microsoft.com/library/565c1f3c-235b-47de-b05b-3b53ed63f1b8)  
- [多媒体](http://msdn.microsoft.com/library/44a8dcd0-80cb-4db0-a222-87cde68c2fac)
+ [动画和计时](https://msdn.microsoft.com/library/7d83765b-d5ae-41b1-b423-80206e1124aa)  
+ [三维图形](https://msdn.microsoft.com/library/565c1f3c-235b-47de-b05b-3b53ed63f1b8)  
+ [多媒体](https://msdn.microsoft.com/library/44a8dcd0-80cb-4db0-a222-87cde68c2fac)

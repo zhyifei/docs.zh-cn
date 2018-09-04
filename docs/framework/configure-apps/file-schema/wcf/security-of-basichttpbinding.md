@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 6432708d-5465-4bd9-bfc2-466742db99cb
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: e39d32a9cc689905bed42f56e4f998bbd8c6e038
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2adb5736cca59d42ab3c62d61513bbfd80a4be04
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33355023"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43565211"
 ---
 # <a name="ltsecuritygt-of-ltbasichttpbindinggt"></a>&lt;basicHttpBinding&gt; 的 &lt;security&gt;
 定义的安全功能[ \<basicHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md)。  
@@ -47,11 +47,11 @@ ms.locfileid: "33355023"
   
 |值|描述|  
 |-----------|-----------------|  
-|无|的在传输过程中不是安全消息。|  
+|无|的在传输过程中不是安全消息数。|  
 |传输|使用 HTTPS 传输提供安全性。 用 HTTPS 保证 SOAP 消息的安全。 使用服务的 X.509 证书向客户端对服务进行身份验证。 使用所提供的 ClientCredentialType 对客户端进行身份验证。 请参阅[\<传输 >](../../../../../docs/framework/configure-apps/file-schema/wcf/transport-of-basichttpbinding.md)。|  
 |消息|使用 SOAP 消息安全提供安全性。 默认情况下，将对正文进行加密和签名。 对于此绑定，系统要求向带外客户端提供服务器证书。 此绑定仅有的有效 `ClientCredentialType` 为 `Certificate`。|  
 |TransportWithMessageCredential|完整性、保密性和服务器身份验证由传输安全来提供。 客户端身份验证采用 SOAP 消息安全方式提供。 如果要使用用户名/密码对用户进行身份验证，并且存在用于保护消息传输的现有 HTTP 部署，则适用此模式。|  
-|TransportCredentialOnly|此模式并不提供消息的完整性和保密性， 而是提供基于 http 的客户端身份验证。 使用此模式时应当小心。 它应在其中通过其他方式 （如 IPSec) 提供传输安全并且只有客户端身份验证由 WCF 基础结构的环境中使用。|  
+|TransportCredentialOnly|此模式并不提供消息的完整性和保密性， 而是提供基于 http 的客户端身份验证。 使用此模式时应当小心。 它应在其中通过其他方式 （如 IPSec) 提供传输安全和 WCF 基础结构提供仅客户端身份验证的环境中使用。|  
   
 ### <a name="child-elements"></a>子元素  
   
@@ -78,5 +78,5 @@ ms.locfileid: "33355023"
  [选择凭据类型](../../../../../docs/framework/wcf/feature-details/selecting-a-credential-type.md)  
  [绑定](../../../../../docs/framework/wcf/bindings.md)  
  [配置系统提供的绑定](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [使用绑定来配置 Windows Communication Foundation 服务和客户端](http://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
+ [使用绑定来配置 Windows Communication Foundation 服务和客户端](https://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
  [\<绑定 >](../../../../../docs/framework/misc/binding.md)

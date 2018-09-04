@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 537d8a2c-d40b-4000-83eb-bc1fcc93f707
-ms.openlocfilehash: 320a45af1c2f3b460c23d8320c456120643902f7
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 7bb68a7d08d983e93119804db6c1f5a01cd047c9
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32759538"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43659384"
 ---
 # <a name="configuring-parameters-and-parameter-data-types"></a>配置参数和参数数据类型
 通过提供类型检查和验证，命令对象可使用参数来将值传递给 SQL 语句或存储过程。 与命令文本不同，参数输入被视为文本值，而不是可执行代码。 这样可帮助抵御“SQL 注入”攻击，这种攻击的攻击者会将命令插入 SQL 语句，从而危及服务器的安全。  
   
- 参数化命令还可提高查询执行性能，因为它们可帮助数据库服务器将传入命令与适当的缓存查询计划进行准确匹配。 有关详细信息，请参阅 SQL Server 联机丛书中的 [Execution Plan Caching and Reuse](http://go.microsoft.com/fwlink/?LinkId=120424) （执行计划的缓存和重用）和 [Parameters and Execution Plan Reuse](http://go.microsoft.com/fwlink/?LinkId=120423) （重用参数和执行计划）。 除具备安全和性能优势外，参数化命令还提供一种用于组织传递到数据源的值的便捷方法。  
+ 参数化命令还可提高查询执行性能，因为它们可帮助数据库服务器将传入命令与适当的缓存查询计划进行准确匹配。 有关详细信息，请参阅[执行计划的缓存和重用](/sql/relational-databases/query-processing-architecture-guide#execution-plan-caching-and-reuse)并[参数和执行计划重用](/sql/relational-databases/query-processing-architecture-guide#PlanReuse)。 除具备安全和性能优势外，参数化命令还提供一种用于组织传递到数据源的值的便捷方法。  
   
  <xref:System.Data.Common.DbParameter> 对象可以通过使用其构造函数来创建，或者也可以通过调用 <xref:System.Data.Common.DbCommand.DbParameterCollection%2A> 集合的 `Add` 方法以将该对象添加到 <xref:System.Data.Common.DbParameterCollection> 来创建。 `Add` 方法将构造函数实参或现有形参对象用作输入，具体取决于数据提供程序。  
   
@@ -56,7 +56,7 @@ ms.locfileid: "32759538"
 |<xref:System.Double>|Double|Float|Double|Double|Double|  
 |<xref:System.Single>|Single|Real|Single|Real|Float|  
 |<xref:System.Guid>|Guid|UniqueIdentifier|Guid|UniqueIdentifier|Raw|  
-|<xref:System.Int16 >|Int16|SmallInt|SmallInt|SmallInt|Int16|  
+|<xref:System.Int16>|Int16|SmallInt|SmallInt|SmallInt|Int16|  
 |<xref:System.Int32>|Int32|Int|Int|Int|Int32|  
 |<xref:System.Int64>|Int64|BigInt|BigInt|BigInt|数字|  
 |<xref:System.Object>|对象|变体|变体|不支持从 Object 推断 OdbcType。|Blob|  
@@ -79,7 +79,7 @@ ms.locfileid: "32759538"
 >  从小数转换到其他类型是缩窄转换，这种转换会将小数值舍入到最近的接近零的整数值。 如果无法以目标类型表示转换结果，则会引发 <xref:System.OverflowException> 。  
   
 > [!NOTE]
->  当你向服务器发送 null 参数值时，必须指定<xref:System.DBNull>，而不`null`(`Nothing`在 Visual Basic 中)。 系统中的 null 值是一个不具有任何值的空对象。 <xref:System.DBNull> 用于表示 null 值。 有关数据库 null 值的详细信息，请参阅 [Handling Null Values](../../../../docs/framework/data/adonet/sql/handling-null-values.md)。  
+>  当你向服务器发送 null 参数值时，则必须指定<xref:System.DBNull>，而非`null`(`Nothing`在 Visual Basic 中)。 系统中的 null 值是一个不具有任何值的空对象。 <xref:System.DBNull> 用于表示 null 值。 有关数据库 null 值的详细信息，请参阅 [Handling Null Values](../../../../docs/framework/data/adonet/sql/handling-null-values.md)。  
   
 ## <a name="deriving-parameter-information"></a>派生参数信息  
  还可以使用 `DbCommandBuilder` 类从存储过程派生参数。 `SqlCommandBuilder` 和 `OleDbCommandBuilder` 类都提供了静态方法 `DeriveParameters`，该静态方法将自动使用存储过程中的参数信息填充 Command 对象的 Parameters 集合。 请注意， `DeriveParameters` 会覆盖此命令的任何现有参数信息。  
@@ -93,7 +93,7 @@ ms.locfileid: "32759538"
  在数据驱动的应用程序中，存储过程具有许多优势。 通过利用存储过程，数据库操作可以包装在单个命令中，为获取最佳性能而进行优化并通过附加的安全性得到增强。 尽管可以通过在 SQL 语句中传递后接参数自变量的存储过程名称来调用相应的存储过程，但如果使用 <xref:System.Data.Common.DbCommand.Parameters%2A> [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 对象的 <xref:System.Data.Common.DbCommand> 集合，则可以让您更为明确地定义存储过程参数，并访问输出参数和返回值。  
   
 > [!NOTE]
->  参数化语句在服务器上通过使用 `sp_executesql,` 执行，sp_executesql 允许重复使用查询计划。 `sp_executesql` 批处理命令中的本地光标或变量对于调用 `sp_executesql`的批处理命令是不可见的。 数据库上下文中的更改只持续到 `sp_executesql` 语句的结尾。 有关更多信息，请参见 SQL Server 联机丛书。  
+> 参数化语句在服务器上通过使用 `sp_executesql,` 执行，sp_executesql 允许重复使用查询计划。 `sp_executesql` 批处理命令中的本地光标或变量对于调用 `sp_executesql`的批处理命令是不可见的。 数据库上下文中的更改只持续到 `sp_executesql` 语句的结尾。 有关详细信息，请参阅[sp_executesql (TRANSACT-SQL)](/sql/relational-databases/system-stored-procedures/sp-executesql-transact-sql)。
   
  对 <xref:System.Data.SqlClient.SqlCommand> 使用参数以执行 SQL Server 存储过程时，添加到 <xref:System.Data.SqlClient.SqlCommand.Parameters%2A> 集合中的参数的名称必须与存储过程中参数标记的名称相匹配。 用于 SQL Server 的 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 数据提供程序不支持使用问号 (?) 占位符向 SQL 语句或存储过程传递参数。 它将存储过程中的参数视为命名参数，并搜索匹配的参数标记。 例如，通过使用名为 `CustOrderHist` 的参数定义 `@CustomerID`存储过程。 您的代码在执行该存储过程时，它也必须使用名为 `@CustomerID`的参数。  
   
@@ -199,4 +199,4 @@ parameter.Direction = ParameterDirection.Output;
  [命令和参数](../../../../docs/framework/data/adonet/commands-and-parameters.md)  
  [DataAdapter 参数](../../../../docs/framework/data/adonet/dataadapter-parameters.md)  
  [ADO.NET 中的数据类型映射](../../../../docs/framework/data/adonet/data-type-mappings-in-ado-net.md)  
- [ADO.NET 托管提供程序和数据集开发人员中心](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)

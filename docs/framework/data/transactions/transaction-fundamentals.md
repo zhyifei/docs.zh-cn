@@ -2,17 +2,17 @@
 title: 事务基础知识
 ms.date: 03/30/2017
 ms.assetid: 353f4ee2-e6bf-4b1c-b1c8-385fc8a486c0
-ms.openlocfilehash: 1189556c74c45dc7475dd872c01c1ec5eaeba111
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 20bce37bb5d5aa1460570b1d39b54c2cb8a3362f
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33361500"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43555965"
 ---
 # <a name="transaction-fundamentals"></a>事务基础知识
 事务将多个任务绑定在一起。 例如，假设应用程序执行两个任务。 首先，它在数据库中创建一个新表。 然后，它调用一个专用对象，来收集数据、设置数据格式以及将数据插入新表中。 这两个任务是相关的，甚至是相互依赖的，以便只有在可以用数据填充表时才创建新表。 在单个事务范围内执行这两个任务时，会在它们之间强制建立连接。 如果第二个任务失败，则第一个任务会回滚到创建新表之前的点。  
   
- 若要确保发生可预测的行为，所有事务都必须具有基本的 ACID 属性（原子性、一致性、隔离性和持久性）。 这些属性可以确保关键任务事务能够做出全是或全非的主张。 有关 ACID 的详细信息，请参阅[ACID 属性](http://go.microsoft.com/fwlink/?LinkId=98791)。 总之，ACID 可保证一组相关任务作为一个整体成功或失败。 用事务处理术语来说，就是事务不是提交就是中止。 对于要提交的事务，所有参与者都必须保证对数据的任何更改都是永久的。 即使发生系统崩溃或其他不可预见的事件，更改也必须是永久的。 只要一个参与者无法做出这项保证，整个事务就会失败， 并且对事务范围内的数据的所有更改都会回滚到特定的设定点。  
+ 若要确保发生可预测的行为，所有事务都必须具有基本的 ACID 属性（原子性、一致性、隔离性和持久性）。 这些属性可以确保关键任务事务能够做出全是或全非的主张。 有关 ACID 的详细信息，请参阅[ACID 属性](https://go.microsoft.com/fwlink/?LinkId=98791)。 总之，ACID 可保证一组相关任务作为一个整体成功或失败。 用事务处理术语来说，就是事务不是提交就是中止。 对于要提交的事务，所有参与者都必须保证对数据的任何更改都是永久的。 即使发生系统崩溃或其他不可预见的事件，更改也必须是永久的。 只要一个参与者无法做出这项保证，整个事务就会失败， 并且对事务范围内的数据的所有更改都会回滚到特定的设定点。  
   
  事务操作可限定于单个数据资源，如数据库或消息队列。 在这种情况下，本地事务由 <xref:System.Transactions> 所提供的可提升性能的事务管理器管理。 当这些事务由数据资源控制时，它们具有高效性并易于管理。  
   
@@ -20,9 +20,9 @@ ms.locfileid: "33361500"
   
  在使用 <xref:System.Transactions> 所提供的类开发事务应用程序时，不必考虑需要使用哪种事务，也不必考虑所涉及的事务管理器。 <xref:System.Transactions> 基础结构会为您自动管理这些事宜。  
   
- 在创建事务时，可以指定应用于该事务的隔离级别。 通过定义的隔离级别<xref:System.Transactions.IsolationLevel>枚举，确定何种级别的其他事务都具有对数据受事务的访问。  
+ 在创建事务时，可以指定应用于该事务的隔离级别。 通过定义的隔离级别<xref:System.Transactions.IsolationLevel>枚举，确定的其他事务将具有对数据受到你的事务的访问级别。  
   
- 你可以创建使用 ADO.NET，事务<xref:System.EnterpriseServices>，或通过提供的事务编程模型<xref:System.Transactions>命名空间。 [功能由 System.Transactions](../../../../docs/framework/data/transactions/features-provided-by-system-transactions.md)主题讨论可用于编写事务应用程序使用的功能<xref:System.Transactions>命名空间。  
+ 您可以创建使用 ADO.NET，事务<xref:System.EnterpriseServices>，或提供的事务性编程模型<xref:System.Transactions>命名空间。 [由 System.Transactions 提供的功能](../../../../docs/framework/data/transactions/features-provided-by-system-transactions.md)主题讨论可用于编写事务应用程序使用的功能<xref:System.Transactions>命名空间。  
   
 ## <a name="see-also"></a>请参阅  
  [由 System.Transactions 提供的功能](../../../../docs/framework/data/transactions/features-provided-by-system-transactions.md)

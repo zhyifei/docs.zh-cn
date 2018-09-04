@@ -2,12 +2,12 @@
 title: 在 SQL Server 中对存储过程签名
 ms.date: 01/05/2018
 ms.assetid: eeed752c-0084-48e5-9dca-381353007a0d
-ms.openlocfilehash: 7ef43f403a300e58a27df2de1f980dc8bcc58c02
-ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
+ms.openlocfilehash: c24edd59992c246c33944e6693ff5ac69311886a
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43253639"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43555159"
 ---
 # <a name="signing-stored-procedures-in-sql-server"></a>在 SQL Server 中对存储过程签名
  数字签名是用签名人的私钥加密的数据摘要。 该私钥可确保数字签名对于其持有者或所有者是唯一的。 可以注册存储的过程、 （除内联表值函数） 的函数、 触发器和程序集。  
@@ -51,7 +51,7 @@ ms.locfileid: "43253639"
   
 |资源|描述|  
 |--------------|-----------------|  
-|[模块签名](http://go.microsoft.com/fwlink/?LinkId=98590)SQL Server 联机丛书中|说明模块签名，提供示例方案和到相关 Transact-SQL 主题的链接。|  
+|[模块签名](https://go.microsoft.com/fwlink/?LinkId=98590)SQL Server 联机丛书中|说明模块签名，提供示例方案和到相关 Transact-SQL 主题的链接。|  
 |[使用证书为存储的过程签名](/sql/relational-databases/tutorial-signing-stored-procedures-with-a-certificate)SQL Server 联机丛书中|提供有关使用证书为存储过程签名的教程。|  
   
 ## <a name="see-also"></a>请参阅  
@@ -62,4 +62,4 @@ ms.locfileid: "43253639"
  [在 SQL Server 中编写安全的动态 SQL](../../../../../docs/framework/data/adonet/sql/writing-secure-dynamic-sql-in-sql-server.md)  
  [在 SQL Server 中使用模拟自定义权限](../../../../../docs/framework/data/adonet/sql/customizing-permissions-with-impersonation-in-sql-server.md)  
  [使用存储过程修改数据](../../../../../docs/framework/data/adonet/modifying-data-with-stored-procedures.md)  
- [ADO.NET 托管提供程序和数据集开发人员中心](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)

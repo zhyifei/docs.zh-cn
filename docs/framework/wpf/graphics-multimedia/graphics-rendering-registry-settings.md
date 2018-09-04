@@ -8,12 +8,12 @@ helpviewer_keywords:
 - troubleshooting graphics rendering [WPF]
 - graphics [WPF], rendering
 ms.assetid: f4b41b42-327d-407c-b398-3ed5f505df8b
-ms.openlocfilehash: e12fccf7426ae130cd2aaf120eafb19ac3909659
-ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
+ms.openlocfilehash: acaa8f2ff6611f2f0beb07b74193341edfa2a428
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2018
-ms.locfileid: "42925750"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43561228"
 ---
 # <a name="graphics-rendering-registry-settings"></a>图形呈现注册表设置
 本主题概述了影响 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 应用程序的 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 图形呈现注册表设置。  
@@ -26,7 +26,7 @@ ms.locfileid: "42925750"
   
 <a name="xpdmandwddm"></a>   
 ## <a name="what-are-xpdm-and-wddm"></a>什么是 XPDM 和 WDDM？  
- 某些图形呈现注册表设置具有不同的默认值，具体取决于视频卡使用的是 XPDM 还是 WDDM 驱动程序。 XPDM 是 [!INCLUDE[TLA#tla_winxp](../../../../includes/tlasharptla-winxp-md.md)] 显示驱动程序模式，WDDM 是 Windows 显示驱动程序模型。 WDDM 适用于运行 [!INCLUDE[TLA2#tla_winvista](../../../../includes/tla2sharptla-winvista-md.md)] 和 [!INCLUDE[win7](../../../../includes/win7-md.md)] 的计算机。 WDDM 适用于运行 [!INCLUDE[TLA2#tla_winvista](../../../../includes/tla2sharptla-winvista-md.md)]、[!INCLUDE[TLA#tla_winxp](../../../../includes/tlasharptla-winxp-md.md)] 和 [!INCLUDE[TLA#tla_winnetsvrfam](../../../../includes/tlasharptla-winnetsvrfam-md.md)] 的计算机。 有关 WDDM 的详细信息，请参阅 [Windows Vista 显示驱动程序模式设计指南](http://go.microsoft.com/fwlink/?LinkId=178394)。  
+ 某些图形呈现注册表设置具有不同的默认值，具体取决于视频卡使用的是 XPDM 还是 WDDM 驱动程序。 XPDM 是 [!INCLUDE[TLA#tla_winxp](../../../../includes/tlasharptla-winxp-md.md)] 显示驱动程序模式，WDDM 是 Windows 显示驱动程序模型。 WDDM 适用于运行 [!INCLUDE[TLA2#tla_winvista](../../../../includes/tla2sharptla-winvista-md.md)] 和 [!INCLUDE[win7](../../../../includes/win7-md.md)] 的计算机。 WDDM 适用于运行 [!INCLUDE[TLA2#tla_winvista](../../../../includes/tla2sharptla-winvista-md.md)]、[!INCLUDE[TLA#tla_winxp](../../../../includes/tlasharptla-winxp-md.md)] 和 [!INCLUDE[TLA#tla_winnetsvrfam](../../../../includes/tlasharptla-winnetsvrfam-md.md)] 的计算机。 有关 WDDM 的详细信息，请参阅 [Windows Vista 显示驱动程序模式设计指南](https://go.microsoft.com/fwlink/?LinkId=178394)。  
   
 <a name="registry_settings"></a>   
 ## <a name="registry-settings"></a>注册表设置  

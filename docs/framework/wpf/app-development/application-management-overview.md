@@ -8,11 +8,11 @@ helpviewer_keywords:
 - application management [WPF]
 ms.assetid: 32b1c054-5aca-423b-b4b5-ed8dc4dc637d
 ms.openlocfilehash: ba8d07a26b7e6abc511e5b24db26162b46a2b0a1
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43406677"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43556647"
 ---
 # <a name="application-management-overview"></a>应用程序管理概述
 所有应用程序都可能会共享一组适用于实现和管理应用程序的常见功能。 本主题概述中的功能的<xref:System.Windows.Application>类用于创建和管理应用程序。  

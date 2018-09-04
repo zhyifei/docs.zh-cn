@@ -13,11 +13,11 @@ helpviewer_keywords:
 - events [WPF], tablet pen
 ms.assetid: 577835be-b145-4226-8570-1d309e9b3901
 ms.openlocfilehash: c351f3d6bf6dbaf94d865fd56e140c44edc20394
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43394654"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43555331"
 ---
 # <a name="the-ink-object-model-windows-forms-and-com-versus-wpf"></a>Ink 对象模型：Windows 窗体和 COM 与 WPF 之比较
 

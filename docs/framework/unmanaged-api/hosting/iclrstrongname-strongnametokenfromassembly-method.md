@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: aea9fb2bb9c4535e30a42ad956b04b3bb06a798a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 3dd083193fa8fed2abc8a1a498325f7edd89bc96
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33433983"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43657995"
 ---
 # <a name="iclrstrongnamestrongnametokenfromassembly-method"></a>ICLRStrongName::StrongNameTokenFromAssembly 方法
-从指定的程序集文件中创建强名称标记。  
+从指定的程序集文件创建强名称令牌。  
   
 ## <a name="syntax"></a>语法  
   
@@ -42,18 +42,18 @@ HRESULT StrongNameTokenFromAssembly (
  [in]程序集可移植可执行 (PE) 文件的路径。  
   
  `ppbStrongNameToken`  
- [out]返回强名称标记。  
+ [out]返回的强名称标记中。  
   
  `pcbStrongNameToken`  
- [out]以字节为单位，强名称标记的大小。  
+ [out]以字节为单位的强名称标记的大小。  
   
 ## <a name="return-value"></a>返回值  
- `S_OK` 如果成功，则完成的方法否则为该值指示失败的 HRESULT 值 (请参阅[常见的 HRESULT 值](http://go.microsoft.com/fwlink/?LinkId=213878)有关的列表)。  
+ `S_OK` 如果成功，则完成的方法否则为指示失败的 HRESULT 值 (请参阅[常见的 HRESULT 值](https://go.microsoft.com/fwlink/?LinkId=213878)列表)。  
   
 ## <a name="remarks"></a>备注  
- 强名称标记是公钥的缩写形式。 令牌是从用于对程序集进行签名的公钥创建一个 64 位哈希。 该令牌属于的强名称的程序集，且可从程序集元数据中读取。  
+ 强名称标记是简写形式的公共密钥。 令牌是通过使用程序集进行签名的公钥创建一个 64 位哈希。 该令牌是程序集的强名称的一部分，且可以从程序集元数据读取。  
   
- 创建令牌后，应调用[iclrstrongname:: Strongnamefreebuffer](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamefreebuffer-method.md)方法来释放分配的内存。  
+ 创建令牌后，应调用[iclrstrongname:: Strongnamefreebuffer](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamefreebuffer-method.md)方法，以释放已分配的内存。  
   
 ## <a name="requirements"></a>要求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
@@ -62,7 +62,7 @@ HRESULT StrongNameTokenFromAssembly (
   
  **库：** 作为 MSCorEE.dll 中的资源  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅  
  [StrongNameTokenFromAssemblyEx 方法](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnametokenfromassemblyex-method.md)  

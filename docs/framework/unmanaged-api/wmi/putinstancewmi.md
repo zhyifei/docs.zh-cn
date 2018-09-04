@@ -17,14 +17,14 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 67abf017040b9e6bbe9b10e560c8d57c124ae84e
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43397508"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43658959"
 ---
 # <a name="putinstancewmi-function"></a>PutInstanceWmi 函数
-创建或更新现有类的实例。 将实例写入到 WMI 存储库。 
+创建或更新现有类的实例。 将该实例写入 WMI 存储库。 
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
   

@@ -3,11 +3,11 @@ title: ODBC 数据类型映射
 ms.date: 03/30/2017
 ms.assetid: 43c35d32-831d-480f-a150-78f7e869d17f
 ms.openlocfilehash: ece9397e8c8e8b9d26f8aac2298aa25173ac2d93
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43397317"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43554665"
 ---
 # <a name="odbc-data-type-mappings"></a>ODBC 数据类型映射
 下表显示了针对适用于 ADO 的 .NET Framework 数据提供程序 ([!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]) 中的数据类型推断出的 <xref:System.Data.Odbc> 类型。 另外，还列出了 <xref:System.Data.Odbc.OdbcDataReader> 的类型化访问器方法。  

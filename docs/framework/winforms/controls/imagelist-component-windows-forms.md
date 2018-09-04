@@ -6,11 +6,11 @@ helpviewer_keywords:
 - image controls
 ms.assetid: 83b48634-782b-464d-9b7d-568dc6e0bef2
 ms.openlocfilehash: ce847507785b06874425e2efe678b86fc868507e
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43464916"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43563921"
 ---
 # <a name="imagelist-component-windows-forms"></a>ImageList 组件（Windows 窗体）
 Windows 窗体 `ImageList` 组件用于存储图像，此图像之后可由控件显示。 借助图像列表，你可为图像的单个一致目录编写代码。  

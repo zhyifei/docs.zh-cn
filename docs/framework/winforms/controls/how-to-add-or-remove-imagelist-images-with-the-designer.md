@@ -7,11 +7,11 @@ helpviewer_keywords:
 - images [Windows Forms], adding to ImageList component
 ms.assetid: 5699b244-e37c-4d20-bc35-7441e55c1e3a
 ms.openlocfilehash: cc85306c68baa4b4a0fe3418c511672d34790ae7
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43394723"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43553597"
 ---
 # <a name="how-to-add-or-remove-imagelist-images-with-the-designer"></a>如何：使用设计器添加或移除 ImageList 图像
 您可以将映像添加到<xref:System.Windows.Forms.ImageList>组件多种不同的方式。 您可以通过使用与关联的智能标记非常快速地添加图像<xref:System.Windows.Forms.ImageList>，或如果您在上设置多个其他属性<xref:System.Windows.Forms.ImageList>，可能会发现更方便地添加具有属性窗口的图像。 此外可以通过使用代码来添加映像。 有关如何通过代码添加图像的详细信息，请参阅[如何： 添加或删除映像使用 Windows 窗体 ImageList 组件](../../../../docs/framework/winforms/controls/how-to-add-or-remove-images-with-the-windows-forms-imagelist-component.md)。 通常填充<xref:System.Windows.Forms.ImageList>映像之前它是与控件相关联，但这不是必需组件。  

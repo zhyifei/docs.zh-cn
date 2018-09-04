@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 73d2980e-e73c-4987-913a-8ddc93d09144
 ms.openlocfilehash: 040ecd8a2ce223f89601de735b77ccc81638c7af
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43417077"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43563424"
 ---
 # <a name="schema-restrictions"></a>架构限制
 第二个可选参数**GetSchema**方法将返回用于限制架构信息的量的限制，并将它传递到**GetSchema**方法作为一个字符串数组. 在数组中的位置确定可以传递的值，这等效于限制数。  

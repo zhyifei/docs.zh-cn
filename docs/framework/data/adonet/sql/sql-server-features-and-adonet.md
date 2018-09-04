@@ -2,12 +2,12 @@
 title: SQL Server 功能和 ADO.NET
 ms.date: 03/30/2017
 ms.assetid: 2839529b-a79b-4450-be5d-07a98dbc7a0f
-ms.openlocfilehash: e19cec01cb749968b051541e78ee8c9af5cbb333
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2747af4ee2937f5b5d26217df5eb45c806606ac5
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33356562"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43658868"
 ---
 # <a name="sql-server-features-and-adonet"></a>SQL Server 功能和 ADO.NET
 本节中的主题讨论 SQL Server 中针对使用 ADO.NET 开发数据库应用程序的功能。  
@@ -16,7 +16,7 @@ ms.locfileid: "33356562"
   
  **SQL Server 联机丛书**  
   
-1.  [开发 （数据库引擎）](http://go.microsoft.com/fwlink/?LinkId=115245)  
+1.  [开发 （数据库引擎）](https://go.microsoft.com/fwlink/?LinkId=115245)  
   
 ## <a name="in-this-section"></a>本节内容  
  [枚举 SQL Server 的实例 (ADO.NET)](../../../../../docs/framework/data/adonet/sql/enumerating-instances-of-sql-server.md)  
@@ -51,4 +51,4 @@ ms.locfileid: "33356562"
  [在 ADO.NET 中检索和修改数据](../../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)  
  [LINQ to SQL](../../../../../docs/framework/data/adonet/sql/linq/index.md)  
  [SQL Server 和 ADO.NET](../../../../../docs/framework/data/adonet/sql/index.md)  
- [ADO.NET 托管提供程序和数据集开发人员中心](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)

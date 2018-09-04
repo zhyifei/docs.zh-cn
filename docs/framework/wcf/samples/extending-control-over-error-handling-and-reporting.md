@@ -3,11 +3,11 @@ title: 扩展对错误处理和错误报告的控制
 ms.date: 03/30/2017
 ms.assetid: 45f996a7-fa00-45cb-9d6f-b368f5778aaa
 ms.openlocfilehash: 6492807b55b50662790cf25807a35ddd65fbe01d
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43399899"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43557781"
 ---
 # <a name="extending-control-over-error-handling-and-reporting"></a>扩展对错误处理和错误报告的控制
 此示例演示如何对错误处理和 Windows Communication Foundation (WCF) 服务使用中的错误报告进行扩展控制<xref:System.ServiceModel.Dispatcher.IErrorHandler>接口。 该示例基于[Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md)与一些额外的代码添加到服务来处理错误。 客户端强制实施若干个错误条件。 服务将截获这些错误并将其记录到某个文件中。  

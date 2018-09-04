@@ -3,11 +3,11 @@ title: 安全 Overview2
 ms.date: 03/30/2017
 ms.assetid: 33e09965-61d5-48cc-9e8c-3b047cc4f194
 ms.openlocfilehash: 18a7496d39cd08e8b340e23c57fcd10dae5ed281
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43481726"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43557087"
 ---
 # <a name="security-overview"></a>安全性概述
 保护应用程序的安全是一个持续的过程。 因为不可能预知将来会出现哪种新的攻击技术，所以开发人员永远都不能保证某一应用程序可以免受所有的攻击。 仅因为还没有人发现（或发布）系统中的安全性缺陷，也不意味着不存在或可能不存在安全性缺陷。 在项目的设计阶段，您需要对安全性进行规划，并规划如何在应用程序生存期内维护其安全。  

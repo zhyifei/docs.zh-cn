@@ -10,11 +10,11 @@ helpviewer_keywords:
 - Control class [Windows Forms], Windows Forms
 ms.assetid: 86cbe435-45b7-4cb4-9b5a-47418369758d
 ms.openlocfilehash: 07a4de944e36b0be1a6196d08df33c4f3ab24bcc
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43387033"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43560127"
 ---
 # <a name="how-to-develop-a-simple-windows-forms-control"></a>如何：开发简单的 Windows 窗体控件
 本部分演示创建自定义 Windows 窗体控件的关键步骤。 在本演练中开发的简单控件允许的对齐方式及其<xref:System.Windows.Forms.Control.Text%2A>要更改属性。 它不会引发或处理事件。  

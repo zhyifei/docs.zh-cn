@@ -10,11 +10,11 @@ helpviewer_keywords:
 - child forms
 ms.assetid: 164b69bb-2eca-4339-ada3-0679eb2c6dda
 ms.openlocfilehash: bdfbe59ef779de242e32be11ca28c84f68437240
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43486787"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43658920"
 ---
 # <a name="how-to-create-mdi-child-forms"></a>如何：创建 MDI 子窗体
 MDI 子窗体是不可或缺的要素[多文档界面 (MDI) 应用程序](../../../../docs/framework/winforms/advanced/multiple-document-interface-mdi-applications.md)，因为这些窗体是用户交互的中心。  

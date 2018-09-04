@@ -17,15 +17,15 @@ helpviewer_keywords:
 - Windows Presentation Foundation [WPF], about security model
 - security model [WPF], operating system
 ms.assetid: 2a39a054-3e2a-4659-bcb7-8bcea490ba31
-ms.openlocfilehash: 805c152728f973750320f7ff2c9b2f2a3ce531f4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 905092cfdcbcbeb95fdfa689c09a847491595d9d
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33566673"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43560387"
 ---
 # <a name="wpf-security-strategy---platform-security"></a>WPF 安全策略 - 平台安全性
-尽管 Windows Presentation Foundation (WPF) 提供了各种安全服务，它还利用的安全功能的基础平台，包括操作系统， [!INCLUDE[TLA2#tla_clr](../../../includes/tla2sharptla-clr-md.md)]，和[!INCLUDE[TLA2#tla_ie](../../../includes/tla2sharptla-ie-md.md)]。 这些层组合在一起旨在提供 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 强大且深层防御的安全模型，尝试避免任何单点故障，如下图所示：  
+虽然 Windows Presentation Foundation (WPF) 提供了各种安全服务，它还利用基础平台 （包括操作系统） 的安全功能[!INCLUDE[TLA2#tla_clr](../../../includes/tla2sharptla-clr-md.md)]，和[!INCLUDE[TLA2#tla_ie](../../../includes/tla2sharptla-ie-md.md)]。 这些层组合在一起旨在提供 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 强大且深层防御的安全模型，尝试避免任何单点故障，如下图所示：  
   
  ![WPF 安全性图示](../../../docs/framework/wpf/media/windowplatformsecurity.PNG "windowplatformsecurity")  
   
@@ -35,11 +35,11 @@ ms.locfileid: "33566673"
   
 <a name="Operating_System_Security"></a>   
 ## <a name="operating-system-security"></a>操作系统安全  
- [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 要求的操作系统最低级别是 [!INCLUDE[TLA2#tla_winxpsp2](../../../includes/tla2sharptla-winxpsp2-md.md)]。 核心[!INCLUDE[TLA2#tla_winxpsp2](../../../includes/tla2sharptla-winxpsp2-md.md)]提供了一些安全功能，窗体中所有的 Windows 应用程序，包括那些使用生成的安全基础[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]。 [!INCLUDE[TLA#tla_longhorn](../../../includes/tlasharptla-longhorn-md.md)] 包含 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 的安全功能并对其进行了进一步扩展。 本主题详细介绍了对 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 至关重要的这些安全功能，以及 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 如何与这些功能集成从而提供深层防御方面的知识。  
+ [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 要求的操作系统最低级别是 [!INCLUDE[TLA2#tla_winxpsp2](../../../includes/tla2sharptla-winxpsp2-md.md)]。 核心[!INCLUDE[TLA2#tla_winxpsp2](../../../includes/tla2sharptla-winxpsp2-md.md)]提供了多个安全功能，构成所有 Windows 应用程序，包括那些使用生成的安全基础[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]。 [!INCLUDE[TLA#tla_longhorn](../../../includes/tlasharptla-longhorn-md.md)] 包含 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 的安全功能并对其进行了进一步扩展。 本主题详细介绍了对 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 至关重要的这些安全功能，以及 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 如何与这些功能集成从而提供深层防御方面的知识。  
   
 <a name="Microsoft_Windows_XP_Service_Pack_2__SP2_"></a>   
 ### <a name="microsoft-windows-xp-service-pack-2-sp2"></a>Microsoft Windows XP Service Pack 2 (SP2)  
- 除了常规评审和增强的 Windows，有三个主要功能从[!INCLUDE[TLA2#tla_winxpsp2](../../../includes/tla2sharptla-winxpsp2-md.md)]，本主题中，我们将讨论：  
+ 除了常规的评审和增强的 Windows，有三个主要功能[!INCLUDE[TLA2#tla_winxpsp2](../../../includes/tla2sharptla-winxpsp2-md.md)]，我们将讨论此主题中：  
   
 -   /GS 编译  
   
@@ -50,7 +50,7 @@ ms.locfileid: "33566673"
   
  以前，缓冲区溢出已导致出现了许多影响较大的安全漏洞。 当攻击者利用代码漏洞时就会发生缓冲区溢出，代码漏洞可让注入的恶意代码通过缓冲区边界写入。 从而让攻击者可以通过重写导致执行攻击者代码的函数返回地址执行代码进程。 结果，恶意代码可以执行具有截获进程相同特权的任意代码。  
   
- 在较高级别，/GS 编译器标志通过注入特殊安全 cookie 保护部分潜在缓冲区溢出，从而保护具有本地字符串缓冲区的函数返回地址。 函数返回后，安全 cookie 将与其上一个值进行比较。 如果值已更改，可能已发生缓冲区溢出，并且该进程已停止并显示错误条件。 停止的进程将阻止执行潜在的恶意代码。 请参阅[/GS （缓冲区安全检查）](http://msdn.microsoft.com/library/8dbf701c.aspx)有关详细信息。  
+ 在较高级别，/GS 编译器标志通过注入特殊安全 cookie 保护部分潜在缓冲区溢出，从而保护具有本地字符串缓冲区的函数返回地址。 函数返回后，安全 cookie 将与其上一个值进行比较。 如果值已更改，可能已发生缓冲区溢出，并且该进程已停止并显示错误条件。 停止的进程将阻止执行潜在的恶意代码。 请参阅[/GS （缓冲区安全检查）](https://msdn.microsoft.com/library/8dbf701c.aspx)的更多详细信息。  
   
  [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 已使用/GS 标志进行编译，旨在对 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 应用程序增加另一层防御。  
   
@@ -62,7 +62,7 @@ ms.locfileid: "33566673"
  [!INCLUDE[TLA#tla_longhorn](../../../includes/tlasharptla-longhorn-md.md)] 上的 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 用户将从操作系统其他的安全增强功能中受益，这些功能包括“Least-Privilege User Access(最小特权用户访问)”、代码完整性检查以及特权隔离。  
   
 #### <a name="user-account-control-uac"></a>用户帐户控制 (UAC)  
- 如今，Windows 用户往往因为许多应用程序需要它们才能安装和/或执行，使用管理员特权运行。 其中一个示例就是，可以将默认应用程序设置写入到注册表。  
+ 目前，Windows 用户往往会因为许多应用程序需要它们的安装和/或执行，使用管理员特权运行。 其中一个示例就是，可以将默认应用程序设置写入到注册表。  
   
  使用管理员特权运行实际上就是指应用程序从授予管理员特权的进程执行。 此方法的安全影响在于，可截获使用管理员特权运行的进程的任何恶意代码都将自动继承这些特权，包括对关键系统资源的访问权限。  
   
@@ -88,7 +88,7 @@ ms.locfileid: "33566673"
 #### <a name="defense-in-depth-layer"></a>深层防御层  
  由于 [!INCLUDE[TLA#tla_winfxwebapp#plural](../../../includes/tlasharptla-winfxwebappsharpplural-md.md)] 通常都是通过 Internet 区域权限集设置的沙盒，因此，删除这些权限不会损害 [!INCLUDE[TLA#tla_winfxwebapp#plural](../../../includes/tlasharptla-winfxwebappsharpplural-md.md)] 的兼容性。 反而会创建一个附加的深层防御层；如果经过沙箱处理的应用程序能够利用其他层截获此进程，该进程将仍然只有有限特权。  
   
- 请参阅[使用最少特权用户帐户](http://technet.microsoft.com/library/cc700846.aspx)。  
+ 请参阅[使用最低权限用户帐户](https://technet.microsoft.com/library/cc700846.aspx)。  
   
 <a name="Common_Language_Runtime_Security"></a>   
 ## <a name="common-language-runtime-security"></a>公共语言运行时的安全性  
@@ -98,7 +98,7 @@ ms.locfileid: "33566673"
 ### <a name="validation-and-verification"></a>确认和验证  
  为了提供程序集隔离和完整性，[!INCLUDE[TLA2#tla_clr](../../../includes/tla2sharptla-clr-md.md)] 将使用验证过程。 [!INCLUDE[TLA2#tla_clr](../../../includes/tla2sharptla-clr-md.md)] 验证可确保程序集通过以下方式进行隔离：即通过验证其指向程序集外部地址的可移植可执行 (PE) 文件的格式。 [!INCLUDE[TLA2#tla_clr](../../../includes/tla2sharptla-clr-md.md)] 验证还可以验证内嵌在程序集中的元数据的完整性。  
   
- 若要确保类型安全，帮助防止常见安全问题 （例如缓冲区溢出），并启用通过子进程隔离的沙盒处理[!INCLUDE[TLA2#tla_clr](../../../includes/tla2sharptla-clr-md.md)]安全性使用验证的概念。  
+ 若要确保类型安全，有助于防止常见安全问题 （例如缓冲区溢出） 和通过子进程隔离启用沙盒机制[!INCLUDE[TLA2#tla_clr](../../../includes/tla2sharptla-clr-md.md)]安全使用了验证概念。  
   
  托管应用程序被编译为 Microsoft 中间语言 (MSIL)。 当执行托管应用程序中的方法时，将采用实时 (JIT) 编译方式把 MSIL 编译为本机代码。 JIT 编译包括的验证过程将应用许多众多安全和可靠规则，从而确保代码不会：  
   
@@ -110,11 +110,11 @@ ms.locfileid: "33566673"
   
  不允许不符合验证规则的托管代码执行，除非它被视为受信任代码。  
   
- 可验证代码的优点是关键原因为何[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]在.NET Framework 上生成。 从使用验证代码而言，利用潜在漏洞的可能性明显降低。  
+ 可验证代码的优点是关键原因为何[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]基于.NET Framework。 从使用验证代码而言，利用潜在漏洞的可能性明显降低。  
   
 <a name="Code_Access_Security"></a>   
 ### <a name="code-access-security"></a>代码访问安全性  
- 客户端计算机公开了托管应用程序可以访问的各种资源，包括文件系统、注册表、打印服务、用户界面、反射和环境变量。 托管的应用程序可以访问任何客户端计算机上的资源之前，它必须具有.NET Framework 权这样做。 [!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)] 中的权限是 <xref:System.Security.CodeAccessPermission> 的子类；[!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)] 可实现托管应用程序可以访问的各个资源的其中一个子类。  
+ 客户端计算机公开了托管应用程序可以访问的各种资源，包括文件系统、注册表、打印服务、用户界面、反射和环境变量。 托管应用程序可以访问任何客户端计算机上的资源之前，它必须具有.NET Framework 权限来执行此操作。 [!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)] 中的权限是 <xref:System.Security.CodeAccessPermission> 的子类；[!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)] 可实现托管应用程序可以访问的各个资源的其中一个子类。  
   
  [!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)] 开始执行时授予托管应用程序的权限集称为一个权限集，由应用程序提供的证据确定。 对于 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 应用程序，提供的证据为从中启动应用程序的位置或区域。 [!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)] 可以标识以下区域：  
   
@@ -136,7 +136,7 @@ ms.locfileid: "33566673"
   
 -   **Internet**。 对于从启动应用程序**Internet**或**受信任的站点**区域。 将授予权限的子集，以提供对客户端计算机资源有限的访问权限，包括隔离存储、仅限打开文件和有限的用户界面。 从根本上来说，此权限集将隔离客户端计算机中的应用程序。  
   
- 应用程序识别为从**不受信任站点**区域会授予任何权限通过[!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)]根本。 因此，对它们而言，就不存在预定义的权限集。  
+ 应用程序标识为来自**不受信任的站点**区域会授予任何权限通过[!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)]根本。 因此，对它们而言，就不存在预定义的权限集。  
   
  下图说明了区域、权限集、权限和资源之间的关系。  
   
@@ -163,28 +163,28 @@ ms.locfileid: "33566673"
   
  这就要求 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 接收提升的特权，同时阻止这些特权由宿主应用程序域的 Internet 区域权限集管理。  
   
- [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 通过使用这一点**断言**权限的方法。 以下代码演示了这种方法。  
+ [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 通过使用实现这**Assert**权限的方法。 以下代码演示了这种方法。  
   
  [!code-csharp[WPFPlatformSecuritySnippets#Permission](../../../samples/snippets/csharp/VS_Snippets_Wpf/WPFPlatformSecuritySnippets/CSharp/Page1.xaml.cs#permission)]
  [!code-vb[WPFPlatformSecuritySnippets#Permission](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WPFPlatformSecuritySnippets/VisualBasic/Page1.xaml.vb#permission)]  
   
- **断言**实质上是阻止所需的不受限制的权限[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]从正在受 Internet 区域权限[!INCLUDE[TLA2#tla_winfxwebapp](../../../includes/tla2sharptla-winfxwebapp-md.md)]。  
+ **Assert**实质上是阻止所需的不受限制的权限[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]不会限制通过 Internet 区域权限[!INCLUDE[TLA2#tla_winfxwebapp](../../../includes/tla2sharptla-winfxwebapp-md.md)]。  
   
- 从平台的角度，[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]负责使用**断言**使用的正确; 错误**断言**可能会导致恶意代码特权提升。 因此，很重要，应仅调用**断言**需要时，并且以确保该沙盒限制将保留不变。 例如，禁止沙盒代码打开任意文件，但允许其使用字体。 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 使沙盒应用程序可以通过调用使用字体功能**断言**，和[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]读取已知代表与沙盒应用程序中包含这些字体的文件。  
+ 从平台角度看，[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]负责使用**Assert**正确; 错误使用**Assert**可能启用恶意代码提升特权。 因此，很重要，应仅调用**Assert**需要时，可确保沙盒限制保持不变。 例如，禁止沙盒代码打开任意文件，但允许其使用字体。 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 允许沙盒应用程序使用字体功能，通过调用**Assert**，并为[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]读取已知包含这些字体代表沙盒应用程序文件。  
   
 <a name="ClickOnce_Deployment"></a>   
 ### <a name="clickonce-deployment"></a>ClickOnce 部署  
- [!INCLUDE[TLA#tla_clickonce](../../../includes/tlasharptla-clickonce-md.md)] 是全面的部署技术，其包含在.NET Framework 中，并与集成[!INCLUDE[TLA#tla_visualstu](../../../includes/tlasharptla-visualstu-md.md)](请参阅[ClickOnce 部署概述](http://msdn.microsoft.com/library/142dbbz4.aspx)有关详细信息)。 独立的 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 应用程序可以使用 [!INCLUDE[TLA#tla_clickonce](../../../includes/tlasharptla-clickonce-md.md)] 进行部署，但浏览器承载的应用程序必须使用 [!INCLUDE[TLA2#tla_clickonce](../../../includes/tla2sharptla-clickonce-md.md)] 进行部署。  
+ [!INCLUDE[TLA#tla_clickonce](../../../includes/tlasharptla-clickonce-md.md)] 是一种全面的部署技术，包含在.NET Framework 中，并与集成[!INCLUDE[TLA#tla_visualstu](../../../includes/tlasharptla-visualstu-md.md)](请参阅[ClickOnce 部署概述](https://msdn.microsoft.com/library/142dbbz4.aspx)的详细信息)。 独立的 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 应用程序可以使用 [!INCLUDE[TLA#tla_clickonce](../../../includes/tlasharptla-clickonce-md.md)] 进行部署，但浏览器承载的应用程序必须使用 [!INCLUDE[TLA2#tla_clickonce](../../../includes/tla2sharptla-clickonce-md.md)] 进行部署。  
   
  使用 [!INCLUDE[TLA2#tla_clickonce](../../../includes/tla2sharptla-clickonce-md.md)] 部署的应用程序具有高于 [!INCLUDE[TLA#tla_cas](../../../includes/tlasharptla-cas-md.md)] 的额外安全层；实质上，[!INCLUDE[TLA#tla_clickonce](../../../includes/tlasharptla-clickonce-md.md)] 部署的应用程序会请求所需的权限。 如果它们不超过在其中部署应用程序的区域的权限集，几乎仅授予它们这些权限。 通过将权限集减少至仅限于所需的权限集，即使它们小于通过启动区域权限集提供的那些权限集，应用程序可以访问的资源数也会减少至最低限度。 因此，如果截获到应用程序，将可以降低对客户端计算机的潜在损坏几率。  
   
 <a name="Security_Critical_Methodology"></a>   
 ### <a name="security-critical-methodology"></a>安全-关键方法  
- [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 代码可以使用权限启动 [!INCLUDE[TLA2#tla_winfxwebapp](../../../includes/tla2sharptla-winfxwebapp-md.md)] 应用程序的 Internet 区域沙盒，因此，必须将该代码保留到安全程度最高的审计和控制中。 为了便于此要求，.NET Framework 时，可提供新的支持用于管理提升特权的代码。 具体而言，[!INCLUDE[TLA2#tla_clr](../../../includes/tla2sharptla-clr-md.md)]使您能够确定提升特权的代码并将其与标记<xref:System.Security.SecurityCriticalAttribute>; 的任何代码未用标记<xref:System.Security.SecurityCriticalAttribute>变得*透明*使用此方法。 反之，禁止未标有 <xref:System.Security.SecurityCriticalAttribute> 的托管代码提升特权。  
+ [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 代码可以使用权限启动 [!INCLUDE[TLA2#tla_winfxwebapp](../../../includes/tla2sharptla-winfxwebapp-md.md)] 应用程序的 Internet 区域沙盒，因此，必须将该代码保留到安全程度最高的审计和控制中。 若要实现此要求，.NET Framework 可提升特权的托管代码提供新的支持。 具体而言，[!INCLUDE[TLA2#tla_clr](../../../includes/tla2sharptla-clr-md.md)]使您能够识别提升特权的代码并将其与标记<xref:System.Security.SecurityCriticalAttribute>; 的任何代码未标有<xref:System.Security.SecurityCriticalAttribute>变得*透明*使用此方法。 反之，禁止未标有 <xref:System.Security.SecurityCriticalAttribute> 的托管代码提升特权。  
   
- 安全关键的方法，可以的组织[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]提升到特权的代码*安全关键的内核*，而正在透明的其余部分。 隔离安全关键代码使[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]工程团队专注超越标准安全做法安全关键的内核上的其他安全分析和源控件 (请参阅[WPF 安全策略安全工程](../../../docs/framework/wpf/wpf-security-strategy-security-engineering.md))。  
+ 安全关键方法允许的组织[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]提升到特权的代码*安全-关键核心*，使剩余部分透明。 隔离安全关键代码可使[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]工程团队关注高于标准安全实践的安全关键内核上的其他安全分析和源控件 (请参阅[WPF 安全策略-安全工程](../../../docs/framework/wpf/wpf-security-strategy-security-engineering.md))。  
   
- 请注意，.NET Framework 允许受信任的代码以扩展[!INCLUDE[TLA2#tla_winfxwebapp](../../../includes/tla2sharptla-winfxwebapp-md.md)]通过允许开发人员编写使用标记的托管程序集的 Internet 区域沙盒<xref:System.Security.AllowPartiallyTrustedCallersAttribute>(APTCA) 并部署到用户的全局程序集缓存 (GAC)。 将程序集标记为 APTCA 是高度敏感的安全操作，因为它允许任何代码调用该程序集，包括来自 Internet 的恶意代码。 执行此操作时，要特别注意并且必须采用最佳做法，用户必须选择信任该软件才能完成安装。  
+ 请注意.NET Framework 允许受信任的代码来扩展[!INCLUDE[TLA2#tla_winfxwebapp](../../../includes/tla2sharptla-winfxwebapp-md.md)]Internet 区域沙盒： 允许开发人员编写标记为的托管程序集<xref:System.Security.AllowPartiallyTrustedCallersAttribute>(APTCA) 并部署到用户的全局程序集缓存 (GAC)。 将程序集标记为 APTCA 是高度敏感的安全操作，因为它允许任何代码调用该程序集，包括来自 Internet 的恶意代码。 执行此操作时，要特别注意并且必须采用最佳做法，用户必须选择信任该软件才能完成安装。  
   
 <a name="Microsoft_Internet_Explorer_Security"></a>   
 ## <a name="microsoft-internet-explorer-security"></a>Microsoft Internet Explorer 安全  
@@ -200,19 +200,19 @@ ms.locfileid: "33566673"
   
  在某些情况下，不受信任的网站将尝试通过诱导 [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] 安装或反复显示 [!INCLUDE[TLA#tla_actx](../../../includes/tlasharptla-actx-md.md)] 安装对话框（即使用户可能已取消）攻击用户。 使用这些技术，有可能会有相当多的用户上当受骗，从而导致安装间谍软件应用程序。  
   
- [!INCLUDE[TLA2#tla_ie6sp2](../../../includes/tla2sharptla-ie6sp2-md.md)] 包括用于缓解围绕用户启动这些问题类型的多个功能。 [!INCLUDE[TLA2#tla_ie6sp2](../../../includes/tla2sharptla-ie6sp2-md.md)] 检测何时用户单击链接或页面元素之前的操作，这被称为*用户启动*，并会将其不同于与上一个页面的脚本其他情况下触发类似的操作时。 例如，[!INCLUDE[TLA2#tla_ie6sp2](../../../includes/tla2sharptla-ie6sp2-md.md)]包含**弹出窗口阻止程序**用于检测当用户单击之前创建一个弹出窗口的页面的按钮。 此程序可使 [!INCLUDE[TLA2#tla_ie6sp2](../../../includes/tla2sharptla-ie6sp2-md.md)] 允许大多数没有威胁的弹出窗口，同时阻止用户既没有要求也不需要的弹出窗口。 已阻止弹出窗口下新捕获**信息栏**，这样，用户可以手动重写阻止并查看弹出窗口。  
+ [!INCLUDE[TLA2#tla_ie6sp2](../../../includes/tla2sharptla-ie6sp2-md.md)] 包括用于缓解围绕用户启动这些问题类型的多个功能。 [!INCLUDE[TLA2#tla_ie6sp2](../../../includes/tla2sharptla-ie6sp2-md.md)] 当用户单击链接或页面元素之前的操作，这被称为上检测到*用户启动*，并将其与上一个页面的脚本在其他情况下触发类似操作时以不同方式。 例如，[!INCLUDE[TLA2#tla_ie6sp2](../../../includes/tla2sharptla-ie6sp2-md.md)]合并**弹出窗口阻止程序**，用于检测在用户单击按钮之前页面创建弹出窗口时。 此程序可使 [!INCLUDE[TLA2#tla_ie6sp2](../../../includes/tla2sharptla-ie6sp2-md.md)] 允许大多数没有威胁的弹出窗口，同时阻止用户既没有要求也不需要的弹出窗口。 阻止的弹出窗口被截获放在新**信息栏**，它允许用户在手动重写块和查看弹出窗口。  
   
- 相同的用户启动逻辑也适用于**打开**/**保存**安全提示。 [!INCLUDE[TLA2#tla_actx](../../../includes/tla2sharptla-actx-md.md)] 安装对话框始终显示在“信息栏”中，除非它们表示从以前安装的控件进行升级。 这些度量值组合在一起，可提供用户更安全、更可控的用户体验，因为诱导他们安装不需要的软件或恶意软件的站点受到了保护。  
+ 相同的用户启动逻辑也适用于**开放**/**保存**安全提示。 [!INCLUDE[TLA2#tla_actx](../../../includes/tla2sharptla-actx-md.md)] 安装对话框始终显示在“信息栏”中，除非它们表示从以前安装的控件进行升级。 这些度量值组合在一起，可提供用户更安全、更可控的用户体验，因为诱导他们安装不需要的软件或恶意软件的站点受到了保护。  
   
  这些功能还可以对使用 [!INCLUDE[TLA2#tla_ie6sp2](../../../includes/tla2sharptla-ie6sp2-md.md)] 浏览网站（允许他们下载和安装 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 应用程序）的用户提供保护。 特别是，这是因为 [!INCLUDE[TLA2#tla_ie6sp2](../../../includes/tla2sharptla-ie6sp2-md.md)] 提供的用户体验更好，降低了安装恶意或“狡猾”的应用程序的几率，而不考虑用于构建它的技术类型，包括 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]。 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 通过使用 [!INCLUDE[TLA#tla_clickonce](../../../includes/tlasharptla-clickonce-md.md)] 进一步增强这些保护，以便通过 Internet 下载其应用程序。 由于 [!INCLUDE[TLA#tla_winfxwebapp#plural](../../../includes/tlasharptla-winfxwebappsharpplural-md.md)] 是在 Internet 区域安全沙盒内执行，因此可以无缝地启动它们。 另一方面，独立的 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 应用程序需要完全信任才能执行。 对于这些应用程序，[!INCLUDE[TLA#tla_clickonce](../../../includes/tlasharptla-clickonce-md.md)] 将在启动过程示安全对话框，以通知使用应用程序的其他安全要求。 但是，必须由用户启动，必须由用户启动的逻辑进行管理并且可以取消。  
   
  [!INCLUDE[TLA2#tla_ie7](../../../includes/tla2sharptla-ie7-md.md)]包含并扩展了作为持续提供安全承诺一部分的 [!INCLUDE[TLA2#tla_ie6sp2](../../../includes/tla2sharptla-ie6sp2-md.md)] 的安全功能。  
   
 ## <a name="see-also"></a>请参阅  
- [了解在 Windows XP SP2 的 Microsoft Internet Explorer 6 中的安全性](http://www.microsoft.com/downloads/details.aspx?FamilyId=E550F940-37A0-4541-B5E2-704AB386C3ED&displaylang=en)  
- [了解和使用受保护的模式 Internet 资源管理器](http://msdn.microsoft.com/library/bb250462.aspx)  
- [Windows XP Service Pack 3](http://www.microsoft.com/windows/products/windowsxp/sp3/default.mspx)  
- [Windows Vista 安全指南](http://www.microsoft.com/downloads/details.aspx?familyid=a3d1bbed-7f35-4e72-bfb5-b84a526c1565&displaylang=en)  
+ [了解 Windows XP SP2 中的 Microsoft Internet Explorer 6 中的安全性](https://www.microsoft.com/downloads/details.aspx?FamilyId=E550F940-37A0-4541-B5E2-704AB386C3ED&displaylang=en)  
+ [Understanding and Working in Protected 的 Mode Internet Explorer](https://msdn.microsoft.com/library/bb250462.aspx)  
+ [Windows XP Service Pack 3](https://www.microsoft.com/windows/products/windowsxp/sp3/default.mspx)  
+ [Windows Vista 安全指南](https://www.microsoft.com/downloads/details.aspx?familyid=a3d1bbed-7f35-4e72-bfb5-b84a526c1565&displaylang=en)  
  [代码访问安全性](../../../docs/framework/misc/code-access-security.md)  
  [安全性](../../../docs/framework/wpf/security-wpf.md)  
  [WPF 部分信任安全](../../../docs/framework/wpf/wpf-partial-trust-security.md)  

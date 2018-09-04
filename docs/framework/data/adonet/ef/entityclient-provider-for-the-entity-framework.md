@@ -3,11 +3,11 @@ title: 用于实体框架的 EntityClient 提供程序
 ms.date: 03/30/2017
 ms.assetid: 8c5db787-78e6-4a34-8dc1-188bca0aca5e
 ms.openlocfilehash: 1bafdc250c7edc009352d668e8ee7962a86fe8bf
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43395086"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43553284"
 ---
 # <a name="entityclient-provider-for-the-entity-framework"></a>用于实体框架的 EntityClient 提供程序
 EntityClient 提供程序是一种数据提供程序，实体框架应用程序使用该提供程序访问在概念模型中描述的数据。 有关概念模型的信息，请参阅[建模和映射](../../../../../docs/framework/data/adonet/ef/modeling-and-mapping.md)。 EntityClient 使用其他 .NET Framework 数据提供程序访问数据源。 例如，EntityClient 在访问 SQL Server 数据库时使用 SQL Server .NET Framework 数据提供程序 (SqlClient)。 有关 SqlClient 提供程序的信息，请参阅[用于实体框架的 SqlClient](../../../../../docs/framework/data/adonet/ef/sqlclient-for-the-entity-framework.md)。 EntityClient 提供程序是在 <xref:System.Data.EntityClient> 命名空间中实现的。  

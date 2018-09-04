@@ -2,15 +2,15 @@
 title: 基本的只包含 XAML 的服务
 ms.date: 03/30/2017
 ms.assetid: c106feb0-0245-43b5-aefe-93ce0e4d38eb
-ms.openlocfilehash: aa6b6ec6930ac90fe95b1cdfcd4cb027de8e5902
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f4f296a97b9c3093874c5ec8e05023e84b0af44a
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33517194"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43556464"
 ---
 # <a name="basic-xaml-only-service"></a>基本的只包含 XAML 的服务
-此示例演示如何创建只包含 XAML 服务。 此方案是一个用于解决车辆相关故障的诊断服务。 此服务作为一个工作流实现，它会向客户端询问一系列问题来诊断故障。 此服务可诊断两种类型的故障（车辆无法启动或空调无法工作）。 工作流使用设计器中的请求/答复模板来公开三个简单的服务操作。 通过在 IIS 中创建虚拟目录以及将 service1.xamlx 和 Web.config 文件复制到虚拟目录中，在 IIS 中承载服务，而无需编译的代码。 默认情况下此示例将自动将所需的文件复制到当你按照的 WCF 和 WF 示例的设置说明创建的虚拟目录：[的 Windows Communication Foundation 示例的一次性安装过程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)生成 Visual Studio 2010 中时。  
+此示例演示如何创建只包含 XAML 服务。 此方案是一个用于解决车辆相关故障的诊断服务。 此服务作为一个工作流实现，它会向客户端询问一系列问题来诊断故障。 此服务可诊断两种类型的故障（车辆无法启动或空调无法工作）。 工作流使用设计器中的请求/答复模板来公开三个简单的服务操作。 通过在 IIS 中创建虚拟目录以及将 service1.xamlx 和 Web.config 文件复制到虚拟目录中，在 IIS 中承载服务，而无需编译的代码。 默认情况下此示例将自动将所需的文件复制到虚拟目录创建时遵循的 WCF 和 WF 示例的安装说明： [WindowsCommunicationFoundation示例的一次性安装过程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md) Visual Studio 2010 中生成时。  
   
 #### <a name="to-use-this-sample"></a>使用此示例  
   
@@ -27,6 +27,6 @@ ms.locfileid: "33517194"
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目录不存在，请转到[Windows Communication Foundation (WCF) 和针对.NET Framework 4 的 Windows Workflow Foundation (WF) 示例](http://go.microsoft.com/fwlink/?LinkId=150780)下载所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
+>  如果此目录不存在，请转到[Windows Communication Foundation (WCF) 和.NET Framework 4 的 Windows Workflow Foundation (WF) 示例](https://go.microsoft.com/fwlink/?LinkId=150780)若要下载所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Services\XAMLService`

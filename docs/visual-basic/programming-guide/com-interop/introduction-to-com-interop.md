@@ -6,11 +6,11 @@ helpviewer_keywords:
 - COM interop [Visual Basic], about COM interop
 ms.assetid: 8bd62e68-383d-407f-998b-29aa0ce0fd67
 ms.openlocfilehash: ecd514231c36cf3b65b1f0dd05f26d05f3c9c88d
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43389739"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43561472"
 ---
 # <a name="introduction-to-com-interop-visual-basic"></a>COM 互操作介绍 (Visual Basic)
 组件对象模型 (COM) 允许到其他组件和主机应用程序公开其功能的对象。 虽然 COM 对象的基础 Windows 编程的许多年来，应用程序面向公共语言运行时 (CLR) 提供了许多优点。  

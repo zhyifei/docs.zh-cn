@@ -3,11 +3,11 @@ title: SQL Server 二进制和大值数据
 ms.date: 03/30/2017
 ms.assetid: e00827b3-7511-4b2d-91d7-851ca86cc6b5
 ms.openlocfilehash: 9ebbe23dfbcac7825ce449dd40f62b921d13ab4a
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43466193"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43564878"
 ---
 # <a name="sql-server-binary-and-large-value-data"></a>SQL Server 二进制和大值数据
 SQL Server 提供 `max` 说明符，它可扩展 `varchar`、`nvarchar` 和 `varbinary` 数据类型的存储容量。 `varchar(max)``nvarchar(max)`，并`varbinary(max)`统称为*大型值数据类型*。 您可以使用大值数据类型来存储最大为 2^31-1 个字节的数据。  

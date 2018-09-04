@@ -5,11 +5,11 @@ f1_keywords:
 - vbrNetwork_NetworkNotAvailable
 ms.assetid: 8d2bac12-bc6a-42ae-b28b-80b026dfabce
 ms.openlocfilehash: f8659c1ef21dc61680d5de37f9de2b37732b06f9
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43487002"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43555059"
 ---
 # <a name="unable-to-ping-because-a-network-connection-is-not-available"></a>由于网络连接不可用，无法使用 ping 命令
 无法执行此操作，因为网络连接不可用。  

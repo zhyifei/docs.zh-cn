@@ -2,16 +2,17 @@
 title: 在 While 活动中模拟中断
 ms.date: 03/30/2017
 ms.assetid: ddff715d-d623-4b54-b841-60bacbc3ca21
-ms.openlocfilehash: 37c64c2b8dc03d58f9c2802edef644fe4888e87d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4938e07364609520f6528688877bce112be26d3f
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43560420"
 ---
 # <a name="emulating-breaking-in-a-while-activity"></a>在 While 活动中模拟中断
 此示例演示如何中断下列活动的循环机制：<xref:System.Activities.Statements.DoWhile>、<xref:System.Activities.Statements.ForEach%601>、<xref:System.Activities.Statements.While> 和 <xref:System.Activities.Statements.ParallelForEach%601>。  
   
- 这很有用，因为 Windows Workflow Foundation (WF) 不包括任何可中断这些循环的执行的活动。  
+ 因为 Windows Workflow Foundation (WF) 中不包含任何活动中断这些循环的执行，这很有用。  
   
 ## <a name="scenario"></a>方案  
  此示例从供应商列表（`Vendor` 类的实例）中查找第一个可靠的供应商。 每个供应商都具有一个 `ID`、一个 `Name` 和一个用于确定供应商的可靠程度的可靠性值。 此示例创建一个名为 `FindReliableVendor` 的自定义活动，该活动接收两个输入参数（一个供应商列表和一个最小可靠值），然后返回列表中符合提供的条件的第一个供应商。  
@@ -76,6 +77,6 @@ new While(env => i.Get(env) < this.Vendors.Get(env).Count && reliableVendor.Get(
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目录不存在，请转到[Windows Communication Foundation (WCF) 和针对.NET Framework 4 的 Windows Workflow Foundation (WF) 示例](http://go.microsoft.com/fwlink/?LinkId=150780)下载所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
+>  如果此目录不存在，请转到[Windows Communication Foundation (WCF) 和.NET Framework 4 的 Windows Workflow Foundation (WF) 示例](https://go.microsoft.com/fwlink/?LinkId=150780)若要下载所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Built-InActivities\EmulatingBreakInWhile`

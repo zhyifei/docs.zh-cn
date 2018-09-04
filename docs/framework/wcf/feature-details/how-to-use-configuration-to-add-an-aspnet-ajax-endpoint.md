@@ -3,11 +3,11 @@ title: 如何：使用配置来添加 ASP.NET AJAX 终结点
 ms.date: 03/30/2017
 ms.assetid: 7cd0099e-dc3a-47e4-a38c-6e10f997f6ea
 ms.openlocfilehash: 3a3474dc04ce2cda63157e68597d1184e9b2bf15
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42934402"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43559946"
 ---
 # <a name="how-to-use-configuration-to-add-an-aspnet-ajax-endpoint"></a>如何：使用配置来添加 ASP.NET AJAX 终结点
 Windows Communication Foundation (WCF)，可创建可支持 ASP.NET AJAX 的终结点可用，可从调用 JavaScript 客户端 Web 站点上的服务。 若要创建这样的终结点，可以使用配置文件，因为与所有其他 Windows Communication Foundation (WCF) 终结点，或使用不需要任何配置元素的方法。 本主题演示配置方法。  

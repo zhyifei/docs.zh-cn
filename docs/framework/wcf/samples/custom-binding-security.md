@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: a6383dff-4308-46d2-bc6d-acd4e18b4b8d
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: 2a0d716c3689b506ad29d99f006f1a4bb7c53a3a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 61e8be6f7f621340a684bff69ec5c9d64ab36c61
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33507024"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43565185"
 ---
 # <a name="custom-binding-security"></a>自定义绑定安全性
 本示例演示如何使用自定义绑定配置安全性。 并演示如何使用自定义绑定实现消息级安全性和安全传输。 如果在客户端和服务之间传输消息时需要进行安全的传输，同时消息必须在消息级别上保持安全，这非常有用。 系统提供的绑定不支持此配置。  
@@ -59,7 +59,7 @@ ms.locfileid: "33507024"
 </behaviors>  
 ```  
   
- 此外，此自定义绑定将消息安全性与 Windows 凭据类型（默认凭据类型）一起使用。 这是通过 `security` 绑定元素实现的。 如果 Kerberos 身份验证机制可用，则使用消息级安全性对客户端和服务进行身份验证。 如果在 Active Directory 环境中运行示例，则会发生这种情况。 如果 Kerberos 身份验证机制不可用，则使用 NTLM 身份验证。 NTLM 向服务对客户端进行身份验证，但不向客户端对服务进行身份验证。 `security`绑定元素配置为使用`SecureConversation``authenticationType`，这将导致客户端和服务上安全会话的创建。 为了使服务的双工协定起作用，需要这么做。  
+ 此外，此自定义绑定将消息安全性与 Windows 凭据类型（默认凭据类型）一起使用。 这是通过 `security` 绑定元素实现的。 如果 Kerberos 身份验证机制可用，则使用消息级安全性对客户端和服务进行身份验证。 如果在 Active Directory 环境中运行示例，则会发生这种情况。 如果 Kerberos 身份验证机制不可用，则使用 NTLM 身份验证。 NTLM 向服务对客户端进行身份验证，但不向客户端对服务进行身份验证。 `security`绑定元素配置为使用`SecureConversation``authenticationType`，这会导致在客户端和服务的安全会话的创建。 为了使服务的双工协定起作用，需要这么做。  
   
  运行示例时，操作请求和响应将显示在客户端的控制台窗口中。 在客户端窗口中按 Enter 可以关闭客户端。  
   
@@ -107,11 +107,11 @@ Equation(0 + 100 - 50 * 17.65 / 2 = 441.25)
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>设置、生成和运行示例  
   
-1.  确保已执行[的 Windows Communication Foundation 示例的一次性安装过程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
+1.  请确保您具有执行[的 Windows Communication Foundation 示例的一次性安装过程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
   
 2.  若要生成 C# 或 Visual Basic .NET 版本的解决方案，请按照 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)中的说明进行操作。  
   
-3.  若要在单或跨计算机配置上运行示例，请按照中的说明[运行 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/running-the-samples.md)。  
+3.  若要在单或跨计算机配置中运行示例，请按照中的说明[运行 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/running-the-samples.md)。  
   
 ### <a name="to-run-the-sample-on-the-same-computer"></a>在同一计算机上运行示例  
   
@@ -124,7 +124,7 @@ Equation(0 + 100 - 50 * 17.65 / 2 = 441.25)
   
 3.  启动 \client\bin 中的 Client.exe。 客户端活动将显示在客户端控制台应用程序上。  
   
-4.  如果客户端和服务不能够进行通信，请参阅[疑难解答提示](http://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b)。  
+4.  如果客户端和服务能够进行通信，请参见[故障排除提示](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b)。  
   
 ### <a name="to-run-the-sample-across-computers"></a>跨计算机运行示例  
   

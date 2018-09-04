@@ -6,22 +6,22 @@ helpviewer_keywords:
 - brushes [WPF], painting with solid colors
 - painting [WPF], with solid colors
 ms.assetid: 5d27d8a7-4bd7-4063-bdf3-2c5c0f19f9d3
-ms.openlocfilehash: 7e8e3fa5a379f02c3bb126c17bbe37fc0f3d57cb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 017c685139979ec3aa411be6e6b5fdf0e91657de
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33561325"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43563136"
 ---
 # <a name="how-to-paint-an-area-with-a-solid-color"></a>如何：使用纯色绘制区域
-若要绘制带有纯色的区域，可以使用预定义的系统画笔，如<xref:System.Windows.Media.Brushes.Red%2A>或<xref:System.Windows.Media.Brushes.Blue%2A>，也可以创建一个新<xref:System.Windows.Media.SolidColorBrush>并描述其<xref:System.Windows.Media.SolidColorBrush.Color%2A>使用 alpha、 红色、 绿色和蓝色值。 在 XAML 中，还可以使用十六进制表示法来利用纯色绘制区域。  
+若要绘制使用纯色区域，可以使用预定义的系统画笔，如<xref:System.Windows.Media.Brushes.Red%2A>或<xref:System.Windows.Media.Brushes.Blue%2A>，也可以创建一个新<xref:System.Windows.Media.SolidColorBrush>并描述其<xref:System.Windows.Media.SolidColorBrush.Color%2A>使用 alpha、 红色、 绿色和蓝色值。 在 XAML 中，还可以使用十六进制表示法来利用纯色绘制区域。  
   
  下面的示例使用上述每种方法来绘制<xref:System.Windows.Shapes.Rectangle>蓝色。  
   
 ## <a name="example"></a>示例  
  **使用预定义画笔**  
   
- 在下面的示例使用预定义的画笔<xref:System.Windows.Media.Brushes.Blue%2A>来绘制的矩形蓝色。  
+ 在下面的示例使用预定义的画笔<xref:System.Windows.Media.Brushes.Blue%2A>来绘制一个蓝色矩形。  
   
  [!code-xaml[brushsamples_snip#_graphicsmm_PredefinedBrush1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/brushsamples_snip/CS/SolidColorBrushExample.xaml#_graphicsmm_predefinedbrush1)]  
   
@@ -35,7 +35,7 @@ ms.locfileid: "33561325"
   
  **使用 ARGB 值**  
   
- 下一个示例创建<xref:System.Windows.Media.SolidColorBrush>并描述其<xref:System.Windows.Media.SolidColorBrush.Color%2A>使用 ARGB 的蓝色值。  
+ 下一个示例创建<xref:System.Windows.Media.SolidColorBrush>并介绍了其<xref:System.Windows.Media.SolidColorBrush.Color%2A>使用 ARGB 值为蓝色。  
   
  [!code-xaml[brushsamples_snip#_graphicsmm_RgbNotation1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/brushsamples_snip/CS/SolidColorBrushExample.xaml#_graphicsmm_rgbnotation1)]  
   
@@ -45,9 +45,9 @@ ms.locfileid: "33561325"
   
  **相关主题**  
   
- 有关详细信息<xref:System.Windows.Media.SolidColorBrush>和其他示例，请参阅[使用纯色和渐变概述绘制](../../../../docs/framework/wpf/graphics-multimedia/painting-with-solid-colors-and-gradients-overview.md)概述。  
+ 有关详细信息<xref:System.Windows.Media.SolidColorBrush>和其他示例，请参阅[使用纯色和渐变概述进行绘制](../../../../docs/framework/wpf/graphics-multimedia/painting-with-solid-colors-and-gradients-overview.md)概述。  
   
- 此代码示例摘自更大的示例为提供<xref:System.Windows.Media.SolidColorBrush>类。 有关完整示例，请参阅[画笔示例](http://go.microsoft.com/fwlink/?LinkID=159973)。  
+ 此代码示例是为提供一个更大示例的一部分<xref:System.Windows.Media.SolidColorBrush>类。 有关完整示例，请参阅[画笔示例](https://go.microsoft.com/fwlink/?LinkID=159973)。  
   
 ## <a name="see-also"></a>请参阅  
  <xref:System.Windows.Media.Brushes>

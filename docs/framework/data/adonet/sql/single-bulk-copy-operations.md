@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 5e7ff0be-3f23-4996-a92c-bd54d65c3836
 ms.openlocfilehash: 274a6e87b272002a567fd92605c4e690c03b6e26
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43466912"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43565167"
 ---
 # <a name="single-bulk-copy-operations"></a>单个批量复制操作
 执行 SQL Server 批量复制操作最简单的方法就是对数据库执行单次操作。 默认情况下，批量复制操作是作为一个独立的操作执行的：该复制操作以非事务处理方式进行，不可进行回滚。  

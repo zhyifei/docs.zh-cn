@@ -8,11 +8,11 @@ helpviewer_keywords:
 - data [Windows Forms], displaying
 ms.assetid: 7f994d45-600d-4190-a187-35803214b40c
 ms.openlocfilehash: 41ab0b36c5f3632ff4458d1289295ab2c9efe7c3
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43420472"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43555110"
 ---
 # <a name="how-to-change-the-type-of-a-windows-forms-datagridview-column-using-the-designer"></a>如何：使用设计器更改 Windows 窗体 DataGridView 列的类型
 有时会想要更改的列的已添加到 Windows 窗体类型<xref:System.Windows.Forms.DataGridView>控件。 例如，你可能想要修改某些时将控件绑定到数据源自动生成的列的类型。 所显示的表具有包含相关表中的行的外键的列时，这很有用。 在这种情况下，你可能想要替换文本中显示的列的组合框中显示列的相关表中更有意义的值与这些外键。  

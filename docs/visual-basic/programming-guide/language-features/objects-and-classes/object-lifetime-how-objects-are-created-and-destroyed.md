@@ -22,12 +22,12 @@ helpviewer_keywords:
 - Sub Dispose destructor
 - garbage collection [Visual Basic], Visual Basic
 ms.assetid: f1ee8458-b156-44e0-9a8a-5dd171648cd8
-ms.openlocfilehash: 441fe91c8c884e59c6399d57e7e55bf6591cb1bb
-ms.sourcegitcommit: a1e35d4e94edab384a63406c0a5438306873031b
+ms.openlocfilehash: 1782748749df171ec8d6e3bc8873b4a42c83c0e6
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/21/2018
-ms.locfileid: "42754211"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43556050"
 ---
 # <a name="object-lifetime-how-objects-are-created-and-destroyed-visual-basic"></a>对象生存期：如何创建和销毁对象 (Visual Basic)
 使用 `New` 关键字创建类的实例（即对象）。 通常，初始化任务必须在使用之前在新对象上执行。 常见的初始化任务包括打开文件、连接到数据库以及读取注册表项的值。 Visual Basic 控制的使用过程名为的新对象初始化*构造函数*（允许控制初始化的特殊方法）。  
@@ -148,7 +148,7 @@ End Sub
   
 ## <a name="see-also"></a>请参阅  
  <xref:System.IDisposable.Dispose%2A>  
- [组件的初始化和终止](http://msdn.microsoft.com/library/58444076-a9d2-4c91-b3f6-0e180dc0695d)  
+ [组件的初始化和终止](https://msdn.microsoft.com/library/58444076-a9d2-4c91-b3f6-0e180dc0695d)  
  [New 运算符](../../../../visual-basic/language-reference/operators/new-operator.md)  
  [Cleaning Up Unmanaged Resources](../../../../standard/garbage-collection/unmanaged.md)（清理未托管资源）  
  [Nothing](../../../../visual-basic/language-reference/nothing.md)

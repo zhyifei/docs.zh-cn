@@ -2,15 +2,15 @@
 title: 在 ADO.NET 中检索和修改数据
 ms.date: 03/30/2017
 ms.assetid: 722e7f87-3691-46c6-87e8-7d159722d675
-ms.openlocfilehash: 0c970c01352aecf6a25bac1b89b9f79c96f80d31
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5ef5191cf89f22fbaf0bb1bf4fbf47db1d4c06a1
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33361538"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43562558"
 ---
 # <a name="retrieving-and-modifying-data-in-adonet"></a>在 ADO.NET 中检索和修改数据
-任何数据库应用程序的一项主要功能是连接数据源并检索数据源中包含的数据。 ADO.NET 的.NET Framework 数据提供程序充当应用程序和数据源，二者之间的桥梁使您可以执行命令以及使用检索数据**DataReader**或**DataAdapter**. 任何数据库应用程序的一项关键功能是更新数据库中存储的数据的能力。 在 ADO.NET 中，更新数据时会使用**DataAdapter**和<xref:System.Data.DataSet>，和**命令**对象，它可能还会使用事务。  
+任何数据库应用程序的一项主要功能是连接数据源并检索数据源中包含的数据。 ADO.NET 的.NET Framework 数据提供程序充当应用程序和数据源之间的桥梁使您可以执行命令以及使用检索数据**DataReader**或**DataAdapter**. 任何数据库应用程序的一项关键功能是更新数据库中存储的数据的能力。 在 ADO.NET 中，更新数据时会使用**DataAdapter**并<xref:System.Data.DataSet>，和**命令**对象; 并且它还可能会使用事务。  
   
 ## <a name="in-this-section"></a>本节内容  
  [连接到数据源](../../../../docs/framework/data/adonet/connecting-to-a-data-source.md)  
@@ -32,10 +32,10 @@ ms.locfileid: "33361538"
  包含说明如何执行本地事务、分布式事务及使用开放式并发的主题。  
   
  [检索标识或自动编号值](../../../../docs/framework/data/adonet/retrieving-identity-or-autonumber-values.md)  
- 提供的映射为生成的值示例**标识**列中的 SQL Server 表或**Autonumber**字段在 Microsoft Access 表中，到表中插入行的列。 讨论在 `DataTable` 中合并标识值。  
+ 提供的映射生成的值示例**标识**或为 SQL Server 表中的列**自动编号**字段在 Microsoft Access 表中，向表中插入行的列。 讨论在 `DataTable` 中合并标识值。  
   
  [检索二进制数据](../../../../docs/framework/data/adonet/retrieving-binary-data.md)  
- 描述如何检索二进制数据或使用的大型数据结构`CommandBehavior`。`SequentialAccess` 若要修改的默认行为`DataReader`。  
+ 介绍了如何检索二进制数据或使用的大型数据结构`CommandBehavior`。`SequentialAccess` 若要修改的默认行为`DataReader`。  
   
  [使用存储过程修改数据](../../../../docs/framework/data/adonet/modifying-data-with-stored-procedures.md)  
  说明如何使用存储过程的输入参数和输出参数在数据库中插入行，同时返回新标识值。  
@@ -56,11 +56,11 @@ ms.locfileid: "33361538"
  介绍了 [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 对异步编程的支持。  
   
  [SqlClient 流支持](../../../../docs/framework/data/adonet/sqlclient-streaming-support.md)  
- 讨论如何编写应用程序流数据从 SQL Server 而不会使完全加载到内存中。  
+ 讨论如何编写应用程序的流数据从 SQL Server 而无需再对其完全加载到内存中。  
   
 ## <a name="see-also"></a>请参阅  
  [ADO.NET 中的数据类型映射](../../../../docs/framework/data/adonet/data-type-mappings-in-ado-net.md)  
  [数据集、数据表和数据视图](../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
  [保证 ADO.NET 应用程序的安全](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
  [SQL Server 和 ADO.NET](../../../../docs/framework/data/adonet/sql/index.md)  
- [ADO.NET 托管提供程序和数据集开发人员中心](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)

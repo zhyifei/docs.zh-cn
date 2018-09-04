@@ -3,11 +3,11 @@ title: 在工作流服务中设置消息格式
 ms.date: 03/30/2017
 ms.assetid: 6d15d44b-20f8-4cb7-bd4f-598c32781ebc
 ms.openlocfilehash: eb9a6b3a83a28154dc968bd4c1c41d34028bdd41
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43389132"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43562912"
 ---
 # <a name="formatting-messages-in-workflow-services"></a>在工作流服务中设置消息格式
 此示例演示如何在消息传递活动（WF 服务）中使用不同的用户类型。 此示例服务是一个简单的费用审批服务，并公开三个操作。 `ApproveExpense` 接受一个数据协定，并演示如何使用已知类型。 该操作根据费用金额返回 `true` 或 `false`。 `ApprovePO` 接受一个 XmlSerializer 类型，并返回`true`或`false`根据费用金额。`ApprovedVendor` 接受一个消息协定类型，并返回`true`或`false`供应商的情况中的已批准的供应商列表，或请求来自财务部门 （财务部门可以使用任何供应商）。  

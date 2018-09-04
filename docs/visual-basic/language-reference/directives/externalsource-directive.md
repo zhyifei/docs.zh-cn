@@ -1,5 +1,5 @@
 ---
-title: '#ExternalSource 指令'
+title: '#ExternalSource 指令 (Visual Basic)'
 ms.date: 07/20/2015
 f1_keywords:
 - '#Externalsource'
@@ -12,15 +12,15 @@ helpviewer_keywords:
 - ExternalSource directive (#ExternalSource)
 - '#ExternalSource directive'
 ms.assetid: 243bc6a2-34c3-4eeb-a776-9fd2bf988149
-ms.openlocfilehash: 146ab41d74b45acc4063e2463baca26c7caa4652
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: dcde8507eb033d0a47d5c5d3fa36176cd63b0856
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33586586"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43556313"
 ---
 # <a name="externalsource-directive"></a>#ExternalSource 指令
-指示代码的源代码的特定行和源的外部文本之间的映射。  
+指示特定行的源代码和源的外部文本之间的映射。  
   
 ## <a name="syntax"></a>语法  
   
@@ -32,13 +32,13 @@ ms.locfileid: "33586586"
   
 ## <a name="parts"></a>部件  
  `StringLiteral`  
- 外部源的路径。  
+ 指向外部源的路径。  
   
  `IntLiteral`  
- 外部源的第一行的行号。  
+ 外部源的第一行的行数。  
   
  `LogicalLine`  
- 外部源中出现错误的行。  
+ 外部源中发生错误的行。  
   
  `#End ExternalSource`  
  终止 `#ExternalSource` 块。  
@@ -46,7 +46,7 @@ ms.locfileid: "33586586"
 ## <a name="remarks"></a>备注  
  使用此指令时仅由编译器和调试器。  
   
- 源文件可能包含外部源指令，指示特定的源文件中的代码行和源，例如一个.aspx 文件的外部文本之间的映射。 如果在编译期间指定的源代码中遇到错误，则将它们标识作为来自外部源中。  
+ 源代码文件可以包含外部源指令，指示特定行的源文件中的代码和源，例如.aspx 文件的外部文本之间的映射。 如果在编译期间指定的源代码中遇到错误，则将其标识为来自外部源中。  
   
  外部源指令不会影响编译，而且不能嵌套。 它们是由应用程序仅供内部使用。  
   

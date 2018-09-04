@@ -3,11 +3,11 @@ title: 如果文件不存在，则无法查询文件信息
 ms.date: 07/20/2015
 ms.assetid: 2bf50d79-2a74-403f-833c-6cabd2c213ce
 ms.openlocfilehash: 698d5ee08d470d846e2d13b3793be62a3699f807
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43403200"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43561729"
 ---
 # <a name="file-information-cannot-be-queried-if-the-file-does-not-exist"></a>如果文件不存在，则无法查询文件信息
 试图查询 <xref:System.IO.FileInfo> 对象以了解某个不存在的文件的相关信息。 通常这是由于提供文件名时出现了差错。  

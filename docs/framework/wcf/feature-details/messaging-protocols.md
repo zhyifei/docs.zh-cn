@@ -3,11 +3,11 @@ title: 消息协议
 ms.date: 03/30/2017
 ms.assetid: 5b20bca7-87b3-4c8f-811b-f215b5987104
 ms.openlocfilehash: 3e56636e8364eec333f9585a0f62f6510561d1cc
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43405054"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43563273"
 ---
 # <a name="messaging-protocols"></a>消息协议
 Windows Communication Foundation (WCF) 通道堆栈采用编码和传输通道将转换为其传输格式的内部消息表示形式和使用特定传输进行发送。 用于 Web 服务互操作性的最常见传输是 HTTP，Web 服务使用的最常见编码是基于 XML 的 SOAP 1.1、SOAP 1.2 和消息传输优化机制 (MTOM)。  

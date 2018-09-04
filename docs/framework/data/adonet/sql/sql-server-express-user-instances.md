@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 00c12376-cb26-4317-86ad-e6e9c089be57
-ms.openlocfilehash: 0af929de17a29d497ce6cf6c8cb055d416ab8761
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 31c0efbe953b56304c264444082185b9a9227d60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33365405"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43658972"
 ---
 # <a name="sql-server-express-user-instances"></a>SQL Server Express 用户实例
 Microsoft SQL Server 学习版 (SQL Server Express) 支持用户实例功能，只有在使用用于 SQL Server 的 .NET Framework 数据提供程序 (`SqlClient`) 时该功能才可用。 用户实例是 SQL Server Express 数据库引擎的单独实例，该单独实例由父实例生成。 不是其本地计算机的管理员的用户可以将用户实例附加和连接到 SQL Server Express 数据库。 在每个用户一个实例的基础上，每个实例在单个用户的安全上下文中运行。  
@@ -24,7 +24,7 @@ Microsoft SQL Server 学习版 (SQL Server Express) 支持用户实例功能，�
 >  对于已经是其各自计算机的管理员的用户不需要用户实例，而且对于涉及多个数据库用户的方案也不需要用户实例。  
   
 ## <a name="enabling-user-instances"></a>启用用户实例  
- 若要生成用户实例，必须运行 SQL Server Express 的父实例。 当 SQL Server Express 已安装，并且它们可以显式启用或禁用由系统管理员执行时，默认情况下启用用户实例**sp_configure**系统存储过程对父实例。  
+ 若要生成用户实例，必须运行 SQL Server Express 的父实例。 当 SQL Server Express 已安装，并且它们可以显式启用或禁用由系统管理员执行时，默认情况下启用了用户实例**sp_configure**系统存储过程对父实例。  
   
 ```  
 -- Enable user instances.  
@@ -37,7 +37,7 @@ sp_configure 'user instances enabled','0'
  用于用户实例的网络协议必须为本地命名管道。 无法对 SQL Server 的远程实例启动用户实例，且不允许使用 SQL Server 登录名。  
   
 ## <a name="connecting-to-a-user-instance"></a>连接到用户实例  
- `User Instance`和`AttachDBFilename`<xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A>关键字允许<xref:System.Data.SqlClient.SqlConnection>连接到用户实例。 <xref:System.Data.SqlClient.SqlConnectionStringBuilder>`UserInstance` 和 `AttachDBFilename` 属性也支持用户实例。  
+ `User Instance`并`AttachDBFilename`<xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A>关键字允许<xref:System.Data.SqlClient.SqlConnection>连接到用户实例。 <xref:System.Data.SqlClient.SqlConnectionStringBuilder>`UserInstance` 和 `AttachDBFilename` 属性也支持用户实例。  
   
  请注意如下所示的有关连接字符串示例的内容：  
   
@@ -58,9 +58,9 @@ Initial Catalog=InstanceDB;
 ```  
   
 > [!NOTE]
->  你还可以使用<xref:System.Data.SqlClient.SqlConnectionStringBuilder><xref:System.Data.SqlClient.SqlConnectionStringBuilder.UserInstance%2A>和<xref:System.Data.SqlClient.SqlConnectionStringBuilder.AttachDBFilename%2A>属性，以生成连接字符串中的运行时。  
+>  此外可以使用<xref:System.Data.SqlClient.SqlConnectionStringBuilder><xref:System.Data.SqlClient.SqlConnectionStringBuilder.UserInstance%2A>和<xref:System.Data.SqlClient.SqlConnectionStringBuilder.AttachDBFilename%2A>属性，以生成连接字符串在运行时。  
   
-### <a name="using-the-124datadirectory124-substitution-string"></a>使用&#124;DataDirectory&#124;替换字符串  
+### <a name="using-the-124datadirectory124-substitution-string"></a>使用&#124;DataDirectory&#124;替代字符串  
  在 ADO.NET 2.0 中，随着 `AttachDbFileName`（包含在管道符号中）替代字符串的引入，对 `|DataDirectory|` 进行了扩展。 `DataDirectory` 与 `AttachDbFileName` 结合使用可指示数据文件的相对路径，从而允许开发人员创建基于数据源的相对路径（而无需指定完整路径）的连接字符串。  
   
  `DataDirectory` 点的物理位置取决于应用程序的类型。 在此示例中，要附加的 Northwind.mdf 文件位于应用程序的 \app_data 文件夹中。  
@@ -119,13 +119,13 @@ private static void OpenSqlConnection()
 >  在 SQL Server 内运行的公共语言运行库 (CLR) 代码中不支持用户实例。 如果对在连接字符串中具有 <xref:System.InvalidOperationException> 的 `Open` 调用 <xref:System.Data.SqlClient.SqlConnection>，则会引发 `User Instance=true`。  
   
 ## <a name="lifetime-of-a-user-instance-connection"></a>用户实例连接的生存期  
- 与作为服务运行的其他 SQL Server 版本不同，SQL Server Express 实例不需要手动启动和停止。 每次用户登录和连接到用户实例时，如果该用户实例尚未运行，则会启动该用户实例。 用户实例数据库设置 `AutoClose` 选项，这样数据库就会在一段非活动期后自动关闭。 已启动的 sqlservr.exe 进程会在实例的上一次连接关闭后的有限超时期限内继续运行，因此，如果在超时过期之前打开了另一连接，则不需要重新启动 sqlservr.exe 进程。 如果在超时过期之前没有打开新连接，则用户实例将自动关闭。 父实例上的系统管理员可以通过使用设置的用户实例的超时期限的持续时间**sp_configure**更改**用户实例超时**选项。 默认值为 60 分钟。  
+ 与作为服务运行的其他 SQL Server 版本不同，SQL Server Express 实例不需要手动启动和停止。 每次用户登录和连接到用户实例时，如果该用户实例尚未运行，则会启动该用户实例。 用户实例数据库设置 `AutoClose` 选项，这样数据库就会在一段非活动期后自动关闭。 已启动的 sqlservr.exe 进程会在实例的上一次连接关闭后的有限超时期限内继续运行，因此，如果在超时过期之前打开了另一连接，则不需要重新启动 sqlservr.exe 进程。 如果在超时过期之前没有打开新连接，则用户实例将自动关闭。 父实例上的系统管理员可以通过设置用户实例超时期限的持续时间**sp_configure**若要更改**用户实例超时值**选项。 默认值为 60 分钟。  
   
 > [!NOTE]
 >  如果 `Min Pool Size` 用于其值大于 0 的连接字符串中，则连接池将始终保持几个打开的连接，且用户实例将不会自动关闭。  
   
 ## <a name="how-user-instances-work"></a>用户实例工作方式  
- 第一次为每个用户生成用户实例**master**和**msdb**系统数据库从模板数据文件夹复制到用户的本地应用程序数据存储库下的路径以供独占使用用户实例的目录。 此路径通常为 `C:\Documents and Settings\<UserName>\Local Settings\Application Data\Microsoft\Microsoft SQL Server Data\SQLEXPRESS`。 用户实例启动之后、 **tempdb**、 日志和跟踪文件也会写入到此目录。 将为该实例生成一个名称，且保证此名称对每个用户均是唯一的。  
+ 第一次为每个用户生成用户实例**主**并**msdb**系统数据库从 Template Data 文件夹复制到用户的本地应用程序数据存储库下的路径以供用户实例独占使用的目录。 此路径通常为 `C:\Documents and Settings\<UserName>\Local Settings\Application Data\Microsoft\Microsoft SQL Server Data\SQLEXPRESS`。 用户实例启动时**tempdb**、 日志和跟踪文件也会写入到此目录。 将为该实例生成一个名称，且保证此名称对每个用户均是唯一的。  
   
  默认情况下，会授予 Windows Builtin\Users 组的所有成员在本地实例上连接的权限，以及对 SQL Server 二进制文件进行读取和执行的权限。 验证持有用户实例的调用用户的凭据后，该用户就会成为该实例的 `sysadmin`。 只为用户实例启用共享内存，这意味着只能对本地计算机执行操作。  
   
@@ -146,7 +146,7 @@ private static void OpenSqlConnection()
   
 -   不需要共享数据的任何单用户应用程序。  
   
--   ClickOnce 部署。 如果 .NET Framework 2.0（或更高版本）和 SQL Server Express 已安装在目标计算机上，则可以由非管理员用户安装并使用通过 ClickOnce 操作而下载的安装程序包。 请注意，如果 SQL Server Express 为安装程序的一部分，则管理员必须安装 SQL Server Express。 有关详细信息，请参阅[ClickOnce 部署的 Windows 窗体应用程序](http://msdn.microsoft.com/library/34d8c770-48f2-460c-8d67-4ea5684511df)。  
+-   ClickOnce 部署。 如果 .NET Framework 2.0（或更高版本）和 SQL Server Express 已安装在目标计算机上，则可以由非管理员用户安装并使用通过 ClickOnce 操作而下载的安装程序包。 请注意，如果 SQL Server Express 为安装程序的一部分，则管理员必须安装 SQL Server Express。 有关详细信息，请参阅[ClickOnce 部署的 Windows 窗体应用程序](https://msdn.microsoft.com/library/34d8c770-48f2-460c-8d67-4ea5684511df)。  
   
 -   使用 Windows 身份验证的专用 ASP.NET 宿主。 Intranet 上可以承载单个 SQL Server Express 实例。 应用程序使用 ASPNET Windows 帐户进行连接，而不是使用模拟进行连接。 用户实例不应用于第三方或共享宿主方案中，在这样的方案中，所有应用程序将共享同一用户实例，而不再保持彼此独立。  
   
@@ -154,4 +154,4 @@ private static void OpenSqlConnection()
  [SQL Server 和 ADO.NET](../../../../../docs/framework/data/adonet/sql/index.md)  
  [连接字符串](../../../../../docs/framework/data/adonet/connection-strings.md)  
  [连接到数据源](../../../../../docs/framework/data/adonet/connecting-to-a-data-source.md)  
- [ADO.NET 托管提供程序和数据集开发人员中心](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)

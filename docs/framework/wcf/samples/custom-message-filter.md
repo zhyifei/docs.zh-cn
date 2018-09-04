@@ -3,11 +3,11 @@ title: 自定义消息筛选器
 ms.date: 03/30/2017
 ms.assetid: 98dd0af8-fce6-4255-ac32-42eb547eea67
 ms.openlocfilehash: c9a6e436548d4d1f009833f80899721c4c085513
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43400134"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43555947"
 ---
 # <a name="custom-message-filter"></a>自定义消息筛选器
 此示例演示如何替换 Windows Communication Foundation (WCF) 用于将消息调度到终结点的消息筛选器。  

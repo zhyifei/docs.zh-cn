@@ -2,12 +2,12 @@
 title: HTTP 确认通道
 ms.date: 03/30/2017
 ms.assetid: 469f3056-5ef2-4753-8acf-b574d23d83cf
-ms.openlocfilehash: c56b2fbe9d0bac3143ee7d234fd36a75f7b8071c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d83f3aa590471aa3d83b8f7bd1464ec1e6e106fc
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33502827"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43559538"
 ---
 # <a name="http-acknowledgement-channel"></a>HTTP 确认通道
 HTTP 确认通道是一个更改单向消息传递模式的分层通道示例，它允许服务确认或拒绝传入的消息，而不是在接收时自动发送确认。 HTTP 确认通道还允许服务延迟确认，直到服务可以做出将对消息进行处理的业务级别的保证。  
@@ -28,9 +28,9 @@ HTTP 确认通道是一个更改单向消息传递模式的分层通道示例，
   
 2.  打开**httpackchannel**解决方案。  
   
-3.  启动的新实例**服务**通过右键单击中的项目的项目**解决方案资源管理器**，并选择**调试**，**启动新实例**从上下文菜单。  
+3.  启动的新实例**服务**通过右键单击项目中的项目**解决方案资源管理器**，然后选择**调试**，**启动新实例**上下文菜单中。  
   
-4.  启动的新实例**客户端**通过右键单击中的项目的项目**解决方案资源管理器**，并选择**调试**，和**启动新实例**从上下文菜单。  
+4.  启动的新实例**客户端**通过右键单击项目中的项目**解决方案资源管理器**，然后选择**调试**，和**启动新实例**上下文菜单中。  
   
 5.  启动服务后，在客户端窗口中按 Enter 让客户端向服务发送一条消息。  
   
@@ -43,6 +43,6 @@ HTTP 确认通道是一个更改单向消息传递模式的分层通道示例，
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目录不存在，请转到[Windows Communication Foundation (WCF) 和针对.NET Framework 4 的 Windows Workflow Foundation (WF) 示例](http://go.microsoft.com/fwlink/?LinkId=150780)下载所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
+>  如果此目录不存在，请转到[Windows Communication Foundation (WCF) 和.NET Framework 4 的 Windows Workflow Foundation (WF) 示例](https://go.microsoft.com/fwlink/?LinkId=150780)若要下载所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Channels\HttpAckChannel`

@@ -2,12 +2,12 @@
 title: 字符串 (F#)
 description: "了解 F # 'string' 类型如何表示为一系列 Unicode 字符的不可变的文本。"
 ms.date: 05/16/2016
-ms.openlocfilehash: d8bfce9ac47cb137456e02b1b213fd2c6a53594d
-ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
+ms.openlocfilehash: 7309e93bf0a6518d03a9f850804a4f580e2c96b1
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37404267"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43561286"
 ---
 # <a name="strings"></a>字符串
 
@@ -42,7 +42,7 @@ let xmlFragment1 = @"<book author=""Milton, John"" title=""Paradise Lost"">"
 let xmlFragment2 = """<book author="Milton, John" title="Paradise Lost">"""
 ```
 
-在代码中，接受有换行符的字符串的和换行是按字面解释为换行符，除非反斜杠字符为换行符之前的最后一个字符。 使用反斜杠字符时，将忽略前导空格的下一行上。 下面的代码生成一个字符串`str1`具有值`"abc\ndef"`和一个字符串`str2`具有值`"abcdef"`。
+在代码中，接受有换行符的字符串的和换行是按字面解释为换行符，除非反斜杠字符为换行符之前的最后一个字符。 使用反斜杠字符时，将忽略在下一行中前导空白字符。 下面的代码生成一个字符串`str1`具有值`"abc\ndef"`和一个字符串`str2`具有值`"abcdef"`。
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet1001.fs)]
 

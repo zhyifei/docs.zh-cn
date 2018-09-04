@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 4fd5ed2c-b03a-4054-a3ed-3ddb380d7d9d
-ms.openlocfilehash: e061c5fea0a406169ba9de29d62192dbff6fb7f6
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 6ec65cad0070bdbd1d510bcc822f3b71f9cf69dc
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32766018"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43560469"
 ---
 # <a name="method-based-query-syntax-examples-join-linq-to-dataset"></a>基于方法的查询语法示例：联接 (LINQ to DataSet)
-联接是面向相互之间没有可导航关系的数据源（如关系数据库表）的查询中的一项重要操作。 联接两个数据源就是将一个数据源中的对象与另一个数据源中具有相同公共属性的对象相关联。 有关详细信息，请参阅[标准查询运算符概述](http://msdn.microsoft.com/library/24cda21e-8af8-4632-b519-c404a839b9b2)。  
+联接是面向相互之间没有可导航关系的数据源（如关系数据库表）的查询中的一项重要操作。 联接两个数据源就是将一个数据源中的对象与另一个数据源中具有相同公共属性的对象相关联。 有关详细信息，请参阅[标准查询运算符概述](https://msdn.microsoft.com/library/24cda21e-8af8-4632-b519-c404a839b9b2)。  
   
  本主题中的示例演示如何使用 <xref:System.Linq.Enumerable.Join%2A> 方法以便使用该方法的查询语法来查询 <xref:System.Data.DataSet>。  
   
@@ -45,6 +45,6 @@ ms.locfileid: "32766018"
 ## <a name="see-also"></a>请参阅  
  [将数据加载到数据集中](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md)  
  [LINQ to DataSet 示例](../../../../docs/framework/data/adonet/linq-to-dataset-examples.md)  
- [标准查询运算符概述](http://msdn.microsoft.com/library/24cda21e-8af8-4632-b519-c404a839b9b2)  
- [加入示例](http://go.microsoft.com/fwlink/?LinkId=187357)  
- [数据集示例](http://go.microsoft.com/fwlink/?LinkId=187358)
+ [标准查询运算符概述](https://msdn.microsoft.com/library/24cda21e-8af8-4632-b519-c404a839b9b2)  
+ [联接示例](https://go.microsoft.com/fwlink/?LinkId=187357)  
+ [数据集示例](https://go.microsoft.com/fwlink/?LinkId=187358)

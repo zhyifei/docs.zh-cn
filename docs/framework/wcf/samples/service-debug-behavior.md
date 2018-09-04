@@ -3,11 +3,11 @@ title: 服务调试行为
 ms.date: 03/30/2017
 ms.assetid: 9d8fd3fb-dc39-427a-8235-336a7e7162ba
 ms.openlocfilehash: b87911426b6d4edf8a6f9b0172f4872fac7b9b6f
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43465546"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43555092"
 ---
 # <a name="service-debug-behavior"></a>服务调试行为
 本示例演示如何配置服务调试行为设置。 该示例基于[Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md)，它可以实现`ICalculator`服务协定。 本示例在配置文件中显式定义服务调试行为。 也可以在代码中强制完成此操作。  

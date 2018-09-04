@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 6c0b353d-79ee-4e61-b348-be49ad0e9a16
 ms.openlocfilehash: ee15fd37390f8bf4ca3bc287f9a3dbd5f8ebd935
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43396778"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43658985"
 ---
 # <a name="custom-binding-transport-and-encoding"></a>自定义绑定传输和编码
 自定义绑定由离散绑定元素的有序列表定义。 本示例演示如何使用各种传输和消息编码元素配置自定义绑定。  
