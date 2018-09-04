@@ -5,37 +5,37 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 7139d585-4034-4dfa-916f-2120a8b72792
-ms.openlocfilehash: 9b58414c0f2a8fabe078724ee91de2c14ada8c3d
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 1e11e6c0e93710cad84ccd44ea9bffbd98080be1
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32760409"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43511310"
 ---
-# <a name="how-to-execute-a-query-that-returns-primitivetype-results"></a><span data-ttu-id="9e124-102">如何：执行返回 PrimitiveType 结果的查询</span><span class="sxs-lookup"><span data-stu-id="9e124-102">How to: Execute a Query that Returns PrimitiveType Results</span></span>
-<span data-ttu-id="9e124-103">本主题演示如何使用 <xref:System.Data.EntityClient.EntityCommand> 针对概念模型执行命令，以及如何使用 <xref:System.Data.Metadata.Edm.PrimitiveType> 检索 <xref:System.Data.EntityClient.EntityDataReader> 结果。</span><span class="sxs-lookup"><span data-stu-id="9e124-103">This topic shows how to execute a command against a conceptual model by using an <xref:System.Data.EntityClient.EntityCommand>, and how to retrieve the <xref:System.Data.Metadata.Edm.PrimitiveType> results by using an <xref:System.Data.EntityClient.EntityDataReader>.</span></span>  
+# <a name="how-to-execute-a-query-that-returns-primitivetype-results"></a><span data-ttu-id="36488-102">如何：执行返回 PrimitiveType 结果的查询</span><span class="sxs-lookup"><span data-stu-id="36488-102">How to: Execute a Query that Returns PrimitiveType Results</span></span>
+<span data-ttu-id="36488-103">本主题演示如何使用 <xref:System.Data.EntityClient.EntityCommand> 针对概念模型执行命令，以及如何使用 <xref:System.Data.Metadata.Edm.PrimitiveType> 检索 <xref:System.Data.EntityClient.EntityDataReader> 结果。</span><span class="sxs-lookup"><span data-stu-id="36488-103">This topic shows how to execute a command against a conceptual model by using an <xref:System.Data.EntityClient.EntityCommand>, and how to retrieve the <xref:System.Data.Metadata.Edm.PrimitiveType> results by using an <xref:System.Data.EntityClient.EntityDataReader>.</span></span>  
   
-### <a name="to-run-the-code-in-this-example"></a><span data-ttu-id="9e124-104">运行本示例中的代码</span><span class="sxs-lookup"><span data-stu-id="9e124-104">To run the code in this example</span></span>  
+### <a name="to-run-the-code-in-this-example"></a><span data-ttu-id="36488-104">运行本示例中的代码</span><span class="sxs-lookup"><span data-stu-id="36488-104">To run the code in this example</span></span>  
   
-1.  <span data-ttu-id="9e124-105">添加[AdventureWorks 销售模型](http://msdn.microsoft.com/library/f16cd988-673f-4376-b034-129ca93c7832)到你的项目和配置项目以使用[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]。</span><span class="sxs-lookup"><span data-stu-id="9e124-105">Add the [AdventureWorks Sales Model](http://msdn.microsoft.com/library/f16cd988-673f-4376-b034-129ca93c7832) to your project and configure your project to use the [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)].</span></span> <span data-ttu-id="9e124-106">有关详细信息，请参阅[如何： 使用实体数据模型向导](http://msdn.microsoft.com/library/dadb058a-c5d9-4c5c-8b01-28044112231d)。</span><span class="sxs-lookup"><span data-stu-id="9e124-106">For more information, see [How to: Use the Entity Data Model Wizard](http://msdn.microsoft.com/library/dadb058a-c5d9-4c5c-8b01-28044112231d).</span></span>  
+1.  <span data-ttu-id="36488-105">添加[AdventureWorks 销售模型](https://msdn.microsoft.com/library/f16cd988-673f-4376-b034-129ca93c7832)到你的项目和配置项目以使用[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]。</span><span class="sxs-lookup"><span data-stu-id="36488-105">Add the [AdventureWorks Sales Model](https://msdn.microsoft.com/library/f16cd988-673f-4376-b034-129ca93c7832) to your project and configure your project to use the [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)].</span></span> <span data-ttu-id="36488-106">有关详细信息，请参阅[如何： 使用实体数据模型向导](https://msdn.microsoft.com/library/dadb058a-c5d9-4c5c-8b01-28044112231d)。</span><span class="sxs-lookup"><span data-stu-id="36488-106">For more information, see [How to: Use the Entity Data Model Wizard](https://msdn.microsoft.com/library/dadb058a-c5d9-4c5c-8b01-28044112231d).</span></span>  
   
-2.  <span data-ttu-id="9e124-107">在应用程序的代码页中，添加以下 `using` 语句（在 Visual Basic 中为 `Imports`）：</span><span class="sxs-lookup"><span data-stu-id="9e124-107">In the code page for your application, add the following `using` statements (`Imports` in Visual Basic):</span></span>  
+2.  <span data-ttu-id="36488-107">在应用程序的代码页中，添加以下 `using` 语句（在 Visual Basic 中为 `Imports`）：</span><span class="sxs-lookup"><span data-stu-id="36488-107">In the code page for your application, add the following `using` statements (`Imports` in Visual Basic):</span></span>  
   
      [!code-csharp[DP EntityServices Concepts#Namespaces](../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/source.cs#namespaces)]
      [!code-vb[DP EntityServices Concepts#Namespaces](../../../../../samples/snippets/visualbasic/VS_Snippets_Data/dp entityservices concepts/vb/source.vb#namespaces)]  
   
-## <a name="example"></a><span data-ttu-id="9e124-108">示例</span><span class="sxs-lookup"><span data-stu-id="9e124-108">Example</span></span>  
- <span data-ttu-id="9e124-109">本示例执行返回 <xref:System.Data.Metadata.Edm.PrimitiveType> 结果的查询。</span><span class="sxs-lookup"><span data-stu-id="9e124-109">This example executes a query that returns a <xref:System.Data.Metadata.Edm.PrimitiveType> result.</span></span> <span data-ttu-id="9e124-110">如果将以下查询作为参数传递给 `ExecutePrimitiveTypeQuery` 函数，则该函数将显示所有 `Products` 的平均定价：</span><span class="sxs-lookup"><span data-stu-id="9e124-110">If you pass the following query as an argument to the `ExecutePrimitiveTypeQuery` function, the function displays the average list price of all `Products`:</span></span>  
+## <a name="example"></a><span data-ttu-id="36488-108">示例</span><span class="sxs-lookup"><span data-stu-id="36488-108">Example</span></span>  
+ <span data-ttu-id="36488-109">本示例执行返回 <xref:System.Data.Metadata.Edm.PrimitiveType> 结果的查询。</span><span class="sxs-lookup"><span data-stu-id="36488-109">This example executes a query that returns a <xref:System.Data.Metadata.Edm.PrimitiveType> result.</span></span> <span data-ttu-id="36488-110">如果将以下查询作为参数传递给 `ExecutePrimitiveTypeQuery` 函数，则该函数将显示所有 `Products` 的平均定价：</span><span class="sxs-lookup"><span data-stu-id="36488-110">If you pass the following query as an argument to the `ExecutePrimitiveTypeQuery` function, the function displays the average list price of all `Products`:</span></span>  
   
  [!code-csharp[DP EntityServices Concepts 2#EDM_AVG](../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#edm_avg)]  
   
- <span data-ttu-id="9e124-111">如果传递参数化查询（如下面的查询），请将 <xref:System.Data.EntityClient.EntityParameter> 对象添加到 <xref:System.Data.EntityClient.EntityCommand.Parameters%2A> 对象的 <xref:System.Data.EntityClient.EntityCommand> 属性。</span><span class="sxs-lookup"><span data-stu-id="9e124-111">If you pass a parameterized query, like the following, <xref:System.Data.EntityClient.EntityParameter> objects to the <xref:System.Data.EntityClient.EntityCommand.Parameters%2A> property on the <xref:System.Data.EntityClient.EntityCommand> object.</span></span>  
+ <span data-ttu-id="36488-111">如果传递参数化查询（如下面的查询），请将 <xref:System.Data.EntityClient.EntityParameter> 对象添加到 <xref:System.Data.EntityClient.EntityCommand.Parameters%2A> 对象的 <xref:System.Data.EntityClient.EntityCommand> 属性。</span><span class="sxs-lookup"><span data-stu-id="36488-111">If you pass a parameterized query, like the following, <xref:System.Data.EntityClient.EntityParameter> objects to the <xref:System.Data.EntityClient.EntityCommand.Parameters%2A> property on the <xref:System.Data.EntityClient.EntityCommand> object.</span></span>  
   
  [!code-csharp[DP EntityServices Concepts 2#CASE_WHEN_THEN_ELSE](../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#case_when_then_else)]  
   
  [!code-csharp[DP EntityServices Concepts#eSQLPrimitiveTypes](../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/source.cs#esqlprimitivetypes)]
  [!code-vb[DP EntityServices Concepts#eSQLPrimitiveTypes](../../../../../samples/snippets/visualbasic/VS_Snippets_Data/dp entityservices concepts/vb/source.vb#esqlprimitivetypes)]  
   
-## <a name="see-also"></a><span data-ttu-id="9e124-112">请参阅</span><span class="sxs-lookup"><span data-stu-id="9e124-112">See Also</span></span>  
- [<span data-ttu-id="9e124-113">实体 SQL 引用</span><span class="sxs-lookup"><span data-stu-id="9e124-113">Entity SQL Reference</span></span>](../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)  
- [<span data-ttu-id="9e124-114">用于实体框架的 EntityClient 提供程序</span><span class="sxs-lookup"><span data-stu-id="9e124-114">EntityClient Provider for the Entity Framework</span></span>](../../../../../docs/framework/data/adonet/ef/entityclient-provider-for-the-entity-framework.md)
+## <a name="see-also"></a><span data-ttu-id="36488-112">请参阅</span><span class="sxs-lookup"><span data-stu-id="36488-112">See Also</span></span>  
+ [<span data-ttu-id="36488-113">实体 SQL 引用</span><span class="sxs-lookup"><span data-stu-id="36488-113">Entity SQL Reference</span></span>](../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)  
+ [<span data-ttu-id="36488-114">用于实体框架的 EntityClient 提供程序</span><span class="sxs-lookup"><span data-stu-id="36488-114">EntityClient Provider for the Entity Framework</span></span>](../../../../../docs/framework/data/adonet/ef/entityclient-provider-for-the-entity-framework.md)

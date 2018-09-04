@@ -6,16 +6,16 @@ dev_langs:
 - vb
 ms.assetid: d6aa8474-7bde-48f7-949d-20dc38a1625b
 ms.openlocfilehash: c1ebe2d735924c559f450f4041884dc9845e4fe0
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43396080"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43514510"
 ---
-# <a name="adding-data-to-a-datatable"></a><span data-ttu-id="ad66a-102">将数据添加到数据表中</span><span class="sxs-lookup"><span data-stu-id="ad66a-102">Adding Data to a DataTable</span></span>
-<span data-ttu-id="ad66a-103">在创建 <xref:System.Data.DataTable> 并使用列和约束定义其结构之后，您可以将新的数据行添加到表中。</span><span class="sxs-lookup"><span data-stu-id="ad66a-103">After you create a <xref:System.Data.DataTable> and define its structure using columns and constraints, you can add new rows of data to the table.</span></span> <span data-ttu-id="ad66a-104">要添加新行，可将一个新变量声明为 <xref:System.Data.DataRow> 类型。</span><span class="sxs-lookup"><span data-stu-id="ad66a-104">To add a new row, declare a new variable as type <xref:System.Data.DataRow>.</span></span> <span data-ttu-id="ad66a-105">一个新**DataRow**调用时返回对象<xref:System.Data.DataTable.NewRow%2A>方法。</span><span class="sxs-lookup"><span data-stu-id="ad66a-105">A new **DataRow** object is returned when you call the <xref:System.Data.DataTable.NewRow%2A> method.</span></span> <span data-ttu-id="ad66a-106">**DataTable**然后创建**DataRow**对象基于的表的结构定义的<xref:System.Data.DataColumnCollection>。</span><span class="sxs-lookup"><span data-stu-id="ad66a-106">The **DataTable** then creates the **DataRow** object based on the structure of the table, as defined by the <xref:System.Data.DataColumnCollection>.</span></span>  
+# <a name="adding-data-to-a-datatable"></a><span data-ttu-id="e5073-102">将数据添加到数据表中</span><span class="sxs-lookup"><span data-stu-id="e5073-102">Adding Data to a DataTable</span></span>
+<span data-ttu-id="e5073-103">在创建 <xref:System.Data.DataTable> 并使用列和约束定义其结构之后，您可以将新的数据行添加到表中。</span><span class="sxs-lookup"><span data-stu-id="e5073-103">After you create a <xref:System.Data.DataTable> and define its structure using columns and constraints, you can add new rows of data to the table.</span></span> <span data-ttu-id="e5073-104">要添加新行，可将一个新变量声明为 <xref:System.Data.DataRow> 类型。</span><span class="sxs-lookup"><span data-stu-id="e5073-104">To add a new row, declare a new variable as type <xref:System.Data.DataRow>.</span></span> <span data-ttu-id="e5073-105">一个新**DataRow**调用时返回对象<xref:System.Data.DataTable.NewRow%2A>方法。</span><span class="sxs-lookup"><span data-stu-id="e5073-105">A new **DataRow** object is returned when you call the <xref:System.Data.DataTable.NewRow%2A> method.</span></span> <span data-ttu-id="e5073-106">**DataTable**然后创建**DataRow**对象基于的表的结构定义的<xref:System.Data.DataColumnCollection>。</span><span class="sxs-lookup"><span data-stu-id="e5073-106">The **DataTable** then creates the **DataRow** object based on the structure of the table, as defined by the <xref:System.Data.DataColumnCollection>.</span></span>  
   
- <span data-ttu-id="ad66a-107">下面的示例演示如何通过调用创建一个新行**NewRow**方法。</span><span class="sxs-lookup"><span data-stu-id="ad66a-107">The following example demonstrates how to create a new row by calling the **NewRow** method.</span></span>  
+ <span data-ttu-id="e5073-107">下面的示例演示如何通过调用创建一个新行**NewRow**方法。</span><span class="sxs-lookup"><span data-stu-id="e5073-107">The following example demonstrates how to create a new row by calling the **NewRow** method.</span></span>  
   
 ```vb  
 Dim workRow As DataRow = workTable.NewRow()  
@@ -25,7 +25,7 @@ Dim workRow As DataRow = workTable.NewRow()
 DataRow workRow = workTable.NewRow();  
 ```  
   
- <span data-ttu-id="ad66a-108">然后您可以使用索引或列名来处理新添加的行，如下例所示。</span><span class="sxs-lookup"><span data-stu-id="ad66a-108">You then can manipulate the newly added row using an index or the column name, as shown in the following example.</span></span>  
+ <span data-ttu-id="e5073-108">然后您可以使用索引或列名来处理新添加的行，如下例所示。</span><span class="sxs-lookup"><span data-stu-id="e5073-108">You then can manipulate the newly added row using an index or the column name, as shown in the following example.</span></span>  
   
 ```vb  
 workRow("CustLName") = "Smith"  
@@ -37,7 +37,7 @@ workRow["CustLName"] = "Smith";
 workRow[1] = "Smith";  
 ```  
   
- <span data-ttu-id="ad66a-109">数据插入新行后**外**方法用于向其中添加行<xref:System.Data.DataRowCollection>，下面的代码中所示。</span><span class="sxs-lookup"><span data-stu-id="ad66a-109">After data is inserted into the new row, the **Add** method is used to add the row to the <xref:System.Data.DataRowCollection>, shown in the following code.</span></span>  
+ <span data-ttu-id="e5073-109">数据插入新行后**外**方法用于向其中添加行<xref:System.Data.DataRowCollection>，下面的代码中所示。</span><span class="sxs-lookup"><span data-stu-id="e5073-109">After data is inserted into the new row, the **Add** method is used to add the row to the <xref:System.Data.DataRowCollection>, shown in the following code.</span></span>  
   
 ```vb  
 workTable.Rows.Add(workRow)  
@@ -47,7 +47,7 @@ workTable.Rows.Add(workRow)
 workTable.Rows.Add(workRow);  
 ```  
   
- <span data-ttu-id="ad66a-110">您还可以调用**外**方法来添加新行，通过传入一个值，数组类型化为<xref:System.Object>，如以下示例所示。</span><span class="sxs-lookup"><span data-stu-id="ad66a-110">You can also call the **Add** method to add a new row by passing in an array of values, typed as <xref:System.Object>, as shown in the following example.</span></span>  
+ <span data-ttu-id="e5073-110">您还可以调用**外**方法来添加新行，通过传入一个值，数组类型化为<xref:System.Object>，如以下示例所示。</span><span class="sxs-lookup"><span data-stu-id="e5073-110">You can also call the **Add** method to add a new row by passing in an array of values, typed as <xref:System.Object>, as shown in the following example.</span></span>  
   
 ```vb  
 workTable.Rows.Add(new Object() {1, "Smith"})  
@@ -57,9 +57,9 @@ workTable.Rows.Add(new Object() {1, "Smith"})
 workTable.Rows.Add(new Object[] {1, "Smith"});  
 ```  
   
- <span data-ttu-id="ad66a-111">传递的值，类型化为数组**对象**给**添加**方法创建表中的新行并将其列的值设置为对象数组中的值。</span><span class="sxs-lookup"><span data-stu-id="ad66a-111">Passing an array of values, typed as **Object**, to the **Add** method creates a new row inside the table and sets its column values to the values in the object array.</span></span> <span data-ttu-id="ad66a-112">请注意，数组中的值会根据它们在表中出现的顺序相继与各列匹配。</span><span class="sxs-lookup"><span data-stu-id="ad66a-112">Note that values in the array are matched sequentially to the columns, based on the order in which they appear in the table.</span></span>  
+ <span data-ttu-id="e5073-111">传递的值，类型化为数组**对象**给**添加**方法创建表中的新行并将其列的值设置为对象数组中的值。</span><span class="sxs-lookup"><span data-stu-id="e5073-111">Passing an array of values, typed as **Object**, to the **Add** method creates a new row inside the table and sets its column values to the values in the object array.</span></span> <span data-ttu-id="e5073-112">请注意，数组中的值会根据它们在表中出现的顺序相继与各列匹配。</span><span class="sxs-lookup"><span data-stu-id="e5073-112">Note that values in the array are matched sequentially to the columns, based on the order in which they appear in the table.</span></span>  
   
- <span data-ttu-id="ad66a-113">下面的示例将添加到新创建的 10 行**客户**表。</span><span class="sxs-lookup"><span data-stu-id="ad66a-113">The following example adds 10 rows to the newly created **Customers** table.</span></span>  
+ <span data-ttu-id="e5073-113">下面的示例将添加到新创建的 10 行**客户**表。</span><span class="sxs-lookup"><span data-stu-id="e5073-113">The following example adds 10 rows to the newly created **Customers** table.</span></span>  
   
 ```vb  
 Dim workRow As DataRow  
@@ -85,10 +85,10 @@ for (int i = 0; i <= 9; i++)
 }  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="ad66a-114">请参阅</span><span class="sxs-lookup"><span data-stu-id="ad66a-114">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="e5073-114">请参阅</span><span class="sxs-lookup"><span data-stu-id="e5073-114">See Also</span></span>  
  <xref:System.Data.DataColumnCollection>  
  <xref:System.Data.DataRow>  
  <xref:System.Data.DataRowCollection>  
  <xref:System.Data.DataTable>  
- [<span data-ttu-id="ad66a-115">操作数据表中的数据</span><span class="sxs-lookup"><span data-stu-id="ad66a-115">Manipulating Data in a DataTable</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/manipulating-data-in-a-datatable.md)  
- [<span data-ttu-id="ad66a-116">ADO.NET 托管提供程序和数据集开发人员中心</span><span class="sxs-lookup"><span data-stu-id="ad66a-116">ADO.NET Managed Providers and DataSet Developer Center</span></span>](https://go.microsoft.com/fwlink/?LinkId=217917)
+ [<span data-ttu-id="e5073-115">操作数据表中的数据</span><span class="sxs-lookup"><span data-stu-id="e5073-115">Manipulating Data in a DataTable</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/manipulating-data-in-a-datatable.md)  
+ [<span data-ttu-id="e5073-116">ADO.NET 托管提供程序和数据集开发人员中心</span><span class="sxs-lookup"><span data-stu-id="e5073-116">ADO.NET Managed Providers and DataSet Developer Center</span></span>](https://go.microsoft.com/fwlink/?LinkId=217917)

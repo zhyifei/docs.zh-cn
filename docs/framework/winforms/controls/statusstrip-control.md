@@ -6,30 +6,30 @@ helpviewer_keywords:
 - status bars
 ms.assetid: eb1e59da-0a48-4ce5-af7d-13b8e75af4b1
 ms.openlocfilehash: 157db8b9fbbbb6e1c6af41b4cf3903f4a762d763
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43385721"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43528092"
 ---
-# <a name="statusstrip-control"></a><span data-ttu-id="94a07-102">StatusStrip 控件</span><span class="sxs-lookup"><span data-stu-id="94a07-102">StatusStrip Control</span></span>
-<span data-ttu-id="94a07-103">Windows 窗体 `StatusStrip` 控件在窗体中用作区域，通常显示在窗口底部，应用程序可在此显示各种状态信息。</span><span class="sxs-lookup"><span data-stu-id="94a07-103">The Windows Forms `StatusStrip` control is used on forms as an area, usually displayed at the bottom of a window, in which an application can display various kinds of status information.</span></span> <span data-ttu-id="94a07-104">`StatusStrip` 控件上通常具有 `ToolStripStatusLabel` 控件（用于显示文本或图标以指示状态）或 <xref:System.Windows.Forms.ToolStripProgressBar>（用于以图形方式显示进程的完成状态）。</span><span class="sxs-lookup"><span data-stu-id="94a07-104">`StatusStrip` controls typically have `ToolStripStatusLabel` controls on them that display text or icons to indicate state, or a <xref:System.Windows.Forms.ToolStripProgressBar> that graphically displays the completion state of a process.</span></span>  
+# <a name="statusstrip-control"></a><span data-ttu-id="0f839-102">StatusStrip 控件</span><span class="sxs-lookup"><span data-stu-id="0f839-102">StatusStrip Control</span></span>
+<span data-ttu-id="0f839-103">Windows 窗体 `StatusStrip` 控件在窗体中用作区域，通常显示在窗口底部，应用程序可在此显示各种状态信息。</span><span class="sxs-lookup"><span data-stu-id="0f839-103">The Windows Forms `StatusStrip` control is used on forms as an area, usually displayed at the bottom of a window, in which an application can display various kinds of status information.</span></span> <span data-ttu-id="0f839-104">`StatusStrip` 控件上通常具有 `ToolStripStatusLabel` 控件（用于显示文本或图标以指示状态）或 <xref:System.Windows.Forms.ToolStripProgressBar>（用于以图形方式显示进程的完成状态）。</span><span class="sxs-lookup"><span data-stu-id="0f839-104">`StatusStrip` controls typically have `ToolStripStatusLabel` controls on them that display text or icons to indicate state, or a <xref:System.Windows.Forms.ToolStripProgressBar> that graphically displays the completion state of a process.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="94a07-105">本节内容</span><span class="sxs-lookup"><span data-stu-id="94a07-105">In This Section</span></span>  
- [<span data-ttu-id="94a07-106">StatusStrip 控件概述</span><span class="sxs-lookup"><span data-stu-id="94a07-106">StatusStrip Control Overview</span></span>](../../../../docs/framework/winforms/controls/statusstrip-control-overview.md)  
- <span data-ttu-id="94a07-107">说明此控件的本质及其主要功能和属性。</span><span class="sxs-lookup"><span data-stu-id="94a07-107">Explains what this control is and its key features and properties.</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="0f839-105">本节内容</span><span class="sxs-lookup"><span data-stu-id="0f839-105">In This Section</span></span>  
+ [<span data-ttu-id="0f839-106">StatusStrip 控件概述</span><span class="sxs-lookup"><span data-stu-id="0f839-106">StatusStrip Control Overview</span></span>](../../../../docs/framework/winforms/controls/statusstrip-control-overview.md)  
+ <span data-ttu-id="0f839-107">说明此控件的本质及其主要功能和属性。</span><span class="sxs-lookup"><span data-stu-id="0f839-107">Explains what this control is and its key features and properties.</span></span>  
   
- [<span data-ttu-id="94a07-108">如何：在 StatusStrip 中以交互方式使用 Spring 属性</span><span class="sxs-lookup"><span data-stu-id="94a07-108">How to: Use the Spring Property Interactively in a StatusStrip</span></span>](../../../../docs/framework/winforms/controls/how-to-use-the-spring-property-interactively-in-a-statusstrip.md)  
- <span data-ttu-id="94a07-109">演示如何使用 `Spring` 属性以交互方式将 `ToolStripStatusLabel` 在 `StatusStrip` 居中显示。</span><span class="sxs-lookup"><span data-stu-id="94a07-109">Demonstrates using the `Spring` property to interactively center a `ToolStripStatusLabel` in a `StatusStrip`.</span></span>  
+ [<span data-ttu-id="0f839-108">如何：在 StatusStrip 中以交互方式使用 Spring 属性</span><span class="sxs-lookup"><span data-stu-id="0f839-108">How to: Use the Spring Property Interactively in a StatusStrip</span></span>](../../../../docs/framework/winforms/controls/how-to-use-the-spring-property-interactively-in-a-statusstrip.md)  
+ <span data-ttu-id="0f839-109">演示如何使用 `Spring` 属性以交互方式将 `ToolStripStatusLabel` 在 `StatusStrip` 居中显示。</span><span class="sxs-lookup"><span data-stu-id="0f839-109">Demonstrates using the `Spring` property to interactively center a `ToolStripStatusLabel` in a `StatusStrip`.</span></span>  
   
- <span data-ttu-id="94a07-110">另请参阅[StatusStrip 项集合编辑器](https://msdn.microsoft.com/library/ms233631\(v=vs.110\))， [StatusStrip 项集合编辑器](https://msdn.microsoft.com/library/ms233642\(v=vs.110\))。</span><span class="sxs-lookup"><span data-stu-id="94a07-110">Also see [StatusStrip Items Collection Editor](https://msdn.microsoft.com/library/ms233631\(v=vs.110\)), [StatusStrip Items Collection Editor](https://msdn.microsoft.com/library/ms233642\(v=vs.110\)).</span></span>  
+ <span data-ttu-id="0f839-110">另请参阅[StatusStrip 项集合编辑器](https://msdn.microsoft.com/library/ms233631\(v=vs.110\))， [StatusStrip 项集合编辑器](https://msdn.microsoft.com/library/ms233642\(v=vs.110\))。</span><span class="sxs-lookup"><span data-stu-id="0f839-110">Also see [StatusStrip Items Collection Editor](https://msdn.microsoft.com/library/ms233631\(v=vs.110\)), [StatusStrip Items Collection Editor](https://msdn.microsoft.com/library/ms233642\(v=vs.110\)).</span></span>  
   
-## <a name="reference"></a><span data-ttu-id="94a07-111">参考</span><span class="sxs-lookup"><span data-stu-id="94a07-111">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="0f839-111">参考</span><span class="sxs-lookup"><span data-stu-id="0f839-111">Reference</span></span>  
  <xref:System.Windows.Forms.StatusStrip>  
- <span data-ttu-id="94a07-112">提供类及其成员的相关引用信息。</span><span class="sxs-lookup"><span data-stu-id="94a07-112">Provides reference information on the class and its members.</span></span>  
+ <span data-ttu-id="0f839-112">提供类及其成员的相关引用信息。</span><span class="sxs-lookup"><span data-stu-id="0f839-112">Provides reference information on the class and its members.</span></span>  
   
  <xref:System.Windows.Forms.ToolStripStatusLabel>  
- <span data-ttu-id="94a07-113">提供类及其成员的相关引用信息。</span><span class="sxs-lookup"><span data-stu-id="94a07-113">Provides reference information on the class and its members.</span></span>  
+ <span data-ttu-id="0f839-113">提供类及其成员的相关引用信息。</span><span class="sxs-lookup"><span data-stu-id="0f839-113">Provides reference information on the class and its members.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="94a07-114">请参阅</span><span class="sxs-lookup"><span data-stu-id="94a07-114">See Also</span></span>  
- [<span data-ttu-id="94a07-115">在 Windows 窗体上使用的控件</span><span class="sxs-lookup"><span data-stu-id="94a07-115">Controls to Use on Windows Forms</span></span>](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)
+## <a name="see-also"></a><span data-ttu-id="0f839-114">请参阅</span><span class="sxs-lookup"><span data-stu-id="0f839-114">See Also</span></span>  
+ [<span data-ttu-id="0f839-115">在 Windows 窗体上使用的控件</span><span class="sxs-lookup"><span data-stu-id="0f839-115">Controls to Use on Windows Forms</span></span>](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)

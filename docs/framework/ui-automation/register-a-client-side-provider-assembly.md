@@ -13,24 +13,24 @@ ms.assetid: a03af4d9-2771-43cc-b07b-d468dca23190
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: 166a2aa72fb718ee38fb6ef964179a6cd112deb3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 41dde3d63c95ae95e64dadb7658db7299ba53646
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33400700"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43524228"
 ---
-# <a name="register-a-client-side-provider-assembly"></a><span data-ttu-id="e5612-102">注册客户端提供程序程序集</span><span class="sxs-lookup"><span data-stu-id="e5612-102">Register a Client-Side Provider Assembly</span></span>
+# <a name="register-a-client-side-provider-assembly"></a><span data-ttu-id="6395c-102">注册客户端提供程序程序集</span><span class="sxs-lookup"><span data-stu-id="6395c-102">Register a Client-Side Provider Assembly</span></span>
 > [!NOTE]
->  <span data-ttu-id="e5612-103">本文档适用于想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空间中定义的托管 <xref:System.Windows.Automation> 类的 .NET Framework 开发人员。</span><span class="sxs-lookup"><span data-stu-id="e5612-103">This documentation is intended for .NET Framework developers who want to use the managed [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] classes defined in the <xref:System.Windows.Automation> namespace.</span></span> <span data-ttu-id="e5612-104">有关 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]的最新信息，请参阅 [Windows 自动化 API：UI 自动化](http://go.microsoft.com/fwlink/?LinkID=156746)。</span><span class="sxs-lookup"><span data-stu-id="e5612-104">For the latest information about [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], see [Windows Automation API: UI Automation](http://go.microsoft.com/fwlink/?LinkID=156746).</span></span>  
+>  <span data-ttu-id="6395c-103">本文档适用于想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空间中定义的托管 <xref:System.Windows.Automation> 类的 .NET Framework 开发人员。</span><span class="sxs-lookup"><span data-stu-id="6395c-103">This documentation is intended for .NET Framework developers who want to use the managed [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] classes defined in the <xref:System.Windows.Automation> namespace.</span></span> <span data-ttu-id="6395c-104">有关最新信息[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]，请参阅[Windows 自动化 API: UI 自动化](https://go.microsoft.com/fwlink/?LinkID=156746)。</span><span class="sxs-lookup"><span data-stu-id="6395c-104">For the latest information about [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], see [Windows Automation API: UI Automation](https://go.microsoft.com/fwlink/?LinkID=156746).</span></span>  
   
- <span data-ttu-id="e5612-105">本主题演示如何注册包含客户端 UI 自动化提供程序的 DLL。</span><span class="sxs-lookup"><span data-stu-id="e5612-105">This topic shows how to register a DLL that contains client-side UI Automation providers.</span></span>  
+ <span data-ttu-id="6395c-105">本主题演示如何注册包含客户端 UI 自动化提供程序的 DLL。</span><span class="sxs-lookup"><span data-stu-id="6395c-105">This topic shows how to register a DLL that contains client-side UI Automation providers.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="e5612-106">示例</span><span class="sxs-lookup"><span data-stu-id="e5612-106">Example</span></span>  
- <span data-ttu-id="e5612-107">下面的示例演示如何注册包含控制台窗口提供程序的程序集。</span><span class="sxs-lookup"><span data-stu-id="e5612-107">The following example shows how to register an assembly that contains a provider for a console window.</span></span>  
+## <a name="example"></a><span data-ttu-id="6395c-106">示例</span><span class="sxs-lookup"><span data-stu-id="6395c-106">Example</span></span>  
+ <span data-ttu-id="6395c-107">下面的示例演示如何注册包含控制台窗口提供程序的程序集。</span><span class="sxs-lookup"><span data-stu-id="6395c-107">The following example shows how to register an assembly that contains a provider for a console window.</span></span>  
   
  [!code-csharp[UIAClientSideProvider_snip#102](../../../samples/snippets/csharp/VS_Snippets_Wpf/UIAClientSideProvider_snip/CSharp/CSClientProgram.cs#102)]
  [!code-vb[UIAClientSideProvider_snip#102](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/UIAClientSideProvider_snip/visualbasic/csclientprogram.vb#102)]  
   
-## <a name="see-also"></a><span data-ttu-id="e5612-108">请参阅</span><span class="sxs-lookup"><span data-stu-id="e5612-108">See Also</span></span>  
- [<span data-ttu-id="e5612-109">创建客户端 UI 自动化提供程序</span><span class="sxs-lookup"><span data-stu-id="e5612-109">Create a Client-Side UI Automation Provider</span></span>](../../../docs/framework/ui-automation/create-a-client-side-ui-automation-provider.md)
+## <a name="see-also"></a><span data-ttu-id="6395c-108">请参阅</span><span class="sxs-lookup"><span data-stu-id="6395c-108">See Also</span></span>  
+ [<span data-ttu-id="6395c-109">创建客户端 UI 自动化提供程序</span><span class="sxs-lookup"><span data-stu-id="6395c-109">Create a Client-Side UI Automation Provider</span></span>](../../../docs/framework/ui-automation/create-a-client-side-ui-automation-provider.md)
