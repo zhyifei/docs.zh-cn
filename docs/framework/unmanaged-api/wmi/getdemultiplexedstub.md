@@ -17,14 +17,14 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 4311a77c9159428bf7beacc99d4479acb28b91b6
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43482351"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43659194"
 ---
 # <a name="getdemultiplexedstub-function"></a>GetDemultiplexedStub 函数
-创建对象转发器接收器以帮助客户端在从 Windows 管理接收异步调用。
+创建对象转发器接收器，帮助客户端从 Windows Management 接收异步调用。
   
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
   

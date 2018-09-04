@@ -14,12 +14,12 @@ helpviewer_keywords:
 - combo boxes [Windows Forms], lookup tables
 - ListBox control [Windows Forms], creating lookup tables
 ms.assetid: 4ce35f12-1f4e-4317-92d1-af8686a8cfaa
-ms.openlocfilehash: 212cc229d8a496be11c84e30dbf3a0eedb952006
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b719f2112aac1292b668fe199d48de4b0b60ed21
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33529374"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43659133"
 ---
 # <a name="how-to-create-a-lookup-table-for-a-windows-forms-combobox-listbox-or-checkedlistbox-control"></a>如何：为 Windows 窗体 ComboBox 控件、ListBox 控件或 CheckedListBox 控件创建查找表
 有时，在 Windows 窗体上以用户友好格式显示数据，但存储数据时使用对程序而言更有意义的格式会很有帮助。 例如，食品订单窗体可能按列表框中的名称显示菜单项。 但是，记录订单的数据表将包含代表该食品的唯一 ID 号。 下表显示如何存储和显示食品订单窗体数据的示例。  
@@ -33,16 +33,16 @@ ms.locfileid: "33529374"
   
 ### <a name="itemtable"></a>ItemTable  
   
-|Id|名称|  
+|Id|name|  
 |--------|----------|  
 |12|Potato|  
 |13|Chicken|  
   
- 在此方案中，一个表， **OrderDetailsTable**，存储您担心显示和保存的实际信息。 但为了节省空间，它采用一种很隐秘的方式。 另一个表**ItemTable**，包含有关哪个 ID 号等同于哪个食品名称，以及执行任何操作有关的实际食品订单的唯一与外观相关的信息。  
+ 在此方案中，一个表中， **OrderDetailsTable**，存储您所关注显示和保存的实际信息。 但为了节省空间，它采用一种很隐秘的方式。 另一个表**ItemTable**，包含有关哪个 ID 号等同于哪个食品名称，并执行任何操作有关的实际食品订单仅与外观相关的信息。  
   
- **ItemTable**连接到<xref:System.Windows.Forms.ComboBox>， <xref:System.Windows.Forms.ListBox>，或<xref:System.Windows.Forms.CheckedListBox>控制通过三个属性。 `DataSource`属性包含此表的名称。 `DisplayMember`属性包含你想要在控件 （食品名称） 中显示的表的数据列。 `ValueMember`属性包含该表中具有存储的信息 （ID 号） 的数据列。  
+ **ItemTable**连接到<xref:System.Windows.Forms.ComboBox>， <xref:System.Windows.Forms.ListBox>，或<xref:System.Windows.Forms.CheckedListBox>控制通过三个属性。 `DataSource`属性包含此表的名称。 `DisplayMember`属性包含你想要在控件 （食品名称） 中显示的表的数据列。 `ValueMember`属性包含的数据列的表中具有存储信息 （ID 号）。  
   
- **OrderDetailsTable**通过其绑定集合，通过访问连接到控件<xref:System.Windows.Forms.Control.DataBindings%2A>属性。 时使用的绑定对象添加到集合时，将控件属性连接到数据源中的特定数据成员 （列的 ID 号） ( **OrderDetailsTable**)。 在控件中进行选择时，窗体输入将保存到此表。  
+ **OrderDetailsTable**连接到控件通过其绑定集合，通过访问<xref:System.Windows.Forms.Control.DataBindings%2A>属性。 时绑定对象添加到集合时，连接到数据源中的特定数据成员 （ID 号的列） 的控件属性 ( **OrderDetailsTable**)。 在控件中进行选择时，窗体输入将保存到此表。  
   
 ### <a name="to-create-a-lookup-table"></a>创建查找表的步骤  
   
@@ -50,17 +50,17 @@ ms.locfileid: "33529374"
   
 2.  连接到数据源。  
   
-3.  在两张表之间建立数据关系。 请参阅[DataRelation 对象介绍](http://msdn.microsoft.com/library/89d8a881-8265-41f2-a88b-61311ab06192)。  
+3.  在两张表之间建立数据关系。 请参阅[DataRelation 对象介绍](https://msdn.microsoft.com/library/89d8a881-8265-41f2-a88b-61311ab06192)。  
   
 4.  设置以下属性： 以下属性可在代码或设计器中设置。  
   
     |属性|设置|  
     |--------------|-------------|  
-    |<xref:System.Windows.Forms.ListControl.DataSource%2A>|包含有关哪个 ID 号等同于哪一项的信息的表。 在前面的方案中，这是`ItemTable`。|  
-    |<xref:System.Windows.Forms.ListControl.DisplayMember%2A>|你想要在控件中显示的源数据表的列。 在前面的方案中，这是`"Name"`（若要在代码中设置，使用双引号）。|  
-    |<xref:System.Windows.Forms.ListControl.ValueMember%2A>|包含所存储信息的源数据表的列。 在前面的方案中，这是`"ID"`（若要在代码中设置，使用双引号）。|  
+    |<xref:System.Windows.Forms.ListControl.DataSource%2A>|包含有关哪个 ID 号等同于哪一项的信息的表。 在前面的方案，这是`ItemTable`。|  
+    |<xref:System.Windows.Forms.ListControl.DisplayMember%2A>|你想要在控件中显示的源数据表的列。 在前面的方案，这是`"Name"`（若要在代码中设置，使用引号）。|  
+    |<xref:System.Windows.Forms.ListControl.ValueMember%2A>|包含所存储信息的源数据表的列。 在前面的方案，这是`"ID"`（若要在代码中设置，使用引号）。|  
   
-5.  在过程中，调用 <xref:System.Windows.Forms.ControlBindingsCollection> 类的 <xref:System.Windows.Forms.ControlBindingsCollection.Add%2A> 方法，以将控件的 <xref:System.Windows.Forms.ListControl.SelectedValue%2A> 属性绑定到记录窗体输入的表。 你也可以这样做的设计器中而不是在代码中，通过访问控件的<xref:System.Windows.Forms.Control.DataBindings%2A>中的属性**属性**窗口。 在前面的方案中，这是`OrderDetailsTable`，而且列为`"ItemID"`。  
+5.  在过程中，调用 <xref:System.Windows.Forms.ControlBindingsCollection> 类的 <xref:System.Windows.Forms.ControlBindingsCollection.Add%2A> 方法，以将控件的 <xref:System.Windows.Forms.ListControl.SelectedValue%2A> 属性绑定到记录窗体输入的表。 您可以执行此操作而不是在代码中，在设计器中访问控件的<xref:System.Windows.Forms.Control.DataBindings%2A>中的属性**属性**窗口。 在前面的方案，这是`OrderDetailsTable`，且列是`"ItemID"`。  
   
     ```vb  
     ListBox1.DataBindings.Add("SelectedValue", OrderDetailsTable, "ItemID")  
