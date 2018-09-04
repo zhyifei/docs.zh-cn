@@ -2,15 +2,15 @@
 title: 体系结构和设计
 ms.date: 03/30/2017
 ms.assetid: bd738d39-00e2-4bab-b387-90aac1a014bd
-ms.openlocfilehash: c2e8ff5f21a2941d75b21915552e6935a1423978
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
-ms.translationtype: MT
+ms.openlocfilehash: 5a0d8aac401a3485bc5f158bcda893ad9ab424e8
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32766863"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43419599"
 ---
 # <a name="architecture-and-design"></a>体系结构和设计
-中的 SQL 生成模块[示例提供程序](http://go.microsoft.com/fwlink/?LinkId=180616)作为表示命令目录树的表达式树访问者实现的。 通过表达式树上的单个传递来执行生成。  
+中的 SQL 生成模块[示例提供程序](https://go.microsoft.com/fwlink/?LinkId=180616)作为表示命令目录树的表达式树的访问者实现。 通过表达式树上的单个传递来执行生成。  
   
  从下至上处理树中的节点。 首先，生成一个中间结构：SqlSelectStatement 或 SqlBuilder（二者都实现 ISqlFragment）。 紧接着，从该结构生成字符串 SQL 语句。 生成中间结构的原因有两个：  
   
@@ -25,7 +25,7 @@ ms.locfileid: "32766863"
  在第二阶段，当生成实际字符串时，将重命名别名。  
   
 ## <a name="data-structures"></a>数据结构  
- 本部分讨论中使用的类型[示例提供程序](http://go.microsoft.com/fwlink/?LinkId=180616)用于生成 SQL 语句。  
+ 本部分讨论中使用的类型[示例提供程序](https://go.microsoft.com/fwlink/?LinkId=180616)用于生成 SQL 语句。  
   
 ### <a name="isqlfragment"></a>ISqlFragment  
  本节涵盖实现 ISqlFragment 接口的类，此接口有两个用途：  
@@ -212,13 +212,13 @@ private bool IsParentAJoin{get}
 ### <a name="input-alias-redirecting"></a>输入别名重定向  
  使用符号表完成输入别名重定向。  
   
- 为了解释输入的别名重定向，请参阅中的第一个示例[从命令目录树的最佳实践生成 SQL](../../../../../docs/framework/data/adonet/ef/generating-sql-from-command-trees-best-practices.md)。  在投影中，需要将“a”重定向为“b”。  
+ 若要解释输入的别名重定向，请参阅中的第一个示例[从命令目录树的最佳实践生成 SQL](../../../../../docs/framework/data/adonet/ef/generating-sql-from-command-trees-best-practices.md)。  在投影中，需要将“a”重定向为“b”。  
   
  在创建 SqlSelectStatement 对象时，作为节点的输入的范围将置于 SqlSelectStatement 的 From 属性中。 基于输入绑定名称（“b”）创建符号 (<symbol_b>) 以表示该范围，并将“AS”+ <symbol_b> 追加到 From 子句。  另外，还将此符号添加到 FromExtents 属性。  
   
  还将此符号添加到符号表以将输入绑定名链接到此符号（“b”，<symbol_b>）。  
   
- 如果后续节点重用该 SqlSelectStatement，则它将一个项添加到符号表以将其输入绑定名链接到此符号。 在本示例中，带输入的绑定名"a"的 DbProjectExpression 将重用 SqlSelectStatement 并添加 ("a"、 \< symbol_b >) 到表。  
+ 如果后续节点重用该 SqlSelectStatement，则它将一个项添加到符号表以将其输入绑定名链接到此符号。 在本示例中，带输入的绑定名"a"的 DbProjectExpression 将重用 SqlSelectStatement 并添加 ("a"、 \< symbol_b >) 的表。  
   
  当表达式引用正在重用 SqlSelectStatement 的节点的输入绑定名时，使用符号表将该引用解析为正确的重定向符号。 若在访问表示“a”的 DbVariableReferenceExpression 时解析“a.x”中的“a”，则将其解析为符号 <symbol_b>。  
   
@@ -324,7 +324,7 @@ ORDER BY sk1, sk2, ...
 <leftSqlSelectStatement> <setOp> <rightSqlSelectStatement>  
 ```  
   
- 其中\<leftSqlSelectStatement > 和\<rightSqlSelectStatement > 是通过访问每个输入，获取 SqlSelectStatements 和\<setOp > 是相应的操作 (例如 UNION ALL)。  
+ 其中\<leftSqlSelectStatement > 和\<rightSqlSelectStatement > 是通过访问每个输入，获得的 Sqlselectstatement 和\<setOp > 是对应的运算 (例如 UNION ALL)。  
   
 ### <a name="dbscanexpression"></a>DbScanExpression  
  如果在联接上下文中访问 DbScanExpression（作为一个联接的输入，该联接是另一个联接的左侧子级），则它会返回一个 SqlBuilder，后者带有相应目标（为定义查询、表或视图）的目标 SQL。 否则，创建一个新的 SqlSelectStatement，其 FROM 字段设置为与相应目标对应。  
