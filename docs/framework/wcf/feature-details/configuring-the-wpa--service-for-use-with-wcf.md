@@ -2,36 +2,36 @@
 title: 配置 Windows 进程激活服务以用于 Windows Communication Foundation
 ms.date: 03/30/2017
 ms.assetid: 1d50712e-53cd-4773-b8bc-a1e1aad66b78
-ms.openlocfilehash: 3a4d771c3f2d5e7e6ec4fd6a1e229548e063a6d1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6e74c81aa26ba7f8d093b8b3ec52f19eb3519905
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33489763"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43489781"
 ---
-# <a name="configuring-the-windows-process-activation-service-for-use-with-windows-communication-foundation"></a><span data-ttu-id="cd2c3-102">配置 Windows 进程激活服务以用于 Windows Communication Foundation</span><span class="sxs-lookup"><span data-stu-id="cd2c3-102">Configuring the Windows Process Activation Service for Use with Windows Communication Foundation</span></span>
-<span data-ttu-id="cd2c3-103">本主题介绍设置 Windows 进程激活服务 (也称为 WAS) 所需的步骤在[!INCLUDE[wv](../../../../includes/wv-md.md)]来承载 Windows Communication Foundation (WCF) 服务不通过 HTTP 进行通信的网络协议。</span><span class="sxs-lookup"><span data-stu-id="cd2c3-103">This topic describes the steps required to set up Windows Process Activation Service (also known as WAS) in [!INCLUDE[wv](../../../../includes/wv-md.md)] to host Windows Communication Foundation (WCF) services that do not communicate over HTTP network protocols.</span></span> <span data-ttu-id="cd2c3-104">下面的部分略述此配置的步骤：</span><span class="sxs-lookup"><span data-stu-id="cd2c3-104">The following sections outline the steps for this configuration:</span></span>  
+# <a name="configuring-the-windows-process-activation-service-for-use-with-windows-communication-foundation"></a><span data-ttu-id="c3217-102">配置 Windows 进程激活服务以用于 Windows Communication Foundation</span><span class="sxs-lookup"><span data-stu-id="c3217-102">Configuring the Windows Process Activation Service for Use with Windows Communication Foundation</span></span>
+<span data-ttu-id="c3217-103">本主题介绍设置 Windows 进程激活服务 (也称为 WAS) 所需的步骤的[!INCLUDE[wv](../../../../includes/wv-md.md)]来承载 Windows Communication Foundation (WCF) 服务未通过 HTTP 进行通信的网络协议。</span><span class="sxs-lookup"><span data-stu-id="c3217-103">This topic describes the steps required to set up Windows Process Activation Service (also known as WAS) in [!INCLUDE[wv](../../../../includes/wv-md.md)] to host Windows Communication Foundation (WCF) services that do not communicate over HTTP network protocols.</span></span> <span data-ttu-id="c3217-104">下面的部分略述此配置的步骤：</span><span class="sxs-lookup"><span data-stu-id="c3217-104">The following sections outline the steps for this configuration:</span></span>  
   
--   <span data-ttu-id="cd2c3-105">安装 （或确认安装） 所需的 WCF 激活组件。</span><span class="sxs-lookup"><span data-stu-id="cd2c3-105">Install (or confirm the installation of) the WCF activation components required.</span></span>  
+-   <span data-ttu-id="c3217-105">安装 （或确认安装） 所需的 WCF 激活组件。</span><span class="sxs-lookup"><span data-stu-id="c3217-105">Install (or confirm the installation of) the WCF activation components required.</span></span>  
   
--   <span data-ttu-id="cd2c3-106">创建一个具有要使用的网络协议绑定的 WAS 站点，或者向现有站点添加新协议绑定。</span><span class="sxs-lookup"><span data-stu-id="cd2c3-106">Create a WAS site with the network protocol bindings you wish to use, or add a new protocol binding to an existing site.</span></span>  
+-   <span data-ttu-id="c3217-106">创建一个具有要使用的网络协议绑定的 WAS 站点，或者向现有站点添加新协议绑定。</span><span class="sxs-lookup"><span data-stu-id="c3217-106">Create a WAS site with the network protocol bindings you wish to use, or add a new protocol binding to an existing site.</span></span>  
   
--   <span data-ttu-id="cd2c3-107">创建一个应用程序以承载服务，并使该应用程序可以使用所需的网络协议。</span><span class="sxs-lookup"><span data-stu-id="cd2c3-107">Create an application to host your services and enable that application to use the required network protocols.</span></span>  
+-   <span data-ttu-id="c3217-107">创建一个应用程序以承载服务，并使该应用程序可以使用所需的网络协议。</span><span class="sxs-lookup"><span data-stu-id="c3217-107">Create an application to host your services and enable that application to use the required network protocols.</span></span>  
   
--   <span data-ttu-id="cd2c3-108">生成 WCF 服务公开非 HTTP 终结点。</span><span class="sxs-lookup"><span data-stu-id="cd2c3-108">Build a WCF service that exposes a non-HTTP endpoint.</span></span>  
+-   <span data-ttu-id="c3217-108">构建 WCF 服务公开非 HTTP 终结点。</span><span class="sxs-lookup"><span data-stu-id="c3217-108">Build a WCF service that exposes a non-HTTP endpoint.</span></span>  
   
-## <a name="configuring-a-site-with-non-http-bindings"></a><span data-ttu-id="cd2c3-109">使用非 HTTP 绑定配置站点</span><span class="sxs-lookup"><span data-stu-id="cd2c3-109">Configuring a Site with Non-HTTP bindings</span></span>  
- <span data-ttu-id="cd2c3-110">若要将非 HTTP 绑定与 WAS 一起使用，必须将站点绑定添加到 WAS 配置。</span><span class="sxs-lookup"><span data-stu-id="cd2c3-110">To use a non-HTTP binding with WAS, the site binding must be added to the WAS configuration.</span></span> <span data-ttu-id="cd2c3-111">WAS 的配置存储是 applicationHost.config 文件，该文件位于 %windir%\system32\inetsrv\config 目录中。</span><span class="sxs-lookup"><span data-stu-id="cd2c3-111">The configuration store for WAS is the applicationHost.config file, located in the %windir%\system32\inetsrv\config directory.</span></span> <span data-ttu-id="cd2c3-112">此配置存储由 WAS 和 IIS 7.0 共享。</span><span class="sxs-lookup"><span data-stu-id="cd2c3-112">This configuration store is shared by both WAS and IIS 7.0.</span></span>  
+## <a name="configuring-a-site-with-non-http-bindings"></a><span data-ttu-id="c3217-109">使用非 HTTP 绑定配置站点</span><span class="sxs-lookup"><span data-stu-id="c3217-109">Configuring a Site with Non-HTTP bindings</span></span>  
+ <span data-ttu-id="c3217-110">若要将非 HTTP 绑定与 WAS 一起使用，必须将站点绑定添加到 WAS 配置。</span><span class="sxs-lookup"><span data-stu-id="c3217-110">To use a non-HTTP binding with WAS, the site binding must be added to the WAS configuration.</span></span> <span data-ttu-id="c3217-111">WAS 的配置存储是 applicationHost.config 文件，该文件位于 %windir%\system32\inetsrv\config 目录中。</span><span class="sxs-lookup"><span data-stu-id="c3217-111">The configuration store for WAS is the applicationHost.config file, located in the %windir%\system32\inetsrv\config directory.</span></span> <span data-ttu-id="c3217-112">此配置存储由 WAS 和 IIS 7.0 共享。</span><span class="sxs-lookup"><span data-stu-id="c3217-112">This configuration store is shared by both WAS and IIS 7.0.</span></span>  
   
- <span data-ttu-id="cd2c3-113">applicationHost.config 是一个 XML 文本文件，可以使用任何标准文本编辑器（如记事本）打开。</span><span class="sxs-lookup"><span data-stu-id="cd2c3-113">applicationHost.config is an XML text file that can be opened with any standard text editor (such as Notepad).</span></span> <span data-ttu-id="cd2c3-114">不过，[!INCLUDE[iisver](../../../../includes/iisver-md.md)] 命令行配置工具 (appcmd.exe) 是添加非 HTTP 站点绑定的首选方法。</span><span class="sxs-lookup"><span data-stu-id="cd2c3-114">However, the [!INCLUDE[iisver](../../../../includes/iisver-md.md)] command-line configuration tool (appcmd.exe) is the preferred way to add non-HTTP site bindings.</span></span>  
+ <span data-ttu-id="c3217-113">applicationHost.config 是一个 XML 文本文件，可以使用任何标准文本编辑器（如记事本）打开。</span><span class="sxs-lookup"><span data-stu-id="c3217-113">applicationHost.config is an XML text file that can be opened with any standard text editor (such as Notepad).</span></span> <span data-ttu-id="c3217-114">不过，[!INCLUDE[iisver](../../../../includes/iisver-md.md)] 命令行配置工具 (appcmd.exe) 是添加非 HTTP 站点绑定的首选方法。</span><span class="sxs-lookup"><span data-stu-id="c3217-114">However, the [!INCLUDE[iisver](../../../../includes/iisver-md.md)] command-line configuration tool (appcmd.exe) is the preferred way to add non-HTTP site bindings.</span></span>  
   
- <span data-ttu-id="cd2c3-115">下面的命令使用 appcmd.exe 将 net.tcp 站点绑定添加到默认网站（将此命令作为单独的一行输入）。</span><span class="sxs-lookup"><span data-stu-id="cd2c3-115">The following command adds a net.tcp site binding to the default Web site using appcmd.exe (this command is entered as a single line).</span></span>  
+ <span data-ttu-id="c3217-115">下面的命令使用 appcmd.exe 将 net.tcp 站点绑定添加到默认网站（将此命令作为单独的一行输入）。</span><span class="sxs-lookup"><span data-stu-id="c3217-115">The following command adds a net.tcp site binding to the default Web site using appcmd.exe (this command is entered as a single line).</span></span>  
   
 ```  
 appcmd.exe set site "Default Web Site" -+bindings.[protocol='net.tcp',bindingInformation='808:*']  
 ```  
   
- <span data-ttu-id="cd2c3-116">通过将下面指示的行添加到 applicationHost.config 文件，此命令将新 net.tcp 绑定添加到默认网站。</span><span class="sxs-lookup"><span data-stu-id="cd2c3-116">This command adds the new net.tcp binding to the default Web site by adding the line indicated below to the applicationHost.config file.</span></span>  
+ <span data-ttu-id="c3217-116">通过将下面指示的行添加到 applicationHost.config 文件，此命令将新 net.tcp 绑定添加到默认网站。</span><span class="sxs-lookup"><span data-stu-id="c3217-116">This command adds the new net.tcp binding to the default Web site by adding the line indicated below to the applicationHost.config file.</span></span>  
   
 ```xml  
 <sites>  
@@ -45,16 +45,16 @@ appcmd.exe set site "Default Web Site" -+bindings.[protocol='net.tcp',bindingInf
 </sites>  
 ```  
   
-## <a name="enabling-an-application-to-use-non-http-protocols"></a><span data-ttu-id="cd2c3-117">使应用程序可以使用非 HTTP 协议</span><span class="sxs-lookup"><span data-stu-id="cd2c3-117">Enabling an Application to Use Non-HTTP Protocols</span></span>  
- <span data-ttu-id="cd2c3-118">你可以启用或禁用单个网络 protocolsat 应用程序级别。</span><span class="sxs-lookup"><span data-stu-id="cd2c3-118">You can enable or disable individual network protocolsat the application level.</span></span> <span data-ttu-id="cd2c3-119">下面的命令说明如何为在 `Default Web Site` 中运行的应用程序同时启用 HTTP 和 net.tcp 协议。</span><span class="sxs-lookup"><span data-stu-id="cd2c3-119">The following command illustrates how to enable both the HTTP and net.tcp protocols for an application that runs in the `Default Web Site`.</span></span>  
+## <a name="enabling-an-application-to-use-non-http-protocols"></a><span data-ttu-id="c3217-117">使应用程序可以使用非 HTTP 协议</span><span class="sxs-lookup"><span data-stu-id="c3217-117">Enabling an Application to Use Non-HTTP Protocols</span></span>  
+ <span data-ttu-id="c3217-118">您可以启用或禁用各个网络 protocolsat 应用程序级别。</span><span class="sxs-lookup"><span data-stu-id="c3217-118">You can enable or disable individual network protocolsat the application level.</span></span> <span data-ttu-id="c3217-119">下面的命令说明如何为在 `Default Web Site` 中运行的应用程序同时启用 HTTP 和 net.tcp 协议。</span><span class="sxs-lookup"><span data-stu-id="c3217-119">The following command illustrates how to enable both the HTTP and net.tcp protocols for an application that runs in the `Default Web Site`.</span></span>  
   
 ```  
 appcmd.exe set app "Default Web Site/appOne" /enabledProtocols:net.tcp  
 ```  
   
- <span data-ttu-id="cd2c3-120">也可以在设置启用的协议列表\<applicationDefaults > 在 ApplicationHost.config 中存储的站点的 XML 配置元素。</span><span class="sxs-lookup"><span data-stu-id="cd2c3-120">The list of enabled protocols can also be set in the \<applicationDefaults> element of the site’s XML configuration stored in ApplicationHost.config.</span></span>  
+ <span data-ttu-id="c3217-120">此外可以设置启用的协议列表\<applicationDefaults > 的站点的 XML 配置存储在 ApplicationHost.config 中的元素。</span><span class="sxs-lookup"><span data-stu-id="c3217-120">The list of enabled protocols can also be set in the \<applicationDefaults> element of the site’s XML configuration stored in ApplicationHost.config.</span></span>  
   
- <span data-ttu-id="cd2c3-121">摘自 applicationHost.config 的以下 XML 代码说明一个已同时绑定到 HTTP 协议和非 HTTP 协议的站点。</span><span class="sxs-lookup"><span data-stu-id="cd2c3-121">The following XML code from applicationHost.config illustrates a site bound to both HTTP and non-HTTP protocols.</span></span> <span data-ttu-id="cd2c3-122">支持非 HTTP 协议所需的其他配置通过注释进行了突出。</span><span class="sxs-lookup"><span data-stu-id="cd2c3-122">The additional configuration required to support non-HTTP protocols is called out with comments.</span></span>  
+ <span data-ttu-id="c3217-121">摘自 applicationHost.config 的以下 XML 代码说明一个已同时绑定到 HTTP 协议和非 HTTP 协议的站点。</span><span class="sxs-lookup"><span data-stu-id="c3217-121">The following XML code from applicationHost.config illustrates a site bound to both HTTP and non-HTTP protocols.</span></span> <span data-ttu-id="c3217-122">支持非 HTTP 协议所需的其他配置通过注释进行了突出。</span><span class="sxs-lookup"><span data-stu-id="c3217-122">The additional configuration required to support non-HTTP protocols is called out with comments.</span></span>  
   
 ```xml  
 <sites>  
@@ -83,19 +83,19 @@ appcmd.exe set app "Default Web Site/appOne" /enabledProtocols:net.tcp
 </sites>  
 ```  
   
- <span data-ttu-id="cd2c3-123">如果您尝试通过用于非 HTTP 激活的 WAS 来激活服务，并且您未安装和配置 WAS，您可能会看到以下错误：</span><span class="sxs-lookup"><span data-stu-id="cd2c3-123">If you attempt to activate a service using WAS for Non-HTTP activation and you have not installed and configured WAS you may see the following error:</span></span>  
+ <span data-ttu-id="c3217-123">如果您尝试通过用于非 HTTP 激活的 WAS 来激活服务，并且您未安装和配置 WAS，您可能会看到以下错误：</span><span class="sxs-lookup"><span data-stu-id="c3217-123">If you attempt to activate a service using WAS for Non-HTTP activation and you have not installed and configured WAS you may see the following error:</span></span>  
   
 ```Output  
 [InvalidOperationException: The protocol 'net.tcp' does not have an implementation of HostedTransportConfiguration type registered.]   System.ServiceModel.AsyncResult.End(IAsyncResult result) +15778592   System.ServiceModel.Activation.HostedHttpRequestAsyncResult.End(IAsyncResult result) +15698937   System.ServiceModel.Activation.HostedHttpRequestAsyncResult.ExecuteSynchronous(HttpApplication context, Boolean flowContext) +265   System.ServiceModel.Activation.HttpModule.ProcessRequest(Object sender, EventArgs e) +227   System.Web.SyncEventExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute() +80   System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously) +171  
 ```  
   
- <span data-ttu-id="cd2c3-124">如果您看到此错误，确保已安装并正确配置了用于非 HTTP 激活的 WAS。</span><span class="sxs-lookup"><span data-stu-id="cd2c3-124">If you see this error ensure WAS for Non-HTTP Activation is installed and configured properly.</span></span> <span data-ttu-id="cd2c3-125">有关详细信息，请参阅[如何： 安装和配置 WCF 激活组件](../../../../docs/framework/wcf/feature-details/how-to-install-and-configure-wcf-activation-components.md)。</span><span class="sxs-lookup"><span data-stu-id="cd2c3-125">For more information, see [How to: Install and Configure WCF Activation Components](../../../../docs/framework/wcf/feature-details/how-to-install-and-configure-wcf-activation-components.md).</span></span>  
+ <span data-ttu-id="c3217-124">如果您看到此错误，确保已安装并正确配置了用于非 HTTP 激活的 WAS。</span><span class="sxs-lookup"><span data-stu-id="c3217-124">If you see this error ensure WAS for Non-HTTP Activation is installed and configured properly.</span></span> <span data-ttu-id="c3217-125">有关详细信息，请参阅[如何： 安装和配置 WCF 激活组件](../../../../docs/framework/wcf/feature-details/how-to-install-and-configure-wcf-activation-components.md)。</span><span class="sxs-lookup"><span data-stu-id="c3217-125">For more information, see [How to: Install and Configure WCF Activation Components](../../../../docs/framework/wcf/feature-details/how-to-install-and-configure-wcf-activation-components.md).</span></span>  
   
-## <a name="building-a-wcf-service-that-uses-was-for-non-http-activation"></a><span data-ttu-id="cd2c3-126">生成一个将 WAS 用于非 HTTP 激活的 WCF 服务</span><span class="sxs-lookup"><span data-stu-id="cd2c3-126">Building a WCF Service That Uses WAS for Non-HTTP activation</span></span>  
- <span data-ttu-id="cd2c3-127">一旦执行的步骤来安装和配置 WAS (请参阅[如何： 安装和配置 WCF 激活组件](../../../../docs/framework/wcf/feature-details/how-to-install-and-configure-wcf-activation-components.md))，服务配置为使用 WAS 激活是类似于在 IIS 中配置托管服务。</span><span class="sxs-lookup"><span data-stu-id="cd2c3-127">Once you perform the steps to install and configure WAS (see [How to: Install and Configure WCF Activation Components](../../../../docs/framework/wcf/feature-details/how-to-install-and-configure-wcf-activation-components.md)), configuring a service to use WAS for activation is similar to configuring a service that is hosted in IIS.</span></span>  
+## <a name="building-a-wcf-service-that-uses-was-for-non-http-activation"></a><span data-ttu-id="c3217-126">生成一个将 WAS 用于非 HTTP 激活的 WCF 服务</span><span class="sxs-lookup"><span data-stu-id="c3217-126">Building a WCF Service That Uses WAS for Non-HTTP activation</span></span>  
+ <span data-ttu-id="c3217-127">执行安装和配置 WAS 的步骤后 (请参阅[如何： 安装和配置 WCF 激活组件](../../../../docs/framework/wcf/feature-details/how-to-install-and-configure-wcf-activation-components.md))，将服务配置为使用 WAS 进行激活的过程类似于在 IIS 中配置托管服务。</span><span class="sxs-lookup"><span data-stu-id="c3217-127">Once you perform the steps to install and configure WAS (see [How to: Install and Configure WCF Activation Components](../../../../docs/framework/wcf/feature-details/how-to-install-and-configure-wcf-activation-components.md)), configuring a service to use WAS for activation is similar to configuring a service that is hosted in IIS.</span></span>  
   
- <span data-ttu-id="cd2c3-128">有关生成 WAS 激活的 WCF 服务的详细说明，请参阅[如何： 承载在 WAS 中的 WCF 服务](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-was.md)。</span><span class="sxs-lookup"><span data-stu-id="cd2c3-128">For detailed instructions about building a WAS-activated WCF service, see [How to: Host a WCF Service in WAS](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-was.md).</span></span>  
+ <span data-ttu-id="c3217-128">有关生成 WAS 激活 WCF 服务的详细说明，请参阅[如何： 承载在 WAS 中的 WCF 服务](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-was.md)。</span><span class="sxs-lookup"><span data-stu-id="c3217-128">For detailed instructions about building a WAS-activated WCF service, see [How to: Host a WCF Service in WAS](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-was.md).</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="cd2c3-129">请参阅</span><span class="sxs-lookup"><span data-stu-id="cd2c3-129">See Also</span></span>  
- [<span data-ttu-id="cd2c3-130">在 Windows Process Activation Service 中承载</span><span class="sxs-lookup"><span data-stu-id="cd2c3-130">Hosting in Windows Process Activation Service</span></span>](../../../../docs/framework/wcf/feature-details/hosting-in-windows-process-activation-service.md)  
- [<span data-ttu-id="cd2c3-131">Windows Server App Fabric 承载功能</span><span class="sxs-lookup"><span data-stu-id="cd2c3-131">Windows Server App Fabric Hosting Features</span></span>](http://go.microsoft.com/fwlink/?LinkId=201276)
+## <a name="see-also"></a><span data-ttu-id="c3217-129">请参阅</span><span class="sxs-lookup"><span data-stu-id="c3217-129">See Also</span></span>  
+ [<span data-ttu-id="c3217-130">在 Windows Process Activation Service 中承载</span><span class="sxs-lookup"><span data-stu-id="c3217-130">Hosting in Windows Process Activation Service</span></span>](../../../../docs/framework/wcf/feature-details/hosting-in-windows-process-activation-service.md)  
+ [<span data-ttu-id="c3217-131">Windows Server App Fabric 承载功能</span><span class="sxs-lookup"><span data-stu-id="c3217-131">Windows Server App Fabric Hosting Features</span></span>](https://go.microsoft.com/fwlink/?LinkId=201276)
