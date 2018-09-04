@@ -8,21 +8,21 @@ helpviewer_keywords:
 - BC31168
 ms.assetid: 45707363-55e4-4151-892d-d8729106355b
 ms.openlocfilehash: 8546ed0a5032d93bcf7320c96424b02b3b6d5fa3
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43467860"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43553846"
 ---
-# <a name="xml-axis-properties-do-not-support-late-binding"></a><span data-ttu-id="ab7e6-102">XML 轴属性不支持后期绑定</span><span class="sxs-lookup"><span data-stu-id="ab7e6-102">XML axis properties do not support late binding</span></span>
-<span data-ttu-id="ab7e6-103">非类型化的对象引用了 XML 轴属性。</span><span class="sxs-lookup"><span data-stu-id="ab7e6-103">An XML axis property has been referenced for an untyped object.</span></span>  
+# <a name="xml-axis-properties-do-not-support-late-binding"></a><span data-ttu-id="577cd-102">XML 轴属性不支持后期绑定</span><span class="sxs-lookup"><span data-stu-id="577cd-102">XML axis properties do not support late binding</span></span>
+<span data-ttu-id="577cd-103">非类型化的对象引用了 XML 轴属性。</span><span class="sxs-lookup"><span data-stu-id="577cd-103">An XML axis property has been referenced for an untyped object.</span></span>  
   
- <span data-ttu-id="ab7e6-104">**错误 ID:** BC31168</span><span class="sxs-lookup"><span data-stu-id="ab7e6-104">**Error ID:** BC31168</span></span>  
+ <span data-ttu-id="577cd-104">**错误 ID:** BC31168</span><span class="sxs-lookup"><span data-stu-id="577cd-104">**Error ID:** BC31168</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="ab7e6-105">更正此错误</span><span class="sxs-lookup"><span data-stu-id="ab7e6-105">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="577cd-105">更正此错误</span><span class="sxs-lookup"><span data-stu-id="577cd-105">To correct this error</span></span>  
   
--   <span data-ttu-id="ab7e6-106">请确保该对象是强类型<xref:System.Xml.Linq.XElement>之前引用 XML 轴属性的对象。</span><span class="sxs-lookup"><span data-stu-id="ab7e6-106">Ensure that the object is a strong-typed <xref:System.Xml.Linq.XElement> object before referencing the XML axis property.</span></span>  
+-   <span data-ttu-id="577cd-106">请确保该对象是强类型<xref:System.Xml.Linq.XElement>之前引用 XML 轴属性的对象。</span><span class="sxs-lookup"><span data-stu-id="577cd-106">Ensure that the object is a strong-typed <xref:System.Xml.Linq.XElement> object before referencing the XML axis property.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="ab7e6-107">请参阅</span><span class="sxs-lookup"><span data-stu-id="ab7e6-107">See Also</span></span>  
- [<span data-ttu-id="ab7e6-108">XML 轴属性</span><span class="sxs-lookup"><span data-stu-id="ab7e6-108">XML Axis Properties</span></span>](../../../visual-basic/language-reference/xml-axis/index.md)  
- [<span data-ttu-id="ab7e6-109">XML</span><span class="sxs-lookup"><span data-stu-id="ab7e6-109">XML</span></span>](../../../visual-basic/programming-guide/language-features/xml/index.md)
+## <a name="see-also"></a><span data-ttu-id="577cd-107">请参阅</span><span class="sxs-lookup"><span data-stu-id="577cd-107">See Also</span></span>  
+ [<span data-ttu-id="577cd-108">XML 轴属性</span><span class="sxs-lookup"><span data-stu-id="577cd-108">XML Axis Properties</span></span>](../../../visual-basic/language-reference/xml-axis/index.md)  
+ [<span data-ttu-id="577cd-109">XML</span><span class="sxs-lookup"><span data-stu-id="577cd-109">XML</span></span>](../../../visual-basic/programming-guide/language-features/xml/index.md)

@@ -8,42 +8,42 @@ helpviewer_keywords:
 - animation [WPF]
 ms.assetid: 587e36f6-1957-424e-9d89-c43724f26d84
 ms.openlocfilehash: 7c61e1bbd3b9c93785393c729f2af27f29d1dc40
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43468662"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43555271"
 ---
-# <a name="animation-and-timing-how-to-topics"></a><span data-ttu-id="fee77-102">动画和计时帮助主题</span><span class="sxs-lookup"><span data-stu-id="fee77-102">Animation and Timing How-to Topics</span></span>
-<span data-ttu-id="fee77-103">以下主题演示如何使用[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]动画和计时系统应用程序中的。</span><span class="sxs-lookup"><span data-stu-id="fee77-103">The following topics demonstrate how to use the [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] animation and timing system in your applications.</span></span>  
+# <a name="animation-and-timing-how-to-topics"></a><span data-ttu-id="cc885-102">动画和计时帮助主题</span><span class="sxs-lookup"><span data-stu-id="cc885-102">Animation and Timing How-to Topics</span></span>
+<span data-ttu-id="cc885-103">以下主题演示如何使用[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]动画和计时系统应用程序中的。</span><span class="sxs-lookup"><span data-stu-id="cc885-103">The following topics demonstrate how to use the [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] animation and timing system in your applications.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="fee77-104">本节内容</span><span class="sxs-lookup"><span data-stu-id="fee77-104">In This Section</span></span>  
- [<span data-ttu-id="fee77-105">加速或减速播放动画</span><span class="sxs-lookup"><span data-stu-id="fee77-105">Accelerate or Decelerate an Animation</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-accelerate-or-decelerate-an-animation.md)  
- [<span data-ttu-id="fee77-106">在重复循环过程中累积动画值</span><span class="sxs-lookup"><span data-stu-id="fee77-106">Accumulate Animation Values During Repeat Cycles</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-accumulate-animation-values-during-repeat-cycles.md)  
- [<span data-ttu-id="fee77-107">向动画起始值添加动画输出值</span><span class="sxs-lookup"><span data-stu-id="fee77-107">Add an Animation Output Value to an Animation Starting Value</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-add-an-animation-output-value-to-an-animation-starting-value.md)  
- [<span data-ttu-id="fee77-108">使用情节提要对属性进行动画处理</span><span class="sxs-lookup"><span data-stu-id="fee77-108">Animate a Property by Using a Storyboard</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-property-by-using-a-storyboard.md)  
- [<span data-ttu-id="fee77-109">在不使用情节提要的情况下为属性设置动画效果</span><span class="sxs-lookup"><span data-stu-id="fee77-109">Animate a Property Without Using a Storyboard</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-property-without-using-a-storyboard.md)  
- [<span data-ttu-id="fee77-110">在 ControlTemplate 中设置动画效果</span><span class="sxs-lookup"><span data-stu-id="fee77-110">Animate in a ControlTemplate</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-in-a-controltemplate.md)  
- [<span data-ttu-id="fee77-111">在样式中设置动画效果</span><span class="sxs-lookup"><span data-stu-id="fee77-111">Animate in a Style</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-in-a-style.md)  
- [<span data-ttu-id="fee77-112">为元素或画笔的不透明度设置动画效果</span><span class="sxs-lookup"><span data-stu-id="fee77-112">Animate the Opacity of an Element or Brush</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-the-opacity-of-an-element-or-brush.md)  
- [<span data-ttu-id="fee77-113">在不更改时间线速度的情况下更改时钟速度</span><span class="sxs-lookup"><span data-stu-id="fee77-113">Change the Speed of a Clock Without Changing the Speed of Its Timeline</span></span>](../../../../docs/framework/wpf/graphics-multimedia/change-the-speed-of-a-clock.md)  
- [<span data-ttu-id="fee77-114">在情节提要启动后使用其交互式方法对其进行控制</span><span class="sxs-lookup"><span data-stu-id="fee77-114">Control a Storyboard After It Starts Using Its Interactive Methods</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-control-a-storyboard-after-it-starts.md)  
- [<span data-ttu-id="fee77-115">使用 From、To 和 By 控制动画</span><span class="sxs-lookup"><span data-stu-id="fee77-115">Control an Animation using From, To, and By</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-control-an-animation-using-from-to-and-by.md)  
- [<span data-ttu-id="fee77-116">定义名称范围</span><span class="sxs-lookup"><span data-stu-id="fee77-116">Define a Name Scope</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-define-a-name-scope.md)  
- [<span data-ttu-id="fee77-117">在时钟状态发生变化时接收通知</span><span class="sxs-lookup"><span data-stu-id="fee77-117">Receive Notification When a Clock's State Changes</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-receive-notification-when-clock-state-changes.md)  
- [<span data-ttu-id="fee77-118">重复动画</span><span class="sxs-lookup"><span data-stu-id="fee77-118">Repeat an Animation</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-repeat-an-animation.md)  
- [<span data-ttu-id="fee77-119">搜寻情节提要</span><span class="sxs-lookup"><span data-stu-id="fee77-119">Seek a Storyboard</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-seek-a-storyboard.md)  
- [<span data-ttu-id="fee77-120">同步搜寻演示图板</span><span class="sxs-lookup"><span data-stu-id="fee77-120">Seek a Storyboard Synchronously</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-seek-a-storyboard-synchronously.md)  
- [<span data-ttu-id="fee77-121">设置动画时长</span><span class="sxs-lookup"><span data-stu-id="fee77-121">Set a Duration for an Animation</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-set-a-duration-for-an-animation.md)  
- [<span data-ttu-id="fee77-122">在使用情节提要为属性设置动画效果后设置属性</span><span class="sxs-lookup"><span data-stu-id="fee77-122">Set a Property After Animating It with a Storyboard</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-set-a-property-after-animating-it-with-a-storyboard.md)  
- [<span data-ttu-id="fee77-123">使用子时间线简化动画</span><span class="sxs-lookup"><span data-stu-id="fee77-123">Simplify Animations by Using Child Timelines</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-simplify-animations-by-using-child-timelines.md)  
- [<span data-ttu-id="fee77-124">指定演示图板动画之间的 HandoffBehavior</span><span class="sxs-lookup"><span data-stu-id="fee77-124">Specify HandoffBehavior Between Storyboard Animations</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-specify-handoffbehavior-between-storyboard-animations.md)  
- [<span data-ttu-id="fee77-125">为已经到达有效期末尾的时间线指定 FillBehavior</span><span class="sxs-lookup"><span data-stu-id="fee77-125">Specify the FillBehavior for a Timeline that has Reached the End of Its Active Period</span></span>](../../../../docs/framework/wpf/graphics-multimedia/specify-the-fillbehavior-for-a-timeline.md)  
- [<span data-ttu-id="fee77-126">指定时间线是否自动反转</span><span class="sxs-lookup"><span data-stu-id="fee77-126">Specify Whether a Timeline Automatically Reverses</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-specify-whether-a-timeline-automatically-reverses.md)  
- [<span data-ttu-id="fee77-127">在属性值更改时触发动画</span><span class="sxs-lookup"><span data-stu-id="fee77-127">Trigger an Animation When a Property Value Changes</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-trigger-an-animation-when-a-property-value-changes.md)  
- [<span data-ttu-id="fee77-128">在情节提要启动之后使用事件触发器来控制情节提要</span><span class="sxs-lookup"><span data-stu-id="fee77-128">Use Event Triggers to Control a Storyboard After It Starts</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-use-event-triggers-to-control-a-storyboard-after-it-starts.md)  
+## <a name="in-this-section"></a><span data-ttu-id="cc885-104">本节内容</span><span class="sxs-lookup"><span data-stu-id="cc885-104">In This Section</span></span>  
+ [<span data-ttu-id="cc885-105">加速或减速播放动画</span><span class="sxs-lookup"><span data-stu-id="cc885-105">Accelerate or Decelerate an Animation</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-accelerate-or-decelerate-an-animation.md)  
+ [<span data-ttu-id="cc885-106">在重复循环过程中累积动画值</span><span class="sxs-lookup"><span data-stu-id="cc885-106">Accumulate Animation Values During Repeat Cycles</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-accumulate-animation-values-during-repeat-cycles.md)  
+ [<span data-ttu-id="cc885-107">向动画起始值添加动画输出值</span><span class="sxs-lookup"><span data-stu-id="cc885-107">Add an Animation Output Value to an Animation Starting Value</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-add-an-animation-output-value-to-an-animation-starting-value.md)  
+ [<span data-ttu-id="cc885-108">使用情节提要对属性进行动画处理</span><span class="sxs-lookup"><span data-stu-id="cc885-108">Animate a Property by Using a Storyboard</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-property-by-using-a-storyboard.md)  
+ [<span data-ttu-id="cc885-109">在不使用情节提要的情况下为属性设置动画效果</span><span class="sxs-lookup"><span data-stu-id="cc885-109">Animate a Property Without Using a Storyboard</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-property-without-using-a-storyboard.md)  
+ [<span data-ttu-id="cc885-110">在 ControlTemplate 中设置动画效果</span><span class="sxs-lookup"><span data-stu-id="cc885-110">Animate in a ControlTemplate</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-in-a-controltemplate.md)  
+ [<span data-ttu-id="cc885-111">在样式中设置动画效果</span><span class="sxs-lookup"><span data-stu-id="cc885-111">Animate in a Style</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-in-a-style.md)  
+ [<span data-ttu-id="cc885-112">为元素或画笔的不透明度设置动画效果</span><span class="sxs-lookup"><span data-stu-id="cc885-112">Animate the Opacity of an Element or Brush</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-the-opacity-of-an-element-or-brush.md)  
+ [<span data-ttu-id="cc885-113">在不更改时间线速度的情况下更改时钟速度</span><span class="sxs-lookup"><span data-stu-id="cc885-113">Change the Speed of a Clock Without Changing the Speed of Its Timeline</span></span>](../../../../docs/framework/wpf/graphics-multimedia/change-the-speed-of-a-clock.md)  
+ [<span data-ttu-id="cc885-114">在情节提要启动后使用其交互式方法对其进行控制</span><span class="sxs-lookup"><span data-stu-id="cc885-114">Control a Storyboard After It Starts Using Its Interactive Methods</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-control-a-storyboard-after-it-starts.md)  
+ [<span data-ttu-id="cc885-115">使用 From、To 和 By 控制动画</span><span class="sxs-lookup"><span data-stu-id="cc885-115">Control an Animation using From, To, and By</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-control-an-animation-using-from-to-and-by.md)  
+ [<span data-ttu-id="cc885-116">定义名称范围</span><span class="sxs-lookup"><span data-stu-id="cc885-116">Define a Name Scope</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-define-a-name-scope.md)  
+ [<span data-ttu-id="cc885-117">在时钟状态发生变化时接收通知</span><span class="sxs-lookup"><span data-stu-id="cc885-117">Receive Notification When a Clock's State Changes</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-receive-notification-when-clock-state-changes.md)  
+ [<span data-ttu-id="cc885-118">重复动画</span><span class="sxs-lookup"><span data-stu-id="cc885-118">Repeat an Animation</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-repeat-an-animation.md)  
+ [<span data-ttu-id="cc885-119">搜寻情节提要</span><span class="sxs-lookup"><span data-stu-id="cc885-119">Seek a Storyboard</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-seek-a-storyboard.md)  
+ [<span data-ttu-id="cc885-120">同步搜寻演示图板</span><span class="sxs-lookup"><span data-stu-id="cc885-120">Seek a Storyboard Synchronously</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-seek-a-storyboard-synchronously.md)  
+ [<span data-ttu-id="cc885-121">设置动画时长</span><span class="sxs-lookup"><span data-stu-id="cc885-121">Set a Duration for an Animation</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-set-a-duration-for-an-animation.md)  
+ [<span data-ttu-id="cc885-122">在使用情节提要为属性设置动画效果后设置属性</span><span class="sxs-lookup"><span data-stu-id="cc885-122">Set a Property After Animating It with a Storyboard</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-set-a-property-after-animating-it-with-a-storyboard.md)  
+ [<span data-ttu-id="cc885-123">使用子时间线简化动画</span><span class="sxs-lookup"><span data-stu-id="cc885-123">Simplify Animations by Using Child Timelines</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-simplify-animations-by-using-child-timelines.md)  
+ [<span data-ttu-id="cc885-124">指定演示图板动画之间的 HandoffBehavior</span><span class="sxs-lookup"><span data-stu-id="cc885-124">Specify HandoffBehavior Between Storyboard Animations</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-specify-handoffbehavior-between-storyboard-animations.md)  
+ [<span data-ttu-id="cc885-125">为已经到达有效期末尾的时间线指定 FillBehavior</span><span class="sxs-lookup"><span data-stu-id="cc885-125">Specify the FillBehavior for a Timeline that has Reached the End of Its Active Period</span></span>](../../../../docs/framework/wpf/graphics-multimedia/specify-the-fillbehavior-for-a-timeline.md)  
+ [<span data-ttu-id="cc885-126">指定时间线是否自动反转</span><span class="sxs-lookup"><span data-stu-id="cc885-126">Specify Whether a Timeline Automatically Reverses</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-specify-whether-a-timeline-automatically-reverses.md)  
+ [<span data-ttu-id="cc885-127">在属性值更改时触发动画</span><span class="sxs-lookup"><span data-stu-id="cc885-127">Trigger an Animation When a Property Value Changes</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-trigger-an-animation-when-a-property-value-changes.md)  
+ [<span data-ttu-id="cc885-128">在情节提要启动之后使用事件触发器来控制情节提要</span><span class="sxs-lookup"><span data-stu-id="cc885-128">Use Event Triggers to Control a Storyboard After It Starts</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-use-event-triggers-to-control-a-storyboard-after-it-starts.md)  
   
-## <a name="reference"></a><span data-ttu-id="fee77-129">参考</span><span class="sxs-lookup"><span data-stu-id="fee77-129">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="cc885-129">参考</span><span class="sxs-lookup"><span data-stu-id="cc885-129">Reference</span></span>  
  <xref:System.Windows.Media.Animation.Timeline>  
   
  <xref:System.Windows.Media.Animation.Storyboard>  
@@ -54,5 +54,5 @@ ms.locfileid: "43468662"
   
  <xref:System.Windows.Media.Animation>  
   
-## <a name="related-sections"></a><span data-ttu-id="fee77-130">相关章节</span><span class="sxs-lookup"><span data-stu-id="fee77-130">Related Sections</span></span>  
- [<span data-ttu-id="fee77-131">图形和多媒体</span><span class="sxs-lookup"><span data-stu-id="fee77-131">Graphics and Multimedia</span></span>](../../../../docs/framework/wpf/graphics-multimedia/index.md)
+## <a name="related-sections"></a><span data-ttu-id="cc885-130">相关章节</span><span class="sxs-lookup"><span data-stu-id="cc885-130">Related Sections</span></span>  
+ [<span data-ttu-id="cc885-131">图形和多媒体</span><span class="sxs-lookup"><span data-stu-id="cc885-131">Graphics and Multimedia</span></span>](../../../../docs/framework/wpf/graphics-multimedia/index.md)

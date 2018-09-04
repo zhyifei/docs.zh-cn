@@ -15,18 +15,18 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 24be4507e8ad6cde1e9c50582e352f0fc9b12ed3
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43483744"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43552722"
 ---
-# <a name="icordebugilframe4getcodeex-method"></a><span data-ttu-id="f9cc4-102">ICorDebugILFrame4::GetCodeEx 方法</span><span class="sxs-lookup"><span data-stu-id="f9cc4-102">ICorDebugILFrame4::GetCodeEx Method</span></span>
-<span data-ttu-id="f9cc4-103">[仅在 .NET Framework 4.5.2 及更高版本中受支持]</span><span class="sxs-lookup"><span data-stu-id="f9cc4-103">[Supported in the .NET Framework 4.5.2 and later versions]</span></span>  
+# <a name="icordebugilframe4getcodeex-method"></a><span data-ttu-id="5c2e8-102">ICorDebugILFrame4::GetCodeEx 方法</span><span class="sxs-lookup"><span data-stu-id="5c2e8-102">ICorDebugILFrame4::GetCodeEx Method</span></span>
+<span data-ttu-id="5c2e8-103">[仅在 .NET Framework 4.5.2 及更高版本中受支持]</span><span class="sxs-lookup"><span data-stu-id="5c2e8-103">[Supported in the .NET Framework 4.5.2 and later versions]</span></span>  
   
- <span data-ttu-id="f9cc4-104">获取指向此堆栈帧正在执行的代码的指针。</span><span class="sxs-lookup"><span data-stu-id="f9cc4-104">Gets a pointer to the code that this stack frame is executing.</span></span>  
+ <span data-ttu-id="5c2e8-104">获取指向此堆栈帧正在执行的代码的指针。</span><span class="sxs-lookup"><span data-stu-id="5c2e8-104">Gets a pointer to the code that this stack frame is executing.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="f9cc4-105">语法</span><span class="sxs-lookup"><span data-stu-id="f9cc4-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="5c2e8-105">语法</span><span class="sxs-lookup"><span data-stu-id="5c2e8-105">Syntax</span></span>  
   
 ```cpp
 HRESULT GetCodeEx(  
@@ -35,26 +35,26 @@ HRESULT GetCodeEx(
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="f9cc4-106">参数</span><span class="sxs-lookup"><span data-stu-id="f9cc4-106">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="5c2e8-106">参数</span><span class="sxs-lookup"><span data-stu-id="5c2e8-106">Parameters</span></span>  
  `flags`  
- <span data-ttu-id="f9cc4-107">[in][ILCodeKind](../../../../docs/framework/unmanaged-api/debugging/ilcodekind-enumeration.md)枚举成员，指定是否由探查器的 ReJIT 请求定义的中间语言 (IL) 包含在帧。</span><span class="sxs-lookup"><span data-stu-id="f9cc4-107">[in] An [ILCodeKind](../../../../docs/framework/unmanaged-api/debugging/ilcodekind-enumeration.md) enumeration member that specifies whether the intermediate language (IL) defined by the profiler's ReJIT request is included in the frame.</span></span>  
+ <span data-ttu-id="5c2e8-107">[in][ILCodeKind](../../../../docs/framework/unmanaged-api/debugging/ilcodekind-enumeration.md)枚举成员，指定是否由探查器的 ReJIT 请求定义的中间语言 (IL) 包含在帧。</span><span class="sxs-lookup"><span data-stu-id="5c2e8-107">[in] An [ILCodeKind](../../../../docs/framework/unmanaged-api/debugging/ilcodekind-enumeration.md) enumeration member that specifies whether the intermediate language (IL) defined by the profiler's ReJIT request is included in the frame.</span></span>  
   
  `ppCode`  
- <span data-ttu-id="f9cc4-108">[out]指向表示此堆栈帧正在执行的代码"ICorDebugCode"对象的地址的指针。</span><span class="sxs-lookup"><span data-stu-id="f9cc4-108">[out] A pointer to the address of an "ICorDebugCode" object that represents the code that this stack frame is executing.</span></span>  
+ <span data-ttu-id="5c2e8-108">[out]指向表示此堆栈帧正在执行的代码"ICorDebugCode"对象的地址的指针。</span><span class="sxs-lookup"><span data-stu-id="5c2e8-108">[out] A pointer to the address of an "ICorDebugCode" object that represents the code that this stack frame is executing.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="f9cc4-109">备注</span><span class="sxs-lookup"><span data-stu-id="f9cc4-109">Remarks</span></span>  
- <span data-ttu-id="f9cc4-110">此方法是类似于[icordebugframe:: Getcode](../../../../docs/framework/unmanaged-api/debugging/icordebugframe-getcode-method.md)方法，但它还可以访问由探查器的 ReJIT 请求定义的代码。</span><span class="sxs-lookup"><span data-stu-id="f9cc4-110">This method is similar to the [ICorDebugFrame::GetCode](../../../../docs/framework/unmanaged-api/debugging/icordebugframe-getcode-method.md) method, except that it optionally accesses code defined by the profiler's ReJIT request.</span></span> <span data-ttu-id="f9cc4-111">调用此方法与`flags`的值`ILCODE_ORIGINAL_IL`等效于调用[GetCode](../../../../docs/framework/unmanaged-api/debugging/icordebugframe-getcode-method.md); 如果检测到该方法，则将无法访问其 IL。</span><span class="sxs-lookup"><span data-stu-id="f9cc4-111">Calling this method with a `flags` value of `ILCODE_ORIGINAL_IL` is equivalent to calling [GetCode](../../../../docs/framework/unmanaged-api/debugging/icordebugframe-getcode-method.md); if the method is instrumented, its IL will not be accessible.</span></span> <span data-ttu-id="f9cc4-112">`ILCODE_REJIT_IL` 允许调试器访问由探查器的 ReJIT 请求定义的 IL。</span><span class="sxs-lookup"><span data-stu-id="f9cc4-112">`ILCODE_REJIT_IL` allows the debugger to access the IL defined by the profiler's ReJIT request.</span></span> <span data-ttu-id="f9cc4-113">如果未检测到 IL，`ppCode`是**null**，并且该方法返回`S_OK`。</span><span class="sxs-lookup"><span data-stu-id="f9cc4-113">If the IL is not instrumented, `ppCode` is **null**, and the method returns `S_OK`.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="5c2e8-109">备注</span><span class="sxs-lookup"><span data-stu-id="5c2e8-109">Remarks</span></span>  
+ <span data-ttu-id="5c2e8-110">此方法是类似于[icordebugframe:: Getcode](../../../../docs/framework/unmanaged-api/debugging/icordebugframe-getcode-method.md)方法，但它还可以访问由探查器的 ReJIT 请求定义的代码。</span><span class="sxs-lookup"><span data-stu-id="5c2e8-110">This method is similar to the [ICorDebugFrame::GetCode](../../../../docs/framework/unmanaged-api/debugging/icordebugframe-getcode-method.md) method, except that it optionally accesses code defined by the profiler's ReJIT request.</span></span> <span data-ttu-id="5c2e8-111">调用此方法与`flags`的值`ILCODE_ORIGINAL_IL`等效于调用[GetCode](../../../../docs/framework/unmanaged-api/debugging/icordebugframe-getcode-method.md); 如果检测到该方法，则将无法访问其 IL。</span><span class="sxs-lookup"><span data-stu-id="5c2e8-111">Calling this method with a `flags` value of `ILCODE_ORIGINAL_IL` is equivalent to calling [GetCode](../../../../docs/framework/unmanaged-api/debugging/icordebugframe-getcode-method.md); if the method is instrumented, its IL will not be accessible.</span></span> <span data-ttu-id="5c2e8-112">`ILCODE_REJIT_IL` 允许调试器访问由探查器的 ReJIT 请求定义的 IL。</span><span class="sxs-lookup"><span data-stu-id="5c2e8-112">`ILCODE_REJIT_IL` allows the debugger to access the IL defined by the profiler's ReJIT request.</span></span> <span data-ttu-id="5c2e8-113">如果未检测到 IL，`ppCode`是**null**，并且该方法返回`S_OK`。</span><span class="sxs-lookup"><span data-stu-id="5c2e8-113">If the IL is not instrumented, `ppCode` is **null**, and the method returns `S_OK`.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="f9cc4-114">要求</span><span class="sxs-lookup"><span data-stu-id="f9cc4-114">Requirements</span></span>  
- <span data-ttu-id="f9cc4-115">**平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="f9cc4-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="5c2e8-114">要求</span><span class="sxs-lookup"><span data-stu-id="5c2e8-114">Requirements</span></span>  
+ <span data-ttu-id="5c2e8-115">**平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="5c2e8-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="f9cc4-116">**标头**：CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="f9cc4-116">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="5c2e8-116">**标头**：CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="5c2e8-116">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="f9cc4-117">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="f9cc4-117">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="5c2e8-117">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="5c2e8-117">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="f9cc4-118">**.NET Framework 版本：**[!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="f9cc4-118">**.NET Framework Versions:** [!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]</span></span>  
+ <span data-ttu-id="5c2e8-118">**.NET Framework 版本：**[!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="5c2e8-118">**.NET Framework Versions:** [!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="f9cc4-119">请参阅</span><span class="sxs-lookup"><span data-stu-id="f9cc4-119">See Also</span></span>  
- [<span data-ttu-id="f9cc4-120">ICorDebugILFrame4 接口</span><span class="sxs-lookup"><span data-stu-id="f9cc4-120">ICorDebugILFrame4 Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe4-interface.md)  
- [<span data-ttu-id="f9cc4-121">调试接口</span><span class="sxs-lookup"><span data-stu-id="f9cc4-121">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)  
- [<span data-ttu-id="f9cc4-122">ReJIT： 操作指南</span><span class="sxs-lookup"><span data-stu-id="f9cc4-122">ReJIT: A How-To Guide</span></span>](https://blogs.msdn.com/b/davbr/archive/2011/10/12/rejit-a-how-to-guide.aspx)
+## <a name="see-also"></a><span data-ttu-id="5c2e8-119">请参阅</span><span class="sxs-lookup"><span data-stu-id="5c2e8-119">See Also</span></span>  
+ [<span data-ttu-id="5c2e8-120">ICorDebugILFrame4 接口</span><span class="sxs-lookup"><span data-stu-id="5c2e8-120">ICorDebugILFrame4 Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe4-interface.md)  
+ [<span data-ttu-id="5c2e8-121">调试接口</span><span class="sxs-lookup"><span data-stu-id="5c2e8-121">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)  
+ [<span data-ttu-id="5c2e8-122">ReJIT： 操作指南</span><span class="sxs-lookup"><span data-stu-id="5c2e8-122">ReJIT: A How-To Guide</span></span>](https://blogs.msdn.com/b/davbr/archive/2011/10/12/rejit-a-how-to-guide.aspx)
