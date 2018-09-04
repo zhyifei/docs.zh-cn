@@ -4,15 +4,15 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - programming [WF], workflow security
 ms.assetid: d712a566-f435-44c0-b8c0-49298e84b114
-ms.openlocfilehash: 8acfd0640478cf67309fe53a99707c7d96c5a635
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 38f679dff1f4e23f0aae541a775ef727917b03e4
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33519576"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43527604"
 ---
 # <a name="workflow-security"></a>工作流安全性
-Windows Workflow Foundation (WF) 的多个不同的技术，如 Microsoft SQL Server 和 Windows Communication Foundation (WCF) 集成。 如果操作不当，采用这些技术可能会给工作流带来安全问题。  
+Windows Workflow Foundation (WF) 与多个不同的技术，如 Microsoft SQL Server 和 Windows Communication Foundation (WCF) 集成。 如果操作不当，采用这些技术可能会给工作流带来安全问题。  
   
 ## <a name="persistence-security-concerns"></a>持久性安全问题  
   
@@ -30,22 +30,22 @@ Windows Workflow Foundation (WF) 的多个不同的技术，如 Microsoft SQL Se
   
 -   使用大量子活动、位置、书签、宿主扩展或作用域时，或使用负载很大的书签时，可能会耗尽内存，或在持久化过程中分配过多的数据库空间。 可使用对象级和数据级的安全措施来缓解该问题。  
   
--   使用 <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> 时，必须保护实例存储区的安全。 有关详细信息，请参阅[SQL Server 最佳做法](http://go.microsoft.com/fwlink/?LinkId=164972)。  
+-   使用 <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> 时，必须保护实例存储区的安全。 有关详细信息，请参阅[SQL Server 最佳实践](https://go.microsoft.com/fwlink/?LinkId=164972)。  
   
--   应为实例存储区中的敏感数据加密。 有关详细信息，请参阅[SQL 安全性加密](http://go.microsoft.com/fwlink/?LinkId=164976)。  
+-   应为实例存储区中的敏感数据加密。 有关详细信息，请参阅[SQL 安全性加密](https://go.microsoft.com/fwlink/?LinkId=164976)。  
   
 -   因为数据库连接字符串通常包含在配置文件中，所以，Windows 级别的安全性 (ACL) 应该用于确保配置文件（通常是 Web.Config）是安全的，并且登录名和密码信息不包含在连接字符串中。 应改为在数据库和 Web 服务器之间使用 Windows 身份验证。  
   
 ## <a name="considerations-for-workflowservicehost"></a>WorkflowServiceHost 的注意事项  
   
--   应保护工作流中使用的 Windows Communication Foundation (WCF) 终结点。 有关详细信息，请参阅[WCF 安全性概述](http://go.microsoft.com/fwlink/?LinkID=164975)。  
+-   应保护工作流中使用的 Windows Communication Foundation (WCF) 终结点。 有关详细信息，请参阅[WCF 安全性概述](https://go.microsoft.com/fwlink/?LinkID=164975)。  
   
--   宿主级授权可以使用 <xref:System.ServiceModel.ServiceAuthorizationManager> 来实现。 请参阅[How To： 为服务创建自定义授权管理器](http://go.microsoft.com/fwlink/?LinkId=192228)有关详细信息。 此外说明了这一点在下面的示例：[工作流服务的安全](../../../docs/framework/windows-workflow-foundation/samples/securing-workflow-services.md)。  
+-   宿主级授权可以使用 <xref:System.ServiceModel.ServiceAuthorizationManager> 来实现。 请参阅[如何： 创建自定义授权管理器服务的](https://go.microsoft.com/fwlink/?LinkId=192228)有关详细信息。 它还显示了在下面的示例：[保护工作流服务](../../../docs/framework/windows-workflow-foundation/samples/securing-workflow-services.md)。  
   
 -   也可通过访问 OperationContext 从工作流内提供传入消息的 ServiceSecurityContext。  请参阅[从工作流服务访问 OperationContext](../../../docs/framework/wcf/feature-details/accessing-operationcontext-from-a-workflow-service.md)有关详细信息。  
   
 ## <a name="wf-security-pack-ctp"></a>WF Security Pack CTP  
- Microsoft WF Security Pack CTP 1 是一组活动和基于其实现的第一个社区技术预览版 (CTP) 版本[Windows Workflow Foundation](http://msdn.microsoft.com/netframework/aa663328.aspx)中[.NET Framework 4](http://msdn.microsoft.com/netframework/default.aspx) (WF4） 和[Windows Identity Foundation (WIF)](http://msdn.microsoft.com/security/aa570351.aspx)。  Microsoft WF Security Pack CTP 1 包含活动及其设计器，阐释如何使用工作流轻松地实现各种与安全相关的方案，包括：  
+ Microsoft WF Security Pack CTP 1 是一组活动和根据其实现的第一个社区技术预览 (CTP) 版本[Windows Workflow Foundation](https://msdn.microsoft.com/netframework/aa663328.aspx)中[.NET Framework 4](https://msdn.microsoft.com/netframework/default.aspx) (WF4），并[Windows Identity Foundation (WIF)](https://msdn.microsoft.com/security/aa570351.aspx)。  Microsoft WF Security Pack CTP 1 包含活动及其设计器，阐释如何使用工作流轻松地实现各种与安全相关的方案，包括：  
   
 1.  在工作流中模拟客户端标识  
   
@@ -55,4 +55,4 @@ Windows Workflow Foundation (WF) 的多个不同的技术，如 Microsoft SQL Se
   
 4.  使用 WS-Trust ActAs 将客户端安全令牌流动到后端服务（基于声明的委托）  
   
-有关详细信息和下载 WF Security Pack CTP，请参阅： [WF Security Pack CTP](http://wf.codeplex.com/releases/view/48114)
+有关详细信息以及下载 WF Security Pack CTP，请参阅： [WF Security Pack CTP](http://wf.codeplex.com/releases/view/48114)

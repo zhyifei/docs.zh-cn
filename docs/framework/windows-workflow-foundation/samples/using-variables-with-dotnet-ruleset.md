@@ -3,11 +3,11 @@ title: 将变量用于 .NET Framework 3.5 规则集
 ms.date: 03/30/2017
 ms.assetid: 27b56249-22fe-4252-840f-74c0d6c7a6b3
 ms.openlocfilehash: 64d47564076e19e152e30b6ab0cb3900ce53cfa1
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43395149"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43512849"
 ---
 # <a name="using-variables-with-a-net-framework-35-ruleset"></a>将变量用于 .NET Framework 3.5 规则集
 此示例演示如何创建一个工作流，该工作流使用 <xref:System.Activities.Statements.Interop> 活动来集成在 [!INCLUDE[netfx35_short](../../../../includes/netfx35-short-md.md)] 中编写并应用了策略和规则的自定义活动。 该工作流将数据传递给此自定义活动，采用的方式是将变量绑定到此自定义活动公开的依赖项属性。  

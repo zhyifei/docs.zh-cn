@@ -17,11 +17,11 @@ helpviewer_keywords:
 - shared components, using with assemblies
 ms.assetid: b324cc1e-b03c-4f39-aea6-6a6d5bfd0e37
 ms.openlocfilehash: 5b92eaf56e337b8a8128bb3a0706ecdb76177c0e
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43472002"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43516822"
 ---
 # <a name="troubleshooting-interoperability-visual-basic"></a>互操作性疑难解答 (Visual Basic)
 当 COM 和托管的代码之间互操作[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]，可能会遇到一个或多个以下常见的问题。  

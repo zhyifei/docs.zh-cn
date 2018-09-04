@@ -3,11 +3,11 @@ title: SQL Server 中的服务器和数据库角色
 ms.date: 03/30/2017
 ms.assetid: 5482dfdb-e498-4614-8652-b174829eed13
 ms.openlocfilehash: 5fd706d886ea050eb578d5f889d55055665c3a44
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43403139"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43517900"
 ---
 # <a name="server-and-database-roles-in-sql-server"></a>SQL Server 中的服务器和数据库角色
 所有版本的 SQL Server 均使用基于角色的安全，它允许您为角色、用户组而不是各个用户分配权限。 固定服务器和固定数据库角色具有分配给它们的一组固定的权限。  

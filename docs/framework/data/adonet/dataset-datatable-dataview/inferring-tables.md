@@ -3,11 +3,11 @@ title: 推断表
 ms.date: 03/30/2017
 ms.assetid: 74a288d4-b8e9-4f1a-b2cd-10df92c1ed1f
 ms.openlocfilehash: 38709f91e01c7f85d9e8482bdd49bc0892121f09
-ms.sourcegitcommit: a368166a51e5204c0224fbf5e46476e3ed122817
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/31/2018
-ms.locfileid: "43332848"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43528167"
 ---
 # <a name="inferring-tables"></a>推断表
 当从 XML 文档推断 <xref:System.Data.DataSet> 的架构时，ADO.NET 首先会确定哪些 XML 元素表示表。 以下 XML 结构生成的表**数据集**架构：  

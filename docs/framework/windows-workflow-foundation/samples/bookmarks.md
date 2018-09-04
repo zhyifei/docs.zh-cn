@@ -3,11 +3,11 @@ title: Bookmarks2
 ms.date: 03/30/2017
 ms.assetid: 035fadb2-49fa-4ac7-b398-daf138f66e87
 ms.openlocfilehash: 6bcc4e27566b9c8553e0792558c281a6b1f1caf4
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43387384"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43528985"
 ---
 # <a name="bookmarks"></a>书签
 此示例演示如何编写一个自定义活动，该活动创建一个书签以接收外部输入。 此示例还包含一个基本控制台应用程序，该应用程序使用工作流中的自定义活动，并演示如何发现和恢复与正在运行的工作流实例关联的书签。 有关书签的详细信息，请参阅[书签](../../../../docs/framework/windows-workflow-foundation/bookmarks.md)。  

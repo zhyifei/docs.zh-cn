@@ -6,11 +6,11 @@ helpviewer_keywords:
 - animation [WPF], Opacity property
 ms.assetid: 572af23b-39dd-48d1-9db5-4bca56a4b3d3
 ms.openlocfilehash: 549d3eab0d6d75403e962eeb146be8d7995cc931
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43421797"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43525848"
 ---
 # <a name="how-to-animate-the-opacity-of-an-element-or-brush"></a>如何：对元素或画笔的不透明度进行动画处理
 若要使框架元素淡入和移出视图，您可以动态显示其<xref:System.Windows.UIElement.Opacity%2A>属性也可以进行动画处理<xref:System.Windows.Media.Brush.Opacity%2A>属性的<xref:System.Windows.Media.Brush>（或画笔） 用来绘制它。 对元素的不透明度进行动画处理可以和其子淡入和移出视图中，但对用于绘制元素的画笔进行动画处理，可更谨慎淡元素的哪个部分。 例如，您无法对用于绘制按钮的背景画笔的不透明度进行动画处理。 这将导致该按钮的背景以淡入淡出视图，同时使其文本完全不透明。  

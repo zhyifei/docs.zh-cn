@@ -8,11 +8,11 @@ ms.assetid: 96dd26e2-46e7-4de0-9a29-4fcb05bf187b
 author: BrucePerlerMS
 manager: mbaldwin
 ms.openlocfilehash: adc1bf7c51eeef715e98bb67c5f6a2e44e09b35f
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43466605"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43522182"
 ---
 # <a name="transport-security-with-windows-authentication"></a>通过 Windows 身份验证确保的传输安全
 以下方案演示了 Windows Communication Foundation (WCF) 客户端和服务由 Windows 安全保护。 有关编程的详细信息，请参阅[如何： 使用 Windows 凭据保护服务](../../../../docs/framework/wcf/how-to-secure-a-service-with-windows-credentials.md)。  

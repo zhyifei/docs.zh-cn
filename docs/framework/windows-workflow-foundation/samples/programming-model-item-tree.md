@@ -3,11 +3,11 @@ title: 编程模型项树
 ms.date: 03/30/2017
 ms.assetid: 0229efde-19ac-4bdc-a187-c6227a7bd1a5
 ms.openlocfilehash: a24e52ec2b7cab10471d756a721611c6dd10516e
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43393483"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43521965"
 ---
 # <a name="programming-model-item-tree"></a>编程模型项树
 此示例演示如何导航<xref:System.Activities.Presentation.Model.ModelItem>树使用的 Windows Presentation Foundation (WPF) 树视图中的声明性数据绑定。  

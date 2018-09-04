@@ -3,11 +3,11 @@ title: 如何：以编程方式向 WCF 服务和客户端添加可检测性
 ms.date: 03/30/2017
 ms.assetid: 4f7ae7ab-6fc8-4769-9730-c14d43f7b9b1
 ms.openlocfilehash: e32128a20a765762249e6892232447c56036c2d8
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43408254"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43524135"
 ---
 # <a name="how-to-programmatically-add-discoverability-to-a-wcf-service-and-client"></a>如何：以编程方式向 WCF 服务和客户端添加可检测性
 本主题说明如何使 Windows Communication Foundation (WCF) 服务可发现。 它基于[自托管](https://go.microsoft.com/fwlink/?LinkId=145523)示例。  

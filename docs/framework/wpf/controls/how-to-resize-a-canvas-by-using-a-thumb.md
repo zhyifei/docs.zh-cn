@@ -11,26 +11,26 @@ helpviewer_keywords:
 - Thumb control [WPF]
 - Canvas control [WPF]
 ms.assetid: 7dc9f435-726c-4d4d-be41-eb24cfe17bef
-ms.openlocfilehash: c3e7176b0578c8fdc5f4331ad8f3b464f3a88b51
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: be267e832180b49686079f426dfa5c30ffdd81b0
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33555059"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43518058"
 ---
 # <a name="how-to-resize-a-canvas-by-using-a-thumb"></a>如何：使用 Thumb 调整画布的大小
-此示例演示如何使用<xref:System.Windows.Controls.Primitives.Thumb>控件调整大小<xref:System.Windows.Controls.Canvas>控件。  
+此示例演示如何使用<xref:System.Windows.Controls.Primitives.Thumb>控件来调整大小<xref:System.Windows.Controls.Canvas>控件。  
   
 ## <a name="example"></a>示例  
- <xref:System.Windows.Controls.Primitives.Thumb>控件提供可用来移动或调整控件大小通过监视的拖动功能<xref:System.Windows.Controls.Primitives.Thumb.DragStarted>，<xref:System.Windows.Controls.Primitives.Thumb.DragDelta>和<xref:System.Windows.Controls.Primitives.Thumb.DragCompleted>的事件<xref:System.Windows.Controls.Primitives.Thumb>。  
+ <xref:System.Windows.Controls.Primitives.Thumb>控件提供的拖放功能，可用于移动或调整控件大小通过监视<xref:System.Windows.Controls.Primitives.Thumb.DragStarted>，<xref:System.Windows.Controls.Primitives.Thumb.DragDelta>并<xref:System.Windows.Controls.Primitives.Thumb.DragCompleted>的事件<xref:System.Windows.Controls.Primitives.Thumb>。  
   
- 用户开始拖动操作通过鼠标指针暂停在时按鼠标左键<xref:System.Windows.Controls.Primitives.Thumb>控件。 只要保持按下鼠标左键，将继续拖动操作。 在拖动操作过程中<xref:System.Windows.Controls.Primitives.Thumb.DragDelta>可以出现多次。 每次它出现时，<xref:System.Windows.Controls.Primitives.DragDeltaEventArgs>类提供对应于鼠标位置的变化的位置中的更改。 当用户释放鼠标左键时，完成拖动操作。 在拖动操作仅提供新坐标;它不会自动重新<xref:System.Windows.Controls.Primitives.Thumb>。  
+ 用户开始拖动操作通过鼠标指针暂停在时按鼠标左键<xref:System.Windows.Controls.Primitives.Thumb>控件。 只要保持按下鼠标左键，将继续拖动操作。 在拖动操作期间<xref:System.Windows.Controls.Primitives.Thumb.DragDelta>可以多次出现。 每次它出现时，<xref:System.Windows.Controls.Primitives.DragDeltaEventArgs>类提供的对应的鼠标位置更改的位置更改。 当用户释放鼠标左键时，已完成拖动操作。 拖动操作仅提供了新的坐标，;它不会自动重新<xref:System.Windows.Controls.Primitives.Thumb>。  
   
- 下面的示例演示<xref:System.Windows.Controls.Primitives.Thumb>即控制的子元素<xref:System.Windows.Controls.Canvas>控件。 事件处理程序其<xref:System.Windows.Controls.Primitives.Thumb.DragDelta>事件提供逻辑来移动<xref:System.Windows.Controls.Primitives.Thumb>并调整其大小<xref:System.Windows.Controls.Canvas>。 事件处理程序<xref:System.Windows.Controls.Primitives.Thumb.DragStarted>和<xref:System.Windows.Controls.Primitives.Thumb.DragCompleted>事件更改的颜色<xref:System.Windows.Controls.Primitives.Thumb>拖动操作过程。 下面的示例定义<xref:System.Windows.Controls.Primitives.Thumb>。  
+ 下面的示例演示<xref:System.Windows.Controls.Primitives.Thumb>控件的子元素<xref:System.Windows.Controls.Canvas>控件。 事件处理程序及其<xref:System.Windows.Controls.Primitives.Thumb.DragDelta>事件提供逻辑来移动<xref:System.Windows.Controls.Primitives.Thumb>并调整其大小<xref:System.Windows.Controls.Canvas>。 事件处理程序<xref:System.Windows.Controls.Primitives.Thumb.DragStarted>并<xref:System.Windows.Controls.Primitives.Thumb.DragCompleted>事件更改的颜色<xref:System.Windows.Controls.Primitives.Thumb>拖动操作过程。 下面的示例定义<xref:System.Windows.Controls.Primitives.Thumb>。  
   
  [!code-xaml[Thumb#thumb](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Thumb/CSharp/Pane1.xaml#thumb)]  
   
- 下面的示例演示<xref:System.Windows.Controls.Primitives.Thumb.DragDelta>移动的事件处理程序<xref:System.Windows.Controls.Primitives.Thumb>并调整其大小<xref:System.Windows.Controls.Canvas>鼠标移动到的响应中。  
+ 下面的示例演示<xref:System.Windows.Controls.Primitives.Thumb.DragDelta>事件处理程序移入<xref:System.Windows.Controls.Primitives.Thumb>并调整其大小<xref:System.Windows.Controls.Canvas>以响应鼠标移动。  
   
  [!code-csharp[Thumb#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Thumb/CSharp/Pane1.xaml.cs#2)]  
   
@@ -44,7 +44,7 @@ ms.locfileid: "33555059"
  [!code-csharp[Thumb#DragCompletedHandler](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Thumb/CSharp/Pane1.xaml.cs#dragcompletedhandler)]
  [!code-vb[Thumb#DragCompletedHandler](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/Thumb/VisualBasic/Pane1.xaml.vb#dragcompletedhandler)]  
   
- 有关完整的示例，请参阅[Thumb 拖功能示例](http://go.microsoft.com/fwlink/?LinkID=160042)。  
+ 有关完整示例，请参阅[Thumb 拖放功能示例](https://go.microsoft.com/fwlink/?LinkID=160042)。  
   
 ## <a name="see-also"></a>请参阅  
  <xref:System.Windows.Controls.Primitives.Thumb>  

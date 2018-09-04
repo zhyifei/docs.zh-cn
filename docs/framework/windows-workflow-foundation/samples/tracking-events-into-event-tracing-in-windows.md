@@ -2,19 +2,20 @@
 title: 在 Windows 事件跟踪中跟踪事件
 ms.date: 03/30/2017
 ms.assetid: f812659b-0943-45ff-9430-4defa733182b
-ms.openlocfilehash: 82de8ee74c12019f815adc63f2ca4441ad95d325
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5b2e43e169faade06d8816d9ae517b6957fbf1ee
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43527091"
 ---
 # <a name="tracking-events-into-event-tracing-in-windows"></a>在 Windows 事件跟踪中跟踪事件
-此示例演示如何启用 Windows Workflow Foundation (WF) 跟踪对工作流服务和发出跟踪事件中事件的 Windows 跟踪 (ETW)。 为了将工作流跟踪记录发到 ETW 中，该示例使用 ETW 跟踪参与者 (<xref:System.Activities.Tracking.EtwTrackingParticipant>)。  
+此示例演示如何启用 Windows Workflow Foundation (WF) 工作流服务跟踪和发出跟踪事件中事件跟踪 Windows (ETW)。 为了将工作流跟踪记录发到 ETW 中，该示例使用 ETW 跟踪参与者 (<xref:System.Activities.Tracking.EtwTrackingParticipant>)。  
   
  该示例中的工作流接收请求，将输入数据的倒数分配给输入变量，并将该倒数返回到客户端。 当输入数据为 0 时，会发生未处理的除数为零异常，从而导致工作流中止。 启用了跟踪后，将向 ETW 发出错误跟踪记录，以后可帮助对错误进行故障排除。 ETW 跟踪参与者通过跟踪配置文件配置为订阅跟踪记录。 跟踪配置文件在 Web.config 文件中定义，作为配置参数提供给 ETW 跟踪参与者。 ETW 跟踪参与者在工作流服务的 Web.config 文件中配置，作为服务行为应用于服务。 在此示例中，使用事件查看器来查看事件日志中的跟踪事件。  
   
 ## <a name="workflow-tracking-details"></a>工作流跟踪详细信息  
- Windows Workflow Foundation 提供一个跟踪基础结构，用于跟踪工作流实例的执行。 跟踪运行时会创建工作流实例以发出与工作流生命周期有关的事件、来自工作流活动的事件以及自定义事件。 下表详细介绍了跟踪基础结构的主要组件。  
+ Windows Workflow Foundation 提供了一个跟踪基础结构来跟踪工作流实例的执行。 跟踪运行时会创建工作流实例以发出与工作流生命周期有关的事件、来自工作流活动的事件以及自定义事件。 下表详细介绍了跟踪基础结构的主要组件。  
   
 |组件|描述|  
 |---------------|-----------------|  
@@ -52,19 +53,19 @@ ms.lasthandoff: 05/04/2018
   
      默认的 [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] 安装文件夹为 C:\Program Files\Microsoft Visual Studio 10.0。  
   
-5.  在 WCF 测试客户端，选择**添加服务**从**文件**菜单。  
+5.  在 WCF 测试客户端，选择**添加的服务**从**文件**菜单。  
   
      在输入框中添加终结点地址。 默认值为 http://localhost:53797/SampleWorkflowService.xamlx。  
   
 6.  打开事件查看器应用程序。  
   
-     调用服务，才能开始从事件查看器**启动**菜单上，选择**运行**键入`eventvwr.exe`。 确保事件日志正在侦听从工作流服务发出的跟踪事件。  
+     调用服务，才能开始从事件查看器**启动**菜单中，选择**运行**并键入`eventvwr.exe`。 确保事件日志正在侦听从工作流服务发出的跟踪事件。  
   
-7.  在事件查看器树视图中，导航到**事件查看器**， **Applications and Services Logs**，和**Microsoft**。 右键单击**Microsoft**和选择**视图**然后**显示分析和调试日志**若要启用分析和调试日志  
+7.  在事件查看器树视图中，导航到**事件查看器**，**应用程序和服务日志**，并**Microsoft**。 右键单击**Microsoft** ，然后选择**视图**，然后**显示分析和调试日志**启用分析和调试日志  
   
-     确保**显示分析和调试日志**选项处于选中状态。  
+     絋粄**显示分析和调试日志**选项处于选中状态。  
   
-8.  在事件查看器中的树视图中，导航到**事件查看器**， **Applications and Services Logs**， **Microsoft**， **Windows**， **应用程序服务器-应用程序**。 右键单击**分析**和选择**启用日志**启用**分析**日志。  
+8.  在事件查看器中树视图中，导航到**事件查看器**，**应用程序和服务日志**， **Microsoft**， **Windows**， **应用程序服务器-应用程序**。 右键单击**Analytic** ，然后选择**启用日志**若要启用**分析**日志。  
   
 9. 通过双击 `GetData`，使用 WCF 测试客户端测试服务。  
   
@@ -74,7 +75,7 @@ ms.lasthandoff: 05/04/2018
   
 10. 观察从工作流发出的事件。  
   
-     切换回事件查看器并导航到**事件查看器**， **Applications and Services Logs**， **Microsoft**， **Windows**， **应用程序服务器-应用程序**。 右键单击**分析**和选择**刷新**。  
+     切换回事件查看器并导航到**事件查看器**，**应用程序和服务日志**， **Microsoft**， **Windows**， **应用程序服务器-应用程序**。 右键单击**Analytic** ，然后选择**刷新**。  
   
      事件查看器中会显示工作流事件。 请注意，会显示工作流执行事件，并且其中一个事件是对应于工作流中的错误的未处理异常。 此外，还会从工作流活动发出一个警告事件，指示活动正引发错误。  
   
@@ -124,18 +125,18 @@ ms.lasthandoff: 05/04/2018
   
 1.  打开事件查看器。  
   
-2.  导航到**事件查看器**， **Applications and Services Logs**， **Microsoft**， **Windows**，**应用程序服务器应用程序**。 右键单击**分析**和选择**禁用日志**。  
+2.  导航到**事件查看器**，**应用程序和服务日志**， **Microsoft**， **Windows**，**应用程序服务器应用程序**。 右键单击**Analytic** ，然后选择**禁用日志**。  
   
-3.  导航到**事件查看器**， **Applications and Services Logs**， **Microsoft**， **Windows**，**应用程序服务器应用程序**。 右键单击**分析**和选择**清除日志**。  
+3.  导航到**事件查看器**，**应用程序和服务日志**， **Microsoft**， **Windows**，**应用程序服务器应用程序**。 右键单击**Analytic** ，然后选择**清除日志**。  
   
-4.  选择**清除**选项以清除事件。  
+4.  选择**清除**选项可清除这些事件。  
   
 ## <a name="known-issue"></a>已知问题  
   
 > [!NOTE]
 >  事件查看器中存在一个已知问题，即可能无法解码 ETW 事件。 您可能会看到与下面类似的错误消息。  
 >   
->  事件 ID 的描述\<id > 从源找不到 Microsoft Windows 应用程序服务器-应用程序。 本地计算机上未安装引发此事件的组件，或者安装已损坏。 可以安装或修复本地计算机上的组件。  
+>  事件 ID 的说明\<id > 找不到 Microsoft Windows 应用程序服务器-应用程序的源中。 本地计算机上未安装引发此事件的组件，或者安装已损坏。 可以安装或修复本地计算机上的组件。  
 >   
 >  如果遇到此错误，请在操作窗格中单击“刷新”。 事件现在应能正确解码。  
   
@@ -144,9 +145,9 @@ ms.lasthandoff: 05/04/2018
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目录不存在，请转到[Windows Communication Foundation (WCF) 和针对.NET Framework 4 的 Windows Workflow Foundation (WF) 示例](http://go.microsoft.com/fwlink/?LinkId=150780)下载所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
+>  如果此目录不存在，请转到[Windows Communication Foundation (WCF) 和.NET Framework 4 的 Windows Workflow Foundation (WF) 示例](https://go.microsoft.com/fwlink/?LinkId=150780)若要下载所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Tracking\EtwTracking`  
   
 ## <a name="see-also"></a>请参阅  
- [AppFabric 监视示例](http://go.microsoft.com/fwlink/?LinkId=193959)
+ [AppFabric 监视示例](https://go.microsoft.com/fwlink/?LinkId=193959)

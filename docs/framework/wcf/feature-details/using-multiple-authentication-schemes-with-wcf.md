@@ -3,11 +3,11 @@ title: 对 WCF 使用多个身份验证方案
 ms.date: 03/30/2017
 ms.assetid: f32a56a0-e2b2-46bf-a302-29e1275917f9
 ms.openlocfilehash: cdf40d6c0ca25a21cbdac07abab04d2bc144bf69
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43408968"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43521694"
 ---
 # <a name="using-multiple-authentication-schemes-with-wcf"></a>对 WCF 使用多个身份验证方案
 WCF 现在允许您对单个终结点上指定多个身份验证方案。 此外，Web 承载的服务可以直接从 IIS 继承其身份验证设置。 自承载服务可以指定可使用的身份验证方案。 有关在 IIS 中设置身份验证设置的详细信息，请参阅[IIS 身份验证](https://go.microsoft.com/fwlink/?LinkId=232458)  

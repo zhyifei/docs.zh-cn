@@ -3,11 +3,11 @@ title: 外部活动验证
 ms.date: 03/30/2017
 ms.assetid: 49619f59-9819-484a-bcd8-5596308e8551
 ms.openlocfilehash: 4805bec3deed0779b02687b11dd487e673802925
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43423889"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43527802"
 ---
 # <a name="external-activity-validation"></a>外部活动验证
 此示例演示如何向不是由您创作的内置活动添加验证逻辑。 验证逻辑包括强制工作流中存在的所有 <xref:System.Activities.Statements.If> 活动已设置其 <xref:System.Activities.Statements.If.Then%2A> 属性或其 <xref:System.Activities.Statements.If.Else%2A> 属性。 此外，验证逻辑还包括检查工作流中存在的所有 <xref:System.Activities.Statements.Pick> 活动是否具有多个分支，如果不具有多个分支，则会生成一个警告。  

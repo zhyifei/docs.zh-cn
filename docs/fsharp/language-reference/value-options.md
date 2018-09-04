@@ -3,11 +3,11 @@ title: '值选项 （F #）'
 description: '了解有关 F # 值选项类型，即选项类型的结构版本。'
 ms.date: 06/16/2018
 ms.openlocfilehash: 4c255cbbcfd9cb480230de09cd370a401c87343a
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43398023"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43527578"
 ---
 # <a name="value-options"></a>值选项
 

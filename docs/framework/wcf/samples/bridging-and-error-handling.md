@@ -3,11 +3,11 @@ title: 桥接和错误处理
 ms.date: 03/30/2017
 ms.assetid: 4ae87d1a-b615-4014-a494-a53f63ff0137
 ms.openlocfilehash: 6afaddc75855b7e95ad708b2179cabb9aee35001
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43389063"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43514537"
 ---
 # <a name="bridging-and-error-handling"></a>桥接和错误处理
 此示例演示如何将 Windows Communication Foundation (WCF) 路由服务使用桥接客户端和使用不同绑定的服务之间的通信。 此示例还演示如何将备份服务用于故障转移方案。 路由服务是一个 WCF 组件，它可以轻松地在应用程序中包含基于内容的路由器。 此示例采用标准的 WCF 计算器示例，用于使用路由服务进行通信。  

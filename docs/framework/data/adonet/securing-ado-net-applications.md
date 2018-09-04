@@ -3,11 +3,11 @@ title: 保证 ADO.NET 应用程序的安全
 ms.date: 03/30/2017
 ms.assetid: 005a1d43-6ee5-471e-ad98-1d30a44d49d5
 ms.openlocfilehash: e5b99621989e9f14c6c734a497f210780f3c7e57
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43481073"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43526964"
 ---
 # <a name="securing-adonet-applications"></a>保证 ADO.NET 应用程序的安全
 编写安全 ADO.NET 应用程序不仅仅是避免常见的编码缺陷（如不验证用户输入）。 访问数据的应用程序具有许多潜在的故障点，攻击者可以利用这些故障点来检索、操作或损坏敏感数据。 因此，了解安全性的各个方面（从应用程序设计阶段期间的威胁建模过程到应用程序的最终部署和不断的维护）非常重要。  

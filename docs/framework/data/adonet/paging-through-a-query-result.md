@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: fa360c46-e5f8-411e-a711-46997771133d
 ms.openlocfilehash: 5d86095586af273f62980fcf8ddf10804b1cfa5a
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43406805"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43514324"
 ---
 # <a name="paging-through-a-query-result"></a>通过查询结果分页
 查询结果分页是以较小数据子集（即页）的形式返回查询结果的过程。 它通常用于以易于管理的小块形式向用户显示结果。  

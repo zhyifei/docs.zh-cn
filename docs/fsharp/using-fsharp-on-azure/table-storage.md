@@ -4,11 +4,11 @@ description: 使用 Azure 表存储或 Azure Cosmos DB 在云中存储结构化�
 author: sylvanc
 ms.date: 03/26/2018
 ms.openlocfilehash: 2d793ba8653833ff384f1824e303b08e05aba69b
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43465007"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43519530"
 ---
 # <a name="get-started-with-azure-table-storage-and-the-azure-cosmos-db-table-api-using-f"></a>开始使用 Azure 表存储和使用 F # 在 Azure Cosmos DB 表 API # 
 

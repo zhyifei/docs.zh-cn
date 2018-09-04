@@ -3,11 +3,11 @@ title: Windows 窗体客户端中的数据绑定
 ms.date: 03/30/2017
 ms.assetid: a2a30b37-d6e2-4552-820e-e60b2bbe8829
 ms.openlocfilehash: a0eaa24cb521dfe4f0d6906d2d8bbbddd3a0d2e4
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43421152"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43529545"
 ---
 # <a name="data-binding-in-a-windows-forms-client"></a>Windows 窗体客户端中的数据绑定
 此示例演示如何将绑定到 Windows 窗体应用程序中的 Windows Communication Foundation (WCF) 服务所返回的数据。  

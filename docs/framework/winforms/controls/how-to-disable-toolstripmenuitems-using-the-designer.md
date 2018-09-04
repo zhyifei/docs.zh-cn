@@ -8,11 +8,11 @@ helpviewer_keywords:
 - menus [Windows Forms], disabling items
 ms.assetid: 985e311e-7d67-4205-b5a3-d045b68a4a03
 ms.openlocfilehash: f97c622719c0f76fe8ce7ea34b9324110508b6e9
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43486589"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43523289"
 ---
 # <a name="how-to-disable-toolstripmenuitems-using-the-designer"></a>如何：使用设计器禁用 ToolStripMenuItem
 您可以限制或扩大用户可通过启用和禁用对用户活动的响应中的菜单项的命令。 菜单项时创建，但这可以通过调整默认情况下启用<xref:System.Windows.Forms.ToolStripMenuItem.Enabled%2A>属性。 在设计时使用此属性可**属性**窗口或以编程方式在代码中设置。 有关详细信息，请参阅[如何： 禁用 ToolStripMenuItems](../../../../docs/framework/winforms/controls/how-to-disable-toolstripmenuitems.md)。  

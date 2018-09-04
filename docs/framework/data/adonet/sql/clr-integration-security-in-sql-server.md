@@ -2,12 +2,12 @@
 title: SQL Server 中的 CLR 集成安全性
 ms.date: 03/30/2017
 ms.assetid: 489fe096-fd1d-42de-8438-bf7aed46aea2
-ms.openlocfilehash: 8df8a19850e9cce28b1f09e80908dafb8bfedaf6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 953982045574cc62b1da46c5d763693b9d9d89ff
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33360997"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43516188"
 ---
 # <a name="clr-integration-security-in-sql-server"></a>SQL Server 中的 CLR 集成安全性
 Microsoft SQL Server 提供 .NET Framework 的公共语言运行时 (CLR) 组件集成。 通过 CLR 集成，您可以使用任何 .NET Framework 语言（如 Microsoft Visual Basic .NET 或 Microsoft Visual C#）编写存储过程、触发器、用户定义的类型、用户定义的函数、用户定义的聚合以及流式表值函数。  
@@ -19,11 +19,11 @@ Microsoft SQL Server 提供 .NET Framework 的公共语言运行时 (CLR) 组件
   
 |资源|描述|  
 |--------------|-----------------|  
-|[代码访问安全性](http://msdn.microsoft.com/library/23a20143-241d-4fe5-9d9f-3933fd594c03)|包含描述 .NET Framework 中 CAS 的主题。|  
-|[CLR 集成安全性](http://go.microsoft.com/fwlink/?LinkId=59998)|讨论在 SQL Server 内部执行的托管代码的安全模型。|  
+|[代码访问安全性](https://msdn.microsoft.com/library/23a20143-241d-4fe5-9d9f-3933fd594c03)|包含描述 .NET Framework 中 CAS 的主题。|  
+|[CLR 集成安全性](https://go.microsoft.com/fwlink/?LinkId=59998)|讨论在 SQL Server 内部执行的托管代码的安全模型。|  
   
 ## <a name="see-also"></a>请参阅  
  [保证 ADO.NET 应用程序的安全](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
  [SQL Server 中的应用程序安全性方案](../../../../../docs/framework/data/adonet/sql/application-security-scenarios-in-sql-server.md)  
  [SQL Server 公共语言运行时集成](../../../../../docs/framework/data/adonet/sql/sql-server-common-language-runtime-integration.md)  
- [ADO.NET 托管提供程序和数据集开发人员中心](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)

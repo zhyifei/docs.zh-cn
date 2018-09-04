@@ -6,11 +6,11 @@ helpviewer_keywords:
 - WCF Data Services, about
 ms.assetid: 7924cf94-c9a6-4015-afc9-f5d22b1743bb
 ms.openlocfilehash: 0cbb3b3906ad83349f02cf6a345f2e3d5336a2e6
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43385949"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43523132"
 ---
 # <a name="wcf-data-services-overview"></a>WCF 数据服务概述
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 支持使用来创建和使用的 Web 或 intranet 的数据服务[!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]。 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 使您能够将数据公开为通过 Uri 进行寻址的资源。 这样，您就可以通过使用具象状态传输 (REST) 的语义（尤其是标准 HTTP 谓词 GET、PUT、POST 和 DELETE）来访问和更改数据。 本主题概述了 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 定义的模式和做法，另外还介绍 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]提供的帮助在基于 .NET Framework 的应用程序中使用 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 的工具。  

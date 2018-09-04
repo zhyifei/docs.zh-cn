@@ -3,11 +3,11 @@ title: 移除设计器添加到 XAML 文件的视图状态
 ms.date: 03/30/2017
 ms.assetid: a801ce22-8699-483c-a392-7bb3834aae4f
 ms.openlocfilehash: ed2fda0bb66b2c8fe58c60acc6f80b9e9c8e984e
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43386928"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43524947"
 ---
 # <a name="removing-the-view-state-the-designer-adds-to-an-xaml-file"></a>移除设计器添加到 XAML 文件的视图状态
 此示例演示如何创建派生自 <xref:System.Windows.Markup.XamlWriter> 的类以及如何从 XAML 文件中移除视图状态。 [!INCLUDE[wfd1](../../../../includes/wfd1-md.md)] 会将信息写入称作视图状态的 XAML 文档中。 视图状态是指设计时所需的信息（如布局定位），运行时不需要此信息。 [!INCLUDE[wfd2](../../../../includes/wfd2-md.md)] 将此信息插入正在编辑的 XAML 文档中。 [!INCLUDE[wfd2](../../../../includes/wfd2-md.md)] 使用 `mc:Ignorable` 特性将视图状态写入 XAML 文件中，因此在运行时加载 XAML 文件时不会加载此信息。 此示例演示如何创建一个类，此类将在处理 XAML 节点时移除视图状态信息。  

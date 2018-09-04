@@ -12,11 +12,11 @@ helpviewer_keywords:
 - Freezable objects [WPF], performance
 ms.assetid: 73aa2f47-1d73-439a-be1f-78dc4ba2b5bd
 ms.openlocfilehash: c599542668a2bbc4d13dbbf5590fdc50113a25af
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43453110"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43521375"
 ---
 # <a name="optimizing-performance-object-behavior"></a>优化性能：对象行为
 了解 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 对象的内部行为，有助于在功能和性能之间做出适当的取舍。  

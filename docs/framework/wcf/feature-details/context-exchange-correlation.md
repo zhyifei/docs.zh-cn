@@ -3,11 +3,11 @@ title: 上下文交换相关
 ms.date: 03/30/2017
 ms.assetid: 1e2852be-3601-45ae-b507-ccc465d45c60
 ms.openlocfilehash: d9de111fa08b4a398bba52bc903ea1fec8c7f298
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43483692"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43519727"
 ---
 # <a name="context-exchange-correlation"></a>上下文交换相关
 上下文相关基于中所述的上下文交换机制[.NET 上下文交换协议规范](https://go.microsoft.com/fwlink/?LinkId=166059)。 上下文相关使用已知的上下文头或 cookie 将消息与正确的实例相关。 若要使用上下文相关，必须在提供给 <xref:System.ServiceModel.BasicHttpContextBinding> 的终结点上使用诸如 <xref:System.ServiceModel.WSHttpContextBinding>、<xref:System.ServiceModel.NetTcpContextBinding> 或 <xref:System.ServiceModel.Activities.WorkflowServiceHost> 之类的基于上下文的绑定。 此主题说明如何在工作流服务中将上下文相关用于消息传送活动。  

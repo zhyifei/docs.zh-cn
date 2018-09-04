@@ -3,11 +3,11 @@ title: WCF Web HTTP 编程模型概述
 ms.date: 03/30/2017
 ms.assetid: 381fdc3a-6e6c-4890-87fe-91cca6f4b476
 ms.openlocfilehash: f1185e7f8d455a59edf2b11e4e77ac6470d768fc
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43417333"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43517070"
 ---
 # <a name="wcf-web-http-programming-model-overview"></a>WCF Web HTTP 编程模型概述
 Windows Communication Foundation (WCF) WEB HTTP 编程模型提供了构建使用 WCF WEB HTTP 服务所需的基本元素。 WCF WEB HTTP 服务旨在最大范围的可能客户端，包括 Web 浏览器访问，并且具有以下独特要求：  

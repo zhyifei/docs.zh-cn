@@ -17,14 +17,14 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: b38e4753105932d2464bf78797a6979aeb0a0aee
-ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42908178"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43527834"
 ---
 # <a name="createclassenumwmi-function"></a>CreateClassEnumWmi 函数
-返回满足指定的选择条件的所有类的枚举器。  
+返回满足指定选择条件的所有类的枚举器。  
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
   

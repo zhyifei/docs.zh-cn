@@ -3,11 +3,11 @@ title: OLE DB 数据类型映射
 ms.date: 03/30/2017
 ms.assetid: 04bcb259-59d3-4fd7-894d-4f0dd0c68069
 ms.openlocfilehash: 2dbea33140e6cdd7370c1822d2bd6513917a31ea
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43457100"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43521362"
 ---
 # <a name="ole-db-data-type-mappings"></a>OLE DB 数据类型映射
 下表显示了针对适用于 ADO 和 OLE DB 的 .NET Framework 数据提供程序 ([!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]) 中的数据类型推断出的 <xref:System.Data.OleDb> 类型。 另外，还列出了 <xref:System.Data.OleDb.OleDbDataReader> 的类型化访问器方法。  

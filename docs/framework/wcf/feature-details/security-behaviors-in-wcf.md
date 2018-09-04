@@ -5,11 +5,11 @@ ms.assetid: 513232c0-39fd-4409-bda6-5ebd5e0ea7b0
 author: BrucePerlerMS
 manager: mbaldwin
 ms.openlocfilehash: 81d7bc6d8d530b2cd3fc528c3f8b44ec8f98f237
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43393370"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43522208"
 ---
 # <a name="security-behaviors-in-wcf"></a>WCF 中的安全行为
 在 Windows Communication Foundation (WCF) 行为修改运行时行为在服务级别或终结点级别。 (有关行为一般情况下，请参阅[指定服务运行时行为](../../../../docs/framework/wcf/specifying-service-run-time-behavior.md)。)*安全行为*允许控制凭据、 身份验证、 授权和审核日志。 可以通过编程或通过配置来使用行为。 本主题重点讨论如何配置下列与安全功能相关的行为：  

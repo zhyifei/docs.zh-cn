@@ -3,11 +3,11 @@ title: Oracle 序列
 ms.date: 03/30/2017
 ms.assetid: 27cd371d-8252-414d-b5b2-5d31fa44b585
 ms.openlocfilehash: 4c1829cc3f9506b0317e6638fd2760a91c7d19d6
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43403966"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43520333"
 ---
 # <a name="oracle-sequences"></a>Oracle 序列
 用于 Oracle 的 .NET Framework 数据提供程序支持在使用 <xref:System.Data.OracleClient.OracleDataAdapter> 执行插入后检索服务器生成的 Oracle 序列键值。  

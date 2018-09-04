@@ -3,11 +3,11 @@ title: 推断元素文本
 ms.date: 03/30/2017
 ms.assetid: 789799e5-716f-459f-a168-76c5cf22178b
 ms.openlocfilehash: b70f76d2702ebcb098c64ea84900b723fbc137ab
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43405783"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43516489"
 ---
 # <a name="inferring-element-text"></a>推断元素文本
 如果元素包含文本但不包含任何子元素被推断为表 （具有属性的元素） 或重复的元素，例如具有名称的新列**TableName_Text**将添加到为该元素推断的表。 该元素中包含的文本将添加到此表中的一行，并存储在新列中。 **ColumnMapping**的新列的属性将设置为**MappingType.SimpleContent**。  

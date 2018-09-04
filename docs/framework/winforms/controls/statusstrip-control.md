@@ -6,11 +6,11 @@ helpviewer_keywords:
 - status bars
 ms.assetid: eb1e59da-0a48-4ce5-af7d-13b8e75af4b1
 ms.openlocfilehash: 157db8b9fbbbb6e1c6af41b4cf3903f4a762d763
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43385721"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43528092"
 ---
 # <a name="statusstrip-control"></a>StatusStrip 控件
 Windows 窗体 `StatusStrip` 控件在窗体中用作区域，通常显示在窗口底部，应用程序可在此显示各种状态信息。 `StatusStrip` 控件上通常具有 `ToolStripStatusLabel` 控件（用于显示文本或图标以指示状态）或 <xref:System.Windows.Forms.ToolStripProgressBar>（用于以图形方式显示进程的完成状态）。  

@@ -3,11 +3,11 @@ title: 实例化初始化
 ms.date: 03/30/2017
 ms.assetid: 154d049f-2140-4696-b494-c7e53f6775ef
 ms.openlocfilehash: 651029783f4632fc0b404bea8df8bd3790622bfd
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43388256"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43516133"
 ---
 # <a name="instancing-initialization"></a>实例化初始化
 此示例扩展[池](../../../../docs/framework/wcf/samples/pooling.md)示例通过定义一个接口， `IObjectControl`，这通过激活和停用它来自定义对象的初始化。 客户端调用向池中返回对象以及不向池中返回对象的方法。  

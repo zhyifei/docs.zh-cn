@@ -3,11 +3,11 @@ title: 标识符 (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: d58a5edd-7b5c-48e1-b5d7-a326ff426aa4
 ms.openlocfilehash: 390c69dec6caed1ffe6faccb5893174d2c211a6b
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43419710"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43528575"
 ---
 # <a name="identifiers-entity-sql"></a>标识符 (Entity SQL)
 在 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 中，标识符用于表示查询表达式别名、变量引用、对象的属性、函数等等。 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 提供了两种类型的标识符： 简单标识符和带引号的标识符。  

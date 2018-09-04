@@ -3,11 +3,11 @@ title: 动态启用分析跟踪
 ms.date: 03/30/2017
 ms.assetid: 58b63cfc-307a-427d-b69d-9917ff9f44ac
 ms.openlocfilehash: f03d2ce381be430121a11df95341886a4be667e2
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43468155"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43529514"
 ---
 # <a name="dynamically-enabling-analytic-tracing"></a>动态启用分析跟踪
 通过 Windows 操作系统附带的工具，可以使用 Windows 事件跟踪 (ETW) 动态启用或禁用跟踪。 所有[!INCLUDE[netfx_current_long](../../../../../includes/netfx-current-long-md.md)]Windows Communication Foundation (WCF) 服务，分析跟踪可以启用和禁用动态而无需修改应用程序的 Web.config 文件或重新启动该服务。 这样，发出跟踪事件的应用程序就可以保持原样。  

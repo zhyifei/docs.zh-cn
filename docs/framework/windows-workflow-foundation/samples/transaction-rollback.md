@@ -3,11 +3,11 @@ title: 事务回滚
 ms.date: 03/30/2017
 ms.assetid: 7f377147-7529-4689-a588-608cee87fdf8
 ms.openlocfilehash: 8134623248b072ec5a095ab9b10840e94a09243c
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43464118"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43528972"
 ---
 # <a name="transaction-rollback"></a>事务回滚
 此示例演示如何创建一个自定义 <xref:System.Activities.NativeActivity>，用于访问环境 <xref:System.Activities.RuntimeTransactionHandle> 以获取环境事务并显式回滚它。  

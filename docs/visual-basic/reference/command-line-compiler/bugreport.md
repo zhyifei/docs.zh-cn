@@ -7,11 +7,11 @@ helpviewer_keywords:
 - /bugreport compiler option [Visual Basic]
 ms.assetid: e4325406-8dbd-4b48-b311-9ee0799e48bb
 ms.openlocfilehash: e8366e1050217f3d993d510683252728aba0c3d9
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43452643"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43527346"
 ---
 # <a name="-bugreport"></a>-bugreport
 创建提交 bug 报告时，可以使用一个文件。  

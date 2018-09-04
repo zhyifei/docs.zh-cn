@@ -5,11 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: f814ff82-fe2b-4614-aebb-b768c3e61179
-ms.openlocfilehash: 704527bde2ac6bf555d40db836baf938c0c5cd96
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 47227bdd23efc9648da25bc879c7946dadee4594
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43527938"
 ---
 # <a name="how-to-run-a-workflow"></a>如何：运行工作流
 本主题是 Windows Workflow Foundation 入门教程的延续，讨论如何创建工作流宿主并运行上一主题 [How to: Create a Workflow](../../../docs/framework/windows-workflow-foundation/how-to-create-a-workflow.md) 中定义的工作流。  
@@ -18,13 +19,13 @@ ms.lasthandoff: 05/04/2018
 >  入门教程中的每个主题都依赖于前面的主题。 若要完成本主题，必须先完成 [How to: Create an Activity](../../../docs/framework/windows-workflow-foundation/how-to-create-an-activity.md) 和 [How to: Create a Workflow](../../../docs/framework/windows-workflow-foundation/how-to-create-a-workflow.md)。  
   
 > [!NOTE]
->  若要下载完整版教程，请参阅 [Windows Workflow Foundation (WF45) — 入门教程](http://go.microsoft.com/fwlink/?LinkID=248976)。  
+>  若要下载本教程的完整的版本，请参阅[Windows Workflow Foundation (WF45)-入门教程](https://go.microsoft.com/fwlink/?LinkID=248976)。  
   
 ### <a name="to-create-the-workflow-host-project"></a>创建工作流宿主项目  
   
 1.  使用 [How to: Create an Activity](../../../docs/framework/windows-workflow-foundation/how-to-create-an-activity.md) 打开上一主题 [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)]。  
   
-2.  在 **解决方案资源管理器** 中右键单击 **WF45GettingStartedTutorial** 解决方案，选择 **“添加”**和 **“新建项目”**。  
+2.  在 **解决方案资源管理器** 中右键单击 **WF45GettingStartedTutorial** 解决方案，选择 **“添加”** 和 **“新建项目”**。  
   
     > [!TIP]
     >  如果未显示 **解决方案资源管理器** 窗口，请从 **“视图”** 菜单选择 **“解决方案资源管理器** 。  
@@ -34,7 +35,7 @@ ms.lasthandoff: 05/04/2018
     > [!NOTE]
     >  根据在 Visual Studio 中配置为主要语言的编程语言的不同， **“Visual C#”** 或 **“Visual Basic”** 节点可能位于 **“已安装”** 节点下的 **“其他语言”** 节点中。  
   
-     请确保在 .NET Framework 版本下拉列表中选择 **“.NET Framework 4.5”** 。 从 **“工作流”** 列表中选择 **“工作流控制台应用程序”** 。 类型`NumberGuessWorkflowHost`到**名称**框中，单击**确定**。 这将创建适合初学者的工作流应用程序，它具备基本的工作流承载支持。 基本承载代码将修改用于运行工作流应用程序。  
+     请确保在 .NET Framework 版本下拉列表中选择 **“.NET Framework 4.5”** 。 从 **“工作流”** 列表中选择 **“工作流控制台应用程序”** 。 类型`NumberGuessWorkflowHost`成**名称**框，然后单击**确定**。 这将创建适合初学者的工作流应用程序，它具备基本的工作流承载支持。 基本承载代码将修改用于运行工作流应用程序。  
   
 4.  在 **解决方案资源管理器** 中右键单击新添加的 **NumberGuessWorkflowHost** ，然后选择 **“添加引用”**。 在 **“添加引用”** 列表中选择 **“解决方案”** ，选中 **NumberGuessWorkflowActivities**旁边的复选框，然后单击 **“确定”**。  
   

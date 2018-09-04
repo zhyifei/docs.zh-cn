@@ -3,11 +3,11 @@ title: 支持多个 IIS 站点绑定
 ms.date: 03/30/2017
 ms.assetid: 40440495-254d-45c8-a8c6-b29f364892ba
 ms.openlocfilehash: 2c42ba7cf3713e5d165d10ce7049df8200d612fb
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43482202"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43517869"
 ---
 # <a name="supporting-multiple-iis-site-bindings"></a>支持多个 IIS 站点绑定
 当承载 Windows Communication Foundation (WCF) 服务在 Internet 信息服务 (IIS) 7.0 时，可能想要提供同一站点使用相同的协议的多个基址。 这使得同一服务可以响应多个不同的 URI。 这是有用的当你想要承载的服务在其侦听时 http://www.contoso.com 和 http://contoso.com 。 在创建对于内部用户和外部用户使用不同基址的服务时，此功能也非常有用。 例如： http://internal.contoso.com 和 http://www.contoso.com 。  

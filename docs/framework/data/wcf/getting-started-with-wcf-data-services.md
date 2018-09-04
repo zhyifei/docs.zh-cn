@@ -5,11 +5,11 @@ helpviewer_keywords:
 - WCF Data Services, getting started
 ms.assetid: c832fa5b-cf86-4690-be5a-a226c0e49530
 ms.openlocfilehash: 5fc37ed215ada6aa35ac8801ef33e5787ba77584
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43468892"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43523686"
 ---
 # <a name="getting-started-with-wcf-data-services"></a>WCF 数据服务入门
 在本部分中的主题帮助你快速了解[!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]以及如何使用[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]公开和使用[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]馈送通过说明基础技术。 本部分包括这两个概念内容和一个[快速入门](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md)教程。  

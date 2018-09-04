@@ -5,11 +5,11 @@ ms.assetid: 731fc871-54d0-4689-90fd-1c9415c45621
 author: BrucePerlerMS
 manager: mbaldwin
 ms.openlocfilehash: c084c9e393728c2f4c2889339dbc36517c058d24
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43456511"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43525330"
 ---
 # <a name="message-security-with-issued-tokens"></a>使用已颁发令牌的消息安全
 已颁发令牌的客户端可以实现联合的安全方案在 Windows Communication Foundation (WCF)。  

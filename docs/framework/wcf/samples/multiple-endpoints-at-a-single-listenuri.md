@@ -3,11 +3,11 @@ title: 在单个 ListenUri 中承载多个终结点
 ms.date: 03/30/2017
 ms.assetid: 911ffad4-4d47-4430-b7c2-79192ce6bcbd
 ms.openlocfilehash: 45963bcf03a6734b85a1213c99facd9023711bf5
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43480384"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43523819"
 ---
 # <a name="multiple-endpoints-at-a-single-listenuri"></a>在单个 ListenUri 中承载多个终结点
 此示例演示了一个在单个 `ListenUri` 中承载多个终结点的服务。 此示例基于[Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md)实现计算器服务。  
