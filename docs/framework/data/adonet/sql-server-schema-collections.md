@@ -2,15 +2,15 @@
 title: SQL Server 架构集合
 ms.date: 03/30/2017
 ms.assetid: c6403cc3-d78b-4f85-bab1-ada7a3446ec5
-ms.openlocfilehash: 248e5f4caf47f09742358240fa43f46169f0b1e5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7020c74d41ce1feef38c4dfc66117a7b8c8eff4e
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33361050"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43508485"
 ---
 # <a name="sql-server-schema-collections"></a>SQL Server 架构集合
-除了通用架构集合之外，适用于 SQL Server 的 Microsoft .NET Framework 数据提供程序还支持其他架构集合。 架构集合因使用的 SQL Server 的版本而稍有不同。 若要确定支持的架构集合列表，调用**GetSchema**不带任何参数，或包含架构集合名称"MetaDataCollections"的方法。 此时将返回 <xref:System.Data.DataTable>，包含支持的架构集合列表、每个架构集合支持的限制数以及所使用的标识符部分数。  
+除了通用架构集合之外，适用于 SQL Server 的 Microsoft .NET Framework 数据提供程序还支持其他架构集合。 架构集合因使用的 SQL Server 的版本而稍有不同。 若要确定支持的架构集合的列表，请调用**GetSchema**不带任何参数，或使用架构集合名称"MetaDataCollections"的方法。 此时将返回 <xref:System.Data.DataTable>，包含支持的架构集合列表、每个架构集合支持的限制数以及所使用的标识符部分数。  
   
 ## <a name="databases"></a>数据库  
   
@@ -257,4 +257,4 @@ ms.locfileid: "33361050"
   
 ## <a name="see-also"></a>请参阅  
  [检索数据库架构信息](../../../../docs/framework/data/adonet/retrieving-database-schema-information.md)  
- [ADO.NET 托管提供程序和数据集开发人员中心](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)

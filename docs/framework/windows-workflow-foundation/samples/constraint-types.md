@@ -3,11 +3,11 @@ title: 约束类型
 ms.date: 03/30/2017
 ms.assetid: b6b246e6-1130-4698-9625-c5c42abcbfed
 ms.openlocfilehash: 202a2c7b3a3fc400552e42c8606457964af66af2
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43401527"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43506607"
 ---
 # <a name="constraint-types"></a>约束类型
 本实例演示将约束应用于工作流的两种不同方法：一种方法是从活动内部应用（生成），另一种方法是从活动外部应用（策略）。 在此方案中，某个活动作者（来自于第三方软件公司）想要验证两个参数之间的关系。 在此例中，成本应小于或等于价格。 这是一个常规的验证生成约束。  

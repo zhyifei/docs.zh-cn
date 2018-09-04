@@ -3,11 +3,11 @@ title: ADO.NET 技术选项和准则
 ms.date: 03/30/2017
 ms.assetid: c8577281-38e6-4ce5-b036-572039a4c3d8
 ms.openlocfilehash: 7312b2eae0e307fa50c89d37918403ee33412ec3
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43403930"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43507987"
 ---
 # <a name="adonet-technology-options-and-guidelines"></a>ADO.NET 技术选项和准则
 ADO.NET 数据平台是一种多版本策略，通过使开发人员能够针对概念性实体数据模型进行编程，减少其所需的编码和维护工作量。 此平台包括 ADO.NET 实体框架和相关技术。  

@@ -3,11 +3,11 @@ title: 演练：SQL 生成
 ms.date: 03/30/2017
 ms.assetid: 16c38aaa-9927-4f3c-ab0f-81636cce57a3
 ms.openlocfilehash: 5551eb4088e7529c61d5c517fed6877c23ae12f2
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43472067"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43510495"
 ---
 # <a name="walkthrough-sql-generation"></a>演练：SQL 生成
 本主题说明了如何中进行 SQL 生成[示例提供程序](https://go.microsoft.com/fwlink/?LinkId=180616)。 下面的 Entity SQL 查询使用随示例提供程序提供的模型：  

@@ -3,11 +3,11 @@ title: 实体框架资源
 ms.date: 03/30/2017
 ms.assetid: 0bb04c18-4a14-42a4-baa9-a63d556c9f49
 ms.openlocfilehash: d32b88e0df0b29ccf7fb5e9ba2d5a43585e0fb44
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43483796"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43509159"
 ---
 # <a name="entity-framework-resources"></a>实体框架资源
 以下外部资源提供创建实体框架应用程序所需的信息和支持。  

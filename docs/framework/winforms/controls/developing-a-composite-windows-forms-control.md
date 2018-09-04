@@ -8,11 +8,11 @@ helpviewer_keywords:
 - controls [Windows Forms], composite
 ms.assetid: d086f2a3-baa3-4e09-b40c-a5bb3cfc51a6
 ms.openlocfilehash: 24fbf17f02072b2d9922ca0998805b916afc41b6
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43463704"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43510155"
 ---
 # <a name="developing-a-composite-windows-forms-control"></a>开发复合 Windows 窗体控件
 可以通过组合其它 Windows 窗体控件来开发复合 Windows 窗体控件。 派生的复合控件<xref:System.Web.UI.UserControl>称为用户控件。 基类 <xref:System.Windows.Forms.UserControl> 为子控件提供了键盘路由，从而确保子控件可以接收焦点。 用户控件的示例，请参阅<xref:System.Windows.Forms.UserControl>示例[如何： 应用 Windows 窗体控件中的特性](../../../../docs/framework/winforms/controls/how-to-apply-attributes-in-windows-forms-controls.md)。  
