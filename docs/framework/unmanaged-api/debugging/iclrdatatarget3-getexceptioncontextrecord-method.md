@@ -15,16 +15,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 72c45e821a59c1e910b5c8422df02978046eb56b
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43425219"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43500503"
 ---
-# <a name="iclrdatatarget3getexceptioncontextrecord-method"></a><span data-ttu-id="b3a0b-102">ICLRDataTarget3::GetExceptionContextRecord 方法</span><span class="sxs-lookup"><span data-stu-id="b3a0b-102">ICLRDataTarget3::GetExceptionContextRecord Method</span></span>
-<span data-ttu-id="b3a0b-103">由公共语言运行时 (CLR) 数据访问服务调用，以检索与目标进程关联的上下文记录。</span><span class="sxs-lookup"><span data-stu-id="b3a0b-103">Called by the common language runtime (CLR) data access services to retrieve the context record associated with the target process.</span></span> <span data-ttu-id="b3a0b-104">例如，对于转储目标，这将是等效于上下文记录通过传入`ExceptionParam`自变量[MiniDumpWriteDump](/windows/desktop/api/minidumpapiset/nf-minidumpapiset-minidumpwritedump) Windows 调试帮助库 (DbgHelp) 中的函数。</span><span class="sxs-lookup"><span data-stu-id="b3a0b-104">For example, for a dump target, this would be equivalent to the context record passed in via the `ExceptionParam` argument to the [MiniDumpWriteDump](/windows/desktop/api/minidumpapiset/nf-minidumpapiset-minidumpwritedump) function in the Windows Debug Help Library (DbgHelp).</span></span>  
+# <a name="iclrdatatarget3getexceptioncontextrecord-method"></a><span data-ttu-id="c788b-102">ICLRDataTarget3::GetExceptionContextRecord 方法</span><span class="sxs-lookup"><span data-stu-id="c788b-102">ICLRDataTarget3::GetExceptionContextRecord Method</span></span>
+<span data-ttu-id="c788b-103">由公共语言运行时 (CLR) 数据访问服务调用，以检索与目标进程关联的上下文记录。</span><span class="sxs-lookup"><span data-stu-id="c788b-103">Called by the common language runtime (CLR) data access services to retrieve the context record associated with the target process.</span></span> <span data-ttu-id="c788b-104">例如，对于转储目标，这将是等效于上下文记录通过传入`ExceptionParam`自变量[MiniDumpWriteDump](/windows/desktop/api/minidumpapiset/nf-minidumpapiset-minidumpwritedump) Windows 调试帮助库 (DbgHelp) 中的函数。</span><span class="sxs-lookup"><span data-stu-id="c788b-104">For example, for a dump target, this would be equivalent to the context record passed in via the `ExceptionParam` argument to the [MiniDumpWriteDump](/windows/desktop/api/minidumpapiset/nf-minidumpapiset-minidumpwritedump) function in the Windows Debug Help Library (DbgHelp).</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="b3a0b-105">语法</span><span class="sxs-lookup"><span data-stu-id="b3a0b-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="c788b-105">语法</span><span class="sxs-lookup"><span data-stu-id="c788b-105">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetExceptionContextRecord(  
@@ -34,40 +34,40 @@ HRESULT GetExceptionContextRecord(
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="b3a0b-106">参数</span><span class="sxs-lookup"><span data-stu-id="b3a0b-106">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="c788b-106">参数</span><span class="sxs-lookup"><span data-stu-id="c788b-106">Parameters</span></span>  
  `bufferSize`  
- <span data-ttu-id="b3a0b-107">[in] 输入缓冲区大小（以字节为单位）。</span><span class="sxs-lookup"><span data-stu-id="b3a0b-107">[in] The input buffer size, in bytes.</span></span> <span data-ttu-id="b3a0b-108">此大小必须大到足以容纳上下文记录。</span><span class="sxs-lookup"><span data-stu-id="b3a0b-108">This must be large enough to accommodate the context record.</span></span>  
+ <span data-ttu-id="c788b-107">[in] 输入缓冲区大小（以字节为单位）。</span><span class="sxs-lookup"><span data-stu-id="c788b-107">[in] The input buffer size, in bytes.</span></span> <span data-ttu-id="c788b-108">此大小必须大到足以容纳上下文记录。</span><span class="sxs-lookup"><span data-stu-id="c788b-108">This must be large enough to accommodate the context record.</span></span>  
   
  `bufferUsed`  
- <span data-ttu-id="b3a0b-109">[out] 指向接收实际写入缓冲区的字节数的 `ULONG32` 类型的指针。</span><span class="sxs-lookup"><span data-stu-id="b3a0b-109">[out] A pointer to a `ULONG32` type that receives the number of bytes actually written to the buffer.</span></span>  
+ <span data-ttu-id="c788b-109">[out] 指向接收实际写入缓冲区的字节数的 `ULONG32` 类型的指针。</span><span class="sxs-lookup"><span data-stu-id="c788b-109">[out] A pointer to a `ULONG32` type that receives the number of bytes actually written to the buffer.</span></span>  
   
  `buffer`  
- <span data-ttu-id="b3a0b-110">[out] 指向接收上下文记录副本的内存缓冲区的指针。</span><span class="sxs-lookup"><span data-stu-id="b3a0b-110">[out] A pointer to a memory buffer that receives a copy of the context record.</span></span> <span data-ttu-id="b3a0b-111">作为返回的异常记录[上下文](/windows/desktop/api/winnt/ns-winnt-_arm64_nt_context)类型。</span><span class="sxs-lookup"><span data-stu-id="b3a0b-111">The exception record is returned as a [CONTEXT](/windows/desktop/api/winnt/ns-winnt-_arm64_nt_context) type.</span></span>  
+ <span data-ttu-id="c788b-110">[out] 指向接收上下文记录副本的内存缓冲区的指针。</span><span class="sxs-lookup"><span data-stu-id="c788b-110">[out] A pointer to a memory buffer that receives a copy of the context record.</span></span> <span data-ttu-id="c788b-111">作为返回的异常记录[上下文](/windows/desktop/api/winnt/ns-winnt-_arm64_nt_context)类型。</span><span class="sxs-lookup"><span data-stu-id="c788b-111">The exception record is returned as a [CONTEXT](/windows/desktop/api/winnt/ns-winnt-_arm64_nt_context) type.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="b3a0b-112">返回值</span><span class="sxs-lookup"><span data-stu-id="b3a0b-112">Return Value</span></span>  
- <span data-ttu-id="b3a0b-113">如果成功，则返回值是 `S_OK`；如果失败，则返回失败 `HRESULT` 代码。</span><span class="sxs-lookup"><span data-stu-id="b3a0b-113">The return value is `S_OK` on success, or a failure `HRESULT` code on failure.</span></span> <span data-ttu-id="b3a0b-114">`HRESULT` 代码可以包括但不限于以下代码：</span><span class="sxs-lookup"><span data-stu-id="b3a0b-114">The `HRESULT` codes can include but are not limited to the following:</span></span>  
+## <a name="return-value"></a><span data-ttu-id="c788b-112">返回值</span><span class="sxs-lookup"><span data-stu-id="c788b-112">Return Value</span></span>  
+ <span data-ttu-id="c788b-113">如果成功，则返回值是 `S_OK`；如果失败，则返回失败 `HRESULT` 代码。</span><span class="sxs-lookup"><span data-stu-id="c788b-113">The return value is `S_OK` on success, or a failure `HRESULT` code on failure.</span></span> <span data-ttu-id="c788b-114">`HRESULT` 代码可以包括但不限于以下代码：</span><span class="sxs-lookup"><span data-stu-id="c788b-114">The `HRESULT` codes can include but are not limited to the following:</span></span>  
   
-|<span data-ttu-id="b3a0b-115">返回代码</span><span class="sxs-lookup"><span data-stu-id="b3a0b-115">Return code</span></span>|<span data-ttu-id="b3a0b-116">描述</span><span class="sxs-lookup"><span data-stu-id="b3a0b-116">Description</span></span>|  
+|<span data-ttu-id="c788b-115">返回代码</span><span class="sxs-lookup"><span data-stu-id="c788b-115">Return code</span></span>|<span data-ttu-id="c788b-116">描述</span><span class="sxs-lookup"><span data-stu-id="c788b-116">Description</span></span>|  
 |-----------------|-----------------|  
-|`S_OK`|<span data-ttu-id="b3a0b-117">方法成功。</span><span class="sxs-lookup"><span data-stu-id="b3a0b-117">Method succeeded.</span></span> <span data-ttu-id="b3a0b-118">已将上下文记录复制到输出缓冲区。</span><span class="sxs-lookup"><span data-stu-id="b3a0b-118">The context record has been copied to the output buffer.</span></span>|  
-|`HRESULT_FROM_WIN32(ERROR_NOT_FOUND)`|<span data-ttu-id="b3a0b-119">没有与目标关联的上下文记录。</span><span class="sxs-lookup"><span data-stu-id="b3a0b-119">No context record is associated with the target.</span></span>|  
-|`HRESULT_FROM_WIN32(ERROR_BAD_LENGTH)`|<span data-ttu-id="b3a0b-120">输入缓冲区大小不足以容纳上下文记录。</span><span class="sxs-lookup"><span data-stu-id="b3a0b-120">The input buffer size is not large enough to accommodate the context record.</span></span>|  
+|`S_OK`|<span data-ttu-id="c788b-117">方法成功。</span><span class="sxs-lookup"><span data-stu-id="c788b-117">Method succeeded.</span></span> <span data-ttu-id="c788b-118">已将上下文记录复制到输出缓冲区。</span><span class="sxs-lookup"><span data-stu-id="c788b-118">The context record has been copied to the output buffer.</span></span>|  
+|`HRESULT_FROM_WIN32(ERROR_NOT_FOUND)`|<span data-ttu-id="c788b-119">没有与目标关联的上下文记录。</span><span class="sxs-lookup"><span data-stu-id="c788b-119">No context record is associated with the target.</span></span>|  
+|`HRESULT_FROM_WIN32(ERROR_BAD_LENGTH)`|<span data-ttu-id="c788b-120">输入缓冲区大小不足以容纳上下文记录。</span><span class="sxs-lookup"><span data-stu-id="c788b-120">The input buffer size is not large enough to accommodate the context record.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="b3a0b-121">备注</span><span class="sxs-lookup"><span data-stu-id="b3a0b-121">Remarks</span></span>  
- <span data-ttu-id="b3a0b-122">[上下文](/windows/desktop/api/winnt/ns-winnt-_arm64_nt_context)是由 Windows SDK 提供的标头中定义的特定于平台的结构。</span><span class="sxs-lookup"><span data-stu-id="b3a0b-122">[CONTEXT](/windows/desktop/api/winnt/ns-winnt-_arm64_nt_context) is a platform-specific structure defined in headers provided by the Windows SDK.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="c788b-121">备注</span><span class="sxs-lookup"><span data-stu-id="c788b-121">Remarks</span></span>  
+ <span data-ttu-id="c788b-122">[上下文](/windows/desktop/api/winnt/ns-winnt-_arm64_nt_context)是由 Windows SDK 提供的标头中定义的特定于平台的结构。</span><span class="sxs-lookup"><span data-stu-id="c788b-122">[CONTEXT](/windows/desktop/api/winnt/ns-winnt-_arm64_nt_context) is a platform-specific structure defined in headers provided by the Windows SDK.</span></span>  
   
- <span data-ttu-id="b3a0b-123">此方法由调试应用程序的编写器实现。</span><span class="sxs-lookup"><span data-stu-id="b3a0b-123">This method is implemented by the writer of the debugging application.</span></span>  
+ <span data-ttu-id="c788b-123">此方法由调试应用程序的编写器实现。</span><span class="sxs-lookup"><span data-stu-id="c788b-123">This method is implemented by the writer of the debugging application.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="b3a0b-124">要求</span><span class="sxs-lookup"><span data-stu-id="b3a0b-124">Requirements</span></span>  
- <span data-ttu-id="b3a0b-125">**平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="b3a0b-125">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="c788b-124">要求</span><span class="sxs-lookup"><span data-stu-id="c788b-124">Requirements</span></span>  
+ <span data-ttu-id="c788b-125">**平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="c788b-125">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="b3a0b-126">**标头：** ClrData.idl、 ClrData.h</span><span class="sxs-lookup"><span data-stu-id="b3a0b-126">**Header:** ClrData.idl, ClrData.h</span></span>  
+ <span data-ttu-id="c788b-126">**标头：** ClrData.idl、 ClrData.h</span><span class="sxs-lookup"><span data-stu-id="c788b-126">**Header:** ClrData.idl, ClrData.h</span></span>  
   
- <span data-ttu-id="b3a0b-127">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="b3a0b-127">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="c788b-127">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="c788b-127">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="b3a0b-128">**.NET Framework 版本：**[!INCLUDE[v451_update](../../../../includes/v451-update-md.md)]</span><span class="sxs-lookup"><span data-stu-id="b3a0b-128">**.NET Framework Versions:** [!INCLUDE[v451_update](../../../../includes/v451-update-md.md)]</span></span>  
+ <span data-ttu-id="c788b-128">**.NET Framework 版本：**[!INCLUDE[v451_update](../../../../includes/v451-update-md.md)]</span><span class="sxs-lookup"><span data-stu-id="c788b-128">**.NET Framework Versions:** [!INCLUDE[v451_update](../../../../includes/v451-update-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="b3a0b-129">请参阅</span><span class="sxs-lookup"><span data-stu-id="b3a0b-129">See Also</span></span>  
- [<span data-ttu-id="b3a0b-130">ICLRDataTarget3 接口</span><span class="sxs-lookup"><span data-stu-id="b3a0b-130">ICLRDataTarget3 Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget3-interface.md)  
- [<span data-ttu-id="b3a0b-131">GetExceptionRecord 方法</span><span class="sxs-lookup"><span data-stu-id="b3a0b-131">GetExceptionRecord Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget3-getexceptionrecord-method.md)  
- [<span data-ttu-id="b3a0b-132">GetExceptionThreadID 方法</span><span class="sxs-lookup"><span data-stu-id="b3a0b-132">GetExceptionThreadID Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget3-getexceptionthreadid-method.md)
+## <a name="see-also"></a><span data-ttu-id="c788b-129">请参阅</span><span class="sxs-lookup"><span data-stu-id="c788b-129">See Also</span></span>  
+ [<span data-ttu-id="c788b-130">ICLRDataTarget3 接口</span><span class="sxs-lookup"><span data-stu-id="c788b-130">ICLRDataTarget3 Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget3-interface.md)  
+ [<span data-ttu-id="c788b-131">GetExceptionRecord 方法</span><span class="sxs-lookup"><span data-stu-id="c788b-131">GetExceptionRecord Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget3-getexceptionrecord-method.md)  
+ [<span data-ttu-id="c788b-132">GetExceptionThreadID 方法</span><span class="sxs-lookup"><span data-stu-id="c788b-132">GetExceptionThreadID Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget3-getexceptionthreadid-method.md)
