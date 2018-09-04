@@ -3,11 +3,11 @@ title: '&lt;clientCredentials&gt; 的 &lt;peer&gt; 元素'
 ms.date: 03/30/2017
 ms.assetid: 505bd987-0042-4622-b68e-94f439729d53
 ms.openlocfilehash: 9d63aaaa6404b791559d1288730098075f1fd8eb
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43385471"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43504478"
 ---
 # <a name="ltpeergt-of-ltclientcredentialsgt-element"></a>&lt;clientCredentials&gt; 的 &lt;peer&gt; 元素
 指定在向对等客户端进行身份验证时使用的凭据。  

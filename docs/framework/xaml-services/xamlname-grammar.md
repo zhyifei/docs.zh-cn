@@ -8,18 +8,18 @@ helpviewer_keywords:
 - names in XAML [XAML Services]
 - XamlName grammar [XAML Services]
 ms.assetid: 11e4cada-41d2-494d-9531-0d3df4dfcbe3
-ms.openlocfilehash: 32fd7b7b952ebbc853e41c0a8276d1ab487e619f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2a934316517047da6b6aec8e88026024b9a25f65
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33561886"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43514796"
 ---
 # <a name="xamlname-grammar"></a>XamlName 语法
-XamlName 语法是 XAML 语言规范 [MS-XAML]，这将为方便起见在此处重现中定义特定语法。  
+XamlName 语法是为了方便起见，此处重现的 XAML 语言规范 [MS-XAML] 中定义的特定语法。  
   
 ## <a name="from-the-xaml-specification"></a>从 XAML 规范  
- [MS-XAML] 规范定义的语法 XamlName 来识别用于类型和属性的合法符号标识符的集。  
+ [MS-XAML] 规范定义语法 XamlName 来标识用于类型和属性的合法符号标识符的集。  
   
  字符串值的类型 XamlName 必须符合以下语法：  
   
@@ -32,7 +32,7 @@ DecimalDigit ::= UnicodeNd
 CombiningCharacter ::= UnicodeMn | UnicodeMc  
 ```  
   
- 在 Unicode 字符数据库中定义，这假定以下常规类别值  
+ 这假定以下常规类别值为 Unicode 字符数据库中定义  
   
 ```  
 Lu  
@@ -55,7 +55,7 @@ Nl
 Number, Letter  
 ```  
   
- XAML 定义第二个语法，DottedXamlName，用于属性和事件限定的引用，并还附加成员。 有关详细信息，请参阅<xref:System.Windows.DependencyProperty>和[XAML 概述 (WPF)](../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)。  
+ XAML 定义的第二个语法，DottedXamlName，是用于属性和事件限定的引用，并还为附加成员。 有关详细信息，请参阅<xref:System.Windows.DependencyProperty>并[XAML 概述 (WPF)](../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)。  
   
  字符串值的类型 DottedXamlName 必须符合以下语法：  
   
@@ -64,4 +64,4 @@ DottedXamlName ::= XamlName '.' XamlName
 ```  
   
 ## <a name="remarks"></a>备注  
- 有关完整规范，请参阅[ \[MS-XAML\]](http://go.microsoft.com/fwlink/?LinkId=114525)。
+ 有关完整规范，请参见[ \[MS XAML\]](https://go.microsoft.com/fwlink/?LinkId=114525)。

@@ -10,11 +10,11 @@ helpviewer_keywords:
 - types [Windows Forms], binding controls to
 ms.assetid: 94faeebb-d2bc-45d6-86d7-96a42661b43d
 ms.openlocfilehash: fdf2134d487787404cccbde1ba0f8c95cb6a4a3d
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43385564"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43503900"
 ---
 # <a name="how-to-bind-a-windows-forms-control-to-a-type"></a>如何：将 Windows 窗体控件绑定到类型
 在生成与数据交互的控件时，有时需要将控件绑定到类型而非对象。 在设计时，如果数据不可用但数据绑定控件仍需要显示类型的公共接口中的信息，则尤其可能出现这种情况。 例如，你可以将 <xref:System.Windows.Forms.DataGridView> 控件绑定到由 Web 服务公开的对象，并希望 <xref:System.Windows.Forms.DataGridView> 控件在设计时用自定义类型的成员名称标记其列。  

@@ -3,11 +3,11 @@ title: 使用集合活动
 ms.date: 03/30/2017
 ms.assetid: e1977cf8-1695-4071-b946-7046fe39601e
 ms.openlocfilehash: a92208583ddf1c0d5d85b5af6a250a15ac8851b9
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43422622"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43506546"
 ---
 # <a name="using-collection-activities"></a>使用集合活动
 此示例演示如何将集合活动（<xref:System.Activities.Statements.AddToCollection%601>、<xref:System.Activities.Statements.ClearCollection%601>、<xref:System.Activities.Statements.ExistsInCollection%601> 和 <xref:System.Activities.Statements.RemoveFromCollection%601>）与实现 <xref:System.Collections.ICollection> 接口的类一起使用，以及如何创建一个自定义活动，该活动循环访问集合以输出集合中每个元素的内容。 命名为 `PrintCollection` 的自定义活动向控制台输出名为 `Numbers` 的集合的项成员。  

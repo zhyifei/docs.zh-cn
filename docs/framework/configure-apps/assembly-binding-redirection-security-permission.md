@@ -9,11 +9,11 @@ author: mcleblanc
 ms.author: markl
 manager: markl
 ms.openlocfilehash: b9b9ac5c4e8ce08b9f926b0cdf7149dbdd9ac2da
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43388961"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43501428"
 ---
 # <a name="assembly-binding-redirection-security-permission"></a>程序集绑定重定向安全权限
 应用程序配置文件中的显式程序集绑定重定向需要安全权限。 这适用于对 .NET Framework 程序集和来自第三方的程序集的重定向。 通过设置授予权限<xref:System.Security.Permissions.SecurityPermissionFlag>标志<xref:System.Security.Permissions.SecurityPermission>。 托管程序集默认情况下没有任何权限。  

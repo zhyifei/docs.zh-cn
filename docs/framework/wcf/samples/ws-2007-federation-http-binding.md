@@ -2,12 +2,12 @@
 title: WS 2007 联合 HTTP 绑定
 ms.date: 03/30/2017
 ms.assetid: 91c1b477-a96e-4bf5-9330-5e9312113371
-ms.openlocfilehash: 0fe4c0e62dbff3ae7f99f3a6dde34940abf90ae9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 53f2cb893476cdfa0517bd6586f38951dff1f2af
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33507076"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43513057"
 ---
 # <a name="ws-2007-federation-http-binding"></a>WS 2007 联合 HTTP 绑定
 此示例演示 <xref:System.ServiceModel.WS2007FederationHttpBinding> 的用法，它是一个标准绑定，可用来生成支持 1.3 版 WS-Trust 规范的联合方案。  
@@ -36,7 +36,7 @@ ms.locfileid: "33507076"
 </bindings>  
 ```  
   
- 上[\<安全 >](../../../../docs/framework/configure-apps/file-schema/wcf/security-element-of-ws2007federationhttpbinding.md)、`security`值指定应使用的安全模式。 在此示例中，`message`使用安全性，这就是为什么[\<消息 >](../../../../docs/framework/configure-apps/file-schema/wcf/message-element-of-ws2007federationhttpbinding.md)内指定[\<安全 >](../../../../docs/framework/configure-apps/file-schema/wcf/security-element-of-ws2007federationhttpbinding.md)。 [\<颁发者 >](../../../../docs/framework/configure-apps/file-schema/wcf/issuer.md)内的元素[\<消息 >](../../../../docs/framework/configure-apps/file-schema/wcf/message-element-of-ws2007federationhttpbinding.md)指定的地址和绑定 sts，以便客户端可以向客户端颁发安全令牌对进行身份验证`ICalculator`服务。  
+ 上[\<安全 >](../../../../docs/framework/configure-apps/file-schema/wcf/security-element-of-ws2007federationhttpbinding.md)，则`security`值指定应使用的安全模式。 在此示例中，`message`使用安全，这就是为什么[\<消息 >](../../../../docs/framework/configure-apps/file-schema/wcf/message-element-of-ws2007federationhttpbinding.md)内指定[\<安全 >](../../../../docs/framework/configure-apps/file-schema/wcf/security-element-of-ws2007federationhttpbinding.md)。 [\<颁发者 >](../../../../docs/framework/configure-apps/file-schema/wcf/issuer.md)元素内的[\<消息 >](../../../../docs/framework/configure-apps/file-schema/wcf/message-element-of-ws2007federationhttpbinding.md)指定地址和 sts，以便客户端可以向客户端颁发安全令牌的绑定对进行身份验证`ICalculator`服务。  
   
  下面的代码演示了此绑定在服务上的配置。  
   
@@ -63,7 +63,7 @@ ms.locfileid: "33507076"
 </bindings>  
 ```  
   
- 上[\<安全 >](../../../../docs/framework/configure-apps/file-schema/wcf/security-element-of-ws2007federationhttpbinding.md)、`security`值指定应使用的安全模式。 在此示例中，`message`使用安全性，这就是为什么[\<消息 >](../../../../docs/framework/configure-apps/file-schema/wcf/message-element-of-ws2007federationhttpbinding.md)内指定[\<安全 >](../../../../docs/framework/configure-apps/file-schema/wcf/security-element-of-ws2007federationhttpbinding.md)。 [ \<IssuerMetadata >](../../../../docs/framework/configure-apps/file-schema/wcf/issuermetadata.md)元素`ws2007FederationHttpBinding`内[\<消息 >](../../../../docs/framework/configure-apps/file-schema/wcf/message-element-of-ws2007federationhttpbinding.md)指定地址和用于检索终结点标识STS 元数据。  
+ 上[\<安全 >](../../../../docs/framework/configure-apps/file-schema/wcf/security-element-of-ws2007federationhttpbinding.md)，则`security`值指定应使用的安全模式。 在此示例中，`message`使用安全，这就是为什么[\<消息 >](../../../../docs/framework/configure-apps/file-schema/wcf/message-element-of-ws2007federationhttpbinding.md)内指定[\<安全 >](../../../../docs/framework/configure-apps/file-schema/wcf/security-element-of-ws2007federationhttpbinding.md)。 [ \<IssuerMetadata >](../../../../docs/framework/configure-apps/file-schema/wcf/issuermetadata.md)元素的`ws2007FederationHttpBinding`内部[\<消息 >](../../../../docs/framework/configure-apps/file-schema/wcf/message-element-of-ws2007federationhttpbinding.md)指定地址和标识，可用于检索终结点STS 的元数据。  
   
  下面的代码演示了该服务的行为。  
   
@@ -92,7 +92,7 @@ ms.locfileid: "33507076"
 </behaviors>  
 ```  
   
- [ \<IssuedTokenAuthentication >](../../../../docs/framework/configure-apps/file-schema/wcf/issuedtokenauthentication-of-servicecredentials.md)> 允许服务指定它允许客户端身份验证期间提供的令牌上的约束。 此配置指定该服务接受由主题名称为 CN=STS 的证书签名的令牌。  
+ [ \<IssuedTokenAuthentication >](../../../../docs/framework/configure-apps/file-schema/wcf/issuedtokenauthentication-of-servicecredentials.md)> 使服务可以指定它允许客户端身份验证期间提供的令牌上的约束。 此配置指定该服务接受由主题名称为 CN=STS 的证书签名的令牌。  
   
  STS 使用标准的 <xref:System.ServiceModel.WS2007HttpBinding> 提供单个终结点。 服务响应客户端对令牌的请求。 如果客户端使用 Windows 帐户进行身份验证，则服务将颁发一个令牌，该令牌以声明的形式包含客户端的用户名。 在创建令牌的过程中，STS 使用与 CN=STS 证书关联的私钥对令牌进行签名。 另外，它还创建对称密钥并使用与 CN=localhost 证书关联的公钥对该密钥进行加密。 在向客户端返回令牌的过程中，STS 还返回对称密钥。 客户端向 `ICalculator` 服务出示所颁发的令牌，并通过使用密钥对消息进行签名来证明客户端知道该对称密钥。  
   
@@ -110,7 +110,7 @@ Press <ENTER> to terminate client.
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>设置、生成和运行示例  
   
-1.  确保已执行[的 Windows Communication Foundation 示例的一次性安装过程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
+1.  请确保您具有执行[的 Windows Communication Foundation 示例的一次性安装过程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
   
 2.  使用管理员特权打开 Visual Studio 命令提示并运行 Setup.bat 文件以创建所需的证书。  
   
@@ -118,14 +118,14 @@ Press <ENTER> to terminate client.
   
 1.  若要生成 C# 或 Visual Basic .NET 版本的解决方案，请按照 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)中的说明进行操作。  
   
-2.  若要在单或跨计算机配置上运行示例，请按照中的说明[运行 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/running-the-samples.md)。 如果你使用[!INCLUDE[windowsver](../../../../includes/windowsver-md.md)]、 必须运行 Service.exe、 Client.exe 和 SecurityTokenService.exe 使用提升的权限 (右键单击文件，然后单击**以管理员身份运行**)。  
+2.  若要在单或跨计算机配置中运行示例，请按照中的说明[运行 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/running-the-samples.md)。 如果使用的[!INCLUDE[windowsver](../../../../includes/windowsver-md.md)]，则必须运行 Service.exe、 Client.exe 和 SecurityTokenService.exe 使用提升的权限 (右键单击文件，然后单击**以管理员身份运行**)。  
   
 > [!IMPORTANT]
 >  您的计算机上可能已安装这些示例。 在继续操作之前，请先检查以下（默认）目录：  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目录不存在，请转到[Windows Communication Foundation (WCF) 和针对.NET Framework 4 的 Windows Workflow Foundation (WF) 示例](http://go.microsoft.com/fwlink/?LinkId=150780)下载所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
+>  如果此目录不存在，请转到[Windows Communication Foundation (WCF) 和.NET Framework 4 的 Windows Workflow Foundation (WF) 示例](https://go.microsoft.com/fwlink/?LinkId=150780)若要下载所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\WS\WS2007FederationHttp`  
   

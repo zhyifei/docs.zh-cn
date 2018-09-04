@@ -8,40 +8,40 @@ helpviewer_keywords:
 - TableLayoutPanel control [Windows Forms], editing
 - rows [Windows Forms], editing
 ms.assetid: c367ed43-40dc-49eb-9e0f-ba70e83dfec0
-ms.openlocfilehash: 763d5df6c49d45f7ee305f4a3be0a1f0a2539872
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 820d2f98290650bfaf377bd2d4b863dfb2e6e704
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33533502"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43500779"
 ---
 # <a name="how-to-edit-columns-and-rows-in-a-tablelayoutpanel-control"></a>如何：在 TableLayoutPanel 控件中编辑行和列
-你可以使用集合编辑器的<xref:System.Windows.Forms.TableLayoutPanel>控件，调用**列和行样式**对话框中，若要编辑的行和控件的列。  
+可以使用的集合编辑器<xref:System.Windows.Forms.TableLayoutPanel>控件，调用**列和行样式**对话框中，若要编辑的行和列的控件。  
   
 > [!NOTE]
 >  如果你想要跨多个行或列的控件，设置`RowSpan`和`ColumnSpan`控件上的属性。 有关详细信息，请参阅 [演练：使用 TableLayoutPanel 在 Windows 窗体上排列控件](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)。  
 >   
->  如果你想要在单元格中，控件对齐，或者如果想要在单元格中拉伸控件，使用控件的<xref:System.Windows.Forms.Control.Anchor%2A>属性。 有关详细信息，请参阅 [演练：使用 TableLayoutPanel 在 Windows 窗体上排列控件](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)。  
+>  如果你想要对齐控件中某一单元，或者如果你想要在单元格中拉伸的控件，使用控件的<xref:System.Windows.Forms.Control.Anchor%2A>属性。 有关详细信息，请参阅 [演练：使用 TableLayoutPanel 在 Windows 窗体上排列控件](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)。  
 >   
->  显示的对话框和菜单命令可能会与“帮助”中的描述不同，具体取决于你现用的设置或版本。 若要更改设置，请在 **“工具”** 菜单上选择 **“导入和导出设置”** 。 有关详细信息，请参阅[在 Visual Studio 中自定义开发设置](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3)。  
+>  显示的对话框和菜单命令可能会与“帮助”中的描述不同，具体取决于你现用的设置或版本。 若要更改设置，请在 **“工具”** 菜单上选择 **“导入和导出设置”** 。 有关详细信息，请参阅[个性化设置 Visual Studio IDE](/visualstudio/ide/personalizing-the-visual-studio-ide)。  
   
 ### <a name="to-edit-rows-and-columns"></a>若要编辑行和列  
   
 1.  拖动<xref:System.Windows.Forms.TableLayoutPanel>控件从**工具箱**拖动到窗体。  
   
-2.  单击<xref:System.Windows.Forms.TableLayoutPanel>控件的智能标记标志符号 (![智能标记标志符号](../../../../docs/framework/winforms/controls/media/vs-winformsmttagglyph.gif "VS_WinFormSmtTagGlyph"))，然后选择**编辑行和列**以打开**列和行样式**对话框。 你也可以右键单击<xref:System.Windows.Forms.TableLayoutPanel>控件，然后选择**编辑行和列**从快捷菜单。  
+2.  单击<xref:System.Windows.Forms.TableLayoutPanel>控件的智能标记标志符号 (![智能标记标志符号](../../../../docs/framework/winforms/controls/media/vs-winformsmttagglyph.gif "VS_WinFormSmtTagGlyph"))，然后选择**编辑行和列**打开**列和行样式**对话框。 也可以右键单击<xref:System.Windows.Forms.TableLayoutPanel>控件，然后选择**编辑行和列**从快捷菜单。  
   
-3.  若要添加或删除列，选择**列**从**成员类型**下拉列表框。  
+3.  若要添加或删除列，请选择**列**从**成员类型**下拉列表框。  
   
-4.  若要添加或删除行，选择**行**从**成员类型**下拉列表框。  
+4.  若要添加或删除的行，请选择**行**从**成员类型**下拉列表框。  
   
-5.  单击**添加**按钮以将行或列添加到末尾**成员**列表。  
+5.  单击**外**按钮以将行或列添加到末尾**成员**列表。  
   
-6.  单击**插入**按钮以在列表中添加行或当前选定项之前的列。  
+6.  单击**插入**按钮在列表中添加行或当前所选的项之前的列。  
   
-7.  如果在添加行或列，选择**大小类型**新行或列。 有关详细信息，请参阅<xref:System.Windows.Forms.SizeType>。  
+7.  如果要添加的行或列，选择**大小类型**新行或列。 有关详细信息，请参阅<xref:System.Windows.Forms.SizeType>。  
   
-8.  若要删除的行或列，请单击**删除**按钮以删除中的当前选定的项**成员**列表。  
+8.  若要删除的行或列，请单击**删除**按钮以删除当前选定的项中**成员**列表。  
   
 ## <a name="see-also"></a>请参阅  
  <xref:System.Windows.Forms.SizeType>  

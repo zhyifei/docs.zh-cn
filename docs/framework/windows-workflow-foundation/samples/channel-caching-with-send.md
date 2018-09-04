@@ -3,11 +3,11 @@ title: 使用 Send 的通道缓存
 ms.date: 03/30/2017
 ms.assetid: e69a2502-25cb-43bf-b8d2-95fbdecb41cb
 ms.openlocfilehash: 619088def1f5e443a31244516655d75d1e25c9cb
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43475850"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43503810"
 ---
 # <a name="channel-caching-with-send"></a>使用 Send 的通道缓存
 <xref:System.ServiceModel.Activities.SendMessageChannelCache> 使用户能够对 <xref:System.ServiceModel.Activities.Send> 和 <xref:System.ServiceModel.Activities.SendParametersContent> 活动使用不同级别的通道缓存。 默认情况下将启用实例级别的缓存，此示例将演示以下功能：  

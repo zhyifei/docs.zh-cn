@@ -3,11 +3,11 @@ title: 选择凭据类型
 ms.date: 03/30/2017
 ms.assetid: bf707063-3f30-4304-ab53-0e63413728a8
 ms.openlocfilehash: c2ee1b9062d14eaa44de0651985c2a385fe02f8e
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43396607"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43503386"
 ---
 # <a name="selecting-a-credential-type"></a>选择凭据类型
 *凭据*是 Windows Communication Foundation (WCF) 使用建立声明的标识或功能的数据。 例如，护照就是政府颁发的用以证明国家或地区的公民身份的凭据。 在 WCF 中，凭据可以采用多种形式，例如用户名标记和 X.509 证书。 本主题讨论凭据、 如何在 WCF 中，使用它们以及如何选择正确的凭据为应用程序。  

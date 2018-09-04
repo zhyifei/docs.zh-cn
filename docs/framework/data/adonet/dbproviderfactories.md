@@ -2,12 +2,12 @@
 title: DbProviderFactories
 ms.date: 03/30/2017
 ms.assetid: 2a8e2640-3a49-42a1-a3a9-b43026907ae1
-ms.openlocfilehash: 8692dc761f00e0ddc8ec9fad5a5df66b7fda7916
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 403c7a50bcb802140bb008bd18db0a6f16663942
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32762294"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43504725"
 ---
 # <a name="dbproviderfactories"></a>DbProviderFactories
 <xref:System.Data.Common> 命名空间提供用于创建与特定数据源一起使用的 <xref:System.Data.Common.DbProviderFactory> 实例的类。 当创建 <xref:System.Data.Common.DbProviderFactory> 实例并向其传递有关数据提供程序的信息时，`DbProviderFactory` 可以根据为其提供的信息确定要返回的正确的强类型连接对象。  
@@ -29,4 +29,4 @@ ms.locfileid: "32762294"
   
 ## <a name="see-also"></a>请参阅  
  [在 ADO.NET 中检索和修改数据](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)  
- [ADO.NET 托管提供程序和数据集开发人员中心](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)

@@ -18,14 +18,14 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 8ca958f8472d7f7e1a44ad4ab237f582f92713c3
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43402733"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43501029"
 ---
 # <a name="iclrstrongnamegethashfromblob-method"></a>ICLRStrongName::GetHashFromBlob 方法
-获取指定的内存地址，使用指定的哈希算法的程序集的哈希。  
+使用指定的哈希算法获取指定内存地址处的程序集的哈希。  
   
 ## <a name="syntax"></a>语法  
   

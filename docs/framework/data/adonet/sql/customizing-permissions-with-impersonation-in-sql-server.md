@@ -2,12 +2,12 @@
 title: 在 SQL Server 中使用模拟自定义权限
 ms.date: 03/30/2017
 ms.assetid: dc733d09-1d6d-4af0-9c4b-8d24504860f1
-ms.openlocfilehash: ac2c6805a9ab49d95f68e56306d7d9fb8aab2a2c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: bfee153a1293ec89285dbeabd1ed64a89764a717
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33362638"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43513967"
 ---
 # <a name="customizing-permissions-with-impersonation-in-sql-server"></a>在 SQL Server 中使用模拟自定义权限
 许多应用程序都使用存储过程来访问数据，依靠所属权链接来限制对基表的访问。 您可以授予针对存储过程的 EXECUTE 权限，撤消或拒绝针对基表的权限。 如果存储过程和表具有相同的所有者，则 SQL Server 不检查调用方的权限。 但是，如果对象具有不同的所有者或使用动态 SQL，则所属权链接不起作用。  
@@ -54,7 +54,7 @@ CREATE PROCEDURE [procName] WITH EXECUTE AS 'proxyUser' AS ...
 ### <a name="using-execute-as-with-revert"></a>与 REVERT 一起使用 EXECUTE AS  
  可以使用 Transact-SQL REVERT 语句来返回到原始执行上下文。  
   
- 可选子句 WITH NO REVERT COOKIE = @variableName，允许你返回到调用方切换执行上下文，如果@variableName变量包含正确的值。 这允许您在使用连接池的环境中将执行上下文切换回调用方。 因为的值@variableName已知仅向调用方的 EXECUTE AS 语句中，调用方可以保证调用的应用程序的最终用户，不更改执行上下文。 当连接关闭时，它将返回到池中。 有关详细信息连接池在 ADO.NET 中，请参阅[SQL Server 连接池 (ADO.NET)](../../../../../docs/framework/data/adonet/sql-server-connection-pooling.md)。  
+ 可选子句 WITH NO REVERT COOKIE = @variableName，如果将执行上下文切换回调用方允许@variableName变量包含正确的值。 这允许您在使用连接池的环境中将执行上下文切换回调用方。 因为值@variableName才知道调用方的 EXECUTE AS 语句中，调用方可以保证调用应用程序的最终用户无法更改执行上下文。 当连接关闭时，它将返回到池中。 有关详细信息连接池在 ADO.NET 中，请参阅[SQL Server 连接池 (ADO.NET)](../../../../../docs/framework/data/adonet/sql-server-connection-pooling.md)。  
   
 ### <a name="specifying-the-execution-context"></a>指定执行上下文  
  除了指定用户外，还可以将 EXECUTE AS 与以下任意关键字一起使用。  
@@ -65,14 +65,6 @@ CREATE PROCEDURE [procName] WITH EXECUTE AS 'proxyUser' AS ...
   
 -   SELF。 以 SELF 身份执行将在存储过程创建者的安全上下文中执行。 这相当于以指定用户的身份执行，这里的指定用户是指创建或改变过程的人。  
   
-## <a name="external-resources"></a>外部资源  
- 有关更多信息，请参见以下资源。  
-  
-|资源|描述|  
-|--------------|-----------------|  
-|[上下文切换](http://msdn.microsoft.com/library/ms188268.aspx)SQL Server 联机丛书中|包含说明如何使用 EXECUTE AS 子句的主题的链接。|  
-|[使用 EXECUTE AS 创建自定义权限集](http://msdn.microsoft.com/library/ms190384.aspx)和[在模块中使用 EXECUTE AS](http://msdn.microsoft.com/library/ms178106.aspx) SQL Server 联机丛书中|说明如何使用 EXECUTE AS 子句的主题。|  
-  
 ## <a name="see-also"></a>请参阅  
  [保证 ADO.NET 应用程序的安全](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
  [SQL Server 安全性概述](../../../../../docs/framework/data/adonet/sql/overview-of-sql-server-security.md)  
@@ -81,4 +73,4 @@ CREATE PROCEDURE [procName] WITH EXECUTE AS 'proxyUser' AS ...
  [在 SQL Server 中编写安全的动态 SQL](../../../../../docs/framework/data/adonet/sql/writing-secure-dynamic-sql-in-sql-server.md)  
  [在 SQL Server 中对存储过程签名](../../../../../docs/framework/data/adonet/sql/signing-stored-procedures-in-sql-server.md)  
  [使用存储过程修改数据](../../../../../docs/framework/data/adonet/modifying-data-with-stored-procedures.md)  
- [ADO.NET 托管提供程序和数据集开发人员中心](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)

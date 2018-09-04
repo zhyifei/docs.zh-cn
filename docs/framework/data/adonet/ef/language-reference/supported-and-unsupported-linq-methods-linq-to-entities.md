@@ -3,11 +3,11 @@ title: 支持和不支持的 LINQ 方法 (LINQ to Entities)
 ms.date: 03/30/2017
 ms.assetid: 7f3ffa5f-f819-4730-bcdb-09b23de3b6d0
 ms.openlocfilehash: a57e8facdd0ece7223ec780a9ef22a1be7c53221
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43386358"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43502238"
 ---
 # <a name="supported-and-unsupported-linq-methods-linq-to-entities"></a>支持和不支持的 LINQ 方法 (LINQ to Entities)
 本节提供有关 [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] 查询中支持和不支持的语言集成查询 (LINQ) 标准查询运算符的信息。 许多 LINQ 标准查询运算符都有可接受整数自变量的重载版本。 该整数参数对应于正在操作的序列中从零开始的索引，<xref:System.Collections.Generic.IEqualityComparer%601> 或 <xref:System.Collections.Generic.IComparer%601>。 除非专门指定，否则这些 LINQ 标准查询运算符的重载版本并不受支持，尝试使用它们将引发异常。  

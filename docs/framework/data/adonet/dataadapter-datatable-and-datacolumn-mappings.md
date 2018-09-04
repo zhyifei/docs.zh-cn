@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: d023260a-a66a-4c39-b8f4-090cd130e730
 ms.openlocfilehash: 9f33ae085bef2b611d1ce95bed1b26f9101a10b9
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43385221"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43505237"
 ---
 # <a name="dataadapter-datatable-and-datacolumn-mappings"></a>DataAdapter 数据表和 DataColumn 映射
 一个**DataAdapter**包含零个或多集合<xref:System.Data.Common.DataTableMapping>中的对象及其**TableMappings**属性。 一个**DataTableMapping**提供了从对数据源，查询返回的数据之间的主映射和<xref:System.Data.DataTable>。 **DataTableMapping**可以将名称传递来代替**DataTable**到名称**填充**方法**DataAdapter**。 下面的示例创建**DataTableMapping**名为**AuthorsMapping**有关**作者**表。  

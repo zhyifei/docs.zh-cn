@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 8438b995-bd07-4223-b22d-13adadef33fb
 ms.openlocfilehash: 4215dcddf44647d98ee70c6f2d06345737cba5de
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43384585"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43503223"
 ---
 # <a name="method-based-query-syntax-examples-element-operators"></a>基于方法的查询语法示例：元素运算符
 本主题中的示例演示如何使用<xref:System.Linq.Enumerable.First%2A>方法来查询[AdventureWorks 销售模型](https://msdn.microsoft.com/library/f16cd988-673f-4376-b034-129ca93c7832)使用基于方法的查询语法。 这些示例中使用的 AdventureWorks 销售模型从 AdventureWorks 示例数据库中的 Contact、Address、Product、SalesOrderHeader 和 SalesOrderDetail 等表生成。  

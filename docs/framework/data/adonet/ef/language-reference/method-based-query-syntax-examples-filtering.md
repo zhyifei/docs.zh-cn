@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: e40e314c-eb30-4f44-a054-41e511e35832
 ms.openlocfilehash: 45000713d0151172762fd797bad7d7736c78a620
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43464076"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43501565"
 ---
 # <a name="method-based-query-syntax-examples-filtering"></a>基于方法的查询语法示例：筛选
 本主题中的示例演示如何使用`Where`并`Where…Contains`方法来查询[AdventureWorks 销售模型](https://msdn.microsoft.com/library/f16cd988-673f-4376-b034-129ca93c7832)使用基于方法的查询语法。 请注意，其中...`Contains` 不能使用作为的一部分[编译查询](../../../../../../docs/framework/data/adonet/ef/language-reference/compiled-queries-linq-to-entities.md)。  

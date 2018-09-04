@@ -13,11 +13,11 @@ ms.assetid: abf48c11-1e72-431d-9562-39cf23e1a8ff
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: a01da268a8347e93982604520f9dcb1d4e91327d
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43389620"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43501610"
 ---
 # <a name="walkthrough-creating-a-cryptographic-application"></a>演练：创建加密应用程序
 本演练演示如何对内容进行加密和解密。 下面的代码示例是特为 Windows 窗体应用程序设计的。 此应用程序不演示实际方案，例如使用智能卡。 而演示加密和解密的基础知识。  

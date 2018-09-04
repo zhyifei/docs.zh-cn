@@ -3,11 +3,11 @@ title: 使用 TransactedReceiveScope
 ms.date: 03/30/2017
 ms.assetid: d455f1dc-bfc5-43d6-8ae9-bc3b3a3ea08a
 ms.openlocfilehash: bc1c418f3fa116f5e1c1647af3543a38122842f5
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43481466"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43501637"
 ---
 # <a name="use-of-transactedreceivescope"></a>使用 TransactedReceiveScope
 此示例演示如何使用 <xref:System.Activities.Statements.TransactionScope> 将事务从客户端流动到服务器，以在客户端上创建一个新的事务和一个 <xref:System.ServiceModel.Activities.TransactedReceiveScope>，从而接收具有流动的事务的消息，并确定事务在服务器上的生存期范围。 此示例由充当客户端和服务器角色的两个项目组成。  

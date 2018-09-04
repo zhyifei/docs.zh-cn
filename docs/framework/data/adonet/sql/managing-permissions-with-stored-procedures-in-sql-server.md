@@ -3,11 +3,11 @@ title: 在 SQL Server 中使用存储过程管理权限
 ms.date: 03/30/2017
 ms.assetid: 08fa34e8-2ffa-470d-ba62-e511a5f8558e
 ms.openlocfilehash: e6161195682964ac9063cbee65d26ade601ef66c
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43425193"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43501683"
 ---
 # <a name="managing-permissions-with-stored-procedures-in-sql-server"></a>在 SQL Server 中使用存储过程管理权限
 为数据库创建多道防线的一个方法是使用存储过程或用户定义的函数实现所有数据访问。 撤消或拒绝对基础对象（如表）的所有权限，并授予对存储过程的 EXECUTE 权限。 这会为数据和数据库对象有效创建安全外围防线。  

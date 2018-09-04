@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 556d29a3-8fc9-4e38-b3ee-c188f7e7b155
 ms.openlocfilehash: 5f2282b7aea8adf9e7574e2abe86af7cc5a487e8
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43392288"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43505916"
 ---
 # <a name="adding-a-datatable-to-a-dataset"></a>将数据表添加到数据集中
 ADO.NET 使您能够创建 <xref:System.Data.DataTable> 对象并将其添加到现有 <xref:System.Data.DataSet> 中。 可以使用 <xref:System.Data.DataTable> 和 <xref:System.Data.DataTable.PrimaryKey%2A> 属性为 <xref:System.Data.DataColumn.Unique%2A> 设置约束信息。  

@@ -10,11 +10,11 @@ helpviewer_keywords:
 - controls [Windows Forms], binding to DBNull values
 ms.assetid: 96494e6f-5f40-4f83-af97-bbd7192c2af8
 ms.openlocfilehash: 278fd4ed0622673a49bfaa2567501b832bd535d3
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43469955"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43506047"
 ---
 # <a name="how-to-bind-windows-forms-controls-to-dbnull-database-values"></a>如何：将 Windows 窗体控件绑定到 DBNull 数据库值
 将 Windows 窗体绑定到数据源且该数据源返回 <xref:System.DBNull> 值时，可以直接替换相应的值，而不用处理、格式化或解析事件。 在格式化或解析数据源的值时，<xref:System.Windows.Forms.Binding.NullValue%2A> 属性将 <xref:System.DBNull> 转换为指定的对象。  

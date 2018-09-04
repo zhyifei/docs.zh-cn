@@ -5,11 +5,11 @@ f1_keywords:
 - vbrArray_TypeMismatch
 ms.assetid: d53cf41b-7a7a-466c-a29a-920d99698fa9
 ms.openlocfilehash: 94e0fe81f7e750a67943b68f2db700e3a7831da1
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43482712"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43502581"
 ---
 # <a name="39redim39-can-only-change-the-right-most-dimension"></a>&#39;ReDim&#39;只能更改最右边的维度
 `ReDim` 语句尝试使用 `Preserve` 关键字来更改一个数组的维度，它不是最后一个维度。 使用 `Preserve`时，只能调整数组最后一个维度的大小。 对于其他所有维度，必须指定与现有数组相同的大小。  

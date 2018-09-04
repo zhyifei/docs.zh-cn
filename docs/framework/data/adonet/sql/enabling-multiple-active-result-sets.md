@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 576079e4-debe-4ab5-9204-fcbe2ca7a5e2
 ms.openlocfilehash: 073cd3a57f254f639fac44900ff6bf022e1fb165
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43408394"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43504301"
 ---
 # <a name="enabling-multiple-active-result-sets"></a>启用多个活动结果集
 多个活动结果集 (MARS) 是一项用于 SQL Server 的功能，可用来对单个连接执行多个批处理。 如果对 SQL Server 启用了 MARS，使用的每个命令对象将向该连接添加一个会话。  

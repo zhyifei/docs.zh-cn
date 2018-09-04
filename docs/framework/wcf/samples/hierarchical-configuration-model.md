@@ -2,12 +2,12 @@
 title: 分层配置模型
 ms.date: 03/30/2017
 ms.assetid: 28dcc698-226c-4b77-9e51-8bf45a36216c
-ms.openlocfilehash: ce0bc69424495594e0ee9c6b950a5fa9c4d5f993
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.openlocfilehash: 8ca9b01eb022e2e2ab940866a6230e8227ceb2dc
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43000096"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43499336"
 ---
 # <a name="hierarchical-configuration-model"></a>分层配置模型
 此示例演示如何实现服务配置文件的层次结构。 它还演示如何从层次结构中较高的级别继承绑定、服务行为和终结点行为。  
@@ -69,9 +69,9 @@ public interface IDesc
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目录不存在，请转到[Windows Communication Foundation (WCF) 和.NET Framework 4 的 Windows Workflow Foundation (WF) 示例](http://go.microsoft.com/fwlink/?LinkId=150780)若要下载所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
+>  如果此目录不存在，请转到[Windows Communication Foundation (WCF) 和.NET Framework 4 的 Windows Workflow Foundation (WF) 示例](https://go.microsoft.com/fwlink/?LinkId=150780)若要下载所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\ConfigHierarchicalModel`  
   
 ## <a name="see-also"></a>请参阅  
- [AppFabric 管理示例](http://go.microsoft.com/fwlink/?LinkId=193960)
+ [AppFabric 管理示例](https://go.microsoft.com/fwlink/?LinkId=193960)

@@ -2,15 +2,15 @@
 title: 数据库访问活动
 ms.date: 03/30/2017
 ms.assetid: 174a381e-1343-46a8-a62c-7c2ae2c4f0b2
-ms.openlocfilehash: e9c7627738d3c5313a4f3e6e4451daf78b87839a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8e315742226ab086a865fa53d7aab9e7f15add08
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33520404"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43502823"
 ---
 # <a name="database-access-activities"></a>数据库访问活动
-数据库访问活动可用于在一个工作流内访问数据库。 这些活动可以访问数据库以检索或修改信息并使用[ADO.NET](http://go.microsoft.com/fwlink/?LinkId=166081)来访问数据库。  
+数据库访问活动可用于在一个工作流内访问数据库。 这些活动可以访问数据库以检索或修改信息并使用[ADO.NET](https://go.microsoft.com/fwlink/?LinkId=166081)来访问数据库。  
   
 > [!IMPORTANT]
 >  您的计算机上可能已安装这些示例。 在继续操作之前，请先检查以下（默认）目录：  
@@ -88,7 +88,7 @@ Public class DbUpdate: AsyncCodeActivity
   
  要执行的查询在其 `Sql` 属性中配置，并通过 `Parameters` 集合传递参数。  
   
- 后`DbQueryScalar`是执行，在中返回标量`Result``out`自变量 (类型的`TResult`，即在基类中定义<xref:System.Activities.AsyncCodeActivity%601>)。  
+ 之后`DbQueryScalar`是执行，在返回标量`Result``out`自变量 (类型的`TResult`，该基类中定义<xref:System.Activities.AsyncCodeActivity%601>)。  
   
 ```  
 public class DbQueryScalar<TResult> : AsyncCodeActivity<TResult>  
@@ -133,7 +133,7 @@ public class DbQueryScalar<TResult> : AsyncCodeActivity<TResult>
 |结果|执行查询后获得的标量。 此参数的类型为 `TResult`。|  
   
 ## <a name="dbquery"></a>DbQuery  
- 执行可检索对象列表的查询。 执行查询后，执行映射函数 (它可以是<xref:System.Func%601> < `DbDataReader`， `TResult`> 或<xref:System.Activities.ActivityFunc%601> < `DbDataReader`， `TResult`>)。 此映射函数在 `DbDataReader` 中获取一个记录，并将其映射到要返回的对象。  
+ 执行可检索对象列表的查询。 执行查询后，将执行映射函数 (它可以是<xref:System.Func%601> < `DbDataReader`， `TResult`> 或者<xref:System.Activities.ActivityFunc%601> < `DbDataReader`， `TResult`>)。 此映射函数在 `DbDataReader` 中获取一个记录，并将其映射到要返回的对象。  
   
  通过设置提供程序固定名称 (`ProviderName`) 和连接字符串 (`ConnectionString`)，或仅使用应用程序配置文件中的连接字符串配置名称 (`ConfigFileSectionName`)，可以配置连接信息。  
   
@@ -189,18 +189,18 @@ public class DbQuery<TResult> : AsyncCodeActivity<IList<TResult>> where TResult 
 |CommandType|要执行的 <xref:System.Data.Common.DbCommand> 的类型。|  
 |Sql|要执行的 SQL 命令。|  
 |参数|SQL 查询的参数集合。|  
-|Mapper|映射函数 (<xref:System.Func%601><`DbDataReader`， `TResult`>) 采用记录`DataReader`执行查询后获得并返回类型的对象的实例`TResult`要添加到`Result`集合。<br /><br /> 在这种情况下，将在单个执行脉冲中完成映射，但不能使用设计器以声明方式创作它。|  
-|MapperFunc|映射函数 (<xref:System.Activities.ActivityFunc%601><`DbDataReader`， `TResult`>) 采用记录`DataReader`执行查询后获得并返回类型的对象的实例`TResult`要添加到`Result`集合。<br /><br /> 在这种情况下，将在多个执行脉冲中完成映射。 此函数可序列化为 XAML，并以声明方式进行创作（任何现有活动均可参与映射）。|  
+|Mapper|映射函数 (<xref:System.Func%601><`DbDataReader`， `TResult`>) 记录，采用`DataReader`接受在执行查询后获得和返回类型的对象的实例`TResult`要添加到`Result`集合。<br /><br /> 在这种情况下，将在单个执行脉冲中完成映射，但不能使用设计器以声明方式创作它。|  
+|MapperFunc|映射函数 (<xref:System.Activities.ActivityFunc%601><`DbDataReader`， `TResult`>) 记录，采用`DataReader`接受在执行查询后获得和返回类型的对象的实例`TResult`要添加到`Result`集合。<br /><br /> 在这种情况下，将在多个执行脉冲中完成映射。 此函数可序列化为 XAML，并以声明方式进行创作（任何现有活动均可参与映射）。|  
 |结果|对象列表，这些对象是通过执行查询并对 `DataReader` 中的每个记录执行映射函数得到的。|  
   
 ## <a name="dbquerydataset"></a>DbQueryDataSet  
- 执行可返回 <xref:System.Data.DataSet> 的查询。 此类以异步方式执行其工作。 它派生自<xref:System.Activities.AsyncCodeActivity> < `TResult`> 并使用其异步功能。  
+ 执行可返回 <xref:System.Data.DataSet> 的查询。 此类以异步方式执行其工作。 它派生<xref:System.Activities.AsyncCodeActivity> < `TResult`> 并使用其异步功能。  
   
  通过设置提供程序固定名称 (`ProviderName`) 和连接字符串 (`ConnectionString`)，或仅使用应用程序配置文件中的连接字符串配置名称 (`ConfigFileSectionName`)，可以配置连接信息。  
   
  要执行的查询在其 `Sql` 属性中配置，并通过 `Parameters` 集合传递参数。  
   
- 后`DbQueryDataSet`执行`DataSet`中返回`Result``out`自变量 (类型的`TResult`，即在基类中定义<xref:System.Activities.AsyncCodeActivity%601>)。  
+ 之后`DbQueryDataSet`执行`DataSet`中返回`Result``out`自变量 (类型的`TResult`，该基类中定义<xref:System.Activities.AsyncCodeActivity%601>)。  
   
 ```  
 public class DbQueryDataSet : AsyncCodeActivity<DataSet>  
@@ -325,6 +325,6 @@ public class DbQueryDataSet : AsyncCodeActivity<DataSet>
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目录不存在，请转到[Windows Communication Foundation (WCF) 和针对.NET Framework 4 的 Windows Workflow Foundation (WF) 示例](http://go.microsoft.com/fwlink/?LinkId=150780)下载所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
+>  如果此目录不存在，请转到[Windows Communication Foundation (WCF) 和.NET Framework 4 的 Windows Workflow Foundation (WF) 示例](https://go.microsoft.com/fwlink/?LinkId=150780)若要下载所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\ActivityLibrary\DbActivities`

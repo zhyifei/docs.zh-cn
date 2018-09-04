@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: aa9e7a4dacceb492dfe037b4b64f22f231323de5
-ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
+ms.openlocfilehash: c08b1f6be41de63886115e5aed6bcad901658bb5
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43258328"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43509215"
 ---
 # <a name="coropenflags-enumeration"></a>CorOpenFlags 枚举
 包含一些标志值，用于控制打开清单文件时的元数据行为。  
@@ -61,7 +61,7 @@ typedef enum CorOpenFlags
 |`ofReadOnly`|指示应打开文件进行读取，并且调用`QueryInterface`有关[IMetaDataEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)无法进行。|  
 |`ofTakeOwnership`|指示内存被分配通过调用[CoTaskMemAlloc](/windows/desktop/api/combaseapi/nf-combaseapi-cotaskmemalloc) ，将释放由元数据。|  
 |`ofNoTypeLib`|已过时。 将忽略此标志。|  
-|`ofNoTransform`|指示应该禁用 .winmd 文件的自动转换。 也就是说，应该禁用从 Windows 运行时类型到 .NET Framework 类型的投影。 有关详细信息，请参阅[其下方底层信息使用.NET 和 Windows 运行时](http://msdn.microsoft.com/magazine/jj651569.aspx)。|  
+|`ofNoTransform`|指示应该禁用 .winmd 文件的自动转换。 也就是说，应该禁用从 Windows 运行时类型到 .NET Framework 类型的投影。 有关详细信息，请参阅[其下方底层信息使用.NET 和 Windows 运行时](https://msdn.microsoft.com/magazine/jj651569.aspx)。|  
 |`ofReserved1`|保留以供内部使用。|  
 |`ofReserved2`|保留以供内部使用。|  
 |`ofReserved`|保留以供内部使用。|  

@@ -5,11 +5,11 @@ ms.assetid: 3d51ba59-3adb-4ca4-bd33-5027531af687
 author: BrucePerlerMS
 manager: mbaldwin
 ms.openlocfilehash: 69c7e30168686eeb7d530b167b1f87c567c63874
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43463190"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43501187"
 ---
 # <a name="how-to-debug-claims-aware-applications-and-services-using-wif-tracing"></a>如何：使用 WIF 跟踪调试声明感知应用程序和服务
 ## <a name="applies-to"></a>适用于  

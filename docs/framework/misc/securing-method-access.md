@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: f7c2d6ec-3b18-4e0e-9991-acd97189d818
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 314ceb86219ce143e84a00392727d610c0779e48
-ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
+ms.openlocfilehash: bdec49d077a41ea0b578aaff9ce7fcf9e0c7dc8c
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43258064"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43505827"
 ---
 # <a name="securing-method-access"></a>保护方法访问
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
@@ -30,7 +30,7 @@ ms.locfileid: "43258064"
   
 -   如果可以信任类、程序集或派生类，则限制它们的可访问性的范围。 这是限制方法访问的最简单的方法。 请注意，派生类的可信度通常可低于其从中派生的类，尽管在某些情况下它们共享父类的标识。 具体而言，不推断从关键字**保护**，这不一定使用的安全上下文中。  
   
--   限制对指定的标识-从根本上讲，任何特定的调用方的方法访问[证据](http://msdn.microsoft.com/library/64ceb7c8-a0b4-46c4-97dc-6c22da0539da)选择 （强名称、 发布服务器、 区域等）。  
+-   限制对指定的标识-从根本上讲，任何特定的调用方的方法访问[证据](https://msdn.microsoft.com/library/64ceb7c8-a0b4-46c4-97dc-6c22da0539da)选择 （强名称、 发布服务器、 区域等）。  
   
 -   限制对具有你选择的任何权限的调用方的方法访问。  
   

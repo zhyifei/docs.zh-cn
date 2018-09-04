@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: a16e4a4d-6a5b-45db-8635-19570e4572ae
 ms.openlocfilehash: fdda1bd4d3aca440558998231f411b614bd5542e
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43392086"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43506171"
 ---
 # <a name="obtaining-a-dbproviderfactory"></a>获取 DbProviderFactory
 获取 <xref:System.Data.Common.DbProviderFactory> 的过程涉及将有关数据提供程序的信息传递给 <xref:System.Data.Common.DbProviderFactories> 类。 <xref:System.Data.Common.DbProviderFactories.GetFactory%2A> 方法将基于此信息创建一个强类型提供程序工厂。 例如，若要创建 <xref:System.Data.SqlClient.SqlClientFactory>，可以向 `GetFactory` 传递一个将提供程序名称指定为“System.Data.SqlClient”的字符串。 `GetFactory` 的其他重载采用 <xref:System.Data.DataRow>。 创建该提供程序工厂后，可以使用其方法创建其他对象。 `SqlClientFactory` 的部分方法包括 <xref:System.Data.SqlClient.SqlClientFactory.CreateConnection%2A>、<xref:System.Data.SqlClient.SqlClientFactory.CreateCommand%2A> 和 <xref:System.Data.SqlClient.SqlClientFactory.CreateDataAdapter%2A>。  

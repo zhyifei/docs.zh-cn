@@ -3,11 +3,11 @@ title: WorkflowApplication ReadLine 主机
 ms.date: 03/30/2017
 ms.assetid: f7b362be-cb42-40d7-b9ef-cfc4aed2455b
 ms.openlocfilehash: 4388ff0285de58b0dc6f86af93aad84b2894373f
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43470848"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43502930"
 ---
 # <a name="workflowapplication-readline-host"></a>WorkflowApplication ReadLine 主机
 此示例是一个泛型 ReadLine 主机。 可以使用包含的 `ReadLine` 活动（或是从通过字符串恢复的书签获取数据的其他类似活动）来加载和运行任何工作流。 `WriteLine` 活动的输出或写入 <xref:System.Activities.Statements.WriteLine.TextWriter%2A> 扩展的任何内容会定向到主机窗口。 当某个实例处于空闲状态时，该实例的可用书签会出现在一个组合框中。 选择书签、输入某些文本和按恢复书签按钮都会继续执行工作流。 也可以取消、中止或终止选择的工作流。 默认情况下持久性处于启用状态 - 您可以关闭主机，然后将其重新打开，实例列表会被那些存储在数据库中的实例所填充。 跟踪可用于将 <xref:System.Activities.WorkflowApplication> 级别事件输出到主机（可以选择在活动级别添加详细跟踪）。  

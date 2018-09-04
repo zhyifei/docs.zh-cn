@@ -7,11 +7,11 @@ helpviewer_keywords:
 - Windows Communication Foundation, Web service protocols
 ms.assetid: 1f7fc4ff-30fe-4e46-adda-91caad3b06c6
 ms.openlocfilehash: f4967a29b28f1862f5799f6935083ed12cb81ead
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43399045"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43504333"
 ---
 # <a name="web-services-protocols-supported-by-system-provided-interoperability-bindings"></a>系统提供的互操作性绑定支持的 Web 服务协议
 Windows Communication Foundation (WCF) 构建与支持的一组称为 Web 服务规范的规范的 Web 服务进行互操作。 为了简化互操作性最佳实践的服务配置，WCF，引入了三个可互操作的系统提供绑定： <xref:System.ServiceModel.BasicHttpBinding?displayProperty=nameWithType>， <xref:System.ServiceModel.WSHttpBinding?displayProperty=nameWithType>，和<xref:System.ServiceModel.WSDualHttpBinding?displayProperty=nameWithType>。 WCF 的互操作性与组织的进步的结构化信息标准 (OASIS) 标准，包括一个可互操作的系统提供绑定： <xref:System.ServiceModel.WS2007HttpBinding?displayProperty=nameWithType>。 对于元数据发布的 WCF 包含两个可互操作的系统提供绑定： [ \<mexHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/mexhttpbinding.md)并[ \<mexHttpsBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/mexhttpsbinding.md)。 本主题列出系统提供的可互操作绑定支持的规范。  

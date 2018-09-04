@@ -11,12 +11,12 @@ helpviewer_keywords:
 - ListView control [Windows Forms]
 - list controls [Windows Forms], List view
 ms.assetid: 9f71cf5c-82da-488a-a04e-ef52c0817187
-ms.openlocfilehash: 396553ce72e34a6af40f54fa45035a218b7fdb17
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e30f4b21d8b8f1a4c5a168402ce5cc386d932f86
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33539684"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43510606"
 ---
 # <a name="listview-control-windows-forms"></a>ListView 控件（Windows 窗体）
 Windows 窗体 `ListView` 控件显示带图标的项列表。 你可以使用列表视图创建类似 Windows 资源管理器右窗格的用户界面。  
@@ -58,15 +58,15 @@ Windows 窗体 `ListView` 控件显示带图标的项列表。 你可以使用�
  [如何：向 ListView 控件添加搜索功能](../../../../docs/framework/winforms/controls/how-to-add-search-capabilities-to-a-listview-control.md)  
  介绍如何以编程方式使用文本搜索或屏幕坐标查找项。  
   
--   [如何：使用设计器在 Windows 窗体 ListView 控件中启用平铺视图](http://msdn.microsoft.com/library/ms233655\(v=vs.110\))  
+-   [如何：使用设计器在 Windows 窗体 ListView 控件中启用平铺视图](enable-tile-view-in-a-wf-listview-control-using-the-designer.md)  
   
--   [如何：使用设计器用 Windows 窗体 ListView 控件添加和删除项](http://msdn.microsoft.com/library/ms233671\(v=vs.110\))  
+-   [如何：使用设计器用 Windows 窗体 ListView 控件添加和删除项](add-and-remove-items-with-wf-listview-control-using-the-designer.md)  
   
--   [如何：使用设计器向 Windows 窗体 ListView 控件添加列](http://msdn.microsoft.com/library/ms233652\(v=vs.110\))  
+-   [如何：使用设计器向 Windows 窗体 ListView 控件添加列](how-to-add-columns-to-the-windows-forms-listview-control-using-the-designer.md)  
   
--   [如何：使用设计器在 Windows 窗体 ListView 控件中对项进行分组](http://msdn.microsoft.com/library/ms233663\(v=vs.110\))  
+-   [如何：使用设计器在 Windows 窗体 ListView 控件中对项进行分组](how-to-group-items-in-a-windows-forms-listview-control-using-the-designer.md)  
   
--   [演练：使用设计器创建带有 ListView 和 TreeView 控件的资源管理器样式界面](http://msdn.microsoft.com/library/ms171645\(v=vs.110\))  
+-   [演练：使用设计器创建带有 ListView 和 TreeView 控件的资源管理器样式界面](creating-an-explorer-style-interface-with-the-listview-and-treeview.md)  
   
 ## <a name="reference"></a>参考  
  <xref:System.Windows.Forms.ListView> 类  
@@ -82,7 +82,7 @@ Windows 窗体 `ListView` 控件显示带图标的项列表。 你可以使用�
  [如何：使用 Windows 窗体创建多窗格用户界面](../../../../docs/framework/winforms/controls/how-to-create-a-multipane-user-interface-with-windows-forms.md)  
  提供具有多个窗格的 Windows 窗体的布局说明。  
   
- [Windows XP 功能和 Windows 窗体控件](http://msdn.microsoft.com/library/bc7fab94-fce9-4bf1-a8ad-a5837c91c3c0)  
+ [Windows XP 功能和 Windows 窗体控件](https://msdn.microsoft.com/library/bc7fab94-fce9-4bf1-a8ad-a5837c91c3c0)  
  介绍如何充分利用适用于 <xref:System.Windows.Forms.ListView> 控件的 Windows XP 特定功能。  
   
 ## <a name="see-also"></a>请参阅  

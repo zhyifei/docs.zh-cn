@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 33bae8a8-4ed8-4a1f-85d1-c62ff288cc61
 ms.openlocfilehash: 290c2f58d0259d5a0df52711f63c48521891ae12
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43407522"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43502076"
 ---
 # <a name="how-to-call-model-defined-functions-as-object-methods"></a>如何：调用模型定义的函数作为对象方法
 本主题介绍如何将模型定义函数作为 <xref:System.Data.Objects.ObjectContext> 对象的方法调用或作为自定义类的静态方法调用。 一个*模型定义函数*是概念模型中定义的函数。 本主题中的过程介绍如何直接调用这些函数，而不是从 LINQ to Entities 查询中调用它们。 有关调用模型定义的函数在 LINQ to Entities 查询的信息，请参阅[如何： 在查询中的 Call Model-Defined 函数](../../../../../../docs/framework/data/adonet/ef/language-reference/how-to-call-model-defined-functions-in-queries.md)。  

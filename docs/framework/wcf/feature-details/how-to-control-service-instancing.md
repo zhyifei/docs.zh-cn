@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: e0b12b34-8004-443a-a46d-83a5c00f2601
-ms.openlocfilehash: 2f9e4f298eb95498ec8d3603624763bfd95bfda1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b9e622903f871564495796b1690ab4e3a1f66fb7
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33489139"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43514819"
 ---
 # <a name="how-to-control-service-instancing"></a>如何：控制服务实例化
-通过设置服务的实例模式，可以指定创建 <xref:System.ServiceModel.InstanceContext?displayProperty=nameWithType>（及其关联的用户定义服务对象）的时间。 有关可能模式，请参见 <xref:System.ServiceModel.InstanceContextMode> 枚举。 有关各种行为的详细信息，请参阅[配置和扩展的运行时带有行为](../../../../docs/framework/wcf/extending/configuring-and-extending-the-runtime-with-behaviors.md)。 有关工作示例，请参阅[行为](../../../../docs/framework/wcf/samples/behaviors.md)。  
+通过设置服务的实例模式，可以指定创建 <xref:System.ServiceModel.InstanceContext?displayProperty=nameWithType>（及其关联的用户定义服务对象）的时间。 有关可能模式，请参见 <xref:System.ServiceModel.InstanceContextMode> 枚举。 有关行为的详细信息，请参阅[配置和扩展的运行时行为带有](../../../../docs/framework/wcf/extending/configuring-and-extending-the-runtime-with-behaviors.md)。 有关工作示例，请参阅[行为](../../../../docs/framework/wcf/samples/behaviors.md)。  
   
 ### <a name="to-control-the-service-instance-lifetime-using-code"></a>使用代码控制服务实例生存期  
   
@@ -34,4 +34,4 @@ ms.locfileid: "33489139"
  <xref:System.ServiceModel.ServiceBehaviorAttribute>  
  <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A>  
  <xref:System.ServiceModel.InstanceContextMode>  
- [服务： 行为示例](http://msdn.microsoft.com/library/4e3c6513-a7ff-4b35-8dcf-b5506c6f39a7)
+ [服务： 行为示例](https://msdn.microsoft.com/library/4e3c6513-a7ff-4b35-8dcf-b5506c6f39a7)

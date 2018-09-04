@@ -6,12 +6,12 @@ helpviewer_keywords:
 - timers
 - timers [Windows Forms], creating
 ms.assetid: 6700e534-6382-43d5-98ed-14205435fff7
-ms.openlocfilehash: 77ff87bcb8c325e87564dfbadf87729ed8a28209
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1a00bfa0772273f9374d292e27f5fba174172ca6
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33537845"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43499869"
 ---
 # <a name="timer-component-windows-forms"></a>Timer 组件（Windows 窗体）
 Windows 窗体 <xref:System.Windows.Forms.Timer> 是一种按固定事件间隔引发事件的组件。 此组件专为 Windows 窗体环境设计。  
@@ -37,5 +37,5 @@ Windows 窗体 <xref:System.Windows.Forms.Timer> 是一种按固定事件间隔�
  [在 Windows 窗体上使用的控件](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
  提供 Windows 窗体控件的完整列表，附带其使用情况相关信息的链接。  
   
- [Visual Basic 6.0 用户的计时器控件](http://msdn.microsoft.com/library/38e5184a-1e50-45cf-b936-dae566c0cfc5)  
+ [Visual Basic 6.0 用户的计时器控件](https://msdn.microsoft.com/library/38e5184a-1e50-45cf-b936-dae566c0cfc5)  
  介绍与先前版本相比，Visual Basic 中的计时器功能有哪些更改。

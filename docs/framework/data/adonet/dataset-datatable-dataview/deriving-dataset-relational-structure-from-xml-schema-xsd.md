@@ -3,11 +3,11 @@ title: 从 XML 架构派生数据集关系结构 (XSD)
 ms.date: 03/30/2017
 ms.assetid: 8f6cd04d-6197-4bc4-9096-8c51c7e4acae
 ms.openlocfilehash: fd5c41272d3b050427804f08f7387328012065f4
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43417199"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43504942"
 ---
 # <a name="deriving-dataset-relational-structure-from-xml-schema-xsd"></a>从 XML 架构派生数据集关系结构 (XSD)
 本节将概述如何从 XML 架构定义语言 (XSD) 架构文档生成 `DataSet` 的关系架构。 一般情况下，为每个`complexType`架构元素的子元素，将生成一个表中`DataSet`。 表结构取决于复杂类型的定义。 在中创建表`DataSet`架构中的顶级元素。 但是，一个表只能创建为顶级`complexType`元素时`complexType`元素嵌套在另一个`complexType`元素，在这种情况下嵌套`complexType`元素映射到`DataTable`内`DataSet`。  

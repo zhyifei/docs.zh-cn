@@ -8,11 +8,11 @@ helpviewer_keywords:
 - Windows Communication Foundation [WCF], concepts
 ms.assetid: 3e7e0afd-7913-499d-bafb-eac7caacbc7a
 ms.openlocfilehash: c19169d61a96314e9fcfad94b013af18440e1ff5
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43474085"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43503609"
 ---
 # <a name="fundamental-windows-communication-foundation-concepts"></a>Windows Communication Foundation 基础概念
 本文档提供 Windows Communication Foundation (WCF) 体系结构的高级视图。 本文档旨在解释关键概念以及这些概念之间的关系。 有关创建 WCF 服务和客户端的最简单版本的教程，请参阅[入门教程](../../../docs/framework/wcf/getting-started-tutorial.md)。 若要了解 WCF 编程，请参阅[基本 WCF 编程](../../../docs/framework/wcf/basic-wcf-programming.md)。  

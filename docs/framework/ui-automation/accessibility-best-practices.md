@@ -8,16 +8,16 @@ ms.assetid: e6d5cd98-21a3-4b01-999c-fb953556d0e6
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: cf3d9aafa428b82b9e8817bcd31b9a6bd2cfeba4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9b451e0c66d2c595826e90debfcb0fb3a2602fec
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33400964"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43502421"
 ---
 # <a name="accessibility-best-practices"></a>辅助功能最佳方案
 > [!NOTE]
->  本文档适用于想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空间中定义的托管 <xref:System.Windows.Automation> 类的 .NET Framework 开发人员。 有关 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]的最新信息，请参阅 [Windows 自动化 API：UI 自动化](http://go.microsoft.com/fwlink/?LinkID=156746)。  
+>  本文档适用于想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空间中定义的托管 <xref:System.Windows.Automation> 类的 .NET Framework 开发人员。 有关最新信息[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]，请参阅[Windows 自动化 API: UI 自动化](https://go.microsoft.com/fwlink/?LinkID=156746)。  
   
  在控件或应用程序中实现以下最佳做法将提高 [!INCLUDE[TLA#tla_at](../../../includes/tlasharptla-at-md.md)] 设备的可访问性。 其中一些最佳做法重点关注优秀的 [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] 设计。 每项最佳做法均包括实现 [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] 控件或应用程序的相关信息。 在很多情况下，满足这些最佳做法的工作已包含在 [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] 控件中。  
   
@@ -135,5 +135,5 @@ ms.locfileid: "33400964"
   
 ## <a name="see-also"></a>请参阅  
  <xref:System.Windows.Automation.Peers>  
- [主题和 UI 自动化支持示例的 NumericUpDown 自定义控件](http://msdn.microsoft.com/library/9aed3c10-68eb-419e-a57f-1d2af15a8253)  
+ [带有主题和 UI 自动化支持示例的 NumericUpDown 自定义控件](https://msdn.microsoft.com/library/9aed3c10-68eb-419e-a57f-1d2af15a8253)  
  [键盘用户界面设计的准则](http://msdn2.microsoft.com/library/ms971323.aspx)

@@ -2,15 +2,15 @@
 title: XMLSerializer 示例
 ms.date: 03/30/2017
 ms.assetid: 7d134453-9a35-4202-ba77-9ca3a65babc3
-ms.openlocfilehash: 155719f546491f53ad2587e12d030dd7821b1fd3
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: 7b43af08758de1d33bcc6ab8f477885c7ecc0825
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33805013"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43503085"
 ---
 # <a name="xmlserializer-sample"></a>XMLSerializer 示例
-此示例演示如何序列化和反序列化与 <xref:System.Xml.Serialization.XmlSerializer> 兼容的类型。 默认的 Windows Communication Foundation (WCF) 格式化程序<xref:System.Runtime.Serialization.DataContractSerializer>类。 当无法使用 <xref:System.Xml.Serialization.XmlSerializer> 类时，可以使用 <xref:System.Runtime.Serialization.DataContractSerializer> 类来序列化和反序列化类型。 当需要精确控制 XML 时通常会发生这种情况 - 例如，如果某个数据必须是一个 XML 属性，而不能是 XML 元素。 此外， <xref:System.Xml.Serialization.XmlSerializer> ，常常会自动选择创建非 WCF 服务的客户端时。  
+此示例演示如何序列化和反序列化与 <xref:System.Xml.Serialization.XmlSerializer> 兼容的类型。 默认的 Windows Communication Foundation (WCF) 格式化程序<xref:System.Runtime.Serialization.DataContractSerializer>类。 当无法使用 <xref:System.Xml.Serialization.XmlSerializer> 类时，可以使用 <xref:System.Runtime.Serialization.DataContractSerializer> 类来序列化和反序列化类型。 当需要精确控制 XML 时通常会发生这种情况 - 例如，如果某个数据必须是一个 XML 属性，而不能是 XML 元素。 此外，<xref:System.Xml.Serialization.XmlSerializer>通常创建非 WCF 服务的客户端时获取自动会选择。  
   
  在此示例中，客户端是一个控制台应用程序 (.exe)，服务是由 Internet 信息服务 (IIS) 承载的。  
   
@@ -84,7 +84,7 @@ public class XmlSerializerCalculatorService : IXmlSerializerCalculator
 }  
 ```  
   
- 客户端实现也使用复数。 服务协定和数据类型定义在 generatedClient.cs 源文件中，通过生成[ServiceModel 元数据实用工具 (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)从服务元数据。 Svcutil.exe 可以检测何时协定不能由 <xref:System.Runtime.Serialization.DataContractSerializer> 序列化，在这种情况下转而发出 `XmlSerializable` 类型。 如果要强制使用 <xref:System.Xml.Serialization.XmlSerializer>，可以将 /serializer:XmlSerializer（使用 XmlSerializer）命令选项传递给 Svcutil.exe 工具。  
+ 客户端实现也使用复数。 在 generatedClient.cs 源代码文件中，由生成定义服务协定和数据类型[ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)从服务元数据。 Svcutil.exe 可以检测何时协定不能由 <xref:System.Runtime.Serialization.DataContractSerializer> 序列化，在这种情况下转而发出 `XmlSerializable` 类型。 如果要强制使用 <xref:System.Xml.Serialization.XmlSerializer>，可以将 /serializer:XmlSerializer（使用 XmlSerializer）命令选项传递给 Svcutil.exe 工具。  
   
 ```csharp  
 // Create a client.  
@@ -119,18 +119,18 @@ Press <ENTER> to terminate client.
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>设置、生成和运行示例  
   
-1.  确保已执行[的 Windows Communication Foundation 示例的一次性安装过程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
+1.  请确保您具有执行[的 Windows Communication Foundation 示例的一次性安装过程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
   
 2.  若要生成 C# 或 Visual Basic .NET 版本的解决方案，请按照 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)中的说明进行操作。  
   
-3.  若要在单或跨计算机配置上运行示例，请按照中的说明[运行 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/running-the-samples.md)。  
+3.  若要在单或跨计算机配置中运行示例，请按照中的说明[运行 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/running-the-samples.md)。  
   
 > [!IMPORTANT]
 >  您的计算机上可能已安装这些示例。 在继续操作之前，请先检查以下（默认）目录：  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目录不存在，请转到[Windows Communication Foundation (WCF) 和针对.NET Framework 4 的 Windows Workflow Foundation (WF) 示例](http://go.microsoft.com/fwlink/?LinkId=150780)下载所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
+>  如果此目录不存在，请转到[Windows Communication Foundation (WCF) 和.NET Framework 4 的 Windows Workflow Foundation (WF) 示例](https://go.microsoft.com/fwlink/?LinkId=150780)若要下载所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Client\Interop\XmlSerializer`  
   

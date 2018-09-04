@@ -3,11 +3,11 @@ title: 会话和队列
 ms.date: 03/30/2017
 ms.assetid: 47d7c5c2-1e6f-4619-8003-a0ff67dcfbd6
 ms.openlocfilehash: 5e8cd975c27e5e7a833e53da7a03c06b10d14ca7
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43404488"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43501486"
 ---
 # <a name="sessions-and-queues"></a>会话和队列
 此示例演示如何通过消息队列 (MSMQ) 传输来发送和接收排队通信中的一组相关消息。 本示例使用 `netMsmqBinding` 绑定。 此服务是自承载控制台应用程序，通过它可以观察服务接收排队消息。  

@@ -2,11 +2,12 @@
 title: 使用跟踪提取 WF 数据
 ms.date: 03/30/2017
 ms.assetid: e30c68f5-8c6a-495a-bd20-667a4364c68e
-ms.openlocfilehash: 22b147521d4ce0c72fadfb7adc81e05f10ce52b1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ef8118df2c5834e32c40760ef31f75660893d89b
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43501578"
 ---
 # <a name="extract-wf-data-using-tracking"></a>使用跟踪提取 WF 数据
 此示例演示如何使用工作流跟踪从活动中提取工作流变量和自变量。 它还演示如何为跟踪记录添加批注以及如何从自定义跟踪记录中提取数据负载。 此示例使用 Windows 事件跟踪 (ETW) 跟踪参与者来提取工作流中的数据。  
@@ -95,13 +96,13 @@ ms.lasthandoff: 05/04/2018
   
 6.  在调用服务之前，请启动事件查看器并确保事件日志正在侦听从工作流服务发出的跟踪事件。  
   
-7.  从**启动**菜单上，选择**管理工具**然后**事件查看器**。  
+7.  从**启动**菜单中，选择**管理工具**，然后**事件查看器**。  
   
-8.  在事件查看器中的树视图中，导航到**事件查看器**， **Applications and Services Logs**，和**Microsoft**。 右键单击**Microsoft**和选择**视图**然后**显示分析和调试日志**。  
+8.  在事件查看器中树视图中，导航到**事件查看器**，**应用程序和服务日志**，并**Microsoft**。 右键单击**Microsoft** ，然后选择**视图**，然后**显示分析和调试日志**。  
   
-     确保**显示分析和调试日志**选项处于选中状态。  
+     絋粄**显示分析和调试日志**选项处于选中状态。  
   
-9. 在事件查看器中的树视图中，导航到**事件查看器**， **Applications and Services Logs**， **Microsoft**， **Windows**， **应用程序服务器-应用程序**。 右键单击**分析**和选择**启用日志**。  
+9. 在事件查看器中树视图中，导航到**事件查看器**，**应用程序和服务日志**， **Microsoft**， **Windows**， **应用程序服务器-应用程序**。 右键单击**Analytic** ，然后选择**启用日志**。  
   
 10. 使用 [!INCLUDE[fileExplorer](../../../../includes/fileexplorer-md.md)]，打开 WCF 测试客户端。  
   
@@ -109,7 +110,7 @@ ms.lasthandoff: 05/04/2018
   
      默认的 [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] 安装文件夹为 C:\Program Files\Microsoft Visual Studio 10.0。  
   
-11. 在 WCF 测试客户端，选择**添加服务**从**文件**菜单。  
+11. 在 WCF 测试客户端，选择**添加的服务**从**文件**菜单。  
   
      在输入框中添加您先前复制的本地服务 WSDL 地址。  
   
@@ -119,7 +120,7 @@ ms.lasthandoff: 05/04/2018
   
 13. 单击**调用**。  
   
-14. 切换回事件查看器并导航到**事件查看器**， **Applications and Services Logs**， **Microsoft**， **Windows**， **应用程序服务器-应用程序**。 右键单击**分析**和选择**刷新**。 工作流事件的事件 ID 位于 100-199 范围内。  
+14. 切换回事件查看器并导航到**事件查看器**，**应用程序和服务日志**， **Microsoft**， **Windows**， **应用程序服务器-应用程序**。 右键单击**Analytic** ，然后选择**刷新**。 工作流事件的事件 ID 位于 100-199 范围内。  
   
      事件包含批注、变量、参数和自定义跟踪记录，可在事件查看器中查看这些内容。  
   
@@ -130,11 +131,11 @@ ms.lasthandoff: 05/04/2018
   
 1.  打开事件查看器。  
   
-2.  导航到**事件查看器**， **Applications and Services Logs**， **Microsoft**， **Windows**，**应用程序服务器应用程序**。 右键单击**分析**和选择**禁用日志**。  
+2.  导航到**事件查看器**，**应用程序和服务日志**， **Microsoft**， **Windows**，**应用程序服务器应用程序**。 右键单击**Analytic** ，然后选择**禁用日志**。  
   
-3.  导航到**事件查看器**， **Applications and Services Logs**， **Microsoft**， **Windows**，**应用程序服务器应用程序**。 右键单击**分析**和选择**清除日志**。  
+3.  导航到**事件查看器**，**应用程序和服务日志**， **Microsoft**， **Windows**，**应用程序服务器应用程序**。 右键单击**Analytic** ，然后选择**清除日志**。  
   
-     选择**清除**选项以清除事件。  
+     选择**清除**选项可清除这些事件。  
   
 ## <a name="known-issue"></a>已知问题  
   
@@ -143,16 +144,16 @@ ms.lasthandoff: 05/04/2018
 >   
 >  `The description for Event ID <id> from source Microsoft-Windows-Application Server-Applications cannot be found. Either the component that raises this event is not installed on your local computer or the installation is corrupted. You can install or repair the component on the local computer.`  
 >   
->  如果你遇到此错误，请单击**刷新**在操作窗格中。 事件现在应能正确解码。  
+>  如果遇到此错误，请单击**刷新**操作窗格中。 事件现在应能正确解码。  
   
 > [!IMPORTANT]
 >  您的计算机上可能已安装这些示例。 在继续操作之前，请先检查以下（默认）目录：  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目录不存在，请转到[Windows Communication Foundation (WCF) 和针对.NET Framework 4 的 Windows Workflow Foundation (WF) 示例](http://go.microsoft.com/fwlink/?LinkId=150780)下载所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
+>  如果此目录不存在，请转到[Windows Communication Foundation (WCF) 和.NET Framework 4 的 Windows Workflow Foundation (WF) 示例](https://go.microsoft.com/fwlink/?LinkId=150780)若要下载所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Tracking\ExtractWfData`  
   
 ## <a name="see-also"></a>请参阅  
- [AppFabric 监视示例](http://go.microsoft.com/fwlink/?LinkId=193959)
+ [AppFabric 监视示例](https://go.microsoft.com/fwlink/?LinkId=193959)

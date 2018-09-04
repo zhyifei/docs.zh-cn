@@ -5,11 +5,11 @@ ms.assetid: 5f050181-8fdd-4a4e-9d16-f84c22a88a97
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: efb16c1e947cd832da88b53a3522a5928e77ae06
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43415444"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43501706"
 ---
 # <a name="runtime-exceptions-in-net-native-apps"></a>.NET 本机应用中的运行时异常
 请务必在通用 Windows 平台应用程序的目标平台上测试它们的发布版本，因为调试和发布配置完全不同。 默认情况下，调试配置使用 .NET Core 运行时来编译应用程序，但发布配置使用 .NET 本机将应用程序编译为本机代码。  
