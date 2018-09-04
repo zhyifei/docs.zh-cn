@@ -3,11 +3,11 @@ title: DynamicActivity 创建
 ms.date: 03/30/2017
 ms.assetid: d8ebe82f-98c8-4452-aed7-2c60a512b097
 ms.openlocfilehash: 270066fafd5c71b2a720ca305433159c172872aa
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43385256"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43534012"
 ---
 # <a name="dynamicactivity-creation"></a>DynamicActivity 创建
 此示例演示在运行时使用 <xref:System.Activities.DynamicActivity> 活动来创建活动的两种不同方式。  

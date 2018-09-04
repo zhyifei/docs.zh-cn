@@ -2,12 +2,12 @@
 title: 自动确认模式
 ms.date: 03/30/2017
 ms.assetid: 668aec65-78d3-4636-9c7b-deed643a18f9
-ms.openlocfilehash: b30703ffba3b721ac544ea6471ec47ce7f746d2b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a032c05743b64fe58b0b187328b5216080ba6e19
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33515988"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43552265"
 ---
 # <a name="auto-confirm-pattern"></a>自动确认模式
 此示例包含三个用来说明自定义 `AutoConfirmScope` 活动的方案。 第一个示例演示一个由四个可补偿活动组成的序列的成功执行，其中的第二个和第三个可补偿活动嵌套到 `AutoConfirmScope` 中。 第二个示例演示相同的序列，但在执行第四个 <xref:System.Activities.Statements.CompensableActivity> 之后会发生异常。 第三个方案演示相同的序列，但在第二个 `AutoConfirmScope` 完成后 <xref:System.Activities.Statements.CompensableActivity> 中会发生异常。  
@@ -35,6 +35,6 @@ ms.locfileid: "33515988"
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目录不存在，请转到[Windows Communication Foundation (WCF) 和针对.NET Framework 4 的 Windows Workflow Foundation (WF) 示例](http://go.microsoft.com/fwlink/?LinkId=150780)下载所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
+>  如果此目录不存在，请转到[Windows Communication Foundation (WCF) 和.NET Framework 4 的 Windows Workflow Foundation (WF) 示例](https://go.microsoft.com/fwlink/?LinkId=150780)若要下载所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\Compensation\AutoConfirm`

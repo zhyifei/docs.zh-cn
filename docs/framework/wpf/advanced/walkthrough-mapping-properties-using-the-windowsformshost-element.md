@@ -8,12 +8,12 @@ helpviewer_keywords:
 - mapping properties [WPF]
 - WindowsFormsHost element property mapping [WPF]
 ms.assetid: 74809167-bf8e-48b7-a2e7-b4ea08bc7d8c
-ms.openlocfilehash: 77027d771cf471e563e24c46d7794a18ad223541
-ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
+ms.openlocfilehash: 4841ce260adfb5d0c0d4b0f359ac9998521d584b
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43258513"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43529642"
 ---
 # <a name="walkthrough-mapping-properties-using-the-windowsformshost-element"></a>演练：使用 WindowsFormsHost 元素映射属性
 
@@ -33,7 +33,7 @@ ms.locfileid: "43258513"
 
 -   扩展默认属性映射。
 
-在本演练中所涉及任务的完整代码列表，请参阅[映射属性使用 WindowsFormsHost 元素示例](http://go.microsoft.com/fwlink/?LinkID=160019)。
+在本演练中所涉及任务的完整代码列表，请参阅[映射属性使用 WindowsFormsHost 元素示例](https://go.microsoft.com/fwlink/?LinkID=160019)。
 
 完成后，你将能够映射[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]上托管的相应属性的属性[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]控件。
 

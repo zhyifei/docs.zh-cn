@@ -3,11 +3,11 @@ title: Hello World 自定义活动
 ms.date: 03/30/2017
 ms.assetid: 72b1dd0a-9aad-47d5-95a9-a1024ee1d0a1
 ms.openlocfilehash: fde745fae7470ec763b6b5030a60436a6525e3c0
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43470770"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43533491"
 ---
 # <a name="hello-world-custom-activity"></a>Hello World 自定义活动
 此示例演示多个关键功能的 Windows Workflow Foundation (WF)，包括如何创建一个简单的自定义活动。 此示例中演示的一些功能使用 C# 创建自定义活动并使用 `in` 和 `out` 参数（<xref:System.Activities.InArgument> 和 <xref:System.Activities.OutArgument>）。  

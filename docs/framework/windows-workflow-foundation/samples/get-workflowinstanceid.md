@@ -3,11 +3,11 @@ title: 获取 WorkflowInstanceId
 ms.date: 03/30/2017
 ms.assetid: bd7eea3b-1c28-4b84-9a67-003bc553aa81
 ms.openlocfilehash: 6725ed92bf785e5b7f7d61332944fcce8427388a
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43463796"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43532301"
 ---
 # <a name="get-workflowinstanceid"></a>获取 WorkflowInstanceId
 此示例演示如何使用自定义活动 `GetWorkflowInstanceId` 返回工作流实例 ID。  

@@ -2,15 +2,15 @@
 title: 在可移植子集项目中添加服务引用
 ms.date: 03/30/2017
 ms.assetid: 61ccfe0f-a34b-40ca-8f5e-725fa1b8095e
-ms.openlocfilehash: 5d094bb1d2d1155565e48850a2f41829a93cff84
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: efe95a326e7c13237c7d2d74888c85bf919ed287
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33460484"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43542305"
 ---
 # <a name="add-service-reference-in-a-portable-subset-project"></a>在可移植子集项目中添加服务引用
-可移植子集项目，.NET 程序集程序员可以维护单个源树并生成系统，同时仍支持多个.NET 实现 （桌面、 Silverlight、 Windows Phone 和 XBOX）。 可移植子集项目只引用.NET 可移植库，后者是可以在任何.NET 实现中使用的.NET framework 程序集。  
+可移植子集项目启用.NET 程序集程序员可以维护单个源树和生成系统，同时仍可支持多个.NET 实现 （桌面、 Silverlight、 Windows Phone 和 XBOX）。 可移植子集项目只引用.NET 可移植库，后者是可以使用任何.NET 实现的.NET framework 程序集。  
   
 ## <a name="add-service-reference-details"></a>添加服务引用详细信息  
  在可移植子集项目中添加服务引用时，将强制执行以下限制：   
@@ -45,4 +45,4 @@ ms.locfileid: "33460484"
   
 ## <a name="see-also"></a>请参阅  
  [使用 WCF 客户端访问服务](../../../docs/framework/wcf/accessing-services-using-a-wcf-client.md)  
- [可移植类库](http://msdn.microsoft.com/library/gg597391\(v=vs.110\))
+ [可移植类库](../../standard/cross-platform/cross-platform-development-with-the-portable-class-library.md)

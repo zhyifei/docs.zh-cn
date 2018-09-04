@@ -2,15 +2,15 @@
 title: UDP 激活
 ms.date: 03/30/2017
 ms.assetid: 4b0ccd10-0dfb-4603-93f9-f0857c581cb7
-ms.openlocfilehash: 9f7600bff17c015f28c3fb94ed5360561d45c65b
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: c64540db555d7cac56dd46c6ffb63ec95ca81f91
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33810026"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43538511"
 ---
 # <a name="udp-activation"></a>UDP 激活
-此示例基于[传输： UDP](../../../../docs/framework/wcf/samples/transport-udp.md)示例。 它扩展[传输： UDP](../../../../docs/framework/wcf/samples/transport-udp.md)示例，用于使用 Windows 进程激活服务 (WAS) 支持进程激活。  
+此示例基于[传输： UDP](../../../../docs/framework/wcf/samples/transport-udp.md)示例。 它扩展了[传输： UDP](../../../../docs/framework/wcf/samples/transport-udp.md)示例，以使用 Windows 进程激活服务 (WAS) 支持进程激活。  
   
  该示例主要由三个部分组成：  
   
@@ -46,7 +46,7 @@ ms.locfileid: "33810026"
   
  当首次传入针对某个应用程序的新请求时，侦听器适配器会将 `WebhostOpenListenerChannelInstance` 调入 WAS，从而启动工作进程（如果尚未启动）。 然后加载协议处理程序，并可以启动侦听器适配器与虚拟应用程序之间的通信。  
   
- 在中 %SystemRoot%\System32\inetsrv\ApplicationHost.config 中注册的侦听器适配器 <`listenerAdapters`> 部分为如下：  
+ 在中 %SystemRoot%\System32\inetsrv\ApplicationHost.config 中注册的侦听器适配器 <`listenerAdapters`> 部分如下所示：  
   
 ```xml  
 <add name="net.udp" identity="S-1-5-21-2127521184-1604012920-1887927527-387045" />  
@@ -56,7 +56,7 @@ ms.locfileid: "33810026"
  UDP 协议侦听器是协议激活器内部的模块，它代表虚拟应用程序在 UDP 终结点进行侦听。 它在 `UdpSocketListener` 类中实现。 终结点表示为 `IPEndpoint`，其端口号从站点协议的绑定中提取。  
   
 ### <a name="control-service"></a>控制服务  
- 在此示例中，我们可以使用 WCF 激活器和 WAS 工作进程之间进行通信。 驻留在激活器中的服务称为“控制服务”。  
+ 在此示例中，我们可以使用 WCF 激活器与 WAS 工作进程之间进行通信。 驻留在激活器中的服务称为“控制服务”。  
   
 ## <a name="protocol-handlers"></a>协议处理程序  
  侦听器适配器调用 `WebhostOpenListenerChannelInstance` 之后，WAS 进程管理器将启动工作进程（如果尚未启动）。 工作进程内部的应用程序管理器随后使用该 `ListenerChannelId` 的请求加载 UDP 进程协议处理程序 (PPH)。 PPH 反过来调用`IAdphManager`。`StartAppDomainProtocolListenerChannel` 若要启动 UDP AppDomain 协议处理程序 (ADPH)。  
@@ -89,13 +89,13 @@ ms.locfileid: "33810026"
   
     -   这还为该虚拟应用程序启用“net.udp”协议。  
   
-3.  启动用户接口应用程序“WasNetActivator.exe”。 单击**安装**选项卡上，选中以下复选框，然后单击**安装**安装它们：  
+3.  启动用户接口应用程序“WasNetActivator.exe”。 单击**安装程序**选项卡上，选中以下复选框，然后单击**安装**安装它们：  
   
     -   UDP 侦听器适配器  
   
     -   UDP 协议处理程序  
   
-4.  单击**激活**用户接口应用程序"WasNetActivator.exe"选项卡。 单击**启动**按钮以启动侦听器适配器。 现在即可运行程序。  
+4.  单击**激活**的用户界面应用程序"WasNetActivator.exe"选项卡。 单击**启动**按钮以启动侦听器适配器。 现在即可运行程序。  
   
     > [!NOTE]
     >  完成此示例后，必须运行 Cleanup.bat，从“默认网站”中移除 net.udp 绑定。  
@@ -119,7 +119,7 @@ ms.locfileid: "33810026"
   
     -   Internet Information Services (IIS)：W3SVC。  
   
-2.  然后启动激活器 WasNetActivator.exe。 下**激活**选项卡上，唯一的协议**UDP**，在下拉列表中选择。 单击**启动**按钮以启动激活器。  
+2.  然后启动激活器 WasNetActivator.exe。 下**激活**选项卡上的唯一协议**UDP**，在下拉列表中选择。 单击**启动**按钮启动激活器。  
   
 3.  启动激活器后，可以通过在命令窗口中运行 Client.exe 来运行客户端代码。 下面是示例输出：  
   
@@ -158,7 +158,7 @@ ms.locfileid: "33810026"
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目录不存在，请转到[Windows Communication Foundation (WCF) 和针对.NET Framework 4 的 Windows Workflow Foundation (WF) 示例](http://go.microsoft.com/fwlink/?LinkId=150780)下载所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
+>  如果此目录不存在，请转到[Windows Communication Foundation (WCF) 和.NET Framework 4 的 Windows Workflow Foundation (WF) 示例](https://go.microsoft.com/fwlink/?LinkId=150780)若要下载所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Transport\UdpActivation`  
   

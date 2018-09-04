@@ -9,16 +9,16 @@ ms.assetid: 18e01bab-01f8-4567-b867-88dce9c4a435
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: 96816772f5d7abb8f89ab6fd1542dbc43eb286cf
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a5bc202c0297eb3f0d4f6fa06b3beca0f9112272
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33410476"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43542331"
 ---
 # <a name="ui-automation-support-for-the-group-control-type"></a>UI 自动化对 Group 控件类型的支持
 > [!NOTE]
->  本文档适用于想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空间中定义的托管 <xref:System.Windows.Automation> 类的 .NET Framework 开发人员。 有关 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]的最新信息，请参阅 [Windows 自动化 API：UI 自动化](http://go.microsoft.com/fwlink/?LinkID=156746)。  
+>  本文档适用于想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空间中定义的托管 <xref:System.Windows.Automation> 类的 .NET Framework 开发人员。 有关最新信息[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]，请参阅[Windows 自动化 API: UI 自动化](https://go.microsoft.com/fwlink/?LinkID=156746)。  
   
  本主题提供有关 Group 控件类型的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 支持的信息。 在 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]中，控件类型是一组条件，控件必须满足这些条件才能使用 <xref:System.Windows.Automation.AutomationElement.ControlTypeProperty> 属性。 这些条件包括针对 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 树结构、 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 属性值和 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 控件模式的特定准则。  
   
@@ -34,13 +34,13 @@ ms.locfileid: "33410476"
 |------------------|------------------|  
 |Group<br /><br /> -0 或多个控件|Group<br /><br /> -0 或多个控件|  
   
- 组控件通常将具有[ListItem 控件类型的 UI 自动化支持](../../../docs/framework/ui-automation/ui-automation-support-for-the-listitem-control-type.md)， [TreeItem 控件类型的 UI 自动化支持](../../../docs/framework/ui-automation/ui-automation-support-for-the-treeitem-control-type.md)，或[UI 自动化支持DataItem 控件类型](../../../docs/framework/ui-automation/ui-automation-support-for-the-dataitem-control-type.md)控制在其下的子树中找到的类型。 因为“Group”是泛型容器，因此任何类型的控件都有可能在 Group 控件下面的树中。  
+ 通常会在组控件[UI 自动化对 ListItem 控件类型支持](../../../docs/framework/ui-automation/ui-automation-support-for-the-listitem-control-type.md)， [UI 自动化对 TreeItem 控件类型支持](../../../docs/framework/ui-automation/ui-automation-support-for-the-treeitem-control-type.md)，或[对 UI 自动化支持DataItem 控件类型](../../../docs/framework/ui-automation/ui-automation-support-for-the-dataitem-control-type.md)控件在其下子树中找到的类型。 因为“Group”是泛型容器，因此任何类型的控件都有可能在 Group 控件下面的树中。  
   
 <a name="Required_UI_Automation_Properties"></a>   
 ## <a name="required-ui-automation-properties"></a>必需的 UI 自动化属性  
  下表列出 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 属性，这些属性的值或定义与组控件尤其相关。 有关 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 属性的详细信息，请参阅 [UI Automation Properties for Clients](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md)。  
   
-|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 属性|值|说明|  
+|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 属性|“值”|说明|  
 |------------------------------------------------------------------------------------|-----------|-----------|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationIdProperty>|请参阅注释。|此属性的值在应用程序的所有控件中都必须保持唯一。|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty>|请参阅注释。|包含整个控件的最外层矩形。|  

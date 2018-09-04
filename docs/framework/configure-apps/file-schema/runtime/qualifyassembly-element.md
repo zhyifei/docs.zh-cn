@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: ad6442f6-1a9d-43b6-b733-04ac1b7f9b82
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d08cfbde82f74dcf88ddadd844854bdfeb403935
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 59e3f54f4d3ce0c191193ff63a3c2bce5b93a1bd
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32754257"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43538026"
 ---
 # <a name="ltqualifyassemblygt-element"></a>&lt;qualifyAssembly&gt;元素
 指定使用部分名称时应动态加载的程序集全名。  
@@ -41,8 +41,8 @@ ms.locfileid: "32754257"
   
 |特性|描述|  
 |---------------|-----------------|  
-|`partialName`|必需的特性。<br /><br /> 指定程序集的部分名称，在代码中所示。|  
-|`fullName`|必需的特性。<br /><br /> 指定的程序集的完整名称，在全局程序集缓存中所示。|  
+|`partialName`|必需的特性。<br /><br /> 显示在代码中指定的程序集的部分名称。|  
+|`fullName`|必需的特性。<br /><br /> 显示在全局程序集缓存中指定的程序集的全名。|  
   
 ### <a name="child-elements"></a>子元素  
  无。  
@@ -56,9 +56,9 @@ ms.locfileid: "32754257"
 |`runtime`|包含有关程序集绑定和垃圾回收的信息。|  
   
 ## <a name="remarks"></a>备注  
- 调用<xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType>使用部分程序集名称的方法使公共语言运行时查找仅在应用程序基目录中的程序集。 使用 **\<qualifyAssembly >** 中应用程序配置文件可提供完整的程序集信息 （名称、 版本、 公钥标记和区域性） 并且使公共语言运行时，要搜索的元素全局程序集缓存中程序集。  
+ 调用<xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType>使用部分程序集名称的方法会导致公共语言运行时查找仅在应用程序基目录中的程序集。 使用 **\<qualifyAssembly >** 可提供完整的程序集信息 （名称、 版本、 公钥标记和区域性） 并且使公共语言运行时搜索应用程序配置文件中的元素有关全局程序集缓存中的程序集。  
   
- **FullName**属性必须包含程序集标识的四个字段： 名称、 版本、 公钥标记和区域性。 **PartialName**属性部分必须引用的程序集。 你必须至少指定程序集的文本名称 （最常见的情况），但你也可以包括版本、 公钥标记或区域性 （或四个，但并非所有四个的任意组合）。 **PartialName**必须匹配你调用中指定的名称。 例如，不能指定`"math"`作为**partialName**中你的配置文件和调用属性`Assembly.Load("math, Version=3.3.3.3")`在代码中。  
+ **FullName**属性必须包含程序集标识的四个字段： 名称、 版本、 公钥标记和区域性。 **PartialName**属性部分必须引用的程序集。 您必须至少指定程序集的文本名称 （最常见的情况），但您还可以包含版本、 公钥标记或区域性 （或四个，但并非所有四个的任意组合）。 **PartialName**的调用中指定的名称必须匹配。 例如，不能指定`"math"`作为**partialName**属性中，配置文件并调用`Assembly.Load("math, Version=3.3.3.3")`在代码中。  
   
 ## <a name="example"></a>示例  
  下面的示例以逻辑方式调用变成`Assembly.Load("math")`到`Assembly.Load("math,version=1.0.0.0,publicKeyToken=a1690a5ea44bab32,culture=neutral")`。  
@@ -78,4 +78,4 @@ ms.locfileid: "32754257"
 ## <a name="see-also"></a>请参阅  
  [运行时设置架构](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
  [运行时如何定位程序集](../../../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)  
- [NIB： 部分程序集引用](http://msdn.microsoft.com/library/ec90f07a-398c-4306-9401-0fc5ff9cb59f)
+ [NIB： 部分程序集引用](https://msdn.microsoft.com/library/ec90f07a-398c-4306-9401-0fc5ff9cb59f)

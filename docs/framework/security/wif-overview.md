@@ -5,11 +5,11 @@ ms.assetid: 5f723345-7270-49e2-b638-b3a34bd40517
 author: BrucePerlerMS
 manager: mbaldwin
 ms.openlocfilehash: 6cfe09e7df28d6f36f6e606802597449dab38212
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43399979"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43532531"
 ---
 # <a name="windows-identity-foundation-45-overview"></a>Windows Identity Foundation 4.5 概述
 Windows Identity Foundation 4.5 是一组用于在您的应用程序中实施基于声明的标识的 .NET Framework 类。 利用 Windows Identity Foundation 4.5，您可以轻松获得声明感知应用程序和服务的好处。 WIF 4.5 可在使用 .NET Framework 4.5 版或更高版本的所有 Web 应用程序或 Web 服务中使用。 WIF 只是 Microsoft 的联合身份软件系列的一部分，它实现了基于开放式标准的共享行业愿景。 联合身份包含三个组件：[Active Directory® 联合身份验证服务](https://go.microsoft.com/fwlink/?LinkID=247516) (AD FS) 2.0、[Microsoft Azure 访问控制服务](https://go.microsoft.com/fwlink/?LinkID=247517) (ACS) 和 WIF。 这三个组件共同构成了 Microsoft 的新的基于声明的云标识和访问平台的核心。  

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - WCF [WCF], troubleshooting
 - Windows Communication Foundation [WCF], troubleshooting
 ms.assetid: a9ea7a53-f31a-46eb-806e-898e465a4992
-ms.openlocfilehash: e752f6f4428d01474d643f1571935cb7d96d41ca
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: 368faf0881c5c0073fe8367a051b6c6c802b9110
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33808518"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43535999"
 ---
 # <a name="wcf-troubleshooting-quickstart"></a>WCF 疑难解答快速入门
 本主题列出了一些客户开发 WCF 客户端和服务时所遇到的已知问题。 如果您遇到的问题不在此列表中，我们建议您为您的服务配置跟踪。 这将生成一个跟踪文件，您可以使用跟踪文件查看器查看它并获取有关服务中可能发生的异常的详细信息。 有关配置跟踪的详细信息，请参阅： [Configuring Tracing](../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md)。 有关跟踪文件查看器的详细信息，请参阅： [Service Trace Viewer Tool (SvcTraceViewer.exe)](../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)。  
@@ -27,7 +27,7 @@ ms.locfileid: "33808518"
   
 5.  [我的服务和客户端工作得很好，但是当客户端位于另一台计算机上时，为何就无法正常工作？发生了什么情况？](../../../docs/framework/wcf/wcf-troubleshooting-quickstart.md#BKMK_q4)  
   
-6.  [当我引发 FaultException\<异常 > 在类型为异常，我总是接收客户端上的一个常规 FaultException 类型而不是泛型类型。发生了什么情况？](../../../docs/framework/wcf/wcf-troubleshooting-quickstart.md#BKMK_q5)  
+6.  [当我引发 FaultException\<异常 > 的类型为异常，我总是接收客户端上的一个常规 FaultException 类型而不是泛型类型。发生了什么情况？](../../../docs/framework/wcf/wcf-troubleshooting-quickstart.md#BKMK_q5)  
   
 7.  [当答复未包含任何数据时，单向操作与请求-答复操作的返回速度似乎基本相同。发生了什么情况？](../../../docs/framework/wcf/wcf-troubleshooting-quickstart.md#BKMK_q6)  
   
@@ -47,15 +47,15 @@ ms.locfileid: "33808518"
   
  HTTP 错误 404.3 – 找不到：由于扩展配置，无法提供您请求的页面。 如果此页是脚本，请添加处理程序。 如果应下载文件，请添加 MIME 映射。 详细错误 InformationModule StaticFileModule。  
   
- 控制面板中未显式设置"Windows Communication Foundation HTTP 激活"时，将出现此错误消息。 若要设置此项，请转到控制面板，并在窗口的左下角单击“程序”。 单击“打开或关闭 Windows 功能”。 展开 Microsoft .NET Framework 3.5.1，选中“Windows Communication Foundation HTTP 激活”。  
+ 在控制面板中未显式设置"Windows Communication Foundation HTTP 激活"时，将出现此错误消息。 若要设置此项，请转到控制面板，并在窗口的左下角单击“程序”。 单击“打开或关闭 Windows 功能”。 展开 Microsoft .NET Framework 3.5.1，选中“Windows Communication Foundation HTTP 激活”。  
   
 <a name="BKMK_q1"></a>   
 ## <a name="sometimes-i-receive-a-messagesecurityexception-on-the-second-request-if-my-client-is-idle-for-a-while-after-the-first-request-what-is-happening"></a>如果我的客户端在第一次请求后暂时处于空闲，有时我会在第二次请求时收到 MessageSecurityException。 发生了什么情况？  
- 第二次请求失败主要有两个原因：(1) 会话已超时或 (2) 承载服务的 Web 服务器被回收。 在第一种情况下，会话在服务超时前有效。当服务在其绑定指定的时间段 (<xref:System.ServiceModel.Channels.Binding.ReceiveTimeout%2A>) 内未接收到来自客户端的请求时，服务将终止安全会话。 后续客户端消息会导致 <xref:System.ServiceModel.Security.MessageSecurityException>。 客户端必须重新建立与服务的安全会话，才能发送以后的消息或使用有状态安全上下文令牌。 有状态的安全上下文令牌还允许安全会话在回收 Web 服务器后存在。 有关安全会话中使用有状态安全上下文令牌的详细信息，请参阅[如何： 为安全会话创建安全上下文令牌](../../../docs/framework/wcf/feature-details/how-to-create-a-security-context-token-for-a-secure-session.md)。 或者，也可禁用安全会话。 当你使用[ \<wsHttpBinding >](../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)绑定，你可以设置`establishSecurityContext`属性`false`以禁用安全会话。 若要为其他绑定禁用安全会话，必须创建自定义绑定。 有关创建自定义绑定的详细信息，请参阅 [How to: Create a Custom Binding Using the SecurityBindingElement](../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)。 在应用任何这些选择前，您必须先了解应用程序的安全要求。  
+ 第二次请求失败主要有两个原因：(1) 会话已超时或 (2) 承载服务的 Web 服务器被回收。 在第一种情况下，会话在服务超时前有效。当服务在其绑定指定的时间段 (<xref:System.ServiceModel.Channels.Binding.ReceiveTimeout%2A>) 内未接收到来自客户端的请求时，服务将终止安全会话。 后续客户端消息会导致 <xref:System.ServiceModel.Security.MessageSecurityException>。 客户端必须重新建立与服务的安全会话，才能发送以后的消息或使用有状态安全上下文令牌。 有状态的安全上下文令牌还允许安全会话在回收 Web 服务器后存在。 有关在安全会话中使用有状态安全上下文令牌的详细信息，请参阅[如何： 为安全会话创建的安全上下文令牌](../../../docs/framework/wcf/feature-details/how-to-create-a-security-context-token-for-a-secure-session.md)。 或者，也可禁用安全会话。 当你使用[ \<wsHttpBinding >](../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)绑定，您可以设置`establishSecurityContext`属性设置为`false`以禁用安全会话。 若要为其他绑定禁用安全会话，必须创建自定义绑定。 有关创建自定义绑定的详细信息，请参阅 [How to: Create a Custom Binding Using the SecurityBindingElement](../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)。 在应用任何这些选择前，您必须先了解应用程序的安全要求。  
   
 <a name="BKMK_q2"></a>   
 ## <a name="my-service-starts-to-reject-new-clients-after-about-10-clients-are-interacting-with-it-what-is-happening"></a>大约有 10 个客户端与我的服务交互后，我的服务开始拒绝新的客户端。 发生了什么情况？  
- 默认情况下，服务最多只能有 10 个并发会话。 因此，如果服务绑定使用会话，则服务将接受新的客户端连接，直到到达该数目；之后，它将拒绝新的客户端连接，直到当前会话之一结束。 可以通过多种方式支持更多的客户端。 如果你的服务不要求会话，则不要使用会话绑定。 (有关详细信息，请参阅[使用会话](../../../docs/framework/wcf/using-sessions.md)。)另一种选择是增大会话限制，方法是将 <xref:System.ServiceModel.Description.ServiceThrottlingBehavior.MaxConcurrentSessions%2A> 属性的值更改为适合您环境的数字。  
+ 默认情况下，服务最多只能有 10 个并发会话。 因此，如果服务绑定使用会话，则服务将接受新的客户端连接，直到到达该数目；之后，它将拒绝新的客户端连接，直到当前会话之一结束。 可以通过多种方式支持更多的客户端。 如果你的服务不要求会话，则不要使用会话绑定。 (有关详细信息，请参阅[使用会话的](../../../docs/framework/wcf/using-sessions.md)。)另一种选择是增大会话限制，方法是将 <xref:System.ServiceModel.Description.ServiceThrottlingBehavior.MaxConcurrentSessions%2A> 属性的值更改为适合您环境的数字。  
   
 <a name="BKMK_q3"></a>   
 ## <a name="can-i-load-my-service-configuration-from-somewhere-other-than-the-wcf-applications-configuration-file"></a>我是否可以从 WCF 应用程序的配置文件以外的某处加载我的服务配置？  
@@ -102,7 +102,7 @@ public class MyServiceHost : ServiceHost
   
 -   可能需要打开应用程序的端口。 有关详细信息，请参阅 SDK 示例中的 [Firewall Instructions](../../../docs/framework/wcf/samples/firewall-instructions.md) 。  
   
--   有关其他可能的问题，请参阅示例主题[在工作组中和跨计算机运行示例](http://msdn.microsoft.com/library/a451a525-e7ce-452d-9da9-620221260113)。  
+-   有关其他可能的问题，请参阅示例主题[运行在计算机和工作组中的示例](https://msdn.microsoft.com/library/a451a525-e7ce-452d-9da9-620221260113)。  
   
 -   如果客户端使用的是 Windows 凭据并且异常为 <xref:System.ServiceModel.Security.SecurityNegotiationException>，则按如下方式配置 Kerberos。  
   
@@ -136,12 +136,12 @@ public class MyServiceHost : ServiceHost
   
 -   [调试 Windows 身份验证错误](../../../docs/framework/wcf/feature-details/debugging-windows-authentication-errors.md)  
   
--   [Registering Kerberos Service Principal Names by Using Http.sys（使用 Http.sys 注册 Kerberos 服务主体名称）](http://go.microsoft.com/fwlink/?LinkId=86943)  
+-   [使用 Http.sys 注册 Kerberos 服务主体名称](https://go.microsoft.com/fwlink/?LinkId=86943)  
   
--   [Kerberos Explained（Kerberos 说明）](http://go.microsoft.com/fwlink/?LinkId=86946)  
+-   [所述的 Kerberos](https://go.microsoft.com/fwlink/?LinkId=86946)  
   
 <a name="BKMK_q5"></a>   
-## <a name="when-i-throw-a-faultexceptionexception-where-the-type-is-an-exception-i-always-receive-a-general-faultexception-type-on-the-client-and-not-the-generic-type-whats-happening"></a>当我引发 FaultException\<异常 > 在类型为异常，我总是接收客户端上的一个常规 FaultException 类型而不是泛型类型。 发生了什么情况？  
+## <a name="when-i-throw-a-faultexceptionexception-where-the-type-is-an-exception-i-always-receive-a-general-faultexception-type-on-the-client-and-not-the-generic-type-whats-happening"></a>当我引发 FaultException\<异常 > 的类型为异常，我总是接收客户端上的一个常规 FaultException 类型而不是泛型类型。 发生了什么情况？  
  强烈建议您创建自己的自定义错误数据类型，并在您的错误协定中将其声明为详细信息类型。 原因是使用系统提供的异常类型：  
   
 -   创建一个类型依赖，它将移除面向服务的应用程序中功能最强大的应用程序之一。  
@@ -154,7 +154,7 @@ public class MyServiceHost : ServiceHost
   
 <a name="BKMK_q6"></a>   
 ## <a name="it-seems-like-one-way-and-request-reply-operations-return-at-roughly-the-same-speed-when-the-reply-contains-no-data-whats-happening"></a>当答复未包含任何数据时，单向操作与请求-答复操作的返回速度似乎基本相同。 发生了什么情况？  
- 指定一个操作为单向只表示操作协定接受输入消息，而不返回输出消息。 在 WCF 中，所有客户端调用返回时的出站数据已写入到网络或引发异常。 单向操作以相同方式工作，如果找不到服务则它们可以引发；或者如果服务没有准备好从网络接受数据则它们可以阻止。 通常在 WCF 中，这会导致单向调用返回到客户端速度比请求-答复; 更快但是，减慢速度通过网络上发送出站数据的任何情况都会降低速度，这是单向操作以及请求-答复操作。 有关详细信息，请参阅[单向服务](../../../docs/framework/wcf/feature-details/one-way-services.md)和[使用 WCF 客户端访问服务](../../../docs/framework/wcf/feature-details/accessing-services-using-a-client.md)。  
+ 指定一个操作为单向只表示操作协定接受输入消息，而不返回输出消息。 在 WCF 中，所有客户端调用返回时的出站数据写入网络或引发异常。 单向操作以相同方式工作，如果找不到服务则它们可以引发；或者如果服务没有准备好从网络接受数据则它们可以阻止。 通常在 WCF 中，这会导致单向调用返回到客户端速度比请求-答复快;但会降低速度通过网络发送的出站数据的任何条件会降低单向操作，以及请求-答复操作。 有关详细信息，请参阅[单向服务](../../../docs/framework/wcf/feature-details/one-way-services.md)并[使用 WCF 客户端访问服务](../../../docs/framework/wcf/feature-details/accessing-services-using-a-client.md)。  
   
 <a name="BKMK_q77"></a>   
 ## <a name="im-using-an-x509-certificate-with-my-service-and-i-get-a-systemsecuritycryptographycryptographicexception-whats-happening"></a>我对我的服务使用的是 X.509 证书，并且获得一个 System.Security.Cryptography.CryptographicException。 发生了什么情况？  
@@ -162,7 +162,7 @@ public class MyServiceHost : ServiceHost
   
  如果的确如此，则必须向该进程的帐户授予对包含该私钥的文件的读访问特权。 例如，如果 IIS 辅助进程运行在 Bob 帐户下，则您需要向 Bob 授予对包含该私钥的文件的读访问权。  
   
- 有关如何向正确的用户帐户访问权限授予对包含特定 X.509 证书的私钥文件的详细信息，请参阅[如何： 使 X.509 证书可由 WCF 访问](../../../docs/framework/wcf/feature-details/how-to-make-x-509-certificates-accessible-to-wcf.md)。  
+ 有关如何授予对包含特定 X.509 证书的私钥的文件的正确的用户帐户访问权限的详细信息，请参阅[如何： 使 X.509 证书可由 WCF 访问](../../../docs/framework/wcf/feature-details/how-to-make-x-509-certificates-accessible-to-wcf.md)。  
   
 <a name="BKMK_q88"></a>   
 ## <a name="i-changed-the-first-parameter-of-an-operation-from-uppercase-to-lowercase-now-my-client-throws-an-exception-whats-happening"></a>我将操作的第一个参数从大写更改为了小写，现在我的客户端引发一个异常。 发生了什么情况？  
@@ -170,7 +170,7 @@ public class MyServiceHost : ServiceHost
   
 <a name="BKMK_q99"></a>   
 ## <a name="im-using-one-of-my-tracing-tools-and-i-get-an-endpointnotfoundexception-whats-happening"></a>我正在使用我的跟踪工具之一，并且获得一个 EndpointNotFoundException。 发生了什么情况？  
- 如果你使用不是系统提供 WCF 跟踪机制的跟踪工具，你收到<xref:System.ServiceModel.EndpointNotFoundException>，该值指示没有地址筛选器不匹配，您需要使用<xref:System.ServiceModel.Description.ClientViaBehavior>类，以将消息定向到跟踪实用工具和让该实用工具将这些消息重定向到服务地址。 <xref:System.ServiceModel.Description.ClientViaBehavior> 类更改 `Via` 寻址标头，以独立于最终接收方（由 `To` 寻址标头指示）指定下一个网络地址。 但是，执行此操作时请不要更改终结点地址，它用于设立 `To` 值。  
+ 如果使用不是系统提供的 WCF 跟踪机制的跟踪工具时你收到<xref:System.ServiceModel.EndpointNotFoundException>，该值指示出现地址筛选器不匹配，您需要使用<xref:System.ServiceModel.Description.ClientViaBehavior>类，以将消息定向到跟踪实用工具和必须将这些消息重定向到服务地址的实用程序。 <xref:System.ServiceModel.Description.ClientViaBehavior> 类更改 `Via` 寻址标头，以独立于最终接收方（由 `To` 寻址标头指示）指定下一个网络地址。 但是，执行此操作时请不要更改终结点地址，它用于设立 `To` 值。  
   
  下面的代码示例演示一个示例客户端配置文件。  
   
@@ -224,7 +224,7 @@ public class MyServiceHost : ServiceHost
 </bindings>  
 ```  
   
- 你将看到如下错误： 未处理的异常： System.ServiceModel.AddressAlreadyInUseException: IP 终结点 0.0.0.0:9000 可以通过使用其他端口指定完全限定的 URL 来解决此错误上已有侦听器MEX 终结点下面的配置代码段中所示：  
+ 你将看到类似于以下错误： 未经处理的异常： System.ServiceModel.AddressAlreadyInUseException: IP 终结点 0.0.0.0:9000 可以解决此错误通过使用其他端口指定完全限定的 URL 上已有侦听器MEX 终结点，以下配置代码段中所示：  
   
 ```xml
 <services>  
@@ -237,7 +237,7 @@ public class MyServiceHost : ServiceHost
   
 <a name="BK_MK99"></a>   
 ## <a name="when-calling-a-wcf-web-http-application-from-a-wcf-soap-application-the-service-returns-the-following-error-405-method-not-allowed"></a>从 WCF SOAP 应用程序调用 WCF Web HTTP 应用程序时，服务返回以下错误：405 不允许的方法  
- 调用 WCF Web HTTP 应用程序 (使用的服务<xref:System.ServiceModel.WebHttpBinding>和<xref:System.ServiceModel.Description.WebHttpBehavior>) 从 WCF 服务可能生成以下异常： `Unhandled Exception: System.ServiceModel.FaultException`1[System.ServiceModel.ExceptionDetail]: 远程服务器返回了意外的响应: (405) 不方法允许。 则会发生此异常，因为 WCF 覆盖传出<xref:System.ServiceModel.OperationContext>以传入<xref:System.ServiceModel.OperationContext>。 若要解决此问题，请在 WCF Web HTTP 服务操作内创建 <xref:System.ServiceModel.OperationContextScope> 。 例如：  
+ 调用 WCF Web HTTP 应用程序 (使用的服务<xref:System.ServiceModel.WebHttpBinding>并<xref:System.ServiceModel.Description.WebHttpBehavior>) 从 WCF 服务可能会生成以下异常： `Unhandled Exception: System.ServiceModel.FaultException`1[System.ServiceModel.ExceptionDetail]: 远程服务器返回了意外的响应: (405) 方法不允许。 发生此异常的原因 WCF 覆盖传出<xref:System.ServiceModel.OperationContext>以传入<xref:System.ServiceModel.OperationContext>。 若要解决此问题，请在 WCF Web HTTP 服务操作内创建 <xref:System.ServiceModel.OperationContextScope> 。 例如：  
   
 ```csharp
 public string Echo(string input)  

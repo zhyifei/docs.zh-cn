@@ -6,11 +6,11 @@ helpviewer_keywords:
 - My.Computer.Registry object
 ms.assetid: afd9edf9-ef9b-438b-a390-d71a02dc8203
 ms.openlocfilehash: a37c7cc903279b284921a0e9c2628ef9a0fcc769
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43388563"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43528455"
 ---
 # <a name="mycomputerregistry-object"></a>My.Computer.Registry 对象
 提供了用于操控注册表的属性和方法。  
