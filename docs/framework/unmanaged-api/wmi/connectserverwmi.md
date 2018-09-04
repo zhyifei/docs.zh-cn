@@ -17,14 +17,14 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 163e61eef8a753b5b6470285e5e3ce63789e25a4
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43416132"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43540878"
 ---
 # <a name="connectserverwmi-function"></a>ConnectServerWmi 函数
-指定计算机上创建的 WMI 命名空间通过 DCOM 连接。  
+通过 DCOM 创建到指定计算机上的 WMI 命名空间的连接。  
   
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
   

@@ -5,21 +5,21 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: b1cc02d1-23b1-4439-a998-0da1899f3442
-ms.openlocfilehash: d118f97e425782dbdf89c7e5d1eccd4d371b419c
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: b88df66ef2e065d1db8d4033eb1fb0e47ebdd189
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32759109"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43536451"
 ---
 # <a name="creating-a-dataview"></a>创建数据视图
-创建 <xref:System.Data.DataView> 的方法有两种。 你可以使用**DataView**构造函数，也可以创建对引用<xref:System.Data.DataTable.DefaultView%2A>属性<xref:System.Data.DataTable>。 **DataView**构造函数可以为空，或它可以采用**DataTable**作为单个参数，或**DataTable**与筛选条件、 排序条件和行状态筛选器。 有关用于与一起使用的其他参数的详细信息**DataView**，请参阅[排序和筛选数据](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/sorting-and-filtering-data.md)。  
+创建 <xref:System.Data.DataView> 的方法有两种。 可以使用**DataView**构造函数，也可以创建对引用<xref:System.Data.DataTable.DefaultView%2A>属性的<xref:System.Data.DataTable>。 **DataView**构造函数可以为空，或它可以采用**DataTable**为单个参数，或**DataTable**与筛选条件、 排序条件和行状态筛选器。 有关用于与一起使用的其他参数的详细信息**DataView**，请参阅[进行排序和筛选数据](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/sorting-and-filtering-data.md)。  
   
- 因为索引**DataView**这两个时，会生成**DataView**创建后，和任何**排序**， **RowFilter**，或**RowStateFilter**属性将被修改，通过提供任何初始排序顺序或筛选条件作为构造函数自变量，在创建时获得最佳性能**DataView**。 创建**DataView**而无需指定排序或筛选条件，然后设置**排序**， **RowFilter**，或**RowStateFilter**属性更高版本使索引生成至少两次： 一次时**DataView**创建后，并且任何排序或筛选器属性再次进行修改时。  
+ 因为的索引**DataView**生成时，均**DataView**创建后，以及时的任何**排序**， **RowFilter**，或**RowStateFilter**属性将被修改，通过提供任何初始排序顺序或筛选条件作为构造函数参数，在创建时获得最佳的性能**DataView**。 创建**DataView**而不指定排序或筛选条件，然后设置**排序**， **RowFilter**，或者**RowStateFilter**属性更高版本使索引生成至少两次： 一旦时**DataView**创建和重新排序或筛选器属性在修改任何。  
   
- 请注意，如果你创建**DataView**使用不采用任何参数的构造函数，你将不能使用**DataView**设置之前**表**属性.  
+ 请注意，如果您创建**DataView**使用不带任何参数的构造函数，您将无法再使用**DataView**之前已设置**表**属性.  
   
- 下面的代码示例演示如何创建**DataView**使用**DataView**构造函数。 A **RowFilter**，**排序**列中，和**DataViewRowState**连同提供**DataTable**。  
+ 下面的代码示例演示如何创建**DataView**使用**DataView**构造函数。 一个**RowFilter**，**排序**列中，并且**DataViewRowState**连同提供**DataTable**。  
   
 ```vb  
 Dim custDV As DataView = New DataView(custDS.Tables("Customers"), _  
@@ -35,7 +35,7 @@ DataView custDV = new DataView(custDS.Tables["Customers"],
     DataViewRowState.CurrentRows);  
 ```  
   
- 下面的代码示例演示如何获取对默认值的引用**DataView**的**DataTable**使用**默认视图**的表的属性。  
+ 下面的代码示例演示如何获取对默认值的引用**DataView**的**DataTable**使用**DefaultView**的表的属性。  
   
 ```vb  
 Dim custDV As DataView = custDS.Tables("Customers").DefaultView  
@@ -51,4 +51,4 @@ DataView custDV = custDS.Tables["Customers"].DefaultView;
  [数据视图](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataviews.md)  
  [对数据进行排序和筛选](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/sorting-and-filtering-data.md)  
  [数据表](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatables.md)  
- [ADO.NET 托管提供程序和数据集开发人员中心](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)

@@ -1,5 +1,5 @@
 ---
-title: '#Const 指令'
+title: '#Const 指令 (Visual Basic)'
 ms.date: 07/20/2015
 f1_keywords:
 - vb.#Const
@@ -15,15 +15,15 @@ helpviewer_keywords:
 - Const statement [Visual Basic], directive (#Const)
 - 'declaring constants [Visual Basic], #const directive'
 ms.assetid: 707669e5-23f9-4f17-8622-a0d534429386
-ms.openlocfilehash: a3b3318f6b44f7d1798e08195be5aeb920b61c0c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 58d786c5e16b1e667f7c7c78b0f7857cd9711239
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33588062"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43541609"
 ---
 # <a name="const-directive"></a>#Const 指令
-适用于 Visual Basic 中定义条件编译器常数。  
+对于 Visual Basic 中定义条件编译器常量。  
   
 ## <a name="syntax"></a>语法  
   
@@ -33,15 +33,15 @@ ms.locfileid: "33588062"
   
 ## <a name="parts"></a>部件  
  `constname`  
- 必须的。 正在定义的常数的名称。  
+ 必须的。 正在定义的常量的名称。  
   
  `expression`  
- 必须的。 文本、 其他条件编译器常量或包括除之外的任何或所有算术或逻辑运算符的任意组合的`Is`。  
+ 必须的。 文本、 其他条件编译器常量或包括除之外的任何或所有算术或逻辑运算符的任意组合`Is`。  
   
 ## <a name="remarks"></a>备注  
- 条件编译器常数始终是私有它们出现的文件类型。 无法创建公共编译器常量使用`#Const`指令; 你可以创建它们仅在用户界面中或使用`/define`编译器选项。  
+ 条件编译器常量始终是专用于其显示的文件。 无法创建使用公共编译器常量`#Const`指令; 仅在用户界面或使用可以创建它们`/define`编译器选项。  
   
- 你可以使用仅条件编译器常数和中的文本`expression`。 使用与定义的标准常量`Const`会导致错误。 相反，你可以使用定义的常数`#Const`关键字仅用于条件编译。 常量还定义，在这种情况下它们具有值为`Nothing`。  
+ 可以使用只有条件编译器常量和中的文本`expression`。 使用与定义的标准常量`Const`将导致错误。 相反，可以使用定义的常数`#Const`关键字用于条件编译。 常量还定义，在这种情况下它们具有值为`Nothing`。  
   
 ## <a name="example"></a>示例  
  此示例使用 `#Const` 指令。  

@@ -2,12 +2,12 @@
 title: 使用 InvokePowerShell 活动
 ms.date: 03/30/2017
 ms.assetid: 956251a0-31ca-4183-bf76-d277c08585df
-ms.openlocfilehash: c5609556af94ed3e372538047ff6309a105975ae
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: fa42cddd930b755e9938a02a137ee77ee273fad0
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33520235"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43538862"
 ---
 # <a name="using-the-invokepowershell-activity"></a>使用 InvokePowerShell 活动
 InvokePowerShell 示例演示如何使用 `InvokePowerShell` 活动调用 Windows PowerShell 命令。  
@@ -25,7 +25,7 @@ InvokePowerShell 示例演示如何使用 `InvokePowerShell` 活动调用 Window
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目录不存在，请转到[Windows Communication Foundation (WCF) 和针对.NET Framework 4 的 Windows Workflow Foundation (WF) 示例](http://go.microsoft.com/fwlink/?LinkId=150780)下载所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
+>  如果此目录不存在，请转到[Windows Communication Foundation (WCF) 和.NET Framework 4 的 Windows Workflow Foundation (WF) 示例](https://go.microsoft.com/fwlink/?LinkId=150780)若要下载所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\ActivityLibrary\PowerShell`  
   
@@ -35,8 +35,8 @@ InvokePowerShell 示例演示如何使用 `InvokePowerShell` 活动调用 Window
 |项目名称|描述|主要文件|  
 |------------------|-----------------|----------------|  
 |CodedClient|使用 PowerShell 活动的示例客户端应用程序。|-   **Program.cs**： 以编程方式创建调用 InvokePowerShell 活动的基于序列的工作流。|  
-|DesignerClient|一个自定义活动集，其中包含 `InvokePowerShell` 自定义活动、其他杂项自定义活动和一个使用这些活动的工作流。|<ul><li>活动：<br /><br /> <ul><li>**PrintCollection.cs**： 打印到控制台集合中的所有项的帮助器活动。</li><li>**ReadLine.cs**： 帮助器活动，从控制台读取输入。</li></ul></li><li>文件系统：<br /><br /> <ul><li>**Copy.xaml**： 将文件复制的活动。</li><li>**CreateFile.xaml**： 创建一个文件的活动。</li><li>**DeleteFile.xaml**： 删除的文件的活动。</li><li>**MakeDir.xaml**： 创建目录的活动。</li><li>**Move.xaml**： 移动文件的活动。</li><li>**ReadFile.xaml**： 读取文件，并返回其内容的活动。</li><li>**TestPath.xaml**： 一个测试是否存在路径的活动。</li></ul></li><li>进程：<br /><br /> <ul><li>**GetProcess.xaml**： 一个获取正在运行的进程列表的活动。</li><li>**StopProcess.xaml**： 停止特定进程的活动。</li></ul></li><li>**Program.cs**： 调用 Sequence1 工作流。</li><li>**Sequence1.xaml**： 基于序列的工作流。</li></ul>|  
-|PowerShell|`InvokePowerShell` 活动及其关联的设计器。|活动文件<br /><br /> -   **ExecutePowerShell.cs**: 活动的主要执行逻辑。<br />-   **InvokePowerShell.cs**： 主要执行逻辑，其中包含泛型 （返回值） 版本和非泛型 （非返回值） 版本周围的包装。 这是活动的公共接口。<br />-   **NoPersistZone.cs**： 此活动可防止任何子活动持久化。 在 `InvokePowerShell` 活动实现中使用该类以防止在执行期间将活动持久化。<br /><br /> 设计器文件：<br /><br /> 1.**ArgumentDictionaryEditor.cs**： 一个 Windows 对话框，用户可以编辑的自变量`InvokePowerShell`活动。<br />2.**GenericInvokePowerShellDesigner.xaml**和**GenericInvokePowerShellDesigner.xaml.cs**： 定义泛型的外观`InvokePowerShell`中的活动[!INCLUDE[wfd2](../../../../includes/wfd2-md.md)]。<br />3.**InvokePowerShellDesigner.xaml**和**InvokePowerShellDesigner.cs**： 定义非泛型的外观`InvokePowerShell`中的活动[!INCLUDE[wfd2](../../../../includes/wfd2-md.md)]。|  
+|DesignerClient|一个自定义活动集，其中包含 `InvokePowerShell` 自定义活动、其他杂项自定义活动和一个使用这些活动的工作流。|<ul><li>活动：<br /><br /> <ul><li>**PrintCollection.cs**： 打印到控制台集合中的所有项的帮助器活动。</li><li>**ReadLine.cs**： 从控制台读取输入的帮助器活动。</li></ul></li><li>文件系统：<br /><br /> <ul><li>**Copy.xaml**： 将文件复制的活动。</li><li>**CreateFile.xaml**： 创建一个文件的活动。</li><li>**DeleteFile.xaml**： 删除的文件的活动。</li><li>**MakeDir.xaml**： 创建目录的活动。</li><li>**Move.xaml**： 将文件移动的活动。</li><li>**ReadFile.xaml**： 读取文件，并返回其内容的活动。</li><li>**TestPath.xaml**： 一个测试路径是否存在的活动。</li></ul></li><li>进程：<br /><br /> <ul><li>**GetProcess.xaml**： 获取正在运行的进程列表的活动。</li><li>**StopProcess.xaml**： 停止特定进程的活动。</li></ul></li><li>**Program.cs**： 调用 Sequence1 工作流。</li><li>**Sequence1.xaml**： 基于序列的工作流。</li></ul>|  
+|PowerShell|`InvokePowerShell` 活动及其关联的设计器。|活动文件<br /><br /> -   **ExecutePowerShell.cs**: 活动的主执行逻辑。<br />-   **InvokePowerShell.cs**： 包含泛型 （返回值） 版本和非泛型 （非返回值） 版本的主执行逻辑周围的包装。 这是活动的公共接口。<br />-   **NoPersistZone.cs**： 此活动可防止任何子活动持久化。 在 `InvokePowerShell` 活动实现中使用该类以防止在执行期间将活动持久化。<br /><br /> 设计器文件：<br /><br /> 1.**ArgumentDictionaryEditor.cs**： 允许用户编辑的参数的 Windows 对话框`InvokePowerShell`活动。<br />2.**GenericInvokePowerShellDesigner.xaml**并**GenericInvokePowerShellDesigner.xaml.cs**： 定义的泛型外观`InvokePowerShell`中的活动[!INCLUDE[wfd2](../../../../includes/wfd2-md.md)]。<br />3.**InvokePowerShellDesigner.xaml**并**InvokePowerShellDesigner.cs**： 定义的非泛型外观`InvokePowerShell`中的活动[!INCLUDE[wfd2](../../../../includes/wfd2-md.md)]。|  
   
  首先讨论客户端项目，因为在了解 PowerShell 活动的用法之后再了解它的内部功能会更容易一些。  
   
@@ -166,10 +166,10 @@ new ForEach<PSObject>
     Grid.Row="1" Grid.Column="1" />  
 ```  
   
- 设计器自定义并不仅限于用于定义活动在设计画布上的外观的 .xaml 文件。 还可以自定义用于显示活动参数的对话框。 这些参数和 PowerShell 变量将影响 PowerShell 命令的行为。 活动会公开它们作为<!--zz <xref:System.Collections.Generic.Dictionary%601>-->`System.Collections.Generic.Dictionary`类型。 ArgumentDictionaryEditor.cs、PropertyEditorResources.xaml 和 PropertyEditorResources.cs 定义可供你用来编辑这些类型的对话框。  
+ 设计器自定义并不仅限于用于定义活动在设计画布上的外观的 .xaml 文件。 还可以自定义用于显示活动参数的对话框。 这些参数和 PowerShell 变量将影响 PowerShell 命令的行为。 该活动将其作为公开<!--zz <xref:System.Collections.Generic.Dictionary%601>-->`System.Collections.Generic.Dictionary`类型。 ArgumentDictionaryEditor.cs、PropertyEditorResources.xaml 和 PropertyEditorResources.cs 定义可供你用来编辑这些类型的对话框。  
   
 ## <a name="to-set-up-build-and-run-the-sample"></a>设置、生成和运行示例  
- 必须安装 Windows PowerShell 才能运行此示例。 可以从以下位置安装 Windows PowerShell: [Windows PowerShell](http://go.microsoft.com/fwlink/?LinkId=150383)。  
+ 必须安装 Windows PowerShell 才能运行此示例。 可以从以下位置安装 Windows PowerShell: [Windows PowerShell](https://go.microsoft.com/fwlink/?LinkId=150383)。  
   
 #### <a name="to-run-the-coded-client"></a>运行 CodedClient  
   
@@ -195,7 +195,7 @@ new ForEach<PSObject>
   
 1.  如果从另一个项目引用 `InvokePowerShell` 活动程序集或项目时导致出现生成错误，则可能需要手动将 `<SpecificVersion>True</SpecificVersion>` 元素添加到该新项目的 .csproj 文件中引用 `InvokePowerShell` 的行下方。  
   
-2.  如果未安装 Windows PowerShell，只要你添加时，Visual Studio 显示以下错误消息`InvokePowerShell`活动拖放到工作流： `Workflow Designer encountered problems with your document. Could not load file or assembly ‘System.Management.Automation’ ... or one of its dependencies. The system cannot find the file specified.`  
+2.  如果未安装 Windows PowerShell，只要您将添加在 Visual Studio 中显示以下错误消息`InvokePowerShell`到工作流活动： `Workflow Designer encountered problems with your document. Could not load file or assembly ‘System.Management.Automation’ ... or one of its dependencies. The system cannot find the file specified.`  
   
 3.  在 Windows PowerShell 2.0 中，以编程方式调用 `$input.MoveNext()` 失败，并且使用 `$input.MoveNext()` 的脚本会产生意外的错误和结果。 若要解决此问题，请考虑在循环访问数组时使用 PowerShell 谓词 `foreach` 而不是调用 `MoveNext()`。    
   
@@ -204,6 +204,6 @@ new ForEach<PSObject>
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目录不存在，请转到[Windows Communication Foundation (WCF) 和针对.NET Framework 4 的 Windows Workflow Foundation (WF) 示例](http://go.microsoft.com/fwlink/?LinkId=150780)下载所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
+>  如果此目录不存在，请转到[Windows Communication Foundation (WCF) 和.NET Framework 4 的 Windows Workflow Foundation (WF) 示例](https://go.microsoft.com/fwlink/?LinkId=150780)若要下载所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\ActivityLibrary\PowerShell`
