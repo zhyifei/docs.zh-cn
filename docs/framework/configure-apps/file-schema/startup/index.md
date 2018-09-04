@@ -10,21 +10,21 @@ author: mcleblanc
 ms.author: markl
 manager: markl
 ms.openlocfilehash: 68f37e3efca784b94be90d5779c9bc402f144448
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43465468"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43530329"
 ---
-# <a name="startup-settings-schema"></a><span data-ttu-id="9fc28-102">启动设置架构</span><span class="sxs-lookup"><span data-stu-id="9fc28-102">Startup Settings Schema</span></span>
-<span data-ttu-id="9fc28-103">启动设置会指定应运行应用程序的公共语言运行时的版本。</span><span class="sxs-lookup"><span data-stu-id="9fc28-103">Startup settings specify the version of the common language runtime that should run the application.</span></span>  
+# <a name="startup-settings-schema"></a><span data-ttu-id="18e6f-102">启动设置架构</span><span class="sxs-lookup"><span data-stu-id="18e6f-102">Startup Settings Schema</span></span>
+<span data-ttu-id="18e6f-103">启动设置会指定应运行应用程序的公共语言运行时的版本。</span><span class="sxs-lookup"><span data-stu-id="18e6f-103">Startup settings specify the version of the common language runtime that should run the application.</span></span>  
   
-|<span data-ttu-id="9fc28-104">元素</span><span class="sxs-lookup"><span data-stu-id="9fc28-104">Element</span></span>|<span data-ttu-id="9fc28-105">描述</span><span class="sxs-lookup"><span data-stu-id="9fc28-105">Description</span></span>|  
+|<span data-ttu-id="18e6f-104">元素</span><span class="sxs-lookup"><span data-stu-id="18e6f-104">Element</span></span>|<span data-ttu-id="18e6f-105">描述</span><span class="sxs-lookup"><span data-stu-id="18e6f-105">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="9fc28-106">\<requiredRuntime></span><span class="sxs-lookup"><span data-stu-id="9fc28-106">\<requiredRuntime></span></span>](../../../../../docs/framework/configure-apps/file-schema/startup/requiredruntime-element.md)|<span data-ttu-id="9fc28-107">指定应用程序仅支持 1.0 版本的公共语言运行时。</span><span class="sxs-lookup"><span data-stu-id="9fc28-107">Specifies that the application supports only version 1.0 of the common language runtime.</span></span> <span data-ttu-id="9fc28-108">使用 1.1 版运行时生成的应用程序应使用 **\<supportedRuntime>** 元素。</span><span class="sxs-lookup"><span data-stu-id="9fc28-108">Applications built with runtime version 1.1 should use the **\<supportedRuntime>** element.</span></span>|  
-|[<span data-ttu-id="9fc28-109">\<supportedRuntime></span><span class="sxs-lookup"><span data-stu-id="9fc28-109">\<supportedRuntime></span></span>](../../../../../docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md)|<span data-ttu-id="9fc28-110">指定应用程序支持的公共语言运行时版本。</span><span class="sxs-lookup"><span data-stu-id="9fc28-110">Specifies which versions of the common language runtime the application supports.</span></span>|  
-|[<span data-ttu-id="9fc28-111">\<startup></span><span class="sxs-lookup"><span data-stu-id="9fc28-111">\<startup></span></span>](../../../../../docs/framework/configure-apps/file-schema/startup/startup-element.md)|<span data-ttu-id="9fc28-112">包含 **\<requiredRuntime>** 和 **\<supportedRuntime>** 元素。</span><span class="sxs-lookup"><span data-stu-id="9fc28-112">Contains the **\<requiredRuntime>** and **\<supportedRuntime>** elements.</span></span>|  
+|[<span data-ttu-id="18e6f-106">\<requiredRuntime></span><span class="sxs-lookup"><span data-stu-id="18e6f-106">\<requiredRuntime></span></span>](../../../../../docs/framework/configure-apps/file-schema/startup/requiredruntime-element.md)|<span data-ttu-id="18e6f-107">指定应用程序仅支持 1.0 版本的公共语言运行时。</span><span class="sxs-lookup"><span data-stu-id="18e6f-107">Specifies that the application supports only version 1.0 of the common language runtime.</span></span> <span data-ttu-id="18e6f-108">使用 1.1 版运行时生成的应用程序应使用 **\<supportedRuntime>** 元素。</span><span class="sxs-lookup"><span data-stu-id="18e6f-108">Applications built with runtime version 1.1 should use the **\<supportedRuntime>** element.</span></span>|  
+|[<span data-ttu-id="18e6f-109">\<supportedRuntime></span><span class="sxs-lookup"><span data-stu-id="18e6f-109">\<supportedRuntime></span></span>](../../../../../docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md)|<span data-ttu-id="18e6f-110">指定应用程序支持的公共语言运行时版本。</span><span class="sxs-lookup"><span data-stu-id="18e6f-110">Specifies which versions of the common language runtime the application supports.</span></span>|  
+|[<span data-ttu-id="18e6f-111">\<startup></span><span class="sxs-lookup"><span data-stu-id="18e6f-111">\<startup></span></span>](../../../../../docs/framework/configure-apps/file-schema/startup/startup-element.md)|<span data-ttu-id="18e6f-112">包含 **\<requiredRuntime>** 和 **\<supportedRuntime>** 元素。</span><span class="sxs-lookup"><span data-stu-id="18e6f-112">Contains the **\<requiredRuntime>** and **\<supportedRuntime>** elements.</span></span>|  
   
-## <a name="see-also"></a><span data-ttu-id="9fc28-113">请参阅</span><span class="sxs-lookup"><span data-stu-id="9fc28-113">See Also</span></span>  
- [<span data-ttu-id="9fc28-114">配置文件架构</span><span class="sxs-lookup"><span data-stu-id="9fc28-114">Configuration File Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/index.md)  
- [<span data-ttu-id="9fc28-115">\<PaveOver> 指定要使用的运行时版本</span><span class="sxs-lookup"><span data-stu-id="9fc28-115">\<PaveOver> Specifying Which Runtime Version to Use</span></span>](https://msdn.microsoft.com/library/c376208d-980d-42b4-865b-fbe0d9cc97c2)
+## <a name="see-also"></a><span data-ttu-id="18e6f-113">请参阅</span><span class="sxs-lookup"><span data-stu-id="18e6f-113">See Also</span></span>  
+ [<span data-ttu-id="18e6f-114">配置文件架构</span><span class="sxs-lookup"><span data-stu-id="18e6f-114">Configuration File Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/index.md)  
+ [<span data-ttu-id="18e6f-115">\<PaveOver> 指定要使用的运行时版本</span><span class="sxs-lookup"><span data-stu-id="18e6f-115">\<PaveOver> Specifying Which Runtime Version to Use</span></span>](https://msdn.microsoft.com/library/c376208d-980d-42b4-865b-fbe0d9cc97c2)

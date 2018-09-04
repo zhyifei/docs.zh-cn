@@ -6,31 +6,31 @@ helpviewer_keywords:
 - Windows Forms, parenting ToolStrip controls
 ms.assetid: a1c94a7f-6fc5-4e4c-84cf-ff11dc573d33
 ms.openlocfilehash: a4b6e3bbc0750ba69607b5c0f96bdbb542aea1be
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43424088"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43529393"
 ---
-# <a name="how-to-move-a-toolstrip-out-of-a-toolstripcontainer-onto-a-form"></a><span data-ttu-id="4e7c7-102">如何：将 ToolStrip 从 ToolStripContainer 移到窗体上</span><span class="sxs-lookup"><span data-stu-id="4e7c7-102">How to: Move a ToolStrip Out of a ToolStripContainer onto a Form</span></span>
-<span data-ttu-id="4e7c7-103">使用以下过程将移<xref:System.Windows.Forms.ToolStrip>共<xref:System.Windows.Forms.ToolStripContainer>拖到窗体。</span><span class="sxs-lookup"><span data-stu-id="4e7c7-103">Use the following procedure to move a <xref:System.Windows.Forms.ToolStrip> out of a <xref:System.Windows.Forms.ToolStripContainer> onto a form.</span></span>  
+# <a name="how-to-move-a-toolstrip-out-of-a-toolstripcontainer-onto-a-form"></a><span data-ttu-id="6e97f-102">如何：将 ToolStrip 从 ToolStripContainer 移到窗体上</span><span class="sxs-lookup"><span data-stu-id="6e97f-102">How to: Move a ToolStrip Out of a ToolStripContainer onto a Form</span></span>
+<span data-ttu-id="6e97f-103">使用以下过程将移<xref:System.Windows.Forms.ToolStrip>共<xref:System.Windows.Forms.ToolStripContainer>拖到窗体。</span><span class="sxs-lookup"><span data-stu-id="6e97f-103">Use the following procedure to move a <xref:System.Windows.Forms.ToolStrip> out of a <xref:System.Windows.Forms.ToolStripContainer> onto a form.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="4e7c7-104">显示的对话框和菜单命令可能会与“帮助”中的描述不同，具体取决于你现用的设置或版本。</span><span class="sxs-lookup"><span data-stu-id="4e7c7-104">The dialog boxes and menu commands you see might differ from those described in Help depending on your active settings or edition.</span></span> <span data-ttu-id="4e7c7-105">若要更改设置，请在 **“工具”** 菜单上选择 **“导入和导出设置”** 。</span><span class="sxs-lookup"><span data-stu-id="4e7c7-105">To change your settings, choose **Import and Export Settings** on the **Tools** menu.</span></span> <span data-ttu-id="4e7c7-106">有关详细信息，请参阅[个性化设置 Visual Studio IDE](/visualstudio/ide/personalizing-the-visual-studio-ide)。</span><span class="sxs-lookup"><span data-stu-id="4e7c7-106">For more information, see [Personalize the Visual Studio IDE](/visualstudio/ide/personalizing-the-visual-studio-ide).</span></span>  
+>  <span data-ttu-id="6e97f-104">显示的对话框和菜单命令可能会与“帮助”中的描述不同，具体取决于你现用的设置或版本。</span><span class="sxs-lookup"><span data-stu-id="6e97f-104">The dialog boxes and menu commands you see might differ from those described in Help depending on your active settings or edition.</span></span> <span data-ttu-id="6e97f-105">若要更改设置，请在 **“工具”** 菜单上选择 **“导入和导出设置”** 。</span><span class="sxs-lookup"><span data-stu-id="6e97f-105">To change your settings, choose **Import and Export Settings** on the **Tools** menu.</span></span> <span data-ttu-id="6e97f-106">有关详细信息，请参阅[个性化设置 Visual Studio IDE](/visualstudio/ide/personalizing-the-visual-studio-ide)。</span><span class="sxs-lookup"><span data-stu-id="6e97f-106">For more information, see [Personalize the Visual Studio IDE](/visualstudio/ide/personalizing-the-visual-studio-ide).</span></span>  
   
-### <a name="to-move-a-toolstrip-out-of-a-toolstripcontainer-onto-a-form"></a><span data-ttu-id="4e7c7-107">若要将移动到窗体从 toolstripcontainer 移出 ToolStrip</span><span class="sxs-lookup"><span data-stu-id="4e7c7-107">To move a ToolStrip out of a ToolStripContainer onto a form</span></span>  
+### <a name="to-move-a-toolstrip-out-of-a-toolstripcontainer-onto-a-form"></a><span data-ttu-id="6e97f-107">若要将移动到窗体从 toolstripcontainer 移出 ToolStrip</span><span class="sxs-lookup"><span data-stu-id="6e97f-107">To move a ToolStrip out of a ToolStripContainer onto a form</span></span>  
   
-1.  <span data-ttu-id="4e7c7-108">选择 <xref:System.Windows.Forms.ToolStrip>。</span><span class="sxs-lookup"><span data-stu-id="4e7c7-108">Select the <xref:System.Windows.Forms.ToolStrip>.</span></span>  
+1.  <span data-ttu-id="6e97f-108">选择 <xref:System.Windows.Forms.ToolStrip>。</span><span class="sxs-lookup"><span data-stu-id="6e97f-108">Select the <xref:System.Windows.Forms.ToolStrip>.</span></span>  
   
-2.  <span data-ttu-id="4e7c7-109">剪切<xref:System.Windows.Forms.ToolStrip>通过按 CTRL + X，或右键单击<xref:System.Windows.Forms.ToolStrip>，然后选择**剪切**从上下文菜单。</span><span class="sxs-lookup"><span data-stu-id="4e7c7-109">Cut the <xref:System.Windows.Forms.ToolStrip> by pressing CTRL+X, or right-click the <xref:System.Windows.Forms.ToolStrip> and choose **Cut** from the context menu.</span></span>  
+2.  <span data-ttu-id="6e97f-109">剪切<xref:System.Windows.Forms.ToolStrip>通过按 CTRL + X，或右键单击<xref:System.Windows.Forms.ToolStrip>，然后选择**剪切**从上下文菜单。</span><span class="sxs-lookup"><span data-stu-id="6e97f-109">Cut the <xref:System.Windows.Forms.ToolStrip> by pressing CTRL+X, or right-click the <xref:System.Windows.Forms.ToolStrip> and choose **Cut** from the context menu.</span></span>  
   
-3.  <span data-ttu-id="4e7c7-110">选择窗体。</span><span class="sxs-lookup"><span data-stu-id="4e7c7-110">Select the form.</span></span>  
+3.  <span data-ttu-id="6e97f-110">选择窗体。</span><span class="sxs-lookup"><span data-stu-id="6e97f-110">Select the form.</span></span>  
   
-4.  <span data-ttu-id="4e7c7-111">粘贴<xref:System.Windows.Forms.ToolStrip>通过按 CTRL + V，或选择**粘贴**从**编辑**菜单。</span><span class="sxs-lookup"><span data-stu-id="4e7c7-111">Paste the <xref:System.Windows.Forms.ToolStrip> by pressing CTRL+V, or choose **Paste** from the **Edit** menu.</span></span>  
+4.  <span data-ttu-id="6e97f-111">粘贴<xref:System.Windows.Forms.ToolStrip>通过按 CTRL + V，或选择**粘贴**从**编辑**菜单。</span><span class="sxs-lookup"><span data-stu-id="6e97f-111">Paste the <xref:System.Windows.Forms.ToolStrip> by pressing CTRL+V, or choose **Paste** from the **Edit** menu.</span></span>  
   
-5.  <span data-ttu-id="4e7c7-112">设置<xref:System.Windows.Forms.ToolStrip.Dock%2A>的属性<xref:System.Windows.Forms.ToolStrip>到**顶部**。</span><span class="sxs-lookup"><span data-stu-id="4e7c7-112">Set the <xref:System.Windows.Forms.ToolStrip.Dock%2A> property of the <xref:System.Windows.Forms.ToolStrip> to **Top**.</span></span>  
+5.  <span data-ttu-id="6e97f-112">设置<xref:System.Windows.Forms.ToolStrip.Dock%2A>的属性<xref:System.Windows.Forms.ToolStrip>到**顶部**。</span><span class="sxs-lookup"><span data-stu-id="6e97f-112">Set the <xref:System.Windows.Forms.ToolStrip.Dock%2A> property of the <xref:System.Windows.Forms.ToolStrip> to **Top**.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="4e7c7-113">请参阅</span><span class="sxs-lookup"><span data-stu-id="4e7c7-113">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="6e97f-113">请参阅</span><span class="sxs-lookup"><span data-stu-id="6e97f-113">See Also</span></span>  
  <xref:System.Windows.Forms.ToolStrip>  
  <xref:System.Windows.Forms.ToolStripContainer>  
- [<span data-ttu-id="4e7c7-114">ToolStrip 控件概述</span><span class="sxs-lookup"><span data-stu-id="4e7c7-114">ToolStrip Control Overview</span></span>](../../../../docs/framework/winforms/controls/toolstrip-control-overview-windows-forms.md)
+ [<span data-ttu-id="6e97f-114">ToolStrip 控件概述</span><span class="sxs-lookup"><span data-stu-id="6e97f-114">ToolStrip Control Overview</span></span>](../../../../docs/framework/winforms/controls/toolstrip-control-overview-windows-forms.md)
