@@ -3,82 +3,82 @@ title: Entity SQL 语言
 ms.date: 03/30/2017
 ms.assetid: 9e7d8837-28c5-429d-a824-7bafb59724cf
 ms.openlocfilehash: 1df5372bed2c4c4b026662e0d1912683dd8752e9
-ms.sourcegitcommit: a368166a51e5204c0224fbf5e46476e3ed122817
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/31/2018
-ms.locfileid: "43331949"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43509604"
 ---
-# <a name="entity-sql-language"></a><span data-ttu-id="4b47f-102">Entity SQL 语言</span><span class="sxs-lookup"><span data-stu-id="4b47f-102">Entity SQL Language</span></span>
-<span data-ttu-id="4b47f-103">Entity SQL 是类似于 SQL 的与存储无关的查询语言。</span><span class="sxs-lookup"><span data-stu-id="4b47f-103">Entity SQL is a storage-independent query language that is similar to SQL.</span></span> <span data-ttu-id="4b47f-104">通过 Entity SQL，可以将实体数据作为对象或以表格形式进行查询。</span><span class="sxs-lookup"><span data-stu-id="4b47f-104">Entity SQL allows you to query entity data, either as objects or in a tabular form.</span></span> <span data-ttu-id="4b47f-105">在以下情况下，应考虑使用 Entity SQL：</span><span class="sxs-lookup"><span data-stu-id="4b47f-105">You should consider using Entity SQL in the following cases:</span></span>  
+# <a name="entity-sql-language"></a><span data-ttu-id="6a315-102">Entity SQL 语言</span><span class="sxs-lookup"><span data-stu-id="6a315-102">Entity SQL Language</span></span>
+<span data-ttu-id="6a315-103">Entity SQL 是类似于 SQL 的与存储无关的查询语言。</span><span class="sxs-lookup"><span data-stu-id="6a315-103">Entity SQL is a storage-independent query language that is similar to SQL.</span></span> <span data-ttu-id="6a315-104">通过 Entity SQL，可以将实体数据作为对象或以表格形式进行查询。</span><span class="sxs-lookup"><span data-stu-id="6a315-104">Entity SQL allows you to query entity data, either as objects or in a tabular form.</span></span> <span data-ttu-id="6a315-105">在以下情况下，应考虑使用 Entity SQL：</span><span class="sxs-lookup"><span data-stu-id="6a315-105">You should consider using Entity SQL in the following cases:</span></span>  
   
--   <span data-ttu-id="4b47f-106">当查询必须在运行时动态构造时。</span><span class="sxs-lookup"><span data-stu-id="4b47f-106">When a query must be dynamically constructed at runtime.</span></span> <span data-ttu-id="4b47f-107">在这种情况下，还应考虑使用 <xref:System.Data.Objects.ObjectQuery%601> 的查询生成器方法，而不是在运行时构造 Entity SQL 查询字符串。</span><span class="sxs-lookup"><span data-stu-id="4b47f-107">In this case, you should also consider using the query builder methods of <xref:System.Data.Objects.ObjectQuery%601> instead of constructing an Entity SQL query string at runtime.</span></span>  
+-   <span data-ttu-id="6a315-106">当查询必须在运行时动态构造时。</span><span class="sxs-lookup"><span data-stu-id="6a315-106">When a query must be dynamically constructed at runtime.</span></span> <span data-ttu-id="6a315-107">在这种情况下，还应考虑使用 <xref:System.Data.Objects.ObjectQuery%601> 的查询生成器方法，而不是在运行时构造 Entity SQL 查询字符串。</span><span class="sxs-lookup"><span data-stu-id="6a315-107">In this case, you should also consider using the query builder methods of <xref:System.Data.Objects.ObjectQuery%601> instead of constructing an Entity SQL query string at runtime.</span></span>  
   
--   <span data-ttu-id="4b47f-108">当您要将查询定义为模型定义的一部分时。</span><span class="sxs-lookup"><span data-stu-id="4b47f-108">When you want to define a query as part of the model definition.</span></span> <span data-ttu-id="4b47f-109">在数据模型中只支持 Entity SQL。</span><span class="sxs-lookup"><span data-stu-id="4b47f-109">Only Entity SQL is supported in a data model.</span></span> <span data-ttu-id="4b47f-110">有关详细信息，请参阅[QueryView 元素 (MSL)](https://msdn.microsoft.com/library/f0426b34-45cb-4fd7-9777-e0570c5e0e80)</span><span class="sxs-lookup"><span data-stu-id="4b47f-110">For more information, see [QueryView Element (MSL)](https://msdn.microsoft.com/library/f0426b34-45cb-4fd7-9777-e0570c5e0e80)</span></span>  
+-   <span data-ttu-id="6a315-108">当您要将查询定义为模型定义的一部分时。</span><span class="sxs-lookup"><span data-stu-id="6a315-108">When you want to define a query as part of the model definition.</span></span> <span data-ttu-id="6a315-109">在数据模型中只支持 Entity SQL。</span><span class="sxs-lookup"><span data-stu-id="6a315-109">Only Entity SQL is supported in a data model.</span></span> <span data-ttu-id="6a315-110">有关详细信息，请参阅[QueryView 元素 (MSL)](https://msdn.microsoft.com/library/f0426b34-45cb-4fd7-9777-e0570c5e0e80)</span><span class="sxs-lookup"><span data-stu-id="6a315-110">For more information, see [QueryView Element (MSL)](https://msdn.microsoft.com/library/f0426b34-45cb-4fd7-9777-e0570c5e0e80)</span></span>  
   
--   <span data-ttu-id="4b47f-111">当使用 EntityClient，通过 <xref:System.Data.EntityClient.EntityDataReader> 将只读实体数据返回为行集时。</span><span class="sxs-lookup"><span data-stu-id="4b47f-111">When using EntityClient to return read-only entity data as rowsets using a <xref:System.Data.EntityClient.EntityDataReader>.</span></span> <span data-ttu-id="4b47f-112">有关详细信息，请参阅[针对实体框架的 EntityClient Provider](../../../../../../docs/framework/data/adonet/ef/entityclient-provider-for-the-entity-framework.md)。</span><span class="sxs-lookup"><span data-stu-id="4b47f-112">For more information, see [EntityClient Provider for the Entity Framework](../../../../../../docs/framework/data/adonet/ef/entityclient-provider-for-the-entity-framework.md).</span></span>  
+-   <span data-ttu-id="6a315-111">当使用 EntityClient，通过 <xref:System.Data.EntityClient.EntityDataReader> 将只读实体数据返回为行集时。</span><span class="sxs-lookup"><span data-stu-id="6a315-111">When using EntityClient to return read-only entity data as rowsets using a <xref:System.Data.EntityClient.EntityDataReader>.</span></span> <span data-ttu-id="6a315-112">有关详细信息，请参阅[针对实体框架的 EntityClient Provider](../../../../../../docs/framework/data/adonet/ef/entityclient-provider-for-the-entity-framework.md)。</span><span class="sxs-lookup"><span data-stu-id="6a315-112">For more information, see [EntityClient Provider for the Entity Framework](../../../../../../docs/framework/data/adonet/ef/entityclient-provider-for-the-entity-framework.md).</span></span>  
   
--   <span data-ttu-id="4b47f-113">如果您已经是基于 SQL 的查询语言的专家，Entity SQL 可能对您而言是最简单不过了。</span><span class="sxs-lookup"><span data-stu-id="4b47f-113">If you are already an expert in SQL-based query languages, Entity SQL may seem the most natural to you.</span></span>  
+-   <span data-ttu-id="6a315-113">如果您已经是基于 SQL 的查询语言的专家，Entity SQL 可能对您而言是最简单不过了。</span><span class="sxs-lookup"><span data-stu-id="6a315-113">If you are already an expert in SQL-based query languages, Entity SQL may seem the most natural to you.</span></span>  
   
-## <a name="using-entity-sql-with-the-entityclient-provider"></a><span data-ttu-id="4b47f-114">将 Entity SQL 与 EntityClient 提供程序结合使用</span><span class="sxs-lookup"><span data-stu-id="4b47f-114">Using Entity SQL with the EntityClient provider</span></span>  
- <span data-ttu-id="4b47f-115">如果您要将 Entity SQL 与 EntityClient 提供程序结合使用，有关更多信息请参见下列主题：</span><span class="sxs-lookup"><span data-stu-id="4b47f-115">If you want to use Entity SQL with the EntityClient provider, see the following topics for more information:</span></span>  
+## <a name="using-entity-sql-with-the-entityclient-provider"></a><span data-ttu-id="6a315-114">将 Entity SQL 与 EntityClient 提供程序结合使用</span><span class="sxs-lookup"><span data-stu-id="6a315-114">Using Entity SQL with the EntityClient provider</span></span>  
+ <span data-ttu-id="6a315-115">如果您要将 Entity SQL 与 EntityClient 提供程序结合使用，有关更多信息请参见下列主题：</span><span class="sxs-lookup"><span data-stu-id="6a315-115">If you want to use Entity SQL with the EntityClient provider, see the following topics for more information:</span></span>  
   
- [<span data-ttu-id="4b47f-116">用于实体框架的 EntityClient 提供程序</span><span class="sxs-lookup"><span data-stu-id="4b47f-116">EntityClient Provider for the Entity Framework</span></span>](../../../../../../docs/framework/data/adonet/ef/entityclient-provider-for-the-entity-framework.md)  
+ [<span data-ttu-id="6a315-116">用于实体框架的 EntityClient 提供程序</span><span class="sxs-lookup"><span data-stu-id="6a315-116">EntityClient Provider for the Entity Framework</span></span>](../../../../../../docs/framework/data/adonet/ef/entityclient-provider-for-the-entity-framework.md)  
   
- [<span data-ttu-id="4b47f-117">如何：生成 EntityConnection 连接字符串</span><span class="sxs-lookup"><span data-stu-id="4b47f-117">How to: Build an EntityConnection Connection String</span></span>](../../../../../../docs/framework/data/adonet/ef/how-to-build-an-entityconnection-connection-string.md)  
+ [<span data-ttu-id="6a315-117">如何：生成 EntityConnection 连接字符串</span><span class="sxs-lookup"><span data-stu-id="6a315-117">How to: Build an EntityConnection Connection String</span></span>](../../../../../../docs/framework/data/adonet/ef/how-to-build-an-entityconnection-connection-string.md)  
   
- [<span data-ttu-id="4b47f-118">如何：执行返回 PrimitiveType 结果的查询</span><span class="sxs-lookup"><span data-stu-id="4b47f-118">How to: Execute a Query that Returns PrimitiveType Results</span></span>](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-primitivetype-results.md)  
+ [<span data-ttu-id="6a315-118">如何：执行返回 PrimitiveType 结果的查询</span><span class="sxs-lookup"><span data-stu-id="6a315-118">How to: Execute a Query that Returns PrimitiveType Results</span></span>](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-primitivetype-results.md)  
   
- [<span data-ttu-id="4b47f-119">如何：执行返回 StructuralType 结果的查询</span><span class="sxs-lookup"><span data-stu-id="4b47f-119">How to: Execute a Query that Returns StructuralType Results</span></span>](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md)  
+ [<span data-ttu-id="6a315-119">如何：执行返回 StructuralType 结果的查询</span><span class="sxs-lookup"><span data-stu-id="6a315-119">How to: Execute a Query that Returns StructuralType Results</span></span>](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md)  
   
- [<span data-ttu-id="4b47f-120">如何：执行返回 RefType 结果的查询</span><span class="sxs-lookup"><span data-stu-id="4b47f-120">How to: Execute a Query that Returns RefType Results</span></span>](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-reftype-results.md)  
+ [<span data-ttu-id="6a315-120">如何：执行返回 RefType 结果的查询</span><span class="sxs-lookup"><span data-stu-id="6a315-120">How to: Execute a Query that Returns RefType Results</span></span>](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-reftype-results.md)  
   
- [<span data-ttu-id="4b47f-121">如何：执行返回复杂类型的查询</span><span class="sxs-lookup"><span data-stu-id="4b47f-121">How to: Execute a Query that Returns Complex Types</span></span>](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-complex-types.md)  
+ [<span data-ttu-id="6a315-121">如何：执行返回复杂类型的查询</span><span class="sxs-lookup"><span data-stu-id="6a315-121">How to: Execute a Query that Returns Complex Types</span></span>](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-complex-types.md)  
   
- [<span data-ttu-id="4b47f-122">如何：执行返回嵌套集合的查询</span><span class="sxs-lookup"><span data-stu-id="4b47f-122">How to: Execute a Query that Returns Nested Collections</span></span>](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-nested-collections.md)  
+ [<span data-ttu-id="6a315-122">如何：执行返回嵌套集合的查询</span><span class="sxs-lookup"><span data-stu-id="6a315-122">How to: Execute a Query that Returns Nested Collections</span></span>](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-nested-collections.md)  
   
- [<span data-ttu-id="4b47f-123">如何：使用 EntityCommand 执行参数化 Entity SQL 查询</span><span class="sxs-lookup"><span data-stu-id="4b47f-123">How to: Execute a Parameterized Entity SQL Query Using EntityCommand</span></span>](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-parameterized-entity-sql-query-using-entitycommand.md)  
+ [<span data-ttu-id="6a315-123">如何：使用 EntityCommand 执行参数化 Entity SQL 查询</span><span class="sxs-lookup"><span data-stu-id="6a315-123">How to: Execute a Parameterized Entity SQL Query Using EntityCommand</span></span>](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-parameterized-entity-sql-query-using-entitycommand.md)  
   
- [<span data-ttu-id="4b47f-124">如何：使用 EntityCommand 执行参数化存储过程</span><span class="sxs-lookup"><span data-stu-id="4b47f-124">How to: Execute a Parameterized Stored Procedure Using EntityCommand</span></span>](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-parameterized-stored-procedure-using-entitycommand.md)  
+ [<span data-ttu-id="6a315-124">如何：使用 EntityCommand 执行参数化存储过程</span><span class="sxs-lookup"><span data-stu-id="6a315-124">How to: Execute a Parameterized Stored Procedure Using EntityCommand</span></span>](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-parameterized-stored-procedure-using-entitycommand.md)  
   
- [<span data-ttu-id="4b47f-125">如何：执行多态查询</span><span class="sxs-lookup"><span data-stu-id="4b47f-125">How to: Execute a Polymorphic Query</span></span>](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-polymorphic-query.md)  
+ [<span data-ttu-id="6a315-125">如何：执行多态查询</span><span class="sxs-lookup"><span data-stu-id="6a315-125">How to: Execute a Polymorphic Query</span></span>](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-polymorphic-query.md)  
   
- [<span data-ttu-id="4b47f-126">如何：使用导航运算符导航关系</span><span class="sxs-lookup"><span data-stu-id="4b47f-126">How to: Navigate Relationships with the Navigate Operator</span></span>](../../../../../../docs/framework/data/adonet/ef/how-to-navigate-relationships-with-the-navigate-operator.md)  
+ [<span data-ttu-id="6a315-126">如何：使用导航运算符导航关系</span><span class="sxs-lookup"><span data-stu-id="6a315-126">How to: Navigate Relationships with the Navigate Operator</span></span>](../../../../../../docs/framework/data/adonet/ef/how-to-navigate-relationships-with-the-navigate-operator.md)  
   
-## <a name="using-entity-sql-with-object-queries"></a><span data-ttu-id="4b47f-127">将 Entity SQL 与对象查询结合使用</span><span class="sxs-lookup"><span data-stu-id="4b47f-127">Using Entity SQL with object queries</span></span>  
- <span data-ttu-id="4b47f-128">如果您要将 Entity SQL 与对象查询结合使用，有关更多信息请参见下列主题：</span><span class="sxs-lookup"><span data-stu-id="4b47f-128">If you want to use Entity SQL with object queries, see the following topics for more information:</span></span>  
+## <a name="using-entity-sql-with-object-queries"></a><span data-ttu-id="6a315-127">将 Entity SQL 与对象查询结合使用</span><span class="sxs-lookup"><span data-stu-id="6a315-127">Using Entity SQL with object queries</span></span>  
+ <span data-ttu-id="6a315-128">如果您要将 Entity SQL 与对象查询结合使用，有关更多信息请参见下列主题：</span><span class="sxs-lookup"><span data-stu-id="6a315-128">If you want to use Entity SQL with object queries, see the following topics for more information:</span></span>  
   
- [<span data-ttu-id="4b47f-129">如何： 执行返回实体类型对象的查询</span><span class="sxs-lookup"><span data-stu-id="4b47f-129">How to: Execute a Query that Returns Entity Type Objects</span></span>](https://msdn.microsoft.com/library/f73e137d-1534-42bb-9e31-99ca42c19b48)  
+ [<span data-ttu-id="6a315-129">如何： 执行返回实体类型对象的查询</span><span class="sxs-lookup"><span data-stu-id="6a315-129">How to: Execute a Query that Returns Entity Type Objects</span></span>](https://msdn.microsoft.com/library/f73e137d-1534-42bb-9e31-99ca42c19b48)  
   
- [<span data-ttu-id="4b47f-130">如何： 执行参数化的查询</span><span class="sxs-lookup"><span data-stu-id="4b47f-130">How to: Execute a Parameterized Query</span></span>](https://msdn.microsoft.com/library/42048f03-c65c-4d98-b50a-3e7d537a63e8)  
+ [<span data-ttu-id="6a315-130">如何： 执行参数化的查询</span><span class="sxs-lookup"><span data-stu-id="6a315-130">How to: Execute a Parameterized Query</span></span>](https://msdn.microsoft.com/library/42048f03-c65c-4d98-b50a-3e7d537a63e8)  
   
- [<span data-ttu-id="4b47f-131">如何： 使用导航属性导航关系</span><span class="sxs-lookup"><span data-stu-id="4b47f-131">How to: Navigate Relationships Using Navigation Properties</span></span>](https://msdn.microsoft.com/library/b1d71c7d-16a7-4b46-96ac-690176bd5057)  
+ [<span data-ttu-id="6a315-131">如何： 使用导航属性导航关系</span><span class="sxs-lookup"><span data-stu-id="6a315-131">How to: Navigate Relationships Using Navigation Properties</span></span>](https://msdn.microsoft.com/library/b1d71c7d-16a7-4b46-96ac-690176bd5057)  
   
- [<span data-ttu-id="4b47f-132">如何： 调用用户定义函数</span><span class="sxs-lookup"><span data-stu-id="4b47f-132">How to: Call a User-Defined Function</span></span>](https://msdn.microsoft.com/library/ad131b86-8b4e-4747-8605-d4fc64fb9d02)  
+ [<span data-ttu-id="6a315-132">如何： 调用用户定义函数</span><span class="sxs-lookup"><span data-stu-id="6a315-132">How to: Call a User-Defined Function</span></span>](https://msdn.microsoft.com/library/ad131b86-8b4e-4747-8605-d4fc64fb9d02)  
   
- [<span data-ttu-id="4b47f-133">如何： 筛选数据</span><span class="sxs-lookup"><span data-stu-id="4b47f-133">How to: Filter Data</span></span>](https://msdn.microsoft.com/library/776f8556-3350-4572-804a-b1513515c1b2)  
+ [<span data-ttu-id="6a315-133">如何： 筛选数据</span><span class="sxs-lookup"><span data-stu-id="6a315-133">How to: Filter Data</span></span>](https://msdn.microsoft.com/library/776f8556-3350-4572-804a-b1513515c1b2)  
   
- [<span data-ttu-id="4b47f-134">如何： 对数据进行排序</span><span class="sxs-lookup"><span data-stu-id="4b47f-134">How to: Sort Data</span></span>](https://msdn.microsoft.com/library/c05f2506-cb9d-4ebc-822b-300042ad53e7)  
+ [<span data-ttu-id="6a315-134">如何： 对数据进行排序</span><span class="sxs-lookup"><span data-stu-id="6a315-134">How to: Sort Data</span></span>](https://msdn.microsoft.com/library/c05f2506-cb9d-4ebc-822b-300042ad53e7)  
   
- [<span data-ttu-id="4b47f-135">如何： 数据进行分组</span><span class="sxs-lookup"><span data-stu-id="4b47f-135">How to: Group Data</span></span>](https://msdn.microsoft.com/library/df801d9d-9a8a-4157-97a6-5016b18998e1)  
+ [<span data-ttu-id="6a315-135">如何： 数据进行分组</span><span class="sxs-lookup"><span data-stu-id="6a315-135">How to: Group Data</span></span>](https://msdn.microsoft.com/library/df801d9d-9a8a-4157-97a6-5016b18998e1)  
   
- [<span data-ttu-id="4b47f-136">如何： 聚合数据</span><span class="sxs-lookup"><span data-stu-id="4b47f-136">How to: Aggregate Data</span></span>](https://msdn.microsoft.com/library/4cf04ce8-3c0f-4f88-9d97-8fac8622598d)  
+ [<span data-ttu-id="6a315-136">如何： 聚合数据</span><span class="sxs-lookup"><span data-stu-id="6a315-136">How to: Aggregate Data</span></span>](https://msdn.microsoft.com/library/4cf04ce8-3c0f-4f88-9d97-8fac8622598d)  
   
- [<span data-ttu-id="4b47f-137">如何： 执行返回匿名类型对象的查询</span><span class="sxs-lookup"><span data-stu-id="4b47f-137">How to: Execute a Query that Returns Anonymous Type Objects</span></span>](https://msdn.microsoft.com/library/3b264025-e911-4d73-90ce-992d2b9d189d)  
+ [<span data-ttu-id="6a315-137">如何： 执行返回匿名类型对象的查询</span><span class="sxs-lookup"><span data-stu-id="6a315-137">How to: Execute a Query that Returns Anonymous Type Objects</span></span>](https://msdn.microsoft.com/library/3b264025-e911-4d73-90ce-992d2b9d189d)  
   
- [<span data-ttu-id="4b47f-138">如何： 执行返回基元类型的集合的查询</span><span class="sxs-lookup"><span data-stu-id="4b47f-138">How to: Execute a Query that Returns a Collection of Primitive Types</span></span>](https://msdn.microsoft.com/library/115b52c0-4f27-4253-8991-284b450000b5)  
+ [<span data-ttu-id="6a315-138">如何： 执行返回基元类型的集合的查询</span><span class="sxs-lookup"><span data-stu-id="6a315-138">How to: Execute a Query that Returns a Collection of Primitive Types</span></span>](https://msdn.microsoft.com/library/115b52c0-4f27-4253-8991-284b450000b5)  
   
- [<span data-ttu-id="4b47f-139">如何： 查询在 EntityCollection 中的相关的对象</span><span class="sxs-lookup"><span data-stu-id="4b47f-139">How to: Query Related Objects in an EntityCollection</span></span>](https://msdn.microsoft.com/library/11ce946f-16f8-4c1d-9d80-f740853807ba)  
+ [<span data-ttu-id="6a315-139">如何： 查询在 EntityCollection 中的相关的对象</span><span class="sxs-lookup"><span data-stu-id="6a315-139">How to: Query Related Objects in an EntityCollection</span></span>](https://msdn.microsoft.com/library/11ce946f-16f8-4c1d-9d80-f740853807ba)  
   
- [<span data-ttu-id="4b47f-140">如何： 两个查询的联合排序</span><span class="sxs-lookup"><span data-stu-id="4b47f-140">How to: Order the Union of Two Queries</span></span>](https://msdn.microsoft.com/library/853c583a-eaba-4400-830d-be974e735313)  
+ [<span data-ttu-id="6a315-140">如何： 两个查询的联合排序</span><span class="sxs-lookup"><span data-stu-id="6a315-140">How to: Order the Union of Two Queries</span></span>](https://msdn.microsoft.com/library/853c583a-eaba-4400-830d-be974e735313)  
   
- [<span data-ttu-id="4b47f-141">如何： 查询结果分页</span><span class="sxs-lookup"><span data-stu-id="4b47f-141">How to: Page Through Query Results</span></span>](https://msdn.microsoft.com/library/ffc0f920-e7de-42e0-9b12-ef356421d030)  
+ [<span data-ttu-id="6a315-141">如何： 查询结果分页</span><span class="sxs-lookup"><span data-stu-id="6a315-141">How to: Page Through Query Results</span></span>](https://msdn.microsoft.com/library/ffc0f920-e7de-42e0-9b12-ef356421d030)  
   
-## <a name="in-this-section"></a><span data-ttu-id="4b47f-142">本节内容</span><span class="sxs-lookup"><span data-stu-id="4b47f-142">In This Section</span></span>  
- [<span data-ttu-id="4b47f-143">实体 SQL 概述</span><span class="sxs-lookup"><span data-stu-id="4b47f-143">Entity SQL Overview</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)  
+## <a name="in-this-section"></a><span data-ttu-id="6a315-142">本节内容</span><span class="sxs-lookup"><span data-stu-id="6a315-142">In This Section</span></span>  
+ [<span data-ttu-id="6a315-143">实体 SQL 概述</span><span class="sxs-lookup"><span data-stu-id="6a315-143">Entity SQL Overview</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)  
   
- [<span data-ttu-id="4b47f-144">实体 SQL 引用</span><span class="sxs-lookup"><span data-stu-id="4b47f-144">Entity SQL Reference</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)  
+ [<span data-ttu-id="6a315-144">实体 SQL 引用</span><span class="sxs-lookup"><span data-stu-id="6a315-144">Entity SQL Reference</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)  
   
-## <a name="see-also"></a><span data-ttu-id="4b47f-145">请参阅</span><span class="sxs-lookup"><span data-stu-id="4b47f-145">See Also</span></span>  
- [<span data-ttu-id="4b47f-146">ADO.NET 实体框架</span><span class="sxs-lookup"><span data-stu-id="4b47f-146">ADO.NET Entity Framework</span></span>](../../../../../../docs/framework/data/adonet/ef/index.md)  
- [<span data-ttu-id="4b47f-147">语言参考</span><span class="sxs-lookup"><span data-stu-id="4b47f-147">Language Reference</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/index.md)
+## <a name="see-also"></a><span data-ttu-id="6a315-145">请参阅</span><span class="sxs-lookup"><span data-stu-id="6a315-145">See Also</span></span>  
+ [<span data-ttu-id="6a315-146">ADO.NET 实体框架</span><span class="sxs-lookup"><span data-stu-id="6a315-146">ADO.NET Entity Framework</span></span>](../../../../../../docs/framework/data/adonet/ef/index.md)  
+ [<span data-ttu-id="6a315-147">语言参考</span><span class="sxs-lookup"><span data-stu-id="6a315-147">Language Reference</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/index.md)
