@@ -7,65 +7,66 @@ helpviewer_keywords:
 - indexers [C#]
 - C# language, indexers
 ms.assetid: 022cd27d-d5e0-4cfe-8b97-dc018cc3355d
-ms.openlocfilehash: acc82ca370a71a0469fc543d042da9c279d69fb2
-ms.sourcegitcommit: a1e35d4e94edab384a63406c0a5438306873031b
+ms.openlocfilehash: 6a98cd9f2ff6f40a200a9e30fc65de717b6e788e
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/21/2018
-ms.locfileid: "42907758"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43503628"
 ---
-# <a name="indexers-c-programming-guide"></a><span data-ttu-id="29f7d-102">索引器（C# 编程指南）</span><span class="sxs-lookup"><span data-stu-id="29f7d-102">Indexers (C# Programming Guide)</span></span>
+# <a name="indexers-c-programming-guide"></a><span data-ttu-id="cd060-102">索引器（C# 编程指南）</span><span class="sxs-lookup"><span data-stu-id="cd060-102">Indexers (C# Programming Guide)</span></span>
 
-<span data-ttu-id="29f7d-103">索引器允许类或结构的实例就像数组一样进行索引。</span><span class="sxs-lookup"><span data-stu-id="29f7d-103">Indexers allow instances of a class or struct to be indexed just like arrays.</span></span> <span data-ttu-id="29f7d-104">无需显式指定类型或实例成员，即可设置或检索索引值。</span><span class="sxs-lookup"><span data-stu-id="29f7d-104">The indexed value can be set or retrieved without explicitly specifying a type or instance member.</span></span> <span data-ttu-id="29f7d-105">索引器类似于[属性](../../../csharp/programming-guide/classes-and-structs/properties.md)，不同之处在于它们的访问器需要使用参数。</span><span class="sxs-lookup"><span data-stu-id="29f7d-105">Indexers resemble [properties](../../../csharp/programming-guide/classes-and-structs/properties.md) except that their accessors take parameters.</span></span>  
+<span data-ttu-id="cd060-103">索引器允许类或结构的实例就像数组一样进行索引。</span><span class="sxs-lookup"><span data-stu-id="cd060-103">Indexers allow instances of a class or struct to be indexed just like arrays.</span></span> <span data-ttu-id="cd060-104">无需显式指定类型或实例成员，即可设置或检索索引值。</span><span class="sxs-lookup"><span data-stu-id="cd060-104">The indexed value can be set or retrieved without explicitly specifying a type or instance member.</span></span> <span data-ttu-id="cd060-105">索引器类似于[属性](../../../csharp/programming-guide/classes-and-structs/properties.md)，不同之处在于它们的访问器需要使用参数。</span><span class="sxs-lookup"><span data-stu-id="cd060-105">Indexers resemble [properties](../../../csharp/programming-guide/classes-and-structs/properties.md) except that their accessors take parameters.</span></span>  
  
- <span data-ttu-id="29f7d-106">以下示例定义了一个泛型类，其中包含用于赋值和检索值的简单 [get](../../../csharp/language-reference/keywords/get.md) 和 [set](../../../csharp/language-reference/keywords/set.md) 访问器方法。</span><span class="sxs-lookup"><span data-stu-id="29f7d-106">The following example defines a generic class with simple [get](../../../csharp/language-reference/keywords/get.md) and [set](../../../csharp/language-reference/keywords/set.md) accessor methods to assign and retrieve values.</span></span> <span data-ttu-id="29f7d-107">`Program` 类创建了此类的一个实例，用于存储字符串。</span><span class="sxs-lookup"><span data-stu-id="29f7d-107">The `Program` class creates an instance of this class for storing strings.</span></span>  
+ <span data-ttu-id="cd060-106">以下示例定义了一个泛型类，其中包含用于赋值和检索值的简单 [get](../../../csharp/language-reference/keywords/get.md) 和 [set](../../../csharp/language-reference/keywords/set.md) 访问器方法。</span><span class="sxs-lookup"><span data-stu-id="cd060-106">The following example defines a generic class with simple [get](../../../csharp/language-reference/keywords/get.md) and [set](../../../csharp/language-reference/keywords/set.md) accessor methods to assign and retrieve values.</span></span> <span data-ttu-id="cd060-107">`Program` 类创建了此类的一个实例，用于存储字符串。</span><span class="sxs-lookup"><span data-stu-id="cd060-107">The `Program` class creates an instance of this class for storing strings.</span></span>  
   
  [!code-csharp[indexers#1](../../../../samples/snippets/csharp/programming-guide/indexers/indexer-1.cs)]  
   
 > [!NOTE]
->  <span data-ttu-id="29f7d-108">有关更多示例，请参阅[相关部分](../../../csharp/programming-guide/indexers/index.md#BKMK_RelatedSections)。</span><span class="sxs-lookup"><span data-stu-id="29f7d-108">For more examples, see [Related Sections](../../../csharp/programming-guide/indexers/index.md#BKMK_RelatedSections).</span></span>  
+>  <span data-ttu-id="cd060-108">有关更多示例，请参阅[相关部分](../../../csharp/programming-guide/indexers/index.md#BKMK_RelatedSections)。</span><span class="sxs-lookup"><span data-stu-id="cd060-108">For more examples, see [Related Sections](../../../csharp/programming-guide/indexers/index.md#BKMK_RelatedSections).</span></span>  
   
-## <a name="expression-body-definitions"></a><span data-ttu-id="29f7d-109">表达式主体定义</span><span class="sxs-lookup"><span data-stu-id="29f7d-109">Expression Body Definitions</span></span>  
+## <a name="expression-body-definitions"></a><span data-ttu-id="cd060-109">表达式主体定义</span><span class="sxs-lookup"><span data-stu-id="cd060-109">Expression Body Definitions</span></span>  
  
-<span data-ttu-id="29f7d-110">索引器的 get 或 set 访问器包含一个用于返回或设置值的语句很常见。</span><span class="sxs-lookup"><span data-stu-id="29f7d-110">It is common for an indexer's get or set accessor to consist of a single statement that either returns or sets a value.</span></span> <span data-ttu-id="29f7d-111">为了支持这种情况，表达式主体成员提供了一种经过简化的语法。</span><span class="sxs-lookup"><span data-stu-id="29f7d-111">Expression-bodied members provide a simplified syntax to support this scenario.</span></span> <span data-ttu-id="29f7d-112">自 C# 6 起，可以表达式主体成员的形式实现只读索引器，如以下示例所示。</span><span class="sxs-lookup"><span data-stu-id="29f7d-112">Starting with C# 6, a read-only indexer can be implemented as an expression-bodied member, as the following example shows.</span></span>
+<span data-ttu-id="cd060-110">索引器的 get 或 set 访问器包含一个用于返回或设置值的语句很常见。</span><span class="sxs-lookup"><span data-stu-id="cd060-110">It is common for an indexer's get or set accessor to consist of a single statement that either returns or sets a value.</span></span> <span data-ttu-id="cd060-111">为了支持这种情况，表达式主体成员提供了一种经过简化的语法。</span><span class="sxs-lookup"><span data-stu-id="cd060-111">Expression-bodied members provide a simplified syntax to support this scenario.</span></span> <span data-ttu-id="cd060-112">自 C# 6 起，可以表达式主体成员的形式实现只读索引器，如以下示例所示。</span><span class="sxs-lookup"><span data-stu-id="cd060-112">Starting with C# 6, a read-only indexer can be implemented as an expression-bodied member, as the following example shows.</span></span>
 
 [!code-csharp[indexers#2](../../../../samples/snippets/csharp/programming-guide/indexers/indexer-2.cs)]  
 
-<span data-ttu-id="29f7d-113">请注意，`=>` 引入了表达式主体，并未使用 `get` 关键字。</span><span class="sxs-lookup"><span data-stu-id="29f7d-113">Note that `=>` introduces the expression body, and that the `get` keyword is not used.</span></span> 
+<span data-ttu-id="cd060-113">请注意，`=>` 引入了表达式主体，并未使用 `get` 关键字。</span><span class="sxs-lookup"><span data-stu-id="cd060-113">Note that `=>` introduces the expression body, and that the `get` keyword is not used.</span></span> 
 
-<span data-ttu-id="29f7d-114">自 C# 7.0 起，get 和 set 访问器均可作为表达式主体成员实现。</span><span class="sxs-lookup"><span data-stu-id="29f7d-114">Starting with C# 7.0, both the get and set accessor can be an implemented as expression-bodied members.</span></span> <span data-ttu-id="29f7d-115">在这种情况下，必须使用 `get` 和 `set` 关键字。</span><span class="sxs-lookup"><span data-stu-id="29f7d-115">In this case, both `get` and `set` keywords must be used.</span></span> <span data-ttu-id="29f7d-116">例如:</span><span class="sxs-lookup"><span data-stu-id="29f7d-116">For example:</span></span>
+<span data-ttu-id="cd060-114">自 C# 7.0 起，get 和 set 访问器均可作为表达式主体成员实现。</span><span class="sxs-lookup"><span data-stu-id="cd060-114">Starting with C# 7.0, both the get and set accessor can be an implemented as expression-bodied members.</span></span> <span data-ttu-id="cd060-115">在这种情况下，必须使用 `get` 和 `set` 关键字。</span><span class="sxs-lookup"><span data-stu-id="cd060-115">In this case, both `get` and `set` keywords must be used.</span></span> <span data-ttu-id="cd060-116">例如:</span><span class="sxs-lookup"><span data-stu-id="cd060-116">For example:</span></span>
 
 [!code-csharp[indexers#3](../../../../samples/snippets/csharp/programming-guide/indexers/indexer-3.cs)]  
   
-## <a name="indexers-overview"></a><span data-ttu-id="29f7d-117">索引器概述</span><span class="sxs-lookup"><span data-stu-id="29f7d-117">Indexers Overview</span></span>  
+## <a name="indexers-overview"></a><span data-ttu-id="cd060-117">索引器概述</span><span class="sxs-lookup"><span data-stu-id="cd060-117">Indexers Overview</span></span>  
   
--   <span data-ttu-id="29f7d-118">使用索引器可以用类似于数组的方式为对象建立索引。</span><span class="sxs-lookup"><span data-stu-id="29f7d-118">Indexers enable objects to be indexed in a similar manner to arrays.</span></span>  
+-   <span data-ttu-id="cd060-118">使用索引器可以用类似于数组的方式为对象建立索引。</span><span class="sxs-lookup"><span data-stu-id="cd060-118">Indexers enable objects to be indexed in a similar manner to arrays.</span></span>  
   
--   <span data-ttu-id="29f7d-119">`get` 取值函数返回值。</span><span class="sxs-lookup"><span data-stu-id="29f7d-119">A `get` accessor returns a value.</span></span> <span data-ttu-id="29f7d-120">`set` 取值函数分配值。</span><span class="sxs-lookup"><span data-stu-id="29f7d-120">A `set` accessor assigns a value.</span></span>  
+-   <span data-ttu-id="cd060-119">`get` 取值函数返回值。</span><span class="sxs-lookup"><span data-stu-id="cd060-119">A `get` accessor returns a value.</span></span> <span data-ttu-id="cd060-120">`set` 取值函数分配值。</span><span class="sxs-lookup"><span data-stu-id="cd060-120">A `set` accessor assigns a value.</span></span>  
   
--   <span data-ttu-id="29f7d-121">[this](../../../csharp/language-reference/keywords/this.md) 关键字用于定义索引器。</span><span class="sxs-lookup"><span data-stu-id="29f7d-121">The [this](../../../csharp/language-reference/keywords/this.md) keyword is used to define the indexer.</span></span>  
+-   <span data-ttu-id="cd060-121">[this](../../../csharp/language-reference/keywords/this.md) 关键字用于定义索引器。</span><span class="sxs-lookup"><span data-stu-id="cd060-121">The [this](../../../csharp/language-reference/keywords/this.md) keyword is used to define the indexer.</span></span>  
   
--   <span data-ttu-id="29f7d-122">[value](../../../csharp/language-reference/keywords/value.md) 关键字用于定义 `set` 索引器所赋的值。</span><span class="sxs-lookup"><span data-stu-id="29f7d-122">The [value](../../../csharp/language-reference/keywords/value.md) keyword is used to define the value being assigned by the `set` indexer.</span></span>  
+-   <span data-ttu-id="cd060-122">[value](../../../csharp/language-reference/keywords/value.md) 关键字用于定义 `set` 索引器所赋的值。</span><span class="sxs-lookup"><span data-stu-id="cd060-122">The [value](../../../csharp/language-reference/keywords/value.md) keyword is used to define the value being assigned by the `set` indexer.</span></span>  
   
--   <span data-ttu-id="29f7d-123">索引器不必根据整数值进行索引；由你决定如何定义特定的查找机制。</span><span class="sxs-lookup"><span data-stu-id="29f7d-123">Indexers do not have to be indexed by an integer value; it is up to you how to define the specific look-up mechanism.</span></span>  
+-   <span data-ttu-id="cd060-123">索引器不必根据整数值进行索引；由你决定如何定义特定的查找机制。</span><span class="sxs-lookup"><span data-stu-id="cd060-123">Indexers do not have to be indexed by an integer value; it is up to you how to define the specific look-up mechanism.</span></span>  
   
--   <span data-ttu-id="29f7d-124">索引器可被重载。</span><span class="sxs-lookup"><span data-stu-id="29f7d-124">Indexers can be overloaded.</span></span>  
+-   <span data-ttu-id="cd060-124">索引器可被重载。</span><span class="sxs-lookup"><span data-stu-id="cd060-124">Indexers can be overloaded.</span></span>  
   
--   <span data-ttu-id="29f7d-125">索引器可以有多个形参，例如当访问二维数组时。</span><span class="sxs-lookup"><span data-stu-id="29f7d-125">Indexers can have more than one formal parameter, for example, when accessing a two-dimensional array.</span></span>  
+-   <span data-ttu-id="cd060-125">索引器可以有多个形参，例如当访问二维数组时。</span><span class="sxs-lookup"><span data-stu-id="cd060-125">Indexers can have more than one formal parameter, for example, when accessing a two-dimensional array.</span></span>  
   
-##  <a name="BKMK_RelatedSections"></a><span data-ttu-id="29f7d-126">相关部分</span><span class="sxs-lookup"><span data-stu-id="29f7d-126">Related Sections</span></span>  
+##  <a name="BKMK_RelatedSections"></a><span data-ttu-id="cd060-126">相关部分</span><span class="sxs-lookup"><span data-stu-id="cd060-126">Related Sections</span></span>  
   
--   [<span data-ttu-id="29f7d-127">使用索引器</span><span class="sxs-lookup"><span data-stu-id="29f7d-127">Using Indexers</span></span>](../../../csharp/programming-guide/indexers/using-indexers.md)  
+-   [<span data-ttu-id="cd060-127">使用索引器</span><span class="sxs-lookup"><span data-stu-id="cd060-127">Using Indexers</span></span>](../../../csharp/programming-guide/indexers/using-indexers.md)  
   
--   [<span data-ttu-id="29f7d-128">接口中的索引器</span><span class="sxs-lookup"><span data-stu-id="29f7d-128">Indexers in Interfaces</span></span>](../../../csharp/programming-guide/indexers/indexers-in-interfaces.md)  
+-   [<span data-ttu-id="cd060-128">接口中的索引器</span><span class="sxs-lookup"><span data-stu-id="cd060-128">Indexers in Interfaces</span></span>](../../../csharp/programming-guide/indexers/indexers-in-interfaces.md)  
   
--   [<span data-ttu-id="29f7d-129">属性与索引器之间的比较</span><span class="sxs-lookup"><span data-stu-id="29f7d-129">Comparison Between Properties and Indexers</span></span>](../../../csharp/programming-guide/indexers/comparison-between-properties-and-indexers.md)  
+-   [<span data-ttu-id="cd060-129">属性与索引器之间的比较</span><span class="sxs-lookup"><span data-stu-id="cd060-129">Comparison Between Properties and Indexers</span></span>](../../../csharp/programming-guide/indexers/comparison-between-properties-and-indexers.md)  
   
--   [<span data-ttu-id="29f7d-130">限制访问器可访问性</span><span class="sxs-lookup"><span data-stu-id="29f7d-130">Restricting Accessor Accessibility</span></span>](../../../csharp/programming-guide/classes-and-structs/restricting-accessor-accessibility.md)  
+-   [<span data-ttu-id="cd060-130">限制访问器可访问性</span><span class="sxs-lookup"><span data-stu-id="cd060-130">Restricting Accessor Accessibility</span></span>](../../../csharp/programming-guide/classes-and-structs/restricting-accessor-accessibility.md)  
   
-## <a name="c-language-specification"></a><span data-ttu-id="29f7d-131">C# 语言规范</span><span class="sxs-lookup"><span data-stu-id="29f7d-131">C# Language Specification</span></span>  
+## <a name="c-language-specification"></a><span data-ttu-id="cd060-131">C# 语言规范</span><span class="sxs-lookup"><span data-stu-id="cd060-131">C# Language Specification</span></span>  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="29f7d-132">请参阅</span><span class="sxs-lookup"><span data-stu-id="29f7d-132">See Also</span></span>  
- [<span data-ttu-id="29f7d-133">C# 编程指南</span><span class="sxs-lookup"><span data-stu-id="29f7d-133">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
- [<span data-ttu-id="29f7d-134">属性</span><span class="sxs-lookup"><span data-stu-id="29f7d-134">Properties</span></span>](../../../csharp/programming-guide/classes-and-structs/properties.md)
+## <a name="see-also"></a><span data-ttu-id="cd060-132">请参阅</span><span class="sxs-lookup"><span data-stu-id="cd060-132">See Also</span></span>
+
+- [<span data-ttu-id="cd060-133">C# 编程指南</span><span class="sxs-lookup"><span data-stu-id="cd060-133">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
+- [<span data-ttu-id="cd060-134">属性</span><span class="sxs-lookup"><span data-stu-id="cd060-134">Properties</span></span>](../../../csharp/programming-guide/classes-and-structs/properties.md)
