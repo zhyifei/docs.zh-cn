@@ -18,12 +18,12 @@ helpviewer_keywords:
 - format specifiers, standard numeric format strings
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f20db5cfb13f788ae0f8670f0d1c3b221db3e43b
-ms.sourcegitcommit: c66ba2df2d2ecfb214f85ee0687d298e4941c1a8
+ms.openlocfilehash: 7f304adb567e3568fb4624b3c5e9ec4585009a05
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/15/2018
-ms.locfileid: "42753811"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43403184"
 ---
 # <a name="standard-numeric-format-strings"></a>标准数字格式字符串
 
@@ -33,8 +33,10 @@ ms.locfileid: "42753811"
   
 -   `xx` 是称为“精度说明符”的可选整数。 精度说明符的范围从 0 到 99，并且影响结果中的位数。 请注意，精度说明符控制数字的字符串表示形式中的数字个数。 它不舍入该数字。 若要执行舍入运算，请使用 <xref:System.Math.Ceiling%2A?displayProperty=nameWithType>、<xref:System.Math.Floor%2A?displayProperty=nameWithType> 或 <xref:System.Math.Round%2A?displayProperty=nameWithType> 方法。  
   
-     如果精度说明符控制结果字符串中的小数位数，结果字符串反映远离零的一侧舍入的数字（即使用 <xref:System.MidpointRounding.AwayFromZero?displayProperty=nameWithType>）。  
-  
+    当精度说明符控制结果字符串中的小数位数时，结果字符串会反映一个数字，该数字四舍五入到最接近无限精确结果的可表示结果。 如果有两个同样接近的可表示结果：
+    - 在 .NET Framework 和.NET Core（.NET Core 2.0 及以下）上，运行时选择最低有效数字更高的结果（即使用 <xref:System.MidpointRounding.AwayFromZero?displayProperty=nameWithType>）。
+    - 在 .NET Core 2.1 及更高版本上，运行时选择最低有效数字为偶数的结果（即使用 <xref:System.MidpointRounding.ToEven?displayProperty=nameWithType>）。 
+
     > [!NOTE]
     >  精度说明符确定结果字符串中的位数。 若要使用前导或尾随空格填充结果字符串，请使用[复合格式设置](../../../docs/standard/base-types/composite-formatting.md)功能，并在格式项中定义*对齐组件*。  
   

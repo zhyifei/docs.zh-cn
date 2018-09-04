@@ -1,8 +1,9 @@
 ---
-title: 桌面应用程序中的资源
-ms.date: 03/30/2017
+title: .NET 应用中的资源
+ms.date: 07/25/2018
 helpviewer_keywords:
 - deploying applications [.NET Framework], resources
+- deploying applications [.NET Core], resources
 - application resources
 - resource files
 - satellite assemblies
@@ -12,23 +13,21 @@ helpviewer_keywords:
 ms.assetid: 8ad495d4-2941-40cf-bf64-e82e85825890
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 023099adeeebf21b7dba631bde75332524eb0cc3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4bc91f5f3872ee5f4a55f3e3cd9e0e9de9bcc422
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33399245"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43408280"
 ---
-# <a name="resources-in-desktop-apps"></a>桌面应用程序中的资源
+# <a name="resources-in-net-apps"></a>.NET 应用中的资源
 几乎每一个生产性应用都需要使用资源。 资源是在逻辑上随应用部署的任何不可执行的数据。 资源可以在应用中作为错误消息显示，或者作为用户界面的一部分显示。 资源可以包含多种形式的数据，包括字符串、图像和持久的对象。 （若要将持久对象写入资源文件，这些对象必须是可序列化的。）通过在资源文件中存储数据，无需重新编译整个应用即可更改这些数据。 还可以将数据存储在一个位置，而无需依赖存储在多个位置的硬编码数据。  
   
- .NET Framework 为桌面应用资源的创建和本地化提供全面的支持。 此外，.NET Framework 还支持一种在桌面应用中打包和部署这些虚拟化资源的简单模型。  
+ .NET Framework 和 .NET Core 为资源的创建和本地化提供全面的支持。 此外，.NET 还支持一种用于打包和部署本地化资源的简单模型。  
   
- 有关 ASP.NET 中的资源的信息，请参阅 Internet Explorer 开发人员中心的 [ASP.NET 网页资源概述](http://msdn.microsoft.com/library/0936b3b2-9e6e-4abe-9c06-364efef9dbbd)。  
+ 有关 ASP.NET 中的资源的信息，请参阅 [ASP.NET 网页资源概述](https://msdn.microsoft.com/library/0936b3b2-9e6e-4abe-9c06-364efef9dbbd)。  
   
- [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]应用采用不同于桌面应用的资源模型并将其资源存储在单个程序包资源索引 (PRI) 文件中。 有关 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]应用中的资源的信息，请参阅 Windows 开发人员中心的[在 Windows 应用商店应用中创建和检索资源](http://go.microsoft.com/fwlink/p/?LinkId=241674)。  
-  
-## <a name="creating-and-localizing-resources"></a>创建和本地化资源  
+ ## <a name="creating-and-localizing-resources"></a>创建和本地化资源  
  在非本地化的应用中，可以使用资源文件作为应用数据的存储库，特别用于存储本来可能在源代码中的多个位置为硬编码的字符串。 通常以文本 (.txt) 或 XML (.resx) 文件形式创建资源，并使用 [Resgen.exe（资源文件生成器）](../../../docs/framework/tools/resgen-exe-resource-file-generator.md)将其编译为二进制 .resources 文件。 随后，这些文件可由语言编译器嵌入到应用的可执行文件中。 有关创建资源的详细信息，请参阅[创建资源文件](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md)。  
   
  您还可以按特定的区域性对应用的资源进行本地化。 这样可以生成应用的本地化（翻译）版本。 在开发使用本地化资源的应用时，可以指定一个区域性作为非特定或回退区域性，以在没有合适的资源可用时使用该区域性的资源。 通常，非特定区域性的资源存储在应用的可执行文件中。 其余各本地化区域性的资源存储在单独的附属程序集中。 有关详细信息，请参阅[创建附属程序集](../../../docs/framework/resources/creating-satellite-assemblies-for-desktop-apps.md)。  
@@ -47,11 +46,11 @@ ms.locfileid: "33399245"
   
 -   如果没有明确分配区域性，则从 <xref:System.Globalization.CultureInfo.DefaultThreadCurrentUICulture%2A?displayProperty=nameWithType> 属性检索默认线程 UI 区域性。  
   
--   如果没有明确分配默认线程 UI 区域性，则通过调用 Windows `GetUserDefaultUILanguage` 函数来检索本地计算机当前用户的区域性。  
+-   如果没有明确分配默认线程 UI 区域性，则在本地计算机上检索当前用户的区域性。 在 Windows 上运行的 .NET 实现通过调用 Windows [`GetUserDefaultUILanguage`](/windows/desktop/api/winnls/nf-winnls-getuserdefaultuilanguage) 函数来完成此操作。  
   
  有关如何设置当前 UI 区域性的详细信息，请参阅 <xref:System.Globalization.CultureInfo> 和 <xref:System.Globalization.CultureInfo.CurrentUICulture%2A?displayProperty=nameWithType> 参考页。  
   
- 随后，通过使用 <xref:System.Resources.ResourceManager?displayProperty=nameWithType> 类，可以为当前的 UI 区域性或特定区域性检索资源。 虽然 <xref:System.Resources.ResourceManager> 类最常用于检索桌面应用资源，但 <xref:System.Resources?displayProperty=nameWithType> 命名空间也包含可用于检索资源的其他类型。 这些方法包括：  
+ 随后，通过使用 <xref:System.Resources.ResourceManager?displayProperty=nameWithType> 类，可以为当前的 UI 区域性或特定区域性检索资源。 虽然 <xref:System.Resources.ResourceManager> 类最常用于检索资源，但 <xref:System.Resources?displayProperty=nameWithType> 命名空间包含可用于检索资源的其他类型。 这些方法包括：  
   
 -   <xref:System.Resources.ResourceReader> 类 - 可用于枚举嵌入在程序集或存储于独立二进制 .resources 文件中的资源。 当您不知道运行时可用资源的准确名称时，这将会很有用。  
   

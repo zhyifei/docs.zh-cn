@@ -2,12 +2,12 @@
 title: 使用工作流中的 OData 源
 ms.date: 03/30/2017
 ms.assetid: 1b26617c-53e9-476a-81af-675c36d95919
-ms.openlocfilehash: 7b9b55d92d81772ed1601ec246cfc2e8aa96c016
-ms.sourcegitcommit: a1e35d4e94edab384a63406c0a5438306873031b
+ms.openlocfilehash: a7e2a0658294681b154b11f48563ebc562c47210
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/21/2018
-ms.locfileid: "42754516"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43562475"
 ---
 # <a name="consuming-odata-feeds-from-a-workflow"></a>使用工作流中的 OData 源
 
@@ -15,7 +15,7 @@ WCF 数据服务是 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]
 
 ## <a name="using-the-sample-northwind-odata-service"></a>使用示例 Northwind OData 服务
 
-本主题中的示例使用示例 Northwind 数据服务在[ http://services.odata.org/Northwind/Northwind.svc/ ](http://go.microsoft.com/fwlink/?LinkID=187426)。 此服务作为 [OData SDK](http://go.microsoft.com/fwlink/?LinkID=185248) 的一部分提供，它提供了对示例 Northwind 数据库的只读访问。 如果需要写权限或需要本地 WCF 数据服务，可按照 [WCF 数据服务快速入门](http://go.microsoft.com/fwlink/?LinkID=131076) 中的步骤执行操作，以创建可提供对 Northwind 数据库的访问的本地 OData 服务。 如果按照该快速入门中的步骤执行操作，则会用本地 URI 代替本主题中的代码示例中提供的 URI。
+本主题中的示例使用示例 Northwind 数据服务在[ http://services.odata.org/Northwind/Northwind.svc/ ](https://go.microsoft.com/fwlink/?LinkID=187426)。 此服务提供的一部分[OData SDK](https://go.microsoft.com/fwlink/?LinkID=185248)并提供对 Northwind 示例数据库的只读访问。 如果需要写访问权限，或者如果需要本地 WCF 数据服务，则可遵循的步骤[WCF Data Services 快速入门](https://go.microsoft.com/fwlink/?LinkID=131076)创建提供对 Northwind 数据库的访问的本地 OData 服务。 如果按照该快速入门中的步骤执行操作，则会用本地 URI 代替本主题中的代码示例中提供的 URI。
 
 ## <a name="consuming-an-odata-feed-using-the-client-libraries"></a>通过客户端库使用 OData 源
 
@@ -30,14 +30,14 @@ WCF 数据服务包括一些客户端库，使您能够通过 [!INCLUDE[dnprdnsh
 请注意，此服务未公开任何服务操作，并且 **“服务”** 列表中包含表示由 Northwind 数据服务公开的实体的项目。 在添加服务引用时，将为这些实体生成类，并可在客户端代码中使用生成的类。 本主题中的示例使用这些类和 `NorthwindEntities` 类来执行查询。
 
 > [!NOTE]
-> 有关详细信息，请参阅[生成数据服务客户端库 (WCF Data Services)](http://go.microsoft.com/fwlink/?LinkID=191611)。
+> 有关详细信息，请参阅[生成数据服务客户端库 (WCF Data Services)](https://go.microsoft.com/fwlink/?LinkID=191611)。
 
 ### <a name="using-asynchronous-methods"></a>使用异步方法
 
 若要解决在通过 Web 访问资源时可能发生的延迟问题，建议您异步访问 WCF 数据服务。 WCF 数据服务客户端库包括用于调用查询的异步方法和 Windows Workflow Foundation (WF) 提供了<xref:System.Activities.AsyncCodeActivity>用于创作异步活动的类。 可写入<xref:System.Activities.AsyncCodeActivity> 派生的活动以利用具有异步方法的 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 类，或者可将要异步执行的代码放入某个方法中并使用委托进行调用。 本节提供了 <xref:System.Activities.AsyncCodeActivity> 派生的活动的两个示例；一个示例使用 WCF 数据服务客户端库的异步方法，另一个示例使用委托。
 
 > [!NOTE]
-> 有关详细信息，请参阅[异步操作 (WCF Data Services)](http://go.microsoft.com/fwlink/?LinkId=193396)并[创建异步活动](../../../docs/framework/windows-workflow-foundation/creating-asynchronous-activities-in-wf.md)。
+> 有关详细信息，请参阅[异步操作 (WCF Data Services)](https://go.microsoft.com/fwlink/?LinkId=193396)并[创建异步活动](../../../docs/framework/windows-workflow-foundation/creating-asynchronous-activities-in-wf.md)。
 
 ### <a name="using-client-library-asynchronous-methods"></a>使用客户端库异步方法
 
@@ -77,7 +77,7 @@ Calling WCF Data Service...
 下面的示例定义了一个 `ListCustomers` 活动。 此活动将查询示例 Northwind 数据服务并返回一个包含 Northwind 数据库中的所有客户的 `List<Customer>` 。 异步工作由 `GetCustomers` 方法执行。 此方法将查询所有客户的服务，然后将这些客户复制到 `List<Customer>`。 然后，此方法会检查结果是否已分页。 如果结果已分页，则此方法会查询下一页结果的服务，再将这些结果添加到列表，然后继续操作直到检索到所有客户数据。
 
 > [!NOTE]
-> 有关 WCF Data Services 中的分页的详细信息，请参阅。 [如何：加载分页结果（WCF 数据服务）](http://go.microsoft.com/fwlink/?LinkId=193452)。
+> 有关 WCF Data Services 中的分页的详细信息，请参阅。 [如何： 加载分页结果 （WCF 数据服务）](https://go.microsoft.com/fwlink/?LinkId=193452)。
 
 在添加所有客户后，将返回该列表。 活动的 `GetCustomers` 重写中指定了 <xref:System.Activities.AsyncCodeActivity.BeginExecute%2A> 方法。 由于该方法具有一个返回值，因此将创建一个 `Func<string, List<Customer>>` 来指定该方法。
 
@@ -154,4 +154,4 @@ xmlns="http://www.w3.org/2005/Atom">
 ...
 ```
 
-本示例提供了一个方法，工作流应用程序作者可通过该方法使用从 OData 服务返回的原始数据。 有关使用访问 WCF 数据服务 Uri 的详细信息，请参阅[访问数据服务资源 (WCF Data Services)](http://go.microsoft.com/fwlink/?LinkId=193397)并[OData: URI 约定](http://go.microsoft.com/fwlink/?LinkId=185564)。
+本示例提供了一个方法，工作流应用程序作者可通过该方法使用从 OData 服务返回的原始数据。 有关使用访问 WCF 数据服务 Uri 的详细信息，请参阅[访问数据服务资源 (WCF Data Services)](https://go.microsoft.com/fwlink/?LinkId=193397)并[OData: URI 约定](https://go.microsoft.com/fwlink/?LinkId=185564)。

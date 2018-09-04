@@ -7,14 +7,14 @@ helpviewer_keywords:
 author: rpetrusha
 ms.author: ronpet
 ms.date: 08/23/2017
-ms.openlocfilehash: 8c9b2803819b4ffcf0edce7994b9fdbc1c6c6951
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: aa34c181073d089d137ac0ef64c85c8fe2772093
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33212624"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43398062"
 ---
-# <a name="get-started-with-c"></a>C# 入门 #
+# <a name="get-started-with-c"></a>C\# 入门
 
 此部分包含简短的教程，可帮助你快速生成 C# .NET Core 应用程序。 可阅读 Visual Studio 2017 和 Visual Studio Code 的入门主题。 既可以生成简单的 Hello World 应用程序，也可以生成简单的类库以供其他应用程序使用（如果安装了 Visual Studio 2017 的话）。
 
@@ -63,4 +63,5 @@ ms.locfileid: "33212624"
     提供指向使用 C# 的编程演练和每个演练的简要概述的链接。
 
 ## <a name="see-also"></a>请参阅
- [借助 Visual Studio 开始使用 Visual C# 和 Visual Basic](/visualstudio/ide/getting-started-with-visual-csharp-and-visual-basic)
+
+* [借助 Visual Studio 开始使用 Visual C# 和 Visual Basic](/visualstudio/ide/getting-started-with-visual-csharp-and-visual-basic)
