@@ -5,11 +5,11 @@ author: rpetrusha
 ms.author: ronpet
 ms.date: 11/06/2017
 ms.openlocfilehash: 6e105bc28b6011c3177216aba996eb85c0766ac8
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43407872"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43723764"
 ---
 # <a name="windows-management-instrumentation-wmi-and-performance-counters-unmanaged-api-reference"></a>Windows Management Instrumentation (WMI) 和性能计数器（非托管 API 参考）
 

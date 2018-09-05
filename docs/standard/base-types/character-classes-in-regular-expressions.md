@@ -14,11 +14,11 @@ ms.assetid: 0f8bffab-ee0d-4e0e-9a96-2b4a252bb7e4
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 8a83f99faa5beaf0fd6a5a53f41cdcba5015fa27
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42931175"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43405081"
 ---
 # <a name="character-classes-in-regular-expressions"></a>正则表达式中的字符类
 <a name="Top"></a>一个字符类定义一组字符，其中的任一字符均可出现在输入字符串中以便成功匹配。 .NET 中的正则表达式语言支持以下字符类：  
