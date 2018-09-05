@@ -2,15 +2,15 @@
 title: WCF Web HTTP 编程对象模型
 ms.date: 03/30/2017
 ms.assetid: ed96b5fc-ca2c-4b0d-bdba-d06b77c3cb2a
-ms.openlocfilehash: 412f3cb8aa0fcbb491bb9aeee907f848d272b847
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8400798e4edcad41c4f5336d59646413900347f8
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33507348"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43670634"
 ---
 # <a name="wcf-web-http-programming-object-model"></a>WCF Web HTTP 编程对象模型
-WCF WEB HTTP 编程模型允许开发人员无需 SOAP 公开通过基本 HTTP 请求的 Windows Communication Foundation (WCF) Web 服务。 WCF WEB HTTP 编程模型是基础的现有的 WCF 扩展性模型生成的。 它定义以下各类：  
+WCF WEB HTTP 编程模型允许开发人员无需 SOAP 提供通过基本 HTTP 请求的 Windows Communication Foundation (WCF) Web 服务。 WCF WEB HTTP 编程模型是基于现有的 WCF 扩展性模型。 它定义以下各类：  
   
  **编程模型：**  
   
@@ -28,7 +28,7 @@ WCF WEB HTTP 编程模型允许开发人员无需 SOAP 公开通过基本 HTTP �
   
 -   <xref:System.ServiceModel.Description.WebHttpBehavior>  
   
- **实用程序类和扩展点：**  
+ **实用工具类和扩展点：**  
   
 -   <xref:System.UriTemplate>  
   
@@ -68,7 +68,7 @@ WCF WEB HTTP 编程模型允许开发人员无需 SOAP 公开通过基本 HTTP �
 |`UriTemplate`|指定 URI 模板，该模板控制将哪些 GET 请求映射到应用该属性的服务操作。|  
   
 ## <a name="uritemplate"></a>UriTemplate  
- 使用 <xref:System.UriTemplate> 类，可以定义一组结构相似的 URI。 模板由两部分组成，即路径和查询。 路径由一系列由斜杠 (/) 分隔的段组成。 每个段都可以具有文本值、 变量值 （书写在大括号 [{}] 内约束以匹配恰好一个段的内容） 或通配符 (书写为星号 [\*]，与"路径其余部分"匹配)，其必须出现在在路径末尾。 查询表达式可以完全省略。 如果出现表达式，则它指定一组无序的名称/值对。 查询表达式的元素可以是文本对 (？ x = 2) 或变量对 (？ x = {*值*})。 不允许使用不成对的值。 <xref:System.UriTemplate> 在内部用于通过 WCF WEB HTTP 编程模型将特定 Uri 组映射到服务操作。  
+ 使用 <xref:System.UriTemplate> 类，可以定义一组结构相似的 URI。 模板由两部分组成，即路径和查询。 路径由一系列由斜杠 (/) 分隔的段组成。 每个段可包含文本值、 变量值 （书写在大括号 [{}]，约束为匹配仅与一个段的内容） 或通配符 (书写为星号 [\*]，可匹配与"路径其余")，它必须显示在路径的末尾。 查询表达式可以完全省略。 如果出现表达式，则它指定一组无序的名称/值对。 查询表达式的元素可以是文本对 (？ x = 2) 或变量对 (？ x = {*值*})。 不允许使用不成对的值。 <xref:System.UriTemplate> 在内部用于通过 WCF WEB HTTP 编程模型将特定 Uri 组映射到服务操作。  
   
 ## <a name="uritemplatetable"></a>UriTemplateTable  
  <xref:System.UriTemplateTable> 类表示一组绑定到开发人员所选对象的关联 <xref:System.UriTemplate> 对象。 您可以通过它将候选统一资源标识符 (URI) 与集合中的模板进行匹配，然后检索与匹配的模板相关联的数据。 <xref:System.UriTemplateTable> 在内部用于通过 WCF WEB HTTP 编程模型将特定 Uri 组映射到服务操作。  
@@ -85,7 +85,7 @@ WCF WEB HTTP 编程模型允许开发人员无需 SOAP 公开通过基本 HTTP �
 ### <a name="extending-webhttpbehavior"></a>扩展 WebHttpBehavior  
  可以使用如下多个虚方法来扩展 <xref:System.ServiceModel.Description.WebHttpBehavior>：<xref:System.ServiceModel.Description.WebHttpBehavior.GetOperationSelector%28System.ServiceModel.Description.ServiceEndpoint%29>、<xref:System.ServiceModel.Description.WebHttpBehavior.GetReplyClientFormatter%28System.ServiceModel.Description.OperationDescription%2CSystem.ServiceModel.Description.ServiceEndpoint%29>、<xref:System.ServiceModel.Description.WebHttpBehavior.GetRequestClientFormatter%28System.ServiceModel.Description.OperationDescription%2CSystem.ServiceModel.Description.ServiceEndpoint%29>、<xref:System.ServiceModel.Description.WebHttpBehavior.GetReplyDispatchFormatter%28System.ServiceModel.Description.OperationDescription%2CSystem.ServiceModel.Description.ServiceEndpoint%29> 以及 <xref:System.ServiceModel.Description.WebHttpBehavior.GetRequestDispatchFormatter%28System.ServiceModel.Description.OperationDescription%2CSystem.ServiceModel.Description.ServiceEndpoint%29>。 开发人员可以从 <xref:System.ServiceModel.Description.WebHttpBehavior> 派生类，并重写这些方法来自定义默认行为。  
   
- <xref:System.ServiceModel.Description.WebScriptEnablingBehavior> 是扩展 <xref:System.ServiceModel.Description.WebHttpBehavior> 的示例。 <xref:System.ServiceModel.Description.WebScriptEnablingBehavior> 使 Windows Communication Foundation (WCF) 终结点以接收来自基于浏览器的 ASP.NET AJAX 客户端 HTTP 请求。 [AJAX 服务使用 HTTP POST](../../../../docs/framework/wcf/samples/ajax-service-using-http-post.md)举例说明使用此扩展点。  
+ <xref:System.ServiceModel.Description.WebScriptEnablingBehavior> 是扩展 <xref:System.ServiceModel.Description.WebHttpBehavior> 的示例。 <xref:System.ServiceModel.Description.WebScriptEnablingBehavior> 启用 Windows Communication Foundation (WCF) 终结点以接收来自基于浏览器的 ASP.NET AJAX 客户端 HTTP 请求。 [使用 HTTP POST 的 AJAX 服务](../../../../docs/framework/wcf/samples/ajax-service-using-http-post.md)是使用此扩展点的示例。  
   
 > [!WARNING]
 >  当使用 <xref:System.ServiceModel.Description.WebScriptEnablingBehavior> 时，<xref:System.UriTemplate> 在 <xref:System.ServiceModel.Web.WebGetAttribute> 或 <xref:System.ServiceModel.Web.WebInvokeAttribute> 特性中不受支持。  
@@ -94,10 +94,10 @@ WCF WEB HTTP 编程模型允许开发人员无需 SOAP 公开通过基本 HTTP �
  <xref:System.ServiceModel.Dispatcher.WebHttpDispatchOperationSelector> 类使用 <xref:System.UriTemplate> 和 <xref:System.UriTemplateTable> 类调度对服务操作的调用。  
   
 ## <a name="compatibility"></a>兼容性  
- WCF WEB HTTP 编程模型不使用基于 SOAP 的消息，因此不支持 WS-* 协议。 但是，您可以通过两个终结点公开同一协定：一个终结点使用 SOAP，另一个终结点不使用 SOAP。 请参阅[如何： 向 SOAP 和 Web 客户端公开协定](../../../../docs/framework/wcf/feature-details/how-to-expose-a-contract-to-soap-and-web-clients.md)有关示例。  
+ WCF WEB HTTP 编程模型不使用基于 SOAP 的消息，因此不支持 WS-* 协议。 但是，您可以通过两个终结点公开同一协定：一个终结点使用 SOAP，另一个终结点不使用 SOAP。 请参阅[如何： 向 SOAP 和 Web 客户端公开协定](../../../../docs/framework/wcf/feature-details/how-to-expose-a-contract-to-soap-and-web-clients.md)有关的示例。  
   
 ## <a name="security"></a>安全性  
- 因为 WCF WEB HTTP 编程模型不支持 WS-* 协议在 WCF WEB HTTP 编程模型上构建的 Web 服务安全的唯一方法是使用 SSL 公开服务。 有关设置 SSL 与[!INCLUDE[iisver](../../../../includes/iisver-md.md)]请参阅[如何在 IIS 中实现 SSL](http://go.microsoft.com/fwlink/?LinkId=131613)  
+ 因为 WCF WEB HTTP 编程模型不支持 WS-* 协议的 WCF WEB HTTP 编程模型上生成的 Web 服务安全的唯一方法是使用 SSL 公开服务。 有关设置 SSL 的详细信息[!INCLUDE[iisver](../../../../includes/iisver-md.md)]请参阅[如何在 IIS 中实现 SSL](https://go.microsoft.com/fwlink/?LinkId=131613)  
   
 ## <a name="see-also"></a>请参阅  
  <xref:System.ServiceModel.WebHttpBinding>  

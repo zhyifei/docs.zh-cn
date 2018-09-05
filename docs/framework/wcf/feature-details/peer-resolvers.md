@@ -3,11 +3,11 @@ title: 对等解析程序
 ms.date: 03/30/2017
 ms.assetid: d86d12a1-7358-450f-9727-b6afb95adb9c
 ms.openlocfilehash: 01320d98953c8fdc057aeec840ace4b818fcf115
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43385076"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43670592"
 ---
 # <a name="peer-resolvers"></a>对等解析程序
 为了连接到网格，对等节点需要获得其他节点的 IP 地址。 IP 地址可通过联系解析程序服务来获取，该服务获取网格 ID，然后返回与向该特定网格 ID 注册的节点对应的地址列表。 解析程序保持已注册地址的列表，此列表是它通过让网格中的每个节点向该服务注册而创建的。  

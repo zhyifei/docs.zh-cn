@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 84059c5e5542e13b1d4fc4efcfc4c7f418db391e
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43452588"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43672117"
 ---
 # <a name="qualifiersetgetnames-function"></a>QualifierSet_GetNames 函数
 检索所有的限定符或某些来自当前对象或属性的限定符的名称。 

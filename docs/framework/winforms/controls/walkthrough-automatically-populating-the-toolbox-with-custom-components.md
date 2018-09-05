@@ -7,11 +7,11 @@ helpviewer_keywords:
 - custom components [Windows Forms], adding to Toolbox
 ms.assetid: 2fa1e3e8-6b9f-42b2-97c0-2be57444dba4
 ms.openlocfilehash: 488d51e748ea17b09e61b982db7abadc34f8e311
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43442793"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43671886"
 ---
 # <a name="walkthrough-automatically-populating-the-toolbox-with-custom-components"></a>演练：使用自定义组件自动填充工具箱
 如果由当前打开的解决方案中的项目定义您的组件，它们将自动显示在**工具箱**，由你需执行任何操作。 可以手动填充**工具箱**与使用自定义组件[选择工具箱项对话框 (Visual Studio)](https://msdn.microsoft.com/library/bd07835f-18a8-433e-bccc-7141f65263bb)，但**工具箱**考虑在解决方案中的项的生成包含所有以下特征的输出结果：  

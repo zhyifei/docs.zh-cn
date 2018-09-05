@@ -2,11 +2,12 @@
 title: 异步通信
 ms.date: 03/30/2017
 ms.assetid: 128dc092-9eb2-4e33-9470-9a7f62b60df6
-ms.openlocfilehash: 9eafeab89aefb181ae016dc0219f9155d9bd2a25
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e85f7efb0de1326ceb5091c305b20f34809eab57
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43670712"
 ---
 # <a name="asynchronous-communication"></a>异步通信
 此示例演示如何两个不同的 Windows Workflow Foundation (WF) 服务之间的通信默认情况下以异步方式完成。  
@@ -32,17 +33,17 @@ ms.lasthandoff: 05/04/2018
   
 1.  右键单击**AsynchronousCommunication**解决方案并选择**属性**。  
   
-2.  在**通用属性**，选择**启动项目**，然后选择**多启动项目**。  
+2.  在**常见属性**，选择**启动项目**，然后选择**多个启动项目**。  
   
-3.  移动**RentalApprovalService**到列表中的第一个位置后, 接**CreditCheckService**后, 跟**客户端**。 设置**启动**上所有三个项目的操作。  
+3.  移动**RentalApprovalService**列表中的第一个位置后, 接**CreditCheckService**后, 跟**客户端**。 设置**启动**上所有三个项目的操作。  
   
-4.  单击**确定**，并按 F5 运行示例。  
+4.  单击**确定**，然后按 F5 以运行示例。  
   
 > [!IMPORTANT]
 >  您的计算机上可能已安装这些示例。 在继续操作之前，请先检查以下（默认）目录：  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目录不存在，请转到[Windows Communication Foundation (WCF) 和针对.NET Framework 4 的 Windows Workflow Foundation (WF) 示例](http://go.microsoft.com/fwlink/?LinkId=150780)下载所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
+>  如果此目录不存在，请转到[Windows Communication Foundation (WCF) 和.NET Framework 4 的 Windows Workflow Foundation (WF) 示例](https://go.microsoft.com/fwlink/?LinkId=150780)若要下载所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\Services\AsynchronousCommunication`

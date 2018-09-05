@@ -3,11 +3,11 @@ title: XML 架构约束和关系
 ms.date: 03/30/2017
 ms.assetid: 165bc2bc-60a1-40e0-9b89-7c68ef979079
 ms.openlocfilehash: bcb6e257a40040701612b73768a98e056bccd6c5
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43479992"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43673747"
 ---
 # <a name="xml-schema-constraints-and-relationships"></a>XML 架构约束和关系
 在 XML 架构定义语言 (XSD) 架构中，可以指定约束 (唯一的键和 keyref 约束) 和关系 (使用**msdata: relationship**批注)。 本主题说明如何解释在 XML 架构中指定的约束和关系，以生成 <xref:System.Data.DataSet>。  

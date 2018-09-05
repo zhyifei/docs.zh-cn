@@ -20,11 +20,11 @@ helpviewer_keywords:
 - printing [Windows Forms], headers and footers
 ms.assetid: 1c7ccb02-ac62-4fc8-8e4f-c67b01a86802
 ms.openlocfilehash: 8caa984799d7f8f5a8f4b017e8c40eeb44d8b6c4
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43404778"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43670566"
 ---
 # <a name="pagesetupdialog-component-windows-forms"></a>PageSetupDialog 组件（Windows 窗体）
 Windows 窗体<xref:System.Windows.Forms.PageSetupDialog>组件是一个预配置的对话框，用于在基于 Windows 的应用程序中设置用于打印的页详细信息。 用于在基于 Windows 的应用程序中作为一个简单的解决方案为用户设置首选项而不是配置您自己的对话框。 可以使用户能够设置边框、 边距调整、 标头和表尾和纵向与横向打印。 利用标准的 Windows 对话框，你可以创建其基本功能可立即为用户所熟悉的应用程序。  

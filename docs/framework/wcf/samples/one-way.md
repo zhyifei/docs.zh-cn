@@ -3,11 +3,11 @@ title: 单向
 ms.date: 03/30/2017
 ms.assetid: 74e3e03d-cd15-4191-a6a5-1efa2dcb9e73
 ms.openlocfilehash: 25720285e29641c3c040444cb643af2790f10d3b
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43407766"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43672682"
 ---
 # <a name="one-way"></a>单向
 此示例演示具有单向服务操作的服务协定。 客户端不会像在双向服务操作中那样等待服务操作完成。 此示例基于[Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md) ，并使用`wsHttpBinding`绑定。 此示例中的服务是自承载控制台应用程序，通过它可以观察接收和处理请求的服务。 客户端也是一个控制台应用程序。  

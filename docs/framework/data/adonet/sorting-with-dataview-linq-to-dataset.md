@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 885b3b7b-51c1-42b3-bb29-b925f4f69a6f
 ms.openlocfilehash: 9f69b64088093bbdd46239a26f16aeea50b6dee7
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43465559"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43671906"
 ---
 # <a name="sorting-with-dataview-linq-to-dataset"></a>使用 DataView 进行排序 (LINQ to DataSet)
 基于特定条件对数据进行排序，然后通过 UI 控件向客户端表示该数据的能力是数据绑定的一个重要特征。 <xref:System.Data.DataView> 提供多种方式对数据进行排序并返回按指定排序条件排序的数据行。 除了基于字符串的排序功能，<xref:System.Data.DataView>还可以使用[!INCLUDE[vbteclinqext](../../../../includes/vbteclinqext-md.md)]排序条件的表达式。 [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] 表达式允许执行比基于字符串的排序更复杂而功能强大的排序操作。 本主题介绍这两种使用 <xref:System.Data.DataView> 的排序方法。  

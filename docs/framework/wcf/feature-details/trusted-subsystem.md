@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 1f5ce46b-e259-4bc9-a0b9-89d06fc9341c
-ms.openlocfilehash: 59c44609017ab18a176624b7ef6d409005151c3f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ac789ba81d728c067be515479e749440bb5809d4
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33500365"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43671962"
 ---
 # <a name="trusted-subsystem"></a>受信任的子系统
 客户端访问分布在网络上的一个或多个 Web 服务。 Web 服务的设计使对其他资源（比如数据库或其他 Web 服务）的访问包装在 Web 服务的企业逻辑中。 必须保护这些资源不受到未经授权的访问。 下图描述了一个受信任的子系统过程。  
   
- ![受信任子系统](../../../../docs/framework/wcf/feature-details/media/wcfc-trustedsubsystemc.gif "wcfc_TrustedSubsystemc")  
+ ![受信任的子系统](../../../../docs/framework/wcf/feature-details/media/wcfc-trustedsubsystemc.gif "wcfc_TrustedSubsystemc")  
   
  以下步骤说明如图所示的受信任子系统过程：  
   
@@ -38,7 +38,7 @@ ms.locfileid: "33500365"
 |完整性|是|  
 |保密性|是|  
 |传输|客户端和受信任子系统服务之间采用 HTTP。<br /><br /> 受信任子系统服务和资源（后端服务）之间采用 NET.TCP。|  
-|绑定|<xref:System.ServiceModel.WSHttpBinding> 和<xref:System.ServiceModel.NetTcpBinding> [ \<wsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md)|  
+|绑定|<xref:System.ServiceModel.WSHttpBinding> 并<xref:System.ServiceModel.NetTcpBinding> [ \<wsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md)|  
   
 ## <a name="resource-back-end-service"></a>资源（后端服务）  
   
@@ -212,4 +212,4 @@ ms.locfileid: "33500365"
   
 ## <a name="see-also"></a>请参阅  
  [安全性概述](../../../../docs/framework/wcf/feature-details/security-overview.md)  
- [Windows Server App Fabric 的安全模型](http://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+ [Windows Server App Fabric 的安全模型](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

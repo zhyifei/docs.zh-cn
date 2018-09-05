@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: fc9e04e8-2d05-4870-8cd6-5bd276814afc
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 90469469c864e235ff96e7dd2f0f3ebfcef9d7b6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 41679d4041a6a5a7b9b71a451a083c539d6b4c7b
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33395461"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43672170"
 ---
 # <a name="getting-started-with-net-native"></a>.NET Native 入门
 无论是在编写适用于 Windows 10 的新 Windows 应用，还是在迁移现有的 Windows 应用商店应用，都可以按照同一套过程操作。 若要创建一个 [!INCLUDE[net_native](../../../includes/net-native-md.md)] 应用，请按照下列步骤操作：  
@@ -114,7 +114,7 @@ ms.locfileid: "33395461"
   
 ## <a name="see-also"></a>请参阅  
  [运行时指令 (rd.xml) 配置文件参考](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)  
- [NIB:.NET Native 安装和配置](http://msdn.microsoft.com/library/7c9bc375-8b87-4c33-bede-72d513e362ec)  
+ [NIB:.NET Native 安装和配置](https://msdn.microsoft.com/library/7c9bc375-8b87-4c33-bede-72d513e362ec)  
  [.NET Native 和编译](../../../docs/framework/net-native/net-native-and-compilation.md)  
  [反射和 .NET Native](../../../docs/framework/net-native/reflection-and-net-native.md)  
  [依赖反射的 API](../../../docs/framework/net-native/apis-that-rely-on-reflection.md)  

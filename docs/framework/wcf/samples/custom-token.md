@@ -2,12 +2,12 @@
 title: 自定义令牌
 ms.date: 03/30/2017
 ms.assetid: e7fd8b38-c370-454f-ba3e-19759019f03d
-ms.openlocfilehash: c7219b94861cd23f27b331d1d3e5509654263430
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: 03472f76310fa99568f13f0aa49d9e2a3453ac30
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33809844"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43671094"
 ---
 # <a name="custom-token"></a>自定义令牌
 此示例演示如何将添加到 Windows Communication Foundation (WCF) 应用程序自定义令牌的实现。 示例使用 `CreditCardToken` 将客户端的信用卡相关信息安全地传递到服务。 令牌在 WS-Security 消息头中传递，并连同消息正文和其他消息头一起使用对称安全绑定元素进行签名和加密。 当内置令牌不足时可以进行这样的操作。 本示例演示如何向服务提供自定义安全令牌而不必使用某个内置令牌。 该服务实现定义“请求-答复”通信模式的协定。  
@@ -21,7 +21,7 @@ ms.locfileid: "33809844"
   
 -   服务如何使用和验证自定义安全令牌。  
   
--   如何 WCF 服务代码可以获取有关已接收的安全令牌包括自定义安全令牌的信息。  
+-   如何 WCF 服务代码可以获取有关接收到的安全令牌包括自定义安全令牌的信息。  
   
 -   如何使用服务器的 X.509 证书保护用于消息加密和签名的对称密钥。  
   
@@ -115,9 +115,9 @@ channelFactory.Close();
 ```  
   
 ## <a name="custom-security-token-implementation"></a>自定义安全令牌实现  
- 若要启用 WCF 中的自定义安全令牌，请创建自定义安全令牌的对象表示。 此示例的 `CreditCardToken` 类中有此表示形式。 对象表示形式负责保存所有相关的安全令牌信息并负责提供包含在安全令牌中的安全密钥列表。 在本例中，信用卡安全令牌不包含任何安全密钥。  
+ 若要启用 WCF 中的自定义安全令牌，请创建自定义安全令牌的对象表示形式。 此示例的 `CreditCardToken` 类中有此表示形式。 对象表示形式负责保存所有相关的安全令牌信息并负责提供包含在安全令牌中的安全密钥列表。 在本例中，信用卡安全令牌不包含任何安全密钥。  
   
- 下一节介绍什么必须做可使得用于通过网络传输的自定义令牌并使用由 WCF 终结点。  
+ 下一节介绍必须做可使得在通过网络传输的自定义令牌和使用 WCF 终结点的内容。  
   
 ```  
 class CreditCardToken : SecurityToken  
@@ -155,7 +155,7 @@ class CreditCardToken : SecurityToken
 ```  
   
 ## <a name="getting-the-custom-credit-card-token-to-and-from-the-message"></a>向消息中写入和从消息中获取自定义信用卡令牌  
- 在 WCF 中的安全令牌序列化负责从消息中的 XML 创建安全令牌的对象表示和创建 XML 形式的安全令牌。 安全令牌序列化程序还负责其他功能，如读取和写入指向安全令牌的密钥标识符，但本示例只使用与安全令牌相关的功能。 要启用自定义令牌，您必须实现您自己的安全令牌序列化程序。 本示例使用 `CreditCardSecurityTokenSerializer` 类来实现此目的。  
+ 安全令牌序列化程序在 WCF 负责从消息中的 XML 创建安全令牌的对象表示形式和创建 XML 形式的安全令牌。 安全令牌序列化程序还负责其他功能，如读取和写入指向安全令牌的密钥标识符，但本示例只使用与安全令牌相关的功能。 要启用自定义令牌，您必须实现您自己的安全令牌序列化程序。 本示例使用 `CreditCardSecurityTokenSerializer` 类来实现此目的。  
   
  在服务上，自定义序列化程序读取 XML 形式的自定义令牌并据此创建自定义令牌的对象表示形式。  
   
@@ -593,7 +593,7 @@ string GetCallerCreditCardNumber()
   
 #### <a name="to-set-up-and-build-the-sample"></a>设置和生成示例  
   
-1.  确保已执行[的 Windows Communication Foundation 示例的一次性安装过程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
+1.  请确保您具有执行[的 Windows Communication Foundation 示例的一次性安装过程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
   
 2.  若要生成解决方案，请按照中的说明[生成 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/building-the-samples.md)。  
   
@@ -606,7 +606,7 @@ string GetCallerCreditCardNumber()
   
 1.  从 client\bin 目录启动 Client.exe。 客户端活动将显示在客户端控制台应用程序上。  
   
-2.  如果客户端和服务不能够进行通信，请参阅[疑难解答提示](http://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b)。  
+2.  如果客户端和服务能够进行通信，请参见[故障排除提示](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b)。  
   
 #### <a name="to-run-the-sample-across-computer"></a>跨计算机运行示例  
   
@@ -628,7 +628,7 @@ string GetCallerCreditCardNumber()
   
 9. 在客户端计算机上，从命令提示窗口中启动 Client.exe。  
   
-10. 如果客户端和服务不能够进行通信，请参阅[疑难解答提示](http://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b)。  
+10. 如果客户端和服务能够进行通信，请参见[故障排除提示](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b)。  
   
 #### <a name="to-clean-up-after-the-sample"></a>运行示例后进行清理  
   

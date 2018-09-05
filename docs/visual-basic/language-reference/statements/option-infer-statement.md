@@ -12,11 +12,11 @@ helpviewer_keywords:
 - inferred variable declaration
 ms.assetid: 4ad3e6e9-8f5b-4209-a248-de22ef6e4652
 ms.openlocfilehash: f5c824df43997282d50c9c2a458fb1d854cc160a
-ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "39245786"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43672580"
 ---
 # <a name="option-infer-statement"></a>Option Infer 语句
 允许声明变量时使用局部类型推理。  
@@ -41,12 +41,12 @@ Option Infer { On | Off }
   
  在下图中，`Option Infer` 处于打开状态。 声明 `Dim someVar = 2` 中的变量由类型推理声明为整数。  
   
- ![声明的 IntelliSense 视图。] (../../../visual-basic/language-reference/statements/media/optioninferasinteger.png "optionInferAsInteger")  
+ ![声明的 IntelliSense 视图。](../../../visual-basic/language-reference/statements/media/optioninferasinteger.png "optionInferAsInteger")  
 Option Infer 处于打开状态时的 IntelliSense  
   
  在下图中，`Option Infer` 处于关闭状态。 声明 `Dim someVar = 2` 中的变量由类型推理声明为 `Object`。 在此示例中， **Option Strict**设置为**Off**上[编译页，项目设计器 (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic)。  
   
- ![声明的 IntelliSense 视图。] (../../../visual-basic/language-reference/statements/media/optioninferasobject.png "optionInferAsObject")  
+ ![声明的 IntelliSense 视图。](../../../visual-basic/language-reference/statements/media/optioninferasobject.png "optionInferAsObject")  
 Option Infer 处于关闭状态时的 IntelliSense  
   
 > [!NOTE]

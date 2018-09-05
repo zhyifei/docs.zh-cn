@@ -3,11 +3,11 @@ title: 松散类型化扩展示例
 ms.date: 03/30/2017
 ms.assetid: 56ce265b-8163-4b85-98e7-7692a12c4357
 ms.openlocfilehash: f46cf3dfcdb60669f0a02337b54de97d4af3efdc
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43384704"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43674171"
 ---
 # <a name="loosely-typed-extensions-sample"></a>松散类型化扩展示例
 联合对象模型为处理扩展数据（在联合源的 XML 表示形式中存在，但是未由 <xref:System.ServiceModel.Syndication.SyndicationFeed> 和 <xref:System.ServiceModel.Syndication.SyndicationItem> 等类显式公开的信息）提供了丰富的支持。 此示例阐释用来处理扩展数据的基本技术。  

@@ -10,27 +10,27 @@ helpviewer_keywords:
 - WSSecurityTokenSerializer class
 - SecurityToken class
 ms.assetid: 6d892973-1558-4115-a9e1-696777776125
-ms.openlocfilehash: 2198d5548b09ba05eeb11466a6fd2d3a1262de94
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: fd168bf2e5233d9119872b267aea466a7af07041
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33809204"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43672796"
 ---
 # <a name="how-to-create-a-custom-token"></a>如何：创建自定义令牌
 本主题介绍如何使用 <xref:System.IdentityModel.Tokens.SecurityToken> 类创建自定义安全令牌，以及如何将其与自定义安全令牌提供程序和身份验证器进行集成。 有关完整的代码示例请参阅[自定义令牌](../../../../docs/framework/wcf/samples/custom-token.md)示例。  
   
- A*安全令牌*是实质上是 Windows Communication Foundation (WCF) 安全框架用于表示有关 SOAP 消息内发件人的声明的 XML 元素。 WCF 安全的系统提供的身份验证模式提供各种令牌。 包括由 <xref:System.IdentityModel.Tokens.X509SecurityToken> 类表示的 X.509 证书安全令牌，或由 <xref:System.IdentityModel.Tokens.UserNameSecurityToken> 类表示的用户名安全令牌。  
+ 一个*安全令牌*实质上是 Windows Communication Foundation (WCF) 安全框架用于表示发送方有关的 SOAP 消息内声明一个 XML 元素。 WCF 安全为系统提供的身份验证模式提供各种令牌。 包括由 <xref:System.IdentityModel.Tokens.X509SecurityToken> 类表示的 X.509 证书安全令牌，或由 <xref:System.IdentityModel.Tokens.UserNameSecurityToken> 类表示的用户名安全令牌。  
   
  有时，所提供的类型不支持某种身份验证模式或凭据。 这种情况下，必须创建自定义安全令牌来提供 SOAP 消息内部自定义凭据的 XML 表示形式。  
   
- 下面的过程演示如何创建自定义安全令牌以及如何将其与 WCF 安全基础结构集成。 本主题创建一个信用卡令牌，用于将客户端的信用卡相关信息传递到服务器。  
+ 以下过程介绍如何创建自定义安全令牌以及如何将它与 WCF 安全基础结构集成。 本主题创建一个信用卡令牌，用于将客户端的信用卡相关信息传递到服务器。  
   
  有关自定义凭据和安全令牌管理器的详细信息，请参阅[演练： 创建自定义客户端和服务凭据](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md)。  
   
  若要了解更多表示安全令牌的类，请参见 <xref:System.IdentityModel.Tokens> 命名空间。  
   
- 有关凭据、 安全令牌管理器和提供程序和身份验证器类的详细信息，请参阅[安全体系结构](http://msdn.microsoft.com/library/16593476-d36a-408d-808c-ae6fd483e28f)。  
+ 有关凭据、 安全令牌管理器和提供程序和身份验证器类的详细信息，请参阅[安全体系结构](https://msdn.microsoft.com/library/16593476-d36a-408d-808c-ae6fd483e28f)。  
   
 ## <a name="procedures"></a>过程  
  客户端应用程序必须有一种方式来指定安全基础结构的信用卡信息。 应用程序通过自定义客户端凭据类可访问此信息。 第一步是创建一个类，用以表示自定义客户端凭据的信用卡信息。  
@@ -44,7 +44,7 @@ ms.locfileid: "33809204"
      [!code-csharp[c_CustomToken#4](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customtoken/cs/source.cs#4)]
      [!code-vb[c_CustomToken#4](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customtoken/vb/source.vb#4)]  
   
- 接下来，必须创建一个表示自定义安全令牌的类。 此类由安全令牌提供程序、 身份验证器和序列化程序类用于传递有关安全令牌与其他 WCF 安全基础结构的信息。  
+ 接下来，必须创建一个表示自定义安全令牌的类。 此类由安全令牌提供程序、 身份验证器和序列化程序类用于传递安全令牌与 WCF 安全基础结构的相关信息。  
   
 #### <a name="to-create-a-custom-security-token-class"></a>创建自定义安全令牌类  
   
@@ -52,14 +52,14 @@ ms.locfileid: "33809204"
   
 2.  重写 <xref:System.IdentityModel.Tokens.SecurityToken.Id%2A> 属性。 该属性用于获取安全令牌的本地标识符，本地标识符用于从 SOAP 消息内其他元素指向安全令牌 XML 表示形式。 在本示例中，令牌标识符可以作为构造函数参数传递给该属性，也可以在每次创建安全令牌实例时随机生成一个新的令牌标识符。  
   
-3.  实现 <xref:System.IdentityModel.Tokens.SecurityToken.SecurityKeys%2A> 属性。 该属性返回一个安全密钥集合，这些密钥是安全令牌实例表示的。 WCF 可以使用这样的密钥进行签名或加密 SOAP 消息部分。 在本示例中，信用卡安全令牌不能包含任何安全密钥；因此，该实现始终返回一个空集合。  
+3.  实现 <xref:System.IdentityModel.Tokens.SecurityToken.SecurityKeys%2A> 属性。 该属性返回一个安全密钥集合，这些密钥是安全令牌实例表示的。 WCF 可以使用此类密钥进行签名或加密 SOAP 消息的部分。 在本示例中，信用卡安全令牌不能包含任何安全密钥；因此，该实现始终返回一个空集合。  
   
-4.  重写 <xref:System.IdentityModel.Tokens.SecurityToken.ValidFrom%2A> 和 <xref:System.IdentityModel.Tokens.SecurityToken.ValidTo%2A> 属性。 通过 WCF 使用的这些属性用于确定安全令牌实例的有效性。 在本示例中，信用卡安全令牌只有到期日期，因此，`ValidFrom` 属性返回一个 <xref:System.DateTime>，它表示实例的创建日期和时间。  
+4.  重写 <xref:System.IdentityModel.Tokens.SecurityToken.ValidFrom%2A> 和 <xref:System.IdentityModel.Tokens.SecurityToken.ValidTo%2A> 属性。 WCF 使用这些属性来确定安全令牌实例的有效性。 在本示例中，信用卡安全令牌只有到期日期，因此，`ValidFrom` 属性返回一个 <xref:System.DateTime>，它表示实例的创建日期和时间。  
   
      [!code-csharp[c_CustomToken#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customtoken/cs/source.cs#1)]
      [!code-vb[c_CustomToken#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customtoken/vb/source.vb#1)]  
   
- 在创建新的安全令牌类型时，需要实现 <xref:System.ServiceModel.Security.Tokens.SecurityTokenParameters> 类。 该实现在安全绑定元素配置中用于表示新的令牌类型。 安全令牌参数类用作模板，用于在处理消息时与实际安全令牌实例进行匹配。 该模板提供附加属性，应用程序可以使用这些附加属性来指定标准，安全令牌必须符合该标准才能使用或进行身份验证。 下面的示例不添加任何其他属性，因此，只有当 WCF 基础结构搜索要使用或验证的安全令牌实例匹配令牌类型的安全性。  
+ 在创建新的安全令牌类型时，需要实现 <xref:System.ServiceModel.Security.Tokens.SecurityTokenParameters> 类。 该实现在安全绑定元素配置中用于表示新的令牌类型。 安全令牌参数类用作模板，用于在处理消息时与实际安全令牌实例进行匹配。 该模板提供附加属性，应用程序可以使用这些附加属性来指定标准，安全令牌必须符合该标准才能使用或进行身份验证。 下面的示例不会添加任何其他属性，因此，只有当 WCF 基础结构中搜索要使用或验证安全令牌实例时匹配标记类型的安全性。  
   
 #### <a name="to-create-a-custom-security-token-parameters-class"></a>创建自定义安全令牌参数类  
   
@@ -73,9 +73,9 @@ ms.locfileid: "33809204"
   
 5.  实现 <xref:System.ServiceModel.Security.Tokens.SecurityTokenParameters.SupportsClientWindowsIdentity%2A> 只读属性。 如果该类表示的安全令牌类型可以映射到 Windows 帐户，则该属性返回 `true`。 这种情况下，身份验证结果由一个 <xref:System.Security.Principal.WindowsIdentity> 类实例表示。 在本示例中，令牌无法映射到 Windows 帐户。  
   
-6.  实现 <xref:System.ServiceModel.Security.Tokens.SecurityTokenParameters.CreateKeyIdentifierClause%28System.IdentityModel.Tokens.SecurityToken%2CSystem.ServiceModel.Security.Tokens.SecurityTokenReferenceStyle%29> 方法。 其需要对此安全令牌参数类所表示的安全令牌实例的引用时，将由 WCF 安全框架调用此方法。 实际安全令牌实例和 <xref:System.ServiceModel.Security.Tokens.SecurityTokenReferenceStyle>（指定所请求的引用类型）都作为参数传递到此方法。 在本示例中，信用卡安全令牌仅支持内部引用。 <xref:System.IdentityModel.Tokens.SecurityToken> 类具有创建内部引用的功能，因此，该实现不需要附加代码。  
+6.  实现 <xref:System.ServiceModel.Security.Tokens.SecurityTokenParameters.CreateKeyIdentifierClause%28System.IdentityModel.Tokens.SecurityToken%2CSystem.ServiceModel.Security.Tokens.SecurityTokenReferenceStyle%29> 方法。 需要对此安全令牌参数类所表示的安全令牌实例的引用时，将由 WCF 安全框架调用此方法。 实际安全令牌实例和 <xref:System.ServiceModel.Security.Tokens.SecurityTokenReferenceStyle>（指定所请求的引用类型）都作为参数传递到此方法。 在本示例中，信用卡安全令牌仅支持内部引用。 <xref:System.IdentityModel.Tokens.SecurityToken> 类具有创建内部引用的功能，因此，该实现不需要附加代码。  
   
-7.  实现 <xref:System.ServiceModel.Security.Tokens.SecurityTokenParameters.InitializeSecurityTokenRequirement%28System.IdentityModel.Selectors.SecurityTokenRequirement%29> 方法。 此方法由 WCF 将安全令牌参数类实例转换为的一个实例调用<xref:System.IdentityModel.Selectors.SecurityTokenRequirement>类。 安全令牌提供程序使用转换结果来创建相应的安全令牌实例。  
+7.  实现 <xref:System.ServiceModel.Security.Tokens.SecurityTokenParameters.InitializeSecurityTokenRequirement%28System.IdentityModel.Selectors.SecurityTokenRequirement%29> 方法。 WCF 将安全令牌参数类实例转换成的实例调用此方法<xref:System.IdentityModel.Selectors.SecurityTokenRequirement>类。 安全令牌提供程序使用转换结果来创建相应的安全令牌实例。  
   
      [!code-csharp[c_CustomToken#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customtoken/cs/source.cs#2)]
      [!code-vb[c_CustomToken#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customtoken/vb/source.vb#2)]  
@@ -83,7 +83,7 @@ ms.locfileid: "33809204"
  安全令牌被传递到 SOAP 消息内部，这要求在安全令牌的内存中表示形式与网络表示形式之间有一种转换机制。 WCF 使用安全令牌序列化程序来完成此任务。 每个自定义令牌都必须有一个自定义安全令牌序列化程序，用于对 SOAP 消息中的自定义安全令牌进行序列化和反序列化。  
   
 > [!NOTE]
->  默认情况下启用派生密钥。 如果你创建自定义安全令牌，并使用它作为主令牌，WCF 从它派生密钥。 如果这样做，则它将调用自定义安全令牌序列化程序以便为自定义安全令牌写入 <xref:System.IdentityModel.Tokens.SecurityKeyIdentifierClause>，同时将 `DerivedKeyToken` 序列化到网络。 在接收端，如果从网络反序列化令牌，则 `DerivedKeyToken` 序列化程序期望 `SecurityTokenReference` 元素作为其下的顶级子元素。 如果自定义安全令牌序列化程序在序列化其子句类型时未添加 `SecurityTokenReference` 元素，则会引发异常。  
+>  默认情况下启用派生密钥。 如果创建自定义安全令牌，并将其用作主令牌，WCF 将从其派生密钥。 如果这样做，则它将调用自定义安全令牌序列化程序以便为自定义安全令牌写入 <xref:System.IdentityModel.Tokens.SecurityKeyIdentifierClause>，同时将 `DerivedKeyToken` 序列化到网络。 在接收端，如果从网络反序列化令牌，则 `DerivedKeyToken` 序列化程序期望 `SecurityTokenReference` 元素作为其下的顶级子元素。 如果自定义安全令牌序列化程序在序列化其子句类型时未添加 `SecurityTokenReference` 元素，则会引发异常。  
   
 #### <a name="to-create-a-custom-security-token-serializer"></a>创建自定义安全令牌序列化程序  
   
@@ -121,7 +121,7 @@ ms.locfileid: "33809204"
   
 #### <a name="to-integrate-the-custom-security-token-with-a-security-token-manager"></a>将自定义安全令牌与安全令牌管理器进行集成  
   
-1.  安全令牌管理器可以创建相应的令牌提供程序、安全身份验证器和令牌序列化程序实例。 若要创建自定义令牌管理器，请创建一个从 <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager> 类继承的类。 该类的主要方法使用 <xref:System.IdentityModel.Selectors.SecurityTokenRequirement> 来创建相应的提供程序以及客户端或服务凭据。 关于自定义安全令牌管理器的详细信息，请参阅[演练： 创建自定义客户端和服务凭据](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md)。  
+1.  安全令牌管理器可以创建相应的令牌提供程序、安全身份验证器和令牌序列化程序实例。 若要创建自定义令牌管理器，请创建一个从 <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager> 类继承的类。 该类的主要方法使用 <xref:System.IdentityModel.Selectors.SecurityTokenRequirement> 来创建相应的提供程序以及客户端或服务凭据。 有关自定义安全令牌管理器的详细信息，请参阅[演练： 创建自定义客户端和服务凭据](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md)。  
   
      [!code-csharp[c_CustomToken#8](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customtoken/cs/source.cs#8)]
      [!code-vb[c_CustomToken#8](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customtoken/vb/source.vb#8)]  
@@ -139,7 +139,7 @@ ms.locfileid: "33809204"
      [!code-csharp[c_customToken#11](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customtoken/cs/source.cs#11)]
      [!code-vb[c_customToken#11](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customtoken/vb/source.vb#11)]  
   
- 创建的自定义安全令牌参数类以前用于告知 WCF 安全框架与服务通信时，必须使用自定义安全令牌。 下面的过程演示如何执行此操作。  
+ 创建的自定义安全令牌参数类以前用于告知 WCF 安全框架与服务进行通信时，必须使用自定义安全令牌。 下面的过程演示如何执行此操作。  
   
 #### <a name="to-integrate-the-custom-security-token-with-the-binding"></a>将自定义安全令牌与绑定进行集成  
   
@@ -148,7 +148,7 @@ ms.locfileid: "33809204"
      [!code-csharp[c_CustomToken#13](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customtoken/cs/source.cs#13)]
      [!code-vb[c_CustomToken#13](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customtoken/vb/source.vb#13)]  
   
- 本主题显示实现和使用自定义令牌所需的各种不同的代码块。 若要查看如何的完整示例的代码的所有这些部分组合在一起，请参阅[自定义令牌](../../../../docs/framework/wcf/samples/custom-token.md)。  
+ 本主题显示实现和使用自定义令牌所需的各种不同的代码块。 若要查看如何的完整示例代码的所有这些片段组合在一起，请参阅[自定义令牌](../../../../docs/framework/wcf/samples/custom-token.md)。  
   
 ## <a name="see-also"></a>请参阅  
  <xref:System.IdentityModel.Tokens.SecurityToken>  
@@ -165,4 +165,4 @@ ms.locfileid: "33809204"
  [演练：创建自定义客户端和服务凭据](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md)  
  [如何：创建自定义安全令牌验证器](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-authenticator.md)  
  [如何：创建自定义安全令牌提供程序](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-provider.md)  
- [安全体系结构](http://msdn.microsoft.com/library/16593476-d36a-408d-808c-ae6fd483e28f)
+ [安全体系结构](https://msdn.microsoft.com/library/16593476-d36a-408d-808c-ae6fd483e28f)

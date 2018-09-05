@@ -3,11 +3,11 @@ title: JSON 和 XML 之间的映射
 ms.date: 03/30/2017
 ms.assetid: 22ee1f52-c708-4024-bbf0-572e0dae64af
 ms.openlocfilehash: 079ca9cebefcc96bffdb0ec4601a675ed83adefe
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43421718"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43670725"
 ---
 # <a name="mapping-between-json-and-xml"></a>JSON 和 XML 之间的映射
 <xref:System.Runtime.Serialization.Json.JsonReaderWriterFactory> 生成的读取器和编写器通过 JavaScript 对象表示法 (JSON) 内容提供 XML API。 JSON 使用 JavaScript 的对象文字子集对数据进行编码。 读取器和编写器生成的此工厂时也可使用 JSON 内容时使用的 Windows Communication Foundation (WCF) 应用程序由发送或接收<xref:System.ServiceModel.Channels.WebMessageEncodingBindingElement>或<xref:System.ServiceModel.WebHttpBinding>。  

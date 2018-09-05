@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 36e4f07f04968579be2e42efad666b0453cc4796
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: a7686a84759f8ac40a123d2c9a7b8f1b9b8096cb
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33434786"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43672595"
 ---
 # <a name="iclrstrongnamegethashfromassemblyfilew-method"></a>ICLRStrongName::GetHashFromAssemblyFileW 方法
-生成指定的 Unicode 字符串的文件的内容哈希代码。  
+生成由 Unicode 字符串指定的文件内容的哈希。  
   
 ## <a name="syntax"></a>语法  
   
@@ -44,7 +44,7 @@ HRESULT GetHashFromAssemblyFileW (
  [in]要进行哈希处理的文件路径。 此参数必须是 Unicode 字符串。  
   
  `piHashAlg`  
- [在中，out]一个指定的哈希算法的常数。 使用默认哈希算法的零。  
+ [in、 out]一个常量，它指定哈希算法。 使用默认哈希算法为零。  
   
  `pbHash`  
  [out]返回的哈希缓冲区中。  
@@ -56,7 +56,7 @@ HRESULT GetHashFromAssemblyFileW (
  [out]返回的大小，以字节为单位， `pbHash`。  
   
 ## <a name="return-value"></a>返回值  
- `S_OK` 如果成功，则完成的方法否则为该值指示失败的 HRESULT 值 (请参阅[常见的 HRESULT 值](http://go.microsoft.com/fwlink/?LinkId=213878)有关的列表)。  
+ `S_OK` 如果成功，则完成的方法否则为指示失败的 HRESULT 值 (请参阅[常见的 HRESULT 值](https://go.microsoft.com/fwlink/?LinkId=213878)列表)。  
   
 ## <a name="requirements"></a>要求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
@@ -65,7 +65,7 @@ HRESULT GetHashFromAssemblyFileW (
   
  **库：** 作为 MSCorEE.dll 中的资源  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅  
  [GetHashFromAssemblyFile 方法](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromassemblyfile-method.md)  

@@ -3,11 +3,11 @@ title: 如何：从工作流应用程序访问服务
 ms.date: 03/30/2017
 ms.assetid: 925ef8ea-5550-4c9d-bb7b-209e20c280ad
 ms.openlocfilehash: 5bc18b446d4bf818c874839a421793a997ddc543
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43395926"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43674052"
 ---
 # <a name="how-to-access-a-service-from-a-workflow-application"></a>如何：从工作流应用程序访问服务
 本主题说明如何从工作流控制台应用程序调用工作流服务。 这取决于完成[如何： 使用消息传递活动创建工作流服务](../../../../docs/framework/wcf/feature-details/how-to-create-a-workflow-service-with-messaging-activities.md)主题。 虽然本主题介绍如何从工作流应用程序调用工作流服务，但是相同的方法可以用于从工作流应用程序中调用任何 Windows Communication Foundation (WCF) 服务。

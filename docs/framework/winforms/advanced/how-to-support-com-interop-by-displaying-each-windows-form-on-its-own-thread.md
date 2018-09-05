@@ -10,12 +10,12 @@ helpviewer_keywords:
 - ActiveX controls [Windows Forms], COM interop
 - Windows Forms, interop
 ms.assetid: a9e04765-d2de-4389-a494-a9a6d07aa6ee
-ms.openlocfilehash: c78bcc8d784fc481af2449f2d81cfde42891e7fe
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d0d8dfd4a19b31be790d2643847396d136098278
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33522884"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43673530"
 ---
 # <a name="how-to-support-com-interop-by-displaying-each-windows-form-on-its-own-thread"></a>如何：通过在每个 Windows 窗体各自的线程上显示该 Windows 窗体来支持 COM 互操作
 可通过在 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 消息循环上显示窗体来解决 COM 互操作性问题 ，可使用 <xref:System.Windows.Forms.Application.Run%2A?displayProperty=nameWithType> 方法来创建该消息循环。  
@@ -26,9 +26,9 @@ ms.locfileid: "33522884"
   
 -   在单独的线程上显示每个 Windows 窗体。  
   
- 没有对 Visual Studio 中的此功能提供广泛支持。  
+ 没有对此功能在 Visual Studio 中的广泛支持。  
   
- 另请参阅 [演练：通过在每个 Windows 窗体各自的线程上显示该 Windows 窗体来支持 COM 互操作](http://msdn.microsoft.com/library/ms233639\(v=vs.110\))。  
+ 另请参阅[演练： 通过显示每个 Windows 窗体各自的线程上支持 COM 互操作](https://msdn.microsoft.com/library/ms233639\(v=vs.110\))。  
   
 ## <a name="example"></a>示例  
  下面的代码示例演示如何在单独的线程上显示窗体，并调用 <xref:System.Windows.Forms.Application.Run%2A?displayProperty=nameWithType> 方法来启动该线程上的 Windows 窗体消息泵。 若要使用此方法，必须使用 <xref:System.Windows.Forms.Control.Invoke%2A> 方法，封送任何从非托管应用程序对窗体的调用。  
