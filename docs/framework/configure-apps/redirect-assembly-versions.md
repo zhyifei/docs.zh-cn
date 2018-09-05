@@ -11,12 +11,12 @@ ms.assetid: 88fb1a17-6ac9-4b57-8028-193aec1f727c
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: 3459ebd2f1df38ac70e9211fd4865e227cd996cb
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: aad369b35837089d05f5d7517e023671f0178011
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32759265"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43507799"
 ---
 # <a name="redirecting-assembly-versions"></a>重定向程序集版本
 你可以将编译时绑定引用重定向到 .NET Framework 程序集、第三方程序集或你自己的应用的程序集。 你还可以重定向应用，以通过多种方式使用不同版本的程序集：通过发布服务器策略、通过应用配置文件或通过计算机配置文件。 本文讨论了程序集绑定在 .NET Framework 中的工作原理以及如何对其进行配置。  
@@ -66,11 +66,11 @@ ms.locfileid: "32759265"
   
  `<bindingRedirect oldVersion="1.0.0.0" newVersion="2.0.0.0" />`  
   
- 如果你的应用面向 [!INCLUDE[vs_dev12](../../../includes/vs-dev12-md.md)]中较旧版本的 .NET framework，则可以启用自动绑定重定向。 你可以通过提供任何程序集的 app.config 文件中的绑定重定向信息，重写此默认行为或关闭绑定重定向功能。 有关如何打开或关闭此功能的信息，请参阅[如何： 启用和禁用自动绑定重定向](../../../docs/framework/configure-apps/how-to-enable-and-disable-automatic-binding-redirection.md)。  
+ 如果你的应用面向 [!INCLUDE[vs_dev12](../../../includes/vs-dev12-md.md)]中较旧版本的 .NET framework，则可以启用自动绑定重定向。 你可以通过提供任何程序集的 app.config 文件中的绑定重定向信息，重写此默认行为或关闭绑定重定向功能。 有关如何启用或禁用此功能的信息，请参阅[如何： 启用和禁用自动绑定重定向](../../../docs/framework/configure-apps/how-to-enable-and-disable-automatic-binding-redirection.md)。  
   
 <a name="bypass_PP"></a>   
 ### <a name="bypassing-publisher-policy"></a>跳过发布服务器策略  
- 如有必要，你可以在应用配置文件中重写发布服务器策略。 例如，声称向后兼容的程序集的新版本也会中断应用。 如果你想要跳过发布服务器策略，添加[ \<publisherPolicy >](../../../docs/framework/configure-apps/file-schema/runtime/publisherpolicy-element.md)元素[ \<dependentAssembly >](../../../docs/framework/configure-apps/file-schema/runtime/dependentassembly-element.md)中的应用程序配置文件和集元素**应用**属性设为**没有**，将覆盖任何以前**是**设置。  
+ 如有必要，你可以在应用配置文件中重写发布服务器策略。 例如，声称向后兼容的程序集的新版本也会中断应用。 如果你想要跳过发行者策略，将添加[ \<publisherPolicy >](../../../docs/framework/configure-apps/file-schema/runtime/publisherpolicy-element.md)元素[ \<dependentAssembly >](../../../docs/framework/configure-apps/file-schema/runtime/dependentassembly-element.md)中的应用程序配置文件，并设置元素**应用**归于**没有**，将覆盖任何以前**是**设置。  
   
  `<publisherPolicy apply="no" />`  
   
@@ -82,11 +82,11 @@ ms.locfileid: "32759265"
   
 <a name="BKMK_Specifyingassemblybindinginconfigurationfiles"></a>   
 ## <a name="specifying-assembly-binding-in-configuration-files"></a>在配置文件中指定程序集绑定  
- 使用相同的 XML 格式指定绑定重定向，无论它位于应用配置文件、计算机配置文件还是位于发布服务器策略文件中。 若要将一个程序集版本重定向到另一个，使用[ \<bindingRedirect >](../../../docs/framework/configure-apps/file-schema/runtime/bindingredirect-element.md)元素。 **oldVersion** 特性可以指定单个程序集版本或一系列版本。 `newVersion` 特性将指定单个版本。  例如， `<bindingRedirect oldVersion="1.1.0.0-1.2.0.0" newVersion="2.0.0.0"/>` 指定运行时应使用版本 2.0.0.0 而不是 1.1.0.0 和 1.2.0.0 之间的程序集版本。  
+ 使用相同的 XML 格式指定绑定重定向，无论它位于应用配置文件、计算机配置文件还是位于发布服务器策略文件中。 若要将一个程序集版本重定向到另一个，请使用[ \<bindingRedirect >](../../../docs/framework/configure-apps/file-schema/runtime/bindingredirect-element.md)元素。 **oldVersion** 特性可以指定单个程序集版本或一系列版本。 `newVersion` 特性将指定单个版本。  例如， `<bindingRedirect oldVersion="1.1.0.0-1.2.0.0" newVersion="2.0.0.0"/>` 指定运行时应使用版本 2.0.0.0 而不是 1.1.0.0 和 1.2.0.0 之间的程序集版本。  
   
  以下代码示例演示了各种绑定重定向方案。 该示例对一系列 `myAssembly`的版本指定了一个重定向，并对 `mySecondAssembly`指定了一个单一绑定重定向。 该示例还指定发布服务器策略文件不会代替 `myThirdAssembly`的绑定重定向。  
   
- 若要绑定程序集，必须指定字符串"urn： 架构-microsoft-com:asm.v1"与**xmlns**属性中[ \<assemblyBinding >](../../../docs/framework/configure-apps/file-schema/runtime/assemblybinding-element-for-runtime.md)标记。  
+ 若要绑定程序集，必须指定的字符串"urn： 架构-microsoft-com:asm.v1"与**xmlns**属性中[ \<assemblyBinding >](../../../docs/framework/configure-apps/file-schema/runtime/assemblybinding-element-for-runtime.md)标记。  
   
 ```xml  
 <configuration>  
@@ -120,7 +120,7 @@ ms.locfileid: "32759265"
 ```  
   
 ### <a name="limiting-assembly--bindings-to-a-specific-version"></a>限制到特定版本的程序集绑定  
- 你可以使用**appliesTo**属性[ \<assemblyBinding >](../../../docs/framework/configure-apps/file-schema/runtime/assemblybinding-element-for-runtime.md)将对特定版本的.NET 程序集绑定引用重定向程序应用程序配置文件中的元素Framework。 此可选特性用 .NET Framework 版本号来指示其适用的版本。 如果没有指定 **appliesTo** 特性，[\<assemblyBinding>](../../../docs/framework/configure-apps/file-schema/runtime/assemblybinding-element-for-runtime.md) 元素将适用于 .NET Framework 的所有版本。  
+ 可以使用**appliesTo**特性，可以在[ \<assemblyBinding >](../../../docs/framework/configure-apps/file-schema/runtime/assemblybinding-element-for-runtime.md)到特定版本的.NET 程序集绑定引用重定向的应用程序配置文件中的元素框架。 此可选特性用 .NET Framework 版本号来指示其适用的版本。 如果没有指定 appliesTo 特性，\<assemblyBinding> 元素将适用于 .NET Framework 的所有版本[](../../../docs/framework/configure-apps/file-schema/runtime/assemblybinding-element-for-runtime.md)。  
   
  例如，若要重定向 .NET Framework 3.5 程序集的程序集绑定，应在你的应用配置文件中包括以下 XML 代码。  
   
@@ -161,7 +161,7 @@ ms.locfileid: "32759265"
  [使用程序集编程](../../../docs/framework/app-domains/programming-with-assemblies.md)  
  [运行时如何定位程序集](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)  
  [配置应用程序](../../../docs/framework/configure-apps/index.md)  
- [配置.NET Framework 应用](http://msdn.microsoft.com/library/d789b592-fcb5-4e3d-8ac9-e0299adaaa42)  
+ [配置.NET Framework 应用](https://msdn.microsoft.com/library/d789b592-fcb5-4e3d-8ac9-e0299adaaa42)  
  [运行时设置架构](../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
  [配置文件架构](../../../docs/framework/configure-apps/file-schema/index.md)  
  [如何：创建发行者策略](../../../docs/framework/configure-apps/how-to-create-a-publisher-policy.md)

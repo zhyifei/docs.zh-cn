@@ -2,12 +2,12 @@
 title: 约束 (F#)
 description: '了解有关 F # 约束应用于泛型类型参数，以在泛型类型或函数中指定的类型参数的要求。'
 ms.date: 05/16/2016
-ms.openlocfilehash: 7af064159d2722256f0db8286a99fc02435a99cd
-ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
+ms.openlocfilehash: 0e79cf5b1a25ada49bf30416f85c1d59f8f2fd23
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37936860"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43525600"
 ---
 # <a name="constraints"></a>约束
 
@@ -35,7 +35,7 @@ type-parameter-list when constraint1 [ and constraint2]
 |委托约束|： 委托&lt;*元组参数类型*，*返回类型*&gt;|提供的类型必须为委托类型具有指定的参数和返回值;不适合公共使用。|
 |比较约束|： 比较|提供的类型必须支持比较。|
 |相等约束|： 是否相等|提供的类型必须支持相等性。|
-|非托管的约束|： 非托管|提供的类型必须是一个非托管的类型。 非托管的类型都是任一特定基元类型 (`sbyte`， `byte`， `char`， `nativeint`， `unativeint`， `float32`， `float`， `int16`， `uint16`， `int32`， `uint32`， `int64`， `uint64`，或`decimal`)，枚举类型`nativeptr&lt;_&gt;`，或其字段都为非托管的类型的非泛型结构。|
+|非托管的约束|： 非托管|提供的类型必须是一个非托管的类型。 非托管的类型都是任一特定基元类型 (`sbyte`， `byte`， `char`， `nativeint`， `unativeint`， `float32`， `float`， `int16`， `uint16`， `int32`， `uint32`， `int64`， `uint64`，或`decimal`)，枚举类型`nativeptr<_>`，或其字段都为非托管的类型的非泛型结构。|
 您必须添加约束，当你的代码必须使用一种功能，一般情况下是可在约束类型而不是在类型上时。 例如，如果你使用类型约束指定类类型，可以使用任何一种泛型函数或类型中的类的方法。
 
 指定约束有时需要写入时，是类型参数显式，因为不受约束，编译器具有无法验证您使用的功能将可用于在运行时类型可能会提供任何类型参数。
