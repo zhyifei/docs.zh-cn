@@ -2,12 +2,12 @@
 title: SQL-CLR 类型映射
 ms.date: 07/23/2018
 ms.assetid: 4ed76327-54a7-414b-82a9-7579bfcec04b
-ms.openlocfilehash: 5437529d9293951ad34abda435b538b4f404c600
-ms.sourcegitcommit: e8dc507cfdaad504fc9d4c83d28d24569dcef91c
+ms.openlocfilehash: ac00d78fff65f5d44a52f92509db3aa493952949
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/03/2018
-ms.locfileid: "33365522"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43735431"
 ---
 # <a name="sql-clr-type-mapping"></a>SQL-CLR 类型映射
 在 LINQ to SQL 中，关系数据库的数据模型映射到用您所选择的编程语言表示的对象模型。 当应用程序运行时，LINQ to SQL 会将对象模型中的语言集成查询转换为 SQL，然后将它们发送到数据库进行执行。 当数据库返回结果时，LINQ to SQL 会将它们转换回您可以用您自己的编程语言处理的对象。  
@@ -60,7 +60,7 @@ ms.locfileid: "33365522"
   
 -   SQL Server 对一些数据类型的排序不同于 CLR 中等效类型数据的排序。 例如，SQL Server 类型 `UNIQUEIDENTIFIER` 的数据排序不同于 CLR 类型 <xref:System.Guid?displayProperty=nameWithType> 的数据排序。  
   
--   SQL Server 处理一些字符串比较操作的方式不同于 CLR。 在 SQL Server 中，字符串比较行为取决于服务器上的排序规则设置。 有关详细信息，请参阅[使用排序规则](http://go.microsoft.com/fwlink/?LinkId=115330)Microsoft SQL Server 联机丛书中。  
+-   SQL Server 处理一些字符串比较操作的方式不同于 CLR。 在 SQL Server 中，字符串比较行为取决于服务器上的排序规则设置。 有关详细信息，请参阅[使用排序规则](https://go.microsoft.com/fwlink/?LinkId=115330)Microsoft SQL Server 联机丛书中。  
   
 -   对于一些映射函数，SQL Server 返回的函数值可能与 CLR 不同。 例如，相等函数会不同，因为在两个字符串仅在尾随空白不同的情况下，SQL Server 会视这两个字符串相等，而 CLR 则视其不相等。  
   
@@ -232,11 +232,11 @@ ms.locfileid: "33365522"
 ### <a name="sql-server-filestream"></a>SQL Server FILESTREAM  
  从 Microsoft SQL Server 2008 开始，提供了 `FILESTREAM` 列的 `VARBINARY(MAX)` 属性；从 .NET Framework 版本 3.5 SP1 开始，您可以使用 LINQ to SQL 映射到该属性。  
   
- 尽管您可以使用 `VARBINARY(MAX)` 属性将 `FILESTREAM` 列映射到 <xref:System.Data.Linq.Binary> 对象，但是 <xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType> 方法无法使用 `FILESTREAM` 属性自动创建列。 有关详细信息`FILESTREAM`，请参阅[FILESTREAM 概述](http://go.microsoft.com/fwlink/?LinkId=115291)上 Microsoft SQL Server 联机丛书。  
+ 尽管您可以使用 `VARBINARY(MAX)` 属性将 `FILESTREAM` 列映射到 <xref:System.Data.Linq.Binary> 对象，但是 <xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType> 方法无法使用 `FILESTREAM` 属性自动创建列。 有关详细信息`FILESTREAM`，请参阅[FILESTREAM 概述](https://go.microsoft.com/fwlink/?LinkId=115291)上 Microsoft SQL Server 联机丛书。  
   
 <a name="BinarySerialization"></a>   
 ### <a name="binary-serialization"></a>二进制序列化  
- 如果一个类实现了 <xref:System.Runtime.Serialization.ISerializable> 接口，则可以将对象序列化到任何 SQL 二进制字段 (`BINARY`、`VARBINARY`、`IMAGE`)。 将根据如何实现 <xref:System.Runtime.Serialization.ISerializable> 接口来对对象进行序列化和反序列化。 有关详细信息，请参阅[二进制序列化](http://go.microsoft.com/fwlink/?LinkId=115581)。  
+ 如果一个类实现了 <xref:System.Runtime.Serialization.ISerializable> 接口，则可以将对象序列化到任何 SQL 二进制字段 (`BINARY`、`VARBINARY`、`IMAGE`)。 将根据如何实现 <xref:System.Runtime.Serialization.ISerializable> 接口来对对象进行序列化和反序列化。 有关详细信息，请参阅[二进制序列化](https://go.microsoft.com/fwlink/?LinkId=115581)。  
   
 <a name="MiscMapping"></a>   
 ## <a name="miscellaneous-mapping"></a>杂项映射  
