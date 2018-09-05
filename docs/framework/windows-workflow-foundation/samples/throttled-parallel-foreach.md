@@ -3,11 +3,11 @@ title: 限制并行 ForEach
 ms.date: 03/30/2017
 ms.assetid: f2855b5f-e9a7-433d-96a4-40fc31025215
 ms.openlocfilehash: 7149e6db8992bff5b436ffae4a77d985ec255986
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43397908"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43564900"
 ---
 # <a name="throttled-parallel-foreach"></a>限制并行 ForEach
 `ThrottleParallelForEach`活动是类似于<!--zz <xref:System.Activities.Statements.ParallelForEach>-->`System.Activities.Statements.ParallelForEach`活动有一个例外是前者允许设置并发系数来限制要执行的并发分支数。 `ThrottleParallelForEach` 活动派生自 <xref:System.Activities.NativeActivity>，因为该活动需要对其他活动（子活动）进行计划，并且只有通过 <xref:System.Activities.NativeActivityContext> 类才能对此进行访问。  

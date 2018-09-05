@@ -3,11 +3,11 @@ title: 基于方法的查询示例 (LINQ to DataSet)
 ms.date: 03/30/2017
 ms.assetid: d340775c-7f39-4087-a290-5cbec6cfa68e
 ms.openlocfilehash: 569292cc03f7cbcbaff2d8625849285ff6e2146e
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43482530"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43500793"
 ---
 # <a name="method-based-query-examples-linq-to-dataset"></a>基于方法的查询示例 (LINQ to DataSet)
 本节提供使用标准查询运算符的基于方法的查询语法中的 [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] 编程示例。 <xref:System.Data.DataSet>这些示例中使用通过使用填充`FillDataSet`方法中指定[加载数据到数据集](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md)。 有关详细信息，请参阅[标准查询运算符概述](https://msdn.microsoft.com/library/24cda21e-8af8-4632-b519-c404a839b9b2)。  
