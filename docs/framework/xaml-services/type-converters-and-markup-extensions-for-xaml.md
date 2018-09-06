@@ -63,7 +63,7 @@ ms.locfileid: "33565858"
   
 <a name="service_context_for_a_value_converter"></a>   
 ## <a name="service-context-for-a-value-converter"></a>值转换器的服务上下文  
- 当实现值转换器时，你经常需要访问在其中应用了值转换器的上下文。 此上下文称为服务上下文。 服务上下文可能包括如下信息：活动的 XAML 架构上下文、对 XAML 架构上下文和 XAML 对象编写器提供的类型映射系统的访问权限等等。 有关可用于值转换器的服务上下文和如何访问服务上下文可能会提供的服务的详细信息，请参阅 [Service Contexts Available to Type Converters and Markup Extensions](../../../docs/framework/xaml-services/service-contexts-available-to-type-converters-and-markup-extensions.md)。  
+ 当实现值转换器时，你经常需要访问在其中应用了值转换器的上下文。 此上下文称为服务上下文。 服务上下文可能包括如下信息：活动的 XAML 架构上下文、对 XAML 架构上下文和 XAML 对象编写器提供的类型映射系统的访问权限等等。 有关可用与值转换器的服务上下文和如何访问服务上下文可能会提供的服务的详细信息，请参阅[可供类型转换器和标记扩展使用的服务上下文](../../../docs/framework/xaml-services/service-contexts-available-to-type-converters-and-markup-extensions.md)。  
   
 ## <a name="see-also"></a>请参阅  
  <xref:System.Windows.Markup.MarkupExtension>  
