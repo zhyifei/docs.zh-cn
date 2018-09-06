@@ -17,18 +17,18 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 4784e22d5a3eec031fbee00441958a62d66b52df
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43542649"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43877736"
 ---
-# <a name="inheritsfrom-function"></a><span data-ttu-id="6b15a-103">InheritsFrom 函数</span><span class="sxs-lookup"><span data-stu-id="6b15a-103">InheritsFrom function</span></span>
-<span data-ttu-id="6b15a-104">确定当前类或实例是否派生自指定的父类。</span><span class="sxs-lookup"><span data-stu-id="6b15a-104">Determines whether the current class or instance derives from a specified parent class.</span></span>
+# <a name="inheritsfrom-function"></a><span data-ttu-id="88d8e-103">InheritsFrom 函数</span><span class="sxs-lookup"><span data-stu-id="88d8e-103">InheritsFrom function</span></span>
+<span data-ttu-id="88d8e-104">确定当前类或实例是否派生自指定的父类。</span><span class="sxs-lookup"><span data-stu-id="88d8e-104">Determines whether the current class or instance derives from a specified parent class.</span></span>
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
     
-## <a name="syntax"></a><span data-ttu-id="6b15a-105">语法</span><span class="sxs-lookup"><span data-stu-id="6b15a-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="88d8e-105">语法</span><span class="sxs-lookup"><span data-stu-id="88d8e-105">Syntax</span></span>  
   
 ```
 HRESULT InheritsFrom (
@@ -38,37 +38,37 @@ HRESULT InheritsFrom (
 ); 
 ```  
 
-## <a name="parameters"></a><span data-ttu-id="6b15a-106">参数</span><span class="sxs-lookup"><span data-stu-id="6b15a-106">Parameters</span></span>
+## <a name="parameters"></a><span data-ttu-id="88d8e-106">参数</span><span class="sxs-lookup"><span data-stu-id="88d8e-106">Parameters</span></span>
 
 `vFunc`  
-<span data-ttu-id="6b15a-107">[in]此参数是未使用。</span><span class="sxs-lookup"><span data-stu-id="6b15a-107">[in] This parameter is unused.</span></span>
+<span data-ttu-id="88d8e-107">[in]此参数是未使用。</span><span class="sxs-lookup"><span data-stu-id="88d8e-107">[in] This parameter is unused.</span></span>
 
 `ptr`  
-<span data-ttu-id="6b15a-108">[in]一个指向[IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject)实例。</span><span class="sxs-lookup"><span data-stu-id="6b15a-108">[in] A pointer to an [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) instance.</span></span>
+<span data-ttu-id="88d8e-108">[in]一个指向[IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject)实例。</span><span class="sxs-lookup"><span data-stu-id="88d8e-108">[in] A pointer to an [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) instance.</span></span>
 
 `wszAncestor`  
-<span data-ttu-id="6b15a-109">[in]类的名称。</span><span class="sxs-lookup"><span data-stu-id="6b15a-109">[in] The name of the class.</span></span> <span data-ttu-id="6b15a-110">`wszAncestor` 必须指向有效`LPCWSTR`。</span><span class="sxs-lookup"><span data-stu-id="6b15a-110">`wszAncestor` must point to a valid `LPCWSTR`.</span></span>
+<span data-ttu-id="88d8e-109">[in]类的名称。</span><span class="sxs-lookup"><span data-stu-id="88d8e-109">[in] The name of the class.</span></span> <span data-ttu-id="88d8e-110">`wszAncestor` 必须指向有效`LPCWSTR`。</span><span class="sxs-lookup"><span data-stu-id="88d8e-110">`wszAncestor` must point to a valid `LPCWSTR`.</span></span>
 
-## <a name="return-value"></a><span data-ttu-id="6b15a-111">返回值</span><span class="sxs-lookup"><span data-stu-id="6b15a-111">Return value</span></span>
+## <a name="return-value"></a><span data-ttu-id="88d8e-111">返回值</span><span class="sxs-lookup"><span data-stu-id="88d8e-111">Return value</span></span>
 
-<span data-ttu-id="6b15a-112">此函数返回以下值中定义*WbemCli.h*标头文件，也可以在定义它们为常量在代码中：</span><span class="sxs-lookup"><span data-stu-id="6b15a-112">The following values returned by this function are defined in the *WbemCli.h* header file, or you can define them as constants in your code:</span></span>
+<span data-ttu-id="88d8e-112">此函数返回以下值中定义*WbemCli.h*标头文件，也可以在定义它们为常量在代码中：</span><span class="sxs-lookup"><span data-stu-id="88d8e-112">The following values returned by this function are defined in the *WbemCli.h* header file, or you can define them as constants in your code:</span></span>
 
-|<span data-ttu-id="6b15a-113">返回的常量</span><span class="sxs-lookup"><span data-stu-id="6b15a-113">Constant</span></span>  |<span data-ttu-id="6b15a-114">“值”</span><span class="sxs-lookup"><span data-stu-id="6b15a-114">Value</span></span>  |<span data-ttu-id="6b15a-115">描述</span><span class="sxs-lookup"><span data-stu-id="6b15a-115">Description</span></span>  |
+|<span data-ttu-id="88d8e-113">返回的常量</span><span class="sxs-lookup"><span data-stu-id="88d8e-113">Constant</span></span>  |<span data-ttu-id="88d8e-114">“值”</span><span class="sxs-lookup"><span data-stu-id="88d8e-114">Value</span></span>  |<span data-ttu-id="88d8e-115">描述</span><span class="sxs-lookup"><span data-stu-id="88d8e-115">Description</span></span>  |
 |---------|---------|---------|
-| `WBEM_S_NO_ERROR` | <span data-ttu-id="6b15a-116">0</span><span class="sxs-lookup"><span data-stu-id="6b15a-116">0</span></span> | <span data-ttu-id="6b15a-117">当前对象继承`wszAncestor`。</span><span class="sxs-lookup"><span data-stu-id="6b15a-117">The current object inherits from `wszAncestor`.</span></span>  |
-| `WBEM_S_FALSE` | <span data-ttu-id="6b15a-118">1</span><span class="sxs-lookup"><span data-stu-id="6b15a-118">1</span></span> | <span data-ttu-id="6b15a-119">当前对象不会继承从`wszAncestor`。</span><span class="sxs-lookup"><span data-stu-id="6b15a-119">The current object does not inherit from `wszAncestor`.</span></span> |
-|`WBEM_E_INVALID_PARAMETER` | <span data-ttu-id="6b15a-120">0x80041008</span><span class="sxs-lookup"><span data-stu-id="6b15a-120">0x80041008</span></span> | <span data-ttu-id="6b15a-121">`wszAncestor` 为 `null`。</span><span class="sxs-lookup"><span data-stu-id="6b15a-121">`wszAncestor` is `null`.</span></span> |
+| `WBEM_S_NO_ERROR` | <span data-ttu-id="88d8e-116">0</span><span class="sxs-lookup"><span data-stu-id="88d8e-116">0</span></span> | <span data-ttu-id="88d8e-117">当前对象继承`wszAncestor`。</span><span class="sxs-lookup"><span data-stu-id="88d8e-117">The current object inherits from `wszAncestor`.</span></span>  |
+| `WBEM_S_FALSE` | <span data-ttu-id="88d8e-118">1</span><span class="sxs-lookup"><span data-stu-id="88d8e-118">1</span></span> | <span data-ttu-id="88d8e-119">当前对象不会继承从`wszAncestor`。</span><span class="sxs-lookup"><span data-stu-id="88d8e-119">The current object does not inherit from `wszAncestor`.</span></span> |
+|`WBEM_E_INVALID_PARAMETER` | <span data-ttu-id="88d8e-120">0x80041008</span><span class="sxs-lookup"><span data-stu-id="88d8e-120">0x80041008</span></span> | <span data-ttu-id="88d8e-121">`wszAncestor` 为 `null`。</span><span class="sxs-lookup"><span data-stu-id="88d8e-121">`wszAncestor` is `null`.</span></span> |
   
-## <a name="remarks"></a><span data-ttu-id="6b15a-122">备注</span><span class="sxs-lookup"><span data-stu-id="6b15a-122">Remarks</span></span>
+## <a name="remarks"></a><span data-ttu-id="88d8e-122">备注</span><span class="sxs-lookup"><span data-stu-id="88d8e-122">Remarks</span></span>
 
-<span data-ttu-id="6b15a-123">此函数包装对的调用[IWbemClassObject::InheritsFrom](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-inheritsfrom)方法。</span><span class="sxs-lookup"><span data-stu-id="6b15a-123">This function wraps a call to the [IWbemClassObject::InheritsFrom](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-inheritsfrom) method.</span></span>
+<span data-ttu-id="88d8e-123">此函数包装对的调用[IWbemClassObject::InheritsFrom](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-inheritsfrom)方法。</span><span class="sxs-lookup"><span data-stu-id="88d8e-123">This function wraps a call to the [IWbemClassObject::InheritsFrom](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-inheritsfrom) method.</span></span>
 
-## <a name="requirements"></a><span data-ttu-id="6b15a-124">要求</span><span class="sxs-lookup"><span data-stu-id="6b15a-124">Requirements</span></span>  
- <span data-ttu-id="6b15a-125">**平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="6b15a-125">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="88d8e-124">要求</span><span class="sxs-lookup"><span data-stu-id="88d8e-124">Requirements</span></span>  
+ <span data-ttu-id="88d8e-125">**平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="88d8e-125">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="6b15a-126">**标头：** WMINet_Utils.idl</span><span class="sxs-lookup"><span data-stu-id="6b15a-126">**Header:** WMINet_Utils.idl</span></span>  
+ <span data-ttu-id="88d8e-126">**标头：** WMINet_Utils.idl</span><span class="sxs-lookup"><span data-stu-id="88d8e-126">**Header:** WMINet_Utils.idl</span></span>  
   
- <span data-ttu-id="6b15a-127">**.NET Framework 版本：**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span><span class="sxs-lookup"><span data-stu-id="6b15a-127">**.NET Framework Versions:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span></span>  
+ <span data-ttu-id="88d8e-127">**.NET Framework 版本：**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span><span class="sxs-lookup"><span data-stu-id="88d8e-127">**.NET Framework Versions:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="6b15a-128">请参阅</span><span class="sxs-lookup"><span data-stu-id="6b15a-128">See also</span></span>  
-[<span data-ttu-id="6b15a-129">WMI 和性能计数器 （非托管 API 参考）</span><span class="sxs-lookup"><span data-stu-id="6b15a-129">WMI and Performance Counters (Unmanaged API Reference)</span></span>](index.md)
+## <a name="see-also"></a><span data-ttu-id="88d8e-128">请参阅</span><span class="sxs-lookup"><span data-stu-id="88d8e-128">See also</span></span>  
+[<span data-ttu-id="88d8e-129">WMI 和性能计数器 （非托管 API 参考）</span><span class="sxs-lookup"><span data-stu-id="88d8e-129">WMI and Performance Counters (Unmanaged API Reference)</span></span>](index.md)

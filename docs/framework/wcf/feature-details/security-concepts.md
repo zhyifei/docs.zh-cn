@@ -5,26 +5,26 @@ ms.assetid: 944fa5ca-2c34-4268-8897-e005a61b470d
 author: BrucePerlerMS
 manager: mbaldwin
 ms.openlocfilehash: 32b05766f82059634e6ad808c75fea6cc9e820e5
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43542902"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43877357"
 ---
-# <a name="security-concepts"></a><span data-ttu-id="12d3e-102">安全性概念</span><span class="sxs-lookup"><span data-stu-id="12d3e-102">Security Concepts</span></span>
-<span data-ttu-id="12d3e-103">本部分简要介绍 Windows Communication Foundation (WCF) 安全相关的概念。</span><span class="sxs-lookup"><span data-stu-id="12d3e-103">This section briefly explains the concepts associated with Windows Communication Foundation (WCF) security.</span></span>  
+# <a name="security-concepts"></a><span data-ttu-id="f69a4-102">安全性概念</span><span class="sxs-lookup"><span data-stu-id="f69a4-102">Security Concepts</span></span>
+<span data-ttu-id="f69a4-103">本部分简要介绍 Windows Communication Foundation (WCF) 安全相关的概念。</span><span class="sxs-lookup"><span data-stu-id="f69a4-103">This section briefly explains the concepts associated with Windows Communication Foundation (WCF) security.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="12d3e-104">本节内容</span><span class="sxs-lookup"><span data-stu-id="12d3e-104">In This Section</span></span>  
- [<span data-ttu-id="12d3e-105">WCF 中使用的安全性概念</span><span class="sxs-lookup"><span data-stu-id="12d3e-105">Security Concepts Used in WCF</span></span>](../../../../docs/framework/wcf/feature-details/security-concepts-used-in-wcf.md)  
- <span data-ttu-id="12d3e-106">对安全性实现中使用的概念的高度概括。</span><span class="sxs-lookup"><span data-stu-id="12d3e-106">A high-level overview of concepts used in security implementations.</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="f69a4-104">本节内容</span><span class="sxs-lookup"><span data-stu-id="f69a4-104">In This Section</span></span>  
+ [<span data-ttu-id="f69a4-105">WCF 中使用的安全性概念</span><span class="sxs-lookup"><span data-stu-id="f69a4-105">Security Concepts Used in WCF</span></span>](../../../../docs/framework/wcf/feature-details/security-concepts-used-in-wcf.md)  
+ <span data-ttu-id="f69a4-106">对安全性实现中使用的概念的高度概括。</span><span class="sxs-lookup"><span data-stu-id="f69a4-106">A high-level overview of concepts used in security implementations.</span></span>  
   
- [<span data-ttu-id="12d3e-107">分布式应用程序安全</span><span class="sxs-lookup"><span data-stu-id="12d3e-107">Distributed Application Security</span></span>](../../../../docs/framework/wcf/feature-details/distributed-application-security.md)  
- <span data-ttu-id="12d3e-108">WCF 如何提供分布式应用程序拓扑中的安全性的概述。</span><span class="sxs-lookup"><span data-stu-id="12d3e-108">An overview of how WCF provides security in distributed application topography.</span></span>  
+ [<span data-ttu-id="f69a4-107">分布式应用程序安全</span><span class="sxs-lookup"><span data-stu-id="f69a4-107">Distributed Application Security</span></span>](../../../../docs/framework/wcf/feature-details/distributed-application-security.md)  
+ <span data-ttu-id="f69a4-108">WCF 如何提供分布式应用程序拓扑中的安全性的概述。</span><span class="sxs-lookup"><span data-stu-id="f69a4-108">An overview of how WCF provides security in distributed application topography.</span></span>  
   
- [<span data-ttu-id="12d3e-109">安全术语</span><span class="sxs-lookup"><span data-stu-id="12d3e-109">Security Terminology</span></span>](../../../../docs/framework/wcf/feature-details/wcf-security-terminology.md)  
- <span data-ttu-id="12d3e-110">讨论 WCF 安全时使用的术语的词汇表。</span><span class="sxs-lookup"><span data-stu-id="12d3e-110">A glossary of terms used when discussing WCF security.</span></span>  
+ [<span data-ttu-id="f69a4-109">安全术语</span><span class="sxs-lookup"><span data-stu-id="f69a4-109">Security Terminology</span></span>](../../../../docs/framework/wcf/feature-details/wcf-security-terminology.md)  
+ <span data-ttu-id="f69a4-110">讨论 WCF 安全时使用的术语的词汇表。</span><span class="sxs-lookup"><span data-stu-id="f69a4-110">A glossary of terms used when discussing WCF security.</span></span>  
   
-## <a name="reference"></a><span data-ttu-id="12d3e-111">参考</span><span class="sxs-lookup"><span data-stu-id="12d3e-111">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="f69a4-111">参考</span><span class="sxs-lookup"><span data-stu-id="f69a4-111">Reference</span></span>  
  <xref:System.ServiceModel>  
   
  <xref:System.ServiceModel.Channels>  
@@ -35,10 +35,10 @@ ms.locfileid: "43542902"
   
  <xref:System.Security>  
   
-## <a name="related-sections"></a><span data-ttu-id="12d3e-112">相关章节</span><span class="sxs-lookup"><span data-stu-id="12d3e-112">Related Sections</span></span>  
- [<span data-ttu-id="12d3e-113">扩展安全性</span><span class="sxs-lookup"><span data-stu-id="12d3e-113">Extending Security</span></span>](../../../../docs/framework/wcf/extending/extending-security.md)  
+## <a name="related-sections"></a><span data-ttu-id="f69a4-112">相关章节</span><span class="sxs-lookup"><span data-stu-id="f69a4-112">Related Sections</span></span>  
+ [<span data-ttu-id="f69a4-113">扩展安全性</span><span class="sxs-lookup"><span data-stu-id="f69a4-113">Extending Security</span></span>](../../../../docs/framework/wcf/extending/extending-security.md)  
   
-## <a name="see-also"></a><span data-ttu-id="12d3e-114">请参阅</span><span class="sxs-lookup"><span data-stu-id="12d3e-114">See Also</span></span>  
- [<span data-ttu-id="12d3e-115">安全性</span><span class="sxs-lookup"><span data-stu-id="12d3e-115">Security</span></span>](../../../../docs/framework/wcf/feature-details/security.md)  
- [<span data-ttu-id="12d3e-116">安全性概述</span><span class="sxs-lookup"><span data-stu-id="12d3e-116">Security Overview</span></span>](../../../../docs/framework/wcf/feature-details/security-overview.md)  
- [<span data-ttu-id="12d3e-117">Windows Server App Fabric 的安全模型</span><span class="sxs-lookup"><span data-stu-id="12d3e-117">Security Model for Windows Server App Fabric</span></span>](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+## <a name="see-also"></a><span data-ttu-id="f69a4-114">请参阅</span><span class="sxs-lookup"><span data-stu-id="f69a4-114">See Also</span></span>  
+ [<span data-ttu-id="f69a4-115">安全性</span><span class="sxs-lookup"><span data-stu-id="f69a4-115">Security</span></span>](../../../../docs/framework/wcf/feature-details/security.md)  
+ [<span data-ttu-id="f69a4-116">安全性概述</span><span class="sxs-lookup"><span data-stu-id="f69a4-116">Security Overview</span></span>](../../../../docs/framework/wcf/feature-details/security-overview.md)  
+ [<span data-ttu-id="f69a4-117">Windows Server App Fabric 的安全模型</span><span class="sxs-lookup"><span data-stu-id="f69a4-117">Security Model for Windows Server App Fabric</span></span>](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
