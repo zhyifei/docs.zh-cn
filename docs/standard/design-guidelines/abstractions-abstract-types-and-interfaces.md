@@ -10,34 +10,35 @@ helpviewer_keywords:
 ms.assetid: 0a632bc7-9b03-44ee-8842-c82f88672a45
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f5863b4ae9cad940e4dd47ef93e07763916427f7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0ad8b2dd3dbf2a7a75c98a3115d4351dfea4e1a0
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33573021"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43891293"
 ---
 # <a name="abstractions-abstract-types-and-interfaces"></a>抽象（抽象类型和接口）
-一种抽象是描述的协定，但不提供完整实现的协定的类型。 通常作为抽象类或接口，实现的抽象，而且随附一组明确定义的参考文档描述实现协定的类型所需的语义。 .NET Framework 中最重要的抽象的一些包括<xref:System.IO.Stream>， <xref:System.Collections.Generic.IEnumerable%601>，和<xref:System.Object>。  
+一种抽象是描述协定，但不提供完整的实现的协定的类型。 通常作为抽象类或接口，实现的抽象概念以及它们与一组定义完善的参考文档，描述所需的语义的实现的协定的类型。 一些.NET Framework 中最重要的抽象包括<xref:System.IO.Stream>， <xref:System.Collections.Generic.IEnumerable%601>，和<xref:System.Object>。  
   
- 你可以通过实现支持协定的抽象的具体类型并使用此具体类型 framework Api 使用 （操作系统上） 来扩展框架的抽象。  
+ 您可以通过实现支持一种抽象的协定的具体类型和使用框架 Api 使用 （操作系统上） 使用此具体类型来扩展框架的抽象。  
   
- 能够承受测试有意义且有用抽象是时间的很难设计的。 主要困难获取正确的一组成员，没有更多和不较少。 如果一种抽象具有太多的成员，则它将成为难或甚至无法实现。 如果已承诺的功能的成员太少，则将没有用处，在许多有趣的方案。  
+ 一种有意义且有用的抽象，能够承受测试是时间的很难设计。 主要困难获取正确成员，没有更多并没有更少的集。 如果抽象具有太多的成员，将很难或几乎不可能实现。 如果是承诺的功能的成员太少，变得无用的许多有趣的情形。  
   
- 框架中的太多抽象还造成负面影响的 framework 的可用性。 它通常是很难了解一种抽象，而不了解它如何适用于具体的实现和抽象在操作的 Api 的较大的图片。 此外，抽象和其成员的名称是一定抽象，这通常使得它们含义隐晦、 unapproachable 而不了解其使用情况的更广泛上下文第一个。  
+ 框架中的太多抽象还产生负面影响的 framework 的可用性。 通常是很难理解抽象，无需了解它如何适用于具体的实现和对抽象操作的 Api 的更大的图片。 此外，抽象和其成员的名称是一定是抽象的这通常会使它们比较难懂且 unapproachable 而无需第一个了解其使用情况的更广泛的上下文。  
   
- 但是，抽象提供的其他扩展性机制通常不能与匹配的功能非常强大扩展性。 它们的许多体系结构模式，如插件的核心是反向的控件 (IoC)、 管道，依次类推。 它们也是非常重要的框架可测试性。 良好的抽象，使能够出繁重的依赖关系，用于单元测试存根。 总之，抽象是负责广受欢迎的丰富功能，现代的面向对象的框架。  
+ 但是，抽象提供非常强大的可扩展性的其他扩展性机制通常不能与匹配。 它们的许多体系结构模式，如插件，核心反转控制 (IoC)、 管道和等等。 它们也是非常重要的可测试性的框架。 很好的抽象，使得可以去掉用于单元测试的大量依赖关系。 总之，抽象是负责的现代面向对象的框架广受欢迎的丰富功能。  
   
  **X DO NOT** 提供抽象，除非它们通过开发几个具体实现和使用抽象的 Api 测试过。  
   
  **✓ DO** 设计抽象时，请仔细选择一个抽象类和接口之间。  
   
- **✓ CONSIDER** 提供抽象的具体实现的引用测试。 此类测试应允许用户以测试是否其实现正确实现协定。  
+ **✓ CONSIDER** 提供抽象的具体实现的引用测试。 此类测试应允许用户以测试是否它们的实现正确地实现该协定。  
   
- *部分 © 2005年，2009 Microsoft Corporation。保留所有权利。*  
+ *部分版权 © 2005, 2009 Microsoft Corporation。保留所有权利。*  
   
- *通过从皮尔逊教育版，Inc.的权限重新打印[Framework 设计准则： 约定、 语法和可重用.NET 库，版本 2 的模式](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619)通过 Krzysztof Cwalina 和 Brad Abrams，发布 2008 年 10 月 22，通过Microsoft Windows 开发系列的一部分的 Addison Wesley Professional。*  
+ *经 Pearson Education, Inc 授权，转载自[框架设计准则：可重用的 .NET 库的约定、习惯用语和模式，第2版](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) 作者：Krzysztof Cwalina 和 Brad Abrams，由 Addison Wesley Professional 于 2008 年 10 月 22 日印发，作为 Microsoft Windows 开发系列的一部分。*  
   
-## <a name="see-also"></a>请参阅  
- [框架设计指南](../../../docs/standard/design-guidelines/index.md)  
- [扩展性设计](../../../docs/standard/design-guidelines/designing-for-extensibility.md)
+## <a name="see-also"></a>请参阅
+
+- [框架设计指南](../../../docs/standard/design-guidelines/index.md)  
+- [扩展性设计](../../../docs/standard/design-guidelines/designing-for-extensibility.md)

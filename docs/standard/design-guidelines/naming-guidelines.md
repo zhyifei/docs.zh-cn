@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: fc076d66-9b5f-42d3-aa65-61d970c794a3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 53ffb641d3e507a937c304725b3c8590d046338e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 70888e068782add5ebe5ae1c7da3bdee842faea8
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33572965"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "44031830"
 ---
 # <a name="naming-guidelines"></a>命名准则
 在框架开发中遵循一套一致的命名约定可极大地提升框架的可用性。 通过这种方式，框架便可供许多开发人员广泛用于各种不同的项目。 除了形式的一致性外，框架元素的名称必须易于理解，且须能够传达每个元素的功能。  
@@ -36,9 +36,10 @@ ms.locfileid: "33572965"
  [类型成员的名称](../../../docs/standard/design-guidelines/names-of-type-members.md)  
  [命名参数](../../../docs/standard/design-guidelines/naming-parameters.md)  
  [命名资源](../../../docs/standard/design-guidelines/naming-resources.md)  
- *部分 © 2005年，2009 Microsoft Corporation。保留所有权利。*  
+ *部分版权 © 2005, 2009 Microsoft Corporation。保留所有权利。*  
   
  *经 Pearson Education, Inc 授权，转载自[框架设计准则：可重用的 .NET 库的约定、习惯用语和模式，第2版](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) 作者：Krzysztof Cwalina 和 Brad Abrams，由 Addison Wesley Professional 于 2008 年 10 月 22 日印发，作为 Microsoft Windows 开发系列的一部分。*  
   
-## <a name="see-also"></a>请参阅  
- [框架设计指南](../../../docs/standard/design-guidelines/index.md)
+## <a name="see-also"></a>请参阅
+
+- [框架设计指南](../../../docs/standard/design-guidelines/index.md)

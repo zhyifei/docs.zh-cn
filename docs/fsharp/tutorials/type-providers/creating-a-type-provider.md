@@ -3,11 +3,11 @@ title: '教程： 创建类型提供程序 （F #）'
 description: '了解如何在 F # 3.0 中创建你自己 F # 类型提供程序，通过检查几个简单类型提供程序来演示基本概念。'
 ms.date: 05/16/2016
 ms.openlocfilehash: 3c998377b2c3a408d536ef416f3799bf7f04b6bd
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43745721"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "44036608"
 ---
 # <a name="tutorial-create-a-type-provider"></a>教程： 创建类型提供程序
 

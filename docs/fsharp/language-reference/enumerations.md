@@ -2,17 +2,16 @@
 title: 枚举 (F#)
 description: '了解如何使用 F # 枚举来代替文本以使代码更具可读性且更易于维护。'
 ms.date: 05/16/2016
-ms.openlocfilehash: b51df53caf2e193496cb3694c913cbae08f7eaf5
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 47fb353c2698f8b1474834ebbd1b0eff2c7f76e7
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43518832"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43891637"
 ---
 # <a name="enumerations"></a>枚举
 
 *枚举*，也称为*枚举*、 是整型类型的标签分配到值的子集。 可以使用它们来代替文本，使代码更具可读性且更易维护。
-
 
 ## <a name="syntax"></a>语法
 
@@ -24,6 +23,7 @@ type enum-name =
 ```
 
 ## <a name="remarks"></a>备注
+
 一个枚举，看上去像可区分联合具有简单的值，只不过可以指定的值。 这些值通常是从 0 或 1，开始的整数或整数，用于表示位位置。 如果一个枚举，用于表示位位置，还应使用[标志](xref:System.FlagsAttribute)属性。
 
 枚举的基础类型由文本使用，以便，例如，您可以使用文本带有后缀，如`1u`， `2u`，依此类推，对于无符号整数 (`uint32`) 类型。
@@ -49,8 +49,8 @@ type enum-name =
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet2104.fs)]
 
 此外，情况下，对于枚举时，始终发出作为`public`。 这是以使它们与 C# 和.NET 平台的其余部分保持一致。
-    
-## <a name="see-also"></a>请参阅
-[F# 语言参考](index.md)
 
-[强制转换和转换](casting-and-conversions.md)
+## <a name="see-also"></a>请参阅
+
+- [F# 语言参考](index.md)
+- [强制转换和转换](casting-and-conversions.md)

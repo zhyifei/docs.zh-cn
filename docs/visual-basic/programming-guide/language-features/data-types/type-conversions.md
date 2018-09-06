@@ -11,11 +11,11 @@ helpviewer_keywords:
 - data type conversion [Visual Basic]
 ms.assetid: 1cdacd21-ba31-4b62-b5be-395e41eeaa17
 ms.openlocfilehash: 026b2a250abfac0782feb0946bc50a94f504f7ed
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
-ms.translationtype: HT
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43800659"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "44036998"
 ---
 # <a name="type-conversions-in-visual-basic"></a>Visual Basic 中的类型转换
 将值从一种数据类型更改为另一种类型的过程称为*转换*。 转换为*扩大*或*收缩*，取决于所涉及的类型的数据容量。 此外会缩短*隐式*或*显式*，取决于在源代码中的语法。  

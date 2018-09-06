@@ -3,11 +3,11 @@ title: 使用 WCF 开发工具
 ms.date: 03/30/2017
 ms.assetid: 054adb87-c244-4d5a-83d1-0b2b44bd454b
 ms.openlocfilehash: 3eb349fd795b2067d4d75ff138fd9b5922110bd3
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43741112"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "44037872"
 ---
 # <a name="using-the-wcf-development-tools"></a>使用 WCF 开发工具
 本部分介绍可以帮助您开发 WCFservice 的 Visual Studio 开发工具。  

@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 51096a2e-8b38-4c4d-a523-799bfdb7ec69
 ms.openlocfilehash: 4d5de5ed3f557842fb28a3cf92b1923a709195d2
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43740398"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "44038590"
 ---
 # <a name="manipulating-data"></a>操作数据
 在引入多个活动结果集 (MARS) 之前，开发人员必须使用多个连接或服务器端游标来解决某些方案。 此外，当多个连接已用在事务的情况下，绑定连接 (与**sp_getbindtoken**并**sp_bindsession**) 所需。 以下方案显示如何使用启用 MARS 的连接来取代多个连接。  

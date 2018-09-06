@@ -3,11 +3,11 @@ title: 实体框架数据提供程序
 ms.date: 03/30/2017
 ms.assetid: 5252e639-ff11-4818-82e7-07221ed6ae23
 ms.openlocfilehash: cd18e8b971af9103fdaecaebfe6f0c8e0ae9a0d3
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43740294"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "44038070"
 ---
 # <a name="entity-framework-data-providers"></a>实体框架数据提供程序
 本节提供有关支持[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]的数据提供程序的信息。  
