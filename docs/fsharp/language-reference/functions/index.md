@@ -1,20 +1,19 @@
 ---
 title: 函数 (F#)
-description: '了解有关在 F # 和 F # 如何支持常见的函数编程构造函数。'
+description: '了解有关 F # 和 F # 如何支持通用函数编程构造中的函数。'
 ms.date: 05/16/2016
-ms.openlocfilehash: c96dddb07ca671a9e823fb25f6f6c3788fe32fd2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7a5b54b7bcfdeee7018dba38016db6182ef95ff0
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33566400"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43803907"
 ---
 # <a name="functions"></a>函数
 
 函数是任何编程语言中程序执行的基本单元。 和其他语言一样，F# 函数有一个名称，可以有形参并采用实参，且具有一个主体。 F# 还支持函数编程构造，例如将函数视为值、在表达式中使用未命名的函数、组合函数以形成新的函数、扩充函数以及通过部分应用函数参数来隐式定义函数。
 
 可通过使用 `let` 关键字或 `let rec` 关键字组合（如果函数为递归函数）定义函数。
-
 
 ## <a name="syntax"></a>语法
 
@@ -26,6 +25,7 @@ let rec function-name parameter-list = recursive-function-body
 ```
 
 ## <a name="remarks"></a>备注
+
 *function-name* 是表示函数的标识符。 *parameter-list* 包含由空格分隔的连续参数。 可按“参数”部分所述，为每个参数指定一个显式类型。 如果未指定特定参数类型，编译器将尝试通过函数体推断类型。 *function-body* 包含一个表达式。 组成函数体的表达式通常是一个由许多表达式组成的复合表达式，组成它的那些表达式以作为返回值的最终表达式结束。 *return-type* 是一个冒号后跟一个类型，且为可选项。 如果不显式指定返回值的类型，编译器将从最终表达式确定返回类型。
 
 简单的函数定义类似：
@@ -38,8 +38,8 @@ let f x = x + 1
 
 可将函数标记为 `inline`。 有关 `inline` 的信息，请参阅[内联函数](../functions/inline-functions.md)。
 
-
 ## <a name="scope"></a>范围
+
 在模块范围以外的任何级别范围上，重用某个值或函数名称不是错误。 重用某个名称时，后来声明的名称将隐藏前面声明的名称。 但在模块中的顶级别范围内，名称必须唯一。 例如，以下代码如果出现在模块范围内则会产生错误，而出现在某个函数内部则不会产生错误：
 
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet101.fs)]
@@ -47,8 +47,9 @@ let f x = x + 1
 但以下代码在任何级别的范围内都可接受：
 
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet102.fs)]
-    
-#### <a name="parameters"></a>参数
+
+### <a name="parameters"></a>参数
+
 参数的名称列在函数名称之后。 可以为参数指定类型，如下例所示：
 
 ```fsharp
@@ -69,16 +70,16 @@ let f x = (x, x)
 
 该函数从任何类型的一个参数中创建一个元组。 因为未指定类型，所以该函数可用于任何参数类型。 有关详细信息，请参阅[自动泛化](../generics/automatic-generalization.md)。
 
-
 ## <a name="function-bodies"></a>函数体
+
 函数体可包含本地变量和函数的定义。 此类变量和函数位于当前函数的主体范围内，而非其外部。 如果已启用轻量语法选项，则必须使用缩进来指示定义位于函数体中，如下例所示：
 
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet103.fs)]
 
 有关详细信息，请参阅[代码格式设置准则](../code-formatting-guidelines.md)和[详细语法](../verbose-syntax.md)。
 
-
 ## <a name="return-values"></a>返回值
+
 编译器使用函数体中的最终表达式来确定返回值和类型。 编译器可能会从前面的表达式来推断最终表达式的类型。 在前一部分中所示的函数 `cylinderVolume` 中，可从文本 `3.14159` 的类型确定 `pi` 的类型为 `float`。 编译器使用 `pi` 的类型来确定表达式 `h * pi * r * r` 的类型为 `float`。 因此，函数的总体返回类型为 `float`。
 
 若要显式指定返回值，请编写如下代码：
@@ -92,6 +93,7 @@ let cylinderVolume (radius : float) (length : float) : float
 ```
 
 ## <a name="calling-a-function"></a>调用函数
+
 可以通过以下方式调用函数：指定函数名称，后跟一个空格，然后是由空格分隔的任何参数。 例如，若要调用函数 **cylinderVolume**，并将结果赋给值 **vol**，可编写以下代码：
 
 ```fsharp
@@ -99,6 +101,7 @@ let vol = cylinderVolume 2.0 3.0
 ```
 
 ## <a name="partial-application-of-arguments"></a>部分应用参数
+
 如果提供的参数数目少于指定的参数数目，则可创建一个应采用其余参数的新函数。 这种处理参数的方法称为“柯里化”，而且这是 F# 等函数编程语言的一个特性。 例如，假设正在处理两种尺寸的管道：一种管道的半径为 **2.0**，另一种管道的半径为 **3.0**。 你可能会创建用于确定管道体积的函数，如下所示：
 
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet106.fs)]
@@ -106,16 +109,17 @@ let vol = cylinderVolume 2.0 3.0
 然后，会根据需要提供附加参数，用来表示两个不同尺寸的管道的各种长度：
 
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet107.fs)]
-    
+
 ## <a name="recursive-functions"></a>递归函数
+
 递归函数是调用自身的函数。 它们要求在指定 **let** 关键字之后指定 **rec** 关键字。 从函数的主体内调用递归函数与调用任何函数调用是一样的。 以下递归函数计算第 n 个斐波纳契数。 斐波纳契数序列很早就为人所知，此序列中的每个连续的数字都是序列中前两个数字之和。
 
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet108.fs)]
 
 如果在编写递归函数时不细心或者不清楚一些特殊技术（例如累加器和延续的使用），则有些递归函数可能会造成执行效率低下或使程序堆栈溢出。
 
-
 ## <a name="function-values"></a>函数值
+
 在 F# 中，所有函数都被视为值；实际上，它们被称为“函数值”。 因为函数是值，所以它们可用作其他函数的参数，或在需要使用值的其他上下文中使用。 下面是一个采用函数值作为参数的函数示例：
 
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet109.fs)]
@@ -132,16 +136,16 @@ let vol = cylinderVolume 2.0 3.0
 
 结果是 200。
 
-
 ## <a name="lambda-expressions"></a>Lambda 表达式
+
 *lambda 表达式* 是未命名的函数。 在上述示例中，可以不定义命名的函数 **increment** 和 **mul**，而使用如下的 lambda 表达式：
 
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet112.fs)]
 
 可通过使用 `fun` 关键字来定义 lambda 表达式。 lambda 表达式类似于函数定义，只不过使用了 `->` 标记将参数列表与函数体分隔，而不是使用 `=` 标记。 与在常规函数定义中一样，可推断或显式指定参数类型，并且从主体中最后一个表达式的类型推断出 lambda 表达式的返回类型。 有关详细信息，请参阅 [Lambda 表达式：`fun` 关键字](../functions/lambda-expressions-the-fun-keyword.md)。
 
-
 ## <a name="function-composition-and-pipelining"></a>函数组合和流水线处理
+
 F# 中的函数可由其他函数组合而成。 由 **function1** 和 **function2** 这两个函数组合而成的另一个函数表示先应用 **function1**，接着应用 **function2**：
 
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet113.fs)]
@@ -195,10 +199,10 @@ let result4 = Pipeline2 2
 ```
 
 ## <a name="overloading-functions"></a>重载函数
+
 可以重载类型（而非函数）的方法。 有关详细信息，请参阅[方法](../members/methods.md)。
 
-
 ## <a name="see-also"></a>请参阅
-[值](../values/index.md)
 
-[F# 语言参考](../index.md)
+- [值](../values/index.md)
+- [F# 语言参考](../index.md)

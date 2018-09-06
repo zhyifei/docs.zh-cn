@@ -3,11 +3,11 @@ title: HTTP 确认通道
 ms.date: 03/30/2017
 ms.assetid: 469f3056-5ef2-4753-8acf-b574d23d83cf
 ms.openlocfilehash: d83f3aa590471aa3d83b8f7bd1464ec1e6e106fc
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43559538"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43856227"
 ---
 # <a name="http-acknowledgement-channel"></a>HTTP 确认通道
 HTTP 确认通道是一个更改单向消息传递模式的分层通道示例，它允许服务确认或拒绝传入的消息，而不是在接收时自动发送确认。 HTTP 确认通道还允许服务延迟确认，直到服务可以做出将对消息进行处理的业务级别的保证。  

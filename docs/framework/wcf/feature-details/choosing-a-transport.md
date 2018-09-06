@@ -5,11 +5,11 @@ helpviewer_keywords:
 - choosing transports [WCF]
 ms.assetid: b169462b-f7b6-4cf4-9fca-d306909ee8bf
 ms.openlocfilehash: c98fd4bb76074c2d96b702a37bf1964600d365e3
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43738841"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43864623"
 ---
 # <a name="choosing-a-transport"></a>选择传输方式
 本主题讨论 Windows Communication Foundation (WCF) 中包含的三个主要传输之间进行选择的条件： HTTP、 TCP 和命名的管道。 WCF 还包括消息队列 (也称为 MSMQ) 传输，但本文不讨论消息队列。  

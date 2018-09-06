@@ -16,11 +16,11 @@ author: Xansky
 ms.author: mhopkins
 manager: markl
 ms.openlocfilehash: 7229c9468948061726e81e3c79d2ab56e7497fa4
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43672873"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43858224"
 ---
 # <a name="find-and-highlight-text-using-ui-automation"></a>使用 UI 自动化查找和突出显示文本
 > [!NOTE]

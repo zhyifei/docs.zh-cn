@@ -2,12 +2,12 @@
 title: 关键字参考 (F#)
 description: '查找指向所有 F # 语言关键字有关的信息。'
 ms.date: 05/16/2016
-ms.openlocfilehash: 18bf5f00cdd5250c0fbd503d096e5415a8b9feea
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 0016f68b2872183a2b4dd865ce229b6a76250b78
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43526184"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43856019"
 ---
 # <a name="keyword-reference"></a>关键字参考
 
@@ -132,8 +132,7 @@ ms.locfileid: "43526184"
 * `volatile`
 
 ## <a name="see-also"></a>请参阅
-[F# 语言参考](index.md)
 
-[符号和运算符参考](symbol-and-operator-reference/index.md)
-
-[编译器选项](compiler-options.md)
+- [F# 语言参考](index.md)
+- [符号和运算符参考](symbol-and-operator-reference/index.md)
+- [编译器选项](compiler-options.md)

@@ -20,11 +20,11 @@ helpviewer_keywords:
 - Double data type
 ms.assetid: 0c5670f7-fcb1-453a-bef1-374730cd38fd
 ms.openlocfilehash: 5d2d84f298b9cf6138e84ef287f6ea9212da2960
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
-ms.translationtype: HT
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 09/05/2018
-ms.locfileid: "43734807"
+ms.locfileid: "43806119"
 ---
 # <a name="double-data-type-visual-basic"></a>Double 数据类型 (Visual Basic)
 保存有符号 IEEE 64 位 （8 字节） 双精度浮点数，范围为从-1.79769313486231570 e + 308 到-4.94065645841246544 e-324 负值，从 4.94065645841246544 e-324 1.79769313486231570 e + 308 到正值。 双精度的数字存储一个实数的近似值。  

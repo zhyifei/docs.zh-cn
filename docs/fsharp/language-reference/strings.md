@@ -2,12 +2,12 @@
 title: 字符串 (F#)
 description: "了解 F # 'string' 类型如何表示为一系列 Unicode 字符的不可变的文本。"
 ms.date: 05/16/2016
-ms.openlocfilehash: 7309e93bf0a6518d03a9f850804a4f580e2c96b1
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 21971602093bc84b0df47d4ae46a14fb936c28bb
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43561286"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43799338"
 ---
 # <a name="strings"></a>字符串
 
@@ -17,6 +17,7 @@ ms.locfileid: "43561286"
 `string`类型将不可变的文本表示为一系列 Unicode 字符。 `string` 是 .NET Framework 中 `System.String` 的别名。
 
 ## <a name="remarks"></a>备注
+
 字符串文本用引号 （"） 字符分隔。 反斜杠字符 ( \\ ) 使用某些特殊字符进行编码。 反斜杠和组合在一起的下一个字符被称为*转义序列*。 转义序列在 F # 字符串文本会显示下表中受支持。
 
 |字符|转义序列|
@@ -66,23 +67,27 @@ def
 您可以通过无符号字节，类型的数组表示 ASCII 字符串`byte[]`。 添加后缀`B`到字符串文本以指示它是一个 ASCII 字符串。 ASCII 字符串文本使用的字节数组支持相同的转义序列作为 Unicode 字符串，除了 Unicode 转义序列。
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet1004.fs)]
-    
+
 ## <a name="string-operators"></a>字符串运算符
+
 有两种方法来连接字符串： 通过使用`+`运算符或通过使用`^`运算符。 `+`运算符维护与.NET Framework 字符串处理功能的兼容性。
 
 下面的示例说明了字符串串联。
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet1006.fs)]
-    
+
 ## <a name="string-class"></a>字符串类
+
 因为 F # 中的字符串类型是实际.NET Framework`System.String`类型，所有`System.String`成员均可。 这包括`+`运算符，用来连接字符串`Length`属性，并`Chars`Unicode 字符数组的形式返回字符串的属性。 有关字符串的详细信息，请参阅`System.String`。
 
 通过使用`Chars`属性的`System.String`，可以通过指定一个索引，如下面的代码中所示访问字符串中的单个字符。
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet1005.fs)]
-    
+
 ## <a name="string-module"></a>字符串模块
+
 字符串处理的附加功能包含在`String`中的模块`FSharp.Core`命名空间。 有关详细信息，请参阅[Core.String 模块](https://msdn.microsoft.com/visualfsharpdocs/conceptual/core.string-module-%5bfsharp%5d)。
 
 ## <a name="see-also"></a>请参阅
-[F# 语言参考](index.md)
+
+- [F# 语言参考](index.md)

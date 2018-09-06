@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 1952121a6c0c735926944c839c3c7e8a8db5fb53
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43723189"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43861684"
 ---
 # <a name="corbindtoruntimehost-function"></a>CorBindToRuntimeHost 函数
 使主机能够加载到进程的指定公共语言运行时 (CLR) 版本。  

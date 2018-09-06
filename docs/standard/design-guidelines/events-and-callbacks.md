@@ -10,17 +10,17 @@ helpviewer_keywords:
 ms.assetid: 48b55c60-495f-4089-9396-97f9122bba7c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 90cc40024de627f151a4d0df879a65e5900004b4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 390c12af7107bb78fc261c55ea15390cf9eaa5b7
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33573628"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43862944"
 ---
 # <a name="events-and-callbacks"></a>事件和回调
-回调是允许回调到通过委托的用户代码的框架的扩展点。 这些委托通常通过方法的参数传递到框架。  
+回调是扩展性点，允许一个框架，用于回调到通过委托的用户代码。 通常，这些委托将传递到框架通过方法的参数。  
   
- 事件是一种特殊的回调情况提供委托 （事件处理程序） 支持方便且一致的语法。 此外，Visual Studio 的语句完成和设计器提供在使用基于事件的 Api 的帮助。 (请参阅[事件设计](../../../docs/standard/design-guidelines/event.md)。)  
+ 事件是一种特殊的回调的情况提供委托 （事件处理程序） 支持便捷且一致的语法。 此外，Visual Studio 的语句完成和设计人员提供的帮助中使用基于事件的 Api。 (请参阅[事件设计](../../../docs/standard/design-guidelines/event.md)。)  
   
  **✓ CONSIDER** 使用回调，以允许用户提供自定义代码来执行的框架。  
   
@@ -32,18 +32,19 @@ ms.locfileid: "33573628"
   
  **✓ DO** 使用新`Func<...>`， `Action<...>`，或`Expression<...>`而不是定义回调的 Api 时的自定义委托的类型。  
   
- `Func<...>` 和`Action<...>`表示泛型委托。 `Expression<...>` 表示函数定义，可以编译并随后在运行时调用但是也可序列化和传递到远程进程。  
+ `Func<...>` 和`Action<...>`表示泛型委托。 `Expression<...>` 表示函数定义，可以编译并随后还调用在运行时，但可进行序列化和传递到远程进程。  
   
  **✓ DO** 测量和了解使用性能影响的`Expression<...>`，而不是使用`Func<...>`和`Action<...>`委托。  
   
- `Expression<...>` 类型是在逻辑上等效于大多数情况下`Func<...>`和`Action<...>`委托。 它们之间的主要区别是委托旨在用于本地进程方案;表达式用于其中是有益的和可能在远程进程或计算机中的表达式进行求值的情况。  
+ `Expression<...>` 类型是在逻辑上等同于大多数情况下`Func<...>`和`Action<...>`委托。 主要区别是，委托应将用于的本地进程方案;表达式适用于的情况下十分有益和无法计算表达式中的远程进程或计算机。  
   
  **✓ DO** 了解，通过调用委托，正在执行任意代码，且无法具有安全、 正确性和兼容性影响。  
   
- *部分 © 2005年，2009 Microsoft Corporation。保留所有权利。*  
+ *部分版权 © 2005, 2009 Microsoft Corporation。保留所有权利。*  
   
- *通过从皮尔逊教育版，Inc.的权限重新打印[Framework 设计准则： 约定、 语法和可重用.NET 库，版本 2 的模式](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619)通过 Krzysztof Cwalina 和 Brad Abrams，发布 2008 年 10 月 22，通过Microsoft Windows 开发系列的一部分的 Addison Wesley Professional。*  
+ *经 Pearson Education, Inc 授权，转载自[框架设计准则：可重用的 .NET 库的约定、习惯用语和模式，第2版](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) 作者：Krzysztof Cwalina 和 Brad Abrams，由 Addison Wesley Professional 于 2008 年 10 月 22 日印发，作为 Microsoft Windows 开发系列的一部分。*  
   
-## <a name="see-also"></a>请参阅  
- [扩展性设计](../../../docs/standard/design-guidelines/designing-for-extensibility.md)  
- [框架设计指南](../../../docs/standard/design-guidelines/index.md)
+## <a name="see-also"></a>请参阅
+
+- [扩展性设计](../../../docs/standard/design-guidelines/designing-for-extensibility.md)  
+- [框架设计指南](../../../docs/standard/design-guidelines/index.md)

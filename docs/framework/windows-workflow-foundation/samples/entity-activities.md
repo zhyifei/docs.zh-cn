@@ -3,11 +3,11 @@ title: 实体活动
 ms.date: 03/30/2017
 ms.assetid: c04f7413-7fb8-40c6-819e-dc92b145b62e
 ms.openlocfilehash: 03bd0e42c70f1226558d492bcb3b2cfa5c7010f2
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43385799"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43861148"
 ---
 # <a name="entity-activities"></a>实体活动
 此示例演示如何使用 Windows Workflow Foundation 与 ADO.NET 实体框架来简化数据访问。  
