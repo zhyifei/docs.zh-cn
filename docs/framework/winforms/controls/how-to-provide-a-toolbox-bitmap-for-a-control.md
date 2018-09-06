@@ -1,14 +1,6 @@
 ---
 title: 如何：为控件提供工具箱位图
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-winforms
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -17,26 +9,21 @@ helpviewer_keywords:
 - custom controls [Windows Forms], Toolbox bitmaps
 - bitmaps [Windows Forms], custom controls
 ms.assetid: 0ed0840a-616d-41ba-a27d-3573241932ad
-caps.latest.revision: 20
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 5d34cbb88805d9c034df61aba89ebd7bb224b1da
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: aa32850b9bcd1a15a93bd6c80b2278278d12c417
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43746540"
 ---
-# <a name="how-to-provide-a-toolbox-bitmap-for-a-control"></a><span data-ttu-id="8b7b1-102">如何：为控件提供工具箱位图</span><span class="sxs-lookup"><span data-stu-id="8b7b1-102">How to: Provide a Toolbox Bitmap for a Control</span></span>
-<span data-ttu-id="8b7b1-103">如果你想要为您的控件的特殊图标将出现在**工具箱**，你可以通过使用指定的特定映像<xref:System.Drawing.ToolboxBitmapAttribute>。</span><span class="sxs-lookup"><span data-stu-id="8b7b1-103">If you want to have a special icon for your control appear in the **Toolbox**, you can specify a particular image by using the <xref:System.Drawing.ToolboxBitmapAttribute>.</span></span> <span data-ttu-id="8b7b1-104">此类是一个特性，是一种可以附加到其他类上的特殊类。</span><span class="sxs-lookup"><span data-stu-id="8b7b1-104">This class is an *attribute*, a special kind of class you can attach to other classes.</span></span> <span data-ttu-id="8b7b1-105">有关特性的详细信息，请参阅[不在生成中： Visual Basic 中的特性概述](http://msdn.microsoft.com/library/0d0cff64-892d-4f57-83bd-bef388553d4f)适用于 Visual Basic 和[属性](http://msdn.microsoft.com/library/ae334cee-d96c-4243-a5e3-06dd7fcaf205)对于 Visual C#。</span><span class="sxs-lookup"><span data-stu-id="8b7b1-105">For more information about attributes, see [NOT IN BUILD: Attributes Overview in Visual Basic](http://msdn.microsoft.com/library/0d0cff64-892d-4f57-83bd-bef388553d4f) for Visual Basic and [Attributes](http://msdn.microsoft.com/library/ae334cee-d96c-4243-a5e3-06dd7fcaf205) for Visual C#.</span></span>  
+# <a name="how-to-provide-a-toolbox-bitmap-for-a-control"></a><span data-ttu-id="424a0-102">如何：为控件提供工具箱位图</span><span class="sxs-lookup"><span data-stu-id="424a0-102">How to: Provide a Toolbox Bitmap for a Control</span></span>
+<span data-ttu-id="424a0-103">如果你想要有一个特殊的图标为您的控件出现在**工具箱**，可以通过使用指定的特定映像<xref:System.Drawing.ToolboxBitmapAttribute>。</span><span class="sxs-lookup"><span data-stu-id="424a0-103">If you want to have a special icon for your control appear in the **Toolbox**, you can specify a particular image by using the <xref:System.Drawing.ToolboxBitmapAttribute>.</span></span> <span data-ttu-id="424a0-104">此类是一个特性，是一种可以附加到其他类上的特殊类。</span><span class="sxs-lookup"><span data-stu-id="424a0-104">This class is an *attribute*, a special kind of class you can attach to other classes.</span></span> <span data-ttu-id="424a0-105">有关属性的详细信息，请参阅[(Visual Basic 中) 的特性概述](../../../visual-basic/programming-guide/concepts/attributes/index.md)适用于 Visual Basic 或[特性 (C#)](../../../csharp/programming-guide/concepts/attributes/index.md)适用于 C#。</span><span class="sxs-lookup"><span data-stu-id="424a0-105">For more information about attributes, see [Attributes overview (Visual Basic)](../../../visual-basic/programming-guide/concepts/attributes/index.md) for Visual Basic or [Attributes (C#)](../../../csharp/programming-guide/concepts/attributes/index.md) for C#.</span></span>  
   
- <span data-ttu-id="8b7b1-106">使用<xref:System.Drawing.ToolboxBitmapAttribute>，你可以指定一个字符串，指示 16 x 16 像素位图的路径和文件名称。</span><span class="sxs-lookup"><span data-stu-id="8b7b1-106">Using the <xref:System.Drawing.ToolboxBitmapAttribute>, you can specify a string that indicates the path and file name for a 16 by 16 pixel bitmap.</span></span> <span data-ttu-id="8b7b1-107">添加到“工具箱”后，此位图显示在对应的控件旁边。</span><span class="sxs-lookup"><span data-stu-id="8b7b1-107">This bitmap then appears next to your control when added to the **Toolbox**.</span></span> <span data-ttu-id="8b7b1-108">你还可以指定<xref:System.Type>，在这种情况下加载与该类型相关联的位图。</span><span class="sxs-lookup"><span data-stu-id="8b7b1-108">You can also specify a <xref:System.Type>, in which case the bitmap associated with that type is loaded.</span></span> <span data-ttu-id="8b7b1-109">如果同时指定了<xref:System.Type>和一个字符串，该控件搜索图像资源中包含由指定的类型的程序集的字符串参数指定的名称与<xref:System.Type>参数。</span><span class="sxs-lookup"><span data-stu-id="8b7b1-109">If you specify both a <xref:System.Type> and a string, the control searches for an image resource with the name specified by the string parameter in the assembly containing the type specified by the <xref:System.Type> parameter.</span></span>  
+ <span data-ttu-id="424a0-106">使用<xref:System.Drawing.ToolboxBitmapAttribute>，可以指定一个字符串，指示一个 16 × 16 像素的位图的路径和文件名称。</span><span class="sxs-lookup"><span data-stu-id="424a0-106">Using the <xref:System.Drawing.ToolboxBitmapAttribute>, you can specify a string that indicates the path and file name for a 16 by 16 pixel bitmap.</span></span> <span data-ttu-id="424a0-107">添加到“工具箱”后，此位图显示在对应的控件旁边。</span><span class="sxs-lookup"><span data-stu-id="424a0-107">This bitmap then appears next to your control when added to the **Toolbox**.</span></span> <span data-ttu-id="424a0-108">此外可以指定<xref:System.Type>，在这种情况下加载与该类型关联的位图。</span><span class="sxs-lookup"><span data-stu-id="424a0-108">You can also specify a <xref:System.Type>, in which case the bitmap associated with that type is loaded.</span></span> <span data-ttu-id="424a0-109">如果同时指定<xref:System.Type>字符串，该控件中搜索的图像资源中包含由指定的类型的程序集的字符串参数所指定的名称和<xref:System.Type>参数。</span><span class="sxs-lookup"><span data-stu-id="424a0-109">If you specify both a <xref:System.Type> and a string, the control searches for an image resource with the name specified by the string parameter in the assembly containing the type specified by the <xref:System.Type> parameter.</span></span>  
   
-### <a name="to-specify-a-toolbox-bitmap-for-your-control"></a><span data-ttu-id="8b7b1-110">指定控件的工具箱位图</span><span class="sxs-lookup"><span data-stu-id="8b7b1-110">To specify a Toolbox bitmap for your control</span></span>  
+### <a name="to-specify-a-toolbox-bitmap-for-your-control"></a><span data-ttu-id="424a0-110">指定控件的工具箱位图</span><span class="sxs-lookup"><span data-stu-id="424a0-110">To specify a Toolbox bitmap for your control</span></span>  
   
-1.  <span data-ttu-id="8b7b1-111">添加<xref:System.Drawing.ToolboxBitmapAttribute>到之前控件的类声明`Class`适用于 visual Basic 和更高版本的类声明适用于 Visual C# 中的关键字。</span><span class="sxs-lookup"><span data-stu-id="8b7b1-111">Add the <xref:System.Drawing.ToolboxBitmapAttribute> to the class declaration of your control before the `Class` keyword for visual Basic, and above the class declaration for Visual C#.</span></span>  
+1.  <span data-ttu-id="424a0-111">添加<xref:System.Drawing.ToolboxBitmapAttribute>到类声明之前控件的`Class`对于 visual Basic，及更高版本的类声明对于 Visual C# 关键字。</span><span class="sxs-lookup"><span data-stu-id="424a0-111">Add the <xref:System.Drawing.ToolboxBitmapAttribute> to the class declaration of your control before the `Class` keyword for visual Basic, and above the class declaration for Visual C#.</span></span>  
   
     ```vb  
     ' Specifies the bitmap associated with the Button type.  
@@ -71,14 +58,15 @@ ms.lasthandoff: 04/26/2018
     }  
     ```  
   
-2.  <span data-ttu-id="8b7b1-112">重新生成项目。</span><span class="sxs-lookup"><span data-stu-id="8b7b1-112">Rebuild the project.</span></span>  
+2.  <span data-ttu-id="424a0-112">重新生成项目。</span><span class="sxs-lookup"><span data-stu-id="424a0-112">Rebuild the project.</span></span>  
   
     > [!NOTE]
-    >  <span data-ttu-id="8b7b1-113">对于自动生成的控件和组件，位图不会出现在工具箱中。</span><span class="sxs-lookup"><span data-stu-id="8b7b1-113">The bitmap does not appear in the Toolbox for autogenerated controls and components.</span></span> <span data-ttu-id="8b7b1-114">若要查看位图，请使用“选择工具箱项”对话框重载控件。</span><span class="sxs-lookup"><span data-stu-id="8b7b1-114">To see the bitmap, reload the control by using the **Choose Toolbox Items** dialog box.</span></span> <span data-ttu-id="8b7b1-115">有关详细信息，请参阅[演练：使用自定义组件自动填充工具箱](../../../../docs/framework/winforms/controls/walkthrough-automatically-populating-the-toolbox-with-custom-components.md)。</span><span class="sxs-lookup"><span data-stu-id="8b7b1-115">For more information, see [Walkthrough: Automatically Populating the Toolbox with Custom Components](../../../../docs/framework/winforms/controls/walkthrough-automatically-populating-the-toolbox-with-custom-components.md).</span></span>  
+    >  <span data-ttu-id="424a0-113">对于自动生成的控件和组件，位图不会出现在工具箱中。</span><span class="sxs-lookup"><span data-stu-id="424a0-113">The bitmap does not appear in the Toolbox for autogenerated controls and components.</span></span> <span data-ttu-id="424a0-114">若要查看位图，请使用“选择工具箱项”对话框重载控件。</span><span class="sxs-lookup"><span data-stu-id="424a0-114">To see the bitmap, reload the control by using the **Choose Toolbox Items** dialog box.</span></span> <span data-ttu-id="424a0-115">有关详细信息，请参阅[演练：使用自定义组件自动填充工具箱](../../../../docs/framework/winforms/controls/walkthrough-automatically-populating-the-toolbox-with-custom-components.md)。</span><span class="sxs-lookup"><span data-stu-id="424a0-115">For more information, see [Walkthrough: Automatically Populating the Toolbox with Custom Components](../../../../docs/framework/winforms/controls/walkthrough-automatically-populating-the-toolbox-with-custom-components.md).</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="8b7b1-116">请参阅</span><span class="sxs-lookup"><span data-stu-id="8b7b1-116">See Also</span></span>  
- <xref:System.Drawing.ToolboxBitmapAttribute>  
- [<span data-ttu-id="8b7b1-117">演练：使用自定义组件自动填充工具箱</span><span class="sxs-lookup"><span data-stu-id="8b7b1-117">Walkthrough: Automatically Populating the Toolbox with Custom Components</span></span>](../../../../docs/framework/winforms/controls/walkthrough-automatically-populating-the-toolbox-with-custom-components.md)  
- [<span data-ttu-id="8b7b1-118">设计时开发 Windows 窗体控件</span><span class="sxs-lookup"><span data-stu-id="8b7b1-118">Developing Windows Forms Controls at Design Time</span></span>](../../../../docs/framework/winforms/controls/developing-windows-forms-controls-at-design-time.md)  
- [<span data-ttu-id="8b7b1-119">属性 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="8b7b1-119">Attributes (Visual Basic)</span></span>](~/docs/visual-basic/language-reference/attributes.md)  
- [<span data-ttu-id="8b7b1-120">特性</span><span class="sxs-lookup"><span data-stu-id="8b7b1-120">Attributes</span></span>](http://msdn.microsoft.com/library/ae334cee-d96c-4243-a5e3-06dd7fcaf205)
+## <a name="see-also"></a><span data-ttu-id="424a0-116">请参阅</span><span class="sxs-lookup"><span data-stu-id="424a0-116">See also</span></span>
+
+- <xref:System.Drawing.ToolboxBitmapAttribute>
+- [<span data-ttu-id="424a0-117">演练：使用自定义组件自动填充工具箱</span><span class="sxs-lookup"><span data-stu-id="424a0-117">Walkthrough: Automatically Populating the Toolbox with Custom Components</span></span>](walkthrough-automatically-populating-the-toolbox-with-custom-components.md)
+- [<span data-ttu-id="424a0-118">设计时开发 Windows 窗体控件</span><span class="sxs-lookup"><span data-stu-id="424a0-118">Developing Windows Forms Controls at Design Time</span></span>](developing-windows-forms-controls-at-design-time.md)
+- [<span data-ttu-id="424a0-119">特性概述 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="424a0-119">Attributes overview (Visual Basic)</span></span>](../../../visual-basic/programming-guide/concepts/attributes/index.md)
+- [<span data-ttu-id="424a0-120">特性 (C#)</span><span class="sxs-lookup"><span data-stu-id="424a0-120">Attributes (C#)</span></span>](../../../csharp/programming-guide/concepts/attributes/index.md)

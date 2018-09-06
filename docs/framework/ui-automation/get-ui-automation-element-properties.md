@@ -12,37 +12,37 @@ author: Xansky
 ms.author: mhopkins
 manager: markl
 ms.openlocfilehash: 9876aa894c49ec7af1ecd240e12e0f70eccfd89f
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43467352"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43786216"
 ---
-# <a name="get-ui-automation-element-properties"></a><span data-ttu-id="d50bf-102">获取 UI 自动化元素的属性</span><span class="sxs-lookup"><span data-stu-id="d50bf-102">Get UI Automation Element Properties</span></span>
+# <a name="get-ui-automation-element-properties"></a><span data-ttu-id="fe627-102">获取 UI 自动化元素的属性</span><span class="sxs-lookup"><span data-stu-id="fe627-102">Get UI Automation Element Properties</span></span>
 > [!NOTE]
->  <span data-ttu-id="d50bf-103">本文档适用于想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空间中定义的托管 <xref:System.Windows.Automation> 类的 .NET Framework 开发人员。</span><span class="sxs-lookup"><span data-stu-id="d50bf-103">This documentation is intended for .NET Framework developers who want to use the managed [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] classes defined in the <xref:System.Windows.Automation> namespace.</span></span> <span data-ttu-id="d50bf-104">有关最新信息[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]，请参阅[Windows 自动化 API: UI 自动化](https://go.microsoft.com/fwlink/?LinkID=156746)。</span><span class="sxs-lookup"><span data-stu-id="d50bf-104">For the latest information about [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], see [Windows Automation API: UI Automation](https://go.microsoft.com/fwlink/?LinkID=156746).</span></span>  
+>  <span data-ttu-id="fe627-103">本文档适用于想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空间中定义的托管 <xref:System.Windows.Automation> 类的 .NET Framework 开发人员。</span><span class="sxs-lookup"><span data-stu-id="fe627-103">This documentation is intended for .NET Framework developers who want to use the managed [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] classes defined in the <xref:System.Windows.Automation> namespace.</span></span> <span data-ttu-id="fe627-104">有关最新信息[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]，请参阅[Windows 自动化 API: UI 自动化](https://go.microsoft.com/fwlink/?LinkID=156746)。</span><span class="sxs-lookup"><span data-stu-id="fe627-104">For the latest information about [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], see [Windows Automation API: UI Automation](https://go.microsoft.com/fwlink/?LinkID=156746).</span></span>  
   
- <span data-ttu-id="d50bf-105">本主题演示如何检索的属性[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]元素。</span><span class="sxs-lookup"><span data-stu-id="d50bf-105">This topic shows how to retrieve properties of a [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] element.</span></span>  
+ <span data-ttu-id="fe627-105">本主题演示如何检索的属性[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]元素。</span><span class="sxs-lookup"><span data-stu-id="fe627-105">This topic shows how to retrieve properties of a [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] element.</span></span>  
   
-### <a name="get-a-current-property-value"></a><span data-ttu-id="d50bf-106">获取当前属性值</span><span class="sxs-lookup"><span data-stu-id="d50bf-106">Get a Current Property Value</span></span>  
+### <a name="get-a-current-property-value"></a><span data-ttu-id="fe627-106">获取当前属性值</span><span class="sxs-lookup"><span data-stu-id="fe627-106">Get a Current Property Value</span></span>  
   
-1.  <span data-ttu-id="d50bf-107">获取<xref:System.Windows.Automation.AutomationElement>你想要获取其属性。</span><span class="sxs-lookup"><span data-stu-id="d50bf-107">Obtain the <xref:System.Windows.Automation.AutomationElement> whose property you wish to get.</span></span>  
+1.  <span data-ttu-id="fe627-107">获取<xref:System.Windows.Automation.AutomationElement>你想要获取其属性。</span><span class="sxs-lookup"><span data-stu-id="fe627-107">Obtain the <xref:System.Windows.Automation.AutomationElement> whose property you wish to get.</span></span>  
   
-2.  <span data-ttu-id="d50bf-108">调用<xref:System.Windows.Automation.AutomationElement.GetCurrentPropertyValue%2A>，或检索<xref:System.Windows.Automation.AutomationElement.Current%2A>属性结构并获取其成员之一的值。</span><span class="sxs-lookup"><span data-stu-id="d50bf-108">Call <xref:System.Windows.Automation.AutomationElement.GetCurrentPropertyValue%2A>, or retrieve the <xref:System.Windows.Automation.AutomationElement.Current%2A> property structure and get the value from one of its members.</span></span>  
+2.  <span data-ttu-id="fe627-108">调用<xref:System.Windows.Automation.AutomationElement.GetCurrentPropertyValue%2A>，或检索<xref:System.Windows.Automation.AutomationElement.Current%2A>属性结构并获取其成员之一的值。</span><span class="sxs-lookup"><span data-stu-id="fe627-108">Call <xref:System.Windows.Automation.AutomationElement.GetCurrentPropertyValue%2A>, or retrieve the <xref:System.Windows.Automation.AutomationElement.Current%2A> property structure and get the value from one of its members.</span></span>  
   
-### <a name="get-a-cached-property-value"></a><span data-ttu-id="d50bf-109">获取缓存的属性值</span><span class="sxs-lookup"><span data-stu-id="d50bf-109">Get a Cached Property Value</span></span>  
+### <a name="get-a-cached-property-value"></a><span data-ttu-id="fe627-109">获取缓存的属性值</span><span class="sxs-lookup"><span data-stu-id="fe627-109">Get a Cached Property Value</span></span>  
   
-1.  <span data-ttu-id="d50bf-110">获取<xref:System.Windows.Automation.AutomationElement>你想要获取其属性。</span><span class="sxs-lookup"><span data-stu-id="d50bf-110">Obtain the <xref:System.Windows.Automation.AutomationElement> whose property you wish to get.</span></span> <span data-ttu-id="d50bf-111">该属性必须在指定<xref:System.Windows.Automation.CacheRequest>。</span><span class="sxs-lookup"><span data-stu-id="d50bf-111">The property must have been specified in the <xref:System.Windows.Automation.CacheRequest>.</span></span>  
+1.  <span data-ttu-id="fe627-110">获取<xref:System.Windows.Automation.AutomationElement>你想要获取其属性。</span><span class="sxs-lookup"><span data-stu-id="fe627-110">Obtain the <xref:System.Windows.Automation.AutomationElement> whose property you wish to get.</span></span> <span data-ttu-id="fe627-111">该属性必须在指定<xref:System.Windows.Automation.CacheRequest>。</span><span class="sxs-lookup"><span data-stu-id="fe627-111">The property must have been specified in the <xref:System.Windows.Automation.CacheRequest>.</span></span>  
   
-2.  <span data-ttu-id="d50bf-112">调用<xref:System.Windows.Automation.AutomationElement.GetCachedPropertyValue%2A>，或检索<xref:System.Windows.Automation.AutomationElement.Cached%2A>属性结构并获取其成员之一的值。</span><span class="sxs-lookup"><span data-stu-id="d50bf-112">Call <xref:System.Windows.Automation.AutomationElement.GetCachedPropertyValue%2A>, or retrieve the <xref:System.Windows.Automation.AutomationElement.Cached%2A> property structure and get the value from one of its members.</span></span>  
+2.  <span data-ttu-id="fe627-112">调用<xref:System.Windows.Automation.AutomationElement.GetCachedPropertyValue%2A>，或检索<xref:System.Windows.Automation.AutomationElement.Cached%2A>属性结构并获取其成员之一的值。</span><span class="sxs-lookup"><span data-stu-id="fe627-112">Call <xref:System.Windows.Automation.AutomationElement.GetCachedPropertyValue%2A>, or retrieve the <xref:System.Windows.Automation.AutomationElement.Cached%2A> property structure and get the value from one of its members.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="d50bf-113">示例</span><span class="sxs-lookup"><span data-stu-id="d50bf-113">Example</span></span>  
- <span data-ttu-id="d50bf-114">下面的示例显示了各种方法来检索当前属性的<xref:System.Windows.Automation.AutomationElement>。</span><span class="sxs-lookup"><span data-stu-id="d50bf-114">The following example shows various ways to retrieve current properties of an <xref:System.Windows.Automation.AutomationElement>.</span></span>  
+## <a name="example"></a><span data-ttu-id="fe627-113">示例</span><span class="sxs-lookup"><span data-stu-id="fe627-113">Example</span></span>  
+ <span data-ttu-id="fe627-114">下面的示例显示了各种方法来检索当前属性的<xref:System.Windows.Automation.AutomationElement>。</span><span class="sxs-lookup"><span data-stu-id="fe627-114">The following example shows various ways to retrieve current properties of an <xref:System.Windows.Automation.AutomationElement>.</span></span>  
   
  [!code-csharp[UIAClient_snip#170](../../../samples/snippets/csharp/VS_Snippets_Wpf/UIAClient_snip/CSharp/ClientForm.cs#170)]
  [!code-vb[UIAClient_snip#170](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/UIAClient_snip/VisualBasic/ClientForm.vb#170)]  
   
-## <a name="see-also"></a><span data-ttu-id="d50bf-115">请参阅</span><span class="sxs-lookup"><span data-stu-id="d50bf-115">See Also</span></span>  
- [<span data-ttu-id="d50bf-116">客户端的 UI 自动化属性</span><span class="sxs-lookup"><span data-stu-id="d50bf-116">UI Automation Properties for Clients</span></span>](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md)  
- [<span data-ttu-id="d50bf-117">在 UI 自动化中使用缓存</span><span class="sxs-lookup"><span data-stu-id="d50bf-117">Use Caching in UI Automation</span></span>](../../../docs/framework/ui-automation/use-caching-in-ui-automation.md)  
- [<span data-ttu-id="d50bf-118">在 UI 自动化客户端中缓存</span><span class="sxs-lookup"><span data-stu-id="d50bf-118">Caching in UI Automation Clients</span></span>](../../../docs/framework/ui-automation/caching-in-ui-automation-clients.md)
+## <a name="see-also"></a><span data-ttu-id="fe627-115">请参阅</span><span class="sxs-lookup"><span data-stu-id="fe627-115">See Also</span></span>  
+ [<span data-ttu-id="fe627-116">客户端的 UI 自动化属性</span><span class="sxs-lookup"><span data-stu-id="fe627-116">UI Automation Properties for Clients</span></span>](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md)  
+ [<span data-ttu-id="fe627-117">在 UI 自动化中使用缓存</span><span class="sxs-lookup"><span data-stu-id="fe627-117">Use Caching in UI Automation</span></span>](../../../docs/framework/ui-automation/use-caching-in-ui-automation.md)  
+ [<span data-ttu-id="fe627-118">在 UI 自动化客户端中缓存</span><span class="sxs-lookup"><span data-stu-id="fe627-118">Caching in UI Automation Clients</span></span>](../../../docs/framework/ui-automation/caching-in-ui-automation-clients.md)
