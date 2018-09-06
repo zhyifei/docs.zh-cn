@@ -2,45 +2,43 @@
 title: 异常类型 (F#)
 description: '了解如何定义和使用 F # 异常类型。'
 ms.date: 05/16/2016
-ms.openlocfilehash: 4462dd00ddf9524d1fd376ee1e73e81fcfd5d945
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b8d648a3649153a3604856deb61ce41db8c40bf2
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33564033"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43858816"
 ---
-# <a name="exception-types"></a><span data-ttu-id="70080-103">异常类型</span><span class="sxs-lookup"><span data-stu-id="70080-103">Exception Types</span></span>
+# <a name="exception-types"></a><span data-ttu-id="532a9-103">异常类型</span><span class="sxs-lookup"><span data-stu-id="532a9-103">Exception Types</span></span>
 
-<span data-ttu-id="70080-104">有两个类别的 F # 中的异常：.NET 异常类型和 F # 异常类型。</span><span class="sxs-lookup"><span data-stu-id="70080-104">There are two categories of exceptions in F#: .NET exception types and F# exception types.</span></span> <span data-ttu-id="70080-105">本主题介绍如何定义和使用 F # 异常类型。</span><span class="sxs-lookup"><span data-stu-id="70080-105">This topic describes how to define and use F# exception types.</span></span>
+<span data-ttu-id="532a9-104">有两个类别的 F # 中的异常：.NET 异常类型和 F # 异常类型。</span><span class="sxs-lookup"><span data-stu-id="532a9-104">There are two categories of exceptions in F#: .NET exception types and F# exception types.</span></span> <span data-ttu-id="532a9-105">本主题介绍如何定义和使用 F # 异常类型。</span><span class="sxs-lookup"><span data-stu-id="532a9-105">This topic describes how to define and use F# exception types.</span></span>
 
-
-## <a name="syntax"></a><span data-ttu-id="70080-106">语法</span><span class="sxs-lookup"><span data-stu-id="70080-106">Syntax</span></span>
+## <a name="syntax"></a><span data-ttu-id="532a9-106">语法</span><span class="sxs-lookup"><span data-stu-id="532a9-106">Syntax</span></span>
 
 ```fsharp
 exception exception-type of argument-type
 ```
 
-## <a name="remarks"></a><span data-ttu-id="70080-107">备注</span><span class="sxs-lookup"><span data-stu-id="70080-107">Remarks</span></span>
-<span data-ttu-id="70080-108">在上述语法中，*异常类型*是新的 F # 异常类型，名称和*自变量类型*表示时引发此类型的异常可以提供自变量的类型。</span><span class="sxs-lookup"><span data-stu-id="70080-108">In the previous syntax, *exception-type* is the name of a new F# exception type, and *argument-type* represents the type of an argument that can be supplied when you raise an exception of this type.</span></span> <span data-ttu-id="70080-109">你可以使用的元组类型来指定多个自变量*自变量类型*。</span><span class="sxs-lookup"><span data-stu-id="70080-109">You can specify multiple arguments by using a tuple type for *argument-type*.</span></span>
+## <a name="remarks"></a><span data-ttu-id="532a9-107">备注</span><span class="sxs-lookup"><span data-stu-id="532a9-107">Remarks</span></span>
 
-<span data-ttu-id="70080-110">F # 异常的典型定义如下所示。</span><span class="sxs-lookup"><span data-stu-id="70080-110">A typical definition for an F# exception resembles the following.</span></span>
+<span data-ttu-id="532a9-108">在上述语法中，*异常类型*是新的 F # 异常类型、 名称和*自变量类型*表示当引发此类型的异常时，可以提供的参数的类型。</span><span class="sxs-lookup"><span data-stu-id="532a9-108">In the previous syntax, *exception-type* is the name of a new F# exception type, and *argument-type* represents the type of an argument that can be supplied when you raise an exception of this type.</span></span> <span data-ttu-id="532a9-109">可以使用的元组类型来指定多个自变量*自变量类型*。</span><span class="sxs-lookup"><span data-stu-id="532a9-109">You can specify multiple arguments by using a tuple type for *argument-type*.</span></span>
+
+<span data-ttu-id="532a9-110">F # 异常的典型定义如下所示。</span><span class="sxs-lookup"><span data-stu-id="532a9-110">A typical definition for an F# exception resembles the following.</span></span>
 
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-2/snippet5501.fs)]
 
-<span data-ttu-id="70080-111">你可以通过使用生成此类型的异常`raise`函数，如下。</span><span class="sxs-lookup"><span data-stu-id="70080-111">You can generate an exception of this type by using the `raise` function, as follows.</span></span>
+<span data-ttu-id="532a9-111">可以使用生成此类型的异常`raise`函数，请按如下所示。</span><span class="sxs-lookup"><span data-stu-id="532a9-111">You can generate an exception of this type by using the `raise` function, as follows.</span></span>
 
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-2/snippet5502.fs)]
 
-<span data-ttu-id="70080-112">你可以在中的筛选器中直接使用 F # 异常类型`try...with`表达式，如下面的示例中所示。</span><span class="sxs-lookup"><span data-stu-id="70080-112">You can use an F# exception type directly in the filters in a `try...with` expression, as shown in the following example.</span></span>
+<span data-ttu-id="532a9-112">您可以直接在筛选器中使用 F # 异常类型`try...with`表达式，如下面的示例中所示。</span><span class="sxs-lookup"><span data-stu-id="532a9-112">You can use an F# exception type directly in the filters in a `try...with` expression, as shown in the following example.</span></span>
 
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-2/snippet5503.fs)]
 
-<span data-ttu-id="70080-113">使用定义的异常类型`exception`F # 中的关键字是一种新类型，继承自`System.Exception`。</span><span class="sxs-lookup"><span data-stu-id="70080-113">The exception type that you define with the `exception` keyword in F# is a new type that inherits from `System.Exception`.</span></span>
+<span data-ttu-id="532a9-113">使用定义的异常类型`exception`F # 中的关键字是继承的新类型`System.Exception`。</span><span class="sxs-lookup"><span data-stu-id="532a9-113">The exception type that you define with the `exception` keyword in F# is a new type that inherits from `System.Exception`.</span></span>
 
+## <a name="see-also"></a><span data-ttu-id="532a9-114">请参阅</span><span class="sxs-lookup"><span data-stu-id="532a9-114">See also</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="70080-114">请参阅</span><span class="sxs-lookup"><span data-stu-id="70080-114">See Also</span></span>
-[<span data-ttu-id="70080-115">异常处理</span><span class="sxs-lookup"><span data-stu-id="70080-115">Exception Handling</span></span>](index.md)
-
-[<span data-ttu-id="70080-116">异常：`raise` 函数</span><span class="sxs-lookup"><span data-stu-id="70080-116">Exceptions: the `raise` Function</span></span>](the-raise-function.md)
-
-[<span data-ttu-id="70080-117">异常层次结构</span><span class="sxs-lookup"><span data-stu-id="70080-117">Exception Hierarchy</span></span>](https://msdn.microsoft.com/library/z4c5tckx.aspx)
+- [<span data-ttu-id="532a9-115">异常处理</span><span class="sxs-lookup"><span data-stu-id="532a9-115">Exception Handling</span></span>](index.md)
+- [<span data-ttu-id="532a9-116">异常：`raise` 函数</span><span class="sxs-lookup"><span data-stu-id="532a9-116">Exceptions: the `raise` Function</span></span>](the-raise-function.md)
+- [<span data-ttu-id="532a9-117">异常层次结构</span><span class="sxs-lookup"><span data-stu-id="532a9-117">Exception Hierarchy</span></span>](https://msdn.microsoft.com/library/z4c5tckx.aspx)

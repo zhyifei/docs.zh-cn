@@ -6,34 +6,34 @@ helpviewer_keywords:
 - <code> XML tag
 ms.assetid: 925e5342-be05-45f2-bf66-7398bbd6710e
 ms.openlocfilehash: e66aebe35dd8f6443fefe3b07842b37270159e6e
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43475980"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43858634"
 ---
-# <a name="ltcodegt-visual-basic"></a><span data-ttu-id="64270-102">&lt;代码&gt;(Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="64270-102">&lt;code&gt; (Visual Basic)</span></span>
-<span data-ttu-id="64270-103">指示该文本是多行代码。</span><span class="sxs-lookup"><span data-stu-id="64270-103">Indicates that the text is multiple lines of code.</span></span>  
+# <a name="ltcodegt-visual-basic"></a><span data-ttu-id="01a75-102">&lt;代码&gt;(Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="01a75-102">&lt;code&gt; (Visual Basic)</span></span>
+<span data-ttu-id="01a75-103">指示该文本是多行代码。</span><span class="sxs-lookup"><span data-stu-id="01a75-103">Indicates that the text is multiple lines of code.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="64270-104">语法</span><span class="sxs-lookup"><span data-stu-id="64270-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="01a75-104">语法</span><span class="sxs-lookup"><span data-stu-id="01a75-104">Syntax</span></span>  
   
 ```xml  
 <code>content</code>  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="64270-105">参数</span><span class="sxs-lookup"><span data-stu-id="64270-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="01a75-105">参数</span><span class="sxs-lookup"><span data-stu-id="01a75-105">Parameters</span></span>  
  `content`  
- <span data-ttu-id="64270-106">要将标记为代码的文本。</span><span class="sxs-lookup"><span data-stu-id="64270-106">The text to mark as code.</span></span>  
+ <span data-ttu-id="01a75-106">要将标记为代码的文本。</span><span class="sxs-lookup"><span data-stu-id="01a75-106">The text to mark as code.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="64270-107">备注</span><span class="sxs-lookup"><span data-stu-id="64270-107">Remarks</span></span>  
- <span data-ttu-id="64270-108">使用`<code>`标记为代码指示多行。</span><span class="sxs-lookup"><span data-stu-id="64270-108">Use the `<code>` tag to indicate multiple lines as code.</span></span> <span data-ttu-id="64270-109">使用 [\<c>](../../../visual-basic/language-reference/xmldoc/c.md) 指示应将说明内的文本标记为代码。</span><span class="sxs-lookup"><span data-stu-id="64270-109">Use [\<c>](../../../visual-basic/language-reference/xmldoc/c.md) to indicate that text within a description should be marked as code.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="01a75-107">备注</span><span class="sxs-lookup"><span data-stu-id="01a75-107">Remarks</span></span>  
+ <span data-ttu-id="01a75-108">使用`<code>`标记为代码指示多行。</span><span class="sxs-lookup"><span data-stu-id="01a75-108">Use the `<code>` tag to indicate multiple lines as code.</span></span> <span data-ttu-id="01a75-109">使用 [\<c>](../../../visual-basic/language-reference/xmldoc/c.md) 指示应将说明内的文本标记为代码。</span><span class="sxs-lookup"><span data-stu-id="01a75-109">Use [\<c>](../../../visual-basic/language-reference/xmldoc/c.md) to indicate that text within a description should be marked as code.</span></span>  
   
- <span data-ttu-id="64270-110">使用 [/doc](../../../visual-basic/reference/command-line-compiler/doc.md) 进行编译可以将文档注释处理到文件中。</span><span class="sxs-lookup"><span data-stu-id="64270-110">Compile with [/doc](../../../visual-basic/reference/command-line-compiler/doc.md) to process documentation comments to a file.</span></span>  
+ <span data-ttu-id="01a75-110">使用 [/doc](../../../visual-basic/reference/command-line-compiler/doc.md) 进行编译可以将文档注释处理到文件中。</span><span class="sxs-lookup"><span data-stu-id="01a75-110">Compile with [/doc](../../../visual-basic/reference/command-line-compiler/doc.md) to process documentation comments to a file.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="64270-111">示例</span><span class="sxs-lookup"><span data-stu-id="64270-111">Example</span></span>  
- <span data-ttu-id="64270-112">此示例使用\<代码 > 标记以包含示例代码，使用`ID`字段。</span><span class="sxs-lookup"><span data-stu-id="64270-112">This example uses the \<code> tag to include example code for using the `ID` field.</span></span>  
+## <a name="example"></a><span data-ttu-id="01a75-111">示例</span><span class="sxs-lookup"><span data-stu-id="01a75-111">Example</span></span>  
+ <span data-ttu-id="01a75-112">此示例使用\<代码 > 标记以包含示例代码，使用`ID`字段。</span><span class="sxs-lookup"><span data-stu-id="01a75-112">This example uses the \<code> tag to include example code for using the `ID` field.</span></span>  
   
  [!code-vb[VbVbcnXmlDocComments#2](../../../visual-basic/language-reference/xmldoc/codesnippet/VisualBasic/code_1.vb)]  
   
-## <a name="see-also"></a><span data-ttu-id="64270-113">请参阅</span><span class="sxs-lookup"><span data-stu-id="64270-113">See Also</span></span>  
- [<span data-ttu-id="64270-114">XML 注释标记</span><span class="sxs-lookup"><span data-stu-id="64270-114">XML Comment Tags</span></span>](../../../visual-basic/language-reference/xmldoc/index.md)
+## <a name="see-also"></a><span data-ttu-id="01a75-113">请参阅</span><span class="sxs-lookup"><span data-stu-id="01a75-113">See Also</span></span>  
+ [<span data-ttu-id="01a75-114">XML 注释标记</span><span class="sxs-lookup"><span data-stu-id="01a75-114">XML Comment Tags</span></span>](../../../visual-basic/language-reference/xmldoc/index.md)
