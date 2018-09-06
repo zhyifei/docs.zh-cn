@@ -11,36 +11,37 @@ helpviewer_keywords:
 ms.assetid: 8b0e97f3-7877-44fd-bc76-e05d36d5d79c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b7cfda4e6a340d040de02903b9b64f0339751c5c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a5b53fc383e6fc9a5f056bab4eabde9979cd734b
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33571181"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43875104"
 ---
-# <a name="naming-resources"></a><span data-ttu-id="ec2cf-102">命名资源</span><span class="sxs-lookup"><span data-stu-id="ec2cf-102">Naming Resources</span></span>
-<span data-ttu-id="ec2cf-103">由于可本地化的资源可像属性那样通过某些对象进行引用，因此资源的命名准则与属性准则相似。</span><span class="sxs-lookup"><span data-stu-id="ec2cf-103">Because localizable resources can be referenced via certain objects as if they were properties, the naming guidelines for resources are similar to property guidelines.</span></span>  
+# <a name="naming-resources"></a><span data-ttu-id="237d9-102">命名资源</span><span class="sxs-lookup"><span data-stu-id="237d9-102">Naming Resources</span></span>
+<span data-ttu-id="237d9-103">由于可本地化的资源可像属性那样通过某些对象进行引用，因此资源的命名准则与属性准则相似。</span><span class="sxs-lookup"><span data-stu-id="237d9-103">Because localizable resources can be referenced via certain objects as if they were properties, the naming guidelines for resources are similar to property guidelines.</span></span>  
   
- <span data-ttu-id="ec2cf-104">**✓ 务必** 在资源键中使用 PascalCasing。</span><span class="sxs-lookup"><span data-stu-id="ec2cf-104">**✓ DO** use PascalCasing in resource keys.</span></span>  
+ <span data-ttu-id="237d9-104">**✓ 务必** 在资源键中使用 PascalCasing。</span><span class="sxs-lookup"><span data-stu-id="237d9-104">**✓ DO** use PascalCasing in resource keys.</span></span>  
   
- <span data-ttu-id="ec2cf-105">**✓ 务必** 提供描述性标识符而非简短标识符。</span><span class="sxs-lookup"><span data-stu-id="ec2cf-105">**✓ DO** provide descriptive rather than short identifiers.</span></span>  
+ <span data-ttu-id="237d9-105">**✓ 务必** 提供描述性标识符而非简短标识符。</span><span class="sxs-lookup"><span data-stu-id="237d9-105">**✓ DO** provide descriptive rather than short identifiers.</span></span>  
   
- <span data-ttu-id="ec2cf-106">**X DO NOT要** 使用主要 CLR 语言中的语言特定关键字。</span><span class="sxs-lookup"><span data-stu-id="ec2cf-106">**X DO NOT** use language-specific keywords of the main CLR languages.</span></span>  
+ <span data-ttu-id="237d9-106">**X DO NOT要** 使用主要 CLR 语言中的语言特定关键字。</span><span class="sxs-lookup"><span data-stu-id="237d9-106">**X DO NOT** use language-specific keywords of the main CLR languages.</span></span>  
   
- <span data-ttu-id="ec2cf-107">**✓ 务必执行** ：命名资源中只能使用字母数字字符和下划线。</span><span class="sxs-lookup"><span data-stu-id="ec2cf-107">**✓ DO** use only alphanumeric characters and underscores in naming resources.</span></span>  
+ <span data-ttu-id="237d9-107">**✓ 务必执行** ：命名资源中只能使用字母数字字符和下划线。</span><span class="sxs-lookup"><span data-stu-id="237d9-107">**✓ DO** use only alphanumeric characters and underscores in naming resources.</span></span>  
   
- <span data-ttu-id="ec2cf-108">**✓ 务必** 为异常消息资源使用以下命名约定。</span><span class="sxs-lookup"><span data-stu-id="ec2cf-108">**✓ DO** use the following naming convention for exception message resources.</span></span>  
+ <span data-ttu-id="237d9-108">**✓ 务必** 为异常消息资源使用以下命名约定。</span><span class="sxs-lookup"><span data-stu-id="237d9-108">**✓ DO** use the following naming convention for exception message resources.</span></span>  
   
- <span data-ttu-id="ec2cf-109">资源标识符应为异常类型名称加上异常的短标识符：</span><span class="sxs-lookup"><span data-stu-id="ec2cf-109">The resource identifier should be the exception type name plus a short identifier of the exception:</span></span>  
+ <span data-ttu-id="237d9-109">资源标识符应为异常类型名称加上异常的短标识符：</span><span class="sxs-lookup"><span data-stu-id="237d9-109">The resource identifier should be the exception type name plus a short identifier of the exception:</span></span>  
   
  `ArgumentExceptionIllegalCharacters`  
  `ArgumentExceptionInvalidName`  
  `ArgumentExceptionFileNameIsMalformed`  
   
- <span data-ttu-id="ec2cf-110">*部分版权 © 2005, 2009 Microsoft Corporation。保留所有权利。*</span><span class="sxs-lookup"><span data-stu-id="ec2cf-110">*Portions © 2005, 2009 Microsoft Corporation. All rights reserved.*</span></span>  
+ <span data-ttu-id="237d9-110">*部分版权 © 2005, 2009 Microsoft Corporation。保留所有权利。*</span><span class="sxs-lookup"><span data-stu-id="237d9-110">*Portions © 2005, 2009 Microsoft Corporation. All rights reserved.*</span></span>  
   
- <span data-ttu-id="ec2cf-111">经 Pearson Education, Inc 授权，转载自[框架设计准则：可重用的 .NET 库的约定、习惯用语和模式，第2版](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) 作者：Krzysztof Cwalina 和 Brad Abrams，由 Addison Wesley Professional 于 2008 年 10 月 22 日印发，作为 Microsoft Windows 开发系列的一部分。</span><span class="sxs-lookup"><span data-stu-id="ec2cf-111">*Reprinted by permission of Pearson Education, Inc. from [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) by Krzysztof Cwalina and Brad Abrams, published Oct 22, 2008 by Addison-Wesley Professional as part of the Microsoft Windows Development Series.*</span></span>  
+ <span data-ttu-id="237d9-111">*经 Pearson Education, Inc 授权，转载自[框架设计准则：可重用的 .NET 库的约定、习惯用语和模式，第2版](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) 作者：Krzysztof Cwalina 和 Brad Abrams，由 Addison Wesley Professional 于 2008 年 10 月 22 日印发，作为 Microsoft Windows 开发系列的一部分。*</span><span class="sxs-lookup"><span data-stu-id="237d9-111">*Reprinted by permission of Pearson Education, Inc. from [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) by Krzysztof Cwalina and Brad Abrams, published Oct 22, 2008 by Addison-Wesley Professional as part of the Microsoft Windows Development Series.*</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="ec2cf-112">请参阅</span><span class="sxs-lookup"><span data-stu-id="ec2cf-112">See Also</span></span>  
- [<span data-ttu-id="ec2cf-113">框架设计指南</span><span class="sxs-lookup"><span data-stu-id="ec2cf-113">Framework Design Guidelines</span></span>](../../../docs/standard/design-guidelines/index.md)  
- [<span data-ttu-id="ec2cf-114">命名规则</span><span class="sxs-lookup"><span data-stu-id="ec2cf-114">Naming Guidelines</span></span>](../../../docs/standard/design-guidelines/naming-guidelines.md)
+## <a name="see-also"></a><span data-ttu-id="237d9-112">请参阅</span><span class="sxs-lookup"><span data-stu-id="237d9-112">See also</span></span>
+
+- [<span data-ttu-id="237d9-113">框架设计指南</span><span class="sxs-lookup"><span data-stu-id="237d9-113">Framework Design Guidelines</span></span>](../../../docs/standard/design-guidelines/index.md)  
+- [<span data-ttu-id="237d9-114">命名规则</span><span class="sxs-lookup"><span data-stu-id="237d9-114">Naming Guidelines</span></span>](../../../docs/standard/design-guidelines/naming-guidelines.md)
