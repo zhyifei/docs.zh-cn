@@ -3,31 +3,31 @@ title: 条件表达式：if... then...else (F#)
 description: '了解如何编写在 F # 中执行代码的不同分支的条件表达式。'
 ms.date: 05/16/2016
 ms.openlocfilehash: 10e4224bef772f00520cf5a0fff2f2920147c2fc
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43745191"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43890864"
 ---
-# <a name="conditional-expressions-ifthenelse"></a><span data-ttu-id="9e0f0-103">条件表达式： `if...then...else`</span><span class="sxs-lookup"><span data-stu-id="9e0f0-103">Conditional Expressions: `if...then...else`</span></span>
+# <a name="conditional-expressions-ifthenelse"></a><span data-ttu-id="d3d9e-103">条件表达式： `if...then...else`</span><span class="sxs-lookup"><span data-stu-id="d3d9e-103">Conditional Expressions: `if...then...else`</span></span>
 
-<span data-ttu-id="9e0f0-104">`if...then...else`表达式在运行代码的不同分支，还可以为不同的值，具体取决于给定的布尔表达式计算。</span><span class="sxs-lookup"><span data-stu-id="9e0f0-104">The `if...then...else` expression runs different branches of code and also evaluates to a different value depending on the Boolean expression given.</span></span>
+<span data-ttu-id="d3d9e-104">`if...then...else`表达式在运行代码的不同分支，还可以为不同的值，具体取决于给定的布尔表达式计算。</span><span class="sxs-lookup"><span data-stu-id="d3d9e-104">The `if...then...else` expression runs different branches of code and also evaluates to a different value depending on the Boolean expression given.</span></span>
 
-## <a name="syntax"></a><span data-ttu-id="9e0f0-105">语法</span><span class="sxs-lookup"><span data-stu-id="9e0f0-105">Syntax</span></span>
+## <a name="syntax"></a><span data-ttu-id="d3d9e-105">语法</span><span class="sxs-lookup"><span data-stu-id="d3d9e-105">Syntax</span></span>
 
 ```fsharp
 if boolean-expression then expression1 [ else expression2 ]
 ```
 
-## <a name="remarks"></a><span data-ttu-id="9e0f0-106">备注</span><span class="sxs-lookup"><span data-stu-id="9e0f0-106">Remarks</span></span>
+## <a name="remarks"></a><span data-ttu-id="d3d9e-106">备注</span><span class="sxs-lookup"><span data-stu-id="d3d9e-106">Remarks</span></span>
 
-<span data-ttu-id="9e0f0-107">在上述语法中， *expression1*运行时的布尔表达式的计算结果为`true`; 否则为*expression2*运行。</span><span class="sxs-lookup"><span data-stu-id="9e0f0-107">In the previous syntax, *expression1* runs when the Boolean expression evaluates to `true`; otherwise, *expression2* runs.</span></span>
+<span data-ttu-id="d3d9e-107">在上述语法中， *expression1*运行时的布尔表达式的计算结果为`true`; 否则为*expression2*运行。</span><span class="sxs-lookup"><span data-stu-id="d3d9e-107">In the previous syntax, *expression1* runs when the Boolean expression evaluates to `true`; otherwise, *expression2* runs.</span></span>
 
-<span data-ttu-id="9e0f0-108">不同于其他语言中`if...then...else`构造是一个表达式，而不是语句。</span><span class="sxs-lookup"><span data-stu-id="9e0f0-108">Unlike in other languages, the `if...then...else` construct is an expression, not a statement.</span></span> <span data-ttu-id="9e0f0-109">这意味着它会生成一个值，该值是在执行的分支中的最后一个表达式的值。</span><span class="sxs-lookup"><span data-stu-id="9e0f0-109">That means that it produces a value, which is the value of the last expression in the branch that executes.</span></span> <span data-ttu-id="9e0f0-110">每个分支中生成的值的类型必须匹配。</span><span class="sxs-lookup"><span data-stu-id="9e0f0-110">The types of the values produced in each branch must match.</span></span> <span data-ttu-id="9e0f0-111">如果未显式`else`分支，其类型是`unit`。</span><span class="sxs-lookup"><span data-stu-id="9e0f0-111">If there is no explicit `else` branch, its type is `unit`.</span></span> <span data-ttu-id="9e0f0-112">因此，如果的类型`then`分支而不是任何类型`unit`，必须有`else`分支具有相同的返回类型。</span><span class="sxs-lookup"><span data-stu-id="9e0f0-112">Therefore, if the type of the `then` branch is any type other than `unit`, there must be an `else` branch with the same return type.</span></span> <span data-ttu-id="9e0f0-113">当链接`if...then...else`表达式组合在一起，可以使用关键字`elif`而不是`else if`; 它们是等效。</span><span class="sxs-lookup"><span data-stu-id="9e0f0-113">When chaining `if...then...else` expressions together, you can use the keyword `elif` instead of `else if`; they are equivalent.</span></span>
+<span data-ttu-id="d3d9e-108">不同于其他语言中`if...then...else`构造是一个表达式，而不是语句。</span><span class="sxs-lookup"><span data-stu-id="d3d9e-108">Unlike in other languages, the `if...then...else` construct is an expression, not a statement.</span></span> <span data-ttu-id="d3d9e-109">这意味着它会生成一个值，该值是在执行的分支中的最后一个表达式的值。</span><span class="sxs-lookup"><span data-stu-id="d3d9e-109">That means that it produces a value, which is the value of the last expression in the branch that executes.</span></span> <span data-ttu-id="d3d9e-110">每个分支中生成的值的类型必须匹配。</span><span class="sxs-lookup"><span data-stu-id="d3d9e-110">The types of the values produced in each branch must match.</span></span> <span data-ttu-id="d3d9e-111">如果未显式`else`分支，其类型是`unit`。</span><span class="sxs-lookup"><span data-stu-id="d3d9e-111">If there is no explicit `else` branch, its type is `unit`.</span></span> <span data-ttu-id="d3d9e-112">因此，如果的类型`then`分支而不是任何类型`unit`，必须有`else`分支具有相同的返回类型。</span><span class="sxs-lookup"><span data-stu-id="d3d9e-112">Therefore, if the type of the `then` branch is any type other than `unit`, there must be an `else` branch with the same return type.</span></span> <span data-ttu-id="d3d9e-113">当链接`if...then...else`表达式组合在一起，可以使用关键字`elif`而不是`else if`; 它们是等效。</span><span class="sxs-lookup"><span data-stu-id="d3d9e-113">When chaining `if...then...else` expressions together, you can use the keyword `elif` instead of `else if`; they are equivalent.</span></span>
 
-## <a name="example"></a><span data-ttu-id="9e0f0-114">示例</span><span class="sxs-lookup"><span data-stu-id="9e0f0-114">Example</span></span>
+## <a name="example"></a><span data-ttu-id="d3d9e-114">示例</span><span class="sxs-lookup"><span data-stu-id="d3d9e-114">Example</span></span>
 
-<span data-ttu-id="9e0f0-115">下面的示例演示如何使用`if...then...else`表达式。</span><span class="sxs-lookup"><span data-stu-id="9e0f0-115">The following example illustrates how to use the `if...then...else` expression.</span></span>
+<span data-ttu-id="d3d9e-115">下面的示例演示如何使用`if...then...else`表达式。</span><span class="sxs-lookup"><span data-stu-id="d3d9e-115">The following example illustrates how to use the `if...then...else` expression.</span></span>
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet4501.fs)]
 
@@ -38,6 +38,6 @@ How old are you? 9
 You are only 9 years old and already learning F#? Wow!
 ```
 
-## <a name="see-also"></a><span data-ttu-id="9e0f0-116">请参阅</span><span class="sxs-lookup"><span data-stu-id="9e0f0-116">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="d3d9e-116">请参阅</span><span class="sxs-lookup"><span data-stu-id="d3d9e-116">See also</span></span>
 
-- [<span data-ttu-id="9e0f0-117">F# 语言参考</span><span class="sxs-lookup"><span data-stu-id="9e0f0-117">F# Language Reference</span></span>](index.md)
+- [<span data-ttu-id="d3d9e-117">F# 语言参考</span><span class="sxs-lookup"><span data-stu-id="d3d9e-117">F# Language Reference</span></span>](index.md)

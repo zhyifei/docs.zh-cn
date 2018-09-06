@@ -8,33 +8,33 @@ helpviewer_keywords:
 - keyboards [Windows Forms], keyboard input
 ms.assetid: 1486075f-1e06-4c9e-82c6-f948331db6d6
 ms.openlocfilehash: fef51f57dd3c14c91572041a72c805823d6019a3
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43740930"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "44037028"
 ---
-# <a name="user-input-in-windows-forms"></a><span data-ttu-id="6998d-102">Windows 窗体中的用户输入</span><span class="sxs-lookup"><span data-stu-id="6998d-102">User Input in Windows Forms</span></span>
-<span data-ttu-id="6998d-103">Windows 窗体包括一种用户输入模型，该模型基于在处理相关的 Windows 消息时所引发的事件。</span><span class="sxs-lookup"><span data-stu-id="6998d-103">Windows Forms includes a user input model based on events that are raised while processing related Windows messages.</span></span> <span data-ttu-id="6998d-104">本节中的主题提供了有关鼠标和键盘用户输入的信息，其中包括演示如何执行特定任务的代码示例。</span><span class="sxs-lookup"><span data-stu-id="6998d-104">The topics in this section provide information on mouse and keyboard user input, including code examples that demonstrate how to perform specific tasks.</span></span>  
+# <a name="user-input-in-windows-forms"></a><span data-ttu-id="de445-102">Windows 窗体中的用户输入</span><span class="sxs-lookup"><span data-stu-id="de445-102">User Input in Windows Forms</span></span>
+<span data-ttu-id="de445-103">Windows 窗体包括一种用户输入模型，该模型基于在处理相关的 Windows 消息时所引发的事件。</span><span class="sxs-lookup"><span data-stu-id="de445-103">Windows Forms includes a user input model based on events that are raised while processing related Windows messages.</span></span> <span data-ttu-id="de445-104">本节中的主题提供了有关鼠标和键盘用户输入的信息，其中包括演示如何执行特定任务的代码示例。</span><span class="sxs-lookup"><span data-stu-id="de445-104">The topics in this section provide information on mouse and keyboard user input, including code examples that demonstrate how to perform specific tasks.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="6998d-105">本节内容</span><span class="sxs-lookup"><span data-stu-id="6998d-105">In This Section</span></span>  
- [<span data-ttu-id="6998d-106">Windows 窗体应用程序中的用户输入</span><span class="sxs-lookup"><span data-stu-id="6998d-106">User Input in a Windows Forms Application</span></span>](../../../docs/framework/winforms/user-input-in-a-windows-forms-application.md)  
- <span data-ttu-id="6998d-107">提供处理 Windows 消息的用户输入事件和方法的概述。</span><span class="sxs-lookup"><span data-stu-id="6998d-107">Provides an overview of user input events and the methods that process Windows messages.</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="de445-105">本节内容</span><span class="sxs-lookup"><span data-stu-id="de445-105">In This Section</span></span>  
+ [<span data-ttu-id="de445-106">Windows 窗体应用程序中的用户输入</span><span class="sxs-lookup"><span data-stu-id="de445-106">User Input in a Windows Forms Application</span></span>](../../../docs/framework/winforms/user-input-in-a-windows-forms-application.md)  
+ <span data-ttu-id="de445-107">提供处理 Windows 消息的用户输入事件和方法的概述。</span><span class="sxs-lookup"><span data-stu-id="de445-107">Provides an overview of user input events and the methods that process Windows messages.</span></span>  
   
- [<span data-ttu-id="6998d-108">Windows 窗体应用程序中的键盘输入</span><span class="sxs-lookup"><span data-stu-id="6998d-108">Keyboard Input in a Windows Forms Application</span></span>](../../../docs/framework/winforms/keyboard-input-in-a-windows-forms-application.md)  
- <span data-ttu-id="6998d-109">提供有关键盘消息处理、不同类型的键和键盘事件的信息。</span><span class="sxs-lookup"><span data-stu-id="6998d-109">Provides information on keyboard message handling, the different types of keys, and the keyboard events.</span></span>  
+ [<span data-ttu-id="de445-108">Windows 窗体应用程序中的键盘输入</span><span class="sxs-lookup"><span data-stu-id="de445-108">Keyboard Input in a Windows Forms Application</span></span>](../../../docs/framework/winforms/keyboard-input-in-a-windows-forms-application.md)  
+ <span data-ttu-id="de445-109">提供有关键盘消息处理、不同类型的键和键盘事件的信息。</span><span class="sxs-lookup"><span data-stu-id="de445-109">Provides information on keyboard message handling, the different types of keys, and the keyboard events.</span></span>  
   
- [<span data-ttu-id="6998d-110">Windows 窗体应用程序中的鼠标输入</span><span class="sxs-lookup"><span data-stu-id="6998d-110">Mouse Input in a Windows Forms Application</span></span>](../../../docs/framework/winforms/mouse-input-in-a-windows-forms-application.md)  
- <span data-ttu-id="6998d-111">提供有关鼠标事件和其他鼠标相关功能（包括鼠标光标和鼠标捕获）的信息。</span><span class="sxs-lookup"><span data-stu-id="6998d-111">Provides information on the mouse events and other mouse-related features, including mouse cursors and mouse capture.</span></span>  
+ [<span data-ttu-id="de445-110">Windows 窗体应用程序中的鼠标输入</span><span class="sxs-lookup"><span data-stu-id="de445-110">Mouse Input in a Windows Forms Application</span></span>](../../../docs/framework/winforms/mouse-input-in-a-windows-forms-application.md)  
+ <span data-ttu-id="de445-111">提供有关鼠标事件和其他鼠标相关功能（包括鼠标光标和鼠标捕获）的信息。</span><span class="sxs-lookup"><span data-stu-id="de445-111">Provides information on the mouse events and other mouse-related features, including mouse cursors and mouse capture.</span></span>  
   
- [<span data-ttu-id="6998d-112">如何：在代码中模拟鼠标和键盘事件</span><span class="sxs-lookup"><span data-stu-id="6998d-112">How to: Simulate Mouse and Keyboard Events in Code</span></span>](../../../docs/framework/winforms/how-to-simulate-mouse-and-keyboard-events-in-code.md)  
- <span data-ttu-id="6998d-113">演示通过编程模拟鼠标和键盘输入的几种不同方式。</span><span class="sxs-lookup"><span data-stu-id="6998d-113">Demonstrates several different ways to programmatically simulate mouse and keyboard input.</span></span>  
+ [<span data-ttu-id="de445-112">如何：在代码中模拟鼠标和键盘事件</span><span class="sxs-lookup"><span data-stu-id="de445-112">How to: Simulate Mouse and Keyboard Events in Code</span></span>](../../../docs/framework/winforms/how-to-simulate-mouse-and-keyboard-events-in-code.md)  
+ <span data-ttu-id="de445-113">演示通过编程模拟鼠标和键盘输入的几种不同方式。</span><span class="sxs-lookup"><span data-stu-id="de445-113">Demonstrates several different ways to programmatically simulate mouse and keyboard input.</span></span>  
   
- [<span data-ttu-id="6998d-114">如何：在 Windows 窗体控件中处理用户输入事件</span><span class="sxs-lookup"><span data-stu-id="6998d-114">How to: Handle User Input Events in Windows Forms Controls</span></span>](../../../docs/framework/winforms/how-to-handle-user-input-events-in-windows-forms-controls.md)  
- <span data-ttu-id="6998d-115">显示处理大多数用户输入事件的代码示例，并报告有关每个事件的信息。</span><span class="sxs-lookup"><span data-stu-id="6998d-115">Presents a code example that handles most user input events and reports information about each event.</span></span>  
+ [<span data-ttu-id="de445-114">如何：在 Windows 窗体控件中处理用户输入事件</span><span class="sxs-lookup"><span data-stu-id="de445-114">How to: Handle User Input Events in Windows Forms Controls</span></span>](../../../docs/framework/winforms/how-to-handle-user-input-events-in-windows-forms-controls.md)  
+ <span data-ttu-id="de445-115">显示处理大多数用户输入事件的代码示例，并报告有关每个事件的信息。</span><span class="sxs-lookup"><span data-stu-id="de445-115">Presents a code example that handles most user input events and reports information about each event.</span></span>  
   
- [<span data-ttu-id="6998d-116">Windows 窗体中的用户输入验证</span><span class="sxs-lookup"><span data-stu-id="6998d-116">User Input Validation in Windows Forms</span></span>](../../../docs/framework/winforms/user-input-validation-in-windows-forms.md)  
- <span data-ttu-id="6998d-117">描述用于验证 Windows 窗体应用程序中的用户输入的方法。</span><span class="sxs-lookup"><span data-stu-id="6998d-117">Describes the methods to validate user input in Windows Forms applications.</span></span>  
+ [<span data-ttu-id="de445-116">Windows 窗体中的用户输入验证</span><span class="sxs-lookup"><span data-stu-id="de445-116">User Input Validation in Windows Forms</span></span>](../../../docs/framework/winforms/user-input-validation-in-windows-forms.md)  
+ <span data-ttu-id="de445-117">描述用于验证 Windows 窗体应用程序中的用户输入的方法。</span><span class="sxs-lookup"><span data-stu-id="de445-117">Describes the methods to validate user input in Windows Forms applications.</span></span>  
   
-## <a name="related-sections"></a><span data-ttu-id="6998d-118">相关章节</span><span class="sxs-lookup"><span data-stu-id="6998d-118">Related Sections</span></span>  
- <span data-ttu-id="6998d-119">另请参阅[在 Windows 窗体中创建事件处理程序](https://msdn.microsoft.com/library/dacysss4\(v=vs.110\))。</span><span class="sxs-lookup"><span data-stu-id="6998d-119">Also see [Creating Event Handlers in Windows Forms](https://msdn.microsoft.com/library/dacysss4\(v=vs.110\)).</span></span>
+## <a name="related-sections"></a><span data-ttu-id="de445-118">相关章节</span><span class="sxs-lookup"><span data-stu-id="de445-118">Related Sections</span></span>  
+ <span data-ttu-id="de445-119">另请参阅[在 Windows 窗体中创建事件处理程序](https://msdn.microsoft.com/library/dacysss4\(v=vs.110\))。</span><span class="sxs-lookup"><span data-stu-id="de445-119">Also see [Creating Event Handlers in Windows Forms](https://msdn.microsoft.com/library/dacysss4\(v=vs.110\)).</span></span>

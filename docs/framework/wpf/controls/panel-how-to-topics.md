@@ -8,23 +8,23 @@ helpviewer_keywords:
 - controls [WPF], Panel
 ms.assetid: 28d8faf2-490c-4e17-a447-df25a66f6679
 ms.openlocfilehash: d8ead1a799f1bd7524d171beb3e262baeb4b5fbe
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43746241"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "44039538"
 ---
-# <a name="panel-how-to-topics"></a><span data-ttu-id="4dd7d-102">Panel 帮助主题</span><span class="sxs-lookup"><span data-stu-id="4dd7d-102">Panel How-to Topics</span></span>
-<span data-ttu-id="4dd7d-103">在本部分中的主题介绍如何使用<xref:System.Windows.Controls.Panel>元素和相关[!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)]。</span><span class="sxs-lookup"><span data-stu-id="4dd7d-103">The topics in this section describe how to use the <xref:System.Windows.Controls.Panel> element and related [!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)].</span></span>  
+# <a name="panel-how-to-topics"></a><span data-ttu-id="80472-102">Panel 帮助主题</span><span class="sxs-lookup"><span data-stu-id="80472-102">Panel How-to Topics</span></span>
+<span data-ttu-id="80472-103">在本部分中的主题介绍如何使用<xref:System.Windows.Controls.Panel>元素和相关[!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)]。</span><span class="sxs-lookup"><span data-stu-id="80472-103">The topics in this section describe how to use the <xref:System.Windows.Controls.Panel> element and related [!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)].</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="4dd7d-104">本节内容</span><span class="sxs-lookup"><span data-stu-id="4dd7d-104">In This Section</span></span>  
- [<span data-ttu-id="4dd7d-105">如何： 向元素应用 LayoutTransform</span><span class="sxs-lookup"><span data-stu-id="4dd7d-105">How to: Apply a LayoutTransform to an Element</span></span>](https://msdn.microsoft.com/library/8221db67-d99f-4783-b65e-a6c5a52c03ab)  
- [<span data-ttu-id="4dd7d-106">创建自定义 Panel 元素</span><span class="sxs-lookup"><span data-stu-id="4dd7d-106">Create a Custom Panel Element</span></span>](../../../../docs/framework/wpf/controls/how-to-create-a-custom-panel-element.md)  
- [<span data-ttu-id="4dd7d-107">重写面板的 OnRender 方法</span><span class="sxs-lookup"><span data-stu-id="4dd7d-107">Override the Panel OnRender Method</span></span>](../../../../docs/framework/wpf/controls/how-to-override-the-panel-onrender-method.md)  
- [<span data-ttu-id="4dd7d-108">设置元素的高度属性</span><span class="sxs-lookup"><span data-stu-id="4dd7d-108">Set the Height Properties of an Element</span></span>](../../../../docs/framework/wpf/controls/how-to-set-the-height-properties-of-an-element.md)  
- [<span data-ttu-id="4dd7d-109">设置元素的宽度属性</span><span class="sxs-lookup"><span data-stu-id="4dd7d-109">Set the Width Properties of an Element</span></span>](../../../../docs/framework/wpf/controls/how-to-set-the-width-properties-of-an-element.md)  
+## <a name="in-this-section"></a><span data-ttu-id="80472-104">本节内容</span><span class="sxs-lookup"><span data-stu-id="80472-104">In This Section</span></span>  
+ [<span data-ttu-id="80472-105">如何： 向元素应用 LayoutTransform</span><span class="sxs-lookup"><span data-stu-id="80472-105">How to: Apply a LayoutTransform to an Element</span></span>](https://msdn.microsoft.com/library/8221db67-d99f-4783-b65e-a6c5a52c03ab)  
+ [<span data-ttu-id="80472-106">创建自定义 Panel 元素</span><span class="sxs-lookup"><span data-stu-id="80472-106">Create a Custom Panel Element</span></span>](../../../../docs/framework/wpf/controls/how-to-create-a-custom-panel-element.md)  
+ [<span data-ttu-id="80472-107">重写面板的 OnRender 方法</span><span class="sxs-lookup"><span data-stu-id="80472-107">Override the Panel OnRender Method</span></span>](../../../../docs/framework/wpf/controls/how-to-override-the-panel-onrender-method.md)  
+ [<span data-ttu-id="80472-108">设置元素的高度属性</span><span class="sxs-lookup"><span data-stu-id="80472-108">Set the Height Properties of an Element</span></span>](../../../../docs/framework/wpf/controls/how-to-set-the-height-properties-of-an-element.md)  
+ [<span data-ttu-id="80472-109">设置元素的宽度属性</span><span class="sxs-lookup"><span data-stu-id="80472-109">Set the Width Properties of an Element</span></span>](../../../../docs/framework/wpf/controls/how-to-set-the-width-properties-of-an-element.md)  
   
-## <a name="reference"></a><span data-ttu-id="4dd7d-110">参考</span><span class="sxs-lookup"><span data-stu-id="4dd7d-110">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="80472-110">参考</span><span class="sxs-lookup"><span data-stu-id="80472-110">Reference</span></span>  
  <xref:System.Windows.Controls.Panel>  
   
  <xref:System.Windows.Controls.Canvas>  
@@ -39,9 +39,9 @@ ms.locfileid: "43746241"
   
  <xref:System.Windows.Controls.WrapPanel>  
   
-## <a name="related-sections"></a><span data-ttu-id="4dd7d-111">相关章节</span><span class="sxs-lookup"><span data-stu-id="4dd7d-111">Related Sections</span></span>  
- [<span data-ttu-id="4dd7d-112">布局</span><span class="sxs-lookup"><span data-stu-id="4dd7d-112">Layout</span></span>](../../../../docs/framework/wpf/advanced/layout.md)  
+## <a name="related-sections"></a><span data-ttu-id="80472-111">相关章节</span><span class="sxs-lookup"><span data-stu-id="80472-111">Related Sections</span></span>  
+ [<span data-ttu-id="80472-112">布局</span><span class="sxs-lookup"><span data-stu-id="80472-112">Layout</span></span>](../../../../docs/framework/wpf/advanced/layout.md)  
   
- [<span data-ttu-id="4dd7d-113">演练：我的第一个 WPF 桌面应用程序</span><span class="sxs-lookup"><span data-stu-id="4dd7d-113">Walkthrough: My first WPF desktop application</span></span>](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md)  
+ [<span data-ttu-id="80472-113">演练：我的第一个 WPF 桌面应用程序</span><span class="sxs-lookup"><span data-stu-id="80472-113">Walkthrough: My first WPF desktop application</span></span>](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md)  
   
- [<span data-ttu-id="4dd7d-114">ScrollViewer 概述</span><span class="sxs-lookup"><span data-stu-id="4dd7d-114">ScrollViewer Overview</span></span>](../../../../docs/framework/wpf/controls/scrollviewer-overview.md)
+ [<span data-ttu-id="80472-114">ScrollViewer 概述</span><span class="sxs-lookup"><span data-stu-id="80472-114">ScrollViewer Overview</span></span>](../../../../docs/framework/wpf/controls/scrollviewer-overview.md)
