@@ -2,12 +2,12 @@
 title: 计算表达式 (F#)
 description: '了解如何创建用于编写计算 F # 中用于进行排列和组合使用控制流构造和绑定的方便语法。'
 ms.date: 07/27/2018
-ms.openlocfilehash: 4995efc757d99a575ee9fad3abf0465a32398c44
-ms.sourcegitcommit: 78bcb629abdbdbde0e295b4e81f350a477864aba
+ms.openlocfilehash: ce81af7966a436b3973de277fb2a78ec06f4c471
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "36207428"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43800901"
 ---
 # <a name="computation-expressions"></a>计算表达式
 
@@ -229,8 +229,6 @@ builder.Run(builder.Delay(fun () -> {| cexpr |}))
 
 在上面的代码中，对调用`Run`和`Delay`省略了如果中计算表达式生成器类未定义。 计算表达式，此处表示为正文`{| cexpr |}`下, 表中所描述的翻译转换为涉及生成器类的方法的调用。 计算表达式`{| cexpr |}`定义以递归方式根据这些翻译其中`expr`是一个 F # 表达式和`cexpr`是计算表达式。
 
-
-
 |表达式|转换|
 |----------|-----------|
 |<code>{&#124; let binding in cexpr &#124;}</code>|<code>let binding in {&#124; cexpr &#124;}</code>|
@@ -361,7 +359,7 @@ let comp = eventually {
         printfn " x = %d" x
     return 3 + 4 }
 
-// Try the remaining lines in F# interactive to see how this 
+// Try the remaining lines in F# interactive to see how this
 // computation expression works in practice.
 let step x = Eventually.step x
 
@@ -386,9 +384,11 @@ comp |> step |> step |> step |> step |> step |> step |> step |> step
 计算表达式的表达式返回的基础类型。 基础类型可表示计算所得的结果或可以执行的延迟的计算或它可能会提供一种方法来循环访问某种类型的集合。 在上一示例中，基础类型是**最终**。 为序列表达式的基础类型是<xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType>。 对于查询表达式中，基础类型是<xref:System.Linq.IQueryable?displayProperty=nameWithType>。 对于异步工作流，基础类型是[ `Async` ](https://msdn.microsoft.com/library/03eb4d12-a01a-4565-a077-5e83f17cf6f7)。 `Async`对象都表示为计算的结果执行的工作。 例如，调用[ `Async.RunSynchronously` ](https://msdn.microsoft.com/library/0a6663a9-50f2-4d38-8bf3-cefd1a51fd6b)执行计算并返回结果。
 
 ## <a name="custom-operations"></a>自定义操作
+
 您可以定义上计算表达式的自定义操作和使用自定义操作作为计算表达式中的运算符。 例如，您可以在查询表达式中包含的查询运算符。 在定义自定义操作时，必须定义 Yield 和计算表达式中的方法。 若要定义自定义操作，将其放入一个生成器类，用于计算表达式，并将[ `CustomOperationAttribute` ](https://msdn.microsoft.com/library/199f3927-79df-484b-ba66-85f58cc49b19)。 此属性采用一个字符串作为参数，它是用于在自定义操作中使用的名称。 此名称发送到开头的计算表达式的左大括号的作用域中时。 因此，不应使用此块中具有相同名称作为自定义操作的标识符。 例如，例如避免使用的标识符`all`或`last`在查询表达式中。
 
 ### <a name="extending-existing-builders-with-new-custom-operations"></a>扩展现有生成器与新的自定义操作
+
 如果您已有一个生成器类，其自定义操作可从此生成器类的外部进行扩展。 必须在模块中声明扩展。 命名空间不能包含除相同的文件和定义该类型的相同命名空间声明组中的扩展成员。
 
 下面的示例演示的现有扩展`Microsoft.FSharp.Linq.QueryBuilder`类。
@@ -402,10 +402,8 @@ type Microsoft.FSharp.Linq.QueryBuilder with
 ```
 
 ## <a name="see-also"></a>请参阅
-[F# 语言参考](index.md)
 
-[异步工作流](asynchronous-workflows.md)
-
-[序列](https://msdn.microsoft.com/library/6b773b6b-9c9a-4af8-bd9e-d96585c166db)
-
-[查询表达式](query-expressions.md)
+- [F# 语言参考](index.md)
+- [异步工作流](asynchronous-workflows.md)
+- [序列](https://msdn.microsoft.com/library/6b773b6b-9c9a-4af8-bd9e-d96585c166db)
+- [查询表达式](query-expressions.md)

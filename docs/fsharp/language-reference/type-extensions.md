@@ -2,12 +2,12 @@
 title: 类型扩展 (F#)
 description: '了解如何 F # 类型扩展允许将新成员添加到以前定义的对象类型。'
 ms.date: 07/20/2018
-ms.openlocfilehash: 2181745ea75894fbfe35d5522c130baaf1876455
-ms.sourcegitcommit: 78bcb629abdbdbde0e295b4e81f350a477864aba
+ms.openlocfilehash: 27238db1fd0803f62c32755fbc4ab7688f5c107e
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "33566881"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43855056"
 ---
 # <a name="type-extensions"></a>类型扩展
 
@@ -169,6 +169,5 @@ type IEnumerableExtensions() =
 
 ## <a name="see-also"></a>请参阅
 
-[F# 语言参考](index.md)
-
-[成员](members/index.md)
+- [F# 语言参考](index.md)
+- [成员](members/index.md)
