@@ -2,18 +2,19 @@
 title: 位运算符 (F#)
 description: '了解有关 F # 编程语言中可用的按位运算符。'
 ms.date: 07/20/2018
-ms.openlocfilehash: abd2778eba422b3ce2a3472efd458446854b3d2f
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: ed76fcf5f9c569a2f288cf260e99dc29fd65ef3b
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43559551"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43784363"
 ---
 # <a name="bitwise-operators"></a>位运算符
 
 本主题介绍 F # 语言中提供的按位运算符。
 
 ## <a name="summary-of-bitwise-operators"></a>按位运算符摘要
+
 下表描述 F # 语言中的未装箱整型类型支持的按位运算符。
 
 |运算符|说明|
@@ -28,9 +29,7 @@ ms.locfileid: "43559551"
 与按位运算符可以使用以下类型： `byte`， `sbyte`， `int16`， `uint16`， `int32 (int)`， `uint32`， `int64`， `uint64`， `nativeint`，和`unativeint`。
 
 ## <a name="see-also"></a>请参阅
-[符号和运算符参考](index.md)
 
-[算术运算符](arithmetic-operators.md)
-
-[布尔运算符](boolean-operators.md)
-
+- [符号和运算符参考](index.md)
+- [算术运算符](arithmetic-operators.md)
+- [布尔运算符](boolean-operators.md)

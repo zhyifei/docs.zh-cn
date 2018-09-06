@@ -2,12 +2,12 @@
 title: 可区分联合 (F#)
 description: '了解如何使用 F # 可区分联合。'
 ms.date: 05/16/2016
-ms.openlocfilehash: 3340933ac8e2b6fe0215c684691d216a28b64787
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 06d6c154790f659c0c7ff73290357ab50a134362
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43537592"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43788118"
 ---
 # <a name="discriminated-unions"></a>可区分联合
 
@@ -167,4 +167,4 @@ Area of rectangle that has height 5.000000 and width 10.000000 is 50.000000
 
 ## <a name="see-also"></a>请参阅
 
-[F# 语言参考](index.md)
+- [F# 语言参考](index.md)

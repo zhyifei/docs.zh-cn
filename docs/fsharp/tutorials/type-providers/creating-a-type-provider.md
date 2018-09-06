@@ -2,12 +2,12 @@
 title: '教程： 创建类型提供程序 （F #）'
 description: '了解如何在 F # 3.0 中创建你自己 F # 类型提供程序，通过检查几个简单类型提供程序来演示基本概念。'
 ms.date: 05/16/2016
-ms.openlocfilehash: 25b11a0c6328fc74832e13b6380c983fb14a74a0
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 3c998377b2c3a408d536ef416f3799bf7f04b6bd
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43499323"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43745721"
 ---
 # <a name="tutorial-create-a-type-provider"></a>教程： 创建类型提供程序
 
@@ -24,7 +24,6 @@ F # 生态系统包含一系列常用 Internet 和企业数据服务的类型提
 - [FSharp.Data.TypeProviders](https://fsprojects.github.io/FSharp.Data.TypeProviders/)是较旧的使用仅与用于访问 SQL、 实体框架、 OData 和 WSDL 数据服务的.NET Framework 编程的类型提供程序集。
 
 必要时，可以创建自定义类型提供程序，也可以引用其他人创建的类型提供程序。 例如，你的组织可能具有可提供大量不断增加的命名数据集，每个都有其自己的稳定数据架构的数据服务。 您可以创建类型提供程序读取架构并以强类型化的方式向程序员显示当前数据集。
-
 
 ## <a name="before-you-start"></a>安装前
 
@@ -51,7 +50,6 @@ F # 生态系统包含一系列常用 Internet 和企业数据服务的类型提
 - 它将更改在程序执行过程？
 
 类型提供程序是代码的最适合于其中的架构是代码的在运行时和已编译的生存期内稳定的情况下。
-
 
 ## <a name="a-simple-type-provider"></a>简单类型提供程序
 
@@ -93,8 +91,7 @@ type Type100 =
 
 请注意静态已知类型和成员提供的组。 此示例不会利用提供程序能够提供依赖于架构的类型。 类型提供程序的实现下面的代码中所述，本主题的后面部分介绍详细信息。
 
-
->[!WARNING] 
+>[!WARNING]
 可能有此代码与联机示例之间的差异。
 
 ```fsharp
@@ -168,7 +165,6 @@ devenv.exe /debugexe fsc.exe -r:bin\Debug\HelloWorldTypeProvider.dll script.fsx
 或者，打开 Visual Studio，打开调试菜单，选择`Debug/Attach to process…`，并将附加到另一个`devenv`进程在其中编辑您的脚本。 通过使用此方法，可以更轻松地通过以交互方式在第二个实例 （具有完整的 IntelliSense 和其他功能） 中键入表达式目标中的类型提供程序特定逻辑。
 
 您可以禁用调试以更好地识别生成的代码中的错误仅我的代码。 有关如何启用或禁用此功能的信息，请参阅[使用调试器浏览代码](/visualstudio/debugger/navigating-through-code-with-the-debugger)。 此外，还可以设置首次异常捕获通过打开`Debug`菜单，然后选择`Exceptions`或通过选择 Ctrl + Alt + E 键以打开`Exceptions`对话框。 在该对话框中下, `Common Language Runtime Exceptions`，选择`Thrown`复选框。
-
 
 ### <a name="implementation-of-the-type-provider"></a>类型提供程序的实现
 
@@ -376,7 +372,6 @@ t.AddMembersDelayed(fun () ->
 
 在此示例中，提供的每个类型擦除键入`obj`，，所有使用该类型将都显示为类型`obj`中编译的代码。 实际上，在这些示例中的基础对象都是字符串，但该类型将显示为`System.Object`在.NET 中编译的代码。 如使用的类型擦除的所有用法，您可以使用显式装箱，取消装箱，并将强制转换来破坏清除类型。 在这种情况下，使用对象时，可能会导致无效强制转换异常。 提供程序运行时可以定义其自己的私有表示形式类型，以帮助防范 false 表示形式。 不能在 F # 本身中定义已清除的类型。 提供的类型可能会消除。 你必须了解后果，这两个实用，擦写的语义，使用任一已清除的类型的类型提供程序或提供的提供程序类型。 已清除的类型没有任何实际的.NET 类型。 因此，不能通过类型进行准确反射和可能破坏已清除的类型，如果你使用运行时转换和其他依赖于确切运行时类型语义的方法。 已清除的类型的 subversion 经常会导致在运行时类型强制转换异常。
 
-
 ### <a name="choosing-representations-for-erased-provided-types"></a>有关清除选择表示形式提供类型
 
 有关清除提供的类型的一些用法，没有表示形式是必需的。 例如，已清除提供类型可能仅包含静态属性和成员和没有构造函数，并且任何方法或属性将返回类型的实例。 如果可以访问已清除的实例提供类型，则必须考虑以下问题：
@@ -435,11 +430,9 @@ ProvidedConstructor(…, InvokeCode = (fun args -> <@@ new DataObject() @@>), �
 
 上一节介绍了如何创建简单的擦除类型提供程序提供了一系列类型、 属性和方法。 本部分还介绍了这一概念的类型擦除，包括一些优点和缺点的类型提供程序，从提供已清除的类型和讨论了已清除的类型的表示形式。
 
-
 ## <a name="a-type-provider-that-uses-static-parameters"></a>使用静态参数类型提供程序
 
 许多有趣的情况下，甚至在提供程序不需要访问的任何本地或远程数据的情况下，能够通过静态数据参数化类型提供程序。 在本部分中，将了解将组合在一起这样的提供程序的一些基本技术。
-
 
 ### <a name="type-checked-regex-provider"></a>检查正则表达式提供程序类型
 
@@ -737,16 +730,13 @@ do ()
 
 本部分介绍了如何创建操作的类型提供程序的静态参数。 提供程序检查静态参数，并提供基于其值的操作。
 
-
 ## <a name="a-type-provider-that-is-backed-by-local-data"></a>类型提供程序支持的本地数据
 
 通常，你可能想类型提供程序提供基于的静态参数和从本地或远程系统的信息的 Api。 本部分讨论基于本地的数据，例如本地数据文件的类型提供程序。
 
-
 ### <a name="simple-csv-file-provider"></a>简单的 CSV 文件提供程序
 
 作为一个简单的示例，请考虑访问科学记数法中以逗号分隔值 (CSV) 格式的数据类型提供程序。 本部分假设 CSV 文件包含下表说明了浮点型数据后, 跟一个标题行：
-
 
 |距离 （米）|时间 （秒）|
 |----------------|-------------|
@@ -893,11 +883,9 @@ type public MiniCsvProvider(cfg:TypeProviderConfig) as this =
 
 本部分介绍了如何使用一个简单的架构包含在数据源本身中创建的本地数据源的类型提供程序。
 
-
 ## <a name="going-further"></a>深入学习
 
 以下部分包含有关进一步研究的建议。
-
 
 ### <a name="a-look-at-the-compiled-code-for-erased-types"></a>查看已清除的类型的已编译代码
 
@@ -939,8 +927,8 @@ IL_0017:  ret
 
 如示例所示，该类型的所有提及`Type1`和`InstanceProperty`属性都会被清除，离开所涉及的仅对运行时类型的操作。
 
-
 ### <a name="design-and-naming-conventions-for-type-providers"></a>设计和类型提供程序的命名约定
+
 创作类型提供程序时，应遵守以下约定。
 
 **连接协议的提供程序**一般情况下，为数据和服务的连接协议，如 OData 或 SQL 连接时，大多数提供程序 Dll 的名称应以结尾`TypeProvider`或`TypeProviders`。 例如，使用一个 DLL 名称类似于以下字符串：
@@ -980,13 +968,12 @@ let data = Fabrikam.Data.Freebase.Astronomy.Asteroids
 
 有关详细信息，请参阅`GetConnection`设计本主题后面所述的约定。
 
-
 ### <a name="design-patterns-for-type-providers"></a>类型提供程序的设计模式
 
 以下部分介绍创作类型提供程序时，可以使用的设计模式。
 
-
 #### <a name="the-getconnection-design-pattern"></a>GetConnection 设计模式
+
 大多数类型提供程序应编写为使用`GetConnection`由 FSharp.Data.TypeProviders.dll 中的类型提供程序，如以下示例所示的模式：
 
 ```fsharp
@@ -1147,10 +1134,7 @@ F # 中的类型提供程序机制具有以下限制：
 
   可以使用打印到 stdout 日志记录。
 
-
 ## <a name="see-also"></a>请参阅
 
-* [类型提供程序](index.md)
-
-* [类型提供程序 SDK](https://github.com/fsprojects/FSharp.TypeProviders.SDK)
-
+- [类型提供程序](index.md)
+- [类型提供程序 SDK](https://github.com/fsprojects/FSharp.TypeProviders.SDK)

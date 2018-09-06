@@ -15,11 +15,11 @@ helpviewer_keywords:
 - StylusPlugIn objects [WPF]
 ms.assetid: c31f3a67-cb3f-4ded-af9e-ed21f6575b26
 ms.openlocfilehash: 3113b953c1c547035883a4f4b51f53e4aefdf0a6
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43537868"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43777373"
 ---
 # <a name="creating-an-ink-input-control"></a>创建墨迹输入控件
 您可以创建自定义控件的动态和静态呈现墨迹。 这就是，根据用户绘制笔划，从而导致出现"流"从 tablet 笔，并在其后显示墨迹添加到该控件，通过触笔从剪贴板粘贴数据或从文件加载的手写内容呈现墨迹。 若要动态呈现墨迹，控件必须使用<xref:System.Windows.Input.StylusPlugIns.DynamicRenderer>。 若要以静态方式呈现墨迹，您必须重写触笔事件方法 (<xref:System.Windows.UIElement.OnStylusDown%2A>， <xref:System.Windows.UIElement.OnStylusMove%2A>，并<xref:System.Windows.UIElement.OnStylusUp%2A>) 来收集<xref:System.Windows.Input.StylusPoint>数据，创建的笔画，并将其添加到<xref:System.Windows.Controls.InkPresenter>（它将呈现在控件上的墨迹）。  

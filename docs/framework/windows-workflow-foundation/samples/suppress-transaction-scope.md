@@ -3,11 +3,11 @@ title: 禁止显示事务范围
 ms.date: 03/30/2017
 ms.assetid: 49fb6dd4-30d4-4067-925c-c5de44c8c740
 ms.openlocfilehash: 44814d66a4de4b3e72bb33eb46019eb1088ab040
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43385189"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43788034"
 ---
 # <a name="suppress-transaction-scope"></a>禁止显示事务范围
 此示例演示如何创作自定义 `SuppressTransactionScope` 活动以禁止环境运行时事务（如果存在的话）。  

@@ -9,11 +9,11 @@ helpviewer_keywords:
 - WCF services [WCF], running
 ms.assetid: 31774d36-923b-4e2d-812e-aa190127266f
 ms.openlocfilehash: e2bf16bd07c7ac9d918a4ae95d7f4aa185d436ec
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43404666"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43741154"
 ---
 # <a name="how-to-host-and-run-a-basic-windows-communication-foundation-service"></a>如何：承载和运行基本的 Windows Communication Foundation 服务
 这是创建 Windows Communication Foundation (WCF) 应用程序所需六项任务中的第三项。 有关全部六项任务的概述，请参阅[入门教程](../../../docs/framework/wcf/getting-started-tutorial.md)主题。  

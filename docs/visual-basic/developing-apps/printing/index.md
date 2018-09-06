@@ -3,11 +3,11 @@ title: 打印和报告 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 92997b65-0279-4889-8db7-32cb6708be9c
 ms.openlocfilehash: 926526a64cd0b70db4864329454fbc42f3e34b1e
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43539035"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43787113"
 ---
 # <a name="printing-and-reporting-visual-basic"></a>打印和报告 (Visual Basic)
 Visual Basic 提供了几个选项用于打印和报告。 以下主题提供概述以及有关打印和报告的相关文档的链接。  

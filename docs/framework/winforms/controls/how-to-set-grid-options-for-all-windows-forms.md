@@ -9,11 +9,11 @@ helpviewer_keywords:
 - Windows Forms Designer
 ms.assetid: 36967466-1dfd-4fae-a7f1-7bf2cbc94048
 ms.openlocfilehash: ef6dc80bc00e2582b514bff7fe3e9c5d6d5770e6
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43420979"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43776669"
 ---
 # <a name="how-to-set-grid-options-for-all-windows-forms"></a>如何：设置所有 Windows 窗体的网格选项
 如您习惯在 Visual Studio 开发环境中工作，可以在 Windows 窗体设计器中设置所有窗体和项目使用首的选项。  

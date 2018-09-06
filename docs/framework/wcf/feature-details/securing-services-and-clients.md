@@ -6,15 +6,15 @@ helpviewer_keywords:
 ms.assetid: e681f3bd-0c09-4a58-b0e4-0ecbdf1aa6c7
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: 2e0440aadcad7c4297cdc6e6489ca004480420ba
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 60aa4da95666de01daa087c4c8e826c8cf72ba85
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33497407"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43788644"
 ---
 # <a name="securing-services-and-clients"></a>保护服务和客户端的安全
-本部分中的信息主要针对的编程安全中 Windows Communication Foundation (WCF)。 通常，这包括选择系统提供的相应绑定、设置安全元素的属性，然后设置服务行为的属性（控制检索凭据以供服务或客户端使用的方式）。 这些技术涵盖大多数情况下，大多数用户的安全要求中所示[常用安全方案](../../../../docs/framework/wcf/feature-details/common-security-scenarios.md)。 如果你的方案需要更多的功能，请首先参阅[使用自定义绑定的安全功能](../../../../docs/framework/wcf/feature-details/security-capabilities-with-custom-bindings.md); 如果解决方案不明显，请参阅[扩展安全](../../../../docs/framework/wcf/extending/extending-security.md)。 如果要创建 （或与互操作性） 的系统使用丰富的声明，请参阅中的主题[授权](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md)。  
+在本部分中的信息重点介绍编程安全 Windows Communication Foundation (WCF) 中。 通常，这包括选择系统提供的相应绑定、设置安全元素的属性，然后设置服务行为的属性（控制检索凭据以供服务或客户端使用的方式）。 这些技术涵盖大多数情况下，大多数用户的安全要求，如中所示[常用安全方案](../../../../docs/framework/wcf/feature-details/common-security-scenarios.md)。 如果你的方案需要更多的功能，首先请参阅[使用自定义绑定的安全功能](../../../../docs/framework/wcf/feature-details/security-capabilities-with-custom-bindings.md); 如果解决方案并不明显，请参阅[扩展安全](../../../../docs/framework/wcf/extending/extending-security.md)。 如果要创建 （或与进行互操作） 的系统使用丰富的声明，请参阅中的主题[授权](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md)。  
   
 ## <a name="in-this-section"></a>本节内容  
  [WCF 安全编程](../../../../docs/framework/wcf/feature-details/programming-wcf-security.md)  
@@ -27,7 +27,7 @@ ms.locfileid: "33497407"
  总结了使用 Windows Communication Foundation (WCF) 中的消息级安全性的原因。  
   
  [安全会话](../../../../docs/framework/wcf/feature-details/secure-sessions.md)  
- 从讨论了所需保护 WCF 会话时的注意事项。  
+ 讨论的所需保护 WCF 会话时的注意事项。  
   
  [使用证书](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)  
  说明使用 X.509 证书时必须完成的一些常见任务。  
@@ -56,4 +56,4 @@ ms.locfileid: "33497407"
   
 ## <a name="see-also"></a>请参阅  
  [基本 WCF 编程](../../../../docs/framework/wcf/basic-wcf-programming.md)  
- [Windows Server App Fabric 的安全模型](http://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+ [Windows Server App Fabric 的安全模型](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

@@ -7,11 +7,11 @@ helpviewer_keywords:
 - classes [WPF], SkewTransform
 ms.assetid: 56b65f2f-dc6e-4238-923f-ca44ec53c52f
 ms.openlocfilehash: f828e4d4e59fa5ed31f81f3e83570a25add19e01
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43424289"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43734898"
 ---
 # <a name="how-to-skew-an-element"></a>如何：使元素扭曲
 此示例演示如何使用<xref:System.Windows.Media.SkewTransform>使元素扭曲。 扭曲（也称为修剪）是一种以非均匀方式拉伸坐标空间的转换。 一个典型用法<xref:System.Windows.Media.SkewTransform>是用于模拟[!INCLUDE[TLA#tla_3d](../../../../includes/tlasharptla-3d-md.md)]中的深度[!INCLUDE[TLA#tla_2d](../../../../includes/tlasharptla-2d-md.md)]对象。  

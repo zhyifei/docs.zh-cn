@@ -3,11 +3,11 @@ title: 将 WSE 3.0 Web 服务迁移到 WCF
 ms.date: 03/30/2017
 ms.assetid: 7bc5fff7-a2b2-4dbc-86cc-ecf73653dcdc
 ms.openlocfilehash: 21e36be178bb0dd0c52213d8c4c1387a564a0e5a
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43560028"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43779807"
 ---
 # <a name="migrating-wse-30-web-services-to-wcf"></a>将 WSE 3.0 Web 服务迁移到 WCF
 WSE 3.0 Web 服务迁移到 Windows Communication Foundation (WCF) 的优点包括改进的性能，支持其他传输、 额外的安全方案和 WS-* 规范。 从 WSE 3.0 迁移到 WCF Web 服务可能会遇到最多 200%到 400%性能改进。 有关 wcf 支持的传输协议的详细信息，请参阅[选择传输](../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)。 有关 WCF 支持的方案的列表，请参阅[常用安全方案](../../../../docs/framework/wcf/feature-details/common-security-scenarios.md)。 有关 WCF 支持的规范的列表，请参阅[Web 服务协议互操作性指南](../../../../docs/framework/wcf/feature-details/web-services-protocols-interoperability-guide.md)。  

@@ -20,11 +20,11 @@ helpviewer_keywords:
 - floating-point numbers
 ms.assetid: 90040d67-b630-4125-a6ae-37195b079042
 ms.openlocfilehash: 9bbc7f51de9899354184d051d8f1a584651dd030
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43671786"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43745484"
 ---
 # <a name="troubleshooting-data-types-visual-basic"></a>数据类型疑难解答 (Visual Basic)
 此页列出了你对内部数据类型执行操作时可能发生的一些常见问题。  

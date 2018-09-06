@@ -6,12 +6,12 @@ helpviewer_keywords:
 - ToolStripContainer control [Windows Forms]
 - ToolStrip control [Windows Forms], ToolStripContainer
 ms.assetid: 378fa5b4-38e1-46f4-8e5c-d0c19dcd0200
-ms.openlocfilehash: d969e456c16f344e9f301511a89615b3c741151b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: eb05627925534820544edc15e1fe06bf57f0ae84
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33538843"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43740957"
 ---
 # <a name="toolstripcontainer-control"></a>ToolStripContainer 控件
 <xref:System.Windows.Forms.ToolStrip> 控件通过使用 <xref:System.Windows.Forms.ToolStripContainer> 而具有内置漂浮功能（停靠时在工具区域中共享水平或垂直空间）。  
@@ -35,7 +35,7 @@ ms.locfileid: "33538843"
  <xref:System.Windows.Forms.ToolStripContentPanel>  
  提供 <xref:System.Windows.Forms.ToolStripContainer> 控件的 <xref:System.Windows.Forms.ToolStripContentPanel> 的参考文档。  
   
- 另请参阅[ToolStripContainer 任务对话框](http://msdn.microsoft.com/library/ms233647\(v=vs.110\))。  
+ 另请参阅[ToolStripContainer 任务对话框](https://msdn.microsoft.com/library/ms233647\(v=vs.110\))。  
   
 ## <a name="related-sections"></a>相关章节  
  <xref:System.Windows.Forms.ToolStripPanel>  

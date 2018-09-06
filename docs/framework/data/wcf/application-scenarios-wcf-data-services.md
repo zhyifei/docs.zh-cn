@@ -5,15 +5,15 @@ helpviewer_keywords:
 - WCF Data Services, learn more
 - WCF Data Services, scenarios
 ms.assetid: 7c82658f-e7c0-46b6-834d-6592f67ab5ea
-ms.openlocfilehash: 81a75007f1d4a13828867e6419412ea9f4c28906
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.openlocfilehash: 5446ab5fe65bd6e2b5244e135c0723f3cb28e81a
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33365055"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43735522"
 ---
 # <a name="application-scenarios-wcf-data-services"></a>应用程序方案（WCF 数据服务）
-[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 用于公开和使用数据作为支持的方案的核心集[!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]馈送。 本主题提供与这些方案相关的主题的链接。  
+[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 支持为公开和使用数据作为一组核心方案[!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]馈送。 本主题提供与这些方案相关的主题的链接。  
   
  公开关系数据从数据库作为[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]源。  
  -   [快速入门](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md)  
@@ -37,20 +37,20 @@ ms.locfileid: "33365055"
 -   [WCF Data Services 客户端库](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)  
   
  在基于 Silverlight 的客户端应用程序中使用 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 源。  
- -   [WCF Data Services (Silverlight)](http://msdn.microsoft.com/library/c0cd9f4b-1372-48e4-9935-c8421239da30)  
+ -   [WCF Data Services (Silverlight)](https://msdn.microsoft.com/library/c0cd9f4b-1372-48e4-9935-c8421239da30)  
   
 -   [异步操作](../../../../docs/framework/data/wcf/asynchronous-operations-wcf-data-services.md)  
   
--   [如何： 将数据服务数据绑定到控件 (WCF 数据服务/Silverlight)](http://msdn.microsoft.com/library/bda7d82e-7b1f-4690-8a33-c6297465bdd5)  
+-   [如何： 将数据服务数据绑定到控件 (WCF Data Services/Silverlight)](https://msdn.microsoft.com/library/bda7d82e-7b1f-4690-8a33-c6297465bdd5)  
   
  在基于 AJAX 的客户端应用程序中使用 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 源。  
  -   [在客户端应用程序中使用数据服务](../../../../docs/framework/data/wcf/using-a-data-service-in-a-client-application-wcf-data-services.md)  
   
--   [OData: URI 约定](http://go.microsoft.com/fwlink/?LinkId=185564)  
+-   [OData: URI 约定](https://go.microsoft.com/fwlink/?LinkId=185564)  
   
--   [OData: JavaScript 对象表示法 (JSON) 格式](http://go.microsoft.com/fwlink/?LinkId=185790)  
+-   [OData: JavaScript 对象表示法 (JSON) 格式](https://go.microsoft.com/fwlink/?LinkId=185790)  
   
- 创建端到端数据的解决方案使用[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]客户端和服务器之间传输数据。  
+ 创建使用端到端数据解决方案[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]客户端和服务器之间传输数据。  
  -   [快速入门](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md)  
   
 -   [在客户端应用程序中使用数据服务](../../../../docs/framework/data/wcf/using-a-data-service-in-a-client-application-wcf-data-services.md)  
@@ -62,14 +62,14 @@ ms.locfileid: "33365055"
   
 -   [异步操作](../../../../docs/framework/data/wcf/asynchronous-operations-wcf-data-services.md)  
   
--   [WCF Data Services (Silverlight)](http://msdn.microsoft.com/library/c0cd9f4b-1372-48e4-9935-c8421239da30)  
+-   [WCF Data Services (Silverlight)](https://msdn.microsoft.com/library/c0cd9f4b-1372-48e4-9935-c8421239da30)  
   
- 公开和使用[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]馈送以访问和更改以流的形式的二进制大型对象。  
+ 公开和使用[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]源和访问和更改以流的形式的二进制大型对象。  
  -   [流提供程序](../../../../docs/framework/data/wcf/streaming-provider-wcf-data-services.md)  
   
 -   [处理二进制数据](../../../../docs/framework/data/wcf/working-with-binary-data-wcf-data-services.md)  
   
- 将绑定[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]馈送到 Windows Presentation Framework (WPF) 应用程序中的控件。  
+ 将绑定[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]源到 Windows Presentation Framework (WPF) 应用程序中的控件。  
  -   [将数据绑定到控件](../../../../docs/framework/data/wcf/binding-data-to-controls-wcf-data-services.md)  
   
 -   [如何：将数据绑定到 Windows Presentation Foundation 元素](../../../../docs/framework/data/wcf/bind-data-to-wpf-elements-wcf-data-services.md)  

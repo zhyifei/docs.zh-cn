@@ -6,11 +6,11 @@ helpviewer_keywords:
 - security [WCF], authorization
 ms.assetid: 8ea0b552-af65-45b0-a157-c6c111b8ce5e
 ms.openlocfilehash: 8e7632dda1a1bd2b60b71c385ad58c23e4207534
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43532098"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43749575"
 ---
 # <a name="authorization-in-wcf"></a>WCF 中的授权
 授权是控制对资源（例如服务或文件）的访问和权限的过程。 在本部分中的主题说明如何在 Windows Communication Foundation (WCF) 在不同的方式执行此基本任务。  

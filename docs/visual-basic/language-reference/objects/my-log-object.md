@@ -5,11 +5,11 @@ helpviewer_keywords:
 - My.Log object
 ms.assetid: 309b14b4-8875-4b2f-9661-a734b8cbff07
 ms.openlocfilehash: 1c36382db2918952a9c84c25fb4319f7006d73d2
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43534881"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43773918"
 ---
 # <a name="mylog-object"></a>My.Log 对象
 提供的属性和方法用于将事件和异常信息写入应用程序的日志侦听器。  

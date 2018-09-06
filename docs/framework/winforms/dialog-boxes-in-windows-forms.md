@@ -7,11 +7,11 @@ helpviewer_keywords:
 - dialogs [Windows Forms], using in Windows Forms
 ms.assetid: d43d022b-451b-490d-9386-dc79d98fbf8a
 ms.openlocfilehash: ef07c087ca43efaf99231453fcb56af0db24234a
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43387736"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43776932"
 ---
 # <a name="dialog-boxes-in-windows-forms"></a>Windows 窗体中的对话框
 对话框用于与用户交互和检索信息。 简单地说，对话框是将其 <xref:System.Windows.Forms.FormBorderStyle> 枚举属性设置为 `FixedDialog` 的窗体。 可以通过使用 Visual Studio 中的 Windows 窗体设计器来构造自己的自定义对话框。 添加 `Label`、`Textbox` 和 `Button` 等控件，以便根据你的特定需求自定义对话框。 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]还包括预定义的对话框，如**文件打开**和消息框，你可以调整为自己的应用程序。 有关详细信息，请参阅[对话框控件和组件](../../../docs/framework/winforms/controls/dialog-box-controls-and-components-windows-forms.md)。  

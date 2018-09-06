@@ -3,11 +3,11 @@ title: 从 XAML 加载
 ms.date: 03/30/2017
 ms.assetid: 1f103ef6-7bed-4f16-ae52-9e665c5a43d7
 ms.openlocfilehash: 3344f8d35400835ed022ba507954f7f962ff75c8
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43418108"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43745429"
 ---
 # <a name="load-from-xaml"></a>从 XAML 加载
 此示例演示如何在不运行 XamlBuildTask 工具的情况下动态加载 XAML 工作流。 此示例改为调用 <xref:System.Activities.XamlIntegration.ActivityXamlServices.Load%2A> 方法。 该示例是一个 Windows Presentation Foundation (WPF) 客户端应用程序加载 XAML 工作流使用<xref:System.Activities.XamlIntegration.ActivityXamlServices>类并执行它们。 在使用 <xref:System.Activities.XamlIntegration.ActivityXamlServices> 类加载完这些工作流后，将返回一个可执行的 <xref:System.Activities.DynamicActivity%601>。  
