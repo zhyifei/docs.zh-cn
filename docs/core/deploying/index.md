@@ -4,12 +4,12 @@ description: 部署 .NET Core 应用程序。
 author: rpetrusha
 ms.author: ronpet
 ms.date: 04/18/2017
-ms.openlocfilehash: 4a39efdd92cf9c3bb6aadf83949e02ce20960481
-ms.sourcegitcommit: 702d5ffc6e733b6c4ded85bf1c92e2293638ee9a
+ms.openlocfilehash: ab65beaa293f7543a8436f913a1e5bf89ca7281b
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37792421"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43562001"
 ---
 # <a name="net-core-application-deployment"></a>.NET Core 应用程序部署
 
@@ -21,7 +21,7 @@ ms.locfileid: "37792421"
 
 ## <a name="framework-dependent-deployments-fdd"></a>依赖框架的部署 (FDD)
 
-对于 FDD，仅部署应用和任何第三方依赖项。 不需要部署 .NET Core，因为应用将使用目标系统上存在的 .NET Core 版本。 这是 .NET Core 应用的默认部署模型。
+对于 FDD，仅部署应用程序和第三方依赖项。 不需要部署 .NET Core，因为应用将使用目标系统上存在的 .NET Core 版本。 这是定目标到 .NET Core 的 .NET Core 和 ASP.NET Core 应用程序的默认部署模型。
 
 ### <a name="why-create-a-framework-dependent-deployment"></a>为什么创建依赖框架的部署？
 
@@ -70,9 +70,9 @@ FDD 和 SCD 部署使用单独的主机可执行文件，使你可以使用发�
 - 独立部署
 - 包含第三方依赖项的独立部署
 
-# <a name="see-also"></a>请参阅
+## <a name="see-also"></a>请参阅
 
-[使用 CLI 工具部署 .NET Core 应用](deploy-with-cli.md)   
-[使用 Visual Studio 部署 .NET Core 应用](deploy-with-vs.md)   
-[包、元包和框架](../packages.md)   
-[.NET Core 运行时标识符 (RID) 目录](../rid-catalog.md)
+* [使用 CLI 工具部署 .NET Core 应用程序](deploy-with-cli.md)
+* [使用 Visual Studio 部署 .NET Core 应用程序](deploy-with-vs.md)
+* [包、元包和框架](../packages.md)
+* [.NET Core 运行时标识符 (RID) 目录](../rid-catalog.md)
