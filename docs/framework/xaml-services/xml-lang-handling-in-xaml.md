@@ -8,11 +8,11 @@ helpviewer_keywords:
 - standards [XAML Services], RFC 3066
 ms.assetid: 7aac0078-a1c5-41f8-b8b0-975510d9dca0
 ms.openlocfilehash: 025e4b2865fe3938e5f1454f87e90bae7a85bcfd
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43399658"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43747965"
 ---
 # <a name="xmllang-handling-in-xaml"></a>XAML 中 xml:lang 的处理
 `xml:lang` 属性是 [!INCLUDE[TLA2#tla_xml](../../../includes/tla2sharptla-xml-md.md)]定义的属性，用于在 XML 中声明元素的语言和区域性信息。 此属性的相同含义在 XAML 中持续存在；但有一些其他注意事项。  

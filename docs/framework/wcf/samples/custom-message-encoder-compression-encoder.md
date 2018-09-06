@@ -2,22 +2,22 @@
 title: 自定义消息编码器：压缩编码器
 ms.date: 03/30/2017
 ms.assetid: 57450b6c-89fe-4b8a-8376-3d794857bfd7
-ms.openlocfilehash: 5dc665da3b28a98f1b3016d38ce706bf77dce06f
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: b70875e385fa32256476f6d1ae53e8cc1f5ff9de
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33808736"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43735869"
 ---
 # <a name="custom-message-encoder-compression-encoder"></a>自定义消息编码器：压缩编码器
-此示例演示如何实现自定义编码器使用的 Windows Communication Foundation (WCF) 平台。  
+此示例演示如何实现自定义编码器使用 Windows Communication Foundation (WCF) 平台。  
   
 > [!IMPORTANT]
 >  您的计算机上可能已安装这些示例。 在继续操作之前，请先检查以下（默认）目录：  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目录不存在，请转到[Windows Communication Foundation (WCF) 和针对.NET Framework 4 的 Windows Workflow Foundation (WF) 示例](http://go.microsoft.com/fwlink/?LinkId=150780)下载所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
+>  如果此目录不存在，请转到[Windows Communication Foundation (WCF) 和.NET Framework 4 的 Windows Workflow Foundation (WF) 示例](https://go.microsoft.com/fwlink/?LinkId=150780)若要下载所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\MessageEncoder\Compression`  
   
@@ -25,9 +25,9 @@ ms.locfileid: "33808736"
  该示例由一个客户端控制台程序 (.exe)、一个自承载的服务控制台程序 (.exe) 和一个压缩消息编码器库 (.dll) 组成。 该服务实现定义“请求-答复”通信模式的协定。 该协定由 `ISampleServer` 接口定义，而该接口将公开基本字符串回显操作（`Echo` 和 `BigEcho`）。 客户端向给定的操作发出同步请求，服务通过将该消息回送到客户端来进行回复。 客户端和服务活动显示在控制台窗口中。 提供该示例的目的在于演示如何编写自定义编码器并演示压缩消息对网络的影响。 可以为压缩消息编码器添加计算消息大小和/或处理时间的方法。  
   
 > [!NOTE]
->  在.NET Framework 4 中，自动解压缩具有已启用 WCF 客户端上的如果服务器发送压缩的响应 （使用 GZip 或 Deflate 等算法创建）。 如果服务是 Internet 信息服务 (IIS) 中的 Web 承载服务，则可以为该服务配置 IIS 以发送压缩响应。 如果客户端和服务上都需要执行压缩和解压缩，或者如果该服务是自承载服务，则可以使用此示例。  
+>  在.NET Framework 4 中，自动解压缩已被启用 WCF 客户端上的如果服务器发送压缩的响应 （使用 GZip 或 Deflate 等算法创建）。 如果服务是 Internet 信息服务 (IIS) 中的 Web 承载服务，则可以为该服务配置 IIS 以发送压缩响应。 如果客户端和服务上都需要执行压缩和解压缩，或者如果该服务是自承载服务，则可以使用此示例。  
   
- 此示例演示如何生成并将自定义消息编码器集成到 WCF 应用程序。 库 GZipEncoder.dll 是同时用客户端和服务部署的。 该示例还演示对消息进行压缩所带来的影响。 GZipEncoder.dll 中的代码演示以下操作：  
+ 此示例演示如何生成和 WCF 应用程序中集成自定义消息编码器。 库 GZipEncoder.dll 是同时用客户端和服务部署的。 该示例还演示对消息进行压缩所带来的影响。 GZipEncoder.dll 中的代码演示以下操作：  
   
 -   生成自定义编码器和编码器工厂。  
   
@@ -63,7 +63,7 @@ ms.locfileid: "33808736"
   
  经过缓冲处理的 `ReadMessage` 和 `WriteMessage` 类使用 `BufferManager` 类。 编码器只能通过编码器工厂来访问。 `MessageEncoderFactory` 抽象类提供了一个名为 `Encoder` 的属性和一个名为 `CreateSessionEncoder` 的方法，前者用来访问当前的编码器，后者用来创建支持会话的编码器。 类似的编码器有序而可靠，可以用在通道支持会话的方案中。 对于写入网络中的数据，此方案允许在每个会话中进行优化。 如果这不是所需的，则基方法不应当重载。 `Encoder` 属性提供了一种访问无会话编码器的机制，该属性的值由 `CreateSessionEncoder` 方法的默认实现返回。 由于此示例通过包装现有的编码器来提供压缩，因此 `MessageEncoderFactory` 实现接受一个表示内部编码器工厂的 `MessageEncoderFactory`。  
   
- 现在，定义编码器和编码器工厂，它们可与 WCF 客户端和服务。 但是，必须将这些编码器添加到通道堆栈中。 您可以从 <xref:System.ServiceModel.ServiceHost> 和 <xref:System.ServiceModel.ChannelFactory%601> 类派生类，并重写 `OnInitialize` 方法以手动添加该编码器工厂。 还可以通过自定义绑定元素来公开编码器工厂。  
+ 现在，定义编码器和编码器工厂，它们可使用 WCF 客户端和服务。 但是，必须将这些编码器添加到通道堆栈中。 您可以从 <xref:System.ServiceModel.ServiceHost> 和 <xref:System.ServiceModel.ChannelFactory%601> 类派生类，并重写 `OnInitialize` 方法以手动添加该编码器工厂。 还可以通过自定义绑定元素来公开编码器工厂。  
   
  若要创建新的自定义绑定元素，请从 <xref:System.ServiceModel.Channels.BindingElement> 类派生一个类。 但是，存在多种类型的绑定元素。 为了确保自定义绑定元素被识别为消息编码绑定元素，还必须实现 <xref:System.ServiceModel.Channels.MessageEncodingBindingElement>。 <xref:System.ServiceModel.Channels.MessageEncodingBindingElement> 公开了一种用来新建消息编码器工厂的方法 (`CreateMessageEncoderFactory`)，实现该方法的目的在于返回匹配的消息编码器工厂的实例。 另外，<xref:System.ServiceModel.Channels.MessageEncodingBindingElement> 还有一个指示寻址版本的属性。 由于此示例包装现有的编码器，因此示例实现还会包装现有的编码器绑定元素、将内部编码器绑定元素作为构造函数的参数并通过一个属性来公开它。 下面的示例代码演示 `GZipMessageEncodingBindingElement` 类的实现。  
   
@@ -293,7 +293,7 @@ public class GZipMessageEncodingElement : BindingElementExtensionElement
 <gzipMessageEncoding innerMessageEncoding="textMessageEncoding" />  
 ```  
   
- 若要使用此配置处理程序，它必须注册内[ \<system.serviceModel >](../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md)元素，如下面的示例配置中所示。  
+ 若要使用此配置处理程序，则必须注册内[ \<system.serviceModel >](../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md)元素，如下面的示例配置中所示。  
   
 ```xml  
 <extensions>  
@@ -340,18 +340,18 @@ Press <ENTER> to terminate client.
     %windir%\Microsoft.NET\Framework\v4.0.XXXXX\aspnet_regiis.exe /i /enable  
     ```  
   
-2.  确保已执行[的 Windows Communication Foundation 示例的一次性安装过程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
+2.  请确保您具有执行[的 Windows Communication Foundation 示例的一次性安装过程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
   
 3.  若要生成解决方案，请按照中的说明[生成 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/building-the-samples.md)。  
   
-4.  若要在单或跨计算机配置上运行示例，请按照中的说明[运行 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/running-the-samples.md)。  
+4.  若要在单或跨计算机配置中运行示例，请按照中的说明[运行 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/running-the-samples.md)。  
   
 > [!IMPORTANT]
 >  您的计算机上可能已安装这些示例。 在继续操作之前，请先检查以下（默认）目录：  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目录不存在，请转到[Windows Communication Foundation (WCF) 和针对.NET Framework 4 的 Windows Workflow Foundation (WF) 示例](http://go.microsoft.com/fwlink/?LinkId=150780)下载所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
+>  如果此目录不存在，请转到[Windows Communication Foundation (WCF) 和.NET Framework 4 的 Windows Workflow Foundation (WF) 示例](https://go.microsoft.com/fwlink/?LinkId=150780)若要下载所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\MessageEncoder\Compression`  
   

@@ -4,11 +4,11 @@ description: 使用 Azure Blob 存储在云中存储非结构化的数据。
 author: sylvanc
 ms.date: 09/20/2016
 ms.openlocfilehash: ea9dc334ec9c2bcd4a80cc501d4b6634da5f64e4
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43467158"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43734468"
 ---
 # <a name="get-started-with-azure-blob-storage-using-f"></a>开始使用 Azure Blob 存储中使用 F # #
 

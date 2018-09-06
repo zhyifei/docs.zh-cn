@@ -2,12 +2,12 @@
 title: 使用 Async 和 Await 的异步编程 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: bd7e462b-583b-4395-9c36-45aa9e61072c
-ms.openlocfilehash: 5a0d2d40b815037e6eb3ed47c500c135ad116aaf
-ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
+ms.openlocfilehash: 9798136bfa88e19764a064732637783620f77a73
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2018
-ms.locfileid: "42925237"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43739537"
 ---
 # <a name="asynchronous-programming-with-async-and-await-visual-basic"></a>使用 Async 和 Await 的异步编程 (Visual Basic)
 通过使用异步编程，你可以避免性能瓶颈并增强应用程序的总体响应能力。 但是，编写异步应用程序的传统技术可能比较复杂，使它们难以编写、调试和维护。  
@@ -99,7 +99,7 @@ Dim urlContents As String = Await client.GetStringAsync()
   
  在异步方法中，可使用提供的关键字和类型来指示需要完成的操作，且编译器会完成其余操作，其中包括持续跟踪控件以挂起方法返回等待点时发生的情况。 一些常规流程（例如，循环和异常处理）在传统异步代码中处理起来可能很困难。 在异步方法中，元素的编写频率与同步解决方案相同且此问题得到解决。  
   
- 若要详细了解旧版 .NET Framework 中的异步性，请参阅 [TPL 和传统 .NET Framework 异步编程](http://msdn.microsoft.com/library/e7b31170-a156-433f-9f26-b1fc7cd1776f)。  
+ 若要详细了解旧版 .NET Framework 中的异步性，请参阅 [TPL 和传统 .NET Framework 异步编程](https://msdn.microsoft.com/library/e7b31170-a156-433f-9f26-b1fc7cd1776f)。  
   
 ##  <a name="BKMK_WhatHappensUnderstandinganAsyncMethod"></a>异步方法的运行机制  
  异步编程中最需弄清的是控制流是如何从方法移动到方法的。 下图可引导你完成该过程。  
@@ -246,7 +246,7 @@ Await Task_MethodAsync()
 |[WhenAny：.NET Framework 和 Windows 运行时之间的桥接](https://msdn.microsoft.com/library/jj635140(v=vs.120).aspx)|展示了如何桥接 .NET Framework 与 [!INCLUDE[wrt](~/includes/wrt-md.md)]中 IAsyncOperations 的任务类型，以便可以将 <xref:System.Threading.Tasks.Task.WhenAny%2A> 与 [!INCLUDE[wrt](~/includes/wrt-md.md)] 方法结合使用。|[异步示例：桥接 .NET 和 Windows 运行时（AsTask 和 WhenAny）](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/jj635140(v=vs.120))|  
 |异步取消：.NET Framework 和 Windows 运行时之间的桥接|展示了如何桥接 .NET Framework 与 [!INCLUDE[wrt](~/includes/wrt-md.md)]中 IAsyncOperations 的任务类型，以便可以将 <xref:System.Threading.CancellationTokenSource> 与 [!INCLUDE[wrt](~/includes/wrt-md.md)] 方法结合使用。|[异步示例：桥接 .NET 和 Windows 运行时（AsTask 和 Cancellation）](https://code.msdn.microsoft.com/Async-Sample-Bridging-9479eca3)|  
 |[使用 Async 进行文件访问 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/using-async-for-file-access.md)|列出并演示使用 async 和 await 访问文件的好处。||  
-|[基于任务的异步模式 (TAP)](http://msdn.microsoft.com/library/8cef1fcf-6f9f-417c-b21f-3fd8bac75007)|描述 .NET Framework 中异步的新模式。 该模式基于 <xref:System.Threading.Tasks.Task> 和 <xref:System.Threading.Tasks.Task%601> 类型。||  
+|[基于任务的异步模式 (TAP)](https://msdn.microsoft.com/library/8cef1fcf-6f9f-417c-b21f-3fd8bac75007)|描述 .NET Framework 中异步的新模式。 该模式基于 <xref:System.Threading.Tasks.Task> 和 <xref:System.Threading.Tasks.Task%601> 类型。||  
 |[Channel 9 上的异步相关视频](https://channel9.msdn.com/search?term=async+&type=All)|提供指向有关异步编程的各种视频的链接。||  
   
 ##  <a name="BKMK_CompleteExample"></a>完整示例  

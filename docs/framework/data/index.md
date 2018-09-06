@@ -6,12 +6,12 @@ helpviewer_keywords:
 - data access [.NET Framework], about .NET Framework data access
 - data [.NET Framework], accessing
 ms.assetid: 8c37635d-e2c1-4b64-a258-61d9e87405e6
-ms.openlocfilehash: 4ad0b287aa37104e01015ef0a44cf500bc885c29
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0db71fd7e48515ad6be3641786fc180f62aacf33
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33356747"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43724001"
 ---
 # <a name="data-and-modeling-in-the-net-framework"></a>.NET Framework 中的数据和建模
 本节提供有关如何使用 ADO.NET、语言集成查询 (LINQ)、WCF 数据服务和 XML 访问数据的信息。  
@@ -20,7 +20,7 @@ ms.locfileid: "33356747"
  [ADO.NET](../../../docs/framework/data/adonet/index.md)  
  描述 ADO.NET 结构，并介绍如何使用 ADO.NET 类管理应用程序数据和与数据源（包括 Microsoft SQL Server、OLE DB 数据源和 XML）进行交互。  
   
- [LINQ 门户网站](http://msdn.microsoft.com/library/6eb15c76-4ee6-4146-981e-b3429a945e6f)  
+ [LINQ 门户网站](https://msdn.microsoft.com/library/6eb15c76-4ee6-4146-981e-b3429a945e6f)  
  提供指向语言集成查询 (LINQ) 的相关文档的链接。  
   
  [事务处理](../../../docs/framework/data/transactions/index.md)  
@@ -32,11 +32,11 @@ ms.locfileid: "33356747"
  [XML 文档和数据](../../../docs/standard/data/xml/index.md)  
  概述了对 .NET Framework 中的 XML 文档和数据有用的一组全面、集成的类。  
   
- [XML 标准参考](http://msdn.microsoft.com/library/79c78508-c9d0-423a-a00f-672e855de401)  
+ [XML 标准参考](https://msdn.microsoft.com/library/79c78508-c9d0-423a-a00f-672e855de401)  
  提供有关 Microsoft 支持的 XML 标准的参考信息。  
   
 ## <a name="related-sections"></a>相关章节  
- [Microsoft SQL Server 建模技术](http://go.microsoft.com/fwlink/?LinkId=193039)  
+ [Microsoft SQL Server 建模技术](https://go.microsoft.com/fwlink/?LinkId=193039)  
  介绍一套快速进行基于数据的自定义应用程序设计和开发的技术。  
   
  [开发指南](../../../docs/framework/development-guide.md)  

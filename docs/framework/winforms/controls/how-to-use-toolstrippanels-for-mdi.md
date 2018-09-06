@@ -10,11 +10,11 @@ helpviewer_keywords:
 - toolbars [Windows Forms], using for MDI
 ms.assetid: d6b884fc-0846-465f-83c3-5dc0fe93b00f
 ms.openlocfilehash: 9a5a13e76af0efe6da9a7617b78245c906b4751c
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43535512"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43744172"
 ---
 # <a name="how-to-use-toolstrippanels-for-mdi"></a>如何：在 MDI 中使用 ToolStripPanel
 <xref:System.Windows.Forms.ToolStripPanel> 通过使用 <xref:System.Windows.Forms.ToolStripPanel.Join%2A> 方法为多文档界面 (MDI) 应用程序提供了灵活性。  

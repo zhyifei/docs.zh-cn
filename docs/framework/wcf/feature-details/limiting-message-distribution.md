@@ -3,11 +3,11 @@ title: 限制消息分布
 ms.date: 03/30/2017
 ms.assetid: 8b5ec4b8-1ce9-45ef-bb90-2c840456bcc1
 ms.openlocfilehash: bec5a28abeff23929d2c0f1c363f4e08872a63fa
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43672566"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43738641"
 ---
 # <a name="limiting-message-distribution"></a>限制消息分布
 对等通道设计为一个广播网格。 其基本洪泛模型实现以下操作：将任意网格成员发送的每条消息均分发给该网格的所有其他成员。 在某个成员生成的每条消息都与所有其他成员相关且对他们有用的情况下（例如聊天室），这是一个理想的模型。 但是，许多应用程序偶尔需要限制消息分发。 例如，如果一个新成员加入网格，希望检索通过网格发送的最后一条消息，则无需将此请求群发给该网格的每个成员。 可以将请求限制为仅发送给近邻，或是筛选出本地生成的消息。也可以将消息发送到网格上的单个节点。 本主题讨论如何使用跃点计数、消息传播筛选器、本地筛选器或直接连接来控制通过网格转发消息的方式，并提供有关方式选择的通用准则。  

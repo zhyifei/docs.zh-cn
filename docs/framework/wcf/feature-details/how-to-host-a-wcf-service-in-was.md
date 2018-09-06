@@ -3,11 +3,11 @@ title: 如何：在 WAS 中承载 WCF 服务
 ms.date: 03/30/2017
 ms.assetid: 9e3e213e-2dce-4f98-81a3-f62f44caeb54
 ms.openlocfilehash: fd48957f7f8410b4b0df39fe125c35e4fc98cb8e
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43560290"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43746795"
 ---
 # <a name="how-to-host-a-wcf-service-in-was"></a>如何：在 WAS 中承载 WCF 服务
 本主题概述了创建 Windows 进程激活服务 (也称为 WAS) 所需的基本步骤的托管 Windows Communication Foundation (WCF) 服务。 WAS 是新的进程激活服务，是对使用非 HTTP 传输协议的 Internet Information Services (IIS) 功能的泛化。 WCF 使用侦听器适配器接口传递激活请求通过非 HTTP 协议支持的 WCF，如 TCP、 命名管道和消息队列接收的请求。  

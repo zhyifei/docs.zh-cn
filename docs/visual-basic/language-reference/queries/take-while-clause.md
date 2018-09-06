@@ -9,11 +9,11 @@ helpviewer_keywords:
 - Take While statement [Visual Basic]
 ms.assetid: db8f9f2f-fc9f-4a6c-b0b8-1bf048147e11
 ms.openlocfilehash: 181cc641bb12329c898cc3bb226ea49f0836e979
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43394391"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43736401"
 ---
 # <a name="take-while-clause-visual-basic"></a>Take While 子句 (Visual Basic)
 包括集合中指定条件为 `true` 的任何元素，并绕过剩余元素。  

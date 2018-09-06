@@ -3,11 +3,11 @@ title: 通过范围进行发现的示例
 ms.date: 03/30/2017
 ms.assetid: 6a37a754-6b8c-4ebe-bdf2-d4f0520271d5
 ms.openlocfilehash: d9adc33d73642a42a8ba948b3c5bf75bd4bc1f5c
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43398130"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43733773"
 ---
 # <a name="discovery-with-scopes-sample"></a>通过范围进行发现的示例
 此示例演示如何使用范围对可发现的终结点进行分类，以及如何使用 <xref:System.ServiceModel.Discovery.DiscoveryClient> 来执行终结点的异步搜索。 对于服务，此示例演示如何通过以下方法为每个终结点自定义发现：添加一个终结点发现行为并使用它将一个范围添加到该终结点，以及控制该终结点的可发现性。 对于客户端，此示例演示客户端如何创建 <xref:System.ServiceModel.Discovery.DiscoveryClient>，以及如何通过将范围添加到 <xref:System.ServiceModel.Discovery.FindCriteria> 对搜索参数进行精细调整以包含范围。 此示例还演示客户端如何通过添加终止条件来限制响应。  

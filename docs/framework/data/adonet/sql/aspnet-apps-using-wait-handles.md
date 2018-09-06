@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: f588597a-49de-4206-8463-4ef377e112ff
 ms.openlocfilehash: 608cec63f08869ebb3a6519f9de0fe7fa02a344f
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43386277"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43738961"
 ---
 # <a name="aspnet-applications-using-wait-handles"></a>使用等待句柄的 ASP.NET 应用程序
 在您的应用程序一次只处理一个异步操作时，用于处理异步操作的回调和轮询模型十分有用。 等待模型提供了一种更灵活的方式来处理多个异步操作。 有两种等待模型，是根据用于实现它们的 <xref:System.Threading.WaitHandle> 方法命名的：等待（任何）模型和等待（所有）模型。  

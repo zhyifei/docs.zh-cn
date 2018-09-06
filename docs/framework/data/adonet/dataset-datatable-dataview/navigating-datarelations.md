@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: e5e673f4-9b44-45ae-aaea-c504d1cc5d3e
 ms.openlocfilehash: 1819d468d12c03ce0c4faac11f4b20b8fe0f9c33
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
-ms.translationtype: MT
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43482001"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43731269"
 ---
 # <a name="navigating-datarelations"></a>导航 DataRelation
 <xref:System.Data.DataRelation> 的一项主要功能就是在 <xref:System.Data.DataTable> 中从一个 <xref:System.Data.DataSet> 浏览到另一个。 这使您可以检索所有相关<xref:System.Data.DataRow>中一个对象**DataTable**如果给定的单个**DataRow**从相关**DataTable**。 例如，在建立**DataRelation**之间的客户表和 orders 的表，可以检索有关特定客户行使用的所有订单行**GetChildRows**。  

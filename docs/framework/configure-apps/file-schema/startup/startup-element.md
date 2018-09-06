@@ -12,12 +12,12 @@ ms.assetid: 536acfd8-f827-452f-838a-e14fa3b87621
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: 60699f0335bb35589341558800cfd64503d0aa0a
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 4d39dc28082fbed932a60228ac216f2f700c2e9f
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32748417"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43734702"
 ---
 # <a name="ltstartupgt-element"></a>&lt;启动&gt;元素
 指定公共语言运行时启动信息。  
@@ -43,16 +43,16 @@ ms.locfileid: "32748417"
   
 ## <a name="uselegacyv2runtimeactivationpolicy-attribute"></a>useLegacyV2RuntimeActivationPolicy 属性  
   
-|值|描述|  
+|“值”|描述|  
 |-----------|-----------------|  
-|`true`|启用[!INCLUDE[dnprdnext](../../../../../includes/dnprdnext-md.md)]选运行时，是将绑定旧式运行时激活技术的运行时激活策略 (如[CorBindToRuntimeEx 函数](../../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md)) 为运行时从配置文件而不是选择上限它们设置在 CLR 版本 2.0。 因此，如果从配置文件选择 CLR 版本 4 或更高版本，则使用.NET Framework 的早期版本创建的混合模式程序集是加载与选择的 CLR 版本。 将设置此值可防止 CLR 版本 1.1 或 CLR 版本 2.0 加载到相同的过程中，有效地禁用进程内并行的功能。|  
-|`false`|使用的默认激活策略[!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)]和更高版本，即允许旧式运行时加载到进程的 CLR 版本 1.1 或 2.0 的激活方法。 设置此值禁止从加载到.NET Framework 4 或更高版本，除非它们生成.NET Framework 4 或更高版本的混合模式程序集。 此值是默认值。|  
+|`true`|启用[!INCLUDE[dnprdnext](../../../../../includes/dnprdnext-md.md)]对于所选的运行时，它将绑定旧式运行时激活技术的运行时激活策略 (如[CorBindToRuntimeEx 函数](../../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md)) 到运行时从配置文件而不是选择在 CLR 版本 2.0 将达到其上限。 因此，如果从配置文件选择 CLR 版本 4 或更高版本，则使用.NET Framework 的早期版本创建的混合模式程序集是加载与所选的 CLR 版本。 设置此值可防止 CLR 版本 1.1 或 CLR 版本 2.0 加载到同一个进程，有效地禁用进程内并行的功能。|  
+|`false`|使用的默认激活策略[!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)]和更高版本，这是允许旧的运行时加载到进程的 CLR 版本 1.1 或 2.0 的激活方法。 将设置此值可阻止混合模式程序集加载到.NET Framework 4 或更高版本，除非在.NET Framework 4 或更高版本生成它们。 此值是默认值。|  
   
 ### <a name="child-elements"></a>子元素  
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<requiredRuntime>](../../../../../docs/framework/configure-apps/file-schema/startup/requiredruntime-element.md)|指定应用程序仅支持 1.0 版本的公共语言运行时。 运行时 1.1 版或更高版本生成的应用程序应使用 **\<supportedRuntime >** 元素。|  
+|[\<requiredRuntime>](../../../../../docs/framework/configure-apps/file-schema/startup/requiredruntime-element.md)|指定应用程序仅支持 1.0 版本的公共语言运行时。 运行时 1.1 版或更高版本构建的应用程序应使用 **\<supportedRuntime >** 元素。|  
 |[\<supportedRuntime>](../../../../../docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md)|指定应用程序支持的公共语言运行时版本。|  
   
 ### <a name="parent-elements"></a>父元素  
@@ -62,15 +62,15 @@ ms.locfileid: "32748417"
 |`configuration`|公共语言运行时和 .NET Framework 应用程序所使用的每个配置文件中的根元素。|  
   
 ## <a name="remarks"></a>备注  
- **\<SupportedRuntime >** 元素应由使用版本 1.1 或更高版本的运行时生成的所有应用程序。 为支持仅运行时 1.0 版而生成的应用程序必须使用 **\<requiredRuntime >** 元素。  
+ **\<SupportedRuntime >** 元素应由使用 1.1 版或更高版本的运行时版本生成的所有应用程序。 仅支持 1.0 版的运行时生成的应用程序必须使用 **\<requiredRuntime >** 元素。  
   
- 在 Microsoft Internet Explorer 中托管的应用程序的启动代码将忽略**\<启动 >** 元素及其子元素。  
+ 在 Microsoft Internet Explorer 中托管的应用程序的启动代码将忽略**\<启动 >** 元素和子元素。  
   
 ## <a name="the-uselegacyv2runtimeactivationpolicy-attribute"></a>UseLegacyV2RuntimeActivationPolicy 属性  
- 此属性是很有用，如果你的应用程序使用旧式激活路径，如[CorBindToRuntimeEx 函数](../../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md)，并且你希望这些路径激活而不是早期版本，CLR 版本 4 或如果你的应用程序使用生成[!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)]但在使用.NET Framework 的早期版本生成的混合模式程序集具有的依赖关系。 在这些情况下，将属性设置为`true`。  
+ 此特性会非常有用，如果你的应用程序使用旧式激活路径，例如[CorBindToRuntimeEx 函数](../../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md)，并且希望这些路径来激活而不是早期版本的 CLR 版本 4 或如果你的应用程序使用生成[!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)]但在使用.NET Framework 的早期版本构建的混合模式程序集具有依赖项。 在这些情况下，将属性设置为`true`。  
   
 > [!NOTE]
->  将属性设置为`true`阻止到相同的过程中，有效地禁用进程内的并行功能加载的 CLR 版本 1.1 或 CLR 版本 2.0 (请参阅[为 COM 互操作的并行执行](http://msdn.microsoft.com/library/4302318c-3586-49bf-8620-b9a39cdf4a32))。  
+>  将属性设置为`true`防止 CLR 版本 1.1 或 CLR 版本 2.0 加载到同一个进程，有效地禁用进程内并行的功能 (请参阅[COM 互操作的并行执行](https://msdn.microsoft.com/library/4302318c-3586-49bf-8620-b9a39cdf4a32))。  
   
 ## <a name="example"></a>示例  
  下面的示例演示如何在配置文件中指定的运行时版本。  
@@ -94,6 +94,6 @@ ms.locfileid: "32748417"
 ## <a name="see-also"></a>请参阅  
  [启动设置架构](../../../../../docs/framework/configure-apps/file-schema/startup/index.md)  
  [配置文件架构](../../../../../docs/framework/configure-apps/file-schema/index.md)  
- [\<PaveOver> 指定要使用的运行时版本](http://msdn.microsoft.com/library/c376208d-980d-42b4-865b-fbe0d9cc97c2)  
- [COM 互操作的的并行执行](http://msdn.microsoft.com/library/4302318c-3586-49bf-8620-b9a39cdf4a32)  
+ [\<PaveOver> 指定要使用的运行时版本](https://msdn.microsoft.com/library/c376208d-980d-42b4-865b-fbe0d9cc97c2)  
+ [COM 互操作的的并行执行](https://msdn.microsoft.com/library/4302318c-3586-49bf-8620-b9a39cdf4a32)  
  [进程内并行执行](../../../../../docs/framework/deployment/in-process-side-by-side-execution.md)

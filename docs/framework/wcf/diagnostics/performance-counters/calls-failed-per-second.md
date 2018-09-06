@@ -2,12 +2,12 @@
 title: Calls Failed Per Second（每秒失败的调用次数）
 ms.date: 03/30/2017
 ms.assetid: e4ef3773-f650-4876-99cf-4d0c02aa03d4
-ms.openlocfilehash: 19f09b2a2132cab56da5dec49bdc8d5f5e4c8b8b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ccb5908e9036650e3f21a9496649c8090c2e47b2
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33474449"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43736317"
 ---
 # <a name="calls-failed-per-second"></a>Calls Failed Per Second（每秒失败的调用次数）
 计数器名称：Calls Failed Per Second（每秒失败的调用次数）  
@@ -15,7 +15,7 @@ ms.locfileid: "33474449"
 ## <a name="description"></a>描述  
  该操作中每秒钟出现未处理异常的调用数目。  
   
- 此计数器为性能计数器类型[PERF_COUNTER_COUNTER](http://go.microsoft.com/fwlink/?LinkID=94649)，使用以下公式计算其值。  
+ 此计数器为性能计数器类型[PERF_COUNTER_COUNTER](https://go.microsoft.com/fwlink/?LinkID=94649)，使用以下公式计算其值。  
   
  (N 1 - N 0 ) / ( (D 1 -D 0 ) / F)  
   

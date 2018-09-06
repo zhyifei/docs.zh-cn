@@ -2,19 +2,19 @@
 title: 客户端验证
 ms.date: 03/30/2017
 ms.assetid: f0c1f805-1a81-4d0d-a112-bf5e2e87a631
-ms.openlocfilehash: 6e34ca8e1bb14f610e363c02eaeb94b7fa5e27c7
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: 3f8b5ec3f8652ef50bbda3456669f2abf456472b
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33808281"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43740002"
 ---
 # <a name="client-validation"></a>客户端验证
 服务通常发布元数据以启用客户端代理类型的自动生成和配置。 如果服务不受信任，客户端应用程序应该验证元数据是否符合客户端应用程序有关安全性、事务、服务协定类型等方面的策略。 下面的示例演示如何编写一个客户端终结点行为，用于验证服务终结点以确保可以安全地使用该服务终结点。  
   
  服务公开四个终结点。 第一个终结点使用 WSDualHttpBinding，第二个终结点使用 NTLM 身份验证，第三个终结点启用事务流，第四个终结点使用基于证书的身份验证。  
   
- 客户端使用 <xref:System.ServiceModel.Description.MetadataResolver> 类来检索服务的元数据。 客户端强制实施禁用双工绑定、NTLM 身份验证和使用验证行为的事务流的策略。 每个<xref:System.ServiceModel.Description.ServiceEndpoint>实例从服务的元数据，客户端应用程序导入添加的一个实例`InternetClientValidatorBehavior`到的终结点行为<xref:System.ServiceModel.Description.ServiceEndpoint>然后再尝试使用 Windows Communication Foundation (WCF) 客户端连接到终结点。 在调用服务上的任何操作之前，会运行该行为的 `Validate` 方法，并通过引发 `InvalidOperationExceptions` 强制实施客户端的策略。  
+ 客户端使用 <xref:System.ServiceModel.Description.MetadataResolver> 类来检索服务的元数据。 客户端强制实施禁用双工绑定、NTLM 身份验证和使用验证行为的事务流的策略。 每个<xref:System.ServiceModel.Description.ServiceEndpoint>从服务的元数据，客户端应用程序导入的实例将添加的实例`InternetClientValidatorBehavior`到终结点行为<xref:System.ServiceModel.Description.ServiceEndpoint>然后再尝试使用 Windows Communication Foundation (WCF) 客户端连接到终结点。 在调用服务上的任何操作之前，会运行该行为的 `Validate` 方法，并通过引发 `InvalidOperationExceptions` 强制实施客户端的策略。  
   
 ### <a name="to-build-the-sample"></a>生成示例  
   
@@ -28,19 +28,19 @@ ms.locfileid: "33808281"
   
 3.  从 \client\bin\Debug 运行客户端应用程序。 客户端活动将显示在客户端控制台应用程序上。  
   
-4.  如果客户端和服务不能够进行通信，请参阅[疑难解答提示](http://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b)。  
+4.  如果客户端和服务能够进行通信，请参见[故障排除提示](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b)。  
   
 5.  在运行完该示例后运行 Cleanup.bat 移除证书。 其他安全示例使用相同的证书。  
   
 ### <a name="to-run-the-sample-across-computers"></a>跨计算机运行示例  
   
-1.  在服务器上，使用管理员特权运行的 Visual Studio 命令提示中键入`setup.bat service`。 运行`setup.bat`与`service`自变量的计算机的完全限定域名创建一个服务证书，并将服务证书导出到名为 Service.cer 的文件。  
+1.  在服务器上，使用管理员特权运行的 Visual Studio 命令提示中键入`setup.bat service`。 运行`setup.bat`与`service`参数与计算机的名称的完全限定域名创建一个服务证书并将服务证书导出到名为 Service.cer 的文件。  
   
-2.  在服务器上，编辑 App.config 以反映新证书名称。 也就是说，将更改`findValue`属性中[ \<serviceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-clientcredentials-element.md)到的计算机的完全限定域名的元素。  
+2.  在服务器上，编辑 App.config 以反映新证书名称。 也就是说，更改`findValue`中的属性[ \<serviceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-clientcredentials-element.md)元素名称的计算机的完全限定域名。  
   
 3.  将服务目录中的 Service.cer 文件复制到客户端计算机上的客户端目录中。  
   
-4.  在客户端，使用管理员特权，并且类型打开 Visual Studio 命令提示`setup.bat client`。 运行`setup.bat`与`client`参数创建一个名为 Client.com 的客户端证书，并将客户端证书导出到名为 Client.cer 的文件。  
+4.  在客户端上打开 Visual Studio 命令提示符下使用管理员特权，并且类型`setup.bat client`。 运行`setup.bat`与`client`参数创建一个名为 Client.com 的客户端证书，并将客户端证书导出到名为 Client.cer 的文件。  
   
 5.  在 client.cs 文件中更改 MEX 终结点的地址值和用于设置默认服务器证书的 `findValue` 以与服务的新地址相匹配。 通过使用服务器的完全限定域名替换 localhost 来执行此操作。 请重新生成。  
   
@@ -54,14 +54,14 @@ ms.locfileid: "33808281"
   
 10. 在客户端计算机上，运行 client.exe。  
   
-    1.  如果客户端和服务不能够进行通信，请参阅[疑难解答提示](http://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b)。  
+    1.  如果客户端和服务能够进行通信，请参见[故障排除提示](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b)。  
   
 ### <a name="to-clean-up-after-the-sample"></a>运行示例后进行清理  
   
 -   运行完示例后运行示例文件夹中的 Cleanup.bat。  
   
     > [!NOTE]
-    >  此脚本不会在跨计算机运行此示例时移除客户端上的服务证书。 如果你已运行跨计算机使用证书，请确保清除已安装在 CurrentUser-的服务证书的 WCF 示例 TrustedPeople 存储中。 为此，请使用以下命令：`certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>. For example: certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`。  
+    >  此脚本不会在跨计算机运行此示例时移除客户端上的服务证书。 如果您运行在计算机之间使用的证书，请确保清除已安装在 CurrentUser-的服务证书的 WCF 示例 TrustedPeople 存储。 为此，请使用以下命令：`certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>. For example: certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`。  
   
 ## <a name="see-also"></a>请参阅  
  [使用元数据](../../../../docs/framework/wcf/feature-details/using-metadata.md)

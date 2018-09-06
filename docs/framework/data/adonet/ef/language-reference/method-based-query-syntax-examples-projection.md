@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 505491fa-5920-43ce-8a96-c25389e125d8
 ms.openlocfilehash: 81484f729b2282678b3fa1a92b5050cf7a502db5
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43469890"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43739150"
 ---
 # <a name="method-based-query-syntax-examples-projection"></a>基于方法的查询语法示例：投影
 本主题中的示例演示如何使用<xref:System.Linq.Enumerable.Select%2A>并<xref:System.Linq.Enumerable.SelectMany%2A>方法查询[AdventureWorks 销售模型](https://msdn.microsoft.com/library/f16cd988-673f-4376-b034-129ca93c7832)使用基于方法的查询语法。 这些示例中使用的 AdventureWorks 销售模型从 AdventureWorks 示例数据库中的 Contact、Address、Product、SalesOrderHeader 和 SalesOrderDetail 等表生成。  

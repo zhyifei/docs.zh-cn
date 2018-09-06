@@ -8,11 +8,11 @@ helpviewer_keywords:
 - cubic Bezier curves [WPF]
 ms.assetid: 450a3a77-7c57-48b0-a008-0f6051add980
 ms.openlocfilehash: 2dd9dfa7f15ce00261c87f316079c25a7aa52532
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
-ms.translationtype: MT
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43425886"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43734663"
 ---
 # <a name="how-to-create-a-cubic-bezier-curve"></a>如何：创建三次方贝塞尔曲线
 此示例演示如何创建三次方贝塞尔曲线。 若要创建三次方贝塞尔曲线，使用<xref:System.Windows.Media.PathGeometry>， <xref:System.Windows.Media.PathFigure>，和<xref:System.Windows.Media.BezierSegment>类。  若要显示所生成的几何图形，请使用<xref:System.Windows.Shapes.Path>元素，或将其用于<xref:System.Windows.Media.GeometryDrawing>或<xref:System.Windows.Media.DrawingContext>。 在以下示例中，三次方贝塞尔曲线绘制从 （10，100） 到 （300，100）。 曲线的控制点为 （100，0） 和 （200，200）。  

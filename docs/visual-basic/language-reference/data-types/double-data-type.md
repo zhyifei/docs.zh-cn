@@ -19,27 +19,28 @@ helpviewer_keywords:
 - zeros, trailing
 - Double data type
 ms.assetid: 0c5670f7-fcb1-453a-bef1-374730cd38fd
-ms.openlocfilehash: c2d3d7d360ccb240bafbe0e19e9f396adfba7f7e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.openlocfilehash: 5d2d84f298b9cf6138e84ef287f6ea9212da2960
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43734807"
 ---
 # <a name="double-data-type-visual-basic"></a>Double 数据类型 (Visual Basic)
-保留带符号的 IEEE 64 位 （8 字节） 双精度浮点数，从-1.79769313486231570 e + 308 到-的值的范围 4.94065645841246544 e-324 负值和 4.94065645841246544 e-324 1.79769313486231570 e + 308 到正值。 双精度数字存储实际数目的近似值。  
+保存有符号 IEEE 64 位 （8 字节） 双精度浮点数，范围为从-1.79769313486231570 e + 308 到-4.94065645841246544 e-324 负值，从 4.94065645841246544 e-324 1.79769313486231570 e + 308 到正值。 双精度的数字存储一个实数的近似值。  
   
 ## <a name="remarks"></a>备注  
- `Double`数据类型提供了大量的最大和最小可能大量度。  
+ `Double`数据类型提供一个数字量最大和最小可能值。  
   
  `Double` 的默认值为 0。  
   
 ## <a name="programming-tips"></a>编程提示  
   
--   **精度。** 在使用浮点数，请记得在内存中不始终具有精确的表示形式。 这可能导致意外的结果从某些操作，如值比较和`Mod`运算符。 有关详细信息，请参阅[故障排除数据类型](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)。  
+-   **精度。** 当使用浮点数时，请记住在内存中不一定有精确的表示形式。 这可能导致意外的结果从某些操作，如值比较和`Mod`运算符。 有关详细信息，请参阅[故障排除数据类型](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)。  
   
--   **尾随零。** 浮点数据类型不具有任何内部表示形式尾随零字符。 例如，它们不区分 4.2000 和 4.2。 因此，尾随零字符不显示时显示或打印的浮点值。  
+-   **尾随零。** 浮点数据类型不具有尾随零个字符的任何内部表示形式。 例如，它们不区分 4.2000 和 4.2。 因此，尾随零个字符不会出现时显示或打印的浮点值。  
   
--   **类型字符。** 将文本类型字符 `R` 追加到文本会将其强制转换为 `Double` 数据类型。 例如，如果一个整数值后, 跟`R`的值更改为`Double`。  
+-   **类型字符。** 将文本类型字符 `R` 追加到文本会将其强制转换为 `Double` 数据类型。 例如，如果一个整数后, 跟`R`的值更改为`Double`。  
   
     ```  
     ' Visual Basic expands the 4 in the statement Dim dub As Double = 4R to 4.0:  
@@ -56,7 +57,7 @@ ms.lasthandoff: 05/04/2018
   
 ## <a name="see-also"></a>请参阅  
  <xref:System.Double?displayProperty=nameWithType>  
- [数据类型](../../../visual-basic/language-reference/data-types/data-type-summary.md)  
+ [数据类型](../../../visual-basic/language-reference/data-types/index.md)  
  [Decimal 数据类型](../../../visual-basic/language-reference/data-types/decimal-data-type.md)  
  [Single 数据类型](../../../visual-basic/language-reference/data-types/single-data-type.md)  
  [类型转换函数](../../../visual-basic/language-reference/functions/type-conversion-functions.md)  

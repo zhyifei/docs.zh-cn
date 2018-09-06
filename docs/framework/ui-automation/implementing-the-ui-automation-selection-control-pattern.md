@@ -9,16 +9,16 @@ ms.assetid: 449c3068-a5d6-4f66-84c6-1bcc7dd4d209
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: b1f7836eaecf098d5d960d080af52da7e304ace9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.openlocfilehash: fb37c55076f243c48604cbaafdb5fd32c94934f2
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33410333"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43734611"
 ---
 # <a name="implementing-the-ui-automation-selection-control-pattern"></a>实现 UI 自动化 Selection 控件模式
 > [!NOTE]
->  本文档适用于想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空间中定义的托管 <xref:System.Windows.Automation> 类的 .NET Framework 开发人员。 有关 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]的最新信息，请参阅 [Windows 自动化 API：UI 自动化](http://go.microsoft.com/fwlink/?LinkID=156746)。  
+>  本文档适用于想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空间中定义的托管 <xref:System.Windows.Automation> 类的 .NET Framework 开发人员。 有关最新信息[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]，请参阅[Windows 自动化 API: UI 自动化](https://go.microsoft.com/fwlink/?LinkID=156746)。  
   
  本主题介绍了实现 <xref:System.Windows.Automation.Provider.ISelectionProvider>的准则和约定，包括有关事件和属性的信息。 本主题的结尾列出了指向其他参考资料的链接。  
   
@@ -34,7 +34,7 @@ ms.locfileid: "33410333"
   
 -   管理实现 <xref:System.Windows.Automation.Provider.IRawElementProviderFragmentRoot>的子控件的单选控件（如“显示属性”  对话框中的“屏幕分辨率”  滑块，或 **中的“颜色选取器”**[!INCLUDE[TLA#tla_word](../../../includes/tlasharptla-word-md.md)] 选项控件（如下所示））应实现 <xref:System.Windows.Automation.Provider.ISelectionProvider>；其子级应实现 <xref:System.Windows.Automation.Provider.IRawElementProviderFragment> 和 <xref:System.Windows.Automation.Provider.ISelectionItemProvider>。  
   
- ![突出显示黄色的颜色选取器。] (../../../docs/framework/ui-automation/media/uia-valuepattern-colorpicker.png "UIA_ValuePattern_ColorPicker")  
+ ![突出显示黄色的颜色选取器。](../../../docs/framework/ui-automation/media/uia-valuepattern-colorpicker.png "UIA_ValuePattern_ColorPicker")  
 颜色样本字符串映射的示例  
   
 -   菜单不支持 <xref:System.Windows.Automation.SelectionPattern>。 如果你正在处理包含图形和文本的菜单项（例如， **中的“视图”****菜单中的“预览窗格”**[!INCLUDE[TLA#tla_outlook](../../../includes/tlasharptla-outlook-md.md)]项）并需要传达状态，则应实现 <xref:System.Windows.Automation.Provider.IToggleProvider>。  

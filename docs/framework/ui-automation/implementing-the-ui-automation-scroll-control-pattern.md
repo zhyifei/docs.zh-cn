@@ -10,11 +10,11 @@ author: Xansky
 ms.author: mhopkins
 manager: markl
 ms.openlocfilehash: 2a32d0684aa42eb5d12f200541f6daf22d3989cc
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43659665"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43738496"
 ---
 # <a name="implementing-the-ui-automation-scroll-control-pattern"></a>实现 UI 自动化 Scroll 控件模式
 > [!NOTE]

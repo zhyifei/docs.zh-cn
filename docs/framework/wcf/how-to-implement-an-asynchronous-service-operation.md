@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 4e5d2ea5-d8f8-4712-bd18-ea3c5461702c
 ms.openlocfilehash: eeea3933446a401ad8f556dc546f54122a19a8b5
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43396764"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43723881"
 ---
 # <a name="how-to-implement-an-asynchronous-service-operation"></a>如何：实现异步服务操作
 在 Windows Communication Foundation (WCF) 应用程序中的服务操作可以实现异步还是同步而无需指示客户端如何调用它。 例如，异步服务操作可以同步调用，而同步服务操作可以异步调用。 有关演示如何在客户端应用程序中以异步方式调用操作的示例，请参阅[如何： 以异步方式调用服务操作](../../../docs/framework/wcf/feature-details/how-to-call-wcf-service-operations-asynchronously.md)。 有关同步和异步操作的详细信息，请参阅[Designing Service Contracts](../../../docs/framework/wcf/designing-service-contracts.md)并[同步和异步操作](../../../docs/framework/wcf/synchronous-and-asynchronous-operations.md)。 本主题介绍异步服务操作的基本结构，代码并不完整。 服务和客户端的完整示例请参阅[异步](https://msdn.microsoft.com/library/833db946-f511-4f64-a26f-2759a11217c7)。  

@@ -3,11 +3,11 @@ title: SqlClient 对 LocalDB 的支持
 ms.date: 03/30/2017
 ms.assetid: cf796898-5575-46f2-ae6e-21e5aa8c4123
 ms.openlocfilehash: 1ef75def3f3de44b5e23cb1197a4410dcf6b547f
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43532704"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43742535"
 ---
 # <a name="sqlclient-support-for-localdb"></a>SqlClient 对 LocalDB 的支持
 从 SQL Server 代号 Denali，SQL Server 的称作 LocalDB 的轻量版本将提供。 本主题讨论如何连接到 LocalDB 数据库。  

@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 938e7825-f63a-4c3d-b603-63772fabfdb3
 ms.openlocfilehash: 185bcb64522115d0c60ae90ee22a73610139c8c3
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43536629"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43747257"
 ---
 # <a name="how-to-exchange-queued-messages-with-wcf-endpoints"></a>如何：使用 WCF 终结点交换排队消息
 队列确保，可靠消息传递之间可能会出现在客户端和 Windows Communication Foundation (WCF) 服务，即使在通信时服务不可用。 以下过程介绍如何确保实现 WCF 服务时，客户端和服务通过使用标准之间的持久性通信排队绑定。  

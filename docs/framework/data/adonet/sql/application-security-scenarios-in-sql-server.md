@@ -3,11 +3,11 @@ title: SQL Server 中的应用程序安全性方案
 ms.date: 03/30/2017
 ms.assetid: 0164f3a4-406e-4693-bec3-03c8e18b46d7
 ms.openlocfilehash: bf4f4adfd5f49bd210026e40bd5fa4e67da10d75
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43535984"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43777803"
 ---
 # <a name="application-security-scenarios-in-sql-server"></a>SQL Server 中的应用程序安全性方案
 没有用于创建安全 SQL Server 客户端应用程序的一种通用的正确方法。 每个应用程序在其要求、部署环境和用户群方面都是不同的。 最初部署时相当安全的应用程序随着时间的推移可能会变得不太安全。 无法准确预测未来可能出现的威胁。  

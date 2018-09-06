@@ -3,11 +3,11 @@ title: 窗体发布
 ms.date: 03/30/2017
 ms.assetid: fa6f84f9-2e07-4e3c-92d0-a245308b7dff
 ms.openlocfilehash: 9115b9abfa7039bf409bb9bbce54e5012d05a074
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43672132"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43745458"
 ---
 # <a name="form-post"></a>窗体发布
 此示例演示如何扩展 WCF REST 编程模型以支持新的传入请求格式。 该示例还包含一个格式化程序的实现，该格式化程序可以将请求从 HTML 窗体发布反序列化为 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 类型。 此外，该示例使用一个 T4 模板返回 HTML 页，该页提供用户可以回发到 WCF REST 服务的 HTML 窗体。  

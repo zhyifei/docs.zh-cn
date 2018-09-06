@@ -10,11 +10,11 @@ helpviewer_keywords:
 - text wrapping [WPF]
 ms.assetid: 205099d9-2551-4302-a25e-a15af9f67e04
 ms.openlocfilehash: bc170334496ca4c2a2028b9c493385674d235ca6
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43552776"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43745604"
 ---
 # <a name="how-to-create-a-control-that-has-an-access-key-and-text-wrapping"></a>如何：创建具有访问键和文本换行的控件
 此示例演示如何创建具有访问键且支持文本换行的控件。 该示例使用<xref:System.Windows.Controls.Label>控件来说明这些概念。  

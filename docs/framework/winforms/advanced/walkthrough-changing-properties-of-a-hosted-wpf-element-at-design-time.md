@@ -8,11 +8,11 @@ helpviewer_keywords:
 - interoperability [WPF]
 ms.assetid: a1f7a90c-0bbb-4781-8c3c-8cc8bef2488d
 ms.openlocfilehash: 15cab9266af5840aa4b37a62b71bd5010b7a859a
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43535637"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43741015"
 ---
 # <a name="walkthrough-changing-properties-of-a-hosted-wpf-element-at-design-time"></a>演练：设计时更改承载的 WPF 元素的属性
 本演练展示了如何更改 Windows 窗体上承载的 Windows Presentation Foundation (WPF) 控件的属性值。  

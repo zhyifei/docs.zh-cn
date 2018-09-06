@@ -3,11 +3,11 @@ title: 属性提升活动
 ms.date: 03/30/2017
 ms.assetid: 802196b7-1159-4c05-b41b-d3bfdfcc88d9
 ms.openlocfilehash: 6e059a0d344e6c62833feaa890c459c141a49673
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43559100"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43747049"
 ---
 # <a name="property-promotion-activity"></a>属性提升活动
 本示例提供了将 <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> 提升功能直接集成到工作流创作体验的端到端解决方案。 提供了一组用于简化对提升功能的使用的配置元素、工作流活动和工作流扩展。 此外，该示例包含一个演示如何使用此集合的简单工作流。  

@@ -2,15 +2,15 @@
 title: 正则表达式活动
 ms.date: 03/30/2017
 ms.assetid: b8f24694-49db-4339-92ec-014e3d4ae63b
-ms.openlocfilehash: 34b1f18f26f0b79c4b8711d65da5707a85cf3bf0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 50daa5b6d7baab37f372de4c30c2e0d12b4fa943
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33519829"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43743159"
 ---
 # <a name="regular-expression-activities"></a>正则表达式活动
-此示例演示如何一组活动，这些活动公开 <xref:System.Text.RegularExpressions> 命名空间的正则表达式功能。 这些自定义活动可以在工作流应用程序中使用。 有关正则表达式的详细信息，请参阅[N:System.Text.RegularExpressions](http://go.microsoft.com/fwlink/?LinkId=150434) Namespace。  
+此示例演示如何一组活动，这些活动公开 <xref:System.Text.RegularExpressions> 命名空间的正则表达式功能。 这些自定义活动可以在工作流应用程序中使用。 有关正则表达式的详细信息，请参阅[更多信息](https://go.microsoft.com/fwlink/?LinkId=150434)Namespace。  
   
  下表详细介绍了此示例中的自定义活动。  
   
@@ -29,7 +29,7 @@ ms.locfileid: "33519829"
 |------------------------------|-----------------|  
 |Pattern（必需）|用于搜索的正则表达式。|  
 |Input（必需）|要搜索的输入字符串。|  
-|RegexOptions|按位 OR 组合[RegexOptions](http://go.microsoft.com/fwlink/?LinkId=150446)枚举值。|  
+|RegexOptions|按位 OR 组合[RegexOptions](https://go.microsoft.com/fwlink/?LinkId=150446)枚举值。|  
 |返回值|如果输入找到了符合所提供的模式的匹配项，则为 `true`；否则为 `false`。|  
   
  下面的代码示例演示如何使用 `IsMatch` 自定义活动。  
@@ -51,7 +51,7 @@ new IsMatch
 |------------------------------|-----------------|  
 |Pattern（必需）|用于搜索的正则表达式。|  
 |Input（必需）|要搜索的输入字符串。|  
-|RegexOptions|按位 OR 组合[RegexOptions](http://go.microsoft.com/fwlink/?LinkId=150446)枚举值。|  
+|RegexOptions|按位 OR 组合[RegexOptions](https://go.microsoft.com/fwlink/?LinkId=150446)枚举值。|  
 |返回值|一个包含成功匹配项的集合的 <xref:System.Text.RegularExpressions.MatchCollection>。|  
   
  下面的代码示例演示如何使用 `Matches` 自定义活动。  
@@ -75,7 +75,7 @@ new Matches
 |Input（必需）|要搜索的输入字符串。|  
 |Replacement|替换字符串。<br /><br /> 如果指定 `Replacement`，则将忽略 `MatchEvaluator` 属性。 必须设置 `Replacement` 或 `MatchEvaluator` 属性中的一个。|  
 |MatchEvaluator|一个自定义方法，该方法检查每个匹配项，然后返回原始的匹配字符串或替换字符串。<br /><br /> 如果指定 `Replacement`，则将忽略 `MatchEvaluator` 属性。 必须设置 `Replacement` 或 `MatchEvaluator` 属性中的一个。|  
-|RegexOptions|按位 OR 组合[RegexOptions](http://go.microsoft.com/fwlink/?LinkId=150446)枚举值。|  
+|RegexOptions|按位 OR 组合[RegexOptions](https://go.microsoft.com/fwlink/?LinkId=150446)枚举值。|  
 |返回值|一个包含成功匹配项的集合的 <xref:System.Text.RegularExpressions.MatchCollection>。|  
   
  下面的代码示例演示如何使用 `Replace` 自定义活动。  
@@ -111,6 +111,6 @@ new Replace
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目录不存在，请转到[Windows Communication Foundation (WCF) 和针对.NET Framework 4 的 Windows Workflow Foundation (WF) 示例](http://go.microsoft.com/fwlink/?LinkId=150780)下载所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
+>  如果此目录不存在，请转到[Windows Communication Foundation (WCF) 和.NET Framework 4 的 Windows Workflow Foundation (WF) 示例](https://go.microsoft.com/fwlink/?LinkId=150780)若要下载所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\ActivityLibrary\Regex`

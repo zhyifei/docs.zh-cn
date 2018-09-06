@@ -3,11 +3,11 @@ title: 属性网格扩展性
 ms.date: 03/30/2017
 ms.assetid: 3530c3a3-756d-4712-9f10-fb2897414d3a
 ms.openlocfilehash: b7c3e3dbc3ccd95fc12dffd40927b3e2bbbc8226
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43660251"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43779294"
 ---
 # <a name="property-grid-extensibliity"></a>属性网格扩展性
 开发人员可以自定义属性网格，此网格将在设计器中选择给定活动时显示。 执行此操作可获得丰富的编辑体验。 此示例演示如何完成此操作。  

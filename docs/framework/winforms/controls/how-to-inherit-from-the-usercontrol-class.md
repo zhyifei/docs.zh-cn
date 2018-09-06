@@ -8,11 +8,11 @@ helpviewer_keywords:
 - composite controls [Windows Forms], creating
 ms.assetid: 67713625-e2e4-4f6a-bce7-0855ee5043d9
 ms.openlocfilehash: 5a826b9fc68bebfa32049a38899ddffaacd25607
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43563703"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43749965"
 ---
 # <a name="how-to-inherit-from-the-usercontrol-class"></a>如何：从 UserControl 类继承
 若要通过自定义代码将一个或多个 Windows 窗体控件的功能进行组合，可以创建一个用户控件。 用户控件将快速控件开发、标准 Windows 窗体控件功能以及自定义属性和方法的多功能组合在一起。 开始创建用户控件时，系统将为你提供一个可见的设计器，可以将标准 Windows 窗体控件放置在该设计器中。 这些控件保留其所有继承的功能以及标准控件的外观和行为。 但是，一旦将这些控件内置到用户控件中，便不能再通过代码来使用。 用户控件执行其自身的绘图工作，同时也处理与控件相关联的所有基本功能。  

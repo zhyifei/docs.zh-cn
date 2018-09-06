@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: c27cb89c-1c1d-4988-9f38-950eda3cb275
 ms.openlocfilehash: 667c67cea4dfa3f9a63554286d6c137280332c7e
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43467524"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43749660"
 ---
 # <a name="query-expression-syntax-examples-filtering"></a>查询表达式语法示例：筛选
 本主题中的示例演示如何使用`Where`并`Where…Contains`方法来查询[AdventureWorks 销售模型](https://msdn.microsoft.com/library/f16cd988-673f-4376-b034-129ca93c7832)使用查询表达式语法。 请注意，其中...`Contains` 不能使用作为的一部分[编译查询](../../../../../../docs/framework/data/adonet/ef/language-reference/compiled-queries-linq-to-entities.md)。  
