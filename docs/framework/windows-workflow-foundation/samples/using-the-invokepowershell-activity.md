@@ -3,11 +3,11 @@ title: 使用 InvokePowerShell 活动
 ms.date: 03/30/2017
 ms.assetid: 956251a0-31ca-4183-bf76-d277c08585df
 ms.openlocfilehash: fa42cddd930b755e9938a02a137ee77ee273fad0
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43777858"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43868019"
 ---
 # <a name="using-the-invokepowershell-activity"></a>使用 InvokePowerShell 活动
 InvokePowerShell 示例演示如何使用 `InvokePowerShell` 活动调用 Windows PowerShell 命令。  

@@ -1,18 +1,17 @@
 ---
 title: 显式字段：val 关键字 (F#)
-description: '了解有关 F # val 关键字，用于声明类或结构类型中存储一个值，而无需初始化类型的位置。'
+description: '了解有关 F # val 关键字用于声明类或结构类型中存储一个值，而不初始化该类型的位置。'
 ms.date: 05/16/2016
-ms.openlocfilehash: 2bd1aae24a5823ddcd6bb8f121d8110f4a211a6a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9cd06f7e90192be79490dd0ff67f118cce4339c3
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33565816"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43876234"
 ---
 # <a name="explicit-fields-the-val-keyword"></a>显式字段：val 关键字
 
 `val` 关键字用于声明在类或结构类型中存储一个值（但不初始化该值）的位置。 在这种方式中声明的存储位置称为*显式字段*。 `val` 关键字的另一个用法是结合 `member` 关键字来声明一个自动实现的属性。 有关自动实现的属性的详细信息，请参阅[属性](properties.md)。
-
 
 ## <a name="syntax"></a>语法
 
@@ -21,11 +20,12 @@ val [ mutable ] [ access-modifier ] field-name : type-name
 ```
 
 ## <a name="remarks"></a>备注
+
 在类或结构类型中定义字段的通常方式是使用 `let` 绑定。 但是，`let` 绑定必须初始化为类构造函数的一部分，而这并不总是可能、有必要或必需实现的。 当你需要一个未初始化的字段时，可以使用 `val` 关键。
 
 显式字段可以为静态或非静态的。 *访问修饰符*可以是`public`， `private`，或`internal`。 默认情况下，显式字段是公共的。 这不同于类中的 `let` 绑定，后者始终是私有的。
 
-[DefaultValue](https://msdn.microsoft.com/library/a3a3307b-8c05-441e-b109-245511614d58)属性需要在具有主构造函数的类类型中的显式字段上。 此特性指定该字段被初始化为零。 字段的类型必须支持零初始化。 如果一个类型为以下类型之一，则该类型支持零初始化：
+[DefaultValue](https://msdn.microsoft.com/library/a3a3307b-8c05-441e-b109-245511614d58)需要在具有主构造函数的类类型中的显式字段上设置属性。 此特性指定该字段被初始化为零。 字段的类型必须支持零初始化。 如果一个类型为以下类型之一，则该类型支持零初始化：
 
 - 具有零值的基元类型。
 
@@ -35,15 +35,12 @@ val [ mutable ] [ access-modifier ] field-name : type-name
 
 - 一种结构，其字段均支持默认值零。
 
-
 例如，称为 `someField` 的不可变字段具有一个 .NET 编译表示形式的支持字段，该字段名为 `someField@`，你可以使用名为 `someField` 的属性访问存储值。
 
 对于可变字段，.NET 编译的表示形式是一个 .NET 字段。
 
-
->[!WARNING] 
+>[!WARNING]
 `Note` .NET Framework 命名空间`System.ComponentModel`包含具有相同名称的属性。 有关该属性的信息，请参见 `System.ComponentModel.DefaultValueAttribute`。
-
 
 以下代码展示了显式字段的用法，作为对比，还展示了具有主构造函数的类中的 `let` 绑定。 注意：与 `let` 字段绑定的 `myInt1` 是私有的。 当从成员方法引用与 `let` 字段绑定的 `myInt1` 时，不需要自我标识符 `this`。 但如果要引用显式字段 `myInt2` 和 `myString`，则需要自我标识符。
 
@@ -72,10 +69,8 @@ val [ mutable ] [ access-modifier ] field-name : type-name
 
 当关键字 `member val` 在一个类型定义中同时出现，它就是一个自动实现属性的定义。 有关详细信息，请参阅[属性](properties.md)。
 
-
 ## <a name="see-also"></a>请参阅
-[属性](properties.md)
 
-[成员](index.md)
-
-[类中的 `let` 绑定](let-bindings-in-classes.md)
+- [属性](properties.md)
+- [成员](index.md)
+- [类中的 `let` 绑定](let-bindings-in-classes.md)

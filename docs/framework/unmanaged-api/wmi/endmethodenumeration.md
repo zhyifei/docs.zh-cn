@@ -1,6 +1,6 @@
 ---
 title: EndMethodEnumeration 函数 （非托管 API 参考）
-description: EndMethodEnumeration 函数将终止方法枚举序列。
+description: EndMethodEnumeration 函数终止方法将枚举序列。
 ms.date: 11/06/2017
 api_name:
 - EndMethodEnumeration
@@ -16,15 +16,15 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d09a2ee278dba7e711891bc6d72043bb3a499dd8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 42ee188c2a622d0bed2985e56e49997d2934686f
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33458485"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43873297"
 ---
 # <a name="endmethodenumeration-function"></a>EndMethodEnumeration 函数
-终止通过调用启动枚举序列[BeginMethodEnumeration 函数](beginmethodenumeration.md)。  
+终止通过调用开始枚举序列[BeginMethodEnumeration 函数](beginmethodenumeration.md)。  
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
     
@@ -40,32 +40,32 @@ HRESULT EndMethodEnumeration (
 ## <a name="parameters"></a>参数
 
 `vFunc`  
-[in]未使用此参数。
+[in]此参数是未使用。
 
 `ptr`  
-[in]指向的指针[IWbemClassObject](https://msdn.microsoft.com/library/aa391433%28v=vs.85%29.aspx)实例。
+[in]一个指向[IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject)实例。
 
 ## <a name="return-value"></a>返回值
 
-此函数返回以下值中定义*WbemCli.h*标头文件，或者你可以定义它们常量作为在代码中：
+此函数返回以下值中定义*WbemCli.h*标头文件，也可以在定义它们为常量在代码中：
 
-|返回的常量  |值  |描述  |
+|返回的常量  |“值”  |描述  |
 |---------|---------|---------|
 |`WBEM_E_UNEXPECTED` | 0x8004101d | 出现内部错误。 |
 |`WBEM_S_NO_ERROR` | 0 | 函数调用成功。  |
   
 ## <a name="remarks"></a>备注
 
-此函数包装对的调用[IWbemClassObject::EndMethodEnumeration](https://msdn.microsoft.com/library/aa391441(v=vs.85).aspx)方法。
+此函数包装对的调用[IWbemClassObject::EndMethodEnumeration](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-endmethodenumeration)方法。
 
-调用方开始枚举序列使用[BeginMethodEnumeration 函数](beginmethodenumeration.md)，然后调用[NextMethod 函数](nextmethod.md )直到该方法返回`WBEM_S_NO_MORE_DATA`。 调用方 （可选） 可以通过调用来完成序列`EndMethodEnumeration`。 调用方可能较早终止枚举，通过调用`EndMethodEnumeration`在任何时间。
+枚举序列使用调用方开始[BeginMethodEnumeration 函数](beginmethodenumeration.md)，然后调用[NextMethod 函数](nextmethod.md )直到该方法返回`WBEM_S_NO_MORE_DATA`。 调用方可以选择通过调用完成序列`EndMethodEnumeration`。 调用方可能会提前终止枚举，通过调用`EndMethodEnumeration`在任何时间。
 
 ## <a name="requirements"></a>要求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** WMINet_Utils.idl  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>请参阅  
 [WMI 和性能计数器 （非托管 API 参考）](index.md)

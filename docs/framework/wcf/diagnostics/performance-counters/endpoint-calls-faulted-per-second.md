@@ -3,11 +3,11 @@ title: 终结点：Calls Faulted Per Second（每秒出错的调用次数）
 ms.date: 03/30/2017
 ms.assetid: 9840fc0a-0e4d-4638-96fd-40e3ab9e4667
 ms.openlocfilehash: f1b2997a0f1e16c897fc319d1833313141f5c4bf
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43466825"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43874675"
 ---
 # <a name="endpoint-calls-faulted-per-second"></a>终结点：Calls Faulted Per Second（每秒出错的调用次数）
 计数器名称：Calls Faulted Per Second（每秒出错的调用次数）。  

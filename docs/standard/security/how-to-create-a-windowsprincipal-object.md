@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 56eb10ca-e61d-4ed2-af7a-555fc4c25a25
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f77d86e2ade841b715fc4bea8350d4e043bcb91b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 016f19c7141ebaf9b5c1f03adc263b689489119b
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33581786"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43874204"
 ---
 # <a name="how-to-create-a-windowsprincipal-object"></a>如何：创建 WindowsPrincipal 对象
 有两种方法来创建 <xref:System.Security.Principal.WindowsPrincipal> 对象，具体取决于代码必须重复执行基于角色的验证还是必须只能执行一次。  
@@ -77,5 +77,6 @@ ms.locfileid: "33581786"
   
 3.  创建主体对象后，你可以使用若干方法中的一种对其进行验证。  
   
-## <a name="see-also"></a>请参阅  
- [主体和标识对象](../../../docs/standard/security/principal-and-identity-objects.md)
+## <a name="see-also"></a>请参阅
+
+- [主体和标识对象](../../../docs/standard/security/principal-and-identity-objects.md)

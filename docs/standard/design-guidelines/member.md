@@ -10,19 +10,19 @@ helpviewer_keywords:
 ms.assetid: 0ce93180-1d7b-4f8c-9306-f828b2d66b8f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1c04b431224a1d4f03e85397b854a52856e114e6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d1598ac63af38f1ca3e11104bc8e1cd6323d35ed
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33571392"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43871012"
 ---
 # <a name="member-design-guidelines"></a>成员设计准则
-方法、 属性、 事件、 构造函数和字段统称作为成员。 成员最终是依据 framework 功能公开给最终用户的 framework 的手段。  
+方法、 属性、 事件、 构造函数和字段统称为成员。 成员是最终的框架功能公开给最终用户的一种框架的方式。  
   
- 成员可以是虚拟或非虚拟、 实际或抽象的静态或实例，并且可以有多个不同的作用域的可访问性。 所有多样性提供难以置信表现力，但同时需要部分 framework 设计器的小心。  
+ 成员可以是虚拟或非虚拟或抽象的具体静态或实例，并可以有多个不同的作用域的可访问性。 所有这样的多样性提供令人难以置信的表达力度，但在同一时间需要的部分框架设计器的小心。  
   
- 本章介绍了设计的任何类型的成员时，应遵循的基本指导原则。  
+ 本章提供了基本设计的任何类型的成员时应遵循的指导原则。  
   
 ## <a name="in-this-section"></a>本节内容  
  [成员重载](../../../docs/standard/design-guidelines/member-overloading.md)  
@@ -33,9 +33,10 @@ ms.locfileid: "33571392"
  [扩展方法](../../../docs/standard/design-guidelines/extension-methods.md)  
  [运算符重载](../../../docs/standard/design-guidelines/operator-overloads.md)  
  [参数设计](../../../docs/standard/design-guidelines/parameter-design.md)  
- *部分 © 2005年，2009 Microsoft Corporation。保留所有权利。*  
+ *部分版权 © 2005, 2009 Microsoft Corporation。保留所有权利。*  
   
- *通过从皮尔逊教育版，Inc.的权限重新打印[Framework 设计准则： 约定、 语法和可重用.NET 库，版本 2 的模式](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619)通过 Krzysztof Cwalina 和 Brad Abrams，发布 2008 年 10 月 22，通过Microsoft Windows 开发系列的一部分的 Addison Wesley Professional。*  
+ *经 Pearson Education, Inc 授权，转载自[框架设计准则：可重用的 .NET 库的约定、习惯用语和模式，第2版](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) 作者：Krzysztof Cwalina 和 Brad Abrams，由 Addison Wesley Professional 于 2008 年 10 月 22 日印发，作为 Microsoft Windows 开发系列的一部分。*  
   
-## <a name="see-also"></a>请参阅  
- [框架设计指南](../../../docs/standard/design-guidelines/index.md)
+## <a name="see-also"></a>请参阅
+
+- [框架设计指南](../../../docs/standard/design-guidelines/index.md)

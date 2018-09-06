@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 96cec467-e963-4132-b18b-7d0b3a2e979f
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: 78bf58b6d1b9059d2513b9f81eb382487bb4004b
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.openlocfilehash: 7dfe18a55d8c7f56db1906cb2aa982ab043841c7
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "42998461"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43875582"
 ---
 # <a name="wstrustchannelfactory-and-wstrustchannel"></a>WSTrustChannelFactory 和 WSTrustChannel
 如果已熟悉 Windows Communication Foundation (WCF)，便知道 WCF 客户端已可感知联合。 通过使用 <xref:System.ServiceModel.WSFederationHttpBinding> 或相似的自定义绑定配置 WCF 客户端，便可对服务启用联合身份验证。  
@@ -24,7 +24,7 @@ ms.locfileid: "42998461"
   
 -   在 WCF 客户端上启用 WIF，将 ActAs 或 OnBehalfOf 元素插入 STS 的 RST 中  
   
--   仅使用 WIF 从 STS 获取令牌，然后启用 WCF 客户端，以便使用此令牌进行身份验证。 有关详细信息，请参阅 [ClaimsAwareWebService](http://go.microsoft.com/fwlink/?LinkID=248406) 示例。  
+-   仅使用 WIF 从 STS 获取令牌，然后启用 WCF 客户端，以便使用此令牌进行身份验证。 有关详细信息，请参阅 [ClaimsAwareWebService](https://go.microsoft.com/fwlink/?LinkID=248406) 示例。  
   
  第一个方案很容易理解：现有的 WCF 客户端将继续适用于 WIF 信赖方和 STS。 本主题讨论剩余的两个方案。  
   
