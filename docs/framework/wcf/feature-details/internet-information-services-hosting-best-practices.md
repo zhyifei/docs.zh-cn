@@ -2,12 +2,12 @@
 title: Internet 信息服务承载最佳实践
 ms.date: 03/30/2017
 ms.assetid: 0834768e-9665-46bf-86eb-d4b09ab91af5
-ms.openlocfilehash: 119f14df9d46883a33272903558d83128501b293
-ms.sourcegitcommit: e8dc507cfdaad504fc9d4c83d28d24569dcef91c
+ms.openlocfilehash: 0ca5e20b846a1b10f5a52748ff06a4af958b2f4c
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/03/2018
-ms.locfileid: "33495757"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43865902"
 ---
 # <a name="internet-information-services-hosting-best-practices"></a>Internet 信息服务承载最佳实践
 本主题概述了用于承载 Windows Communication Foundation (WCF) 服务的一些最佳做法。  
@@ -33,7 +33,7 @@ ms.locfileid: "33495757"
  中间层方案还通过使用由 `svcutil /a` 选项生成的异步 API 来产生性能提升。 `/a`选项使[ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)生成`BeginXXX/EndXXX`对于每个服务操作，它允许对远程服务可能需要长时间运行调用，使其上的方法后台线程。  
   
 ## <a name="wcf-in-multi-homed-or-multi-named-scenarios"></a>多宿主或多名称方案中的 WCF  
- 你可以部署 WCF 服务内部的 IIS Web 场，其中的一组计算机共享公共外部名称 (如http://www.contoso.com)但由不同的主机名单独寻址 (例如，http://www.contoso.com可能会将流量定向到两个不同的计算机名为http://machine1.internal.contoso.com和http://machine2.internal.contoso.com)。 此部署方案中完全支持由 WCF，但需要承载 WCF 服务在服务的元数据 （Web 服务描述语言） 中显示正确的 （外部） 主机名的 IIS 网站的特殊配置。  
+ 你可以部署 WCF 服务内部的 IIS Web 场，其中的一组计算机共享公共外部名称 (如 http://www.contoso.com)但由不同的主机名单独寻址 (例如， http://www.contoso.com可能会将流量定向到两个不同的计算机名为 http://machine1.internal.contoso.com和 http://machine2.internal.contoso.com)。 此部署方案中完全支持由 WCF，但需要承载 WCF 服务在服务的元数据 （Web 服务描述语言） 中显示正确的 （外部） 主机名的 IIS 网站的特殊配置。  
   
  若要确保正确的主机名显示在 WCF 服务元数据生成、 托管 WCF 服务以使用显式主机名的 IIS 网站的默认标识配置。 例如，驻留在 www.contoso.com 场内的计算机应使用的 IIS 站点绑定 *:80:www.contoso.com 为 HTTP 和\*: 443:www.contoso.com 为支持 HTTPS。  
   
@@ -82,5 +82,5 @@ ms.locfileid: "33495757"
 ```  
   
 ## <a name="see-also"></a>请参阅  
- [服务承载示例](http://msdn.microsoft.com/library/f703a3f6-0fba-418a-a92f-7ce75ccfa47e)  
- [Windows Server App Fabric 承载功能](http://go.microsoft.com/fwlink/?LinkId=201276)
+ [服务承载示例](https://msdn.microsoft.com/library/f703a3f6-0fba-418a-a92f-7ce75ccfa47e)  
+ [Windows Server App Fabric 承载功能](https://go.microsoft.com/fwlink/?LinkId=201276)
