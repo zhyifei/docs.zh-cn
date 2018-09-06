@@ -3,11 +3,11 @@ title: 在可移植子集项目中添加服务引用
 ms.date: 03/30/2017
 ms.assetid: 61ccfe0f-a34b-40ca-8f5e-725fa1b8095e
 ms.openlocfilehash: efe95a326e7c13237c7d2d74888c85bf919ed287
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43542305"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "44038696"
 ---
 # <a name="add-service-reference-in-a-portable-subset-project"></a>在可移植子集项目中添加服务引用
 可移植子集项目启用.NET 程序集程序员可以维护单个源树和生成系统，同时仍可支持多个.NET 实现 （桌面、 Silverlight、 Windows Phone 和 XBOX）。 可移植子集项目只引用.NET 可移植库，后者是可以使用任何.NET 实现的.NET framework 程序集。  

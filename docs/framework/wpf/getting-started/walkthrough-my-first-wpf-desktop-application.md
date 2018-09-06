@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: b96bed40-8946-4285-8fe4-88045ab854ed
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 38f6e16616ad931641539d3ae164381ddd9ad941
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.openlocfilehash: a8f806a1f1f7840f21e82d77d1b639b9318259e7
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42931720"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43885176"
 ---
 # <a name="walkthrough-my-first-wpf-desktop-application"></a>演练：我的第一个 WPF 桌面应用程序
 
@@ -38,7 +38,7 @@ ms.locfileid: "42931720"
 本演练结束时，你将生成独立的 Windows 应用程序，允许用户查看所选人员的费用报表。 应用程序的托管在浏览器样式的窗口中的多个 WPF 页面组成。
 
 > [!TIP]
-> 用于生成此演练的示例代码是适用于 Visual Basic 和 C# 均适用于[生成 WPF 应用程序简介](http://go.microsoft.com/fwlink/?LinkID=160008)。
+> 用于生成此演练的示例代码是适用于 Visual Basic 和 C# 均适用于[生成 WPF 应用程序简介](https://go.microsoft.com/fwlink/?LinkID=160008)。
 
 ## <a name="prerequisites"></a>系统必备
 
@@ -326,7 +326,7 @@ ms.locfileid: "42931720"
 
 1. 打开*`ExpenseItHome.xaml`*。
 
-2. 添加<xref:System.Windows.Controls.Primitives.ButtonBase.Click>事件处理程序<xref:System.Windows.Controls.Button>元素。 有关详细信息，请参阅[如何： 创建简单的事件处理程序](http://msdn.microsoft.com/library/b1456e07-9dec-4354-99cf-18666b64f480)。
+2. 添加<xref:System.Windows.Controls.Primitives.ButtonBase.Click>事件处理程序<xref:System.Windows.Controls.Button>元素。 有关详细信息，请参阅[如何： 创建简单的事件处理程序](https://msdn.microsoft.com/library/b1456e07-9dec-4354-99cf-18666b64f480)。
 
     [!code-xaml[ExpenseIt#15](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ExpenseIt/CSharp/ExpenseIt6/ExpenseItHome.xaml#15)]
 
@@ -464,7 +464,7 @@ ms.locfileid: "42931720"
 
     [!code-xaml[ExpenseIt#30](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ExpenseIt/CSharp/ExpenseIt9/ExpenseReportPage.xaml#30)]
 
-4. 应用到模板<xref:System.Windows.Controls.DataGrid>列显示费用报表数据。
+4. 替换<xref:System.Windows.Controls.DataGridTextColumn>具有的元素<xref:System.Windows.Controls.DataGridTemplateColumn>下<xref:System.Windows.Controls.DataGrid>元素并将模板应用于它们。
 
     [!code-xaml[ExpenseIt#32](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ExpenseIt/CSharp/ExpenseIt9/ExpenseReportPage.xaml#32)]
 

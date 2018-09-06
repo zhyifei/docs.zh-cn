@@ -13,23 +13,23 @@ helpviewer_keywords:
 ms.assetid: 3f63b1bc-9a4b-4bde-84ea-ab028a80d3e1
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: eb4196ff53a5c26be7c46a8168a30044836af2cf
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a65798c46b01bb7a702559d685590ecf7a6f2793
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33572757"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43881897"
 ---
 # <a name="finding-the-time-zones-defined-on-a-local-system"></a>查找本地系统上定义的时区
 
 <xref:System.TimeZoneInfo> 类不公开公共构造函数。 因此，`new` 关键字不能用于创建新的 <xref:System.TimeZoneInfo> 对象。 相反，<xref:System.TimeZoneInfo> 对象通过从注册表检索关于预定义时区的信息或通过创建自定义时区而完成实例化。 本主题讨论从存储在注册表中的数据实例化时区。 此外，<xref:System.TimeZoneInfo> 类的 `static`（Visual Basic 中的 `shared`）属性提供对协调世界时 (UTC) 和本地时区的访问。
 
 > [!NOTE]
-> 对于在注册表中未定义的时区，可以通过调用 <xref:System.TimeZoneInfo.CreateCustomTimeZone%2A> 方法的重载创建自定义时区。 中介绍了创建自定义时区[如何： 创建不带调整规则的时区](../../../docs/standard/datetime/create-time-zones-without-adjustment-rules.md)和[如何： 创建带有调整规则的时区](../../../docs/standard/datetime/create-time-zones-with-adjustment-rules.md)主题。 此外，可以通过使用 <xref:System.TimeZoneInfo.FromSerializedString%2A> 方法将 <xref:System.TimeZoneInfo> 对象从序列化字符串还原来对其实例化。 序列化和反序列化<xref:System.TimeZoneInfo>对象已在[如何： 将时区保存到嵌入的资源](../../../docs/standard/datetime/save-time-zones-to-an-embedded-resource.md)和[如何： 从嵌入的资源还原时区](../../../docs/standard/datetime/restore-time-zones-from-an-embedded-resource.md)主题。
+> 对于在注册表中未定义的时区，可以通过调用 <xref:System.TimeZoneInfo.CreateCustomTimeZone%2A> 方法的重载创建自定义时区。 在讨论创建自定义的时区[如何： 创建不含调整规则的时区](../../../docs/standard/datetime/create-time-zones-without-adjustment-rules.md)并[如何： 创建含调整规则的时区](../../../docs/standard/datetime/create-time-zones-with-adjustment-rules.md)主题。 此外，可以通过使用 <xref:System.TimeZoneInfo.FromSerializedString%2A> 方法将 <xref:System.TimeZoneInfo> 对象从序列化字符串还原来对其实例化。 序列化和反序列化<xref:System.TimeZoneInfo>中讨论对象[如何： 将时区保存到嵌入的资源](../../../docs/standard/datetime/save-time-zones-to-an-embedded-resource.md)并[如何： 从嵌入的资源还原时区](../../../docs/standard/datetime/restore-time-zones-from-an-embedded-resource.md)主题。
 
 ## <a name="accessing-individual-time-zones"></a>访问独立时区
 
-<xref:System.TimeZoneInfo> 类提供两个预定义的时区对象，分别表示 UTC 时间和本地时区。 它们分别可从 <xref:System.TimeZoneInfo.Utc%2A> 和 <xref:System.TimeZoneInfo.Local%2A> 属性获得。 有关访问 UTC 或本地时区的说明，请参阅[如何： 访问预定义的 UTC 和当地时间区域对象](../../../docs/standard/datetime/access-utc-and-local.md)。
+<xref:System.TimeZoneInfo> 类提供两个预定义的时区对象，分别表示 UTC 时间和本地时区。 它们分别可从 <xref:System.TimeZoneInfo.Utc%2A> 和 <xref:System.TimeZoneInfo.Local%2A> 属性获得。 有关访问 UTC 或本地时区的说明，请参阅[如何： 访问预定义的 UTC 和本地时区对象](../../../docs/standard/datetime/access-utc-and-local.md)。
 
 还可以实例化表示注册表中定义的任何时区的 <xref:System.TimeZoneInfo> 对象。 有关实例化特定时区对象的说明，请参阅[如何： 实例化 TimeZoneInfo 对象](../../../docs/standard/datetime/instantiate-time-zone-info.md)。
 
@@ -39,7 +39,7 @@ ms.locfileid: "33572757"
 
 ## <a name="see-also"></a>请参阅
 
-[日期、 时间和时区](../../../docs/standard/datetime/index.md)
-[如何： 访问预定义的 UTC 和当地时间区域对象](../../../docs/standard/datetime/access-utc-and-local.md)
-[如何： 实例化 TimeZoneInfo 对象](../../../docs/standard/datetime/instantiate-time-zone-info.md)
-[时区之间转换时间](../../../docs/standard/datetime/converting-between-time-zones.md)
+- [日期、时间和时区](../../../docs/standard/datetime/index.md)
+- [如何：访问预定义 UTC 和本地时区对象](../../../docs/standard/datetime/access-utc-and-local.md)
+- [如何：实例化 TimeZoneInfo 对象](../../../docs/standard/datetime/instantiate-time-zone-info.md)
+- [在各时区之间转换时间](../../../docs/standard/datetime/converting-between-time-zones.md)

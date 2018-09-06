@@ -5,11 +5,11 @@ f1_keywords:
 - vbrNetwork_UploadAddressNeedsFilename
 ms.assetid: 0ee11749-0432-4ccb-8c08-1663a4a55ad0
 ms.openlocfilehash: a3f0b02246264cb50c6f719294cb990221702ea2
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43738392"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43886261"
 ---
 # <a name="the-address-for-uploadfile-needs-to-include-a-filename"></a>UploadFile 的地址中需要包括文件名
 当用 `UploadFile` 方法上载文件时，必须提供目标路径中的文件名。  

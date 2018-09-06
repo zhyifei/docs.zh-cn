@@ -7,12 +7,12 @@ helpviewer_keywords:
 - serialization, selective serialization
 - binary serialization, selective serialization
 ms.assetid: 39c56635-95d2-4afd-aff1-b022e7649bb3
-ms.openlocfilehash: 6a91501c4c3763250a64c9849694bc4e5fa4829f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 74e21045ec70faf6ee82200a15362d51edf61433
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33581532"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43879280"
 ---
 # <a name="selective-serialization"></a>有选择的序列化
 类通常包含不应进行序列化的字段。 例如，假定类将线程 ID 存储在成员变量中。 如果反序列化该类，而在对该类进行序列化时，存储了该 ID 的线程可能不再运行。因此，序列化该值毫无意义。 按如下方法使用 [NonSerialized](xref:System.NonSerializedAttribute) 属性标记成员变量，可防止其被序列化。  
@@ -31,7 +31,8 @@ public class MyObject
 
 [!INCLUDE [binary-serialization-warning](../../../includes/binary-serialization-warning.md)]
   
-## <a name="see-also"></a>请参阅  
- [二进制序列化](binary-serialization.md)  
- [XML 和 SOAP 序列化](xml-and-soap-serialization.md)  
- [安全性和序列化](../../../docs/framework/misc/security-and-serialization.md)
+## <a name="see-also"></a>请参阅
+
+- [二进制序列化](binary-serialization.md)  
+- [XML 和 SOAP 序列化](xml-and-soap-serialization.md)  
+- [安全性和序列化](../../../docs/framework/misc/security-and-serialization.md)

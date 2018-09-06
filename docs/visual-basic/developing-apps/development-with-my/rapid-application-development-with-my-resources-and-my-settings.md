@@ -8,11 +8,11 @@ helpviewer_keywords:
 - My.Resources object [Visual Basic], developing applications
 ms.assetid: 68284ab1-b685-4814-a2a4-01ae40445ff8
 ms.openlocfilehash: 7dbb15c43d044e21c9823c4a1652b0408006e5c3
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42932562"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "44032762"
 ---
 # <a name="rapid-application-development-with-myresources-and-mysettings-visual-basic"></a>使用 My.Resources 和 My.Settings 快速开发应用程序 (Visual Basic)
 `My.Resources`对象提供了对应用程序的资源的访问，并可动态检索应用程序的资源。  

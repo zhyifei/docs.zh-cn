@@ -3,11 +3,11 @@ title: 批量复制示例设置
 ms.date: 03/30/2017
 ms.assetid: d4dde6ac-b8b6-4593-965a-635c8fb2dadb
 ms.openlocfilehash: 71daf489fdf5e7e12594e798bc3ac01b1c76b027
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43402371"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43877393"
 ---
 # <a name="bulk-copy-example-setup"></a>批量复制示例设置
 <xref:System.Data.SqlClient.SqlBulkCopy> 类只能用于向 SQL Server 表中写入数据。 本主题中所示的代码示例使用 SQL Server 示例数据库**AdventureWorks**。 为避免改变现有表，代码示例将数据写入必须先创建的表。  

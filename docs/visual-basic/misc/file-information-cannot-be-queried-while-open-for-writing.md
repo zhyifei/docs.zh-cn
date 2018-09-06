@@ -3,11 +3,11 @@ title: 当文件打开以进行写入时无法查询文件信息
 ms.date: 07/20/2015
 ms.assetid: 2198af10-f128-4b1d-baba-a251e1369146
 ms.openlocfilehash: 1df1630eecc688dbe61400398838c7edaf75a7b2
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43538644"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43886378"
 ---
 # <a name="file-information-cannot-be-queried-while-open-for-writing"></a>当文件打开以进行写入时无法查询文件信息
 已尝试获取有关当前打开以进行写入的文件的信息。  

@@ -3,11 +3,11 @@ title: 类型化数据集
 ms.date: 03/30/2017
 ms.assetid: 033d2548-cf24-4c05-8179-67d8b009c048
 ms.openlocfilehash: 68721bcdbce6bf6d3279d6018ce6bc48d65c55a3
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43536796"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "44039801"
 ---
 # <a name="typed-datasets"></a>类型化数据集
 在允许通过弱类型化变量对值进行后期绑定访问的同时，<xref:System.Data.DataSet> 还允许通过强类型化比喻对数据进行访问。 表和列的一部分**数据集**可以使用用户友好的名称来访问和强类型化变量。  
