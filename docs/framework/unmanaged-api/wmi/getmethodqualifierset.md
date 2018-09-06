@@ -17,18 +17,18 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: a363591f5db7a2dbcba1147df35d8c023c9b0707
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
-ms.translationtype: MT
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43389037"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43724716"
 ---
-# <a name="getmethodqualifierset-function"></a><span data-ttu-id="977b6-103">GetMethodQualifierSet 函数</span><span class="sxs-lookup"><span data-stu-id="977b6-103">GetMethodQualifierSet function</span></span>
-<span data-ttu-id="977b6-104">检索设置的特定方法的限定符。</span><span class="sxs-lookup"><span data-stu-id="977b6-104">Retrieves the qualifier set for a particular method.</span></span>
+# <a name="getmethodqualifierset-function"></a><span data-ttu-id="562b8-103">GetMethodQualifierSet 函数</span><span class="sxs-lookup"><span data-stu-id="562b8-103">GetMethodQualifierSet function</span></span>
+<span data-ttu-id="562b8-104">检索特定方法的限定符集。</span><span class="sxs-lookup"><span data-stu-id="562b8-104">Retrieves the qualifier set for a particular method.</span></span>
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
     
-## <a name="syntax"></a><span data-ttu-id="977b6-105">语法</span><span class="sxs-lookup"><span data-stu-id="977b6-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="562b8-105">语法</span><span class="sxs-lookup"><span data-stu-id="562b8-105">Syntax</span></span>  
   
 ```  
 HRESULT GetMethodQualifierSet (
@@ -39,44 +39,44 @@ HRESULT GetMethodQualifierSet (
 ); 
 ```  
 
-## <a name="parameters"></a><span data-ttu-id="977b6-106">参数</span><span class="sxs-lookup"><span data-stu-id="977b6-106">Parameters</span></span>
+## <a name="parameters"></a><span data-ttu-id="562b8-106">参数</span><span class="sxs-lookup"><span data-stu-id="562b8-106">Parameters</span></span>
 
 `vFunc`  
-<span data-ttu-id="977b6-107">[in]此参数是未使用。</span><span class="sxs-lookup"><span data-stu-id="977b6-107">[in] This parameter is unused.</span></span>
+<span data-ttu-id="562b8-107">[in]此参数是未使用。</span><span class="sxs-lookup"><span data-stu-id="562b8-107">[in] This parameter is unused.</span></span>
 
 `ptr`  
-<span data-ttu-id="977b6-108">[in]一个指向[IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject)实例。</span><span class="sxs-lookup"><span data-stu-id="977b6-108">[in] A pointer to an [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) instance.</span></span>
+<span data-ttu-id="562b8-108">[in]一个指向[IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject)实例。</span><span class="sxs-lookup"><span data-stu-id="562b8-108">[in] A pointer to an [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) instance.</span></span>
 
 `wszMethod`  
-<span data-ttu-id="977b6-109">[in]方法名称。</span><span class="sxs-lookup"><span data-stu-id="977b6-109">[in] The method  name.</span></span> <span data-ttu-id="977b6-110">`wszMethod` 必须指向有效`LPCWSTR`。</span><span class="sxs-lookup"><span data-stu-id="977b6-110">`wszMethod` must point to a valid `LPCWSTR`.</span></span> 
+<span data-ttu-id="562b8-109">[in]方法名称。</span><span class="sxs-lookup"><span data-stu-id="562b8-109">[in] The method  name.</span></span> <span data-ttu-id="562b8-110">`wszMethod` 必须指向有效`LPCWSTR`。</span><span class="sxs-lookup"><span data-stu-id="562b8-110">`wszMethod` must point to a valid `LPCWSTR`.</span></span> 
 
 `ppQualSet`  
-<span data-ttu-id="977b6-111">[out]接收允许的方法的限定符访问的接口指针。</span><span class="sxs-lookup"><span data-stu-id="977b6-111">[out] Receives the interface pointer that allows access to the qualifiers of the method.</span></span> <span data-ttu-id="977b6-112">`ppQualSet` 不能为 `null`。</span><span class="sxs-lookup"><span data-stu-id="977b6-112">`ppQualSet` cannot be `null`.</span></span> <span data-ttu-id="977b6-113">如果发生错误，未返回一个新的对象，并将指针设置为指向`null`。</span><span class="sxs-lookup"><span data-stu-id="977b6-113">If an error occurs, a new object is not returned, and the pointer is set to point to `null`.</span></span> 
+<span data-ttu-id="562b8-111">[out]接收允许的方法的限定符访问的接口指针。</span><span class="sxs-lookup"><span data-stu-id="562b8-111">[out] Receives the interface pointer that allows access to the qualifiers of the method.</span></span> <span data-ttu-id="562b8-112">`ppQualSet` 不能为 `null`。</span><span class="sxs-lookup"><span data-stu-id="562b8-112">`ppQualSet` cannot be `null`.</span></span> <span data-ttu-id="562b8-113">如果发生错误，未返回一个新的对象，并将指针设置为指向`null`。</span><span class="sxs-lookup"><span data-stu-id="562b8-113">If an error occurs, a new object is not returned, and the pointer is set to point to `null`.</span></span> 
 
-## <a name="return-value"></a><span data-ttu-id="977b6-114">返回值</span><span class="sxs-lookup"><span data-stu-id="977b6-114">Return value</span></span>
+## <a name="return-value"></a><span data-ttu-id="562b8-114">返回值</span><span class="sxs-lookup"><span data-stu-id="562b8-114">Return value</span></span>
 
-<span data-ttu-id="977b6-115">此函数返回以下值中定义*WbemCli.h*标头文件，也可以在定义它们为常量在代码中：</span><span class="sxs-lookup"><span data-stu-id="977b6-115">The following values returned by this function are defined in the *WbemCli.h* header file, or you can define them as constants in your code:</span></span>
+<span data-ttu-id="562b8-115">此函数返回以下值中定义*WbemCli.h*标头文件，也可以在定义它们为常量在代码中：</span><span class="sxs-lookup"><span data-stu-id="562b8-115">The following values returned by this function are defined in the *WbemCli.h* header file, or you can define them as constants in your code:</span></span>
 
-|<span data-ttu-id="977b6-116">返回的常量</span><span class="sxs-lookup"><span data-stu-id="977b6-116">Constant</span></span>  |<span data-ttu-id="977b6-117">“值”</span><span class="sxs-lookup"><span data-stu-id="977b6-117">Value</span></span>  |<span data-ttu-id="977b6-118">描述</span><span class="sxs-lookup"><span data-stu-id="977b6-118">Description</span></span>  |
+|<span data-ttu-id="562b8-116">返回的常量</span><span class="sxs-lookup"><span data-stu-id="562b8-116">Constant</span></span>  |<span data-ttu-id="562b8-117">“值”</span><span class="sxs-lookup"><span data-stu-id="562b8-117">Value</span></span>  |<span data-ttu-id="562b8-118">描述</span><span class="sxs-lookup"><span data-stu-id="562b8-118">Description</span></span>  |
 |---------|---------|---------|
-|`WBEM_E_NOT_FOUND` | <span data-ttu-id="977b6-119">0x80041002</span><span class="sxs-lookup"><span data-stu-id="977b6-119">0x80041002</span></span> | <span data-ttu-id="977b6-120">指定的方法不存在。</span><span class="sxs-lookup"><span data-stu-id="977b6-120">The specified method does not exist.</span></span> |
-|`WBEM_E_INVALID_PARAMETER` | <span data-ttu-id="977b6-121">0x80041008</span><span class="sxs-lookup"><span data-stu-id="977b6-121">0x80041008</span></span> | <span data-ttu-id="977b6-122">参数是`null`。</span><span class="sxs-lookup"><span data-stu-id="977b6-122">A parameter is `null`.</span></span> |
-|`WBEM_S_NO_ERROR` | <span data-ttu-id="977b6-123">0</span><span class="sxs-lookup"><span data-stu-id="977b6-123">0</span></span> | <span data-ttu-id="977b6-124">函数调用成功。</span><span class="sxs-lookup"><span data-stu-id="977b6-124">The function call was successful.</span></span>  |
+|`WBEM_E_NOT_FOUND` | <span data-ttu-id="562b8-119">0x80041002</span><span class="sxs-lookup"><span data-stu-id="562b8-119">0x80041002</span></span> | <span data-ttu-id="562b8-120">指定的方法不存在。</span><span class="sxs-lookup"><span data-stu-id="562b8-120">The specified method does not exist.</span></span> |
+|`WBEM_E_INVALID_PARAMETER` | <span data-ttu-id="562b8-121">0x80041008</span><span class="sxs-lookup"><span data-stu-id="562b8-121">0x80041008</span></span> | <span data-ttu-id="562b8-122">参数是`null`。</span><span class="sxs-lookup"><span data-stu-id="562b8-122">A parameter is `null`.</span></span> |
+|`WBEM_S_NO_ERROR` | <span data-ttu-id="562b8-123">0</span><span class="sxs-lookup"><span data-stu-id="562b8-123">0</span></span> | <span data-ttu-id="562b8-124">函数调用成功。</span><span class="sxs-lookup"><span data-stu-id="562b8-124">The function call was successful.</span></span>  |
   
-## <a name="remarks"></a><span data-ttu-id="977b6-125">备注</span><span class="sxs-lookup"><span data-stu-id="977b6-125">Remarks</span></span>
+## <a name="remarks"></a><span data-ttu-id="562b8-125">备注</span><span class="sxs-lookup"><span data-stu-id="562b8-125">Remarks</span></span>
 
-<span data-ttu-id="977b6-126">此函数包装对的调用[IWbemClassObject::GetMethodQualifierSet](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-getmethodqualifierset)方法。</span><span class="sxs-lookup"><span data-stu-id="977b6-126">This function wraps a call to the [IWbemClassObject::GetMethodQualifierSet](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-getmethodqualifierset) method.</span></span> 
+<span data-ttu-id="562b8-126">此函数包装对的调用[IWbemClassObject::GetMethodQualifierSet](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-getmethodqualifierset)方法。</span><span class="sxs-lookup"><span data-stu-id="562b8-126">This function wraps a call to the [IWbemClassObject::GetMethodQualifierSet](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-getmethodqualifierset) method.</span></span> 
 
-<span data-ttu-id="977b6-127">当前对象是 CIM 类定义时，才支持对此函数的调用。</span><span class="sxs-lookup"><span data-stu-id="977b6-127">A call to this function is supported only if the current object is a CIM class definition.</span></span> <span data-ttu-id="977b6-128">方法操作不适用于[IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) ponters 指向 CIM 实例。</span><span class="sxs-lookup"><span data-stu-id="977b6-128">Method manipulation is not available for [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) ponters that point to CIM instances.</span></span>
+<span data-ttu-id="562b8-127">当前对象是 CIM 类定义时，才支持对此函数的调用。</span><span class="sxs-lookup"><span data-stu-id="562b8-127">A call to this function is supported only if the current object is a CIM class definition.</span></span> <span data-ttu-id="562b8-128">方法操作不适用于[IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) ponters 指向 CIM 实例。</span><span class="sxs-lookup"><span data-stu-id="562b8-128">Method manipulation is not available for [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) ponters that point to CIM instances.</span></span>
 
-<span data-ttu-id="977b6-129">因为每个方法可能具有其自己的限定符[IWbemQualifierSet 指针](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemqualifierset)允许调用方添加、 编辑或删除这些限定符。</span><span class="sxs-lookup"><span data-stu-id="977b6-129">Because each method may have its own qualifiers, the [IWbemQualifierSet pointer](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemqualifierset) lets the caller add, edit, or delete these qualifiers.</span></span>
+<span data-ttu-id="562b8-129">因为每个方法可能具有其自己的限定符[IWbemQualifierSet 指针](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemqualifierset)允许调用方添加、 编辑或删除这些限定符。</span><span class="sxs-lookup"><span data-stu-id="562b8-129">Because each method may have its own qualifiers, the [IWbemQualifierSet pointer](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemqualifierset) lets the caller add, edit, or delete these qualifiers.</span></span>
 
-## <a name="requirements"></a><span data-ttu-id="977b6-130">要求</span><span class="sxs-lookup"><span data-stu-id="977b6-130">Requirements</span></span>  
-<span data-ttu-id="977b6-131">**平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="977b6-131">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="562b8-130">要求</span><span class="sxs-lookup"><span data-stu-id="562b8-130">Requirements</span></span>  
+<span data-ttu-id="562b8-131">**平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="562b8-131">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="977b6-132">**标头：** WMINet_Utils.idl</span><span class="sxs-lookup"><span data-stu-id="977b6-132">**Header:** WMINet_Utils.idl</span></span>  
+ <span data-ttu-id="562b8-132">**标头：** WMINet_Utils.idl</span><span class="sxs-lookup"><span data-stu-id="562b8-132">**Header:** WMINet_Utils.idl</span></span>  
   
- <span data-ttu-id="977b6-133">**.NET Framework 版本：**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span><span class="sxs-lookup"><span data-stu-id="977b6-133">**.NET Framework Versions:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span></span>  
+ <span data-ttu-id="562b8-133">**.NET Framework 版本：**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span><span class="sxs-lookup"><span data-stu-id="562b8-133">**.NET Framework Versions:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="977b6-134">请参阅</span><span class="sxs-lookup"><span data-stu-id="977b6-134">See also</span></span>  
-[<span data-ttu-id="977b6-135">WMI 和性能计数器 （非托管 API 参考）</span><span class="sxs-lookup"><span data-stu-id="977b6-135">WMI and Performance Counters (Unmanaged API Reference)</span></span>](index.md)
+## <a name="see-also"></a><span data-ttu-id="562b8-134">请参阅</span><span class="sxs-lookup"><span data-stu-id="562b8-134">See also</span></span>  
+[<span data-ttu-id="562b8-135">WMI 和性能计数器 （非托管 API 参考）</span><span class="sxs-lookup"><span data-stu-id="562b8-135">WMI and Performance Counters (Unmanaged API Reference)</span></span>](index.md)

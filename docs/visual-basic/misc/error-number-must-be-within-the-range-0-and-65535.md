@@ -5,19 +5,19 @@ f1_keywords:
 - vbrMaxErrNumber
 ms.assetid: c5cb5753-516e-4568-9d63-0e9a2a4c5812
 ms.openlocfilehash: c4d6d57684f1a77404df9a50e2adaa2e1a81fbe8
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43407060"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43749205"
 ---
-# <a name="error-number-must-be-within-the-range-0-and-65535"></a><span data-ttu-id="8d3cd-102">错误号必须在 0 到 65535 的范围内</span><span class="sxs-lookup"><span data-stu-id="8d3cd-102">Error number must be within the range 0 and 65535</span></span>
-<span data-ttu-id="8d3cd-103">错误号不在 0 到 65535 的允许范围内。</span><span class="sxs-lookup"><span data-stu-id="8d3cd-103">An error number falls outside the allowable of between 0 and 65535.</span></span>  
+# <a name="error-number-must-be-within-the-range-0-and-65535"></a><span data-ttu-id="3fd99-102">错误号必须在 0 到 65535 的范围内</span><span class="sxs-lookup"><span data-stu-id="3fd99-102">Error number must be within the range 0 and 65535</span></span>
+<span data-ttu-id="3fd99-103">错误号不在 0 到 65535 的允许范围内。</span><span class="sxs-lookup"><span data-stu-id="3fd99-103">An error number falls outside the allowable of between 0 and 65535.</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="8d3cd-104">更正此错误</span><span class="sxs-lookup"><span data-stu-id="8d3cd-104">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="3fd99-104">更正此错误</span><span class="sxs-lookup"><span data-stu-id="3fd99-104">To correct this error</span></span>  
   
--   <span data-ttu-id="8d3cd-105">确保错误号在有效的范围内。</span><span class="sxs-lookup"><span data-stu-id="8d3cd-105">Ensure that the number falls within the valid range.</span></span>  
+-   <span data-ttu-id="3fd99-105">确保错误号在有效的范围内。</span><span class="sxs-lookup"><span data-stu-id="3fd99-105">Ensure that the number falls within the valid range.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="8d3cd-106">请参阅</span><span class="sxs-lookup"><span data-stu-id="8d3cd-106">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="3fd99-106">请参阅</span><span class="sxs-lookup"><span data-stu-id="3fd99-106">See Also</span></span>  
    
- [<span data-ttu-id="8d3cd-107">Number 属性 (Err 对象)</span><span class="sxs-lookup"><span data-stu-id="8d3cd-107">Number Property (Err Object)</span></span>](https://msdn.microsoft.com/library/3b1991c4-b349-4ed0-a6ad-b5e2003c9028)
+ [<span data-ttu-id="3fd99-107">Number 属性 (Err 对象)</span><span class="sxs-lookup"><span data-stu-id="3fd99-107">Number Property (Err Object)</span></span>](https://msdn.microsoft.com/library/3b1991c4-b349-4ed0-a6ad-b5e2003c9028)

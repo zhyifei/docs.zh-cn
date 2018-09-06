@@ -6,57 +6,57 @@ dev_langs:
 - vb
 ms.assetid: bcbc9625-7cf7-476e-85d2-058f12682f54
 ms.openlocfilehash: bc8bfaabb9e90e66e4ec81e551fd66319a78ca7e
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43387853"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43745272"
 ---
-# <a name="query-expression-syntax-examples-ordering"></a><span data-ttu-id="fe67b-102">查询表达式语法示例：排序</span><span class="sxs-lookup"><span data-stu-id="fe67b-102">Query Expression Syntax Examples: Ordering</span></span>
-<span data-ttu-id="fe67b-103">本主题中的示例演示如何使用`OrderBy`并`OrderByDescending`方法来查询[AdventureWorks 销售模型](https://msdn.microsoft.com/library/f16cd988-673f-4376-b034-129ca93c7832)使用查询表达式语法。</span><span class="sxs-lookup"><span data-stu-id="fe67b-103">The examples in this topic demonstrate how to use the `OrderBy` and `OrderByDescending` methods to query the [AdventureWorks Sales Model](https://msdn.microsoft.com/library/f16cd988-673f-4376-b034-129ca93c7832) using query expression syntax.</span></span> <span data-ttu-id="fe67b-104">这些示例中使用的 AdventureWorks 销售模型从 AdventureWorks 示例数据库中的 Contact、Address、Product、SalesOrderHeader 和 SalesOrderDetail 等表生成。</span><span class="sxs-lookup"><span data-stu-id="fe67b-104">The AdventureWorks Sales Model used in these examples is built from the Contact, Address, Product, SalesOrderHeader, and SalesOrderDetail tables in the AdventureWorks sample database.</span></span>  
+# <a name="query-expression-syntax-examples-ordering"></a><span data-ttu-id="ea039-102">查询表达式语法示例：排序</span><span class="sxs-lookup"><span data-stu-id="ea039-102">Query Expression Syntax Examples: Ordering</span></span>
+<span data-ttu-id="ea039-103">本主题中的示例演示如何使用`OrderBy`并`OrderByDescending`方法来查询[AdventureWorks 销售模型](https://msdn.microsoft.com/library/f16cd988-673f-4376-b034-129ca93c7832)使用查询表达式语法。</span><span class="sxs-lookup"><span data-stu-id="ea039-103">The examples in this topic demonstrate how to use the `OrderBy` and `OrderByDescending` methods to query the [AdventureWorks Sales Model](https://msdn.microsoft.com/library/f16cd988-673f-4376-b034-129ca93c7832) using query expression syntax.</span></span> <span data-ttu-id="ea039-104">这些示例中使用的 AdventureWorks 销售模型从 AdventureWorks 示例数据库中的 Contact、Address、Product、SalesOrderHeader 和 SalesOrderDetail 等表生成。</span><span class="sxs-lookup"><span data-stu-id="ea039-104">The AdventureWorks Sales Model used in these examples is built from the Contact, Address, Product, SalesOrderHeader, and SalesOrderDetail tables in the AdventureWorks sample database.</span></span>  
   
- <span data-ttu-id="fe67b-105">本主题中的示例使用以下`using` / `Imports`语句：</span><span class="sxs-lookup"><span data-stu-id="fe67b-105">The examples in this topic use the following `using`/`Imports` statements:</span></span>  
+ <span data-ttu-id="ea039-105">本主题中的示例使用以下`using` / `Imports`语句：</span><span class="sxs-lookup"><span data-stu-id="ea039-105">The examples in this topic use the following `using`/`Imports` statements:</span></span>  
   
  [!code-csharp[DP L2E Examples#ImportsUsing](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Examples/CS/Program.cs#importsusing)]
  [!code-vb[DP L2E Examples#ImportsUsing](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Examples/VB/Module1.vb#importsusing)]  
   
-## <a name="orderby"></a><span data-ttu-id="fe67b-106">OrderBy</span><span class="sxs-lookup"><span data-stu-id="fe67b-106">OrderBy</span></span>  
+## <a name="orderby"></a><span data-ttu-id="ea039-106">OrderBy</span><span class="sxs-lookup"><span data-stu-id="ea039-106">OrderBy</span></span>  
   
-### <a name="example"></a><span data-ttu-id="fe67b-107">示例</span><span class="sxs-lookup"><span data-stu-id="fe67b-107">Example</span></span>  
- <span data-ttu-id="fe67b-108">以下示例使用 <xref:System.Linq.Enumerable.OrderBy%2A> 以返回按姓氏排序的联系人列表。</span><span class="sxs-lookup"><span data-stu-id="fe67b-108">The following example uses <xref:System.Linq.Enumerable.OrderBy%2A> to return a list of contacts ordered by last name.</span></span>  
+### <a name="example"></a><span data-ttu-id="ea039-107">示例</span><span class="sxs-lookup"><span data-stu-id="ea039-107">Example</span></span>  
+ <span data-ttu-id="ea039-108">以下示例使用 <xref:System.Linq.Enumerable.OrderBy%2A> 以返回按姓氏排序的联系人列表。</span><span class="sxs-lookup"><span data-stu-id="ea039-108">The following example uses <xref:System.Linq.Enumerable.OrderBy%2A> to return a list of contacts ordered by last name.</span></span>  
   
  [!code-csharp[DP L2E Examples#OrderBySimple1](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Examples/CS/Program.cs#orderbysimple1)]
  [!code-vb[DP L2E Examples#OrderBySimple1](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Examples/VB/Module1.vb#orderbysimple1)]  
   
-### <a name="example"></a><span data-ttu-id="fe67b-109">示例</span><span class="sxs-lookup"><span data-stu-id="fe67b-109">Example</span></span>  
- <span data-ttu-id="fe67b-110">以下示例使用 <xref:System.Linq.Enumerable.OrderBy%2A> 以按姓氏的长度对联系人列表排序。</span><span class="sxs-lookup"><span data-stu-id="fe67b-110">The following example uses <xref:System.Linq.Enumerable.OrderBy%2A> to sort a list of contacts by length of last name.</span></span>  
+### <a name="example"></a><span data-ttu-id="ea039-109">示例</span><span class="sxs-lookup"><span data-stu-id="ea039-109">Example</span></span>  
+ <span data-ttu-id="ea039-110">以下示例使用 <xref:System.Linq.Enumerable.OrderBy%2A> 以按姓氏的长度对联系人列表排序。</span><span class="sxs-lookup"><span data-stu-id="ea039-110">The following example uses <xref:System.Linq.Enumerable.OrderBy%2A> to sort a list of contacts by length of last name.</span></span>  
   
  [!code-csharp[DP L2E Examples#OrderBySimple2](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Examples/CS/Program.cs#orderbysimple2)]
  [!code-vb[DP L2E Examples#OrderBySimple2](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Examples/VB/Module1.vb#orderbysimple2)]  
   
-## <a name="orderbydescending"></a><span data-ttu-id="fe67b-111">OrderByDescending</span><span class="sxs-lookup"><span data-stu-id="fe67b-111">OrderByDescending</span></span>  
+## <a name="orderbydescending"></a><span data-ttu-id="ea039-111">OrderByDescending</span><span class="sxs-lookup"><span data-stu-id="ea039-111">OrderByDescending</span></span>  
   
-### <a name="example"></a><span data-ttu-id="fe67b-112">示例</span><span class="sxs-lookup"><span data-stu-id="fe67b-112">Example</span></span>  
- <span data-ttu-id="fe67b-113">以下示例使用 `orderby… descending`（等效于 `Order By … Descending` 方法，但在 Visual Basic 中为 <xref:System.Linq.Enumerable.OrderByDescending%2A>），以按照从高到低的顺序对价目表排序。</span><span class="sxs-lookup"><span data-stu-id="fe67b-113">The following example uses `orderby… descending` (`Order By … Descending` in Visual Basic), which is equivalent to the <xref:System.Linq.Enumerable.OrderByDescending%2A> method, to sort the price list from highest to lowest.</span></span>  
+### <a name="example"></a><span data-ttu-id="ea039-112">示例</span><span class="sxs-lookup"><span data-stu-id="ea039-112">Example</span></span>  
+ <span data-ttu-id="ea039-113">以下示例使用 `orderby… descending`（等效于 `Order By … Descending` 方法，但在 Visual Basic 中为 <xref:System.Linq.Enumerable.OrderByDescending%2A>），以按照从高到低的顺序对价目表排序。</span><span class="sxs-lookup"><span data-stu-id="ea039-113">The following example uses `orderby… descending` (`Order By … Descending` in Visual Basic), which is equivalent to the <xref:System.Linq.Enumerable.OrderByDescending%2A> method, to sort the price list from highest to lowest.</span></span>  
   
  [!code-csharp[DP L2E Examples#OrderByDescendingSimple1](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Examples/CS/Program.cs#orderbydescendingsimple1)]
  [!code-vb[DP L2E Examples#OrderByDescendingSimple1](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Examples/VB/Module1.vb#orderbydescendingsimple1)]  
   
-## <a name="thenby"></a><span data-ttu-id="fe67b-114">ThenBy</span><span class="sxs-lookup"><span data-stu-id="fe67b-114">ThenBy</span></span>  
+## <a name="thenby"></a><span data-ttu-id="ea039-114">ThenBy</span><span class="sxs-lookup"><span data-stu-id="ea039-114">ThenBy</span></span>  
   
-### <a name="example"></a><span data-ttu-id="fe67b-115">示例</span><span class="sxs-lookup"><span data-stu-id="fe67b-115">Example</span></span>  
- <span data-ttu-id="fe67b-116">以下示例使用 <xref:System.Linq.Queryable.OrderBy%2A> 和 <xref:System.Linq.Queryable.ThenBy%2A> 以返回先按姓氏后按名字排序的联系人列表。</span><span class="sxs-lookup"><span data-stu-id="fe67b-116">The following example uses <xref:System.Linq.Queryable.OrderBy%2A> and <xref:System.Linq.Queryable.ThenBy%2A> to return a list of contacts ordered by last name and then by first name.</span></span>  
+### <a name="example"></a><span data-ttu-id="ea039-115">示例</span><span class="sxs-lookup"><span data-stu-id="ea039-115">Example</span></span>  
+ <span data-ttu-id="ea039-116">以下示例使用 <xref:System.Linq.Queryable.OrderBy%2A> 和 <xref:System.Linq.Queryable.ThenBy%2A> 以返回先按姓氏后按名字排序的联系人列表。</span><span class="sxs-lookup"><span data-stu-id="ea039-116">The following example uses <xref:System.Linq.Queryable.OrderBy%2A> and <xref:System.Linq.Queryable.ThenBy%2A> to return a list of contacts ordered by last name and then by first name.</span></span>  
   
  [!code-csharp[DP L2E Examples#OrderByThenBy](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Examples/CS/Program.cs#orderbythenby)]
  [!code-vb[DP L2E Examples#OrderByThenBy](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Examples/VB/Module1.vb#orderbythenby)]  
   
-## <a name="thenbydescending"></a><span data-ttu-id="fe67b-117">ThenByDescending</span><span class="sxs-lookup"><span data-stu-id="fe67b-117">ThenByDescending</span></span>  
+## <a name="thenbydescending"></a><span data-ttu-id="ea039-117">ThenByDescending</span><span class="sxs-lookup"><span data-stu-id="ea039-117">ThenByDescending</span></span>  
   
-### <a name="example"></a><span data-ttu-id="fe67b-118">示例</span><span class="sxs-lookup"><span data-stu-id="fe67b-118">Example</span></span>  
- <span data-ttu-id="fe67b-119">以下示例使用 `OrderBy… Descending`（等效于 <xref:System.Linq.Enumerable.ThenByDescending%2A> 方法），以先按名称后按标价（从高到低）对产品列表排序。</span><span class="sxs-lookup"><span data-stu-id="fe67b-119">The following example uses `OrderBy… Descending`, which is equivalent to the <xref:System.Linq.Enumerable.ThenByDescending%2A> method, to sort a list of products, first by name and then by list price from highest to lowest.</span></span>  
+### <a name="example"></a><span data-ttu-id="ea039-118">示例</span><span class="sxs-lookup"><span data-stu-id="ea039-118">Example</span></span>  
+ <span data-ttu-id="ea039-119">以下示例使用 `OrderBy… Descending`（等效于 <xref:System.Linq.Enumerable.ThenByDescending%2A> 方法），以先按名称后按标价（从高到低）对产品列表排序。</span><span class="sxs-lookup"><span data-stu-id="ea039-119">The following example uses `OrderBy… Descending`, which is equivalent to the <xref:System.Linq.Enumerable.ThenByDescending%2A> method, to sort a list of products, first by name and then by list price from highest to lowest.</span></span>  
   
  [!code-csharp[DP L2E Examples#ThenByDescendingSimple](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Examples/CS/Program.cs#thenbydescendingsimple)]
  [!code-vb[DP L2E Examples#ThenByDescendingSimple](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Examples/VB/Module1.vb#thenbydescendingsimple)]  
   
-## <a name="see-also"></a><span data-ttu-id="fe67b-120">请参阅</span><span class="sxs-lookup"><span data-stu-id="fe67b-120">See Also</span></span>  
- [<span data-ttu-id="fe67b-121">LINQ to Entities 中的查询</span><span class="sxs-lookup"><span data-stu-id="fe67b-121">Queries in LINQ to Entities</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/queries-in-linq-to-entities.md)
+## <a name="see-also"></a><span data-ttu-id="ea039-120">请参阅</span><span class="sxs-lookup"><span data-stu-id="ea039-120">See Also</span></span>  
+ [<span data-ttu-id="ea039-121">LINQ to Entities 中的查询</span><span class="sxs-lookup"><span data-stu-id="ea039-121">Queries in LINQ to Entities</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/queries-in-linq-to-entities.md)

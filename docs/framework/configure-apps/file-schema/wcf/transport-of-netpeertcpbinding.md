@@ -3,23 +3,23 @@ title: '&lt;netPeerTcpBinding&gt; 的 &lt;transport&gt;'
 ms.date: 03/30/2017
 ms.assetid: c44d86d2-1160-44d7-9c7a-297b12eccc7f
 ms.openlocfilehash: 2b89ae090d24ff6aad1aae1b39a0a18961bd2537
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43405659"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43735314"
 ---
-# <a name="lttransportgt-of-ltnetpeertcpbindinggt"></a><span data-ttu-id="0d54f-102">&lt;netPeerTcpBinding&gt; 的 &lt;transport&gt;</span><span class="sxs-lookup"><span data-stu-id="0d54f-102">&lt;transport&gt; of &lt;netPeerTcpBinding&gt;</span></span>
-<span data-ttu-id="0d54f-103">使用时指定的传输级安全设置[ \<netPeerTcpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/netpeertcpbinding.md)。</span><span class="sxs-lookup"><span data-stu-id="0d54f-103">Specifies settings for transport level security when using the [\<netPeerTcpBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/netpeertcpbinding.md).</span></span>  
+# <a name="lttransportgt-of-ltnetpeertcpbindinggt"></a><span data-ttu-id="e6f76-102">&lt;netPeerTcpBinding&gt; 的 &lt;transport&gt;</span><span class="sxs-lookup"><span data-stu-id="e6f76-102">&lt;transport&gt; of &lt;netPeerTcpBinding&gt;</span></span>
+<span data-ttu-id="e6f76-103">使用时指定的传输级安全设置[ \<netPeerTcpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/netpeertcpbinding.md)。</span><span class="sxs-lookup"><span data-stu-id="e6f76-103">Specifies settings for transport level security when using the [\<netPeerTcpBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/netpeertcpbinding.md).</span></span>  
   
- <span data-ttu-id="0d54f-104">\<system.ServiceModel></span><span class="sxs-lookup"><span data-stu-id="0d54f-104">\<system.ServiceModel></span></span>  
-<span data-ttu-id="0d54f-105">\<绑定 ></span><span class="sxs-lookup"><span data-stu-id="0d54f-105">\<bindings></span></span>  
-<span data-ttu-id="0d54f-106">\<netPeerTcpBinding></span><span class="sxs-lookup"><span data-stu-id="0d54f-106">\<netPeerTcpBinding></span></span>  
-<span data-ttu-id="0d54f-107">\<绑定 ></span><span class="sxs-lookup"><span data-stu-id="0d54f-107">\<binding></span></span>  
-<span data-ttu-id="0d54f-108">\<安全 ></span><span class="sxs-lookup"><span data-stu-id="0d54f-108">\<security></span></span>  
-<span data-ttu-id="0d54f-109">\<transport></span><span class="sxs-lookup"><span data-stu-id="0d54f-109">\<transport></span></span>  
+ <span data-ttu-id="e6f76-104">\<system.ServiceModel></span><span class="sxs-lookup"><span data-stu-id="e6f76-104">\<system.ServiceModel></span></span>  
+<span data-ttu-id="e6f76-105">\<绑定 ></span><span class="sxs-lookup"><span data-stu-id="e6f76-105">\<bindings></span></span>  
+<span data-ttu-id="e6f76-106">\<netPeerTcpBinding></span><span class="sxs-lookup"><span data-stu-id="e6f76-106">\<netPeerTcpBinding></span></span>  
+<span data-ttu-id="e6f76-107">\<绑定 ></span><span class="sxs-lookup"><span data-stu-id="e6f76-107">\<binding></span></span>  
+<span data-ttu-id="e6f76-108">\<安全 ></span><span class="sxs-lookup"><span data-stu-id="e6f76-108">\<security></span></span>  
+<span data-ttu-id="e6f76-109">\<transport></span><span class="sxs-lookup"><span data-stu-id="e6f76-109">\<transport></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="0d54f-110">语法</span><span class="sxs-lookup"><span data-stu-id="0d54f-110">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="e6f76-110">语法</span><span class="sxs-lookup"><span data-stu-id="e6f76-110">Syntax</span></span>  
   
 ```xml  
 <netPeerTcpBinding>  
@@ -31,38 +31,38 @@ ms.locfileid: "43405659"
 </netPeerTcpBinding>  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="0d54f-111">特性和元素</span><span class="sxs-lookup"><span data-stu-id="0d54f-111">Attributes and Elements</span></span>  
- <span data-ttu-id="0d54f-112">以下几节描述了特性、子元素和父元素。</span><span class="sxs-lookup"><span data-stu-id="0d54f-112">The following sections describe attributes, child elements, and parent elements</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="e6f76-111">特性和元素</span><span class="sxs-lookup"><span data-stu-id="e6f76-111">Attributes and Elements</span></span>  
+ <span data-ttu-id="e6f76-112">以下几节描述了特性、子元素和父元素。</span><span class="sxs-lookup"><span data-stu-id="e6f76-112">The following sections describe attributes, child elements, and parent elements</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="0d54f-113">特性</span><span class="sxs-lookup"><span data-stu-id="0d54f-113">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="e6f76-113">特性</span><span class="sxs-lookup"><span data-stu-id="e6f76-113">Attributes</span></span>  
   
-|<span data-ttu-id="0d54f-114">特性</span><span class="sxs-lookup"><span data-stu-id="0d54f-114">Attribute</span></span>|<span data-ttu-id="0d54f-115">描述</span><span class="sxs-lookup"><span data-stu-id="0d54f-115">Description</span></span>|  
+|<span data-ttu-id="e6f76-114">特性</span><span class="sxs-lookup"><span data-stu-id="e6f76-114">Attribute</span></span>|<span data-ttu-id="e6f76-115">描述</span><span class="sxs-lookup"><span data-stu-id="e6f76-115">Description</span></span>|  
 |---------------|-----------------|  
-|<span data-ttu-id="0d54f-116">credentialType</span><span class="sxs-lookup"><span data-stu-id="0d54f-116">credentialType</span></span>|<span data-ttu-id="0d54f-117">可选。</span><span class="sxs-lookup"><span data-stu-id="0d54f-117">Optional.</span></span> <span data-ttu-id="0d54f-118">指定用于验证通过对等传输发送的消息的凭据的类型。</span><span class="sxs-lookup"><span data-stu-id="0d54f-118">Specifies the type of credentials used to verify messages sent with the peer transport.</span></span> <span data-ttu-id="0d54f-119">此属性的类型为 <xref:System.ServiceModel.PeerTransportCredentialType>。</span><span class="sxs-lookup"><span data-stu-id="0d54f-119">This attribute is of type <xref:System.ServiceModel.PeerTransportCredentialType>.</span></span>|  
+|<span data-ttu-id="e6f76-116">credentialType</span><span class="sxs-lookup"><span data-stu-id="e6f76-116">credentialType</span></span>|<span data-ttu-id="e6f76-117">可选。</span><span class="sxs-lookup"><span data-stu-id="e6f76-117">Optional.</span></span> <span data-ttu-id="e6f76-118">指定用于验证通过对等传输发送的消息的凭据的类型。</span><span class="sxs-lookup"><span data-stu-id="e6f76-118">Specifies the type of credentials used to verify messages sent with the peer transport.</span></span> <span data-ttu-id="e6f76-119">此属性的类型为 <xref:System.ServiceModel.PeerTransportCredentialType>。</span><span class="sxs-lookup"><span data-stu-id="e6f76-119">This attribute is of type <xref:System.ServiceModel.PeerTransportCredentialType>.</span></span>|  
   
-## <a name="credentialtype-attribute"></a><span data-ttu-id="0d54f-120">credentialType 属性</span><span class="sxs-lookup"><span data-stu-id="0d54f-120">credentialType Attribute</span></span>  
+## <a name="credentialtype-attribute"></a><span data-ttu-id="e6f76-120">credentialType 属性</span><span class="sxs-lookup"><span data-stu-id="e6f76-120">credentialType Attribute</span></span>  
   
-|<span data-ttu-id="0d54f-121">值</span><span class="sxs-lookup"><span data-stu-id="0d54f-121">Value</span></span>|<span data-ttu-id="0d54f-122">描述</span><span class="sxs-lookup"><span data-stu-id="0d54f-122">Description</span></span>|  
+|<span data-ttu-id="e6f76-121">值</span><span class="sxs-lookup"><span data-stu-id="e6f76-121">Value</span></span>|<span data-ttu-id="e6f76-122">描述</span><span class="sxs-lookup"><span data-stu-id="e6f76-122">Description</span></span>|  
 |-----------|-----------------|  
-|<span data-ttu-id="0d54f-123">证书</span><span class="sxs-lookup"><span data-stu-id="0d54f-123">Certificate</span></span>|<span data-ttu-id="0d54f-124">对等通道传输的身份验证需要 X509 证书。</span><span class="sxs-lookup"><span data-stu-id="0d54f-124">Authentication of the peer channel transport requires an X509 certificate.</span></span>|  
-|<span data-ttu-id="0d54f-125">密码</span><span class="sxs-lookup"><span data-stu-id="0d54f-125">Password</span></span>|<span data-ttu-id="0d54f-126">对等通道传输的身份验证需要正确的密码。</span><span class="sxs-lookup"><span data-stu-id="0d54f-126">Authentication of the peer channel transport requires a correct password.</span></span>|  
+|<span data-ttu-id="e6f76-123">证书</span><span class="sxs-lookup"><span data-stu-id="e6f76-123">Certificate</span></span>|<span data-ttu-id="e6f76-124">对等通道传输的身份验证需要 X509 证书。</span><span class="sxs-lookup"><span data-stu-id="e6f76-124">Authentication of the peer channel transport requires an X509 certificate.</span></span>|  
+|<span data-ttu-id="e6f76-125">密码</span><span class="sxs-lookup"><span data-stu-id="e6f76-125">Password</span></span>|<span data-ttu-id="e6f76-126">对等通道传输的身份验证需要正确的密码。</span><span class="sxs-lookup"><span data-stu-id="e6f76-126">Authentication of the peer channel transport requires a correct password.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="0d54f-127">子元素</span><span class="sxs-lookup"><span data-stu-id="0d54f-127">Child Elements</span></span>  
- <span data-ttu-id="0d54f-128">无</span><span class="sxs-lookup"><span data-stu-id="0d54f-128">None</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="e6f76-127">子元素</span><span class="sxs-lookup"><span data-stu-id="e6f76-127">Child Elements</span></span>  
+ <span data-ttu-id="e6f76-128">无</span><span class="sxs-lookup"><span data-stu-id="e6f76-128">None</span></span>  
   
-### <a name="parent-elements"></a><span data-ttu-id="0d54f-129">父元素</span><span class="sxs-lookup"><span data-stu-id="0d54f-129">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="e6f76-129">父元素</span><span class="sxs-lookup"><span data-stu-id="e6f76-129">Parent Elements</span></span>  
   
-|<span data-ttu-id="0d54f-130">元素</span><span class="sxs-lookup"><span data-stu-id="0d54f-130">Element</span></span>|<span data-ttu-id="0d54f-131">描述</span><span class="sxs-lookup"><span data-stu-id="0d54f-131">Description</span></span>|  
+|<span data-ttu-id="e6f76-130">元素</span><span class="sxs-lookup"><span data-stu-id="e6f76-130">Element</span></span>|<span data-ttu-id="e6f76-131">描述</span><span class="sxs-lookup"><span data-stu-id="e6f76-131">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="0d54f-132">\<security></span><span class="sxs-lookup"><span data-stu-id="0d54f-132">\<security></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-netpeerbinding.md)|<span data-ttu-id="0d54f-133">定义的安全设置[ \<netPeerTcpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/netpeertcpbinding.md)。</span><span class="sxs-lookup"><span data-stu-id="0d54f-133">Defines the security settings for the [\<netPeerTcpBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/netpeertcpbinding.md).</span></span>|  
+|[<span data-ttu-id="e6f76-132">\<security></span><span class="sxs-lookup"><span data-stu-id="e6f76-132">\<security></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-netpeerbinding.md)|<span data-ttu-id="e6f76-133">定义的安全设置[ \<netPeerTcpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/netpeertcpbinding.md)。</span><span class="sxs-lookup"><span data-stu-id="e6f76-133">Defines the security settings for the [\<netPeerTcpBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/netpeertcpbinding.md).</span></span>|  
   
-## <a name="see-also"></a><span data-ttu-id="0d54f-134">请参阅</span><span class="sxs-lookup"><span data-stu-id="0d54f-134">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="e6f76-134">请参阅</span><span class="sxs-lookup"><span data-stu-id="e6f76-134">See Also</span></span>  
  <xref:System.ServiceModel.Configuration.PeerTransportSecurityElement>  
  <xref:System.ServiceModel.PeerSecuritySettings.Transport%2A>  
  <xref:System.ServiceModel.Configuration.PeerSecurityElement.Transport%2A>  
  <xref:System.ServiceModel.PeerTransportSecuritySettings>  
- [<span data-ttu-id="0d54f-135">保护服务和客户端的安全</span><span class="sxs-lookup"><span data-stu-id="0d54f-135">Securing Services and Clients</span></span>](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
- [<span data-ttu-id="0d54f-136">绑定</span><span class="sxs-lookup"><span data-stu-id="0d54f-136">Bindings</span></span>](../../../../../docs/framework/wcf/bindings.md)  
- [<span data-ttu-id="0d54f-137">配置系统提供的绑定</span><span class="sxs-lookup"><span data-stu-id="0d54f-137">Configuring System-Provided Bindings</span></span>](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [<span data-ttu-id="0d54f-138">使用绑定来配置 Windows Communication Foundation 服务和客户端</span><span class="sxs-lookup"><span data-stu-id="0d54f-138">Using Bindings to Configure Windows Communication Foundation Services and Clients</span></span>](https://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
- [<span data-ttu-id="0d54f-139">\<绑定 ></span><span class="sxs-lookup"><span data-stu-id="0d54f-139">\<binding></span></span>](../../../../../docs/framework/misc/binding.md)
+ [<span data-ttu-id="e6f76-135">保护服务和客户端的安全</span><span class="sxs-lookup"><span data-stu-id="e6f76-135">Securing Services and Clients</span></span>](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
+ [<span data-ttu-id="e6f76-136">绑定</span><span class="sxs-lookup"><span data-stu-id="e6f76-136">Bindings</span></span>](../../../../../docs/framework/wcf/bindings.md)  
+ [<span data-ttu-id="e6f76-137">配置系统提供的绑定</span><span class="sxs-lookup"><span data-stu-id="e6f76-137">Configuring System-Provided Bindings</span></span>](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
+ [<span data-ttu-id="e6f76-138">使用绑定来配置 Windows Communication Foundation 服务和客户端</span><span class="sxs-lookup"><span data-stu-id="e6f76-138">Using Bindings to Configure Windows Communication Foundation Services and Clients</span></span>](https://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
+ [<span data-ttu-id="e6f76-139">\<绑定 ></span><span class="sxs-lookup"><span data-stu-id="e6f76-139">\<binding></span></span>](../../../../../docs/framework/misc/binding.md)

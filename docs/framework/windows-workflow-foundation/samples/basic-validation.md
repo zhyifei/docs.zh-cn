@@ -3,43 +3,43 @@ title: 基本验证
 ms.date: 03/30/2017
 ms.assetid: ba1343cc-aaab-4ade-b0c0-1dd5063bf4ad
 ms.openlocfilehash: 74d99e2d426e9ea5701fad80418fdf019112cc9e
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43558435"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43749718"
 ---
-# <a name="basic-validation"></a><span data-ttu-id="e3454-102">基本验证</span><span class="sxs-lookup"><span data-stu-id="e3454-102">Basic Validation</span></span>
-<span data-ttu-id="e3454-103">此示例包含 `CreateProduct` 活动，该活动验证它的 `Cost` 参数是否小于或等于它的 `Price` 参数。</span><span class="sxs-lookup"><span data-stu-id="e3454-103">This sample consists of an activity, `CreateProduct`, which validates that its `Cost` argument is smaller than or equal to its `Price` argument.</span></span>  
+# <a name="basic-validation"></a><span data-ttu-id="b8f5a-102">基本验证</span><span class="sxs-lookup"><span data-stu-id="b8f5a-102">Basic Validation</span></span>
+<span data-ttu-id="b8f5a-103">此示例包含 `CreateProduct` 活动，该活动验证它的 `Cost` 参数是否小于或等于它的 `Price` 参数。</span><span class="sxs-lookup"><span data-stu-id="b8f5a-103">This sample consists of an activity, `CreateProduct`, which validates that its `Cost` argument is smaller than or equal to its `Price` argument.</span></span>  
   
-## <a name="sample-details"></a><span data-ttu-id="e3454-104">示例详细信息</span><span class="sxs-lookup"><span data-stu-id="e3454-104">Sample Details</span></span>  
- <span data-ttu-id="e3454-105">有两个使用验证的作者：活动作者（创建活动的验证逻辑）和工作流作者（对特定工作流调用验证服务）。</span><span class="sxs-lookup"><span data-stu-id="e3454-105">There are two authors that use validation, the activity author (creates the validation logic for the activity) and the workflow author that calls validation services on a specific workflow.</span></span> <span data-ttu-id="e3454-106">在此方案中，活动作者想要强制其活动的每个实例的成本都必须小于或等于价格。</span><span class="sxs-lookup"><span data-stu-id="e3454-106">In this scenario, the activity author wants to enforce that every instance of his activity must have a smaller or equal cost than that of the price.</span></span>  
+## <a name="sample-details"></a><span data-ttu-id="b8f5a-104">示例详细信息</span><span class="sxs-lookup"><span data-stu-id="b8f5a-104">Sample Details</span></span>  
+ <span data-ttu-id="b8f5a-105">有两个使用验证的作者：活动作者（创建活动的验证逻辑）和工作流作者（对特定工作流调用验证服务）。</span><span class="sxs-lookup"><span data-stu-id="b8f5a-105">There are two authors that use validation, the activity author (creates the validation logic for the activity) and the workflow author that calls validation services on a specific workflow.</span></span> <span data-ttu-id="b8f5a-106">在此方案中，活动作者想要强制其活动的每个实例的成本都必须小于或等于价格。</span><span class="sxs-lookup"><span data-stu-id="b8f5a-106">In this scenario, the activity author wants to enforce that every instance of his activity must have a smaller or equal cost than that of the price.</span></span>  
   
- <span data-ttu-id="e3454-107">活动作者（活动内部）必须：</span><span class="sxs-lookup"><span data-stu-id="e3454-107">The activity author (inside the activity) must:</span></span>  
+ <span data-ttu-id="b8f5a-107">活动作者（活动内部）必须：</span><span class="sxs-lookup"><span data-stu-id="b8f5a-107">The activity author (inside the activity) must:</span></span>  
   
--   <span data-ttu-id="e3454-108">创建一个约束 (`PriceGreaterThanCost`)。</span><span class="sxs-lookup"><span data-stu-id="e3454-108">Create a constraint (`PriceGreaterThanCost`).</span></span> <span data-ttu-id="e3454-109">这是存放全部验证逻辑的位置。</span><span class="sxs-lookup"><span data-stu-id="e3454-109">This is where all the validation logic resides.</span></span>  
+-   <span data-ttu-id="b8f5a-108">创建一个约束 (`PriceGreaterThanCost`)。</span><span class="sxs-lookup"><span data-stu-id="b8f5a-108">Create a constraint (`PriceGreaterThanCost`).</span></span> <span data-ttu-id="b8f5a-109">这是存放全部验证逻辑的位置。</span><span class="sxs-lookup"><span data-stu-id="b8f5a-109">This is where all the validation logic resides.</span></span>  
   
--   <span data-ttu-id="e3454-110">重写 `System.Activities.CodeActivity.OnGetConstraints()` 并将约束 (`PriceGreaterThanCost`) 添加到约束集 <xref:System.Collections.IList> 中。</span><span class="sxs-lookup"><span data-stu-id="e3454-110">Override `System.Activities.CodeActivity.OnGetConstraints()` and add the constraint (`PriceGreaterThanCost`) to the constraints <xref:System.Collections.IList>.</span></span>  
+-   <span data-ttu-id="b8f5a-110">重写 `System.Activities.CodeActivity.OnGetConstraints()` 并将约束 (`PriceGreaterThanCost`) 添加到约束集 <xref:System.Collections.IList> 中。</span><span class="sxs-lookup"><span data-stu-id="b8f5a-110">Override `System.Activities.CodeActivity.OnGetConstraints()` and add the constraint (`PriceGreaterThanCost`) to the constraints <xref:System.Collections.IList>.</span></span>  
   
- <span data-ttu-id="e3454-111">工作流作者（主程序）必须：</span><span class="sxs-lookup"><span data-stu-id="e3454-111">The workflow author (main program) must:</span></span>  
+ <span data-ttu-id="b8f5a-111">工作流作者（主程序）必须：</span><span class="sxs-lookup"><span data-stu-id="b8f5a-111">The workflow author (main program) must:</span></span>  
   
--   <span data-ttu-id="e3454-112">使用要验证的活动实例来创建一个工作流 (`CreateProduct`)。</span><span class="sxs-lookup"><span data-stu-id="e3454-112">Create a workflow with an instance of the activity to validate (`CreateProduct`).</span></span>  
+-   <span data-ttu-id="b8f5a-112">使用要验证的活动实例来创建一个工作流 (`CreateProduct`)。</span><span class="sxs-lookup"><span data-stu-id="b8f5a-112">Create a workflow with an instance of the activity to validate (`CreateProduct`).</span></span>  
   
--   <span data-ttu-id="e3454-113">调用 <xref:System.Activities.Validation.ActivityValidationServices.Validate%2A>，它将返回<xref:System.Activities.Validation.ValidationResults> 的 <xref:System.Activities.Validation.ValidationError> 集合。</span><span class="sxs-lookup"><span data-stu-id="e3454-113">Call <xref:System.Activities.Validation.ActivityValidationServices.Validate%2A>, which returns a <xref:System.Activities.Validation.ValidationResults> collection of <xref:System.Activities.Validation.ValidationError>.</span></span>  
+-   <span data-ttu-id="b8f5a-113">调用 <xref:System.Activities.Validation.ActivityValidationServices.Validate%2A>，它将返回<xref:System.Activities.Validation.ValidationResults> 的 <xref:System.Activities.Validation.ValidationError> 集合。</span><span class="sxs-lookup"><span data-stu-id="b8f5a-113">Call <xref:System.Activities.Validation.ActivityValidationServices.Validate%2A>, which returns a <xref:System.Activities.Validation.ValidationResults> collection of <xref:System.Activities.Validation.ValidationError>.</span></span>  
   
--   <span data-ttu-id="e3454-114">（可选）输出 <xref:System.Activities.Validation.ValidationError> 对象。</span><span class="sxs-lookup"><span data-stu-id="e3454-114">(Optional) Print the <xref:System.Activities.Validation.ValidationError> objects.</span></span>  
+-   <span data-ttu-id="b8f5a-114">（可选）输出 <xref:System.Activities.Validation.ValidationError> 对象。</span><span class="sxs-lookup"><span data-stu-id="b8f5a-114">(Optional) Print the <xref:System.Activities.Validation.ValidationError> objects.</span></span>  
   
-#### <a name="to-set-up-build-and-run-the-sample"></a><span data-ttu-id="e3454-115">设置、生成和运行示例</span><span class="sxs-lookup"><span data-stu-id="e3454-115">To set up, build, and run the sample</span></span>  
+#### <a name="to-set-up-build-and-run-the-sample"></a><span data-ttu-id="b8f5a-115">设置、生成和运行示例</span><span class="sxs-lookup"><span data-stu-id="b8f5a-115">To set up, build, and run the sample</span></span>  
   
-1.  <span data-ttu-id="e3454-116">在 [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] 中打开 BasicValidation.sln 示例解决方案。</span><span class="sxs-lookup"><span data-stu-id="e3454-116">Open the BasicValidation.sln sample solution in [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)].</span></span>  
+1.  <span data-ttu-id="b8f5a-116">在 [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] 中打开 BasicValidation.sln 示例解决方案。</span><span class="sxs-lookup"><span data-stu-id="b8f5a-116">Open the BasicValidation.sln sample solution in [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)].</span></span>  
   
-2.  <span data-ttu-id="e3454-117">生成和运行解决方案。</span><span class="sxs-lookup"><span data-stu-id="e3454-117">Build and run the solution.</span></span>  
+2.  <span data-ttu-id="b8f5a-117">生成和运行解决方案。</span><span class="sxs-lookup"><span data-stu-id="b8f5a-117">Build and run the solution.</span></span>  
   
 > [!IMPORTANT]
->  <span data-ttu-id="e3454-118">您的计算机上可能已安装这些示例。</span><span class="sxs-lookup"><span data-stu-id="e3454-118">The samples may already be installed on your machine.</span></span> <span data-ttu-id="e3454-119">在继续操作之前，请先检查以下（默认）目录：</span><span class="sxs-lookup"><span data-stu-id="e3454-119">Check for the following (default) directory before continuing.</span></span>  
+>  <span data-ttu-id="b8f5a-118">您的计算机上可能已安装这些示例。</span><span class="sxs-lookup"><span data-stu-id="b8f5a-118">The samples may already be installed on your machine.</span></span> <span data-ttu-id="b8f5a-119">在继续操作之前，请先检查以下（默认）目录：</span><span class="sxs-lookup"><span data-stu-id="b8f5a-119">Check for the following (default) directory before continuing.</span></span>  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  <span data-ttu-id="e3454-120">如果此目录不存在，请转到[Windows Communication Foundation (WCF) 和.NET Framework 4 的 Windows Workflow Foundation (WF) 示例](https://go.microsoft.com/fwlink/?LinkId=150780)若要下载所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。</span><span class="sxs-lookup"><span data-stu-id="e3454-120">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) to download all Windows Communication Foundation (WCF) and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="e3454-121">此示例位于以下目录：</span><span class="sxs-lookup"><span data-stu-id="e3454-121">This sample is located in the following directory.</span></span>  
+>  <span data-ttu-id="b8f5a-120">如果此目录不存在，请转到[Windows Communication Foundation (WCF) 和.NET Framework 4 的 Windows Workflow Foundation (WF) 示例](https://go.microsoft.com/fwlink/?LinkId=150780)若要下载所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。</span><span class="sxs-lookup"><span data-stu-id="b8f5a-120">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) to download all Windows Communication Foundation (WCF) and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="b8f5a-121">此示例位于以下目录：</span><span class="sxs-lookup"><span data-stu-id="b8f5a-121">This sample is located in the following directory.</span></span>  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Validation\BasicValidation`
