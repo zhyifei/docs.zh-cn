@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: af5a0903-36af-4c2a-b848-cf959affeaa5
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 25fe93b63c518f54ee72300f26dfcb3f3ad21d76
-ms.sourcegitcommit: b6baf91310f6867223f0f32d596b451592b917b5
+ms.openlocfilehash: 0541f100f208543c796de7238e68ea6f90c7b299
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "33575344"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44077104"
 ---
 # <a name="names-of-type-members"></a>类型成员的名称
 类型的成员包括：方法、属性、事件、构造函数和字段。 以下各部分介绍各类型成员的命名准则。  
@@ -98,10 +98,11 @@ public class Control {
   
  例如，不要使用 "g_" 或 "s_" 来指示静态字段。  
   
- *部分版权 © 2005, 2009 Microsoft Corporation。* 保留所有权利。  
+ *部分版权 © 2005, 2009 Microsoft Corporation。保留所有权利。*  
   
- 由 Pearson Education, Inc 许可，转载自 [Framework 设计准则：可重用 .NET 库的约定、惯用法和模式，第2版](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) 作者：Krzysztof Cwalina 和 Brad Abrams，由 Addison Wesley Professional 于 2008 年 10 月 22 日作为 Microsoft Windows 开发系列的一部分发布。  
+ *经 Pearson Education, Inc 授权，转载自[框架设计准则：可重用的 .NET 库的约定、习惯用语和模式，第2版](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) 作者：Krzysztof Cwalina 和 Brad Abrams，由 Addison Wesley Professional 于 2008 年 10 月 22 日印发，作为 Microsoft Windows 开发系列的一部分。*  
   
-## <a name="see-also"></a>请参阅  
- [框架设计指南](../../../docs/standard/design-guidelines/index.md)  
- [命名规则](../../../docs/standard/design-guidelines/naming-guidelines.md)
+## <a name="see-also"></a>请参阅
+
+- [框架设计指南](../../../docs/standard/design-guidelines/index.md)  
+- [命名规则](../../../docs/standard/design-guidelines/naming-guidelines.md)
