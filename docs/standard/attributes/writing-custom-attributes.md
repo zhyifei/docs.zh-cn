@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 97216f69-bde8-49fd-ac40-f18c500ef5dc
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 114d24c1fc523d5501deb4aa17f9541c5a918276
-ms.sourcegitcommit: c66ba2df2d2ecfb214f85ee0687d298e4941c1a8
+ms.openlocfilehash: 67a5ffe2075618020f3ab9f801852a1a97fc74d2
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "33574642"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44072163"
 ---
 # <a name="writing-custom-attributes"></a>编写自定义特性
 要设计你自己的自定义特性，无需掌握许多新的概念。 如果你熟悉面向对象的编程，并且知道如何设计类，那么你已经具备大部分所需知识。 自定义属性本质上是直接或间接派生自 <xref:System.Attribute?displayProperty=nameWithType> 的传统类。 与传统类一样，自定义特性包含用于存储和检索数据的方法。  
@@ -148,7 +148,8 @@ ms.locfileid: "33574642"
   
  第一个示例显示只应用了必选命名参数的特性，第二个示例显示同时应用了必选参数和可选参数的特性。  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Attribute?displayProperty=nameWithType>  
- <xref:System.AttributeUsageAttribute?displayProperty=nameWithType>  
- [特性](../../../docs/standard/attributes/index.md)
+## <a name="see-also"></a>请参阅
+
+- <xref:System.Attribute?displayProperty=nameWithType>  
+- <xref:System.AttributeUsageAttribute?displayProperty=nameWithType>  
+- [特性](../../../docs/standard/attributes/index.md)
