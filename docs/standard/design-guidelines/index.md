@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 5fbcaf4f-ea2a-4d20-b0d6-e61dee202b4b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2674acf14aae5e892dfb9707a19cca12b4797c90
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: df2ccf3d778e26e16937554304ae847f624cfec0
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33572978"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44085629"
 ---
 # <a name="framework-design-guidelines"></a>框架设计准则
 本部分提供的准则适用于设计那些可扩展 .NET Framework 并与之交互的库。 目的是通过提供独立于开发所用编程语言的统一编程模型，帮助库设计者确保 API 的一致性和易用性。 建议在开发可扩展 .NET Framework 的类和组件时遵循这些设计准则。 不一致的库设计会对开发人员的工作效率产生负面影响，影响用户采用它。  
@@ -28,10 +28,10 @@ ms.locfileid: "33572978"
  提供在类库中命名程序集、名称空间、类型和成员的准则。  
   
  [类型设计准则](../../../docs/standard/design-guidelines/type.md)  
- 提供用于静态和抽象类、 接口、 枚举、 结构和其他类型的准则。  
+ 提供了使用静态和抽象类、 接口、 枚举、 结构和其他类型的指导原则。  
   
  [成员设计准则](../../../docs/standard/design-guidelines/member.md)  
- 提供有关设计和使用属性、 方法、 构造函数、 字段、 事件、 运算符和参数的准则。  
+ 提供设计和使用属性、 方法、 构造函数、 字段、 事件、 运算符和参数的准则。  
   
  [扩展性设计](../../../docs/standard/design-guidelines/designing-for-extensibility.md)  
  讨论可扩展性机制，例如子类化，使用事件、虚拟成员和回调，并说明如何选择最符合框架要求的机制。  
@@ -45,11 +45,12 @@ ms.locfileid: "33572978"
  [常用设计模型](../../../docs/standard/design-guidelines/common-design-patterns.md)  
  提供有关如何选择和实现依赖项属性和 dispose 模式的准则。  
   
- 部分 © 2005，2009 Microsoft Corporation。保留所有权利。  
+ 部分 © 2005，2009 Microsoft Corporation。*保留所有权利。*  
   
- 由 Pearson Education, Inc 许可，转载自 [Framework 设计准则：可重用 .NET 库的约定、惯用法和模式，第2版](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) 作者：Krzysztof Cwalina 和 Brad Abrams，由 Addison Wesley Professional 于 2008 年 10 月 22 日作为 Microsoft Windows 开发系列的一部分发布。  
+ *经 Pearson Education, Inc 授权，转载自[框架设计准则：可重用的 .NET 库的约定、习惯用语和模式，第2版](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) 作者：Krzysztof Cwalina 和 Brad Abrams，由 Addison Wesley Professional 于 2008 年 10 月 22 日印发，作为 Microsoft Windows 开发系列的一部分。*  
   
-## <a name="see-also"></a>请参阅  
- [概述](../../../docs/framework/get-started/overview.md)  
- [.NET Framework 的路线图](https://msdn.microsoft.com/library/0b46b7c6-9163-4f99-8e58-0d1ee7da8c67)  
- [开发指南](../../../docs/framework/development-guide.md)
+## <a name="see-also"></a>请参阅
+
+- [概述](../../../docs/framework/get-started/overview.md)  
+- [.NET Framework 的路线图](https://msdn.microsoft.com/library/0b46b7c6-9163-4f99-8e58-0d1ee7da8c67)  
+- [开发指南](../../../docs/framework/development-guide.md)

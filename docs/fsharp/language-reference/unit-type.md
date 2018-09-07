@@ -3,11 +3,11 @@ title: unit 类型 (F#)
 description: '了解如何 F # 单位类型通常用来保存其中一个值所需的语言语法需要或所需的任何值时的位置。'
 ms.date: 05/16/2016
 ms.openlocfilehash: c3dfa5f63c25a1e8abc0f75b905c129b311479af
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43773418"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44097147"
 ---
 # <a name="unit-type"></a>unit 类型
 

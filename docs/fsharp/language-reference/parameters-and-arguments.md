@@ -2,25 +2,25 @@
 title: 参数和自变量 (F#)
 description: '了解有关 F # 语言支持对定义形参并将参数传递给函数、 方法和属性。'
 ms.date: 05/16/2016
-ms.openlocfilehash: 9744339110314e4e6b3c3cf8d49b1c988bc25e3c
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: a3418ec814e0419d08758cf035ecc0f402b5db1a
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43471976"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44062632"
 ---
 # <a name="parameters-and-arguments"></a>形参和实参
 
 本主题介绍对定义形参并将参数传递给函数、 方法和属性的语言支持。 它包括有关如何将传递的引用，以及如何定义和使用可以采用可变数量的参数的方法的信息。
 
-
 ## <a name="parameters-and-arguments"></a>形参和实参
+
 术语*参数*用于描述的预期提供的值的名称。 术语*自变量*用于为每个参数提供的值。
 
 元组或扩充窗体，或两者的某种组合中，可以指定参数。 可以通过使用显式参数名称传递参数。 方法的参数可以是指定为可选，指定的默认值。
 
-
 ## <a name="parameter-patterns"></a>参数模式
+
 一般情况下，提供给函数和方法的参数是由空格分隔的模式。 这意味着，从原理上讲，任何模式中所述[匹配表达式](match-expressions.md)可用于在参数列表中的函数或成员。
 
 方法通常会使用元组形式传递自变量。 这实现了从其他.NET 语言的角度来看更加清晰的结果，因为元组形式与.NET 方法中传递参数的方法相匹配。
@@ -90,6 +90,7 @@ let angle (Polar(_, theta)) = theta
 最好保留以供快速原型制作和其他临时使用具有不完全匹配的模式的使用。 编译器将发出此类代码的警告。 此类模式无法涵盖所有可能的输入的一般情况下，并因此不适合组件 Api。
 
 ## <a name="named-arguments"></a>命名实参
+
 可以通过在逗号分隔参数列表中，位置指定的方法参数或它们可以显式传递给方法通过提供名称后, 跟一个等号和要在中传递的值。 如果指定通过提供的名称，它们可以出现在不同的声明中使用的顺序。
 
 命名的自变量可以对某些类型的 API，如方法参数的重新排序中的更改使代码更具可读性且更适应能力更强。
@@ -107,6 +108,7 @@ let angle (Polar(_, theta)) = theta
 有关详细信息，请参阅[构造函数 （F #）](https://msdn.microsoft.com/library/2cd0ed07-d214-4125-8317-4f288af99f05)。
 
 ## <a name="optional-parameters"></a>可选参数
+
 可以通过使用参数名称前面的问号指定一种方法的可选参数。 可选参数被解释为 F # 选项类型，因此您可以将这些查询，查询选项类型，通过常规方式`match`与表达式`Some`和`None`。 仅在成员上，通过使用创建的函数上不允许使用可选参数`let`绑定。
 
 此外可以使用一个函数`defaultArg`，用于设置默认值为可选的参数。 `defaultArg`函数使用的第一个参数的可选参数，以及为第二个的默认值。
@@ -124,6 +126,7 @@ Baud Rate: 300 Duplex: Half Parity: true
 ```
 
 ## <a name="passing-by-reference"></a>按引用传递
+
 按引用传递的 F # 值涉及`byref`关键字，它指定该参数是实际指向按引用传递的值。 任何值传递到方法替换`byref`参数必须是`mutable`。
 
 因为参数是一个指针，值为可变，对值的任何更改将保留后执行函数。
@@ -139,6 +142,7 @@ Baud Rate: 300 Duplex: Half Parity: true
 [!code-fsharp[Main](../../../samples/snippets/fsharp/parameters-and-arguments-1/snippet3810.fs)]
 
 ## <a name="parameter-arrays"></a>参数数组
+
 有时有必要定义采用任意数量的异构类型的参数的函数。 它不会实际创建所有可能的重载的方法来应对可能使用的所有类型。 .NET 实现为此类方法的参数数组功能通过提供支持。 可以有任意数量的参数提供的签名中使用参数数组的方法。 参数被放入数组中。 数组元素的类型确定可以传递给函数的参数类型。 如果定义数组，该参数数组`System.Object`与元素类型，然后客户端代码可以通过任何类型的值。
 
 在 F # 中，只能在方法中定义参数数组。 它们不能独立函数或模块中定义的函数中使用。
@@ -162,4 +166,5 @@ true
 ```
 
 ## <a name="see-also"></a>请参阅
-[成员](members/index.md)
+
+- [成员](members/index.md)

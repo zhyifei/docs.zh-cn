@@ -1,23 +1,21 @@
 ---
 title: 详细语法 (F#)
-description: '了解在 F # 编程语言的详细和轻量语法之间的差异。'
+description: '了解 F # 编程语言中的详细和轻量语法之间的差异。'
 ms.date: 05/16/2016
-ms.openlocfilehash: b0bed66b4a76c5ab11e6c9e7aaf695f864e74ca0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b4f2354738da4692cb444e5e7dd9531d80d26664
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33563779"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44063113"
 ---
 # <a name="verbose-syntax"></a>详细语法
 
-有两种形式的语法可用于对 F # 语言中的许多构造：*详细语法*和*轻量语法*。 详细语法不常使用，但具有到缩进的敏感程度较低的优点。 轻量语法更简短，缩进用于表示的开头和末尾构造，而不是其他关键字，例如`begin`， `end`， `in`，依次类推。 默认语法是轻量语法。 本主题介绍对 F # 构造语法时不启用轻量语法。 详细语法始终处于启用状态，因此即使启用轻量语法，仍可以对某些构造使用详细语法。 你可以通过使用禁用轻量语法`#light "off"`指令。
-
+有两种形式的语法可用于 F # 语言中的许多构造：*详细语法*并*轻量语法*。 详细语法不常使用，但具有的优势在于到缩进的敏感程度较低。 轻量语法为较短，并使用缩进发出信号的开头和结尾的构造，而不是其他关键字，例如`begin`， `end`， `in`，依次类推。 默认语法为轻量语法。 未启用轻量语法时，本主题介绍对 F # 构造的语法。 详细语法始终处于启用状态，因此即使您启用轻量语法，仍然可以为某些构造使用详细语法。 可以使用禁用轻量语法`#light "off"`指令。
 
 ## <a name="table-of-constructs"></a>构造表
-下表显示 F # 语言构造的轻量和详细语法在上下文中的两种形式之间的区别所在。 在此表中，尖括号 (&lt;&gt;) 括起用户提供的语法元素。 请参阅每个语言构造，它用于在这些构造中使用的语法的更多详细信息的文档。
 
-
+下表显示了 F # 语言构造的轻量和详细语法，在上下文中存在两种形式之间的差异的。 在此表中，角度方括号 (&lt;&gt;) 括起来的用户提供的语法元素。 请参阅有关使用这些构造中的语法的更多详细信息每种语言构造的文档。
 
 <table>
 <tr>
@@ -189,7 +187,7 @@ type <record-name> =
 
 </td>
 </tr>
-<tr><td>类
+<tr><td>class
 </td><td>
 ```
 type <class-name>(<params>) = ... ```
@@ -245,7 +243,7 @@ type <union-name> =
 
 </td>
 </tr>
-<tr><td>接口</td><td>
+<tr><td>interface</td><td>
 
 ```
 type <interface-name> =
@@ -343,11 +341,8 @@ module <module-name> =
 </tr>
 </table>
 
-
-
 ## <a name="see-also"></a>请参阅
-[F# 语言参考](index.md)
 
-[编译器指令](compiler-directives.md)
-
-[代码格式设置准则](code-formatting-guidelines.md)
+- [F# 语言参考](index.md)
+- [编译器指令](compiler-directives.md)
+- [代码格式设置准则](code-formatting-guidelines.md)

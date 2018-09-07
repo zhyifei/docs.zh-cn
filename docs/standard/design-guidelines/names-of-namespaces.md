@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: a49058d2-0276-43a7-9502-04adddf857b2
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9e0b6c5ac60474cfe984b3802e880eb58b017722
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6d68966f60c5039fd67195a03facc1586b9ed154
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33576427"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44097004"
 ---
 # <a name="names-of-namespaces"></a>命名空间的名称
 与其他命名准则一样，为命名空间命名的目的是为了让使用该框架的程序员能够通过名称快速了解命名空间所涉及的内容。 以下模板指定了为命名空间命名的一般规则：  
@@ -31,7 +31,7 @@ ms.locfileid: "33576427"
   
  **✓ 务必**在命名空间名称的第二级名称中使用稳定的、与版本无关的产品名称。  
   
- **X 不要**使用企业组织的层次结构作为命名空间层次结构中名称的基础，因为公司内的群组名称往往是短期的。应围绕相关技术的群组来组织命名空间的层次结构。 将组织的相关技术的组周围的命名空间的层次结构。  
+ **X 不要**使用企业组织的层次结构作为命名空间层次结构中名称的基础，因为公司内的群组名称往往是短期的。应围绕相关技术的群组来组织命名空间的层次结构。 组织周围的相关技术的组的命名空间的层次结构。  
   
  **✓ 务必**使用 PascalCasing，并使用句点分隔命名空间组件（例如，`Microsoft.Office.PowerPoint`）。 如果品牌使用非传统的大小写形式，则应遵循由品牌定义的大小写，即使与通常的命名空间大小写不符也是如此。  
   
@@ -46,13 +46,13 @@ ms.locfileid: "33576427"
 ### <a name="namespaces-and-type-name-conflicts"></a>命名空间和类型名称冲突  
  **X 不要**引入泛型类型名称，如 `Element`、`Node`、`Log` 和 `Message` 等。  
   
- 没有这样做将导致类型名称共同点冲突方案非常高概率。 一般情况下，这样做很可能会导致类型名称冲突。应限定泛型类型名称（`FormElement`、`XmlNode`、`EventLog`、`SoapMessage`）。  
+ 没有这样做将导致类型名称冲突共同方案很有可能。 一般情况下，这样做很可能会导致类型名称冲突。应限定泛型类型名称（`FormElement`、`XmlNode`、`EventLog`、`SoapMessage`）。  
   
  针对不同类别的命名空间，存在避免类型名称冲突的特定准则。  
   
 -   **应用程序模型命名空间**  
   
-     属于同一应用程序模型的命名空间经常一起使用，但它们几乎从不与其他应用程序模型的命名空间一起使用。 例如，<xref:System.Windows.Forms?displayProperty=nameWithType> 命名空间很少与 <xref:System.Web.UI?displayProperty=nameWithType> 命名空间一起使用。以下是一个常见的应用程序模型命名空间组的列表： 下面是一个已知应用程序模型命名空间组的列表：  
+     属于同一应用程序模型的命名空间经常一起使用，但它们几乎从不与其他应用程序模型的命名空间一起使用。 例如，<xref:System.Windows.Forms?displayProperty=nameWithType> 命名空间很少与 <xref:System.Web.UI?displayProperty=nameWithType> 命名空间一起使用。以下是一个常见的应用程序模型命名空间组的列表： 下面是已知的应用程序模型命名空间组的列表：  
   
      `System.Windows*`   
      `System.Web.UI*`  
@@ -85,6 +85,7 @@ ms.locfileid: "33576427"
   
  *经 Pearson Education, Inc 授权，转载自[框架设计准则：可重用的 .NET 库的约定、习惯用语和模式，第2版](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) 作者：Krzysztof Cwalina 和 Brad Abrams，由 Addison Wesley Professional 于 2008 年 10 月 22 日印发，作为 Microsoft Windows 开发系列的一部分。*  
   
-## <a name="see-also"></a>请参阅  
- [框架设计指南](../../../docs/standard/design-guidelines/index.md)  
- [命名规则](../../../docs/standard/design-guidelines/naming-guidelines.md)
+## <a name="see-also"></a>请参阅
+
+- [框架设计指南](../../../docs/standard/design-guidelines/index.md)  
+- [命名规则](../../../docs/standard/design-guidelines/naming-guidelines.md)

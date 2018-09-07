@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC42358
 ms.assetid: 43342515-c3c8-4155-9263-c302afabcbc2
-ms.openlocfilehash: a07955363ea5ca1ca8785c241b0de58149f329ba
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: fe820b9d2157c09428903a36427d3ff5e4c0045b
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43745575"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44069609"
 ---
 # <a name="because-this-call-is-not-awaited-the-current-method-continues-to-run-before-the-call-is-completed"></a>由于不等待此调用，因此在调用完成之前，当前方法将继续运行
 在调用完成之前，会继续执行当前方法，原因是此调用不处于等待状态。 请考虑向调用结果应用“Await”运算符。  
@@ -117,7 +117,7 @@ ms.locfileid: "43745575"
   
      MainWindow.xaml 的“设计”  视图中将显示一个简单的窗口，其中包含一个按钮和一个文本框。  
   
-     有关 XAML 设计器的详细信息，请参阅[使用 XAML 设计器创建 UI](/visualstudio/designers/creating-a-ui-by-using-xaml-designer-in-visual-studio)。 有关如何自行生成简单 UI 的信息，请参阅[演练：使用 Async 和 Await 访问 Web](https://msdn.microsoft.com/library/25879a6d-fdee-4a38-bc98-bb8c24d16042)的“创建 WPF 应用程序的步骤”和“设计简单的 WPF MainWindow 的步骤”两个章节。  
+     有关 XAML 设计器的详细信息，请参阅[使用 XAML 设计器创建 UI](/visualstudio/designers/creating-a-ui-by-using-xaml-designer-in-visual-studio)。 有关如何自行生成简单 UI 的信息，请参阅[演练：使用 Async 和 Await 访问 Web](../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)的“创建 WPF 应用程序的步骤”和“设计简单的 WPF MainWindow 的步骤”两个章节。  
   
 4.  将 MainWindow.xaml.vb 中的代码替换为以下代码。  
   
@@ -203,6 +203,7 @@ ms.locfileid: "43745575"
   
      预期的输出显示在代码末尾。  
   
-## <a name="see-also"></a>请参阅  
- [Await 运算符](../../../visual-basic/language-reference/operators/await-operator.md)  
- [使用 Async 和 Await 的异步编程](../../../visual-basic/programming-guide/concepts/async/index.md)
+## <a name="see-also"></a>请参阅
+
+- [Await 运算符](../../../visual-basic/language-reference/operators/await-operator.md)  
+- [使用 Async 和 Await 的异步编程](../../../visual-basic/programming-guide/concepts/async/index.md)

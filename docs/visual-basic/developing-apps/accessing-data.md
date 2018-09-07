@@ -5,12 +5,12 @@ helpviewer_keywords:
 - data [Visual Basic]
 - Visual Basic, data access
 ms.assetid: 3086ab38-3be5-4b22-9385-7d0e16b04f6a
-ms.openlocfilehash: 2e6cfc3d6d8752b12fa20a357dedfeb1b3346dce
-ms.sourcegitcommit: 2d8b7488d94101b534ca3e9780b1c1e840233405
+ms.openlocfilehash: 220d662576a5f23194dee7e23317bdbb0027546d
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39198818"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44098532"
 ---
 # <a name="accessing-data-in-visual-basic-applications"></a>在 Visual Basic 应用程序中访问数据
 Visual Basic 包括多种新功能，以帮助开发访问数据的应用程序。 通过将项从[“数据源”窗口](/visualstudio/data-tools/add-new-data-sources)拖到窗体上来创建 Windows 应用程序的数据绑定窗体。 通过将项从“数据源窗口”拖动到现有控件上来将控件绑定到数据。  
@@ -55,5 +55,4 @@ Visual Basic 包括多种新功能，以帮助开发访问数据的应用程序�
  [ADO.NET](../../framework/data/adonet/index.md)  
  描述 ADO.NET 类，该类向 .NET Framework 程序员公开数据访问服务。
 
- [Office 解决方案中的数据](https://msdn.microsoft.com/library/xx069ybh)  
- 包含相关页面的链接，这些页面阐释了数据在 Office 解决方案中的工作方式（包括有关面向架构的编程、数据缓存和服务器端数据访问的信息）。
+ [Office 解决方案中的数据](/visualstudio/vsto/data-in-office-solutions)包含指向这些页面阐释了数据在 Office 解决方案中，包括有关面向架构编程、 数据缓存和服务器端数据访问的信息的工作方式。
