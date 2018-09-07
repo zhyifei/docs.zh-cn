@@ -10,11 +10,11 @@ helpviewer_keywords:
 - statements [C#]
 ms.assetid: 20f8469d-5a6a-4084-ad90-0856b7e97e45
 ms.openlocfilehash: 1085de3447bd6101fcccf6cae7b37afac24d37f1
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43776522"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "44047787"
 ---
 # <a name="statements-expressions-and-operators-c-programming-guide"></a>语句、表达式和运算符（C# 编程指南）
 构成应用程序的 C# 代码由关键字、表达式和运算符组成的语句所组成。 本节包含有关这些 C# 程序基本元素的信息。  

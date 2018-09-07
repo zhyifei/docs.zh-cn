@@ -3,11 +3,11 @@ title: ASP.NET 兼容性
 ms.date: 03/30/2017
 ms.assetid: c8b51f1e-c096-4c42-ad99-0519887bbbc5
 ms.openlocfilehash: eeb09914fc90848c987127c789379549917063f6
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
-ms.translationtype: HT
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43659508"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43800168"
 ---
 # <a name="aspnet-compatibility"></a>ASP.NET 兼容性
 此示例演示如何启用 ASP.NET 兼容性模式在 Windows Communication Foundation (WCF)。 在 ASP.NET 兼容性模式完全参与 ASP.NET 应用程序管道，并可以使运行的服务使用的 ASP.NET 功能，如文件 /URL 授权、 会话状态和<xref:System.Web.HttpContext>类。 <xref:System.Web.HttpContext>类可以访问 cookie、 会话和其他 ASP.NET 功能。 此模式要求绑定使用 HTTP 传输，且服务本身必须承载于 IIS 中。  

@@ -10,24 +10,24 @@ ms.assetid: 87bee662-0a3e-4232-a421-20e7a5968321
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: be7711fdbe9b2cb45d618e685a6f1ae2a941aa29
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: fcc7782b5e2ad2fae876c2b3143caf367332ed5a
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33399157"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43777959"
 ---
 # <a name="ui-automation-and-microsoft-active-accessibility"></a>UI 自动化和 Microsoft Active Accessibility
 > [!NOTE]
->  本文档适用于想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空间中定义的托管 <xref:System.Windows.Automation> 类的 .NET Framework 开发人员。 有关 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]的最新信息，请参阅 [Windows 自动化 API：UI 自动化](http://go.microsoft.com/fwlink/?LinkID=156746)。  
+>  本文档适用于想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空间中定义的托管 <xref:System.Windows.Automation> 类的 .NET Framework 开发人员。 有关最新信息[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]，请参阅[Windows 自动化 API: UI 自动化](https://go.microsoft.com/fwlink/?LinkID=156746)。  
   
- [!INCLUDE[TLA#tla_aa](../../../includes/tlasharptla-aa-md.md)] 是使应用程序具备辅助功能的早期解决方案。 [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] 是 [!INCLUDE[TLA#tla_win](../../../includes/tlasharptla-win-md.md)] 的新辅助功能模型，旨在满足对辅助技术产品和自动测试工具的需求。 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 通过 [!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)]提供了很多改进。  
+ [!INCLUDE[TLA#tla_aa](../../../includes/tlasharptla-aa-md.md)] 是使应用程序具备辅助功能的早期解决方案。 [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] 是 [!INCLUDE[TLA#tla_win](../../../includes/tlasharptla-win-md.md)] 的新辅助功能模型，旨在满足对辅助技术产品和自动测试工具的需求。 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]通过 [!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)] 提供了很多改进。  
   
  本主题包含了 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 的主要功能并解释了这些功能与 [!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)]的不同之处。  
   
 <a name="Programming_Languages_compare"></a>   
 ## <a name="programming-languages"></a>编程语言  
-<[!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)] 基于[!INCLUDE[TLA#tla_com](../../../includes/tlasharptla-com-md.md)]，支持双重接口，因此 C/c + + 中可编程[!INCLUDE[TLA#tla_vb6](../../../includes/tlasharptla-vb6-md.md)]，和脚本语言。 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] （包括用于标准控件的客户端提供程序库） 用托管代码编写，并且 UI 自动化客户端应用程序轻松进行编程使用 C# 或 Visual Basic.NET。 作为接口实现的 UI 自动化提供程序可以用托管代码或 C/C++ 编写。  
+<[!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)] 基于[!INCLUDE[TLA#tla_com](../../../includes/tlasharptla-com-md.md)]具有双重接口支持，因此 C/c + + 中可编程[!INCLUDE[TLA#tla_vb6](../../../includes/tlasharptla-vb6-md.md)]，和脚本语言。 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] （包括适用于标准控件的客户端提供程序库） 编写托管代码中，UI 自动化客户端应用程序轻松进行编程使用 C# 或 Visual Basic.NET。 作为接口实现的 UI 自动化提供程序可以用托管代码或 C/C++ 编写。  
   
 <a name="Support_in_Windows_Presentation_Foundation_"></a>   
 ## <a name="support-in-windows-presentation-foundation"></a>Windows Presentation Foundation 中的支持  
@@ -192,7 +192,7 @@ ms.locfileid: "33399157"
 |WinEvent|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 事件标识符|  
 |--------------|--------------------------------------------------------------------------------------------|  
 |EVENT_OBJECT_ACCELERATORCHANGE|<xref:System.Windows.Automation.AutomationElement.AcceleratorKeyProperty> 属性更改|  
-|EVENT_OBJECT_CONTENTSCROLLED|相关联的滚动条上的 <xref:System.Windows.Automation.ScrollPattern.VerticalScrollPercentProperty>或 <xref:System.Windows.Automation.ScrollPattern.HorizontalScrollPercentProperty> 属性更改|  
+|EVENT_OBJECT_CONTENTSCROLLED|相关联的滚动条上的<xref:System.Windows.Automation.ScrollPattern.VerticalScrollPercentProperty> 或 <xref:System.Windows.Automation.ScrollPattern.HorizontalScrollPercentProperty> 属性更改|  
 |EVENT_OBJECT_CREATE|<xref:System.Windows.Automation.AutomationElement.StructureChangedEvent>|  
 |EVENT_OBJECT_DEFACTIONCHANGE|无等效项|  
 |EVENT_OBJECT_DESCRIPTIONCHANGE|没有确切的等效项；也许 <xref:System.Windows.Automation.AutomationElement.HelpTextProperty> 或 <xref:System.Windows.Automation.AutomationElement.LocalizedControlTypeProperty> 属性更改|  

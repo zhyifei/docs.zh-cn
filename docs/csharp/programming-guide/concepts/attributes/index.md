@@ -1,12 +1,12 @@
 ---
 title: 特性 (C#)
 ms.date: 04/26/2018
-ms.openlocfilehash: fe94f0ee778f14581fd7949f705cc22f12058b27
-ms.sourcegitcommit: 88f251b08bf0718ce119f3d7302f514b74895038
+ms.openlocfilehash: c33d93a4af91e0c61546e8d51ab470f2889c095c
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "33956067"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43892381"
 ---
 # <a name="attributes-c"></a>特性 (C#)
 
@@ -125,7 +125,7 @@ using System.Reflection;
 
 ## <a name="see-also"></a>请参阅
 
- [C# 编程指南](../../index.md)  
- [反射 (C#)](../reflection.md)  
- [特性](../../../../standard/attributes/index.md)  
- [在 C# 中使用特性](../../../tutorials/attributes.md)  
+- [C# 编程指南](../../index.md)  
+- [反射 (C#)](../reflection.md)  
+- [特性](../../../../standard/attributes/index.md)  
+- [在 C# 中使用特性](../../../tutorials/attributes.md)  

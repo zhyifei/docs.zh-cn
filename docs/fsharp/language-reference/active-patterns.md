@@ -2,12 +2,12 @@
 title: 活动模式 (F#)
 description: '了解如何使用活动模式以定义细分输入的数据在 F # 编程语言中的命名的分区。'
 ms.date: 05/16/2016
-ms.openlocfilehash: 964ae8eb6db0191fab1e5a816e29bd0819605f2c
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
-ms.translationtype: HT
+ms.openlocfilehash: 4fb7d3e2b9c7e6f1c1ed9d64a47728c7f40017c8
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43786477"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43881871"
 ---
 # <a name="active-patterns"></a>活动模式
 
@@ -44,7 +44,7 @@ let (|identifier|_|) [ arguments ] = expression
 
 活动模式的另一个用途是将分解在多个方面，例如当同一基础数据具有各种可能的表示形式的数据类型。 例如，`Color`对象无法分解为一表示形式，RGB 或 HSB 表示形式。
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet5003.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet5003.fs)]
 
 上面的程序中的输出如下所示：
 
@@ -72,9 +72,9 @@ BlanchedAlmond
 
 ## <a name="partial-active-patterns"></a>部分活动模式
 
-有时，您需要进行分区仅输入空间的一部分。 在这种情况下，您编写一组的部分模式，其中匹配一些输入，但无法匹配其他输入。 始终不会生成值的活动模式被称为*分部活动模式*; 它们具有返回值将是选项类型。 若要定义部分活动模式，请在香蕉夹内的模式的列表的末尾使用通配符字符 (_)。 下面的代码演示如何使用部分活动模式。
+有时，您需要进行分区仅输入空间的一部分。 在这种情况下，您编写一组的部分模式，其中匹配一些输入，但无法匹配其他输入。 始终不会生成值的活动模式被称为*分部活动模式*; 它们具有返回值将是选项类型。 若要定义部分活动模式，您可以使用通配符字符 (\_) 模式在香蕉夹内的列表的末尾。 下面的代码演示如何使用部分活动模式。
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet5004.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet5004.fs)]
 
 上一示例的输出如下所示：
 
@@ -88,7 +88,7 @@ Something else : Not matched.
 
 当使用部分活动模式时，有时单项选择可以是不连续或互斥的但它们不需要。 在以下示例中，模式正方形和多维数据集的模式不是连续的因为一些数字是平方和多维数据集，例如 64。 下面的程序将最多是平方和多维数据集的 1000000 输出所有整数。
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet5005.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet5005.fs)]
 
 输出如下所示：
 
@@ -109,7 +109,7 @@ Something else : Not matched.
 
 活动模式始终采用至少一个参数为要匹配的项，但也可能会采用其他参数，这种情况下名称*参数化活动模式*适用。 其他参数，可进行专用化的常规模式。 例如，使用正则表达式分析字符串通常的活动模式包括正则表达式作为一个额外的参数，如下面的代码，还会使用部分活动模式中所示`Integer`在前面的代码示例中定义。 在此示例中，提供有关各种日期格式中使用正则表达式的字符串以自定义常规 ParseRegex 活动模式。 使用整数活动模式以匹配的字符串转换为可传递给 DateTime 构造函数的整数。
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet5006.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet5006.fs)]
 
 上述代码的输出如下所示：
 
@@ -119,7 +119,7 @@ Something else : Not matched.
 
 活动模式不会限制仅用于模式匹配表达式，也可以让绑定上使用它们。
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet5007.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet5007.fs)]
 
 上述代码的输出如下所示：
 

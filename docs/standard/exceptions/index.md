@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: f99a1d29-a2a8-47af-9707-9909f9010735
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a278940528966e32646a3551b4c133223de9746e
-ms.sourcegitcommit: 640cee8fc5d256cdd80e5b80240469feac10499e
+ms.openlocfilehash: 263e6394a57ec3e7ef00eb79671d9b8ac47e724f
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36298339"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "43883776"
 ---
 # <a name="handling-and-throwing-exceptions-in-net"></a>在 .NET 中处理和引发异常
 
@@ -60,13 +60,13 @@ ms.locfileid: "36298339"
 
 ## <a name="see-also"></a>请参阅
 
-[异常类和属性](exception-class-and-properties.md)  
-[如何：使用 Try-Catch 块捕捉异常](how-to-use-the-try-catch-block-to-catch-exceptions.md)  
-[如何：在 Catch 块中使用特定异常](how-to-use-specific-exceptions-in-a-catch-block.md)  
-[如何显式引发异常](how-to-explicitly-throw-exceptions.md)  
-[如何：创建用户定义的异常](how-to-create-user-defined-exceptions.md)  
-[使用用户筛选的异常处理程序](using-user-filtered-exception-handlers.md)  
-[如何：使用 Finally 块](how-to-use-finally-blocks.md)  
-[处理 COM 互操作异常](handling-com-interop-exceptions.md)  
-[与异常有关的最佳做法](best-practices-for-exceptions.md)  
-[每个开发人员都需要了解的有关运行时异常方面的内容](https://github.com/dotnet/coreclr/blob/master/Documentation/botr/exceptions.md)。
+- [异常类和属性](exception-class-and-properties.md)  
+- [如何：使用 Try-Catch 块捕捉异常](how-to-use-the-try-catch-block-to-catch-exceptions.md)  
+- [如何：在 Catch 块中使用特定异常](how-to-use-specific-exceptions-in-a-catch-block.md)  
+- [如何显式引发异常](how-to-explicitly-throw-exceptions.md)  
+- [如何：创建用户定义的异常](how-to-create-user-defined-exceptions.md)  
+- [使用用户筛选的异常处理程序](using-user-filtered-exception-handlers.md)  
+- [如何：使用 Finally 块](how-to-use-finally-blocks.md)  
+- [处理 COM 互操作异常](handling-com-interop-exceptions.md)  
+- [与异常有关的最佳做法](best-practices-for-exceptions.md)  
+- [每个开发人员都需要了解的有关运行时异常方面的内容](https://github.com/dotnet/coreclr/blob/master/Documentation/botr/exceptions.md)。
