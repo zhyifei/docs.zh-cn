@@ -17,18 +17,18 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: fb187719ff502abe61ac5deb69c6427a4a64ab44
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43488204"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44059676"
 ---
-# <a name="spawninstance-function"></a><span data-ttu-id="bf735-103">SpawnInstance 函数</span><span class="sxs-lookup"><span data-stu-id="bf735-103">SpawnInstance function</span></span>
-<span data-ttu-id="bf735-104">创建一个类的新实例。</span><span class="sxs-lookup"><span data-stu-id="bf735-104">Creates a new instance of a class.</span></span>    
+# <a name="spawninstance-function"></a><span data-ttu-id="7fa58-103">SpawnInstance 函数</span><span class="sxs-lookup"><span data-stu-id="7fa58-103">SpawnInstance function</span></span>
+<span data-ttu-id="7fa58-104">创建类的新实例。</span><span class="sxs-lookup"><span data-stu-id="7fa58-104">Creates a new instance of a class.</span></span>    
   
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
   
-## <a name="syntax"></a><span data-ttu-id="bf735-105">语法</span><span class="sxs-lookup"><span data-stu-id="bf735-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="7fa58-105">语法</span><span class="sxs-lookup"><span data-stu-id="7fa58-105">Syntax</span></span>  
   
 ```  
 HRESULT SpawnInstance (
@@ -38,48 +38,48 @@ HRESULT SpawnInstance (
    [out] IWbemClassObject**  ppNewInstance); 
 ```  
 
-## <a name="parameters"></a><span data-ttu-id="bf735-106">参数</span><span class="sxs-lookup"><span data-stu-id="bf735-106">Parameters</span></span>
+## <a name="parameters"></a><span data-ttu-id="7fa58-106">参数</span><span class="sxs-lookup"><span data-stu-id="7fa58-106">Parameters</span></span>
 
 `vFunc`  
-<span data-ttu-id="bf735-107">[in]此参数是未使用。</span><span class="sxs-lookup"><span data-stu-id="bf735-107">[in] This parameter is unused.</span></span>
+<span data-ttu-id="7fa58-107">[in]此参数是未使用。</span><span class="sxs-lookup"><span data-stu-id="7fa58-107">[in] This parameter is unused.</span></span>
 
 `ptr`  
-<span data-ttu-id="bf735-108">[in]一个指向[IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject)实例。</span><span class="sxs-lookup"><span data-stu-id="bf735-108">[in] A pointer to an [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) instance.</span></span>
+<span data-ttu-id="7fa58-108">[in]一个指向[IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject)实例。</span><span class="sxs-lookup"><span data-stu-id="7fa58-108">[in] A pointer to an [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) instance.</span></span>
 
 `lFlags`  
-<span data-ttu-id="bf735-109">[in]保留。</span><span class="sxs-lookup"><span data-stu-id="bf735-109">[in] Reserved.</span></span> <span data-ttu-id="bf735-110">此参数必须为 0。</span><span class="sxs-lookup"><span data-stu-id="bf735-110">This parameter must be 0.</span></span>
+<span data-ttu-id="7fa58-109">[in]保留。</span><span class="sxs-lookup"><span data-stu-id="7fa58-109">[in] Reserved.</span></span> <span data-ttu-id="7fa58-110">此参数必须为 0。</span><span class="sxs-lookup"><span data-stu-id="7fa58-110">This parameter must be 0.</span></span>
 
 `ppNewInstance`  
-<span data-ttu-id="bf735-111">[out]接收到的类的新实例的指针。</span><span class="sxs-lookup"><span data-stu-id="bf735-111">[out] Receives the pointer to the new instance of the class.</span></span> <span data-ttu-id="bf735-112">如果发生错误，新对象不是返回，和`ppNewInstance`左侧不被修改。</span><span class="sxs-lookup"><span data-stu-id="bf735-112">If an error occurs, a new object is not returned, and `ppNewInstance` is left unmodified.</span></span>
+<span data-ttu-id="7fa58-111">[out]接收到的类的新实例的指针。</span><span class="sxs-lookup"><span data-stu-id="7fa58-111">[out] Receives the pointer to the new instance of the class.</span></span> <span data-ttu-id="7fa58-112">如果发生错误，新对象不是返回，和`ppNewInstance`左侧不被修改。</span><span class="sxs-lookup"><span data-stu-id="7fa58-112">If an error occurs, a new object is not returned, and `ppNewInstance` is left unmodified.</span></span>
 
-## <a name="return-value"></a><span data-ttu-id="bf735-113">返回值</span><span class="sxs-lookup"><span data-stu-id="bf735-113">Return value</span></span>
+## <a name="return-value"></a><span data-ttu-id="7fa58-113">返回值</span><span class="sxs-lookup"><span data-stu-id="7fa58-113">Return value</span></span>
 
-<span data-ttu-id="bf735-114">此函数返回以下值中定义*WbemCli.h*标头文件，也可以在定义它们为常量在代码中：</span><span class="sxs-lookup"><span data-stu-id="bf735-114">The following values returned by this function are defined in the *WbemCli.h* header file, or you can define them as constants in your code:</span></span>
+<span data-ttu-id="7fa58-114">此函数返回以下值中定义*WbemCli.h*标头文件，也可以在定义它们为常量在代码中：</span><span class="sxs-lookup"><span data-stu-id="7fa58-114">The following values returned by this function are defined in the *WbemCli.h* header file, or you can define them as constants in your code:</span></span>
 
-|<span data-ttu-id="bf735-115">返回的常量</span><span class="sxs-lookup"><span data-stu-id="bf735-115">Constant</span></span>  |<span data-ttu-id="bf735-116">“值”</span><span class="sxs-lookup"><span data-stu-id="bf735-116">Value</span></span>  |<span data-ttu-id="bf735-117">描述</span><span class="sxs-lookup"><span data-stu-id="bf735-117">Description</span></span>  |
+|<span data-ttu-id="7fa58-115">返回的常量</span><span class="sxs-lookup"><span data-stu-id="7fa58-115">Constant</span></span>  |<span data-ttu-id="7fa58-116">“值”</span><span class="sxs-lookup"><span data-stu-id="7fa58-116">Value</span></span>  |<span data-ttu-id="7fa58-117">描述</span><span class="sxs-lookup"><span data-stu-id="7fa58-117">Description</span></span>  |
 |---------|---------|---------|
-| `WBEM_E_INCOMPLETE_CLASS` | <span data-ttu-id="bf735-118">0x80041020</span><span class="sxs-lookup"><span data-stu-id="bf735-118">0x80041020</span></span> | <span data-ttu-id="bf735-119">`ptr` 不是有效的类定义，无法生成新的实例。</span><span class="sxs-lookup"><span data-stu-id="bf735-119">`ptr` is not a valid class definition and cannot spawn new instances.</span></span> <span data-ttu-id="bf735-120">不完整，或者它尚未注册到 Windows 管理通过调用[PutClassWmi](putclasswmi.md)。</span><span class="sxs-lookup"><span data-stu-id="bf735-120">Either it is incomplete or it has not been registered with Windows Management by calling [PutClassWmi](putclasswmi.md).</span></span> |
-| `WBEM_E_OUT_OF_MEMORY` | <span data-ttu-id="bf735-121">0x80041006</span><span class="sxs-lookup"><span data-stu-id="bf735-121">0x80041006</span></span> | <span data-ttu-id="bf735-122">没有足够的内存是可用于完成该操作。</span><span class="sxs-lookup"><span data-stu-id="bf735-122">Not enough memory is available to complete the operation.</span></span> |
-| `WBEM_E_INVALID_PARAMETER` | <span data-ttu-id="bf735-123">0x80041008</span><span class="sxs-lookup"><span data-stu-id="bf735-123">0x80041008</span></span> | <span data-ttu-id="bf735-124">`ppNewClass` 为 `null`。</span><span class="sxs-lookup"><span data-stu-id="bf735-124">`ppNewClass` is `null`.</span></span> |
-| `WBEM_S_NO_ERROR` | <span data-ttu-id="bf735-125">0</span><span class="sxs-lookup"><span data-stu-id="bf735-125">0</span></span> | <span data-ttu-id="bf735-126">函数调用成功。</span><span class="sxs-lookup"><span data-stu-id="bf735-126">The function call was successful.</span></span>  |
+| `WBEM_E_INCOMPLETE_CLASS` | <span data-ttu-id="7fa58-118">0x80041020</span><span class="sxs-lookup"><span data-stu-id="7fa58-118">0x80041020</span></span> | <span data-ttu-id="7fa58-119">`ptr` 不是有效的类定义，无法生成新的实例。</span><span class="sxs-lookup"><span data-stu-id="7fa58-119">`ptr` is not a valid class definition and cannot spawn new instances.</span></span> <span data-ttu-id="7fa58-120">不完整，或者它尚未注册到 Windows 管理通过调用[PutClassWmi](putclasswmi.md)。</span><span class="sxs-lookup"><span data-stu-id="7fa58-120">Either it is incomplete or it has not been registered with Windows Management by calling [PutClassWmi](putclasswmi.md).</span></span> |
+| `WBEM_E_OUT_OF_MEMORY` | <span data-ttu-id="7fa58-121">0x80041006</span><span class="sxs-lookup"><span data-stu-id="7fa58-121">0x80041006</span></span> | <span data-ttu-id="7fa58-122">没有足够的内存是可用于完成该操作。</span><span class="sxs-lookup"><span data-stu-id="7fa58-122">Not enough memory is available to complete the operation.</span></span> |
+| `WBEM_E_INVALID_PARAMETER` | <span data-ttu-id="7fa58-123">0x80041008</span><span class="sxs-lookup"><span data-stu-id="7fa58-123">0x80041008</span></span> | <span data-ttu-id="7fa58-124">`ppNewClass` 为 `null`。</span><span class="sxs-lookup"><span data-stu-id="7fa58-124">`ppNewClass` is `null`.</span></span> |
+| `WBEM_S_NO_ERROR` | <span data-ttu-id="7fa58-125">0</span><span class="sxs-lookup"><span data-stu-id="7fa58-125">0</span></span> | <span data-ttu-id="7fa58-126">函数调用成功。</span><span class="sxs-lookup"><span data-stu-id="7fa58-126">The function call was successful.</span></span>  |
   
-## <a name="remarks"></a><span data-ttu-id="bf735-127">备注</span><span class="sxs-lookup"><span data-stu-id="bf735-127">Remarks</span></span>
+## <a name="remarks"></a><span data-ttu-id="7fa58-127">备注</span><span class="sxs-lookup"><span data-stu-id="7fa58-127">Remarks</span></span>
 
-<span data-ttu-id="bf735-128">此函数包装对的调用[IWbemClassObject::SpawnInstance](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-spawninstance)方法。</span><span class="sxs-lookup"><span data-stu-id="bf735-128">This function wraps a call to the [IWbemClassObject::SpawnInstance](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-spawninstance) method.</span></span>
+<span data-ttu-id="7fa58-128">此函数包装对的调用[IWbemClassObject::SpawnInstance](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-spawninstance)方法。</span><span class="sxs-lookup"><span data-stu-id="7fa58-128">This function wraps a call to the [IWbemClassObject::SpawnInstance](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-spawninstance) method.</span></span>
 
-<span data-ttu-id="bf735-129">`ptr` 必须在类定义获取从 Windows 管理。</span><span class="sxs-lookup"><span data-stu-id="bf735-129">`ptr` must be a class definition obtained from Windows Management.</span></span> <span data-ttu-id="bf735-130">（请注意，支持生成实例中的实例，但返回的实例为空。）然后可以使用此类定义创建新实例。</span><span class="sxs-lookup"><span data-stu-id="bf735-130">(Note that spawning an instance from an instance is supported but the returned instance is empty.) You then use this class definition to create new instances.</span></span> <span data-ttu-id="bf735-131">调用[PutInstanceWmi](putinstancewmi.md)函数是必需的如果你想要将实例写入 Windows 管理。</span><span class="sxs-lookup"><span data-stu-id="bf735-131">A call to the [PutInstanceWmi](putinstancewmi.md) function is required if you intend to write the instance to Windows Management.</span></span>
-
-
+<span data-ttu-id="7fa58-129">`ptr` 必须在类定义获取从 Windows 管理。</span><span class="sxs-lookup"><span data-stu-id="7fa58-129">`ptr` must be a class definition obtained from Windows Management.</span></span> <span data-ttu-id="7fa58-130">（请注意，支持生成实例中的实例，但返回的实例为空。）然后可以使用此类定义创建新实例。</span><span class="sxs-lookup"><span data-stu-id="7fa58-130">(Note that spawning an instance from an instance is supported but the returned instance is empty.) You then use this class definition to create new instances.</span></span> <span data-ttu-id="7fa58-131">调用[PutInstanceWmi](putinstancewmi.md)函数是必需的如果你想要将实例写入 Windows 管理。</span><span class="sxs-lookup"><span data-stu-id="7fa58-131">A call to the [PutInstanceWmi](putinstancewmi.md) function is required if you intend to write the instance to Windows Management.</span></span>
 
 
-<span data-ttu-id="bf735-132">新的对象中返回`ppNewClass`自动成为当前对象的子类。</span><span class="sxs-lookup"><span data-stu-id="bf735-132">The new object returned in `ppNewClass` automatically becomes a subclass of the current object.</span></span> <span data-ttu-id="bf735-133">不能重写此行为。</span><span class="sxs-lookup"><span data-stu-id="bf735-133">This behavior cannot be overridden.</span></span> <span data-ttu-id="bf735-134">没有其他方法可以创建子类 （的派生类）。</span><span class="sxs-lookup"><span data-stu-id="bf735-134">There is no other method by which subclasses (derived classes) can be created.</span></span>
 
-## <a name="requirements"></a><span data-ttu-id="bf735-135">要求</span><span class="sxs-lookup"><span data-stu-id="bf735-135">Requirements</span></span>  
- <span data-ttu-id="bf735-136">**平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="bf735-136">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+
+<span data-ttu-id="7fa58-132">新的对象中返回`ppNewClass`自动成为当前对象的子类。</span><span class="sxs-lookup"><span data-stu-id="7fa58-132">The new object returned in `ppNewClass` automatically becomes a subclass of the current object.</span></span> <span data-ttu-id="7fa58-133">不能重写此行为。</span><span class="sxs-lookup"><span data-stu-id="7fa58-133">This behavior cannot be overridden.</span></span> <span data-ttu-id="7fa58-134">没有其他方法可以创建子类 （的派生类）。</span><span class="sxs-lookup"><span data-stu-id="7fa58-134">There is no other method by which subclasses (derived classes) can be created.</span></span>
+
+## <a name="requirements"></a><span data-ttu-id="7fa58-135">要求</span><span class="sxs-lookup"><span data-stu-id="7fa58-135">Requirements</span></span>  
+ <span data-ttu-id="7fa58-136">**平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="7fa58-136">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="bf735-137">**标头：** WMINet_Utils.idl</span><span class="sxs-lookup"><span data-stu-id="bf735-137">**Header:** WMINet_Utils.idl</span></span>  
+ <span data-ttu-id="7fa58-137">**标头：** WMINet_Utils.idl</span><span class="sxs-lookup"><span data-stu-id="7fa58-137">**Header:** WMINet_Utils.idl</span></span>  
   
- <span data-ttu-id="bf735-138">**.NET Framework 版本：**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span><span class="sxs-lookup"><span data-stu-id="bf735-138">**.NET Framework Versions:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span></span>  
+ <span data-ttu-id="7fa58-138">**.NET Framework 版本：**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span><span class="sxs-lookup"><span data-stu-id="7fa58-138">**.NET Framework Versions:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="bf735-139">请参阅</span><span class="sxs-lookup"><span data-stu-id="bf735-139">See also</span></span>  
-[<span data-ttu-id="bf735-140">WMI 和性能计数器 （非托管 API 参考）</span><span class="sxs-lookup"><span data-stu-id="bf735-140">WMI and Performance Counters (Unmanaged API Reference)</span></span>](index.md)
+## <a name="see-also"></a><span data-ttu-id="7fa58-139">请参阅</span><span class="sxs-lookup"><span data-stu-id="7fa58-139">See also</span></span>  
+[<span data-ttu-id="7fa58-140">WMI 和性能计数器 （非托管 API 参考）</span><span class="sxs-lookup"><span data-stu-id="7fa58-140">WMI and Performance Counters (Unmanaged API Reference)</span></span>](index.md)
