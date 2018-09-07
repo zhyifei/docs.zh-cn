@@ -19,11 +19,11 @@ ms.assetid: 97216f69-bde8-49fd-ac40-f18c500ef5dc
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 67a5ffe2075618020f3ab9f801852a1a97fc74d2
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 09/07/2018
-ms.locfileid: "44072163"
+ms.locfileid: "44087386"
 ---
 # <a name="writing-custom-attributes"></a>编写自定义特性
 要设计你自己的自定义特性，无需掌握许多新的概念。 如果你熟悉面向对象的编程，并且知道如何设计类，那么你已经具备大部分所需知识。 自定义属性本质上是直接或间接派生自 <xref:System.Attribute?displayProperty=nameWithType> 的传统类。 与传统类一样，自定义特性包含用于存储和检索数据的方法。  

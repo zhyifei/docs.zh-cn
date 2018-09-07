@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: c82dc689-7e82-4767-a18d-cd24ce5f05e9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f3c229b0fc463863b7113c7ba73890b84e86553b
-ms.sourcegitcommit: e8dc507cfdaad504fc9d4c83d28d24569dcef91c
+ms.openlocfilehash: dbc5909a3d4ea1ba2747fcc694bf1f34e20e7d2b
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/03/2018
-ms.locfileid: "33579647"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44080876"
 ---
 # <a name="regular-expression-options"></a>正则表达式选项
 <a name="Top"></a>默认情况下，正则表达式模式中带有任意文本字符的输入字符串比较区分大小写，正则表达式模式中的空白将被解释为文本空白字符且正则表达式中的捕获组通过隐式和显式命名。 可通过指定正则表达式选项修改默认正则表达式行为的这些和其他数个方面。 列于下表的这些选项，可将内联作为正则表达式的一部分包含，或者可将它们作为 <xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType> 枚举值提供给 <xref:System.Text.RegularExpressions.RegexOptions?displayProperty=nameWithType> 类构造函数或静态模式匹配方法。  
@@ -394,5 +394,6 @@ ms.locfileid: "33579647"
  [!code-csharp[Conceptual.Regex.Language.Options#15](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.options/cs/culture1.cs#15)]
  [!code-vb[Conceptual.Regex.Language.Options#15](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.options/vb/culture1.vb#15)]  
   
-## <a name="see-also"></a>请参阅  
- [正则表达式语言 - 快速参考](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)
+## <a name="see-also"></a>请参阅
+
+- [正则表达式语言 - 快速参考](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)
