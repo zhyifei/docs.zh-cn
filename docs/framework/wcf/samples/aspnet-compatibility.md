@@ -3,11 +3,11 @@ title: ASP.NET 兼容性
 ms.date: 03/30/2017
 ms.assetid: c8b51f1e-c096-4c42-ad99-0519887bbbc5
 ms.openlocfilehash: eeb09914fc90848c987127c789379549917063f6
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43398230"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43659508"
 ---
 # <a name="aspnet-compatibility"></a>ASP.NET 兼容性
 此示例演示如何启用 ASP.NET 兼容性模式在 Windows Communication Foundation (WCF)。 在 ASP.NET 兼容性模式完全参与 ASP.NET 应用程序管道，并可以使运行的服务使用的 ASP.NET 功能，如文件 /URL 授权、 会话状态和<xref:System.Web.HttpContext>类。 <xref:System.Web.HttpContext>类可以访问 cookie、 会话和其他 ASP.NET 功能。 此模式要求绑定使用 HTTP 传输，且服务本身必须承载于 IIS 中。  
@@ -23,9 +23,9 @@ ms.locfileid: "43398230"
 
 2.  展开在 treeview**连接**窗格。 选择**应用程序池**节点。  
 
-3.  若要设置要使用的默认应用程序池[!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)]（这可能会导致与现有站点的不兼容性问题），右键单击**DefaultAppPool**列表项并选择**基本设置...**. 设置 **.Net Framework 版本** ┰ 到 **.Net Framework v4.0.30128** （或更高版本）。  
+3.  若要设置要使用的默认应用程序池[!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)]（这可能会导致与现有站点的不兼容性问题），右键单击**DefaultAppPool**列表项并选择**基本设置...**. 设置 **.Net Framework 版本**下拉到 **.Net Framework v4.0.30128** （或更高版本）。  
 
-4.  若要创建新的应用程序池使用的[!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)]（若要保持其他应用程序兼容性），右键单击**应用程序池**节点，然后选择**添加应用程序池...**. 命名新的应用程序池，并将设置 **.Net Framework 版本** ┰ 到 **.Net Framework v4.0.30128** （或更高版本）。 运行安装程序下面的步骤后，右键单击**ServiceModelSamples**应用程序并选择**管理应用程序**，**高级设置...**. 设置**应用程序池**到新的应用程序池。  
+4.  若要创建新的应用程序池使用的[!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)]（若要保持其他应用程序兼容性），右键单击**应用程序池**节点，然后选择**添加应用程序池...**. 命名新的应用程序池，并将设置 **.Net Framework 版本**下拉到 **.Net Framework v4.0.30128** （或更高版本）。 运行安装程序下面的步骤后，右键单击**ServiceModelSamples**应用程序并选择**管理应用程序**，**高级设置...**. 设置**应用程序池**到新的应用程序池。  
   
 > [!IMPORTANT]
 >  您的计算机上可能已安装这些示例。 在继续操作之前，请先检查以下（默认）目录：  
