@@ -12,21 +12,21 @@ helpviewer_keywords:
 ms.assetid: d67c14d8-c4dd-443f-affb-4ccae677c9b6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 92152600d317c04e3fef26400b11e94a549fde4c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c3a0a51fc6055190f9a0189de2e17d98f88036ea
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33571054"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "44046978"
 ---
 # <a name="static-class-design"></a>静态类设计
-静态该类可以定义为仅包含静态成员的类 (当然除了从继承的实例成员<xref:System.Object?displayProperty=nameWithType>和可能是一个专用的构造函数)。 某些语言为静态的类提供内置支持。 在 C# 2.0 版和更高版本的类声明为静态，它是密封的抽象，，可以重写任何实例成员，或将其声明。  
+静态类被定义为仅包含静态成员的类 (当然除了继承自的实例成员<xref:System.Object?displayProperty=nameWithType>和可能是私有构造函数)。 某些语言用于静态类提供内置支持。 在 C# 2.0 及更高版本，当一个类声明为静态，密封的抽象，并且可以重写任何实例成员，或将其声明。  
   
- 静态类是纯的面向对象的设计和简易性之间的折衷。 它们通常用于提供其他操作的快捷方式 (如<xref:System.IO.File?displayProperty=nameWithType>)，持有人的扩展方法或为其完整的面向对象的包装，则不能确保的功能 (如<xref:System.Environment?displayProperty=nameWithType>)。  
+ 静态类是纯粹的面向对象的设计和简单性之间泄漏。 它们通常用于提供其他操作的快捷方式 (如<xref:System.IO.File?displayProperty=nameWithType>)，持有者的扩展方法或为其完整的面向对象的包装器是不能确保的功能 (如<xref:System.Environment?displayProperty=nameWithType>)。  
   
  **✓ DO** 静态类应谨慎使用。  
   
- 静态类应只可用作支持框架的面向对象的核心的类。  
+ 应仅作为 framework 的面向对象的核心的支持类使用静态的类。  
   
  **X DO NOT** 静态类视为杂项存储桶。  
   
@@ -34,10 +34,11 @@ ms.locfileid: "33571054"
   
  **✓ DO** 静态类声明为密封的抽象，并添加一个私有实例构造函数，如果您的编程语言不具有对静态类的内置支持。  
   
- *部分 © 2005年，2009 Microsoft Corporation。保留所有权利。*  
+ *部分版权 © 2005, 2009 Microsoft Corporation。保留所有权利。*  
   
- *通过从皮尔逊教育版，Inc.的权限重新打印[Framework 设计准则： 约定、 语法和可重用.NET 库，版本 2 的模式](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619)通过 Krzysztof Cwalina 和 Brad Abrams，发布 2008 年 10 月 22，通过Microsoft Windows 开发系列的一部分的 Addison Wesley Professional。*  
+ *经 Pearson Education, Inc 授权，转载自[框架设计准则：可重用的 .NET 库的约定、习惯用语和模式，第2版](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) 作者：Krzysztof Cwalina 和 Brad Abrams，由 Addison Wesley Professional 于 2008 年 10 月 22 日印发，作为 Microsoft Windows 开发系列的一部分。*  
   
-## <a name="see-also"></a>请参阅  
- [类型设计准则](../../../docs/standard/design-guidelines/type.md)  
- [框架设计指南](../../../docs/standard/design-guidelines/index.md)
+## <a name="see-also"></a>请参阅
+
+- [类型设计准则](../../../docs/standard/design-guidelines/type.md)  
+- [框架设计指南](../../../docs/standard/design-guidelines/index.md)

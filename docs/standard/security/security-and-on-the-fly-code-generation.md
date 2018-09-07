@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 6d221724-bb21-4d76-90c3-0ee2a2e69be2
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 2cfc93e1c8d3d9e878d96de164b0d646e62c0998
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ffb1081c80c31353ad38080ae16ef9f8a74b5481
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33583963"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44046770"
 ---
 # <a name="security-and-on-the-fly-code-generation"></a>安全性和进行中的代码生成
 某些库的操作方式是通过生成代码并运行它执行调用方的某项操作。 基本问题是代表信任级别较低的代码生成代码，并在更高的信任级别运行它。 当调用方可影响代码生成时，问题更为恶化，因此必须确保仅生成认为安全的代码。  
@@ -26,5 +26,6 @@ ms.locfileid: "33583963"
   
  编译代码时，请注意恶意程序是否可以某种方式修改它。 在编译器读取磁盘上的源代码或代码加载 .dll 文件之前，是否存在一小段时间窗口使恶意代码可在此期间修改此源代码？ 若如此，必须适当使用文件系统中的访问控制列表保护包含这些文件的目录。  
   
-## <a name="see-also"></a>请参阅  
- [安全编码准则](../../../docs/standard/security/secure-coding-guidelines.md)
+## <a name="see-also"></a>请参阅
+
+- [安全编码准则](../../../docs/standard/security/secure-coding-guidelines.md)

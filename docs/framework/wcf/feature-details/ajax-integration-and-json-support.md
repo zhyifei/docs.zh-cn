@@ -5,11 +5,11 @@ helpviewer_keywords:
 - AJAX integration and JSON support [WCF]
 ms.assetid: 3851a8fc-d861-4ac1-873c-96af0343d3a7
 ms.openlocfilehash: bcf1cab9386d9d9503af6258c1bb39f8744c073b
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43787696"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44061242"
 ---
 # <a name="ajax-integration-and-json-support"></a>AJAX 集成和 JSON 支持
 对 ASP.NET 异步 JavaScript 和 XML (AJAX) 的 Windows Communication Foundation (WCF) 支持，并且 JavaScript 对象表示法 (JSON) 数据格式允许 WCF 服务向 AJAX 客户端公开操作。 AJAX 客户端是运行 JavaScript 代码以及使用 HTTP 请求这些 WCF 服务进行访问的网页。 本节中的主题提供有关此支持以及如何实现此支持的信息。  

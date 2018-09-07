@@ -5,11 +5,11 @@ helpviewer_keywords:
 - My.Computer.Keyboard object
 ms.assetid: 78dec9be-4e69-4ede-b9be-2ac34bec2b26
 ms.openlocfilehash: a7b3627a22a8e9e5de5ee022836f477fdef00cec
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43875663"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44081974"
 ---
 # <a name="mycomputerkeyboard-object"></a>My.Computer.Keyboard 对象
 提供了用于访问键盘当前状态（如当前按下了哪些键）的属性，并提供了用于将击键发送到活动窗口的方法。  

@@ -6,11 +6,11 @@ helpviewer_keywords:
 - ToolBar control [WPF]
 ms.assetid: a8edb32c-118d-4f31-b6e6-8899082b504b
 ms.openlocfilehash: 816ac0d81ddcaa461a842c0f69fe5ed5b21a32d1
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43868687"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44087993"
 ---
 # <a name="toolbar-overview"></a>ToolBar 概述
 <xref:System.Windows.Controls.ToolBar> 控件是一组命令或控件通常在功能上相关的容器。 一个<xref:System.Windows.Controls.ToolBar>通常包含调用命令的按钮。  

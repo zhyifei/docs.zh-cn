@@ -2,12 +2,12 @@
 title: 引用单元格 (F#)
 description: '了解 F # 引用单元格的存储位置，您可以创建具有引用语义的可变值的方式。'
 ms.date: 05/16/2016
-ms.openlocfilehash: 133aec6b162a13306a05c9afa172f859890565eb
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: e2e1a91c62fd76e4992bc5ae11bb672766850718
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43892411"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44079291"
 ---
 # <a name="reference-cells"></a>引用单元格
 
@@ -74,62 +74,9 @@ let ref x = { contents = x }
 
 提供字段 `contents` 的目的是为了与其他版本的 ML 兼容，并且该字段将在编译过程中产生警告。 若要禁用警告，请使用 `--mlcompatibility` 编译器选项。 有关详细信息，请参阅[编译器选项](compiler-options.md)。
 
-下面的代码阐释了参数传递中引用单元格的用法。 增量类型有一个方法采用一个参数以包括 byref 参数类型中的增量。 Byref 参数类型中的表示，调用方必须传递引用单元格或指定类型的典型变量的地址在此事例的 int。剩余的代码演示如何使用这两种类型的参数，调用增量和显示 ref 运算符使用了一个变量来创建引用单元格 (ref myDelta1) 上。 然后，它演示了如何使用 address-of 运算符 (&amp;) 来生成相应的参数。 最后，通过使用 let 的绑定声明的引用单元格再次调用增量方法。 最后一行代码演示如何使用 ！ 若要取消引用引用单元格进行打印的运算符。
+C# 程序员应知道`ref`C# 中不是是与相同的`ref`F # 中。 F # 中的等效构造是[byref](byrefs.md)，这是从引用单元格不同的概念。
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet2204.fs)]
-
-有关如何按引用传递的详细信息，请参阅[形参和实参](parameters-and-arguments.md)。
-
->[!NOTE]
-C# 程序员应知道该 ref 的工作方式在 F # 与在 C#。 例如，ref 时传递自变量的使用没有相同的效果在 F # 中 C# 中的一样。
-
->[!NOTE]
-`mutable` 变量可以自动升级到`'a ref`如果捕获的闭包中; 请参阅[值](values/index.md)。
-
-## <a name="consuming-c-ref-returns"></a>使用 C#`ref`返回
-
-从 F # 4.1 开始，你可以使用`ref`返回在 C# 中生成。  此类调用的结果是`byref<_>`指针。
-
-以下 C# 方法：
-
-```csharp
-namespace RefReturns
-{
-    public static class RefClass
-    {
-        public static ref int Find(int val, int[] vals)
-        {
-            for (int i = 0; i < vals.Length; i++)
-            {
-                if (vals[i] == val)
-                {
-                    return ref numbers[i]; // Returns the location, not the value
-                }
-            }
-
-            throw new IndexOutOfRangeException($"{nameof(number)} not found");
-        }
-    }
-}
-```
-
-可以以透明方式调用 F # 与任何特殊的语法：
-
-```fsharp
-open RefReturns
-
-let consumeRefReturn() =
-    let result = RefClass.Find(3, [| 1; 2; 3; 4; 5 |]) // 'result' is of type 'byref<int>'.
-    ()
-```
-
-你还可以声明函数，这可能需要`ref`返回作为输入，例如：
-
-```fsharp
-let f (x: byref<int>) = &x
-```
-
-当前没有方法来生成`ref`F # 中可使用 C# 中返回。
+值标记为`mutable`可能会自动提升为`'a ref`如果捕获的闭包中; 请参阅[值](values/index.md)。
 
 ## <a name="see-also"></a>请参阅
 

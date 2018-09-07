@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC31168
 ms.assetid: 45707363-55e4-4151-892d-d8729106355b
 ms.openlocfilehash: 8546ed0a5032d93bcf7320c96424b02b3b6d5fa3
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43553846"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44078290"
 ---
 # <a name="xml-axis-properties-do-not-support-late-binding"></a>XML 轴属性不支持后期绑定
 非类型化的对象引用了 XML 轴属性。  

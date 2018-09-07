@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 7ecce51f-db5f-4bd4-9321-cceb6fcb2a77
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 39dd7bfe4e5dd3405e24bf044723dbd92ccc65a3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b583df2eb6098fa28dd8999a6796e5053d13cab4
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33589823"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44070376"
 ---
 # <a name="encrypting-data"></a>加密数据
 对称加密和非对称加密是使用不同的进程执行的。 对称加密是对流执行的，因此适用于加密大量数据。 非对称加密是对少数字节执行的，因此仅适用于加密少量数据。  
@@ -173,7 +173,7 @@ The connection failed.
 ## <a name="asymmetric-encryption"></a>非对称加密  
  非对称算法通常用于加密少量数据，例如加密对称密钥和 IV。 通常情况下，单独执行的非对称加密使用另一方生成的公共密钥。 .NET Framework 出于此目的提供了 <xref:System.Security.Cryptography.RSACryptoServiceProvider> 类。  
   
- 下面的示例使用公钥信息加密对称密钥和 IV。 初始化了代表第三方公钥的两个字节数组。 <xref:System.Security.Cryptography.RSAParameters> 对象初始化为这些值。 接下来， **RSAParameters**对象 （以及它所代表的公钥） 导入**RSACryptoServiceProvider**使用<xref:System.Security.Cryptography.RSACryptoServiceProvider.ImportParameters%2A?displayProperty=nameWithType>方法。 最后，对 <xref:System.Security.Cryptography.RijndaelManaged> 类创建私钥和 IV 进行加密。 此示例要求系统安装 128 位加密。  
+ 下面的示例使用公钥信息加密对称密钥和 IV。 初始化了代表第三方公钥的两个字节数组。 <xref:System.Security.Cryptography.RSAParameters> 对象初始化为这些值。 下一步， **RSAParameters**对象 （以及它所代表的公钥） 导入**RSACryptoServiceProvider**使用<xref:System.Security.Cryptography.RSACryptoServiceProvider.ImportParameters%2A?displayProperty=nameWithType>方法。 最后，对 <xref:System.Security.Cryptography.RijndaelManaged> 类创建私钥和 IV 进行加密。 此示例要求系统安装 128 位加密。  
   
 ```vb  
 Imports System  
@@ -262,7 +262,8 @@ class Class1
 }  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [生成加密和解密密钥](../../../docs/standard/security/generating-keys-for-encryption-and-decryption.md)  
- [解密数据](../../../docs/standard/security/decrypting-data.md)  
- [Cryptographic Services](../../../docs/standard/security/cryptographic-services.md)
+## <a name="see-also"></a>请参阅
+
+- [生成加密和解密密钥](../../../docs/standard/security/generating-keys-for-encryption-and-decryption.md)  
+- [解密数据](../../../docs/standard/security/decrypting-data.md)  
+- [Cryptographic Services](../../../docs/standard/security/cryptographic-services.md)

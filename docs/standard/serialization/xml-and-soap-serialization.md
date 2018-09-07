@@ -9,12 +9,12 @@ helpviewer_keywords:
 - XML serialization
 - serialization
 ms.assetid: 832ac524-21bc-419a-a27b-ca8bfc45840f
-ms.openlocfilehash: ca3b31c1d60770a6b9db5e92275d9840036ee0b0
-ms.sourcegitcommit: bd4fa78f5a46133efdead1bc692a9aa2811d7868
+ms.openlocfilehash: 366a4a42ff0bf968e51e11a66fa81566a47c86ea
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "42753903"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44075278"
 ---
 # <a name="xml-and-soap-serialization"></a>XML 和 SOAP 序列化
 
@@ -92,4 +92,4 @@ XML 序列化还可用于将对象序列化为符合 SOAP 规范的 XML 流。 S
 
 ## <a name="see-also"></a>请参阅
 
-[二进制序列化](binary-serialization.md)  
+- [二进制序列化](binary-serialization.md)

@@ -12,32 +12,33 @@ helpviewer_keywords:
 ms.assetid: d3646e6d-5c1f-4922-8fb0-ec5effb30d60
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 28052cc6848d77acbdf8e9381146ca6fb06c15d2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c5b9dacc4995a126e1ee3f6062dca796194d4882
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33570528"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44059662"
 ---
 # <a name="abstract-class-design"></a>抽象类设计
 **X DO NOT** 在抽象类型中定义公共或受保护内部构造函数。  
   
- 构造函数应为公共的仅当用户将需要创建该类型的实例。 由于无法创建抽象类型的实例，具有公共构造函数的抽象类型不正确地设计和都误导性的用户。  
+ 构造函数应为公共，仅当用户将需要创建该类型的实例。 因为不能创建抽象类型的实例，具有公共构造函数的抽象类型不正确是设计并具有误导性的用户。  
   
  **✓ DO** 在抽象类中定义为受保护或内部构造函数。  
   
- 受保护的构造函数更常见的是，并只允许基类，来创建子类型时执行自己的初始化。  
+ 受保护的构造函数，则更容易，并只是允许基类以创建子类型时进行其自己的初始化。  
   
- 内部构造函数可以用于限制对定义的类的程序集的抽象类的具体实现。  
+ 内部构造函数可以用于限制对程序集定义的类的抽象类的具体实现。  
   
  **✓ DO** 提供至少一个继承自每个抽象类，要交付的具体类型。  
   
- 执行此有助于验证抽象类的设计。 例如，<xref:System.IO.FileStream?displayProperty=nameWithType>实现的<xref:System.IO.Stream?displayProperty=nameWithType>抽象类。  
+ 这些措施可帮助验证抽象类的设计。 例如，<xref:System.IO.FileStream?displayProperty=nameWithType>是一种实现的<xref:System.IO.Stream?displayProperty=nameWithType>抽象类。  
   
- *部分 © 2005年，2009 Microsoft Corporation。保留所有权利。*  
+ *部分版权 © 2005, 2009 Microsoft Corporation。保留所有权利。*  
   
- *通过从皮尔逊教育版，Inc.的权限重新打印[Framework 设计准则： 约定、 语法和可重用.NET 库，版本 2 的模式](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619)通过 Krzysztof Cwalina 和 Brad Abrams，发布 2008 年 10 月 22，通过Microsoft Windows 开发系列的一部分的 Addison Wesley Professional。*  
+ *经 Pearson Education, Inc 授权，转载自[框架设计准则：可重用的 .NET 库的约定、习惯用语和模式，第2版](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) 作者：Krzysztof Cwalina 和 Brad Abrams，由 Addison Wesley Professional 于 2008 年 10 月 22 日印发，作为 Microsoft Windows 开发系列的一部分。*  
   
-## <a name="see-also"></a>请参阅  
- [类型设计准则](../../../docs/standard/design-guidelines/type.md)  
- [框架设计指南](../../../docs/standard/design-guidelines/index.md)
+## <a name="see-also"></a>请参阅
+
+- [类型设计准则](../../../docs/standard/design-guidelines/type.md)  
+- [框架设计指南](../../../docs/standard/design-guidelines/index.md)

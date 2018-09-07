@@ -9,11 +9,11 @@ helpviewer_keywords:
 - XML [Visual Basic], accessing
 ms.assetid: c47f88b2-3cbc-4bb1-b4b9-be60f71ffc6a
 ms.openlocfilehash: 0540c52cf3e4cd7594f051c10832ea99cf58a34e
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43734377"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44078889"
 ---
 # <a name="accessing-xml-in-visual-basic"></a>在 Visual Basic 中访问 XML
 Visual Basic 提供了用于访问和导航 XML 轴属性[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]结构。 这些属性使用特殊语法，可以通过指定的 XML 名称来访问元素和属性。  

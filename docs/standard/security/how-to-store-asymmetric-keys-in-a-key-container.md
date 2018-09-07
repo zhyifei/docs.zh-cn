@@ -17,21 +17,21 @@ helpviewer_keywords:
 ms.assetid: 0dbcbd8d-0dcf-40e9-9f0c-e3f162d35ccc
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 3db4afb00367f719391193ebce4053cc5da16164
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a5cd157f89797406fbe87c3d70c415d7b192d1a9
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33588851"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44061203"
 ---
 # <a name="how-to-store-asymmetric-keys-in-a-key-container"></a>如何：将非对称密钥存储在密钥容器中
 非对称私钥永远不应以原义或纯文本形式存储在本地计算机上。 如果需要存储私钥，则应使用密钥容器。 有关密钥容器的详细信息，请参阅[了解计算机级别和用户级别的 RSA 密钥容器](https://msdn.microsoft.com/library/9a179f38-8fb7-4442-964c-fb7b9f39f5b9)。  
   
 ### <a name="to-create-an-asymmetric-key-and-save-it-in-a-key-container"></a>创建非对称密钥并且将它保存在密钥容器中  
   
-1.  创建的新实例<xref:System.Security.Cryptography.CspParameters>类并将你想要调用到密钥容器的名称传递<xref:System.Security.Cryptography.CspParameters.KeyContainerName?displayProperty=nameWithType>字段。  
+1.  创建的新实例<xref:System.Security.Cryptography.CspParameters>类，并将您想要调用到密钥容器名称传递<xref:System.Security.Cryptography.CspParameters.KeyContainerName?displayProperty=nameWithType>字段。  
   
-2.  创建派生自的类的新实例<xref:System.Security.Cryptography.AsymmetricAlgorithm>类 (通常**RSACryptoServiceProvider**或**DSACryptoServiceProvider**) 和传递先前创建**CspParameters**给其构造函数的对象。  
+2.  创建派生的类的新实例<xref:System.Security.Cryptography.AsymmetricAlgorithm>类 (通常**RSACryptoServiceProvider**或**DSACryptoServiceProvider**)，并将传递先前创建**CspParameters**给其构造函数的对象。  
   
 ### <a name="to-delete-the-key-from-a-key-container"></a>从密钥容器删除密钥  
   
@@ -223,8 +223,9 @@ Key added to container:
 Key deleted.  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [生成加密和解密密钥](../../../docs/standard/security/generating-keys-for-encryption-and-decryption.md)  
- [加密数据](../../../docs/standard/security/encrypting-data.md)  
- [解密数据](../../../docs/standard/security/decrypting-data.md)  
- [Cryptographic Services](../../../docs/standard/security/cryptographic-services.md)
+## <a name="see-also"></a>请参阅
+
+- [生成加密和解密密钥](../../../docs/standard/security/generating-keys-for-encryption-and-decryption.md)  
+- [加密数据](../../../docs/standard/security/encrypting-data.md)  
+- [解密数据](../../../docs/standard/security/decrypting-data.md)  
+- [Cryptographic Services](../../../docs/standard/security/cryptographic-services.md)

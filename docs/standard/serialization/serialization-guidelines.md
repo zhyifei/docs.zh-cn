@@ -8,12 +8,12 @@ helpviewer_keywords:
 - serialization, guidelines
 - binary serialization, guidelines
 ms.assetid: ebbeddff-179d-443f-bf08-9c373199a73a
-ms.openlocfilehash: 51d561009a2f497cf4cf720abd5a414cbbbb2e64
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b47be45f00ee03d400383dd45dc6776cff3f816d
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33592088"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44060328"
 ---
 # <a name="serialization-guidelines"></a>序列化准则
 本文档列出了在设计要序列化的 API 时要考虑的准则。  
@@ -104,7 +104,7 @@ ms.locfileid: "33592088"
      [!code-csharp[SerializationGuidelines#6](../../../samples/snippets/csharp/VS_Snippets_CFX/serializationguidelines/cs/source.cs#6)]
      [!code-vb[SerializationGuidelines#6](../../../samples/snippets/visualbasic/VS_Snippets_CFX/serializationguidelines/vb/source.vb#6)]  
   
-2.  如果通过应用 XML 序列化属性所提供的对于序列化 XML 的形状的控制还无法满足您的需要，则可考虑实现 <xref:System.Xml.Serialization.IXmlSerializable> 接口。 两种方法的接口，<xref:System.Xml.Serialization.IXmlSerializable.ReadXml%2A>和<xref:System.Xml.Serialization.IXmlSerializable.WriteXml%2A>，允许你完全控制的序列化的 XML 流。 还可以通过应用 <xref:System.Xml.Serialization.XmlSchemaProviderAttribute> 属性来控制为类型生成的 XML 架构。  
+2.  如果通过应用 XML 序列化属性所提供的对于序列化 XML 的形状的控制还无法满足您的需要，则可考虑实现 <xref:System.Xml.Serialization.IXmlSerializable> 接口。 两种方法的接口<xref:System.Xml.Serialization.IXmlSerializable.ReadXml%2A>和<xref:System.Xml.Serialization.IXmlSerializable.WriteXml%2A>，允许你完全控制的序列化的 XML 流。 还可以通过应用 <xref:System.Xml.Serialization.XmlSchemaProviderAttribute> 属性来控制为类型生成的 XML 架构。  
   
 #### <a name="supporting-runtime-serialization"></a>支持运行时序列化  
  运行时序列化是 .NET 远程处理所使用的一项技术。 如果您认为将会使用 .NET 远程处理传输类型，则需要确保类型支持运行时序列化。  
@@ -138,11 +138,12 @@ ms.locfileid: "33592088"
      [!code-csharp[SerializationGuidelines#11](../../../samples/snippets/csharp/VS_Snippets_CFX/serializationguidelines/cs/source.cs#11)]
      [!code-vb[SerializationGuidelines#11](../../../samples/snippets/visualbasic/VS_Snippets_CFX/serializationguidelines/vb/source.vb#11)]  
   
-## <a name="see-also"></a>请参阅  
- [使用数据协定](../../../docs/framework/wcf/feature-details/using-data-contracts.md)  
- [数据协定序列化程序](../../../docs/framework/wcf/feature-details/data-contract-serializer.md)  
- [数据协定序列化程序支持的类型](../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md)  
- [二进制序列化](binary-serialization.md)  
- [远程对象](https://msdn.microsoft.com/library/515686e6-0a8d-42f7-8188-73abede57c58)  
- [XML 和 SOAP 序列化](xml-and-soap-serialization.md)  
- [安全性和序列化](../../../docs/framework/misc/security-and-serialization.md)
+## <a name="see-also"></a>请参阅
+
+- [使用数据协定](../../../docs/framework/wcf/feature-details/using-data-contracts.md)  
+- [数据协定序列化程序](../../../docs/framework/wcf/feature-details/data-contract-serializer.md)  
+- [数据协定序列化程序支持的类型](../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md)  
+- [二进制序列化](binary-serialization.md)  
+- [远程对象](https://msdn.microsoft.com/library/515686e6-0a8d-42f7-8188-73abede57c58)  
+- [XML 和 SOAP 序列化](xml-and-soap-serialization.md)  
+- [安全性和序列化](../../../docs/framework/misc/security-and-serialization.md)

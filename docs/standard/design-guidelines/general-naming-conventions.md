@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: d3a77ea1-75d2-4969-a8c3-3e1e3e1aaedc
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 207227b3e5c52b7c6e0f704543379874f3708c03
-ms.sourcegitcommit: ceca5a1c027627abcca2767567703c3879f33325
+ms.openlocfilehash: cd3defd969b5f26fb95e7feca9c3d533e67272b1
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/23/2018
-ms.locfileid: "36338099"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44071091"
 ---
 # <a name="general-naming-conventions"></a>通用命名约定
 本部分介绍与单词选择相关的一般命名约定、缩略词和首字母缩写词的使用准则以及有关如何避免使用特定于语言的名称的建议。  
   
-## <a name="word-choice"></a>选词  
+## <a name="word-choice"></a>Word 的选择  
  **✓ 务必**选择易读的标识符名称。  
   
  例如，在英语中，属性名称 `HorizontalAlignment` 比 `AlignmentHorizontal` 更具可读性。  
@@ -53,7 +53,7 @@ ms.locfileid: "36338099"
 ## <a name="avoiding-language-specific-names"></a>避免特定于语言的名称  
  **✓ 务必**使用在语义上有意义的名称而不是特定于语言的关键字作为类型名称。  
   
- 例如，`GetLength`是更好的名称比`GetInt`。  
+ 例如，`GetLength`是一个合适的名称`GetInt`。  
   
  **✓ 务必**在标识符不具有超出其类型以外的语义时（这是极少见的情况），使用泛型 CLR 类型名称，而不是特定于语言的名称。  
   
@@ -99,6 +99,7 @@ ms.locfileid: "36338099"
   
  *经 Pearson Education, Inc 授权，转载自[框架设计准则：可重用的 .NET 库的约定、习惯用语和模式，第2版](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) 作者：Krzysztof Cwalina 和 Brad Abrams，由 Addison Wesley Professional 于 2008 年 10 月 22 日印发，作为 Microsoft Windows 开发系列的一部分。*  
   
-## <a name="see-also"></a>请参阅  
- [框架设计指南](../../../docs/standard/design-guidelines/index.md)  
- [命名规则](../../../docs/standard/design-guidelines/naming-guidelines.md)
+## <a name="see-also"></a>请参阅
+
+- [框架设计指南](../../../docs/standard/design-guidelines/index.md)  
+- [命名规则](../../../docs/standard/design-guidelines/naming-guidelines.md)
