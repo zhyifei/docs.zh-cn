@@ -9,11 +9,11 @@ helpviewer_keywords:
 - Windows Communication Foundation, guidelines
 ms.assetid: 5098ba46-6e8d-4e02-b0c5-d737f9fdad84
 ms.openlocfilehash: 54af876a361dfee7a00e3fd29f43f4b643b07913
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43804274"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44081838"
 ---
 # <a name="guidelines-and-best-practices"></a>指南与最佳做法
 本部分包含用于创建 Windows Communication Foundation (WCF) 应用程序提供指导原则的主题。  
