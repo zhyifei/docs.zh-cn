@@ -7,16 +7,16 @@ helpviewer_keywords:
 - x:FactoryMethod directive [XAML Services]
 ms.assetid: 829bcbdf-5318-4afb-9a03-c310e0d2f23d
 ms.openlocfilehash: 436caa9b93467dcf2a0763bcc0962a2beb722315
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44131865"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44199656"
 ---
-# <a name="xfactorymethod-directive"></a><span data-ttu-id="65eaf-102">x:FactoryMethod 指令</span><span class="sxs-lookup"><span data-stu-id="65eaf-102">x:FactoryMethod Directive</span></span>
-<span data-ttu-id="65eaf-103">指定应使用 XAML 处理器正在解析其后备类型后初始化对象的构造函数以外的方法。</span><span class="sxs-lookup"><span data-stu-id="65eaf-103">Specifies a method other than a constructor that a XAML processor should use to initialize an object after resolving its backing type.</span></span>  
+# <a name="xfactorymethod-directive"></a><span data-ttu-id="24950-102">x:FactoryMethod 指令</span><span class="sxs-lookup"><span data-stu-id="24950-102">x:FactoryMethod Directive</span></span>
+<span data-ttu-id="24950-103">指定应使用 XAML 处理器正在解析其后备类型后初始化对象的构造函数以外的方法。</span><span class="sxs-lookup"><span data-stu-id="24950-103">Specifies a method other than a constructor that a XAML processor should use to initialize an object after resolving its backing type.</span></span>  
   
-## <a name="xaml-attribute-usage-no-xarguments"></a><span data-ttu-id="65eaf-104">XAML 特性用法，任何 x： 参数</span><span class="sxs-lookup"><span data-stu-id="65eaf-104">XAML Attribute Usage, no x:Arguments</span></span>  
+## <a name="xaml-attribute-usage-no-xarguments"></a><span data-ttu-id="24950-104">XAML 特性用法，任何 x： 参数</span><span class="sxs-lookup"><span data-stu-id="24950-104">XAML Attribute Usage, no x:Arguments</span></span>  
   
 ```  
 <object x:FactoryMethod="methodname"...>  
@@ -24,7 +24,7 @@ ms.locfileid: "44131865"
 </object>  
 ```  
   
-## <a name="xaml-attribute-usage-xarguments-as-elements"></a><span data-ttu-id="65eaf-105">XAML 特性用法，作为元素的 x： 参数</span><span class="sxs-lookup"><span data-stu-id="65eaf-105">XAML Attribute Usage, x:Arguments as Element(s)</span></span>  
+## <a name="xaml-attribute-usage-xarguments-as-elements"></a><span data-ttu-id="24950-105">XAML 特性用法，作为元素的 x： 参数</span><span class="sxs-lookup"><span data-stu-id="24950-105">XAML Attribute Usage, x:Arguments as Element(s)</span></span>  
   
 ```  
 <object x:FactoryMethod="methodname"...>  
@@ -34,27 +34,27 @@ ms.locfileid: "44131865"
 </object>  
 ```  
   
-## <a name="xaml-values"></a><span data-ttu-id="65eaf-106">XAML 值</span><span class="sxs-lookup"><span data-stu-id="65eaf-106">XAML Values</span></span>  
+## <a name="xaml-values"></a><span data-ttu-id="24950-106">XAML 值</span><span class="sxs-lookup"><span data-stu-id="24950-106">XAML Values</span></span>  
   
 |||  
 |-|-|  
-|`methodname`|<span data-ttu-id="65eaf-107">XAML 处理器调用以初始化为指定的实例的方法的字符串方法名称`object`。</span><span class="sxs-lookup"><span data-stu-id="65eaf-107">The string method name of a method that XAML processors call to initialize the instance specified as `object`.</span></span> <span data-ttu-id="65eaf-108">请参阅“备注”。</span><span class="sxs-lookup"><span data-stu-id="65eaf-108">See Remarks.</span></span>|  
-|`oneOrMoreObjectElements`|<span data-ttu-id="65eaf-109">指定工厂方法参数的对象的一个或多个对象元素。</span><span class="sxs-lookup"><span data-stu-id="65eaf-109">One or more object elements for objects that specify factory method parameters.</span></span> <span data-ttu-id="65eaf-110">顺序很重要;它表示在其中应将参数传递给工厂方法的顺序。</span><span class="sxs-lookup"><span data-stu-id="65eaf-110">Order is significant; it signifies the order in which arguments should be passed to the factory method.</span></span>|  
+|`methodname`|<span data-ttu-id="24950-107">XAML 处理器调用以初始化为指定的实例的方法的字符串方法名称`object`。</span><span class="sxs-lookup"><span data-stu-id="24950-107">The string method name of a method that XAML processors call to initialize the instance specified as `object`.</span></span> <span data-ttu-id="24950-108">请参阅“备注”。</span><span class="sxs-lookup"><span data-stu-id="24950-108">See Remarks.</span></span>|  
+|`oneOrMoreObjectElements`|<span data-ttu-id="24950-109">指定工厂方法参数的对象的一个或多个对象元素。</span><span class="sxs-lookup"><span data-stu-id="24950-109">One or more object elements for objects that specify factory method parameters.</span></span> <span data-ttu-id="24950-110">顺序很重要;它表示在其中应将参数传递给工厂方法的顺序。</span><span class="sxs-lookup"><span data-stu-id="24950-110">Order is significant; it signifies the order in which arguments should be passed to the factory method.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="65eaf-111">备注</span><span class="sxs-lookup"><span data-stu-id="65eaf-111">Remarks</span></span>  
- <span data-ttu-id="65eaf-112">如果`methodname`是实例方法，不能限定。</span><span class="sxs-lookup"><span data-stu-id="65eaf-112">If `methodname` is an instance method, it cannot be qualified.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="24950-111">备注</span><span class="sxs-lookup"><span data-stu-id="24950-111">Remarks</span></span>  
+ <span data-ttu-id="24950-112">如果`methodname`是实例方法，不能限定。</span><span class="sxs-lookup"><span data-stu-id="24950-112">If `methodname` is an instance method, it cannot be qualified.</span></span>  
   
- <span data-ttu-id="65eaf-113">支持为工厂方法的静态方法。</span><span class="sxs-lookup"><span data-stu-id="65eaf-113">Static methods as factory methods are supported.</span></span> <span data-ttu-id="65eaf-114">如果`methodname`是一种静态方法，`methodname`作为提供*typeName*。*methodName*组合，其中*typeName*命名定义的静态工厂方法的类。</span><span class="sxs-lookup"><span data-stu-id="65eaf-114">If `methodname` is a static method, `methodname` is provided as a *typeName*.*methodName* combination, where *typeName* names the class that defines the static factory method.</span></span> <span data-ttu-id="65eaf-115">*typeName*可以是如果引用类型中映射 xmlns 前缀限定。</span><span class="sxs-lookup"><span data-stu-id="65eaf-115">*typeName* can be prefix-qualified if referring to a type in a mapped xmlns.</span></span> <span data-ttu-id="65eaf-116">*typeName*可以是与不同的类型`typeof(object)`。</span><span class="sxs-lookup"><span data-stu-id="65eaf-116">*typeName* can be a different type than `typeof(object)`.</span></span>  
+ <span data-ttu-id="24950-113">支持为工厂方法的静态方法。</span><span class="sxs-lookup"><span data-stu-id="24950-113">Static methods as factory methods are supported.</span></span> <span data-ttu-id="24950-114">如果`methodname`是一种静态方法，`methodname`作为提供*typeName*。*methodName*组合，其中*typeName*命名定义的静态工厂方法的类。</span><span class="sxs-lookup"><span data-stu-id="24950-114">If `methodname` is a static method, `methodname` is provided as a *typeName*.*methodName* combination, where *typeName* names the class that defines the static factory method.</span></span> <span data-ttu-id="24950-115">*typeName*可以是如果引用类型中映射 xmlns 前缀限定。</span><span class="sxs-lookup"><span data-stu-id="24950-115">*typeName* can be prefix-qualified if referring to a type in a mapped xmlns.</span></span> <span data-ttu-id="24950-116">*typeName*可以是与不同的类型`typeof(object)`。</span><span class="sxs-lookup"><span data-stu-id="24950-116">*typeName* can be a different type than `typeof(object)`.</span></span>  
   
- <span data-ttu-id="65eaf-117">工厂方法必须声明支持相关的对象元素的类型的公共方法。</span><span class="sxs-lookup"><span data-stu-id="65eaf-117">The factory method must be a declared public method of the type that backs the relevant object element.</span></span>  
+ <span data-ttu-id="24950-117">工厂方法必须声明支持相关的对象元素的类型的公共方法。</span><span class="sxs-lookup"><span data-stu-id="24950-117">The factory method must be a declared public method of the type that backs the relevant object element.</span></span>  
   
- <span data-ttu-id="65eaf-118">工厂方法必须返回可分配给相关对象的实例。</span><span class="sxs-lookup"><span data-stu-id="65eaf-118">The factory method must return an instance that is assignable to the relevant object.</span></span> <span data-ttu-id="65eaf-119">工厂方法应永远不会返回 null。</span><span class="sxs-lookup"><span data-stu-id="65eaf-119">Factory methods should never return null.</span></span>  
+ <span data-ttu-id="24950-118">工厂方法必须返回可分配给相关对象的实例。</span><span class="sxs-lookup"><span data-stu-id="24950-118">The factory method must return an instance that is assignable to the relevant object.</span></span> <span data-ttu-id="24950-119">工厂方法应永远不会返回 null。</span><span class="sxs-lookup"><span data-stu-id="24950-119">Factory methods should never return null.</span></span>  
   
- <span data-ttu-id="65eaf-120">`x:Arguments` 对与最匹配的工厂方法的签名的原则进行操作。</span><span class="sxs-lookup"><span data-stu-id="65eaf-120">`x:Arguments` operates on a principle of best match for signatures of factory methods.</span></span> <span data-ttu-id="65eaf-121">首先，匹配计算的参数计数。</span><span class="sxs-lookup"><span data-stu-id="65eaf-121">Matching evaluates the parameter count first.</span></span> <span data-ttu-id="65eaf-122">如果没有参数计数为多个可能的匹配项，参数类型为检测计算和最佳匹配项。</span><span class="sxs-lookup"><span data-stu-id="65eaf-122">If there is more than one possible match for a parameter count, parameter type is then evaluated and best match is determined.</span></span> <span data-ttu-id="65eaf-123">如果仍二义性评估此阶段完成之后，XAML 处理器行为是未定义。</span><span class="sxs-lookup"><span data-stu-id="65eaf-123">If there is still ambiguity after this phase of evaluation, XAML processor behavior is undefined.</span></span>  
+ <span data-ttu-id="24950-120">`x:Arguments` 对与最匹配的工厂方法的签名的原则进行操作。</span><span class="sxs-lookup"><span data-stu-id="24950-120">`x:Arguments` operates on a principle of best match for signatures of factory methods.</span></span> <span data-ttu-id="24950-121">首先，匹配计算的参数计数。</span><span class="sxs-lookup"><span data-stu-id="24950-121">Matching evaluates the parameter count first.</span></span> <span data-ttu-id="24950-122">如果没有参数计数为多个可能的匹配项，参数类型为检测计算和最佳匹配项。</span><span class="sxs-lookup"><span data-stu-id="24950-122">If there is more than one possible match for a parameter count, parameter type is then evaluated and best match is determined.</span></span> <span data-ttu-id="24950-123">如果仍二义性评估此阶段完成之后，XAML 处理器行为是未定义。</span><span class="sxs-lookup"><span data-stu-id="24950-123">If there is still ambiguity after this phase of evaluation, XAML processor behavior is undefined.</span></span>  
   
- <span data-ttu-id="65eaf-124">`x:FactoryMethod`元素用法不是属性元素用法在典型意义上，因为指令的标记不会引用包含对象元素的类型。</span><span class="sxs-lookup"><span data-stu-id="65eaf-124">The `x:FactoryMethod` element usage is not property element usage in the typical sense, because the directive markup does not reference the containing object element's type.</span></span> <span data-ttu-id="65eaf-125">它预期该元素使用情况并不常见比属性用法。</span><span class="sxs-lookup"><span data-stu-id="65eaf-125">It is expected that element usage is less common than attribute usage.</span></span> <span data-ttu-id="65eaf-126">`x:Arguments` （属性或元素用法） 可用于沿`x:FactoryMethod`元素使用情况，但这并没有专门显示使用情况部分中。</span><span class="sxs-lookup"><span data-stu-id="65eaf-126">`x:Arguments` (either attribute or element usage) can be used along with `x:FactoryMethod` element usage, but this is not specifically shown in the Usage sections.</span></span>  
+ <span data-ttu-id="24950-124">`x:FactoryMethod`元素用法不是属性元素用法在典型意义上，因为指令的标记不会引用包含对象元素的类型。</span><span class="sxs-lookup"><span data-stu-id="24950-124">The `x:FactoryMethod` element usage is not property element usage in the typical sense, because the directive markup does not reference the containing object element's type.</span></span> <span data-ttu-id="24950-125">它预期该元素使用情况并不常见比属性用法。</span><span class="sxs-lookup"><span data-stu-id="24950-125">It is expected that element usage is less common than attribute usage.</span></span> <span data-ttu-id="24950-126">`x:Arguments` （属性或元素用法） 可用于沿`x:FactoryMethod`元素使用情况，但这并没有专门显示使用情况部分中。</span><span class="sxs-lookup"><span data-stu-id="24950-126">`x:Arguments` (either attribute or element usage) can be used along with `x:FactoryMethod` element usage, but this is not specifically shown in the Usage sections.</span></span>  
   
- <span data-ttu-id="65eaf-127">`x:FactoryMethod` 如某个元素必须位于任何其他属性元素之前，必须在任何之前`x:Arguments`还作为元素，提供，并且必须在之前的任何内容/内部文本/初始化文本。</span><span class="sxs-lookup"><span data-stu-id="65eaf-127">`x:FactoryMethod` as an element must precede any other property elements, must precede any `x:Arguments` also provided as elements, and must precede any content/inner text/initialization text.</span></span>  
+ <span data-ttu-id="24950-127">`x:FactoryMethod` 如某个元素必须位于任何其他属性元素之前，必须在任何之前`x:Arguments`还作为元素，提供，并且必须在之前的任何内容/内部文本/初始化文本。</span><span class="sxs-lookup"><span data-stu-id="24950-127">`x:FactoryMethod` as an element must precede any other property elements, must precede any `x:Arguments` also provided as elements, and must precede any content/inner text/initialization text.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="65eaf-128">请参阅</span><span class="sxs-lookup"><span data-stu-id="65eaf-128">See Also</span></span>  
- [<span data-ttu-id="65eaf-129">x:Arguments 指令</span><span class="sxs-lookup"><span data-stu-id="65eaf-129">x:Arguments Directive</span></span>](../../../docs/framework/xaml-services/x-arguments-directive.md)
+## <a name="see-also"></a><span data-ttu-id="24950-128">请参阅</span><span class="sxs-lookup"><span data-stu-id="24950-128">See Also</span></span>  
+ [<span data-ttu-id="24950-129">x:Arguments 指令</span><span class="sxs-lookup"><span data-stu-id="24950-129">x:Arguments Directive</span></span>](../../../docs/framework/xaml-services/x-arguments-directive.md)

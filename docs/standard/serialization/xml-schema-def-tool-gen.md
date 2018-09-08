@@ -8,56 +8,56 @@ helpviewer_keywords:
 - XML Schema Definition tool, using to generate XML Schema Document
 ms.assetid: 51f0edc3-993d-4051-b7f2-77753694d3d1
 ms.openlocfilehash: 2edaf7ba540035fbf2f49ba78b41ab99f8889391
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44032090"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44199305"
 ---
-# <a name="how-to-use-the-xml-schema-definition-tool-to-generate-classes-and-xml-schema-documents"></a><span data-ttu-id="5e733-102">How to: Use the XML Schema Definition Tool to Generate Classes and XML Schema Documents</span><span class="sxs-lookup"><span data-stu-id="5e733-102">How to: Use the XML Schema Definition Tool to Generate Classes and XML Schema Documents</span></span>
-<span data-ttu-id="5e733-103">使用 XML 架构定义工具 (Xsd.exe) 可以生成描述类的 XML 架构，也可以生成 XML 架构定义的类。</span><span class="sxs-lookup"><span data-stu-id="5e733-103">The XML Schema Definition tool (Xsd.exe) allows you to generate an XML schema that describes a class or to generate the class defined by an XML schema.</span></span> <span data-ttu-id="5e733-104">下面的过程说明如何执行这两种操作。</span><span class="sxs-lookup"><span data-stu-id="5e733-104">The following procedures show how to perform these operations.</span></span>  
+# <a name="how-to-use-the-xml-schema-definition-tool-to-generate-classes-and-xml-schema-documents"></a><span data-ttu-id="29705-102">How to: Use the XML Schema Definition Tool to Generate Classes and XML Schema Documents</span><span class="sxs-lookup"><span data-stu-id="29705-102">How to: Use the XML Schema Definition Tool to Generate Classes and XML Schema Documents</span></span>
+<span data-ttu-id="29705-103">使用 XML 架构定义工具 (Xsd.exe) 可以生成描述类的 XML 架构，也可以生成 XML 架构定义的类。</span><span class="sxs-lookup"><span data-stu-id="29705-103">The XML Schema Definition tool (Xsd.exe) allows you to generate an XML schema that describes a class or to generate the class defined by an XML schema.</span></span> <span data-ttu-id="29705-104">下面的过程说明如何执行这两种操作。</span><span class="sxs-lookup"><span data-stu-id="29705-104">The following procedures show how to perform these operations.</span></span>  
   
-### <a name="to-generate-classes-that-conform-to-a-specific-schema"></a><span data-ttu-id="5e733-105">生成符合特定架构的类</span><span class="sxs-lookup"><span data-stu-id="5e733-105">To generate classes that conform to a specific schema</span></span>  
+### <a name="to-generate-classes-that-conform-to-a-specific-schema"></a><span data-ttu-id="29705-105">生成符合特定架构的类</span><span class="sxs-lookup"><span data-stu-id="29705-105">To generate classes that conform to a specific schema</span></span>  
   
-1.  <span data-ttu-id="5e733-106">打开命令提示。</span><span class="sxs-lookup"><span data-stu-id="5e733-106">Open a command prompt.</span></span>  
+1.  <span data-ttu-id="29705-106">打开命令提示。</span><span class="sxs-lookup"><span data-stu-id="29705-106">Open a command prompt.</span></span>  
   
-2.  <span data-ttu-id="5e733-107">将 XML 架构作为参数传递给 XML 架构定义工具，该工具将创建与 XML 架构精确匹配的一组类，例如：</span><span class="sxs-lookup"><span data-stu-id="5e733-107">Pass the XML Schema as an argument to the XML Schema Definition tool, which creates a set of classes that are precisely matched to the XML Schema, for example:</span></span>  
+2.  <span data-ttu-id="29705-107">将 XML 架构作为参数传递给 XML 架构定义工具，该工具将创建与 XML 架构精确匹配的一组类，例如：</span><span class="sxs-lookup"><span data-stu-id="29705-107">Pass the XML Schema as an argument to the XML Schema Definition tool, which creates a set of classes that are precisely matched to the XML Schema, for example:</span></span>  
   
     ```  
     xsd mySchema.xsd  
     ```  
   
-     <span data-ttu-id="5e733-108">该工具只能处理引用万维网联合会 2001 年 3 月 16 日的 XML 规范的架构。</span><span class="sxs-lookup"><span data-stu-id="5e733-108">The tool can only process schemas that reference the World Wide Web Consortium XML specification of March 16, 2001.</span></span> <span data-ttu-id="5e733-109">换而言之，XML 架构命名空间必须是"http://www.w3.org/2001/XMLSchema"下面的示例中所示。</span><span class="sxs-lookup"><span data-stu-id="5e733-109">In other words, the XML Schema namespace must be "http://www.w3.org/2001/XMLSchema" as shown in the following example.</span></span>  
+     <span data-ttu-id="29705-108">该工具只能处理引用万维网联合会 2001 年 3 月 16 日的 XML 规范的架构。</span><span class="sxs-lookup"><span data-stu-id="29705-108">The tool can only process schemas that reference the World Wide Web Consortium XML specification of March 16, 2001.</span></span> <span data-ttu-id="29705-109">换而言之，XML 架构命名空间必须是"http://www.w3.org/2001/XMLSchema"下面的示例中所示。</span><span class="sxs-lookup"><span data-stu-id="29705-109">In other words, the XML Schema namespace must be "http://www.w3.org/2001/XMLSchema" as shown in the following example.</span></span>  
   
     ```xml  
     <?xml version="1.0" encoding="utf-8"?>  
     <xs:schema attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="" xmlns:xs="http://www.w3.org/2001/XMLSchema">  
     ```  
   
-3.  <span data-ttu-id="5e733-110">必要时用方法、属性或字段修改类。</span><span class="sxs-lookup"><span data-stu-id="5e733-110">Modify the classes with methods, properties, or fields, as necessary.</span></span> <span data-ttu-id="5e733-111">有关利用特性修改类的详细信息，请参阅[使用特性控制 XML 序列化](../../../docs/standard/serialization/controlling-xml-serialization-using-attributes.md)和[控制编码的 SOAP 序列化的特性](../../../docs/standard/serialization/attributes-that-control-encoded-soap-serialization.md)。</span><span class="sxs-lookup"><span data-stu-id="5e733-111">For more information about modifying a class with attributes, see [Controlling XML Serialization Using Attributes](../../../docs/standard/serialization/controlling-xml-serialization-using-attributes.md) and [Attributes That Control Encoded SOAP Serialization](../../../docs/standard/serialization/attributes-that-control-encoded-soap-serialization.md).</span></span>  
+3.  <span data-ttu-id="29705-110">必要时用方法、属性或字段修改类。</span><span class="sxs-lookup"><span data-stu-id="29705-110">Modify the classes with methods, properties, or fields, as necessary.</span></span> <span data-ttu-id="29705-111">有关利用特性修改类的详细信息，请参阅[使用特性控制 XML 序列化](../../../docs/standard/serialization/controlling-xml-serialization-using-attributes.md)和[控制编码的 SOAP 序列化的特性](../../../docs/standard/serialization/attributes-that-control-encoded-soap-serialization.md)。</span><span class="sxs-lookup"><span data-stu-id="29705-111">For more information about modifying a class with attributes, see [Controlling XML Serialization Using Attributes](../../../docs/standard/serialization/controlling-xml-serialization-using-attributes.md) and [Attributes That Control Encoded SOAP Serialization](../../../docs/standard/serialization/attributes-that-control-encoded-soap-serialization.md).</span></span>  
   
- <span data-ttu-id="5e733-112">当序列化一个或多个类的实例后，检查生成的 XML 流的架构通常非常有用。</span><span class="sxs-lookup"><span data-stu-id="5e733-112">It is often useful to examine the schema of the XML stream that is generated when instances of a class (or classes) are serialized.</span></span> <span data-ttu-id="5e733-113">例如，您可能发布架构以供其他人使用，或者可能将其与想达成一致的架构进行比较。</span><span class="sxs-lookup"><span data-stu-id="5e733-113">For example, you might publish your schema for others to use, or you might compare it to a schema with which you are trying to achieve conformity.</span></span>  
+ <span data-ttu-id="29705-112">当序列化一个或多个类的实例后，检查生成的 XML 流的架构通常非常有用。</span><span class="sxs-lookup"><span data-stu-id="29705-112">It is often useful to examine the schema of the XML stream that is generated when instances of a class (or classes) are serialized.</span></span> <span data-ttu-id="29705-113">例如，您可能发布架构以供其他人使用，或者可能将其与想达成一致的架构进行比较。</span><span class="sxs-lookup"><span data-stu-id="29705-113">For example, you might publish your schema for others to use, or you might compare it to a schema with which you are trying to achieve conformity.</span></span>  
   
-#### <a name="to-generate-an-xml-schema-document-from-a-set-of-classes"></a><span data-ttu-id="5e733-114">从一组类生成 XML 架构文档</span><span class="sxs-lookup"><span data-stu-id="5e733-114">To generate an XML Schema document from a set of classes</span></span>  
+#### <a name="to-generate-an-xml-schema-document-from-a-set-of-classes"></a><span data-ttu-id="29705-114">从一组类生成 XML 架构文档</span><span class="sxs-lookup"><span data-stu-id="29705-114">To generate an XML Schema document from a set of classes</span></span>  
   
-1.  <span data-ttu-id="5e733-115">将一个或多个类编译成 DLL。</span><span class="sxs-lookup"><span data-stu-id="5e733-115">Compile the class or classes into a DLL.</span></span>  
+1.  <span data-ttu-id="29705-115">将一个或多个类编译成 DLL。</span><span class="sxs-lookup"><span data-stu-id="29705-115">Compile the class or classes into a DLL.</span></span>  
   
-2.  <span data-ttu-id="5e733-116">打开命令提示。</span><span class="sxs-lookup"><span data-stu-id="5e733-116">Open a command prompt.</span></span>  
+2.  <span data-ttu-id="29705-116">打开命令提示。</span><span class="sxs-lookup"><span data-stu-id="29705-116">Open a command prompt.</span></span>  
   
-3.  <span data-ttu-id="5e733-117">将 DLL 作为参数传递给 Xsd.exe，例如：</span><span class="sxs-lookup"><span data-stu-id="5e733-117">Pass the DLL as an argument to Xsd.exe, for example:</span></span>  
+3.  <span data-ttu-id="29705-117">将 DLL 作为参数传递给 Xsd.exe，例如：</span><span class="sxs-lookup"><span data-stu-id="29705-117">Pass the DLL as an argument to Xsd.exe, for example:</span></span>  
   
     ```  
     xsd MyFile.dll  
     ```  
   
-     <span data-ttu-id="5e733-118">架构将被写入，以名称“schema0.xsd”开头。</span><span class="sxs-lookup"><span data-stu-id="5e733-118">The schema (or schemas) will be written, beginning with the name "schema0.xsd".</span></span>  
+     <span data-ttu-id="29705-118">架构将被写入，以名称“schema0.xsd”开头。</span><span class="sxs-lookup"><span data-stu-id="29705-118">The schema (or schemas) will be written, beginning with the name "schema0.xsd".</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="5e733-119">请参阅</span><span class="sxs-lookup"><span data-stu-id="5e733-119">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="29705-119">请参阅</span><span class="sxs-lookup"><span data-stu-id="29705-119">See also</span></span>
 
 - <xref:System.Data.DataSet>  
-- [<span data-ttu-id="5e733-120">XML 架构定义工具和 XML 序列化</span><span class="sxs-lookup"><span data-stu-id="5e733-120">The XML Schema Definition Tool and XML Serialization</span></span>](../../../docs/standard/serialization/the-xml-schema-definition-tool-and-xml-serialization.md)  
-- [<span data-ttu-id="5e733-121">XML 序列化简介</span><span class="sxs-lookup"><span data-stu-id="5e733-121">Introducing XML Serialization</span></span>](../../../docs/standard/serialization/introducing-xml-serialization.md)  
-- [<span data-ttu-id="5e733-122">XML 架构定义工具 (Xsd.exe)</span><span class="sxs-lookup"><span data-stu-id="5e733-122">XML Schema Definition Tool (Xsd.exe)</span></span>](../../../docs/standard/serialization/xml-schema-definition-tool-xsd-exe.md)  
+- [<span data-ttu-id="29705-120">XML 架构定义工具和 XML 序列化</span><span class="sxs-lookup"><span data-stu-id="29705-120">The XML Schema Definition Tool and XML Serialization</span></span>](../../../docs/standard/serialization/the-xml-schema-definition-tool-and-xml-serialization.md)  
+- [<span data-ttu-id="29705-121">XML 序列化简介</span><span class="sxs-lookup"><span data-stu-id="29705-121">Introducing XML Serialization</span></span>](../../../docs/standard/serialization/introducing-xml-serialization.md)  
+- [<span data-ttu-id="29705-122">XML 架构定义工具 (Xsd.exe)</span><span class="sxs-lookup"><span data-stu-id="29705-122">XML Schema Definition Tool (Xsd.exe)</span></span>](../../../docs/standard/serialization/xml-schema-definition-tool-xsd-exe.md)  
 - <xref:System.Xml.Serialization.XmlSerializer>  
-- [<span data-ttu-id="5e733-123">如何：序列化对象</span><span class="sxs-lookup"><span data-stu-id="5e733-123">How to: Serialize an Object</span></span>](../../../docs/standard/serialization/how-to-serialize-an-object.md)  
-- [<span data-ttu-id="5e733-124">如何：反序列化对象</span><span class="sxs-lookup"><span data-stu-id="5e733-124">How to: Deserialize an Object</span></span>](../../../docs/standard/serialization/how-to-deserialize-an-object.md)
+- [<span data-ttu-id="29705-123">如何：序列化对象</span><span class="sxs-lookup"><span data-stu-id="29705-123">How to: Serialize an Object</span></span>](../../../docs/standard/serialization/how-to-serialize-an-object.md)  
+- [<span data-ttu-id="29705-124">如何：反序列化对象</span><span class="sxs-lookup"><span data-stu-id="29705-124">How to: Deserialize an Object</span></span>](../../../docs/standard/serialization/how-to-deserialize-an-object.md)

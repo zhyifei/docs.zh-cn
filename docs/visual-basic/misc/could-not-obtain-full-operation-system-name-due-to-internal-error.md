@@ -5,24 +5,24 @@ f1_keywords:
 - vbrDiagnosticInfo_FullOSName
 ms.assetid: f69da02b-eb9a-4284-bb9e-3025517ae6c1
 ms.openlocfilehash: 192033348a779591a54860505d5d707a802c415a
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43778238"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44199045"
 ---
-# <a name="could-not-obtain-full-operation-system-name-due-to-internal-error"></a><span data-ttu-id="600af-102">由于内部错误，无法获取完整的操作系统名</span><span class="sxs-lookup"><span data-stu-id="600af-102">Could not obtain full operation system name due to internal error</span></span>
-<span data-ttu-id="600af-103">由于内部错误，无法获取完整的操作系统名。</span><span class="sxs-lookup"><span data-stu-id="600af-103">Could not obtain full operation system name due to internal error.</span></span> <span data-ttu-id="600af-104">这可能由当前计算机上不存在 WMI 导致。</span><span class="sxs-lookup"><span data-stu-id="600af-104">This might be caused by WMI not existing on the current machine.</span></span>  
+# <a name="could-not-obtain-full-operation-system-name-due-to-internal-error"></a><span data-ttu-id="7e8a8-102">由于内部错误，无法获取完整的操作系统名</span><span class="sxs-lookup"><span data-stu-id="7e8a8-102">Could not obtain full operation system name due to internal error</span></span>
+<span data-ttu-id="7e8a8-103">由于内部错误，无法获取完整的操作系统名。</span><span class="sxs-lookup"><span data-stu-id="7e8a8-103">Could not obtain full operation system name due to internal error.</span></span> <span data-ttu-id="7e8a8-104">这可能由当前计算机上不存在 WMI 导致。</span><span class="sxs-lookup"><span data-stu-id="7e8a8-104">This might be caused by WMI not existing on the current machine.</span></span>  
   
- <span data-ttu-id="600af-105">对 `My.Computer.Info.OSFullName` 属性的调用失败。</span><span class="sxs-lookup"><span data-stu-id="600af-105">A call to the `My.Computer.Info.OSFullName` property failed.</span></span> <span data-ttu-id="600af-106">此失败的可能原因是当前计算机上是否未安装 Windows Management Instrumentation (WMI)。</span><span class="sxs-lookup"><span data-stu-id="600af-106">A possible cause for this failure is if Windows Management Instrumentation (WMI) is not installed on the current computer.</span></span>  
+ <span data-ttu-id="7e8a8-105">对 `My.Computer.Info.OSFullName` 属性的调用失败。</span><span class="sxs-lookup"><span data-stu-id="7e8a8-105">A call to the `My.Computer.Info.OSFullName` property failed.</span></span> <span data-ttu-id="7e8a8-106">此失败的可能原因是当前计算机上是否未安装 Windows Management Instrumentation (WMI)。</span><span class="sxs-lookup"><span data-stu-id="7e8a8-106">A possible cause for this failure is if Windows Management Instrumentation (WMI) is not installed on the current computer.</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="600af-107">更正此错误</span><span class="sxs-lookup"><span data-stu-id="600af-107">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="7e8a8-107">更正此错误</span><span class="sxs-lookup"><span data-stu-id="7e8a8-107">To correct this error</span></span>  
   
-1.  <span data-ttu-id="600af-108">将调用周围的 `Try...Catch` 块添加到 `My.Computer.Info.OSFullName` 属性。</span><span class="sxs-lookup"><span data-stu-id="600af-108">Add a `Try...Catch` block around the call to the `My.Computer.Info.OSFullName` property.</span></span>  
+1.  <span data-ttu-id="7e8a8-108">将调用周围的 `Try...Catch` 块添加到 `My.Computer.Info.OSFullName` 属性。</span><span class="sxs-lookup"><span data-stu-id="7e8a8-108">Add a `Try...Catch` block around the call to the `My.Computer.Info.OSFullName` property.</span></span>  
   
-2.  <span data-ttu-id="600af-109">有关 WMI 和如何安装它的详细信息，请转到和"Windows Management Instrumentation Core"搜索。</span><span class="sxs-lookup"><span data-stu-id="600af-109">For more information about WMI and how to install it, go to  and search for "Windows Management Instrumentation Core".</span></span>  
+2.  <span data-ttu-id="7e8a8-109">有关 WMI 和如何安装它的详细信息，请转到和"Windows Management Instrumentation Core"搜索。</span><span class="sxs-lookup"><span data-stu-id="7e8a8-109">For more information about WMI and how to install it, go to  and search for "Windows Management Instrumentation Core".</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="600af-110">请参阅</span><span class="sxs-lookup"><span data-stu-id="600af-110">See Also</span></span>  
- [<span data-ttu-id="600af-111">My.Computer.Info.OSFullName</span><span class="sxs-lookup"><span data-stu-id="600af-111">My.Computer.Info.OSFullName</span></span>](xref:Microsoft.VisualBasic.Devices.ComputerInfo.OSFullName)  
- [<span data-ttu-id="600af-112">异常和 Visual Basic 中的错误处理</span><span class="sxs-lookup"><span data-stu-id="600af-112">Exception and Error Handling in Visual Basic</span></span>](https://msdn.microsoft.com/library/3e351e73-cf23-40ab-8b60-05794160529e)  
- [<span data-ttu-id="600af-113">Try...Catch...Finally 语句</span><span class="sxs-lookup"><span data-stu-id="600af-113">Try...Catch...Finally Statement</span></span>](../../visual-basic/language-reference/statements/try-catch-finally-statement.md)
+## <a name="see-also"></a><span data-ttu-id="7e8a8-110">请参阅</span><span class="sxs-lookup"><span data-stu-id="7e8a8-110">See Also</span></span>  
+ [<span data-ttu-id="7e8a8-111">My.Computer.Info.OSFullName</span><span class="sxs-lookup"><span data-stu-id="7e8a8-111">My.Computer.Info.OSFullName</span></span>](xref:Microsoft.VisualBasic.Devices.ComputerInfo.OSFullName)  
+ [<span data-ttu-id="7e8a8-112">异常和 Visual Basic 中的错误处理</span><span class="sxs-lookup"><span data-stu-id="7e8a8-112">Exception and Error Handling in Visual Basic</span></span>](https://msdn.microsoft.com/library/3e351e73-cf23-40ab-8b60-05794160529e)  
+ [<span data-ttu-id="7e8a8-113">Try...Catch...Finally 语句</span><span class="sxs-lookup"><span data-stu-id="7e8a8-113">Try...Catch...Finally Statement</span></span>](../../visual-basic/language-reference/statements/try-catch-finally-statement.md)
