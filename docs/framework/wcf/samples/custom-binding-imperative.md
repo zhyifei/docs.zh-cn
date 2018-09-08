@@ -3,11 +3,11 @@ title: 自定义绑定命令
 ms.date: 03/30/2017
 ms.assetid: 6e13bf96-5de0-4476-b646-5f150774418d
 ms.openlocfilehash: dac98d2c08a207019b9ec5b18340afc02e62f836
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44035734"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44129703"
 ---
 # <a name="custom-binding-imperative"></a>自定义绑定命令
 此示例演示如何编写命令性代码来定义和使用自定义绑定，而不使用配置文件或 Windows Communication Foundation (WCF) 生成客户端。 本示例将 HTTP 传输提供的功能与可靠会话通道结合在一起，用于创建基于 HTTP 的可靠绑定。 此示例基于[Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md)实现计算器服务。  

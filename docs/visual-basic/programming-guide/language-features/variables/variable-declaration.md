@@ -18,11 +18,11 @@ helpviewer_keywords:
 - scope [Visual Basic], variables
 ms.assetid: d8f10226-92b1-480f-9f53-df377b2d7e15
 ms.openlocfilehash: 92a20e5fbe60c71ec3375ed35c919e1f88cf0a9c
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 09/07/2018
-ms.locfileid: "44067787"
+ms.locfileid: "44135284"
 ---
 # <a name="variable-declaration-in-visual-basic"></a>Visual Basic 中的变量声明
 声明一个变量来指定其名称和特征。 变量声明语句是[Dim 语句](../../../../visual-basic/language-reference/statements/dim-statement.md)。 其位置和内容确定变量的特征。  

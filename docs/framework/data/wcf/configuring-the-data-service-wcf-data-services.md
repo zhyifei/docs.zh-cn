@@ -8,11 +8,11 @@ helpviewer_keywords:
 - WCF Data Services, configuring
 ms.assetid: 59efd4c8-cc7a-4800-a0a4-d3f8abe6c55c
 ms.openlocfilehash: 0824a43cba1a21cc9ae92b1f807c6a1369fd63ed
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43879785"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44135817"
 ---
 # <a name="configuring-the-data-service-wcf-data-services"></a>配置数据服务（WCF 数据服务）
 与[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]，可以创建公开的数据服务[!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]馈送。 这些源中的数据可以来自各种数据源。 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 使用数据提供程序公开此数据作为[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]源。 这些提供程序包括一个[!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)]提供程序、一个反射提供程序和一组自定义数据服务提供程序接口。 提供程序实现为服务定义数据模型。 有关详细信息，请参阅[数据服务提供商](../../../../docs/framework/data/wcf/data-services-providers-wcf-data-services.md)。  

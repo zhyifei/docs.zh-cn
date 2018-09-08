@@ -3,11 +3,11 @@ title: For 活动
 ms.date: 03/30/2017
 ms.assetid: 2ea751b4-36f0-48aa-a115-70a2ab89f6d8
 ms.openlocfilehash: 7a7023abb9057ab4b25552fbf9a81cd2ae2b4e88
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43881516"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44131745"
 ---
 # <a name="for-activity"></a>For 活动
 For 示例演示如何生成一个继承自 <xref:System.Activities.NativeActivity> 的自定义活动，以及如何在工作流中使用此活动来执行实际示例。 该示例中包含的自定义活动的功能与 C# `for` 语句的功能类似 T  

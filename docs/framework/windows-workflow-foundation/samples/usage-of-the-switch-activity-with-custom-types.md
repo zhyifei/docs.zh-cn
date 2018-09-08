@@ -3,11 +3,11 @@ title: 带自定义类型的切换活动的用法
 ms.date: 03/30/2017
 ms.assetid: 482a48c4-eb83-40c3-a4e2-2f9a8af88b75
 ms.openlocfilehash: b24a03573b31f3fb1c34d4aa6e03bc11f5b25455
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44038869"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44133907"
 ---
 # <a name="usage-of-the-switch-activity-with-custom-types"></a>带自定义类型的切换活动的用法
 此示例介绍如何使 <xref:System.Activities.Statements.Switch%601> 活动能够在运行时计算用户定义的复杂类型。 在大多数传统的过程性编程语言，[切换](https://go.microsoft.com/fwlink/?LinkId=180521)语句选择执行逻辑基于变量的条件评估。 传统上，`switch` 语句会操作可静态计算的表达式。 例如，在 C# 中，这表示仅支持基元类型（如 <xref:System.Boolean>、<xref:System.Int32>、<xref:System.String>）和枚举类型。  

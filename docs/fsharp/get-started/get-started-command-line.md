@@ -2,12 +2,12 @@
 title: '使用命令行工具实现 F # 入门'
 description: '了解如何在 F # 在任何操作系统 （Windows、 macOs 或 Linux） 上使用.NET Core CLI 构建简单的多项目解决方案。'
 ms.date: 03/26/2018
-ms.openlocfilehash: 6cdb2b42781dba6ba00c03b20e6a76d033e03063
-ms.sourcegitcommit: 59b51cd7c95c75be85bd6ef715e9ef8c85720bac
+ms.openlocfilehash: 8a82970f33c8bbe1b8cdd8fb6499b59b16d3cbf3
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37875009"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44134800"
 ---
 # <a name="get-started-with-f-with-the-net-core-cli"></a>要开始使用 F # 使用.NET Core CLI
 
@@ -41,7 +41,7 @@ FSNetCore
 使用`dotnet new`命令，创建一个在类库项目**src**名为库的文件夹。
 
 ```console
-dotnet new lib -lang F# -o src/Library
+dotnet new classlib -lang F# -o src/Library
 ```
 
 运行上述命令后会生成以下目录结构：

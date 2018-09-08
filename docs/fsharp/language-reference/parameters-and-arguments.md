@@ -2,12 +2,12 @@
 title: 参数和自变量 (F#)
 description: '了解有关 F # 语言支持对定义形参并将参数传递给函数、 方法和属性。'
 ms.date: 05/16/2016
-ms.openlocfilehash: a3418ec814e0419d08758cf035ecc0f402b5db1a
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: a1e2a70ca560bbb09d2cd10f47485cbe5c5e029d
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 09/07/2018
-ms.locfileid: "44062632"
+ms.locfileid: "44131970"
 ---
 # <a name="parameters-and-arguments"></a>形参和实参
 
@@ -127,15 +127,32 @@ Baud Rate: 300 Duplex: Half Parity: true
 
 ## <a name="passing-by-reference"></a>按引用传递
 
-按引用传递的 F # 值涉及`byref`关键字，它指定该参数是实际指向按引用传递的值。 任何值传递到方法替换`byref`参数必须是`mutable`。
+按引用传递的 F # 值涉及[byref](byrefs.md)，哪些是托管的指针类型。 对于要使用的类型是，如下所示的指南：
+
+* 使用`inref<'T>`如果只需要读取指针。
+* 使用`outref<'T>`如果只需编写的指针。
+* 使用`byref<'T>`如果你需要同时读取和写入到的指针。
+
+```fsharp
+let example1 (x: inref<int>) = printfn "It's %d" x
+
+let example2 (x: outref<int>) = x <- x + 1
+
+let example3 (x: byref<int>) =
+    printfn "It'd %d" x
+    x <- x + 1
+
+// No need to make it mutable, since it's read-only
+let x = 1
+example1 &x
+
+// Needs to be mutable, since we write to it
+let mutable y = 2
+example2 &y
+example3 &y // Now 'y' is 3
+```
 
 因为参数是一个指针，值为可变，对值的任何更改将保留后执行函数。
-
-您可以完成与相同的事情[引用单元格](reference-cells.md)，但务必要注意**引用单元格和`byref`s 不是相同的操作**。 引用单元格是一个值，可以检查和更改的内容，但此值在堆上，等效于使用它所包含的可变值遇到一条记录的容器。 一个`byref`是实际的指针，因此它是不同的基础语义和用法规则 （它可以是非常严格的）。
-
-下面的示例说明如何使用`byref`关键字。 请注意，作为参数使用引用单元格时，您必须创建作为命名值的引用单元格和将其用作参数，而不仅仅是添加`ref`运算符在首次调用中所示`Increment`在下面的代码。 创建引用单元格创建基础值的副本，因为第一次调用只是递增的临时值。
-
-[!code-fsharp[Main](../../../samples/snippets/fsharp/parameters-and-arguments-1/snippet3809.fs)]
 
 可以使用一个元组作为返回值来存储任何`out`中.NET 库方法的参数。 或者，您可以将`out`参数作为`byref`参数。 下面的代码示例说明了这两种方式。
 
@@ -155,7 +172,7 @@ Baud Rate: 300 Duplex: Half Parity: true
 
 当运行在项目中，上述代码的输出如下所示：
 
-```
+```console
 a 1 10 Hello world 1 True
 "a"
 1

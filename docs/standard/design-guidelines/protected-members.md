@@ -13,11 +13,11 @@ ms.assetid: aa0b58ee-3956-494d-ab48-471ae5db8740
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 4574dffc3f9dd1b60d655bfde33a4ddc1a81d350
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 09/07/2018
-ms.locfileid: "44068971"
+ms.locfileid: "44140939"
 ---
 # <a name="protected-members"></a>受保护的成员
 受保护的成员本身不提供任何可扩展性，但它们会使通过子类化可扩展性功能更强大。 它们可以用于公开高级自定义选项，而不必要地复杂化的主要公共接口。  

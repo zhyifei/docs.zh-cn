@@ -10,11 +10,11 @@ ms.assetid: 7cb4b0f3-7a10-4c93-b84d-733f7134fcf8
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 65c54fe9a076a219c61280a98c390b16f56b5015
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43873937"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44127847"
 ---
 # <a name="field-design"></a>字段设计
 封装原则是最重要的概念之一中面向对象的设计。 此原则指出，应仅对该对象可访问的对象内存储的数据。  

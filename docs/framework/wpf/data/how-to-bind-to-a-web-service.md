@@ -10,11 +10,11 @@ helpviewer_keywords:
 - data binding [WPF], Web service
 ms.assetid: 77e2d373-69ba-4cbd-b6f5-2c83c38fc98b
 ms.openlocfilehash: 84c5aee8d2bc7d31ebcfee98930d9a0847c527d5
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43866548"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44129522"
 ---
 # <a name="how-to-bind-to-a-web-service"></a>如何：绑定到 Web 服务
 此示例演示如何将绑定到由 Web 服务方法调用返回的对象。  

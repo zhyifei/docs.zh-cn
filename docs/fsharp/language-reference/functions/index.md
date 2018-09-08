@@ -2,12 +2,12 @@
 title: 函数 (F#)
 description: '了解有关 F # 和 F # 如何支持通用函数编程构造中的函数。'
 ms.date: 05/16/2016
-ms.openlocfilehash: 7a5b54b7bcfdeee7018dba38016db6182ef95ff0
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 717eba7e69398048d229173e07ccc376797171bb
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43803907"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44140913"
 ---
 # <a name="functions"></a>函数
 
@@ -112,7 +112,7 @@ let vol = cylinderVolume 2.0 3.0
 
 ## <a name="recursive-functions"></a>递归函数
 
-递归函数是调用自身的函数。 它们要求在指定 **let** 关键字之后指定 **rec** 关键字。 从函数的主体内调用递归函数与调用任何函数调用是一样的。 以下递归函数计算第 n 个斐波纳契数。 斐波纳契数序列很早就为人所知，此序列中的每个连续的数字都是序列中前两个数字之和。
+递归函数是调用自身的函数。 它们要求在指定 **let** 关键字之后指定 **rec** 关键字。 从函数的主体内调用递归函数与调用任何函数调用是一样的。 以下递归函数计算*n*<sup>th</sup>斐波纳契数。 斐波纳契数序列很早就为人所知，此序列中的每个连续的数字都是序列中前两个数字之和。
 
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet108.fs)]
 

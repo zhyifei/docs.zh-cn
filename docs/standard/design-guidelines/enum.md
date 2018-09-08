@@ -12,11 +12,11 @@ ms.assetid: dd53c952-9d9a-4736-86ff-9540e815d545
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 9dea187b5f3911114e551d640e0bb0aa6fac1143
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43891228"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44137208"
 ---
 # <a name="enum-design"></a>枚举设计
 枚举都是一种特殊的值类型。 有两种类型的枚举： 简单枚举和标志枚举。  

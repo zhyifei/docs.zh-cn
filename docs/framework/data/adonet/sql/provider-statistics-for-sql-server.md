@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 429c9d09-92ac-46ec-829a-fbff0a9575a2
 ms.openlocfilehash: d52c6bfdadf0a53ac4c5f62c37f1056c6702a82c
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43745019"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44139340"
 ---
 # <a name="provider-statistics-for-sql-server"></a>用于 SQL Server 的提供程序统计信息
 从 .NET Framework 2.0 版开始，适用于 SQL Server 的 .NET Framework 数据提供程序支持运行时统计信息。 必须在创建了有效的连接对象后将 <xref:System.Data.SqlClient.SqlConnection.StatisticsEnabled%2A> 对象的 <xref:System.Data.SqlClient.SqlConnection> 属性设置为 `True`，以启用统计信息。 启用了统计信息之后，可以通过 <xref:System.Collections.IDictionary> 对象的 <xref:System.Data.SqlClient.SqlConnection.RetrieveStatistics%2A> 方法检索 <xref:System.Data.SqlClient.SqlConnection> 引用，以将统计信息作为“实时快照”查看。 通过列表作为一组名称/值对字典条目进行枚举。 这些名称/值对不排序。 可以随时调用 <xref:System.Data.SqlClient.SqlConnection.ResetStatistics%2A> 对象的 <xref:System.Data.SqlClient.SqlConnection> 方法，以重置计数器。 如果尚未启用统计信息收集功能，则不会生成异常。 此外，如果调用 <xref:System.Data.SqlClient.SqlConnection.RetrieveStatistics%2A> 之前没有先调用 <xref:System.Data.SqlClient.SqlConnection.StatisticsEnabled%2A>，检索到的值是每个条目的初始值。 如果启用了统计信息，运行应用程序一段时间，然后禁用统计信息，检索到的值将反映在禁用统计信息之前收集的值。 所有统计信息值按照连接进行收集。  

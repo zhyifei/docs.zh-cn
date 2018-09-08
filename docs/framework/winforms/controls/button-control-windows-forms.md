@@ -6,11 +6,11 @@ helpviewer_keywords:
 - Button control [Windows Forms]
 ms.assetid: d38bc40c-8040-4f19-9e88-2c665b0ab80b
 ms.openlocfilehash: a2f421afe8e64b38851b3063c7091d9ee105ade9
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43892741"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44134956"
 ---
 # <a name="button-control-windows-forms"></a>Button 控件（Windows 窗体）
 Windows 窗体 `Button` 控件允许用户通过单击来执行某项操作。 `Button` 控件可以显示文本和图像。 单击该按钮时，看上去它像是被按下并释放。  

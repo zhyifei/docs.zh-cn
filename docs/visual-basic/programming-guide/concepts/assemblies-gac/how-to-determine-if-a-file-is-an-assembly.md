@@ -2,19 +2,19 @@
 title: 如何： 确定文件是否为程序集 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: de26f410-9bd1-4b55-a343-cc82f81684be
-ms.openlocfilehash: 84d45cea4a2557350edacd5f05b12c8ffcac4df8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ced41279e7e192d6d5bed53dbce7378395b32e6d
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33643221"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44131615"
 ---
 # <a name="how-to-determine-if-a-file-is-an-assembly-visual-basic"></a>如何： 确定文件是否为程序集 (Visual Basic)
 当且仅当程序集处于托管状态，并在其元数据中包含程序集条目时，该文件才为程序集。 有关程序集和元数据的详细信息，请参阅主题[程序集清单](../../../../framework/app-domains/assembly-manifest.md)。  
   
 ## <a name="how-to-manually-determine-if-a-file-is-an-assembly"></a>如何手动确定文件是否为程序集  
   
-1.  启动 [Ildasm.exe（IL 反汇编程序）](https://msdn.microsoft.com/library/f7dy01k1)。  
+1.  启动 [Ildasm.exe（IL 反汇编程序）](../../../../framework/tools/ildasm-exe-il-disassembler.md)。  
   
 2.  加载要测试的文件。  
   
@@ -52,7 +52,8 @@ End Module
   
  <xref:System.Reflection.AssemblyName.GetAssemblyName%2A> 方法加载测试文件，然后在读取信息之后释放它。  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Reflection.AssemblyName>  
- [编程概念](../../../../visual-basic/programming-guide/concepts/index.md)  
- [程序集和全局程序集缓存 (Visual Basic)](index.md)
+## <a name="see-also"></a>请参阅
+
+- <xref:System.Reflection.AssemblyName>  
+- [编程概念](../../../../visual-basic/programming-guide/concepts/index.md)  
+- [程序集和全局程序集缓存 (Visual Basic)](index.md)

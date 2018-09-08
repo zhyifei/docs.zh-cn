@@ -3,11 +3,11 @@ title: 终结点：Reliable Messaging Sessions Faulted Per Second（每秒出错
 ms.date: 03/30/2017
 ms.assetid: e9ae808a-7e1f-46b0-9560-d5a866be6d6e
 ms.openlocfilehash: f6b48ec4c37c28588dd874a5bfa94a01a2f43b0c
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44037641"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44135674"
 ---
 # <a name="endpoint-reliable-messaging-sessions-faulted-per-second"></a>终结点：Reliable Messaging Sessions Faulted Per Second（每秒出错的可靠消息会话数）
 计数器名称：Reliable Messaging Sessions Faulted Per Second（每秒出错的可靠消息会话数）。  

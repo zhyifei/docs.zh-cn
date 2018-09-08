@@ -3,11 +3,11 @@ title: CSDL 规范
 ms.date: 03/30/2017
 ms.assetid: 6bb94c37-87da-447a-8dfd-83d1c4b5a2d2
 ms.openlocfilehash: f3acb7933392fcd8a1d952354a2b45e4b588834e
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 09/07/2018
-ms.locfileid: "44061255"
+ms.locfileid: "44136259"
 ---
 # <a name="csdl-specification"></a>CSDL 规范
 [Msdn.microsoft.com/data/ef](https://msdn.microsoft.com/data/ef)网站现在是有关实体框架内容的主位置。  

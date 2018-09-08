@@ -3,11 +3,11 @@ title: 空间函数
 ms.date: 03/30/2017
 ms.assetid: 90cb177d-88a0-45be-97e8-3b306283c6e0
 ms.openlocfilehash: ad6b722e84aae40354e30434b107752d02352645
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 09/07/2018
-ms.locfileid: "44061684"
+ms.locfileid: "44133949"
 ---
 # <a name="spatial-functions"></a>空间函数
 空间类型没有文本格式。 但是，您可以使用规范实体实体框架函数，这些函数可使用已知文本格式的字符串来调用。 例如，以下函数调用会生成一个几何点：  

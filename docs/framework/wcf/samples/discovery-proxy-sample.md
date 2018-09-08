@@ -3,11 +3,11 @@ title: 发现代理示例
 ms.date: 03/30/2017
 ms.assetid: 1dfa02df-15b1-4e97-9c8e-f5f2772711b0
 ms.openlocfilehash: 6fc0680bc6b61a6fe1b4b141c8b1e5081df5a124
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43892368"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44127795"
 ---
 # <a name="discovery-proxy-sample"></a>发现代理示例
 此示例演示如何创建发现代理的实现以存储有关现有服务的信息，并演示客户端如何可以查询该代理以获取信息。 此示例由三个项目组成：  

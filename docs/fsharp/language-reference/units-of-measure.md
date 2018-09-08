@@ -2,17 +2,16 @@
 title: 度量单位 (F#)
 description: '了解如何浮点和 F # 中的带符号的整数值可以具有关联的度量值，这些信息通常用于指示长度、 卷和大容量单位。'
 ms.date: 05/16/2016
-ms.openlocfilehash: 6075742ec80d9510be51d4565e3397931c9f68c7
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: ad2193e25f3c0cee6e73cd529ab43d1e4b6b549b
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43517421"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44131255"
 ---
 # <a name="units-of-measure"></a>度量单位
 
 F # 中的浮点点和带符号的整数值可以具有关联之类的度量单位通常用于指示长度、 体积、 成批，依此类推。 通过使用个单位的数量，使编译器无法验证算术关系具有正确的单位，从而有助于防止出现编程错误。
-
 
 ## <a name="syntax"></a>语法
 
@@ -21,6 +20,7 @@ F # 中的浮点点和带符号的整数值可以具有关联之类的度量单�
 ```
 
 ## <a name="remarks"></a>备注
+
 上述语法中定义*单元名称*作为一个单元的度量值。 可选部分用于定义新的度量值根据以前定义的单位。 例如，以下行定义度量值`cm`（厘米）。
 
 ```fsharp
@@ -72,7 +72,7 @@ let convertg2kg (x : float<g>) = x / 1000.0<g/kg>
 下面的示例演示如何使用度量单位。
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet6901.fs)]
-    
+
 下面的代码示例说明了如何将从纲浮点数转换为划分维度的浮点值。 您只需与 1.0 相乘，将维度应用于 1.0。 可以将此抽象到所示的函数`degreesFahrenheit`。
 
 此外，当将划分维度的值传递到期望纲浮点数的函数中，则必须取消扩展单位或强制转换为`float`通过使用`float`运算符。 在此示例中，您除以`1.0<degC>`的参数`printf`因为`printf`需要纲数量。
@@ -88,20 +88,23 @@ That temperature in degrees Celsius is    32.22.
 ```
 
 ## <a name="using-generic-units"></a>使用泛型单位
+
 对具有关联的单元的度量值的数据，可以编写运行的泛型函数。 您为此，指定一个类型与泛型单元一起作为一个类型参数，如下面的代码示例中所示。
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet6903.fs)]
-    
+
 ## <a name="creating-aggregate-types-with-generic-units"></a>使用泛型单位创建聚合类型
+
 下面的代码演示如何创建单个浮动点具有的值都是泛型方法的单元组成的聚合类型。 这使单个类型来创建适用于各种单位。 此外，泛型单位可以通过确保泛型类型具有一组单元相同的泛型类型具有一组不同的单元与不同的类型保留类型安全。 此技术的基础是`Measure`特性可以应用于类型参数。
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet6904.fs)]
-    
+
 ## <a name="units-at-runtime"></a>在运行时的单位
+
 度量单位用于静态类型检查。 浮点值编译时，将消除的度量单位，以便在运行时的单位是丢失。 因此，任何尝试实现取决于在运行时检查单元的功能是不可能。 例如，实现`ToString`函数来打印出单位不能。
 
-
 ## <a name="conversions"></a>转换
+
 要转换具有单位的类型 (例如， `float<'u>`) 到一个没有单元的类型，可以使用标准的转换函数。 例如，可以使用`float`将转换为`float`不具有单元，如下面的代码中所示的值。
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet6905.fs)]
@@ -109,10 +112,11 @@ That temperature in degrees Celsius is    32.22.
 若要将无单位的值转换为具有单元的值，可以用适当的单位乘以 1 或 1.0 进行批注的值。 但是，为编写的互操作性层，也有一些可用于与单元将无单位值转换为值的显式函数。 这些对象位于[Microsoft.FSharp.Core.LanguagePrimitives](https://msdn.microsoft.com/library/69d08ac5-5d51-4c20-bf1e-850fd312ece3)模块。 例如，若要从无单位转换`float`到`float<cm>`，使用[FloatWithMeasure](https://msdn.microsoft.com/library/69520bc7-d67b-46b8-9004-7cac9646b8d9)，如下面的代码中所示。
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet6906.fs)]
-    
+
 ## <a name="units-of-measure-in-the-f-core-library"></a>F # 核心库中的度量单位
+
 单元库现已推出`FSharp.Data.UnitSystems.SI`命名空间。 它包括这两个符号形式的 SI 单位 (如`m`测定仪) 中`UnitSymbols`子命名空间和其完整名称 (如`meter`测定仪) 中`UnitNames`子命名空间。
 
-
 ## <a name="see-also"></a>请参阅
-[F# 语言参考](index.md)
+
+- [F# 语言参考](index.md)

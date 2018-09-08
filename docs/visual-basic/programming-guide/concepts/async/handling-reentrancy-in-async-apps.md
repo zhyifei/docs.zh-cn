@@ -2,29 +2,29 @@
 title: 处理异步应用程序 (Visual Basic 中) 中的重新进入
 ms.date: 07/20/2015
 ms.assetid: ef3dc73d-13fb-4c5f-a686-6b84148bbffe
-ms.openlocfilehash: b633e3cf9a499cd5f364692cd0461aed640fe54d
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: fa1bfcc5cfaf4a3ba1f5116be7b3f1851ce293af
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43868097"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44129716"
 ---
 # <a name="handling-reentrancy-in-async-apps-visual-basic"></a>处理异步应用程序 (Visual Basic 中) 中的重新进入
 在应用中包含异步代码时，应考虑并且可以阻止重新进入（指在异步操作完成之前重新进入它）。 如果不识别并处理重新进入的可能性，则它可能会导致意外结果。  
   
  **在本主题中**  
   
--   [识别重新进入](https://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645)  
+-   [识别重新进入](#BKMK_RecognizingReentrancy)  
   
--   [处理重新进入](https://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645)  
+-   [处理重新进入](#BKMK_HandlingReentrancy)  
   
-    -   [禁用“开始”按钮](https://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645)  
+    -   [禁用“开始”按钮](#BKMK_DisableTheStartButton)  
   
-    -   [取消和重启操作](https://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645)  
+    -   [取消和重启操作](#BKMK_CancelAndRestart)  
   
-    -   [运行多个操作并将输出排入队列](https://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645)  
+    -   [运行多个操作并将输出排入队列](#BKMK_RunMultipleOperations)  
   
--   [检查并运行示例应用](https://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645)  
+-   [检查并运行示例应用](#BKMD_SettingUpTheExample)  
   
 > [!NOTE]
 >  若要运行该示例，计算机上必须安装 Visual Studio 2012 或更高版本和 .NET Framework 4.5 或更高版本。  
@@ -84,20 +84,20 @@ TOTAL bytes returned:  890591
 TOTAL bytes returned:  890591  
 ```  
   
- 可以滚动到本主题末尾来评审生成此输出的代码。 可以通过将解决方案下载到本地计算机，然后运行 WebsiteDownload 项目，或是通过使用本主题末尾的代码创建自己的项目，来体验该代码。有关详细信息和说明，请参阅[检查并运行示例应用](https://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645)。  
+ 可以滚动到本主题末尾来评审生成此输出的代码。 可以通过将解决方案下载到本地计算机，然后运行 WebsiteDownload 项目，或是通过使用本主题末尾的代码创建自己的项目，来体验该代码。有关详细信息和说明，请参阅[检查并运行示例应用](#BKMD_SettingUpTheExample)。  
   
 ##  <a name="BKMK_HandlingReentrancy"></a>处理重新进入  
  可以采用各种方式处理重新进入，具体取决于希望应用执行的操作。 本主题展示了以下示例：  
   
--   [禁用“开始”按钮](https://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645)  
+-   [禁用“开始”按钮](#BKMK_DisableTheStartButton)  
   
      在操作运行期间禁用“开始”按钮，以便用户无法中断它。  
   
--   [取消和重启操作](https://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645)  
+-   [取消和重启操作](#BKMK_CancelAndRestart)  
   
      当用户再次选择“开始”按钮时取消仍在运行的任何操作，然后让最近请求的操作继续运行。  
   
--   [运行多个操作并将输出排入队列](https://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645)  
+-   [运行多个操作并将输出排入队列](#BKMK_RunMultipleOperations)  
   
      允许所有请求的操作异步运行，但是会协调输出的显示，以便每个操作的结果按顺序一起显示。  
   
@@ -134,7 +134,7 @@ End Sub
   
  有关取消的详细信息，请参阅[微调异步应用程序 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/fine-tuning-your-async-application.md)。  
   
- 若要设置此方案，请对[检查并运行示例应用](https://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645)中提供的基本代码进行以下更改。 还可以从[异步示例：.NET 桌面应用中的重新进入](https://code.msdn.microsoft.com/Async-Sample-Preventing-a8489f06)下载已完成的应用。 此项目的名称是 CancelAndRestart。  
+ 若要设置此方案，请对[检查并运行示例应用](#BKMD_SettingUpTheExample)中提供的基本代码进行以下更改。 还可以从[异步示例：.NET 桌面应用中的重新进入](https://code.msdn.microsoft.com/Async-Sample-Preventing-a8489f06)下载已完成的应用。 此项目的名称是 CancelAndRestart。  
   
 1.  声明 <xref:System.Threading.CancellationTokenSource> 变量 `cts`，它处于所有方法的范围内。  
   
@@ -285,11 +285,11 @@ TOTAL bytes returned:  890591
  若要消除部分列表，请对 `StartButton_Click` 中的第一行代码取消注释以在用户每次重新启动操作时清除文本框。  
   
 ###  <a name="BKMK_RunMultipleOperations"></a>运行多个操作并将输出排入队列  
- 此第三个示例最复杂，因为应用会在用户每次选择“开始”按钮时启动另一个异步操作，并且所有操作都会运行到完成。 所有请求的操作以异步方式从列表中下载网站，但是操作的输出会按顺序呈现。 也就是说，实际下载活动是交错进行的（如[识别重新进入](https://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645)中的输出所示），但是每个组的结果列表会分开呈现。  
+ 此第三个示例最复杂，因为应用会在用户每次选择“开始”按钮时启动另一个异步操作，并且所有操作都会运行到完成。 所有请求的操作以异步方式从列表中下载网站，但是操作的输出会按顺序呈现。 也就是说，实际下载活动是交错进行的（如[识别重新进入](#BKMK_RecognizingReentrancy)中的输出所示），但是每个组的结果列表会分开呈现。  
   
  操作会共享一个全局 <xref:System.Threading.Tasks.Task> (`pendingWork`)，它用作显示进程的守卫。  
   
- 可以通过将更改粘贴到[生成应用](https://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645)中的代码来运行此示例，也可以按照[下载应用](https://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645)中的说明下载示例，然后运行 QueueResults 项目。  
+ 可以通过将更改粘贴到[生成应用](#BKMK_BuildingTheApp)中的代码来运行此示例，也可以按照[下载应用](#BKMK_DownloadingTheApp)中的说明下载示例，然后运行 QueueResults 项目。  
   
  下面的输出显示用户仅选择“开始”按钮一次时的结果。 字母标签 A 指示结果来自首次选择“开始”按钮。 编号显示下载目标列表中 URL 的顺序。  
   
@@ -473,7 +473,7 @@ Private Async Function FinishOneGroupAsync(urls As List(Of String), contentTasks
 End Function  
 ```  
   
- 可以通过将更改粘贴到[生成应用](https://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645)中的代码来运行此示例，也可以按照[下载应用](https://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645)中的说明下载示例，然后运行 QueueResults 项目。  
+ 可以通过将更改粘贴到[生成应用](#BKMK_BuildingTheApp)中的代码来运行此示例，也可以按照[下载应用](#BKMK_DownloadingTheApp)中的说明下载示例，然后运行 QueueResults 项目。  
   
 #### <a name="points-of-interest"></a>兴趣点  
  输出中以井号 (#) 开头的信息行阐明了此示例的工作原理。  
@@ -674,8 +674,9 @@ End Function
   
 11. 选择 CTRL+F5 键以运行程序，然后多次选择“开始”按钮。  
   
-12. 从[禁用“开始”按钮](https://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645)、[取消并重启操作](https://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645)或[运行多个操作并将输出排入队列](https://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645)中进行更改以处理重新进入。  
+12. 从[禁用“开始”按钮](#BKMK_DisableTheStartButton)、[取消并重启操作](#BKMK_CancelAndRestart)或[运行多个操作并将输出排入队列](#BKMK_RunMultipleOperations)中进行更改以处理重新进入。  
   
-## <a name="see-also"></a>请参阅  
- [演练：使用 Async 和 Await 访问 Web (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)  
- [使用 Async 和 Await 的异步编程 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md)
+## <a name="see-also"></a>请参阅
+
+- [演练：使用 Async 和 Await 访问 Web (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)  
+- [使用 Async 和 Await 的异步编程 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md)

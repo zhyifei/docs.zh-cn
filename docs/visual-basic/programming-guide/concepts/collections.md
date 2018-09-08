@@ -2,12 +2,12 @@
 title: 集合 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 5f7749f3-aaf2-4319-b63c-bfa72e1e2b7a
-ms.openlocfilehash: 510abe7d818b3a45869824bc52dc4fde38238f7b
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 60519de1f580bf1cfa4aa067d4a999b20ea8d54d
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43504439"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44129097"
 ---
 # <a name="collections-visual-basic"></a>集合 (Visual Basic)
 对于许多应用程序，你会想要创建和管理相关对象的组。 有两种方法对对象进行分组：通过创建对象的数组，以及通过创建对象的集合。  
@@ -464,7 +464,7 @@ End Class
 ## <a name="defining-a-custom-collection"></a>定义自定义集合  
  可以通过实现 <xref:System.Collections.Generic.IEnumerable%601> 或 <xref:System.Collections.IEnumerable> 接口来定义集合。 有关其他信息，请参阅[对集合进行枚举](https://msdn.microsoft.com/library/71807ea7-9180-48a6-916f-35a5251d477f)。  
   
- 尽管可以定义自定义集合，但通常最好使用包含在 .NET Framework 中的集合，这在本主题前面的[集合类型](https://msdn.microsoft.com/library/e76533a9-5033-4a0b-b003-9c2be60d185b)中进行了介绍。  
+ 尽管可以定义自定义集合，但通常最好使用包含在 .NET Framework 中的集合，这在本主题前面的[集合类型](#kinds-of-collections)中进行了介绍。  
   
  以下示例定义一个名为 `AllColors` 的自定义集合类。 此类实现 <xref:System.Collections.IEnumerable> 接口，此操作需要实现 <xref:System.Collections.IEnumerable.GetEnumerator%2A> 方法。  
   
@@ -570,14 +570,15 @@ As IEnumerable(Of Integer)
 End Function  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [集合初始值设定项](../../../visual-basic/programming-guide/language-features/collection-initializers/index.md)  
- [编程概念 (Visual Basic)](../../../visual-basic/programming-guide/concepts/index.md)  
- [Option Strict 语句](../../../visual-basic/language-reference/statements/option-strict-statement.md)  
- [LINQ to Objects (Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)  
- [并行 LINQ (PLINQ)](../../../standard/parallel-programming/parallel-linq-plinq.md)  
- [集合和数据结构](../../../standard/collections/index.md)  
- [创建和操作集合](https://msdn.microsoft.com/library/2065398e-eb1a-4821-9188-75f16e42e069)  
- [选择集合类](../../../standard/collections/selecting-a-collection-class.md)  
- [集合内的比较和排序](../../../standard/collections/comparisons-and-sorts-within-collections.md)  
- [何时使用泛型集合](../../../standard/collections/when-to-use-generic-collections.md)
+## <a name="see-also"></a>请参阅
+
+- [集合初始值设定项](../../../visual-basic/programming-guide/language-features/collection-initializers/index.md)  
+- [编程概念 (Visual Basic)](../../../visual-basic/programming-guide/concepts/index.md)  
+- [Option Strict 语句](../../../visual-basic/language-reference/statements/option-strict-statement.md)  
+- [LINQ to Objects (Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)  
+- [并行 LINQ (PLINQ)](../../../standard/parallel-programming/parallel-linq-plinq.md)  
+- [集合和数据结构](../../../standard/collections/index.md)  
+- [创建和操作集合](https://msdn.microsoft.com/library/2065398e-eb1a-4821-9188-75f16e42e069)  
+- [选择集合类](../../../standard/collections/selecting-a-collection-class.md)  
+- [集合内的比较和排序](../../../standard/collections/comparisons-and-sorts-within-collections.md)  
+- [何时使用泛型集合](../../../standard/collections/when-to-use-generic-collections.md)

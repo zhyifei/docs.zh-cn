@@ -10,11 +10,11 @@ helpviewer_keywords:
 - message loops [WPF]
 ms.assetid: f440c23f-fa5d-4d5a-852f-ba61150e6405
 ms.openlocfilehash: b43143fb3f27d127f93f5e8edd55b853ad604ef5
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43892225"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44137754"
 ---
 # <a name="troubleshooting-hybrid-applications"></a>混合应用程序疑难解答
 <a name="introduction"></a>本主题列出了在创作同时使用 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 和 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]技术的混合应用程序时可能发生的一些常见问题。  

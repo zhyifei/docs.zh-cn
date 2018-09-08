@@ -11,11 +11,11 @@ helpviewer_keywords:
 - WCF Data Services, streams
 ms.assetid: f0978fe4-5f9f-42aa-a5c2-df395d7c9495
 ms.openlocfilehash: 543d095c88670024a53fad7c865883ecaab1c6e0
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 09/07/2018
-ms.locfileid: "44046835"
+ms.locfileid: "44138573"
 ---
 # <a name="streaming-provider-wcf-data-services"></a>流提供程序（WCF 数据服务）
 数据服务可公开二进制大型对象数据。 此二进制数据可以表示视频和音频流、图像、文档文件或其他类型的二进制媒体。 当数据模型中的某个实体包括一个或多个二进制属性时，数据服务会在响应源的入口内以 base-64 编码形式返回此二进制数据。 加载和序列化大型二进制数据，以这种方式会影响性能，因为[!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]定义用于检索独立于其所属的实体的二进制数据的机制。 这一点是通过将实体和二进制数据分隔到一个或多个数据流来实现的。  

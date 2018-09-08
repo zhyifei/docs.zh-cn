@@ -11,11 +11,11 @@ ms.assetid: 37585bf2-4c27-4dee-849a-af70e3338cc1
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 4ca42d25a5f3456c6a10eff76d7015656322abae
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43874051"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44131242"
 ---
 # <a name="operator-overloads"></a>运算符重载
 运算符重载允许显示如同内置语言基元的框架类型。  

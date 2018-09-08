@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: eee2f227-91f2-4f2b-a9d6-1c51c5320858
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 77c80332e663596244b35fe002218e7bcbaeb46a
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 2a69d0e15f9094860c4c66f3fe0a195a0a609db9
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43523319"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44127097"
 ---
 # <a name="-resource-visual-basic"></a>-资源 (Visual Basic)
 将托管资源嵌入程序集。  
@@ -39,7 +39,7 @@ ms.locfileid: "43523319"
 ## <a name="remarks"></a>备注  
  使用`-linkresource`若要将资源链接到程序集，而无需将资源文件放置在输出文件。  
   
- 如果`filename`是[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]创建的资源文件，例如，通过[Resgen.exe （资源文件生成器）](https://msdn.microsoft.com/library/8ef159de-b660-4bec-9213-c3fbc4d1c6f4)或在开发环境中，则可以使用来访问中的成员<xref:System.Resources>命名空间 （请参阅<xref:System.Resources.ResourceManager>有关详细信息)。 若要在运行时访问所有其他资源，请使用以下方法之一： <xref:System.Reflection.Assembly.GetManifestResourceInfo%2A>， <xref:System.Reflection.Assembly.GetManifestResourceNames%2A>，或<xref:System.Reflection.Assembly.GetManifestResourceStream%2A>。  
+ 如果`filename`是[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]创建的资源文件，例如，通过[Resgen.exe （资源文件生成器）](../../../framework/tools/resgen-exe-resource-file-generator.md)或在开发环境中，则可以使用来访问中的成员<xref:System.Resources>命名空间 （请参阅<xref:System.Resources.ResourceManager>有关详细信息)。 若要在运行时访问所有其他资源，请使用以下方法之一： <xref:System.Reflection.Assembly.GetManifestResourceInfo%2A>， <xref:System.Reflection.Assembly.GetManifestResourceNames%2A>，或<xref:System.Reflection.Assembly.GetManifestResourceStream%2A>。  
   
  `-resource` 的缩写形式是 `-res`。  
   
@@ -52,9 +52,10 @@ ms.locfileid: "43523319"
 vbc -res:rf.resource in.vb  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [Visual Basic 命令行编译器](../../../visual-basic/reference/command-line-compiler/index.md)  
- [-win32resource](../../../visual-basic/reference/command-line-compiler/win32resource.md)  
- [-linkresource (Visual Basic)](../../../visual-basic/reference/command-line-compiler/linkresource.md)  
- [-目标 (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md)  
- [示例编译命令行](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
+## <a name="see-also"></a>请参阅
+
+- [Visual Basic 命令行编译器](../../../visual-basic/reference/command-line-compiler/index.md)  
+- [-win32resource](../../../visual-basic/reference/command-line-compiler/win32resource.md)  
+- [-linkresource (Visual Basic)](../../../visual-basic/reference/command-line-compiler/linkresource.md)  
+- [-目标 (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md)  
+- [示例编译命令行](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)

@@ -3,11 +3,11 @@ title: LINQ to DataSet 概述
 ms.date: 03/30/2017
 ms.assetid: dc20a8fb-03f6-4b68-9c2b-7f7299e3070b
 ms.openlocfilehash: 43c3aa081bd934202bd3a7831741054115d7a6d5
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43883970"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44138807"
 ---
 # <a name="linq-to-dataset-overview"></a>LINQ to DataSet 概述
 <xref:System.Data.DataSet> 是更为广泛使用的 [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 组件之一。 它是 [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 所基于的断开连接式编程模型的关键元素，使用它可以显式缓存不同数据源中的数据。 在表示层上，<xref:System.Data.DataSet> 与 GUI 控件紧密集成，以进行数据绑定。 在中间层上，它提供保留数据关系形状的缓存并包括快速简单查询和层次结构导航服务。 用于减少对数据库的请求数的常用技术是使用 <xref:System.Data.DataSet> 以便在中间层进行缓存。 例如，考虑数据驱动的 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Web 应用程序。 通常，应用程序的绝大部分数据不会经常更改，属于会话之间或用户之间的公共数据。 此数据可以保存在 Web 服务器的内存中，这会减少对数据库的请求数并加速用户的交互。 另一个有用特征的<xref:System.Data.DataSet>是它允许应用程序到应用程序空间从一个或多个数据源将数据子集。 然后，应用程序可以在内存中操作这些数据，同时保留其关系形状。  

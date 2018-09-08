@@ -2,17 +2,17 @@
 title: LINQ to XML 轴概述 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 9161f151-cfa8-4408-94ba-08a9ba3a486d
-ms.openlocfilehash: d7d881564abfdaba6cb7efa8fb92849e48c6fa4c
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 43649800869f4829d56977f1e6e62d30192b0604
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43804261"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44128795"
 ---
 # <a name="linq-to-xml-axes-overview-visual-basic"></a>LINQ to XML 轴概述 (Visual Basic)
 创建 XML 树或将 XML 文档加载到 XML 树之后，可以进行查询，从而查找元素和属性并检索它们的值。 通过*轴方法*（也叫做*轴*）来检索集合。 一些轴就是 <xref:System.Xml.Linq.XElement> 和 <xref:System.Xml.Linq.XDocument> 类中返回 <xref:System.Collections.Generic.IEnumerable%601> 集合的方法。 另一些轴是 <xref:System.Xml.Linq.Extensions> 类中的扩展方法。 实现为扩展方法的轴对集合进行操作，然后返回集合。  
   
- 如同 [XElement 类概述](https://msdn.microsoft.com/library/d35180fe-7016-4895-9bfc-ba1e3f7875ec)中所述，<xref:System.Xml.Linq.XElement> 对象表示单个元素节点。 元素的内容可以是复杂的（有时称为结构化内容），也可以是简单元素。 简单元素可以是空的，也可以包含值。 如果节点包含结构化内容，则可以使用各种轴方法来检索子代元素的枚举。 最常使用的轴方法是 <xref:System.Xml.Linq.XContainer.Elements%2A> 和 <xref:System.Xml.Linq.XContainer.Descendants%2A>。  
+ 如同 [XElement 类概述](../../../../visual-basic/programming-guide/concepts/linq/xelement-class-overview.md)中所述，<xref:System.Xml.Linq.XElement> 对象表示单个元素节点。 元素的内容可以是复杂的（有时称为结构化内容），也可以是简单元素。 简单元素可以是空的，也可以包含值。 如果节点包含结构化内容，则可以使用各种轴方法来检索子代元素的枚举。 最常使用的轴方法是 <xref:System.Xml.Linq.XContainer.Elements%2A> 和 <xref:System.Xml.Linq.XContainer.Descendants%2A>。  
   
  除了返回集合的轴方法之外，还有两个方法会在 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 查询中经常用到。 <xref:System.Xml.Linq.XContainer.Element%2A> 方法返回单个 <xref:System.Xml.Linq.XElement>。 <xref:System.Xml.Linq.XElement.Attribute%2A> 方法返回单个 <xref:System.Xml.Linq.XAttribute>。  
   
@@ -54,5 +54,6 @@ ms.locfileid: "43804261"
 |------------|-----------------|  
 |<xref:System.Xml.Linq.XElement.Attribute%2A?displayProperty=nameWithType>|返回具有指定 <xref:System.Xml.Linq.XAttribute> 的 <xref:System.Xml.Linq.XName>。|  
   
-## <a name="see-also"></a>请参阅  
- [LINQ to XML 轴 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-axes.md)
+## <a name="see-also"></a>请参阅
+
+- [LINQ to XML 轴 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-axes.md)

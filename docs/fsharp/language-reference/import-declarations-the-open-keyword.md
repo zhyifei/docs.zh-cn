@@ -3,11 +3,11 @@ title: 导入声明：open 关键字 (F#)
 description: '了解有关 F # 导入声明以及如何指定模块或命名空间可以不使用完全限定的名称引用其中的元素。'
 ms.date: 05/16/2016
 ms.openlocfilehash: 8cae4b4f5418689bfb0933b7db4ec23a313d5ed8
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43883147"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44130180"
 ---
 # <a name="import-declarations-the-open-keyword"></a>导入声明：`open`关键字
 

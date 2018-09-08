@@ -15,12 +15,12 @@ helpviewer_keywords:
 - threading [Windows Forms], background operations
 - background operations
 ms.assetid: 4691b796-9200-471a-89c3-ba4c7cc78c03
-ms.openlocfilehash: 435bc1c04bfd2f9b8a94ff8151369b5ef2fae6f8
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 81c7f21e7e331b60d41330c8239893332dbea5a1
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43777985"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44135882"
 ---
 # <a name="walkthrough-implementing-a-form-that-uses-a-background-operation"></a>演练：实现一个使用后台操作的窗体
 如果某项操作需要很长时间才能完成，并且您不希望用户界面 (UI) 停止响应或"挂起，可以使用<xref:System.ComponentModel.BackgroundWorker>类，以另一个线程上执行此操作。  
@@ -163,11 +163,12 @@ ms.locfileid: "43777985"
     > [!CAUTION]
     >  使用任何一种多线程都可能引起极为严重和复杂的 Bug。 在实现任何使用多线程处理的解决方案之前，请参阅[托管线程处理最佳做法](../../../../docs/standard/threading/managed-threading-best-practices.md)。  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.ComponentModel.BackgroundWorker>  
- [托管线程处理的最佳做法](../../../../docs/standard/threading/managed-threading-best-practices.md)  
- [组件中的多线程处理](https://msdn.microsoft.com/library/2fc31e68-fb71-4544-b654-0ce720478779)  
- [未构造：Visual Basic 中的多线程处理](https://msdn.microsoft.com/library/c731a50c-09c1-4468-9646-54c86b75d269)  
- [如何：实现使用后台操作的窗体](../../../../docs/framework/winforms/controls/how-to-implement-a-form-that-uses-a-background-operation.md)  
- [演练：在后台运行操作](../../../../docs/framework/winforms/controls/walkthrough-running-an-operation-in-the-background.md)  
- [BackgroundWorker 组件](../../../../docs/framework/winforms/controls/backgroundworker-component.md)
+## <a name="see-also"></a>请参阅
+
+- <xref:System.ComponentModel.BackgroundWorker?displayProperty=nameWithType>
+- [托管线程](../../../../docs/standard/threading/index.md)
+- [托管线程处理的最佳做法](../../../../docs/standard/threading/managed-threading-best-practices.md)
+- [基于事件的异步模式概述](../../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)
+- [如何：实现使用后台操作的窗体](how-to-implement-a-form-that-uses-a-background-operation.md)  
+- [演练：在后台运行操作](walkthrough-running-an-operation-in-the-background.md)
+- [BackgroundWorker 组件](backgroundworker-component.md)

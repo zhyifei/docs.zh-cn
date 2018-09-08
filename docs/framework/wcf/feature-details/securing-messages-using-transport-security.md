@@ -5,11 +5,11 @@ ms.assetid: 9029771a-097e-448a-a13a-55d2878330b8
 author: BrucePerlerMS
 manager: mbaldwin
 ms.openlocfilehash: 0ab04326404a4b90e30036594a7152e6118c2138
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 09/07/2018
-ms.locfileid: "44063558"
+ms.locfileid: "44129136"
 ---
 # <a name="securing-messages-using-transport-security"></a>使用传输安全保护消息
 本节讨论消息队列 (MSMQ) 传输安全，您可将其用于保护发送到队列的消息。  
