@@ -14,38 +14,38 @@ helpviewer_keywords:
 - binary serialization, examples
 ms.assetid: 22f1b818-7e0d-428a-8680-f17d6ebdd185
 ms.openlocfilehash: 4b83e841db1afc898c5c3c99ed4186fd264ed2ef
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43866496"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44211757"
 ---
-# <a name="how-to-chunk-serialized-data"></a><span data-ttu-id="2cb7a-102">如何：对序列化数据进行分块</span><span class="sxs-lookup"><span data-stu-id="2cb7a-102">How to: chunk serialized data</span></span>
+# <a name="how-to-chunk-serialized-data"></a><span data-ttu-id="cfaf7-102">如何：对序列化数据进行分块</span><span class="sxs-lookup"><span data-stu-id="cfaf7-102">How to: chunk serialized data</span></span>
 
 [!INCLUDE [binary-serialization-warning](../../../includes/binary-serialization-warning.md)]
 
-<span data-ttu-id="2cb7a-103">在 Web 服务消息中发送大型数据集时，会出现下面两个问题：</span><span class="sxs-lookup"><span data-stu-id="2cb7a-103">Two issues that occur when sending large data sets in Web service messages are:</span></span>  
+<span data-ttu-id="cfaf7-103">在 Web 服务消息中发送大型数据集时，会出现下面两个问题：</span><span class="sxs-lookup"><span data-stu-id="cfaf7-103">Two issues that occur when sending large data sets in Web service messages are:</span></span>  
   
-1.  <span data-ttu-id="2cb7a-104">因序列化引擎执行缓冲而使工作集（内存）很大。</span><span class="sxs-lookup"><span data-stu-id="2cb7a-104">A large working set (memory) due to buffering by the serialization engine.</span></span>  
+1.  <span data-ttu-id="cfaf7-104">因序列化引擎执行缓冲而使工作集（内存）很大。</span><span class="sxs-lookup"><span data-stu-id="cfaf7-104">A large working set (memory) due to buffering by the serialization engine.</span></span>  
   
-2.  <span data-ttu-id="2cb7a-105">因使用 Base64 编码后产生 33% 的膨胀而过度占用带宽。</span><span class="sxs-lookup"><span data-stu-id="2cb7a-105">Inordinate bandwidth consumption due to 33 percent inflation after Base64 encoding.</span></span>  
+2.  <span data-ttu-id="cfaf7-105">因使用 Base64 编码后产生 33% 的膨胀而过度占用带宽。</span><span class="sxs-lookup"><span data-stu-id="cfaf7-105">Inordinate bandwidth consumption due to 33 percent inflation after Base64 encoding.</span></span>  
   
- <span data-ttu-id="2cb7a-106">若要解决这两个问题，可以通过实现 <xref:System.Xml.Serialization.IXmlSerializable> 接口，来控制序列化和反序列化。</span><span class="sxs-lookup"><span data-stu-id="2cb7a-106">To solve these problems, implement the <xref:System.Xml.Serialization.IXmlSerializable> interface to control the serialization and deserialization.</span></span> <span data-ttu-id="2cb7a-107">具体来讲，就是实现 <xref:System.Xml.Serialization.IXmlSerializable.WriteXml%2A> 和 <xref:System.Xml.Serialization.IXmlSerializable.ReadXml%2A> 方法，对数据进行分块。</span><span class="sxs-lookup"><span data-stu-id="2cb7a-107">Specifically, implement the <xref:System.Xml.Serialization.IXmlSerializable.WriteXml%2A> and <xref:System.Xml.Serialization.IXmlSerializable.ReadXml%2A> methods to chunk the data.</span></span>  
+ <span data-ttu-id="cfaf7-106">若要解决这两个问题，可以通过实现 <xref:System.Xml.Serialization.IXmlSerializable> 接口，来控制序列化和反序列化。</span><span class="sxs-lookup"><span data-stu-id="cfaf7-106">To solve these problems, implement the <xref:System.Xml.Serialization.IXmlSerializable> interface to control the serialization and deserialization.</span></span> <span data-ttu-id="cfaf7-107">具体来讲，就是实现 <xref:System.Xml.Serialization.IXmlSerializable.WriteXml%2A> 和 <xref:System.Xml.Serialization.IXmlSerializable.ReadXml%2A> 方法，对数据进行分块。</span><span class="sxs-lookup"><span data-stu-id="cfaf7-107">Specifically, implement the <xref:System.Xml.Serialization.IXmlSerializable.WriteXml%2A> and <xref:System.Xml.Serialization.IXmlSerializable.ReadXml%2A> methods to chunk the data.</span></span>  
   
-### <a name="to-implement-server-side-chunking"></a><span data-ttu-id="2cb7a-108">实现服务器端数据分块</span><span class="sxs-lookup"><span data-stu-id="2cb7a-108">To implement server-side chunking</span></span>  
+### <a name="to-implement-server-side-chunking"></a><span data-ttu-id="cfaf7-108">实现服务器端数据分块</span><span class="sxs-lookup"><span data-stu-id="cfaf7-108">To implement server-side chunking</span></span>  
   
-1.  <span data-ttu-id="2cb7a-109">在服务器计算机上，必须采用 Web 方法禁用 ASP.NET 缓冲，并返回实现 <xref:System.Xml.Serialization.IXmlSerializable> 的类型。</span><span class="sxs-lookup"><span data-stu-id="2cb7a-109">On the server machine, the Web method must turn off ASP.NET buffering and return a type that implements <xref:System.Xml.Serialization.IXmlSerializable>.</span></span>  
+1.  <span data-ttu-id="cfaf7-109">在服务器计算机上，必须采用 Web 方法禁用 ASP.NET 缓冲，并返回实现 <xref:System.Xml.Serialization.IXmlSerializable> 的类型。</span><span class="sxs-lookup"><span data-stu-id="cfaf7-109">On the server machine, the Web method must turn off ASP.NET buffering and return a type that implements <xref:System.Xml.Serialization.IXmlSerializable>.</span></span>  
   
-2.  <span data-ttu-id="2cb7a-110">实现 <xref:System.Xml.Serialization.IXmlSerializable> 的类型可以采用 <xref:System.Xml.Serialization.IXmlSerializable.WriteXml%2A> 方法对数据进行分块。</span><span class="sxs-lookup"><span data-stu-id="2cb7a-110">The type that implements <xref:System.Xml.Serialization.IXmlSerializable> chunks the data in the <xref:System.Xml.Serialization.IXmlSerializable.WriteXml%2A> method.</span></span>  
+2.  <span data-ttu-id="cfaf7-110">实现 <xref:System.Xml.Serialization.IXmlSerializable> 的类型可以采用 <xref:System.Xml.Serialization.IXmlSerializable.WriteXml%2A> 方法对数据进行分块。</span><span class="sxs-lookup"><span data-stu-id="cfaf7-110">The type that implements <xref:System.Xml.Serialization.IXmlSerializable> chunks the data in the <xref:System.Xml.Serialization.IXmlSerializable.WriteXml%2A> method.</span></span>  
   
-### <a name="to-implement-client-side-processing"></a><span data-ttu-id="2cb7a-111">实现客户端处理</span><span class="sxs-lookup"><span data-stu-id="2cb7a-111">To implement client-side processing</span></span>  
+### <a name="to-implement-client-side-processing"></a><span data-ttu-id="cfaf7-111">实现客户端处理</span><span class="sxs-lookup"><span data-stu-id="cfaf7-111">To implement client-side processing</span></span>  
   
-1.  <span data-ttu-id="2cb7a-112">通过更改客户端代理上的 Web 方法，可以返回实现 <xref:System.Xml.Serialization.IXmlSerializable> 的类型。</span><span class="sxs-lookup"><span data-stu-id="2cb7a-112">Alter the Web method on the client proxy to return the type that implements <xref:System.Xml.Serialization.IXmlSerializable>.</span></span> <span data-ttu-id="2cb7a-113">可以使用 <xref:System.Xml.Serialization.Advanced.SchemaImporterExtension> 自动执行这项操作，但此处不加以说明。</span><span class="sxs-lookup"><span data-stu-id="2cb7a-113">You can use a <xref:System.Xml.Serialization.Advanced.SchemaImporterExtension> to do this automatically, but this isn't shown here.</span></span>  
+1.  <span data-ttu-id="cfaf7-112">通过更改客户端代理上的 Web 方法，可以返回实现 <xref:System.Xml.Serialization.IXmlSerializable> 的类型。</span><span class="sxs-lookup"><span data-stu-id="cfaf7-112">Alter the Web method on the client proxy to return the type that implements <xref:System.Xml.Serialization.IXmlSerializable>.</span></span> <span data-ttu-id="cfaf7-113">可以使用 <xref:System.Xml.Serialization.Advanced.SchemaImporterExtension> 自动执行这项操作，但此处不加以说明。</span><span class="sxs-lookup"><span data-stu-id="cfaf7-113">You can use a <xref:System.Xml.Serialization.Advanced.SchemaImporterExtension> to do this automatically, but this isn't shown here.</span></span>  
   
-2.  <span data-ttu-id="2cb7a-114">通过实现 <xref:System.Xml.Serialization.IXmlSerializable.ReadXml%2A> 方法，可以读取分块数据流，并将字节写入磁盘。</span><span class="sxs-lookup"><span data-stu-id="2cb7a-114">Implement the <xref:System.Xml.Serialization.IXmlSerializable.ReadXml%2A> method to read the chunked data stream and write the bytes to disk.</span></span> <span data-ttu-id="2cb7a-115">此实现还会引发可供图形控件（如进度栏）使用的进度事件。</span><span class="sxs-lookup"><span data-stu-id="2cb7a-115">This implementation also raises progress events that can be used by a graphic control, such as a progress bar.</span></span>  
+2.  <span data-ttu-id="cfaf7-114">通过实现 <xref:System.Xml.Serialization.IXmlSerializable.ReadXml%2A> 方法，可以读取分块数据流，并将字节写入磁盘。</span><span class="sxs-lookup"><span data-stu-id="cfaf7-114">Implement the <xref:System.Xml.Serialization.IXmlSerializable.ReadXml%2A> method to read the chunked data stream and write the bytes to disk.</span></span> <span data-ttu-id="cfaf7-115">此实现还会引发可供图形控件（如进度栏）使用的进度事件。</span><span class="sxs-lookup"><span data-stu-id="cfaf7-115">This implementation also raises progress events that can be used by a graphic control, such as a progress bar.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="2cb7a-116">示例</span><span class="sxs-lookup"><span data-stu-id="2cb7a-116">Example</span></span>  
-<span data-ttu-id="2cb7a-117">下面的代码示例演示客户端上用于禁用 ASP.NET 缓冲的 Web 方法。</span><span class="sxs-lookup"><span data-stu-id="2cb7a-117">The following code example shows the Web method on the client that turns off ASP.NET buffering.</span></span> <span data-ttu-id="2cb7a-118">它还演示了如何在客户端实现 <xref:System.Xml.Serialization.IXmlSerializable> 接口，该实现可以采用 <xref:System.Xml.Serialization.IXmlSerializable.WriteXml%2A> 方法对数据进行分块。</span><span class="sxs-lookup"><span data-stu-id="2cb7a-118">It also shows the client-side implementation of the <xref:System.Xml.Serialization.IXmlSerializable> interface that chunks the data in the <xref:System.Xml.Serialization.IXmlSerializable.WriteXml%2A> method.</span></span>  
+## <a name="example"></a><span data-ttu-id="cfaf7-116">示例</span><span class="sxs-lookup"><span data-stu-id="cfaf7-116">Example</span></span>  
+<span data-ttu-id="cfaf7-117">下面的代码示例演示客户端上用于禁用 ASP.NET 缓冲的 Web 方法。</span><span class="sxs-lookup"><span data-stu-id="cfaf7-117">The following code example shows the Web method on the client that turns off ASP.NET buffering.</span></span> <span data-ttu-id="cfaf7-118">它还演示了如何在客户端实现 <xref:System.Xml.Serialization.IXmlSerializable> 接口，该实现可以采用 <xref:System.Xml.Serialization.IXmlSerializable.WriteXml%2A> 方法对数据进行分块。</span><span class="sxs-lookup"><span data-stu-id="cfaf7-118">It also shows the client-side implementation of the <xref:System.Xml.Serialization.IXmlSerializable> interface that chunks the data in the <xref:System.Xml.Serialization.IXmlSerializable.WriteXml%2A> method.</span></span>  
   
 [!code-csharp[HowToChunkSerializedData#1](../../../samples/snippets/csharp/VS_Snippets_Remoting/HowToChunkSerializedData/CS/SerializationChunk.cs#1)]
 [!code-vb[HowToChunkSerializedData#1](../../../samples/snippets/visualbasic/VS_Snippets_Remoting/HowToChunkSerializedData/VB/SerializationChunk.vb#1)]  
@@ -54,10 +54,10 @@ ms.locfileid: "43866496"
 [!code-csharp[HowToChunkSerializedData#3](../../../samples/snippets/csharp/VS_Snippets_Remoting/HowToChunkSerializedData/CS/SerializationChunk.cs#3)]
 [!code-vb[HowToChunkSerializedData#3](../../../samples/snippets/visualbasic/VS_Snippets_Remoting/HowToChunkSerializedData/VB/SerializationChunk.vb#3)]  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="2cb7a-119">编译代码</span><span class="sxs-lookup"><span data-stu-id="2cb7a-119">Compiling the code</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="cfaf7-119">编译代码</span><span class="sxs-lookup"><span data-stu-id="cfaf7-119">Compiling the code</span></span>  
   
--   <span data-ttu-id="2cb7a-120">代码使用下面的命名空间：<xref:System>、<xref:System.Runtime.Serialization>、<xref:System.Web.Services>、<xref:System.Web.Services.Protocols>、<xref:System.Xml>、<xref:System.Xml.Serialization> 和 <xref:System.Xml.Schema>。</span><span class="sxs-lookup"><span data-stu-id="2cb7a-120">The code uses the following namespaces: <xref:System>, <xref:System.Runtime.Serialization>, <xref:System.Web.Services>, <xref:System.Web.Services.Protocols>, <xref:System.Xml>, <xref:System.Xml.Serialization>, and <xref:System.Xml.Schema>.</span></span>  
+-   <span data-ttu-id="cfaf7-120">代码使用下面的命名空间：<xref:System>、<xref:System.Runtime.Serialization>、<xref:System.Web.Services>、<xref:System.Web.Services.Protocols>、<xref:System.Xml>、<xref:System.Xml.Serialization> 和 <xref:System.Xml.Schema>。</span><span class="sxs-lookup"><span data-stu-id="cfaf7-120">The code uses the following namespaces: <xref:System>, <xref:System.Runtime.Serialization>, <xref:System.Web.Services>, <xref:System.Web.Services.Protocols>, <xref:System.Xml>, <xref:System.Xml.Serialization>, and <xref:System.Xml.Schema>.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="2cb7a-121">请参阅</span><span class="sxs-lookup"><span data-stu-id="2cb7a-121">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="cfaf7-121">请参阅</span><span class="sxs-lookup"><span data-stu-id="cfaf7-121">See also</span></span>
 
-- [<span data-ttu-id="2cb7a-122">自定义序列化</span><span class="sxs-lookup"><span data-stu-id="2cb7a-122">Custom Serialization</span></span>](custom-serialization.md)
+- [<span data-ttu-id="cfaf7-122">自定义序列化</span><span class="sxs-lookup"><span data-stu-id="cfaf7-122">Custom Serialization</span></span>](custom-serialization.md)

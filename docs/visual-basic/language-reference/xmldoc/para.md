@@ -6,34 +6,34 @@ helpviewer_keywords:
 - para XML tag
 ms.assetid: a3a18b6c-6416-4358-94ec-37b22675fd37
 ms.openlocfilehash: fa11c713a5ed5793b50865753f8bcdeaabf56e83
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44132352"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44209690"
 ---
-# <a name="ltparagt-visual-basic"></a><span data-ttu-id="bf9b5-102">&lt;para&gt; (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="bf9b5-102">&lt;para&gt; (Visual Basic)</span></span>
-<span data-ttu-id="bf9b5-103">指定内容的格式设置为一个段落。</span><span class="sxs-lookup"><span data-stu-id="bf9b5-103">Specifies that the content is formatted as a paragraph.</span></span>  
+# <a name="ltparagt-visual-basic"></a><span data-ttu-id="e1953-102">&lt;para&gt; (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="e1953-102">&lt;para&gt; (Visual Basic)</span></span>
+<span data-ttu-id="e1953-103">指定内容的格式设置为一个段落。</span><span class="sxs-lookup"><span data-stu-id="e1953-103">Specifies that the content is formatted as a paragraph.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="bf9b5-104">语法</span><span class="sxs-lookup"><span data-stu-id="bf9b5-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="e1953-104">语法</span><span class="sxs-lookup"><span data-stu-id="e1953-104">Syntax</span></span>  
   
 ```xml  
 <para>content</para>  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="bf9b5-105">参数</span><span class="sxs-lookup"><span data-stu-id="bf9b5-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="e1953-105">参数</span><span class="sxs-lookup"><span data-stu-id="e1953-105">Parameters</span></span>  
  `content`  
- <span data-ttu-id="bf9b5-106">段落文本。</span><span class="sxs-lookup"><span data-stu-id="bf9b5-106">The text of the paragraph.</span></span>  
+ <span data-ttu-id="e1953-106">段落文本。</span><span class="sxs-lookup"><span data-stu-id="e1953-106">The text of the paragraph.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="bf9b5-107">备注</span><span class="sxs-lookup"><span data-stu-id="bf9b5-107">Remarks</span></span>  
- <span data-ttu-id="bf9b5-108">`<para>`标记是用于标记内，例如[\<摘要 >](../../../visual-basic/language-reference/xmldoc/summary.md)， [\<备注 >](../../../visual-basic/language-reference/xmldoc/remarks.md)，或[\<返回 >](../../../visual-basic/language-reference/xmldoc/returns.md)，并允许您向文本添加结构。</span><span class="sxs-lookup"><span data-stu-id="bf9b5-108">The `<para>` tag is for use inside a tag, such as [\<summary>](../../../visual-basic/language-reference/xmldoc/summary.md), [\<remarks>](../../../visual-basic/language-reference/xmldoc/remarks.md), or [\<returns>](../../../visual-basic/language-reference/xmldoc/returns.md), and lets you add structure to the text.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="e1953-107">备注</span><span class="sxs-lookup"><span data-stu-id="e1953-107">Remarks</span></span>  
+ <span data-ttu-id="e1953-108">`<para>`标记是用于标记内，例如[\<摘要 >](../../../visual-basic/language-reference/xmldoc/summary.md)， [\<备注 >](../../../visual-basic/language-reference/xmldoc/remarks.md)，或[\<返回 >](../../../visual-basic/language-reference/xmldoc/returns.md)，并允许您向文本添加结构。</span><span class="sxs-lookup"><span data-stu-id="e1953-108">The `<para>` tag is for use inside a tag, such as [\<summary>](../../../visual-basic/language-reference/xmldoc/summary.md), [\<remarks>](../../../visual-basic/language-reference/xmldoc/remarks.md), or [\<returns>](../../../visual-basic/language-reference/xmldoc/returns.md), and lets you add structure to the text.</span></span>  
   
- <span data-ttu-id="bf9b5-109">使用 [/doc](../../../visual-basic/reference/command-line-compiler/doc.md) 进行编译可以将文档注释处理到文件中。</span><span class="sxs-lookup"><span data-stu-id="bf9b5-109">Compile with [/doc](../../../visual-basic/reference/command-line-compiler/doc.md) to process documentation comments to a file.</span></span>  
+ <span data-ttu-id="e1953-109">使用 [/doc](../../../visual-basic/reference/command-line-compiler/doc.md) 进行编译可以将文档注释处理到文件中。</span><span class="sxs-lookup"><span data-stu-id="e1953-109">Compile with [/doc](../../../visual-basic/reference/command-line-compiler/doc.md) to process documentation comments to a file.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="bf9b5-110">示例</span><span class="sxs-lookup"><span data-stu-id="bf9b5-110">Example</span></span>  
- <span data-ttu-id="bf9b5-111">此示例使用`<para>`拆分备注部分的标记`UpdateRecord`分成两个段落的方法。</span><span class="sxs-lookup"><span data-stu-id="bf9b5-111">This example uses the `<para>` tag to split the remarks section for the `UpdateRecord` method into two paragraphs.</span></span>  
+## <a name="example"></a><span data-ttu-id="e1953-110">示例</span><span class="sxs-lookup"><span data-stu-id="e1953-110">Example</span></span>  
+ <span data-ttu-id="e1953-111">此示例使用`<para>`拆分备注部分的标记`UpdateRecord`分成两个段落的方法。</span><span class="sxs-lookup"><span data-stu-id="e1953-111">This example uses the `<para>` tag to split the remarks section for the `UpdateRecord` method into two paragraphs.</span></span>  
   
  [!code-vb[VbVbcnXmlDocComments#6](../../../visual-basic/language-reference/xmldoc/codesnippet/VisualBasic/para_1.vb)]  
   
-## <a name="see-also"></a><span data-ttu-id="bf9b5-112">请参阅</span><span class="sxs-lookup"><span data-stu-id="bf9b5-112">See Also</span></span>  
- [<span data-ttu-id="bf9b5-113">XML 注释标记</span><span class="sxs-lookup"><span data-stu-id="bf9b5-113">XML Comment Tags</span></span>](../../../visual-basic/language-reference/xmldoc/index.md)
+## <a name="see-also"></a><span data-ttu-id="e1953-112">请参阅</span><span class="sxs-lookup"><span data-stu-id="e1953-112">See Also</span></span>  
+ [<span data-ttu-id="e1953-113">XML 注释标记</span><span class="sxs-lookup"><span data-stu-id="e1953-113">XML Comment Tags</span></span>](../../../visual-basic/language-reference/xmldoc/index.md)

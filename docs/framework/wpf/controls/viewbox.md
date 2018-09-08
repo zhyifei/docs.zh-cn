@@ -10,22 +10,22 @@ helpviewer_keywords:
 - scaling elements [WPF], Viewbox control
 ms.assetid: 00fc0a16-1078-4d55-9849-ffaf7da96531
 ms.openlocfilehash: fe7184df5d889a93f2274dfd20669701947f0965
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43871000"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44212342"
 ---
-# <a name="viewbox"></a><span data-ttu-id="87041-102">Viewbox</span><span class="sxs-lookup"><span data-stu-id="87041-102">Viewbox</span></span>
-<span data-ttu-id="87041-103"><xref:System.Windows.Controls.Viewbox>控件用来拉伸或缩放的子元素。</span><span class="sxs-lookup"><span data-stu-id="87041-103">The <xref:System.Windows.Controls.Viewbox> control is used to stretch or scale a child element.</span></span>  
+# <a name="viewbox"></a><span data-ttu-id="69e11-102">Viewbox</span><span class="sxs-lookup"><span data-stu-id="69e11-102">Viewbox</span></span>
+<span data-ttu-id="69e11-103"><xref:System.Windows.Controls.Viewbox>控件用来拉伸或缩放的子元素。</span><span class="sxs-lookup"><span data-stu-id="69e11-103">The <xref:System.Windows.Controls.Viewbox> control is used to stretch or scale a child element.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="87041-104">本节内容</span><span class="sxs-lookup"><span data-stu-id="87041-104">In This Section</span></span>  
- [<span data-ttu-id="87041-105">向 Viewbox 的内容应用 Stretch 属性</span><span class="sxs-lookup"><span data-stu-id="87041-105">Apply Stretch Properties to the Contents of a Viewbox</span></span>](../../../../docs/framework/wpf/controls/how-to-apply-stretch-properties-to-the-contents-of-a-viewbox.md)  
+## <a name="in-this-section"></a><span data-ttu-id="69e11-104">本节内容</span><span class="sxs-lookup"><span data-stu-id="69e11-104">In This Section</span></span>  
+ [<span data-ttu-id="69e11-105">向 Viewbox 的内容应用 Stretch 属性</span><span class="sxs-lookup"><span data-stu-id="69e11-105">Apply Stretch Properties to the Contents of a Viewbox</span></span>](../../../../docs/framework/wpf/controls/how-to-apply-stretch-properties-to-the-contents-of-a-viewbox.md)  
   
-## <a name="reference"></a><span data-ttu-id="87041-106">参考</span><span class="sxs-lookup"><span data-stu-id="87041-106">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="69e11-106">参考</span><span class="sxs-lookup"><span data-stu-id="69e11-106">Reference</span></span>  
  <xref:System.Windows.Controls.Viewbox>  
   
  <xref:System.Windows.Controls.Image>  
   
-## <a name="see-also"></a><span data-ttu-id="87041-107">请参阅</span><span class="sxs-lookup"><span data-stu-id="87041-107">See Also</span></span>  
- [<span data-ttu-id="87041-108">WPF 控件库示例</span><span class="sxs-lookup"><span data-stu-id="87041-108">WPF Controls Gallery Sample</span></span>](https://go.microsoft.com/fwlink/?LinkID=160053)
+## <a name="see-also"></a><span data-ttu-id="69e11-107">请参阅</span><span class="sxs-lookup"><span data-stu-id="69e11-107">See Also</span></span>  
+ [<span data-ttu-id="69e11-108">WPF 控件库示例</span><span class="sxs-lookup"><span data-stu-id="69e11-108">WPF Controls Gallery Sample</span></span>](https://go.microsoft.com/fwlink/?LinkID=160053)
