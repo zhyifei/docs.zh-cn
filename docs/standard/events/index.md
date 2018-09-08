@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: b6f65241-e0ad-4590-a99f-200ce741bb1f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 623700161ae4587daeb2c7348055d413512f7c87
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: f5d106dd3b7b9a7a0aeedca86e63a6fccbb1cc27
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43805632"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44192478"
 ---
 # <a name="handling-and-raising-events"></a>处理和引发事件
 .NET Framework 中的事件基于委托模型。 委托模型遵守观察者设计模式，使订阅者能够向提供方注册并接收相关通知。 事件发送方推送事件发生的通知，事件接收器接收该通知并定义对它的响应。 本文介绍委托模型的主要组件、如何在应用程序中使用事件以及如何在你的代码中实现事件。  
@@ -87,11 +87,12 @@ ms.locfileid: "43805632"
 |[观察程序设计模式](../../../docs/standard/events/observer-design-pattern.md)|描述允许订阅者向提供方注册和接收通知的设计模式。|  
 |[如何：在 Web 窗体应用程序中使用事件](../../../docs/standard/events/how-to-consume-events-in-a-web-forms-application.md)|演示如何处理 Web 窗体控件引发的事件。|  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.EventHandler>  
- <xref:System.EventHandler%601>  
- <xref:System.EventArgs>  
- <xref:System.Delegate>  
- [事件和路由事件概述（UWP 应用）](/windows/uwp/xaml-platform/events-and-routed-events-overview)  
- [事件 (Visual Basic)](../../visual-basic/programming-guide/language-features/events/index.md)  
- [事件（C# 编程指南）](../../csharp/programming-guide/events/index.md)
+## <a name="see-also"></a>请参阅
+
+- <xref:System.EventHandler>  
+- <xref:System.EventHandler%601>  
+- <xref:System.EventArgs>  
+- <xref:System.Delegate>  
+- [事件和路由事件概述（UWP 应用）](/windows/uwp/xaml-platform/events-and-routed-events-overview)  
+- [事件 (Visual Basic)](../../visual-basic/programming-guide/language-features/events/index.md)  
+- [事件（C# 编程指南）](../../csharp/programming-guide/events/index.md)

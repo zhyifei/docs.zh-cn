@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: bb79761a-ca08-44ee-b142-b06b3e2fc22b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cfa44187d846c72f0dfd4fb131cacbe41648dd32
-ms.sourcegitcommit: e8dc507cfdaad504fc9d4c83d28d24569dcef91c
+ms.openlocfilehash: abb38e4f084575665954bc514584feed760b0666
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/03/2018
-ms.locfileid: "33579803"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44207637"
 ---
 # <a name="standard-date-and-time-format-strings"></a>标准日期和时间格式字符串
 标准日期和时间格式字符串使用单个格式说明符来定义日期和时间值的文本表示形式。 包含一个以上字符（包括空白）的任何日期和时间格式字符串都会被解释为自定义日期和时间格式字符串；有关更多信息，请参见[自定义日期和时间格式字符串](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)。 可通过两种方式使用标准或自定义格式字符串：  
@@ -413,9 +413,10 @@ ms.locfileid: "33579803"
 ### <a name="datetimeformatinfo-properties"></a>DateTimeFormatInfo 属性  
  格式化受当前的 <xref:System.Globalization.DateTimeFormatInfo> 对象的属性影响，其由当前线程区域性隐式提供或由调用格式化的方法的 <xref:System.IFormatProvider> 参数显式提供。 对于 <xref:System.IFormatProvider> 参数，应用程序应指定一个表示区域性的 <xref:System.Globalization.CultureInfo> 对象或表示特定区域性的日期和时间格式设置约定的 <xref:System.Globalization.DateTimeFormatInfo> 对象。 许多标准日期和时间格式说明符是由当前的 <xref:System.Globalization.DateTimeFormatInfo> 对象的属性定义的格式设置模式的别名。 应用程序通过更改相应 <xref:System.Globalization.DateTimeFormatInfo> 属性的相应日期和时间格式模式，可以更改由某些标准日期和时间格式说明符产生的结果。  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.DateTime?displayProperty=nameWithType>  
- <xref:System.DateTimeOffset?displayProperty=nameWithType>  
- [格式设置类型](../../../docs/standard/base-types/formatting-types.md)  
- [自定义日期和时间格式字符串](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)  
- [示例：.NET Framework 4 格式设置实用工具](https://code.msdn.microsoft.com/NET-Framework-4-Formatting-9c4dae8d)
+## <a name="see-also"></a>请参阅
+
+- <xref:System.DateTime?displayProperty=nameWithType>  
+- <xref:System.DateTimeOffset?displayProperty=nameWithType>  
+- [格式设置类型](../../../docs/standard/base-types/formatting-types.md)  
+- [自定义日期和时间格式字符串](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)  
+- [示例：.NET Framework 4 格式设置实用工具](https://code.msdn.microsoft.com/NET-Framework-4-Formatting-9c4dae8d)
