@@ -3,11 +3,11 @@ title: 无配置的 AJAX 服务
 ms.date: 03/30/2017
 ms.assetid: e6db7acd-5679-45d4-b98a-8449c6873838
 ms.openlocfilehash: f12b0fad97c9f43397f3b202800943e6d061aa53
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44129253"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44180889"
 ---
 # <a name="ajax-service-without-configuration"></a>无配置的 AJAX 服务
 此示例演示如何使用 Windows Communication Foundation (WCF) 来创建基本的 ASP.NET 异步 JavaScript 和 XML (AJAX) 服务 （使用从 Web 浏览器客户端的 JavaScript 代码可以访问的服务），而无需使用任何配置设置。 该服务在 .svc 文件中使用特殊语法来自动启用 AJAX 终结点。  

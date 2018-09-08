@@ -3,11 +3,11 @@ title: SQL 工作流实例存储的属性
 ms.date: 03/30/2017
 ms.assetid: 5bf75f3c-8f33-450d-967f-6ee862c14c67
 ms.openlocfilehash: 3707e4912628380e5e06eeae1a6d608a4b0d5555
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43869070"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44182903"
 ---
 # <a name="properties-of-sql-workflow-instance-store"></a>SQL 工作流实例存储的属性
 本节中的主题提供有关 SQL 工作流实例存储的属性的详细信息。  

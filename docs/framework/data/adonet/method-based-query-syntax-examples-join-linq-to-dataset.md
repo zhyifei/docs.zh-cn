@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 4fd5ed2c-b03a-4054-a3ed-3ddb380d7d9d
 ms.openlocfilehash: 6ec65cad0070bdbd1d510bcc822f3b71f9cf69dc
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43560469"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44195288"
 ---
 # <a name="method-based-query-syntax-examples-join-linq-to-dataset"></a>基于方法的查询语法示例：联接 (LINQ to DataSet)
 联接是面向相互之间没有可导航关系的数据源（如关系数据库表）的查询中的一项重要操作。 联接两个数据源就是将一个数据源中的对象与另一个数据源中具有相同公共属性的对象相关联。 有关详细信息，请参阅[标准查询运算符概述](https://msdn.microsoft.com/library/24cda21e-8af8-4632-b519-c404a839b9b2)。  

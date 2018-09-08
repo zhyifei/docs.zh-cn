@@ -3,11 +3,11 @@ title: 如何：在企业中锁定终结点
 ms.date: 03/30/2017
 ms.assetid: 1b7eaab7-da60-4cf7-9d6a-ec02709cf75d
 ms.openlocfilehash: 032b69c1fae38576b0374b329f1ab6fe90e2b1a0
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43806194"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44184383"
 ---
 # <a name="how-to-lock-down-endpoints-in-the-enterprise"></a>如何：在企业中锁定终结点
 大企业往往要求开发的应用程序符合企业安全策略。 以下主题讨论如何开发和安装客户端的终结点验证程序，它可以用来验证安装在计算机上的所有 Windows Communication Foundation (WCF) 客户端应用程序。  

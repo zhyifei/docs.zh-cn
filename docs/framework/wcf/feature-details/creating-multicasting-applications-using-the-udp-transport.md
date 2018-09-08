@@ -3,11 +3,11 @@ title: 创建使用 UDP 传输的多播应用程序
 ms.date: 03/30/2017
 ms.assetid: 7485154a-6e85-4a67-a9d4-9008e741d4df
 ms.openlocfilehash: 89ac99ffec614eeebd076f9868568dcf2c7b04fd
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44137001"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44178023"
 ---
 # <a name="creating-multicasting-applications-using-the-udp-transport"></a>创建使用 UDP 传输的多播应用程序
 多播应用程序同时向大量收件人发送小消息，而无需建立点到点连接。 对于此类应用程序而言，速度比可靠性更重要。 换句话说，更重要的是发送及时的数据，而不是确保确实收到任何特定的消息。 现在，WCF 支持使用 <xref:System.ServiceModel.UdpBinding> 编写多播应用程序。 此传输在服务需要将小消息同时发出到大量客户端的方案中非常有用。 股票行情自动收录器应用程序是这类服务的一个示例。  

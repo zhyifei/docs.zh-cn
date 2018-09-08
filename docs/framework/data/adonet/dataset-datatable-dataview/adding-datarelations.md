@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: a4a564fb-c1c4-4135-b6c2-b030e51195e4
 ms.openlocfilehash: d0f481979ead7af775d462a2624ec43080e2c5a9
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43891075"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44184336"
 ---
 # <a name="adding-datarelations"></a>添加 DataRelation
 在包含多个 <xref:System.Data.DataSet> 对象的 <xref:System.Data.DataTable> 中，可以使用 <xref:System.Data.DataRelation> 对象来使一个表与另一个表相关，在多个表之间导航，以及从相关表中返回子行或父行。  

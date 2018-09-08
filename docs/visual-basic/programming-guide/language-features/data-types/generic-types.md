@@ -36,12 +36,12 @@ helpviewer_keywords:
 - type arguments [Visual Basic], defining
 - arguments [Visual Basic], type
 ms.assetid: 89f771d9-ecbb-4737-88b8-116b63c6cf4d
-ms.openlocfilehash: c13bdc47568aa8bbd934bb2b86410e17bbc485dc
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 3a419fb38d3b97b08c8aaa094265d8b426429ae4
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43562804"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44188665"
 ---
 # <a name="generic-types-in-visual-basic-visual-basic"></a>Visual Basic 中的泛型类型 (Visual Basic)
 *泛型类型* 是可适应对多种数据类型执行相同功能的单个编程元素。 定义泛型类或过程时，无需为可能需要对其执行该功能的每个数据类型定义单独版本。  
@@ -147,15 +147,16 @@ ms.locfileid: "43562804"
   
 -   *构造类型*。 通过为泛型类型的类型形参提供类型实参，从泛型类型声明的类、结构、接口、过程或委托。  
   
-## <a name="see-also"></a>请参阅  
- [数据类型](../../../../visual-basic/programming-guide/language-features/data-types/index.md)  
- [类型字符](../../../../visual-basic/programming-guide/language-features/data-types/type-characters.md)  
- [值类型和引用类型](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)  
- [在 Visual Basic 中的类型转换](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)  
- [数据类型疑难解答](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)  
- [数据类型](../../../../visual-basic/language-reference/data-types/index.md)  
- [Of](../../../../visual-basic/language-reference/statements/of-clause.md)  
- [As](../../../../visual-basic/language-reference/statements/as-clause.md)  
- [Object 数据类型](../../../../visual-basic/language-reference/data-types/object-data-type.md)  
- [协变和逆变](../../concepts/covariance-contravariance/index.md)  
- [迭代器](https://msdn.microsoft.com/library/f45331db-d595-46ec-9142-551d3d1eb1a7)
+## <a name="see-also"></a>请参阅
+
+- [数据类型](../../../../visual-basic/programming-guide/language-features/data-types/index.md)  
+- [类型字符](../../../../visual-basic/programming-guide/language-features/data-types/type-characters.md)  
+- [值类型和引用类型](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)  
+- [在 Visual Basic 中的类型转换](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)  
+- [数据类型疑难解答](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)  
+- [数据类型](../../../../visual-basic/language-reference/data-types/index.md)  
+- [Of](../../../../visual-basic/language-reference/statements/of-clause.md)  
+- [As](../../../../visual-basic/language-reference/statements/as-clause.md)  
+- [Object 数据类型](../../../../visual-basic/language-reference/data-types/object-data-type.md)  
+- [协变和逆变](../../concepts/covariance-contravariance/index.md)  
+- [迭代器](../../../../visual-basic/programming-guide/concepts/iterators.md)

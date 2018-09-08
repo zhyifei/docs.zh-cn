@@ -6,11 +6,11 @@ helpviewer_keywords:
 - Visual Basic, data access
 ms.assetid: 3086ab38-3be5-4b22-9385-7d0e16b04f6a
 ms.openlocfilehash: 220d662576a5f23194dee7e23317bdbb0027546d
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44098532"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44185726"
 ---
 # <a name="accessing-data-in-visual-basic-applications"></a>在 Visual Basic 应用程序中访问数据
 Visual Basic 包括多种新功能，以帮助开发访问数据的应用程序。 通过将项从[“数据源”窗口](/visualstudio/data-tools/add-new-data-sources)拖到窗体上来创建 Windows 应用程序的数据绑定窗体。 通过将项从“数据源窗口”拖动到现有控件上来将控件绑定到数据。  

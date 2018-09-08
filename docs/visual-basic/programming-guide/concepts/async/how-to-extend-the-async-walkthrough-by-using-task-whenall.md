@@ -3,11 +3,11 @@ title: 如何： 使用 Task.WhenAll (Visual Basic) 扩展异步演练
 ms.date: 07/20/2015
 ms.assetid: c06d386d-e996-4da9-bf3d-05a3b6c0a258
 ms.openlocfilehash: 09496f7044a0be86a3fdb37085b09069086750ce
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44129068"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44184035"
 ---
 # <a name="how-to-extend-the-async-walkthrough-by-using-taskwhenall-visual-basic"></a>如何： 使用 Task.WhenAll (Visual Basic) 扩展异步演练
 可以提高的中的异步解决方案性能[演练： 使用 Async 和 Await (Visual Basic 中) 通过 Web 访问](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)通过使用<xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType>方法。 此方法以异步方式等待多个异步操作（它们表示为任务的集合）。  

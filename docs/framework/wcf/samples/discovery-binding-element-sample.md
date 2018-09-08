@@ -3,11 +3,11 @@ title: 发现绑定元素示例
 ms.date: 03/30/2017
 ms.assetid: af513015-85bf-417b-8729-1bdff77ff6d6
 ms.openlocfilehash: d906d9a389c50095f2af5d52e3874c3e43199e68
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43877594"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44177531"
 ---
 # <a name="discovery-binding-element-sample"></a>发现绑定元素示例
 本示例演示如何使用发现客户端绑定元素发现服务。 开发人员使用此功能可以向其现有客户端通道堆栈添加发现客户端通道，从而使编程模型非常直观。 当关联通道打开时，会使用发现解析服务地址。 本示例包含以下项目：  

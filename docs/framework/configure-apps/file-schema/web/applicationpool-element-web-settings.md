@@ -9,11 +9,11 @@ author: mcleblanc
 ms.author: markl
 manager: markl
 ms.openlocfilehash: 1a129abca5888120d03c42689ac825d768733a9d
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44037680"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44190356"
 ---
 # <a name="ltapplicationpoolgt-element-web-settings"></a>&lt;applicationPool&gt;元素 （Web 设置）
 指定 ASP.NET 用于 ASP.NET 应用程序在中集成模式下运行时管理的进程范围行为的配置设置[!INCLUDE[iisver](../../../../../includes/iisver-md.md)]或更高版本。  

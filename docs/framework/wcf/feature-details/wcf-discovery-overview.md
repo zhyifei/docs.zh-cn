@@ -3,11 +3,11 @@ title: WCF Discovery 概述
 ms.date: 03/30/2017
 ms.assetid: 84fad0e4-23b1-45b5-a2d4-c9cdf90bbb22
 ms.openlocfilehash: 24d758502e360a8368be25c506b8648b12a3eb20
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44069156"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44173069"
 ---
 # <a name="wcf-discovery-overview"></a>WCF Discovery 概述
 Discovery API 提供了统一的编程模型来使用 WS-Discovery 协议动态发布和发现 Web 服务。 通过这些 API，服务可以发布自身，客户端可以查找已发布的服务。 服务一旦可供检测，即可发送公告消息，并侦听和响应发现请求。 可检测到的服务可以发送 Hello 消息和 Bye 消息，前者用于公告服务将到达网络，后者用于公告服务将离开网络。 若要查找服务，客户端将在网络上发送包含特定条件（如服务协定类型、关键字和范围）的 `Probe` 请求。 服务接收到此 `Probe` 请求，并确定它们是否匹配该条件。 如果某一服务匹配该条件，该服务会做出响应，向客户端回发一条 `ProbeMatch` 消息，该消息包含与该服务联系所需的信息。 客户端还可以发送 `Resolve` 请求，以便查找可能已更改终结点地址的服务。 匹配的服务会向客户端回发一条 `Resolve` 消息，以此来响应 `ResolveMatch` 请求。  

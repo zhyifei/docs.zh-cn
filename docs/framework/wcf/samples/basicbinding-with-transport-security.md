@@ -5,11 +5,11 @@ ms.assetid: f49b1de6-0254-4362-8ef2-fccd8ff9688b
 author: BrucePerlerMS
 manager: mbaldwin
 ms.openlocfilehash: 69257099338ae2d50c5ea184c0800d0057e020f4
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44032470"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44185397"
 ---
 # <a name="basicbinding-with-transport-security"></a>使用传输安全的 BasicBinding
 本示例演示对基本绑定使用 SSL 传输安全。 此示例基于[Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md)实现计算器服务。  

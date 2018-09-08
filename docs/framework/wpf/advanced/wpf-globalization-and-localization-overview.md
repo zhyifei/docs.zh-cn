@@ -6,11 +6,11 @@ helpviewer_keywords:
 - localization [WPF], about localization
 ms.assetid: 56e5a5c8-6c96-4d19-b8e1-a5be1dc564af
 ms.openlocfilehash: 54c5caaf3ade07f342e94ad0359f00c1418eace4
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44076984"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44180353"
 ---
 # <a name="wpf-globalization-and-localization-overview"></a>WPF 全球化和本地化概述
 当你将自己的产品限制为只能通过一种语言使用时，便将潜在的客户群限制为全球 65 亿人口中的一小部分。 如果想让自己的应用程序被全球用户所接受，那么对产品进行经济而有效的本地化将是赢得更多客户的最好、最经济的方法。  

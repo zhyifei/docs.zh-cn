@@ -2,12 +2,12 @@
 title: 结构 (F#)
 description: '了解有关 F # 结构，紧凑对象类型通常比用于具有少量数据且行为简单类型的类更有效。'
 ms.date: 05/16/2016
-ms.openlocfilehash: 889d493af3c9c388bdc7969c02bc7b021b82517d
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 08af88132dda28883e246b94585ff4ed8bd2f16a
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43799666"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44181922"
 ---
 # <a name="structures"></a>结构
 
@@ -48,9 +48,51 @@ type [accessibility-modifier] type-name =
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet2501.fs)]
 
+## <a name="byreflike-structs"></a>ByRefLike 结构
+
+您可以定义自己的结构，可以遵循`byref`-如语义： 请参阅[Byref](byrefs.md)有关详细信息。 这通过<xref:System.Runtime.CompilerServices.IsByRefLikeAttribute>属性：
+
+```fsharp
+open System
+open System.Runtime.CompilerServices
+
+[<IsByRefLike; Struct>]
+type S(count1: Span<int>, count2: Span<int>) =
+    member x.Count1 = count1
+    member x.Count2 = count2
+```
+
+`IsByRefLike` 并不意味着`Struct`。 必须同时出现在类型上。
+
+一个"`byref`-例如"F # 中的结构是绑定堆栈的值类型。 它永远不会分配托管堆上。 一个`byref`-像结构可用于高效的编程中，因为它强制实施强检查有关生存期和非捕获组。 中的规则：
+
+* 它们可用作函数参数、 方法参数、 局部变量、 方法返回。
+* 它们不能是静态或实例的类或常规结构的成员。
+* 不能通过任何闭包构造捕获它们 (`async`方法或 lambda 表达式)。
+* 它们不能用作泛型参数。
+
+尽管这些规则非常强限制使用，但它们这样做是为了满足这一承诺的高性能计算以安全方式。
+
+## <a name="readonly-structs"></a>只读结构
+
+你可以批注与结构<xref:System.Runtime.CompilerServices.IsReadOnlyAttribute>属性。 例如：
+
+```fsharp
+[<IsReadOnly; Struct>]
+type S(count1: int, count2: int) =
+    member x.Count1 = count1
+    member x.Count2 = count2
+```
+
+`IsReadOnly` 并不意味着`Struct`。 你必须添加具有`IsReadOnly`结构。
+
+此属性的使用发出元数据让 F # 和 C# 知道会将其视为`inref<'T>`和`in ref`分别。
+
+定义 readonly 结构内的可变值将产生错误。
+
 ## <a name="struct-records-and-discriminated-unions"></a>结构记录和可区分的联合
 
-从 F # 4.1 开始，你可以代表[记录](records.md)并[可区分联合](discriminated-unions.md)为与结构`[<Struct>]`属性。  请参阅每个文章，了解详细信息。
+可以表示[记录](records.md)并[可区分联合](discriminated-unions.md)为与结构`[<Struct>]`属性。  请参阅每个文章，了解详细信息。
 
 ## <a name="see-also"></a>请参阅
 

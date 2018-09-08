@@ -3,11 +3,11 @@ title: 支持的部署方案
 ms.date: 03/30/2017
 ms.assetid: 3399f208-3504-4c70-a22e-a7c02a8b94a6
 ms.openlocfilehash: a86fd9d50b2bdfa2daafa3bec98802d10a1efef5
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44074652"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44183374"
 ---
 # <a name="supported-deployment-scenarios"></a>支持的部署方案
 支持在部分受信任的应用程序中使用的 Windows Communication Foundation (WCF) 功能子集旨在满足使用 WCF 部分，而不是所有方案的要求。 在服务器上，WCF 满足 Internet 规模的要求共享宿主提供程序运行第三方应用程序中[!INCLUDE[vstecasplong](../../../../includes/vstecasplong-md.md)]中等信任权限集出于安全原因。 在客户端，WCF 部分信任支持旨在满足的要求的部署技术如[ClickOnce 部署](https://go.microsoft.com/fwlink/?LinkId=83712)或[!INCLUDE[avalon2](../../../../includes/avalon2-md.md)]的 XAML 浏览器应用程序技术，允许无缝和安全来自不受信任的站点的桌面应用程序的部署。  

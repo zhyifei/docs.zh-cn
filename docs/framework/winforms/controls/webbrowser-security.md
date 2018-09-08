@@ -6,11 +6,11 @@ helpviewer_keywords:
 - security [Windows Forms], WebBrowser control
 ms.assetid: 0968846e-48ee-485a-9797-65b5b9a622f8
 ms.openlocfilehash: 683c6ad4cbc55a889f4a0c1d20ebe8e8a2669a13
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44062726"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44180370"
 ---
 # <a name="webbrowser-security"></a>WebBrowser 安全
 <xref:System.Windows.Forms.WebBrowser>控件旨在以完全信任权限。 在控件中显示的 HTML 内容可以来自外部 Web 服务器，并且可以包含在脚本或 Web 控件的窗体中的非托管的代码。 如果您使用<xref:System.Windows.Forms.WebBrowser>这种情况下，该控件中的控件将不达到安全标准是 Internet Explorer，但托管<xref:System.Windows.Forms.WebBrowser>控件不会阻止运行此类非托管的代码。  

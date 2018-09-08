@@ -10,11 +10,11 @@ helpviewer_keywords:
 - FlowLayoutPanel control [Windows Forms], about FlowLayoutPanel control
 ms.assetid: 3883e024-f5a0-456d-9c27-b4dfa1cc9045
 ms.openlocfilehash: 73767114da1c04222fb8ceaf812153421c4597aa
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
-ms.translationtype: HT
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44048112"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44185186"
 ---
 # <a name="flowlayoutpanel-control-overview"></a>FlowLayoutPanel 控件概述
 <xref:System.Windows.Forms.FlowLayoutPanel> 控件沿水平或纵排方向排列其内容。 可从一行到下一行，或从一列到下一列来进行控件内容换行。 或者，可以剪切其内容，而非进行换行。  

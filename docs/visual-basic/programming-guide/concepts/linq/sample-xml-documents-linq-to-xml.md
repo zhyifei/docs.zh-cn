@@ -2,12 +2,12 @@
 title: 示例 XML 文档 (LINQ to XML)
 ms.date: 07/20/2015
 ms.assetid: a734cc4e-d95d-4631-91a2-81618c8ad894
-ms.openlocfilehash: f1860eed059de4b6922976da8d3b9190cf96bbed
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 5ddfdd9c8b7114651cea59a0b356ee87f29bd62b
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43883995"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44186781"
 ---
 # <a name="sample-xml-documents-linq-to-xml"></a>示例 XML 文档 (LINQ to XML)
 整个 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 文档的代码示例和代码段中均使用下面的示例文件。  
@@ -26,7 +26,7 @@ ms.locfileid: "43883995"
 |[示例 XML 文件：测试配置 (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-test-configuration-linq-to-xml.md)|包含一些伪测试配置数据的 XML 文档。|  
 |[示例 XML 文件：命名空间中的测试配置](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-test-configuration-in-a-namespace.md)|处于某一命名空间中的包含一些伪测试配置数据的 XML 文档。|  
 |[示例 XML 文件：客户和订单 (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml.md)|包含客户和订单的 XML 文档。|  
-|[示例 XSD 文件：客户和订单](../../../../visual-basic/programming-guide/concepts/linq/sample-xsd-file-customers-and-orders.md)|XML 架构定义 (XSD)，用于验证[示例 XML 文件：客户和订单 (LINQ to XML)](https://msdn.microsoft.com/library/26790c41-5976-4558-a096-d0f67bfc4d92)。|  
+|[示例 XSD 文件：客户和订单](../../../../visual-basic/programming-guide/concepts/linq/sample-xsd-file-customers-and-orders.md)|XML 架构定义 (XSD)，用于验证[示例 XML 文件：客户和订单 (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml.md)。|  
 |[示例 XML 文件：命名空间中的客户和订单](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-in-a-namespace.md)|处于某一命名空间中的包含客户和订单的 XML 文档。|  
 |[示例 XML 文件：数值数据 (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-numerical-data-linq-to-xml.md)|包含适合于求和和分组的数据的 XML 文档。|  
 |[示例 XML 文件：命名空间中的数值数据](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-numerical-data-in-a-namespace.md)|处于某一命名空间中的包含适合于求和和分组的数据的 XML 文档。|  

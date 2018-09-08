@@ -8,11 +8,11 @@ helpviewer_keywords:
 - animation [WPF], decelerating
 ms.assetid: 4f383b2c-f94d-4a4e-9a06-f56f5dae95f9
 ms.openlocfilehash: b1649f27fc8ff850516eef2086dbce732915406b
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44135869"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44180431"
 ---
 # <a name="how-to-accelerate-or-decelerate-an-animation"></a>如何：使动画加速或减速
 此示例演示如何使动画加速和减速随着时间的推移。 在以下示例中，多个矩形进行动画处理与不同的动画<xref:System.Windows.Media.Animation.Timeline.AccelerationRatio%2A>和<xref:System.Windows.Media.Animation.Timeline.DecelerationRatio%2A>设置。  

@@ -13,11 +13,11 @@ helpviewer_keywords:
 - FileOpen function
 ms.assetid: 4c145456-5453-4bda-aab5-578dc8bee59a
 ms.openlocfilehash: 05d849afb50a3b1c4eeecc3db26170bacc3517df
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44066186"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44182916"
 ---
 # <a name="mycomputerfilesystem-object"></a>My.Computer.FileSystem 对象
 提供了用于处理驱动器、文件和目录的属性和方法。  

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Windows applications
 - Windows Forms, Visual Basic
 ms.assetid: 0b919d30-7fd6-42db-85c8-543d15312441
-ms.openlocfilehash: cdc3e42adcb2c7eae52aab0b14d0f9c6a822eeea
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: b900b85b4e3e56dbc587a15edea40f6e3032cbd1
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43881968"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44192426"
 ---
 # <a name="windows-forms-application-basics-visual-basic"></a>Windows 窗体应用程序基础知识 (Visual Basic)
 Visual Basic 的一个重要部分是能够创建用户的计算机本地运行的 Windows 窗体应用程序。 可以使用 Visual Studio 来创建使用 Windows 窗体的应用程序和用户界面。 Windows 窗体应用程序基于类从<xref:System.Windows.Forms>命名空间。  
@@ -67,7 +67,7 @@ Visual Basic 的一个重要部分是能够创建用户的计算机本地运行�
 |到|查看|  
 |--------|---------|  
 |使用<xref:System.Windows.Forms.BindingSource>组件|[如何：使用设计器将 Windows 窗体控件与 BindingSource 组件进行绑定](../../../framework/winforms/controls/bind-wf-controls-with-the-bindingsource.md)|  
-|使用[!INCLUDE[vstecado](~/includes/vstecado-md.md)]数据源|[如何：使用 Windows 窗体 BindingSource 组件对 ADO.NET 数据进行排序和筛选](https://msdn.microsoft.com/library/ya3sah92.aspx)|  
+|使用[!INCLUDE[vstecado](~/includes/vstecado-md.md)]数据源|[如何：使用 Windows 窗体 BindingSource 组件对 ADO.NET 数据进行排序和筛选](../../../framework/winforms/controls/sort-and-filter-ado-net-data-with-wf-bindingsource-component.md)|
 |使用数据源窗口|[演练：在 Windows 窗体上显示数据](/visualstudio/data-tools/accessing-data-in-visual-studio)|  
   
 ## <a name="deploying-applications-to-client-computers"></a>将应用程序部署到客户端计算机  
@@ -95,7 +95,8 @@ Visual Basic 的一个重要部分是能够创建用户的计算机本地运行�
 |打印窗体的内容|[如何：在 Windows 窗体中打印图形](../../../framework/winforms/advanced/how-to-print-graphics-in-windows-forms.md)<br /><br /> [如何：打印 Windows 窗体中的多页文本文件](../../../framework/winforms/advanced/how-to-print-a-multi-page-text-file-in-windows-forms.md)|   
 |了解有关 Windows 窗体安全的详细信息|[Windows 窗体中的安全性概述](../../../framework/winforms/security-in-windows-forms-overview.md)|  
   
-## <a name="see-also"></a>请参阅  
- <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase>  
- [Windows 窗体概述](../../../framework/winforms/windows-forms-overview.md)  
- [My.Forms 对象](../../../visual-basic/language-reference/objects/my-forms-object.md)
+## <a name="see-also"></a>请参阅
+
+- <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase>  
+- [Windows 窗体概述](../../../framework/winforms/windows-forms-overview.md)  
+- [My.Forms 对象](../../../visual-basic/language-reference/objects/my-forms-object.md)

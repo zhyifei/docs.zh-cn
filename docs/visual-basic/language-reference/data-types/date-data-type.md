@@ -16,11 +16,11 @@ helpviewer_keywords:
 - '# specifier for Date literals'
 ms.assetid: d9edf5b0-e85e-438b-a1cf-1f321e7c831b
 ms.openlocfilehash: 32bd0912b0bae3340cffed010fc67431d0efb376
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43881351"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44176571"
 ---
 # <a name="date-data-type-visual-basic"></a>Date 数据类型 (Visual Basic)
 保存 IEEE 64 位（8 字节）值，它代表从 0001 年 1 月 1 日到 9999 年 12 月 31 日的日期，12:00:00 AM（午夜）到 11:59:59.9999999 PM 的时间。 每个增量表示自公历 1 年 1 月 1 日开始后经过的 100 纳秒的时间。 最大值表示 10000 年 1 月 1 日开始之前的 100 纳秒。  

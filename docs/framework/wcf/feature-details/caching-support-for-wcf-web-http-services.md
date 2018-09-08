@@ -3,11 +3,11 @@ title: 对 WCF Web HTTP 服务的缓存支持
 ms.date: 03/30/2017
 ms.assetid: 7f8078e0-00d9-415c-b8ba-c1b6d5c31799
 ms.openlocfilehash: 25b564235b5d2b3b26b5d657f3e5f0bd5d594125
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44081305"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44185069"
 ---
 # <a name="caching-support-for-wcf-web-http-services"></a>对 WCF Web HTTP 服务的缓存支持
 [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] 可以使用已在 WCF Web HTTP 服务在 ASP.NET 中提供的声明性缓存机制。 这样，你可以缓存来自 WCF Web HTTP 服务操作的响应。 如果用户向配置为进行缓存的服务发送了 HTTP GET，ASP.NET 将发送回已缓存的响应且不会调用服务方法。 在缓存过期后，下次用户发送 HTTP GET 时，将会调用服务方法且再次缓存响应。 有关 ASP.NET 缓存的详细信息，请参阅[ASP.NET 缓存概述](https://go.microsoft.com/fwlink/?LinkId=152534)  

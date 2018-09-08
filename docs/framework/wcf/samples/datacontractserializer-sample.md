@@ -5,11 +5,11 @@ helpviewer_keywords:
 - XML Formatter
 ms.assetid: e0a2fe89-3534-48c8-aa3c-819862224571
 ms.openlocfilehash: ef1b01ff59fc32546dca8ed9c95f3a981ed408e3
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43867590"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44181006"
 ---
 # <a name="datacontractserializer-sample"></a>DataContractSerializer 示例
 DataContractSerializer 示例演示为数据协定类执行常规序列化和反序列化服务的 <xref:System.Runtime.Serialization.DataContractSerializer>。 此示例将创建`Record`对象，将其序列化到内存流，并返回到另一个内存流反序列化`Record`对象，以演示使用<xref:System.Runtime.Serialization.DataContractSerializer>。 然后示例使用二进制编写器序列化 `Record` 对象以演示编写器如何影响序列化。  

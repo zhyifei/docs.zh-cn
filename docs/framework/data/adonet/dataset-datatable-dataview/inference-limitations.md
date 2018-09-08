@@ -3,11 +3,11 @@ title: 推断限制
 ms.date: 03/30/2017
 ms.assetid: 78517994-5d57-44f8-9d20-38812977de09
 ms.openlocfilehash: d113df98cdd339300b3e75ceda49a56d4f346d3c
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44137221"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44190671"
 ---
 # <a name="inference-limitations"></a>推断限制
 根据每个文档中的 XML 元素，从 XML 推断 <xref:System.Data.DataSet> 架构的过程会产生不同的架构。 例如，考虑以下 XML 文档。  

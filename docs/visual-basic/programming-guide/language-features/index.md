@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Visual Basic code, elements of
 - Visual Basic code
 ms.assetid: b0b21730-298c-47e6-9a2f-cc81f628067b
-ms.openlocfilehash: a8f6da4dc42244fbadbaf0e96b0dd281a3f7ccb2
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 975bec73235b3b8f82088325e0d4abc50ce6b1dd
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43879599"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44185358"
 ---
 # <a name="visual-basic-language-features"></a>Visual Basic 语言功能
 以下主题介绍并讨论 Visual Basic 中，面向对象的编程语言的基本组件。 使用窗体和控件创建应用程序的用户界面后，需要编写代码来定义应用程序的行为。 与任何现代编程语言，Visual Basic 支持许多常见的编程构造和语言元素。  
@@ -77,8 +77,9 @@ ms.locfileid: "43879599"
  [XML](../../../visual-basic/programming-guide/language-features/xml/index.md)  
  收录了主题链接，有助于你了解如何在 Visual Basic 中使用 XML。  
   
-## <a name="related-sections"></a>相关章节  
- [集合](https://msdn.microsoft.com/library/e76533a9-5033-4a0b-b003-9c2be60d185b)  
+## <a name="related-sections"></a>相关章节
+
+ [集合](../../../visual-basic/programming-guide/concepts/collections.md)  
  介绍了 .NET Framework 提供的一些类型集合。 展示了如何使用简单的集合和键/值对集合。  
   
  [Visual Basic 语言参考](../../../visual-basic/language-reference/index.md)  

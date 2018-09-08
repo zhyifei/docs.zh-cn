@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 4311a77c9159428bf7beacc99d4479acb28b91b6
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44135804"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44195447"
 ---
 # <a name="getdemultiplexedstub-function"></a>GetDemultiplexedStub 函数
 创建对象转发器接收器，帮助客户端从 Windows Management 接收异步调用。

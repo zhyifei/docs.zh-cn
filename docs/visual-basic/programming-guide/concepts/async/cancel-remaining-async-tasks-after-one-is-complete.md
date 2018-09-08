@@ -2,12 +2,12 @@
 title: 后取消剩余异步任务之一完成 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: c928b5a1-622f-4441-8baf-adca1dde197f
-ms.openlocfilehash: 5dab0c4aa14710fe78d2473675aea8b8c8bb73b9
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 0f241d2769edf3efbba0aca3b19ef35b9cdad601
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43874792"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44207676"
 ---
 # <a name="cancel-remaining-async-tasks-after-one-is-complete-visual-basic"></a>后取消剩余异步任务之一完成 (Visual Basic)
 通过结合使用 <xref:System.Threading.Tasks.Task.WhenAny%2A?displayProperty=nameWithType> 方法和 <xref:System.Threading.CancellationToken>，可在一个任务完成时取消所有剩余任务。 `WhenAny` 方法采用任务集合中的一个参数。 该方法启动所有任务，并返回单个任务。 当集合中任意任务完成时，完成单个任务。  
@@ -37,7 +37,7 @@ ms.locfileid: "43874792"
  如果不想下载项目，可以查看本主题末尾处的 MainWindow.xaml.vb 文件。  
   
 ## <a name="building-the-example"></a>生成示例  
- 本主题中的示例将添加到项目中开发[取消一个异步任务或任务列表](https://msdn.microsoft.com/library/d6e4e801-df64-4705-98fc-df725a577fb0)取消的任务的列表。 该示例使用相同的 UI，但未显示使用“取消”按钮。  
+ 本主题中的示例将添加到项目中开发[取消一个异步任务或任务列表](../../../../visual-basic/programming-guide/concepts/async/cancel-an-async-task-or-a-list-of-tasks.md)取消的任务的列表。 该示例使用相同的 UI，但未显示使用“取消”按钮。  
   
  若要自行生成示例，请按“下载示例”部分的说明逐步操作，选择“CancelAListOfTasks”作为“启动项目”。 将此主题中的更改添加到该项目。  
   
@@ -232,8 +232,9 @@ End Class
 ' Download complete.  
 ```  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Threading.Tasks.Task.WhenAny%2A>  
- [微调异步应用程序 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/fine-tuning-your-async-application.md)  
- [使用 Async 和 Await 的异步编程 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md)  
- [Async Sample: Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)（异步示例：微调应用程序）
+## <a name="see-also"></a>请参阅
+
+- <xref:System.Threading.Tasks.Task.WhenAny%2A>  
+- [微调异步应用程序 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/fine-tuning-your-async-application.md)  
+- [使用 Async 和 Await 的异步编程 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md)  
+- [Async Sample: Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)（异步示例：微调应用程序）

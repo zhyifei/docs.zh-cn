@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: e800b610-31b4-4949-9c14-cb60e9f254be
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c6cf175472d68e99598dd56e170bee3d37ae3c2a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 97bd152cff53fb1c2edb107b6d6b34bd91ca1c49
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33570403"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44187643"
 ---
 # <a name="names-of-assemblies-and-dlls"></a>程序集和 DLL 的名称
 程序集是托管代码程序的部署和标识单元。 虽然程序集可以跨一个或多个文件，但通常程序集与 DLL 是一对一映射的。 因此，本部分仅描述 DLL 命名约定，然后可以将其映射到程序集命名约定。  
@@ -28,14 +28,15 @@ ms.locfileid: "33570403"
   
  `<Company>.<Component>.dll`  
   
- 其中`<Component>`包含一个或多个以点分隔的子句。 例如：  
+ 其中`<Component>`包含一个或多个以点号分隔的子句。 例如：  
   
  `Litware.Controls.dll`。  
   
- 部分 © 2005，2009 Microsoft Corporation。保留所有权利。  
+ 部分 © 2005，2009 Microsoft Corporation。*保留所有权利。*  
   
- 由 Pearson Education, Inc 许可，转载自 [Framework 设计准则：可重用 .NET 库的约定、惯用法和模式，第2版](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) 作者：Krzysztof Cwalina 和 Brad Abrams，由 Addison Wesley Professional 于 2008 年 10 月 22 日作为 Microsoft Windows 开发系列的一部分发布。  
+ *经 Pearson Education, Inc 授权，转载自[框架设计准则：可重用的 .NET 库的约定、习惯用语和模式，第2版](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) 作者：Krzysztof Cwalina 和 Brad Abrams，由 Addison Wesley Professional 于 2008 年 10 月 22 日印发，作为 Microsoft Windows 开发系列的一部分。*  
   
-## <a name="see-also"></a>请参阅  
- [框架设计指南](../../../docs/standard/design-guidelines/index.md)  
- [命名规则](../../../docs/standard/design-guidelines/naming-guidelines.md)
+## <a name="see-also"></a>请参阅
+
+- [框架设计指南](../../../docs/standard/design-guidelines/index.md)  
+- [命名规则](../../../docs/standard/design-guidelines/naming-guidelines.md)

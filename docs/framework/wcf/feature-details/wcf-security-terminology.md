@@ -9,11 +9,11 @@ ms.assetid: 68dde024-8e51-40ba-804f-ec52d85e9ca9
 author: BrucePerlerMS
 manager: mbaldwin
 ms.openlocfilehash: 72a2ea1393daa7435ae233d1e420cf88b6f5b6af
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44070675"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44190041"
 ---
 # <a name="wcf-security-terminology"></a>WCF 安全术语
 在讨论安全时使用的某些术语可能是您所不熟悉的。 本主题提供了一些安全术语的扼要解释，但并不试图提供每个术语的全面文档。  

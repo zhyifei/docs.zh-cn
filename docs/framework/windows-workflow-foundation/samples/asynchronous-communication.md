@@ -3,11 +3,11 @@ title: 异步通信
 ms.date: 03/30/2017
 ms.assetid: 128dc092-9eb2-4e33-9470-9a7f62b60df6
 ms.openlocfilehash: e85f7efb0de1326ceb5091c305b20f34809eab57
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44047082"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44172855"
 ---
 # <a name="asynchronous-communication"></a>异步通信
 此示例演示如何两个不同的 Windows Workflow Foundation (WF) 服务之间的通信默认情况下以异步方式完成。  

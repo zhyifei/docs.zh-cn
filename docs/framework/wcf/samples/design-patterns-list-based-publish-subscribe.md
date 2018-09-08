@@ -3,11 +3,11 @@ title: 设计模式：基于列表的发布-订阅
 ms.date: 03/30/2017
 ms.assetid: f4257abc-12df-4736-a03b-0731becf0fd4
 ms.openlocfilehash: 2807cc8cc197ff39417e3b6375ebbd595cf73c54
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44128451"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44179960"
 ---
 # <a name="design-patterns-list-based-publish-subscribe"></a>设计模式：基于列表的发布-订阅
 此示例演示基于列表的发布-订阅模式实现作为 Windows Communication Foundation (WCF) 的程序。  

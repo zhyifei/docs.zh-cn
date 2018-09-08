@@ -9,11 +9,11 @@ helpviewer_keywords:
 - objects, serializing steps
 ms.assetid: a1207d05-32b2-4953-8582-959607991227
 ms.openlocfilehash: e4d6e3edb15dbf5ba4b7ec7f8658fec1a618d315
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43875744"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44194898"
 ---
 # <a name="how-to-serialize-an-object"></a>如何：序列化对象
 要序列化对象，首先应创建要序列化的对象，然后设置其公共属性和字段。 为此，必须确定 XML 流的传输格式，即它是作为流还是作为文件进行存储。 例如，如果 XML 流必须以永久形式保存，则应创建 <xref:System.IO.FileStream> 对象。  

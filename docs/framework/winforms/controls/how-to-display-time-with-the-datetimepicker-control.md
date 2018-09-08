@@ -10,11 +10,11 @@ helpviewer_keywords:
 - DateTimePicker control [Windows Forms], displaying time
 ms.assetid: 0c1c8b40-1b50-4301-a90c-39516775ccb1
 ms.openlocfilehash: c65a1102ccb8b05602d813831745dbcefed8c17d
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44131904"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44194741"
 ---
 # <a name="how-to-display-time-with-the-datetimepicker-control"></a>如何：使用 DateTimePicker 控件显示时间
 如果希望应用程序能够使用户选择日期和时间，并以指定的格式显示该日期和时间，请使用 <xref:System.Windows.Forms.DateTimePicker> 控件。 以下的过程说明如何使用 <xref:System.Windows.Forms.DateTimePicker> 控件来显示时间。  
