@@ -8,11 +8,11 @@ helpviewer_keywords:
 - media [WPF]
 ms.assetid: f7d96707-ffb5-486c-9e85-db6f0d5ac547
 ms.openlocfilehash: d7c3a6b01591dd1c7fc7554a6e660f1ca7b12de1
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44075405"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44222538"
 ---
 # <a name="audio-and-video-how-to-topics"></a>音频和视频帮助主题
 以下主题演示如何使用<xref:System.Windows.Controls.MediaElement>集成应用程序中的音频和视频内容。  

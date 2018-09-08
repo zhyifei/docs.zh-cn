@@ -14,11 +14,11 @@ helpviewer_keywords:
 - Internet Explorer security settings [WPF]
 ms.assetid: ee1baea0-3611-4e36-9ad6-fcd5205376fb
 ms.openlocfilehash: 970fd0483d7e0126b258afd5ac5c3607cbc6aa0a
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43891871"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44202227"
 ---
 # <a name="security-wpf"></a>安全性 (WPF)
 <a name="introduction"></a> 在开发 Windows Presentation Foundation (WPF) 独立应用程序和浏览器承载的应用程序时，必须考虑的安全模型。 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 独立应用程序执行无限制的权限 ( [!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)] **FullTrust**的权限集)、 是否使用 Windows Installer (.msi)、 XCopy 部署或[!INCLUDE[TLA2#tla_clickonce](../../../includes/tla2sharptla-clickonce-md.md)]。 不支持使用 ClickOnce 部署部分信任的独立 WPF 应用程序。 但是，完全信任的主机应用程序可以创建部分信任<xref:System.AppDomain>使用.NET Framework 外接程序模型。 有关详细信息，请参阅[WPF 外接程序概述](../../../docs/framework/wpf/app-development/wpf-add-ins-overview.md)。  

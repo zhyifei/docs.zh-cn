@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: ecf6bff10e98ab7f008cfd176f59687f34d89553
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44098441"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44216459"
 ---
 # <a name="icorruntimehost-interface"></a>ICorRuntimeHost 接口
 提供了使宿主能够启动和停止公共语言运行时 (CLR) 明确，若要创建和配置应用程序域，若要访问默认域，并要枚举的进程中运行的所有域的方法。  

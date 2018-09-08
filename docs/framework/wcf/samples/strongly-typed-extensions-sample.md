@@ -3,11 +3,11 @@ title: 强类型扩展示例
 ms.date: 03/30/2017
 ms.assetid: 02220f11-1a83-441c-9e5a-85f9a9367572
 ms.openlocfilehash: eccb0ce240d01ab8592a44daddcfa7aa3d2023fb
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43880663"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44207351"
 ---
 # <a name="strongly-typed-extensions-sample"></a>强类型扩展示例
 此示例使用 <xref:System.ServiceModel.Syndication.SyndicationFeed> 类作为示例。 但是，此示例中演示的模式可用于支持扩展数据的所有 Syndication 类。  

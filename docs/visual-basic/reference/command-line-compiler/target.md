@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: e0954147-548b-461f-9c4b-a8f88845616c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 17528bb9faf137029b35e4a9f28bab7a28ae25db
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 5e3f691da48db863edd20bc6881785940a5451ef
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43864610"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44209376"
 ---
 # <a name="-target-visual-basic"></a>-目标 (Visual Basic)
 指定编译器输出的格式。  
@@ -38,7 +38,7 @@ ms.locfileid: "43864610"
   
  除非指定，否则`-target:module`，`-target`导致[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]要添加到输出文件的程序集清单。  
   
- Vbc.exe 的每个实例会生成，最多一个输出文件。 如果指定编译器选项，例如`-out`或`-target`不止一次，编译器进程使生效的最后一个。 有关在编译中的所有文件的信息添加到清单。 除使用创建的文件，所有输出`-target:module`包含在清单中的程序集元数据。 使用[Ildasm.exe （IL 反汇编程序）](https://msdn.microsoft.com/library/f7dy01k1)输出文件中查看元数据。  
+ Vbc.exe 的每个实例会生成，最多一个输出文件。 如果指定编译器选项，例如`-out`或`-target`不止一次，编译器进程使生效的最后一个。 有关在编译中的所有文件的信息添加到清单。 除使用创建的文件，所有输出`-target:module`包含在清单中的程序集元数据。 使用[Ildasm.exe （IL 反汇编程序）](../../../framework/tools/ildasm-exe-il-disassembler.md)输出文件中查看元数据。  
   
  `-target` 的缩写形式是 `-t`。  
   
@@ -57,12 +57,13 @@ ms.locfileid: "43864610"
 vbc -target:library in.vb  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [Visual Basic 命令行编译器](../../../visual-basic/reference/command-line-compiler/index.md)  
- [-main](../../../visual-basic/reference/command-line-compiler/main.md)  
- [-out (Visual Basic)](../../../visual-basic/reference/command-line-compiler/out.md)  
- [-参考 (Visual Basic)](../../../visual-basic/reference/command-line-compiler/reference.md)  
- [-addmodule](../../../visual-basic/reference/command-line-compiler/addmodule.md)  
- [-moduleassemblyname](../../../visual-basic/reference/command-line-compiler/moduleassemblyname.md)  
- [程序集和全局程序集缓存](../../../visual-basic/programming-guide/concepts/assemblies-gac/index.md)  
- [示例编译命令行](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
+## <a name="see-also"></a>请参阅
+
+- [Visual Basic 命令行编译器](../../../visual-basic/reference/command-line-compiler/index.md)  
+- [-main](../../../visual-basic/reference/command-line-compiler/main.md)  
+- [-out (Visual Basic)](../../../visual-basic/reference/command-line-compiler/out.md)  
+- [-参考 (Visual Basic)](../../../visual-basic/reference/command-line-compiler/reference.md)  
+- [-addmodule](../../../visual-basic/reference/command-line-compiler/addmodule.md)  
+- [-moduleassemblyname](../../../visual-basic/reference/command-line-compiler/moduleassemblyname.md)  
+- [程序集和全局程序集缓存](../../../visual-basic/programming-guide/concepts/assemblies-gac/index.md)  
+- [示例编译命令行](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)

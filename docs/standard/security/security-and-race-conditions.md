@@ -14,11 +14,11 @@ ms.assetid: ea3edb80-b2e8-4e85-bfed-311b20cb59b6
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 57ceaedc7c38ae70a0db5a7fd584a765a7474aff
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44138937"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44210489"
 ---
 # <a name="security-and-race-conditions"></a>安全和争用条件
 需要关注的另一个方面是争用条件被利用的安全漏洞的可能性。 有几种方法可能是在其中。 遵循的子主题概述了一些开发人员必须避免的主要缺陷。  

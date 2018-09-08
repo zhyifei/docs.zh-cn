@@ -3,11 +3,11 @@ title: 工作流管理终结点示例
 ms.date: 03/30/2017
 ms.assetid: 3ac6e08f-c43d-4bb7-83c3-e3890a4dac03
 ms.openlocfilehash: 3d99cbef20895381f5e40ee939e1d94a409f1391
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44130508"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44206492"
 ---
 # <a name="workflow-management-endpoint-sample"></a>工作流管理终结点示例
 此示例演示如何使用工作流控制终结点以本地方式和远程方式创建和运行工作流。 此示例演示如何承载一个控制终结点并编写调用此控制终结点的客户端，以创建和运行工作流的实例。 工作流不是服务。  

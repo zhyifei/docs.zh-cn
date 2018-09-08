@@ -2,12 +2,12 @@
 title: LINQ to XML 与DOM (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 18c36130-d598-40b7-9007-828232252978
-ms.openlocfilehash: a0a23a773e927155ca22456ea403549b255718ad
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 4feb0df2e4d3ffe5c79ce61d7b94142833a312c7
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43885625"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44213866"
 ---
 # <a name="linq-to-xml-vs-dom-visual-basic"></a>LINQ to XML 与DOM (Visual Basic)
 本节说明 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 和当前主导 XML 编程 API（W3C 文档对象模型 (DOM)）之间的主要区别。  
@@ -125,10 +125,10 @@ doc.AppendChild(name)
  [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 将空白存储为 <xref:System.Xml.Linq.XText> 节点，而不像 DOM 那样具有专门的 <xref:System.Xml.XmlNodeType.Whitespace> 节点类型。  
   
 ## <a name="support-for-annotations"></a>对批注的支持  
- [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 元素支持可扩展的批注集。 这对于跟踪有关元素的杂项信息（如架构信息、关于元素是否绑定到 UI 的信息或应用程序特定的任何其他信息）很有用。 有关详细信息，请参阅 [LINQ to XML 批注](https://msdn.microsoft.com/library/e2f0052d-61e2-48d4-9ea4-356c9cab35d5)。  
+ [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 元素支持可扩展的批注集。 这对于跟踪有关元素的杂项信息（如架构信息、关于元素是否绑定到 UI 的信息或应用程序特定的任何其他信息）很有用。 有关详细信息，请参阅 [LINQ to XML 批注](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-annotations.md)。  
   
 ## <a name="support-for-schema-information"></a>对架构信息的支持  
- [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 通过 <xref:System.Xml.Schema?displayProperty=nameWithType> 命名空间中的扩展方法提供对 XSD 验证的支持。 你可以验证 XML 树是否符合 XSD。 你可以用架构验证后信息集 (PSVI) 填充 XML 树。 有关详细信息，请参阅[如何：使用 XSD 进行验证](https://msdn.microsoft.com/library/481a97fa-6e96-46f2-8c9a-415555fac33b)和 <xref:System.Xml.Schema.Extensions>。  
+ [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 通过 <xref:System.Xml.Schema?displayProperty=nameWithType> 命名空间中的扩展方法提供对 XSD 验证的支持。 你可以验证 XML 树是否符合 XSD。 你可以用架构验证后信息集 (PSVI) 填充 XML 树。 有关详细信息，请参阅[如何：使用 XSD 进行验证](../../../../visual-basic/programming-guide/concepts/linq/how-to-validate-using-xsd-linq-to-xml.md)和 <xref:System.Xml.Schema.Extensions>。  
   
 ## <a name="see-also"></a>请参阅  
  [入门 (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/getting-started-linq-to-xml.md)

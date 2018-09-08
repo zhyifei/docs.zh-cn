@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 2d83d7c0-b3be-4c92-a630-25cd1285de31
 ms.openlocfilehash: 519f9073954e8f7710c9e73b61f40b4fcfefd25b
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44129360"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44206961"
 ---
 # <a name="query-expression-syntax-examples-grouping"></a>查询表达式语法示例：分组
 本主题中的示例演示如何使用`GroupBy`方法来查询[AdventureWorks 销售模型](https://msdn.microsoft.com/library/f16cd988-673f-4376-b034-129ca93c7832)使用查询表达式语法。 这些示例中使用的 AdventureWorks 销售模型从 AdventureWorks 示例数据库中的 Contact、Address、Product、SalesOrderHeader 和 SalesOrderDetail 等表生成。  

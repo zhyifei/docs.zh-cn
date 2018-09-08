@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 1f9bcd9b-8f8f-47fa-8f1e-0d47236eb800
 ms.openlocfilehash: 2e01d3de6ee7b415c7b3f18a20e840b8ec4ab9b6
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44098231"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44210528"
 ---
 # <a name="how-to-access-a-wse-30-service-with-a-wcf-client"></a>如何：使用 WCF 客户端访问 WSE 3.0 服务
 WCF 客户端配置为使用 2004 年 8 月版的 Ws-addressing 规范时，Windows Communication Foundation (WCF) 客户端是 Microsoft.NET 服务的网络级别兼容性与 Web Services Enhancements (WSE) 3.0。 但是，WSE 3.0 服务不支持元数据交换 (MEX) 协议，因此当你使用[ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)若要创建 WCF 客户端类，安全设置不会应用到生成WCF 客户端。 因此，必须指定安全设置 WSE 3.0 服务，需要生成 WCF 客户端之后。  

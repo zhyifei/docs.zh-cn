@@ -3,11 +3,11 @@ title: 异常：try...finally 表达式 (F#)
 description: '了解如何在 F # try...最后表达式使您可以执行清理代码，即使代码块将引发异常。'
 ms.date: 05/16/2016
 ms.openlocfilehash: 546a6b0619de6f51044600dc1ead73c6d5211299
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44137052"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44211588"
 ---
 # <a name="exceptions-the-tryfinally-expression"></a>异常：try...finally 表达式
 

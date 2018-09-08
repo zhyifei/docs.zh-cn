@@ -15,11 +15,11 @@ helpviewer_keywords:
 - nonvisual controls [Windows Forms]
 ms.assetid: 52134d9c-cff6-4eed-8e2b-3d5eb3bd494e
 ms.openlocfilehash: 9458fc7f3344a5692581485a0e5bd462e45551d9
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43881822"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44207260"
 ---
 # <a name="how-to-add-controls-without-a-user-interface-to-windows-forms"></a>如何：向 Windows 窗体添加无用户界面的控件
 非可视控件 （或组件） 提供了与你的应用程序的功能。 不同于其他控件组件不向用户提供用户界面，因此不需要在 Windows 窗体设计器图面上显示。 当一个组件添加到窗体时，Windows 窗体设计器在其中显示所有组件的窗体的底部显示可调整大小的送纸器。 控件添加到组件栏后，你可以选择的组件，并设置其属性，就像任何其他控件在窗体上。  

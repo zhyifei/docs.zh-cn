@@ -5,11 +5,11 @@ ms.assetid: 3b381f04-593b-471f-bd33-0362be1aade5
 author: BrucePerlerMS
 manager: mbaldwin
 ms.openlocfilehash: 2a275c32caefb54b11cc605c1339526465c8319a
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43868084"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44205135"
 ---
 # <a name="what39s-new-in-windows-identity-foundation-45"></a>Windows Identity Foundation 4.5 中的新增功能
 Windows Identity Foundation (WIF) 的首个版本是作为单独的下载文件而发布的，因为在 .NET 3.5 SP1 期间推出，所以称为 WIF 3.5。 从 .NET 4.5 开始，WIF 便成为 .NET Framework 的一部分。 通过使 WIF 类直接在框架中可用，可以在 .NET 中更深度地集成基于声明的标识，从而更轻松地使用声明。 针对 WIF 3.5 而编写的应用程序需要进行修改才能利用新模型；有关信息，请参阅[使用 WIF 3.5 至 WIF 4.5 构建的应用程序的迁移指南](../../../docs/framework/security/guidelines-for-migrating-an-application-built-using-wif-3-5-to-wif-4-5.md)。  

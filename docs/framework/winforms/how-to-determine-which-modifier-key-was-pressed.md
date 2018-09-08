@@ -25,11 +25,11 @@ helpviewer_keywords:
 - modifier keys
 ms.assetid: 1e184048-0ae3-4067-a200-d4ba31dbc2cb
 ms.openlocfilehash: f73dea640bc2059353b2a250188b901f360ea750
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44037264"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44202032"
 ---
 # <a name="how-to-determine-which-modifier-key-was-pressed"></a>如何：确定所按下的修改键
 在创建接受用户的击键的应用程序时，可能还想要监视修改键，如 SHIFT、 ALT 和 CTRL 键。 修改键按下时结合使用其他密钥，或者单击鼠标，你的应用程序做出正确响应。 例如，如果按下字母 S 时，这只是可能导致"s"出现在屏幕上，但如果按下了 CTRL + S 的密钥，可能会保存当前文档。 如果处理<xref:System.Windows.Forms.Control.KeyDown>事件，<xref:System.Windows.Forms.KeyEventArgs.Modifiers%2A>属性的<xref:System.Windows.Forms.KeyEventArgs>收到的事件处理程序指定哪个修改键被按下。 或者，<xref:System.Windows.Forms.KeyEventArgs.KeyData%2A>属性的<xref:System.Windows.Forms.KeyEventArgs>指定按下了也与按位 OR 组合与任何修改键的字符。 但是，如果你是<xref:System.Windows.Forms.Control.KeyPress>事件或鼠标事件，事件处理程序不会接收此信息。 在这种情况下，必须使用<xref:System.Windows.Forms.Control.ModifierKeys%2A>属性的<xref:System.Windows.Forms.Control>类。 在任一情况下，您必须执行相应的按位 AND<xref:System.Windows.Forms.Keys>值和要测试的值。 <xref:System.Windows.Forms.Keys>枚举提供了变体的每个修改键，因此，必须执行的按位并使用正确的值。 例如，由表示 SHIFT 键<xref:System.Windows.Forms.Keys.Shift>， <xref:System.Windows.Forms.Keys.ShiftKey>，<xref:System.Windows.Forms.Keys.RShiftKey>并<xref:System.Windows.Forms.Keys.LShiftKey>正确的值来测试 SHIFT 修改键原样<xref:System.Windows.Forms.Keys.Shift>。 同样，若要测试 CTLR 和 ALT 修饰符作为您应使用<xref:System.Windows.Forms.Keys.Control>和<xref:System.Windows.Forms.Keys.Alt>值，分别。  

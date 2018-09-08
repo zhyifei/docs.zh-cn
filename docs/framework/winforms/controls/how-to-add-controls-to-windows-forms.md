@@ -10,11 +10,11 @@ helpviewer_keywords:
 - controls [Windows Forms], adding
 ms.assetid: 2af86001-9d62-4154-87fb-66db2c3cd9fd
 ms.openlocfilehash: 1b803a93f865eaa4db6751187213c4bb01d2a5ee
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44065196"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44213087"
 ---
 # <a name="how-to-add-controls-to-windows-forms"></a>如何：向 Windows 窗体添加控件
 大多数窗体旨在通过将控件添加到窗体的面，用于定义用户界面 (UI) 中。 一个*控制*是用于显示信息或接受用户输入的窗体上的组件。 有关控件的详细信息，请参阅[Windows 窗体控件](../../../../docs/framework/winforms/controls/index.md)。  

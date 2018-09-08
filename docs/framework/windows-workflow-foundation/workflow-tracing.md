@@ -3,11 +3,11 @@ title: 工作流跟踪
 ms.date: 03/30/2017
 ms.assetid: 18737989-0502-4367-b5f6-617ebfb77c96
 ms.openlocfilehash: 27e56933043c9eb955500cdd1c5bbd06cb33bde8
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44129547"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44210888"
 ---
 # <a name="workflow-tracing"></a>工作流跟踪
 工作流跟踪提供了一种使用 .NET Framework 跟踪侦听器捕获诊断信息的方法。 如果检测到应用程序存在问题，可以启用跟踪，然后在解决问题之后再次禁用跟踪。 可以通过两种方法为工作流启用调试跟踪。 您可以使用事件跟踪查看器配置调试跟踪，也可以使用 <xref:System.Diagnostics> 向文件发送跟踪事件。  

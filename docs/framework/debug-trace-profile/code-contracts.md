@@ -1,6 +1,6 @@
 ---
 title: 代码协定
-ms.date: 03/30/2017
+ms.date: 09/05/2018
 dev_langs:
 - csharp
 - vb
@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 84526045-496f-489d-8517-a258cf76f040
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a444b7eace18fa579324f540e8cf7537c420a6a8
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: f7f7a779cc10b32d66a184107359b502cf094979
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44080603"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44222118"
 ---
 # <a name="code-contracts"></a>代码协定
 代码协定提供了在代码中指定前置条件、后置条件和对象固定的方法。 前置条件是输入方法或属性时必须满足的要求。 后置条件描述在方法或属性代码退出时的预期。 对象固定描述处于良好状态的类的预期状态。  
@@ -148,7 +148,7 @@ Contract.Invariant(this.x > this.y);
 }  
 ```  
   
- 固定协定由 CONTRACTS_FULL 预处理器符号有条件地进行定义。 在运行时检查期间，每次公共方法结束都要检查固定协定。 如果固定协定提到相同类中的公共方法，则将禁用通常在此公共方法结束时执行的固定协定检查。 相反，仅在此方法的最外层方法调用结束时进行检查。 如果因调用其他类上的方法而重新输入类，也会发生此类情况。 对于对象终结器或任何实现 <xref:System.IDisposable.Dispose%2A> 方法的方法，不会执行固定协定检查。  
+ 固定协定由 CONTRACTS_FULL 预处理器符号有条件地进行定义。 在运行时检查期间，每次公共方法结束都要检查固定协定。 如果固定协定提到相同类中的公共方法，则将禁用通常在此公共方法结束时执行的固定协定检查。 相反，仅在此方法的最外层方法调用结束时进行检查。 如果因调用其他类上的方法而重新输入类，也会发生此类情况。 对于对象终结器不检查固定条件和一个<xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType>实现。  
   
 <a name="usage_guidelines"></a>   
 ## <a name="usage-guidelines"></a>使用准则  
