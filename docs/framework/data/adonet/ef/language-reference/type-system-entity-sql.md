@@ -3,11 +3,11 @@ title: 类型系统 (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 818a505b-a196-41dd-aaac-2ccd5f7a2f1a
 ms.openlocfilehash: 270b0981214e674d220025ad52c7c94ee3a66224
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43878216"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44196928"
 ---
 # <a name="type-system-entity-sql"></a>类型系统 (Entity SQL)
 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 支持多种类型：  

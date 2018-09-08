@@ -3,11 +3,11 @@ title: 工作流发现示例
 ms.date: 03/30/2017
 ms.assetid: 82cc43f1-3c8f-4771-ac19-a75ac936e2c3
 ms.openlocfilehash: 1076e7045ca546fed7e6902f69406bfc002c4c26
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44069746"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44198018"
 ---
 # <a name="workflow-discovery-sample"></a>工作流发现示例
 此示例演示如何使工作流服务可发现，以及如何编写搜索特定服务的自定义代码活动。  

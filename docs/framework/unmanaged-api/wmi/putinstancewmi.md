@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 67abf017040b9e6bbe9b10e560c8d57c124ae84e
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44076701"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44197671"
 ---
 # <a name="putinstancewmi-function"></a>PutInstanceWmi 函数
 创建或更新现有类的实例。 将该实例写入 WMI 存储库。 

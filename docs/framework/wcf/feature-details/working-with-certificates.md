@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - certificates [WCF]
 ms.assetid: 6ffb8682-8f07-4a45-afbb-8d2487e9dbc3
-ms.openlocfilehash: d0e54aeda1ee51fe7ba87c3ac69c556ea25e320f
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 938998a2316af28071e54e909fa60b5edbda0f35
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43870206"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44198928"
 ---
 # <a name="working-with-certificates"></a>使用证书
 对 Windows Communication Foundation (WCF) 安全性进行编程时，通常使用 X.509 数字证书对客户端和服务器进行身份验证，以及对消息进行加密和数字签名。 本主题将简要说明 X.509 数字证书的功能以及如何在 WCF 中使用它们，并提供一些主题的链接，这些主题对这些概念进行了深入说明，或揭示了如何使用 WCF 和证书来完成常见任务。  
@@ -85,12 +85,12 @@ ms.locfileid: "43870206"
   
  在创建自定义身份验证器时，要重写的最重要方法是 <xref:System.IdentityModel.Selectors.X509CertificateValidator.Validate%2A> 方法。 有关自定义身份验证的示例，请参阅 [X.509 证书验证程序](../../../../docs/framework/wcf/samples/x-509-certificate-validator.md)示例。 有关详细信息，请参阅[自定义凭据和凭据验证](../../../../docs/framework/wcf/extending/custom-credential-and-credential-validation.md)。  
   
-## <a name="using-makecertexe-to-build-a-certificate-chain"></a>使用 Makecert.exe 生成证书链  
- 证书创建工具 (Makecert.exe) 可以创建 X.509 证书和私钥/公钥对。 可以将私钥保存在磁盘上，然后用它来颁发和签名新证书，从而模拟链状证书的层次结构。 此工具仅在开发服务时用作辅助手段，决不可以用来为实际部署创建证书。 在开发 WCF 服务时，可使用 Makecert.exe 按照下列步骤生成信任链。  
+## <a name="using-the-powershell-new-selfsignedcertificate-cmdlet-to-build-a-certificate-chain"></a>使用 Powershell New-selfsignedcertificate Cmdlet 生成的证书链  
+ Powershell New-selfsignedcertificate cmdlet 创建 X.509 证书和私钥/公钥对。 可以将私钥保存在磁盘上，然后用它来颁发和签名新证书，从而模拟链状证书的层次结构。 开发服务和应永远不会用于创建用于实际部署的证书时，该 cmdlet 旨在仅用作帮助。 开发 WCF 服务时，使用以下步骤来生成使用 New-selfsignedcertificate cmdlet 的信任链。  
   
-#### <a name="to-build-a-chain-of-trust-with-makecertexe"></a>使用 Makecert.exe 生成信任链  
+#### <a name="to-build-a-chain-of-trust-with-the-new-selfsignedcertificate-cmdlet"></a>若要生成使用 New-selfsignedcertificate cmdlet 的信任链  
   
-1.  使用 MakeCert.exe 工具创建一个临时根证书颁发机构（自签名）证书。 将私钥保存到磁盘上。  
+1.  创建使用 New-selfsignedcertificate cmdlet 的临时根颁发机构 （自签名） 证书。 将私钥保存到磁盘上。  
   
 2.  使用此新证书颁发另一个包含公钥的证书。  
   
