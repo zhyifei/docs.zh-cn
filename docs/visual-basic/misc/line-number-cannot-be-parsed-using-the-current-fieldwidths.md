@@ -4,24 +4,25 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrTextFieldParser_MalFormedFixedWidthLine
 ms.assetid: 84e14245-dfdf-4b62-8b84-e83a31608899
-ms.openlocfilehash: 57390700ab0ef47cc7e6b5521a3691a8e5812a9e
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: d362ed594fd343c22345df9767c94a5770e5303a
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43861524"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44129188"
 ---
-# <a name="line-ltnumbergt-cannot-be-parsed-using-the-current-fieldwidths"></a><span data-ttu-id="83277-102">行&lt;数&gt;无法使用当前的 FieldWidths 分析</span><span class="sxs-lookup"><span data-stu-id="83277-102">Line &lt;number&gt; cannot be parsed using the current FieldWidths</span></span>
-<span data-ttu-id="83277-103">无法分析指定的行，因为其字段的宽度与所指定的不同。</span><span class="sxs-lookup"><span data-stu-id="83277-103">The specified line cannot be parsed because its fields have widths other than those specified.</span></span>  
+# <a name="line-ltnumbergt-cannot-be-parsed-using-the-current-fieldwidths"></a><span data-ttu-id="75fbd-102">行&lt;数&gt;无法使用当前的 FieldWidths 分析</span><span class="sxs-lookup"><span data-stu-id="75fbd-102">Line &lt;number&gt; cannot be parsed using the current FieldWidths</span></span>
+<span data-ttu-id="75fbd-103">无法分析指定的行，因为其字段的宽度与所指定的不同。</span><span class="sxs-lookup"><span data-stu-id="75fbd-103">The specified line cannot be parsed because its fields have widths other than those specified.</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="83277-104">更正此错误</span><span class="sxs-lookup"><span data-stu-id="83277-104">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="75fbd-104">更正此错误</span><span class="sxs-lookup"><span data-stu-id="75fbd-104">To correct this error</span></span>  
   
--   <span data-ttu-id="83277-105">调整 `FieldWidths` 以便正确分析此行，或插入异常处理代码以处理此行。</span><span class="sxs-lookup"><span data-stu-id="83277-105">Adjust `FieldWidths` so the line can be parsed correctly, or insert exception-handling code in order to handle the line.</span></span>  
+-   <span data-ttu-id="75fbd-105">调整 `FieldWidths` 以便正确分析此行，或插入异常处理代码以处理此行。</span><span class="sxs-lookup"><span data-stu-id="75fbd-105">Adjust `FieldWidths` so the line can be parsed correctly, or insert exception-handling code in order to handle the line.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="83277-106">请参阅</span><span class="sxs-lookup"><span data-stu-id="83277-106">See Also</span></span>  
- [<span data-ttu-id="83277-107">如何：读取具有多种格式的文本文件</span><span class="sxs-lookup"><span data-stu-id="83277-107">How to: Read From Text Files with Multiple Formats</span></span>](../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-text-files-with-multiple-formats.md)  
- [<span data-ttu-id="83277-108">My.Computer.FileSystem.OpenTextFieldParser</span><span class="sxs-lookup"><span data-stu-id="83277-108">My.Computer.FileSystem.OpenTextFieldParser</span></span>](xref:Microsoft.VisualBasic.FileIO.FileSystem.OpenTextFieldParser%2A)  
- [<span data-ttu-id="83277-109">使用 TextFieldParser 对象分析文本文件</span><span class="sxs-lookup"><span data-stu-id="83277-109">Parsing Text Files with the TextFieldParser Object</span></span>](../../visual-basic/developing-apps/programming/drives-directories-files/parsing-text-files-with-the-textfieldparser-object.md)  
- [<span data-ttu-id="83277-110">TextFieldParser 对象</span><span class="sxs-lookup"><span data-stu-id="83277-110">TextFieldParser Object</span></span>](../../visual-basic/language-reference/objects/textfieldparser-object.md)  
- [<span data-ttu-id="83277-111">TextFieldParser.FieldWidths 属性</span><span class="sxs-lookup"><span data-stu-id="83277-111">TextFieldParser.FieldWidths Property</span></span>](https://msdn.microsoft.com/library/c6985360-60c6-494e-89e7-43b6b73f2597)  
- [<span data-ttu-id="83277-112">TextFieldParser.SetFieldWidths 方法</span><span class="sxs-lookup"><span data-stu-id="83277-112">TextFieldParser.SetFieldWidths Method</span></span>](https://msdn.microsoft.com/library/958fed9f-e0f3-4fc5-83b4-386156bdf036)
+## <a name="see-also"></a><span data-ttu-id="75fbd-106">请参阅</span><span class="sxs-lookup"><span data-stu-id="75fbd-106">See also</span></span>
+
+- [<span data-ttu-id="75fbd-107">如何：读取具有多种格式的文本文件</span><span class="sxs-lookup"><span data-stu-id="75fbd-107">How to: Read From Text Files with Multiple Formats</span></span>](../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-text-files-with-multiple-formats.md)  
+- [<span data-ttu-id="75fbd-108">My.Computer.FileSystem.OpenTextFieldParser</span><span class="sxs-lookup"><span data-stu-id="75fbd-108">My.Computer.FileSystem.OpenTextFieldParser</span></span>](xref:Microsoft.VisualBasic.FileIO.FileSystem.OpenTextFieldParser%2A)  
+- [<span data-ttu-id="75fbd-109">使用 TextFieldParser 对象分析文本文件</span><span class="sxs-lookup"><span data-stu-id="75fbd-109">Parsing Text Files with the TextFieldParser Object</span></span>](../../visual-basic/developing-apps/programming/drives-directories-files/parsing-text-files-with-the-textfieldparser-object.md)  
+- [<span data-ttu-id="75fbd-110">TextFieldParser 对象</span><span class="sxs-lookup"><span data-stu-id="75fbd-110">TextFieldParser Object</span></span>](../../visual-basic/language-reference/objects/textfieldparser-object.md)  
+- [<span data-ttu-id="75fbd-111">TextFieldParser.FieldWidths 属性</span><span class="sxs-lookup"><span data-stu-id="75fbd-111">TextFieldParser.FieldWidths Property</span></span>](xref:Microsoft.VisualBasic.FileIO.TextFieldParser.FieldWidths%2A)  
+- [<span data-ttu-id="75fbd-112">TextFieldParser.SetFieldWidths 方法</span><span class="sxs-lookup"><span data-stu-id="75fbd-112">TextFieldParser.SetFieldWidths Method</span></span>](xref:Microsoft.VisualBasic.FileIO.TextFieldParser.SetFieldWidths%2A)

@@ -3,22 +3,22 @@ title: 连接池
 ms.date: 03/30/2017
 ms.assetid: 955c057f-aea8-4ba8-aa6d-e3dfa18ba8d5
 ms.openlocfilehash: 28a1036f377326b5f1fdfafa1eaffd8a47bc05bc
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43876590"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44139626"
 ---
-# <a name="connection-pooling"></a><span data-ttu-id="a0b60-102">连接池</span><span class="sxs-lookup"><span data-stu-id="a0b60-102">Connection Pooling</span></span>
-<span data-ttu-id="a0b60-103">连接到数据源可能需要很长时间。</span><span class="sxs-lookup"><span data-stu-id="a0b60-103">Connecting to a data source can be time consuming.</span></span> <span data-ttu-id="a0b60-104">若要打开连接的成本降至最低，ADO.NET 使用名为优化技术*连接池*，其中反复打开和关闭连接的成本降至最低。</span><span class="sxs-lookup"><span data-stu-id="a0b60-104">To minimize the cost of opening connections, ADO.NET uses an optimization technique called *connection pooling*, which minimizes the cost of repeatedly opening and closing connections.</span></span> <span data-ttu-id="a0b60-105">.NET Framework 数据提供程序处理连接池的方式有所不同。</span><span class="sxs-lookup"><span data-stu-id="a0b60-105">Connection pooling is handled differently for the .NET Framework data providers.</span></span>  
+# <a name="connection-pooling"></a><span data-ttu-id="59d80-102">连接池</span><span class="sxs-lookup"><span data-stu-id="59d80-102">Connection Pooling</span></span>
+<span data-ttu-id="59d80-103">连接到数据源可能需要很长时间。</span><span class="sxs-lookup"><span data-stu-id="59d80-103">Connecting to a data source can be time consuming.</span></span> <span data-ttu-id="59d80-104">若要打开连接的成本降至最低，ADO.NET 使用名为优化技术*连接池*，其中反复打开和关闭连接的成本降至最低。</span><span class="sxs-lookup"><span data-stu-id="59d80-104">To minimize the cost of opening connections, ADO.NET uses an optimization technique called *connection pooling*, which minimizes the cost of repeatedly opening and closing connections.</span></span> <span data-ttu-id="59d80-105">.NET Framework 数据提供程序处理连接池的方式有所不同。</span><span class="sxs-lookup"><span data-stu-id="59d80-105">Connection pooling is handled differently for the .NET Framework data providers.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="a0b60-106">本节内容</span><span class="sxs-lookup"><span data-stu-id="a0b60-106">In This Section</span></span>  
- [<span data-ttu-id="a0b60-107">SQL Server 连接池 (ADO.NET)</span><span class="sxs-lookup"><span data-stu-id="a0b60-107">SQL Server Connection Pooling (ADO.NET)</span></span>](../../../../docs/framework/data/adonet/sql-server-connection-pooling.md)  
- <span data-ttu-id="a0b60-108">提供的连接池的概述和介绍连接池在 SQL Server 中的工作方式。</span><span class="sxs-lookup"><span data-stu-id="a0b60-108">Provides an overview of connection pooling and describes how connection pooling works in SQL Server.</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="59d80-106">本节内容</span><span class="sxs-lookup"><span data-stu-id="59d80-106">In This Section</span></span>  
+ [<span data-ttu-id="59d80-107">SQL Server 连接池 (ADO.NET)</span><span class="sxs-lookup"><span data-stu-id="59d80-107">SQL Server Connection Pooling (ADO.NET)</span></span>](../../../../docs/framework/data/adonet/sql-server-connection-pooling.md)  
+ <span data-ttu-id="59d80-108">提供的连接池的概述和介绍连接池在 SQL Server 中的工作方式。</span><span class="sxs-lookup"><span data-stu-id="59d80-108">Provides an overview of connection pooling and describes how connection pooling works in SQL Server.</span></span>  
   
- [<span data-ttu-id="a0b60-109">OLE DB、ODBC 和 Oracle 连接池</span><span class="sxs-lookup"><span data-stu-id="a0b60-109">OLE DB, ODBC, and Oracle Connection Pooling</span></span>](../../../../docs/framework/data/adonet/ole-db-odbc-and-oracle-connection-pooling.md)  
- <span data-ttu-id="a0b60-110">说明适用于 OLE DB 的 .NET Framework 数据提供程序、适用于 ODBC 的 .NET Framework 数据提供程序和适用于 Oracle 的 .NET Framework 数据提供程序的连接池。</span><span class="sxs-lookup"><span data-stu-id="a0b60-110">Describes connection pooling for the .NET Framework Data Provider for OLE DB, the .NET Framework Data Provider for ODBC, and the .NET Framework Data Provider for Oracle.</span></span>  
+ [<span data-ttu-id="59d80-109">OLE DB、ODBC 和 Oracle 连接池</span><span class="sxs-lookup"><span data-stu-id="59d80-109">OLE DB, ODBC, and Oracle Connection Pooling</span></span>](../../../../docs/framework/data/adonet/ole-db-odbc-and-oracle-connection-pooling.md)  
+ <span data-ttu-id="59d80-110">说明适用于 OLE DB 的 .NET Framework 数据提供程序、适用于 ODBC 的 .NET Framework 数据提供程序和适用于 Oracle 的 .NET Framework 数据提供程序的连接池。</span><span class="sxs-lookup"><span data-stu-id="59d80-110">Describes connection pooling for the .NET Framework Data Provider for OLE DB, the .NET Framework Data Provider for ODBC, and the .NET Framework Data Provider for Oracle.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="a0b60-111">请参阅</span><span class="sxs-lookup"><span data-stu-id="a0b60-111">See Also</span></span>  
- [<span data-ttu-id="a0b60-112">在 ADO.NET 中检索和修改数据</span><span class="sxs-lookup"><span data-stu-id="a0b60-112">Retrieving and Modifying Data in ADO.NET</span></span>](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)  
- [<span data-ttu-id="a0b60-113">ADO.NET 托管提供程序和数据集开发人员中心</span><span class="sxs-lookup"><span data-stu-id="a0b60-113">ADO.NET Managed Providers and DataSet Developer Center</span></span>](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a><span data-ttu-id="59d80-111">请参阅</span><span class="sxs-lookup"><span data-stu-id="59d80-111">See Also</span></span>  
+ [<span data-ttu-id="59d80-112">在 ADO.NET 中检索和修改数据</span><span class="sxs-lookup"><span data-stu-id="59d80-112">Retrieving and Modifying Data in ADO.NET</span></span>](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)  
+ [<span data-ttu-id="59d80-113">ADO.NET 托管提供程序和数据集开发人员中心</span><span class="sxs-lookup"><span data-stu-id="59d80-113">ADO.NET Managed Providers and DataSet Developer Center</span></span>](https://go.microsoft.com/fwlink/?LinkId=217917)
