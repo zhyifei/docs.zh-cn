@@ -16,7 +16,7 @@ ms.locfileid: "37404640"
 > “第一次是否正确完成并不重要。 最后一次正确完成才至关重要。”  
 > — Andrew Hunt 和 David Thomas
 
-ASP.NET Core 是一个跨平台的开源框架，用于构建新式云优化 Web 应用程序。 ASP.NET Core 具有轻量级和模块化的特点，并且内置了对依赖关系注入的支持，因此具有更好的可测试性和可维护性。 而 MVC 支持构建新式 Web API 和基于视图的应用，ASP.NET Core 与之结合后将成为一个功能强大的框架，用于构建企业 Web 应用程序。
+ASP.NET Core 是一个跨平台的开源框架，用于构建新式云优化 Web 应用程序。 ASP.NET Core 具有轻量级和模块化的特点，并且内置了对依赖注入的支持，因此具有更好的可测试性和可维护性。 而 MVC 支持构建新式 Web API 和基于视图的应用，ASP.NET Core 与之结合后将成为一个功能强大的框架，用于构建企业 Web 应用程序。
 
 ## <a name="mapping-requests-to-responses"></a>将请求映射到响应
 
@@ -62,7 +62,7 @@ public class ProductsController : Controller
 
 模型验证发生在绑定模型之后，调用操作方法之前。 模型验证对模型类型使用可选属性，且有助于确保提供的模型对象符合特定数据要求。 可以将某些值指定为必需项，将其限制为特定长度，或将其限制在一定数值范围内，等等。如果指定了验证特性，但该模型不符合其要求，则属性 ModelState.IsValid 将为 false，并且失败的验证规则集将可被发送到发出请求的客户端。
 
-使用模型验证时，执行任何状态更改命令之前，务必确保模型有效，以防无效数据损坏应用。 使用[筛选器](/aspnet/core/mvc/controllers/filters)可避免在每个操作中都为此添加代码的需要。 ASP.NET Core MVC 筛选器具有截获多组请求的功能，因此可以有针对性地应用通用策略和横切关注点。 筛选器可应用于单个操作、整个控制器或应用程序全局。
+使用模型验证时，执行任何状态更改命令之前，务必确保模型有效，以防无效数据损坏应用。 使用[过滤器](/aspnet/core/mvc/controllers/filters)可避免在每个操作中都为此添加代码的需要。 ASP.NET Core MVC 过滤器具有截获多组请求的功能，因此可以有针对性地应用通用策略和横切关注点。 过滤器可应用于单个操作、整个控制器或应用程序全局。
 
 对于 Web API，ASP.NET Core MVC 支持[_内容协商_](/aspnet/core/mvc/models/formatting)，允许对指定如何设置响应格式进行请求。 根据请求中提供的标头，操作返回的数据将采用 XML、JSON 或其他支持格式作为响应的格式。 借助此功能，同一个 API 可供数据格式要求不同的多个客户端使用。
 
@@ -74,20 +74,20 @@ public class ProductsController : Controller
 > <https://docs.microsoft.com/aspnet/core/mvc/models/model-binding>
 > - **模型验证**
 > <https://docs.microsoft.com/aspnet/core/mvc/models/validation>
-> - **筛选器**
+> - **过滤器**
 > <https://docs.microsoft.com/aspnet/core/mvc/controllers/filters>
 
 ## <a name="working-with-dependencies"></a>处理依赖关系
 
-ASP.NET Core 内置了对[依赖关系注入](/aspnet/core/fundamentals/dependency-injection)技术的支持，并且在内部使用这一技术。 依赖关系注入技术可以在应用程序的不同部分之间实现松散耦合。 比较松散的耦合更符合需要，因为它可以更轻松地将应用程序的某些部分隔离开，然后进行测试或替换。 它还可以降低对应用程序某个部分进行更改会对应用程序中的其他位置产生意外影响的可能性。 依赖关系注入的基础是依赖关系反转原则，并且通常是实现开放/闭合原则的关键。 评估应用程序对其依赖关系的处理方式时，请注意 [static cling](https://deviq.com/static-cling/)（静态粘附）这一代码味，并请记住这句格言：[新增即粘附](https://ardalis.com/new-is-glue)。
+ASP.NET Core 内置了对[依赖注入](/aspnet/core/fundamentals/dependency-injection)技术的支持，并且在内部使用这一技术。 依赖注入技术可以在应用程序的不同部分之间实现松散耦合。 比较松散的耦合更符合需要，因为它可以更轻松地将应用程序的某些部分隔离开，然后进行测试或替换。 它还可以降低对应用程序某个部分进行更改会对应用程序中的其他位置产生意外影响的可能性。 依赖注入的基础是依赖关系反转原则，并且通常是实现开放/闭合原则的关键。 评估应用程序对其依赖关系的处理方式时，请注意 [static cling](https://deviq.com/static-cling/)（静态粘附）这一代码味道，并请记住这句格言：[直接实例化导致强耦合](https://ardalis.com/new-is-glue)。
 
 类调用静态方法或访问静态属性时，会对基础结构造成负面影响或产生依赖关系，此时会发生静态粘附。 例如，如果一个方法调用静态方法，静态方法反过来又写入数据库，则该方法与该数据库紧密耦合。 破坏该数据库调用的任何内容都会破坏该方法。 测试此类方法非常困难，因为此类测试要么需要使用商业模拟库来模拟静态调用，要么只能使用已有测试数据库进行测试。 不依赖于任何基础结构的静态调用，尤其是完全无状态的静态调用可以进行正常调用，并且对耦合或可测试性没有任何影响（超越了将代码耦合到静态调用本身）。
 
-许多开发人员知道静态粘附和全局状态的风险，但仍会通过直接实例化将其代码与具体实现紧密耦合。 “新增即粘附”旨在提醒注意这种耦合，并非一律谴责使用新关键词。 和静态方法调用一样，没有外部依赖关系的类型的新实例通常不会将代码紧密耦合到实现详细信息，或增加测试的难度。 但每次将类实例化时，花一小点时间思考对该特定位置的该特定实例进行硬编码是否有意义，或者说如果将该实例作为依赖项进行请求会不会更好。
+许多开发人员知道静态粘附和全局状态的风险，但仍会通过直接实例化将其代码与具体实现紧密耦合。 “直接实例化导致强耦合”旨在提醒注意这种耦合，并非一律谴责使用new关键词。 和静态方法调用一样，没有外部依赖关系的类型的新实例通常不会将代码紧密耦合到具体的实现，这将增加测试的难度。 但每次将类实例化时，只需要花一点时间来考虑在该特定位置硬编码该特定实例是否有意义，或者说如果将该实例作为依赖项进行请求会不会更好。
 
 ### <a name="declare-your-dependencies"></a>声明依赖关系
 
-ASP.NET Core 的构建原理是让方法和类声明依赖关系，并将其作为参数进行请求。 ASP.NET 应用程序通常在 Startup 类中进行设置，而该类本身就配置为在多处支持依赖关系注入。 如果 Startup 类具有构造函数，则可以通过构造函数请求依赖关系，如下所示：
+ASP.NET Core 的构建原理是让方法和类声明依赖关系，并将其作为参数进行请求。 ASP.NET 应用程序通常在 Startup 类中进行设置，而该类本身就配置为在多处支持依赖注入。 如果 Startup 类具有构造函数，则可以通过构造函数请求依赖关系，如下所示：
 
 ```csharp
 public class Startup
@@ -102,9 +102,9 @@ public class Startup
 }
 ```
 
-Startup 类很有意思，因为它没有显式的类型要求。 它不继承特殊的 Startup 基类，也不实现任何特定的接口。 可为其提供构造函数，也可不提供，并且可以为构造函数指定任意所需数量的参数。 为应用程序配置的 Web 主机启动时，该主机将调用你命令其使用的 Startup 类，并将使用依赖关系注入来填充 Startup 类请求的任何依赖关系。 当然，如果 ASP.NET Core 使用的服务容器中未配置请求的参数，则会引发异常，但只要是粘附到容器知晓的依赖项，则可以请求任何所需内容。
+Startup 类很有意思，因为它没有显式的类型要求。 它不继承特殊的 Startup 基类，也不实现任何特定的接口。 可为其提供构造函数，也可不提供，并且可以为构造函数指定任意所需数量的参数。 为应用程序配置的 Web 主机启动时，该主机将调用你命令其使用的 Startup 类，并将使用依赖注入来填充 Startup 类请求的任何依赖关系。 当然，如果 ASP.NET Core 使用的服务容器中未配置请求的参数，则会引发异常，但只要是粘附到容器知晓的依赖项，则可以请求任何所需内容。
 
-依赖关系注入从一开始创建 Startup 实例时就内置在 ASP.NET Core 应用中。 它不会为 Startup 类在此停留。 也可以在 Configure 方法中请求依赖关系：
+依赖注入从一开始创建 Startup 实例时就内置在 ASP.NET Core 应用中。 它不会为 Startup 类在此停留。 也可以在 Configure 方法中请求依赖关系：
 
 ```csharp
 public void Configure(IApplicationBuilder app,
@@ -115,22 +115,22 @@ public void Configure(IApplicationBuilder app,
 }
 ```
 
-ConfigureServices 方法是此行为的例外情况，它必须使用 IServiceCollection 类型的一个参数。 实际上它并不需要支持依赖关系注入，因为一方面它负责向服务容器添加对象，另一方面它有权通过 IServiceCollection 参数访问所有当前已配置的服务。 因此在 Startup 类的每个部分均可使用 ASP.NET Core 服务集合中定义的依赖关系，方法是以参数形式请求所需服务，也可通过在 ConfigureServices 中使用 IServiceCollection。
+ConfigureServices 方法是此行为的例外情况，它必须使用 IServiceCollection 类型的一个参数。 实际上它并不需要支持依赖注入，因为一方面它负责向服务容器添加对象，另一方面它有权通过 IServiceCollection 参数访问所有当前已配置的服务。 因此在 Startup 类的每个部分均可使用 ASP.NET Core 服务集合中定义的依赖关系，方法是以参数形式请求所需服务，也可通过在 ConfigureServices 中使用 IServiceCollection。
 
 > [!NOTE]
 > 如果需确保某些服务可供 Startup 类使用，可以使用 WebHostBuilder 及其 ConfigureServices 方法对其进行配置。
 
-Startup 类是一个范例，应照此构建 ASP.NET Core 应用程序的其他部分，从控制器到中间件到筛选器再到自己的服务。 在任何情况下都应遵守[显式依赖关系原则](https://deviq.com/explicit-dependencies-principle/)，请求依赖关系，而不要直接创建依赖关系，在整个应用程序中充分利用依赖关系注入。 注意对实现进行直接实例化的位置和方式，特别是使用基础结构或会产生负面影响的服务和对象。 相较于对特定实现类型的引用进行硬编码，最好是使用在应用程序核心中定义并作为参数传递的抽象元素。
+Startup 类是一个范例，应照此构建 ASP.NET Core 应用程序的其他部分，从控制器到中间件到过滤器再到自己的服务。 在任何情况下都应遵守[显式依赖关系原则](https://deviq.com/explicit-dependencies-principle/)，请求依赖关系，而不要直接创建依赖关系，在整个应用程序中充分利用依赖注入。 注意对实现进行直接实例化的位置和方式，特别是使用基础结构或会产生负面影响的服务和对象。 相较于对特定实现类型的引用进行硬编码，最好是使用在应用程序核心中定义并作为参数传递的抽象元素。
 
 ## <a name="structuring-the-application"></a>构建应用程序
 
-整体式应用程序通常只有一个入口点。 对 ASP.NET Core Web 应用程序而言，入口点是 ASP.NET Core Web 项目。 但是，这并不意味着解决方案只应包含一个项目。 按照分离关注点的原则，将应用程序分解到不同层中非常有用。 分解到不同层后，超越文件夹来分离项目很有好处，可帮助实现更好的封装。 通过 ASP.NET Core 应用程序实现这些目标的最佳方法是第 5 章中所述的干净体系结构的变体。 按照此方法，应用程序的解决方案将包含 UI、基础结构和 ApplicationCore 各自单独的库。
+整体式应用程序通常只有一个入口点。 对 ASP.NET Core Web 应用程序而言，入口点是 ASP.NET Core Web 项目。 但是，这并不意味着解决方案只应包含一个项目。 按照分离关注点的原则，将应用程序分解到不同层中非常有用。 分解到不同层，比通过文件夹来分离项目很有好处，可帮助实现更好的封装。 通过 ASP.NET Core 应用程序实现这些目标的最佳方法是第 5 章中所述的整洁架构的变体。 按照此方法，应用程序的解决方案将由 UI、基础结构和 ApplicationCore 各自单独的库组成。
 
 除这些项目之外，还包含一个单独的测试项目（第 9 章中对测试进行介绍）。
 
 应用程序的对象模型和接口应放在 ApplicationCore 项目中。 此项目应具有尽可能少的依赖关系，可供解决方案中的其他项目引用。 需要保留的业务实体以及不直接依赖基础结构的服务在 ApplicationCore 项目中进行定义。
 
-实现的详细信息（例如如何执行保留或如何将通知发送给用户）保存在 Infrastructure 项目中。 此项目将引用特定于实现的包，例如 Entity Framework Core，但不应在此项目之外泄露这些实现的详细信息。 基础结构服务和存储库应实现在 ApplicationCore 项目中定义的接口，其持久性实现负责检索和存储在 ApplicationCore 中定义的实体。
+具体的实现（例如如何执行保留或如何将通知发送给用户）保存在 Infrastructure 项目中。 此项目将引用特定于实现的包，例如 Entity Framework Core，但不应在此项目之外泄露这些实现的详细信息。 基础结构服务和存储库应实现在 ApplicationCore 项目中定义的接口，其持久性实现负责检索和存储在 ApplicationCore 中定义的实体。
 
 ASP.NET Core UI 项目负责所有 UI 级问题，但不得包含业务逻辑或基础结构详细信息。 实际上，最理想的情况是它甚至没有对 Infrastructure 项目的依赖关系，这样可确保不意外引入两个项目之间的依赖关系。 第三方 DI 容器（例如 StructureMap）可用于定于每个项目中 Registry 类中的 DI 规则，从而帮助实现这一目的。
 
@@ -207,13 +207,13 @@ ASP.NET Core MVC 还使用约定来确定视图的位置。 可以使用自定�
 
 ### <a name="cross-cutting-concerns"></a>横切关注点
 
-随着应用程序的发展，将横切关注点分解出来，以消除重复和保持一致性变得越来越重要。 ASP.NET Core 应用程序中的横切关注点非常多，例如身份验证、模型验证规则、输出缓存和错误处理等等。 ASP.NET Core MVC [筛选器](/aspnet/core/mvc/controllers/filters)允许在请求处理管道中的特定步骤之前或之后运行代码。 例如，可以在模型绑定之前/之后、某个操作之前/之后或某个操作结果之前/之后运行筛选器。 还可以使用授权筛选器来控制对管道其余部分的访问权限。 图 7-2 显示了请求执行如何流经筛选器（如果配置）。
+随着应用程序的发展，将横切关注点分解出来，以消除重复和保持一致性变得越来越重要。 ASP.NET Core 应用程序中的横切关注点非常多，例如身份验证、模型验证规则、输出缓存和错误处理等等。 ASP.NET Core MVC [过滤器](/aspnet/core/mvc/controllers/filters)允许在请求处理管道中的特定步骤之前或之后运行代码。 例如，可以在模型绑定之前/之后、某个操作之前/之后或某个操作结果之前/之后运行过滤器。 还可以使用授权过滤器来控制对管道其余部分的访问权限。 图 7-2 显示了请求执行如何流经过滤器（如果配置）。
 
-![请求通过授权筛选器、资源筛选器、模型绑定、操作筛选器、操作执行和操作结果转换、异常筛选器、结果筛选器和结果执行进行处理。 返回时，请求仅由结果筛选器和资源筛选器进行处理，变成发送到客户端的响应。](./media/image7-2.png)
+![请求通过授权过滤器、资源过滤器、模型绑定、操作过滤器、操作执行和操作结果转换、异常过滤器、结果过滤器和结果执行进行处理。 返回时，请求仅由结果过滤器和资源过滤器进行处理，变成发送到客户端的响应。](./media/image7-2.png)
 
-图 7-2 请求执行通过各筛选器和请求管道。
+图 7-2 请求执行通过各过滤器和请求管道。
 
-筛选器通常作为属性实现，因此可应用于控制器或操作。 以这种方式添加时，在操作级别指定的筛选器会覆盖在控制器级别指定的筛选器（会覆盖全局筛选器）或在其基础之上生成。 例如，\[Route\] 属性可用来生成控制器和操作之间的路由。 同样，可以在控制器级别配置授权，然后被各操作覆盖，如下所示：
+过滤器通常作为属性实现，因此可应用于控制器或操作。 以这种方式添加时，在操作级别指定的过滤器会覆盖在控制器级别指定的过滤器（会覆盖全局过滤器）或在其基础之上生成。 例如，\[Route\] 属性可用来生成控制器和操作之间的路由。 同样，可以在控制器级别配置授权，然后被各操作覆盖，如下所示：
 
 ```csharp
 [Authorize]
@@ -226,9 +226,9 @@ public class AccountController : Controller
 }
 ```
 
-第一个方法 Login 使用 AllowAnonymous 筛选器（属性）来覆盖在控制器级别设置的 Authorize 筛选器。 ForgotPassword 操作（以及类中没有 AllowAnonymous 属性的任何其他操作）需要经过身份验证的请求。
+第一个方法 Login 使用 AllowAnonymous 过滤器（属性）来覆盖在控制器级别设置的 Authorize 过滤器。 ForgotPassword 操作（以及类中没有 AllowAnonymous 属性的任何其他操作）需要经过身份验证的请求。
 
-筛选器可作为 API 的常见错误处理策略，用于消除重复。 例如，如果请求引用的关键字不存在，典型的 API 策略会返回 NotFound 响应，如果模型验证失败，则返回 BadRequest 响应。 下面的示例通过操作演示了这两种策略：
+过滤器可作为 API 的常见错误处理策略，用于消除重复。 例如，如果请求引用的关键字不存在，典型的 API 策略会返回 NotFound 响应，如果模型验证失败，则返回 BadRequest 响应。 下面的示例通过操作演示了这两种策略：
 
 ```csharp
 [HttpPut("{id}")]
@@ -248,7 +248,7 @@ public async Task<IActionResult> Put(int id, [FromBody]Author author)
 }
 ```
 
-切勿让操作方法因为类似于此的条件代码变得杂乱。 而应该将策略放在可按需应用的筛选器中。 此示例中，无论何时只要向 API 发送命令就会进行模型验证检查，可使用以下属性替换模型验证检查：
+切勿让操作方法因为类似于此的条件代码变得杂乱。 而应该将策略放在可按需应用的过滤器中。 此示例中，无论何时只要向 API 发送命令就会进行模型验证检查，可使用以下属性替换模型验证检查：
 
 ```csharp
 public class ValidateModelAttribute : ActionFilterAttribute
@@ -263,7 +263,7 @@ public class ValidateModelAttribute : ActionFilterAttribute
 }
 ```
 
-同样，可以使用筛选器来检查某条记录是否存在，并在执行操作前返回 404，而无需在操作中执行这些检查。 将常见约定提取出来，并在整理解决方案时将基础结构代码和业务逻辑与 UI 分离开，这样 MVC 操作方法会变得极其精简：
+同样，可以使用过滤器来检查某条记录是否存在，并在执行操作前返回 404，而无需在操作中执行这些检查。 将常见约定提取出来，并在整理解决方案时将基础结构代码和业务逻辑与 UI 分离开，这样 MVC 操作方法会变得极其精简：
 
 ```csharp
 [HttpPut("{id}")]
@@ -275,7 +275,7 @@ public async Task<IActionResult> Put(int id, [FromBody]Author author)
 }
 ```
 
-可在 MSDN 文章[实际的 ASP.NET Core MVC 筛选器](https://msdn.microsoft.com/magazine/mt767699.aspx)中了解有关实现筛选器的详细信息并下载工作示例。
+可在 MSDN 文章[实际的 ASP.NET Core MVC 过滤器](https://msdn.microsoft.com/magazine/mt767699.aspx)中了解有关实现过滤器的详细信息并下载工作示例。
 
 > ### <a name="references--structuring-applications"></a>参考 - 构建应用程序
 >
@@ -283,9 +283,9 @@ public async Task<IActionResult> Put(int id, [FromBody]Author author)
 >   <https://docs.microsoft.com/aspnet/core/mvc/controllers/areas>
 > - **MSDN 杂志 - ASP.NET Core MVC 的功能切分**  
  > <https://msdn.microsoft.com/magazine/mt763233.aspx>
-> - **筛选器**  
+> - **过滤器**  
 >   <https://docs.microsoft.com/aspnet/core/mvc/controllers/filters>
-> - **MSDN - 实际的 ASP.NET Core MVC 筛选器**  
+> - **MSDN - 实际的 ASP.NET Core MVC 过滤器**  
 >   <https://msdn.microsoft.com/magazine/mt767699.aspx>
 
 ## <a name="security"></a>安全性
@@ -460,9 +460,9 @@ public class Program
 > - **WebSocket 管理器**  
 >   https://github.com/radu-matei/websocket-manager
 
-## <a name="domain-driven-design--should-you-apply-it"></a>域驱动的设计 - 是否该使用？
+## <a name="domain-driven-design--should-you-apply-it"></a>领域驱动设计 - 是否该使用？
 
-域驱动设计 (DDD) 是一种敏捷方法，用于构建强调注重企业域的软件。 它非常注重与企业领域专家的沟通和互动，这些专家可以告知开发人员实际系统如何工作。 例如，如果你在构建处理股票交易的系统，那么域专家可能是一位经验丰富的股票经纪人。 DDD 旨在解决大型复杂的企业问题，通常不适合较小型较简单的应用程序，因为在理解域和为域建模上的投入并不值得。
+领域驱动设计 (DDD) 是一种敏捷方法，用于构建强调专注于业务领域的软件。 它非常注重与业务领域专家的沟通和互动，这些专家可以告知开发人员实际系统如何工作。 例如，如果你在构建处理股票交易的系统，那么领域专家可能是一位经验丰富的股票经纪人。 DDD 旨在解决大型复杂的企业问题，通常不适合较小型较简单的应用程序，因为在理解领域和为领域建模上的投入并不值得。
 
 采用 DDD 方法构建软件时，团队（包括非技术型利益干系人和参与者）应为问题空间开发一种通用语言。 即，要进行建模的实际概念、软件同义词以及可能存在以维持该概念的任何结构（例如数据库表）应使用相同的术语。 因此，通用语言中所述的概念应该形成域模型的基础。
 
@@ -474,33 +474,33 @@ public class Program
 
 - [值对象](https://deviq.com/value-object/)，表示可以根据其属性值的总和进行比较的概念。 例如，包含开始日期和结束日期的 DateRange。
 
-- [域事件](https://martinfowler.com/eaaDev/DomainEvent.html)，表示系统中发生的与系统其他部分相关的事件。
+- [领域事件](https://martinfowler.com/eaaDev/DomainEvent.html)，表示系统中发生的与系统其他部分相关的事件。
 
-请注意，DDD 域模型应封装模型中的复杂行为。 尤其是实体，它不应该仅仅是属性的集合。 域模型缺少行为，并且仅表示系统状态时，就是所谓的[贫乏性模型](https://deviq.com/anemic-model/)，DDD 中应避免此类模型。
+请注意，DDD 领域模型应封装模型中的复杂行为。 尤其是实体，它不应该仅仅是属性的集合。 领域模型缺少行为，并且仅表示系统状态时，就是所谓的[贫血模型](https://deviq.com/anemic-model/)，DDD 中应避免此类模型。
 
 除这些模型类型之外，DDD 通常还采用多种模式：
 
-- [存储库](https://deviq.com/repository-pattern/)，用于提取持久保留详细信息。
+- [存储库](https://deviq.com/repository-pattern/)，用于抽象持久化细节
 
 - [工厂](https://en.wikipedia.org/wiki/Factory_method_pattern)，用于封装复杂对象创建。
 
-- 域事件，用于从触发行为中分离依赖性行为。
+- 领域事件，用于从触发行为中分离依赖性行为。
 
-- [服务](http://gorodinski.com/blog/2012/04/14/services-in-domain-driven-design-ddd/)，用于封装复杂行为和/或基础结构实现详细信息。
+- [服务](http://gorodinski.com/blog/2012/04/14/services-in-domain-driven-design-ddd/)，用于封装复杂行为和/或基础结构实现细节。
 
-- [命令](https://en.wikipedia.org/wiki/Command_pattern)，用于分离发出的命令并执行命令本身。
+- [命令模式](https://en.wikipedia.org/wiki/Command_pattern)，用于分离发出的命令并执行命令本身。
 
-- [规范](https://deviq.com/specification-pattern/)，用于封装查询详细信息。
+- [规约模式](https://deviq.com/specification-pattern/)，用于封装查询细节。
 
-DDD 还建议使用之前介绍过的干净体系结构，以实现松散耦合、封装和使用单元测试即可轻松验证的代码。
+DDD 还建议使用之前介绍过的整洁架构，以实现松散耦合、封装和使用单元测试即可轻松验证的代码。
 
 ### <a name="when-should-you-apply-ddd"></a>该何时使用 DDD
 
-DDD 非常适合业务（不仅仅是技术）非常复杂的大型应用程序。 这种应用程序需要域专家的知识。 域模型本身应包括有某种意义的行为，表示业务规则和交互，而不仅仅是存储和检索数据存储中各种记录的当前状态。
+DDD 非常适合业务（不仅仅是技术）非常复杂的大型应用程序。 这种应用程序需要领域专家的知识。 领域模型本身应包括有某种意义的行为，表示业务规则和交互，而不仅仅是存储和检索数据存储中各种记录的当前状态。
 
 ### <a name="when-shouldnt-you-apply-ddd"></a>何时不该使用 DDD
 
-DDD 需要在建模、体系结构和通信方面进行投资，这对于较小型的应用程序或本质只是 CRUD（创建/读取/更新/删除）的应用程序来说可能并不值得。 如果选择采用 DDD 处理应用程序，但发现域中有一个没有任何行为的贫乏性模型，则可能需要重新考虑处理方法。 可能是该应用程序不需要 DDD，也可能是你需要别人帮助你重构应用程序，将业务逻辑封装在域模型中，而不是数据库或用户界面中。
+DDD 需要在建模、体系结构和通信方面进行投资，这对于较小型的应用程序或本质只是 CRUD（创建/读取/更新/删除）的应用程序来说可能并不值得。 如果选择采用 DDD 处理应用程序，但发现域中有一个没有任何行为的贫血模型，则可能需要重新考虑处理方法。 可能是该应用程序不需要 DDD，也可能是你需要别人帮助你重构应用程序，将业务逻辑封装在域模型中，而不是数据库或用户界面中。
 
 可以使用混合方法，只对应用程序中的事务性区域或比较复杂的区域使用 DDD，而不对应用程序中比较简单的 CRUD 或只读部分使用 DDD。 例如，如果是为显示报表或将仪表板数据可视化而查询数据，则无需具有聚合约束。 使用单独的、更简单的读取模型处理这类要求是完全可以接受的。
 
