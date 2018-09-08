@@ -11,16 +11,16 @@ ms.assetid: fb626b41-b888-4625-84c3-2c02b5e3866f
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 408b71bf38427d12418e05f8b509fe841bc95ef1
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43880160"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44191854"
 ---
-# <a name="axlgetissuerpublickeyhash-function"></a><span data-ttu-id="640a6-102">_AxlGetIssuerPublicKeyHash 函数</span><span class="sxs-lookup"><span data-stu-id="640a6-102">_AxlGetIssuerPublicKeyHash Function</span></span>
-<span data-ttu-id="640a6-103">检索与用于对指定证书进行签名的私钥关联的公钥的 SHA-1 哈希。</span><span class="sxs-lookup"><span data-stu-id="640a6-103">Retrieves the SHA-1 hash of the public key associated with the private key that is used to sign the specified certificate.</span></span>  
+# <a name="axlgetissuerpublickeyhash-function"></a><span data-ttu-id="7383d-102">_AxlGetIssuerPublicKeyHash 函数</span><span class="sxs-lookup"><span data-stu-id="7383d-102">_AxlGetIssuerPublicKeyHash Function</span></span>
+<span data-ttu-id="7383d-103">检索与用于对指定证书进行签名的私钥关联的公钥的 SHA-1 哈希。</span><span class="sxs-lookup"><span data-stu-id="7383d-103">Retrieves the SHA-1 hash of the public key associated with the private key that is used to sign the specified certificate.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="640a6-104">语法</span><span class="sxs-lookup"><span data-stu-id="640a6-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="7383d-104">语法</span><span class="sxs-lookup"><span data-stu-id="7383d-104">Syntax</span></span>  
   
 ```  
 HRESULT _AxlGetIssuerPublicKeyHash (  
@@ -29,15 +29,15 @@ HRESULT _AxlGetIssuerPublicKeyHash (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="640a6-105">参数</span><span class="sxs-lookup"><span data-stu-id="640a6-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="7383d-105">参数</span><span class="sxs-lookup"><span data-stu-id="7383d-105">Parameters</span></span>  
  `pChainContext`  
- <span data-ttu-id="640a6-106">[in] CSP 公钥 Blob。</span><span class="sxs-lookup"><span data-stu-id="640a6-106">[in] The CSP public key blob.</span></span> <span data-ttu-id="640a6-107">请参阅[CRYPTOAPI_BLOB](/windows/desktop/api/dpapi/ns-dpapi-_cryptoapi_blob)结构。</span><span class="sxs-lookup"><span data-stu-id="640a6-107">See the [CRYPTOAPI_BLOB](/windows/desktop/api/dpapi/ns-dpapi-_cryptoapi_blob) structure.</span></span>  
+ <span data-ttu-id="7383d-106">[in] CSP 公钥 Blob。</span><span class="sxs-lookup"><span data-stu-id="7383d-106">[in] The CSP public key blob.</span></span> <span data-ttu-id="7383d-107">请参阅[CRYPTOAPI_BLOB](/windows/desktop/api/dpapi/ns-dpapi-_cryptoapi_blob)结构。</span><span class="sxs-lookup"><span data-stu-id="7383d-107">See the [CRYPTOAPI_BLOB](/windows/desktop/api/dpapi/ns-dpapi-_cryptoapi_blob) structure.</span></span>  
   
  `ppwszPublicKeyHash`  
- <span data-ttu-id="640a6-108">[out] 指向 WCHAR \* 的指针，用于接收十六进制编码的公钥标记。</span><span class="sxs-lookup"><span data-stu-id="640a6-108">[out] A pointer to WCHAR \* to receive the hex-encoded public key token.</span></span>  
+ <span data-ttu-id="7383d-108">[out] 指向 WCHAR \* 的指针，用于接收十六进制编码的公钥标记。</span><span class="sxs-lookup"><span data-stu-id="7383d-108">[out] A pointer to WCHAR \* to receive the hex-encoded public key token.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="640a6-109">返回值</span><span class="sxs-lookup"><span data-stu-id="640a6-109">Return Value</span></span>  
- <span data-ttu-id="640a6-110">如果函数成功，则为 `S_OK`；否则为 `S_FALSE`。</span><span class="sxs-lookup"><span data-stu-id="640a6-110">`S_OK` if the function succeeds; otherwise `S_FALSE`.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="7383d-109">返回值</span><span class="sxs-lookup"><span data-stu-id="7383d-109">Return Value</span></span>  
+ <span data-ttu-id="7383d-110">如果函数成功，则为 `S_OK`；否则为 `S_FALSE`。</span><span class="sxs-lookup"><span data-stu-id="7383d-110">`S_OK` if the function succeeds; otherwise `S_FALSE`.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="640a6-111">请参阅</span><span class="sxs-lookup"><span data-stu-id="640a6-111">See Also</span></span>  
- [<span data-ttu-id="640a6-112">验证码</span><span class="sxs-lookup"><span data-stu-id="640a6-112">Authenticode</span></span>](../../../../docs/framework/unmanaged-api/authenticode/index.md)
+## <a name="see-also"></a><span data-ttu-id="7383d-111">请参阅</span><span class="sxs-lookup"><span data-stu-id="7383d-111">See Also</span></span>  
+ [<span data-ttu-id="7383d-112">验证码</span><span class="sxs-lookup"><span data-stu-id="7383d-112">Authenticode</span></span>](../../../../docs/framework/unmanaged-api/authenticode/index.md)

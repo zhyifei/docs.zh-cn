@@ -9,25 +9,25 @@ helpviewer_keywords:
 - objects, serializing steps
 ms.assetid: a1207d05-32b2-4953-8582-959607991227
 ms.openlocfilehash: e4d6e3edb15dbf5ba4b7ec7f8658fec1a618d315
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43875744"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44194898"
 ---
-# <a name="how-to-serialize-an-object"></a><span data-ttu-id="882e5-102">如何：序列化对象</span><span class="sxs-lookup"><span data-stu-id="882e5-102">How to: Serialize an Object</span></span>
-<span data-ttu-id="882e5-103">要序列化对象，首先应创建要序列化的对象，然后设置其公共属性和字段。</span><span class="sxs-lookup"><span data-stu-id="882e5-103">To serialize an object, first create the object that is to be serialized and set its public properties and fields.</span></span> <span data-ttu-id="882e5-104">为此，必须确定 XML 流的传输格式，即它是作为流还是作为文件进行存储。</span><span class="sxs-lookup"><span data-stu-id="882e5-104">To do this, you must determine the transport format in which the XML stream is to be stored, either as a stream or as a file.</span></span> <span data-ttu-id="882e5-105">例如，如果 XML 流必须以永久形式保存，则应创建 <xref:System.IO.FileStream> 对象。</span><span class="sxs-lookup"><span data-stu-id="882e5-105">For example, if the XML stream must be saved in a permanent form, create a <xref:System.IO.FileStream> object.</span></span>  
+# <a name="how-to-serialize-an-object"></a><span data-ttu-id="4113a-102">如何：序列化对象</span><span class="sxs-lookup"><span data-stu-id="4113a-102">How to: Serialize an Object</span></span>
+<span data-ttu-id="4113a-103">要序列化对象，首先应创建要序列化的对象，然后设置其公共属性和字段。</span><span class="sxs-lookup"><span data-stu-id="4113a-103">To serialize an object, first create the object that is to be serialized and set its public properties and fields.</span></span> <span data-ttu-id="4113a-104">为此，必须确定 XML 流的传输格式，即它是作为流还是作为文件进行存储。</span><span class="sxs-lookup"><span data-stu-id="4113a-104">To do this, you must determine the transport format in which the XML stream is to be stored, either as a stream or as a file.</span></span> <span data-ttu-id="4113a-105">例如，如果 XML 流必须以永久形式保存，则应创建 <xref:System.IO.FileStream> 对象。</span><span class="sxs-lookup"><span data-stu-id="4113a-105">For example, if the XML stream must be saved in a permanent form, create a <xref:System.IO.FileStream> object.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="882e5-106">有关 XML 序列化的更多示例，请参见 [XML 序列化示例](../../../docs/standard/serialization/examples-of-xml-serialization.md)。</span><span class="sxs-lookup"><span data-stu-id="882e5-106">For more examples of XML serialization, see [Examples of XML Serialization](../../../docs/standard/serialization/examples-of-xml-serialization.md).</span></span>  
+>  <span data-ttu-id="4113a-106">有关 XML 序列化的更多示例，请参见 [XML 序列化示例](../../../docs/standard/serialization/examples-of-xml-serialization.md)。</span><span class="sxs-lookup"><span data-stu-id="4113a-106">For more examples of XML serialization, see [Examples of XML Serialization](../../../docs/standard/serialization/examples-of-xml-serialization.md).</span></span>  
   
-### <a name="to-serialize-an-object"></a><span data-ttu-id="882e5-107">序列化对象</span><span class="sxs-lookup"><span data-stu-id="882e5-107">To serialize an object</span></span>  
+### <a name="to-serialize-an-object"></a><span data-ttu-id="4113a-107">序列化对象</span><span class="sxs-lookup"><span data-stu-id="4113a-107">To serialize an object</span></span>  
   
-1.  <span data-ttu-id="882e5-108">创建对象并设置其公共字段和属性。</span><span class="sxs-lookup"><span data-stu-id="882e5-108">Create the object and set its public fields and properties.</span></span>  
+1.  <span data-ttu-id="4113a-108">创建对象并设置其公共字段和属性。</span><span class="sxs-lookup"><span data-stu-id="4113a-108">Create the object and set its public fields and properties.</span></span>  
   
-2.  <span data-ttu-id="882e5-109">使用对象的类型构造 <xref:System.Xml.Serialization.XmlSerializer>。</span><span class="sxs-lookup"><span data-stu-id="882e5-109">Construct a <xref:System.Xml.Serialization.XmlSerializer> using the type of the object.</span></span> <span data-ttu-id="882e5-110">有关更多信息，请参见 <xref:System.Xml.Serialization.XmlSerializer> 类构造函数。</span><span class="sxs-lookup"><span data-stu-id="882e5-110">For more information, see the <xref:System.Xml.Serialization.XmlSerializer> class constructors.</span></span>  
+2.  <span data-ttu-id="4113a-109">使用对象的类型构造 <xref:System.Xml.Serialization.XmlSerializer>。</span><span class="sxs-lookup"><span data-stu-id="4113a-109">Construct a <xref:System.Xml.Serialization.XmlSerializer> using the type of the object.</span></span> <span data-ttu-id="4113a-110">有关更多信息，请参见 <xref:System.Xml.Serialization.XmlSerializer> 类构造函数。</span><span class="sxs-lookup"><span data-stu-id="4113a-110">For more information, see the <xref:System.Xml.Serialization.XmlSerializer> class constructors.</span></span>  
   
-3.  <span data-ttu-id="882e5-111">调用 <xref:System.Xml.Serialization.XmlSerializer.Serialize%2A> 方法生成对象的公共属性和字段的 XML 流或文件表示形式。</span><span class="sxs-lookup"><span data-stu-id="882e5-111">Call the <xref:System.Xml.Serialization.XmlSerializer.Serialize%2A> method to generate either an XML stream or a file representation of the object's public properties and fields.</span></span> <span data-ttu-id="882e5-112">下面的示例将创建一个文件。</span><span class="sxs-lookup"><span data-stu-id="882e5-112">The following example creates a file.</span></span>  
+3.  <span data-ttu-id="4113a-111">调用 <xref:System.Xml.Serialization.XmlSerializer.Serialize%2A> 方法生成对象的公共属性和字段的 XML 流或文件表示形式。</span><span class="sxs-lookup"><span data-stu-id="4113a-111">Call the <xref:System.Xml.Serialization.XmlSerializer.Serialize%2A> method to generate either an XML stream or a file representation of the object's public properties and fields.</span></span> <span data-ttu-id="4113a-112">下面的示例将创建一个文件。</span><span class="sxs-lookup"><span data-stu-id="4113a-112">The following example creates a file.</span></span>  
   
     ```vb  
     Dim myObject As MySerializableClass = New MySerializableClass()  
@@ -50,7 +50,7 @@ ms.locfileid: "43875744"
     myWriter.Close();  
     ```  
   
-## <a name="see-also"></a><span data-ttu-id="882e5-113">请参阅</span><span class="sxs-lookup"><span data-stu-id="882e5-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="4113a-113">请参阅</span><span class="sxs-lookup"><span data-stu-id="4113a-113">See also</span></span>
 
-- [<span data-ttu-id="882e5-114">XML 序列化简介</span><span class="sxs-lookup"><span data-stu-id="882e5-114">Introducing XML Serialization</span></span>](../../../docs/standard/serialization/introducing-xml-serialization.md)  
-- [<span data-ttu-id="882e5-115">如何：反序列化对象</span><span class="sxs-lookup"><span data-stu-id="882e5-115">How to: Deserialize an Object</span></span>](../../../docs/standard/serialization/how-to-deserialize-an-object.md)
+- [<span data-ttu-id="4113a-114">XML 序列化简介</span><span class="sxs-lookup"><span data-stu-id="4113a-114">Introducing XML Serialization</span></span>](../../../docs/standard/serialization/introducing-xml-serialization.md)  
+- [<span data-ttu-id="4113a-115">如何：反序列化对象</span><span class="sxs-lookup"><span data-stu-id="4113a-115">How to: Deserialize an Object</span></span>](../../../docs/standard/serialization/how-to-deserialize-an-object.md)
