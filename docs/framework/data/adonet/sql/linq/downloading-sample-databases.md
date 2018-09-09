@@ -3,54 +3,54 @@ title: 下载示例数据库
 ms.date: 03/30/2017
 ms.assetid: ef9d69a1-9461-43fe-94bb-7c836754bcb5
 ms.openlocfilehash: e0b842385762a486ffcc775974e15334c77b589b
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44039129"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44225264"
 ---
-# <a name="downloading-sample-databases"></a><span data-ttu-id="f99f3-102">下载示例数据库</span><span class="sxs-lookup"><span data-stu-id="f99f3-102">Downloading Sample Databases</span></span>
-<span data-ttu-id="f99f3-103">[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 中的许多示例和演练都使用 Northwind 示例数据库和 SQL Server Express Edition。</span><span class="sxs-lookup"><span data-stu-id="f99f3-103">A number of samples and walkthroughs in the [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] documentation use the Northwind sample database and SQL Server Express Edition.</span></span> <span data-ttu-id="f99f3-104">您可以从 Microsoft 下载网站免费下载这些产品。</span><span class="sxs-lookup"><span data-stu-id="f99f3-104">You can download these products free of charge from the Microsoft download site.</span></span>  
+# <a name="downloading-sample-databases"></a><span data-ttu-id="e624f-102">下载示例数据库</span><span class="sxs-lookup"><span data-stu-id="e624f-102">Downloading Sample Databases</span></span>
+<span data-ttu-id="e624f-103">[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 中的许多示例和演练都使用 Northwind 示例数据库和 SQL Server Express Edition。</span><span class="sxs-lookup"><span data-stu-id="e624f-103">A number of samples and walkthroughs in the [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] documentation use the Northwind sample database and SQL Server Express Edition.</span></span> <span data-ttu-id="e624f-104">您可以从 Microsoft 下载网站免费下载这些产品。</span><span class="sxs-lookup"><span data-stu-id="e624f-104">You can download these products free of charge from the Microsoft download site.</span></span>  
   
-## <a name="downloading-the-northwind-database"></a><span data-ttu-id="f99f3-105">下载 Northwind 数据库</span><span class="sxs-lookup"><span data-stu-id="f99f3-105">Downloading the Northwind Database</span></span>  
+## <a name="downloading-the-northwind-database"></a><span data-ttu-id="e624f-105">下载 Northwind 数据库</span><span class="sxs-lookup"><span data-stu-id="e624f-105">Downloading the Northwind Database</span></span>  
   
-#### <a name="to-download-and-install-the-northwind-sample-database-for-sql-server"></a><span data-ttu-id="f99f3-106">下载和安装用于 SQL Server 的 Northwind 示例数据库</span><span class="sxs-lookup"><span data-stu-id="f99f3-106">To download and install the Northwind sample database for SQL Server</span></span>  
+#### <a name="to-download-and-install-the-northwind-sample-database-for-sql-server"></a><span data-ttu-id="e624f-106">下载和安装用于 SQL Server 的 Northwind 示例数据库</span><span class="sxs-lookup"><span data-stu-id="e624f-106">To download and install the Northwind sample database for SQL Server</span></span>  
   
-1.  <span data-ttu-id="f99f3-107">启动 Internet Explorer。</span><span class="sxs-lookup"><span data-stu-id="f99f3-107">Start Internet Explorer.</span></span>  
+1.  <span data-ttu-id="e624f-107">启动 Internet Explorer。</span><span class="sxs-lookup"><span data-stu-id="e624f-107">Start Internet Explorer.</span></span>  
   
-2.  <span data-ttu-id="f99f3-108">转到[Northwind 和 Pubs 示例数据库](https://go.microsoft.com/fwlink?linkid=64296)Web 站点。</span><span class="sxs-lookup"><span data-stu-id="f99f3-108">Go to the [Northwind and Pubs Sample Databases](https://go.microsoft.com/fwlink?linkid=64296) Web site.</span></span>  
+2.  <span data-ttu-id="e624f-108">转到[Northwind 和 Pubs 示例数据库](https://go.microsoft.com/fwlink?linkid=64296)Web 站点。</span><span class="sxs-lookup"><span data-stu-id="e624f-108">Go to the [Northwind and Pubs Sample Databases](https://go.microsoft.com/fwlink?linkid=64296) Web site.</span></span>  
   
-3.  <span data-ttu-id="f99f3-109">单击 **“下载”**。</span><span class="sxs-lookup"><span data-stu-id="f99f3-109">Click **Download**.</span></span>  
+3.  <span data-ttu-id="e624f-109">单击 **“下载”**。</span><span class="sxs-lookup"><span data-stu-id="e624f-109">Click **Download**.</span></span>  
   
-4.  <span data-ttu-id="f99f3-110">在中**文件下载**对话框中，选择**保存**。</span><span class="sxs-lookup"><span data-stu-id="f99f3-110">In the **File Download** dialog box, select **Save**.</span></span>  
+4.  <span data-ttu-id="e624f-110">在中**文件下载**对话框中，选择**保存**。</span><span class="sxs-lookup"><span data-stu-id="e624f-110">In the **File Download** dialog box, select **Save**.</span></span>  
   
-5.  <span data-ttu-id="f99f3-111">下载文件后，双击**Nwind.exe**文件来安装数据库。</span><span class="sxs-lookup"><span data-stu-id="f99f3-111">After the file has downloaded, double-click the **Nwind.exe** file to install the database.</span></span>  
+5.  <span data-ttu-id="e624f-111">下载文件后，双击**Nwind.exe**文件来安装数据库。</span><span class="sxs-lookup"><span data-stu-id="e624f-111">After the file has downloaded, double-click the **Nwind.exe** file to install the database.</span></span>  
   
-     <span data-ttu-id="f99f3-112">默认情况下，数据库安装在*驱动器*: \SQL Server 2000 Sample Databases。</span><span class="sxs-lookup"><span data-stu-id="f99f3-112">By default, the database is installed at *drive*:\SQL Server 2000 Sample Databases.</span></span>  
+     <span data-ttu-id="e624f-112">默认情况下，数据库安装在*驱动器*: \SQL Server 2000 Sample Databases。</span><span class="sxs-lookup"><span data-stu-id="e624f-112">By default, the database is installed at *drive*:\SQL Server 2000 Sample Databases.</span></span>  
   
-## <a name="downloading-sql-server-express-edition"></a><span data-ttu-id="f99f3-113">下载 SQL Server Express Edition</span><span class="sxs-lookup"><span data-stu-id="f99f3-113">Downloading SQL Server Express Edition</span></span>  
- <span data-ttu-id="f99f3-114">SQL Server Express Edition 免费提供，您可以利用应用程序重新发布它。</span><span class="sxs-lookup"><span data-stu-id="f99f3-114">SQL Server Express Edition is available without charge, and you can redistribute it with applications.</span></span> <span data-ttu-id="f99f3-115">如果使用的 Visual Studio，专业版和更高版本都包含 SQL Server Express Edition。</span><span class="sxs-lookup"><span data-stu-id="f99f3-115">If you are using Visual Studio, SQL Server Express Edition is included in the Pro and greater editions.</span></span>  
+## <a name="downloading-sql-server-express-edition"></a><span data-ttu-id="e624f-113">下载 SQL Server Express Edition</span><span class="sxs-lookup"><span data-stu-id="e624f-113">Downloading SQL Server Express Edition</span></span>  
+ <span data-ttu-id="e624f-114">SQL Server Express Edition 免费提供，您可以利用应用程序重新发布它。</span><span class="sxs-lookup"><span data-stu-id="e624f-114">SQL Server Express Edition is available without charge, and you can redistribute it with applications.</span></span> <span data-ttu-id="e624f-115">如果使用的 Visual Studio，专业版和更高版本都包含 SQL Server Express Edition。</span><span class="sxs-lookup"><span data-stu-id="e624f-115">If you are using Visual Studio, SQL Server Express Edition is included in the Pro and greater editions.</span></span>  
   
-#### <a name="to-download-and-install-sql-server-express-edition"></a><span data-ttu-id="f99f3-116">下载并安装 SQL Server Express Edition</span><span class="sxs-lookup"><span data-stu-id="f99f3-116">To download and install SQL Server Express Edition</span></span>  
+#### <a name="to-download-and-install-sql-server-express-edition"></a><span data-ttu-id="e624f-116">下载并安装 SQL Server Express Edition</span><span class="sxs-lookup"><span data-stu-id="e624f-116">To download and install SQL Server Express Edition</span></span>  
   
-1.  <span data-ttu-id="f99f3-117">启动 Internet Explorer。</span><span class="sxs-lookup"><span data-stu-id="f99f3-117">Start Internet Explorer.</span></span>  
+1.  <span data-ttu-id="e624f-117">启动 Internet Explorer。</span><span class="sxs-lookup"><span data-stu-id="e624f-117">Start Internet Explorer.</span></span>  
   
-2.  <span data-ttu-id="f99f3-118">转到[Microsoft Download Center](https://go.microsoft.com/fwlink?linkid=74602) Web 站点。</span><span class="sxs-lookup"><span data-stu-id="f99f3-118">Go to the [Microsoft Download Center](https://go.microsoft.com/fwlink?linkid=74602) Web site.</span></span>  
+2.  <span data-ttu-id="e624f-118">转到[Microsoft Download Center](https://go.microsoft.com/fwlink?linkid=74602) Web 站点。</span><span class="sxs-lookup"><span data-stu-id="e624f-118">Go to the [Microsoft Download Center](https://go.microsoft.com/fwlink?linkid=74602) Web site.</span></span>  
   
-3.  <span data-ttu-id="f99f3-119">在关键字框中，键入**SQL Server Express**。</span><span class="sxs-lookup"><span data-stu-id="f99f3-119">In the keywords box, type **SQL Server Express**.</span></span>  
+3.  <span data-ttu-id="e624f-119">在关键字框中，键入**SQL Server Express**。</span><span class="sxs-lookup"><span data-stu-id="e624f-119">In the keywords box, type **SQL Server Express**.</span></span>  
   
-4.  <span data-ttu-id="f99f3-120">单击 **“转到”**。</span><span class="sxs-lookup"><span data-stu-id="f99f3-120">Click **Go**.</span></span>  
+4.  <span data-ttu-id="e624f-120">单击 **“转到”**。</span><span class="sxs-lookup"><span data-stu-id="e624f-120">Click **Go**.</span></span>  
   
-5.  <span data-ttu-id="f99f3-121">在结果页上，单击指向**Microsoft SQL Server 2005 Express Edition**下载页。</span><span class="sxs-lookup"><span data-stu-id="f99f3-121">On the results page, click the link to the **Microsoft SQL Server 2005 Express Edition** download page.</span></span>  
+5.  <span data-ttu-id="e624f-121">在结果页上，单击指向**Microsoft SQL Server 2005 Express Edition**下载页。</span><span class="sxs-lookup"><span data-stu-id="e624f-121">On the results page, click the link to the **Microsoft SQL Server 2005 Express Edition** download page.</span></span>  
   
-6.  <span data-ttu-id="f99f3-122">按照网站上的安装说明操作。</span><span class="sxs-lookup"><span data-stu-id="f99f3-122">Follow the installation instructions on the Web site.</span></span>  
+6.  <span data-ttu-id="e624f-122">按照网站上的安装说明操作。</span><span class="sxs-lookup"><span data-stu-id="e624f-122">Follow the installation instructions on the Web site.</span></span>  
   
-## <a name="downloading-management-studio-express"></a><span data-ttu-id="f99f3-123">下载 Management Studio Express</span><span class="sxs-lookup"><span data-stu-id="f99f3-123">Downloading Management Studio Express</span></span>  
- <span data-ttu-id="f99f3-124">如果你想要修改已下载的数据库，则可以访问数据库从**服务器资源管理器**在 Visual Studio 集成开发环境 (IDE)，或使用 Microsoft SQL Server Management Studio Express (SSMSE).</span><span class="sxs-lookup"><span data-stu-id="f99f3-124">If you want to modify a database that you have downloaded, you can access the database from **Server Explorer** in the Visual Studio integrated development environment (IDE), or use Microsoft SQL Server Management Studio Express (SSMSE).</span></span>  
+## <a name="downloading-management-studio-express"></a><span data-ttu-id="e624f-123">下载 Management Studio Express</span><span class="sxs-lookup"><span data-stu-id="e624f-123">Downloading Management Studio Express</span></span>  
+ <span data-ttu-id="e624f-124">如果你想要修改已下载的数据库，则可以访问数据库从**服务器资源管理器**在 Visual Studio 集成开发环境 (IDE)，或使用 Microsoft SQL Server Management Studio Express (SSMSE).</span><span class="sxs-lookup"><span data-stu-id="e624f-124">If you want to modify a database that you have downloaded, you can access the database from **Server Explorer** in the Visual Studio integrated development environment (IDE), or use Microsoft SQL Server Management Studio Express (SSMSE).</span></span>  
   
-#### <a name="to-download-management-studio-express"></a><span data-ttu-id="f99f3-125">下载 Management Studio Express</span><span class="sxs-lookup"><span data-stu-id="f99f3-125">To download Management Studio Express</span></span>  
+#### <a name="to-download-management-studio-express"></a><span data-ttu-id="e624f-125">下载 Management Studio Express</span><span class="sxs-lookup"><span data-stu-id="e624f-125">To download Management Studio Express</span></span>  
   
--   <span data-ttu-id="f99f3-126">按照的说明[SSMSE 站点](https://go.microsoft.com/fwlink/?LinkId=95933)。</span><span class="sxs-lookup"><span data-stu-id="f99f3-126">Follow the instructions at the [SSMSE site](https://go.microsoft.com/fwlink/?LinkId=95933).</span></span>  
+-   <span data-ttu-id="e624f-126">按照的说明[SSMSE 站点](https://go.microsoft.com/fwlink/?LinkId=95933)。</span><span class="sxs-lookup"><span data-stu-id="e624f-126">Follow the instructions at the [SSMSE site](https://go.microsoft.com/fwlink/?LinkId=95933).</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="f99f3-127">请参阅</span><span class="sxs-lookup"><span data-stu-id="f99f3-127">See Also</span></span>  
- [<span data-ttu-id="f99f3-128">入门</span><span class="sxs-lookup"><span data-stu-id="f99f3-128">Getting Started</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/getting-started.md)
+## <a name="see-also"></a><span data-ttu-id="e624f-127">请参阅</span><span class="sxs-lookup"><span data-stu-id="e624f-127">See Also</span></span>  
+ [<span data-ttu-id="e624f-128">入门</span><span class="sxs-lookup"><span data-stu-id="e624f-128">Getting Started</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/getting-started.md)

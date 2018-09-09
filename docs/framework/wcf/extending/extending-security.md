@@ -7,41 +7,41 @@ ms.assetid: a015a040-9fdf-4147-9ea9-f83b570be1d4
 author: BrucePerlerMS
 manager: mbaldwin
 ms.openlocfilehash: a16416e580dabd6a9057e11a8183437529ca83e8
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43884877"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44227644"
 ---
-# <a name="extending-security"></a><span data-ttu-id="b0cb6-102">扩展安全性</span><span class="sxs-lookup"><span data-stu-id="b0cb6-102">Extending Security</span></span>
-<span data-ttu-id="b0cb6-103">若要适应新的声明类型和自定义令牌，可以扩展安全基础结构的 Windows Communication Foundation (WCF)。</span><span class="sxs-lookup"><span data-stu-id="b0cb6-103">To accommodate new claim types and custom tokens, you can extend the security infrastructure of Windows Communication Foundation (WCF).</span></span> <span data-ttu-id="b0cb6-104">本节中的主题将向您介绍如何完成此任务。</span><span class="sxs-lookup"><span data-stu-id="b0cb6-104">The topics in this section show you how this is done.</span></span>  
+# <a name="extending-security"></a><span data-ttu-id="8fd91-102">扩展安全性</span><span class="sxs-lookup"><span data-stu-id="8fd91-102">Extending Security</span></span>
+<span data-ttu-id="8fd91-103">若要适应新的声明类型和自定义令牌，可以扩展安全基础结构的 Windows Communication Foundation (WCF)。</span><span class="sxs-lookup"><span data-stu-id="8fd91-103">To accommodate new claim types and custom tokens, you can extend the security infrastructure of Windows Communication Foundation (WCF).</span></span> <span data-ttu-id="8fd91-104">本节中的主题将向您介绍如何完成此任务。</span><span class="sxs-lookup"><span data-stu-id="8fd91-104">The topics in this section show you how this is done.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="b0cb6-105">本节内容</span><span class="sxs-lookup"><span data-stu-id="b0cb6-105">In This Section</span></span>  
- [<span data-ttu-id="b0cb6-106">安全体系结构</span><span class="sxs-lookup"><span data-stu-id="b0cb6-106">Security Architecture</span></span>](https://msdn.microsoft.com/library/16593476-d36a-408d-808c-ae6fd483e28f)  
- <span data-ttu-id="b0cb6-107">介绍了整个 WCF 安全系统的体系结构。</span><span class="sxs-lookup"><span data-stu-id="b0cb6-107">Walks through the architecture of the WCF security system.</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="8fd91-105">本节内容</span><span class="sxs-lookup"><span data-stu-id="8fd91-105">In This Section</span></span>  
+ [<span data-ttu-id="8fd91-106">安全体系结构</span><span class="sxs-lookup"><span data-stu-id="8fd91-106">Security Architecture</span></span>](https://msdn.microsoft.com/library/16593476-d36a-408d-808c-ae6fd483e28f)  
+ <span data-ttu-id="8fd91-107">介绍了整个 WCF 安全系统的体系结构。</span><span class="sxs-lookup"><span data-stu-id="8fd91-107">Walks through the architecture of the WCF security system.</span></span>  
   
- [<span data-ttu-id="b0cb6-108">自定义凭据和凭据验证</span><span class="sxs-lookup"><span data-stu-id="b0cb6-108">Custom Credential and Credential Validation</span></span>](../../../../docs/framework/wcf/extending/custom-credential-and-credential-validation.md)  
- <span data-ttu-id="b0cb6-109">说明在验证自定义凭据时如何使用标识模型。</span><span class="sxs-lookup"><span data-stu-id="b0cb6-109">Explains how the Identity Model is used when validating custom credentials.</span></span>  
+ [<span data-ttu-id="8fd91-108">自定义凭据和凭据验证</span><span class="sxs-lookup"><span data-stu-id="8fd91-108">Custom Credential and Credential Validation</span></span>](../../../../docs/framework/wcf/extending/custom-credential-and-credential-validation.md)  
+ <span data-ttu-id="8fd91-109">说明在验证自定义凭据时如何使用标识模型。</span><span class="sxs-lookup"><span data-stu-id="8fd91-109">Explains how the Identity Model is used when validating custom credentials.</span></span>  
   
- [<span data-ttu-id="b0cb6-110">自定义令牌</span><span class="sxs-lookup"><span data-stu-id="b0cb6-110">Custom Tokens</span></span>](../../../../docs/framework/wcf/extending/custom-tokens.md)  
- <span data-ttu-id="b0cb6-111">安全令牌服务 (STS) 颁发的令牌通常为 SAML 令牌。</span><span class="sxs-lookup"><span data-stu-id="b0cb6-111">Issued tokens from a Security Token Service (STS) are typically SAML tokens.</span></span> <span data-ttu-id="b0cb6-112">本主题说明如何创建自定义令牌类型。</span><span class="sxs-lookup"><span data-stu-id="b0cb6-112">This topic explains how to create a custom token type.</span></span>  
+ [<span data-ttu-id="8fd91-110">自定义令牌</span><span class="sxs-lookup"><span data-stu-id="8fd91-110">Custom Tokens</span></span>](../../../../docs/framework/wcf/extending/custom-tokens.md)  
+ <span data-ttu-id="8fd91-111">安全令牌服务 (STS) 颁发的令牌通常为 SAML 令牌。</span><span class="sxs-lookup"><span data-stu-id="8fd91-111">Issued tokens from a Security Token Service (STS) are typically SAML tokens.</span></span> <span data-ttu-id="8fd91-112">本主题说明如何创建自定义令牌类型。</span><span class="sxs-lookup"><span data-stu-id="8fd91-112">This topic explains how to create a custom token type.</span></span>  
   
- [<span data-ttu-id="b0cb6-113">自定义授权</span><span class="sxs-lookup"><span data-stu-id="b0cb6-113">Custom Authorization</span></span>](../../../../docs/framework/wcf/extending/custom-authorization.md)  
- <span data-ttu-id="b0cb6-114">说明如何实现自定义授权。</span><span class="sxs-lookup"><span data-stu-id="b0cb6-114">Explains how to implement custom authorization.</span></span>  
+ [<span data-ttu-id="8fd91-113">自定义授权</span><span class="sxs-lookup"><span data-stu-id="8fd91-113">Custom Authorization</span></span>](../../../../docs/framework/wcf/extending/custom-authorization.md)  
+ <span data-ttu-id="8fd91-114">说明如何实现自定义授权。</span><span class="sxs-lookup"><span data-stu-id="8fd91-114">Explains how to implement custom authorization.</span></span>  
   
- [<span data-ttu-id="b0cb6-115">重写服务标识以便进行身份验证</span><span class="sxs-lookup"><span data-stu-id="b0cb6-115">Overriding the Identity of a Service for Authentication</span></span>](../../../../docs/framework/wcf/extending/overriding-the-identity-of-a-service-for-authentication.md)  
- <span data-ttu-id="b0cb6-116">介绍如何重写身份验证服务的标识。</span><span class="sxs-lookup"><span data-stu-id="b0cb6-116">Describes how to override the identity of a service for authentication.</span></span>  
+ [<span data-ttu-id="8fd91-115">重写服务标识以便进行身份验证</span><span class="sxs-lookup"><span data-stu-id="8fd91-115">Overriding the Identity of a Service for Authentication</span></span>](../../../../docs/framework/wcf/extending/overriding-the-identity-of-a-service-for-authentication.md)  
+ <span data-ttu-id="8fd91-116">介绍如何重写身份验证服务的标识。</span><span class="sxs-lookup"><span data-stu-id="8fd91-116">Describes how to override the identity of a service for authentication.</span></span>  
   
- [<span data-ttu-id="b0cb6-117">如何：创建自定义客户端标识验证工具</span><span class="sxs-lookup"><span data-stu-id="b0cb6-117">How to: Create a Custom Client Identity Verifier</span></span>](../../../../docs/framework/wcf/extending/how-to-create-a-custom-client-identity-verifier.md)  
- <span data-ttu-id="b0cb6-118">演示如何验证自定义终结点标识。</span><span class="sxs-lookup"><span data-stu-id="b0cb6-118">Demonstrates how to validate a custom endpoint identity.</span></span>  
+ [<span data-ttu-id="8fd91-117">如何：创建自定义客户端标识验证工具</span><span class="sxs-lookup"><span data-stu-id="8fd91-117">How to: Create a Custom Client Identity Verifier</span></span>](../../../../docs/framework/wcf/extending/how-to-create-a-custom-client-identity-verifier.md)  
+ <span data-ttu-id="8fd91-118">演示如何验证自定义终结点标识。</span><span class="sxs-lookup"><span data-stu-id="8fd91-118">Demonstrates how to validate a custom endpoint identity.</span></span>  
   
- [<span data-ttu-id="b0cb6-119">如何：使用独立的 X.509 证书进行签名和加密</span><span class="sxs-lookup"><span data-stu-id="b0cb6-119">How to: Use Separate X.509 Certificates for Signing and Encryption</span></span>](../../../../docs/framework/wcf/extending/how-to-use-separate-x-509-certificates-for-signing-and-encryption.md)  
- <span data-ttu-id="b0cb6-120">通常使用单个证书对消息进行签名和加密。</span><span class="sxs-lookup"><span data-stu-id="b0cb6-120">Messages are typically signed and encrypted with a single certificate.</span></span> <span data-ttu-id="b0cb6-121">本主题说明如何按照要求使用两个证书。</span><span class="sxs-lookup"><span data-stu-id="b0cb6-121">This topic explains how two certificates can be used, when required.</span></span>  
+ [<span data-ttu-id="8fd91-119">如何：使用独立的 X.509 证书进行签名和加密</span><span class="sxs-lookup"><span data-stu-id="8fd91-119">How to: Use Separate X.509 Certificates for Signing and Encryption</span></span>](../../../../docs/framework/wcf/extending/how-to-use-separate-x-509-certificates-for-signing-and-encryption.md)  
+ <span data-ttu-id="8fd91-120">通常使用单个证书对消息进行签名和加密。</span><span class="sxs-lookup"><span data-stu-id="8fd91-120">Messages are typically signed and encrypted with a single certificate.</span></span> <span data-ttu-id="8fd91-121">本主题说明如何按照要求使用两个证书。</span><span class="sxs-lookup"><span data-stu-id="8fd91-121">This topic explains how two certificates can be used, when required.</span></span>  
   
- [<span data-ttu-id="b0cb6-122">如何：更改 X.509 证书私钥的加密提供程序</span><span class="sxs-lookup"><span data-stu-id="b0cb6-122">How to: Change the Cryptographic Provider for an X.509 Certificate's Private Key</span></span>](../../../../docs/framework/wcf/extending/change-cryptographic-provider-x509-certificate-private-key.md)  
- <span data-ttu-id="b0cb6-123">说明如何更改用于提供 X.509 证书的私钥的加密提供程序以及如何将提供程序集成到 Windows Communication Foundation (WCF) 框架。</span><span class="sxs-lookup"><span data-stu-id="b0cb6-123">Explains how to change the cryptographic provider used to provide an X.509 certificate's private key and how to integrate the provider into the Windows Communication Foundation (WCF) framework.</span></span>  
+ [<span data-ttu-id="8fd91-122">如何：更改 X.509 证书私钥的加密提供程序</span><span class="sxs-lookup"><span data-stu-id="8fd91-122">How to: Change the Cryptographic Provider for an X.509 Certificate's Private Key</span></span>](../../../../docs/framework/wcf/extending/change-cryptographic-provider-x509-certificate-private-key.md)  
+ <span data-ttu-id="8fd91-123">说明如何更改用于提供 X.509 证书的私钥的加密提供程序以及如何将提供程序集成到 Windows Communication Foundation (WCF) 框架。</span><span class="sxs-lookup"><span data-stu-id="8fd91-123">Explains how to change the cryptographic provider used to provide an X.509 certificate's private key and how to integrate the provider into the Windows Communication Foundation (WCF) framework.</span></span>  
   
-## <a name="reference"></a><span data-ttu-id="b0cb6-124">参考</span><span class="sxs-lookup"><span data-stu-id="b0cb6-124">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="8fd91-124">参考</span><span class="sxs-lookup"><span data-stu-id="8fd91-124">Reference</span></span>  
  <xref:System.ServiceModel.ServiceAuthorizationManager>  
   
  <xref:System.ServiceModel.Security>  
@@ -54,10 +54,10 @@ ms.locfileid: "43884877"
   
  <xref:System.IdentityModel.Selectors>  
   
-## <a name="related-sections"></a><span data-ttu-id="b0cb6-125">相关章节</span><span class="sxs-lookup"><span data-stu-id="b0cb6-125">Related Sections</span></span>  
- [<span data-ttu-id="b0cb6-126">安全性</span><span class="sxs-lookup"><span data-stu-id="b0cb6-126">Security</span></span>](../../../../docs/framework/wcf/feature-details/security.md)  
+## <a name="related-sections"></a><span data-ttu-id="8fd91-125">相关章节</span><span class="sxs-lookup"><span data-stu-id="8fd91-125">Related Sections</span></span>  
+ [<span data-ttu-id="8fd91-126">安全性</span><span class="sxs-lookup"><span data-stu-id="8fd91-126">Security</span></span>](../../../../docs/framework/wcf/feature-details/security.md)  
   
- [<span data-ttu-id="b0cb6-127">基本 WCF 编程</span><span class="sxs-lookup"><span data-stu-id="b0cb6-127">Basic WCF Programming</span></span>](../../../../docs/framework/wcf/basic-wcf-programming.md)  
+ [<span data-ttu-id="8fd91-127">基本 WCF 编程</span><span class="sxs-lookup"><span data-stu-id="8fd91-127">Basic WCF Programming</span></span>](../../../../docs/framework/wcf/basic-wcf-programming.md)  
   
-## <a name="see-also"></a><span data-ttu-id="b0cb6-128">请参阅</span><span class="sxs-lookup"><span data-stu-id="b0cb6-128">See Also</span></span>  
- [<span data-ttu-id="b0cb6-129">安全性概述</span><span class="sxs-lookup"><span data-stu-id="b0cb6-129">Security Overview</span></span>](../../../../docs/framework/wcf/feature-details/security-overview.md)
+## <a name="see-also"></a><span data-ttu-id="8fd91-128">请参阅</span><span class="sxs-lookup"><span data-stu-id="8fd91-128">See Also</span></span>  
+ [<span data-ttu-id="8fd91-129">安全性概述</span><span class="sxs-lookup"><span data-stu-id="8fd91-129">Security Overview</span></span>](../../../../docs/framework/wcf/feature-details/security-overview.md)
