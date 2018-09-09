@@ -3,11 +3,11 @@ title: 事务处理队列
 ms.date: 03/30/2017
 ms.assetid: b1b011dd-5e0b-482c-9bb0-9d8727038f14
 ms.openlocfilehash: db6a9686334eefb02b9360827a23ca8363127eb5
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44048024"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44253190"
 ---
 # <a name="transacted-queues"></a>事务处理队列
 此示例演示如何将队列和事务中 Windows Workflow Foundation (WF) 来创建可靠且可伸缩的服务进行集成。 一个<!--zz <xref:System.Activities.TransactionScope>-->`System.Activities.TransactionScope`客户端工作流中用于将消息发送到队列中事务使用<xref:System.ServiceModel.NetMsmqBinding>。 在服务器上使用 <xref:System.ServiceModel.Activities.TransactedReceiveScope>，在同一个事务中从队列接受消息并更新工作流的状态。  

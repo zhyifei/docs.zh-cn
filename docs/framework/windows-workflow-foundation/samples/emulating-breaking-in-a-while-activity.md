@@ -3,11 +3,11 @@ title: 在 While 活动中模拟中断
 ms.date: 03/30/2017
 ms.assetid: ddff715d-d623-4b54-b841-60bacbc3ca21
 ms.openlocfilehash: 4938e07364609520f6528688877bce112be26d3f
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43773919"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44253294"
 ---
 # <a name="emulating-breaking-in-a-while-activity"></a>在 While 活动中模拟中断
 此示例演示如何中断下列活动的循环机制：<xref:System.Activities.Statements.DoWhile>、<xref:System.Activities.Statements.ForEach%601>、<xref:System.Activities.Statements.While> 和 <xref:System.Activities.Statements.ParallelForEach%601>。  

@@ -10,11 +10,11 @@ ms.assetid: 5388e02b-52f5-460e-a2b5-eeafe60eeebe
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 9fbbe84811e3fa096b9e13c459143311bb75a198
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44132631"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44225144"
 ---
 # <a name="exception-throwing"></a>异常引发
 在本部分中所述的异常引发指南要求很好的执行失败的含义的定义。 执行失败时发生此事件成员不能执行它已执行的操作 （的成员名称表示）。 例如，如果`OpenFile`方法不能返回到调用方的打开的文件句柄，它将被认为执行失败。  
