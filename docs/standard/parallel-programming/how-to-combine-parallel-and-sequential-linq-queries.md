@@ -10,27 +10,28 @@ helpviewer_keywords:
 ms.assetid: 1167cfe6-c8aa-4096-94ba-c66c3a4edf4c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c69d4d423bbdf72f2af7dad38812aa508df0067c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9fd67d5f0cb5af33dc2b79f86148557a0dca6ec4
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33580245"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44190275"
 ---
-# <a name="how-to-combine-parallel-and-sequential-linq-queries"></a><span data-ttu-id="7c96e-102">如何：合并并行和顺序 LINQ 查询</span><span class="sxs-lookup"><span data-stu-id="7c96e-102">How to: Combine Parallel and Sequential LINQ Queries</span></span>
-<span data-ttu-id="7c96e-103">此示例展示了如何使用 <xref:System.Linq.ParallelEnumerable.AsSequential%2A> 方法，指示 PLINQ 顺序处理查询中的所有后续运算符。</span><span class="sxs-lookup"><span data-stu-id="7c96e-103">This example shows how to use the <xref:System.Linq.ParallelEnumerable.AsSequential%2A> method to instruct PLINQ to process all subsequent operators in the query sequentially.</span></span> <span data-ttu-id="7c96e-104">尽管顺序处理通常比并行处理慢，但有时却是生成正确结果的必要条件。</span><span class="sxs-lookup"><span data-stu-id="7c96e-104">Although sequential processing is generally slower than parallel, sometimes it is necessary to produce correct results.</span></span>  
+# <a name="how-to-combine-parallel-and-sequential-linq-queries"></a><span data-ttu-id="43c6d-102">如何：合并并行和顺序 LINQ 查询</span><span class="sxs-lookup"><span data-stu-id="43c6d-102">How to: Combine Parallel and Sequential LINQ Queries</span></span>
+<span data-ttu-id="43c6d-103">此示例展示了如何使用 <xref:System.Linq.ParallelEnumerable.AsSequential%2A> 方法，指示 PLINQ 顺序处理查询中的所有后续运算符。</span><span class="sxs-lookup"><span data-stu-id="43c6d-103">This example shows how to use the <xref:System.Linq.ParallelEnumerable.AsSequential%2A> method to instruct PLINQ to process all subsequent operators in the query sequentially.</span></span> <span data-ttu-id="43c6d-104">尽管顺序处理通常比并行处理慢，但有时却是生成正确结果的必要条件。</span><span class="sxs-lookup"><span data-stu-id="43c6d-104">Although sequential processing is generally slower than parallel, sometimes it is necessary to produce correct results.</span></span>  
   
 > [!WARNING]
->  <span data-ttu-id="7c96e-105">本示例旨在演示用法，运行速度可能不如等效的顺序 LINQ to Objects 查询快。</span><span class="sxs-lookup"><span data-stu-id="7c96e-105">This example is intended to demonstrate usage, and might not run faster than the equivalent sequential LINQ to Objects query.</span></span> <span data-ttu-id="7c96e-106">若要详细了解加速，请参阅[了解 PLINQ 中的加速](../../../docs/standard/parallel-programming/understanding-speedup-in-plinq.md)。</span><span class="sxs-lookup"><span data-stu-id="7c96e-106">For more information about speedup, see [Understanding Speedup in PLINQ](../../../docs/standard/parallel-programming/understanding-speedup-in-plinq.md).</span></span>  
+>  <span data-ttu-id="43c6d-105">本示例旨在演示用法，运行速度可能不如等效的顺序 LINQ to Objects 查询快。</span><span class="sxs-lookup"><span data-stu-id="43c6d-105">This example is intended to demonstrate usage, and might not run faster than the equivalent sequential LINQ to Objects query.</span></span> <span data-ttu-id="43c6d-106">若要详细了解加速，请参阅[了解 PLINQ 中的加速](../../../docs/standard/parallel-programming/understanding-speedup-in-plinq.md)。</span><span class="sxs-lookup"><span data-stu-id="43c6d-106">For more information about speedup, see [Understanding Speedup in PLINQ](../../../docs/standard/parallel-programming/understanding-speedup-in-plinq.md).</span></span>  
   
-## <a name="example"></a><span data-ttu-id="7c96e-107">示例</span><span class="sxs-lookup"><span data-stu-id="7c96e-107">Example</span></span>  
- <span data-ttu-id="7c96e-108">下面的示例展示了一种需要 <xref:System.Linq.ParallelEnumerable.AsSequential%2A> 的情况，即暂留在旧查询子句中建立的顺序。</span><span class="sxs-lookup"><span data-stu-id="7c96e-108">The following example shows one scenario in which <xref:System.Linq.ParallelEnumerable.AsSequential%2A> is required, namely to preserve the ordering that was established in a previous clause of the query.</span></span>  
+## <a name="example"></a><span data-ttu-id="43c6d-107">示例</span><span class="sxs-lookup"><span data-stu-id="43c6d-107">Example</span></span>  
+ <span data-ttu-id="43c6d-108">下面的示例展示了一种需要 <xref:System.Linq.ParallelEnumerable.AsSequential%2A> 的情况，即暂留在旧查询子句中建立的顺序。</span><span class="sxs-lookup"><span data-stu-id="43c6d-108">The following example shows one scenario in which <xref:System.Linq.ParallelEnumerable.AsSequential%2A> is required, namely to preserve the ordering that was established in a previous clause of the query.</span></span>  
   
  [!code-csharp[PLINQ#24](../../../samples/snippets/csharp/VS_Snippets_Misc/plinq/cs/plinqsamples.cs#24)]
  [!code-vb[PLINQ#24](../../../samples/snippets/visualbasic/VS_Snippets_Misc/plinq/vb/plinqsnippets1.vb#24)]  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="7c96e-109">编译代码</span><span class="sxs-lookup"><span data-stu-id="7c96e-109">Compiling the Code</span></span>  
- <span data-ttu-id="7c96e-110">若要编译并运行此代码，请将它粘贴到 [PLINQ 数据样本](../../../docs/standard/parallel-programming/plinq-data-sample.md)项目中，添加用于从 `Main` 调用方法的代码行，再按 F5。</span><span class="sxs-lookup"><span data-stu-id="7c96e-110">To compile and run this code, paste it into the [PLINQ Data Sample](../../../docs/standard/parallel-programming/plinq-data-sample.md) project, add a line to call the method from `Main`, and press F5.</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="43c6d-109">编译代码</span><span class="sxs-lookup"><span data-stu-id="43c6d-109">Compiling the Code</span></span>  
+ <span data-ttu-id="43c6d-110">若要编译并运行此代码，请将它粘贴到 [PLINQ 数据样本](../../../docs/standard/parallel-programming/plinq-data-sample.md)项目中，添加用于从 `Main` 调用方法的代码行，再按 F5。</span><span class="sxs-lookup"><span data-stu-id="43c6d-110">To compile and run this code, paste it into the [PLINQ Data Sample](../../../docs/standard/parallel-programming/plinq-data-sample.md) project, add a line to call the method from `Main`, and press F5.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="7c96e-111">请参阅</span><span class="sxs-lookup"><span data-stu-id="7c96e-111">See Also</span></span>  
- [<span data-ttu-id="7c96e-112">并行 LINQ (PLINQ)</span><span class="sxs-lookup"><span data-stu-id="7c96e-112">Parallel LINQ (PLINQ)</span></span>](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)
+## <a name="see-also"></a><span data-ttu-id="43c6d-111">请参阅</span><span class="sxs-lookup"><span data-stu-id="43c6d-111">See also</span></span>
+
+- [<span data-ttu-id="43c6d-112">并行 LINQ (PLINQ)</span><span class="sxs-lookup"><span data-stu-id="43c6d-112">Parallel LINQ (PLINQ)</span></span>](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)

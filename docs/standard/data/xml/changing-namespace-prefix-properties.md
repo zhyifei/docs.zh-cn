@@ -8,15 +8,15 @@ dev_langs:
 ms.assetid: d5c87cbe-4d69-429f-aad5-3103c2ca2770
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e3f41ba7281d67cc2ce848597926f5efebf4d489
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4a6597a3a57cd68c4dd17c4fbae882590f373709
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33568688"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44222683"
 ---
-# <a name="changing-namespace-prefix-properties"></a><span data-ttu-id="53006-102">更改命名空间前缀属性</span><span class="sxs-lookup"><span data-stu-id="53006-102">Changing Namespace Prefix Properties</span></span>
-<span data-ttu-id="53006-103">使用 XmlNode 类，可以更改与给定节点关联的命名空间前缀。</span><span class="sxs-lookup"><span data-stu-id="53006-103">The **XmlNode** class allows you to change the namespace prefix associated with a given node.</span></span> <span data-ttu-id="53006-104">例如，下面的代码显示所更改元素的前缀。</span><span class="sxs-lookup"><span data-stu-id="53006-104">For example, the following code shows the prefix of an element being changed.</span></span>  
+# <a name="changing-namespace-prefix-properties"></a><span data-ttu-id="2d99c-102">更改命名空间前缀属性</span><span class="sxs-lookup"><span data-stu-id="2d99c-102">Changing Namespace Prefix Properties</span></span>
+<span data-ttu-id="2d99c-103">使用 XmlNode 类，可以更改与给定节点关联的命名空间前缀。</span><span class="sxs-lookup"><span data-stu-id="2d99c-103">The **XmlNode** class allows you to change the namespace prefix associated with a given node.</span></span> <span data-ttu-id="2d99c-104">例如，下面的代码显示所更改元素的前缀。</span><span class="sxs-lookup"><span data-stu-id="2d99c-104">For example, the following code shows the prefix of an element being changed.</span></span>  
   
 ```vb  
 Dim doc as XmlDocument = new XmlDocument()  
@@ -34,13 +34,13 @@ e.Prefix = "b";
 Console.WriteLine(doc.InnerXml);  
 ```  
   
- <span data-ttu-id="53006-105">**输出**</span><span class="sxs-lookup"><span data-stu-id="53006-105">**Output**</span></span>  
+ <span data-ttu-id="2d99c-105">**输出**</span><span class="sxs-lookup"><span data-stu-id="2d99c-105">**Output**</span></span>  
   
 ```xml  
 <b:test xmlns:a="123" xmlns:b="456" />  
 ```  
   
- <span data-ttu-id="53006-106">更改节点的前缀不会更改节点的命名空间。</span><span class="sxs-lookup"><span data-stu-id="53006-106">Changing the prefix of a node does not change its namespace.</span></span> <span data-ttu-id="53006-107">命名空间只能在创建节点时设置。</span><span class="sxs-lookup"><span data-stu-id="53006-107">The namespace can only be set when the node is created.</span></span> <span data-ttu-id="53006-108">当保持树时，可能需要在外部保存新的命名空间属性，以满足所设置的前缀的需要。</span><span class="sxs-lookup"><span data-stu-id="53006-108">When you persist the tree, new namespace attributes may be persisted out to satisfy the prefix you set.</span></span> <span data-ttu-id="53006-109">如果无法创建新的命名空间，则更改此前缀以使节点保留其本地名称和命名空间。</span><span class="sxs-lookup"><span data-stu-id="53006-109">If the new namespace cannot be created, then the prefix is changed so the node preserves its local name and namespace.</span></span> <span data-ttu-id="53006-110">下面的示例显示所添加的命名空间属性。</span><span class="sxs-lookup"><span data-stu-id="53006-110">The following example shows a namespace attribute being added.</span></span>  
+ <span data-ttu-id="2d99c-106">更改节点的前缀不会更改节点的命名空间。</span><span class="sxs-lookup"><span data-stu-id="2d99c-106">Changing the prefix of a node does not change its namespace.</span></span> <span data-ttu-id="2d99c-107">命名空间只能在创建节点时设置。</span><span class="sxs-lookup"><span data-stu-id="2d99c-107">The namespace can only be set when the node is created.</span></span> <span data-ttu-id="2d99c-108">当保持树时，可能需要在外部保存新的命名空间属性，以满足所设置的前缀的需要。</span><span class="sxs-lookup"><span data-stu-id="2d99c-108">When you persist the tree, new namespace attributes may be persisted out to satisfy the prefix you set.</span></span> <span data-ttu-id="2d99c-109">如果无法创建新的命名空间，则更改此前缀以使节点保留其本地名称和命名空间。</span><span class="sxs-lookup"><span data-stu-id="2d99c-109">If the new namespace cannot be created, then the prefix is changed so the node preserves its local name and namespace.</span></span> <span data-ttu-id="2d99c-110">下面的示例显示所添加的命名空间属性。</span><span class="sxs-lookup"><span data-stu-id="2d99c-110">The following example shows a namespace attribute being added.</span></span>  
   
 ```vb  
 Dim doc as XmlDocument = new XmlDocument()  
@@ -58,13 +58,14 @@ e.Prefix = "a";
 Console.WriteLine(doc.InnerXml);  
 ```  
   
- <span data-ttu-id="53006-111">**输出**</span><span class="sxs-lookup"><span data-stu-id="53006-111">**Output**</span></span>  
+ <span data-ttu-id="2d99c-111">**输出**</span><span class="sxs-lookup"><span data-stu-id="2d99c-111">**Output**</span></span>  
   
 ```xml  
 <a:test xmlns="123" xmlns:a="123" />  
 ```  
   
- <span data-ttu-id="53006-112">如果树由于 doc.InnerXml 调用而暂留到字符串，添加的 `xmlns:a='123'` 属性是为了暂留 `test` 元素的命名空间。</span><span class="sxs-lookup"><span data-stu-id="53006-112">When the tree was persisted to a string as a result of the call to **doc.InnerXml**, the `xmlns:a='123'` attribute was added to preserve the namespace of the `test` element.</span></span> <span data-ttu-id="53006-113">以前为 `'123'`，并保持为 `'123'`。</span><span class="sxs-lookup"><span data-stu-id="53006-113">It was `'123'`, and it remained `'123'`.</span></span>  
+ <span data-ttu-id="2d99c-112">如果树由于 doc.InnerXml 调用而暂留到字符串，添加的 `xmlns:a='123'` 属性是为了暂留 `test` 元素的命名空间。</span><span class="sxs-lookup"><span data-stu-id="2d99c-112">When the tree was persisted to a string as a result of the call to **doc.InnerXml**, the `xmlns:a='123'` attribute was added to preserve the namespace of the `test` element.</span></span> <span data-ttu-id="2d99c-113">以前为 `'123'`，并保持为 `'123'`。</span><span class="sxs-lookup"><span data-stu-id="2d99c-113">It was `'123'`, and it remained `'123'`.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="53006-114">请参阅</span><span class="sxs-lookup"><span data-stu-id="53006-114">See Also</span></span>  
- [<span data-ttu-id="53006-115">XML 文档对象模型 (DOM)</span><span class="sxs-lookup"><span data-stu-id="53006-115">XML Document Object Model (DOM)</span></span>](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+## <a name="see-also"></a><span data-ttu-id="2d99c-114">请参阅</span><span class="sxs-lookup"><span data-stu-id="2d99c-114">See also</span></span>
+
+- [<span data-ttu-id="2d99c-115">XML 文档对象模型 (DOM)</span><span class="sxs-lookup"><span data-stu-id="2d99c-115">XML Document Object Model (DOM)</span></span>](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
