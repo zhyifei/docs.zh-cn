@@ -2,12 +2,12 @@
 title: 启用数据源以进行 LINQ 查询 1
 ms.date: 07/20/2015
 ms.assetid: d2ef04a5-31a6-45cb-af9a-a5ce7732662c
-ms.openlocfilehash: 5b67995f40bc0cb703003aa80b511268f21da8b8
-ms.sourcegitcommit: f6343b070f3c66877338a05c8bfb0be9985255e2
+ms.openlocfilehash: 204d2d6104a065f1d1cf9e731dc01f400218f91b
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/24/2018
-ms.locfileid: "39220992"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44253177"
 ---
 # <a name="enabling-a-data-source-for-linq-querying"></a>启用数据源以进行 LINQ 查询
 可通过多种方式来扩展 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]，以便能够在 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 模式中查询任何数据源。 数据源可以是数据结构、Web 服务、文件系统或数据库等。 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 模式使客户端可以轻松地查询能够进行 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 查询的数据源，因为查询的语法和模式没有更改。 可通过以下方式将 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 扩展到这些数据源：  
@@ -39,9 +39,10 @@ ms.locfileid: "39220992"
   
  复杂的 `IQueryable` 提供程序（如 [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] 提供程序）可将完整的 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 查询转换为可表达查询语言（如 SQL）。 与复杂性较低的提供程序相比，复杂的提供程序更为全面，因为它能在查询中处理各种各样的问题。 它还具有开放的类型系统，因而必须包含广泛的基础结构来映射用户定义的类型。 开发复杂的提供程序需要耗费大量的精力。  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Linq.IQueryable%601>  
- <xref:System.Collections.Generic.IEnumerable%601>  
- <xref:System.Linq.Enumerable>  
- [标准查询运算符概述 (C#)](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)  
- [LINQ to Objects (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-objects.md)
+## <a name="see-also"></a>请参阅
+
+- <xref:System.Linq.IQueryable%601>  
+- <xref:System.Collections.Generic.IEnumerable%601>  
+- <xref:System.Linq.Enumerable>  
+- [标准查询运算符概述 (C#)](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)  
+- [LINQ to Objects (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-objects.md)

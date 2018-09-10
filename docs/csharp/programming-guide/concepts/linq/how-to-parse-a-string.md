@@ -2,12 +2,12 @@
 title: 如何：分析字符串 (C#)
 ms.date: 07/20/2015
 ms.assetid: 81e5686c-9658-42d8-a7e3-b11be0a2c98b
-ms.openlocfilehash: fe1ef6d601b97252eb2d146f28003cad352b2d84
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b6b955d2cc9a3ea0c6e17e68639ad7fc677c3fc7
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33320139"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43744795"
 ---
 # <a name="how-to-parse-a-string-c"></a>如何：分析字符串 (C#)
 本主题演示如何分析字符串，以在 C# 中创建 XML 树。  
@@ -45,5 +45,6 @@ XElement contacts = XElement.Parse(
 Console.WriteLine(contacts);  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [分析 XML (C#)](../../../../csharp/programming-guide/concepts/linq/parsing-xml.md)
+## <a name="see-also"></a>请参阅
+
+- [分析 XML (C#)](../../../../csharp/programming-guide/concepts/linq/parsing-xml.md)

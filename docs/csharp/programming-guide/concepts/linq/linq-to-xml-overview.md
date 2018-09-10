@@ -2,12 +2,12 @@
 title: LINQ to XML 概述 (C#)
 ms.date: 07/20/2015
 ms.assetid: 716b94d3-0091-4de1-8e05-41bc069fa9dd
-ms.openlocfilehash: 1cb4a0cd50abe579bdbf78d388b73af30cbdd6f0
-ms.sourcegitcommit: 59b51cd7c95c75be85bd6ef715e9ef8c85720bac
+ms.openlocfilehash: 5b557c95993d7f1e907a8eb6ef1e5ec23a2988ab
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37874684"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43856616"
 ---
 # <a name="linq-to-xml-overview-c"></a>LINQ to XML 概述 (C#)
 在很多环境中，XML 已广泛采用为格式化数据的方式。 例如，在 Web 上，在配置文件、Microsoft Office Word 文件以及数据库中，都可以看到 XML。  
@@ -87,6 +87,7 @@ new XElement("Contacts",
   
  有关详细信息，请参阅[创建 XML 树 (C#)](../../../../csharp/programming-guide/concepts/linq/creating-xml-trees.md)。  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Xml.Linq>  
- [入门 (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/getting-started-linq-to-xml.md)
+## <a name="see-also"></a>请参阅
+
+- <xref:System.Xml.Linq>  
+- [入门 (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/getting-started-linq-to-xml.md)

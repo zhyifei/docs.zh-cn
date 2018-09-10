@@ -7,11 +7,11 @@ helpviewer_keywords:
 - '#pragma directive [C#]'
 ms.assetid: 5b7944cd-d402-46a1-ad8f-feffb2d83673
 ms.openlocfilehash: 5ae397cc61e0c6b58ed2079369131ebb7e352eae
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43482930"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43747478"
 ---
 # <a name="pragma-c-reference"></a>#pragma（C# 参考）
 `#pragma` 为编译器给出特殊指令以编译它所在的文件。 这些指令必须受编译器支持。 即是说，不可使用 `#pragma` 创建自定义处理指令。 Microsoft C# 编译器支持以下两种 `#pragma` 指令：  

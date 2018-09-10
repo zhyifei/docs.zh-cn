@@ -5,12 +5,12 @@ helpviewer_keywords:
 - expressions [C#]
 - C# language, expressions
 ms.assetid: c7d8feb0-0e58-4f94-8bf6-4d070550a832
-ms.openlocfilehash: bb70a7e3dfd8b274987bf68568004d785afd0ee1
-ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
+ms.openlocfilehash: 3cf084102186d9e13727c36ed14e2ea72ca324f9
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37936941"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44213801"
 ---
 # <a name="expressions-c-programming-guide"></a>表达式（C# 编程指南）
 表达式是由一个或多个操作数以及零个或多个运算符组成的序列，其计算结果为一个值、对象、方法或命名空间。 表达式可以包含文本值、方法调用、运算符及其操作数，或简单名称。 简单名称可以是变量名、类型成员名、方法参数名、命名空间名或类型名。  
@@ -72,10 +72,11 @@ C# 支持“Expression-Bodied 成员”，这允许为方法、构造函数、�
 ## <a name="remarks"></a>备注  
  只要从表达式中识别到变量、对象属性或对象索引器访问，该项的值都会用作表达式的值。 只要表达式的最终计算结果是所需的类型，表达式就可以置于 C# 中任何需要值或对象的位置。  
 
-## <a name="see-also"></a>请参阅  
- [C# 编程指南](../../../csharp/programming-guide/index.md)  
- [方法](../../../csharp/programming-guide/classes-and-structs/methods.md)  
- [委托](../../../csharp/programming-guide/delegates/index.md)  
- [运算符](../../../csharp/programming-guide/statements-expressions-operators/operators.md)  
- [类型](../../../csharp/programming-guide/types/index.md)  
- [LINQ 查询表达式](../../../csharp/programming-guide/linq-query-expressions/index.md)
+## <a name="see-also"></a>请参阅
+
+- [C# 编程指南](../../../csharp/programming-guide/index.md)  
+- [方法](../../../csharp/programming-guide/classes-and-structs/methods.md)  
+- [委托](../../../csharp/programming-guide/delegates/index.md)  
+- [运算符](../../../csharp/programming-guide/statements-expressions-operators/operators.md)  
+- [类型](../../../csharp/programming-guide/types/index.md)  
+- [LINQ 查询表达式](../../../csharp/programming-guide/linq-query-expressions/index.md)

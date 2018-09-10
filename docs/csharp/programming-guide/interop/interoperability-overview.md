@@ -8,12 +8,12 @@ helpviewer_keywords:
 - interoperability, about interoperability
 - platform invoke
 ms.assetid: c025b2e0-2357-4c27-8461-118f0090aeff
-ms.openlocfilehash: d14c196babb03b7f13dde6ab5b46508a30ba26d6
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 0bd53d97cec4370adc78fc715b1cea5ee5a3fd6f
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43394525"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44208791"
 ---
 # <a name="interoperability-overview-c-programming-guide"></a>互操作性概述（C# 编程指南）
 本主题描述在 C# 托管代码和非托管代码之间实现互操作性的方法。  
@@ -57,10 +57,11 @@ ms.locfileid: "43394525"
   
  有关详细信息，请参阅[向 COM 公开 .NET Framework 组件](../../../../docs/framework/interop/exposing-dotnet-components-to-com.md)和 [COM 类示例](../../../csharp/programming-guide/interop/example-com-class.md)。  
   
-## <a name="see-also"></a>请参阅  
- [Improving Interop Performance](https://msdn.microsoft.com/library/ms998551.aspx)（提高互操作性能）  
- [COM 和 .NET 之间的互操作性简介](https://msdn.microsoft.com/library/office/bb610378.aspx)  
- [Visual Basic 中的 COM 互操作简介](../../../../docs/visual-basic/programming-guide/com-interop/introduction-to-com-interop.md)  
- [托管代码与非托管代码之间的封送处理](../../../../docs/framework/interop/interop-marshaling.md)  
- [与非托管代码交互操作](../../../../docs/framework/interop/index.md)  
- [C# 编程指南](../../../csharp/programming-guide/index.md)
+## <a name="see-also"></a>请参阅
+
+- [Improving Interop Performance](https://msdn.microsoft.com/library/ms998551.aspx)（提高互操作性能）  
+- [COM 和 .NET 之间的互操作性简介](https://msdn.microsoft.com/library/office/bb610378.aspx)  
+- [Visual Basic 中的 COM 互操作简介](../../../../docs/visual-basic/programming-guide/com-interop/introduction-to-com-interop.md)  
+- [托管代码与非托管代码之间的封送处理](../../../../docs/framework/interop/interop-marshaling.md)  
+- [与非托管代码交互操作](../../../../docs/framework/interop/index.md)  
+- [C# 编程指南](../../../csharp/programming-guide/index.md)

@@ -2,12 +2,12 @@
 title: 示例 XML 文件：命名空间 3 中的数值数据
 ms.date: 07/20/2015
 ms.assetid: 51750cab-3c66-4511-90fb-b9d211308d31
-ms.openlocfilehash: 5a752f477d17cee50b98bc88bd39cabda2bd3bf6
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 114657087a0aee69bc9be298025eac58923294b0
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43393563"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44185605"
 ---
 # <a name="sample-xml-file-numerical-data-in-a-namespace"></a>示例 XML 文件：命名空间中的数值数据
 下面的 XML 文件用在 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 文档的很多示例中。 此文件包含数值数据，用于求和、求平均值和分组。 该 XML 在某个命名空间中。  
@@ -55,5 +55,6 @@ ms.locfileid: "43393563"
 </Root>  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [示例 XML 文档 (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)
+## <a name="see-also"></a>请参阅
+
+- [示例 XML 文档 (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)

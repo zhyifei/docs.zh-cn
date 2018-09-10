@@ -5,12 +5,12 @@ helpviewer_keywords:
 - C# Language, access modifiers
 - access modifiers [C#], about
 ms.assetid: 6e81ee82-224f-4a12-9baf-a0dca2656c5b
-ms.openlocfilehash: 4be248b1d86692bd35491e55b1c649cd8428a33b
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 6be0ae4f6497dfb2db9607f61c4ede5083d57dc7
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43406350"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44185803"
 ---
 # <a name="access-modifiers-c-programming-guide"></a>访问修饰符（C# 编程指南）
 所有类型和类型成员都具有可访问性级别，该级别可以控制是否可以从你的程序集或其他程序集中的其他代码中使用它们。 可以使用以下访问修饰符在进行声明时指定类型或成员的可访问性：  
@@ -73,16 +73,17 @@ ms.locfileid: "43406350"
 ## <a name="c-language-specification"></a>C# 语言规范  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>请参阅  
- [C# 编程指南](../../../csharp/programming-guide/index.md)  
- [类和结构](../../../csharp/programming-guide/classes-and-structs/index.md)  
- [接口](../../../csharp/programming-guide/interfaces/index.md)  
- [private](../../../csharp/language-reference/keywords/private.md)  
- [public](../../../csharp/language-reference/keywords/public.md)  
- [internal](../../../csharp/language-reference/keywords/internal.md)  
- [protected](../../../csharp/language-reference/keywords/protected.md)  
- [受保护的内部](../../../csharp/language-reference/keywords/protected-internal.md)  
- [专用受保护](../../../csharp/language-reference/keywords/private-protected.md)  
- [class](../../../csharp/language-reference/keywords/class.md)  
- [struct](../../../csharp/language-reference/keywords/struct.md)  
- [interface](../../../csharp/language-reference/keywords/interface.md)
+## <a name="see-also"></a>请参阅
+
+- [C# 编程指南](../../../csharp/programming-guide/index.md)  
+- [类和结构](../../../csharp/programming-guide/classes-and-structs/index.md)  
+- [接口](../../../csharp/programming-guide/interfaces/index.md)  
+- [private](../../../csharp/language-reference/keywords/private.md)  
+- [public](../../../csharp/language-reference/keywords/public.md)  
+- [internal](../../../csharp/language-reference/keywords/internal.md)  
+- [protected](../../../csharp/language-reference/keywords/protected.md)  
+- [受保护的内部](../../../csharp/language-reference/keywords/protected-internal.md)  
+- [专用受保护](../../../csharp/language-reference/keywords/private-protected.md)  
+- [class](../../../csharp/language-reference/keywords/class.md)  
+- [struct](../../../csharp/language-reference/keywords/struct.md)  
+- [interface](../../../csharp/language-reference/keywords/interface.md)

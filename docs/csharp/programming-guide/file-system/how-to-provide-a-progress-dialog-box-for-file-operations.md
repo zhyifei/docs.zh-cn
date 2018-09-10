@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - progress dialog [C#]
 ms.assetid: 01b71fe7-8178-4dc8-aeb1-12053be7b51c
-ms.openlocfilehash: e48fcee8dc4c85083a00a89c88027529ab1cc3aa
-ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
+ms.openlocfilehash: f80bbc94579c58210769800ad8bf74bc60878af5
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37960078"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44260157"
 ---
 # <a name="how-to-provide-a-progress-dialog-box-for-file-operations-c-programming-guide"></a>如何：提供文件操作进度对话框（C# 编程指南）
 如果在 <xref:Microsoft.VisualBasic?displayProperty=nameWithType> 命名空间中使用 <xref:Microsoft.VisualBasic.FileIO.FileSystem.CopyFile%28System.String%2CSystem.String%2CMicrosoft.VisualBasic.FileIO.UIOption%29> 方法，可以在 Windows 中提供显示文件操作进度的标准对话框。  
@@ -31,5 +31,6 @@ ms.locfileid: "37960078"
   
  [!code-csharp[csFilesandFolders#11](../../../csharp/programming-guide/file-system/codesnippet/CSharp/how-to-provide-a-progress-dialog-box-for-file-operations_1.cs)]  
   
-## <a name="see-also"></a>请参阅  
- [文件系统和注册表（C# 编程指南）](../../../csharp/programming-guide/file-system/index.md)
+## <a name="see-also"></a>请参阅
+
+- [文件系统和注册表（C# 编程指南）](../../../csharp/programming-guide/file-system/index.md)

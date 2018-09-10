@@ -2,12 +2,12 @@
 title: 编程指南 (LINQ to XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: 4b1ffd10-ab81-4a0d-a0ca-e9876478d924
-ms.openlocfilehash: 03742916c973f9ddac8163fe231cba45750ff080
-ms.sourcegitcommit: a1e35d4e94edab384a63406c0a5438306873031b
+ms.openlocfilehash: acb8271ad9ea338d31516c35bae46593a5fd2f78
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/21/2018
-ms.locfileid: "42751980"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44187908"
 ---
 # <a name="programming-guide-linq-to-xml-c"></a>编程指南 (LINQ to XML) (C#)
 本节提供有关使用 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 进行编程的概念性和指导性信息。  
@@ -34,6 +34,7 @@ ms.locfileid: "42751980"
 |[LINQ to XML 安全性 (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-security.md)|描述与 LINQ to XML 相关的安全问题并提供减小安全隐患的一些指导。|  
 |[示例 XML 文档 (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)|包含本文档中许多示例使用的示例 XML 文档。|  
   
-## <a name="see-also"></a>请参阅  
- [入门 (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/getting-started-linq-to-xml.md)  
- [LINQ to XML (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml.md)
+## <a name="see-also"></a>请参阅
+
+- [入门 (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/getting-started-linq-to-xml.md)  
+- [LINQ to XML (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml.md)

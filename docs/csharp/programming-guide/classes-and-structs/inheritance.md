@@ -9,12 +9,12 @@ helpviewer_keywords:
 - virtual methods [C#]
 - C# language, inheritance
 ms.assetid: 81d64ee4-50f9-4d6c-a8dc-257c348d2eea
-ms.openlocfilehash: 6294669a05f5cc6c52de5164d89e29062ceb6bdd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f6620562a9500885f31d1343664919f09af33861
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33323597"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43855889"
 ---
 # <a name="inheritance-c-programming-guide"></a>继承（C# 编程指南）
 
@@ -53,8 +53,9 @@ ms.locfileid: "33323597"
 ## <a name="derived-class-hiding-of-base-class-members"></a>基类成员的派生类隐藏  
  派生类可以通过使用相同名称和签名声明成员来隐藏基类成员。 [new](../../../csharp/language-reference/keywords/new.md) 修饰符可以用于显式指示成员不应作为基类成员的重写。 使用 [new](../../../csharp/language-reference/keywords/new.md) 不是必需的，但如果未使用 [new](../../../csharp/language-reference/keywords/new.md)，则会生成编译器警告。 有关详细信息，请参阅[使用 Override 和 New 关键字进行版本控制](../../../csharp/programming-guide/classes-and-structs/versioning-with-the-override-and-new-keywords.md)和[了解何时使用 Override 和 New 关键字](../../../csharp/programming-guide/classes-and-structs/knowing-when-to-use-override-and-new-keywords.md)。  
   
-## <a name="see-also"></a>请参阅  
- [C# 编程指南](../../../csharp/programming-guide/index.md)  
- [类和结构](../../../csharp/programming-guide/classes-and-structs/index.md)  
- [class](../../../csharp/language-reference/keywords/class.md)  
- [struct](../../../csharp/language-reference/keywords/struct.md)
+## <a name="see-also"></a>请参阅
+
+- [C# 编程指南](../../../csharp/programming-guide/index.md)  
+- [类和结构](../../../csharp/programming-guide/classes-and-structs/index.md)  
+- [class](../../../csharp/language-reference/keywords/class.md)  
+- [struct](../../../csharp/language-reference/keywords/struct.md)

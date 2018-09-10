@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - pointers [C#], comparison
 ms.assetid: fcafd514-7405-4deb-8490-cc58efda5495
-ms.openlocfilehash: af264cd1572faafe25ee170b35cbeb48ed0fb2aa
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: fa980c944159c477c333762ffad569332fba9402
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33337699"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44086634"
 ---
 # <a name="pointer-comparison-c-programming-guide"></a>指针比较（C# 编程指南）
 可以应用以下运算符比较任何类型的指针：  
@@ -28,13 +28,14 @@ ms.locfileid: "33337699"
   
  `False`  
   
-## <a name="see-also"></a>请参阅  
- [C# 编程指南](../../../csharp/programming-guide/index.md)  
- [指针表达式](../../../csharp/programming-guide/unsafe-code-pointers/pointer-expressions.md)  
- [C# 运算符](../../../csharp/language-reference/operators/index.md)  
- [操作指针](../../../csharp/programming-guide/unsafe-code-pointers/manipulating-pointers.md)  
- [指针类型](../../../csharp/programming-guide/unsafe-code-pointers/pointer-types.md)  
- [类型](../../../csharp/language-reference/keywords/types.md)  
- [unsafe](../../../csharp/language-reference/keywords/unsafe.md)  
- [fixed 语句](../../../csharp/language-reference/keywords/fixed-statement.md)  
- [stackalloc](../../../csharp/language-reference/keywords/stackalloc.md)
+## <a name="see-also"></a>请参阅
+
+- [C# 编程指南](../../../csharp/programming-guide/index.md)  
+- [指针表达式](../../../csharp/programming-guide/unsafe-code-pointers/pointer-expressions.md)  
+- [C# 运算符](../../../csharp/language-reference/operators/index.md)  
+- [操作指针](../../../csharp/programming-guide/unsafe-code-pointers/manipulating-pointers.md)  
+- [指针类型](../../../csharp/programming-guide/unsafe-code-pointers/pointer-types.md)  
+- [类型](../../../csharp/language-reference/keywords/types.md)  
+- [unsafe](../../../csharp/language-reference/keywords/unsafe.md)  
+- [fixed 语句](../../../csharp/language-reference/keywords/fixed-statement.md)  
+- [stackalloc](../../../csharp/language-reference/keywords/stackalloc.md)

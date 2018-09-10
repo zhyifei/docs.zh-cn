@@ -5,12 +5,12 @@ helpviewer_keywords:
 - generics [C#], reflection
 - reflection [C#], generic types
 ms.assetid: 162fd9b4-dd5b-4abb-8c9b-e44e21e2f451
-ms.openlocfilehash: 7e35c7d6712323bd7088ad68160da05cdf3a5115
-ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
+ms.openlocfilehash: 9bbf08161162c2d0776a066098e40b57a415da6d
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "39245773"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44187132"
 ---
 # <a name="generics-and-reflection-c-programming-guide"></a>泛型和反射（C# 编程指南）
 因为公共语言运行时 (CLR) 能够在运行时访问泛型类型信息，所以可以使用反射获取关于泛型类型的信息，方法与用于非泛型类型的方法相同。 有关详细信息，请参阅[运行时中的泛型](../../../csharp/programming-guide/generics/generics-in-the-run-time.md)。  
@@ -44,8 +44,9 @@ ms.locfileid: "39245773"
 |<xref:System.Reflection.MethodBase.IsGenericMethodDefinition%2A>|如果当前 <xref:System.Reflection.MethodInfo> 表示泛型方法的定义，则返回 true。|  
 |<xref:System.Reflection.MethodInfo.MakeGenericMethod%2A>|用类型数组的元素替代当前泛型方法定义的类型参数，并返回表示结果构造方法的 <xref:System.Reflection.MethodInfo> 对象。|  
   
-## <a name="see-also"></a>请参阅  
- [C# 编程指南](../../../csharp/programming-guide/index.md)  
- [泛型](../../../csharp/programming-guide/generics/index.md)  
- [反射类型和泛型类型](../../../framework/reflection-and-codedom/reflection-and-generic-types.md)  
- [泛型](~/docs/standard/generics/index.md)
+## <a name="see-also"></a>请参阅
+
+- [C# 编程指南](../../../csharp/programming-guide/index.md)  
+- [泛型](../../../csharp/programming-guide/generics/index.md)  
+- [反射类型和泛型类型](../../../framework/reflection-and-codedom/reflection-and-generic-types.md)  
+- [泛型](~/docs/standard/generics/index.md)

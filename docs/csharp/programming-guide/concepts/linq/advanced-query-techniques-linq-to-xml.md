@@ -2,12 +2,12 @@
 title: 高级查询技术 (LINQ to XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: 028d978e-215b-4d50-ba70-adce0659386d
-ms.openlocfilehash: b1045308d18afb46c5f3bb0da9d02b07f17db95e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d33677be318275eb9c9cc427129caec6edddb2d9
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33326311"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44141186"
 ---
 # <a name="advanced-query-techniques-linq-to-xml-c"></a>高级查询技术 (LINQ to XML) (C#)
 本节提供更多高级 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 查询技术的示例。  
@@ -26,5 +26,6 @@ ms.locfileid: "33326311"
 |[如何：修改 Office Open XML 文档 (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-modify-an-office-open-xml-document.md)|演示打开、修改和保存 Office Open XML 文档的代码。|  
 |[如何：从文件系统填充 XML 树 (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-populate-an-xml-tree-from-the-file-system.md)|演示从文件系统创建 XML 树的代码。|  
   
-## <a name="see-also"></a>请参阅  
- [查询 XML 树 (C#)](../../../../csharp/programming-guide/concepts/linq/querying-xml-trees.md)
+## <a name="see-also"></a>请参阅
+
+- [查询 XML 树 (C#)](../../../../csharp/programming-guide/concepts/linq/querying-xml-trees.md)

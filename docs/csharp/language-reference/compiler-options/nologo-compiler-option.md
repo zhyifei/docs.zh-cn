@@ -10,11 +10,11 @@ helpviewer_keywords:
 - /nologo compiler option [C#]
 ms.assetid: 426afb36-a8fb-469d-9c45-a35d9512557c
 ms.openlocfilehash: a8f4582e9c8d5a54d924ff5b456ef8ffd8cc56f3
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43480590"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44181438"
 ---
 # <a name="-nologo-c-compiler-options"></a>-nologo（C# 编译器选项）
 -nologo 选项可在编译器启动时取消显式登录版权标志并在编译期间取消显示信息性消息。  

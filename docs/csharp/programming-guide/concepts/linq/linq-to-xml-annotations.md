@@ -2,12 +2,12 @@
 title: LINQ to XML 批注 3
 ms.date: 07/20/2015
 ms.assetid: 54e7b9d0-07f5-488f-9065-b6e6b870f810
-ms.openlocfilehash: 8b8e03b0174ad2bf044c21eb9a9d3391da37fb7f
-ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
+ms.openlocfilehash: 13dd72a9016dea8c5b4389580f912625028e51ae
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37960694"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43530359"
 ---
 # <a name="linq-to-xml-annotations"></a>LINQ to XML 批注
 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 中的注释可将任意类型的任意对象与 XML 树中的任何 XML 组件相关联。  
@@ -26,5 +26,6 @@ ms.locfileid: "37960694"
 |<xref:System.Xml.Linq.XObject.Annotations%2A>|获取 <xref:System.Xml.Linq.XObject> 的指定类型的批注集合。|  
 |<xref:System.Xml.Linq.XObject.RemoveAnnotations%2A>|从 <xref:System.Xml.Linq.XObject> 移除指定类型的批注。|  
   
-## <a name="see-also"></a>请参阅  
- [高级 LINQ to XML 编程 (C#)](../../../../csharp/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)
+## <a name="see-also"></a>请参阅
+
+- [高级 LINQ to XML 编程 (C#)](../../../../csharp/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)

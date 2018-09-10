@@ -2,12 +2,12 @@
 title: XElement 和 XDocument 对象的有效内容3
 ms.date: 07/20/2015
 ms.assetid: 0d253586-2b97-459f-b1a7-f30f38f3ed9f
-ms.openlocfilehash: 32521941bacdf8d689a81f6136d427307481ddc9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: afaeed7ba49891380982ec9c3cade43574ab8c16
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33340315"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44214051"
 ---
 # <a name="valid-content-of-xelement-and-xdocument-objects"></a>XElement 和 XDocument 对象的有效内容
 本主题描述可以传递给构造函数以及用于向元素和文档添加内容的方法的有效参数。  
@@ -88,5 +88,6 @@ ms.locfileid: "33340315"
 |<xref:System.Xml.Linq.XContainer.ReplaceNodes%2A>|用新内容替换子节点。|  
 |<xref:System.Xml.Linq.XNode.ReplaceWith%2A>|用新内容替换节点。|  
   
-## <a name="see-also"></a>请参阅  
- [创建 XML 树 (C#)](../../../../csharp/programming-guide/concepts/linq/creating-xml-trees.md)
+## <a name="see-also"></a>请参阅
+
+- [创建 XML 树 (C#)](../../../../csharp/programming-guide/concepts/linq/creating-xml-trees.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - /moduleassemblyname compiler option [C#]
 - .moduleassemblyname compiler option [C#]
 ms.assetid: d464d9b9-f18d-423b-95e9-66c7878fd53a
-ms.openlocfilehash: 2c6467434b56d624c42aaf54219959228e068ffa
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 975acb5b814bc5a250cba351e0d1559968f7e298
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33217225"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43864701"
 ---
 # <a name="-moduleassemblyname-c-compiler-option"></a>-moduleassemblyname（C# 编译器选项）
 指定一个程序集，.netmodule 可以访问其非公共类型。  
@@ -93,7 +93,9 @@ class A {
 }  
 ```  
   
- 已调用 An_Internal_Class.Test  
+已调用 An_Internal_Class.Test
+
 ## <a name="see-also"></a>请参阅  
- [C# 编译器选项](../../../csharp/language-reference/compiler-options/index.md)  
- [管理项目和解决方案属性](/visualstudio/ide/managing-project-and-solution-properties)
+
+- [C# 编译器选项](../../../csharp/language-reference/compiler-options/index.md)  
+- [管理项目和解决方案属性](/visualstudio/ide/managing-project-and-solution-properties)

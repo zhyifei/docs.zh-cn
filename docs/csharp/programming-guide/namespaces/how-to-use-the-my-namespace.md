@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - C# language, My namespace access
 ms.assetid: e7152414-0ea5-4c8e-bf02-c8d5bbe45ff4
-ms.openlocfilehash: ceab0dbb2ded070fc7de4f5a59d778be2a54f9cb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a8ec3a96534693142d37d26ac0c08eec9298b178
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33332005"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43526201"
 ---
 # <a name="how-to-use-the-my-namespace-c-programming-guide"></a>如何：使用 My 命名空间（C# 编程指南）
 <xref:Microsoft.VisualBasic.MyServices> 命名空间（在 Visual Basic 中为 `My`）使访问多个 .NET Framework 类变得轻松直观，让你能够编写与计算机、应用程序、设置、资源等交互的代码。 虽然最初设计用于 Visual Basic，但 `MyServices` 命名空间仍可用于 C# 应用程序。  
@@ -38,7 +38,8 @@ ms.locfileid: "33332005"
   
  [!code-csharp[csProgGuideNamespaces#20](../../../csharp/programming-guide/namespaces/codesnippet/CSharp/how-to-use-the-my-namespace_3.cs)]  
   
-## <a name="see-also"></a>请参阅  
- [C# 编程指南](../../../csharp/programming-guide/index.md)  
- [命名空间](../../../csharp/programming-guide/namespaces/index.md)  
- [使用命名空间](../../../csharp/programming-guide/namespaces/using-namespaces.md)
+## <a name="see-also"></a>请参阅
+
+- [C# 编程指南](../../../csharp/programming-guide/index.md)  
+- [命名空间](../../../csharp/programming-guide/namespaces/index.md)  
+- [使用命名空间](../../../csharp/programming-guide/namespaces/using-namespaces.md)

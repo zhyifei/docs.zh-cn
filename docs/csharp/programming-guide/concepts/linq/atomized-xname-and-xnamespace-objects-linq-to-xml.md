@@ -2,12 +2,12 @@
 title: 原子化的 XName 和 XNamespace 对象 (LINQ to XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: a5b21433-b49d-415c-b00e-bcbfb0d267d7
-ms.openlocfilehash: 85799741246f484bcb17a1ae7e320bd477872238
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3ffeaac6d893b70c2c0d49d8d52d0372879cdf37
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33323204"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43526392"
 ---
 # <a name="atomized-xname-and-xnamespace-objects-linq-to-xml-c"></a>原子化的 XName 和 XNamespace 对象 (LINQ to XML) (C#)
 <xref:System.Xml.Linq.XName> 和 <xref:System.Xml.Linq.XNamespace> 对象进行了原子化；即，如果这两个对象包含相同的限定名，则它们将引用同一个对象。 这将提高查询性能：当比较两个原子化名称是否相等时，基础中间语言只需确定这两个引用是否指向同一个对象。 基础代码不必进行很耗费时间的字符串比较。  
@@ -74,5 +74,6 @@ foreach (var z in query)
 <C1>1</C1>  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [性能 (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/performance-linq-to-xml.md)
+## <a name="see-also"></a>请参阅
+
+- [性能 (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/performance-linq-to-xml.md)

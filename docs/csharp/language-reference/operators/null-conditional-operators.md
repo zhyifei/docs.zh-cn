@@ -13,11 +13,11 @@ helpviewer_keywords:
 - ?[] operator [Visual Basic]
 ms.assetid: 9c7b2c8f-a785-44ca-836c-407bfb6d27f5
 ms.openlocfilehash: f00d5e489931d9c1172a21ee5f0d3e3d0a6f4a4e
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43408993"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44192796"
 ---
 # <a name="-and--null-conditional-operators-c-and-visual-basic"></a>?. 和 ?[] NULL 条件运算符（C# 和 Visual Basic）
 执行成员访问 (`?.`) 或索引 (`?[]`) 操作之前，测试左侧操作数的值为 null，如果左侧操作数计算结果为 `null`，则返回 `null`。 

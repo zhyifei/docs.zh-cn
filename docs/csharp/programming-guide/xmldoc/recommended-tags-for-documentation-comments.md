@@ -5,12 +5,12 @@ helpviewer_keywords:
 - XML [C#], tags
 - XML documentation [C#], tags
 ms.assetid: 6e98f7a9-38f4-4d74-b644-1ff1b23320fd
-ms.openlocfilehash: 54047746db672efbf626eb2d3fc301b341cc49f5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ef7ba44c0c3a8c660df9627361eb1cabdd9098a0
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33338473"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43741941"
 ---
 # <a name="recommended-tags-for-documentation-comments-c-programming-guide"></a>建议的文档注释标记（C# 编程指南）
 C# 编译器处理代码中的文档注释，并在文件中将其设置为 XML 格式，该文件的名称通过 /doc 命令行选项指定。 若要基于编译器生成的文件创建最终文档，可以创建一个自定义工具，也可以使用 [Sandcastle](https://github.com/EWSoftware/SHFB) 等工具。  
@@ -42,7 +42,8 @@ C# 编译器处理代码中的文档注释，并在文件中将其设置为 XML 
 /// </summary>  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [C# 编程指南](../../../csharp/programming-guide/index.md)  
- [/doc（C# 编译器选项）](../../../csharp/language-reference/compiler-options/doc-compiler-option.md)  
- [XML 文档注释](../../../csharp/programming-guide/xmldoc/xml-documentation-comments.md)
+## <a name="see-also"></a>请参阅
+
+- [C# 编程指南](../../../csharp/programming-guide/index.md)  
+- [/doc（C# 编译器选项）](../../../csharp/language-reference/compiler-options/doc-compiler-option.md)  
+- [XML 文档注释](../../../csharp/programming-guide/xmldoc/xml-documentation-comments.md)

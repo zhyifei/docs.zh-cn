@@ -5,12 +5,12 @@ helpviewer_keywords:
 - C# language, generic interfaces
 - generics [C#], interfaces
 ms.assetid: a8fa49a1-6e78-4a09-87e5-84a0b9f5ffbe
-ms.openlocfilehash: 72f48aa1d70e6cf81b20adc547e2d418c4497256
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a5763413662d32d66e955fb0edfc6b438968720b
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33323633"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43857740"
 ---
 # <a name="generic-interfaces-c-programming-guide"></a>泛型接口（C# 编程指南）
 为泛型集合类或表示集合中的项的泛型类定义接口通常很有用处。 为避免对值类型的装箱和取消装箱操作，泛型类的首选项使用泛型接口，例如 <xref:System.IComparable%601>而不是 <xref:System.IComparable>。 .NET Framework 类库定义多个泛型接口，以将其用于 <xref:System.Collections.Generic> 命名空间中的集合类。  
@@ -43,8 +43,9 @@ ms.locfileid: "33323633"
   
  控制方法重载的规则对泛型类、泛型结构或泛型接口内的方法一样。 有关详细信息，请参阅[泛型方法](../../../csharp/programming-guide/generics/generic-methods.md)。  
   
-## <a name="see-also"></a>请参阅  
- [C# 编程指南](../../../csharp/programming-guide/index.md)  
- [泛型介绍](../../../csharp/programming-guide/generics/introduction-to-generics.md)  
- [interface](../../../csharp/language-reference/keywords/interface.md)  
- [泛型](~/docs/standard/generics/index.md)
+## <a name="see-also"></a>请参阅
+
+- [C# 编程指南](../../../csharp/programming-guide/index.md)  
+- [泛型介绍](../../../csharp/programming-guide/generics/introduction-to-generics.md)  
+- [interface](../../../csharp/language-reference/keywords/interface.md)  
+- [泛型](~/docs/standard/generics/index.md)

@@ -2,12 +2,12 @@
 title: 性能 (LINQ to XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: 43c9f1b7-9bd3-489c-b45c-cb09173a3718
-ms.openlocfilehash: 93c753c9bc408abb3db652f435ac1b0c87f93898
-ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
+ms.openlocfilehash: 340be61f55f2b77ed22d608ec151daa737389771
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "39245409"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43857123"
 ---
 # <a name="performance-linq-to-xml-c"></a>性能 (LINQ to XML) (C#)
 本节提供有关 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 中的性能（尤其是函数构造和查询的性能）信息。  
@@ -25,5 +25,6 @@ ms.locfileid: "39245409"
  [静态编译的查询 (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/statically-compiled-queries-linq-to-xml.md)  
  提供有关静态编译查询（对比必须由 XPath 表达式计算器完成的分析和处理）的性能信息。  
   
-## <a name="see-also"></a>请参阅  
- [编程指南 (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/programming-guide-linq-to-xml.md)
+## <a name="see-also"></a>请参阅
+
+- [编程指南 (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/programming-guide-linq-to-xml.md)

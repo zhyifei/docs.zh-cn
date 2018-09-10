@@ -8,11 +8,11 @@ helpviewer_keywords:
 - < operator [C#]
 ms.assetid: 38cb91e6-79a6-48ec-9c1e-7b71fd8d2b41
 ms.openlocfilehash: 382110985eaffd7ca4cf014d7991fc5ee87dc031
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43467401"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43530303"
 ---
 # <a name="lt-operator-c-reference"></a>&lt; 运算符（C# 参考）
 所有数值和枚举类型定义“小于”关系运算符 (`<`)，如果第一个操作数小于第二个操作数，此运算符返回 `true`，否则返回 `false`。  

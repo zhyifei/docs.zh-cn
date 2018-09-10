@@ -5,12 +5,12 @@ helpviewer_keywords:
 - C# Language, copy constructor
 - copy constructor [C#]
 ms.assetid: fba899b5-fc41-428e-a745-3ebdbf37990a
-ms.openlocfilehash: 8a7cc85d40272918f4839d13fcccb79b558eeac7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d6ecfc3659dcf533db0f4e7b67fdffd620a584fd
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33322492"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44182001"
 ---
 # <a name="how-to-write-a-copy-constructor-c-programming-guide"></a>如何：编写复制构造函数（C# 编程指南）
 C# 不会为对象提供复制构造函数，但你可以自己编写一个。  
@@ -20,9 +20,10 @@ C# 不会为对象提供复制构造函数，但你可以自己编写一个。
   
  [!code-csharp[csProgGuideObjects#16](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-write-a-copy-constructor_1.cs)]  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.ICloneable>  
- [C# 编程指南](../../../csharp/programming-guide/index.md)  
- [类和结构](../../../csharp/programming-guide/classes-and-structs/index.md)  
- [构造函数](../../../csharp/programming-guide/classes-and-structs/constructors.md)  
- [终结器](../../../csharp/programming-guide/classes-and-structs/destructors.md)
+## <a name="see-also"></a>请参阅
+
+- <xref:System.ICloneable>  
+- [C# 编程指南](../../../csharp/programming-guide/index.md)  
+- [类和结构](../../../csharp/programming-guide/classes-and-structs/index.md)  
+- [构造函数](../../../csharp/programming-guide/classes-and-structs/constructors.md)  
+- [终结器](../../../csharp/programming-guide/classes-and-structs/destructors.md)

@@ -2,12 +2,12 @@
 title: 纯功能转换简介 (C#)
 ms.date: 07/20/2015
 ms.assetid: 8495c9d9-2d02-4aa0-8a10-9e8794b985fe
-ms.openlocfilehash: 278b3afc66e4c4f222e27e648274cb8cea814d50
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f04189c5ae6fc8f6c827f983357ab0126b2c086d
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33329096"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44183179"
 ---
 # <a name="introduction-to-pure-functional-transformations-c"></a>纯功能转换简介 (C#)
 本节介绍函数转换，包括基本概念和支持的语言构造。 本节对面向对象的编程方法与函数转换编程方法进行了对比，并针对如何转换到后者提供了一些建议。 尽管可以在很多编程方案中都使用函数转换，但此处使用 XML 转换作为具体示例。  
@@ -22,5 +22,6 @@ ms.locfileid: "33329096"
 |[功能转换的适用性 (C#)](../../../../csharp/programming-guide/concepts/linq/applicability-of-functional-transformation.md)|描述函数转换的典型应用场景。|  
 |[XML 的功能转换 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/functional-transformation-of-xml.md)|描述在转换 XML 树的上下文中的函数转换。|  
   
-## <a name="see-also"></a>请参阅  
- [XML 的纯功能转换 (C#)](../../../../csharp/programming-guide/concepts/linq/pure-functional-transformations-of-xml.md)
+## <a name="see-also"></a>请参阅
+
+- [XML 的纯功能转换 (C#)](../../../../csharp/programming-guide/concepts/linq/pure-functional-transformations-of-xml.md)

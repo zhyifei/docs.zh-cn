@@ -4,18 +4,18 @@ description: 了解 .NET Core 提供的 C# 语言级别异步编程模式。
 author: cartermp
 ms.date: 06/20/2016
 ms.assetid: b878c34c-a78f-419e-a594-a2b44fa521a4
-ms.openlocfilehash: ae1c9b1569b5fb6784f50ec9d78a44380242fcd8
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 971295b85e5f2763eef87bfe9109524db2630120
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43484962"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43865145"
 ---
 # <a name="asynchronous-programming"></a>异步编程
 
 如果需要 I/O 绑定（例如从网络请求数据或访问数据库），则需要利用异步编程。  还可以使用 CPU 绑定代码（例如执行成本高昂的计算），对编写异步代码而言，这是一个不错的方案。
 
-C# 拥有语言级别的异步编程模型，它使你能轻松编写异步代码，而无需应付回叫或符合支持异步的库。 它遵循[基于任务的异步模式 (TAP)](https://msdn.microsoft.com/library/hh873175.aspx)。
+C# 拥有语言级别的异步编程模型，它使你能轻松编写异步代码，而无需应付回叫或符合支持异步的库。 它遵循[基于任务的异步模式 (TAP)](../standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md)。
 
 ## <a name="basic-overview-of-the-asynchronous-model"></a>异步模型的基本概述
 

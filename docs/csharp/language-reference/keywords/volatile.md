@@ -8,11 +8,11 @@ helpviewer_keywords:
 - volatile keyword [C#]
 ms.assetid: 78089bc7-7b38-4cfd-9e49-87ac036af009
 ms.openlocfilehash: be7e081b18702710c00b5b86a9bc152800f0cf3d
-ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43253162"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43526214"
 ---
 # <a name="volatile-c-reference"></a>volatile（C# 参考）
 `volatile` 关键字指示一个字段可以由多个同时执行的线程修改。 声明为 `volatile` 的字段不受编译器优化（假定由单个线程访问）的限制。 这些限制确保所有线程观察易失性写入操作（由任何其他线程执行）时的观察顺序与写入操作的执行顺序一致。 不确保从所有执行线程整体来看时所有易失性写入操作均按执行顺序排序。  
