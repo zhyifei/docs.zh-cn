@@ -1,42 +1,49 @@
 ---
-title: 整型表（C# 参考）
-ms.date: 07/20/2015
+title: 整型类型表（C# 参考）
+description: 内置 C# 整型类型的概述
+ms.date: 08/20/2018
 helpviewer_keywords:
 - integral types, C#
 - Visual C#, integral types
 - types [C#], integral types
 - ranges of integral types [C#]
 ms.assetid: 62e86126-46ff-40b0-9028-e61d7558268c
-ms.openlocfilehash: d524224f15d7861328cc24b1e4f9a54fcc16ee34
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4ac16d185a52cdb03fcb22f57ebf7506f2fb2745
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33267904"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43467187"
 ---
-# <a name="integral-types-table-c-reference"></a><span data-ttu-id="b52d0-102">整型表（C# 参考）</span><span class="sxs-lookup"><span data-stu-id="b52d0-102">Integral Types Table (C# Reference)</span></span>
-<span data-ttu-id="b52d0-103">下表显示整型类型的大小和范围，它们构成简单类型的子集。</span><span class="sxs-lookup"><span data-stu-id="b52d0-103">The following table shows the sizes and ranges of the integral types, which constitute a subset of simple types.</span></span>  
+# <a name="integral-types-table-c-reference"></a><span data-ttu-id="e8d4b-103">整型类型表（C# 参考）</span><span class="sxs-lookup"><span data-stu-id="e8d4b-103">Integral types table (C# Reference)</span></span>
+
+<span data-ttu-id="e8d4b-104">下表显示整型类型的大小和范围，它们构成简单类型的子集。</span><span class="sxs-lookup"><span data-stu-id="e8d4b-104">The following table shows the sizes and ranges of the integral types, which constitute a subset of simple types.</span></span>  
   
-|<span data-ttu-id="b52d0-104">类型</span><span class="sxs-lookup"><span data-stu-id="b52d0-104">Type</span></span>|<span data-ttu-id="b52d0-105">范围</span><span class="sxs-lookup"><span data-stu-id="b52d0-105">Range</span></span>|<span data-ttu-id="b52d0-106">大小</span><span class="sxs-lookup"><span data-stu-id="b52d0-106">Size</span></span>|  
+|<span data-ttu-id="e8d4b-105">类型</span><span class="sxs-lookup"><span data-stu-id="e8d4b-105">Type</span></span>|<span data-ttu-id="e8d4b-106">范围</span><span class="sxs-lookup"><span data-stu-id="e8d4b-106">Range</span></span>|<span data-ttu-id="e8d4b-107">大小</span><span class="sxs-lookup"><span data-stu-id="e8d4b-107">Size</span></span>|  
 |----------|-----------|----------|  
-|[<span data-ttu-id="b52d0-107">sbyte</span><span class="sxs-lookup"><span data-stu-id="b52d0-107">sbyte</span></span>](../../../csharp/language-reference/keywords/sbyte.md)|<span data-ttu-id="b52d0-108">-128 到 127</span><span class="sxs-lookup"><span data-stu-id="b52d0-108">-128 to 127</span></span>|<span data-ttu-id="b52d0-109">8 位带符号整数</span><span class="sxs-lookup"><span data-stu-id="b52d0-109">Signed 8-bit integer</span></span>|  
-|[<span data-ttu-id="b52d0-110">byte</span><span class="sxs-lookup"><span data-stu-id="b52d0-110">byte</span></span>](../../../csharp/language-reference/keywords/byte.md)|<span data-ttu-id="b52d0-111">0 到 255</span><span class="sxs-lookup"><span data-stu-id="b52d0-111">0 to 255</span></span>|<span data-ttu-id="b52d0-112">无符号的 8 位整数</span><span class="sxs-lookup"><span data-stu-id="b52d0-112">Unsigned 8-bit integer</span></span>|  
-|[<span data-ttu-id="b52d0-113">char</span><span class="sxs-lookup"><span data-stu-id="b52d0-113">char</span></span>](../../../csharp/language-reference/keywords/char.md)|<span data-ttu-id="b52d0-114">U+0000 到 U+ffff</span><span class="sxs-lookup"><span data-stu-id="b52d0-114">U+0000 to U+ffff</span></span>|<span data-ttu-id="b52d0-115">Unicode 16 位字符</span><span class="sxs-lookup"><span data-stu-id="b52d0-115">Unicode 16-bit character</span></span>|  
-|[<span data-ttu-id="b52d0-116">short</span><span class="sxs-lookup"><span data-stu-id="b52d0-116">short</span></span>](../../../csharp/language-reference/keywords/short.md)|<span data-ttu-id="b52d0-117">-32,768 到 32,767</span><span class="sxs-lookup"><span data-stu-id="b52d0-117">-32,768 to 32,767</span></span>|<span data-ttu-id="b52d0-118">有符号 16 位整数</span><span class="sxs-lookup"><span data-stu-id="b52d0-118">Signed 16-bit integer</span></span>|  
-|[<span data-ttu-id="b52d0-119">ushort</span><span class="sxs-lookup"><span data-stu-id="b52d0-119">ushort</span></span>](../../../csharp/language-reference/keywords/ushort.md)|<span data-ttu-id="b52d0-120">0 到 65,535</span><span class="sxs-lookup"><span data-stu-id="b52d0-120">0 to 65,535</span></span>|<span data-ttu-id="b52d0-121">无符号 16 位整数</span><span class="sxs-lookup"><span data-stu-id="b52d0-121">Unsigned 16-bit integer</span></span>|  
-|[<span data-ttu-id="b52d0-122">int</span><span class="sxs-lookup"><span data-stu-id="b52d0-122">int</span></span>](../../../csharp/language-reference/keywords/int.md)|<span data-ttu-id="b52d0-123">-2,147,483,648 到 2,147,483,647</span><span class="sxs-lookup"><span data-stu-id="b52d0-123">-2,147,483,648 to 2,147,483,647</span></span>|<span data-ttu-id="b52d0-124">带符号的 32 位整数</span><span class="sxs-lookup"><span data-stu-id="b52d0-124">Signed 32-bit integer</span></span>|  
-|[<span data-ttu-id="b52d0-125">uint</span><span class="sxs-lookup"><span data-stu-id="b52d0-125">uint</span></span>](../../../csharp/language-reference/keywords/uint.md)|<span data-ttu-id="b52d0-126">0 到 4,294,967,295</span><span class="sxs-lookup"><span data-stu-id="b52d0-126">0 to 4,294,967,295</span></span>|<span data-ttu-id="b52d0-127">无符号的 32 位整数</span><span class="sxs-lookup"><span data-stu-id="b52d0-127">Unsigned 32-bit integer</span></span>|  
-|[<span data-ttu-id="b52d0-128">long</span><span class="sxs-lookup"><span data-stu-id="b52d0-128">long</span></span>](../../../csharp/language-reference/keywords/long.md)|<span data-ttu-id="b52d0-129">-9,223,372,036,854,775,808 到 9,223,372,036,854,775,807</span><span class="sxs-lookup"><span data-stu-id="b52d0-129">-9,223,372,036,854,775,808 to 9,223,372,036,854,775,807</span></span>|<span data-ttu-id="b52d0-130">64 位带符号整数</span><span class="sxs-lookup"><span data-stu-id="b52d0-130">Signed 64-bit integer</span></span>|  
-|[<span data-ttu-id="b52d0-131">ulong</span><span class="sxs-lookup"><span data-stu-id="b52d0-131">ulong</span></span>](../../../csharp/language-reference/keywords/ulong.md)|<span data-ttu-id="b52d0-132">0 到 18,446,744,073,709,551,615</span><span class="sxs-lookup"><span data-stu-id="b52d0-132">0 to 18,446,744,073,709,551,615</span></span>|<span data-ttu-id="b52d0-133">无符号 64 位整数</span><span class="sxs-lookup"><span data-stu-id="b52d0-133">Unsigned 64-bit integer</span></span>|  
+|[<span data-ttu-id="e8d4b-108">sbyte</span><span class="sxs-lookup"><span data-stu-id="e8d4b-108">sbyte</span></span>](sbyte.md)|<span data-ttu-id="e8d4b-109">-128 到 127</span><span class="sxs-lookup"><span data-stu-id="e8d4b-109">-128 to 127</span></span>|<span data-ttu-id="e8d4b-110">8 位带符号整数</span><span class="sxs-lookup"><span data-stu-id="e8d4b-110">Signed 8-bit integer</span></span>|  
+|[<span data-ttu-id="e8d4b-111">byte</span><span class="sxs-lookup"><span data-stu-id="e8d4b-111">byte</span></span>](byte.md)|<span data-ttu-id="e8d4b-112">0 到 255</span><span class="sxs-lookup"><span data-stu-id="e8d4b-112">0 to 255</span></span>|<span data-ttu-id="e8d4b-113">无符号的 8 位整数</span><span class="sxs-lookup"><span data-stu-id="e8d4b-113">Unsigned 8-bit integer</span></span>|  
+|[<span data-ttu-id="e8d4b-114">char</span><span class="sxs-lookup"><span data-stu-id="e8d4b-114">char</span></span>](char.md)|<span data-ttu-id="e8d4b-115">U+0000 到 U+ffff</span><span class="sxs-lookup"><span data-stu-id="e8d4b-115">U+0000 to U+ffff</span></span>|<span data-ttu-id="e8d4b-116">Unicode 16 位字符</span><span class="sxs-lookup"><span data-stu-id="e8d4b-116">Unicode 16-bit character</span></span>|  
+|[<span data-ttu-id="e8d4b-117">short</span><span class="sxs-lookup"><span data-stu-id="e8d4b-117">short</span></span>](short.md)|<span data-ttu-id="e8d4b-118">-32,768 到 32,767</span><span class="sxs-lookup"><span data-stu-id="e8d4b-118">-32,768 to 32,767</span></span>|<span data-ttu-id="e8d4b-119">有符号 16 位整数</span><span class="sxs-lookup"><span data-stu-id="e8d4b-119">Signed 16-bit integer</span></span>|  
+|[<span data-ttu-id="e8d4b-120">ushort</span><span class="sxs-lookup"><span data-stu-id="e8d4b-120">ushort</span></span>](ushort.md)|<span data-ttu-id="e8d4b-121">0 到 65,535</span><span class="sxs-lookup"><span data-stu-id="e8d4b-121">0 to 65,535</span></span>|<span data-ttu-id="e8d4b-122">无符号 16 位整数</span><span class="sxs-lookup"><span data-stu-id="e8d4b-122">Unsigned 16-bit integer</span></span>|  
+|[<span data-ttu-id="e8d4b-123">int</span><span class="sxs-lookup"><span data-stu-id="e8d4b-123">int</span></span>](int.md)|<span data-ttu-id="e8d4b-124">-2,147,483,648 到 2,147,483,647</span><span class="sxs-lookup"><span data-stu-id="e8d4b-124">-2,147,483,648 to 2,147,483,647</span></span>|<span data-ttu-id="e8d4b-125">带符号的 32 位整数</span><span class="sxs-lookup"><span data-stu-id="e8d4b-125">Signed 32-bit integer</span></span>|  
+|[<span data-ttu-id="e8d4b-126">uint</span><span class="sxs-lookup"><span data-stu-id="e8d4b-126">uint</span></span>](uint.md)|<span data-ttu-id="e8d4b-127">0 到 4,294,967,295</span><span class="sxs-lookup"><span data-stu-id="e8d4b-127">0 to 4,294,967,295</span></span>|<span data-ttu-id="e8d4b-128">无符号的 32 位整数</span><span class="sxs-lookup"><span data-stu-id="e8d4b-128">Unsigned 32-bit integer</span></span>|  
+|[<span data-ttu-id="e8d4b-129">long</span><span class="sxs-lookup"><span data-stu-id="e8d4b-129">long</span></span>](long.md)|<span data-ttu-id="e8d4b-130">-9,223,372,036,854,775,808 到 9,223,372,036,854,775,807</span><span class="sxs-lookup"><span data-stu-id="e8d4b-130">-9,223,372,036,854,775,808 to 9,223,372,036,854,775,807</span></span>|<span data-ttu-id="e8d4b-131">64 位带符号整数</span><span class="sxs-lookup"><span data-stu-id="e8d4b-131">Signed 64-bit integer</span></span>|  
+|[<span data-ttu-id="e8d4b-132">ulong</span><span class="sxs-lookup"><span data-stu-id="e8d4b-132">ulong</span></span>](ulong.md)|<span data-ttu-id="e8d4b-133">0 到 18,446,744,073,709,551,615</span><span class="sxs-lookup"><span data-stu-id="e8d4b-133">0 to 18,446,744,073,709,551,615</span></span>|<span data-ttu-id="e8d4b-134">无符号 64 位整数</span><span class="sxs-lookup"><span data-stu-id="e8d4b-134">Unsigned 64-bit integer</span></span>|  
+
+## <a name="remarks"></a><span data-ttu-id="e8d4b-135">备注</span><span class="sxs-lookup"><span data-stu-id="e8d4b-135">Remarks</span></span>
   
- <span data-ttu-id="b52d0-134">如果由整数文本所表示的值超出了 `ulong` 的范围，则将出现编译错误。</span><span class="sxs-lookup"><span data-stu-id="b52d0-134">If the value represented by an integer literal exceeds the range of `ulong`, a compilation error will occur.</span></span>  
+<span data-ttu-id="e8d4b-136">如果由整数字面量所表示的值超出了 <xref:System.UInt64.MaxValue?displayProperty=nameWithType>，则将出现编译器错误 [CS1021](../../misc/cs1021.md)。</span><span class="sxs-lookup"><span data-stu-id="e8d4b-136">If the value represented by an integer literal exceeds <xref:System.UInt64.MaxValue?displayProperty=nameWithType>, a compiler error [CS1021](../../misc/cs1021.md) occurs.</span></span>
+
+<span data-ttu-id="e8d4b-137">使用 <xref:System.Numerics.BigInteger?displayProperty=nameWithType> 类来表示任意大的带符号整数。</span><span class="sxs-lookup"><span data-stu-id="e8d4b-137">Use the <xref:System.Numerics.BigInteger?displayProperty=nameWithType> class to represent an arbitrarily large signed integer.</span></span>
   
-## <a name="see-also"></a><span data-ttu-id="b52d0-135">请参阅</span><span class="sxs-lookup"><span data-stu-id="b52d0-135">See Also</span></span>  
- [<span data-ttu-id="b52d0-136">C# 参考</span><span class="sxs-lookup"><span data-stu-id="b52d0-136">C# Reference</span></span>](../../../csharp/language-reference/index.md)  
- [<span data-ttu-id="b52d0-137">C# 编程指南</span><span class="sxs-lookup"><span data-stu-id="b52d0-137">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
- [<span data-ttu-id="b52d0-138">C# 关键字</span><span class="sxs-lookup"><span data-stu-id="b52d0-138">C# Keywords</span></span>](../../../csharp/language-reference/keywords/index.md)  
- [<span data-ttu-id="b52d0-139">内置类型表</span><span class="sxs-lookup"><span data-stu-id="b52d0-139">Built-In Types Table</span></span>](../../../csharp/language-reference/keywords/built-in-types-table.md)  
- [<span data-ttu-id="b52d0-140">浮点型表</span><span class="sxs-lookup"><span data-stu-id="b52d0-140">Floating-Point Types Table</span></span>](../../../csharp/language-reference/keywords/floating-point-types-table.md)  
- [<span data-ttu-id="b52d0-141">默认值表</span><span class="sxs-lookup"><span data-stu-id="b52d0-141">Default Values Table</span></span>](../../../csharp/language-reference/keywords/default-values-table.md)  
- [<span data-ttu-id="b52d0-142">设置数值结果表的格式</span><span class="sxs-lookup"><span data-stu-id="b52d0-142">Formatting Numeric Results Table</span></span>](../../../csharp/language-reference/keywords/formatting-numeric-results-table.md)  
- [<span data-ttu-id="b52d0-143">类型参考表</span><span class="sxs-lookup"><span data-stu-id="b52d0-143">Reference Tables for Types</span></span>](../../../csharp/language-reference/keywords/reference-tables-for-types.md)
+## <a name="see-also"></a><span data-ttu-id="e8d4b-138">请参阅</span><span class="sxs-lookup"><span data-stu-id="e8d4b-138">See also</span></span>
+
+- [<span data-ttu-id="e8d4b-139">C# 参考</span><span class="sxs-lookup"><span data-stu-id="e8d4b-139">C# Reference</span></span>](../index.md)
+- [<span data-ttu-id="e8d4b-140">C# 编程指南</span><span class="sxs-lookup"><span data-stu-id="e8d4b-140">C# Programming Guide</span></span>](../../programming-guide/index.md)
+- [<span data-ttu-id="e8d4b-141">C# 关键字</span><span class="sxs-lookup"><span data-stu-id="e8d4b-141">C# Keywords</span></span>](index.md)
+- [<span data-ttu-id="e8d4b-142">类型引用表</span><span class="sxs-lookup"><span data-stu-id="e8d4b-142">Reference tables for types</span></span>](reference-tables-for-types.md)
+- [<span data-ttu-id="e8d4b-143">浮点型表</span><span class="sxs-lookup"><span data-stu-id="e8d4b-143">Floating-point types table</span></span>](floating-point-types-table.md)
+- [<span data-ttu-id="e8d4b-144">默认值表</span><span class="sxs-lookup"><span data-stu-id="e8d4b-144">Default values table</span></span>](default-values-table.md)
+- [<span data-ttu-id="e8d4b-145">设置数值结果表的格式</span><span class="sxs-lookup"><span data-stu-id="e8d4b-145">Formatting numeric results table</span></span>](formatting-numeric-results-table.md)
+- [<span data-ttu-id="e8d4b-146">内置类型表</span><span class="sxs-lookup"><span data-stu-id="e8d4b-146">Built-in types table</span></span>](built-in-types-table.md)

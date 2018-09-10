@@ -1,38 +1,50 @@
 ---
 title: 运算符关键字（C# 参考）
-ms.date: 07/20/2015
+description: 了解如何重载内置 C# 运算符
+ms.date: 08/27/2018
 f1_keywords:
 - operator_CSharpKeyword
 - operator
 helpviewer_keywords:
 - operator keyword [C#]
 ms.assetid: 59218cce-e90e-42f6-a6bb-30300981b86a
-ms.openlocfilehash: c3bfada235993670bf158fe9803a09707b2b3251
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.openlocfilehash: 1e11d7767b61becc39b1158fae9cb2abe997e4bd
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42929867"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43480647"
 ---
-# <a name="operator-c-reference"></a><span data-ttu-id="4e3ce-102">运算符（C# 参考）</span><span class="sxs-lookup"><span data-stu-id="4e3ce-102">operator (C# Reference)</span></span>
+# <a name="operator-c-reference"></a><span data-ttu-id="747fa-103">运算符（C# 参考）</span><span class="sxs-lookup"><span data-stu-id="747fa-103">operator (C# Reference)</span></span>
 
-<span data-ttu-id="4e3ce-103">使用 `operator` 关键字重载内置运算符，或在类或结构声明中提供用户定义的转换。</span><span class="sxs-lookup"><span data-stu-id="4e3ce-103">Use the `operator` keyword to overload a built-in operator or to provide a user-defined conversion in a class or struct declaration.</span></span>
+<span data-ttu-id="747fa-104">使用 `operator` 关键字重载内置运算符，或在类或结构声明中提供用户定义的转换。</span><span class="sxs-lookup"><span data-stu-id="747fa-104">Use the `operator` keyword to overload a built-in operator or to provide a user-defined conversion in a class or struct declaration.</span></span>
 
-## <a name="example"></a><span data-ttu-id="4e3ce-104">示例</span><span class="sxs-lookup"><span data-stu-id="4e3ce-104">Example</span></span>
+<span data-ttu-id="747fa-105">若要在自定义类或结构上重载运算符，可以在相应的类型中创建运算符声明。</span><span class="sxs-lookup"><span data-stu-id="747fa-105">To overload an operator on a custom class or struct, you create an operator declaration in the corresponding type.</span></span> <span data-ttu-id="747fa-106">重载内置 C# 运算符的运算符声明必须满足以下规则：</span><span class="sxs-lookup"><span data-stu-id="747fa-106">The operator declaration that overloads a built-in C# operator must satisfy the following rules:</span></span>
 
-<span data-ttu-id="4e3ce-105">下面是针对分数的一个非常简单的类。</span><span class="sxs-lookup"><span data-stu-id="4e3ce-105">The following is a very simplified class for fractional numbers.</span></span> <span data-ttu-id="4e3ce-106">此类重载 `+` 和 `*` 运算符以执行分数加法和乘法，并提供转换运算符将 `Fraction` 类型转换为 `double` 类型。</span><span class="sxs-lookup"><span data-stu-id="4e3ce-106">It overloads the `+` and `*` operators to perform fractional addition and multiplication, and also provides a conversion operator that converts a `Fraction` type to a `double` type.</span></span>
+- <span data-ttu-id="747fa-107">同时包含 `public` 和 `static` 修饰符。</span><span class="sxs-lookup"><span data-stu-id="747fa-107">It includes both a `public` and a `static` modifier.</span></span>
+- <span data-ttu-id="747fa-108">包含 `operator X`，其中 `X` 是被重载运算符的名称或符号。</span><span class="sxs-lookup"><span data-stu-id="747fa-108">It includes `operator X` where `X` is the name or symbol of the operator being overloaded.</span></span>
+- <span data-ttu-id="747fa-109">一元运算符具有一个参数，二元运算符具有两个参数。</span><span class="sxs-lookup"><span data-stu-id="747fa-109">Unary operators have one parameter, and binary operators have two parameters.</span></span> <span data-ttu-id="747fa-110">在每种情况下，都必须至少有一个参数与声明运算符的类或结构的类型相同。</span><span class="sxs-lookup"><span data-stu-id="747fa-110">In each case, at least one parameter must be the same type as the class or struct that declares the operator.</span></span>
+
+<span data-ttu-id="747fa-111">有关如何定义转换运算符的信息，请参阅[显式](explicit.md)和[隐式](implicit.md)关键字文章。</span><span class="sxs-lookup"><span data-stu-id="747fa-111">For information about how to define conversion operators, see the [explicit](explicit.md) and [implicit](implicit.md) keyword articles.</span></span>
+
+<span data-ttu-id="747fa-112">有关可重载 C# 运算符的概述，请参阅[可重载运算符](../../programming-guide/statements-expressions-operators/overloadable-operators.md)一文。</span><span class="sxs-lookup"><span data-stu-id="747fa-112">For an overview of the C# operators that can be overloaded, see the [Overloadable operators](../../programming-guide/statements-expressions-operators/overloadable-operators.md) article.</span></span>
+
+## <a name="example"></a><span data-ttu-id="747fa-113">示例</span><span class="sxs-lookup"><span data-stu-id="747fa-113">Example</span></span>
+
+<span data-ttu-id="747fa-114">以下示例定义了表示小数的 `Fraction` 类型。</span><span class="sxs-lookup"><span data-stu-id="747fa-114">The following example defines a `Fraction` type that represents fractional numbers.</span></span> <span data-ttu-id="747fa-115">此类重载 `+` 和 `*` 运算符以执行分数加法和乘法，并提供转换运算符将 `Fraction` 类型转换为 `double` 类型。</span><span class="sxs-lookup"><span data-stu-id="747fa-115">It overloads the `+` and `*` operators to perform fractional addition and multiplication, and also provides a conversion operator that converts a `Fraction` type to a `double` type.</span></span>
 
 [!code-csharp[csrefKeywordsConversion#6](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsConversion/CS/csrefKeywordsConversion.cs#6)]
 
-## <a name="c-language-specification"></a><span data-ttu-id="4e3ce-107">C# 语言规范</span><span class="sxs-lookup"><span data-stu-id="4e3ce-107">C# language specification</span></span>
+## <a name="c-language-specification"></a><span data-ttu-id="747fa-116">C# 语言规范</span><span class="sxs-lookup"><span data-stu-id="747fa-116">C# language specification</span></span>
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
-## <a name="see-also"></a><span data-ttu-id="4e3ce-108">请参阅</span><span class="sxs-lookup"><span data-stu-id="4e3ce-108">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="747fa-117">请参阅</span><span class="sxs-lookup"><span data-stu-id="747fa-117">See also</span></span>
 
-- [<span data-ttu-id="4e3ce-109">C# 参考</span><span class="sxs-lookup"><span data-stu-id="4e3ce-109">C# Reference</span></span>](../index.md)
-- [<span data-ttu-id="4e3ce-110">C# 编程指南</span><span class="sxs-lookup"><span data-stu-id="4e3ce-110">C# Programming Guide</span></span>](../../programming-guide/index.md)
-- [<span data-ttu-id="4e3ce-111">C# 关键字</span><span class="sxs-lookup"><span data-stu-id="4e3ce-111">C# Keywords</span></span>](index.md)
-- [<span data-ttu-id="4e3ce-112">implicit</span><span class="sxs-lookup"><span data-stu-id="4e3ce-112">implicit</span></span>](implicit.md)
-- [<span data-ttu-id="4e3ce-113">explicit</span><span class="sxs-lookup"><span data-stu-id="4e3ce-113">explicit</span></span>](explicit.md)
-- [<span data-ttu-id="4e3ce-114">如何：在结构之间实现用户定义的转换</span><span class="sxs-lookup"><span data-stu-id="4e3ce-114">How to: Implement User-Defined Conversions Between Structs</span></span>](../../programming-guide/statements-expressions-operators/how-to-implement-user-defined-conversions-between-structs.md)
+- [<span data-ttu-id="747fa-118">C# 参考</span><span class="sxs-lookup"><span data-stu-id="747fa-118">C# Reference</span></span>](../index.md)
+- [<span data-ttu-id="747fa-119">C# 编程指南</span><span class="sxs-lookup"><span data-stu-id="747fa-119">C# Programming Guide</span></span>](../../programming-guide/index.md)
+- [<span data-ttu-id="747fa-120">C# 关键字</span><span class="sxs-lookup"><span data-stu-id="747fa-120">C# Keywords</span></span>](index.md)
+- [<span data-ttu-id="747fa-121">implicit</span><span class="sxs-lookup"><span data-stu-id="747fa-121">implicit</span></span>](implicit.md)
+- [<span data-ttu-id="747fa-122">explicit</span><span class="sxs-lookup"><span data-stu-id="747fa-122">explicit</span></span>](explicit.md)
+- [<span data-ttu-id="747fa-123">可重载运算符</span><span class="sxs-lookup"><span data-stu-id="747fa-123">Overloadable operators</span></span>](../../programming-guide/statements-expressions-operators/overloadable-operators.md)
+- [<span data-ttu-id="747fa-124">如何：在结构之间实现用户定义的转换</span><span class="sxs-lookup"><span data-stu-id="747fa-124">How to: Implement User-Defined Conversions Between Structs</span></span>](../../programming-guide/statements-expressions-operators/how-to-implement-user-defined-conversions-between-structs.md)
