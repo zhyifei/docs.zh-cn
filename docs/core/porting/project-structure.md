@@ -4,12 +4,12 @@ description: 帮助希望针对 .NET Framework 和 .NET Core 并行编译解决�
 author: conniey
 ms.author: mairaw
 ms.date: 04/06/2017
-ms.openlocfilehash: e6cd9c6d66996d9fd24fe71d48091723143e5849
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f8ca0d08c9e3802c71d53c831592ee4388ab5512
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33211434"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43512261"
 ---
 # <a name="organizing-your-project-to-support-net-framework-and-net-core"></a>组织项目以支持 .NET Framework 和 .NET Core
 
@@ -51,6 +51,7 @@ ms.locfileid: "33211434"
 [**源代码**][example-csproj-code]
 
 需注意的更改：
+
 * 用新的 [.NET Core *\*.csproj*][example-csproj-netcore] 替换 packages.config 和 \*.csproj。 NuGet 包是使用 `<PackageReference> ItemGroup` 指定的。
 
 ## <a name="keep-existing-projects-and-create-a-net-core-project"></a>保留现有项目并创建 .NET Core 项目
@@ -62,12 +63,13 @@ ms.locfileid: "33211434"
 [**源代码**][example-csproj-different-code]
 
 需注意的更改：
+
 * 将 .NET Core 项目和现有项目保存在不同的文件夹中。
-    * 将项目保存在不同的文件夹中可以避免强制使用 Visual Studio 2017。 可以创建仅打开旧项目的单独解决方案。
+  * 将项目保存在不同的文件夹中可以避免强制使用 Visual Studio 2017。 可以创建仅打开旧项目的单独解决方案。
 
 ## <a name="see-also"></a>请参阅
 
-有关迁移到 .NET Core 的详细指南，请参阅 [.NET Core 移植文档][porting-doc]。
+* 有关迁移到 .NET Core 的详细指南，请参阅 [.NET Core 移植文档][porting-doc]。
 
 [porting-doc]: index.md
 [example-initial-project]: media/project-structure/project.png "现有项目"

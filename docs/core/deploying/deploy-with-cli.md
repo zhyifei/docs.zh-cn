@@ -4,12 +4,12 @@ description: 了解如何使用命令行接口 (CLI) 工具部署 .NET Core 应�
 author: rpetrusha
 ms.author: ronpet
 ms.date: 04/18/2017
-ms.openlocfilehash: 7b009068422686442ebff83b9400c365f34a3154
-ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
+ms.openlocfilehash: dbef9d91aa4e7af8e6e0ed2d8f361238385d4976
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "39244740"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43855017"
 ---
 # <a name="deploying-net-core-apps-with-command-line-interface-cli-tools"></a>使用命令行接口 (CLI) 工具部署 .NET Core 应用
 
@@ -26,7 +26,7 @@ ms.locfileid: "39244740"
 
 ## <a name="framework-dependent-deployment"></a>依赖框架的部署
 
-如果不使用第三方依赖项，部属依赖框架的部署只包括生成、测试和发布应用。 一个用 C# 编写的简单示例可说明此过程。 
+如果不使用第三方依赖项，部属依赖框架的部署只包括生成、测试和发布应用。 一个用 C# 编写的简单示例可说明此过程。
 
 1. 创建项目目录。
 
@@ -43,7 +43,7 @@ ms.locfileid: "39244740"
    [!code-csharp[deployment#1](../../../samples/snippets/core/deploying/deployment-example.cs)]
 
 1. 更新项目的依赖项和工具。
- 
+
    运行 [dotnet restore](../tools/dotnet-restore.md)（[请参阅注释](#dotnet-restore-note)）命令，还原项目中指定的依赖项。
 
 1. 创建应用的调试版本。
@@ -105,7 +105,7 @@ ms.locfileid: "39244740"
 
 1. 定义应用的目标平台。
 
-   在 csproj 文件（该文件用于定义应用的目标平台）的 `<PropertyGroup>` 部分中创建 `<RuntimeIdentifiers>` 标记，然后指定每个目标平台的运行时标识符 (RID)。 请注意，还需要添加分号来分隔 RID。 请查看[运行时标识符目录](../rid-catalog.md)，获取运行时标识符列表。 
+   在 csproj 文件（该文件用于定义应用的目标平台）的 `<PropertyGroup>` 部分中创建 `<RuntimeIdentifiers>` 标记，然后指定每个目标平台的运行时标识符 (RID)。 请注意，还需要添加分号来分隔 RID。 请查看[运行时标识符目录](../rid-catalog.md)，获取运行时标识符列表。
 
    例如，以下 `<PropertyGroup>` 部分表明应用在 64 位 Windows 10 操作系统和 64 位 OS X 10.11 版本的操作系统上运行。
 
@@ -188,8 +188,7 @@ ms.locfileid: "39244740"
 <a name="dotnet-restore-note"></a>
 [!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
 
-# <a name="see-also"></a>请参阅
+## <a name="see-also"></a>请参阅
 
-[.NET Core 应用程序部署](index.md)   
-[.NET Core 运行时标识符 (RID) 目录](../rid-catalog.md)   
-
+* [.NET Core 应用程序部署](index.md)
+* [.NET Core 运行时标识符 (RID) 目录](../rid-catalog.md)

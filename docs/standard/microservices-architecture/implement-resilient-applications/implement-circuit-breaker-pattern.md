@@ -4,18 +4,18 @@ description: 适用于容器化 .NET 应用程序的 .NET 微服务体系结构 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 07/03/2018
-ms.openlocfilehash: d5902c5a0744d74ae5086a4df3aee606b24b6030
-ms.sourcegitcommit: 59b51cd7c95c75be85bd6ef715e9ef8c85720bac
+ms.openlocfilehash: 8cd3564e5240ec5a8783edb336957549be27ea6a
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37875162"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43403522"
 ---
 # <a name="implement-the-circuit-breaker-pattern"></a>实现断路器模式
 
 如前文所述，需要处理某类故障，处理这类故障时，所需的时间并不固定，尝试连接远程服务或资源时就可能会发生这类故障。 处理这类故障可以提高应用程序的稳定性和复原能力。
 
-在分布式环境中，对远程资源和服务的调用可能由于暂时性故障而失败，例如网络连接速度较慢和超时或资源连接缓慢或暂时不可用。 这些故障通常在一段时间之后会自动消失，应配备可靠强大的云应用程序，使用“重试模式”等策略来解决这些故障。 
+在分布式环境中，对远程资源和服务的调用可能由于暂时性故障而失败，例如网络连接速度较慢和超时或资源响应缓慢或暂时不可用。 这些故障通常在一段时间之后会自动消失，应配备可靠强大的云应用程序，使用“重试模式”等策略来解决这些故障。 
 
 但也可能存在这种情况，由于意外事件引发故障，需要更长的时间来解决故障。 这些故障轻则导致部分连接中断，重则导致服务完全瘫痪。 在这些情况下，应用程序持续重试一个操作可能毫无意义，因为操作不可能成功。 
 
@@ -23,7 +23,7 @@ ms.locfileid: "37875162"
 
 如果不恰当地使用 Http 重试，可能会在自己的软件中产生拒绝服务 ([DoS](https://en.wikipedia.org/wiki/Denial-of-service_attack)) 攻击。 由于微服务出现故障或执行缓慢，多个客户端可能会反复重试失败的请求。 这会产生极高的风险，导致针对失败的服务的流量成倍增加。
 
-因此，需要某种防御屏障，以便重试操作在不断尝试无意义时停止请求。 此防御屏障正是断路器。
+因此，需要某种防御屏障，以便在不断尝试无意义时停止过多的请求。 此防御屏障正是断路器。
 
 断路器模式与“重试模式”的目的和用途不同。 “重试模式”让应用程序能够重试某项操作，并预期该操作最终会成功。 断路器模式阻止应用程序执行很可能会失败的操作。 应用程序可以合并这两种模式。 但重试逻辑应能敏锐觉察断路器返回的任何异常，并在断路器指示故障并非暂时性故障时放弃重试尝试。
 
@@ -43,7 +43,7 @@ services.AddHttpClient<IBasketService, BasketService>()
         .AddPolicyHandler(GetCircuitBreakerPolicy());
 ```
 
-`AddPolicyHandler()` 方法将策略添加至将要使用的 HttpClient 对象。 在这种情况下，它会为断路器添加 Polly 的策略。
+`AddPolicyHandler()` 方法将策略添加至将要使用的 HttpClient 对象。 在这种情况下，它会为断路器添加 Polly 策略。
 
 为了获取更为模块化的方法，会在一个名为 GetCircuitBreakerPolicy() 的单独方法中定义断路器策略，如下列代码所示。
 
@@ -56,7 +56,7 @@ static IAsyncPolicy<HttpResponseMessage> GetCircuitBreakerPolicy()
 }
 ```
 
-上述代码示例配置了断路器策略，因此，如果在重试 Http 请求时出现五个异常，则会中断或打开线路。 然后，将出现 30 秒的持续时间或中断时间。
+上述代码示例配置了断路器策略，因此，如果在重试 Http 请求时出现五个连续故障，则会中断或断开线路。 此时，电路将断开 30 秒：在此期间，断路器会立即中止呼叫，而不是拨打电话。  该策略自动将[相关异常和 HTTP 状态代码](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/http-requests?view=aspnetcore-2.1#handle-transient-faults)解释为故障。  
 
 如果一个特定资源出现问题，且该资源部署在不同于执行 HTTP 调用的客户端应用程序或服务的环境中，则还应使用断路器将请求重定向到回退基础结构。 这样一来，如果数据中心发生故障，但该故障只影响后端微服务，而不影响客户端应用程序，则客户端应用程序可以重定向到回退服务。 Polly 正在规划新策略，用于自动实现此[故障转移策略](https://github.com/App-vNext/Polly/wiki/Polly-Roadmap#failover-policy)方案。 
 
@@ -65,7 +65,6 @@ static IAsyncPolicy<HttpResponseMessage> GetCircuitBreakerPolicy()
 从使用情况角度来看，在使用 HttpClient 时，无需添加新内容，因为该代码与结合使用 HttpClientFactory 和 HttpClient 时所使用的代码相同，如之前部分所述。 
 
 ## <a name="testing-http-retries-and-circuit-breakers-in-eshoponcontainers"></a>在 eShopOnContainers 中测试 Http 重试和断路器
-
 
 每当在 Docker 主机中启动 eShopOnContainers 解决方案时，它需要启动多个容器。 启动和初始化某些容器时会比较慢，如 SQL Server 容器。 尤其是首次在 Docker 中部署 eShopOnContainers 应用程序时，因为它需要设置映像和数据库。 某些容器的启动速度比其他容器慢，这可能导致其余服务一开始会引发 HTTP 异常，即使在 docker-compose 级别设置容器之间的依赖关系也会如此，如前面部分中所述。 容器之间的那些 docker-compose 依赖关系只存在于进程级别。 可能容器的入口点进程已启动，但 SQL Server 可能还不能响应查询。 这是一连串错误导致的结果，应用程序在尝试使用该特定容器时可能引发异常。 
 

@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: b782bcb8-da6a-4c6a-805f-2eb46d504309
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e35c2337ff7e416cb5f2c869f8ede160e05d369f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5098eea86ee910baad57115419e147df02e41ed9
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33592010"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43485529"
 ---
 # <a name="overview-of-synchronization-primitives"></a>同步基元概述
 <a name="top"></a> .NET Framework 提供一系列用于控制线程交互和避免争用情况的同步基元。 这大致可分为 3 个类别：锁定、发出信号和联锁操作。  
@@ -40,7 +40,7 @@ ms.locfileid: "33592010"
  锁定控制一次针对一个线程的资源，或控制针对指定数目线程的资源。 锁定正在使用时请求排他锁的线程将受阻，直到锁定变为可用。  
   
 ### <a name="exclusive-locks"></a>排他锁  
- 最简单的锁定形式是 C# 中的 `lock` 语句和 Visual Basic 中的 `SyncLock` 语句），它控制对代码块的访问。 此类块经常被称为关键部分。 `lock` 语句是使用 <xref:System.Threading.Monitor.Enter%2A?displayProperty=nameWithType> 和 <xref:System.Threading.Monitor.Exit%2A?displayProperty=nameWithType> 方法进行实现，并使用 `try…catch…finally` 块来确保锁已解除。  
+ 最简单的锁定形式是 C# 中的 `lock` 语句和 Visual Basic 中的 `SyncLock` 语句），它控制对代码块的访问。 此类块经常被称为关键部分。 `lock` 语句是使用 <xref:System.Threading.Monitor.Enter%2A?displayProperty=nameWithType> 和 <xref:System.Threading.Monitor.Exit%2A?displayProperty=nameWithType> 方法进行实现，并使用 `try…finally` 块来确保锁已解除。  
   
  一般来说，使用 <xref:System.Threading.Monitor> 类的最佳方式是，使用 `lock` 或 `SyncLock` 语句来保护小代码块，但绝不横跨多个方法。 <xref:System.Threading.Monitor> 类虽然功能强大，但容易形成孤立锁和死锁情况。  
   
@@ -61,7 +61,7 @@ ms.locfileid: "33592010"
   
  <xref:System.Threading.Monitor> 类不可实例化。 其方法是静态方法（Visual Basic 中为 `Shared`），并在用于可实例化的锁对象。  
   
- 有关概念性概述，请参阅 [Monitor](http://msdn.microsoft.com/library/33fe4aef-b44b-42fd-9e72-c908e39e75db)。  
+ 有关概念性概述，请参阅 [Monitor](https://msdn.microsoft.com/library/33fe4aef-b44b-42fd-9e72-c908e39e75db)。  
   
 #### <a name="mutex-class"></a>Mutex 类  
  线程通过调用其 <xref:System.Threading.WaitHandle.WaitOne%2A> 方法的重载来请求 <xref:System.Threading.Mutex>。 提供了超时的重载，以允许线程放弃等待。 与 <xref:System.Threading.Monitor> 类不同，互斥可以是局部的，也可以是全局的。 全局互斥（也称为已命名互斥）在整个操作系统中均可见，且可用于同步多个应用程序域或进程中的线程。 局部互斥派生自 <xref:System.MarshalByRefObject>，且可跨应用程序域边界使用。  
@@ -109,7 +109,7 @@ ms.locfileid: "33592010"
   
  线程通过调用实例方法 <xref:System.Threading.WaitHandle.WaitOne%2A> 或其中一个静态方法（<xref:System.Threading.WaitHandle.WaitAll%2A>、<xref:System.Threading.WaitHandle.WaitAny%2A> 或 <xref:System.Threading.WaitHandle.SignalAndWait%2A>来阻止等待句柄。 释放方式取决于调用的方法类型和等待句柄的类型。  
   
- 有关概念性概述，请参阅[等待句柄](http://msdn.microsoft.com/library/48d10b6f-5fd7-407c-86ab-0179aef72489)。  
+ 有关概念性概述，请参阅[等待句柄](https://msdn.microsoft.com/library/48d10b6f-5fd7-407c-86ab-0179aef72489)。  
   
 #### <a name="event-wait-handles"></a>事件等待句柄  
  事件等待句柄包括 <xref:System.Threading.EventWaitHandle>类及其派生类（<xref:System.Threading.AutoResetEvent> 和 <xref:System.Threading.ManualResetEvent>）。 当通过调用事件等待句柄的 <xref:System.Threading.EventWaitHandle.Set%2A> 方法或通过使用 <xref:System.Threading.WaitHandle.SignalAndWait%2A> 方法来发出事件等待句柄的信号时，将从事件等待句柄中释放线程。  
@@ -167,11 +167,11 @@ ms.locfileid: "33592010"
   
 ## <a name="see-also"></a>请参阅  
  [为多线程处理同步数据](../../../docs/standard/threading/synchronizing-data-for-multithreading.md)  
- [监视器](http://msdn.microsoft.com/library/33fe4aef-b44b-42fd-9e72-c908e39e75db)  
+ [监视器](https://msdn.microsoft.com/library/33fe4aef-b44b-42fd-9e72-c908e39e75db)  
  [Mutex](../../../docs/standard/threading/mutexes.md)  
  [Semaphore 和 SemaphoreSlim](../../../docs/standard/threading/semaphore-and-semaphoreslim.md)  
  [EventWaitHandle、AutoResetEvent、CountdownEvent、ManualResetEvent](../../../docs/standard/threading/eventwaithandle-autoresetevent-countdownevent-manualresetevent.md)  
- [等待句柄](http://msdn.microsoft.com/library/48d10b6f-5fd7-407c-86ab-0179aef72489)  
+ [等待句柄](https://msdn.microsoft.com/library/48d10b6f-5fd7-407c-86ab-0179aef72489)  
  [互锁操作](../../../docs/standard/threading/interlocked-operations.md)  
  [读取器-编写器锁](../../../docs/standard/threading/reader-writer-locks.md)  
  [Barrier](../../../docs/standard/threading/barrier.md)  

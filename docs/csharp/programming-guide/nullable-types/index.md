@@ -7,12 +7,12 @@ helpviewer_keywords:
 - C# language, nullable types
 - types [C#], nullable
 ms.assetid: e473cb01-28ca-42be-9cea-f717055d72c6
-ms.openlocfilehash: 64b326b82cd022ed6590a232546690e2ec2a5c78
-ms.sourcegitcommit: 78bcb629abdbdbde0e295b4e81f350a477864aba
+ms.openlocfilehash: 2af0704abcad00c75a5d40bfe2d0523d07ee6a3f
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39245579"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "43885043"
 ---
 # <a name="nullable-types-c-programming-guide"></a>可以为 null 的类型（C# 编程指南）
 
@@ -38,7 +38,7 @@ ms.locfileid: "39245579"
   
 - 还可将 `==` 和 `!=` 运算符用于可以为 null 的类型，如以下示例所示：`if (x != null) y = x.Value;` 如果 `a` 和 `b` 均为 null，则 `a == b` 的计算结果为 `true`。  
 
-- 从 C# 7.0 开始，可以使用模式匹配来检查和获取可以为 null 的类型的值：`if (x is int xValue) y = xValue;`。
+- 从 C# 7.0 开始，可以使用[模式匹配](../../pattern-matching.md#the-is-type-pattern-expression)来检查和获取可以为 null 的类型的值：`if (x is int valueOfX) y = valueOfX;`。
   
 - `T?` 的默认值是一个实例，其 <xref:System.Nullable%601.HasValue%2A> 属性返回 `false`。  
 
@@ -56,10 +56,10 @@ ms.locfileid: "39245579"
   
 ## <a name="see-also"></a>请参阅
 
- <xref:System.Nullable%601?displayProperty=nameWithType>  
- <xref:System.Nullable?displayProperty=nameWithType>  
- [??运算符](../../language-reference/operators/null-coalescing-operator.md)  
- [C# 编程指南](../index.md)  
- [C# 指南](../../index.md)  
- [C# 参考](../../language-reference/index.md)  
- [可以为 Null 的值类型 (Visual Basic)](../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)  
+- <xref:System.Nullable%601?displayProperty=nameWithType>  
+- <xref:System.Nullable?displayProperty=nameWithType>  
+- [??运算符](../../language-reference/operators/null-coalescing-operator.md)  
+- [C# 编程指南](../index.md)  
+- [C# 指南](../../index.md)  
+- [C# 参考](../../language-reference/index.md)  
+- [可以为 Null 的值类型 (Visual Basic)](../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)  

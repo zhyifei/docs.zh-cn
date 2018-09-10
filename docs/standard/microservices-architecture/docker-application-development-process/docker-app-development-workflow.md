@@ -4,12 +4,12 @@ description: 用于容器化 .NET 应用程序的 .NET 微服务体系结构 | D
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/18/2017
-ms.openlocfilehash: 0627a61e910b1d278fd2e604dd8de7021fdb0fed
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.openlocfilehash: b7115530c44321dc2a10be3996c14429591b611f
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37106212"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43401975"
 ---
 # <a name="development-workflow-for-docker-apps"></a>Docker 应用开发工作流
 
@@ -35,7 +35,7 @@ ms.locfileid: "37106212"
 
 本指南详细介绍了整个流程，并着重通过 Visual Studio 环境解释了每个主要步骤。
 
-使用编辑器/CLI 开发方法（例如，Visual Studio Code 和 macOS 或 Windows 上的 Docker CLI）时，需了解每个步骤，通常需要比使用 Visual Studio 了解得更详细。 有关在 CLI 环境中进行开发的详细信息，请参阅电子书 [Containerized Docker Application lifecycle with Microsoft Platforms and Tools](http://aka.ms/dockerlifecycleebook/)（容器化 Docker 应用程序生命周期与 Microsoft 平台和工具）。
+使用编辑器/CLI 开发方法（例如，Visual Studio Code 和 macOS 或 Windows 上的 Docker CLI）时，需了解每个步骤，通常需要比使用 Visual Studio 了解得更详细。 有关在 CLI 环境中进行开发的详细信息，请参阅电子书 [Containerized Docker Application lifecycle with Microsoft Platforms and Tools](https://aka.ms/dockerlifecycleebook/)（容器化 Docker 应用程序生命周期与 Microsoft 平台和工具）。
 
 使用 Visual Studio 2015 或 Visual Studio 2017 时，许多步骤都无需开发者执行，可显著提高工作效率。 使用 Visual Studio 2017 开发多容器应用程序时更是如此。 例如，只需单击一下，Visual Studio 就会将 Dockerfile 和 docker-compose.yml 文件添加到含有应用程序配置的项目。 在 Visual Studio 中运行应用程序时，系统会生成 Docker 映像并在 Docker 中直接运行多容器应用程序；开发人员甚至还能同时调试多个容器。 这些功能可大大提高开发速度。
 
@@ -248,7 +248,7 @@ services:
 
 请注意，这是一个简化合并版的 docker-compose.yml 文件。 其中包含始终适用的每个容器的静态配置数据（如自定义映像的名称），以及视部署环境而定的配置信息（如连接字符串）。 后面的章节将介绍如何将 docker-compose.yml 配置拆分为多个 docker-compose 文件，并根据环境和执行类型（调试或发布）覆盖值。
 
-docker-compose.yml 示例文件中定义了五项服务：webmvc 服务（一个 Web 应用程序）、两个微服务（catalog.api 和 ordering.api）、一个数据源容器以及一个作为容器运行的基于 SQL Server for Linux 的 sql.data。 每项服务都部署为一个容器，因此每项服务都需要一个 Docker 映像。
+docker-compose.yml 示例文件中定义了四项服务：webmvc 服务（一个 Web 应用程序）、两个微服务（catalog.api 和 ordering.api）、一个数据源容器以及一个作为容器运行的基于 SQL Server for Linux 的 sql.data。 每项服务都部署为一个容器，因此每项服务都需要一个 Docker 映像。
 
 docker-compose.yml 文件不仅指定正在使用的容器，还指定如何单独配置各容器。 例如，.yml 文件中的 webmvc 容器定义：
 

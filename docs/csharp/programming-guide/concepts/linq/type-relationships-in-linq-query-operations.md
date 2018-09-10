@@ -12,12 +12,12 @@ helpviewer_keywords:
 - data transformations [LINQ in C#]
 - LINQ [C#], type relationships
 ms.assetid: 99118938-d47c-4d7e-bb22-2657a9f95268
-ms.openlocfilehash: 274c5eaee2b4bf0e1331fb7a4a1a89a432a567c2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 154501d666b467c94f5d1dd721f1e2303189c908
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33339574"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43484819"
 ---
 # <a name="type-relationships-in-linq-query-operations-c"></a>LINQ 查询操作中的类型关系 (C#)
 若要有效编写查询，应了解完整的查询操作中的变量类型是如何全部彼此关联的。 如果了解这些关系，就能够更容易地理解文档中的 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 示例和代码示例。 另外，还能了解在使用 `var` 隐式对变量进行类型化时的后台操作。  
@@ -33,7 +33,7 @@ ms.locfileid: "33339574"
   
 1.  数据源的类型参数决定范围变量的类型。  
   
-2.  所选对象的类型决定查询变量的类型。 此处的 `name` 是一个字符串。 因此，查询变量是一个 `IEnumerable`\<string>。  
+2.  所选对象的类型决定查询变量的类型。 此处的 `name` 是一个字符串。 因此，查询变量是一个 `IEnumerable<string>`。  
   
 3.  在 `foreach` 语句中循环访问查询变量。 因为查询变量是一个字符串序列，所以迭代变量也是一个字符串。  
   

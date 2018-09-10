@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: e24d8a3d-edc6-485c-b6e0-5672d91fb607
 author: ghogen
 manager: douge
-ms.openlocfilehash: 73f61ee3358edf50c11ae10ee53650c66b1c1400
-ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
+ms.openlocfilehash: 6d70db7139d82b6e219e2c417282333f950ef402
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2018
-ms.locfileid: "42925797"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43417856"
 ---
 # <a name="walkthrough-creating-a-windows-service-application-in-the-component-designer"></a>演练：在组件设计器中创建 Windows 服务应用程序
 本文演示了如何在 Visual Studio 中创建向事件日志中写入消息的简单 Windows 服务应用程序。 下面是创建和使用你的服务所执行的基本步骤：  
@@ -477,7 +477,7 @@ End Sub
      如果服务成功卸载，installutil.exe 将报告已成功移除服务。 有关更多信息，请参见 [How to: Install and Uninstall Services](../../../docs/framework/windows-services/how-to-install-and-uninstall-services.md)。  
   
 ## <a name="next-steps"></a>后续步骤  
- 你可以创建其他人可以用来安装你的 Windows 服务的独立安装程序，但需要额外的步骤。 ClickOnce 不支持 Windows 服务，因此你无法使用发布向导。 可使用 InstallShield 的完整版（Microsoft 不提供）。 有关 InstallShield 的详细信息，请参阅 [InstallShield Limited Edition](/visualstudio/deployment/installshield-limited-edition)。 你也可以使用 [Windows Installer XML 工具集](http://go.microsoft.com/fwlink/?LinkId=249067) 来为 Windows 服务创建安装程序。  
+ 你可以创建其他人可以用来安装你的 Windows 服务的独立安装程序，但需要额外的步骤。 ClickOnce 不支持 Windows 服务，因此你无法使用发布向导。 可使用 InstallShield 的完整版（Microsoft 不提供）。 有关 InstallShield 的详细信息，请参阅 [InstallShield Limited Edition](/visualstudio/deployment/installshield-limited-edition)。 也可以使用 [Windows Installer XML 工具集](https://go.microsoft.com/fwlink/?LinkId=249067) 为 Windows 服务创建安装程序。  
   
  你可以浏览 <xref:System.ServiceProcess.ServiceController> 组件的用途，这将使你能发送命令到你已经安装的服务。  
   
@@ -487,4 +487,4 @@ End Sub
  [Windows 服务应用程序](../../../docs/framework/windows-services/index.md)  
  [Windows 服务应用程序介绍](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)  
  [如何：调试 Windows 服务应用程序](../../../docs/framework/windows-services/how-to-debug-windows-service-applications.md)  
- [服务 (Windows)](http://msdn.microsoft.com/library/windows/desktop/ms685141.aspx)
+ [服务 (Windows)](https://msdn.microsoft.com/library/windows/desktop/ms685141.aspx)

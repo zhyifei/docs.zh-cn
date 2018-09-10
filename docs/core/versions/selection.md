@@ -4,12 +4,12 @@ description: 了解 .NET Core 如何查找和选择适用于程序的运行时�
 author: billwagner
 ms.author: wiwagn
 ms.date: 06/27/2018
-ms.openlocfilehash: d1b885ebbade4736d5f592d1dc1d4ba25a321a16
-ms.sourcegitcommit: 59b51cd7c95c75be85bd6ef715e9ef8c85720bac
+ms.openlocfilehash: 21697aa773abfbd88288d47323402a48c51d69ae
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37874465"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43395112"
 ---
 # <a name="net-core-version-selection"></a>.NET Core 版本选择
 
@@ -31,11 +31,11 @@ ms.locfileid: "37874465"
 
 ## <a name="the-sdk-uses-the-latest-installed-version"></a>SDK 使用最新安装的版本
 
-SDK 命令包括 `dotnet new`、`dotnet build` 或 `dotnet run`。 `dotnet` CLI 必须为所有命令选择 SDK 版本。 .NET Core CLI 默认情况下使用计算机上安装的最新 SDK。 即使处理的项目面向 .NET Core 运行时 2.0，仍将使用 .NET Core SDK v2.1.301（如果已安装）。 请注意，此情况同样适用于预览版及相关版本。 面向较旧的 .NET Core 运行时版本时，可利用最新的 SDK 功能和功能改进。 可在不同项目上面向 .NET Core 的多个运行时版本，同时对所有项目使用相同的 SDK 工具。
+SDK 命令包括 `dotnet new`、  、或 `dotnet run`。 `dotnet` CLI 必须为所有命令选择 SDK 版本。 .NET Core CLI 默认情况下使用计算机上安装的最新 SDK。 即使处理的项目面向 .NET Core 运行时 2.0，仍将使用 .NET Core SDK v2.1.301（如果已安装）。 使用最新的预览版以及发布版本。 面向较旧的 .NET Core 运行时版本时，可利用最新的 SDK 功能和功能改进。 可在不同项目上面向 .NET Core 的多个运行时版本，同时对所有项目使用相同的 SDK 工具。
 
 在少数情况下，可能需要使用版本较旧的 SDK。 在 [global.json 文件](../tools/global-json.md)中指定该版本。 “使用最新”策略表示仅使用 global.json 指定早于最新安装版本的一个 .NET Core SDK 版本。
 
-可将 global.json 放置在文件层次结构中的任何位置。 CLI 从项目目录中向上搜索其找到的第一个 global.json。 由用户控制对哪些项目应用给定的 global.json（按其在文件系统中的位置）。 .NET CLI 从当前工作目录路径向上导航，以迭代方式搜索 global.json 文件。 找到的第一个 global.json 文件指定要使用的版本。 如果已安装该版本，则使用该版本。 如果未找到 global.json 中指定的 SDK，则 .NET CLI 前滚到安装的最新 SDK。 这与未找到 global.json 文件时的默认行为相同。
+可将 global.json 放置在文件层次结构中的任何位置。 CLI 从项目目录中向上搜索其找到的第一个 global.json。 由用户控制对哪些项目应用给定的 global.json（按其在文件系统中的位置）。 .NET CLI 从当前工作目录路径向上导航，以迭代方式搜索 global.json 文件。 找到的第一个 global.json 文件指定要使用的版本。 如果已安装该版本，则使用该版本。 如果未找到 global.json 中指定的 SDK，则 .NET CLI 前滚到安装的最新 SDK。 前滚操作与未找到 global.json 文件时的默认行为相同。
 
 下面的示例演示 global.json 语法：
 
@@ -53,7 +53,7 @@ SDK 命令包括 `dotnet new`、`dotnet build` 或 `dotnet run`。 `dotnet` CLI 
 1. `dotnet` 使用所找到的第一个 global.json 中指定的 SDK。
 1. 如果未找到 global.json，`dotnet` 使用最新安装的 SDK。
 
-有关选择 SDK 版本的详细信息，可参阅关于 global.json 的主题的[匹配规则](../tools/global-json.md)部分。
+有关选择 SDK 版本的详细信息，可参阅 global.json 相关文章的[匹配规则](../tools/global-json.md#matching-rules)部分。
 
 ## <a name="target-framework-monikers-define-build-time-apis"></a>目标框架名字对象用于定义生成时 API
 

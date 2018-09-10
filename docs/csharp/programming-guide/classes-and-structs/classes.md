@@ -6,30 +6,34 @@ helpviewer_keywords:
 - classes [C#]
 - C# language, classes
 ms.assetid: e8848524-7273-429f-8aba-c658d5eff5ad
-ms.openlocfilehash: 688736aa8556719789b02d7db25858f442b4309e
-ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
+ms.openlocfilehash: 5f4bcf9957f91fe3ee8a62a8dc68448188df4188
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "39245710"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43467037"
 ---
 # <a name="classes-c-programming-guide"></a>类（C# 编程指南）
 *类*属于构造，使用类，可以通过组合其他类型的变量、方法和事件创建自己的自定义类型。 类好比是蓝图。 它定义类型的数据和行为。 如果类未声明为静态，客户端代码可以创建它的实例。 这些实例是分配给变量的对象。 类实例会一直保留在内存中，直到对它的所有引用都不在作用域范围之内。 超出范围时，CLR 将对其进行标记，以便用于垃圾回收。 如果类声明为[静态](../../../csharp/language-reference/keywords/static.md)，便无法创建实例，并且客户端代码只能通过类本身来访问它。 有关详细信息，请参阅[静态类和静态类成员](../../../csharp/programming-guide/classes-and-structs/static-classes-and-static-class-members.md)。  
 
 ## <a name="reference-types"></a>引用类型  
-定义为[类](../../../csharp/language-reference/keywords/class.md)的一个类型是*引用类型*。 在运行时，如果声明引用类型的变量，此变量就会一直包含值 [null](../../../csharp/language-reference/keywords/null.md)，直到使用 [new](../../../csharp/language-reference/keywords/new.md) 运算符显式创建类实例，或直到为此变量分配已在其他位置创建的对象，如下面的示例所示：
+定义为[类](../../../csharp/language-reference/keywords/class.md)的一个类型是*引用类型*。 在运行时，如果声明引用类型的变量，此变量就会一直包含值 [null](../../../csharp/language-reference/keywords/null.md)，直到使用 [new](../../../csharp/language-reference/keywords/new.md) 运算符显式创建类实例，或直到为此变量分配可能已在其他位置创建的兼容类型的对象，如下面的示例所示：
 
 ```csharp
+//Declaring a object of type MyClass.
 MyClass mc = new MyClass();
+
+//Declaring another object of the same type, assigning it the value of the first object.
 MyClass mc2 = mc;
 ```
 
-创建对象后，内存位于托管堆上，并且变量只保留对对象位置的引用。 当分配托管堆上的类型和由 CLR 的自动内存管理功能对其进行回收（称为*垃圾回收*）时，需要开销。 但是，垃圾回收已是高度优化，并且在大多数情况下，不会产生性能问题。 有关垃圾回收的详细信息，请参阅[自动内存管理和垃圾回收](../../../standard/garbage-collection/gc.md)。  
+创建对象时，在该托管堆上为该特定对象分足够的内存，并且该变量仅保存对所述对象位置的引用。 当分配托管堆上的类型和由 CLR 的自动内存管理功能对其进行回收（称为*垃圾回收*）时，需要开销。 但是，垃圾回收已是高度优化，并且在大多数情况下，不会产生性能问题。 有关垃圾回收的详细信息，请参阅[自动内存管理和垃圾回收](../../../standard/garbage-collection/gc.md)。  
   
 ## <a name="declaring-classes"></a>声明类  
- 使用 [class](../../../csharp/language-reference/keywords/class.md) 关键字可以声明类，如下例所示：
+ 使用后跟唯一标识符的 [class](../../../csharp/language-reference/keywords/class.md) 关键字可以声明类，如下例所示：
 
  ```csharp
+//[access modifier] - [class] - [identifier]
  public class Customer
  {
     // Fields, properties, methods and events go here...

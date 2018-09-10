@@ -8,12 +8,12 @@ helpviewer_keywords:
 - <include> C# XML tag
 - include C# XML tag
 ms.assetid: a8a70302-6196-4643-bd09-ef33f411f18f
-ms.openlocfilehash: a681a2fcbb874d67b82c8bda73d92dd993928bbc
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d3c9adda4ca3a58edca48d6df3d2f5e4d5783187
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33334504"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43389146"
 ---
 # <a name="ltincludegt-c-programming-guide"></a>&lt;include&gt;（C# 编程指南）
 ## <a name="syntax"></a>语法  
@@ -24,7 +24,7 @@ ms.locfileid: "33334504"
   
 #### <a name="parameters"></a>参数  
  `filename`  
- 包含文档的 XML 文件的名称。 可使用路径来限定文件名。 使用单引号 (' ') 将 `filename` 括起来。  
+ 包含文档的 XML 文件的名称。 可使用相对于源代码文件的路径限定文件名。 使用单引号 (' ') 将 `filename` 括起来。  
   
  `tagpath`  
  `filename` 中标记的路径，它指向标记 `name`。 使用单引号 (' ') 将路径括起来。  

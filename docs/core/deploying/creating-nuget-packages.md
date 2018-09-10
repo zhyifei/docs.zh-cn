@@ -6,18 +6,18 @@ ms.author: mairaw
 ms.date: 06/20/2016
 ms.technology: dotnet-cli
 ms.openlocfilehash: 6be94c2e2cef443f69b2d6df7c2d490cb1fb629d
-ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36207761"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44205053"
 ---
 # <a name="how-to-create-a-nuget-package-with-cross-platform-tools"></a>如何使用跨平台工具创建 NuGet 包
 
 > [!NOTE]
 > 下例是关于使用 Unix 的命令行。  此处显示的 `dotnet pack` 命令工作方式与在 Windows 上相同。
 
-对于 .NET Core 1.0，所有库都应以 NuGet 包方式发布。  实际上，这是所有 .NET Standard 库的发布和使用方式。  可以使用 `dotnet pack` 命令轻松实现此操作。
+对于 .NET Core 1.0，所有库都应以 NuGet 包方式发布。  实际上，这是所有 .NET 标准库的发布和使用方式。  可以使用 `dotnet pack` 命令轻松实现此操作。
 
 假设你刚编写了一个很棒的新库，并想通过 NuGet 发布。  你就可以使用跨平台工具创建一个 NuGet 包，完全照做就行！  下例假定使用一个名为 **SuperAwesomeLibrary** 的库，该库以 `netstandard1.0` 为目标。
 

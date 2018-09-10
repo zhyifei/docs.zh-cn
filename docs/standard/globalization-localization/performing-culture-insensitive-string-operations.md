@@ -1,6 +1,6 @@
 ---
 title: 执行不区分区域性的字符串操作
-ms.date: 03/30/2017
+ms.date: 08/22/2018
 ms.technology: dotnet-standard
 helpviewer_keywords:
 - case mappings
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 579ef891-1f83-4c63-9ebd-2f40406b5b91
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9500550fe415d77bacb44011622ddd83ffc8a9ec
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 748b4170e9e4c0df048c542d06bcb64a56ccf677
+ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33575370"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43254640"
 ---
 # <a name="performing-culture-insensitive-string-operations"></a>执行不区分区域性的字符串操作
 默认情况下，大多数执行区域性敏感型字符串操作的 .NET Framework 方法提供方法重载，以便于通过传递 <xref:System.Globalization.CultureInfo> 参数来显式指定要使用的区域性。 这些重载允许消除大小写映射和排序规则中的区域性差异，保证获得不区分区域性的结果。  
@@ -41,3 +41,7 @@ ms.locfileid: "33575370"
 ## <a name="related-sections"></a>相关章节  
  [不区分区域性的字符串操作](../../../docs/standard/globalization-localization/culture-insensitive-string-operations.md)  
  介绍对字符串执行操作时应了解区域性的原因，并为何时执行区分区域性的操作、何时执行不区分区域性的操作提供了指南。
+
+## <a name="see-also"></a>请参阅
+
+- [排序权重表](https://www.microsoft.com/en-us/download/details.aspx?id=10921)

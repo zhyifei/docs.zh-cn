@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 643575d0-d26d-4c35-8de7-a9c403e97dd6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5581f825a23104ff005f3557de26420ee45b5c27
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d44ec0e0601383133e6c59e44cd81031918d4b6d
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33592478"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43385853"
 ---
 # <a name="dataflow-task-parallel-library"></a>数据流（任务并行库）
 <a name="top"></a> 任务并行库 (TPL) 提供数据流组件，可帮助提高启用并发的应用程序的可靠性。 这些数据流组件统称为 TPL 数据流库。 这种数据流模型通过向粗粒度的数据流和管道任务提供进程内消息传递来促进基于角色的编程。 数据流组件基于 TPL 的类型和计划基础结构，并集成了 C#、Visual Basic 和 F# 语言的异步编程支持。 当您有必须相互异步沟通的多个操作或者想要在数据可用时对其处理时，这些数据流组件就非常有用。 例如，请考虑一个处理网络摄像机图像数据的应用程序。 通过使用数据流模型，当图像帧可用时，应用程序就可以处理它们。 如果应用程序增强图像帧（例如执行灯光修正或消除红眼），则可以创建数据流组件的管道。 管道的每个阶段可以使用更粗粒度的并行功能（例如 TPL 提供的功能）来转换图像。  
@@ -60,7 +60,7 @@ ms.locfileid: "33592478"
   
  源数据流块通过调用方法 <xref:System.Threading.Tasks.Dataflow.ITargetBlock%601.OfferMessage%2A?displayProperty=nameWithType> 向目标数据流块提供数据。 目标块通过以下三种方式之一来回应提供的消息：它可以接受消息，拒绝消息或推迟消息。 当目标接受消息时，<xref:System.Threading.Tasks.Dataflow.ITargetBlock%601.OfferMessage%2A> 方法会返回 <xref:System.Threading.Tasks.Dataflow.DataflowMessageStatus.Accepted>。 当目标拒绝消息时，<xref:System.Threading.Tasks.Dataflow.ITargetBlock%601.OfferMessage%2A> 方法会返回 <xref:System.Threading.Tasks.Dataflow.DataflowMessageStatus.Declined>。 当目标要求它不再接收来自源的任何消息时，<xref:System.Threading.Tasks.Dataflow.ITargetBlock%601.OfferMessage%2A> 会返回 <xref:System.Threading.Tasks.Dataflow.DataflowMessageStatus.DecliningPermanently>。 预定义的源块类型在这些返回值接收后不会向链接的目标提供消息，并且它们会自动取消这些目标的链接。  
   
- 当目标块推迟消息以备日后使用时，<xref:System.Threading.Tasks.Dataflow.ITargetBlock%601.OfferMessage%2A> 方法会返回 <xref:System.Threading.Tasks.Dataflow.DataflowMessageStatus.Postponed>。 推迟消息的目标块可以稍后调用 <xref:System.Threading.Tasks.Dataflow.ISourceBlock%601.ReserveMessage%2A?displayProperty=nameWithType> 方法，以尝试暂留所提供的消息。 此时，消息仍可用，并且可由该目标块使用，否则表明该消息已由另一个目标接收。 如果目标数据流块稍后需要消息或不再需要消息，它会分别调用 <xref:System.Threading.Tasks.Dataflow.ISourceBlock%601.ConsumeMessage%2A?displayProperty=nameWithType> 或 <xref:System.Threading.Tasks.Dataflow.ISourceBlock%601.ReleaseReservation%2A> 方法。 消息保留通常由以非贪婪模式运行的数据流块类型使用。 非贪婪模式将在本文档的后面详细介绍。 除了保留推迟的消息，目标块也可以使用 <xref:System.Threading.Tasks.Dataflow.ISourceBlock%601.ConsumeMessage%2A?displayProperty=nameWithType> 方法来尝试直接使用推迟的消息。  
+ 当目标块推迟消息以备日后使用时，<xref:System.Threading.Tasks.Dataflow.ITargetBlock%601.OfferMessage%2A> 方法会返回 <xref:System.Threading.Tasks.Dataflow.DataflowMessageStatus.Postponed>。 推迟消息的目标块可以稍后调用 <xref:System.Threading.Tasks.Dataflow.ISourceBlock%601.ReserveMessage%2A?displayProperty=nameWithType> 方法，以尝试暂留所提供的消息。 此时，消息仍可用，并且可由该目标块使用，否则表明该消息已由另一个目标接收。 如果目标数据流块稍后需要消息或不再需要消息，它会分别调用 <xref:System.Threading.Tasks.Dataflow.ISourceBlock%601.ConsumeMessage%2A?displayProperty=nameWithType> 或 <xref:System.Threading.Tasks.Dataflow.ISourceBlock%601.ReleaseReservation%2A> 方法。 消息预留通常由以非贪婪模式运行的数据流块类型使用。 非贪婪模式将在本文档的后面详细介绍。 除了保留推迟的消息，目标块也可以使用 <xref:System.Threading.Tasks.Dataflow.ISourceBlock%601.ConsumeMessage%2A?displayProperty=nameWithType> 方法来尝试直接使用推迟的消息。  
   
 ### <a name="dataflow-block-completion"></a>数据流块完成  
  数据流块也支持完成概念。 完成状态的数据流块不执行任何进一步的工作。 每个数据流块都有相关的 <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> 对象（称为“完成任务”），表示数据流块的完成状态。 因为您可以使用完成任务等待 <xref:System.Threading.Tasks.Task> 对象完成，所以您可以等待数据流网络的一个或更多终端节点来完成任务。 <xref:System.Threading.Tasks.Dataflow.IDataflowBlock> 接口定义 <xref:System.Threading.Tasks.Dataflow.IDataflowBlock.Complete%2A> 方法（该方法向数据流块通知它完成的请求）和 <xref:System.Threading.Tasks.Dataflow.IDataflowBlock.Completion%2A> 属性（该属性返回数据流块的完成任务）。 <xref:System.Threading.Tasks.Dataflow.ISourceBlock%601> 和 <xref:System.Threading.Tasks.Dataflow.ITargetBlock%601> 都继承 <xref:System.Threading.Tasks.Dataflow.IDataflowBlock> 接口。  
@@ -72,14 +72,14 @@ ms.locfileid: "33592478"
   
  此示例演示在执行数据流块的委托中异常变成不可处理的情况。 建议您在这样的块主体中处理异常。 然而，你如果没能这么做，块就表现得好像是它被取消了，而且不会处理传入消息。  
   
- 当显式取消数据流块时，<xref:System.AggregateException> 对象在 <xref:System.OperationCanceledException> 属性中包含 <xref:System.AggregateException.InnerExceptions%2A>。 有关数据流取消的详细信息，请参阅本文档后面的“启用取消”部分。  
+ 当显式取消数据流块时，<xref:System.AggregateException> 对象在 <xref:System.OperationCanceledException> 属性中包含 <xref:System.AggregateException.InnerExceptions%2A>。 有关数据流取消的详细信息，请参阅[启用取消](#enabling-cancellation)部分。  
   
- 第二种确定数据流块的完成状态的方法是使用延续执行完成任务，或者使用 C# 和 Visual Basic 的异步语言功能以异步方式等待完成任务。 您提供给 <xref:System.Threading.Tasks.Task.ContinueWith%2A?displayProperty=nameWithType> 方法的委托采用表示前面任务的 <xref:System.Threading.Tasks.Task> 对象。 就 <xref:System.Threading.Tasks.Dataflow.IDataflowBlock.Completion%2A> 属性来说，延续的委托自行采用完成任务。 下面的示例与前一个示例相似，不同之处在于它也使用 <xref:System.Threading.Tasks.Task.ContinueWith%2A> 方法创建输出整个数据流操作状态的完成任务。  
+ 第二种确定数据流块的完成状态的方法是使用延续执行完成任务，或者使用 C# 和 Visual Basic 的异步语言功能以异步方式等待完成任务。 您提供给 <xref:System.Threading.Tasks.Task.ContinueWith%2A?displayProperty=nameWithType> 方法的委托采用表示前面任务的 <xref:System.Threading.Tasks.Task> 对象。 就 <xref:System.Threading.Tasks.Dataflow.IDataflowBlock.Completion%2A> 属性来说，延续的委托自行采用完成任务。 下面的示例与前一个示例相似，不同之处在于它也使用 <xref:System.Threading.Tasks.Task.ContinueWith%2A> 方法创建输出整个数据流操作状态的延续任务。  
   
  [!code-csharp[TPLDataflow_Overview#11](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_overview/cs/program.cs#11)]
  [!code-vb[TPLDataflow_Overview#11](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_overview/vb/program.vb#11)]  
   
- 您也可以使用类似延续任务主体中的属性（例如 <xref:System.Threading.Tasks.Task.IsCanceled%2A>）来确定有关数据流块的完成状态的其他信息。 若要深入了解延续任务及其与取消和错误处理如何相关，请参阅[使用延续任务链接任务](../../../docs/standard/parallel-programming/chaining-tasks-by-using-continuation-tasks.md)、[任务取消](../../../docs/standard/parallel-programming/task-cancellation.md)、[异常处理](../../../docs/standard/parallel-programming/exception-handling-task-parallel-library.md)和 [NIB：如何：处理由任务引发的异常](https://msdn.microsoft.com/library/d6c47ec8-9de9-4880-beb3-ff19ae51565d)。  
+ 您也可以使用类似延续任务主体中的属性（例如 <xref:System.Threading.Tasks.Task.IsCanceled%2A>）来确定有关数据流块的完成状态的其他信息。 若要深入了解延续任务及其与取消和错误处理如何相关，请参阅[使用延续任务链接任务](../../../docs/standard/parallel-programming/chaining-tasks-by-using-continuation-tasks.md)、[任务取消](../../../docs/standard/parallel-programming/task-cancellation.md)和[异常处理](../../../docs/standard/parallel-programming/exception-handling-task-parallel-library.md)。  
   
  [[转到页首](#top)]  
   
@@ -124,7 +124,7 @@ ms.locfileid: "33592478"
  执行块为每条接收数据调用用户提供的委托。 TPL 数据流库提供三种执行块类型：<xref:System.Threading.Tasks.Dataflow.ActionBlock%601>、<xref:System.Threading.Tasks.Dataflow.TransformBlock%602?displayProperty=nameWithType> 和 <xref:System.Threading.Tasks.Dataflow.TransformManyBlock%602?displayProperty=nameWithType>。  
   
 #### <a name="actionblockt"></a>ActionBlock(T)  
- <xref:System.Threading.Tasks.Dataflow.ActionBlock%601> 类在接收数据时是调用委托的目标块。 将 <xref:System.Threading.Tasks.Dataflow.ActionBlock%601> 对象视为数据可用时异步运行的委托。 您提供给 <xref:System.Threading.Tasks.Dataflow.ActionBlock%601> 对象的委托可以是类型 <xref:System.Action> 或类型 `System.Func\<TInput, Task>`。 当通过 <xref:System.Threading.Tasks.Dataflow.ActionBlock%601> 使用 <xref:System.Action> 对象时，每个输入元素的处理在委托返回时视为已完成。 当您通过 <xref:System.Threading.Tasks.Dataflow.ActionBlock%601> 使用 `System.Func\<TInput, Task>` 对象时，只有当返回的 <xref:System.Threading.Tasks.Task> 对象完成时，每个输入元素的处理才可以视为已完成。 使用这两种机制，您可使用 <xref:System.Threading.Tasks.Dataflow.ActionBlock%601> 同步和异步处理每个输入元素。  
+ <xref:System.Threading.Tasks.Dataflow.ActionBlock%601> 类在接收数据时是调用委托的目标块。 将 <xref:System.Threading.Tasks.Dataflow.ActionBlock%601> 对象视为数据可用时异步运行的委托。 您提供给 <xref:System.Threading.Tasks.Dataflow.ActionBlock%601> 对象的委托可以是类型 <xref:System.Action%601> 或类型 `System.Func<TInput, Task>`。 当通过 <xref:System.Threading.Tasks.Dataflow.ActionBlock%601> 使用 <xref:System.Action%601> 对象时，每个输入元素的处理在委托返回时视为已完成。 当您通过 <xref:System.Threading.Tasks.Dataflow.ActionBlock%601> 使用 `System.Func<TInput, Task>` 对象时，只有当返回的 <xref:System.Threading.Tasks.Task> 对象完成时，每个输入元素的处理才可以视为已完成。 使用这两种机制，您可使用 <xref:System.Threading.Tasks.Dataflow.ActionBlock%601> 同步和异步处理每个输入元素。  
   
  下面的基本示例将多个 <xref:System.Int32> 值发送给 <xref:System.Threading.Tasks.Dataflow.ActionBlock%601> 对象。 <xref:System.Threading.Tasks.Dataflow.ActionBlock%601> 对象将这些值输出到控制台中。 然后此示例将该块设置为已完成状态，并等待所有数据流任务完成。  
   
@@ -134,7 +134,7 @@ ms.locfileid: "33592478"
  有关展示了如何结合使用委托和 <xref:System.Threading.Tasks.Dataflow.ActionBlock%601> 类的完整示例，请参阅[如何：在数据流块收到数据时执行操作](../../../docs/standard/parallel-programming/how-to-perform-action-when-a-dataflow-block-receives-data.md)。  
   
 #### <a name="transformblocktinput-toutput"></a>TransformBlock(TInput, TOutput)  
- <xref:System.Threading.Tasks.Dataflow.TransformBlock%602> 类与 <xref:System.Threading.Tasks.Dataflow.ActionBlock%601> 类相似，不同之处在于它可以同时充当源和目标。 传递给 <xref:System.Threading.Tasks.Dataflow.TransformBlock%602> 对象的委托返回类型为 `TOutput` 的值。 您提供给 <xref:System.Threading.Tasks.Dataflow.TransformBlock%602> 对象的委托可以是类型 `System.Func<TInput, TOutput>` 或类型 `System.Func<TInput, Task>`。 当您搭配使用 <xref:System.Threading.Tasks.Dataflow.TransformBlock%602> 和 `System.Func\<TInput, TOutput>` 对象时，每个输入元素的处理在委托返回时视为已完成。 当您搭配使用 <xref:System.Threading.Tasks.Dataflow.TransformBlock%602> 和 `System.Func<TInput, Task<TOutput>>` 对象时，只有当返回的 <xref:System.Threading.Tasks.Task> 对象完成时，每个输入元素的处理才可以视为已完成。 像 <xref:System.Threading.Tasks.Dataflow.ActionBlock%601> 一样，通过使用这两种机制，您可使用 <xref:System.Threading.Tasks.Dataflow.TransformBlock%602> 同步和异步处理每个输入元素。  
+ <xref:System.Threading.Tasks.Dataflow.TransformBlock%602> 类与 <xref:System.Threading.Tasks.Dataflow.ActionBlock%601> 类相似，不同之处在于它可以同时充当源和目标。 传递给 <xref:System.Threading.Tasks.Dataflow.TransformBlock%602> 对象的委托返回类型为 `TOutput` 的值。 您提供给 <xref:System.Threading.Tasks.Dataflow.TransformBlock%602> 对象的委托可以是类型 `System.Func<TInput, TOutput>` 或类型 `System.Func<TInput, Task<TOutput>>`。 当您搭配使用 <xref:System.Threading.Tasks.Dataflow.TransformBlock%602> 和 `System.Func<TInput, TOutput>` 对象时，每个输入元素的处理在委托返回时视为已完成。 当您搭配使用 <xref:System.Threading.Tasks.Dataflow.TransformBlock%602> 和 `System.Func<TInput, Task<TOutput>>` 对象时，只有当返回的 <xref:System.Threading.Tasks.Task%601> 对象完成时，每个输入元素的处理才可以视为已完成。 像 <xref:System.Threading.Tasks.Dataflow.ActionBlock%601> 一样，通过使用这两种机制，您可使用 <xref:System.Threading.Tasks.Dataflow.TransformBlock%602> 同步和异步处理每个输入元素。  
   
  下面的基本示例所创建的 <xref:System.Threading.Tasks.Dataflow.TransformBlock%602> 对象用于计算输入的平方根。 <xref:System.Threading.Tasks.Dataflow.TransformBlock%602> 对象采用 <xref:System.Int32> 值作为输入并生成 <xref:System.Double> 值作为输出。  
   
@@ -144,7 +144,7 @@ ms.locfileid: "33592478"
  有关展示了如何在数据流块网络中使用 <xref:System.Threading.Tasks.Dataflow.TransformBlock%602> 在 Windows 窗体应用中执行图像处理的完整示例，请参阅[演练：在 Windows 窗体应用中使用数据流](../../../docs/standard/parallel-programming/walkthrough-using-dataflow-in-a-windows-forms-application.md)。  
   
 #### <a name="transformmanyblocktinput-toutput"></a>TransformManyBlock(TInput, TOutput)  
- <xref:System.Threading.Tasks.Dataflow.TransformManyBlock%602> 类与 <xref:System.Threading.Tasks.Dataflow.TransformBlock%602> 类相似，不同之处在于 <xref:System.Threading.Tasks.Dataflow.TransformManyBlock%602> 为每一个输入值生成零个或多个输出值，而不是为每个输入值仅生成一个输出值。 您提供给 <xref:System.Threading.Tasks.Dataflow.TransformManyBlock%602> 对象的委托可以是类型 `System.Func<TInput, IEnumerable<TOutput>>` 或类型 `type System.Func<TInput, Task<IEnumerable<TOutput>>>`。 当您搭配使用 <xref:System.Threading.Tasks.Dataflow.TransformManyBlock%602> 和 `System.Func<TInput, IEnumerable<TOutput>>` 对象时，每个输入元素的处理在委托返回时视为已完成。 当您搭配使用 <xref:System.Threading.Tasks.Dataflow.TransformManyBlock%602> 和 `System.Func<TInput, Task<IEnumerable<TOutput>>>` 对象时，只有当返回的 `System.Threading.Tasks.Task<IEnumerable<TOutput>>` 对象完成时，每个输入元素的处理才可以视为已完成。  
+ <xref:System.Threading.Tasks.Dataflow.TransformManyBlock%602> 类与 <xref:System.Threading.Tasks.Dataflow.TransformBlock%602> 类相似，不同之处在于 <xref:System.Threading.Tasks.Dataflow.TransformManyBlock%602> 为每一个输入值生成零个或多个输出值，而不是为每个输入值仅生成一个输出值。 您提供给 <xref:System.Threading.Tasks.Dataflow.TransformManyBlock%602> 对象的委托可以是类型 `System.Func<TInput, IEnumerable<TOutput>>` 或类型 `System.Func<TInput, Task<IEnumerable<TOutput>>>`。 当您搭配使用 <xref:System.Threading.Tasks.Dataflow.TransformManyBlock%602> 和 `System.Func<TInput, IEnumerable<TOutput>>` 对象时，每个输入元素的处理在委托返回时视为已完成。 当您搭配使用 <xref:System.Threading.Tasks.Dataflow.TransformManyBlock%602> 和 `System.Func<TInput, Task<IEnumerable<TOutput>>>` 对象时，只有当返回的 `System.Threading.Tasks.Task<IEnumerable<TOutput>>` 对象完成时，每个输入元素的处理才可以视为已完成。  
   
  下面的基本示例所创建的 <xref:System.Threading.Tasks.Dataflow.TransformManyBlock%602> 对象将字符串拆分为单个字符序列。 <xref:System.Threading.Tasks.Dataflow.TransformManyBlock%602> 对象采用 <xref:System.String> 值作为输入并生成 <xref:System.Char> 值作为输出。  
   
@@ -235,7 +235,7 @@ ms.locfileid: "33592478"
  <xref:System.Threading.Tasks.Dataflow.ExecutionDataflowBlockOptions.MaxDegreeOfParallelism%2A> 的默认值为 1，这保证了数据流块一次处理一条消息。 将该属性设置为大于 1 的值将使数据流块可以同时处理多条消息。 将该属性设置为 <xref:System.Threading.Tasks.Dataflow.DataflowBlockOptions.Unbounded?displayProperty=nameWithType> 将使基础任务计划程序管理最大并发程度。  
   
 > [!IMPORTANT]
->  当您指定大于 1 的最大并行度时，会同时处理多条消息，因此，消息可能不会按照接收的顺序进行处理。 将会对从块中输出消息的顺序进行正确排序。  
+>  当指定大于 1 的最大并行度时，会同时处理多条消息，因此，消息可能不会按照接收的顺序进行处理。 然而，从块输出消息的顺序与接收消息的顺序相同。  
   
  由于 <xref:System.Threading.Tasks.Dataflow.ExecutionDataflowBlockOptions.MaxDegreeOfParallelism%2A> 属性表示最大并行度，因此数据流块执行时的并行度可能小于指定的值。 为了达到功能要求或因为缺少可用的系统资源，数据流块可能使用较小的并行度。 数据流块选择的并行度不会超过您指定的值。  
   

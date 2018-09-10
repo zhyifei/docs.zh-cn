@@ -4,12 +4,12 @@ description: 了解 .NET Core 提供的 C# 语言级别异步编程模式。
 author: cartermp
 ms.date: 06/20/2016
 ms.assetid: b878c34c-a78f-419e-a594-a2b44fa521a4
-ms.openlocfilehash: b753b887da6f8836e0f4363a479c12c7364ea770
-ms.sourcegitcommit: 895c7602386a6dfe7ca4facce3d965b27e5c6e87
+ms.openlocfilehash: ae1c9b1569b5fb6784f50ec9d78a44380242fcd8
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34312061"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43484962"
 ---
 # <a name="asynchronous-programming"></a>异步编程
 
@@ -118,7 +118,7 @@ calculateButton.Clicked += async (o, e) =>
 
 ### <a name="extracting-data-from-a-network"></a>从网络提取数据
 
-此代码片段从 www.dotnetfoundation.org 下载 HTML，并对 HTML 中出现字符串“.NET”的次数计数。  它使用 ASP.NET MVC 定义执行此任务的 Web 控制器方法，以便返回数字。
+此代码片段从 [www.dotnetfoundation.org](https://www.dotnetfoundation.org) 主页下载 HTML，并对 HTML 中出现字符串“.NET”的次数计数。  它使用 ASP.NET MVC 定义执行此任务的 Web 控制器方法，以便返回数字。
 
 > [!NOTE]
 > 如果打算在生产代码中进行 HTML 分析，则不要使用正则表达式。 改为使用分析库。

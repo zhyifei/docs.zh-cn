@@ -4,12 +4,12 @@ description: 了解如何使用 Visual Studio 部署 .NET Core 应用
 author: rpetrusha
 ms.author: ronpet
 ms.date: 04/18/2017
-ms.openlocfilehash: dedf04a872faf1b35a05f9da0c61b80713fdce51
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2829bb5a2f5857f6124e5c1f78f5247fe8d1f552
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33218672"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43407444"
 ---
 # <a name="deploying-net-core-apps-with-visual-studio"></a>使用 Visual Studio 部署 .NET Core 应用
 
@@ -72,11 +72,11 @@ ms.locfileid: "33218672"
 
 1. 如果系统中已安装 `Newtonsoft.Json`，请在“管理解决方案包”选项卡的右侧窗格中选择项目，将该项添加到项目。
 
-请注意，如果依赖框架的部署具有第三方依赖项，则其可移植性只与第三方依赖项相同。 例如，如果某个第三方库只支持 macOS，该应用将无法移植到 Windows 系统。 当第三方依赖项本身取决于本机代码时，也可能发生此情况。 [Kestrel 服务器](http://docs.microsoft.com/aspnet/core/fundamentals/servers/kestrel)就是一个很好的示例，它需要 [libuv](https://github.com/libuv/libuv) 的本机依赖项。 当为具有此类第三方依赖项的应用程序创建 FDD 时，已发布的输出会针对每个本机依赖项支持（存在于 NuGet 包中）的[运行时标识符 (RID)](../rid-catalog.md) 包含一个文件夹。
+请注意，如果依赖框架的部署具有第三方依赖项，则其可移植性只与第三方依赖项相同。 例如，如果某个第三方库只支持 macOS，该应用将无法移植到 Windows 系统。 当第三方依赖项本身取决于本机代码时，也可能发生此情况。 [Kestrel 服务器](https://docs.microsoft.com/aspnet/core/fundamentals/servers/kestrel)就是一个很好的示例，它需要 [libuv](https://github.com/libuv/libuv) 的本机依赖项。 当为具有此类第三方依赖项的应用程序创建 FDD 时，已发布的输出会针对每个本机依赖项支持（存在于 NuGet 包中）的[运行时标识符 (RID)](../rid-catalog.md) 包含一个文件夹。
 
 ## <a name="simpleSelf"></a>不包含第三方依赖项的独立部署
 
-部署没有第三方依赖项的独立部署包括创建项目、修改 csproj 文件、生成、测试以及发布应用。 一个用 C# 编写的简单示例可说明此过程。 
+部署没有第三方依赖项的独立部署包括创建项目、修改 csproj 文件、生成、测试以及发布应用。 一个用 C# 编写的简单示例可说明此过程。
 
 1. 创建项目。
 
@@ -92,7 +92,7 @@ ms.locfileid: "33218672"
 
    1. 在“解决方案资源管理器”中右键单击项目（而非解决方案），然后选择“编辑 SCD.csproj”。
 
-   1. 在 csproj 文件（该文件用于定义应用的目标平台）的 `<PropertyGroup>` 部分中创建 `<RuntimeIdentifiers>` 标记，然后指定每个目标平台的运行时标识符 (RID)。 请注意，还需要添加分号来分隔 RID。 请查看[运行时标识符目录](../rid-catalog.md)，获取运行时标识符列表。 
+   1. 在 csproj 文件（该文件用于定义应用的目标平台）的 `<PropertyGroup>` 部分中创建 `<RuntimeIdentifiers>` 标记，然后指定每个目标平台的运行时标识符 (RID)。 请注意，还需要添加分号来分隔 RID。 请查看[运行时标识符目录](../rid-catalog.md)，获取运行时标识符列表。
 
    例如，以下示例表明应用在 64 位 Windows 10 操作系统和 64 位 OS X 10.11 版本的操作系统上运行。
 
@@ -101,6 +101,7 @@ ms.locfileid: "33218672"
     <RuntimeIdentifiers>win10-x64;osx.10.11-x64</RuntimeIdentifiers>
 </PropertyGroup>
 ```
+
    请注意，`<RuntimeIdentifiers>` 元素可能会进入 csproj 文件的任何 `<PropertyGroup>` 中。 本节后面部分将显示完整的示例 csproj 文件。
 
 1. 创建应用的调试版本。
@@ -115,7 +116,7 @@ ms.locfileid: "33218672"
 
       1. 将工具栏上的解决方案配置从“调试”更改为“发布”，生成应用的发布（而非调试）版本。
 
-      1. 在“解决方案资源管理器”中右键单击项目（而非解决方案），然后选择“发布”。 
+      1. 在“解决方案资源管理器”中右键单击项目（而非解决方案），然后选择“发布”。
 
       1. 在“发布”选项卡上，选择“发布”。 Visual Studio 将包含应用程序的文件写入本地文件系统。
 
@@ -180,6 +181,7 @@ ms.locfileid: "33218672"
 
 请注意，可以只将具有一个第三方库的独立部署部署到该库支持的平台。 这与依赖框架的部署中具有本机依赖项和第三方依赖项相似，其中的本机依赖项不会存在于目标平台上，除非之前在该平台上安装了该依赖项。
 
-# <a name="see-also"></a>请参阅
-[.NET Core 应用程序部署](index.md)   
-[.NET Core 运行时标识符 (RID) 目录](../rid-catalog.md)   
+## <a name="see-also"></a>请参阅
+
+* [.NET Core 应用程序部署](index.md)
+* [.NET Core 运行时标识符 (RID) 目录](../rid-catalog.md)

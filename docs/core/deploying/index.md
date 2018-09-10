@@ -3,13 +3,13 @@ title: .NET Core 应用程序部署
 description: 部署 .NET Core 应用程序。
 author: rpetrusha
 ms.author: ronpet
-ms.date: 04/18/2017
-ms.openlocfilehash: ab65beaa293f7543a8436f913a1e5bf89ca7281b
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.date: 09/03/2018
+ms.openlocfilehash: 2ef63ebd737739b2c8e671d982c3844135689ab4
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43562001"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43891306"
 ---
 # <a name="net-core-application-deployment"></a>.NET Core 应用程序部署
 
@@ -41,7 +41,9 @@ ms.locfileid: "43562001"
 
 ## <a name="self-contained-deployments-scd"></a>独立部署 (SCD)
 
-对于独立部署，可以部署应用和所需的第三方依赖项以及生成应用所使用的 .NET Core 版本。 创建 SCD 不包括各种平台上的 [.NET Core 本机依赖项](https://github.com/dotnet/core/blob/master/Documentation/prereqs.md)，因此运行应用前这些依赖项必须已存在。 有关在运行时进行版本绑定的详细信息，请参阅有关 [.NET Core 中的版本绑定](../versions/selection.md)的文章
+对于独立部署，可以部署应用和所需的第三方依赖项以及生成应用所使用的 .NET Core 版本。 创建 SCD 不包括各种平台上的 [.NET Core 本机依赖项](https://github.com/dotnet/core/blob/master/Documentation/prereqs.md)，因此运行应用前这些依赖项必须已存在。 有关在运行时进行版本绑定的详细信息，请参阅有关 [.NET Core 中的版本绑定](../versions/selection.md)的文章。
+
+从 NET Core 2.1 SDK（版本 2.1.300）开始，.NET Core 支持修补程序版本前滚。 在创建独立部署时，.NET Core 工具会自动包含你的应用程序所指向的 .NET Core 版本的最新服务的运行时。 （最新服务的运行时包括安全修补程序和其他 bug 修复程序。）服务的运行时不需要存在于你的生成系统上；它会从 NuGet.org 自动下载。有关详细信息，包括有关如何选择退出修补程序版本前滚的说明，请参阅[独立部署运行时前滚](runtime-patch-selection.md)。
 
 FDD 和 SCD 部署使用单独的主机可执行文件，使你可以使用发布者签名为 SCD 签署主机可执行文件。
 
@@ -58,6 +60,8 @@ FDD 和 SCD 部署使用单独的主机可执行文件，使你可以使用发�
 - 由于 .NET Core 包含在部署包中，因此必须提前选择为其生成部署包的目标平台。
 
 - 部署包相对较大，因为需要将 .NET Core 和应用及其第三方依赖项包括在内。
+
+  从.NET Core 2.0 开始，可以通过使用 .NET Core [*全球化固定模式*](https://github.com/dotnet/corefx/blob/master/Documentation/architecture/globalization-invariant-mode.md)在 Linux 系统上减少大约 28 MB 的部署大小。 通常，Linux 上的 .NET Core 依赖于 [ICU 库](https://github.com/dotnet/docs/issues/http%22//icu-project.org)来实现全球化支持。 在固定模式下，库不包含在部署中，并且所有区域性的行为均类似于[固定区域性](xref:System.Globalization.CultureInfo.InvariantCulture?displayProperty=nameWithType)。
 
 - 向系统部署大量独立的 .NET Core 应用可能会使用大量磁盘空间，因为每个应用都会复制 .NET Core 文件。
 

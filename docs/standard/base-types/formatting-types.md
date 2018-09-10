@@ -27,12 +27,12 @@ helpviewer_keywords:
 ms.assetid: 0d1364da-5b30-4d42-8e6b-03378343343f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 10dd7e007ecd24ec3f127ab9c102cd758dfc7d75
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2c26f4602623e1eb8979ef08c5d14404cc84e031
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33579842"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43484859"
 ---
 # <a name="formatting-types-in-net"></a>设置 .NET 中类型的格式
 <a name="Introduction"></a> 格式设置是指将类、结构或枚举值的实例转换为其字符串表示形式的过程，通常使得最终的字符串可以显示给用户，或者进行反序列化以还原为原始数据类型。 此转换可能面临一系列挑战：  
@@ -120,7 +120,7 @@ ms.locfileid: "33579842"
  [!code-vb[Conceptual.Formatting.Overview#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.formatting.overview/vb/default1.vb#1)]  
   
 > [!WARNING]
->  从 [!INCLUDE[win81](../../../includes/win81-md.md)]开始， [!INCLUDE[wrt](../../../includes/wrt-md.md)] 包括了具有单个方法 ( [IStringable.ToString](http://msdn.microsoft.com/library/windows/apps/windows.foundation.istringable.aspx) ) 的 [IStringable](http://msdn.microsoft.com/library/windows/apps/windows.foundation.istringable.tostring.aspx)接口，用于提供默认格式支持。 但是，我们建议托管类型不实现 `IStringable` 接口。 有关更多信息，请参见 [!INCLUDE[wrt](../../../includes/wrt-md.md)] 参考页上的“`IStringable`和 <xref:System.Object.ToString%2A?displayProperty=nameWithType> 接口”部分。  
+>  从 [!INCLUDE[win81](../../../includes/win81-md.md)]开始，[!INCLUDE[wrt](../../../includes/wrt-md.md)] 包括了具有单个方法 ([IStringable.ToString](https://msdn.microsoft.com/library/windows/apps/windows.foundation.istringable.aspx)) 的 [IStringable](https://msdn.microsoft.com/library/windows/apps/windows.foundation.istringable.tostring.aspx) 接口，用于提供默认格式支持。 但是，我们建议托管类型不实现 `IStringable` 接口。 有关更多信息，请参见 [!INCLUDE[wrt](../../../includes/wrt-md.md)] 参考页上的“`IStringable`和 <xref:System.Object.ToString%2A?displayProperty=nameWithType> 接口”部分。  
   
  由于除接口以外的所有类型都派生自 <xref:System.Object>，因此会向自定义类或结构自动提供此功能。 但是，由默认 `ToString` 方法提供的功能具有以下限制：尽管它标识类型，但无法提供有关该类型的实例的任何信息。 若要提供可提供该对象相关信息的对象的字符串表示形式，必须重写 `ToString` 方法。  
   

@@ -3,14 +3,14 @@ title: 如何：修改字符串内容 - C# 指南
 ms.date: 02/26/2018
 helpviewer_keywords:
 - strings [C#], modifying
-ms.openlocfilehash: 99102fe90f5f675235e2993b7dd99f59214862d2
-ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
+ms.openlocfilehash: 23d52a52291b3d5c36fc2ed0f299ab82aa5ffabd
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "39243743"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43482275"
 ---
-# <a name="how-to-modify-string-contents-in-c"></a>如何：修改以 C# 编写的字符串内容 #
+# <a name="how-to-modify-string-contents-in-c"></a>如何：修改以 C\# 编写的字符串内容
 
 本文演示通过修改现有 `string` 来生成 `string` 的几种方法。 演示的所有方法均将修改的结果返回为新的 `string` 对象。 为了清楚地演示这一点，所有示例均将结果存储在新的变量中。 之后，你可以检查原始 `string` 和运行每个示例时从修改中得到的 `string`。
 
@@ -73,5 +73,5 @@ ms.locfileid: "39243743"
 
 ## <a name="see-also"></a>请参阅
 
-[.NET Framework 正则表达式](../../standard/base-types/regular-expressions.md)  
- [正则表达式语言 - 快速参考](../../standard/base-types/regular-expression-language-quick-reference.md)  
+- [.NET Framework 正则表达式](../../standard/base-types/regular-expressions.md)  
+- [正则表达式语言 - 快速参考](../../standard/base-types/regular-expression-language-quick-reference.md)  

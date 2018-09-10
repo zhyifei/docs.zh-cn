@@ -3,12 +3,12 @@ title: C# 发展历史 - C# 指南
 description: 这些语言在最早版本中是什么样的，它又是如何演化的？
 author: erikdietrich
 ms.date: 09/20/2017
-ms.openlocfilehash: 90f480d7b25ebe308d1f1cb3d4c117f36f7dd9bf
-ms.sourcegitcommit: a1e35d4e94edab384a63406c0a5438306873031b
+ms.openlocfilehash: 7a7030eb9479ebae553f3bb4d569c9a9f931db9a
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/21/2018
-ms.locfileid: "42752073"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43391243"
 ---
 # <a name="the-history-of-c"></a>C# 发展历史 #
 
@@ -34,6 +34,10 @@ C# 1.0 的主要功能包括：
 - [语句](../programming-guide/statements-expressions-operators/statements.md)
 - [特性](../programming-guide/concepts/attributes/index.md)
 - 文本
+
+## <a name="c-version-12"></a>C# 版本 1.2
+
+随 Visual Studio 2003 一起提供的 C# 版本 1.2。 它对语言做了一些小改进。 最值得注意的是，从此版本开始，当 <xref:System.Collections.IEnumerator> 实现 <xref:System.IDisposable> 时，`foreach` 循环中生成的代码会在 <xref:System.Collections.IEnumerator> 上调用 <xref:System.IDisposable.Dispose%2A>。
 
 ## <a name="c-version-20"></a>C# 2.0 版
 

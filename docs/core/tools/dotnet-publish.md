@@ -4,12 +4,12 @@ description: dotnet publish 命令可将 .NET Core 项目发布到目录。
 author: mairaw
 ms.author: mairaw
 ms.date: 05/29/2018
-ms.openlocfilehash: 38224aa8472f99df107e523667e18892384a20b0
-ms.sourcegitcommit: f6343b070f3c66877338a05c8bfb0be9985255e2
+ms.openlocfilehash: a60777d613573076f41fba3e5ed610b236884063
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/24/2018
-ms.locfileid: "39220667"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43416917"
 ---
 # <a name="dotnet-publish"></a>dotnet 发布
 
@@ -54,7 +54,7 @@ dotnet publish [-h|--help]
 
 [!INCLUDE[dotnet restore note + options](~/includes/dotnet-restore-note-options.md)]
 
-## <a name="arguments"></a>参数
+## <a name="arguments"></a>自变量
 
 `PROJECT`
 
@@ -86,7 +86,7 @@ dotnet publish [-h|--help]
 
 `--no-build`
 
-发布前不生成项目。 还隐式设置 `--no-restore` 标记。
+发布前不生成项目。 还将隐式设置 `--no-restore` 标记。
 
 `--no-dependencies`
 

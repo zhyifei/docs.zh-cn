@@ -6,15 +6,17 @@ f1_keywords:
 helpviewer_keywords:
 - '#line directive [C#]'
 ms.assetid: 6439e525-5dd5-4acb-b8ea-efabb32ff95b
-ms.openlocfilehash: 08ba94ec3f1799f858e098bd2c0e059b7f45af2e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f3ebecda7761e6249656e0b9f8543ae1252b844e
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33289264"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43395132"
 ---
 # <a name="line-c-reference"></a>#line（C# 参考）
-`#line` 可修改编译器的行号及（可选）用于错误和警告的文件名输出。 此示例演示如何报告与行号相关联的两个警告。 `#line 200` 指令将行号强制设为 200（尽管默认值为 #7），直到下一个 #line 指令前，文件名都将报告为“特殊”。 #line 默认指令将行号返回至其默认行号，默认行号对由上个指令重新编号的行进行计数。  
+借助 `#line`，可修改编译器的行号及（可选）用于错误和警告的文件名输出。
+
+以下示例演示如何报告与行号相关联的两个警告。 `#line 200` 指令将下一行号强制设为 200（尽管默认值为 #6），直到下一个 #line 指令前，文件名都将报告为“特殊”。 #line 默认指令将行号返回至其默认行号，默认行号对由上个指令重新编号的行进行计数。  
   
 ```csharp
 class MainClass  
@@ -22,18 +24,28 @@ class MainClass
     static void Main()  
     {  
 #line 200 "Special"  
-        int i;    // CS0168 on line 200  
-        int j;    // CS0168 on line 201  
+        int i;
+        int j;
 #line default  
-        char c;   // CS0168 on line 9  
-        float f;  // CS0168 on line 10  
+        char c;
+        float f;
 #line hidden // numbering not affected  
         string s;   
-        double d; // CS0168 on line 13  
+        double d;
     }  
 }  
 ```  
-  
+编译产生以下输出：
+
+```console
+Special(200,13): warning CS0168: The variable 'i' is declared but never used
+Special(201,13): warning CS0168: The variable 'j' is declared but never used
+MainClass.cs(9,14): warning CS0168: The variable 'c' is declared but never used
+MainClass.cs(10,15): warning CS0168: The variable 'f' is declared but never used
+MainClass.cs(12,16): warning CS0168: The variable 's' is declared but never used
+MainClass.cs(13,16): warning CS0168: The variable 'd' is declared but never used
+```
+
 ## <a name="remarks"></a>备注  
  可在生成过程的自动、中间步骤中使用 `#line` 指令。 例如，如果已从原始源代码文件中删除行，但仍希望编译器基于文件中的原始行号生成输出，可在删除行后，使用 `#line` 来模拟原始行号。  
   
@@ -64,7 +76,8 @@ class MainClass
 }  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [C# 参考](../../../csharp/language-reference/index.md)  
- [C# 编程指南](../../../csharp/programming-guide/index.md)  
- [C# 预处理器指令](../../../csharp/language-reference/preprocessor-directives/index.md)
+## <a name="see-also"></a>请参阅
+
+- [C# 参考](../../../csharp/language-reference/index.md)  
+- [C# 编程指南](../../../csharp/programming-guide/index.md)  
+- [C# 预处理器指令](../../../csharp/language-reference/preprocessor-directives/index.md)

@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - double data type [C#]
 ms.assetid: 0980e11b-6004-4102-abcf-cfc280fc6991
-ms.openlocfilehash: 8e3a94bb79d46f2815e46b86f1aca92acc73e5c2
-ms.sourcegitcommit: f9e38d31288fe5962e6be5b0cc286da633482873
+ms.openlocfilehash: 4c11065d9354d44c1da8354c6f7b4f52d7b84c10
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37027845"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43401319"
 ---
 # <a name="double-c-reference"></a>double（C# 参考）
 
@@ -34,9 +34,9 @@ double x = 3D;
 
 可以在表达式中混合使用数值整型和浮点类型。 在这种情况下，整数类型将转换为浮点类型。 根据以下规则对表达式求值：
 
-- 如果浮点类型之一是 `double`，则该表达式的计算结果为 `double` 类型，在关系表达式或布尔表达式中为 [bool](../../../csharp/language-reference/keywords/bool.md) 类型。
+- 如果其中一个浮点类型是 `double`，该表达式在关系比较和相等比较中求值类型为 `double` 或 [bool](../../../csharp/language-reference/keywords/bool.md)。
 
-- 如果表达式中无 `double` 类型，则该表达式的计算结果为 [float](../../../csharp/language-reference/keywords/float.md) 类型，在关系表达式或布尔表达式中为 [bool](../../../csharp/language-reference/keywords/bool.md) 类型。
+- 如果表达式中没有 `double` 类型，则表达式在关系比较和相等比较中求值类型为[float](../../../csharp/language-reference/keywords/float.md) 或 [bool](../../../csharp/language-reference/keywords/bool.md)。
 
  浮点表达式可以包含下列值集：
 
@@ -62,11 +62,11 @@ double x = 3D;
 
 ## <a name="see-also"></a>请参阅
 
-[C# 参考](../../../csharp/language-reference/index.md)  
-[C# 编程指南](../../../csharp/programming-guide/index.md)  
-[C# 关键字](../../../csharp/language-reference/keywords/index.md)  
-[默认值表](../../../csharp/language-reference/keywords/default-values-table.md)  
-[内置类型表](../../../csharp/language-reference/keywords/built-in-types-table.md)  
-[浮点型表](../../../csharp/language-reference/keywords/floating-point-types-table.md)  
-[隐式数值转换表](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)  
-[显式数值转换表](../../../csharp/language-reference/keywords/explicit-numeric-conversions-table.md)  
+- [C# 参考](../../../csharp/language-reference/index.md)  
+- [C# 编程指南](../../../csharp/programming-guide/index.md)  
+- [C# 关键字](../../../csharp/language-reference/keywords/index.md)  
+- [默认值表](../../../csharp/language-reference/keywords/default-values-table.md)  
+- [内置类型表](../../../csharp/language-reference/keywords/built-in-types-table.md)  
+- [浮点型表](../../../csharp/language-reference/keywords/floating-point-types-table.md)  
+- [隐式数值转换表](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)  
+- [显式数值转换表](../../../csharp/language-reference/keywords/explicit-numeric-conversions-table.md)  

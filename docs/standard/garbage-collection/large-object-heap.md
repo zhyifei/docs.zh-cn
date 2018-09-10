@@ -11,12 +11,12 @@ ms.author: ronpet
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: abb1f72a10a4aff448dea22b5c9415111c25eaab
-ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
+ms.openlocfilehash: 852efc14af02eec4608e133e4c75507cd881b80e
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34457378"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43469942"
 ---
 # <a name="the-large-object-heap-on-windows-systems"></a>Windows 系统上的大型对象堆
 
@@ -40,21 +40,21 @@ ms.locfileid: "34457378"
 代可提供 GC 堆的逻辑视图。 实际上，对象存在于托管堆段中。 托管堆段是 GC 通过调用 [VirtualAlloc 功能](https://msdn.microsoft.com/library/windows/desktop/aa366887(v=vs.85).aspx)代表托管代码在操作系统上保留的内存块。 加载 CLR 时，GC 分配两个初始堆段：一个用于小型对象（小型对象堆或 SOH），一个用于大型对象（大型对象堆）。
 
 然后，通过将托管对象置于这些托管堆段上来满足分配请求。 如果该对象小于 85,000 字节，则将它置于 SOH 的段上，否则，将它置于 LOH 段。 随着分配到各段上的对象越来越多，会以较小块的形式提交这些段。
-对于 SOH，GC 未处理的对象将提升为下一代。 第 0 代回收未处理的对象现在视为第 1 代对象，以此类推。 但是，最后一代回收未处理的对象仍会被视为最后一代中的对象。 也就是说，第 2 代垃圾回收未处理的对象仍是第 2 代对象；LOH 未处理的对象仍是 LOH 对象（由第 2 代回收）。 
+对于 SOH，GC 未处理的对象将提升为下一代。 第 0 代回收未处理的对象现在视为第 1 代对象，以此类推。 但是，最后一代回收未处理的对象仍会被视为最后一代中的对象。 也就是说，第 2 代垃圾回收未处理的对象仍是第 2 代对象；LOH 未处理的对象仍是 LOH 对象（由第 2 代回收）。
 
 用户代码只能在第 0 代（小型对象）或 LOH（大型对象）中分配。 只有 GC 可以在第 1 代（通过提升第 0 代回收未处理的对象）和第 2 代（通过提升第 1 代和第 2 代回收未处理的对象）中“分配”对象。
 
 触发垃圾回收后，GC 将寻找存在的对象并将它们压缩。 但是由于压缩费用很高，GC 会扫过 LOH，列出没有被清除的对象列表以供以后重新使用，从而满足大型对象的分配请求。 相邻的被清除对象将组成一个自由对象。
 
-.NET Core 和 .NET Framework（从 .NET Framework 4.5.1 开始）包括 <xref:System.Runtime.GCSettings.LargeObjectHeapCompactionMode?displayProperty="fullname"> 属性，该属性可让用户指定在下一完整阻止 GC 期间压缩 LOH。 并且在以后，.NET 可能会自动决定压缩 LOH。 这就意味着，如果分配了大型对象并希望确保它们不被移动，则应将其固定起来。
+.NET Core 和 .NET Framework（从 .NET Framework 4.5.1 开始）包括 <xref:System.Runtime.GCSettings.LargeObjectHeapCompactionMode?displayProperty=nameWithType> 属性，该属性可让用户指定在下一完整阻止 GC 期间压缩 LOH。 并且在以后，.NET 可能会自动决定压缩 LOH。 这就意味着，如果分配了大型对象并希望确保它们不被移动，则应将其固定起来。
 
 图 1 说明了一种情况，在第一次第 0 代 GC 后 GC 形成了第 1 代，其中 `Obj1` 和 `Obj3` 被清除；在第一次第 1 代 GC 后形成了第 2 代，其中 `Obj2` 和 `Obj5` 被清除。 请注意此图和下图仅用于说明，它们只包含能更好展示堆上的情况的极少几个对象。 实际上，GC 中通常包含更多的对象。
 
-![图 1：第 0 代 GC 和第 1 代 GC](media/loh/loh-figure-1.jpg)   
+![图 1：第 0 代 GC 和第 1 代 GC](media/loh/loh-figure-1.jpg)  
 图 1：第 0 代和第 1 代 GC。
 
 图 2 显示了第 2 代 GC 发现 `Obj1` 和 `Obj2` 被清除后，GC 在内存中形成了相邻的可用空间，由 `Obj1` 和 `Obj2` 占用，然后用于满足 `Obj4` 的分配要求。 从最后一个对象 `Obj3` 到此段末尾的空间仍可用于满足分配请求。
- 
+
 ![图 2：第 2 代 GC 之后](media/loh/loh-figure-2.jpg)  
 图 2：第 2 代 GC 之后
 
@@ -63,7 +63,7 @@ ms.locfileid: "34457378"
 在第 1 代或第 2 代 GC 期间，垃圾回收器会通过调用 [VirtualFree 功能](https://msdn.microsoft.com/library/windows/desktop/aa366892(v=vs.85).aspx)将不包含活动对象的段释放回操作系统。 将退回最后一个活动对象到段末尾的空间（第 0 代/第 1 代存在的短暂段上的空间除外，垃圾回收器会在该段上会保存部分提交内容，因为应用程序将在其中立即分配）。 而且，尽管已重置可用空间，但仍会提交它们，这意味着操作系统无需将其中的数据重新写入磁盘。
 
 由于 LOH 仅在第 2 代 GC 期间进行回收，所以 LOH 段仅在此类 GC 期间可用。 图 3 说明了一种情况，在此情况下，垃圾回收器将某段（段 2）释放回操作系统并且退回剩余段上更多的空间。 如果需要使用该段末尾的已退回空间来满足大型对象分配请求，它会再次提交该内存。 （有关提交/退回的解释说明，请参阅 [VirtualAlloc](https://msdn.microsoft.com/library/windows/desktop/aa366887(v=vs.85).aspx) 的文档）。
- 
+
 ![图 3：第 2 代 GC 后的 LOH](media/loh/loh-figure-3.jpg)  
 图 3：第 2 代 GC 后的 LOH
 
@@ -73,17 +73,17 @@ ms.locfileid: "34457378"
 
 - 分配超出第 0 代或大型对象阈值。
 
-   阈值是某代的属性。 垃圾回收器在其中分配对象时，会为代设置阈值。 超出阈值后，会在该代上触发 GC。 因此，分配小型或大型对象时，需要分别使用第 0 代和 LOH 的阈值。 当垃圾回收器分配到第 1 代和第 2 代中时，将使用它们的阈值。 运行此程序时，会动态调整这些阈值。
+  阈值是某代的属性。 垃圾回收器在其中分配对象时，会为代设置阈值。 超出阈值后，会在该代上触发 GC。 因此，分配小型或大型对象时，需要分别使用第 0 代和 LOH 的阈值。 当垃圾回收器分配到第 1 代和第 2 代中时，将使用它们的阈值。 运行此程序时，会动态调整这些阈值。
 
-   这是典型情况，大部分 GC 执行都因为托管堆上的分配。
+  这是典型情况，大部分 GC 执行都因为托管堆上的分配。
 
 - 调用 <xref:System.GC.Collect%2A?displayProperty=nameWithType> 方法。
 
-   如果调用无参数 <xref:System.GC.Collect?displayProperty=nameWithType> 方法，或另一个重载作为参数传递到 <xref:System.GC.MaxGeneration?displayProperty=nameWithType>，将会一起收集 LOH 和剩余的托管堆。
+  如果调用无参数 <xref:System.GC.Collect?displayProperty=nameWithType> 方法，或另一个重载作为参数传递到 <xref:System.GC.MaxGeneration?displayProperty=nameWithType>，将会一起收集 LOH 和剩余的托管堆。
 
 - 系统处于内存不足的状况。
 
-   垃圾回收器收到来自操作系统 的高内存通知时，会发生以上情况。 如果垃圾回收器认为执行第 2 代 GC 会有效率，它将触发第 2 代。
+  垃圾回收器收到来自操作系统 的高内存通知时，会发生以上情况。 如果垃圾回收器认为执行第 2 代 GC 会有效率，它将触发第 2 代。
 
 ## <a name="loh-performance-implications"></a>LOH 性能意义
 
@@ -91,41 +91,41 @@ ms.locfileid: "34457378"
 
 - 分配成本。
 
-   CLR 确保清除了它提供的每个新对象的内存。 这意味着大型对象的分配成本完全由清理的内存（除非触发了 GC）决定。 如果需要 2 轮才能清除一个字节，即需要 170,000 轮才能清除最小的大型对象。 清除 2GHz 计算机上 16MB 对象的内存大约需要 16ms。 这些成本相当大。
+  CLR 确保清除了它提供的每个新对象的内存。 这意味着大型对象的分配成本完全由清理的内存（除非触发了 GC）决定。 如果需要 2 轮才能清除一个字节，即需要 170,000 轮才能清除最小的大型对象。 清除 2GHz 计算机上 16MB 对象的内存大约需要 16ms。 这些成本相当大。
 
 - 回收成本。
 
-   因为 LOH 和第 2 代一起回收，如果超出了它们之中任何一个的阈值，则触发第 2 代回收。 如果由于 LOH 触发第 2 代回收，第 2 代没有必要在 GC 后变得更小。 如果第 2 代上数据不多，则影响较小。 但是，如果第 2 代很大，则触发多次第 2 代 GC 可能会产生性能问题。 如果很多大型对象都在非常短暂的基础上进行分配，并且拥有大型 SOH，则可能会花费太多时间来执行 GC。 除此之外，如果连续分配并且释放真正的大型对象，那么分配成本可能会增加。
+  因为 LOH 和第 2 代一起回收，如果超出了它们之中任何一个的阈值，则触发第 2 代回收。 如果由于 LOH 触发第 2 代回收，第 2 代没有必要在 GC 后变得更小。 如果第 2 代上数据不多，则影响较小。 但是，如果第 2 代很大，则触发多次第 2 代 GC 可能会产生性能问题。 如果很多大型对象都在非常短暂的基础上进行分配，并且拥有大型 SOH，则可能会花费太多时间来执行 GC。 除此之外，如果连续分配并且释放真正的大型对象，那么分配成本可能会增加。
 
 - 具有引用类型的数组元素。
 
-   LOH 上的特大型对象通常是数组（很少会有非常大的实例对象）。 如果数组的元素有丰富的引用，则可能产生成本；如果元素没有丰富的引用，将不会产生此类成本。 如果元素不包含任何引用，则垃圾回收器根本无需处理此数组。 例如，如果使用数组存储二进制树中的节点，一种实现方法是按实际节点引用某个节点的左侧节点和右侧节点：
+  LOH 上的特大型对象通常是数组（很少会有非常大的实例对象）。 如果数组的元素有丰富的引用，则可能产生成本；如果元素没有丰富的引用，将不会产生此类成本。 如果元素不包含任何引用，则垃圾回收器根本无需处理此数组。 例如，如果使用数组存储二进制树中的节点，一种实现方法是按实际节点引用某个节点的左侧节点和右侧节点：
 
-   ```csharp
-   class Node
-   {
-      Data d;
-      Node left;
-      Node right;
-   };
+  ```csharp
+  class Node
+  {
+     Data d;
+     Node left;
+     Node right;
+  };
 
-   Node[] binary_tr = new Node [num_nodes];
-   ```
+  Node[] binary_tr = new Node [num_nodes];
+  ```
 
-   如果 `num_nodes` 非常大，则垃圾回收器需要处理每个元素的至少两个引用。 另一种方法是存储左侧节点和右侧节点的索引：
+  如果 `num_nodes` 非常大，则垃圾回收器需要处理每个元素的至少两个引用。 另一种方法是存储左侧节点和右侧节点的索引：
 
-   ```csharp
-   class Node
-   {
-      Data d;
-      uint left_index;
-      uint right_index;
-   } ;
-   ```
+  ```csharp
+  class Node
+  {
+     Data d;
+     uint left_index;
+     uint right_index;
+  } ;
+  ```
 
-   不要将左侧节点的数据引用为 `left.d`，而是将其引用为 `binary_tr[left_index].d`。 而垃圾回收器无需查看左侧节点和右侧节点的任何引用。
+  不要将左侧节点的数据引用为 `left.d`，而是将其引用为 `binary_tr[left_index].d`。 而垃圾回收器无需查看左侧节点和右侧节点的任何引用。
 
-在这三种因素中，前两个通常比第三个更重要。 因此，建议分配重复使用的大型对象池，而不是分配临时大型对象。 
+在这三种因素中，前两个通常比第三个更重要。 因此，建议分配重复使用的大型对象池，而不是分配临时大型对象。
 
 ## <a name="collecting-performance-data-for-the-loh"></a>收集 LOH 的性能数据
 
@@ -133,7 +133,7 @@ ms.locfileid: "34457378"
 
 1. 找到应查看此区域的证据。
 
-1. 排查你知道的其他区域，确保未发现可解释上述性能问题的内容。
+2. 排查你知道的其他区域，确保未发现可解释上述性能问题的内容。
 
 参阅博客[尝试找出解决方案之前先了解问题](https://blogs.msdn.microsoft.com/maoni/2006/09/01/understand-the-problem-before-you-try-to-find-a-solution/)获取内存和 CPU 的基础知识的详细信息。
 
@@ -149,7 +149,7 @@ ms.locfileid: "34457378"
 
 这些性能计数器通常是调查性能问题的第一步（但是推荐使用 [ETW 事件](#etw)）。 通过添加所需计数器配置性能监视器，如图 4 所示。 与 LOH 相关的是：
 
-- **\#第 2 代回收次数**
+- 第 2 代回收次数
 
    显示自进程开始起第 2 代 GC 发生的次数。 此计数器在第 2 代回收结束时递增（也称为完整垃圾回收）。 此计数器显示上次观测的值。
 
@@ -159,7 +159,7 @@ ms.locfileid: "34457378"
 
 查看性能计数器的常用方法是使用性能监视器 (perfmon.exe)。 使用“添加计数器”可为关注的进程添加感兴趣的计数器。 可将性能计数器数据保存在日志文件中，如图 4 所示。
 
-![图 4：添加性能计数器。](media/loh/perfcounter.png)    
+![图 4：添加性能计数器。](media/loh/perfcounter.png)  
 图 4：第 2 代 GC 后的 LOH
 
 也可以编程方式查询性能计数器。 大部分人在例行测试过程中都采用此方式进行收集。 如果发现计数器显示的值不正常，则可以使用其他方法获得更多详细信息以帮助调查。
@@ -171,13 +171,13 @@ ms.locfileid: "34457378"
 
 垃圾回收器提供丰富的 ETW 事件集，帮助了解堆的工作内容和工作原理。 以下博客文章演示了如何使用 ETW 收集和了解 GC 事件：
 
-- [GC ETW 事件 - 1](http://blogs.msdn.com/b/maoni/archive/2014/12/22/gc-etw-events.aspx)
+- [GC ETW 事件 - 1](https://blogs.msdn.microsoft.com/maoni/2014/12/22/gc-etw-events-1/)
 
-- [GC ETW 事件 - 2](http://blogs.msdn.com/b/maoni/archive/2014/12/25/gc-etw-events-2.aspx)
+- [GC ETW 事件 - 2](https://blogs.msdn.microsoft.com/maoni/2014/12/25/gc-etw-events-2/)
 
-- [GC ETW 事件 - 3](http://blogs.msdn.com/b/maoni/archive/2014/12/25/gc-etw-events-3.aspx) 
+- [GC ETW 事件 - 3](https://blogs.msdn.microsoft.com/maoni/2014/12/25/gc-etw-events-3/)
 
-- [GC ETW 事件 - 4](http://blogs.msdn.com/b/maoni/archive/2014/12/30/gc-etw-events-4.aspx)
+- [GC ETW 事件 - 4](https://blogs.msdn.microsoft.com/maoni/2014/12/30/gc-etw-events-4/)
 
 若要标识由临时 LOH 分配造成的过多第 2 代 GC 次数，请查看 GC 的“触发原因”列。 有关仅分配临时大型对象的简单测试，可使用以下 [PerfView](https://www.microsoft.com/download/details.aspx?id=28567) 命令行收集 ETW 事件的信息：
 
@@ -186,7 +186,7 @@ perfview /GCCollectOnly /AcceptEULA /nogui collect
 ```
 
 结果类似于以下类容：
- 
+
 ![图 5：使用 PerfView 检查 ETW 事件](media/loh/perfview.png)  
 图 5：使用 PerfView 显示的 ETW 事件
 
@@ -199,18 +199,18 @@ perfview /GCOnly /AcceptEULA /nogui collect
 ```
 
 收集 AllocationTick 事件，大约每 10 万次分配就会触发该事件。 换句话说，每次分配大型对象都会触发事件。 然后可查看某个 GC 堆分配视图，该视图显示分配大型对象的调用堆栈：
- 
+
 ![图 6：GC 堆分配视图](media/loh/perfview2.png)  
 图 6：GC 堆分配视图
- 
+
 如图所示，这是从 `Main` 方法分配大型对象的简单测试。
 
 ### <a name="a-debugger"></a>调试器
 
-如果只有内存转储，则需要查看 LOH 上实际有哪些对象，你可使用 .NET 提供的 [SoS 调试器扩展](http://msdn2.microsoft.com/ms404370.aspx)来查看。 
+如果只有内存转储，则需要查看 LOH 上实际有哪些对象，你可使用 .NET 提供的 [SoS 调试器扩展](http://msdn2.microsoft.com/ms404370.aspx)来查看。
 
 > [!NOTE]
-> 此部分提到的调试命令适用于 [Windows 调试器](http://www.microsoft.com/whdc/devtools/debugging/default.mspx)。
+> 此部分提到的调试命令适用于 [Windows 调试器](https://www.microsoft.com/whdc/devtools/debugging/default.mspx)。
 
 以下内容显示了分析 LOH 的示例输出：
 
@@ -243,7 +243,7 @@ MT   Count   TotalSize Class Name
 Total 133 objects
 ```
 
-LOH 堆大小为 (16,754,224 + 16,699,288 + 16,284,504) = 49,738,016 字节。 在地址 023e1000 和地址 033db630 之间，8,008,736 字节由 <xref:System.Object?displayProperty=fullName> 对象的数组占用，6,663,696 字节由 <xref:System.Byte?displayProperty=nameWithType> 对象的数组占用，2,081,792 字节由可用空间占用。
+LOH 堆大小为 (16,754,224 + 16,699,288 + 16,284,504) = 49,738,016 字节。 在地址 023e1000 和地址 033db630 之间，8,008,736 字节由 <xref:System.Object?displayProperty=nameWithType> 对象的数组占用，6,663,696 字节由 <xref:System.Byte?displayProperty=nameWithType> 对象的数组占用，2,081,792 字节由可用空间占用。
 
 有时，调试器显示 LOH 的总大小少于 85,000 个字节。 这是由于运行时本身使用 LOH 分配某些小于大型对象的对象引起的。
 
