@@ -10,11 +10,11 @@ helpviewer_keywords:
 - win32res compiler option [C#]
 ms.assetid: 3c33f750-6948-4c7e-a27e-bef98f77255b
 ms.openlocfilehash: 96b0b089843495d35a54db43018688dbb4ffba2b
-ms.sourcegitcommit: a368166a51e5204c0224fbf5e46476e3ed122817
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/31/2018
-ms.locfileid: "43330888"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43507505"
 ---
 # <a name="-win32res-c-compiler-options"></a>-win32res（C# 编译器选项）
 -win32res 选项会在输出文件中插入 Win32 资源。  

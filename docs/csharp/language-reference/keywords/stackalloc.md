@@ -7,11 +7,11 @@ f1_keywords:
 helpviewer_keywords:
 - stackalloc keyword [C#]
 ms.openlocfilehash: 5926550eea1f5a2f8fb74645f22ca54c2bed3136
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43484049"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43508575"
 ---
 # <a name="stackalloc-c-reference"></a>stackalloc（C# 参考）
 在不安全代码上下文中使用 `stackalloc` 关键字在堆栈上分配内存块。
