@@ -17,11 +17,11 @@ author: mcleblanc
 ms.author: markl
 manager: markl
 ms.openlocfilehash: 158a68d97a52bb5a72985d260a3dd5c6bfd0bd41
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43408482"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44084606"
 ---
 # <a name="using-application-protocols"></a>使用应用程序协议
 .NET Framework 支持常用的 Internet 应用程序协议。 本部分包括有关使用 [HTTP](../../../docs/framework/network-programming/http.md)、“TCP”和“UDP”协议的信息，以及使用 [Windows Sockets](../../../docs/framework/network-programming/sockets.md) 接口实现自定义协议的相关信息。  

@@ -8,12 +8,12 @@ dev_langs:
 ms.assetid: 9404d758-679f-4ffb-995d-3d07d817659e
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: bac8d1496463d1224021270347c9480e7ce391e6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1d8b8c21af8ca0a21d97e8246ad82c42aaaf4974
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33577393"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44190983"
 ---
 # <a name="migrating-from-the-xsltransform-class"></a>从 XslTransform 类迁移
 [!INCLUDE[vsprvslong](../../../../includes/vsprvslong-md.md)] 版本重新设计了 XSLT 体系结构。 <xref:System.Xml.Xsl.XslTransform> 类已被 <xref:System.Xml.Xsl.XslCompiledTransform> 类所取代。  
@@ -117,6 +117,7 @@ using (XmlWriter writer = doc.CreateNavigator().AppendChild()) {
   
 -   与架构相关的 XPath 扩展函数：这些函数不受 <xref:System.Xml.Xsl.XslCompiledTransform> 本机支持。 但是，它们可以作为扩展函数实现。  
   
-## <a name="see-also"></a>请参阅  
- [XSLT 转换](../../../../docs/standard/data/xml/xslt-transformations.md)  
- [使用 XslCompiledTransform 类](../../../../docs/standard/data/xml/using-the-xslcompiledtransform-class.md)
+## <a name="see-also"></a>请参阅
+
+- [XSLT 转换](../../../../docs/standard/data/xml/xslt-transformations.md)  
+- [使用 XslCompiledTransform 类](../../../../docs/standard/data/xml/using-the-xslcompiledtransform-class.md)

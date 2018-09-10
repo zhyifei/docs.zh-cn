@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 8c71acf2-2c18-4f4d-8cdb-0728639265fd
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6f829fc0b399f5cfd10d98f6b7439de757674f11
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8be9b4eef30333fbbdc26915635d17157176d6fc
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33586368"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44208174"
 ---
 # <a name="reader-writer-locks"></a>读取器/编写器锁
 借助 <xref:System.Threading.ReaderWriterLockSlim> 类，多个线程可以同时读取资源，但线程必须等待排他锁生成，才能对资源执行写入操作。  
@@ -27,8 +27,9 @@ ms.locfileid: "33586368"
 > [!NOTE]
 >  [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 有下面两个读取器-编写器锁：<xref:System.Threading.ReaderWriterLockSlim> 和 <xref:System.Threading.ReaderWriterLock>。 建议对所有新开发的项目使用 <xref:System.Threading.ReaderWriterLockSlim>。 虽然 <xref:System.Threading.ReaderWriterLockSlim> 类似于 <xref:System.Threading.ReaderWriterLock>，但不同之处在于，前者简化了递归规则以及锁状态的升级和降级规则。 <xref:System.Threading.ReaderWriterLockSlim> 避免了许多潜在的死锁情况。 另外，<xref:System.Threading.ReaderWriterLockSlim> 的性能显著优于 <xref:System.Threading.ReaderWriterLock>。  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Threading.ReaderWriterLockSlim>  
- <xref:System.Threading.ReaderWriterLock>  
- [线程处理](../../../docs/standard/threading/index.md)  
- [线程处理对象和功能](../../../docs/standard/threading/threading-objects-and-features.md)
+## <a name="see-also"></a>请参阅
+
+- <xref:System.Threading.ReaderWriterLockSlim>  
+- <xref:System.Threading.ReaderWriterLock>  
+- [线程处理](../../../docs/standard/threading/index.md)  
+- [线程处理对象和功能](../../../docs/standard/threading/threading-objects-and-features.md)

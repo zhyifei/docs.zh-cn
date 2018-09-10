@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 1e357177-e699-4b8f-9e49-56d3513ed128
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6d4fd91eccd5e8f3fd6be7c8a63ab1c097002382
-ms.sourcegitcommit: 9e18e4a18284ae9e54c515e30d019c0bbff9cd37
+ms.openlocfilehash: f6910dfba0889b4eaf601960d13dfe87a3b8c2fa
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37073224"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44214116"
 ---
 # <a name="potential-pitfalls-in-data-and-task-parallelism"></a>数据并行和任务并行中的潜在缺陷
 在许多情况下，与普通的顺序循环相比，<xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> 和 <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> 可以显著提升性能。 但是，对循环进行并行化的工作增加了复杂性，可能会导致在顺序代码中出现不常见或根本不会遇到的问题。 本主题列出了一些在编写并行循环时要避免的做法。  
@@ -52,10 +52,10 @@ ms.locfileid: "37073224"
 >  可以自行对此进行测试，具体方法是在查询中插入一些 <xref:System.Console.WriteLine%2A> 调用。 尽管出于演示目的，在文档示例中使用了此方法，但除非必要，否则不要在并行循环中使用它。  
   
 ## <a name="be-aware-of-thread-affinity-issues"></a>注意线程关联问题  
- 某些技术（例如，单线程单元 (STA) 组件的 COM 互操作性、Windows 窗体以及 Windows Presentation Foundation (WPF)）具有要求代码在特定线程上运行的线程关联限制。 例如，在 Windows 窗体和 WPF 中，只能在创建控件的线程上访问该控件。 举例来说，这意味着，除非将线程调度器配置为仅将工作安排在 UI 线程上，否则你将无法从并行循环中更新列表控件。 有关详细信息，请参阅[如何：在用户界面 (UI) 线程上安排工作](http://msdn.microsoft.com/library/32a846a5-d628-4933-907b-4888ff72c663)。  
+ 某些技术（例如，单线程单元 (STA) 组件的 COM 互操作性、Windows 窗体以及 Windows Presentation Foundation (WPF)）具有要求代码在特定线程上运行的线程关联限制。 例如，在 Windows 窗体和 WPF 中，只能在创建控件的线程上访问该控件。 举例来说，这意味着，除非将线程调度器配置为仅将工作安排在 UI 线程上，否则你将无法从并行循环中更新列表控件。 有关详细信息，请参阅[如何：在用户界面 (UI) 线程上安排工作](https://msdn.microsoft.com/library/32a846a5-d628-4933-907b-4888ff72c663)。  
   
 ## <a name="use-caution-when-waiting-in-delegates-that-are-called-by-parallelinvoke"></a>在由 Parallel.Invoke 调用的委托中等待时请谨慎使用  
- 在某些情况下，任务并行库将对任务进行内联操作，这意味着它将在当前正在执行的线程上的任务上运行。 （有关详细信息，请参阅[任务计划程序](http://msdn.microsoft.com/library/638f8ea5-21db-47a2-a934-86e1e961bf65)。）此性能优化在某些情况下可能会导致死锁。 例如，两个任务可能运行相同的委托代码，该代码在事件发生时将发出信号，然后等待另一个任务发出信号。 如果在相同线程上将第二个任务内联为第一个，并且第一个任务进入等待状态，则第二个任务将永远无法发出其事件信号。 为了避免发生这种情况，可以在等待操作上指定超时，或使用显式线程构造函数来帮助确保一个任务无法阻止另一个任务。  
+ 在某些情况下，任务并行库将对任务进行内联操作，这意味着它将在当前正在执行的线程上的任务上运行。 （有关详细信息，请参阅[任务计划程序](https://msdn.microsoft.com/library/638f8ea5-21db-47a2-a934-86e1e961bf65)。）此性能优化在某些情况下可能会导致死锁。 例如，两个任务可能运行相同的委托代码，该代码在事件发生时将发出信号，然后等待另一个任务发出信号。 如果在相同线程上将第二个任务内联为第一个，并且第一个任务进入等待状态，则第二个任务将永远无法发出其事件信号。 为了避免发生这种情况，可以在等待操作上指定超时，或使用显式线程构造函数来帮助确保一个任务无法阻止另一个任务。  
   
 ## <a name="do-not-assume-that-iterations-of-foreach-for-and-forall-always-execute-in-parallel"></a>不要假定 ForEach、For 和 ForAll 的迭代始终并行执行  
  请务必注意，<xref:System.Threading.Tasks.Parallel.For%2A>、<xref:System.Threading.Tasks.Parallel.ForEach%2A> 或 <xref:System.Linq.ParallelEnumerable.ForAll%2A> 循环中的各个迭代可能会（但不需要）并行执行。 因此，应避免编写任何依赖于迭代并行执行的正确性或依赖于按任何特定顺序执行迭代的代码。 例如，此代码有可能会死锁：  
@@ -80,7 +80,8 @@ ms.locfileid: "37073224"
  [!code-csharp[TPL_Pitfalls#03](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_pitfalls/cs/pitfalls.cs#03)]
  [!code-vb[TPL_Pitfalls#03](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_pitfalls/vb/pitfalls_vb.vb#03)]  
   
-## <a name="see-also"></a>请参阅  
- [并行编程](../../../docs/standard/parallel-programming/index.md)  
- [PLINQ 的潜在问题](../../../docs/standard/parallel-programming/potential-pitfalls-with-plinq.md)  
- [并行编程模式：了解并使用 .NET Framework 4 应用并行模式](https://www.microsoft.com/download/details.aspx?id=19222)
+## <a name="see-also"></a>请参阅
+
+- [并行编程](../../../docs/standard/parallel-programming/index.md)  
+- [PLINQ 的潜在问题](../../../docs/standard/parallel-programming/potential-pitfalls-with-plinq.md)  
+- [并行编程模式：了解并使用 .NET Framework 4 应用并行模式](https://www.microsoft.com/download/details.aspx?id=19222)

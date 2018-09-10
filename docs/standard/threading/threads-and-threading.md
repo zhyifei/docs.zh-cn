@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 5baac3aa-e603-4fa6-9f89-0f2c1084e6b1
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4380c509a08ebe59f9561a9e6fc596458768917f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ef464b0d4c22d04d42f9b6f953abefe7582b4957
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33592179"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44188535"
 ---
 # <a name="threads-and-threading"></a>线程与线程处理
 操作系统使用进程隔开正在执行的不同应用。 线程是操作系统向其分配处理器时间的基本单位，在相应进程内多个线程可以同时执行代码。 每个线程负责维护异常处理程序、计划优先级，以及系统用来保存被排入计划前线程上下文的一组结构。 线程上下文包含线程在其主机进程地址空间中顺畅继续执行所需的全部信息，包括线程的一组 CPU 寄存器和堆栈。  
@@ -89,8 +89,9 @@ ms.locfileid: "33592179"
 > [!NOTE]
 >  在 .NET framework 版本 1.0 和 1.1 中，公共语言运行时以无提示方式捕获一些异常，例如线程池中的线程异常。 这可能会损坏应用状态，并最终导致应用挂起，此问题的调试难度非常大。  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Threading.ThreadPool>  
- <xref:System.ComponentModel.BackgroundWorker>  
- [为多线程处理同步数据](../../../docs/standard/threading/synchronizing-data-for-multithreading.md)  
- [托管线程池](../../../docs/standard/threading/the-managed-thread-pool.md)
+## <a name="see-also"></a>请参阅
+
+- <xref:System.Threading.ThreadPool>  
+- <xref:System.ComponentModel.BackgroundWorker>  
+- [为多线程处理同步数据](../../../docs/standard/threading/synchronizing-data-for-multithreading.md)  
+- [托管线程池](../../../docs/standard/threading/the-managed-thread-pool.md)

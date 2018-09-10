@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 53c57c96-83e1-4ee3-9543-9ac832671a89
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5d21a3a315b7dc63a84f7b5d43d55c06eb2d5188
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6c8db725e25fe441c875a25cba97eb2090d4c071
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33579582"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44262602"
 ---
 # <a name="common-type-system"></a>常规类型系统
 通用类型系统定义了如何在公共语言运行时中声明、使用和管理类型，同时也是运行时跨语言集成支持的一个重要组成部分。 常规类型系统执行以下功能：  
@@ -320,7 +320,8 @@ ms.locfileid: "33579582"
   
 -   派生类型可以重写继承的虚方法。 重写方法提供了对方法的一种新定义，将根据运行时的值的类型，而不是编译时已知的变量类型来调用方法。 只有在虚拟方法未标记为 `final` 且新方法至少可以像虚拟方法一样进行访问的情况下，方法才能重写虚拟方法。  
   
-## <a name="see-also"></a>请参阅  
- [.NET API 浏览器](/dotnet/api)  
- [公共语言运行时](../../../docs/standard/clr.md)  
- [.NET 中的类型转换](../../../docs/standard/base-types/type-conversion.md)
+## <a name="see-also"></a>请参阅
+
+- [.NET API 浏览器](/dotnet/api)  
+- [公共语言运行时](../../../docs/standard/clr.md)  
+- [.NET 中的类型转换](../../../docs/standard/base-types/type-conversion.md)

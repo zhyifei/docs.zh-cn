@@ -8,12 +8,12 @@ dev_langs:
 ms.assetid: 500335af-f9b5-413b-968a-e6d9a824478c
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c871dabd9d027e5716c863985bed7ef3b955a358
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 67062ab87182bcb42793cb166323020178ac1688
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43482084"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44264280"
 ---
 # <a name="xslt-transformations-with-the-xsltransform-class"></a>XslTransform 类的 XSLT 转换
 
@@ -98,11 +98,11 @@ public class Sample
 
 ## <a name="see-also"></a>请参阅
 
-<xref:System.Xml.Xsl.XslTransform>  
-[XslTransform 类实现 XSLT 处理器](xsltransform-class-implements-the-xslt-processor.md)  
-[XslTransform 类中任意行为的实现](implementation-of-discretionary-behaviors-in-the-xsltransform-class.md)  
-[转换中的 XPathNavigator](xpathnavigator-in-transformations.md)  
-[转换中的 XPathNodeIterator](xpathnodeiterator-in-transformations.md)  
-[XslTransform 的 XPathDocument 输入](xpathdocument-input-to-xsltransform.md)  
-[XslTransform 的 XmlDataDocument 输入](xmldatadocument-input-to-xsltransform.md)  
-[XslTransform 的 XmlDocument 输入](xmldocument-input-to-xsltransform.md)  
+- <xref:System.Xml.Xsl.XslTransform>  
+- [XslTransform 类实现 XSLT 处理器](xsltransform-class-implements-the-xslt-processor.md)  
+- [XslTransform 类中任意行为的实现](implementation-of-discretionary-behaviors-in-the-xsltransform-class.md)  
+- [转换中的 XPathNavigator](xpathnavigator-in-transformations.md)  
+- [转换中的 XPathNodeIterator](xpathnodeiterator-in-transformations.md)  
+- [XslTransform 的 XPathDocument 输入](xpathdocument-input-to-xsltransform.md)  
+- [XslTransform 的 XmlDataDocument 输入](xmldatadocument-input-to-xsltransform.md)  
+- [XslTransform 的 XmlDocument 输入](xmldocument-input-to-xsltransform.md)  

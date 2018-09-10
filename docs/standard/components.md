@@ -5,12 +5,12 @@ author: cartermp
 ms.author: mairaw
 ms.date: 08/23/2017
 ms.technology: dotnet-standard
-ms.openlocfilehash: 2415f0c360118389bc7a3ae3aaf74ca8daf24422
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e131ab48b666f2d22d8bd02e41ed76e415a2597d
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33574802"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44262243"
 ---
 # <a name="net-architectural-components"></a>.NET 体系结构组件
 
@@ -68,11 +68,11 @@ UWP 是用于为物联网 (IoT) 生成新式触控 Windows 应用程序和软件
 ## <a name="net-runtimes"></a>.NET 运行时
 
 运行时是用于托管程序的执行环境。 OS 属于运行时环境，但不属于 .NET 运行时。 下面是 .NET 运行时的一些示例：
- 
- - .NET Framework 公共语言运行时 (CLR)
- - .NET Core 核心公共语言运行时 (CoreCLR)
- - 适用于通用 Windows 平台的 .NET Native 
- - 用于 Xamarin.iOS、Xamarin.Android、Xamarin.Mac 和 Mono 桌面框架的 Mono 运行时
+
+- .NET Framework 公共语言运行时 (CLR)
+- .NET Core 核心公共语言运行时 (CoreCLR)
+- 适用于通用 Windows 平台的 .NET Native 
+- 用于 Xamarin.iOS、Xamarin.Android、Xamarin.Mac 和 Mono 桌面框架的 Mono 运行时
 
 ## <a name="net-tooling-and-common-infrastructure"></a>.NET 工具和常见基础结构
 
@@ -85,11 +85,11 @@ UWP 是用于为物联网 (IoT) 生成新式触控 Windows 应用程序和软件
 - 开放源生成业务流程工具，例如 [CAKE](https://cakebuild.net/) 和 [FAKE](https://fake.build/)
 
 ## <a name="see-also"></a>请参阅
-[为服务器应用选择 .NET Core 或 .NET Framework](choosing-core-framework-server.md)   
-[.NET Standard](net-standard.md)  
-[.NET Core 指南](../core/index.md)  
-[.NET Framework 指南](../framework/index.md)  
-[C# 指南](../csharp/index.md)  
-[F# 指南](../fsharp/index.md)  
-[VB.NET 指南](../visual-basic/index.md)  
 
+- [为服务器应用选择 .NET Core 或 .NET Framework](choosing-core-framework-server.md)   
+- [.NET Standard](net-standard.md)  
+- [.NET Core 指南](../core/index.md)  
+- [.NET Framework 指南](../framework/index.md)  
+- [C# 指南](../csharp/index.md)  
+- [F# 指南](../fsharp/index.md)  
+- [VB.NET 指南](../visual-basic/index.md)  

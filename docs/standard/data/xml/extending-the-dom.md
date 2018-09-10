@@ -8,12 +8,12 @@ dev_langs:
 ms.assetid: b5489c96-4afd-439a-a25d-fc82eb4a148d
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 58f32dcb76246bed1030f3d0a45db2541f381877
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 70e13893cf350a193411f1833e2e3b21c9b64182
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43390723"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44269262"
 ---
 # <a name="extending-the-dom"></a>扩展 DOM
 
@@ -255,4 +255,4 @@ DOM 的 .NET Framework 实现还包括一个事件系统，使您能够在 XML �
 
 ## <a name="see-also"></a>请参阅
 
-[XML 文档对象模型 (DOM)](xml-document-object-model-dom.md)  
+- [XML 文档对象模型 (DOM)](xml-document-object-model-dom.md)  

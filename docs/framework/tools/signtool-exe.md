@@ -7,11 +7,12 @@ helpviewer_keywords:
 ms.assetid: 0c25ff6c-bff3-422e-b017-146a3ee86cb9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1728dee4d0d8d90b8a1e2b2a3f92fc256c6267c6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b4cece1227b5210cf839aff0658267ae480b23b6
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44197454"
 ---
 # <a name="signtoolexe-sign-tool"></a>SignTool.exe（签名工具）
 签名工具是一个命令行工具，用于对文件进行数字签名，以及验证文件和时间戳文件中的签名。  
@@ -96,7 +97,7 @@ signtool [command] [options] [file_name | ...]
 |`/u` Usage|指定签名证书中必须存在的增强型密钥用法 (EKU)。 可以通过 OID 或字符串指定该用法的值。 默认用法为“代码签名”(1.3.6.1.5.5.7.3.3)。|  
 |`/uw`|指定“Windows 系统组件验证”(1.3.6.1.4.1.311.10.3.6) 的用法。|  
   
- 有关用法示例，请参阅 [Using SignTool to Sign a File](http://msdn.microsoft.com/library/windows/desktop/aa388170.aspx)（使用 SignTool 为文件签名）。  
+ 有关用法示例，请参阅 [Using SignTool to Sign a File](/windows/desktop/SecCrypto/using-signtool-to-sign-a-file)（使用 SignTool 为文件签名）。  
   
 <a name="TimeStamp"></a>   
 ## <a name="timestamp-command-options"></a>TimeStamp 命令选项  
@@ -110,7 +111,7 @@ signtool [command] [options] [file_name | ...]
 |`/tp` index|对 index 处的签名进行时间戳操作。|  
 |`/tr` URL|指定 RFC 3161 时间戳服务器的 URL。 要执行时间戳操作的文件必须在以前已进行签名。 需要 `/tr` 或 `/t` 选项。|  
   
- 有关使用示例，请参阅 [Adding Time Stamps to Previously Signed Files](http://msdn.microsoft.com/library/windows/desktop/aa375542.aspx)（向之前已签名的文件添加时间戳）。  
+ 有关使用示例，请参阅 [Adding Time Stamps to Previously Signed Files](/windows/desktop/SecCrypto/adding-time-stamps-to-previously-signed-files)（向之前已签名的文件添加时间戳）。  
   
 <a name="Verify"></a>   
 ## <a name="verify-command-options"></a>Verify 命令选项  
@@ -127,7 +128,7 @@ signtool [command] [options] [file_name | ...]
 |`/ds` Index|验证指定位置的签名。|  
 |`/hash` (`SHA1`|`SHA256`)|指定在目录中搜索文件时要使用的可选哈希算法。|  
 |`/kp`|指定应使用内核模式驱动程序签名策略执行验证。|  
-|`/ms`|使用多个验证语义。 这是 [!INCLUDE[win8](../../../includes/win8-md.md)] 和更高版本上的 [WinVerifyTrust](http://msdn.microsoft.com/library/windows/desktop/aa388208.aspx) 调用的默认行为。|  
+|`/ms`|使用多个验证语义。 这是 [!INCLUDE[win8](../../../includes/win8-md.md)] 和更高版本上的 [WinVerifyTrust](/windows/desktop/api/wintrust/nf-wintrust-winverifytrust) 调用的默认行为。|  
 |`/o` Version|按操作系统版本验证文件。 Version 具有以下形式：PlatformID:VerMajor.VerMinor.BuildNumber。 PlatformID 表示 <xref:System.PlatformID> 枚举成员的基础值。 重要提示：建议使用 `/o` 开关。 如果未指定 `/o`，SignTool.exe 可能会返回意外的结果。 例如，如果你未将 `/o` 开关包含在内，则能在旧版操作系统上正确验证的系统目录可能在新版操作系统上无法正确验证。|  
 |`/p7`|验证 PKCS #7 文件。 无现有策略用于 PKCS #7 验证。 该签名处于选中状态，并为签名证书生成了链。|  
 |`/pa`|指定应使用默认认证码验证策略。 如果未指定 `/pa` 选项，签名工具将使用 Windows 驱动程序验证策略。 此选项不能与 `catdb` 选项一起使用。|  
@@ -136,7 +137,7 @@ signtool [command] [options] [file_name | ...]
 |`/r` RootSubjectName|指定签名证书必须链接到的根证书的主题名称。 该值可以是根证书的整个主题名称的子字符串。|  
 |`/tw`|指定在未对签名进行时间戳操作时应生成警告。|  
   
- 有关用法示例，请参阅 [Using SignTool to Verify a File Signature](http://msdn.microsoft.com/library/windows/desktop/aa388171.aspx)（使用 SignTool 验证文件签名）。  
+ 有关用法示例，请参阅 [Using SignTool to Verify a File Signature](/windows/desktop/SecCrypto/using-signtool-to-verify-a-file-signature)（使用 SignTool 验证文件签名）。  
   
 ## <a name="return-value"></a>返回值  
  当其终止时，签名工具将返回下列退出代码之一。  

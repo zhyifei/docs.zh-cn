@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: d077a3e8-bd81-4bdf-b6a3-323857ea30fb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 41a3f729a6be1cf9e803af306d1d6015f0afbdc3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a90b4214e244bc1f9c5f8e71782e604bd6c7b619
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33395929"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44180106"
 ---
 # <a name="dynamic-source-code-generation-and-compilation"></a>动态源代码生成和编译
 .NET Framework 包括一个名为代码文档对象模型 (CodeDOM) 的机制。通过该机制，发出源代码的程序开发者可基于一种表示要呈现的代码的单一模型，在运行时以多种编程语言生成源代码。  
@@ -51,5 +51,5 @@ ms.locfileid: "33395929"
  定义用于在运行时生成和编译代码的接口。  
   
 ## <a name="related-sections"></a>相关章节  
- [CodeDOM 快速参考](http://msdn.microsoft.com/library/c77b8bfd-0a32-4e36-b59a-4f687f32c524)  
+ [CodeDOM 快速参考](https://msdn.microsoft.com/library/c77b8bfd-0a32-4e36-b59a-4f687f32c524)  
  为开发人员提供了一种方法，使其可以快速查找表示源代码元素的 CodeDOM 元素。

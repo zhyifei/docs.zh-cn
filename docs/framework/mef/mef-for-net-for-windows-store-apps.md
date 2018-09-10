@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 7667770e-d163-4ad6-a303-085cf73db2f2
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 26c2c6cd701f15ca950d399cf3074ee229534d65
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9cb7807fbfc1fbaf039fd7aef04331210dfa7cfa
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33388854"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44227410"
 ---
 # <a name="mef-for-net-for-windows-store-apps"></a>适用于 Windows 应用商店应用的 .NET 的 MEF
 <xref:System.Composition?displayProperty=nameWithType> 及其子命名空间包含用于使用 Managed Extensibility Framework (MEF) 开发可扩展的 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 应用的类型。 这些名称空间是 [!INCLUDE[win8](../../../includes/win8-md.md)] 操作系统的 [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)] 子集的一部分。  
@@ -24,9 +24,9 @@ ms.locfileid: "33388854"
   
 -   <xref:System.Composition.Hosting.Core?displayProperty=nameWithType> 提供由组合引擎内部使用的 MEF 类型。  
   
- 有关 [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)] 及其包含的命名空间和类型列表的详细信息，请参阅 Windows 开发人员中心的[适用于 Windows 应用商店应用的 .NET 概述](http://go.microsoft.com/fwlink/p/?LinkID=238312)。  
+ 有关 [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)] 及其包含的命名空间和类型列表的详细信息，请参阅 Windows 开发人员中心的[适用于 Windows 应用商店应用的 .NET 概述](https://go.microsoft.com/fwlink/p/?LinkID=238312)。  
   
 ## <a name="see-also"></a>请参阅  
- [适用于 Microsoft Store 应用的 .NET 概述](http://go.microsoft.com/fwlink/p/?LinkID=238312)  
- [适用于 Windows 应用商店应用的 .NET - 支持的 API](http://go.microsoft.com/fwlink/p/?LinkID=247912)  
+ [适用于 Microsoft Store 应用的 .NET 概述](https://go.microsoft.com/fwlink/p/?LinkID=238312)  
+ [适用于 Windows 应用商店应用的 .NET - 支持的 API](https://go.microsoft.com/fwlink/p/?LinkID=247912)  
  [Managed Extensibility Framework (MEF)](../../../docs/framework/mef/index.md)

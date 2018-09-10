@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 977dc094-fe19-4955-98ec-d2294d04a4ba
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c925b734c6d89bfa7240a7946c5bae4d8062a47a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b1fa907be4571e0a5f95ab798210bedb154e9170
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33577809"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44264670"
 ---
 # <a name="comparing-strings-in-net"></a>比较 .NET 中的字符串
 .NET 提供几种方法来比较字符串的值。 下表列出和描述值比较方法。  
@@ -150,6 +150,8 @@ ms.locfileid: "33577809"
   
  与 **String.Remove** 方法结合使用时，这两种方法都很有用。 可以使用 **IndexOf** 或 **LastIndexOf** 方法来检索字符的位置，然后将该位置提供给 **Remove** 方法，以删除字符或以该字符开头的单词。  
   
-## <a name="see-also"></a>请参阅  
- [基本字符串操作](../../../docs/standard/base-types/basic-string-operations.md)  
- [执行不区分区域性的字符串操作](../../../docs/standard/globalization-localization/performing-culture-insensitive-string-operations.md)
+## <a name="see-also"></a>请参阅
+
+- [基本字符串操作](../../../docs/standard/base-types/basic-string-operations.md)  
+- [执行不区分区域性的字符串操作](../../../docs/standard/globalization-localization/performing-culture-insensitive-string-operations.md)
+- [排序权重表](https://www.microsoft.com/en-us/download/details.aspx?id=10921)

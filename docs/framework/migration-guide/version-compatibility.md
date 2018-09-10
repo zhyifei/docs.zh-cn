@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 2f25e522-456a-48c3-8a53-e5f39275649f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 15c5455bd604765ebcd78aa418d2f74f4141628d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0d3d0e2dbd57d9581d1c8b0ca42d1e9d556d8905
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33398269"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44198499"
 ---
 # <a name="version-compatibility-in-the-net-framework"></a>.NET Framework 的版本兼容性
 向后兼容性表示为某个平台的特定版本开发的应用程序将在该平台的更高版本上运行。 .NET Framework 尝试最大程度地支持向后兼容性：为某个版本的 .NET Framework 编写的源代码应在更高版本的 .NET Framework 上编译，而在某个版本的 .NET Framework 上运行的二进制文件的行为方式应与其在更高版本的 .NET Framework 上的行为方式相同。  
@@ -52,9 +52,9 @@ ms.locfileid: "33398269"
 
 - 如果使用 .NET Framework 3.5 应用，另请参阅 [.NET Framework 4 迁移问题](../../../docs/framework/migration-guide/net-framework-4-migration-issues.md)。
 
-- 如果使用 .NET Framework 2.0 应用，另请参阅 [.NET Framework 3.5 SP1 中的更改](http://go.microsoft.com/fwlink/?LinkId=186989)。
+- 如果使用 .NET Framework 2.0 应用，另请参阅 [.NET Framework 3.5 SP1 中的更改](https://go.microsoft.com/fwlink/?LinkId=186989)。
 
-- 如果使用 .NET Framework 1.1 应用，另请参阅 [.NET Framework 2.0 中的更改](http://go.microsoft.com/fwlink/?LinkID=125263)。  
+- 如果使用 .NET Framework 1.1 应用，另请参阅 [.NET Framework 2.0 中的更改](https://go.microsoft.com/fwlink/?LinkID=125263)。  
   
 -   如果要重新编译现有源代码以在 .NET Framework 4.5 或其单点版本上运行，或者要从现有源代码库开发面向 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 或其单点版本的新版本应用或组件，请查看[类库中过时的内容](../../../docs/framework/whats-new/whats-obsolete.md)以了解过时的类型和成员，并采用描述的解决方法。 （以前编译的代码将继续针对已标记为过时的类型和成员运行。）  
   
@@ -69,5 +69,5 @@ ms.locfileid: "33398269"
  [新增功能](../../../docs/framework/whats-new/index.md)  
  [类库中过时的内容](../../../docs/framework/whats-new/whats-obsolete.md)  
  [应用程序兼容性](../../../docs/framework/migration-guide/application-compatibility.md)  
- [Microsoft .NET Framework 支持生命周期策略](http://go.microsoft.com/fwlink/p/?LinkId=248212)  
+ [Microsoft .NET Framework 支持生命周期策略](https://go.microsoft.com/fwlink/p/?LinkId=248212)  
  [.NET Framework 4 迁移问题](../../../docs/framework/migration-guide/net-framework-4-migration-issues.md)

@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: b782bcb8-da6a-4c6a-805f-2eb46d504309
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5098eea86ee910baad57115419e147df02e41ed9
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 37abcb6b3a8fdf4ef91d5e946a97db7ca1428ce8
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43485529"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44195697"
 ---
 # <a name="overview-of-synchronization-primitives"></a>同步基元概述
 <a name="top"></a> .NET Framework 提供一系列用于控制线程交互和避免争用情况的同步基元。 这大致可分为 3 个类别：锁定、发出信号和联锁操作。  
@@ -165,15 +165,16 @@ ms.locfileid: "43485529"
   
  有关概念性概述，请参阅[互锁操作](../../../docs/standard/threading/interlocked-operations.md)。  
   
-## <a name="see-also"></a>请参阅  
- [为多线程处理同步数据](../../../docs/standard/threading/synchronizing-data-for-multithreading.md)  
- [监视器](https://msdn.microsoft.com/library/33fe4aef-b44b-42fd-9e72-c908e39e75db)  
- [Mutex](../../../docs/standard/threading/mutexes.md)  
- [Semaphore 和 SemaphoreSlim](../../../docs/standard/threading/semaphore-and-semaphoreslim.md)  
- [EventWaitHandle、AutoResetEvent、CountdownEvent、ManualResetEvent](../../../docs/standard/threading/eventwaithandle-autoresetevent-countdownevent-manualresetevent.md)  
- [等待句柄](https://msdn.microsoft.com/library/48d10b6f-5fd7-407c-86ab-0179aef72489)  
- [互锁操作](../../../docs/standard/threading/interlocked-operations.md)  
- [读取器-编写器锁](../../../docs/standard/threading/reader-writer-locks.md)  
- [Barrier](../../../docs/standard/threading/barrier.md)  
- [SpinWait](../../../docs/standard/threading/spinwait.md)  
- [SpinLock](../../../docs/standard/threading/spinlock.md)
+## <a name="see-also"></a>请参阅
+
+- [为多线程处理同步数据](../../../docs/standard/threading/synchronizing-data-for-multithreading.md)  
+- [监视器](https://msdn.microsoft.com/library/33fe4aef-b44b-42fd-9e72-c908e39e75db)  
+- [Mutex](../../../docs/standard/threading/mutexes.md)  
+- [Semaphore 和 SemaphoreSlim](../../../docs/standard/threading/semaphore-and-semaphoreslim.md)  
+- [EventWaitHandle、AutoResetEvent、CountdownEvent、ManualResetEvent](../../../docs/standard/threading/eventwaithandle-autoresetevent-countdownevent-manualresetevent.md)  
+- [等待句柄](https://msdn.microsoft.com/library/48d10b6f-5fd7-407c-86ab-0179aef72489)  
+- [互锁操作](../../../docs/standard/threading/interlocked-operations.md)  
+- [读取器-编写器锁](../../../docs/standard/threading/reader-writer-locks.md)  
+- [Barrier](../../../docs/standard/threading/barrier.md)  
+- [SpinWait](../../../docs/standard/threading/spinwait.md)  
+- [SpinLock](../../../docs/standard/threading/spinlock.md)

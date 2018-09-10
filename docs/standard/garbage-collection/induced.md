@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 019008fe-4708-4e65-bebf-04fd9941e149
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 436953782049800e89298932278af4e450fc10de
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 69590b0efc924132d149621c135ef0816cac7d1e
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33575858"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44192543"
 ---
 # <a name="induced-collections"></a>被动回收
 在大多数情况下，垃圾回收器可以确定执行回收的最佳时间，应让其独立运行。 在某些不常见的情况下，强制回收可以提高应用程序的性能。 在这种情况下，可以使用 <xref:System.GC.Collect%2A?displayProperty=nameWithType> 方法强制执行垃圾回收，从而诱导垃圾回收。  
@@ -36,6 +36,7 @@ ms.locfileid: "33575858"
 |<xref:System.GCCollectionMode.Forced> 或 <xref:System.GCCollectionMode.Default>|尽快执行阻塞回收。 如果后台回收正在进行且分代为 0 或 1，<xref:System.GC.Collect%28System.Int32%2CSystem.GCCollectionMode%2CSystem.Boolean%29> 方法会立即触发阻止式回收，并在回收完成后返回结果。 如果后台回收正在进行且 `generation` 参数为 2，此方法会等到后台回收完成，再触发第 2 代阻止式回收，然后返回结果。|尽快执行回收。 <xref:System.GC.Collect%28System.Int32%2CSystem.GCCollectionMode%2CSystem.Boolean%29> 方法请求执行后台回收，但这并没有保证；阻止式回收仍可执行，具体视环境而定。 如果后台回收正在进行，该方法将立即返回。|  
 |<xref:System.GCCollectionMode.Optimized>|可能会执行阻止式回收，具体视垃圾回收器的状态和 `generation` 参数而定。 垃圾回收器会尽量提供最佳性能。|根据垃圾回收器的状态，有时可执行回收。 <xref:System.GC.Collect%28System.Int32%2CSystem.GCCollectionMode%2CSystem.Boolean%29> 方法请求执行后台回收，但这并没有保证；阻止式回收仍可执行，具体视环境而定。 垃圾回收器会尽量提供最佳性能。 如果后台回收正在进行，该方法将立即返回。|  
   
-## <a name="see-also"></a>请参阅  
- [延迟模式](../../../docs/standard/garbage-collection/latency.md)  
- [垃圾回收](../../../docs/standard/garbage-collection/index.md)
+## <a name="see-also"></a>请参阅
+
+- [延迟模式](../../../docs/standard/garbage-collection/latency.md)  
+- [垃圾回收](../../../docs/standard/garbage-collection/index.md)

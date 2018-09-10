@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: 682643fc-b848-4e42-8c0d-50deeaeb5f2a
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 47162a43c942416c5a2b842663288290c9f43f62
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c8d08d6fd6fb783f5cb8c7e714bffa2b655ffb41
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33574717"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44214818"
 ---
 # <a name="managing-namespaces-in-an-xml-document"></a>管理 XML 文档中的命名空间
 XML 命名空间将 XML 文档中的元素和属性名称与自定义和预定义的 URI 关联起来。 要创建这些关联，您应为命名空间 URI 定义前缀，并使用这些前缀来限定 XML 数据中的元素和属性名称。 命名空间可防止元素和属性名称冲突，并允许以不同方式处理和验证同名的元素和属性。  
@@ -79,6 +79,7 @@ XML 命名空间将 XML 文档中的元素和属性名称与自定义和预定�
 |检查是否在当前范围内定义了前缀|<xref:System.Xml.XmlNamespaceManager.HasNamespace%2A> 方法|  
 |获取用于查找前缀和 URI 的名称表|<xref:System.Xml.XmlNamespaceManager.NameTable%2A> 属性|  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Xml.XmlNamespaceManager>  
- [XML 文档和数据](../../../../docs/standard/data/xml/index.md)
+## <a name="see-also"></a>请参阅
+
+- <xref:System.Xml.XmlNamespaceManager>  
+- [XML 文档和数据](../../../../docs/standard/data/xml/index.md)

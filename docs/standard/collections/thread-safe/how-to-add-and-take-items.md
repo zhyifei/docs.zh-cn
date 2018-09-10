@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 38f2f3d8-15e5-4bf4-9c83-2b5b6f22bad1
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4f83e260e41acd7c8fff03cf7df0832bab229911
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 74518f6f56f65668d4c7f073a79c9e7de27d7978
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33568493"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44178555"
 ---
 # <a name="how-to-add-and-take-items-individually-from-a-blockingcollection"></a>如何：在 BlockingCollection 中逐个添加和取出项
 此示例展示了如何以阻止性和非阻止性方式在 <xref:System.Collections.Concurrent.BlockingCollection%601> 中添加和删除项。 有关 <xref:System.Collections.Concurrent.BlockingCollection%601> 的详细信息，请参阅 [BlockingCollection 概述](../../../../docs/standard/collections/thread-safe/blockingcollection-overview.md)。  
@@ -34,6 +34,7 @@ ms.locfileid: "33568493"
  [!code-csharp[CDS_BlockingCollection#02](../../../../samples/snippets/csharp/VS_Snippets_Misc/cds_blockingcollection/cs/example02.cs#02)]
  [!code-vb[CDS_BlockingCollection#02](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/cds_blockingcollection/vb/nonblockingbc.vb#02)]  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Collections.Concurrent?displayProperty=nameWithType>  
- [BlockingCollection 概述](../../../../docs/standard/collections/thread-safe/blockingcollection-overview.md)
+## <a name="see-also"></a>请参阅
+
+- <xref:System.Collections.Concurrent?displayProperty=nameWithType>  
+- [BlockingCollection 概述](../../../../docs/standard/collections/thread-safe/blockingcollection-overview.md)

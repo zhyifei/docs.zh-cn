@@ -9,20 +9,21 @@ helpviewer_keywords:
 ms.assetid: f12922e1-6234-4165-8896-63f0653ab478
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f4d732d64eecff72403c455c14b68c3aec1b5407
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 22815b5ab993b36bc8bcb91f89f346cb6d812e19
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33572055"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44251688"
 ---
 # <a name="performing-culture-insensitive-string-operations-in-arrays"></a>在数组中执行不区分区域性的字符串操作
 默认情况下，<xref:System.Array.Sort%2A?displayProperty=nameWithType> 和 <xref:System.Array.BinarySearch%2A?displayProperty=nameWithType> 方法重载使用 <xref:System.Threading.Thread.CurrentCulture%2A?displayProperty=nameWithType> 属性执行区域性敏感型排序。 由于排序顺序不同，因此这些方法返回的区域性敏感型结果可能会因区域性而异。 若要消除区域性敏感型行为，请使用需要使用 `comparer` 参数的此方法重载之一。 `comparer` 参数指定要在比较数组元素时使用的 <xref:System.Collections.IComparer> 实现。 对于参数，指定使用 <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType> 的自定义固定比较器类。 [在集合中执行非区域性敏感型字符串操作](../../../docs/standard/globalization-localization/performing-culture-insensitive-string-operations-in-collections.md)主题的“使用 SortedList 类”子主题提供了自定义固定比较器类的示例。  
   
  **注意**：向比较方法传递 CultureInfo.InvariantCulture 确实会执行非区域性敏感型比较。 但是，这不会导致对文件路径、注册表项、环境变量等进行非语义比较。 也不支持基于比较结果的安全决策。 若要进行非语义比较或支持基于结果的安全决策，应用应使用接受 <xref:System.StringComparison> 值的比较方法。 然后，应用应传递 <xref:System.StringComparison.Ordinal>。  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Array.Sort%2A?displayProperty=nameWithType>  
- <xref:System.Array.BinarySearch%2A?displayProperty=nameWithType>  
- <xref:System.Collections.IComparer>  
- [执行不区分区域性的字符串操作](../../../docs/standard/globalization-localization/performing-culture-insensitive-string-operations.md)
+## <a name="see-also"></a>请参阅
+
+- <xref:System.Array.Sort%2A?displayProperty=nameWithType>  
+- <xref:System.Array.BinarySearch%2A?displayProperty=nameWithType>  
+- <xref:System.Collections.IComparer>  
+- [执行不区分区域性的字符串操作](../../../docs/standard/globalization-localization/performing-culture-insensitive-string-operations.md)

@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: f0548ead-0fed-41ee-b33e-117ba900d3bc
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6e91ce2b36462780925dcaef701583a966c5f59b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: bcc796f8d895e3daa81a9607bd7c4941b747cf24
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33569446"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44208765"
 ---
 # <a name="namespace-support-in-the-dom"></a>DOM 中的命名空间支持
 XML 文档对象模型 (DOM) 完全识别命名空间。 只支持识别命名空间的 XML 文档。 万维网联合会 (W3C) 指定实现级别 1 的 DOM 应用程序可以不识别命名空间，而 DOM 级别 2 功能识别命名空间。 然而，XML DOM 中的所有功能都识别命名空间，不论该方法来自级别 1 还是级别 2 DOM 建议。  
@@ -25,5 +25,6 @@ XML 文档对象模型 (DOM) 完全识别命名空间。 只支持识别命名�
   
 -   如果找到冒号，则根据第一个冒号字符的位置将该名称分为两个部分。 将前缀设置为该冒号前面的字符串，将本地名称设置为该冒号后面的字符串。 对于不接受 NamespaceURI 值的方法，不解析 NamespaceURI 并保持设置为空字符串。 否则，将 NamespaceURI 设置为传递给该方法的字符串。 如果未定义前缀，Save 方法以及 InnerXml 和 OuterXml 属性失败。  
   
-## <a name="see-also"></a>请参阅  
- [XML 文档对象模型 (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+## <a name="see-also"></a>请参阅
+
+- [XML 文档对象模型 (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

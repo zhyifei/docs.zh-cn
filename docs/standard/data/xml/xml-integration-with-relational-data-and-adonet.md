@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: f6ebb1a1-f2ca-49b9-92c9-0150940cf6e6
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 3e9bdb9b88d51e5435609bbab8bbe21a985505a0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d86c590f2d5fe6bc970c2f8ac6de43d3e8485650
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33575696"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44183140"
 ---
 # <a name="xml-integration-with-relational-data-and-adonet"></a>关系数据和 ADO.NET 的 XML 集成
 XmlDataDocument 类是 XmlDocument 的派生类，包含 XML 数据。 XmlDataDocument 的优势在于，在关系数据和分层数据之间架起了桥梁。 它是可绑定到 DataSet 的 XmlDocument，这两个类可以同步对其中所含数据的更改。 绑定到 DataSet 的 XmlDocument 允许 XML 与关系数据集成，不必将数据表示为 XML 格式或关系格式。 您可以用这两种格式表示数据，而不是限于一种数据表示形式。  
@@ -47,5 +47,6 @@ XmlDataDocument 类是 XmlDocument 的派生类，包含 XML 数据。 XmlDataDo
   
  如果从 XmlDataDocument 加载 DataSet 可满足需求，请参阅[将 DataSet 与 XML 文档同步](../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataset-and-xmldatadocument-synchronization.md)。  
   
-## <a name="see-also"></a>请参阅  
- [在数据集中使用 XML](../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)
+## <a name="see-also"></a>请参阅
+
+- [在数据集中使用 XML](../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)

@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: cb5fab92-1c19-499e-ae91-8b7525dd875f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8e3fb5fd807971aed014ba98cbb207c4483b93f9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 03aaae7cd0faa7e7628da2e2e8f622f0967102cf
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33581675"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44205002"
 ---
 # <a name="how-to-write-a-simple-parallelforeach-loop"></a>如何：编写简单的 Parallel.ForEach 循环
 此示例展示了如何使用 <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> 循环，对任何 <xref:System.Collections.IEnumerable?displayProperty=nameWithType> 或 <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType> 数据源启用数据并行。  
@@ -47,7 +47,8 @@ ms.locfileid: "33581675"
   
 -   按 F5  
   
-## <a name="see-also"></a>请参阅  
- [数据并行](../../../docs/standard/parallel-programming/data-parallelism-task-parallel-library.md)  
- [并行编程](../../../docs/standard/parallel-programming/index.md)  
- [并行 LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)
+## <a name="see-also"></a>请参阅
+
+- [数据并行](../../../docs/standard/parallel-programming/data-parallelism-task-parallel-library.md)  
+- [并行编程](../../../docs/standard/parallel-programming/index.md)  
+- [并行 LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)

@@ -8,12 +8,12 @@ dev_langs:
 ms.assetid: 23a763ea-8348-4244-9f8c-a4280b870b47
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b3cfaf4cf22bba445d774c653ff7797d535bcde2
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 96067ab6c8e13417158e4ebf7fae0e08cb9fbea4
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43398960"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44087474"
 ---
 # <a name="how-to-convert-between-net-framework-streams-and-windows-runtime-streams"></a>如何：在 .NET Framework 流与 Windows 运行时流之间转换
 
@@ -79,6 +79,6 @@ Windows 运行时提供支持只读、只写或读写的流类型，并且在将
 
 ## <a name="see-also"></a>请参阅
 
-[快速入门：对文件执行读取和写入操作 (Windows)](https://msdn.microsoft.com/library/windows/apps/hh464978.aspx)  
-[适用于 Microsoft Store 应用的 .NET 概述](https://msdn.microsoft.com/library/windows/apps/br230302.aspx)  
-[适用于 Windows 应用商店应用的 .NET - 支持的 API](https://msdn.microsoft.com/library/windows/apps/br230232.aspx)  
+- [快速入门：对文件执行读取和写入操作 (Windows)](https://msdn.microsoft.com/library/windows/apps/hh464978.aspx)  
+- [适用于 Microsoft Store 应用的 .NET 概述](https://msdn.microsoft.com/library/windows/apps/br230302.aspx)  
+- [适用于 Windows 应用商店应用的 .NET - 支持的 API](https://msdn.microsoft.com/library/windows/apps/br230232.aspx)  

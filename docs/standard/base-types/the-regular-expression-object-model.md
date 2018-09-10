@@ -37,12 +37,12 @@ helpviewer_keywords:
 ms.assetid: 49a21470-64ca-4b5a-a889-8e24e3c0af7e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 14402b56a765fc8fe57f40e9c5c44f500267e266
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 856b7c8a842b173fbf3e31323ce7224fc05a4f12
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33579855"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44192842"
 ---
 # <a name="the-regular-expression-object-model"></a>正则表达式对象模型
 <a name="introduction"></a> 本主题介绍了处理 .NET 正则表达式时使用的对象模型。 它包含下列部分：  
@@ -169,7 +169,7 @@ ms.locfileid: "33579855"
 ### <a name="the-match-collection"></a>Match 集合  
  <xref:System.Text.RegularExpressions.Regex.Matches%2A?displayProperty=nameWithType> 方法返回一个 <xref:System.Text.RegularExpressions.MatchCollection> 对象，该对象包含多个 <xref:System.Text.RegularExpressions.Match> 对象，这些对象表示正则表达式引擎在输入字符串中找到的所有匹配项（其顺序为这些匹配项在输入字符串中的显示顺序）。 如果没有匹配项，则此方法将返回一个不包含任何成员的 <xref:System.Text.RegularExpressions.MatchCollection> 对象。 利用 <xref:System.Text.RegularExpressions.MatchCollection.Item%2A?displayProperty=nameWithType> 属性，你可以按照索引（从零到将 <xref:System.Text.RegularExpressions.MatchCollection.Count%2A?displayProperty=nameWithType> 属性的值减 1 所得的值）访问集合中的各个成员。 <xref:System.Text.RegularExpressions.MatchCollection.Item%2A> 是集合的索引器（在 C# 中）和默认属性（在 Visual Basic 中）。  
   
- 默认情况下，调用 <xref:System.Text.RegularExpressions.Regex.Matches%2A?displayProperty=nameWithType> 方法会使用延迟计算来填充 <xref:System.Text.RegularExpressions.MatchCollection> 对象。 访问需要完全填充的集合的属性（如 <xref:System.Text.RegularExpressions.MatchCollection.Count%2A?displayProperty=nameWithType> 和 <xref:System.Text.RegularExpressions.MatchCollection.Item%2A?displayProperty=nameWithType> 属性）可能会降低性能。 因此，建议你使用由 <xref:System.Collections.IEnumerator> 方法返回的 <xref:System.Text.RegularExpressions.MatchCollection.GetEnumerator%2A?displayProperty=nameWithType> 对象访问该集合。 各种语言都提供了用于包装集合的 <xref:System.Collections.IEnumerator> 接口的构造（如 Visual Basic 中的 `For``Each` 和 C# 中的 `foreach`）。  
+ 默认情况下，调用 <xref:System.Text.RegularExpressions.Regex.Matches%2A?displayProperty=nameWithType> 方法会使用延迟计算来填充 <xref:System.Text.RegularExpressions.MatchCollection> 对象。 访问需要完全填充的集合的属性（如 <xref:System.Text.RegularExpressions.MatchCollection.Count%2A?displayProperty=nameWithType> 和 <xref:System.Text.RegularExpressions.MatchCollection.Item%2A?displayProperty=nameWithType> 属性）可能会降低性能。 因此，建议你使用由 <xref:System.Collections.IEnumerator> 方法返回的 <xref:System.Text.RegularExpressions.MatchCollection.GetEnumerator%2A?displayProperty=nameWithType> 对象访问该集合。 各种语言都提供了用于包装集合的 <xref:System.Collections.IEnumerator> 接口的构造（如 Visual Basic 中的 `For Each` 和 C# 中的 `foreach`）。  
   
  下面的示例使用 <xref:System.Text.RegularExpressions.Regex.Matches%28System.String%29?displayProperty=nameWithType> 方法将在输入字符串中找到的所有匹配项填充到 <xref:System.Text.RegularExpressions.MatchCollection> 对象中。 此示例枚举了该集合，将匹配项复制到字符串数组并将字符位置记录在整数数组中。  
   
@@ -194,8 +194,7 @@ ms.locfileid: "33579855"
      [!code-csharp[Conceptual.RegularExpressions.ObjectModel#8](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.objectmodel/cs/match3.cs#8)]
      [!code-vb[Conceptual.RegularExpressions.ObjectModel#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.objectmodel/vb/match3.vb#8)]  
   
- 
-          <xref:System.Text.RegularExpressions.Match> 类的以下两个属性都将返回集合对象：  
+ <xref:System.Text.RegularExpressions.Match> 类的以下两个属性都将返回集合对象：  
   
 -   <xref:System.Text.RegularExpressions.Match.Groups%2A?displayProperty=nameWithType> 属性返回一个 <xref:System.Text.RegularExpressions.GroupCollection> 对象，该对象包含有关与正则表达式模式中的捕获组匹配的子字符串的信息。  
   
@@ -264,7 +263,7 @@ ms.locfileid: "33579855"
   
 <a name="the_captured_group"></a>   
 ## <a name="the-captured-group"></a>捕获的组  
- <xref:System.Text.RegularExpressions.Group> 类表示来自单个捕获组的结果。 表示正则表达式中定义的捕获组的组对象由 <xref:System.Text.RegularExpressions.GroupCollection.Item%2A> 属性所返回的 <xref:System.Text.RegularExpressions.GroupCollection> 对象的 <xref:System.Text.RegularExpressions.Match.Groups%2A?displayProperty=nameWithType> 属性返回。 <xref:System.Text.RegularExpressions.GroupCollection.Item%2A> 属性是索引器（在 C# 中）和 <xref:System.Text.RegularExpressions.Group> 类的默认属性（在 Visual Basic 中）。 也可以使用 `foreach` 或 `For``Each` 构造循环访问集合，从而检索各个成员。 有关示例，请参见上一部分。  
+ <xref:System.Text.RegularExpressions.Group> 类表示来自单个捕获组的结果。 表示正则表达式中定义的捕获组的组对象由 <xref:System.Text.RegularExpressions.GroupCollection.Item%2A> 属性所返回的 <xref:System.Text.RegularExpressions.GroupCollection> 对象的 <xref:System.Text.RegularExpressions.Match.Groups%2A?displayProperty=nameWithType> 属性返回。 <xref:System.Text.RegularExpressions.GroupCollection.Item%2A> 属性是索引器（在 C# 中）和 <xref:System.Text.RegularExpressions.Group> 类的默认属性（在 Visual Basic 中）。 也可以使用 `foreach` 或 `For Each` 构造循环访问集合，从而检索各个成员。 有关示例，请参见上一部分。  
   
  下面的示例使用嵌套的分组构造来将子字符串捕获到组中。 正则表达式模式 `(a(b))c` 将匹配字符串“abc”。 它会将子字符串“ab”分配给第一个捕获组，并将子字符串“b”分配给第二个捕获组。  
   
@@ -285,8 +284,7 @@ ms.locfileid: "33579855"
 |`:`|匹配冒号。|  
 |`(?<value>\w+)`|匹配一个或多个单词字符。 此捕获组的名称为 `value`。|  
   
- 
-          <xref:System.Text.RegularExpressions.Group> 类的属性提供有关捕获的组的信息：`Group.Value` 属性包含捕获的子字符串，`Group.Index` 属性指示输入文本中捕获的组的起始位置，`Group.Length` 属性包含捕获的文本的长度，`Group.Success` 属性指示子字符串是否与捕获组所定义的模式匹配。  
+ <xref:System.Text.RegularExpressions.Group> 类的属性提供有关捕获的组的信息：`Group.Value` 属性包含捕获的子字符串，`Group.Index` 属性指示输入文本中捕获的组的起始位置，`Group.Length` 属性包含捕获的文本的长度，`Group.Success` 属性指示子字符串是否与捕获组所定义的模式匹配。  
   
  通过对组应用量符（有关详细信息，请参阅[量符](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md)），可以每捕获组修改一个捕获的关系，具体方式分为以下两种：  
   
@@ -314,7 +312,7 @@ ms.locfileid: "33579855"
 ## <a name="the-capture-collection"></a>捕获集合  
  <xref:System.Text.RegularExpressions.Group> 对象仅包含有关最后一个捕获的信息。 但仍可从 <xref:System.Text.RegularExpressions.CaptureCollection> 属性返回的 <xref:System.Text.RegularExpressions.Group.Captures%2A?displayProperty=nameWithType> 对象中获取由捕获组生成的整个捕获集。 集合中的每个成员均为一个表示由该捕获组生成的捕获的 <xref:System.Text.RegularExpressions.Capture> 对象，这些对象按被捕获的顺序排列（因而也就是遵循在输入字符串中按从左至右匹配捕获的字符串的顺序）。 可以通过以下两种方式之一来检索集合中的各个 <xref:System.Text.RegularExpressions.Capture> 对象：  
   
--   通过使用构造循环访问集合，如 `foreach` 构造（在 C# 中）或 `For``Each` 构造（在 Visual Basic 中）。  
+-   通过使用构造循环访问集合，如 `foreach` 构造（在 C# 中）或 `For Each` 构造（在 Visual Basic 中）。  
   
 -   通过使用 <xref:System.Text.RegularExpressions.CaptureCollection.Item%2A?displayProperty=nameWithType> 属性按索引检索特定对象。 <xref:System.Text.RegularExpressions.CaptureCollection.Item%2A> 属性是 <xref:System.Text.RegularExpressions.CaptureCollection> 对象的默认属性（在 Visual Basic 中）或索引器（在 C# 中）。  
   
@@ -353,7 +351,8 @@ ms.locfileid: "33579855"
 |`;`|匹配分号。|  
 |`((\w+(\s\w+)*),(\d+);)+`|匹配一个或多个以下模式：一个单词后跟任何其他单词，后跟一个逗号、一个或多个数字和一个分号。 这是第一个捕获组。|  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Text.RegularExpressions>  
- [.NET 正则表达式](../../../docs/standard/base-types/regular-expressions.md)  
- [正则表达式语言 - 快速参考](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)
+## <a name="see-also"></a>请参阅
+
+- <xref:System.Text.RegularExpressions>  
+- [.NET 正则表达式](../../../docs/standard/base-types/regular-expressions.md)  
+- [正则表达式语言 - 快速参考](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)

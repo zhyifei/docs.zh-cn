@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 37dfe4e3-7da0-48b6-a3d9-398981524e1c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7b6799763b4635632728561eef2820b26820aeed
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7021a984f844660c45ae3e2d98569432ab64b657
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33570384"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44264774"
 ---
 # <a name="retrieving-information-stored-in-attributes"></a>检索存储在特性中的信息
 检索自定义属性的过程非常简单。 首先，声明要检索的属性实例。 然后，使用 <xref:System.Attribute.GetCustomAttribute%2A?displayProperty=nameWithType> 方法，用要检索的属性的值初始化新属性。 在初始化新属性后，只需使用它的属性即可获取值。  
@@ -84,8 +84,9 @@ The attribute was not found.
   
  可以使用 <xref:System.Type> 类的成员，在传递的类中获取各个方法和成员。 此示例先查询 Type 对象，以获取类一级的属性信息。 接下来，它使用 <xref:System.Type.GetMethods%2A?displayProperty=nameWithType> 将所有方法实例都放入 <xref:System.Reflection.MemberInfo?displayProperty=nameWithType> 对象数组，以检索方法一级的属性信息。 还可以使用 <xref:System.Type.GetProperties%2A?displayProperty=nameWithType> 方法检查属性一级的属性，或使用 <xref:System.Type.GetConstructors%2A?displayProperty=nameWithType>方法检查构造函数一级的属性。  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Type?displayProperty=nameWithType>  
- <xref:System.Attribute.GetCustomAttribute%2A?displayProperty=nameWithType>  
- <xref:System.Attribute.GetCustomAttributes%2A?displayProperty=nameWithType>  
- [特性](../../../docs/standard/attributes/index.md)
+## <a name="see-also"></a>请参阅
+
+- <xref:System.Type?displayProperty=nameWithType>  
+- <xref:System.Attribute.GetCustomAttribute%2A?displayProperty=nameWithType>  
+- <xref:System.Attribute.GetCustomAttributes%2A?displayProperty=nameWithType>  
+- [特性](../../../docs/standard/attributes/index.md)

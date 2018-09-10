@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 9fce4859-a19d-4506-b082-7dd0792688ca
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 77dcdc95e0ca9d570c896fb036e0577f0475e164
-ms.sourcegitcommit: c66ba2df2d2ecfb214f85ee0687d298e4941c1a8
+ms.openlocfilehash: b66881a8a42c0c34b5c2119f7404fe7787c8f3f2
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/15/2018
-ms.locfileid: "42753625"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44137520"
 ---
 # <a name="pausing-and-interrupting-threads"></a>暂停和中断线程
 
@@ -49,10 +49,11 @@ ms.locfileid: "42753625"
   
 -   <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> 将线程从可能处于的任何等待中唤醒，并导致 <xref:System.Threading.ThreadAbortException> 在线程中抛出。 有关详细信息，请参阅[销毁线程](../../../docs/standard/threading/destroying-threads.md)。  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Threading.Thread>  
- <xref:System.Threading.ThreadInterruptedException>  
- <xref:System.Threading.ThreadAbortException>  
- [线程处理](../../../docs/standard/threading/index.md)  
- [使用线程和线程处理](../../../docs/standard/threading/using-threads-and-threading.md)  
- [同步基元概述](../../../docs/standard/threading/overview-of-synchronization-primitives.md)
+## <a name="see-also"></a>请参阅
+
+- <xref:System.Threading.Thread>  
+- <xref:System.Threading.ThreadInterruptedException>  
+- <xref:System.Threading.ThreadAbortException>  
+- [线程处理](../../../docs/standard/threading/index.md)  
+- [使用线程和线程处理](../../../docs/standard/threading/using-threads-and-threading.md)  
+- [同步基元概述](../../../docs/standard/threading/overview-of-synchronization-primitives.md)

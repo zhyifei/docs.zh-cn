@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: a9babe97-e457-4ff3-b528-a1bc940d5320
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b224e758eb5b0e07c76f055f22bfe827789f07ab
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: eefa1b52907525059b3403e7eb20542d3b5a5c73
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33574834"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44209953"
 ---
 # <a name="when-to-use-a-thread-safe-collection"></a>何时使用线程安全集合
 [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)] 新引入了五个专为支持多线程添加和删除操作而设计的集合类型。 为了实现线程安全性，这些新类型使用多种高效的锁定和免锁定同步机制。 同步会增加操作的开销。 开销数取决于所用的同步类型、执行的操作类型和其他因素，例如尝试并行访问该集合的线程数。  
@@ -62,7 +62,8 @@ ms.locfileid: "33574834"
 ## <a name="blockingcollection"></a>BlockingCollection  
  需要限制和阻止语义时，<xref:System.Collections.Concurrent.BlockingCollection%601?displayProperty=nameWithType> 的执行速度可能优于任何自定义实现。 它还支持诸多取消、枚举和异常处理操作。  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Collections.Concurrent?displayProperty=nameWithType>  
- [线程安全集合](../../../../docs/standard/collections/thread-safe/index.md)  
- [并行编程](../../../../docs/standard/parallel-programming/index.md)
+## <a name="see-also"></a>请参阅
+
+- <xref:System.Collections.Concurrent?displayProperty=nameWithType>  
+- [线程安全集合](../../../../docs/standard/collections/thread-safe/index.md)  
+- [并行编程](../../../../docs/standard/parallel-programming/index.md)

@@ -5,12 +5,12 @@ ms.assetid: 8efacc29-7367-47c2-8638-a4f66385ad91
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: 85c190756821ee14fffad600ce7b44029c314ec1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9a8230d382cfcf3709a2e4df42758470f3caea4e
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33397463"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44187385"
 ---
 # <a name="network-programming-samples"></a>网络编程示例
 本节包含可下载的网络编程示例的说明和链接，这些示例使用 <xref:System.Net>、<xref:System.Net.Cache>、<xref:System.Net.Configuration>、<xref:System.Net.Mail>、<xref:System.Net.Mime>、<xref:System.Net.NetworkInformation>、<xref:System.Net.Security>、<xref:System.Net.Sockets> 和相关命名空间中的类。 
@@ -28,7 +28,7 @@ ms.locfileid: "33397463"
  [HttpListener 技术示例](https://msdn.microsoft.com/en-us/library/y7cbb2y2(v=vs.85).aspx)  
  演示如何处理来自应用程序的 HTTP 请求。  
  
- [HttpListener ASPX 主机应用程序示例](https://docs.microsoft.com/en-us/previous-versions/visualstudio/visual-studio-2008/dd767375(v%3dvs.90))   
+ [HttpListener ASPX 主机应用程序示例](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/dd767375(v%3dvs.90))   
  演示如何使用 <xref:System.Net.HttpListener?displayProperty=nameWithType> 类的功能创建将调用路由至托管的 ASP.NET 应用程序的 HTTP 服务器。
   
  [Mailer 技术示例](https://msdn.microsoft.com/en-us/library/whw7xbk2(v=vs.85).aspx)  

@@ -13,11 +13,11 @@ ms.assetid: 90f308b9-82dc-414a-bce1-77e0155e56bd
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 939630726f399184c264f73ee01270f50981e83a
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43484800"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44209103"
 ---
 # <a name="registration-free-com-interop"></a>免注册 COM 互操作
 免注册 COM 互操作在不使用 Windows 注册表来存储程序集信息的情况下激活组件。 不是在部署过程中在计算机上注册组件，而是在设计时创建包含有关绑定和激活信息的 Win32 样式清单文件。 正是这些清单文件（而不是注册表项）指导对象的激活。  

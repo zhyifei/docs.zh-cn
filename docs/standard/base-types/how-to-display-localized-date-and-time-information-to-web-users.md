@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 377fe93c-32be-421a-a30a-be639a46ede8
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 63775d48ca2e11cfa121f3b7aeaff708d86e50de
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 27e9306164e3d0e008f38f2d94e1f9c11c0d7d3d
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33578152"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44085220"
 ---
 # <a name="how-to-display-localized-date-and-time-information-to-web-users"></a>如何：向 Web 用户显示本地化的日期和时间信息
 由于世界各地的人都可以查看网页，因此在与用户交互时，分析和设置日期和时间值的格式的操作不得依赖默认格式（通常是 Web 服务器本地区域性的格式）。 相反，处理用户输入的日期和时间字符串的 Web 窗体，应使用用户的首选区域性分析字符串。 同样，日期和时间数据应以符合用户区域性的格式向用户显示。 本主题演示如何执行此操作。  
@@ -108,8 +108,9 @@ ms.locfileid: "33578152"
 ## <a name="net-framework-security"></a>.NET Framework 安全性  
  为防止用户向 HTML 流注入脚本，不得在服务器响应中直接回显用户输入。 相反，应使用 <xref:System.Web.HttpServerUtility.HtmlEncode%2A?displayProperty=nameWithType> 方法进行回显。  
   
-## <a name="see-also"></a>请参阅  
- [执行格式设置操作](../../../docs/standard/base-types/performing-formatting-operations.md)  
- [标准日期和时间格式字符串](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)  
- [自定义日期和时间格式字符串](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)  
- [分析日期和时间字符串](../../../docs/standard/base-types/parsing-datetime.md)
+## <a name="see-also"></a>请参阅
+
+- [执行格式设置操作](../../../docs/standard/base-types/performing-formatting-operations.md)  
+- [标准日期和时间格式字符串](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)  
+- [自定义日期和时间格式字符串](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)  
+- [分析日期和时间字符串](../../../docs/standard/base-types/parsing-datetime.md)

@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 476b03dc-2b12-49a7-b067-41caeaa2f533
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4901a81e318efe8371dc72cd9c1d511d55b0c65b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 33c498e8379d68287bfe4a2e781d6797fd6b4c10
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33578971"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44192582"
 ---
 # <a name="managed-execution-process"></a>托管执行过程
 <a name="introduction"></a> 托管的执行过程包括以下步骤，在本主题后面将对此进行详细讨论：  
@@ -107,13 +107,14 @@ ms.locfileid: "33578971"
   
  [返回页首](#introduction)  
   
-## <a name="see-also"></a>请参阅  
- [概述](../../docs/framework/get-started/overview.md)  
- [语言独立性和与语言无关的组件](../../docs/standard/language-independence-and-language-independent-components.md)  
- [元数据和自描述组件](../../docs/standard/metadata-and-self-describing-components.md)  
- [Ilasm.exe（IL 汇编程序）](../../docs/framework/tools/ilasm-exe-il-assembler.md)  
- [安全性](../../docs/standard/security/index.md)  
- [与非托管代码交互操作](../../docs/framework/interop/index.md)  
- [部署](../../docs/framework/deployment/net-framework-applications.md)  
- [Assemblies in the Common Language Runtime](../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)（公共语言运行时中的程序集）  
- [应用程序域](../../docs/framework/app-domains/application-domains.md)
+## <a name="see-also"></a>请参阅
+
+- [概述](../../docs/framework/get-started/overview.md)  
+- [语言独立性和与语言无关的组件](../../docs/standard/language-independence-and-language-independent-components.md)  
+- [元数据和自描述组件](../../docs/standard/metadata-and-self-describing-components.md)  
+- [Ilasm.exe（IL 汇编程序）](../../docs/framework/tools/ilasm-exe-il-assembler.md)  
+- [安全性](../../docs/standard/security/index.md)  
+- [与非托管代码交互操作](../../docs/framework/interop/index.md)  
+- [部署](../../docs/framework/deployment/net-framework-applications.md)  
+- [Assemblies in the Common Language Runtime](../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)（公共语言运行时中的程序集）  
+- [应用程序域](../../docs/framework/app-domains/application-domains.md)

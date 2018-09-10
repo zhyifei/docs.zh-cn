@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: dd7604eb-9fa3-4b60-b2dd-b47739fa3148
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a3a0151f6cc3ce25ca0c52a25be328ece8cb4434
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5d28da0c788d40222ccd689807d6e51f66b4ce78
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33567362"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44193713"
 ---
 # <a name="applying-attributes"></a>应用特性
 使用以下过程将特性应用于代码的元素。  
@@ -52,8 +52,9 @@ ms.locfileid: "33567362"
   
  应用此特性时，字符串 `"My Assembly"` 将被放置在文件元数据部分的程序集清单中。 可通过后列方法查看特性：使用 [MSIL 反汇编程序 (Ildasm.exe)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md)，或创建一个自定义程序来检索特性。  
   
-## <a name="see-also"></a>请参阅  
- [特性](../../../docs/standard/attributes/index.md)  
- [检索存储在特性中的信息](../../../docs/standard/attributes/retrieving-information-stored-in-attributes.md)  
- [概念](/cpp/windows/attributed-programming-concepts)  
- [特性](https://msdn.microsoft.com/library/ae334cee-d96c-4243-a5e3-06dd7fcaf205)
+## <a name="see-also"></a>请参阅
+
+- [特性](../../../docs/standard/attributes/index.md)  
+- [检索存储在特性中的信息](../../../docs/standard/attributes/retrieving-information-stored-in-attributes.md)  
+- [概念](/cpp/windows/attributed-programming-concepts)  
+- [特性](https://msdn.microsoft.com/library/ae334cee-d96c-4243-a5e3-06dd7fcaf205)

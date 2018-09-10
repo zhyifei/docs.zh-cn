@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: b980eb4c-71d5-4860-864a-6dfe3692430a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 998e159cceded6da2e9c3068680c45bc1c9345a6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1a7561a09b1b47827b3476b5525863503765064f
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33591526"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44180132"
 ---
 # <a name="synchronizing-data-for-multithreading"></a>为多线程处理同步数据
 多个线程可以调用单个对象的属性和方法时，对这些调用进行同步处理是非常重要的。 否则，一个线程可能会中断另一个线程正在执行的任务，可能使该对象处于无效状态。 其成员不受这类中断影响的类叫做线程安全类。  
@@ -67,9 +67,10 @@ ms.locfileid: "33591526"
 ## <a name="synchronized-context"></a>同步上下文  
  可以使用任何 **ContextBoundObject** 上的 **SynchronizationAttribute** 来同步所有实例方法和字段。 同一上下文域中的所有对象都共享同一个锁。 允许多个线程访问方法和字段，但在任一时刻只允许一个线程访问。  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Runtime.Remoting.Contexts.SynchronizationAttribute>  
- [线程与线程处理](../../../docs/standard/threading/threads-and-threading.md)  
- [同步基元概述](../../../docs/standard/threading/overview-of-synchronization-primitives.md)  
- [SyncLock 语句](~/docs/visual-basic/language-reference/statements/synclock-statement.md)  
- [lock 语句](~/docs/csharp/language-reference/keywords/lock-statement.md)
+## <a name="see-also"></a>请参阅
+
+- <xref:System.Runtime.Remoting.Contexts.SynchronizationAttribute>  
+- [线程与线程处理](../../../docs/standard/threading/threads-and-threading.md)  
+- [同步基元概述](../../../docs/standard/threading/overview-of-synchronization-primitives.md)  
+- [SyncLock 语句](~/docs/visual-basic/language-reference/statements/synclock-statement.md)  
+- [lock 语句](~/docs/csharp/language-reference/keywords/lock-statement.md)

@@ -4,12 +4,12 @@ description: 用于容器化 .NET 应用程序的 .NET 微服务体系结构 | �
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.openlocfilehash: 7e539067b20f0e018496b0076582619cb88072e1
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 4c514f3a7dc1fb01b2f1ed2dddc9d938c1101809
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43480660"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44268846"
 ---
 # <a name="challenges-and-solutions-for-distributed-data-management"></a>分布式数据管理的挑战和解决方案
 
@@ -79,7 +79,7 @@ ms.locfileid: "43480660"
 
 因此，为强化微服务自治并且提升复原能力，应尽可能少地使用跨微服务的请求/响应通信链。 建议只使用异步交互进行微服务之间的通信，方法是使用基于消息和事件的异步通信，或使用独立于原始 HTTP 请求/响应周期的 HTTP 轮询。
 
-异步通信的使用将在本指南的[异步微服务集成强化了微服务的自治性](#asynchronous-microservice-integration-enforce-microservices-autonomy)和[基于消息的异步通信](#asynchronous-message-based-communication)部分详细介绍。
+异步通信的使用将在本指南的[异步微服务集成强化了微服务的自治性](communication-in-microservice-architecture.md#asynchronous-microservice-integration-enforces-microservices-autonomy)和[基于消息的异步通信](asynchronous-message-based-communication.md)部分详细介绍。
 
 ## <a name="additional-resources"></a>其他资源
 

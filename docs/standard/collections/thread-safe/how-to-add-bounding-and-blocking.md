@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 4c2492de-3876-4873-b5a1-000bb404d770
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6262822e0916e142c7c543d2e2546c8540cb73a5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3f52d1067a8aa907c8f1cf8b550eec82d1133b3f
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33568571"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44261741"
 ---
 # <a name="how-to-add-bounding-and-blocking-functionality-to-a-collection"></a>如何：向集合添加限制和阻塞功能
 本示例演示如何通过实现类中的 <xref:System.Collections.Concurrent.IProducerConsumerCollection%601?displayProperty=nameWithType> 接口，然后将类实例用作 <xref:System.Collections.Concurrent.BlockingCollection%601?displayProperty=nameWithType> 的内部存储机制，来向自定义集合类添加限制和阻塞功能。 有关限制和阻塞的详细信息，请参阅 [BlockingCollection 概述](../../../../docs/standard/collections/thread-safe/blockingcollection-overview.md)。  
@@ -28,5 +28,6 @@ ms.locfileid: "33568571"
   
  默认情况下，<xref:System.Collections.Concurrent.BlockingCollection%601?displayProperty=nameWithType> 的存储为 <xref:System.Collections.Concurrent.ConcurrentQueue%601?displayProperty=nameWithType>。  
   
-## <a name="see-also"></a>请参阅  
- [线程安全集合](../../../../docs/standard/collections/thread-safe/index.md)
+## <a name="see-also"></a>请参阅
+
+- [线程安全集合](../../../../docs/standard/collections/thread-safe/index.md)
