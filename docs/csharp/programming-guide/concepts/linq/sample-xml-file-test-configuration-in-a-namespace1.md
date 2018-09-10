@@ -2,17 +2,17 @@
 title: 示例 XML 文件：Namespace1 中的测试配置
 ms.date: 07/20/2015
 ms.assetid: e75ad1bc-5636-4623-9a34-a286a8c485d6
-ms.openlocfilehash: 04d66eaa7fd134fdf368614ca94261b80c16d4d9
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.openlocfilehash: 01470a66ac42eb9fd68fdcde0d0a4bf9150e3d5f
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42932075"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43506496"
 ---
-# <a name="sample-xml-file-test-configuration-in-a-namespace"></a><span data-ttu-id="47ff8-102">示例 XML 文件：测试命名空间中的配置</span><span class="sxs-lookup"><span data-stu-id="47ff8-102">Sample XML File: Test Configuration in a Namespace</span></span>
-<span data-ttu-id="47ff8-103">下面的 XML 文件用在 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 文档的很多示例中。</span><span class="sxs-lookup"><span data-stu-id="47ff8-103">The following XML file is used in various examples in the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] documentation.</span></span> <span data-ttu-id="47ff8-104">这是一个测试配置文件。</span><span class="sxs-lookup"><span data-stu-id="47ff8-104">This is a test configuration file.</span></span> <span data-ttu-id="47ff8-105">该 XML 在某个命名空间中。</span><span class="sxs-lookup"><span data-stu-id="47ff8-105">The XML is in a namespace.</span></span>  
+# <a name="sample-xml-file-test-configuration-in-a-namespace"></a><span data-ttu-id="27d26-102">示例 XML 文件：测试命名空间中的配置</span><span class="sxs-lookup"><span data-stu-id="27d26-102">Sample XML File: Test Configuration in a Namespace</span></span>
+<span data-ttu-id="27d26-103">下面的 XML 文件用在 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 文档的很多示例中。</span><span class="sxs-lookup"><span data-stu-id="27d26-103">The following XML file is used in various examples in the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] documentation.</span></span> <span data-ttu-id="27d26-104">这是一个测试配置文件。</span><span class="sxs-lookup"><span data-stu-id="27d26-104">This is a test configuration file.</span></span> <span data-ttu-id="27d26-105">该 XML 在某个命名空间中。</span><span class="sxs-lookup"><span data-stu-id="27d26-105">The XML is in a namespace.</span></span>  
   
-## <a name="testconfiginnamespacexml"></a><span data-ttu-id="47ff8-106">TestConfigInNamespace.xml</span><span class="sxs-lookup"><span data-stu-id="47ff8-106">TestConfigInNamespace.xml</span></span>  
+## <a name="testconfiginnamespacexml"></a><span data-ttu-id="27d26-106">TestConfigInNamespace.xml</span><span class="sxs-lookup"><span data-stu-id="27d26-106">TestConfigInNamespace.xml</span></span>  
   
 ```xml  
 <?xml version="1.0"?>  
@@ -56,5 +56,6 @@ ms.locfileid: "42932075"
 </Tests>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="47ff8-107">请参阅</span><span class="sxs-lookup"><span data-stu-id="47ff8-107">See Also</span></span>  
- [<span data-ttu-id="47ff8-108">示例 XML 文档 (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="47ff8-108">Sample XML Documents (LINQ to XML)</span></span>](../../../../csharp/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)
+## <a name="see-also"></a><span data-ttu-id="27d26-107">请参阅</span><span class="sxs-lookup"><span data-stu-id="27d26-107">See Also</span></span>
+
+- [<span data-ttu-id="27d26-108">示例 XML 文档 (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="27d26-108">Sample XML Documents (LINQ to XML)</span></span>](../../../../csharp/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)

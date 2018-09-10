@@ -2,17 +2,17 @@
 title: 示例 XML 文件：合并的采购订单 2
 ms.date: 07/20/2015
 ms.assetid: 9d9698a5-95f2-4564-813b-ba536cdf3bfb
-ms.openlocfilehash: d9a97b097f208cdabb63023b36db1e374ac61c3f
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 3f7f24d0607be9a657e00b9e81c821ac3b41c3b2
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43403583"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43520468"
 ---
-# <a name="sample-xml-file-consolidated-purchase-orders"></a><span data-ttu-id="2ad8b-102">示例 XML 文件：合并的采购订单</span><span class="sxs-lookup"><span data-stu-id="2ad8b-102">Sample XML File: Consolidated Purchase Orders</span></span>
-<span data-ttu-id="2ad8b-103">下面的 XML 文件用在 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 文档的很多示例中。</span><span class="sxs-lookup"><span data-stu-id="2ad8b-103">The following XML file is used in various examples in the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] documentation.</span></span> <span data-ttu-id="2ad8b-104">此文件是一组来自多家公司、具有不同形状的采购订单。</span><span class="sxs-lookup"><span data-stu-id="2ad8b-104">This file is a set of purchase orders with different shapes from multiple companies.</span></span> <span data-ttu-id="2ad8b-105">每家公司的采购订单位于单独的命名空间中。</span><span class="sxs-lookup"><span data-stu-id="2ad8b-105">Purchase orders from each company are in separate namespaces.</span></span>  
+# <a name="sample-xml-file-consolidated-purchase-orders"></a><span data-ttu-id="b30ac-102">示例 XML 文件：合并的采购订单</span><span class="sxs-lookup"><span data-stu-id="b30ac-102">Sample XML File: Consolidated Purchase Orders</span></span>
+<span data-ttu-id="b30ac-103">下面的 XML 文件用在 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 文档的很多示例中。</span><span class="sxs-lookup"><span data-stu-id="b30ac-103">The following XML file is used in various examples in the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] documentation.</span></span> <span data-ttu-id="b30ac-104">此文件是一组来自多家公司、具有不同形状的采购订单。</span><span class="sxs-lookup"><span data-stu-id="b30ac-104">This file is a set of purchase orders with different shapes from multiple companies.</span></span> <span data-ttu-id="b30ac-105">每家公司的采购订单位于单独的命名空间中。</span><span class="sxs-lookup"><span data-stu-id="b30ac-105">Purchase orders from each company are in separate namespaces.</span></span>  
   
-## <a name="consolidatedpurchaseordersxml"></a><span data-ttu-id="2ad8b-106">ConsolidatedPurchaseOrders.xml</span><span class="sxs-lookup"><span data-stu-id="2ad8b-106">ConsolidatedPurchaseOrders.xml</span></span>  
+## <a name="consolidatedpurchaseordersxml"></a><span data-ttu-id="b30ac-106">ConsolidatedPurchaseOrders.xml</span><span class="sxs-lookup"><span data-stu-id="b30ac-106">ConsolidatedPurchaseOrders.xml</span></span>  
   
 ```xml  
 <?xml version="1.0"?>  
@@ -144,5 +144,6 @@ ms.locfileid: "43403583"
 </PurchaseOrders>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="2ad8b-107">请参阅</span><span class="sxs-lookup"><span data-stu-id="2ad8b-107">See Also</span></span>  
- [<span data-ttu-id="2ad8b-108">示例 XML 文档 (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="2ad8b-108">Sample XML Documents (LINQ to XML)</span></span>](../../../../csharp/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)
+## <a name="see-also"></a><span data-ttu-id="b30ac-107">请参阅</span><span class="sxs-lookup"><span data-stu-id="b30ac-107">See Also</span></span>
+
+- [<span data-ttu-id="b30ac-108">示例 XML 文档 (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="b30ac-108">Sample XML Documents (LINQ to XML)</span></span>](../../../../csharp/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)
