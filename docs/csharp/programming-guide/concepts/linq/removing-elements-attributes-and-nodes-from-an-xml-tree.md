@@ -2,41 +2,41 @@
 title: 从 XML 树中删除元素、属性和节点 (C#)
 ms.date: 07/20/2015
 ms.assetid: 07dd06d6-1117-4077-bf98-9120cf51176e
-ms.openlocfilehash: 85c1adc06321abf90fe478abf5375882069f11ec
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9ce63ce6a4ef75dedc788efca11e8dd2bdb471eb
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33339964"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44217485"
 ---
-# <a name="removing-elements-attributes-and-nodes-from-an-xml-tree-c"></a><span data-ttu-id="4ebad-102">从 XML 树中删除元素、属性和节点 (C#)</span><span class="sxs-lookup"><span data-stu-id="4ebad-102">Removing Elements, Attributes, and Nodes from an XML Tree (C#)</span></span>
-<span data-ttu-id="4ebad-103">可以修改 XML 树，移除元素、属性和其他类型的节点。</span><span class="sxs-lookup"><span data-stu-id="4ebad-103">You can modify an XML tree, removing elements, attributes, and other types of nodes.</span></span>  
+# <a name="removing-elements-attributes-and-nodes-from-an-xml-tree-c"></a><span data-ttu-id="96329-102">从 XML 树中删除元素、属性和节点 (C#)</span><span class="sxs-lookup"><span data-stu-id="96329-102">Removing Elements, Attributes, and Nodes from an XML Tree (C#)</span></span>
+<span data-ttu-id="96329-103">可以修改 XML 树，移除元素、属性和其他类型的节点。</span><span class="sxs-lookup"><span data-stu-id="96329-103">You can modify an XML tree, removing elements, attributes, and other types of nodes.</span></span>  
   
- <span data-ttu-id="4ebad-104">从 XML 文档中移除单个元素或单个属性的操作非常简单。</span><span class="sxs-lookup"><span data-stu-id="4ebad-104">Removing a single element or a single attribute from an XML document is straightforward.</span></span> <span data-ttu-id="4ebad-105">但是，若要移除多个元素或属性的集合，则应首先将一个集合具体化为一个列表，然后从该列表中删除相应元素或属性。</span><span class="sxs-lookup"><span data-stu-id="4ebad-105">However, when removing collections of elements or attributes, you should first materialize a collection into a list, and then delete the elements or attributes from the list.</span></span> <span data-ttu-id="4ebad-106">最好的方法是使用 <xref:System.Xml.Linq.Extensions.Remove%2A> 扩展方法，该方法可以实现此操作。</span><span class="sxs-lookup"><span data-stu-id="4ebad-106">The best approach is to use the <xref:System.Xml.Linq.Extensions.Remove%2A> extension method, which will do this for you.</span></span>  
+ <span data-ttu-id="96329-104">从 XML 文档中移除单个元素或单个属性的操作非常简单。</span><span class="sxs-lookup"><span data-stu-id="96329-104">Removing a single element or a single attribute from an XML document is straightforward.</span></span> <span data-ttu-id="96329-105">但是，若要移除多个元素或属性的集合，则应首先将一个集合具体化为一个列表，然后从该列表中删除相应元素或属性。</span><span class="sxs-lookup"><span data-stu-id="96329-105">However, when removing collections of elements or attributes, you should first materialize a collection into a list, and then delete the elements or attributes from the list.</span></span> <span data-ttu-id="96329-106">最好的方法是使用 <xref:System.Xml.Linq.Extensions.Remove%2A> 扩展方法，该方法可以实现此操作。</span><span class="sxs-lookup"><span data-stu-id="96329-106">The best approach is to use the <xref:System.Xml.Linq.Extensions.Remove%2A> extension method, which will do this for you.</span></span>  
   
- <span data-ttu-id="4ebad-107">这么做的主要原因在于，从 XML 树检索的大多数集合都是用延迟执行生成的。</span><span class="sxs-lookup"><span data-stu-id="4ebad-107">The main reason for doing this is that most of the collections you retrieve from an XML tree are yielded using deferred execution.</span></span> <span data-ttu-id="4ebad-108">如果不首先将集合具体化为列表，或者不使用扩展方法，则可能会遇到某类 Bug。</span><span class="sxs-lookup"><span data-stu-id="4ebad-108">If you do not first materialize them into a list, or if you do not use the extension methods, it is possible to encounter a certain class of bugs.</span></span> <span data-ttu-id="4ebad-109">有关详细信息，请参阅[混合声明性代码/命令性代码的问题 (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/mixed-declarative-code-imperative-code-bugs-linq-to-xml.md)。</span><span class="sxs-lookup"><span data-stu-id="4ebad-109">For more information, see [Mixed Declarative Code/Imperative Code Bugs (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/mixed-declarative-code-imperative-code-bugs-linq-to-xml.md).</span></span>  
+ <span data-ttu-id="96329-107">这么做的主要原因在于，从 XML 树检索的大多数集合都是用延迟执行生成的。</span><span class="sxs-lookup"><span data-stu-id="96329-107">The main reason for doing this is that most of the collections you retrieve from an XML tree are yielded using deferred execution.</span></span> <span data-ttu-id="96329-108">如果不首先将集合具体化为列表，或者不使用扩展方法，则可能会遇到某类 Bug。</span><span class="sxs-lookup"><span data-stu-id="96329-108">If you do not first materialize them into a list, or if you do not use the extension methods, it is possible to encounter a certain class of bugs.</span></span> <span data-ttu-id="96329-109">有关详细信息，请参阅[混合声明性代码/命令性代码的问题 (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/mixed-declarative-code-imperative-code-bugs-linq-to-xml.md)。</span><span class="sxs-lookup"><span data-stu-id="96329-109">For more information, see [Mixed Declarative Code/Imperative Code Bugs (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/mixed-declarative-code-imperative-code-bugs-linq-to-xml.md).</span></span>  
   
- <span data-ttu-id="4ebad-110">下列方法可以从 XML 树中移除节点和属性。</span><span class="sxs-lookup"><span data-stu-id="4ebad-110">The following methods remove nodes and attributes from an XML tree.</span></span>  
+ <span data-ttu-id="96329-110">下列方法可以从 XML 树中移除节点和属性。</span><span class="sxs-lookup"><span data-stu-id="96329-110">The following methods remove nodes and attributes from an XML tree.</span></span>  
   
-|<span data-ttu-id="4ebad-111">方法</span><span class="sxs-lookup"><span data-stu-id="4ebad-111">Method</span></span>|<span data-ttu-id="4ebad-112">描述</span><span class="sxs-lookup"><span data-stu-id="4ebad-112">Description</span></span>|  
+|<span data-ttu-id="96329-111">方法</span><span class="sxs-lookup"><span data-stu-id="96329-111">Method</span></span>|<span data-ttu-id="96329-112">描述</span><span class="sxs-lookup"><span data-stu-id="96329-112">Description</span></span>|  
 |------------|-----------------|  
-|<xref:System.Xml.Linq.XAttribute.Remove%2A?displayProperty=nameWithType>|<span data-ttu-id="4ebad-113">从父节点中移除 <xref:System.Xml.Linq.XAttribute>。</span><span class="sxs-lookup"><span data-stu-id="4ebad-113">Removes an <xref:System.Xml.Linq.XAttribute> from its parent.</span></span>|  
-|<xref:System.Xml.Linq.XContainer.RemoveNodes%2A?displayProperty=nameWithType>|<span data-ttu-id="4ebad-114">从 <xref:System.Xml.Linq.XContainer> 中移除子节点。</span><span class="sxs-lookup"><span data-stu-id="4ebad-114">Removes the child nodes from an <xref:System.Xml.Linq.XContainer>.</span></span>|  
-|<xref:System.Xml.Linq.XElement.RemoveAll%2A?displayProperty=nameWithType>|<span data-ttu-id="4ebad-115">从 <xref:System.Xml.Linq.XElement> 中移除内容和属性。</span><span class="sxs-lookup"><span data-stu-id="4ebad-115">Removes content and attributes from an <xref:System.Xml.Linq.XElement>.</span></span>|  
-|<xref:System.Xml.Linq.XElement.RemoveAttributes%2A?displayProperty=nameWithType>|<span data-ttu-id="4ebad-116">移除 <xref:System.Xml.Linq.XElement> 的属性。</span><span class="sxs-lookup"><span data-stu-id="4ebad-116">Removes the attributes of an <xref:System.Xml.Linq.XElement>.</span></span>|  
-|<xref:System.Xml.Linq.XElement.SetAttributeValue%2A?displayProperty=nameWithType>|<span data-ttu-id="4ebad-117">如果传递 `null` 作为值，则移除该属性。</span><span class="sxs-lookup"><span data-stu-id="4ebad-117">If you pass `null` for value, then removes the attribute.</span></span>|  
-|<xref:System.Xml.Linq.XElement.SetElementValue%2A?displayProperty=nameWithType>|<span data-ttu-id="4ebad-118">如果传递 `null` 作为值，则移除该子元素。</span><span class="sxs-lookup"><span data-stu-id="4ebad-118">If you pass `null` for value, then removes the child element.</span></span>|  
-|<xref:System.Xml.Linq.XNode.Remove%2A?displayProperty=nameWithType>|<span data-ttu-id="4ebad-119">从父节点中移除 <xref:System.Xml.Linq.XNode>。</span><span class="sxs-lookup"><span data-stu-id="4ebad-119">Removes an <xref:System.Xml.Linq.XNode> from its parent.</span></span>|  
-|<xref:System.Xml.Linq.Extensions.Remove%2A?displayProperty=nameWithType>|<span data-ttu-id="4ebad-120">从父元素中移除源集合中的每个属性或元素。</span><span class="sxs-lookup"><span data-stu-id="4ebad-120">Removes every attribute or element in the source collection from its parent element.</span></span>|  
+|<xref:System.Xml.Linq.XAttribute.Remove%2A?displayProperty=nameWithType>|<span data-ttu-id="96329-113">从父节点中移除 <xref:System.Xml.Linq.XAttribute>。</span><span class="sxs-lookup"><span data-stu-id="96329-113">Removes an <xref:System.Xml.Linq.XAttribute> from its parent.</span></span>|  
+|<xref:System.Xml.Linq.XContainer.RemoveNodes%2A?displayProperty=nameWithType>|<span data-ttu-id="96329-114">从 <xref:System.Xml.Linq.XContainer> 中移除子节点。</span><span class="sxs-lookup"><span data-stu-id="96329-114">Removes the child nodes from an <xref:System.Xml.Linq.XContainer>.</span></span>|  
+|<xref:System.Xml.Linq.XElement.RemoveAll%2A?displayProperty=nameWithType>|<span data-ttu-id="96329-115">从 <xref:System.Xml.Linq.XElement> 中移除内容和属性。</span><span class="sxs-lookup"><span data-stu-id="96329-115">Removes content and attributes from an <xref:System.Xml.Linq.XElement>.</span></span>|  
+|<xref:System.Xml.Linq.XElement.RemoveAttributes%2A?displayProperty=nameWithType>|<span data-ttu-id="96329-116">移除 <xref:System.Xml.Linq.XElement> 的属性。</span><span class="sxs-lookup"><span data-stu-id="96329-116">Removes the attributes of an <xref:System.Xml.Linq.XElement>.</span></span>|  
+|<xref:System.Xml.Linq.XElement.SetAttributeValue%2A?displayProperty=nameWithType>|<span data-ttu-id="96329-117">如果传递 `null` 作为值，则移除该属性。</span><span class="sxs-lookup"><span data-stu-id="96329-117">If you pass `null` for value, then removes the attribute.</span></span>|  
+|<xref:System.Xml.Linq.XElement.SetElementValue%2A?displayProperty=nameWithType>|<span data-ttu-id="96329-118">如果传递 `null` 作为值，则移除该子元素。</span><span class="sxs-lookup"><span data-stu-id="96329-118">If you pass `null` for value, then removes the child element.</span></span>|  
+|<xref:System.Xml.Linq.XNode.Remove%2A?displayProperty=nameWithType>|<span data-ttu-id="96329-119">从父节点中移除 <xref:System.Xml.Linq.XNode>。</span><span class="sxs-lookup"><span data-stu-id="96329-119">Removes an <xref:System.Xml.Linq.XNode> from its parent.</span></span>|  
+|<xref:System.Xml.Linq.Extensions.Remove%2A?displayProperty=nameWithType>|<span data-ttu-id="96329-120">从父元素中移除源集合中的每个属性或元素。</span><span class="sxs-lookup"><span data-stu-id="96329-120">Removes every attribute or element in the source collection from its parent element.</span></span>|  
   
-## <a name="example"></a><span data-ttu-id="4ebad-121">示例</span><span class="sxs-lookup"><span data-stu-id="4ebad-121">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="96329-121">示例</span><span class="sxs-lookup"><span data-stu-id="96329-121">Example</span></span>  
   
-### <a name="description"></a><span data-ttu-id="4ebad-122">描述</span><span class="sxs-lookup"><span data-stu-id="4ebad-122">Description</span></span>  
- <span data-ttu-id="4ebad-123">此示例演示三种移除元素的方法。</span><span class="sxs-lookup"><span data-stu-id="4ebad-123">This example demonstrates three approaches to removing elements.</span></span> <span data-ttu-id="4ebad-124">第一种，移除单个元素。</span><span class="sxs-lookup"><span data-stu-id="4ebad-124">First, it removes a single element.</span></span> <span data-ttu-id="4ebad-125">第二种，检索元素的集合，使用 <xref:System.Linq.Enumerable.ToList%2A?displayProperty=nameWithType> 运算符将它们具体化，然后移除集合。</span><span class="sxs-lookup"><span data-stu-id="4ebad-125">Second, it retrieves a collection of elements, materializes them using the <xref:System.Linq.Enumerable.ToList%2A?displayProperty=nameWithType> operator, and removes the collection.</span></span> <span data-ttu-id="4ebad-126">最后一种，检索元素的集合，使用 <xref:System.Xml.Linq.Extensions.Remove%2A> 扩展方法移除元素。</span><span class="sxs-lookup"><span data-stu-id="4ebad-126">Finally, it retrieves a collection of elements and removes them using the <xref:System.Xml.Linq.Extensions.Remove%2A> extension method.</span></span>  
+### <a name="description"></a><span data-ttu-id="96329-122">描述</span><span class="sxs-lookup"><span data-stu-id="96329-122">Description</span></span>  
+ <span data-ttu-id="96329-123">此示例演示三种移除元素的方法。</span><span class="sxs-lookup"><span data-stu-id="96329-123">This example demonstrates three approaches to removing elements.</span></span> <span data-ttu-id="96329-124">第一种，移除单个元素。</span><span class="sxs-lookup"><span data-stu-id="96329-124">First, it removes a single element.</span></span> <span data-ttu-id="96329-125">第二种，检索元素的集合，使用 <xref:System.Linq.Enumerable.ToList%2A?displayProperty=nameWithType> 运算符将它们具体化，然后移除集合。</span><span class="sxs-lookup"><span data-stu-id="96329-125">Second, it retrieves a collection of elements, materializes them using the <xref:System.Linq.Enumerable.ToList%2A?displayProperty=nameWithType> operator, and removes the collection.</span></span> <span data-ttu-id="96329-126">最后一种，检索元素的集合，使用 <xref:System.Xml.Linq.Extensions.Remove%2A> 扩展方法移除元素。</span><span class="sxs-lookup"><span data-stu-id="96329-126">Finally, it retrieves a collection of elements and removes them using the <xref:System.Xml.Linq.Extensions.Remove%2A> extension method.</span></span>  
   
- <span data-ttu-id="4ebad-127">有关 <xref:System.Linq.Enumerable.ToList%2A> 运算符的详细信息，请参阅[转换数据类型 (C#)](../../../../csharp/programming-guide/concepts/linq/converting-data-types.md)。</span><span class="sxs-lookup"><span data-stu-id="4ebad-127">For more information on the <xref:System.Linq.Enumerable.ToList%2A> operator, see [Converting Data Types (C#)](../../../../csharp/programming-guide/concepts/linq/converting-data-types.md).</span></span>  
+ <span data-ttu-id="96329-127">有关 <xref:System.Linq.Enumerable.ToList%2A> 运算符的详细信息，请参阅[转换数据类型 (C#)](../../../../csharp/programming-guide/concepts/linq/converting-data-types.md)。</span><span class="sxs-lookup"><span data-stu-id="96329-127">For more information on the <xref:System.Linq.Enumerable.ToList%2A> operator, see [Converting Data Types (C#)](../../../../csharp/programming-guide/concepts/linq/converting-data-types.md).</span></span>  
   
-### <a name="code"></a><span data-ttu-id="4ebad-128">代码</span><span class="sxs-lookup"><span data-stu-id="4ebad-128">Code</span></span>  
+### <a name="code"></a><span data-ttu-id="96329-128">代码</span><span class="sxs-lookup"><span data-stu-id="96329-128">Code</span></span>  
   
 ```csharp  
 XElement root = XElement.Parse(@"<Root>  
@@ -62,8 +62,8 @@ root.Element("Child3").Elements().Remove();
 Console.WriteLine(root);  
 ```  
   
-### <a name="comments"></a><span data-ttu-id="4ebad-129">注释</span><span class="sxs-lookup"><span data-stu-id="4ebad-129">Comments</span></span>  
- <span data-ttu-id="4ebad-130">此代码生成以下输出：</span><span class="sxs-lookup"><span data-stu-id="4ebad-130">This code produces the following output:</span></span>  
+### <a name="comments"></a><span data-ttu-id="96329-129">注释</span><span class="sxs-lookup"><span data-stu-id="96329-129">Comments</span></span>  
+ <span data-ttu-id="96329-130">此代码生成以下输出：</span><span class="sxs-lookup"><span data-stu-id="96329-130">This code produces the following output:</span></span>  
   
 ```xml  
 <Root>  
@@ -76,7 +76,8 @@ Console.WriteLine(root);
 </Root>  
 ```  
   
- <span data-ttu-id="4ebad-131">请注意，第一个孙元素已从 `Child1` 中移除。</span><span class="sxs-lookup"><span data-stu-id="4ebad-131">Notice that the first grandchild element has been removed from `Child1`.</span></span> <span data-ttu-id="4ebad-132">所有孙元素都已从 `Child2` 和 `Child3` 中移除。</span><span class="sxs-lookup"><span data-stu-id="4ebad-132">All grandchildren elements have been removed from `Child2` and from `Child3`.</span></span>  
+ <span data-ttu-id="96329-131">请注意，第一个孙元素已从 `Child1` 中移除。</span><span class="sxs-lookup"><span data-stu-id="96329-131">Notice that the first grandchild element has been removed from `Child1`.</span></span> <span data-ttu-id="96329-132">所有孙元素都已从 `Child2` 和 `Child3` 中移除。</span><span class="sxs-lookup"><span data-stu-id="96329-132">All grandchildren elements have been removed from `Child2` and from `Child3`.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="4ebad-133">请参阅</span><span class="sxs-lookup"><span data-stu-id="4ebad-133">See Also</span></span>  
- [<span data-ttu-id="4ebad-134">修改 XML 树 (LINQ to XML) (C#)</span><span class="sxs-lookup"><span data-stu-id="4ebad-134">Modifying XML Trees (LINQ to XML) (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/modifying-xml-trees-linq-to-xml.md)
+## <a name="see-also"></a><span data-ttu-id="96329-133">请参阅</span><span class="sxs-lookup"><span data-stu-id="96329-133">See Also</span></span>
+
+- [<span data-ttu-id="96329-134">修改 XML 树 (LINQ to XML) (C#)</span><span class="sxs-lookup"><span data-stu-id="96329-134">Modifying XML Trees (LINQ to XML) (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/modifying-xml-trees-linq-to-xml.md)

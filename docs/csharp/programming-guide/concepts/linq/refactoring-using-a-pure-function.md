@@ -2,22 +2,22 @@
 title: 使用纯函数重构 (C#)
 ms.date: 07/20/2015
 ms.assetid: a3416a45-9e12-4e4a-9747-897f06eef510
-ms.openlocfilehash: ac0cd63790d5600a96c868a8c7f446ceda737eb5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 28f31b144cbdbd85febfc57acccb9bd7a158d702
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33340679"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44266435"
 ---
-# <a name="refactoring-using-a-pure-function-c"></a><span data-ttu-id="de925-102">使用纯函数重构 (C#)</span><span class="sxs-lookup"><span data-stu-id="de925-102">Refactoring Using a Pure Function (C#)</span></span>
-<span data-ttu-id="de925-103">下面的示例使用一个纯函数对前面的示例[使用扩展方法重构 (C#)](../../../../csharp/programming-guide/concepts/linq/refactoring-using-an-extension-method.md) 进行重构。在本示例中，查找段落文本的代码将移至纯静态方法 `ParagraphText` 中。</span><span class="sxs-lookup"><span data-stu-id="de925-103">The following example refactors the previous example, [Refactoring Using an Extension Method (C#)](../../../../csharp/programming-guide/concepts/linq/refactoring-using-an-extension-method.md), to use a pure function In this example, the code to find the text of a paragraph is moved to the pure static method `ParagraphText`.</span></span>  
+# <a name="refactoring-using-a-pure-function-c"></a><span data-ttu-id="90371-102">使用纯函数重构 (C#)</span><span class="sxs-lookup"><span data-stu-id="90371-102">Refactoring Using a Pure Function (C#)</span></span>
+<span data-ttu-id="90371-103">下面的示例使用一个纯函数对前面的示例[使用扩展方法重构 (C#)](../../../../csharp/programming-guide/concepts/linq/refactoring-using-an-extension-method.md) 进行重构。在本示例中，查找段落文本的代码将移至纯静态方法 `ParagraphText` 中。</span><span class="sxs-lookup"><span data-stu-id="90371-103">The following example refactors the previous example, [Refactoring Using an Extension Method (C#)](../../../../csharp/programming-guide/concepts/linq/refactoring-using-an-extension-method.md), to use a pure function In this example, the code to find the text of a paragraph is moved to the pure static method `ParagraphText`.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="de925-104">示例</span><span class="sxs-lookup"><span data-stu-id="de925-104">Example</span></span>  
- <span data-ttu-id="de925-105">本示例处理一个 WordprocessingML 文档，它从 WordprocessingML 文档中检索段落节点。</span><span class="sxs-lookup"><span data-stu-id="de925-105">This example processes a WordprocessingML document, retrieving the paragraph nodes from a WordprocessingML document.</span></span> <span data-ttu-id="de925-106">它还标识每个段落的样式。</span><span class="sxs-lookup"><span data-stu-id="de925-106">It also identifies the style of each paragraph.</span></span> <span data-ttu-id="de925-107">本示例以本教程中前面的一些示例为基础构建。</span><span class="sxs-lookup"><span data-stu-id="de925-107">This example builds on the previous examples in this tutorial.</span></span> <span data-ttu-id="de925-108">下面代码中的注释标识出了重构的代码。</span><span class="sxs-lookup"><span data-stu-id="de925-108">The refactored code is called out in comments in the code below.</span></span>  
+## <a name="example"></a><span data-ttu-id="90371-104">示例</span><span class="sxs-lookup"><span data-stu-id="90371-104">Example</span></span>  
+ <span data-ttu-id="90371-105">本示例处理一个 WordprocessingML 文档，它从 WordprocessingML 文档中检索段落节点。</span><span class="sxs-lookup"><span data-stu-id="90371-105">This example processes a WordprocessingML document, retrieving the paragraph nodes from a WordprocessingML document.</span></span> <span data-ttu-id="90371-106">它还标识每个段落的样式。</span><span class="sxs-lookup"><span data-stu-id="90371-106">It also identifies the style of each paragraph.</span></span> <span data-ttu-id="90371-107">本示例以本教程中前面的一些示例为基础构建。</span><span class="sxs-lookup"><span data-stu-id="90371-107">This example builds on the previous examples in this tutorial.</span></span> <span data-ttu-id="90371-108">下面代码中的注释标识出了重构的代码。</span><span class="sxs-lookup"><span data-stu-id="90371-108">The refactored code is called out in comments in the code below.</span></span>  
   
- <span data-ttu-id="de925-109">有关创建此示例的源文档的说明，请参阅[创建源 Office Open XML 文档 (C#)](../../../../csharp/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md)。</span><span class="sxs-lookup"><span data-stu-id="de925-109">For instructions for creating the source document for this example, see [Creating the Source Office Open XML Document (C#)](../../../../csharp/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md).</span></span>  
+ <span data-ttu-id="90371-109">有关创建此示例的源文档的说明，请参阅[创建源 Office Open XML 文档 (C#)](../../../../csharp/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md)。</span><span class="sxs-lookup"><span data-stu-id="90371-109">For instructions for creating the source document for this example, see [Creating the Source Office Open XML Document (C#)](../../../../csharp/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md).</span></span>  
   
- <span data-ttu-id="de925-110">本示例使用 WindowsBase 程序集中的类。</span><span class="sxs-lookup"><span data-stu-id="de925-110">This example uses classes from the WindowsBase assembly.</span></span> <span data-ttu-id="de925-111">它使用 <xref:System.IO.Packaging?displayProperty=nameWithType> 命名空间中的类型。</span><span class="sxs-lookup"><span data-stu-id="de925-111">It uses types in the <xref:System.IO.Packaging?displayProperty=nameWithType> namespace.</span></span>  
+ <span data-ttu-id="90371-110">本示例使用 WindowsBase 程序集中的类。</span><span class="sxs-lookup"><span data-stu-id="90371-110">This example uses classes from the WindowsBase assembly.</span></span> <span data-ttu-id="90371-111">它使用 <xref:System.IO.Packaging?displayProperty=nameWithType> 命名空间中的类型。</span><span class="sxs-lookup"><span data-stu-id="90371-111">It uses types in the <xref:System.IO.Packaging?displayProperty=nameWithType> namespace.</span></span>  
   
 ```csharp  
 public static class LocalExtensions  
@@ -154,7 +154,7 @@ class Program
 }  
 ```  
   
- <span data-ttu-id="de925-112">此示例生成与重构前相同的输出：</span><span class="sxs-lookup"><span data-stu-id="de925-112">This example produces the same output as before the refactoring:</span></span>  
+ <span data-ttu-id="90371-112">此示例生成与重构前相同的输出：</span><span class="sxs-lookup"><span data-stu-id="90371-112">This example produces the same output as before the refactoring:</span></span>  
   
 ```  
 StyleName:Heading1 >Parsing WordprocessingML with LINQ to XML<  
@@ -174,12 +174,13 @@ StyleName:Normal ><
 StyleName:Code >Hello World<  
 ```  
   
-### <a name="next-steps"></a><span data-ttu-id="de925-113">后续步骤</span><span class="sxs-lookup"><span data-stu-id="de925-113">Next Steps</span></span>  
- <span data-ttu-id="de925-114">下面的示例演示如何将 XML 投影到一个不同的形状：</span><span class="sxs-lookup"><span data-stu-id="de925-114">The next example shows how to project XML into a different shape:</span></span>  
+### <a name="next-steps"></a><span data-ttu-id="90371-113">后续步骤</span><span class="sxs-lookup"><span data-stu-id="90371-113">Next Steps</span></span>  
+ <span data-ttu-id="90371-114">下面的示例演示如何将 XML 投影到一个不同的形状：</span><span class="sxs-lookup"><span data-stu-id="90371-114">The next example shows how to project XML into a different shape:</span></span>  
   
--   [<span data-ttu-id="de925-115">对不同形状的 XML 进行投影 (C#)</span><span class="sxs-lookup"><span data-stu-id="de925-115">Projecting XML in a Different Shape (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/projecting-xml-in-a-different-shape.md)  
+-   [<span data-ttu-id="90371-115">对不同形状的 XML 进行投影 (C#)</span><span class="sxs-lookup"><span data-stu-id="90371-115">Projecting XML in a Different Shape (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/projecting-xml-in-a-different-shape.md)  
   
-## <a name="see-also"></a><span data-ttu-id="de925-116">请参阅</span><span class="sxs-lookup"><span data-stu-id="de925-116">See Also</span></span>  
- [<span data-ttu-id="de925-117">教程：操作 WordprocessingML 文档中的内容 (C#)</span><span class="sxs-lookup"><span data-stu-id="de925-117">Tutorial: Manipulating Content in a WordprocessingML Document (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)  
- [<span data-ttu-id="de925-118">使用扩展方法重构 (C#)</span><span class="sxs-lookup"><span data-stu-id="de925-118">Refactoring Using an Extension Method (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/refactoring-using-an-extension-method.md)  
- [<span data-ttu-id="de925-119">重构为纯函数 (C#)</span><span class="sxs-lookup"><span data-stu-id="de925-119">Refactoring Into Pure Functions (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/refactoring-into-pure-functions.md)
+## <a name="see-also"></a><span data-ttu-id="90371-116">请参阅</span><span class="sxs-lookup"><span data-stu-id="90371-116">See Also</span></span>
+
+- [<span data-ttu-id="90371-117">教程：操作 WordprocessingML 文档中的内容 (C#)</span><span class="sxs-lookup"><span data-stu-id="90371-117">Tutorial: Manipulating Content in a WordprocessingML Document (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)  
+- [<span data-ttu-id="90371-118">使用扩展方法重构 (C#)</span><span class="sxs-lookup"><span data-stu-id="90371-118">Refactoring Using an Extension Method (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/refactoring-using-an-extension-method.md)  
+- [<span data-ttu-id="90371-119">重构为纯函数 (C#)</span><span class="sxs-lookup"><span data-stu-id="90371-119">Refactoring Into Pure Functions (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/refactoring-into-pure-functions.md)

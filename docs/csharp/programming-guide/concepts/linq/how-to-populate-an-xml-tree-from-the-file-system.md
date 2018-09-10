@@ -2,18 +2,18 @@
 title: 如何：从文件系统填充 XML 树 (C#)
 ms.date: 07/20/2015
 ms.assetid: 2aa2ccac-4a22-47ae-9107-3bb8df232576
-ms.openlocfilehash: fdbab0fbda3bbfe3ab91e674bb66694f71121962
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7bddab1942c5a673969e271338f17705914f81a4
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33328170"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44204989"
 ---
-# <a name="how-to-populate-an-xml-tree-from-the-file-system-c"></a><span data-ttu-id="f6064-102">如何：从文件系统填充 XML 树 (C#)</span><span class="sxs-lookup"><span data-stu-id="f6064-102">How to: Populate an XML Tree from the File System (C#)</span></span>
-<span data-ttu-id="f6064-103">XML 树有一种有用的常见应用，即作为层次结构名称/值数据存储区。</span><span class="sxs-lookup"><span data-stu-id="f6064-103">A common and useful application of XML trees is as a hierarchical name/value data store.</span></span> <span data-ttu-id="f6064-104">您可以使用层次结构数据填充 XML 树，然后对它进行查询、转换和序列化（如有必要）。</span><span class="sxs-lookup"><span data-stu-id="f6064-104">You can populate an XML tree with hierarchical data, and then query it, transform it, and if necessary, serialize it.</span></span> <span data-ttu-id="f6064-105">在这种用法中，很多 XML 特定的语义（如命名空间和空白行为）都不重要。</span><span class="sxs-lookup"><span data-stu-id="f6064-105">In this usage scenario, many of the XML specific semantics, such as namespaces and white space behavior, are not important.</span></span> <span data-ttu-id="f6064-106">相反，你将 XML 树用作内存中的小型单用户层次结构数据库。</span><span class="sxs-lookup"><span data-stu-id="f6064-106">Instead, you are using the XML tree as a small, in memory, single user hierarchical database.</span></span>  
+# <a name="how-to-populate-an-xml-tree-from-the-file-system-c"></a><span data-ttu-id="d1475-102">如何：从文件系统填充 XML 树 (C#)</span><span class="sxs-lookup"><span data-stu-id="d1475-102">How to: Populate an XML Tree from the File System (C#)</span></span>
+<span data-ttu-id="d1475-103">XML 树有一种有用的常见应用，即作为层次结构名称/值数据存储区。</span><span class="sxs-lookup"><span data-stu-id="d1475-103">A common and useful application of XML trees is as a hierarchical name/value data store.</span></span> <span data-ttu-id="d1475-104">您可以使用层次结构数据填充 XML 树，然后对它进行查询、转换和序列化（如有必要）。</span><span class="sxs-lookup"><span data-stu-id="d1475-104">You can populate an XML tree with hierarchical data, and then query it, transform it, and if necessary, serialize it.</span></span> <span data-ttu-id="d1475-105">在这种用法中，很多 XML 特定的语义（如命名空间和空白行为）都不重要。</span><span class="sxs-lookup"><span data-stu-id="d1475-105">In this usage scenario, many of the XML specific semantics, such as namespaces and white space behavior, are not important.</span></span> <span data-ttu-id="d1475-106">相反，你将 XML 树用作内存中的小型单用户层次结构数据库。</span><span class="sxs-lookup"><span data-stu-id="d1475-106">Instead, you are using the XML tree as a small, in memory, single user hierarchical database.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="f6064-107">示例</span><span class="sxs-lookup"><span data-stu-id="f6064-107">Example</span></span>  
- <span data-ttu-id="f6064-108">下面的示例使用递归从本地文件系统填充 XML 树。</span><span class="sxs-lookup"><span data-stu-id="f6064-108">The following example populates an XML tree from the local file system using recursion.</span></span> <span data-ttu-id="f6064-109">然后查询该树，计算树中所有文件的总大小。</span><span class="sxs-lookup"><span data-stu-id="f6064-109">It then queries the tree, calculating the total of the sizes of all files in the tree.</span></span>  
+## <a name="example"></a><span data-ttu-id="d1475-107">示例</span><span class="sxs-lookup"><span data-stu-id="d1475-107">Example</span></span>  
+ <span data-ttu-id="d1475-108">下面的示例使用递归从本地文件系统填充 XML 树。</span><span class="sxs-lookup"><span data-stu-id="d1475-108">The following example populates an XML tree from the local file system using recursion.</span></span> <span data-ttu-id="d1475-109">然后查询该树，计算树中所有文件的总大小。</span><span class="sxs-lookup"><span data-stu-id="d1475-109">It then queries the tree, calculating the total of the sizes of all files in the tree.</span></span>  
   
 ```csharp  
 class Program  
@@ -46,7 +46,7 @@ class Program
 }  
 ```  
   
- <span data-ttu-id="f6064-110">本示例生成类似下面的输出：</span><span class="sxs-lookup"><span data-stu-id="f6064-110">This example produces output similar to the following:</span></span>  
+ <span data-ttu-id="d1475-110">本示例生成类似下面的输出：</span><span class="sxs-lookup"><span data-stu-id="d1475-110">This example produces output similar to the following:</span></span>  
   
 ```xml  
 <Dir Name="Tmp">  
@@ -116,5 +116,6 @@ class Program
 Total File Size:59089  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="f6064-111">请参阅</span><span class="sxs-lookup"><span data-stu-id="f6064-111">See Also</span></span>  
- [<span data-ttu-id="f6064-112">高级查询技术 (LINQ to XML) (C#)</span><span class="sxs-lookup"><span data-stu-id="f6064-112">Advanced Query Techniques (LINQ to XML) (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)
+## <a name="see-also"></a><span data-ttu-id="d1475-111">请参阅</span><span class="sxs-lookup"><span data-stu-id="d1475-111">See Also</span></span>
+
+- [<span data-ttu-id="d1475-112">高级查询技术 (LINQ to XML) (C#)</span><span class="sxs-lookup"><span data-stu-id="d1475-112">Advanced Query Techniques (LINQ to XML) (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)

@@ -8,14 +8,14 @@ helpviewer_keywords:
 - structs [C#], struct keyword
 ms.assetid: ff3dd9b7-dc93-4720-8855-ef5558f65c7c
 ms.openlocfilehash: 7931da2e5f5c493b54eb1f33a1d6f57b38592f6e
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43399013"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43530187"
 ---
-# <a name="struct-c-reference"></a><span data-ttu-id="98048-102">struct（C# 参考）</span><span class="sxs-lookup"><span data-stu-id="98048-102">struct (C# Reference)</span></span>
-<span data-ttu-id="98048-103">`struct` 类型是一种值类型，通常用来封装小型相关变量组，例如，矩形的坐标或库存商品的特征。</span><span class="sxs-lookup"><span data-stu-id="98048-103">A `struct` type is a value type that is typically used to encapsulate small groups of related variables, such as the coordinates of a rectangle or the characteristics of an item in an inventory.</span></span> <span data-ttu-id="98048-104">下面的示例显示了一个简单的结构声明：</span><span class="sxs-lookup"><span data-stu-id="98048-104">The following example shows a simple struct declaration:</span></span>  
+# <a name="struct-c-reference"></a><span data-ttu-id="3c9cb-102">struct（C# 参考）</span><span class="sxs-lookup"><span data-stu-id="3c9cb-102">struct (C# Reference)</span></span>
+<span data-ttu-id="3c9cb-103">`struct` 类型是一种值类型，通常用来封装小型相关变量组，例如，矩形的坐标或库存商品的特征。</span><span class="sxs-lookup"><span data-stu-id="3c9cb-103">A `struct` type is a value type that is typically used to encapsulate small groups of related variables, such as the coordinates of a rectangle or the characteristics of an item in an inventory.</span></span> <span data-ttu-id="3c9cb-104">下面的示例显示了一个简单的结构声明：</span><span class="sxs-lookup"><span data-stu-id="3c9cb-104">The following example shows a simple struct declaration:</span></span>  
   
 ```csharp  
 public struct Book  
@@ -26,30 +26,30 @@ public struct Book
 }  
 ```  
   
-## <a name="remarks"></a><span data-ttu-id="98048-105">备注</span><span class="sxs-lookup"><span data-stu-id="98048-105">Remarks</span></span>  
- <span data-ttu-id="98048-106">结构还可以包含[构造函数](../../../csharp/programming-guide/classes-and-structs/constructors.md)、[常量](../../../csharp/programming-guide/classes-and-structs/constants.md)、[字段](../../../csharp/programming-guide/classes-and-structs/fields.md)、[方法](../../../csharp/programming-guide/classes-and-structs/methods.md)、[属性](../../../csharp/programming-guide/classes-and-structs/properties.md)、[索引器](../../../csharp/programming-guide/indexers/index.md)、[运算符](../../../csharp/programming-guide/statements-expressions-operators/operators.md)、[事件](../../../csharp/programming-guide/events/index.md)和[嵌套类型](../../../csharp/programming-guide/classes-and-structs/nested-types.md)，但如果同时需要上述几种成员，则应当考虑改为使用类作为类型。</span><span class="sxs-lookup"><span data-stu-id="98048-106">Structs can also contain [constructors](../../../csharp/programming-guide/classes-and-structs/constructors.md), [constants](../../../csharp/programming-guide/classes-and-structs/constants.md), [fields](../../../csharp/programming-guide/classes-and-structs/fields.md), [methods](../../../csharp/programming-guide/classes-and-structs/methods.md), [properties](../../../csharp/programming-guide/classes-and-structs/properties.md), [indexers](../../../csharp/programming-guide/indexers/index.md), [operators](../../../csharp/programming-guide/statements-expressions-operators/operators.md), [events](../../../csharp/programming-guide/events/index.md), and [nested types](../../../csharp/programming-guide/classes-and-structs/nested-types.md), although if several such members are required, you should consider making your type a class instead.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="3c9cb-105">备注</span><span class="sxs-lookup"><span data-stu-id="3c9cb-105">Remarks</span></span>  
+ <span data-ttu-id="3c9cb-106">结构还可以包含[构造函数](../../../csharp/programming-guide/classes-and-structs/constructors.md)、[常量](../../../csharp/programming-guide/classes-and-structs/constants.md)、[字段](../../../csharp/programming-guide/classes-and-structs/fields.md)、[方法](../../../csharp/programming-guide/classes-and-structs/methods.md)、[属性](../../../csharp/programming-guide/classes-and-structs/properties.md)、[索引器](../../../csharp/programming-guide/indexers/index.md)、[运算符](../../../csharp/programming-guide/statements-expressions-operators/operators.md)、[事件](../../../csharp/programming-guide/events/index.md)和[嵌套类型](../../../csharp/programming-guide/classes-and-structs/nested-types.md)，但如果同时需要上述几种成员，则应当考虑改为使用类作为类型。</span><span class="sxs-lookup"><span data-stu-id="3c9cb-106">Structs can also contain [constructors](../../../csharp/programming-guide/classes-and-structs/constructors.md), [constants](../../../csharp/programming-guide/classes-and-structs/constants.md), [fields](../../../csharp/programming-guide/classes-and-structs/fields.md), [methods](../../../csharp/programming-guide/classes-and-structs/methods.md), [properties](../../../csharp/programming-guide/classes-and-structs/properties.md), [indexers](../../../csharp/programming-guide/indexers/index.md), [operators](../../../csharp/programming-guide/statements-expressions-operators/operators.md), [events](../../../csharp/programming-guide/events/index.md), and [nested types](../../../csharp/programming-guide/classes-and-structs/nested-types.md), although if several such members are required, you should consider making your type a class instead.</span></span>  
   
- <span data-ttu-id="98048-107">有关示例，请参阅[使用结构](../../../csharp/programming-guide/classes-and-structs/using-structs.md)。</span><span class="sxs-lookup"><span data-stu-id="98048-107">For examples, see [Using Structs](../../../csharp/programming-guide/classes-and-structs/using-structs.md).</span></span>  
+ <span data-ttu-id="3c9cb-107">有关示例，请参阅[使用结构](../../../csharp/programming-guide/classes-and-structs/using-structs.md)。</span><span class="sxs-lookup"><span data-stu-id="3c9cb-107">For examples, see [Using Structs](../../../csharp/programming-guide/classes-and-structs/using-structs.md).</span></span>  
   
- <span data-ttu-id="98048-108">结构可以实现接口，但它们无法继承另一个结构。</span><span class="sxs-lookup"><span data-stu-id="98048-108">Structs can implement an interface but they cannot inherit from another struct.</span></span> <span data-ttu-id="98048-109">因此，结构成员无法声明为 `protected`。</span><span class="sxs-lookup"><span data-stu-id="98048-109">For that reason, struct members cannot be declared as `protected`.</span></span>  
+ <span data-ttu-id="3c9cb-108">结构可以实现接口，但它们无法继承另一个结构。</span><span class="sxs-lookup"><span data-stu-id="3c9cb-108">Structs can implement an interface but they cannot inherit from another struct.</span></span> <span data-ttu-id="3c9cb-109">因此，结构成员无法声明为 `protected`。</span><span class="sxs-lookup"><span data-stu-id="3c9cb-109">For that reason, struct members cannot be declared as `protected`.</span></span>  
   
- <span data-ttu-id="98048-110">有关详细信息，请参阅[结构](../../../csharp/programming-guide/classes-and-structs/structs.md)。</span><span class="sxs-lookup"><span data-stu-id="98048-110">For more information, see [Structs](../../../csharp/programming-guide/classes-and-structs/structs.md).</span></span>  
+ <span data-ttu-id="3c9cb-110">有关详细信息，请参阅[结构](../../../csharp/programming-guide/classes-and-structs/structs.md)。</span><span class="sxs-lookup"><span data-stu-id="3c9cb-110">For more information, see [Structs](../../../csharp/programming-guide/classes-and-structs/structs.md).</span></span>  
   
-## <a name="examples"></a><span data-ttu-id="98048-111">示例</span><span class="sxs-lookup"><span data-stu-id="98048-111">Examples</span></span>  
- <span data-ttu-id="98048-112">有关示例和详细信息，请参阅[使用结构](../../../csharp/programming-guide/classes-and-structs/using-structs.md)。</span><span class="sxs-lookup"><span data-stu-id="98048-112">For examples and more information, see [Using Structs](../../../csharp/programming-guide/classes-and-structs/using-structs.md).</span></span>  
+## <a name="examples"></a><span data-ttu-id="3c9cb-111">示例</span><span class="sxs-lookup"><span data-stu-id="3c9cb-111">Examples</span></span>  
+ <span data-ttu-id="3c9cb-112">有关示例和详细信息，请参阅[使用结构](../../../csharp/programming-guide/classes-and-structs/using-structs.md)。</span><span class="sxs-lookup"><span data-stu-id="3c9cb-112">For examples and more information, see [Using Structs](../../../csharp/programming-guide/classes-and-structs/using-structs.md).</span></span>  
   
-## <a name="c-language-specification"></a><span data-ttu-id="98048-113">C# 语言规范</span><span class="sxs-lookup"><span data-stu-id="98048-113">C# Language Specification</span></span>  
- <span data-ttu-id="98048-114">有关示例，请参阅[使用结构](../../../csharp/programming-guide/classes-and-structs/using-structs.md)。</span><span class="sxs-lookup"><span data-stu-id="98048-114">For examples, see [Using Structs](../../../csharp/programming-guide/classes-and-structs/using-structs.md).</span></span>  
+## <a name="c-language-specification"></a><span data-ttu-id="3c9cb-113">C# 语言规范</span><span class="sxs-lookup"><span data-stu-id="3c9cb-113">C# Language Specification</span></span>  
+ <span data-ttu-id="3c9cb-114">有关示例，请参阅[使用结构](../../../csharp/programming-guide/classes-and-structs/using-structs.md)。</span><span class="sxs-lookup"><span data-stu-id="3c9cb-114">For examples, see [Using Structs](../../../csharp/programming-guide/classes-and-structs/using-structs.md).</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="98048-115">请参阅</span><span class="sxs-lookup"><span data-stu-id="98048-115">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="3c9cb-115">请参阅</span><span class="sxs-lookup"><span data-stu-id="3c9cb-115">See Also</span></span>
 
-- [<span data-ttu-id="98048-116">C# 参考</span><span class="sxs-lookup"><span data-stu-id="98048-116">C# Reference</span></span>](../../../csharp/language-reference/index.md)  
-- [<span data-ttu-id="98048-117">C# 编程指南</span><span class="sxs-lookup"><span data-stu-id="98048-117">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
-- [<span data-ttu-id="98048-118">C# 关键字</span><span class="sxs-lookup"><span data-stu-id="98048-118">C# Keywords</span></span>](../../../csharp/language-reference/keywords/index.md)  
-- [<span data-ttu-id="98048-119">默认值表</span><span class="sxs-lookup"><span data-stu-id="98048-119">Default Values Table</span></span>](../../../csharp/language-reference/keywords/default-values-table.md)  
-- [<span data-ttu-id="98048-120">内置类型表</span><span class="sxs-lookup"><span data-stu-id="98048-120">Built-In Types Table</span></span>](../../../csharp/language-reference/keywords/built-in-types-table.md)  
-- [<span data-ttu-id="98048-121">类型</span><span class="sxs-lookup"><span data-stu-id="98048-121">Types</span></span>](../../../csharp/language-reference/keywords/types.md)  
-- [<span data-ttu-id="98048-122">值类型</span><span class="sxs-lookup"><span data-stu-id="98048-122">Value Types</span></span>](../../../csharp/language-reference/keywords/value-types.md)  
-- [<span data-ttu-id="98048-123">class</span><span class="sxs-lookup"><span data-stu-id="98048-123">class</span></span>](../../../csharp/language-reference/keywords/class.md)  
-- [<span data-ttu-id="98048-124">interface</span><span class="sxs-lookup"><span data-stu-id="98048-124">interface</span></span>](../../../csharp/language-reference/keywords/interface.md)  
-- [<span data-ttu-id="98048-125">类和结构</span><span class="sxs-lookup"><span data-stu-id="98048-125">Classes and Structs</span></span>](../../../csharp/programming-guide/classes-and-structs/index.md)
+- [<span data-ttu-id="3c9cb-116">C# 参考</span><span class="sxs-lookup"><span data-stu-id="3c9cb-116">C# Reference</span></span>](../../../csharp/language-reference/index.md)  
+- [<span data-ttu-id="3c9cb-117">C# 编程指南</span><span class="sxs-lookup"><span data-stu-id="3c9cb-117">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
+- [<span data-ttu-id="3c9cb-118">C# 关键字</span><span class="sxs-lookup"><span data-stu-id="3c9cb-118">C# Keywords</span></span>](../../../csharp/language-reference/keywords/index.md)  
+- [<span data-ttu-id="3c9cb-119">默认值表</span><span class="sxs-lookup"><span data-stu-id="3c9cb-119">Default Values Table</span></span>](../../../csharp/language-reference/keywords/default-values-table.md)  
+- [<span data-ttu-id="3c9cb-120">内置类型表</span><span class="sxs-lookup"><span data-stu-id="3c9cb-120">Built-In Types Table</span></span>](../../../csharp/language-reference/keywords/built-in-types-table.md)  
+- [<span data-ttu-id="3c9cb-121">类型</span><span class="sxs-lookup"><span data-stu-id="3c9cb-121">Types</span></span>](../../../csharp/language-reference/keywords/types.md)  
+- [<span data-ttu-id="3c9cb-122">值类型</span><span class="sxs-lookup"><span data-stu-id="3c9cb-122">Value Types</span></span>](../../../csharp/language-reference/keywords/value-types.md)  
+- [<span data-ttu-id="3c9cb-123">class</span><span class="sxs-lookup"><span data-stu-id="3c9cb-123">class</span></span>](../../../csharp/language-reference/keywords/class.md)  
+- [<span data-ttu-id="3c9cb-124">interface</span><span class="sxs-lookup"><span data-stu-id="3c9cb-124">interface</span></span>](../../../csharp/language-reference/keywords/interface.md)  
+- [<span data-ttu-id="3c9cb-125">类和结构</span><span class="sxs-lookup"><span data-stu-id="3c9cb-125">Classes and Structs</span></span>](../../../csharp/programming-guide/classes-and-structs/index.md)

@@ -2,17 +2,17 @@
 title: 示例 XML 文件：命名空间 3 中的数值数据
 ms.date: 07/20/2015
 ms.assetid: 51750cab-3c66-4511-90fb-b9d211308d31
-ms.openlocfilehash: 5a752f477d17cee50b98bc88bd39cabda2bd3bf6
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 114657087a0aee69bc9be298025eac58923294b0
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43393563"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44185605"
 ---
-# <a name="sample-xml-file-numerical-data-in-a-namespace"></a><span data-ttu-id="95cc1-102">示例 XML 文件：命名空间中的数值数据</span><span class="sxs-lookup"><span data-stu-id="95cc1-102">Sample XML File: Numerical Data in a Namespace</span></span>
-<span data-ttu-id="95cc1-103">下面的 XML 文件用在 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 文档的很多示例中。</span><span class="sxs-lookup"><span data-stu-id="95cc1-103">The following XML file is used in various examples in the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] documentation.</span></span> <span data-ttu-id="95cc1-104">此文件包含数值数据，用于求和、求平均值和分组。</span><span class="sxs-lookup"><span data-stu-id="95cc1-104">This file contains numerical data for summing, averaging, and grouping.</span></span> <span data-ttu-id="95cc1-105">该 XML 在某个命名空间中。</span><span class="sxs-lookup"><span data-stu-id="95cc1-105">The XML is in a namespace.</span></span>  
+# <a name="sample-xml-file-numerical-data-in-a-namespace"></a><span data-ttu-id="70a6f-102">示例 XML 文件：命名空间中的数值数据</span><span class="sxs-lookup"><span data-stu-id="70a6f-102">Sample XML File: Numerical Data in a Namespace</span></span>
+<span data-ttu-id="70a6f-103">下面的 XML 文件用在 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 文档的很多示例中。</span><span class="sxs-lookup"><span data-stu-id="70a6f-103">The following XML file is used in various examples in the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] documentation.</span></span> <span data-ttu-id="70a6f-104">此文件包含数值数据，用于求和、求平均值和分组。</span><span class="sxs-lookup"><span data-stu-id="70a6f-104">This file contains numerical data for summing, averaging, and grouping.</span></span> <span data-ttu-id="70a6f-105">该 XML 在某个命名空间中。</span><span class="sxs-lookup"><span data-stu-id="70a6f-105">The XML is in a namespace.</span></span>  
   
-## <a name="data"></a><span data-ttu-id="95cc1-106">数据</span><span class="sxs-lookup"><span data-stu-id="95cc1-106">Data</span></span>  
+## <a name="data"></a><span data-ttu-id="70a6f-106">数据</span><span class="sxs-lookup"><span data-stu-id="70a6f-106">Data</span></span>  
   
 ```xml  
 <Root xmlns='http://www.adatum.com'>  
@@ -55,5 +55,6 @@ ms.locfileid: "43393563"
 </Root>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="95cc1-107">请参阅</span><span class="sxs-lookup"><span data-stu-id="95cc1-107">See Also</span></span>  
- [<span data-ttu-id="95cc1-108">示例 XML 文档 (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="95cc1-108">Sample XML Documents (LINQ to XML)</span></span>](../../../../csharp/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)
+## <a name="see-also"></a><span data-ttu-id="70a6f-107">请参阅</span><span class="sxs-lookup"><span data-stu-id="70a6f-107">See Also</span></span>
+
+- [<span data-ttu-id="70a6f-108">示例 XML 文档 (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="70a6f-108">Sample XML Documents (LINQ to XML)</span></span>](../../../../csharp/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)

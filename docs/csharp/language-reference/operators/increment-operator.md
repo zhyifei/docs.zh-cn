@@ -8,27 +8,27 @@ helpviewer_keywords:
 - ++ operator [C#]
 ms.assetid: e9dec353-070b-44fb-98ed-eb8fdf753feb
 ms.openlocfilehash: a52f614ce1bbfb8e9d9be686b277c1e69f6f9d35
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43399305"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44180928"
 ---
-# <a name="-operator-c-reference"></a><span data-ttu-id="11ec4-102">++ 运算符（C# 参考）</span><span class="sxs-lookup"><span data-stu-id="11ec4-102">++ Operator (C# Reference)</span></span>
-<span data-ttu-id="11ec4-103">递增运算符 (`++`) 按 1 递增其操作数。</span><span class="sxs-lookup"><span data-stu-id="11ec4-103">The increment operator (`++`) increments its operand by 1.</span></span> <span data-ttu-id="11ec4-104">递增运算符可以在其操作数之前或之后出现： `++variable` 和 `variable++`。</span><span class="sxs-lookup"><span data-stu-id="11ec4-104">The increment operator can appear before or after its operand: `++variable` and `variable++`.</span></span>  
+# <a name="-operator-c-reference"></a><span data-ttu-id="b6f97-102">++ 运算符（C# 参考）</span><span class="sxs-lookup"><span data-stu-id="b6f97-102">++ Operator (C# Reference)</span></span>
+<span data-ttu-id="b6f97-103">递增运算符 (`++`) 按 1 递增其操作数。</span><span class="sxs-lookup"><span data-stu-id="b6f97-103">The increment operator (`++`) increments its operand by 1.</span></span> <span data-ttu-id="b6f97-104">递增运算符可以在其操作数之前或之后出现： `++variable` 和 `variable++`。</span><span class="sxs-lookup"><span data-stu-id="b6f97-104">The increment operator can appear before or after its operand: `++variable` and `variable++`.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="11ec4-105">备注</span><span class="sxs-lookup"><span data-stu-id="11ec4-105">Remarks</span></span>  
- <span data-ttu-id="11ec4-106">第一个窗体是前缀递增操作。</span><span class="sxs-lookup"><span data-stu-id="11ec4-106">The first form is a prefix increment operation.</span></span> <span data-ttu-id="11ec4-107">操作的结果是操作数递增后的值。</span><span class="sxs-lookup"><span data-stu-id="11ec4-107">The result of the operation is the value of the operand after it has been incremented.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="b6f97-105">备注</span><span class="sxs-lookup"><span data-stu-id="b6f97-105">Remarks</span></span>  
+ <span data-ttu-id="b6f97-106">第一个窗体是前缀递增操作。</span><span class="sxs-lookup"><span data-stu-id="b6f97-106">The first form is a prefix increment operation.</span></span> <span data-ttu-id="b6f97-107">操作的结果是操作数递增后的值。</span><span class="sxs-lookup"><span data-stu-id="b6f97-107">The result of the operation is the value of the operand after it has been incremented.</span></span>  
   
- <span data-ttu-id="11ec4-108">第二个窗体是后缀递增操作。</span><span class="sxs-lookup"><span data-stu-id="11ec4-108">The second form is a postfix increment operation.</span></span> <span data-ttu-id="11ec4-109">操作的结果是操作数递增前的值。</span><span class="sxs-lookup"><span data-stu-id="11ec4-109">The result of the operation is the value of the operand before it has been incremented.</span></span>  
+ <span data-ttu-id="b6f97-108">第二个窗体是后缀递增操作。</span><span class="sxs-lookup"><span data-stu-id="b6f97-108">The second form is a postfix increment operation.</span></span> <span data-ttu-id="b6f97-109">操作的结果是操作数递增前的值。</span><span class="sxs-lookup"><span data-stu-id="b6f97-109">The result of the operation is the value of the operand before it has been incremented.</span></span>  
   
- <span data-ttu-id="11ec4-110">数值和枚举类型具有预定义的递增运算符。</span><span class="sxs-lookup"><span data-stu-id="11ec4-110">Numeric and enumeration types have predefined increment operators.</span></span> <span data-ttu-id="11ec4-111">用户定义的类型可以重载 `++` 运算符。</span><span class="sxs-lookup"><span data-stu-id="11ec4-111">User-defined types can overload the `++` operator.</span></span> <span data-ttu-id="11ec4-112">对整数类型的操作通常可用于枚举。</span><span class="sxs-lookup"><span data-stu-id="11ec4-112">Operations on integral types are generally allowed on enumeration.</span></span>  
+ <span data-ttu-id="b6f97-110">数值和枚举类型具有预定义的递增运算符。</span><span class="sxs-lookup"><span data-stu-id="b6f97-110">Numeric and enumeration types have predefined increment operators.</span></span> <span data-ttu-id="b6f97-111">用户定义的类型可以重载 `++` 运算符。</span><span class="sxs-lookup"><span data-stu-id="b6f97-111">User-defined types can overload the `++` operator.</span></span> <span data-ttu-id="b6f97-112">对整数类型的操作通常可用于枚举。</span><span class="sxs-lookup"><span data-stu-id="b6f97-112">Operations on integral types are generally allowed on enumeration.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="11ec4-113">示例</span><span class="sxs-lookup"><span data-stu-id="11ec4-113">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="b6f97-113">示例</span><span class="sxs-lookup"><span data-stu-id="b6f97-113">Example</span></span>  
  [!code-csharp[csRefOperators#3](../../../csharp/language-reference/operators/codesnippet/CSharp/increment-operator_1.cs)]  
   
-## <a name="see-also"></a><span data-ttu-id="11ec4-114">请参阅</span><span class="sxs-lookup"><span data-stu-id="11ec4-114">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="b6f97-114">请参阅</span><span class="sxs-lookup"><span data-stu-id="b6f97-114">See Also</span></span>
 
-- [<span data-ttu-id="11ec4-115">C# 参考</span><span class="sxs-lookup"><span data-stu-id="11ec4-115">C# Reference</span></span>](../../../csharp/language-reference/index.md)  
-- [<span data-ttu-id="11ec4-116">C# 编程指南</span><span class="sxs-lookup"><span data-stu-id="11ec4-116">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
-- [<span data-ttu-id="11ec4-117">C# 运算符</span><span class="sxs-lookup"><span data-stu-id="11ec4-117">C# Operators</span></span>](../../../csharp/language-reference/operators/index.md)
+- [<span data-ttu-id="b6f97-115">C# 参考</span><span class="sxs-lookup"><span data-stu-id="b6f97-115">C# Reference</span></span>](../../../csharp/language-reference/index.md)  
+- [<span data-ttu-id="b6f97-116">C# 编程指南</span><span class="sxs-lookup"><span data-stu-id="b6f97-116">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
+- [<span data-ttu-id="b6f97-117">C# 运算符</span><span class="sxs-lookup"><span data-stu-id="b6f97-117">C# Operators</span></span>](../../../csharp/language-reference/operators/index.md)
