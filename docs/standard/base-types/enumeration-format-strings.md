@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: dd1ff672-1052-42cf-8666-4924fb6cd1a1
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4402bf58ea853d8a373592eec274a8bf75e7e90c
-ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
+ms.openlocfilehash: 956dc7daad91d9daa3ac950d7f5897404dd314c2
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2018
-ms.locfileid: "42925737"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "44041260"
 ---
 # <a name="enumeration-format-strings"></a>枚举格式字符串
 可以使用 <xref:System.Enum.ToString%2A?displayProperty=nameWithType> 方法，新建表示枚举成员的数字值、十六进制值或字符串值的字符串对象。 此方法采用枚举格式设置字符串之一来指定要返回的值。
@@ -50,4 +50,4 @@ ms.locfileid: "42925737"
 
 ## <a name="see-also"></a>请参阅
 
-[格式设置类型](formatting-types.md)
+- [格式设置类型](formatting-types.md)

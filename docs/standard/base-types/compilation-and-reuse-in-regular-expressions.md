@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 182ec76d-5a01-4d73-996c-0b0d14fcea18
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8a9adb5d39eb420496030d85dacd95a1cccd6fd2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2166412269a84329d42f58c7e3423229be4327b8
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33568753"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43877733"
 ---
 # <a name="compilation-and-reuse-in-regular-expressions"></a>正则表达式中的编译和重复使用
 通过了解正则表达式引擎编译表达式的方式以及正则表达式的缓存方式，可以优化大量使用正则表达式的应用程序的性能。 本主题介绍编译和缓存。  
@@ -46,5 +46,6 @@ ms.locfileid: "33568753"
   
  鉴于对象实例化和正则表达式编译产生的开销，因此创建并迅速销毁大量 <xref:System.Text.RegularExpressions.Regex> 对象的进程成本非常高。 对于使用大量不同正则表达式的应用，可以调用静态方法 `Regex`，并尽量增加正则表达式缓存大小，从而优化性能。  
   
-## <a name="see-also"></a>请参阅  
- [.NET 正则表达式](../../../docs/standard/base-types/regular-expressions.md)
+## <a name="see-also"></a>请参阅
+
+- [.NET 正则表达式](../../../docs/standard/base-types/regular-expressions.md)

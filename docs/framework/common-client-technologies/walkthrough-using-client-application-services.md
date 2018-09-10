@@ -8,12 +8,12 @@ helpviewer_keywords:
 - application services host [client application services]
 - client application services, walkthroughs
 ms.assetid: bb7c8950-4517-4dae-b705-b74a14059b26
-ms.openlocfilehash: 9193dc56a0f92daf486d95666ba820cb09d588d0
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: b800848fc3cefb1f82fb5822007bc670c1684363
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32745365"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43788923"
 ---
 # <a name="walkthrough-using-client-application-services"></a>演练：使用客户端应用程序服务
 本主题介绍如何创建使用客户端应用程序服务对用户进行身份验证并检索用户角色和设置的 Windows 应用程序。  
@@ -69,7 +69,7 @@ ms.locfileid: "32745365"
  此时，应用程序配置为从同一个主机访问所有三个服务。 在下一部分中，你会以简单 Web 服务应用程序的形式创建主机，从而使你可以测试客户端配置。  
   
 ## <a name="creating-the-application-services-host"></a>创建应用程序服务主机  
- 在本部分中，你会创建一个简单 Web 服务应用程序，该应用程序从本地 SQL Server Compact 数据库文件访问用户数据。 然后，你将使用 [ASP.NET Web Site Administration Tool](http://msdn.microsoft.com/library/100ddd8b-7d11-4df9-91ef-0bbbe92e5aec)填充数据库。 通过这种简单配置可以快速测试客户端应用程序。 作为替代方法，可以配置 Web 服务主机以从完整 SQL Server 数据库或通过自定义 <xref:System.Web.Security.MembershipProvider> 和 <xref:System.Web.Security.RoleProvider> 类访问用户数据。 有关详细信息，请参阅 [Creating and Configuring the Application Services Database for SQL Server](http://msdn.microsoft.com/library/ab894e83-7e2f-4af8-a116-b1bff8f815b2)。  
+ 在本部分中，你会创建一个简单 Web 服务应用程序，该应用程序从本地 SQL Server Compact 数据库文件访问用户数据。 然后，你将使用 [ASP.NET Web Site Administration Tool](https://msdn.microsoft.com/library/100ddd8b-7d11-4df9-91ef-0bbbe92e5aec)填充数据库。 通过这种简单配置可以快速测试客户端应用程序。 作为替代方法，可以配置 Web 服务主机以从完整 SQL Server 数据库或通过自定义 <xref:System.Web.Security.MembershipProvider> 和 <xref:System.Web.Security.RoleProvider> 类访问用户数据。 有关详细信息，请参阅 [Creating and Configuring the Application Services Database for SQL Server](https://msdn.microsoft.com/library/ab894e83-7e2f-4af8-a116-b1bff8f815b2)。  
   
  在下面的过程中，会创建和配置 AppServices Web 服务。  
   
@@ -105,7 +105,7 @@ ms.locfileid: "32745365"
      此标记中的 `authenticationService`、 `profileService`和 `roleService` 元素会启用并配置应用程序服务。 为进行测试， `requireSSL` 元素的 `authenticationService` 特性设置为“false”。 `readAccessProperties` 元素的 `writeAccessProperties` 和 `profileService` 特性指示 `WebSettingsTestText` 属性为读/写。  
   
     > [!NOTE]
-    >  在生产代码中，应始终通过安全套接字层（SSL，使用 HTTPS 协议）访问身份验证服务。 有关如何设置 SSL 的信息，请参阅 [配置安全套接字层（IIS 6.0 操作指南）](http://go.microsoft.com/fwlink/?LinkId=91844)。  
+    >  在生产代码中，应始终通过安全套接字层（SSL，使用 HTTPS 协议）访问身份验证服务。 有关如何设置 SSL 的信息，请参阅 [配置安全套接字层（IIS 6.0 操作指南）](https://go.microsoft.com/fwlink/?LinkId=91844)。  
   
     ```xml  
     <system.web.extensions>  
@@ -538,6 +538,6 @@ ms.locfileid: "32745365"
  [客户端应用程序服务](../../../docs/framework/common-client-technologies/client-application-services.md)  
  [客户端应用程序服务概述](../../../docs/framework/common-client-technologies/client-application-services-overview.md)  
  [如何：配置客户端应用程序服务](../../../docs/framework/common-client-technologies/how-to-configure-client-application-services.md)  
- [ASP.NET Web Site Administration Tool](http://msdn.microsoft.com/library/100ddd8b-7d11-4df9-91ef-0bbbe92e5aec)  
- [为 SQL Server 创建和配置应用程序服务数据库](http://msdn.microsoft.com/library/ab894e83-7e2f-4af8-a116-b1bff8f815b2)  
- [演练：使用 ASP.NET 应用程序服务](http://msdn.microsoft.com/library/f3f394f0-20d6-4361-aa8f-4b21bf4933eb)
+ [ASP.NET Web Site Administration Tool](https://msdn.microsoft.com/library/100ddd8b-7d11-4df9-91ef-0bbbe92e5aec)  
+ [为 SQL Server 创建和配置应用程序服务数据库](https://msdn.microsoft.com/library/ab894e83-7e2f-4af8-a116-b1bff8f815b2)  
+ [演练：使用 ASP.NET 应用程序服务](https://msdn.microsoft.com/library/f3f394f0-20d6-4361-aa8f-4b21bf4933eb)

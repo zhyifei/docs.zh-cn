@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 63ab0800-0f05-4f1e-88e6-94c73fd920a2
 author: ghogen
 manager: douge
-ms.openlocfilehash: 5de4c90361033df603bb63fbb365514d6bb5ea0c
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.openlocfilehash: a0c57ab049fff699d5bb12004fd48d90a226e514
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42935682"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43525017"
 ---
 # <a name="how-to-debug-windows-service-applications"></a>如何：调试 Windows 服务应用程序
 必须从服务控制管理器的上下文中而不是 Visual Studio 中运行服务。 因此，调试服务不像调试其他 Visual Studio 应用程序类型一样简单。 要调试服务，必须启动该服务，然后将调试器附加到该服务正在其中运行的进程中。 然后你可以使用所有 Visual Studio 的标准调试功能来调试你的应用程序。  
@@ -33,7 +33,7 @@ ms.locfileid: "42935682"
 >  调试 <xref:System.ServiceProcess.ServiceBase.OnStart%2A> 方法会比较困难，因为服务控制管理器对所有启动服务的尝试施加了 30 秒的限制。 有关详细信息，请参阅[疑难解答：调试 Windows 服务](../../../docs/framework/windows-services/troubleshooting-debugging-windows-services.md)。  
   
 > [!WARNING]
->  若要获取有意义的调试信息，Visual Studio 调试器需要找到正在调试的二进制文件的符号文件。 如果你正在调试你在 Visual Studio 中生成的服务，符号文件（.pdb 文件）就在与可执行文件或库相同的文件夹中，调试器会自动加载它们。 如果你正在调试你没有生成过的服务，你应该首先查找该服务的符号文件，确保调试器可找到它们。 请参阅[指定符号 (.pdb) 和源文件](http://msdn.microsoft.com/library/1105e169-5272-4e7c-b3e7-cda1b7798a6b)。 如果你正在调试系统进程，或想要你的服务中的系统调用符号，你应该添加 Microsoft 符号服务器。 请参阅[调试符号](/windows/desktop/DxTechArts/debugging-with-symbols)。  
+>  若要获取有意义的调试信息，Visual Studio 调试器需要找到正在调试的二进制文件的符号文件。 如果你正在调试你在 Visual Studio 中生成的服务，符号文件（.pdb 文件）就在与可执行文件或库相同的文件夹中，调试器会自动加载它们。 如果你正在调试你没有生成过的服务，你应该首先查找该服务的符号文件，确保调试器可找到它们。 请参阅[指定符号 (.pdb) 和源文件](https://msdn.microsoft.com/library/1105e169-5272-4e7c-b3e7-cda1b7798a6b)。 如果你正在调试系统进程，或想要你的服务中的系统调用符号，你应该添加 Microsoft 符号服务器。 请参阅[调试符号](/windows/desktop/DxTechArts/debugging-with-symbols)。  
   
 ### <a name="to-debug-a-service"></a>调试服务  
   
@@ -112,7 +112,7 @@ ms.locfileid: "42935682"
   
 5.  若要将该程序再次作为 Windows 服务运行，请安装它并像通常启动 Windows 服务一样启动它。 不必恢复这些更改。  
   
- 在某些情况下，你必须使用 Windows 调试器，比如当你想要调试仅在系统启动时发生的问题时。 安装[Windows 调试工具](http://msdn.microsoft.com/windows/hardware/hh852365)并查看[如何调试 Windows 服务](http://support.microsoft.com/kb/824344)。  
+ 在某些情况下，你必须使用 Windows 调试器，比如当你想要调试仅在系统启动时发生的问题时。 安装[Windows 调试工具](https://msdn.microsoft.com/windows/hardware/hh852365)并查看[如何调试 Windows 服务](https://support.microsoft.com/kb/824344)。  
   
 ## <a name="see-also"></a>请参阅  
  [Windows 服务应用程序介绍](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)  

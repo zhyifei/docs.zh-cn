@@ -160,11 +160,11 @@ ms.assetid: 8271973c-deba-47a6-8e5e-04ce63f146ad
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: f051af9284ddbf583e5454f7bdc106a061489d3c
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43465494"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44075446"
 ---
 # <a name="winmdexpexe-error-messages"></a>Winmdexp.exe 错误消息
 当使用 [!INCLUDE[vs_dev11_long](../../../includes/vs-dev11-long-md.md)] 中的 [!INCLUDE[wrt](../../../includes/wrt-md.md)] 组件模板时，生成进程调用 [Winmdexp.exe（Windows 运行时元数据导出工具）](../../../docs/framework/tools/winmdexp-exe-windows-runtime-metadata-export-tool.md)，因此“错误列表”中会显示 Winmdexp.exe 错误消息。 Winmdexp.exe 在用 `/target:winmdobj` 选项编译的模块上运行。 由于它需要将编译的模块作为输入，因此不会显示错误消息，除非编译成功。  

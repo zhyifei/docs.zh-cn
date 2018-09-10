@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 3947e333-5af6-4601-b2f1-24d4d6129cf3
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 776984cf1cc17d5c1becc91d4491fa6dbc9e2c17
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: cfb6111b080b7c8c359458e3fd1dc99cb0ff3c36
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33572322"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43877315"
 ---
 # <a name="how-to-delete-stores-in-isolated-storage"></a>如何：删除独立存储中的存储区
 <xref:System.IO.IsolatedStorage.IsolatedStorageFile> 类提供了两个用于删除独立存储文件的方法：  
@@ -38,6 +38,7 @@ ms.locfileid: "33572322"
  [!code-csharp[Conceptual.IsolatedStorage#3](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.isolatedstorage/cs/source3.cs#3)]
  [!code-vb[Conceptual.IsolatedStorage#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.isolatedstorage/vb/source3.vb#3)]  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.IO.IsolatedStorage.IsolatedStorageFile>  
- [独立存储](../../../docs/standard/io/isolated-storage.md)
+## <a name="see-also"></a>请参阅
+
+- <xref:System.IO.IsolatedStorage.IsolatedStorageFile>  
+- [独立存储](../../../docs/standard/io/isolated-storage.md)

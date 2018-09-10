@@ -5,12 +5,12 @@ ms.assetid: 81731998-d5e7-49e4-ad38-c8e6d01689d0
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: 88170162e4149580d532129666348d226540aced
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a78507226b87f005798d0c4824a827a72f1d657a
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33398126"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "43742786"
 ---
 # <a name="integrated-windows-authentication-with-extended-protection"></a>带有扩展保护的集成 Windows 身份验证
 进行了可影响以下类处理集成式 Windows 身份验证的方式的改进：<xref:System.Net.HttpWebRequest>、<xref:System.Net.HttpListener>、<xref:System.Net.Mail.SmtpClient>、<xref:System.Net.Security.SslStream>、<xref:System.Net.Security.NegotiateStream> 以及 <xref:System.Net> 和相关命名空间中的相关类。 添加了对扩展保护的支持以增强安全性。  
@@ -131,7 +131,7 @@ ms.locfileid: "33398126"
   
 3.  客户端指定正确的通道绑定或能够不指定通道绑定进行连接，因为服务器上的扩展保护策略配置为 <xref:System.Security.Authentication.ExtendedProtection.PolicyEnforcement.WhenSupported>。请求将返回到应用程序进行处理。 不会自动执行服务器名称检查。 应用程序可能使用 <xref:System.Net.HttpListenerRequest.ServiceName%2A> 属性来选择执行其自己的服务名称验证，但在这些情况下它是多余的。  
   
- 如果应用程序自己进行 SSPI 调用以基于 HTTP 请求主体中来回传递的 Blob 执行身份验证，并且想要支持通道绑定，则它需要使用 <xref:System.Net.HttpListener> 来检索外部安全通道的预期通道绑定，以便将其传递给本机 Win32 [AcceptSecurityContext](http://go.microsoft.com/fwlink/?LinkId=147021) 函数。 若要执行此操作，请使用 <xref:System.Net.HttpListenerRequest.TransportContext%2A> 属性并调用 <xref:System.Net.TransportContext.GetChannelBinding%2A> 方法来检索 CBT。 仅支持终结点绑定。 如果指定除 <xref:System.Security.Authentication.ExtendedProtection.ChannelBindingKind.Endpoint> 外的其他内容，将引发 <xref:System.NotSupportedException>。 如果基础操作系统支持通道绑定，<xref:System.Net.TransportContext.GetChannelBinding%2A> 方法将返回 <xref:System.Security.Authentication.ExtendedProtection.ChannelBinding><xref:System.Runtime.InteropServices.SafeHandle>，包装指向适合传递到 [AcceptSecurityContext](http://go.microsoft.com/fwlink/?LinkId=147021) 函数的通道绑定的指针，因为 SecBuffer 结构的 pvBuffer 成员传入了 `pInput` 参数。 <xref:System.Security.Authentication.ExtendedProtection.ChannelBinding.Size%2A> 属性包含通道绑定的以字节为单位的长度。 如果基础操作系统不支持通道绑定，该函数将返回 `null`。  
+ 如果应用程序自己进行 SSPI 调用以基于 HTTP 请求主体中来回传递的 Blob 执行身份验证，并且想要支持通道绑定，则它需要使用 <xref:System.Net.HttpListener> 来检索外部安全通道的预期通道绑定，以便将其传递给本机 Win32 [AcceptSecurityContext](https://go.microsoft.com/fwlink/?LinkId=147021) 函数。 若要执行此操作，请使用 <xref:System.Net.HttpListenerRequest.TransportContext%2A> 属性并调用 <xref:System.Net.TransportContext.GetChannelBinding%2A> 方法来检索 CBT。 仅支持终结点绑定。 如果指定除 <xref:System.Security.Authentication.ExtendedProtection.ChannelBindingKind.Endpoint> 外的其他内容，将引发 <xref:System.NotSupportedException>。 如果基础操作系统支持通道绑定，<xref:System.Net.TransportContext.GetChannelBinding%2A> 方法将返回 <xref:System.Security.Authentication.ExtendedProtection.ChannelBinding><xref:System.Runtime.InteropServices.SafeHandle>，包装指向适合传递到 [AcceptSecurityContext](https://go.microsoft.com/fwlink/?LinkId=147021) 函数的通道绑定的指针，因为 SecBuffer 结构的 pvBuffer 成员传入了 `pInput` 参数。 <xref:System.Security.Authentication.ExtendedProtection.ChannelBinding.Size%2A> 属性包含通道绑定的以字节为单位的长度。 如果基础操作系统不支持通道绑定，该函数将返回 `null`。  
   
  另一种可能的情况是未使用代理时为 HTTP:// 前缀启用扩展保护。 在这种情况下，将 <xref:System.Net.HttpListener.ExtendedProtectionPolicy%2A?displayProperty=nameWithType> 设置为 <xref:System.Security.Authentication.ExtendedProtection.ExtendedProtectionPolicy>（其中 <xref:System.Security.Authentication.ExtendedProtection.PolicyEnforcement> 设置为 <xref:System.Security.Authentication.ExtendedProtection.PolicyEnforcement.WhenSupported> 或 <xref:System.Security.Authentication.ExtendedProtection.PolicyEnforcement.Always>），并且将 <xref:System.Security.Authentication.ExtendedProtection.ProtectionScenario> 设置为 <xref:System.Security.Authentication.ExtendedProtection.ProtectionScenario.TransportSelected>。<xref:System.Security.Authentication.ExtendedProtection.PolicyEnforcement.WhenSupported> 的值使 <xref:System.Net.HttpListener> 处于部分强化模式，而 <xref:System.Security.Authentication.ExtendedProtection.PolicyEnforcement.Always> 对应完全强化模式。  
   

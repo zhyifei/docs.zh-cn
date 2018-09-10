@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: a281bfbf-6596-45ed-a2d6-3782d535ada2
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9800f1b1ec8fbb0eaf91611895aaf9d45629fae0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 18a784db1ff02f459fbc2265c3ca1a2abfaff9b4
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33575819"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43879031"
 ---
 # <a name="how-to-define-and-use-custom-numeric-format-providers"></a>如何：定义和使用自定义数值格式提供程序
 借助 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]，可以全面控制数值的字符串表示形式。 它支持用于自定义数值格式的以下功能：  
@@ -91,5 +91,6 @@ ms.locfileid: "33575819"
 ## <a name="compiling-the-code"></a>编译代码  
  使用 csc.exe 或 vb.exe 通过命令行编译代码。 若要在 Visual Studio 中编译代码，请将代码置于控制台应用程序项目模板中。  
   
-## <a name="see-also"></a>请参阅  
- [执行格式设置操作](../../../docs/standard/base-types/performing-formatting-operations.md)
+## <a name="see-also"></a>请参阅
+
+- [执行格式设置操作](../../../docs/standard/base-types/performing-formatting-operations.md)

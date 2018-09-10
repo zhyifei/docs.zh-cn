@@ -4,12 +4,12 @@ description: 适用于容器化 .NET 应用程序的 .NET 微服务体系结构 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/18/2017
-ms.openlocfilehash: f0e0e63c6ce2e4699cc4f9c0bd0d120549b88cca
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.openlocfilehash: 827d28adda90403d866e7bc13d9eae99fe47c137
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37106007"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43804102"
 ---
 # <a name="communication-in-a-microservice-architecture"></a>微服务体系结构中的通信
 
@@ -61,7 +61,7 @@ ms.locfileid: "37106007"
 
 最后（构建微服务时大多数问题会在这里发生），如果初始微服务需要最初由其他微服务拥有的数据，则不要依赖于对该数据进行同步请求。 而是通过使用最终一致性（通常使用集成事件，如后面几节所述），将该数据（仅需要的属性）复制或传播到初始服务的数据库中。
 
-如前面的[标识每个微服务的域模型边界](#identifying-domain-model-boundaries-for-each-microservice)一节中所述，跨多个微服务复制某些数据不是设计错误 - 相反，此操作可以将数据翻译成该附加域或有边界的上下文的特定语言或术语。 例如，在 [eShopOnContainers ](http://aka.ms/MicroservicesArchitecture) 应用程序中，有一个名为 identity.api 的微服务，它负责名为 User 的实体中的大部分用户数据。 但在需要存储有关订购微服务内的用户数据时，将其存储为名为 Buyer 的其他实体。 Buyer 实体与原始 User 实体共享相同的身份，但它可能只具有订购域所需的少量属性，而不是整个用户配置文件。
+如前面的[标识每个微服务的域模型边界](#identifying-domain-model-boundaries-for-each-microservice)一节中所述，跨多个微服务复制某些数据不是设计错误 - 相反，此操作可以将数据翻译成该附加域或有边界的上下文的特定语言或术语。 例如，在 [eShopOnContainers ](https://aka.ms/MicroservicesArchitecture) 应用程序中，有一个名为 identity.api 的微服务，它负责名为 User 的实体中的大部分用户数据。 但在需要存储有关订购微服务内的用户数据时，将其存储为名为 Buyer 的其他实体。 Buyer 实体与原始 User 实体共享相同的身份，但它可能只具有订购域所需的少量属性，而不是整个用户配置文件。
 
 可以使用任何协议在微服务之间异步通信和传播数据，以实现最终的一致性。 如前所述，可以通过事件总线或消息代理使用集成事件，或者甚至可以通过轮询其他服务使用 HTTP。 这无关紧要。 重要的规则是不在微服务之间创建同步依赖项。
 

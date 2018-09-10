@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Manifest Generation and Editing tool
 - Mage.exe
 ms.assetid: 77dfe576-2962-407e-af13-82255df725a1
-ms.openlocfilehash: d3922d9a81e350fd9ce95ffaa51dc3534873fb97
-ms.sourcegitcommit: bd4fa78f5a46133efdead1bc692a9aa2811d7868
+ms.openlocfilehash: 8f4e60eef443f772de3574d988ce48470f8c2017
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "42754987"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43856174"
 ---
 # <a name="mageexe-manifest-generation-and-editing-tool"></a>Mage.exe（清单生成和编辑工具）
 
@@ -63,7 +63,7 @@ Mage [commands] [commandOptions]
 |**-pu,** **-ProviderURL** `url`||部署清单。|指定 ClickOnce 要检查是否存在应用程序更新的 URL。|
 |**-pub, -Publisher** `publisherName`||应用程序清单。<br /><br /> 部署清单。|将发布服务器名称添加到部署清单或应用程序清单的描述元素中。 在应用程序清单中使用时，还必须使用值 “true” 或 “t” 来指定 **-UseManifestForTrust** ，否则此参数将引发错误。|
 |**-s, -SupportURL**  `url`||应用程序清单。<br /><br /> 部署清单。|指定在“添加或删除程序”对话框中为 ClickOnce 应用程序显示的链接。|
-|**-ti, -TimestampUri** `uri`||应用程序清单。<br /><br /> 部署清单。|数字时间戳服务的 URL。 如果数字证书在部署应用程序的下一个版本之前过期，为清单加盖时间戳可以让你不必对清单进行重新签名。 有关详细信息，请参阅 [Windows 根证书计划成员](http://go.microsoft.com/fwlink/?LinkId=159000)。|
+|**-ti, -TimestampUri** `uri`||应用程序清单。<br /><br /> 部署清单。|数字时间戳服务的 URL。 如果数字证书在部署应用程序的下一个版本之前过期，为清单加盖时间戳可以让你不必对清单进行重新签名。 有关详细信息，请参阅 [Windows 根证书计划成员](https://go.microsoft.com/fwlink/?LinkId=159000)。|
 |**-t, -ToFile** `filePath`|-   新建：<br />-   部署：deploy.application<br />-   应用程序：application.exe.manifest<br />-   更新：<br />-   输入文件。|所有文件类型。|指定已经创建或修改的文件的输出路径。<br /><br /> 如果使用 **-New** 时未提供 **-ToFile**，则输出将写入到当前工作目录。 如果使用“-Update”时未提供“-ToFile”，Mage.exe 会将该文件写回到输入文件中。|
 |**-tr, -TrustLevel** `level`|基于应用程序 URL 所在的区域。|应用程序清单。|要为客户端计算机上的应用程序授予的信任级别。 值包括“Internet”、“Intranet”和“FullTrust”。|
 |**-um, -UseManifestForTrust** `willUseForTrust`|False|应用程序清单。|指定当应用程序在客户端上运行时，是否使用应用程序清单的数字签名来做出信任决定。 如果指定“true”或“t”，则指示将使用应用程序清单来做出信任决定。 如果指定“false”或“f”，则指示将使用部署清单的签名。|

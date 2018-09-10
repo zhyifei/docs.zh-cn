@@ -8,12 +8,12 @@ dev_langs:
 ms.assetid: 00833027-1428-4586-83c1-42f5de3323d1
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 72bb3c2badef5262907e2e4fa8b461b576e8867d
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: ca806f0f9c7e1ad859affe05d5db8ec0d3b36b03
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43476045"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44078870"
 ---
 # <a name="xdr-validation-with-xmlschemacollection"></a>使用 XmlSchemaCollection 进行 XDR 验证
 
@@ -160,5 +160,5 @@ namespace ValidationSample
 
 ## <a name="see-also"></a>请参阅
 
-<xref:System.Xml.XmlValidatingReader.ValidationType%2A>  
-[XmlSchemaCollection 架构编译](xmlschemacollection-schema-compilation.md)  
+- <xref:System.Xml.XmlValidatingReader.ValidationType%2A>
+- [XmlSchemaCollection 架构编译](xmlschemacollection-schema-compilation.md)

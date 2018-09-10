@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: f9af93bb-7a0d-4ba5-afe8-74f48b6b6958
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f7d1d95030d2bc9f9288ae134471c150a37291b9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5bd2468c7b68a9c79e7418a32294676fb468e1a9
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33582254"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "44042629"
 ---
 # <a name="spinlock"></a>SpinLock
 <xref:System.Threading.SpinLock> 结构是低级互斥同步基元，在等待获取锁时旋转。 在多核计算机上，如果应缩短等待时间且争用最少，那么 <xref:System.Threading.SpinLock> 的性能优于其他种类的锁。 不过，建议仅在通过分析确定 <xref:System.Threading.Monitor?displayProperty=nameWithType> 方法或 <xref:System.Threading.Interlocked> 方法显著降低程序性能时，才使用 <xref:System.Threading.SpinLock>。  
@@ -25,5 +25,6 @@ ms.locfileid: "33582254"
   
  <xref:System.Threading.SpinLock> 支持*线程*-*跟踪*模式，可以在开发阶段使用此模式，有助于跟踪在特定时间保留锁的线程。 虽然线程跟踪模式对于调试非常有用，但建议在程序的发行版中禁用它，因为它可能会降低性能。 有关详细信息，请参阅[如何：在 SpinLock 中启用线程跟踪模式](../../../docs/standard/threading/how-to-enable-thread-tracking-mode-in-spinlock.md)。  
   
-## <a name="see-also"></a>请参阅  
- [线程处理对象和功能](../../../docs/standard/threading/threading-objects-and-features.md)
+## <a name="see-also"></a>请参阅
+
+- [线程处理对象和功能](../../../docs/standard/threading/threading-objects-and-features.md)
