@@ -7,12 +7,12 @@ helpviewer_keywords:
 - wav files
 - .wav files
 ms.assetid: f7f62f53-e026-4c40-b221-3a26adb0c2c5
-ms.openlocfilehash: 6b20877e54722b338c9905445a39c42350c7f7d7
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: a83d0a11aacac3676aa78d9952f24f505949d24c
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43384864"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43522548"
 ---
 # <a name="how-to-use-platform-invoke-to-play-a-wave-file-c-programming-guide"></a>如何：使用平台调用播放波形文件（C# 编程指南）
 下面的 C# 代码示例说明了如何使用平台调用服务在 Windows 操作系统中播放波形声音文件。  
@@ -43,8 +43,9 @@ ms.locfileid: "43384864"
 ## <a name="net-framework-security"></a>.NET Framework 安全性  
  有关详细信息，请参阅 [ .NET 中的安全性](../../../standard/security/index.md)。  
   
-## <a name="see-also"></a>请参阅  
- [C# 编程指南](../../../csharp/programming-guide/index.md)  
- [互操作性概述](../../../csharp/programming-guide/interop/interoperability-overview.md)  
- [平台调用详解](../../../framework/interop/consuming-unmanaged-dll-functions.md#a-closer-look-at-platform-invoke)  
- [用平台调用封送数据](../../../framework/interop/marshaling-data-with-platform-invoke.md)
+## <a name="see-also"></a>请参阅
+
+- [C# 编程指南](../../../csharp/programming-guide/index.md)  
+- [互操作性概述](../../../csharp/programming-guide/interop/interoperability-overview.md)  
+- [平台调用详解](../../../framework/interop/consuming-unmanaged-dll-functions.md#a-closer-look-at-platform-invoke)  
+- [用平台调用封送数据](../../../framework/interop/marshaling-data-with-platform-invoke.md)

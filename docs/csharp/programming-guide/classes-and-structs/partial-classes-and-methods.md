@@ -6,12 +6,12 @@ helpviewer_keywords:
 - partial classes [C#]
 - C# language, partial classes and methods
 ms.assetid: 804cecb7-62db-4f97-a99f-60975bd59fa1
-ms.openlocfilehash: aa0baf50b9e4aabf0bb5dfa229ecd245db391a8b
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 21350c28f5fcce812f47742bebe07f5bcdf842f1
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43484023"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43521164"
 ---
 # <a name="partial-classes-and-methods-c-programming-guide"></a>分部类和方法（C# 编程指南）
 拆分[类](../../../csharp/language-reference/keywords/class.md)、[结构](../../../csharp/language-reference/keywords/struct.md)、[接口](../../../csharp/language-reference/keywords/interface.md)或超过两种源文件的方法的定义是可能的。 每个源文件包含类型或方法定义的一部分，编译应用程序时将把所有部分组合起来。  
@@ -160,9 +160,10 @@ partial void onNameChanged()
 ## <a name="c-language-specification"></a>C# 语言规范  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>请参阅  
- [C# 编程指南](../../../csharp/programming-guide/index.md)  
- [类](../../../csharp/programming-guide/classes-and-structs/classes.md)  
- [结构](../../../csharp/programming-guide/classes-and-structs/structs.md)  
- [接口](../../../csharp/programming-guide/interfaces/index.md)  
- [分部（类型）](../../../csharp/language-reference/keywords/partial-type.md)
+## <a name="see-also"></a>请参阅
+
+- [C# 编程指南](../../../csharp/programming-guide/index.md)  
+- [类](../../../csharp/programming-guide/classes-and-structs/classes.md)  
+- [结构](../../../csharp/programming-guide/classes-and-structs/structs.md)  
+- [接口](../../../csharp/programming-guide/interfaces/index.md)  
+- [分部（类型）](../../../csharp/language-reference/keywords/partial-type.md)

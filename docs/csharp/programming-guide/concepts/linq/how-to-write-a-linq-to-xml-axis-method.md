@@ -2,12 +2,12 @@
 title: 如何：编写 LINQ to XML 轴方法 (C#)
 ms.date: 07/20/2015
 ms.assetid: 50aef06b-1d22-4718-a18a-21237e26d7c1
-ms.openlocfilehash: 51adbc9f0771f8925e5e16c61f48bbb5f8bedf05
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 74ed60fa3c78bcbc233e27868b1abe357a85c62a
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33322778"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43510528"
 ---
 # <a name="how-to-write-a-linq-to-xml-axis-method-c"></a>如何：编写 LINQ to XML 轴方法 (C#)
 你可以编写自己的轴方法以便从 XML 树中检索集合。 执行此操作的最佳方式之一是编写可返回元素或属性集合的扩展方法。 您可以基于应用程序的需求编写扩展方法以返回元素或属性的特定子集。  
@@ -291,5 +291,6 @@ class Program
 1999-10-22  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [高级查询技术 (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)
+## <a name="see-also"></a>请参阅
+
+- [高级查询技术 (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)

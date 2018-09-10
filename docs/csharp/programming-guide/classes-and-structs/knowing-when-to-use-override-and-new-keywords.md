@@ -6,12 +6,12 @@ helpviewer_keywords:
 - new keyword [C#]
 - polymorphism [C#], using override and new [C#]
 ms.assetid: 323db184-b136-46fc-8839-007886e7e8b0
-ms.openlocfilehash: 61bfa87b7aaa7c17d4ba67c69fa1e57ee7415dc0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5b13ee695ef2a63332b01b504458453885160039
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33340263"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43513814"
 ---
 # <a name="knowing-when-to-use-override-and-new-keywords-c-programming-guide"></a>了解何时使用 Override 和 New 关键字（C# 编程指南）
 在 C# 中，派生类中的方法可具有与基类中的方法相同的名称。 可使用 [new](../../../csharp/language-reference/keywords/new.md) 和 [override](../../../csharp/language-reference/keywords/override.md) 关键字指定方法的交互方式。 `override` 修饰符用于扩展基类方法，而 `new` 修饰符则用于隐藏该方法。 本主题中的示例阐释了这种差异。  
@@ -541,9 +541,10 @@ namespace OverrideAndNew2
 }  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [C# 编程指南](../../../csharp/programming-guide/index.md)  
- [类和结构](../../../csharp/programming-guide/classes-and-structs/index.md)  
- [使用 Override 和 New 关键字进行版本控制](../../../csharp/programming-guide/classes-and-structs/versioning-with-the-override-and-new-keywords.md)  
- [base](../../../csharp/language-reference/keywords/base.md)  
- [abstract](../../../csharp/language-reference/keywords/abstract.md)
+## <a name="see-also"></a>请参阅
+
+- [C# 编程指南](../../../csharp/programming-guide/index.md)  
+- [类和结构](../../../csharp/programming-guide/classes-and-structs/index.md)  
+- [使用 Override 和 New 关键字进行版本控制](../../../csharp/programming-guide/classes-and-structs/versioning-with-the-override-and-new-keywords.md)  
+- [base](../../../csharp/language-reference/keywords/base.md)  
+- [abstract](../../../csharp/language-reference/keywords/abstract.md)

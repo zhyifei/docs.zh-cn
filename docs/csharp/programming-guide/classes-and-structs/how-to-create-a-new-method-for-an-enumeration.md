@@ -6,12 +6,12 @@ helpviewer_keywords:
 - extension methods [C#], for enums
 - enum extensibility [C#]
 ms.assetid: 100106f9-1e54-462c-8ebe-3892fe23b6eb
-ms.openlocfilehash: 8de44cbddf26af45245709d0e28d2d157256ce59
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.openlocfilehash: 3e153dbbe80ed850705ddaea4a9a3d5aba570fe0
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42932210"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43508942"
 ---
 # <a name="how-to-create-a-new-method-for-an-enumeration-c-programming-guide"></a>如何：为枚举创建新方法（C# 编程指南）
 可使用扩展方法添加特定于某个特定枚举类型的功能。  
@@ -26,6 +26,7 @@ ms.locfileid: "42932210"
 ## <a name="compiling-the-code"></a>编译代码  
  若要运行此代码，请将其复制并粘贴到已在 Visual Studio 中创建的 Visual C# 控制台应用程序项目。 默认情况下，此项目面向 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 3.5 版，并且具有对 System.Core.dll 的引用和一个用于 System.Linq 的 `using` 指令。 如果项目中缺少其中一个或多个要求，则可以手动添加它们。  
   
-## <a name="see-also"></a>请参阅  
- [C# 编程指南](../../../csharp/programming-guide/index.md)  
- [扩展方法](../../../csharp/programming-guide/classes-and-structs/extension-methods.md)
+## <a name="see-also"></a>请参阅
+
+- [C# 编程指南](../../../csharp/programming-guide/index.md)  
+- [扩展方法](../../../csharp/programming-guide/classes-and-structs/extension-methods.md)

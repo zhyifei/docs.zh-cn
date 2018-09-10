@@ -2,12 +2,12 @@
 title: 检索段落及其样式 (C#)
 ms.date: 07/20/2015
 ms.assetid: c2f767f8-57b1-4b4b-af04-89ffb1f7067d
-ms.openlocfilehash: 11788c1fa46c63c78a9db0255c8e84250285863e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 46ffc13c9808b6186efa402bd46b75c6c1a9bbda
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33335343"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43510769"
 ---
 # <a name="retrieving-the-paragraphs-and-their-styles-c"></a>检索段落及其样式 (C#)
 在本示例中，我们编写一个从 WordprocessingML 文档检索段落节点的查询。 它还标识每个段落的样式。  
@@ -132,5 +132,6 @@ StyleName:Code
 ## <a name="next-steps"></a>后续步骤  
  在下一主题[检索段落的文本 (C#)](../../../../csharp/programming-guide/concepts/linq/retrieving-the-text-of-the-paragraphs.md) 中，将创建一个查询来检索段落的文本。  
   
-## <a name="see-also"></a>请参阅  
- [教程：操作 WordprocessingML 文档中的内容 (C#)](../../../../csharp/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)
+## <a name="see-also"></a>请参阅
+
+- [教程：操作 WordprocessingML 文档中的内容 (C#)](../../../../csharp/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)

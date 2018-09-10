@@ -2,12 +2,12 @@
 title: -target:appcontainerexe（C# 编译器选项）
 ms.date: 07/20/2015
 ms.assetid: e7e62229-23ea-4e53-bef5-380d951bf95f
-ms.openlocfilehash: b8765f64aeb08d816ca17fce64c13e981d85145b
-ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
+ms.openlocfilehash: 8042e1888da63d26f3639ed372bfc7fadcd515f0
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42907652"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43507869"
 ---
 # <a name="-targetappcontainerexe-c-compiler-options"></a>-target:appcontainerexe（C# 编译器选项）
 如果使用 -target:appcontainerexe 编译器选项，则编译器会创建一个 Windows 可执行 (.exe) 文件，该文件必须在应用容器中运行。 此选项与 [-target:winexe](../../../csharp/language-reference/compiler-options/target-winexe-compiler-option.md) 等效，但专门用于 [!INCLUDE[win8_appname_long](~/includes/win8-appname-long-md.md)] 应用。  
@@ -19,7 +19,7 @@ ms.locfileid: "42907652"
 ```  
   
 ## <a name="remarks"></a>备注  
- 为了要求应用在应用容器中运行，此选项在[可移植可执行](https://msdn.microsoft.com/library/windows/desktop/ms680547(v=vs.85).aspx?id=19509) (PE) 文件中设置了一个位。 设置该位时，如果 CreateProcess 方法尝试在应用容器外启动该可执行文件，就会发生错误。  
+ 为了要求应用在应用容器中运行，此选项在[可移植可执行](/windows/desktop/Debug/pe-format) (PE) 文件中设置了一个位。 设置该位时，如果 CreateProcess 方法尝试在应用容器外启动该可执行文件，就会发生错误。  
   
  除非使用 [-out](../../../csharp/language-reference/compiler-options/out-compiler-option.md) 选项，否则输出文件名采用包含 [Main](../../../csharp/programming-guide/main-and-command-args/index.md) 方法的输入文件的名称。  
   
@@ -43,6 +43,7 @@ csc -target:appcontainerexe filename.cs
 ```  
   
 ## <a name="see-also"></a>请参阅  
- [-target（C# 编译器选项）](../../../csharp/language-reference/compiler-options/target-compiler-option.md)  
- [-target:winexe（C# 编译器选项）](../../../csharp/language-reference/compiler-options/target-winexe-compiler-option.md)  
- [C# 编译器选项](../../../csharp/language-reference/compiler-options/index.md)
+
+- [-target（C# 编译器选项）](../../../csharp/language-reference/compiler-options/target-compiler-option.md)  
+- [-target:winexe（C# 编译器选项）](../../../csharp/language-reference/compiler-options/target-winexe-compiler-option.md)  
+- [C# 编译器选项](../../../csharp/language-reference/compiler-options/index.md)

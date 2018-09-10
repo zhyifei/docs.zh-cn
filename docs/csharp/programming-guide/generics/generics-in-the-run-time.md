@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - generics [C#], at run time
 ms.assetid: 119df7e6-9ceb-49df-af36-24f8f8c0747f
-ms.openlocfilehash: c7cc0580398eeb5c70422cba3569340133107b12
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e5eb0ed02b1462aa126e55d688f4166aa741353a
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33334530"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43513801"
 ---
 # <a name="generics-in-the-run-time-c-programming-guide"></a>运行时中的泛型（C# 编程指南）
 泛型类型或方法编译为 Microsoft 中间语言 (MSIL) 时，它包含将其标识为具有类型参数的元数据。 如何使用泛型类型的 MSIL 根据所提供的类型参数是值类型还是引用类型而有所不同。  
@@ -46,8 +46,9 @@ ms.locfileid: "33334530"
   
  此外，使用值类型或引用类型参数实例化泛型 C# 类时，反射可在运行时对其进行查询，且其实际类型和类型参数皆可被确定。  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Collections.Generic>  
- [C# 编程指南](../../../csharp/programming-guide/index.md)  
- [泛型介绍](../../../csharp/programming-guide/generics/introduction-to-generics.md)  
- [泛型](~/docs/standard/generics/index.md)
+## <a name="see-also"></a>请参阅
+
+- <xref:System.Collections.Generic>  
+- [C# 编程指南](../../../csharp/programming-guide/index.md)  
+- [泛型介绍](../../../csharp/programming-guide/generics/introduction-to-generics.md)  
+- [泛型](~/docs/standard/generics/index.md)

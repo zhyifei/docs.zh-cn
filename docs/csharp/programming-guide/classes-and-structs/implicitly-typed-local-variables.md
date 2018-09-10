@@ -5,12 +5,12 @@ helpviewer_keywords:
 - implicitly-typed local variables [C#]
 - var [C#]
 ms.assetid: b9218fb2-ef5d-4814-8a8e-2bc29b0bbc9b
-ms.openlocfilehash: 91020886e381d8410358cae9511107e28c51452a
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 2e678886162196c3a0fe4762bf766596cdc02225
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43464903"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43501398"
 ---
 # <a name="implicitly-typed-local-variables-c-programming-guide"></a>隐式类型的局部变量（C# 编程指南）
 可声明局部变量而无需提供显式类型。 `var` 关键字指示编译器通过初始化语句右侧的表达式推断变量的类型。 推断类型可以是内置类型、匿名类型、用户定义类型或 .NET Framework 类库中定义的类型。 有关如何使用 `var` 初始化数组的详细信息，请参阅[隐式类型化数组](../../../csharp/programming-guide/arrays/implicitly-typed-arrays.md)。  
@@ -73,15 +73,16 @@ ms.locfileid: "43464903"
   
  但是，使用 `var` 至少有可能使代码对其他开发人员更加难以理解。 为此，C# 文档通常只在需要时才使用 `var`。  
   
-## <a name="see-also"></a>请参阅  
- [C# 参考](../../../csharp/language-reference/index.md)  
- [隐式类型化数组](../../../csharp/programming-guide/arrays/implicitly-typed-arrays.md)  
- [如何：在查询表达式中使用隐式类型的局部变量和数组](../../../csharp/programming-guide/classes-and-structs/how-to-use-implicitly-typed-local-variables-and-arrays-in-a-query-expression.md)  
- [匿名类型](../../../csharp/programming-guide/classes-and-structs/anonymous-types.md)  
- [对象和集合初始值设定项](../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md)  
- [var](../../../csharp/language-reference/keywords/var.md)  
- [LINQ 查询表达式](../../../csharp/programming-guide/linq-query-expressions/index.md)  
- [LINQ（语言集成查询）](../../../csharp/linq/index.md)  
- [for](../../../csharp/language-reference/keywords/for.md)  
- [foreach, in](../../../csharp/language-reference/keywords/foreach-in.md)  
- [using 语句](../../../csharp/language-reference/keywords/using-statement.md)
+## <a name="see-also"></a>请参阅
+
+- [C# 参考](../../../csharp/language-reference/index.md)  
+- [隐式类型化数组](../../../csharp/programming-guide/arrays/implicitly-typed-arrays.md)  
+- [如何：在查询表达式中使用隐式类型的局部变量和数组](../../../csharp/programming-guide/classes-and-structs/how-to-use-implicitly-typed-local-variables-and-arrays-in-a-query-expression.md)  
+- [匿名类型](../../../csharp/programming-guide/classes-and-structs/anonymous-types.md)  
+- [对象和集合初始值设定项](../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md)  
+- [var](../../../csharp/language-reference/keywords/var.md)  
+- [LINQ 查询表达式](../../../csharp/programming-guide/linq-query-expressions/index.md)  
+- [LINQ（语言集成查询）](../../../csharp/linq/index.md)  
+- [for](../../../csharp/language-reference/keywords/for.md)  
+- [foreach, in](../../../csharp/language-reference/keywords/foreach-in.md)  
+- [using 语句](../../../csharp/language-reference/keywords/using-statement.md)

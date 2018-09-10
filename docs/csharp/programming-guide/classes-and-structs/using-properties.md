@@ -6,12 +6,12 @@ helpviewer_keywords:
 - get accessor [C#]
 - properties [C#], about properties
 ms.assetid: f7f67b05-0983-4cdb-96af-1855d24c967c
-ms.openlocfilehash: f0d470d2c38a07db9a936fc645b7a97aa12a7f84
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 50dda6a27081762a4e8b407ca5af94659b47da45
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33339743"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43515849"
 ---
 # <a name="using-properties-c-programming-guide"></a>使用属性（C# 编程指南）
 属性结合了字段和方法的多个方面。 对于对象的用户来说，属性似乎是一个字段，访问属性需要相同的语法。 对于类的实现者来说，属性是一两个代码块，表示 [get](../../../csharp/language-reference/keywords/get.md) 访问器和/或 [set](../../../csharp/language-reference/keywords/set.md) 访问器。 读取属性时，执行 `get` 访问器的代码块；向属性赋予新值时，执行 `set` 访问器的代码块。 将不带 `set` 访问器的属性视为只读。 将不带 `get` 访问器的属性视为只写。 将具有以上两个访问器的属性视为读写。  
@@ -99,8 +99,9 @@ ms.locfileid: "33339743"
   
  [!code-csharp[csProgGuideProperties#6](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-properties_12.cs)]  
   
-## <a name="see-also"></a>请参阅  
- [C# 编程指南](../../../csharp/programming-guide/index.md)  
- [属性](../../../csharp/programming-guide/classes-and-structs/properties.md)  
- [接口属性](../../../csharp/programming-guide/classes-and-structs/interface-properties.md)  
- [自动实现的属性](../../../csharp/programming-guide/classes-and-structs/auto-implemented-properties.md)
+## <a name="see-also"></a>请参阅
+
+- [C# 编程指南](../../../csharp/programming-guide/index.md)  
+- [属性](../../../csharp/programming-guide/classes-and-structs/properties.md)  
+- [接口属性](../../../csharp/programming-guide/classes-and-structs/interface-properties.md)  
+- [自动实现的属性](../../../csharp/programming-guide/classes-and-structs/auto-implemented-properties.md)

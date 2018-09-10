@@ -2,12 +2,12 @@
 title: 处理异步应用中的重新进入 (C#)
 ms.date: 07/20/2015
 ms.assetid: 47c5075e-c448-45ce-9155-ed4e7e98c677
-ms.openlocfilehash: f2b43bd982b7dcd1f4641ae55f95595d14d70b0b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ef0d3da41fdabaf8745dff083d37fcd89e3a2700
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33339756"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43521623"
 ---
 # <a name="handling-reentrancy-in-async-apps-c"></a>处理异步应用中的重新进入 (C#)
 在应用中包含异步代码时，应考虑并且可以阻止重新进入（指在异步操作完成之前重新进入它）。 如果不识别并处理重新进入的可能性，则它可能会导致意外结果。  
@@ -710,6 +710,7 @@ private async Task FinishOneGroupAsync(List<string> urls, Task<byte[]>[] content
   
 12. 从[禁用“开始”按钮](#BKMK_DisableTheStartButton)、[取消并重启操作](#BKMK_CancelAndRestart)或[运行多个操作并将输出排入队列](#BKMK_RunMultipleOperations)中进行更改以处理重新进入。  
   
-## <a name="see-also"></a>请参阅  
- [演练：使用 Async 和 Await 访问 Web (C#)](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)  
- [使用 Async 和 Await 的异步编程 (C#)](../../../../csharp/programming-guide/concepts/async/index.md)
+## <a name="see-also"></a>请参阅
+
+- [演练：使用 Async 和 Await 访问 Web (C#)](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)  
+- [使用 Async 和 Await 的异步编程 (C#)](../../../../csharp/programming-guide/concepts/async/index.md)

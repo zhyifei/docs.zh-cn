@@ -2,12 +2,12 @@
 title: 如何：投影新类型 (LINQ to XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: 48145cf9-1e0b-4e73-bbfd-28fc04800dc4
-ms.openlocfilehash: f9a46e78a0f80f33764e9f87e3e8ce3560a8e0f3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 889396dbcc44b685945eaafdf85cfe2510ddcde3
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33323766"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43510329"
 ---
 # <a name="how-to-project-a-new-type-linq-to-xml-c"></a>如何：投影新类型 (LINQ to XML) (C#)
 本节中的其他示例已演示了一些查询，这些查询以 <xref:System.Collections.Generic.IEnumerable%601> 的 <xref:System.Xml.Linq.XElement>、<xref:System.Collections.Generic.IEnumerable%601> 的 `string` 和 <xref:System.Collections.Generic.IEnumerable%601> 的 `int` 的形式返回结果。 这些是常见结果类型，但它们不是对所有情况都适用。 在很多情况下，会希望查询返回其他类型的 <xref:System.Collections.Generic.IEnumerable%601>。  
@@ -54,5 +54,6 @@ Lawnmower:1
 Baby Monitor:2  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [投影和转换 (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/projections-and-transformations-linq-to-xml.md)
+## <a name="see-also"></a>请参阅
+
+- [投影和转换 (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/projections-and-transformations-linq-to-xml.md)

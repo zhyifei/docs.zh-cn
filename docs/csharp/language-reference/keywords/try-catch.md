@@ -11,11 +11,11 @@ helpviewer_keywords:
 - try-catch statement [C#]
 ms.assetid: cb5503c7-bfa1-4610-8fc2-ddcd2e84c438
 ms.openlocfilehash: 70830b08f9be95422761e0c096071d726a3950c8
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43422648"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43517388"
 ---
 # <a name="try-catch-c-reference"></a>try-catch（C# 参考）
 Try-catch 语句包含一个后接一个或多个 `catch` 子句的 `try` 块，这些子句指定不同异常的处理程序。  

@@ -9,11 +9,11 @@ helpviewer_keywords:
 - async [C#]
 ms.assetid: 16f14f09-b2ce-42c7-a875-e4eca5d50674
 ms.openlocfilehash: 10f1d62c5aa29f2074106ab102775b9a0283d646
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43389541"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43510957"
 ---
 # <a name="async-c-reference"></a>async（C# 参考）
 使用 `async` 修饰符可将方法、[lambda 表达式](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)或[匿名方法](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md)指定为异步。 如果对方法或表达式使用此修饰符，则其称为异步方法。 如下示例定义了一个名为 `ExampleMethodAsync` 的异步方法： 

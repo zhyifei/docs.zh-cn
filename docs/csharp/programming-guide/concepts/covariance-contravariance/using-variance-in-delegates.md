@@ -2,12 +2,12 @@
 title: 使用委托中的变体 (C#)
 ms.date: 07/20/2015
 ms.assetid: 1638c95d-dc8b-40c1-972c-c2dcf84be55e
-ms.openlocfilehash: 46c09da9adac7ed47c32b1fed4311dfedbf5764e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5be4f786d2e1b8a0ead3fd58fe056e188faa916a
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33326054"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43501719"
 ---
 # <a name="using-variance-in-delegates-c"></a>使用委托中的变体 (C#)
 向委托分配方法时，协变和逆变为匹配委托类型和方法签名提供了灵活性。 协变允许方法具有的派生返回类型多于委托中定义的类型。 逆变允许方法具有的派生参数类型少于委托类型中的类型。  
@@ -20,8 +20,8 @@ ms.locfileid: "33326054"
 ### <a name="code"></a>代码  
   
 ```csharp  
-class Mammals{}  
-class Dogs : Mammals{}  
+class Mammals {}  
+class Dogs : Mammals {}  
   
 class Program  
 {  
@@ -77,6 +77,7 @@ public Form1()
 }  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [委托中的变体 (C#)](../../../../csharp/programming-guide/concepts/covariance-contravariance/variance-in-delegates.md)  
- [对 Func 和 Action 泛型委托使用变体 (C#)](../../../../csharp/programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md)
+## <a name="see-also"></a>请参阅
+
+- [委托中的变体 (C#)](../../../../csharp/programming-guide/concepts/covariance-contravariance/variance-in-delegates.md)  
+- [对 Func 和 Action 泛型委托使用变体 (C#)](../../../../csharp/programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md)

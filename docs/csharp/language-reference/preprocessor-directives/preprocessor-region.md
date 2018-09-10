@@ -7,11 +7,11 @@ helpviewer_keywords:
 - '#region directive [C#]'
 ms.assetid: 672c87d1-9771-4f64-ab3f-0ad3d4ffb2b4
 ms.openlocfilehash: 3edc4fe757ab1f5cbf42e67ab74cd8032a82d853
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43463268"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43518273"
 ---
 # <a name="region-c-reference"></a>#region（C# 参考）
 利用 `#region`，可以指定在使用 Visual Studio Code 编辑器的[大纲功能](/visualstudio/ide/outlining)时可展开或折叠的代码块。 在较长的代码文件中，能够折叠或隐藏一个或多个区域会十分便利，这样，可将精力集中于当前处理的文件部分。 下面的示例演示如何定义区域：  

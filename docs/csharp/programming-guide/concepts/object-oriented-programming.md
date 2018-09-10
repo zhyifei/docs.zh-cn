@@ -2,12 +2,12 @@
 title: 面向对象的编程 (C#)
 ms.date: 07/20/2015
 ms.assetid: 89574786-65ef-4335-88bc-fbacd094f183
-ms.openlocfilehash: a6194cb93b10d5b9f5d25fc42cff6c071627d411
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 8e211fec25ceb2e8e42620ff3f421e6943d8b5e5
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43415483"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43522150"
 ---
 # <a name="object-oriented-programming-c"></a>面向对象的编程 (C#)
 C# 提供对面向对象的编程（包括封装、继承和多形性）的完整支持。  
@@ -434,5 +434,6 @@ class SampleClass
   
 -   [委托](../../../csharp/language-reference/keywords/delegate.md)  
   
-## <a name="see-also"></a>请参阅  
- [C# 编程指南](../../../csharp/programming-guide/index.md)
+## <a name="see-also"></a>请参阅
+
+- [C# 编程指南](../../../csharp/programming-guide/index.md)

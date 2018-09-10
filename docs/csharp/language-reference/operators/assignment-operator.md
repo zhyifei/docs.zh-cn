@@ -7,11 +7,11 @@ helpviewer_keywords:
 - = operator [C#]
 ms.assetid: d802a6d5-32f0-42b8-b180-12f5a081bfc1
 ms.openlocfilehash: 9cd1af400a9afdb7942a49dee7e7f7bb78387f2d
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43477927"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43507349"
 ---
 # <a name="-operator-c-reference"></a>= 运算符（C# 参考）
 赋值运算符 (`=`) 在由左操作数表示的存储位置、属性或索引器中存储右操作数的值，并将该值作为结果返回。 操作数类型必须相同（或右操作数必须可隐式转换为左操作数的类型）。  

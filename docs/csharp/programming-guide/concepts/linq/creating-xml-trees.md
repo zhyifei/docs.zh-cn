@@ -2,12 +2,12 @@
 title: 创建 XML 树 (C#)
 ms.date: 07/20/2015
 ms.assetid: bccc3e0a-c08c-468e-9d30-e075670fdace
-ms.openlocfilehash: a9e9cfd82434de0fabc8119aa500ad9d9ef8155a
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 1245c0f087bb63f12d9f17389bf752330ccc7670
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43481370"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43521533"
 ---
 # <a name="creating-xml-trees-c"></a>创建 XML 树 (C#)
 最常见的 XML 任务之一是构造 XML 树。 本节介绍多种创建 XML 树的方法。  
@@ -23,5 +23,6 @@ ms.locfileid: "43481370"
 |[如何：使用 XSD 进行验证 (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-validate-using-xsd-linq-to-xml.md)|演示如何使用 XSD 验证 XML 树。|  
 |[XElement 和 XDocument 对象的有效内容](../../../../csharp/programming-guide/concepts/linq/valid-content-of-xelement-and-xdocument-objects3.md)|描述可以传递给构造函数的有效自变量，以及用于向元素和文档添加内容的方法。|  
   
-## <a name="see-also"></a>请参阅  
- [编程指南 (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/programming-guide-linq-to-xml.md)
+## <a name="see-also"></a>请参阅
+
+- [编程指南 (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/programming-guide-linq-to-xml.md)

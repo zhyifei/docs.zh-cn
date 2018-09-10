@@ -2,12 +2,12 @@
 title: 投影运算 (C#)
 ms.date: 07/20/2015
 ms.assetid: 98df573a-aad9-4b8c-9a71-844be2c4fb41
-ms.openlocfilehash: a044982c21246fd4e8c1cbdbb9801ae7b29d05c6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 80939e3ece9fdf82b7ca3300fe6f927caa34e9f0
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33335385"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43509731"
 ---
 # <a name="projection-operations-c"></a>投影运算 (C#)
 投影是指将对象转换为一种新形式的操作，该形式通常只包含那些将随后使用的属性。 通过使用投影，您可以构造从每个对象生成的新类型。 可以投影属性，并对该属性执行数学函数。 还可以在不更改原始对象的情况下投影该对象。  
@@ -159,9 +159,10 @@ static void SelectVsSelectMany()
 }  
 ```  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Linq>  
- [标准查询运算符概述 (C#)](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)  
- [select 子句](../../../../csharp/language-reference/keywords/select-clause.md)  
- [如何：从多个源填充对象集合 (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-populate-object-collections-from-multiple-sources-linq.md)  
- [如何：使用组将一个文件拆分成多个文件 (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-split-a-file-into-many-files-by-using-groups-linq.md)
+## <a name="see-also"></a>请参阅
+
+- <xref:System.Linq>  
+- [标准查询运算符概述 (C#)](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)  
+- [select 子句](../../../../csharp/language-reference/keywords/select-clause.md)  
+- [如何：从多个源填充对象集合 (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-populate-object-collections-from-multiple-sources-linq.md)  
+- [如何：使用组将一个文件拆分成多个文件 (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-split-a-file-into-many-files-by-using-groups-linq.md)

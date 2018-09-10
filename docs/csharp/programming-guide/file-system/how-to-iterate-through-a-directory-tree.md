@@ -5,12 +5,12 @@ helpviewer_keywords:
 - iterating through folders [C#]
 - file iteration [C#]
 ms.assetid: c4be4a75-6b1b-46a7-9d38-bab353091ed7
-ms.openlocfilehash: 8222985e803972fb8d19159cfeaad93c9b08954d
-ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
+ms.openlocfilehash: 1aac40793fabe152e18a1bf1b634058e85b31481
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "39244808"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43515756"
 ---
 # <a name="how-to-iterate-through-a-directory-tree-c-programming-guide"></a>如何：循环访问目录树（C# 编程指南）
 短语“循环访问目录树”的意思是访问特定根文件夹下的每个嵌套子目录中的每个文件，可以是任意深度。 不需要打开每个文件。 可以以 `string` 的形式只检索文件或子目录的名称，也可以以 <xref:System.IO.FileInfo?displayProperty=nameWithType> 或 <xref:System.IO.DirectoryInfo?displayProperty=nameWithType> 对象的形式检索其他信息。  
@@ -56,7 +56,8 @@ root.GetDirectories("*.*", System.IO.SearchOption.AllDirectories);
 ## <a name="robust-programming"></a>可靠编程  
  可靠的文件迭代代码必须考虑文件系统的诸多复杂性。 有关 Windows 文件系统的详细信息，请参阅 [NTFS Technical Reference](https://technet.microsoft.com/library/81cc8a8a-bd32-4786-a849-03245d68d8e4)（NTFS 技术参考）。  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.IO>  
- [LINQ 和文件目录](../../../csharp/programming-guide/concepts/linq/linq-and-file-directories.md)  
- [文件系统和注册表（C# 编程指南）](../../../csharp/programming-guide/file-system/index.md)
+## <a name="see-also"></a>请参阅
+
+- <xref:System.IO>  
+- [LINQ 和文件目录](../../../csharp/programming-guide/concepts/linq/linq-and-file-directories.md)  
+- [文件系统和注册表（C# 编程指南）](../../../csharp/programming-guide/file-system/index.md)

@@ -9,11 +9,11 @@ helpviewer_keywords:
 - select clause [C#]
 ms.assetid: df01e266-5781-4aaa-80c4-67cf28ea093f
 ms.openlocfilehash: dcab29cdbe98b5e49463d9a2781d43d4b9ee9544
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43467336"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43516476"
 ---
 # <a name="select-clause-c-reference"></a>select 子句（C# 参考）
 在查询表达式中，`select` 子句指定在执行查询时产生的值的类型。 根据计算所有以前的子句以及根据 `select` 子句本身的所有表达式得出结果。 查询表达式必须以 `select` 子句或 [group](../../../csharp/language-reference/keywords/group-clause.md) 子句结尾。  

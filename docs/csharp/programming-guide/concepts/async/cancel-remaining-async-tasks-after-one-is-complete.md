@@ -2,12 +2,12 @@
 title: 在完成一个异步任务后取消剩余任务 (C#)
 ms.date: 07/20/2015
 ms.assetid: d3cebc74-c392-497b-b1e6-62a262eabe05
-ms.openlocfilehash: 22a29dec90dcbbd24ff1a6081fd7bf1d56d6ac0e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e7ea530b369b2de22f195d348a90816b2b797584
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33327419"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43515298"
 ---
 # <a name="cancel-remaining-async-tasks-after-one-is-complete-c"></a>在完成一个异步任务后取消剩余任务 (C#)
 通过结合使用 <xref:System.Threading.Tasks.Task.WhenAny%2A?displayProperty=nameWithType> 方法和 <xref:System.Threading.CancellationToken>，可在一个任务完成时取消所有剩余任务。 `WhenAny` 方法采用任务集合中的一个参数。 该方法启动所有任务，并返回单个任务。 当集合中任意任务完成时，完成单个任务。  
@@ -257,8 +257,9 @@ namespace CancelAfterOneTask
 }  
 ```  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Threading.Tasks.Task.WhenAny%2A>  
- [微调异步应用程序 (C#)](../../../../csharp/programming-guide/concepts/async/fine-tuning-your-async-application.md)  
- [使用 Async 和 Await 的异步编程 (C#)](../../../../csharp/programming-guide/concepts/async/index.md)  
- [Async Sample: Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)（异步示例：微调应用程序）
+## <a name="see-also"></a>请参阅
+
+- <xref:System.Threading.Tasks.Task.WhenAny%2A>  
+- [微调异步应用程序 (C#)](../../../../csharp/programming-guide/concepts/async/fine-tuning-your-async-application.md)  
+- [使用 Async 和 Await 的异步编程 (C#)](../../../../csharp/programming-guide/concepts/async/index.md)  
+- [Async Sample: Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)（异步示例：微调应用程序）

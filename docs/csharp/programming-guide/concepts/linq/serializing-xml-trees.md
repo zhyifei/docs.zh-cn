@@ -2,12 +2,12 @@
 title: 序列化 XML 树 (C#)
 ms.date: 07/20/2015
 ms.assetid: b3937e54-4ce9-4236-ac96-14e7972aa594
-ms.openlocfilehash: 8f372a05bd69b801085cba9d9a3b11ae01841a2c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f9bcf049eb6cfe129971923657f5d70a833209cc
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33338346"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43500475"
 ---
 # <a name="serializing-xml-trees-c"></a>序列化 XML 树 (C#)
 序列化 XML 树意味着从 XML 树生成 XML。 可以将 XML 树序列化到文件、<xref:System.IO.TextWriter> 类的具体实现或 <xref:System.Xml.XmlWriter> 的具体实现。  
@@ -23,5 +23,6 @@ ms.locfileid: "33338346"
 |[序列化为文件、TextWriter 和 XmlWriter](../../../../csharp/programming-guide/concepts/linq/serializing-to-files-textwriters-and-xmlwriters.md)|描述如何将文档序列化到 <xref:System.IO.File>、<xref:System.IO.TextWriter> 或 <xref:System.Xml.XmlWriter>。|  
 |[序列化为 XmlReader（调用 XSLT）(C#)](../../../../csharp/programming-guide/concepts/linq/serializing-to-an-xmlreader-invoking-xslt.md)|描述如何创建一个 <xref:System.Xml.XmlReader>，使另一个模块能够通过它读取 XML 树的内容。|  
   
-## <a name="see-also"></a>请参阅  
- [编程指南 (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/programming-guide-linq-to-xml.md)
+## <a name="see-also"></a>请参阅
+
+- [编程指南 (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/programming-guide-linq-to-xml.md)

@@ -2,12 +2,12 @@
 title: 对数据分组 (C#)
 ms.date: 07/20/2015
 ms.assetid: e414e9e4-343a-4e6e-858f-4a30c5e64492
-ms.openlocfilehash: 1d2aca79fd6ae5df84b34a903ecb5e18ae7ab5a7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 42e93bf291b0921d7aafa07265d1193387d46aa6
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33327432"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43500310"
 ---
 # <a name="grouping-data-c"></a>对数据分组 (C#)
 分组是指将数据分到不同的组，使每组中的元素拥有公共的属性。  
@@ -59,12 +59,13 @@ foreach (var group in query)
 */  
 ```  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Linq>  
- [标准查询运算符概述 (C#)](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)  
- [group 子句](../../../../csharp/language-reference/keywords/group-clause.md)  
- [如何：创建嵌套组](../../../../csharp/programming-guide/linq-query-expressions/how-to-create-a-nested-group.md)  
- [如何：按扩展名对文件分组 (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-group-files-by-extension-linq.md)  
- [如何：对查询结果进行分组](../../../../csharp/programming-guide/linq-query-expressions/how-to-group-query-results.md)  
- [如何：对分组操作执行子查询](../../../../csharp/programming-guide/linq-query-expressions/how-to-perform-a-subquery-on-a-grouping-operation.md)  
- [如何：使用组将一个文件拆分成多个文件 (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-split-a-file-into-many-files-by-using-groups-linq.md)
+## <a name="see-also"></a>请参阅
+
+- <xref:System.Linq>  
+- [标准查询运算符概述 (C#)](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)  
+- [group 子句](../../../../csharp/language-reference/keywords/group-clause.md)  
+- [如何：创建嵌套组](../../../../csharp/programming-guide/linq-query-expressions/how-to-create-a-nested-group.md)  
+- [如何：按扩展名对文件分组 (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-group-files-by-extension-linq.md)  
+- [如何：对查询结果进行分组](../../../../csharp/programming-guide/linq-query-expressions/how-to-group-query-results.md)  
+- [如何：对分组操作执行子查询](../../../../csharp/programming-guide/linq-query-expressions/how-to-perform-a-subquery-on-a-grouping-operation.md)  
+- [如何：使用组将一个文件拆分成多个文件 (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-split-a-file-into-many-files-by-using-groups-linq.md)

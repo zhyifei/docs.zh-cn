@@ -5,12 +5,12 @@ helpviewer_keywords:
 - exception handling [C#], about exception handling
 - exceptions [C#], about exceptions
 ms.assetid: 71472c62-320a-470a-97d2-67995180389d
-ms.openlocfilehash: 43012ec1190117b1905b5e44010d5f57a1e543aa
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7b60ad4ce20a1977d309b275b530d03cbb8e1f7d
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33339821"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43514681"
 ---
 # <a name="using-exceptions-c-programming-guide"></a>使用异常（C# 编程指南）
 在 C# 中，程序中的运行时错误通过使用一种称为“异常”的机制在程序中传播。 异常由遇到错误的代码引发，由能够更正错误的代码捕捉。 异常可由 .NET Framework 公共语言运行时 (CLR) 或由程序中的代码引发。 一旦引发了一个异常，此异常会在调用堆栈中传播，直到找到针对它的 `catch` 语句。 未捕获的异常由系统提供的通用异常处理程序处理，该处理程序会显示一个对话框。  
@@ -43,6 +43,7 @@ ms.locfileid: "33339821"
   
 -   如果到达线程的开头，则终止线程。  
   
-## <a name="see-also"></a>请参阅  
- [C# 编程指南](../../../csharp/programming-guide/index.md)  
- [异常和异常处理](../../../csharp/programming-guide/exceptions/index.md)
+## <a name="see-also"></a>请参阅
+
+- [C# 编程指南](../../../csharp/programming-guide/index.md)  
+- [异常和异常处理](../../../csharp/programming-guide/exceptions/index.md)
