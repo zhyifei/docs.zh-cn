@@ -10,25 +10,25 @@ helpviewer_keywords:
 - conditional operator (?:) [C#]
 ms.assetid: e83a17f1-7500-48ba-8bee-2fbc4c847af4
 ms.openlocfilehash: 150149453a67d8e5319461266865cb25be180347
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43421499"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43506427"
 ---
-# <a name="-operator-c-reference"></a><span data-ttu-id="6460a-102">?: 运算符（C# 参考）</span><span class="sxs-lookup"><span data-stu-id="6460a-102">?: Operator (C# Reference)</span></span>
-<span data-ttu-id="6460a-103">条件运算符 (`?:`) 通常被称为三元条件运算符，根据 Boolean 表达式的值返回两个值之一。</span><span class="sxs-lookup"><span data-stu-id="6460a-103">The conditional operator (`?:`), commonly known as the ternary conditional operator, returns one of two values depending on the value of a Boolean expression.</span></span> <span data-ttu-id="6460a-104">下面是条件运算符的语法。</span><span class="sxs-lookup"><span data-stu-id="6460a-104">Following is the syntax for the conditional operator.</span></span>  
+# <a name="-operator-c-reference"></a><span data-ttu-id="925f5-102">?: 运算符（C# 参考）</span><span class="sxs-lookup"><span data-stu-id="925f5-102">?: Operator (C# Reference)</span></span>
+<span data-ttu-id="925f5-103">条件运算符 (`?:`) 通常被称为三元条件运算符，根据 Boolean 表达式的值返回两个值之一。</span><span class="sxs-lookup"><span data-stu-id="925f5-103">The conditional operator (`?:`), commonly known as the ternary conditional operator, returns one of two values depending on the value of a Boolean expression.</span></span> <span data-ttu-id="925f5-104">下面是条件运算符的语法。</span><span class="sxs-lookup"><span data-stu-id="925f5-104">Following is the syntax for the conditional operator.</span></span>  
   
 ```  
 condition ? first_expression : second_expression;  
 ```  
   
-## <a name="remarks"></a><span data-ttu-id="6460a-105">备注</span><span class="sxs-lookup"><span data-stu-id="6460a-105">Remarks</span></span>  
- <span data-ttu-id="6460a-106">`condition` 的计算结果必须为 `true` 或 `false`。</span><span class="sxs-lookup"><span data-stu-id="6460a-106">The `condition` must evaluate to `true` or `false`.</span></span> <span data-ttu-id="6460a-107">如果 `condition` 为 `true`，则将计算 `first_expression` 并使其成为结果。</span><span class="sxs-lookup"><span data-stu-id="6460a-107">If `condition` is `true`, `first_expression` is evaluated and becomes the result.</span></span> <span data-ttu-id="6460a-108">如果 `condition` 为 `false`，则将计算 `second_expression` 并使其成为结果。</span><span class="sxs-lookup"><span data-stu-id="6460a-108">If `condition` is `false`, `second_expression` is evaluated and becomes the result.</span></span> <span data-ttu-id="6460a-109">只计算两个表达式之一。</span><span class="sxs-lookup"><span data-stu-id="6460a-109">Only one of the two expressions is evaluated.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="925f5-105">备注</span><span class="sxs-lookup"><span data-stu-id="925f5-105">Remarks</span></span>  
+ <span data-ttu-id="925f5-106">`condition` 的计算结果必须为 `true` 或 `false`。</span><span class="sxs-lookup"><span data-stu-id="925f5-106">The `condition` must evaluate to `true` or `false`.</span></span> <span data-ttu-id="925f5-107">如果 `condition` 为 `true`，则将计算 `first_expression` 并使其成为结果。</span><span class="sxs-lookup"><span data-stu-id="925f5-107">If `condition` is `true`, `first_expression` is evaluated and becomes the result.</span></span> <span data-ttu-id="925f5-108">如果 `condition` 为 `false`，则将计算 `second_expression` 并使其成为结果。</span><span class="sxs-lookup"><span data-stu-id="925f5-108">If `condition` is `false`, `second_expression` is evaluated and becomes the result.</span></span> <span data-ttu-id="925f5-109">只计算两个表达式之一。</span><span class="sxs-lookup"><span data-stu-id="925f5-109">Only one of the two expressions is evaluated.</span></span>  
   
- <span data-ttu-id="6460a-110">`first_expression` 和 `second_expression` 的类型必须相同，或者必须存在从一种类型到另一种类型的隐式转换。</span><span class="sxs-lookup"><span data-stu-id="6460a-110">Either the type of `first_expression` and `second_expression` must be the same, or an implicit conversion must exist from one type to the other.</span></span>  
+ <span data-ttu-id="925f5-110">`first_expression` 和 `second_expression` 的类型必须相同，或者必须存在从一种类型到另一种类型的隐式转换。</span><span class="sxs-lookup"><span data-stu-id="925f5-110">Either the type of `first_expression` and `second_expression` must be the same, or an implicit conversion must exist from one type to the other.</span></span>  
   
- <span data-ttu-id="6460a-111">你可通过使用条件运算符表达可能更确切地要求 `if-else` 构造的计算。</span><span class="sxs-lookup"><span data-stu-id="6460a-111">You can express calculations that might otherwise require an `if-else` construction more concisely by using the conditional operator.</span></span> <span data-ttu-id="6460a-112">例如，以下代码首先使用 `if` 语句，然后使用条件运算符将整数分类为正整数或负整数。</span><span class="sxs-lookup"><span data-stu-id="6460a-112">For example, the following code uses first an `if` statement and then a conditional operator to classify an integer as positive or negative.</span></span>  
+ <span data-ttu-id="925f5-111">你可通过使用条件运算符表达可能更确切地要求 `if-else` 构造的计算。</span><span class="sxs-lookup"><span data-stu-id="925f5-111">You can express calculations that might otherwise require an `if-else` construction more concisely by using the conditional operator.</span></span> <span data-ttu-id="925f5-112">例如，以下代码首先使用 `if` 语句，然后使用条件运算符将整数分类为正整数或负整数。</span><span class="sxs-lookup"><span data-stu-id="925f5-112">For example, the following code uses first an `if` statement and then a conditional operator to classify an integer as positive or negative.</span></span>  
   
 ```csharp
 int input = Convert.ToInt32(Console.ReadLine());  
@@ -44,18 +44,18 @@ else
 classify = (input > 0) ? "positive" : "negative";  
 ```  
   
- <span data-ttu-id="6460a-113">条件运算符为右联运算符。</span><span class="sxs-lookup"><span data-stu-id="6460a-113">The conditional operator is right-associative.</span></span> <span data-ttu-id="6460a-114">表达式 `a ? b : c ? d : e` 作为 `a ? b : (c ? d : e)` 而非 `(a ? b : c) ? d : e` 进行计算。</span><span class="sxs-lookup"><span data-stu-id="6460a-114">The expression `a ? b : c ? d : e` is evaluated as `a ? b : (c ? d : e)`, not as `(a ? b : c) ? d : e`.</span></span>  
+ <span data-ttu-id="925f5-113">条件运算符为右联运算符。</span><span class="sxs-lookup"><span data-stu-id="925f5-113">The conditional operator is right-associative.</span></span> <span data-ttu-id="925f5-114">表达式 `a ? b : c ? d : e` 作为 `a ? b : (c ? d : e)` 而非 `(a ? b : c) ? d : e` 进行计算。</span><span class="sxs-lookup"><span data-stu-id="925f5-114">The expression `a ? b : c ? d : e` is evaluated as `a ? b : (c ? d : e)`, not as `(a ? b : c) ? d : e`.</span></span>  
   
- <span data-ttu-id="6460a-115">无法重载条件运算符。</span><span class="sxs-lookup"><span data-stu-id="6460a-115">The conditional operator cannot be overloaded.</span></span>  
+ <span data-ttu-id="925f5-115">无法重载条件运算符。</span><span class="sxs-lookup"><span data-stu-id="925f5-115">The conditional operator cannot be overloaded.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="6460a-116">示例</span><span class="sxs-lookup"><span data-stu-id="6460a-116">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="925f5-116">示例</span><span class="sxs-lookup"><span data-stu-id="925f5-116">Example</span></span>  
  [!code-csharp[csRefOperators#41](../../../csharp/language-reference/operators/codesnippet/CSharp/conditional-operator_1.cs)]  
   
-## <a name="see-also"></a><span data-ttu-id="6460a-117">请参阅</span><span class="sxs-lookup"><span data-stu-id="6460a-117">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="925f5-117">请参阅</span><span class="sxs-lookup"><span data-stu-id="925f5-117">See Also</span></span>
 
-- [<span data-ttu-id="6460a-118">C# 参考</span><span class="sxs-lookup"><span data-stu-id="6460a-118">C# Reference</span></span>](../../../csharp/language-reference/index.md)  
-- [<span data-ttu-id="6460a-119">C# 编程指南</span><span class="sxs-lookup"><span data-stu-id="6460a-119">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
-- [<span data-ttu-id="6460a-120">C# 运算符</span><span class="sxs-lookup"><span data-stu-id="6460a-120">C# Operators</span></span>](../../../csharp/language-reference/operators/index.md)  
-- [<span data-ttu-id="6460a-121">if-else</span><span class="sxs-lookup"><span data-stu-id="6460a-121">if-else</span></span>](../../../csharp/language-reference/keywords/if-else.md)  
-- <span data-ttu-id="6460a-122">[?. 和 ?[] 运算符](../../../csharp/language-reference/operators/null-conditional-operators.md)</span><span class="sxs-lookup"><span data-stu-id="6460a-122">[?. and ?[] Operators](../../../csharp/language-reference/operators/null-conditional-operators.md)</span></span>  
-- [<span data-ttu-id="6460a-123">??运算符</span><span class="sxs-lookup"><span data-stu-id="6460a-123">?? Operator</span></span>](../../../csharp/language-reference/operators/null-coalescing-operator.md)
+- [<span data-ttu-id="925f5-118">C# 参考</span><span class="sxs-lookup"><span data-stu-id="925f5-118">C# Reference</span></span>](../../../csharp/language-reference/index.md)  
+- [<span data-ttu-id="925f5-119">C# 编程指南</span><span class="sxs-lookup"><span data-stu-id="925f5-119">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
+- [<span data-ttu-id="925f5-120">C# 运算符</span><span class="sxs-lookup"><span data-stu-id="925f5-120">C# Operators</span></span>](../../../csharp/language-reference/operators/index.md)  
+- [<span data-ttu-id="925f5-121">if-else</span><span class="sxs-lookup"><span data-stu-id="925f5-121">if-else</span></span>](../../../csharp/language-reference/keywords/if-else.md)  
+- <span data-ttu-id="925f5-122">[?. 和 ?[] 运算符](../../../csharp/language-reference/operators/null-conditional-operators.md)</span><span class="sxs-lookup"><span data-stu-id="925f5-122">[?. and ?[] Operators](../../../csharp/language-reference/operators/null-conditional-operators.md)</span></span>  
+- [<span data-ttu-id="925f5-123">??运算符</span><span class="sxs-lookup"><span data-stu-id="925f5-123">?? Operator</span></span>](../../../csharp/language-reference/operators/null-coalescing-operator.md)
