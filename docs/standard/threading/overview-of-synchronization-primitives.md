@@ -10,11 +10,11 @@ ms.assetid: b782bcb8-da6a-4c6a-805f-2eb46d504309
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 37abcb6b3a8fdf4ef91d5e946a97db7ca1428ce8
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44195697"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44271294"
 ---
 # <a name="overview-of-synchronization-primitives"></a>同步基元概述
 <a name="top"></a> .NET Framework 提供一系列用于控制线程交互和避免争用情况的同步基元。 这大致可分为 3 个类别：锁定、发出信号和联锁操作。  

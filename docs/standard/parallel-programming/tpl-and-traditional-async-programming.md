@@ -11,11 +11,11 @@ ms.assetid: e7b31170-a156-433f-9f26-b1fc7cd1776f
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 8024fe6673b39a611c55eb55742bcfd981300e7e
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44225589"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44277140"
 ---
 # <a name="tpl-and-traditional-net-framework-asynchronous-programming"></a>TPL 和传统 .NET Framework 异步编程
 .NET Framework 提供了以下两种标准模式，用于执行 I/O 密集型和计算密集型异步操作：  
