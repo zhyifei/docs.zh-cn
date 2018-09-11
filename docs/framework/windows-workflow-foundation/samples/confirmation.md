@@ -3,11 +3,11 @@ title: 确认
 ms.date: 03/30/2017
 ms.assetid: 8637aeaf-ac9e-49b8-93f4-da15dee45277
 ms.openlocfilehash: caa712aa52da01ce44335a361fd6c9f5215316bf
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44198096"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44276938"
 ---
 # <a name="confirmation"></a>确认
 此示例演示针对 <xref:System.Activities.Statements.CompensableActivity> 的使用和确认的四种常见方案。 此示例运行四个工作流以显示确认。 此示例具有声明性版本和命令性版本。  

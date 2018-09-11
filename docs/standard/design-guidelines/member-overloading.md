@@ -12,11 +12,11 @@ ms.assetid: 964ba19e-8b94-4b5b-b1e3-5a0b531a0bb1
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 2127497d294cbfd4e1bb24d033f432378627ff13
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44208226"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44273224"
 ---
 # <a name="member-overloading"></a>成员重载
 成员重载意味着创建两个或多个成员上的相同类型的区别只体现在数量或类型参数，但具有相同的名称。 例如，在以下内容，`WriteLine`重载方法：  

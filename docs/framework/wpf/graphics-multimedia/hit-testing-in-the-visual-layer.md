@@ -9,11 +9,11 @@ helpviewer_keywords:
 - visual layer [WPF], hit testing functionality
 ms.assetid: b1a64b61-14be-4d75-b89a-5c67bebb2c7b
 ms.openlocfilehash: fe54578407e881ec7d6782ec21100b29eded07a3
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.sourcegitcommit: 67de6cb5dd66a19f2180ba7e4d7aecc697f8a963
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44176670"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44338111"
 ---
 # <a name="hit-testing-in-the-visual-layer"></a>可视化层中的命中测试
 本主题概述可视化层提供的命中测试功能。 命中测试支持，您可以确定几何或点值是否落在所呈现内容的<xref:System.Windows.Media.Visual>，从而可以实现用户界面行为，例如选择矩形来选择多个对象。  

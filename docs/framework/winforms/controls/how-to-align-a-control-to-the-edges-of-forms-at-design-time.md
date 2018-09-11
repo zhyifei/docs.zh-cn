@@ -6,11 +6,11 @@ helpviewer_keywords:
 - Dock property [Windows Forms], aligning controls (using designer)
 ms.assetid: 51f08998-5e3b-4330-be58-a4edd0eb60f4
 ms.openlocfilehash: 513029c1bd5cc4af52fcee97f7fab961729e613c
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44197687"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44277083"
 ---
 # <a name="how-to-align-a-control-to-the-edges-of-forms-at-design-time"></a>如何：设计时将控件与窗体边缘对齐
 可以使控件与窗体的边缘对齐通过设置<xref:System.Windows.Forms.Control.Dock%2A>。 此属性指定控件在窗体中的驻留位置。 可以将 <xref:System.Windows.Forms.Control.Dock%2A> 属性设置为下列值：  

@@ -10,11 +10,11 @@ helpviewer_keywords:
 - operators [Visual Basic], result data types
 ms.assetid: 9d524533-e1a1-4aa8-b1b8-622068173d06
 ms.openlocfilehash: 135c44217debcddb15fd4cef7e73ca2f98903c43
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 67de6cb5dd66a19f2180ba7e4d7aecc697f8a963
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44221735"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44338644"
 ---
 # <a name="data-types-of-operator-results-visual-basic"></a>运算符结果的数据类型 (Visual Basic)
 Visual Basic 确定基于操作数的数据类型的操作的结果数据类型。 在某些情况下这可能是更大的范围比的其中一个操作数的数据类型。  

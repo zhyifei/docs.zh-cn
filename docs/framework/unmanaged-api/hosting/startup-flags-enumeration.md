@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: f4680187de7318a6438bf6a5e6bd7c5f3acd05c2
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 67de6cb5dd66a19f2180ba7e4d7aecc697f8a963
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44180158"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44337299"
 ---
 # <a name="startupflags-enumeration"></a>STARTUP_FLAGS 枚举
 包含指示公共语言运行时 (CLR) 的启动行为的值。 默认情况下，垃圾回收是非并发，只有在基类库加载到非特定于域的区域。  

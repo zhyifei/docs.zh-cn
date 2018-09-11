@@ -11,11 +11,11 @@ ms.assetid: 1cdb8740-871a-456c-9bd9-db96ca8d79b3
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 9c1690d0cdf1f57eaf0a794d6e71babfa4fa6425
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44199877"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44277544"
 ---
 # <a name="designing-for-extensibility"></a>扩展性设计
 设计一个框架的一个重要方面确保仔细考虑框架的扩展性。 这需要了解的成本和收益与各种扩展性机制相关联。 这一章可帮助你决定哪一个的扩展性机制 — 子类化、 事件、 虚拟成员、 回调，等等 — 能够最好地满足您的框架的要求。  

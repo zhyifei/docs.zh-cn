@@ -8,11 +8,11 @@ helpviewer_keywords:
 - libraries [WPF], controls
 ms.assetid: c1b33289-c389-4ac2-b153-3cbb0d8324ad
 ms.openlocfilehash: 26f81a2bfeb5ef4e448ddcbc9b8bac521624a629
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44212459"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44272538"
 ---
 # <a name="control-library"></a>控件库
 Windows Presentation Foundation (WPF) 控件库包含提供由 Windows Presentation Foundation (WPF)，按字母顺序列出的控件的信息。  
