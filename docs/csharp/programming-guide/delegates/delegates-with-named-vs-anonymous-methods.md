@@ -6,11 +6,11 @@ helpviewer_keywords:
 - methods [C#], in delegates
 ms.assetid: 98fa8c61-66b6-4146-986c-3236c4045733
 ms.openlocfilehash: 6d7dcb3c7c6fa8f1d55237504c23cf468aa0e79d
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44194213"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44274198"
 ---
 # <a name="delegates-with-named-vs-anonymous-methods-c-programming-guide"></a>带有命名方法的委托与匿名方法（C# 编程指南）
 [委托](../../../csharp/language-reference/keywords/delegate.md)可以与命名方法相关联。 使用命名方法实例化委托时，该方法作为参数传递，例如：  

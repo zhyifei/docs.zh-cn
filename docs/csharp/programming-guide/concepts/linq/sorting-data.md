@@ -3,11 +3,11 @@ title: 对数据排序 (C#)
 ms.date: 07/20/2015
 ms.assetid: d93fa055-2f19-46d2-9898-e2aed628f1c9
 ms.openlocfilehash: 6a7f687895385bfb77d2a1e3e785742a794bb1b6
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44209415"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44275166"
 ---
 # <a name="sorting-data-c"></a>对数据排序 (C#)
 排序操作基于一个或多个属性对序列的元素进行排序。 第一个排序条件对元素执行主要排序。 通过指定第二个排序条件，您可以对每个主要排序组内的元素进行排序。  

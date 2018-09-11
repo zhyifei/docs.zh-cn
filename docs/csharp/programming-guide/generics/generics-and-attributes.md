@@ -6,11 +6,11 @@ helpviewer_keywords:
 - attributes [C#], with generics
 ms.assetid: da9fc326-4648-454a-8e13-3911a2edefd7
 ms.openlocfilehash: 0fe2d61001584aa7c175500bfa754b2ae2244660
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44209246"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44272664"
 ---
 # <a name="generics-and-attributes-c-programming-guide"></a>泛型和特性（C# 编程指南）
 属性可按与非泛型类型相同的方式应用到泛型类型。 有关应用特性的详细信息，请参阅[属性](../../../csharp/programming-guide/concepts/attributes/index.md)。  
