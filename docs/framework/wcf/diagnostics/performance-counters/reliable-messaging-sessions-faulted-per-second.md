@@ -3,18 +3,18 @@ title: Reliable Messaging Sessions Faulted Per Second（每秒出错的可靠消
 ms.date: 03/30/2017
 ms.assetid: 8f8ca2eb-1be4-4b6a-aa78-fcd3ee145fe8
 ms.openlocfilehash: c77d6a5f12dcce15dba94e2f63025a219ebcc6fd
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44187119"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44273445"
 ---
-# <a name="reliable-messaging-sessions-faulted-per-second"></a><span data-ttu-id="a8f61-102">Reliable Messaging Sessions Faulted Per Second（每秒出错的可靠消息会话数）</span><span class="sxs-lookup"><span data-stu-id="a8f61-102">Reliable Messaging Sessions Faulted Per Second</span></span>
-<span data-ttu-id="a8f61-103">计数器名称：Reliable Messaging Sessions Faulted Per Second（每秒出错的可靠消息会话数）。</span><span class="sxs-lookup"><span data-stu-id="a8f61-103">Counter Name: Reliable Messaging Sessions Faulted Per Second.</span></span>  
+# <a name="reliable-messaging-sessions-faulted-per-second"></a><span data-ttu-id="b880a-102">Reliable Messaging Sessions Faulted Per Second（每秒出错的可靠消息会话数）</span><span class="sxs-lookup"><span data-stu-id="b880a-102">Reliable Messaging Sessions Faulted Per Second</span></span>
+<span data-ttu-id="b880a-103">计数器名称：Reliable Messaging Sessions Faulted Per Second（每秒出错的可靠消息会话数）。</span><span class="sxs-lookup"><span data-stu-id="b880a-103">Counter Name: Reliable Messaging Sessions Faulted Per Second.</span></span>  
   
-## <a name="description"></a><span data-ttu-id="a8f61-104">描述</span><span class="sxs-lookup"><span data-stu-id="a8f61-104">Description</span></span>  
- <span data-ttu-id="a8f61-105">此服务每秒出错的可靠消息会话的数目。</span><span class="sxs-lookup"><span data-stu-id="a8f61-105">Number of reliable messaging sessions that are faulted in this service in a second.</span></span>  
+## <a name="description"></a><span data-ttu-id="b880a-104">描述</span><span class="sxs-lookup"><span data-stu-id="b880a-104">Description</span></span>  
+ <span data-ttu-id="b880a-105">此服务每秒出错的可靠消息会话的数目。</span><span class="sxs-lookup"><span data-stu-id="b880a-105">Number of reliable messaging sessions that are faulted in this service in a second.</span></span>  
   
- <span data-ttu-id="a8f61-106">此计数器为性能计数器类型[PERF_COUNTER_COUNTER](https://go.microsoft.com/fwlink/?LinkID=94649)，使用以下公式计算其值。</span><span class="sxs-lookup"><span data-stu-id="a8f61-106">This counter is of performance counter type [PERF_COUNTER_COUNTER](https://go.microsoft.com/fwlink/?LinkID=94649), whose value is calculated using the following formula.</span></span>  
+ <span data-ttu-id="b880a-106">此计数器为性能计数器类型[PERF_COUNTER_COUNTER](https://go.microsoft.com/fwlink/?LinkID=94649)，使用以下公式计算其值。</span><span class="sxs-lookup"><span data-stu-id="b880a-106">This counter is of performance counter type [PERF_COUNTER_COUNTER](https://go.microsoft.com/fwlink/?LinkID=94649), whose value is calculated using the following formula.</span></span>  
   
- <span data-ttu-id="a8f61-107">(N 1 - N 0 ) / ( (D 1 -D 0 ) / F)</span><span class="sxs-lookup"><span data-stu-id="a8f61-107">(N 1 - N 0 ) / ( (D 1 -D 0 ) / F)</span></span>
+ <span data-ttu-id="b880a-107">(N 1 - N 0 ) / ( (D 1 -D 0 ) / F)</span><span class="sxs-lookup"><span data-stu-id="b880a-107">(N 1 - N 0 ) / ( (D 1 -D 0 ) / F)</span></span>

@@ -18,16 +18,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 33aab5ee23a1f0d30d1f9f3079856ca30d46d2ec
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 67de6cb5dd66a19f2180ba7e4d7aecc697f8a963
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44192310"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44337702"
 ---
-# <a name="iclrstrongnamegethashfromfile-method"></a><span data-ttu-id="f06f2-102">ICLRStrongName::GetHashFromFile 方法</span><span class="sxs-lookup"><span data-stu-id="f06f2-102">ICLRStrongName::GetHashFromFile Method</span></span>
-<span data-ttu-id="f06f2-103">生成指定文件内容的哈希。</span><span class="sxs-lookup"><span data-stu-id="f06f2-103">Generates a hash over the contents of the specified file.</span></span>  
+# <a name="iclrstrongnamegethashfromfile-method"></a><span data-ttu-id="925c0-102">ICLRStrongName::GetHashFromFile 方法</span><span class="sxs-lookup"><span data-stu-id="925c0-102">ICLRStrongName::GetHashFromFile Method</span></span>
+<span data-ttu-id="925c0-103">生成指定文件内容的哈希。</span><span class="sxs-lookup"><span data-stu-id="925c0-103">Generates a hash over the contents of the specified file.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="f06f2-104">语法</span><span class="sxs-lookup"><span data-stu-id="f06f2-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="925c0-104">语法</span><span class="sxs-lookup"><span data-stu-id="925c0-104">Syntax</span></span>  
   
 ```  
 HRESULT GetHashFromFile (  
@@ -39,37 +39,37 @@ HRESULT GetHashFromFile (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="f06f2-105">参数</span><span class="sxs-lookup"><span data-stu-id="f06f2-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="925c0-105">参数</span><span class="sxs-lookup"><span data-stu-id="925c0-105">Parameters</span></span>  
  `szFilePath`  
- <span data-ttu-id="f06f2-106">[in]哈希的文件的名称。</span><span class="sxs-lookup"><span data-stu-id="f06f2-106">[in] The name of the file to hash.</span></span>  
+ <span data-ttu-id="925c0-106">[in]哈希的文件的名称。</span><span class="sxs-lookup"><span data-stu-id="925c0-106">[in] The name of the file to hash.</span></span>  
   
  `piHashAlg`  
- <span data-ttu-id="f06f2-107">[in、 out]要生成哈希时使用的算法。</span><span class="sxs-lookup"><span data-stu-id="f06f2-107">[in, out] The algorithm to use when generating the hash.</span></span> <span data-ttu-id="f06f2-108">有效的算法是定义的 Win32 CryptoAPI。</span><span class="sxs-lookup"><span data-stu-id="f06f2-108">Valid algorithms are those defined by the Win32 CryptoAPI.</span></span> <span data-ttu-id="f06f2-109">如果`piHashAlg`设置为 0，使用 CALG_SHA 1 的默认算法。</span><span class="sxs-lookup"><span data-stu-id="f06f2-109">If `piHashAlg` is set to 0, the default algorithm CALG_SHA-1 is used.</span></span>  
+ <span data-ttu-id="925c0-107">[in、 out]要生成哈希时使用的算法。</span><span class="sxs-lookup"><span data-stu-id="925c0-107">[in, out] The algorithm to use when generating the hash.</span></span> <span data-ttu-id="925c0-108">有效的算法是定义的 Win32 CryptoAPI。</span><span class="sxs-lookup"><span data-stu-id="925c0-108">Valid algorithms are those defined by the Win32 CryptoAPI.</span></span> <span data-ttu-id="925c0-109">如果`piHashAlg`设置为 0，使用 CALG_SHA 1 的默认算法。</span><span class="sxs-lookup"><span data-stu-id="925c0-109">If `piHashAlg` is set to 0, the default algorithm CALG_SHA-1 is used.</span></span>  
   
  `pbHash`  
- <span data-ttu-id="f06f2-110">[out]包含生成的哈希的字节数组。</span><span class="sxs-lookup"><span data-stu-id="f06f2-110">[out] A byte array containing the generated hash.</span></span>  
+ <span data-ttu-id="925c0-110">[out]包含生成的哈希的字节数组。</span><span class="sxs-lookup"><span data-stu-id="925c0-110">[out] A byte array containing the generated hash.</span></span>  
   
  `cchHash`  
- <span data-ttu-id="f06f2-111">[in]缓冲区的最大大小的`pbHash`指向。</span><span class="sxs-lookup"><span data-stu-id="f06f2-111">[in] The maximum size of the buffer that `pbHash` points to.</span></span>  
+ <span data-ttu-id="925c0-111">[in]缓冲区的最大大小的`pbHash`指向。</span><span class="sxs-lookup"><span data-stu-id="925c0-111">[in] The maximum size of the buffer that `pbHash` points to.</span></span>  
   
  `pchHash`  
- <span data-ttu-id="f06f2-112">[out]大小 （字节），则返回的`pbHash`。</span><span class="sxs-lookup"><span data-stu-id="f06f2-112">[out] The size, in bytes, of the returned `pbHash`.</span></span>  
+ <span data-ttu-id="925c0-112">[out]大小 （字节），则返回的`pbHash`。</span><span class="sxs-lookup"><span data-stu-id="925c0-112">[out] The size, in bytes, of the returned `pbHash`.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="f06f2-113">返回值</span><span class="sxs-lookup"><span data-stu-id="f06f2-113">Return Value</span></span>  
- <span data-ttu-id="f06f2-114">`S_OK` 如果成功，则完成的方法否则为指示失败的 HRESULT 值 (请参阅[常见的 HRESULT 值](https://go.microsoft.com/fwlink/?LinkId=213878)列表)。</span><span class="sxs-lookup"><span data-stu-id="f06f2-114">`S_OK` if the method completed successfully; otherwise, an HRESULT value that indicates failure (see [Common HRESULT Values](https://go.microsoft.com/fwlink/?LinkId=213878) for a list).</span></span>  
+## <a name="return-value"></a><span data-ttu-id="925c0-113">返回值</span><span class="sxs-lookup"><span data-stu-id="925c0-113">Return Value</span></span>  
+ <span data-ttu-id="925c0-114">`S_OK` 如果成功，则完成的方法否则为指示失败的 HRESULT 值 (请参阅[常见的 HRESULT 值](https://go.microsoft.com/fwlink/?LinkId=213878)列表)。</span><span class="sxs-lookup"><span data-stu-id="925c0-114">`S_OK` if the method completed successfully; otherwise, an HRESULT value that indicates failure (see [Common HRESULT Values](https://go.microsoft.com/fwlink/?LinkId=213878) for a list).</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="f06f2-115">备注</span><span class="sxs-lookup"><span data-stu-id="f06f2-115">Remarks</span></span>  
- <span data-ttu-id="f06f2-116">此方法等同于[iclrstrongname:: Gethashfromfilew](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromfilew-method.md)方法，不同之处在于的文件的名称规范是 ANSI 而不是 Unicode。</span><span class="sxs-lookup"><span data-stu-id="f06f2-116">This method is the same as the [ICLRStrongName::GetHashFromFileW](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromfilew-method.md) method, except that the file name specification is ANSI instead of Unicode.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="925c0-115">备注</span><span class="sxs-lookup"><span data-stu-id="925c0-115">Remarks</span></span>  
+ <span data-ttu-id="925c0-116">此方法等同于[iclrstrongname:: Gethashfromfilew](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromfilew-method.md)方法，不同之处在于的文件的名称规范是 ANSI 而不是 Unicode。</span><span class="sxs-lookup"><span data-stu-id="925c0-116">This method is the same as the [ICLRStrongName::GetHashFromFileW](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromfilew-method.md) method, except that the file name specification is ANSI instead of Unicode.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="f06f2-117">要求</span><span class="sxs-lookup"><span data-stu-id="f06f2-117">Requirements</span></span>  
- <span data-ttu-id="f06f2-118">**平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="f06f2-118">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="925c0-117">要求</span><span class="sxs-lookup"><span data-stu-id="925c0-117">Requirements</span></span>  
+ <span data-ttu-id="925c0-118">**平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="925c0-118">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="f06f2-119">**标头：** MetaHost.h</span><span class="sxs-lookup"><span data-stu-id="f06f2-119">**Header:** MetaHost.h</span></span>  
+ <span data-ttu-id="925c0-119">**标头：** MetaHost.h</span><span class="sxs-lookup"><span data-stu-id="925c0-119">**Header:** MetaHost.h</span></span>  
   
- <span data-ttu-id="f06f2-120">**库：** 作为 MSCorEE.dll 中的资源</span><span class="sxs-lookup"><span data-stu-id="f06f2-120">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="925c0-120">**库：** 作为 MSCorEE.dll 中的资源</span><span class="sxs-lookup"><span data-stu-id="925c0-120">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="f06f2-121">**.NET Framework 版本：**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="f06f2-121">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
+ <span data-ttu-id="925c0-121">**.NET Framework 版本：**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="925c0-121">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="f06f2-122">请参阅</span><span class="sxs-lookup"><span data-stu-id="f06f2-122">See Also</span></span>  
- [<span data-ttu-id="f06f2-123">GetHashFromFileW 方法</span><span class="sxs-lookup"><span data-stu-id="f06f2-123">GetHashFromFileW Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromfilew-method.md)  
- [<span data-ttu-id="f06f2-124">ICLRStrongName 接口</span><span class="sxs-lookup"><span data-stu-id="f06f2-124">ICLRStrongName Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)
+## <a name="see-also"></a><span data-ttu-id="925c0-122">请参阅</span><span class="sxs-lookup"><span data-stu-id="925c0-122">See Also</span></span>  
+ [<span data-ttu-id="925c0-123">GetHashFromFileW 方法</span><span class="sxs-lookup"><span data-stu-id="925c0-123">GetHashFromFileW Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromfilew-method.md)  
+ [<span data-ttu-id="925c0-124">ICLRStrongName 接口</span><span class="sxs-lookup"><span data-stu-id="925c0-124">ICLRStrongName Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)
