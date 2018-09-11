@@ -2,20 +2,20 @@
 title: 查询 XDocument 与查询 XElement (C#)
 ms.date: 07/20/2015
 ms.assetid: 46221ff5-62ee-4de8-93ba-66465facb5c1
-ms.openlocfilehash: 61d8c70b9cbaeeb487059e4acfc88dc165c45d65
-ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
+ms.openlocfilehash: 991cbf14fde1c2e3e1e76ef10066db3408ca51c5
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37960129"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44200823"
 ---
-# <a name="querying-an-xdocument-vs-querying-an-xelement-c"></a><span data-ttu-id="708aa-102">查询 XDocument 与查询 XElement (C#)</span><span class="sxs-lookup"><span data-stu-id="708aa-102">Querying an XDocument vs. Querying an XElement (C#)</span></span>
-<span data-ttu-id="708aa-103">通过 <xref:System.Xml.Linq.XDocument.Load%2A?displayProperty=nameWithType> 加载文档时，您会注意到，您要编写的查询与通过 <xref:System.Xml.Linq.XElement.Load%2A?displayProperty=nameWithType> 加载文档时稍有不同。</span><span class="sxs-lookup"><span data-stu-id="708aa-103">When you load a document via <xref:System.Xml.Linq.XDocument.Load%2A?displayProperty=nameWithType>, you will notice that you have to write queries slightly differently than when you load via <xref:System.Xml.Linq.XElement.Load%2A?displayProperty=nameWithType>.</span></span>  
+# <a name="querying-an-xdocument-vs-querying-an-xelement-c"></a><span data-ttu-id="ecc5a-102">查询 XDocument 与查询 XElement (C#)</span><span class="sxs-lookup"><span data-stu-id="ecc5a-102">Querying an XDocument vs. Querying an XElement (C#)</span></span>
+<span data-ttu-id="ecc5a-103">通过 <xref:System.Xml.Linq.XDocument.Load%2A?displayProperty=nameWithType> 加载文档时，您会注意到，您要编写的查询与通过 <xref:System.Xml.Linq.XElement.Load%2A?displayProperty=nameWithType> 加载文档时稍有不同。</span><span class="sxs-lookup"><span data-stu-id="ecc5a-103">When you load a document via <xref:System.Xml.Linq.XDocument.Load%2A?displayProperty=nameWithType>, you will notice that you have to write queries slightly differently than when you load via <xref:System.Xml.Linq.XElement.Load%2A?displayProperty=nameWithType>.</span></span>  
   
-## <a name="comparison-of-xdocumentload-and-xelementload"></a><span data-ttu-id="708aa-104">XDocument.Load 与 XElement.Load 的比较</span><span class="sxs-lookup"><span data-stu-id="708aa-104">Comparison of XDocument.Load and XElement.Load</span></span>  
- <span data-ttu-id="708aa-105">通过 <xref:System.Xml.Linq.XElement> 将 XML 文档加载到 <xref:System.Xml.Linq.XElement.Load%2A?displayProperty=nameWithType> 中时，位于 XML 树根部的 <xref:System.Xml.Linq.XElement> 包含所加载文档的根元素。</span><span class="sxs-lookup"><span data-stu-id="708aa-105">When you load an XML document into an <xref:System.Xml.Linq.XElement> via <xref:System.Xml.Linq.XElement.Load%2A?displayProperty=nameWithType>, the <xref:System.Xml.Linq.XElement> at the root of the XML tree contains the root element of the loaded document.</span></span> <span data-ttu-id="708aa-106">然而，通过 <xref:System.Xml.Linq.XDocument> 将同一个 XML 文档加载到 <xref:System.Xml.Linq.XDocument.Load%2A?displayProperty=nameWithType> 中时，树根部为 <xref:System.Xml.Linq.XDocument> 节点，所加载文档的根元素为 <xref:System.Xml.Linq.XElement> 所允许的一个子 <xref:System.Xml.Linq.XDocument> 节点。</span><span class="sxs-lookup"><span data-stu-id="708aa-106">However, when you load the same XML document into an <xref:System.Xml.Linq.XDocument> via <xref:System.Xml.Linq.XDocument.Load%2A?displayProperty=nameWithType>, the root of the tree is an <xref:System.Xml.Linq.XDocument> node, and the root element of the loaded document is the one allowed child <xref:System.Xml.Linq.XElement> node of the <xref:System.Xml.Linq.XDocument>.</span></span> <span data-ttu-id="708aa-107">[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 轴相对于根节点进行操作。</span><span class="sxs-lookup"><span data-stu-id="708aa-107">The [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] axes operate relative to the root node.</span></span>  
+## <a name="comparison-of-xdocumentload-and-xelementload"></a><span data-ttu-id="ecc5a-104">XDocument.Load 与 XElement.Load 的比较</span><span class="sxs-lookup"><span data-stu-id="ecc5a-104">Comparison of XDocument.Load and XElement.Load</span></span>  
+ <span data-ttu-id="ecc5a-105">通过 <xref:System.Xml.Linq.XElement> 将 XML 文档加载到 <xref:System.Xml.Linq.XElement.Load%2A?displayProperty=nameWithType> 中时，位于 XML 树根部的 <xref:System.Xml.Linq.XElement> 包含所加载文档的根元素。</span><span class="sxs-lookup"><span data-stu-id="ecc5a-105">When you load an XML document into an <xref:System.Xml.Linq.XElement> via <xref:System.Xml.Linq.XElement.Load%2A?displayProperty=nameWithType>, the <xref:System.Xml.Linq.XElement> at the root of the XML tree contains the root element of the loaded document.</span></span> <span data-ttu-id="ecc5a-106">然而，通过 <xref:System.Xml.Linq.XDocument> 将同一个 XML 文档加载到 <xref:System.Xml.Linq.XDocument.Load%2A?displayProperty=nameWithType> 中时，树根部为 <xref:System.Xml.Linq.XDocument> 节点，所加载文档的根元素为 <xref:System.Xml.Linq.XElement> 所允许的一个子 <xref:System.Xml.Linq.XDocument> 节点。</span><span class="sxs-lookup"><span data-stu-id="ecc5a-106">However, when you load the same XML document into an <xref:System.Xml.Linq.XDocument> via <xref:System.Xml.Linq.XDocument.Load%2A?displayProperty=nameWithType>, the root of the tree is an <xref:System.Xml.Linq.XDocument> node, and the root element of the loaded document is the one allowed child <xref:System.Xml.Linq.XElement> node of the <xref:System.Xml.Linq.XDocument>.</span></span> <span data-ttu-id="ecc5a-107">[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 轴相对于根节点进行操作。</span><span class="sxs-lookup"><span data-stu-id="ecc5a-107">The [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] axes operate relative to the root node.</span></span>  
   
- <span data-ttu-id="708aa-108">第一个示例使用 <xref:System.Xml.Linq.XElement.Load%2A> 加载 XML 树。</span><span class="sxs-lookup"><span data-stu-id="708aa-108">This first example loads an XML tree using <xref:System.Xml.Linq.XElement.Load%2A>.</span></span> <span data-ttu-id="708aa-109">然后它查询树根部的子元素。</span><span class="sxs-lookup"><span data-stu-id="708aa-109">It then queries for the child elements of the root of the tree.</span></span>  
+ <span data-ttu-id="ecc5a-108">第一个示例使用 <xref:System.Xml.Linq.XElement.Load%2A> 加载 XML 树。</span><span class="sxs-lookup"><span data-stu-id="ecc5a-108">This first example loads an XML tree using <xref:System.Xml.Linq.XElement.Load%2A>.</span></span> <span data-ttu-id="ecc5a-109">然后它查询树根部的子元素。</span><span class="sxs-lookup"><span data-stu-id="ecc5a-109">It then queries for the child elements of the root of the tree.</span></span>  
   
 ```csharp  
 // Create a simple document and write it to a file  
@@ -35,7 +35,7 @@ foreach (XElement e in childList)
     Console.WriteLine(e);  
 ```  
   
- <span data-ttu-id="708aa-110">此示例将按预期产生以下输出：</span><span class="sxs-lookup"><span data-stu-id="708aa-110">As expected, this example produces the following output:</span></span>  
+ <span data-ttu-id="ecc5a-110">此示例将按预期产生以下输出：</span><span class="sxs-lookup"><span data-stu-id="ecc5a-110">As expected, this example produces the following output:</span></span>  
   
 ```  
 Querying tree loaded with XElement.Load  
@@ -45,7 +45,7 @@ Querying tree loaded with XElement.Load
 <Child3>3</Child3>  
 ```  
   
- <span data-ttu-id="708aa-111">下面的示例与上面的基本相同，不同之处在于 XML 树是加载到 <xref:System.Xml.Linq.XDocument>，而不是加载到 <xref:System.Xml.Linq.XElement>。</span><span class="sxs-lookup"><span data-stu-id="708aa-111">The following example is the same as the one above, with the exception that the XML tree is loaded into an <xref:System.Xml.Linq.XDocument> instead of an <xref:System.Xml.Linq.XElement>.</span></span>  
+ <span data-ttu-id="ecc5a-111">下面的示例与上面的基本相同，不同之处在于 XML 树是加载到 <xref:System.Xml.Linq.XDocument>，而不是加载到 <xref:System.Xml.Linq.XElement>。</span><span class="sxs-lookup"><span data-stu-id="ecc5a-111">The following example is the same as the one above, with the exception that the XML tree is loaded into an <xref:System.Xml.Linq.XDocument> instead of an <xref:System.Xml.Linq.XElement>.</span></span>  
   
 ```csharp  
 // Create a simple document and write it to a file  
@@ -65,7 +65,7 @@ foreach (XElement e in childList)
     Console.WriteLine(e);  
 ```  
   
- <span data-ttu-id="708aa-112">该示例产生下面的输出：</span><span class="sxs-lookup"><span data-stu-id="708aa-112">This example produces the following output:</span></span>  
+ <span data-ttu-id="ecc5a-112">该示例产生下面的输出：</span><span class="sxs-lookup"><span data-stu-id="ecc5a-112">This example produces the following output:</span></span>  
   
 ```  
 Querying tree loaded with XDocument.Load  
@@ -77,9 +77,9 @@ Querying tree loaded with XDocument.Load
 </Root>  
 ```  
   
- <span data-ttu-id="708aa-113">请注意，同样的查询返回一个 `Root` 节点，而不是返回三个子节点。</span><span class="sxs-lookup"><span data-stu-id="708aa-113">Notice that the same query returned the one `Root` node instead of the three child nodes.</span></span>  
+ <span data-ttu-id="ecc5a-113">请注意，同样的查询返回一个 `Root` 节点，而不是返回三个子节点。</span><span class="sxs-lookup"><span data-stu-id="ecc5a-113">Notice that the same query returned the one `Root` node instead of the three child nodes.</span></span>  
   
- <span data-ttu-id="708aa-114">处理这一问题的一种方法是在访问轴方法之前使用 <xref:System.Xml.Linq.XDocument.Root%2A> 属性，如下所示：</span><span class="sxs-lookup"><span data-stu-id="708aa-114">One approach to dealing with this is to use the <xref:System.Xml.Linq.XDocument.Root%2A> property before accessing the axes methods, as follows:</span></span>  
+ <span data-ttu-id="ecc5a-114">处理这一问题的一种方法是在访问轴方法之前使用 <xref:System.Xml.Linq.XDocument.Root%2A> 属性，如下所示：</span><span class="sxs-lookup"><span data-stu-id="ecc5a-114">One approach to dealing with this is to use the <xref:System.Xml.Linq.XDocument.Root%2A> property before accessing the axes methods, as follows:</span></span>  
   
 ```csharp  
 // Create a simple document and write it to a file  
@@ -99,7 +99,7 @@ foreach (XElement e in childList)
     Console.WriteLine(e);  
 ```  
   
- <span data-ttu-id="708aa-115">此查询现在的执行方式与根部位于 <xref:System.Xml.Linq.XElement> 中的树中的查询相同。</span><span class="sxs-lookup"><span data-stu-id="708aa-115">This query now performs in the same way as the query on the tree rooted in <xref:System.Xml.Linq.XElement>.</span></span> <span data-ttu-id="708aa-116">此示例产生以下输出：</span><span class="sxs-lookup"><span data-stu-id="708aa-116">The example produces the following output:</span></span>  
+ <span data-ttu-id="ecc5a-115">此查询现在的执行方式与根部位于 <xref:System.Xml.Linq.XElement> 中的树中的查询相同。</span><span class="sxs-lookup"><span data-stu-id="ecc5a-115">This query now performs in the same way as the query on the tree rooted in <xref:System.Xml.Linq.XElement>.</span></span> <span data-ttu-id="ecc5a-116">此示例产生以下输出：</span><span class="sxs-lookup"><span data-stu-id="ecc5a-116">The example produces the following output:</span></span>  
   
 ```  
 Querying tree loaded with XDocument.Load  
@@ -109,5 +109,6 @@ Querying tree loaded with XDocument.Load
 <Child3>3</Child3>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="708aa-117">请参阅</span><span class="sxs-lookup"><span data-stu-id="708aa-117">See Also</span></span>  
- [<span data-ttu-id="708aa-118">基本查询 (LINQ to XML) (C#)</span><span class="sxs-lookup"><span data-stu-id="708aa-118">Basic Queries (LINQ to XML) (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)
+## <a name="see-also"></a><span data-ttu-id="ecc5a-117">请参阅</span><span class="sxs-lookup"><span data-stu-id="ecc5a-117">See Also</span></span>
+
+- [<span data-ttu-id="ecc5a-118">基本查询 (LINQ to XML) (C#)</span><span class="sxs-lookup"><span data-stu-id="ecc5a-118">Basic Queries (LINQ to XML) (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)
