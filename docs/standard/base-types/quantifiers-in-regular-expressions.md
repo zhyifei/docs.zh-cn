@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 36b81212-6511-49ed-a8f1-ff080415312f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 374ef3e015ee477c5979e2e31574aabfdd03dd1b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a982082611760e4f901c427af25a0a49a4e243a1
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33579088"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44192248"
 ---
 # <a name="quantifiers-in-regular-expressions"></a>正则表达式中的限定符
 限定符指定输入中必须存在字符、组或字符类的多少实例才能找到匹配项。  下表列出了 .NET 支持的限定符。  
@@ -115,7 +115,7 @@ ms.locfileid: "33579088"
 |`\b`|在字边界结束。|  
   
 ### <a name="match-at-least-n-times-n"></a>至少匹配 n 次：{n,}  
- `{`n`,}` 限定符与前面的元素至少匹配 n 次，其中 n 是任何整数。 `{`n`,}` 是贪婪限定符，其惰性等效项是 `{`n`}?`。  
+ `{`n`,}` 限定符与前面的元素至少匹配 n 次，其中 n 是任何整数。 `{`n`,}` 是贪婪限定符，其惰性等效项是 `{`n`,}?`。  
   
  例如，正则表达式 `\b\d{2,}\b\D+` 会尝试匹配依次后跟至少两个数字、一个单词边界和一个非数字字符的单词边界。 下面的示例说明此正则表达式。 正则表达式无法匹配短语 `"7 days"`，因为它只包含一个十进制数字，但可以成功匹配短语 `"10 weeks and 300 years"`。  
   
@@ -271,6 +271,7 @@ ms.locfileid: "33579088"
  [!code-csharp[RegularExpressions.Quantifiers.EmptyMatch#2](../../../samples/snippets/csharp/VS_Snippets_CLR/regularexpressions.quantifiers.emptymatch/cs/emptymatch4.cs#2)]
  [!code-vb[RegularExpressions.Quantifiers.EmptyMatch#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.quantifiers.emptymatch/vb/emptymatch4.vb#2)]  
   
-## <a name="see-also"></a>请参阅  
- [正则表达式语言 - 快速参考](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)  
- [回溯](../../../docs/standard/base-types/backtracking-in-regular-expressions.md)
+## <a name="see-also"></a>请参阅
+
+- [正则表达式语言 - 快速参考](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)  
+- [回溯](../../../docs/standard/base-types/backtracking-in-regular-expressions.md)

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: fae2c15b-7adf-4b15-b118-58eb3906994f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b270559e9e73e18bebb29e36b815268d5426a940
-ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
+ms.openlocfilehash: e6fe667ca908b2a4ba16e34e8e74dd39ca01f153
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34728675"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44187463"
 ---
 # <a name="regular-expression-example-scanning-for-hrefs"></a>正则表达式示例：扫描 HREF
 下面的示例搜索输入字符串并显示所有 href="…" 的值和它们在字符串中的位置。  
@@ -56,5 +56,6 @@ ms.locfileid: "34728675"
   
  为了解决这些问题，<xref:System.Text.RegularExpressions.Regex> 类支持语法 `(?<name>…)`，以便将匹配捕获到指定槽中（可以使用字符串或整数命名槽；如果使用整数命名，可以更快地召回）。 因此，相同字符串的替代匹配全都可以定向到相同位置。 发生冲突时，放入槽中的最后一个匹配项是成功的匹配项。 （但是，提供了适用于单个槽的多个匹配项的完整列表。 有关详细信息，请参阅 <xref:System.Text.RegularExpressions.Group.Captures%2A?displayProperty=nameWithType> 集合。）  
   
-## <a name="see-also"></a>请参阅  
- [.NET 正则表达式](../../../docs/standard/base-types/regular-expressions.md)
+## <a name="see-also"></a>请参阅
+
+- [.NET 正则表达式](../../../docs/standard/base-types/regular-expressions.md)

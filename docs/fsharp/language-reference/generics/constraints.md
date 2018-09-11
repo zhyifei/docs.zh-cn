@@ -2,17 +2,16 @@
 title: 约束 (F#)
 description: '了解有关 F # 约束应用于泛型类型参数，以在泛型类型或函数中指定的类型参数的要求。'
 ms.date: 05/16/2016
-ms.openlocfilehash: 0e79cf5b1a25ada49bf30416f85c1d59f8f2fd23
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
-ms.translationtype: MT
+ms.openlocfilehash: 9534db4ffd195022366af8c993658bd94f375f53
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43525600"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43867824"
 ---
 # <a name="constraints"></a>约束
 
 本主题介绍可应用于泛型约束类型参数，以在泛型类型或函数中指定的类型参数的要求。
-
 
 ## <a name="syntax"></a>语法
 
@@ -21,13 +20,14 @@ type-parameter-list when constraint1 [ and constraint2]
 ```
 
 ## <a name="remarks"></a>备注
+
 有几个不同的约束可用于限制可在泛型类型的类型。 下表列出并描述这些约束。
 
 |约束|语法|描述|
 |----------|------|-----------|
 |类型约束|*类型参数*:&gt; *类型*|提供的类型必须等于或派生从指定的类型，或者，如果该类型是接口，提供的类型必须实现接口。|
 |Null 约束|*类型参数*: null|提供的类型必须支持 null 字面值。 这包括所有.NET 对象类型，但不是 F # 列表、 元组、 函数、 类、 记录或联合类型。|
-|显式成员约束|[（)]*类型参数*[or...或*类型参数*)]: (*成员签名*)|在至少其中一个提供的类型参数必须具有指定的签名; 的成员不适合公共使用。 成员必须要么显式定义为显式成员约束的有效目标类型或隐式类型扩展的一部分。|
+|显式成员约束|[（]*类型参数*[or...或*类型参数*)]: (*成员签名*)|在至少其中一个提供的类型参数必须具有指定的签名; 的成员不适合公共使用。 成员必须要么显式定义为显式成员约束的有效目标类型或隐式类型扩展的一部分。|
 |构造函数约束|*类型参数*: (新： 单元-&gt; )|提供的类型必须具有默认构造函数。|
 |值类型约束|： 结构|提供的类型必须是一个.NET 值类型。|
 |引用类型约束|： 不结构|提供的类型必须是.NET 引用类型。|
@@ -115,6 +115,6 @@ class end
 ```
 
 ## <a name="see-also"></a>请参阅
-[泛型](index.md)
 
-[约束](constraints.md)
+- [泛型](index.md)
+- [约束](constraints.md)

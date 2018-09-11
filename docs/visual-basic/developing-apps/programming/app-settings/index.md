@@ -6,11 +6,11 @@ helpviewer_keywords:
 - examples [Visual Basic], application settings
 ms.assetid: e38d0cc7-247a-46ca-ba04-f2913f0adb2e
 ms.openlocfilehash: 3b933287d18a2519969852117fc6f847e9ead461
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44190236"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44276820"
 ---
 # <a name="accessing-application-settings-visual-basic"></a>访问应用程序设置 (Visual Basic)
 本部分包含描述 `My.Settings` 对象及其允许完成的任务的主题。  
