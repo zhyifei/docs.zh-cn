@@ -9,11 +9,11 @@ ms.assetid: f7bd1361-4ab2-4132-972d-a044b8f197e1
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: d41ba0c1e972eeee07b36ad0d15532f7b551ec2a
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44228047"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44261994"
 ---
 # <a name="common-design-patterns"></a>常见设计模式
 没有有关软件模式、 模式语言和对立模式可解决的模式涉及范围非常广泛的主题的众多书籍。 因此，这一章提供了指导原则和一组非常有限的.NET Framework Api 的设计中经常使用的模式与相关的讨论。  
