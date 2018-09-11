@@ -9,12 +9,12 @@ helpviewer_keywords:
 - linkres compiler option [Visual Basic]
 - -linkres compiler option [Visual Basic]
 ms.assetid: cf4dcad8-17b7-404c-9184-29358aa05b15
-ms.openlocfilehash: 4f4b3db768b5466f8912b66a0a4709d0f773c1f3
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 97e0ccd46f413cc05b659731436bb141ee178419
+ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44047186"
+ms.lasthandoff: 09/11/2018
+ms.locfileid: "44369025"
 ---
 # <a name="-linkresource-visual-basic"></a>-linkresource (Visual Basic)
 创建指向托管资源的链接。  
@@ -39,7 +39,7 @@ ms.locfileid: "44047186"
   
  `-linkresource`选项要求之一`-target`不是选项`-target:module`。  
   
- 如果`filename`是[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]创建的资源文件，例如，通过[Resgen.exe （资源文件生成器）](https://msdn.microsoft.com/library/8ef159de-b660-4bec-9213-c3fbc4d1c6f4)或在开发环境中，则可以使用来访问中的成员<xref:System.Resources>命名空间。 （有关详细信息，请参阅 <xref:System.Resources.ResourceManager>。）若要在运行时访问所有其他资源，使用的方法的开头`GetManifestResource`在<xref:System.Reflection.Assembly>类。  
+ 如果`filename`是[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]创建的资源文件，例如，通过[Resgen.exe （资源文件生成器）](../../../framework/tools/resgen-exe-resource-file-generator.md)或在开发环境中，则可以使用来访问中的成员<xref:System.Resources>命名空间。 （有关详细信息，请参阅 <xref:System.Resources.ResourceManager>。）若要在运行时访问所有其他资源，使用的方法的开头`GetManifestResource`在<xref:System.Reflection.Assembly>类。  
   
  文件名称可以是任何文件格式。 例如，你可能希望生成程序集的本机 DLL 部分，从而可将它安装到全局程序集缓存中，并且可从该程序集中的托管代码访问它。  
   
@@ -55,8 +55,9 @@ ms.locfileid: "44047186"
 vbc -linkresource:rf.resource in.vb  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [Visual Basic 命令行编译器](../../../visual-basic/reference/command-line-compiler/index.md)  
- [-目标 (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md)  
- [-资源 (Visual Basic)](../../../visual-basic/reference/command-line-compiler/resource.md)  
- [示例编译命令行](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
+## <a name="see-also"></a>请参阅
+
+- [Visual Basic 命令行编译器](../../../visual-basic/reference/command-line-compiler/index.md)  
+- [-目标 (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md)  
+- [-资源 (Visual Basic)](../../../visual-basic/reference/command-line-compiler/resource.md)  
+- [示例编译命令行](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)

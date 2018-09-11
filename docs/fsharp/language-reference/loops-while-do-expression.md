@@ -3,11 +3,11 @@ title: 循环：while...do 表达式 (F#)
 description: 请参阅如何...执行表达式用于在指定的测试条件为 true 时执行迭代操作 （循环）。
 ms.date: 05/16/2016
 ms.openlocfilehash: 5cf4461669221f91cb50e238c25494f03a10bbc2
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44208497"
+ms.lasthandoff: 09/11/2018
+ms.locfileid: "44352552"
 ---
 # <a name="loops-whiledo-expression"></a>循环：while...do 表达式
 
