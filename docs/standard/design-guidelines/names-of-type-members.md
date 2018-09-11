@@ -15,11 +15,11 @@ ms.assetid: af5a0903-36af-4c2a-b848-cf959affeaa5
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 0541f100f208543c796de7238e68ea6f90c7b299
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44205174"
+ms.lasthandoff: 09/11/2018
+ms.locfileid: "44367686"
 ---
 # <a name="names-of-type-members"></a>类型成员的名称
 类型的成员包括：方法、属性、事件、构造函数和字段。 以下各部分介绍各类型成员的命名准则。  
