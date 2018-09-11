@@ -2,12 +2,12 @@
 title: 启动多个异步任务并在其完成时进行处理 (C#)
 ms.date: 07/20/2015
 ms.assetid: 25331850-35a7-43b3-ab76-3908e4346b9d
-ms.openlocfilehash: d59b65e456c528c63c79c97f6c75c328066be631
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: a23bdedbd9786fb930f92f5aa4b1025b83a4bcbe
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43416393"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44222034"
 ---
 # <a name="start-multiple-async-tasks-and-process-them-as-they-complete-c"></a>启动多个异步任务并在其完成时进行处理 (C#)
 通过使用 <xref:System.Threading.Tasks.Task.WhenAny%2A?displayProperty=nameWithType>，可以同时启动多个任务，并在它们完成时逐个对它们进行处理，而不是按照它们的启动顺序进行处理。  
@@ -225,8 +225,9 @@ namespace ProcessTasksAsTheyFinish
 // Downloads complete.  
 ```  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Threading.Tasks.Task.WhenAny%2A>  
- [微调异步应用程序 (C#)](../../../../csharp/programming-guide/concepts/async/fine-tuning-your-async-application.md)  
- [使用 Async 和 Await 的异步编程 (C#)](../../../../csharp/programming-guide/concepts/async/index.md)  
- [Async Sample: Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)（异步示例：微调应用程序）
+## <a name="see-also"></a>请参阅
+
+- <xref:System.Threading.Tasks.Task.WhenAny%2A>  
+- [微调异步应用程序 (C#)](../../../../csharp/programming-guide/concepts/async/fine-tuning-your-async-application.md)  
+- [使用 Async 和 Await 的异步编程 (C#)](../../../../csharp/programming-guide/concepts/async/index.md)  
+- [Async Sample: Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)（异步示例：微调应用程序）

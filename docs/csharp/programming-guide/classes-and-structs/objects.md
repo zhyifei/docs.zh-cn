@@ -5,12 +5,12 @@ helpviewer_keywords:
 - objects [C#], about objects
 - variables [C#]
 ms.assetid: af4a5230-fbf3-4eea-95e1-8b883c2f845c
-ms.openlocfilehash: 553b0a5e75364bc5c294867852265575fb9271b6
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.openlocfilehash: e5e537d239bd69cb7a95ae82edbdb82144c700a1
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42935495"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44188316"
 ---
 # <a name="objects-c-programming-guide"></a>对象（C# 编程指南）
 类或结构定义的作用类似于蓝图，指定该类型可以进行哪些操作。 从本质上说，对象是按照此蓝图分配和配置的内存块。 程序可以创建同一个类的多个对象。 对象也称为实例，可以存储在命名变量中，也可以存储在数组或集合中。 使用这些变量来调用对象方法及访问对象公共属性的代码称为客户端代码。 在 C# 等面向对象的语言中，典型的程序由动态交互的多个对象组成。  
@@ -60,11 +60,12 @@ ms.locfileid: "42935495"
   
 -   [事件](../../../csharp/programming-guide/events/index.md)  
   
-## <a name="see-also"></a>请参阅  
- [C# 编程指南](../../../csharp/programming-guide/index.md)  
- [object](../../../csharp/language-reference/keywords/object.md)  
- [继承](../../../csharp/programming-guide/classes-and-structs/inheritance.md)  
- [class](../../../csharp/language-reference/keywords/class.md)  
- [struct](../../../csharp/language-reference/keywords/struct.md)  
- [new 运算符](../../../csharp/language-reference/keywords/new-operator.md)  
- [常规类型系统](../../../standard/base-types/common-type-system.md)
+## <a name="see-also"></a>请参阅
+
+- [C# 编程指南](../../../csharp/programming-guide/index.md)  
+- [object](../../../csharp/language-reference/keywords/object.md)  
+- [继承](../../../csharp/programming-guide/classes-and-structs/inheritance.md)  
+- [class](../../../csharp/language-reference/keywords/class.md)  
+- [struct](../../../csharp/language-reference/keywords/struct.md)  
+- [new 运算符](../../../csharp/language-reference/keywords/new-operator.md)  
+- [常规类型系统](../../../standard/base-types/common-type-system.md)

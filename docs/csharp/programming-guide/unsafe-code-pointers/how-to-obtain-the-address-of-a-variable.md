@@ -6,12 +6,12 @@ helpviewer_keywords:
 - pointers [C#], & operator
 - pointer expressions [C#], address-of operator
 ms.assetid: 44fe2cd9-a64f-4ef5-be2a-09ce807c0182
-ms.openlocfilehash: bb52aee3341194697b40b30ec14afced61a200be
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 40a7ac34a4e68df7aa316adc3cbd1999d975eabe
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33340120"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43741868"
 ---
 # <a name="how-to-obtain-the-address-of-a-variable-c-programming-guide"></a>如何：获取变量的地址（C# 编程指南）
 若要获取计算结果为固定变量的一元表达式的地址，请使用 address-of 运算符 `&`：  
@@ -35,11 +35,12 @@ int* p = &number; //address-of operator &
   
  [!code-csharp[address-of-a-variable](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuidePointers/CS/Pointers.cs#8)]  
   
-## <a name="see-also"></a>请参阅  
- [C# 编程指南](../../../csharp/programming-guide/index.md)  
- [指针表达式](../../../csharp/programming-guide/unsafe-code-pointers/pointer-expressions.md)  
- [指针类型](../../../csharp/programming-guide/unsafe-code-pointers/pointer-types.md)  
- [类型](../../../csharp/language-reference/keywords/types.md)  
- [unsafe](../../../csharp/language-reference/keywords/unsafe.md)  
- [fixed 语句](../../../csharp/language-reference/keywords/fixed-statement.md)  
- [stackalloc](../../../csharp/language-reference/keywords/stackalloc.md)
+## <a name="see-also"></a>请参阅
+
+- [C# 编程指南](../../../csharp/programming-guide/index.md)  
+- [指针表达式](../../../csharp/programming-guide/unsafe-code-pointers/pointer-expressions.md)  
+- [指针类型](../../../csharp/programming-guide/unsafe-code-pointers/pointer-types.md)  
+- [类型](../../../csharp/language-reference/keywords/types.md)  
+- [unsafe](../../../csharp/language-reference/keywords/unsafe.md)  
+- [fixed 语句](../../../csharp/language-reference/keywords/fixed-statement.md)  
+- [stackalloc](../../../csharp/language-reference/keywords/stackalloc.md)

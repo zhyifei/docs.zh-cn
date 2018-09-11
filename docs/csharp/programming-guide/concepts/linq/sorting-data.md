@@ -2,12 +2,12 @@
 title: 对数据排序 (C#)
 ms.date: 07/20/2015
 ms.assetid: d93fa055-2f19-46d2-9898-e2aed628f1c9
-ms.openlocfilehash: 90ff7d52e6832935fe16e081e904acae3a24669a
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 6a7f687895385bfb77d2a1e3e785742a794bb1b6
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43402024"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44209415"
 ---
 # <a name="sorting-data-c"></a>对数据排序 (C#)
 排序操作基于一个或多个属性对序列的元素进行排序。 第一个排序条件对元素执行主要排序。 通过指定第二个排序条件，您可以对每个主要排序组内的元素进行排序。  
@@ -126,9 +126,10 @@ foreach (string str in query)
 */  
 ```  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Linq>  
- [标准查询运算符概述 (C#)](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)  
- [orderby 子句](../../../../csharp/language-reference/keywords/orderby-clause.md)  
- [如何：对 Join 子句的结果进行排序](../../../../csharp/programming-guide/linq-query-expressions/how-to-order-the-results-of-a-join-clause.md)  
- [如何：按任意词或字段对文本数据进行排序或筛选 (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-sort-or-filter-text-data-by-any-word-or-field-linq.md)
+## <a name="see-also"></a>请参阅
+
+- <xref:System.Linq>  
+- [标准查询运算符概述 (C#)](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)  
+- [orderby 子句](../../../../csharp/language-reference/keywords/orderby-clause.md)  
+- [如何：对 Join 子句的结果进行排序](../../../../csharp/programming-guide/linq-query-expressions/how-to-order-the-results-of-a-join-clause.md)  
+- [如何：按任意词或字段对文本数据进行排序或筛选 (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-sort-or-filter-text-data-by-any-word-or-field-linq.md)

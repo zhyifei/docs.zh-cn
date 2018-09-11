@@ -8,12 +8,12 @@ helpviewer_keywords:
 - examples [C#], Hello World
 - Hello World example [C#]
 ms.assetid: 6493182a-b0b6-4539-a719-518a168cb730
-ms.openlocfilehash: 96cad879c843a7b70dc748675123b792137d290e
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 90f0ec6b88a2822cb3429948681c76c70f3d3f18
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43463112"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44213840"
 ---
 # <a name="hello-world----your-first-program-c-programming-guide"></a>Hello World -- 您的第一个程序（C# 编程指南）
 以下过程创建传统“Hello World!”程序的 C# 版本。 该程序显示字符串 `Hello World!`  
@@ -78,7 +78,7 @@ ms.locfileid: "43463112"
   
  `Main` 方法中定义的参数 `args` 是一个 `string` 类型的数组，该数组包含用于调用该程序的命令行自变量。 与 C++ 不同的是该数组不包括可执行 (exe) 文件的名称。  
   
- 若要深入了解如何使用命令行参数，请参阅 [Main() 和命令行参数](../../../csharp/programming-guide/main-and-command-args/index.md)与[如何：使用命令行创建和使用程序集](https://msdn.microsoft.com/library/70f65026-3687-4e9c-ab79-c18b97dd8be4)中的示例。  
+ 若要深入了解如何使用命令行参数，请参阅 [Main() 和命令行参数](../../../csharp/programming-guide/main-and-command-args/index.md)与[如何：使用命令行创建和使用程序集](../../../csharp/programming-guide/concepts/assemblies-gac/how-to-create-and-use-assemblies-using-the-command-line.md)中的示例。  
   
  在调试模式下运行程序时，对 `Main` 方法末尾处 <xref:System.Console.ReadKey%2A> 的调用可以防止在有可能读取输出内容之前控制台窗口关闭，具体方法是按 F5 键。  
   
@@ -126,11 +126,12 @@ ms.locfileid: "43463112"
   
  有关 C# 编译器及其选项的详细信息，请参阅 [C# 编译器选项](../../../csharp/language-reference/compiler-options/index.md)。
   
-## <a name="see-also"></a>请参阅  
- [C# 编程指南](../../../csharp/programming-guide/index.md)  
- [在 C# 程序内部](../../../csharp/programming-guide/inside-a-program/index.md)  
- [字符串](../../../csharp/programming-guide/strings/index.md)  
- [\<paveover>C# 示例应用程序](https://msdn.microsoft.com/library/9a9d7aaa-51d3-4224-b564-95409b0f3e15)  
- [C# 参考](../../../csharp/language-reference/index.md)  
- [Main() 和命令行参数](../../../csharp/programming-guide/main-and-command-args/index.md)  
- [Visual C# 和 Visual Basic 入门](/visualstudio/ide/getting-started-with-visual-csharp-and-visual-basic)
+## <a name="see-also"></a>请参阅
+
+- [C# 编程指南](../../../csharp/programming-guide/index.md)  
+- [在 C# 程序内部](../../../csharp/programming-guide/inside-a-program/index.md)  
+- [字符串](../../../csharp/programming-guide/strings/index.md)  
+- [\<paveover>C# 示例应用程序](https://msdn.microsoft.com/library/9a9d7aaa-51d3-4224-b564-95409b0f3e15)  
+- [C# 参考](../../../csharp/language-reference/index.md)  
+- [Main() 和命令行参数](../../../csharp/programming-guide/main-and-command-args/index.md)  
+- [Visual C# 和 Visual Basic 入门](/visualstudio/ide/getting-started-with-visual-csharp-and-visual-basic)

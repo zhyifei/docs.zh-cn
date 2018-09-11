@@ -5,12 +5,12 @@ helpviewer_keywords:
 - object identity [C#]
 - reference equality [C#]
 ms.assetid: 91307fda-267b-4fd2-a338-2aada39ee791
-ms.openlocfilehash: 78a6bf1f5d4a93bd561faada91b4a11f52692dbf
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d48c2cab7100d8227b33ee0eeefb825dd81a5f88
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33322336"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44084564"
 ---
 # <a name="how-to-test-for-reference-equality-identity-c-programming-guide"></a>如何：测试引用相等性（标识）（C# 编程指南）
 无需实现任何自定义逻辑，即可支持类型中的引用相等性比较。 此功能由静态 <xref:System.Object.ReferenceEquals%2A?displayProperty=nameWithType> 方法向所有类型提供。  
@@ -26,5 +26,6 @@ ms.locfileid: "33322336"
   
  运行时始终暂存同一程序集内的常量字符串。 也就是说，仅维护每个唯一文本字符串的一个实例。 但是，运行时不能保证会暂存在运行时创建的字符串，也不保证会暂存不同程序集中两个相等的常量字符串。  
   
-## <a name="see-also"></a>请参阅  
- [相等比较](../../../csharp/programming-guide/statements-expressions-operators/equality-comparisons.md)
+## <a name="see-also"></a>请参阅
+
+- [相等比较](../../../csharp/programming-guide/statements-expressions-operators/equality-comparisons.md)

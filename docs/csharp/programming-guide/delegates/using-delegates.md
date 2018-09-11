@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - delegates [C#], how to use
 ms.assetid: 99a2fc27-a32e-4a34-921c-e65497520eec
-ms.openlocfilehash: b27c94570fdf76808e8a7df67b34466bde20de7f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 07bc0e38455335e068719137c349daf65f8fab6b
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33337400"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "44042200"
 ---
 # <a name="using-delegates-c-programming-guide"></a>使用委托（C# 编程指南）
 [委托](../../../csharp/language-reference/keywords/delegate.md)是安全封装方法的类型，类似于 C 和 C++ 中的函数指针。 与 C 函数指针不同的是，委托是面向对象的、类型安全的和可靠的。 委托的类型由委托的名称确定。 以下示例声明名为 `Del` 的委托，该委托可以封装采用[字符串](../../../csharp/language-reference/keywords/string.md)作为参数并返回 [void](../../../csharp/language-reference/keywords/void.md) 的方法：  
@@ -64,10 +64,11 @@ ms.locfileid: "33337400"
   
  [!code-csharp[csProgGuideDelegates#30](../../../csharp/programming-guide/delegates/codesnippet/CSharp/using-delegates_10.cs)]  
   
-## <a name="see-also"></a>请参阅  
- [C# 编程指南](../../../csharp/programming-guide/index.md)  
- [委托](../../../csharp/programming-guide/delegates/index.md)  
- [使用委托中的变体](http://msdn.microsoft.com/library/e6acad03-93e0-4efb-a158-8696d5eb4ecf)  
- [委托中的变体](http://msdn.microsoft.com/library/e3b98197-6c5b-4e55-9c6e-9739b60645ca)  
- [对 Func 和 Action 泛型委托使用变体](http://msdn.microsoft.com/library/e69c4f39-09aa-4c6d-a752-08cc767d8290)  
- [事件](../../../csharp/programming-guide/events/index.md)
+## <a name="see-also"></a>请参阅
+
+- [C# 编程指南](../../../csharp/programming-guide/index.md)
+- [委托](../../../csharp/programming-guide/delegates/index.md)
+- [使用委托中的变体](../../../csharp/programming-guide/concepts/covariance-contravariance/using-variance-in-delegates.md)
+- [委托中的变体](../../../csharp/programming-guide/concepts/covariance-contravariance/variance-in-delegates.md)
+- [对 Func 和 Action 泛型委托使用变体](../../../csharp/programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md)
+- [事件](../../../csharp/programming-guide/events/index.md)

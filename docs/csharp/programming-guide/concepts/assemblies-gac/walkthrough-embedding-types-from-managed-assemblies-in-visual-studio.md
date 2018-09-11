@@ -2,12 +2,12 @@
 title: 演练：在 Visual Studio 中嵌入托管程序集中的类型 (C#)
 ms.date: 07/20/2015
 ms.assetid: 55ed13c9-c5bb-4bc2-bcd8-0587eb568864
-ms.openlocfilehash: 90bb523e3eb42cea2cd0a9d1e753e4d9b9873c0c
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.openlocfilehash: 1900c62d1ebaf611f141f8f1bdf95f8d11f82140
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42932090"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44201252"
 ---
 # <a name="walkthrough-embedding-types-from-managed-assemblies-in-visual-studio-c"></a>演练：在 Visual Studio 中嵌入托管程序集中的类型 (C#)
 如果嵌入强命名托管程序集中的类型信息，则可以对应用程序中的类型进行松耦合，以实现版本独立性。 也就是说，可以将程序编写为使用多个托管库版本中的类型，而不必对每个版本重新编译程序。  
@@ -232,8 +232,9 @@ ms.locfileid: "42932090"
   
 6.  在文件资源管理器中，打开输出路径文件夹（如 C:\TypeEquivalenceSample）。 双击 TypeEquivalenceClient.exe 运行该程序。 程序将反映 TypeEquivalenceRuntime 程序集的未经重新编译的新版本。  
   
-## <a name="see-also"></a>请参阅  
- [/link（C# 编译器选项）](../../../../csharp/language-reference/compiler-options/link-compiler-option.md)  
- [C# 编程指南](../../../../csharp/programming-guide/index.md)  
- [使用程序集编程](../../../../framework/app-domains/programming-with-assemblies.md)  
- [程序集和全局程序集缓存 (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/index.md)
+## <a name="see-also"></a>请参阅
+
+- [/link（C# 编译器选项）](../../../../csharp/language-reference/compiler-options/link-compiler-option.md)  
+- [C# 编程指南](../../../../csharp/programming-guide/index.md)  
+- [使用程序集编程](../../../../framework/app-domains/programming-with-assemblies.md)  
+- [程序集和全局程序集缓存 (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/index.md)

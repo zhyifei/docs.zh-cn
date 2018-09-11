@@ -5,12 +5,12 @@ helpviewer_keywords:
 - auto-implemented properties [C#]
 - properties [C#], auto-implemented
 ms.assetid: 1dc5a8ad-a4f7-4f32-8506-3fc6d8c8bfed
-ms.openlocfilehash: 9612ec916481776691e85a84503ce5063c20b099
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: fb5d11ed43246f2c4dd67ef35b71e899ab978fc4
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33321517"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44249466"
 ---
 # <a name="how-to-implement-a-lightweight-class-with-auto-implemented-properties-c-programming-guide"></a>如何：使用自动实现的属性实现轻量类（C# 编程指南）
 本示例演示如何创建一个仅用于封装一组自动实现的属性的不可变轻型类。 当你必须使用引用类型语义时，请使用此种构造而不是结构。  
@@ -113,7 +113,8 @@ ms.locfileid: "33321517"
   
  编译器为每个自动实现的属性创建了支持字段。 这些字段无法直接从源代码进行访问。  
   
-## <a name="see-also"></a>请参阅  
- [属性](../../../csharp/programming-guide/classes-and-structs/properties.md)  
- [struct](../../../csharp/language-reference/keywords/struct.md)  
- [对象和集合初始值设定项](../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md)
+## <a name="see-also"></a>请参阅
+
+- [属性](../../../csharp/programming-guide/classes-and-structs/properties.md)  
+- [struct](../../../csharp/language-reference/keywords/struct.md)  
+- [对象和集合初始值设定项](../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md)

@@ -2,12 +2,12 @@
 title: 如何：查找命名空间中的所有节点 (C#)
 ms.date: 07/20/2015
 ms.assetid: 3a38b913-a53e-4d0e-a19d-8782bffd3364
-ms.openlocfilehash: b22acdd7c2d64316e802c4dd01876a61141c8979
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0675795da7c190e6d105ac61027c28f161961099
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33317773"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44261546"
 ---
 # <a name="how-to-find-all-nodes-in-a-namespace-c"></a>如何：查找命名空间中的所有节点 (C#)
 您可以对每个元素或属性的命名空间进行筛选，以便查找该特定命名空间中的所有节点。  
@@ -95,5 +95,6 @@ Console.WriteLine(newTree);
 </Root>  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [基本查询 (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)
+## <a name="see-also"></a>请参阅
+
+- [基本查询 (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - <returns> C# XML tag
 - returns C# XML tag
 ms.assetid: bb2d9958-62fc-47c7-9511-6311171f119f
-ms.openlocfilehash: 40572f1097731b330db7e061bd45436e65583ccf
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: fc3254062e4412c2a0640e27ce4d188b83507eea
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33333572"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44259910"
 ---
 # <a name="ltreturnsgt-c-programming-guide"></a>&lt;returns&gt;（C# 编程指南）
 ## <a name="syntax"></a>语法  
@@ -34,6 +34,7 @@ ms.locfileid: "33333572"
 ## <a name="example"></a>示例  
  [!code-csharp[csProgGuideDocComments#10](../../../csharp/programming-guide/xmldoc/codesnippet/CSharp/returns_1.cs)]  
   
-## <a name="see-also"></a>请参阅  
- [C# 编程指南](../../../csharp/programming-guide/index.md)  
- [建议的文档注释标记](../../../csharp/programming-guide/xmldoc/recommended-tags-for-documentation-comments.md)
+## <a name="see-also"></a>请参阅
+
+- [C# 编程指南](../../../csharp/programming-guide/index.md)  
+- [建议的文档注释标记](../../../csharp/programming-guide/xmldoc/recommended-tags-for-documentation-comments.md)

@@ -2,12 +2,12 @@
 title: 如何：使用 Task.WhenAll 扩展异步演练 (C#)
 ms.date: 07/20/2015
 ms.assetid: f6927ef2-dc6c-43f8-bc82-bbeac42de423
-ms.openlocfilehash: b7df5c1f1ffbcc8c60fd6ed0596088f0842ef9ea
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 241bd6baf0c1133ba7603da433a7cdf8d36748c0
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43482809"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44260238"
 ---
 # <a name="how-to-extend-the-async-walkthrough-by-using-taskwhenall-c"></a>如何：使用 Task.WhenAll 扩展异步演练 (C#)
 可以使用 <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType> 方法来改进[演练：使用 Async 和 Await 访问 Web (C#)](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md) 中的异步解决方案性能。 此方法以异步方式等待多个异步操作（它们表示为任务的集合）。  
@@ -61,7 +61,7 @@ ms.locfileid: "43482809"
     //}  
     ```  
   
-3.  创建任务集合。 以下代码定义一个[查询](https://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d)，由 <xref:System.Linq.Enumerable.ToArray%2A> 方法执行该查询时，它会创建下载每个网站内容的任务集合。 计算该查询时，会启动任务。  
+3.  创建任务集合。 以下代码定义一个[查询](../../../../csharp/programming-guide/concepts/linq/index.md)，由 <xref:System.Linq.Enumerable.ToArray%2A> 方法执行该查询时，它会创建下载每个网站内容的任务集合。 计算该查询时，会启动任务。  
   
      在 `urlList` 的声明后，将以下代码添加到方法 `SumPageSizesAsync` 中。  
   
@@ -136,7 +136,7 @@ ms.locfileid: "43482809"
     //}  
     ```  
   
-3.  定义一个[查询](https://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d)，由 <xref:System.Linq.Enumerable.ToArray%2A> 方法执行该查询时，它会创建下载每个网站内容的任务集合。 计算该查询时，会启动任务。  
+3.  定义一个[查询](../../../../csharp/programming-guide/concepts/linq/index.md)，由 <xref:System.Linq.Enumerable.ToArray%2A> 方法执行该查询时，它会创建下载每个网站内容的任务集合。 计算该查询时，会启动任务。  
   
      在 `client` 和 `urlList` 的声明后，将以下代码添加到方法 `SumPageSizesAsync` 中。  
   
@@ -435,6 +435,7 @@ namespace AsyncExampleWPF_HttpClient_WhenAll
 }  
 ```  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType>  
- [演练：使用 Async 和 Await 访问 Web (C#)](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)
+## <a name="see-also"></a>请参阅
+
+- <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType>  
+- [演练：使用 Async 和 Await 访问 Web (C#)](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)

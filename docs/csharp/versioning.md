@@ -3,12 +3,12 @@ title: C# 版本控制 - C# 指南
 description: 了解 C# 和 .NET 中的版本控制工作原理
 ms.date: 01/08/2017
 ms.assetid: aa8732d7-5cd0-46e1-994a-78017f20d861
-ms.openlocfilehash: 4dc8e7e521bf209d6ca69a84534d277fb8a93ea8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 949b7414116169cada62b48392f37809f26d7ff9
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33351779"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44185751"
 ---
 # <a name="versioning-in-c"></a>C# 中的版本控制 #
 
@@ -24,7 +24,7 @@ ms.locfileid: "33351779"
 理想情况下，提供给库的版本信息应帮助开发人员确定版本是否与使用相同库的早期版本的项目兼容。
 
 SemVer 的最基本方法是 3 组件格式 `MAJOR.MINOR.PATCH`，其中：
- 
+
 * 进行不兼容的 API 更改时，`MAJOR` 将会增加
 * 以后向兼容方式添加功能时，`MINOR` 将会增加
 * 进行后向兼容 bug 修复时，`PATCH` 将会增加
@@ -51,7 +51,7 @@ SemVer 的最基本方法是 3 组件格式 `MAJOR.MINOR.PATCH`，其中：
 
 ### <a name="application-configuration-file"></a>应用程序配置文件
 
-.NET 开发人员很可能已在大多数项目类型中遇到过 [`app.config` 文件](https://msdn.microsoft.com/library/1fk1t1t0(v=vs.110).aspx)。
+.NET 开发人员很可能已在大多数项目类型中遇到过 [`app.config` 文件](../framework/configure-apps/file-schema/index.md)。
 此类简单配置文件对于改进新更新的推出有重要作用。 通常应以以下方式设计库：将可能定期更改的信息存储在 `app.config` 文件中。这样，当更新此类信息时，只需使用新版本的配置文件替换旧版本配置文件即可，而无需重新编译库。
 
 ## <a name="consuming-libraries"></a>使用库
@@ -62,7 +62,7 @@ SemVer 的最基本方法是 3 组件格式 `MAJOR.MINOR.PATCH`，其中：
 
 ### <a name="assembly-binding-redirection"></a>程序集绑定重定向
 
-可使用 `app.config` 文件更新应用使用的库版本。 通过添加[*绑定重定向*](https://msdn.microsoft.com/library/7wd6ex19(v=vs.110).aspx)，可在无需重新编译应用的情况下使用新的库版本。 下面的示例演示更新应用的 `app.config` 文件的方法，以便使用 `ReferencedLibrary` 的 `1.0.1` 修补程序版本，而不是最初编译时使用的 `1.0.0` 版本。
+可使用 `app.config` 文件更新应用使用的库版本。 通过添加[*绑定重定向*](../framework/configure-apps/redirect-assembly-versions.md)，可在无需重新编译应用的情况下使用新的库版本。 下面的示例演示更新应用的 `app.config` 文件的方法，以便使用 `ReferencedLibrary` 的 `1.0.1` 修补程序版本，而不是最初编译时使用的 `1.0.0` 版本。
 
 ```xml
 <dependentAssembly>
