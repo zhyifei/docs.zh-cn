@@ -7,30 +7,30 @@ helpviewer_keywords:
 - HelpProvider component [Windows Forms]
 ms.assetid: a09a6e0b-79d8-457f-bb36-86fad2beeada
 ms.openlocfilehash: 63574e6a4f7a9c5a1c2bcb267c64baa5c5e392f3
-ms.sourcegitcommit: 67de6cb5dd66a19f2180ba7e4d7aecc697f8a963
+ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44339152"
+ms.lasthandoff: 09/11/2018
+ms.locfileid: "44353104"
 ---
-# <a name="helpprovider-component-windows-forms"></a><span data-ttu-id="c7ec6-102">HelpProvider 组件（Windows 窗体）</span><span class="sxs-lookup"><span data-stu-id="c7ec6-102">HelpProvider Component (Windows Forms)</span></span>
-<span data-ttu-id="c7ec6-103">Windows 窗体 `HelpProvider` 组件用于将基于 Windows 的应用程序与 HTML Help 1.x 帮助文件（HTML Help Workshop 生成的 .chm 文件，或 .htm 文件）关联。</span><span class="sxs-lookup"><span data-stu-id="c7ec6-103">The Windows Forms `HelpProvider` component is used to associate an HTML Help 1.x Help file (either a .chm file, produced with the HTML Help Workshop, or an .htm file) with your Windows-based application.</span></span>  
+# <a name="helpprovider-component-windows-forms"></a><span data-ttu-id="64dee-102">HelpProvider 组件（Windows 窗体）</span><span class="sxs-lookup"><span data-stu-id="64dee-102">HelpProvider Component (Windows Forms)</span></span>
+<span data-ttu-id="64dee-103">Windows 窗体 `HelpProvider` 组件用于将基于 Windows 的应用程序与 HTML Help 1.x 帮助文件（HTML Help Workshop 生成的 .chm 文件，或 .htm 文件）关联。</span><span class="sxs-lookup"><span data-stu-id="64dee-103">The Windows Forms `HelpProvider` component is used to associate an HTML Help 1.x Help file (either a .chm file, produced with the HTML Help Workshop, or an .htm file) with your Windows-based application.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="c7ec6-104">本节内容</span><span class="sxs-lookup"><span data-stu-id="c7ec6-104">In This Section</span></span>  
- [<span data-ttu-id="c7ec6-105">HelpProvider 组件概述</span><span class="sxs-lookup"><span data-stu-id="c7ec6-105">HelpProvider Component Overview</span></span>](../../../../docs/framework/winforms/controls/helpprovider-component-overview-windows-forms.md)  
- <span data-ttu-id="c7ec6-106">介绍 `HelpProvider` 组件的一般概念，使用该组件可将基于 Windows 的应用程序与 HTML 帮助文件关联。</span><span class="sxs-lookup"><span data-stu-id="c7ec6-106">Introduces the general concepts of the `HelpProvider` component, which lets you associate an HTML Help file with a Windows-based application.</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="64dee-104">本节内容</span><span class="sxs-lookup"><span data-stu-id="64dee-104">In This Section</span></span>  
+ [<span data-ttu-id="64dee-105">HelpProvider 组件概述</span><span class="sxs-lookup"><span data-stu-id="64dee-105">HelpProvider Component Overview</span></span>](../../../../docs/framework/winforms/controls/helpprovider-component-overview-windows-forms.md)  
+ <span data-ttu-id="64dee-106">介绍 `HelpProvider` 组件的一般概念，使用该组件可将基于 Windows 的应用程序与 HTML 帮助文件关联。</span><span class="sxs-lookup"><span data-stu-id="64dee-106">Introduces the general concepts of the `HelpProvider` component, which lets you associate an HTML Help file with a Windows-based application.</span></span>  
   
- <span data-ttu-id="c7ec6-107">请参阅[Windows 窗体应用程序中的帮助系统](../../../../docs/framework/winforms/advanced/help-systems-in-windows-forms-applications.md)。</span><span class="sxs-lookup"><span data-stu-id="c7ec6-107">See [Help Systems in Windows Forms Applications](../../../../docs/framework/winforms/advanced/help-systems-in-windows-forms-applications.md).</span></span>  
+ <span data-ttu-id="64dee-107">请参阅[Windows 窗体应用程序中的帮助系统](../../../../docs/framework/winforms/advanced/help-systems-in-windows-forms-applications.md)。</span><span class="sxs-lookup"><span data-stu-id="64dee-107">See [Help Systems in Windows Forms Applications](../../../../docs/framework/winforms/advanced/help-systems-in-windows-forms-applications.md).</span></span>  
   
-## <a name="reference"></a><span data-ttu-id="c7ec6-108">参考</span><span class="sxs-lookup"><span data-stu-id="c7ec6-108">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="64dee-108">参考</span><span class="sxs-lookup"><span data-stu-id="64dee-108">Reference</span></span>  
  <xref:System.Windows.Forms.HelpProvider>  
- <span data-ttu-id="c7ec6-109">对此类进行描述，并提供指向其所有成员的链接。</span><span class="sxs-lookup"><span data-stu-id="c7ec6-109">Describes this class and has links to all its members.</span></span>  
+ <span data-ttu-id="64dee-109">对此类进行描述，并提供指向其所有成员的链接。</span><span class="sxs-lookup"><span data-stu-id="64dee-109">Describes this class and has links to all its members.</span></span>  
   
  <xref:System.Windows.Forms.Help>  
- <span data-ttu-id="c7ec6-110">对此类进行描述，并提供指向其所有成员的链接。</span><span class="sxs-lookup"><span data-stu-id="c7ec6-110">Describes this class and has links to all its members.</span></span>  
+ <span data-ttu-id="64dee-110">对此类进行描述，并提供指向其所有成员的链接。</span><span class="sxs-lookup"><span data-stu-id="64dee-110">Describes this class and has links to all its members.</span></span>  
   
-## <a name="related-sections"></a><span data-ttu-id="c7ec6-111">相关章节</span><span class="sxs-lookup"><span data-stu-id="c7ec6-111">Related Sections</span></span>  
- [<span data-ttu-id="c7ec6-112">在 Windows 窗体上使用的控件</span><span class="sxs-lookup"><span data-stu-id="c7ec6-112">Controls to Use on Windows Forms</span></span>](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
- <span data-ttu-id="c7ec6-113">提供 Windows 窗体控件的完整列表，附带其使用情况相关信息的链接。</span><span class="sxs-lookup"><span data-stu-id="c7ec6-113">Provides a complete list of Windows Forms controls, with links to information on their use.</span></span>  
+## <a name="related-sections"></a><span data-ttu-id="64dee-111">相关章节</span><span class="sxs-lookup"><span data-stu-id="64dee-111">Related Sections</span></span>  
+ [<span data-ttu-id="64dee-112">在 Windows 窗体上使用的控件</span><span class="sxs-lookup"><span data-stu-id="64dee-112">Controls to Use on Windows Forms</span></span>](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
+ <span data-ttu-id="64dee-113">提供 Windows 窗体控件的完整列表，附带其使用情况相关信息的链接。</span><span class="sxs-lookup"><span data-stu-id="64dee-113">Provides a complete list of Windows Forms controls, with links to information on their use.</span></span>  
   
- <span data-ttu-id="c7ec6-114">另请参阅[在 Windows 窗体应用程序中的帮助系统](https://msdn.microsoft.com/library/55dct0a1\(v=vs.110\))。</span><span class="sxs-lookup"><span data-stu-id="c7ec6-114">Also see [Help Systems in Windows Forms Applications](https://msdn.microsoft.com/library/55dct0a1\(v=vs.110\)).</span></span>
+ <span data-ttu-id="64dee-114">另请参阅[在 Windows 窗体应用程序中的帮助系统](https://msdn.microsoft.com/library/55dct0a1\(v=vs.110\))。</span><span class="sxs-lookup"><span data-stu-id="64dee-114">Also see [Help Systems in Windows Forms Applications](https://msdn.microsoft.com/library/55dct0a1\(v=vs.110\)).</span></span>

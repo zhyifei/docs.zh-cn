@@ -16,20 +16,20 @@ helpviewer_keywords:
 - serialization, attributes
 ms.assetid: 47d4c39d-30e1-4c7b-8a2e-301325390647
 ms.openlocfilehash: 28c7ebe1de3adb92e531597027e4b8bb7a63294c
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 67de6cb5dd66a19f2180ba7e4d7aecc697f8a963
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44191210"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44342467"
 ---
-# <a name="controlling-xml-serialization-using-attributes"></a><span data-ttu-id="215ce-102">使用属性控制 XML 序列化</span><span class="sxs-lookup"><span data-stu-id="215ce-102">Controlling XML Serialization Using Attributes</span></span>
+# <a name="controlling-xml-serialization-using-attributes"></a><span data-ttu-id="e13fb-102">使用属性控制 XML 序列化</span><span class="sxs-lookup"><span data-stu-id="e13fb-102">Controlling XML Serialization Using Attributes</span></span>
 
-<span data-ttu-id="215ce-103">使用属性可以控制对象的 XML 序列化，还可以利用同一组类创建其他 XML 流。</span><span class="sxs-lookup"><span data-stu-id="215ce-103">Attributes can be used to control the XML serialization of an object or to create an alternate XML stream from the same set of classes.</span></span> <span data-ttu-id="215ce-104">有关创建其他 XML 流的详细信息，请参见[如何：指定 XML 流的替代元素名称](how-to-specify-an-alternate-element-name-for-an-xml-stream.md)。</span><span class="sxs-lookup"><span data-stu-id="215ce-104">For more details about creating an alternate XML stream, see [How to: Specify an Alternate Element Name for an XML Stream](how-to-specify-an-alternate-element-name-for-an-xml-stream.md).</span></span>
+<span data-ttu-id="e13fb-103">使用属性可以控制对象的 XML 序列化，还可以利用同一组类创建其他 XML 流。</span><span class="sxs-lookup"><span data-stu-id="e13fb-103">Attributes can be used to control the XML serialization of an object or to create an alternate XML stream from the same set of classes.</span></span> <span data-ttu-id="e13fb-104">有关创建其他 XML 流的详细信息，请参见[如何：指定 XML 流的替代元素名称](how-to-specify-an-alternate-element-name-for-an-xml-stream.md)。</span><span class="sxs-lookup"><span data-stu-id="e13fb-104">For more details about creating an alternate XML stream, see [How to: Specify an Alternate Element Name for an XML Stream](how-to-specify-an-alternate-element-name-for-an-xml-stream.md).</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="215ce-105">如果生成的 XML 必须符合到第 5 节的 World Wide Web 联合会 (W3C) 文档[简单对象访问协议 (SOAP) 1.1](https://www.w3.org/TR/2000/NOTE-SOAP-20000508/)，使用中列出的特性[属性，控制编码的 SOAP序列化](attributes-that-control-encoded-soap-serialization.md)。</span><span class="sxs-lookup"><span data-stu-id="215ce-105">If the XML generated must conform to section 5 of the World Wide Web Consortium (W3C) document titled [Simple Object Access Protocol (SOAP) 1.1](https://www.w3.org/TR/2000/NOTE-SOAP-20000508/), use the attributes listed in [Attributes That Control Encoded SOAP Serialization](attributes-that-control-encoded-soap-serialization.md).</span></span>
+> <span data-ttu-id="e13fb-105">如果生成的 XML 必须符合到第 5 节的 World Wide Web 联合会 (W3C) 文档[简单对象访问协议 (SOAP) 1.1](https://www.w3.org/TR/2000/NOTE-SOAP-20000508/)，使用中列出的特性[属性，控制编码的 SOAP序列化](attributes-that-control-encoded-soap-serialization.md)。</span><span class="sxs-lookup"><span data-stu-id="e13fb-105">If the XML generated must conform to section 5 of the World Wide Web Consortium (W3C) document titled [Simple Object Access Protocol (SOAP) 1.1](https://www.w3.org/TR/2000/NOTE-SOAP-20000508/), use the attributes listed in [Attributes That Control Encoded SOAP Serialization](attributes-that-control-encoded-soap-serialization.md).</span></span>
 
-<span data-ttu-id="215ce-106">默认情况下，XML 元素名称由类或成员名称确定。</span><span class="sxs-lookup"><span data-stu-id="215ce-106">By default, an XML element name is determined by the class or member name.</span></span> <span data-ttu-id="215ce-107">在名为 `Book` 的简单类中，名为 `ISBN` 的字段将生成 XML 元素标记 \<ISBN>，如下面的示例所示。</span><span class="sxs-lookup"><span data-stu-id="215ce-107">In a simple class named `Book`, a field named `ISBN` will produce an XML element tag \<ISBN>, as shown in the following example.</span></span>
+<span data-ttu-id="e13fb-106">默认情况下，XML 元素名称由类或成员名称确定。</span><span class="sxs-lookup"><span data-stu-id="e13fb-106">By default, an XML element name is determined by the class or member name.</span></span> <span data-ttu-id="e13fb-107">在名为 `Book` 的简单类中，名为 `ISBN` 的字段将生成 XML 元素标记 \<ISBN>，如下面的示例所示。</span><span class="sxs-lookup"><span data-stu-id="e13fb-107">In a simple class named `Book`, a field named `ISBN` will produce an XML element tag \<ISBN>, as shown in the following example.</span></span>
 
 ```vb
 Public Class Book
@@ -50,7 +50,7 @@ public class Book
 // <ISBN>1234567890</ISBN>.
 ```
 
-<span data-ttu-id="215ce-108">若要重新命名元素，可以更改这种默认行为。</span><span class="sxs-lookup"><span data-stu-id="215ce-108">This default behavior can be changed if you want to give the element a new name.</span></span> <span data-ttu-id="215ce-109">下面的代码演示属性 (Attribute) 如何通过设置 <xref:System.Xml.Serialization.XmlElementAttribute.ElementName%2A> 的 <xref:System.Xml.Serialization.XmlElementAttribute> 属性 (Property) 实现此目的。</span><span class="sxs-lookup"><span data-stu-id="215ce-109">The following code shows how an attribute enables this by setting the <xref:System.Xml.Serialization.XmlElementAttribute.ElementName%2A> property of a <xref:System.Xml.Serialization.XmlElementAttribute>.</span></span>
+<span data-ttu-id="e13fb-108">若要重新命名元素，可以更改这种默认行为。</span><span class="sxs-lookup"><span data-stu-id="e13fb-108">This default behavior can be changed if you want to give the element a new name.</span></span> <span data-ttu-id="e13fb-109">下面的代码演示属性 (Attribute) 如何通过设置 <xref:System.Xml.Serialization.XmlElementAttribute.ElementName%2A> 的 <xref:System.Xml.Serialization.XmlElementAttribute> 属性 (Property) 实现此目的。</span><span class="sxs-lookup"><span data-stu-id="e13fb-109">The following code shows how an attribute enables this by setting the <xref:System.Xml.Serialization.XmlElementAttribute.ElementName%2A> property of a <xref:System.Xml.Serialization.XmlElementAttribute>.</span></span>
 
 ```vb
 Public Class TaxRates
@@ -66,13 +66,13 @@ public class TaxRates {
 }
 ```
 
-<span data-ttu-id="215ce-110">有关属性的详细信息，请参阅[属性](../../../docs/standard/attributes/index.md)。</span><span class="sxs-lookup"><span data-stu-id="215ce-110">For more information about attributes, see [Attributes](../../../docs/standard/attributes/index.md).</span></span> <span data-ttu-id="215ce-111">有关控制 XML 序列化的特性的列表，请参阅[控制 XML 序列化的特性](attributes-that-control-xml-serialization.md)。</span><span class="sxs-lookup"><span data-stu-id="215ce-111">For a list of attributes that control XML serialization, see [Attributes That Control XML Serialization](attributes-that-control-xml-serialization.md).</span></span>
+<span data-ttu-id="e13fb-110">有关属性的详细信息，请参阅[属性](../../../docs/standard/attributes/index.md)。</span><span class="sxs-lookup"><span data-stu-id="e13fb-110">For more information about attributes, see [Attributes](../../../docs/standard/attributes/index.md).</span></span> <span data-ttu-id="e13fb-111">有关控制 XML 序列化的特性的列表，请参阅[控制 XML 序列化的特性](attributes-that-control-xml-serialization.md)。</span><span class="sxs-lookup"><span data-stu-id="e13fb-111">For a list of attributes that control XML serialization, see [Attributes That Control XML Serialization](attributes-that-control-xml-serialization.md).</span></span>
 
-## <a name="controlling-array-serialization"></a><span data-ttu-id="215ce-112">控制数组序列化</span><span class="sxs-lookup"><span data-stu-id="215ce-112">Controlling Array Serialization</span></span>
+## <a name="controlling-array-serialization"></a><span data-ttu-id="e13fb-112">控制数组序列化</span><span class="sxs-lookup"><span data-stu-id="e13fb-112">Controlling Array Serialization</span></span>
 
-<span data-ttu-id="215ce-113"><xref:System.Xml.Serialization.XmlArrayAttribute> 和 <xref:System.Xml.Serialization.XmlArrayItemAttribute> 属性旨在用于控制数组的序列化。</span><span class="sxs-lookup"><span data-stu-id="215ce-113">The <xref:System.Xml.Serialization.XmlArrayAttribute> and the <xref:System.Xml.Serialization.XmlArrayItemAttribute> attributes are designed to control the serialization of arrays.</span></span> <span data-ttu-id="215ce-114">使用这些特性可以控制元素名称、命名空间以及 XML 架构 (XSD) 数据类型（在万维网联合会 [www.w3.org] 文档“XML 架构第 2 部分：数据类型”中进行了定义）。</span><span class="sxs-lookup"><span data-stu-id="215ce-114">Using these attributes, you can control the element name, namespace, and XML Schema (XSD) data type (as defined in the World Wide Web Consortium [www.w3.org] document titled "XML Schema Part 2: Datatypes").</span></span> <span data-ttu-id="215ce-115">此外，还可以指定数组所能包含的类型。</span><span class="sxs-lookup"><span data-stu-id="215ce-115">You can also specify the types that can be included in an array.</span></span>
+<span data-ttu-id="e13fb-113"><xref:System.Xml.Serialization.XmlArrayAttribute> 和 <xref:System.Xml.Serialization.XmlArrayItemAttribute> 属性旨在用于控制数组的序列化。</span><span class="sxs-lookup"><span data-stu-id="e13fb-113">The <xref:System.Xml.Serialization.XmlArrayAttribute> and the <xref:System.Xml.Serialization.XmlArrayItemAttribute> attributes are designed to control the serialization of arrays.</span></span> <span data-ttu-id="e13fb-114">使用这些特性可以控制元素名称、命名空间以及 XML 架构 (XSD) 数据类型（在万维网联合会 [www.w3.org] 文档“XML 架构第 2 部分：数据类型”中进行了定义）。</span><span class="sxs-lookup"><span data-stu-id="e13fb-114">Using these attributes, you can control the element name, namespace, and XML Schema (XSD) data type (as defined in the World Wide Web Consortium [www.w3.org] document titled "XML Schema Part 2: Datatypes").</span></span> <span data-ttu-id="e13fb-115">此外，还可以指定数组所能包含的类型。</span><span class="sxs-lookup"><span data-stu-id="e13fb-115">You can also specify the types that can be included in an array.</span></span>
 
-<span data-ttu-id="215ce-116">对于序列化数组时生成的封闭 XML 元素，其属性将由 <xref:System.Xml.Serialization.XmlArrayAttribute> 确定。</span><span class="sxs-lookup"><span data-stu-id="215ce-116">The <xref:System.Xml.Serialization.XmlArrayAttribute> will determine the properties of the enclosing XML element that results when an array is serialized.</span></span> <span data-ttu-id="215ce-117">例如，默认情况下，序列化下面的数组时，将会生成名为 `Employees` 的 XML 元素。</span><span class="sxs-lookup"><span data-stu-id="215ce-117">For example, by default, serializing the array below will result in an XML element named `Employees`.</span></span> <span data-ttu-id="215ce-118">`Employees` 元素将包含在数组类型 `Employee` 之后命名的一系列元素。</span><span class="sxs-lookup"><span data-stu-id="215ce-118">The `Employees` element will contain a series of elements named after the array type `Employee`.</span></span>
+<span data-ttu-id="e13fb-116">对于序列化数组时生成的封闭 XML 元素，其属性将由 <xref:System.Xml.Serialization.XmlArrayAttribute> 确定。</span><span class="sxs-lookup"><span data-stu-id="e13fb-116">The <xref:System.Xml.Serialization.XmlArrayAttribute> will determine the properties of the enclosing XML element that results when an array is serialized.</span></span> <span data-ttu-id="e13fb-117">例如，默认情况下，序列化下面的数组时，将会生成名为 `Employees` 的 XML 元素。</span><span class="sxs-lookup"><span data-stu-id="e13fb-117">For example, by default, serializing the array below will result in an XML element named `Employees`.</span></span> <span data-ttu-id="e13fb-118">`Employees` 元素将包含在数组类型 `Employee` 之后命名的一系列元素。</span><span class="sxs-lookup"><span data-stu-id="e13fb-118">The `Employees` element will contain a series of elements named after the array type `Employee`.</span></span>
 
 ```vb
 Public Class Group
@@ -92,7 +92,7 @@ public class Employee {
 }
 ```
 
-<span data-ttu-id="215ce-119">序列化实例可能如下所示。</span><span class="sxs-lookup"><span data-stu-id="215ce-119">A serialized instance might resemble the following.</span></span>
+<span data-ttu-id="e13fb-119">序列化实例可能如下所示。</span><span class="sxs-lookup"><span data-stu-id="e13fb-119">A serialized instance might resemble the following.</span></span>
 
 ```xml
 <Group>
@@ -104,7 +104,7 @@ public class Employee {
 </Group>
 ```
 
-<span data-ttu-id="215ce-120">通过应用 <xref:System.Xml.Serialization.XmlArrayAttribute>，可以按照以下方式更改 XML 元素的名称。</span><span class="sxs-lookup"><span data-stu-id="215ce-120">By applying a <xref:System.Xml.Serialization.XmlArrayAttribute>, you can change the name of the XML element, as follows.</span></span>
+<span data-ttu-id="e13fb-120">通过应用 <xref:System.Xml.Serialization.XmlArrayAttribute>，可以按照以下方式更改 XML 元素的名称。</span><span class="sxs-lookup"><span data-stu-id="e13fb-120">By applying a <xref:System.Xml.Serialization.XmlArrayAttribute>, you can change the name of the XML element, as follows.</span></span>
 
 ```vb
 Public Class Group
@@ -120,7 +120,7 @@ public class Group {
 }
 ```
 
-<span data-ttu-id="215ce-121">生成的 XML 可能如下所示。</span><span class="sxs-lookup"><span data-stu-id="215ce-121">The resulting XML might resemble the following.</span></span>
+<span data-ttu-id="e13fb-121">生成的 XML 可能如下所示。</span><span class="sxs-lookup"><span data-stu-id="e13fb-121">The resulting XML might resemble the following.</span></span>
 
 ```xml
 <Group>
@@ -132,7 +132,7 @@ public class Group {
 </Group>
 ```
 
-<span data-ttu-id="215ce-122">另一方面，<xref:System.Xml.Serialization.XmlArrayItemAttribute> 可以控制如何序列化数组中包含的项。</span><span class="sxs-lookup"><span data-stu-id="215ce-122">The <xref:System.Xml.Serialization.XmlArrayItemAttribute>, on the other hand, controls how the items contained in the array are serialized.</span></span> <span data-ttu-id="215ce-123">请注意，该特性将应用于返回数组的字段。</span><span class="sxs-lookup"><span data-stu-id="215ce-123">Note that the attribute is applied to the field returning the array.</span></span>
+<span data-ttu-id="e13fb-122">另一方面，<xref:System.Xml.Serialization.XmlArrayItemAttribute> 可以控制如何序列化数组中包含的项。</span><span class="sxs-lookup"><span data-stu-id="e13fb-122">The <xref:System.Xml.Serialization.XmlArrayItemAttribute>, on the other hand, controls how the items contained in the array are serialized.</span></span> <span data-ttu-id="e13fb-123">请注意，该特性将应用于返回数组的字段。</span><span class="sxs-lookup"><span data-stu-id="e13fb-123">Note that the attribute is applied to the field returning the array.</span></span>
 
 ```vb
 Public Class Group
@@ -148,7 +148,7 @@ public class Group {
 }
 ```
 
-<span data-ttu-id="215ce-124">生成的 XML 可能如下所示。</span><span class="sxs-lookup"><span data-stu-id="215ce-124">The resulting XML might resemble the following.</span></span>
+<span data-ttu-id="e13fb-124">生成的 XML 可能如下所示。</span><span class="sxs-lookup"><span data-stu-id="e13fb-124">The resulting XML might resemble the following.</span></span>
 
 ```xml
 <Group>
@@ -158,9 +158,9 @@ public class Group {
 </Group>
 ```
 
-## <a name="serializing-derived-classes"></a><span data-ttu-id="215ce-125">序列化派生类</span><span class="sxs-lookup"><span data-stu-id="215ce-125">Serializing Derived Classes</span></span>
+## <a name="serializing-derived-classes"></a><span data-ttu-id="e13fb-125">序列化派生类</span><span class="sxs-lookup"><span data-stu-id="e13fb-125">Serializing Derived Classes</span></span>
 
-<span data-ttu-id="215ce-126"><xref:System.Xml.Serialization.XmlArrayItemAttribute> 的另一种用法是，允许序列化派生类。</span><span class="sxs-lookup"><span data-stu-id="215ce-126">Another use of the <xref:System.Xml.Serialization.XmlArrayItemAttribute> is to allow the serialization of derived classes.</span></span> <span data-ttu-id="215ce-127">例如，可将派生自 `Manager` 的另一个名为 `Employee` 的类添加至上一示例中。</span><span class="sxs-lookup"><span data-stu-id="215ce-127">For example, another class named `Manager` that derives from `Employee` can be added to the previous example.</span></span> <span data-ttu-id="215ce-128">如果没有应用 <xref:System.Xml.Serialization.XmlArrayItemAttribute>，代码将在运行时失败，原因是无法识别派生类类型。</span><span class="sxs-lookup"><span data-stu-id="215ce-128">If you do not apply the <xref:System.Xml.Serialization.XmlArrayItemAttribute>, the code will fail at run time because the derived class type will not be recognized.</span></span> <span data-ttu-id="215ce-129">若要解决这个问题，每次为每个可接受类型（基类和派生类）设置 <xref:System.Xml.Serialization.XmlArrayItemAttribute.Type%2A> 属性时，需要应用该特性两次。</span><span class="sxs-lookup"><span data-stu-id="215ce-129">To remedy this, apply the attribute twice, each time setting the <xref:System.Xml.Serialization.XmlArrayItemAttribute.Type%2A> property for each acceptable type (base and derived).</span></span>
+<span data-ttu-id="e13fb-126"><xref:System.Xml.Serialization.XmlArrayItemAttribute> 的另一种用法是，允许序列化派生类。</span><span class="sxs-lookup"><span data-stu-id="e13fb-126">Another use of the <xref:System.Xml.Serialization.XmlArrayItemAttribute> is to allow the serialization of derived classes.</span></span> <span data-ttu-id="e13fb-127">例如，可将派生自 `Manager` 的另一个名为 `Employee` 的类添加至上一示例中。</span><span class="sxs-lookup"><span data-stu-id="e13fb-127">For example, another class named `Manager` that derives from `Employee` can be added to the previous example.</span></span> <span data-ttu-id="e13fb-128">如果没有应用 <xref:System.Xml.Serialization.XmlArrayItemAttribute>，代码将在运行时失败，原因是无法识别派生类类型。</span><span class="sxs-lookup"><span data-stu-id="e13fb-128">If you do not apply the <xref:System.Xml.Serialization.XmlArrayItemAttribute>, the code will fail at run time because the derived class type will not be recognized.</span></span> <span data-ttu-id="e13fb-129">若要解决这个问题，每次为每个可接受类型（基类和派生类）设置 <xref:System.Xml.Serialization.XmlArrayItemAttribute.Type%2A> 属性时，需要应用该特性两次。</span><span class="sxs-lookup"><span data-stu-id="e13fb-129">To remedy this, apply the attribute twice, each time setting the <xref:System.Xml.Serialization.XmlArrayItemAttribute.Type%2A> property for each acceptable type (base and derived).</span></span>
 
 ```vb
 Public Class Group
@@ -191,7 +191,7 @@ public class Manager:Employee {
 }
 ```
 
-<span data-ttu-id="215ce-130">序列化实例可能如下所示。</span><span class="sxs-lookup"><span data-stu-id="215ce-130">A serialized instance might resemble the following.</span></span>
+<span data-ttu-id="e13fb-130">序列化实例可能如下所示。</span><span class="sxs-lookup"><span data-stu-id="e13fb-130">A serialized instance might resemble the following.</span></span>
 
 ```xml
 <Group>
@@ -207,9 +207,9 @@ public class Manager:Employee {
 </Group>
 ```
 
-## <a name="serializing-an-array-as-a-sequence-of-elements"></a><span data-ttu-id="215ce-131">将数组作为元素序列进行序列化</span><span class="sxs-lookup"><span data-stu-id="215ce-131">Serializing an Array as a Sequence of Elements</span></span>
+## <a name="serializing-an-array-as-a-sequence-of-elements"></a><span data-ttu-id="e13fb-131">将数组作为元素序列进行序列化</span><span class="sxs-lookup"><span data-stu-id="e13fb-131">Serializing an Array as a Sequence of Elements</span></span>
 
-<span data-ttu-id="215ce-132">通过将 <xref:System.Xml.Serialization.XmlElementAttribute> 应用于返回数组的字段，还可以将该数组作为 XML 元素的平面序列进行序列化，如下所示。</span><span class="sxs-lookup"><span data-stu-id="215ce-132">You can also serialize an array as a flat sequence of XML elements by applying a <xref:System.Xml.Serialization.XmlElementAttribute> to the field returning the array as follows.</span></span>
+<span data-ttu-id="e13fb-132">通过将 <xref:System.Xml.Serialization.XmlElementAttribute> 应用于返回数组的字段，还可以将该数组作为 XML 元素的平面序列进行序列化，如下所示。</span><span class="sxs-lookup"><span data-stu-id="e13fb-132">You can also serialize an array as a flat sequence of XML elements by applying a <xref:System.Xml.Serialization.XmlElementAttribute> to the field returning the array as follows.</span></span>
 
 ```vb
 Public Class Group
@@ -225,7 +225,7 @@ public class Group {
 }
 ```
 
-<span data-ttu-id="215ce-133">序列化实例可能如下所示。</span><span class="sxs-lookup"><span data-stu-id="215ce-133">A serialized instance might resemble the following.</span></span>
+<span data-ttu-id="e13fb-133">序列化实例可能如下所示。</span><span class="sxs-lookup"><span data-stu-id="e13fb-133">A serialized instance might resemble the following.</span></span>
 
 ```xml
 <Group>
@@ -241,21 +241,21 @@ public class Group {
 </Group>
 ```
 
-<span data-ttu-id="215ce-134">区别两种 XML 流的另一个方法是，使用 XML 架构定义工具，从编译好的代码生成 XML 架构 (XSD) 文档文件。</span><span class="sxs-lookup"><span data-stu-id="215ce-134">Another way to differentiate the two XML streams is to use the XML Schema Definition tool to generate the XML Schema (XSD) document files from the compiled code.</span></span> <span data-ttu-id="215ce-135">（有关使用该工具的详细信息，请参见[XML 架构定义工具和 XML 序列化](the-xml-schema-definition-tool-and-xml-serialization.md)。）没有将属性应用于字段时，架构会以下列方式描述元素。</span><span class="sxs-lookup"><span data-stu-id="215ce-135">(For more details on using the tool, see [The XML Schema Definition Tool and XML Serialization](the-xml-schema-definition-tool-and-xml-serialization.md).) When no attribute is applied to the field, the schema describes the element in the following manner.</span></span>
+<span data-ttu-id="e13fb-134">区别两种 XML 流的另一个方法是，使用 XML 架构定义工具，从编译好的代码生成 XML 架构 (XSD) 文档文件。</span><span class="sxs-lookup"><span data-stu-id="e13fb-134">Another way to differentiate the two XML streams is to use the XML Schema Definition tool to generate the XML Schema (XSD) document files from the compiled code.</span></span> <span data-ttu-id="e13fb-135">（有关使用该工具的详细信息，请参见[XML 架构定义工具和 XML 序列化](the-xml-schema-definition-tool-and-xml-serialization.md)。）没有将属性应用于字段时，架构会以下列方式描述元素。</span><span class="sxs-lookup"><span data-stu-id="e13fb-135">(For more details on using the tool, see [The XML Schema Definition Tool and XML Serialization](the-xml-schema-definition-tool-and-xml-serialization.md).) When no attribute is applied to the field, the schema describes the element in the following manner.</span></span>
 
 ```xml
 <xs:element minOccurs="0" maxOccurs ="1" name="Employees" type="ArrayOfEmployee" />
 ```
 
-<span data-ttu-id="215ce-136">将 <xref:System.Xml.Serialization.XmlElementAttribute> 应用于字段时，生成的架构会以下列方式描述元素。</span><span class="sxs-lookup"><span data-stu-id="215ce-136">When the <xref:System.Xml.Serialization.XmlElementAttribute> is applied to the field, the resulting schema describes the element as follows.</span></span>
+<span data-ttu-id="e13fb-136">将 <xref:System.Xml.Serialization.XmlElementAttribute> 应用于字段时，生成的架构会以下列方式描述元素。</span><span class="sxs-lookup"><span data-stu-id="e13fb-136">When the <xref:System.Xml.Serialization.XmlElementAttribute> is applied to the field, the resulting schema describes the element as follows.</span></span>
 
 ```xml
 <xs:element minOccurs="0" maxOccurs="unbounded" name="Employees" type="Employee" /> 
 ```
 
-## <a name="serializing-an-arraylist"></a><span data-ttu-id="215ce-137">序列化 ArrayList</span><span class="sxs-lookup"><span data-stu-id="215ce-137">Serializing an ArrayList</span></span>
+## <a name="serializing-an-arraylist"></a><span data-ttu-id="e13fb-137">序列化 ArrayList</span><span class="sxs-lookup"><span data-stu-id="e13fb-137">Serializing an ArrayList</span></span>
 
-<span data-ttu-id="215ce-138"><xref:System.Collections.ArrayList> 类可能包含各种不同对象的集合。</span><span class="sxs-lookup"><span data-stu-id="215ce-138">The <xref:System.Collections.ArrayList> class can contain a collection of diverse objects.</span></span> <span data-ttu-id="215ce-139">因此，可以按照使用数组的类似方式使用 <xref:System.Collections.ArrayList>。</span><span class="sxs-lookup"><span data-stu-id="215ce-139">You can therefore use a <xref:System.Collections.ArrayList> much as you use an array.</span></span> <span data-ttu-id="215ce-140">您可以创建返回单个 <xref:System.Collections.ArrayList> 的字段，而不用创建返回类型化对象的数组的字段。</span><span class="sxs-lookup"><span data-stu-id="215ce-140">Instead of creating a field that returns an array of typed objects, however, you can create a field that returns a single <xref:System.Collections.ArrayList>.</span></span> <span data-ttu-id="215ce-141">但是，与数组相同的是，必须将 <xref:System.Xml.Serialization.XmlSerializer> 包含的对象的类型告知 <xref:System.Collections.ArrayList>。</span><span class="sxs-lookup"><span data-stu-id="215ce-141">However, as with arrays, you must inform the <xref:System.Xml.Serialization.XmlSerializer> of the types of objects the <xref:System.Collections.ArrayList> contains.</span></span> <span data-ttu-id="215ce-142">为此，需要为该字段分配 <xref:System.Xml.Serialization.XmlElementAttribute> 的多个实例，如下面的示例所示。</span><span class="sxs-lookup"><span data-stu-id="215ce-142">To accomplish this, assign multiple instances of the <xref:System.Xml.Serialization.XmlElementAttribute> to the field, as shown in the following example.</span></span>
+<span data-ttu-id="e13fb-138"><xref:System.Collections.ArrayList> 类可能包含各种不同对象的集合。</span><span class="sxs-lookup"><span data-stu-id="e13fb-138">The <xref:System.Collections.ArrayList> class can contain a collection of diverse objects.</span></span> <span data-ttu-id="e13fb-139">因此，可以按照使用数组的类似方式使用 <xref:System.Collections.ArrayList>。</span><span class="sxs-lookup"><span data-stu-id="e13fb-139">You can therefore use a <xref:System.Collections.ArrayList> much as you use an array.</span></span> <span data-ttu-id="e13fb-140">您可以创建返回单个 <xref:System.Collections.ArrayList> 的字段，而不用创建返回类型化对象的数组的字段。</span><span class="sxs-lookup"><span data-stu-id="e13fb-140">Instead of creating a field that returns an array of typed objects, however, you can create a field that returns a single <xref:System.Collections.ArrayList>.</span></span> <span data-ttu-id="e13fb-141">但是，与数组相同的是，必须将 <xref:System.Xml.Serialization.XmlSerializer> 包含的对象的类型告知 <xref:System.Collections.ArrayList>。</span><span class="sxs-lookup"><span data-stu-id="e13fb-141">However, as with arrays, you must inform the <xref:System.Xml.Serialization.XmlSerializer> of the types of objects the <xref:System.Collections.ArrayList> contains.</span></span> <span data-ttu-id="e13fb-142">为此，需要为该字段分配 <xref:System.Xml.Serialization.XmlElementAttribute> 的多个实例，如下面的示例所示。</span><span class="sxs-lookup"><span data-stu-id="e13fb-142">To accomplish this, assign multiple instances of the <xref:System.Xml.Serialization.XmlElementAttribute> to the field, as shown in the following example.</span></span>
 
 ```vb
 Public Class Group
@@ -273,13 +273,13 @@ public class Group {
 }
 ```
 
-## <a name="controlling-serialization-of-classes-using-xmlrootattribute-and-xmltypeattribute"></a><span data-ttu-id="215ce-143">使用 XmlRootAttribute 和 XmlTypeAttribute 控制类的序列化</span><span class="sxs-lookup"><span data-stu-id="215ce-143">Controlling Serialization of Classes Using XmlRootAttribute and XmlTypeAttribute</span></span>
+## <a name="controlling-serialization-of-classes-using-xmlrootattribute-and-xmltypeattribute"></a><span data-ttu-id="e13fb-143">使用 XmlRootAttribute 和 XmlTypeAttribute 控制类的序列化</span><span class="sxs-lookup"><span data-stu-id="e13fb-143">Controlling Serialization of Classes Using XmlRootAttribute and XmlTypeAttribute</span></span>
 
-<span data-ttu-id="215ce-144">能且只能应用于一个类的特性有下面两种：<xref:System.Xml.Serialization.XmlRootAttribute> 和 <xref:System.Xml.Serialization.XmlTypeAttribute>。</span><span class="sxs-lookup"><span data-stu-id="215ce-144">There are two attributes that can be applied to a class (and only a class): <xref:System.Xml.Serialization.XmlRootAttribute> and <xref:System.Xml.Serialization.XmlTypeAttribute>.</span></span> <span data-ttu-id="215ce-145">这两种特性非常相似。</span><span class="sxs-lookup"><span data-stu-id="215ce-145">These attributes are very similar.</span></span> <span data-ttu-id="215ce-146"><xref:System.Xml.Serialization.XmlRootAttribute> 只能应用于一个类：序列化时，该类表示 XML 文档的开始和结束元素，也就是根元素。</span><span class="sxs-lookup"><span data-stu-id="215ce-146">The <xref:System.Xml.Serialization.XmlRootAttribute> can be applied to only one class: the class that, when serialized, represents the XML document's opening and closing element—in other words, the root element.</span></span> <span data-ttu-id="215ce-147">另一方面，<xref:System.Xml.Serialization.XmlTypeAttribute> 可以应用于任何一个类，包括根类。</span><span class="sxs-lookup"><span data-stu-id="215ce-147">The <xref:System.Xml.Serialization.XmlTypeAttribute>, on the other hand, can be applied to any class, including the root class.</span></span>
+<span data-ttu-id="e13fb-144">能且只能应用于一个类的特性有下面两种：<xref:System.Xml.Serialization.XmlRootAttribute> 和 <xref:System.Xml.Serialization.XmlTypeAttribute>。</span><span class="sxs-lookup"><span data-stu-id="e13fb-144">There are two attributes that can be applied to a class (and only a class): <xref:System.Xml.Serialization.XmlRootAttribute> and <xref:System.Xml.Serialization.XmlTypeAttribute>.</span></span> <span data-ttu-id="e13fb-145">这两种特性非常相似。</span><span class="sxs-lookup"><span data-stu-id="e13fb-145">These attributes are very similar.</span></span> <span data-ttu-id="e13fb-146"><xref:System.Xml.Serialization.XmlRootAttribute> 只能应用于一个类：序列化时，该类表示 XML 文档的开始和结束元素，也就是根元素。</span><span class="sxs-lookup"><span data-stu-id="e13fb-146">The <xref:System.Xml.Serialization.XmlRootAttribute> can be applied to only one class: the class that, when serialized, represents the XML document's opening and closing element—in other words, the root element.</span></span> <span data-ttu-id="e13fb-147">另一方面，<xref:System.Xml.Serialization.XmlTypeAttribute> 可以应用于任何一个类，包括根类。</span><span class="sxs-lookup"><span data-stu-id="e13fb-147">The <xref:System.Xml.Serialization.XmlTypeAttribute>, on the other hand, can be applied to any class, including the root class.</span></span>
 
-<span data-ttu-id="215ce-148">例如，在上面的示例中，`Group` 类就是根类，而其所有的公共字段和属性变成 XML 文档中的 XML 元素。</span><span class="sxs-lookup"><span data-stu-id="215ce-148">For example, in the previous examples, the `Group` class is the root class, and all its public fields and properties become the XML elements found in the XML document.</span></span> <span data-ttu-id="215ce-149">因此，只能有一个根类。</span><span class="sxs-lookup"><span data-stu-id="215ce-149">Therefore, there can be only one root class.</span></span> <span data-ttu-id="215ce-150">通过应用 <xref:System.Xml.Serialization.XmlRootAttribute>，可以控制 <xref:System.Xml.Serialization.XmlSerializer> 所生成的 XML 流。</span><span class="sxs-lookup"><span data-stu-id="215ce-150">By applying the <xref:System.Xml.Serialization.XmlRootAttribute>, you can control the XML stream generated by the <xref:System.Xml.Serialization.XmlSerializer>.</span></span> <span data-ttu-id="215ce-151">例如，可以更改元素名称和命名空间。</span><span class="sxs-lookup"><span data-stu-id="215ce-151">For example, you can change the element name and namespace.</span></span>
+<span data-ttu-id="e13fb-148">例如，在上面的示例中，`Group` 类就是根类，而其所有的公共字段和属性变成 XML 文档中的 XML 元素。</span><span class="sxs-lookup"><span data-stu-id="e13fb-148">For example, in the previous examples, the `Group` class is the root class, and all its public fields and properties become the XML elements found in the XML document.</span></span> <span data-ttu-id="e13fb-149">因此，只能有一个根类。</span><span class="sxs-lookup"><span data-stu-id="e13fb-149">Therefore, there can be only one root class.</span></span> <span data-ttu-id="e13fb-150">通过应用 <xref:System.Xml.Serialization.XmlRootAttribute>，可以控制 <xref:System.Xml.Serialization.XmlSerializer> 所生成的 XML 流。</span><span class="sxs-lookup"><span data-stu-id="e13fb-150">By applying the <xref:System.Xml.Serialization.XmlRootAttribute>, you can control the XML stream generated by the <xref:System.Xml.Serialization.XmlSerializer>.</span></span> <span data-ttu-id="e13fb-151">例如，可以更改元素名称和命名空间。</span><span class="sxs-lookup"><span data-stu-id="e13fb-151">For example, you can change the element name and namespace.</span></span>
 
-<span data-ttu-id="215ce-152">使用 <xref:System.Xml.Serialization.XmlTypeAttribute> 可以控制所生成 XML 的架构。</span><span class="sxs-lookup"><span data-stu-id="215ce-152">The <xref:System.Xml.Serialization.XmlTypeAttribute> allows you to control the schema of the generated XML.</span></span> <span data-ttu-id="215ce-153">需要通过 XML Web services 发布架构时，这项功能很有用。</span><span class="sxs-lookup"><span data-stu-id="215ce-153">This capability is useful when you need to publish the schema through an XML Web service.</span></span> <span data-ttu-id="215ce-154">下面的示例将 <xref:System.Xml.Serialization.XmlTypeAttribute> 和 <xref:System.Xml.Serialization.XmlRootAttribute> 同时应用于同一个类。</span><span class="sxs-lookup"><span data-stu-id="215ce-154">The following example applies both the <xref:System.Xml.Serialization.XmlTypeAttribute> and the <xref:System.Xml.Serialization.XmlRootAttribute> to the same class.</span></span>
+<span data-ttu-id="e13fb-152">使用 <xref:System.Xml.Serialization.XmlTypeAttribute> 可以控制所生成 XML 的架构。</span><span class="sxs-lookup"><span data-stu-id="e13fb-152">The <xref:System.Xml.Serialization.XmlTypeAttribute> allows you to control the schema of the generated XML.</span></span> <span data-ttu-id="e13fb-153">需要通过 XML Web services 发布架构时，这项功能很有用。</span><span class="sxs-lookup"><span data-stu-id="e13fb-153">This capability is useful when you need to publish the schema through an XML Web service.</span></span> <span data-ttu-id="e13fb-154">下面的示例将 <xref:System.Xml.Serialization.XmlTypeAttribute> 和 <xref:System.Xml.Serialization.XmlRootAttribute> 同时应用于同一个类。</span><span class="sxs-lookup"><span data-stu-id="e13fb-154">The following example applies both the <xref:System.Xml.Serialization.XmlTypeAttribute> and the <xref:System.Xml.Serialization.XmlRootAttribute> to the same class.</span></span>
 
 ```vb
 <XmlRoot("NewGroupName"), _
@@ -297,13 +297,13 @@ public class Group {
 }
 ```
 
-<span data-ttu-id="215ce-155">如果对该类进行编译，并且使用 XML 架构定义工具生成其架构，可能会找到下面描述 `Group` 的 XML。</span><span class="sxs-lookup"><span data-stu-id="215ce-155">If this class is compiled, and the XML Schema Definition tool is used to generate its schema, you would find the following XML describing `Group`.</span></span>
+<span data-ttu-id="e13fb-155">如果对该类进行编译，并且使用 XML 架构定义工具生成其架构，可能会找到下面描述 `Group` 的 XML。</span><span class="sxs-lookup"><span data-stu-id="e13fb-155">If this class is compiled, and the XML Schema Definition tool is used to generate its schema, you would find the following XML describing `Group`.</span></span>
 
 ```xml
 <xs:element name="NewGroupName" type="NewTypeName">
 ```
 
-<span data-ttu-id="215ce-156">相比之下，如果是对该类的实例进行序列化，则只能在 XML 文档中找到 `NewGroupName`。</span><span class="sxs-lookup"><span data-stu-id="215ce-156">In contrast, if you were to serialize an instance of the class, only `NewGroupName` would be found in the XML document.</span></span>
+<span data-ttu-id="e13fb-156">相比之下，如果是对该类的实例进行序列化，则只能在 XML 文档中找到 `NewGroupName`。</span><span class="sxs-lookup"><span data-stu-id="e13fb-156">In contrast, if you were to serialize an instance of the class, only `NewGroupName` would be found in the XML document.</span></span>
 
 ```xml
 <NewGroupName>
@@ -311,16 +311,16 @@ public class Group {
 </NewGroupName>
 ```
 
-## <a name="preventing-serialization-with-the-xmlignoreattribute"></a><span data-ttu-id="215ce-157">使用 XmlIgnoreAttribute 防止序列化</span><span class="sxs-lookup"><span data-stu-id="215ce-157">Preventing Serialization with the XmlIgnoreAttribute</span></span>
+## <a name="preventing-serialization-with-the-xmlignoreattribute"></a><span data-ttu-id="e13fb-157">使用 XmlIgnoreAttribute 防止序列化</span><span class="sxs-lookup"><span data-stu-id="e13fb-157">Preventing Serialization with the XmlIgnoreAttribute</span></span>
 
-<span data-ttu-id="215ce-158">可能会出现公共属性或字段无需进行序列化的情况。</span><span class="sxs-lookup"><span data-stu-id="215ce-158">There might be situations when a public property or field does not need to be serialized.</span></span> <span data-ttu-id="215ce-159">例如，字段或属性可能用于包含元数据。</span><span class="sxs-lookup"><span data-stu-id="215ce-159">For example, a field or property could be used to contain metadata.</span></span> <span data-ttu-id="215ce-160">在这样的情况下，可将 <xref:System.Xml.Serialization.XmlIgnoreAttribute> 应用于该字段或属性，而 <xref:System.Xml.Serialization.XmlSerializer> 将跳过它。</span><span class="sxs-lookup"><span data-stu-id="215ce-160">In such cases, apply the <xref:System.Xml.Serialization.XmlIgnoreAttribute> to the field or property and the <xref:System.Xml.Serialization.XmlSerializer> will skip over it.</span></span>
+<span data-ttu-id="e13fb-158">可能会出现公共属性或字段无需进行序列化的情况。</span><span class="sxs-lookup"><span data-stu-id="e13fb-158">There might be situations when a public property or field does not need to be serialized.</span></span> <span data-ttu-id="e13fb-159">例如，字段或属性可能用于包含元数据。</span><span class="sxs-lookup"><span data-stu-id="e13fb-159">For example, a field or property could be used to contain metadata.</span></span> <span data-ttu-id="e13fb-160">在这样的情况下，可将 <xref:System.Xml.Serialization.XmlIgnoreAttribute> 应用于该字段或属性，而 <xref:System.Xml.Serialization.XmlSerializer> 将跳过它。</span><span class="sxs-lookup"><span data-stu-id="e13fb-160">In such cases, apply the <xref:System.Xml.Serialization.XmlIgnoreAttribute> to the field or property and the <xref:System.Xml.Serialization.XmlSerializer> will skip over it.</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="215ce-161">请参阅</span><span class="sxs-lookup"><span data-stu-id="215ce-161">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="e13fb-161">请参阅</span><span class="sxs-lookup"><span data-stu-id="e13fb-161">See also</span></span>
 
-- [<span data-ttu-id="215ce-162">用来控制 XML 序列化的属性</span><span class="sxs-lookup"><span data-stu-id="215ce-162">Attributes That Control XML Serialization</span></span>](attributes-that-control-xml-serialization.md)  
-- [<span data-ttu-id="215ce-163">用来控制编码的 SOAP 序列化的属性</span><span class="sxs-lookup"><span data-stu-id="215ce-163">Attributes That Control Encoded SOAP Serialization</span></span>](attributes-that-control-encoded-soap-serialization.md)  
-- [<span data-ttu-id="215ce-164">XML 序列化简介</span><span class="sxs-lookup"><span data-stu-id="215ce-164">Introducing XML Serialization</span></span>](introducing-xml-serialization.md)  
-- [<span data-ttu-id="215ce-165">XML 序列化示例</span><span class="sxs-lookup"><span data-stu-id="215ce-165">Examples of XML Serialization</span></span>](examples-of-xml-serialization.md)  
-- [<span data-ttu-id="215ce-166">如何：指定 XML 流的替代元素名称</span><span class="sxs-lookup"><span data-stu-id="215ce-166">How to: Specify an Alternate Element Name for an XML Stream</span></span>](how-to-specify-an-alternate-element-name-for-an-xml-stream.md)  
-- [<span data-ttu-id="215ce-167">如何：序列化对象</span><span class="sxs-lookup"><span data-stu-id="215ce-167">How to: Serialize an Object</span></span>](how-to-serialize-an-object.md)  
-- [<span data-ttu-id="215ce-168">如何：反序列化对象</span><span class="sxs-lookup"><span data-stu-id="215ce-168">How to: Deserialize an Object</span></span>](how-to-deserialize-an-object.md)  
+- [<span data-ttu-id="e13fb-162">用来控制 XML 序列化的属性</span><span class="sxs-lookup"><span data-stu-id="e13fb-162">Attributes That Control XML Serialization</span></span>](attributes-that-control-xml-serialization.md)  
+- [<span data-ttu-id="e13fb-163">用来控制编码的 SOAP 序列化的属性</span><span class="sxs-lookup"><span data-stu-id="e13fb-163">Attributes That Control Encoded SOAP Serialization</span></span>](attributes-that-control-encoded-soap-serialization.md)  
+- [<span data-ttu-id="e13fb-164">XML 序列化简介</span><span class="sxs-lookup"><span data-stu-id="e13fb-164">Introducing XML Serialization</span></span>](introducing-xml-serialization.md)  
+- [<span data-ttu-id="e13fb-165">XML 序列化示例</span><span class="sxs-lookup"><span data-stu-id="e13fb-165">Examples of XML Serialization</span></span>](examples-of-xml-serialization.md)  
+- [<span data-ttu-id="e13fb-166">如何：指定 XML 流的替代元素名称</span><span class="sxs-lookup"><span data-stu-id="e13fb-166">How to: Specify an Alternate Element Name for an XML Stream</span></span>](how-to-specify-an-alternate-element-name-for-an-xml-stream.md)  
+- [<span data-ttu-id="e13fb-167">如何：序列化对象</span><span class="sxs-lookup"><span data-stu-id="e13fb-167">How to: Serialize an Object</span></span>](how-to-serialize-an-object.md)  
+- [<span data-ttu-id="e13fb-168">如何：反序列化对象</span><span class="sxs-lookup"><span data-stu-id="e13fb-168">How to: Deserialize an Object</span></span>](how-to-deserialize-an-object.md)  
