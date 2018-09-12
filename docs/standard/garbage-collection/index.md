@@ -21,11 +21,11 @@ ms.assetid: 22b6cb97-0c80-4eeb-a2cf-5ed7655e37f9
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 1f61b63f78ea3c6131d4d1ab4e421be25149035b
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44261780"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "44509533"
 ---
 # <a name="garbage-collection"></a>垃圾回收
 .NET 的垃圾回收器管理应用程序的内存分配和释放。 每当有对象新建时，公共语言运行时都会从托管堆为对象分配内存。 只要托管堆中有地址空间，运行时就会继续为新对象分配空间。 不过，内存并不是无限的。 垃圾回收器最终必须执行垃圾回收来释放一些内存。 垃圾回收器的优化引擎会根据所执行的分配来确定执行回收的最佳时机。 执行回收时，垃圾回收器会在托管堆中检查应用程序不再使用的对象，然后执行必要的操作来回收其内存。  

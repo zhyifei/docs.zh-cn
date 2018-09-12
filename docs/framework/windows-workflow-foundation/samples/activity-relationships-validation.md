@@ -3,11 +3,11 @@ title: 活动关系验证
 ms.date: 03/30/2017
 ms.assetid: 6f11a34e-ed67-4bce-88ce-7e96bbb4d052
 ms.openlocfilehash: 50f08118fb5ad4d9b8fe809e7ab3cc5d57f28149
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43784807"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44193661"
 ---
 # <a name="activity-relationships-validation"></a>活动关系验证
 此示例由以下三个活动组成：`CreateCity`、`CreateState` 和 `CreateCountry`。 `CreateCity` 必须在 `CreateState` 活动内，并且`CreateState` 必须在 `CreateCountry` 活动内。  此示例出于演示的需要，对 `CreateState` 活动使用代码形式的验证逻辑，而对 `CreateCity` 活动使用 XAML 形式的验证逻辑。 这两个约束具有相同的行为。  
