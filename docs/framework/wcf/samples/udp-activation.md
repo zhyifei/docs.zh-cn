@@ -3,11 +3,11 @@ title: UDP 激活
 ms.date: 03/30/2017
 ms.assetid: 4b0ccd10-0dfb-4603-93f9-f0857c581cb7
 ms.openlocfilehash: c64540db555d7cac56dd46c6ffb63ec95ca81f91
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44271148"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "44508837"
 ---
 # <a name="udp-activation"></a>UDP 激活
 此示例基于[传输： UDP](../../../../docs/framework/wcf/samples/transport-udp.md)示例。 它扩展了[传输： UDP](../../../../docs/framework/wcf/samples/transport-udp.md)示例，以使用 Windows 进程激活服务 (WAS) 支持进程激活。  

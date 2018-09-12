@@ -3,11 +3,11 @@ title: OperationScope
 ms.date: 03/30/2017
 ms.assetid: 56206a21-1e63-422d-b92a-e5d8b713e707
 ms.openlocfilehash: 562fd9c8ff964cb997012d49600bce73d4441465
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44177109"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "44511206"
 ---
 # <a name="operationscope"></a>OperationScope
 此示例演示如何使用消息传送活动（<xref:System.ServiceModel.Activities.Receive> 和 <xref:System.ServiceModel.Activities.SendReply>），将现有的自定义活动作为工作流服务中的操作公开。 此示例包含一个名为 `OperationScope` 的新的自定义活动。 这样做的目的是，通过允许用户将其操作的主体作为自定义活动单独创作，然后使用 `OperationScope` 活动轻松地将这些活动作为服务操作公开，从而方便工作流服务的开发。 例如，对于一个采用两个 `Add` 参数并返回一个 `in` 参数的自定义 `out` 活动，可以通过将其拖放到 `Add` 中来将其作为工作流服务上的 `OperationScope` 操作公开。  

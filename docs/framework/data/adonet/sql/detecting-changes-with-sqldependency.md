@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: e6a58316-f005-4477-92e1-45cc2eb8c5b4
 ms.openlocfilehash: 63d6a17e5aaf3e5d39ed0eda288e75c071be4d73
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44268349"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "44508473"
 ---
 # <a name="detecting-changes-with-sqldependency"></a>使用 SqlDependency 检测更改
 <xref:System.Data.SqlClient.SqlDependency> 对象可以与 <xref:System.Data.SqlClient.SqlCommand> 关联，以便检测查询结果何时与最初检索的结果不同。 也可以向 `OnChange` 事件分配一个委托，当关联命令的结果更改时，将会触发该委托。 在执行命令前，必须将 <xref:System.Data.SqlClient.SqlDependency> 与该命令关联。 也可以使用 `HasChanges` 的 <xref:System.Data.SqlClient.SqlDependency> 属性来确定自从首次检索数据以来查询结果是否已经更改。  

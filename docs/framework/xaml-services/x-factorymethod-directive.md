@@ -7,11 +7,11 @@ helpviewer_keywords:
 - x:FactoryMethod directive [XAML Services]
 ms.assetid: 829bcbdf-5318-4afb-9a03-c310e0d2f23d
 ms.openlocfilehash: 436caa9b93467dcf2a0763bcc0962a2beb722315
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44264462"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "44509416"
 ---
 # <a name="xfactorymethod-directive"></a>x:FactoryMethod 指令
 指定应使用 XAML 处理器正在解析其后备类型后初始化对象的构造函数以外的方法。  

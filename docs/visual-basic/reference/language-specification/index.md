@@ -7,11 +7,11 @@ helpviewer_keywords:
 - specifications, Visual Basic
 ms.assetid: 42c30017-19d0-442e-87a2-850b66ddc3df
 ms.openlocfilehash: 6708ad107a2ee5b4ba2896d811c103ed49b476b8
-ms.sourcegitcommit: 67de6cb5dd66a19f2180ba7e4d7aecc697f8a963
+ms.sourcegitcommit: ba5c189bf44d44204a3e8838e59ec378a62d82f3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44339462"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "44698307"
 ---
 # <a name="visual-basic-language-specification"></a>Visual Basic 语言规范
 Visual Basic 语言规范是解答有关 Visual Basic 语法和句法的所有问题的权威来源。 它包含有关语言，包括 Visual Basic 参考文档中未涵盖的多个点的详细的信息。  

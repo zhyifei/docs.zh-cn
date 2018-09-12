@@ -2,12 +2,12 @@
 title: 'Byref （F #）'
 description: '了解有关 byref 和类似 byref 类型在 F # 中，用于低级编程。'
 ms.date: 09/02/2018
-ms.openlocfilehash: 7d4138649ee39a0d342db2828ad4d32fbded978c
-ms.sourcegitcommit: 67de6cb5dd66a19f2180ba7e4d7aecc697f8a963
+ms.openlocfilehash: 6131104e4325f77da84368c337f998c6b2b5309b
+ms.sourcegitcommit: ba5c189bf44d44204a3e8838e59ec378a62d82f3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44338657"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "44699641"
 ---
 # <a name="byrefs"></a>Byref
 
@@ -105,7 +105,7 @@ let f (x: inref<SomeStruct>) = s.SomeField
 
 用途`outref<'T>`是指示指针应仅在从读取。 意外，`outref<'T>`允许读取基础值，尽管其名称。 这是为了实现兼容性。 在语义上，`outref<'T>`没有什么不同`byref<'T>`。
 
-### <a name="interop-with-c"></a>与 C 进行互操作 #
+### <a name="interop-with-c"></a>使用 C# 的互操作 #
 
 C# 支持`in ref`并`out ref`关键字，除了`ref`返回。 下表显示了如何 F # 解释什么 C# 发出：
 
@@ -196,7 +196,7 @@ printfn "%d" sum // 'sum' is of type 'int'
 您可以直接将分配给返回`byref`。 请考虑以下 （高度命令性） 程序：
 
 ```fsharp
-ype C() =
+type C() =
     let mutable nums = [| 1; 3; 7; 15; 31; 63; 127; 255; 511; 1023 |]
 
     override __.ToString() = String.Join(' ', nums)

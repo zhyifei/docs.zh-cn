@@ -3,11 +3,11 @@ title: 模块 (F#)
 description: '了解如何与 F # 模块是 F # 代码，例如值、 类型和函数值，F # 程序中的分组。'
 ms.date: 04/24/2017
 ms.openlocfilehash: fb0aa1d508d1141933b4fbdf10633f67ed078dc7
-ms.sourcegitcommit: 67de6cb5dd66a19f2180ba7e4d7aecc697f8a963
-ms.translationtype: MT
+ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44342795"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "44514345"
 ---
 # <a name="modules"></a>模块
 

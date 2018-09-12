@@ -3,11 +3,11 @@ title: 循环：for...in 表达式 (F#)
 description: '请参阅如何 F # 数据类型...在表达式中循环构造用于循环访问的可枚举集合中的模式匹配。'
 ms.date: 05/16/2016
 ms.openlocfilehash: c4fba1f1dea3993cafa2e37ad0f32d9fb2eed85a
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
-ms.translationtype: MT
+ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44271684"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "44513948"
 ---
 # <a name="loops-forin-expression"></a>循环：for...in 表达式
 

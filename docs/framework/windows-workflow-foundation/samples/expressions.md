@@ -3,11 +3,11 @@ title: Expressions2
 ms.date: 03/30/2017
 ms.assetid: 43a85905-77b5-4893-bb38-1cb9b293d69d
 ms.openlocfilehash: e852b62e6d0b6b4b3ddc19b197902de5325310a1
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44275088"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "44493533"
 ---
 # <a name="expressions"></a>表达式
 此示例演示如何在工作流中使用基本表达式。 它包含一个工作流，此工作流计算虚构的公司中两名员工的基本工资统计信息。 Employee.cs 和 SalaryStats.cs 中定义了两个类，即 `Employee` 和 `SalaryStats`。 演示如何对复杂类型的变量属性执行简单算术和字符串运算的工作流中使用了这两个类。  

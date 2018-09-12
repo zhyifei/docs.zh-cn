@@ -3,11 +3,11 @@ title: 强制转换和转换 (F#)
 description: '了解如何 F # 编程语言提供转换运算符的各种基元类型之间的算术转换。'
 ms.date: 05/16/2016
 ms.openlocfilehash: aca1a2523130ee485a7e7c9a6a45a410904cb246
-ms.sourcegitcommit: 67de6cb5dd66a19f2180ba7e4d7aecc697f8a963
+ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44338228"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "44509546"
 ---
 # <a name="casting-and-conversions-f"></a>强制转换和转换 (F#)
 
