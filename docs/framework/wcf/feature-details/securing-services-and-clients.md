@@ -7,53 +7,53 @@ ms.assetid: e681f3bd-0c09-4a58-b0e4-0ecbdf1aa6c7
 author: BrucePerlerMS
 manager: mbaldwin
 ms.openlocfilehash: 60aa4da95666de01daa087c4c8e826c8cf72ba85
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43886547"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "44511365"
 ---
-# <a name="securing-services-and-clients"></a><span data-ttu-id="fdf5f-102">保护服务和客户端的安全</span><span class="sxs-lookup"><span data-stu-id="fdf5f-102">Securing Services and Clients</span></span>
-<span data-ttu-id="fdf5f-103">在本部分中的信息重点介绍编程安全 Windows Communication Foundation (WCF) 中。</span><span class="sxs-lookup"><span data-stu-id="fdf5f-103">The information in this section focuses on programming security in Windows Communication Foundation (WCF).</span></span> <span data-ttu-id="fdf5f-104">通常，这包括选择系统提供的相应绑定、设置安全元素的属性，然后设置服务行为的属性（控制检索凭据以供服务或客户端使用的方式）。</span><span class="sxs-lookup"><span data-stu-id="fdf5f-104">Generally, this includes selecting an appropriate system-provided binding, setting the properties of the security element, and then setting properties of the service behaviors that govern how credentials are retrieved for use by either the service or the client.</span></span> <span data-ttu-id="fdf5f-105">这些技术涵盖大多数情况下，大多数用户的安全要求，如中所示[常用安全方案](../../../../docs/framework/wcf/feature-details/common-security-scenarios.md)。</span><span class="sxs-lookup"><span data-stu-id="fdf5f-105">These techniques cover the security requirements of most users for most scenarios, as shown in [Common Security Scenarios](../../../../docs/framework/wcf/feature-details/common-security-scenarios.md).</span></span> <span data-ttu-id="fdf5f-106">如果你的方案需要更多的功能，首先请参阅[使用自定义绑定的安全功能](../../../../docs/framework/wcf/feature-details/security-capabilities-with-custom-bindings.md); 如果解决方案并不明显，请参阅[扩展安全](../../../../docs/framework/wcf/extending/extending-security.md)。</span><span class="sxs-lookup"><span data-stu-id="fdf5f-106">If your scenario requires more capabilities, first see [Security Capabilities with Custom Bindings](../../../../docs/framework/wcf/feature-details/security-capabilities-with-custom-bindings.md); if a solution is not apparent, see [Extending Security](../../../../docs/framework/wcf/extending/extending-security.md).</span></span> <span data-ttu-id="fdf5f-107">如果要创建 （或与进行互操作） 的系统使用丰富的声明，请参阅中的主题[授权](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md)。</span><span class="sxs-lookup"><span data-stu-id="fdf5f-107">If you are creating (or interoperating with) a system that uses rich claims, see the topics in [Authorization](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md).</span></span>  
+# <a name="securing-services-and-clients"></a><span data-ttu-id="e2f06-102">保护服务和客户端的安全</span><span class="sxs-lookup"><span data-stu-id="e2f06-102">Securing Services and Clients</span></span>
+<span data-ttu-id="e2f06-103">在本部分中的信息重点介绍编程安全 Windows Communication Foundation (WCF) 中。</span><span class="sxs-lookup"><span data-stu-id="e2f06-103">The information in this section focuses on programming security in Windows Communication Foundation (WCF).</span></span> <span data-ttu-id="e2f06-104">通常，这包括选择系统提供的相应绑定、设置安全元素的属性，然后设置服务行为的属性（控制检索凭据以供服务或客户端使用的方式）。</span><span class="sxs-lookup"><span data-stu-id="e2f06-104">Generally, this includes selecting an appropriate system-provided binding, setting the properties of the security element, and then setting properties of the service behaviors that govern how credentials are retrieved for use by either the service or the client.</span></span> <span data-ttu-id="e2f06-105">这些技术涵盖大多数情况下，大多数用户的安全要求，如中所示[常用安全方案](../../../../docs/framework/wcf/feature-details/common-security-scenarios.md)。</span><span class="sxs-lookup"><span data-stu-id="e2f06-105">These techniques cover the security requirements of most users for most scenarios, as shown in [Common Security Scenarios](../../../../docs/framework/wcf/feature-details/common-security-scenarios.md).</span></span> <span data-ttu-id="e2f06-106">如果你的方案需要更多的功能，首先请参阅[使用自定义绑定的安全功能](../../../../docs/framework/wcf/feature-details/security-capabilities-with-custom-bindings.md); 如果解决方案并不明显，请参阅[扩展安全](../../../../docs/framework/wcf/extending/extending-security.md)。</span><span class="sxs-lookup"><span data-stu-id="e2f06-106">If your scenario requires more capabilities, first see [Security Capabilities with Custom Bindings](../../../../docs/framework/wcf/feature-details/security-capabilities-with-custom-bindings.md); if a solution is not apparent, see [Extending Security](../../../../docs/framework/wcf/extending/extending-security.md).</span></span> <span data-ttu-id="e2f06-107">如果要创建 （或与进行互操作） 的系统使用丰富的声明，请参阅中的主题[授权](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md)。</span><span class="sxs-lookup"><span data-stu-id="e2f06-107">If you are creating (or interoperating with) a system that uses rich claims, see the topics in [Authorization](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md).</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="fdf5f-108">本节内容</span><span class="sxs-lookup"><span data-stu-id="fdf5f-108">In This Section</span></span>  
- [<span data-ttu-id="fdf5f-109">WCF 安全编程</span><span class="sxs-lookup"><span data-stu-id="fdf5f-109">Programming WCF Security</span></span>](../../../../docs/framework/wcf/feature-details/programming-wcf-security.md)  
- <span data-ttu-id="fdf5f-110">用于保护消息安全的编程模型概述。</span><span class="sxs-lookup"><span data-stu-id="fdf5f-110">An overview of the programming model used to secure messages.</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="e2f06-108">本节内容</span><span class="sxs-lookup"><span data-stu-id="e2f06-108">In This Section</span></span>  
+ [<span data-ttu-id="e2f06-109">WCF 安全编程</span><span class="sxs-lookup"><span data-stu-id="e2f06-109">Programming WCF Security</span></span>](../../../../docs/framework/wcf/feature-details/programming-wcf-security.md)  
+ <span data-ttu-id="e2f06-110">用于保护消息安全的编程模型概述。</span><span class="sxs-lookup"><span data-stu-id="e2f06-110">An overview of the programming model used to secure messages.</span></span>  
   
- [<span data-ttu-id="fdf5f-111">传输安全性概述</span><span class="sxs-lookup"><span data-stu-id="fdf5f-111">Transport Security Overview</span></span>](../../../../docs/framework/wcf/feature-details/transport-security-overview.md)  
- <span data-ttu-id="fdf5f-112">如何通过传输层保护消息安全概述。</span><span class="sxs-lookup"><span data-stu-id="fdf5f-112">An overview of how to secure messages through the transport layer.</span></span>  
+ [<span data-ttu-id="e2f06-111">传输安全性概述</span><span class="sxs-lookup"><span data-stu-id="e2f06-111">Transport Security Overview</span></span>](../../../../docs/framework/wcf/feature-details/transport-security-overview.md)  
+ <span data-ttu-id="e2f06-112">如何通过传输层保护消息安全概述。</span><span class="sxs-lookup"><span data-stu-id="e2f06-112">An overview of how to secure messages through the transport layer.</span></span>  
   
- [<span data-ttu-id="fdf5f-113">消息安全性</span><span class="sxs-lookup"><span data-stu-id="fdf5f-113">Message Security</span></span>](../../../../docs/framework/wcf/feature-details/message-security-in-wcf.md)  
- <span data-ttu-id="fdf5f-114">总结了使用 Windows Communication Foundation (WCF) 中的消息级安全性的原因。</span><span class="sxs-lookup"><span data-stu-id="fdf5f-114">Summarizes reasons for using message-level security in Windows Communication Foundation (WCF).</span></span>  
+ [<span data-ttu-id="e2f06-113">消息安全性</span><span class="sxs-lookup"><span data-stu-id="e2f06-113">Message Security</span></span>](../../../../docs/framework/wcf/feature-details/message-security-in-wcf.md)  
+ <span data-ttu-id="e2f06-114">总结了使用 Windows Communication Foundation (WCF) 中的消息级安全性的原因。</span><span class="sxs-lookup"><span data-stu-id="e2f06-114">Summarizes reasons for using message-level security in Windows Communication Foundation (WCF).</span></span>  
   
- [<span data-ttu-id="fdf5f-115">安全会话</span><span class="sxs-lookup"><span data-stu-id="fdf5f-115">Secure Sessions</span></span>](../../../../docs/framework/wcf/feature-details/secure-sessions.md)  
- <span data-ttu-id="fdf5f-116">讨论的所需保护 WCF 会话时的注意事项。</span><span class="sxs-lookup"><span data-stu-id="fdf5f-116">A discussion of the considerations required when securing a WCF session.</span></span>  
+ [<span data-ttu-id="e2f06-115">安全会话</span><span class="sxs-lookup"><span data-stu-id="e2f06-115">Secure Sessions</span></span>](../../../../docs/framework/wcf/feature-details/secure-sessions.md)  
+ <span data-ttu-id="e2f06-116">讨论的所需保护 WCF 会话时的注意事项。</span><span class="sxs-lookup"><span data-stu-id="e2f06-116">A discussion of the considerations required when securing a WCF session.</span></span>  
   
- [<span data-ttu-id="fdf5f-117">使用证书</span><span class="sxs-lookup"><span data-stu-id="fdf5f-117">Working with Certificates</span></span>](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)  
- <span data-ttu-id="fdf5f-118">说明使用 X.509 证书时必须完成的一些常见任务。</span><span class="sxs-lookup"><span data-stu-id="fdf5f-118">An explanation of some of the common tasks required when using X.509 certificates.</span></span>  
+ [<span data-ttu-id="e2f06-117">使用证书</span><span class="sxs-lookup"><span data-stu-id="e2f06-117">Working with Certificates</span></span>](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)  
+ <span data-ttu-id="e2f06-118">说明使用 X.509 证书时必须完成的一些常见任务。</span><span class="sxs-lookup"><span data-stu-id="e2f06-118">An explanation of some of the common tasks required when using X.509 certificates.</span></span>  
   
-## <a name="reference"></a><span data-ttu-id="fdf5f-119">参考</span><span class="sxs-lookup"><span data-stu-id="fdf5f-119">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="e2f06-119">参考</span><span class="sxs-lookup"><span data-stu-id="e2f06-119">Reference</span></span>  
  <xref:System.ServiceModel>  
   
  <xref:System.ServiceModel.Channels>  
   
  <xref:System.ServiceModel.Security>  
   
-## <a name="related-sections"></a><span data-ttu-id="fdf5f-120">相关章节</span><span class="sxs-lookup"><span data-stu-id="fdf5f-120">Related Sections</span></span>  
- [<span data-ttu-id="fdf5f-121">安全性概念</span><span class="sxs-lookup"><span data-stu-id="fdf5f-121">Security Concepts</span></span>](../../../../docs/framework/wcf/feature-details/security-concepts.md)  
+## <a name="related-sections"></a><span data-ttu-id="e2f06-120">相关章节</span><span class="sxs-lookup"><span data-stu-id="e2f06-120">Related Sections</span></span>  
+ [<span data-ttu-id="e2f06-121">安全性概念</span><span class="sxs-lookup"><span data-stu-id="e2f06-121">Security Concepts</span></span>](../../../../docs/framework/wcf/feature-details/security-concepts.md)  
   
- [<span data-ttu-id="fdf5f-122">扩展安全性</span><span class="sxs-lookup"><span data-stu-id="fdf5f-122">Extending Security</span></span>](../../../../docs/framework/wcf/extending/extending-security.md)  
+ [<span data-ttu-id="e2f06-122">扩展安全性</span><span class="sxs-lookup"><span data-stu-id="e2f06-122">Extending Security</span></span>](../../../../docs/framework/wcf/extending/extending-security.md)  
   
- [<span data-ttu-id="fdf5f-123">常用安全方案</span><span class="sxs-lookup"><span data-stu-id="fdf5f-123">Common Security Scenarios</span></span>](../../../../docs/framework/wcf/feature-details/common-security-scenarios.md)  
+ [<span data-ttu-id="e2f06-123">常用安全方案</span><span class="sxs-lookup"><span data-stu-id="e2f06-123">Common Security Scenarios</span></span>](../../../../docs/framework/wcf/feature-details/common-security-scenarios.md)  
   
- [<span data-ttu-id="fdf5f-124">绑定与安全</span><span class="sxs-lookup"><span data-stu-id="fdf5f-124">Bindings and Security</span></span>](../../../../docs/framework/wcf/feature-details/bindings-and-security.md)  
+ [<span data-ttu-id="e2f06-124">绑定与安全</span><span class="sxs-lookup"><span data-stu-id="e2f06-124">Bindings and Security</span></span>](../../../../docs/framework/wcf/feature-details/bindings-and-security.md)  
   
- [<span data-ttu-id="fdf5f-125">使用自定义绑定的安全功能</span><span class="sxs-lookup"><span data-stu-id="fdf5f-125">Security Capabilities with Custom Bindings</span></span>](../../../../docs/framework/wcf/feature-details/security-capabilities-with-custom-bindings.md)  
+ [<span data-ttu-id="e2f06-125">使用自定义绑定的安全功能</span><span class="sxs-lookup"><span data-stu-id="e2f06-125">Security Capabilities with Custom Bindings</span></span>](../../../../docs/framework/wcf/feature-details/security-capabilities-with-custom-bindings.md)  
   
- [<span data-ttu-id="fdf5f-126">扩展安全性</span><span class="sxs-lookup"><span data-stu-id="fdf5f-126">Extending Security</span></span>](../../../../docs/framework/wcf/extending/extending-security.md)  
+ [<span data-ttu-id="e2f06-126">扩展安全性</span><span class="sxs-lookup"><span data-stu-id="e2f06-126">Extending Security</span></span>](../../../../docs/framework/wcf/extending/extending-security.md)  
   
- [<span data-ttu-id="fdf5f-127">授权</span><span class="sxs-lookup"><span data-stu-id="fdf5f-127">Authorization</span></span>](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md)  
+ [<span data-ttu-id="e2f06-127">授权</span><span class="sxs-lookup"><span data-stu-id="e2f06-127">Authorization</span></span>](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md)  
   
-## <a name="see-also"></a><span data-ttu-id="fdf5f-128">请参阅</span><span class="sxs-lookup"><span data-stu-id="fdf5f-128">See Also</span></span>  
- [<span data-ttu-id="fdf5f-129">基本 WCF 编程</span><span class="sxs-lookup"><span data-stu-id="fdf5f-129">Basic WCF Programming</span></span>](../../../../docs/framework/wcf/basic-wcf-programming.md)  
- [<span data-ttu-id="fdf5f-130">Windows Server App Fabric 的安全模型</span><span class="sxs-lookup"><span data-stu-id="fdf5f-130">Security Model for Windows Server App Fabric</span></span>](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+## <a name="see-also"></a><span data-ttu-id="e2f06-128">请参阅</span><span class="sxs-lookup"><span data-stu-id="e2f06-128">See Also</span></span>  
+ [<span data-ttu-id="e2f06-129">基本 WCF 编程</span><span class="sxs-lookup"><span data-stu-id="e2f06-129">Basic WCF Programming</span></span>](../../../../docs/framework/wcf/basic-wcf-programming.md)  
+ [<span data-ttu-id="e2f06-130">Windows Server App Fabric 的安全模型</span><span class="sxs-lookup"><span data-stu-id="e2f06-130">Security Model for Windows Server App Fabric</span></span>](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
