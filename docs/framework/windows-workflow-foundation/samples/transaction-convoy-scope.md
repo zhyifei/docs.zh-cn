@@ -3,11 +3,11 @@ title: 事务队列范围
 ms.date: 03/30/2017
 ms.assetid: 37141708-a29f-4b6a-81fe-f8a11f825061
 ms.openlocfilehash: fa1da6df5ad5256665610c9b3c2df7d706cef63c
-ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
+ms.sourcegitcommit: ba5c189bf44d44204a3e8838e59ec378a62d82f3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/11/2018
-ms.locfileid: "44360922"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "44705279"
 ---
 # <a name="transaction-convoy-scope"></a>事务队列范围
 此示例演示如何创建“并行保护”消息传递活动模式与 <xref:System.ServiceModel.Activities.TransactedReceiveScope>，以便构建一个协议，允许很多操作在同一事务下按任意顺序执行。 此示例还演示 <xref:System.ServiceModel.Activities.TransactedReceiveScope> 如何在某个事务无法流向服务器时自动创建新的事务，以便客户端不使用任何事务。  

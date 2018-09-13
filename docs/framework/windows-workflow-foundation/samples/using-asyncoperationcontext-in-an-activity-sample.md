@@ -3,11 +3,11 @@ title: 在活动示例中使用 AsyncOperationContext
 ms.date: 03/30/2017
 ms.assetid: 0888a0bd-d227-4c00-ad6a-b654a01740e8
 ms.openlocfilehash: 4358a364a3f7ec69b7c1c548fcf82fe494f37505
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.sourcegitcommit: ba5c189bf44d44204a3e8838e59ec378a62d82f3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44274998"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "44704847"
 ---
 # <a name="using-asyncoperationcontext-in-an-activity-sample"></a>在活动示例中使用 AsyncOperationContext
 此示例演示如何开发一个自定义 <xref:System.Activities.CodeActivity>，该活动使用 <xref:System.Activities.AsyncCodeActivityContext> 在工作流外部异步执行工作。  

@@ -9,11 +9,11 @@ helpviewer_keywords:
 - WCF Data Services, accessing data
 ms.assetid: 9665ff5b-3e3a-495d-bf83-d531d5d060ed
 ms.openlocfilehash: d4f4de1fa12418bd56f9680e5414bfe7dd0aa128
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: ba5c189bf44d44204a3e8838e59ec378a62d82f3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44189762"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "44705906"
 ---
 # <a name="accessing-data-service-resources-wcf-data-services"></a>访问数据服务资源（WCF 数据服务）
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 支持[!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]若要将数据公开为通过 Uri 进行寻址的资源的源。 这些资源表示的实体关系约定根据[实体数据模型](../../../../docs/framework/data/adonet/entity-data-model.md)。 在此模型中，实体表示作为应用程序域中数据类型的数据操作单元，如客户、订单、项目和产品。 可以通过使用具象状态传输 (REST) 的语义（尤其是标准 HTTP 谓词 GET、PUT、POST 和 DELETE）访问和更改实体数据。  
