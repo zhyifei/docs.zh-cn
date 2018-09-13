@@ -52,7 +52,7 @@
 ### [extern](extern.md)
 ### [in（泛型修饰符）](in-generic-modifier.md)
 ### [out（泛型修饰符）](out-generic-modifier.md)
-### [替代](override.md)
+### [override](override.md)
 ### [readonly](readonly.md)
 ### [sealed](sealed.md)
 ### [static](static.md)
