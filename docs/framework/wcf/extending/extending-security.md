@@ -7,11 +7,11 @@ ms.assetid: a015a040-9fdf-4147-9ea9-f83b570be1d4
 author: BrucePerlerMS
 manager: mbaldwin
 ms.openlocfilehash: a16416e580dabd6a9057e11a8183437529ca83e8
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44271255"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45597038"
 ---
 # <a name="extending-security"></a>扩展安全性
 若要适应新的声明类型和自定义令牌，可以扩展安全基础结构的 Windows Communication Foundation (WCF)。 本节中的主题将向您介绍如何完成此任务。  

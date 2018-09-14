@@ -3,11 +3,11 @@ title: 指定无嵌套的元素之间的关系
 ms.date: 03/30/2017
 ms.assetid: e31325da-7691-4d33-acf4-99fccca67006
 ms.openlocfilehash: d04a3d946b87c7203497313c6e21a75ef69f50eb
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45526553"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45609588"
 ---
 # <a name="specify-relations-between-elements-with-no-nesting"></a>指定无嵌套的元素之间的关系
 当元素不嵌套时，将不创建任何隐式关系。 但是，可以显式指定不使用嵌套的元素之间的关系**msdata: relationship**批注。  

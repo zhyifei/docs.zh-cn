@@ -8,11 +8,11 @@ helpviewer_keywords:
 - Atn function
 ms.assetid: 4d2d82e7-6924-42fe-a4a7-b4dd5bebbd0c
 ms.openlocfilehash: da0b612feb5b9a479d50f52cf65e38007ab3b196
-ms.sourcegitcommit: ba5c189bf44d44204a3e8838e59ec378a62d82f3
+ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "44700188"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45570153"
 ---
 # <a name="math-functions-visual-basic"></a>数学函数 (Visual Basic)
 方法<xref:System.Math?displayProperty=nameWithType>类提供三角、 对数和其他通用数学函数。  

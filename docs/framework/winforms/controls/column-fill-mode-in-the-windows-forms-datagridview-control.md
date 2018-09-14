@@ -10,11 +10,11 @@ helpviewer_keywords:
 - data grids [Windows Forms], column fill mode
 ms.assetid: b4ef7411-ebf4-4e26-bb33-aecec90de80c
 ms.openlocfilehash: a023d8d8c31131db46cc8535d0e903c2a8d8a345
-ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/11/2018
-ms.locfileid: "44360656"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45595183"
 ---
 # <a name="column-fill-mode-in-the-windows-forms-datagridview-control"></a>Windows 窗体 DataGridView 控件中的列填充模式
 在列填充模式中，<xref:System.Windows.Forms.DataGridView> 控件自动调整其列的大小，以便它们可填充可用显示区域的宽度。 该控件不显示水平滚动条，除非有必要使每列的宽度等于或大于其 <xref:System.Windows.Forms.DataGridViewColumn.MinimumWidth%2A> 属性值。  

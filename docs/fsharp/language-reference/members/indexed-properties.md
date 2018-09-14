@@ -3,11 +3,11 @@ title: 索引属性 (F#)
 description: '了解有关 F # 编制索引的属性提供对有序数据的类似数组的访问权限的属性。'
 ms.date: 05/16/2016
 ms.openlocfilehash: e56e4e2ea3f35df4c8ec46012357242cb6ce69f3
-ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
+ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "44511037"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45583419"
 ---
 # <a name="indexed-properties"></a>索引属性
 

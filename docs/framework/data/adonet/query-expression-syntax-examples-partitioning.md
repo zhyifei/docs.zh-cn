@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: beb5f361-1ac8-44fb-afa1-2aacea15f166
 ms.openlocfilehash: 456e4289af2c71ee2ef96f48939dc9f7b70c6bc0
-ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "44508187"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45594959"
 ---
 # <a name="query-expression-syntax-examples-partitioning-linq-to-dataset"></a>查询表达式语法示例：分区 (LINQ to DataSet)
 本主题中的示例演示如何使用 <xref:System.Linq.Enumerable.Skip%2A> 和 <xref:System.Linq.Enumerable.Take%2A> 方法以便使用查询表达式语法来查询 <xref:System.Data.DataSet>。  

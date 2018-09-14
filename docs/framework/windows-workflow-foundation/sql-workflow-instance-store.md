@@ -3,11 +3,11 @@ title: SQL 工作流实例存储
 ms.date: 03/30/2017
 ms.assetid: 8cd2f8a5-4bf8-46ea-8909-c7fdb314fabc
 ms.openlocfilehash: 680a233ca721cd8a0c620b797832419f460b13b6
-ms.sourcegitcommit: ba5c189bf44d44204a3e8838e59ec378a62d82f3
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "44698299"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45594280"
 ---
 # <a name="sql-workflow-instance-store"></a>SQL 工作流实例存储
 [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] 附带的 SQL 工作流实例存储允许工作流在 SQL Server 2005 或 SQL Server 2008 数据库中持久保存有关工作流实例的状态信息。 此功能主要以 <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> 类的形式实现，该类是从持久性框架的抽象 <xref:System.Runtime.DurableInstancing.InstanceStore> 类派生的。 SQL 工作流实例存储功能包含一个 SQL 持久性提供程序，该提供程序是持久性 API 的具体实现，宿主将使用此持久性 API 向存储发送持久性命令。  

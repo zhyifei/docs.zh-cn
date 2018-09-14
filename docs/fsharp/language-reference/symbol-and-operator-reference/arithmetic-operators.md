@@ -3,11 +3,11 @@ title: 算术运算符 (F#)
 description: '了解有关 F # 编程语言中可用的算术运算符。'
 ms.date: 04/04/2018
 ms.openlocfilehash: 008aa84b8736bb3a734ce8bb9713d34c17f1b76e
-ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/11/2018
-ms.locfileid: "44361954"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45597413"
 ---
 # <a name="arithmetic-operators"></a>算术运算符
 

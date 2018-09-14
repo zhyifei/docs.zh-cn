@@ -11,11 +11,11 @@ helpviewer_keywords:
 - XAML [XAML Services], x:Static markup extension
 ms.assetid: 056aee79-7cdd-434f-8174-dfc856cad343
 ms.openlocfilehash: 8a14b00fe762d325028072cd0ea3eecf9b9206e3
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45519891"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45595500"
 ---
 # <a name="xstatic-markup-extension"></a>x:Static 标记扩展
 引用中定义的任何静态的值的代码实体[!INCLUDE[TLA#tla_cls](../../../includes/tlasharptla-cls-md.md)]– 合规的方式。 引用的静态属性可以用于提供在 XAML 中属性的值。  

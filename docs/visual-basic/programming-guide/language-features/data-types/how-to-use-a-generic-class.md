@@ -22,11 +22,11 @@ helpviewer_keywords:
 - arguments [Visual Basic], type
 ms.assetid: 242dd2a6-86c4-4ce7-83f2-f2661803f752
 ms.openlocfilehash: 108532e5b765fa918fa894199ef710a9f52db4e4
-ms.sourcegitcommit: ba5c189bf44d44204a3e8838e59ec378a62d82f3
+ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "44708187"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45583526"
 ---
 # <a name="how-to-use-a-generic-class-visual-basic"></a>如何：使用泛型类 (Visual Basic)
 采用 *类型参数* 的类称为 *泛型类*。 如果使用一个泛型类，则可以通过为每个形参提供 *类型实参* ，从该类生成 *构造类* 。 随后可以声明构造类类型的一个变量，可以创建构造类的实例并将它分配给该变量。  

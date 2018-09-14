@@ -17,11 +17,11 @@ ms.assetid: a4d5ceb1-b9f5-47e8-9e4a-a2b39110002f
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 9ec813e50bb4dca33c8dda8b41914cfa5d5596c2
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45507491"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45593239"
 ---
 # <a name="how-to-verify-the-digital-signatures-of-xml-documents"></a>如何：验证 XML 文档的数字签名
 可以使用 <xref:System.Security.Cryptography.Xml> 命名空间中的类来验证签有数字签名的 XML 数据。  使用 XML 数字签名 (XMLDSIG)，你可以验证签名后的数据没有被更改。  有关 XMLDSIG 标准的详细信息，请参阅万维网联合会 (W3C) 规范 http://www.w3.org/TR/xmldsig-core/。  

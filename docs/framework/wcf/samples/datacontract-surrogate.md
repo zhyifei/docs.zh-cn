@@ -3,11 +3,11 @@ title: DataContract 代理项
 ms.date: 03/30/2017
 ms.assetid: b0188f3c-00a9-4cf0-a887-a2284c8fb014
 ms.openlocfilehash: 10b0c2a3e82e39b03291f567ca360c51042b464e
-ms.sourcegitcommit: 67de6cb5dd66a19f2180ba7e4d7aecc697f8a963
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44342389"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45597363"
 ---
 # <a name="datacontract-surrogate"></a>DataContract 代理项
 本示例演示如何使用数据协定代理类自定义诸如序列化、反序列化、架构导出和架构导入之类的过程。 此示例演示如何在客户端和服务器方案中，序列化和 Windows Communication Foundation (WCF) 客户端和服务之间传输数据是使用代理项。  

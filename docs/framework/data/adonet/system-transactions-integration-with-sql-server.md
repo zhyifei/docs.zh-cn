@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: b555544e-7abb-4814-859b-ab9cdd7d8716
 ms.openlocfilehash: 31edbc8f4cbb09f8720b373780f1b0646a985b20
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44179044"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45597896"
 ---
 # <a name="systemtransactions-integration-with-sql-server"></a>System.Transactions 与 SQL Server 的集成
 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 2.0 版引入了一个可通过 <xref:System.Transactions> 命名空间访问的事务框架。 此框架公开事务的方式是完全集成在 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]，包括 [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)]。  

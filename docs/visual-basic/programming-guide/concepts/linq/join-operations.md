@@ -3,11 +3,11 @@ title: 联接操作 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 39ab4854-ac84-4738-9d0b-3cb79be84db4
 ms.openlocfilehash: 660b6d04e0a807a3072cff51d885999545052018
-ms.sourcegitcommit: ba5c189bf44d44204a3e8838e59ec378a62d82f3
+ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "44700604"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45589045"
 ---
 # <a name="join-operations-visual-basic"></a>联接操作 (Visual Basic)
 联接两个数据源就是将一个数据源中的对象与另一个数据源中具有相同公共属性的对象相关联。  

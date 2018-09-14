@@ -12,11 +12,11 @@ helpviewer_keywords:
 - insertion marks
 ms.assetid: 88d0a15b-25fd-4dc3-a685-297351311940
 ms.openlocfilehash: b9b6e1911d3e372861ebcdc5a175314d69c89175
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44192311"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45592241"
 ---
 # <a name="how-to-display-an-insertion-mark-in-a-windows-forms-listview-control"></a>如何：在 Windows 窗体 ListView 控件中显示插入标记
 <xref:System.Windows.Forms.ListView> 控件的插入标记向用户显示拖动项将插入的位置。 当用户将某项拖至两个其他项之间的位置时，插入标记会显示该项的预计新位置。  

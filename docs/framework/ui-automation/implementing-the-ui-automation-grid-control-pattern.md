@@ -10,11 +10,11 @@ author: Xansky
 ms.author: mhopkins
 manager: markl
 ms.openlocfilehash: 036680ea908f2cbe58db398dc315fccd997c4148
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45529298"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45610017"
 ---
 # <a name="implementing-the-ui-automation-grid-control-pattern"></a>实现 UI 自动化 Grid 控件模式
 > [!NOTE]

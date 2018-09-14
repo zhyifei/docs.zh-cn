@@ -3,11 +3,11 @@ title: 客户端验证
 ms.date: 03/30/2017
 ms.assetid: f0c1f805-1a81-4d0d-a112-bf5e2e87a631
 ms.openlocfilehash: 3f8b5ec3f8652ef50bbda3456669f2abf456472b
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44262704"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45569955"
 ---
 # <a name="client-validation"></a>客户端验证
 服务通常发布元数据以启用客户端代理类型的自动生成和配置。 如果服务不受信任，客户端应用程序应该验证元数据是否符合客户端应用程序有关安全性、事务、服务协定类型等方面的策略。 下面的示例演示如何编写一个客户端终结点行为，用于验证服务终结点以确保可以安全地使用该服务终结点。  

@@ -3,11 +3,11 @@ title: WCF 中的消息安全
 ms.date: 03/30/2017
 ms.assetid: a80efb59-591a-4a37-bb3c-8fffa6ca0b7d
 ms.openlocfilehash: 81d9acde3c8fab1860904074199066cca55c7186
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45510334"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45593252"
 ---
 # <a name="message-security-in-wcf"></a>WCF 中的消息安全
 Windows Communication Foundation (WCF) 具有针对提供安全性的两种主要模式 (`Transport`并`Message`) 和第三个模式 (`TransportWithMessageCredential`) 结合了这两者。 本主题讨论消息安全和使用它的原因。  

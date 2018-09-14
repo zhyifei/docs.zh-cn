@@ -16,11 +16,11 @@ helpviewer_keywords:
 - Windows Forms, layout
 ms.assetid: f8ae2a6b-db13-4630-8e25-d104091205c7
 ms.openlocfilehash: 52bc75135e4f8cf5b9c1888b2ad9f5e278c1d6e2
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44271278"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45597857"
 ---
 # <a name="walkthrough-laying-out-windows-forms-controls-with-padding-margins-and-the-autosize-property"></a>演练：使用 Padding、Margins 和 AutoSize 属性对 Windows 窗体控件进行布局
 在窗体上精确地放置控件对于许多应用程序而言是高优先级。 **Windows 窗体设计器**为你提供许多布局工具实现此目的。 三个最重要的是<xref:System.Windows.Forms.Control.Margin%2A>， <xref:System.Windows.Forms.Control.Padding%2A>，和<xref:System.Windows.Forms.Control.AutoSize%2A>是存在于所有 Windows 窗体控件上的属性。  

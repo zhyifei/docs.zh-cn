@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 2e6642c9-bfc6-425c-b3a7-e4912ffa6c1f
 ms.openlocfilehash: 629e8b0bea1cd5c1dd80409acd7c03e0e033b5bc
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44195002"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45560629"
 ---
 # <a name="row-states-and-row-versions"></a>行状态和行版本
 ADO.NET 用行状态和行版本管理表中的行。 行状态指示行的状态；行版本在修改行中存储的值时维护各个阶段的值，包括当前值、原始值和默认值。 例如，在修改了行中的某列后，该行的行状态将为 `Modified`，并且有两个行版本：`Current`（包含行的当前值）和 `Original`（包含列修改前行的值）。  

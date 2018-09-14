@@ -3,11 +3,11 @@ title: 自定义查找条件
 ms.date: 03/30/2017
 ms.assetid: b2723929-8829-424d-8015-a37ba2ab4f68
 ms.openlocfilehash: 699260fcef7680710f721d213dbf1126ebf7a896
-ms.sourcegitcommit: ba5c189bf44d44204a3e8838e59ec378a62d82f3
-ms.translationtype: HT
+ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 09/13/2018
-ms.locfileid: "44757206"
+ms.locfileid: "45560748"
 ---
 # <a name="custom-find-criteria"></a>自定义查找条件
 本示例演示如何使用逻辑来创建自定义范围匹配以及如何实现自定义发现服务。 客户端使用自定义范围匹配功能在系统提供的 WCF Discovery 查找功能基础之上进行优化并进一步生成。 本示例包含的方案如下所示：  
