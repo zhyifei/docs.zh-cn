@@ -12,11 +12,11 @@ ms.assetid: 3f33bf46-4a7b-43b3-bb78-1ffebe0dcfa6
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: ea5311de8cef266af23b259d943568bfa95eaf72
-ms.sourcegitcommit: ba5c189bf44d44204a3e8838e59ec378a62d82f3
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "44708580"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45615071"
 ---
 # <a name="parameter-design"></a>参数设计
 本部分提供全面的指南参数的设计方案，包括用于检查参数的指导原则的部分。 此外，应参考中所述的准则[命名参数](../../../docs/standard/design-guidelines/naming-parameters.md)。  

@@ -3,11 +3,11 @@ title: SendMail 自定义活动
 ms.date: 03/30/2017
 ms.assetid: 947a9ae6-379c-43a3-9cd5-87f573a5739f
 ms.openlocfilehash: e9d27711754c3aa8ff7f68c23f528c9f5c4356f7
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 09/14/2018
-ms.locfileid: "45560943"
+ms.locfileid: "45618946"
 ---
 # <a name="sendmail-custom-activity"></a>SendMail 自定义活动
 本示例演示如何创建派生自 <xref:System.Activities.AsyncCodeActivity> 的自定义活动，以使用 SMTP 发送邮件供在工作流应用程序内使用。 自定义活动使用的功能的<xref:System.Net.Mail.SmtpClient>以异步方式发送电子邮件以及发送身份验证的邮件。 它还提供一些最终用户功能，例如测试模式、标记替换、文件模板和测试放置路径。  

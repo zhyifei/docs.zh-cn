@@ -13,11 +13,11 @@ author: Xansky
 ms.author: mhopkins
 manager: markl
 ms.openlocfilehash: 5f1e5cfbf72ebce605c7f08ae944dc3d235dcf7a
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 09/14/2018
-ms.locfileid: "45587872"
+ms.locfileid: "45615646"
 ---
 # <a name="obtain-text-attributes-using-ui-automation"></a>使用 UI 自动化获取文本特性
 > [!NOTE]

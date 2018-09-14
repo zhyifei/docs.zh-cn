@@ -5,11 +5,11 @@ ms.assetid: 96cec467-e963-4132-b18b-7d0b3a2e979f
 author: BrucePerlerMS
 manager: mbaldwin
 ms.openlocfilehash: 7dfe18a55d8c7f56db1906cb2aa982ab043841c7
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45517926"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45597001"
 ---
 # <a name="wstrustchannelfactory-and-wstrustchannel"></a>WSTrustChannelFactory 和 WSTrustChannel
 如果已熟悉 Windows Communication Foundation (WCF)，便知道 WCF 客户端已可感知联合。 通过使用 <xref:System.ServiceModel.WSFederationHttpBinding> 或相似的自定义绑定配置 WCF 客户端，便可对服务启用联合身份验证。  

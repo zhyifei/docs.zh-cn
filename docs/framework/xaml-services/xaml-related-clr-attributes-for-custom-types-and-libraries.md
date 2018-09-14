@@ -5,11 +5,11 @@ helpviewer_keywords:
 - CLR attributes for custom types [XAML Services]
 ms.assetid: 5dfb299a-b6e2-41b8-8694-e6ac987547f1
 ms.openlocfilehash: 13cc4d85a1a4b5c9b1ff61afbf7980a54e3d22d0
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45514477"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45591901"
 ---
 # <a name="xaml-related-clr-attributes-for-custom-types-and-libraries"></a>自定义类型和库的 XAML 相关 CLR 特性
 本主题介绍由.NET Framework XAML 服务定义的公共语言运行时 (CLR) 属性。 它还介绍了在.NET Framework 中定义具有对程序集或类型的应用程序的 XAML 相关方案的其他 CLR 属性。 使用这些 CLR 特性属性的程序集、 类型或成员提供了与您的类型相关的 XAML 类型系统信息。 到直接处理 XAML 节点流或专用的 XAML 读取器和 XAML 编写器通过使用.NET Framework XAML 服务的任何 XAML 使用者提供信息。  

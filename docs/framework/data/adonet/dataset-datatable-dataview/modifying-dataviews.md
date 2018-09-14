@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 697a3991-b660-4a5a-8a54-1a2304ff158e
 ms.openlocfilehash: 3b1e0cbfc6118ad9ca670f5d91183b78b2c99d89
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
-ms.translationtype: MT
+ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44268531"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45589149"
 ---
 # <a name="modifying-dataviews"></a>修改 DataView
 可以使用 <xref:System.Data.DataView> 在基础表中添加、删除或修改数据行。 若要使用的功能**DataView**若要修改基础表中的数据由设置其中一个的三个布尔属性控制**DataView**。 这三个属性是 <xref:System.Data.DataView.AllowNew%2A>、<xref:System.Data.DataView.AllowEdit%2A> 和 <xref:System.Data.DataView.AllowDelete%2A>。 它们设 **，则返回 true**默认情况下。  

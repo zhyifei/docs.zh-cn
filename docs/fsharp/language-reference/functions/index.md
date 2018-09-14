@@ -3,11 +3,11 @@ title: 函数 (F#)
 description: '了解有关 F # 和 F # 如何支持通用函数编程构造中的函数。'
 ms.date: 05/16/2016
 ms.openlocfilehash: 717eba7e69398048d229173e07ccc376797171bb
-ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
+ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "44514444"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45560709"
 ---
 # <a name="functions"></a>函数
 

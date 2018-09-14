@@ -5,11 +5,11 @@ helpviewer_keywords:
 - bindings [WCF], overview
 ms.assetid: cfb5842f-e0f9-4c56-a015-f2b33f258232
 ms.openlocfilehash: f171a6380840fe2cb828ee06985317f002b353de
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45519505"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45615620"
 ---
 # <a name="windows-communication-foundation-bindings-overview"></a>Windows Communication Foundation 绑定概述
 绑定是用来指定所需连接到 Windows Communication Foundation (WCF) 服务的终结点的通信详细信息的对象。 WCF 服务中的每个终结点需要具体指定的绑定。 本主题概述了通信详细信息的绑定所定义的一个绑定，在 WCF 中，包含哪些绑定和如何为终结点指定一个绑定元素的类型。  

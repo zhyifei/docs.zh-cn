@@ -3,11 +3,11 @@ title: 详细语法 (F#)
 description: '了解 F # 编程语言中的详细和轻量语法之间的差异。'
 ms.date: 05/16/2016
 ms.openlocfilehash: b4f2354738da4692cb444e5e7dd9531d80d26664
-ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
+ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/11/2018
-ms.locfileid: "44367936"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45589308"
 ---
 # <a name="verbose-syntax"></a>详细语法
 

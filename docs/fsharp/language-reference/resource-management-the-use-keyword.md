@@ -3,11 +3,11 @@ title: 资源管理：use 关键字 (F#)
 description: '了解有关 F # 关键字 use 和 using 函数，可以控制的初始化和释放资源。'
 ms.date: 05/16/2016
 ms.openlocfilehash: ffa1cb515139a3705920d9d9f79be1a69602f7d8
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45515517"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45616053"
 ---
 # <a name="resource-management-the-use-keyword"></a>资源管理：use 关键字
 

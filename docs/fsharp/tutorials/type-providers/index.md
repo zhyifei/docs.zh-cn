@@ -3,11 +3,11 @@ title: 类型提供程序
 description: '了解如何提供类型、 属性和方法在您的程序中使用的组件的 F # 类型提供程序。'
 ms.date: 04/02/2018
 ms.openlocfilehash: 5fa9de229caa2ec3ba4a248ca5cd1c8aa5adb230
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44276573"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45615243"
 ---
 # <a name="type-providers"></a>类型提供程序
 
