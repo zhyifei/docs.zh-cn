@@ -48,7 +48,7 @@ C# 7.0 向 C# 语言添加了许多新功能：
 
 [!code-csharp[OutVariableDeclarations](../../../samples/snippets/csharp/new-in-7/program.cs#01_OutVariableDeclarations "Out variable declarations")]
 
-为清晰明了，可能需指定 `out` 变量的类型，如上所示。 但是，该语言不支持使用隐式类型的局部变量：
+为清晰明了，可能需指定 `out` 变量的类型，如上所示。 但是，该语言支持使用隐式类型的局部变量：
 
 [!code-csharp[OutVarVariableDeclarations](../../../samples/snippets/csharp/new-in-7/program.cs#02_OutVarVariableDeclarations "Implicitly typed Out variable")]
 
