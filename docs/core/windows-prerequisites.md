@@ -4,12 +4,12 @@ description: 了解在 Windows 计算机上开发和运行 .NET Core 应用程�
 author: mairaw
 ms.author: mairaw
 ms.date: 08/31/2018
-ms.openlocfilehash: bbf54c8d215783656830f0fa035708be82a7c39c
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 477d303b50495070ba3a3540188deb274dd9f510
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43482605"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44179489"
 ---
 # <a name="prerequisites-for-net-core-on-windows"></a>Windows 上 .NET Core 的先决条件
 
@@ -30,6 +30,8 @@ ms.locfileid: "43482605"
 * Windows Server 2012 SP1（完全服务器或服务器核心）
 * Windows Server 2012 R2（完全服务器或服务器核心）
 * Windows Server 2016 或更高版本（完全服务器、服务器核心或 Nano Server）
+
+## <a name="net-core-supported-operating-systems"></a>.NET Core 支持的操作系统
 
 以下文章提供了 .NET Core 针对每个版本所支持的操作系统的完整列表：
 

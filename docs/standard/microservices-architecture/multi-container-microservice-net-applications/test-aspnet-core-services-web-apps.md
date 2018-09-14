@@ -4,12 +4,12 @@ description: 适用于容器化 .NET 应用程序的 .NET 微服务体系结构 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 12/11/2017
-ms.openlocfilehash: f7bd75ecdd85e49524ccdf67f3e59aa4be46bdce
-ms.sourcegitcommit: 702d5ffc6e733b6c4ded85bf1c92e2293638ee9a
+ms.openlocfilehash: 63576445a44df0c0bdbd22b263754bb3d2919963
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37792408"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44195616"
 ---
 # <a name="testing-aspnet-core-services-and-web-apps"></a>测试 ASP.NET Core 服务和 Web 应用
 
@@ -31,9 +31,9 @@ ms.locfileid: "37792408"
 
 单元测试控制器操作时，请确保仅关注其行为。 控制器单元测试将避开筛选器、路由或模型绑定等。 由于仅专注测试一项内容，单位测试通常编写简单、运行迅速。 正确编写的单位测试集无需过多开销即可经常运行。
 
-单元测试基于 xUnit.net、MSTest、Moq 或 NUnit 等测试框架实现。 对于 eShopOnContainers 示例应用程序，我们将使用 XUnit。
+单元测试基于 xUnit.net、MSTest、Moq 或 NUnit 等测试框架实现。 对于 eShopOnContainers 示例应用程序，我们使用 xUnit。
 
-为 Web API 控制器编写单元测试时，通过使用 C\# 中的新关键字直接实例化控制器类，以便尽快运行测试。 下面的示例演示如何将 [XUnit](https://xunit.github.io/) 作为测试框架执行此操作。
+为 Web API 控制器编写单元测试时，通过使用 C\# 中的新关键字直接实例化控制器类，以便尽快运行测试。 下面的示例演示如何将 [xUnit](https://xunit.github.io/) 作为测试框架执行此操作。
 
 ```csharp
 [Fact]

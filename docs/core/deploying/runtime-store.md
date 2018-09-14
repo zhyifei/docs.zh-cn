@@ -4,12 +4,12 @@ description: 本主题介绍了 .NET Core 使用的运行时包存储区和目�
 author: bleroy
 ms.author: mairaw
 ms.date: 08/12/2017
-ms.openlocfilehash: aba1939cda8459d8b0d9438a97545c19d3c1926d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: df2776ac2e4a2eed7f54b3031f13ab41fc714aae
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33218698"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43511579"
 ---
 # <a name="runtime-package-store"></a>运行时包存储区
 
@@ -17,18 +17,20 @@ ms.locfileid: "33218698"
 
 此功能实现为运行时包存储区，这是包在磁盘上的存储目录（通常情况下，在 macOS/Linux 上是 /usr/local/share/dotnet/store，在 Windows 上是 C:/Program Files/dotnet/store）。 此目录下有各个体系结构和[目标框架](../../standard/frameworks.md)的子目录。 文件布局类似于[磁盘上的 NuGet 资产布局](/nuget/create-packages/supporting-multiple-target-frameworks#framework-version-folder-structure)：
 
-\dotnet   
-&nbsp;&nbsp;\store   
-&nbsp;&nbsp;&nbsp;&nbsp;\x64   
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\netcoreapp2.0   
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\microsoft.applicationinsights   
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\microsoft.aspnetcore   
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;...   
-&nbsp;&nbsp;&nbsp;&nbsp;\x86   
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\netcoreapp2.0   
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\microsoft.applicationinsights   
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\microsoft.aspnetcore   
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;...   
+```
+\dotnet
+    \store
+        \x64
+            \netcoreapp2.0
+                \microsoft.applicationinsights
+                \microsoft.aspnetcore
+                ...
+        \x86
+            \netcoreapp2.0
+                \microsoft.applicationinsights
+                \microsoft.aspnetcore
+                ...
+```
 
 目标清单文件列出了运行时包存储区中的包。 开发者可以在发布应用程序时以此清单为目标。 目标清单通常是由目标生产环境的所有者提供。
 
@@ -120,6 +122,8 @@ dotnet publish --manifest manifest.xml
 
 ## <a name="aspnet-core-implicit-store"></a>ASP.NET Core 隐式存储区
 
+ASP.NET Core 隐式存储仅适用于 ASP.NET Core 2.0。 我们强烈建议应用程序使用 ASP.NET Core 2.1 及更高版本，这些版本不使用隐式存储。 ASP.NET Core 2.1 及更高版本使用共享框架。
+
 当 ASP.NET Core 应用程序部署为[从属框架部署 (FDD)](index.md#framework-dependent-deployments-fdd) 应用程序时，应用程序会隐式使用运行时包存储区功能。 [`Microsoft.NET.Sdk.Web`](https://github.com/aspnet/websdk) 中的目标包括引用目标系统上的隐式包存储区的清单。 此外，如果 FDD 应用程序依赖 `Microsoft.AspNetCore.All` 包，则会生成仅包含应用程序及其资产的已发布应用程序，而不是 `Microsoft.AspNetCore.All` 元包中列出的包。 假定这些包都位于目标系统上。
 
 安装 .NET Core SDK 后，便会在主机上安装运行时包存储区。 其他安装程序可能会提供运行时包存储区，包括 .NET Core SDK 的 Zip/tarball 安装、`apt-get`、Red Hat Yum、.NET Core Windows Server Hosting 捆绑包和手动运行时包存储区安装。
@@ -132,7 +136,7 @@ dotnet publish --manifest manifest.xml
 </PropertyGroup>
 ```
 
-> [!NOTE] 
+> [!NOTE]
 > 对于[独立部署 (SCD)](index.md#self-contained-deployments-scd) 应用程序，假定目标系统不一定包含所需的清单包。 因此，对于 SCD 应用程序，不能将 \<PublishWithAspNetCoreTargetManifest> 设置为 `true`。
 
 如果使用部署中的清单依赖项（程序集位于 bin 文件夹中）部署应用程序，运行时包存储区不会在主机上用于相应程序集。 将使用 bin 文件夹程序集，无论它是否位于主机上的运行时包存储区中。
@@ -142,5 +146,6 @@ dotnet publish --manifest manifest.xml
 如果在发布时部署发生剪裁，只有指明的特定版本清单包，才不会出现在已发布的输出中。 主机上必须有指明的包版本，应用程序才能启动。
 
 ## <a name="see-also"></a>请参阅
- [dotnet-publish](../tools/dotnet-publish.md)  
- [dotnet-store](../tools/dotnet-store.md)  
+
+* [dotnet-publish](../tools/dotnet-publish.md)  
+* [dotnet-store](../tools/dotnet-store.md)  

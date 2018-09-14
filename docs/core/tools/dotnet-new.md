@@ -3,13 +3,13 @@ title: dotnet new 命令 - .NET Core CLI
 description: dotnet new 命令可根据指定模板新建 .NET Core 项目。
 author: mairaw
 ms.author: mairaw
-ms.date: 06/12/2018
-ms.openlocfilehash: f0ef91361dfbc2c2ba5532fbd607786289e98c69
-ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
+ms.date: 07/31/2018
+ms.openlocfilehash: 2c82dda2d93225edb360316637e22964135cd5e4
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36207757"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43512550"
 ---
 # <a name="dotnet-new"></a>dotnet new
 
@@ -22,25 +22,31 @@ ms.locfileid: "36207757"
 ## <a name="synopsis"></a>摘要
 
 # <a name="net-core-21tabnetcore21"></a>[.NET Core 2.1](#tab/netcore21)
-```
+
+```console
 dotnet new <TEMPLATE> [--force] [-i|--install] [-lang|--language] [-n|--name] [--nuget-source] [-o|--output]
     [-u|--uninstall] [Template options]
 dotnet new <TEMPLATE> [-l|--list] [--type]
 dotnet new [-h|--help]
 ```
+
 # <a name="net-core-20tabnetcore20"></a>[.NET Core 2.0](#tab/netcore20)
-```
+
+```console
 dotnet new <TEMPLATE> [--force] [-i|--install] [-lang|--language] [-n|--name] [-o|--output] [-u|--uninstall] [Template options]
 dotnet new <TEMPLATE> [-l|--list] [--type]
 dotnet new [-h|--help]
 ```
+
 # <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
-```
+
+```console
 dotnet new <TEMPLATE> [-lang|--language] [-n|--name] [-o|--output] [-all|--show-all] [-h|--help] [Template options]
 dotnet new <TEMPLATE> [-l|--list]
 dotnet new [-all|--show-all]
 dotnet new [-h|--help]
 ```
+
 ---
 
 ## <a name="description"></a>描述
@@ -284,9 +290,11 @@ console、angular、react、reactredux、razorclasslib
 
 **web**
 
-`--use-launch-settings` - 在生成的模板输出中添加 launchSettings.json。
+`--exclude-launch-settings` - 从生成的模板中排除 launchSettings.json。
 
 `--no-restore` - 在项目创建期间不执行隐式还原。
+
+`--no-https` - 项目不需要 HTTPS。 此选项仅适用于未使用 `IndividualAuth` 或 `OrganizationalAuth` 的情况。
 
 **webapi**
 
@@ -311,11 +319,13 @@ console、angular、react、reactredux、razorclasslib
 
 `-r|--org-read-access` - 允许此应用程序对目录进行读取访问。 仅适用于 `SingleOrg` 或 `MultiOrg` 身份验证。
 
-`--use-launch-settings` - 在生成的模板输出中添加 launchSettings.json。
+`--exclude-launch-settings` - 从生成的模板中排除 launchSettings.json。
 
 `-uld|--use-local-db` - 指定应使用 LocalDB，而不使用 SQLite。 仅适用于 `Individual` 或 `IndividualB2C` 身份验证。
 
 `--no-restore` - 在项目创建期间不执行隐式还原。
+
+`--no-https` - 项目不需要 HTTPS。 `app.UseHsts` 和 `app.UseHttpsRedirection` 未添加到 `Startup.Configure` 中。 此选项仅适用于未使用 `Individual`、`IndividualB2C``SingleOrg` 和 `MultiOrg` 的情况。
 
 **mvc、razor**
 
@@ -348,13 +358,15 @@ console、angular、react、reactredux、razorclasslib
 
 `-r|--org-read-access` - 允许此应用程序对目录进行读取访问。 仅适用于 `SingleOrg` 或 `MultiOrg` 身份验证。
 
-`--use-launch-settings` - 在生成的模板输出中添加 launchSettings.json。
+`--exclude-launch-settings` - 从生成的模板中排除 launchSettings.json。
 
 `--use-browserlink` - 在项目中添加 BrowserLink。
 
 `-uld|--use-local-db` - 指定应使用 LocalDB，而不使用 SQLite。 仅适用于 `Individual` 或 `IndividualB2C` 身份验证。
 
 `--no-restore` - 在项目创建期间不执行隐式还原。
+
+`--no-https` - 项目不需要 HTTPS。 `app.UseHsts` 和 `app.UseHttpsRedirection` 未添加到 `Startup.Configure` 中。 此选项仅适用于未使用 `Individual`、`IndividualB2C``SingleOrg` 和 `MultiOrg` 的情况。
 
 **page**
 
@@ -524,7 +536,7 @@ console、angular、react、reactredux、razorclasslib
 
 ## <a name="see-also"></a>请参阅
 
-[dotnet new 自定义模板](custom-templates.md)  
-[创建 dotnet new 自定义模板](~/docs/core/tutorials/create-custom-template.md)  
-[dotnet/dotnet-template-samples GitHub 存储库](https://github.com/dotnet/dotnet-template-samples)  
-[dotnet new 可用模板](https://github.com/dotnet/templating/wiki/Available-templates-for-dotnet-new)
+* [dotnet new 自定义模板](custom-templates.md)  
+* [创建 dotnet new 自定义模板](~/docs/core/tutorials/create-custom-template.md)  
+* [dotnet/dotnet-template-samples GitHub 存储库](https://github.com/dotnet/dotnet-template-samples)  
+* [dotnet new 可用模板](https://github.com/dotnet/templating/wiki/Available-templates-for-dotnet-new)

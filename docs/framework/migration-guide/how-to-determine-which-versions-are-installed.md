@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 40a67826-e4df-4f59-a651-d9eb0fdc755d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3677ff7cc27847d56802206c793a574d61b1464c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1874d5512f04f22b9c53bdc9e92d0c96e45d21c8
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33391633"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44222735"
 ---
 # <a name="how-to-determine-which-net-framework-versions-are-installed"></a>如何：确定安装了哪些 .NET Framework 版本
 
@@ -94,7 +94,7 @@ ms.locfileid: "33391633"
     |379893|.NET Framework 4.5.2|
     |仅在 Windows 10 系统上：393295<br /><br /> 在所有其他操作系统版本上：393297|[!INCLUDE[net_v46](../../../includes/net-v46-md.md)]|
     |仅在 Windows 10 11 月更新系统上：394254<br /><br /> 在所有其他操作系统版本上：394271|[!INCLUDE[net_v461](../../../includes/net-v461-md.md)]|
-    |仅在 Windows 10 周年更新上：394802<br /><br /> 在所有其他操作系统版本上：394806|[!INCLUDE[net_v462](../../../includes/net-v462-md.md)]| 
+    |在 Windows 10 周年更新和 Windows Server 2016 上：394802<br /><br /> 在所有其他操作系统版本上：394806|[!INCLUDE[net_v462](../../../includes/net-v462-md.md)]| 
     |仅在 Windows 10 创意者更新上：460798<br/><br/> 在所有其他操作系统版本上： 460805 | .NET Framework 4.7 |
     |仅在 Windows 10 秋季创意者更新上：461308<br/><br/> 在所有其他操作系统版本上：461310 | .NET Framework 4.7.1 |
     |仅 Windows 10 2018 年 4 月更新中：461808<br/><br/> 在所有其他操作系统版本上：461814| .NET Framework 4.7.2 |
@@ -142,7 +142,7 @@ ms.locfileid: "33391633"
     |在所有其他 Windows 操作系统版本上安装的 .NET Framework 4.6|393297|
     |在 Windows 10 上安装的 .NET Framework 4.6.1|394254|
     |在所有其他 Windows 操作系统版本上安装的 .NET Framework 4.6.1|394271|
-    |在 Windows 10 周年更新上安装的 .NET Framework 4.6.2|394802|
+    |在 Windows 10 周年更新和 Windows Server 2016 上安装的 .NET Framework 4.6.2|394802|
     |在所有其他 Windows 操作系统版本上安装的 .NET Framework 4.6.2|394806|
     |在 Windows 10 创意者更新上安装的 .NET Framework 4.7|460798|
     |在所有其他 Windows 操作系统版本上安装的 .NET Framework 4.7|460805|

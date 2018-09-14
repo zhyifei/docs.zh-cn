@@ -5,12 +5,12 @@ ms.assetid: c933aca2-4cd0-4ff1-9df9-267143f25a6f
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: bdeb0e92dca723b64ee82b70f58fe910fd0c2edb
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.openlocfilehash: fe3b10e17c3cdf181f0b33b4305008655047fb0f
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42931045"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44269392"
 ---
 # <a name="certificate-selection-and-validation"></a>证书选择和验证
 <xref:System.Net> 类支持多种针对安全套接字层 (SSL) 连接选择和验证 <xref:System.Security.Cryptography.X509Certificates> 的方法。 客户端可以选择一个或多个证书对服务器自身的客户端进行身份验证。 服务器可以要求客户端证书具有一个或多个用于身份验证的特定属性。  
@@ -41,13 +41,13 @@ ms.locfileid: "42931045"
 ## <a name="tools-for-certificate-configuration"></a>证书配置工具  
  许多工具都可用于配置客户端和服务器证书。  
   
- Winhttpcertcfg.exe 工具可用于配置客户端证书。 Winhttpcertcfg.exe 工具作为 Windows Server 2003 Resource Kit 的工具之一提供。 该工具在 www.microsoft.com 上也是作为 Windows Server 2003 Resource Kit 工具的部件可供下载。  
+ Winhttpcertcfg.exe 工具可用于配置客户端证书。 Winhttpcertcfg.exe 工具作为 Windows Server 2003 Resource Kit 的工具之一提供。 该工具在 [www.microsoft.com](https://www.microsoft.com) 上也是作为 Windows Server 2003 Resource Kit 工具的部件可供下载。  
   
 HttpCfg.exe 工具可用于配置 <xref:System.Net.HttpListener> 类的服务器证书。 HttpCfg.exe 工具作为 Windows Server 2003 和 Windows XP Service Pack 2 的支持工具之一提供。 默认情况下，Windows Server 2003 或 Windows XP 上都未安装 HttpCfg.exe 和其他支持工具。 在 Windows Server 2003 上， 支持工具单独安装在 Windows Server 2003 CD-ROM 上的以下文件夹和文件中：  
   
  \Support\Tools\Suptools.msi  
   
- 若要使用 Windows XP Service Pack 2，可访问 www.microsoft.com 下载 Windows XP 支持工具。  
+ 若要使用 Windows XP Service Pack 2，可访问 [www.microsoft.com](https://www.microsoft.com) 下载 Windows XP 支持工具。  
   
  HttpCfg.exe 工具版本的源代码也可用作 Windows Server SDK 的示例。 HttpCfg.exe 示例的源代码使用网络示例作为 Windows SDK 的部件在以下文件夹中默认安装：  
   

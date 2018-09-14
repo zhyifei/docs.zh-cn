@@ -1,62 +1,72 @@
 ---
 title: 内置类型表（C# 参考）
-ms.date: 07/20/2015
+description: 内置 C# 类型的关键字
+ms.date: 08/17/2018
 helpviewer_keywords:
 - types [C#], built-in
 - built-in C# types
 ms.assetid: 54f901f2-bf2f-472c-ae8d-73e8ecfc57fe
-ms.openlocfilehash: 120347e5bff7f0d6c7120af0cb250936ca39ea16
-ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
+ms.openlocfilehash: fd9ba878d77bdb219542db55bb38023c60c7bec4
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2018
-ms.locfileid: "34172261"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43507307"
 ---
 # <a name="built-in-types-table-c-reference"></a>内置类型表（C# 参考）
+
 下表显示内置 C# 类型的关键字，即 <xref:System> 命名空间中预定义类型的别名。  
   
-|C# 类型|.NET Framework 类型|  
+|C# 类型|.NET 类型|  
 |--------------|-------------------------|  
-|[bool](../../../csharp/language-reference/keywords/bool.md)|`System.Boolean`|  
-|[byte](../../../csharp/language-reference/keywords/byte.md)|`System.Byte`|  
-|[sbyte](../../../csharp/language-reference/keywords/sbyte.md)|`System.SByte`|  
-|[char](../../../csharp/language-reference/keywords/char.md)|`System.Char`|  
-|[decimal](../../../csharp/language-reference/keywords/decimal.md)|`System.Decimal`|  
-|[double](../../../csharp/language-reference/keywords/double.md)|`System.Double`|  
-|[float](../../../csharp/language-reference/keywords/float.md)|`System.Single`|  
-|[int](../../../csharp/language-reference/keywords/int.md)|`System.Int32`|  
-|[uint](../../../csharp/language-reference/keywords/uint.md)|`System.UInt32`|  
-|[long](../../../csharp/language-reference/keywords/long.md)|`System.Int64`|  
-|[ulong](../../../csharp/language-reference/keywords/ulong.md)|`System.UInt64`|  
-|[object](../../../csharp/language-reference/keywords/object.md)|`System.Object`|  
-|[short](../../../csharp/language-reference/keywords/short.md)|`System.Int16`|  
-|[ushort](../../../csharp/language-reference/keywords/ushort.md)|`System.UInt16`|  
-|[string](../../../csharp/language-reference/keywords/string.md)|`System.String`|  
+|[bool](bool.md)|<xref:System.Boolean?displayProperty=nameWithType>|  
+|[byte](byte.md)|<xref:System.Byte?displayProperty=nameWithType>|  
+|[sbyte](sbyte.md)|<xref:System.SByte?displayProperty=nameWithType>|  
+|[char](char.md)|<xref:System.Char?displayProperty=nameWithType>|  
+|[decimal](decimal.md)|<xref:System.Decimal?displayProperty=nameWithType>|  
+|[double](double.md)|<xref:System.Double?displayProperty=nameWithType>|  
+|[float](float.md)|<xref:System.Single?displayProperty=nameWithType>|  
+|[int](int.md)|<xref:System.Int32?displayProperty=nameWithType>|  
+|[uint](uint.md)|<xref:System.UInt32?displayProperty=nameWithType>|  
+|[long](long.md)|<xref:System.Int64?displayProperty=nameWithType>|  
+|[ulong](ulong.md)|<xref:System.UInt64?displayProperty=nameWithType>|  
+|[object](object.md)|<xref:System.Object?displayProperty=nameWithType>|  
+|[short](short.md)|<xref:System.Int16?displayProperty=nameWithType>|  
+|[ushort](ushort.md)|<xref:System.UInt16?displayProperty=nameWithType>|  
+|[string](string.md)|<xref:System.String?displayProperty=nameWithType>|  
   
-## <a name="remarks"></a>备注  
- 此表中的所有类型，除 `object` 和 `string` 外，皆被称为简单类型。  
+## <a name="remarks"></a>备注
+
+此表中的所有类型，除 `object` 和 `string` 外，皆被称为简单类型。  
   
- C# 类型关键字及其别名可互换。 例如，可通过使用以下任意一个声明来声明整型变量：  
-  
-```csharp  
-int x = 123;  
-System.Int32 x = 123;  
-```  
-  
- 要显示任何 C# 类型的实际类型，请使用系统方法 `GetType()`。 例如，如下语句显示表示 `myVariable` 类型的系统别名：  
-  
-```csharp  
-Console.WriteLine(myVariable.GetType());  
-```  
-  
- 也可使用 [typeof](../../../csharp/language-reference/keywords/typeof.md) 运算符。  
-  
-## <a name="see-also"></a>请参阅  
- [C# 参考](../../../csharp/language-reference/index.md)  
- [C# 编程指南](../../../csharp/programming-guide/index.md)  
- [C# 关键字](../../../csharp/language-reference/keywords/index.md)  
- [值类型](../../../csharp/language-reference/keywords/value-types.md)  
- [默认值表](../../../csharp/language-reference/keywords/default-values-table.md)  
- [设置数值结果表的格式](../../../csharp/language-reference/keywords/formatting-numeric-results-table.md)  
- [dynamic](../../../csharp/language-reference/keywords/dynamic.md)  
- [类型参考表](../../../csharp/language-reference/keywords/reference-tables-for-types.md)
+C# 类型关键字及其别名可互换。 例如，可通过使用以下任意一个声明来声明整型变量：  
+
+```csharp
+int x = 123;
+System.Int32 y = 123;
+```
+
+使用 [typeof](typeof.md) 运算符以获取表示指定类型的 <xref:System.Type?displayProperty=nameWithType> 实例：
+
+```csharp
+Type stringType = typeof(string);
+Console.WriteLine(stringType.FullName);
+
+Type doubleType = typeof(System.Double);
+Console.WriteLine(doubleType.FullName);
+
+// Output:
+// System.String
+// System.Double
+```
+
+## <a name="see-also"></a>请参阅
+
+- [C# 参考](../../../csharp/language-reference/index.md)
+- [C# 编程指南](../../../csharp/programming-guide/index.md)
+- [C# 关键字](index.md)
+- [类型引用表](reference-tables-for-types.md)
+- [值类型](value-types.md)
+- [引用类型](reference-types.md)
+- [默认值表](default-values-table.md)
+- [dynamic](dynamic.md)

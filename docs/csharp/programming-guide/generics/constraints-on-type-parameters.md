@@ -6,12 +6,12 @@ helpviewer_keywords:
 - type constraints [C#]
 - type parameters [C#], constraints
 - unbound type parameter [C#]
-ms.openlocfilehash: b5ad639309238912aa27b58c95466b4f37052699
-ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
+ms.openlocfilehash: df5a509296f3fb9e8e77a273a0636c74a6f86da3
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34457352"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44208655"
 ---
 # <a name="constraints-on-type-parameters-c-programming-guide"></a>类型参数的约束（C# 编程指南）
 
@@ -19,7 +19,7 @@ ms.locfileid: "34457352"
 
 |约束|描述|
 |----------------|-----------------|
-|`where T : struct`|类型参数必须是值类型。 可以指定除 <xref:System.Nullable> 以外的任何值类型。 有关详细信息，请参阅[使用可以为 null 的类型](../nullable-types/using-nullable-types.md)。|
+|`where T : struct`|类型参数必须是值类型。 可以指定除 <xref:System.Nullable%601> 以外的任何值类型。 有关可以为 null 的类型的详细信息，请参阅[可以为 null 的类型](../nullable-types/index.md)。|
 |`where T : class`|类型参数必须是引用类型。 此约束还应用于任何类、接口、委托或数组类型。|
 |`where T : unmanaged`|类型参数不能是引用类型，并且任何嵌套级别均不能包含任何引用类型成员。|
 |`where T : new()`|类型参数必须具有公共无参数构造函数。 与其他约束一起使用时，`new()` 约束必须最后指定。|
@@ -111,7 +111,8 @@ ms.locfileid: "34457352"
 
 ## <a name="see-also"></a>请参阅
 
- <xref:System.Collections.Generic> [C# 编程指南](../../../csharp/programming-guide/index.md)  
- [泛型介绍](../../../csharp/programming-guide/generics/introduction-to-generics.md)  
- [泛型类](../../../csharp/programming-guide/generics/generic-classes.md)  
- [new 约束](../../../csharp/language-reference/keywords/new-constraint.md)  
+- <xref:System.Collections.Generic>
+- [C# 编程指南](../../../csharp/programming-guide/index.md)  
+- [泛型介绍](../../../csharp/programming-guide/generics/introduction-to-generics.md)  
+- [泛型类](../../../csharp/programming-guide/generics/generic-classes.md)  
+- [new 约束](../../../csharp/language-reference/keywords/new-constraint.md)  

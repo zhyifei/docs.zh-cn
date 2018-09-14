@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# language, operators
 - operators [C#], about operators
 ms.assetid: 214e7b83-1a41-4f7c-9867-64e9c0bab39f
-ms.openlocfilehash: 76371985e340945793310247ec48d9b0cb747aed
-ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
+ms.openlocfilehash: 025510782551c058c3b80eff3045138476e031b9
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34457925"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43514180"
 ---
 # <a name="operators-c-programming-guide"></a>运算符（C# 编程指南）
 在 C# 中，运算符  是应用于表达式或语句中的一个或多个操作数  的程序元素。 接受一个操作数的运算符称为`++`一元 `new`运算符，例如递增运算符 ( *) 或* 。 接受两个操作数的运算符称为`+`二元`-`运算符，例如算术运算符（`*`、`/`、 *、* ）。 条件运算符`?:`接受三个操作数，是 C# 中唯一的三元运算符。  
@@ -111,7 +111,7 @@ ms.locfileid: "34457925"
 |类别|表达式|描述|  
 |--------------|----------------|-----------------|  
 |逻辑“与”|x [&](../../../csharp/language-reference/operators/and-operator.md) y|整型按位“与”，布尔型逻辑“与”|  
-|逻辑 XOR|x [^](../../../csharp/language-reference/operators/xor-operator.md) y|整型按位 XOR，布尔型逻辑 XOR|  
+|逻辑“异或”|x [^](../../../csharp/language-reference/operators/xor-operator.md) y|整型按位 XOR，布尔型逻辑 XOR|  
 |逻辑“或”|x [&#124;](../../../csharp/language-reference/operators/or-operator.md) y|整型按位“或”，布尔型逻辑“或”|  
 |条件“与”|x [&&](../../../csharp/language-reference/operators/conditional-and-operator.md) y|仅当 x 为 True 时计算 y|  
 |条件“或”|x [&#124;&#124;](../../../csharp/language-reference/operators/conditional-or-operator.md) y|仅当 x 为 False 时计算 y|  
@@ -123,7 +123,7 @@ ms.locfileid: "34457925"
 |表达式|描述|  
 |----------------|-----------------|  
 |[=](../../../csharp/language-reference/operators/assignment-operator.md)|赋值|  
-|x op= y|复合赋值。 支持以下这些运算符：[+=](../../../csharp/language-reference/operators/addition-assignment-operator.md)、[-=](../../../csharp/language-reference/operators/subtraction-assignment-operator.md)、[*=](../../../csharp/language-reference/operators/multiplication-assignment-operator.md)、[/=](../../../csharp/language-reference/operators/division-assignment-operator.md)、[%=](../../../csharp/language-reference/operators/modulus-assignment-operator.md)、[&=](../../../csharp/language-reference/operators/and-assignment-operator.md)、[&#124;=](../../../csharp/language-reference/operators/or-assignment-operator.md)、[!=](../../../csharp/language-reference/operators/not-equal-operator.md)、[<\<=](../../../csharp/language-reference/operators/left-shift-assignment-operator.md)、[>>=](../../../csharp/language-reference/operators/right-shift-assignment-operator.md)|  
+|x op= y|复合赋值。 支持以下运算符：[+=](../../../csharp/language-reference/operators/addition-assignment-operator.md)、[-=](../../../csharp/language-reference/operators/subtraction-assignment-operator.md)、[*=](../../../csharp/language-reference/operators/multiplication-assignment-operator.md)、[/=](../../../csharp/language-reference/operators/division-assignment-operator.md)、[%=](../../../csharp/language-reference/operators/modulus-assignment-operator.md)、[&=](../../../csharp/language-reference/operators/and-assignment-operator.md)、[&#124;=](../../../csharp/language-reference/operators/or-assignment-operator.md)、[^=](../../../csharp/language-reference/operators/xor-assignment-operator.md)、[<\<=](../../../csharp/language-reference/operators/left-shift-assignment-operator.md)、[>>=](../../../csharp/language-reference/operators/right-shift-assignment-operator.md)|  
 |(T x) [=>](../../../csharp/language-reference/operators/lambda-operator.md) y|匿名函数（lambda 表达式）|  
   
 ## <a name="associativity"></a>结合性  
@@ -163,11 +163,12 @@ a = (b = c);
 |`a = (b + c) * (d - e)`|a、b、c、+、d、e、-、*、=|  
   
 ## <a name="operator-overloading"></a>运算符重载  
- 对于自定义类和结构，你可以更改运算符的行为。 此过程称为“运算符重载” 。 有关详细信息，请参阅[可重载运算符](../../../csharp/programming-guide/statements-expressions-operators/overloadable-operators.md)。  
+ 对于自定义类和结构，你可以更改运算符的行为。 此过程称为“运算符重载” 。 有关详细信息，请参阅[可重载运算符](../../../csharp/programming-guide/statements-expressions-operators/overloadable-operators.md)和[运算符](../../../csharp/language-reference/keywords/operator.md)关键字文章。  
   
 ## <a name="related-sections"></a>相关章节  
  有关详细信息，请参阅[运算符关键字](../../../csharp/language-reference/keywords/operator-keywords.md)和 [C# 运算符](../../../csharp/language-reference/operators/index.md)。  
   
-## <a name="see-also"></a>请参阅  
- [C# 编程指南](../../../csharp/programming-guide/index.md)  
- [语句、表达式和运算符](../../../csharp/programming-guide/statements-expressions-operators/index.md)
+## <a name="see-also"></a>请参阅
+
+- [C# 编程指南](../../../csharp/programming-guide/index.md)  
+- [语句、表达式和运算符](../../../csharp/programming-guide/statements-expressions-operators/index.md)

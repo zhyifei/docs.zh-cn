@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: d2bf6123-7b0c-4e60-87ad-a39a1c3eb2e0
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f2306d51d88ab2d3b74ed6381a6de0acebf1e62c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 67955e2b9d523cdee02f6de548720fdad261ab4d
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33410093"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43748422"
 ---
 # <a name="caspolexe-code-access-security-policy-tool"></a>Caspol.exe（代码访问安全策略工具）
 代码访问安全性 (CAS) 策略工具 (Caspol.exe) 使用户和管理员可修改计算机策略级别、用户策略级别和企业策略级别的安全策略。  
@@ -83,29 +83,29 @@ caspol [options]
   
 |参数|描述|  
 |--------------|-----------------|  
-|**-allcode**|指定所有代码。 有关此成员资格条件的详细信息，请参阅 <xref:System.Security.Policy.AllMembershipCondition>。|  
-|**-appdir**|指定应用程序目录。 如果指定 **–appdir** 作为成员资格条件，则代码的 URL 证据将与代码的应用程序目录证据进行比较。 如果两个证据值相同，则满足此成员资格条件。 有关此成员资格条件的详细信息，请参阅 <xref:System.Security.Policy.ApplicationDirectoryMembershipCondition>。|  
+|**-allcode**|指定所有代码。 有关此成员资格条件的详细信息，请参阅 <xref:System.Security.Policy.AllMembershipCondition?displayProperty=nameWithType>。|  
+|**-appdir**|指定应用程序目录。 如果指定 **–appdir** 作为成员资格条件，则代码的 URL 证据将与代码的应用程序目录证据进行比较。 如果两个证据值相同，则满足此成员资格条件。 有关此成员资格条件的详细信息，请参阅 <xref:System.Security.Policy.ApplicationDirectoryMembershipCondition?displayProperty=nameWithType>。|  
 |**-custom**  *xmlfile*|添加自定义成员资格条件。 强制性 *xmlfile* 参数指定包含自定义成员资格条件的 XML 序列化的 .xml 文件。|  
-|**-hash** *hashAlg* {**-hex** *hashValue* &#124; **-file** *assembly_file* }|指定具有给定程序集哈希的代码。 若要使用哈希作为代码组成员资格条件，则必须指定哈希值或程序集文件。 有关此成员资格条件的详细信息，请参阅 <xref:System.Security.Policy.HashMembershipCondition>。|  
-|**-pub** { **-cert** *cert_file_name* &#124;<br /><br /> **-file** *signed_file_name* &#124; **-hex**  *hex_string* }|指定具有给定软件发行者的代码，软件发行者由证书文件、文件上的签名或 X509 证书的十六进制表示形式来指示。 有关此成员资格条件的详细信息，请参阅 <xref:System.Security.Policy.PublisherMembershipCondition>。|  
-|**-site** *website*|指定具有给定源站点的代码。 例如:<br /><br /> **-site** www.proseware.com<br /><br /> 有关此成员资格条件的详细信息，请参阅 <xref:System.Security.Policy.SiteMembershipCondition>。|  
-|**-strong -file** *file_name* {*name* &#124; **-noname**} {*version* &#124; **-noversion**}|指定具有特定强名称的代码，强名称由文件名、字符串形式的程序集名称和 *major*.*minor*.*build*.*revision* 格式的程序集版本指示。 例如:<br /><br /> **-strong -file** myAssembly.exe myAssembly 1.2.3.4<br /><br /> 有关此成员资格条件的详细信息，请参阅 <xref:System.Security.Policy.StrongNameMembershipCondition>。|  
-|**-url** *URL*|指定源自给定 URL 的代码。 URL 必须包含一个协议，如 http:// 或 ftp://。 此外，可以使用通配符 (\*) 指定来自特定 URL 的多个程序集。 **注意：** 由于 URL 可以用多个名称标识，使用 URL 作为成员条件不是确定代码标识的安全方式。 应尽可能使用强名称成员条件、发行者成员条件或哈希成员条件。 <br /><br /> 有关此成员资格条件的详细信息，请参阅 <xref:System.Security.Policy.UrlMembershipCondition>。|  
+|**-hash** *hashAlg* {**-hex** *hashValue* &#124; **-file** *assembly_file* }|指定具有给定程序集哈希的代码。 若要使用哈希作为代码组成员资格条件，则必须指定哈希值或程序集文件。 有关此成员资格条件的详细信息，请参阅 <xref:System.Security.Policy.HashMembershipCondition?displayProperty=nameWithType>。|  
+|**-pub** { **-cert** *cert_file_name* &#124;<br /><br /> **-file** *signed_file_name* &#124; **-hex**  *hex_string* }|指定具有给定软件发行者的代码，软件发行者由证书文件、文件上的签名或 X509 证书的十六进制表示形式来指示。 有关此成员资格条件的详细信息，请参阅 <xref:System.Security.Policy.PublisherMembershipCondition?displayProperty=nameWithType>。|  
+|**-site** *website*|指定具有给定源站点的代码。 例如:<br /><br /> `-site** www.proseware.com`<br /><br /> 有关此成员资格条件的详细信息，请参阅 <xref:System.Security.Policy.SiteMembershipCondition?displayProperty=nameWithType>。|  
+|**-strong -file** *file_name* {*name* &#124; **-noname**} {*version* &#124; **-noversion**}|指定具有特定强名称的代码，强名称由文件名、字符串形式的程序集名称和 *major*.*minor*.*build*.*revision* 格式的程序集版本指示。 例如:<br /><br /> **-strong -file** myAssembly.exe myAssembly 1.2.3.4<br /><br /> 有关此成员资格条件的详细信息，请参阅 <xref:System.Security.Policy.StrongNameMembershipCondition?displayProperty=nameWithType>。|  
+|**-url** *URL*|指定源自给定 URL 的代码。 URL 必须包含一个协议，如 http:// 或 ftp://。 此外，可以使用通配符 (\*) 指定来自特定 URL 的多个程序集。 **注意：** 由于 URL 可以用多个名称标识，使用 URL 作为成员条件不是确定代码标识的安全方式。 应尽可能使用强名称成员条件、发行者成员条件或哈希成员条件。 <br /><br /> 有关此成员资格条件的详细信息，请参阅 <xref:System.Security.Policy.UrlMembershipCondition?displayProperty=nameWithType>。|  
 |**-zone** *zonename*|指定具有给定源区域的代码。 *zonename* 参数可以是下列值之一：**MyComputer**、**Intranet**、**Trusted**、**Internet** 或 **Untrusted**。 有关此成员资格条件的更多信息，请参见 <xref:System.Security.Policy.ZoneMembershipCondition> 类。|  
   
  可与 **–addgroup** 和 **–chggroup** 选项一起使用的 *flags* 参数，可使用下列参数之一指定。  
   
 |参数|描述|  
 |--------------|-----------------|  
-|**-description "** *description* **"**|与 **–addgroup** 选项一起使用时，指定要添加的代码组的描述。 与 **–chggroup** 选项一起使用时，指定要编辑的代码组的描述。 *description* 参数必须用双引号引起来。|  
+|-description “description”|与 **–addgroup** 选项一起使用时，指定要添加的代码组的描述。 与 **–chggroup** 选项一起使用时，指定要编辑的代码组的描述。 *description* 参数必须用双引号引起来。|  
 |**-exclusive** {**on**&#124;**off**}|设置为 **on** 时，指示当某些代码符合代码组的成员资格条件时，只考虑与正在添加或修改的代码组关联的权限集。 当此选项设置为 **off** 时，Caspol.exe 考虑策略级别中所有匹配的代码组的权限集。|  
 |**-levelfinal** {**on**&#124;**off**}|当设置为 **on** 时，指示不考虑低于已添加或修改的代码组所在的级别的策略级别。 此选项通常在计算机策略级别上使用。 例如，如果在计算机级别上为代码组设置此标志，并且某个代码与此代码组的成员资格条件匹配，则 Caspol.exe 不会计算或应用此代码的用户级别策略。|  
-|**-name "** *name* **"**|与 **–addgroup** 选项一起使用时，指定要添加的代码组的脚本名称。 与 **-chggroup** 选项一起使用时，指定要编辑的代码组的脚本名称。 *name* 参数必须用双引号引起。 *name*参数不能以数字开头，只能包含 A-Z、0-9 和下划线字符。 代码组可以按此 *name* 而非其数字标签引用。 *name* 对于撰写脚本也非常有用。|  
+|-name “name”|与 **–addgroup** 选项一起使用时，指定要添加的代码组的脚本名称。 与 **-chggroup** 选项一起使用时，指定要编辑的代码组的脚本名称。 *name* 参数必须用双引号引起。 *name*参数不能以数字开头，只能包含 A-Z、0-9 和下划线字符。 代码组可以按此 *name* 而非其数字标签引用。 *name* 对于撰写脚本也非常有用。|  
   
 ## <a name="remarks"></a>备注  
  安全策略使用三个策略级别来表示：计算机策略、用户策略和企业策略。 程序集收到的权限集由这三个策略级别允许的权限集的交集确定。 每个策略级别都用代码组的分层结构表示。 每个代码组都有一个确定哪个代码是该组成员的成员资格条件。 命名权限集也与每个代码组关联。 此权限集指定运行时允许满足成员资格条件的代码拥有的权限。 代码组层次结构连同其关联的命名权限集一起定义并维护每个安全策略级别。 可以使用 **–user**、**-customuser**、**–machine** 和 **-enterprise** 选项设置安全策略级别。  
   
- 有关安全策略以及运行时如何确定授予代码何种权限的更多信息，请参见[安全策略管理](http://msdn.microsoft.com/library/d754e05d-29dc-4d3a-a2c2-95eaaf1b82b9)。  
+ 有关安全策略以及运行时如何确定授予代码何种权限的更多信息，请参见[安全策略管理](https://msdn.microsoft.com/library/d754e05d-29dc-4d3a-a2c2-95eaaf1b82b9)。  
   
 ## <a name="referencing-code-groups-and-permission-sets"></a>引用代码组和权限集  
  为使在层次结构中引用代码组更容易，**-list** 选项显示了代码组的缩进式列表及其数字标签（1、1.1、1.1.1 依此类推）。 其他以代码组为目标的命令行操作也使用数字标签来引用特定的代码组。  
@@ -132,13 +132,13 @@ caspol [options]
   
  假设已经将一个包含自定义权限的权限集添加到计算机策略。 该自定义权限在 `MyPerm.exe` 中实现，而 `MyPerm.exe` 引用 `MyOther.exe` 中的类。 这两个程序集都必须添加到完全信任程序集列表中。 下面的命令将 `MyPerm.exe` 程序集添加到计算机策略的完全信任列表中。  
   
-```  
+```console  
 caspol -machine -addfulltrust MyPerm.exe  
 ```  
   
  下面的命令将 `MyOther.exe` 程序集添加到计算机策略的完全信任列表中。  
   
-```  
+```console  
 caspol -machine -addfulltrust MyOther.exe  
 ```  
   
@@ -146,13 +146,13 @@ caspol -machine -addfulltrust MyOther.exe
   
  下面的命令将子代码组添加到计算机策略代码组层次结构的根位置。 新的代码组是 **Internet** 区域的成员，并与 **Execution** 权限集关联。  
   
-```  
+```console  
 caspol -machine -addgroup 1.  -zone Internet Execution  
 ```  
   
  下面的命令将添加一个子代码组，该代码组授予共享 \\\netserver\netshare 本地 Intranet 权限。  
   
-```  
+```console  
 caspol -machine -addgroup 1. -url \\netserver\netshare\* LocalIntranet  
 ```  
   
@@ -160,7 +160,7 @@ caspol -machine -addgroup 1. -url \\netserver\netshare\* LocalIntranet
   
  下面的命令将 `Mypset` 权限集添加到用户策略。  
   
-```  
+```console  
 caspol -user -addpset Mypset.xml Mypset  
 ```  
   
@@ -168,13 +168,13 @@ caspol -user -addpset Mypset.xml Mypset
   
  下面的命令将标记为 1.2. 的代码组的用户策略中的权限集 更改为 **Execution** 权限集。  
   
-```  
+```console  
 caspol -user -chggroup 1.2. Execution  
 ```  
   
  下面的命令更改标记为 1.2.1. 的代码组的默认策略中的成员资格条件， 并更改 **exclusive** 标志的设置。 该成员资格条件被定义为源自 **Internet** 区域的代码，并且 **exclusive** 标志已打开。  
   
-```  
+```console  
 caspol -chggroup 1.2.1. -zone Internet -exclusive on  
 ```  
   
@@ -182,7 +182,7 @@ caspol -chggroup 1.2.1. -zone Internet -exclusive on
   
  下面的命令将名为 `Mypset` 的权限集更改为包含在 `newpset.xml` 中的权限集。 请注意，当前版本不支持更改正在由代码组层次结构使用的权限集。  
   
-```  
+```console  
 caspol -chgpset Mypset newpset.xml  
 ```  
   
@@ -190,7 +190,7 @@ caspol -chgpset Mypset newpset.xml
   
  下面的命令使用户策略的根代码组（标记为 1）与 **Nothing** 命名权限集关联。 这将阻止 Caspol.exe 运行。  
   
-```  
+```console  
 caspol -force -user -chggroup 1 Nothing  
 ```  
   
@@ -198,7 +198,7 @@ caspol -force -user -chggroup 1 Nothing
   
  下面的命令恢复最近保存的计算机策略。  
   
-```  
+```console  
 caspol -machine -recover  
 ```  
   
@@ -206,7 +206,7 @@ caspol -machine -recover
   
  下面的命令移除标记为 1.1 的代码组。 如果该代码组有任何子代码组，则这些代码组也将被删除。  
   
-```  
+```console  
 caspol -remgroup 1.1.  
 ```  
   
@@ -214,13 +214,13 @@ caspol -remgroup 1.1.
   
  下面的命令从用户策略中移除 **Execution** 权限集。  
   
-```  
+```console  
 caspol -user -rempset Execution  
 ```  
   
  下面的命令从用户策略级别中移除 `Mypset`。  
   
-```  
+```console  
 caspol -rempset MyPset  
 ```  
   
@@ -228,13 +228,13 @@ caspol -rempset MyPset
   
  下面的命令显示 `myassembly` 所属的计算机策略的所有代码组。  
   
-```  
+```console  
 caspol -machine -resolvegroup myassembly  
 ```  
   
  下面的命令显示 `myassembly` 所属的计算机策略、企业策略和指定的自定义用户策略的所有代码组。  
   
-```  
+```console  
 caspol -customall "c:\config_test\security.config" -resolvegroup myassembly  
 ```  
   
@@ -242,10 +242,10 @@ caspol -customall "c:\config_test\security.config" -resolvegroup myassembly
   
  下面的命令基于计算机策略级别和用户策略级别计算 `testassembly` 的权限。  
   
-```  
+```console  
 caspol -all -resolveperm testassembly  
 ```  
   
 ## <a name="see-also"></a>请参阅  
- [工具](../../../docs/framework/tools/index.md)  
- [命令提示](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
+ [工具](index.md)  
+ [命令提示](developer-command-prompt-for-vs.md)

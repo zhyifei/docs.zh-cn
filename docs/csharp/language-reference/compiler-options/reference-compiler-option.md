@@ -13,12 +13,12 @@ helpviewer_keywords:
 - public type information [C#]
 - -reference compiler option [C#]
 ms.assetid: 8d13e5b0-abf6-4c46-bf71-2daf2cd0a6c4
-ms.openlocfilehash: 76a53d6adcf4c55faa57c25f851e46dd4c2c6c22
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 131cdf62917ab2fc8d564b85c30d13c8971e5809
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43393206"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44213710"
 ---
 # <a name="-reference-c-compiler-options"></a>-reference（C# 编译器选项）
 -reference 选项使编译器将指定文件中的[公共](../../../csharp/language-reference/keywords/public.md)类型信息导入当前项目，从而使你可从指定的程序集文件中引用元数据。  
@@ -67,10 +67,12 @@ ms.locfileid: "43393206"
  本示例演示如何使用[外部别名](../../../csharp/language-reference/keywords/extern-alias.md)功能。  
   
  编译源文件，并从先前已编译的 `grid.dll` 和 `grid20.dll` 中导入元数据。 这两个 DLL 包含同一组件的不同版本，将使用两个带有别名选项的 -reference 编译源文件。 这两个选项如下所示：  
+
+```console
+-reference:GridV1=grid.dll -reference:GridV2=grid20.dll  
+```
   
- -reference:GridV1=grid.dll 和 -reference:GridV2=grid20.dll  
-  
- 这将设置外部别名“GridV1”和“GridV2”，将在程序中通过外部语句使用它们：  
+ 这将设置外部别名 `GridV1` 和 `GridV2`，将通过 `extern` 语句在程序中使用它们：  
   
 ```csharp  
 extern alias GridV1;  
@@ -78,13 +80,13 @@ extern alias GridV2;
 // Using statements go here.  
 ```  
   
- 完成此操作后，可以通过在控件名称前添加 GridV1 前缀来引用 grid.dll 中的网格控件，如下所示：  
+ 完成此操作后，可以通过在控件名称前添加 `GridV1` 前缀来引用 `grid.dll` 中的网格控件，如下所示：  
   
 ```csharp  
 GridV1::Grid  
 ```  
   
- 此外，可以通过在控件名称前添加 GridV2 前缀来引用 grid20.dll 中的网格控件，如下所示：  
+ 此外，可以通过在控件名称前添加 `GridV2` 前缀来引用 `grid20.dll` 中的网格控件，如下所示：  
   
 ```csharp  
 GridV2::Grid   

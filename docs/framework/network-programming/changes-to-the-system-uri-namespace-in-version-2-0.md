@@ -5,12 +5,12 @@ ms.assetid: 35883fe9-2d09-4d8b-80ca-cf23a941e459
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: 169454edd04bfdb55affcc2be12140f42dd2f7ff
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: dbd12b3e08b6e21d26e2cb688a591cd4e03574dc
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33392443"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44205979"
 ---
 # <a name="changes-to-the-systemuri-namespace-in-version-20"></a>对 2.0 版中的 System.Uri 命名空间的更改
 对 <xref:System.Uri?displayProperty=nameWithType> 类进行了少量更改。 这些更改修复了不正确的行为、提高了可用性、增强了安全性。  
@@ -42,7 +42,7 @@ ms.locfileid: "33392443"
   
 -   对于已知不含有查询部件（文件、ftp 等）的 URI 方案，“?”字符始终转义，不将它视为 <xref:System.Uri.Query%2A> 部件的开头。  
   
--   对于隐式文件 URI（采用“c:\directory\file@name.txt”形式），片段字符（“#”）始终转义，除非要求完全反转义或 <xref:System.Uri.LocalPath%2A> 为 `true`。  
+-   对于隐式文件 URI（采用 `c:\directory\file@name.txt` 形式），片段字符（“#”）始终转义，除非要求完全反转义或 <xref:System.Uri.LocalPath%2A> 为 `true`。  
   
 -   删除了 UNC 主机名支持；采用了 IDN 规范来表示国际主机名。  
   
@@ -56,9 +56,9 @@ ms.locfileid: "33392443"
   
 -   <xref:System.Uri.IsLoopback%2A> 现在产生一致的结果。  
   
--   URI `file:///path` 不再转换为 file://path。  
+-   URI“`file:///path`”不再转换为 `file://path`。  
   
--   现在，“#”被识别为主机名终止符。 即， “http://consoto.com#fragment” 现在转换为 “http://contoso.com/#fragment” 。  
+-   现在，“#”被识别为主机名终止符。 即，`http://consoto.com#fragment` 现在转换为 `http://contoso.com/#fragment`。  
   
 -   结合基 URI 与片段时的 bug 已修复。  
   

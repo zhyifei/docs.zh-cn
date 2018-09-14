@@ -8,25 +8,25 @@ helpviewer_keywords:
 - value equality [C#]
 - equivalence [C#]
 ms.assetid: 4084581e-b931-498b-9534-cf7ef5b68690
-ms.openlocfilehash: c0105371bd39c3999aafca867a7bb7a59fd367c1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 365aa5a71eb3d07a79920f565a66fcac67de0b42
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33339600"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "44042616"
 ---
 # <a name="how-to-define-value-equality-for-a-type-c-programming-guide"></a>如何：为类型定义值相等性（C# 编程指南）
 定义类或结构时，需确定为类型创建值相等性（或等效性）的自定义定义是否有意义。 通常，类型的对象预期要添加到某类集合时，或者这些对象主要用于存储一组字段或属性时，需实现值相等性。 可以基于类型中所有字段和属性的比较结果来定义值相等性，也可以基于子集进行定义。 但在任何一种情况下，类和结构中的实现均应遵循 5 个等效性保证条件：  
   
-1.  x.`Equals`(x) 返回 `true.`。这称为自反属性。  
+1.  `x.Equals(x)` 返回 `true`。 这称为自反属性。  
   
-2.  x.`Equals`(y) 返回与 y.`Equals`(x) 相同的值。 这称为对称属性。  
+2.  `x.Equals(y)` 返回与 `y.Equals(x)` 相同的值。 这称为对称属性。  
   
-3.  如果 (x.`Equals`(y) && y.`Equals`(z)) 返回 `true`，则 x.`Equals`(z) 返回 `true`。 这称为可传递属性。  
+3.  如果 `(x.Equals(y) && y.Equals(z))` 返回 `true`，则 `x.Equals(z)` 返回 `true`。 这称为可传递属性。  
   
-4.  只要不修改 x 和 y 引用的对象，x.`Equals`(y) 的后续调用就会返回相同的值。  
+4.  只要未修改 x 和 y 引用的对象，`x.Equals(y)` 的连续调用将返回相同的值。  
   
-5.  x.`Equals`(null) 返回 `false`。 但是，null.Equals(null) 会引发异常；它未遵循上面的第 2 条规则。  
+5.  `x.Equals(null)` 返回 `false`。 但是，`null.Equals(null)` 会引发异常；它未遵循上面的第二条规则。  
   
  定义的任何结构都已具有其从 <xref:System.Object.Equals%28System.Object%29?displayProperty=nameWithType> 方法的 <xref:System.ValueType?displayProperty=nameWithType> 替代中继承的值相等性的默认实现。 此实现使用反射来检查类型中的所有字段和属性。 尽管此实现可生成正确的结果，但与专门为类型编写的自定义实现相比，它的速度相对较慢。  
   
@@ -62,6 +62,7 @@ ms.locfileid: "33339600"
   
  除非结构显式重载了 [==](../../../csharp/language-reference/operators/equality-comparison-operator.md) 和 [!=](../../../csharp/language-reference/operators/not-equal-operator.md) 运算符，否则这些运算符无法对结构进行运算。  
   
-## <a name="see-also"></a>请参阅  
- [相等比较](../../../csharp/programming-guide/statements-expressions-operators/equality-comparisons.md)  
- [C# 编程指南](../../../csharp/programming-guide/index.md)
+## <a name="see-also"></a>请参阅
+
+- [相等比较](../../../csharp/programming-guide/statements-expressions-operators/equality-comparisons.md)  
+- [C# 编程指南](../../../csharp/programming-guide/index.md)

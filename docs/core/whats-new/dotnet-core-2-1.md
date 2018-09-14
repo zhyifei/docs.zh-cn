@@ -4,12 +4,12 @@ description: 了解 .NET Core 2.1 的新增功能。
 author: rpetrusha
 ms.author: ronpet
 ms.date: 06/06/2018
-ms.openlocfilehash: 2599908c81cbe046889778bbdf7aeb9f8272b215
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 850df87666c5beb0594f0672d8f558c11653f973
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43392844"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44209571"
 ---
 # <a name="whats-new-in-net-core-21"></a>.NET Core 2.1 的新增功能
 
@@ -121,6 +121,7 @@ dotnet tool install -g dotnetsay
 
 使用 .NET Core 2.0 SDK，自包含应用程序将通过 .NET Core 2.0.0 运行时发布，除非通过 `RuntimeFrameworkVersion` 属性指定不同版本。 借助此新行为，你将不再需要设置此属性便可为自包含的应用程序选择更高版本的运行时。 最简单的方法是始终通过 .NET Core 2.1 SDK (v 2.1.300) 发布。
 
+有关详细信息，请参阅[独立部署运行时前滚](../deploying/runtime-patch-selection.md)。
 ## <a name="windows-compatibility-pack"></a>Windows 兼容包
 
 当你将现有代码从 .NET Framework 转移到 .NET Core 时，可以使用 [Windows 兼容包](https://www.nuget.org/packages/Microsoft.Windows.Compatibility)。 除了 .NET Core 中提供的 API，它使你还能够访问额外的 20,000 多个 API。 这些 API 包括 <xref:System.Drawing?displayProperty=nameWithType> 命名空间中的类型、<xref:System.Diagnostics.EventLog> 类、WMI、性能计数器、Windows 服务以及 Windows 注册表类型和成员。

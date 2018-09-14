@@ -3,12 +3,12 @@ title: 解释表达式
 description: 了解如何编写代码来检查表达式树的结构。
 ms.date: 06/20/2016
 ms.assetid: adf73dde-1e52-4df3-9929-2e0670e28e16
-ms.openlocfilehash: 04622c0aa7323ac4cf16af94e31f1ef6987f87c8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 95fbb021aeeb9f2f4eb36f664f9fe904d1d52453
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33219305"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43506414"
 ---
 # <a name="interpreting-expressions"></a>解释表达式
 
@@ -514,7 +514,7 @@ The expression body is:
 
 即使最后一个示例也只可识别可能的节点类型的一部分。
 你仍可以向其添加许多将导致其失败的表达式。
-完整的实现包含在名为 [ExpressionVisitor](/dotnet/core/api/System.Linq.Expressions.ExpressionVisitor) 的 .NET Standard 中，且可以处理所有可能的节点类型。
+完整的实现包含在名为 <xref:System.Linq.Expressions.ExpressionVisitor> 的 .NET 标准中，且可以处理所有可能的节点类型。
 
 最后，在本文中所使用的库是为演示和学习目的而生成。 它未进行优化。 编写它是为了让所使用的结构非常清晰，以及强调用于访问节点和对此进行分析的技术。 生产实现将更加注重性能。
 
