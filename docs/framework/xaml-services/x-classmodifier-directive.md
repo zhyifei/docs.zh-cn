@@ -11,11 +11,11 @@ helpviewer_keywords:
 - ClassModifier attribute in XAML [XAML Services]
 ms.assetid: ef30ab78-d334-4668-917d-c9f66c3b6aea
 ms.openlocfilehash: 5a3bbd1d4d75c84dda741d382c8dd7568dbb474b
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44271736"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45514075"
 ---
 # <a name="xclassmodifier-directive"></a>x:ClassModifier 指令
 修改 XAML 编译行为时`x:Class`还提供了。 具体而言，而不是创建一个分部`class`，其`Public`访问级别 （默认值），提供`x:Class`使用创建`NotPublic`访问级别。 此行为会影响生成的程序集中类的访问级别。  

@@ -4,12 +4,12 @@ description: 使用 Microsoft 平台和工具 (e-book)_v1.1 的容器化 Docker 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
-ms.openlocfilehash: bf5648b1aa21ffd783c76aaa11c8e81371f45d18
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.openlocfilehash: 24a4e826ece691a6a1221b39c164bba2eef8a059
+ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37104633"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "44778417"
 ---
 # <a name="key-takeaways"></a>关键结论
 
@@ -23,7 +23,7 @@ ms.locfileid: "37104633"
 
 -   支持连接到生产 Docker 环境的持续集成/持续部署的端到端 DevOps 环境可提供灵活性，最终缩短应用程序的上市时间。
 
-Visual Studio Team Services 极大地简化了从持续部署管道（包括简单 Docker 环境或基于 Azure 的更高级的微服务和容器协调程序）指定为 Docker 环境的 DevOps 环境。
+Azure DevOps 服务极大地简化了从持续部署管道，包括简单 Docker 环境或更高级的微服务和容器协调程序在 Azure 上基于指定为 Docker 环境的 DevOps 环境。
 
 >[!div class="step-by-step"]
 [上一篇](../run-manage-monitor-docker-environments/monitor-containerized-application-services.md)

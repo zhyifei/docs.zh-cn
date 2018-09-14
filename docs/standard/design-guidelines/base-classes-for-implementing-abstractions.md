@@ -9,11 +9,11 @@ ms.assetid: 37a2d9a4-9721-482a-a40f-eee2c1d97875
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 9f326ee895251678c7a23ea84a11e83951edf2cc
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44194872"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45519466"
 ---
 # <a name="base-classes-for-implementing-abstractions"></a>用于实现抽象的基类
 严格地说，一个类成为基类时另一个类派生。 但是，对于本部分中，基类是主要用于提供常见抽象或重复使用某些其他类的默认实现但继承的类。 基类，这些类通常位于继承层次结构，层次结构的根处的抽象和底部的多个自定义实现之间的中间。  

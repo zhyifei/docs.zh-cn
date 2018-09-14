@@ -3,11 +3,11 @@ title: 源数据存储可编程性
 ms.date: 03/30/2017
 ms.assetid: 5b613661-f3f9-4e07-8e88-28c9ea2fd8f8
 ms.openlocfilehash: 4ea6117686b985a9ea18ce4e5cc4ea2b5c25524c
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44276323"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45512525"
 ---
 # <a name="metadata-store-programmability"></a>源数据存储可编程性
 元数据存储是一项 [!INCLUDE[wfd1](../../../../includes/wfd1-md.md)] 功能，可用于将任意元数据关联（以 CLR 特性的形式）运行时类型。 这可以实现运行时组件与其设计时对应项之间的松散耦合，并且可以实现在不影响运行时的情况下更改设计时组件。 此示例演示如何通过对运行时类型（我们无法控制的源）应用特性来针对元数据存储进行编程。 通常使用的术语是，主机应用程序为一组类型注册元数据。  

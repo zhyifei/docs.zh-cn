@@ -9,11 +9,11 @@ helpviewer_keywords:
 - ListView controls [WPF], about ListView control
 ms.assetid: 989e12b0-260e-4570-95c6-489284003ce2
 ms.openlocfilehash: a3b5805808ce2e84e7713f07694464b75d83a391
-ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
+ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/11/2018
-ms.locfileid: "44365207"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45521617"
 ---
 # <a name="listview-overview"></a>ListView 概述
 <xref:System.Windows.Controls.ListView>控件提供了用于显示数据项的一组不同的布局或视图中的基础结构。 例如，用户可能需要在表格中显示数据项，并同时对表格的列进行排序。  

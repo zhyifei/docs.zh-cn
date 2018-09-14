@@ -3,11 +3,11 @@ title: SQL Server 中的授权和权限
 ms.date: 03/30/2017
 ms.assetid: d340405c-91f4-4837-a3cc-a238ee89888a
 ms.openlocfilehash: bdf5112e3f0e2cada4885b0b66adf248f0ffe808
-ms.sourcegitcommit: ba5c189bf44d44204a3e8838e59ec378a62d82f3
+ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "44699497"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45521515"
 ---
 # <a name="authorization-and-permissions-in-sql-server"></a>SQL Server 中的授权和权限
 在创建数据库对象时，必须显式授予权限以使用户可以访问它们。 每个可保护对象都具有可使用权限语句授予主体的权限。  

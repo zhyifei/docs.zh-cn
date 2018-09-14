@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 5a29de74-acfc-4134-8616-829dd7ce0710
 ms.openlocfilehash: c1ef9ff9cc4d77e4951e99ed74c96cf78eb71506
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: ba5c189bf44d44204a3e8838e59ec378a62d82f3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44194814"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "44778580"
 ---
 # <a name="connection-events"></a>连接事件
 所有.NET Framework 数据提供程序都具有**连接**若要从数据源中检索信息性消息，或若要确定是否可以使用的两个事件的对象的状态**连接**具有更改。 下表描述的事件**连接**对象。  

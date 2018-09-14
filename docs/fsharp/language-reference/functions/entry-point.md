@@ -3,11 +3,11 @@ title: 入口点 (F#)
 description: '了解如何设置入口点为 F # 程序编译为可执行文件，正式开始执行的位置。'
 ms.date: 05/16/2016
 ms.openlocfilehash: 298500931d49c891a7a243295333df3a9f5d413e
-ms.sourcegitcommit: ba5c189bf44d44204a3e8838e59ec378a62d82f3
+ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "44710338"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45515206"
 ---
 # <a name="entry-point"></a>入口点
 

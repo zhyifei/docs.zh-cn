@@ -6,11 +6,11 @@ helpviewer_keywords:
 - Windows Forms, Visual Basic
 ms.assetid: 0b919d30-7fd6-42db-85c8-543d15312441
 ms.openlocfilehash: b900b85b4e3e56dbc587a15edea40f6e3032cbd1
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44192426"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45521676"
 ---
 # <a name="windows-forms-application-basics-visual-basic"></a>Windows 窗体应用程序基础知识 (Visual Basic)
 Visual Basic 的一个重要部分是能够创建用户的计算机本地运行的 Windows 窗体应用程序。 可以使用 Visual Studio 来创建使用 Windows 窗体的应用程序和用户界面。 Windows 窗体应用程序基于类从<xref:System.Windows.Forms>命名空间。  

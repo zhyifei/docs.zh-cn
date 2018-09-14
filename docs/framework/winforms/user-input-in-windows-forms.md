@@ -8,11 +8,11 @@ helpviewer_keywords:
 - keyboards [Windows Forms], keyboard input
 ms.assetid: 1486075f-1e06-4c9e-82c6-f948331db6d6
 ms.openlocfilehash: fef51f57dd3c14c91572041a72c805823d6019a3
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44205395"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45527624"
 ---
 # <a name="user-input-in-windows-forms"></a>Windows 窗体中的用户输入
 Windows 窗体包括一种用户输入模型，该模型基于在处理相关的 Windows 消息时所引发的事件。 本节中的主题提供了有关鼠标和键盘用户输入的信息，其中包括演示如何执行特定任务的代码示例。  

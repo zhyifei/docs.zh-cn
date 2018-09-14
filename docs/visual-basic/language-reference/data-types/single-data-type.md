@@ -21,11 +21,11 @@ helpviewer_keywords:
 - numbers [Visual Basic], floating point
 ms.assetid: 224a2795-4cd5-496c-8f7a-a4f05a06d45d
 ms.openlocfilehash: 98433c0f1d1008664bb994f3b43fe48a753a432c
-ms.sourcegitcommit: ba5c189bf44d44204a3e8838e59ec378a62d82f3
+ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "44705175"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45527757"
 ---
 # <a name="single-data-type-visual-basic"></a>Single 数据类型 (Visual Basic)
 保存有符号 IEEE 32 位 （4 字节） 单精度浮点数，值范围从-3.4028235E + 38 到-1.401298E-45 负值，从 1.401298E-45 到 3.4028235E + 38 对于正值。 单精度的数字存储一个实数的近似值。  

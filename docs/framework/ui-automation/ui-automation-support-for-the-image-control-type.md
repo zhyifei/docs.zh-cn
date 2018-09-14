@@ -10,11 +10,11 @@ author: Xansky
 ms.author: mhopkins
 manager: markl
 ms.openlocfilehash: cf6b6d7ebabc8e6cec52993c9a837f81f34669df
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.sourcegitcommit: ba5c189bf44d44204a3e8838e59ec378a62d82f3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44264371"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "44778495"
 ---
 # <a name="ui-automation-support-for-the-image-control-type"></a>UI 自动化对 Image 控件类型的支持
 > [!NOTE]

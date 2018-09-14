@@ -11,11 +11,11 @@ ms.assetid: cc42267f-bb7a-427a-845e-df97408528d4
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 6d8c445de44a69f6c0cb1eaefa0e59d682288318
-ms.sourcegitcommit: 67de6cb5dd66a19f2180ba7e4d7aecc697f8a963
+ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44336909"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45515861"
 ---
 # <a name="sealing"></a>密封
 面向对象的框架的功能之一是开发人员可以扩展和未预料到框架设计器的方式自定义它们。 这是设计的两个电源和可扩展的危险。 在设计您的框架，它，因此是非常重要时需要，仔细设计可扩展性以及限制可扩展性时这是很危险。  

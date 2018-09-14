@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: b96bed40-8946-4285-8fe4-88045ab854ed
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a8f806a1f1f7840f21e82d77d1b639b9318259e7
-ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
+ms.openlocfilehash: ab01005b6f73cf1dbae5d0e44df4440bf6a1d7e6
+ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/11/2018
-ms.locfileid: "44366119"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45527494"
 ---
 # <a name="walkthrough-my-first-wpf-desktop-application"></a>演练：我的第一个 WPF 桌面应用程序
 
@@ -42,9 +42,9 @@ ms.locfileid: "44366119"
 
 ## <a name="prerequisites"></a>系统必备
 
-- Visual Studio 2012 或更高版本
+- （这篇文章基于 Visual Studio 2017） 的 visual Studio 2012 或更高版本
 
-有关安装 Visual Studio 的最新版本的详细信息，请参阅[安装 Visual Studio](/visualstudio/install/install-visual-studio)。
+   有关安装 Visual Studio 的最新版本的详细信息，请参阅[安装 Visual Studio](/visualstudio/install/install-visual-studio)。
 
 ## <a name="create-the-application-project"></a>创建应用程序项目
 

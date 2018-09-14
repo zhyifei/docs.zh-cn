@@ -3,11 +3,11 @@ title: 在工作流解决方案中添加服务引用
 ms.date: 03/30/2017
 ms.assetid: 83574cf3-9803-49bc-837f-432936dc9c76
 ms.openlocfilehash: 9dcbf779d948f6d295c2a23f5a09efc5ac989cdd
-ms.sourcegitcommit: ba5c189bf44d44204a3e8838e59ec378a62d82f3
+ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "44707878"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45512785"
 ---
 # <a name="adding-a-service-reference-in-a-workflow-solution"></a>在工作流解决方案中添加服务引用
 

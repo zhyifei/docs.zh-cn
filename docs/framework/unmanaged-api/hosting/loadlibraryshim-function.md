@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 5fe1ba15f8a9f8ee79582158209049c1e502a61d
-ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
-ms.translationtype: MT
+ms.sourcegitcommit: ba5c189bf44d44204a3e8838e59ec378a62d82f3
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/11/2018
-ms.locfileid: "44352513"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "44756140"
 ---
 # <a name="loadlibraryshim-function"></a>LoadLibraryShim 函数
 加载指定的版本的.NET Framework 可再发行组件包中包含的 DLL。  

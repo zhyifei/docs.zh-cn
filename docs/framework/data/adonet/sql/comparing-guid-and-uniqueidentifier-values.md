@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: aababd75-2335-43e3-ace8-4b7ae84191a8
 ms.openlocfilehash: 7d982b73332a2629ccd32c409e0de6fe1ce6eb98
-ms.sourcegitcommit: ba5c189bf44d44204a3e8838e59ec378a62d82f3
+ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "44700513"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45514162"
 ---
 # <a name="comparing-guid-and-uniqueidentifier-values"></a>比较 GUID 和 uniqueidentifier 值
 SQL Server 中的全局唯一标识符 (GUID) 数据类型由 `uniqueidentifier` 数据类型表示，用于存储 16 字节的二进制值。 GUID 是一个二进制数字，其主要用途是作为标识符，该标识符在拥有位于许多地点的许多计算机的网络中必须是唯一的。 GUID 可以通过调用 Transact-SQL NEWID 函数生成，保证在全局是唯一的。 有关详细信息，请参阅[唯一标识符 (Transact SQL)](/sql/t-sql/data-types/uniqueidentifier-transact-sql)。  
