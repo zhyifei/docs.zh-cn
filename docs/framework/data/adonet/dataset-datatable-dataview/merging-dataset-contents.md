@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: e5e9309a-3ebb-4a9c-9d78-21c4e2bafc5b
 ms.openlocfilehash: 38d716552c4a52e01ef803ce197e4d588ed562c3
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45560865"
+ms.lasthandoff: 09/15/2018
+ms.locfileid: "45658790"
 ---
 # <a name="merging-dataset-contents"></a>合并数据集内容
 您可以使用 <xref:System.Data.DataSet.Merge%2A> 方法将 <xref:System.Data.DataSet>、<xref:System.Data.DataTable> 或 <xref:System.Data.DataRow> 数组的内容合并到现有的 `DataSet` 中。 若干因素和选项会影响将新数据合并到现有 `DataSet` 中的方式。  

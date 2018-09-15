@@ -3,11 +3,11 @@ title: 构造函数 (F#)
 description: '了解如何定义和使用在 F # 中的构造函数来创建和初始化类和结构对象。'
 ms.date: 05/16/2016
 ms.openlocfilehash: ff2463f890034cce0bbaa85d9a5c93e50427cd03
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45508429"
+ms.lasthandoff: 09/15/2018
+ms.locfileid: "45658628"
 ---
 # <a name="constructors"></a>构造函数
 
