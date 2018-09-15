@@ -3,11 +3,11 @@ title: 作为一类值的函数 (F#)
 description: '了解如何提升至最优状态在 F # 编程语言中的函数。'
 ms.date: 05/16/2016
 ms.openlocfilehash: 45b65ab2454a592d38c80fd367e7243635614727
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44195837"
+ms.lasthandoff: 09/15/2018
+ms.locfileid: "45648533"
 ---
 # <a name="functions-as-first-class-values"></a>作为一类值的函数
 

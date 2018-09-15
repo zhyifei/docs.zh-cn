@@ -3,11 +3,11 @@ title: '调用方信息 （F #）'
 description: 介绍如何使用调用方信息参数特性从一种方法获取调用方信息。
 ms.date: 04/25/2017
 ms.openlocfilehash: 0f2f4b16804d9156d234cc29d1f72ebe80a5b556
-ms.sourcegitcommit: ba5c189bf44d44204a3e8838e59ec378a62d82f3
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "44700893"
+ms.lasthandoff: 09/15/2018
+ms.locfileid: "45646202"
 ---
 # <a name="caller-information"></a>调用方信息
 

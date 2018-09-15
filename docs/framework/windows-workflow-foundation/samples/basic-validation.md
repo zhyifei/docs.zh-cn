@@ -3,11 +3,11 @@ title: 基本验证
 ms.date: 03/30/2017
 ms.assetid: ba1343cc-aaab-4ade-b0c0-1dd5063bf4ad
 ms.openlocfilehash: 74d99e2d426e9ea5701fad80418fdf019112cc9e
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45513854"
+ms.lasthandoff: 09/15/2018
+ms.locfileid: "45645809"
 ---
 # <a name="basic-validation"></a>基本验证
 此示例包含 `CreateProduct` 活动，该活动验证它的 `Cost` 参数是否小于或等于它的 `Price` 参数。  

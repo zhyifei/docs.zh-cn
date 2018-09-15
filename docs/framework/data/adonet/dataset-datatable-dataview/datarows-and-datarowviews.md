@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 8f5eec26-b809-4aca-8778-7e202356d856
 ms.openlocfilehash: 5bd7ebefc03dbe6b44a199ba3123414e7b282c90
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45568366"
+ms.lasthandoff: 09/15/2018
+ms.locfileid: "45646803"
 ---
 # <a name="datarows-and-datarowviews"></a>DataRow 和 DataRowView
 <xref:System.Data.DataView> 公开 <xref:System.Data.DataRowView> 对象的可枚举集合。 **DataRowView**对象将值公开为对象数组按名称或序号引用的基础表中的列编制索引。 您可以访问<xref:System.Data.DataRow>由公开**DataRowView**通过<xref:System.Data.DataRowView.Row%2A>属性**DataRowView**。  

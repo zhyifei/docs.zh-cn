@@ -3,11 +3,11 @@ title: '签名文件 （F #）'
 description: '了解如何使用 F # 签名文件来保存一组 F # 程序元素，如类型、 命名空间和模块的信息的公共签名。'
 ms.date: 06/15/2018
 ms.openlocfilehash: f0836aa7f638dc9e2b066b0f46bbb6c086347615
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45508416"
+ms.lasthandoff: 09/15/2018
+ms.locfileid: "45638530"
 ---
 # <a name="signatures"></a>签名
 
