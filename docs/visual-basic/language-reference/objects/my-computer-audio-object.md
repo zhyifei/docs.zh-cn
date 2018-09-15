@@ -6,26 +6,26 @@ helpviewer_keywords:
 - My.Computer.Audio object
 ms.assetid: ab5bdd04-b0ce-48b2-91c5-6404ceca31d0
 ms.openlocfilehash: 805e2a87e586e96048dd40033e7d80a74dcc94e9
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45583789"
+ms.lasthandoff: 09/15/2018
+ms.locfileid: "45641204"
 ---
-# <a name="mycomputeraudio-object"></a><span data-ttu-id="25439-102">My.Computer.Audio 对象</span><span class="sxs-lookup"><span data-stu-id="25439-102">My.Computer.Audio Object</span></span>
-<span data-ttu-id="25439-103">提供了用于播放音频的方法。</span><span class="sxs-lookup"><span data-stu-id="25439-103">Provides methods for playing sounds.</span></span>  
+# <a name="mycomputeraudio-object"></a><span data-ttu-id="04030-102">My.Computer.Audio 对象</span><span class="sxs-lookup"><span data-stu-id="04030-102">My.Computer.Audio Object</span></span>
+<span data-ttu-id="04030-103">提供了用于播放音频的方法。</span><span class="sxs-lookup"><span data-stu-id="04030-103">Provides methods for playing sounds.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="25439-104">备注</span><span class="sxs-lookup"><span data-stu-id="25439-104">Remarks</span></span>  
- <span data-ttu-id="25439-105">有关方法和属性的信息`My.Computer.Audio`对象，请参阅<xref:Microsoft.VisualBasic.Devices.Audio>。</span><span class="sxs-lookup"><span data-stu-id="25439-105">For information about the methods and properties of the `My.Computer.Audio` object, see <xref:Microsoft.VisualBasic.Devices.Audio>.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="04030-104">备注</span><span class="sxs-lookup"><span data-stu-id="04030-104">Remarks</span></span>  
+ <span data-ttu-id="04030-105">有关方法和属性的信息`My.Computer.Audio`对象，请参阅<xref:Microsoft.VisualBasic.Devices.Audio>。</span><span class="sxs-lookup"><span data-stu-id="04030-105">For information about the methods and properties of the `My.Computer.Audio` object, see <xref:Microsoft.VisualBasic.Devices.Audio>.</span></span>  
   
- <span data-ttu-id="25439-106">有关详细信息，请参阅[播放声音](../../../visual-basic/developing-apps/programming/computer-resources/playing-sounds.md)。</span><span class="sxs-lookup"><span data-stu-id="25439-106">For more information, see [Playing Sounds](../../../visual-basic/developing-apps/programming/computer-resources/playing-sounds.md).</span></span>  
+ <span data-ttu-id="04030-106">有关详细信息，请参阅[播放声音](../../../visual-basic/developing-apps/programming/computer-resources/playing-sounds.md)。</span><span class="sxs-lookup"><span data-stu-id="04030-106">For more information, see [Playing Sounds](../../../visual-basic/developing-apps/programming/computer-resources/playing-sounds.md).</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="25439-107">要求</span><span class="sxs-lookup"><span data-stu-id="25439-107">Requirements</span></span>  
- <span data-ttu-id="25439-108">**Namespace**：<xref:Microsoft.VisualBasic.Devices></span><span class="sxs-lookup"><span data-stu-id="25439-108">**Namespace:** <xref:Microsoft.VisualBasic.Devices></span></span>  
+## <a name="requirements"></a><span data-ttu-id="04030-107">要求</span><span class="sxs-lookup"><span data-stu-id="04030-107">Requirements</span></span>  
+ <span data-ttu-id="04030-108">**Namespace**：<xref:Microsoft.VisualBasic.Devices></span><span class="sxs-lookup"><span data-stu-id="04030-108">**Namespace:** <xref:Microsoft.VisualBasic.Devices></span></span>  
   
- <span data-ttu-id="25439-109">**类：** <xref:Microsoft.VisualBasic.Devices.Audio></span><span class="sxs-lookup"><span data-stu-id="25439-109">**Class:** <xref:Microsoft.VisualBasic.Devices.Audio></span></span>  
+ <span data-ttu-id="04030-109">**类：** <xref:Microsoft.VisualBasic.Devices.Audio></span><span class="sxs-lookup"><span data-stu-id="04030-109">**Class:** <xref:Microsoft.VisualBasic.Devices.Audio></span></span>  
   
- <span data-ttu-id="25439-110">**程序集：** Visual Basic 运行库 （在 Microsoft.VisualBasic.dll 中)</span><span class="sxs-lookup"><span data-stu-id="25439-110">**Assembly:** Visual Basic Runtime Library (in Microsoft.VisualBasic.dll)</span></span>  
+ <span data-ttu-id="04030-110">**程序集：** Visual Basic 运行库 （在 Microsoft.VisualBasic.dll 中)</span><span class="sxs-lookup"><span data-stu-id="04030-110">**Assembly:** Visual Basic Runtime Library (in Microsoft.VisualBasic.dll)</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="25439-111">请参阅</span><span class="sxs-lookup"><span data-stu-id="25439-111">See Also</span></span>  
- [<span data-ttu-id="25439-112">My.Computer 对象</span><span class="sxs-lookup"><span data-stu-id="25439-112">My.Computer Object</span></span>](../../../visual-basic/language-reference/objects/my-computer-object.md)
+## <a name="see-also"></a><span data-ttu-id="04030-111">请参阅</span><span class="sxs-lookup"><span data-stu-id="04030-111">See Also</span></span>  
+ [<span data-ttu-id="04030-112">My.Computer 对象</span><span class="sxs-lookup"><span data-stu-id="04030-112">My.Computer Object</span></span>](../../../visual-basic/language-reference/objects/my-computer-object.md)
