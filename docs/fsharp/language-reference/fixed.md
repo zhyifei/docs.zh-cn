@@ -3,11 +3,11 @@ title: 'Fixed 的关键字 （F #）'
 description: '了解如何可以固定到堆栈上的本地，以防止使用 F # 集合 fixed 关键字。'
 ms.date: 04/24/2017
 ms.openlocfilehash: 1bf1b2ad67d2dd7f854e569cfca7c06e8aec7f4c
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
-ms.translationtype: HT
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 09/14/2018
-ms.locfileid: "45560368"
+ms.locfileid: "45624504"
 ---
 # <a name="the-fixed-keyword"></a>Fixed 的关键字
 

@@ -3,11 +3,11 @@ title: 可变类型 (F#)
 description: '了解如何使用 F # 可变类型批注，这表示参数、 变量或值具有与指定的类型兼容的类型。'
 ms.date: 05/16/2016
 ms.openlocfilehash: b6c97c3cc19f15b2c8db74b2c55660a16b2858f7
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
-ms.translationtype: HT
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 09/14/2018
-ms.locfileid: "45568808"
+ms.locfileid: "45615555"
 ---
 # <a name="flexible-types"></a>可变类型
 
