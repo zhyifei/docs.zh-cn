@@ -3,27 +3,27 @@ title: 客户端
 ms.date: 03/30/2017
 ms.assetid: cce50025-0318-4a5e-9ce8-c67feab83b06
 ms.openlocfilehash: 844412b211fe6187e3475fc71b9c3ccca8dd178f
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45560815"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45676462"
 ---
-# <a name="clients"></a><span data-ttu-id="2e139-102">客户端</span><span class="sxs-lookup"><span data-stu-id="2e139-102">Clients</span></span>
-<span data-ttu-id="2e139-103">在本部分中的主题介绍客户端体系结构，如何访问 Windows Communication Foundation (WCF) 服务、 如何配置 WCF 客户端和 WCF 客户端的一些安全注意事项。</span><span class="sxs-lookup"><span data-stu-id="2e139-103">The topics in this section cover the client architecture, how to access a Windows Communication Foundation (WCF) service, how to configure a WCF client, and some security consideration for WCF clients.</span></span>  
+# <a name="clients"></a><span data-ttu-id="c89c9-102">客户端</span><span class="sxs-lookup"><span data-stu-id="c89c9-102">Clients</span></span>
+<span data-ttu-id="c89c9-103">在本部分中的主题介绍客户端体系结构，如何访问 Windows Communication Foundation (WCF) 服务、 如何配置 WCF 客户端和 WCF 客户端的一些安全注意事项。</span><span class="sxs-lookup"><span data-stu-id="c89c9-103">The topics in this section cover the client architecture, how to access a Windows Communication Foundation (WCF) service, how to configure a WCF client, and some security consideration for WCF clients.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="2e139-104">本节内容</span><span class="sxs-lookup"><span data-stu-id="2e139-104">In This Section</span></span>  
- [<span data-ttu-id="2e139-105">WCF 客户端体系结构</span><span class="sxs-lookup"><span data-stu-id="2e139-105">WCF Client Architecture</span></span>](../../../../docs/framework/wcf/feature-details/client-architecture.md)  
- <span data-ttu-id="2e139-106">介绍 WCF 客户端体系结构。</span><span class="sxs-lookup"><span data-stu-id="2e139-106">Describes the WCF client architecture.</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="c89c9-104">本节内容</span><span class="sxs-lookup"><span data-stu-id="c89c9-104">In This Section</span></span>  
+ [<span data-ttu-id="c89c9-105">WCF 客户端体系结构</span><span class="sxs-lookup"><span data-stu-id="c89c9-105">WCF Client Architecture</span></span>](../../../../docs/framework/wcf/feature-details/client-architecture.md)  
+ <span data-ttu-id="c89c9-106">介绍 WCF 客户端体系结构。</span><span class="sxs-lookup"><span data-stu-id="c89c9-106">Describes the WCF client architecture.</span></span>  
   
- [<span data-ttu-id="2e139-107">使用 WCF 客户端访问服务</span><span class="sxs-lookup"><span data-stu-id="2e139-107">Accessing Services Using a WCF Client</span></span>](../../../../docs/framework/wcf/feature-details/accessing-services-using-a-client.md)  
- <span data-ttu-id="2e139-108">介绍如何访问 WCF 服务。</span><span class="sxs-lookup"><span data-stu-id="2e139-108">Describes how to access a WCF service.</span></span>  
+ [<span data-ttu-id="c89c9-107">使用 WCF 客户端访问服务</span><span class="sxs-lookup"><span data-stu-id="c89c9-107">Accessing Services Using a WCF Client</span></span>](../../../../docs/framework/wcf/feature-details/accessing-services-using-a-client.md)  
+ <span data-ttu-id="c89c9-108">介绍如何访问 WCF 服务。</span><span class="sxs-lookup"><span data-stu-id="c89c9-108">Describes how to access a WCF service.</span></span>  
   
- [<span data-ttu-id="2e139-109">WCF 客户端配置</span><span class="sxs-lookup"><span data-stu-id="2e139-109">WCF Client Configuration</span></span>](../../../../docs/framework/wcf/feature-details/client-configuration.md)  
- <span data-ttu-id="2e139-110">介绍如何配置 WCF 客户端。</span><span class="sxs-lookup"><span data-stu-id="2e139-110">Describes how to configure a WCF client.</span></span>  
+ [<span data-ttu-id="c89c9-109">WCF 客户端配置</span><span class="sxs-lookup"><span data-stu-id="c89c9-109">WCF Client Configuration</span></span>](../../../../docs/framework/wcf/feature-details/client-configuration.md)  
+ <span data-ttu-id="c89c9-110">介绍如何配置 WCF 客户端。</span><span class="sxs-lookup"><span data-stu-id="c89c9-110">Describes how to configure a WCF client.</span></span>  
   
- [<span data-ttu-id="2e139-111">保护客户端</span><span class="sxs-lookup"><span data-stu-id="2e139-111">Securing Clients</span></span>](../../../../docs/framework/wcf/securing-clients.md)  
- <span data-ttu-id="2e139-112">介绍 WCF 客户端的一些安全注意事项。</span><span class="sxs-lookup"><span data-stu-id="2e139-112">Describes some security considerations for WCF clients.</span></span>  
+ [<span data-ttu-id="c89c9-111">保护客户端</span><span class="sxs-lookup"><span data-stu-id="c89c9-111">Securing Clients</span></span>](../../../../docs/framework/wcf/securing-clients.md)  
+ <span data-ttu-id="c89c9-112">介绍 WCF 客户端的一些安全注意事项。</span><span class="sxs-lookup"><span data-stu-id="c89c9-112">Describes some security considerations for WCF clients.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="2e139-113">请参阅</span><span class="sxs-lookup"><span data-stu-id="2e139-113">See Also</span></span>  
- [<span data-ttu-id="2e139-114">客户端示例</span><span class="sxs-lookup"><span data-stu-id="2e139-114">Client Samples</span></span>](https://msdn.microsoft.com/library/849fc452-8718-4d4e-ba57-905eed943f63)
+## <a name="see-also"></a><span data-ttu-id="c89c9-113">请参阅</span><span class="sxs-lookup"><span data-stu-id="c89c9-113">See Also</span></span>  
+ [<span data-ttu-id="c89c9-114">客户端示例</span><span class="sxs-lookup"><span data-stu-id="c89c9-114">Client Samples</span></span>](https://msdn.microsoft.com/library/849fc452-8718-4d4e-ba57-905eed943f63)
