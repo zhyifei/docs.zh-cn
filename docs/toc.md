@@ -82,7 +82,7 @@
 ### [借助 Visual Studio for Mac 在 macOS 上开始使用 .NET Core](core/tutorials/using-on-mac-vs.md)
 ### [使用 Visual Studio for Mac 在 macOS 上构建完整的 .NET Core 解决方案](core/tutorials/using-on-mac-vs-full-solution.md)
 ### [使用 CLI 工具实现 .NET Core 入门](core/tutorials/using-with-xplat-cli.md)
-#### [使用 .NET Core 命令行组织和测试项目](core/tutorials/testing-with-cli.md)
+### [使用 .NET Core 命令行组织和测试项目](core/tutorials/testing-with-cli.md)
 ### [使用跨平台工具开发库](core/tutorials/libraries.md)
 ### [开发 ASP.NET Core 应用程序](core/tutorials/aspnet-core.md)
 ### [如何管理 .NET Core 1.0 的包依赖项版本](core/tutorials/managing-package-dependency-versions.md)
