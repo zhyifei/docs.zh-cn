@@ -3,11 +3,11 @@ title: do 绑定 (F#)
 description: '了解如何将 F # do 绑定用来执行代码而无需定义的函数或值。'
 ms.date: 05/16/2016
 ms.openlocfilehash: 78dbf8da0fe40b5af566ad98693df1109eede7e4
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45515842"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45668686"
 ---
 # <a name="do-bindings"></a>do 绑定
 

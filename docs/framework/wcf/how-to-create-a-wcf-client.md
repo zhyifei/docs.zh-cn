@@ -5,12 +5,12 @@ helpviewer_keywords:
 - clients [WCF], running
 - WCF clients [WCF], running
 ms.assetid: a67884cc-1c4b-416b-8c96-5c954099f19f
-ms.openlocfilehash: 9e6d75bf8911a3c36e63b3bc108faae823434d1d
-ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
+ms.openlocfilehash: e5655a6fdc06e69d801cb38b7ee7412450f0d34c
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "44509994"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45674138"
 ---
 # <a name="how-to-create-a-windows-communication-foundation-client"></a>如何：创建 Windows Communication Foundation 客户端
 
@@ -36,18 +36,18 @@ ms.locfileid: "44509994"
 
 3.  将对 System.ServiceModel 的引用添加到 GettingStartedClient 项目中，右键单击**引用**在解决方案资源管理器中，选择 GettingStartedClient 项目下的文件夹**添加**引用。 在“添加引用”对话框中，选择对话框左侧的“框架”。 请在“搜索程序集”文本框中，键入 `System.ServiceModel`。 在对话框的中心部分，选择“System.ServiceModel”，单击“添加”按钮，然后单击“关闭”按钮。 通过单击保存解决方案**全部保存**主菜单下的按钮。
 
-4.  接下来，您添加到计算器服务的服务引用。 在此之前，必须先启动 GettingStartedHost 控制台应用程序。 主机运行后，右键单击**引用**GettingStartedClient 项目下的文件夹**解决方案资源管理器**，然后选择**添加** >  **服务引用**。 以下 URL 中的地址框中的类型**添加服务引用**对话框： [ http://localhost:8000/ServiceModelSamples/Service ](http://localhost:8000/ServiceModelSamples/Service)然后单击**转**按钮。 CalculatorService 随后应显示在服务列表框中。 双击 CalculatorService，它将展开并显示由该服务实现的服务协定。 保留默认命名空间，并且单击**确定**按钮。
+4.  接下来，您添加到计算器服务的服务引用。 在此之前，必须先启动 GettingStartedHost 控制台应用程序。 主机运行后，右键单击**引用**GettingStartedClient 项目下的文件夹**解决方案资源管理器**，然后选择**添加** >  **服务引用**。 以下 URL 中的地址框中的类型**添加服务引用**对话框： [ http://localhost:8000/GettingStartedClient/Service ](http://localhost:8000/GettingStartedClient/Service)然后单击**转**按钮。 CalculatorService 随后应显示在服务列表框中。 双击 CalculatorService，它将展开并显示由该服务实现的服务协定。 保留默认命名空间，并且单击**确定**按钮。
 
      使用 Visual Studio 将引用添加到服务时，解决方案资源管理器中 GettingStartedClient 项目下的“服务引用”文件夹下将显示一个新项。  如果您使用[ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)工具将生成一个源代码文件和 app.config 文件。
 
      您还可以使用命令行工具[ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)使用适当的开关来创建客户端代码。 下面的示例生成服务的代码文件和配置文件。 第一个示例显示如何在 VB 中生成代理，第二个示例显示如何在 C# 中生成代理：
 
     ```
-    svcutil.exe /language:vb /out:generatedProxy.vb /config:app.config http://localhost:8000/ServiceModelSamples/service
+    svcutil.exe /language:vb /out:generatedProxy.vb /config:app.config http://localhost:8000/GettingStartedClient/service
     ```
 
     ```csharp
-    svcutil.exe /language:cs /out:generatedProxy.cs /config:app.config http://localhost:8000/ServiceModelSamples/service
+    svcutil.exe /language:cs /out:generatedProxy.cs /config:app.config http://localhost:8000/GettingStartedClient/service
     ```
 
  现在，您已创建了客户端应用程序将用于调用计算器服务的代理。 转到序列中下一个主题：[如何： 配置客户端](../../../docs/framework/wcf/how-to-configure-a-basic-wcf-client.md)

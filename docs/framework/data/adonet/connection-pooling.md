@@ -3,11 +3,11 @@ title: 连接池
 ms.date: 03/30/2017
 ms.assetid: 955c057f-aea8-4ba8-aa6d-e3dfa18ba8d5
 ms.openlocfilehash: 28a1036f377326b5f1fdfafa1eaffd8a47bc05bc
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45533407"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45678503"
 ---
 # <a name="connection-pooling"></a>连接池
 连接到数据源可能需要很长时间。 若要打开连接的成本降至最低，ADO.NET 使用名为优化技术*连接池*，其中反复打开和关闭连接的成本降至最低。 .NET Framework 数据提供程序处理连接池的方式有所不同。  

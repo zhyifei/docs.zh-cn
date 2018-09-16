@@ -3,11 +3,11 @@ title: 代码引用 (F#)
 description: '了解有关 F # 的代码引号，一种语言功能，可用于生成和以编程方式使用 F # 代码表达式。'
 ms.date: 05/16/2016
 ms.openlocfilehash: 27e9cf1d99e2b5955cc6359653fc87bdbe824cc7
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45516339"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45666715"
 ---
 # <a name="code-quotations"></a>代码引用
 
