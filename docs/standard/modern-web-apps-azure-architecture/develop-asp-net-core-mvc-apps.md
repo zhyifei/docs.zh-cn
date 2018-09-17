@@ -104,7 +104,7 @@ public class Startup
 
 Startup 类很有意思，因为它没有显式的类型要求。 它不继承自特殊的 Startup 基类，也不实现任何特定的接口。 可为其提供构造函数，也可不提供，并且可以为构造函数指定任意所需数量的参数。 为应用程序配置的 Web 主机启动时，该主机将调用你命令其使用的 Startup 类，并使用依赖注入来填充 Startup 类所需的任何依赖关系。 当然，如果 ASP.NET Core 使用的服务容器中未配置请求的参数，则会引发异常，但只要是粘附到容器知晓的依赖项，则可以请求任何所需内容。
 
-依赖关系注入从一开始创建 Startup 实例时就内置在 ASP.NET Core 应用中。 它不会为 Startup 类在此停留。 也可以在 Configure 方法中请求依赖关系：
+依赖注入从一开始创建 Startup 实例时就内置在 ASP.NET Core 应用中。 它的作用不仅限于 Startup 类。 也可以在 Configure 方法中请求依赖关系：
 
 ```csharp
 public void Configure(IApplicationBuilder app,
@@ -115,22 +115,22 @@ public void Configure(IApplicationBuilder app,
 }
 ```
 
-ConfigureServices 方法是此行为的例外情况，它必须使用 IServiceCollection 类型的一个参数。 实际上它并不需要支持依赖关系注入，因为一方面它负责向服务容器添加对象，另一方面它有权通过 IServiceCollection 参数访问所有当前已配置的服务。 因此在 Startup 类的每个部分均可使用 ASP.NET Core 服务集合中定义的依赖关系，方法是以参数形式请求所需服务，也可通过在 ConfigureServices 中使用 IServiceCollection。
+ConfigureServices 方法是此行为的例外情况，它必须且只能使用 IServiceCollection 类型的一个参数。 实际上它并不需要支持依赖注入，因为一方面它负责向服务容器添加对象，另一方面它有权通过 IServiceCollection 参数访问所有当前已配置的服务。 因此在 Startup 类的每个部分均可使用 ASP.NET Core 服务集合中定义的依赖关系，方法是以参数形式请求所需服务，或在 ConfigureServices 中使用 IServiceCollection。
 
 > [!NOTE]
 > 如果需确保某些服务可供 Startup 类使用，可以使用 WebHostBuilder 及其 ConfigureServices 方法对其进行配置。
 
-Startup 类是一个范例，应照此构建 ASP.NET Core 应用程序的其他部分，从控制器到中间件到筛选器再到自己的服务。 在任何情况下都应遵守[显式依赖关系原则](https://deviq.com/explicit-dependencies-principle/)，请求依赖关系，而不要直接创建依赖关系，在整个应用程序中充分利用依赖关系注入。 注意对实现进行直接实例化的位置和方式，特别是使用基础结构或会产生负面影响的服务和对象。 相较于对特定实现类型的引用进行硬编码，最好是使用在应用程序核心中定义并作为参数传递的抽象元素。
+Startup 类是一个范例，应照此构建 ASP.NET Core 应用程序的其他部分 - 从控制器到中间件到过滤器再到自己的服务。 在任何情况下都应遵守[显式依赖关系原则](https://deviq.com/explicit-dependencies-principle/)，应请求依赖关系，而非直接创建依赖关系，并在整个应用程序中充分利用依赖注入。 注意对实现进行直接实例化的位置和方式，特别是使用基础结构或会产生负面影响的服务和对象。 相较于对针对特定实现类型的引用进行硬编码，最好是使用在应用程序核心中定义并作为参数传递的抽象元素。
 
 ## <a name="structuring-the-application"></a>构建应用程序
 
-整体式应用程序通常只有一个入口点。 对 ASP.NET Core Web 应用程序而言，入口点是 ASP.NET Core Web 项目。 但是，这并不意味着解决方案只应包含一个项目。 按照分离关注点的原则，将应用程序分解到不同层中非常有用。 分解到不同层后，超越文件夹来分离项目很有好处，可帮助实现更好的封装。 通过 ASP.NET Core 应用程序实现这些目标的最佳方法是第 5 章中所述的干净体系结构的变体。 按照此方法，应用程序的解决方案将包含 UI、基础结构和 ApplicationCore 各自单独的库。
+整体式应用程序通常只有一个入口点。 就 ASP.NET Core Web 应用程序而言，入口点是 ASP.NET Core Web 项目。 但是，这并不意味着解决方案只应包含一个项目。 按照分离关注点的原则，将应用程序分解到不同层中会非常有用。 分解到不同层，有助于脱离文件夹的局限来分离项目，可帮助实现更好的封装。 通过 ASP.NET Core 应用程序实现这些目标的最佳方法是第 5 章中所述的整洁架构的变体。 按照此方法，应用程序的解决方案将由分别用于 UI、基础结构和 ApplicationCore 的库构成。
 
 除这些项目之外，还包含一个单独的测试项目（第 9 章中对测试进行介绍）。
 
 应用程序的对象模型和接口应放在 ApplicationCore 项目中。 此项目应具有尽可能少的依赖关系，可供解决方案中的其他项目引用。 需要保留的业务实体以及不直接依赖基础结构的服务在 ApplicationCore 项目中进行定义。
 
-实现的详细信息（例如如何执行保留或如何将通知发送给用户）保存在 Infrastructure 项目中。 此项目将引用特定于实现的包，例如 Entity Framework Core，但不应在此项目之外泄露这些实现的详细信息。 基础结构服务和存储库应实现在 ApplicationCore 项目中定义的接口，其持久性实现负责检索和存储在 ApplicationCore 中定义的实体。
+实现的细节（例如如何执行保留或如何将通知发送给用户）保存在 Infrastructure 项目中。 此项目将引用特定于实现的包，例如 Entity Framework Core，但不应在此项目之外公开这些实现的详细信息。 基础结构服务和存储库应实现 ApplicationCore 项目中定义的接口，其持久性实现负责检索和存储 ApplicationCore 中定义的实体。
 
 ASP.NET Core UI 项目负责所有 UI 级问题，但不得包含业务逻辑或基础结构详细信息。 实际上，最理想的情况是它甚至没有对 Infrastructure 项目的依赖关系，这样可确保不意外引入两个项目之间的依赖关系。 第三方 DI 容器（例如 StructureMap）可用于定于每个项目中 Registry 类中的 DI 规则，从而帮助实现这一目的。
 
@@ -207,7 +207,7 @@ ASP.NET Core MVC 还使用约定来确定视图的位置。 可以使用自定�
 
 ### <a name="cross-cutting-concerns"></a>横切关注点
 
-随着应用程序的发展，将横切关注点分解出来，以消除重复和保持一致性变得越来越重要。 ASP.NET Core 应用程序中的横切关注点非常多，例如身份验证、模型验证规则、输出缓存和错误处理等等。 ASP.NET Core MVC [筛选器](/aspnet/core/mvc/controllers/filters)允许在请求处理管道中的特定步骤之前或之后运行代码。 例如，可以在模型绑定之前/之后、某个操作之前/之后或某个操作结果之前/之后运行筛选器。 还可以使用授权筛选器来控制对管道其余部分的访问权限。 图 7-2 显示了请求执行如何流经筛选器（如果配置）。
+随着应用程序的发展，将横切关注点分解出来以消除重复和保持一致性变得越来越重要。 ASP.NET Core 应用程序中的横切关注点非常多，例如身份验证、模型验证规则、输出缓存和错误处理等。 ASP.NET Core MVC [过滤器](/aspnet/core/mvc/controllers/filters)允许在执行请求处理管道中的特定步骤之前或之后运行代码。 例如，可以在模型绑定之前/之后、某个操作之前/之后或某个操作结果之前/之后运行过滤器。 还可以使用授权过滤器来控制对管道其余部分的访问权限。 图 7-2 显示了请求执行操作是如何通过一系列过滤器（如果已配置）的。
 
 ![请求通过授权过滤器、资源过滤器、模型绑定、操作过滤器、操作执行和操作结果转换、异常过滤器、结果过滤器和结果执行进行处理。 返回时，请求仅由结果过滤器和资源过滤器进行处理，变成发送到客户端的响应。](./media/image7-2.png)
 
@@ -228,7 +228,7 @@ public class AccountController : Controller
 
 第一个方法 Login 使用 AllowAnonymous 过滤器（属性）来覆盖在控制器级别设置的 Authorize 过滤器。 ForgotPassword 操作（以及类中没有 AllowAnonymous 属性的任何其他操作）需要经过身份验证的请求。
 
-筛选器可作为 API 的常见错误处理策略，用于消除重复。 例如，如果请求引用的关键字不存在，典型的 API 策略会返回 NotFound 响应，如果模型验证失败，则返回 BadRequest 响应。 下面的示例通过操作演示了这两种策略：
+过滤器可作为 API 的常见错误处理策略，用于消除重复。 例如，如果请求引用的关键字不存在，典型的 API 策略会返回 NotFound 响应，如果模型验证失败，则返回 BadRequest 响应。 下面的示例演示了这两种策略：
 
 ```csharp
 [HttpPut("{id}")]
@@ -248,7 +248,7 @@ public async Task<IActionResult> Put(int id, [FromBody]Author author)
 }
 ```
 
-切勿让操作方法因为类似于此的条件代码变得杂乱。 而应该将策略放在可按需应用的筛选器中。 此示例中，无论何时只要向 API 发送命令就会进行模型验证检查，可使用以下属性替换模型验证检查：
+切勿让操作方法因类似于此的条件代码变得杂乱。 应将策略放在可按需应用的过滤器中。 此示例中，可使用以下属性替换（每当向 API 发送命令就会触发的）模型验证检查：
 
 ```csharp
 public class ValidateModelAttribute : ActionFilterAttribute
@@ -263,7 +263,7 @@ public class ValidateModelAttribute : ActionFilterAttribute
 }
 ```
 
-同样，可以使用筛选器来检查某条记录是否存在，并在执行操作前返回 404，而无需在操作中执行这些检查。 将常见约定提取出来，并在整理解决方案时将基础结构代码和业务逻辑与 UI 分离开，这样 MVC 操作方法会变得极其精简：
+同样，可以使用过滤器来检查某条记录是否存在，并在执行操作前返回 404，而无需在操作中执行这些检查。 在将常见约定提取出来、整理解决方案、将基础结构代码和业务逻辑与 UI 分离开后，MVC 操作方法会变得极其精简：
 
 ```csharp
 [HttpPut("{id}")]
@@ -275,7 +275,7 @@ public async Task<IActionResult> Put(int id, [FromBody]Author author)
 }
 ```
 
-可在 MSDN 文章[实际的 ASP.NET Core MVC 筛选器](https://msdn.microsoft.com/magazine/mt767699.aspx)中了解有关实现筛选器的详细信息并下载工作示例。
+可阅读 MSDN 文章[真实的 ASP.NET Core MVC 过滤器](https://msdn.microsoft.com/magazine/mt767699.aspx)，解有关实现过滤器的详细信息并下载工作示例。
 
 > ### <a name="references--structuring-applications"></a>参考 - 构建应用程序
 >
@@ -285,7 +285,7 @@ public async Task<IActionResult> Put(int id, [FromBody]Author author)
  > <https://msdn.microsoft.com/magazine/mt763233.aspx>
 > - **过滤器**  
 >   <https://docs.microsoft.com/aspnet/core/mvc/controllers/filters>
-> - **MSDN - 实际的 ASP.NET Core MVC 筛选器**  
+> - **MSDN - 真实的 ASP.NET Core MVC 过滤器**  
 >   <https://msdn.microsoft.com/magazine/mt767699.aspx>
 
 ## <a name="security"></a>安全性
@@ -476,11 +476,11 @@ public class Program
 
 - [领域事件](https://martinfowler.com/eaaDev/DomainEvent.html)，表示系统中发生的与系统其他部分相关的事件。
 
-请注意，DDD 域模型应封装模型中的复杂行为。 尤其是实体，它不应该仅仅是属性的集合。 域模型缺少行为，并且仅表示系统状态时，就是所谓的[贫乏性模型](https://deviq.com/anemic-model/)，DDD 中应避免此类模型。
+请注意，DDD 领域模型应在模型中包含复杂行为。 尤其是实体，它不应该仅仅是属性的集合。 如果领域模型缺少行为，并且仅表示系统状态时，就是所谓的[贫血模型](https://deviq.com/anemic-model/)，DDD 中应避免这种情况。
 
 除这些模型类型之外，DDD 通常还采用多种模式：
 
-- [存储库](https://deviq.com/repository-pattern/)，用于提取持久保留详细信息。
+- [存储库](https://deviq.com/repository-pattern/)，用于抽象化持久性细节
 
 - [工厂](https://en.wikipedia.org/wiki/Factory_method_pattern)，用于封装复杂对象创建。
 
@@ -496,11 +496,11 @@ DDD 还建议使用之前介绍过的整洁架构，以实现松散耦合、封�
 
 ### <a name="when-should-you-apply-ddd"></a>该何时使用 DDD
 
-DDD 非常适合业务（不仅仅是技术）非常复杂的大型应用程序。 这种应用程序需要域专家的知识。 域模型本身应包括有某种意义的行为，表示业务规则和交互，而不仅仅是存储和检索数据存储中各种记录的当前状态。
+DDD 非常适合业务（不仅仅是技术）非常复杂的大型应用程序。 这种应用程序需要借助领域专家的知识。 领域模型本身应包含有某种意义的行为，应体现出业务规则和交互，而不仅仅是存储和检索数据存储中各种记录的当前状态。
 
 ### <a name="when-shouldnt-you-apply-ddd"></a>何时不该使用 DDD
 
-DDD 需要在建模、体系结构和通信方面进行投资，这对于较小型的应用程序或本质只是 CRUD（创建/读取/更新/删除）的应用程序来说可能并不值得。 如果选择采用 DDD 处理应用程序，但发现域中有一个没有任何行为的贫乏性模型，则可能需要重新考虑处理方法。 可能是该应用程序不需要 DDD，也可能是你需要别人帮助你重构应用程序，将业务逻辑封装在域模型中，而不是数据库或用户界面中。
+DDD 需要在建模、体系结构和通信方面进行投资，这对于较小型的应用程序或本质只是 CRUD（创建/读取/更新/删除）的应用程序来说可能并不值得。 如果选择为应用程序采用 DDD，但发现领域中有一个不含任何行为的贫血模型，则可能需要重新考虑要采用的方法。 可能该应用程序并不需要采用 DDD，或者可能需要别人帮助重构应用程序以将业务逻辑封装在领域模型中，而不是数据库或用户界面中。
 
 可以使用混合方法，只对应用程序中的事务性区域或比较复杂的区域使用 DDD，而不对应用程序中比较简单的 CRUD 或只读部分使用 DDD。 例如，如果是为显示报表或将仪表板数据可视化而查询数据，则无需具有聚合约束。 使用单独的、更简单的读取模型处理这类要求是完全可以接受的。
 
