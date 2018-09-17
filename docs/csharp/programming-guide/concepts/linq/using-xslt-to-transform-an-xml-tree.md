@@ -3,16 +3,16 @@ title: 使用 XSLT 转换 XML 树 (C#)
 ms.date: 07/20/2015
 ms.assetid: 373a2699-d4c5-471b-9bda-c1f0ab73b477
 ms.openlocfilehash: 3fa850c0f09404da49b2963e980d15e1ed54316f
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44276469"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45646712"
 ---
-# <a name="using-xslt-to-transform-an-xml-tree-c"></a><span data-ttu-id="0484c-102">使用 XSLT 转换 XML 树 (C#)</span><span class="sxs-lookup"><span data-stu-id="0484c-102">Using XSLT to Transform an XML Tree (C#)</span></span>
-<span data-ttu-id="0484c-103">可以创建 XML 树，从 XML 树创建 <xref:System.Xml.XmlReader>，创建新文档，然后创建 <xref:System.Xml.XmlWriter>，以写入新文档。</span><span class="sxs-lookup"><span data-stu-id="0484c-103">You can create an XML tree, create an <xref:System.Xml.XmlReader> from the XML tree, create a new document, and create an <xref:System.Xml.XmlWriter> that will write into the new document.</span></span> <span data-ttu-id="0484c-104">然后，您可以调用 XSLT 转换，并可以将 <xref:System.Xml.XmlReader> 和 <xref:System.Xml.XmlWriter> 传递到转换中。</span><span class="sxs-lookup"><span data-stu-id="0484c-104">Then, you can invoke the XSLT transformation, passing the <xref:System.Xml.XmlReader> and <xref:System.Xml.XmlWriter> to the transformation.</span></span> <span data-ttu-id="0484c-105">在转换成功完成后，使用转换的结果，填充新的 XML 树。</span><span class="sxs-lookup"><span data-stu-id="0484c-105">After the transformation successfully completes, the new XML tree is populated with the results of the transform.</span></span>  
+# <a name="using-xslt-to-transform-an-xml-tree-c"></a><span data-ttu-id="7fc70-102">使用 XSLT 转换 XML 树 (C#)</span><span class="sxs-lookup"><span data-stu-id="7fc70-102">Using XSLT to Transform an XML Tree (C#)</span></span>
+<span data-ttu-id="7fc70-103">可以创建 XML 树，从 XML 树创建 <xref:System.Xml.XmlReader>，创建新文档，然后创建 <xref:System.Xml.XmlWriter>，以写入新文档。</span><span class="sxs-lookup"><span data-stu-id="7fc70-103">You can create an XML tree, create an <xref:System.Xml.XmlReader> from the XML tree, create a new document, and create an <xref:System.Xml.XmlWriter> that will write into the new document.</span></span> <span data-ttu-id="7fc70-104">然后，您可以调用 XSLT 转换，并可以将 <xref:System.Xml.XmlReader> 和 <xref:System.Xml.XmlWriter> 传递到转换中。</span><span class="sxs-lookup"><span data-stu-id="7fc70-104">Then, you can invoke the XSLT transformation, passing the <xref:System.Xml.XmlReader> and <xref:System.Xml.XmlWriter> to the transformation.</span></span> <span data-ttu-id="7fc70-105">在转换成功完成后，使用转换的结果，填充新的 XML 树。</span><span class="sxs-lookup"><span data-stu-id="7fc70-105">After the transformation successfully completes, the new XML tree is populated with the results of the transform.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="0484c-106">示例</span><span class="sxs-lookup"><span data-stu-id="0484c-106">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="7fc70-106">示例</span><span class="sxs-lookup"><span data-stu-id="7fc70-106">Example</span></span>  
   
 ```csharp  
 string xslMarkup = @"<?xml version='1.0'?>  
@@ -49,7 +49,7 @@ using (XmlWriter writer = newTree.CreateWriter()) {
 Console.WriteLine(newTree);  
 ```  
   
- <span data-ttu-id="0484c-107">该示例产生下面的输出：</span><span class="sxs-lookup"><span data-stu-id="0484c-107">This example produces the following output:</span></span>  
+ <span data-ttu-id="7fc70-107">该示例产生下面的输出：</span><span class="sxs-lookup"><span data-stu-id="7fc70-107">This example produces the following output:</span></span>  
   
 ```xml  
 <Root>  
@@ -58,8 +58,8 @@ Console.WriteLine(newTree);
 </Root>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="0484c-108">请参阅</span><span class="sxs-lookup"><span data-stu-id="0484c-108">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="7fc70-108">请参阅</span><span class="sxs-lookup"><span data-stu-id="7fc70-108">See Also</span></span>
 
 - <xref:System.Xml.Linq.XContainer.CreateWriter%2A?displayProperty=nameWithType>  
 - <xref:System.Xml.Linq.XNode.CreateReader%2A?displayProperty=nameWithType>  
-- [<span data-ttu-id="0484c-109">高级 LINQ to XML 编程 (C#)</span><span class="sxs-lookup"><span data-stu-id="0484c-109">Advanced LINQ to XML Programming (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)
+- [<span data-ttu-id="7fc70-109">高级 LINQ to XML 编程 (C#)</span><span class="sxs-lookup"><span data-stu-id="7fc70-109">Advanced LINQ to XML Programming (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)

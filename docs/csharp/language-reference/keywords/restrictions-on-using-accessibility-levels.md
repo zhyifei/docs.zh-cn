@@ -5,40 +5,40 @@ helpviewer_keywords:
 - access modifiers [C#], accessibility level restrictions
 ms.assetid: 987e2f22-46bf-4fea-80ee-270b9cd01045
 ms.openlocfilehash: 2bcf2b12d1aa1488e6d3e46f5b37ac9535b138dd
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44252695"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45592122"
 ---
-# <a name="restrictions-on-using-accessibility-levels-c-reference"></a><span data-ttu-id="533c5-102">可访问性级别的使用限制（C# 参考）</span><span class="sxs-lookup"><span data-stu-id="533c5-102">Restrictions on using accessibility levels (C# Reference)</span></span>
+# <a name="restrictions-on-using-accessibility-levels-c-reference"></a><span data-ttu-id="d5604-102">可访问性级别的使用限制（C# 参考）</span><span class="sxs-lookup"><span data-stu-id="d5604-102">Restrictions on using accessibility levels (C# Reference)</span></span>
 
-<span data-ttu-id="533c5-103">在声明中指定类型时，检查类型的可访问性级别是否依赖于成员或其他类型的可访问性级别。</span><span class="sxs-lookup"><span data-stu-id="533c5-103">When you specify a type in a declaration, check whether the accessibility level of the type is dependent on the accessibility level of a member or of another type.</span></span> <span data-ttu-id="533c5-104">例如，直接基类必须至少具有与派生类相同的可访问性。</span><span class="sxs-lookup"><span data-stu-id="533c5-104">For example, the direct base class must be at least as accessible as the derived class.</span></span> <span data-ttu-id="533c5-105">以下声明会导致编译器错误，因为基类 `BaseClass` 的可访问性低于 `MyClass`：</span><span class="sxs-lookup"><span data-stu-id="533c5-105">The following declarations cause a compiler error because the base class `BaseClass` is less accessible than `MyClass`:</span></span>
+<span data-ttu-id="d5604-103">在声明中指定类型时，检查类型的可访问性级别是否依赖于成员或其他类型的可访问性级别。</span><span class="sxs-lookup"><span data-stu-id="d5604-103">When you specify a type in a declaration, check whether the accessibility level of the type is dependent on the accessibility level of a member or of another type.</span></span> <span data-ttu-id="d5604-104">例如，直接基类必须至少具有与派生类相同的可访问性。</span><span class="sxs-lookup"><span data-stu-id="d5604-104">For example, the direct base class must be at least as accessible as the derived class.</span></span> <span data-ttu-id="d5604-105">以下声明会导致编译器错误，因为基类 `BaseClass` 的可访问性低于 `MyClass`：</span><span class="sxs-lookup"><span data-stu-id="d5604-105">The following declarations cause a compiler error because the base class `BaseClass` is less accessible than `MyClass`:</span></span>
 
 ```csharp
 class BaseClass {...}
 public class MyClass: BaseClass {...} // Error
 ```
 
-<span data-ttu-id="533c5-106">下表汇总了对已声明可访问性级别的限制。</span><span class="sxs-lookup"><span data-stu-id="533c5-106">The following table summarizes the restrictions on declared accessibility levels.</span></span>
+<span data-ttu-id="d5604-106">下表汇总了对已声明可访问性级别的限制。</span><span class="sxs-lookup"><span data-stu-id="d5604-106">The following table summarizes the restrictions on declared accessibility levels.</span></span>
 
-|<span data-ttu-id="533c5-107">上下文</span><span class="sxs-lookup"><span data-stu-id="533c5-107">Context</span></span>|<span data-ttu-id="533c5-108">备注</span><span class="sxs-lookup"><span data-stu-id="533c5-108">Remarks</span></span>|
+|<span data-ttu-id="d5604-107">上下文</span><span class="sxs-lookup"><span data-stu-id="d5604-107">Context</span></span>|<span data-ttu-id="d5604-108">备注</span><span class="sxs-lookup"><span data-stu-id="d5604-108">Remarks</span></span>|
 |-------------|-------------|
-|[<span data-ttu-id="533c5-109">类</span><span class="sxs-lookup"><span data-stu-id="533c5-109">Classes</span></span>](../../programming-guide/classes-and-structs/classes.md)|<span data-ttu-id="533c5-110">类类型的直接基类必须至少具有与类类型本身相同的可访问性。</span><span class="sxs-lookup"><span data-stu-id="533c5-110">The direct base class of a class type must be at least as accessible as the class type itself.</span></span>|
-|[<span data-ttu-id="533c5-111">接口</span><span class="sxs-lookup"><span data-stu-id="533c5-111">Interfaces</span></span>](../../programming-guide/interfaces/index.md)|<span data-ttu-id="533c5-112">接口类型的显式基接口必须至少具有与接口类型本身相同的可访问性。</span><span class="sxs-lookup"><span data-stu-id="533c5-112">The explicit base interfaces of an interface type must be at least as accessible as the interface type itself.</span></span>|
-|[<span data-ttu-id="533c5-113">委托</span><span class="sxs-lookup"><span data-stu-id="533c5-113">Delegates</span></span>](../../programming-guide/delegates/index.md)|<span data-ttu-id="533c5-114">委托类型的返回类型和参数类型必须至少具有与委托类型本身相同的可访问性。</span><span class="sxs-lookup"><span data-stu-id="533c5-114">The return type and parameter types of a delegate type must be at least as accessible as the delegate type itself.</span></span>|
-|[<span data-ttu-id="533c5-115">常量</span><span class="sxs-lookup"><span data-stu-id="533c5-115">Constants</span></span>](../../programming-guide/classes-and-structs/constants.md)|<span data-ttu-id="533c5-116">常量的类型必须至少具有与常量本身相同的可访问性。</span><span class="sxs-lookup"><span data-stu-id="533c5-116">The type of a constant must be at least as accessible as the constant itself.</span></span>|
-|[<span data-ttu-id="533c5-117">字段</span><span class="sxs-lookup"><span data-stu-id="533c5-117">Fields</span></span>](../../programming-guide/classes-and-structs/fields.md)|<span data-ttu-id="533c5-118">字段的类型必须至少具有与字段本身相同的可访问性。</span><span class="sxs-lookup"><span data-stu-id="533c5-118">The type of a field must be at least as accessible as the field itself.</span></span>|
-|[<span data-ttu-id="533c5-119">方法</span><span class="sxs-lookup"><span data-stu-id="533c5-119">Methods</span></span>](../../programming-guide/classes-and-structs/methods.md)|<span data-ttu-id="533c5-120">方法的返回类型和参数类型必须至少具有与方法本身相同的可访问性。</span><span class="sxs-lookup"><span data-stu-id="533c5-120">The return type and parameter types of a method must be at least as accessible as the method itself.</span></span>|
-|[<span data-ttu-id="533c5-121">属性</span><span class="sxs-lookup"><span data-stu-id="533c5-121">Properties</span></span>](../../programming-guide/classes-and-structs/properties.md)|<span data-ttu-id="533c5-122">属性的类型必须至少具有与属性本身相同的可访问性。</span><span class="sxs-lookup"><span data-stu-id="533c5-122">The type of a property must be at least as accessible as the property itself.</span></span>|
-|[<span data-ttu-id="533c5-123">事件</span><span class="sxs-lookup"><span data-stu-id="533c5-123">Events</span></span>](../../programming-guide/events/index.md)|<span data-ttu-id="533c5-124">事件的类型必须至少具有与事件本身相同的可访问性。</span><span class="sxs-lookup"><span data-stu-id="533c5-124">The type of an event must be at least as accessible as the event itself.</span></span>|
-|[<span data-ttu-id="533c5-125">索引器</span><span class="sxs-lookup"><span data-stu-id="533c5-125">Indexers</span></span>](../../programming-guide/indexers/index.md)|<span data-ttu-id="533c5-126">索引器的类型和参数类型必须至少具有与索引器本身相同的可访问性。</span><span class="sxs-lookup"><span data-stu-id="533c5-126">The type and parameter types of an indexer must be at least as accessible as the indexer itself.</span></span>|
-|[<span data-ttu-id="533c5-127">运算符</span><span class="sxs-lookup"><span data-stu-id="533c5-127">Operators</span></span>](../../programming-guide/statements-expressions-operators/operators.md)|<span data-ttu-id="533c5-128">运算符的类型和参数类型必须至少具有与运算符本身相同的可访问性。</span><span class="sxs-lookup"><span data-stu-id="533c5-128">The return type and parameter types of an operator must be at least as accessible as the operator itself.</span></span>|
-|[<span data-ttu-id="533c5-129">构造函数</span><span class="sxs-lookup"><span data-stu-id="533c5-129">Constructors</span></span>](../../programming-guide/classes-and-structs/constructors.md)|<span data-ttu-id="533c5-130">构造函数的参数类型必须至少具有与构造函数本身相同的可访问性。</span><span class="sxs-lookup"><span data-stu-id="533c5-130">The parameter types of a constructor must be at least as accessible as the constructor itself.</span></span>|
+|[<span data-ttu-id="d5604-109">类</span><span class="sxs-lookup"><span data-stu-id="d5604-109">Classes</span></span>](../../programming-guide/classes-and-structs/classes.md)|<span data-ttu-id="d5604-110">类类型的直接基类必须至少具有与类类型本身相同的可访问性。</span><span class="sxs-lookup"><span data-stu-id="d5604-110">The direct base class of a class type must be at least as accessible as the class type itself.</span></span>|
+|[<span data-ttu-id="d5604-111">接口</span><span class="sxs-lookup"><span data-stu-id="d5604-111">Interfaces</span></span>](../../programming-guide/interfaces/index.md)|<span data-ttu-id="d5604-112">接口类型的显式基接口必须至少具有与接口类型本身相同的可访问性。</span><span class="sxs-lookup"><span data-stu-id="d5604-112">The explicit base interfaces of an interface type must be at least as accessible as the interface type itself.</span></span>|
+|[<span data-ttu-id="d5604-113">委托</span><span class="sxs-lookup"><span data-stu-id="d5604-113">Delegates</span></span>](../../programming-guide/delegates/index.md)|<span data-ttu-id="d5604-114">委托类型的返回类型和参数类型必须至少具有与委托类型本身相同的可访问性。</span><span class="sxs-lookup"><span data-stu-id="d5604-114">The return type and parameter types of a delegate type must be at least as accessible as the delegate type itself.</span></span>|
+|[<span data-ttu-id="d5604-115">常量</span><span class="sxs-lookup"><span data-stu-id="d5604-115">Constants</span></span>](../../programming-guide/classes-and-structs/constants.md)|<span data-ttu-id="d5604-116">常量的类型必须至少具有与常量本身相同的可访问性。</span><span class="sxs-lookup"><span data-stu-id="d5604-116">The type of a constant must be at least as accessible as the constant itself.</span></span>|
+|[<span data-ttu-id="d5604-117">字段</span><span class="sxs-lookup"><span data-stu-id="d5604-117">Fields</span></span>](../../programming-guide/classes-and-structs/fields.md)|<span data-ttu-id="d5604-118">字段的类型必须至少具有与字段本身相同的可访问性。</span><span class="sxs-lookup"><span data-stu-id="d5604-118">The type of a field must be at least as accessible as the field itself.</span></span>|
+|[<span data-ttu-id="d5604-119">方法</span><span class="sxs-lookup"><span data-stu-id="d5604-119">Methods</span></span>](../../programming-guide/classes-and-structs/methods.md)|<span data-ttu-id="d5604-120">方法的返回类型和参数类型必须至少具有与方法本身相同的可访问性。</span><span class="sxs-lookup"><span data-stu-id="d5604-120">The return type and parameter types of a method must be at least as accessible as the method itself.</span></span>|
+|[<span data-ttu-id="d5604-121">属性</span><span class="sxs-lookup"><span data-stu-id="d5604-121">Properties</span></span>](../../programming-guide/classes-and-structs/properties.md)|<span data-ttu-id="d5604-122">属性的类型必须至少具有与属性本身相同的可访问性。</span><span class="sxs-lookup"><span data-stu-id="d5604-122">The type of a property must be at least as accessible as the property itself.</span></span>|
+|[<span data-ttu-id="d5604-123">事件</span><span class="sxs-lookup"><span data-stu-id="d5604-123">Events</span></span>](../../programming-guide/events/index.md)|<span data-ttu-id="d5604-124">事件的类型必须至少具有与事件本身相同的可访问性。</span><span class="sxs-lookup"><span data-stu-id="d5604-124">The type of an event must be at least as accessible as the event itself.</span></span>|
+|[<span data-ttu-id="d5604-125">索引器</span><span class="sxs-lookup"><span data-stu-id="d5604-125">Indexers</span></span>](../../programming-guide/indexers/index.md)|<span data-ttu-id="d5604-126">索引器的类型和参数类型必须至少具有与索引器本身相同的可访问性。</span><span class="sxs-lookup"><span data-stu-id="d5604-126">The type and parameter types of an indexer must be at least as accessible as the indexer itself.</span></span>|
+|[<span data-ttu-id="d5604-127">运算符</span><span class="sxs-lookup"><span data-stu-id="d5604-127">Operators</span></span>](../../programming-guide/statements-expressions-operators/operators.md)|<span data-ttu-id="d5604-128">运算符的类型和参数类型必须至少具有与运算符本身相同的可访问性。</span><span class="sxs-lookup"><span data-stu-id="d5604-128">The return type and parameter types of an operator must be at least as accessible as the operator itself.</span></span>|
+|[<span data-ttu-id="d5604-129">构造函数</span><span class="sxs-lookup"><span data-stu-id="d5604-129">Constructors</span></span>](../../programming-guide/classes-and-structs/constructors.md)|<span data-ttu-id="d5604-130">构造函数的参数类型必须至少具有与构造函数本身相同的可访问性。</span><span class="sxs-lookup"><span data-stu-id="d5604-130">The parameter types of a constructor must be at least as accessible as the constructor itself.</span></span>|
 
-## <a name="example"></a><span data-ttu-id="533c5-131">示例</span><span class="sxs-lookup"><span data-stu-id="533c5-131">Example</span></span>
+## <a name="example"></a><span data-ttu-id="d5604-131">示例</span><span class="sxs-lookup"><span data-stu-id="d5604-131">Example</span></span>
 
-<span data-ttu-id="533c5-132">下面的示例包含不同类型的错误声明。</span><span class="sxs-lookup"><span data-stu-id="533c5-132">The following example contains erroneous declarations of different types.</span></span> <span data-ttu-id="533c5-133">每个声明后的注释指示预期编译器错误。</span><span class="sxs-lookup"><span data-stu-id="533c5-133">The comment following each declaration indicates the expected compiler error.</span></span>
+<span data-ttu-id="d5604-132">下面的示例包含不同类型的错误声明。</span><span class="sxs-lookup"><span data-stu-id="d5604-132">The following example contains erroneous declarations of different types.</span></span> <span data-ttu-id="d5604-133">每个声明后的注释指示预期编译器错误。</span><span class="sxs-lookup"><span data-stu-id="d5604-133">The comment following each declaration indicates the expected compiler error.</span></span>
 
 ```csharp
 // Restrictions on Using Accessibility Levels
@@ -103,20 +103,20 @@ public class A
 }
 ```
 
-## <a name="c-language-specification"></a><span data-ttu-id="533c5-134">C# 语言规范</span><span class="sxs-lookup"><span data-stu-id="533c5-134">C# language specification</span></span>
+## <a name="c-language-specification"></a><span data-ttu-id="d5604-134">C# 语言规范</span><span class="sxs-lookup"><span data-stu-id="d5604-134">C# language specification</span></span>
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
-## <a name="see-also"></a><span data-ttu-id="533c5-135">请参阅</span><span class="sxs-lookup"><span data-stu-id="533c5-135">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="d5604-135">请参阅</span><span class="sxs-lookup"><span data-stu-id="d5604-135">See also</span></span>
 
-- [<span data-ttu-id="533c5-136">C# 参考</span><span class="sxs-lookup"><span data-stu-id="533c5-136">C# Reference</span></span>](../../language-reference/index.md)
-- [<span data-ttu-id="533c5-137">C# 编程指南</span><span class="sxs-lookup"><span data-stu-id="533c5-137">C# Programming Guide</span></span>](../../programming-guide/index.md)
-- [<span data-ttu-id="533c5-138">C# 关键字</span><span class="sxs-lookup"><span data-stu-id="533c5-138">C# Keywords</span></span>](../../language-reference/keywords/index.md)
-- [<span data-ttu-id="533c5-139">访问修饰符</span><span class="sxs-lookup"><span data-stu-id="533c5-139">Access Modifiers</span></span>](../../language-reference/keywords/access-modifiers.md)
-- [<span data-ttu-id="533c5-140">可访问域</span><span class="sxs-lookup"><span data-stu-id="533c5-140">Accessibility Domain</span></span>](../../language-reference/keywords/accessibility-domain.md)
-- [<span data-ttu-id="533c5-141">可访问性级别</span><span class="sxs-lookup"><span data-stu-id="533c5-141">Accessibility Levels</span></span>](../../language-reference/keywords/accessibility-levels.md)
-- [<span data-ttu-id="533c5-142">访问修饰符</span><span class="sxs-lookup"><span data-stu-id="533c5-142">Access Modifiers</span></span>](../../programming-guide/classes-and-structs/access-modifiers.md)
-- [<span data-ttu-id="533c5-143">public</span><span class="sxs-lookup"><span data-stu-id="533c5-143">public</span></span>](../../language-reference/keywords/public.md)
-- [<span data-ttu-id="533c5-144">专用</span><span class="sxs-lookup"><span data-stu-id="533c5-144">private</span></span>](../../language-reference/keywords/private.md)
-- [<span data-ttu-id="533c5-145">protected</span><span class="sxs-lookup"><span data-stu-id="533c5-145">protected</span></span>](../../language-reference/keywords/protected.md)
-- [<span data-ttu-id="533c5-146">internal</span><span class="sxs-lookup"><span data-stu-id="533c5-146">internal</span></span>](../../language-reference/keywords/internal.md)
+- [<span data-ttu-id="d5604-136">C# 参考</span><span class="sxs-lookup"><span data-stu-id="d5604-136">C# Reference</span></span>](../../language-reference/index.md)
+- [<span data-ttu-id="d5604-137">C# 编程指南</span><span class="sxs-lookup"><span data-stu-id="d5604-137">C# Programming Guide</span></span>](../../programming-guide/index.md)
+- [<span data-ttu-id="d5604-138">C# 关键字</span><span class="sxs-lookup"><span data-stu-id="d5604-138">C# Keywords</span></span>](../../language-reference/keywords/index.md)
+- [<span data-ttu-id="d5604-139">访问修饰符</span><span class="sxs-lookup"><span data-stu-id="d5604-139">Access Modifiers</span></span>](../../language-reference/keywords/access-modifiers.md)
+- [<span data-ttu-id="d5604-140">可访问域</span><span class="sxs-lookup"><span data-stu-id="d5604-140">Accessibility Domain</span></span>](../../language-reference/keywords/accessibility-domain.md)
+- [<span data-ttu-id="d5604-141">可访问性级别</span><span class="sxs-lookup"><span data-stu-id="d5604-141">Accessibility Levels</span></span>](../../language-reference/keywords/accessibility-levels.md)
+- [<span data-ttu-id="d5604-142">访问修饰符</span><span class="sxs-lookup"><span data-stu-id="d5604-142">Access Modifiers</span></span>](../../programming-guide/classes-and-structs/access-modifiers.md)
+- [<span data-ttu-id="d5604-143">public</span><span class="sxs-lookup"><span data-stu-id="d5604-143">public</span></span>](../../language-reference/keywords/public.md)
+- [<span data-ttu-id="d5604-144">专用</span><span class="sxs-lookup"><span data-stu-id="d5604-144">private</span></span>](../../language-reference/keywords/private.md)
+- [<span data-ttu-id="d5604-145">protected</span><span class="sxs-lookup"><span data-stu-id="d5604-145">protected</span></span>](../../language-reference/keywords/protected.md)
+- [<span data-ttu-id="d5604-146">internal</span><span class="sxs-lookup"><span data-stu-id="d5604-146">internal</span></span>](../../language-reference/keywords/internal.md)

@@ -1,36 +1,55 @@
 ---
 title: '% 运算符（C# 参考）'
-ms.date: 04/04/2018
+ms.date: 09/04/2018
 f1_keywords:
 - '%_CSharpKeyword'
 helpviewer_keywords:
 - remainder operator [C#]
 - '% operator [C#]'
 ms.assetid: 3b74f4f9-fd9c-45e7-84fa-c8d71a0dfad7
-ms.openlocfilehash: b906feb22aaec97e58da562b615baae01f3e0719
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9cd2f7ad3856feb34667686979c942ecb21887c2
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33271062"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44266691"
 ---
-# <a name="-operator-c-reference"></a><span data-ttu-id="a170f-102">% 运算符（C# 参考）</span><span class="sxs-lookup"><span data-stu-id="a170f-102">% Operator (C# Reference)</span></span>
-<span data-ttu-id="a170f-103">余数运算符 (`%`) 计算第一个操作数除以第二个操作数后的余数。</span><span class="sxs-lookup"><span data-stu-id="a170f-103">The remainder operator (`%`) computes the remainder after dividing its first operand by its second.</span></span> <span data-ttu-id="a170f-104">所有数值类型都已预定义余数运算符。</span><span class="sxs-lookup"><span data-stu-id="a170f-104">All numeric types have predefined remainder operators.</span></span> 
+# <a name="-operator-c-reference"></a><span data-ttu-id="e28dc-102">% 运算符（C# 参考）</span><span class="sxs-lookup"><span data-stu-id="e28dc-102">% Operator (C# Reference)</span></span>
+
+<span data-ttu-id="e28dc-103">余数运算符 `%` 计算第一个操作数除以第二个操作数后的余数。</span><span class="sxs-lookup"><span data-stu-id="e28dc-103">The remainder operator `%` computes the remainder after dividing its first operand by its second operand.</span></span> <span data-ttu-id="e28dc-104">用户定义的类型可以[重载](../keywords/operator.md) `%` 运算符。</span><span class="sxs-lookup"><span data-stu-id="e28dc-104">User-defined types can [overload](../keywords/operator.md) the `%` operator.</span></span> <span data-ttu-id="e28dc-105">当 `%` 重载时，[余数赋值运算符](remainder-assignment-operator.md) `%=` 也会隐式重载。</span><span class="sxs-lookup"><span data-stu-id="e28dc-105">When the `%` is overloaded, the [remainder assignment operator](remainder-assignment-operator.md) `%=` is also implicitly overloaded.</span></span>
+
+<span data-ttu-id="e28dc-106">所有数值类型都支持余数运算符。</span><span class="sxs-lookup"><span data-stu-id="e28dc-106">All numeric types support the remainder operator.</span></span>
+
+## <a name="integer-remainder"></a><span data-ttu-id="e28dc-107">整数余数</span><span class="sxs-lookup"><span data-stu-id="e28dc-107">Integer remainder</span></span>
   
-## <a name="remarks"></a><span data-ttu-id="a170f-105">备注</span><span class="sxs-lookup"><span data-stu-id="a170f-105">Remarks</span></span>  
- <span data-ttu-id="a170f-106">公式 `a % b` 始终返回介于 `(-b, b)` 范围（不含边界值）内的值（绝不会返回 `b` 或 `-b`），同时保留被除数的符号。</span><span class="sxs-lookup"><span data-stu-id="a170f-106">The formula `a % b` will always return a value on the range `(-b, b)`, exclusive (it can never return `b` or `-b`), keeping the sign of the dividend.</span></span> <span data-ttu-id="a170f-107">对于整数除法，余数运算符执行规则 `a % b = a - (a / b) * b`。</span><span class="sxs-lookup"><span data-stu-id="a170f-107">For integer division, the remainder operator satisfies the rule `a % b = a - (a / b) * b`.</span></span>
-  
- <span data-ttu-id="a170f-108">不要将这与规范取模相混淆，后者虽然执行类似的规则，但采用 Floor 除法，并返回介于 `[0, b)` 范围内的值。</span><span class="sxs-lookup"><span data-stu-id="a170f-108">This is not to be confused with canonical modulus, which satisfies a similar rule but with floored division and returns values on the range `[0, b)`.</span></span> <span data-ttu-id="a170f-109">C# 没有规范取模运算符。</span><span class="sxs-lookup"><span data-stu-id="a170f-109">C# does not have an operator for canonical modulus.</span></span> <span data-ttu-id="a170f-110">不过，行为与正被除数相同。</span><span class="sxs-lookup"><span data-stu-id="a170f-110">However, the behavior is the same for positive dividends.</span></span>
-  
- <span data-ttu-id="a170f-111">用户定义的类型可以重载 `%` 运算符（请参阅[运算符](../../../csharp/language-reference/keywords/operator.md)）。</span><span class="sxs-lookup"><span data-stu-id="a170f-111">User-defined types can overload the `%` operator (see [operator](../../../csharp/language-reference/keywords/operator.md)).</span></span> <span data-ttu-id="a170f-112">重载二元运算符时，也会隐式重载相应的赋值运算符（若有）。</span><span class="sxs-lookup"><span data-stu-id="a170f-112">When a binary operator is overloaded, the corresponding assignment operator, if any, is also implicitly overloaded.</span></span>  
-  
-## <a name="example"></a><span data-ttu-id="a170f-113">示例</span><span class="sxs-lookup"><span data-stu-id="a170f-113">Example</span></span>  
- [!code-csharp[csRefOperators#9](../../../csharp/language-reference/operators/codesnippet/CSharp/remainder-operator_1.cs)]  
-  
-## <a name="comments"></a><span data-ttu-id="a170f-114">注释</span><span class="sxs-lookup"><span data-stu-id="a170f-114">Comments</span></span>  
- <span data-ttu-id="a170f-115">请注意与双精度类型关联的舍入误差。</span><span class="sxs-lookup"><span data-stu-id="a170f-115">Note the round-off errors associated with the double type.</span></span>  
-  
-## <a name="see-also"></a><span data-ttu-id="a170f-116">请参阅</span><span class="sxs-lookup"><span data-stu-id="a170f-116">See Also</span></span>  
- [<span data-ttu-id="a170f-117">C# 参考</span><span class="sxs-lookup"><span data-stu-id="a170f-117">C# Reference</span></span>](../../../csharp/language-reference/index.md)  
- [<span data-ttu-id="a170f-118">C# 编程指南</span><span class="sxs-lookup"><span data-stu-id="a170f-118">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
- [<span data-ttu-id="a170f-119">C# 运算符</span><span class="sxs-lookup"><span data-stu-id="a170f-119">C# Operators</span></span>](../../../csharp/language-reference/operators/index.md)
+<span data-ttu-id="e28dc-108">对于整数操作数，`a % b` 的结果是由 `a - (a / b) * b` 生成的值。</span><span class="sxs-lookup"><span data-stu-id="e28dc-108">For the integer operands, the result of `a % b` is the value produced by `a - (a / b) * b`.</span></span> <span data-ttu-id="e28dc-109">非零余数的符号与第一个操作数的符号相同，如下例所示：</span><span class="sxs-lookup"><span data-stu-id="e28dc-109">The sign of the non-zero remainder is the same as that of the first operand, as the following example shows:</span></span>
+
+[!code-csharp-interactive[integer remainder](~/samples/snippets/csharp/language-reference/operators/RemainderExamples.cs#1)]
+
+## <a name="floating-point-remainder"></a><span data-ttu-id="e28dc-110">浮点余数</span><span class="sxs-lookup"><span data-stu-id="e28dc-110">Floating-point remainder</span></span>
+
+<span data-ttu-id="e28dc-111">对于[浮点](../keywords/float.md)和[双精度型](../keywords/double.md)操作数，有限的 `x` 和 `y` 的 `x % y` 的结果是值 `z`，使得</span><span class="sxs-lookup"><span data-stu-id="e28dc-111">For the [float](../keywords/float.md) and [double](../keywords/double.md) operands, the result of `x % y` for the finite `x` and `y` is the value `z` such that</span></span>
+
+- <span data-ttu-id="e28dc-112">如果不是零，则 `z` 的符号与 `x` 的符号相同；</span><span class="sxs-lookup"><span data-stu-id="e28dc-112">the sign of `z`, if non-zero, is the same as the sign of `x`;</span></span>
+- <span data-ttu-id="e28dc-113">`z` 的绝对值是 `|x| - n * |y|` 生成的值，其中 `n` 是小于或等于 `|x| / |y|` 的最大可能整数，`|x|` 和 `|y|` 分别是 `x` 和 `y` 的绝对值。</span><span class="sxs-lookup"><span data-stu-id="e28dc-113">the absolute value of `z` is the value produced by `|x| - n * |y|` where `n` is the largest possible integer that is less than or equal to `|x| / |y|` and `|x|` and `|y|` are the absolute values of `x` and `y`, respectively.</span></span>
+
+<span data-ttu-id="e28dc-114">有关非限定操作数的 `%` 运算符行为的信息，请参阅 [C# 语言规范](/dotnet/csharp/language-reference/language-specification/index)的[余数运算符](/dotnet/csharp/language-reference/language-specification/expressions#remainder-operator)章节。</span><span class="sxs-lookup"><span data-stu-id="e28dc-114">For information about behavior of the `%` operator in case of non-finite operands, see the [Remainder operator](/dotnet/csharp/language-reference/language-specification/expressions#remainder-operator) section of the [C# language specification](/dotnet/csharp/language-reference/language-specification/index).</span></span>
+
+> [!NOTE]
+> <span data-ttu-id="e28dc-115">计算余数的此方法类似于用于整数操作数的方法，但与 IEEE 754 不同。</span><span class="sxs-lookup"><span data-stu-id="e28dc-115">This method of computing the remainder is analogous to that used for integer operands, but differs from the IEEE 754.</span></span> <span data-ttu-id="e28dc-116">如果需要符合 IEEE 754 的余数运算，使用 <xref:System.Math.IEEERemainder%2A?displayProperty=nameWithType> 方法。</span><span class="sxs-lookup"><span data-stu-id="e28dc-116">If you need the remainder operation that complies with the IEEE 754, use the <xref:System.Math.IEEERemainder%2A?displayProperty=nameWithType> method.</span></span>
+
+<span data-ttu-id="e28dc-117">下面的示例演示 `float` 和 `double` 操作数的余数运算符的行为：</span><span class="sxs-lookup"><span data-stu-id="e28dc-117">The following example demonstrates the behavior of the remainder operator for `float` and `double` operands:</span></span>
+
+[!code-csharp-interactive[float and double remainder](~/samples/snippets/csharp/language-reference/operators/RemainderExamples.cs#2)]
+
+<span data-ttu-id="e28dc-118">请注意与浮点类型相关联的舍入错误。</span><span class="sxs-lookup"><span data-stu-id="e28dc-118">Note the round-off errors that can be associated with the floating-point types.</span></span>
+
+<span data-ttu-id="e28dc-119">有关[十进制](../keywords/decimal.md)操作数，余数运算符 `%` 等效于 <xref:System.Decimal?displayProperty=nameWithType> 类型的[余数运算符](<xref:System.Decimal.op_Modulus(System.Decimal,System.Decimal)>)。</span><span class="sxs-lookup"><span data-stu-id="e28dc-119">For the [decimal](../keywords/decimal.md) operands, the remainder operator `%` is equivalent to the [remainder operator](<xref:System.Decimal.op_Modulus(System.Decimal,System.Decimal)>) of the <xref:System.Decimal?displayProperty=nameWithType> type.</span></span>
+
+## <a name="see-also"></a><span data-ttu-id="e28dc-120">请参阅</span><span class="sxs-lookup"><span data-stu-id="e28dc-120">See also</span></span>
+
+- [<span data-ttu-id="e28dc-121">C# 参考</span><span class="sxs-lookup"><span data-stu-id="e28dc-121">C# Reference</span></span>](../index.md)
+- [<span data-ttu-id="e28dc-122">C# 编程指南</span><span class="sxs-lookup"><span data-stu-id="e28dc-122">C# Programming Guide</span></span>](../../programming-guide/index.md)
+- [<span data-ttu-id="e28dc-123">C# 运算符</span><span class="sxs-lookup"><span data-stu-id="e28dc-123">C# Operators</span></span>](index.md)
+- <xref:System.Math.IEEERemainder%2A?displayProperty=nameWithType>
+- <xref:System.Math.DivRem%2A?displayProperty=nameWithType>
