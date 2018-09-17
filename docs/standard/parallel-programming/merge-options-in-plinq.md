@@ -11,11 +11,11 @@ ms.assetid: e8f7be3b-88de-4f33-ab14-dc008e76c1ba
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 0652f5f3f3629257f8f67c6b4a0b9551ef547b62
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44221891"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45648065"
 ---
 # <a name="merge-options-in-plinq"></a>PLINQ 中的合并选项
 如果并行执行查询，PLINQ 对源序列进行分区，以便多个线程能够并发处理不同部分，通常是在不同的线程中。 如果要在一个线程（例如，`foreach`（Visual Basic 中的 `For Each`）循环）中使用结果，必须将每个线程的结果合并回一个序列中。 PLINQ 执行的合并类型具体视查询中的运算符而定。 例如，对结果强制施加新顺序的运算符必须缓冲所有线程中的全部元素。 从使用线程（以及应用用户）的角度来看，完全缓冲查询可能会运行很长时间，才能生成第一个结果。 默认情况下，其他运算符进行部分缓冲，并分批生成结果。 默认不缓冲的一个运算符是 <xref:System.Linq.ParallelEnumerable.ForAll%2A>。 它会立即生成所有线程中的所有元素。  

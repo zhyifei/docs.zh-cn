@@ -3,12 +3,12 @@ title: 使用 XML 注释来记录代码
 description: 了解如何使用 XML 文档注释来记录代码和在编译时生成 XML 文档文件。
 ms.date: 02/14/2017
 ms.assetid: 8e75e317-4a55-45f2-a866-e76124171838
-ms.openlocfilehash: 4c94e98478e71449a3f9cc4bf1f21462e17a371b
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: e211543a6a5cc5f6f29d8c195492b474eb24a38d
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43517476"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45683052"
 ---
 # <a name="documenting-your-code-with-xml-comments"></a>使用 XML 注释来记录代码
 
@@ -29,7 +29,7 @@ XML 文档注释是一种特殊注释，添加在任何用户定义的类型或�
    还可以精确指定 XML 文件的绝对或相对路径及名称。 下面的示例在与调试版本的应用程序相同的目录中生成 XML 文件：
 
    ```xml
-   <DocumentationFile>bin\Debug\netcoreapp1.0\App.xml</DocumentationFile>
+   <DocumentationFile>bin\Debug\netcoreapp2.1\App.xml</DocumentationFile>
    ```
 
 - 如果使用 Visual Studio 开发应用程序，右键单击项目并选择“属性”。 在属性对话框中，选择“生成”选项卡，然后选中“XML 文档文件”。 还可以更改编译器写入文件的位置。

@@ -4,11 +4,11 @@ description: 了解安全地最大程度减少结构复制操作的语言功能
 ms.date: 11/10/2017
 ms.custom: mvc
 ms.openlocfilehash: f241219994d7a03192a4aea69b912bf1ac5ed29c
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44272899"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45592148"
 ---
 # <a name="reference-semantics-with-value-types"></a>具有值类型的引用语义
 

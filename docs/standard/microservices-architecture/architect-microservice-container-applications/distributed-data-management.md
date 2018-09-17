@@ -4,12 +4,12 @@ description: 用于容器化 .NET 应用程序的 .NET 微服务体系结构 | �
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.openlocfilehash: 4c514f3a7dc1fb01b2f1ed2dddc9d938c1101809
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.openlocfilehash: 7574a28fc3e8eb3288a81fa5a7ad26f34f1a3eb9
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44268846"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45646215"
 ---
 # <a name="challenges-and-solutions-for-distributed-data-management"></a>分布式数据管理的挑战和解决方案
 
@@ -19,7 +19,7 @@ ms.locfileid: "44268846"
 
 首先，需要着重关注应用程序的逻辑域模型和相关数据。 必须尝试识别同一应用程序中数据和不同上下文的分离岛。 每个上下文可能具有不同的业务语言（不同的业务术语）。 应独立定义和管理上下文。 不同上下文中所用的术语和实体可能听起来很相似，但你可能会发现在特定上下文中，某个业务概念可在另一个上下文中用于不同目的，甚至名称也不同。 例如，用户在身份或成员身份上下文中称为用户，在 CRM 上下文中称为客户，在订购上下文中称为购买者等等。
 
-多个应用程序上下文（各上下文具有不同域）之间的边界识别方法，也可用于识别各业务微服务及其相关域模型和数据的边界。 始终尝试最大程度减少这些微服务之间的耦合度。 本指南稍后将在[识别每个微服务的域模型边界](#identifying-domain-model-boundaries-for-each-microservice)部分详细介绍此识别方法和域模型设计。
+多个应用程序上下文（各上下文具有不同域）之间的边界识别方法，也可用于识别各业务微服务及其相关域模型和数据的边界。 始终尝试最大程度减少这些微服务之间的耦合度。 本指南稍后将在[识别每个微服务的域模型边界](identify-microservice-domain-model-boundaries.md)部分详细介绍此识别方法和域模型设计。
 
 ## <a name="challenge-2-how-to-create-queries-that-retrieve-data-from-several-microservices"></a>挑战 \#2：如何创建从多个微服务中检索数据的查询
 
@@ -57,7 +57,7 @@ ms.locfileid: "44268846"
 
 此外，ACID 式或两阶段提交事务不仅针对微服务原则；大多数 NoSQL 数据库（如 Azure Cosmos DB、MongoDB 等）不支持两阶段提交事务。 但是，维护服务和数据库的数据一致性至关重要。 此挑战还涉及，当某些数据需要冗余时（例如，需要在目录微服务和购物篮微服务中使用产品名称或说明时），如何在多个微服务之间传播更改。
 
-针对此问题的一个良好解决方案是，在通过事件驱动通信和发布订阅系统形成的微服务之间使用最终一致性。 本指南后面的[异步事件驱动通信](#async_event_driven_communication)部分将介绍这些主题。
+针对此问题的一个良好解决方案是，在通过事件驱动通信和发布订阅系统形成的微服务之间使用最终一致性。 本指南后面的[异步事件驱动通信](asynchronous-message-based-communication.md#asynchronous-event-driven-communication)部分将介绍这些主题。
 
 ## <a name="challenge-4-how-to-design-communication-across-microservice-boundaries"></a>挑战 \#4：如何设计跨微服务边界的通信
 

@@ -10,11 +10,11 @@ ms.assetid: 0a1a3ba3-7e46-4df2-afd3-f3a8237e1c4f
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 8c27bdb75ef9950d0b2b32f742b38e141cf4981b
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44268989"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45649583"
 ---
 # <a name="how-to-get-progress-from-the-net-framework-45-installer"></a>如何：获取 .NET Framework 4.5 安装程序的进度
 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 是可再发行运行时。 如果开发基于此 .NET framework 版本的应用程序，则可以将（链）[!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 安装程序作为必备组件包括在应用的安装程序中。 若要提供自定义或统一的安装体验，可能需要以无提示方式启动 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 安装程序并跟踪其进度，同时显示应用的安装进度。 若要启用无提示跟踪，[!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 安装程序（可观察）通过使用内存映射 I/O (MMIO) 段来定义协议，以便与安装程序（观察程序或链接器）进行通信。 此协议定义链接器获取进度信息、详细结果，响应消息和取消 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 安装的方式。  

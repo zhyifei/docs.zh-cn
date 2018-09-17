@@ -11,11 +11,11 @@ ms.assetid: 24b10041-b30b-45cb-aa65-66cf568ca76d
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 357cc488705ec3dab66543fa4814dbe3e6a22777
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44227566"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45590987"
 ---
 # <a name="how-to-write-a-parallelforeach-loop-with-partition-local-variables"></a>如何：使用分区本地变量编写 Parallel.ForEach 循环
 下面的示例演示如何编写使用分区本地变量的 <xref:System.Threading.Tasks.Parallel.ForEach%2A> 方法。 当 <xref:System.Threading.Tasks.Parallel.ForEach%2A> 循环执行时，它会将其源集合划分为多个分区。 每个分区都有自己的分区本地变量的副本。 分区本地变量类似于[线程本地变量](xref:System.Threading.ThreadLocal%601)，只是单个线程上可以运行多个分区。

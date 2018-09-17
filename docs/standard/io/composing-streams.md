@@ -16,11 +16,11 @@ ms.assetid: da761658-a535-4f26-a452-b30df47f73d5
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 5e52b827f337892c33ec61b9affa1cc646a759c5
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44182459"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45676819"
 ---
 # <a name="composing-streams"></a>编写流
 后备存储是磁盘或内存等存储介质。 各个后备存储都实现自己的流，作为 <xref:System.IO.Stream> 类的实现。 每个流类型对给定的后备存储执行字节读取和写入操作。 连接到后备存储的流称为“基流”。 基流的构造函数包含将流连接到后备存储所需的参数。 例如，<xref:System.IO.FileStream> 包含指定路径参数的构造函数，此参数指定了进程如何共享文件等。  

@@ -20,11 +20,11 @@ ms.assetid: dbdd55e7-d6b9-4f9e-8abb-ab0edd4457f7
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: cf253ff4a25ba902c16c6d00a8be4bf291166774
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44268729"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45652945"
 ---
 # <a name="asynchronous-file-io"></a>异步文件 I/O
 异步操作使您能在不阻塞主线程的情况下执行占用大量资源的 I/O 操作。 在 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 应用或 [!INCLUDE[desktop_appname](../../../includes/desktop-appname-md.md)] 应用中一个耗时的流操作可能阻塞 UI 线程并让您的应用看起来好像不工作时，这种性能的考虑就显得尤为重要了。  

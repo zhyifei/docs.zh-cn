@@ -9,11 +9,11 @@ ms.assetid: aa80d155-060d-41b4-a636-1ceb424afee8
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: d1e771a95542153dfad0981d3198e6b4c31cdeb9
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44264254"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45618229"
 ---
 # <a name="using-user-filtered-exception-handlers"></a>使用用户筛选的异常处理程序
 目前，Visual Basic 支持用户筛选的异常。 用户筛选的异常处理程序基于定义的异常需求来捕获和处理异常。 这些处理程序使用含有关键字 **When** 的 **Catch** 语句。  

@@ -11,11 +11,11 @@ ms.assetid: 36012f42-34e5-4f86-adf4-973f433ed6c6
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 1ff8b5b75d1d69d3d8c88810de1311540a239c52
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44273406"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45625499"
 ---
 # <a name="spinwait"></a>SpinWait
 <xref:System.Threading.SpinWait?displayProperty=nameWithType> 是一种轻型同步类型，可用于低级方案，以避免执行内核事件所需的高成本上下文切换和内核转换。 在多核计算机上，如果不得长时间保留资源，更高效的做法是，先让等待线程在用户模式下旋转几十或几百个周期，再重试获取资源。 如果资源在旋转后可用，便节省了几千个周期。 如果资源仍不可用，那么也只花了几个周期，仍可以进入基于内核的等待。 这种“旋转后等待”的组合有时称为“两阶段等待操作”。  
