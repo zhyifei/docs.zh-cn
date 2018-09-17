@@ -5,12 +5,12 @@ helpviewer_keywords:
 - WCF Data Services, providers
 - WCF Data Services, Entity Framework
 ms.assetid: 6d11fec8-0108-42f5-8719-2a7866d04428
-ms.openlocfilehash: 72439596ec6dc6c42024ed38116ba0026922154c
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 4bccd1e4655786ae24166cdc32619b420c4a54d3
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45679604"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45743769"
 ---
 # <a name="how-to-create-a-data-service-using-an-adonet-entity-framework-data-source-wcf-data-services"></a>如何：使用 ADO.NET 实体框架数据源创建数据服务（WCF 数据服务）
 
@@ -34,7 +34,7 @@ WCF 数据服务公开实体数据作为数据服务。 此实体数据由提供
 
 6. 在中**连接属性**对话框中，键入你的服务器名称、 选择身份验证方法中，键入数据库名称，然后单击**确定**。
 
-     **选择数据连接**的对话框将与数据库的连接设置更新。
+     **选择数据连接**对话框以数据库的连接设置更新。
 
 7. 絋粄**将实体连接设置保存为 App.Config 中：** 选中复选框。 然后，单击 **“下一步”**。
 

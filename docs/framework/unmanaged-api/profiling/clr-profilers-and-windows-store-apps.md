@@ -15,11 +15,11 @@ ms.assetid: 1c8eb2e7-f20a-42f9-a795-71503486a0f5
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: f1747d99fbfbc31fb592aee570d10d574b8480b0
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45558218"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45743808"
 ---
 # <a name="clr-profilers-and-windows-store-apps"></a>CLR 探查器和 Windows 应用商店应用程序
 
@@ -134,7 +134,7 @@ IEnumerable<Package> packages = packageManager.FindPackagesForUser(currentUserSI
  **指定的自定义的环境块**  
  新的 COM 接口， [IPackageDebugSettings](https://msdn.microsoft.com/library/hh438393\(v=vs.85\).aspx)，可用于自定义为了简化某些形式的诊断的 Windows 应用商店应用的执行行为。  其方法之一[EnableDebugging](https://msdn.microsoft.com/library/hh438395\(v=vs.85\).aspx)，可以将环境块传递给 Windows 应用商店应用程序时它已启动，以及其他有用的效果，例如禁用自动进程挂起。  环境块很重要，因为这是您需要指定环境变量 (`COR_PROFILER`， `COR_ENABLE_PROFILING`，和`COR_PROFILER_PATH)`) 使用 CLR 加载 Profiler DLL。  
   
- 请考虑下面的代码段：  
+ 请思考以下代码片段：  
   
 ```csharp  
 IPackageDebugSettings pkgDebugSettings = new PackageDebugSettings();  

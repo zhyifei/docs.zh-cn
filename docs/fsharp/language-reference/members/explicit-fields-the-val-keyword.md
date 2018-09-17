@@ -3,11 +3,11 @@ title: 显式字段：val 关键字 (F#)
 description: '了解有关 F # val 关键字用于声明类或结构类型中存储一个值，而不初始化该类型的位置。'
 ms.date: 05/16/2016
 ms.openlocfilehash: 9cd06f7e90192be79490dd0ff67f118cce4339c3
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45617365"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45746352"
 ---
 # <a name="explicit-fields-the-val-keyword"></a>显式字段：val 关键字
 

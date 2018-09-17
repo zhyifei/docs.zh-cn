@@ -6,11 +6,11 @@ ms.assetid: 297b8f1d-b11f-4dc6-960a-8e990817304e
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 3571ebb2fdd2bcdfd8be1f0087d096e01f18790a
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45674086"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45964825"
 ---
 # <a name="guidelines-for-collections"></a>集合准则
 任何专门用于操作的一组具有一些公共特征的对象的类型可被视为集合。 它几乎总是适合于此类类型来实现<xref:System.Collections.IEnumerable>或<xref:System.Collections.Generic.IEnumerable%601>，因此在本部分中我们只考虑实现一个或两个这些接口的类型是集合。  
