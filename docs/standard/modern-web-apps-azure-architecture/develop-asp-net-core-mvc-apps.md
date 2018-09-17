@@ -209,9 +209,9 @@ ASP.NET Core MVC 还使用约定来确定视图的位置。 可以使用自定�
 
 随着应用程序的发展，将横切关注点分解出来，以消除重复和保持一致性变得越来越重要。 ASP.NET Core 应用程序中的横切关注点非常多，例如身份验证、模型验证规则、输出缓存和错误处理等等。 ASP.NET Core MVC [筛选器](/aspnet/core/mvc/controllers/filters)允许在请求处理管道中的特定步骤之前或之后运行代码。 例如，可以在模型绑定之前/之后、某个操作之前/之后或某个操作结果之前/之后运行筛选器。 还可以使用授权筛选器来控制对管道其余部分的访问权限。 图 7-2 显示了请求执行如何流经筛选器（如果配置）。
 
-![请求通过授权筛选器、资源筛选器、模型绑定、操作筛选器、操作执行和操作结果转换、异常筛选器、结果筛选器和结果执行进行处理。 返回时，请求仅由结果筛选器和资源筛选器进行处理，变成发送到客户端的响应。](./media/image7-2.png)
+![请求通过授权过滤器、资源过滤器、模型绑定、操作过滤器、操作执行和操作结果转换、异常过滤器、结果过滤器和结果执行进行处理。 返回时，请求仅由结果过滤器和资源过滤器进行处理，变成发送到客户端的响应。](./media/image7-2.png)
 
-图 7-2 请求执行通过各筛选器和请求管道。
+图 7-2 请求执行通过各过滤器和请求管道。
 
 过滤器通常作为属性实现，因此可应用于控制器或操作。 以这种方式添加时，在操作级别指定的过滤器会覆盖在控制器级别指定的过滤器（会覆盖全局过滤器）或在其基础之上生成。 例如，\[Route\] 属性可用来生成控制器和操作之间的路由。 同样，可以在控制器级别配置授权，然后被各操作覆盖，如下所示：
 
@@ -283,7 +283,7 @@ public async Task<IActionResult> Put(int id, [FromBody]Author author)
 >   <https://docs.microsoft.com/aspnet/core/mvc/controllers/areas>
 > - **MSDN 杂志 - ASP.NET Core MVC 的功能切分**  
  > <https://msdn.microsoft.com/magazine/mt763233.aspx>
-> - **筛选器**  
+> - **过滤器**  
 >   <https://docs.microsoft.com/aspnet/core/mvc/controllers/filters>
 > - **MSDN - 实际的 ASP.NET Core MVC 筛选器**  
 >   <https://msdn.microsoft.com/magazine/mt767699.aspx>
@@ -460,7 +460,7 @@ public class Program
 > - **WebSocket 管理器**  
 >   https://github.com/radu-matei/websocket-manager
 
-## <a name="domain-driven-design--should-you-apply-it"></a>域驱动的设计 - 是否该使用？
+## <a name="domain-driven-design--should-you-apply-it"></a>领域驱动设计 - 是否该使用？
 
 域驱动设计 (DDD) 是一种敏捷方法，用于构建强调注重企业域的软件。 它非常注重与企业领域专家的沟通和互动，这些专家可以告知开发人员实际系统如何工作。 例如，如果你在构建处理股票交易的系统，那么域专家可能是一位经验丰富的股票经纪人。 DDD 旨在解决大型复杂的企业问题，通常不适合较小型较简单的应用程序，因为在理解域和为域建模上的投入并不值得。
 
@@ -474,7 +474,7 @@ public class Program
 
 - [值对象](https://deviq.com/value-object/)，表示可以根据其属性值的总和进行比较的概念。 例如，包含开始日期和结束日期的 DateRange。
 
-- [域事件](https://martinfowler.com/eaaDev/DomainEvent.html)，表示系统中发生的与系统其他部分相关的事件。
+- [领域事件](https://martinfowler.com/eaaDev/DomainEvent.html)，表示系统中发生的与系统其他部分相关的事件。
 
 请注意，DDD 域模型应封装模型中的复杂行为。 尤其是实体，它不应该仅仅是属性的集合。 域模型缺少行为，并且仅表示系统状态时，就是所谓的[贫乏性模型](https://deviq.com/anemic-model/)，DDD 中应避免此类模型。
 

@@ -4,12 +4,12 @@ description: dotnet run 命令可便于使用源代码运行应用程序。
 author: mairaw
 ms.author: mairaw
 ms.date: 05/29/2018
-ms.openlocfilehash: 609ac27f21e6801992b9e10c7d465a805492859e
-ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
+ms.openlocfilehash: f560e6f795f00488818647a4b5c711dcf9d59dcd
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "39245247"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45687642"
 ---
 # <a name="dotnet-run"></a>dotnet 运行
 
@@ -44,7 +44,7 @@ dotnet run [-h|--help]
 
 `dotnet run` 命令为从源代码使用一个命令运行应用程序提供了一个方便的选项。 这对从命令行中进行快速迭代开发很有帮助。 命令取决于生成代码的 [`dotnet build`](dotnet-build.md) 命令。 对于此生成的任何要求，例如项目必须首先还原，同样适用于 `dotnet run`。
 
-输出文件会写入到默认位置，即 `bin/<configuration>/<target>`。 例如，如果具有 `netcoreapp1.0` 应用程序并且运行 `dotnet run`，则输出置于 `bin/Debug/netcoreapp1.0`。 将根据需要覆盖文件。 临时文件将置于 `obj` 目录。
+输出文件会写入到默认位置，即 `bin/<configuration>/<target>`。 例如，如果具有 `netcoreapp2.1` 应用程序并且运行 `dotnet run`，则输出置于 `bin/Debug/netcoreapp2.1`。 将根据需要覆盖文件。 临时文件将置于 `obj` 目录。
 
 如果该项目指定多个框架，在不使用 `-f|--framework <FRAMEWORK>` 选项指定框架时，执行 `dotnet run` 将导致错误。
 

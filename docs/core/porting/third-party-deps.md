@@ -4,12 +4,12 @@ description: 了解如何分析第三方依赖项，以便将项目从 .NET Fram
 author: cartermp
 ms.author: mairaw
 ms.date: 02/15/2018
-ms.openlocfilehash: a5affd8f1c493a87b2a4f7cd4096d168d404626a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 06d8d36d8369680c54af4d16513b2b871b57079c
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33216825"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45679266"
 ---
 # <a name="analyze-your-third-party-dependencies"></a>分析第三方依赖项
 
@@ -51,6 +51,7 @@ netstandard2.0
 netcoreapp1.0
 netcoreapp1.1
 netcoreapp2.0
+netcoreapp2.1
 portable-net45-win8
 portable-win8-wpa8
 portable-net451-win81
@@ -75,7 +76,7 @@ dotnet5.4
 dotnet5.5
 ```
 
-尽管这些 TFM 也许可以使用代码，但不保证其兼容性。 使用预发行的 .NET Core 包生成内含这些 TFM 的包。 请记下使用这些 TFM 的包何时（或是否）更新为基于 .NET Standard。
+尽管这些 TFM 也许可以使用代码，但不保证其兼容性。 使用预发行的 .NET Core 包生成内含这些 TFM 的包。 请记下使用这些 TFM 的包何时（或是否）更新为基于 .NET 标准。
 
 > [!NOTE]
 > 若要使用面向传统 PCL 或预发行的 .NET Core 目标的包，必须在项目文件中使用 `PackageTargetFallback` MSBuild 元素。
