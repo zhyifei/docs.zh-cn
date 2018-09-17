@@ -10,11 +10,11 @@ helpviewer_keywords:
 - assemblies [Visual Basic], references
 ms.assetid: 38149bd4-0a6f-4b31-b5f8-94a8c33f1600
 ms.openlocfilehash: 89d360e5caa3cdb0dd1ecb985ea7ba727e5a6d9d
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44208501"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45692666"
 ---
 # <a name="references-and-the-imports-statement-visual-basic"></a>引用和 Imports 语句 (Visual Basic)
 您可以向外部对象提供你的项目通过选择**添加引用**命令**项目**菜单。 在 Visual Basic 中的引用可以指向程序集，与类似类型库但包含的详细信息。  
