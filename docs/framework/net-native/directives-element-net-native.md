@@ -5,11 +5,11 @@ ms.assetid: 444846f3-48d5-4341-a43e-69f7221389eb
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 8921d2841f9a7b4228ae3b8735d7047453f71bcb
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45676254"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45972145"
 ---
 # <a name="ltdirectivesgt-element-net-native"></a>&lt;指令&gt;元素 (.NET Native)
 .NET native 每个运行时指令文件中的根元素。  

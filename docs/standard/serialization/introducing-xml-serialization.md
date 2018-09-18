@@ -12,12 +12,12 @@ helpviewer_keywords:
 - DataSet class, serializing
 - XML Schema, serializing
 ms.assetid: 8c63200d-db63-4a03-a93d-21641623df62
-ms.openlocfilehash: 66412c620b8107312e5d58fef5cf1b5d9ee90107
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: e1625d2cdf0be4106a43b9d40aef97ea2b5c4ec4
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45615505"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "45999456"
 ---
 # <a name="introducing-xml-serialization"></a>XML 序列化简介
 
@@ -61,7 +61,7 @@ ms.locfileid: "45615505"
 
 - 已序列化的敏感数据可能容易受到攻击。
 
-  XmlSerializer 序列化数据之后，数据可存储为 XML 文件或其他的数据存储。 如果数据存储区可供其他进程使用或者可在 Intranet 或 Internet 上看见，则数据可能被盗和恶意使用。 例如，如果您创建一个应用程序来序列化包含信用卡号码的订单，则数据是高度敏感的。 为防止被盗和恶意使用，应始终保护您的数据存储区并采取步骤保持其私密性。
+  之后**XmlSerializer**包含序列化数据，它可以存储为 XML 文件或其他数据存储。 如果数据存储区可供其他进程使用或者可在 Intranet 或 Internet 上看见，则数据可能被盗和恶意使用。 例如，如果您创建一个应用程序来序列化包含信用卡号码的订单，则数据是高度敏感的。 为防止被盗和恶意使用，应始终保护您的数据存储区并采取步骤保持其私密性。
 
 ## <a name="serialization-of-a-simple-class"></a>简单类的序列化
 

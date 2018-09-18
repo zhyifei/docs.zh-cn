@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 5e7ff0be-3f23-4996-a92c-bd54d65c3836
-ms.openlocfilehash: 274a6e87b272002a567fd92605c4e690c03b6e26
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 4b2b35d3ca3f7bea5f64188420c17d386a1afa42
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/15/2018
-ms.locfileid: "45652789"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "45971976"
 ---
 # <a name="single-bulk-copy-operations"></a>单个批量复制操作
 执行 SQL Server 批量复制操作最简单的方法就是对数据库执行单次操作。 默认情况下，批量复制操作是作为一个独立的操作执行的：该复制操作以非事务处理方式进行，不可进行回滚。  
@@ -40,7 +40,7 @@ ms.locfileid: "45652789"
 >  我们建议源列和目标列的数据类型匹配。 如果数据类型不匹配， **SqlBulkCopy**尝试将每个源值转换为目标数据类型，使用采用的规则<xref:System.Data.SqlClient.SqlParameter.Value%2A>。 转换可能会影响性能，还可能会导致意外的错误。 例如，大多数情况下，`Double` 数据类型可以转换为 `Decimal` 数据类型，但是有时就不能。  
   
 ## <a name="example"></a>示例  
- 以下控制台应用程序演示如何使用 <xref:System.Data.SqlClient.SqlBulkCopy> 类加载数据。 在此示例中，<xref:System.Data.SqlClient.SqlDataReader>用于复制的数据**Production.Product**表中的 SQL Server**AdventureWorks**到同一个数据库中类似表的数据库。  
+ 以下控制台应用程序演示如何使用 <xref:System.Data.SqlClient.SqlBulkCopy> 类加载数据。 在此示例中，<xref:System.Data.SqlClient.SqlDataReader>用于复制的数据**Production.Product**表中的 SQL Server **AdventureWorks**到同一个数据库中类似表的数据库。  
   
 > [!IMPORTANT]
 >  此示例将不运行，除非你已创建的工作表中所述[大容量复制示例设置](../../../../../docs/framework/data/adonet/sql/bulk-copy-example-setup.md)。 提供此代码演示了使用语法**SqlBulkCopy**仅。 如果源表和目标表位于同一个 SQL Server 实例中，则使用 Transact-SQL `INSERT … SELECT` 语句复制数据会更加容易、更加迅速。  

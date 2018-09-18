@@ -10,11 +10,11 @@ author: Xansky
 ms.author: mhopkins
 manager: markl
 ms.openlocfilehash: f2927ea6eed0bf23f75f960f8ecef0a1ad670253
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: f513a91160b3fec289dd06646d0d6f81f8fcf910
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45591511"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46009357"
 ---
 # <a name="ui-automation-support-for-the-menubar-control-type"></a>UI 自动化对 MenuBar 控件类型的支持
 > [!NOTE]

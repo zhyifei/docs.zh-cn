@@ -6,11 +6,11 @@ ms.assetid: 5de945cb-88f4-49d7-b0e6-f098300cf357
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 6bfc2e6def94d0830df4a4cdf738cdeef106de9f
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
-ms.translationtype: MT
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45668166"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45972301"
 ---
 # <a name="extension-methods"></a>扩展方法
 扩展方法是一种语言功能，允许使用实例方法调用语法来调用静态方法。 这些方法必须采用至少一个参数，它表示的方法是在上运行的实例。  

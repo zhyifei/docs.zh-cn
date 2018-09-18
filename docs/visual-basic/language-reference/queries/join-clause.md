@@ -11,11 +11,11 @@ helpviewer_keywords:
 - Join clause [Visual Basic]
 ms.assetid: 6dd37936-b27c-4e00-98ad-154b23f4de64
 ms.openlocfilehash: b1551583079c66d1bf5f6963a42d5d24e518fff3
-ms.sourcegitcommit: ba5c189bf44d44204a3e8838e59ec378a62d82f3
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "44778430"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46003316"
 ---
 # <a name="join-clause-visual-basic"></a>Join 子句 (Visual Basic)
 将两个集合合并为单个集合。 联接运算基于匹配键，并使用`Equals`运算符。  

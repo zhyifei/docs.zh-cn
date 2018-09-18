@@ -7,12 +7,12 @@ helpviewer_keywords:
 - user controls [Windows Forms], inheriting from
 - composite controls [Windows Forms], creating
 ms.assetid: 79c9cf05-5ab6-4a18-886d-88a64748b098
-ms.openlocfilehash: 2c7d2c94c376b671d6e9e4e4b71bc8a9b0fbc343
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 7abdeae4d19ceb6425f85e3cdd28f565a03d7ea4
+ms.sourcegitcommit: f513a91160b3fec289dd06646d0d6f81f8fcf910
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43798753"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46007422"
 ---
 # <a name="how-to-author-composite-controls"></a>如何：创作复合控件
 可通过多种方式使用复合控件。 可将其作为 Windows 桌面应用程序项目的一部分创作，并只在该项目的窗体上使用它们。 或者，可在 Windows 控件库项目中创作它们，将该项目编译为程序集，在其他项目中使用这些控件。 甚至可以从它们继承，并针对特殊目的使用视觉对象继承快速对它们进行自定义。  
@@ -26,11 +26,11 @@ ms.locfileid: "43798753"
   
 1.  打开一个名为 `DemoControlHost` 的新 **Windows 应用程序**项目。  
   
-2.  在“项目”菜单上，单击“添加用户控件”。  
+2.  在 **“项目”** 菜单上，单击 **“添加用户控件”**。  
   
 3.  在“添加新项”对话框中，为类文件（.vb 或 .cs 文件）提供希望复合控件具有的名称。  
   
-4.  单击“添加”按钮为复合控件创建类文件。  
+4.  选择**添加**按钮以创建复合控件的类文件。  
   
 5.  将控件从“工具箱”添加到复合控件表面。  
   
