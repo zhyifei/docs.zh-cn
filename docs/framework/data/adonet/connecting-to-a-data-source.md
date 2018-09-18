@@ -3,11 +3,11 @@ title: 连接到 ADO.NET 中的数据源
 ms.date: 03/30/2017
 ms.assetid: 9abc3f92-1be3-4e1a-b360-762dc689650e
 ms.openlocfilehash: f5788b9b0b19f32d03c917575db7b3f40324c0a2
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
-ms.translationtype: HT
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 09/17/2018
-ms.locfileid: "45696154"
+ms.locfileid: "45964574"
 ---
 # <a name="connecting-to-a-data-source-in-adonet"></a>连接到 ADO.NET 中的数据源
 在 ADO.NET 中，使用**连接**对象以连接到特定的数据源，通过提供必要的身份验证连接字符串中的信息。 **连接**您使用的对象取决于数据源的类型。  
