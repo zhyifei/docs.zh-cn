@@ -2,12 +2,12 @@
 title: WCF Discovery 对象模型
 ms.date: 03/30/2017
 ms.assetid: 8365a152-eacd-4779-9130-bbc48fa5c5d9
-ms.openlocfilehash: a325ee0fd6376f101ca8ccc6097e79c30198a011
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b337eda40fc70a6d0e7b3aeccfc125e6e6bacf8f
+ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33509029"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46324107"
 ---
 # <a name="wcf-discovery-object-model"></a>WCF Discovery 对象模型
 WCF Discovery 由一组类型组成，通过这些类型提供的统一编程模型，您可以编写在运行时可发现的服务以及查找并使用这些服务的客户端。  
@@ -61,9 +61,7 @@ WCF Discovery 由一组类型组成，通过这些类型提供的统一编程模
 -   <xref:System.ServiceModel.Discovery.ResolveResponse>  
   
 -   <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior>  
-  
--   <!--zz <xref:System.ServiceModel.Discovery.ServiceDiscoveryExtension> --> `ServiceDiscoveryExtension`  
-  
+ 
 -   <xref:System.ServiceModel.Discovery.UdpAnnouncementEndpoint>  
   
 -   <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint>  
@@ -80,14 +78,14 @@ WCF Discovery 由一组类型组成，通过这些类型提供的统一编程模
 ## <a name="discoveryclient"></a>DiscoveryClient  
  <xref:System.ServiceModel.Discovery.DiscoveryClient> 类由客户端应用程序用来查找和解析可用服务。 它根据指定的 <xref:System.ServiceModel.Discovery.FindCriteria> 和 <xref:System.ServiceModel.Discovery.ResolveCriteria>，分别提供用于查找和解析服务的同步和异步方法。 开发人员创建一个 <xref:System.ServiceModel.Discovery.DiscoveryClient> 实例，并作为构造函数参数提供 <xref:System.ServiceModel.Discovery.DiscoveryEndpoint> 的实例。  
   
- 若要查找服务，开发人员需调用同步或异步`Find`方法，提供<!--zz <xref:System.ServiceModel.Discription.FindCriteria> -->`FindCriteria`实例，其中包含要使用的搜索条件。 <xref:System.ServiceModel.Discovery.DiscoveryClient> 创建一个具有相应标头的 `Probe` 消息并发送查找请求。 由于任何时候都可能存在多个未处理的 `Find` 请求，因此客户端会将接收到的响应关联并验证这些响应。 然后，客户端使用 `Find` 将结果传递给 <xref:System.ServiceModel.Discovery.FindResponse> 操作的调用方。  
+ 为了查找服务，开发人员需调用同步或异步 `Find` 方法，该方法提供了一个包含要使用的搜索条件的 <xref:System.ServiceModel.Discovery.FindCriteria> 实例。 <xref:System.ServiceModel.Discovery.DiscoveryClient> 创建一个具有相应标头的 `Probe` 消息并发送查找请求。 由于任何时候都可能存在多个未处理的 `Find` 请求，因此客户端会将接收到的响应关联并验证这些响应。 然后，客户端使用 `Find` 将结果传递给 <xref:System.ServiceModel.Discovery.FindResponse> 操作的调用方。  
   
- 为了解析已知的服务，开发人员需调用同步或异步`Resolve`提供的实例的方法<!--zz <xref:System.ServiceModel.ResolveCriteria>-->`ResolveCriteria`包含<xref:System.ServiceModel.EndpointAddress>已知服务。 <xref:System.ServiceModel.Discovery.DiscoveryClient> 创建具有相应标头的 `Resolve` 消息并发送解析请求。 使用 `Resolve` 将接收到的响应与未处理的解析请求关联，并将结果传递给 <xref:System.ServiceModel.Discovery.ResolveResponse> 操作的调用方。  
+ 为了解析已知服务，开发人员将调用同步或异步 `Resolve` 方法，该方法提供包含已知服务的 <xref:System.ServiceModel.Discovery.ResolveCriteria> 的 <xref:System.ServiceModel.EndpointAddress> 实例。 <xref:System.ServiceModel.Discovery.DiscoveryClient> 创建具有相应标头的 `Resolve` 消息并发送解析请求。 使用 `Resolve` 将接收到的响应与未处理的解析请求关联，并将结果传递给 <xref:System.ServiceModel.Discovery.ResolveResponse> 操作的调用方。  
   
- 如果发现代理在网络上存在与<!--zz <xref:System.ServiceModel.Discover.DiscoveryClient> -->`DiscoveryClient`发送发现请求以多播方式，发现代理可以使用多播的禁止 Hello 消息响应。 <!--zz <xref:System.ServiceModel.Discover.DiscoveryClient> --> `DiscoveryClient`引发`ProxyAvailable`事件以响应未完成接收 Hello 消息时`Find`或`Resolve`请求。 `ProxyAvailable` 事件包含有关发现代理的 <xref:System.ServiceModel.Discovery.EndpointDiscoveryMetadata>。 开发人员可以决定是否使用此信息从临时模式切换到托管模式。  
+ 如果网络中存在发现代理，并且 <xref:System.ServiceModel.Discovery.DiscoveryClient> 以多播方式发送发现请求，则发现代理可以使用多播禁止 Hello 消息进行响应。 <xref:System.ServiceModel.Discovery.DiscoveryClient> 在接收到 Hello 消息时将引发 `ProxyAvailable` 事件，以便响应未处理的 `Find` 或 `Resolve` 请求。 `ProxyAvailable` 事件包含有关发现代理的 <xref:System.ServiceModel.Discovery.EndpointDiscoveryMetadata>。 开发人员可以决定是否使用此信息从临时模式切换到托管模式。  
   
 ## <a name="discoveryendpoint"></a>DiscoveryEndpoint  
- <xref:System.ServiceModel.Discovery.DiscoveryEndpoint> 表示具有固定发现协定的标准终结点。 该类由服务或客户端用来发送或接收发现消息。 默认情况下，<xref:System.ServiceModel.Discovery.DiscoveryEndpoint>设置为使用<!--zz <xref:System.ServiceModel.Discovery.DiscoveryMode.Managed>-->`Managed`模式和 WSDiscovery11 Ws-discovery 版本。  
+ <xref:System.ServiceModel.Discovery.DiscoveryEndpoint> 表示具有固定发现协定的标准终结点。 该类由服务或客户端用来发送或接收发现消息。 默认情况下，<xref:System.ServiceModel.Discovery.DiscoveryEndpoint> 设置为使用 <xref:System.ServiceModel.Discovery.ServiceDiscoveryMode.Managed?displayProperty=nameWithType> 方法和 WSDiscovery11 WS-Discovery 版本。  
   
 ## <a name="discoverymessagesequencegenerator"></a>DiscoveryMessageSequenceGenerator  
  <xref:System.ServiceModel.Discovery.DiscoveryMessageSequenceGenerator> 用于在服务发出发现消息或公告消息时生成 <xref:System.ServiceModel.Discovery.DiscoveryMessageSequence>。  
@@ -102,13 +100,13 @@ WCF Discovery 由一组类型组成，通过这些类型提供的统一编程模
  <xref:System.ServiceModel.Discovery.DiscoveryVersion> 类表示要使用的发现协议版本。  
   
 ## <a name="endpointdiscoverybehavior"></a>EndpointDiscoveryBehavior  
- <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior> 类用于控制终结点的可发现性，指定扩展、附加协定类型名称， 以及与该终结点关联的作用域。 将此行为添加到应用程序终结点可以配置其 <xref:System.ServiceModel.Discovery.EndpointDiscoveryMetadata>。 将 <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior> 添加到服务主机后，默认情况下，该服务主机承载的所有应用程序终结点都变为可发现的。 开发人员可以关闭发现特定终结点通过设置<!--zz <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior.Enable%2A>-->`Enable`属性`false`。  
+ <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior> 类用于控制终结点的可发现性，指定扩展、附加协定类型名称， 以及与该终结点关联的作用域。 将此行为添加到应用程序终结点可以配置其 <xref:System.ServiceModel.Discovery.EndpointDiscoveryMetadata>。 将 <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior> 添加到服务主机后，默认情况下，该服务主机承载的所有应用程序终结点都变为可发现的。 开发人员通过将 <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior.Enabled%2A> 属性设置为 `false`，可以关闭发现特定终结点的能力。  
   
 ## <a name="endpointdiscoverymetadata"></a>EndpointDiscoveryMetadata  
  <xref:System.ServiceModel.Discovery.EndpointDiscoveryMetadata> 类提供服务发布的终结点的版本无关的表示形式。 该类包含服务开发人员指定的终结点地址、侦听 URI、协定类型名称、作用域、元数据版本和扩展。 客户端在 <xref:System.ServiceModel.Discovery.FindCriteria> 操作期间发送的 `Probe` 将与 <xref:System.ServiceModel.Discovery.EndpointDiscoveryMetadata> 进行匹配。 如果条件匹配，则会将 <xref:System.ServiceModel.Discovery.EndpointDiscoveryMetadata> 返回到客户端。 <xref:System.ServiceModel.Discovery.ResolveCriteria> 中的终结点地址将与 <xref:System.ServiceModel.Discovery.EndpointDiscoveryMetadata> 的终结点地址进行匹配。 如果条件匹配，则会将 <xref:System.ServiceModel.Discovery.EndpointDiscoveryMetadata> 返回到客户端。  
   
 ## <a name="findcriteria"></a>FindCriteria  
- <xref:System.ServiceModel.Discovery.FindCriteria> 类是一个版本无关的类，用于指定在查找服务时所使用的条件。 该类完全支持 WS-Discovery 定义的用于匹配服务的条件。 它还提供一些扩展，开发人员可以使用这些扩展指定可在匹配过程中使用的自定义值。 开发人员可以提供的终止条件`Find`通过指定操作<!--zz <xref:System.ServiceModel.Discovery.FindCriteria.MaxResult%2A>--> `MaxResult`，它指定的服务开发人员正在寻找值或指定的总数目<xref:System.ServiceModel.Discovery.FindCriteria.Duration%2A>，即值，该值指定客户端等待响应的时长。  
+ <xref:System.ServiceModel.Discovery.FindCriteria> 类是一个版本无关的类，用于指定在查找服务时所使用的条件。 该类完全支持 WS-Discovery 定义的用于匹配服务的条件。 它还提供一些扩展，开发人员可以使用这些扩展指定可在匹配过程中使用的自定义值。 开发人员可以提供 `Find` 操作的终止条件，方法是指定 <xref:System.ServiceModel.Discovery.FindCriteria.MaxResults%2A>，它指定开发人员查找的服务总数，或者指定 <xref:System.ServiceModel.Discovery.FindCriteria.Duration%2A>（该值指定客户端等待响应的时长）。  
   
 ## <a name="findrequestcontext"></a>FindRequestContext  
  <xref:System.ServiceModel.Discovery.FindRequestContext> 类由发现服务根据其在客户端初始化 `Probe` 操作时接收的 `Find` 消息进行实例化。 该类包含客户端所指定的 <xref:System.ServiceModel.Discovery.FindCriteria> 的一个实例。  
@@ -125,11 +123,8 @@ WCF Discovery 由一组类型组成，通过这些类型提供的统一编程模
 ## <a name="servicediscoverybehavior"></a>ServiceDiscoveryBehavior  
  通过 <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior> 类，开发人员可以将发现功能添加到服务。 您可以将此行为添加到 <xref:System.ServiceModel.ServiceHost>。 <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior> 类循环访问添加到服务主机的应用程序终结点，并根据可发现终结点创建 <xref:System.ServiceModel.Discovery.EndpointDiscoveryMetadata> 的集合。 默认情况下，所有终结点都是可发现的。 可以通过将 <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior> 添加到特定终结点来控制该特定终结点的可发现性。 如果已将公告终结点添加到 <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior>，则在打开或关闭服务主机时，将通过每个公告终结点发送所有可发现终结点的公告。  
   
-## <a name="servicediscoveryextension"></a>ServiceDiscoveryExtension  
- <!--zz <xref:System.ServiceModel.Discovery.ServiceDiscoveryExtension> --> `ServiceDiscoveryExtension`类创建的<xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior>类。 供发现的终结点可以从获取<!--zz <xref:System.ServiceModel.Discovery.ServiceDiscoveryExtension> --> `ServiceDiscoveryExtension`。 还可使用此类指定自定义发现服务实现。  
-  
 ## <a name="udpannouncementendpoint"></a>UdpAnnouncementEndpoint  
  <xref:System.ServiceModel.Discovery.UdpAnnouncementEndpoint> 类是一个标准公告终结点，它预先配置为可通过 UDP 多播绑定进行公告。 默认情况下，<xref:System.ServiceModel.Discovery.UdpAnnouncementEndpoint> 设置为使用 WSApril2005 WS_Discovery 版本。  
   
 ## <a name="udpdiscoveryendpoint"></a>UdpDiscoveryEndpoint  
- <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> 类一个标准发现终结点，它预先配置为可通过 UDP 多播绑定来发现。 默认情况下，<xref:System.ServiceModel.Discovery.DiscoveryEndpoint>设置为使用 WSDiscovery11 Ws-discovery 版本和<!--zz <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint.Adhoc>-->`Adhoc`模式。
+ <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> 类一个标准发现终结点，它预先配置为可通过 UDP 多播绑定来发现。 默认情况下，<xref:System.ServiceModel.Discovery.DiscoveryEndpoint> 设置为使用 WSDiscovery11 WS-Discovery 版本和 <xref:System.ServiceModel.Discovery.ServiceDiscoveryMode.Adhoc?displayProperty=nameWithType> 模式。

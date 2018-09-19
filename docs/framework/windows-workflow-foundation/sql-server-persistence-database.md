@@ -3,11 +3,11 @@ title: SQL Server 持久性数据库
 ms.date: 03/30/2017
 ms.assetid: 4e594eec-2a31-4d49-ad31-aca2ecbb1f69
 ms.openlocfilehash: 3929148cf6a236db7d226b45da750e8d4ae1d0cc
-ms.sourcegitcommit: f513a91160b3fec289dd06646d0d6f81f8fcf910
+ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46287316"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46322456"
 ---
 # <a name="sql-server-persistence-database"></a>SQL Server 持久性数据库
 本节提供有关 SQL 工作流实例存储支持的公共数据库视图的详细信息，并演示如何反序列化基元实例数据属性以及如何查询非持久化实例。  
