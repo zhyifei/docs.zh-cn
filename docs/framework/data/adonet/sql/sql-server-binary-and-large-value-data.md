@@ -3,26 +3,26 @@ title: SQL Server 二进制和大值数据
 ms.date: 03/30/2017
 ms.assetid: e00827b3-7511-4b2d-91d7-851ca86cc6b5
 ms.openlocfilehash: 9ebbe23dfbcac7825ce449dd40f62b921d13ab4a
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45998937"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46470943"
 ---
-# <a name="sql-server-binary-and-large-value-data"></a><span data-ttu-id="e2c51-102">SQL Server 二进制和大值数据</span><span class="sxs-lookup"><span data-stu-id="e2c51-102">SQL Server Binary and Large-Value Data</span></span>
-<span data-ttu-id="e2c51-103">SQL Server 提供 `max` 说明符，它可扩展 `varchar`、`nvarchar` 和 `varbinary` 数据类型的存储容量。</span><span class="sxs-lookup"><span data-stu-id="e2c51-103">SQL Server provides the `max` specifier, which expands the storage capacity of the `varchar`, `nvarchar`, and `varbinary` data types.</span></span> <span data-ttu-id="e2c51-104">`varchar(max)``nvarchar(max)`，并`varbinary(max)`统称为*大型值数据类型*。</span><span class="sxs-lookup"><span data-stu-id="e2c51-104">`varchar(max)`, `nvarchar(max)`, and `varbinary(max)` are collectively called *large-value data types*.</span></span> <span data-ttu-id="e2c51-105">您可以使用大值数据类型来存储最大为 2^31-1 个字节的数据。</span><span class="sxs-lookup"><span data-stu-id="e2c51-105">You can use the large-value data types to store up to 2^31-1 bytes of data.</span></span>  
+# <a name="sql-server-binary-and-large-value-data"></a><span data-ttu-id="a77d3-102">SQL Server 二进制和大值数据</span><span class="sxs-lookup"><span data-stu-id="a77d3-102">SQL Server Binary and Large-Value Data</span></span>
+<span data-ttu-id="a77d3-103">SQL Server 提供 `max` 说明符，它可扩展 `varchar`、`nvarchar` 和 `varbinary` 数据类型的存储容量。</span><span class="sxs-lookup"><span data-stu-id="a77d3-103">SQL Server provides the `max` specifier, which expands the storage capacity of the `varchar`, `nvarchar`, and `varbinary` data types.</span></span> <span data-ttu-id="a77d3-104">`varchar(max)``nvarchar(max)`，并`varbinary(max)`统称为*大型值数据类型*。</span><span class="sxs-lookup"><span data-stu-id="a77d3-104">`varchar(max)`, `nvarchar(max)`, and `varbinary(max)` are collectively called *large-value data types*.</span></span> <span data-ttu-id="a77d3-105">您可以使用大值数据类型来存储最大为 2^31-1 个字节的数据。</span><span class="sxs-lookup"><span data-stu-id="a77d3-105">You can use the large-value data types to store up to 2^31-1 bytes of data.</span></span>  
   
- <span data-ttu-id="e2c51-106">SQL Server 2008 引入了 FILESTREAM 属性，该属性不是一种数据类型，而是一种可在列上定义的属性，因而允许将大值数据存储在文件系统上而不是存储在数据库中。</span><span class="sxs-lookup"><span data-stu-id="e2c51-106">SQL Server 2008 introduces the FILESTREAM attribute, which is not a data type, but rather an attribute that can be defined on a column, allowing large-value data to be stored on the file system instead of in the database.</span></span>  
+ <span data-ttu-id="a77d3-106">SQL Server 2008 引入了 FILESTREAM 属性，该属性不是一种数据类型，而是一种可在列上定义的属性，因而允许将大值数据存储在文件系统上而不是存储在数据库中。</span><span class="sxs-lookup"><span data-stu-id="a77d3-106">SQL Server 2008 introduces the FILESTREAM attribute, which is not a data type, but rather an attribute that can be defined on a column, allowing large-value data to be stored on the file system instead of in the database.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="e2c51-107">本节内容</span><span class="sxs-lookup"><span data-stu-id="e2c51-107">In This Section</span></span>  
- [<span data-ttu-id="e2c51-108">在 ADO.NET 中修改大值 (max) 数据</span><span class="sxs-lookup"><span data-stu-id="e2c51-108">Modifying Large-Value (max) Data in ADO.NET</span></span>](../../../../../docs/framework/data/adonet/sql/modifying-large-value-max-data.md)  
- <span data-ttu-id="e2c51-109">说明如何使用大值数据类型。</span><span class="sxs-lookup"><span data-stu-id="e2c51-109">Describes how to work with the large-value data types.</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="a77d3-107">本节内容</span><span class="sxs-lookup"><span data-stu-id="a77d3-107">In This Section</span></span>  
+ [<span data-ttu-id="a77d3-108">在 ADO.NET 中修改大值 (max) 数据</span><span class="sxs-lookup"><span data-stu-id="a77d3-108">Modifying Large-Value (max) Data in ADO.NET</span></span>](../../../../../docs/framework/data/adonet/sql/modifying-large-value-max-data.md)  
+ <span data-ttu-id="a77d3-109">说明如何使用大值数据类型。</span><span class="sxs-lookup"><span data-stu-id="a77d3-109">Describes how to work with the large-value data types.</span></span>  
   
- [<span data-ttu-id="e2c51-110">FILESTREAM 数据</span><span class="sxs-lookup"><span data-stu-id="e2c51-110">FILESTREAM Data</span></span>](../../../../../docs/framework/data/adonet/sql/filestream-data.md)  
- <span data-ttu-id="e2c51-111">描述如何使用在 SQL Server 2008 中通过 FILESTREAM 属性存储的大值数据。</span><span class="sxs-lookup"><span data-stu-id="e2c51-111">Describes how to work with large-value data stored in SQL Server 2008 with the FILESTREAM attribute.</span></span>  
+ [<span data-ttu-id="a77d3-110">FILESTREAM 数据</span><span class="sxs-lookup"><span data-stu-id="a77d3-110">FILESTREAM Data</span></span>](../../../../../docs/framework/data/adonet/sql/filestream-data.md)  
+ <span data-ttu-id="a77d3-111">描述如何使用在 SQL Server 2008 中通过 FILESTREAM 属性存储的大值数据。</span><span class="sxs-lookup"><span data-stu-id="a77d3-111">Describes how to work with large-value data stored in SQL Server 2008 with the FILESTREAM attribute.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="e2c51-112">请参阅</span><span class="sxs-lookup"><span data-stu-id="e2c51-112">See Also</span></span>  
- [<span data-ttu-id="e2c51-113">SQL Server 数据类型和 ADO.NET</span><span class="sxs-lookup"><span data-stu-id="e2c51-113">SQL Server Data Types and ADO.NET</span></span>](../../../../../docs/framework/data/adonet/sql/sql-server-data-types.md)  
- [<span data-ttu-id="e2c51-114">ADO.NET 中的 SQL Server 数据操作</span><span class="sxs-lookup"><span data-stu-id="e2c51-114">SQL Server Data Operations in ADO.NET</span></span>](../../../../../docs/framework/data/adonet/sql/sql-server-data-operations.md)  
- [<span data-ttu-id="e2c51-115">在 ADO.NET 中检索和修改数据</span><span class="sxs-lookup"><span data-stu-id="e2c51-115">Retrieving and Modifying Data in ADO.NET</span></span>](../../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)  
- [<span data-ttu-id="e2c51-116">ADO.NET 托管提供程序和数据集开发人员中心</span><span class="sxs-lookup"><span data-stu-id="e2c51-116">ADO.NET Managed Providers and DataSet Developer Center</span></span>](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a><span data-ttu-id="a77d3-112">请参阅</span><span class="sxs-lookup"><span data-stu-id="a77d3-112">See Also</span></span>  
+ [<span data-ttu-id="a77d3-113">SQL Server 数据类型和 ADO.NET</span><span class="sxs-lookup"><span data-stu-id="a77d3-113">SQL Server Data Types and ADO.NET</span></span>](../../../../../docs/framework/data/adonet/sql/sql-server-data-types.md)  
+ [<span data-ttu-id="a77d3-114">ADO.NET 中的 SQL Server 数据操作</span><span class="sxs-lookup"><span data-stu-id="a77d3-114">SQL Server Data Operations in ADO.NET</span></span>](../../../../../docs/framework/data/adonet/sql/sql-server-data-operations.md)  
+ [<span data-ttu-id="a77d3-115">在 ADO.NET 中检索和修改数据</span><span class="sxs-lookup"><span data-stu-id="a77d3-115">Retrieving and Modifying Data in ADO.NET</span></span>](../../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)  
+ [<span data-ttu-id="a77d3-116">ADO.NET 托管提供程序和数据集开发人员中心</span><span class="sxs-lookup"><span data-stu-id="a77d3-116">ADO.NET Managed Providers and DataSet Developer Center</span></span>](https://go.microsoft.com/fwlink/?LinkId=217917)
