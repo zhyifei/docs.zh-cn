@@ -11,11 +11,11 @@ author: mairaw
 ms.author: mairaw
 ms.topic: conceptual
 ms.openlocfilehash: 7659dde4a2cb08fc3257d2f613ce4146522072b6
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45990721"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46478865"
 ---
 # <a name="additional-class-libraries-and-apis"></a>其他类库和 API
 
@@ -25,7 +25,7 @@ ms.locfileid: "45990721"
   
 ## <a name="oob-projects"></a>OOB 项目
   
-| 项目 | 描述 |  
+| 项目 | Description |  
 | ------- | ----------- |  
 | <xref:System.Collections.Immutable> | 提供的集合数是线程安全的，并且保证决不会更改该集合的内容。 |
 | <xref:System.Net.Http.WinHttpHandler> | 基于 Windows 的 WinHTTP 接口为 <xref:System.Net.Http.HttpClient> 提供消息处理程序。 |
@@ -34,7 +34,7 @@ ms.locfileid: "45990721"
 
 ## <a name="platform-specific-libraries"></a>特定于平台的库
   
-| 项目 | 描述 |  
+| 项目 | Description |  
 | ------- | ----------- |  
 | <xref:System.Text.CodePagesEncodingProvider> | 扩展了<xref:System.Text.EncodingProvider>类，以使代码页编码可用于面向通用 Windows 平台的应用。 |  
   

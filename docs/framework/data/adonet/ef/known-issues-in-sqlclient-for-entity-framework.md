@@ -3,11 +3,11 @@ title: SqlClient 中的已知问题（实体框架）
 ms.date: 03/30/2017
 ms.assetid: 48fe4912-4d0f-46b6-be96-3a42c54780f6
 ms.openlocfilehash: c1353444415ddd2305a73d14bacf1bb33a931929
-ms.sourcegitcommit: f513a91160b3fec289dd06646d0d6f81f8fcf910
+ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46009055"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46477868"
 ---
 # <a name="known-issues-in-sqlclient-for-entity-framework"></a>SqlClient 中的已知问题（实体框架）
 本节介绍与 SQL Server .NET Framework 数据提供程序 (SqlClient) 有关的已知问题。  

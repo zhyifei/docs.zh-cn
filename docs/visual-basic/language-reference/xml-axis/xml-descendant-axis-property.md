@@ -11,11 +11,11 @@ helpviewer_keywords:
 - XML [Visual Basic], accessing
 ms.assetid: a178f85b-5d54-438f-8479-40b62af6fe76
 ms.openlocfilehash: 6040401ce3e98c835677be3c4cc7698013348f37
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45990657"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46472137"
 ---
 # <a name="xml-descendant-axis-property-visual-basic"></a>XML 后代轴属性 (Visual Basic)
 提供对以下的后代的访问：<xref:System.Xml.Linq.XElement>对象，<xref:System.Xml.Linq.XDocument>对象、 一系列<xref:System.Xml.Linq.XElement>对象或一系列<xref:System.Xml.Linq.XDocument>对象。  
@@ -36,7 +36,7 @@ object...<descendant>
  `descendant`  
  必须的。 若要访问，窗体的子代节点的名称 [`prefix``:`]`name`。  
   
-|部件|描述|  
+|部件|Description|  
 |----------|-----------------|  
 |`prefix`|可选。 子代节点的 XML 命名空间前缀。 必须使用定义的全局 XML 命名空间`Imports`语句。|  
 |`name`|必须的。 子代节点的本地名称。 请参阅[声明的 XML 元素和特性的名称](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md)。|  

@@ -10,11 +10,11 @@ helpviewer_keywords:
 - WCF Data Services, hosting
 ms.assetid: f6f768c5-4989-49e3-a36f-896ab4ded86e
 ms.openlocfilehash: af81e65dfd4661d62d7aa4a3e6075be312765cb7
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45749838"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46482074"
 ---
 # <a name="how-to-develop-a-wcf-data-service-running-on-iis"></a>如何： 开发在 IIS 上运行的 WCF 数据服务
 
@@ -37,7 +37,7 @@ ms.locfileid: "45749838"
 
 1. 输入`NorthwindService`作为项目的名称。
 
-5. 单击 **“确定”**。
+5. 单击“确定” 。
 
 6. 上**项目**菜单中，选择**NorthwindService 属性**。
 

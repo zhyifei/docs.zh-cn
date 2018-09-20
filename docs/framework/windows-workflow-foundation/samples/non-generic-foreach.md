@@ -2,17 +2,17 @@
 title: 非泛型 ForEach
 ms.date: 03/30/2017
 ms.assetid: 576cd07a-d58d-4536-b514-77bad60bff38
-ms.openlocfilehash: b94ad54d248af7f6ad45c11b9860dd415db840f9
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 0274cd5b87e6039ff40afa3108986ffd113fc4fb
+ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43419312"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46478313"
 ---
 # <a name="non-generic-foreach"></a>非泛型 ForEach
-[!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] 在其工具箱中随附的一组控制流活动，包括<xref:System.Activities.Statements.ForEach%601>，它允许遍历<!--zz <xref:System.Collections.IEnumerable%601> -->`System.Collections.IEnumerable`集合。  
+[!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] 的工具箱中附带了一组控制流活动，其中包括可用来循环访问 <xref:System.Activities.Statements.ForEach%601> 集合的 <xref:System.Collections.Generic.IEnumerable%601>。  
   
- <xref:System.Activities.Statements.ForEach%601> 需要其<xref:System.Activities.Statements.ForEach%601.Values%2A>属性属于类型<!--zz <xref:System.Collections.IEnumerable%601> --> `System.Collections.IEnumerable`。 这将阻止从遍历数据结构实现的用户<!--zz <xref:System.Collections.IEnumerable%601> -->`System.Collections.IEnumerable`接口 (例如， <xref:System.Collections.ArrayList>)。 非泛型版本的 <xref:System.Activities.Statements.ForEach%601> 没有这一要求，不过与此对应的代价是，需要更复杂的运行时来确保集合中的值类型的兼容性。  
+ <xref:System.Activities.Statements.ForEach%601> 要求其 <xref:System.Activities.Statements.ForEach%601.Values%2A> 属性为 <xref:System.Collections.Generic.IEnumerable%601> 类型。 这将阻止用户循环访问实现 <xref:System.Collections.Generic.IEnumerable%601> 接口（例如，<xref:System.Collections.ArrayList>）的数据结构。 非泛型版本的 <xref:System.Activities.Statements.ForEach%601> 没有这一要求，不过与此对应的代价是，需要更复杂的运行时来确保集合中的值类型的兼容性。  
   
  此示例演示如何实现非泛型的 <xref:System.Activities.Statements.ForEach%601> 活动及其设计器。 此活动可用于循环访问 <xref:System.Collections.ArrayList>。  
   
@@ -93,7 +93,7 @@ public sealed class ForEachWithBodyFactory : IActivityTemplateFactory
 }  
 ```  
   
-#### <a name="to-run-this-sample"></a>运行此示例  
+#### <a name="to-run-this-sample"></a>运行本示例的步骤  
   
 1.  将您选择的项目设置为解决方案的启动项目：  
   

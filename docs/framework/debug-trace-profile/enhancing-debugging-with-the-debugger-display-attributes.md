@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 72bb7aa9-459b-42c4-9163-9312fab4c410
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 2efa8cfb2b196d6f5a26354161e42c1f376e43b1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 880504e874d9797cf05290058b6dbf3a3daf2579
+ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33389500"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46473111"
 ---
 # <a name="enhancing-debugging-with-the-debugger-display-attributes"></a>使用调试器显示特性增强调试
 最了解且可指定类型运行时行为的类型开发人员还可以使用调试器显示属性指定类型在调试器中的显示外观。 此外，即使不了解源代码，用户也可将提供 `Target` 属性的调试器显示属性应用于程序集级别。 <xref:System.Diagnostics.DebuggerDisplayAttribute> 属性控制类型或成员在调试器变量窗口中的显示方式。 <xref:System.Diagnostics.DebuggerBrowsableAttribute> 属性决定是否在调试器变量窗口中显示字段或属性，若要显示，则决定其显示方式。 <xref:System.Diagnostics.DebuggerTypeProxyAttribute> 属性指定类型的替代类型或代理，并更改类型在调试器窗口中的显示方式。 查看具有代理或替代类型的变量时，代理将代替调试器显示窗口中的原始类型。 调试器变量窗口仅显示代理类型的公共成员。 不会显示私有成员。  
@@ -93,7 +93,7 @@ class MyHashtable : Hashtable
   
 ## <a name="example"></a>示例  
   
-### <a name="description"></a>描述  
+### <a name="description"></a>Description  
  可在 [!INCLUDE[vsprvslong](../../../includes/vsprvslong-md.md)] 中查看以下代码示例，以查看应用 <xref:System.Diagnostics.DebuggerDisplayAttribute>、<xref:System.Diagnostics.DebuggerBrowsableAttribute> 和 <xref:System.Diagnostics.DebuggerTypeProxyAttribute> 属性的结果。  
   
 ### <a name="code"></a>代码  

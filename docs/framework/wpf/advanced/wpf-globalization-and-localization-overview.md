@@ -5,12 +5,12 @@ helpviewer_keywords:
 - globalization [WPF], about globalization
 - localization [WPF], about localization
 ms.assetid: 56e5a5c8-6c96-4d19-b8e1-a5be1dc564af
-ms.openlocfilehash: 54c5caaf3ade07f342e94ad0359f00c1418eace4
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: d8fef7965e3248d5361d866a441783bf4968460e
+ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/15/2018
-ms.locfileid: "45646449"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46478884"
 ---
 # <a name="wpf-globalization-and-localization-overview"></a>WPF 全球化和本地化概述
 当你将自己的产品限制为只能通过一种语言使用时，便将潜在的客户群限制为全球 65 亿人口中的一小部分。 如果想让自己的应用程序被全球用户所接受，那么对产品进行经济而有效的本地化将是赢得更多客户的最好、最经济的方法。  
@@ -54,7 +54,7 @@ ms.locfileid: "45646449"
   
 -   使用本地化特性控制本地化，而不是选择性地省略<xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A>元素上的属性。 请参阅[本地化特性和注释](../../../../docs/framework/wpf/advanced/localization-attributes-and-comments.md)有关详细信息。  
   
--   使用**msbuild /t: updateuid**并 **/t: checkuid**添加和检查<xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A>中的属性在[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]。 使用<xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A>属性，用于开发和本地化之间跟踪更改。 <xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A> 属性可帮助您对新的开发更改进行本地化。 如果你手动添加<xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A>属性设置为[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]，该任务是通常会比较繁重并且准确性较低。  
+-   使用`msbuild -t:updateuid`并`-t:checkuid`若要添加并检查<xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A>中的属性在[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]。 使用<xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A>属性，用于开发和本地化之间跟踪更改。 <xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A> 属性可帮助您对新的开发更改进行本地化。 如果你手动添加<xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A>属性设置为[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]，该任务是通常会比较繁重并且准确性较低。  
   
     -   请勿编辑或更改<xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A>后开始进行本地化的属性。  
   
@@ -125,7 +125,7 @@ ms.locfileid: "45646449"
   
  <xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A> 为了使所需属性[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]本地化[!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)]才能正常工作。  
   
- 它们由[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]本地化[!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)]之间的开发和本地化的跟踪更改[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]。 <xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A> 属性，你可以合并的较新版本[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]与较早本地化[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]。 您将添加<xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A>属性通过运行**msbuild /t: updateuid RunDialog.csproj**命令行界面中。 这是添加的建议的方法<xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A>属性因为手动添加它们是通常比较费时并且准确性较低。 你可以检查是否<xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A>属性正确设置通过运行**msbuild /t: checkuid RunDialog.csproj**。  
+ 它们由[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]本地化[!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)]之间的开发和本地化的跟踪更改[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]。 <xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A> 属性，你可以合并的较新版本[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]与较早本地化[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]。 您将添加<xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A>属性通过运行`msbuild -t:updateuid RunDialog.csproj`命令行界面中。 这是添加的建议的方法<xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A>属性因为手动添加它们是通常比较费时并且准确性较低。 你可以检查是否<xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A>属性正确设置通过运行`msbuild -t:checkuid RunDialog.csproj`。
   
  [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]通过使用结构化<xref:System.Windows.Controls.Grid>控件，它是针对如何利用自动布局非常有用的控件中[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]。 请注意，对话框拆分成三行五列。 没有一种行和列定义具有固定的大小;因此，[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]定位每个单元中的元素可以适应增加和减少的大小在本地化过程。  
   
@@ -258,7 +258,7 @@ ms.locfileid: "45646449"
   
 |资源键|类别|可读性|可修改性|注释|“值”|  
 |-|-|-|-|-|-|  
-|TextBlock_1:System.Windows.Controls.TextBlock.$Content|Text|true|true|此字符用作装饰性规则。|&#124;|  
+|TextBlock_1:System.Windows.Controls.TextBlock.$Content|Text|TRUE|TRUE|此字符用作装饰性规则。|&#124;|  
   
  使用下面的语法可以将注释放置在任何元素的内容或属性上：  
   
@@ -266,7 +266,7 @@ ms.locfileid: "45646449"
   
  **本地化特性**  
   
- 通常，开发人员或本地化经理需要控制本地化人员能够阅读和修改的内容。 例如，可能不希望本地化人员翻译你公司的名称或法律用语。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 提供了一些特性，使用这些特性可以设置元素的内容或属性（本地化工具可以使用这些内容或属性锁定、隐藏元素或对元素进行排序）的可读性、可修改性和类别。 有关详细信息，请参阅<xref:System.Windows.Localization.Attributes%2A>。 此示例中 LocBaml 工具仅输出这些特性的值。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 控件对这些特性都使用默认值，但可以替代这些默认值。 例如，下面的示例重写的默认本地化特性`TextBlock_1`和为本地化人员设置的内容可读，但不可修改。  
+ 通常，开发人员或本地化经理需要控制本地化人员能够阅读和修改的内容。 例如，可能不希望本地化人员翻译你公司的名称或法律用语。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 提供了一些特性，使用这些特性可以设置元素的内容或属性（本地化工具可以使用这些内容或属性锁定、隐藏元素或对元素进行排序）的可读性、可修改性和类别。 有关详细信息，请参阅 <xref:System.Windows.Localization.Attributes%2A> 。 此示例中 LocBaml 工具仅输出这些特性的值。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 控件对这些特性都使用默认值，但可以替代这些默认值。 例如，下面的示例重写的默认本地化特性`TextBlock_1`和为本地化人员设置的内容可读，但不可修改。  
   
  [!code-xaml[LocalizationComAtt#LocalizationAttributes](../../../../samples/snippets/csharp/VS_Snippets_Wpf/LocalizationComAtt/CSharp/Attributes.xaml#localizationattributes)]  
   

@@ -2,12 +2,12 @@
 title: '&lt;comContract&gt;'
 ms.date: 03/30/2017
 ms.assetid: 3f8e1c0c-cfdf-4c79-ac65-c64e9323a51c
-ms.openlocfilehash: b15d40c5933776676c605e71c77453442ad3e339
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: e2addbada7f55076ae919d93c897991a7ec0fcd8
+ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32749057"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46490447"
 ---
 # <a name="ltcomcontractgt"></a>&lt;comContract&gt;
 指定 COM+ 集成服务协定。  
@@ -70,7 +70,7 @@ ms.locfileid: "32749057"
 |comContracts|包含 `comContract` 元素的集合。|  
   
 ## <a name="remarks"></a>备注  
- COM + 集成服务协定是当前只限于" http://tempuri.org "命名空间，而协定名称从支持的 COM 接口派生。 但是，可以使用配置文件中的 `comContracts` 节以及 `comContract` 元素来指定替代服务协定。 例如，可以使用下面的配置来指定服务协定的命名空间、协定名称、要包含的用户定义类型以及其他设置。  
+ COM + 集成服务协定是当前只限于`http://tempuri.org`命名空间，而从提供支持的 COM 接口派生的协定名称。 但是，可以使用配置文件中的 `comContracts` 节以及 `comContract` 元素来指定替代服务协定。 例如，可以使用下面的配置来指定服务协定的命名空间、协定名称、要包含的用户定义类型以及其他设置。  
   
 ```xml  
 <comContracts>  

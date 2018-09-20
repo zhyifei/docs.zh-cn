@@ -3,11 +3,11 @@ title: 导入声明：open 关键字 (F#)
 description: '了解有关 F # 导入声明以及如何指定模块或命名空间可以不使用完全限定的名称引用其中的元素。'
 ms.date: 05/16/2016
 ms.openlocfilehash: 8cae4b4f5418689bfb0933b7db4ec23a313d5ed8
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45969569"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46481632"
 ---
 # <a name="import-declarations-the-open-keyword"></a>导入声明：`open`关键字
 
@@ -50,7 +50,7 @@ printfn "%A" empty
 
 F # 代码而无需显式导入声明它们也隐式打开频繁使用一些命名空间。 下表显示了默认情况下打开的命名空间。
 
-|命名空间|描述|
+|命名空间|Description|
 |---------|-----------|
 |`Microsoft.FSharp.Core`|包含基本 F # 的类型定义内置类型，如`int`和`float`。|
 |`Microsoft.FSharp.Core.Operators`|包含基本算术运算，如`+`和`*`。|

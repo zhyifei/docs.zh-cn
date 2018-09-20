@@ -3,16 +3,16 @@ title: 系统函数
 ms.date: 03/30/2017
 ms.assetid: b7c71b58-09e6-44ce-a3e5-a0fdb892fb86
 ms.openlocfilehash: 277f2f9c69610b134f3f95787f065f65b01712d2
-ms.sourcegitcommit: f513a91160b3fec289dd06646d0d6f81f8fcf910
-ms.translationtype: HT
+ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46006595"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46472238"
 ---
 # <a name="system-functions"></a>系统函数
 SQL Server .NET Framework 数据提供程序 (SqlClient) 提供以下系统函数：  
   
-|函数|描述|  
+|函数|Description|  
 |--------------|-----------------|  
 |`CHECKSUM (` `value`, [`value`, [`value`]]`)`|返回校验和值。 `CHECKSUM` 用于生成哈希索引。<br /><br /> **参数**<br /><br /> `value`： 一个`Boolean`， `Byte`， `Int16`， `Int32`， `Int64`， `Single`， `Decimal`， `Double`， `DateTime`， `String`， `Binary`，或`Guid`。 可以指定一个、两个或三个值。<br /><br /> **返回值**<br /><br /> 指定表达式的绝对值。<br /><br /> **示例**<br /><br /> `SqlServer.CHECKSUM(10,100,1000.0)`|  
 |`CURRENT_TIMESTAMP ()`|以 SQL Server 内部格式对 `DateTime` 值生成当前日期和时间（在 SQL Server 2008 中精度为 7，在 SQL Server 2005 中精度为 3）。<br /><br /> **返回值**<br /><br /> 作为 `DateTime` 的当前系统日期和时间。<br /><br /> **示例**<br /><br /> `SqlServer.CURRENT_TIMESTAMP()`|  

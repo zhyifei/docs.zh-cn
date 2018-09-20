@@ -3,11 +3,11 @@ title: 特性 (F#)
 description: '了解 F # 属性如何启用要应用于编程构造元数据。'
 ms.date: 05/16/2016
 ms.openlocfilehash: 3e7f1d0ff383e1070b3db72e633f80ea37150548
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/15/2018
-ms.locfileid: "45647945"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46471085"
 ---
 # <a name="attributes"></a>特性
 
@@ -89,7 +89,7 @@ F # 中的特性可以应用于以下的编程构造： 函数、 方法、 程�
     <td>成员这。MyMethod ([<param: Out>] x: ref<int>) = x: = 10</td> 
   </tr>
   <tr>
-    <td>类型</td>
+    <td>type</td>
     <td>
         ```
         [<type: StructLayout(Sequential)>] 键入 MyStruct = 结构 x： 字节 y: int 结束 ```

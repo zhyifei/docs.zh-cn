@@ -8,11 +8,11 @@ helpviewer_keywords:
 - print preview [Windows Forms], default interface (using designer)
 ms.assetid: bfb5a3d7-021e-44f4-90f3-d435467f51d6
 ms.openlocfilehash: 0f35343ca06666580d744b4d6e0fa954afedbd9c
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45968984"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46477842"
 ---
 # <a name="printpreviewdialog-control-windows-forms"></a>PrintPreviewDialog 控件（Windows 窗体）
 Windows 窗体 `PrintPreviewDialog` 控件是一个预配置的对话框，用于显示文档在打印时的显示方式。 在基于 Windows 的应用程序中，使用它作为一种替代配置自己对话框的简单解决方案。 该控件包含用于打印、放大、显示一页或多页以及关闭对话框的按钮。  

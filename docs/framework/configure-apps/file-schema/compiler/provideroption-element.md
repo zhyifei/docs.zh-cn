@@ -12,11 +12,11 @@ author: mcleblanc
 ms.author: markl
 manager: markl
 ms.openlocfilehash: 75cc2003a88cc7be467b9062c37b6b5d9eb82f53
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45618894"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46480664"
 ---
 # <a name="ltprovideroptiongt-element"></a>&lt;providerOption&gt;元素
 指定语言提供程序的编译器版本特性。  
@@ -51,7 +51,7 @@ ms.locfileid: "45618894"
   
 ### <a name="parent-elements"></a>父元素  
   
-|元素|描述|  
+|元素|Description|  
 |-------------|-----------------|  
 |[\<configuration> 元素](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)|公共语言运行库和 .NET Framework 应用程序所使用的每个配置文件中的根元素。|  
 |[\<system.codedom > 元素](../../../../../docs/framework/configure-apps/file-schema/compiler/system-codedom-element.md)|指定可用语言提供程序的编译器配置设置。|  

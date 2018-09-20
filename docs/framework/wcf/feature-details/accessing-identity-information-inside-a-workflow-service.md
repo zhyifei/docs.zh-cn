@@ -2,17 +2,17 @@
 title: 访问工作流服务内的标识信息
 ms.date: 03/30/2017
 ms.assetid: 0b832127-b35b-468e-a45f-321381170cbc
-ms.openlocfilehash: a87c21215c37fefd8d9306fd0ccd0c5b2a1dfd11
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7951782946f5b8ef989598d01229dcf193d97689
+ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33491970"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46480742"
 ---
 # <a name="accessing-identity-information-inside-a-workflow-service"></a>访问工作流服务内的标识信息
-若要访问工作流服务内的标识信息，您必须实现自定义执行属性中的 <xref:System.ServiceModel.Activities.IReceiveMessageCallback> 接口。 在 <xref:System.ServiceModel.Activities.IReceiveMessageCallback.OnReceiveMessage(System.ServiceModel.OperationContext,System.Activities.ExecutionProperties)> 方法中，您可以访问 <xref:System.ServiceModel.OperationContext.ServiceSecurityContext> 来访问标识信息。 本主题将指导您实现此执行属性，以及一个在运行时会将此属性呈现给 <xref:System.ServiceModel.Activities.Receive> 活动的自定义活动。  自定义活动将实现相同的行为<!--zz <xref:System.ServiceModel.Activities.Sequence>-->`System.ServiceModel.Activities.Sequence`活动时除外，<xref:System.ServiceModel.Activities.Receive>置于内，<xref:System.ServiceModel.Activities.IReceiveMessageCallback>将调用，且将检索的标识信息。  
+若要访问工作流服务内的标识信息，您必须实现自定义执行属性中的 <xref:System.ServiceModel.Activities.IReceiveMessageCallback> 接口。 在 <xref:System.ServiceModel.Activities.IReceiveMessageCallback.OnReceiveMessage(System.ServiceModel.OperationContext,System.Activities.ExecutionProperties)> 方法中，您可以访问 <xref:System.ServiceModel.OperationContext.ServiceSecurityContext> 来访问标识信息。 本主题将指导您实现此执行属性，以及一个在运行时会将此属性呈现给 <xref:System.ServiceModel.Activities.Receive> 活动的自定义活动。 自定义活动将实现与 <xref:System.Activities.Statements.Sequence> 活动相同的行为，但将 <xref:System.ServiceModel.Activities.Receive> 置于自定义活动内时除外，在此情况下，将调用 <xref:System.ServiceModel.Activities.IReceiveMessageCallback> 并检索标识信息。  
   
-### <a name="implement-ireceivemessagecallback"></a>实现 IReceiveMessageCallback  
+## <a name="implement-ireceivemessagecallback"></a>实现 IReceiveMessageCallback  
   
 1.  创建一个空的 [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] 解决方案。  
   
@@ -50,13 +50,13 @@ ms.locfileid: "33491970"
   
      此代码使用传入方法的 <xref:System.ServiceModel.OperationContext> 来访问标识信息。  
   
-### <a name="implement-a-native-activity-to-add-the-ireceivemessagecallback-implementation-to-the-nativeactivitycontext"></a>实现本机活动可将 IReceiveMessageCallback 实现添加到 NativeActivityContext  
+## <a name="implement-a-native-activity-to-add-the-ireceivemessagecallback-implementation-to-the-nativeactivitycontext"></a>实现本机活动可将 IReceiveMessageCallback 实现添加到 NativeActivityContext  
   
 1.  添加一个派生自 <xref:System.Activities.NativeActivity> 的名为 `AccessIdentityScope` 的新类。  
   
 2.  添加局部变量以跟踪子活动、变量、当前活动索引和 <xref:System.Activities.CompletionCallback> 回调。  
   
-    ```  
+    ```csharp
     public sealed class AccessIdentityScope : NativeActivity  
     {  
         Collection<Activity> children;  
@@ -68,7 +68,7 @@ ms.locfileid: "33491970"
   
 3.  实现构造函数  
   
-    ```  
+    ```csharp
     public AccessIdentityScope() : base()  
     {  
         this.children = new Collection<Activity>();  
@@ -79,7 +79,7 @@ ms.locfileid: "33491970"
   
 4.  实现 `Activities` 和 `Variables` 属性。  
   
-    ```  
+    ```csharp
     public Collection<Activity> Activities  
     {  
          get { return this.children; }  
@@ -93,7 +93,7 @@ ms.locfileid: "33491970"
   
 5.  重写 <xref:System.Activities.NativeActivity.CacheMetadata%2A>  
   
-    ```  
+    ```csharp
     protected override void CacheMetadata(NativeActivityMetadata metadata)  
     {  
         //call base.CacheMetadata to add the Activities and Variables to this activity's metadata  
@@ -105,7 +105,7 @@ ms.locfileid: "33491970"
   
 6.  重写 <xref:System.Activities.NativeActivity.Execute%2A>  
   
-    ```  
+    ```csharp
     protected override void Execute(NativeActivityContext context)  
     {  
        // Add the IReceiveMessageCallback implementation as an Execution property   
@@ -139,13 +139,13 @@ ms.locfileid: "33491970"
     }  
     ```  
   
-### <a name="implement-the-workflow-service"></a>实现工作流服务  
+## <a name="implement-the-workflow-service"></a>实现工作流服务  
   
 1.  打开现有`Program`类。  
   
 2.  定义下面的常量：  
   
-    ```  
+    ```csharp
     class Program  
     {  
        const string addr = "http://localhost:8080/Service";  
@@ -155,7 +155,7 @@ ms.locfileid: "33491970"
   
 3.  添加一个用于创建工作流服务的名为 `GetWorkflowService` 的静态方法。  
   
-    ```  
+    ```csharp
     static Activity GetServiceWorkflow()  
     {  
        Variable<string> echoString = new Variable<string>();  
@@ -194,7 +194,7 @@ ms.locfileid: "33491970"
   
 4.  在现有的 `Main` 方法中，承载工作流服务。  
   
-    ```  
+    ```csharp
     static void Main(string[] args)  
     {  
        string addr = "http://localhost:8080/Service";  
@@ -213,7 +213,7 @@ ms.locfileid: "33491970"
     }  
     ```  
   
-### <a name="implement-a-workflow-client"></a>实现工作流客户端  
+## <a name="implement-a-workflow-client"></a>实现工作流客户端  
   
 1.  创建一个名为 `Client` 的新控制台应用程序项目。  
   
@@ -227,7 +227,7 @@ ms.locfileid: "33491970"
   
 3.  打开生成的 Program.cs 文件并添加一个名为 `GetClientWorkflow` 的静态方法以创建客户端工作流。  
   
-    ```  
+    ```csharp
     static Activity GetClientWorkflow()  
     {  
        Variable<string> echoString = new Variable<string>();  
@@ -245,7 +245,7 @@ ms.locfileid: "33491970"
           OperationName = "Echo",  
           Content = new SendParametersContent()  
           {  
-             Parameters = { { "echoString", new InArgument<string>("Hello, World") } }   
+             Parameters = { { "echoString", new InArgument<string>("Hello, World") } }
           }  
        };  
   
@@ -253,12 +253,12 @@ ms.locfileid: "33491970"
        {  
           Variables = { echoString },  
           Activities =  
-          {                      
+          {
              new CorrelationScope  
              {  
                 Body = new Sequence  
                 {  
-                   Activities =   
+                   Activities =
                    {  
                       echoRequest,  
                       new ReceiveReply  
@@ -271,8 +271,8 @@ ms.locfileid: "33491970"
                       }  
                    }  
                 }  
-             },                      
-             new WriteLine { Text = new InArgument<string>( (e) => "Received Text: " + echoString.Get(e) ) },                      
+             },
+             new WriteLine { Text = new InArgument<string>( (e) => "Received Text: " + echoString.Get(e) ) },
              }  
           };  
        }  
@@ -281,7 +281,7 @@ ms.locfileid: "33491970"
   
 4.  将下列宿主代码添加到 `Main()` 方法。  
   
-    ```  
+    ```csharp
     static void Main(string[] args)  
     {  
        Activity workflow = GetClientWorkflow();  
@@ -292,10 +292,10 @@ ms.locfileid: "33491970"
     }  
     ```  
   
-## <a name="example"></a>示例  
+## <a name="example"></a>示例
  下面是本主题中使用的源代码的完整列表。  
   
-```  
+```csharp
 // AccessIdentityCallback.cs  
 //----------------------------------------------------------------  
 // Copyright (c) Microsoft Corporation.  All rights reserved.  
@@ -333,9 +333,9 @@ namespace Microsoft.Samples.AccessingOperationContext.Service
         }  
     }  
 }  
-```  
+```
   
-```  
+```csharp
 // AccessIdentityScope.cs  
 //----------------------------------------------------------------  
 // Copyright (c) Microsoft Corporation.  All rights reserved.  
@@ -381,9 +381,9 @@ namespace Microsoft.Samples.AccessingOperationContext.Service
         {  
             //call base.CacheMetadata to add the Activities and Variables to this activity's metadata  
             base.CacheMetadata(metadata);  
-            //add the private implementation variable: currentIndex   
+            //add the private implementation variable: currentIndex
             metadata.AddImplementationVariable(this.currentIndex);  
-        }                     
+        }
   
         protected override void Execute(  
             NativeActivityContext context)  
@@ -418,9 +418,9 @@ namespace Microsoft.Samples.AccessingOperationContext.Service
         }  
     }  
 }  
-```  
+```
   
-```  
+```csharp
 // Service.cs  
 //----------------------------------------------------------------  
 // Copyright (c) Microsoft Corporation.  All rights reserved.  
@@ -493,10 +493,10 @@ namespace Microsoft.Samples.AccessingOperationContext.Service
         }  
     }  
 }  
-```  
+```
   
-```  
-// client.cs   
+```csharp
+// client.cs
 //----------------------------------------------------------------  
 // Copyright (c) Microsoft Corporation.  All rights reserved.  
 //----------------------------------------------------------------  
@@ -546,12 +546,12 @@ namespace Microsoft.Samples.AccessingOperationContext.Client
             {  
                 Variables = { echoString },  
                 Activities =  
-                {                      
+                {
                     new CorrelationScope  
                     {  
                         Body = new Sequence  
                         {  
-                            Activities =   
+                            Activities =
                             {  
                                 echoRequest,  
                                 new ReceiveReply  
@@ -564,8 +564,8 @@ namespace Microsoft.Samples.AccessingOperationContext.Client
                                 }  
                             }  
                         }  
-                    },                      
-                    new WriteLine { Text = new InArgument<string>( (e) => "Received Text: " + echoString.Get(e) ) },                      
+                    },
+                    new WriteLine { Text = new InArgument<string>( (e) => "Received Text: " + echoString.Get(e) ) },
                 }  
             };  
         }  

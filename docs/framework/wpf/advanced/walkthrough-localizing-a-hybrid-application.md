@@ -5,12 +5,12 @@ helpviewer_keywords:
 - localization [WPF interoperability]
 - hybrid applications [WPF interoperability]
 ms.assetid: fbc0c54e-930a-4c13-8e9c-27b83665010a
-ms.openlocfilehash: 685c68967f69e8933ff3dd2cd062e0893c7e2da6
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: e1d06085b4edb5c1e102eaab766ec7636194b991
+ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44076805"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46482113"
 ---
 # <a name="walkthrough-localizing-a-hybrid-application"></a>演练：本地化混合应用程序
 
@@ -32,7 +32,7 @@ ms.locfileid: "44076805"
 
 完成后，你将拥有一个本地化的混合应用程序。
 
-## <a name="prerequisites"></a>系统必备
+## <a name="prerequisites"></a>必要條件
 
 你需要以下组件来完成本演练：
 
@@ -123,7 +123,7 @@ Windows 窗体设计器提供用于在附属程序集中启用本地化的设置
 2.  使用以下命令将资源标识符分配到可本地化内容。
 
     ```
-    msbuild /t:updateuid LocalizingWpfInWf.csproj
+    msbuild -t:updateuid LocalizingWpfInWf.csproj
     ```
 
 3.  在中**解决方案资源管理器**，双击**SimpleControl.xaml**以在代码编辑器中打开它。 你将看到`msbuild`命令添加`Uid`所有元素的都属性。 这有助于通过分配资源标识符进行本地化。

@@ -3,11 +3,11 @@ title: 查询表达式 (F#)
 description: '了解有关 F # 编程语言中的 LINQ 查询表达式支持。'
 ms.date: 05/16/2016
 ms.openlocfilehash: 6586d991dde550380d04c4d9831bb954eb94a715
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45591771"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46473364"
 ---
 # <a name="query-expressions"></a>查询表达式
 
@@ -84,7 +84,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 <table style="width:100%">
   <tr>
     <th>运算符</th>
-    <th>描述</th>
+    <th>Description</th>
   </tr>
   <tr>
   <td><code>contains</code></td>

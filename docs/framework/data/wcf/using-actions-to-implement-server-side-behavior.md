@@ -2,15 +2,16 @@
 title: 使用操作来实现服务器端行为
 ms.date: 03/30/2017
 ms.assetid: 11a372db-7168-498b-80d2-9419ff557ba5
-ms.openlocfilehash: 415797114d1e6d2ff307f0d872361f7d415cad3c
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 515553540053ed0c16085fde06e2cc2d2dedda1e
+ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43516256"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46471709"
 ---
 # <a name="using-actions-to-implement-server-side-behavior"></a>使用操作来实现服务器端行为
-OData 操作提供了用于实现这样一种行为方法，即该行为将作用于从 OData 服务检索的资源。  例如，请考虑将一部数字电影作为资源，您可能需要完成许多事情：签出、评级/注释或签入。 这些是用于管理数字电影的 WCF 数据服务可能实现的所有动作示例。 动作在 OData 响应中描述，而此响应包含对其调用此动作的资源。 当用户请求表示数字电影的资源时，从 WCF 数据服务返回的响应将包含有关可用于该资源的动作的信息。 动作的可用性可能取决于数据服务或资源的状态。 例如，一旦数字电影已被签出，其他用户就无法签出。 客户只需指定 URL 即可调用动作。 例如 http://MyServer/MovieService.svc/Movies(6) 标识特定的数字电影和 http://MyServer/MovieService.svc/Movies(6)/Checkout 将调用对这部特定电影的操作。 动作使您能够公开服务模型，但不必公开数据模型。 继续探讨此电影服务示例，您可能希望允许用户对电影评级，但不能直接将评级数据公开为资源。 您可以实现评级动作，以使用户能够对电影评级，但不能直接将评级数据作为资源进行访问。  
+
+OData 操作提供了用于实现这样一种行为方法，即该行为将作用于从 OData 服务检索的资源。 例如，请考虑将一部数字电影作为资源，您可能需要完成许多事情：签出、评级/注释或签入。 这些是用于管理数字电影的 WCF 数据服务可能实现的所有动作示例。 动作在 OData 响应中描述，而此响应包含对其调用此动作的资源。 当用户请求表示数字电影的资源时，从 WCF 数据服务返回的响应将包含有关可用于该资源的动作的信息。 动作的可用性可能取决于数据服务或资源的状态。 例如，一旦数字电影已被签出，其他用户就无法签出。 客户只需指定 URL 即可调用动作。 例如，`http://MyServer/MovieService.svc/Movies(6)`将标识特定的数字电影和`http://MyServer/MovieService.svc/Movies(6)/Checkout`像调用对这部特定电影的操作。 动作使您能够公开服务模型，但不必公开数据模型。 继续探讨此电影服务示例，您可能希望允许用户对电影评级，但不能直接将评级数据公开为资源。 您可以实现评级动作，以使用户能够对电影评级，但不能直接将评级数据作为资源进行访问。
   
 ## <a name="implementing-an-action"></a>实现动作  
  若要实现服务动作，您必须实现<xref:System.IServiceProvider>， [IDataServiceActionProvider](https://msdn.microsoft.com/library/system.data.services.providers.idataserviceactionprovider(v=vs.113).aspx)，和[IDataServiceInvokable](https://msdn.microsoft.com/library/system.data.services.providers.idataserviceinvokable(v=vs.113).aspx)接口。 <xref:System.IServiceProvider> 使 WCF 数据服务获取的实现[IDataServiceActionProvider](https://msdn.microsoft.com/library/system.data.services.providers.idataserviceactionprovider(v=vs.113).aspx)。 [IDataServiceActionProvider](https://msdn.microsoft.com/library/system.data.services.providers.idataserviceactionprovider(v=vs.113).aspx)使 WCF 数据服务能够创建、 查找、 描述和调用服务操作。 [IDataServiceInvokable](https://msdn.microsoft.com/library/system.data.services.providers.idataserviceinvokable(v=vs.113).aspx) ，可调用实现服务动作行为的代码和获取结果，如果有的话。 请记住，WCF 数据服务是“每次调用”的 WCF 服务，也即，每次调用此服务时，都会创建此服务的一个新实例。  确保创建此服务时不执行多余的任务。  
@@ -52,7 +53,7 @@ OData 操作提供了用于实现这样一种行为方法，即该行为将作�
 ## <a name="invoking-a-wcf-data-service-action"></a>调用 WCF 数据服务动作  
  可以使用 HTTP POST 请求来调用动作。 URL 指定资源（后跟动作名称）。 参数在请求的正文中传递。 例如，假设有一个名为 MovieService 的服务，该服务公开了一个名为 Rate 的动作。 您可以使用下面的 URL 针对特定电影调用 Rate 动作：  
   
- http://MovieServer/MovieService.svc/Movies(1)/Rate  
+ `http://MovieServer/MovieService.svc/Movies(1)/Rate`
   
  Movies(1) 指定您要评级的电影，而 Rate 指定 Rate（评级）动作。 评级的实际值将位于 HTTP 请求的正文中，如以下示例所示：  
   
@@ -67,15 +68,15 @@ Host: localhost:15238
 ```  
   
 > [!WARNING]
->  上面的示例代码只能与支持轻型 JSON 的 WCF 数据服务 5.2 和更高版本结合使用。 如果使用 WCF 数据服务的更低版本，您必须指定 json 详细内容类型，如下所示：`application/json;odata=verbose`。  
+> 上面的示例代码只能与支持轻型 JSON 的 WCF 数据服务 5.2 和更高版本结合使用。 如果使用 WCF 数据服务的更低版本，您必须指定 json 详细内容类型，如下所示：`application/json;odata=verbose`。  
   
  此外，您也可以使用 WCF 数据服务客户端调用动作，如下面的代码段所示。  
   
-```  
+```csharp
 MoviesModel context = new MoviesModel (new Uri("http://MyServer/MoviesService.svc/"));  
-            //...  
-            context.Execute(new Uri("http://MyServer/MoviesService.svc/Movies(1)/Rate"), "POST", new BodyOperationParameter("rating",4) );           
-```  
+//...  
+context.Execute(new Uri("http://MyServer/MoviesService.svc/Movies(1)/Rate"), "POST", new BodyOperationParameter("rating",4) );
+```
   
  在上面的代码段中，通过使用 Visual Studio 将服务引用添加到 WCF 数据服务，从而生成了 `MoviesModel` 类。  
   

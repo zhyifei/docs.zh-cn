@@ -13,11 +13,11 @@ helpviewer_keywords:
 - templates [WPF], custom for existing controls
 ms.assetid: 678dd116-43a2-4b8c-82b5-6b826f126e31
 ms.openlocfilehash: 435789e0d1bc601a9eb51488254407fefd334e05
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45519989"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46490252"
 ---
 # <a name="customizing-the-appearance-of-an-existing-control-by-creating-a-controltemplate"></a>通过创建 ControlTemplate 自定义现有控件的外观
 <a name="introduction"></a> 一个<xref:System.Windows.Controls.ControlTemplate>指定可视结构和控件的可视行为。 您可以通过提供一个新的 it 自定义控件的外观<xref:System.Windows.Controls.ControlTemplate>。 当你创建<xref:System.Windows.Controls.ControlTemplate>，而无需更改其功能替换现有控件的外观。 例如，您可以将按钮在应用程序中圆形而不是默认的方形，但按钮仍将引发<xref:System.Windows.Controls.Primitives.ButtonBase.Click>事件。  
@@ -34,7 +34,7 @@ ms.locfileid: "45519989"
   
   
 <a name="prerequisites"></a>   
-## <a name="prerequisites"></a>系统必备  
+## <a name="prerequisites"></a>必要條件  
  本主题假设用户了解如何创建和使用[控件](../../../../docs/framework/wpf/controls/index.md)中讨论的控件和样式。 本主题中讨论的概念适用于从继承元素<xref:System.Windows.Controls.Control>类，除<xref:System.Windows.Controls.UserControl>。 无法应用<xref:System.Windows.Controls.ControlTemplate>到<xref:System.Windows.Controls.UserControl>。  
   
 <a name="when_you_should_create_a_controltemplate"></a>   
@@ -131,7 +131,7 @@ ms.locfileid: "45519989"
   
  该控件负责将各种状态定义为控件协定的一部分，这将在本主题后面的[通过了解控件协定自定义其他控件](#customizing_other_controls_by_understanding_the_control_contract)中进行详细讨论。 下表列出了为指定的状态<xref:System.Windows.Controls.Button>。  
   
-|VisualState 名称|VisualStateGroup 名称|描述|  
+|VisualState 名称|VisualStateGroup 名称|Description|  
 |----------------------|---------------------------|-----------------|  
 |普通|CommonStates|默认状态。|  
 |MouseOver|CommonStates|鼠标指针悬停在控件上方。|  

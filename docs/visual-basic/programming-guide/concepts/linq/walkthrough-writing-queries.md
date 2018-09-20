@@ -8,11 +8,11 @@ helpviewer_keywords:
 - writing LINQ queries [Visual Basic]
 ms.assetid: f0045808-b9fe-4d31-88d1-473d9957211e
 ms.openlocfilehash: 6c5f7d288d805a6a25afa9a5b32a4550aaa76ec3
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45677261"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46480651"
 ---
 # <a name="walkthrough-writing-queries-in-visual-basic"></a>演练：用 Visual Basic 编写查询
 本演练演示如何使用 Visual Basic 语言功能编写[!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)]查询表达式。 本演练演示如何在列表中的学生对象创建查询、 运行查询，以及如何对其进行修改。 查询将合并多个功能，包括对象初始值设定项、 局部类型推理和匿名类型。  

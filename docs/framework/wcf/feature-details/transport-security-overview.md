@@ -7,12 +7,12 @@ dev_langs:
 ms.assetid: 00959326-aa9d-44d0-af61-54933d4adc7f
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: 9a04b8aaf9c6263a8935099963aaa1dc8d9100fd
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: c656811e493c11ca463ce85d71b716c681501f21
+ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45664665"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46481892"
 ---
 # <a name="transport-security-overview"></a>传输安全概述
 Windows Communication Foundation (WCF) 中的传输安全机制取决于绑定和正在使用的传输。 例如，当使用 <xref:System.ServiceModel.WSHttpBinding> 类时，传输为 HTTP，保证传输安全的主要机制为 HTTP 上的安全套接字层 (SSL) （通常称为 HTTPS）。 本主题讨论 WCF 系统提供绑定中使用的主要传输安全机制。  
@@ -21,7 +21,7 @@ Windows Communication Foundation (WCF) 中的传输安全机制取决于绑定�
 >  使用 SSL 安全时使用.NET Framework 3.5 及更高版本的 WCF 客户端在其证书存储中使用这两个中间证书和 SSL 协商，以在服务上执行证书链验证期间收到的中间证书证书。 .NET Framework 3.0 仅使用本地证书存储区中安装的中间证书。  
   
 > [!WARNING]
->  使用传输安全时， <!--zz <xref:System.Treading.Thread.CurrentPrincipal%2A> --> `CurrentPrincipal`属性可能会被覆盖。 若要避免这种情况的发生集<!--zz <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior.PrincipalPermission%2A> -->`PrincipalPermission`为 None。 <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior> 是可对服务说明设置的服务行为。  
+>  在使用传输安全时，可能会覆盖 <xref:System.Threading.Thread.CurrentPrincipal%2A?displayProperty=nameWithType> 属性。 若要避免这种情况的发生集<xref:System.ServiceModel.Description.ServiceAuthorizationBehavior.PrincipalPermissionMode%2A?displayProperty=nameWithType>到<xref:System.ServiceModel.Description.PrincipalPermissionMode.None?displayProperty=nameWithType>。 <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior> 是可对服务说明设置的服务行为。  
   
 ## <a name="basichttpbinding"></a>BasicHttpBinding  
  默认情况下，<xref:System.ServiceModel.BasicHttpBinding> 类不提供安全性。 此绑定旨在提供与不实现安全机制的 Web 服务提供程序的互操作性。 但可以通过将 <xref:System.ServiceModel.BasicHttpSecurity.Mode%2A> 属性设置为 <xref:System.ServiceModel.BasicHttpSecurityMode.None> 以外的值来启用安全。 若要启用传输安全，请将该属性设置为 <xref:System.ServiceModel.BasicHttpSecurityMode.Transport>。  

@@ -11,11 +11,11 @@ helpviewer_keywords:
 - XAML [XAML Services], x:Key attribute
 ms.assetid: 1985cd45-f197-42d5-b75e-886add64b248
 ms.openlocfilehash: f77f0a952224f79ee95a755cb848a4f8b68c9602
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45964678"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46479717"
 ---
 # <a name="xkey-directive"></a>x:Key 指令
 唯一标识创建和引用 XAML 定义的字典中的元素。 添加`x:Key`XAML 对象元素的值是标识资源字典，例如在 WPF 中的资源的最常见方法<xref:System.Windows.ResourceDictionary>。  

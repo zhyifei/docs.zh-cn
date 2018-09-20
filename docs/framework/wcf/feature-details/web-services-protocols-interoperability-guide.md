@@ -2,12 +2,12 @@
 title: Web 服务协议互操作性指南
 ms.date: 03/30/2017
 ms.assetid: f2981678-ebdb-433d-899b-467f7df95fb2
-ms.openlocfilehash: da5014292a8ebfcea48a7b6e1a0cdfd014b09961
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 37416a80c8b6f2ac086dbface1cda37609698bfc
+ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43739040"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46490369"
 ---
 # <a name="web-services-protocols-interoperability-guide"></a>Web 服务协议互操作性指南
 Windows Communication Foundation (WCF) 实现多个 Web 服务协议。 这些协议中有许多都包含大量留给实施者来决定的选项和扩展点。 本主题提供了一系列 WCF 实现的 Web 服务协议。 本节中的其他主题介绍每个受支持的协议的实现详细信息。  
@@ -74,7 +74,7 @@ Windows Communication Foundation (WCF) 实现多个 Web 服务协议。 这些�
 |WS-Coordination|[Web 服务协调](https://go.microsoft.com/fwlink/?LinkId=95324)|  
 |WS-AtomicTransaction|[Web 服务原子事务](https://go.microsoft.com/fwlink/?LinkId=95323)|  
   
- <xref:System.ServiceModel.Description.MetadataExporter>， <xref:System.ServiceModel.Description.MetadataImporter>， <!--zz <xref:System.ServiceModel.Description.WSDLExporter>, <xref:System.ServiceModel.Description.WSDLImporter>, --> `System.ServiceModel.Description.MetadataImporter`， `System.ServiceModel.Description.WSDLImporter`，并<xref:System.ServiceModel.Description.MetadataResolver>类提供支持的以下元数据规范：  
+ <xref:System.ServiceModel.Description.MetadataExporter>、<xref:System.ServiceModel.Description.MetadataImporter>、<xref:System.ServiceModel.Description.WsdlExporter>、<xref:System.ServiceModel.Description.WsdlImporter> 和 <xref:System.ServiceModel.Description.MetadataResolver> 类支持以下元数据规范：  
   
 -   [XML 架构第 1 部分： 结构第二版](https://go.microsoft.com/fwlink/?LinkId=3536)  
   

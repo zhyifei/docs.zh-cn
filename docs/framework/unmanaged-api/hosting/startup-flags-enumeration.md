@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: f4680187de7318a6438bf6a5e6bd7c5f3acd05c2
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45743324"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46489622"
 ---
 # <a name="startupflags-enumeration"></a>STARTUP_FLAGS 枚举
 包含指示公共语言运行时 (CLR) 的启动行为的值。 默认情况下，垃圾回收是非并发，只有在基类库加载到非特定于域的区域。  
@@ -55,7 +55,7 @@ typedef enum {
   
 ## <a name="members"></a>成员  
   
-|成员|描述|  
+|成员|Description|  
 |------------|-----------------|  
 |`STARTUP_CONCURRENT_GC`|指定应使用并发垃圾回收。 如果在单处理器计算机上，调用方要求的服务器版本和并发垃圾回收，工作站版本和非并发垃圾回收是改为运行。 **注意：** 并发垃圾回收的应用程序运行在 WOW64 中不支持 x86 仿真程序上实现 Intel Itanium 体系结构 （以前称为 IA-64） 的 64 位系统。 有关在 64 位 Windows 系统上使用 WOW64 的详细信息，请参阅[运行 32 位应用程序](/windows/desktop/WinProg64/running-32-bit-applications)。|  
 |`STARTUP_LOADER_OPTIMIZATION_MASK`|指定只应出现加载程序优化。|  

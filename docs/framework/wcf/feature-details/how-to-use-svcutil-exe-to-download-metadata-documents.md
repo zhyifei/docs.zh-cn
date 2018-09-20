@@ -2,12 +2,12 @@
 title: 如何：使用 Svcutil.exe 下载元数据文档
 ms.date: 03/30/2017
 ms.assetid: 15524274-3167-4627-b722-d6cedb9fa8c6
-ms.openlocfilehash: 75068608c2b44ab772175aba7af8d8123457fb7c
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 6643f0a5dba98afcef38870cf24d91e7d69a1440
+ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43510944"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46481853"
 ---
 # <a name="how-to-use-svcutilexe-to-download-metadata-documents"></a>如何：使用 Svcutil.exe 下载元数据文档
 您可以使用 Svcutil.exe 从正在运行的服务中下载元数据并将元数据保存到本地文件。 对于 HTTP 和 HTTPS URL 方案，Svcutil.exe 会尝试使用 Ws-metadataexchange 检索元数据和[XML Web 服务发现](https://go.microsoft.com/fwlink/?LinkId=94950)。 对于所有其他 URL 架构，Svcutil.exe 仅使用 WS-MetadataExchange。  
@@ -15,13 +15,13 @@ ms.locfileid: "43510944"
  默认情况下，Svcutil.exe 使用 <xref:System.ServiceModel.Description.MetadataExchangeBindings> 类中定义的绑定。 若要配置用于 WS-MetadataExchange 的绑定，必须在 Svcutil.exe 的配置文件 (svcutil.exe.config) 中定义一个客户端终结点，使该终结点使用 `IMetadataExchange` 约定，并具有与元数据终结点地址的统一资源标识符 (URI) 架构相同的名称。  
   
 > [!CAUTION]
->  当运行 Svcutil.exe 以获取公开两个不同的服务的服务的元数据协定，每个包含具有相同名称的操作时，Svcutil.exe 将显示"无法获取元数据从..."的错误消息，例如，如果必须公开名为服务协定的服务具有的操作的 ICarService Get (Car c) 和同一服务还公开名为 IBookService 的具有 Get (Book b) 的操作的服务协定。 若要解决此问题，请执行下列操作之一：  
->   
->  -   重命名其中的一项操作  
-> -   将 <xref:System.ServiceModel.OperationContractAttribute.Name%2A> 设置为其他名称。  
-> -   使用 <xref:System.ServiceModel.ServiceContractAttribute.Namespace%2A> 属性将其中一项操作的命名空间设置为其他命名空间。  
+> 当运行 Svcutil.exe 以获取公开两个不同的服务的服务的元数据协定，每个包含具有相同名称的操作时，Svcutil.exe 将显示"无法获取元数据从..."的错误消息，例如，如果你具有公开名为服务协定的服务`ICarService`有一个操作`Get(Car c)`，并在同一个服务公开名为服务协定`IBookService`有一个操作`Get(Book b)`。 若要解决此问题，请执行下列操作之一：
+>
+> - 重命名其中的一项操作。
+> - 将 <xref:System.ServiceModel.OperationContractAttribute.Name%2A> 设置为其他名称。
+> - 使用 <xref:System.ServiceModel.ServiceContractAttribute.Namespace%2A> 属性将其中一项操作的命名空间设置为其他命名空间。
   
-### <a name="to-download-metadata-using-svcutilexe"></a>使用 Svcutil.exe 下载元数据  
+## <a name="to-download-metadata-using-svcutilexe"></a>使用 Svcutil.exe 下载元数据  
   
 1.  在以下位置找到 Svcutil.exe 工具：  
   

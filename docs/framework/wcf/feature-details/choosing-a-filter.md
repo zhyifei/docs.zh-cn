@@ -2,12 +2,12 @@
 title: 选择筛选器
 ms.date: 03/30/2017
 ms.assetid: 67ab5af9-b9d9-4300-b3b1-41abb5a1fd10
-ms.openlocfilehash: bc3bba9a2b00b35f3e0cff1786ea98cfa881f311
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 377d4f5c221ad37acf954b1dafc8712a388122ff
+ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43743134"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46478488"
 ---
 # <a name="choosing-a-filter"></a>选择筛选器
 配置路由服务时，选择正确的消息筛选器并将它们配置为允许您针对接收的消息进行完全匹配非常重要。 如果所选筛选器筛选出的匹配项太广或者配置不当，则消息会错误地进行路由。 如果筛选器的筛选范围太窄，则某些消息可能没有任何可用的有效路由。  
@@ -16,7 +16,7 @@ ms.locfileid: "43743134"
  选择由路由服务使用的筛选器时，了解每个筛选器的工作方式以及哪些信息可以作为传入消息的一部分非常重要。 例如，如果所有消息都是通过同一终结点接收的，则 Address 和 EndpointName 筛选器可能没有用，因为所有消息都与这两个筛选器匹配。  
   
 ### <a name="action"></a>操作  
- Action 筛选器检查 <xref:System.ServiceModel.Channels.MessageHeaders.Action%2A> 属性。 如果消息中 Action 标头的内容与筛选器配置中指定的筛选器数据值相匹配，此筛选器将返回 `true`。 下面的示例定义`FilterElement`，它使用操作筛选器匹配包含值的 action 标头的消息"http://namespace/contract/operation/"。  
+ Action 筛选器检查 <xref:System.ServiceModel.Channels.MessageHeaders.Action%2A> 属性。 如果消息中 Action 标头的内容与筛选器配置中指定的筛选器数据值相匹配，此筛选器将返回 `true`。 下面的示例定义`FilterElement`，它使用操作筛选器匹配包含值的 action 标头的消息`http://namespace/contract/operation/`。
   
 ```xml  
 <filter name="action1" filterType="Action" filterData="http://namespace/contract/operation/" />  
@@ -47,7 +47,7 @@ EndpointAddressMessageFilter address1 = new EndpointAddressMessageFilter(new End
  如果将传入消息发送到唯一地址，则应使用此筛选器。  
   
 ### <a name="endpointaddressprefix"></a>EndpointAddressPrefix  
- EndpointAddressPrefix 筛选器与 EndpointAddress 筛选器类似。 EndpointAddressPrefix 筛选器检查接收消息的 EndpointAddress。 但是，EndpointAddressPrefix 筛选器在匹配以筛选器配置中指定的值开头的地址时用作通配符。 下面的示例定义`FilterElement`，它使用 EndpointAddressPrefix 筛选器匹配发送到任何消息"http://\<主机名 > / vdir *"。  
+ EndpointAddressPrefix 筛选器与 EndpointAddress 筛选器类似。 EndpointAddressPrefix 筛选器检查接收消息的 EndpointAddress。 但是，EndpointAddressPrefix 筛选器在匹配以筛选器配置中指定的值开头的地址时用作通配符。 下面的示例定义`FilterElement`，它使用 EndpointAddressPrefix 筛选器匹配发送到任何消息`http://<hostname>/vdir*`。  
   
 ```xml  
 <filter name="prefix1" filterType="EndpointAddressPrefix" filterData="http://host/vdir" />  

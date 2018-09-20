@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 67abf017040b9e6bbe9b10e560c8d57c124ae84e
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
-ms.translationtype: HT
+ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45743285"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46488972"
 ---
 # <a name="putinstancewmi-function"></a>PutInstanceWmi 函数
 创建或更新现有类的实例。 将该实例写入 WMI 存储库。 
@@ -47,7 +47,7 @@ HRESULT PutInstanceWmi (
 `lFlags`   
 [in]影响此函数的行为的标志的组合。 以下值中定义*WbemCli.h*标头文件，也可以在定义它们为常量在代码中： 
 
-|返回的常量  |“值”  |描述  |
+|返回的常量  |“值”  |Description  |
 |---------|---------|---------|
 | `WBEM_FLAG_USE_AMENDED_QUALIFIERS` | 0x20000 | 如果设置，WMI 不存储任何与限定符**Amended**风格。 </br> 如果不设置，则假定未本地化此对象，并且所有限定符都是 storedwith 此实例。 |
 | `WBEM_FLAG_CREATE_OR_UPDATE` | 0 | 如果不存在，或者覆盖它，如果它已存在，请创建该实例。 |
@@ -65,7 +65,7 @@ HRESULT PutInstanceWmi (
 
 此函数返回以下值中定义*WbemCli.h*标头文件，也可以在定义它们为常量在代码中：
 
-|返回的常量  |“值”  |描述  |
+|返回的常量  |“值”  |Description  |
 |---------|---------|---------|
 | `WBEM_E_ACCESS_DENIED` | 0x80041003 | 用户没有权限来更新指定类的实例。 |
 | `WBEM_E_FAILED` | 0x80041001 | 发生未知的错误。 |

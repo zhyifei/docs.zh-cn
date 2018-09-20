@@ -2,19 +2,19 @@
 title: 公开和调用 ActivityActions
 ms.date: 03/30/2017
 ms.assetid: 97ce4797-426e-463d-9cc4-1261afad6df4
-ms.openlocfilehash: f36d88fc54e5150927113ed8825fbccad84129d4
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 99207c33d82ec9028da2355cc792c366dc5e0cc6
+ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43520118"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46479749"
 ---
 # <a name="exposing-and-invoking-activityactions"></a>公开和调用 ActivityActions
 此示例演示如何开发具有 <xref:System.Activities.ActivityAction> 的自定义活动。 它还演示如何通过提供 <xref:System.Activities.ActivityAction> 的实现来使用此活动。  
   
- <xref:System.Activities.ActivityAction>允许活动作者公开"漏洞"具有特定签名的活动用户可在其中插入自定义行为。 例如， <!--zz <xref:System.Activities.Statements.ForEach>--> `System.Activities.Statements.ForEach`活动，（其中通过进行操作的项的集合），具有<xref:System.Activities.ActivityAction>，允许活动用户插入对当前迭代项进行操作的行为。  
+ <xref:System.Activities.ActivityAction>允许活动作者公开"漏洞"具有特定签名的活动用户可在其中插入自定义行为。 例如，<xref:System.Activities.Statements.ForEach%601> 活动（针对项集合进行操作）具有一个 <xref:System.Activities.ActivityAction>，它允许活动用户插入针对当前迭代项进行操作的行为。  
   
-#### <a name="to-set-up-build-and-run-the-sample"></a>设置、生成和运行示例  
+## <a name="to-set-up-build-and-run-the-sample"></a>设置、生成和运行示例  
   
 1.  打开**ActivityAction.sln**示例解决方案中的[!INCLUDE[vs2010](../../../../includes/vs2010-md.md)]。  
   

@@ -9,11 +9,11 @@ helpviewer_keywords:
 - custom controls [Windows Forms], events using code
 ms.assetid: d89f1096-8061-42e2-a855-a1f053f1940a
 ms.openlocfilehash: 60ae01ca63f895bfb1c7aabbe3337596cd13933d
-ms.sourcegitcommit: f513a91160b3fec289dd06646d0d6f81f8fcf910
+ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46320235"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46489648"
 ---
 # <a name="defining-an-event-in-windows-forms-controls"></a>在 Windows 窗体控件中定义事件
 有关定义自定义事件的详细信息，请参阅[事件](../../../../docs/standard/events/index.md)。 如果你定义的事件没有任何关联的数据，则使用事件数据的基类型 <xref:System.EventArgs>，并使用 <xref:System.EventHandler> 作为事件委托。 所有这些剩下工作就是定义一个事件成员和受保护`On` *EventName*引发事件的方法。  

@@ -3,11 +3,11 @@ title: 作为一类值的函数 (F#)
 description: '了解如何提升至最优状态在 F # 编程语言中的函数。'
 ms.date: 05/16/2016
 ms.openlocfilehash: 45b65ab2454a592d38c80fd367e7243635614727
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/15/2018
-ms.locfileid: "45648533"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46478573"
 ---
 # <a name="functions-as-first-class-values"></a>作为一类值的函数
 
@@ -180,7 +180,7 @@ F # 提供了两个运算符`<<`和`>>`，组合函数。 例如，`let squareAn
 
 ## <a name="example"></a>示例
 
-### <a name="description"></a>描述
+### <a name="description"></a>Description
 
 下面的代码包含本主题中的所有示例。
 

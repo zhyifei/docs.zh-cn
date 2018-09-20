@@ -8,11 +8,11 @@ helpviewer_keywords:
 - data binding [WPF], PriorityBinding class
 ms.assetid: d63b65ab-b3e9-4322-9aa8-1450f8d89532
 ms.openlocfilehash: a7729ec3d06ec701cf2194bed5d90b5bed76573a
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/15/2018
-ms.locfileid: "45649258"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46490700"
 ---
 # <a name="how-to-implement-prioritybinding"></a>如何：实现 PriorityBinding
 <xref:System.Windows.Data.PriorityBinding> 在[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]的工作原理是指定的绑定的列表。 绑定的列表按从最高优先级到最低优先级排序。 如果最高优先级绑定返回一个值成功时对其进行处理然后则永远不需要处理列表中的其他绑定。 这是最高优先级的绑定需要很长的时间要计算的情况下，将使用成功返回值的下一步最高优先级，直到较高优先级的绑定会成功返回一个值。  

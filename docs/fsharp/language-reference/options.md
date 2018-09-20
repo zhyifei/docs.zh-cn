@@ -3,11 +3,11 @@ title: 选项 (F#)
 description: '了解如何使用 F # 类型时的实际值可能不存在的选项为命名的值或变量。'
 ms.date: 05/16/2016
 ms.openlocfilehash: 0859cb42e72ef9e67551b884f5cf6130fb099a78
-ms.sourcegitcommit: f513a91160b3fec289dd06646d0d6f81f8fcf910
+ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46287931"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46479515"
 ---
 # <a name="options"></a>选项
 
@@ -45,7 +45,7 @@ ms.locfileid: "46287931"
 
 选项类型支持以下属性和方法。
 
-|属性或方法|类型|描述|
+|属性或方法|类型|Description|
 |------------------|----|-----------|
 |[无](https://msdn.microsoft.com/library/83ef260a-aa33-4e6f-aee6-b9bf0a461476)|`'T option`|静态属性，可用于创建具有的选项值`None`值。|
 |[IsNone](https://msdn.microsoft.com/library/f08532ca-1716-4f60-ae59-8ef6256df234)|`bool`|返回`true`如果该选项有`None`值。|

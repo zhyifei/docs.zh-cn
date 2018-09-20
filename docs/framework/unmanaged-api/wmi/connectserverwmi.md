@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 163e61eef8a753b5b6470285e5e3ce63789e25a4
-ms.sourcegitcommit: f513a91160b3fec289dd06646d0d6f81f8fcf910
+ms.openlocfilehash: 244df48606f6d971d6b6e246c4f9b73f916cbdcd
+ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46287736"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46473533"
 ---
 # <a name="connectserverwmi-function"></a>ConnectServerWmi 函数
 通过 DCOM 创建到指定计算机上的 WMI 命名空间的连接。  
@@ -48,7 +48,7 @@ HRESULT ConnectServerWmi (
 
 `strNetworkResource` [in]指向有效`BSTR`包含正确的 WMI 命名空间的对象路径。 请参阅[备注](#remarks)部分，了解详细信息。
 
-`strUser` [in]指向一个有效的指针`BSTR`，其中包含的用户名称。 一个`null`值指示当前的安全上下文。 如果用户是从不同的域与当前`strUser`还可以包含一个反斜杠分隔的域和用户名称。 `strUser` 此外可以为用户主体名称 (UPN) 设置格式，作为 suhc *userName@domainName*。 请参阅[备注](#remarks)部分，了解详细信息。
+`strUser` [in]指向一个有效的指针`BSTR`，其中包含的用户名称。 一个`null`值指示当前的安全上下文。 如果用户是从不同的域与当前`strUser`还可以包含一个反斜杠分隔的域和用户名称。 `strUser` 也可以是用户主体名称 (UPN) 格式，如`userName@domainName`。 请参阅[备注](#remarks)部分，了解详细信息。
 
 `strPassword` [in]指向一个有效的指针`BSTR`包含的密码。 一个`null`指示当前的安全上下文。 空字符串 ("") 指示有效长度为零的密码。
 
@@ -56,14 +56,14 @@ HRESULT ConnectServerWmi (
  
 `lSecurityFlags` [in]要传递给标志`ConnectServerWmi`方法。 此参数为零 (0) 的值将导致调用`ConnectServerWmi`返回才建立到服务器的连接。 这可能导致应用程序未响应无限期地服务器已中断。 其他有效值为：
 
-| 返回的常量  | “值”  | 描述  |
+| 返回的常量  | “值”  | Description  |
 |---------|---------|---------|
 | `CONNECT_REPOSITORY_ONLY` | 0x40 | 保留以供内部使用。 请勿使用。 |
 | `WBEM_FLAG_CONNECT_USE_MAX_WAIT` | 0x80 | `ConnectServerWmi` 返回在两分钟或更少。 |
 
 `strAuthority` [in]用户的域名。 可以有下列值：
 
-| “值” | 描述 |
+| “值” | Description |
 |---------|---------|
 | 空白 | 使用 NTLM 身份验证，并使用当前用户的 NTLM 域。 如果`strUser`指定域 （推荐位置），它必须未在此处指定。 该函数将返回`WBEM_E_INVALID_PARAMETER`如果两个参数中指定的域。 |
 | Kerberos:*主体名称* | 使用 Kerberos 身份验证，并且此参数包含 Kerberos 主体名称。 |
@@ -85,7 +85,7 @@ HRESULT ConnectServerWmi (
 
 此函数返回以下值中定义*WbemCli.h*标头文件，也可以在定义它们为常量在代码中：
 
-|返回的常量  |“值”  |描述  |
+|返回的常量  |“值”  |Description  |
 |---------|---------|---------|
 | `WBEM_E_FAILED` | 0x80041001 | 已存在时的常见错误。 |
 | `WBEM_E_INVALID_PARAMETER` | 0x80041008 | 参数不是有效的。 |

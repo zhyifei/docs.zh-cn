@@ -2,12 +2,12 @@
 title: WCF 错误处理
 ms.date: 03/30/2017
 ms.assetid: 1e4b1e0f-9598-449d-9d73-90bda62305b8
-ms.openlocfilehash: 90c1d5a955de10b7e65dd21bda7ebfb64f24399d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4fad317d8cb696b29d9c8e4e4d8209abc28410f8
+ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33504911"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46473442"
 ---
 # <a name="wcf-error-handling"></a>WCF 错误处理
 WCF 应用程序遇到的错误属于下列三组中的一组：  
@@ -38,13 +38,13 @@ WCF 应用程序遇到的错误属于下列三组中的一组：
  利用错误协定，您可以独立于平台的方式定义服务操作期间会发生的错误。 默认情况下，所有从服务操作内引发的异常都将作为 <xref:System.ServiceModel.FaultException> 对象返回到客户端。 <xref:System.ServiceModel.FaultException> 对象将包含很少的信息。 通过定义错误协定并作为 <xref:System.ServiceModel.FaultException%601> 返回错误，可以控制发送到客户端的信息。 有关详细信息，请参阅[指定和处理在协定和服务中的错误](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)。  
   
 ## <a name="ierrorhandler"></a>IErrorHandler  
- 利用 <xref:System.ServiceModel.Dispatcher.IErrorHandler> 接口，您可以对 WCF 应用程序响应错误的方式进行更多的控制。  您可以完全控制返回到客户端的故障消息，还可以执行自定义错误处理，例如日志记录。  有关详细信息<xref:System.ServiceModel.Dispatcher.IErrorHandler>和[扩展控件通过错误处理和报表](../../../docs/framework/wcf/samples/extending-control-over-error-handling-and-reporting.md)  
+ 利用 <xref:System.ServiceModel.Dispatcher.IErrorHandler> 接口，您可以对 WCF 应用程序响应错误的方式进行更多的控制。  您可以完全控制返回到客户端的故障消息，还可以执行自定义错误处理，例如日志记录。  有关详细信息<xref:System.ServiceModel.Dispatcher.IErrorHandler>和[扩展控件上的错误处理和报告](../../../docs/framework/wcf/samples/extending-control-over-error-handling-and-reporting.md)  
   
 ## <a name="servicehost-events"></a>ServiceHost 事件  
  <xref:System.ServiceModel.ServiceHost> 类承载服务，并定义处理错误可能需要的几个事件。 例如：  
   
-1.  <!--zz <xref:System.ServiceModel.ServiceHost.Faulted>-->  `System.ServiceModel.ServiceHost.Faulted`
+1. <xref:System.ServiceModel.Channels.CommunicationObject.Faulted>
   
-2. <!--zz  <xref:System.ServiceModel.ServiceHost.UnknownMessageReceived>  --> `System.ServiceModel.ServiceHost.UnknownMessageReceived`
+2. <xref:System.ServiceModel.ServiceHostBase.UnknownMessageReceived>
   
  有关详细信息，请参阅<xref:System.ServiceModel.ServiceHost>。
