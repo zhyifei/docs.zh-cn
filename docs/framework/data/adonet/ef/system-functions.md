@@ -3,11 +3,11 @@ title: 系统函数
 ms.date: 03/30/2017
 ms.assetid: b7c71b58-09e6-44ce-a3e5-a0fdb892fb86
 ms.openlocfilehash: 277f2f9c69610b134f3f95787f065f65b01712d2
-ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
-ms.translationtype: MT
+ms.sourcegitcommit: f513a91160b3fec289dd06646d0d6f81f8fcf910
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/11/2018
-ms.locfileid: "44360734"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46006595"
 ---
 # <a name="system-functions"></a>系统函数
 SQL Server .NET Framework 数据提供程序 (SqlClient) 提供以下系统函数：  

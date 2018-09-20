@@ -5,11 +5,11 @@ helpviewer_keywords:
 - My.Computer.Info object
 ms.assetid: 2eb2aa5f-303d-426c-918d-989c8b7b08d0
 ms.openlocfilehash: 9eabd2538d43c5a0104032c501da8cbf81b5c74d
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44264423"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45963700"
 ---
 # <a name="mycomputerinfo-object"></a>My.Computer.Info 对象
 提供了用于获取计算机内存、已加载程序集、名称和操作系统相关信息的属性。  
