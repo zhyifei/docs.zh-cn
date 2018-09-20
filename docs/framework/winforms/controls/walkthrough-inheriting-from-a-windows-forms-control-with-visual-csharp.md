@@ -9,11 +9,11 @@ helpviewer_keywords:
 - custom controls [Windows Forms], inheritance
 ms.assetid: 09476da0-8d4c-4a4c-b969-649519dfb438
 ms.openlocfilehash: cad15b8fb89ec17e45b0f6cfed22f3109551fc2c
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
-ms.translationtype: HT
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45521565"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45595719"
 ---
 # <a name="walkthrough-inheriting-from-a-windows-forms-control-with-visual-c"></a>演练：使用 Visual C# 从 Windows 窗体控件继承 #
 使用 [!INCLUDE[csprcslong](../../../../includes/csprcslong-md.md)] 可通过继承来创建功能强大的自定义控件。 通过继承，可以创建不仅保留了标准 Windows 窗体控件的所有固有功能，而且还包含自定义功能的控件。 在本演练中，将创建一个名为 `ValueButton` 的简单继承控件。 此按钮将继承标准 Windows 窗体的功能<xref:System.Windows.Forms.Button>控件，并将公开一个名为的自定义属性`ButtonValue`。  

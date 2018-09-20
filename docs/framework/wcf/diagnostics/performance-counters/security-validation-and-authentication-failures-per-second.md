@@ -5,11 +5,11 @@ ms.assetid: 266c3bd3-2ffc-4471-94b7-3675443be1ac
 author: BrucePerlerMS
 manager: mbaldwin
 ms.openlocfilehash: 4836a5076401de2f7c3112b298cdadc0e0307962
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
-ms.translationtype: HT
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45518342"
+ms.lasthandoff: 09/15/2018
+ms.locfileid: "45641050"
 ---
 # <a name="security-validation-and-authentication-failures-per-second"></a>Security Validation and Authentication Failures Per Second（每秒安全验证和身份验证失败次数）
 计数器名称：Security Validation and Authentication Failures Per Second（每秒安全验证和身份验证失败次数）。  

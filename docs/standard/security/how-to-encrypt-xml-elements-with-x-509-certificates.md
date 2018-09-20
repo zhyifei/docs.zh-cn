@@ -17,11 +17,11 @@ ms.assetid: 761f1c66-631c-47af-aa86-ad9c50cfa453
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 674a4c917df20f58a509e92465e756c4615118ca
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45517588"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45969910"
 ---
 # <a name="how-to-encrypt-xml-elements-with-x509-certificates"></a>如何：用 X.509 证书对 XML 元素进行加密
 可以使用 <xref:System.Security.Cryptography.Xml> 命名空间中的类加密 XML 文档内的元素。  XML 加密是交换或存储加密的 XML 数据的一种标准方式，使用后就无需担心数据被轻易读取。  有关 XML 加密标准的详细信息，请参阅万维网联合会 (W3C) 规范 XML 加密位于 http://www.w3.org/TR/xmldsig-core/ 。  
