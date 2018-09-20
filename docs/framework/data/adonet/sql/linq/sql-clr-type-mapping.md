@@ -2,12 +2,12 @@
 title: SQL-CLR 类型映射
 ms.date: 07/23/2018
 ms.assetid: 4ed76327-54a7-414b-82a9-7579bfcec04b
-ms.openlocfilehash: ac00d78fff65f5d44a52f92509db3aa493952949
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: d5c0072d8561efa1211de191a1f2b6f3a1e55b7b
+ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43862100"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46478690"
 ---
 # <a name="sql-clr-type-mapping"></a>SQL-CLR 类型映射
 在 LINQ to SQL 中，关系数据库的数据模型映射到用您所选择的编程语言表示的对象模型。 当应用程序运行时，LINQ to SQL 会将对象模型中的语言集成查询转换为 SQL，然后将它们发送到数据库进行执行。 当数据库返回结果时，LINQ to SQL 会将它们转换回您可以用您自己的编程语言处理的对象。  
@@ -122,7 +122,7 @@ ms.locfileid: "43862100"
  有许多其他可以选择的数值映射，但是某些数值映射在转换到数据库或从数据库中转换时，可能会导致溢出或数据丢失异常。 有关详细信息，请参阅[类型映射运行时行为矩阵](#BehaviorMatrix)。  
   
 ### <a name="decimal-and-money-types"></a>Decimal 和 Money 类型  
- SQL Server 的默认精度`DECIMAL`类型 （18 十进制数字的左侧和右侧的小数点） 是 CLR 的精度比小得多<!--zz <xref:System.Decima?displayProperty=nameWithType>l -->`Decimal`与默认情况下配对的类型。 这可导致将数据保存到数据库时的精度降低。 但是，如果将 SQL Server `DECIMAL` 类型配置为大于 29 位精度，则会产生相反的结果。 将 SQL Server `DECIMAL` 类型的精度配置为大于 CLR <xref:System.Decimal?displayProperty=nameWithType> 时，则在从数据库检索数据时会发生精度降低。  
+ SQL Server 的默认精度`DECIMAL`类型 （18 十进制数字的左侧和右侧的小数点） 是 CLR 的精度比小得多<xref:System.Decimal?displayProperty=nameWithType>与默认情况下配对的类型。 这可导致将数据保存到数据库时的精度降低。 但是，如果将 SQL Server `DECIMAL` 类型配置为大于 29 位精度，则会产生相反的结果。 将 SQL Server `DECIMAL` 类型的精度配置为大于 CLR <xref:System.Decimal?displayProperty=nameWithType> 时，则在从数据库检索数据时会发生精度降低。  
   
  默认情况下和 CLR `MONEY` 类型成对使用的 SQL Server `SMALLMONEY` 和 <xref:System.Decimal?displayProperty=nameWithType> 具有非常小的精度，在将数据保存到数据库时可导致溢出或数据丢失异常。  
   
