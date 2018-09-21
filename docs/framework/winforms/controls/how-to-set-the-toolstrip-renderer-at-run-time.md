@@ -12,11 +12,11 @@ helpviewer_keywords:
 - MenuStrip control [Windows Forms]
 ms.assetid: 525e2347-0804-49aa-b9a3-9b2cabbf1c35
 ms.openlocfilehash: 98a027cb8cd913e3e2d00db16fc2f527159a1c87
-ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
-ms.translationtype: HT
+ms.sourcegitcommit: dfb2a100cfb4d3902c042f17b3204f49bc7635e7
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/20/2018
-ms.locfileid: "46472290"
+ms.lasthandoff: 09/21/2018
+ms.locfileid: "46517394"
 ---
 # <a name="how-to-set-the-toolstrip-renderer-at-run-time"></a>如何：在运行时设置 ToolStrip 呈现程序
 你可以通过创建一个自定义 `ProfessionalColorTable` 类来自定义 <xref:System.Windows.Forms.ToolStrip> 控件的外观。  

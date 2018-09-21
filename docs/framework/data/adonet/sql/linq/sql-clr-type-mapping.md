@@ -3,11 +3,11 @@ title: SQL-CLR 类型映射
 ms.date: 07/23/2018
 ms.assetid: 4ed76327-54a7-414b-82a9-7579bfcec04b
 ms.openlocfilehash: d5c0072d8561efa1211de191a1f2b6f3a1e55b7b
-ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
+ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/20/2018
-ms.locfileid: "46478690"
+ms.lasthandoff: 09/21/2018
+ms.locfileid: "46532436"
 ---
 # <a name="sql-clr-type-mapping"></a>SQL-CLR 类型映射
 在 LINQ to SQL 中，关系数据库的数据模型映射到用您所选择的编程语言表示的对象模型。 当应用程序运行时，LINQ to SQL 会将对象模型中的语言集成查询转换为 SQL，然后将它们发送到数据库进行执行。 当数据库返回结果时，LINQ to SQL 会将它们转换回您可以用您自己的编程语言处理的对象。  

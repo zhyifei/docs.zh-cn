@@ -18,11 +18,11 @@ helpviewer_keywords:
 - CType function [Visual Basic], Operator statement
 ms.assetid: b12ec4af-1ad7-4a17-865b-c5ee96320ae5
 ms.openlocfilehash: 69dea99cf71bd1e091116e54e244abfca291ffdb
-ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
+ms.sourcegitcommit: dfb2a100cfb4d3902c042f17b3204f49bc7635e7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/20/2018
-ms.locfileid: "46481970"
+ms.lasthandoff: 09/21/2018
+ms.locfileid: "46517892"
 ---
 # <a name="operator-statement"></a>Operator Statement
 声明运算符符号、 操作数和运算符过程定义的类或结构的代码。  
@@ -74,7 +74,7 @@ End Operator
   
  `[ ByVal ] operandname [ As operandtype ]`  
   
-|部件|Description|  
+|部件|描述|  
 |----------|-----------------|  
 |`ByVal`|必须为可选，但传递机制[ByVal](../../../visual-basic/language-reference/modifiers/byval.md)。|  
 |`operandname`|必须的。 表示此操作数的变量的名称。 请参阅[声明的元素名称](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)。|  

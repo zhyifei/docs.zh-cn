@@ -5,11 +5,11 @@ ms.assetid: 444846f3-48d5-4341-a43e-69f7221389eb
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 8921d2841f9a7b4228ae3b8735d7047453f71bcb
-ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
+ms.sourcegitcommit: dfb2a100cfb4d3902c042f17b3204f49bc7635e7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/20/2018
-ms.locfileid: "46490622"
+ms.lasthandoff: 09/21/2018
+ms.locfileid: "46525641"
 ---
 # <a name="ltdirectivesgt-element-net-native"></a>&lt;指令&gt;元素 (.NET Native)
 .NET native 每个运行时指令文件中的根元素。  
@@ -32,7 +32,7 @@ ms.locfileid: "46490622"
   
 ## <a name="child-elements"></a>子元素  
   
-|元素|Description|  
+|元素|描述|  
 |-------------|-----------------|  
 |[\<Application>](../../../docs/framework/net-native/application-element-net-native.md)|作为应用程序范围内的类型和其元数据可以用于反射的类型成员的容器而服务。|  
 |[\<Library>](../../../docs/framework/net-native/library-element-net-native.md)|定义那些子类型和类型成员在运行时间要求元数据的程序集。|  

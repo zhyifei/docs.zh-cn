@@ -5,11 +5,11 @@ helpviewer_keywords:
 - queues [WCF], MSMQ integration
 ms.assetid: b8757992-ffce-40ad-9e9b-3243f6d0fce1
 ms.openlocfilehash: c181a415c8702c3032077728139b23e86d85d1f0
-ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
+ms.sourcegitcommit: dfb2a100cfb4d3902c042f17b3204f49bc7635e7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/20/2018
-ms.locfileid: "46490265"
+ms.lasthandoff: 09/21/2018
+ms.locfileid: "46508588"
 ---
 # <a name="queues-overview"></a>队列概述
 本节介绍与排队通信相关的一般概念和核心概念。 后续各节将有关此处所述的队列概念中如何显示在 Windows Communication Foundation (WCF) 的详细信息。  

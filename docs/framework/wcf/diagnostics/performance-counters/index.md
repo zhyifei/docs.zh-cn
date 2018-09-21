@@ -5,11 +5,11 @@ helpviewer_keywords:
 - performance counters [WCF]
 ms.assetid: f559b2bd-ed83-4988-97a1-e88f06646609
 ms.openlocfilehash: d0ad7ee0bc3ea1d15197e6b8d9888d60b21a2f15
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: dfb2a100cfb4d3902c042f17b3204f49bc7635e7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45610082"
+ms.lasthandoff: 09/21/2018
+ms.locfileid: "46508760"
 ---
 # <a name="wcf-performance-counters"></a>WCF 性能计数器
 Windows Communication Foundation (WCF) 包括大量的性能计数器，可帮助您衡量应用程序的性能。  

@@ -3,11 +3,11 @@ title: 筛选
 ms.date: 03/30/2017
 ms.assetid: 4002946c-e34a-4356-8cfb-e25912a4be63
 ms.openlocfilehash: 74915a45ed5ca1d13790f64c7921d1f750fa04d3
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.sourcegitcommit: dfb2a100cfb4d3902c042f17b3204f49bc7635e7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45972476"
+ms.lasthandoff: 09/21/2018
+ms.locfileid: "46508773"
 ---
 # <a name="filtering"></a>筛选
 Windows Communication Foundation (WCF) 筛选系统可以使用声明性筛选器匹配的消息以及做出操作决定。 使用筛选器，可以通过检查消息的某个部分来确定如何处理消息。 例如，查询过程可以使用 XPath 1.0 查询来检查已知标头的优先级元素，以确定是否将消息移动到队列的靠前位置。  

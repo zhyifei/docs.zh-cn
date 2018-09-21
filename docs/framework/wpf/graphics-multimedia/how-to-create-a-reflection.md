@@ -10,11 +10,11 @@ helpviewer_keywords:
 - reflections [WPF], creating
 ms.assetid: 4f017e16-ab80-43c7-98df-03b6bddbb203
 ms.openlocfilehash: 716adff5c5c41e6601e384b6669516cb6ba1041d
-ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
+ms.sourcegitcommit: dfb2a100cfb4d3902c042f17b3204f49bc7635e7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/20/2018
-ms.locfileid: "46477618"
+ms.lasthandoff: 09/21/2018
+ms.locfileid: "46525092"
 ---
 # <a name="how-to-create-a-reflection"></a>如何：创建反射
 此示例演示如何使用<xref:System.Windows.Media.VisualBrush>创建反射。 因为<xref:System.Windows.Media.VisualBrush>可以显示现有视觉对象，可以使用此功能来生成有趣的视觉效果，例如反射和放大。  

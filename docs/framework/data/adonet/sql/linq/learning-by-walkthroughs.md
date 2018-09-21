@@ -3,11 +3,11 @@ title: 通过演练学习
 ms.date: 03/30/2017
 ms.assetid: a8ae2965-6a49-4155-89b0-7fab2c488ab1
 ms.openlocfilehash: 1386d0e8fadddab5cd15818cb616bf331262e654
-ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
+ms.sourcegitcommit: dfb2a100cfb4d3902c042f17b3204f49bc7635e7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/20/2018
-ms.locfileid: "46470883"
+ms.lasthandoff: 09/21/2018
+ms.locfileid: "46518228"
 ---
 # <a name="learning-by-walkthroughs"></a>通过演练学习
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]文档提供了一些演练。 本主题介绍一些一般性的演练问题（包括疑难解答），并提供指向用于了解 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 的一些入门级演练的链接。  
@@ -45,7 +45,7 @@ ms.locfileid: "46470883"
   
 -   通常表示 Northwind 示例数据库中 Orders 表的类名为 `[Order]`。 这种转义是必需的因为`Order`是在 Visual Basic 中的关键字。  
   
-## <a name="troubleshooting"></a>故障排除  
+## <a name="troubleshooting"></a>疑难解答  
  发生运行时错误的原因可能是您没有足够的权限来访问这些演练中使用的数据库。 请参见以下步骤以帮助解决最常见的此类问题。  
   
 ### <a name="log-on-issues"></a>登录问题  

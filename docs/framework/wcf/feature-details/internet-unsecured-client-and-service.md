@@ -8,11 +8,11 @@ ms.assetid: 97a10d79-3e7d-4bd1-9a99-fd9807fd70bc
 author: BrucePerlerMS
 manager: mbaldwin
 ms.openlocfilehash: b2c71af169018f272a6ca538bba9191f9ddbc0dd
-ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
-ms.translationtype: HT
+ms.sourcegitcommit: dfb2a100cfb4d3902c042f17b3204f49bc7635e7
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/20/2018
-ms.locfileid: "46481638"
+ms.lasthandoff: 09/21/2018
+ms.locfileid: "46507984"
 ---
 # <a name="internet-unsecured-client-and-service"></a>不安全的 Internet 客户端和服务
 下图显示了 public、 不安全的 Windows Communication Foundation (WCF) 客户端和服务的示例。  

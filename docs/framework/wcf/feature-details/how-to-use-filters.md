@@ -2,12 +2,12 @@
 title: 如何：使用筛选器
 ms.date: 03/30/2017
 ms.assetid: f2c7255f-c376-460e-aa20-14071f1666e5
-ms.openlocfilehash: 6b1e02563fcc32a0095e2bdb5e25d0853fc05e84
-ms.sourcegitcommit: c66ba2df2d2ecfb214f85ee0687d298e4941c1a8
+ms.openlocfilehash: aee0f2e4fbf3b4e0802803b76aa557f2dec668bb
+ms.sourcegitcommit: dfb2a100cfb4d3902c042f17b3204f49bc7635e7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/15/2018
-ms.locfileid: "42754524"
+ms.lasthandoff: 09/21/2018
+ms.locfileid: "46508997"
 ---
 # <a name="how-to-use-filters"></a>如何：使用筛选器
 本主题概述创建使用多个筛选器的路由配置所需执行的基本步骤。 在本示例中，消息将路由到两个计算器服务实现，即 regularCalc 和 roundingCalc。 这两个实现都支持相同的运算；但其中一个服务在返回计算结果前会将所有计算结果舍入到最接近的整数值。 客户端应用程序必须能够指示是否使用服务的舍入版本；如果未表示任何服务首选项，则消息将在这两个服务间执行负载平衡。 这两个服务公开的运算包括：  
@@ -113,7 +113,7 @@ ms.locfileid: "42754524"
      这**MessageFilter**寻找 RoundingCalculator 标头中包含的值为"rounding"的消息。 此标头由客户端设置，用于指示应将消息路由到 roundingCalc 服务。  
   
     > [!NOTE]
-    >  S12 命名空间前缀在命名空间表中，默认情况下定义和表示的命名空间"http://www.w3.org/2003/05/soap-envelope"。  
+    > S12 命名空间前缀在命名空间表中，默认情况下定义和表示的命名空间`http://www.w3.org/2003/05/soap-envelope`。
   
 2.  您还必须定义用于查找在两个虚拟终结点上接收到的消息的筛选器。 第一个虚拟终结点是"regular/calculator"终结点。 客户端可以将请求发送到此终结点，以指示应将消息路由到 regularCalc 服务。 下面的配置定义一个筛选器，该筛选器使用 <xref:System.ServiceModel.Dispatcher.EndpointNameMessageFilter> 确定消息是否通过具有 filterData 中指定的名称的终结点到达。  
   
@@ -132,7 +132,7 @@ ms.locfileid: "42754524"
             filterData="http://localhost/routingservice/router/rounding/"/>  
     ```  
   
-     如果以开头的地址上收到一条消息"http://localhost/routingservice/router/rounding/"，然后此筛选器的计算结果为**true**。 因为此配置使用的基址是"http://localhost/routingservice/router"和为 roundingEndpoint"舍入/calculator"指定的地址，用于与此终结点进行通信的完整地址是"http://localhost/routingservice/router/rounding/calculator"，这与此筛选器匹配。  
+     如果以开头的地址上收到一条消息`http://localhost/routingservice/router/rounding/`则此筛选器的计算结果为**true**。 因为此配置使用的基址`http://localhost/routingservice/router`，并且为 roundingEndpoint"舍入/calculator"指定地址，用于与此终结点进行通信的完整地址是`http://localhost/routingservice/router/rounding/calculator`，与此筛选器相匹配。  
   
     > [!NOTE]
     >  PrefixEndpointAddress 筛选器在执行匹配时不会计算主机名，因为可以使用多种主机名形式引用单个主机，而所有这些主机名可能都是从客户端应用程序引用主机的有效方式。 例如，下面的所有主机名可能引用同一主机：  
@@ -156,7 +156,7 @@ ms.locfileid: "42754524"
                     filterData="group1"/>  
     ```  
   
-     在运行期间，此筛选器类型在定义的此类型的所有筛选器实例（这些实例在一个集合中配置为同一组）之间交替。 这将导致此自定义筛选器处理的消息在为 RoundRobinFilter1 和 RoundRobinFilter2 返回 `true` 之间交替。  
+     在运行期间，此筛选器类型在定义的此类型的所有筛选器实例（这些实例在一个集合中配置为同一组）之间交替。 这将导致返回之间进行交替此自定义筛选器处理的消息`true`有关`RoundRobinFilter1`和`RoundRobinFilter2`。  
   
 ### <a name="define-filter-tables"></a>定义筛选器表  
   
@@ -165,7 +165,7 @@ ms.locfileid: "42754524"
     > [!NOTE]
     >  虽然指定筛选器优先级可以控制筛选器的处理顺序，但可能会对路由服务的性能产生负面影响。 如有可能，请构造筛选器逻辑，以免使用筛选器优先级。  
   
-     以下定义筛选器表并添加到具有优先级 2 表之前定义的"XPathFilter"。 此条目还指定，是否"XPathFilter"与消息相匹配，会将消息路由到"roundingCalcEndpoint"  
+     以下定义筛选器表并添加到具有优先级 2 表之前定义的"XPathFilter"。 此条目还指定，如果`XPathFilter`匹配消息，消息将路由到`roundingCalcEndpoint`。  
   
     ```xml  
     <routing>  

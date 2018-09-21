@@ -3,11 +3,11 @@ title: Windows 工作流概述
 ms.date: 03/30/2017
 ms.assetid: fc44adbe-1412-49ae-81af-0298be44aae6
 ms.openlocfilehash: a516f454abc81ae8f6f1c15c815fe2b671ecd98f
-ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
+ms.sourcegitcommit: dfb2a100cfb4d3902c042f17b3204f49bc7635e7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/20/2018
-ms.locfileid: "46479593"
+ms.lasthandoff: 09/21/2018
+ms.locfileid: "46518813"
 ---
 # <a name="windows-workflow-overview"></a>Windows 工作流概述
 工作流是一组的名为的基本单元*活动*作为描述实际过程的模型存储的。 工作流提供了一种方法，用于描述多项短期运行或长期运行的工作之间的执行顺序和依赖关系。 此工作从头到尾地贯穿模型，并且活动可以人工执行或由系统功能执行。  

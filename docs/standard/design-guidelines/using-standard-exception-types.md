@@ -11,11 +11,11 @@ ms.assetid: ab22ce03-78f9-4dca-8824-c7ed3bdccc27
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 9ea4a61be3a76c30c564cbf98ba3318fc6c3e7d4
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.sourcegitcommit: dfb2a100cfb4d3902c042f17b3204f49bc7635e7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45972288"
+ms.lasthandoff: 09/21/2018
+ms.locfileid: "46509143"
 ---
 # <a name="using-standard-exception-types"></a>使用标准异常类型
 本部分介绍的框架和及其用法的详细信息中提供的标准异常。 列表并不详尽。 请参阅其他 Framework 异常类型的.NET Framework 参考文档的使用情况。  
