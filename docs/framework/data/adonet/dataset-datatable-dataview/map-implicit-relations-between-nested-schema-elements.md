@@ -2,12 +2,12 @@
 title: 映射嵌套架构元素之间的隐式关系
 ms.date: 03/30/2017
 ms.assetid: 6b25002a-352e-4d9b-bae3-15129458a355
-ms.openlocfilehash: 3c0b5356479d31a3caad8438618e7cf7dc4e10e8
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 73cd8a83021934de3b8e3bf494a4f59dd32e183c
+ms.sourcegitcommit: dfb2a100cfb4d3902c042f17b3204f49bc7635e7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43485568"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46493615"
 ---
 # <a name="map-implicit-relations-between-nested-schema-elements"></a>映射嵌套架构元素之间的隐式关系
 XML 架构定义语言 (XSD) 架构可以具有相互嵌套的复杂类型。 在这种情况下，映射过程将应用默认映射并在 <xref:System.Data.DataSet> 中创建以下内容：  
@@ -16,7 +16,7 @@ XML 架构定义语言 (XSD) 架构可以具有相互嵌套的复杂类型。 �
   
 -   一个附加主键列每个表定义的父级上不存在任何唯一约束，如果名为*TableName*id （_i) 其中*TableName*是父表的名称。  
   
--   为主键将附加列标识父表上的主键约束 (通过设置**IsPrimaryKey**属性设置为**True**)。 命名约束的约束*#* 其中*#* 是 1、 2、 3，依此类推。 例如，第一个约束的默认名称为 Constraint1。  
+-   为主键将附加列标识父表上的主键约束 (通过设置**IsPrimaryKey**属性设置为**True**)。 该约束以 Constraint\# 的形式来命名，其中 \# 为 1、2、3...。 例如，第一个约束的默认名称为 Constraint1。  
   
 -   在子表上创建外键约束，该约束将附加列标识为引用父表主键的外键。 命名约束*ParentTable_ChildTable*其中*ParentTable*是父表的名称并*ChildTable*是子表的名称。  
   

@@ -2,12 +2,12 @@
 title: 消息相关性
 ms.date: 03/30/2017
 ms.assetid: 3f62babd-c991-421f-bcd8-391655c82a1f
-ms.openlocfilehash: e4cd5dfd6f03370a408dc6f8fb39c983db3d43df
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: fd97f12f536da85619f300d36d02a10306f32aa5
+ms.sourcegitcommit: dfb2a100cfb4d3902c042f17b3204f49bc7635e7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45999424"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46493165"
 ---
 # <a name="message-correlation"></a>消息相关性
 此示例演示消息队列 (MSMQ) 应用程序如何可以将 MSMQ 消息发送到 Windows Communication Foundation (WCF) 服务以及如何消息也可以在请求/响应方案中的发送方和接收方应用程序之间关联起来。 此示例使用 msmqIntegrationBinding 绑定。 这种情况下的服务是自承载控制台应用程序，通过它可以观察接收排队消息的服务。 k  
@@ -16,7 +16,7 @@ ms.locfileid: "45999424"
   
  `IOrderProcessor` 服务协定定义了适合与队列一起使用的单向服务操作。 MSMQ 消息没有 Action 标头，因此无法将不同的 MSMQ 消息自动映射到操作协定。 因此，在这种情况下只有一个操作协定。 如果您希望在服务中定义更多的操作协定，则应用程序必须提供相关信息，如 MSMQ 消息中的哪个标头（例如标签或 correlationID）可用于确定要调度的操作协定。 了这一点[自定义多路分解器](../../../../docs/framework/wcf/samples/custom-demux.md)。  
   
- MSMQ 消息也不包含诸如哪些标头映射到操作协定的不同参数等信息。 因此，在该操作协定中只有一个参数。 参数的类型是<!--zz <xref:System.ServiceModel.MSMQIntegration.MsmqMessage%601>`MsmqMessage<T>`-->，`System.ServiceModel.MSMQIntegration.MsmqMessage`其中包含基础 MSMQ 消息。 `MsmqMessage<T>` 类中的“T”类型表示序列化到 MSMQ 消息正文中的数据。 在此示例中，`PurchaseOrder` 类型序列化到 MSMQ 消息正文中。  
+ MSMQ 消息也不包含诸如哪些标头映射到操作协定的不同参数等信息。 因此，在该操作协定中只有一个参数。 参数的类型是<xref:System.ServiceModel.MsmqIntegration.MsmqMessage%601>，其中包含基础 MSMQ 消息。 `MsmqMessage<T>` 类中的“T”类型表示序列化到 MSMQ 消息正文中的数据。 在此示例中，`PurchaseOrder` 类型序列化到 MSMQ 消息正文中。  
 
 ```csharp
 [ServiceContract(Namespace = "http://Microsoft.ServiceModel.Samples")]  

@@ -2,12 +2,12 @@
 title: 如何：从工作流应用程序访问服务
 ms.date: 03/30/2017
 ms.assetid: 925ef8ea-5550-4c9d-bb7b-209e20c280ad
-ms.openlocfilehash: 5bc18b446d4bf818c874839a421793a997ddc543
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 460e5d0f1bbfdebf885176ed9fcc336b76731edd
+ms.sourcegitcommit: dfb2a100cfb4d3902c042f17b3204f49bc7635e7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45595459"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46493265"
 ---
 # <a name="how-to-access-a-service-from-a-workflow-application"></a>如何：从工作流应用程序访问服务
 本主题说明如何从工作流控制台应用程序调用工作流服务。 这取决于完成[如何： 使用消息传递活动创建工作流服务](../../../../docs/framework/wcf/feature-details/how-to-create-a-workflow-service-with-messaging-activities.md)主题。 虽然本主题介绍如何从工作流应用程序调用工作流服务，但是相同的方法可以用于从工作流应用程序中调用任何 Windows Communication Foundation (WCF) 服务。
@@ -42,13 +42,13 @@ ms.locfileid: "45595459"
 
      ![回显在工具箱中的活动](../../../../docs/framework/wcf/feature-details/media/echoactivity.JPG "EchoActivity")
 
-7.  拖放到<!--zz <xref:System.ServiceModel.Activities.Sequence>-->`System.ServiceModel.Activities.Sequence`活动拖动到设计器图面。 它位于**控制流**工具箱的部分。
+7.  将 <xref:System.Activities.Statements.Sequence> 活动拖放到设计器图面。 它位于**控制流**工具箱的部分。
 
-8.  与<!--zz <xref:System.ServiceModel.Activities.Sequence>-->`System.ServiceModel.Activities.Sequence`活动处于焦点模式，请单击**变量**链接，然后添加一个名为的字符串变量`inString`。 为该变量的默认值为`"Hello, world"`以及一个名为的字符串变量`outString`以下关系图中所示。
+8.  与<xref:System.Activities.Statements.Sequence>活动处于焦点模式，请单击**变量**链接，然后添加一个名为的字符串变量`inString`。 为该变量的默认值为`"Hello, world"`以及一个名为的字符串变量`outString`以下关系图中所示。
 
      ![添加变量](../../../../docs/framework/wcf/feature-details/media/instringvar.JPG "inStringVar")
 
-9. 拖放到**Echo**到活动<!--zz <xref:System.ServiceModel.Activities.Sequence>--> `System.ServiceModel.Activities.Sequence`。 在属性窗口中将绑定`inMsg`自变量`inString`变量并`outMsg`参数`outString`变量，如以下插图所示。 这样会将 `inString` 变量的值传入操作中，然后获取返回值，并将返回值放到 `outString` 变量中。
+9. 拖放到**Echo**到活动<xref:System.Activities.Statements.Sequence>。 在属性窗口中将绑定`inMsg`自变量`inString`变量并`outMsg`参数`outString`变量，如以下插图所示。 这样会将 `inString` 变量的值传入操作中，然后获取返回值，并将返回值放到 `outString` 变量中。
 
      ![自变量绑定到变量](../../../../docs/framework/wcf/feature-details/media/argumentbind.JPG "ArgumentBind")
 

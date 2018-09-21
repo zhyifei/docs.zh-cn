@@ -55,7 +55,7 @@ typedef enum {
   
 ## <a name="members"></a>成员  
   
-|成员|Description|  
+|成员|描述|  
 |------------|-----------------|  
 |`STARTUP_CONCURRENT_GC`|指定应使用并发垃圾回收。 如果在单处理器计算机上，调用方要求的服务器版本和并发垃圾回收，工作站版本和非并发垃圾回收是改为运行。 **注意：** 并发垃圾回收的应用程序运行在 WOW64 中不支持 x86 仿真程序上实现 Intel Itanium 体系结构 （以前称为 IA-64） 的 64 位系统。 有关在 64 位 Windows 系统上使用 WOW64 的详细信息，请参阅[运行 32 位应用程序](/windows/desktop/WinProg64/running-32-bit-applications)。|  
 |`STARTUP_LOADER_OPTIMIZATION_MASK`|指定只应出现加载程序优化。|  

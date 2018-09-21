@@ -45,7 +45,7 @@ ms.locfileid: "46489846"
   
 ### <a name="parent-elements"></a>父元素  
   
-|元素|Description|  
+|元素|描述|  
 |-------------|-----------------|  
 |[\<commonParameters>](https://msdn.microsoft.com/library/d0e1e6fc-985a-4713-b7da-194e30dfab4c)|服务使用的公用参数的集合。 此集合通常将包括可由持久性服务共享的数据库连接字符串。|  
   

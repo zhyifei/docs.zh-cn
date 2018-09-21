@@ -13,7 +13,7 @@ ms.locfileid: "46480729"
 
 本主题列出了在 F # 语言中定义的基本类型。 这些类型是最基本的 F # 中，几乎每个 F # 程序的基础。 它们是.NET 基元类型的一个超集。
 
-|类型|.NET 类型|Description|
+|类型|.NET 类型|描述|
 |----|---------|-----------|
 |`bool`|<xref:System.Boolean>|可能的值为 `true` 和 `false`。|
 |`byte`|<xref:System.Byte>|从 0 到 255 之间的值。|

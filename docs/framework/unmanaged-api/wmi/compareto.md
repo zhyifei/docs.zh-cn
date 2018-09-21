@@ -58,7 +58,7 @@ HRESULT CompareTo (
 
 此函数返回以下值中定义*WbemCli.h*标头文件，也可以在定义它们为常量在代码中：
 
-|返回的常量  |“值”  |Description  |
+|返回的常量  |“值”  |描述  |
 |---------|---------|---------|
 | `WBEM_E_FAILED` | 0x80041001 | 发生未知的错误。 |
 | `WBEM_E_INVALID_PARAMETER` | 0x80041008 | 参数无效。 |
@@ -73,7 +73,7 @@ HRESULT CompareTo (
 
 可以作为传递的标志`lEnumFlags`中定义参数*WbemCli.h*标头文件，也可以在定义它们为常量在代码中。 通过指定以下标志的按位组合，可以指定在比较中涉及的各个特征：
 
-|返回的常量  |“值”  |Description  |
+|返回的常量  |“值”  |描述  |
 |---------|---------|---------|
 | `WBEM_FLAG_IGNORE_OBJECT_SOURCE` | 2 | 忽略源 （在服务器和它们原来的位置的命名空间）。 |
 | `WBEM_FLAG_IGNORE_QUALIFIERS` | 1 | 忽略所有限定符 (包括**键**并**动态**) |

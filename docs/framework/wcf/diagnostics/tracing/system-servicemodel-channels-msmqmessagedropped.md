@@ -12,7 +12,7 @@ ms.locfileid: "46485413"
 # <a name="systemservicemodelchannelsmsmqmessagedropped"></a>System.ServiceModel.Channels.MsmqMessageDropped
 MSMQ 已删除该消息。  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>描述  
  该跟踪指示已丢弃 MSMQ 消息。 当 Windows Communication Foundation (WCF) （与 NetMsmqBinding 或 MsmqIntegrationBinding 一起使用） 无法处理它们时，可以删除 MSMQ 消息。 这些消息称为病毒消息。  
   
  当 NetMsmqBinding 或 MsmqIntegrationBinding 上的 `ReceiveErrorHandling` 属性设置为 `Drop` 时，将丢弃病毒消息。 丢弃的消息会从队列中移除而不再可恢复。  

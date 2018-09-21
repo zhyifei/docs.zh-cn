@@ -35,13 +35,13 @@ ms.locfileid: "46480612"
   
 ### <a name="child-elements"></a>子元素  
   
-|元素|Description|  
+|元素|描述|  
 |-------------|-----------------|  
 |[\<参与者 >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/participants.md)|一个配置元素，包含 `a HYPERLINK "http://msdn.microsoft.com/library/library/system.servicemodel.activities.tracking.configuration.profileworkflowelement.activitydefinitionid(VS.100).aspx" ctivityDefinitionId` 属性所标识的特定工作流的所有查询。|  
   
 ### <a name="parent-elements"></a>父元素  
   
-|元素|Description|  
+|元素|描述|  
 |-------------|-----------------|  
 |[\<跟踪 >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/tracking.md)|表示一个配置节，用于定义工作流服务的跟踪设置。|  
   

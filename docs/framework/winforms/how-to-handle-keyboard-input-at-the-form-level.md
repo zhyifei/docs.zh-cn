@@ -11,11 +11,11 @@ helpviewer_keywords:
 - keyboards [Windows Forms], form-level input
 ms.assetid: d7f8b390-dc91-42d2-ae0f-2ffa388127ad
 ms.openlocfilehash: a75c4f116b32499f9ba33dd863f2a5b6952a3e24
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.sourcegitcommit: dfb2a100cfb4d3902c042f17b3204f49bc7635e7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46000825"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46492952"
 ---
 # <a name="how-to-handle-keyboard-input-at-the-form-level"></a>如何：在窗体级别处理键盘输入
 Windows 窗体能够在消息到达控件之前处理窗体级别的键盘消息。 本主题演示如何完成此任务。  

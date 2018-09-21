@@ -2,12 +2,12 @@
 title: WCF 简化功能
 ms.date: 03/30/2017
 ms.assetid: 4535a511-6064-4da0-b361-80262a891663
-ms.openlocfilehash: 010f941850dedd73e9cc203ea2b180dae7d4742c
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: ded4fc93e5e8f33d98e58ffcb3cb98c2bff2b410
+ms.sourcegitcommit: dfb2a100cfb4d3902c042f17b3204f49bc7635e7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43526348"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46493226"
 ---
 # <a name="wcf-simplification-features"></a>WCF 简化功能
 本主题讨论可使编写 WCF 应用程序更简单的新功能。  
@@ -106,7 +106,7 @@ ms.locfileid: "43526348"
 |----------------|-------------------|-----------------|  
 |<xref:System.Xml.XmlDictionaryReaderQuotas.MaxArrayLength%2A>|Int32.MaxValue|获取并设置允许的最大数组长度。 此配额限制 XML 读取器返回的基元数组（包括字节数组）的最大大小。 此配额不限制 XML 读取器本身的内存消耗，但限制使用该读取器的所有组件的内存消耗。 例如，当 <xref:System.Runtime.Serialization.DataContractSerializer> 使用一个以 <xref:System.Xml.XmlDictionaryReaderQuotas.MaxArrayLength%2A>保护的读取器时，将不会反序列化大于此配额的字节数组。|  
 |<xref:System.Xml.XmlDictionaryReaderQuotas.MaxBytesPerRead%2A>|Int32.MaxValue|获取并设置允许每次读取返回的最大字节数。 此配额限制在当读取元素开始标记及其属性时在一次 Read 操作中读取的字节数目。 （在非流模式情况下，不会根据配额对元素名称本身进行计数）。 具有太多的 XML 特性可能会耗用过长的处理时间，因为必须检查特性名称的唯一性。 <xref:System.Xml.XmlDictionaryReaderQuotas.MaxBytesPerRead%2A> 可缓解这一威胁。|  
-|<xref:System.Xml.XmlDictionaryReaderQuotas.MaxDepth%2A>|节点深度为 128|此配额限制 XML 元素的最大嵌套深度。  <xref:System.Xml.XmlDictionaryReaderQuotas.MaxDepth%2A> 与 <xref:System.Xml.XmlDictionaryReaderQuotas.MaxBytesPerRead%2A> 交互：读取器始终在内存中保留当前元素以及它的所有上级的数据，因此读取器的最大内存消耗与这两个设置的积成比例。 当反序列化深度嵌套的对象图时，会迫使反序列化程序访问整个堆栈并引发一个不可恢复的 <xref:System.StackOverflowException>。 XML 嵌套和两个对象嵌套之间存在直接关联<xref:System.Runtime.Serialization.DataContractSerializer>并<!--zz <xref:System.Runtime.Serialization.XmlSerializer>--> `System.Runtime.Serialization.XmlSerializer`。 <xref:System.Xml.XmlDictionaryReaderQuotas.MaxDepth%2A> 用于缓解这一威胁。|  
+|<xref:System.Xml.XmlDictionaryReaderQuotas.MaxDepth%2A>|节点深度为 128|此配额限制 XML 元素的最大嵌套深度。  <xref:System.Xml.XmlDictionaryReaderQuotas.MaxDepth%2A> 与 <xref:System.Xml.XmlDictionaryReaderQuotas.MaxBytesPerRead%2A> 交互：读取器始终在内存中保留当前元素以及它的所有上级的数据，因此读取器的最大内存消耗与这两个设置的积成比例。 当反序列化深度嵌套的对象图时，会迫使反序列化程序访问整个堆栈并引发一个不可恢复的 <xref:System.StackOverflowException>。 对于 <xref:System.Runtime.Serialization.DataContractSerializer> 和 <xref:System.Xml.Serialization.XmlSerializer>，XML 嵌套和对象嵌套之间存在直接关联。 <xref:System.Xml.XmlDictionaryReaderQuotas.MaxDepth%2A> 用于缓解这一威胁。|  
 |<xref:System.Xml.XmlDictionaryReaderQuotas.MaxNameTableCharCount%2A>|Int32.MaxValue|此配额限制名称表中所允许的最大字符数。 名称表包含在处理 XML 文档时遇到的一些字符串（例如，命名空间和前缀）。 由于这些字符串在内存中进行缓冲，因此，此配额用于防止在预期使用流处理时进行过度缓冲。|  
 |<xref:System.Xml.XmlDictionaryReaderQuotas.MaxStringContentLength%2A>|Int32.MaxValue|此配额限制 XML 读取器返回的最大字符串大小。 此配额不限制 XML 读取器本身的内存消耗，但限制使用该读取器的组件中的内存消耗。 例如，当 <xref:System.Runtime.Serialization.DataContractSerializer> 使用一个以 <xref:System.Xml.XmlDictionaryReaderQuotas.MaxStringContentLength%2A>保护的读取器时，将不会反序列化大于此配额的字符串。|  
   
