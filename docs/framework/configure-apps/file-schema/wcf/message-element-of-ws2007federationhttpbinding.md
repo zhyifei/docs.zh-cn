@@ -3,11 +3,11 @@ title: '&lt;ws2007FederationHttpBinding&gt; 的 &lt;message&gt; 元素'
 ms.date: 03/30/2017
 ms.assetid: 52cd941d-e230-4c82-8b29-333a7d20eca8
 ms.openlocfilehash: 3f0dbc3128af812c7fd09eed5acd90ab43ec8351
-ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
+ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/20/2018
-ms.locfileid: "46471585"
+ms.lasthandoff: 09/21/2018
+ms.locfileid: "46530097"
 ---
 # <a name="ltmessagegt-element-of-ltws2007federationhttpbindinggt"></a>&lt;ws2007FederationHttpBinding&gt; 的 &lt;message&gt; 元素
 定义消息级安全性设置[ \<ws2007FederationHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/ws2007federationhttpbinding.md)元素。  
@@ -115,7 +115,7 @@ ms.locfileid: "46471585"
   
 ### <a name="child-elements"></a>子元素  
   
-|元素|Description|  
+|元素|描述|  
 |-------------|-----------------|  
 |[\<claimTypeRequirements>](../../../../../docs/framework/configure-apps/file-schema/wcf/claimtyperequirements-element.md)|指定此绑定的声明类型集合。 每个元素的类型都为 <xref:System.ServiceModel.Configuration.ClaimTypeElement>。|  
 |[\<issuer>](../../../../../docs/framework/configure-apps/file-schema/wcf/issuer.md)|指定颁发安全令牌的终结点。 此元素的类型为 <xref:System.ServiceModel.Configuration.IssuedTokenParametersEndpointAddressElement>。|  
@@ -124,7 +124,7 @@ ms.locfileid: "46471585"
   
 ### <a name="parent-elements"></a>父元素  
   
-|元素|Description|  
+|元素|描述|  
 |-------------|-----------------|  
 |[\<security>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-element-of-ws2007federationhttpbinding.md)|定义绑定的安全设置。|  
   

@@ -3,11 +3,11 @@ title: 符号和运算符参考 (F#)
 description: '了解符号和 F # 编程语言中使用的运算符。'
 ms.date: 04/04/2018
 ms.openlocfilehash: 0e36f6cfc75b7d2e79bcf7acb89d260fd4e9b1ad
-ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
+ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/20/2018
-ms.locfileid: "46473481"
+ms.lasthandoff: 09/21/2018
+ms.locfileid: "46532605"
 ---
 # <a name="symbol-and-operator-reference"></a>符号和运算符参考
 
@@ -20,7 +20,7 @@ ms.locfileid: "46473481"
 
 下表描述 F# 语言中使用的符号、提供指向包含详细信息的主题的链接，并简要描述一些符号的使用。 符号按 ASCII 字符集顺序排序。
 
-|符号或运算符|链接|Description|
+|符号或运算符|链接|描述|
 |------------------|-----|-----------|
 |`!`|[引用单元格](../reference-cells.md)<br /><br />[计算表达式](../computation-expressions.md)|<ul><li>取消引用引用单元格。<br /></li><li>在关键字后，指示由工作流控制的关键字行为的修改版本。<br /></li></ul>|
 |`!=`|不适用。|<ul><li>F# 中不使用。 使用 `<>` 进行不等运算。<br /></li></ul>|

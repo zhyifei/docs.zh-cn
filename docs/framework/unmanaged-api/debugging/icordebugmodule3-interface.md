@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 58bad617eb91b7e529ff3d95edd06a5c73feee64
-ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
+ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/20/2018
-ms.locfileid: "46472030"
+ms.lasthandoff: 09/21/2018
+ms.locfileid: "46537155"
 ---
 # <a name="icordebugmodule3-interface"></a>ICorDebugModule3 接口
 为动态模块创建符号读取器。  
@@ -41,7 +41,7 @@ interface ICorDebugModule3 : IUnknown
   
 ## <a name="methods"></a>方法  
   
-|方法|Description|  
+|方法|描述|  
 |------------|-----------------|  
 |[ICorDebugModule3::CreateReaderForInMemorySymbols 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule3-createreaderforinmemorysymbols-method.md)|创建符号读取器 (通常[ISymUnmanagedReader 接口](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)) 的动态模块。|  
   

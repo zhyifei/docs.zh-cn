@@ -8,11 +8,11 @@ helpviewer_keywords:
 - Windows Forms controls, arranging
 ms.assetid: d5c9edc7-cf30-4a97-8ebe-201d569340f8
 ms.openlocfilehash: 170b79f03515ab371f7013c267b28ba85dafd0f5
-ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
+ms.sourcegitcommit: dfb2a100cfb4d3902c042f17b3204f49bc7635e7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46324274"
+ms.lasthandoff: 09/21/2018
+ms.locfileid: "46525758"
 ---
 # <a name="walkthrough-arranging-controls-on-windows-forms-using-snaplines"></a>演练：使用对齐线在 Windows 窗体上排列控件
 在窗体上精确地放置控件对于许多应用程序而言是高优先级。 Windows 窗体设计器提供许多布局工具来实现此目的。 一个最重要的是<xref:System.Windows.Forms.Design.Behavior.SnapLine>功能。  

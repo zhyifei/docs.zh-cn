@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 791e75aa60fd651dde1555339e31664a3523e1eb
-ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
+ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/20/2018
-ms.locfileid: "46470896"
+ms.lasthandoff: 09/21/2018
+ms.locfileid: "46561547"
 ---
 # <a name="delete-function"></a>删除函数
 从 CIM 类定义中删除指定的属性和所有其限定符。
@@ -53,7 +53,7 @@ HRESULT Delete (
 
 此函数返回以下值中定义*WbemCli.h*标头文件，也可以在定义它们为常量在代码中：
 
-|返回的常量  |“值”  |Description  |
+|返回的常量  |“值”  |描述  |
 |---------|---------|---------|
 | `WBEM_E_FAILED` | 0x80041001 | 发生未知的错误。 |
 | `WBEM_E_INVALID_OPERATION` | 0x80041016 | 不能删除该属性。 |

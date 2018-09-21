@@ -2,12 +2,12 @@
 title: 使用 Windows Store 应用商店客户端应用访问 WCF 服务
 ms.date: 03/30/2017
 ms.assetid: e2002ef4-5dee-4a54-9d87-03b33d35fc52
-ms.openlocfilehash: cfc5dd13c5660ff1604e9de02fdf6755d70a95e9
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: a6324d5400e9fb15b3373eea4df0a15cd7c54887
+ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43485659"
+ms.lasthandoff: 09/21/2018
+ms.locfileid: "46541114"
 ---
 # <a name="accessing-wcf-services-with-a-windows-store-client-app"></a>使用 Windows Store 应用商店客户端应用访问 WCF 服务
 Windows 8 引入了一种新应用程序，称为 Windows 应用商店应用程序。 这些应用程序是围绕触摸屏界面设计的。 通过 .NET Framework 4.5，Windows 商店应用程序可以调用 WCF 服务。  
@@ -107,17 +107,18 @@ public partial class Service1Client : System.ServiceModel.ClientBase<MetroWcfCli
 >  XmlDictionaryWriter.Write(DateTime) 现在会将 DateTime 对象作为字符串写入。  
   
 ### <a name="security"></a>安全性  
- Windows 应用商店应用程序支持以下安全模式：  
+
+在 Windows 应用商店应用程序中支持以下安全模式：
   
-1.  <xref:System.ServiceModel.SecurityMode.None>  
+1. <xref:System.ServiceModel.SecurityMode.None>  
   
-2.  <xref:System.ServiceModel.SecurityMode.Transport>  
+2. <xref:System.ServiceModel.SecurityMode.Transport>  
   
-3.  <!--zz <xref:System.ServiceModel.SecurityMode.TransportWithMessageCredentials> --> `System.ServiceModel.SecurityMode.TransportWithMessageCredentials`
+3. <xref:System.ServiceModel.SecurityMode.TransportWithMessageCredential>
   
-4.  <!--zz <xref:System.ServiceModel.SecurityMode.TransportCredentialOnly>  --> `System.ServiceModel.SecurityMode.TransportCredentialOnly`
+4. <xref:System.ServiceModel.SecurityMode.Message>
   
- Windows 应用商店应用程序支持以下客户端凭据类型  
+在 Windows 应用商店应用程序中支持以下客户端凭据类型：
   
 1.  无  
   
@@ -145,7 +146,7 @@ public partial class Service1Client : System.ServiceModel.ClientBase<MetroWcfCli
   
 1.  <xref:System.ServiceModel.ChannelFactory>  
   
-2.  <!--zz <xref:System.ServiceModel.DuplexChannelFactory> --> `System.ServiceModel.DuplexChannelFactory`
+2.  <xref:System.ServiceModel.DuplexChannelFactory%601>
   
 3.  <xref:System.ServiceModel.CallbackBehaviorAttribute>  
   

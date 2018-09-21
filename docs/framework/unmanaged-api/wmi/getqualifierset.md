@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 635dc7605af00f2662a9f9553adefafcd25f9452
-ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
+ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/20/2018
-ms.locfileid: "46488852"
+ms.lasthandoff: 09/21/2018
+ms.locfileid: "46537808"
 ---
 # <a name="getqualifierset-function"></a>GetQualifierSet 函数
 检索类实例或类定义的限定符集。
@@ -53,7 +53,7 @@ HRESULT GetQualifierSet (
 
 此函数返回以下值中定义*WbemCli.h*标头文件，也可以在定义它们为常量在代码中：
 
-|返回的常量  |“值”  |Description  |
+|返回的常量  |“值”  |描述  |
 |---------|---------|---------|
 |`WBEM_E_FAILED` | 0x80041001 | 已存在时的常见错误。 |
 |`WBEM_E_NOT_FOUND` | 0x80041002 | 指定的方法不存在。 |

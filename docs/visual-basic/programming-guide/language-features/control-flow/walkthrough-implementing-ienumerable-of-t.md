@@ -8,11 +8,11 @@ helpviewer_keywords:
 - control flow [Visual Basic]
 ms.assetid: c60d7589-51f2-4463-a2d5-22506bbc1554
 ms.openlocfilehash: be2eefdc52d38df3071d457b7a71dbac6eaa2657
-ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
+ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/20/2018
-ms.locfileid: "46490499"
+ms.lasthandoff: 09/21/2018
+ms.locfileid: "46525495"
 ---
 # <a name="walkthrough-implementing-ienumerableof-t-in-visual-basic"></a>演练：在 Visual Basic 中实现 IEnumerable(Of T)
 <xref:System.Collections.Generic.IEnumerable%601>接口由类实现，可以一次返回一系列值的一项。 返回的数据一次的一项是不需要完整的数据集加载到内存中才能使用它的优点。 只需使用足够的内存将数据从加载单个项。 类实现`IEnumerable(T)`接口可与`For Each`循环或 LINQ 查询。  

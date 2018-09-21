@@ -6,11 +6,11 @@ helpviewer_keywords:
 - hybrid applications [WPF interoperability]
 ms.assetid: fbc0c54e-930a-4c13-8e9c-27b83665010a
 ms.openlocfilehash: e1d06085b4edb5c1e102eaab766ec7636194b991
-ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
+ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/20/2018
-ms.locfileid: "46482113"
+ms.lasthandoff: 09/21/2018
+ms.locfileid: "46532005"
 ---
 # <a name="walkthrough-localizing-a-hybrid-application"></a>演练：本地化混合应用程序
 
@@ -32,7 +32,7 @@ ms.locfileid: "46482113"
 
 完成后，你将拥有一个本地化的混合应用程序。
 
-## <a name="prerequisites"></a>必要條件
+## <a name="prerequisites"></a>系统必备
 
 你需要以下组件来完成本演练：
 

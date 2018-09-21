@@ -2,21 +2,21 @@
 title: WCF Web HTTP 服务帮助页
 ms.date: 03/30/2017
 ms.assetid: 63c7c695-44b6-4f31-bb9c-00f2763f525e
-ms.openlocfilehash: 75babbeda7d5f0dca18c2de2e3187145164ac9a0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d0fe4f99fea4d414c95244e535cd75891f921790
+ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33500947"
+ms.lasthandoff: 09/21/2018
+ms.locfileid: "46529971"
 ---
 # <a name="wcf-web-http-service-help-page"></a>WCF Web HTTP 服务帮助页
-[!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]提供了 WCF WEB HTTP 服务的自动帮助页。 此帮助页列出了每个操作的说明、请求和响应格式以及架构。 默认情况下关闭此功能。 当用户浏览到 WCF WEB HTTP 服务和追加"/ 帮助"到 URL，例如末尾http://localhost:8000/Customers/Help，如同显示以下帮助页。  
+[!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]提供了 WCF WEB HTTP 服务的自动帮助页。 此帮助页列出了每个操作的说明、请求和响应格式以及架构。 默认情况下关闭此功能。 当用户浏览到 WCF WEB HTTP 服务和附加"/help"的 URL，例如末尾 http://localhost:8000/Customers/Help，如显示以下信息帮助页。  
   
  ![WCF REST 帮助页](../../../../docs/framework/wcf/feature-details/media/wcfresthelppagemain.gif "WCFRESTHELPPAGEMAIN")  
   
  用户随后可以单击帮助页中列出的任何方法，并且所显示的该操作的详细页中显示了有关该方法的更多信息，其中包括消息格式和示例响应。 下图是方法帮助页的一个示例。  
   
- ![WCF REST 帮助页详细介绍](../../../../docs/framework/wcf/feature-details/media/wcfresthelppagedetail2.gif "WCFRESTHELPPAGEDETAIL2")  
+ ![详细介绍了 WCF REST 帮助页](../../../../docs/framework/wcf/feature-details/media/wcfresthelppagedetail2.gif "WCFRESTHELPPAGEDETAIL2")  
   
 ## <a name="using-the-wcf-web-http-help-page"></a>使用 WCF Web HTTP 帮助页  
  WCF WEB HTTP 帮助页显示了每个操作的简单说明（假设您使用 <xref:System.ComponentModel.DescriptionAttribute> 指定了操作）。 此特性接受一个字符串，该字符串中包含它所应用到的操作的简短说明。 例如，下面的代码演示如何使用 <xref:System.ComponentModel.DescriptionAttribute> 来提供简短说明。  
@@ -45,12 +45,12 @@ SyndicationFeedFormatter GetTemplate1();
 </services>  
 ```  
   
- 若要启用 WCF Web HTTP 帮助页在代码中的，添加服务终结点，并添加<xref:System.ServiceModel.Description.WebHttpBehavior>到终结点设置<!--zz <xref:System.ServiceModel.Description.WebHttpBehavior.EnableHelp%2A>-->`EnableHelp`到`true`。 下面的代码演示如何执行此操作。  
+ 若要通过代码启用 WCF Web HTTP 帮助页，请添加一个服务终结点，将 <xref:System.ServiceModel.Description.WebHttpBehavior> 添加到该终结点，并将 <xref:System.ServiceModel.Description.WebHttpBehavior.HelpEnabled%2A> 设置为 `true`。 下面的代码演示如何执行此操作。  
   
 ```  
 using (WebServiceHost host = new WebServiceHost(typeof(Service), new Uri("http://localhost:8000/Customers")))  
 {  
-   host.AddServiceEndpoint(typeof(ICustomerCollection), new WebHttpBinding(), "");               
+   host.AddServiceEndpoint(typeof(ICustomerCollection), new WebHttpBinding(), "");
    host.Description.Endpoints[0].Behaviors.Add(new WebHttpBehavior { EnableHelp = true });  
    // ...  
 }  

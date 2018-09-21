@@ -7,11 +7,11 @@ helpviewer_keywords:
 - Option keyword [Visual Basic]
 ms.assetid: 6b2f41c4-2403-43b6-8a14-94a3775e5b47
 ms.openlocfilehash: f4996b0c03ee98fef31bc301dc957060afdfdac8
-ms.sourcegitcommit: f513a91160b3fec289dd06646d0d6f81f8fcf910
+ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46008663"
+ms.lasthandoff: 09/21/2018
+ms.locfileid: "46561375"
 ---
 # <a name="option-ltkeywordgt-statement"></a>选项&lt;关键字&gt;语句
 引入了指定应用于整个源文件编译器选项的语句。  

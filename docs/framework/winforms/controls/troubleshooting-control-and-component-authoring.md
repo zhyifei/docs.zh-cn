@@ -12,11 +12,11 @@ helpviewer_keywords:
 - Windows Forms controls, debugging
 ms.assetid: e9c8c099-2271-4737-882f-50f336c7a55e
 ms.openlocfilehash: caad6a76b52a970e133425c484602deb8801d252
-ms.sourcegitcommit: dfb2a100cfb4d3902c042f17b3204f49bc7635e7
+ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/20/2018
-ms.locfileid: "46493108"
+ms.lasthandoff: 09/21/2018
+ms.locfileid: "46538948"
 ---
 # <a name="troubleshooting-control-and-component-authoring"></a>控件和组件创作疑难解答
 本主题列出了开发组件和控件时遇到的常见问题。 有关详细信息，请参阅[使用组件编程](https://msdn.microsoft.com/library/d4d4fcb4-e0b8-46b3-b679-7ee0026eb9e3)。  

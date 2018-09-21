@@ -7,11 +7,11 @@ ms.assetid: 44c8578c-9a5b-4acd-8168-1c30a027c4c5
 author: BrucePerlerMS
 manager: mbaldwin
 ms.openlocfilehash: e0bed1e47302cc80a04498f39144177acdbc9ae6
-ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
+ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/20/2018
-ms.locfileid: "46481944"
+ms.lasthandoff: 09/21/2018
+ms.locfileid: "46537406"
 ---
 # <a name="securing-clients"></a>保证客户端的安全
 在 Windows Communication Foundation (WCF)，由服务规定客户端的安全要求。 即，由服务指定要使用的安全模式以及客户端是否必须提供凭据。 因此，保证客户端安全的过程非常简单：使用从服务那里获得的元数据（如果已发布）来生成客户端。 元数据指定如何配置客户端。 如果服务要求客户端提供凭据，您必须获得能够满足要求的凭据。 本主题进一步详细讨论此过程。 有关创建安全服务的详细信息，请参阅[Securing Services](../../../docs/framework/wcf/securing-services.md)。  
@@ -80,7 +80,7 @@ ms.locfileid: "46481944"
 #### <a name="setting-a-clientcredentials-value-in-code"></a>设置\<clientCredentials > 在代码中的值  
  若要设置[ \<clientCredentials >](../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md)值在代码中，你必须访问<xref:System.ServiceModel.ClientBase%601.ClientCredentials%2A>属性<xref:System.ServiceModel.ClientBase%601>类。 该属性返回一个 <xref:System.ServiceModel.Description.ClientCredentials> 对象，使用该对象可以访问各种凭据类型，如下表所示。  
   
-|ClientCredential 属性|Description|说明|  
+|ClientCredential 属性|描述|说明|  
 |-------------------------------|-----------------|-----------|  
 |<xref:System.ServiceModel.Description.ClientCredentials.ClientCertificate%2A>|返回一个 <xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential>|表示客户端提供的 X.509 证书，客户端使用该证书向服务器证明自己的身份。|  
 |<xref:System.ServiceModel.Description.ClientCredentials.HttpDigest%2A>|返回一个 <xref:System.ServiceModel.Security.HttpDigestClientCredential>|表示 HTTP 摘要式凭据。 该凭据是用户名和密码的哈希。|  

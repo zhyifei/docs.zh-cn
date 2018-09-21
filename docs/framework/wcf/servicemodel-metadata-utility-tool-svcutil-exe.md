@@ -8,11 +8,11 @@ helpviewer_keywords:
 - clients [WCF], consuming services
 ms.assetid: 1abf3d9f-b420-46f1-b628-df238751f308
 ms.openlocfilehash: f9ae53aeb988f23611adb4b00354f65918790d3b
-ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
+ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/20/2018
-ms.locfileid: "46490161"
+ms.lasthandoff: 09/21/2018
+ms.locfileid: "46529724"
 ---
 # <a name="servicemodel-metadata-utility-tool-svcutilexe"></a>ServiceModel 元数据实用工具 (Svcutil.exe)
 
@@ -57,7 +57,7 @@ ServiceModel Metadata Utility Tool 可在 Windows SDK 安装位置，具体而�
 
 下表显示了某些常用的选项为此工具：
 
-|选项|Description|
+|选项|描述|
 |------------|-----------------|
 |/ 目录：\<目录 >|要在其中创建文件的目录。<br /><br /> 默认设置：当前目录。<br /><br /> 缩写形式：`/d`|
 |/help|显示此工具的命令语法和选项。<br /><br /> 缩写形式：`/?`|
@@ -78,13 +78,13 @@ Svcutil.exe 可以依据元数据文档为服务协定、客户端和数据类�
 
 `svcutil.exe [/t:code]  <metadataDocumentPath>* | <url>* | <epr>`
 
-|参数|Description|
+|参数|描述|
 |--------------|-----------------|
 |`epr`|XML 文件的路径，该文件包含支持 WS-Metadata Exchange 的服务终结点的 WS-Addressing EndpointReference。 有关更多信息，请参见“元数据下载”一节。|
 |`metadataDocumentPath`|元数据文档的路径 (*wsdl*或*xsd*)，其中包含要导入代码 （.wsdl、.xsd、.wspolicy 或.wsmex） 的协定。<br /><br /> 当您为元数据指定远程 URL 时，Svcutil 采用导入和包含的内容。 但是，如果要在本地文件系统上处理元数据文件，则必须在此自变量中指定所有文件。 这样，您可以在不能有网络依赖项的生成环境中使用 Svcutil。 你可以使用通配符 (*.xsd， \*.wsdl) 为此参数。|
 |`url`|可提供元数据的服务终结点的 URL，或是联机承载的元数据文档的 URL。 有关如何检索这些文档的更多信息，请参见“元数据下载”一节。|
 
-|选项|Description|
+|选项|描述|
 |------------|-----------------|
 |/async|同时生成同步和异步方法签名。<br /><br /> 默认设置：只生成同步方法签名。<br /><br /> 缩写形式：`/a`|
 |/collectionType:\<type>|为 WCF 客户端指定列表集合类型。<br/><br /> 默认值： 集合类型是 System.Array。 <br /><br /> 缩写形式：`/ct`|
@@ -119,11 +119,11 @@ Svcutil.exe 可以导出已编译程序集中服务、协定和数据类型的�
 
 `svcutil.exe [/t:metadata] [/serviceName:<serviceConfigName>] [/dataContractOnly] <assemblyPath>*`
 
-|参数|Description|
+|参数|描述|
 |--------------|-----------------|
 |`assemblyPath`|指定程序集的路径，该程序集包含要导出的服务、协定或数据协定类型。 可以使用标准命令行通配符提供多个文件作为输入。|
 
-|选项|Description|
+|选项|描述|
 |------------|-----------------|
 |/serviceName:\<serviceConfigName>|指定要导出的服务的配置名称。 如果使用此选项，则必须传递包含关联配置文件的可执行程序集作为输入。 Svcutil.exe 将为服务配置搜索所有关联的配置文件。 如果配置文件包含任何扩展类型，则包含这些类型的程序集必须位于 GAC 中，或者必须使用 `/reference` 选项显式提供。|
 |/reference:\<文件路径 >|将指定程序集添加到用于解析类型引用的一组程序集中。 如果要导出或验证使用在配置中注册的第三方扩展（行为、绑定和绑定元素）的服务，请使用此选项找到不在 GAC 中的扩展程序集。<br /><br /> 缩写形式：`/r`|
@@ -136,11 +136,11 @@ Svcutil.exe 可以导出已编译程序集中服务、协定和数据类型的�
 
 `svcutil.exe /validate /serviceName:<serviceConfigName>  <assemblyPath>*`
 
-|参数|Description|
+|参数|描述|
 |--------------|-----------------|
 |`assemblyPath`|指定程序集的路径，该程序集包含要验证的服务类型。 程序集必须具有相关联的配置文件才能提供服务配置。 可以使用标准命令行通配符来提供多个程序集。|
 
-|选项|Description|
+|选项|描述|
 |------------|-----------------|
 |/validate|验证 `/serviceName` 选项指定的服务实现。 如果使用此选项，则必须传递包含关联配置文件的可执行程序集作为输入。<br /><br /> 缩写形式：`/v`|
 |/serviceName:\<serviceConfigName>|指定要验证的服务的配置名称。 Svcutil.exe 将为服务配置搜索所有输入程序集的所有关联配置文件。 如果配置文件包含任何扩展类型，则包含这些类型的程序集必须位于 GAC 中，或者必须使用 `/reference` 选项显式提供。|
@@ -164,7 +164,7 @@ Svcutil 会同时发出以下元数据请求以检索元数据。
 
 `svcutil.exe /t:metadata  <url>* | <epr>`
 
-|参数|Description|
+|参数|描述|
 |--------------|-----------------|
 |`url`|可提供元数据的服务终结点的 URL，或是联机承载的元数据文档的 URL。|
 |`epr`|XML 文件的路径，该文件包含支持 WS-Metadata Exchange 的服务终结点的 WS-Addressing EndpointReference。|
@@ -183,11 +183,11 @@ Svcutil.exe 可依据应用程序的已编译程序集生成必要的 C# 序列�
 
 `svcutil.exe /t:xmlSerializer  <assemblyPath>*`
 
-|参数|Description|
+|参数|描述|
 |--------------|-----------------|
 |`assemblyPath`|指定包含服务协定类型的程序集的路径。 为每个协定中的所有 Xml 可序列化类型生成序列化类型。|
 
-|选项|Description|
+|选项|描述|
 |------------|-----------------|
 |/reference:\<文件路径 >|将指定程序集添加到用于解析类型引用的一组程序集中。<br /><br /> 缩写形式：`/r`|
 |/excludeType:\<type>|指定要从导出或验证中排除的类型的完全限定或程序集限定名称。<br /><br /> 缩写形式：`/et`|

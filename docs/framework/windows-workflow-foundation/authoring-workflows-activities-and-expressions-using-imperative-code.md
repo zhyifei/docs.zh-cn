@@ -3,11 +3,11 @@ title: 使用命令性代码创作工作流、活动和表达式
 ms.date: 03/30/2017
 ms.assetid: cefc9cfc-2882-4eb9-8c94-7a6da957f2b2
 ms.openlocfilehash: a0566e01d5786c955562ef97d6d083d886278293
-ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
-ms.translationtype: HT
+ms.sourcegitcommit: dfb2a100cfb4d3902c042f17b3204f49bc7635e7
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/20/2018
-ms.locfileid: "46489141"
+ms.lasthandoff: 09/21/2018
+ms.locfileid: "46519521"
 ---
 # <a name="authoring-workflows-activities-and-expressions-using-imperative-code"></a>使用命令性代码创作工作流、活动和表达式
 工作流定义是已配置活动对象的树。 这种活动树有多种定义方法，包括手动编辑 XAML 或使用工作流设计器来生成 XAML。 但是，并非必须使用 XAML。 工作流定义也可以通过编程方式来创建。 本主题概述如何通过使用代码创建工作流定义、活动和表达式。 有关使用 XAML 工作流使用代码的示例，请参阅[序列化工作流和活动与 XAML](../../../docs/framework/windows-workflow-foundation/serializing-workflows-and-activities-to-and-from-xaml.md)。  

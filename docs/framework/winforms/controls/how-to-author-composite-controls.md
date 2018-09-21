@@ -8,11 +8,11 @@ helpviewer_keywords:
 - composite controls [Windows Forms], creating
 ms.assetid: 79c9cf05-5ab6-4a18-886d-88a64748b098
 ms.openlocfilehash: 7abdeae4d19ceb6425f85e3cdd28f565a03d7ea4
-ms.sourcegitcommit: f513a91160b3fec289dd06646d0d6f81f8fcf910
-ms.translationtype: MT
+ms.sourcegitcommit: dfb2a100cfb4d3902c042f17b3204f49bc7635e7
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46007422"
+ms.lasthandoff: 09/21/2018
+ms.locfileid: "46508244"
 ---
 # <a name="how-to-author-composite-controls"></a>如何：创作复合控件
 可通过多种方式使用复合控件。 可将其作为 Windows 桌面应用程序项目的一部分创作，并只在该项目的窗体上使用它们。 或者，可在 Windows 控件库项目中创作它们，将该项目编译为程序集，在其他项目中使用这些控件。 甚至可以从它们继承，并针对特殊目的使用视觉对象继承快速对它们进行自定义。  

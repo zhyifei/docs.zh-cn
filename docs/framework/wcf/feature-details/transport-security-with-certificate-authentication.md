@@ -7,11 +7,11 @@ ms.assetid: 3d726b71-4d8b-4581-a3bb-02b9af51d11b
 author: BrucePerlerMS
 manager: mbaldwin
 ms.openlocfilehash: 2da7a304af613920449e925e3bb43b350f556e6a
-ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
+ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/20/2018
-ms.locfileid: "46478365"
+ms.lasthandoff: 09/21/2018
+ms.locfileid: "46528913"
 ---
 # <a name="transport-security-with-certificate-authentication"></a>利用证书身份验证的传输安全
 本主题探讨使用传输安全性时如何使用 X.509 证书进行服务器和客户端身份验证。 有关 X.509 证书的详细信息，请参阅 [X.509 公钥证书](https://msdn.microsoft.com/library/bb540819\(VS.85\).aspx)。 证书必须由证书颁发，这通常是第三方证书颁发机构颁发。 在 Windows Server 域中，可以使用 Active Directory 证书服务向域中的客户端计算机颁发证书。 有关详细信息请参阅[Windows 2008 R2 证书服务](https://go.microsoft.com/fwlink/?LinkID=209949&clcid=0x409)。 在此方案中，该服务承载在使用安全套接字层 (SSL) 配置的 Internet Information Services (IIS) 之下。 该服务使用 SSL (X.509) 证书进行配置，以允许客户端验证服务器的身份。 客户端也使用 X.509 证书进行配置，以允许服务验证客户端的身份。 客户端必须信任服务器的证书，服务器也必须信任客户端的证书。 服务和客户端如何验证彼此身份的实际机制不在本主题讨论范围之内。 有关详细信息请参阅[Wikipedia 上的数字签名](https://go.microsoft.com/fwlink/?LinkId=253157)。  

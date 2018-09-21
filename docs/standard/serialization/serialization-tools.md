@@ -3,11 +3,11 @@ title: 序列化工具
 ms.date: 03/30/2017
 ms.assetid: 593b675f-938c-44ff-807b-0ca9fea30103
 ms.openlocfilehash: af0ed0df0e99245d3dacd31280574c36415d2a1e
-ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
+ms.sourcegitcommit: dfb2a100cfb4d3902c042f17b3204f49bc7635e7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/20/2018
-ms.locfileid: "46481814"
+ms.lasthandoff: 09/21/2018
+ms.locfileid: "46525615"
 ---
 # <a name="serialization-tools"></a>序列化工具
 本节包含有关序列化工具的详细信息。 您可以从命令行中运行所有工具。  
@@ -17,7 +17,7 @@ ms.locfileid: "46481814"
   
 ## <a name="in-this-section"></a>本节内容  
   
-|工具|Description|  
+|工具|描述|  
 |----------|-----------------|  
 |[XML 序列化程序生成器工具 (Sgen.exe)](../../../docs/standard/serialization/xml-serializer-generator-tool-sgen-exe.md)|为指定程序集中的类型创建一个 XML 序列化程序集，以改进 <xref:System.Xml.Serialization.XmlSerializer> 的运行时性能。|  
 |[XML 架构定义工具 (Xsd.exe)](../../../docs/standard/serialization/xml-schema-definition-tool-xsd-exe.md)|生成的 XML 架构应遵从万维网联合会 (W3C) 提出的 XSD 语言。 此工具利用 XSD 架构文件生成公共语言运行库类和 <xref:System.Data.DataSet> 类。|  

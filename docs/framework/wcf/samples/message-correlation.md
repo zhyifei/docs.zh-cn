@@ -3,11 +3,11 @@ title: 消息相关性
 ms.date: 03/30/2017
 ms.assetid: 3f62babd-c991-421f-bcd8-391655c82a1f
 ms.openlocfilehash: fd97f12f536da85619f300d36d02a10306f32aa5
-ms.sourcegitcommit: dfb2a100cfb4d3902c042f17b3204f49bc7635e7
+ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/20/2018
-ms.locfileid: "46493165"
+ms.lasthandoff: 09/21/2018
+ms.locfileid: "46529095"
 ---
 # <a name="message-correlation"></a>消息相关性
 此示例演示消息队列 (MSMQ) 应用程序如何可以将 MSMQ 消息发送到 Windows Communication Foundation (WCF) 服务以及如何消息也可以在请求/响应方案中的发送方和接收方应用程序之间关联起来。 此示例使用 msmqIntegrationBinding 绑定。 这种情况下的服务是自承载控制台应用程序，通过它可以观察接收排队消息的服务。 k  

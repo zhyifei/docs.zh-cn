@@ -7,11 +7,11 @@ helpviewer_keywords:
 - xmlSerializer element
 ms.assetid: d129d10c-3eb7-45d9-8098-5fa853825e47
 ms.openlocfilehash: 2770b82f71f3c4b43df4c44f75248e5392c528c2
-ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
+ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/20/2018
-ms.locfileid: "46472267"
+ms.lasthandoff: 09/21/2018
+ms.locfileid: "46531611"
 ---
 # <a name="ltxmlserializergt-element"></a>&lt;xmlSerializer&gt; 元素
 指定是否完成 <xref:System.Xml.Serialization.XmlSerializer> 进度的额外检查。  
@@ -30,7 +30,7 @@ ms.locfileid: "46472267"
   
 ### <a name="attributes"></a>特性  
   
-|特性|Description|  
+|特性|描述|  
 |---------------|-----------------|  
 |**checkDeserializeAdvances**|指定是否已检查 <xref:System.Xml.Serialization.XmlSerializer> 的进度。 将特性设置为“true”或“false”。 默认值为“true”。|  
 |**useLegacySerializationGeneration**|指定 <xref:System.Xml.Serialization.XmlSerializer> 是否使用旧的序列化生成，该方法通过将 C# 代码写入到一个文件，然后将其编译为程序集来生成程序集。 默认值为 false。|  
@@ -40,7 +40,7 @@ ms.locfileid: "46472267"
   
 ### <a name="parent-elements"></a>父元素  
   
-|元素|Description|  
+|元素|描述|  
 |-------------|-----------------|  
 |[\<system.xml.serialization> 元素](../../../docs/standard/serialization/system-xml-serialization-element.md)|包含 <xref:System.Xml.Serialization.XmlSerializer> 和 <xref:System.Xml.Serialization.XmlSchemaImporter> 类的配置设置。|  
   

@@ -3,11 +3,11 @@ title: 列表 (F#)
 description: '了解有关 F # 列表，相同类型的元素的有序的、 不可变序列。'
 ms.date: 05/16/2016
 ms.openlocfilehash: 60e7edb56bdf498e3ba51aff028d8564eb68d0f1
-ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
+ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46324235"
+ms.lasthandoff: 09/21/2018
+ms.locfileid: "46532777"
 ---
 # <a name="lists"></a>列表
 
