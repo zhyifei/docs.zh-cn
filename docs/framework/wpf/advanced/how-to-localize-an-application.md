@@ -9,12 +9,12 @@ helpviewer_keywords:
 - LocBaml tool [WPF]
 - applications [WPF], localizing
 ms.assetid: 5001227e-9326-48a4-9dcd-ba1b89ee6653
-ms.openlocfilehash: 7dcdaa0d101ce45ba24226e0aba81b812d5b88da
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 1190fb739e7c1873532e96b50399ac0deb6bb51c
+ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43518301"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46478581"
 ---
 # <a name="how-to-localize-an-application"></a>如何：对应用程序进行本地化
 本教程介绍如何通过使用 LocBaml 工具创建本地化应用程序。  
@@ -46,11 +46,11 @@ ms.locfileid: "43518301"
   
 3.  将 Uid 添加到你的 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 文件。 Uid 用于跟踪对文件的更改并标识必须翻译的项。 若要将 Uid 添加到你的文件，请运行**updateuid**上你的项目文件：  
   
-     **msbuild /t:updateuid helloapp.csproj**  
+     **msbuild t: updateuid helloapp.csproj**  
   
      若要验证没有缺少或重复的 Uid，请运行**checkuid**:  
   
-     **msbuild /t:checkuid helloapp.csproj**  
+     **msbuild t: checkuid helloapp.csproj**  
   
      运行之后**updateuid**，你的文件应包含 Uid。 例如，在 HelloApp 的 Pane1.xaml 文件中，你应能找到下列内容：  
   
