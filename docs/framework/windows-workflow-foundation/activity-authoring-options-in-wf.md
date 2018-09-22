@@ -3,11 +3,11 @@ title: WF 中的活动创作选项
 ms.date: 03/30/2017
 ms.assetid: b9061f5f-12c3-47f0-adbe-1330e2714c94
 ms.openlocfilehash: 219d759cd1390a83abfb90af509b21047085f6e9
-ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46529588"
+ms.lasthandoff: 09/22/2018
+ms.locfileid: "46697667"
 ---
 # <a name="activity-authoring-options-in-wf"></a>WF 中的活动创作选项
 [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)]提供了若干用于创建自定义活动的选项。 用于创作给定活动的正确方法取决于所需的运行时功能。  
