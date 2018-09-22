@@ -41,7 +41,7 @@ ms.locfileid: "44038739"
   
      你无法向 `List<Base>` 类型的变量分配 `List(Of Base)`（在 Visual Basic 中为 `List<Derived>`）的实例，反之亦然。  
   
- 利用协变类型参数，你可以执行非常类似于普通的[多形性](~/docs/csharp/programming-guide/classes-and-structs/polymorphism.md)的分配，如以下代码中所示。  
+ 利用协变类型参数，你可以执行非常类似于普通的[多态性](~/docs/csharp/programming-guide/classes-and-structs/polymorphism.md)的分配，如以下代码中所示。  
   
  [!code-csharp[CoContraSimpleIEnum#1](../../../samples/snippets/csharp/VS_Snippets_CLR/cocontrasimpleienum/cs/example.cs#1)]
  [!code-vb[CoContraSimpleIEnum#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/cocontrasimpleienum/vb/example.vb#1)]  
