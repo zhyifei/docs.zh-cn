@@ -2,17 +2,17 @@
 title: 源数据存储可编程性
 ms.date: 03/30/2017
 ms.assetid: 5b613661-f3f9-4e07-8e88-28c9ea2fd8f8
-ms.openlocfilehash: 4ea6117686b985a9ea18ce4e5cc4ea2b5c25524c
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 9f30fcdac131b8749a4d165875b9bbb584542843
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45998911"
+ms.lasthandoff: 09/22/2018
+ms.locfileid: "46583569"
 ---
 # <a name="metadata-store-programmability"></a>源数据存储可编程性
 元数据存储是一项 [!INCLUDE[wfd1](../../../../includes/wfd1-md.md)] 功能，可用于将任意元数据关联（以 CLR 特性的形式）运行时类型。 这可以实现运行时组件与其设计时对应项之间的松散耦合，并且可以实现在不影响运行时的情况下更改设计时组件。 此示例演示如何通过对运行时类型（我们无法控制的源）应用特性来针对元数据存储进行编程。 通常使用的术语是，主机应用程序为一组类型注册元数据。  
   
- 在输出中，你可能会发现其他、 意外的特性<!--zz <xref:System.Runtime.InteropServices.GUIDAttribute> --> `System.Runtime.InteropServices.GUIDAttribute`。 此特性是在使用元数据 API 时添加的，对示例的运行没有任何影响。  
+ 在输出中，您可能会注意到一个附加的、意外的特性 <xref:System.Runtime.InteropServices.GuidAttribute>。 此特性是在使用元数据 API 时添加的，对示例的运行没有任何影响。  
   
  此示例演示：  
   
@@ -22,7 +22,7 @@ ms.locfileid: "45998911"
   
 -   使用回调机制延迟元数据注册。  
   
-#### <a name="to-set-up-build-and-run-the-sample"></a>设置、生成和运行示例  
+## <a name="to-set-up-build-and-run-the-sample"></a>设置、生成和运行示例
   
 1.  使用 [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] 打开 ProgrammingMetadataStore.sln 解决方案文件。  
   

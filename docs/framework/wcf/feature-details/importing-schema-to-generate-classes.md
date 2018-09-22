@@ -9,11 +9,11 @@ helpviewer_keywords:
 - XsdDataContractImporter class
 ms.assetid: b9170583-8c34-43bd-97bb-6c0c8dddeee0
 ms.openlocfilehash: 0d18ee811763a1a3db6905bdbd18540ab5c97c05
-ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46539911"
+ms.lasthandoff: 09/22/2018
+ms.locfileid: "46577936"
 ---
 # <a name="importing-schema-to-generate-classes"></a>导入架构以生成类
 若要从使用 Windows Communication Foundation (WCF) 可用架构生成类，使用<xref:System.Runtime.Serialization.XsdDataContractImporter>类。 本主题描述该过程和变体。  

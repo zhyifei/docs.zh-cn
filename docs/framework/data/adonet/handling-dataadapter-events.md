@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 11515b25-ee49-4b1d-9294-a142147c1ec5
 ms.openlocfilehash: 3c2158e94f936dd2b28fe46310fd96df8dbc50fb
-ms.sourcegitcommit: dfb2a100cfb4d3902c042f17b3204f49bc7635e7
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46525547"
+ms.lasthandoff: 09/22/2018
+ms.locfileid: "46577290"
 ---
 # <a name="handling-dataadapter-events"></a>处理 DataAdapter 事件
 ADO.NET <xref:System.Data.Common.DataAdapter> 公开三个可用于响应数据源中数据更改的事件。 下表演示了 `DataAdapter` 事件。  

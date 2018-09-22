@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 53fd830cdefda58d40f96f8662a80d1888d963dc
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 2dbc6b5ffaa3a381bdd657059a682a3d12dc4cf1
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33449194"
+ms.lasthandoff: 09/22/2018
+ms.locfileid: "46584261"
 ---
 # <a name="imetadataemitdefinemethod-method"></a>IMetaDataEmit::DefineMethod 方法
-创建一个定义为方法或全局函数使用指定的签名，并将令牌返回到该方法定义。  
+使用指定的签名中，创建方法或全局函数的定义，并将令牌返回到该方法定义。  
   
 ## <a name="syntax"></a>语法  
   
@@ -44,16 +44,16 @@ HRESULT DefineMethod (
   
 #### <a name="parameters"></a>参数  
  `td`  
- [in]`mdTypedef`令牌的父类或父接口的方法。 设置`td`到`mdTokenNil`，如果你正在定义的全局函数。  
+ [in]`mdTypedef`父类或父接口的方法的令牌。 设置`td`到`mdTokenNil`，如果您要定义全局函数。  
   
  `szName`  
  [in]Unicode 中的成员名称。  
   
  `dwMethodFlags`  
- [in]值为[CorMethodAttr](../../../../docs/framework/unmanaged-api/metadata/cormethodattr-enumeration.md)指定方法或全局函数的特性的枚举。  
+ [in]值为[CorMethodAttr](../../../../docs/framework/unmanaged-api/metadata/cormethodattr-enumeration.md)枚举，用于指定方法或全局函数的属性。  
   
  `pvSigBlob`  
- [in]方法签名中。 作为提供，并会保持签名。 如果你需要指定任何参数的其他信息，使用[imetadataemit:: Setparamprops](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-setparamprops-method.md)方法。  
+ [in]方法签名中。 保存签名中提供。 如果您需要指定任何参数的其他信息，请使用[imetadataemit:: Setparamprops](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-setparamprops-method.md)方法。  
   
  `cbSigBlob`  
  [in]中的字节计数`pvSigBlob`。  
@@ -62,44 +62,44 @@ HRESULT DefineMethod (
  [in]代码的地址。  
   
  `dwImplFlags`  
- [in]值为[CorMethodImpl](../../../../docs/framework/unmanaged-api/metadata/cormethodimpl-enumeration.md)枚举，指定方法实现功能。  
+ [in]值为[CorMethodImpl](../../../../docs/framework/unmanaged-api/metadata/cormethodimpl-enumeration.md)枚举，用于指定该方法的实现功能。  
   
  `pmd`  
  [out]成员标记中。  
   
 ## <a name="remarks"></a>备注  
- 元数据 API 保证为给定的封闭类或接口，在中指定的调用方发出它们按保留相同的顺序中的方法`td`参数。  
+ 元数据 API 可保证按给定的封闭类或接口中指定的调用方发出这些方法的相同顺序保留`td`参数。  
   
- 有关使用的其他信息`DefineMethod`和特定的参数设置如下所示。  
+ 有关使用的其他信息`DefineMethod`和特定参数设置如下。  
   
 ## <a name="slots-in-the-v-table"></a>V-表中的槽  
- 运行时使用方法定义来设置 v-表槽。 在一个或多个槽需要已跳过，例如用于这种情况并保留有一个 COM 接口布局，奇偶校验 dummy 方法定义以占用槽或 v-表; 中的槽设置`dwMethodFlags`到`mdRTSpecialName`值[CorMethodAttr](../../../../docs/framework/unmanaged-api/metadata/cormethodattr-enumeration.md)枚举和将名称指定为：  
+ 运行时使用的方法定义以设置 v 表槽。 在一个或多个槽需要是已跳过、 此类情况下并保持与 COM 接口布局相同的虚拟方法定义为采用槽或 v-表; 中的槽设置`dwMethodFlags`到`mdRTSpecialName`的值[CorMethodAttr](../../../../docs/framework/unmanaged-api/metadata/cormethodattr-enumeration.md)枚举和名称指定为：  
   
- _VtblGap\<*SequenceNumber*>\<\_*槽数*>  
+ _VtblGap\<*SequenceNumber*>\<\_*槽数*>
   
- 其中*SequenceNumber*是方法的序列号和*槽数*是要跳过 v-表中的槽数。 如果*槽数*是省略，则假定为 1。 这些虚拟方法不是可从托管或非托管代码调用，并从托管或非托管代码中调用它们的任何尝试生成异常。 它们的唯一用途是将会占用空间运行时为 COM 集成生成 v-表中。  
+ 其中*SequenceNumber*是方法的序列号和*槽数*是要跳过 v 表中的槽数。 如果*槽数*是省略，则假定为 1。 这些虚拟方法不能从托管或非托管代码调用，任何尝试从托管或非托管代码中调用它们，将引发异常。 其唯一用途是占用空间为 COM 集成运行时生成的 v 表中。  
   
 ## <a name="duplicate-methods"></a>重复的方法  
- 不应定义重复的方法。 也就是说，不应调用`DefineMethod`重复的一组值中使用`td`， `wzName`，和`pvSig`参数。 (这三个参数组合在一起唯一定义的方法。)。 但是，可以使用重复三元组，前提是，对于一种方法定义中，你设置`mdPrivateScope`中位`dwMethodFlags`参数。 (`mdPrivateScope`位意味着编译器将发出对此方法定义的引用。)  
+ 不应定义重复的方法。 也就是说，不应调用`DefineMethod`中的值重复一`td`， `wzName`，和`pvSig`参数。 (这三个参数组合在一起唯一地定义的方法。)。 但是，可以使用重复三次，前提是，对于其中一个方法定义，您将设置`mdPrivateScope`位`dwMethodFlags`参数。 (`mdPrivateScope`位意味着编译器将发出对此方法定义的引用。)  
   
-## <a name="method-implementation-information"></a>方法的实现信息  
- 在声明的方法时通常不知道有关方法的实现的信息。 因此，不需要传递中的值`ulCodeRVA`和`dwImplFlags`参数调用时`DefineMethod`。 可以通过更高版本提供值[imetadataemit:: Setmethodimplflags](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-setmethodimplflags-method.md)或[imetadataemit:: Setrva](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-setrva-method.md)适当。  
+## <a name="method-implementation-information"></a>方法的实施信息  
+ 声明的方法时通常不知道有关方法实现的信息。 因此，不需要传递中的值`ulCodeRVA`并`dwImplFlags`参数调用时`DefineMethod`。 可以通过更高版本提供的值[imetadataemit:: Setmethodimplflags](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-setmethodimplflags-method.md)或[imetadataemit:: Setrva](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-setrva-method.md)根据。  
   
- 在某些情况下，如平台调用 (PInvoke) 或 COM 互操作方案中，未将提供方法体，和`ulCodeRVA`应设置为零。 在这些情况下，该方法不应被标记为抽象，因为运行时将查找其实现。  
+ 在某些情况下，如平台调用 (PInvoke) 或 COM 互操作方案中，未将提供方法正文，和`ulCodeRVA`应设置为零。 在这些情况下，该方法不应将标记为抽象，因为运行时将查找其实现。  
   
-## <a name="defining-a-method-for-pinvoke"></a>为 PInvoke 定义方法  
- 对于每个要通过 PInvoke 调用的非托管函数，必须定义表示目标的非托管函数的托管的方法。 若要定义的托管的方法，使用`DefineMethod`一些设置为特定值，具体取决于在其中使用 PInvoke 的方法的参数：  
+## <a name="defining-a-method-for-pinvoke"></a>定义一个方法的 PInvoke  
+ 若要通过 PInvoke 调用每个非托管函数，必须定义表示目标的非托管函数的托管的方法。 若要定义的托管的方法，请使用`DefineMethod`某些设置为特定值，具体取决于 PInvoke 的使用方式的参数：  
   
--   True PInvoke-涉及驻留在非托管 DLL 的外部的非托管方法的调用。  
+-   True PInvoke-涉及到驻留在非托管 DLL 的外部的非托管方法的调用。  
   
--   本地 PInvoke — 涉及在当前的托管模块中嵌入的本机非托管方法的调用。  
+-   本地 PInvoke-涉及到在当前托管模块中嵌入本机非托管方法的调用。  
   
  下表中提供的参数设置。  
   
-|参数|值 true PInvoke|本地 PInvoke 值|  
+|参数|值为 true 的 PInvoke 的|值为本地 PInvoke 的|  
 |---------------|-----------------------------|------------------------------|  
 |`dwMethodFlags`||设置`mdStatic`; 清除`mdSynchronized`和`mdAbstract`。|  
-|`pvSigBlob`|一个有效的公共语言运行时 (CLR) 方法签名，其参数属于有效的托管类型。|一个有效的 CLR 方法签名，其有效的参数的托管类型。|  
+|`pvSigBlob`|一个有效的公共语言运行时 (CLR) 方法签名，使用有效的参数将托管类型。|使用有效的参数有效的 CLR 方法签名的托管类型。|  
 |`ulCodeRVA`||0|  
 |`dwImplFlags`|设置`miCil`和`miManaged`。|设置`miNative`和`miUnmanaged`。|  
   
@@ -110,7 +110,7 @@ HRESULT DefineMethod (
   
  **库：** 用作 MSCorEE.dll 中的资源  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅  
  [IMetaDataEmit Interface](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)  

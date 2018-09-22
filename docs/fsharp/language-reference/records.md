@@ -3,11 +3,11 @@ title: 记录 (F#)
 description: '了解如何对 F # 记录表示已命名的值，可选择包含成员的简单聚合。'
 ms.date: 05/16/2016
 ms.openlocfilehash: 6103d96b6b80a9e2ed168755958dbe800f7fa862
-ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46537535"
+ms.lasthandoff: 09/22/2018
+ms.locfileid: "46576913"
 ---
 # <a name="records"></a>记录
 

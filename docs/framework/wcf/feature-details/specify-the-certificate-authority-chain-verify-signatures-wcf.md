@@ -6,11 +6,11 @@ helpviewer_keywords:
 - certificates [WCF], verifying signatures
 ms.assetid: 7c719355-aa41-4567-80d0-5115a8cf73fd
 ms.openlocfilehash: 9e2ba9f3550442602cab217fec329e6c19efd3b3
-ms.sourcegitcommit: dfb2a100cfb4d3902c042f17b3204f49bc7635e7
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46526167"
+ms.lasthandoff: 09/22/2018
+ms.locfileid: "46585360"
 ---
 # <a name="how-to-specify-the-certificate-authority-certificate-chain-used-to-verify-signatures-wcf"></a>如何：指定用于验证签名的证书颁发机构证书链 (WCF)
 当 Windows Communication Foundation (WCF) 收到使用 X.509 证书签名的 SOAP 消息时，默认情况下它将验证 X.509 证书已颁发由受信任的证书颁发机构。 通过搜索证书存储区并确定是否已将该证书颁发机构的证书指定为受信任的证书，可以做到这一点。 为了使 WCF 能够做出此判断，必须在正确的证书存储区中安装证书颁发机构证书链。  

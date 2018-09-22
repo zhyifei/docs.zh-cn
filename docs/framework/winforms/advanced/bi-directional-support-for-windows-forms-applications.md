@@ -10,11 +10,11 @@ helpviewer_keywords:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: b4c572e518c84dfb230ff26049369011d8d7aa70
-ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46529867"
+ms.lasthandoff: 09/22/2018
+ms.locfileid: "46577804"
 ---
 # <a name="bi-directional-support-for-windows-forms-applications"></a>Windows 窗体应用程序的双向支持
 Visual Studio 可用于创建基于 Windows 的应用程序支持阿拉伯语和希伯来语等双向 （右到左） 语言。 这包括标准窗体、对话框、MDI 窗体以及可在这些窗体中使用的所有控件 — 即，<xref:System.Windows.Forms.Control> 命名空间中的所有对象。  

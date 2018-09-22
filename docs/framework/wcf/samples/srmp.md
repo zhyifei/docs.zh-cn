@@ -3,11 +3,11 @@ title: SRMP
 ms.date: 03/30/2017
 ms.assetid: cf37078c-dcb4-45e0-acaf-2f196521b226
 ms.openlocfilehash: 62075cccfa8ff2c6a181d633756a5f9bc8969932
-ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46529254"
+ms.lasthandoff: 09/22/2018
+ms.locfileid: "46581306"
 ---
 # <a name="srmp"></a>SRMP
 本示例演示如何使用 HTTP 上的消息队列 (MSMQ) 来执行事务处理排队通信。  

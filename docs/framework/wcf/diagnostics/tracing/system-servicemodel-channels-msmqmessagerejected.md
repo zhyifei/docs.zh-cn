@@ -3,16 +3,16 @@ title: System.ServiceModel.Channels.MsmqMessageRejected
 ms.date: 03/30/2017
 ms.assetid: 9b7c10a7-2af6-44a2-8b1a-90bba0c7cf26
 ms.openlocfilehash: 0addf987eac62c750a3c418e1b1c431d3f9bc1b0
-ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/20/2018
-ms.locfileid: "46484943"
+ms.lasthandoff: 09/22/2018
+ms.locfileid: "46586631"
 ---
 # <a name="systemservicemodelchannelsmsmqmessagerejected"></a>System.ServiceModel.Channels.MsmqMessageRejected
 MSMQ 已拒绝该消息。  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>描述  
  此跟踪指示已拒绝 MSMQ 消息。  
   
  当 Windows Communication Foundation (WCF) （与 NetMsmqBinding 或 MsmqIntegrationBinding 一起使用） 无法处理它们时，可以拒绝 MSMQ 消息。 这些消息称为病毒消息。 当 NetMsmqBinding 或 MsmqIntegrationBinding 上的 `ReceiveErrorHandling` 属性设置为 `Reject` 时，将拒绝病毒消息。 将被拒绝的消息传递回发件人[死信队列](https://go.microsoft.com/fwlink/?LinkID=99544)。  

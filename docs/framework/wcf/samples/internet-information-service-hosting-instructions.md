@@ -3,11 +3,11 @@ title: Internet 信息服务承载说明
 ms.date: 03/30/2017
 ms.assetid: 959a21c8-9d9d-4757-b255-4e57793ae9d6
 ms.openlocfilehash: 303fe47df987901b09cee8cc4292f12bcda2b74d
-ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/20/2018
-ms.locfileid: "46480690"
+ms.lasthandoff: 09/22/2018
+ms.locfileid: "46577673"
 ---
 # <a name="internet-information-service-hosting-instructions"></a>Internet 信息服务承载说明
 若要运行由 Internet 信息服务 (IIS) 承载的示例，必须确保 IIS 已正确安装且正在运行。  
@@ -68,7 +68,7 @@ ms.locfileid: "46480690"
   
 15. 下**Internet 信息服务**目录中，展开项标记为**Microsoft.NET Framework 3.5.1**，然后选择**Windows Communication Foundation Http 激活**.  
   
-16. 单击“确定” 。  
+16. 单击 **“确定”**。  
   
 ### <a name="to-install-iis-version-70-on-windows-server-2008"></a>在 Windows Server 2008 上安装 IIS 7.0 版  
   
@@ -126,7 +126,7 @@ ms.locfileid: "46480690"
   
 15. 展开项标记为**Microsoft.NET Framework 3.0**，然后选择**Windows Communication Foundation Http 激活**。  
   
-16. 单击“确定” 。  
+16. 单击 **“确定”**。  
   
 ### <a name="to-install-iis-version-60-on-windows-server-2003"></a>在 Windows Server 2003 上安装 IIS 6.0 版  
   

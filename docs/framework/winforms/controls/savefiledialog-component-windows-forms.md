@@ -6,11 +6,11 @@ helpviewer_keywords:
 - SaveFileDialog component
 ms.assetid: 6f5d9321-37d7-4448-ac4c-a33c42b2a766
 ms.openlocfilehash: e402f9835f3ca03ac0632d7202000fa3208ed6e3
-ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46529160"
+ms.lasthandoff: 09/22/2018
+ms.locfileid: "46579730"
 ---
 # <a name="savefiledialog-component-windows-forms"></a>SaveFileDialog 组件（Windows 窗体）
 Windows 窗体 <xref:System.Windows.Forms.SaveFileDialog> 组件是一个预配置的对话框。 它与 Windows 使用的标准保存文件对话框相同。 它继承自 <xref:System.Windows.Forms.CommonDialog> 类。  

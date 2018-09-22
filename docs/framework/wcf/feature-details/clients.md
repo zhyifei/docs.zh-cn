@@ -3,11 +3,11 @@ title: 客户端
 ms.date: 03/30/2017
 ms.assetid: cce50025-0318-4a5e-9ce8-c67feab83b06
 ms.openlocfilehash: 844412b211fe6187e3475fc71b9c3ccca8dd178f
-ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/20/2018
-ms.locfileid: "46480273"
+ms.lasthandoff: 09/22/2018
+ms.locfileid: "46580715"
 ---
 # <a name="clients"></a>客户端
 在本部分中的主题介绍客户端体系结构，如何访问 Windows Communication Foundation (WCF) 服务、 如何配置 WCF 客户端和 WCF 客户端的一些安全注意事项。  
