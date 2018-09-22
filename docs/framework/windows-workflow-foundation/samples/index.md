@@ -2,31 +2,34 @@
 title: Windows 工作流 (WF) 示例
 ms.date: 03/30/2017
 ms.assetid: e0aef017-4381-4f2f-a904-6e1ed898687e
-ms.openlocfilehash: e9b511606c6278e7d2b2fb1bc3cbd9c38b51b000
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: b6f614bd8543070ee69636344376b058988c2306
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45698414"
+ms.lasthandoff: 09/22/2018
+ms.locfileid: "46580611"
 ---
-# <a name="windows-workflow-wf-samples"></a><span data-ttu-id="e667d-102">Windows 工作流 (WF) 示例</span><span class="sxs-lookup"><span data-stu-id="e667d-102">Windows Workflow (WF) Samples</span></span>
-<span data-ttu-id="e667d-103">这些示例对各个方面的 Windows Workflow Foundation (WF) 提供指导。</span><span class="sxs-lookup"><span data-stu-id="e667d-103">These samples provide instruction on various aspects of Windows Workflow Foundation (WF).</span></span>  
-  
-<span data-ttu-id="e667d-104">可以从 [Microsoft 下载中心](https://go.microsoft.com/fwlink/?LinkId=150780)下载示例。</span><span class="sxs-lookup"><span data-stu-id="e667d-104">The samples can be downloaded from the [Microsoft Download Center](https://go.microsoft.com/fwlink/?LinkId=150780).</span></span>  
-  
+# <a name="windows-workflow-wf-samples"></a><span data-ttu-id="a6eb1-102">Windows 工作流 (WF) 示例</span><span class="sxs-lookup"><span data-stu-id="a6eb1-102">Windows Workflow (WF) Samples</span></span>
+
+<span data-ttu-id="a6eb1-103">这些示例对各个方面的 Windows Workflow Foundation (WF) 提供指导。</span><span class="sxs-lookup"><span data-stu-id="a6eb1-103">These samples provide instruction on various aspects of Windows Workflow Foundation (WF).</span></span>
+
+<span data-ttu-id="a6eb1-104">可以从 [Microsoft 下载中心](https://go.microsoft.com/fwlink/?LinkId=150780)下载示例。</span><span class="sxs-lookup"><span data-stu-id="a6eb1-104">The samples can be downloaded from the [Microsoft Download Center](https://go.microsoft.com/fwlink/?LinkId=150780).</span></span>
+
 > [!NOTE]
->  <span data-ttu-id="e667d-105">这些示例是使用 [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] 和 [!INCLUDE[netfx40_short](../../../../includes/netfx40-short-md.md)] 创建的，但与 [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] 和 [!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)] 兼容。</span><span class="sxs-lookup"><span data-stu-id="e667d-105">These samples were created with [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] and [!INCLUDE[netfx40_short](../../../../includes/netfx40-short-md.md)], but are compatible with [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] and [!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)].</span></span> <span data-ttu-id="e667d-106">Windows Workflow Foundation 中的其他示例[!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)]上可以找到[代码 MSDN](https://aka.ms/WF45Samples)。</span><span class="sxs-lookup"><span data-stu-id="e667d-106">Additional samples for Windows Workflow Foundation in [!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)] can be found on [Code MSDN](https://aka.ms/WF45Samples).</span></span>
-  
-## <a name="in-this-section"></a><span data-ttu-id="e667d-107">本节内容</span><span class="sxs-lookup"><span data-stu-id="e667d-107">In this section</span></span>  
- [<span data-ttu-id="e667d-108">应用程序</span><span class="sxs-lookup"><span data-stu-id="e667d-108">Application</span></span>](../../../../docs/framework/windows-workflow-foundation/samples/application.md)  
- <span data-ttu-id="e667d-109">提供与工作流应用程序相关的示例。</span><span class="sxs-lookup"><span data-stu-id="e667d-109">Provides samples that are related to workflow applications.</span></span>  
-  
- [<span data-ttu-id="e667d-110">基本</span><span class="sxs-lookup"><span data-stu-id="e667d-110">Basic</span></span>](../../../../docs/framework/windows-workflow-foundation/samples/basic.md)  
- <span data-ttu-id="e667d-111">提供演示基本的 Windows Workflow Foundation (WF) 功能的示例。</span><span class="sxs-lookup"><span data-stu-id="e667d-111">Provides samples that demonstrate basic Windows Workflow Foundation (WF) functionality.</span></span>  
-  
- [<span data-ttu-id="e667d-112">方案</span><span class="sxs-lookup"><span data-stu-id="e667d-112">Scenario</span></span>](../../../../docs/framework/windows-workflow-foundation/samples/scenario.md)  
- <span data-ttu-id="e667d-113">提供了 Windows Workflow Foundation (WF) 方案的示例。</span><span class="sxs-lookup"><span data-stu-id="e667d-113">Provides examples of Windows Workflow Foundation (WF) scenarios.</span></span>  
-  
- <span data-ttu-id="e667d-114">本节中包含的示例利用 C# 3.0 中的新功能。</span><span class="sxs-lookup"><span data-stu-id="e667d-114">The samples contained in this section make use of new features in C# 3.0.</span></span> <span data-ttu-id="e667d-115">有关可能不熟悉的 C# 3.0 新功能的详细信息，请参阅 [C# 3.0 概述](https://go.microsoft.com/fwlink/?LinkId=193972)。</span><span class="sxs-lookup"><span data-stu-id="e667d-115">For details on some new features of C# 3.0 that may be unfamiliar, please see the [C# 3.0 Overview](https://go.microsoft.com/fwlink/?LinkId=193972).</span></span>  
-  
- <span data-ttu-id="e667d-116">可以从 [Microsoft 下载中心](https://go.microsoft.com/fwlink/?LinkId=150780)下载示例。</span><span class="sxs-lookup"><span data-stu-id="e667d-116">The samples can be downloaded from the [Microsoft Download Center](https://go.microsoft.com/fwlink/?LinkId=150780).</span></span>
+> <span data-ttu-id="a6eb1-105">这些示例使用 Visual Studio 2010 创建和[!INCLUDE[netfx40_short](../../../../includes/netfx40-short-md.md)]，但与更高版本的 Visual Studio 和.NET Framework 兼容。</span><span class="sxs-lookup"><span data-stu-id="a6eb1-105">These samples were created with Visual Studio 2010 and [!INCLUDE[netfx40_short](../../../../includes/netfx40-short-md.md)], but are compatible with later versions of Visual Studio and the .NET Framework.</span></span> <span data-ttu-id="a6eb1-106">Windows Workflow Foundation 中的其他示例[!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)]上可以找到[MSDN 代码示例](https://aka.ms/WF45Samples)。</span><span class="sxs-lookup"><span data-stu-id="a6eb1-106">Additional samples for Windows Workflow Foundation in [!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)] can be found on [MSDN code samples](https://aka.ms/WF45Samples).</span></span>
+
+## <a name="in-this-section"></a><span data-ttu-id="a6eb1-107">本节内容</span><span class="sxs-lookup"><span data-stu-id="a6eb1-107">In this section</span></span>
+
+[<span data-ttu-id="a6eb1-108">应用程序</span><span class="sxs-lookup"><span data-stu-id="a6eb1-108">Application</span></span>](../../../../docs/framework/windows-workflow-foundation/samples/application.md)
+
+<span data-ttu-id="a6eb1-109">提供与工作流应用程序相关的示例。</span><span class="sxs-lookup"><span data-stu-id="a6eb1-109">Provides samples that are related to workflow applications.</span></span>
+
+[<span data-ttu-id="a6eb1-110">基本</span><span class="sxs-lookup"><span data-stu-id="a6eb1-110">Basic</span></span>](../../../../docs/framework/windows-workflow-foundation/samples/basic.md)
+
+<span data-ttu-id="a6eb1-111">提供演示基本的 Windows Workflow Foundation (WF) 功能的示例。</span><span class="sxs-lookup"><span data-stu-id="a6eb1-111">Provides samples that demonstrate basic Windows Workflow Foundation (WF) functionality.</span></span>
+
+[<span data-ttu-id="a6eb1-112">方案</span><span class="sxs-lookup"><span data-stu-id="a6eb1-112">Scenario</span></span>](../../../../docs/framework/windows-workflow-foundation/samples/scenario.md)
+
+<span data-ttu-id="a6eb1-113">提供了 Windows Workflow Foundation (WF) 方案的示例。</span><span class="sxs-lookup"><span data-stu-id="a6eb1-113">Provides examples of Windows Workflow Foundation (WF) scenarios.</span></span>
+
+<span data-ttu-id="a6eb1-114">可以从 [Microsoft 下载中心](https://go.microsoft.com/fwlink/?LinkId=150780)下载示例。</span><span class="sxs-lookup"><span data-stu-id="a6eb1-114">The samples can be downloaded from the [Microsoft Download Center](https://go.microsoft.com/fwlink/?LinkId=150780).</span></span>
