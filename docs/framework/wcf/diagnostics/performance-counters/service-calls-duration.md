@@ -3,17 +3,17 @@ title: 服务： 调用持续时间
 ms.date: 03/30/2017
 ms.assetid: dfe42a97-daf8-42c3-ba34-4bb8230cdebb
 ms.openlocfilehash: 660a36844c2b48324447616aa0f2530127cef94f
-ms.sourcegitcommit: dfb2a100cfb4d3902c042f17b3204f49bc7635e7
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46516504"
+ms.lasthandoff: 09/22/2018
+ms.locfileid: "46698050"
 ---
-# <a name="service-calls-duration"></a><span data-ttu-id="80e51-102">服务： 调用持续时间</span><span class="sxs-lookup"><span data-stu-id="80e51-102">Service: Calls Duration</span></span>
-<span data-ttu-id="80e51-103">计数器名称： 调用持续时间</span><span class="sxs-lookup"><span data-stu-id="80e51-103">Counter Name: Calls Duration</span></span>  
+# <a name="service-calls-duration"></a><span data-ttu-id="771fc-102">服务： 调用持续时间</span><span class="sxs-lookup"><span data-stu-id="771fc-102">Service: Calls Duration</span></span>
+<span data-ttu-id="771fc-103">计数器名称： 调用持续时间</span><span class="sxs-lookup"><span data-stu-id="771fc-103">Counter Name: Calls Duration</span></span>  
   
-## <a name="description"></a><span data-ttu-id="80e51-104">描述</span><span class="sxs-lookup"><span data-stu-id="80e51-104">Description</span></span>  
- <span data-ttu-id="80e51-105">调用此服务的平均持续时间。</span><span class="sxs-lookup"><span data-stu-id="80e51-105">The average duration of calls to this service.</span></span> <span data-ttu-id="80e51-106">平均持续时间根据此公式计算：(N1-N0)/(D1-D0)。</span><span class="sxs-lookup"><span data-stu-id="80e51-106">The average duration is calculated based on this equation: (N1-N0)/(D1-D0).</span></span>  
+## <a name="description"></a><span data-ttu-id="771fc-104">描述</span><span class="sxs-lookup"><span data-stu-id="771fc-104">Description</span></span>  
+ <span data-ttu-id="771fc-105">调用此服务的平均持续时间。</span><span class="sxs-lookup"><span data-stu-id="771fc-105">The average duration of calls to this service.</span></span> <span data-ttu-id="771fc-106">平均持续时间根据此公式计算：(N1-N0)/(D1-D0)。</span><span class="sxs-lookup"><span data-stu-id="771fc-106">The average duration is calculated based on this equation: (N1-N0)/(D1-D0).</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="80e51-107">请参阅</span><span class="sxs-lookup"><span data-stu-id="80e51-107">See Also</span></span>  
- [<span data-ttu-id="80e51-108">PERF_AVERAGE_TIMER</span><span class="sxs-lookup"><span data-stu-id="80e51-108">PERF_AVERAGE_TIMER</span></span>](https://go.microsoft.com/fwlink/?LinkID=95015)
+## <a name="see-also"></a><span data-ttu-id="771fc-107">请参阅</span><span class="sxs-lookup"><span data-stu-id="771fc-107">See Also</span></span>  
+ [<span data-ttu-id="771fc-108">PERF_AVERAGE_TIMER</span><span class="sxs-lookup"><span data-stu-id="771fc-108">PERF_AVERAGE_TIMER</span></span>](https://go.microsoft.com/fwlink/?LinkID=95015)
