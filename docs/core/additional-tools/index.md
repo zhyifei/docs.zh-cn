@@ -5,16 +5,16 @@ author: mlacouture
 ms.author: johalex
 ms.date: 01/19/2018
 ms.custom: mvc
-ms.openlocfilehash: ba63ef6cdc092d06e267637112070e7cd5133a45
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: c64dddbe36b789a695c2603e78b29b38d8718f95
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43511749"
+ms.lasthandoff: 09/22/2018
+ms.locfileid: "46586878"
 ---
 # <a name="net-core-additional-tools"></a>其他 .NET Core 工具
 
-本节除了 [.NET Core 命令行接口 (CLI)](..\tools\index.md) 工具外，还编译了可支持和扩展 .NET Core 功能的工具列表。
+本节除了 [.NET Core 命令行接口 (CLI)](../tools/index.md) 工具外，还编译了可支持和扩展 .NET Core 功能的工具列表。
 
 ## <a name="wcf-web-service-reference-toolwcf-web-service-reference-guidemd"></a>[WCF Web 服务引用工具](wcf-web-service-reference-guide.md)
 

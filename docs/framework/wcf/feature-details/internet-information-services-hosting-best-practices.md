@@ -3,11 +3,11 @@ title: Internet 信息服务承载最佳实践
 ms.date: 03/30/2017
 ms.assetid: 0834768e-9665-46bf-86eb-d4b09ab91af5
 ms.openlocfilehash: 0ca5e20b846a1b10f5a52748ff06a4af958b2f4c
-ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46540458"
+ms.lasthandoff: 09/23/2018
+ms.locfileid: "46703497"
 ---
 # <a name="internet-information-services-hosting-best-practices"></a>Internet 信息服务承载最佳实践
 本主题概述了用于承载 Windows Communication Foundation (WCF) 服务的一些最佳做法。  
