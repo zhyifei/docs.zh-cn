@@ -4,12 +4,12 @@ description: 了解如何从源代码生成 .NET Core 和 .NET Core CLI。
 author: bleroy
 ms.author: mairaw
 ms.date: 06/28/2017
-ms.openlocfilehash: 2623c5d21121b71960d174301c35bdd0d7f8558a
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: fa9c193ea4088f04745bdadc6040552e18c0858a
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45618514"
+ms.lasthandoff: 09/22/2018
+ms.locfileid: "46577498"
 ---
 # <a name="build-net-core-from-source"></a>从源生成 .NET Core
 
@@ -93,7 +93,7 @@ bin\Log 目录包含生成期间生成的日志文件（生成失败时这些日
   * Xcode
   * Openssl
 
-若要进行生成，请在 Windows 上从根运行 `build.cmd`，在 Linux 和 macOS 上从根运行 `build.sh`。 如果不希望执行测试，请运行 `build.cmd /t:Compile` 或 `./build.sh /t:Compile`。 若要在 macOS Sierra 中生成 CLI，需通过运行 `export DOTNET_RUNTIME_ID=osx.10.11-x64` 设置 DOTNET_RUNTIME_ID 环境变量。
+若要进行生成，请在 Windows 上从根运行 `build.cmd`，在 Linux 和 macOS 上从根运行 `build.sh`。 如果不希望执行测试，请运行 `build.cmd -t:Compile` 或 `./build.sh -t:Compile`。 若要在 macOS Sierra 中生成 CLI，需通过运行 `export DOTNET_RUNTIME_ID=osx.10.11-x64` 设置 DOTNET_RUNTIME_ID 环境变量。
 
 ### <a name="using-your-build"></a>使用生成
 

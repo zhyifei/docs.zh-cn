@@ -3,11 +3,11 @@ title: '&lt;soapProcessing&gt;'
 ms.date: 03/30/2017
 ms.assetid: e8707027-e6b8-4539-893d-3cd7c13fbc18
 ms.openlocfilehash: 296993f1a91a6da93f01610357f35dac4cfab9e6
-ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/20/2018
-ms.locfileid: "46485280"
+ms.lasthandoff: 09/22/2018
+ms.locfileid: "46577717"
 ---
 # <a name="ltsoapprocessinggt"></a>&lt;soapProcessing&gt;
 
@@ -31,7 +31,7 @@ ms.locfileid: "46485280"
 
 ### <a name="attributes"></a>特性
 
-|                   | Description |
+|                   | 描述 |
 | ----------------- | ----------- |
 | `processMessages` | 一个布尔值，指定是否应封送 SOAP 消息版本之间的消息。 |
 
@@ -41,7 +41,7 @@ ms.locfileid: "46485280"
 
 ### <a name="parent-elements"></a>父元素
 
-|     | Description |
+|     | 描述 |
 | --- | ----------- |
 | [**\<行为 >**](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md) | 指定终结点行为。 |
 
