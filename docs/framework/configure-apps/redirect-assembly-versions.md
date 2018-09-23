@@ -12,11 +12,11 @@ author: mcleblanc
 ms.author: markl
 manager: markl
 ms.openlocfilehash: 060f2bfdc39e7fe4ab0a28a4aecec87db89d3428
-ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46537849"
+ms.lasthandoff: 09/23/2018
+ms.locfileid: "46705648"
 ---
 # <a name="redirecting-assembly-versions"></a>重定向程序集版本
 
@@ -122,7 +122,7 @@ ms.locfileid: "46537849"
 ```
 
 ### <a name="limiting-assembly--bindings-to-a-specific-version"></a>限制到特定版本的程序集绑定
- 可以使用**appliesTo**特性，可以在[ \<assemblyBinding >](../../../docs/framework/configure-apps/file-schema/runtime/assemblybinding-element-for-runtime.md)到特定版本的.NET 程序集绑定引用重定向的应用程序配置文件中的元素框架。 此可选特性用 .NET Framework 版本号来指示其适用的版本。 如果没有指定 appliesTo 特性，\<assemblyBinding> 元素将适用于 .NET Framework 的所有版本[](../../../docs/framework/configure-apps/file-schema/runtime/assemblybinding-element-for-runtime.md)。
+ 可以使用**appliesTo**特性，可以在[ \<assemblyBinding >](../../../docs/framework/configure-apps/file-schema/runtime/assemblybinding-element-for-runtime.md)到特定版本的.NET 程序集绑定引用重定向的应用程序配置文件中的元素框架。 此可选特性用 .NET Framework 版本号来指示其适用的版本。 如果没有指定 **appliesTo** 特性，[\<assemblyBinding>](../../../docs/framework/configure-apps/file-schema/runtime/assemblybinding-element-for-runtime.md) 元素将适用于 .NET Framework 的所有版本。
 
  例如，若要重定向 .NET Framework 3.5 程序集的程序集绑定，应在你的应用配置文件中包括以下 XML 代码。
 

@@ -3,11 +3,11 @@ title: '@ServiceHost'
 ms.date: 03/30/2017
 ms.assetid: 96ba6967-00f2-422f-9aa7-15de4d33ebf3
 ms.openlocfilehash: 730b1188a95d0e35d7431d43884e867e5520585e
-ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/22/2018
-ms.locfileid: "46568483"
+ms.lasthandoff: 09/23/2018
+ms.locfileid: "46703390"
 ---
 # <a name="servicehost"></a>\@ServiceHost
 将用于生成服务主机的工厂与要承载的服务以及访问或编译 .svc 文件中提供的主机代码所需的其他编程方面相关联。  

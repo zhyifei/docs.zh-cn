@@ -11,11 +11,11 @@ helpviewer_keywords:
 - templates [WPF]
 ms.assetid: c19049bb-5ceb-492d-afd2-751dca0ed8e3
 ms.openlocfilehash: 58d65ee9842270b07a76ff438c975955689197e9
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45592827"
+ms.lasthandoff: 09/23/2018
+ms.locfileid: "46706575"
 ---
 # <a name="control-styles-and-templates"></a>Control 样式和模板
 Windows Presentation Foundation (WPF) 中的控件具有<xref:System.Windows.Controls.ControlTemplate>，其中包含该控件的可视化树。 可以通过修改更改结构和控件的外观<xref:System.Windows.Controls.ControlTemplate>该控件。 无法替换可视化树的控件，则只有部分若要更改必须设置一个控件的可视化树<xref:System.Windows.Controls.Control.Template%2A>为新的完整控件属性<xref:System.Windows.Controls.ControlTemplate>。  

@@ -11,11 +11,11 @@ ms.assetid: bc177b2f-7528-4ae4-83db-aacfb04b86d0
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 51cc5296a7b3f6d75b5e56d6bbc74330fa147848
-ms.sourcegitcommit: dfb2a100cfb4d3902c042f17b3204f49bc7635e7
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46517940"
+ms.lasthandoff: 09/23/2018
+ms.locfileid: "46703734"
 ---
 # <a name="design-guidelines-for-exceptions"></a>异常设计准则
 异常处理有很多优于基于返回值的错误报告。 良好的框架设计可帮助应用程序开发人员的好处的异常。 本部分讨论其优势的异常，并提供了有效地使用它们的准则。  

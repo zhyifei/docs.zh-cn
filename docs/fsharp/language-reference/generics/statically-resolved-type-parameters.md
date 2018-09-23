@@ -3,11 +3,11 @@ title: 静态解析的类型参数 (F#)
 description: '了解如何使用 F # 静态解析的类型参数，它将被替换为实际类型在编译时而不是在运行时。'
 ms.date: 05/16/2016
 ms.openlocfilehash: 747917fef2746dcbf363ef4b717ace5e47229800
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45973165"
+ms.lasthandoff: 09/23/2018
+ms.locfileid: "46706406"
 ---
 # <a name="statically-resolved-type-parameters"></a>静态解析的类型参数
 

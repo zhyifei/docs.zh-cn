@@ -3,11 +3,11 @@ title: 递归函数：rec 关键字 (F#)
 description: '了解如何使用 let 关键字使用 F # rec 关键字定义的递归函数。'
 ms.date: 05/16/2016
 ms.openlocfilehash: 5aab6ed8ab0fc3c0f0bcfc93c3ce6518ec53254f
-ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46562673"
+ms.lasthandoff: 09/23/2018
+ms.locfileid: "46705982"
 ---
 # <a name="recursive-functions-the-rec-keyword"></a>递归函数：rec 关键字
 

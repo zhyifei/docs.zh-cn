@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - attached properties [WPF Designer]
 ms.assetid: 75928354-dc01-47e8-a018-8409aec1f32d
-ms.openlocfilehash: c830a8ac3c8c935aa73974bb5fcee1f2be9c79a3
-ms.sourcegitcommit: bd4fa78f5a46133efdead1bc692a9aa2811d7868
+ms.openlocfilehash: c9eed211b65e7069897718d98c301667a23aaec2
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "42754659"
+ms.lasthandoff: 09/23/2018
+ms.locfileid: "46702902"
 ---
 # <a name="attached-properties-overview"></a>附加属性概述
 
@@ -60,7 +60,7 @@ ms.locfileid: "42754659"
 
 ## 在代码中的附加的属性 <a name="attached_properties_code"></a>
 
-WPF 中的附加的属性不具有典型[!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]用于简化 get/set 访问的"包装"方法。 这是因为附加属性不是必须属于设置它的实例的 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] 命名空间的一部分。 但是，分析 XAML 时，XAML 处理器必须能够设置这些值。 若要支持有效的附加属性用法，附加属性的所有者类型必须在 `Get`PropertyName 和 `Set`PropertyName 窗体中实现专用访问器方法。 这些专用访问器方法对在代码中设置附加属性也很有帮助。 从代码的角度来看，附加属性类似于具有方法访问器而不是属性访问器的支持字段，且支持字段可在任何对象上存在，无需专门定义。
+WPF 中的附加的属性不具有典型[!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]用于简化 get/set 访问的"包装"方法。 这是因为附加属性不是必须属于设置它的实例的 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] 命名空间的一部分。 但是，分析 XAML 时，XAML 处理器必须能够设置这些值。 若要支持的有效的附加的属性用法，附加属性的所有者类型必须实现专用访问器方法在窗体**获取 * PropertyName*** 和 **设置*PropertyName * * *。 这些专用访问器方法对在代码中设置附加属性也很有帮助。 从代码的角度来看，附加属性类似于具有方法访问器而不是属性访问器的支持字段，且支持字段可在任何对象上存在，无需专门定义。
 
 下面的示例演示如何在代码中设置附加属性。 在此示例中，`myCheckBox`的一个实例<xref:System.Windows.Controls.CheckBox>类。
 
@@ -91,16 +91,16 @@ WPF 中的附加的属性不具有典型[!INCLUDE[TLA2#tla_clr](../../../../incl
 
 如果您的类定义附加的属性严格使用其他类型，则不需要从派生类<xref:System.Windows.DependencyObject>。 但需要派生自<xref:System.Windows.DependencyObject>如果遵循使附加的属性也是依赖项属性的整体 WPF 模型。
 
-将附加的属性定义为依赖属性通过声明`public static readonly`类型的字段<xref:System.Windows.DependencyProperty>。 使用的返回值定义此字段<xref:System.Windows.DependencyProperty.RegisterAttached%2A>方法。 字段名称必须匹配附加的属性名称，且追加字符串`Property`，以遵循命名标识字段及其它们所表示的属性的已建立的 WPF 模式。 附加属性提供程序还必须提供静态的 `Get`PropertyName 和 `Set`PropertyName 方法，作为附加属性访问器，否则将导致属性系统无法使用附加属性。
+将附加的属性定义为依赖属性通过声明`public static readonly`类型的字段<xref:System.Windows.DependencyProperty>。 使用的返回值定义此字段<xref:System.Windows.DependencyProperty.RegisterAttached%2A>方法。 字段名称必须匹配附加的属性名称，且追加字符串`Property`，以遵循命名标识字段及其它们所表示的属性的已建立的 WPF 模式。 附加的属性提供程序还必须提供静态**获取 * PropertyName*** 和**设置 * PropertyName*** 方法访问器作为附加属性。 如果不这样做将导致属性系统无法使用附加的属性。
 
 > [!NOTE]
 > 如果省略附加的属性的 get 访问器，在属性上的数据绑定不会在设计工具，如 Visual Studio 和 Expression Blend 中。
 
 #### <a name="the-get-accessor"></a>Get 访问器
 
-`Get` PropertyName 访问器的签名必须是：
+签名**获取 * PropertyName*** 访问器必须是：
 
-`public static object Get` *属性名称* `(object target)`
+`public static object GetPropertyName(object target)`
 
 -   `target` 对象在实现中可以指定为更具体的类型。 例如，<xref:System.Windows.Controls.DockPanel.GetDock%2A?displayProperty=nameWithType>方法的类型参数作为<xref:System.Windows.UIElement>，因为附加的属性只是在上设置<xref:System.Windows.UIElement>实例。
 
@@ -108,15 +108,15 @@ WPF 中的附加的属性不具有典型[!INCLUDE[TLA2#tla_clr](../../../../incl
 
 #### <a name="the-set-accessor"></a>Set 访问器
 
-`Set` PropertyName 访问器的签名必须是：
+签名**设置 * PropertyName*** 访问器必须是：
 
-`public static void Set` PropertyName `(object`  `target` `, object`  `value` `)`
+`public static void SetPropertyName(object target, object value)`
 
 -   `target` 对象在实现中可以指定为更具体的类型。 例如，<xref:System.Windows.Controls.DockPanel.SetDock%2A>方法将其作为类型<xref:System.Windows.UIElement>，因为附加的属性只是在上设置<xref:System.Windows.UIElement>实例。
 
 -   `value` 对象在实现中可以指定为更具体的类型。 例如，<xref:System.Windows.Controls.DockPanel.SetDock%2A>方法将其作为类型<xref:System.Windows.Controls.Dock>，因为值只能设置为该枚举。 请记住，此方法的值是 XAML 加载器在标记中的附加属性用法中遇到附加属性时的输入。 该输入是在标记中指定为 XAML 属性值的值。 因此必须存在可用于你所使用的类型的类型转换、值序列化程序或标记扩展支持，以便可以从属性值（最终仅仅是一个字符串）创建相应的类型。
 
-下面的示例显示了依赖关系属性注册 (使用<xref:System.Windows.DependencyProperty.RegisterAttached%2A>方法)，并将`Get` *PropertyName*并`Set` *PropertyName*访问器. 在此示例中，附加属性名称为 `IsBubbleSource`。 因此，访问器必须名为 `GetIsBubbleSource` 和 `SetIsBubbleSource`。
+下面的示例显示了依赖关系属性注册 (使用<xref:System.Windows.DependencyProperty.RegisterAttached%2A>方法)，并将**获取 * PropertyName*** 和**设置 * PropertyName*** 访问器。 在此示例中，附加属性名称为 `IsBubbleSource`。 因此，访问器必须名为 `GetIsBubbleSource` 和 `SetIsBubbleSource`。
 
 [!code-csharp[WPFAquariumSln#RegisterAttachedBubbler](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WPFAquariumSln/CSharp/WPFAquariumObjects/Class1.cs#registerattachedbubbler)]
 [!code-vb[WPFAquariumSln#RegisterAttachedBubbler](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WPFAquariumSln/visualbasic/wpfaquariumobjects/class1.vb#registerattachedbubbler)]
