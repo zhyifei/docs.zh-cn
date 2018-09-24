@@ -6,11 +6,11 @@ ms.assetid: 484929b0-fefb-4629-87ee-ebdde70ff1f8
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 8f7630b9a233db009b6095abc8d833870c1f33d8
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45625199"
+ms.lasthandoff: 09/22/2018
+ms.locfileid: "46581929"
 ---
 # <a name="recoverable-xslt-errors"></a>可恢复的 XSLT 错误
 W3C XSL 转换 (XSLT) 1.0 版建议中涉及到实现提供者可以在哪些方面确定如何处理某种情况。 这些方面被认为是任意行为。 例如，在第 7.3 节“Creating Processing Instructions”中，XSLT 1.0 建议指出，如果实例化 `xsl:processing-instruction` 的内容会创建文本节点以外的节点，则会发生错误。 对于某些问题，XSLT 1.0 建议指示在处理器决定从错误中恢复时应做的决策。 对于 7.3 节中给出的问题，W3C 指出，实现可以通过忽略节点及其内容来从此错误中恢复。  

@@ -6,11 +6,11 @@ helpviewer_keywords:
 - copy constructor [C#]
 ms.assetid: fba899b5-fc41-428e-a745-3ebdbf37990a
 ms.openlocfilehash: d6ecfc3659dcf533db0f4e7b67fdffd620a584fd
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45638105"
+ms.lasthandoff: 09/23/2018
+ms.locfileid: "46705272"
 ---
 # <a name="how-to-write-a-copy-constructor-c-programming-guide"></a>如何：编写复制构造函数（C# 编程指南）
 C# 不会为对象提供复制构造函数，但你可以自己编写一个。  

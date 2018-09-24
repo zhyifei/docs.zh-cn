@@ -6,11 +6,11 @@ ms.assetid: d818a29a-6ee5-4725-97c4-78cf60a156b6
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 960d69e7db4d06956bfff8fb849f1d085e4cb1c0
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45594031"
+ms.lasthandoff: 09/23/2018
+ms.locfileid: "46583362"
 ---
 # <a name="removing-nodes-content-and-values-from-an-xml-document"></a>移除 XML 文档中的节点、内容和值
 XML 文档对象模型 (DOM) 在内存中之后，可以移除树中的节点，或移除特定节点类型中的内容和值。 若要了解如何从文档中删除叶节点或整个节点子树，请参阅[从 DOM 中删除节点](../../../../docs/standard/data/xml/removing-nodes-from-the-dom.md)。 若要了解如何删除元素属性，请参阅[删除 DOM 中元素节点的属性](../../../../docs/standard/data/xml/removing-attributes-from-an-element-node-in-the-dom.md)。 若要了解如何删除节点内容但将节点保留在树中，请参阅[删除 DOM 中的节点内容](../../../../docs/standard/data/xml/removing-node-content-in-the-dom.md)。  

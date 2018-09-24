@@ -10,11 +10,11 @@ helpviewer_keywords:
 - explicit conversion operators [C#]
 ms.assetid: caf36e89-c6c0-4b87-9f9e-85780a45c9a4
 ms.openlocfilehash: 17a722f7160ae9cd03caa2dff9c4436fcf0f9d9e
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45593694"
+ms.lasthandoff: 09/22/2018
+ms.locfileid: "46698801"
 ---
 # <a name="using-conversion-operators-c-programming-guide"></a>使用转换运算符（C# 编程指南）
 您可以使用 `implicit` 转换运算符或者 `explicit` 转换运算符，前者更易于使用，后者能向阅读代码的每个人清楚地指示您要转换类型。 本主题演示转换运算符的两个类型。  

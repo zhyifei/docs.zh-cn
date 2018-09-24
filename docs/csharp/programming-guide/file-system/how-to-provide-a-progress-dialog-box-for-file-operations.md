@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - progress dialog [C#]
 ms.assetid: 01b71fe7-8178-4dc8-aeb1-12053be7b51c
-ms.openlocfilehash: f80bbc94579c58210769800ad8bf74bc60878af5
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.openlocfilehash: e93ce06a01046dfaf4465470ba7fdc687effa58d
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44260157"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "46710798"
 ---
 # <a name="how-to-provide-a-progress-dialog-box-for-file-operations-c-programming-guide"></a>如何：提供文件操作进度对话框（C# 编程指南）
 如果在 <xref:Microsoft.VisualBasic?displayProperty=nameWithType> 命名空间中使用 <xref:Microsoft.VisualBasic.FileIO.FileSystem.CopyFile%28System.String%2CSystem.String%2CMicrosoft.VisualBasic.FileIO.UIOption%29> 方法，可以在 Windows 中提供显示文件操作进度的标准对话框。  
@@ -22,7 +22,7 @@ ms.locfileid: "44260157"
   
      此时将显示“引用管理器”对话框。  
   
-2.  在“程序集”区域，选择“框架”（如果尚未选择它）。  
+2.  在“程序集”区域，选择“Framework”（如果尚未选择它）。  
   
 3.  在名称列表中，选择“Microsoft.VisualBasic”复选框，然后再选择“确定”按钮以关闭对话框。  
   

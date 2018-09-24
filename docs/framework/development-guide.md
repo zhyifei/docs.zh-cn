@@ -6,12 +6,12 @@ helpviewer_keywords:
 ms.assetid: 26e3d285-24c3-435c-a797-9fe5affb8525
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c42311368bf94a2629f656b61b09cb7c2c5f68b6
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: a21f4cd8657a9d2c26ac481e7f2b00e6a2f502c9
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44205382"
+ms.lasthandoff: 09/22/2018
+ms.locfileid: "46581098"
 ---
 # <a name="net-framework-development-guide"></a>.NET Framework 开发指南
 本节介绍了如何创建、配置、调试、保护和部署 .NET Framework 应用。 本节还提供有关技术领域的信息，例如，动态编程、互操作性、扩展性、内存管理和线程处理。  
@@ -64,10 +64,7 @@ ms.locfileid: "44205382"
   
  [性能](../../docs/framework/performance/index.md)  
  提供有关缓存、延迟初始化、可靠性和 ETW 事件的信息。  
-  
- <!--zz [Advanced Reading for the .NET Framework](https://msdn.microsoft.com/library/faae8083-fecb-4514-b133-b0a5a32a7c3c)  
- Provides information about advanced development tasks and techniques in the .NET Framework, including extensibility, interoperability, and reflection. Also includes the reference topics for unmanaged APIs that can be used by managed apps, such as runtime hosts, compilers, disassemblers, debuggers, and profilers.  --> 
-  
+ 
 ## <a name="reference"></a>参考  
  [.NET Framework 类库](/dotnet/api/?view=netframework-4.7)  
  提供 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 命名空间中包含的每一个类的语法、代码示例和使用信息。  

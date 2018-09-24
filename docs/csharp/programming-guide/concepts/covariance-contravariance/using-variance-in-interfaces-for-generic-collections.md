@@ -3,11 +3,11 @@ title: 在泛型集合的接口中使用变体 (C#)
 ms.date: 07/20/2015
 ms.assetid: a44f0708-10fa-4c76-82cd-daa6e6b31e8e
 ms.openlocfilehash: 66a1eac33d5f715f52bd83c43bac4452df41aabd
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45596524"
+ms.lasthandoff: 09/22/2018
+ms.locfileid: "46583806"
 ---
 # <a name="using-variance-in-interfaces-for-generic-collections-c"></a>在泛型集合的接口中使用变体 (C#)
 协变接口允许其方法返回的派生类型多于接口中指定的派生类型。 逆变接口允许其方法接受派生类型少于接口中指定的类型的参数。  

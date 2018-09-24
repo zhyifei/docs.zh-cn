@@ -7,12 +7,13 @@ ms.date: 09/03/2018
 dev_langs:
 - csharp
 - vb
-ms.openlocfilehash: 62cfef08a8319981891c713c08c34eba5ab54b6f
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.custom: vs-dotnet
+ms.openlocfilehash: 7a9410ca99f621ee6d0e8b263354ebc536f71a4a
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45595303"
+ms.lasthandoff: 09/23/2018
+ms.locfileid: "46705794"
 ---
 # <a name="deploying-net-core-apps-with-visual-studio"></a>使用 Visual Studio 部署 .NET Core 应用
 
@@ -74,7 +75,7 @@ ms.locfileid: "45595303"
 
 1. 确认已在系统中安装 `Newtonsoft.Json`，如果尚未安装，请先安装它。 “已安装”选项卡列出了系统中已安装的 NuGet 包。 如果此处未列出 `Newtonsoft.Json`，请选择“浏览”选项卡，然后在搜索框中输入“Newtonsoft.Json”。 选择 `Newtonsoft.Json`，在右侧窗格中选择项目，然后选择“安装”。
 
-1. 如果系统中已安装 `Newtonsoft.Json`，请在“管理解决方案包”选项卡的右侧窗格中选择项目，将该项添加到项目。
+1. 如果系统中已安装 `Newtonsoft.Json`，请在“管理解决方案包”选项卡的右侧窗格中选择项目，将其添加到项目。
 
 请注意，如果依赖框架的部署具有第三方依赖项，则其可移植性只与第三方依赖项相同。 例如，如果某个第三方库只支持 macOS，该应用将无法移植到 Windows 系统。 当第三方依赖项本身取决于本机代码时，也可能发生此情况。 [Kestrel 服务器](https://docs.microsoft.com/aspnet/core/fundamentals/servers/kestrel)就是一个很好的示例，它需要 [libuv](https://github.com/libuv/libuv) 的本机依赖项。 当为具有此类第三方依赖项的应用程序创建 FDD 时，已发布的输出会针对每个本机依赖项支持（存在于 NuGet 包中）的[运行时标识符 (RID)](../rid-catalog.md) 包含一个文件夹。
 

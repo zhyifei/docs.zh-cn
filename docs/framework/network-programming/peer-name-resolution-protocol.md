@@ -6,11 +6,11 @@ author: mcleblanc
 ms.author: markl
 manager: markl
 ms.openlocfilehash: 70c49198c0198610eaa5001971b7de7efd2951aa
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45625186"
+ms.lasthandoff: 09/22/2018
+ms.locfileid: "46580403"
 ---
 # <a name="peer-name-resolution-protocol"></a>对等名称解析协议
 在对等环境中，对等机使用特定的名称解析系统从名称或其他类型的标识符解析彼此的网络位置（地址、协议和端口）。 过去，由于本质上的短暂性连接以及域名系统 (DNS) 内的其他缺陷，造成对等名称解析十分复杂。  

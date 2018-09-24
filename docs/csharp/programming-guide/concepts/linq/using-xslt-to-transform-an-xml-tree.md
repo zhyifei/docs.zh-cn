@@ -3,11 +3,11 @@ title: 使用 XSLT 转换 XML 树 (C#)
 ms.date: 07/20/2015
 ms.assetid: 373a2699-d4c5-471b-9bda-c1f0ab73b477
 ms.openlocfilehash: 3fa850c0f09404da49b2963e980d15e1ed54316f
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45646712"
+ms.lasthandoff: 09/22/2018
+ms.locfileid: "46585941"
 ---
 # <a name="using-xslt-to-transform-an-xml-tree-c"></a>使用 XSLT 转换 XML 树 (C#)
 可以创建 XML 树，从 XML 树创建 <xref:System.Xml.XmlReader>，创建新文档，然后创建 <xref:System.Xml.XmlWriter>，以写入新文档。 然后，您可以调用 XSLT 转换，并可以将 <xref:System.Xml.XmlReader> 和 <xref:System.Xml.XmlWriter> 传递到转换中。 在转换成功完成后，使用转换的结果，填充新的 XML 树。  
