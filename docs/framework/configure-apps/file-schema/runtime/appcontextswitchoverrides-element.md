@@ -1,7 +1,7 @@
 ---
 title: '&lt;AppContextSwitchOverrides&gt;元素'
 ms.custom: updateeachrelease
-ms.date: 04/19/2018
+ms.date: 09/19/2018
 helpviewer_keywords:
 - AppContextSwitchOverrides
 - compatibility switches
@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 4ce07f47-7ddb-4d91-b067-501bd8b88752
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d16ce7f2744869c812b9988e91edd153d9cb4fd2
-ms.sourcegitcommit: e8dc507cfdaad504fc9d4c83d28d24569dcef91c
+ms.openlocfilehash: c06b63c492d31d1391b53a36ced5b5c7277f5ad6
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/03/2018
-ms.locfileid: "32747520"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "47027357"
 ---
 # <a name="ltappcontextswitchoverridesgt-element"></a>&lt;AppContextSwitchOverrides&gt;元素
 定义 <xref:System.AppContext> 类使用的一个或多个开关，用于提供新功能的选择退出机制。  
@@ -125,7 +125,21 @@ ms.locfileid: "32747520"
   
  库开发人员还可以定义自定义的交换机，以允许调用方可以选择不更改其库的更高版本中引入的功能。 有关更多信息，请参见 <xref:System.AppContext> 类。  
   
-## <a name="example"></a>示例  
+## <a name="switches-in-aspnet-applications"></a>在 ASP.NET 应用程序中的交换机
+
+可以配置 ASP.NET 应用程序通过将添加使用兼容性设置[\<添加 >](~/docs/framework/configure-apps/file-schema/appsettings/add-element-for-appsettings.md)元素[ \<appSettings >](~/docs/framework/configure-apps/file-schema/appsettings/index.md) web.config 文件部分。 
+
+下面的示例使用`<add>`元素添加到两个设置`<appSettings>`web.config 文件的部分：
+
+```xml
+<appSettings>
+  <add key="AppContext.SetSwitch:Switch.System.Globalization.NoAsyncCurrentCulture" value="true" />
+  <add key="AppContext.SetSwitch:Switch.System.Uri.DontEnableStrictRFC3986ReservedCharacterSets" value="true" />
+</appSettings>
+```
+
+## <a name="example"></a>示例
+
  下面的示例使用`AppContextSwitchOverrides`元素来定义单个应用程序兼容性开关， `Switch.System.Globalization.NoAsyncCurrentCulture`，防止在异步方法调用中的线程间流动区域性。  
   
 ```xml  
