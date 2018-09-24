@@ -6,26 +6,26 @@ ms.assetid: dc2e2b65-f623-4dc3-938b-d2a054d6832c
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 59e288a756a022763bae2235964a8b25a9d72bd1
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45679156"
+ms.lasthandoff: 09/23/2018
+ms.locfileid: "46705483"
 ---
-# <a name="converting-net-framework-types-to-strings"></a><span data-ttu-id="6d74b-102">将 .NET Framework 类型转换为字符串</span><span class="sxs-lookup"><span data-stu-id="6d74b-102">Converting .NET Framework Types to Strings</span></span>
-<span data-ttu-id="6d74b-103">若要将 .NET Framework 类型转换为字符串，请使用 ToString 方法。</span><span class="sxs-lookup"><span data-stu-id="6d74b-103">If you want to convert a .NET Framework type to a string, use the **ToString** method.</span></span> <span data-ttu-id="6d74b-104">ToString 方法返回传入的类型的字符串表示形式。</span><span class="sxs-lookup"><span data-stu-id="6d74b-104">The **ToString** method returns a string representation of the type passed in.</span></span> <span data-ttu-id="6d74b-105">下表列出了以映射到 XML 架构 (XSD) 规范的格式返回字符串的 .NET Framework 类型。</span><span class="sxs-lookup"><span data-stu-id="6d74b-105">The following table lists the .NET Framework types that return a string in a format that maps to the XML Schema (XSD) specifications.</span></span>  
+# <a name="converting-net-framework-types-to-strings"></a><span data-ttu-id="ba8cf-102">将 .NET Framework 类型转换为字符串</span><span class="sxs-lookup"><span data-stu-id="ba8cf-102">Converting .NET Framework Types to Strings</span></span>
+<span data-ttu-id="ba8cf-103">若要将 .NET Framework 类型转换为字符串，请使用 ToString 方法。</span><span class="sxs-lookup"><span data-stu-id="ba8cf-103">If you want to convert a .NET Framework type to a string, use the **ToString** method.</span></span> <span data-ttu-id="ba8cf-104">ToString 方法返回传入的类型的字符串表示形式。</span><span class="sxs-lookup"><span data-stu-id="ba8cf-104">The **ToString** method returns a string representation of the type passed in.</span></span> <span data-ttu-id="ba8cf-105">下表列出了以映射到 XML 架构 (XSD) 规范的格式返回字符串的 .NET Framework 类型。</span><span class="sxs-lookup"><span data-stu-id="ba8cf-105">The following table lists the .NET Framework types that return a string in a format that maps to the XML Schema (XSD) specifications.</span></span>  
   
-|<span data-ttu-id="6d74b-106">.NET Framework 类型</span><span class="sxs-lookup"><span data-stu-id="6d74b-106">.NET Framework type</span></span>|<span data-ttu-id="6d74b-107">返回的字符串类型</span><span class="sxs-lookup"><span data-stu-id="6d74b-107">String type returned</span></span>|  
+|<span data-ttu-id="ba8cf-106">.NET Framework 类型</span><span class="sxs-lookup"><span data-stu-id="ba8cf-106">.NET Framework type</span></span>|<span data-ttu-id="ba8cf-107">返回的字符串类型</span><span class="sxs-lookup"><span data-stu-id="ba8cf-107">String type returned</span></span>|  
 |-------------------------|--------------------------|  
-|<span data-ttu-id="6d74b-108">Boolean</span><span class="sxs-lookup"><span data-stu-id="6d74b-108">Boolean</span></span>|<span data-ttu-id="6d74b-109">“true”、“false”</span><span class="sxs-lookup"><span data-stu-id="6d74b-109">"true", "false"</span></span>|  
-|<span data-ttu-id="6d74b-110">Single.PositiveInfinity</span><span class="sxs-lookup"><span data-stu-id="6d74b-110">Single.PositiveInfinity</span></span>|<span data-ttu-id="6d74b-111">“INF”</span><span class="sxs-lookup"><span data-stu-id="6d74b-111">"INF"</span></span>|  
-|<span data-ttu-id="6d74b-112">Single.NegativeInfinity</span><span class="sxs-lookup"><span data-stu-id="6d74b-112">Single.NegativeInfinity</span></span>|<span data-ttu-id="6d74b-113">“-INF”</span><span class="sxs-lookup"><span data-stu-id="6d74b-113">"-INF"</span></span>|  
-|<span data-ttu-id="6d74b-114">Double.PositiveInfinity</span><span class="sxs-lookup"><span data-stu-id="6d74b-114">Double.PositiveInfinity</span></span>|<span data-ttu-id="6d74b-115">“INF”</span><span class="sxs-lookup"><span data-stu-id="6d74b-115">"INF"</span></span>|  
-|<span data-ttu-id="6d74b-116">Double.NegativeInfinity</span><span class="sxs-lookup"><span data-stu-id="6d74b-116">Double.NegativeInfinity</span></span>|<span data-ttu-id="6d74b-117">“-INF”</span><span class="sxs-lookup"><span data-stu-id="6d74b-117">"-INF"</span></span>|  
-|<span data-ttu-id="6d74b-118">DateTime</span><span class="sxs-lookup"><span data-stu-id="6d74b-118">DateTime</span></span>|<span data-ttu-id="6d74b-119">格式为 yyyy-MM-ddTHH:mm:sszzzzzz 及其子集。</span><span class="sxs-lookup"><span data-stu-id="6d74b-119">Format is yyyy-MM-ddTHH:mm:sszzzzzz and its subsets.</span></span>|  
-|<span data-ttu-id="6d74b-120">Timespan</span><span class="sxs-lookup"><span data-stu-id="6d74b-120">Timespan</span></span>|<span data-ttu-id="6d74b-121">格式是 PnYnMnTnHnMnS，例如，`P2Y10M15DT10H30M20S` 表示长 2 年 10 个月 15 天 10 小时 30 分钟 20 秒的持续时间。</span><span class="sxs-lookup"><span data-stu-id="6d74b-121">Format is PnYnMnTnHnMnS, for example, `P2Y10M15DT10H30M20S` is a duration of 2 years, 10 months, 15 days, 10hours, 30 minutes and 20 seconds.</span></span>|  
+|<span data-ttu-id="ba8cf-108">Boolean</span><span class="sxs-lookup"><span data-stu-id="ba8cf-108">Boolean</span></span>|<span data-ttu-id="ba8cf-109">“true”、“false”</span><span class="sxs-lookup"><span data-stu-id="ba8cf-109">"true", "false"</span></span>|  
+|<span data-ttu-id="ba8cf-110">Single.PositiveInfinity</span><span class="sxs-lookup"><span data-stu-id="ba8cf-110">Single.PositiveInfinity</span></span>|<span data-ttu-id="ba8cf-111">“INF”</span><span class="sxs-lookup"><span data-stu-id="ba8cf-111">"INF"</span></span>|  
+|<span data-ttu-id="ba8cf-112">Single.NegativeInfinity</span><span class="sxs-lookup"><span data-stu-id="ba8cf-112">Single.NegativeInfinity</span></span>|<span data-ttu-id="ba8cf-113">“-INF”</span><span class="sxs-lookup"><span data-stu-id="ba8cf-113">"-INF"</span></span>|  
+|<span data-ttu-id="ba8cf-114">Double.PositiveInfinity</span><span class="sxs-lookup"><span data-stu-id="ba8cf-114">Double.PositiveInfinity</span></span>|<span data-ttu-id="ba8cf-115">“INF”</span><span class="sxs-lookup"><span data-stu-id="ba8cf-115">"INF"</span></span>|  
+|<span data-ttu-id="ba8cf-116">Double.NegativeInfinity</span><span class="sxs-lookup"><span data-stu-id="ba8cf-116">Double.NegativeInfinity</span></span>|<span data-ttu-id="ba8cf-117">“-INF”</span><span class="sxs-lookup"><span data-stu-id="ba8cf-117">"-INF"</span></span>|  
+|<span data-ttu-id="ba8cf-118">DateTime</span><span class="sxs-lookup"><span data-stu-id="ba8cf-118">DateTime</span></span>|<span data-ttu-id="ba8cf-119">格式为 yyyy-MM-ddTHH:mm:sszzzzzz 及其子集。</span><span class="sxs-lookup"><span data-stu-id="ba8cf-119">Format is yyyy-MM-ddTHH:mm:sszzzzzz and its subsets.</span></span>|  
+|<span data-ttu-id="ba8cf-120">Timespan</span><span class="sxs-lookup"><span data-stu-id="ba8cf-120">Timespan</span></span>|<span data-ttu-id="ba8cf-121">格式是 PnYnMnTnHnMnS，例如，`P2Y10M15DT10H30M20S` 表示长 2 年 10 个月 15 天 10 小时 30 分钟 20 秒的持续时间。</span><span class="sxs-lookup"><span data-stu-id="ba8cf-121">Format is PnYnMnTnHnMnS, for example, `P2Y10M15DT10H30M20S` is a duration of 2 years, 10 months, 15 days, 10hours, 30 minutes and 20 seconds.</span></span>|  
   
-## <a name="see-also"></a><span data-ttu-id="6d74b-122">请参阅</span><span class="sxs-lookup"><span data-stu-id="6d74b-122">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="ba8cf-122">请参阅</span><span class="sxs-lookup"><span data-stu-id="ba8cf-122">See also</span></span>
 
-- [<span data-ttu-id="6d74b-123">XML 数据类型转换</span><span class="sxs-lookup"><span data-stu-id="6d74b-123">Conversion of XML Data Types</span></span>](../../../../docs/standard/data/xml/conversion-of-xml-data-types.md)  
-- [<span data-ttu-id="6d74b-124">将字符串转换为 .NET Framework 数据类型</span><span class="sxs-lookup"><span data-stu-id="6d74b-124">Converting Strings to .NET Framework Data Types</span></span>](../../../../docs/standard/data/xml/converting-strings-to-dotnet-data-types.md)
+- [<span data-ttu-id="ba8cf-123">XML 数据类型转换</span><span class="sxs-lookup"><span data-stu-id="ba8cf-123">Conversion of XML Data Types</span></span>](../../../../docs/standard/data/xml/conversion-of-xml-data-types.md)  
+- [<span data-ttu-id="ba8cf-124">将字符串转换为 .NET Framework 数据类型</span><span class="sxs-lookup"><span data-stu-id="ba8cf-124">Converting Strings to .NET Framework Data Types</span></span>](../../../../docs/standard/data/xml/converting-strings-to-dotnet-data-types.md)
