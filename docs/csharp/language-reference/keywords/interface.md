@@ -7,59 +7,59 @@ helpviewer_keywords:
 - interface keyword [C#]
 ms.assetid: 7da38e81-4f99-4bc5-b07d-c986b687eeba
 ms.openlocfilehash: 4adc7ba106e0044ba6aff94ea3180d9c8e3ded7b
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45619196"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "46711293"
 ---
-# <a name="interface-c-reference"></a><span data-ttu-id="3ea9e-102">接口（C# 参考）</span><span class="sxs-lookup"><span data-stu-id="3ea9e-102">interface (C# Reference)</span></span>
+# <a name="interface-c-reference"></a><span data-ttu-id="7374f-102">接口（C# 参考）</span><span class="sxs-lookup"><span data-stu-id="7374f-102">interface (C# Reference)</span></span>
 
-<span data-ttu-id="3ea9e-103">接口只包含[方法](../../programming-guide/classes-and-structs/methods.md)、[属性](../../programming-guide/classes-and-structs/properties.md)、[事件](../../programming-guide/events/index.md)或[索引器](../../programming-guide/indexers/index.md)的签名。</span><span class="sxs-lookup"><span data-stu-id="3ea9e-103">An interface contains only the signatures of [methods](../../programming-guide/classes-and-structs/methods.md), [properties](../../programming-guide/classes-and-structs/properties.md), [events](../../programming-guide/events/index.md) or [indexers](../../programming-guide/indexers/index.md).</span></span> <span data-ttu-id="3ea9e-104">实现接口的类或结构必须实现接口定义中指定的接口成员。</span><span class="sxs-lookup"><span data-stu-id="3ea9e-104">A class or struct that implements the interface must implement the members of the interface that are specified in the interface definition.</span></span> <span data-ttu-id="3ea9e-105">在以下示例中，类 `ImplementationClass` 必须实现一个不含参数但返回 `void` 的名为 `SampleMethod` 的方法。</span><span class="sxs-lookup"><span data-stu-id="3ea9e-105">In the following example, class `ImplementationClass` must implement a method named `SampleMethod` that has no parameters and returns `void`.</span></span>
+<span data-ttu-id="7374f-103">接口只包含[方法](../../programming-guide/classes-and-structs/methods.md)、[属性](../../programming-guide/classes-and-structs/properties.md)、[事件](../../programming-guide/events/index.md)或[索引器](../../programming-guide/indexers/index.md)的签名。</span><span class="sxs-lookup"><span data-stu-id="7374f-103">An interface contains only the signatures of [methods](../../programming-guide/classes-and-structs/methods.md), [properties](../../programming-guide/classes-and-structs/properties.md), [events](../../programming-guide/events/index.md) or [indexers](../../programming-guide/indexers/index.md).</span></span> <span data-ttu-id="7374f-104">实现接口的类或结构必须实现接口定义中指定的接口成员。</span><span class="sxs-lookup"><span data-stu-id="7374f-104">A class or struct that implements the interface must implement the members of the interface that are specified in the interface definition.</span></span> <span data-ttu-id="7374f-105">在以下示例中，类 `ImplementationClass` 必须实现一个不含参数但返回 `void` 的名为 `SampleMethod` 的方法。</span><span class="sxs-lookup"><span data-stu-id="7374f-105">In the following example, class `ImplementationClass` must implement a method named `SampleMethod` that has no parameters and returns `void`.</span></span>
 
-<span data-ttu-id="3ea9e-106">有关详细信息和示例，请参阅[接口](../../programming-guide/interfaces/index.md)。</span><span class="sxs-lookup"><span data-stu-id="3ea9e-106">For more information and examples, see [Interfaces](../../programming-guide/interfaces/index.md).</span></span>
+<span data-ttu-id="7374f-106">有关详细信息和示例，请参阅[接口](../../programming-guide/interfaces/index.md)。</span><span class="sxs-lookup"><span data-stu-id="7374f-106">For more information and examples, see [Interfaces](../../programming-guide/interfaces/index.md).</span></span>
 
-## <a name="example"></a><span data-ttu-id="3ea9e-107">示例</span><span class="sxs-lookup"><span data-stu-id="3ea9e-107">Example</span></span>
+## <a name="example"></a><span data-ttu-id="7374f-107">示例</span><span class="sxs-lookup"><span data-stu-id="7374f-107">Example</span></span>
 
 [!code-csharp[csrefKeywordsTypes#14](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsTypes/CS/keywordsTypes.cs#14)]
 
-<span data-ttu-id="3ea9e-108">接口可以是命名空间或类的成员，并且可以包含下列成员的签名：</span><span class="sxs-lookup"><span data-stu-id="3ea9e-108">An interface can be a member of a namespace or a class and can contain signatures of the following members:</span></span>
+<span data-ttu-id="7374f-108">接口可以是命名空间或类的成员，并且可以包含下列成员的签名：</span><span class="sxs-lookup"><span data-stu-id="7374f-108">An interface can be a member of a namespace or a class and can contain signatures of the following members:</span></span>
 
-- [<span data-ttu-id="3ea9e-109">方法</span><span class="sxs-lookup"><span data-stu-id="3ea9e-109">Methods</span></span>](../../programming-guide/classes-and-structs/methods.md)
+- [<span data-ttu-id="7374f-109">方法</span><span class="sxs-lookup"><span data-stu-id="7374f-109">Methods</span></span>](../../programming-guide/classes-and-structs/methods.md)
 
-- [<span data-ttu-id="3ea9e-110">属性</span><span class="sxs-lookup"><span data-stu-id="3ea9e-110">Properties</span></span>](../../programming-guide/classes-and-structs/using-properties.md)
+- [<span data-ttu-id="7374f-110">属性</span><span class="sxs-lookup"><span data-stu-id="7374f-110">Properties</span></span>](../../programming-guide/classes-and-structs/using-properties.md)
 
-- [<span data-ttu-id="3ea9e-111">索引器</span><span class="sxs-lookup"><span data-stu-id="3ea9e-111">Indexers</span></span>](../../programming-guide/indexers/using-indexers.md)
+- [<span data-ttu-id="7374f-111">索引器</span><span class="sxs-lookup"><span data-stu-id="7374f-111">Indexers</span></span>](../../programming-guide/indexers/using-indexers.md)
 
-- [<span data-ttu-id="3ea9e-112">事件</span><span class="sxs-lookup"><span data-stu-id="3ea9e-112">Events</span></span>](event.md)
+- [<span data-ttu-id="7374f-112">事件</span><span class="sxs-lookup"><span data-stu-id="7374f-112">Events</span></span>](event.md)
 
-<span data-ttu-id="3ea9e-113">一个接口可从一个或多个基接口继承。</span><span class="sxs-lookup"><span data-stu-id="3ea9e-113">An interface can inherit from one or more base interfaces.</span></span>
+<span data-ttu-id="7374f-113">一个接口可从一个或多个基接口继承。</span><span class="sxs-lookup"><span data-stu-id="7374f-113">An interface can inherit from one or more base interfaces.</span></span>
 
-<span data-ttu-id="3ea9e-114">基类型列表包含基类和接口时，基类必须是列表中的第 1 项。</span><span class="sxs-lookup"><span data-stu-id="3ea9e-114">When a base type list contains a base class and interfaces, the base class must come first in the list.</span></span>
+<span data-ttu-id="7374f-114">基类型列表包含基类和接口时，基类必须是列表中的第 1 项。</span><span class="sxs-lookup"><span data-stu-id="7374f-114">When a base type list contains a base class and interfaces, the base class must come first in the list.</span></span>
 
-<span data-ttu-id="3ea9e-115">实现接口的类可以显式实现该接口的成员。</span><span class="sxs-lookup"><span data-stu-id="3ea9e-115">A class that implements an interface can explicitly implement members of that interface.</span></span> <span data-ttu-id="3ea9e-116">显式实现的成员不能通过类实例访问，而只能通过接口实例访问。</span><span class="sxs-lookup"><span data-stu-id="3ea9e-116">An explicitly implemented member cannot be accessed through a class instance, but only through an instance of the interface.</span></span>
+<span data-ttu-id="7374f-115">实现接口的类可以显式实现该接口的成员。</span><span class="sxs-lookup"><span data-stu-id="7374f-115">A class that implements an interface can explicitly implement members of that interface.</span></span> <span data-ttu-id="7374f-116">显式实现的成员不能通过类实例访问，而只能通过接口实例访问。</span><span class="sxs-lookup"><span data-stu-id="7374f-116">An explicitly implemented member cannot be accessed through a class instance, but only through an instance of the interface.</span></span>
 
-<span data-ttu-id="3ea9e-117">有关显式接口实现的更多详细信息和代码示例，请参阅[显式接口实现](../../programming-guide/interfaces/explicit-interface-implementation.md)。</span><span class="sxs-lookup"><span data-stu-id="3ea9e-117">For more details and code examples on explicit interface implementation, see [Explicit Interface Implementation](../../programming-guide/interfaces/explicit-interface-implementation.md).</span></span>
+<span data-ttu-id="7374f-117">有关显式接口实现的更多详细信息和代码示例，请参阅[显式接口实现](../../programming-guide/interfaces/explicit-interface-implementation.md)。</span><span class="sxs-lookup"><span data-stu-id="7374f-117">For more details and code examples on explicit interface implementation, see [Explicit Interface Implementation](../../programming-guide/interfaces/explicit-interface-implementation.md).</span></span>
 
-## <a name="example"></a><span data-ttu-id="3ea9e-118">示例</span><span class="sxs-lookup"><span data-stu-id="3ea9e-118">Example</span></span>
+## <a name="example"></a><span data-ttu-id="7374f-118">示例</span><span class="sxs-lookup"><span data-stu-id="7374f-118">Example</span></span>
 
-<span data-ttu-id="3ea9e-119">下例演示了接口实现。</span><span class="sxs-lookup"><span data-stu-id="3ea9e-119">The following example demonstrates interface implementation.</span></span> <span data-ttu-id="3ea9e-120">在此示例中，接口包含属性声明，类包含实现。</span><span class="sxs-lookup"><span data-stu-id="3ea9e-120">In this example, the interface contains the property declaration and the class contains the implementation.</span></span> <span data-ttu-id="3ea9e-121">实现 `IPoint` 的类的任何实例都具有整数属性 `x` 和 `y`。</span><span class="sxs-lookup"><span data-stu-id="3ea9e-121">Any instance of a class that implements `IPoint` has integer properties `x` and `y`.</span></span>
+<span data-ttu-id="7374f-119">下例演示了接口实现。</span><span class="sxs-lookup"><span data-stu-id="7374f-119">The following example demonstrates interface implementation.</span></span> <span data-ttu-id="7374f-120">在此示例中，接口包含属性声明，类包含实现。</span><span class="sxs-lookup"><span data-stu-id="7374f-120">In this example, the interface contains the property declaration and the class contains the implementation.</span></span> <span data-ttu-id="7374f-121">实现 `IPoint` 的类的任何实例都具有整数属性 `x` 和 `y`。</span><span class="sxs-lookup"><span data-stu-id="7374f-121">Any instance of a class that implements `IPoint` has integer properties `x` and `y`.</span></span>
 
 [!code-csharp[csrefKeywordsTypes#15](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsTypes/CS/keywordsTypes.cs#15)]
 
-## <a name="c-language-specification"></a><span data-ttu-id="3ea9e-122">C# 语言规范</span><span class="sxs-lookup"><span data-stu-id="3ea9e-122">C# language specification</span></span>
+## <a name="c-language-specification"></a><span data-ttu-id="7374f-122">C# 语言规范</span><span class="sxs-lookup"><span data-stu-id="7374f-122">C# language specification</span></span>
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
-## <a name="see-also"></a><span data-ttu-id="3ea9e-123">请参阅</span><span class="sxs-lookup"><span data-stu-id="3ea9e-123">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="7374f-123">请参阅</span><span class="sxs-lookup"><span data-stu-id="7374f-123">See also</span></span>
 
-- [<span data-ttu-id="3ea9e-124">C# 参考</span><span class="sxs-lookup"><span data-stu-id="3ea9e-124">C# Reference</span></span>](../../../csharp/language-reference/index.md)  
-- [<span data-ttu-id="3ea9e-125">C# 编程指南</span><span class="sxs-lookup"><span data-stu-id="3ea9e-125">C# Programming Guide</span></span>](../../programming-guide/index.md)  
-- [<span data-ttu-id="3ea9e-126">C# 关键字</span><span class="sxs-lookup"><span data-stu-id="3ea9e-126">C# Keywords</span></span>](index.md)  
-- [<span data-ttu-id="3ea9e-127">引用类型</span><span class="sxs-lookup"><span data-stu-id="3ea9e-127">Reference Types</span></span>](reference-types.md)  
-- [<span data-ttu-id="3ea9e-128">接口</span><span class="sxs-lookup"><span data-stu-id="3ea9e-128">Interfaces</span></span>](../../programming-guide/interfaces/index.md)  
-- [<span data-ttu-id="3ea9e-129">使用属性</span><span class="sxs-lookup"><span data-stu-id="3ea9e-129">Using Properties</span></span>](../../programming-guide/classes-and-structs/using-properties.md)  
-- [<span data-ttu-id="3ea9e-130">使用索引器</span><span class="sxs-lookup"><span data-stu-id="3ea9e-130">Using Indexers</span></span>](../../programming-guide/indexers/using-indexers.md)  
-- [<span data-ttu-id="3ea9e-131">class</span><span class="sxs-lookup"><span data-stu-id="3ea9e-131">class</span></span>](class.md)  
-- [<span data-ttu-id="3ea9e-132">struct</span><span class="sxs-lookup"><span data-stu-id="3ea9e-132">struct</span></span>](struct.md)  
-- [<span data-ttu-id="3ea9e-133">接口</span><span class="sxs-lookup"><span data-stu-id="3ea9e-133">Interfaces</span></span>](../../programming-guide/interfaces/index.md)
+- [<span data-ttu-id="7374f-124">C# 参考</span><span class="sxs-lookup"><span data-stu-id="7374f-124">C# Reference</span></span>](../../../csharp/language-reference/index.md)  
+- [<span data-ttu-id="7374f-125">C# 编程指南</span><span class="sxs-lookup"><span data-stu-id="7374f-125">C# Programming Guide</span></span>](../../programming-guide/index.md)  
+- [<span data-ttu-id="7374f-126">C# 关键字</span><span class="sxs-lookup"><span data-stu-id="7374f-126">C# Keywords</span></span>](index.md)  
+- [<span data-ttu-id="7374f-127">引用类型</span><span class="sxs-lookup"><span data-stu-id="7374f-127">Reference Types</span></span>](reference-types.md)  
+- [<span data-ttu-id="7374f-128">接口</span><span class="sxs-lookup"><span data-stu-id="7374f-128">Interfaces</span></span>](../../programming-guide/interfaces/index.md)  
+- [<span data-ttu-id="7374f-129">使用属性</span><span class="sxs-lookup"><span data-stu-id="7374f-129">Using Properties</span></span>](../../programming-guide/classes-and-structs/using-properties.md)  
+- [<span data-ttu-id="7374f-130">使用索引器</span><span class="sxs-lookup"><span data-stu-id="7374f-130">Using Indexers</span></span>](../../programming-guide/indexers/using-indexers.md)  
+- [<span data-ttu-id="7374f-131">class</span><span class="sxs-lookup"><span data-stu-id="7374f-131">class</span></span>](class.md)  
+- [<span data-ttu-id="7374f-132">struct</span><span class="sxs-lookup"><span data-stu-id="7374f-132">struct</span></span>](struct.md)  
+- [<span data-ttu-id="7374f-133">接口</span><span class="sxs-lookup"><span data-stu-id="7374f-133">Interfaces</span></span>](../../programming-guide/interfaces/index.md)

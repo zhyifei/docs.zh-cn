@@ -3,16 +3,16 @@ title: 委托中的变体 (C#)
 ms.date: 07/20/2015
 ms.assetid: 19de89d2-8224-4406-8964-2965b732b890
 ms.openlocfilehash: 3dabac4e532198871cf05d639aa692751ab17ae1
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45592161"
+ms.lasthandoff: 09/22/2018
+ms.locfileid: "46577472"
 ---
-# <a name="variance-in-delegates-c"></a><span data-ttu-id="2b4d9-102">委托中的变体 (C#)</span><span class="sxs-lookup"><span data-stu-id="2b4d9-102">Variance in Delegates (C#)</span></span>
-<span data-ttu-id="2b4d9-103">.NET Framework 3.5 引入了变体支持，用于在 C# 中匹配所有委托的方法签名和委托类型。</span><span class="sxs-lookup"><span data-stu-id="2b4d9-103">.NET Framework 3.5 introduced variance support for matching method signatures with delegate types in all delegates in C#.</span></span> <span data-ttu-id="2b4d9-104">这表明不仅可以将具有匹配签名的方法分配给委托，还可以将返回多个派生类型（协变）的方法分配给委托，或者将所接受参数的派生类型（逆变）数目比委托类型指定的数目少的方法分配给委托。</span><span class="sxs-lookup"><span data-stu-id="2b4d9-104">This means that you can assign to delegates not only methods that have matching signatures, but also methods that return more derived types (covariance) or that accept parameters that have less derived types (contravariance) than that specified by the delegate type.</span></span> <span data-ttu-id="2b4d9-105">这包括泛型委托和非泛型委托。</span><span class="sxs-lookup"><span data-stu-id="2b4d9-105">This includes both generic and non-generic delegates.</span></span>  
+# <a name="variance-in-delegates-c"></a><span data-ttu-id="3f251-102">委托中的变体 (C#)</span><span class="sxs-lookup"><span data-stu-id="3f251-102">Variance in Delegates (C#)</span></span>
+<span data-ttu-id="3f251-103">.NET Framework 3.5 引入了变体支持，用于在 C# 中匹配所有委托的方法签名和委托类型。</span><span class="sxs-lookup"><span data-stu-id="3f251-103">.NET Framework 3.5 introduced variance support for matching method signatures with delegate types in all delegates in C#.</span></span> <span data-ttu-id="3f251-104">这表明不仅可以将具有匹配签名的方法分配给委托，还可以将返回多个派生类型（协变）的方法分配给委托，或者将所接受参数的派生类型（逆变）数目比委托类型指定的数目少的方法分配给委托。</span><span class="sxs-lookup"><span data-stu-id="3f251-104">This means that you can assign to delegates not only methods that have matching signatures, but also methods that return more derived types (covariance) or that accept parameters that have less derived types (contravariance) than that specified by the delegate type.</span></span> <span data-ttu-id="3f251-105">这包括泛型委托和非泛型委托。</span><span class="sxs-lookup"><span data-stu-id="3f251-105">This includes both generic and non-generic delegates.</span></span>  
   
- <span data-ttu-id="2b4d9-106">例如，思考以下代码，该代码具有两个类和两个委托：泛型和非泛型。</span><span class="sxs-lookup"><span data-stu-id="2b4d9-106">For example, consider the following code, which has two classes and two delegates: generic and non-generic.</span></span>  
+ <span data-ttu-id="3f251-106">例如，思考以下代码，该代码具有两个类和两个委托：泛型和非泛型。</span><span class="sxs-lookup"><span data-stu-id="3f251-106">For example, consider the following code, which has two classes and two delegates: generic and non-generic.</span></span>  
   
 ```csharp  
 public class First { }  
@@ -21,7 +21,7 @@ public delegate First SampleDelegate(Second a);
 public delegate R SampleGenericDelegate<A, R>(A a);  
 ```  
   
- <span data-ttu-id="2b4d9-107">创建 `SampleDelegate` 或 `SampleGenericDelegate<A, R>` 类型的委托时，可以将以下任一方法分配给这些委托。</span><span class="sxs-lookup"><span data-stu-id="2b4d9-107">When you create delegates of the `SampleDelegate` or `SampleGenericDelegate<A, R>` types, you can assign any one of the following methods to those delegates.</span></span>  
+ <span data-ttu-id="3f251-107">创建 `SampleDelegate` 或 `SampleGenericDelegate<A, R>` 类型的委托时，可以将以下任一方法分配给这些委托。</span><span class="sxs-lookup"><span data-stu-id="3f251-107">When you create delegates of the `SampleDelegate` or `SampleGenericDelegate<A, R>` types, you can assign any one of the following methods to those delegates.</span></span>  
   
 ```csharp  
 // Matching signature.  
@@ -42,7 +42,7 @@ public static Second AFirstRSecond(First first)
 { return new Second(); }  
 ```  
   
- <span data-ttu-id="2b4d9-108">以下代码示例说明了方法签名与委托类型之间的隐式转换。</span><span class="sxs-lookup"><span data-stu-id="2b4d9-108">The following code example illustrates the implicit conversion between the method signature and the delegate type.</span></span>  
+ <span data-ttu-id="3f251-108">以下代码示例说明了方法签名与委托类型之间的隐式转换。</span><span class="sxs-lookup"><span data-stu-id="3f251-108">The following code example illustrates the implicit conversion between the method signature and the delegate type.</span></span>  
   
 ```csharp  
 // Assigning a method with a matching signature   
@@ -62,14 +62,14 @@ SampleGenericDelegate<Second, First> dGeneric = ASecondRFirst;
 SampleGenericDelegate<Second, First> dGenericConversion = AFirstRSecond;  
 ```  
   
- <span data-ttu-id="2b4d9-109">有关更多示例，请参阅[在委托中使用变体 (C#)](../../../../csharp/programming-guide/concepts/covariance-contravariance/using-variance-in-delegates.md) 和[对 Func 和 Action 泛型委托使用变体 (C#)](../../../../csharp/programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md)。</span><span class="sxs-lookup"><span data-stu-id="2b4d9-109">For more examples, see [Using Variance in Delegates (C#)](../../../../csharp/programming-guide/concepts/covariance-contravariance/using-variance-in-delegates.md) and [Using Variance for Func and Action Generic Delegates (C#)](../../../../csharp/programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md).</span></span>  
+ <span data-ttu-id="3f251-109">有关更多示例，请参阅[在委托中使用变体 (C#)](../../../../csharp/programming-guide/concepts/covariance-contravariance/using-variance-in-delegates.md) 和[对 Func 和 Action 泛型委托使用变体 (C#)](../../../../csharp/programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md)。</span><span class="sxs-lookup"><span data-stu-id="3f251-109">For more examples, see [Using Variance in Delegates (C#)](../../../../csharp/programming-guide/concepts/covariance-contravariance/using-variance-in-delegates.md) and [Using Variance for Func and Action Generic Delegates (C#)](../../../../csharp/programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md).</span></span>  
   
-## <a name="variance-in-generic-type-parameters"></a><span data-ttu-id="2b4d9-110">泛型类型参数中的变体</span><span class="sxs-lookup"><span data-stu-id="2b4d9-110">Variance in Generic Type Parameters</span></span>  
- <span data-ttu-id="2b4d9-111">在 .NET Framework 4 或更高版本中，可以启用委托之间的隐式转换，以便在具有泛型类型参数所指定的不同类型按变体的要求继承自对方时，可以将这些类型的泛型委托分配给对方。</span><span class="sxs-lookup"><span data-stu-id="2b4d9-111">In .NET Framework 4 or later you can enable implicit conversion between delegates, so that generic delegates that have different types specified by generic type parameters can be assigned to each other, if the types are inherited from each other as required by variance.</span></span>  
+## <a name="variance-in-generic-type-parameters"></a><span data-ttu-id="3f251-110">泛型类型参数中的变体</span><span class="sxs-lookup"><span data-stu-id="3f251-110">Variance in Generic Type Parameters</span></span>  
+ <span data-ttu-id="3f251-111">在 .NET Framework 4 或更高版本中，可以启用委托之间的隐式转换，以便在具有泛型类型参数所指定的不同类型按变体的要求继承自对方时，可以将这些类型的泛型委托分配给对方。</span><span class="sxs-lookup"><span data-stu-id="3f251-111">In .NET Framework 4 or later you can enable implicit conversion between delegates, so that generic delegates that have different types specified by generic type parameters can be assigned to each other, if the types are inherited from each other as required by variance.</span></span>  
   
- <span data-ttu-id="2b4d9-112">若要启用隐式转换，必须使用 `in` 或 `out` 关键字将委托中的泛型参数显式声明为协变或逆变。</span><span class="sxs-lookup"><span data-stu-id="2b4d9-112">To enable implicit conversion, you must explicitly declare generic parameters in a delegate as covariant or contravariant by using the `in` or `out` keyword.</span></span>  
+ <span data-ttu-id="3f251-112">若要启用隐式转换，必须使用 `in` 或 `out` 关键字将委托中的泛型参数显式声明为协变或逆变。</span><span class="sxs-lookup"><span data-stu-id="3f251-112">To enable implicit conversion, you must explicitly declare generic parameters in a delegate as covariant or contravariant by using the `in` or `out` keyword.</span></span>  
   
- <span data-ttu-id="2b4d9-113">以下代码示例演示了如何创建一个具有协变泛型类型参数的委托。</span><span class="sxs-lookup"><span data-stu-id="2b4d9-113">The following code example shows how you can create a delegate that has a covariant generic type parameter.</span></span>  
+ <span data-ttu-id="3f251-113">以下代码示例演示了如何创建一个具有协变泛型类型参数的委托。</span><span class="sxs-lookup"><span data-stu-id="3f251-113">The following code example shows how you can create a delegate that has a covariant generic type parameter.</span></span>  
   
 ```csharp  
 // Type T is declared covariant by using the out keyword.  
@@ -85,9 +85,9 @@ public static void Test()
 }  
 ```  
   
- <span data-ttu-id="2b4d9-114">如果仅使用变体支持来匹配方法签名和委托类型，且不使用 `in` 和 `out` 关键字，则可能会发现有时可以使用相同的 lambda 表达式或方法实例化委托，但不能将一个委托分配给另一个委托。</span><span class="sxs-lookup"><span data-stu-id="2b4d9-114">If you use only variance support to match method signatures with delegate types and do not use the `in` and `out` keywords, you may find that sometimes you can instantiate delegates with identical lambda expressions or methods, but you cannot assign one delegate to another.</span></span>  
+ <span data-ttu-id="3f251-114">如果仅使用变体支持来匹配方法签名和委托类型，且不使用 `in` 和 `out` 关键字，则可能会发现有时可以使用相同的 lambda 表达式或方法实例化委托，但不能将一个委托分配给另一个委托。</span><span class="sxs-lookup"><span data-stu-id="3f251-114">If you use only variance support to match method signatures with delegate types and do not use the `in` and `out` keywords, you may find that sometimes you can instantiate delegates with identical lambda expressions or methods, but you cannot assign one delegate to another.</span></span>  
   
- <span data-ttu-id="2b4d9-115">在以下代码示例中，`SampleGenericDelegate<String>` 不能显式转换为 `SampleGenericDelegate<Object>`，尽管 `String` 继承 `Object`。</span><span class="sxs-lookup"><span data-stu-id="2b4d9-115">In the following code example, `SampleGenericDelegate<String>` cannot be explicitly converted to `SampleGenericDelegate<Object>`, although `String` inherits `Object`.</span></span> <span data-ttu-id="2b4d9-116">可以使用 `out` 关键字标记 泛型参数 `T` 解决此问题。</span><span class="sxs-lookup"><span data-stu-id="2b4d9-116">You can fix this problem by marking the generic parameter `T` with the `out` keyword.</span></span>  
+ <span data-ttu-id="3f251-115">在以下代码示例中，`SampleGenericDelegate<String>` 不能显式转换为 `SampleGenericDelegate<Object>`，尽管 `String` 继承 `Object`。</span><span class="sxs-lookup"><span data-stu-id="3f251-115">In the following code example, `SampleGenericDelegate<String>` cannot be explicitly converted to `SampleGenericDelegate<Object>`, although `String` inherits `Object`.</span></span> <span data-ttu-id="3f251-116">可以使用 `out` 关键字标记 泛型参数 `T` 解决此问题。</span><span class="sxs-lookup"><span data-stu-id="3f251-116">You can fix this problem by marking the generic parameter `T` with the `out` keyword.</span></span>  
   
 ```csharp  
 public delegate T SampleGenericDelegate<T>();  
@@ -109,55 +109,55 @@ public static void Test()
 }  
 ```  
   
-### <a name="generic-delegates-that-have-variant-type-parameters-in-the-net-framework"></a><span data-ttu-id="2b4d9-117">.NET Framework 中具有变体类型参数的泛型委托</span><span class="sxs-lookup"><span data-stu-id="2b4d9-117">Generic Delegates That Have Variant Type Parameters in the .NET Framework</span></span>  
- <span data-ttu-id="2b4d9-118">.NET Framework 4 在几个现有泛型委托中引入了泛型类型参数的变体支持：</span><span class="sxs-lookup"><span data-stu-id="2b4d9-118">.NET Framework 4 introduced variance support for generic type parameters in several existing generic delegates:</span></span>  
+### <a name="generic-delegates-that-have-variant-type-parameters-in-the-net-framework"></a><span data-ttu-id="3f251-117">.NET Framework 中具有变体类型参数的泛型委托</span><span class="sxs-lookup"><span data-stu-id="3f251-117">Generic Delegates That Have Variant Type Parameters in the .NET Framework</span></span>  
+ <span data-ttu-id="3f251-118">.NET Framework 4 在几个现有泛型委托中引入了泛型类型参数的变体支持：</span><span class="sxs-lookup"><span data-stu-id="3f251-118">.NET Framework 4 introduced variance support for generic type parameters in several existing generic delegates:</span></span>  
   
--   <span data-ttu-id="2b4d9-119"><xref:System> 命名空间的 `Action` 委托，例如 <xref:System.Action%601> 和 <xref:System.Action%602></span><span class="sxs-lookup"><span data-stu-id="2b4d9-119">`Action` delegates from the <xref:System> namespace, for example, <xref:System.Action%601> and <xref:System.Action%602></span></span>  
+-   <span data-ttu-id="3f251-119"><xref:System> 命名空间的 `Action` 委托，例如 <xref:System.Action%601> 和 <xref:System.Action%602></span><span class="sxs-lookup"><span data-stu-id="3f251-119">`Action` delegates from the <xref:System> namespace, for example, <xref:System.Action%601> and <xref:System.Action%602></span></span>  
   
--   <span data-ttu-id="2b4d9-120"><xref:System> 命名空间的 `Func` 委托，例如 <xref:System.Func%601> 和 <xref:System.Func%602></span><span class="sxs-lookup"><span data-stu-id="2b4d9-120">`Func` delegates from the <xref:System> namespace, for example, <xref:System.Func%601> and <xref:System.Func%602></span></span>  
+-   <span data-ttu-id="3f251-120"><xref:System> 命名空间的 `Func` 委托，例如 <xref:System.Func%601> 和 <xref:System.Func%602></span><span class="sxs-lookup"><span data-stu-id="3f251-120">`Func` delegates from the <xref:System> namespace, for example, <xref:System.Func%601> and <xref:System.Func%602></span></span>  
   
--   <span data-ttu-id="2b4d9-121"><xref:System.Predicate%601> 委托</span><span class="sxs-lookup"><span data-stu-id="2b4d9-121">The <xref:System.Predicate%601> delegate</span></span>  
+-   <span data-ttu-id="3f251-121"><xref:System.Predicate%601> 委托</span><span class="sxs-lookup"><span data-stu-id="3f251-121">The <xref:System.Predicate%601> delegate</span></span>  
   
--   <span data-ttu-id="2b4d9-122"><xref:System.Comparison%601> 委托</span><span class="sxs-lookup"><span data-stu-id="2b4d9-122">The <xref:System.Comparison%601> delegate</span></span>  
+-   <span data-ttu-id="3f251-122"><xref:System.Comparison%601> 委托</span><span class="sxs-lookup"><span data-stu-id="3f251-122">The <xref:System.Comparison%601> delegate</span></span>  
   
--   <span data-ttu-id="2b4d9-123"><xref:System.Converter%602> 委托</span><span class="sxs-lookup"><span data-stu-id="2b4d9-123">The <xref:System.Converter%602> delegate</span></span>  
+-   <span data-ttu-id="3f251-123"><xref:System.Converter%602> 委托</span><span class="sxs-lookup"><span data-stu-id="3f251-123">The <xref:System.Converter%602> delegate</span></span>  
   
- <span data-ttu-id="2b4d9-124">有关详细信息和示例，请参阅[对 Func 和 Action 泛型委托使用变体 (C#)](../../../../csharp/programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md)。</span><span class="sxs-lookup"><span data-stu-id="2b4d9-124">For more information and examples, see [Using Variance for Func and Action Generic Delegates (C#)](../../../../csharp/programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md).</span></span>  
+ <span data-ttu-id="3f251-124">有关详细信息和示例，请参阅[对 Func 和 Action 泛型委托使用变体 (C#)](../../../../csharp/programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md)。</span><span class="sxs-lookup"><span data-stu-id="3f251-124">For more information and examples, see [Using Variance for Func and Action Generic Delegates (C#)](../../../../csharp/programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md).</span></span>  
   
-### <a name="declaring-variant-type-parameters-in-generic-delegates"></a><span data-ttu-id="2b4d9-125">声明泛型委托中的变体类型参数</span><span class="sxs-lookup"><span data-stu-id="2b4d9-125">Declaring Variant Type Parameters in Generic Delegates</span></span>  
- <span data-ttu-id="2b4d9-126">如果泛型委托具有协变或逆变泛型类型参数，则该委托可被称为“变体泛型委托”。</span><span class="sxs-lookup"><span data-stu-id="2b4d9-126">If a generic delegate has covariant or contravariant generic type parameters, it can be referred to as a *variant generic delegate*.</span></span>  
+### <a name="declaring-variant-type-parameters-in-generic-delegates"></a><span data-ttu-id="3f251-125">声明泛型委托中的变体类型参数</span><span class="sxs-lookup"><span data-stu-id="3f251-125">Declaring Variant Type Parameters in Generic Delegates</span></span>  
+ <span data-ttu-id="3f251-126">如果泛型委托具有协变或逆变泛型类型参数，则该委托可被称为“变体泛型委托”。</span><span class="sxs-lookup"><span data-stu-id="3f251-126">If a generic delegate has covariant or contravariant generic type parameters, it can be referred to as a *variant generic delegate*.</span></span>  
   
- <span data-ttu-id="2b4d9-127">可以使用 `out` 关键字声明泛型委托中的泛型类型参数协变。</span><span class="sxs-lookup"><span data-stu-id="2b4d9-127">You can declare a generic type parameter covariant in a generic delegate by using the `out` keyword.</span></span> <span data-ttu-id="2b4d9-128">协变类型只能用作方法返回类型，而不能用作方法参数的类型。</span><span class="sxs-lookup"><span data-stu-id="2b4d9-128">The covariant type can be used only as a method return type and not as a type of method arguments.</span></span> <span data-ttu-id="2b4d9-129">以下代码示例演示了如何声明协变泛型委托。</span><span class="sxs-lookup"><span data-stu-id="2b4d9-129">The following code example shows how to declare a covariant generic delegate.</span></span>  
+ <span data-ttu-id="3f251-127">可以使用 `out` 关键字声明泛型委托中的泛型类型参数协变。</span><span class="sxs-lookup"><span data-stu-id="3f251-127">You can declare a generic type parameter covariant in a generic delegate by using the `out` keyword.</span></span> <span data-ttu-id="3f251-128">协变类型只能用作方法返回类型，而不能用作方法参数的类型。</span><span class="sxs-lookup"><span data-stu-id="3f251-128">The covariant type can be used only as a method return type and not as a type of method arguments.</span></span> <span data-ttu-id="3f251-129">以下代码示例演示了如何声明协变泛型委托。</span><span class="sxs-lookup"><span data-stu-id="3f251-129">The following code example shows how to declare a covariant generic delegate.</span></span>  
   
 ```csharp  
 public delegate R DCovariant<out R>();  
 ```  
   
- <span data-ttu-id="2b4d9-130">可以使用 `in` 关键字声明泛型委托中的泛型类型参数逆变。</span><span class="sxs-lookup"><span data-stu-id="2b4d9-130">You can declare a generic type parameter contravariant in a generic delegate by using the `in` keyword.</span></span> <span data-ttu-id="2b4d9-131">逆变类型只能用作方法参数的类型，而不能用作方法返回类型。</span><span class="sxs-lookup"><span data-stu-id="2b4d9-131">The contravariant type can be used only as a type of method arguments and not as a method return type.</span></span> <span data-ttu-id="2b4d9-132">以下代码示例演示了如何声明逆变泛型委托。</span><span class="sxs-lookup"><span data-stu-id="2b4d9-132">The following code example shows how to declare a contravariant generic delegate.</span></span>  
+ <span data-ttu-id="3f251-130">可以使用 `in` 关键字声明泛型委托中的泛型类型参数逆变。</span><span class="sxs-lookup"><span data-stu-id="3f251-130">You can declare a generic type parameter contravariant in a generic delegate by using the `in` keyword.</span></span> <span data-ttu-id="3f251-131">逆变类型只能用作方法参数的类型，而不能用作方法返回类型。</span><span class="sxs-lookup"><span data-stu-id="3f251-131">The contravariant type can be used only as a type of method arguments and not as a method return type.</span></span> <span data-ttu-id="3f251-132">以下代码示例演示了如何声明逆变泛型委托。</span><span class="sxs-lookup"><span data-stu-id="3f251-132">The following code example shows how to declare a contravariant generic delegate.</span></span>  
   
 ```csharp  
 public delegate void DContravariant<in A>(A a);  
 ```  
   
 > [!IMPORTANT]
->  <span data-ttu-id="2b4d9-133">C# 中的 `ref`、`in` 和 `out` 参数不能标记为变体。</span><span class="sxs-lookup"><span data-stu-id="2b4d9-133">`ref`, `in`, and `out` parameters in C# can't be marked as variant.</span></span>  
+>  <span data-ttu-id="3f251-133">C# 中的 `ref`、`in` 和 `out` 参数不能标记为变体。</span><span class="sxs-lookup"><span data-stu-id="3f251-133">`ref`, `in`, and `out` parameters in C# can't be marked as variant.</span></span>  
   
- <span data-ttu-id="2b4d9-134">可以在同一个委托中支持变体和协变，但这只适用于不同类型的参数。</span><span class="sxs-lookup"><span data-stu-id="2b4d9-134">It is also possible to support both variance and covariance in the same delegate, but for different type parameters.</span></span> <span data-ttu-id="2b4d9-135">这在下面的示例中显示。</span><span class="sxs-lookup"><span data-stu-id="2b4d9-135">This is shown in the following example.</span></span>  
+ <span data-ttu-id="3f251-134">可以在同一个委托中支持变体和协变，但这只适用于不同类型的参数。</span><span class="sxs-lookup"><span data-stu-id="3f251-134">It is also possible to support both variance and covariance in the same delegate, but for different type parameters.</span></span> <span data-ttu-id="3f251-135">这在下面的示例中显示。</span><span class="sxs-lookup"><span data-stu-id="3f251-135">This is shown in the following example.</span></span>  
   
 ```csharp  
 public delegate R DVariant<in A, out R>(A a);  
 ```  
   
-### <a name="instantiating-and-invoking-variant-generic-delegates"></a><span data-ttu-id="2b4d9-136">实例化和调用变体泛型委托</span><span class="sxs-lookup"><span data-stu-id="2b4d9-136">Instantiating and Invoking Variant Generic Delegates</span></span>  
- <span data-ttu-id="2b4d9-137">可以像实例化和调用固定委托一样，实例化和调用变体委托。</span><span class="sxs-lookup"><span data-stu-id="2b4d9-137">You can instantiate and invoke variant delegates just as you instantiate and invoke invariant delegates.</span></span> <span data-ttu-id="2b4d9-138">在以下示例中，该委托通过 lambda 表达式进行实例化。</span><span class="sxs-lookup"><span data-stu-id="2b4d9-138">In the following example, the delegate is instantiated by a lambda expression.</span></span>  
+### <a name="instantiating-and-invoking-variant-generic-delegates"></a><span data-ttu-id="3f251-136">实例化和调用变体泛型委托</span><span class="sxs-lookup"><span data-stu-id="3f251-136">Instantiating and Invoking Variant Generic Delegates</span></span>  
+ <span data-ttu-id="3f251-137">可以像实例化和调用固定委托一样，实例化和调用变体委托。</span><span class="sxs-lookup"><span data-stu-id="3f251-137">You can instantiate and invoke variant delegates just as you instantiate and invoke invariant delegates.</span></span> <span data-ttu-id="3f251-138">在以下示例中，该委托通过 lambda 表达式进行实例化。</span><span class="sxs-lookup"><span data-stu-id="3f251-138">In the following example, the delegate is instantiated by a lambda expression.</span></span>  
   
 ```csharp  
 DVariant<String, String> dvariant = (String str) => str + " ";  
 dvariant("test");  
 ```  
   
-### <a name="combining-variant-generic-delegates"></a><span data-ttu-id="2b4d9-139">合并变体泛型委托</span><span class="sxs-lookup"><span data-stu-id="2b4d9-139">Combining Variant Generic Delegates</span></span>  
- <span data-ttu-id="2b4d9-140">不应合并变体委托。</span><span class="sxs-lookup"><span data-stu-id="2b4d9-140">You should not combine variant delegates.</span></span> <span data-ttu-id="2b4d9-141"><xref:System.Delegate.Combine%2A> 方法不支持变体委托转换，并且要求委托的类型完全相同。</span><span class="sxs-lookup"><span data-stu-id="2b4d9-141">The <xref:System.Delegate.Combine%2A> method does not support variant delegate conversion and expects delegates to be of exactly the same type.</span></span> <span data-ttu-id="2b4d9-142">这会导致在使用 <xref:System.Delegate.Combine%2A> 方法或使用 `+` 运算符合并委托时出现运行时异常，如以下代码示例中所示。</span><span class="sxs-lookup"><span data-stu-id="2b4d9-142">This can lead to a run-time exception when you combine delegates either by using the <xref:System.Delegate.Combine%2A> method or by using the `+` operator, as shown in the following code example.</span></span>  
+### <a name="combining-variant-generic-delegates"></a><span data-ttu-id="3f251-139">合并变体泛型委托</span><span class="sxs-lookup"><span data-stu-id="3f251-139">Combining Variant Generic Delegates</span></span>  
+ <span data-ttu-id="3f251-140">不应合并变体委托。</span><span class="sxs-lookup"><span data-stu-id="3f251-140">You should not combine variant delegates.</span></span> <span data-ttu-id="3f251-141"><xref:System.Delegate.Combine%2A> 方法不支持变体委托转换，并且要求委托的类型完全相同。</span><span class="sxs-lookup"><span data-stu-id="3f251-141">The <xref:System.Delegate.Combine%2A> method does not support variant delegate conversion and expects delegates to be of exactly the same type.</span></span> <span data-ttu-id="3f251-142">这会导致在使用 <xref:System.Delegate.Combine%2A> 方法或使用 `+` 运算符合并委托时出现运行时异常，如以下代码示例中所示。</span><span class="sxs-lookup"><span data-stu-id="3f251-142">This can lead to a run-time exception when you combine delegates either by using the <xref:System.Delegate.Combine%2A> method or by using the `+` operator, as shown in the following code example.</span></span>  
   
 ```csharp  
 Action<object> actObj = x => Console.WriteLine("object: {0}", x);  
@@ -168,10 +168,10 @@ Action<string> actStr = x => Console.WriteLine("string: {0}", x);
 // Delegate.Combine(actStr, actObj);  
 ```  
   
-## <a name="variance-in-generic-type-parameters-for-value-and-reference-types"></a><span data-ttu-id="2b4d9-143">泛型类型参数中用于值和引用类型的变体</span><span class="sxs-lookup"><span data-stu-id="2b4d9-143">Variance in Generic Type Parameters for Value and Reference Types</span></span>  
- <span data-ttu-id="2b4d9-144">泛型类型参数的变体仅支持引用类型。</span><span class="sxs-lookup"><span data-stu-id="2b4d9-144">Variance for generic type parameters is supported for reference types only.</span></span> <span data-ttu-id="2b4d9-145">例如，`DVariant<int>` 不能隐式转换为 `DVariant<Object>` 或 `DVariant<long>`，因为整数是值类型。</span><span class="sxs-lookup"><span data-stu-id="2b4d9-145">For example, `DVariant<int>` can't be implicitly converted to `DVariant<Object>` or `DVariant<long>`, because integer is a value type.</span></span>  
+## <a name="variance-in-generic-type-parameters-for-value-and-reference-types"></a><span data-ttu-id="3f251-143">泛型类型参数中用于值和引用类型的变体</span><span class="sxs-lookup"><span data-stu-id="3f251-143">Variance in Generic Type Parameters for Value and Reference Types</span></span>  
+ <span data-ttu-id="3f251-144">泛型类型参数的变体仅支持引用类型。</span><span class="sxs-lookup"><span data-stu-id="3f251-144">Variance for generic type parameters is supported for reference types only.</span></span> <span data-ttu-id="3f251-145">例如，`DVariant<int>` 不能隐式转换为 `DVariant<Object>` 或 `DVariant<long>`，因为整数是值类型。</span><span class="sxs-lookup"><span data-stu-id="3f251-145">For example, `DVariant<int>` can't be implicitly converted to `DVariant<Object>` or `DVariant<long>`, because integer is a value type.</span></span>  
   
- <span data-ttu-id="2b4d9-146">以下示例演示了泛型类型参数中的变体不支持值类型。</span><span class="sxs-lookup"><span data-stu-id="2b4d9-146">The following example demonstrates that variance in generic type parameters is not supported for value types.</span></span>  
+ <span data-ttu-id="3f251-146">以下示例演示了泛型类型参数中的变体不支持值类型。</span><span class="sxs-lookup"><span data-stu-id="3f251-146">The following example demonstrates that variance in generic type parameters is not supported for value types.</span></span>  
   
 ```csharp  
 // The type T is covariant.  
@@ -196,8 +196,8 @@ public static void Test()
 }  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="2b4d9-147">请参阅</span><span class="sxs-lookup"><span data-stu-id="2b4d9-147">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="3f251-147">请参阅</span><span class="sxs-lookup"><span data-stu-id="3f251-147">See Also</span></span>
 
-- [<span data-ttu-id="2b4d9-148">泛型</span><span class="sxs-lookup"><span data-stu-id="2b4d9-148">Generics</span></span>](~/docs/standard/generics/index.md)  
-- [<span data-ttu-id="2b4d9-149">对 Func 和 Action 泛型委托使用变体 (C#)</span><span class="sxs-lookup"><span data-stu-id="2b4d9-149">Using Variance for Func and Action Generic Delegates (C#)</span></span>](../../../../csharp/programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md)  
-- [<span data-ttu-id="2b4d9-150">如何：合并委托（多播委托）</span><span class="sxs-lookup"><span data-stu-id="2b4d9-150">How to: Combine Delegates (Multicast Delegates)</span></span>](../../../../csharp/programming-guide/delegates/how-to-combine-delegates-multicast-delegates.md)
+- [<span data-ttu-id="3f251-148">泛型</span><span class="sxs-lookup"><span data-stu-id="3f251-148">Generics</span></span>](~/docs/standard/generics/index.md)  
+- [<span data-ttu-id="3f251-149">对 Func 和 Action 泛型委托使用变体 (C#)</span><span class="sxs-lookup"><span data-stu-id="3f251-149">Using Variance for Func and Action Generic Delegates (C#)</span></span>](../../../../csharp/programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md)  
+- [<span data-ttu-id="3f251-150">如何：合并委托（多播委托）</span><span class="sxs-lookup"><span data-stu-id="3f251-150">How to: Combine Delegates (Multicast Delegates)</span></span>](../../../../csharp/programming-guide/delegates/how-to-combine-delegates-multicast-delegates.md)
