@@ -3,11 +3,11 @@ title: 如何：编写基于上下文查找元素的查询 (C#)
 ms.date: 07/20/2015
 ms.assetid: 3ff79ef0-fc8b-42fe-8cc0-10dc32b06b4e
 ms.openlocfilehash: c1c43bc47df1612be26c78351a9d30272a020160
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45593304"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "45987950"
 ---
 # <a name="how-to-write-a-query-that-finds-elements-based-on-context-c"></a>如何：编写基于上下文查找元素的查询 (C#)
 有时，您可能必须编写基于元素上下文选择元素的查询。 您可能需要基于前面或后面的同级元素进行筛选。 您可能需要基于子元素或上级元素进行筛选。  

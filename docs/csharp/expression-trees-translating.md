@@ -4,11 +4,11 @@ description: 介绍如何访问表达式树中的每个节点，同时生成该�
 ms.date: 06/20/2016
 ms.assetid: b453c591-acc6-4e08-8175-97e5bc65958e
 ms.openlocfilehash: bd4aec2ef34e4dc972ae867c6b5070f92dcbc498
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45678941"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "45971887"
 ---
 # <a name="translating-expression-trees"></a>转换表达式树
 

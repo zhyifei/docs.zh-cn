@@ -3,11 +3,11 @@ title: 教程：将查询链接在一起 (C#)
 ms.date: 07/20/2015
 ms.assetid: 44f54444-c4c5-4c23-9d19-986b957b8eda
 ms.openlocfilehash: cab012a6ae618bd731c26bc1a002c144b84d2169
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45609627"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46489925"
 ---
 # <a name="tutorial-chaining-queries-together-c"></a>教程：将查询链接在一起 (C#)
 本教程阐释将查询链接在一起时的处理模型。 将查询链接在一起是编写函数转换的一个关键部分。 确切理解链接的查询如何工作非常重要。  

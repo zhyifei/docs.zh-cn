@@ -12,11 +12,11 @@ ms.assetid: 40a67826-e4df-4f59-a651-d9eb0fdc755d
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 1874d5512f04f22b9c53bdc9e92d0c96e45d21c8
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45649484"
+ms.lasthandoff: 09/22/2018
+ms.locfileid: "46697914"
 ---
 # <a name="how-to-determine-which-net-framework-versions-are-installed"></a>如何：确定安装了哪些 .NET Framework 版本
 

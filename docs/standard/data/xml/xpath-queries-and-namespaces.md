@@ -9,11 +9,11 @@ ms.assetid: ef6402be-2f8e-4be2-8d3e-a80891cdef8b
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: b11ac80b671c345768da23d2b51d2333c228aaeb
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45615006"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46003720"
 ---
 # <a name="xpath-queries-and-namespaces"></a>XPath 查询和命名空间
 XPath 查询支持 XML 文档中的命名空间，可以使用命名空间前缀来限定元素和属性的名称。 使用命名空间前缀来限定元素和属性的名称可以限制 XPath 查询只返回属于特定命名空间的节点。  

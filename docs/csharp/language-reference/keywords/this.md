@@ -9,11 +9,11 @@ helpviewer_keywords:
 - this keyword [C#]
 ms.assetid: d4f827fe-4710-410b-89b8-867dad44b8a3
 ms.openlocfilehash: df1bf6a3e6d24b231bf5e3c7a960f49084c4e53a
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45616573"
+ms.lasthandoff: 09/22/2018
+ms.locfileid: "46577348"
 ---
 # <a name="this-c-reference"></a>this（C# 参考）
 `this` 关键字指代类的当前实例，还可用作扩展方法的第一个参数的修饰符。  

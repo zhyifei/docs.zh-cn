@@ -6,11 +6,11 @@ ms.assetid: a42f81b3-0403-4e34-b346-7d2129804e54
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 67fdbcdbff64bcd91c80fbeaec0c41982b68d98f
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45646137"
+ms.lasthandoff: 09/22/2018
+ms.locfileid: "46695376"
 ---
 # <a name="creating-new-entity-references"></a>创建新实体引用
 CreateEntityReference 方法新建 XmlEntityReference 节点。 XML 文档对象模型 (DOM) 查看是否已声明了引用的实体名称。 如果已声明，从实体声明节点复制 XmlEntityReference 节点的子节点。 如果没有匹配的实体声明，则附加一个空的文本节点作为实体引用节点的唯一子级。 由于 XmlEntityReference 节点的子节点是其他节点的副本，因此这些子节点是只读的，无法修改。  

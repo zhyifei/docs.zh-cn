@@ -6,11 +6,11 @@ ms.assetid: 71d03b78-6898-4ce7-b0fc-1282573f31f7
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 623583f16c23b55c16f648fedcd039ca36f73b1f
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45597610"
+ms.lasthandoff: 09/22/2018
+ms.locfileid: "46583702"
 ---
 # <a name="types-of-xml-nodes"></a>XML 节点类型
 当将 XML 文档作为节点树读入内存时，这些节点的节点类型在创建节点时确定。 XML 文档对象模型 (DOM) 具有多种节点类型，这些类型由万维网联合会 (W3C) 确定并在 1.1.1 节“The DOM Structure Model”中列出。 下表列出了节点类型、分配给该节点类型的对象以及每种节点类型的简短说明。  

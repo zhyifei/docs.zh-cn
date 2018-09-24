@@ -13,11 +13,11 @@ helpviewer_keywords:
 - AsyncCompletedEventArgs class
 ms.assetid: a00046aa-785d-4f7f-a8e5-d06475ea50da
 ms.openlocfilehash: af30f0d09ce772f20f342ec0936d0ca63f5465d7
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45592018"
+ms.lasthandoff: 09/22/2018
+ms.locfileid: "46584202"
 ---
 # <a name="deciding-when-to-implement-the-event-based-asynchronous-pattern"></a>确定何时实现基于事件的异步模式
 基于事件的异步模式可用于公开类的异步行为。 通过引入此模式，[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 定义了下面两种用于公开异步行为的模式：基于 <xref:System.IAsyncResult?displayProperty=nameWithType> 接口的异步模式和基于事件的模式。 本主题介绍了何时适合实现这两种模式。  

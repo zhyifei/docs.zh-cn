@@ -6,11 +6,11 @@ ms.assetid: c57b46e6-5c77-408f-bc4e-67a5dcc9cc05
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: dca266066a4e53a57789210fd61e90edfcc13b79
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45687395"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "45988681"
 ---
 # <a name="accessing-xml-data-using-xpathnavigator"></a>使用 XPathNavigator 访问 XML 数据
 <xref:System.Xml.XPath.XPathNavigator> 类提供的方法用于在 <xref:System.Xml.XPath.XPathDocument> 或 <xref:System.Xml.XmlDocument> 对象中浏览节点，提取 XML 数据，以及访问强类型 XML 数据。  

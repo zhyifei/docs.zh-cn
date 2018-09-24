@@ -6,11 +6,11 @@ helpviewer_keywords:
 - command line [C#]
 ms.assetid: 66e70056-dd20-453c-a9b3-507e0478b015
 ms.openlocfilehash: 4b6dfdbce131371553fc729206de29794266bfbe
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45594540"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "46710678"
 ---
 # <a name="command-line-build-with-cscexe"></a>使用 csc.exe 实现命令行生成
 通过在命令提示符处键入 C# 编译器的可执行文件名称 (csc.exe)，可调用该编译器。

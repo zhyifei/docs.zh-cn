@@ -2,13 +2,13 @@
 title: 使用 Visual Studio 中的 Roslyn 语法可视化工具浏览代码
 description: 语法可视化工具提供了可视化工具，用于浏览 .NET Compiler Platform SDK 为代码生成的模型。
 ms.date: 03/07/2018
-ms.custom: mvc
-ms.openlocfilehash: 3029c868ad9b0384cf11e57a00b123acd1177806
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.custom: mvc, vs-dotnet
+ms.openlocfilehash: 97a058eed8c0babebd3a41ec91875bef83ac3527
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43456459"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "45750201"
 ---
 # <a name="explore-code-with-the-roslyn-syntax-visualizer-in-visual-studio"></a>使用 Visual Studio 中的 Roslyn 语法可视化工具浏览代码
 

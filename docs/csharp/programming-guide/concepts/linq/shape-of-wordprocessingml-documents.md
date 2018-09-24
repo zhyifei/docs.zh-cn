@@ -3,11 +3,11 @@ title: WordprocessingML 文档的形状 (C#)
 ms.date: 07/20/2015
 ms.assetid: 3791b5e0-c502-469b-bb75-a7bf6fdd0a94
 ms.openlocfilehash: aeb047f23f60ba6951950a85a6e2ef57fcbd9dda
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45597271"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46002952"
 ---
 # <a name="shape-of-wordprocessingml-documents-c"></a>WordprocessingML 文档的形状 (C#)
 本主题介绍 WordprocessingML 文档的 XML 形状。  

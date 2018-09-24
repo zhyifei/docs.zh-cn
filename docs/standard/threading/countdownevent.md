@@ -11,11 +11,11 @@ ms.assetid: eec3812a-e20f-4ecd-bfef-6921d508b708
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 49b01fdd14d1adfe0480f93150ab6e996aa84dee
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45616496"
+ms.lasthandoff: 09/21/2018
+ms.locfileid: "46562154"
 ---
 # <a name="countdownevent"></a>CountdownEvent
 <xref:System.Threading.CountdownEvent?displayProperty=nameWithType> 是在收到信号特定次数后取消阻止等待线程的同步基元。 <xref:System.Threading.CountdownEvent> 适用于以下情况：不得不先使用 <xref:System.Threading.ManualResetEvent> 或 <xref:System.Threading.ManualResetEventSlim> 并手动递减变量，然后再向事件发出信号。 例如，在分支/联接方案中，可以只创建信号计数为 5 的 <xref:System.Threading.CountdownEvent>，然后在线程池中启动五个工作项，并让每个工作项在完成时调用 <xref:System.Threading.CountdownEvent.Signal%2A>。 每次调用 <xref:System.Threading.CountdownEvent.Signal%2A> 都会让信号计数递减 1。 在主线程上，<xref:System.Threading.CountdownEvent.Wait%2A> 调用一直阻止到信号计数为零。  

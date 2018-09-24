@@ -4,12 +4,13 @@ description: 了解如何在 Windows 上的 Visual Studio 2017 中生成完整�
 author: bleroy
 ms.author: mairaw
 ms.date: 11/16/2016
-ms.openlocfilehash: 52b8781cdc29ac776123402c982353ef437ce74f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.custom: vs-dotnet
+ms.openlocfilehash: 15537ea8c68b5c873bbf26ab0519a19de0b13230
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33214388"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "45969556"
 ---
 # <a name="building-a-complete-net-core-solution-on-windows-using-visual-studio-2017"></a>在 Windows 上，使用 Visual Studio 2017 生成完整的 .NET Core 解决方案
 

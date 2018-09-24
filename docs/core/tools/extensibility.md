@@ -4,12 +4,12 @@ description: 了解如何扩展命令行接口 (CLI) 工具。
 author: blackdwarf
 ms.author: mairaw
 ms.date: 04/12/2017
-ms.openlocfilehash: a9cfebbeddbedc329432c805c5956b382a726a77
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 9f54479704f547ada567619a82b24a47a0b104c4
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45592057"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "46326571"
 ---
 # <a name="net-core-cli-tools-extensibility-model"></a>.NET Core CLI 工具扩展性模型
 
@@ -133,7 +133,7 @@ NuGet 可将[自定义 MSBuild 目标和属性文件打包](/nuget/create-packag
 
 若要使用自定义目标，请提供指向此程序包的 `<PackageReference>` 以及项目内正在进行扩展的该程序包版本。 与工具不同，自定义目标包未包含在使用项目中的依赖项结尾。
 
-使用自定义目标仅取决于配置方式。 由于它是 MSBuild 目标，因此会依赖于给定的目标并在另一个目标后运行，也可使用 `dotnet msbuild /t:<target-name>` 命令手动调用。
+使用自定义目标仅取决于配置方式。 由于它是 MSBuild 目标，因此会依赖于给定的目标并在另一个目标后运行，也可使用 `dotnet msbuild -t:<target-name>` 命令手动调用。
 
 但是，如果要为用户提供更好的用户体验，可以合并基于项目的工具和自定义目标。 在这种情况下，基于项目的工具实质上只需接受任何所需的参数并将其转换为执行目标所需的 [`dotnet msbuild`](dotnet-msbuild.md) 调用。 有关此类协同作用的示例，请访问 [`dotnet-packer`](https://github.com/dotnet/MVPSummitHackathon2016/tree/master/dotnet-packer) 项目中的 [2016 年编程马拉松 MVP 峰会示例](https://github.com/dotnet/MVPSummitHackathon2016)存储库。
 

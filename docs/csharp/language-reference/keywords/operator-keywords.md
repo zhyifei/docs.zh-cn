@@ -6,11 +6,11 @@ helpviewer_keywords:
 - operators [C#], keywords
 ms.assetid: f745c81f-f8d8-4673-86a1-0f3a85cc63c3
 ms.openlocfilehash: b6a7fbc08647ace73676403937f4b0f79e7ff585
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45679114"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46003641"
 ---
 # <a name="operator-keywords-c-reference"></a>运算符关键字（C# 参考）
 用于执行其他操作，例如创建对象、检查对象的运行时类型、获取类型的大小等等。 本部分介绍以下关键字：  

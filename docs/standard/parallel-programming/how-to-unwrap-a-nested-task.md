@@ -11,11 +11,11 @@ ms.assetid: a0769dd2-0f6d-48ca-8418-a9d39de7f450
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 224f9273b0c8c9445a6a9e25f064e9726acc84f0
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45616943"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "45750188"
 ---
 # <a name="how-to-unwrap-a-nested-task"></a>如何：解除嵌套任务的包装
 可以从方法返回任务，再等待或继续执行此任务，如下面的示例所示：  

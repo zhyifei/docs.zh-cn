@@ -14,11 +14,11 @@ ms.assetid: 37dfe4e3-7da0-48b6-a3d9-398981524e1c
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 7021a984f844660c45ae3e2d98569432ab64b657
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45668374"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46002991"
 ---
 # <a name="retrieving-information-stored-in-attributes"></a>检索存储在特性中的信息
 检索自定义属性的过程非常简单。 首先，声明要检索的属性实例。 然后，使用 <xref:System.Attribute.GetCustomAttribute%2A?displayProperty=nameWithType> 方法，用要检索的属性的值初始化新属性。 在初始化新属性后，只需使用它的属性即可获取值。  
