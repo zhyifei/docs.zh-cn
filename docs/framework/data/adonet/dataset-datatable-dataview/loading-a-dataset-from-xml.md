@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 49c083b7-a5ed-41cf-aabc-5aaba96f00e6
 ms.openlocfilehash: 3a781f17ac3cabebce17955b9a7e2edda4d4fd4b
-ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/20/2018
-ms.locfileid: "46485832"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "47027342"
 ---
 # <a name="loading-a-dataset-from-xml"></a>从 XML 加载数据集
 ADO.NET <xref:System.Data.DataSet> 的内容可以从 XML 流或文档创建。 此外，利用 .NET Framework，您可以相当灵活地控制从 XML 中加载哪些信息以及如何创建 <xref:System.Data.DataSet> 的架构（即关系结构）。  
@@ -19,7 +19,7 @@ ADO.NET <xref:System.Data.DataSet> 的内容可以从 XML 流或文档创建。 
   
  下表描述的选项**XmlReadMode**参数。  
   
-|选项|Description|  
+|选项|描述|  
 |------------|-----------------|  
 |**Auto**|这是默认设置。 检查 XML 并按如下顺序选择最适合的选项：<br /><br /> -如果 XML 为 DiffGram **DiffGram**使用。<br />-如果<xref:System.Data.DataSet>包含一个架构或 XML 包含内联架构**ReadSchema**使用。<br />-如果<xref:System.Data.DataSet>不包含架构且 XML 不包含内联架构**InferSchema**使用。<br /><br /> 如果您知道所读取的 XML 的格式，为获得最佳性能建议设置显式**XmlReadMode**，而不是不是接受**自动**默认值。|  
 |**ReadSchema**|读取内联架构并加载数据和架构。<br /><br /> 如果 <xref:System.Data.DataSet> 已包含架构，则新表将从内联架构添加到 <xref:System.Data.DataSet> 中的现有架构。 如果 <xref:System.Data.DataSet> 中已存在内联架构中的任何表，则将引发异常。 你将不能修改现有的表使用的架构**XmlReadMode.ReadSchema**。<br /><br /> 如果 <xref:System.Data.DataSet> 不包含架构，并且没有内联架构，则不会读取任何数据。<br /><br /> 内联架构可以使用 XML 架构定义语言 (XSD) 架构来定义。 有关编写内联架构作为 XML 架构的详细信息，请参阅[派生数据集关系结构从 XML 架构 (XSD)](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/deriving-dataset-relational-structure-from-xml-schema-xsd.md)。|  

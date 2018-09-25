@@ -8,11 +8,11 @@ helpviewer_keywords:
 - Extensible Application Markup Language [WPF]
 ms.assetid: 5d858575-a83b-42df-ad3f-047ed2d6e3c8
 ms.openlocfilehash: 5a1db973be51d98ad6e55062fac23e31926f2bb1
-ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46539067"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "46710757"
 ---
 # <a name="xaml-in-wpf"></a>WPF 中的 XAML
 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] 编程一种声明性应用程序标记语言。 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 实现 aXAML 处理器实现中，并提供 XAML 语言支持。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]类型实现，这样它们可以为所需的类型支持的 XAML 表示形式。 一般情况下，可以创建的大多数您[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]XAML 标记中的应用程序 UI。  

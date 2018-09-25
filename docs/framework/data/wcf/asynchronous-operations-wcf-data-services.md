@@ -7,11 +7,11 @@ helpviewer_keywords:
 - WCF Data Services, client library
 ms.assetid: 679644c7-e3fc-422c-b14a-b44b683900d0
 ms.openlocfilehash: 665e424ada24e5e2990eccde7193a91dc039b265
-ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46532303"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "47027851"
 ---
 # <a name="asynchronous-operations-wcf-data-services"></a>异步操作（WCF 数据服务）
 与内部网络中运行的应用程序相比，Web 应用程序必须适应客户端与服务器之间更长时间的延迟。 若要优化应用程序的性能和用户体验，建议您在通过 Web 访问 <xref:System.Data.Services.Client.DataServiceContext> 服务器时使用 <xref:System.Data.Services.Client.DataServiceQuery%601> 和 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 类的异步方法。  

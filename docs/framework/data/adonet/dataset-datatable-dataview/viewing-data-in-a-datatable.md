@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 1d26e0fb-f6e0-4afa-9a9c-b8d55b8f20dc
 ms.openlocfilehash: de745633060dd4f7b1610492d0ff57ec7a4f545b
-ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46530214"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "46710704"
 ---
 # <a name="viewing-data-in-a-datatable"></a>查看数据表中的数据
 可以访问的内容<xref:System.Data.DataTable>通过使用**行**并**列**集合**DataTable**。 此外可以使用<xref:System.Data.DataTable.Select%2A>方法来返回中的数据的子集**DataTable**根据包括搜索条件的条件，排序顺序和行状态。 此外，还可以使用<xref:System.Data.DataRowCollection.Find%2A>方法**DataRowCollection**搜索使用的主键值的特定行时。  
