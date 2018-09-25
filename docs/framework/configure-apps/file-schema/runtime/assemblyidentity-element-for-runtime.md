@@ -11,24 +11,23 @@ helpviewer_keywords:
 ms.assetid: cea4d187-6398-4da4-af09-c1abc6a349c1
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 5d985d1620b7dec324c0113bcd5652cede044950
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 2b0d7968ce2cf8f326004c9e564cb2e7912c1a0a
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32744962"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47077338"
 ---
-# <a name="ltassemblyidentitygt-element-for-ltruntimegt"></a><span data-ttu-id="b63ab-102">&lt;assemblyIdentity&gt;元素&lt;运行时&gt;</span><span class="sxs-lookup"><span data-stu-id="b63ab-102">&lt;assemblyIdentity&gt; Element for &lt;runtime&gt;</span></span>
-<span data-ttu-id="b63ab-103">包含有关程序集的标识信息。</span><span class="sxs-lookup"><span data-stu-id="b63ab-103">Contains identifying information about the assembly.</span></span>  
+# <a name="ltassemblyidentitygt-element-for-ltruntimegt"></a><span data-ttu-id="78fb4-102">&lt;assemblyIdentity&gt;元素&lt;运行时&gt;</span><span class="sxs-lookup"><span data-stu-id="78fb4-102">&lt;assemblyIdentity&gt; Element for &lt;runtime&gt;</span></span>
+<span data-ttu-id="78fb4-103">包含有关程序集的标识信息。</span><span class="sxs-lookup"><span data-stu-id="78fb4-103">Contains identifying information about the assembly.</span></span>  
   
- <span data-ttu-id="b63ab-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="b63ab-104">\<configuration></span></span>  
-<span data-ttu-id="b63ab-105">\<运行时 ></span><span class="sxs-lookup"><span data-stu-id="b63ab-105">\<runtime></span></span>  
-<span data-ttu-id="b63ab-106">\<assemblyBinding ></span><span class="sxs-lookup"><span data-stu-id="b63ab-106">\<assemblyBinding></span></span>  
-<span data-ttu-id="b63ab-107">\<dependentAssembly ></span><span class="sxs-lookup"><span data-stu-id="b63ab-107">\<dependentAssembly></span></span>  
-<span data-ttu-id="b63ab-108">\<assemblyIdentity ></span><span class="sxs-lookup"><span data-stu-id="b63ab-108">\<assemblyIdentity></span></span>  
+ <span data-ttu-id="78fb4-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="78fb4-104">\<configuration></span></span>  
+<span data-ttu-id="78fb4-105">\<运行时 ></span><span class="sxs-lookup"><span data-stu-id="78fb4-105">\<runtime></span></span>  
+<span data-ttu-id="78fb4-106">\<assemblyBinding ></span><span class="sxs-lookup"><span data-stu-id="78fb4-106">\<assemblyBinding></span></span>  
+<span data-ttu-id="78fb4-107">\<dependentAssembly ></span><span class="sxs-lookup"><span data-stu-id="78fb4-107">\<dependentAssembly></span></span>  
+<span data-ttu-id="78fb4-108">\<assemblyIdentity ></span><span class="sxs-lookup"><span data-stu-id="78fb4-108">\<assemblyIdentity></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="b63ab-109">语法</span><span class="sxs-lookup"><span data-stu-id="b63ab-109">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="78fb4-109">语法</span><span class="sxs-lookup"><span data-stu-id="78fb4-109">Syntax</span></span>  
   
 ```xml  
    <assemblyIdentity    
@@ -37,45 +36,45 @@ publicKeyToken="public key token"
 culture="assembly culture"/>  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="b63ab-110">特性和元素</span><span class="sxs-lookup"><span data-stu-id="b63ab-110">Attributes and Elements</span></span>  
- <span data-ttu-id="b63ab-111">下列各节描述了特性、子元素和父元素。</span><span class="sxs-lookup"><span data-stu-id="b63ab-111">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="78fb4-110">特性和元素</span><span class="sxs-lookup"><span data-stu-id="78fb4-110">Attributes and Elements</span></span>  
+ <span data-ttu-id="78fb4-111">下列各节描述了特性、子元素和父元素。</span><span class="sxs-lookup"><span data-stu-id="78fb4-111">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="b63ab-112">特性</span><span class="sxs-lookup"><span data-stu-id="b63ab-112">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="78fb4-112">特性</span><span class="sxs-lookup"><span data-stu-id="78fb4-112">Attributes</span></span>  
   
-|<span data-ttu-id="b63ab-113">特性</span><span class="sxs-lookup"><span data-stu-id="b63ab-113">Attribute</span></span>|<span data-ttu-id="b63ab-114">描述</span><span class="sxs-lookup"><span data-stu-id="b63ab-114">Description</span></span>|  
+|<span data-ttu-id="78fb4-113">特性</span><span class="sxs-lookup"><span data-stu-id="78fb4-113">Attribute</span></span>|<span data-ttu-id="78fb4-114">描述</span><span class="sxs-lookup"><span data-stu-id="78fb4-114">Description</span></span>|  
 |---------------|-----------------|  
-|`name`|<span data-ttu-id="b63ab-115">必需的特性。</span><span class="sxs-lookup"><span data-stu-id="b63ab-115">Required attribute.</span></span><br /><br /> <span data-ttu-id="b63ab-116">程序集的名称</span><span class="sxs-lookup"><span data-stu-id="b63ab-116">The name of the assembly</span></span>|  
-|`culture`|<span data-ttu-id="b63ab-117">可选特性。</span><span class="sxs-lookup"><span data-stu-id="b63ab-117">Optional attribute.</span></span><br /><br /> <span data-ttu-id="b63ab-118">一个字符串，指定的语言和国家/地区的程序集。</span><span class="sxs-lookup"><span data-stu-id="b63ab-118">A string that specifies the language and country/region of the assembly.</span></span>|  
-|`publicKeyToken`|<span data-ttu-id="b63ab-119">可选特性。</span><span class="sxs-lookup"><span data-stu-id="b63ab-119">Optional attribute.</span></span><br /><br /> <span data-ttu-id="b63ab-120">一个十六进制值，指定的程序集的强名称。</span><span class="sxs-lookup"><span data-stu-id="b63ab-120">A hexadecimal value that specifies the strong name of the assembly.</span></span>|  
-|`processorArchitecture`|<span data-ttu-id="b63ab-121">可选特性。</span><span class="sxs-lookup"><span data-stu-id="b63ab-121">Optional attribute.</span></span><br /><br /> <span data-ttu-id="b63ab-122">指定包含特定于处理器的代码程序集的处理器体系结构的值"x86"、"amd64"、"msil"或"ia64"之一。</span><span class="sxs-lookup"><span data-stu-id="b63ab-122">One of the values "x86", "amd64", "msil", or "ia64", specifying the processor architecture for an assembly that contains processor-specific code.</span></span> <span data-ttu-id="b63ab-123">值不区分大小写。</span><span class="sxs-lookup"><span data-stu-id="b63ab-123">The values are not case-sensitive.</span></span> <span data-ttu-id="b63ab-124">如果该特性被赋予任何其他值，整个`<assemblyIdentity>`元素将被忽略。</span><span class="sxs-lookup"><span data-stu-id="b63ab-124">If the attribute is assigned any other value, the entire `<assemblyIdentity>` element is ignored.</span></span> <span data-ttu-id="b63ab-125">请参阅 <xref:System.Reflection.ProcessorArchitecture>。</span><span class="sxs-lookup"><span data-stu-id="b63ab-125">See <xref:System.Reflection.ProcessorArchitecture>.</span></span>|  
+|`name`|<span data-ttu-id="78fb4-115">必需的特性。</span><span class="sxs-lookup"><span data-stu-id="78fb4-115">Required attribute.</span></span><br /><br /> <span data-ttu-id="78fb4-116">程序集的名称</span><span class="sxs-lookup"><span data-stu-id="78fb4-116">The name of the assembly</span></span>|  
+|`culture`|<span data-ttu-id="78fb4-117">可选特性。</span><span class="sxs-lookup"><span data-stu-id="78fb4-117">Optional attribute.</span></span><br /><br /> <span data-ttu-id="78fb4-118">一个字符串，指定的语言和国家/地区的程序集。</span><span class="sxs-lookup"><span data-stu-id="78fb4-118">A string that specifies the language and country/region of the assembly.</span></span>|  
+|`publicKeyToken`|<span data-ttu-id="78fb4-119">可选特性。</span><span class="sxs-lookup"><span data-stu-id="78fb4-119">Optional attribute.</span></span><br /><br /> <span data-ttu-id="78fb4-120">一个十六进制值，该值指定程序集的强名称。</span><span class="sxs-lookup"><span data-stu-id="78fb4-120">A hexadecimal value that specifies the strong name of the assembly.</span></span>|  
+|`processorArchitecture`|<span data-ttu-id="78fb4-121">可选特性。</span><span class="sxs-lookup"><span data-stu-id="78fb4-121">Optional attribute.</span></span><br /><br /> <span data-ttu-id="78fb4-122">为包含特定于处理器的代码程序集指定的处理器体系结构的值"x86"、"amd64"、"msil"或"ia64"之一。</span><span class="sxs-lookup"><span data-stu-id="78fb4-122">One of the values "x86", "amd64", "msil", or "ia64", specifying the processor architecture for an assembly that contains processor-specific code.</span></span> <span data-ttu-id="78fb4-123">值不区分大小写。</span><span class="sxs-lookup"><span data-stu-id="78fb4-123">The values are not case-sensitive.</span></span> <span data-ttu-id="78fb4-124">如果该属性分配任何其他值，则整个`<assemblyIdentity>`元素将被忽略。</span><span class="sxs-lookup"><span data-stu-id="78fb4-124">If the attribute is assigned any other value, the entire `<assemblyIdentity>` element is ignored.</span></span> <span data-ttu-id="78fb4-125">请参阅 <xref:System.Reflection.ProcessorArchitecture>。</span><span class="sxs-lookup"><span data-stu-id="78fb4-125">See <xref:System.Reflection.ProcessorArchitecture>.</span></span>|  
   
-## <a name="processorarchitecture-attribute"></a><span data-ttu-id="b63ab-126">processorArchitecture 属性</span><span class="sxs-lookup"><span data-stu-id="b63ab-126">processorArchitecture Attribute</span></span>  
+## <a name="processorarchitecture-attribute"></a><span data-ttu-id="78fb4-126">processorArchitecture 属性</span><span class="sxs-lookup"><span data-stu-id="78fb4-126">processorArchitecture Attribute</span></span>  
   
-|<span data-ttu-id="b63ab-127">值</span><span class="sxs-lookup"><span data-stu-id="b63ab-127">Value</span></span>|<span data-ttu-id="b63ab-128">描述</span><span class="sxs-lookup"><span data-stu-id="b63ab-128">Description</span></span>|  
+|<span data-ttu-id="78fb4-127">“值”</span><span class="sxs-lookup"><span data-stu-id="78fb4-127">Value</span></span>|<span data-ttu-id="78fb4-128">描述</span><span class="sxs-lookup"><span data-stu-id="78fb4-128">Description</span></span>|  
 |-----------|-----------------|  
-|`amd64`|<span data-ttu-id="b63ab-129">仅 64 位 AMD 处理器。</span><span class="sxs-lookup"><span data-stu-id="b63ab-129">A 64-bit AMD processor only.</span></span>|  
-|`ia64`|<span data-ttu-id="b63ab-130">仅 64 位 Intel 处理器。</span><span class="sxs-lookup"><span data-stu-id="b63ab-130">A 64-bit Intel processor only.</span></span>|  
-|`msil`|<span data-ttu-id="b63ab-131">特定于处理器和每字位数</span><span class="sxs-lookup"><span data-stu-id="b63ab-131">Neutral with respect to processor and bits-per-word</span></span>|  
-|`x86`|<span data-ttu-id="b63ab-132">32 位 Intel 处理器、 是本机或在 64 位平台上的 Windows (WOW) 环境上的 Windows 中。</span><span class="sxs-lookup"><span data-stu-id="b63ab-132">A 32-bit Intel processor, either native or in the Windows on Windows (WOW) environment on a 64-bit platform.</span></span>|  
+|`amd64`|<span data-ttu-id="78fb4-129">仅 64 位 AMD 处理器。</span><span class="sxs-lookup"><span data-stu-id="78fb4-129">A 64-bit AMD processor only.</span></span>|  
+|`ia64`|<span data-ttu-id="78fb4-130">仅 64 位 Intel 处理器。</span><span class="sxs-lookup"><span data-stu-id="78fb4-130">A 64-bit Intel processor only.</span></span>|  
+|`msil`|<span data-ttu-id="78fb4-131">特定于处理器和每字位数</span><span class="sxs-lookup"><span data-stu-id="78fb4-131">Neutral with respect to processor and bits-per-word</span></span>|  
+|`x86`|<span data-ttu-id="78fb4-132">32 位 Intel 处理器，位于本机或在 Windows 上的 64 位平台上的 Windows (WOW) 环境中。</span><span class="sxs-lookup"><span data-stu-id="78fb4-132">A 32-bit Intel processor, either native or in the Windows on Windows (WOW) environment on a 64-bit platform.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="b63ab-133">子元素</span><span class="sxs-lookup"><span data-stu-id="b63ab-133">Child Elements</span></span>  
- <span data-ttu-id="b63ab-134">无。</span><span class="sxs-lookup"><span data-stu-id="b63ab-134">None.</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="78fb4-133">子元素</span><span class="sxs-lookup"><span data-stu-id="78fb4-133">Child Elements</span></span>  
+ <span data-ttu-id="78fb4-134">无。</span><span class="sxs-lookup"><span data-stu-id="78fb4-134">None.</span></span>  
   
-### <a name="parent-elements"></a><span data-ttu-id="b63ab-135">父元素</span><span class="sxs-lookup"><span data-stu-id="b63ab-135">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="78fb4-135">父元素</span><span class="sxs-lookup"><span data-stu-id="78fb4-135">Parent Elements</span></span>  
   
-|<span data-ttu-id="b63ab-136">元素</span><span class="sxs-lookup"><span data-stu-id="b63ab-136">Element</span></span>|<span data-ttu-id="b63ab-137">描述</span><span class="sxs-lookup"><span data-stu-id="b63ab-137">Description</span></span>|  
+|<span data-ttu-id="78fb4-136">元素</span><span class="sxs-lookup"><span data-stu-id="78fb4-136">Element</span></span>|<span data-ttu-id="78fb4-137">描述</span><span class="sxs-lookup"><span data-stu-id="78fb4-137">Description</span></span>|  
 |-------------|-----------------|  
-|`assemblyBinding`|<span data-ttu-id="b63ab-138">包含有关程序集版本重定向和程序集位置的信息。</span><span class="sxs-lookup"><span data-stu-id="b63ab-138">Contains information about assembly version redirection and the locations of assemblies.</span></span>|  
-|`configuration`|<span data-ttu-id="b63ab-139">公共语言运行时和 .NET Framework 应用程序所使用的每个配置文件中的根元素。</span><span class="sxs-lookup"><span data-stu-id="b63ab-139">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
-|`dependentAssembly`|<span data-ttu-id="b63ab-140">封装每个程序集的绑定策略和程序集位置。</span><span class="sxs-lookup"><span data-stu-id="b63ab-140">Encapsulates binding policy and assembly location for each assembly.</span></span> <span data-ttu-id="b63ab-141">使用一个`<dependentAssembly>`每个程序集的元素。</span><span class="sxs-lookup"><span data-stu-id="b63ab-141">Use one `<dependentAssembly>` element for each assembly.</span></span>|  
-|`runtime`|<span data-ttu-id="b63ab-142">包含有关程序集绑定和垃圾回收的信息。</span><span class="sxs-lookup"><span data-stu-id="b63ab-142">Contains information about assembly binding and garbage collection.</span></span>|  
+|`assemblyBinding`|<span data-ttu-id="78fb4-138">包含有关程序集版本重定向和程序集位置的信息。</span><span class="sxs-lookup"><span data-stu-id="78fb4-138">Contains information about assembly version redirection and the locations of assemblies.</span></span>|  
+|`configuration`|<span data-ttu-id="78fb4-139">公共语言运行时和 .NET Framework 应用程序所使用的每个配置文件中的根元素。</span><span class="sxs-lookup"><span data-stu-id="78fb4-139">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
+|`dependentAssembly`|<span data-ttu-id="78fb4-140">封装每个程序集的绑定策略和程序集位置。</span><span class="sxs-lookup"><span data-stu-id="78fb4-140">Encapsulates binding policy and assembly location for each assembly.</span></span> <span data-ttu-id="78fb4-141">使用一个`<dependentAssembly>`每个程序集的元素。</span><span class="sxs-lookup"><span data-stu-id="78fb4-141">Use one `<dependentAssembly>` element for each assembly.</span></span>|  
+|`runtime`|<span data-ttu-id="78fb4-142">包含有关程序集绑定和垃圾回收的信息。</span><span class="sxs-lookup"><span data-stu-id="78fb4-142">Contains information about assembly binding and garbage collection.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="b63ab-143">备注</span><span class="sxs-lookup"><span data-stu-id="b63ab-143">Remarks</span></span>  
- <span data-ttu-id="b63ab-144">每个 **\<dependentAssembly >** 元素都必须有一个 **\<assemblyIdentity >** 子元素。</span><span class="sxs-lookup"><span data-stu-id="b63ab-144">Every **\<dependentAssembly>** element must have one **\<assemblyIdentity>** child element.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="78fb4-143">备注</span><span class="sxs-lookup"><span data-stu-id="78fb4-143">Remarks</span></span>  
+ <span data-ttu-id="78fb4-144">每个 **\<dependentAssembly >** 元素必须有一个 **\<assemblyIdentity >** 子元素。</span><span class="sxs-lookup"><span data-stu-id="78fb4-144">Every **\<dependentAssembly>** element must have one **\<assemblyIdentity>** child element.</span></span>  
   
- <span data-ttu-id="b63ab-145">如果`processorArchitecture`属性是否存在、`<assemblyIdentity>`元素仅适用于具有相应的处理器体系结构的程序集。</span><span class="sxs-lookup"><span data-stu-id="b63ab-145">If the `processorArchitecture` attribute is present, the `<assemblyIdentity>` element applies only to the assembly with the corresponding processor architecture.</span></span> <span data-ttu-id="b63ab-146">如果`processorArchitecture`属性不存在，`<assemblyIdentity>`元素可以应用于任何处理器体系结构包含的程序集。</span><span class="sxs-lookup"><span data-stu-id="b63ab-146">If the `processorArchitecture` attribute is not present, the `<assemblyIdentity>` element can apply to an assembly with any processor architecture.</span></span>  
+ <span data-ttu-id="78fb4-145">如果`processorArchitecture`属性是否存在、`<assemblyIdentity>`元素仅适用于具有相应的处理器体系结构的程序集。</span><span class="sxs-lookup"><span data-stu-id="78fb4-145">If the `processorArchitecture` attribute is present, the `<assemblyIdentity>` element applies only to the assembly with the corresponding processor architecture.</span></span> <span data-ttu-id="78fb4-146">如果`processorArchitecture`属性不存在，`<assemblyIdentity>`元素可以将应用于具有任何处理器体系结构的程序集。</span><span class="sxs-lookup"><span data-stu-id="78fb4-146">If the `processorArchitecture` attribute is not present, the `<assemblyIdentity>` element can apply to an assembly with any processor architecture.</span></span>  
   
- <span data-ttu-id="b63ab-147">下面的示例演示两个程序集具有相同的名称，面向两个不同两个处理器体系结构，以及其版本不维护同步配置文件。当应用程序执行 x86 平台第一个`<assemblyIdentity>`元素得到应用，另一个被忽略。</span><span class="sxs-lookup"><span data-stu-id="b63ab-147">The following example shows a configuration file for two assemblies with the same name that target two different two processor architectures, and whose versions have not been maintained in synch. When the application executes on the x86 platform the first `<assemblyIdentity>` element applies and the other is ignored.</span></span> <span data-ttu-id="b63ab-148">如果应用程序执行在非 x86 或 ia64 平台上，同时将被忽略。</span><span class="sxs-lookup"><span data-stu-id="b63ab-148">If the application executes on a platform other than x86 or ia64, both are ignored.</span></span>  
+ <span data-ttu-id="78fb4-147">下面的示例显示了两个程序集具有相同名称的针对两个不同两个处理器的体系结构，且其版本不维护同步配置文件。当应用程序执行 x86 平台第一个`<assemblyIdentity>`元素得到应用，另一个被忽略。</span><span class="sxs-lookup"><span data-stu-id="78fb4-147">The following example shows a configuration file for two assemblies with the same name that target two different two processor architectures, and whose versions have not been maintained in synch. When the application executes on the x86 platform the first `<assemblyIdentity>` element applies and the other is ignored.</span></span> <span data-ttu-id="78fb4-148">如果应用程序在非 x86 或 ia64 平台上执行，都将被忽略。</span><span class="sxs-lookup"><span data-stu-id="78fb4-148">If the application executes on a platform other than x86 or ia64, both are ignored.</span></span>  
   
 ```xml  
 <configuration>  
@@ -102,10 +101,10 @@ culture="assembly culture"/>
 </configuration>  
 ```  
   
- <span data-ttu-id="b63ab-149">如果配置文件包含`<assemblyIdentity>`元素没有`processorArchitecture`属性，然后在不包含相匹配的平台，而无需元素的元素`processorArchitecture`使用属性。</span><span class="sxs-lookup"><span data-stu-id="b63ab-149">If a configuration file contains an `<assemblyIdentity>` element with no `processorArchitecture` attribute, and does not contain an element that matches the platform, the element without the `processorArchitecture` attribute is used.</span></span>  
+ <span data-ttu-id="78fb4-149">如果配置文件包含`<assemblyIdentity>`元素没有`processorArchitecture`属性，并且不包含相匹配的平台，而无需元素的元素`processorArchitecture`使用属性。</span><span class="sxs-lookup"><span data-stu-id="78fb4-149">If a configuration file contains an `<assemblyIdentity>` element with no `processorArchitecture` attribute, and does not contain an element that matches the platform, the element without the `processorArchitecture` attribute is used.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="b63ab-150">示例</span><span class="sxs-lookup"><span data-stu-id="b63ab-150">Example</span></span>  
- <span data-ttu-id="b63ab-151">下面的示例演示如何提供有关程序集的信息。</span><span class="sxs-lookup"><span data-stu-id="b63ab-151">The following example shows how to provide information about an assembly.</span></span>  
+## <a name="example"></a><span data-ttu-id="78fb4-150">示例</span><span class="sxs-lookup"><span data-stu-id="78fb4-150">Example</span></span>  
+ <span data-ttu-id="78fb4-151">下面的示例演示如何提供有关程序集信息。</span><span class="sxs-lookup"><span data-stu-id="78fb4-151">The following example shows how to provide information about an assembly.</span></span>  
   
 ```xml  
 <configuration>  
@@ -122,7 +121,7 @@ culture="assembly culture"/>
 </configuration>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="b63ab-152">请参阅</span><span class="sxs-lookup"><span data-stu-id="b63ab-152">See Also</span></span>  
- [<span data-ttu-id="b63ab-153">运行时设置架构</span><span class="sxs-lookup"><span data-stu-id="b63ab-153">Runtime Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
- [<span data-ttu-id="b63ab-154">配置文件架构</span><span class="sxs-lookup"><span data-stu-id="b63ab-154">Configuration File Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/index.md)  
- [<span data-ttu-id="b63ab-155">重定向程序集版本</span><span class="sxs-lookup"><span data-stu-id="b63ab-155">Redirecting Assembly Versions</span></span>](../../../../../docs/framework/configure-apps/redirect-assembly-versions.md)
+## <a name="see-also"></a><span data-ttu-id="78fb4-152">请参阅</span><span class="sxs-lookup"><span data-stu-id="78fb4-152">See Also</span></span>  
+ [<span data-ttu-id="78fb4-153">运行时设置架构</span><span class="sxs-lookup"><span data-stu-id="78fb4-153">Runtime Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
+ [<span data-ttu-id="78fb4-154">配置文件架构</span><span class="sxs-lookup"><span data-stu-id="78fb4-154">Configuration File Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/index.md)  
+ [<span data-ttu-id="78fb4-155">重定向程序集版本</span><span class="sxs-lookup"><span data-stu-id="78fb4-155">Redirecting Assembly Versions</span></span>](../../../../../docs/framework/configure-apps/redirect-assembly-versions.md)
