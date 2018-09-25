@@ -27,19 +27,19 @@ ms.locfileid: "44038739"
   
      使你能够使用比原始指定的类型派生程度更大的类型。  
   
-     你可以向 `IEnumerable<Derived>` 类型的变量分配 `IEnumerable<Base>` （在 Visual Basic 中为 `IEnumerable(Of Derived)` ）的实例。  
+     可以向 `IEnumerable<Base>` 类型的变量分配 `IEnumerable<Derived>`（在 Visual Basic 中为 `IEnumerable(Of Derived)`）的实例。。  
   
 -   `Contravariance`  
   
      使你能够使用比原始指定的类型更泛型（派生程度更小）的类型。  
   
-     你可以向 `Action<Base>` 类型的变量分配 `Action<Derived>` （在 Visual Basic 中为 `Action(Of Base)` ）的实例。  
+     可以向 `Action<Derived>` 类型的变量分配 `Action<Base>`（在 Visual Basic 中为 `Action(Of Base)`）的实例。  
   
 -   `Invariance`  
   
      这意味着，你只能使用原始指定的类型；固定泛型类型参数既不是协变类型，也不是逆变类型。  
   
-     你无法向 `List<Base>` 类型的变量分配 `List<Derived>` （在 Visual Basic 中为 `List(Of Base)` ）的实例，反之亦然。  
+     无法向 `List<Derived>` 类型的变量分配 `List<Base>`（在 Visual Basic 中为 `List(Of Base)`）的实例，反之亦然。  
   
  利用协变类型参数，你可以执行非常类似于普通的[多形性](~/docs/csharp/programming-guide/classes-and-structs/polymorphism.md)的分配，如以下代码中所示。  
   
