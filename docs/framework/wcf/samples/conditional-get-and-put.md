@@ -3,11 +3,11 @@ title: 条件 Get 和 Put
 ms.date: 03/30/2017
 ms.assetid: 3d22067f-57b8-4e0f-a571-a694512187ae
 ms.openlocfilehash: 29819f89327128cdd71cc89eb8d14126522dc2df
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/22/2018
-ms.locfileid: "46580390"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47080168"
 ---
 # <a name="conditional-get-and-put"></a>条件 Get 和 Put
 此示例演示如何将新条件检索和更新 API 用于 WCF REST 编程模型。 由于条件检索和更新最适合面向资源的和 REST 服务，此示例扩展[基本资源服务](../../../../docs/framework/wcf/samples/basic-resource-service.md)示例。 此示例重点介绍添加对条件检索和更新的支持[基本资源服务](../../../../docs/framework/wcf/samples/basic-resource-service.md)示例使用新的 Api 中引入[!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)]。  

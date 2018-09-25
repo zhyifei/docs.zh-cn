@@ -1,5 +1,5 @@
 ---
-title: '&lt;清除&gt;authenticationModules （网络设置） 的元素'
+title: '&lt;清除&gt;authenticationModules （网络设置） 的'
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/authenticationModules/clear
@@ -12,16 +12,15 @@ helpviewer_keywords:
 ms.assetid: dc522c45-4a80-4831-8955-f7b68a47edfd
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 94e0242ca685e8b0118a55ba44fb0569c13f10f3
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: ef12a475dde103023d3411fb68efb3bdb4f6d116
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32751982"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47076688"
 ---
-# <a name="ltcleargt-element-for-authenticationmodules-network-settings"></a>&lt;清除&gt;authenticationModules （网络设置） 的元素
-清除从应用程序的所有身份验证模块。  
+# <a name="ltcleargt-element-for-authenticationmodules-network-settings"></a>&lt;清除&gt;authenticationModules （网络设置） 的
+清除所有身份验证模块从应用程序。  
   
  \<configuration>  
 \<system.net>  
@@ -47,16 +46,16 @@ ms.locfileid: "32751982"
   
 |**元素**|**说明**|  
 |-----------------|---------------------|  
-|[authenticationModules](../../../../../docs/framework/configure-apps/file-schema/network/authenticationmodules-element-network-settings.md)|指定用来验证网络请求的模块。|  
+|[authenticationModules](../../../../../docs/framework/configure-apps/file-schema/network/authenticationmodules-element-network-settings.md)|指定使用网络请求进行身份验证模块。|  
   
 ## <a name="remarks"></a>备注  
- `clear`元素中删除配置文件中或在配置层次结构中较高级别前面定义的所有身份验证模块。  
+ `clear`元素移除所有配置文件中或在配置层次结构中较高级别上前面定义的身份验证模块。  
   
 ## <a name="configuration-files"></a>配置文件  
  此元素可在应用程序配置文件或计算机配置文件 (Machine.config) 中使用。  
   
 ## <a name="example"></a>示例  
- 下面的示例中移除所有配置的身份验证模块。  
+ 以下示例将删除所有配置的身份验证模块。  
   
 ```xml  
 <configuration>  

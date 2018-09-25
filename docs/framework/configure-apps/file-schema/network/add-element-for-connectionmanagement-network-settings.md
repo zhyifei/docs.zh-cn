@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 856bf57d-1c63-46c7-a178-03d97b0a4149
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: c6cfd036a98c345da23fc7b3699987c9678e149d
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: cdc7e8501f7cf3f5cff4c29ca5b2d004ce7cd5c6
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32753737"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47080320"
 ---
 # <a name="ltaddgt-element-for-connectionmanagement-network-settings"></a>&lt;添加&gt;connectionManagement （网络设置） 的元素
 将 IP 地址或 DNS 名称添加到连接管理列表。  
@@ -65,7 +64,7 @@ ms.locfileid: "32753737"
  此元素可在应用程序配置文件或计算机配置文件 (Machine.config) 中使用。  
   
 ## <a name="example"></a>示例  
- 下面的示例将配置应用程序使用 4 个到 www.contoso.com 和两个连接到所有其他服务器。  
+ 下面的示例配置应用程序使用与服务器 www.contoso.com 的四个连接和两个连接到所有其他服务器。  
   
 ```xml  
 <configuration>  

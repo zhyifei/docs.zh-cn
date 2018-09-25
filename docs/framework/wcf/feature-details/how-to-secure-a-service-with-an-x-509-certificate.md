@@ -6,18 +6,17 @@ dev_langs:
 - vb
 ms.assetid: 2d06c2aa-d0d7-4e5e-ad7e-77416aa1c10b
 author: BrucePerlerMS
-manager: mbaldwin
-ms.openlocfilehash: 73fd9919d1403ef592e5b81c11b6eb659baea669
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1c5ab5e76ebed549df09b365a5a271f81003a517
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33493037"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47073549"
 ---
 # <a name="how-to-secure-a-service-with-an-x509-certificate"></a>如何：使用 X.509 证书保证服务的安全
-保护具有 X.509 证书的服务是大多数绑定中 Windows Communication Foundation (WCF) 使用的基本技术。 本主题演练使用 X.509 证书配置自承载服务的步骤。  
+保护使用 X.509 证书的服务是大多数绑定 Windows Communication Foundation (WCF) 中使用的基本技术。 本主题演练使用 X.509 证书配置自承载服务的步骤。  
   
- 先决条件是具有可用于对服务器进行身份验证的有效证书。 证书必须由受信任的证书颁发机构颁发给服务器。 如果证书无效，则尝试使用该服务的任何客户端都不会信任该服务，因此不会建立连接。 有关使用证书的详细信息，请参阅[使用证书](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)。  
+ 先决条件是具有可用于对服务器进行身份验证的有效证书。 证书必须由受信任的证书颁发机构颁发给服务器。 如果证书无效，则尝试使用该服务的任何客户端都不会信任该服务，因此不会建立连接。 有关使用证书的详细信息，请参阅[Working with Certificates](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)。  
   
 ### <a name="to-configure-a-service-with-a-certificate-using-code"></a>使用代码用证书配置服务  
   
@@ -33,7 +32,7 @@ ms.locfileid: "33493037"
      [!code-csharp[C_SecureWithCertificate#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securewithcertificate/cs/source.cs#2)]
      [!code-vb[C_SecureWithCertificate#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securewithcertificate/vb/source.vb#2)]  
   
-4.  为服务的基址创建 <xref:System.Uri> 类的一个实例。 因为`WSHttpBinding`使用 HTTP 传输，统一资源标识符 (URI) 必须以开头该架构，或打开服务时，Windows Communication Foundation (WCF) 将引发异常。  
+4.  为服务的基址创建 <xref:System.Uri> 类的一个实例。 因为`WSHttpBinding`使用 HTTP 传输，统一资源标识符 (URI) 必须以与该架构，或打开该服务时，Windows Communication Foundation (WCF) 将引发异常。  
   
      [!code-csharp[C_SecureWithCertificate#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securewithcertificate/cs/source.cs#3)]
      [!code-vb[C_SecureWithCertificate#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securewithcertificate/vb/source.vb#3)]  

@@ -3,11 +3,11 @@ title: 符号和运算符参考 (F#)
 description: '了解符号和 F # 编程语言中使用的运算符。'
 ms.date: 04/04/2018
 ms.openlocfilehash: 0e36f6cfc75b7d2e79bcf7acb89d260fd4e9b1ad
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/22/2018
-ms.locfileid: "46577686"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47113788"
 ---
 # <a name="symbol-and-operator-reference"></a>符号和运算符参考
 

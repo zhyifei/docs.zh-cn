@@ -3,11 +3,11 @@ title: 基本的只包含 XAML 的服务
 ms.date: 03/30/2017
 ms.assetid: c106feb0-0245-43b5-aefe-93ce0e4d38eb
 ms.openlocfilehash: f4f296a97b9c3093874c5ec8e05023e84b0af44a
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/22/2018
-ms.locfileid: "46583689"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47074705"
 ---
 # <a name="basic-xaml-only-service"></a>基本的只包含 XAML 的服务
 此示例演示如何创建只包含 XAML 服务。 此方案是一个用于解决车辆相关故障的诊断服务。 此服务作为一个工作流实现，它会向客户端询问一系列问题来诊断故障。 此服务可诊断两种类型的故障（车辆无法启动或空调无法工作）。 工作流使用设计器中的请求/答复模板来公开三个简单的服务操作。 通过在 IIS 中创建虚拟目录以及将 service1.xamlx 和 Web.config 文件复制到虚拟目录中，在 IIS 中承载服务，而无需编译的代码。 默认情况下此示例将自动将所需的文件复制到虚拟目录创建时遵循的 WCF 和 WF 示例的安装说明： [WindowsCommunicationFoundation示例的一次性安装过程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md) Visual Studio 2010 中生成时。  

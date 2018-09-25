@@ -3,13 +3,12 @@ title: '&lt; netMsmqBinding&gt; 的 &lt;security&gt;'
 ms.date: 03/30/2017
 ms.assetid: 001d11a9-7439-498c-b09d-fca20eaf8cd3
 author: BrucePerlerMS
-manager: mbaldwin
-ms.openlocfilehash: c525344b18322cef05f64e46c75cdab7b271561a
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 40f0e72069e96d3c0f28e708d67e8777e18e2b1f
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45673943"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47079945"
 ---
 # <a name="ltsecuritygt-of-ltnetmsmqbindinggt"></a>&lt; netMsmqBinding&gt; 的 &lt;security&gt;
 定义 MSMQ 绑定的安全设置。 它指定是否启用传输或 SOAP 安全；如果启用，还指定所使用的身份验证模式和保护级别。  

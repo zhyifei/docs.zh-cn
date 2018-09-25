@@ -10,13 +10,12 @@ helpviewer_keywords:
 ms.assetid: a71f605b-c7d9-4501-a5c3-abcbb964a43f
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: cb4af08095c14c0c748a79f53104d8454d3dcd47
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 69d6deafb6aad88f5d379c7e8d4ac707e4c51815
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32754153"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47088680"
 ---
 # <a name="ltperformancecountersgt-element"></a>&lt;performanceCounters&gt;元素
 指定由性能计数器共享的全局内存的大小。  
@@ -38,7 +37,7 @@ ms.locfileid: "32754153"
   
 |特性|描述|  
 |---------------|-----------------|  
-|filemappingsize|必需的特性。<br /><br /> 指定的大小，以字节为单位由性能计数器共享的全局内存。 默认值为 524288。|  
+|filemappingsize|必需的特性。<br /><br /> 指定的大小，以字节为单位的性能计数器共享的全局内存。 默认值为 524288。|  
   
 ### <a name="child-elements"></a>子元素  
  无。  
@@ -51,11 +50,11 @@ ms.locfileid: "32754153"
 |`system.diagnostics`|为 ASP.NET 配置节指定根元素。|  
   
 ## <a name="remarks"></a>备注  
- 性能计数器使用内存映射文件或共享的内存，发布性能数据。  共享内存的大小确定可以在一次使用多少个实例。  有两种类型的共享内存： 全局共享内存和单独的共享的内存。  安装的.NET Framework 版本 1.0 或 1.1 的所有性能计数器类别都使用全局共享的内存。  随.NET Framework 2.0 版一起安装的性能计数器类别使用单独的共享的内存，每个性能计数器类别都有自己的内存。  
+ 性能计数器使用内存映射文件或共享的内存，发布性能数据。  共享内存的大小决定可以在一次使用多少个实例。  有两种类型的共享内存： 全局共享内存和单独的共享的内存。  使用.NET framework 1.0 或 1.1 版安装的所有性能计数器类别都使用全局共享的内存。  安装.NET framework 2.0 版的性能计数器类别使用单独的共享的内存，每个性能计数器类别都有自己的内存。  
   
- 可以仅使用配置文件设置全局共享内存的大小。  默认大小为 524288 字节、 最大大小为 33554432 字节，和的最小大小为 32,768 字节。  由于全局共享的内存共享由所有进程和类别的第一个创建者指定的大小。  如果应用程序配置文件中定义的大小，如果你的应用程序的第一个应用程序会导致要执行的性能计数器才会使用该大小。  因此指定的正确位置`filemappingsize`值是 Machine.config 文件。  无法通过单个性能计数器，因此，最终全局共享的内存用完时，如果创建了大量的具有不同名称的性能计数器实例释放全局共享内存中的内存。  
+ 可以仅使用配置文件设置全局共享内存的大小。  默认大小为 524288 字节，最大大小是 33554432 字节的最小大小为 32,768 字节。  由于全局共享的内存中共享的所有进程和类别时，第一个创建者指定的大小。  如果在应用程序配置文件中定义的大小，如果你的应用程序是会导致要执行的性能计数器的第一个应用程序才会使用该大小。  因此正确的位置来指定`filemappingsize`值是 Machine.config 文件。  不能由单个性能计数器，因此，最终全局共享的内存已用尽，如果将创建大量具有不同名称的性能计数器实例的发布中全局共享内存的内存。  
   
- 对于单独的共享内存大小，在注册表中的 DWORD FileMappingSize 值密钥 HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\\*\<类别名称 >* 引用 \Performance首先后, 跟为配置文件中的全局共享内存指定的值。 如果 FileMappingSize 值不存在，则单独的共享的内存大小设置为一个第四个 (1/4) 配置文件中的全局设置。  
+ 对于单独共享内存的大小，在注册表中的 DWORD FileMappingSize 值密钥 HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\\*\<类别名称 >* \Performance 引用首先后, 跟为全局共享内存配置文件中指定的值。 如果 FileMappingSize 值不存在，则单独的共享的内存大小设置为一个第四个 (1/4) 配置文件中的全局设置。  
   
 ## <a name="see-also"></a>请参阅  
  <xref:System.Diagnostics.PerformanceCounter>  

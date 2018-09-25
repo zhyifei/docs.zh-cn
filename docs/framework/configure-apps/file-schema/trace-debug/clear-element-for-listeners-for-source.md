@@ -1,5 +1,5 @@
 ---
-title: '&lt;清除&gt;元素&lt;侦听器&gt;为&lt;源&gt;'
+title: '&lt;清除&gt;的元素&lt;侦听器&gt;为&lt;源&gt;'
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/sources/source/listeners/clear
@@ -9,15 +9,14 @@ helpviewer_keywords:
 ms.assetid: 76796bb2-9c0b-4526-8135-8bf18b16d8d9
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 8c6ef51dae36e94fa4a4fdc5ad8983380e78bde3
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 3674b5e8f54735010da901c76b77bd617218891e
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32746847"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47071748"
 ---
-# <a name="ltcleargt-element-for-ltlistenersgt-for-ltsourcegt"></a>&lt;清除&gt;元素&lt;侦听器&gt;为&lt;源&gt;
+# <a name="ltcleargt-element-for-ltlistenersgt-for-ltsourcegt"></a>&lt;清除&gt;的元素&lt;侦听器&gt;为&lt;源&gt;
 清除跟踪源的 `Listeners` 集合。  
   
  \<configuration>  
@@ -50,16 +49,16 @@ ms.locfileid: "32746847"
 |`system.diagnostics`|指定用于收集、存储和路由消息的跟踪侦听器以及对跟踪开关设置的级别。|  
 |`sources`|包含用于启动跟踪消息的跟踪源。|  
 |`source`|指定用于启动跟踪消息的跟踪源。|  
-|`listeners`|指定收集、 存储和将消息路由的侦听器。|  
+|`listeners`|指定侦听器，用于收集、 存储和路由消息。|  
   
 ## <a name="remarks"></a>备注  
- `<clear>`元素中移除所有侦听器从`Listeners`集合跟踪源，包括<xref:System.Diagnostics.DefaultTraceListener>。 你可以使用`<clear>`元素之前使用`<add>`被某些有没有其他活动的侦听器集合中的元素。  
+ `<clear>`元素中移除所有侦听器`Listeners`集合跟踪源，包括<xref:System.Diagnostics.DefaultTraceListener>。 可以使用`<clear>`元素之前使用`<add>`元素为特定集合中没有任何其他活动的侦听器。  
   
 ## <a name="configuration-file"></a>配置文件  
  计算机配置文件 (Machine.config) 和应用程序配置文件中，可以使用此元素。  
   
 ## <a name="example"></a>示例  
- 下面的示例演示如何使用`<clear>`元素之前使用`<add>`元素将侦听器`console`和`textListener`到`Listeners`跟踪源集合`TraceSourceApp`。  
+ 下面的示例演示如何使用`<clear>`之前使用的元素`<add>`元素添加侦听器`console`并`textListener`到`Listeners`跟踪源集合`TraceSourceApp`。  
   
 ```xml  
 <configuration>  

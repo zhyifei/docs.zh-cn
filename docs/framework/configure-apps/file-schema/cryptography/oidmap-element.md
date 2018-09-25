@@ -10,20 +10,19 @@ helpviewer_keywords:
 ms.assetid: 7f0c2246-c070-4748-b96a-2f66a296c539
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: db39d7de3566647b5171b71940c78a9a0ab6f5f1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4ec2ba884f0f60182dd59bb6a4491e223f43ce1a
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33350217"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47073536"
 ---
 # <a name="ltoidmapgt-element"></a>&lt;oidMap&gt;元素
-包含 ASN.1 对象标识符 (OID) 映射到类。  
+包含类的 ASN.1 对象标识符 (OID) 映射。  
   
  \<configuration>  
 \<mscorlib >  
-\<g s >  
+\<cryptographySettings >  
 \<oidMap >  
   
 ## <a name="syntax"></a>语法  
@@ -43,7 +42,7 @@ ms.locfileid: "33350217"
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<oidEntry >](../../../../../docs/framework/configure-apps/file-schema/cryptography/oidentry-element.md)|将 ASN.1 OID 映射到一个友好名称。|  
+|[\<oidEntry >](../../../../../docs/framework/configure-apps/file-schema/cryptography/oidentry-element.md)|将 ASN.1 OID 映射到友好名称。|  
   
 ### <a name="parent-elements"></a>父元素  
   
@@ -54,7 +53,7 @@ ms.locfileid: "33350217"
 |`mscorlib`|包含`cryptographySettings`元素。|  
   
 ## <a name="example"></a>示例  
- 下面的示例演示如何使用 **\<oidMap >** 元素以包含该哈希算法的实现的 ripemd-160 哈希算法的 oid 的映射。  
+ 下面的示例演示如何使用 **\<oidMap >** 元素以包含该哈希算法的实现将 RIPEMD-160 哈希算法的 OID 的映射。  
   
 ```xml  
 <configuration>  

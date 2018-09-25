@@ -3,13 +3,12 @@ title: WIF 会话管理
 ms.date: 03/30/2017
 ms.assetid: 98bce126-18a9-401b-b20d-67ee462a5f8a
 author: BrucePerlerMS
-manager: mbaldwin
-ms.openlocfilehash: 04c2f4bdfe2a6309fde0821db308ee2a83887323
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 980d0c6dca9b0b5fadf2d4a841e4c95a9acaff52
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43520547"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47084522"
 ---
 # <a name="wif-session-management"></a>WIF 会话管理
 客户端首次尝试访问信赖方托管的受保护资源时，客户端应先向信赖方信任的安全令牌服务 (STS) 验证自身身份。 然后，STS 向客户端颁发安全令牌。 客户端向信赖方出示此令牌，然后信赖方授予客户端访问受保护资源的权限。 但是，不希望客户端针对每个请求重新向 STS 进行身份验证，特别是因为它甚至可能与依赖方不在同一台计算机上或同一个域中。 相反，Windows Identity Foundation (WIF) 中客户端和信赖方建立一个会话，该会话中客户端为首次请求后的所有请求使用会话安全令牌向信赖方验证自身身份。 信赖方可以使用 cookie 中存储的此会话安全令牌重构客户端的 <xref:System.Security.Claims.ClaimsPrincipal?displayProperty=nameWithType>。  

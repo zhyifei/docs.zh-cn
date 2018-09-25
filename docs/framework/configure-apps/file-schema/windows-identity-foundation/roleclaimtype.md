@@ -1,18 +1,17 @@
 ---
-title: '&lt;roleClaimType&gt;'
+title: '&lt;RoleClaimType&gt;'
 ms.date: 03/30/2017
 ms.assetid: 69a49deb-6369-41ba-806b-ae8d21fac64b
 author: BrucePerlerMS
-manager: mbaldwin
-ms.openlocfilehash: 909df1bd6054d9737f91c30c3c6b2d68b932281c
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 565bf30d334c62c8132c60f411e89f7b260c54f1
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32755183"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47084340"
 ---
-# <a name="ltroleclaimtypegt"></a>&lt;roleClaimType&gt;
-指定的集合中定义的角色类型声明的声明类型<xref:System.Security.Claims.ClaimsIdentity>返回的对象<xref:System.IdentityModel.Tokens.SecurityTokenHandler.ValidateToken%2A>令牌处理程序方法。  
+# <a name="ltroleclaimtypegt"></a>&lt;RoleClaimType&gt;
+指定的集合中定义的角色类型声明的声明类型<xref:System.Security.Claims.ClaimsIdentity>返回的对象<xref:System.IdentityModel.Tokens.SecurityTokenHandler.ValidateToken%2A>令牌处理程序的方法。  
   
  \<system.identityModel>  
 \<identityConfiguration>  
@@ -45,7 +44,7 @@ ms.locfileid: "32755183"
   
 |特性|描述|  
 |---------------|-----------------|  
-|值|一个字符串，指定表示要用于此角色声明类型的声明的声明类型的 URI。|  
+|值|一个字符串，指定表示要用于角色声明类型的声明的声明类型的 URI。|  
   
 ### <a name="child-elements"></a>子元素  
  无  
@@ -54,7 +53,7 @@ ms.locfileid: "32755183"
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<samlSecurityTokenRequirement>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/samlsecuritytokenrequirement.md)|提供有关配置<xref:System.IdentityModel.Tokens.SamlSecurityTokenHandler>类，<xref:System.IdentityModel.Tokens.Saml2SecurityTokenHandler>类或这些类之一的派生的类。|  
+|[\<samlSecurityTokenRequirement>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/samlsecuritytokenrequirement.md)|提供用于配置<xref:System.IdentityModel.Tokens.SamlSecurityTokenHandler>类，<xref:System.IdentityModel.Tokens.Saml2SecurityTokenHandler>类或这些类的任何一个的派生的类。|  
   
 ## <a name="remarks"></a>备注  
  `<roleClaimType>`元素集<xref:System.IdentityModel.Tokens.SamlSecurityTokenRequirement.RoleClaimType%2A>属性时<xref:System.IdentityModel.Tokens.SamlSecurityTokenRequirement>从配置初始化对象。  

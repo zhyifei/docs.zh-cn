@@ -10,20 +10,19 @@ helpviewer_keywords:
 ms.assetid: 03db52ef-010e-44ea-b6fd-b9c900ecad50
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 728fff7b8626e227e692c713f4cb05049c14a9f1
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: e74cc5fa99473562b158cd5068fb8bbaeb6a4a17
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32742752"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47083908"
 ---
 # <a name="ltcryptoclassgt-element"></a>&lt;cryptoClass&gt;元素
 包含一个密码类，该类具有到 [\<nameEntry>](../../../../../docs/framework/configure-apps/file-schema/cryptography/nameentry-element.md) 元素中的友好名称的映射。  
   
  \<configuration>  
 \<mscorlib >  
-\<g s >  
+\<cryptographySettings >  
 \<cryptoNameMapping >  
 \<cryptoClasses >  
 \<cryptoClass >  
@@ -41,7 +40,7 @@ ms.locfileid: "32742752"
   
 |特性|描述|  
 |---------------|-----------------|  
-|`customClassName`|必需的特性。<br /><br /> 包含加密类的信息。 使用此属性以提供您的类的短名称。 必须指定满足要求中指定的字符串[指定完全限定的类型名称](../../../../../docs/framework/reflection-and-codedom/specifying-fully-qualified-type-names.md)。|  
+|`customClassName`|必需的特性。<br /><br /> 包含密码类的信息。 此属性用于提供您的类的短名称。 必须指定一个字符串，满足中指定的要求[指定完全限定的类型名称](../../../../../docs/framework/reflection-and-codedom/specifying-fully-qualified-type-names.md)。|  
   
 ### <a name="child-elements"></a>子元素  
  无。  
@@ -57,7 +56,7 @@ ms.locfileid: "32742752"
 |`mscorlib`|包含 [\<cryptographySettings>](../../../../../docs/framework/configure-apps/file-schema/cryptography/cryptographysettings-element.md) 元素。|  
   
 ## <a name="example"></a>示例  
- 下面的示例演示如何使用 **\<cryptoClass >** 元素来引用密码类并配置运行时。 然后，你可以将字符串"RSA"传递到<xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A?displayProperty=nameWithType>方法并使用<xref:System.Security.Cryptography.AsymmetricAlgorithm.Create%2A>方法以返回`MyCryptoRSAClass`对象。  
+ 以下示例演示如何使用 **\<cryptoClass >** 元素来引用一个密码类并配置运行时。 然后可以将字符串"RSA"传递给<xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A?displayProperty=nameWithType>方法，并使用<xref:System.Security.Cryptography.AsymmetricAlgorithm.Create%2A>方法以返回`MyCryptoRSAClass`对象。  
   
 ```xml  
 <configuration>  

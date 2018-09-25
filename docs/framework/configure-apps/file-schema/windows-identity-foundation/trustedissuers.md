@@ -3,16 +3,15 @@ title: '&lt;trustedIssuers&gt;'
 ms.date: 03/30/2017
 ms.assetid: d818c917-07b4-40db-9801-8676561859fd
 author: BrucePerlerMS
-manager: mbaldwin
-ms.openlocfilehash: f9daea7d6b78e2f6790050b35dde62db6058c60b
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: c390cecc265b27dfa8d9d0a892f5930c982f7054
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32757465"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47075367"
 ---
 # <a name="lttrustedissuersgt"></a>&lt;trustedIssuers&gt;
-配置使用的基于配置的颁发者名称注册表的受信任颁发者证书的列表 (<xref:System.IdentityModel.Tokens.ConfigurationBasedIssuerNameRegistry>)。  
+配置使用的基于配置的颁布者名称注册表的受信任的颁发者证书的列表 (<xref:System.IdentityModel.Tokens.ConfigurationBasedIssuerNameRegistry>)。  
   
  \<system.identityModel>  
 \<identityConfiguration>  
@@ -51,20 +50,20 @@ ms.locfileid: "32757465"
   
 |元素|描述|  
 |-------------|-----------------|  
-|`<add thumbprint=xs:string name=xs:string>`|将证书添加到受信任的颁发者的集合。 使用指定的证书`thumbprint`属性。 此属性是必需的并且应包含证书指纹的 ASN.1 编码形式。 `name`属性是可选的可以用于指定证书的友好名称。|  
-|`<clear>`|清除所有证书的受信任颁发者的集合。|  
+|`<add thumbprint=xs:string name=xs:string>`|将证书添加到受信任颁发者的集合。 使用指定的证书`thumbprint`属性。 此属性是必需的并且应包含证书指纹的 ASN.1 编码形式。 `name`属性是可选的可用于指定证书的友好名称。|  
+|`<clear>`|清除所有证书从受信任颁发者的集合。|  
 |`<remove thumbprint=xs:string>`|从受信任颁发者集合中删除证书。 使用指定的证书`thumbprint`属性。 该属性是必选项。|  
   
 ### <a name="parent-elements"></a>父元素  
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<issuerNameRegistry >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/issuernameregistry.md)|配置颁发者名称注册表。 **重要说明：** `type`属性`<issuerNameRegistry>`元素必须引用<xref:System.IdentityModel.Tokens.ConfigurationBasedIssuerNameRegistry>类`<trustedIssuers>`元素有效。|  
+|[\<issuerNameRegistry >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/issuernameregistry.md)|配置颁发者名称注册表。 **重要说明：** `type`的属性`<issuerNameRegistry>`元素必须引用<xref:System.IdentityModel.Tokens.ConfigurationBasedIssuerNameRegistry>类`<trustedIssuers>`元素有效。|  
   
 ## <a name="remarks"></a>备注  
- Windows Identity Foundation (WIF) 提供的单个实现<xref:System.IdentityModel.Tokens.IssuerNameRegistry>现成类<xref:System.IdentityModel.Tokens.ConfigurationBasedIssuerNameRegistry>类。 配置颁发者名称注册表维护从配置加载的受信任颁发者列表。 列表将每个颁发者名称与验证生成的颁发者的令牌的签名时需要的 X.509 证书相关联。 受信任颁发者证书的列表下指定`<trustedIssuers>`元素。 在列表中的每个元素将与验证生成的该颁发者的令牌的签名时需要的 X.509 证书关联的助记键的颁发者名称。 受信任的证书指定使用 ASN.1 编码形式的证书指纹和通过使用添加集合`<add>`元素。 您可以清除或从列表中删除颁发者 （证书），通过使用`<clear>`和`<remove>`元素。  
+ Windows Identity Foundation (WIF) 提供的单一实现<xref:System.IdentityModel.Tokens.IssuerNameRegistry>默认情况下，类<xref:System.IdentityModel.Tokens.ConfigurationBasedIssuerNameRegistry>类。 配置颁发者名称注册表维护从配置中加载的受信任颁发者列表。 列表将与所需验证颁发者生成的令牌签名的 X.509 证书关联的每个颁发者名称。 在指定的受信任的颁发者证书的列表`<trustedIssuers>`元素。 在列表中的每个元素将与验证生成的该颁发者的令牌签名所需的 X.509 证书关联的助记键的颁发者名称。 受信任的证书使用 ASN.1 编码的证书指纹的形式指定，并且通过使用添加集合`<add>`元素。 您可以清除或通过从列表中删除 （证书） 的颁发者`<clear>`和`<remove>`元素。  
   
- `type`属性`<issuerNameRegistry>`元素必须引用<xref:System.IdentityModel.Tokens.ConfigurationBasedIssuerNameRegistry>类`<trustedIssuers>`元素有效。  
+ `type`的属性`<issuerNameRegistry>`元素必须引用<xref:System.IdentityModel.Tokens.ConfigurationBasedIssuerNameRegistry>类`<trustedIssuers>`元素有效。  
   
 ## <a name="example"></a>示例  
  下面的 XML 演示如何指定配置基于颁发者名称注册表。  

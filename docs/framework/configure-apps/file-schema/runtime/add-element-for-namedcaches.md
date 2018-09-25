@@ -7,13 +7,12 @@ helpviewer_keywords:
 ms.assetid: ce2a63a8-c829-4742-a6ea-72ee5d89f169
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: d65dfd9a1560f2657f48b327277b64ab77014b47
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 695ee744bdf2226f0647c4cdf142a2dca4e97a4a
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32743818"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47085809"
 ---
 # <a name="ltaddgt-element-for-ltnamedcachesgt"></a>&lt;添加&gt;元素&lt;namedCaches&gt;
 将添加`namedCache`进入`namedCaches`内存缓存的集合。  
@@ -44,7 +43,7 @@ ms.locfileid: "32743818"
 |-|-|  
 |`CacheMemoryLimitMegabytes`|一个整数值，指定的最大允许大小 （以兆字节为单位） 的实例<xref:System.Runtime.Caching.MemoryCache>可以增长到。 默认值为 0，这意味着<xref:System.Runtime.Caching.MemoryCache>默认情况下使用类的自动调整大小试探法。|  
 |`Name`|缓存的名称。|  
-|`PhysicalMemoryLimitPercentage`|指定以物理方式安装的计算机可以由缓存使用的内存的最大百分比整数值介于 0 和 100 之间。 默认值为 0，这意味着<xref:System.Runtime.Caching.MemoryCache>默认情况下使用类的自动调整大小试探法。|  
+|`PhysicalMemoryLimitPercentage`|一个整数值介于 0 和 100 之间，指定可以使用由缓存以物理方式安装的计算机内存的最大百分比。 默认值为 0，这意味着<xref:System.Runtime.Caching.MemoryCache>默认情况下使用类的自动调整大小试探法。|  
 |`PollingInterval`|一个时间间隔的值，在该时间间隔之后，缓存实现会将当前内存负载与为缓存实例设置的基于绝对值和百分比的内存限制进行比较。 "Hh: mm:"格式输入此值。|  
   
 ### <a name="child-elements"></a>子元素  
@@ -57,10 +56,10 @@ ms.locfileid: "32743818"
 |[\<namedCaches>](../../../../../docs/framework/configure-apps/file-schema/runtime/namedcaches-element-cache-settings.md)|包含的配置设置的命名集合<xref:System.Runtime.Caching.MemoryCache>实例。|  
   
 ## <a name="remarks"></a>备注  
- `add`元素添加到一个条目`namedCaches`内存缓存的集合。 你可以使用[清除](../../../../../docs/framework/configure-apps/file-schema/runtime/clear-element-for-namedcaches.md)元素在使用之前`add`元素能够确定不是否存在任何其他命名缓存在集合中的。 在 machine.config 文件中并在 Web.config 文件中，可以使用此元素。  
+ `add`元素添加一个条目`namedCaches`内存缓存的集合。 可以使用[清除](../../../../../docs/framework/configure-apps/file-schema/runtime/clear-element-for-namedcaches.md)元素在使用之前`add`元素以确认是否不存在任何其他命名缓存在集合中的。 在 machine.config 文件中并在 Web.config 文件中，可以使用此元素。  
   
 ## <a name="example"></a>示例  
- 下面的示例演示如何定义默认设置`namedCache`进入`namedCaches`内存缓存的集合。  
+ 下面的示例演示如何定义的默认设置`namedCache`进入`namedCaches`内存缓存的集合。  
   
 ```xml  
 <configuration>  

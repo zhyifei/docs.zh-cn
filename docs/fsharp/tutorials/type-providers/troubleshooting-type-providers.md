@@ -3,11 +3,11 @@ title: 类型提供程序疑难解答
 description: '发现问题的最有可能要在 F # 中使用类型提供程序时遇到的潜在的解决方案。'
 ms.date: 05/16/2016
 ms.openlocfilehash: f3b8ffdaf615563305b7b84b45a9ed1e066d0dcc
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/22/2018
-ms.locfileid: "46577147"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47086705"
 ---
 # <a name="troubleshooting-type-providers"></a>类型提供程序疑难解答
 

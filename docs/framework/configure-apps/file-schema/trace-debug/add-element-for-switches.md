@@ -9,20 +9,19 @@ helpviewer_keywords:
 ms.assetid: 712ac3a7-7abf-4a9e-8db4-acd241c2f369
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: e0dc425327f6577606e1205a23fdaffcc39f6e01
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 0a1a2c9ec34c43eb1b9559d90a8da0d70193c19e
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32747449"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47109519"
 ---
 # <a name="ltaddgt-element-for-ltswitchesgt"></a>&lt;添加&gt;元素&lt;开关&gt;
 指定对跟踪开关设置的级别。  
   
  \<configuration>  
 \<system.diagnostics >  
-\<交换机 >  
+\<开关 >  
 \<add>  
   
 ## <a name="syntax"></a>语法  
@@ -40,7 +39,7 @@ ms.locfileid: "32747449"
 |特性|描述|  
 |---------------|-----------------|  
 |**name**|必需的特性。<br /><br /> 指定的交换机的名称。 此属性的值对应于*displayName*传递切换构造函数的参数。|  
-|**value**|必需的特性。<br /><br /> 指定开关的级别。|  
+|**value**|必需的特性。<br /><br /> 指定此开关的级别。|  
   
 ### <a name="child-elements"></a>子元素  
  无。  
@@ -54,7 +53,7 @@ ms.locfileid: "32747449"
 |`system.diagnostics`|指定用于收集、存储和路由消息的跟踪侦听器以及对跟踪开关设置的级别。|  
   
 ## <a name="remarks"></a>备注  
- 可以通过将它放在配置文件来更改跟踪开关的级别。 如果开关已<xref:System.Diagnostics.BooleanSwitch>，你可以将其打开和关闭。 如果开关已<xref:System.Diagnostics.TraceSwitch>，可以将不同级别分配到它，以指定类型的跟踪或调试消息的应用程序输出。  
+ 可以通过将它放在配置文件更改跟踪开关的级别。 如果该切换<xref:System.Diagnostics.BooleanSwitch>，您可以将其打开和关闭。 如果该切换<xref:System.Diagnostics.TraceSwitch>，可以将不同级别分配给该代码以指定类型的跟踪或调试消息的应用程序输出。  
   
 ## <a name="example"></a>示例  
  下面的示例演示如何使用**\<添加 >** 元素中设置`General`跟踪切换到<xref:System.Diagnostics.TraceLevel>级别，并启用`Data`布尔型跟踪开关。  

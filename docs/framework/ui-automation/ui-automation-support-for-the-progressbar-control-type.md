@@ -8,13 +8,12 @@ helpviewer_keywords:
 ms.assetid: 302e778c-24b0-4789-814a-c8d37cf53a5f
 author: Xansky
 ms.author: mhopkins
-manager: markl
-ms.openlocfilehash: 5cc985bad1b47dac284021729670bd4a2a2b6ac7
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: f00e4e96d337be0ec1d70a208e51b991f7d44e55
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43511814"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47082768"
 ---
 # <a name="ui-automation-support-for-the-progressbar-control-type"></a>UI 自动化对 ProgressBar 控件类型的支持
 > [!NOTE]

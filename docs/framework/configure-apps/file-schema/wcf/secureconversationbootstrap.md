@@ -3,13 +3,12 @@ title: '&lt;secureConversationBootstrap&gt;'
 ms.date: 03/30/2017
 ms.assetid: 66b46f95-fa2d-4b5b-b6ce-0572ab0cdd50
 author: BrucePerlerMS
-manager: mbaldwin
-ms.openlocfilehash: f7eab333899f5fc379db8fb5683ea3d29d04943c
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 703e89342cbfd4a957c10419d6583e85ec6f6d2a
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32751592"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47079839"
 ---
 # <a name="ltsecureconversationbootstrapgt"></a>&lt;secureConversationBootstrap&gt;
 指定用于启动安全对话服务的默认值。  
@@ -67,7 +66,7 @@ messageProtectionOrder="SignBeforeEncrypt/SignBeforeEncryptAndEncryptSignature/E
 |元素|描述|  
 |-------------|-----------------|  
 |[\<issuedTokenParameters>](../../../../../docs/framework/configure-apps/file-schema/wcf/issuedtokenparameters.md)|指定一个当前颁发的令牌。 此元素的类型为 <xref:System.ServiceModel.Configuration.IssuedTokenParametersElement>。|  
-|[\<g s >](../../../../../docs/framework/configure-apps/file-schema/wcf/localclientsettings-element.md)|指定此绑定的本地客户端安全设置。 此元素的类型为 <xref:System.ServiceModel.Configuration.LocalClientSecuritySettingsElement>。|  
+|[\<localClientSettings >](../../../../../docs/framework/configure-apps/file-schema/wcf/localclientsettings-element.md)|指定此绑定的本地客户端安全设置。 此元素的类型为 <xref:System.ServiceModel.Configuration.LocalClientSecuritySettingsElement>。|  
 |[\<localServiceSettings >](../../../../../docs/framework/configure-apps/file-schema/wcf/localservicesettings-element.md)|指定此绑定的本地服务安全设置。 此元素的类型为 <xref:System.ServiceModel.Configuration.LocalServiceSecuritySettingsElement>。|  
   
 ### <a name="parent-elements"></a>父元素  

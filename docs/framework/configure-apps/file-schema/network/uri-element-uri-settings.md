@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: c22bab8b-477c-4ae4-8498-65ad409e0847
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 05b2fb4255643f657f37012ec51a1b29ed68095d
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: a58c27500c0258415c12a5fd8e552b3ee43f50e8
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47108905"
 ---
 # <a name="lturigt-element-uri-settings"></a>&lt;Uri&gt;元素 （Uri 设置）
 包含指定.NET Framework 如何处理使用统一资源标识符 (Uri) 表示的 web 地址的设置。  
@@ -37,7 +37,7 @@ ms.lasthandoff: 05/03/2018
 |**元素**|**说明**|  
 |-----------------|---------------------|  
 |[idn](../../../../../docs/framework/configure-apps/file-schema/network/idn-element-uri-settings.md)|指定是否对域名应用国际化域名 (IDN) 分析。|  
-|[iriParsing](../../../../../docs/framework/configure-apps/file-schema/network/iriparsing-element-uri-settings.md)|指定是否对应用国际资源标识符 (IRI) 分析<xref:System.Uri>以及是否应应用 IRI 分析规则。|  
+|[iriParsing](../../../../../docs/framework/configure-apps/file-schema/network/iriparsing-element-uri-settings.md)|指定是否对应用国际资源标识符 (IRI) 分析<xref:System.Uri>，以及是否应该应用 IRI 分析规则。|  
 |[schemeSettings](../../../../../docs/framework/configure-apps/file-schema/network/schemesettings-element-uri-settings.md)|指定如何分析特定方案的 <xref:System.Uri>。|  
   
 ### <a name="parent-elements"></a>父元素  
@@ -47,12 +47,12 @@ ms.lasthandoff: 05/03/2018
 |[配置](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)|包含所有命名空间的设置。|  
   
 ## <a name="remarks"></a>备注  
- `uri`元素包含的成员的设置<xref:System.Uri>类中的类使用<xref:System.Net>命名空间。 设置配置对 IRI 和 IDN 支持。  
+ `uri`元素包含的成员设置<xref:System.Uri>类中的类使用<xref:System.Net>命名空间。 设置配置为 IRI 和 IDN 的支持。  
   
 ## <a name="example"></a>示例  
   
 ### <a name="description"></a>描述  
- 下面的示例演示使用的配置<xref:System.Uri>类，以支持 IRI 分析和 IDN 名称。 该示例还会清除所有方案设置，然后添加了对未转义百分比编码路径分隔符，使用 http 方案的支持。  
+ 下面的示例演示使用的配置<xref:System.Uri>类，以支持分析 IRI 和 IDN 名称。 该示例还会清除所有方案设置，然后添加对未转义的 http 方案的百分比编码路径分隔符的支持。  
   
 ### <a name="code"></a>代码  
   

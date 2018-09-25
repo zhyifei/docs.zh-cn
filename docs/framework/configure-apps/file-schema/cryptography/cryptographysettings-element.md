@@ -1,5 +1,5 @@
 ---
-title: '&lt;g s&gt;元素'
+title: '&lt;cryptographySettings&gt;元素'
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/mscorlib/cryptographySettings
@@ -10,20 +10,19 @@ helpviewer_keywords:
 ms.assetid: 6201b7da-bcb7-49f7-b9f5-ba1fe05573b9
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 14b510df192dcff1f005eec4f029aa0f26b967a4
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: dc55acd7a698ef37d45e8a412db684c13a3b8b16
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32751930"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47156611"
 ---
-# <a name="ltcryptographysettingsgt-element"></a>&lt;g s&gt;元素
+# <a name="ltcryptographysettingsgt-element"></a>&lt;cryptographySettings&gt;元素
 包含加密设置。  
   
  \<configuration>  
 \<mscorlib >  
-\<g s >  
+\<cryptographySettings >  
   
 ## <a name="syntax"></a>语法  
   
@@ -43,7 +42,7 @@ ms.locfileid: "32751930"
 |元素|描述|  
 |-------------|-----------------|  
 |[\<cryptoNameMapping >](../../../../../docs/framework/configure-apps/file-schema/cryptography/cryptonamemapping-element.md)|包含类到友好名称的映射。|  
-|[\<oidMap >](../../../../../docs/framework/configure-apps/file-schema/cryptography/oidmap-element.md)|包含 ASN.1 对象标识符 (OID) 映射到类。|  
+|[\<oidMap >](../../../../../docs/framework/configure-apps/file-schema/cryptography/oidmap-element.md)|包含类的 ASN.1 对象标识符 (OID) 映射。|  
   
 ### <a name="parent-elements"></a>父元素  
   
@@ -53,7 +52,7 @@ ms.locfileid: "32751930"
 |`mscorlib`|包含`cryptographySettings`元素。|  
   
 ## <a name="example"></a>示例  
- 下面的示例演示如何使用 **\<g s >** 元素以包含加密名称映射和 OID 映射。 此示例将配置为运行时，以便<xref:System.Security.Cryptography.HashAlgorithm.Create%2A?displayProperty=nameWithType>返回`MyHashClass`对象和`MyCryptoClass`类映射到对象标识符 1.3.36.2.1。  
+ 以下示例演示如何使用 **\<cryptographySettings >** 元素以包含加密名称映射和 OID 映射。 此示例将在运行时配置，以便<xref:System.Security.Cryptography.HashAlgorithm.Create%2A?displayProperty=nameWithType>将返回`MyHashClass`对象和`MyCryptoClass`类映射到的对象标识符 1.3.36.2.1。  
   
 ```xml  
 <configuration>  

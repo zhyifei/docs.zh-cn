@@ -1,5 +1,5 @@
 ---
-title: '&lt;清除&gt;元素&lt;侦听器&gt;为&lt;跟踪&gt;'
+title: '&lt;清除&gt;的元素&lt;侦听器&gt;为&lt;跟踪&gt;'
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/trace/listeners/clear
@@ -9,15 +9,14 @@ helpviewer_keywords:
 ms.assetid: b44732a8-271f-4a06-ba9e-fe3298d6f192
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 1705ed7cc847d60ecf8b42f4615d77f2cc569e21
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 91b4b4f132138fa6752c1da9b28e7a3ab7fad006
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32748654"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47082885"
 ---
-# <a name="ltcleargt-element-for-ltlistenersgt-for-lttracegt"></a>&lt;清除&gt;元素&lt;侦听器&gt;为&lt;跟踪&gt;
+# <a name="ltcleargt-element-for-ltlistenersgt-for-lttracegt"></a>&lt;清除&gt;的元素&lt;侦听器&gt;为&lt;跟踪&gt;
 清除跟踪的 `Listeners` 集合。  
   
  \<configuration>  
@@ -48,20 +47,20 @@ ms.locfileid: "32748654"
 |`configuration`|公共语言运行时和 .NET Framework 应用程序所使用的每个配置文件中的根元素。|  
 |`system.diagnostics`|指定用于收集、存储和路由消息的跟踪侦听器以及对跟踪开关设置的级别。|  
 |`trace`|包含用于收集、存储和路由跟踪消息的侦听器。|  
-|`listeners`|包含收集、 存储和将消息路由的侦听器。 侦听器将跟踪输出定向到适当的目标。|  
+|`listeners`|包含用于收集、 存储和路由消息的侦听器。 侦听器将跟踪输出定向到适当的目标。|  
   
 ## <a name="remarks"></a>备注  
- `<clear>`元素中移除所有侦听器从`Listeners`跟踪的集合。 你可以使用`<clear>`元素之前使用`<add>`被某些有没有其他活动的侦听器集合中的元素。  
+ `<clear>`元素中移除所有侦听器从`Listeners`跟踪的集合。 可以使用`<clear>`元素之前使用`<add>`元素为特定集合中没有任何其他活动的侦听器。  
   
- 您可以清除`Listeners`集合以编程方式通过调用<xref:System.Diagnostics.TraceListenerCollection.Clear%2A>方法<xref:System.Diagnostics.Trace.Listeners%2A?displayProperty=nameWithType>属性 (`System.Diagnostics.Trace.Listeners.Clear()`)。  
+ 您可以清除`Listeners`以编程方式调用集合<xref:System.Diagnostics.TraceListenerCollection.Clear%2A>方法<xref:System.Diagnostics.Trace.Listeners%2A?displayProperty=nameWithType>属性 (`System.Diagnostics.Trace.Listeners.Clear()`)。  
   
  计算机配置文件 (Machine.config) 和应用程序配置文件中，可以使用此元素。  
   
 > [!NOTE]
->  `<clear>`元素中删除<xref:System.Diagnostics.DefaultTraceListener>从`Listeners`集合，行为<xref:System.Diagnostics.Debug.Assert%2A?displayProperty=nameWithType>， <xref:System.Diagnostics.Trace.Assert%2A?displayProperty=nameWithType>， <xref:System.Diagnostics.Debug.Fail%2A?displayProperty=nameWithType>，和<xref:System.Diagnostics.Trace.Fail%2A?displayProperty=nameWithType>方法。 调用`Assert`或`Fail`方法通常会导致显示一个消息框。 但是，消息框如果不显示<xref:System.Diagnostics.DefaultTraceListener>不在`Listeners`集合。  
+>  `<clear>`元素中移除<xref:System.Diagnostics.DefaultTraceListener>从`Listeners`集合中，更改的行为<xref:System.Diagnostics.Debug.Assert%2A?displayProperty=nameWithType>， <xref:System.Diagnostics.Trace.Assert%2A?displayProperty=nameWithType>， <xref:System.Diagnostics.Debug.Fail%2A?displayProperty=nameWithType>，和<xref:System.Diagnostics.Trace.Fail%2A?displayProperty=nameWithType>方法。 调用`Assert`或`Fail`方法通常会显示一个消息框中。 但是，消息框如果不显示<xref:System.Diagnostics.DefaultTraceListener>不在`Listeners`集合。  
   
 ## <a name="example"></a>示例  
- 下面的示例演示如何使用`<clear>`元素之前使用`<add>`元素添加侦听器`console`到`Listeners`跟踪的集合。  
+ 下面的示例演示如何使用`<clear>`之前使用的元素`<add>`元素添加侦听器`console`到`Listeners`跟踪的集合。  
   
 ```xml  
 <configuration>  

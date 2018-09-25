@@ -9,13 +9,12 @@ helpviewer_keywords:
 ms.assetid: 6cc55983-b894-449b-8e26-b258e53939cd
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 6a3358b2d64ade65e641caa203e2e760dcc4be2c
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 5693b92ac35a357ff1f8643d0eb9ec2105acecb4
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32743116"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47073458"
 ---
 # <a name="assemblybinding-element-for-configuration"></a>\<assemblyBinding > 元素\<配置 >
 
@@ -52,14 +51,14 @@ ms.locfileid: "32743116"
 
 ## <a name="remarks"></a>备注
 
-[  **\<LinkedConfiguration >** ](~/docs/framework/configure-apps/file-schema/linkedconfiguration-element.md)元素中的配置文件允许应用程序配置文件包含程序集，从而简化组件程序集的管理已知位置，而不是复制的程序集配置设置。
+[  **\<LinkedConfiguration >** ](~/docs/framework/configure-apps/file-schema/linkedconfiguration-element.md)元素中的配置文件允许应用程序配置文件包含程序集，从而简化管理的组件程序集已知位置，而不是复制的程序集配置设置。
 
 > [!NOTE]
-> **\<LinkedConfiguration >** 与 Windows 并排显示清单的应用程序中不支持元素。
+> **\<LinkedConfiguration >** 元素不支持使用 Windows 通过并行清单的应用程序。
 
 ## <a name="example"></a>示例
 
-下面的示例演示如何将本地硬盘上的配置文件包括：
+下面的示例演示如何包含本地硬盘上的配置文件：
 
 ```xml
 <configuration>

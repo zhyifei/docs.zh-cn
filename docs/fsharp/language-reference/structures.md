@@ -3,11 +3,11 @@ title: 结构 (F#)
 description: '了解有关 F # 结构，紧凑对象类型通常比用于具有少量数据且行为简单类型的类更有效。'
 ms.date: 05/16/2016
 ms.openlocfilehash: 08af88132dda28883e246b94585ff4ed8bd2f16a
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/22/2018
-ms.locfileid: "46577384"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47086783"
 ---
 # <a name="structures"></a>结构
 

@@ -10,20 +10,19 @@ helpviewer_keywords:
 ms.assetid: 22fb88b0-bf27-489c-9ca0-e65950ac136c
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: db209bac487ccbb98f7f0aeb272f51169e7a0148
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: c5be6ef95693f274e5cb2002e5642d5e58a7661a
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32746350"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47082063"
 ---
 # <a name="ltoidentrygt-element"></a>&lt;oidEntry&gt;元素
 将 ASN.1 对象标识符 (OID) 映射到友好名称。  
   
  \<configuration>  
 \<mscorlib >  
-\<g s >  
+\<cryptographySettings >  
 \<oidMap >  
 \<oidEntry >  
   
@@ -40,7 +39,7 @@ ms.locfileid: "32746350"
   
 |特性|描述|  
 |---------------|-----------------|  
-|**OID**|必需的特性。<br /><br /> 指定对应于由您的类实现的算法 ASN.1 OID。|  
+|**OID**|必需的特性。<br /><br /> 指定的 ASN.1 OID 对应于您的类所实现的算法。|  
 |**name**|必需的特性。<br /><br /> 指定的值**名称**属性中[ \<nameEntry >](../../../../../docs/framework/configure-apps/file-schema/cryptography/nameentry-element.md)标记。|  
   
 ### <a name="child-elements"></a>子元素  
@@ -53,13 +52,13 @@ ms.locfileid: "32746350"
 |`configuration`|公共语言运行时和 .NET Framework 应用程序所使用的每个配置文件中的根元素。|  
 |`cryptographySettings`|包含加密设置。|  
 |`mscorlib`|包含`cryptographySettings`元素。|  
-|`oidMap`|包含 ASN.1 对象标识符 (OID) 映射到类。|  
+|`oidMap`|包含类的 ASN.1 对象标识符 (OID) 映射。|  
   
 ## <a name="remarks"></a>备注  
- ASN.1 对象标识符标识中某些加密格式的算法。 将对象标识符映射到你希望确定的算法的友好名称。  
+ ASN.1 对象标识符标识中某些加密格式的算法。 将对象标识符映射到你想要识别的算法的友好名称。  
   
 ## <a name="example"></a>示例  
- 下面的示例演示如何使用 **\<oidEntry >** 元素将 ripemd-160 哈希算法的对象标识符映射到该哈希算法实现。  
+ 下面的示例演示如何使用 **\<oidEntry >** 元素将 RIPEMD-160 哈希算法的对象标识符映射到该哈希算法的实现。  
   
 ```xml  
 <configuration>  

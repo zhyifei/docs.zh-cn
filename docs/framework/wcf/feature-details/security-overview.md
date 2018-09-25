@@ -6,13 +6,12 @@ helpviewer_keywords:
 - WCF, security
 ms.assetid: f478c80d-792d-4e7a-96bd-a2ff0b6f65f9
 author: BrucePerlerMS
-manager: mbaldwin
-ms.openlocfilehash: f5f991296aa00bcc49c6672113fd1c25afac3c53
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 54cb952e2f3bffc9c37f2d75059c931d78f29eee
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43402862"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47088504"
 ---
 # <a name="security-overview"></a>安全性概述
 Windows Communication Foundation (WCF) 是一个 SOAP 基于消息的分布式编程平台，并保护客户端和服务之间的消息是保护数据必不可少。 WCF 基于现有安全性基础结构和 SOAP 消息安全标准的安全消息交换提供通用且可互操作平台。  

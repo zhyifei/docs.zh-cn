@@ -9,11 +9,11 @@ helpviewer_keywords:
 - navigation [WPF], through navigation history (back)
 ms.assetid: 9343234b-d864-441d-b8a7-d895cba80a87
 ms.openlocfilehash: 7266c9486524e962a859c34c9be5ab8f6d7bf7d5
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/22/2018
-ms.locfileid: "46578808"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47080223"
 ---
 # <a name="how-to-navigate-back-through-navigation-history"></a>如何： 在向后导航导航历史记录
 此示例说明如何导航到条目后退导航历史记录。  

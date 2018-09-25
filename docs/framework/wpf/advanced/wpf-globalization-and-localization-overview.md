@@ -5,12 +5,12 @@ helpviewer_keywords:
 - globalization [WPF], about globalization
 - localization [WPF], about localization
 ms.assetid: 56e5a5c8-6c96-4d19-b8e1-a5be1dc564af
-ms.openlocfilehash: d8fef7965e3248d5361d866a441783bf4968460e
-ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
+ms.openlocfilehash: fcf5b8f872e2f97497ff5387adb755da1832bf8c
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/20/2018
-ms.locfileid: "46478884"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47111306"
 ---
 # <a name="wpf-globalization-and-localization-overview"></a>WPF 全球化和本地化概述
 当你将自己的产品限制为只能通过一种语言使用时，便将潜在的客户群限制为全球 65 亿人口中的一小部分。 如果想让自己的应用程序被全球用户所接受，那么对产品进行经济而有效的本地化将是赢得更多客户的最好、最经济的方法。  
@@ -29,7 +29,7 @@ ms.locfileid: "46478884"
   
 -   避免使用绝对位置和固定的大小进行布局的内容;相反，使用相对或自动大小调整。
   
-    -   使用<xref:System.Windows.Window.SizeToContent%2A>; 并将宽度和高度设置为`Auto`。  
+    -   使用<xref:System.Windows.Window.SizeToContent%2A>并将宽度和高度设置为`Auto`。  
   
     -   避免使用<xref:System.Windows.Controls.Canvas>布置[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]s。  
   
@@ -39,7 +39,7 @@ ms.locfileid: "46478884"
   
 -   启用<xref:System.Windows.Controls.TextBlock.TextWrapping%2A>上<xref:System.Windows.Controls.TextBlock>以避免剪裁。
   
--   设置**xml: lang**属性。 此属性描述特定元素及其子元素的区域性。 此属性的值更改中的许多功能的行为[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]。 例如，它可以更改断字、拼写检查、数字替换、复杂脚本成型和字体回退的行为。 请参阅[WPF 的全球化](../../../../docs/framework/wpf/advanced/globalization-for-wpf.md)有关设置的详细信息[xml: lang 处理在 XAML 中](../../../../docs/framework/xaml-services/xml-lang-handling-in-xaml.md)。  
+-   设置`xml:lang`属性。 此属性描述特定元素及其子元素的区域性。 此属性的值更改中的许多功能的行为[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]。 例如，它可以更改断字、拼写检查、数字替换、复杂脚本成型和字体回退的行为。 请参阅[WPF 的全球化](../../../../docs/framework/wpf/advanced/globalization-for-wpf.md)有关设置的详细信息[xml: lang 处理在 XAML 中](../../../../docs/framework/xaml-services/xml-lang-handling-in-xaml.md)。  
   
 -   创建自定义复合字体，以获取更好地控制用于不同语言的字体。 默认情况下，[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]使用 windows\fonts 目录中的 GlobalUserInterface.composite 字体。  
   
@@ -64,7 +64,7 @@ ms.locfileid: "46478884"
   
          如果您决定通过省略主程序集中添加源语言`<UICulture>`在项目文件中标记中，设置`UltimateResourceFallback`与主程序集而不是附属项的位置 (例如， `[assembly: NeutralResourcesLanguage("en-US", UltimateResourceFallbackLocation.MainAssembly)]`)。  
   
-<a name="workflow_to_localize"></a>   
+<a name="workflow_to_localize" />   
 ## <a name="localize-a-wpf-application"></a>对 WPF 应用程序进行本地化  
  进行本地化时[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]应用程序中，有几个选项。 例如，将可本地化资源绑定到应用程序中[!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)]文件，在 resx 表中存储可本地化的文本，或者让本地化人员使用[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]文件。 本部分介绍使用 XAML，可提供的好处的 BAML 形式的本地化工作流：  
   
@@ -92,7 +92,7 @@ ms.locfileid: "46478884"
   
  ![未本地化的工作流](../../../../docs/framework/wpf/advanced/media/localizationworkflow2.png "LocalizationWorkflow2")  
   
-<a name="examples_of_localization"></a>   
+<a name="examples_of_localization" />   
 ## <a name="examples-of-wpf-localization"></a>WPF 本地化示例  
  本部分包含本地化的应用程序，以帮助你了解如何生成和本地化示例[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]应用程序。  
   
@@ -137,7 +137,7 @@ ms.locfileid: "46478884"
   
  请注意，该示例使用的共享大小调整功能<xref:System.Windows.Controls.Grid>。 最后三列通过将自身放置在同一个充分利用这<xref:System.Windows.Controls.DefinitionBase.SharedSizeGroup%2A>。 正如属性名称所示，此属性允许不同的列采用相同大小。 因此如果"浏览..."获取已本地化为较长的字符串"Durchsuchen..."，所有按钮都增加而不是让小型的"确定"按钮和一个极大的"Durchsuchen..."按钮的宽度。  
   
- **Xml:lang**  
+ **Xml:lang**
   
  `Xml:lang="en-US"`  
   
@@ -146,7 +146,9 @@ ms.locfileid: "46478884"
  **生成附属资源程序集**  
   
  *在 .csproj 中：*  
-  
+
+ 编辑`.csproj`文件，并将以下标记添加到无条件`<PropertyGroup>`:
+ 
  `<UICulture>en-US</UICulture>`  
   
  请注意，增加的`UICulture`值。 当此项设置为有效<xref:System.Globalization.CultureInfo>值，如 EN-US，生成项目将在其中生成具有所有可本地化资源的附属程序集。  
@@ -197,7 +199,7 @@ ms.locfileid: "46478884"
   
  **LocBaml.exe /generate RunDialog.resources.dll /trans:RunDialog.resources.dll.CSV /out: . /cul:de-DE**  
   
- 在德语[!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)]，如果此 resources.dll 放置在主程序集旁边的 DE-DE 文件夹中，此资源会自动加载而不是 EN-US 文件夹中的一个。 如果没有德语版本的[!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)]若要测试这一点，请将区域性设置的任何区域性[!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)]使用 (即 EN-US)，并替换原始的 resources.dll。  
+ 在德语[!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)]，如果此 resources.dll 放置在主程序集旁边的 DE-DE 文件夹中，此资源会自动加载而不是 EN-US 文件夹中的一个。 如果没有德语版本的[!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)]若要测试这一点，请将区域性设置的任何区域性[!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)]使用 (例如， `en-US`)，并替换原始资源 DLL。  
   
  **附属资源加载**  
   
@@ -246,7 +248,7 @@ ms.locfileid: "46478884"
   
  **避免对面板和控件使用固定维度**  
   
- 请浏览 Homepage.xaml，注意，除了固定的宽度和高度指定的整个[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]在顶部<xref:System.Windows.Controls.DockPanel>，有其他固定的维度。 请勿使用固定尺寸，以防裁剪可能比源文本长的本地化文本。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 面板和控件将根据其所包含的内容自动调整大小。 大多数控件还具有最小和最大尺寸，设置这些尺寸可以加强控制（例如 MinWidth= "20"）。 与<xref:System.Windows.Controls.Grid>，你还可以通过设置相对宽度和高度 * (例如 Width ="0.25\*") 或使用其单元格大小共享功能。  
+ 请浏览 Homepage.xaml，注意，除了固定的宽度和高度指定的整个[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]在顶部<xref:System.Windows.Controls.DockPanel>，有其他固定的维度。 请勿使用固定尺寸，以防裁剪可能比源文本长的本地化文本。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 面板和控件将根据其所包含的内容自动调整大小。 大多数控件还具有最小值和最大维度，可以为更多的控制设置 (例如 MinWidth ="20")。 与<xref:System.Windows.Controls.Grid>，你还可以通过设置相对宽度和高度\*(例如， `Width="0.25*"`) 或使用其单元格大小共享功能。  
   
  **本地化注释**  
   
@@ -258,7 +260,7 @@ ms.locfileid: "46478884"
   
 |资源键|类别|可读性|可修改性|注释|“值”|  
 |-|-|-|-|-|-|  
-|TextBlock_1:System.Windows.Controls.TextBlock.$Content|Text|TRUE|TRUE|此字符用作装饰性规则。|&#124;|  
+|TextBlock_1:System.Windows.Controls.TextBlock.$Content|Text|true|true|此字符用作装饰性规则。|&#124;|  
   
  使用下面的语法可以将注释放置在任何元素的内容或属性上：  
   
@@ -266,7 +268,7 @@ ms.locfileid: "46478884"
   
  **本地化特性**  
   
- 通常，开发人员或本地化经理需要控制本地化人员能够阅读和修改的内容。 例如，可能不希望本地化人员翻译你公司的名称或法律用语。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 提供了一些特性，使用这些特性可以设置元素的内容或属性（本地化工具可以使用这些内容或属性锁定、隐藏元素或对元素进行排序）的可读性、可修改性和类别。 有关详细信息，请参阅 <xref:System.Windows.Localization.Attributes%2A> 。 此示例中 LocBaml 工具仅输出这些特性的值。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 控件对这些特性都使用默认值，但可以替代这些默认值。 例如，下面的示例重写的默认本地化特性`TextBlock_1`和为本地化人员设置的内容可读，但不可修改。  
+ 通常，开发人员或本地化经理需要控制本地化人员能够阅读和修改的内容。 例如，可能不希望本地化人员翻译你公司的名称或法律用语。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 提供了一些特性，使用这些特性可以设置元素的内容或属性（本地化工具可以使用这些内容或属性锁定、隐藏元素或对元素进行排序）的可读性、可修改性和类别。 有关详细信息，请参阅<xref:System.Windows.Localization.Attributes%2A>。 此示例中 LocBaml 工具仅输出这些特性的值。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 控件对这些特性都使用默认值，但可以替代这些默认值。 例如，下面的示例重写的默认本地化特性`TextBlock_1`和为本地化人员设置的内容可读，但不可修改。  
   
  [!code-xaml[LocalizationComAtt#LocalizationAttributes](../../../../samples/snippets/csharp/VS_Snippets_Wpf/LocalizationComAtt/CSharp/Attributes.xaml#localizationattributes)]  
   
@@ -275,26 +277,20 @@ ms.locfileid: "46478884"
  [!code-xaml[LocalizationComAtt#LocalizationAttributesOverridden](../../../../samples/snippets/csharp/VS_Snippets_Wpf/LocalizationComAtt/CSharp/Attributes.xaml#localizationattributesoverridden)]  
   
  默认本地化特性[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]提供可以还通过代码进行替代，以便可以正确设置自定义控件的合适的默认值。 例如：  
-  
- `[Localizability(Readability = Readability.Readable, Modifiability=Modifiability.Unmodifiable, LocalizationCategory.None)]`  
-  
- `public class CorporateLogo: TextBlock`  
-  
- `{`  
-  
- `…`  
-  
- `..`  
-  
- `.`  
-  
- `}`  
-  
+
+```csharp 
+[Localizability(Readability = Readability.Readable, Modifiability=Modifiability.Unmodifiable, LocalizationCategory.None)] 
+public class CorporateLogo : TextBlock
+{
+    // ...
+}
+``` 
+ 
  实例中设置特定特性[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]将优先于自定义控件上的代码中设置的值。 有关特性和注释的详细信息，请参阅[本地化特性和注释](../../../../docs/framework/wpf/advanced/localization-attributes-and-comments.md)。  
   
  **字体回退和复合字体**  
   
- 如果指定不支持给定的码位范围的字体[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]会自动回退到一个通过使用位于 windows\fonts 目录中的 Global User Interface.compositefont 来实现。 复合字体与任何其他字体的用法相同，通过设置元素的 FontFamily（例如 FontFamily= "Global User Interface"）可以显式使用复合字体。 通过创建你自己的复合字体并指定针对特定代码点范围和语言所使用的字体，可以指定你自己的字体回退首选项。  
+ 如果指定不支持给定的码位范围的字体[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]会自动回退到一个通过使用位于 windows\fonts 目录中的 Global User Interface.compositefont 来实现。 复合字体工作原理与任何其他字体，以及可以通过设置元素的显式使用`FontFamily`(例如， `FontFamily="Global User Interface"`)。 通过创建你自己的复合字体并指定针对特定代码点范围和语言所使用的字体，可以指定你自己的字体回退首选项。  
   
  有关复合字体的详细信息请参阅<xref:System.Windows.Media.FontFamily>。  
   

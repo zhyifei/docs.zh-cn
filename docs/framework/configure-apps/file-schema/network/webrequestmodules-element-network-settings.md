@@ -10,16 +10,15 @@ helpviewer_keywords:
 ms.assetid: 1263de11-3e0a-4f94-97c9-710b2ae53817
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 7454099d8af0f2d656296be55677c648cc0c36c9
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 34173812f4f6fac940632e23e6641e458250a4ee
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32742687"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47110887"
 ---
 # <a name="ltwebrequestmodulesgt-element-network-settings"></a>&lt;webRequestModules&gt;元素 （网络设置）
-指定要用于从网络主机请求信息的模块。  
+指定模块用于从网络主机请求信息。  
   
  \<configuration>  
 \<system.net>  
@@ -55,13 +54,13 @@ ms.locfileid: "32742687"
 ## <a name="remarks"></a>备注  
  此 `webRequestModules` 元素注册 <xref:System.Net.WebRequest> 类的子代，以处理向网络主机发出的信息请求。 Web 请求模块必须实现<xref:System.Net.IWebRequestCreate>接口。  
   
- .NET Framework 包括以 http://、 https:// 和 file:// 开头的 uri Web 请求模块。 仅在配置文件中注册自定义模块可以覆盖默认模块。  
+ .NET Framework 包括以 http://、 https:// 和 file:// 开头的 Uri Web 请求模块。 仅在配置文件中注册自定义模块可以覆盖默认模块。  
   
 ## <a name="configuration-files"></a>配置文件  
  此元素可在应用程序配置文件或计算机配置文件 (Machine.config) 中使用。  
   
 ## <a name="example"></a>示例  
- 下面的示例注册默认 HTTP 模块。 版本和 PublicKeyToken 提供值应替换为指定的模块的正确值。  
+ 下面的示例注册默认的 HTTP 模块。 应使用正确的值指定模块的版本和 PublicKeyToken 替换值。  
   
 ```xml  
 <configuration>  
