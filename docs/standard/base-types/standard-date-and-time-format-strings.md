@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: bb79761a-ca08-44ee-b142-b06b3e2fc22b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: abb38e4f084575665954bc514584feed760b0666
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 4ca6109a61fb32cd148e69081da0772277743b6e
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44207637"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47075796"
 ---
 # <a name="standard-date-and-time-format-strings"></a>标准日期和时间格式字符串
 标准日期和时间格式字符串使用单个格式说明符来定义日期和时间值的文本表示形式。 包含一个以上字符（包括空白）的任何日期和时间格式字符串都会被解释为自定义日期和时间格式字符串；有关更多信息，请参见[自定义日期和时间格式字符串](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)。 可通过两种方式使用标准或自定义格式字符串：  
@@ -35,7 +35,7 @@ ms.locfileid: "44207637"
 
 标准日期和时间格式字符串可以与 <xref:System.DateTime> 和 <xref:System.DateTimeOffset> 值一起使用。  
   
-[!INCLUDE[C# interactive-note](~/includes/csharp-interactive-with-utc-note.md)] 
+[!INCLUDE[C# interactive-note](~/includes/csharp-interactive-with-utc-partial-note.md)] 
 
 <a name="table"></a>下表描述了标准日期和时间格式说明符。 除非另行说明，否则，特定的标准日期和时间格式说明符将产生相同的字符串表示形式，这与它是与 <xref:System.DateTime> 值还是 <xref:System.DateTimeOffset> 值一起使用无关。 有关使用标准日期和时间格式字符串的其他信息，请参见[注释](#Notes)部分。  
   
@@ -70,12 +70,12 @@ ms.locfileid: "44207637"
   
 -   可以传递一个表示区域性的 <xref:System.Globalization.CultureInfo> 对象，该区域性的格式设置将用于具有 <xref:System.IFormatProvider> 参数的方法。 下面的示例使用 pt-BR 区域性的短日期格式显示日期。  
   
-     [!code-csharp-interactive[System.DateTime.Conceptual.Formatting#2](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.DateTime.Conceptual.Formatting/cs/StandardFormats1.cs#2)]
+     [!code-csharp[System.DateTime.Conceptual.Formatting#2](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.DateTime.Conceptual.Formatting/cs/StandardFormats1.cs#2)]
      [!code-vb[System.DateTime.Conceptual.Formatting#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.DateTime.Conceptual.Formatting/vb/StandardFormats1.vb#2)]  
   
 -   可以传递一个 <xref:System.Globalization.DateTimeFormatInfo> 对象，该对象向具有 <xref:System.IFormatProvider> 参数的方法提供格式设置信息。 下面的示例使用 hr-HR 区域性的 <xref:System.Globalization.DateTimeFormatInfo> 对象中的短日期格式显示日期。  
   
-     [!code-csharp-interactive[System.DateTime.Conceptual.Formatting#3](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.DateTime.Conceptual.Formatting/cs/StandardFormats1.cs#3)]
+     [!code-csharp[System.DateTime.Conceptual.Formatting#3](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.DateTime.Conceptual.Formatting/cs/StandardFormats1.cs#3)]
      [!code-vb[System.DateTime.Conceptual.Formatting#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.DateTime.Conceptual.Formatting/vb/StandardFormats1.vb#3)]  
   
 > [!NOTE]
@@ -110,7 +110,7 @@ ms.locfileid: "44207637"
   
  下面的示例使用“d”格式说明符来显示日期和时间值。  
   
- [!code-csharp-interactive[Formatting.DateAndTime.Standard#1](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Standard/cs/Standard1.cs#1)]
+ [!code-csharp[Formatting.DateAndTime.Standard#1](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Standard/cs/Standard1.cs#1)]
  [!code-vb[Formatting.DateAndTime.Standard#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Standard/vb/Standard1.vb#1)]  
   
  [返回表首](#table)  
@@ -129,7 +129,7 @@ ms.locfileid: "44207637"
   
  下面的示例使用“D”格式说明符来显示日期和时间值。  
   
- [!code-csharp-interactive[Formatting.DateAndTime.Standard#2](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Standard/cs/Standard1.cs#2)]
+ [!code-csharp[Formatting.DateAndTime.Standard#2](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Standard/cs/Standard1.cs#2)]
  [!code-vb[Formatting.DateAndTime.Standard#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Standard/vb/Standard1.vb#2)]  
   
  [返回表首](#table)  
@@ -152,7 +152,7 @@ ms.locfileid: "44207637"
   
  下面的示例使用“f”格式说明符来显示日期和时间值。  
   
- [!code-csharp-interactive[Formatting.DateAndTime.Standard#3](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Standard/cs/Standard1.cs#3)]
+ [!code-csharp[Formatting.DateAndTime.Standard#3](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Standard/cs/Standard1.cs#3)]
  [!code-vb[Formatting.DateAndTime.Standard#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Standard/vb/Standard1.vb#3)]  
   
  [返回表首](#table)  
@@ -174,7 +174,7 @@ ms.locfileid: "44207637"
   
  下面的示例使用“F”格式说明符来显示日期和时间值。  
   
- [!code-csharp-interactive[Formatting.DateAndTime.Standard#4](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Standard/cs/Standard1.cs#4)]
+ [!code-csharp[Formatting.DateAndTime.Standard#4](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Standard/cs/Standard1.cs#4)]
  [!code-vb[Formatting.DateAndTime.Standard#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Standard/vb/Standard1.vb#4)]  
   
  [返回表首](#table)  
@@ -196,7 +196,7 @@ ms.locfileid: "44207637"
   
  下面的示例使用“g”格式说明符来显示日期和时间值。  
   
- [!code-csharp-interactive[Formatting.DateAndTime.Standard#5](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Standard/cs/Standard1.cs#5)]
+ [!code-csharp[Formatting.DateAndTime.Standard#5](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Standard/cs/Standard1.cs#5)]
  [!code-vb[Formatting.DateAndTime.Standard#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Standard/vb/Standard1.vb#5)]  
   
  [返回表首](#table)  
@@ -218,7 +218,7 @@ ms.locfileid: "44207637"
   
  下面的示例使用“G”格式说明符来显示日期和时间值。  
   
- [!code-csharp-interactive[Formatting.DateAndTime.Standard#6](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Standard/cs/Standard1.cs#6)]
+ [!code-csharp[Formatting.DateAndTime.Standard#6](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Standard/cs/Standard1.cs#6)]
  [!code-vb[Formatting.DateAndTime.Standard#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Standard/vb/Standard1.vb#6)]  
   
  [返回表首](#table)  
@@ -236,7 +236,7 @@ ms.locfileid: "44207637"
   
  下面的示例使用“m”格式说明符来显示日期和时间值。  
   
- [!code-csharp-interactive[Formatting.DateAndTime.Standard#7](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Standard/cs/Standard1.cs#7)]
+ [!code-csharp[Formatting.DateAndTime.Standard#7](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Standard/cs/Standard1.cs#7)]
  [!code-vb[Formatting.DateAndTime.Standard#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Standard/vb/Standard1.vb#7)]  
   
  [返回表首](#table)  
@@ -266,7 +266,7 @@ ms.locfileid: "44207637"
   
  下面的示例使用“O”格式说明符创建格式字符串，然后通过调用日期和时间 `Parse` 方法还原原始日期和时间值。  
   
- [!code-csharp-interactive[Formatting.DateandTime.Standard#16](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Standard/cs/Roundtrip1.cs#16)]
+ [!code-csharp[Formatting.DateandTime.Standard#16](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Standard/cs/Roundtrip1.cs#16)]
  [!code-vb[Formatting.DateandTime.Standard#16](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Standard/vb/RoundTrip1.vb#16)]  
   
  [返回表首](#table)  
@@ -322,7 +322,7 @@ ms.locfileid: "44207637"
   
  下面的示例使用“t”格式说明符来显示日期和时间值。  
   
- [!code-csharp-interactive[Formatting.DateAndTime.Standard#11](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Standard/cs/Standard1.cs#11)]
+ [!code-csharp[Formatting.DateAndTime.Standard#11](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Standard/cs/Standard1.cs#11)]
  [!code-vb[Formatting.DateAndTime.Standard#11](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Standard/vb/Standard1.vb#11)]  
   
  [返回表首](#table)  
@@ -342,7 +342,7 @@ ms.locfileid: "44207637"
   
  下面的示例使用“T”格式说明符来显示日期和时间值。  
   
- [!code-csharp-interactive[Formatting.DateAndTime.Standard#12](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Standard/cs/Standard1.cs#12)]
+ [!code-csharp[Formatting.DateAndTime.Standard#12](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Standard/cs/Standard1.cs#12)]
  [!code-vb[Formatting.DateAndTime.Standard#12](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Standard/vb/Standard1.vb#12)]  
   
  [返回表首](#table)  
@@ -379,7 +379,7 @@ ms.locfileid: "44207637"
   
  下面的示例使用“U”格式说明符来显示日期和时间值。  
   
- [!code-csharp-interactive[Formatting.DateAndTime.Standard#14](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Standard/cs/Standard1.cs#14)]
+ [!code-csharp[Formatting.DateAndTime.Standard#14](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Standard/cs/Standard1.cs#14)]
  [!code-vb[Formatting.DateAndTime.Standard#14](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Standard/vb/Standard1.vb#14)]  
   
  [返回表首](#table)  
@@ -397,7 +397,7 @@ ms.locfileid: "44207637"
   
  下面的示例使用“y”格式说明符来显示日期和时间值。  
   
- [!code-csharp-interactive[Formatting.DateAndTime.Standard#15](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Standard/cs/Standard1.cs#15)]
+ [!code-csharp[Formatting.DateAndTime.Standard#15](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Standard/cs/Standard1.cs#15)]
  [!code-vb[Formatting.DateAndTime.Standard#15](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Standard/vb/Standard1.vb#15)]  
   
  [返回表首](#table)  
