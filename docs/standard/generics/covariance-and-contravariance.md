@@ -27,7 +27,7 @@ ms.locfileid: "44038739"
   
      使你能够使用比原始指定的类型派生程度更大的类型。  
   
-     可以向 `IEnumerable<Base>` 类型的变量分配 `IEnumerable<Derived>`（在 Visual Basic 中为 `IEnumerable(Of Derived)`）的实例。。  
+     可以向 `IEnumerable<Base>` 类型的变量分配 `IEnumerable<Derived>`（在 Visual Basic 中为 `IEnumerable(Of Derived)`）的实例。  
   
 -   `Contravariance`  
   
