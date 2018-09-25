@@ -8,37 +8,37 @@ helpviewer_keywords:
 - keywords [C#], preprocessor directives
 ms.assetid: f2406090-b244-4f7e-ab72-3698fefed724
 ms.openlocfilehash: 1c0a97cabce347be0bc9367f3d090a1fc699db19
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/22/2018
-ms.locfileid: "46584654"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47082157"
 ---
-# <a name="c-preprocessor-directives"></a><span data-ttu-id="52678-102">C# 预处理器指令</span><span class="sxs-lookup"><span data-stu-id="52678-102">C# preprocessor directives</span></span>
-<span data-ttu-id="52678-103">本节介绍了以下 C# 预处理器指令：</span><span class="sxs-lookup"><span data-stu-id="52678-103">This section contains information about the following C# preprocessor directives:</span></span>
+# <a name="c-preprocessor-directives"></a><span data-ttu-id="4ab26-102">C# 预处理器指令</span><span class="sxs-lookup"><span data-stu-id="4ab26-102">C# preprocessor directives</span></span>
+<span data-ttu-id="4ab26-103">本节介绍了以下 C# 预处理器指令：</span><span class="sxs-lookup"><span data-stu-id="4ab26-103">This section contains information about the following C# preprocessor directives:</span></span>
 
-- [<span data-ttu-id="52678-104">#if</span><span class="sxs-lookup"><span data-stu-id="52678-104">#if</span></span>](../../../csharp/language-reference/preprocessor-directives/preprocessor-if.md)
-- [<span data-ttu-id="52678-105">#else</span><span class="sxs-lookup"><span data-stu-id="52678-105">#else</span></span>](../../../csharp/language-reference/preprocessor-directives/preprocessor-else.md)
-- [<span data-ttu-id="52678-106">#elif</span><span class="sxs-lookup"><span data-stu-id="52678-106">#elif</span></span>](../../../csharp/language-reference/preprocessor-directives/preprocessor-elif.md)
-- [<span data-ttu-id="52678-107">#endif</span><span class="sxs-lookup"><span data-stu-id="52678-107">#endif</span></span>](../../../csharp/language-reference/preprocessor-directives/preprocessor-endif.md)
-- [<span data-ttu-id="52678-108">#define</span><span class="sxs-lookup"><span data-stu-id="52678-108">#define</span></span>](../../../csharp/language-reference/preprocessor-directives/preprocessor-define.md)
-- [<span data-ttu-id="52678-109">#undef</span><span class="sxs-lookup"><span data-stu-id="52678-109">#undef</span></span>](../../../csharp/language-reference/preprocessor-directives/preprocessor-undef.md)
-- [<span data-ttu-id="52678-110">#warning</span><span class="sxs-lookup"><span data-stu-id="52678-110">#warning</span></span>](../../../csharp/language-reference/preprocessor-directives/preprocessor-warning.md)
-- [<span data-ttu-id="52678-111">#error</span><span class="sxs-lookup"><span data-stu-id="52678-111">#error</span></span>](../../../csharp/language-reference/preprocessor-directives/preprocessor-error.md)
-- [<span data-ttu-id="52678-112">#line</span><span class="sxs-lookup"><span data-stu-id="52678-112">#line</span></span>](../../../csharp/language-reference/preprocessor-directives/preprocessor-line.md)
-- [<span data-ttu-id="52678-113">#region</span><span class="sxs-lookup"><span data-stu-id="52678-113">#region</span></span>](../../../csharp/language-reference/preprocessor-directives/preprocessor-region.md)
-- [<span data-ttu-id="52678-114">#endregion</span><span class="sxs-lookup"><span data-stu-id="52678-114">#endregion</span></span>](../../../csharp/language-reference/preprocessor-directives/preprocessor-endregion.md)
-- [<span data-ttu-id="52678-115">#pragma</span><span class="sxs-lookup"><span data-stu-id="52678-115">#pragma</span></span>](../../../csharp/language-reference/preprocessor-directives/preprocessor-pragma.md)
-- [<span data-ttu-id="52678-116">#pragma warning</span><span class="sxs-lookup"><span data-stu-id="52678-116">#pragma warning</span></span>](../../../csharp/language-reference/preprocessor-directives/preprocessor-pragma-warning.md)
-- [<span data-ttu-id="52678-117">#pragma checksum</span><span class="sxs-lookup"><span data-stu-id="52678-117">#pragma checksum</span></span>](../../../csharp/language-reference/preprocessor-directives/preprocessor-pragma-checksum.md)
+- [<span data-ttu-id="4ab26-104">#if</span><span class="sxs-lookup"><span data-stu-id="4ab26-104">#if</span></span>](../../../csharp/language-reference/preprocessor-directives/preprocessor-if.md)
+- [<span data-ttu-id="4ab26-105">#else</span><span class="sxs-lookup"><span data-stu-id="4ab26-105">#else</span></span>](../../../csharp/language-reference/preprocessor-directives/preprocessor-else.md)
+- [<span data-ttu-id="4ab26-106">#elif</span><span class="sxs-lookup"><span data-stu-id="4ab26-106">#elif</span></span>](../../../csharp/language-reference/preprocessor-directives/preprocessor-elif.md)
+- [<span data-ttu-id="4ab26-107">#endif</span><span class="sxs-lookup"><span data-stu-id="4ab26-107">#endif</span></span>](../../../csharp/language-reference/preprocessor-directives/preprocessor-endif.md)
+- [<span data-ttu-id="4ab26-108">#define</span><span class="sxs-lookup"><span data-stu-id="4ab26-108">#define</span></span>](../../../csharp/language-reference/preprocessor-directives/preprocessor-define.md)
+- [<span data-ttu-id="4ab26-109">#undef</span><span class="sxs-lookup"><span data-stu-id="4ab26-109">#undef</span></span>](../../../csharp/language-reference/preprocessor-directives/preprocessor-undef.md)
+- [<span data-ttu-id="4ab26-110">#warning</span><span class="sxs-lookup"><span data-stu-id="4ab26-110">#warning</span></span>](../../../csharp/language-reference/preprocessor-directives/preprocessor-warning.md)
+- [<span data-ttu-id="4ab26-111">#error</span><span class="sxs-lookup"><span data-stu-id="4ab26-111">#error</span></span>](../../../csharp/language-reference/preprocessor-directives/preprocessor-error.md)
+- [<span data-ttu-id="4ab26-112">#line</span><span class="sxs-lookup"><span data-stu-id="4ab26-112">#line</span></span>](../../../csharp/language-reference/preprocessor-directives/preprocessor-line.md)
+- [<span data-ttu-id="4ab26-113">#region</span><span class="sxs-lookup"><span data-stu-id="4ab26-113">#region</span></span>](../../../csharp/language-reference/preprocessor-directives/preprocessor-region.md)
+- [<span data-ttu-id="4ab26-114">#endregion</span><span class="sxs-lookup"><span data-stu-id="4ab26-114">#endregion</span></span>](../../../csharp/language-reference/preprocessor-directives/preprocessor-endregion.md)
+- [<span data-ttu-id="4ab26-115">#pragma</span><span class="sxs-lookup"><span data-stu-id="4ab26-115">#pragma</span></span>](../../../csharp/language-reference/preprocessor-directives/preprocessor-pragma.md)
+- [<span data-ttu-id="4ab26-116">#pragma warning</span><span class="sxs-lookup"><span data-stu-id="4ab26-116">#pragma warning</span></span>](../../../csharp/language-reference/preprocessor-directives/preprocessor-pragma-warning.md)
+- [<span data-ttu-id="4ab26-117">#pragma checksum</span><span class="sxs-lookup"><span data-stu-id="4ab26-117">#pragma checksum</span></span>](../../../csharp/language-reference/preprocessor-directives/preprocessor-pragma-checksum.md)
 
-<span data-ttu-id="52678-118">请参阅各个主题了解更多信息和示例。</span><span class="sxs-lookup"><span data-stu-id="52678-118">See the individual topics for more information and examples.</span></span>
+<span data-ttu-id="4ab26-118">请参阅各个主题了解更多信息和示例。</span><span class="sxs-lookup"><span data-stu-id="4ab26-118">See the individual topics for more information and examples.</span></span>
 
-<span data-ttu-id="52678-119">尽管编译器没有单独的预处理器，但本节中所述指令的处理方式与有预处理器时一样。</span><span class="sxs-lookup"><span data-stu-id="52678-119">Although the compiler doesn't have a separate preprocessor, the directives described in this section are processed as if there were one.</span></span> <span data-ttu-id="52678-120">这些指令用于帮助条件编译。</span><span class="sxs-lookup"><span data-stu-id="52678-120">They are used to help in conditional compilation.</span></span> <span data-ttu-id="52678-121">不同于 C 和 C++ 指令，不能使用这些指令来创建宏。</span><span class="sxs-lookup"><span data-stu-id="52678-121">Unlike C and C++ directives, you cannot use these directives to create macros.</span></span>
+<span data-ttu-id="4ab26-119">尽管编译器没有单独的预处理器，但本节中所述指令的处理方式与有预处理器时一样。</span><span class="sxs-lookup"><span data-stu-id="4ab26-119">Although the compiler doesn't have a separate preprocessor, the directives described in this section are processed as if there were one.</span></span> <span data-ttu-id="4ab26-120">这些指令用于帮助条件编译。</span><span class="sxs-lookup"><span data-stu-id="4ab26-120">They are used to help in conditional compilation.</span></span> <span data-ttu-id="4ab26-121">不同于 C 和 C++ 指令，不能使用这些指令来创建宏。</span><span class="sxs-lookup"><span data-stu-id="4ab26-121">Unlike C and C++ directives, you cannot use these directives to create macros.</span></span>
 
-<span data-ttu-id="52678-122">预处理器指令必须是一行中唯一的说明。</span><span class="sxs-lookup"><span data-stu-id="52678-122">A preprocessor directive must be the only instruction on a line.</span></span>
+<span data-ttu-id="4ab26-122">预处理器指令必须是一行中唯一的说明。</span><span class="sxs-lookup"><span data-stu-id="4ab26-122">A preprocessor directive must be the only instruction on a line.</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="52678-123">请参阅</span><span class="sxs-lookup"><span data-stu-id="52678-123">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="4ab26-123">请参阅</span><span class="sxs-lookup"><span data-stu-id="4ab26-123">See also</span></span>
 
-- [<span data-ttu-id="52678-124">C# 参考</span><span class="sxs-lookup"><span data-stu-id="52678-124">C# Reference</span></span>](../../../csharp/language-reference/index.md)  
-- [<span data-ttu-id="52678-125">C# 编程指南</span><span class="sxs-lookup"><span data-stu-id="52678-125">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)
+- [<span data-ttu-id="4ab26-124">C# 参考</span><span class="sxs-lookup"><span data-stu-id="4ab26-124">C# Reference</span></span>](../../../csharp/language-reference/index.md)  
+- [<span data-ttu-id="4ab26-125">C# 编程指南</span><span class="sxs-lookup"><span data-stu-id="4ab26-125">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)
