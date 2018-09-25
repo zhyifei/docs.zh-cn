@@ -3,16 +3,15 @@ title: 安全会话
 ms.date: 03/30/2017
 ms.assetid: 7b50602f-d7b5-42e9-8e92-1f0413df0d8b
 author: BrucePerlerMS
-manager: mbaldwin
-ms.openlocfilehash: 1c7229fba8e30632f08834eb36c1fb177de7a294
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 09c261afb2c64a46fc1f4619c4ec6b2e87b3fbbf
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33497537"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47070196"
 ---
 # <a name="secure-sessions"></a>安全会话
-功能的 Windows Communication Foundation (WCF) 是保证按发送顺序接收消息的可靠会话。 本节中的主题讨论在创建可靠会话时要考虑的安全性问题。 有关可靠会话的详细信息，请参阅[使用会话](../../../../docs/framework/wcf/using-sessions.md)。  
+Windows Communication Foundation (WCF) 的一项功能是保证按发送的顺序接收消息的可靠会话。 本节中的主题讨论在创建可靠会话时要考虑的安全性问题。 有关可靠会话的详细信息，请参阅[使用会话的](../../../../docs/framework/wcf/using-sessions.md)。  
   
 > [!NOTE]
 >  当需要在 Windows XP 上进行模拟时，请不要在安全会话中使用有状态安全令牌上下文 (SCT)。 如果在模拟时使用有状态 SCT，则会引发 <xref:System.InvalidOperationException>。 有关详细信息，请参阅[不支持的方案](../../../../docs/framework/wcf/feature-details/unsupported-scenarios.md)。  

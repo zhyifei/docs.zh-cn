@@ -10,16 +10,15 @@ helpviewer_keywords:
 ms.assetid: 6e5def51-3646-4ef6-a7bd-c69151321bec
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 5903174f125938923a63fc031421a8d5a020e56d
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 2aaf590975d9fd3f5d78cb64d8d2b1c38c0e8dc7
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32753581"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47113064"
 ---
 # <a name="ltservicepointmanagergt-element-network-settings"></a>&lt;servicePointManager&gt;元素 （网络设置）
-配置对网络资源的连接。  
+配置连接到网络资源。  
   
  \<configuration>  
 \<system.net>  
@@ -47,12 +46,12 @@ ms.locfileid: "32753581"
   
 |**特性**|**说明**|  
 |-------------------|---------------------|  
-|`checkCertificateName`|指定系统是否应验证证书上的名称与之前使用的证书匹配服务器主机名。 默认值为 `true`。|  
-|`checkCertificateRevocationList`|指定是否应检查系统，然后才能使用该证书是否已吊销证书。 默认值为 `false`。|  
-|`dnsRefreshTimeout`|结合使用 DNS 轮循机制选项，以毫秒为单位指定时长域名服务 (DNS) 解析的缓存。 默认值是 120,000 毫秒（2 分钟）。|  
-|`enableDnsRoundRobin`|指定是否具有多个返回的 Internet 协议 (IP) 地址名称的主机的 DNS 解析所有地址或只是第一个。 默认值为 `false`。|  
-|`encryptionPolicy`|指定应用到的 SSL/TLS 会话上的加密策略<xref:System.Net.ServicePointManager>实例。 可能的值为等效的值<xref:System.Net.Security.EncryptionPolicy>枚举。 使用<xref:System.Security.Authentication.CipherAlgorithmType.Null>加密策略设置为时需要`NoEncryption`。 默认值为 `RequireEncryption`。|  
-|`expect100Continue`|指定是否应该会 POST 方法接收`100-continue`从服务器的响应。 默认值为 `true`。|  
+|`checkCertificateName`|指定系统是否应验证对证书的名称与之前使用的证书匹配服务器主机名。 默认值为 `true`。|  
+|`checkCertificateRevocationList`|指定是否应检查系统，然后再使用该证书是否已吊销证书。 默认值为 `false`。|  
+|`dnsRefreshTimeout`|结合使用 DNS 轮循机制选项，以毫秒为单位指定时间长度域名服务 (DNS) 解析的缓存。 默认值是 120,000 毫秒（2 分钟）。|  
+|`enableDnsRoundRobin`|指定是否具有多个 Internet 协议 (IP) 地址返回命名的主机的 DNS 解析所有地址或只是第一个。 默认值为 `false`。|  
+|`encryptionPolicy`|指定应用于 SSL/TLS 会话上的加密策略<xref:System.Net.ServicePointManager>实例。 可能的值为等效的值为<xref:System.Net.Security.EncryptionPolicy>枚举。 利用<xref:System.Security.Authentication.CipherAlgorithmType.Null>时，必须提供的加密策略设置为`NoEncryption`。 默认值为 `RequireEncryption`。|  
+|`expect100Continue`|指定是否应该会 POST 方法收到`100-continue`来自服务器的响应。 默认值为 `true`。|  
 |`useNagleAlgorithm`|指定由服务点管理器控制的连接是否使用 Nagle 算法。 默认值为 `true`。|  
   
 ### <a name="child-elements"></a>子元素  

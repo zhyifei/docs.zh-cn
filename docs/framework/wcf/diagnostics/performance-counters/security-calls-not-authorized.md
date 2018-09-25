@@ -3,13 +3,12 @@ title: Security Calls Not Authorized（未授权的安全调用次数）
 ms.date: 03/30/2017
 ms.assetid: cb6acdcd-7336-42e1-9ae8-ac891336cd58
 author: BrucePerlerMS
-manager: mbaldwin
-ms.openlocfilehash: 3554644a7f73894703cc26ad11e4f7b9d58cab60
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6af1c7576e6a0fe7ae21f6f1997b2ebe3b919214
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33472568"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47111901"
 ---
 # <a name="security-calls-not-authorized"></a>Security Calls Not Authorized（未授权的安全调用次数）
 计数器名称：Security Calls Not Authorized（未授权的安全调用次数）。  

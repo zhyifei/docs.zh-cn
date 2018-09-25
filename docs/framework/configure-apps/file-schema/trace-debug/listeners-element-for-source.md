@@ -9,16 +9,15 @@ helpviewer_keywords:
 ms.assetid: a2991f43-b4d3-4614-a8e7-da392de9697f
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: a711b8d6bfd5b6d73d3240cb84810841bdc5a2b6
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 86b85779f4eff72e8ab910a5ccd32fd369270509
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32746834"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47085642"
 ---
 # <a name="ltlistenersgt-element-for-ltsourcegt"></a>&lt;侦听器&gt;元素&lt;源&gt;
-添加或删除侦听器中的<xref:System.Diagnostics.TraceSource.Listeners%2A>集合<xref:System.Diagnostics.TraceSource>。 侦听器将定向到适当的目标，如日志、 窗口或文本文件的跟踪输出。  
+添加或删除中的侦听器<xref:System.Diagnostics.TraceSource.Listeners%2A>集合<xref:System.Diagnostics.TraceSource>。 侦听器将定向到适当的目标，如日志、 窗口或文本文件的跟踪输出。  
   
  \<configuration>  
 \<system.diagnostics >  
@@ -65,7 +64,7 @@ ms.locfileid: "32746834"
  计算机配置文件 (Machine.config) 和应用程序配置文件中，可以使用此元素。  
   
 ## <a name="example"></a>示例  
- 下面的示例演示如何使用`<listeners>`要添加到控制台跟踪侦听器元素`mySource`源并删除默认跟踪侦听器。  
+ 下面的示例演示如何使用`<listeners>`元素添加到控制台跟踪侦听器`mySource`源，并删除默认跟踪侦听器。  
   
 ```xml  
 <configuration>  

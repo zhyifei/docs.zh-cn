@@ -1,5 +1,5 @@
 ---
-title: '&lt;将 bypasslist&gt;元素 （网络设置）'
+title: '&lt;bypasslist&gt;元素 （网络设置）'
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#bypasslist
@@ -10,21 +10,20 @@ helpviewer_keywords:
 ms.assetid: 124446b7-abb1-4e5e-a492-b64398f268f1
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 2d2076ee5e95ab722fe828ee625392671a6281c1
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 3ca7ba9b0e534b5806570580b207da5314243d8f
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32743896"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47109035"
 ---
-# <a name="ltbypasslistgt-element-network-settings"></a>&lt;将 bypasslist&gt;元素 （网络设置）
+# <a name="ltbypasslistgt-element-network-settings"></a>&lt;bypasslist&gt;元素 （网络设置）
 提供一组描述不使用代理的地址的正则表达式。  
   
  \<configuration>  
 \<system.net>  
 \<defaultProxy >  
-\<将 bypasslist >  
+\<bypasslist >  
   
 ## <a name="syntax"></a>语法  
   
@@ -43,9 +42,9 @@ ms.locfileid: "32743896"
   
 |**元素**|**说明**|  
 |-----------------|---------------------|  
-|[add](../../../../../docs/framework/configure-apps/file-schema/network/add-element-for-bypasslist-network-settings.md)|将 IP 地址或 DNS 名称添加到代理绕过列表。|  
+|[add](../../../../../docs/framework/configure-apps/file-schema/network/add-element-for-bypasslist-network-settings.md)|将 IP 地址或 DNS 名称添加到代理跳过列表。|  
 |[clear](../../../../../docs/framework/configure-apps/file-schema/network/clear-element-for-bypasslist-network-settings.md)|清除跳过列表。|  
-|[remove](../../../../../docs/framework/configure-apps/file-schema/network/remove-element-for-bypasslist-network-settings.md)|从代理绕过列表中删除 IP 地址或 DNS 名称。|  
+|[remove](../../../../../docs/framework/configure-apps/file-schema/network/remove-element-for-bypasslist-network-settings.md)|从代理跳过列表中删除 IP 地址或 DNS 名称。|  
   
 ### <a name="parent-elements"></a>父元素  
   
@@ -54,9 +53,9 @@ ms.locfileid: "32743896"
 |[defaultProxy](../../../../../docs/framework/configure-apps/file-schema/network/defaultproxy-element-network-settings.md)|配置超文本传输协议 (HTTP) 代理服务器。|  
   
 ## <a name="remarks"></a>备注  
- 跳过列表包含描述 Uri 的正则表达式，<xref:System.Net.WebRequest>实例而不是直接访问通过代理服务器。  
+ 跳过列表包含描述 Uri 的正则表达式的<xref:System.Net.WebRequest>实例而不是直接访问通过代理服务器。  
   
- 指定此元素的正则表达式时，应使用警告。 正则表达式"[a 到 z] +\\.contoso\\.com"匹配任何承载在 contoso.com 域，但它还将匹配 contoso.com.cpandl.com 域中的任何主机。 若要匹配仅在 contoso.com 域中的主机，使用的定位点 （"$"）:"[a 到 z] +\\.contoso\\.com$"。  
+ 指定此元素的正则表达式时应十分小心。 正则表达式"[a-z] +\\.contoso\\.com"匹配任意主机在 contoso.com 域，但它还将匹配 contoso.com.cpandl.com 域中的任何主机。 若要匹配仅在 contoso.com 域中的主机，使用的定位点 （"$"）:"[a-z] +\\.contoso\\.com$"。  
   
  有关正则表达式的详细信息，请参阅。[.NET framework 正则表达式](../../../../../docs/standard/base-types/regular-expressions.md)。  
   
@@ -64,7 +63,7 @@ ms.locfileid: "32743896"
  此元素可在应用程序配置文件或计算机配置文件 (Machine.config) 中使用。  
   
 ## <a name="example"></a>示例  
- 下面的示例将两个地址添加到跳过列表。 第一个绕过用于 contoso.com 域; 中的所有服务器的代理第二个绕过用于与 192.168 其 IP 地址开始的所有服务器的代理。  
+ 下面的示例将两个地址添加到忽略列表。 第一个跳过 contoso.com 域; 中的所有服务器的代理第二个跳过与 192.168 其 IP 地址开始的所有服务器的代理。  
   
 ```xml  
 <configuration>  

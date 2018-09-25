@@ -13,16 +13,15 @@ helpviewer_keywords:
 ms.assetid: de200534-19dd-4156-86cf-c50521802c4c
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 57927d09f10e84e73c3da424c283846bd79b5044
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: b312ea8180c464fb9f955e7d7079cac930c8bf05
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32745570"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47070131"
 ---
 # <a name="ltsharedlistenersgt-element"></a>&lt;sharedListeners&gt;元素
-包含任何源或跟踪元素可以引用的侦听器。  上述侦听器默认情况下，不接收任何跟踪并不能在运行时检索这些侦听器。 标识为共享的侦听器可以按名称添加到源或跟踪侦听器。  
+包含任何源或跟踪元素可以引用的侦听器。  这些侦听器不会收到默认情况下，任何跟踪并不能在运行时检索这些侦听器。 标识为共享的侦听器可以按名称添加到源或跟踪侦听器。  
   
  \<configuration>  
 \<system.diagnostics >  
@@ -56,12 +55,12 @@ ms.locfileid: "32745570"
 |`system.diagnostics`|为 ASP.NET 配置节指定根元素。|  
   
 ## <a name="remarks"></a>备注  
- 将侦听器添加到共享的侦听器集合不会不会使其活动的侦听器。 它必须仍将添加到跟踪源或跟踪通过将其添加到`Listeners`该跟踪元素的集合。 .NET Framework 中的侦听器类派生自<xref:System.Diagnostics.TraceListener>类。  
+ 将侦听器添加到共享的侦听器集合不会使其活动的侦听器。 它必须仍将添加到跟踪源或跟踪添加到`Listeners`该跟踪元素的集合。 .NET Framework 中的侦听器类派生<xref:System.Diagnostics.TraceListener>类。  
   
  计算机配置文件 (Machine.config) 和应用程序配置文件中，可以使用此元素。  
   
 ## <a name="example"></a>示例  
- 下面的示例演示如何使用`<sharedListeners>`元素添加侦听器`console`到`Listeners`两个集合<xref:System.Diagnostics.TraceSource>和<xref:System.Diagnostics.Trace>类。 控制台跟踪侦听器将跟踪信息写入控制台中通过调用<xref:System.Diagnostics.TraceSource>或<xref:System.Diagnostics.Trace>。  
+ 下面的示例演示如何使用`<sharedListeners>`元素添加侦听器`console`到`Listeners`两个集合<xref:System.Diagnostics.TraceSource>和<xref:System.Diagnostics.Trace>类。 控制台跟踪侦听器将跟踪信息写入到通过调用控制台<xref:System.Diagnostics.TraceSource>或<xref:System.Diagnostics.Trace>。  
   
 ```xml  
 <configuration>  
