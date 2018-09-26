@@ -3,11 +3,11 @@ title: 在自定义日志名称中，只有前八个字符是有意义的
 ms.date: 07/20/2015
 ms.assetid: db2a0252-9ddd-4e93-a239-6a690cc09557
 ms.openlocfilehash: c994399a657de3872e70edce0a9168e22f781ce3
-ms.sourcegitcommit: dfb2a100cfb4d3902c042f17b3204f49bc7635e7
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46519206"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47169926"
 ---
 # <a name="only-the-first-eight-characters-of-a-custom-log-name-are-significant"></a>在自定义日志名称中，只有前八个字符是有意义的
 在检查事件日志名称的唯一性时，仅考虑前八个字符。 当事件日志共享前八个字符时，则可能会导致冲突。  

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Windows Forms Designer [Windows Forms], interoperability with WPF
 - interoperability [WPF]
 ms.assetid: 03c85dce-26ad-44cd-bc1d-8e0cb56de096
-ms.openlocfilehash: 30b84f05898f823227415c410dc7ba5f89d58664
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: be925bdceea3dd01c568d85fe025d6e037066454
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43504700"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47170465"
 ---
 # <a name="using-wpf-controls"></a>使用 WPF 控件
 基于 Windows 窗体的应用程序中，可以使用 Windows Presentation Foundation (WPF) 控件。 尽管这些是两个不同的视图技术，则它们平稳地相互操作。  
@@ -24,16 +24,10 @@ ms.locfileid: "43504700"
  演示如何将复制在 Windows 窗体上的 Windows Presentation Foundation 控件。  
   
  [演练：在设计时在 Windows 窗体上排列 WPF 内容](../../../../docs/framework/winforms/advanced/walkthrough-arranging-wpf-content-on-windows-forms-at-design-time.md)  
- 演示如何使用 Windows 窗体布局功能，例如锚定和对齐线，排列 Windows Presentation Foundation 控件。  
-  
- [演练：在设计时更改托管 WPF 元素的属性](../../../../docs/framework/winforms/advanced/walkthrough-changing-properties-of-a-hosted-wpf-element-at-design-time.md)  
- 显示 Windows 窗体设计器之间的工作流和[!INCLUDE[wpfdesigner_current_long](../../../../includes/wpfdesigner-current-long-md.md)]更改 WPF 控件上的属性。  
+ 演示如何使用 Windows 窗体布局功能，例如锚定和对齐线，排列 Windows Presentation Foundation 控件。
   
  [演练：在设计时在 Windows 窗体上新建 WPF 内容](../../../../docs/framework/winforms/advanced/walkthrough-creating-new-wpf-content-on-windows-forms-at-design-time.md)  
- 演示如何创建基于 Windows 窗体的应用程序中使用的 Windows Presentation Foundation 控件。  
-  
- [演练：将 ElementHost 控件复制并粘贴到各个 Windows 窗体中](../../../../docs/framework/winforms/advanced/copy--paste-an-elementhost-control-into-forms.md)  
- 演示如何将 Windows Presentation Foundation 控件复制到另一个 Windows 窗体。  
+ 演示如何创建基于 Windows 窗体的应用程序中使用的 Windows Presentation Foundation 控件。
   
  [演练：在设计时在 Windows 窗体上分配 WPF 内容](../../../../docs/framework/winforms/advanced/walkthrough-assigning-wpf-content-on-windows-forms-at-design-time.md)  
  演示如何选择想要显示窗体上的 Windows Presentation Foundation 控件类型。  

@@ -4,16 +4,15 @@ ms.date: 03/30/2017
 ms.assetid: 16c8e869-1791-4cf5-9244-3d3c738f60ec
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 17f68fbb92797928be911e530232e8638793687f
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 1537c17cb3c16beeb41cfaa4103e0664e93facc7
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32742567"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47170595"
 ---
 # <a name="ltidngt-element-uri-settings"></a>&lt;idn&gt;元素 （Uri 设置）
-指定是否国际化域名 (IDN) 分析将应用于域的名称。  
+指定是否对域名应用国际化域名 (IDN) 分析。  
   
 ## <a name="schema-hierarchy"></a>架构层次结构  
  [\<configuration> 元素](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)  
@@ -37,7 +36,7 @@ ms.locfileid: "32742567"
   
 |**元素**|**说明**|  
 |-----------------|---------------------|  
-|`enabled`|指定是否国际化域名 (IDN) 分析应用到一个域名称的默认值为 none。|  
+|`enabled`|指定对域名应用国际化域名 (IDN) 分析的默认值为 none。|  
   
 ### <a name="child-elements"></a>子元素  
  无  
@@ -49,9 +48,9 @@ ms.locfileid: "32742567"
 |[Uri](../../../../../docs/framework/configure-apps/file-schema/network/uri-element-uri-settings.md)|包含指定.NET Framework 如何处理使用统一资源标识符 (Uri) 表示的 web 地址的设置。|  
   
 ## <a name="remarks"></a>备注  
- 现有<xref:System.Uri>已在.NET Framework 3.5 扩展类。 3.0 SP1 和 2.0 SP1 中的对国际资源标识符 (IRI) 和国际化域名 (IDN) 的支持。 当前用户将不会看到从.NET Framework 2.0 行为的任何更改，除非专门允许 IRI 和 IDN 支持。 这确保了 NET Framework 以前版本的应用程序兼容性。  
+ 现有<xref:System.Uri>类具有.NET Framework 3.5 中进行了扩展。 3.0 SP1 和 2.0 SP1 中的对国际资源标识符 (IRI) 和国际化域名 (IDN) 的支持。 当前用户不会看到从.NET Framework 2.0 行为的任何更改，除非专门启用 IRI 和 IDN 支持。 这确保了 NET Framework 以前版本的应用程序兼容性。  
   
- 若要启用对 IRI 的支持，以下两项更改是必需的：  
+ 若要启用 IRI 支持，以下两项更改是必需的：  
   
 1.  将以下行添加到.NET Framework 2.0 目录下的 machine.config 文件  
   
@@ -59,21 +58,21 @@ ms.locfileid: "32742567"
     <section name="uri" type="System.Configuration.UriSection, System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />  
     ```  
   
-2.  指定是否要国际化域名 (IDN) 分析应用到的域名以及是否应应用 IRI 分析规则。 这可以在 machine.config 或应用配置文件中完成。  
+2.  指定是否对域名应用国际化域名 (IDN) 分析以及是否应该应用 IRI 分析规则。 这可以在 machine.config 或应用配置文件中完成。  
   
- 有用于 IDN 具体取决于使用的 DNS 服务器的三个可能的值：  
+ 有三个可能的 IDN 值具体取决于使用的 DNS 服务器：  
   
 -   启用 idn = All  
   
-     此值会将任何 Unicode 域名称转换为其 Punycode 等效项 （IDN 名称）。  
+     此值会将任何 Unicode 域名转换为 Punycode 等效项 （IDN 名称）。  
   
 -   启用 idn = AllExceptIntranet  
   
-     此值会将所有 Unicode 域名而不是基于本地 Intranet 使用 Punycode 等效 （IDN 名称）。 在这种情况下来处理本地 Intranet 上的国际名称，用于 Intranet DNS 服务器应支持 Unicode 名称解析。  
+     此值会将不在使用 Punycode 等效项 （IDN 名称） 在本地 Intranet 上的所有 Unicode 域名都转换。 在这种情况下若要处理本地 Intranet 上的国际化名称，用于 Intranet 的 DNS 服务器应该支持 Unicode 名称解析。  
   
--   启用 idn = None  
+-   启用 idn = 无  
   
-     此值不会将转换使用 Punycode 任何 Unicode 域名。 这是默认值，这是与.NET Framework 2.0 行为一致。  
+     此值不会将转换为使用 Punycode 任何 Unicode 域名。 这是默认值是与.NET Framework 2.0 行为一致。  
   
  启用 IDN 可以将域名中所有 Unicode 标签转换成标签的 Punycode 等同项。 Punycode 名称只包含 ASCII 字符，并且始终以 xn-- 前缀开头。 这样是为了支持 Internet 上的 DNS 服务器，因为大部分 DNS 服务器仅支持 ASCII 字符（参见 RFC 3940）。  
   
@@ -83,7 +82,7 @@ ms.locfileid: "32742567"
 ## <a name="example"></a>示例  
   
 ### <a name="description"></a>描述  
- 下面的示例演示使用的配置<xref:System.Uri>类，以支持 IRI 分析和 IDN 名称。  
+ 下面的示例演示使用的配置<xref:System.Uri>类，以支持分析 IRI 和 IDN 名称。  
   
 ### <a name="code"></a>代码  
   

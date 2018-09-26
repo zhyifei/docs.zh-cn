@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 8eb34f3b-427e-4288-a7ff-c73f489deb45
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 71769efa1233fc8a693219dc02ae56ea39c164e7
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: c5186aa94993ba551252db6fef55853b5b554789
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32743792"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47170816"
 ---
 # <a name="linkedconfiguration-element"></a>\<linkedConfiguration > 元素
 
@@ -39,7 +38,7 @@ ms.locfileid: "32743792"
 
 |           | 描述 |
 | --------- | ----------- |
-| **href**  | 必需的特性。<br><br>要包括的配置文件的 URL。 有关支持的唯一格式**href**属性是`file://`。 支持本地文件和 UNC 文件。 |
+| **href**  | 必需的特性。<br><br>要包括在配置文件的 URL。 有关支持的唯一格式**href**属性是`file://`。 支持本地文件和 UNC 文件。 |
 
 ## <a name="parent-element"></a>父元素
 
@@ -53,28 +52,28 @@ ms.locfileid: "32743792"
 
 ## <a name="remarks"></a>备注
 
-**\<LinkedConfiguration >** 元素简化了维护的组件程序集。 如果一个或多个应用程序使用具有配置文件中的已知位置的程序集，可以使用的应用程序使用的程序集的配置文件 **\<linkedConfiguration >** 元素以包含程序集配置文件，而不是直接包含配置信息。 组件程序集已维修，更新常见的配置文件提供所有应用程序使用的程序集的更新的配置的信息。
+**\<LinkedConfiguration >** 元素可简化维护组件程序集。 如果一个或多个应用程序使用的程序集都驻留在已知位置中的配置文件，可以使用的应用程序使用的程序集的配置文件 **\<linkedConfiguration >** 若要包括程序集配置文件，而不是直接包含配置信息的元素。 组件程序集已维修，更新常见的配置文件提供所有应用程序使用的程序集的更新的配置的信息。
 
 > [!NOTE]
-> **\<LinkedConfiguration >** 与 Windows 并排显示清单的应用程序中不支持元素。
+> **\<LinkedConfiguration >** 元素不支持使用 Windows 通过并行清单的应用程序。
 
-以下规则控制的链接的配置文件的使用：
+链接的配置文件的使用遵循以下规则：
 
-- 包含的配置文件中的设置仅影响加载程序绑定策略，并只由加载程序。 包含的配置文件可以设置而非绑定策略，但这些设置不产生任何影响。
+- 包含的配置文件中设置只会影响加载程序绑定策略，并且仅由加载程序。 包含的配置文件可以具有设置不是绑定策略，但这些设置不产生任何影响。
 
 - 有关支持的唯一格式`href`属性是`file://`。 支持本地文件和 UNC 文件。
 
-- 不没有链接配置每个配置文件数受任何约束。
+- 没有任何约束的每个配置文件的链接配置数量上。
 
-- 所有链接的配置文件合并，以形成一个文件的行为类似`#include`C/c + + 中的指令。
+- 所有链接的配置文件经过合并以形成一个文件的行为类似`#include`C/c + + 中的指令。
 
 - **\<LinkedConfiguration >** 元素允许仅在应用程序配置文件中; 在将被忽略*Machine.config*。
 
-- 检测和终止循环引用。 也就是说，如果 **\<linkedConfiguration >** 的一系列的配置文件的元素形成循环，循环是检测到，并已停止。
+- 检测到并终止循环引用。 也就是说，如果 **\<linkedConfiguration >** 一系列配置文件中的元素形成循环，循环将检测并停止。
 
 ## <a name="example"></a>示例
 
-下面的示例演示如何将从本地硬盘上的配置文件包括：
+下面的示例演示如何包含配置文件从本地硬盘：
 
 ```xml
 <configuration>
