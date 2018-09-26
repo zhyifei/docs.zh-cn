@@ -3,11 +3,11 @@ title: 无法删除项，因为它具有子项
 ms.date: 07/20/2015
 ms.assetid: 71d7f28f-42ef-4eb7-a39e-512c40b79977
 ms.openlocfilehash: da784f0d22e0cdd5db5054645d977918fca47f4b
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 09/25/2018
-ms.locfileid: "47061285"
+ms.locfileid: "47173416"
 ---
 # <a name="key-cannot-be-deleted-because-it-has-subkeys"></a>无法删除项，因为它具有子项
 无法删除该项，因为它具有子项。  

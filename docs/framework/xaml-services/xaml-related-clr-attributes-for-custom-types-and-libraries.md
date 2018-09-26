@@ -5,11 +5,11 @@ helpviewer_keywords:
 - CLR attributes for custom types [XAML Services]
 ms.assetid: 5dfb299a-b6e2-41b8-8694-e6ac987547f1
 ms.openlocfilehash: 13cc4d85a1a4b5c9b1ff61afbf7980a54e3d22d0
-ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/20/2018
-ms.locfileid: "46473507"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47172045"
 ---
 # <a name="xaml-related-clr-attributes-for-custom-types-and-libraries"></a>自定义类型和库的 XAML 相关 CLR 特性
 本主题介绍由.NET Framework XAML 服务定义的公共语言运行时 (CLR) 属性。 它还介绍了在.NET Framework 中定义具有对程序集或类型的应用程序的 XAML 相关方案的其他 CLR 属性。 使用这些 CLR 特性属性的程序集、 类型或成员提供了与您的类型相关的 XAML 类型系统信息。 到直接处理 XAML 节点流或专用的 XAML 读取器和 XAML 编写器通过使用.NET Framework XAML 服务的任何 XAML 使用者提供信息。  
@@ -37,7 +37,7 @@ ms.locfileid: "46473507"
   
  **参数：** 一个字符串，指定与单个构造函数自变量匹配的属性的名称。  
   
- <xref:System.Windows.Markup.ConstructorArgumentAttribute> 指定可以使用非默认构造函数语法来初始化的对象和指定名称的属性提供构造信息。 此信息主要用于 XAML 序列化。 有关详细信息，请参阅 <xref:System.Windows.Markup.ConstructorArgumentAttribute> 。  
+ <xref:System.Windows.Markup.ConstructorArgumentAttribute> 指定可以使用非默认构造函数语法来初始化的对象和指定名称的属性提供构造信息。 此信息主要用于 XAML 序列化。 有关详细信息，请参阅<xref:System.Windows.Markup.ConstructorArgumentAttribute>。  
   
 ### <a name="contentpropertyattribute"></a>ContentPropertyAttribute  
  **参考文档：**  <xref:System.Windows.Markup.ContentPropertyAttribute>  
@@ -151,7 +151,7 @@ ms.locfileid: "46473507"
   
  **参数：** 一个布尔值。 如果使用为该特性的预期用途，这应始终指定为`true`。  
   
- 指示在 XAML 对象图创建期间是否自上而下生成此类型。 这是一种高级的概念，这与编程模型的定义可能密切相关。 有关详细信息，请参阅 <xref:System.Windows.Markup.UsableDuringInitializationAttribute> 。  
+ 指示在 XAML 对象图创建期间是否自上而下生成此类型。 这是一种高级的概念，这与编程模型的定义可能密切相关。 有关详细信息，请参阅<xref:System.Windows.Markup.UsableDuringInitializationAttribute>。  
   
 ### <a name="valueserializerattribute"></a>ValueSerializerAttribute  
  **参考文档：**  <xref:System.Windows.Markup.ValueSerializerAttribute>  

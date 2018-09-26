@@ -3,11 +3,11 @@ title: 使用 Windows Store 应用商店客户端应用访问 WCF 服务
 ms.date: 03/30/2017
 ms.assetid: e2002ef4-5dee-4a54-9d87-03b33d35fc52
 ms.openlocfilehash: a6324d5400e9fb15b3373eea4df0a15cd7c54887
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/22/2018
-ms.locfileid: "46585147"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47176329"
 ---
 # <a name="accessing-wcf-services-with-a-windows-store-client-app"></a>使用 Windows Store 应用商店客户端应用访问 WCF 服务
 Windows 8 引入了一种新应用程序，称为 Windows 应用商店应用程序。 这些应用程序是围绕触摸屏界面设计的。 通过 .NET Framework 4.5，Windows 商店应用程序可以调用 WCF 服务。  

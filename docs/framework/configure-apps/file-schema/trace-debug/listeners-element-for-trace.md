@@ -9,16 +9,15 @@ helpviewer_keywords:
 ms.assetid: 1394c2c3-6304-46db-87c1-8e8b16f5ad5b
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 2f0d795d6a8789772ff3fd46648fbc0d683c66e5
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: bfcf96c553f85aeb0a40dfd6ea36667d504e8eee
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32748134"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47172831"
 ---
 # <a name="ltlistenersgt-element-for-lttracegt"></a>&lt;侦听器&gt;元素&lt;跟踪&gt;
-指定收集，侦听器存储区，并将消息路由。 侦听器将跟踪输出定向到适当的目标。  
+指定的侦听器，可收集、 存储，并将消息路由。 侦听器将跟踪输出定向到适当的目标。  
   
  \<配置 > 元素  
 \<system.diagnostics > 元素  
@@ -58,13 +57,13 @@ ms.locfileid: "32748134"
 |`trace`|包含用于收集、存储和路由跟踪消息的侦听器。|  
   
 ## <a name="remarks"></a>备注  
- <xref:System.Diagnostics.Debug>和<xref:System.Diagnostics.Trace>类共用同一个**侦听器**集合。 如果你将侦听器对象添加到这些类之一中的集合，其他类将使用相同的侦听器。 随.NET Framework 提供的侦听器类派生自<xref:System.Diagnostics.TraceListener>类。  
+ <xref:System.Diagnostics.Debug>并<xref:System.Diagnostics.Trace>类将共享相同**侦听器**集合。 如果将侦听器对象添加到在其中一个类的集合，其他类将使用相同的侦听器。 .NET Framework 附带的侦听器类派生<xref:System.Diagnostics.TraceListener>类。  
   
 ## <a name="configuration-file"></a>配置文件  
  计算机配置文件 (Machine.config) 和应用程序配置文件中，可以使用此元素。  
   
 ## <a name="example"></a>示例  
- 下面的示例演示如何使用**\<侦听器 >** 元素将侦听器`MyListener`和`MyEventListener`到**侦听器**集合。 `MyListener` 创建名为的文件`MyListener.log`并将输出写入文件。 `MyEventListener` 事件日志中创建的项。  
+ 下面的示例演示如何使用**\<侦听器 >** 元素添加侦听器`MyListener`并`MyEventListener`到**侦听器**集合。 `MyListener` 创建一个名为文件`MyListener.log`并将输出写入到该文件。 `MyEventListener` 事件日志中创建一个条目。  
   
 ```xml  
 <configuration>  

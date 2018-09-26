@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 1eb2fae3-de4b-45b6-852f-517c39b751bd
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: fb050a8d73c42094caf83ba00c5dfc2e4d472723
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 0640b4c54b6f1429bce4947ec536352f240ca719
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32748667"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47172727"
 ---
 # <a name="ltruntimegt-element"></a>&lt;运行时&gt;元素
 提供公共语言运行时用于配置应用程序的信息。  
@@ -33,7 +32,7 @@ ms.locfileid: "32748667"
 ```  
   
 ## <a name="attributes-and-elements"></a>特性和元素  
- 下列各节描述子元素和父元素。  
+ 以下各节描述了子元素和父元素。  
   
 ### <a name="attributes"></a>特性  
  无。  
@@ -51,7 +50,7 @@ ms.locfileid: "32748667"
 |[\<bypassTrustedAppStrongNames>](../../../../../docs/framework/configure-apps/file-schema/runtime/bypasstrustedappstrongnames-element.md)|指定是否应绕过对受信任的程序集进行强名称验证。|  
 |[\<CompatSortNLSVersion>](../../../../../docs/framework/configure-apps/file-schema/runtime/compatsortnlsversion-element.md)|指定执行字符串比较时，运行时应使用旧排序行为。|  
 |[\<developmentMode>](../../../../../docs/framework/configure-apps/file-schema/runtime/developmentmode-element.md)|指定运行时是否搜索由 DEVPATH 环境变量指定的目录中的程序集。|  
-|[\<disableCachingBindingFailures>](../../../../../docs/framework/configure-apps/file-schema/runtime/disablecachingbindingfailures-element.md)|指定是否禁用缓存绑定故障，这是.NET Framework 2.0 版中的默认行为。|  
+|[\<disableCachingBindingFailures>](../../../../../docs/framework/configure-apps/file-schema/runtime/disablecachingbindingfailures-element.md)|指定是否禁用缓存绑定故障，即.NET Framework 2.0 版中的默认行为。|  
 |[\<disableCommitThreadStack>](../../../../../docs/framework/configure-apps/file-schema/runtime/disablecommitthreadstack-element.md)|指定在线程启动时是否提交完整线程堆栈。|  
 |[\<disableFusionUpdatesFromADManager>](../../../../../docs/framework/configure-apps/file-schema/runtime/disablefusionupdatesfromadmanager-element.md)|指定是否禁用允许运行时主机为应用程序域重写配置设置的默认行为。|  
 |[\<EnableAmPmParseAdjustment>](../../../../../docs/framework/configure-apps/file-schema/runtime/enableampmparseadjustment-element.md)|确定日期和时间分析方法是否使用调整后的一组规则来分析仅包含天、月、小时和 AM/PM 指示符的日期字符串。|  
@@ -88,9 +87,9 @@ ms.locfileid: "32748667"
 |`configuration`|公共语言运行时和 .NET Framework 应用程序所使用的每个配置文件中的根元素。|  
   
 ## <a name="remarks"></a>备注  
- 中的子元素[\<运行时 >](../../../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md)配置文件节供公共语言运行时，用于将配置应用程序的执行方式。 例如， [ \<gcServer >](../../../../../docs/framework/configure-apps/file-schema/runtime/gcserver-element.md)元素确定垃圾回收器是否使用工作站垃圾回收或服务器垃圾回收， [ \<UseRandomizedStringHashAlgorithm >](../../../../../docs/framework/configure-apps/file-schema/runtime/userandomizedstringhashalgorithm-element.md)元素确定公共语言运行时是否计算上按应用程序或每个应用程序域为基础，字符串的哈希代码和`AppContextSwitchOverrides`元素允许库用户若要选择加入或选择退出更改库提供的功能。  
+ 中的子元素[\<运行时 >](../../../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md)配置文件节由公共语言运行时，若要配置应用程序的执行方式。 例如， [ \<gcServer >](../../../../../docs/framework/configure-apps/file-schema/runtime/gcserver-element.md)元素确定垃圾回收器使用工作站垃圾回收或服务器垃圾回收[ \<Userandomizedstringhashalgorithm，那么 >](../../../../../docs/framework/configure-apps/file-schema/runtime/userandomizedstringhashalgorithm-element.md)元素可确定公共语言运行时是否计算上每个程序或每个应用程序域为基础，字符串的哈希代码和`AppContextSwitchOverrides`元素允许库用户若要选择加入或退出更改库提供的功能。  
   
- 中的元素[\<运行时 >](../../../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md)部分由公共语言运行时在应用程序启动时自动进行读取。 你还可以定义一个非默认应用程序域的配置文件提供到其名称<xref:System.AppDomainSetup.ConfigurationFile%2A?displayProperty=nameWithType>属性; 其将读取设置自动时，应用程序域将加载。 你应极少数情况下，如果有，具有需要直接读取中的设置[\<运行时 >](../../../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md)你的应用程序配置文件中的部分。  
+ 中的元素[\<运行时 >](../../../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md)部分由公共语言运行时在应用程序启动时自动读取。 您还可以通过提供到其名称定义一个非默认应用程序域的配置文件<xref:System.AppDomainSetup.ConfigurationFile%2A?displayProperty=nameWithType>属性; 其设置将应用程序域加载时自动读取。 您应该很少，即使有的话会需要直接读取中的设置[\<运行时 >](../../../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md)应用程序的配置文件中的部分。  
   
 ## <a name="see-also"></a>请参阅  
  [运行时设置架构](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
