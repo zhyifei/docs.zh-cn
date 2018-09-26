@@ -3,21 +3,21 @@ title: 无法删除项，因为它具有子项
 ms.date: 07/20/2015
 ms.assetid: 71d7f28f-42ef-4eb7-a39e-512c40b79977
 ms.openlocfilehash: da784f0d22e0cdd5db5054645d977918fca47f4b
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 09/25/2018
-ms.locfileid: "47061285"
+ms.locfileid: "47173416"
 ---
-# <a name="key-cannot-be-deleted-because-it-has-subkeys"></a><span data-ttu-id="9289a-102">无法删除项，因为它具有子项</span><span class="sxs-lookup"><span data-stu-id="9289a-102">Key cannot be deleted because it has subkeys</span></span>
-<span data-ttu-id="9289a-103">无法删除该项，因为它具有子项。</span><span class="sxs-lookup"><span data-stu-id="9289a-103">The key cannot be deleted because it has subkeys.</span></span>  
+# <a name="key-cannot-be-deleted-because-it-has-subkeys"></a><span data-ttu-id="81322-102">无法删除项，因为它具有子项</span><span class="sxs-lookup"><span data-stu-id="81322-102">Key cannot be deleted because it has subkeys</span></span>
+<span data-ttu-id="81322-103">无法删除该项，因为它具有子项。</span><span class="sxs-lookup"><span data-stu-id="81322-103">The key cannot be deleted because it has subkeys.</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="9289a-104">更正此错误</span><span class="sxs-lookup"><span data-stu-id="9289a-104">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="81322-104">更正此错误</span><span class="sxs-lookup"><span data-stu-id="81322-104">To correct this error</span></span>  
   
--   <span data-ttu-id="9289a-105">在尝试此操作之前，请确定并删除指定项的子项。</span><span class="sxs-lookup"><span data-stu-id="9289a-105">Determine and delete the specified key's subkeys before attempting this operation.</span></span>  
+-   <span data-ttu-id="81322-105">在尝试此操作之前，请确定并删除指定项的子项。</span><span class="sxs-lookup"><span data-stu-id="81322-105">Determine and delete the specified key's subkeys before attempting this operation.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="9289a-106">请参阅</span><span class="sxs-lookup"><span data-stu-id="9289a-106">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="81322-106">请参阅</span><span class="sxs-lookup"><span data-stu-id="81322-106">See Also</span></span>  
  <xref:Microsoft.Win32.RegistryKey.DeleteSubKey%2A>  
- [<span data-ttu-id="9289a-107">如何：删除注册表项</span><span class="sxs-lookup"><span data-stu-id="9289a-107">How to: Delete a Registry Key</span></span>](../../visual-basic/developing-apps/programming/computer-resources/how-to-delete-a-registry-key.md)  
- [<span data-ttu-id="9289a-108">读取和写入注册表使用我 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="9289a-108">Reading from and Writing to the Registry Using My (Visual Basic)</span></span>](https://msdn.microsoft.com/library/1309ad05-5bef-401f-970a-2f6455873b79)  
- [<span data-ttu-id="9289a-109">故障排除： 操作注册表 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="9289a-109">Troubleshooting: Manipulating the Registry (Visual Basic)</span></span>](https://msdn.microsoft.com/library/6ca24f55-3697-4017-b687-9de45858af4c)
+ [<span data-ttu-id="81322-107">如何：删除注册表项</span><span class="sxs-lookup"><span data-stu-id="81322-107">How to: Delete a Registry Key</span></span>](../../visual-basic/developing-apps/programming/computer-resources/how-to-delete-a-registry-key.md)  
+ [<span data-ttu-id="81322-108">读取和写入注册表使用我 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="81322-108">Reading from and Writing to the Registry Using My (Visual Basic)</span></span>](https://msdn.microsoft.com/library/1309ad05-5bef-401f-970a-2f6455873b79)  
+ [<span data-ttu-id="81322-109">故障排除： 操作注册表 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="81322-109">Troubleshooting: Manipulating the Registry (Visual Basic)</span></span>](https://msdn.microsoft.com/library/6ca24f55-3697-4017-b687-9de45858af4c)

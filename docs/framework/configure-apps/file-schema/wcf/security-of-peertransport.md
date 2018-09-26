@@ -3,25 +3,24 @@ title: '&lt;peerTransport&gt; 的 &lt;security&gt;'
 ms.date: 03/30/2017
 ms.assetid: f73634ed-f896-4968-bf74-5e5ac52d3b6b
 author: BrucePerlerMS
-manager: mbaldwin
-ms.openlocfilehash: 9d77c250b4843c9a0f83247cae5c2859429cf5bf
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 152087550d3fa881a7a88271d9c91dfcc5c894c8
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32749837"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47176755"
 ---
-# <a name="ltsecuritygt-of-ltpeertransportgt"></a><span data-ttu-id="734f1-102">&lt;peerTransport&gt; 的 &lt;security&gt;</span><span class="sxs-lookup"><span data-stu-id="734f1-102">&lt;security&gt; of &lt;peerTransport&gt;</span></span>
-<span data-ttu-id="734f1-103">包含与对等通道相关的安全设置，包括使用的身份验证类型和用于消息传输的安全性。</span><span class="sxs-lookup"><span data-stu-id="734f1-103">Contains the security settings associated with a peer channel, including the type of authentication used and the security used for the message transport.</span></span>  
+# <a name="ltsecuritygt-of-ltpeertransportgt"></a><span data-ttu-id="700c6-102">&lt;peerTransport&gt; 的 &lt;security&gt;</span><span class="sxs-lookup"><span data-stu-id="700c6-102">&lt;security&gt; of &lt;peerTransport&gt;</span></span>
+<span data-ttu-id="700c6-103">包含与对等通道相关的安全设置，包括使用的身份验证类型和用于消息传输的安全性。</span><span class="sxs-lookup"><span data-stu-id="700c6-103">Contains the security settings associated with a peer channel, including the type of authentication used and the security used for the message transport.</span></span>  
   
- <span data-ttu-id="734f1-104">\<system.serviceModel></span><span class="sxs-lookup"><span data-stu-id="734f1-104">\<system.serviceModel></span></span>  
-<span data-ttu-id="734f1-105">\<绑定 ></span><span class="sxs-lookup"><span data-stu-id="734f1-105">\<bindings></span></span>  
-<span data-ttu-id="734f1-106">\<customBinding></span><span class="sxs-lookup"><span data-stu-id="734f1-106">\<customBinding></span></span>  
-<span data-ttu-id="734f1-107">\<绑定 ></span><span class="sxs-lookup"><span data-stu-id="734f1-107">\<binding></span></span>  
-<span data-ttu-id="734f1-108">\<t ></span><span class="sxs-lookup"><span data-stu-id="734f1-108">\<peerTransport></span></span>  
-<span data-ttu-id="734f1-109">\<安全 ></span><span class="sxs-lookup"><span data-stu-id="734f1-109">\<security></span></span>  
+ <span data-ttu-id="700c6-104">\<system.serviceModel></span><span class="sxs-lookup"><span data-stu-id="700c6-104">\<system.serviceModel></span></span>  
+<span data-ttu-id="700c6-105">\<绑定 ></span><span class="sxs-lookup"><span data-stu-id="700c6-105">\<bindings></span></span>  
+<span data-ttu-id="700c6-106">\<customBinding></span><span class="sxs-lookup"><span data-stu-id="700c6-106">\<customBinding></span></span>  
+<span data-ttu-id="700c6-107">\<绑定 ></span><span class="sxs-lookup"><span data-stu-id="700c6-107">\<binding></span></span>  
+<span data-ttu-id="700c6-108">\<peerTransport ></span><span class="sxs-lookup"><span data-stu-id="700c6-108">\<peerTransport></span></span>  
+<span data-ttu-id="700c6-109">\<安全 ></span><span class="sxs-lookup"><span data-stu-id="700c6-109">\<security></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="734f1-110">语法</span><span class="sxs-lookup"><span data-stu-id="734f1-110">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="700c6-110">语法</span><span class="sxs-lookup"><span data-stu-id="700c6-110">Syntax</span></span>  
   
 ```xml  
 <security mode="None/Transport/Message/TransportWithMessageCredential">  
@@ -29,44 +28,44 @@ ms.locfileid: "32749837"
 </security  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="734f1-111">特性和元素</span><span class="sxs-lookup"><span data-stu-id="734f1-111">Attributes and Elements</span></span>  
- <span data-ttu-id="734f1-112">下列各节描述了特性、子元素和父元素。</span><span class="sxs-lookup"><span data-stu-id="734f1-112">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="700c6-111">特性和元素</span><span class="sxs-lookup"><span data-stu-id="700c6-111">Attributes and Elements</span></span>  
+ <span data-ttu-id="700c6-112">下列各节描述了特性、子元素和父元素。</span><span class="sxs-lookup"><span data-stu-id="700c6-112">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="734f1-113">特性</span><span class="sxs-lookup"><span data-stu-id="734f1-113">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="700c6-113">特性</span><span class="sxs-lookup"><span data-stu-id="700c6-113">Attributes</span></span>  
   
-|<span data-ttu-id="734f1-114">特性</span><span class="sxs-lookup"><span data-stu-id="734f1-114">Attribute</span></span>|<span data-ttu-id="734f1-115">描述</span><span class="sxs-lookup"><span data-stu-id="734f1-115">Description</span></span>|  
+|<span data-ttu-id="700c6-114">特性</span><span class="sxs-lookup"><span data-stu-id="700c6-114">Attribute</span></span>|<span data-ttu-id="700c6-115">描述</span><span class="sxs-lookup"><span data-stu-id="700c6-115">Description</span></span>|  
 |---------------|-----------------|  
-|`mode`|<span data-ttu-id="734f1-116">指定要应用的安全类型。</span><span class="sxs-lookup"><span data-stu-id="734f1-116">Specifies the type of security to be applied.</span></span> <span data-ttu-id="734f1-117">默认值为 Message。</span><span class="sxs-lookup"><span data-stu-id="734f1-117">The default value is Message.</span></span> <span data-ttu-id="734f1-118">此属性的类型为 <xref:System.ServiceModel.SecurityMode>。</span><span class="sxs-lookup"><span data-stu-id="734f1-118">This attribute is of type <xref:System.ServiceModel.SecurityMode>.</span></span>|  
+|`mode`|<span data-ttu-id="700c6-116">指定要应用的安全类型。</span><span class="sxs-lookup"><span data-stu-id="700c6-116">Specifies the type of security to be applied.</span></span> <span data-ttu-id="700c6-117">默认值为 Message。</span><span class="sxs-lookup"><span data-stu-id="700c6-117">The default value is Message.</span></span> <span data-ttu-id="700c6-118">此属性的类型为 <xref:System.ServiceModel.SecurityMode>。</span><span class="sxs-lookup"><span data-stu-id="700c6-118">This attribute is of type <xref:System.ServiceModel.SecurityMode>.</span></span>|  
   
-## <a name="mode-attribute"></a><span data-ttu-id="734f1-119">mode 属性</span><span class="sxs-lookup"><span data-stu-id="734f1-119">mode Attribute</span></span>  
+## <a name="mode-attribute"></a><span data-ttu-id="700c6-119">mode 属性</span><span class="sxs-lookup"><span data-stu-id="700c6-119">mode Attribute</span></span>  
   
-|<span data-ttu-id="734f1-120">值</span><span class="sxs-lookup"><span data-stu-id="734f1-120">Value</span></span>|<span data-ttu-id="734f1-121">描述</span><span class="sxs-lookup"><span data-stu-id="734f1-121">Description</span></span>|  
+|<span data-ttu-id="700c6-120">值</span><span class="sxs-lookup"><span data-stu-id="700c6-120">Value</span></span>|<span data-ttu-id="700c6-121">描述</span><span class="sxs-lookup"><span data-stu-id="700c6-121">Description</span></span>|  
 |-----------|-----------------|  
-|`None`|<span data-ttu-id="734f1-122">禁用安全性。</span><span class="sxs-lookup"><span data-stu-id="734f1-122">Security is disabled.</span></span>|  
-|`Transport`|<span data-ttu-id="734f1-123">使用 HTTPS 提供安全性。</span><span class="sxs-lookup"><span data-stu-id="734f1-123">Security is provided using HTTPS.</span></span>|  
-|`Message`|<span data-ttu-id="734f1-124">SOAP 安全提供身份验证、完整性和保密性。</span><span class="sxs-lookup"><span data-stu-id="734f1-124">SOAP security provides authentication, integrity and confidentiality.</span></span>|  
-|`TransportWithMessageCredential`|<span data-ttu-id="734f1-125">HTTPS 提供身份验证和保密性。</span><span class="sxs-lookup"><span data-stu-id="734f1-125">HTTPS provides authentication and confidentiality.</span></span> <span data-ttu-id="734f1-126">SOAP 消息提供丰富的凭据类型。</span><span class="sxs-lookup"><span data-stu-id="734f1-126">SOAP messages provide rich credential types.</span></span>|  
+|`None`|<span data-ttu-id="700c6-122">禁用安全性。</span><span class="sxs-lookup"><span data-stu-id="700c6-122">Security is disabled.</span></span>|  
+|`Transport`|<span data-ttu-id="700c6-123">使用 HTTPS 提供安全性。</span><span class="sxs-lookup"><span data-stu-id="700c6-123">Security is provided using HTTPS.</span></span>|  
+|`Message`|<span data-ttu-id="700c6-124">SOAP 安全提供身份验证、完整性和保密性。</span><span class="sxs-lookup"><span data-stu-id="700c6-124">SOAP security provides authentication, integrity and confidentiality.</span></span>|  
+|`TransportWithMessageCredential`|<span data-ttu-id="700c6-125">HTTPS 提供身份验证和保密性。</span><span class="sxs-lookup"><span data-stu-id="700c6-125">HTTPS provides authentication and confidentiality.</span></span> <span data-ttu-id="700c6-126">SOAP 消息提供丰富的凭据类型。</span><span class="sxs-lookup"><span data-stu-id="700c6-126">SOAP messages provide rich credential types.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="734f1-127">子元素</span><span class="sxs-lookup"><span data-stu-id="734f1-127">Child Elements</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="700c6-127">子元素</span><span class="sxs-lookup"><span data-stu-id="700c6-127">Child Elements</span></span>  
   
-|<span data-ttu-id="734f1-128">元素</span><span class="sxs-lookup"><span data-stu-id="734f1-128">Element</span></span>|<span data-ttu-id="734f1-129">描述</span><span class="sxs-lookup"><span data-stu-id="734f1-129">Description</span></span>|  
+|<span data-ttu-id="700c6-128">元素</span><span class="sxs-lookup"><span data-stu-id="700c6-128">Element</span></span>|<span data-ttu-id="700c6-129">描述</span><span class="sxs-lookup"><span data-stu-id="700c6-129">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="734f1-130">\<transport></span><span class="sxs-lookup"><span data-stu-id="734f1-130">\<transport></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/transport-of-peertransport.md)|<span data-ttu-id="734f1-131">定义自定义绑定的对等传输。</span><span class="sxs-lookup"><span data-stu-id="734f1-131">Defines a peer transport for a custom binding.</span></span> <span data-ttu-id="734f1-132">此元素具有一个 `clientCredentialType` 属性，可指定与服务进行交互时要使用的凭据。</span><span class="sxs-lookup"><span data-stu-id="734f1-132">This element has a `clientCredentialType` attribute that specifies the credentials to be used when interacting with a service.</span></span> <span data-ttu-id="734f1-133">此属性的类型为 <xref:System.ServiceModel.PeerTransportCredentialType>。</span><span class="sxs-lookup"><span data-stu-id="734f1-133">This attribute is of type <xref:System.ServiceModel.PeerTransportCredentialType>.</span></span><br /><br /> <span data-ttu-id="734f1-134">此元素的类型为 <xref:System.ServiceModel.Configuration.PeerTransportSecurityElement>。</span><span class="sxs-lookup"><span data-stu-id="734f1-134">This element is of type <xref:System.ServiceModel.Configuration.PeerTransportSecurityElement>.</span></span>|  
+|[<span data-ttu-id="700c6-130">\<transport></span><span class="sxs-lookup"><span data-stu-id="700c6-130">\<transport></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/transport-of-peertransport.md)|<span data-ttu-id="700c6-131">定义自定义绑定的对等传输。</span><span class="sxs-lookup"><span data-stu-id="700c6-131">Defines a peer transport for a custom binding.</span></span> <span data-ttu-id="700c6-132">此元素具有一个 `clientCredentialType` 属性，可指定与服务进行交互时要使用的凭据。</span><span class="sxs-lookup"><span data-stu-id="700c6-132">This element has a `clientCredentialType` attribute that specifies the credentials to be used when interacting with a service.</span></span> <span data-ttu-id="700c6-133">此属性的类型为 <xref:System.ServiceModel.PeerTransportCredentialType>。</span><span class="sxs-lookup"><span data-stu-id="700c6-133">This attribute is of type <xref:System.ServiceModel.PeerTransportCredentialType>.</span></span><br /><br /> <span data-ttu-id="700c6-134">此元素的类型为 <xref:System.ServiceModel.Configuration.PeerTransportSecurityElement>。</span><span class="sxs-lookup"><span data-stu-id="700c6-134">This element is of type <xref:System.ServiceModel.Configuration.PeerTransportSecurityElement>.</span></span>|  
   
-### <a name="parent-elements"></a><span data-ttu-id="734f1-135">父元素</span><span class="sxs-lookup"><span data-stu-id="734f1-135">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="700c6-135">父元素</span><span class="sxs-lookup"><span data-stu-id="700c6-135">Parent Elements</span></span>  
   
-|<span data-ttu-id="734f1-136">元素</span><span class="sxs-lookup"><span data-stu-id="734f1-136">Element</span></span>|<span data-ttu-id="734f1-137">描述</span><span class="sxs-lookup"><span data-stu-id="734f1-137">Description</span></span>|  
+|<span data-ttu-id="700c6-136">元素</span><span class="sxs-lookup"><span data-stu-id="700c6-136">Element</span></span>|<span data-ttu-id="700c6-137">描述</span><span class="sxs-lookup"><span data-stu-id="700c6-137">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="734f1-138">\<t ></span><span class="sxs-lookup"><span data-stu-id="734f1-138">\<peerTransport></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/peertransport.md)|<span data-ttu-id="734f1-139">定义自定义绑定的对等传输。</span><span class="sxs-lookup"><span data-stu-id="734f1-139">Defines a peer transport for a custom binding.</span></span>|  
+|[<span data-ttu-id="700c6-138">\<peerTransport ></span><span class="sxs-lookup"><span data-stu-id="700c6-138">\<peerTransport></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/peertransport.md)|<span data-ttu-id="700c6-139">定义自定义绑定的对等传输。</span><span class="sxs-lookup"><span data-stu-id="700c6-139">Defines a peer transport for a custom binding.</span></span>|  
   
-## <a name="see-also"></a><span data-ttu-id="734f1-140">请参阅</span><span class="sxs-lookup"><span data-stu-id="734f1-140">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="700c6-140">请参阅</span><span class="sxs-lookup"><span data-stu-id="700c6-140">See Also</span></span>  
  <xref:System.ServiceModel.Configuration.PeerSecurityElement>  
  <xref:System.ServiceModel.PeerSecuritySettings>  
  <xref:System.ServiceModel.Channels.CustomBinding>  
- [<span data-ttu-id="734f1-141">传输安全性</span><span class="sxs-lookup"><span data-stu-id="734f1-141">Transport Security</span></span>](../../../../../docs/framework/wcf/feature-details/transport-security.md)  
- [<span data-ttu-id="734f1-142">传输</span><span class="sxs-lookup"><span data-stu-id="734f1-142">Transports</span></span>](../../../../../docs/framework/wcf/feature-details/transports.md)  
- [<span data-ttu-id="734f1-143">选择传输</span><span class="sxs-lookup"><span data-stu-id="734f1-143">Choosing a Transport</span></span>](../../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)  
- [<span data-ttu-id="734f1-144">绑定</span><span class="sxs-lookup"><span data-stu-id="734f1-144">Bindings</span></span>](../../../../../docs/framework/wcf/bindings.md)  
- [<span data-ttu-id="734f1-145">扩展绑定</span><span class="sxs-lookup"><span data-stu-id="734f1-145">Extending Bindings</span></span>](../../../../../docs/framework/wcf/extending/extending-bindings.md)  
- [<span data-ttu-id="734f1-146">自定义绑定</span><span class="sxs-lookup"><span data-stu-id="734f1-146">Custom Bindings</span></span>](../../../../../docs/framework/wcf/extending/custom-bindings.md)  
- [<span data-ttu-id="734f1-147">\<customBinding></span><span class="sxs-lookup"><span data-stu-id="734f1-147">\<customBinding></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
+ [<span data-ttu-id="700c6-141">传输安全性</span><span class="sxs-lookup"><span data-stu-id="700c6-141">Transport Security</span></span>](../../../../../docs/framework/wcf/feature-details/transport-security.md)  
+ [<span data-ttu-id="700c6-142">传输</span><span class="sxs-lookup"><span data-stu-id="700c6-142">Transports</span></span>](../../../../../docs/framework/wcf/feature-details/transports.md)  
+ [<span data-ttu-id="700c6-143">选择传输</span><span class="sxs-lookup"><span data-stu-id="700c6-143">Choosing a Transport</span></span>](../../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)  
+ [<span data-ttu-id="700c6-144">绑定</span><span class="sxs-lookup"><span data-stu-id="700c6-144">Bindings</span></span>](../../../../../docs/framework/wcf/bindings.md)  
+ [<span data-ttu-id="700c6-145">扩展绑定</span><span class="sxs-lookup"><span data-stu-id="700c6-145">Extending Bindings</span></span>](../../../../../docs/framework/wcf/extending/extending-bindings.md)  
+ [<span data-ttu-id="700c6-146">自定义绑定</span><span class="sxs-lookup"><span data-stu-id="700c6-146">Custom Bindings</span></span>](../../../../../docs/framework/wcf/extending/custom-bindings.md)  
+ [<span data-ttu-id="700c6-147">\<customBinding></span><span class="sxs-lookup"><span data-stu-id="700c6-147">\<customBinding></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)

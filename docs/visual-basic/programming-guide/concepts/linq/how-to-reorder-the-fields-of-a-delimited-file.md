@@ -3,20 +3,20 @@ title: 如何： 重新排列带分隔符的文件 (LINQ) (Visual Basic) 字段
 ms.date: 07/20/2015
 ms.assetid: c451c7db-663b-4daf-b8ba-a2093095d672
 ms.openlocfilehash: f9322ac9601deffd110c962a9ed8b502a02092ee
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/22/2018
-ms.locfileid: "46576764"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47172662"
 ---
-# <a name="how-to-reorder-the-fields-of-a-delimited-file-linq-visual-basic"></a><span data-ttu-id="5e902-102">如何： 重新排列带分隔符的文件 (LINQ) (Visual Basic) 字段</span><span class="sxs-lookup"><span data-stu-id="5e902-102">How to: Reorder the Fields of a Delimited File (LINQ) (Visual Basic)</span></span>
-<span data-ttu-id="5e902-103">逗号分隔值 (CSV) 文件是一种文本文件，通常用于存储电子表格数据或其他由行和列表示的表格数据。</span><span class="sxs-lookup"><span data-stu-id="5e902-103">A comma-separated value (CSV) file is a text file that is often used to store spreadsheet data or other tabular data that is represented by rows and columns.</span></span> <span data-ttu-id="5e902-104">通过使用 <xref:System.String.Split%2A> 方法分隔字段，可以非常轻松地使用 LINQ 来查询和操作 CSV 文件。</span><span class="sxs-lookup"><span data-stu-id="5e902-104">By using the <xref:System.String.Split%2A> method to separate the fields, it is very easy to query and manipulate CSV files by using LINQ.</span></span> <span data-ttu-id="5e902-105">事实上，可以使用此技术来重新排列任何结构化文本行部分；此技术不局限于 CSV 文件。</span><span class="sxs-lookup"><span data-stu-id="5e902-105">In fact, the same technique can be used to reorder the parts of any structured line of text; it is not limited to CSV files.</span></span>  
+# <a name="how-to-reorder-the-fields-of-a-delimited-file-linq-visual-basic"></a><span data-ttu-id="42ebe-102">如何： 重新排列带分隔符的文件 (LINQ) (Visual Basic) 字段</span><span class="sxs-lookup"><span data-stu-id="42ebe-102">How to: Reorder the Fields of a Delimited File (LINQ) (Visual Basic)</span></span>
+<span data-ttu-id="42ebe-103">逗号分隔值 (CSV) 文件是一种文本文件，通常用于存储电子表格数据或其他由行和列表示的表格数据。</span><span class="sxs-lookup"><span data-stu-id="42ebe-103">A comma-separated value (CSV) file is a text file that is often used to store spreadsheet data or other tabular data that is represented by rows and columns.</span></span> <span data-ttu-id="42ebe-104">通过使用 <xref:System.String.Split%2A> 方法分隔字段，可以非常轻松地使用 LINQ 来查询和操作 CSV 文件。</span><span class="sxs-lookup"><span data-stu-id="42ebe-104">By using the <xref:System.String.Split%2A> method to separate the fields, it is very easy to query and manipulate CSV files by using LINQ.</span></span> <span data-ttu-id="42ebe-105">事实上，可以使用此技术来重新排列任何结构化文本行部分；此技术不局限于 CSV 文件。</span><span class="sxs-lookup"><span data-stu-id="42ebe-105">In fact, the same technique can be used to reorder the parts of any structured line of text; it is not limited to CSV files.</span></span>  
   
- <span data-ttu-id="5e902-106">在下面的示例中，假设有三列分别代表学生的“姓氏”、“名字”和“ID”。</span><span class="sxs-lookup"><span data-stu-id="5e902-106">In the following example, assume that the three columns represent students' "last name," "first name", and "ID."</span></span> <span data-ttu-id="5e902-107">这些字段基于学生的姓氏按字母顺序排列。</span><span class="sxs-lookup"><span data-stu-id="5e902-107">The fields are in alphabetical order based on the students' last names.</span></span> <span data-ttu-id="5e902-108">查询生成一个新序列，其中首先出现的是 ID 列，后面的第二列组合了学生的名字和姓氏。</span><span class="sxs-lookup"><span data-stu-id="5e902-108">The query produces a new sequence in which the ID column appears first, followed by a second column that combines the student's first name and last name.</span></span> <span data-ttu-id="5e902-109">根据 ID 字段重新排列各行。</span><span class="sxs-lookup"><span data-stu-id="5e902-109">The lines are reordered according to the ID field.</span></span> <span data-ttu-id="5e902-110">结果保存到新文件，但不修改原始数据。</span><span class="sxs-lookup"><span data-stu-id="5e902-110">The results are saved into a new file and the original data is not modified.</span></span>  
+ <span data-ttu-id="42ebe-106">在下面的示例中，假设有三列分别代表学生的“姓氏”、“名字”和“ID”。</span><span class="sxs-lookup"><span data-stu-id="42ebe-106">In the following example, assume that the three columns represent students' "last name," "first name", and "ID."</span></span> <span data-ttu-id="42ebe-107">这些字段基于学生的姓氏按字母顺序排列。</span><span class="sxs-lookup"><span data-stu-id="42ebe-107">The fields are in alphabetical order based on the students' last names.</span></span> <span data-ttu-id="42ebe-108">查询生成一个新序列，其中首先出现的是 ID 列，后面的第二列组合了学生的名字和姓氏。</span><span class="sxs-lookup"><span data-stu-id="42ebe-108">The query produces a new sequence in which the ID column appears first, followed by a second column that combines the student's first name and last name.</span></span> <span data-ttu-id="42ebe-109">根据 ID 字段重新排列各行。</span><span class="sxs-lookup"><span data-stu-id="42ebe-109">The lines are reordered according to the ID field.</span></span> <span data-ttu-id="42ebe-110">结果保存到新文件，但不修改原始数据。</span><span class="sxs-lookup"><span data-stu-id="42ebe-110">The results are saved into a new file and the original data is not modified.</span></span>  
   
-### <a name="to-create-the-data-file"></a><span data-ttu-id="5e902-111">创建数据文件</span><span class="sxs-lookup"><span data-stu-id="5e902-111">To create the data file</span></span>  
+### <a name="to-create-the-data-file"></a><span data-ttu-id="42ebe-111">创建数据文件</span><span class="sxs-lookup"><span data-stu-id="42ebe-111">To create the data file</span></span>  
   
-1.  <span data-ttu-id="5e902-112">将以下各行复制到名为 spreadsheet1.csv 的纯文本文件。</span><span class="sxs-lookup"><span data-stu-id="5e902-112">Copy the following lines into a plain text file that is named spreadsheet1.csv.</span></span> <span data-ttu-id="5e902-113">将此文件保存到项目文件夹。</span><span class="sxs-lookup"><span data-stu-id="5e902-113">Save the file in your project folder.</span></span>  
+1.  <span data-ttu-id="42ebe-112">将以下各行复制到名为 spreadsheet1.csv 的纯文本文件。</span><span class="sxs-lookup"><span data-stu-id="42ebe-112">Copy the following lines into a plain text file that is named spreadsheet1.csv.</span></span> <span data-ttu-id="42ebe-113">将此文件保存到项目文件夹。</span><span class="sxs-lookup"><span data-stu-id="42ebe-113">Save the file in your project folder.</span></span>  
   
     ```  
     Adams,Terry,120  
@@ -33,7 +33,7 @@ ms.locfileid: "46576764"
     Zabokritski,Eugene,121  
     ```  
   
-## <a name="example"></a><span data-ttu-id="5e902-114">示例</span><span class="sxs-lookup"><span data-stu-id="5e902-114">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="42ebe-114">示例</span><span class="sxs-lookup"><span data-stu-id="42ebe-114">Example</span></span>  
   
 ```vb  
 Class CSVFiles  
@@ -74,10 +74,10 @@ End Class
 ' 122, Michael Tucker  
 ```  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="5e902-115">编译代码</span><span class="sxs-lookup"><span data-stu-id="5e902-115">Compiling the Code</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="42ebe-115">编译代码</span><span class="sxs-lookup"><span data-stu-id="42ebe-115">Compiling the Code</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="5e902-116">请参阅</span><span class="sxs-lookup"><span data-stu-id="5e902-116">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="42ebe-116">请参阅</span><span class="sxs-lookup"><span data-stu-id="42ebe-116">See also</span></span>
 
-- [<span data-ttu-id="5e902-117">LINQ 和字符串 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="5e902-117">LINQ and Strings (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)  
-- [<span data-ttu-id="5e902-118">LINQ 和文件目录 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="5e902-118">LINQ and File Directories (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)  
-- [<span data-ttu-id="5e902-119">如何：从 CSV 文件生成 XML</span><span class="sxs-lookup"><span data-stu-id="5e902-119">How to: Generate XML from CSV Files</span></span>](../../../../visual-basic/programming-guide/concepts/linq/how-to-generate-xml-from-csv-files.md)
+- [<span data-ttu-id="42ebe-117">LINQ 和字符串 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="42ebe-117">LINQ and Strings (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)  
+- [<span data-ttu-id="42ebe-118">LINQ 和文件目录 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="42ebe-118">LINQ and File Directories (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)  
+- [<span data-ttu-id="42ebe-119">如何：从 CSV 文件生成 XML</span><span class="sxs-lookup"><span data-stu-id="42ebe-119">How to: Generate XML from CSV Files</span></span>](../../../../visual-basic/programming-guide/concepts/linq/how-to-generate-xml-from-csv-files.md)
