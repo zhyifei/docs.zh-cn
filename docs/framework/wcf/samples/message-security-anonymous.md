@@ -6,11 +6,11 @@ helpviewer_keywords:
 ms.assetid: c321cbf9-8c05-4cce-b5a5-4bf7b230ee03
 author: BrucePerlerMS
 ms.openlocfilehash: 23f814b036d698a4973ca923cd534ea5f0f5b25c
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47075535"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47196832"
 ---
 # <a name="message-security-anonymous"></a>匿名消息安全
 匿名消息安全的示例演示如何实现 Windows Communication Foundation (WCF) 应用程序使用消息级安全的无客户端身份验证，但需要使用服务器的 X.509 服务器身份验证证书。 客户端与服务器之间的所有应用程序消息均已进行签名和加密。 此示例基于[WSHttpBinding](../../../../docs/framework/wcf/samples/wshttpbinding.md)示例。 此示例由客户端控制台程序 (.exe) 和 Internet 信息服务 (IIS) 所承载的服务库 (.dll) 组成。 该服务实现定义“请求-答复”通信模式的协定。  

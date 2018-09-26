@@ -12,11 +12,11 @@ ms.assetid: 1eb2fae3-de4b-45b6-852f-517c39b751bd
 author: mcleblanc
 ms.author: markl
 ms.openlocfilehash: 0640b4c54b6f1429bce4947ec536352f240ca719
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47172727"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47208641"
 ---
 # <a name="ltruntimegt-element"></a>&lt;运行时&gt;元素
 提供公共语言运行时用于配置应用程序的信息。  

@@ -13,11 +13,11 @@ ms.assetid: d67c14d8-c4dd-443f-affb-4ccae677c9b6
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: c3a0a51fc6055190f9a0189de2e17d98f88036ea
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47111498"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47192727"
 ---
 # <a name="static-class-design"></a>静态类设计
 静态类被定义为仅包含静态成员的类 (当然除了继承自的实例成员<xref:System.Object?displayProperty=nameWithType>和可能是私有构造函数)。 某些语言用于静态类提供内置支持。 在 C# 2.0 及更高版本，当一个类声明为静态，密封的抽象，并且可以重写任何实例成员，或将其声明。  

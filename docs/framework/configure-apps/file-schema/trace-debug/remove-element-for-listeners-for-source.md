@@ -1,5 +1,5 @@
 ---
-title: '&lt;删除&gt;元素&lt;侦听器&gt;为&lt;源&gt;'
+title: '&lt;删除&gt;的元素&lt;侦听器&gt;为&lt;源&gt;'
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/sources/source/listeners/remove
@@ -9,15 +9,14 @@ helpviewer_keywords:
 ms.assetid: 3ff6b578-273d-407f-b07f-8251f1f9f5d0
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: cc6772e7a9b98f09df21fd1acf24f578b66ae51e
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 5cfed154af93d72f69efc24c6475b432d0963580
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32754270"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47188932"
 ---
-# <a name="ltremovegt-element-for-ltlistenersgt-for-ltsourcegt"></a>&lt;删除&gt;元素&lt;侦听器&gt;为&lt;源&gt;
+# <a name="ltremovegt-element-for-ltlistenersgt-for-ltsourcegt"></a>&lt;删除&gt;的元素&lt;侦听器&gt;为&lt;源&gt;
 从跟踪源的 `Listeners` 集合中删除侦听器。  
   
  \<configuration>  
@@ -53,17 +52,17 @@ ms.locfileid: "32754270"
 |`system.diagnostics`|指定用于收集、存储和路由消息的跟踪侦听器以及对跟踪开关设置的级别。|  
 |`sources`|包含用于启动跟踪消息的跟踪源。|  
 |`source`|指定用于启动跟踪消息的跟踪源。|  
-|`listeners`|指定收集、 存储和将消息路由的侦听器。|  
+|`listeners`|指定侦听器，用于收集、 存储和路由消息。|  
   
 ## <a name="remarks"></a>备注  
  `<remove>`元素中移除指定的侦听器从`Listeners`跟踪源的集合。  
   
- 你可以删除从元素`Listeners`以编程方式通过调用跟踪源集合<xref:System.Diagnostics.TraceListenerCollection.Remove%2A>方法<xref:System.Diagnostics.TraceSource.Listeners%2A>属性<xref:System.Diagnostics.TraceSource>实例。  
+ 可以删除从元素`Listeners`跟踪源以编程方式调用集合<xref:System.Diagnostics.TraceListenerCollection.Remove%2A>方法<xref:System.Diagnostics.TraceSource.Listeners%2A>属性的<xref:System.Diagnostics.TraceSource>实例。  
   
  计算机配置文件 (Machine.config) 和应用程序配置文件中，可以使用此元素。  
   
 ## <a name="example"></a>示例  
- 下面的示例演示如何使用`<remove>`元素之前使用`<add>`元素添加侦听器`console`到`Listeners`跟踪源集合`TraceSourceApp`。  
+ 下面的示例演示如何使用`<remove>`之前使用的元素`<add>`元素添加侦听器`console`到`Listeners`跟踪源集合`TraceSourceApp`。  
   
 ```xml  
 <configuration>  

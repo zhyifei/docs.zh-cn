@@ -9,11 +9,11 @@ helpviewer_keywords:
 ms.assetid: 4de03dd3-968a-4e65-af43-516e903d7f95
 author: BrucePerlerMS
 ms.openlocfilehash: 904ea64bd6e76e7bf99aa4a31ef752bfb2760c23
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47080125"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47198457"
 ---
 # <a name="bindings-and-security"></a>绑定与安全
 系统提供的绑定包括与 Windows Communication Foundation (WCF) 提供程序的 WCF 应用程序的快速方法。 但有一个例外，就是所有绑定都启用了默认的安全方案。 本主题将帮助你根据安全需要来选择正确的绑定。  

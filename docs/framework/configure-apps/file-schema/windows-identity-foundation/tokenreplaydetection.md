@@ -3,16 +3,15 @@ title: '&lt;tokenReplayDetection&gt;'
 ms.date: 03/30/2017
 ms.assetid: ac3f588e-5f75-4275-b969-2d492ecc3b47
 author: BrucePerlerMS
-manager: mbaldwin
-ms.openlocfilehash: 7f0cef2590bb301e6897aa4922454942ecdd0957
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: bd2272cb83dc0183d5008cfa178e11783f51ca2d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32755222"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47205919"
 ---
 # <a name="lttokenreplaydetectiongt"></a>&lt;tokenReplayDetection&gt;
-启用令牌重放检测并指定令牌的过期时间。  
+启用令牌重放检测并指定令牌的到期时间。  
   
  \<system.identityModel>  
 \<identityConfiguration>  
@@ -39,8 +38,8 @@ ms.locfileid: "32755222"
   
 |特性|描述|  
 |---------------|-----------------|  
-|enabled|一个值，指定是否启用令牌重放检测;"true"若要启用令牌重放检测。|  
-|expirationPeriod|A <xref:System.TimeSpan> ，它指定的最大项被视为过期并从缓存中删除之前的时间量。  有关如何指定详细信息<xref:System.TimeSpan>值，请参阅[Timespan 值](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/index.md)。|  
+|enabled|一个值，指定是否启用令牌重放检测;"true"以启用令牌重放检测。|  
+|expirationPeriod|一个<xref:System.TimeSpan>指定最大的前一个项目被认为过期并从缓存中删除的时间量。  有关如何指定详细信息<xref:System.TimeSpan>值，请参阅[Timespan 值](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/index.md)。|  
   
 ### <a name="child-elements"></a>子元素  
  无  
@@ -53,6 +52,6 @@ ms.locfileid: "32755222"
 |[\<securityTokenHandlerConfiguration >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/securitytokenhandlerconfiguration.md)|提供配置集合的安全令牌处理程序。|  
   
 ## <a name="remarks"></a>备注  
- A`<tokenReplayDetection>`可以在服务级别下指定元素`<identityConfiguration>`元素或下位于安全令牌处理程序集合级别`<securityTokenHandlerConfiguration>`元素。 令牌处理程序集合上的设置会覆盖在服务上指定。  
+ 一个`<tokenReplayDetection>`可以在服务级别下指定元素`<identityConfiguration>`元素下的安全令牌处理程序集合级别上或`<securityTokenHandlerConfiguration>`元素。 标记处理程序集合上的设置将覆盖在服务上指定的。  
   
- 指定的令牌重放缓存类型[ \<tokenReplayCache >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/tokenreplaycache.md)元素。
+ 通过指定的标记重播缓存类型[ \<tokenReplayCache >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/tokenreplaycache.md)元素。

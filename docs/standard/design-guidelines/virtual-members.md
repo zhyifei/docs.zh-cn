@@ -10,11 +10,11 @@ ms.assetid: 8ff4eb97-0364-43ec-8a02-934b5cd94d19
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: b92b648e7886fb0214238e32eacae2870b470340
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47076884"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47216417"
 ---
 # <a name="virtual-members"></a>虚成员
 可以重写虚拟成员，因此更改行为的子类。 它们是非常类似于在它们提供的可扩展性方面的回调，但它们是在执行性能和内存消耗方面更好。 此外，虚拟成员感觉更自然需要创建一种特殊类型的现有类型 （专用化） 的方案中。  

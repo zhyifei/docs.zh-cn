@@ -3,11 +3,11 @@ title: 修改 SQL 生成
 ms.date: 03/30/2017
 ms.assetid: 2188a39d-46ed-4a8b-906a-c9f15e6fefd1
 ms.openlocfilehash: 8e0568e32094b6cc27137409f3d908928d82cebb
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47111953"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47216729"
 ---
 # <a name="modification-sql-generation"></a>修改 SQL 生成
 本节讨论如何开发用于（符合 SQL:1999 的数据库）提供程序的修改 SQL 生成模块。 此模块负责将修改命令目录树转换成适当的 SQL INSERT、UPDATE 或 DELETE 语句。  

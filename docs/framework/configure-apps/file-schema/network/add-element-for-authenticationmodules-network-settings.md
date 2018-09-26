@@ -13,11 +13,11 @@ ms.assetid: 333c5fb0-a2ab-4db8-8531-a7fe37bb9b5b
 author: mcleblanc
 ms.author: markl
 ms.openlocfilehash: 4a9bcc6cd5d2bbf30f463da0a51e1bccbcd5a3f1
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47083882"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47206088"
 ---
 # <a name="ltaddgt-element-for-authenticationmodules-network-settings"></a>&lt;添加&gt;authenticationModules （网络设置） 的
 将身份验证模块添加到应用程序。  

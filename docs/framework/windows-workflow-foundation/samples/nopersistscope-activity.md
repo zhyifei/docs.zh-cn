@@ -3,11 +3,11 @@ title: NoPersistScope 活动
 ms.date: 03/30/2017
 ms.assetid: 9a0baeb7-a05c-4fac-b905-252758cb71bb
 ms.openlocfilehash: 6543756594b6734aec39bf22c5ab6215605341b1
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47088140"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47216197"
 ---
 # <a name="nopersistscope-activity"></a>NoPersistScope 活动
 此示例演示如何操作工作流中的不可序列化且可释放的状态。 工作流不会尝试保留不可序列化的状态是很重要的，在工作流中使用过可释放的对象之后清除它们也是很重要的。  

@@ -5,11 +5,11 @@ helpviewer_keywords:
 - metadata [WCF], overview
 ms.assetid: 1d37645e-086d-4d68-a358-f3c5b6e8205e
 ms.openlocfilehash: d0fc45b5ccabedb127061090eed1f6b63fd7acba
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47108363"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47199146"
 ---
 # <a name="metadata-architecture-overview"></a>元数据体系结构概述
 Windows Communication Foundation (WCF) 提供了用于导出、 发布、 检索和导入服务元数据的丰富基础结构。 WCF 服务使用元数据来描述如何与服务的终结点交互，以便诸如 Svcutil.exe 之类的工具，可以自动生成用于访问服务的客户端代码。  
