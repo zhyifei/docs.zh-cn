@@ -9,29 +9,29 @@ ms.assetid: d270ab45-542b-45c0-a240-e80aa4a61b95
 author: Xansky
 ms.author: mhopkins
 ms.openlocfilehash: 481e2eeaa24c4e8bc2b6199d2bb4ab2c3c51e221
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47108658"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47231003"
 ---
-# <a name="ui-automation-fundamentals"></a><span data-ttu-id="fd869-102">UI 自动化基础知识</span><span class="sxs-lookup"><span data-stu-id="fd869-102">UI Automation Fundamentals</span></span>
+# <a name="ui-automation-fundamentals"></a><span data-ttu-id="8f241-102">UI 自动化基础知识</span><span class="sxs-lookup"><span data-stu-id="8f241-102">UI Automation Fundamentals</span></span>
 > [!NOTE]
->  <span data-ttu-id="fd869-103">本文档适用于想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空间中定义的托管 <xref:System.Windows.Automation> 类的 .NET Framework 开发人员。</span><span class="sxs-lookup"><span data-stu-id="fd869-103">This documentation is intended for .NET Framework developers who want to use the managed [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] classes defined in the <xref:System.Windows.Automation> namespace.</span></span> <span data-ttu-id="fd869-104">有关最新信息[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]，请参阅[Windows 自动化 API: UI 自动化](https://go.microsoft.com/fwlink/?LinkID=156746)。</span><span class="sxs-lookup"><span data-stu-id="fd869-104">For the latest information about [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], see [Windows Automation API: UI Automation](https://go.microsoft.com/fwlink/?LinkID=156746).</span></span>  
+>  <span data-ttu-id="8f241-103">本文档适用于想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空间中定义的托管 <xref:System.Windows.Automation> 类的 .NET Framework 开发人员。</span><span class="sxs-lookup"><span data-stu-id="8f241-103">This documentation is intended for .NET Framework developers who want to use the managed [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] classes defined in the <xref:System.Windows.Automation> namespace.</span></span> <span data-ttu-id="8f241-104">有关最新信息[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]，请参阅[Windows 自动化 API: UI 自动化](https://go.microsoft.com/fwlink/?LinkID=156746)。</span><span class="sxs-lookup"><span data-stu-id="8f241-104">For the latest information about [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], see [Windows Automation API: UI Automation](https://go.microsoft.com/fwlink/?LinkID=156746).</span></span>  
   
- <span data-ttu-id="fd869-105">本部分包含的高级概述[!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] [!INCLUDE[TLA#tla_api](../../../includes/tlasharptla-api-md.md)]。</span><span class="sxs-lookup"><span data-stu-id="fd869-105">This section contains high-level overviews of the [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] [!INCLUDE[TLA#tla_api](../../../includes/tlasharptla-api-md.md)].</span></span>  
+ <span data-ttu-id="8f241-105">本部分包含的高级概述[!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] [!INCLUDE[TLA#tla_api](../../../includes/tlasharptla-api-md.md)]。</span><span class="sxs-lookup"><span data-stu-id="8f241-105">This section contains high-level overviews of the [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] [!INCLUDE[TLA#tla_api](../../../includes/tlasharptla-api-md.md)].</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="fd869-106">本节内容</span><span class="sxs-lookup"><span data-stu-id="fd869-106">In This Section</span></span>  
- [<span data-ttu-id="fd869-107">UI 自动化概述</span><span class="sxs-lookup"><span data-stu-id="fd869-107">UI Automation Overview</span></span>](../../../docs/framework/ui-automation/ui-automation-overview.md)  
- [<span data-ttu-id="fd869-108">UI 自动化和 Microsoft Active Accessibility</span><span class="sxs-lookup"><span data-stu-id="fd869-108">UI Automation and Microsoft Active Accessibility</span></span>](../../../docs/framework/ui-automation/ui-automation-and-microsoft-active-accessibility.md)  
- [<span data-ttu-id="fd869-109">UI 自动化树概述</span><span class="sxs-lookup"><span data-stu-id="fd869-109">UI Automation Tree Overview</span></span>](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)  
- [<span data-ttu-id="fd869-110">UI 自动化控件模式概述</span><span class="sxs-lookup"><span data-stu-id="fd869-110">UI Automation Control Patterns Overview</span></span>](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)  
- [<span data-ttu-id="fd869-111">UI 自动化属性概述</span><span class="sxs-lookup"><span data-stu-id="fd869-111">UI Automation Properties Overview</span></span>](../../../docs/framework/ui-automation/ui-automation-properties-overview.md)  
- [<span data-ttu-id="fd869-112">UI 自动化事件概述</span><span class="sxs-lookup"><span data-stu-id="fd869-112">UI Automation Events Overview</span></span>](../../../docs/framework/ui-automation/ui-automation-events-overview.md)  
- [<span data-ttu-id="fd869-113">UI 自动化安全性概述</span><span class="sxs-lookup"><span data-stu-id="fd869-113">UI Automation Security Overview</span></span>](../../../docs/framework/ui-automation/ui-automation-security-overview.md)  
- [<span data-ttu-id="fd869-114">使用 UI 自动化进行自动化测试</span><span class="sxs-lookup"><span data-stu-id="fd869-114">Using UI Automation for Automated Testing</span></span>](../../../docs/framework/ui-automation/using-ui-automation-for-automated-testing.md)  
+## <a name="in-this-section"></a><span data-ttu-id="8f241-106">本节内容</span><span class="sxs-lookup"><span data-stu-id="8f241-106">In This Section</span></span>  
+ [<span data-ttu-id="8f241-107">UI 自动化概述</span><span class="sxs-lookup"><span data-stu-id="8f241-107">UI Automation Overview</span></span>](../../../docs/framework/ui-automation/ui-automation-overview.md)  
+ [<span data-ttu-id="8f241-108">UI 自动化和 Microsoft Active Accessibility</span><span class="sxs-lookup"><span data-stu-id="8f241-108">UI Automation and Microsoft Active Accessibility</span></span>](../../../docs/framework/ui-automation/ui-automation-and-microsoft-active-accessibility.md)  
+ [<span data-ttu-id="8f241-109">UI 自动化树概述</span><span class="sxs-lookup"><span data-stu-id="8f241-109">UI Automation Tree Overview</span></span>](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)  
+ [<span data-ttu-id="8f241-110">UI 自动化控件模式概述</span><span class="sxs-lookup"><span data-stu-id="8f241-110">UI Automation Control Patterns Overview</span></span>](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)  
+ [<span data-ttu-id="8f241-111">UI 自动化属性概述</span><span class="sxs-lookup"><span data-stu-id="8f241-111">UI Automation Properties Overview</span></span>](../../../docs/framework/ui-automation/ui-automation-properties-overview.md)  
+ [<span data-ttu-id="8f241-112">UI 自动化事件概述</span><span class="sxs-lookup"><span data-stu-id="8f241-112">UI Automation Events Overview</span></span>](../../../docs/framework/ui-automation/ui-automation-events-overview.md)  
+ [<span data-ttu-id="8f241-113">UI 自动化安全性概述</span><span class="sxs-lookup"><span data-stu-id="8f241-113">UI Automation Security Overview</span></span>](../../../docs/framework/ui-automation/ui-automation-security-overview.md)  
+ [<span data-ttu-id="8f241-114">使用 UI 自动化进行自动化测试</span><span class="sxs-lookup"><span data-stu-id="8f241-114">Using UI Automation for Automated Testing</span></span>](../../../docs/framework/ui-automation/using-ui-automation-for-automated-testing.md)  
   
-## <a name="reference"></a><span data-ttu-id="fd869-115">参考</span><span class="sxs-lookup"><span data-stu-id="fd869-115">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="8f241-115">参考</span><span class="sxs-lookup"><span data-stu-id="8f241-115">Reference</span></span>  
  <xref:System.Windows.Automation>  
   
  <xref:System.Windows.Automation.Provider>  

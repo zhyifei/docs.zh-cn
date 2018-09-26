@@ -6,43 +6,43 @@ dev_langs:
 - vb
 ms.assetid: beb5f361-1ac8-44fb-afa1-2aacea15f166
 ms.openlocfilehash: 456e4289af2c71ee2ef96f48939dc9f7b70c6bc0
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47084717"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47206538"
 ---
-# <a name="query-expression-syntax-examples-partitioning-linq-to-dataset"></a><span data-ttu-id="d74c7-102">查询表达式语法示例：分区 (LINQ to DataSet)</span><span class="sxs-lookup"><span data-stu-id="d74c7-102">Query Expression Syntax Examples: Partitioning (LINQ to DataSet)</span></span>
-<span data-ttu-id="d74c7-103">本主题中的示例演示如何使用 <xref:System.Linq.Enumerable.Skip%2A> 和 <xref:System.Linq.Enumerable.Take%2A> 方法以便使用查询表达式语法来查询 <xref:System.Data.DataSet>。</span><span class="sxs-lookup"><span data-stu-id="d74c7-103">The examples in this topic demonstrate how to use the <xref:System.Linq.Enumerable.Skip%2A> and <xref:System.Linq.Enumerable.Take%2A> methods to query a <xref:System.Data.DataSet> using the query expression syntax.</span></span>  
+# <a name="query-expression-syntax-examples-partitioning-linq-to-dataset"></a><span data-ttu-id="91510-102">查询表达式语法示例：分区 (LINQ to DataSet)</span><span class="sxs-lookup"><span data-stu-id="91510-102">Query Expression Syntax Examples: Partitioning (LINQ to DataSet)</span></span>
+<span data-ttu-id="91510-103">本主题中的示例演示如何使用 <xref:System.Linq.Enumerable.Skip%2A> 和 <xref:System.Linq.Enumerable.Take%2A> 方法以便使用查询表达式语法来查询 <xref:System.Data.DataSet>。</span><span class="sxs-lookup"><span data-stu-id="91510-103">The examples in this topic demonstrate how to use the <xref:System.Linq.Enumerable.Skip%2A> and <xref:System.Linq.Enumerable.Take%2A> methods to query a <xref:System.Data.DataSet> using the query expression syntax.</span></span>  
   
- <span data-ttu-id="d74c7-104">`FillDataSet`中指定这些示例中使用的方法[加载数据到数据集](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md)。</span><span class="sxs-lookup"><span data-stu-id="d74c7-104">The `FillDataSet` method used in these examples is specified in [Loading Data Into a DataSet](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md).</span></span>  
+ <span data-ttu-id="91510-104">`FillDataSet`中指定这些示例中使用的方法[加载数据到数据集](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md)。</span><span class="sxs-lookup"><span data-stu-id="91510-104">The `FillDataSet` method used in these examples is specified in [Loading Data Into a DataSet](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md).</span></span>  
   
- <span data-ttu-id="d74c7-105">本主题中的示例使用 AdventureWorks 示例数据库中的 Contact、Address、Product、SalesOrderHeader 和 SalesOrderDetail 表。</span><span class="sxs-lookup"><span data-stu-id="d74c7-105">The examples in this topic use the Contact, Address, Product, SalesOrderHeader, and SalesOrderDetail tables in the AdventureWorks sample database.</span></span>  
+ <span data-ttu-id="91510-105">本主题中的示例使用 AdventureWorks 示例数据库中的 Contact、Address、Product、SalesOrderHeader 和 SalesOrderDetail 表。</span><span class="sxs-lookup"><span data-stu-id="91510-105">The examples in this topic use the Contact, Address, Product, SalesOrderHeader, and SalesOrderDetail tables in the AdventureWorks sample database.</span></span>  
   
- <span data-ttu-id="d74c7-106">本主题中的示例使用以下`using` / `Imports`语句：</span><span class="sxs-lookup"><span data-stu-id="d74c7-106">The examples in this topic use the following `using`/`Imports` statements:</span></span>  
+ <span data-ttu-id="91510-106">本主题中的示例使用以下`using` / `Imports`语句：</span><span class="sxs-lookup"><span data-stu-id="91510-106">The examples in this topic use the following `using`/`Imports` statements:</span></span>  
   
  [!code-csharp[DP LINQ to DataSet Examples#ImportsUsing](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/CS/Program.cs#importsusing)]
  [!code-vb[DP LINQ to DataSet Examples#ImportsUsing](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/VB/Module1.vb#importsusing)]  
   
- <span data-ttu-id="d74c7-107">有关详细信息，请参阅[如何： 创建 LINQ to DataSet 项目在 Visual Studio 中](../../../../docs/framework/data/adonet/how-to-create-a-linq-to-dataset-project-in-vs.md)。</span><span class="sxs-lookup"><span data-stu-id="d74c7-107">For more information, see [How to: Create a LINQ to DataSet Project In Visual Studio](../../../../docs/framework/data/adonet/how-to-create-a-linq-to-dataset-project-in-vs.md).</span></span>  
+ <span data-ttu-id="91510-107">有关详细信息，请参阅[如何： 创建 LINQ to DataSet 项目在 Visual Studio 中](../../../../docs/framework/data/adonet/how-to-create-a-linq-to-dataset-project-in-vs.md)。</span><span class="sxs-lookup"><span data-stu-id="91510-107">For more information, see [How to: Create a LINQ to DataSet Project In Visual Studio](../../../../docs/framework/data/adonet/how-to-create-a-linq-to-dataset-project-in-vs.md).</span></span>  
   
-## <a name="skip"></a><span data-ttu-id="d74c7-108">Skip</span><span class="sxs-lookup"><span data-stu-id="d74c7-108">Skip</span></span>  
+## <a name="skip"></a><span data-ttu-id="91510-108">Skip</span><span class="sxs-lookup"><span data-stu-id="91510-108">Skip</span></span>  
   
-### <a name="example"></a><span data-ttu-id="d74c7-109">示例</span><span class="sxs-lookup"><span data-stu-id="d74c7-109">Example</span></span>  
- <span data-ttu-id="d74c7-110">此示例使用 <xref:System.Linq.Enumerable.Skip%2A> 方法获取 Seattle 中除前两个地址以外的所有地址。</span><span class="sxs-lookup"><span data-stu-id="d74c7-110">This example uses the <xref:System.Linq.Enumerable.Skip%2A> method to get all but the first two addresses in Seattle.</span></span>  
+### <a name="example"></a><span data-ttu-id="91510-109">示例</span><span class="sxs-lookup"><span data-stu-id="91510-109">Example</span></span>  
+ <span data-ttu-id="91510-110">此示例使用 <xref:System.Linq.Enumerable.Skip%2A> 方法获取 Seattle 中除前两个地址以外的所有地址。</span><span class="sxs-lookup"><span data-stu-id="91510-110">This example uses the <xref:System.Linq.Enumerable.Skip%2A> method to get all but the first two addresses in Seattle.</span></span>  
   
  [!code-csharp[DP LINQ to DataSet Examples#SkipNested](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/CS/Program.cs#skipnested)]
  [!code-vb[DP LINQ to DataSet Examples#SkipNested](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/VB/Module1.vb#skipnested)]  
   
-## <a name="take"></a><span data-ttu-id="d74c7-111">Take</span><span class="sxs-lookup"><span data-stu-id="d74c7-111">Take</span></span>  
+## <a name="take"></a><span data-ttu-id="91510-111">Take</span><span class="sxs-lookup"><span data-stu-id="91510-111">Take</span></span>  
   
-### <a name="example"></a><span data-ttu-id="d74c7-112">示例</span><span class="sxs-lookup"><span data-stu-id="d74c7-112">Example</span></span>  
- <span data-ttu-id="d74c7-113">此示例使用 <xref:System.Linq.Enumerable.Take%2A> 方法获取 Seattle 中的前三个地址。</span><span class="sxs-lookup"><span data-stu-id="d74c7-113">This example uses the <xref:System.Linq.Enumerable.Take%2A> method to get the first three addresses in Seattle.</span></span>  
+### <a name="example"></a><span data-ttu-id="91510-112">示例</span><span class="sxs-lookup"><span data-stu-id="91510-112">Example</span></span>  
+ <span data-ttu-id="91510-113">此示例使用 <xref:System.Linq.Enumerable.Take%2A> 方法获取 Seattle 中的前三个地址。</span><span class="sxs-lookup"><span data-stu-id="91510-113">This example uses the <xref:System.Linq.Enumerable.Take%2A> method to get the first three addresses in Seattle.</span></span>  
   
  [!code-csharp[DP LINQ to DataSet Examples#TakeNested](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/CS/Program.cs#takenested)]
  [!code-vb[DP LINQ to DataSet Examples#TakeNested](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/VB/Module1.vb#takenested)]  
   
-## <a name="see-also"></a><span data-ttu-id="d74c7-114">请参阅</span><span class="sxs-lookup"><span data-stu-id="d74c7-114">See Also</span></span>  
- [<span data-ttu-id="d74c7-115">将数据加载到数据集中</span><span class="sxs-lookup"><span data-stu-id="d74c7-115">Loading Data Into a DataSet</span></span>](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md)  
- [<span data-ttu-id="d74c7-116">LINQ to DataSet 示例</span><span class="sxs-lookup"><span data-stu-id="d74c7-116">LINQ to DataSet Examples</span></span>](../../../../docs/framework/data/adonet/linq-to-dataset-examples.md)  
- [<span data-ttu-id="d74c7-117">标准查询运算符概述</span><span class="sxs-lookup"><span data-stu-id="d74c7-117">Standard Query Operators Overview</span></span>](https://msdn.microsoft.com/library/24cda21e-8af8-4632-b519-c404a839b9b2)
+## <a name="see-also"></a><span data-ttu-id="91510-114">请参阅</span><span class="sxs-lookup"><span data-stu-id="91510-114">See Also</span></span>  
+ [<span data-ttu-id="91510-115">将数据加载到数据集中</span><span class="sxs-lookup"><span data-stu-id="91510-115">Loading Data Into a DataSet</span></span>](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md)  
+ [<span data-ttu-id="91510-116">LINQ to DataSet 示例</span><span class="sxs-lookup"><span data-stu-id="91510-116">LINQ to DataSet Examples</span></span>](../../../../docs/framework/data/adonet/linq-to-dataset-examples.md)  
+ [<span data-ttu-id="91510-117">标准查询运算符概述</span><span class="sxs-lookup"><span data-stu-id="91510-117">Standard Query Operators Overview</span></span>](https://msdn.microsoft.com/library/24cda21e-8af8-4632-b519-c404a839b9b2)
