@@ -7,11 +7,11 @@ helpviewer_keywords:
 - bindings [WCF]
 ms.assetid: 83639133-89f7-43f0-b4ef-8d9e57c08d25
 ms.openlocfilehash: 1930826cf51d67ceb789e20920ca42f04d1adc1b
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/23/2018
-ms.locfileid: "46706380"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47199328"
 ---
 # <a name="windows-communication-foundation-bindings"></a>Windows Communication Foundation 绑定
 Windows Communication Foundation (WCF) 将如何与其他软件的通信方式编写的应用程序软件。 使用绑定指定客户端与服务彼此通信所需的传输、编码和协议详细信息。 WCF 使用绑定来生成的终结点的基础网络表示，因此必须进行通信双方达成大多数绑定详细信息。 完成此任务的最简单方法是让服务的客户端使用该服务的终结点所使用的相同绑定。 有关如何执行此操作的详细信息，请参阅[配置 Windows Communication Foundation 服务和客户端使用的绑定](https://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)。  

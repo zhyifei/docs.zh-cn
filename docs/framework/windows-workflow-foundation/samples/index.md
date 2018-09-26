@@ -3,11 +3,11 @@ title: Windows 工作流 (WF) 示例
 ms.date: 03/30/2017
 ms.assetid: e0aef017-4381-4f2f-a904-6e1ed898687e
 ms.openlocfilehash: b6f614bd8543070ee69636344376b058988c2306
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47082102"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47195259"
 ---
 # <a name="windows-workflow-wf-samples"></a>Windows 工作流 (WF) 示例
 

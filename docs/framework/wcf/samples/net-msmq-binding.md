@@ -2,12 +2,12 @@
 title: 网络 MSMQ 绑定
 ms.date: 03/30/2017
 ms.assetid: fe4bb696-f57c-4cb3-9b7e-9d95fe6b8323
-ms.openlocfilehash: c54e8b661e011eb6b8add39dc7484f39ddc9b7c1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ee32ea09eed28c1c7cd5df2df2d13fd5f41f4b22
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33500875"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47200966"
 ---
 # <a name="net-msmq-binding"></a>网络 MSMQ 绑定
 本节包含演示如何使用终结点元素的 MSMQ 绑定特性的示例。  
@@ -29,16 +29,10 @@ ms.locfileid: "33500875"
  演示如何通过消息队列 (MSMQ) 传输来发送和接收排队通信中的一组相关消息。  
   
  [双向通信](../../../../docs/framework/wcf/samples/two-way-communication.md)  
- 演示如何通过 MSMQ 执行事务处理双向排队通信。  
-  
- [事务处理批处理](../../../../docs/framework/wcf/samples/transacted-batching.md)  
- 演示如何通过使用消息队列 (MSMQ) 来批处理事务处理读取。  
+ 演示如何通过 MSMQ 执行事务处理双向排队通信。
   
  [SRMP](../../../../docs/framework/wcf/samples/srmp.md)  
  演示如何使用 HTTP 上的消息队列 (MSMQ) 执行已经过事务处理的排队通信。  
   
  [基于消息队列的消息安全性](../../../../docs/framework/wcf/samples/message-security-over-message-queuing.md)  
- 演示如何实现使用 WS-Security 的应用程序，此应用程序使用 X.509v3 证书对客户端进行身份验证，并要求通过 MSMQ 使用服务器的 X.509v3 证书的服务器身份验证。  
-  
- [ReceiveContext 乘积生成器](../../../../docs/framework/wcf/samples/receivecontext-enabled-wcf-channels.md)  
- 演示启用了 <xref:System.ServiceModel.Channels.ReceiveContext> 的 WCF 通道的用处。
+ 演示如何实现使用 WS-Security 的应用程序，此应用程序使用 X.509v3 证书对客户端进行身份验证，并要求通过 MSMQ 使用服务器的 X.509v3 证书的服务器身份验证。

@@ -2,12 +2,12 @@
 title: 相关概述
 ms.date: 03/30/2017
 ms.assetid: edcc0315-5d26-44d6-a36d-ea554c418e9f
-ms.openlocfilehash: 8ac5d39866b23bc134f009fdb0df6ebf56c6d234
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: 342fa1d89bc179b6dabb59f87d63170980992a06
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47113931"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47205390"
 ---
 # <a name="correlation-overview"></a>相关概述
 相关是指使工作流服务消息彼此相关或与应用程序实例状态相关的机制，例如，使答复与初始请求相关，或者使特定订单 ID 与订单处理工作流的保留状态相关。 本主题概述了相关。 本节中的其他主题提供了相关的各种类型的附加信息。  
@@ -20,10 +20,10 @@ ms.locfileid: "47113931"
 ## <a name="protocol-based-correlation"></a>基于协议的相关  
  基于协议的相关使用传输机制使消息彼此相关或与相应实例相关。 系统提供的一些协议相关包括请求-答复相关和基于上下文的相关。 请求-答复相关用于将一对消息传递活动相关以形成双向操作，如 <xref:System.ServiceModel.Activities.Send> 与 <xref:System.ServiceModel.Activities.ReceiveReply> 成对，或 <xref:System.ServiceModel.Activities.Receive> 与 <xref:System.ServiceModel.Activities.SendReply> 成对。 [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] 工作流设计器还提供了一组活动模板，用于快速实现此模式。 基于上下文的相关基于中所述的上下文交换机制[.NET 上下文交换协议规范](https://go.microsoft.com/fwlink/?LinkID=166059)。 若要使用基于上下文的相关，必须在终结点上使用诸如 <xref:System.ServiceModel.BasicHttpContextBinding>、<xref:System.ServiceModel.WSHttpContextBinding> 或 <xref:System.ServiceModel.NetTcpContextBinding> 之类的基于上下文的绑定。  
   
- 有关协议相关的详细信息，请参阅[上下文交换](../../../../docs/framework/wcf/feature-details/context-exchange-correlation.md)，[持久双工](../../../../docs/framework/wcf/feature-details/durable-duplex-correlation.md)，并[请求-答复](../../../../docs/framework/wcf/feature-details/request-reply-correlation.md)。 有关使用详细信息[!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)]工作流设计器活动模板，请参阅[消息传递活动](../../../../docs/framework/wcf/feature-details/messaging-activities.md)。 有关示例代码，请参阅[持久双工&#91;WF 示例&#93;](../../../../docs/framework/windows-workflow-foundation/samples/durable-duplex.md)并[NetContextExchangeCorrelation](https://msdn.microsoft.com/library/93c74a1a-b9e2-46c6-95c0-c9b0e9472caf)示例。  
+ 有关协议相关的详细信息，请参阅[持久双工](../../../../docs/framework/wcf/feature-details/durable-duplex-correlation.md)，并[请求-答复](../../../../docs/framework/wcf/feature-details/request-reply-correlation.md)。 有关使用详细信息[!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)]工作流设计器活动模板，请参阅[消息传递活动](../../../../docs/framework/wcf/feature-details/messaging-activities.md)。 有关示例代码，请参阅[持久双工&#91;WF 示例&#93;](../../../../docs/framework/windows-workflow-foundation/samples/durable-duplex.md)并[NetContextExchangeCorrelation](https://msdn.microsoft.com/library/93c74a1a-b9e2-46c6-95c0-c9b0e9472caf)示例。  
   
 ## <a name="content-based-correlation"></a>基于内容的相关  
- 基于内容的相关使用消息中的某些信息片段将消息与特定实例关联。 与基于协议的相关不同，基于内容的相关要求应用程序作者显式声明此数据在各相关消息中的位置。 使用基于内容相关的活动通过使用 <xref:System.ServiceModel.MessageQuerySet> 指定此消息数据。 与不使用某个上下文绑定（如 <xref:System.ServiceModel.BasicHttpContextBinding>）的服务进行通信时，基于内容的相关非常有用。 有关基于内容的相关详细信息，请参阅[基于内容](../../../../docs/framework/wcf/feature-details/content-based-correlation.md)。 有关示例代码，请参阅[基于内容的相关](../../../../docs/framework/windows-workflow-foundation/samples/content-based-correlation.md)并[相关计算器](../../../../docs/framework/windows-workflow-foundation/samples/correlated-calculator.md)示例。  
+ 基于内容的相关使用消息中的某些信息片段将消息与特定实例关联。 与基于协议的相关不同，基于内容的相关要求应用程序作者显式声明此数据在各相关消息中的位置。 使用基于内容相关的活动通过使用 <xref:System.ServiceModel.MessageQuerySet> 指定此消息数据。 与不使用某个上下文绑定（如 <xref:System.ServiceModel.BasicHttpContextBinding>）的服务进行通信时，基于内容的相关非常有用。 有关示例代码，请参阅[基于内容的相关](../../../../docs/framework/windows-workflow-foundation/samples/content-based-correlation.md)并[相关计算器](../../../../docs/framework/windows-workflow-foundation/samples/correlated-calculator.md)示例。  
   
 ## <a name="see-also"></a>请参阅  
  [基于内容的关联](../../../../docs/framework/windows-workflow-foundation/samples/content-based-correlation.md)  

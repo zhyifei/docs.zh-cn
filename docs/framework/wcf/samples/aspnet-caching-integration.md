@@ -2,15 +2,15 @@
 title: ASP.NET 缓存集成
 ms.date: 03/30/2017
 ms.assetid: f581923a-8a72-42fc-bd6a-46de2aaeecc1
-ms.openlocfilehash: 55e6213bf0c4c212ebcf4e68882d16532c0e4229
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 376e188bcabbff1d87e7b45aa281e2a2b92a13b6
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46002783"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47197443"
 ---
 # <a name="aspnet-caching-integration"></a>ASP.NET 缓存集成
-此示例演示如何通过 WCF WEB HTTP 编程模型使用 ASP.NET 输出缓存。 请参阅[基本资源服务](../../../../docs/framework/wcf/samples/basic-resource-service.md)示例服务深入讨论实现此方案的自承载版本。 本主题重点介绍 ASP.NET 输出缓存集成功能。  
+此示例演示如何通过 WCF WEB HTTP 编程模型使用 ASP.NET 输出缓存。 本主题重点介绍 ASP.NET 输出缓存集成功能。  
   
 ## <a name="demonstrates"></a>演示  
  与 ASP.NET 输出缓存的集成  
@@ -29,7 +29,7 @@ ms.locfileid: "46002783"
   
  示例服务项目，在 Service.cs 文件中同时`GetCustomer`并`GetCustomers`操作被标记为与<xref:System.ServiceModel.Web.AspNetCacheProfileAttribute>，它提供缓存配置文件名称"CacheFor60Seconds"。 在服务项目的 Web.config 文件中，缓存配置文件"CacheFor60Seconds"下提供了 <`caching`> 元素的 <`system.web`>。 对于此缓存配置文件，值`duration`属性是"60"，因此与此配置文件关联的响应缓存 ASP.NET 输出缓存中 60 秒。 同样，对于此缓存配置文件中，`varmByParam`属性设置为"format"具有不同的值是请求`format`查询字符串参数分别缓存其响应。 最后，缓存配置文件的`varyByHeader`属性设置为"Accept"，因此具有不同 Accept 标头值的请求必须分别缓存其响应。  
   
- 客户端项目中的 Program.cs 演示如何使用 <xref:System.Net.HttpWebRequest> 编写此类客户端。 请注意，这只是访问 WCF 服务的一种方式。 还有可能要等 WCF 通道工厂使用其他.NET Framework 类访问服务和<xref:System.Net.WebClient>。 SDK 中的其他示例 (如[基本 HTTP 服务](../../../../docs/framework/wcf/samples/basic-http-service.md)示例和[自动格式选择](../../../../docs/framework/wcf/samples/automatic-format-selection.md)示例) 演示了如何使用这些类与 WCF 服务进行通信。  
+ 客户端项目中的 Program.cs 演示如何使用 <xref:System.Net.HttpWebRequest> 编写此类客户端。 请注意，这只是访问 WCF 服务的一种方式。 还有可能要等 WCF 通道工厂使用其他.NET Framework 类访问服务和<xref:System.Net.WebClient>。 SDK 中的其他示例 (如[基本 HTTP 服务](../../../../docs/framework/wcf/samples/basic-http-service.md)示例) 演示了如何使用这些类与 WCF 服务进行通信。  
   
 ## <a name="to-run-the-sample"></a>运行示例  
  该示例由三个项目组成：  

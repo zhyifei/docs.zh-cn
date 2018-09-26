@@ -9,11 +9,11 @@ ms.assetid: 1cb92bd7-6bab-44cf-8fd3-36303ce84fea
 author: mcleblanc
 ms.author: markl
 ms.openlocfilehash: 8fedec60b6152e77d6f99bf55cf11ec909fa8f80
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47083704"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47203977"
 ---
 # <a name="specifying-an-assembly39s-location"></a>指定程序集&#39;的位置
 有两种方法来指定程序集的位置：  

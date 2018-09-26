@@ -2,22 +2,19 @@
 title: Hosting1
 ms.date: 03/30/2017
 ms.assetid: 8a6ec5d4-d191-49cc-bb0f-a07639dc60d4
-ms.openlocfilehash: f7c10e6c3c290e3f1648b18c45aa414d3ea61457
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: 6cbd05bd0d478898807ef0bfadfc64f1feea0574
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33809802"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47203521"
 ---
 # <a name="hosting"></a>宿主
-本节包含演示承载 Windows Communication Foundation (WCF) 服务的服务的示例。  
+本节包含演示承载 Windows Communication Foundation (WCF) 服务的示例。  
   
 ## <a name="in-this-section"></a>本节内容  
  [Windows 进程激活](../../../../docs/framework/wcf/samples/windows-process-activation.md)  
  演示通过网络协议进行的服务激活。  
-  
- [基于配置的激活](../../../../docs/framework/wcf/samples/configuration-based-activation.md)  
- 而无需.svc 文件中演示的 WCF 服务的激活。  
   
  [SystemWebRouting 集成示例](../../../../docs/framework/wcf/samples/systemwebrouting-integration-sample.md)  
  演示 <xref:System.Web.Routing> 命名空间中承载层与类的集成。  
@@ -29,7 +26,7 @@ ms.locfileid: "33809802"
  演示如何实现由 Internet 信息服务 (IIS) 承载的服务，该服务的服务代码以内联方式包含在一个 .svc 文件中，并且可以按需编译。  
   
  [Windows 服务主机](../../../../docs/framework/wcf/samples/windows-service-host.md)  
- 演示在托管 Windows 服务中承载的 WCF 服务。  
+ 演示如何在托管 Windows 服务中承载的 WCF 服务。  
   
  [自承载](../../../../docs/framework/wcf/samples/self-host.md)  
  演示如何在控制台应用程序中实现自承载服务。
