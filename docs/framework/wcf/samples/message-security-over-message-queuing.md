@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 ms.assetid: 329aea9c-fa80-45c0-b2b9-e37fd7b85b38
 author: BrucePerlerMS
 ms.openlocfilehash: 48318206844b8d3289d367435cc737e2421ff491
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47108593"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47196962"
 ---
 # <a name="message-security-over-message-queuing"></a>基于消息队列的消息安全性
 此示例演示如何实现一个应用程序，该应用程序对客户端使用 WS-Security 和 X.509v3 证书身份验证，并要求使用服务器的 X.509v3 证书对 MSMQ 进行服务器身份验证。 有时候消息安全性更重要，以确保 MSMQ 存储区中的消息始终是加密的，并且应用程序能够对消息执行其自己的身份验证。  
