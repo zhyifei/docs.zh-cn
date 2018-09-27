@@ -12,50 +12,50 @@ ms.assetid: 4cf36786-b89a-40e2-a0f1-86bb9b783343
 author: mcleblanc
 ms.author: markl
 ms.openlocfilehash: 7ca375935c1dfcdb406257ece1a9dfd18851dddf
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47113879"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47232625"
 ---
-# <a name="ltswitchesgt-element"></a><span data-ttu-id="aa15b-102">&lt;开关&gt;元素</span><span class="sxs-lookup"><span data-stu-id="aa15b-102">&lt;switches&gt; Element</span></span>
-<span data-ttu-id="aa15b-103">包含跟踪开关和对该跟踪开关设置的级别。</span><span class="sxs-lookup"><span data-stu-id="aa15b-103">Contains trace switches and the level where the trace switches are set.</span></span>  
+# <a name="ltswitchesgt-element"></a><span data-ttu-id="53262-102">&lt;开关&gt;元素</span><span class="sxs-lookup"><span data-stu-id="53262-102">&lt;switches&gt; Element</span></span>
+<span data-ttu-id="53262-103">包含跟踪开关和对该跟踪开关设置的级别。</span><span class="sxs-lookup"><span data-stu-id="53262-103">Contains trace switches and the level where the trace switches are set.</span></span>  
   
- <span data-ttu-id="aa15b-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="aa15b-104">\<configuration></span></span>  
-<span data-ttu-id="aa15b-105">\<system.diagnostics ></span><span class="sxs-lookup"><span data-stu-id="aa15b-105">\<system.diagnostics></span></span>  
-<span data-ttu-id="aa15b-106">\<开关 ></span><span class="sxs-lookup"><span data-stu-id="aa15b-106">\<switches></span></span>  
+ <span data-ttu-id="53262-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="53262-104">\<configuration></span></span>  
+<span data-ttu-id="53262-105">\<system.diagnostics ></span><span class="sxs-lookup"><span data-stu-id="53262-105">\<system.diagnostics></span></span>  
+<span data-ttu-id="53262-106">\<开关 ></span><span class="sxs-lookup"><span data-stu-id="53262-106">\<switches></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="aa15b-107">语法</span><span class="sxs-lookup"><span data-stu-id="aa15b-107">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="53262-107">语法</span><span class="sxs-lookup"><span data-stu-id="53262-107">Syntax</span></span>  
   
 ```xml  
       <switches>   
 </switches>  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="aa15b-108">特性和元素</span><span class="sxs-lookup"><span data-stu-id="aa15b-108">Attributes and Elements</span></span>  
- <span data-ttu-id="aa15b-109">下列各节描述了特性、子元素和父元素。</span><span class="sxs-lookup"><span data-stu-id="aa15b-109">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="53262-108">特性和元素</span><span class="sxs-lookup"><span data-stu-id="53262-108">Attributes and Elements</span></span>  
+ <span data-ttu-id="53262-109">下列各节描述了特性、子元素和父元素。</span><span class="sxs-lookup"><span data-stu-id="53262-109">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="aa15b-110">特性</span><span class="sxs-lookup"><span data-stu-id="aa15b-110">Attributes</span></span>  
- <span data-ttu-id="aa15b-111">无。</span><span class="sxs-lookup"><span data-stu-id="aa15b-111">None.</span></span>  
+### <a name="attributes"></a><span data-ttu-id="53262-110">特性</span><span class="sxs-lookup"><span data-stu-id="53262-110">Attributes</span></span>  
+ <span data-ttu-id="53262-111">无。</span><span class="sxs-lookup"><span data-stu-id="53262-111">None.</span></span>  
   
-### <a name="child-elements"></a><span data-ttu-id="aa15b-112">子元素</span><span class="sxs-lookup"><span data-stu-id="aa15b-112">Child Elements</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="53262-112">子元素</span><span class="sxs-lookup"><span data-stu-id="53262-112">Child Elements</span></span>  
   
-|<span data-ttu-id="aa15b-113">元素</span><span class="sxs-lookup"><span data-stu-id="aa15b-113">Element</span></span>|<span data-ttu-id="aa15b-114">描述</span><span class="sxs-lookup"><span data-stu-id="aa15b-114">Description</span></span>|  
+|<span data-ttu-id="53262-113">元素</span><span class="sxs-lookup"><span data-stu-id="53262-113">Element</span></span>|<span data-ttu-id="53262-114">描述</span><span class="sxs-lookup"><span data-stu-id="53262-114">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="aa15b-115">\<add></span><span class="sxs-lookup"><span data-stu-id="aa15b-115">\<add></span></span>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/add-element-for-switches.md)|<span data-ttu-id="aa15b-116">指定对跟踪开关设置的级别。</span><span class="sxs-lookup"><span data-stu-id="aa15b-116">Specifies the level where a trace switch is set.</span></span>|  
+|[<span data-ttu-id="53262-115">\<add></span><span class="sxs-lookup"><span data-stu-id="53262-115">\<add></span></span>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/add-element-for-switches.md)|<span data-ttu-id="53262-116">指定对跟踪开关设置的级别。</span><span class="sxs-lookup"><span data-stu-id="53262-116">Specifies the level where a trace switch is set.</span></span>|  
   
-### <a name="parent-elements"></a><span data-ttu-id="aa15b-117">父元素</span><span class="sxs-lookup"><span data-stu-id="aa15b-117">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="53262-117">父元素</span><span class="sxs-lookup"><span data-stu-id="53262-117">Parent Elements</span></span>  
   
-|<span data-ttu-id="aa15b-118">元素</span><span class="sxs-lookup"><span data-stu-id="aa15b-118">Element</span></span>|<span data-ttu-id="aa15b-119">描述</span><span class="sxs-lookup"><span data-stu-id="aa15b-119">Description</span></span>|  
+|<span data-ttu-id="53262-118">元素</span><span class="sxs-lookup"><span data-stu-id="53262-118">Element</span></span>|<span data-ttu-id="53262-119">描述</span><span class="sxs-lookup"><span data-stu-id="53262-119">Description</span></span>|  
 |-------------|-----------------|  
-|`configuration`|<span data-ttu-id="aa15b-120">公共语言运行时和 .NET Framework 应用程序所使用的每个配置文件中的根元素。</span><span class="sxs-lookup"><span data-stu-id="aa15b-120">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
-|`System.diagnostics`|<span data-ttu-id="aa15b-121">指定用于收集、存储和路由消息的跟踪侦听器以及对跟踪开关设置的级别。</span><span class="sxs-lookup"><span data-stu-id="aa15b-121">Specifies trace listeners that collect, store, and route messages and the level where a trace switch is set.</span></span>|  
+|`configuration`|<span data-ttu-id="53262-120">公共语言运行时和 .NET Framework 应用程序所使用的每个配置文件中的根元素。</span><span class="sxs-lookup"><span data-stu-id="53262-120">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
+|`System.diagnostics`|<span data-ttu-id="53262-121">指定用于收集、存储和路由消息的跟踪侦听器以及对跟踪开关设置的级别。</span><span class="sxs-lookup"><span data-stu-id="53262-121">Specifies trace listeners that collect, store, and route messages and the level where a trace switch is set.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="aa15b-122">备注</span><span class="sxs-lookup"><span data-stu-id="aa15b-122">Remarks</span></span>  
- <span data-ttu-id="aa15b-123">可以通过将它放在配置文件更改跟踪开关的级别。</span><span class="sxs-lookup"><span data-stu-id="aa15b-123">You can change the level of a trace switch by putting it in a configuration file.</span></span> <span data-ttu-id="aa15b-124">如果该切换<xref:System.Diagnostics.BooleanSwitch>，您可以将其打开和关闭。</span><span class="sxs-lookup"><span data-stu-id="aa15b-124">If the switch is a <xref:System.Diagnostics.BooleanSwitch>, you can turn it on and off.</span></span> <span data-ttu-id="aa15b-125">如果该切换<xref:System.Diagnostics.TraceSwitch>，可以将不同级别分配给该代码以指定类型的跟踪或调试消息的应用程序输出。</span><span class="sxs-lookup"><span data-stu-id="aa15b-125">If the switch is a <xref:System.Diagnostics.TraceSwitch>, you can assign different levels to it to specify the types of trace or debug messages the application outputs.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="53262-122">备注</span><span class="sxs-lookup"><span data-stu-id="53262-122">Remarks</span></span>  
+ <span data-ttu-id="53262-123">可以通过将它放在配置文件更改跟踪开关的级别。</span><span class="sxs-lookup"><span data-stu-id="53262-123">You can change the level of a trace switch by putting it in a configuration file.</span></span> <span data-ttu-id="53262-124">如果该切换<xref:System.Diagnostics.BooleanSwitch>，您可以将其打开和关闭。</span><span class="sxs-lookup"><span data-stu-id="53262-124">If the switch is a <xref:System.Diagnostics.BooleanSwitch>, you can turn it on and off.</span></span> <span data-ttu-id="53262-125">如果该切换<xref:System.Diagnostics.TraceSwitch>，可以将不同级别分配给该代码以指定类型的跟踪或调试消息的应用程序输出。</span><span class="sxs-lookup"><span data-stu-id="53262-125">If the switch is a <xref:System.Diagnostics.TraceSwitch>, you can assign different levels to it to specify the types of trace or debug messages the application outputs.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="aa15b-126">示例</span><span class="sxs-lookup"><span data-stu-id="aa15b-126">Example</span></span>  
- <span data-ttu-id="aa15b-127">下面的示例演示如何使用**\<切换 >** 元素中设置`General`跟踪切换到<xref:System.Diagnostics.TraceLevel>级别，并启用`Data`布尔型跟踪开关。</span><span class="sxs-lookup"><span data-stu-id="aa15b-127">The following example shows how to use the **\<switch>** element to set the `General` trace switch to the <xref:System.Diagnostics.TraceLevel> level, and enable the `Data` Boolean trace switch.</span></span>  
+## <a name="example"></a><span data-ttu-id="53262-126">示例</span><span class="sxs-lookup"><span data-stu-id="53262-126">Example</span></span>  
+ <span data-ttu-id="53262-127">下面的示例演示如何使用**\<切换 >** 元素中设置`General`跟踪切换到<xref:System.Diagnostics.TraceLevel>级别，并启用`Data`布尔型跟踪开关。</span><span class="sxs-lookup"><span data-stu-id="53262-127">The following example shows how to use the **\<switch>** element to set the `General` trace switch to the <xref:System.Diagnostics.TraceLevel> level, and enable the `Data` Boolean trace switch.</span></span>  
   
 ```xml  
 <configuration>  
@@ -68,8 +68,8 @@ ms.locfileid: "47113879"
 </configuration>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="aa15b-128">请参阅</span><span class="sxs-lookup"><span data-stu-id="aa15b-128">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="53262-128">请参阅</span><span class="sxs-lookup"><span data-stu-id="53262-128">See Also</span></span>  
  <xref:System.Diagnostics.Switch>  
  <xref:System.Diagnostics.TraceSwitch>  
  <xref:System.Diagnostics.BooleanSwitch>  
- [<span data-ttu-id="aa15b-129">跟踪和调试设置架构</span><span class="sxs-lookup"><span data-stu-id="aa15b-129">Trace and Debug Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)
+ [<span data-ttu-id="53262-129">跟踪和调试设置架构</span><span class="sxs-lookup"><span data-stu-id="53262-129">Trace and Debug Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)
