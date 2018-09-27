@@ -7,42 +7,42 @@ dev_langs:
 ms.assetid: b54f491d-196b-4279-876c-76b83ec0442c
 author: BrucePerlerMS
 ms.openlocfilehash: 4a6ad2746bea9dfea1999e272796d44f0341e64d
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47082339"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47235567"
 ---
-# <a name="transport-security-with-basic-authentication"></a><span data-ttu-id="12611-102">通过基本身份验证确保的传输安全</span><span class="sxs-lookup"><span data-stu-id="12611-102">Transport Security with Basic Authentication</span></span>
-<span data-ttu-id="12611-103">下图显示了 Windows Communication Foundation (WCF) 服务和客户端。</span><span class="sxs-lookup"><span data-stu-id="12611-103">The following illustration shows a Windows Communication Foundation (WCF) service and client.</span></span> <span data-ttu-id="12611-104">服务器需要一个有效的可用于安全套接字层 (SSL) 的 X.509 证书，并且客户端必须信任此服务器证书。</span><span class="sxs-lookup"><span data-stu-id="12611-104">The server needs a valid X.509 certificate that can be used for Secure Sockets Layer (SSL), and the clients must trust the server’s certificate.</span></span> <span data-ttu-id="12611-105">而且，Web 服务已经有了一个可以使用的 SSL 实现。</span><span class="sxs-lookup"><span data-stu-id="12611-105">Further, the Web service already has an SSL implementation that can be used.</span></span> <span data-ttu-id="12611-106">有关详细信息启用基本身份验证在 Internet 信息服务 (IIS)，请参阅[ https://go.microsoft.com/fwlink/?LinkId=83822 ](https://go.microsoft.com/fwlink/?LinkId=83822)。</span><span class="sxs-lookup"><span data-stu-id="12611-106">For more information about enabling basic authentication on Internet Information Services (IIS), see [https://go.microsoft.com/fwlink/?LinkId=83822](https://go.microsoft.com/fwlink/?LinkId=83822).</span></span>  
+# <a name="transport-security-with-basic-authentication"></a><span data-ttu-id="82c0e-102">通过基本身份验证确保的传输安全</span><span class="sxs-lookup"><span data-stu-id="82c0e-102">Transport Security with Basic Authentication</span></span>
+<span data-ttu-id="82c0e-103">下图显示了 Windows Communication Foundation (WCF) 服务和客户端。</span><span class="sxs-lookup"><span data-stu-id="82c0e-103">The following illustration shows a Windows Communication Foundation (WCF) service and client.</span></span> <span data-ttu-id="82c0e-104">服务器需要一个有效的可用于安全套接字层 (SSL) 的 X.509 证书，并且客户端必须信任此服务器证书。</span><span class="sxs-lookup"><span data-stu-id="82c0e-104">The server needs a valid X.509 certificate that can be used for Secure Sockets Layer (SSL), and the clients must trust the server’s certificate.</span></span> <span data-ttu-id="82c0e-105">而且，Web 服务已经有了一个可以使用的 SSL 实现。</span><span class="sxs-lookup"><span data-stu-id="82c0e-105">Further, the Web service already has an SSL implementation that can be used.</span></span> <span data-ttu-id="82c0e-106">有关详细信息启用基本身份验证在 Internet 信息服务 (IIS)，请参阅[ https://go.microsoft.com/fwlink/?LinkId=83822 ](https://go.microsoft.com/fwlink/?LinkId=83822)。</span><span class="sxs-lookup"><span data-stu-id="82c0e-106">For more information about enabling basic authentication on Internet Information Services (IIS), see [https://go.microsoft.com/fwlink/?LinkId=83822](https://go.microsoft.com/fwlink/?LinkId=83822).</span></span>  
   
- <span data-ttu-id="12611-107">![传输安全使用基本身份验证](../../../../docs/framework/wcf/feature-details/media/securedbyusername.gif "SecuredbyUsername")</span><span class="sxs-lookup"><span data-stu-id="12611-107">![Transport security with basic authentication](../../../../docs/framework/wcf/feature-details/media/securedbyusername.gif "SecuredbyUsername")</span></span>  
+ <span data-ttu-id="82c0e-107">![传输安全使用基本身份验证](../../../../docs/framework/wcf/feature-details/media/securedbyusername.gif "SecuredbyUsername")</span><span class="sxs-lookup"><span data-stu-id="82c0e-107">![Transport security with basic authentication](../../../../docs/framework/wcf/feature-details/media/securedbyusername.gif "SecuredbyUsername")</span></span>  
   
-|<span data-ttu-id="12611-108">特征</span><span class="sxs-lookup"><span data-stu-id="12611-108">Characteristic</span></span>|<span data-ttu-id="12611-109">描述</span><span class="sxs-lookup"><span data-stu-id="12611-109">Description</span></span>|  
+|<span data-ttu-id="82c0e-108">特征</span><span class="sxs-lookup"><span data-stu-id="82c0e-108">Characteristic</span></span>|<span data-ttu-id="82c0e-109">描述</span><span class="sxs-lookup"><span data-stu-id="82c0e-109">Description</span></span>|  
 |--------------------|-----------------|  
-|<span data-ttu-id="12611-110">安全模式</span><span class="sxs-lookup"><span data-stu-id="12611-110">Security Mode</span></span>|<span data-ttu-id="12611-111">传输</span><span class="sxs-lookup"><span data-stu-id="12611-111">Transport</span></span>|  
-|<span data-ttu-id="12611-112">互操作性</span><span class="sxs-lookup"><span data-stu-id="12611-112">Interoperability</span></span>|<span data-ttu-id="12611-113">与现有的 Web 服务客户端和服务进行互操作</span><span class="sxs-lookup"><span data-stu-id="12611-113">With existing Web service clients and services</span></span>|  
-|<span data-ttu-id="12611-114">身份验证（服务器）</span><span class="sxs-lookup"><span data-stu-id="12611-114">Authentication (Server)</span></span><br /><br /> <span data-ttu-id="12611-115">身份验证（客户端）</span><span class="sxs-lookup"><span data-stu-id="12611-115">Authentication (Client)</span></span>|<span data-ttu-id="12611-116">是（使用 HTTPS）</span><span class="sxs-lookup"><span data-stu-id="12611-116">Yes (using HTTPS)</span></span><br /><br /> <span data-ttu-id="12611-117">是（通过用户名/密码）</span><span class="sxs-lookup"><span data-stu-id="12611-117">Yes (through User name/Password)</span></span>|  
-|<span data-ttu-id="12611-118">完整性</span><span class="sxs-lookup"><span data-stu-id="12611-118">Integrity</span></span>|<span data-ttu-id="12611-119">是</span><span class="sxs-lookup"><span data-stu-id="12611-119">Yes</span></span>|  
-|<span data-ttu-id="12611-120">保密性</span><span class="sxs-lookup"><span data-stu-id="12611-120">Confidentiality</span></span>|<span data-ttu-id="12611-121">是</span><span class="sxs-lookup"><span data-stu-id="12611-121">Yes</span></span>|  
-|<span data-ttu-id="12611-122">传输</span><span class="sxs-lookup"><span data-stu-id="12611-122">Transport</span></span>|<span data-ttu-id="12611-123">HTTPS</span><span class="sxs-lookup"><span data-stu-id="12611-123">HTTPS</span></span>|  
-|<span data-ttu-id="12611-124">绑定</span><span class="sxs-lookup"><span data-stu-id="12611-124">Binding</span></span>|<xref:System.ServiceModel.WSHttpBinding>|  
+|<span data-ttu-id="82c0e-110">安全模式</span><span class="sxs-lookup"><span data-stu-id="82c0e-110">Security Mode</span></span>|<span data-ttu-id="82c0e-111">传输</span><span class="sxs-lookup"><span data-stu-id="82c0e-111">Transport</span></span>|  
+|<span data-ttu-id="82c0e-112">互操作性</span><span class="sxs-lookup"><span data-stu-id="82c0e-112">Interoperability</span></span>|<span data-ttu-id="82c0e-113">与现有的 Web 服务客户端和服务进行互操作</span><span class="sxs-lookup"><span data-stu-id="82c0e-113">With existing Web service clients and services</span></span>|  
+|<span data-ttu-id="82c0e-114">身份验证（服务器）</span><span class="sxs-lookup"><span data-stu-id="82c0e-114">Authentication (Server)</span></span><br /><br /> <span data-ttu-id="82c0e-115">身份验证（客户端）</span><span class="sxs-lookup"><span data-stu-id="82c0e-115">Authentication (Client)</span></span>|<span data-ttu-id="82c0e-116">是（使用 HTTPS）</span><span class="sxs-lookup"><span data-stu-id="82c0e-116">Yes (using HTTPS)</span></span><br /><br /> <span data-ttu-id="82c0e-117">是（通过用户名/密码）</span><span class="sxs-lookup"><span data-stu-id="82c0e-117">Yes (through User name/Password)</span></span>|  
+|<span data-ttu-id="82c0e-118">完整性</span><span class="sxs-lookup"><span data-stu-id="82c0e-118">Integrity</span></span>|<span data-ttu-id="82c0e-119">是</span><span class="sxs-lookup"><span data-stu-id="82c0e-119">Yes</span></span>|  
+|<span data-ttu-id="82c0e-120">保密性</span><span class="sxs-lookup"><span data-stu-id="82c0e-120">Confidentiality</span></span>|<span data-ttu-id="82c0e-121">是</span><span class="sxs-lookup"><span data-stu-id="82c0e-121">Yes</span></span>|  
+|<span data-ttu-id="82c0e-122">传输</span><span class="sxs-lookup"><span data-stu-id="82c0e-122">Transport</span></span>|<span data-ttu-id="82c0e-123">HTTPS</span><span class="sxs-lookup"><span data-stu-id="82c0e-123">HTTPS</span></span>|  
+|<span data-ttu-id="82c0e-124">绑定</span><span class="sxs-lookup"><span data-stu-id="82c0e-124">Binding</span></span>|<xref:System.ServiceModel.WSHttpBinding>|  
   
-## <a name="service"></a><span data-ttu-id="12611-125">服务</span><span class="sxs-lookup"><span data-stu-id="12611-125">Service</span></span>  
- <span data-ttu-id="12611-126">下面的代码和配置应独立运行。</span><span class="sxs-lookup"><span data-stu-id="12611-126">The following code and configuration are meant to run independently.</span></span> <span data-ttu-id="12611-127">执行下列操作之一：</span><span class="sxs-lookup"><span data-stu-id="12611-127">Do one of the following:</span></span>  
+## <a name="service"></a><span data-ttu-id="82c0e-125">服务</span><span class="sxs-lookup"><span data-stu-id="82c0e-125">Service</span></span>  
+ <span data-ttu-id="82c0e-126">下面的代码和配置应独立运行。</span><span class="sxs-lookup"><span data-stu-id="82c0e-126">The following code and configuration are meant to run independently.</span></span> <span data-ttu-id="82c0e-127">执行下列操作之一：</span><span class="sxs-lookup"><span data-stu-id="82c0e-127">Do one of the following:</span></span>  
   
--   <span data-ttu-id="12611-128">使用代码（而不使用配置）创建独立服务。</span><span class="sxs-lookup"><span data-stu-id="12611-128">Create a stand-alone service using the code with no configuration.</span></span>  
+-   <span data-ttu-id="82c0e-128">使用代码（而不使用配置）创建独立服务。</span><span class="sxs-lookup"><span data-stu-id="82c0e-128">Create a stand-alone service using the code with no configuration.</span></span>  
   
--   <span data-ttu-id="12611-129">使用提供的配置创建服务，但不定义任何终结点。</span><span class="sxs-lookup"><span data-stu-id="12611-129">Create a service using the supplied configuration, but do not define any endpoints.</span></span>  
+-   <span data-ttu-id="82c0e-129">使用提供的配置创建服务，但不定义任何终结点。</span><span class="sxs-lookup"><span data-stu-id="82c0e-129">Create a service using the supplied configuration, but do not define any endpoints.</span></span>  
   
-### <a name="code"></a><span data-ttu-id="12611-130">代码</span><span class="sxs-lookup"><span data-stu-id="12611-130">Code</span></span>  
- <span data-ttu-id="12611-131">下面的代码演示如何创建使用 Windows 域用户名和密码确保传输安全的服务终结点。</span><span class="sxs-lookup"><span data-stu-id="12611-131">The following code shows how to create a service endpoint that uses a Windows domain user name and password for transfer security.</span></span> <span data-ttu-id="12611-132">请注意，此服务要求使用 X.509 证书向客户端进行身份验证。</span><span class="sxs-lookup"><span data-stu-id="12611-132">Note that the service requires an X.509 certificate to authenticate to the client.</span></span> <span data-ttu-id="12611-133">有关详细信息，请参阅[Working with Certificates](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)并[如何： 使用 SSL 证书配置端口](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)。</span><span class="sxs-lookup"><span data-stu-id="12611-133">For more information, see [Working with Certificates](../../../../docs/framework/wcf/feature-details/working-with-certificates.md) and [How to: Configure a Port with an SSL Certificate](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md).</span></span>  
+### <a name="code"></a><span data-ttu-id="82c0e-130">代码</span><span class="sxs-lookup"><span data-stu-id="82c0e-130">Code</span></span>  
+ <span data-ttu-id="82c0e-131">下面的代码演示如何创建使用 Windows 域用户名和密码确保传输安全的服务终结点。</span><span class="sxs-lookup"><span data-stu-id="82c0e-131">The following code shows how to create a service endpoint that uses a Windows domain user name and password for transfer security.</span></span> <span data-ttu-id="82c0e-132">请注意，此服务要求使用 X.509 证书向客户端进行身份验证。</span><span class="sxs-lookup"><span data-stu-id="82c0e-132">Note that the service requires an X.509 certificate to authenticate to the client.</span></span> <span data-ttu-id="82c0e-133">有关详细信息，请参阅[Working with Certificates](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)并[如何： 使用 SSL 证书配置端口](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)。</span><span class="sxs-lookup"><span data-stu-id="82c0e-133">For more information, see [Working with Certificates](../../../../docs/framework/wcf/feature-details/working-with-certificates.md) and [How to: Configure a Port with an SSL Certificate](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md).</span></span>  
   
  [!code-csharp[C_SecurityScenarios#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#1)]
  [!code-vb[C_SecurityScenarios#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#1)]  
   
-## <a name="configuration"></a><span data-ttu-id="12611-134">配置</span><span class="sxs-lookup"><span data-stu-id="12611-134">Configuration</span></span>  
- <span data-ttu-id="12611-135">下面将配置一个服务以使用具有传输级安全的基本身份验证：</span><span class="sxs-lookup"><span data-stu-id="12611-135">The following configures a service to use basic authentication with transport-level security:</span></span>  
+## <a name="configuration"></a><span data-ttu-id="82c0e-134">配置</span><span class="sxs-lookup"><span data-stu-id="82c0e-134">Configuration</span></span>  
+ <span data-ttu-id="82c0e-135">下面将配置一个服务以使用具有传输级安全的基本身份验证：</span><span class="sxs-lookup"><span data-stu-id="82c0e-135">The following configures a service to use basic authentication with transport-level security:</span></span>  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  
@@ -70,22 +70,22 @@ ms.locfileid: "47082339"
 </configuration>  
 ```  
   
-## <a name="client"></a><span data-ttu-id="12611-136">客户端</span><span class="sxs-lookup"><span data-stu-id="12611-136">Client</span></span>  
+## <a name="client"></a><span data-ttu-id="82c0e-136">客户端</span><span class="sxs-lookup"><span data-stu-id="82c0e-136">Client</span></span>  
   
-### <a name="code"></a><span data-ttu-id="12611-137">代码</span><span class="sxs-lookup"><span data-stu-id="12611-137">Code</span></span>  
- <span data-ttu-id="12611-138">下面的代码演示包括用户名和密码在内的客户端代码。</span><span class="sxs-lookup"><span data-stu-id="12611-138">The following code shows the client code that includes the user name and password.</span></span> <span data-ttu-id="12611-139">请注意，此用户必须提供一个有效的 Windows 用户名和密码。</span><span class="sxs-lookup"><span data-stu-id="12611-139">Note that the user must provide a valid Windows user name and password.</span></span> <span data-ttu-id="12611-140">此处不显示用于返回用户名和密码的代码。</span><span class="sxs-lookup"><span data-stu-id="12611-140">The code to return the user name and password is not shown here.</span></span> <span data-ttu-id="12611-141">使用对话框或其他界面来查询用户的相关信息。</span><span class="sxs-lookup"><span data-stu-id="12611-141">Use a dialog box or other interface to query the user for the information.</span></span>  
+### <a name="code"></a><span data-ttu-id="82c0e-137">代码</span><span class="sxs-lookup"><span data-stu-id="82c0e-137">Code</span></span>  
+ <span data-ttu-id="82c0e-138">下面的代码演示包括用户名和密码在内的客户端代码。</span><span class="sxs-lookup"><span data-stu-id="82c0e-138">The following code shows the client code that includes the user name and password.</span></span> <span data-ttu-id="82c0e-139">请注意，此用户必须提供一个有效的 Windows 用户名和密码。</span><span class="sxs-lookup"><span data-stu-id="82c0e-139">Note that the user must provide a valid Windows user name and password.</span></span> <span data-ttu-id="82c0e-140">此处不显示用于返回用户名和密码的代码。</span><span class="sxs-lookup"><span data-stu-id="82c0e-140">The code to return the user name and password is not shown here.</span></span> <span data-ttu-id="82c0e-141">使用对话框或其他界面来查询用户的相关信息。</span><span class="sxs-lookup"><span data-stu-id="82c0e-141">Use a dialog box or other interface to query the user for the information.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="12611-142">用户名和密码只能使用代码进行设置。</span><span class="sxs-lookup"><span data-stu-id="12611-142">User name and password can only be set using code.</span></span>  
+>  <span data-ttu-id="82c0e-142">用户名和密码只能使用代码进行设置。</span><span class="sxs-lookup"><span data-stu-id="82c0e-142">User name and password can only be set using code.</span></span>  
   
  [!code-csharp[C_SecurityScenarios#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#2)]
  [!code-vb[C_SecurityScenarios#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#2)]  
   
-### <a name="configuration"></a><span data-ttu-id="12611-143">配置</span><span class="sxs-lookup"><span data-stu-id="12611-143">Configuration</span></span>  
- <span data-ttu-id="12611-144">下面的代码演示客户端配置。</span><span class="sxs-lookup"><span data-stu-id="12611-144">The following code shows the client configuration.</span></span>  
+### <a name="configuration"></a><span data-ttu-id="82c0e-143">配置</span><span class="sxs-lookup"><span data-stu-id="82c0e-143">Configuration</span></span>  
+ <span data-ttu-id="82c0e-144">下面的代码演示客户端配置。</span><span class="sxs-lookup"><span data-stu-id="82c0e-144">The following code shows the client configuration.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="12611-145">不能使用配置来设置用户名和密码。</span><span class="sxs-lookup"><span data-stu-id="12611-145">You cannot use configuration to set the user name and password.</span></span> <span data-ttu-id="12611-146">此处显示的配置必须使用代码进行扩充以设置用户名和密码。</span><span class="sxs-lookup"><span data-stu-id="12611-146">The configuration shown here must be augmented using code to set the user name and password.</span></span>  
+>  <span data-ttu-id="82c0e-145">不能使用配置来设置用户名和密码。</span><span class="sxs-lookup"><span data-stu-id="82c0e-145">You cannot use configuration to set the user name and password.</span></span> <span data-ttu-id="82c0e-146">此处显示的配置必须使用代码进行扩充以设置用户名和密码。</span><span class="sxs-lookup"><span data-stu-id="82c0e-146">The configuration shown here must be augmented using code to set the user name and password.</span></span>  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  
@@ -111,11 +111,11 @@ ms.locfileid: "47082339"
 </configuration>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="12611-147">请参阅</span><span class="sxs-lookup"><span data-stu-id="12611-147">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="82c0e-147">请参阅</span><span class="sxs-lookup"><span data-stu-id="82c0e-147">See Also</span></span>  
  <xref:System.ServiceModel.ClientBase%601.ClientCredentials%2A>  
  <xref:System.ServiceModel.Security.UserNamePasswordClientCredential>  
- [<span data-ttu-id="12611-148">使用证书</span><span class="sxs-lookup"><span data-stu-id="12611-148">Working with Certificates</span></span>](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)  
- [<span data-ttu-id="12611-149">如何：使用 SSL 证书配置端口</span><span class="sxs-lookup"><span data-stu-id="12611-149">How to: Configure a Port with an SSL Certificate</span></span>](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)  
- [<span data-ttu-id="12611-150">安全性概述</span><span class="sxs-lookup"><span data-stu-id="12611-150">Security Overview</span></span>](../../../../docs/framework/wcf/feature-details/security-overview.md)  
- [<span data-ttu-id="12611-151">\<clientCredentials></span><span class="sxs-lookup"><span data-stu-id="12611-151">\<clientCredentials></span></span>](../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md)  
- [<span data-ttu-id="12611-152">Windows Server App Fabric 的安全模型</span><span class="sxs-lookup"><span data-stu-id="12611-152">Security Model for Windows Server App Fabric</span></span>](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+ [<span data-ttu-id="82c0e-148">使用证书</span><span class="sxs-lookup"><span data-stu-id="82c0e-148">Working with Certificates</span></span>](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)  
+ [<span data-ttu-id="82c0e-149">如何：使用 SSL 证书配置端口</span><span class="sxs-lookup"><span data-stu-id="82c0e-149">How to: Configure a Port with an SSL Certificate</span></span>](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)  
+ [<span data-ttu-id="82c0e-150">安全性概述</span><span class="sxs-lookup"><span data-stu-id="82c0e-150">Security Overview</span></span>](../../../../docs/framework/wcf/feature-details/security-overview.md)  
+ [<span data-ttu-id="82c0e-151">\<clientCredentials></span><span class="sxs-lookup"><span data-stu-id="82c0e-151">\<clientCredentials></span></span>](../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md)  
+ [<span data-ttu-id="82c0e-152">Windows Server App Fabric 的安全模型</span><span class="sxs-lookup"><span data-stu-id="82c0e-152">Security Model for Windows Server App Fabric</span></span>](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
