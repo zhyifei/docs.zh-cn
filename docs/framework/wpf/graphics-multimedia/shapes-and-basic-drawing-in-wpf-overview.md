@@ -13,11 +13,11 @@ helpviewer_keywords:
 - Shape objects [WPF]
 ms.assetid: 66d7a6d6-e3b6-47bc-8dfe-8a1b26f7d901
 ms.openlocfilehash: 47df352c3b001f088f34ea057b34698efc4f4b53
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47109389"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47233273"
 ---
 # <a name="shapes-and-basic-drawing-in-wpf-overview"></a>WPF 中的形状和基本图形概述
 本主题概述了如何绘制与<xref:System.Windows.Shapes.Shape>对象。 一个<xref:System.Windows.Shapes.Shape>是一种<xref:System.Windows.UIElement>，使您可以在屏幕上绘制一个形状。 由于它们是 UI 元素<xref:System.Windows.Shapes.Shape>对象可以用在<xref:System.Windows.Controls.Panel>元素和多数控件。  

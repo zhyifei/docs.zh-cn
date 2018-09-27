@@ -13,11 +13,11 @@ ms.assetid: 7931c942-63c1-47c3-a045-9d9de3cacdbf
 author: mcleblanc
 ms.author: markl
 ms.openlocfilehash: 55a7eb431432b67b3252853d14bf93be304ee883
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47176342"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47233088"
 ---
 # <a name="lttracegt-element"></a>&lt;跟踪&gt;元素
 包含用于收集、存储和路由跟踪消息的侦听器。  

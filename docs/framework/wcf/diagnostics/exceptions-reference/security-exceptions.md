@@ -3,13 +3,12 @@ title: 安全异常
 ms.date: 03/30/2017
 ms.assetid: 76d5e5cd-e4f4-404f-9a5a-ec3522494ad8
 author: BrucePerlerMS
-manager: mbaldwin
-ms.openlocfilehash: 057d01ba918a41df0bdf2acc30c9bb35777ebc27
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9e5795da5765e3dadfb169b1819b7154bd6ce0a9
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33474878"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47233231"
 ---
 # <a name="security-exceptions"></a>安全异常
 本主题列出所有安全异常。  
@@ -30,7 +29,7 @@ ms.locfileid: "33474878"
 |BindingDoesNotSupportWindowsIdenityForImpersonation|指定协定操作需要 Windows 标识进行自动模拟。 指定协定的指定绑定未提供代表调用方的 Windows 标识。|  
 |CachedNegotiationStateQuotaReached|服务无法缓存协商状态，因为已达到指定容量。 请重试请求。|  
 |CacheQuotaReached|无法添加该项目。 最大缓存大小已指定。|  
-|CannotDetermineSPNBasedOnAddress|客户端无法以 SspiNegotiation/Kerberos 为目的根据指定目标地址中的标识确定服务主体名称。 目标地址标识必须是 UPN 标识 (如 acmedomain\\\alice) 或 SPN 标识 （例如主机/bobs-machine)。|  
+|CannotDetermineSPNBasedOnAddress|客户端无法以 SspiNegotiation/Kerberos 为目的根据指定目标地址中的标识确定服务主体名称。 目标地址标识必须是 UPN 标识 (例如 acmedomain\\\alice) 或 SPN 标识 （例如主机/bobs-machine)。|  
 |CannotFindCert|无法使用下列指定的搜索标准找到 X.509 证书：StoreName、StoreLocation、FindType、FindValue。|  
 |CannotFindCertForTarget|无法使用下列指定的搜索标准为指定目标找到 X.509 证书：StoreName、StoreLocation、FindType、FindValue。|  
 |CannotFindCorrelationStateForApplyingSecurity|无法找到将安全性应用到应答器上的答复所需的相关性状态。|  
