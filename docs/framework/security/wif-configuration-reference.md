@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 ms.assetid: 098b80ba-9ebd-4078-a1cb-c1151036a207
 author: BrucePerlerMS
 ms.openlocfilehash: e2077135819cb41f2590e3bc1d60ecc376836271
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47173260"
+ms.lasthandoff: 09/27/2018
+ms.locfileid: "47237012"
 ---
 # <a name="wif-configuration-reference"></a>WIF 配置参考
 可以通过将元素添加到配置文件来配置应用程序中的 Windows Identity Foundation (WIF)。 本主题包含指向 WIF 配置元素参考主题的链接。  

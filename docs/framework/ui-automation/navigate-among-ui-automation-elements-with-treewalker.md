@@ -13,11 +13,11 @@ ms.assetid: afcd21dc-2ffa-48c9-9332-51269f44b7e9
 author: Xansky
 ms.author: mhopkins
 ms.openlocfilehash: f2f7c140211e558677ce90fcc3ef138a2022881f
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47077988"
+ms.lasthandoff: 09/27/2018
+ms.locfileid: "47397485"
 ---
 # <a name="navigate-among-ui-automation-elements-with-treewalker"></a>使用 TreeWalker 在 UI 自动化元素之间导航
 > [!NOTE]

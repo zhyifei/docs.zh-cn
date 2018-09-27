@@ -2,12 +2,12 @@
 title: 如何：动态更新
 ms.date: 03/30/2017
 ms.assetid: 9b8f6e0d-edab-4a7e-86e3-8c66bebc64bb
-ms.openlocfilehash: 891caf2570ea4f843f20f95ac347b66ef84569f9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 597a4f8776398769307214090a8b463981bc0d46
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33493290"
+ms.lasthandoff: 09/27/2018
+ms.locfileid: "47399276"
 ---
 # <a name="how-to-dynamic-update"></a>如何：动态更新
 本主题概述了创建和动态更新路由配置所需的基本步骤。 在本示例中，从配置文件中获取初始路由配置，并将所有消息路由至 regularCalc 计算器服务；不过，本示例随后以编程方式更新该路由配置，以便更改 roundingCalc 服务的目标终结点。  
@@ -160,7 +160,7 @@ ms.locfileid: "33493290"
     ```  
   
     > [!NOTE]
-    >  由于提供新 RoutingConfiguration 的方法包含在 RoutingExtension 服务扩展中，因此，在具有或可获取对 ServiceHost 或 ServiceExtensions 的引用的 WCF 扩展性模型中，可以在任意位置（例如，在另一 ServiceExtension 中）提供新的 RoutingConfiguration 对象。 动态更新以这种方式 RoutingConfiguration 的示例，请参阅[动态重新配置](../../../../docs/framework/wcf/samples/dynamic-reconfiguration.md)。  
+    > 由于提供新 RoutingConfiguration 的方法包含在 RoutingExtension 服务扩展中，因此，在具有或可获取对 ServiceHost 或 ServiceExtensions 的引用的 WCF 扩展性模型中，可以在任意位置（例如，在另一 ServiceExtension 中）提供新的 RoutingConfiguration 对象。
   
 ## <a name="example"></a>示例  
  下面列出了本示例中使用的控制台应用程序的完整代码清单。  

@@ -2,17 +2,17 @@
 title: 工作流管理终结点示例
 ms.date: 03/30/2017
 ms.assetid: 3ac6e08f-c43d-4bb7-83c3-e3890a4dac03
-ms.openlocfilehash: 3d99cbef20895381f5e40ee939e1d94a409f1391
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: 398ace1c198f0db0268c44083ccc98c5ba2d2c7f
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47078378"
+ms.lasthandoff: 09/27/2018
+ms.locfileid: "47399120"
 ---
 # <a name="workflow-management-endpoint-sample"></a>工作流管理终结点示例
 此示例演示如何使用工作流控制终结点以本地方式和远程方式创建和运行工作流。 此示例演示如何承载一个控制终结点并编写调用此控制终结点的客户端，以创建和运行工作流的实例。 工作流不是服务。  
   
- 在示例的服务端，使用 WorkflowServiceHost 承载工作流并且添加 WorkflowControlEndpoint，以便客户端可以执行控制操作（暂停、开始等）。 还添加用户定义的 CreationEndpoint，以允许创建工作流。 然后，该服务使用这些终结点在挂起状态中开始工作流，并且继续工作流。 客户端执行相同的操作，但这些操作来自客户端代码。 有关详细信息，有关这些接口，请参阅[流控制终结点](../../../../docs/framework/wcf/feature-details/workflow-control-endpoint.md)和[如何： 承载非服务工作流在 IIS 中](../../../../docs/framework/wcf/feature-details/how-to-host-a-non-service-workflow-in-iis.md)  
+ 在示例的服务端，使用 WorkflowServiceHost 承载工作流并且添加 WorkflowControlEndpoint，以便客户端可以执行控制操作（暂停、开始等）。 还添加用户定义的 CreationEndpoint，以允许创建工作流。 然后，该服务使用这些终结点在挂起状态中开始工作流，并且继续工作流。 客户端执行相同的操作，但这些操作来自客户端代码。 有关详细信息，有关这些接口，请参阅[流控制终结点](../../../../docs/framework/wcf/feature-details/workflow-control-endpoint.md)。  
   
 #### <a name="to-run-the-sample"></a>运行示例  
   

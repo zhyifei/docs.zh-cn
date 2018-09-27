@@ -14,11 +14,11 @@ ms.assetid: fc076d66-9b5f-42d3-aa65-61d970c794a3
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 70888e068782add5ebe5ae1c7da3bdee842faea8
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47070209"
+ms.lasthandoff: 09/27/2018
+ms.locfileid: "47398873"
 ---
 # <a name="naming-guidelines"></a>命名准则
 在框架开发中遵循一套一致的命名约定可极大地提升框架的可用性。 通过这种方式，框架便可供许多开发人员广泛用于各种不同的项目。 除了形式的一致性外，框架元素的名称必须易于理解，且须能够传达每个元素的功能。  
