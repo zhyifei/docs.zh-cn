@@ -8,11 +8,11 @@ ms.assetid: 24211ea5-163e-4fe5-aed8-004d8499760c
 author: mcleblanc
 ms.author: markl
 ms.openlocfilehash: f885416629ae58949cc688f4e6fbd41e77e872aa
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47071694"
+ms.lasthandoff: 09/28/2018
+ms.locfileid: "47425805"
 ---
 # <a name="ltremovegt-element-for-ltnamedcachesgt"></a>&lt;删除&gt;元素&lt;namedCaches&gt;
 从内存缓存的 `namedCaches` 集合中删除一个命名的缓存条目。  

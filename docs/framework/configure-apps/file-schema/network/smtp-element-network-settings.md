@@ -11,11 +11,11 @@ ms.assetid: 220b0329-e384-4e0c-86b4-0945ad17efd9
 author: mcleblanc
 ms.author: markl
 ms.openlocfilehash: 61110413f43e95060aa2cfecb4acdb3ebaae14df
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47082248"
+ms.lasthandoff: 09/28/2018
+ms.locfileid: "47425818"
 ---
 # <a name="ltsmtpgt-element-network-settings"></a>&lt;smtp&gt;元素 （网络设置）
 配置传递格式、 传递方法和发件人发送电子邮件地址。  
