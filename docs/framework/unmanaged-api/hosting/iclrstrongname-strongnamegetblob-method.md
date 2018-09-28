@@ -19,16 +19,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: f4621a7d143d401d4cb620ac17c31e4ee5f13837
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47086770"
+ms.lasthandoff: 09/28/2018
+ms.locfileid: "47421776"
 ---
-# <a name="iclrstrongnamestrongnamegetblob-method"></a><span data-ttu-id="691ee-102">ICLRStrongName::StrongNameGetBlob 方法</span><span class="sxs-lookup"><span data-stu-id="691ee-102">ICLRStrongName::StrongNameGetBlob Method</span></span>
-<span data-ttu-id="691ee-103">使用指定地址处可执行文件的二进制表示形式填充指定的缓冲区。</span><span class="sxs-lookup"><span data-stu-id="691ee-103">Fills the specified buffer with the binary representation of the executable file at the specified address.</span></span>  
+# <a name="iclrstrongnamestrongnamegetblob-method"></a><span data-ttu-id="3e64e-102">ICLRStrongName::StrongNameGetBlob 方法</span><span class="sxs-lookup"><span data-stu-id="3e64e-102">ICLRStrongName::StrongNameGetBlob Method</span></span>
+<span data-ttu-id="3e64e-103">使用指定地址处可执行文件的二进制表示形式填充指定的缓冲区。</span><span class="sxs-lookup"><span data-stu-id="3e64e-103">Fills the specified buffer with the binary representation of the executable file at the specified address.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="691ee-104">语法</span><span class="sxs-lookup"><span data-stu-id="691ee-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="3e64e-104">语法</span><span class="sxs-lookup"><span data-stu-id="3e64e-104">Syntax</span></span>  
   
 ```  
 HRESULT StrongNameGetBlob (  
@@ -38,28 +38,28 @@ HRESULT StrongNameGetBlob (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="691ee-105">参数</span><span class="sxs-lookup"><span data-stu-id="691ee-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="3e64e-105">参数</span><span class="sxs-lookup"><span data-stu-id="3e64e-105">Parameters</span></span>  
  `wszFilePath`  
- <span data-ttu-id="691ee-106">[in]要加载的可执行文件是有效路径。</span><span class="sxs-lookup"><span data-stu-id="691ee-106">[in] A valid path to the executable file to be loaded.</span></span>  
+ <span data-ttu-id="3e64e-106">[in]要加载的可执行文件是有效路径。</span><span class="sxs-lookup"><span data-stu-id="3e64e-106">[in] A valid path to the executable file to be loaded.</span></span>  
   
  `pbBlob`  
- <span data-ttu-id="691ee-107">[in]若要加载的可执行文件读入的缓冲区。</span><span class="sxs-lookup"><span data-stu-id="691ee-107">[in] The buffer into which to load the executable file.</span></span>  
+ <span data-ttu-id="3e64e-107">[in]若要加载的可执行文件读入的缓冲区。</span><span class="sxs-lookup"><span data-stu-id="3e64e-107">[in] The buffer into which to load the executable file.</span></span>  
   
  `pcbBlob`  
- <span data-ttu-id="691ee-108">[in、 out]请求的最大大小，以字节为单位， `pbBlob`。</span><span class="sxs-lookup"><span data-stu-id="691ee-108">[in, out] The requested maximum size, in bytes, of `pbBlob`.</span></span> <span data-ttu-id="691ee-109">在返回时，实际大小，以字节为单位的`pbBlob`。</span><span class="sxs-lookup"><span data-stu-id="691ee-109">Upon return, the actual size, in bytes, of `pbBlob`.</span></span>  
+ <span data-ttu-id="3e64e-108">[in、 out]请求的最大大小，以字节为单位， `pbBlob`。</span><span class="sxs-lookup"><span data-stu-id="3e64e-108">[in, out] The requested maximum size, in bytes, of `pbBlob`.</span></span> <span data-ttu-id="3e64e-109">在返回时，实际大小，以字节为单位的`pbBlob`。</span><span class="sxs-lookup"><span data-stu-id="3e64e-109">Upon return, the actual size, in bytes, of `pbBlob`.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="691ee-110">返回值</span><span class="sxs-lookup"><span data-stu-id="691ee-110">Return Value</span></span>  
- <span data-ttu-id="691ee-111">`S_OK` 如果成功，则完成的方法否则为指示失败的 HRESULT 值 (请参阅[常见的 HRESULT 值](https://go.microsoft.com/fwlink/?LinkId=213878)列表)。</span><span class="sxs-lookup"><span data-stu-id="691ee-111">`S_OK` if the method completed successfully; otherwise, an HRESULT value that indicates failure (see [Common HRESULT Values](https://go.microsoft.com/fwlink/?LinkId=213878) for a list).</span></span>  
+## <a name="return-value"></a><span data-ttu-id="3e64e-110">返回值</span><span class="sxs-lookup"><span data-stu-id="3e64e-110">Return Value</span></span>  
+ <span data-ttu-id="3e64e-111">`S_OK` 如果成功，则完成的方法否则为指示失败的 HRESULT 值 (请参阅[常见的 HRESULT 值](https://go.microsoft.com/fwlink/?LinkId=213878)列表)。</span><span class="sxs-lookup"><span data-stu-id="3e64e-111">`S_OK` if the method completed successfully; otherwise, an HRESULT value that indicates failure (see [Common HRESULT Values](https://go.microsoft.com/fwlink/?LinkId=213878) for a list).</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="691ee-112">要求</span><span class="sxs-lookup"><span data-stu-id="691ee-112">Requirements</span></span>  
- <span data-ttu-id="691ee-113">**平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="691ee-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="3e64e-112">要求</span><span class="sxs-lookup"><span data-stu-id="3e64e-112">Requirements</span></span>  
+ <span data-ttu-id="3e64e-113">**平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="3e64e-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="691ee-114">**标头：** MetaHost.h</span><span class="sxs-lookup"><span data-stu-id="691ee-114">**Header:** MetaHost.h</span></span>  
+ <span data-ttu-id="3e64e-114">**标头：** MetaHost.h</span><span class="sxs-lookup"><span data-stu-id="3e64e-114">**Header:** MetaHost.h</span></span>  
   
- <span data-ttu-id="691ee-115">**库：** 作为 MSCorEE.dll 中的资源</span><span class="sxs-lookup"><span data-stu-id="691ee-115">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="3e64e-115">**库：** 作为 MSCorEE.dll 中的资源</span><span class="sxs-lookup"><span data-stu-id="3e64e-115">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="691ee-116">**.NET Framework 版本：**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="691ee-116">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
+ <span data-ttu-id="3e64e-116">**.NET Framework 版本：**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="3e64e-116">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="691ee-117">请参阅</span><span class="sxs-lookup"><span data-stu-id="691ee-117">See Also</span></span>  
- [<span data-ttu-id="691ee-118">StrongNameGetBlobFromImage 方法</span><span class="sxs-lookup"><span data-stu-id="691ee-118">StrongNameGetBlobFromImage Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamegetblobfromimage-method.md)  
- [<span data-ttu-id="691ee-119">ICLRStrongName 接口</span><span class="sxs-lookup"><span data-stu-id="691ee-119">ICLRStrongName Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)
+## <a name="see-also"></a><span data-ttu-id="3e64e-117">请参阅</span><span class="sxs-lookup"><span data-stu-id="3e64e-117">See Also</span></span>  
+ [<span data-ttu-id="3e64e-118">StrongNameGetBlobFromImage 方法</span><span class="sxs-lookup"><span data-stu-id="3e64e-118">StrongNameGetBlobFromImage Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamegetblobfromimage-method.md)  
+ [<span data-ttu-id="3e64e-119">ICLRStrongName 接口</span><span class="sxs-lookup"><span data-stu-id="3e64e-119">ICLRStrongName Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)
