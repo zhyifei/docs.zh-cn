@@ -7,11 +7,11 @@ helpviewer_keywords:
 - application event logs
 ms.assetid: 2581afd1-5791-4bc4-86b2-46244e9fe468
 ms.openlocfilehash: c11e1f0c99b3189c7a353e6778c701667b0a1d12
-ms.sourcegitcommit: f513a91160b3fec289dd06646d0d6f81f8fcf910
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45964743"
+ms.lasthandoff: 09/27/2018
+ms.locfileid: "47397681"
 ---
 # <a name="working-with-application-logs-in-visual-basic"></a>使用 Application 日志 (Visual Basic)
 使用 `My.Applicaton.Log` 和 `My.Log` 对象可以轻松将日志记录和跟踪信息写入日志。  
