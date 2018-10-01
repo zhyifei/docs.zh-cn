@@ -2,12 +2,12 @@
 title: 计算表达式 (F#)
 description: '了解如何创建用于编写计算 F # 中用于进行排列和组合使用控制流构造和绑定的方便语法。'
 ms.date: 07/27/2018
-ms.openlocfilehash: ce81af7966a436b3973de277fb2a78ec06f4c471
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 148d1a661fb7630782c6dc48507a66e7bdc1d56b
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45685733"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47459797"
 ---
 # <a name="computation-expressions"></a>计算表达式
 
@@ -88,7 +88,7 @@ let doThingsAsync url =
 ```fsharp
 let doThingsAsync data url =
     async {
-        do! sumbitData data url
+        do! submitData data url
         ...
     }
 ```
