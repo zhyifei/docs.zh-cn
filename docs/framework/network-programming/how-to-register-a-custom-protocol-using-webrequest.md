@@ -7,13 +7,12 @@ dev_langs:
 ms.assetid: 98ddbdb9-66b1-4080-92ad-51f5c447fcf8
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: e6902adeac04d95d576ae72469624a5b4f8aa0c6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1f78f98f94daa51c17a1294285e13dfddd457106
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33394587"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47230964"
 ---
 # <a name="how-to-register-a-custom-protocol-using-webrequest"></a>如何：使用 WebRequest 注册自定义协议
 此示例演示如何注册在其他位置定义的特定于协议的类。 在此示例中，`CustomWebRequestCreator` 是用户实现对象，它实现返回 `CustomWebRequest` 对象的“Create”方法。 此代码示例假定已编写了实现自定义协议的 `CustomWebRequest` 代码。  

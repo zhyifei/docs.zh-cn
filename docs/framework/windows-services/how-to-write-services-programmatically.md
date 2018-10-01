@@ -9,13 +9,12 @@ helpviewer_keywords:
 - Windows Service applications, creating
 ms.assetid: 3abbb2ec-78d2-41e6-b9f9-6662d4e2cdc7
 author: ghogen
-manager: douge
-ms.openlocfilehash: 99fd44723bba21127e2a5e0ba3e9bfc4b90b52d7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 904a82a3cc725221defb6795bf813b8cbc490c41
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33513281"
+ms.lasthandoff: 09/27/2018
+ms.locfileid: "47397015"
 ---
 # <a name="how-to-write-services-programmatically"></a>如何：以编程方式编写服务
 如果选择不使用 Windows 服务项目模板，则可以通过自行设置继承和其他基础结构元素来编写自己的服务。 当以编程方式创建服务时，必须执行以下几个步骤（否则，模板将为你处理）：  

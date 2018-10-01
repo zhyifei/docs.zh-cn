@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: d5c3477a-e798-454c-a890-738ba14c5707
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: bc325a551afd0190ea71b46cc53a275de635bda3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8aabd71a841af2b01c644d52806f213ca9c92ec2
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33397629"
+ms.lasthandoff: 09/29/2018
+ms.locfileid: "47209354"
 ---
 # <a name="using-udp-services"></a>使用 UDP 服务
 <xref:System.Net.Sockets.UdpClient> 类使用 UDP与网络服务通信。 <xref:System.Net.Sockets.UdpClient> 类的属性和方法概要说明了使用 UDP 创建 <xref:System.Net.Sockets.Socket> 以请求和接收数据的详情。  

@@ -9,11 +9,11 @@ ms.assetid: a4fb291f-5630-49ba-a49a-5b66c3b71e49
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 9031f5df0d0f48dc2844cdfd0654ee4ab876cc22
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/22/2018
-ms.locfileid: "46578701"
+ms.lasthandoff: 09/29/2018
+ms.locfileid: "47399042"
 ---
 # <a name="reading-an-xml-document-into-the-dom"></a>将 XML 文档读入 DOM
 XML 信息从不同的格式读入内存。 读取源包括字符串、流、URL、文本读取器或 <xref:System.Xml.XmlReader> 的派生类。  

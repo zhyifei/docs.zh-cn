@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 8d84f936-2376-4356-9264-03162e0f9279
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: fd2856ffcf6b21ba34771c231f608ad725b21763
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2d46f88b40fc48eb819877c49ff9e04e487a0f5a
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33390960"
+ms.lasthandoff: 09/28/2018
+ms.locfileid: "47205247"
 ---
 # <a name="how-to-customize-a-time-based-cache-policy"></a>如何：自定义基于时间的缓存策略
 创建基于时间的缓存策略时，可以通过为最长使用时间、最低新鲜度、最长过期时间或缓存同步日期指定值，以自定义缓存行为。 <xref:System.Net.Cache.HttpRequestCachePolicy> 对象提供几个构造函数，可用于指定这些值的有效组合。  

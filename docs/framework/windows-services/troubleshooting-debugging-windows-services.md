@@ -12,13 +12,12 @@ helpviewer_keywords:
 - Windows Service applications, troubleshooting
 ms.assetid: cf859d4c-f04c-4cb7-81e3-bc7de8bea190
 author: ghogen
-manager: douge
-ms.openlocfilehash: 77a0c19c2da2d1886beaf396650fa024fc1243a6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0dbbebd14ce0ff5f69a12c256238c7e0a02494cb
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33510132"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47199939"
 ---
 # <a name="troubleshooting-debugging-windows-services"></a>疑难解答：调试 Windows 服务
 在调试 Windows 服务应用程序时，服务和 Windows 服务管理器交互。 Service Manager 通过调用 <xref:System.ServiceProcess.ServiceBase.OnStart%2A> 方法来启动服务，然后等待 30 秒以便 <xref:System.ServiceProcess.ServiceBase.OnStart%2A> 方法返回。 如果此时该方法未返回，则管理器将显示服务无法启动的错误。  

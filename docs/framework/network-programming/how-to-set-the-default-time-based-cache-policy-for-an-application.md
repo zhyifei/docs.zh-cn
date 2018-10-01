@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 6bfce066-a2e7-4add-a05e-85c12ec9f07f
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 021a13b9124cf54712643e33cbf0ca77ec828b27
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1e08026f8d1ec8b39f7ef3c2c34efad9e51b8fe9
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33396667"
+ms.lasthandoff: 09/28/2018
+ms.locfileid: "47235697"
 ---
 # <a name="how-to-set-the-default-time-based-cache-policy-for-an-application"></a>如何：为应用程序设置默认基于时间的缓存策略
 默认的基于时间的缓存策略允许应用程序将标头定义的缓存行为与缓存资源和 RFC 2616 的第 13 和 14 节（可在 [http://www.ietf.org](http://www.ietf.org/) 中找到）中定义的缓存行为一起发送。这是适用于大多数应用程序的缓存行为。  

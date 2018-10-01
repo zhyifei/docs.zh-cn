@@ -4,12 +4,12 @@ description: 了解 .NET Core 2.1 的新增功能。
 author: rpetrusha
 ms.author: ronpet
 ms.date: 06/06/2018
-ms.openlocfilehash: 850df87666c5beb0594f0672d8f558c11653f973
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: aa80e6b7214f91c49803adde49a1e03d1971b3f6
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45625394"
+ms.lasthandoff: 09/27/2018
+ms.locfileid: "47400057"
 ---
 # <a name="whats-new-in-net-core-21"></a>.NET Core 2.1 的新增功能
 
@@ -66,7 +66,7 @@ ms.locfileid: "45625394"
 
 .NET Core 2.1 支持全局工具，即，可通过命令行在全局范围内使用的自定义工具。 以前版本的 .NET Core 中的扩展性模型只能通过使用 [`DotnetCliToolReference`](../tools/extensibility.md#consuming-per-project-tools) 在每个项目的基础上提供自定义工具。
 
-若要安装全局工具，请使用 [dotnet tool install](..\tools\dotnet-tool-install.md) 命令。 例如:
+若要安装全局工具，请使用 [dotnet tool install](../tools/dotnet-tool-install.md) 命令。 例如:
 
 ```console
 dotnet tool install -g dotnetsay

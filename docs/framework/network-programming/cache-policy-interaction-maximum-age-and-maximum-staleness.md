@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 7f775925-89a1-4956-ba90-c869c1749a94
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 4ee2b3a0a97a0526802d6cb4c8f546a5ec4e7b85
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c512f03cd3c0cfc4463e54538f12898fbbf45f7e
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33392601"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47235771"
 ---
 # <a name="cache-policy-interactionmaximum-age-and-maximum-staleness"></a>缓存策略交互 — 最长使用期限和最长过期时间
 为了帮助确保将最新鲜的内容返回给客户端应用程序，客户端缓存策略和服务器重新验证要求的交互始终会造成最保守的缓存策略。 本主题中的所有示例阐明针对在 1 月 1 日缓存、1 月 4 日过期的资源的缓存策略。  

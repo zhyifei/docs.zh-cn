@@ -8,11 +8,11 @@ ms.assetid: bdc82f2f-4754-45a1-a81e-fe2e9c30cef9
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 6453e9983086dcb5b97ec134db9d74160d7a47cf
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/22/2018
-ms.locfileid: "46577579"
+ms.lasthandoff: 09/27/2018
+ms.locfileid: "47399919"
 ---
 # <a name="data-structures-for-parallel-programming"></a>用于并行编程的数据结构
 .NET Framework 版本 4 引入了几种对并行编程非常有用的新类型，包括一组并发回收类、轻型同步基元和迟缓初始化类型。 可以将这些类型与任何多线程应用代码（包括任务并行库和 PLINQ）结合使用。  

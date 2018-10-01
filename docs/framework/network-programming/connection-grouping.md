@@ -10,13 +10,12 @@ helpviewer_keywords:
 ms.assetid: 2ec502e8-4ba0-4c22-9410-f28eaf4eee63
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: bbf34f1e653e95ea30a3e9945fc74c99cfdc3a45
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5d7a13172c32d7ae47cbe290587ff7620e6060da
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33395042"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47200862"
 ---
 # <a name="connection-grouping"></a>连接分组
 连接分组将单个应用程序内的特定请求与已定义连接池相联系。 代表用户连接到后端服务器并使用支持委托的身份验证协议（如 Kerberos）的中间层应用程序，或提供其自身凭据的中间层应用程序可要求连接分组，如以下示例所示。 例如，假设用户 Joe 访问显示其工资信息的内部网站。 对 Joe 进行身份验证之后，中间层应用程序服务器使用 Joe 的凭据连接到后端服务器来检索他的工资信息。 接下来 Susan 访问该站点，并请求她的工资信息。 因为中间层应用程序已使用 Joe 的凭据完成了连接，所以后端服务器会使用 Joe 的信息进行响应。 但是，如果应用程序将发送到后端服务器的每个请求分配给由用户名形成的连接组，那么每个用户将属于单独的连接池，并且不会意外地与其他用户分享身份验证信息。  

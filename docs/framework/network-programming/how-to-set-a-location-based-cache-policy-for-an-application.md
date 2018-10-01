@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 683bb88e-3411-4f46-9686-3411b6ba511c
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 50312578e9900f65fb2378de5201888fa5d77a8c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 61eb598ff2ca228e76b2a3633fe4d2bf37f2a476
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33395227"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47209803"
 ---
 # <a name="how-to-set-a-location-based-cache-policy-for-an-application"></a>如何：为应用程序设置基于位置的缓存策略
 基于位置的缓存策略允许应用程序基于所请求资源的位置显式定义缓存行为。 本主题演示如何以编程方式设置缓存策略。 有关使用配置文件为应用程序设置策略的信息，请参阅 [ \<requestCaching > 元素（网络设置）](../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md)。  

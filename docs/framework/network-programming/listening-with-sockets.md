@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 40e426cc-13db-4371-95eb-f7388bd23ebf
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 640caf57638acae9bbe39d3f1039bc08c036785f
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: c518c3bea980e23367477bd1b9851630454b728b
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46002653"
+ms.lasthandoff: 09/27/2018
+ms.locfileid: "47209881"
 ---
 # <a name="listening-with-sockets"></a>使用套接字侦听
 侦听器或服务器套接字打开网络上的端口，然后等待客户端连接到该端口。 虽然存在其他网络地址系列和协议，但本示例演示如何创建 TCP/IP 网络的远程服务。  
