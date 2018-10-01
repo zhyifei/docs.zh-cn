@@ -4,13 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: b6216d88-bccb-4a59-9f1c-9f751708e811
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: a933c81105399a9411fcb749a06e47bf769cf532
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c81300d160e2ec175f61f286047fa92015345942
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33397814"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47198138"
 ---
 # <a name="peer-to-peer-collaboration"></a>对等协作
 对等网络服务利用存在于 Internet 边缘的相对强大的计算机（个人计算机）完成各项任务，不仅仅是基于客户端的计算任务。 现代个人电脑 (PC) 具有超快处理器、大量存储和大型硬盘，在执行电子邮件和 Web 浏览等常见计算任务时，并未充分利用这些优势。 现代 PC 可以轻松地充当许多类型的应用程序的客户端和服务器（对等机）。  

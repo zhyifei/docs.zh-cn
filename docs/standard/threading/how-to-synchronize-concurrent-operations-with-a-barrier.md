@@ -11,11 +11,11 @@ ms.assetid: e1a253ff-e0fb-4df8-95ff-d01a90d4cb19
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 16dc60fa9cd8782efbe1b6028413138b5991839e
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45624835"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47193700"
 ---
 # <a name="how-to-synchronize-concurrent-operations-with-a-barrier"></a>如何：使用屏障来使并发操作保持同步
 下面的示例展示了如何将并发任务与 <xref:System.Threading.Barrier> 同步。  

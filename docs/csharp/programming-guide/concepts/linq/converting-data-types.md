@@ -3,11 +3,11 @@ title: 转换数据类型 (C#)
 ms.date: 07/20/2015
 ms.assetid: 46e5682f-77a1-4302-8f93-a2b53c408808
 ms.openlocfilehash: 54ef612ad4e92058d9af4d96b7b3cde9732b2f9c
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/23/2018
-ms.locfileid: "46580572"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47089719"
 ---
 # <a name="converting-data-types-c"></a>转换数据类型 (C#)
 转换方法可更改输入对象的类型。  

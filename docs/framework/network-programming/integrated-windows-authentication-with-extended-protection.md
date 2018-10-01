@@ -4,13 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 81731998-d5e7-49e4-ad38-c8e6d01689d0
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: a78507226b87f005798d0c4824a827a72f1d657a
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 1ab211a45b5a3cb835d051c53d321dc39cac2f9f
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "43742786"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47193823"
 ---
 # <a name="integrated-windows-authentication-with-extended-protection"></a>带有扩展保护的集成 Windows 身份验证
 进行了可影响以下类处理集成式 Windows 身份验证的方式的改进：<xref:System.Net.HttpWebRequest>、<xref:System.Net.HttpListener>、<xref:System.Net.Mail.SmtpClient>、<xref:System.Net.Security.SslStream>、<xref:System.Net.Security.NegotiateStream> 以及 <xref:System.Net> 和相关命名空间中的相关类。 添加了对扩展保护的支持以增强安全性。  

@@ -14,11 +14,11 @@ ms.assetid: 74423362-1721-49cb-aa0a-e04005f72a06
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 35a7d481cf82818054a852f7c2e142f615022fcb
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/23/2018
-ms.locfileid: "46695801"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47079038"
 ---
 # <a name="how-to-open-and-append-to-a-log-file"></a>如何：打开并追加到日志文件
 <xref:System.IO.StreamWriter> 和 <xref:System.IO.StreamReader> 对流执行字符写入和读取操作。 下面的代码示例打开 `log.txt` 文件以供输入，或创建文件（如果尚无文件的话），并将信息追加到文件末尾。 然后，将文件内容写入标准输出以供显示。 作为此示例的替换方法，可以将信息存储为一个字符串或字符串数组，并能使用 <xref:System.IO.File.WriteAllText%2A> 或 <xref:System.IO.File.WriteAllLines%2A> 方法实现相同的功能。  
