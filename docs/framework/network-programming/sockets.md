@@ -17,22 +17,21 @@ helpviewer_keywords:
 ms.assetid: 10d22735-bd37-42c1-a2be-c1932f979a7d
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: b234846e63eab59602069aa72125df116e30375d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ce7ded81ad23c2df55afa9360435e8391fea7a63
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33398282"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47176820"
 ---
-# <a name="sockets"></a><span data-ttu-id="0e7c7-102">套接字</span><span class="sxs-lookup"><span data-stu-id="0e7c7-102">Sockets</span></span>
-<span data-ttu-id="0e7c7-103"><xref:System.Net.Sockets> 命名空间包含 Windows 套接字接口的托管实现。</span><span class="sxs-lookup"><span data-stu-id="0e7c7-103">The <xref:System.Net.Sockets> namespace contains a managed implementation of the Windows Sockets interface.</span></span> <span data-ttu-id="0e7c7-104"><xref:System.Net> 命名空间中的所有其他网络访问类均建立在套接字的此实现之上。</span><span class="sxs-lookup"><span data-stu-id="0e7c7-104">All other network-access classes in the <xref:System.Net> namespace are built on top of this implementation of sockets.</span></span>  
+# <a name="sockets"></a><span data-ttu-id="817c0-102">套接字</span><span class="sxs-lookup"><span data-stu-id="817c0-102">Sockets</span></span>
+<span data-ttu-id="817c0-103"><xref:System.Net.Sockets> 命名空间包含 Windows 套接字接口的托管实现。</span><span class="sxs-lookup"><span data-stu-id="817c0-103">The <xref:System.Net.Sockets> namespace contains a managed implementation of the Windows Sockets interface.</span></span> <span data-ttu-id="817c0-104"><xref:System.Net> 命名空间中的所有其他网络访问类均建立在套接字的此实现之上。</span><span class="sxs-lookup"><span data-stu-id="817c0-104">All other network-access classes in the <xref:System.Net> namespace are built on top of this implementation of sockets.</span></span>  
   
- <span data-ttu-id="0e7c7-105">.NET Framework <xref:System.Net.Sockets.Socket> 类是由 Winsock32 API 提供的套接字服务的托管代码版本。</span><span class="sxs-lookup"><span data-stu-id="0e7c7-105">The .NET Framework <xref:System.Net.Sockets.Socket> class is a managed-code version of the socket services provided by the Winsock32 API.</span></span> <span data-ttu-id="0e7c7-106">大多数情况下，Socket 类方法只是将数据封送到其本机 Win32 对等体中，并负责任何必要的安全检查。</span><span class="sxs-lookup"><span data-stu-id="0e7c7-106">In most cases, the **Socket** class methods simply marshal data into their native Win32 counterparts and handle any necessary security checks.</span></span>  
+ <span data-ttu-id="817c0-105">.NET Framework <xref:System.Net.Sockets.Socket> 类是由 Winsock32 API 提供的套接字服务的托管代码版本。</span><span class="sxs-lookup"><span data-stu-id="817c0-105">The .NET Framework <xref:System.Net.Sockets.Socket> class is a managed-code version of the socket services provided by the Winsock32 API.</span></span> <span data-ttu-id="817c0-106">大多数情况下，Socket 类方法只是将数据封送到其本机 Win32 对等体中，并负责任何必要的安全检查。</span><span class="sxs-lookup"><span data-stu-id="817c0-106">In most cases, the **Socket** class methods simply marshal data into their native Win32 counterparts and handle any necessary security checks.</span></span>  
   
- <span data-ttu-id="0e7c7-107">Socket 类支持同步和异步两种基本模式。</span><span class="sxs-lookup"><span data-stu-id="0e7c7-107">The **Socket** class supports two basic modes, synchronous and asynchronous.</span></span> <span data-ttu-id="0e7c7-108">在同步模式下，对执行网络操作（例如 <xref:System.Net.Sockets.Socket.Send%2A> 和 <xref:System.Net.Sockets.Socket.Receive%2A>）的函数的调用等待操作完成，再将控制权返回给调用程序。</span><span class="sxs-lookup"><span data-stu-id="0e7c7-108">In synchronous mode, calls to functions that perform network operations (such as <xref:System.Net.Sockets.Socket.Send%2A> and <xref:System.Net.Sockets.Socket.Receive%2A>) wait until the operation completes before returning control to the calling program.</span></span> <span data-ttu-id="0e7c7-109">在异步模式下，这些调用立即返回。</span><span class="sxs-lookup"><span data-stu-id="0e7c7-109">In asynchronous mode, these calls return immediately.</span></span>  
+ <span data-ttu-id="817c0-107">Socket 类支持同步和异步两种基本模式。</span><span class="sxs-lookup"><span data-stu-id="817c0-107">The **Socket** class supports two basic modes, synchronous and asynchronous.</span></span> <span data-ttu-id="817c0-108">在同步模式下，对执行网络操作（例如 <xref:System.Net.Sockets.Socket.Send%2A> 和 <xref:System.Net.Sockets.Socket.Receive%2A>）的函数的调用等待操作完成，再将控制权返回给调用程序。</span><span class="sxs-lookup"><span data-stu-id="817c0-108">In synchronous mode, calls to functions that perform network operations (such as <xref:System.Net.Sockets.Socket.Send%2A> and <xref:System.Net.Sockets.Socket.Receive%2A>) wait until the operation completes before returning control to the calling program.</span></span> <span data-ttu-id="817c0-109">在异步模式下，这些调用立即返回。</span><span class="sxs-lookup"><span data-stu-id="817c0-109">In asynchronous mode, these calls return immediately.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="0e7c7-110">请参阅</span><span class="sxs-lookup"><span data-stu-id="0e7c7-110">See Also</span></span>  
- [<span data-ttu-id="0e7c7-111">如何：创建套接字</span><span class="sxs-lookup"><span data-stu-id="0e7c7-111">How to: Create a Socket</span></span>](../../../docs/framework/network-programming/how-to-create-a-socket.md)  
+## <a name="see-also"></a><span data-ttu-id="817c0-110">请参阅</span><span class="sxs-lookup"><span data-stu-id="817c0-110">See Also</span></span>  
+ [<span data-ttu-id="817c0-111">如何：创建套接字</span><span class="sxs-lookup"><span data-stu-id="817c0-111">How to: Create a Socket</span></span>](../../../docs/framework/network-programming/how-to-create-a-socket.md)  
     
- [<span data-ttu-id="0e7c7-112">使用应用程序协议</span><span class="sxs-lookup"><span data-stu-id="0e7c7-112">Using Application Protocols</span></span>](../../../docs/framework/network-programming/using-application-protocols.md)
+ [<span data-ttu-id="817c0-112">使用应用程序协议</span><span class="sxs-lookup"><span data-stu-id="817c0-112">Using Application Protocols</span></span>](../../../docs/framework/network-programming/using-application-protocols.md)
