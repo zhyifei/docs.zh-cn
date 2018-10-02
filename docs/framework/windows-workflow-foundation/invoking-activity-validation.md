@@ -2,15 +2,15 @@
 title: 调用活动验证
 ms.date: 03/30/2017
 ms.assetid: 22bef766-c505-4fd4-ac0f-7b363b238969
-ms.openlocfilehash: 7e8be762e6c5c67687864727dcd4ca1cde9a8e42
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 61491e906bfc58bbd19cf43a5980b2781493411b
+ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33520170"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48035131"
 ---
 # <a name="invoking-activity-validation"></a>调用活动验证
-活动验证提供了一种在执行任何活动配置之前标识和报告此配置中的错误的方法。 当在工作流设计器中修改工作流，并且工作流设计器中显示任何验证错误或警告时，将执行验证。 此外，当调用工作流时，如果发生任何验证错误，默认验证逻辑将引发 <xref:System.Activities.InvalidWorkflowException>，此时，也将在运行时执行验证。 Windows Workflow Foundation (WF) 提供<xref:System.Activities.Validation.ActivityValidationServices>可按工作流应用程序和工具开发人员用来显式验证活动的类。 本主题说明如何使用 <xref:System.Activities.Validation.ActivityValidationServices> 执行活动验证。  
+活动验证提供了一种在执行任何活动配置之前标识和报告此配置中的错误的方法。 当在工作流设计器中修改工作流，并且工作流设计器中显示任何验证错误或警告时，将执行验证。 此外，当调用工作流时，如果发生任何验证错误，默认验证逻辑将引发 <xref:System.Activities.InvalidWorkflowException>，此时，也将在运行时执行验证。 Windows Workflow Foundation (WF) 提供了<xref:System.Activities.Validation.ActivityValidationServices>可用于工作流应用程序和工具开发人员显式验证活动的类。 本主题说明如何使用 <xref:System.Activities.Validation.ActivityValidationServices> 执行活动验证。  
   
 ## <a name="using-activityvalidationservices"></a>使用 ActivityValidationServices  
  <xref:System.Activities.Validation.ActivityValidationServices> 具有两种 <xref:System.Activities.Validation.ActivityValidationServices.Validate%2A> 重载，用于调用活动的验证逻辑。 第一种重载采用要验证的根活动，并返回验证错误和警告的集合。 下面的示例使用含有两个必需参数的自定义 `Add` 活动。  
@@ -76,8 +76,8 @@ else
   
  当对此示例工作流调用 <xref:System.Activities.Validation.ActivityValidationServices.Validate%2A> 时，返回两个验证错误。  
   
- **错误： 未提供必要的活动自变量 Operand2 的值。**  
-**错误： 未提供必要的活动自变量 Operand1 的值。**  如果已调用此工作流，将引发 <xref:System.Activities.InvalidWorkflowException>，如下面的示例所示。  
+ **错误： 未提供必需的活动自变量 Operand2 的值。**  
+**错误： 未提供必需的活动自变量 Operand1 的值。**  如果已调用此工作流，将引发 <xref:System.Activities.InvalidWorkflowException>，如下面的示例所示。  
   
 ```csharp  
 try  
@@ -91,9 +91,9 @@ catch (Exception ex)
 ```  
   
  **System.Activities.InvalidWorkflowException:**  
-**处理工作流树时遇到了以下错误：**   
-**添加： 未提供必要的活动自变量 Operand2 的值。**   
-**添加： 未提供必要的活动自变量 Operand1 的值。**  为使此示例工作流有效，必须绑定 `Add` 活动的两个必需参数。 在下面的示例中，这两个必需参数绑定到工作流变量和结果值。 在此示例中，<xref:System.Activities.Activity%601.Result%2A> 参数与这两个必需参数绑定在一起。 不必绑定 <xref:System.Activities.Activity%601.Result%2A> 参数，因为如果未绑定该参数，并不会导致验证错误。 如果在工作流中的其他位置使用 <xref:System.Activities.Activity%601.Result%2A> 的值，工作流作者应负责绑定该参数。  
+**处理工作流树时遇到以下错误：**   
+**添加： 未提供必要活动参数 Operand2 的值。**   
+**添加： 未提供必要活动参数 Operand1 的值。**  为使此示例工作流有效，必须绑定 `Add` 活动的两个必需参数。 在下面的示例中，这两个必需参数绑定到工作流变量和结果值。 在此示例中，<xref:System.Activities.Activity%601.Result%2A> 参数与这两个必需参数绑定在一起。 不必绑定 <xref:System.Activities.Activity%601.Result%2A> 参数，因为如果未绑定该参数，并不会导致验证错误。 如果在工作流中的其他位置使用 <xref:System.Activities.Activity%601.Result%2A> 的值，工作流作者应负责绑定该参数。  
   
 ```csharp  
 new Add  
@@ -123,10 +123,10 @@ catch (Exception ex)
 }  
 ```  
   
- **System.ArgumentException： 根活动的自变量设置不正确。**  
-**请修复工作流定义，或提供输入的值来修复这些错误：**   
-**添加： 未提供必要的活动自变量 Operand2 的值。**   
-**添加： 未提供必要的活动自变量 Operand1 的值。**  传递正确的自变量之后，工作流将成功完成，如下面的示例所示。  
+ **System.ArgumentException： 根活动的参数的设置不正确。**  
+**修复工作流定义，或提供输入的值来修复这些错误：**   
+**添加： 未提供必要活动参数 Operand2 的值。**   
+**添加： 未提供必要活动参数 Operand1 的值。**  传递正确的自变量之后，工作流将成功完成，如下面的示例所示。  
   
 ```csharp  
 Add wf = new Add();  
@@ -152,12 +152,13 @@ catch (Exception ex)
 ```  
   
 > [!NOTE]
->  在此示例中，根活动已声明为 `Add`，而不是上述示例中的 `Activity`。 这使 `WorkflowInvoker.Invoke` 方法返回一个表示 `Add` 活动的结果的整数，而不是 `out` 参数的字典。 也可将 `wf` 变量声明为 `Activity<int>`。  
+> 在此示例中，根活动已声明为 `Add`，而不是上述示例中的 `Activity`。 这使 `WorkflowInvoker.Invoke` 方法返回一个表示 `Add` 活动的结果的整数，而不是 `out` 参数的字典。 也可将 `wf` 变量声明为 `Activity<int>`。  
   
  当验证根参数时，主机应用程序应负责确保在调用工作流时传递所有必需参数。  
   
-### <a name="invoking-imperative-code-based-validation"></a>调用基于命令性代码的验证  
- 基于命令性代码的验证为活动提供用于自身验证的简单方法，并且该方法可用于从 <xref:System.Activities.CodeActivity>、<xref:System.Activities.AsyncCodeActivity> 和 <xref:System.Activities.NativeActivity> 派生的活动。 会向活动中添加确定所有验证错误或警告的验证代码。 在对活动调用验证时，这些警告或错误会包含在对 <xref:System.Activities.Validation.ActivityValidationServices.Validate%2A> 的调用所返回的集合中。 在下面的示例，摘自[基本验证](../../../docs/framework/windows-workflow-foundation/samples/basic-validation.md)示例中，`CreateProduct`定义活动。 如果 `Cost` 大于 `Price`，则会向 <xref:System.Activities.CodeActivity.CacheMetadata%2A> 重写中的元数据添加一个验证错误。  
+### <a name="invoking-imperative-code-based-validation"></a>调用基于命令性代码的验证
+
+基于命令性代码的验证为活动提供用于自身验证的简单方法，并且该方法可用于从 <xref:System.Activities.CodeActivity>、<xref:System.Activities.AsyncCodeActivity> 和 <xref:System.Activities.NativeActivity> 派生的活动。 会向活动中添加确定所有验证错误或警告的验证代码。 在对活动调用验证时，这些警告或错误会包含在对 <xref:System.Activities.Validation.ActivityValidationServices.Validate%2A> 的调用所返回的集合中。 下面的示例定义了一个 `CreateProduct` 活动。 如果 `Cost` 大于 `Price`，则会向 <xref:System.Activities.CodeActivity.CacheMetadata%2A> 重写中的元数据添加一个验证错误。  
   
 ```csharp  
 public sealed class CreateProduct : CodeActivity  
@@ -227,8 +228,8 @@ else
 }  
 ```  
   
- **错误： 成本必须为小于或等于价格。**  
-**错误： 未提供必要的活动自变量 'Description' 的值。**    
+ **错误： 成本必须是小于或等于价格。**  
+**错误： 未提供必需的活动自变量 Description 的值。**    
 > [!NOTE]
 >  自定义活动作者可以在活动的 <xref:System.Activities.CodeActivity.CacheMetadata%2A> 重写中提供验证逻辑。 由 <xref:System.Activities.CodeActivity.CacheMetadata%2A> 引发的任何异常不会视为验证错误。 这些异常将从对 <xref:System.Activities.Validation.ActivityValidationServices.Validate%2A> 的调用中转义，并且必须由调用方进行处理。  
   
@@ -303,4 +304,4 @@ else
   
  此代码显示以下输出内容：  
   
- **任何警告或错误**即使`Add`活动具有必需的未绑定的参数验证仍成功完成，因为计算仅根活动。 此验证类型对于只验证活动树中的特定元素非常有用，例如，在设计器中验证单个活动的属性更改。 请注意，如果将调用此工作流，将计算在工作流中配置的完全验证，并且将引发 <xref:System.Activities.InvalidWorkflowException>。 <xref:System.Activities.Validation.ActivityValidationServices> 和 <xref:System.Activities.Validation.ValidationSettings> 仅配置主机显式调用的验证，而不会配置在调用工作流时所执行的验证。
+ **没有警告或错误**即使`Add`活动的必需参数未绑定验证仍成功完成，因为只有根活动计算。 此验证类型对于只验证活动树中的特定元素非常有用，例如，在设计器中验证单个活动的属性更改。 请注意，如果将调用此工作流，将计算在工作流中配置的完全验证，并且将引发 <xref:System.Activities.InvalidWorkflowException>。 <xref:System.Activities.Validation.ActivityValidationServices> 和 <xref:System.Activities.Validation.ValidationSettings> 仅配置主机显式调用的验证，而不会配置在调用工作流时所执行的验证。

@@ -10,11 +10,11 @@ ms.assetid: 66a1b3d8-6f3f-4715-b235-e1ff95e32d8e
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 1ac7e28c3172f2ed68d402e1d04a1664644c7f25
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47399676"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48024527"
 ---
 # <a name="arrays"></a>数组
 **✓ DO** 喜欢使用通过公共 Api 中的数组的集合。 [集合](../../../docs/standard/design-guidelines/guidelines-for-collections.md)部分提供有关如何集合和数组之间进行选择的详细信息。  

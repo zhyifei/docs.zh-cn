@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 ms.assetid: 2831d514-d9d8-4200-9192-954bb6da1126
 author: BrucePerlerMS
 ms.openlocfilehash: 8673b4520d9727ae1aa78ef0bc9f435defb02598
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47235960"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48032330"
 ---
 # <a name="how-to-transform-incoming-claims"></a>如何：转换传入声明
 ## <a name="applies-to"></a>适用于  
