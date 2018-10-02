@@ -2,12 +2,12 @@
 title: 持久双工相关
 ms.date: 03/30/2017
 ms.assetid: 8eb0e49a-6d3b-4f7e-a054-0d4febee2ffb
-ms.openlocfilehash: 82c052ff87eb8b125dfc64e1567dbd00d255894d
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: f2f5fe557f1f8754758d0dd9b4042cacc62cc61f
+ms.sourcegitcommit: daa8788af67ac2d1cecd24f9f3409babb2f978c9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47205480"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47862884"
 ---
 # <a name="durable-duplex-correlation"></a>持久双工相关
 当工作流服务要求向初始调用方发送回调时，持久双工相关性（也称为回调相关性）非常有用。 与 WCF 双工不同的是，该回调可以在将来的任何时间发生，并且不会绑定到同一通道或通道生存期；唯一要求是，调用方应具有一个用于侦听回调消息的活动终结点。 这样，这两个工作流服务便可在长期运行的对话中进行通信。 本主题概述了持久双工相关性。  
@@ -198,7 +198,4 @@ WF2 - Items sent
 WF1 - Items Received  
 ```  
   
- 在本示例中，两个工作流均使用 <xref:System.ServiceModel.Activities.CallbackCorrelationInitializer> 显式管理相关性。 由于上述示例工作流中仅存在一个相关性，因此默认的 <xref:System.ServiceModel.Activities.CorrelationHandle> 管理足以满足需求。  
-  
-## <a name="see-also"></a>请参阅  
- [持久双工&#91;WF 示例&#93;](../../../../docs/framework/windows-workflow-foundation/samples/durable-duplex.md)
+ 在本示例中，两个工作流均使用 <xref:System.ServiceModel.Activities.CallbackCorrelationInitializer> 显式管理相关性。 由于上述示例工作流中仅存在一个相关性，因此默认的 <xref:System.ServiceModel.Activities.CorrelationHandle> 管理足以满足需求。

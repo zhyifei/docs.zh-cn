@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 ms.assetid: 2afe044d-df4a-49a4-9865-38700474c3dd
 author: BrucePerlerMS
 ms.openlocfilehash: 09872b5422d9d66dd4f54753815067954be6c0bb
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
-ms.translationtype: MT
+ms.sourcegitcommit: daa8788af67ac2d1cecd24f9f3409babb2f978c9
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47203406"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47862810"
 ---
 # <a name="security-extensibility"></a>安全可扩展点
 本节包含演示自定义安全 Windows Communication Foundation (WCF) 中的示例。  
