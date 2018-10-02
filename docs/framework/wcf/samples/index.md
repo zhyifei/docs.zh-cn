@@ -1,31 +1,27 @@
 ---
-title: Windows Communication Foundation (WCF) 示例
-ms.date: 03/30/2017
+title: Windows Communication Foundation (WCF) 示例文档
+ms.date: 09/24/2018
 ms.assetid: 89d4efce-7832-4dd5-82a8-0e574b3302f9
-ms.openlocfilehash: a8ac756a5c52093015f32942de3791853bdd17c4
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 5fe191aa3bc005aacf1e32bfb6533b8dfd6f23fb
+ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44087595"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48027827"
 ---
-# <a name="windows-communication-foundation-wcf-samples"></a><span data-ttu-id="89e35-102">Windows Communication Foundation (WCF) 示例</span><span class="sxs-lookup"><span data-stu-id="89e35-102">Windows Communication Foundation (WCF) Samples</span></span>
-<span data-ttu-id="89e35-103">这些示例对各个方面的 Windows Communication Foundation (WCF) 提供指导。</span><span class="sxs-lookup"><span data-stu-id="89e35-103">These samples provide instruction on various aspects of Windows Communication Foundation (WCF).</span></span>  
+# <a name="windows-communication-foundation-wcf-samples"></a><span data-ttu-id="ed990-102">Windows Communication Foundation (WCF) 示例</span><span class="sxs-lookup"><span data-stu-id="ed990-102">Windows Communication Foundation (WCF) samples</span></span>
+
+<span data-ttu-id="ed990-103">您可以下载[针对.NET Framework 4 的 Windows Communication Foundation (WCF) 示例](https://go.microsoft.com/fwlink/?LinkId=150780)。</span><span class="sxs-lookup"><span data-stu-id="ed990-103">You can download [Windows Communication Foundation (WCF) samples for .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780).</span></span> <span data-ttu-id="ed990-104">这些示例对各个方面的 Windows Communication Foundation (WCF) 提供指导。</span><span class="sxs-lookup"><span data-stu-id="ed990-104">The samples provide instruction on various aspects of Windows Communication Foundation (WCF).</span></span>
   
--   <span data-ttu-id="89e35-104">有关 C# 版本中的示例，请转到[Windows Communication Foundation (WCF) 和.NET Framework 4 的 Windows Workflow Foundation (WF) 示例](https://go.microsoft.com/fwlink/?LinkId=150780)。</span><span class="sxs-lookup"><span data-stu-id="89e35-104">For C# versions of the samples, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780).</span></span>  
+> [!TIP]
+> <span data-ttu-id="ed990-105">在本部分中的文章介绍了一些下载包中的示例。</span><span class="sxs-lookup"><span data-stu-id="ed990-105">The articles in this section describe some of the samples in the download package.</span></span> <span data-ttu-id="ed990-106">有关涵盖的所有示例的完整文档集，请[WCF 示例的.NET Framework 4 文档](/previous-versions/dotnet/netframework-4.0/dd483346(v%3dvs.100))。</span><span class="sxs-lookup"><span data-stu-id="ed990-106">For a complete documentation set that covers all of the samples, check the [.NET Framework 4 documentation for WCF samples](/previous-versions/dotnet/netframework-4.0/dd483346(v%3dvs.100)).</span></span>
+
+<span data-ttu-id="ed990-107">Windows Workflow Foundation (WF)[应用程序](../../windows-workflow-foundation/samples/application.md)示例还演示了多个 WCF 功能。</span><span class="sxs-lookup"><span data-stu-id="ed990-107">The Windows Workflow Foundation (WF) [application](../../windows-workflow-foundation/samples/application.md) samples also demonstrate several WCF features.</span></span>
   
--   <span data-ttu-id="89e35-105">有关这些示例的 Visual Basic 版本，请转到[Visual Basic 2010 示例](https://go.microsoft.com/fwlink/?LinkID=193373)单击**WF 超链接"javascript:__doPostBack('ctl00$ctl00$Content$TabContentPanel$Content$ReleaseFiles$FileList$ctl02$FileNameLink'，')"_WCF_Samples.zip**。</span><span class="sxs-lookup"><span data-stu-id="89e35-105">For Visual Basic versions of the samples, go to [Visual Basic 2010 Samples](https://go.microsoft.com/fwlink/?LinkID=193373) and click **WF HYPERLINK "javascript:__doPostBack('ctl00$ctl00$Content$TabContentPanel$Content$ReleaseFiles$FileList$ctl02$FileNameLink','')" _WCF_Samples.zip**.</span></span>  
-  
- <span data-ttu-id="89e35-106">Windows Workflow Foundation (WF)[应用程序](../../../../docs/framework/windows-workflow-foundation/samples/application.md)示例还演示了几个 WCFfeatures。</span><span class="sxs-lookup"><span data-stu-id="89e35-106">The Windows Workflow Foundation (WF) [Application](../../../../docs/framework/windows-workflow-foundation/samples/application.md) samples also demonstrate several WCFfeatures.</span></span>  
-  
- <span data-ttu-id="89e35-107">若要安装的文档和帮助查看器的独立版本，下载[Microsoft Windows SDK v 7.1](https://go.microsoft.com/fwlink/?LinkID=194146)。</span><span class="sxs-lookup"><span data-stu-id="89e35-107">To install a stand-alone version of the documentation and a Help viewer, download the [Microsoft Windows SDK v 7.1](https://go.microsoft.com/fwlink/?LinkID=194146).</span></span>  
-  
-## <a name="in-this-section"></a><span data-ttu-id="89e35-108">本节内容</span><span class="sxs-lookup"><span data-stu-id="89e35-108">In This Section</span></span>  
- [<span data-ttu-id="89e35-109">基本</span><span class="sxs-lookup"><span data-stu-id="89e35-109">Basic</span></span>](../../../../docs/framework/wcf/samples/basic.md)  
- <span data-ttu-id="89e35-110">显示示例演示基本 WCF 功能。</span><span class="sxs-lookup"><span data-stu-id="89e35-110">Shows samples that illustrate basic WCF functionality.</span></span>  
-  
- <span data-ttu-id="89e35-111">扩展性</span><span class="sxs-lookup"><span data-stu-id="89e35-111">Extensibility</span></span>  
- <span data-ttu-id="89e35-112">显示与发现功能相关的示例。</span><span class="sxs-lookup"><span data-stu-id="89e35-112">Shows samples that are related to the discovery feature.</span></span>  
-  
- [<span data-ttu-id="89e35-113">方案</span><span class="sxs-lookup"><span data-stu-id="89e35-113">Scenario</span></span>](../../../../docs/framework/wcf/samples/scenario.md)  
- <span data-ttu-id="89e35-114">演示 WCF 方案。</span><span class="sxs-lookup"><span data-stu-id="89e35-114">Demonstrates a WCF scenario.</span></span>
+## <a name="in-this-section"></a><span data-ttu-id="ed990-108">本节内容</span><span class="sxs-lookup"><span data-stu-id="ed990-108">In this section</span></span>  
+
+<span data-ttu-id="ed990-109">[基本](basic.md)的示例演示基本 WCF 功能。</span><span class="sxs-lookup"><span data-stu-id="ed990-109">[Basic](basic.md) - Samples that illustrate basic WCF functionality.</span></span>  
+
+<span data-ttu-id="ed990-110">[可扩展性](extensibility.md)-与发现功能相关的示例。</span><span class="sxs-lookup"><span data-stu-id="ed990-110">[Extensibility](extensibility.md) - Samples that are related to the discovery feature.</span></span>  
+
+<span data-ttu-id="ed990-111">[方案](scenario.md)-演示 WCF 方案。</span><span class="sxs-lookup"><span data-stu-id="ed990-111">[Scenario](scenario.md) - Demonstrates a WCF scenario.</span></span>

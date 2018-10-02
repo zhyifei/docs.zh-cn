@@ -3,30 +3,30 @@ title: .NET Framework 的序列化示例
 ms.date: 03/30/2017
 ms.assetid: 6a56f66d-c80a-43e9-8e50-fb9b61120222
 ms.openlocfilehash: 5deae766b2b05fcb14c51666fa9fb988832a9a2d
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47215816"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48035287"
 ---
-# <a name="serialization-samples-for-the-net-framework"></a><span data-ttu-id="66473-102">.NET Framework 的序列化示例</span><span class="sxs-lookup"><span data-stu-id="66473-102">Serialization Samples for the .NET Framework</span></span>
-<span data-ttu-id="66473-103">本部分演示如何在 .NET Framework 中序列化对象。</span><span class="sxs-lookup"><span data-stu-id="66473-103">This section demonstrates serializing objects in the .NET Framework.</span></span>  
+# <a name="serialization-samples-for-the-net-framework"></a><span data-ttu-id="35728-102">.NET Framework 的序列化示例</span><span class="sxs-lookup"><span data-stu-id="35728-102">Serialization Samples for the .NET Framework</span></span>
+<span data-ttu-id="35728-103">本部分演示如何在 .NET Framework 中序列化对象。</span><span class="sxs-lookup"><span data-stu-id="35728-103">This section demonstrates serializing objects in the .NET Framework.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="66473-104">本节内容</span><span class="sxs-lookup"><span data-stu-id="66473-104">In This Section</span></span>  
- [<span data-ttu-id="66473-105">基本序列化技术示例</span><span class="sxs-lookup"><span data-stu-id="66473-105">Basic Serialization Technology Sample</span></span>](../../../docs/standard/serialization/basic-serialization-technology-sample.md)  
- <span data-ttu-id="66473-106">演示如何将内存中的对象图序列化成流。</span><span class="sxs-lookup"><span data-stu-id="66473-106">Demonstrates how to serialize an object graph in memory to a stream.</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="35728-104">本节内容</span><span class="sxs-lookup"><span data-stu-id="35728-104">In This Section</span></span>  
+ [<span data-ttu-id="35728-105">基本序列化技术示例</span><span class="sxs-lookup"><span data-stu-id="35728-105">Basic Serialization Technology Sample</span></span>](../../../docs/standard/serialization/basic-serialization-technology-sample.md)  
+ <span data-ttu-id="35728-106">演示如何将内存中的对象图序列化成流。</span><span class="sxs-lookup"><span data-stu-id="35728-106">Demonstrates how to serialize an object graph in memory to a stream.</span></span>  
   
- [<span data-ttu-id="66473-107">版本容错序列化技术示例</span><span class="sxs-lookup"><span data-stu-id="66473-107">Version Tolerant Serialization Technology Sample</span></span>](../../../docs/standard/serialization/version-tolerant-serialization-technology-sample.md)  
- <span data-ttu-id="66473-108">演示 .NET 序列化的版本容错功能。</span><span class="sxs-lookup"><span data-stu-id="66473-108">Demonstrates the version tolerance features of .NET Serialization.</span></span>  
+ [<span data-ttu-id="35728-107">版本容错序列化技术示例</span><span class="sxs-lookup"><span data-stu-id="35728-107">Version Tolerant Serialization Technology Sample</span></span>](../../../docs/standard/serialization/version-tolerant-serialization-technology-sample.md)  
+ <span data-ttu-id="35728-108">演示 .NET 序列化的版本容错功能。</span><span class="sxs-lookup"><span data-stu-id="35728-108">Demonstrates the version tolerance features of .NET Serialization.</span></span>  
   
- [<span data-ttu-id="66473-109">Web 服务泛型序列化技术示例</span><span class="sxs-lookup"><span data-stu-id="66473-109">Web Services Generics Serialization Technology Sample</span></span>](../../../docs/standard/serialization/web-services-generics-serialization-technology-sample.md)  
- <span data-ttu-id="66473-110">演示如何在 ASP.NET Web 服务中使用和控制泛型的序列化。</span><span class="sxs-lookup"><span data-stu-id="66473-110">Shows how to use and control the serialization of generics in ASP.NET Web Services.</span></span> 
+ [<span data-ttu-id="35728-109">Web 服务泛型序列化技术示例</span><span class="sxs-lookup"><span data-stu-id="35728-109">Web Services Generics Serialization Technology Sample</span></span>](../../../docs/standard/serialization/web-services-generics-serialization-technology-sample.md)  
+ <span data-ttu-id="35728-110">演示如何在 ASP.NET Web 服务中使用和控制泛型的序列化。</span><span class="sxs-lookup"><span data-stu-id="35728-110">Shows how to use and control the serialization of generics in ASP.NET Web Services.</span></span> 
   
- [<span data-ttu-id="66473-111">SchemaImporterExtension 技术示例</span><span class="sxs-lookup"><span data-stu-id="66473-111">SchemaImporterExtension Technology Sample</span></span>](../../../docs/standard/serialization/schemaimporterextension-technology-sample.md)  
- <span data-ttu-id="66473-112">演示自定义 <xref:System.Xml.Serialization.Advanced.SchemaImporterExtension>。</span><span class="sxs-lookup"><span data-stu-id="66473-112">Demonstrates a custom <xref:System.Xml.Serialization.Advanced.SchemaImporterExtension>.</span></span>  
+ [<span data-ttu-id="35728-111">SchemaImporterExtension 技术示例</span><span class="sxs-lookup"><span data-stu-id="35728-111">SchemaImporterExtension Technology Sample</span></span>](../../../docs/standard/serialization/schemaimporterextension-technology-sample.md)  
+ <span data-ttu-id="35728-112">演示自定义 <xref:System.Xml.Serialization.Advanced.SchemaImporterExtension>。</span><span class="sxs-lookup"><span data-stu-id="35728-112">Demonstrates a custom <xref:System.Xml.Serialization.Advanced.SchemaImporterExtension>.</span></span>  
   
- [<span data-ttu-id="66473-113">使用 XmlSerializer 自定义序列化顺序</span><span class="sxs-lookup"><span data-stu-id="66473-113">Custom Serialization Order With XmlSerializer</span></span>](../../../docs/standard/serialization/custom-serialization-order-with-xmlserializer.md)  
- <span data-ttu-id="66473-114">演示如何控制序列化和反序列化元素的顺序来进行 XML 序列化。</span><span class="sxs-lookup"><span data-stu-id="66473-114">Shows how to control the order of serialized and deserialized elements for XML serialization.</span></span>  
+ [<span data-ttu-id="35728-113">使用 XmlSerializer 自定义序列化顺序</span><span class="sxs-lookup"><span data-stu-id="35728-113">Custom Serialization Order With XmlSerializer</span></span>](../../../docs/standard/serialization/custom-serialization-order-with-xmlserializer.md)  
+ <span data-ttu-id="35728-114">演示如何控制序列化和反序列化元素的顺序来进行 XML 序列化。</span><span class="sxs-lookup"><span data-stu-id="35728-114">Shows how to control the order of serialized and deserialized elements for XML serialization.</span></span>  
   
-## <a name="related-sections"></a><span data-ttu-id="66473-115">相关章节</span><span class="sxs-lookup"><span data-stu-id="66473-115">Related Sections</span></span>  
- [<span data-ttu-id="66473-116">序列化</span><span class="sxs-lookup"><span data-stu-id="66473-116">Serialization</span></span>](../../../docs/standard/serialization/index.md)
+## <a name="related-sections"></a><span data-ttu-id="35728-115">相关章节</span><span class="sxs-lookup"><span data-stu-id="35728-115">Related Sections</span></span>  
+ [<span data-ttu-id="35728-116">序列化</span><span class="sxs-lookup"><span data-stu-id="35728-116">Serialization</span></span>](../../../docs/standard/serialization/index.md)
