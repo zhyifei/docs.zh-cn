@@ -2,12 +2,12 @@
 title: 针对相关的疑难解答
 ms.date: 03/30/2017
 ms.assetid: 98003875-233d-4512-a688-4b2a1b0b5371
-ms.openlocfilehash: 56b17d0a865d1a6c1afaa2844878c82b755afdc7
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: fecfaf7374823bb19a4ad3d7f6cb2dbbdf139703
+ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47397146"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48027918"
 ---
 # <a name="troubleshooting-correlation"></a>针对相关的疑难解答
 相关用于在工作流服务消息之间和工作流服务消息与正确的工作流实例之间建立关联，如果未正确配置相关，则将接收不到消息，且应用程序无法正常运行。 本主题概述了对相关问题进行疑难解答的几种方法，还列出了使用相关时可能出现的一些常见问题。
@@ -76,7 +76,7 @@ class CustomFactory : WorkflowServiceHostFactory
 host.WorkflowExtensions.Add(new ConsoleTrackingParticipant());
 ```
 
- 跟踪参与者（如 ConsoleTrackingParticipant）对于具有控制台窗口的自承载工作流服务很有用。 对于 Web 承载的服务，将跟踪信息记录到持久存储的跟踪参与者应使用，如内置<xref:System.Activities.Tracking.EtwTrackingParticipant>，或自定义跟踪参与者，可将信息记录到文件，如`TextWriterTrackingParticpant`从[使用文本文件跟踪](../../../../docs/framework/windows-workflow-foundation/samples/tracking-using-a-text-file.md)示例。
+ 跟踪参与者（如 ConsoleTrackingParticipant）对于具有控制台窗口的自承载工作流服务很有用。 对于 Web 承载的服务，将跟踪信息记录到持久存储的跟踪参与者应使用，如内置<xref:System.Activities.Tracking.EtwTrackingParticipant>，或将信息记录到文件的自定义跟踪参与者。
 
  有关跟踪和配置 Web 承载的工作流服务跟踪的详细信息，请参阅[工作流跟踪](../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)，[工作流配置跟踪](../../../../docs/framework/windows-workflow-foundation/configuring-tracking-for-a-workflow.md)，和[跟踪&#91;WF 示例&#93;](../../../../docs/framework/windows-workflow-foundation/samples/tracking.md)示例。
 
@@ -214,7 +214,7 @@ sm:body()/xg0:AddItemMessage/xg0:CartId
 sm:header()/tempuri:CartId
 ```
 
- 可以通过检查消息正文确认此情况。
+可以通过检查消息正文确认此情况。
 
 ```xml
 <s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
@@ -230,7 +230,7 @@ sm:header()/tempuri:CartId
 </s:Envelope>
 ```
 
- 下面的示例演示一个 <xref:System.ServiceModel.Activities.Receive> 活动，该活动针对使用以前的消息协定检索数据的 `AddItem` 操作而配置。 XPath 查询进行了正确配置。
+下面的示例演示一个 <xref:System.ServiceModel.Activities.Receive> 活动，该活动针对使用以前的消息协定检索数据的 `AddItem` 操作而配置。 XPath 查询进行了正确配置。
 
 ```xaml
 <Receive CorrelatesWith="[CCHandle] OperationName="AddItem" ServiceContractName="p:IService">
@@ -247,5 +247,3 @@ sm:header()/tempuri:CartId
   </ReceiveMessageContent>
 </Receive>
 ```
-
-有关基于内容的相关详细信息，请参阅[相关计算器](../../../../docs/framework/windows-workflow-foundation/samples/correlated-calculator.md)示例。

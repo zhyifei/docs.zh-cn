@@ -10,11 +10,11 @@ helpviewer_keywords:
 ms.assetid: 98e82101-4cff-4bb8-a220-f7abed3556e5
 author: BrucePerlerMS
 ms.openlocfilehash: dd2c4f32978107a82ce940e0ef984c70f461b2c3
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47400036"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48046729"
 ---
 # <a name="how-to-create-a-security-token-service"></a>如何：创建安全令牌服务
 安全令牌服务实现在 WS-Trust 规范中定义的协议。 此协议为颁发、续订、取消和验证安全令牌定义消息格式和消息交换模式。 给定的安全令牌服务提供这些功能中的一个或多个功能。 本主题考虑最常见的情况：实现令牌颁发。  

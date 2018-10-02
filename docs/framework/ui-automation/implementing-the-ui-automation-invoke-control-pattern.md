@@ -9,11 +9,11 @@ ms.assetid: e5b1e239-49f8-468e-bfec-1fba02ec9ac4
 author: Xansky
 ms.author: mhopkins
 ms.openlocfilehash: f6afb850b16493bab79dd368ba1ff126305f96aa
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/29/2018
-ms.locfileid: "47454981"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48033514"
 ---
 # <a name="implementing-the-ui-automation-invoke-control-pattern"></a>实现 UI 自动化 Invoke 控件模式
 > [!NOTE]

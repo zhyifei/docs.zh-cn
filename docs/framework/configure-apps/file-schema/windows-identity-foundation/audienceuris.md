@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 ms.assetid: 7a3d8515-d756-4afe-a22d-07cbe2217ee3
 author: BrucePerlerMS
 ms.openlocfilehash: af138a4da49a48ed43e1bc8f2c2c81c56892feed
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47216639"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48034475"
 ---
 # <a name="ltaudienceurisgt"></a>&lt;audienceUris&gt;
 指定 Uri 都是可接受的信赖方 (RP) 标识符的集。 除非某个允许的受众 Uri 作用域内，将不会接受令牌。  

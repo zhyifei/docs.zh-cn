@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: ca7bf77f-3e5d-4b23-b17a-d0b60f46411d
-ms.openlocfilehash: 55869c3c8a957de98962378cc1a93e7058e24e38
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: d79c8fc364d13c00049523f7788ada258af6ec98
+ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43524865"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48028330"
 ---
 # <a name="how-to-enable-sql-persistence-for-workflows-and-workflow-services"></a>如何：对工作流和工作流服务启用 SQL 持久性
 
@@ -72,7 +72,7 @@ Windows Server App Fabric 大大简化了配置持久性的过程。 有关详�
    ```
 
 > [!NOTE]
-> 请参阅[持久保存工作流应用程序](../../../docs/framework/windows-workflow-foundation/samples/persisting-a-workflow-application.md)示例[持久性](../../../docs/framework/windows-workflow-foundation/samples/persistence.md)有关为使用工作流启用持久性的示例<xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore>，并且[如何： 创建和运行长时间运行工作流](../../../docs/framework/windows-workflow-foundation/how-to-create-and-run-a-long-running-workflow.md)的步骤[入门教程](../../../docs/framework/windows-workflow-foundation/getting-started-tutorial.md)有关分步说明。  
+> 请参阅[如何： 创建和运行长时间运行工作流](../../../docs/framework/windows-workflow-foundation/how-to-create-and-run-a-long-running-workflow.md)的步骤[入门教程](../../../docs/framework/windows-workflow-foundation/getting-started-tutorial.md)有关分步说明。  
 
 ## <a name="enabling-persistence-for-self-hosted-workflow-services-that-use-the-workflowservicehost"></a>为使用 WorkflowServiceHost 的自承载工作流服务启用持久性
 
@@ -82,7 +82,7 @@ Windows Server App Fabric 大大简化了配置持久性的过程。 有关详�
 
 以下过程包含使用 <xref:System.ServiceModel.Activities.Description.SqlWorkflowInstanceStoreBehavior> 类来为自承载工作流服务启用持久性的步骤。  
 
-##### <a name="to-enable-persistence-using-sqlworkflowinstancestorebehavior"></a>使用 SqlWorkflowInstanceStoreBehavior 启用持久性
+#### <a name="to-enable-persistence-using-sqlworkflowinstancestorebehavior"></a>使用 SqlWorkflowInstanceStoreBehavior 启用持久性
 
 1.  添加对 System.ServiceModel.dll 的引用。  
   
@@ -116,9 +116,6 @@ Windows Server App Fabric 大大简化了配置持久性的过程。 有关详�
     ```csharp
     host.Open();
     ```
-
-> [!IMPORTANT]
-> 请参阅[内置配置](../../../docs/framework/windows-workflow-foundation/samples/built-in-configuration.md)示例[持久性](../../../docs/framework/windows-workflow-foundation/samples/persistence.md)有关为使用的工作流服务启用持久性的示例`SqlWorkflowInstanceStoreBehavior`类。  
 
 ### <a name="using-the-durableinstancingoptions-property"></a>使用 DurableInstancingOptions 属性
 

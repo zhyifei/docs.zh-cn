@@ -18,11 +18,11 @@ ms.assetid: 0dbcbd8d-0dcf-40e9-9f0c-e3f162d35ccc
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: a5cd157f89797406fbe87c3d70c415d7b192d1a9
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47399906"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48025235"
 ---
 # <a name="how-to-store-asymmetric-keys-in-a-key-container"></a>如何：将非对称密钥存储在密钥容器中
 非对称私钥永远不应以原义或纯文本形式存储在本地计算机上。 如果需要存储私钥，则应使用密钥容器。 有关密钥容器的详细信息，请参阅[了解计算机级别和用户级别的 RSA 密钥容器](https://msdn.microsoft.com/library/9a179f38-8fb7-4442-964c-fb7b9f39f5b9)。  

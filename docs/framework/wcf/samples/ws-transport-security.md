@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 ms.assetid: 33a20358-5e1b-458a-a6a9-15753bc7b99b
 author: BrucePerlerMS
 ms.openlocfilehash: 99f8e038657a620de56d1d759a95bbbdf93b1ed4
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/29/2018
-ms.locfileid: "47454297"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48029133"
 ---
 # <a name="ws-transport-security"></a>WS 传输安全
 此示例演示如何对 <xref:System.ServiceModel.WSHttpBinding> 绑定使用 SSL 传输安全。 默认情况下，`wsHttpBinding` 绑定提供 HTTP 通信。 针对传输安全配置绑定之后，该绑定即支持 HTTPS 通信。 此示例基于[Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md)实现计算器服务。 `wsHttpBinding` 是在客户端和服务的应用程序配置文件中指定和配置的。  

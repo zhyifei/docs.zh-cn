@@ -2,12 +2,12 @@
 title: 在 .NET Framework 4 中将 .NET Framework 3.0 WF 活动与 Interop 活动一起使用
 ms.date: 03/30/2017
 ms.assetid: 71f112ba-abb0-46f7-b05f-a5d2eb9d0c5c
-ms.openlocfilehash: b2dac91ffa0f4bf5e1c1afea1fc6f6629c345857
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 386f71f21a4164f6f0ffc0ed19aab68abbe5a0b5
+ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43467500"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48029252"
 ---
 # <a name="using-net-framework-30-wf-activities-in-net-framework-4-with-the-interop-activity"></a>在 .NET Framework 4 中将 .NET Framework 3.0 WF 活动与 Interop 活动一起使用
 <xref:System.Activities.Statements.Interop> 活动是一个 [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] (WF 4.5) 活动，该活动将一个 [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] (WF 3.5) 活动包装在 [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] 工作流中。 WF 3 活动可以是单叶活动，也可以是整个活动树。 [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] 活动的执行（包括取消和异常处理）和持久化在执行的 [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] 工作流实例的上下文中进行。  
@@ -52,7 +52,4 @@ ms.locfileid: "43467500"
   
 3.  将  <xref:System.Activities.Statements.Interop> 活动中活动的 WF 3 跟踪记录以 <xref:System.Activities.Tracking.InteropTrackingRecord> 对象的形式提供给 WF 4.5 跟踪参与者。 <xref:System.Activities.Tracking.InteropTrackingRecord> 是从 <xref:System.Activities.Tracking.CustomTrackingRecord> 派生的。  
   
-4.  WF 3 自定义活动可以在互操作环境中使用工作流队列访问数据，其访问方式与在 WF 3 工作流运行时中完全相同。 不需要更改任何自定义活动代码。 在宿主上，通过恢复 <xref:System.Activities.Bookmark> 可将数据排入 WF 3 工作流队列。 书签的名称是字符串形式的 <xref:System.IComparable> 工作流队列名称。  
-  
-## <a name="see-also"></a>请参阅  
- [在 .NET Framework 4.5 工作流中使用 .NET Framework 3.0 或 .NET Framework 3.5 活动](../../../docs/framework/windows-workflow-foundation/samples/using-a-net-3-0-or-net-3-5-activity-in-a-net-4-5-workflow.md)
+4.  WF 3 自定义活动可以在互操作环境中使用工作流队列访问数据，其访问方式与在 WF 3 工作流运行时中完全相同。 不需要更改任何自定义活动代码。 在宿主上，通过恢复 <xref:System.Activities.Bookmark> 可将数据排入 WF 3 工作流队列。 书签的名称是字符串形式的 <xref:System.IComparable> 工作流队列名称。

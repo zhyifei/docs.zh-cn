@@ -7,11 +7,11 @@ dev_langs:
 ms.assetid: 640676b6-c75a-4ff7-aea4-b1a1524d71b2
 author: BrucePerlerMS
 ms.openlocfilehash: 85954dd89bdb576b68d234a364a406a6e0d2145b
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47203743"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48030336"
 ---
 # <a name="how-to-create-a-security-context-token-for-a-secure-session"></a>如何：为安全会话创建安全上下文令牌
 通过在安全会话中使用有状态安全上下文令牌 (SCT)，可以使该会话避免因为重新使用服务而受到影响。 例如，如果在安全会话中使用了无状态 SCT 并且 Internet 信息服务 (IIS) 被重置，则与该服务相关联的会话数据将丢失。 这些会话数据包括一个 SCT 令牌缓存。 因此，当客户端下一次向该服务发送无状态 SCT 时，将返回错误，这是因为无法检索到与该 SCT 相关联的密钥。 但是，如果使用有状态 SCT，则与该 SCT 相关联的密钥将包含在该 SCT 中。 由于密钥包含在 SCT 中并因而包含在消息中，因此安全会话不会因为重新使用服务而受到影响。 默认情况下，Windows Communication Foundation (WCF) 在安全会话中使用无状态 Sct。 本主题详细介绍如何在安全会话中使用有状态 SCT。  

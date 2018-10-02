@@ -2,12 +2,12 @@
 title: 使用 DynamicActivity 在运行时创建活动
 ms.date: 03/30/2017
 ms.assetid: 1af85cc6-912d-449e-90c5-c5db3eca5ace
-ms.openlocfilehash: 0450a56059083f355f3fd71d95c83bf8dd1cf0e2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 880dbc6263b64c877d3211347541766d91534c85
+ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33515168"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48027359"
 ---
 # <a name="creating-an-activity-at-runtime-with-dynamicactivity"></a>使用 DynamicActivity 在运行时创建活动
 <xref:System.Activities.DynamicActivity> 是一个带有公共构造函数的具体的密封类。 通过使用活动 DOM，<xref:System.Activities.DynamicActivity> 可用于在运行时组合活动功能。  
@@ -25,7 +25,7 @@ ms.locfileid: "33515168"
   
 2.  选择**文件**，**新**，**项目**。 选择**Workflow 4.0**下**Visual C#** 中**项目类型**窗口中，然后选择**v2010**节点。 选择**顺序工作流控制台应用程序**中**模板**窗口。 将新项目命名为 DynamicActivitySample。  
   
-3.  右击 HelloActivity 项目中的 Workflow1.xaml，然后选择**删除**。  
+3.  在 HelloActivity 项目中右击 Workflow1.xaml，然后选择**删除**。  
   
 4.  打开 Program.cs。 将下面的指令添加到文件的顶部。  
   
@@ -74,9 +74,9 @@ ms.locfileid: "33515168"
   
 2.  选择**文件**，**新**，**项目**。 选择**Workflow 4.0**下**Visual C#** 中**项目类型**窗口中，然后选择**v2010**节点。 选择**工作流控制台应用程序**中**模板**窗口。 将新项目命名为 DynamicActivitySample。  
   
-3.  在 HelloActivity 项目中打开 Workflow1.xaml。 单击**参数**设计器底部的选项。 创建一个 `In` 类型的新 `TextToWrite` 参数，并将其命名为 `String`。  
+3.  在 HelloActivity 项目中打开 Workflow1.xaml。 单击**自变量**设计器底部的选项。 创建一个 `In` 类型的新 `TextToWrite` 参数，并将其命名为 `String`。  
   
-4.  拖动**WriteLine**活动从**基元**一部分工具箱中拖动到设计器图面。 将值分配`TextToWrite`到**文本**的活动的属性。  
+4.  拖动**WriteLine**活动从**基元**部分中的工具箱拖到设计器图面。 将该值赋`TextToWrite`到**文本**活动属性。  
   
 5.  打开 Program.cs。 将下面的指令添加到文件的顶部。  
   
@@ -94,8 +94,8 @@ ms.locfileid: "33515168"
   
 7.  执行应用程序。 具有文本"Hello World ！"的控制台窗口 将出现。  
   
-8.  右击 Workflow1.xaml 文件中的**解决方案资源管理器**和选择**查看代码**。 请注意，活动类使用 `x:Class` 创建，属性使用 `x:Property` 创建。  
+8.  右击 Workflow1.xaml 文件中的**解决方案资源管理器**，然后选择**查看代码**。 请注意，活动类使用 `x:Class` 创建，属性使用 `x:Property` 创建。  
   
-## <a name="see-also"></a>请参阅  
- [使用强制性代码创建工作流、活动和表达式](../../../docs/framework/windows-workflow-foundation/authoring-workflows-activities-and-expressions-using-imperative-code.md)  
- [DynamicActivity 创建](../../../docs/framework/windows-workflow-foundation/samples/dynamicactivity-creation.md)
+## <a name="see-also"></a>请参阅
+
+- [使用强制性代码创建工作流、活动和表达式](../../../docs/framework/windows-workflow-foundation/authoring-workflows-activities-and-expressions-using-imperative-code.md)

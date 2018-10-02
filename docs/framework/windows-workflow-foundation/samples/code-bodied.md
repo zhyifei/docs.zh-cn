@@ -2,34 +2,18 @@
 title: Code-Bodied
 ms.date: 03/30/2017
 ms.assetid: 5bfb2d95-9092-4551-9c59-bd8f0a37225e
-ms.openlocfilehash: dc1ff68c0dad7dae33ca7977b566a86ae3bad9bd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 269d6665e7251b172dad59a7202f297e0b4c0347
+ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33514835"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48037010"
 ---
 # <a name="code-bodied"></a>Code-Bodied
+
 本节包含使用代码以声明方式创建的自定义活动示例。  
   
-## <a name="in-this-section"></a>本节内容  
- [定位标记](../../../../docs/framework/windows-workflow-foundation/samples/bookmarks.md)  
- 此示例演示如何编写一个自定义活动，该活动创建一个书签以接收外部输入。  
+## <a name="in-this-section"></a>本节内容
   
  [使用本机活动的自定义复合](../../../../docs/framework/windows-workflow-foundation/samples/custom-composite-using-native-activity.md)  
- 此示例演示如何编写一个 <xref:System.Activities.NativeActivity>，该活动安排其他 <xref:System.Activities.Activity> 对象以控制工作流的执行流。  
-  
- [执行属性](../../../../docs/framework/windows-workflow-foundation/samples/execution-properties.md)  
- 此示例演示如何在自定义活动中定义并使用执行属性。  
-  
- [公开和调用 ActivityActions](../../../../docs/framework/windows-workflow-foundation/samples/exposing-and-invoking-activityactions.md)  
- 此示例演示如何开发具有 <xref:System.Activities.ActivityAction> 的自定义活动。  
-  
- [在活动中使用 AsyncCodeActivityContext](../../../../docs/framework/windows-workflow-foundation/samples/using-asyncoperationcontext-in-an-activity-sample.md)  
- 此示例演示如何开发一个自定义 <xref:System.Activities.CodeActivity>，该活动使用 <xref:System.Activities.AsyncCodeActivityContext> 在工作流外部异步执行工作。 
-  
- [Hello World 自定义活动](../../../../docs/framework/windows-workflow-foundation/samples/hello-world-custom-activity.md)  
- 此示例演示几个重要功能的 Windows Workflow Foundation (WF)，包括如何创建一个简单的自定义活动。  
-  
- [动态自变量](../../../../docs/framework/windows-workflow-foundation/samples/dynamic-arguments.md)  
- 此示例演示如何实现由活动使用方而不是活动作者为其定义自变量的活动。
+ 此示例演示如何编写一个 <xref:System.Activities.NativeActivity>，该活动安排其他 <xref:System.Activities.Activity> 对象以控制工作流的执行流。

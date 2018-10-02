@@ -2,12 +2,12 @@
 title: .NET Framework 4.5 中的外部化的策略活动
 ms.date: 03/30/2017
 ms.assetid: 92fd6f92-23a1-4adf-b96a-2754ea93ad3e
-ms.openlocfilehash: 4d107188bbcb46006ba6a6eab491ccb97aa4a83d
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 1c2f66caeb9932422681ba7176346a5e5e084c11
+ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43503402"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48046626"
 ---
 # <a name="externalized-policy-activity-in-net-framework-45"></a>.NET Framework 4.5 中的外部化的策略活动
 
@@ -56,7 +56,7 @@ public class ExternalizedPolicy4Activity<TResult>: CodeActivity
 
 ## <a name="policy4-and-externalpolicy4"></a>Policy4 和 ExternalPolicy4
 
-[.NET Framework 4.5 中的策略活动](../../../../docs/framework/windows-workflow-foundation/samples/policy-activity-in-net-framework-4-5.md)活动允许您创建和执行 WF 4.5 工作流中的.NET Framework 3.5 规则集。 <xref:System.Workflow.Activities.Rules.RuleSet> 是 Policy4 活动 XAML 定义中的序列化内联。 ExternalizedPolicy4 示例演示如何使用现有外部 <xref:System.Workflow.Activities.Rules.RuleSet>（包含在 .rules 文件中）。
+策略活动允许您创建和执行 WF 4.5 工作流中的.NET Framework 3.5 规则集。 <xref:System.Workflow.Activities.Rules.RuleSet> 是 Policy4 活动 XAML 定义中的序列化内联。 ExternalizedPolicy4 示例演示如何使用现有外部 <xref:System.Workflow.Activities.Rules.RuleSet>（包含在 .rules 文件中）。
 
 ## <a name="use-this-sample"></a>使用此示例
 

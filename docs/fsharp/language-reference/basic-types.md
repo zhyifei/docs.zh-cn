@@ -3,11 +3,11 @@ title: '基本类型 （F #）'
 description: '了解 F # 语言中使用的基础的基本类型。'
 ms.date: 07/09/2018
 ms.openlocfilehash: 8f948d066323527b09b1d3f9f4167b95b1c875cf
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47203809"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48026928"
 ---
 # <a name="basic-types"></a>基本类型
 

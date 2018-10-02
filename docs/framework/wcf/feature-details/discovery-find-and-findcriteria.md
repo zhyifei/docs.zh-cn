@@ -3,11 +3,11 @@ title: Discovery Find 和 FindCriteria
 ms.date: 03/30/2017
 ms.assetid: 99016fa4-1778-495b-b4cc-0e22fbec42c6
 ms.openlocfilehash: bd54a7bc896870035972daf1ea6f56d84dc5414e
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47205430"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48035079"
 ---
 # <a name="discovery-find-and-findcriteria"></a>Discovery Find 和 FindCriteria
 发现查找操作是发现功能中的主要操作之一，它由客户端启动，用于发现一个或多个服务。 执行查找时将通过网络发送一条 WS-Discovery Probe 消息。 与指定条件匹配的服务通过 WS-Discovery ProbeMatch 消息进行答复。 有关发现消息的详细信息，请参阅[Ws-discovery 规范](https://go.microsoft.com/fwlink/?LinkID=122347)。  

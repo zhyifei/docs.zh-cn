@@ -7,11 +7,11 @@ dev_langs:
 ms.assetid: 01e7d0b8-10f9-45c3-a4c5-53d44dc61eb8
 author: BrucePerlerMS
 ms.openlocfilehash: c24ced1a3f19297f06404403f1196b8a9139a919
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47203652"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48030572"
 ---
 # <a name="message-security-with-a-windows-client"></a>Windows 客户端的消息安全
 此方案显示了 Windows Communication Foundation (WCF) 客户端和服务器保护的消息安全模式。 客户端和服务使用 Windows 凭据进行身份验证。  

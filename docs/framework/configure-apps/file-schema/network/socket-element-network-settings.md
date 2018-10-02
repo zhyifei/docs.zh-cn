@@ -11,11 +11,11 @@ ms.assetid: 366c634c-7d16-478f-aedf-053eda94a1a0
 author: mcleblanc
 ms.author: markl
 ms.openlocfilehash: fb057ab75c31edd7bbdaf5d5115cda2802d3b057
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47203990"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48028242"
 ---
 # <a name="ltsocketgt-element-network-settings"></a>&lt;套接字&gt;元素 （网络设置）
 指定套接字操作是否使用完成端口。  

@@ -11,11 +11,11 @@ ms.assetid: 290d5f96-946d-4f02-babb-1d31ec0b8295
 author: mcleblanc
 ms.author: markl
 ms.openlocfilehash: 671302003c3a1f3a37e1773aeeae9cb09a457d13
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47215868"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48033351"
 ---
 # <a name="ltcryptoclassesgt-element"></a>&lt;cryptoClasses&gt;元素
 包含密码类的列表，这些类具有到 [\<nameEntry>](../../../../../docs/framework/configure-apps/file-schema/cryptography/nameentry-element.md) 元素中的友好名称的映射。  

@@ -3,11 +3,11 @@ title: 使用 LINQ to SQL 的 N 层和远程应用程序
 ms.date: 03/30/2017
 ms.assetid: 854a1cdd-53cb-45f5-83ca-63962a9b3598
 ms.openlocfilehash: 10eec92dcb9fdc5329f2cf19336ccc11f8bd181a
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47399763"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48032577"
 ---
 # <a name="n-tier-and-remote-applications-with-linq-to-sql"></a>使用 LINQ to SQL 的 N 层和远程应用程序
 可以创建使用 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 的 n 层或多层应用程序。 通常情况下，[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]数据上下文、 实体类和查询构造逻辑位于中间层上作为数据访问层 (DAL)。 业务逻辑和任何非持久性数据都可以在实体的分部类和分部方法中以及数据上下文中完整实现，也可以在单独的类中实现。

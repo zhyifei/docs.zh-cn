@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 ms.assetid: 6e9001e1-e064-4f47-84b2-46225c177746
 author: BrucePerlerMS
 ms.openlocfilehash: d4b64e2c88e153834b7cf5a83bd6258b6dfd471f
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/29/2018
-ms.locfileid: "47454284"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48031926"
 ---
 # <a name="ltservicetokenresolvergt"></a>&lt;serviceTokenResolver&gt;
 注册的服务令牌解析程序使用的令牌处理程序集合中的处理程序。 服务标记解析器用于解析传入的令牌和消息中的加密令牌。  

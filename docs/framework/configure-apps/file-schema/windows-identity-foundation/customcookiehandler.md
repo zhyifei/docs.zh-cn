@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 ms.assetid: a03b153d-5ec6-4915-9031-6f0c3fd348be
 author: BrucePerlerMS
 ms.openlocfilehash: 51ca91de5c77727f5f5506118461d19354f12c14
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47237028"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48029074"
 ---
 # <a name="ltcustomcookiehandlergt"></a>&lt;customCookieHandler&gt;
 设置自定义 cookie 处理程序类型。 此元素仅可能存在如果`mode`属性的`<cookieHandler>`元素是"自定义"。 自定义的类型必须派生自<xref:System.IdentityModel.Services.CookieHandler>类。  
