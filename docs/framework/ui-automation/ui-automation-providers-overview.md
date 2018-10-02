@@ -7,17 +7,16 @@ helpviewer_keywords:
 ms.assetid: 859557b8-51e1-4d15-92e8-318d2dcdb2f7
 author: Xansky
 ms.author: mhopkins
-manager: markl
-ms.openlocfilehash: e48e2eb0df8fbc4daf4db68b0c27493b122adfa3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7b4286abdb2e2b5bb3f91f6fa0bbffd6beda8efc
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33407488"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47193196"
 ---
 # <a name="ui-automation-providers-overview"></a>UI 自动化提供程序概述
 > [!NOTE]
->  本文档适用于想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空间中定义的托管 <xref:System.Windows.Automation> 类的 .NET Framework 开发人员。 有关 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]的最新信息，请参阅 [Windows 自动化 API：UI 自动化](http://go.microsoft.com/fwlink/?LinkID=156746)。  
+>  本文档适用于想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空间中定义的托管 <xref:System.Windows.Automation> 类的 .NET Framework 开发人员。 有关最新信息[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]，请参阅[Windows 自动化 API: UI 自动化](https://go.microsoft.com/fwlink/?LinkID=156746)。  
   
  UI 自动化提供程序使控件能够与 UI 自动化客户端应用程序进行通信。 通常， [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] 中的每个控件或其他非重复元素均由提供程序表示。 提供程序公开有关该元素的信息并选择性实现控件模式，这些空间模式使客户端应用程序能够与控件进行交互。  
   
@@ -32,10 +31,10 @@ ms.locfileid: "33407488"
 ### <a name="client-side-providers"></a>客户端提供程序  
  客户端提供程序由 UI 自动化客户端实现，以便与不支持（或不完全支持） [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]的应用程序进行通信。 客户端提供程序通常与服务器通信跨进程边界通过发送和接收 Windows 消息。  
   
- 因为 UI 自动化提供程序中的控件[!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)]，Windows 窗体，或[!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)]作为操作系统的一部分提供，应用程序、 客户端应用程序很少需要实现自己的提供程序，并且本概述不覆盖它们进一步。  
+ 因为中的控件的 UI 自动化提供程序[!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)]，Windows 窗体或[!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)]作为操作系统的一部分提供的应用程序、 客户端应用程序很少需要实现自己的提供程序和本概述不涉及这些进一步。  
   
 ### <a name="server-side-providers"></a>服务器端提供程序  
- 服务器端提供程序由自定义控件或基于 UI 框架以外的应用程序实现[!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)]，Windows 窗体，或[!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)]。  
+ 服务器端提供程序实现由自定义控件或应用程序的基于 UI 框架以外[!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)]，Windows 窗体或[!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)]。  
   
  服务器端提供程序向 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 核心系统公开接口，核心系统依次处理来自客户端的请求，使服务器端提供程序与跨进程边界的客户端应用程序进行通信。  
   

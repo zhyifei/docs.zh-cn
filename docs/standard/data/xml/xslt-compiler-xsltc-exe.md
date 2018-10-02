@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: 672a5ac8-8305-4d28-ba10-11089c2c0924
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: aef49f70f3a60151aa053a1a94a06bc71401531e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 470dd0eb37d8081d388ef69b204293f568096a5e
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33575435"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45615038"
 ---
 # <a name="xslt-compiler-xsltcexe"></a>XSLT 编译器 (xsltc.exe)
 XSLT 编译器 (xsltc.exe) 编译 XSLT 样式表并生成一个程序集。 然后可以将已编译的样式表直接传递到 <xref:System.Xml.Xsl.XslCompiledTransform.Load%28System.Type%29?displayProperty=nameWithType> 方法中。 不能用 xsltc.exe 生成签名的程序集。  
@@ -82,7 +82,8 @@ xsltc /settings:DTD+,script+ /out:myTest calc.xsl
 xsltc booksort.xsl output.xsl  
 ```  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Xml.Xsl.XslCompiledTransform>  
- [如何：通过使用程序集执行 XSLT 转换](../../../../docs/standard/data/xml/how-to-perform-an-xslt-transformation-by-using-an-assembly.md)  
- [XSLT 转换](../../../../docs/standard/data/xml/xslt-transformations.md)
+## <a name="see-also"></a>请参阅
+
+- <xref:System.Xml.Xsl.XslCompiledTransform>  
+- [如何：通过使用程序集执行 XSLT 转换](../../../../docs/standard/data/xml/how-to-perform-an-xslt-transformation-by-using-an-assembly.md)  
+- [XSLT 转换](../../../../docs/standard/data/xml/xslt-transformations.md)

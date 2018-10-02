@@ -1,13 +1,13 @@
 ---
-title: Namespace3 中的示例 XML 文件： 典型采购订单
+title: 命名空间 3 中的示例 XML 文件： 典型采购订单
 ms.date: 07/20/2015
 ms.assetid: 38260901-c9f9-4240-9cbf-652c8b05021d
 ms.openlocfilehash: 94aa8d39b351a55183b7164bd4ceca875742f17d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33644776"
+ms.lasthandoff: 07/25/2018
+ms.locfileid: "39244821"
 ---
 # <a name="sample-xml-file-typical-purchase-order-in-a-namespace"></a>示例 XML 文件：命名空间中的典型采购订单
 下面的 XML 文件用在 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 文档的很多示例中。 此文件是典型的采购单。 该 XML 在某个命名空间中。  

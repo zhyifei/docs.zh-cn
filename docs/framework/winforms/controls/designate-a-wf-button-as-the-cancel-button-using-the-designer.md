@@ -5,24 +5,24 @@ helpviewer_keywords:
 - buttons [Windows Forms], cancel buttons
 - Button control [Windows Forms], designating as cancel button
 ms.assetid: 30e77d9c-d565-4ab5-a84a-62c043af8822
-ms.openlocfilehash: e94553a31ecdbf325c12815aa7a782cb68b95f19
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: faffeafc0cbe67c3b40297144ec85acd94956da9
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33526134"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47203847"
 ---
 # <a name="how-to-designate-a-windows-forms-button-as-the-cancel-button-using-the-designer"></a>如何：使用设计器将 Windows 窗体按钮指定为“取消”按钮
-在任何 Windows 窗体中，你可以指定<xref:System.Windows.Forms.Button>控件取消按钮。 每当用户按 ESC 键时，无论哪个窗体上的其他控件具有焦点，则单击取消按钮。 通常，这样的按钮进行编程，使用户能够快速退出操作，而无须执行任何操作。  
+在任何 Windows 窗体中，可以将指定<xref:System.Windows.Forms.Button>控件为取消按钮。 每当用户按 ESC 键时，无论哪个窗体上的其他控件具有焦点时，单击取消按钮。 通常，设计这样的按钮，使用户能够快速退出操作而无须执行任何操作。  
   
 > [!NOTE]
->  显示的对话框和菜单命令可能会与“帮助”中的描述不同，具体取决于你现用的设置或版本。 若要更改设置，请在 **“工具”** 菜单上选择 **“导入和导出设置”** 。 有关详细信息，请参阅[在 Visual Studio 中自定义开发设置](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3)。  
+>  显示的对话框和菜单命令可能会与“帮助”中的描述不同，具体取决于你现用的设置或版本。 若要更改设置，请在 **“工具”** 菜单上选择 **“导入和导出设置”** 。 有关详细信息，请参阅[个性化设置 Visual Studio IDE](/visualstudio/ide/personalizing-the-visual-studio-ide)。  
   
 ### <a name="to-designate-the-cancel-button"></a>若要指定取消按钮  
   
-1.  选择按钮所驻留的表单。  
+1.  选择该按钮所驻留的窗体。  
   
-2.  在**属性**窗口中，设置窗体的<xref:System.Windows.Forms.Form.CancelButton%2A>属性<xref:System.Windows.Forms.Button>控件的名称。  
+2.  在中**属性**窗口中，将窗体的<xref:System.Windows.Forms.Form.CancelButton%2A>属性设置为<xref:System.Windows.Forms.Button>控件的名称。  
   
 ## <a name="see-also"></a>请参阅  
  <xref:System.Windows.Forms.Form.CancelButton%2A>  

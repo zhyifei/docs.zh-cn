@@ -3,20 +3,18 @@ title: 体系结构原则
 description: 使用 ASP.NET Core 和 Azure 构建新式 Web 应用程序 | 体系结构原则
 author: ardalis
 ms.author: wiwagn
-ms.date: 10/06/2017
-ms.openlocfilehash: 4ee14b128d3b83fd446352bb6f78afc08fb38c52
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.date: 6/28/2018
+ms.openlocfilehash: 2e0938fc67e02a52b99158b2ff07b9f32464e674
+ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37105854"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37404433"
 ---
 # <a name="architectural-principles"></a>体系结构原则
 
 > “如果建筑师按照程序员编写程序的方式建造建筑物，那么第一只到来的啄木鸟（找 Bug）就将摧毁文明。”  
 > \- Gerald Weinberg
-
-## <a name="summary"></a>总结
 
 构建和设计软件解决方案时应考虑到可维护性。 本部分概述的原则可帮助指导你作出体系结构决策，生成简洁、可维护的应用程序。 一般而言，在这些原则的指导下构建的应用程序各部分间可通过显式接口或消息传送系统进行通信，并非松散耦合的离散组件。
 
@@ -26,7 +24,7 @@ ms.locfileid: "37105854"
 
 分离关注点是开发时的指导原则。 此原则主张应根据软件执行的工作类型将软件分离。 例如，假设应用程序中包含两个逻辑，其中一个逻辑标识要显示给用户的注意事项，另一个以特定方式设置这些注意事项的格式，使其更加显眼。 负责选择要为哪些事项设置格式的行为应与负责设置事项格式的行为区分开，因为这两种行为只是碰巧彼此相关联的分离关注点。
 
-从体系结构上来说，按此原则有逻辑地构建应用程序应将核心业务行为与基础结构及用户界面逻辑区分开。 理想情况下，业务规则和逻辑应单独位于一个项目中，且该项目不依赖于应用程序中的其他项目。 这样可帮助确保该业务模型易于测试，且可在不与低级别实现详细信息紧密耦合的情况下逐步改进。 分离关注点是在应用程序体系结构中使用层背后的一个关键考虑事项。
+从体系结构上来说，按此原则有逻辑地构建应用程序应将核心业务行为与基础结构及用户界面逻辑区分开。 理想情况下，业务规则和逻辑应单独位于一个项目中，且该项目不依赖于应用程序中的其他项目。 这样可帮助确保该业务模型易于测试，且可在不与低级别实现详细信息紧密耦合的情况下逐步改进。 在应用程序体系结构的使用层背后，关注点分离是核心设计思想。
 
 ### <a name="encapsulation"></a>封装
 
@@ -64,7 +62,7 @@ ms.locfileid: "37105854"
 
 将此原则应用到应用程序体系结构及其逻辑终结点时，你将获得微服务。 给定的微服务应具有单一责任。 一般而言，如果需要扩展系统的行为，最好通过添加其他微服务来实现，而不要向现有微服务添加责任。
 
-[详细了解微服务体系结构](http://aka.ms/MicroservicesEbook)
+[详细了解微服务体系结构](https://aka.ms/MicroservicesEbook)
 
 ### <a name="dont-repeat-yourself-dry"></a>不要自我重复 (DRY)
 
@@ -81,41 +79,42 @@ ms.locfileid: "37105854"
 
 违反此原则的一些示例包括：
 
--   必需的基类
+- 必需的基类。
 
--   必需的接口实现
+- 必需的接口实现。
 
--   负责保存其自身的类（例如活动记录模式）
+- 负责保存其自身的类（例如活动记录模式）。
 
--   必需的默认构造函数
+- 必需的默认构造函数。
 
--   需要 virtual 关键字的属性
+- 需要 virtual 关键字的属性。
 
--   特定于持久性的必需特性
+- 特定于持久性的必需特性。
 
 要求类具有上述任何特性或行为会增加要保持不变的类型和持久性技术的选择之间的耦合，从而增加将来采用新的数据访问策略的难度。
 
 ### <a name="bounded-contexts"></a>有界上下文
 
-有界上下文是域驱动设计中的中心模式。 它们可以将大型应用程序或组织分解为独立的概念模块，通过这种方式来解决复杂性问题。 每个概念模块表示各自独立的上下文（因此有界），并且可以独立改进。 理想情况下，每个有界上下文都应该能够为其中的概念自由选择它自己的名称，并对其自己的持久性存储具有独占访问权限。
+有界上下文是领域驱动设计中的中心模式。 它们可以将大型应用程序或组织分解为独立的概念模块，通过这种方式来解决复杂性问题。 每个概念模块表示各自独立的上下文（因此有界），并且可以独立改进。 理想情况下，每个有界上下文都应该能够为其中的概念自由选择它自己的名称，并对其自己的持久性存储具有独占访问权限。
 
 至少，各 Web 应用程序应努力成为自己的有界上下文，为其业务模型提供自己的持久性存储，而不是与其他应用程序共享数据库。 有界上下文之间的通信通过编程接口进行，而不是通过共享数据库进行，这样可以引发业务逻辑和事件来响应发生的更改。 有界上下文会紧密映射到微服务，后者在理想情况下也作为其自己的单独有界上下文实现。
 
 > ### <a name="references--modern-web-applications"></a>参考 - 新式 Web 应用程序
 > - **分离关注点**  
-> <http://deviq.com/separation-of-concerns/>
-> - **Encapsulation**（封装）<http://deviq.com/encapsulation/>
+> <https://deviq.com/separation-of-concerns/>
+> - **封装**  
+> <https://deviq.com/encapsulation/>
 > - **依赖关系反转原则**  
-> <http://deviq.com/dependency-inversion-principle/>
+> <https://deviq.com/dependency-inversion-principle/>
 > - **Explicit Dependencies Principle**（显式依赖关系原则）  
-> <http://deviq.com/explicit-dependencies-principle/>
+> <https://deviq.com/explicit-dependencies-principle/>
 > - **不要自我重复**  
-> <http://deviq.com/don-t-repeat-yourself/>
+> <https://deviq.com/don-t-repeat-yourself/>
 > - **持久性无感知**  
-> <http://deviq.com/persistence-ignorance/>
+> <https://deviq.com/persistence-ignorance/>
 > - **有界上下文**  
 > <https://martinfowler.com/bliki/BoundedContext.html>
 
-> [!div class="step-by-step"]
+>[!div class="step-by-step"]
 [上一页](choose-between-traditional-web-and-single-page-apps.md)
 [下一页](common-web-application-architectures.md)

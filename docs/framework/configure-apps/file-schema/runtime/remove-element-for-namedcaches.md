@@ -7,13 +7,12 @@ helpviewer_keywords:
 ms.assetid: 24211ea5-163e-4fe5-aed8-004d8499760c
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 6ffaea24910a6b8f4a120d6b72219bff592fab17
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: f885416629ae58949cc688f4e6fbd41e77e872aa
+ms.sourcegitcommit: daa8788af67ac2d1cecd24f9f3409babb2f978c9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32745209"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47861894"
 ---
 # <a name="ltremovegt-element-for-ltnamedcachesgt"></a>&lt;删除&gt;元素&lt;namedCaches&gt;
 从内存缓存的 `namedCaches` 集合中删除一个命名的缓存条目。  
@@ -51,7 +50,7 @@ ms.locfileid: "32745209"
 |[\<namedCaches>](../../../../../docs/framework/configure-apps/file-schema/runtime/namedcaches-element-cache-settings.md)|包含的配置设置的命名集合<xref:System.Runtime.Caching.MemoryCache>实例。|  
   
 ## <a name="remarks"></a>备注  
- `remove`元素中删除`namedCache`内存缓存的命名的缓存集合中的条目。  
+ `remove`元素中移除`namedCache`内存缓存的命名的缓存集合中的条目。  
   
 ## <a name="see-also"></a>请参阅  
  [\<namedCaches > 元素 （缓存设置）](../../../../../docs/framework/configure-apps/file-schema/runtime/namedcaches-element-cache-settings.md)

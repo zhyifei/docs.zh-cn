@@ -27,7 +27,7 @@ JSON（JavaScript 对象表示法）是专门为浏览器中的网页上运行�
 |<xref:System.Enum>|数字|请参见本主题中后面的“枚举和 JSON”。|  
 |<xref:System.Boolean>|Boolean|--|  
 |<xref:System.String>, <xref:System.Char>|String|--|  
-|<xref:System.TimeSpan>, <xref:System.Guid>, <xref:System.Uri>|String|在 JSON 中这些类型的格式是与 XML 中的相同 (实质上，采用 ISO 8601 持续时间格式的时间跨度，采用"12345678-ABCD-ABCD-ABCD-1234567890AB"格式的 GUID 和其自然字符串形式的 URI，如"http://www.example.com")。 精确的信息，请参阅[数据协定架构参考](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md)。|  
+|<xref:System.TimeSpan>, <xref:System.Guid>, <xref:System.Uri>|String|在 JSON 中这些类型的格式是与 XML 中的相同 (实质上，采用 ISO 8601 持续时间格式的时间跨度，采用"12345678-ABCD-ABCD-ABCD-1234567890AB"格式的 GUID 和其自然字符串形式的 URI，如" http://www.example.com ")。 精确的信息，请参阅[数据协定架构参考](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md)。|  
 |<xref:System.Xml.XmlQualifiedName>|String|格式为“名称:命名空间”（第一个冒号之前的所有内容都是名称）。 可以缺少名称或命名空间。 如果没有命名空间，则也可以省略冒号。|  
 |<xref:System.Array> 类型的 <xref:System.Byte>|数字数组|每个数字都表示一个字节的值。|  
 |<xref:System.DateTime>|DateTime 或 String|请参见本主题中后面的“日期/时间和 JSON”。|  
@@ -181,13 +181,13 @@ http://example.com/myservice.svc/MyOperation?number=7&p={"name":"John","age":42}
  禁止将数据成员命名为“__type”，因为它可能与类型提示发生冲突。  
   
 #### <a name="reducing-the-size-of-type-hints"></a>减小类型提示的大小  
- 若要减小 JSON 值消息，默认数据协定命名空间前缀 (http://schemas.datacontract.org/2004/07/)替换"#"字符。 (若要使此替换可逆，请使用一项转义规则： 如果以"#"开头的命名空间或"\\"字符，它们追加另一个额外"\\"字符)。 因此，如果"Circle"是.NET 命名空间"MyApp.Shapes"中的类型，其默认数据协定命名空间是http://schemas.datacontract.org/2004/07/MyApp。 下面是 Shapes 及其 JSON 表示形式。  
+ 若要减小 JSON 值消息，默认数据协定命名空间前缀 ( http://schemas.datacontract.org/2004/07/) 替换"#"字符。 (若要使此替换可逆，请使用一项转义规则： 如果以"#"开头的命名空间或"\\"字符，它们追加另一个额外"\\"字符)。 因此，如果"Circle"是.NET 命名空间"MyApp.Shapes"中的类型，其默认数据协定命名空间是 http://schemas.datacontract.org/2004/07/MyApp 。 下面是 Shapes 及其 JSON 表示形式。  
   
 ```json  
 {"__type":"Circle:#MyApp.Shapes","x":50,"y":70,"radius":10}  
 ```  
   
- 截断 (#MyApp.Shapes) 和完整 (http://schemas.datacontract.org/2004/07/MyApp.Shapes)名称理解在反序列化。  
+ 截断 (#MyApp.Shapes) 和完整 (http://schemas.datacontract.org/2004/07/MyApp.Shapes) 名称理解在反序列化。  
   
 #### <a name="type-hint-position-in-json-objects"></a>JSON 对象中的类型提示位置  
  请注意，类型提示必须出现在 JSON 表示形式的开头。 这是 JSON 处理中唯一一种重视键/值对顺序的情况。 例如，下面不是指定类型提示的有效方式。  

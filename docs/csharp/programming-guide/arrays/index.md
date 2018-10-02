@@ -5,14 +5,15 @@ helpviewer_keywords:
 - arrays [C#]
 - C# language, arrays
 ms.assetid: bb79bdde-e570-4c30-adb0-1dd5759ae041
-ms.openlocfilehash: e01b9463eca88858633b847be256ae5b063459b2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e0ed2d678363a29bb870a496846fc6f054769a4b
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33313496"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47111108"
 ---
 # <a name="arrays-c-programming-guide"></a>数组（C# 编程指南）
+
 可以将同一类型的多个变量存储在一个数组数据结构中。 通过指定数组的元素类型来声明数组。  
   
  `type[] arrayName;`  
@@ -21,7 +22,8 @@ ms.locfileid: "33313496"
   
  [!code-csharp[csProgGuideArrays#1](../../../csharp/programming-guide/arrays/codesnippet/CSharp/index_1.cs)]  
   
-## <a name="array-overview"></a>数组概述  
+## <a name="array-overview"></a>数组概述
+
  数组具有以下属性：  
   
 -   数组可以是[一维](../../../csharp/programming-guide/arrays/single-dimensional-arrays.md)、[多维](../../../csharp/programming-guide/arrays/multidimensional-arrays.md)或[交错](../../../csharp/programming-guide/arrays/jagged-arrays.md)的。  
@@ -46,12 +48,12 @@ ms.locfileid: "33313496"
   
 -   [将数组作为参数传递](../../../csharp/programming-guide/arrays/passing-arrays-as-arguments.md)  
   
--   [使用 ref 和 out 传递数组](../../../csharp/programming-guide/arrays/passing-arrays-using-ref-and-out.md)   
-  
-## <a name="c-language-specification"></a>C# 语言规范  
+## <a name="c-language-specification"></a>C# 语言规范
+
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>请参阅  
- [C# 编程指南](../../../csharp/programming-guide/index.md)  
- [集合](http://msdn.microsoft.com/library/e76533a9-5033-4a0b-b003-9c2be60d185b)  
- [数组集合类型](http://msdn.microsoft.com/library/8a9964de-8941-47b1-a3cf-a01bc88db9e8)
+## <a name="see-also"></a>请参阅
+
+- [C# 编程指南](../../../csharp/programming-guide/index.md)  
+- [集合](../../../csharp/programming-guide/concepts/collections.md)  
+- [数组集合类型](https://msdn.microsoft.com/library/8a9964de-8941-47b1-a3cf-a01bc88db9e8)

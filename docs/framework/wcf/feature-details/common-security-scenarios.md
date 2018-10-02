@@ -5,13 +5,12 @@ helpviewer_keywords:
 - security [WCF], scenarios
 ms.assetid: 201923b5-5162-4a8a-8d4c-e7bd242748d5
 author: BrucePerlerMS
-manager: mbaldwin
-ms.openlocfilehash: 0fb51ea0624c4fa686e4e99ffb9c30decedfea10
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 081518fb1b3eb1f66c772cd401c19c0eb523d32a
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33490898"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47200823"
 ---
 # <a name="common-security-scenarios"></a>常用安全方案
 本节中的主题对众多可能的客户端和服务安全配置进行分类。 配置会随多种因素而变化。 例如，服务或客户端是否位于 Intranet 上，或者安全性是由 Windows 提供还是由传输（如 HTTPS）提供。  
@@ -21,7 +20,7 @@ ms.locfileid: "33490898"
  一个公共的、不安全的客户端和服务的示例。  
   
  [不安全的 Intranet 客户端和服务](../../../../docs/framework/wcf/feature-details/intranet-unsecured-client-and-service.md)  
- 基本的 Windows Communication Foundation (WCF) 服务开发到 WCF 应用程序安全的专用网络上提供的信息。  
+ 一个基本的 Windows Communication Foundation (WCF) 服务开发提供到 WCF 应用程序安全的专用网络上的信息。  
   
  [使用基本身份验证的传输安全性](../../../../docs/framework/wcf/feature-details/transport-security-with-basic-authentication.md)  
  应用程序允许客户端使用自定义身份验证进行登录。  
@@ -36,7 +35,7 @@ ms.locfileid: "33490898"
  显示由证书保护的客户端和服务。  
   
  [匿名客户端的消息安全性](../../../../docs/framework/wcf/feature-details/message-security-with-an-anonymous-client.md)  
- 显示客户端和服务保护的 WCF 消息安全性。  
+ 显示客户端和受保护的 WCF 消息安全的服务。  
   
  [用户名客户端的消息安全性](../../../../docs/framework/wcf/feature-details/message-security-with-a-user-name-client.md)  
  客户端是一个 Windows 窗体应用程序，允许客户端使用域用户名和密码登录。  
@@ -83,4 +82,4 @@ ms.locfileid: "33490898"
   
 ## <a name="see-also"></a>请参阅  
  [安全指导和最佳做法](../../../../docs/framework/wcf/feature-details/security-guidance-and-best-practices.md)  
- [Windows Server App Fabric 的安全模型](http://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+ [Windows Server App Fabric 的安全模型](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

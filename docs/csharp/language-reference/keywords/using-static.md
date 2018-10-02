@@ -6,24 +6,24 @@ helpviewer_keywords:
 ms.assetid: 8b8f9e34-c75e-469b-ba85-6f2eb4090314
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c9b7508c6e751f83fdc16a700ad68aa7de36e497
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 04e7368a6b6a4453f2dd07c7afdc0bffa7473ed1
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33285130"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43506667"
 ---
 # <a name="using-static-directive-c-reference"></a>using static 指令（C# 参考）
 
-`using static` 指令指定无需指定类型名称即可访问其静态成员的类型。 语法为：
+`using static` 指令指定一种类型，无需指定类型名称即可访问其静态成员和嵌套类型。 语法为：
 
 ```csharp
-using static <fully-qualified-type-name>
+using static <fully-qualified-type-name>;
 ```
 
-其中，*fully-qualified-type-name* 是无需指定类型名称即可访问其静态成员的类型的名称。 如果不提供完全限定的类型名称（完整的命名空间名称以及类型名称），则 C# 将生成编译器错误 CS0246：“找不到‘<type-name>’的类型或命名空间名称。”
+其中，fully-qualified-type-name 是无需指定类型名称即可访问其静态成员和嵌套类型的类型名称。 如果不提供完全限定的类型名称（完整的命名空间名称以及类型名称），则 C# 将生成编译器错误 [CS0246](../compiler-messages/cs0246.md)：“无法找到类型或命名空间名称‘type/namespace’（是否缺少 using 指令或程序集引用？）”。
 
-`using static` 指令适用于任何具有静态成员的类型，即使该类型还具有实例成员。 但是，只能通过类型实例来调用实例成员。
+`using static` 指令适用于任何具有静态成员（或嵌套类型）的类型，即使该类型还具有实例成员。 但是，只能通过类型实例来调用实例成员。
 
 `using static` 指令是在 C# 6 中引入的。
 
@@ -53,9 +53,9 @@ using static <fully-qualified-type-name>
 
 ## <a name="see-also"></a>请参阅
 
-[using 指令](using-directive.md)   
-[C# 参考](../../../csharp/language-reference/index.md)   
-[C# 关键字](../../../csharp/language-reference/keywords/index.md)   
-[Using 命名空间](../../../csharp/programming-guide/namespaces/using-namespaces.md)   
-[命名空间关键字](../../../csharp/language-reference/keywords/namespace-keywords.md)   
-[命名空间](../../../csharp/programming-guide/namespaces/index.md)   
+- [using 指令](using-directive.md)
+- [C# 参考](../../../csharp/language-reference/index.md)
+- [C# 关键字](../../../csharp/language-reference/keywords/index.md)
+- [使用命名空间](../../../csharp/programming-guide/namespaces/using-namespaces.md)
+- [命名空间关键字](../../../csharp/language-reference/keywords/namespace-keywords.md)
+- [命名空间](../../../csharp/programming-guide/namespaces/index.md)

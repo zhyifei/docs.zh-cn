@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: b609b277-edc6-4c74-b03e-ea73324ecbdb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 26a1cafc7ed6e497e5aab9cd33654f3aa3d4d98c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 55b16d135449cad8ed489a8a3e21db326be0fae0
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33573170"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45668413"
 ---
 # <a name="how-to-round-trip-date-and-time-values"></a>如何：往返日期和时间值
 在许多应用程序中，日期和时间值旨在明确标识单个时间点。 本主题介绍了如何保存和还原 <xref:System.DateTime> 值、<xref:System.DateTimeOffset> 值以及包含时区信息的日期和时间值，以便还原后的值与保存的值标识的时间相同。  
@@ -99,7 +99,8 @@ ms.locfileid: "33573170"
   
 -   每个代码示例（`DateInTimeZone` 除外）都应被添加到类或 Visual Basic 模块中，且被包装到方法中，并通过 `Main` 进行调用。  
   
-## <a name="see-also"></a>请参阅  
- [执行格式设置操作](../../../docs/standard/base-types/performing-formatting-operations.md)  
- [在 DateTime、DateTimeOffset、TimeSpan 和 TimeZoneInfo 之间进行选择](../../../docs/standard/datetime/choosing-between-datetime.md)  
- [标准日期和时间格式字符串](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)
+## <a name="see-also"></a>请参阅
+
+- [执行格式设置操作](../../../docs/standard/base-types/performing-formatting-operations.md)  
+- [在 DateTime、DateTimeOffset、TimeSpan 和 TimeZoneInfo 之间进行选择](../../../docs/standard/datetime/choosing-between-datetime.md)  
+- [标准日期和时间格式字符串](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)

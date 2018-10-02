@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 1a9bf078-aa82-46eb-b95a-f87237f028c5
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 61f520b7f4d1827424466a5cc3537041ae37a3bd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 47a61a1d01984eeefb2f1f09774374dc29a774d3
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33583235"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44087804"
 ---
 # <a name="how-to-write-messages-to-and-read-messages-from-a-dataflow-block"></a>如何：将消息写入数据流块和从数据流块读取消息
 本文档介绍如何使用 TPL 数据流库从数据流块写入和读取消息。 TPL 数据流库同时提供用于从数据流块写入和读取消息的同步和异步方法。 本文档使用 <xref:System.Threading.Tasks.Dataflow.BufferBlock%601?displayProperty=nameWithType> 类。 <xref:System.Threading.Tasks.Dataflow.BufferBlock%601> 类将缓冲消息，而且其行为方式与消息源相同，也与消息目标相同。  
@@ -65,5 +65,6 @@ ms.locfileid: "33583235"
 ## <a name="next-steps"></a>后续步骤  
  本示例演示如何直接从消息块读取和写入。 还可以连接数据流块来形成管道（这是数据流块的线性序列）或网络（这是数据流块的图形）。 在管道或网络中，当数据可用时源向目标异步传播数据。 有关创建基本数据流管道的示例，请参阅[演练：创建数据流管道](../../../docs/standard/parallel-programming/walkthrough-creating-a-dataflow-pipeline.md)。 有关创建更复杂的数据流网络的示例，请参阅[演练：在 Windows 窗体应用程序中使用数据流](../../../docs/standard/parallel-programming/walkthrough-using-dataflow-in-a-windows-forms-application.md)。  
   
-## <a name="see-also"></a>请参阅  
- [数据流](../../../docs/standard/parallel-programming/dataflow-task-parallel-library.md)
+## <a name="see-also"></a>请参阅
+
+- [数据流](../../../docs/standard/parallel-programming/dataflow-task-parallel-library.md)

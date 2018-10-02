@@ -8,12 +8,12 @@ helpviewer_keywords:
 - -appconfig compiler option [C#]
 - appconfig compiler option [C#]
 ms.assetid: 1cdbcbcc-7813-4010-b5b8-e67c107c5a98
-ms.openlocfilehash: 3fca0821b8665354d840783fca3ab90ece41b2cc
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 33f79967c34736f2175e0bb6e2b5b88d211545c2
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33214765"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45698113"
 ---
 # <a name="-appconfig-c-compiler-options"></a>-appconfig（C# 编译器选项）
 -appconfig 编译器选项让 C# 应用程序能够在程序集绑定时将程序集的应用程序配置 (app.config) 文件的位置指定为公共语言运行时 (CLR)。  
@@ -55,5 +55,6 @@ ms.locfileid: "33214765"
 ```  
   
 ## <a name="see-also"></a>请参阅  
- [\<supportPortability> 元素](../../../framework/configure-apps/file-schema/runtime/supportportability-element.md)  
- [按字母顺序列出的 C# 编译器选项](../../../csharp/language-reference/compiler-options/listed-alphabetically.md)
+
+- [\<supportPortability> 元素](../../../framework/configure-apps/file-schema/runtime/supportportability-element.md)  
+- [按字母顺序列出的 C# 编译器选项](../../../csharp/language-reference/compiler-options/listed-alphabetically.md)

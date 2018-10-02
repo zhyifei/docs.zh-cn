@@ -6,12 +6,12 @@ helpviewer_keywords:
 - namespaces [C#], global namespace qualifier
 - global namespace [C#]
 ms.assetid: 98a1d89b-3c5a-44f7-8400-c4a3c0ec22a9
-ms.openlocfilehash: 74f51d18ddda1ae4706b78aaf713683d2e505d2e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c15271abb55cb29a200185e4b512a76a4913d848
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33327237"
+ms.lasthandoff: 09/15/2018
+ms.locfileid: "44514613"
 ---
 # <a name="how-to-use-the-global-namespace-alias-c-programming-guide"></a>如何：使用全局命名空间别名（C# 编程指南）
 当具有同一名称的其他实体可能隐藏了成员时，访问全局[命名空间](../../../csharp/language-reference/keywords/namespace.md)中的成员的功能将十分有用。  
@@ -41,12 +41,14 @@ ms.locfileid: "33327237"
   
  [!code-csharp[csProgGuideNamespaces#5](../../../csharp/programming-guide/namespaces/codesnippet/CSharp/how-to-use-the-global-namespace-alias_6.cs)]  
   
- A 1  
-B 2  
-C 3   
-## <a name="see-also"></a>请参阅  
- [C# 编程指南](../../../csharp/programming-guide/index.md)  
- [命名空间](../../../csharp/programming-guide/namespaces/index.md)  
- [。运算符](../../../csharp/language-reference/operators/member-access-operator.md)  
- [:: 运算符](../../../csharp/language-reference/operators/namespace-alias-qualifer.md)  
- [extern](../../../csharp/language-reference/keywords/extern.md)
+**A 1**
+**B 2**
+**C 3**
+
+## <a name="see-also"></a>请参阅
+
+- [C# 编程指南](../../../csharp/programming-guide/index.md)  
+- [命名空间](../../../csharp/programming-guide/namespaces/index.md)  
+- [。运算符](../../../csharp/language-reference/operators/member-access-operator.md)  
+- [:: 运算符](../../../csharp/language-reference/operators/namespace-alias-qualifer.md)  
+- [extern](../../../csharp/language-reference/keywords/extern.md)

@@ -2,12 +2,12 @@
 title: '&lt;byteStreamMessageEncoding&gt;'
 ms.date: 03/30/2017
 ms.assetid: bbadd8dd-60a2-4007-b959-89373a8a7d60
-ms.openlocfilehash: 3493588d4613131ad9526a8d26912ecdb601ea25
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 4b031bfb0d0979dc99df13c104a712d6dd771e8a
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32753269"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44225183"
 ---
 # <a name="ltbytestreammessageencodinggt"></a>&lt;byteStreamMessageEncoding&gt;
 指定消息编码作为字节流，也可以选择指定字符编码。  
@@ -37,7 +37,7 @@ ms.locfileid: "32753269"
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<readerQuotas>](http://msdn.microsoft.com/library/3e5e42ff-cef8-478f-bf14-034449239bfd)|定义可由采用此绑定配置的终结点进行处理的 SOAP 消息的复杂性约束。 此元素的类型为 <xref:System.ServiceModel.Configuration.XmlDictionaryReaderQuotasElement>。|  
+|[\<readerQuotas>](https://msdn.microsoft.com/library/3e5e42ff-cef8-478f-bf14-034449239bfd)|定义可由采用此绑定配置的终结点进行处理的 SOAP 消息的复杂性约束。 此元素的类型为 <xref:System.ServiceModel.Configuration.XmlDictionaryReaderQuotasElement>。|  
   
 ### <a name="parent-elements"></a>父元素  
   

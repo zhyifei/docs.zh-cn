@@ -2,12 +2,12 @@
 title: 成员资格和角色提供程序
 ms.date: 03/30/2017
 ms.assetid: 0d11a31c-e75f-4fcf-9cf4-b7f26e056bcd
-ms.openlocfilehash: 94808fbb3fae1714f63a4682dfe1096ca314985c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: bff100189c904706f3c7c886945383252ce7bfcb
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33506684"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43864023"
 ---
 # <a name="membership-and-role-provider"></a>成员资格和角色提供程序
 此“成员资格和角色提供程序”示例演示服务如何使用 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 成员资格和角色提供程序来对客户端进行身份验证和授权。  
@@ -118,9 +118,9 @@ ms.locfileid: "33506684"
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>设置、生成和运行示例  
   
-1.  若要生成解决方案的 C# 或 Visual Basic.NET 版本，请按照中的说明[运行 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/running-the-samples.md)。  
+1.  若要生成 C# 或 Visual Basic.NET 版本的解决方案，请按照中的说明[运行 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/running-the-samples.md)。  
   
-2.  请确保你配置[ASP.NET 应用程序服务数据库](http://go.microsoft.com/fwlink/?LinkId=94997)。  
+2.  请确保你配置[ASP.NET 应用程序服务数据库](https://go.microsoft.com/fwlink/?LinkId=94997)。  
   
     > [!NOTE]
     >  如果运行的是 SQL Server Express Edition，则服务器名称为 .\SQLEXPRESS。 配置 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 应用程序服务数据库时应使用该服务器，Web.config 连接字符串中也应使用该服务器。  
@@ -138,7 +138,7 @@ ms.locfileid: "33506684"
   
 3.  启动 \client\bin 中的 Client.exe。 客户端活动将显示在客户端控制台应用程序上。  
   
-4.  如果客户端和服务不能够进行通信，请参阅[疑难解答提示](http://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b)。  
+4.  如果客户端和服务能够进行通信，请参见[故障排除提示](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b)。  
   
 ### <a name="to-run-the-sample-across-computers"></a>跨计算机运行示例  
   
@@ -150,9 +150,9 @@ ms.locfileid: "33506684"
   
 4.  将客户端程序文件复制到客户端计算机上的客户端目录中。 另外，将 Setup.bat、Cleanup.bat 和 ImportServiceCert.bat 文件复制到客户端上。  
   
-5.  在服务器上，使用管理特权打开 Visual Studio 命令提示并运行 `setup.bat service`。 运行`setup.bat`与`service`自变量的计算机的完全限定域名创建一个服务证书，并将服务证书导出到名为 Service.cer 的文件。  
+5.  在服务器上，使用管理特权打开 Visual Studio 命令提示并运行 `setup.bat service`。 运行`setup.bat`与`service`参数与计算机的名称的完全限定域名创建一个服务证书并将服务证书导出到名为 Service.cer 的文件。  
   
-6.  编辑 Web.config 以反映新的证书名称 (在`findValue`属性中[ \<serviceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md))，这是计算机的完全限定域名相同。  
+6.  编辑 Web.config 以反映新的证书名称 (在`findValue`中的属性[ \<serviceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md))，这是与计算机的名称的完全限定域名相同。  
   
 7.  将服务目录中的 Service.cer 文件复制到客户端计算机上的客户端目录中。  
   
@@ -160,14 +160,14 @@ ms.locfileid: "33506684"
   
 9. 在客户端上，使用管理特权打开 Visual Studio 命令提示并运行 ImportServiceCert.bat。 这会将 Service.cer 文件中的服务证书导入 CurrentUser – TrustedPeople 存储区。  
   
-10. 在客户端计算机上，在命令提示符下启动 Client.exe。 如果客户端和服务不能够进行通信，请参阅[疑难解答提示](http://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b)。  
+10. 在客户端计算机上，在命令提示符下启动 Client.exe。 如果客户端和服务能够进行通信，请参见[故障排除提示](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b)。  
   
 ### <a name="to-clean-up-after-the-sample"></a>运行示例后进行清理  
   
 -   运行完示例后运行示例文件夹中的 Cleanup.bat。  
   
 > [!NOTE]
->  此脚本不会在跨计算机运行此示例时移除客户端上的服务证书。 如果已运行跨计算机使用证书的 Windows Communication Foundation (WCF) 示例，请确保清除已安装在 CurrentUser-TrustedPeople 存储区中的服务证书。 为此，请使用以下命令：`certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>`，例如：`certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`。  
+>  此脚本不会在跨计算机运行此示例时移除客户端上的服务证书。 如果有运行在计算机之间使用证书的 Windows Communication Foundation (WCF) 示例，请确保清除已安装在 CurrentUser-TrustedPeople 存储区中的服务证书。 为此，请使用以下命令：`certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>`，例如：`certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`。  
   
 ## <a name="the-setup-batch-file"></a>Setup 批处理文件  
  通过运行此示例随附的 Setup.bat 批处理文件，可以用相关的证书将服务器配置为运行需要基于服务器证书的安全性的自承载应用程序。 必须修改此批处理文件，以便跨计算机或在非承载情况下工作。  

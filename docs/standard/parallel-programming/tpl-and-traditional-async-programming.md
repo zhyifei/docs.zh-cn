@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: e7b31170-a156-433f-9f26-b1fc7cd1776f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6d708068dc0d55a1c7ec725977a4ca6d16b0f43c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8024fe6673b39a611c55eb55742bcfd981300e7e
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33591750"
+ms.lasthandoff: 09/23/2018
+ms.locfileid: "46702941"
 ---
 # <a name="tpl-and-traditional-net-framework-asynchronous-programming"></a>TPL 和传统 .NET Framework 异步编程
 .NET Framework 提供了以下两种标准模式，用于执行 I/O 密集型和计算密集型异步操作：  
@@ -119,5 +119,6 @@ ms.locfileid: "33591750"
 ## <a name="using-the-streamextensions-sample-code"></a>使用 StreamExtensions 示例代码  
  在[使用 .NET Framework 4 的并行编程示例](https://code.msdn.microsoft.com/ParExtSamples)中，Streamextensions.cs 文件包含多个引用实现，以将 Task 对象用于异步文件和网络 I/O。  
   
-## <a name="see-also"></a>请参阅  
- [任务并行库 (TPL)](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md)
+## <a name="see-also"></a>请参阅
+
+- [任务并行库 (TPL)](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md)

@@ -9,34 +9,34 @@ helpviewer_keywords:
 - querying the data service [WCF Data Services]
 - WCF Data Services, querying
 ms.assetid: cc4ec9e9-348f-42a6-a78e-1cd40e370656
-ms.openlocfilehash: 030c8e12b45cfc11d1440a410c69d8bc911c56c8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 92b3444f81f00ee709c22836126073d342c6fa05
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33365964"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43526812"
 ---
 # <a name="linq-considerations-wcf-data-services"></a>LINQ 注意事项（WCF 数据服务）
 本主题提供有关使用 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 客户端时 LINQ 查询的编写和执行方式的信息以及使用 LINQ 查询实现[!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] 的数据服务的限制。 有关编写和执行针对查询的详细信息[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]-基于数据服务，请参阅[查询数据服务](../../../../docs/framework/data/wcf/querying-the-data-service-wcf-data-services.md)。  
   
 ## <a name="composing-linq-queries"></a>编写 LINQ 查询  
- LINQ 允许针对实现 <xref:System.Collections.Generic.IEnumerable%601> 的对象集合编写查询。 这两个**添加服务引用**使用 Visual Studio 中的对话框和 DataSvcUtil.exe 工具来生成的表示形式[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]服务为继承自的实体容器类<xref:System.Data.Services.Client.DataServiceContext>，以及表示源中返回的实体的对象。 这些工具还可为由服务作为源公开的集合的实体容器类生成属性。 封装了数据服务的类的每个属性都会返回一个 <xref:System.Data.Services.Client.DataServiceQuery%601>。 因为 <xref:System.Data.Services.Client.DataServiceQuery%601> 类实现 LINQ 定义的 <xref:System.Linq.IQueryable%601> 接口，所以可以针对数据服务公开的源编写 LINQ 查询，客户端库会将其转换为一个查询请求 URI，在执行时将此 URI 发送给数据服务。  
+ LINQ 允许针对实现 <xref:System.Collections.Generic.IEnumerable%601> 的对象集合编写查询。 这两个**添加服务引用**使用 Visual Studio 中的对话框和 DataSvcUtil.exe 工具生成的表示形式[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]服务作为继承的实体容器类<xref:System.Data.Services.Client.DataServiceContext>，以及表示源中返回的实体的对象。 这些工具还可为由服务作为源公开的集合的实体容器类生成属性。 封装了数据服务的类的每个属性都会返回一个 <xref:System.Data.Services.Client.DataServiceQuery%601>。 因为 <xref:System.Data.Services.Client.DataServiceQuery%601> 类实现 LINQ 定义的 <xref:System.Linq.IQueryable%601> 接口，所以可以针对数据服务公开的源编写 LINQ 查询，客户端库会将其转换为一个查询请求 URI，在执行时将此 URI 发送给数据服务。  
   
 > [!IMPORTANT]
->  可以采用 LINQ 语法表示的查询集大于 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 数据服务使用的 URI 语法所支持的查询集。 如果无法将查询映射到目标数据服务中的 URI，则会引发 <xref:System.NotSupportedException>。 有关详细信息，请参阅[不受支持的 LINQ 方法](../../../../docs/framework/data/wcf/linq-considerations-wcf-data-services.md#unsupportedMethods)本主题中。  
+>  可以采用 LINQ 语法表示的查询集大于 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 数据服务使用的 URI 语法所支持的查询集。 如果无法将查询映射到目标数据服务中的 URI，则会引发 <xref:System.NotSupportedException>。 有关详细信息，请参阅[不支持的 LINQ 方法](../../../../docs/framework/data/wcf/linq-considerations-wcf-data-services.md#unsupportedMethods)本主题中。  
   
  下面的示例是一个 LINQ 查询，它返回运费成本超过 30 美元的 `Orders` 并按装运日期对结果进行排序，最近的装运日期排在最前面：  
   
 [!code-csharp[Astoria Northwind Client#AddQueryOptionsLinqSpecific](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/source.cs#addqueryoptionslinqspecific)]      
 [!code-vb[Astoria Northwind Client#AddQueryOptionsLinqSpecific](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/source.vb#addqueryoptionslinqspecific)]    
   
- 此 LINQ 查询转换为以下查询执行针对基于 Northwind 的 URI[快速入门](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md)数据服务：  
+ 此 LINQ 查询转换成下面的查询执行针对基于 Northwind 的 URI[快速入门](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md)数据服务：  
   
 ```  
 http://localhost:12345/Northwind.svc/Orders?Orderby=ShippedDate&?filter=Freight gt 30  
 ```  
   
- 有关 LINQ 的更多常规信息，请参阅[LINQ （语言集成查询）](http://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d)。  
+ 有关 LINQ 的更多常规信息，请参阅[LINQ （语言集成查询）](https://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d)。  
   
  LINQ 允许使用语言特定声明查询语法（如上例所示）和一组称为标准查询运算符的查询方法编写查询。 通过仅使用基于方法的语法可以编写与上例等效的查询，如下面的示例所示：  
   
@@ -195,7 +195,7 @@ http://localhost:12345/Northwind.svc/Orders?Orderby=ShippedDate&?filter=Freight 
 |<xref:System.DateTime.Second>|`int second(DateTime p0)`|  
 |<xref:System.DateTime.Year>|`int year(DateTime p0)`|  
   
- <sup>1</sup>的等效的日期和时间属性<xref:Microsoft.VisualBasic.DateAndTime?displayProperty=nameWithType>，以及<xref:Microsoft.VisualBasic.DateAndTime.DatePart%2A>还支持在 Visual Basic 中的方法。  
+ <sup>1</sup>等效的日期和时间属性<xref:Microsoft.VisualBasic.DateAndTime?displayProperty=nameWithType>，并将<xref:Microsoft.VisualBasic.DateAndTime.DatePart%2A>还支持在 Visual Basic 中的方法。  
   
 |<xref:System.Math> 成员|支持的 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 函数|  
 |---------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------|  
@@ -216,4 +216,4 @@ http://localhost:12345/Northwind.svc/Orders?Orderby=ShippedDate&?filter=Freight 
  [查询数据服务](../../../../docs/framework/data/wcf/querying-the-data-service-wcf-data-services.md)  
  [查询投影](../../../../docs/framework/data/wcf/query-projections-wcf-data-services.md)  
  [对象具体化](../../../../docs/framework/data/wcf/object-materialization-wcf-data-services.md)  
- [OData: URI 约定](http://go.microsoft.com/fwlink/?LinkID=185564)
+ [OData: URI 约定](https://go.microsoft.com/fwlink/?LinkID=185564)

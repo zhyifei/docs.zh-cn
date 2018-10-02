@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: a0bfa4b1-99e5-4dd1-9912-4b825a9dc25c
-ms.openlocfilehash: 6435cf097b2fab880271d2c79ac8bb1afaf9cb6b
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 9f2dced10b9d5e8326dcfd25a105e44cfc68573c
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32763210"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43499947"
 ---
 # <a name="method-based-query-syntax-examples-navigating-relationships"></a>基于方法的查询语法示例：导航关系
 [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)]中的导航属性是快捷方式属性，用于定位位于关联各端的实体。 导航属性允许用户通过关联集从一个实体导航到另一个实体或从一个实体导航到多个相关的实体。 本主题以基于方法的查询语法提供相关的示例，以介绍如何通过 [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] 查询中的导航属性来导航关系。  
@@ -53,5 +53,5 @@ ms.locfileid: "32763210"
  [!code-vb[DP L2E Examples#WhereNavProperty](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Examples/VB/Module1.vb#wherenavproperty)]  
   
 ## <a name="see-also"></a>请参阅  
- [导航属性](http://msdn.microsoft.com/library/41e1e6b9-8a57-467d-99d9-1857d2ca2ea5)  
+ [导航属性](https://msdn.microsoft.com/library/41e1e6b9-8a57-467d-99d9-1857d2ca2ea5)  
  [LINQ to Entities 中的查询](../../../../../../docs/framework/data/adonet/ef/language-reference/queries-in-linq-to-entities.md)

@@ -9,12 +9,12 @@ dev_langs:
 ms.assetid: 8a5ea56c-0140-4b51-8997-875ae6a8e0cb
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5ed02680831302880e2bfc02b21ea61303b92a3c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 10b2471d13d410826cec3404725117649442297b
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33576817"
+ms.lasthandoff: 09/29/2018
+ms.locfileid: "47402651"
 ---
 # <a name="building-xml-schemas"></a>生成 XML 架构
 <xref:System.Xml.Schema?displayProperty=nameWithType> 命名空间中的类映射到万维网联合会 (W3C) XML 架构建议中定义的结构，可以用于在内存中生成 XML 架构。  
@@ -88,11 +88,12 @@ ms.locfileid: "33576817"
 </xs:schema>  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [XML 架构对象模型概述](../../../../docs/standard/data/xml/xml-schema-object-model-overview.md)  
- [读取和编写 XML 架构](../../../../docs/standard/data/xml/reading-and-writing-xml-schemas.md)  
- [遍历 XML 架构](../../../../docs/standard/data/xml/traversing-xml-schemas.md)  
- [编辑 XML 架构](../../../../docs/standard/data/xml/editing-xml-schemas.md)  
- [包含或导入 XML 架构](../../../../docs/standard/data/xml/including-or-importing-xml-schemas.md)  
- [用于编译架构的 XmlSchemaSet](../../../../docs/standard/data/xml/xmlschemaset-for-schema-compilation.md)  
- [后架构编译信息集](../../../../docs/standard/data/xml/post-schema-compilation-infoset.md)
+## <a name="see-also"></a>请参阅
+
+- [XML 架构对象模型概述](../../../../docs/standard/data/xml/xml-schema-object-model-overview.md)  
+- [读取和编写 XML 架构](../../../../docs/standard/data/xml/reading-and-writing-xml-schemas.md)  
+- [遍历 XML 架构](../../../../docs/standard/data/xml/traversing-xml-schemas.md)  
+- [编辑 XML 架构](../../../../docs/standard/data/xml/editing-xml-schemas.md)  
+- [包含或导入 XML 架构](../../../../docs/standard/data/xml/including-or-importing-xml-schemas.md)  
+- [用于编译架构的 XmlSchemaSet](../../../../docs/standard/data/xml/xmlschemaset-for-schema-compilation.md)  
+- [后架构编译信息集](../../../../docs/standard/data/xml/post-schema-compilation-infoset.md)

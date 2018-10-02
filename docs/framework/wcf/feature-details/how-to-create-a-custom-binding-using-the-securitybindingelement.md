@@ -8,22 +8,21 @@ helpviewer_keywords:
 - security [WCF], creating custom bindings
 ms.assetid: 203a9f9e-3a73-427c-87aa-721c56265b29
 author: BrucePerlerMS
-manager: mbaldwin
-ms.openlocfilehash: 1e288daeb717fa9fa041d552cac4ec5d0cd28808
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e0adbe9d1689e840d940dd22fcfe05f54e2131fa
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33495627"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47203077"
 ---
 # <a name="how-to-create-a-custom-binding-using-the-securitybindingelement"></a>如何：使用 SecurityBindingElement 创建自定义绑定
-Windows Communication Foundation (WCF) 包括多个的系统提供绑定，可配置，但配置 WCF 支持的所有安全选项时未提供充分的灵活性。 本主题演示如何直接从各个绑定元素创建自定义绑定，并着重说明创建这样的绑定时可以指定的一些安全设置。 有关创建自定义绑定的详细信息，请参阅[扩展绑定](../../../../docs/framework/wcf/extending/extending-bindings.md)。  
+Windows Communication Foundation (WCF) 包括多个系统提供的绑定可以配置，但配置 WCF 支持的所有安全选项时未提供最大的灵活性。 本主题演示如何直接从各个绑定元素创建自定义绑定，并着重说明创建这样的绑定时可以指定的一些安全设置。 有关创建自定义绑定的详细信息，请参阅[扩展绑定](../../../../docs/framework/wcf/extending/extending-bindings.md)。  
   
 > [!WARNING]
 >  <xref:System.ServiceModel.Channels.SecurityBindingElement> 不支持 <xref:System.ServiceModel.Channels.IDuplexSessionChannel> 通道形状，它是 TCP 传输在 <xref:System.ServiceModel.TransferMode> 设置为 <xref:System.ServiceModel.TransferMode.Buffered> 时使用的默认通道形状。 您必须将 <xref:System.ServiceModel.TransferMode> 设置为 <xref:System.ServiceModel.TransferMode.Streamed>，才能在此方案中使用 <xref:System.ServiceModel.Channels.SecurityBindingElement>。  
   
 ## <a name="creating-a-custom-binding"></a>创建自定义绑定  
- 在 WCF 中的所有绑定的都组成*绑定元素*。 每个绑定元素都是从 <xref:System.ServiceModel.Channels.BindingElement> 类派生的。 对于系统提供的标准绑定，已为你创建和配置绑定元素，但你仍可以自定义某些属性设置。  
+ WCF 中的所有绑定都构成*绑定元素*。 每个绑定元素都是从 <xref:System.ServiceModel.Channels.BindingElement> 类派生的。 对于系统提供的标准绑定，已为你创建和配置绑定元素，但你仍可以自定义某些属性设置。  
   
  相比之下，若要创建自定义绑定，应创建并配置绑定元素，然后从绑定元素创建 <xref:System.ServiceModel.Channels.CustomBinding>。  
   

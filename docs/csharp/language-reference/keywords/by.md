@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - by keyword [C#]
 ms.assetid: efe6f0e3-be40-4df2-a144-c7db968ae052
-ms.openlocfilehash: e1748948ce6e036d0a3791940fd900f79f27d51f
-ms.sourcegitcommit: c217b067985905cb21eafc5dd9a83568d7ff4e45
+ms.openlocfilehash: b2d9b08378dd0edf37c07663b3fe37a09f8acf47
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/22/2018
-ms.locfileid: "36315129"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43524497"
 ---
 # <a name="by-c-reference"></a>by（C# 参考）
 
@@ -26,4 +26,4 @@ ms.locfileid: "36315129"
 
 ## <a name="see-also"></a>请参阅
 
-[LINQ 查询表达式](../../../csharp/programming-guide/linq-query-expressions/index.md)
+- [LINQ 查询表达式](../../../csharp/programming-guide/linq-query-expressions/index.md)

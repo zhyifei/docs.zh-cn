@@ -5,18 +5,18 @@ helpviewer_keywords:
 - splitter windows
 - SplitContainer control [Windows Forms]
 ms.assetid: 2e36f17f-5c39-4fb4-bb09-7ce3ef823402
-ms.openlocfilehash: 42eccbf88db2a407c6dd40209ecd615f0c19eb7f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 63b1a4b9b2483d017a686819573f91744d8a565a
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33539196"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43518802"
 ---
 # <a name="splitcontainer-control-windows-forms"></a>SplitContainer 控件（Windows 窗体）
 Windows 窗体 `SplitContainer` 控件可视为一个复合控件；它是由可移动条隔开的两个面板。 当鼠标指针位于条上方时，指针将改变形状以表示条可移动。  
   
 > [!NOTE]
->  在**工具箱**，则此控件替代<xref:System.Windows.Forms.Splitter>以前版本的 Visual Studio 中的控件。 相较于 <xref:System.Windows.Forms.Splitter> 控件，优先选择 `SplitContainer` 控件。 <xref:System.Windows.Forms.Splitter> 类仍包含在 .NET Framework 中，以便与现有应用程序兼容，但我们强烈建议为新项目使用 `SplitContainer` 控件。  
+>  在中**工具箱**，则此控件替代<xref:System.Windows.Forms.Splitter>以前版本的 Visual Studio 中的控件。 相较于 <xref:System.Windows.Forms.Splitter> 控件，优先选择 `SplitContainer` 控件。 <xref:System.Windows.Forms.Splitter> 类仍包含在 .NET Framework 中，以便与现有应用程序兼容，但我们强烈建议为新项目使用 `SplitContainer` 控件。  
   
  `SplitContainer` 控件允许你创建复杂的用户界面；通常情况下，在一个面板中的选择将决定显示在另一个面板中的对象。 这种安排对于显示和浏览信息非常有效。 拥有两个面板使你能够在区域、条或“拆分器”中聚合信息，使用户可轻松地调整面板大小。  
   
@@ -33,7 +33,7 @@ Windows 窗体 `SplitContainer` 控件可视为一个复合控件；它是由可
  [如何：使用 Windows 窗体创建多窗格用户界面](../../../../docs/framework/winforms/controls/how-to-create-a-multipane-user-interface-with-windows-forms.md)  
  创建一个与 Microsoft Outlook 中使用的多窗格用户界面相似的多窗格用户界面。  
   
- 另请参阅[如何： 拆分窗口水平使用设计器](http://msdn.microsoft.com/library/ms233667\(v=vs.110\))，[如何： 在 Windows 窗体上创建 Windows 资源管理器样式界面](http://msdn.microsoft.com/library/zh2fe5a5\(v=vs.110\))，[如何： 创建与 Multipane 用户界面使用设计器的 Windows 窗体](http://msdn.microsoft.com/library/ms233661\(v=vs.110\))。  
+ 另请参阅[如何： 拆分窗口水平使用设计器](how-to-split-a-window-horizontally-using-the-designer.md)，[如何： 在 Windows 窗体上创建一个 Windows 资源管理器样式界面](https://msdn.microsoft.com/library/zh2fe5a5\(v=vs.110\))，[如何： 创建一个具有用户界面，Multipane使用设计器的 Windows 窗体](create-a-multipane-user-interface-with-wf-using-the-designer.md)。  
   
 ## <a name="reference"></a>参考  
  <xref:System.Windows.Forms.SplitContainer> 类  

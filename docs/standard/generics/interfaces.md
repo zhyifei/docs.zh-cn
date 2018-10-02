@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 88bf5b04-d371-4edb-ba38-01ec7cabaacf
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: cf9d1323918d42884f5e2fdf8a5905d13283c74c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a6c151798c807206cc7f4b2fbeb21e75e9142379
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33575968"
+ms.lasthandoff: 09/27/2018
+ms.locfileid: "47234674"
 ---
 # <a name="generic-interfaces"></a>泛型接口
 本主题概述跨泛型类型系列提供通用功能的泛型接口。  
@@ -42,10 +42,11 @@ ms.locfileid: "33575968"
   
  <xref:System.Collections.Generic.IEnumerable%601> 泛型接口提供泛型枚举器结构。 泛型枚举器实现的 <xref:System.Collections.Generic.IEnumerator%601> 泛型接口继承自非泛型 <xref:System.Collections.IEnumerator> 接口；<xref:System.Collections.IEnumerator.MoveNext%2A> 和 <xref:System.Collections.IEnumerator.Reset%2A> 成员（不依赖于类型参数 `T`）仅出现在非泛型接口中。 这意味着非泛型接口的任何使用者还可以使用泛型接口。  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Collections.Generic?displayProperty=nameWithType>  
- <xref:System.Collections.ObjectModel?displayProperty=nameWithType>  
- [泛型](../../../docs/standard/generics/index.md)  
- [.NET Framework 中的泛型集合](../../../docs/standard/generics/collections.md)  
- [用于控制数组和列表的泛型委托](../../../docs/standard/generics/delegates-for-manipulating-arrays-and-lists.md)  
- [协变和逆变](../../../docs/standard/generics/covariance-and-contravariance.md)
+## <a name="see-also"></a>请参阅
+
+- <xref:System.Collections.Generic?displayProperty=nameWithType>  
+- <xref:System.Collections.ObjectModel?displayProperty=nameWithType>  
+- [泛型](../../../docs/standard/generics/index.md)  
+- [.NET Framework 中的泛型集合](../../../docs/standard/generics/collections.md)  
+- [用于控制数组和列表的泛型委托](../../../docs/standard/generics/delegates-for-manipulating-arrays-and-lists.md)  
+- [协变和逆变](../../../docs/standard/generics/covariance-and-contravariance.md)

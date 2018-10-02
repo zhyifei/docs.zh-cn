@@ -6,11 +6,11 @@ helpviewer_keywords:
 - XML literals [Visual Basic], white space
 ms.assetid: dfe3a9ff-d69a-418e-a6b5-476f4ed84219
 ms.openlocfilehash: 60ee90c69aeda38f95107a6043801a4994972079
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33649745"
+ms.lasthandoff: 07/25/2018
+ms.locfileid: "39245154"
 ---
 # <a name="white-space-in-xml-literals-visual-basic"></a>XML 文本中的空白 (Visual Basic)
 Visual Basic 编译器创建时包含的有意义的空白字符将从 XML 文本[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]对象。 它不会合并无意义的空白字符。  
@@ -18,25 +18,25 @@ Visual Basic 编译器创建时包含的有意义的空白字符将从 XML 文�
 ## <a name="significant-and-insignificant-white-space"></a>有效空白和无关紧要的空白区域  
  只有三个区域中，XML 文本中的空格字符是有意义：  
   
--   当它们位于属性值。  
+-   它们的特性值中。  
   
--   当它们是元素的文本内容的一部分，并且该文本还包含其他字符。  
+-   当它们都属于某个元素的文本内容和文本中还包含其他字符。  
   
--   当它们位于元素的文本内容的嵌入式表达式。  
+-   它们在嵌入式表达式的元素的文本内容。  
   
- 否则为编译器将视为无意义的空白字符，且不包括然后中[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]文本的对象。  
+ 否则为编译器将视为无意义的空白字符，不包括然后中[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]该文字的对象。  
   
- 若要在 XML 文本中包括无关紧要的空白区域，使用嵌入式的表达式包含具有空白区域的字符串文本。  
+ 若要在 XML 文本中包括无关紧要的空白区域，使用嵌入式的表达式包含了空白字符串。  
   
 > [!NOTE]
->  如果`xml:space`特性随即显示 XML 元素文本中，Visual Basic 编译器包含中的属性<xref:System.Xml.Linq.XElement>对象，但添加此属性不会更改编译器如何处理空白区域。  
+>  如果`xml:space`特性出现在 XML 元素文本、 Visual Basic 编译器将该特性中的包含<xref:System.Xml.Linq.XElement>对象，而是添加此属性不会更改编译器如何处理空白区域。  
   
 ## <a name="examples"></a>示例  
- 下面的示例包含两个 XML 元素，外部和内部。 这两个元素包含文本内容中的空白区域。 中的外部元素的空白区域是无意义，因为它只包含空格和一个 XML 元素。 中元素的内部的空白区域很重要，因为它包含空格和文本。  
+ 下面的示例包含两个 XML 元素，外部和内部。 两个元素都包含其文本内容中的空白区域。 外部元素中的空白并不重要，因为它仅包含空格和一个 XML 元素。 内部元素中的空白区域很重要，因为它包含空格和文本。  
   
  [!code-vb[VbXMLSamples#29](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/white-space-in-xml-literals_1.vb)]  
   
- 运行时，此代码将显示以下文本。  
+ 当运行时，此代码将显示以下文本。  
   
 ```xml  
 <outer>  

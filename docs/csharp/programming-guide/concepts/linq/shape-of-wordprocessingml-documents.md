@@ -2,12 +2,12 @@
 title: WordprocessingML 文档的形状 (C#)
 ms.date: 07/20/2015
 ms.assetid: 3791b5e0-c502-469b-bb75-a7bf6fdd0a94
-ms.openlocfilehash: 0d8a80a8e7d33facd452e3b7fb31793c1ed55c58
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: aeb047f23f60ba6951950a85a6e2ef57fcbd9dda
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33331982"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46002952"
 ---
 # <a name="shape-of-wordprocessingml-documents-c"></a>WordprocessingML 文档的形状 (C#)
 本主题介绍 WordprocessingML 文档的 XML 形状。  
@@ -94,5 +94,6 @@ using (Package wdPackage = Package.Open("SampleDoc.docx", FileMode.Open, FileAcc
  [WordprocessingML 简介](http://ericwhite.com/blog/introduction-to-wordprocessingml-series/)  
  [Office 2003: XML Reference Schemas Download page](https://www.microsoft.com/en-us/download/details.aspx?id=101)（Office 2003：XML 参考架构下载页）  
   
-## <a name="see-also"></a>请参阅  
- [教程：操作 WordprocessingML 文档中的内容 (C#)](../../../../csharp/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)
+## <a name="see-also"></a>请参阅
+
+- [教程：操作 WordprocessingML 文档中的内容 (C#)](../../../../csharp/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)

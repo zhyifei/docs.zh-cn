@@ -3,12 +3,12 @@ title: 具有值类型的引用语义
 description: 了解安全地最大程度减少结构复制操作的语言功能
 ms.date: 11/10/2017
 ms.custom: mvc
-ms.openlocfilehash: 0646a7fbc01ed76883fb6b16ce04006049ef054a
-ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
+ms.openlocfilehash: f241219994d7a03192a4aea69b912bf1ac5ed29c
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34566275"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "45964691"
 ---
 # <a name="reference-semantics-with-value-types"></a>具有值类型的引用语义
 

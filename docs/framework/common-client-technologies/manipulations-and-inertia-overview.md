@@ -2,12 +2,12 @@
 title: 操作和惯性概述
 ms.date: 03/30/2017
 ms.assetid: dd31b89b-eab6-45a1-8d0b-11e0eb84b234
-ms.openlocfilehash: 7aec2756bfc3a7d4ccd394d54f19428d73b44fcb
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 41c22dc305f8ef653705436544ab2342e55ed02a
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32744390"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43521234"
 ---
 # <a name="manipulations-and-inertia-overview"></a>操作和惯性概述
 操作使用户可借助操控器移动、旋转用户界面 (UI) 元素以及调整它的大小。 操控器是指鼠标或（在可触摸情况下）触笔或手指。  
@@ -25,11 +25,11 @@ ms.locfileid: "32744390"
   
  由两个操控器操作的图像  
   
- 操作处理提供一个框架，用于监视操控器子集并将其解释为共同合作，而非独立操作。 可同时创建多个操作处理器对象，每个对象对应一个要在应用程序中操作的 UI 元素。 向操作处理器通知要观察哪个输入设备，并通过 [.NET 事件](http://msdn.microsoft.com/library/17sde2xt.aspx)报告操作。  
+ 操作处理提供一个框架，用于监视操控器子集并将其解释为共同合作，而非独立操作。 可同时创建多个操作处理器对象，每个对象对应一个要在应用程序中操作的 UI 元素。 向操作处理器通知要观察哪个输入设备，并通过 [.NET 事件](https://msdn.microsoft.com/library/17sde2xt.aspx)报告操作。  
   
  操作处理器不具备正在操作的特定元素的相关信息。 应用程序分别将更改应用于应用程序特定的元素。 例如，应用程序对图像应用转换，或者进行重绘以在其新位置或以新大小或方向进行显示。  
   
- 操作专用于二维 (2-D) [仿射转换](http://msdn.microsoft.com/library/ms533810\(VS.85\).aspx)。 这些转换包括平移、旋转和缩放。  
+ 操作专用于二维 (2-D) [仿射转换](/windows/desktop/gdiplus/-gdiplus-transformations-use)。 这些转换包括平移、旋转和缩放。  
   
 ### <a name="parts-of-a-manipulation"></a>操作的各个部分  
  操作是 <xref:System.Windows.Input.Manipulations.Manipulator2D> 对象的集合。 此聚合操作表示为原点和椭圆。 原点是正在操作元素的所有操控器的平均位置。 椭圆的半径是原点到每个 <xref:System.Windows.Input.Manipulations.Manipulator2D> 对象的平均距离。  
@@ -41,7 +41,7 @@ ms.locfileid: "32744390"
  当添加、移动或删除 UI 元素的操控器时，应用程序会调用 <xref:System.Windows.Input.Manipulations.ManipulationProcessor2D.ProcessManipulators%2A> 方法更新 <xref:System.Windows.Input.Manipulations.ManipulationProcessor2D> 对象。 当首次执行操作时，引发<xref:System.Windows.Input.Manipulations.ManipulationProcessor2D.Started> 事件。  
   
 > [!NOTE]
->  操作处理在基于框架的更新环境中使用时效率更高。 在 Microsoft XNA 应用程序中使用操作处理时，无需对此担忧，因为 XNA Framework 使用 [Game.Update](http://msdn.microsoft.com/library/microsoft.xna.framework.game.update.aspx) 方法提供了基于框架的更新。 但在其他环境（如 WinForms）中，则可能需要提供自己的基于框架的逻辑以便收集操作和定期将其作为批处理发送到 <xref:System.Windows.Input.Manipulations.ManipulationProcessor2D.ProcessManipulators%2A> 方法。  
+>  操作处理在基于框架的更新环境中使用时效率更高。 在 Microsoft XNA 应用程序中使用操作处理时，无需对此担忧，因为 XNA Framework 使用 [Game.Update](https://msdn.microsoft.com/library/microsoft.xna.framework.game.update.aspx) 方法提供了基于框架的更新。 但在其他环境（如 WinForms）中，则可能需要提供自己的基于框架的逻辑以便收集操作和定期将其作为批处理发送到 <xref:System.Windows.Input.Manipulations.ManipulationProcessor2D.ProcessManipulators%2A> 方法。  
   
  操控器的数量或位置发生变化时，引发 <xref:System.Windows.Input.Manipulations.ManipulationProcessor2D.Delta> 事件。 传递至 <xref:System.Windows.Input.Manipulations.ManipulationProcessor2D.Delta> 事件处理程序的 <xref:System.Windows.Input.Manipulations.Manipulation2DDeltaEventArgs> 对象的属性指定自上次事件以来原点、缩放、旋转和平移中的更改。 移动、添加或删除操控器时，将更改操作的原点。 平移值指定操作包含的 X 或 Y 移动数量。  
   

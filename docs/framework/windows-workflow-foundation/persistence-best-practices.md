@@ -2,11 +2,12 @@
 title: 持久性最佳做法
 ms.date: 03/30/2017
 ms.assetid: 6974c5a4-1af8-4732-ab53-7d694608a3a0
-ms.openlocfilehash: 68164cc937c1c718df39c96c3d6ac490ab025fae
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: fdbf61e559efbd978df1c5a46fcbbbbc528ec98a
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43800646"
 ---
 # <a name="persistence-best-practices"></a>持久性最佳做法
 本文档介绍了针对与工作流持久性相关的工作流设计和配置的最佳实践。  
@@ -20,7 +21,7 @@ ms.lasthandoff: 05/04/2018
   
  如果工作流长时间处于忙碌状态，则建议您在工作流实例的忙碌时段中定期保留工作流实例。 可以通过在一系列使工作流实例处于忙碌状态的活动中添加 <xref:System.Activities.Statements.Persist> 活动来执行此操作。 通过这种方式，应用程序域回收、主机故障或计算机故障便不会导致系统回滚到忙碌时段的开头。 请注意，将 <xref:System.Activities.Statements.Persist> 活动添加到工作流可能会导致性能降低。  
   
- Windows Server App Fabric 大大简化了持久性的配置和使用。 有关详细信息，请参阅[Windows Server App Fabric 持久性](http://go.microsoft.com/fwlink/?LinkID=201200&clcid=0x409)  
+ Windows Server App Fabric 大大简化了持久性的配置和使用。 有关详细信息，请参阅[Windows Server App Fabric 持久性](https://go.microsoft.com/fwlink/?LinkID=201200&clcid=0x409)  
   
 ## <a name="configuration-of-scalability-parameters"></a>可伸缩性参数的配置  
  可伸缩性和性能要求将决定以下参数的设置：  

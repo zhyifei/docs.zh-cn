@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - void keyword [C#]
 ms.assetid: 0d2d8a95-fe20-4fbd-bf5d-c1e54bce71d4
-ms.openlocfilehash: e66efc287fc3ed0fcc15963a827fccb788c38753
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 223db893dd42181c234d9a07c1a1c00af26f0c30
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33267282"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47232893"
 ---
 # <a name="void-c-reference"></a>void（C# 参考）
 当用作一种方法的返回类型时，`void` 将指定该方法不返回值。
@@ -34,10 +34,11 @@ public void SampleMethod()
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
 ## <a name="see-also"></a>请参阅
- [C# 参考](../../../csharp/language-reference/index.md)  
- [C# 编程指南](../../../csharp/programming-guide/index.md)  
- [C# 关键字](../../../csharp/language-reference/keywords/index.md)  
- [引用类型](../../../csharp/language-reference/keywords/reference-types.md)  
- [值类型](../../../csharp/language-reference/keywords/value-types.md)  
- [方法](../../../csharp/programming-guide/classes-and-structs/methods.md)  
- [不安全代码和指针](../../../csharp/programming-guide/unsafe-code-pointers/index.md)
+
+- [C# 参考](../../../csharp/language-reference/index.md)  
+- [C# 编程指南](../../../csharp/programming-guide/index.md)  
+- [C# 关键字](../../../csharp/language-reference/keywords/index.md)  
+- [引用类型](../../../csharp/language-reference/keywords/reference-types.md)  
+- [值类型](../../../csharp/language-reference/keywords/value-types.md)  
+- [方法](../../../csharp/programming-guide/classes-and-structs/methods.md)  
+- [不安全代码和指针](../../../csharp/programming-guide/unsafe-code-pointers/index.md)

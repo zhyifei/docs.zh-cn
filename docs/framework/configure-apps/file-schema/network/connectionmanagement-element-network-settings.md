@@ -10,13 +10,12 @@ helpviewer_keywords:
 ms.assetid: bedccaab-12a2-4511-8f67-e961f249aec6
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: a7e1609df0a7a1de4e70f425e649115459b43f8c
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: bc0b75db5b3f35087df70c9155a1ba3b39ceae4d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32742817"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47205978"
 ---
 # <a name="ltconnectionmanagementgt-element-network-settings"></a>&lt;connectionManagement&gt;元素 （网络设置）
 指定到网络主机的最大连接数。  
@@ -53,13 +52,13 @@ ms.locfileid: "32742817"
 |[system.net](../../../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md)|包含指定 .NET Framework 如何连接到网络的设置。|  
   
 ## <a name="remarks"></a>备注  
- `connectionManagement`元素定义的服务器或服务器组的最大连接数。  
+ `connectionManagement`元素到服务器或服务器组中定义的最大连接数。  
   
 ## <a name="configuration-files"></a>配置文件  
  此元素可在应用程序配置文件或计算机配置文件 (Machine.config) 中使用。  
   
 ## <a name="example"></a>示例  
- 下面的示例将配置应用程序使用 4 个到 www.contoso.com 和两个连接到所有其他服务器。  
+ 下面的示例配置应用程序使用与服务器 www.contoso.com 的四个连接和两个连接到所有其他服务器。  
   
 ```xml  
 <configuration>  

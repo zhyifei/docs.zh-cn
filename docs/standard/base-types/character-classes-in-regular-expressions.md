@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 0f8bffab-ee0d-4e0e-9a96-2b4a252bb7e4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 241bc9756118cd2db15356dcc2c724a24c84d0fc
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2b1a40c5c178f87bb5037ce356d345a2f3db997a
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33579686"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44180145"
 ---
 # <a name="character-classes-in-regular-expressions"></a>正则表达式中的字符类
 <a name="Top"></a>一个字符类定义一组字符，其中的任一字符均可出现在输入字符串中以便成功匹配。 .NET 中的正则表达式语言支持以下字符类：  
@@ -168,7 +168,7 @@ ms.locfileid: "33579686"
 > [!NOTE]
 >  由于它匹配除 `\n` 之外的任何字符，因此 `.` 字符类也匹配 `\r`（回车符 \u000D）。  
   
--   正字符组或负字符组中的句点字符将被视为原义句点字符，而非字符类。 有关详细信息，请参阅本主题前面部分的[正字符组](#PositiveGroup)和[负字符组](#NegativeGroup)。 下面的示例通过定义包括句点字符 (`.`) 的正则表达式作为字符类和正字符组的成员来进行这方面的演示。 正则表达式 `\b.*[.?!;:](\s|\z)` 在字边界处开始，匹配任何字符直到遇到四个标点符号标记之一（包括句点），然后匹配空白字符或字符串的末尾。  
+-   正字符组或负字符组中的句点字符将被视为原义句点字符，而非字符类。 有关详细信息，请参阅本主题前面部分的[正字符组](#PositiveGroup)和[负字符组](#NegativeGroup)。 下面的示例通过定义包括句点字符 (`.`) 的正则表达式作为字符类和正字符组的成员来进行这方面的演示。 正则表达式 `\b.*[.?!;:](\s|\z)` 在字边界处开始，匹配任何字符直到遇到五个标点符号标记之一（包括句点），然后匹配空白字符或字符串的末尾。  
   
      [!code-csharp[Conceptual.RegEx.Language.CharacterClasses#4](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.characterclasses/cs/any1.cs#4)]
      [!code-vb[Conceptual.RegEx.Language.CharacterClasses#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.characterclasses/vb/any1.vb#4)]  
@@ -188,7 +188,7 @@ ms.locfileid: "33579686"
   
  匹配属于 Unicode 常规类别或命名块的任何字符，其中，name 是类别缩写或命名块的名称。 有关类别缩写的列表，请参阅本主题稍后的[支持的 Unicode 常规类别](#SupportedUnicodeGeneralCategories)部分。 有关命名块的列表，请参阅本主题稍后的[支持的命名块](#SupportedNamedBlocks)部分。  
   
- 下面的示例使用 `\p{`名称`}`构造以匹配 Unicode 常规类别（在该示例中为 `Pd` 或“标点，短划线”类别）和命名块（`IsGreek` 和 `IsBasicLatin` 命名块）。  
+ 下面的示例使用 `\p{`名称`}` 构造以匹配 Unicode 常规类别（在该示例中为 `Pd` 或“标点，短划线”类别）和命名块（`IsGreek` 和 `IsBasicLatin` 命名块）。  
   
  [!code-csharp[Conceptual.RegEx.Language.CharacterClasses#6](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.characterclasses/cs/category1.cs#6)]
  [!code-vb[Conceptual.RegEx.Language.CharacterClasses#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.characterclasses/vb/category1.vb#6)]  
@@ -590,7 +590,8 @@ ms.locfileid: "33579686"
  [!code-csharp[Conceptual.RegEx.Language.CharacterClasses#15](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.characterclasses/cs/classsubtraction1.cs#15)]
  [!code-vb[Conceptual.RegEx.Language.CharacterClasses#15](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.characterclasses/vb/classsubtraction1.vb#15)]  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Char.GetUnicodeCategory%2A>  
- [正则表达式语言 - 快速参考](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)  
- [正则表达式选项](../../../docs/standard/base-types/regular-expression-options.md)
+## <a name="see-also"></a>请参阅
+
+- <xref:System.Char.GetUnicodeCategory%2A>  
+- [正则表达式语言 - 快速参考](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)  
+- [正则表达式选项](../../../docs/standard/base-types/regular-expression-options.md)

@@ -15,15 +15,15 @@ helpviewer_keywords:
 - mouse [Windows Forms], events
 - MouseUp event
 ms.assetid: 8cf0070d-793b-4876-b09e-d20d28280fab
-ms.openlocfilehash: cd5f87b1c1e2d32a6e7fa94dfce977c7432f7f86
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6f457756d2266a84c4f241a1cea167af194d8b81
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33541205"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43864492"
 ---
 # <a name="mouse-events-in-windows-forms"></a>Windows 窗体中的鼠标事件
-当处理鼠标输入时，通常想要知道鼠标指针的位置和鼠标按钮的状态。 本主题详细介绍如何从鼠标事件获取此信息，并说明在 Windows 窗体控件中引发的鼠标单击事件的顺序。 列表和鼠标事件的所有说明，请参阅[鼠标输入工作原理 Windows 窗体中](../../../docs/framework/winforms/how-mouse-input-works-in-windows-forms.md)。  另请参阅[事件处理程序概述 （Windows 窗体）](http://msdn.microsoft.com/library/be6fx1bb\(v=vs.110\))，[事件概述 （Windows 窗体）](http://msdn.microsoft.com/library/1h12f09z\(v=vs.110\))  
+当处理鼠标输入时，通常想要知道鼠标指针的位置和鼠标按钮的状态。 本主题详细介绍如何从鼠标事件获取此信息，并说明在 Windows 窗体控件中引发的鼠标单击事件的顺序。 列表和所有鼠标事件的说明，请参阅[鼠标输入工作原理在 Windows 窗体中](../../../docs/framework/winforms/how-mouse-input-works-in-windows-forms.md)。  另请参阅[事件处理程序概述 （Windows 窗体）](https://msdn.microsoft.com/library/be6fx1bb\(v=vs.110\))，[事件概述 （Windows 窗体）](https://msdn.microsoft.com/library/1h12f09z\(v=vs.110\))  
   
 ## <a name="mouse-information"></a>鼠标信息  
  <xref:System.Windows.Forms.MouseEventArgs> 将发送到与单击鼠标按钮和跟踪鼠标移动相关的鼠标事件处理程序。 <xref:System.Windows.Forms.MouseEventArgs> 提供有关当前鼠标状态的信息，包括鼠标指针在客户端坐标中的位置、按下的鼠标按钮是哪一个以及是否已经滚动鼠标滚轮。 几个鼠标事件（例如通知鼠标指针进入或离开控件边界的时间）会向事件处理程序发送 <xref:System.EventArgs>，但不提供详细信息。  
@@ -62,7 +62,7 @@ ms.locfileid: "33541205"
   
 8.  <xref:System.Windows.Forms.Control.MouseUp> 事件。  
   
- 有关演示鼠标的顺序的代码示例中，单击事件，请参阅[如何： 在 Windows 窗体控件中处理用户输入事件](../../../docs/framework/winforms/how-to-handle-user-input-events-in-windows-forms-controls.md)。  
+ 有关代码示例演示顺序的鼠标单击事件，请参阅[如何： 在 Windows 窗体控件中处理用户输入事件](../../../docs/framework/winforms/how-to-handle-user-input-events-in-windows-forms-controls.md)。  
   
 ### <a name="individual-controls"></a>个别控件  
  以下控件不符合标准鼠标单击事件行为：  

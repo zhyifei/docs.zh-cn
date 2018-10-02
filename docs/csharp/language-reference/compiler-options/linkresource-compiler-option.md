@@ -11,12 +11,12 @@ helpviewer_keywords:
 - -linkresource compiler option [C#]
 - linkresource compiler option [C#]
 ms.assetid: 440c26c2-77c1-4811-a0a3-57cce3f5fc96
-ms.openlocfilehash: 5c666b1c6440ac323830780ca5ca6930327ad9d3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: feca4713fe0e704799e2abbae3818edd0f3a5c84
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33219175"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43523170"
 ---
 # <a name="-linkresource-c-compiler-options"></a>-linkresource (C# 编译器选项)
 在输出文件中创建指向 .NET Framework 资源的链接。 不会在输出文件中添加资源文件。 这不同于会在输出文件中嵌入资源文件的 [-resource](../../../csharp/language-reference/compiler-options/resource-compiler-option.md) 选项。  
@@ -75,7 +75,8 @@ gacutil -i A.dll
 ```  
   
 ## <a name="see-also"></a>请参阅  
- [C# 编译器选项](../../../csharp/language-reference/compiler-options/index.md)  
- [Al.exe（程序集链接器）](../../../framework/tools/al-exe-assembly-linker.md)  
- [使用程序集和全局程序集缓存](../../../framework/app-domains/working-with-assemblies-and-the-gac.md)  
- [管理项目和解决方案属性](/visualstudio/ide/managing-project-and-solution-properties)
+
+- [C# 编译器选项](../../../csharp/language-reference/compiler-options/index.md)  
+- [Al.exe（程序集链接器）](../../../framework/tools/al-exe-assembly-linker.md)  
+- [使用程序集和全局程序集缓存](../../../framework/app-domains/working-with-assemblies-and-the-gac.md)  
+- [管理项目和解决方案属性](/visualstudio/ide/managing-project-and-solution-properties)

@@ -2,12 +2,12 @@
 title: ADO.NET 体系结构
 ms.date: 03/30/2017
 ms.assetid: fcd45b99-ae8f-45ab-8b97-d887beda734e
-ms.openlocfilehash: 384f2397e0e2794c4326d635db9f81fe1078f374
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 4c2299951202794112ea66c1f20025777c68e356
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32759863"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44195512"
 ---
 # <a name="adonet-architecture"></a>ADO.NET 体系结构
 以前，数据处理主要依赖于基于连接的双层模型。 随着数据处理越来越多地使用多层体系结构，程序员正在向断开方法转换，以便为他们的应用程序提供更好的可伸缩性。  
@@ -16,7 +16,7 @@ ms.locfileid: "32759863"
  [!INCLUDE[ado_orcas_long](../../../../includes/ado-orcas-long-md.md)] 用于访问和操作数据的两个主要组件是 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 数据提供程序和 <xref:System.Data.DataSet>。  
   
 ### <a name="net-framework-data-providers"></a>.NET Framework 数据提供程序  
- .NET Framework 数据提供程序是专门为数据操作以及快速、只进、只读访问数据而设计的组件。 `Connection` 对象提供到数据源的连接。 使用 `Command` 对象可以访问用于返回数据、修改数据、运行存储过程以及发送或检索参数信息的数据库命令。 `DataReader` 可从数据源提供高性能的数据流。 最后，`DataAdapter` 在 `DataSet` 对象和数据源之间起到桥梁作用。 `DataAdapter` 使用 `Command` 对象在数据源中执行 SQL 命令以向 `DataSet` 中加载数据，并将对 `DataSet` 中数据的更改协调回数据源。 有关详细信息，请参阅[.NET Framework 数据提供程序](../../../../docs/framework/data/adonet/data-providers.md)和[检索和修改 ADO.NET 中的数据](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)。  
+ .NET Framework 数据提供程序是专门为数据操作以及快速、只进、只读访问数据而设计的组件。 `Connection` 对象提供到数据源的连接。 使用 `Command` 对象可以访问用于返回数据、修改数据、运行存储过程以及发送或检索参数信息的数据库命令。 `DataReader` 可从数据源提供高性能的数据流。 最后，`DataAdapter` 在 `DataSet` 对象和数据源之间起到桥梁作用。 `DataAdapter` 使用 `Command` 对象在数据源中执行 SQL 命令以向 `DataSet` 中加载数据，并将对 `DataSet` 中数据的更改协调回数据源。 有关详细信息，请参阅[.NET Framework 数据提供程序](../../../../docs/framework/data/adonet/data-providers.md)并[检索和修改 ADO.NET 中的数据](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)。  
   
 ### <a name="the-dataset"></a>DataSet  
  ADO.NET `DataSet` 是专门为独立于任何数据源的数据访问而设计的。 因此，它可以用于多种不同的数据源，用于 XML 数据，或用于管理应用程序本地的数据。 `DataSet` 包含一个或多个 <xref:System.Data.DataTable> 对象的集合，这些对象由数据行和数据列以及有关 `DataTable` 对象中数据的主键、外键、约束和关系信息组成。 有关详细信息，请参阅[数据集、 数据表和数据视图](../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)。  
@@ -27,7 +27,7 @@ ms.locfileid: "32759863"
 ADO.NET 体系结构  
   
 ### <a name="choosing-a-datareader-or-a-dataset"></a>选择 DataReader 或 DataSet  
- 当你决定你的应用程序是否应使用`DataReader`(请参阅[使用 DataReader 检索数据](../../../../docs/framework/data/adonet/retrieving-data-using-a-datareader.md)) 或`DataSet`(请参阅[数据集、 数据表和数据视图](../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md))，请考虑的一种应用程序所需的功能。 使用 `DataSet` 可执行以下操作：  
+ 决定是否应使用你的应用程序时`DataReader`(请参阅[使用 DataReader 检索数据](../../../../docs/framework/data/adonet/retrieving-data-using-a-datareader.md)) 或`DataSet`(请参阅[数据集、 数据表和数据视图](../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md))，请考虑的类型应用程序所需的功能。 使用 `DataSet` 可执行以下操作：  
   
 -   在应用程序中将数据缓存在本地，以便可以对数据进行处理。 如果只需要读取查询结果，则 `DataReader` 是更好的选择。  
   
@@ -37,7 +37,7 @@ ADO.NET 体系结构
   
 -   对数据执行大量的处理，而不需要与数据源保持打开的连接，从而将该连接释放给其他客户端使用。  
   
- 如果不需要 `DataSet` 所提供的功能，则可以通过使用 `DataReader` 以只进、只读方式返回数据，从而提高应用程序的性能。 尽管`DataAdapter`使用`DataReader`以填充的内容`DataSet`(请参阅[填充数据集从 DataAdapter](../../../../docs/framework/data/adonet/populating-a-dataset-from-a-dataadapter.md))，通过使用`DataReader`，可以提高性能，因为这样可以节省内存将可供`DataSet`，并避免需要创建并填充的内容的处理`DataSet`。  
+ 如果不需要 `DataSet` 所提供的功能，则可以通过使用 `DataReader` 以只进、只读方式返回数据，从而提高应用程序的性能。 尽管`DataAdapter`使用`DataReader`以填充其内容`DataSet`(请参阅[填充数据集从 DataAdapter](../../../../docs/framework/data/adonet/populating-a-dataset-from-a-dataadapter.md))，通过使用`DataReader`，可以提升性能，因为这样可以节省内存将由`DataSet`，并避免创建和填充的内容所需的处理`DataSet`。  
   
 ## <a name="linq-to-dataset"></a>LINQ to DataSet  
  LINQ to DataSet 提供对在 DataSet 对象中缓存的数据的查询功能和编译时类型检查。 它使您可以使用一种 .NET Framework 开发语言（例如 C# 或 Visual Basic）来编写查询。 有关详细信息，请参阅 [LINQ to DataSet](../../../../docs/framework/data/adonet/linq-to-dataset.md)。  
@@ -58,4 +58,4 @@ ADO.NET 体系结构
   
 ## <a name="see-also"></a>请参阅  
  [ADO.NET 概述](../../../../docs/framework/data/adonet/ado-net-overview.md)  
- [ADO.NET 托管提供程序和数据集开发人员中心](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)

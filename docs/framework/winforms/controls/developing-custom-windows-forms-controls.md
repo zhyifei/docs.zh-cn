@@ -5,12 +5,12 @@ helpviewer_keywords:
 - custom controls [Windows Forms], developing using code
 - Control class [Windows Forms], Windows Forms
 ms.assetid: 236cebc0-bd71-4f18-9fd6-5d0e592375df
-ms.openlocfilehash: 935358664f93b6428b9153a9bcbed862aeee07ab
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6ab459f37e825d71163e375e10f30fbe3e23911a
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33528663"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43525531"
 ---
 # <a name="developing-custom-windows-forms-controls-with-the-net-framework"></a>使用 .NET Framework 开发自定义 Windows 窗体控件
 Windows 窗体控件是可以重用的组件，可以封装用户界面功能并用于客户端基于 Windows 的应用程序。 Windows 窗体不仅可以提供许多易用的控件，而且还可以提供用于开发你自己的控件的基础结构。 你可以组合现有的控件、扩展现有的控件或创作你自己的自定义控件。 本节介绍了背景信息和示例，有助于你开发 Windows 窗体控件。  
@@ -51,13 +51,13 @@ Windows 窗体控件是可以重用的组件，可以封装用户界面功能并
  对此类进行描述，并提供指向其所有成员的链接。  
   
 ## <a name="related-sections"></a>相关章节  
- [组件的设计时特性](http://msdn.microsoft.com/library/12050fe3-9327-4509-9e21-4ee2494b95c3)  
+ [组件的设计时特性](https://msdn.microsoft.com/library/12050fe3-9327-4509-9e21-4ee2494b95c3)  
  将列出的元数据特性应用到组件和控件，以便在设计时正确显示在可视化设计器中。  
   
- [扩展设计时支持](http://msdn.microsoft.com/library/d6ac8a6a-42fd-4bc8-bf33-b212811297e2)  
+ [扩展设计时支持](https://msdn.microsoft.com/library/d6ac8a6a-42fd-4bc8-bf33-b212811297e2)  
  描述如何实现提供设计时支持的类，例如编辑器和设计器。  
   
- [如何：授予组件和控件许可权限](http://msdn.microsoft.com/library/8e66c1ed-a445-4b26-8185-990b6e2bbd57)  
+ [如何：授予组件和控件许可权限](https://msdn.microsoft.com/library/8e66c1ed-a445-4b26-8185-990b6e2bbd57)  
  描述如何实现授予控件或组件许可权限。  
   
- 另请参阅[设计时开发 Windows 窗体控件](http://msdn.microsoft.com/library/w29y3h59\(v=vs.110\))。
+ 另请参阅[设计时开发 Windows 窗体控件](https://msdn.microsoft.com/library/w29y3h59\(v=vs.110\))。

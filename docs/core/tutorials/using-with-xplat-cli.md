@@ -5,12 +5,12 @@ author: cartermp
 ms.author: mairaw
 ms.date: 03/08/2017
 ms.technology: dotnet-cli
-ms.openlocfilehash: 57045a91ce62a730493d219bdf7c30e90fe57759
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5ec7168ebc2ee4fc428d1ab520e986842f111ca7
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33216335"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44200312"
 ---
 # <a name="getting-started-with-net-core-on-windowslinuxmacos-using-the-command-line"></a>使用命令行在 Windows/Linux/macOS 上入门 .NET Core
 
@@ -29,7 +29,7 @@ ms.locfileid: "33216335"
 
 打开命令提示符，创建一个名为“Hello”的文件夹。 导航到创建的文件夹，键入下列内容：
 
-```
+```console
 $ dotnet new console
 $ dotnet restore
 $ dotnet run
@@ -40,10 +40,10 @@ $ dotnet run
 1. `$ dotnet new console`
 
    [`dotnet new`](../tools/dotnet-new.md) 会创建一个最新的 `Hello.csproj` 项目文件，其中包含生成控制台应用所必需的依赖项。  它还将创建 `Program.cs`，这是包含应用程序的入口点的基本文件。
-   
+
    `Hello.csproj`：
 
-   [!code[Hello.csproj](../../../samples/core/console-apps/HelloMsBuild/Hello.csproj)]   
+   [!code[Hello.csproj](../../../samples/core/console-apps/HelloMsBuild/Hello.csproj)]
 
    项目文件指定还原依赖项和生成程序所需的一切。
 
@@ -52,7 +52,7 @@ $ dotnet run
 
    `Program.cs`：
 
-   [!code-csharp[Program.cs](../../../samples/core/console-apps/HelloMsBuild/Program.cs)]   
+   [!code-csharp[Program.cs](../../../samples/core/console-apps/HelloMsBuild/Program.cs)]
 
    该程序从 `using System` 开始，这意味着“将 `System` 命名空间中的所有内容都纳入此文件的作用域”。 `System` 命名空间包括基本结构，如 `string` 或数值类型。
 
@@ -63,21 +63,21 @@ $ dotnet run
 2. `$ dotnet restore`
 
    [`dotnet restore`](../tools/dotnet-restore.md) 调用到 [NuGet](https://www.nuget.org/)（.NET 包管理器）以还原依赖项树。 NuGet 分析 *Hello.csproj* 文件、下载文件中所述的依赖项（或从计算机缓存中获取）并编写 *obj/project.assets.json* 文件。  需要 *project.assets.json* 文件才可进行编译和运行。
-   
-   *project.assets.json* 文件是 NuGet 依赖项和其他描述应用的信息的持久化完整图片集。  此文件由其他工具（如 [`dotnet build`](../tools/dotnet-build.md) 和 [`dotnet run`](../tools/dotnet-run.md)）读取，让它们可以使用正确的 NuGet 依赖项和绑定解决方法集处理源代码。
-   
+
+   *project.assets.json* 文件是 NuGet 依赖项和其他描述应用的信息的持久化完整图片集。  此文件由其他工具（如 [`dotnet build`](../tools/dotnet-build.md) 和 [ `dotnet run`](../tools/dotnet-run.md)）读取，让它们可以使用正确的 NuGet 依赖项和绑定解决方法集处理源代码。
+
 3. `$ dotnet run`
 
    [`dotnet run`](../tools/dotnet-run.md) 调用 [`dotnet build`](../tools/dotnet-build.md) 来确保已生成要生成的目标，然后调用 `dotnet <assembly.dll>` 运行目标应用程序。
-   
-    ```
+
+    ```console
     $ dotnet run
     Hello World!
     ```
 
     或者，还可以执行 [`dotnet build`](../tools/dotnet-build.md) 来编译代码，无需运行已生成的控制台应用程序。 这使得编译的应用程序（作为 DLL 文件）可以在 Windows 上使用 `dotnet bin\Debug\netcoreapp1.0\Hello.dll` 运行（将 `/` 用于非 Windows 系统）。 还可以对应用程序指定参数，相关操作将在本主题稍后部分进行介绍。
 
-    ```
+    ```console
     $ dotnet bin\Debug\netcoreapp1.0\Hello.dll
     Hello World!
     ```
@@ -90,13 +90,13 @@ $ dotnet run
 
 1. 将 *Program.cs* 文件的内容替换为以下代码：
 
-   [!code-csharp[Fibonacci](../../../samples/core/console-apps/fibonacci-msbuild/Program.cs)]   
+   [!code-csharp[Fibonacci](../../../samples/core/console-apps/fibonacci-msbuild/Program.cs)]
 
 2. 执行 [`dotnet build`](../tools/dotnet-build.md) 以编译更改。
 
 3. 运行向应用传递参数的程序：
 
-   ```
+   ```console
    $ dotnet run -- John
    Hello John!
    Fibonacci Numbers 1-15:
@@ -121,11 +121,11 @@ $ dotnet run
 
 ## <a name="working-with-multiple-files"></a>使用多个文件
 
-对于简单的一次性程序，使用单个文件即可，但如果要生成更复杂的应用，则项目上可能需要多个源文件。让我们通过缓存一些 Fibonacci 值，基于之前的 Fibonacci 示例来生成这类应用，并添加一些递归特性。 
+对于简单的一次性程序，使用单个文件即可，但如果要生成更复杂的应用，则项目上可能需要多个源文件。让我们通过缓存一些 Fibonacci 值，基于之前的 Fibonacci 示例来生成这类应用，并添加一些递归特性。
 
 1. 使用以下代码将新文件添加到名为 *FibonacciGenerator.cs* 的 *Hello* 目录：
 
-   [!code-csharp[Fibonacci Generator](../../../samples/core/console-apps/FibonacciBetterMsBuild/FibonacciGenerator.cs)]   
+   [!code-csharp[Fibonacci Generator](../../../samples/core/console-apps/FibonacciBetterMsBuild/FibonacciGenerator.cs)]
 
 2. 更改 *Program.cs* 文件中的 `Main` 方法，以实例化新的类并调用其方法，如下例所示：
 
@@ -135,7 +135,8 @@ $ dotnet run
 
 4. 通过执行 [`dotnet run`](../tools/dotnet-run.md) 来运行应用。 以下是程序输出：
 
-   ```
+   ```console
+   $ dotnet run
    0
    1
    1
@@ -159,4 +160,4 @@ $ dotnet run
 
 ## <a name="see-also"></a>请参阅
 
-[使用 .NET Core CLI 工具组织和测试项目](testing-with-cli.md)
+* [使用 .NET Core CLI 工具组织和测试项目](testing-with-cli.md)

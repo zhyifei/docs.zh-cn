@@ -13,12 +13,12 @@ helpviewer_keywords:
 - public type information [C#]
 - -reference compiler option [C#]
 ms.assetid: 8d13e5b0-abf6-4c46-bf71-2daf2cd0a6c4
-ms.openlocfilehash: 4a96da3668a73368dd98055a9082479f162b7b45
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 131cdf62917ab2fc8d564b85c30d13c8971e5809
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33218171"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46003617"
 ---
 # <a name="-reference-c-compiler-options"></a>-reference（C# 编译器选项）
 -reference 选项使编译器将指定文件中的[公共](../../../csharp/language-reference/keywords/public.md)类型信息导入当前项目，从而使你可从指定的程序集文件中引用元数据。  
@@ -67,10 +67,12 @@ ms.locfileid: "33218171"
  本示例演示如何使用[外部别名](../../../csharp/language-reference/keywords/extern-alias.md)功能。  
   
  编译源文件，并从先前已编译的 `grid.dll` 和 `grid20.dll` 中导入元数据。 这两个 DLL 包含同一组件的不同版本，将使用两个带有别名选项的 -reference 编译源文件。 这两个选项如下所示：  
+
+```console
+-reference:GridV1=grid.dll -reference:GridV2=grid20.dll  
+```
   
- -reference:GridV1=grid.dll 和 -reference:GridV2=grid20.dll  
-  
- 这将设置外部别名“GridV1”和“GridV2”，将在程序中通过外部语句使用它们：  
+ 这将设置外部别名 `GridV1` 和 `GridV2`，将通过 `extern` 语句在程序中使用它们：  
   
 ```csharp  
 extern alias GridV1;  
@@ -78,18 +80,19 @@ extern alias GridV2;
 // Using statements go here.  
 ```  
   
- 完成此操作后，可以通过在控件名称前添加 GridV1 前缀来引用 grid.dll 中的网格控件，如下所示：  
+ 完成此操作后，可以通过在控件名称前添加 `GridV1` 前缀来引用 `grid.dll` 中的网格控件，如下所示：  
   
 ```csharp  
 GridV1::Grid  
 ```  
   
- 此外，可以通过在控件名称前添加 GridV2 前缀来引用 grid20.dll 中的网格控件，如下所示：  
+ 此外，可以通过在控件名称前添加 `GridV2` 前缀来引用 `grid20.dll` 中的网格控件，如下所示：  
   
 ```csharp  
 GridV2::Grid   
 ```  
   
 ## <a name="see-also"></a>请参阅  
- [C# 编译器选项](../../../csharp/language-reference/compiler-options/index.md)  
- [管理项目和解决方案属性](/visualstudio/ide/managing-project-and-solution-properties)
+
+- [C# 编译器选项](../../../csharp/language-reference/compiler-options/index.md)  
+- [管理项目和解决方案属性](/visualstudio/ide/managing-project-and-solution-properties)

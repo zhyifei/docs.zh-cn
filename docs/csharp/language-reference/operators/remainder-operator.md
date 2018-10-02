@@ -1,36 +1,55 @@
 ---
 title: '% 运算符（C# 参考）'
-ms.date: 04/04/2018
+ms.date: 09/04/2018
 f1_keywords:
 - '%_CSharpKeyword'
 helpviewer_keywords:
 - remainder operator [C#]
 - '% operator [C#]'
 ms.assetid: 3b74f4f9-fd9c-45e7-84fa-c8d71a0dfad7
-ms.openlocfilehash: b906feb22aaec97e58da562b615baae01f3e0719
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9cd2f7ad3856feb34667686979c942ecb21887c2
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33271062"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45645913"
 ---
 # <a name="-operator-c-reference"></a>% 运算符（C# 参考）
-余数运算符 (`%`) 计算第一个操作数除以第二个操作数后的余数。 所有数值类型都已预定义余数运算符。 
+
+余数运算符 `%` 计算第一个操作数除以第二个操作数后的余数。 用户定义的类型可以[重载](../keywords/operator.md) `%` 运算符。 当 `%` 重载时，[余数赋值运算符](remainder-assignment-operator.md) `%=` 也会隐式重载。
+
+所有数值类型都支持余数运算符。
+
+## <a name="integer-remainder"></a>整数余数
   
-## <a name="remarks"></a>备注  
- 公式 `a % b` 始终返回介于 `(-b, b)` 范围（不含边界值）内的值（绝不会返回 `b` 或 `-b`），同时保留被除数的符号。 对于整数除法，余数运算符执行规则 `a % b = a - (a / b) * b`。
-  
- 不要将这与规范取模相混淆，后者虽然执行类似的规则，但采用 Floor 除法，并返回介于 `[0, b)` 范围内的值。 C# 没有规范取模运算符。 不过，行为与正被除数相同。
-  
- 用户定义的类型可以重载 `%` 运算符（请参阅[运算符](../../../csharp/language-reference/keywords/operator.md)）。 重载二元运算符时，也会隐式重载相应的赋值运算符（若有）。  
-  
-## <a name="example"></a>示例  
- [!code-csharp[csRefOperators#9](../../../csharp/language-reference/operators/codesnippet/CSharp/remainder-operator_1.cs)]  
-  
-## <a name="comments"></a>注释  
- 请注意与双精度类型关联的舍入误差。  
-  
-## <a name="see-also"></a>请参阅  
- [C# 参考](../../../csharp/language-reference/index.md)  
- [C# 编程指南](../../../csharp/programming-guide/index.md)  
- [C# 运算符](../../../csharp/language-reference/operators/index.md)
+对于整数操作数，`a % b` 的结果是由 `a - (a / b) * b` 生成的值。 非零余数的符号与第一个操作数的符号相同，如下例所示：
+
+[!code-csharp-interactive[integer remainder](~/samples/snippets/csharp/language-reference/operators/RemainderExamples.cs#1)]
+
+## <a name="floating-point-remainder"></a>浮点余数
+
+对于[浮点](../keywords/float.md)和[双精度型](../keywords/double.md)操作数，有限的 `x` 和 `y` 的 `x % y` 的结果是值 `z`，使得
+
+- 如果不是零，则 `z` 的符号与 `x` 的符号相同；
+- `z` 的绝对值是 `|x| - n * |y|` 生成的值，其中 `n` 是小于或等于 `|x| / |y|` 的最大可能整数，`|x|` 和 `|y|` 分别是 `x` 和 `y` 的绝对值。
+
+有关非限定操作数的 `%` 运算符行为的信息，请参阅 [C# 语言规范](/dotnet/csharp/language-reference/language-specification/index)的[余数运算符](/dotnet/csharp/language-reference/language-specification/expressions#remainder-operator)章节。
+
+> [!NOTE]
+> 计算余数的此方法类似于用于整数操作数的方法，但与 IEEE 754 不同。 如果需要符合 IEEE 754 的余数运算，使用 <xref:System.Math.IEEERemainder%2A?displayProperty=nameWithType> 方法。
+
+下面的示例演示 `float` 和 `double` 操作数的余数运算符的行为：
+
+[!code-csharp-interactive[float and double remainder](~/samples/snippets/csharp/language-reference/operators/RemainderExamples.cs#2)]
+
+请注意与浮点类型相关联的舍入错误。
+
+有关[十进制](../keywords/decimal.md)操作数，余数运算符 `%` 等效于 <xref:System.Decimal?displayProperty=nameWithType> 类型的[余数运算符](<xref:System.Decimal.op_Modulus(System.Decimal,System.Decimal)>)。
+
+## <a name="see-also"></a>请参阅
+
+- [C# 参考](../index.md)
+- [C# 编程指南](../../programming-guide/index.md)
+- [C# 运算符](index.md)
+- <xref:System.Math.IEEERemainder%2A?displayProperty=nameWithType>
+- <xref:System.Math.DivRem%2A?displayProperty=nameWithType>

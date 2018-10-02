@@ -6,18 +6,17 @@ dev_langs:
 - vb
 ms.assetid: cad53e1a-b7c9-4064-bc87-508c3d1dce49
 author: BrucePerlerMS
-manager: mbaldwin
-ms.openlocfilehash: b8cab1762a8c8c672d557c7bcccc2f339cbaefe9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f488d2e840ec2524f0cde8dc4b3e6c1cd10c554e
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33495049"
+ms.lasthandoff: 09/27/2018
+ms.locfileid: "47400356"
 ---
 # <a name="message-security-with-an-anonymous-client"></a>匿名客户端的消息安全
-下面的方案演示客户端和受 Windows Communication Foundation (WCF) 消息安全的服务。 设计目标是使用消息安全而非传输安全，以便将来可支持更加丰富的基于声明的模型。 有关使用丰富的声明进行授权的详细信息，请参阅[管理声明和使用标识模型的授权](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md)。  
+下面的方案演示客户端和受保护的 Windows Communication Foundation (WCF) 消息安全的服务。 设计目标是使用消息安全而非传输安全，以便将来可支持更加丰富的基于声明的模型。 有关使用丰富声明用于授权的详细信息，请参阅[管理声明和使用标识模型的授权](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md)。  
   
- 有关示例应用程序，请参阅[匿名消息安全](../../../../docs/framework/wcf/samples/message-security-anonymous.md)。  
+ 示例应用程序，请参阅[匿名消息安全](../../../../docs/framework/wcf/samples/message-security-anonymous.md)。  
   
  ![消息与匿名客户端的安全](../../../../docs/framework/wcf/feature-details/media/b361a565-831c-4c10-90d7-66d8eeece0a1.gif "b361a565-831c-4c10-90d7-66d8eeece0a1")  
   
@@ -138,4 +137,4 @@ ms.locfileid: "33495049"
  [分布式应用程序安全](../../../../docs/framework/wcf/feature-details/distributed-application-security.md)  
  [匿名消息安全](../../../../docs/framework/wcf/samples/message-security-anonymous.md)  
  [服务标识和身份验证](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)  
- [Windows Server App Fabric 的安全模型](http://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+ [Windows Server App Fabric 的安全模型](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

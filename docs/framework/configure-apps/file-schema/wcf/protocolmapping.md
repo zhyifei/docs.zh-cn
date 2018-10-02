@@ -2,23 +2,25 @@
 title: '&lt;protocolMapping&gt;'
 ms.date: 03/30/2017
 ms.assetid: 5076644b-1f33-4f26-9488-87de9fcda04c
-ms.openlocfilehash: 4afdaaa62c1ac3241eb7382d0995bed51bde73e2
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: c50ca451052c9ad9d7ab6a0cb5387e644196191e
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32748901"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43525001"
 ---
 # <a name="ltprotocolmappinggt"></a>&lt;protocolMapping&gt;
-表示一个配置节，用于定义一组的传输协议方案 （例如，http、 net.tcp、 net.pipe 等） 和 WCF 绑定之间的默认协议映射。 当在运行时创建默认终结点，Windows Communication Foundation (WCF) 配置的映射查找并确定要用于特定的绑定基于地址。  
+表示用于定义一组的传输协议方案 （例如，http、 net.tcp、 net.pipe 等） 和 WCF 绑定之间的默认协议映射的配置节。 当在运行时创建默认终结点，Windows Communication Foundation (WCF) 查看已配置的映射，并决定要用于特定的绑定基于此地址。  
   
- \<system.serviceModel>  
-\<protocolMapping >  
+[**\<system.serviceModel >**](system-servicemodel.md)  
+&nbsp;&nbsp;**\<protocolMapping >**  
   
 ## <a name="syntax"></a>语法  
   
 ```xml
-   <protocolMapping>    <add binding="String"         bindingConfiguration="String"         scheme="http/net.msmq/net.pipe/net.tcp"/></protocolMapping>  
+<protocolMapping>
+   <add binding="String" bindingConfiguration="String" scheme="http/net.msmq/net.pipe/net.tcp"/>
+</protocolMapping>  
 ```
 
 ## <a name="attributes-and-elements"></a>特性和元素  
@@ -31,13 +33,13 @@ ms.locfileid: "32748901"
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<筛选器 >](../../../../../docs/framework/configure-apps/file-schema/wcf/filters-of-routing.md)|包含传输协议方案 （例如，http、 net.tcp、 net.pipe 等） 和 WCF 绑定之间的默认协议映射。|  
+|[\<筛选器 >](filters-of-routing.md)|包含传输协议方案 （例如，http、 net.tcp、 net.pipe 等） 和 WCF 绑定之间的默认协议映射。|  
   
 ### <a name="parent-elements"></a>父元素  
   
 |元素|描述|  
 |-------------|-----------------|  
-|system.ServiceModel|所有 WCF 配置元素的根元素。|  
+|[\<system.serviceModel>](system-servicemodel.md)|所有 WCF 配置元素的根元素。|  
   
 ## <a name="example"></a>示例  
  下面的配置示例演示 machine.config 文件中的默认协议映射。 您可以通过修改 machine.config 文件在计算机级别重写此默认映射。 或者，如果您只希望在应用程序范围内重写此映射，则可以在应用程序配置文件中重写此节，并为单独的协议方案更改映射。  

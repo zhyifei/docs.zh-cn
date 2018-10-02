@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: 920cfe3b-d525-4bb2-abf6-9431651f9cf9
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6aa9c6717d89cf5529ef65b56811e614b6fc30f1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 39e8afd8c22ca757141d2a7b556b115f8380e731
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33574756"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47205572"
 ---
 # <a name="resolving-external-xslt-style-sheets-and-documents"></a>解析外部 XSLT 样式表和文档
 转换过程中会有几个场合需要解析外部资源。  
@@ -43,16 +43,17 @@ ms.locfileid: "33574756"
   
  调用 <xref:System.Xml.Xsl.XslTransform.Transform%2A> 方法时，将针对在加载时提供的证据来计算权限，并将权限集分配给整个转换过程。 如果 `document()` 函数尝试启动一个操作而该操作需要权限集中没有的权限，就会引发异常。  
   
-## <a name="see-also"></a>请参阅  
- [XslTransform 类的 XSLT 转换](../../../../docs/standard/data/xml/xslt-transformations-with-the-xsltransform-class.md)  
- [XslTransform 类实现 XSLT 处理器](../../../../docs/standard/data/xml/xsltransform-class-implements-the-xslt-processor.md)  
- [XslTransform 的输出](../../../../docs/standard/data/xml/outputs-from-an-xsltransform.md)  
- [不同存储区的 XSLT 转换](../../../../docs/standard/data/xml/xslt-transformations-over-different-stores.md)  
- [样式表参数和扩展对象的 XsltArgumentList](../../../../docs/standard/data/xml/xsltargumentlist-for-style-sheet-parameters-and-extension-objects.md)  
- [使用 \<msxsl:script>](../../../../docs/standard/data/xml/xslt-stylesheet-scripting-using-msxsl-script.md) 编写 XSLT 样式表脚本  
- [对 msxsl:node-set() 函数的支持](../../../../docs/standard/data/xml/support-for-the-msxsl-node-set-function.md)  
- [转换中的 XPathNavigator](../../../../docs/standard/data/xml/xpathnavigator-in-transformations.md)  
- [转换中的 XPathNodeIterator](../../../../docs/standard/data/xml/xpathnodeiterator-in-transformations.md)  
- [XslTransform 的 XPathDocument 输入](../../../../docs/standard/data/xml/xpathdocument-input-to-xsltransform.md)  
- [XslTransform 的 XmlDataDocument 输入](../../../../docs/standard/data/xml/xmldatadocument-input-to-xsltransform.md)  
- [XslTransform 的 XmlDocument 输入](../../../../docs/standard/data/xml/xmldocument-input-to-xsltransform.md)
+## <a name="see-also"></a>请参阅
+
+- [XslTransform 类的 XSLT 转换](../../../../docs/standard/data/xml/xslt-transformations-with-the-xsltransform-class.md)  
+- [XslTransform 类实现 XSLT 处理器](../../../../docs/standard/data/xml/xsltransform-class-implements-the-xslt-processor.md)  
+- [XslTransform 的输出](../../../../docs/standard/data/xml/outputs-from-an-xsltransform.md)  
+- [不同存储区的 XSLT 转换](../../../../docs/standard/data/xml/xslt-transformations-over-different-stores.md)  
+- [样式表参数和扩展对象的 XsltArgumentList](../../../../docs/standard/data/xml/xsltargumentlist-for-style-sheet-parameters-and-extension-objects.md)  
+- [使用 \<msxsl:script>](../../../../docs/standard/data/xml/xslt-stylesheet-scripting-using-msxsl-script.md) 编写 XSLT 样式表脚本  
+- [对 msxsl:node-set() 函数的支持](../../../../docs/standard/data/xml/support-for-the-msxsl-node-set-function.md)  
+- [转换中的 XPathNavigator](../../../../docs/standard/data/xml/xpathnavigator-in-transformations.md)  
+- [转换中的 XPathNodeIterator](../../../../docs/standard/data/xml/xpathnodeiterator-in-transformations.md)  
+- [XslTransform 的 XPathDocument 输入](../../../../docs/standard/data/xml/xpathdocument-input-to-xsltransform.md)  
+- [XslTransform 的 XmlDataDocument 输入](../../../../docs/standard/data/xml/xmldatadocument-input-to-xsltransform.md)  
+- [XslTransform 的 XmlDocument 输入](../../../../docs/standard/data/xml/xmldocument-input-to-xsltransform.md)

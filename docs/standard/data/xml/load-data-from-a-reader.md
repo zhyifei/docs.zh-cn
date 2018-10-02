@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: 7e74918c-bc72-4977-a49b-e1520a6d8f60
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5156374708beb07da875d2e2a8a3b74e52e21427
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 55756092f086de47c4b2acb8f147ca3ab231abe1
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33569969"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44207221"
 ---
 # <a name="load-data-from-a-reader"></a>从读取器中加载数据
 如果使用 <xref:System.Xml.XmlDocument.Load%2A> 方法和 <xref:System.Xml.XmlReader> 的参数加载 XML 文档，与从其他格式加载数据的行为相比，发生的行为有所不同。 如果读取器处于初始状态，<xref:System.Xml.XmlDocument.Load%2A> 将使用读取器中的全部内容，并通过读取器中的所有数据生成 XML 文档对象模型 (DOM)。  
@@ -29,5 +29,6 @@ ms.locfileid: "33569969"
   
  默认情况下，<xref:System.Xml.XmlDocument.Load%2A> 不会使用文档类型定义 (DTD) 或架构验证来验证 XML 是否有效。 只验证 XML 的格式是否正确。 要进行验证，需要使用 <xref:System.Xml.XmlReader> 类创建一个 <xref:System.Xml.XmlReaderSettings>。 <xref:System.Xml.XmlReader> 类可以使用 DTD 或架构定义语言 (XSD) 架构强制进行验证。 <xref:System.Xml.ValidationType> 类的 <xref:System.Xml.XmlReaderSettings> 属性确定 <xref:System.Xml.XmlReader> 实例是否强制进行验证。 有关验证 XML 数据的详细信息，请参阅 <xref:System.Xml.XmlReader> 引用页的“备注”部分。  
   
-## <a name="see-also"></a>请参阅  
- [XML 文档对象模型 (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+## <a name="see-also"></a>请参阅
+
+- [XML 文档对象模型 (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

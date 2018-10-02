@@ -3,13 +3,12 @@ title: System.ServiceModel.Security.IssuanceTokenProviderUsingCachedToken
 ms.date: 03/30/2017
 ms.assetid: ee51ed4e-821c-4010-8d64-eabde522169f
 author: BrucePerlerMS
-manager: mbaldwin
-ms.openlocfilehash: c9c3ba30d07de0c9adda36db705e828b229b4bc1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 739769f9f8df2e5a927b07adbe92eca93e960b55
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33481457"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47203129"
 ---
 # <a name="systemservicemodelsecurityissuancetokenproviderusingcachedtoken"></a>System.ServiceModel.Security.IssuanceTokenProviderUsingCachedToken
 System.ServiceModel.Security.IssuanceTokenProviderUsingCachedToken  

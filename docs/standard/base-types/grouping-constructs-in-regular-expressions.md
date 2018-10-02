@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0fc18634-f590-4062-8d5c-f0b71abe405b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0830ec4022ca789d9aac0d1ae2c10ae6f76cc75e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4e6a0b0a6fbad1c01ed26b5090cd18dcce3be057
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33579816"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "44041595"
 ---
 # <a name="grouping-constructs-in-regular-expressions"></a>正则表达式中的分组构造
 分组构造描述了正则表达式的子表达式，用于捕获输入字符串的子字符串。 你可以使用分组构造来完成下列任务：  
@@ -168,7 +168,7 @@ ms.locfileid: "33579816"
 |-------------|-----------------|  
 |`\D+`|匹配一个或多个非十进制数字字符。|  
 |`(?<digit>\d+)`|匹配一个或多个十进制数字字符。 将匹配分配到 `digit` 命名组。|  
-|\D+|匹配一个或多个非十进制数字字符。|  
+|`\D+`|匹配一个或多个非十进制数字字符。|  
 |`(?<digit>\d+)?`|匹配一个或多个十进制数字字符的零个或一个匹配项。 将匹配分配到 `digit` 命名组。|  
   
 <a name="balancing_group_definition"></a>   
@@ -470,6 +470,7 @@ ms.locfileid: "33579816"
   
  第一个捕获组匹配句子的每个单词。 第二个捕获组匹配每个单词，连同标点符号和该单词后的空白区域。 <xref:System.Text.RegularExpressions.Group> 对象的索引是 2，提供了有关由第二个捕获组匹配的文本的信息。 可从 <xref:System.Text.RegularExpressions.CaptureCollection> 对象获取捕获组捕获的整组单词，该对象由 <xref:System.Text.RegularExpressions.Group.Captures%2A?displayProperty=nameWithType> 属性返回。  
   
-## <a name="see-also"></a>请参阅  
- [正则表达式语言 - 快速参考](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)  
- [回溯](../../../docs/standard/base-types/backtracking-in-regular-expressions.md)
+## <a name="see-also"></a>请参阅
+
+- [正则表达式语言 - 快速参考](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)  
+- [回溯](../../../docs/standard/base-types/backtracking-in-regular-expressions.md)

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 94b81775-5a22-4975-8c47-8620c40c3f35
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 8d503e06139fc6ce14f4d2c50c46e4bcfeb1b860
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: d249cc412a1638e62b57b4976adc23fdf8f36e80
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32754475"
+ms.lasthandoff: 09/28/2018
+ms.locfileid: "47425792"
 ---
 # <a name="ltremovegt-element-for-connectionmanagement-network-settings"></a>&lt;删除&gt;connectionManagement （网络设置） 的元素
 从连接管理列表中删除 IP 地址或 DNS 名称。  
@@ -63,7 +62,7 @@ ms.locfileid: "32754475"
  此元素可在应用程序配置文件或计算机配置文件 (Machine.config) 中使用。  
   
 ## <a name="example"></a>示例  
- 下面的示例中移除服务器 www.adventure-works.com 所有连接管理列表条目，然后配置应用程序使用 4 个到 www.contoso.com 和两个连接到所有其他服务器。  
+ 下面的示例中移除服务器 www.adventure-works.com 所有连接管理列表条目，然后配置应用程序使用与服务器 www.contoso.com 的四个连接和两个连接到所有其他服务器。  
   
 ```xml  
 <configuration>  

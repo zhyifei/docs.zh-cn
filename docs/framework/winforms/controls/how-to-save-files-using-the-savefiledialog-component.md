@@ -11,33 +11,33 @@ helpviewer_keywords:
 - files [Windows Forms], saving
 - OpenFile method [Windows Forms], saving files with SaveFileDialog component
 ms.assetid: 02e8f409-b83f-4707-babb-e71f6b223d90
-ms.openlocfilehash: ca6ca5adbbe20a438ba936778ba71f1a163b40e5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4755d950da6726f007ae3333a558f3cafdcada9b
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33540525"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43508155"
 ---
 # <a name="how-to-save-files-using-the-savefiledialog-component"></a>如何：使用 SaveFileDialog 组件保存文件
-<xref:System.Windows.Forms.SaveFileDialog>组件，用户可以浏览文件系统并选择要保存文件。 对话框返回用户在对话框中所选的文件路径和名称。 但是必须编写代码才能真正地将文件写入磁盘。  
+<xref:System.Windows.Forms.SaveFileDialog>组件让用户可以浏览文件系统并选择要保存的文件。 对话框返回用户在对话框中所选的文件路径和名称。 但是必须编写代码才能真正地将文件写入磁盘。  
   
 ### <a name="to-save-a-file-using-the-savefiledialog-component"></a>使用 SaveFileDialog 组件保存文件  
   
 -   显示“保存文件”对话框，并调用来方法保存用户选择的文件。  
   
-     使用<xref:System.Windows.Forms.SaveFileDialog>组件的<xref:System.Windows.Forms.SaveFileDialog.OpenFile%2A>方法以将保存该文件。 此方法提供<xref:System.IO.Stream>可以写入的对象。  
+     使用<xref:System.Windows.Forms.SaveFileDialog>组件的<xref:System.Windows.Forms.SaveFileDialog.OpenFile%2A>方法以保存该文件。 此方法可让您<xref:System.IO.Stream>可以写入的对象。  
   
-     下面的示例使用<xref:System.Windows.Forms.DialogResult>属性来获取该文件的名称和<xref:System.Windows.Forms.OpenFileDialog.OpenFile%2A>方法以将保存该文件。 <xref:System.Windows.Forms.SaveFileDialog.OpenFile%2A>方法提供写入到文件流。  
+     下面的示例使用<xref:System.Windows.Forms.DialogResult>属性来获取文件的名称和<xref:System.Windows.Forms.OpenFileDialog.OpenFile%2A>方法以保存该文件。 <xref:System.Windows.Forms.SaveFileDialog.OpenFile%2A>方法提供要写入到文件的流。  
   
-     在下面的示例中，没有<xref:System.Windows.Forms.Button>控件分配给它的映像。 当你单击按钮，<xref:System.Windows.Forms.SaveFileDialog>与允许的类型.gif、.jpeg 和.bmp 文件的筛选器实例化组件。 如果在“保存文件”对话框中选择了此类型的文件，那么按钮的图像将会保存。  
+     在以下示例中，没有<xref:System.Windows.Forms.Button>向其分配了图像控件。 单击按钮时<xref:System.Windows.Forms.SaveFileDialog>使用一个允许的类型.gif、.jpeg 和.bmp 文件筛选器实例化组件。 如果在“保存文件”对话框中选择了此类型的文件，那么按钮的图像将会保存。  
   
     > [!IMPORTANT]
-    >  要获取或设置<xref:System.Windows.Forms.FileDialog.FileName%2A>属性，您的程序集需要特权级别授予通过<xref:System.Security.Permissions.FileIOPermission?displayProperty=nameWithType>类。 如果在部分信任上下文中运行，该进程可能会因特权不足而引发异常。 有关详细信息，请参阅[代码访问安全性基础知识](../../../../docs/framework/misc/code-access-security-basics.md)。  
+    >  获取或设置<xref:System.Windows.Forms.FileDialog.FileName%2A>属性，您的程序集需要的特权等级授予通过<xref:System.Security.Permissions.FileIOPermission?displayProperty=nameWithType>类。 如果在部分信任上下文中运行，该进程可能会因特权不足而引发异常。 有关详细信息，请参阅[代码访问安全性基础知识](../../../../docs/framework/misc/code-access-security-basics.md)。  
   
-     该示例假定你的窗体具有<xref:System.Windows.Forms.Button>使用来控制其<xref:System.Windows.Forms.ButtonBase.Image%2A>属性设置为的类型.gif、.jpeg 或.bmp 文件。  
+     该示例假定窗体具有<xref:System.Windows.Forms.Button>与控制其<xref:System.Windows.Forms.ButtonBase.Image%2A>属性设置为的类型.gif、.jpeg 或.bmp 文件。  
   
     > [!NOTE]
-    >  <xref:System.Windows.Forms.FileDialog>类的<xref:System.Windows.Forms.FileDialog.FilterIndex%2A>属性 (它，由于继承，属于<xref:System.Windows.Forms.SaveFileDialog>类) 使用基于 1 的索引。 如果要通过编写代码以特定格式保存数据（例如，以纯文本或二进制格式保存文件），那么这一点很重要。 以下示例介绍了该属性。  
+    >  <xref:System.Windows.Forms.FileDialog>类的<xref:System.Windows.Forms.FileDialog.FilterIndex%2A>属性 (其中，继承是一部分<xref:System.Windows.Forms.SaveFileDialog>类) 使用从 1 开始的索引。 如果要通过编写代码以特定格式保存数据（例如，以纯文本或二进制格式保存文件），那么这一点很重要。 以下示例介绍了该属性。  
   
     ```vb  
     Private Sub Button2_Click(ByVal sender As System.Object, _  
@@ -161,7 +161,7 @@ ms.locfileid: "33540525"
        }  
     ```  
   
-     (Visual C# 和[!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) 将以下代码放在窗体的构造函数以注册事件处理程序。  
+     (Visual C# 和[!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) 将以下代码放在窗体的构造函数，以注册事件处理程序。  
   
     ```csharp  
     this.button2.Click += new System.EventHandler(this.button2_Click);  
@@ -175,7 +175,7 @@ ms.locfileid: "33540525"
      有关编写文件流的详细信息，请参阅<xref:System.IO.FileStream.BeginWrite%2A>和<xref:System.IO.FileStream.Write%2A>。  
   
     > [!NOTE]
-    >  某些控件，如<xref:System.Windows.Forms.RichTextBox>控制，必须保存文件的功能。 有关详细信息，请参阅 MSDN 联机库技术文章 [Windows 窗体对话框的基本代码](http://go.microsoft.com/fwlink/?LinkID=102575)中的“SaveFileDialog 组件”部分。  
+    >  某些控件，如<xref:System.Windows.Forms.RichTextBox>控制，以及用于保存文件。 有关详细信息，请参阅 MSDN 联机库技术文章 [Windows 窗体对话框的基本代码](https://go.microsoft.com/fwlink/?LinkID=102575)中的“SaveFileDialog 组件”部分。  
   
 ## <a name="see-also"></a>请参阅  
  <xref:System.Windows.Forms.SaveFileDialog>  

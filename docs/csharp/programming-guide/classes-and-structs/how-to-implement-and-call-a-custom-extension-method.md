@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - extension methods [C#], implementing and calling
 ms.assetid: 7dab2a56-cf8e-4a47-a444-fe610a02772a
-ms.openlocfilehash: 62dbbbfb7a63c8fb73661fe7d66e73d0eca73107
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7a09fa34b88c024bdaa0197bf82471a6bd6c2ae8
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33340302"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43739228"
 ---
 # <a name="how-to-implement-and-call-a-custom-extension-method-c-programming-guide"></a>如何：实现和调用自定义扩展方法（C# 编程指南）
 本主题将介绍如何为任意 .NET 类型实现自定义扩展方法。 客户端代码可以通过以下方法使用扩展方法，添加包含这些扩展方法的 DLL 的引用，以及添加 [using](../../../csharp/language-reference/keywords/using-directive.md) 指令，该指令指定在其中定义扩展方法的命名空间。  
@@ -41,13 +41,14 @@ ms.locfileid: "33340302"
 ## <a name="net-framework-security"></a>.NET Framework 安全性  
  扩展方法不存在特定的安全漏洞。 始终不会将扩展方法用于模拟类型的现有方法，因为为了支持类型本身定义的实例或静态方法，已解决所有名称冲突。 扩展方法无法访问扩展类中的任何隐私数据。  
   
-## <a name="see-also"></a>请参阅  
- [C# 编程指南](../../../csharp/programming-guide/index.md)  
- [扩展方法](../../../csharp/programming-guide/classes-and-structs/extension-methods.md)  
- [LINQ（语言集成查询）](http://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d)  
- [静态类和静态类成员](../../../csharp/programming-guide/classes-and-structs/static-classes-and-static-class-members.md)  
- [protected](../../../csharp/language-reference/keywords/protected.md)  
- [internal](../../../csharp/language-reference/keywords/internal.md)  
- [public](../../../csharp/language-reference/keywords/public.md)  
- [this](../../../csharp/language-reference/keywords/this.md)  
- [namespace](../../../csharp/language-reference/keywords/namespace.md)
+## <a name="see-also"></a>请参阅
+
+- [C# 编程指南](../../../csharp/programming-guide/index.md)  
+- [扩展方法](../../../csharp/programming-guide/classes-and-structs/extension-methods.md)  
+- [LINQ（语言集成查询）](../../../csharp/linq/linq-in-csharp.md)  
+- [静态类和静态类成员](../../../csharp/programming-guide/classes-and-structs/static-classes-and-static-class-members.md)  
+- [protected](../../../csharp/language-reference/keywords/protected.md)  
+- [internal](../../../csharp/language-reference/keywords/internal.md)  
+- [public](../../../csharp/language-reference/keywords/public.md)  
+- [this](../../../csharp/language-reference/keywords/this.md)  
+- [namespace](../../../csharp/language-reference/keywords/namespace.md)

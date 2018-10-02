@@ -10,15 +10,15 @@ helpviewer_keywords:
 - x:ClassModifier attribute [XAML Services]
 - ClassModifier attribute in XAML [XAML Services]
 ms.assetid: ef30ab78-d334-4668-917d-c9f66c3b6aea
-ms.openlocfilehash: 67b53a63dbd6e1377d5684d64ed32b0374c84b5a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5a3bbd1d4d75c84dda741d382c8dd7568dbb474b
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33564373"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45749902"
 ---
 # <a name="xclassmodifier-directive"></a>x:ClassModifier 指令
-修改 XAML 编译行为时`x:Class`还提供。 具体而言，而不是创建一个分部`class`具有`Public`访问级别 （默认值），提供`x:Class`使用创建`NotPublic`访问级别。 此行为会影响中生成的程序集的类的访问级别。  
+修改 XAML 编译行为时`x:Class`还提供了。 具体而言，而不是创建一个分部`class`，其`Public`访问级别 （默认值），提供`x:Class`使用创建`NotPublic`访问级别。 此行为会影响生成的程序集中类的访问级别。  
   
 ## <a name="xaml-attribute-usage"></a>XAML 属性用法  
   
@@ -32,26 +32,26 @@ ms.locfileid: "33564373"
   
 |||  
 |-|-|  
-|*NotPublic*|确切的字符串传递的用于指定<xref:System.Reflection.TypeAttributes.Public?displayProperty=nameWithType>与<xref:System.Reflection.TypeAttributes.NotPublic?displayProperty=nameWithType>各不相同，具体取决于你使用的代码隐藏编程语言。 请参阅“备注”。|  
+|*NotPublic*|确切的字符串传递的用于指定<xref:System.Reflection.TypeAttributes.Public?displayProperty=nameWithType>与<xref:System.Reflection.TypeAttributes.NotPublic?displayProperty=nameWithType>各不相同，具体取决于您使用的代码隐藏编程语言。 请参阅“备注”。|  
   
 ## <a name="dependencies"></a>依赖项  
- [X:class](../../../docs/framework/xaml-services/x-class-directive.md)还必须提供在同一元素上并且该元素必须在页中的根元素。 有关详细信息，请参阅[ \[MS-XAML\]部分 4.3.1.8](http://go.microsoft.com/fwlink/?LinkId=114525)。  
+ [x： 类](../../../docs/framework/xaml-services/x-class-directive.md)还必须提供在同一元素上并且该元素必须是一个页面中的根元素。 有关详细信息，请参阅[ \[MS XAML\]部分 4.3.1.8](https://go.microsoft.com/fwlink/?LinkId=114525)。  
   
 ## <a name="remarks"></a>备注  
- 值`x:ClassModifier`.NET Framework XAML 服务中使用情况因编程语言。 要使用的字符串取决于每种语言的实现方式其<xref:System.CodeDom.Compiler.CodeDomProvider>和它将返回定义的含义的类型转换器<xref:System.Reflection.TypeAttributes.Public?displayProperty=nameWithType>和<xref:System.Reflection.TypeAttributes.NotPublic?displayProperty=nameWithType>，以及该语言是区分大小写。  
+ 值`x:ClassModifier`.NET Framework XAML 服务中而异的编程语言的使用情况。 要使用的字符串取决于如何实现每种语言及其<xref:System.CodeDom.Compiler.CodeDomProvider>和类型转换器，它将返回定义的含义<xref:System.Reflection.TypeAttributes.Public?displayProperty=nameWithType>和<xref:System.Reflection.TypeAttributes.NotPublic?displayProperty=nameWithType>，以及该语言是否区分大小写。  
   
 -   对于 C#，要传递的用于指定的字符串<xref:System.Reflection.TypeAttributes.NotPublic?displayProperty=nameWithType>是`internal`。  
   
--   Microsoft Visual Basic.NET，要传递的用于指定的字符串的<xref:System.Reflection.TypeAttributes.NotPublic?displayProperty=nameWithType>是`Friend`。  
+-   用于 Microsoft Visual Basic.NET，要传递的用于指定的字符串<xref:System.Reflection.TypeAttributes.NotPublic?displayProperty=nameWithType>是`Friend`。  
   
--   有关[!INCLUDE[TLA2#tla_cppcli](../../../includes/tla2sharptla-cppcli-md.md)]，没有目标存在编译 XAML 支持，; 因此，未指定要传递的值。  
+-   有关[!INCLUDE[TLA2#tla_cppcli](../../../includes/tla2sharptla-cppcli-md.md)]，没有目标存在支持编译 XAML 的; 因此，未指定要传递的值。  
   
- 你还可以指定<xref:System.Reflection.TypeAttributes.Public?displayProperty=nameWithType>(`public`在 C# 中，`Public`在 Visual Basic 中); 但是，指定<xref:System.Reflection.TypeAttributes.Public?displayProperty=nameWithType>不常做是因为<xref:System.Reflection.TypeAttributes.Public?displayProperty=nameWithType>已是默认行为。  
+ 此外可以指定<xref:System.Reflection.TypeAttributes.Public?displayProperty=nameWithType>(`public`在 C# 中，`Public`在 Visual Basic 中); 但是，指定<xref:System.Reflection.TypeAttributes.Public?displayProperty=nameWithType>很少做是因为<xref:System.Reflection.TypeAttributes.Public?displayProperty=nameWithType>已经是默认行为。  
   
- 其他值与等效的用户代码访问级别限制，如`private`在 C# 中，不相关的`x:ClassModifier`因为在 XAML 中，不支持嵌套的类引用，因此，<xref:System.Reflection.TypeAttributes.NotPublic?displayProperty=nameWithType>修饰符具有相同的效果。  
+ 其他值，相当的用户代码访问级别的限制，如`private`在 C# 中，不是适用于`x:ClassModifier`因为 XAML，不支持嵌套的类的引用，因此，<xref:System.Reflection.TypeAttributes.NotPublic?displayProperty=nameWithType>修饰符具有相同的效果。  
   
 ## <a name="security-notes"></a>安全说明  
- 中声明的访问级别`x:ClassModifier`仍将受到由特定框架和其功能的解释。 WPF 包括功能，可加载和实例化类型其中`x:ClassModifier`是`internal`，如果从 WPF 通过包 URI 引用资源引用该类。 这种情况并且可能由其他框架实现类似的其他人，因此不依赖于以独占方式在`x:ClassModifier`若要阻止所有可能的实例化尝试。  
+ 中声明的访问级别`x:ClassModifier`仍取决于特定的框架和及其功能的解释。 WPF 还包括加载和实例化类型的功能，`x:ClassModifier`是`internal`，如果该类从 WPF 资源通过 URI 引用的包引用。 这种情况下以及可能其他类似的其他框架实现，因此不要依赖于以独占方式在`x:ClassModifier`来阻止所有可能实例化尝试。  
   
 ## <a name="see-also"></a>请参阅  
  [x:Class 指令](../../../docs/framework/xaml-services/x-class-directive.md)  

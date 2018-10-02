@@ -3,20 +3,20 @@ title: 使用 ML.NET 预测纽约出租车费（回归）
 description: 了解如何在回归方案中使用 ML.NET。
 author: aditidugar
 ms.author: johalex
-ms.date: 06/18/2018
+ms.date: 07/02/2018
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 9706dad0a8e32651496e0404be4501c2c70e9d75
-ms.sourcegitcommit: ed7b4b9b77d35e94a35a2634e8c874f46603fb2b
+ms.openlocfilehash: 133b7ad17a98e4eea510f1704555b690b98e9091
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36948626"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44252839"
 ---
 # <a name="tutorial-use-mlnet-to-predict-new-york-taxi-fares-regression"></a>教程：使用 ML.NET 预测纽约出租车费（回归）
 
 > [!NOTE]
-> 本主题引用 ML.NET（目前处于预览状态），且材料可能会更改。 有关详细信息，请访问 [ML.NET 简介](https://www.microsoft.com/net/learn/apps/machine-learning-and-ai/ml-dotnet)。
+> 本主题引用 ML.NET（目前处于预览状态），且材料可能会更改。 有关详细信息，请参阅 [ML.NET 简介](https://www.microsoft.com/net/learn/apps/machine-learning-and-ai/ml-dotnet)。
 
 本教程演示如何使用 ML.NET 构建[回归模型](../resources/glossary.md#regression)来预测纽约市出租车费。
 
@@ -38,21 +38,21 @@ ms.locfileid: "36948626"
 
 ## <a name="understand-the-problem"></a>了解问题
 
-此问题围绕“预测纽约市的出租车行程费用”展开。 从表面看，似乎只取决于行程距离。 但是，由于其他因素（比如额外的乘客或使用信用卡而非现金付款），纽约的出租车供应商收费不同。
+此问题是有关“预测纽约市的出租车行程费用”。 从表面看，似乎只取决于行程距离。 但是，由于其他因素（比如额外的乘客或使用信用卡而非现金付款），纽约的出租车供应商收费不同。
 
 ## <a name="select-the-appropriate-machine-learning-task"></a>选择适当的机器学习任务
 
-若要预测出租车费，首先选择适当的机器学习任务。 你希望基于数据集中的其他因素预测实际值（表示价格的双精度值）。 你选择[回归](../resources/glossary.md#regression)任务。
+你想要预测价格值，该值是基于数据集中的其他因素的实际值。 要执行此操作，选择[回归](../resources/glossary.md#regression)机器学习任务。
 
 ## <a name="create-a-console-application"></a>创建控制台应用程序
 
 1. 打开 Visual Studio 2017。 从菜单栏中选择“文件” > “新建” > “项目”。 在“新项目”对话框中，依次选择“Visual C#”和“.NET Core”节点。 然后，选择“控制台应用程序(.NET Core)”项目模板。 在“名称”文本框中，键入“TaxiFarePrediction”，然后选择“确定”按钮。
 
-2. 在项目中创建一个名为“数据”的目录来保存数据集文件：
+1. 在项目中创建一个名为“数据”的目录来保存数据集和模型文件：
 
     在“解决方案资源管理器”中，右键单击项目，然后选择“添加” > “新文件夹”。 键入“数据”，然后按 Enter。
 
-3. 安装“Microsoft.ML NuGet 包”：
+1. 安装“Microsoft.ML”NuGet 包：
 
     在“解决方案资源管理器”中，右键单击项目，然后选择“管理 NuGet 包”。 将“nuget.org”选择为“包源”，选择“浏览”选项卡并搜索“Microsoft.ML”，在列表中选择该包，然后选择“安装”按钮。 选择“预览更改”对话框上的“确定”按钮，如果你同意所列包的许可条款，则选择“接受许可”对话框上的“我接受”按钮。
 
@@ -60,9 +60,9 @@ ms.locfileid: "36948626"
 
 1. 下载 [taxi-fare-train.csv](https://github.com/dotnet/machinelearning/blob/master/test/data/taxi-fare-train.csv) 和 [taxi-fare-test.csv](https://github.com/dotnet/machinelearning/blob/master/test/data/taxi-fare-test.csv) 数据集，并将它们保存到先前创建的“数据”文件夹。 我们使用这些数据集定型机器学习模型，然后评估模型的准确性。 这些数据集最初来自 [NYC TLC 出租车行程数据集](http://www.nyc.gov/html/tlc/html/about/trip_record_data.shtml)。
 
-2. 在“解决方案资源管理器”中，右键单击每个 \*.csv 文件，然后选择“属性”。 在“高级”下，将“复制到输出目录”的值更改为“始终”。
+1. 在“解决方案资源管理器”中，右键单击每个 \*.csv 文件，然后选择“属性”。 在“高级”下，将“复制到输出目录”的值更改为“如果较新则复制”。
 
-3. 打开“taxi-fare-train.csv”数据集并查看第一行中的列标题。 查看每个列。 了解数据并确定哪些列是“特征”以及哪些是“标签”。
+1. 打开“taxi-fare-train.csv”数据集并查看第一行中的列标题。 查看每个列。 了解数据并确定哪些列是“特征”以及哪些是“标签”。
 
 “标签”是希望预测的列的标识符。 标识的“特征”用于预测标签。
 
@@ -92,7 +92,10 @@ ms.locfileid: "36948626"
 
 `TaxiTrip` 是输入数据类且具有针对每个数据集列的定义。 使用[列](xref:Microsoft.ML.Runtime.Api.ColumnAttribute)属性在数据集中指定源列的索引。
 
-使用 `TaxiTripFarePrediction` 类表示预测的结果。 它应用了单个浮动 (`FareAmount`) 字段，附带 `Score` [ColumnName](xref:Microsoft.ML.Runtime.Api.ColumnNameAttribute) 属性。 “分数”列是 ML.NET 中的特殊列。 模型将预测值输出到该列。
+`TaxiTripFarePrediction` 类表示预测的结果。 它应用了单个浮动 `FareAmount` 字段，附带 `Score` [ColumnName](xref:Microsoft.ML.Runtime.Api.ColumnNameAttribute) 属性。 对于回归任务，“分数”列包含预测的标签值。
+
+> [!NOTE]
+> 使用 `float` 类型来表示输入和预测数据类中的浮点值。
 
 ## <a name="define-data-and-model-paths"></a>定义数据和模型路径
 
@@ -116,7 +119,7 @@ ms.locfileid: "36948626"
 
 [!code-csharp[AddUsings](../../../samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#1 "Add necessary usings")]
 
-在 `Main` 中，将 `Console.WriteLine("Hello World!")` 替换为以下代码：
+将 `Main` 方法中的 `Console.WriteLine("Hello World!")` 替换为以下代码：
 
 ```csharp
 PredictionModel<TaxiTrip, TaxiTripFarePrediction> model = Train();
@@ -139,7 +142,7 @@ var pipeline = new LearningPipeline();
 
 ## <a name="load-and-transform-data"></a>加载和转换数据
 
-学习管道执行的第一步是从定型数据集加载数据。 在本例中，定型数据集存储在具有 `_datapath` 字段所定义路径的文本文件中。 该文件包含有列名的标头，所以加载数据时应忽略第一行。 文件中的列用逗号 (",") 分割。 将以下代码添加到 `Train` 方法：
+第一个步骤是从定型数据集加载数据。 在本例中，定型数据集存储在具有 `_datapath` 字段所定义路径的文本文件中。 该文件带有列名的标头，所以加载数据时应忽略第一行。 文件中的列用逗号 (",") 分割。 将以下代码添加到 `Train` 方法：
 
 ```csharp
 pipeline.Add(new TextLoader(_datapath).CreateFrom<TaxiTrip>(useHeader: true, separator: ','));
@@ -147,7 +150,7 @@ pipeline.Add(new TextLoader(_datapath).CreateFrom<TaxiTrip>(useHeader: true, sep
 
 在后续步骤中，我们按 `TaxiTrip` 类中定义的名称引用列。
 
-定型和评估模型时，将“标签”列中的值视为要预测的正确值。 希望预测出租车费时，将 `FareAmount` 列复制到“标签”列。 为此，请使用 <xref:Microsoft.ML.Transforms.ColumnCopier> 并添加以下代码：
+定型和评估模型时，默认情况下，将“标签”列中的值视为要预测的正确值。 希望预测出租车费时，将 `FareAmount` 列复制到“标签”列。 为此，请使用 <xref:Microsoft.ML.Transforms.ColumnCopier> 并添加以下代码：
 
 ```csharp
 pipeline.Add(new ColumnCopier(("FareAmount", "Label")));
@@ -161,7 +164,7 @@ pipeline.Add(new CategoricalOneHotVectorizer("VendorId",
                                              "PaymentType"));
 ```
 
-数据准备最后一步使用 <xref:Microsoft.ML.Transforms.ColumnConcatenator> 转换类将所有功能列合并到“功能”列。 此步骤是必需的，因为学习器仅处理“功能”列的功能。 添加以下代码：
+数据准备最后一步使用 <xref:Microsoft.ML.Transforms.ColumnConcatenator> 转换类将所有功能列合并到“功能”列。 默认情况下，学习算法仅处理“特征”列的特征。 添加以下代码：
 
 ```csharp
 pipeline.Add(new ColumnConcatenator("Features",
@@ -179,7 +182,7 @@ pipeline.Add(new ColumnConcatenator("Features",
 
 ## <a name="choose-a-learning-algorithm"></a>选择学习算法
 
-在将数据添加到管道，并将其转换为正确的输入格式之后，可以选择学习算法（学习器）。 学习器定型模型。 为此问题选择了“回归任务”，所以添加 <xref:Microsoft.ML.Trainers.FastTreeRegressor> 学习器（ML.NET 提供的一种回归学习器）。
+在将数据添加到管道，并将其转换为正确的输入格式之后，可以选择学习算法（学习器）。 学习器定型模型。 为此问题选择了“回归任务”，所以使用 <xref:Microsoft.ML.Trainers.FastTreeRegressor> 学习器（ML.NET 提供的一种回归学习器）。
 
 <xref:Microsoft.ML.Trainers.FastTreeRegressor> 学习器利用梯度提升。 梯度提升是针对回归问题的一项机器学习技术。 它将以步进方式生成每个回归树。 它使用预定义的损失函数测量每个步骤中的错误，并在下一步中对其进行校正。 其结果是一种预测模型，实际上是一组较弱的预测模型。 有关梯度提升的详细信息，请参阅[提升的决策树回归](/azure/machine-learning/studio-module-reference/boosted-decision-tree-regression)。
 
@@ -203,7 +206,7 @@ pipeline.Add(new FastTreeRegressor());
 
 ### <a name="save-the-model"></a>保存模型
 
-继续下一步之前，通过在 `Train` 方法的末尾添加以下代码，将模型保存到一个 .zip 文件：
+此时，你具有可以集成到任何现有或新 .NET 应用程序的模型。 要将模型保存到 .zip 文件中，请在 `Train` 方法的末尾添加以下代码：
 
 [!code-csharp[SaveModel](../../../samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#5 "Save the model asynchronously and return the model")]
 
@@ -260,7 +263,7 @@ private static void Evaluate(PredictionModel<TaxiTrip, TaxiTripFarePrediction> m
 
 ## <a name="use-the-model-for-predictions"></a>使用预测模型
 
-接下来，创建一个类来存放测试场景，可以使用这些场景来确保模型正常工作：
+将类创建到房屋测试数据实例：
 
 1. 在“解决方案资源管理器”中，右键单击项目，然后选择“添加” > “新项”。
 1. 在“添加新项”对话框中，选择“类”并将“名称”字段更改为“TestTrips.cs”。 然后，选择“添加”按钮。
@@ -280,7 +283,7 @@ private static void Evaluate(PredictionModel<TaxiTrip, TaxiTripFarePrediction> m
 
 运行此程序，查看测试用例的预测出租车费。
 
-祝贺你！ 你已成功生成用于预测出租车费的机器学习模型、评估其准确性，并用其进行预测。 可以在 [dotnet/samples](https://github.com/dotnet/samples/tree/master/machine-learning/tutorials/TaxiFarePrediction) 存储库中找到本教程的源代码。
+祝贺你！ 你已成功生成用于预测出租车费的机器学习模型、评估其准确性，并用其进行预测。 可以在 [dotnet/samples](https://github.com/dotnet/samples/tree/master/machine-learning/tutorials/TaxiFarePrediction) GitHub 存储库中找到本教程的源代码。
 
 ## <a name="next-steps"></a>后续步骤
 
@@ -296,6 +299,6 @@ private static void Evaluate(PredictionModel<TaxiTrip, TaxiTripFarePrediction> m
 > * 评估模型
 > * 使用预测模型
 
-查看我们的 GitHub 存储库以继续学习，并找到更多示例。
+进入下一教程了解详细信息。
 > [!div class="nextstepaction"]
-> [dotnet/machinelearning GitHub 存储库](https://github.com/dotnet/machinelearning/)
+> [Iris 聚类分析](iris-clustering.md)

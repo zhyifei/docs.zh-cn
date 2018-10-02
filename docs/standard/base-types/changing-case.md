@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 6805f81b-e9ad-4387-9f4c-b9bdb21b87c0
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f29a92c0d0b8961c178b7a92ea5964a1575a48db
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: bd20db7fcc16f7781e093d59514c4be75705080a
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33570515"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46003667"
 ---
 # <a name="changing-case-in-net"></a>更改 .NET 中的大小写
 如果编写可接受用户输入的应用程序，永远无法确定用户以哪种大小写输入数据。 通常，你希望字符串统一采用大写或小写，尤其是在用户界面显示时。 下表介绍 3 种更改大小写的方法： 前两个方法提供可接受区域性的重载。  
@@ -70,6 +70,7 @@ ms.locfileid: "33570515"
   
  请注意，<xref:System.Globalization.TextInfo.ToTitleCase%2A?displayProperty=nameWithType> 方法虽然区分区域性，但不提供语言方面的正确大小写规则。 例如，在上述示例中，方法将“a tale of two cities”转换为“A Tale Of Two Cities”。 但是，对于 en-US 区域性，语言方面的正确首字母大小写应为“A Tale of Two Cities”。  
   
-## <a name="see-also"></a>请参阅  
- [基本字符串操作](../../../docs/standard/base-types/basic-string-operations.md)  
- [执行不区分区域性的字符串操作](../../../docs/standard/globalization-localization/performing-culture-insensitive-string-operations.md)
+## <a name="see-also"></a>请参阅
+
+- [基本字符串操作](../../../docs/standard/base-types/basic-string-operations.md)  
+- [执行不区分区域性的字符串操作](../../../docs/standard/globalization-localization/performing-culture-insensitive-string-operations.md)

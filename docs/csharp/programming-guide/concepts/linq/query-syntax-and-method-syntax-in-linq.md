@@ -5,12 +5,12 @@ helpviewer_keywords:
 - LINQ [C#], query syntax vs. method syntax
 - queries [LINQ in C#], syntax comparisons
 ms.assetid: eedd6dd9-fec2-428c-9581-5b8783810ded
-ms.openlocfilehash: 6b943da442d2ec1210911cb9f4b6a0d56c7216d7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: fe1fbfbf76507f19905d1a9a3a836483a8dd3849
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33336347"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43748231"
 ---
 # <a name="query-syntax-and-method-syntax-in-linq-c"></a>LINQ 中的查询语法和方法语法 (C#)
 介绍性的语言集成查询 ([!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]) 文档中的大多数查询是使用 LINQ 声明性查询语法编写的。 但是在编译代码时，查询语法必须转换为针对 .NET 公共语言运行时 (CLR) 的方法调用。 这些方法调用会调用标准查询运算符（名称为 `Where`、`Select`、`GroupBy`、`Join`、`Max` 和 `Average` 等）。 可以使用方法语法（而不查询语法）来直接调用它们。  
@@ -42,5 +42,6 @@ ms.locfileid: "33336347"
 ## <a name="composability-of-queries"></a>查询的可组合性  
  在前面的代码示例中，请注意，`OrderBy` 方法通过对 `Where` 调用使用点运算符来调用。 `Where` 会生成经过筛选的序列，然后 `Orderby` 通过进行排序来对该序列进行操作。 由于查询返回 `IEnumerable`，因此可通过将方法调用链接在一起在方法语法中撰写查询。 这是当你使用查询语法编写查询时，编译器在幕后进行的工作。 因为查询变量不存储查询的结果，所以可以随时修改它或将它用作新查询的基础（即使在执行过它之后）。  
   
-## <a name="see-also"></a>请参阅  
- [C# 中的 LINQ 入门](../../../../csharp/programming-guide/concepts/linq/getting-started-with-linq.md)
+## <a name="see-also"></a>请参阅
+
+- [C# 中的 LINQ 入门](../../../../csharp/programming-guide/concepts/linq/getting-started-with-linq.md)

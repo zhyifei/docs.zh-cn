@@ -10,16 +10,15 @@ helpviewer_keywords:
 ms.assetid: 10b79aef-327b-4718-a892-e11f55e4d169
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 4b73e5d781829292513e809c39ac9de9dfc6d0e8
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 5b1707d7490de07520603f6fdf6d1ee1a44ffba7
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32742479"
+ms.lasthandoff: 09/27/2018
+ms.locfileid: "47400499"
 ---
 # <a name="ltipv6gt-element-network-settings"></a>&lt;ipv6&gt;元素 （网络设置）
-启用 Internet 协议版本 6 (IPv6) 响应的过时成员<xref:System.Net.Dns>类。  
+启用 Internet 协议版本 6 (IPv6) 的过时成员的响应<xref:System.Net.Dns>类。  
   
  \<configuration>  
 \<system.net>  
@@ -41,7 +40,7 @@ ms.locfileid: "32742479"
   
 |**特性**|**说明**|  
 |-------------------|---------------------|  
-|`enabled`|指定是否的成员<xref:System.Net.Dns>类返回 Internet 协议版本 6 (IPv6) 地址。 默认值为 `false`。|  
+|`enabled`|指定是否隶属于<xref:System.Net.Dns>类返回 Internet 协议版本 6 (IPv6) 地址。 默认值为 `false`。|  
   
 ### <a name="child-elements"></a>子元素  
  无。  
@@ -53,13 +52,13 @@ ms.locfileid: "32742479"
 |[设置](../../../../../docs/framework/configure-apps/file-schema/network/settings-element-network-settings.md)|配置 <xref:System.Net> 命名空间的基本网络选项。|  
   
 ## <a name="remarks"></a>备注  
- 此设置启用 IPv6 支持的过时成员<xref:System.Net.Dns>类： <xref:System.Net.Dns.BeginGetHostByName%2A>， <xref:System.Net.Dns.BeginResolve%2A>， <xref:System.Net.Dns.EndGetHostByName%2A>， <xref:System.Net.Dns.EndResolve%2A>， <xref:System.Net.Dns.GetHostByAddress%2A>， <xref:System.Net.Dns.GetHostByName%2A>，和<xref:System.Net.Dns.Resolve%2A>。 有关的其他成员<xref:System.Net?displayProperty=nameWithType>命名空间，如果在操作系统中启用了 IPv6，则可能会返回 IPv6 地址。  
+ 此设置启用 IPv6 支持的过时成员<xref:System.Net.Dns>类： <xref:System.Net.Dns.BeginGetHostByName%2A>， <xref:System.Net.Dns.BeginResolve%2A>， <xref:System.Net.Dns.EndGetHostByName%2A>， <xref:System.Net.Dns.EndResolve%2A>， <xref:System.Net.Dns.GetHostByAddress%2A>， <xref:System.Net.Dns.GetHostByName%2A>，和<xref:System.Net.Dns.Resolve%2A>。 有关的其他成员<xref:System.Net?displayProperty=nameWithType>命名空间中，如果在操作系统中启用了 IPv6，则可能会返回 IPv6 地址。  
   
 ## <a name="configuration-files"></a>配置文件  
  此元素可在应用程序配置文件或计算机配置文件 (Machine.config) 中使用。  
   
 ## <a name="example"></a>示例  
- 下面的示例演示如何启用 IPv6 的支持<xref:System.Net.Dns>类。  
+ 下面的示例演示如何启用 IPv6 支持<xref:System.Net.Dns>类。  
   
 ```xml  
 <configuration>  

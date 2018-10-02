@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: ae1ac356-267d-4753-8d7a-7a04eb45a9be
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 93d0d2ea5cf3b0329d9b1a03a233cff2d8133072
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 461043dbb57043c5c18ea703d45f8b3ae487d271
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32767474"
+ms.lasthandoff: 09/27/2018
+ms.locfileid: "47401480"
 ---
 # <a name="web-settings-schema"></a>Web 设置架构
 Web 设置指定 CPU 和执行级别 ASP.NET 设置，后者应用于由 ASP.NET 承载层托管的进程范围行为。 这些设置与 ASP.NET 应用程序的 Web.config 文件中指定的应用程序域类型设置不同。  

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: fcb6b178-d526-47c4-b029-e946f880f9db
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 604aabbff8554416d6794ff0b87188fb5bcc3185
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1e2f87bfe1e3e7f3a1c8135c047b25a998793453
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33576677"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44084065"
 ---
 # <a name="how-to-obtain-stores-for-isolated-storage"></a>如何：获取独立存储的存储区
 独立存储区公开数据隔离舱中的虚拟文件系统。 <xref:System.IO.IsolatedStorage.IsolatedStorageFile> 类提供许多与独立存储区交互的方法。 为了创建和检索存储区，<xref:System.IO.IsolatedStorage.IsolatedStorageFile> 提供了三种静态方法：  
@@ -56,9 +56,10 @@ ms.locfileid: "33576677"
  [!code-csharp[Conceptual.IsolatedStorage#7](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.isolatedstorage/cs/source6.cs#7)]
  [!code-vb[Conceptual.IsolatedStorage#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.isolatedstorage/vb/source6.vb#7)]  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.IO.IsolatedStorage.IsolatedStorageFile>  
- <xref:System.IO.IsolatedStorage.IsolatedStorageScope>  
- [独立存储](../../../docs/standard/io/isolated-storage.md)  
- [隔离的类型](../../../docs/standard/io/types-of-isolation.md)  
- [Assemblies in the Common Language Runtime](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)（公共语言运行时中的程序集）
+## <a name="see-also"></a>请参阅
+
+- <xref:System.IO.IsolatedStorage.IsolatedStorageFile>  
+- <xref:System.IO.IsolatedStorage.IsolatedStorageScope>  
+- [独立存储](../../../docs/standard/io/isolated-storage.md)  
+- [隔离的类型](../../../docs/standard/io/types-of-isolation.md)  
+- [Assemblies in the Common Language Runtime](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)（公共语言运行时中的程序集）

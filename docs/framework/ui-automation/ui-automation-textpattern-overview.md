@@ -8,24 +8,23 @@ helpviewer_keywords:
 ms.assetid: 41787927-df1f-4f4a-aba3-641662854fc4
 author: Xansky
 ms.author: mhopkins
-manager: markl
-ms.openlocfilehash: e8358a4a4e0b4933670a2f01dfdf4dd9a7aa43cd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7455ce7f0c1dbc71bed6e7656663d3cd67325447
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33409875"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47193653"
 ---
 # <a name="ui-automation-textpattern-overview"></a>UI 自动化 TextPattern 概述
 > [!NOTE]
->  本文档适用于想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空间中定义的托管 <xref:System.Windows.Automation> 类的 .NET Framework 开发人员。 有关 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]的最新信息，请参阅 [Windows 自动化 API：UI 自动化](http://go.microsoft.com/fwlink/?LinkID=156746)。  
+>  本文档适用于想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空间中定义的托管 <xref:System.Windows.Automation> 类的 .NET Framework 开发人员。 有关最新信息[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]，请参阅[Windows 自动化 API: UI 自动化](https://go.microsoft.com/fwlink/?LinkID=156746)。  
   
- 本概述介绍如何使用 [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] 公开文本内容，其中包括在 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]支持的平台中的文本控件的格式和样式特性。 这些控件包括但不限于 Microsoft.NET Framework<xref:System.Windows.Controls.TextBox>和<xref:System.Windows.Controls.RichTextBox>以及其[!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)]等效项。  
+ 本概述介绍如何使用 [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] 公开文本内容，其中包括在 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]支持的平台中的文本控件的格式和样式特性。 这些控件包括但不限于 Microsoft.NET Framework<xref:System.Windows.Controls.TextBox>并<xref:System.Windows.Controls.RichTextBox>以及其[!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)]等效项。  
   
  控件文本内容的功能通过使用 <xref:System.Windows.Automation.TextPattern> 控件模式完成，该控件模式表示作为文本流的文本容器的内容。 与之相反， <xref:System.Windows.Automation.TextPattern> 需要 <xref:System.Windows.Automation.Text.TextPatternRange> 的支持，以公开格式和样式特性。 <xref:System.Windows.Automation.Text.TextPatternRange> 通过采用一系列 <xref:System.Windows.Automation.TextPattern> 和 <xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.Start> 终结点表示文本容器中连续或多个不连续的的文本段来支持 <xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.End> 。 <xref:System.Windows.Automation.Text.TextPatternRange> 支持功能包括选择、比较、检索和遍历。  
   
 > [!NOTE]
->  <xref:System.Windows.Automation.TextPattern> 类不提供插入或修改文本的方法。 但是，具体取决于该控件，这可以通过 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] <xref:System.Windows.Automation.ValuePattern> 或直接键盘输入得到解决。 请参阅[TextPattern 插入文本示例](http://msdn.microsoft.com/library/67353f93-7ee2-42f2-ab76-5c078cf6ca16)有关示例。  
+>  <xref:System.Windows.Automation.TextPattern> 类不提供插入或修改文本的方法。 但是，具体取决于该控件，这可以通过 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] <xref:System.Windows.Automation.ValuePattern> 或直接键盘输入得到解决。 请参阅[TextPattern Insert Text Sample](https://msdn.microsoft.com/library/67353f93-7ee2-42f2-ab76-5c078cf6ca16)有关的示例。  
   
  本概述中所述的功能对辅助技术供应商及其最终用户至关重要。 辅助技术可以使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 为用户收集完整的文本格式信息，并通过 <xref:System.Windows.Automation.Text.TextUnit> （字符、单词、行或段落）提供编程方式导航和文本选择。  
   
@@ -113,7 +112,7 @@ ms.locfileid: "33409875"
  文本范围的格式特性（例如， <xref:System.Windows.Automation.TextPattern.IsItalicAttribute> 或 <xref:System.Windows.Automation.TextPattern.FontNameAttribute>）。  
   
  **退化范围**  
- 退化范围为空或零字符文本区域。 出于 TextPattern 控件模式的目的，文本插入点（或系统插入标记）被视为退化范围。 如果未选择文本， <xref:System.Windows.Automation.TextPattern.GetSelection%2A> 将返回文本插入点处的退化范围， <xref:System.Windows.Automation.TextPattern.RangeFromPoint%2A> 将返回退化范围作为其起始终结点。 文本提供程序找不到任何与给定条件相匹配的文本范围时，<xref:System.Windows.Automation.TextPattern.RangeFromChild%2A> 和 <xref:System.Windows.Automation.TextPattern.GetVisibleRanges%2A> 可能会返回退化范围。 此退化范围可用作文本提供程序内的起始终结点。 <xref:System.Windows.Automation.Text.TextPatternRange.FindText%2A> 和<xref:System.Windows.Automation.Text.TextPatternRange.FindAttribute%2A>返回空引用 (`Nothing`在 Microsoft Visual Basic.NET) 以避免与发现范围和退化范围相混淆。  
+ 退化范围为空或零字符文本区域。 出于 TextPattern 控件模式的目的，文本插入点（或系统插入标记）被视为退化范围。 如果未选择文本， <xref:System.Windows.Automation.TextPattern.GetSelection%2A> 将返回文本插入点处的退化范围， <xref:System.Windows.Automation.TextPattern.RangeFromPoint%2A> 将返回退化范围作为其起始终结点。 文本提供程序找不到任何与给定条件相匹配的文本范围时，<xref:System.Windows.Automation.TextPattern.RangeFromChild%2A> 和 <xref:System.Windows.Automation.TextPattern.GetVisibleRanges%2A> 可能会返回退化范围。 此退化范围可用作文本提供程序内的起始终结点。 <xref:System.Windows.Automation.Text.TextPatternRange.FindText%2A> 并<xref:System.Windows.Automation.Text.TextPatternRange.FindAttribute%2A>返回空引用 (`Nothing`在 Microsoft Visual Basic.NET) 以避免与发现范围和退化范围相混淆。  
   
  **嵌入式对象**  
  在 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 文本模型中，有两种类型的嵌入对象。 它们包含基于文本的内容元素，如超链接或表，以及控制元素（如图像和按钮）。 有关详细信息，请参见 [Access Embedded Objects Using UI Automation](../../../docs/framework/ui-automation/access-embedded-objects-using-ui-automation.md)。  
@@ -121,7 +120,7 @@ ms.locfileid: "33409875"
  **终结点**  
  文本容器内的文本范围的绝对 <xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.Start> 或 <xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.End> 点。  
   
- ![TextPatternRangeEndpoints&#40;开头和结尾&#41;。] (../../../docs/framework/ui-automation/media/uia-textpattern-endpoints.PNG "UIA_TextPattern_Endpoints")  
+ ![TextPatternRangeEndpoints&#40;的开始和结束&#41;。](../../../docs/framework/ui-automation/media/uia-textpattern-endpoints.PNG "UIA_TextPattern_Endpoints")  
 下面显示了一套起始点和终结点。  
   
  **TextRange**  
@@ -137,4 +136,4 @@ ms.locfileid: "33409875"
  [在 UI 自动化中使用缓存](../../../docs/framework/ui-automation/use-caching-in-ui-automation.md)  
  [在 UI 自动化提供程序中支持控件模式](../../../docs/framework/ui-automation/support-control-patterns-in-a-ui-automation-provider.md)  
  [UI 自动化客户端的控件模式映射](../../../docs/framework/ui-automation/control-pattern-mapping-for-ui-automation-clients.md)  
- [文本服务框架](http://msdn.microsoft.com/library/default.asp?url=/library/tsf/tsf/text_services_framework.asp)
+ [文本服务框架](https://msdn.microsoft.com/library/default.asp?url=/library/tsf/tsf/text_services_framework.asp)

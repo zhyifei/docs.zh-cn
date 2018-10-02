@@ -9,13 +9,12 @@ helpviewer_keywords:
 ms.assetid: 8fd6c675-9ea6-4fad-a412-e2c2c1f233d8
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: ed8de7c4271483a878ee422aac188adbf4700985
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6ca48627df37a98265b9078e2bc93dd823823e45
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33395351"
+ms.lasthandoff: 09/29/2018
+ms.locfileid: "47193520"
 ---
 # <a name="network-programming-how-to-topics"></a>网络编程操作说明主题
 以下列表包含指向网络编程概念文档中操作说明主题的链接。  
@@ -83,4 +82,4 @@ ms.locfileid: "33395351"
 ## <a name="see-also"></a>请参阅  
  [.NET Framework 中的网络编程](../../../docs/framework/network-programming/index.md)  
  [网络编程示例](../../../docs/framework/network-programming/network-programming-samples.md)  
- [MSDN 代码库中的 .NET 联网示例](http://code.msdn.microsoft.com/Wiki/View.aspx?ProjectName=nclsamples)
+ [MSDN 代码库中的 .NET 联网示例](https://code.msdn.microsoft.com/Wiki/View.aspx?ProjectName=nclsamples)

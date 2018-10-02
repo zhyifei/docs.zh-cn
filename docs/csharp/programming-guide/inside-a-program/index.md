@@ -5,12 +5,12 @@ helpviewer_keywords:
 - C# language, about C# program
 - Visual C#, program structure
 ms.assetid: 9551354b-33f0-4e11-bbf0-1a35e3702b22
-ms.openlocfilehash: b1a6ab513420081ef4629eac93a5b5c568fc57b5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a39a7dd3ebdbb7483f0b69169c8e00382f581788
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33339389"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44252891"
 ---
 # <a name="inside-a-c-program"></a>在 C# 程序内部
 本节讨论 C# 程序的一般结构，并包括标准的“Hello, World!” 示例。  
@@ -29,10 +29,11 @@ ms.locfileid: "33339389"
   
 -   [C# 参考](../../../csharp/language-reference/index.md)  
   
--   [\<paveover>C# 示例应用程序](http://msdn.microsoft.com/library/9a9d7aaa-51d3-4224-b564-95409b0f3e15)  
+-   [\<paveover>C# 示例应用程序](https://msdn.microsoft.com/library/9a9d7aaa-51d3-4224-b564-95409b0f3e15)  
   
 ## <a name="c-language-specification"></a>C# 语言规范  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>请参阅  
- [C# 编程指南](../../../csharp/programming-guide/index.md)
+## <a name="see-also"></a>请参阅
+
+- [C# 编程指南](../../../csharp/programming-guide/index.md)

@@ -3,12 +3,12 @@ title: 模式匹配 - C# 指南
 description: 了解 C# 中的模式匹配表达式
 ms.date: 01/24/2017
 ms.assetid: 1e575c32-2e2b-4425-9dca-7d118f3ed15b
-ms.openlocfilehash: 635ab45c89a38f3dedac2d60ea1e31ebf394c9b2
-ms.sourcegitcommit: 2ad7d06f4f469b5d8a5280ac0e0289a81867fc8e
+ms.openlocfilehash: fa327dafe3f924d22b5f0d459eb0b6c7ba60a684
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35231471"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43522021"
 ---
 # <a name="pattern-matching"></a>模式匹配 #
 
@@ -21,7 +21,7 @@ ms.locfileid: "35231471"
 对于未在类层次结构中进行结构化的数据，无法使用这些技术。 当数据和方法分开时，需要其他工具。 新的模式匹配构造可实现更简洁的语法，以基于这些数据的任何条件来检查数据和操作控制流。 你已编写了测试变量值的 `if` 语句和 `switch`。 你编写了测试变量类型的 `is` 语句。 模式匹配为这些语句添加了新功能。
 
 在本主题中，你会构建计算不同几何形状的面积的方法。 但是，你会在不求助于面向对象的技术以及为不同形状构建类层次结构的情况下实现它。
-你会改用模式匹配。 为了进一步强调我们未使用继承，你会将每个形状设为 `struct` 而不是类。 请注意，不同 `struct` 类型不能指定用户定义的通用基类型，因此继承不是可行的设计。
+你会改用模式匹配。
 执行此示例时，将此代码与它作为对象层次结构来构造的方式进行对比。 当必须查询和操作的数据不是类层次结构时，模式匹配可实现非常完善的设计。
 
 我们不会从抽象形状定义以及添加不同的特定形状类开始，而是从每个几何形状的简单纯数据定义开始：

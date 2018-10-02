@@ -1,6 +1,6 @@
 ---
 title: QualifierSet_EndEnumeration 函数 （非托管 API 参考）
-description: QualifierSet_EndEnumeration 函数将终止枚举。
+description: QualifierSet_EndEnumeration 函数终止枚举。
 ms.date: 11/06/2017
 api_name:
 - QualifierSet_EndEnumeration
@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0e24acdde486f377cc9187aac088ce7a611cd4eb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: dbf47dbfddac7d48b78c9d52969de1ef03385c15
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33460736"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43524309"
 ---
 # <a name="qualifiersetendenumeration-function"></a>QualifierSet_EndEnumeration 函数
 终止通过调用开始枚举[QualifierSet_BeginEnumeration](qualifierset-beginenumeration.md)函数。  
@@ -40,24 +40,24 @@ HRESULT QualifierSet_EndEnumeration (
 ## <a name="parameters"></a>参数
 
 `vFunc`  
-[in]未使用此参数。
+[in]此参数是未使用。
 
 `ptr`   
-[in]指向的指针[IWbemQualifierSet](https://msdn.microsoft.com/library/aa391860(v=vs.85).aspx)实例。
+[in]一个指向[IWbemQualifierSet](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemqualifierset)实例。
 
 ## <a name="return-value"></a>返回值
 
-此函数返回以下值用定义*WbemCli.h*标头文件，也可以为常量在中定义你的代码：
+此函数返回的以下值中定义*WbemCli.h*标头文件，也可以将其定义为常量在代码中：
 
-|返回的常量  |值  |描述  |
+|返回的常量  |“值”  |描述  |
 |---------|---------|---------|
 |`WBEM_S_NO_ERROR` | 0 | 函数调用成功。  |
   
 ## <a name="remarks"></a>备注
 
-此函数包装对的调用[IWbemQualifierSet::EndEnumeration](https://msdn.microsoft.com/library/aa391865(v=vs.85).aspx)方法。
+此函数包装对的调用[IWbemQualifierSet::EndEnumeration](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemqualifierset-endenumeration)方法。
 
-此调用是建议，但不是要求。 它立即释放枚举与关联的资源。
+此调用是建议这样做，但不是必需的。 它立即释放与枚举关联的资源。
 
 ## <a name="requirements"></a>要求  
 
@@ -65,7 +65,7 @@ HRESULT QualifierSet_EndEnumeration (
   
 **标头：** WMINet_Utils.idl  
   
-**.NET framework 版本：** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+**.NET Framework 版本：**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>请参阅  
 [WMI 和性能计数器 （非托管 API 参考）](index.md)

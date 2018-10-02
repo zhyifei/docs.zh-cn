@@ -1,5 +1,5 @@
 ---
-title: '&lt;交换机&gt;元素'
+title: '&lt;开关&gt;元素'
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/switches
@@ -11,20 +11,19 @@ helpviewer_keywords:
 ms.assetid: 4cf36786-b89a-40e2-a0f1-86bb9b783343
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 60a18ae8d89d6be69b2c10c07064f123d3f9c0f8
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 7ca375935c1dfcdb406257ece1a9dfd18851dddf
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32745141"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47232625"
 ---
-# <a name="ltswitchesgt-element"></a>&lt;交换机&gt;元素
+# <a name="ltswitchesgt-element"></a>&lt;开关&gt;元素
 包含跟踪开关和对该跟踪开关设置的级别。  
   
  \<configuration>  
 \<system.diagnostics >  
-\<交换机 >  
+\<开关 >  
   
 ## <a name="syntax"></a>语法  
   
@@ -53,7 +52,7 @@ ms.locfileid: "32745141"
 |`System.diagnostics`|指定用于收集、存储和路由消息的跟踪侦听器以及对跟踪开关设置的级别。|  
   
 ## <a name="remarks"></a>备注  
- 可以通过将它放在配置文件来更改跟踪开关的级别。 如果开关已<xref:System.Diagnostics.BooleanSwitch>，你可以将其打开和关闭。 如果开关已<xref:System.Diagnostics.TraceSwitch>，可以将不同级别分配到它，以指定类型的跟踪或调试消息的应用程序输出。  
+ 可以通过将它放在配置文件更改跟踪开关的级别。 如果该切换<xref:System.Diagnostics.BooleanSwitch>，您可以将其打开和关闭。 如果该切换<xref:System.Diagnostics.TraceSwitch>，可以将不同级别分配给该代码以指定类型的跟踪或调试消息的应用程序输出。  
   
 ## <a name="example"></a>示例  
  下面的示例演示如何使用**\<切换 >** 元素中设置`General`跟踪切换到<xref:System.Diagnostics.TraceLevel>级别，并启用`Data`布尔型跟踪开关。  

@@ -11,17 +11,16 @@ helpviewer_keywords:
 ms.assetid: 5ee2de3f-256c-43ec-b64c-62ace91f9983
 author: Xansky
 ms.author: mhopkins
-manager: markl
-ms.openlocfilehash: 89e528e7ff3dbeeba30307adf83434b83f540221
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7e531e7ecdcc6e5cbdbc770b008d2c07873aca16
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33408319"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47195779"
 ---
 # <a name="invoke-a-control-using-ui-automation"></a>使用 UI 自动化调用控件
 > [!NOTE]
->  本文档适用于想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空间中定义的托管 <xref:System.Windows.Automation> 类的 .NET Framework 开发人员。 有关 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]的最新信息，请参阅 [Windows 自动化 API：UI 自动化](http://go.microsoft.com/fwlink/?LinkID=156746)。  
+>  本文档适用于想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空间中定义的托管 <xref:System.Windows.Automation> 类的 .NET Framework 开发人员。 有关最新信息[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]，请参阅[Windows 自动化 API: UI 自动化](https://go.microsoft.com/fwlink/?LinkID=156746)。  
   
  本主题演示如何执行以下任务：  
   
@@ -42,4 +41,4 @@ ms.locfileid: "33408319"
 [!code-vb[InvokePatternApp#1102](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/InvokePatternApp/VisualBasic/Client.vb#1102)]  
   
 ## <a name="see-also"></a>请参阅  
- [InvokePattern 和 ExpandCollapsePattern 菜单项示例](http://msdn.microsoft.com/library/b7fa141c-e2d1-4da2-a27f-81a7d1172210)
+ [InvokePattern 和 ExpandCollapsePattern 菜单项示例](https://msdn.microsoft.com/library/b7fa141c-e2d1-4da2-a27f-81a7d1172210)

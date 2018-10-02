@@ -10,16 +10,15 @@ helpviewer_keywords:
 ms.assetid: 0eb0c5cb-dd97-484d-8614-785e88877abb
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: e4ea16c925114d4ad4054af5f340c764ed6fe4fd
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: e03fb02bd351058c1fcdedb8367d03318418a12c
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32743142"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47209421"
 ---
 # <a name="ltdefaultftpcachepolicygt-element-network-settings"></a>&lt;defaultFtpCachePolicy&gt;元素 （网络设置）
-描述 FTP 缓存功能是否处于活动状态并描述默认缓存策略。  
+介绍 FTP 缓存功能是否处于活动状态并介绍了默认的缓存策略。  
   
  \<configuration>  
 \<system.net>  
@@ -45,15 +44,15 @@ ms.locfileid: "32743142"
   
 ## <a name="policylevel-attribute"></a>policyLevel 属性  
   
-|值|描述|  
+|“值”|描述|  
 |-----------|-----------------|  
-|`Default`|如果资源是最新，内容的长度是准确的并且存在过期、 修改和内容长度属性将，返回缓存的资源。|  
+|`Default`|如果资源是最新、 内容长度是准确的并且存在过期、 修改和内容长度属性将，返回缓存的资源。|  
 |`BypassCache`|从服务器返回的资源。|  
 |`CacheOnly`|如果内容长度存在并且匹配的项大小，则返回缓存的资源。|  
-|`CacheIfAvailable`|如果提供了内容的长度，并且匹配的项大小;，返回缓存的资源否则为该资源从服务器下载，并返回到调用方。|  
-|`Revalidate`|如果缓存的资源的时间戳是与服务器; 上的资源的时间戳相同，则返回缓存的资源否则为资源是从服务器下载、 存储在缓存中，并返回至调用方。|  
-|`Reload`|从服务器下载的资源、 将其存储在缓存中，和将资源返回给调用方。|  
-|`NoCacheNoStore`|如果缓存的资源存在，则删除它。 资源从服务器下载，并返回到调用方。|  
+|`CacheIfAvailable`|如果提供了内容的长度，并且与匹配项的大小;，返回缓存的资源否则为该资源从服务器下载，并返回到调用方。|  
+|`Revalidate`|如果缓存资源的时间戳是与服务器; 上的资源的时间戳相同，则返回缓存的资源否则为资源是从服务器下载，存储在缓存中，并返回给调用方。|  
+|`Reload`|从服务器下载资源、 将其存储在缓存中，并返回给调用方的资源。|  
+|`NoCacheNoStore`|如果缓存的资源存在，将删除它。 资源从服务器下载，并返回到调用方。|  
 |`Revalidate`|如果时间戳与服务器上的资源的时间戳相同，则使用资源的缓存副本满足请求；否则从服务器下载资源，将资源展示给调用方，然后再存储在缓存中。|  
   
 ### <a name="child-elements"></a>子元素  

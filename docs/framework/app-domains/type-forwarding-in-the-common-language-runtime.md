@@ -10,11 +10,12 @@ helpviewer_keywords:
 ms.assetid: 51f8ffa3-c253-4201-a3d3-c4fad85ae097
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9945b66f9d9fcdfb075bd48f5f56f30f2fdf7712
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: d25bac953ff68422a1dddc54bdb01b4b4f241cbb
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45664522"
 ---
 # <a name="type-forwarding-in-the-common-language-runtime"></a>公共语言运行时中的类型转发
 使用类型转发可以将类型移到另一个程序集，而不必重新编译使用原始程序集的应用程序。  
@@ -43,9 +44,9 @@ ms.lasthandoff: 05/03/2018
   
 3.  编译该类型目前所属的程序集。  
   
-4.  重新编译该类型原来所属的程序集，其中带有对该类型目前所属的程序集的引用。 例如，如果从命令行编译一个 C# 文件，则使用 [/reference（C# 编译器选项）](~/docs/csharp/language-reference/compiler-options/reference-compiler-option.md)选项指定包含类型的程序集。 在 C++ 中，在源文件中使用 [#using](http://msdn.microsoft.com/library/870b15e5-f361-40a8-ba1c-c57d75c8809a) 指令指定包含类型的程序集。  
+4.  重新编译该类型原来所属的程序集，其中带有对该类型目前所属的程序集的引用。 例如，如果从命令行编译一个 C# 文件，则使用 [/reference（C# 编译器选项）](~/docs/csharp/language-reference/compiler-options/reference-compiler-option.md)选项指定包含类型的程序集。 在 C++ 中，在源文件中使用 [#using](https://msdn.microsoft.com/library/870b15e5-f361-40a8-ba1c-c57d75c8809a) 指令指定包含类型的程序集。  
   
 ## <a name="see-also"></a>请参阅  
  <xref:System.Runtime.CompilerServices.TypeForwardedToAttribute>  
  [类型转发 (C++/CLI)](/cpp/windows/type-forwarding-cpp-cli)  
- [#using 指令](http://msdn.microsoft.com/library/870b15e5-f361-40a8-ba1c-c57d75c8809a)
+ [#using 指令](https://msdn.microsoft.com/library/870b15e5-f361-40a8-ba1c-c57d75c8809a)

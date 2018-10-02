@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 6c61b4ec-c6df-4651-80f1-4854f8b14dde
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1f950779514975a3ee76af76506c7579e046537f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 323dfe7d68f5a6f6274ce23f82e25a337956b23c
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33393180"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43739703"
 ---
 # <a name="managed-extensibility-framework-mef"></a>Managed Extensibility Framework (MEF)
 该话题为在 .NET Framework 4 中引入的 Managed Extensibility Framework 提供了一个概述。  
@@ -62,7 +62,7 @@ ms.locfileid: "33393180"
 ## <a name="simplecalculator-an-example-application"></a>SimpleCalculator：示例应用程序  
  查看 MEF 能做什么最简单的方法就是构建一个简单的 MEF 应用程序。 在此示例中，你构建了一个叫作简单计算器的非常简单的计算器。 简单计算器旨在创建一个接受形式为“5+3”或“6-2”的基础运算命令然后返回正确答案的控制台应用程序。 使用 MEF，你将能够添加新的操作人员而无须更改应用程序代码。  
   
- 下载此示例的完整代码，请参阅 [SimpleCalculator 示例](http://code.msdn.microsoft.com/windowsdesktop/Simple-Calculator-MEF-1152654e)。  
+ 下载此示例的完整代码，请参阅 [SimpleCalculator 示例](https://code.msdn.microsoft.com/windowsdesktop/Simple-Calculator-MEF-1152654e)。  
   
 > [!NOTE]
 >  简单计算器旨在演示 MEF 的概念和语法而非必须为其使用提供现实情况。 许多将从 MEF 的功能受益最大的应用程序比简单计算器更加复杂。 更多扩展性示例，请参阅 GitHub 上的 [Managed Extensibility Framework](https://github.com/MicrosoftArchive/mef)。
@@ -471,6 +471,6 @@ public class Mod : SimpleCalculator.IOperation
   
 <a name="where_do_i_go_now"></a>   
 ## <a name="where-do-i-go-now"></a>现在我该转到哪儿？  
- 下载此示例的完整代码，请参阅 [SimpleCalculator 示例](http://code.msdn.microsoft.com/windowsdesktop/Simple-Calculator-MEF-1152654e)。  
+ 下载此示例的完整代码，请参阅 [SimpleCalculator 示例](https://code.msdn.microsoft.com/windowsdesktop/Simple-Calculator-MEF-1152654e)。  
   
- 有关详细信息和代码示例，请参阅 [Managed Extensibility Framework](http://go.microsoft.com/fwlink/?LinkId=144282)。 一组 MEF 类型，请参阅<xref:System.ComponentModel.Composition?displayProperty=nameWithType>名称空间。
+ 有关详细信息和代码示例，请参阅 [Managed Extensibility Framework](https://go.microsoft.com/fwlink/?LinkId=144282)。 一组 MEF 类型，请参阅<xref:System.ComponentModel.Composition?displayProperty=nameWithType>名称空间。

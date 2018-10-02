@@ -4,12 +4,12 @@ description: dotnet tool uninstall 命令从你计算机上卸载指定的 .NET 
 author: mairaw
 ms.author: mairaw
 ms.date: 05/29/2018
-ms.openlocfilehash: 5cf80d1756dbf4e88bb52a8028d186d44978f440
-ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
+ms.openlocfilehash: 93a43e19df4c7f220ac1e2d2db397cba4d791e83
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34696931"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43738160"
 ---
 # <a name="dotnet-tool-uninstall"></a>dotnet tool uninstall
 
@@ -21,7 +21,7 @@ ms.locfileid: "34696931"
 
 ## <a name="synopsis"></a>摘要
 
-```
+```console
 dotnet tool uninstall <PACKAGE_NAME> <-g|--global>
 dotnet tool uninstall <PACKAGE_NAME> <--tool-path>
 dotnet tool uninstall <-h|--help>
@@ -67,4 +67,4 @@ dotnet tool uninstall <-h|--help>
 
 ## <a name="see-also"></a>请参阅
 
-[.NET Core 全局工具](global-tools.md)
+* [.NET Core 全局工具](global-tools.md)

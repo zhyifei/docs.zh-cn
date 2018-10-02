@@ -8,12 +8,12 @@ helpviewer_keywords:
 - interoperability, about interoperability
 - platform invoke
 ms.assetid: c025b2e0-2357-4c27-8461-118f0090aeff
-ms.openlocfilehash: 747b2d420beeb63b89b21dd16d2977d12bc5d580
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0bd53d97cec4370adc78fc715b1cea5ee5a3fd6f
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33337498"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44208791"
 ---
 # <a name="interoperability-overview-c-programming-guide"></a>互操作性概述（C# 编程指南）
 本主题描述在 C# 托管代码和非托管代码之间实现互操作性的方法。  
@@ -24,7 +24,7 @@ ms.locfileid: "33337498"
  有关详细信息，请参阅[使用非托管 DLL 函数](../../../framework/interop/consuming-unmanaged-dll-functions.md)和[如何：使用平台调用播放波形文件](../../../csharp/programming-guide/interop/how-to-use-platform-invoke-to-play-a-wave-file.md)。  
   
 > [!NOTE]
->  [公共语言运行时](../../../standard/clr.md) (CLR) 管理对系统资源的访问。 调用 CLR 外部的非托管代码将避开这种安全机制，因此会带来安全风险。 例如，非托管代码可能直接调用非托管代码中的资源，从而避开 CLR 安全机制。 有关详细信息，请参阅 [.NET Framework 安全性](https://technet.microsoft.com/en-us/security/)。  
+>  [公共语言运行时](../../../standard/clr.md) (CLR) 管理对系统资源的访问。 调用 CLR 外部的非托管代码将避开这种安全机制，因此会带来安全风险。 例如，非托管代码可能直接调用非托管代码中的资源，从而避开 CLR 安全机制。 有关详细信息，请参阅 [ .NET 中的安全性](../../../standard/security/index.md)。  
   
 ## <a name="c-interop"></a>C++ 互操作  
  可使用 C++ interop（又称为 It Just Works (IJW)）包装本机 C++ 类，以便用 C# 或其他 .NET Framework 语言编写的代码可以使用此类。 为此，请编写 C++ 代码来包装本机 DLL 或 COM 组件。 与其他 .NET Framework 语言不同，[!INCLUDE[vcprvc](~/includes/vcprvc-md.md)] 具有互操作性支持，可使托管和非托管代码放置在同一个应用程序（甚至同一个文件）中。 然后使用 **/clr** 编译器开关生成托管程序集，以便生成 C++ 代码。 最后，在 C# 项目中添加一个对该程序集的引用，并像使用其他托管类那样使用被包装对象。  
@@ -57,10 +57,11 @@ ms.locfileid: "33337498"
   
  有关详细信息，请参阅[向 COM 公开 .NET Framework 组件](../../../../docs/framework/interop/exposing-dotnet-components-to-com.md)和 [COM 类示例](../../../csharp/programming-guide/interop/example-com-class.md)。  
   
-## <a name="see-also"></a>请参阅  
- [Improving Interop Performance](https://msdn.microsoft.com/library/ms998551.aspx)（提高互操作性能）  
- [COM 和 .NET 之间的互操作性简介](https://msdn.microsoft.com/library/office/bb610378.aspx)  
- [Visual Basic 中的 COM 互操作简介](../../../../docs/visual-basic/programming-guide/com-interop/introduction-to-com-interop.md)  
- [托管代码与非托管代码之间的封送处理](../../../../docs/framework/interop/interop-marshaling.md)  
- [与非托管代码交互操作](../../../../docs/framework/interop/index.md)  
- [C# 编程指南](../../../csharp/programming-guide/index.md)
+## <a name="see-also"></a>请参阅
+
+- [Improving Interop Performance](https://msdn.microsoft.com/library/ms998551.aspx)（提高互操作性能）  
+- [COM 和 .NET 之间的互操作性简介](https://msdn.microsoft.com/library/office/bb610378.aspx)  
+- [Visual Basic 中的 COM 互操作简介](../../../../docs/visual-basic/programming-guide/com-interop/introduction-to-com-interop.md)  
+- [托管代码与非托管代码之间的封送处理](../../../../docs/framework/interop/interop-marshaling.md)  
+- [与非托管代码交互操作](../../../../docs/framework/interop/index.md)  
+- [C# 编程指南](../../../csharp/programming-guide/index.md)

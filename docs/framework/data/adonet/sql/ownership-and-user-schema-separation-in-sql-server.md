@@ -2,18 +2,18 @@
 title: SQL Server 中的所有权和用户架构分离
 ms.date: 03/30/2017
 ms.assetid: 242830c1-31b5-4427-828c-cc22ff339f30
-ms.openlocfilehash: 69d0c0dee6141b80908c8cdc36dfe21ff318f423
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7b1cda211fdc89732afa8eed1eaaf2c98309a969
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33358402"
+ms.lasthandoff: 09/15/2018
+ms.locfileid: "45649115"
 ---
 # <a name="ownership-and-user-schema-separation-in-sql-server"></a>SQL Server 中的所有权和用户架构分离
 SQL Server 安全性的核心概念是对象的所有者具有管理这些对象的不可撤消的权限。 您不能取消对象所有者的特权，并且如果用户在数据库中拥有对象，您也不能将用户从数据库中删除。  
   
 ## <a name="user-schema-separation"></a>用户架构分离  
- 通过用户架构分离，可实现管理数据库对象权限的更大灵活性。 A*架构*是数据库对象，它允许您将对象分组为单独的命名空间的命名的容器。 例如，AdventureWorks 示例数据库包含 Production、Sales 和 HumanResources 的架构。  
+ 通过用户架构分离，可实现管理数据库对象权限的更大灵活性。 一个*架构*是数据库对象，它允许您对对象进行分组为单独的命名空间的命名的容器。 例如，AdventureWorks 示例数据库包含 Production、Sales 和 HumanResources 的架构。  
   
  用于引用对象的由四部分组成的命名语法指定架构名称。  
   
@@ -55,7 +55,7 @@ Server.Database.DatabaseSchema.DatabaseObject
   
 |资源|描述|  
 |--------------|-----------------|  
-|[用户架构分离](http://msdn.microsoft.com/library/ms190387.aspx)SQL Server 联机丛书中|描述用户架构分离引发的变化， 包括新行为及其对所有权、目录视图和权限的影响。|  
+|[用户架构分离](https://msdn.microsoft.com/library/ms190387.aspx)SQL Server 联机丛书中|描述用户架构分离引发的变化， 包括新行为及其对所有权、目录视图和权限的影响。|  
   
 ## <a name="see-also"></a>请参阅  
  [保证 ADO.NET 应用程序的安全](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
@@ -63,4 +63,4 @@ Server.Database.DatabaseSchema.DatabaseObject
  [SQL Server 中的身份验证](../../../../../docs/framework/data/adonet/sql/authentication-in-sql-server.md)  
  [SQL Server 中的服务器和数据库角色](../../../../../docs/framework/data/adonet/sql/server-and-database-roles-in-sql-server.md)  
  [SQL Server 中的授权和权限](../../../../../docs/framework/data/adonet/sql/authorization-and-permissions-in-sql-server.md)  
- [ADO.NET 托管提供程序和数据集开发人员中心](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)

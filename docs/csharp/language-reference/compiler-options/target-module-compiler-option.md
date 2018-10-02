@@ -8,12 +8,12 @@ helpviewer_keywords:
 - target compiler options [C#], /target:module
 - /target compiler options [C#], /target:module
 ms.assetid: 9af1e4fa-c749-44e7-ae58-90a3d05d4e72
-ms.openlocfilehash: d02a46390ca34b8063320df6ec237a00c0423c88
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7cc0e48a7a4a3ec3f28c89e80fadf6aa7e1130f2
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33214249"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43865057"
 ---
 # <a name="-targetmodule-c-compiler-options"></a>-target:module（C# 编译器选项）
 此选项会导致编译器不生成程序集清单。  
@@ -43,5 +43,6 @@ csc -target:module in.cs
 ```  
   
 ## <a name="see-also"></a>请参阅  
- [-target（C# 编译器选项）](../../../csharp/language-reference/compiler-options/target-compiler-option.md)  
- [C# 编译器选项](../../../csharp/language-reference/compiler-options/index.md)
+
+- [-target（C# 编译器选项）](../../../csharp/language-reference/compiler-options/target-compiler-option.md)  
+- [C# 编译器选项](../../../csharp/language-reference/compiler-options/index.md)

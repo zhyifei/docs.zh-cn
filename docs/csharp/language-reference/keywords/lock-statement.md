@@ -1,85 +1,80 @@
 ---
-title: “锁定”语句（C# 参考）
-ms.date: 07/20/2015
+title: lock 语句（C# 参考）
+description: 使用 C# lock 语句同步对共享资源的线程访问
+ms.date: 08/28/2018
 f1_keywords:
 - lock_CSharpKeyword
 - lock
 helpviewer_keywords:
 - lock keyword [C#]
 ms.assetid: 656da1a4-707e-4ef6-9c6e-6d13b646af42
-ms.openlocfilehash: 2ce870e8caa67d780ce603a6f1dbcc7cd303b842
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2b6fbfb2f81d7745c4effb9ea0087f34cc872a6c
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33274214"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43858351"
 ---
-# <a name="lock-statement-c-reference"></a>“锁定”语句（C# 参考）
-`lock` 关键字将语句块标记为关键部分，方法是获取给定对象的互斥锁，执行语句，然后释放该锁。 以下示例包含一个 `lock` 语句。  
-  
-```csharp  
-class Account  
-{  
-    decimal balance;  
-    private Object thisLock = new Object();  
-  
-    public void Withdraw(decimal amount)  
-    {  
-        lock (thisLock)  
-        {  
-            if (amount > balance)  
-            {  
-                throw new Exception("Insufficient funds");  
-            }  
-            balance -= amount;  
-        }  
-    }  
-}  
-```  
-  
- 有关详细信息，请参阅[线程同步](../../programming-guide/concepts/threading/thread-synchronization.md)。  
-  
-## <a name="remarks"></a>备注  
- `lock` 关键字可确保当一个线程位于代码的关键部分时，另一个线程不会进入该关键部分。 如果其他线程尝试进入锁定的代码，则它将一直等待（即被阻止），直到该对象被释放。  
-  
- [线程](../../programming-guide/concepts/threading/index.md)一节讨论了线程处理。  
-  
- `lock` 关键字在块的开始处调用 <xref:System.Threading.Monitor.Enter%2A>，而在块的结尾处调用 <xref:System.Threading.Monitor.Exit%2A>。 如果 <xref:System.Threading.Thread.Interrupt%2A> 中断正在等待输入 `lock` 语句的线程，将引发 <xref:System.Threading.ThreadInterruptedException>。  
-  
- 通常，应避免锁定 `public` 类型，否则实例将超出代码的控制范围。 常见的结构 `lock (this)`、`lock (typeof (MyType))` 和 `lock ("myLock")` 违反此准则：  
-  
--   如果可以公开访问实例，将出现 `lock (this)` 问题。  
-  
--   如果可以公开访问 `lock (typeof (MyType))`，将出现 `MyType` 问题。  
-  
--   由于进程中使用同一字符串的任何其他代码都将共享同一个锁，因此出现 `lock("myLock")` 问题。  
-  
- 最佳做法是定义 `private` 对象来进行锁定，或者定义 `private static` 对象变量来保护所有实例所共有的数据。  
-  
- 在 `lock` 语句的正文中不能使用 [await](../../../csharp/language-reference/keywords/await.md) 关键字。  
-  
-## <a name="example"></a>示例  
- 下面演示在 C# 中使用未锁定的线程的简单示例。  
-  
- [!code-csharp[csrefKeywordsFixedLock#5](../../../csharp/language-reference/keywords/codesnippet/CSharp/lock-statement_1.cs)]  
-  
-## <a name="example"></a>示例  
- 下例使用线程和 `lock`。 只要 `lock` 语句存在，语句块就是关键部分并且 `balance` 永远不会是负数。  
-  
- [!code-csharp[csrefKeywordsFixedLock#6](../../../csharp/language-reference/keywords/codesnippet/CSharp/lock-statement_2.cs)]  
-  
-## <a name="c-language-specification"></a>C# 语言规范  
- [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
-  
-## <a name="see-also"></a>请参阅  
- <xref:System.Reflection.MethodImplAttributes>  
- <xref:System.Threading.Mutex>  
- [C# 参考](../../../csharp/language-reference/index.md)  
- [C# 编程指南](../../../csharp/programming-guide/index.md)  
- [线程处理](../../programming-guide/concepts/threading/index.md)  
- [C# 关键字](../../../csharp/language-reference/keywords/index.md)  
- [语句关键字](../../../csharp/language-reference/keywords/statement-keywords.md)  
- <xref:System.Threading.Monitor>  
- [互锁操作](../../../standard/threading/interlocked-operations.md)  
- [AutoResetEvent](../../../standard/threading/autoresetevent.md)  
- [线程同步](../../programming-guide/concepts/threading/thread-synchronization.md)
+# <a name="lock-statement-c-reference"></a>lock 语句（C# 参考）
+
+`lock` 语句获取给定对象的互斥 lock，执行语句 lock，然后释放 lock。 持有 lock 时，持有 lock 的线程可以再次获取并释放 lock。 阻止任何其他线程获取 lock 并等待释放 lock。
+
+`lock` 语句具有以下格式
+
+```csharp
+lock (x)
+{
+    // Your code...
+}
+```
+
+其中 `x` 是[引用类型](reference-types.md)的表达式。 它完全等同于
+
+```csharp
+object __lockObj = x;
+bool __lockWasTaken = false;
+try
+{
+    System.Threading.Monitor.Enter(__lockObj, ref __lockWasTaken);
+    // Your code...
+}
+finally
+{
+    if (__lockWasTaken) System.Threading.Monitor.Exit(__lockObj);
+}
+```
+
+由于该代码使用 [try...finally](try-finally.md) 块，即使在 `lock` 语句的正文中引发异常，也会释放 lock。
+
+在 `lock` 语句的正文中不能使用 [await](await.md) 关键字。
+
+## <a name="remarks"></a>备注
+
+当同步对共享资源的线程访问时，请锁定专用对象实例（例如，`private readonly object balanceLock = new object();`）或另一个不太可能被代码无关部分用作 lock 对象的实例。 避免对不同的共享资源使用相同的 lock 对象实例，因为这可能导致死锁或锁争用。 具体而言，应避免使用
+
+- `this`（调用方可能将其用作 lock），
+- <xref:System.Type> 实例（可以通过 [typeof](typeof.md) 运算符或反射获取），
+- 字符串实例，包括字符串文本，
+
+用作 lock 对象。
+
+## <a name="example"></a>示例
+
+以下示例定义了一个 `Account` 类，该类通过锁定专用的 `balanceLock` 实例来同步对其专用 `balance` 字段的访问。 使用相同的实例进行锁定可确保尝试同时调用 `Debit` 或 `Credit` 方法的两个线程无法同时更新 `balance` 字段。
+
+[!code-csharp[lock-statement-example](~/samples/snippets/csharp/keywords/LockStatementExample.cs)]
+
+## <a name="c-language-specification"></a>C# 语言规范
+
+[!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
+
+## <a name="see-also"></a>请参阅
+
+- <xref:System.Threading.Monitor?displayProperty=nameWithType>
+- <xref:System.Threading.SpinLock?displayProperty=nameWithType>
+- <xref:System.Threading.Interlocked?displayProperty=nameWithType>
+- [C# 参考](../index.md)
+- [C# 关键字](index.md)
+- [语句关键字](statement-keywords.md)
+- [互锁操作](../../../standard/threading/interlocked-operations.md)
+- [同步基元概述](../../../standard/threading/overview-of-synchronization-primitives.md)

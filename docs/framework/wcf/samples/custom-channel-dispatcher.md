@@ -2,18 +2,18 @@
 title: 自定义通道调度程序
 ms.date: 03/30/2017
 ms.assetid: 813acf03-9661-4d57-a3c7-eeab497321c6
-ms.openlocfilehash: 2f7bb67f45c3aa9eb0cb58fa2f30744d5500fab0
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: 20574b4c849f312cb2cf55709d8d5e2a9b5dbca7
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33809974"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43519885"
 ---
 # <a name="custom-channel-dispatcher"></a>自定义通道调度程序
 此示例演示如何通过直接实现 <xref:System.ServiceModel.ServiceHostBase> 以自定义方式生成通道堆栈，以及如何在 Web 宿主环境中创建自定义通道调度程序。 通道调度程序与 <xref:System.ServiceModel.Channels.IChannelListener> 交互以接受通道并从通道堆栈中检索消息。 此示例还提供一个基本示例，用于演示如何使用 <xref:System.ServiceModel.Activation.VirtualPathExtension> 在 Web 宿主环境中生成通道堆栈。  
   
 ## <a name="custom-servicehostbase"></a>自定义 ServiceHostBase  
- 此示例实现的基类型<xref:System.ServiceModel.ServiceHostBase>而不是<xref:System.ServiceModel.ServiceHost>来演示如何将 Windows Communication Foundation (WCF) 堆栈实现替换为自定义消息处理通道堆栈顶部的层。 重写虚拟方法 <xref:System.ServiceModel.ServiceHostBase.InitializeRuntime%2A> 可生成通道侦听器和通道调度程序。  
+ 此示例实现的基类型<xref:System.ServiceModel.ServiceHostBase>而不是<xref:System.ServiceModel.ServiceHost>来演示如何进行 Windows Communication Foundation (WCF) 堆栈实现替换为自定义消息处理通道堆栈上面的层。 重写虚拟方法 <xref:System.ServiceModel.ServiceHostBase.InitializeRuntime%2A> 可生成通道侦听器和通道调度程序。  
   
  若要实现 Web 承载的服务，请从 <xref:System.ServiceModel.Activation.VirtualPathExtension> 集合获取服务扩展 <xref:System.ServiceModel.ServiceHostBase.Extensions%2A> 并将其添加到 <xref:System.ServiceModel.Channels.BindingParameterCollection>，以便传输层知道如何基于宿主环境设置（即，Internet 信息服务 (IIS)/Windows 进程激活服务 (WAS) 设置）来配置通道侦听器。  
   
@@ -23,13 +23,13 @@ ms.locfileid: "33809974"
  调度程序首先打开通道侦听器，然后接受单一答复通道。 通过该通道，调度程序开始在一个无限循环中发送消息（请求）。 对于每个请求，它都会创建一条答复消息，并将其发送回客户端。  
   
 ## <a name="creating-a-response-message"></a>创建响应消息  
- 消息处理是在 `MyServiceManager` 类型中实现的。 在 `HandleRequest` 方法中，将首先检查消息的 `Action` 标头以查看是否支持该请求。 一个预定义的 SOAP 操作"http://tempuri.org/HelloWorld/Hello"定义以提供消息筛选。 它类似于中的 WCF 实现的服务协定概念<xref:System.ServiceModel.ServiceHost>。  
+ 消息处理是在 `MyServiceManager` 类型中实现的。 在 `HandleRequest` 方法中，将首先检查消息的 `Action` 标头以查看是否支持该请求。 一个预定义的 SOAP 操作"http://tempuri.org/HelloWorld/Hello"定义以提供消息筛选。 它类似于 WCF 的实现中的服务协定概念<xref:System.ServiceModel.ServiceHost>。  
   
  对于正确的 SOAP 操作情况，此示例将检索请求的消息数据，并生成一个与该请求对应的响应，类似于在 <xref:System.ServiceModel.ServiceHost> 示例中所看到的内容。  
   
  在此示例中，通过返回自定义 HTML 消息对 HTTP-GET 谓词进行了特殊处理，以便您可以通过浏览器来浏览服务，查看是否已正确编译该服务。 如果 SOAP 操作不匹配，则发送回一条错误消息，指示不支持该请求。  
   
- 此示例的客户端是正常的 WCF 客户端，不会接受来自服务的任何内容。 因此，该服务专门设计以匹配你从正常的 WCF 获取<xref:System.ServiceModel.ServiceHost>实现。 因此，在客户端上仅需要一个服务协定。  
+ 此示例的客户端是不会假定任何内容，从该服务的常规 WCF 客户端。 因此，服务专门设计以匹配你从正常的 WCF 获取<xref:System.ServiceModel.ServiceHost>实现。 因此，在客户端上仅需要一个服务协定。  
   
 ## <a name="using-the-sample"></a>使用示例  
  运行客户端应用程序将直接生成以下输出。  
@@ -51,6 +51,6 @@ Server replied: You said: Howdy. Message id: 5
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目录不存在，请转到[Windows Communication Foundation (WCF) 和针对.NET Framework 4 的 Windows Workflow Foundation (WF) 示例](http://go.microsoft.com/fwlink/?LinkId=150780)下载所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
+>  如果此目录不存在，请转到[Windows Communication Foundation (WCF) 和.NET Framework 4 的 Windows Workflow Foundation (WF) 示例](https://go.microsoft.com/fwlink/?LinkId=150780)若要下载所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Channels\CustomChannelDispatcher`

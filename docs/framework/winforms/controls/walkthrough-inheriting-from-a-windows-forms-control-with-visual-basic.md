@@ -10,18 +10,18 @@ helpviewer_keywords:
 - inheritance [Windows Forms], walkthroughs
 - custom controls [Windows Forms], inheritance
 ms.assetid: fb58d7c8-b702-4478-ad31-b00cae118882
-ms.openlocfilehash: a6b1e78d17d952590510bdda80bf802ccc094285
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6c70de1bf6a5340b6f5b2c652110ed9be5536665
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33541432"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45750085"
 ---
 # <a name="walkthrough-inheriting-from-a-windows-forms-control-with-visual-basic"></a>演练：使用 Visual Basic 从 Windows 窗体控件继承
-使用 Visual Basic 中，您可以创建功能强大的自定义控件，通过*继承*。 通过继承，可以创建不仅保留了标准 Windows 窗体控件的所有固有功能，而且还包含自定义功能的控件。 在本演练中，将创建一个名为 `ValueButton` 的简单继承控件。 此按钮将从标准 Windows 窗体继承功能<xref:System.Windows.Forms.Button>控制，并将公开一个名为的自定义属性`ButtonValue`。  
+使用 Visual Basic 中，可以创建功能强大的自定义控件，通过*继承*。 通过继承，可以创建不仅保留了标准 Windows 窗体控件的所有固有功能，而且还包含自定义功能的控件。 在本演练中，将创建一个名为 `ValueButton` 的简单继承控件。 此按钮将继承标准 Windows 窗体的功能<xref:System.Windows.Forms.Button>控件，并将公开一个名为的自定义属性`ButtonValue`。  
   
 > [!NOTE]
->  显示的对话框和菜单命令可能会与“帮助”中的描述不同，具体取决于你现用的设置或版本。 若要更改设置，请在 **“工具”** 菜单上选择 **“导入和导出设置”** 。 有关详细信息，请参阅[在 Visual Studio 中自定义开发设置](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3)。  
+>  显示的对话框和菜单命令可能会与“帮助”中的描述不同，具体取决于你现用的设置或版本。 若要更改设置，请在 **“工具”** 菜单上选择 **“导入和导出设置”** 。 有关详细信息，请参阅[个性化设置 Visual Studio IDE](/visualstudio/ide/personalizing-the-visual-studio-ide)。  
   
 ## <a name="creating-the-project"></a>创建项目  
  创建新的项目时应指定其名称，以设置根命名空间、程序集名称和项目名称，并确保默认组件将位于正确的命名空间中。  
@@ -30,7 +30,7 @@ ms.locfileid: "33541432"
   
 1.  在“文件”菜单上指向“新建”，然后单击“项目”打开“新建项目”对话框。  
   
-2.  选择**Windows 窗体控件库**Visual Basic 项目中和类型的列表中的项目模板`ValueButtonLib`中**名称**框。  
+2.  选择**Windows 窗体控件库**项目模板从列表中的 Visual Basic 项目，然后键入`ValueButtonLib`中**名称**框。  
   
      默认情况下，项目名称 `ValueButtonLib` 也会分配到根命名空间中。 根命名空间用于限定程序集中的组件名。 例如，如果两个程序集都提供名为 `ValueButton` 的组件，则可以使用 `ValueButtonLib.ValueButton` 指定 `ValueButton` 组件。 有关详细信息，请参阅 [Visual Basic 中的命名空间](~/docs/visual-basic/programming-guide/program-structure/namespaces.md)。  
   
@@ -40,13 +40,13 @@ ms.locfileid: "33541432"
   
 5.  打开“ValueButton.vb”节点显示设计器生成的代码文件 **ValueButton.Designer.vb**。 在“代码编辑器”中打开此文件。  
   
-6.  找到`Class`语句， `Partial Public Class ValueButton`，并将从其继承自此控件类型更改<xref:System.Windows.Forms.UserControl>到<xref:System.Windows.Forms.Button>。 这使继承的控件继承的所有功能<xref:System.Windows.Forms.Button>控件。  
+6.  找到`Class`语句中， `Partial Public Class ValueButton`，并将该控件从从中要继承的类型更改<xref:System.Windows.Forms.UserControl>到<xref:System.Windows.Forms.Button>。 这允许继承的控件继承的所有功能<xref:System.Windows.Forms.Button>控件。  
   
-7.  找到`InitializeComponent`方法和删除的行分配<xref:System.Windows.Forms.ContainerControl.AutoScaleMode%2A>属性。 中不存在此属性<xref:System.Windows.Forms.Button>控件。  
+7.  找到`InitializeComponent`方法，并删除的行，将分配<xref:System.Windows.Forms.ContainerControl.AutoScaleMode%2A>属性。 此属性中不存在<xref:System.Windows.Forms.Button>控件。  
   
 8.  在“文件”菜单中，选择“全部保存”以保存项目。  
   
-     请注意，可视化设计器不再可用。 因为<xref:System.Windows.Forms.Button>控件不自行绘制，则无法修改设计器中的其外观。 其可视表示形式将完全相同，从它继承的类 (即， <xref:System.Windows.Forms.Button>) 除非在代码中修改。  
+     请注意，可视化设计器不再可用。 因为<xref:System.Windows.Forms.Button>控件不自行绘制，则无法在设计器中修改其外观。 其可视表示形式将完全从它继承的类相同 (即， <xref:System.Windows.Forms.Button>) 除非在代码中修改。  
   
 > [!NOTE]
 >  但仍然可以向设计器图面添加不含 UI 元素的组件。  
@@ -151,4 +151,4 @@ ms.locfileid: "33541432"
  [如何：在“选择工具箱项”对话框中显示控件](../../../../docs/framework/winforms/controls/how-to-display-a-control-in-the-choose-toolbox-items-dialog-box.md)  
  [使用 .NET Framework 开发自定义 Windows 窗体控件](../../../../docs/framework/winforms/controls/developing-custom-windows-forms-controls.md)  
  [继承的基础知识 (Visual Basic)](~/docs/visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)  
- [组件创作演练](http://msdn.microsoft.com/library/c414cca9-2489-4208-8b38-954586d91c13)
+ [组件创作演练](https://msdn.microsoft.com/library/c414cca9-2489-4208-8b38-954586d91c13)

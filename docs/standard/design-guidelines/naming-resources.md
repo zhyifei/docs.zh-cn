@@ -11,35 +11,37 @@ helpviewer_keywords:
 ms.assetid: 8b0e97f3-7877-44fd-bc76-e05d36d5d79c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b7cfda4e6a340d040de02903b9b64f0339751c5c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a5b53fc383e6fc9a5f056bab4eabde9979cd734b
+ms.sourcegitcommit: daa8788af67ac2d1cecd24f9f3409babb2f978c9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47862063"
 ---
 # <a name="naming-resources"></a>命名资源
-因为可以通过某些对象引用可本地化的资源，就像它们是属性，用于资源的命名准则是类似于属性指南。  
+由于可本地化的资源可像属性那样通过某些对象进行引用，因此资源的命名准则与属性准则相似。  
   
- **✓ 执行**PascalCasing 用资源键。  
+ **✓ 务必** 在资源键中使用 PascalCasing。  
   
- **✓ 执行**提供描述性而不是短的标识符。  
+ **✓ 务必** 提供描述性标识符而非简短标识符。  
   
- **X 不**使用的主要 CLR 语言的语言特定关键字。  
+ **X DO NOT要** 使用主要 CLR 语言中的语言特定关键字。  
   
- **✓ 执行**使用仅字母数字字符和下划线在命名资源。  
+ **✓ 务必执行** ：命名资源中只能使用字母数字字符和下划线。  
   
- **✓ 执行**对异常消息资源使用以下命名约定。  
+ **✓ 务必** 为异常消息资源使用以下命名约定。  
   
- 异常类型名称和异常的短标识符，应为资源标识符：  
+ 资源标识符应为异常类型名称加上异常的短标识符：  
   
  `ArgumentExceptionIllegalCharacters`  
  `ArgumentExceptionInvalidName`  
  `ArgumentExceptionFileNameIsMalformed`  
   
- *部分 © 2005年，2009 Microsoft Corporation。保留所有权利。*  
+ *部分版权 © 2005, 2009 Microsoft Corporation。保留所有权利。*  
   
- *通过从皮尔逊教育版，Inc.的权限重新打印[Framework 设计准则： 约定、 语法和可重用.NET 库，版本 2 的模式](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619)通过 Krzysztof Cwalina 和 Brad Abrams，发布 2008 年 10 月 22，通过Microsoft Windows 开发系列的一部分的 Addison Wesley Professional。*  
+ *经 Pearson Education, Inc 授权，转载自[框架设计准则：可重用的 .NET 库的约定、习惯用语和模式，第2版](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) 作者：Krzysztof Cwalina 和 Brad Abrams，由 Addison Wesley Professional 于 2008 年 10 月 22 日印发，作为 Microsoft Windows 开发系列的一部分。*  
   
-## <a name="see-also"></a>请参阅  
- [框架设计指南](../../../docs/standard/design-guidelines/index.md)  
- [命名规则](../../../docs/standard/design-guidelines/naming-guidelines.md)
+## <a name="see-also"></a>请参阅
+
+- [框架设计指南](../../../docs/standard/design-guidelines/index.md)  
+- [命名规则](../../../docs/standard/design-guidelines/naming-guidelines.md)

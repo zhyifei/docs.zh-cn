@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - get keyword [C#]
 ms.assetid: a52de048-fbe0-41b0-82ec-8e4ac04d3a71
-ms.openlocfilehash: 671cadce0bd120ec0728562ec448b2ce6edf2dd7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 182f7164ad929232c185903a3dbf024a2e5d22a7
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33216104"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "45987781"
 ---
 # <a name="get-c-reference"></a>get（C# 参考）
 
@@ -34,7 +34,9 @@ ms.locfileid: "33216104"
 
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>请参阅  
- [C# 参考](../../../csharp/language-reference/index.md)  
- [C# 编程指南](../../../csharp/programming-guide/index.md)  
- [C# 关键字](../../../csharp/language-reference/keywords/index.md)[属性](../../../csharp/programming-guide/classes-and-structs/properties.md)
+## <a name="see-also"></a>请参阅
+
+- [C# 参考](../../../csharp/language-reference/index.md)  
+- [C# 编程指南](../../../csharp/programming-guide/index.md)  
+- [C# 关键字](../../../csharp/language-reference/keywords/index.md)
+- [属性](../../../csharp/programming-guide/classes-and-structs/properties.md)

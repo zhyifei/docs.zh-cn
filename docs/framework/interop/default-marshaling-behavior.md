@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: c0a9bcdf-3df8-4db3-b1b6-abbdb2af809a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 83bb8b0305e47ca7b354db03c7a9a3dd02f62d41
-ms.sourcegitcommit: f9e38d31288fe5962e6be5b0cc286da633482873
+ms.openlocfilehash: aedc7b1941268184b71713d31913dbfbd8b74643
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37028066"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43504254"
 ---
 # <a name="default-marshaling-behavior"></a>默认封送处理行为
 互操作封送处理根据规则进行操作，该规则指定与方法参数相关联的数据在托管和非托管内存之间传递时的行为方式。 这些内置规则控制诸如此类的封送处理活动：数据类型转换、被调用方是否可以更改传递给它的数据并将这些更改返回给调用方以及在何种情况下封送拆收器提供性能优化。  
@@ -41,7 +41,7 @@ BSTR MethodOne (BSTR b) {
   
  但是，如果将方法定义为平台调用原型，将每个 BSTR 类型替换为 <xref:System.String> 类型并调用 `MethodOne`，则公共语言运行时会尝试释放 `b` 两次。 可使用 <xref:System.IntPtr> 类型而不是字符串类型来更改封送处理行为。  
   
- 运行时始终使用 CoTaskMemFree 方法来释放内存。 如果正在使用的内存未通过 **CoTaskMemAlloc** 方法分配，则必须使用 **IntPtr** 并通过适当的方法手动释放内存。 同样，可在永不应释放内存的情况下避免自动释放内存，例如，从 kernel32.dll（它将指针返回内核内存）使用 GetCommandLine 函数时。 有关手动释放内存的详细信息，请参阅[缓冲区示例](http://msdn.microsoft.com/library/e30d36e8-d7c4-4936-916a-8fdbe4d9ffd5(v=vs.100))。  
+ 运行时始终使用 CoTaskMemFree 方法来释放内存。 如果正在使用的内存未通过 **CoTaskMemAlloc** 方法分配，则必须使用 **IntPtr** 并通过适当的方法手动释放内存。 同样，可在永不应释放内存的情况下避免自动释放内存，例如，从 kernel32.dll（它将指针返回内核内存）使用 GetCommandLine 函数时。 有关手动释放内存的详细信息，请参阅[缓冲区示例](https://msdn.microsoft.com/library/e30d36e8-d7c4-4936-916a-8fdbe4d9ffd5(v=vs.100))。  
   
 ## <a name="default-marshaling-for-classes"></a>类的默认封送处理  
  类仅能由 COM 互操作封送，并总是作为接口封送。 在某些情况下用来将该类封送的接口称为类接口。 有关使用所选接口替代类接口的信息，请参阅[类接口简介](com-callable-wrapper.md#introducing-the-class-interface)。  

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - properties [C#]
 - C# language, properties
 ms.assetid: e295a8a2-b357-4ee7-a12e-385a44146fa8
-ms.openlocfilehash: 47f8e978d81b4aec94482f0a295691b830c3698c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 74020696a9d2370de2976671a9f1ed944aba8fb9
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33325157"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43857675"
 ---
 # <a name="properties-c-programming-guide"></a>属性（C# 编程指南）
 
@@ -73,8 +73,9 @@ ms.locfileid: "33325157"
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>请参阅
- [C# 编程指南](../../../csharp/programming-guide/index.md)  
- [使用属性](../../../csharp/programming-guide/classes-and-structs/using-properties.md)  
- [索引器](../../../csharp/programming-guide/indexers/index.md)  
- [get 关键字](../../../csharp/language-reference/keywords/get.md)    
- [set 关键字](../../../csharp/language-reference/keywords/set.md)    
+
+- [C# 编程指南](../../../csharp/programming-guide/index.md)  
+- [使用属性](../../../csharp/programming-guide/classes-and-structs/using-properties.md)  
+- [索引器](../../../csharp/programming-guide/indexers/index.md)  
+- [get 关键字](../../../csharp/language-reference/keywords/get.md)    
+- [set 关键字](../../../csharp/language-reference/keywords/set.md)    

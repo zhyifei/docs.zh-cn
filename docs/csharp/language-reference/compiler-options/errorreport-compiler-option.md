@@ -8,12 +8,12 @@ helpviewer_keywords:
 - errorreport compiler option [C#]
 - /errorreport compiler option [C#]
 ms.assetid: bd0e7493-b79d-4369-9c3f-ba26ebdfbedf
-ms.openlocfilehash: d7e001834d670e7c88488c6db887d1d8e671beef
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: dcbb9467da87a82147176bb0feb00383aff2c77f
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33218980"
+ms.lasthandoff: 09/27/2018
+ms.locfileid: "47209894"
 ---
 # <a name="-errorreport-c-compiler-options"></a>-errorreport（C# 编译器选项）
 此选项提供向 Microsoft 报告 C# 内部编译错误的简便方法。  
@@ -62,4 +62,5 @@ ms.locfileid: "33218980"
  有关如何以编程方式设置此编译器选项的信息，请参阅 <xref:VSLangProj80.CSharpProjectConfigurationProperties3.ErrorReport%2A>。  
   
 ## <a name="see-also"></a>请参阅  
- [C# 编译器选项](../../../csharp/language-reference/compiler-options/index.md)
+
+- [C# 编译器选项](../../../csharp/language-reference/compiler-options/index.md)

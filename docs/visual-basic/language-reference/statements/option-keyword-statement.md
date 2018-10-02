@@ -1,23 +1,23 @@
 ---
-title: 选项&lt;关键字&gt;语句
+title: 选项&lt;关键字&gt;语句 (Visual Basic)
 ms.date: 07/20/2015
 f1_keywords:
 - vb.option
 helpviewer_keywords:
 - Option keyword [Visual Basic]
 ms.assetid: 6b2f41c4-2403-43b6-8a14-94a3775e5b47
-ms.openlocfilehash: c5a53faec01b8c10de5802eccb21d66350193696
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f4996b0c03ee98fef31bc301dc957060afdfdac8
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33598197"
+ms.lasthandoff: 09/28/2018
+ms.locfileid: "47421159"
 ---
 # <a name="option-ltkeywordgt-statement"></a>选项&lt;关键字&gt;语句
-引入了指定适用于整个源文件编译器选项的语句。  
+引入了指定应用于整个源文件编译器选项的语句。  
   
 ## <a name="remarks"></a>备注  
- 编译器选项可以控制是否必须显式声明所有变量、 是否收缩类型转换必须为显式，或是否应为文本或二进制数量比较字符串。  
+ 编译器选项可以控制是否必须显式声明所有变量，是否收缩类型转换必须是显式的或者是否应作为文本或二进制数量比较字符串。  
   
  `Option` 关键字可用于以下上下文中：  
   

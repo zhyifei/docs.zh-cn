@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: 23975f88-e0af-4b88-93de-9e20e11880ad
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 34ce6ec5a4cc5ddd4542474dc9ce55ff64a274ec
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7a0b632965306b7511a2abcf94d0c4c88ab850d4
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33577015"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44199357"
 ---
 # <a name="attribute-and-namespace-node-navigation-using-xpathnavigator"></a>使用 XPathNavigator 的属性和命名空间节点定位
 <xref:System.Xml.XPath.XPathNavigator> 类提供两组导航方法，第一组如[使用 XPathNavigator 的节点集定位](../../../../docs/standard/data/xml/node-set-navigation-using-xpathnavigator.md)主题中所述，用于浏览 <xref:System.Xml.XPath.XPathDocument> 或 <xref:System.Xml.XmlDocument> 对象中的节点集。 第二组如本主题中所述，用于浏览 <xref:System.Xml.XPath.XPathDocument> 或 <xref:System.Xml.XmlDocument> 对象中的属性和命名空间节点。  
@@ -96,11 +96,12 @@ ms.locfileid: "33577015"
 > [!NOTE]
 >  <xref:System.Xml.XPath.XPathNavigator> 类以相反的文档顺序返回命名空间节点。 因此，<xref:System.Xml.XPath.XPathNavigator.MoveToFirstNamespace%2A> 实质上移到当前在范围内的最后一个命名空间节点。  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Xml.XmlDocument>  
- <xref:System.Xml.XPath.XPathDocument>  
- <xref:System.Xml.XPath.XPathNavigator>  
- [使用 XPath 数据模型处理 XML 数据](../../../../docs/standard/data/xml/process-xml-data-using-the-xpath-data-model.md)  
- [使用 XPathNavigator 的节点集定位](../../../../docs/standard/data/xml/node-set-navigation-using-xpathnavigator.md)  
- [使用 XPathNavigator 提取 XML 数据](../../../../docs/standard/data/xml/extract-xml-data-using-xpathnavigator.md)  
- [使用 XPathNavigator 访问强类型 XML 数据](../../../../docs/standard/data/xml/accessing-strongly-typed-xml-data-using-xpathnavigator.md)
+## <a name="see-also"></a>请参阅
+
+- <xref:System.Xml.XmlDocument>  
+- <xref:System.Xml.XPath.XPathDocument>  
+- <xref:System.Xml.XPath.XPathNavigator>  
+- [使用 XPath 数据模型处理 XML 数据](../../../../docs/standard/data/xml/process-xml-data-using-the-xpath-data-model.md)  
+- [使用 XPathNavigator 的节点集定位](../../../../docs/standard/data/xml/node-set-navigation-using-xpathnavigator.md)  
+- [使用 XPathNavigator 提取 XML 数据](../../../../docs/standard/data/xml/extract-xml-data-using-xpathnavigator.md)  
+- [使用 XPathNavigator 访问强类型 XML 数据](../../../../docs/standard/data/xml/accessing-strongly-typed-xml-data-using-xpathnavigator.md)

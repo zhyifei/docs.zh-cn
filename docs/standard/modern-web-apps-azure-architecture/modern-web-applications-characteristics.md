@@ -3,20 +3,18 @@ title: 新式 Web 应用程序的特征
 description: 使用 ASP.NET Core 和 Azure 构建新式 Web 应用程序 | 新式 Web 应用程序的特征
 author: ardalis
 ms.author: wiwagn
-ms.date: 10/06/2017
-ms.openlocfilehash: cc4493bf8e45c41a94e8e6f719318b14ad5b05f1
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.date: 06/28/2018
+ms.openlocfilehash: 4c73ab59148325f66d3ee17db3fb78d397b73f15
+ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37105802"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37404481"
 ---
 # <a name="characteristics-of-modern-web-applications"></a>新式 Web 应用程序的特征
 
 > "… 恰当合理的设计，会使功能的价格变便宜。 这种方式有难度，但是却总有成效。”  
 > \- Dennis Ritchie
-
-## <a name="summary"></a>总结
 
 新式 Web 应用程序比以往承载着更高的用户期望和要求。 当今的 Web 应用需要能在全球任何地方任意时刻可用，需要可在任何设备或屏幕尺寸上使用。 Web 应用程序必须具有安全性、灵活性和可缩放性，以便满足高峰需求。 如今复杂方案日益需要由丰富的用户体验来处理，这建立在使用 JavaScript 并通过 Web API 进行有效通信的客户端的基础之上。
 
@@ -31,8 +29,9 @@ ASP.NET Core 针对新式 Web 应用程序和基于云的托管方案进行了�
 ![](./media/image2-1.png)
 
 > ### <a name="reference-application"></a>参考应用程序
+>
 > - **eShopOnWeb**  
-> <https://github.com/dotnet/eShopOnWeb>
+>   <https://github.com/dotnet/eShopOnWeb>
 
 ## <a name="cloud-hosted-and-scalable"></a>云托管和可缩放
 
@@ -58,7 +57,7 @@ ASP.NET Core 应用程序支持单元测试，并且通过其松散耦合和依�
 
 与之相反，单页应用程序 (SPAs) 涉及极少动态生成的服务器端页面负载（如有）。 许多 SPA 在一个静态 HTML 文件中进行初始化，此文件加载该应用启动和运行所需的 JavaScript 库。 这些应用大量使用 Web API 处理数据需求，并提供更为丰富的用户体验。
 
-许多 Web 应用程序同时涉及传统 Web 应用程序行为（尤其是对于内容）和 SPA（对于交互）。 ASP.NET Core 通过使用相同工具集和基础框架库，在同一应用程序中同时支持 MVC 和 Web API。
+许多 Web 应用程序同时涉及传统 Web 应用程序行为（尤其是对于内容）和 SPA（对于交互）。 ASP.NET Core 通过使用相同工具集和基础框架库，在同一应用程序中同时支持 MVC（视图和/或 Razor Pages）和 Web API。
 
 ## <a name="simple-development-and-deployment"></a>简单的开发和部署
 
@@ -69,12 +68,13 @@ ASP.NET Core 应用程序支持单元测试，并且通过其松散耦合和依�
 除 ASP.NET Core 外，传统的 ASP.NET 4.x 依然是一个用于构建 Web 应用程序的可靠强大的平台。 ASP.NET 支持 MVC 和 Web API 开发模型以及 Web 窗体。Web 窗体非常适合用于基于页面的丰富应用程序开发，具有丰富的第三方组件系统。 Microsoft Azure 长期以来支持 ASP.NET 4.x 应用程序，而且许多开发人员非常熟悉该平台。
 
 > ### <a name="references--modern-web-applications"></a>参考 - 新式 Web 应用程序
+>
 > - **ASP.NET Core 简介**  
-> <https://docs.microsoft.com/aspnet/core/>
+>   <https://docs.microsoft.com/aspnet/core/>
 > - **ASP.NET Core 六大关键优势使其更加独特和优秀**  
-> <https://blog.trigent.com/six-key-benefits-of-asp-net-core-1-0-which-make-it-different-better/>
+>   <https://blog.trigent.com/six-key-benefits-of-asp-net-core-1-0-which-make-it-different-better/>
 > - **在 ASP.NET Core 进行测试**  
-> <https://docs.microsoft.com/aspnet/core/testing/>
+>   <https://docs.microsoft.com/aspnet/core/testing/>
 
 >[!div class="step-by-step"]
 [上一页](index.md)

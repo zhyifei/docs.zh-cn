@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: d2ce0683-343d-403e-bb8d-209186f7a19d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7181f6f28d576c5ddbbbe57d27e1d41e412cef6c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8a228513bd29e35e8793124846de16f1c8bf4c10
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33408094"
+ms.lasthandoff: 09/29/2018
+ms.locfileid: "47237171"
 ---
 # <a name="winmdexpexe-windows-runtime-metadata-export-tool"></a>Winmdexp.exe（Windows 运行时元数据导出工具）
 [!INCLUDE[wrt](../../../includes/wrt-md.md)]元数据导出工具 (Winmdexp.exe) 可将 .NET Framework 模块转换为包含 [!INCLUDE[wrt](../../../includes/wrt-md.md)]元数据的文件。 尽管 .NET Framework 程序集和 [!INCLUDE[wrt](../../../includes/wrt-md.md)]元数据文件使用相同的物理格式，但元数据表的内容有差别，这意味着 .NET Framework 程序集不可自动用作 [!INCLUDE[wrt](../../../includes/wrt-md.md)]组件。 将 .NET Framework 模块转换为 [!INCLUDE[wrt](../../../includes/wrt-md.md)] 组件的过程称为*导出*。 在 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 和 [!INCLUDE[net_v451](../../../includes/net-v451-md.md)] 中，生成的 Windows 元数据 (.winmd) 文件同时包含元数据和实现。  
@@ -46,12 +46,12 @@ winmdexp [options] winmdmodule
 |**@** `responsefile`|指定包含选项的响应 (.rsp) 文件（并且还可以选择指定 `winmdmodule`）。 `responsefile` 中的每行应包含一个参数或选项。|  
   
 ## <a name="remarks"></a>备注  
- Winmdexp.exe 未被设计将任意 .NET Framework 程序集转换为 .winmd 文件。 它需要使用 `/target:winmdobj` 选项编译的模块，并且其他限制也适用。 这些限制中最重要的是，程序集的 API 图面中公开的所有类型都必须是 [!INCLUDE[wrt](../../../includes/wrt-md.md)]类型。 有关详细信息，请参阅 Windows 开发人员中心的文章[在 C# 和 Visual Basic 中创建 Windows 运行时组件](http://go.microsoft.com/fwlink/p/?LinkID=238313)的“在 Windows 运行时组件中声明类型”一节。  
+ Winmdexp.exe 未被设计将任意 .NET Framework 程序集转换为 .winmd 文件。 它需要使用 `/target:winmdobj` 选项编译的模块，并且其他限制也适用。 这些限制中最重要的是，程序集的 API 图面中公开的所有类型都必须是 [!INCLUDE[wrt](../../../includes/wrt-md.md)]类型。 有关详细信息，请参阅 Windows 开发人员中心的文章[在 C# 和 Visual Basic 中创建 Windows 运行时组件](https://go.microsoft.com/fwlink/p/?LinkID=238313)的“在 Windows 运行时组件中声明类型”一节。  
   
- 当你使用 C# 或 Visual Basic 编写 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]应用或 [!INCLUDE[wrt](../../../includes/wrt-md.md)]组件时，.NET Framework 将提供支持，使得利用 [!INCLUDE[wrt](../../../includes/wrt-md.md)]进行编程更加自然。 [Windows 应用商店应用和 Windows 运行时的 .NET Framework 支持](../../../docs/standard/cross-platform/support-for-windows-store-apps-and-windows-runtime.md)一文中对此进行了讨论。 在该过程中，某些常用的 [!INCLUDE[wrt](../../../includes/wrt-md.md)]类型将映射到 .NET Framework 类型。 Winmdexp.exe 将反转此过程并生成使用对应的 [!INCLUDE[wrt](../../../includes/wrt-md.md)]类型的 API 图面。 例如，从 <xref:System.Collections.Generic.IList%601> 接口构造的类型将映射到从 [!INCLUDE[wrt](../../../includes/wrt-md.md)][IVector\<T>](http://go.microsoft.com/fwlink/p/?LinkId=251132)接口构造的类型。  
+ 当你使用 C# 或 Visual Basic 编写 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]应用或 [!INCLUDE[wrt](../../../includes/wrt-md.md)]组件时，.NET Framework 将提供支持，使得利用 [!INCLUDE[wrt](../../../includes/wrt-md.md)]进行编程更加自然。 [Windows 应用商店应用和 Windows 运行时的 .NET Framework 支持](../../../docs/standard/cross-platform/support-for-windows-store-apps-and-windows-runtime.md)一文中对此进行了讨论。 在该过程中，某些常用的 [!INCLUDE[wrt](../../../includes/wrt-md.md)]类型将映射到 .NET Framework 类型。 Winmdexp.exe 将反转此过程并生成使用对应的 [!INCLUDE[wrt](../../../includes/wrt-md.md)]类型的 API 图面。 例如，从 <xref:System.Collections.Generic.IList%601> 接口构造的类型将映射到从 [!INCLUDE[wrt](../../../includes/wrt-md.md)][IVector\<T>](https://go.microsoft.com/fwlink/p/?LinkId=251132)接口构造的类型。  
   
 ## <a name="see-also"></a>请参阅  
  [.NET Framework 对 Windows 应用商店应用和 Windows 运行时的支持情况](../../../docs/standard/cross-platform/support-for-windows-store-apps-and-windows-runtime.md)  
- [用 C# 和 Visual Basic 创建 Windows 运行时组件](http://go.microsoft.com/fwlink/p/?LinkID=238313)  
+ [用 C# 和 Visual Basic 创建 Windows 运行时组件](https://go.microsoft.com/fwlink/p/?LinkID=238313)  
  [Winmdexp.exe 错误消息](../../../docs/framework/tools/winmdexp-exe-error-messages.md)  
- [生成、部署和配置工具 (.NET Framework)](http://msdn.microsoft.com/library/b8c921be-6012-4181-b8d4-ab15813fc9a7)
+ [生成、部署和配置工具 (.NET Framework)](https://msdn.microsoft.com/library/b8c921be-6012-4181-b8d4-ab15813fc9a7)

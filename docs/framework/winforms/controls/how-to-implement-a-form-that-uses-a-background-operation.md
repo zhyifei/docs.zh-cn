@@ -16,19 +16,19 @@ helpviewer_keywords:
 - threading [Windows Forms], background operations
 - background operations
 ms.assetid: 9f483f93-1613-4be1-a021-b4934e9c78f3
-ms.openlocfilehash: 5923895e1e6cf86f8de30405dbfdb0a603d708d6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8f348097223d2db4c54d9ecbba89eb8d179b6680
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33533291"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43523116"
 ---
 # <a name="how-to-implement-a-form-that-uses-a-background-operation"></a>如何：实现使用后台操作的窗体
 以下示例程序创建一个计算 Fibonacci 数字的窗体。 计算在独立于用户界面线程的线程上运行，因此用户界面将随计算继续运行，不会延迟。  
   
  Visual Studio 中对此任务提供广泛支持。  
   
- 另请参阅[演练：实现使用后台操作的窗体](http://msdn.microsoft.com/library/b2zk6580\(v=vs.110\))。  
+ 另请参阅[演练：实现使用后台操作的窗体](https://msdn.microsoft.com/library/b2zk6580\(v=vs.110\))。  
   
 ## <a name="example"></a>示例  
  [!code-cpp[System.ComponentModel.BackgroundWorker#1](../../../../samples/snippets/cpp/VS_Snippets_Winforms/System.ComponentModel.BackgroundWorker/CPP/fibonacciform.cpp#1)]
@@ -40,7 +40,7 @@ ms.locfileid: "33533291"
   
 -   对 System、System.Drawing 和 System.Windows.Forms 程序集的引用。  
   
- 为 Visual Basic 或 Visual C# 中生成此示例从命令行有关的信息，请参阅[从命令行生成](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md)或[命令行上使用 csc.exe 生成](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)。 你也可以通过将代码粘贴到新项目中生成 Visual Studio 中的此示例。  另请参阅 [如何：使用 Visual Studio 编译和运行完整的 Windows 窗体代码示例](http://msdn.microsoft.com/library/Bb129228\(v=vs.110\))。  
+ Visual Basic 或 Visual C# 生成命令行中的此示例的信息，请参阅[从命令行生成](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md)或[命令行上使用 csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)。 也可以通过将代码粘贴到新的项目中生成此示例在 Visual Studio 中。  另请参阅[如何：使用 Visual Studio 编译和运行完整的 Windows 窗体代码示例](https://msdn.microsoft.com/library/Bb129228\(v=vs.110\))。  
   
 ## <a name="robust-programming"></a>可靠编程  
   

@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 41972034-92ed-450a-9664-ab93fcc6f1fb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cbe0178033338754c9e412dfcac993f042d943d1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a4bdf31b34a60e29c3b406bb996c52462cd1207d
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33575487"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44084876"
 ---
 # <a name="calling-synchronous-methods-asynchronously"></a>使用异步方式调用同步方法
 使用 .NET Framework 可以以异步方式调用任何方法。 要实现此操作，请定义一个委托，此委托具有与你要调用的方法相同的签名；公共语言运行时会自动使用适当的签名为此委托定义 `BeginInvoke` 和 `EndInvoke` 方法。  
@@ -110,6 +110,7 @@ ms.locfileid: "33575487"
  [!code-csharp[AsyncDelegateExamples#5](../../../samples/snippets/csharp/VS_Snippets_CLR/AsyncDelegateExamples/CS/callback.cs#5)]
  [!code-vb[AsyncDelegateExamples#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/AsyncDelegateExamples/VB/callback.vb#5)]  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Delegate>  
- [基于事件的异步模式 (EAP)](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md)
+## <a name="see-also"></a>请参阅
+
+- <xref:System.Delegate>  
+- [基于事件的异步模式 (EAP)](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md)

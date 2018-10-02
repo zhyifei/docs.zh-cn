@@ -2,17 +2,17 @@
 title: SQL Server 数据类型和 ADO.NET
 ms.date: 03/30/2017
 ms.assetid: 81b43550-23e8-43bb-b460-7eb8ac825c33
-ms.openlocfilehash: da98ac72fab0bc3934cef79aeec9b12d003b6888
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 878bbe41f259f1e50cd0a41669c7a352e78bc0f1
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33363497"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47108055"
 ---
 # <a name="sql-server-data-types-and-adonet"></a>SQL Server 数据类型和 ADO.NET
 SQL Server 和 .NET Framework 基于不同的类型系统，这可导致潜在的数据丢失。 为了保持数据的完整性，适用于 SQL Server 的 .NET Framework 数据提供程序 (<xref:System.Data.SqlClient>) 提供了用于处理 SQL Server 数据的类型化访问器方法。 可以使用 <xref:System.Data.SqlDbType> 类中的枚举来指定 <xref:System.Data.SqlClient.SqlParameter> 数据类型。  
   
- 有关详细信息和的表，用于描述的数据类型 SQL Server 和.NET Framework 数据类型之间的映射，请参阅[SQL Server 数据类型映射](../../../../../docs/framework/data/adonet/sql-server-data-type-mappings.md)。  
+ 有关详细信息和一个表，该表用于描述的数据类型 SQL Server 和.NET Framework 数据类型之间的映射，请参阅[SQL Server 数据类型映射](../../../../../docs/framework/data/adonet/sql-server-data-type-mappings.md)。  
   
  SQL Server 2008 引入了旨在满足业务需求的新数据类型，以用于处理日期和时间、结构化、半结构化和非结构化的数据。 这些文档位于 SQL Server 2008 联机丛书中。  
   
@@ -20,7 +20,7 @@ SQL Server 和 .NET Framework 基于不同的类型系统，这可导致潜在�
   
  **SQL Server 联机丛书**  
   
-1.  [数据类型 （数据库引擎）](http://go.microsoft.com/fwlink/?LinkID=107468)  
+1.  [数据类型 （数据库引擎）](https://go.microsoft.com/fwlink/?LinkID=107468)  
   
 ## <a name="in-this-section"></a>本节内容  
  [SqlTypes 和数据集](../../../../../docs/framework/data/adonet/sql/sqltypes-and-the-dataset.md)  
@@ -59,4 +59,4 @@ SQL Server 和 .NET Framework 基于不同的类型系统，这可导致潜在�
  [配置参数和参数数据类型](../../../../../docs/framework/data/adonet/configuring-parameters-and-parameter-data-types.md)  
  [表值参数](../../../../../docs/framework/data/adonet/sql/table-valued-parameters.md)  
  [SQL Server 二进制和大值数据](../../../../../docs/framework/data/adonet/sql/sql-server-binary-and-large-value-data.md)  
- [ADO.NET 托管提供程序和数据集开发人员中心](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)

@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: cea4d187-6398-4da4-af09-c1abc6a349c1
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 5d985d1620b7dec324c0113bcd5652cede044950
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 2b0d7968ce2cf8f326004c9e564cb2e7912c1a0a
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32744962"
+ms.lasthandoff: 09/28/2018
+ms.locfileid: "47436240"
 ---
 # <a name="ltassemblyidentitygt-element-for-ltruntimegt"></a>&lt;assemblyIdentity&gt;元素&lt;运行时&gt;
 包含有关程序集的标识信息。  
@@ -46,17 +45,17 @@ culture="assembly culture"/>
 |---------------|-----------------|  
 |`name`|必需的特性。<br /><br /> 程序集的名称|  
 |`culture`|可选特性。<br /><br /> 一个字符串，指定的语言和国家/地区的程序集。|  
-|`publicKeyToken`|可选特性。<br /><br /> 一个十六进制值，指定的程序集的强名称。|  
-|`processorArchitecture`|可选特性。<br /><br /> 指定包含特定于处理器的代码程序集的处理器体系结构的值"x86"、"amd64"、"msil"或"ia64"之一。 值不区分大小写。 如果该特性被赋予任何其他值，整个`<assemblyIdentity>`元素将被忽略。 请参阅 <xref:System.Reflection.ProcessorArchitecture>。|  
+|`publicKeyToken`|可选特性。<br /><br /> 一个十六进制值，该值指定程序集的强名称。|  
+|`processorArchitecture`|可选特性。<br /><br /> 为包含特定于处理器的代码程序集指定的处理器体系结构的值"x86"、"amd64"、"msil"或"ia64"之一。 值不区分大小写。 如果该属性分配任何其他值，则整个`<assemblyIdentity>`元素将被忽略。 请参阅 <xref:System.Reflection.ProcessorArchitecture>。|  
   
 ## <a name="processorarchitecture-attribute"></a>processorArchitecture 属性  
   
-|值|描述|  
+|“值”|描述|  
 |-----------|-----------------|  
 |`amd64`|仅 64 位 AMD 处理器。|  
 |`ia64`|仅 64 位 Intel 处理器。|  
 |`msil`|特定于处理器和每字位数|  
-|`x86`|32 位 Intel 处理器、 是本机或在 64 位平台上的 Windows (WOW) 环境上的 Windows 中。|  
+|`x86`|32 位 Intel 处理器，位于本机或在 Windows 上的 64 位平台上的 Windows (WOW) 环境中。|  
   
 ### <a name="child-elements"></a>子元素  
  无。  
@@ -71,11 +70,11 @@ culture="assembly culture"/>
 |`runtime`|包含有关程序集绑定和垃圾回收的信息。|  
   
 ## <a name="remarks"></a>备注  
- 每个 **\<dependentAssembly >** 元素都必须有一个 **\<assemblyIdentity >** 子元素。  
+ 每个 **\<dependentAssembly >** 元素必须有一个 **\<assemblyIdentity >** 子元素。  
   
- 如果`processorArchitecture`属性是否存在、`<assemblyIdentity>`元素仅适用于具有相应的处理器体系结构的程序集。 如果`processorArchitecture`属性不存在，`<assemblyIdentity>`元素可以应用于任何处理器体系结构包含的程序集。  
+ 如果`processorArchitecture`属性是否存在、`<assemblyIdentity>`元素仅适用于具有相应的处理器体系结构的程序集。 如果`processorArchitecture`属性不存在，`<assemblyIdentity>`元素可以将应用于具有任何处理器体系结构的程序集。  
   
- 下面的示例演示两个程序集具有相同的名称，面向两个不同两个处理器体系结构，以及其版本不维护同步配置文件。当应用程序执行 x86 平台第一个`<assemblyIdentity>`元素得到应用，另一个被忽略。 如果应用程序执行在非 x86 或 ia64 平台上，同时将被忽略。  
+ 下面的示例显示了两个程序集具有相同名称的针对两个不同两个处理器的体系结构，且其版本不维护同步配置文件。当应用程序执行 x86 平台第一个`<assemblyIdentity>`元素得到应用，另一个被忽略。 如果应用程序在非 x86 或 ia64 平台上执行，都将被忽略。  
   
 ```xml  
 <configuration>  
@@ -102,10 +101,10 @@ culture="assembly culture"/>
 </configuration>  
 ```  
   
- 如果配置文件包含`<assemblyIdentity>`元素没有`processorArchitecture`属性，然后在不包含相匹配的平台，而无需元素的元素`processorArchitecture`使用属性。  
+ 如果配置文件包含`<assemblyIdentity>`元素没有`processorArchitecture`属性，并且不包含相匹配的平台，而无需元素的元素`processorArchitecture`使用属性。  
   
 ## <a name="example"></a>示例  
- 下面的示例演示如何提供有关程序集的信息。  
+ 下面的示例演示如何提供有关程序集信息。  
   
 ```xml  
 <configuration>  

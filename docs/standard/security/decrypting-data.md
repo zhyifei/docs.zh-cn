@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 9b266b6c-a9b2-4d20-afd8-b3a0d8fd48a0
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d0aefcc61a9ce283f1230cd44ffae549725bb15f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b3e48d5a088fc6cff3dbdaaa77e6fa561c33f400
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33589092"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43865516"
 ---
 # <a name="decrypting-data"></a>解密数据
 解密是加密的反向操作。 对于私钥加密，必须知道用于加密数据的密钥和 IV。 对于公钥加密，必须知道公钥（如果使用了私钥来加密数据）或私钥（如果使用了公钥来加密数据）。  
@@ -202,7 +202,8 @@ SymmetricKey = RSA.Decrypt( EncryptedSymmetricKey, false);
 SymmetricIV = RSA.Decrypt( EncryptedSymmetricIV , false);  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [生成加密和解密密钥](../../../docs/standard/security/generating-keys-for-encryption-and-decryption.md)  
- [加密数据](../../../docs/standard/security/encrypting-data.md)  
- [Cryptographic Services](../../../docs/standard/security/cryptographic-services.md)
+## <a name="see-also"></a>请参阅
+
+- [生成加密和解密密钥](../../../docs/standard/security/generating-keys-for-encryption-and-decryption.md)  
+- [加密数据](../../../docs/standard/security/encrypting-data.md)  
+- [Cryptographic Services](../../../docs/standard/security/cryptographic-services.md)

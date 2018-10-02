@@ -8,12 +8,12 @@ helpviewer_keywords:
 - -bugreport compiler option [C#]
 - bugreport compiler option [C#]
 ms.assetid: f39665e3-4f6f-4357-88a2-3274c7bec0c1
-ms.openlocfilehash: 5505971ad9a6920124dd4d8c12642a5e4e346322
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6e4674acd2a5edbbffd2babf130d2078019ab9b7
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33214087"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43516998"
 ---
 # <a name="-bugreport-c-compiler-options"></a>-bugreport（C# 编译器选项）
 指定应使调试信息置于文件中供以后分析。  
@@ -54,6 +54,7 @@ ms.locfileid: "33214087"
  请注意，生成文件的内容会公开源代码，这可能会导致意外信息泄露。  
   
 ## <a name="see-also"></a>请参阅  
- [C# 编译器选项](../../../csharp/language-reference/compiler-options/index.md)  
- [-errorreport（C# 编译器选项）](../../../csharp/language-reference/compiler-options/errorreport-compiler-option.md)  
- [管理项目和解决方案属性](/visualstudio/ide/managing-project-and-solution-properties)
+
+- [C# 编译器选项](../../../csharp/language-reference/compiler-options/index.md)  
+- [-errorreport（C# 编译器选项）](../../../csharp/language-reference/compiler-options/errorreport-compiler-option.md)  
+- [管理项目和解决方案属性](/visualstudio/ide/managing-project-and-solution-properties)

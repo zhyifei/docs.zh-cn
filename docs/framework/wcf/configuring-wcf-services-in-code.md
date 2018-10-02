@@ -2,15 +2,15 @@
 title: 在代码中配置 WCF 服务
 ms.date: 03/30/2017
 ms.assetid: 193c725d-134f-4d31-a8f8-4e575233bff6
-ms.openlocfilehash: 714236bcdb562840323698622cdf3d0c6c89b6ca
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: abd75e514d698e73c2297a5dc2e511f89f0534b1
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33804142"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47216501"
 ---
 # <a name="configuring-wcf-services-in-code"></a>在代码中配置 WCF 服务
-Windows Communication Foundation (WCF) 允许开发人员配置服务使用配置文件或代码。  当部署之后需要对服务进行配置时，配置文件十分有用。 在使用配置文件时，IT 专业人员只需要更新配置文件，无需重新编译。 不过，配置文件可能十分复杂，难以维护。 不支持对配置文件进行调试，并且将按名称来引用配置元素，这使得配置文件的创作易于出错且较为困难。 WCF 还允许你在代码中配置服务。 在早期版本的代码中的 WCF （4.0 及更早版本） 配置服务中十分方便，在自承载方案中，<xref:System.ServiceModel.ServiceHost>类允许你配置终结点和在调用 ServiceHost.Open 之前的行为。 但是，在 Web 承载方案中，您不具备针对 <xref:System.ServiceModel.ServiceHost> 类的直接访问权限。 若要配置 Web 承载的服务，您需要创建 `System.ServiceModel.ServiceHostFactory`，后者会创建 <xref:System.ServiceModel.Activation.ServiceHostFactory> 并执行任何所需的配置。 从.NET 4.5 开始，WCF 提供了更简单的方法来配置自承载和 web 承载服务的代码。  
+Windows Communication Foundation (WCF) 允许开发人员使用代码或配置文件配置服务。  当部署之后需要对服务进行配置时，配置文件十分有用。 在使用配置文件时，IT 专业人员只需要更新配置文件，无需重新编译。 不过，配置文件可能十分复杂，难以维护。 不支持对配置文件进行调试，并且将按名称来引用配置元素，这使得配置文件的创作易于出错且较为困难。 WCF 还允许您在代码中配置服务。 在早期版本的代码中的 WCF （4.0 及更早版本） 配置服务很容易在自承载方案中，<xref:System.ServiceModel.ServiceHost>类允许您配置终结点和调用 ServiceHost.Open 之前的行为。 但是，在 Web 承载方案中，您不具备针对 <xref:System.ServiceModel.ServiceHost> 类的直接访问权限。 若要配置 Web 承载的服务，您需要创建 `System.ServiceModel.ServiceHostFactory`，后者会创建 <xref:System.ServiceModel.Activation.ServiceHostFactory> 并执行任何所需的配置。 从.NET 4.5 开始，WCF 提供了更简单的方法同时配置两者自托管，web 托管代码中的服务。  
   
 ## <a name="the-configure-method"></a>Configure 方法  
  只需在您的服务实现类中使用以下签名定义名为 `Configure` 的公共静态方法：  
@@ -19,7 +19,7 @@ Windows Communication Foundation (WCF) 允许开发人员配置服务使用配�
 public static void Configure(ServiceConfiguration config)  
 ```  
   
- Configure 方法采用 <xref:System.ServiceModel.ServiceConfiguration> 实例，使开发者可以添加终结点和行为。 打开服务主机之前，将 wcf 调用此方法。 定义后，将忽略 app.config 或 web.config 文件中指定的任何服务配置设置。  
+ Configure 方法采用 <xref:System.ServiceModel.ServiceConfiguration> 实例，使开发者可以添加终结点和行为。 打开服务主机之前，将由 WCF 调用此方法。 定义后，将忽略 app.config 或 web.config 文件中指定的任何服务配置设置。  
   
  下面的代码段阐释如何定义 `Configure` 方法和添加服务终结点、终结点行为以及服务行为：  
   
@@ -77,7 +77,7 @@ public class Service1 : IService1
 }   
 ```  
   
- 中的设置 <`protocolMappings`> 如果没有任何应用程序终结点添加到仅使用部分<xref:System.ServiceModel.ServiceConfiguration>以编程方式。你可以从默认应用程序配置文件通过调用来根据需要加载服务配置<xref:System.ServiceModel.ServiceConfiguration.LoadFromConfiguration%2A>然后更改设置。 <xref:System.ServiceModel.ServiceConfiguration.LoadFromConfiguration> 类还允许您从集中式配置加载配置。 下面的代码演示如何实现这一点：  
+ 中的设置 <`protocolMappings`> 部分才使用任何应用程序终结点添加到<xref:System.ServiceModel.ServiceConfiguration>以编程方式。您可以根据需要加载服务配置从默认应用程序配置文件通过调用<xref:System.ServiceModel.ServiceConfiguration.LoadFromConfiguration%2A>然后更改设置。 <xref:System.ServiceModel.ServiceConfiguration.LoadFromConfiguration> 类还允许您从集中式配置加载配置。 下面的代码演示如何实现这一点：  
   
 ```  
 public class Service1 : IService1   
@@ -91,13 +91,12 @@ public class Service1 : IService1
 ```  
   
 > [!IMPORTANT]
->  请注意，<xref:System.ServiceModel.ServiceConfiguration.LoadFromConfiguration%2A>忽略 <`host`> 中的设置 <`service`> 标记 <`system.serviceModel`>。 从概念上讲，<`host`> 即将主机配置不服务配置，它获取加载之前执行此配置方法。  
+>  请注意，<xref:System.ServiceModel.ServiceConfiguration.LoadFromConfiguration%2A>忽略 <`host`> 中的设置 <`service`> 标记 <`system.serviceModel`>。 从概念上讲，<`host`> 是有关主机配置、 不服务配置，以及它在 Configure 方法执行之前进行加载。  
   
 ## <a name="see-also"></a>请参阅  
  [使用配置文件配置服务](../../../docs/framework/wcf/configuring-services-using-configuration-files.md)  
  [配置客户端行为](../../../docs/framework/wcf/configuring-client-behaviors.md)  
  [简化配置](../../../docs/framework/wcf/simplified-configuration.md)  
- [基于配置的激活](../../../docs/framework/wcf/samples/configuration-based-activation.md)  
  [配置](../../../docs/framework/wcf/samples/configuration-sample.md)  
  [IIS 和 WAS 中的基于配置的激活](../../../docs/framework/wcf/feature-details/configuration-based-activation-in-iis-and-was.md)  
  [配置和元数据支持](../../../docs/framework/wcf/extending/configuration-and-metadata-support.md)  

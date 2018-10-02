@@ -12,32 +12,32 @@ helpviewer_keywords:
 - animation [WPF], color of GradientStop objects
 - GradientStop objects [WPF], animating position of
 ms.assetid: 6f5b8b47-6c32-4b8e-98ee-fdf6515ec843
-ms.openlocfilehash: 2eb528127c8aa66976788ec1f4e5362ca3a1ef26
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: fcbb546b64810416d3f7dbe052da77b7bc941e7a
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33558663"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44083980"
 ---
 # <a name="how-to-animate-the-position-or-color-of-a-gradient-stop"></a>如何：对渐变停止点的位置或颜色进行动画处理
-此示例演示如何进行动画处理<xref:System.Windows.Media.GradientStop.Color%2A>和<xref:System.Windows.Media.GradientStop.Offset%2A>的<xref:System.Windows.Media.GradientStop>对象。  
+此示例演示如何进行动画处理<xref:System.Windows.Media.GradientStop.Color%2A>并<xref:System.Windows.Media.GradientStop.Offset%2A>的<xref:System.Windows.Media.GradientStop>对象。  
   
 ## <a name="example"></a>示例  
- 下面的示例进行动画处理内的三个梯度停止点<xref:System.Windows.Media.LinearGradientBrush>。 该示例使用三个动画，其中每个进行动画处理不同的渐变停止点：  
+ 下面的示例进行动画处理中的三个梯度停止点<xref:System.Windows.Media.LinearGradientBrush>。 该示例使用三个动画，其中每个进行动画处理不同的渐变停止点：  
   
--   第一个动画， <xref:System.Windows.Media.Animation.DoubleAnimation>，进行动画处理对第一个渐变停止点的<xref:System.Windows.Media.GradientStop.Offset%2A>从 0.0 到 1.0，然后再为 0.0。 因此，第一个中，渐变将在从左边算矩形的右侧颜色，然后再返回到左侧。  
+-   第一个动画<xref:System.Windows.Media.Animation.DoubleAnimation>，进行动画处理对第一个梯度停止点的<xref:System.Windows.Media.GradientStop.Offset%2A>从 0.0 到 1.0，然后再为 0.0。 因此，第一个颜色在渐变左侧会移至该矩形的右侧，然后再返回到左侧和右侧。  
   
--   第二个动画， <xref:System.Windows.Media.Animation.ColorAnimation>，进行动画处理对第二个渐变停止点的<xref:System.Windows.Media.GradientStop.Color%2A>从<xref:System.Windows.Media.Colors.Purple%2A>到<xref:System.Windows.Media.Colors.Yellow%2A>和再转回<xref:System.Windows.Media.Colors.Purple%2A>。 因此，为黄色，并返回到紫色，从紫色将更改渐变中的中间颜色。  
+-   第二个动画<xref:System.Windows.Media.Animation.ColorAnimation>，进行第二个梯度停止点的动画处理<xref:System.Windows.Media.GradientStop.Color%2A>从<xref:System.Windows.Media.Colors.Purple%2A>到<xref:System.Windows.Media.Colors.Yellow%2A>，然后返回<xref:System.Windows.Media.Colors.Purple%2A>。 因此，为黄色，并返回到紫色，从紫色将更改渐变中的中间颜色。  
   
--   第三个动画，另一个<xref:System.Windows.Media.Animation.ColorAnimation>，进行动画处理的第三个渐变停止点的不透明度<xref:System.Windows.Media.GradientStop.Color%2A>乘以-1，然后再设置。 因此，渐变中的第三个颜色淡出，然后再次变得不透明。  
+-   第三个动画，另一个<xref:System.Windows.Media.Animation.ColorAnimation>，对第三个梯度停止点的不透明度进行动画处理<xref:System.Windows.Media.GradientStop.Color%2A>乘以-1，然后返回。 结果是，渐变中的第三个颜色淡出，然后再次变得不透明。  
   
  [!code-csharp[BrushesIntroduction_snip#GraphicsMMGradientAnimationExamplesWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BrushesIntroduction_snip/CSharp/GradientStopAnimationExample.cs#graphicsmmgradientanimationexampleswholepage)]
  [!code-vb[BrushesIntroduction_snip#GraphicsMMGradientAnimationExamplesWholePage](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/BrushesIntroduction_snip/visualbasic/gradientstopanimationexample.vb#graphicsmmgradientanimationexampleswholepage)]
  [!code-xaml[BrushesIntroduction_snip#GraphicsMMGradientAnimationExamplesWholePage](../../../../samples/snippets/xaml/VS_Snippets_Wpf/BrushesIntroduction_snip/XAML/GradientStopAnimationExample.xaml#graphicsmmgradientanimationexampleswholepage)]  
   
- 虽然此示例使用<xref:System.Windows.Media.LinearGradientBrush>，过程是相同进行动画处理<xref:System.Windows.Media.GradientStop>对象内<xref:System.Windows.Media.RadialGradientBrush>。  
+ 虽然此示例使用<xref:System.Windows.Media.LinearGradientBrush>，过程是相同的进行动画处理<xref:System.Windows.Media.GradientStop>对象内<xref:System.Windows.Media.RadialGradientBrush>。  
   
- 有关其他示例，请参阅[画笔示例](http://go.microsoft.com/fwlink/?LinkID=159973)。  
+ 有关其他示例，请参阅[画笔示例](https://go.microsoft.com/fwlink/?LinkID=159973)。  
   
 ## <a name="see-also"></a>请参阅  
  <xref:System.Windows.Media.GradientStop>  

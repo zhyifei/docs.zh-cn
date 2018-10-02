@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - const keyword [C#]
 ms.assetid: 79eb447c-117b-4418-933f-97c50aa472db
-ms.openlocfilehash: 985ba9cfefce458fac73aa4b92de0b3d438405c6
-ms.sourcegitcommit: ed7b4b9b77d35e94a35a2634e8c874f46603fb2b
+ms.openlocfilehash: f586b6d097a8592fd74e92df7886b519d623e478
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36948337"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43513379"
 ---
 # <a name="const-c-reference"></a>const（C# 参考）
 
@@ -46,13 +46,7 @@ public const int c2 = c1 + 100;
 ```
 
 > [!NOTE]
-> [readonly](../../../csharp/language-reference/keywords/readonly.md) 关键字与 `const` 关键字不同。 
-          
-          
-          `const` 字段只能在该字段的声明中初始化。 
-          
-          
-          `readonly` 字段可以在声明或构造函数中初始化。 因此，根据所使用的构造函数，`readonly` 字段可能具有不同的值。 另外，虽然 `const` 字段是编译时常量，但 `readonly` 字段可用于运行时常量，如此行所示：`public static readonly uint l1 = (uint)DateTime.Now.Ticks;`
+> [readonly](../../../csharp/language-reference/keywords/readonly.md) 关键字与 `const` 关键字不同。 `const` 字段只能在该字段的声明中初始化。 `readonly` 字段可以在声明或构造函数中初始化。 因此，根据所使用的构造函数，`readonly` 字段可能具有不同的值。 另外，虽然 `const` 字段是编译时常量，但 `readonly` 字段可用于运行时常量，如此行所示：`public static readonly uint l1 = (uint)DateTime.Now.Ticks;`
 
 ## <a name="example"></a>示例
 
@@ -70,8 +64,8 @@ public const int c2 = c1 + 100;
 
 ## <a name="see-also"></a>请参阅
 
-[C# 参考](../../../csharp/language-reference/index.md)  
-[C# 编程指南](../../../csharp/programming-guide/index.md)  
-[C# 关键字](../../../csharp/language-reference/keywords/index.md)  
-[修饰符](../../../csharp/language-reference/keywords/modifiers.md)  
-[readonly](../../../csharp/language-reference/keywords/readonly.md)
+- [C# 参考](../../../csharp/language-reference/index.md)  
+- [C# 编程指南](../../../csharp/programming-guide/index.md)  
+- [C# 关键字](../../../csharp/language-reference/keywords/index.md)  
+- [修饰符](../../../csharp/language-reference/keywords/modifiers.md)  
+- [readonly](../../../csharp/language-reference/keywords/readonly.md)

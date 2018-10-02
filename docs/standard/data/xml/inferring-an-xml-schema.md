@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: b18e7ffd-3c04-482d-9934-ba2f6a59b2c9
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 847d25ae760a2ec91c4ad5979f6b2e4de5dbc5cd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0ed8614e1af3a52b9519c82a4b5c169c2fa3188f
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33568779"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44221631"
 ---
 # <a name="inferring-an-xml-schema"></a>推断 XML 架构
 描述如何使用架构对象模型 (SOM) <xref:System.Xml.Schema.XmlSchemaInference> 类从 XML 文档的结构推断 XML 架构定义语言 (XSD) 架构。  
@@ -27,7 +27,8 @@ ms.locfileid: "33568779"
  [推断简单类型的规则](../../../../docs/standard/data/xml/rules-for-inferring-simple-types.md)  
  描述 <xref:System.Xml.Schema.XmlSchemaInference> 类如何推断属性和元素的数据类型。  
   
-## <a name="see-also"></a>请参阅  
- [XML 架构对象模型 (SOM)](../../../../docs/standard/data/xml/xml-schema-object-model-som.md)  
- [从 XML 文档推断架构](../../../../docs/standard/data/xml/inferring-schemas-from-xml-documents.md)  
- [推断架构节点类型和结构的规则](../../../../docs/standard/data/xml/rules-for-inferring-schema-node-types-and-structure.md)
+## <a name="see-also"></a>请参阅
+
+- [XML 架构对象模型 (SOM)](../../../../docs/standard/data/xml/xml-schema-object-model-som.md)  
+- [从 XML 文档推断架构](../../../../docs/standard/data/xml/inferring-schemas-from-xml-documents.md)  
+- [推断架构节点类型和结构的规则](../../../../docs/standard/data/xml/rules-for-inferring-schema-node-types-and-structure.md)

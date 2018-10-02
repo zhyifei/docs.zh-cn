@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: 33ced8ee-1745-4e71-8dee-ebe70ec067c7
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 902c82f77240c957cc6070c9437b95d0c89fca53
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.openlocfilehash: 4e0d0a2a8d8c7fd75da7f2109619d588eac7b4a6
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37105344"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43863015"
 ---
 # <a name="xml-processing-options"></a>XML 处理选项
 请参见下面的表以获得可用于处理 XML 数据的 Microsoft 技术的列表。  
@@ -33,7 +33,8 @@ ms.locfileid: "37105344"
 |[XmlLite](https://msdn.microsoft.com/library/ms752872.aspx)|-   快速安全、非缓存、仅正向 XML 分析器，有助于生成高性能 XML 应用。<br />-   支持能够使用动态链接库 (DLL) 的任何语言；建议使用 C++。|  
 |[MSXML](https://msdn.microsoft.com/library/ms763742.aspx)|-   基于 COM 的技术，用于处理 Windows 操作系统随附的 XML。<br />-   提供 DOM 本机实现，同时支持 XPath 和 XSLT。<br />-   包含 SAX2 基于事件的分析器。|  
   
-## <a name="see-also"></a>请参阅  
- [使用 DOM 模型处理 XML 数据](../../../../docs/standard/data/xml/process-xml-data-using-the-dom-model.md)  
- [使用 XPath 数据模型处理 XML 数据](../../../../docs/standard/data/xml/process-xml-data-using-the-xpath-data-model.md)  
- [XSLT 编译器 (xsltc.exe)](../../../../docs/standard/data/xml/xslt-compiler-xsltc-exe.md)
+## <a name="see-also"></a>请参阅
+
+- [使用 DOM 模型处理 XML 数据](../../../../docs/standard/data/xml/process-xml-data-using-the-dom-model.md)  
+- [使用 XPath 数据模型处理 XML 数据](../../../../docs/standard/data/xml/process-xml-data-using-the-xpath-data-model.md)  
+- [XSLT 编译器 (xsltc.exe)](../../../../docs/standard/data/xml/xslt-compiler-xsltc-exe.md)

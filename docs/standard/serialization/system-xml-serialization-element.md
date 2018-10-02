@@ -6,12 +6,12 @@ helpviewer_keywords:
 - XML serialization, configuration
 - <system.xml.serialization> element
 ms.assetid: 3ce45919-388a-418c-8968-6df0372c73ec
-ms.openlocfilehash: e26a12facb92147d7660ae266ea5e1b090d7e198
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b67c1ec1ec737976e4e50b80b42f34e508dc0224
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33583768"
+ms.lasthandoff: 09/28/2018
+ms.locfileid: "47425911"
 ---
 # <a name="ltsystemxmlserializationgt-element"></a>&lt;system.xml.serialization&gt; 元素
 用于控制 XML 序列化的顶级元素。 有关配置文件的详细信息，请参阅[配置文件架构](../../../docs/framework/configure-apps/file-schema/index.md)。  
@@ -62,10 +62,11 @@ ms.locfileid: "33583768"
 </system.sxml.serialization>  
 ```  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Xml.Serialization.XmlSchemaImporter>  
- <xref:System.Xml.Serialization.Configuration.DateTimeSerializationSection.DateTimeSerializationMode>  
- [配置文件架构](../../../docs/framework/configure-apps/file-schema/index.md)  
- [\<dateTimeSerialization> 元素](../../../docs/standard/serialization/datetimeserialization-element.md)  
- [\<schemaImporterExtensions> 元素](../../../docs/standard/serialization/schemaimporterextensions-element.md)  
- [\<xmlSchemaImporterExtensions> 的 \<add> 元素](../../../docs/standard/serialization/add-element-for-xmlschemaimporterextensions.md)
+## <a name="see-also"></a>请参阅
+
+- <xref:System.Xml.Serialization.XmlSchemaImporter>  
+- <xref:System.Xml.Serialization.Configuration.DateTimeSerializationSection.DateTimeSerializationMode>  
+- [配置文件架构](../../../docs/framework/configure-apps/file-schema/index.md)  
+- [\<dateTimeSerialization> 元素](../../../docs/standard/serialization/datetimeserialization-element.md)  
+- [\<schemaImporterExtensions> 元素](../../../docs/standard/serialization/schemaimporterextensions-element.md)  
+- [\<添加 > 元素\<schemaImporterExtensions >](../../../docs/standard/serialization/add-element-for-schemaimporterextensions.md)

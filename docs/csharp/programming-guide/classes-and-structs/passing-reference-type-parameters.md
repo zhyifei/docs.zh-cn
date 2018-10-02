@@ -5,12 +5,12 @@ helpviewer_keywords:
 - method parameters [C#], reference types
 - parameters [C#], reference
 ms.assetid: 9e6eb65c-942e-48ab-920a-b7ba9df4ea20
-ms.openlocfilehash: ed6c822638c56b3ab95216581f6f39cacb9d06ee
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d577754e8cb686c40172abd6c0bbd00bc481f737
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33326562"
+ms.lasthandoff: 09/27/2018
+ms.locfileid: "47230692"
 ---
 # <a name="passing-reference-type-parameters-c-programming-guide"></a>传递引用类型参数（C# 编程指南）
 [引用类型](../../../csharp/language-reference/keywords/reference-types.md)的变量不直接包含其数据；它包含对其数据的引用。 如果按值传递引用类型参数，则可能更改属于所引用对象的数据，例如类成员的值。 但是，不能更改引用本身的值；例如，不能使用相同引用为新类分配内存，并将其保留在方法外部。 为此，请使用 [ref](../../../csharp/language-reference/keywords/ref.md) 或 [out](../../../csharp/language-reference/keywords/out-parameter-modifier.md) 关键字传递参数。 为简单起见，下面的示例使用 `ref`。  
@@ -38,11 +38,11 @@ ms.locfileid: "33326562"
   
  有关字符串的详细信息，请参阅[字符串](../../../csharp/language-reference/keywords/string.md)。  
   
-## <a name="see-also"></a>请参阅  
- [C# 编程指南](../../../csharp/programming-guide/index.md)  
- [传递参数](../../../csharp/programming-guide/classes-and-structs/passing-parameters.md)  
- [使用 ref 和 out 传递数组](../../../csharp/programming-guide/arrays/passing-arrays-using-ref-and-out.md)  
- [ref](../../../csharp/language-reference/keywords/ref.md)  
- [in](../../../csharp/language-reference/keywords/in-parameter-modifier.md)  
- [out](../../../csharp/language-reference/keywords/out.md)  
- [引用类型](../../../csharp/language-reference/keywords/reference-types.md)
+## <a name="see-also"></a>请参阅
+
+- [C# 编程指南](../../../csharp/programming-guide/index.md)  
+- [传递参数](../../../csharp/programming-guide/classes-and-structs/passing-parameters.md)  
+- [ref](../../../csharp/language-reference/keywords/ref.md)  
+- [in](../../../csharp/language-reference/keywords/in-parameter-modifier.md)  
+- [out](../../../csharp/language-reference/keywords/out.md)  
+- [引用类型](../../../csharp/language-reference/keywords/reference-types.md)

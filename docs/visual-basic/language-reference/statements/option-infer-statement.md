@@ -1,5 +1,5 @@
 ---
-title: Option Infer 语句
+title: Option Infer 语句 (Visual Basic)
 ms.date: 07/20/2015
 f1_keywords:
 - vb.OptionInfer
@@ -11,12 +11,12 @@ helpviewer_keywords:
 - declaring variables [Visual Basic], inferred
 - inferred variable declaration
 ms.assetid: 4ad3e6e9-8f5b-4209-a248-de22ef6e4652
-ms.openlocfilehash: c7628e5c4c0cda527a4c3b1a211c45760640fc63
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f5c824df43997282d50c9c2a458fb1d854cc160a
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33605506"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43862214"
 ---
 # <a name="option-infer-statement"></a>Option Infer 语句
 允许声明变量时使用局部类型推理。  
@@ -41,23 +41,23 @@ Option Infer { On | Off }
   
  在下图中，`Option Infer` 处于打开状态。 声明 `Dim someVar = 2` 中的变量由类型推理声明为整数。  
   
- ![声明的 IntelliSense 视图。] (../../../visual-basic/language-reference/statements/media/optioninferasinteger.png "optionInferAsInteger")  
+ ![声明的 IntelliSense 视图。](../../../visual-basic/language-reference/statements/media/optioninferasinteger.png "optionInferAsInteger")  
 Option Infer 处于打开状态时的 IntelliSense  
   
- 在下图中，`Option Infer` 处于关闭状态。 声明 `Dim someVar = 2` 中的变量由类型推理声明为 `Object`。 在此示例中， **Option Strict**设置设为**关闭**上[编译页，项目设计器 (Visual Basic 中)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic)。  
+ 在下图中，`Option Infer` 处于关闭状态。 声明 `Dim someVar = 2` 中的变量由类型推理声明为 `Object`。 在此示例中， **Option Strict**设置为**Off**上[编译页，项目设计器 (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic)。  
   
- ![声明的 IntelliSense 视图。] (../../../visual-basic/language-reference/statements/media/optioninferasobject.png "optionInferAsObject")  
+ ![声明的 IntelliSense 视图。](../../../visual-basic/language-reference/statements/media/optioninferasobject.png "optionInferAsObject")  
 Option Infer 处于关闭状态时的 IntelliSense  
   
 > [!NOTE]
->  变量声明为 `Object` 时，可在程序运行时更改运行时类型。 Visual Basic 执行调用的操作*装箱*和*取消装箱*之间进行转换`Object`和值类型，这会使执行速度较慢。 有关装箱和取消装箱的信息，请参阅[Visual Basic 语言规范](../../../visual-basic/reference/language-specification/index.md)。
+>  变量声明为 `Object` 时，可在程序运行时更改运行时类型。 Visual Basic 执行调用的操作*装箱*并*取消装箱*之间进行转换`Object`和值类型，这会使执行速度较慢。 有关装箱和取消装箱的信息，请参阅[Visual Basic 语言规范](../../../visual-basic/reference/language-specification/index.md)。
   
  类型推理适用于过程级，且在类、结构、模块或接口中的过程之外不适用。  
   
- 有关其他信息，请参阅[本地类型推理](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)。  
+ 有关其他信息，请参阅[本地类型推断](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)。  
   
 ## <a name="when-an-option-infer-statement-is-not-present"></a>当 Option Infer 语句不存在时  
- 如果源代码不包含`Option Infer`语句， **Option Infer**上设置[编译页，项目设计器 (Visual Basic 中)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic)使用。 如果使用命令行编译器， [/optioninfer](../../../visual-basic/reference/command-line-compiler/optioninfer.md)使用编译器选项。  
+ 如果源代码不包含`Option Infer`语句中， **Option Infer**上设置[编译页，项目设计器 (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic)使用。 如果使用命令行编译器，则[/optioninfer](../../../visual-basic/reference/command-line-compiler/optioninfer.md)使用编译器选项。  
   
 #### <a name="to-set-option-infer-in-the-ide"></a>若要在 IDE 中设置 Option Infer  
   
@@ -65,9 +65,9 @@ Option Infer 处于关闭状态时的 IntelliSense
   
 2.  单击“编译”选项卡。  
   
-3.  设置中的值**Option infer**框。  
+3.  中的值设置**Option infer**框。  
   
- 当创建新项目， **Option Infer**上设置**编译**选项卡设置为**Option Infer**中设置**VB 默认值**对话框。 访问**VB 默认值**对话框中，在**工具**菜单上，单击**选项**。 在“选项”对话框中，展开“项目和解决方案”，然后单击“VB 默认值”。 中的初始默认设置**VB 默认值**是`On`。  
+ 创建一个新项目时**Option Infer**上设置**编译**选项卡设置为**Option Infer**中设置**VB 默认值**对话框。 访问**VB 默认值**对话框中，在**工具**菜单中，单击**选项**。 在“选项”对话框中，展开“项目和解决方案”，然后单击“VB 默认值”。 中的初始默认设置**VB 默认值**是`On`。  
   
 #### <a name="to-set-option-infer-on-the-command-line"></a>若要设置命令行上的 Option Infer  
   

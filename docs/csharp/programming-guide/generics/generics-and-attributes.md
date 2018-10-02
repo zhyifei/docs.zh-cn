@@ -5,12 +5,12 @@ helpviewer_keywords:
 - generics [C#], attributes
 - attributes [C#], with generics
 ms.assetid: da9fc326-4648-454a-8e13-3911a2edefd7
-ms.openlocfilehash: 3bfb4028fb5efce693abd83b40636b0149962e3b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0fe2d61001584aa7c175500bfa754b2ae2244660
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33339666"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45675530"
 ---
 # <a name="generics-and-attributes-c-programming-guide"></a>泛型和特性（C# 编程指南）
 属性可按与非泛型类型相同的方式应用到泛型类型。 有关应用特性的详细信息，请参阅[属性](../../../csharp/programming-guide/concepts/attributes/index.md)。  
@@ -43,7 +43,8 @@ ms.locfileid: "33339666"
   
  若要在运行时获取有关泛型类型或类型参数的信息，可使用 <xref:System.Reflection> 方法。 有关详细信息，请参阅[泛型和反射](../../../csharp/programming-guide/generics/generics-and-reflection.md)  
   
-## <a name="see-also"></a>请参阅  
- [C# 编程指南](../../../csharp/programming-guide/index.md)  
- [泛型](../../../csharp/programming-guide/generics/index.md)  
- [特性](../../../../docs/standard/attributes/index.md)
+## <a name="see-also"></a>请参阅
+
+- [C# 编程指南](../../../csharp/programming-guide/index.md)  
+- [泛型](../../../csharp/programming-guide/generics/index.md)  
+- [特性](../../../../docs/standard/attributes/index.md)

@@ -2,12 +2,12 @@
 title: 具有样式3 的 WordprocessingML 文档
 ms.date: 07/20/2015
 ms.assetid: 40e35de6-ac93-4bba-88ab-a018cbe93873
-ms.openlocfilehash: 6d0d1026edf9a9dbef84eaf3d68412902749e121
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8b21c9e8be957ea2b43405a96e343cea78197f68
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33332213"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47196091"
 ---
 # <a name="wordprocessingml-document-with-styles"></a>具有样式的 WordprocessingML 文档
 较为复杂的 WordprocessingML 文档具有使用样式格式的段落。  
@@ -137,5 +137,6 @@ ms.locfileid: "33332213"
 </w:document>  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [Office Open XML WordprocessingML 文档的详细信息 (C#)](../../../../csharp/programming-guide/concepts/linq/details-of-office-open-xml-wordprocessingml-documents.md)
+## <a name="see-also"></a>请参阅
+
+- [Office Open XML WordprocessingML 文档的详细信息 (C#)](../../../../csharp/programming-guide/concepts/linq/details-of-office-open-xml-wordprocessingml-documents.md)

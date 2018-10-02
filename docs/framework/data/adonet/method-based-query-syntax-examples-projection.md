@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 0fc2c8f0-1967-4f30-8b20-39b8dccfb82f
-ms.openlocfilehash: 5887ae58c142cb4c1835599e6a7b34bf200d7071
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 8d18ed04ad33fe88fb14fd7436ddfd7a164c4303
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32757744"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43744993"
 ---
 # <a name="method-based-query-syntax-examples-projection-linq-to-dataset"></a>基于方法的查询语法示例：投影 (LINQ to DataSet)
 本主题中的示例演示如何使用 <xref:System.Linq.Enumerable.Select%2A> 和 <xref:System.Linq.Enumerable.SelectMany%2A> 方法以便使用基于方法的查询语法来查询 <xref:System.Data.DataSet>。  
@@ -51,4 +51,4 @@ ms.locfileid: "32757744"
 ## <a name="see-also"></a>请参阅  
  [将数据加载到数据集中](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md)  
  [LINQ to DataSet 示例](../../../../docs/framework/data/adonet/linq-to-dataset-examples.md)  
- [标准查询运算符概述](http://msdn.microsoft.com/library/24cda21e-8af8-4632-b519-c404a839b9b2)
+ [标准查询运算符概述](https://msdn.microsoft.com/library/24cda21e-8af8-4632-b519-c404a839b9b2)

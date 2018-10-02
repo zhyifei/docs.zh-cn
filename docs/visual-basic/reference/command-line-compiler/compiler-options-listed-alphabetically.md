@@ -6,15 +6,15 @@ helpviewer_keywords:
 ms.assetid: e67febba-bacf-4e1f-a143-c141e063f90e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: dc25ff282772cc82b8ebe5d59e729a6a48afa8f8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9f24759d68f007caf5f79096c6d4cebb7c050851
+ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33656027"
+ms.lasthandoff: 09/21/2018
+ms.locfileid: "46532476"
 ---
 # <a name="visual-basic-compiler-options-listed-alphabetically"></a>按字母顺序列出的 Visual Basic 编译器选项
-Visual Basic 命令行编译器用作编译来自 Visual Studio 集成的开发环境 (IDE) 的程序的替代方法。 下面是 Visual Basic 命令行编译器选项按字母顺序排序的列表。  
+Visual Basic 命令行编译器用作一种编译来自 Visual Studio 集成的开发环境 (IDE) 的程序的替代方法。 下面是 Visual Basic 命令行编译器选项按字母顺序排序的列表。  
 
 [!INCLUDE[compiler-options](~/includes/compiler-options.md)]
   
@@ -44,7 +44,7 @@ Visual Basic 命令行编译器用作编译来自 Visual Studio 集成的开发�
 |[-langversion](../../../visual-basic/reference/command-line-compiler/langversion.md)|指定语言版本： 9&#124;9.0&#124;10&#124;10.0&#124;11&#124;11.0。|  
 |[-libpath](../../../visual-basic/reference/command-line-compiler/libpath.md)|指定引用的程序集的位置[-引用](../../../visual-basic/reference/command-line-compiler/reference.md)选项。|  
 |[-linkresource](../../../visual-basic/reference/command-line-compiler/linkresource.md)|创建指向托管资源的链接。|  
-|[-main](../../../visual-basic/reference/command-line-compiler/main.md)|指定的类，包含`Sub Main`要使用在启动过程。|  
+|[-main](../../../visual-basic/reference/command-line-compiler/main.md)|指定包含的类`Sub Main`启动时要使用的过程。|  
 |[-moduleassemblyname](../../../visual-basic/reference/command-line-compiler/moduleassemblyname.md)|指定模块所属程序集的名称。|  
 |`-modulename:<string>`|指定源模块的名称|  
 |[-netcf](../../../visual-basic/reference/command-line-compiler/netcf.md)|设置编译器从而以 [!INCLUDE[Compact](~/includes/compact-md.md)] 为目标。|  
@@ -84,6 +84,6 @@ Visual Basic 命令行编译器用作编译来自 Visual Studio 集成的开发�
   
 ## <a name="see-also"></a>请参阅  
  [按类别列出的 Visual Basic 编译器选项](../../../visual-basic/reference/command-line-compiler/compiler-options-listed-by-category.md)  
- [项目设计器简介](http://msdn.microsoft.com/library/898dd854-c98d-430c-ba1b-a913ce3c73d7)  
+ [项目设计器简介](https://msdn.microsoft.com/library/898dd854-c98d-430c-ba1b-a913ce3c73d7)  
  [按字母顺序列出的 C# 编译器选项](../../../csharp/language-reference/compiler-options/listed-alphabetically.md)  
  [按类别列出的 C# 编译器选项](../../../csharp/language-reference/compiler-options/listed-by-category.md)

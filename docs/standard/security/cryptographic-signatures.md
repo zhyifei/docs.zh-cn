@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: aa87cb7f-e608-4a81-948b-c9b8a1225783
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 656b34a828ef6acd488cc84ca98d5a4bbaaa2cdf
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3f9d83a0edb6dc2261931e422b0ae4c735d2e0d1
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33589800"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44086091"
 ---
 # <a name="cryptographic-signatures"></a>加密签名
 <a name="top"></a> 加密数字签名使用公钥算法提供数据完整性。 如果使用数字签名对数据进行签名，则其他人可验证该签名，并且可证明这些数据确实是你发出的，并且在你签名之后未被更改。 有关数字签名的详细信息，请参阅 [Cryptographic Services](../../../docs/standard/security/cryptographic-services.md)。  
@@ -105,7 +105,7 @@ class Class1
 ### <a name="signing-xml-files"></a>对 XML 文件进行签名  
  .NET Framework 提供可实现 XML 签名的 <xref:System.Security.Cryptography.Xml> 命名空间。 当想要验证 XML 是否源自某个源时，对 XML 进行签名就变得非常重要。 例如，如果你正在利用使用 XML 的股票报价服务，则如果已对 XML 签名，你就可以验证该 XML 的源。  
   
- 此命名空间中的类遵循[XML 签名语法和处理建议](https://www.w3.org/TR/xmldsig-core/)从 World Wide Web Consortium。  
+ 此命名空间中的类遵循[XML 签名语法和处理建议](https://www.w3.org/TR/xmldsig-core/)来自 World Wide Web 联合会。  
   
  [返回页首](#top)  
   
@@ -121,7 +121,7 @@ class Class1
   
 -   签名方使用的哈希算法。  
   
- 若要验证由 <xref:System.Security.Cryptography.RSAPKCS1SignatureFormatter> 类签署的签名，请使用 <xref:System.Security.Cryptography.RSAPKCS1SignatureDeformatter> 类。 必须向 <xref:System.Security.Cryptography.RSAPKCS1SignatureDeformatter> 类提供签名者的公钥。 将需要模数和指数的值以指定公钥。 （生成公钥/私钥对的一方应提供这些值）。首先创建<xref:System.Security.Cryptography.RSACryptoServiceProvider>对象以保存将验证签名，并进行初始化的公共密钥<xref:System.Security.Cryptography.RSAParameters>结构指定的公钥的模数值和指数值。  
+ 若要验证由 <xref:System.Security.Cryptography.RSAPKCS1SignatureFormatter> 类签署的签名，请使用 <xref:System.Security.Cryptography.RSAPKCS1SignatureDeformatter> 类。 必须向 <xref:System.Security.Cryptography.RSAPKCS1SignatureDeformatter> 类提供签名者的公钥。 将需要模数和指数的值以指定公钥。 （生成公钥/私钥对的一方应提供这些值）。首先创建<xref:System.Security.Cryptography.RSACryptoServiceProvider>对象以保存将验证签名，并进行初始化的公共密钥<xref:System.Security.Cryptography.RSAParameters>结构与指定的公钥的模数值和指数值。  
   
  下面的代码显示 <xref:System.Security.Cryptography.RSAParameters> 结构的创建。 `Modulus` 属性设置为名为 `ModulusData` 的字节数组的值， `Exponent` 属性设置为名为 `ExponentData`的字节数组的值。  
   
@@ -172,5 +172,6 @@ else
   
  如果签名有效，则此代码段将显示“`The signature is valid`”，如果无效，则显示“`The signature is not valid`”。  
   
-## <a name="see-also"></a>请参阅  
- [Cryptographic Services](../../../docs/standard/security/cryptographic-services.md)
+## <a name="see-also"></a>请参阅
+
+- [Cryptographic Services](../../../docs/standard/security/cryptographic-services.md)

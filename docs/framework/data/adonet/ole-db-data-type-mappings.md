@@ -2,12 +2,12 @@
 title: OLE DB 数据类型映射
 ms.date: 03/30/2017
 ms.assetid: 04bcb259-59d3-4fd7-894d-4f0dd0c68069
-ms.openlocfilehash: 4287b125b26bc0c7233f59322c84e2ac27c0c594
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 2dbea33140e6cdd7370c1822d2bd6513917a31ea
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32758927"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43521362"
 ---
 # <a name="ole-db-data-type-mappings"></a>OLE DB 数据类型映射
 下表显示了针对适用于 ADO 和 OLE DB 的 .NET Framework 数据提供程序 ([!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]) 中的数据类型推断出的 <xref:System.Data.OleDb> 类型。 另外，还列出了 <xref:System.Data.OleDb.OleDbDataReader> 的类型化访问器方法。  
@@ -18,7 +18,7 @@ ms.locfileid: "32758927"
 |adBinary|DBTYPE_BYTES|Byte[]|GetBytes()|  
 |adBoolean|DBTYPE_BOOL|Boolean|GetBoolean()|  
 |adBSTR|DBTYPE_BSTR|String|GetString()|  
-|adChapter|DBTYPE_HCHAPTER|通过 `DataReader` 支持。 请参阅[检索数据使用 DataReader](../../../../docs/framework/data/adonet/retrieving-data-using-a-datareader.md)。|GetValue()|  
+|adChapter|DBTYPE_HCHAPTER|通过 `DataReader` 支持。 请参阅[使用 DataReader 检索数据](../../../../docs/framework/data/adonet/retrieving-data-using-a-datareader.md)。|GetValue()|  
 |adChar|DBTYPE_STR|String|GetString()|  
 |adCurrency|DBTYPE_CY|Decimal|GetDecimal()|  
 |adDate|DBTYPE_DATE|DateTime|GetDateTime()|  
@@ -47,8 +47,8 @@ ms.locfileid: "32758927"
 |adUserDefined|DBTYPE_UDT|不受支持||  
 |adVarNumeric|DBTYPE_VARNUMERIC|不受支持||  
   
- \* 对于 OLE DB 类型`DBTYPE_IUNKNOWN`和`DBTYPE_IDISPATCH`，对象引用是指针的封送的表示。  
+ \* 对于 OLE DB 类型`DBTYPE_IUNKNOWN`和`DBTYPE_IDISPATCH`，对象引用是指针的封送表示形式。  
   
 ## <a name="see-also"></a>请参阅  
  [在 ADO.NET 中检索和修改数据](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)  
- [ADO.NET 托管提供程序和数据集开发人员中心](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)

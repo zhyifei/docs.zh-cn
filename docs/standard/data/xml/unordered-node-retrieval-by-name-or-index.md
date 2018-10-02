@@ -8,12 +8,12 @@ dev_langs:
 ms.assetid: 2038a90b-92af-4a0a-baaa-08e688d95194
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 785a609455a35dd87a9593f00b58fd160ac708e9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: da1c9f25052bb2354b435cd28b7ff55d4a754ed1
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33572936"
+ms.lasthandoff: 09/28/2018
+ms.locfileid: "47216313"
 ---
 # <a name="unordered-node-retrieval-by-name-or-index"></a>按名称或索引检索未排序节点
 XmlNamedNodeMap 在万维网联合会 (W3C) 规范中被描述为 NamedNodeMap，它对于处理未排序的节点集并能够按节点名称或索引引用节点是必需的。 访问 XmlNamedNodeMap 的唯一方式是通过方法或属性返回 XmlNamedNodeMap。 有三个方法或属性返回 XmlNamedNodeMap：  
@@ -119,5 +119,6 @@ class test {
   
  若要查看另一个显示从 AttributeCollection 中移除属性的代码示例，请参见 [XmlNamedNodeMap.RemoveNamedItem 方法](Overload:System.Xml.XmlNamedNodeMap.RemoveNamedItem)。 有关方法和属性的更多信息，请参见 [XmlNamedNodeMap 成员](AllMembers.T:System.Xml.XmlNamedNodeMap)。  
   
-## <a name="see-also"></a>请参阅  
- [XML 文档对象模型 (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+## <a name="see-also"></a>请参阅
+
+- [XML 文档对象模型 (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

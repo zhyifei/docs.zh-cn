@@ -9,15 +9,15 @@ helpviewer_keywords:
 - keyboard events
 - events [Windows Forms], keyboard
 ms.assetid: d3f3e14b-a459-4ee6-9875-8957e34f8ee9
-ms.openlocfilehash: 706b4d87ddbb6afadfd90af866520e6feaa58ca7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2c6059e5d0957de09dd2c4832573c784935eb510
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33542257"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43786422"
 ---
 # <a name="using-keyboard-events"></a>使用键盘事件
-大多数 Windows 窗体程序通过处理键盘事件处理键盘输入。 本主题提供对键盘事件的概述，包括有关何时使用每个事件和向每个事件提供的数据的详细信息。  另请参阅[事件处理程序概述 （Windows 窗体）](http://msdn.microsoft.com/library/be6fx1bb\(v=vs.110\))，[事件概述 （Windows 窗体）](http://msdn.microsoft.com/library/1h12f09z\(v=vs.110\))。  
+大多数 Windows 窗体程序通过处理键盘事件处理键盘输入。 本主题提供对键盘事件的概述，包括有关何时使用每个事件和向每个事件提供的数据的详细信息。  另请参阅[事件处理程序概述 （Windows 窗体）](https://msdn.microsoft.com/library/be6fx1bb\(v=vs.110\))，[事件概述 （Windows 窗体）](https://msdn.microsoft.com/library/1h12f09z\(v=vs.110\))。  
   
 ## <a name="keyboard-events"></a>键盘事件  
  Windows 窗体提供了两个在用户按下键盘键时发生的事件和一个在用户释放键盘键时发生的事件：  

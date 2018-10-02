@@ -4,17 +4,17 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - PrintForm component [Visual Basic]
 ms.assetid: 03de98b8-b54c-4764-91d7-83c64e974750
-ms.openlocfilehash: 6cb7cfe022b2b4d23f47a47ec70f08d5c0ccbc7e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 879d31c5a572689d84af6b2e46f3d33e1a8841c8
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33591403"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47172149"
 ---
 # <a name="printform-component-visual-basic"></a>PrintForm 组件 (Visual Basic)
 <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm>适用于 Visual Basic 组件，可以在运行时打印 Windows 窗体的图像。 其行为取代了 Visual Basic 早期版本中的 `PrintForm` 方法。  
   
- Visual Studio 中不再包含 PowerPack 控件，但你可以从 [下载中心](http://www.microsoft.com/en-us/download/details.aspx?id=25169)下载它们。  
+ 在 Visual Studio 中，不再包含 PowerPack 控件，但您可以下载它们从[下载中心](https://www.microsoft.com/en-us/download/details.aspx?id=25169)。  
   
 ## <a name="printform-component-overview"></a>PrintForm 组件概述  
  Windows 窗体的一个常见方案是创建格式设置为类似于纸质表单或报表的窗体，然后打印窗体的图像。 虽然可以使用 <xref:System.Drawing.Printing.PrintDocument> 组件来执行此操作，但这将需要大量的代码。 通过 <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm> 组件，可以在不使用 <xref:System.Drawing.Printing.PrintDocument> 组件的情况下，将窗体的图像打印到打印机、打印预览窗口或文件。  

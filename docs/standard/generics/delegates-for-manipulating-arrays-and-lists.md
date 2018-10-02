@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 416be383-cc61-4102-9b1b-88b51adb963e
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 566a2e5e8587dc6d6d2259a5f79f5c59c2e60c90
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a8266db66abb46ffc9503bdaeaf4ec4078177760
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33576290"
+ms.lasthandoff: 09/22/2018
+ms.locfileid: "46696780"
 ---
 # <a name="generic-delegates-for-manipulating-arrays-and-lists"></a>用于操作数组和列表的泛型委托
 此主题概述了用于转换的泛型委托、搜索谓词以及对数组或集合中的元素所采取的操作。  
@@ -41,10 +41,11 @@ ms.locfileid: "33576290"
 ### <a name="chaining-delegates"></a>链接委托  
  使用这些委托的许多方法返回数组或列表，然后传递到另一种方法。 例如，如果你想要选择某些数组元素，将这些元素转换为新类型，并将其保存在新的数组中，则可以将 <xref:System.Array.FindAll%2A> 泛型方法返回的数组传递到 <xref:System.Array.ConvertAll%2A> 泛型方法。 如果新的元素类型缺少自然排序顺序，你可以将 <xref:System.Array.ConvertAll%2A> 泛型方法返回的数组传递到 <xref:System.Array.Sort%60%601%28%60%600%5B%5D%2CSystem.Comparison%7B%60%600%7D%29> 泛型方法。  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Collections.Generic?displayProperty=nameWithType>  
- <xref:System.Collections.ObjectModel?displayProperty=nameWithType>  
- [泛型](../../../docs/standard/generics/index.md)  
- [.NET Framework 中的泛型集合](../../../docs/standard/generics/collections.md)  
- [泛型接口](../../../docs/standard/generics/interfaces.md)  
- [协变和逆变](../../../docs/standard/generics/covariance-and-contravariance.md)
+## <a name="see-also"></a>请参阅
+
+- <xref:System.Collections.Generic?displayProperty=nameWithType>  
+- <xref:System.Collections.ObjectModel?displayProperty=nameWithType>  
+- [泛型](../../../docs/standard/generics/index.md)  
+- [.NET Framework 中的泛型集合](../../../docs/standard/generics/collections.md)  
+- [泛型接口](../../../docs/standard/generics/interfaces.md)  
+- [协变和逆变](../../../docs/standard/generics/covariance-and-contravariance.md)

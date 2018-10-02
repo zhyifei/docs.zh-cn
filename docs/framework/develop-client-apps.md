@@ -13,12 +13,12 @@ helpviewer_keywords:
 - Visual C#, creating applications
 - client/server applications, Windows applications
 ms.assetid: 2dfb50b7-5af2-4e12-9bbb-c5ade0e39a68
-ms.openlocfilehash: 279e0536f69ebd4b45d9458a88c4f930f6bb3262
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 987f8e25014e8ce6413c998f6eb78d821558ecec
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33389104"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43518659"
 ---
 # <a name="developing-client-applications-with-the-net-framework"></a>使用 .NET Framework 开发客户端应用程序
 
@@ -49,7 +49,7 @@ ms.locfileid: "33389104"
 [适用于 UWP 应用的 .NET](https://msdn.microsoft.com/library/windows/apps/mt185501.aspx)  
 介绍应用商店应用支持的 .NET Framework，可以部署到 Windows 计算机和设备。
 
-[适用于 Windows Phone Silverlight 的 .NET API](https://docs.microsoft.com/en-us/previous-versions/windows/apps/jj207211\(v=vs.105\))  
+[适用于 Windows Phone Silverlight 的 .NET API](https://docs.microsoft.com/previous-versions/windows/apps/jj207211\(v=vs.105\))  
 列出使用 Windows Phone Silverlight 构建应用时可使用的 .NET Framework API。
   
 [开发多平台应用程序](../../docs/standard/cross-platform/index.md)  

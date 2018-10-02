@@ -7,12 +7,12 @@ helpviewer_keywords:
 - XML Schema Definition tool, using to generate classes that conform to specific schema
 - XML Schema Definition tool, using to generate XML Schema Document
 ms.assetid: 51f0edc3-993d-4051-b7f2-77753694d3d1
-ms.openlocfilehash: c169a3068b240e8d4d1cdb1d307938ee113066fb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2edaf7ba540035fbf2f49ba78b41ab99f8889391
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33582361"
+ms.lasthandoff: 09/28/2018
+ms.locfileid: "47436045"
 ---
 # <a name="how-to-use-the-xml-schema-definition-tool-to-generate-classes-and-xml-schema-documents"></a>How to: Use the XML Schema Definition Tool to Generate Classes and XML Schema Documents
 使用 XML 架构定义工具 (Xsd.exe) 可以生成描述类的 XML 架构，也可以生成 XML 架构定义的类。 下面的过程说明如何执行这两种操作。  
@@ -52,11 +52,12 @@ ms.locfileid: "33582361"
   
      架构将被写入，以名称“schema0.xsd”开头。  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Data.DataSet>  
- [XML 架构定义工具和 XML 序列化](../../../docs/standard/serialization/the-xml-schema-definition-tool-and-xml-serialization.md)  
- [XML 序列化简介](../../../docs/standard/serialization/introducing-xml-serialization.md)  
- [XML 架构定义工具 (Xsd.exe)](../../../docs/standard/serialization/xml-schema-definition-tool-xsd-exe.md)  
- <xref:System.Xml.Serialization.XmlSerializer>  
- [如何：序列化对象](../../../docs/standard/serialization/how-to-serialize-an-object.md)  
- [如何：反序列化对象](../../../docs/standard/serialization/how-to-deserialize-an-object.md)
+## <a name="see-also"></a>请参阅
+
+- <xref:System.Data.DataSet>  
+- [XML 架构定义工具和 XML 序列化](../../../docs/standard/serialization/the-xml-schema-definition-tool-and-xml-serialization.md)  
+- [XML 序列化简介](../../../docs/standard/serialization/introducing-xml-serialization.md)  
+- [XML 架构定义工具 (Xsd.exe)](../../../docs/standard/serialization/xml-schema-definition-tool-xsd-exe.md)  
+- <xref:System.Xml.Serialization.XmlSerializer>  
+- [如何：序列化对象](../../../docs/standard/serialization/how-to-serialize-an-object.md)  
+- [如何：反序列化对象](../../../docs/standard/serialization/how-to-deserialize-an-object.md)

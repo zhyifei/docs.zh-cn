@@ -6,12 +6,12 @@ helpviewer_keywords:
 - interoperability [WDF]
 - styles [Windows Forms], WPF content
 ms.assetid: e574aac7-7ea4-4cdb-8034-bab541f000df
-ms.openlocfilehash: d02e48daad705b29cb7e179417f665c34857896e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ad98c2da32084122dab529b8cf3a8fe7ef506b99
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33529191"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43489898"
 ---
 # <a name="walkthrough-styling-wpf-content"></a>演练：设置 WPF 内容的样式
 本演练显示了如何将样式应用到 Windows 窗体上承载的 Windows Presentation Foundation (WPF) 控件中。  
@@ -25,7 +25,7 @@ ms.locfileid: "33529191"
 -   将样式应用到 WPF 控件。  
   
 > [!NOTE]
->  显示的对话框和菜单命令可能会与“帮助”中的描述不同，具体取决于你现用的设置或版本。 若要更改设置，请在 **“工具”** 菜单上选择 **“导入和导出设置”** 。 有关详细信息，请参阅[在 Visual Studio 中自定义开发设置](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3)。  
+>  显示的对话框和菜单命令可能会与“帮助”中的描述不同，具体取决于你现用的设置或版本。 若要更改设置，请在 **“工具”** 菜单上选择 **“导入和导出设置”** 。 有关详细信息，请参阅[个性化设置 Visual Studio IDE](/visualstudio/ide/personalizing-the-visual-studio-ide)。  
   
 ## <a name="prerequisites"></a>系统必备  
  你需要以下组件来完成本演练：  
@@ -40,7 +40,7 @@ ms.locfileid: "33529191"
   
 #### <a name="to-create-the-project"></a>要创建项目  
   
--   创建新的 Windows 窗体应用程序项目中 Visual Basic 或 Visual C# 名为`StylingWpfContent`。  
+-   创建新的 Windows 窗体应用程序项目在 Visual Basic 或 Visual C# 名为`StylingWpfContent`。  
   
 ## <a name="creating-the-wpf-control-types"></a>创建 WPF 控件类型  
  将 WPF 控件类型添加到项目后，就可在 <xref:System.Windows.Forms.Integration.ElementHost> 控件中托管它。  
@@ -49,13 +49,13 @@ ms.locfileid: "33529191"
   
 1.  将新的 WPF <xref:System.Windows.Controls.UserControl> 项目添加到解决方案。 使用控件类型的默认名称，`UserControl1.xaml`。 有关详细信息，请参阅[演练： 创建新 WPF 内容在设计时的 Windows 窗体上](../../../../docs/framework/winforms/advanced/walkthrough-creating-new-wpf-content-on-windows-forms-at-design-time.md)。  
   
-2.  在设计视图中，请确保已选中 `UserControl1`。 有关详细信息，请参阅[如何： 选择和设计图面上移动元素](http://msdn.microsoft.com/library/54cb70b6-b35b-46e4-a0cc-65189399c474)。  
+2.  在设计视图中，请确保已选中 `UserControl1`。 有关详细信息，请参阅[如何： 选择和设计图面上移动元素](https://msdn.microsoft.com/library/54cb70b6-b35b-46e4-a0cc-65189399c474)。  
   
-3.  在**属性**窗口中，设置的值<xref:System.Windows.FrameworkElement.Width%2A>和<xref:System.Windows.FrameworkElement.Height%2A>属性设置为`200`。  
+3.  在中**属性**窗口中，设置的值<xref:System.Windows.FrameworkElement.Width%2A>并<xref:System.Windows.FrameworkElement.Height%2A>属性设置为`200`。  
   
-4.  添加<xref:System.Windows.Controls.Button?displayProperty=nameWithType>控制转移到<xref:System.Windows.Controls.UserControl>和设置的值<xref:System.Windows.Controls.ContentControl.Content%2A>属性**取消**。  
+4.  添加<xref:System.Windows.Controls.Button?displayProperty=nameWithType>控制对<xref:System.Windows.Controls.UserControl>并将值设置<xref:System.Windows.Controls.ContentControl.Content%2A>属性设置为**取消**。  
   
-5.  添加第二个<xref:System.Windows.Controls.Button?displayProperty=nameWithType>控制转移到<xref:System.Windows.Controls.UserControl>和设置的值<xref:System.Windows.Controls.ContentControl.Content%2A>属性**确定**。  
+5.  添加另一个<xref:System.Windows.Controls.Button?displayProperty=nameWithType>控制对<xref:System.Windows.Controls.UserControl>并将值设置<xref:System.Windows.Controls.ContentControl.Content%2A>属性设置为**确定**。  
   
 6.  生成项目。  
   
@@ -66,11 +66,11 @@ ms.locfileid: "33529191"
   
 1.  在 Windows 窗体设计器中打开 `Form1`。  
   
-2.  在**工具箱**，双击`UserControl1`若要创建的实例`UserControl1`窗体上。  
+2.  在中**工具箱**，双击`UserControl1`若要创建的实例`UserControl1`窗体上。  
   
      `UserControl1` 的实例托管在名为 `elementHost1` 的新 <xref:System.Windows.Forms.Integration.ElementHost> 控件中。  
   
-3.  在智能标记面板中`elementHost1`，单击**编辑所承载的内容**从下拉列表。  
+3.  中的智能标记面板`elementHost1`，单击**编辑所承载的内容**从下拉列表。  
   
      `UserControl1` 将在 [!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)] 中打开。  
   
@@ -145,7 +145,7 @@ ms.locfileid: "33529191"
   
 3.  将新样式应用到按钮控件中。  
   
-4.  从**调试**菜单上，选择**启动调试**运行该应用程序。  
+4.  从**调试**菜单中，选择**开始调试**运行该应用程序。  
   
 5.  单击“确定”和“取消”按钮并查看差异。  
   
@@ -154,6 +154,6 @@ ms.locfileid: "33529191"
  <xref:System.Windows.Forms.Integration.WindowsFormsHost>  
  [迁移和互操作性](../../../../docs/framework/wpf/advanced/migration-and-interoperability.md)  
  [使用 WPF 控件](../../../../docs/framework/winforms/advanced/using-wpf-controls.md)  
- [WPF 设计器](http://msdn.microsoft.com/library/c6c65214-8411-4e16-b254-163ed4099c26)  
+ [在 Visual Studio 中设计 XAML](/visualstudio/designers/designing-xaml-in-visual-studio)  
  [XAML 概述 (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)  
  [样式设置和模板化](../../../../docs/framework/wpf/controls/styling-and-templating.md)

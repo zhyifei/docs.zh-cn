@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 0b45e9a2-de28-46ce-8212-1817280ed42d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 27d97d38c903cbb33097db0e109758d98527e00f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 308b834a133798104dcc47a16f8adc068ed937ec
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33591932"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44188340"
 ---
 # <a name="chaining-tasks-by-using-continuation-tasks"></a>使用延续任务来链接任务
 在异步编程中，一个异步操作在完成时调用另一个操作并将数据传递到其中的情况非常常见。 传统上，此过程是通过使用回调方法完成的。 在任务并行库中， *延续任务*提供了同样的功能。 延续任务（也简称为“延续”）是一个异步任务，由另一个任务（称为 *前面的任务*）在完成时调用。  
@@ -44,7 +44,7 @@ ms.locfileid: "33591932"
  延续本身是 <xref:System.Threading.Tasks.Task> ，并不阻止它在其上启动的线程。 调用 <xref:System.Threading.Tasks.Task.Wait%2A?displayProperty=nameWithType> 方法进行阻止，直到延续任务完成。  
   
 ## <a name="creating-a-continuation-for-a-single-antecedent"></a>为一个前面的任务创建延续  
- 通过调用 <xref:System.Threading.Tasks.Task.ContinueWith%2A?displayProperty=nameWithType> 方法创建在其前面的任务完成时执行的延续。 下面的示例演示基本模式（为清楚起见，省略了异常处理）。 它会执行一个先行任务 - `taskA`，将返回一个 <xref:System.DayOfWeek> 对象，指示当天为周几。 前面的任务完成时，将向延续任务 `taskB`传递该前面的任务，并将显示包含其结果的字符串。  
+ 通过调用 <xref:System.Threading.Tasks.Task.ContinueWith%2A?displayProperty=nameWithType> 方法创建在其前面的任务完成时执行的延续。 下面的示例演示基本模式（为清楚起见，省略了异常处理）。 它会执行一个先行任务 - `taskA`，将返回一个 <xref:System.DayOfWeek> 对象，指示当天为周几。 前面的任务完成时，将向延续任务 `continuation` 传递前面的任务，并显示包含其结果的字符串。  
   
  [!code-csharp[TPL_Continuations#1](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_continuations/cs/simple1.cs#1)]
  [!code-vb[TPL_Continuations#1](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_continuations/vb/simple1.vb#1)]  
@@ -145,9 +145,10 @@ ms.locfileid: "33591932"
      [!code-csharp[TPL_Continuations#11](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_continuations/cs/exception2.cs#11)]
      [!code-vb[TPL_Continuations#11](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_continuations/vb/exception2.vb#11)]  
   
-     有关详细信息，请参阅[异常处理](../../../docs/standard/parallel-programming/exception-handling-task-parallel-library.md)和 [NIB：如何：处理由任务引发的异常](https://msdn.microsoft.com/library/d6c47ec8-9de9-4880-beb3-ff19ae51565d)。  
+     有关详细信息，请参阅[异常处理](../../../docs/standard/parallel-programming/exception-handling-task-parallel-library.md)。  
   
 -   如果延续为附加子任务并且是通过使用 <xref:System.Threading.Tasks.TaskContinuationOptions.AttachedToParent?displayProperty=nameWithType> 选项创建的，则父级会将该延续的异常传播回调用线程，就像任何其他附加子级的情况一样。 有关详细信息，请参阅[附加和分离的子任务](../../../docs/standard/parallel-programming/attached-and-detached-child-tasks.md)。  
   
-## <a name="see-also"></a>请参阅  
- [任务并行库 (TPL)](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md)
+## <a name="see-also"></a>请参阅
+
+- [任务并行库 (TPL)](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md)

@@ -9,12 +9,12 @@ dev_langs:
 ms.assetid: b5757c4a-ea59-467e-ac62-be2bfe24eb77
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b652adb27c3bb075fe86c09d7c9ab33511371279
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 241ff40448c3dca2846f9e420dc7df41427dc79d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33570440"
+ms.lasthandoff: 09/29/2018
+ms.locfileid: "47236327"
 ---
 # <a name="reading-and-writing-xml-schemas"></a>读写 XML 架构
 架构对象模型 (SOM) API 可以用于从文件或其他源读取和写入 XML 架构定义语言 (XSD) 架构并使用 <xref:System.Xml.Schema?displayProperty=nameWithType> 命名空间中的类生成内存中 XML 架构，这些架构映射到万维网联合会 (W3C) XML 架构建议中定义的结构。  
@@ -47,12 +47,13 @@ ms.locfileid: "33570440"
 </xs:schema>  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [XML 架构对象模型概述](../../../../docs/standard/data/xml/xml-schema-object-model-overview.md)  
- [生成 XML 架构](../../../../docs/standard/data/xml/building-xml-schemas.md)  
- [遍历 XML 架构](../../../../docs/standard/data/xml/traversing-xml-schemas.md)  
- [编辑 XML 架构](../../../../docs/standard/data/xml/editing-xml-schemas.md)  
- [包含或导入 XML 架构](../../../../docs/standard/data/xml/including-or-importing-xml-schemas.md)  
- [用于编译架构的 XmlSchemaSet](../../../../docs/standard/data/xml/xmlschemaset-for-schema-compilation.md)  
- [后架构编译信息集](../../../../docs/standard/data/xml/post-schema-compilation-infoset.md)  
- [管理 XML 文档中的命名空间](../../../../docs/standard/data/xml/managing-namespaces-in-an-xml-document.md)
+## <a name="see-also"></a>请参阅
+
+- [XML 架构对象模型概述](../../../../docs/standard/data/xml/xml-schema-object-model-overview.md)  
+- [生成 XML 架构](../../../../docs/standard/data/xml/building-xml-schemas.md)  
+- [遍历 XML 架构](../../../../docs/standard/data/xml/traversing-xml-schemas.md)  
+- [编辑 XML 架构](../../../../docs/standard/data/xml/editing-xml-schemas.md)  
+- [包含或导入 XML 架构](../../../../docs/standard/data/xml/including-or-importing-xml-schemas.md)  
+- [用于编译架构的 XmlSchemaSet](../../../../docs/standard/data/xml/xmlschemaset-for-schema-compilation.md)  
+- [后架构编译信息集](../../../../docs/standard/data/xml/post-schema-compilation-infoset.md)  
+- [管理 XML 文档中的命名空间](../../../../docs/standard/data/xml/managing-namespaces-in-an-xml-document.md)

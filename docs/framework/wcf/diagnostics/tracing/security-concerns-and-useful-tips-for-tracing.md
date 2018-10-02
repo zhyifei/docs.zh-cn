@@ -3,13 +3,12 @@ title: 有关跟踪的安全注意事项和有用提示
 ms.date: 03/30/2017
 ms.assetid: 88bc2880-ecb9-47cd-9816-39016a07076f
 author: BrucePerlerMS
-manager: mbaldwin
-ms.openlocfilehash: 664785bc97574eff73dc1c2be64f407641df6b00
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 51db352913999d5527ead5273e6488cd09d88670
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33484564"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47207794"
 ---
 # <a name="security-concerns-and-useful-tips-for-tracing"></a>有关跟踪的安全注意事项和有用提示
 本主题说明防止敏感信息公开的方法以及使用 WebHost 时的有用提示。  
@@ -88,7 +87,7 @@ ms.locfileid: "33484564"
   
  PII 日志记录的详细信息，请参阅[PII 安全锁定](../../../../../docs/framework/wcf/samples/pii-security-lockdown.md)示例。  
   
- 计算机管理员和应用程序部署人员应谨慎使用这两个开关。 如果启用了 PII 日志记录，则会记录安全密钥和 PII。 如果禁用了 PII 日志记录，仍会在消息头和正文中记录敏感数据和特定于应用程序的数据。 有关隐私和防止 PII 公开的更详细的讨论，请参阅[用户隐私](http://go.microsoft.com/fwlink/?LinkID=94647)。  
+ 计算机管理员和应用程序部署人员应谨慎使用这两个开关。 如果启用了 PII 日志记录，则会记录安全密钥和 PII。 如果禁用了 PII 日志记录，仍会在消息头和正文中记录敏感数据和特定于应用程序的数据。 有关隐私以及防止公开 PII 的更深入讨论，请参阅[用户隐私](https://go.microsoft.com/fwlink/?LinkID=94647)。  
   
  另外，对于面向连接的传输，每次连接时会记录一次消息发送方的 IP 地址；对于非面向连接的传输，每发送一条消息会记录一次消息发送方的 IP 地址。 这是在未经发送方同意的情况下进行的。 不过，只有在“信息”或“详细”跟踪级别才会发生此日志记录，这些级别不是生产中的默认或推荐跟踪级别（现场调试时除外）。  
   

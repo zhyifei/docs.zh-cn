@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 9d19b591-ea95-4418-8ea7-b6266af9905b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ce9b8b0864f3ed30c2ff03866abdb0d5d07991db
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: db0ff4cbc343cfbc1c81b24aa4401fa00ecf4f4b
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33580385"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44199383"
 ---
 # <a name="how-to-cancel-a-parallelfor-or-foreach-loop"></a>如何：取消 Parallel.For 或 ForEach Loop
 <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> 和 <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> 方法支持通过使用取消令牌进行取消。 若要详细了解取消的大致信息，请参阅[取消](../../../docs/standard/threading/cancellation-in-managed-threads.md)。 在并行循环中，将 <xref:System.Threading.CancellationToken> 提供给 <xref:System.Threading.Tasks.ParallelOptions> 参数中的方法，再将并行调用封闭到 try-catch 块中。  
@@ -29,6 +29,7 @@ ms.locfileid: "33580385"
   
  如果发送取消信号的令牌与<xref:System.Threading.Tasks.ParallelOptions> 实例中指定的令牌相同，并行循环会在取消时抛出一个 <xref:System.OperationCanceledException>。 如果导致取消发生的是其他一些令牌，循环会抛出带 <xref:System.OperationCanceledException> 的 <xref:System.AggregateException> 作为 InnerException。  
   
-## <a name="see-also"></a>请参阅  
- [数据并行](../../../docs/standard/parallel-programming/data-parallelism-task-parallel-library.md)  
- [PLINQ 和 TPL 中的 Lambda 表达式](../../../docs/standard/parallel-programming/lambda-expressions-in-plinq-and-tpl.md)
+## <a name="see-also"></a>请参阅
+
+- [数据并行](../../../docs/standard/parallel-programming/data-parallelism-task-parallel-library.md)  
+- [PLINQ 和 TPL 中的 Lambda 表达式](../../../docs/standard/parallel-programming/lambda-expressions-in-plinq-and-tpl.md)

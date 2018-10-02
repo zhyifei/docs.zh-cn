@@ -2,12 +2,12 @@
 title: 流
 ms.date: 03/30/2017
 ms.assetid: 58a3db81-20ab-4627-bf31-39d30b70b4fe
-ms.openlocfilehash: 96b77d0135a4dac1dcb8406a1b9a1372d0c4a35d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 54601b92efcb621d36432d870514fe9a9dc0b46e
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33508210"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43861109"
 ---
 # <a name="stream"></a>流
 流示例演示流传输模式通信的用法。 收发流的若干操作都由服务公开。 此示例是自承载的。 客户端和服务都是控制台程序。  
@@ -15,7 +15,7 @@ ms.locfileid: "33508210"
 > [!NOTE]
 >  本主题的最后介绍了此示例的设置过程和生成说明。  
   
- Windows Communication Foundation (WCF) 可以在两个传输模式下通信-缓冲处理还是流式处理。 在默认的缓冲传输模式中，必须完整传递消息，接收方才能读取该消息。 在流传输模式下，接收方可以在完整传递消息之前开始处理该消息。 当传递的信息很长且可以依次处理时，流模式非常有用。 当消息过长以致于无法全部缓冲时，流模式也非常有用。  
+ Windows Communication Foundation (WCF) 可以在两个传输模式通信 — 缓冲处理还是流式处理。 在默认的缓冲传输模式中，必须完整传递消息，接收方才能读取该消息。 在流传输模式下，接收方可以在完整传递消息之前开始处理该消息。 当传递的信息很长且可以依次处理时，流模式非常有用。 当消息过长以致于无法全部缓冲时，流模式也非常有用。  
   
 ## <a name="streaming-and-service-contracts"></a>流处理和服务协定  
  在设计服务协定时，可以考虑进行流处理。 如果某个操作接收或返回大量数据，则应当考虑对该数据进行流处理，以免因对输入或输出消息进行缓冲而导致内存使用率过高。 若要对数据进行流处理，用来存放该数据的参数必须是消息中的唯一参数。 例如，如果要对输入消息进行流处理，则该操作必须正好具有一个输入参数。 同样，如果要对输出消息进行流处理，则该操作必须正好具有一个输出参数或一个返回值。 在任一情况下，该参数或返回值类型必须是 `Stream`、`Message` 或 `IXmlSerializable`。 下面是该流处理示例中使用的服务协定。  
@@ -167,11 +167,11 @@ Press <ENTER> to terminate client.
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>设置、生成和运行示例  
   
-1.  确保已执行[的 Windows Communication Foundation 示例的一次性安装过程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
+1.  请确保您具有执行[的 Windows Communication Foundation 示例的一次性安装过程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
   
 2.  若要生成 C# 或 Visual Basic .NET 版本的解决方案，请按照 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)中的说明进行操作。  
   
-3.  若要在单或跨计算机配置上运行示例，请按照中的说明[运行 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/running-the-samples.md)。  
+3.  若要在单或跨计算机配置中运行示例，请按照中的说明[运行 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/running-the-samples.md)。  
   
 > [!NOTE]
 >  如果使用 Svcutil.exe 为此示例重新生成配置，请确保在客户端配置中修改终结点名称以与客户端代码匹配。  
@@ -181,7 +181,7 @@ Press <ENTER> to terminate client.
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目录不存在，请转到[Windows Communication Foundation (WCF) 和针对.NET Framework 4 的 Windows Workflow Foundation (WF) 示例](http://go.microsoft.com/fwlink/?LinkId=150780)下载所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
+>  如果此目录不存在，请转到[Windows Communication Foundation (WCF) 和.NET Framework 4 的 Windows Workflow Foundation (WF) 示例](https://go.microsoft.com/fwlink/?LinkId=150780)若要下载所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Contract\Service\Stream`  
   

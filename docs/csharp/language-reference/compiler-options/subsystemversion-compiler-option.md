@@ -2,12 +2,12 @@
 title: -subsystemversion（C# 编译器选项）
 ms.date: 07/20/2015
 ms.assetid: a99fce81-9d92-4813-9874-bee777041445
-ms.openlocfilehash: 25391dd504fb8a2b9458fd9495477258fc23d81a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ff4cd196edc1ec04f8abcecfa1a7a4e99e32dd56
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33215509"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47215899"
 ---
 # <a name="-subsystemversion-c-compiler-options"></a>-subsystemversion（C# 编译器选项）
 指定可以运行生成的可执行文件的子系统的最低版本，以此确定可以运行该可执行文件的 Windows 版本。 大多数情况下，此选项确保该可执行文件可以利用早期 Windows 版本中未提供的特定安全功能。  
@@ -59,4 +59,5 @@ ms.locfileid: "33215509"
  若要在 Visual Studio 中设置 -subsystemversion 编译器选项，必须打开 .csproj 文件，并在 MSBuild XML 中为 `SubsystemVersion` 属性指定一个值。 不能在 Visual Studio IDE 中设置此选项。 有关详细信息，请参阅本主题前面的“默认值”或[常用的 MSBuild 项目属性](/visualstudio/msbuild/common-msbuild-project-properties)。  
   
 ## <a name="see-also"></a>请参阅  
- [C# 编译器选项](../../../csharp/language-reference/compiler-options/index.md)
+
+- [C# 编译器选项](../../../csharp/language-reference/compiler-options/index.md)

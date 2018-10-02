@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: a2ca532d-91f7-426a-9303-417c2ee1247c
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4034a23b076bc0f3041f09dc4756646a926d6915
-ms.sourcegitcommit: c217b067985905cb21eafc5dd9a83568d7ff4e45
+ms.openlocfilehash: 208dc3048b52cc895a5142a7686829390d1d4503
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/22/2018
-ms.locfileid: "36314680"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "44041481"
 ---
 # <a name="net-framework-tools"></a>.NET Framework 工具
 您可以使用 .NET Framework 工具轻松创建、部署和管理面向 .NET Framework 的应用程序和组件。  
@@ -129,7 +129,7 @@ ms.locfileid: "36314680"
  帮助您对 Windows 窗体使用的用户界面 (UI) 资源（.resx 或 .resources 文件）进行本地化。 您可以翻译字符串，然后对控件进行大小调整、移动和隐藏操作，以使控件可以容纳本地化字符串。  
   
 ## <a name="related-sections"></a>相关章节  
- [工具](http://msdn.microsoft.com/library/f533241c-317c-445e-88ca-c80c8d078fca)  
+ [工具](https://msdn.microsoft.com/library/f533241c-317c-445e-88ca-c80c8d078fca)  
  包括 isXPS 合规性工具 (isXPS.exe) 和性能分析工具等工具。  
   
  [Windows Communication Foundation 工具](../../../docs/framework/wcf/tools.md)  

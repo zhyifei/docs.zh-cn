@@ -8,20 +8,20 @@ helpviewer_keywords:
 - line segments [WPF], creating
 - graphics [WPF], line segments
 ms.assetid: 0155ed47-a20d-49a7-a306-186d8e07fbc4
-ms.openlocfilehash: 1cfa9275a2a4508c153cf6ab7ed1c6126b1ee92c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 61425a68d83c8078b8420be01e0e59d3cba6a4e2
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33559654"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43518968"
 ---
 # <a name="how-to-create-a-linesegment-in-a-pathgeometry"></a>如何：在 PathGeometry 中创建 LineSegment
-此示例演示如何创建一条线段。 若要创建一条直线段，使用<xref:System.Windows.Media.PathGeometry>， <xref:System.Windows.Media.PathFigure>，和<xref:System.Windows.Media.LineSegment>类。  
+此示例演示如何创建一条线段。 若要创建一条线段，请使用<xref:System.Windows.Media.PathGeometry>， <xref:System.Windows.Media.PathFigure>，和<xref:System.Windows.Media.LineSegment>类。  
   
 ## <a name="example"></a>示例  
- 下面的示例绘制<xref:System.Windows.Media.LineSegment>从 （10，50） 到 （200，70）。 下图显示得到的<xref:System.Windows.Media.LineSegment>; 已添加了网格背景以显示坐标系统。  
+ 下面的示例绘制<xref:System.Windows.Media.LineSegment>从 （10，50） 到 （200，70）。 下图显示了生成<xref:System.Windows.Media.LineSegment>; 已添加网格背景以显示坐标系统。  
   
- ![Pathfigure 中的一个 Linesegment](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-pathgeometrylinesegment.png "graphicsmm_pathgeometrylinesegment")  
+ ![PathFigure 中的一个 LineSegment](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-pathgeometrylinesegment.png "graphicsmm_pathgeometrylinesegment")  
 从 (10,50) 绘制到 (200,70) 的 LineSegment  
   
  [xaml]  
@@ -35,7 +35,7 @@ ms.locfileid: "33559654"
   
  [xaml]  
   
- (请注意，此特性语法实际创建<xref:System.Windows.Media.StreamGeometry>的轻量版本<xref:System.Windows.Media.PathGeometry>。 有关详细信息，请参阅[路径标记语法](../../../../docs/framework/wpf/graphics-multimedia/path-markup-syntax.md)页。）  
+ (请注意，此属性语法实际上创建了<xref:System.Windows.Media.StreamGeometry>的轻量版本<xref:System.Windows.Media.PathGeometry>。 有关详细信息，请参阅[路径标记语法](../../../../docs/framework/wpf/graphics-multimedia/path-markup-syntax.md)页。）  
   
  在 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 中，还可以使用对象元素语法来绘制线段。 以下内容等效于之前的 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 示例。  
   
@@ -99,7 +99,7 @@ Dim myPathFigure As New PathFigure()
             myPath.Data = myPathGeometry  
 ```  
   
- 此示例是更大示例的组成部分；有关完整示例，请参阅[几何图形示例](http://go.microsoft.com/fwlink/?LinkID=159989)。  
+ 此示例是更大示例的组成部分；有关完整示例，请参阅[几何图形示例](https://go.microsoft.com/fwlink/?LinkID=159989)。  
   
 ## <a name="see-also"></a>请参阅  
  <xref:System.Windows.Media.PathFigure>  

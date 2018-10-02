@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 80b14640-edfa-4153-be1b-3e003d3e9c1a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 074371a929d5dd2cf0efb763ec45395a8dfd0432
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e5008ede5054e8e6970bcb6f804fa1888244238f
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33584272"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "45973087"
 ---
 # <a name="how-to-cancel-a-plinq-query"></a>如何：取消 PLINQ 查询
 下面的示例展示了取消 PLINQ 查询的两种方法。 第一个示例展示了如何取消主要由数据遍历组成的查询。 第二个示例展示了如何取消包含计算成本很高的用户函数的查询。  
@@ -50,7 +50,8 @@ ms.locfileid: "33584272"
   
  如果枚举器已遭清理（例如，当代码跳出循环访问查询结果的 foreach（Visual Basic 中的 For Each）循环时），查询就会被取消，但不会抛出异常。  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Linq.ParallelEnumerable>  
- [并行 LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)  
- [托管线程中的取消](../../../docs/standard/threading/cancellation-in-managed-threads.md)
+## <a name="see-also"></a>请参阅
+
+- <xref:System.Linq.ParallelEnumerable>  
+- [并行 LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)  
+- [托管线程中的取消](../../../docs/standard/threading/cancellation-in-managed-threads.md)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: bf00c380-706a-4e38-b829-454a480629fc
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: bf0caa0513881d5a1096478d8b29fc708ac3d3ce
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f205040e0f044ab04112683c7bdb8edccdfb9f71
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33577650"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45641503"
 ---
 # <a name="common-io-tasks"></a>通用 I/O 任务
 <xref:System.IO> 命名空间提供若干个类，通过这些类可以对文件、目录和流执行各种操作（如读取和写入）。 有关详细信息，请参阅[文件和流 I/O](../../../docs/standard/io/index.md)。  
@@ -53,7 +53,8 @@ ms.locfileid: "33577650"
 |查明目录大小|<xref:System.IO.Directory?displayProperty=nameWithType> 类|  
 |确定目录是否存在|<xref:System.IO.Directory.Exists%2A?displayProperty=nameWithType> 方法|  
   
-## <a name="see-also"></a>请参阅  
- [文件和流 I/O](../../../docs/standard/io/index.md)  
- [撰写流](../../../docs/standard/io/composing-streams.md)  
- [异步文件 I/O](../../../docs/standard/io/asynchronous-file-i-o.md)
+## <a name="see-also"></a>请参阅
+
+- [文件和流 I/O](../../../docs/standard/io/index.md)  
+- [撰写流](../../../docs/standard/io/composing-streams.md)  
+- [异步文件 I/O](../../../docs/standard/io/asynchronous-file-i-o.md)

@@ -2,15 +2,15 @@
 title: 配置 Windows 进程激活服务以用于 Windows Communication Foundation
 ms.date: 03/30/2017
 ms.assetid: 1d50712e-53cd-4773-b8bc-a1e1aad66b78
-ms.openlocfilehash: 3a4d771c3f2d5e7e6ec4fd6a1e229548e063a6d1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6e74c81aa26ba7f8d093b8b3ec52f19eb3519905
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33489763"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44216062"
 ---
 # <a name="configuring-the-windows-process-activation-service-for-use-with-windows-communication-foundation"></a>配置 Windows 进程激活服务以用于 Windows Communication Foundation
-本主题介绍设置 Windows 进程激活服务 (也称为 WAS) 所需的步骤在[!INCLUDE[wv](../../../../includes/wv-md.md)]来承载 Windows Communication Foundation (WCF) 服务不通过 HTTP 进行通信的网络协议。 下面的部分略述此配置的步骤：  
+本主题介绍设置 Windows 进程激活服务 (也称为 WAS) 所需的步骤的[!INCLUDE[wv](../../../../includes/wv-md.md)]来承载 Windows Communication Foundation (WCF) 服务未通过 HTTP 进行通信的网络协议。 下面的部分略述此配置的步骤：  
   
 -   安装 （或确认安装） 所需的 WCF 激活组件。  
   
@@ -18,7 +18,7 @@ ms.locfileid: "33489763"
   
 -   创建一个应用程序以承载服务，并使该应用程序可以使用所需的网络协议。  
   
--   生成 WCF 服务公开非 HTTP 终结点。  
+-   构建 WCF 服务公开非 HTTP 终结点。  
   
 ## <a name="configuring-a-site-with-non-http-bindings"></a>使用非 HTTP 绑定配置站点  
  若要将非 HTTP 绑定与 WAS 一起使用，必须将站点绑定添加到 WAS 配置。 WAS 的配置存储是 applicationHost.config 文件，该文件位于 %windir%\system32\inetsrv\config 目录中。 此配置存储由 WAS 和 IIS 7.0 共享。  
@@ -46,13 +46,13 @@ appcmd.exe set site "Default Web Site" -+bindings.[protocol='net.tcp',bindingInf
 ```  
   
 ## <a name="enabling-an-application-to-use-non-http-protocols"></a>使应用程序可以使用非 HTTP 协议  
- 你可以启用或禁用单个网络 protocolsat 应用程序级别。 下面的命令说明如何为在 `Default Web Site` 中运行的应用程序同时启用 HTTP 和 net.tcp 协议。  
+ 您可以启用或禁用各个网络 protocolsat 应用程序级别。 下面的命令说明如何为在 `Default Web Site` 中运行的应用程序同时启用 HTTP 和 net.tcp 协议。  
   
 ```  
 appcmd.exe set app "Default Web Site/appOne" /enabledProtocols:net.tcp  
 ```  
   
- 也可以在设置启用的协议列表\<applicationDefaults > 在 ApplicationHost.config 中存储的站点的 XML 配置元素。  
+ 此外可以设置启用的协议列表\<applicationDefaults > 的站点的 XML 配置存储在 ApplicationHost.config 中的元素。  
   
  摘自 applicationHost.config 的以下 XML 代码说明一个已同时绑定到 HTTP 协议和非 HTTP 协议的站点。 支持非 HTTP 协议所需的其他配置通过注释进行了突出。  
   
@@ -92,10 +92,10 @@ appcmd.exe set app "Default Web Site/appOne" /enabledProtocols:net.tcp
  如果您看到此错误，确保已安装并正确配置了用于非 HTTP 激活的 WAS。 有关详细信息，请参阅[如何： 安装和配置 WCF 激活组件](../../../../docs/framework/wcf/feature-details/how-to-install-and-configure-wcf-activation-components.md)。  
   
 ## <a name="building-a-wcf-service-that-uses-was-for-non-http-activation"></a>生成一个将 WAS 用于非 HTTP 激活的 WCF 服务  
- 一旦执行的步骤来安装和配置 WAS (请参阅[如何： 安装和配置 WCF 激活组件](../../../../docs/framework/wcf/feature-details/how-to-install-and-configure-wcf-activation-components.md))，服务配置为使用 WAS 激活是类似于在 IIS 中配置托管服务。  
+ 执行安装和配置 WAS 的步骤后 (请参阅[如何： 安装和配置 WCF 激活组件](../../../../docs/framework/wcf/feature-details/how-to-install-and-configure-wcf-activation-components.md))，将服务配置为使用 WAS 进行激活的过程类似于在 IIS 中配置托管服务。  
   
- 有关生成 WAS 激活的 WCF 服务的详细说明，请参阅[如何： 承载在 WAS 中的 WCF 服务](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-was.md)。  
+ 有关生成 WAS 激活 WCF 服务的详细说明，请参阅[如何： 承载在 WAS 中的 WCF 服务](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-was.md)。  
   
 ## <a name="see-also"></a>请参阅  
  [在 Windows Process Activation Service 中承载](../../../../docs/framework/wcf/feature-details/hosting-in-windows-process-activation-service.md)  
- [Windows Server App Fabric 承载功能](http://go.microsoft.com/fwlink/?LinkId=201276)
+ [Windows Server App Fabric 承载功能](https://go.microsoft.com/fwlink/?LinkId=201276)

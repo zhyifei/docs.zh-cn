@@ -9,19 +9,19 @@ helpviewer_keywords:
 - data grids [Windows Forms], adding unbound columns
 - DataGridView control [Windows Forms], unbound data
 ms.assetid: f7bdc4d8-ba8e-421b-ad62-82d936f01372
-ms.openlocfilehash: 8ba06457371bab5b81e18a307960a833d1d54199
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 39c637fe30ed852f7d6e9fa7a1dbbfa72af9e4b4
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33537305"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43527925"
 ---
 # <a name="how-to-add-an-unbound-column-to-a-data-bound-windows-forms-datagridview-control"></a>如何：将未绑定的列添加到绑定了数据的 Windows 窗体 DataGridView 控件
 在 <xref:System.Windows.Forms.DataGridView> 控件中显示的数据通常来自某种类型的数据源，但你可能需要显示并非来自该数据源的一列数据。 这种列称为未绑定列。 未绑定列可有多种形式。 它们常用于提供对数据行详细信息的访问。  
   
- 下面的代码示例演示如何创建的未绑定的列**详细信息**在实现主/从方案时，与父表中的特定行相关按钮以显示子表。 若要响应按钮点击，请实现显示包含子表的窗体的 <xref:System.Windows.Forms.DataGridView.CellClick?displayProperty=nameWithType> 事件处理程序。  
+ 下面的代码示例演示如何创建未绑定的列**详细信息**实现母版/详细信息方案时，与父表中的特定行相关按钮以显示子表。 若要响应按钮点击，请实现显示包含子表的窗体的 <xref:System.Windows.Forms.DataGridView.CellClick?displayProperty=nameWithType> 事件处理程序。  
   
- Visual Studio 中对此任务提供支持。  另请参阅[如何： 添加和删除 Windows 窗体 DataGridView 控件使用设计器中的列](http://msdn.microsoft.com/library/dyyesckz\(v=vs.110\))  
+ Visual Studio 中对此任务提供支持。  另请参阅[如何： 添加和删除 Windows 窗体 DataGridView 控件使用设计器中的列](https://msdn.microsoft.com/library/dyyesckz\(v=vs.110\))  
   
 ## <a name="example"></a>示例  
  [!code-csharp[System.Windows.Forms.DataGridViewMisc#010](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/CS/datagridviewmisc.cs#010)]

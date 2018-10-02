@@ -5,12 +5,12 @@ helpviewer_keywords:
 - static constructors [C#]
 - constructors [C#], static
 ms.assetid: 151ec95e-3c4d-4ed7-885d-95b7a3be2e7d
-ms.openlocfilehash: 52c52f68bc3612807b810047044aedbd2c457cf1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 22be72547e96c66df3be115dac30a16559b23659
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33315706"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43502763"
 ---
 # <a name="static-constructors-c-programming-guide"></a>静态构造函数（C# 编程指南）
 静态构造函数用于初始化任何[静态](../../../csharp/language-reference/keywords/static.md)数据，或执行仅需执行一次的特定操作。 将在创建第一个实例或引用任何静态成员之前自动调用静态构造函数。  
@@ -38,9 +38,10 @@ ms.locfileid: "33315706"
   
  [!code-csharp[csProgGuideObjects#15](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/static-constructors_2.cs)]  
   
-## <a name="see-also"></a>请参阅  
- [C# 编程指南](../../../csharp/programming-guide/index.md)  
- [类和结构](../../../csharp/programming-guide/classes-and-structs/index.md)  
- [构造函数](../../../csharp/programming-guide/classes-and-structs/constructors.md)  
- [静态类和静态类成员](../../../csharp/programming-guide/classes-and-structs/static-classes-and-static-class-members.md)  
- [终结器](../../../csharp/programming-guide/classes-and-structs/destructors.md)
+## <a name="see-also"></a>请参阅
+
+- [C# 编程指南](../../../csharp/programming-guide/index.md)  
+- [类和结构](../../../csharp/programming-guide/classes-and-structs/index.md)  
+- [构造函数](../../../csharp/programming-guide/classes-and-structs/constructors.md)  
+- [静态类和静态类成员](../../../csharp/programming-guide/classes-and-structs/static-classes-and-static-class-members.md)  
+- [终结器](../../../csharp/programming-guide/classes-and-structs/destructors.md)

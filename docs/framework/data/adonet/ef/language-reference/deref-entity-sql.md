@@ -2,12 +2,12 @@
 title: DEREF (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 4c78e833-b260-453d-9bf4-eb39857dd0fa
-ms.openlocfilehash: ee3877ca256eb3847b0284ac2a7362a4a60aad48
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: abe47f8c72abe13bd5c27fe10a412ff94ab861cf
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32761475"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43855134"
 ---
 # <a name="deref-entity-sql"></a>DEREF (Entity SQL)
 取消引用一个引用值，并生成该取消引用的结果。  
@@ -26,12 +26,12 @@ SELECT DEREF ( o.expression ) from Table as o;
  引用的实体的值。  
   
 ## <a name="remarks"></a>备注  
- DEREF 运算符取消引用一个引用值，并生成该取消引用的结果。 例如，如果`r`为引用类型 ref\<T >，`Deref``(r)`类型的表达式`T`可通过引用的实体`r`。 如果引用值为 Null，或无关联（即，引用的目标不存在），则 DEREF 运算符的结果为 Null。  
+ DEREF 运算符取消引用一个引用值，并生成该取消引用的结果。 例如，如果`r`为 ref 类型引用\<T >，`Deref(r)`类型的表达式`T`生成的引用的实体`r`。 如果引用值为 Null，或无关联（即，引用的目标不存在），则 DEREF 运算符的结果为 Null。  
   
 ## <a name="example"></a>示例  
  下面的 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 查询使用 DEREF 运算符取消引用一个引用值，并生成该取消引用的结果。 此查询基于 AdventureWorks 销售模型。 若要编译并运行此查询，请执行下列步骤：  
   
-1.  按照中的步骤[如何： 执行查询该返回 PrimitiveType 结果](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-primitivetype-results.md)。  
+1.  按照中的过程[如何： 执行查询，返回 PrimitiveType 结果](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-primitivetype-results.md)。  
   
 2.  将以下查询作为参数传递给 ExecutePrimitiveTypeQuery 方法：  
   

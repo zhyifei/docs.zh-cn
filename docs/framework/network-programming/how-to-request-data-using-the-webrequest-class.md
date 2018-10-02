@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 368b8d0f-dc5e-4469-a8b8-b2adbf5dd800
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: e02ad4772d3ba84a2735a2e146a9979862d75989
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8928ce8790f58b6920c16cbfd9fc8d9aa6644a44
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33397710"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47197820"
 ---
 # <a name="how-to-request-data-using-the-webrequest-class"></a>如何使用 WebRequest 类请求数据
 以下过程描述从服务器请求资源（如 Web 页或文件）所需的步骤。 资源必须由 URI 标识。  

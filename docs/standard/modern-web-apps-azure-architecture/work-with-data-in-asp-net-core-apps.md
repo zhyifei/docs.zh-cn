@@ -1,23 +1,21 @@
 ---
 title: 在 ASP.NET Core 应用中使用数据
-description: 使用 ASP.NET Core 和 Azure 构建新式 Web 应用程序 | 在 ASP 中使用数据
+description: 使用 ASP.NET Core 和 Azure 构建新式 Web 应用 | 在 ASP.NET Core 应用中使用数据
 author: ardalis
 ms.author: wiwagn
-ms.date: 10/07/2017
-ms.openlocfilehash: c9f1350f57ed649b9bf53968c19ab652b3c74384
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.date: 06/28/2018
+ms.openlocfilehash: 7209789eb36dc717823625c0ae67357ee332086b
+ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37106170"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37404653"
 ---
 # <a name="working-with-data-in-aspnet-core-apps"></a>在 ASP.NET Core 应用中使用数据
 
 > “数据很宝贵，它的持续时间长于系统本身。”
-
-Tim Berners-Lee
-
-## <a name="summary"></a>总结
+>
+> Tim Berners-Lee
 
 对于几乎任何软件应用程序，数据访问都是重要的部分。 ASP.NET Core 支持各种数据访问选项，包括 Entity Framework Core（以及 Entity Framework 6），并且可使用任何 .NET 数据访问框架。 选择使用哪种数据访问框架，具体取决于应用程序的需求。 从 ApplicationCore 和 UI 项目中提取这些选项，并在基础结构中封装实现详细信息，这有助于生成松散耦合的可测试软件。
 
@@ -35,7 +33,7 @@ dotnet add package Microsoft.EntityFrameworkCore.InMemory
 
 ### <a name="the-dbcontext"></a>DbContext
 
-要使用 EF Core，需要 DbContext 的子类。 此类可保留表示应用程序将使用的实体集合的属性。 eShopOnWeb 示例包括项目、品牌和类型集合的 CatalogContext：
+要使用 EF Core，需要 <xref:Microsoft.EntityFrameworkCore.DbContext> 的子类。 此类可保留表示应用程序将使用的实体集合的属性。 eShopOnWeb 示例包括项目、品牌和类型集合的 CatalogContext：
 
 ```csharp
 public class CatalogContext : DbContext
@@ -129,7 +127,9 @@ var brandsWithItems = await _context.CatalogBrands
 
 加载相关数据的另一个选项是使用显式加载。 通过显式加载，可以将其他数据加载到已检索的实体中。 由于这涉及单独的数据库请求，因此不建议用于 Web 应用程序，Web 应用程序应尽量减少每个请求的数据往返次数。
 
-延迟加载是可在应用程序引用相关数据时自动对其进行加载的一项功能。 EF Core 当前不支持该功能，但与显式加载一样，通常应对 Web 应用程序禁用该功能。
+延迟加载是可在应用程序引用相关数据时自动对其进行加载的一项功能。 EF Core 2.1 版本中添加了延迟加载支持。 延迟加载默认为不启用，且需要安装 `Microsoft.EntityFrameworkCore.Proxies`。 与显式加载相同，通常应对 Web 应用禁用延迟加载，因为使用延迟加载将导致在每个 Web 请求内进行额外的数据库查询。 遗憾的是，当延迟较小并且用于测试的数据集通常也较小时，在开发时常常会难以发现延迟加载所产生的开销。 但是，在生产中（涉及更多用户、更多数据和更多延迟），额外的数据库请求常常会导致大量使用延迟加载的 Web 应用性能不佳。
+
+[避免延迟加载 Web 应用中的实体](https://ardalis.com/avoid-lazy-loading-entities-in-asp-net-applications)
 
 ### <a name="resilient-connections"></a>弹性连接
 
@@ -153,19 +153,19 @@ public class Startup
         {
             sqlOptions.EnableRetryOnFailure(
             maxRetryCount: 5,
-            maxRetryDelay: TimeSpan.FromSeconds(30), 
-            errorNumbersToAdd: null); 
+            maxRetryDelay: TimeSpan.FromSeconds(30),
+            errorNumbersToAdd: null);
         });
     });
 }
 //...
 ```
 
-  #### <a name="execution-strategies-and-explicit-transactions-using-begintransaction-and-multiple-dbcontexts"></a>使用 BeginTransaction 和多个 DbContext 的执行策略和显式事务 
-  
-  在 EF Core 连接中启用重试时，使用 EF Core 执行的每项操作都会成为其自己的可重试操作。 如果发生暂时性故障，每个查询和 SaveChanges 的每次调用都会作为一个单元进行重试。
-  
-  但是，如果代码使用 BeginTransaction 启动事务，这表示在定义一组自己的操作，这些操作需要被视为一个单元 - 如果发生故障，事务内的所有内容都会回退。 如果在使用 EF 执行策略（重试策略）时尝试执行该事务，并且事务中包含一些来自多个 DbContext 的 SaveChanges，则会看到与下列情况类似的异常。
+#### <a name="execution-strategies-and-explicit-transactions-using-begintransaction-and-multiple-dbcontexts"></a>使用 BeginTransaction 和多个 DbContext 的执行策略和显式事务
+
+在 EF Core 连接中启用重试时，使用 EF Core 执行的每项操作都会成为其自己的可重试操作。 如果发生暂时性故障，每个查询和 SaveChanges 的每次调用都会作为一个单元进行重试。
+
+但是，如果代码使用 BeginTransaction 启动事务，这表示在定义一组自己的操作，这些操作需要被视为一个单元 - 如果发生故障，事务内的所有内容都会回退。 如果在使用 EF 执行策略（重试策略）时尝试执行该事务，并且事务中包含一些来自多个 DbContext 的 SaveChanges，则会看到与下列情况类似的异常。
 
 System.InvalidOperationException：已配置的执行策略“SqlServerRetryingExecutionStrategy”不支持用户启动的事务。 使用由“DbContext.Database.CreateExecutionStrategy()”返回的执行策略执行事务（作为一个可回溯单元）中的所有操作。
 
@@ -176,7 +176,7 @@ System.InvalidOperationException：已配置的执行策略“SqlServerRetryingE
 // within an explicit transaction
 // See:
 // https://docs.microsoft.com/ef/core/miscellaneous/connection-resiliency
-var strategy = _catalogContext.Database.CreateExecutionStrategy(); 
+var strategy = _catalogContext.Database.CreateExecutionStrategy();
 await strategy.ExecuteAsync(async () =>
 {
     // Achieving atomicity between original Catalog database operation and the
@@ -185,7 +185,7 @@ await strategy.ExecuteAsync(async () =>
     {
         _catalogContext.CatalogItems.Update(catalogItem);
         await _catalogContext.SaveChangesAsync();
-        
+
         // Save to EventLog only if product price changed
         if (raiseProductPriceChangedEvent)
         await _integrationEventLogService.SaveEventAsync(priceChangedEvent);
@@ -197,12 +197,13 @@ await strategy.ExecuteAsync(async () =>
 第一个 DbContext 是 \_catalogContext，第二个 DbContext 位于 \_integrationEventLogService 对象内。 最后，“提交”操作将执行多个 DbContext，并使用 EF 执行策略。
 
 > ### <a name="references--entity-framework-core"></a>引用 - Entity Framework Core
+>
 > - **EF Core 文档**  
-> <https://docs.microsoft.com/ef/>
+>   <https://docs.microsoft.com/ef/>
 > - **EF Core：相关数据**  
-> <https://docs.microsoft.com/ef/core/querying/related-data>
+>   <https://docs.microsoft.com/ef/core/querying/related-data>
 > - **避免延迟加载 ASPNET 应用程序中的实体**  
-> <https://ardalis.com/avoid-lazy-loading-entities-in-asp-net-applications>
+>   <https://ardalis.com/avoid-lazy-loading-entities-in-asp-net-applications>
 
 ## <a name="ef-core-or-micro-orm"></a>选择 EF Core 还是微型 ORM？
 
@@ -272,7 +273,6 @@ NoSQL 数据库通常不会强制实施 [ACID](https://en.wikipedia.org/wiki/ACI
 
 Azure Cosmos DB 是一项完全托管的 NoSQL 数据库服务，可提供基于云的无架构数据存储。 Cosmos DB 旨在实现快速可预测性能、高可用性、弹性缩放和全球分发。 尽管属于 NoSQL 数据库，但开发人员可对 JSON 数据使用熟悉的一系列 SQL 查询功能。 Cosmos DB 中的所有资源均存储为 JSON 文档。 资源作为“项目”（包含元数据的文档）和“源”（项目集合）管理。 图 8-2 显示了不同 Cosmos DB 资源之间的关系。
 
-
 ![Cosmos DB（一种 NoSQL JSON 数据库）的资源之间的层次结构关系](./media/image8-2.png)
 
 **图 8-2。** Cosmos DB 资源组织。
@@ -281,25 +281,25 @@ Cosmos DB 查询语言是简单而强大的接口，用于查询 JSON 文档。 
 
 **参考 - Cosmos DB**
 
--   Cosmos DB 简介\
-    <https://docs.microsoft.com/azure/documentdb/documentdb-introduction>
+- Cosmos DB 简介\
+  <https://docs.microsoft.com/azure/documentdb/documentdb-introduction>
 
-## <a name="other-persistence-options"></a>其他持久性方案
+## <a name="other-persistence-options"></a>其他持久性选项
 
 除关系数据库和 NoSQL 数据库存储选项外，ASP.NET Core 应用程序还可使用 Azure 存储，以基于云的可缩放方式存储各种数据格式和文件。 Azure 存储可大规模缩放，因此如果应用程序需要存储少量数据并纵向扩展到存储数百或 TB 级数据，可采用 Azure 存储。 Azure 存储支持四种数据：
 
--   适用于非结构化文本或二进制储存的 Blob 存储，也称为对象存储。
+- 适用于非结构化文本或二进制储存的 Blob 存储，也称为对象存储。
 
--   适用于结构化数据集的表存储，可通过行键进行访问。
+- 适用于结构化数据集的表存储，可通过行键进行访问。
 
--   适用于可靠且基于队列的消息传送的队列存储。
+- 适用于可靠且基于队列的消息传送的队列存储。
 
--   适用于 Azure 虚拟机和本地应用程序之间的共享文件访问的文件存储。
+- 适用于 Azure 虚拟机和本地应用程序之间的共享文件访问的文件存储。
 
 **参考 – Azure 存储**
 
--   Azure 存储简介\
-    <https://docs.microsoft.com/azure/storage/storage-introduction>
+- Azure 存储简介\
+  <https://docs.microsoft.com/azure/storage/storage-introduction>
 
 ## <a name="caching"></a>缓存
 
@@ -315,16 +315,17 @@ ASP.NET Core 支持两种级别的响应缓存。 第一种级别不会在服务
     [ResponseCache(Duration = 60)]
     public IActionResult Contact()
     { }
-    
+
     ViewData["Message"] = "Your contact page.";
     return View();
 }
+```
 
-The above example will result in the following header being added to the response, instructing clients to cache the result for up to 60 seconds.
+上述示例将导致将以下标头添加到响应，同时指示客户端缓存结果（最长 60 秒）。
 
 Cache-Control: public,max-age=60
 
-In order to add server-side in-memory caching to the application, you must reference the Microsoft.AspNetCore.ResponseCaching NuGet package, and then add the Response Caching middleware. This middleware is configured in both ConfigureServices and Configure in Startup:
+若要将服务器端内存中缓存添加到应用程序，则必须引用 Microsoft.AspNetCore.ResponseCaching NuGet 包，然后添加响应缓存中间件。 ConfigureServices 和 Configure 中的 Startup 中均配置有此中间件：
 
 ```csharp
 public void ConfigureServices(IServiceCollection services)
@@ -338,11 +339,11 @@ public void Configure(IApplicationBuilder app)
 }
 ```
 
-响应缓存中间件将根据一组可自定义的条件自动缓存响应。 默认情况下，仅缓存通过 GET 或 HEAD 方法请求的 200（正常）响应。 此外，请求必须具有包含缓存控件（公共标头）的响应，且不能包含授权标头或 Set-Cookie。 请参阅[响应缓存中间件所用缓存条件的完整列表](https://docs.microsoft.com/aspnet/core/performance/caching/middleware#conditions-for-caching)。
+响应缓存中间件将根据一组可自定义的条件自动缓存响应。 默认情况下，仅缓存通过 GET 或 HEAD 方法请求的 200（正常）响应。 此外，请求必须具有包含缓存控件（公共标头）的响应，且不能包含授权标头或 Set-Cookie。 请参阅[响应缓存中间件所用缓存条件的完整列表](/aspnet/core/performance/caching/middleware#conditions-for-caching)。
 
 ### <a name="data-caching"></a>数据缓存
 
-可以缓存各个数据查询的结果，而不是（或除了）缓存完整 web 响应。 为此，可对 Web 服务器使用内存中缓存，或使用[分布式缓存](https://docs.microsoft.com/aspnet/core/performance/caching/distributed)。 本节将演示如何实现内存中缓存。
+可以缓存各个数据查询的结果，而不是（或除了）缓存完整 web 响应。 为此，可对 Web 服务器使用内存中缓存，或使用[分布式缓存](/aspnet/core/performance/caching/distributed)。 本节将演示如何实现内存中缓存。
 
 在 ConfigureServices 中添加内存（或分布式）缓存支持：
 
@@ -373,7 +374,7 @@ public class CachedCatalogService : ICatalogService
         _cache = cache;
         _catalogService = catalogService;
     }
-    
+
     public async Task<IEnumerable<SelectListItem>> GetBrands()
     {
         return await _cache.GetOrCreateAsync(_brandsKey, async entry =>
@@ -382,7 +383,7 @@ public class CachedCatalogService : ICatalogService
             return await _catalogService.GetBrands();
         });
     }
-    
+
     public async Task<Catalog> GetCatalogItems(int pageIndex, int itemsPage, int? brandID, int? typeId)
     {
         string cacheKey = String.Format(_itemsKeyTemplate, pageIndex, itemsPage, brandID, typeId);
@@ -392,7 +393,7 @@ public class CachedCatalogService : ICatalogService
             return await _catalogService.GetCatalogItems(pageIndex, itemsPage, brandID, typeId);
         });
     }
-    
+
     public async Task<IEnumerable<SelectListItem>> GetTypes()
     {
         return await _cache.GetOrCreateAsync(_typesKey, async entry =>
@@ -435,6 +436,8 @@ new CancellationChangeToken(cts.Token));
 // elsewhere, expire the cache by cancelling the token\
 _cache.Get<CancellationTokenSource>("cts").Cancel();
 ```
+
+缓存可以显著提高从数据库重复请求相同值的网页的性能。 请确保在应用缓存前测量数据访问和页面性能，并且仅在发现需要改进性能时才应用缓存。 缓存使用 Web 服务器内存资源并增加应用程序的复杂性，因此，不要过早使用此技术进行优化。
 
 >[!div class="step-by-step"]
 [上一页](develop-asp-net-core-mvc-apps.md)

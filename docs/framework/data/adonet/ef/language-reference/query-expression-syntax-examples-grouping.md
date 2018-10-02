@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 2d83d7c0-b3be-4c92-a630-25cd1285de31
-ms.openlocfilehash: a5222110bc5ac41ecaaa8e5003262360fd4d9ff5
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 519f9073954e8f7710c9e73b61f40b4fcfefd25b
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32763519"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44206961"
 ---
 # <a name="query-expression-syntax-examples-grouping"></a>查询表达式语法示例：分组
-本主题中的示例演示如何使用`GroupBy`方法来查询[AdventureWorks 销售模型](http://msdn.microsoft.com/library/f16cd988-673f-4376-b034-129ca93c7832)使用查询表达式语法。 这些示例中使用的 AdventureWorks 销售模型从 AdventureWorks 示例数据库中的 Contact、Address、Product、SalesOrderHeader 和 SalesOrderDetail 等表生成。  
+本主题中的示例演示如何使用`GroupBy`方法来查询[AdventureWorks 销售模型](https://msdn.microsoft.com/library/f16cd988-673f-4376-b034-129ca93c7832)使用查询表达式语法。 这些示例中使用的 AdventureWorks 销售模型从 AdventureWorks 示例数据库中的 Contact、Address、Product、SalesOrderHeader 和 SalesOrderDetail 等表生成。  
   
  本主题中的示例使用以下`using` / `Imports`语句：  
   

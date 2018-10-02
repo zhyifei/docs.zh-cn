@@ -4,15 +4,15 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Duplex Service Contract
 ms.assetid: bc5de6b6-1a63-42a3-919a-67d21bae24e0
-ms.openlocfilehash: c132b49c3d1ff1cd72c7a02f66ad4bf6d2d65d1b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 54b941541ae0da4900608e61f08f4ed99c9ea472
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33506641"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "45969975"
 ---
 # <a name="duplex"></a>双工
-“双工”示例演示如何定义和实现双工协定。 当客户端与服务建立会话并为服务提供可用来将消息发送回客户端的通道时，就会发生双工通信。 此示例基于[入门](../../../../docs/framework/wcf/samples/getting-started-sample.md)。 双工协定以一对接口形式定义：一个从客户端到服务的主接口和一个从服务到客户端的回调接口。 在本示例中，`ICalculatorDuplex` 接口允许客户端执行数学运算，通过会话计算结果。 服务在 `ICalculatorDuplexCallback` 接口上返回结果。 双工协定需要会话，因为必须建立上下文才能将客户端和服务之间发送的一组消息关联在一起。  
+“双工”示例演示如何定义和实现双工协定。 当客户端与服务建立会话并为服务提供可用来将消息发送回客户端的通道时，就会发生双工通信。 此示例基于[Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md)。 双工协定以一对接口形式定义：一个从客户端到服务的主接口和一个从服务到客户端的回调接口。 在本示例中，`ICalculatorDuplex` 接口允许客户端执行数学运算，通过会话计算结果。 服务在 `ICalculatorDuplexCallback` 接口上返回结果。 双工协定需要会话，因为必须建立上下文才能将客户端和服务之间发送的一组消息关联在一起。  
   
 > [!NOTE]
 >  本主题的最后介绍了此示例的设置过程和生成说明。  
@@ -161,14 +161,14 @@ client.Close();
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>设置、生成和运行示例  
   
-1.  确保已执行[的 Windows Communication Foundation 示例的一次性安装过程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
+1.  请确保您具有执行[的 Windows Communication Foundation 示例的一次性安装过程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
   
 2.  若要生成解决方案的 C#、 c + + 或 Visual Basic.NET 版本，请按照中的说明[生成 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/building-the-samples.md)。  
   
-3.  若要在单或跨计算机配置上运行示例，请按照中的说明[运行 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/running-the-samples.md)。  
+3.  若要在单或跨计算机配置中运行示例，请按照中的说明[运行 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/running-the-samples.md)。  
   
     > [!IMPORTANT]
-    >  在运行时客户端的跨计算机配置，请务必将中的"localhost"`address`属性[终结点](http://msdn.microsoft.com/library/13aa23b7-2f08-4add-8dbf-a99f8127c017)元素和`clientBaseAddress`属性[ \<绑定 >](../../../../docs/framework/misc/binding.md)元素[ \<wsDualHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsdualhttpbinding.md)具有适当的计算机，如以下所示的名称的元素：  
+    >  在运行时客户端用跨计算机配置，请务必替换中的"localhost"`address`的属性[终结点](https://msdn.microsoft.com/library/13aa23b7-2f08-4add-8dbf-a99f8127c017)元素和`clientBaseAddress`的属性[ \<绑定 >](../../../../docs/framework/misc/binding.md)的元素[ \<wsDualHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsdualhttpbinding.md)元素如下所示的相应计算机的名称：  
   
     ```xml  
     <client>  
@@ -188,7 +188,7 @@ client.Close();
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目录不存在，请转到[Windows Communication Foundation (WCF) 和针对.NET Framework 4 的 Windows Workflow Foundation (WF) 示例](http://go.microsoft.com/fwlink/?LinkId=150780)下载所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
+>  如果此目录不存在，请转到[Windows Communication Foundation (WCF) 和.NET Framework 4 的 Windows Workflow Foundation (WF) 示例](https://go.microsoft.com/fwlink/?LinkId=150780)若要下载所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Contract\Service\Duplex`  
   

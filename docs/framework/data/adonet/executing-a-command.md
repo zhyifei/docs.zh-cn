@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 40494916-c25a-4cb8-8f7c-fcb8d378464e
-ms.openlocfilehash: 5ffa32b13330d61e450a42e35b933ce05d69b041
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: ed5ae1cbab40b57676219ffbe7d1d5696ac3bec4
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32765173"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45698114"
 ---
 # <a name="executing-a-command"></a>执行命令
 包含在 .NET Framework 中的每个 .NET Framework 数据提供程序都拥有自己的继承自 <xref:System.Data.Common.DbCommand> 的命令对象。 适用于 OLE DB 的 .NET Framework 数据提供程序包括一个 <xref:System.Data.OleDb.OleDbCommand> 对象，适用于 SQL Server 的 .NET Framework 数据提供程序包括一个 <xref:System.Data.SqlClient.SqlCommand> 对象，适用于 ODBC 的 .NET Framework 数据提供程序包括一个 <xref:System.Data.Odbc.OdbcCommand> 对象，适用于 Oracle 的 .NET Framework 数据提供程序包括一个 <xref:System.Data.OracleClient.OracleCommand> 对象。 其中每个对象都根据命令的类型和所需的返回值公开用于执行命令的方法，如下表所述。  
@@ -42,5 +42,5 @@ ms.locfileid: "32765173"
 ## <a name="see-also"></a>请参阅  
  [命令和参数](../../../../docs/framework/data/adonet/commands-and-parameters.md)  
  [DataAdapters 和 DataReaders](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)  
- [使用 Datareader](http://msdn.microsoft.com/library/126a966a-d08d-4d22-a19f-f432908b2b54)  
- [ADO.NET 托管提供程序和数据集开发人员中心](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [使用 Datareader](https://msdn.microsoft.com/library/126a966a-d08d-4d22-a19f-f432908b2b54)  
+ [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)

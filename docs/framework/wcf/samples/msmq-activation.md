@@ -2,15 +2,15 @@
 title: MSMQ 激活
 ms.date: 03/30/2017
 ms.assetid: e3834149-7b8c-4a54-806b-b4296720f31d
-ms.openlocfilehash: 4dc8cc2a3c6d9178f6507c87ae512a8929bd1380
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: a03f5783e732c4a0f3f13cf6abd7ec4803c07c8f
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33808125"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43779307"
 ---
 # <a name="msmq-activation"></a>MSMQ 激活
-本示例演示如何在 Windows 进程激活服务 (WAS) 中承载从消息队列读取的应用程序。 此示例使用`netMsmqBinding`和基于[双向通信](../../../../docs/framework/wcf/samples/two-way-communication.md)示例。 本示例中的服务是一个 Web 承载的应用程序，而客户端是自承载的，并输出到控制台以观察提交的采购订单的状态。  
+本示例演示如何在 Windows 进程激活服务 (WAS) 中承载从消息队列读取的应用程序。 此示例使用`netMsmqBinding`，并基于[双向通信](../../../../docs/framework/wcf/samples/two-way-communication.md)示例。 本示例中的服务是一个 Web 承载的应用程序，而客户端是自承载的，并输出到控制台以观察提交的采购订单的状态。  
   
 > [!NOTE]
 >  本主题的最后介绍了此示例的设置过程和生成说明。  
@@ -20,11 +20,11 @@ ms.locfileid: "33808125"
 >   
 >  \<InstallDrive>:\WF_WCF_Samples  
 >   
->  如果此目录不存在，请转到 Windows Communication Foundation (WCF) 超链接"http://go.microsoft.com/fwlink/?LinkId=150780"\t"_blank"和 Windows Workflow Foundation (WF) 示例[!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)]下载所有 WCF 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
+>  如果此目录不存在，请转到 Windows Communication Foundation (WCF) 超链接 "https://go.microsoft.com/fwlink/?LinkId=150780"\t"_blank"和 Windows Workflow Foundation (WF) 示例[!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)] 若要下载所有 WCF 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
 >   
 >  \<InstallDrive>:\Samples\WCFWFCardSpace\WCF\Basic\Services\Hosting\WASHost\MsmqActivation.  
   
- Windows 进程激活服务 (WAS) 是 [!INCLUDE[lserver](../../../../includes/lserver-md.md)] 新增的进程激活机制，它向使用非 HTTP 协议的应用程序提供了类似 IIS 的功能，这些功能以前只对基于 HTTP 的应用程序可用。 Windows Communication Foundation (WCF) 使用侦听器适配器接口传递激活请求通过由 WCF，如 TCP、 命名管道和 MSMQ 支持非 HTTP 协议接收请求。 用于通过非 HTTP 协议接收请求的功能由 SMSvcHost.exe 中运行的托管 Windows 服务承载。  
+ Windows 进程激活服务 (WAS) 是 [!INCLUDE[lserver](../../../../includes/lserver-md.md)] 新增的进程激活机制，它向使用非 HTTP 协议的应用程序提供了类似 IIS 的功能，这些功能以前只对基于 HTTP 的应用程序可用。 Windows Communication Foundation (WCF) 使用侦听器适配器接口传递激活请求通过 WCF，如 TCP、 命名管道和 MSMQ 支持非 HTTP 协议接收的请求。 用于通过非 HTTP 协议接收请求的功能由 SMSvcHost.exe 中运行的托管 Windows 服务承载。  
   
  Net.Msmq Listener Adapter 服务 (NetMsmqActivator) 根据队列中的消息激活排队的应用程序。  
   
@@ -84,7 +84,7 @@ public class OrderProcessorService : IOrderProcessor
  MSMQ 队列名称是在配置文件的 appSettings 节中指定的。 服务的终结点是在配置文件的 System.serviceModel 节中定义的。  
   
 > [!NOTE]
->  MSMQ 队列名称和终结点地址使用略有不同的寻址约定。 MSMQ 队列名称为本地计算机使用圆点 (.)，并在其路径中使用反斜杠分隔符。 WCF 终结点地址指定一个 net.msmq： 方案，使用"localhost"来表示本地计算机，并在其路径中使用正斜杠。 若要从在远程计算机上承载的队列读取数据，请将“.”和“localhost”替换为远程计算机名称。  
+>  MSMQ 队列名称和终结点地址使用略有不同的寻址约定。 MSMQ 队列名称为本地计算机使用圆点 (.)，并在其路径中使用反斜杠分隔符。 WCF 终结点地址指定一个 net.msmq： 方案，为本地计算机中，使用"localhost"，并在其路径中使用正斜杠。 若要从在远程计算机上承载的队列读取数据，请将“.”和“localhost”替换为远程计算机名称。  
   
  使用一个以类名作为名称的 .svc 文件来承载 WAS 中的服务代码。  
   
@@ -216,9 +216,9 @@ Status of order 70cf9d63-3dfa-4e69-81c2-23aa4478ebed :Pending
   
 1.  确保安装了 [!INCLUDE[iisver](../../../../includes/iisver-md.md)]，因为 WAS 激活需要它。  
   
-2.  确保已执行[的 Windows Communication Foundation 示例的一次性安装过程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。 此外，你必须安装 WCF 非 HTTP 激活组件：  
+2.  请确保您具有执行[的 Windows Communication Foundation 示例的一次性安装过程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。 此外，必须安装 WCF 非 HTTP 激活组件：  
   
-    1.  从**启动**菜单上，选择**控制面板**。  
+    1.  从**启动**菜单中，选择**控制面板**。  
   
     2.  选择**程序和功能**。  
   
@@ -226,7 +226,7 @@ Status of order 70cf9d63-3dfa-4e69-81c2-23aa4478ebed :Pending
   
     4.  下**功能摘要**，单击**添加功能**。  
   
-    5.  展开**Microsoft.NET Framework 3.0**节点并选中**Windows Communication Foundation 非 HTTP 激活**功能。  
+    5.  展开**Microsoft.NET Framework 3.0**节点并检查**Windows Communication Foundation 非 HTTP 激活**功能。  
   
 3.  若要生成 C# 或 Visual Basic .NET 版本的解决方案，请按照 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)中的说明进行操作。  
   
@@ -234,13 +234,13 @@ Status of order 70cf9d63-3dfa-4e69-81c2-23aa4478ebed :Pending
   
 5.  在默认情况下 MSMQ 激活服务将作为网络服务运行。 因此，用于激活应用程序的队列必须具有对网络服务的接收和查看权限。 可以通过使用消息队列 MMC 来添加这些权限：  
   
-    1.  从**启动**菜单上，单击**运行**，然后键入`Compmgmt.msc`，然后按 enter 键。  
+    1.  从**启动**菜单上，单击**运行**，然后键入`Compmgmt.msc`然后按 ENTER。  
   
     2.  下**服务和应用程序**，展开**消息队列**。  
   
     3.  单击**专用队列**。  
   
-    4.  右击队列 (servicemodelsamples/Service.svc) 并选择**属性**。  
+    4.  右键单击队列 (servicemodelsamples/Service.svc) 并选择**属性**。  
   
     5.  上**安全**选项卡上，单击**添加**和授予查看和接收对网络服务的权限。  
   
@@ -269,11 +269,11 @@ Status of order 70cf9d63-3dfa-4e69-81c2-23aa4478ebed :Pending
         > [!NOTE]
         >  此命令是单行文本。  
   
-         此命令启用 /servicemodelsamples 应用程序使用访问http://localhost/servicemodelsamples和 net.msmq: //localhost/servicemodelsamples。  
+         此命令将启用 /servicemodelsamples 应用程序使用访问 http://localhost/servicemodelsamples和 net.msmq: //localhost/servicemodelsamples。  
   
-7.  如果您以前没有进行此操作，应确保启用 MSMQ 激活服务。 从**启动**菜单上，单击**运行**，和类型`Services.msc`。 适用于的服务列表中搜索**Net.Msmq Listener Adapter**。 右键单击并选择**属性**。 设置**启动类型**到**自动**，单击**应用**单击**启动**按钮。 此步骤只能在第一次使用 Net.Msmq Listener Adapter 服务之前操作一次。  
+7.  如果您以前没有进行此操作，应确保启用 MSMQ 激活服务。 从**启动**菜单上，单击**运行**，然后键入`Services.msc`。 搜索的服务列表**Net.Msmq Listener Adapter**。 右键单击并选择**属性**。 设置**启动类型**到**自动**，单击**应用**然后单击**启动**按钮。 此步骤只能在第一次使用 Net.Msmq Listener Adapter 服务之前操作一次。  
   
-8.  若要在单或跨计算机配置上运行示例，请按照中的说明[运行 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/running-the-samples.md)。 此外，在客户端上更改用于提交采购订单的代码，使其在提交采购订单时在队列的 URI 中反映计算机名。 使用以下代码：  
+8.  若要在单或跨计算机配置中运行示例，请按照中的说明[运行 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/running-the-samples.md)。 此外，在客户端上更改用于提交采购订单的代码，使其在提交采购订单时在队列的 URI 中反映计算机名。 使用以下代码：  
   
     ```  
     client.SubmitPurchaseOrder(po, "net.msmq://localhost/private/ServiceModelSamples/OrderStatus");  
@@ -350,4 +350,4 @@ Status of order 70cf9d63-3dfa-4e69-81c2-23aa4478ebed :Pending
     ```  
   
 ## <a name="see-also"></a>请参阅  
- [AppFabric 承载和持久性示例](http://go.microsoft.com/fwlink/?LinkId=193961)
+ [AppFabric 承载和持久性示例](https://go.microsoft.com/fwlink/?LinkId=193961)

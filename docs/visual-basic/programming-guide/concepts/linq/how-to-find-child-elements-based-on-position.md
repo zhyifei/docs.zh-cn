@@ -1,15 +1,15 @@
 ---
-title: 如何： 查找子元素基于位置 (XPATH-LINQ to XML) (Visual Basic)
+title: 如何： 查找子元素根据位置 (XPATH-LINQ to XML) (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 6831e1db-5e97-444f-a7a1-d0a87104b005
 ms.openlocfilehash: 9f18da12786b4c44dc21e54c8d5020f49ef9ecb6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33641035"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43390781"
 ---
-# <a name="how-to-find-child-elements-based-on-position-xpath-linq-to-xml-visual-basic"></a>如何： 查找子元素基于位置 (XPATH-LINQ to XML) (Visual Basic)
+# <a name="how-to-find-child-elements-based-on-position-xpath-linq-to-xml-visual-basic"></a>如何： 查找子元素根据位置 (XPATH-LINQ to XML) (Visual Basic)
 有时需要根据元素的位置查找元素。 您可能想查找第二个元素，或者查找第三到第五个元素。  
   
  XPath 表达式为：  

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - right shift assignment operator (>>=) [C#]
 - '>>= operator (right-shift assignment) [C#]'
 ms.assetid: b593778c-b9b4-440d-8b29-c1ac22cb81c0
-ms.openlocfilehash: ccc3f688d985b9e35404550f0c53a7acf8095dd5
-ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
+ms.openlocfilehash: f2bac6a4320980d80a9b6c2597dcf8dc6f08ac70
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2018
-ms.locfileid: "34171413"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43865018"
 ---
 # <a name="gtgt-operator-c-reference"></a>&gt;&gt;= 运算符（C# 参考）
 右移赋值运算符。  
@@ -37,7 +37,8 @@ x = x >> y
 ## <a name="example"></a>示例  
  [!code-csharp[csRefOperators#11](../../../csharp/language-reference/operators/codesnippet/CSharp/right-shift-assignment-operator_1.cs)]  
   
-## <a name="see-also"></a>请参阅  
- [C# 参考](../../../csharp/language-reference/index.md)  
- [C# 编程指南](../../../csharp/programming-guide/index.md)  
- [C# 运算符](../../../csharp/language-reference/operators/index.md)
+## <a name="see-also"></a>请参阅
+
+- [C# 参考](../../../csharp/language-reference/index.md)  
+- [C# 编程指南](../../../csharp/programming-guide/index.md)  
+- [C# 运算符](../../../csharp/language-reference/operators/index.md)

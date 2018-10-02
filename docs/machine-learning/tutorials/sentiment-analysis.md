@@ -4,12 +4,12 @@ description: 了解如何在二元分类方案中使用 ML.NET，以了解如何
 ms.date: 06/04/2018
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 727718c00b9270e2bbbe0840879b3a7e164a02d8
-ms.sourcegitcommit: ed7b4b9b77d35e94a35a2634e8c874f46603fb2b
+ms.openlocfilehash: dec44bf114472e19fdac131e0af6c13854957fe3
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36948613"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43864769"
 ---
 # <a name="tutorial-use-mlnet-in-a-sentiment-analysis-binary-classification-scenario"></a>教程：在情绪分析二元分类方案中使用 ML.NET
 
@@ -91,7 +91,7 @@ ms.locfileid: "36948613"
 
 ## <a name="create-a-console-application"></a>创建控制台应用程序
 
-1. 打开 Visual Studio 2017。 从菜单栏中选择“文件” > “新建” > “项目”。 在“新项目”*对话框中，依次选择“Visual C#”和“.NET Core”节点。 然后，选择“控制台应用程序(.NET Core)”项目模板。 在“名称”文本框中，键入“SentimentAnalysis”，然后选择“确定”按钮。
+1. 打开 Visual Studio 2017。 从菜单栏中选择“文件” > “新建” > “项目”。 在“新项目”对话框中，依次选择“Visual C#”和“.NET Core”节点。 然后，选择“控制台应用程序(.NET Core)”项目模板。 在“名称”文本框中，键入“SentimentAnalysis”，然后选择“确定”按钮。
 
 2. 在项目中创建一个名为“数据”的目录来保存数据集文件：
 
@@ -105,7 +105,7 @@ ms.locfileid: "36948613"
 
 1. 下载 [WikiPedia detox-250-line-data.tsv](https://github.com/dotnet/machinelearning/blob/master/test/data/wikipedia-detox-250-line-data.tsv) 和 [wikipedia-detox-250-line-test.tsv](https://github.com/dotnet/machinelearning/blob/master/test/data/wikipedia-detox-250-line-test.tsv) 数据集并将它们保存到先前创建的“数据”文件夹。 第一个数据集定型机器学习模型，第二个数据集可用来评估模型的准确度。
 
-2. 在“解决方案资源管理器”中，右键单击每个 \*.tsv 文件，然后选择“属性”。 在“高级”下，将“复制到输出目录”的值更改为“始终”。
+2. 在“解决方案资源管理器”中，右键单击每个 \*.tsv 文件，然后选择“属性”。 在“高级”下，将“复制到输出目录”的值更改为“如果较新则复制”。
 
 ### <a name="create-classes-and-define-paths"></a>创建类和定义路径
 

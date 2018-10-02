@@ -1,6 +1,6 @@
 ---
 title: QualifierSet_Get 函数 （非托管 API 参考）
-description: QualifierSet_Get 函数获取命名的限定符。
+description: QualifierSet_Get 函数获取指定的限定符。
 ms.date: 11/06/2017
 api_name:
 - QualifierSet_Get
@@ -16,15 +16,15 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f1bc57ab45a0452d9e3a50f0ab2de786ad73204a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: e8c10a680f1caffd583097b16c046729fe10b140
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33458642"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43804235"
 ---
 # <a name="qualifiersetget-function"></a>QualifierSet_Get 函数
-获取指定的命名的限定符。  
+获取指定的命名限定符。  
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
   
@@ -44,10 +44,10 @@ HRESULT QualifierSet_Get (
 ## <a name="parameters"></a>参数
 
 `vFunc`   
-[in]未使用此参数。
+[in]此参数是未使用。
 
 `ptr`   
-[in]指向的指针[IWbemQualifierSet](https://msdn.microsoft.com/library/aa391860(v=vs.85).aspx)实例。
+[in]一个指向[IWbemQualifierSet](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemqualifierset)实例。
 
 `wszName`   
 [in]请求其值的限定符的名称。
@@ -56,16 +56,16 @@ HRESULT QualifierSet_Get (
 [in]保留。 此参数必须为 0。
 
 `pVal`   
-[out]成功时，正确的类型和值限定符。 如果函数失败，`VARIANT`指向`pVal`则不会修改。 如果此参数为`null`，则将忽略参数。
+[out]登录成功时，正确的类型和限定符值。 如果函数失败，`VARIANT`指向的`pVal`则不会修改。 如果此参数为`null`，将忽略此参数。
 
 `plFlavor`   
-[out]指向接收请求的限定符的限定符风格位长时间的指针。 如果不想风格信息，此参数可以为`null`。 
+[out]指向接收请求的限定符的限定符风格位长时间的指针。 如果不想风格的信息，此参数可以是`null`。 
 
 ## <a name="return-value"></a>返回值
 
-此函数返回以下值中定义*WbemCli.h*标头文件，或者你可以定义它们常量作为在代码中：
+此函数返回以下值中定义*WbemCli.h*标头文件，也可以在定义它们为常量在代码中：
 
-|返回的常量  |值  |描述  |
+|返回的常量  |“值”  |描述  |
 |---------|---------|---------|
 |`WBEM_E_INVALID_PARAMETER` | 0x80041008 | 参数不是有效的。 |
 |`WBEM_E_NOT_FOUND` | 0x80041002 | 指定的限定符不存在。 |
@@ -73,14 +73,14 @@ HRESULT QualifierSet_Get (
   
 ## <a name="remarks"></a>备注
 
-此函数包装对的调用[IWbemQualifierSet::Get](https://msdn.microsoft.com/library/aa391867(v=vs.85).aspx)方法。
+此函数包装对的调用[IWbemQualifierSet::Get](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemqualifierset-get)方法。
 
 ## <a name="requirements"></a>要求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** WMINet_Utils.idl  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>请参阅  
 [WMI 和性能计数器 （非托管 API 参考）](index.md)

@@ -2,15 +2,15 @@
 title: '&lt;ws2007HttpBinding&gt; 的 &lt;message&gt;'
 ms.date: 03/30/2017
 ms.assetid: 9ffd8db6-84a8-4b38-a9fe-2cb1a87a1c97
-ms.openlocfilehash: 39d5ce66537fd6c94895205ccc855d7fb631284e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a8f448f40dbbf5fabbbd833cb9366c3911045f95
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33363175"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "44042499"
 ---
 # <a name="ltmessagegt-of-ltws2007httpbindinggt"></a>&lt;ws2007HttpBinding&gt; 的 &lt;message&gt;
-定义消息级安全性设置[ \<ws2007HttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/ws2007httpbinding.md)元素。  
+定义的消息级安全性设置[ \<ws2007HttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/ws2007httpbinding.md)元素。  
   
  \<system.ServiceModel>  
 \<绑定 >  
@@ -49,7 +49,7 @@ ms.locfileid: "33363175"
 |`algorithmSuite`|设置消息加密和密钥包装算法。 算法和密钥大小由 <xref:System.ServiceModel.Security.SecurityAlgorithmSuite> 类确定。 这些算法映射到安全策略语言 (WS-SecurityPolicy) 规范中指定的算法。<br /><br /> 默认值为 Basic256。|  
 |`clientCredentialType`|可选。 指定在使用安全模式 `Message` 或 `TransportWithMessageCredentials` 执行客户端身份验证时要使用的凭据的类型。 请参见下表中的枚举值。 默认值为 Windows。<br /><br /> 此属性的类型为 <xref:System.ServiceModel.MessageCredentialType>。|  
 |`establishSecurityContext`|一个确定安全通道是否建立安全会话的值。 安全会话将在交换应用程序消息之前建立安全上下文令牌 (SCT)。 建立 SCT 时，此安全通道将提供与上层通道之间的 <xref:System.ServiceModel.Channels.ISession> 接口。 有关使用安全会话的详细信息，请参阅[如何： 创建安全会话](../../../../../docs/framework/wcf/feature-details/how-to-create-a-secure-session.md)。<br /><br /> 默认值为 `true`。|  
-|`negotiateServiceCredential`|可选。 一个值，指定是在带外客户端提供服务凭据，还是通过协商过程从服务向客户端获取服务凭据。 这种协商是正常消息交换的前提。<br /><br /> 如果`clientCredentialType`属性为无，用户名或证书，此属性设置为等于`false`意味着服务证书位于带外客户端并且客户端必须指定服务证书 （使用[\<serviceCertificate >](../../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md)) 中[ \<serviceCredentials >](../../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md)服务行为。 此模式可与实现 WS-Trust 和 WS-SecureConversation 的 SOAP 堆栈交互操作。<br /><br /> 如果 `ClientCredentialType` 属性设置为 `Windows`，则将此属性设置为 `false` 会指定基于 Kerberos 的身份验证。 这意味着客户端和服务必须是相同 Kerberos 域的一部分。 此模式可与实现 Kerberos 令牌配置文件（如 OASIS WSS TC 中所定义）以及 WS-Trust 和 WS-SecureConversation 的 SOAP 堆栈交互操作。<br /><br /> 当此属性为 `true` 时，将导致 .NET SOAP 协商，从而通过 SOAP 消息进行 <xref:System.ServiceModel.Security.Tokens.ServiceModelSecurityTokenTypes.Spnego%2A> 交换隧道处理。<br /><br /> 默认值为 `true`。|  
+|`negotiateServiceCredential`|可选。 一个值，指定是在带外客户端提供服务凭据，还是通过协商过程从服务向客户端获取服务凭据。 这种协商是正常消息交换的前提。<br /><br /> 如果`clientCredentialType`属性等于 None、 Username 或 Certificate，此属性设置为`false`意味着服务证书可在带外客户端，并且客户端必须指定服务证书 （使用[\<serviceCertificate >](../../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md)) 中[ \<serviceCredentials >](../../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md)服务行为。 此模式可与实现 WS-Trust 和 WS-SecureConversation 的 SOAP 堆栈交互操作。<br /><br /> 如果 `ClientCredentialType` 属性设置为 `Windows`，则将此属性设置为 `false` 会指定基于 Kerberos 的身份验证。 这意味着客户端和服务必须是相同 Kerberos 域的一部分。 此模式可与实现 Kerberos 令牌配置文件（如 OASIS WSS TC 中所定义）以及 WS-Trust 和 WS-SecureConversation 的 SOAP 堆栈交互操作。<br /><br /> 当此属性为 `true` 时，将导致 .NET SOAP 协商，从而通过 SOAP 消息进行 <xref:System.ServiceModel.Security.Tokens.ServiceModelSecurityTokenTypes.Spnego%2A> 交换隧道处理。<br /><br /> 默认值为 `true`。|  
   
 ## <a name="algorithmsuite-attribute"></a>algorithmSuite 属性  
   
@@ -79,7 +79,7 @@ ms.locfileid: "33363175"
 |`None`|允许服务与匿名客户端交互。 对于服务，这表示服务不需要任何客户端凭据。 对于客户端，这表示客户端不提供任何客户端凭据。|  
 |`Certificate`|允许服务要求使用证书对客户端进行身份验证。 如果使用 `message` 安全模式并且将 `negotiateServiceCredential` 属性设置为 `false`，则必须向客户端提供服务证书。|  
 |`IssuedToken`|指定自定义令牌，该令牌通常由安全令牌服务 (STS) 颁发。|  
-|`UserName`|允许服务要求使用 `UserName` 凭据对客户端进行身份验证。 WCF 不支持发送密码摘要，也派生密钥使用的密码，并使用这样的密钥来提供消息安全性。 在这种情况下，WCF 将确保传输的安全性时使用`UserName`凭据。 这种凭据模式将产生可互操作的交换或不可互操作的协商，具体取决于 `negotiateServiceCredential` 属性。|  
+|`UserName`|允许服务要求使用 `UserName` 凭据对客户端进行身份验证。 WCF 不支持发送密码摘要，也派生密钥使用的密码并使用此类密钥来提供消息安全性。 在这种情况下，WCF 强制执行传输的安全性时使用`UserName`凭据。 这种凭据模式将产生可互操作的交换或不可互操作的协商，具体取决于 `negotiateServiceCredential` 属性。|  
 |`Windows`|允许 SOAP 交换在已通过身份验证的 `Windows` 凭据上下文中执行。 如果 `negotiateServiceCredential` 属性设置为 `true`，则将执行 SSPI 协商或 Kerberos（一种可互操作的标准）。|  
   
 ### <a name="child-elements"></a>子元素  
@@ -99,5 +99,5 @@ ms.locfileid: "33363175"
  [保护服务和客户端的安全](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
  [绑定](../../../../../docs/framework/wcf/bindings.md)  
  [配置系统提供的绑定](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [使用绑定来配置 Windows Communication Foundation 服务和客户端](http://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
+ [使用绑定来配置 Windows Communication Foundation 服务和客户端](https://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
  [\<绑定 >](../../../../../docs/framework/misc/binding.md)

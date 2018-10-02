@@ -10,13 +10,12 @@ helpviewer_keywords:
 ms.assetid: 3f348f42-fa72-4ff2-aa1c-bb9eecad4bb2
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 090c296ba84043445364b350c8b74587c35b5940
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 35fe167beb53c27aa511e08507415a26b1749ca2
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32750331"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47193221"
 ---
 # <a name="ltsystemdiagnosticsgt-element"></a>&lt;system.diagnostics&gt;元素
 指定用于收集、存储和路由消息的跟踪侦听器以及对跟踪开关设置的级别。  
@@ -45,7 +44,7 @@ ms.locfileid: "32750331"
 |[\<performanceCounters>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/performancecounters-element.md)|指定由性能计数器共享的全局内存的大小。|  
 |[\<sharedListeners>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/sharedlisteners-element.md)|包含任何源或跟踪元素可以引用的侦听器。 标识为共享的侦听器可以按名称添加到源或跟踪侦听器。|  
 |[\<sources>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/sources-element.md)|指定启动跟踪消息的跟踪源。|  
-|[\<switches>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/switches-element.md)|包含跟踪开关和在其中设置跟踪开关的级别。|  
+|[\<switches>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/switches-element.md)|包含跟踪开关和跟踪开关设置其中的级别。|  
 |[\<trace>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/trace-element.md)|包含用于收集、存储和路由跟踪消息的侦听器。|  
   
 ### <a name="parent-elements"></a>父元素  
@@ -55,10 +54,10 @@ ms.locfileid: "32750331"
 |`configuration`|公共语言运行时和 .NET Framework 应用程序所使用的每个配置文件中的根元素。|  
   
 ## <a name="example"></a>示例  
- 下面的示例演示如何将跟踪开关和跟踪侦听器嵌入 **\<system.diagnostics >** 元素。 `General`跟踪开关设置为<xref:System.Diagnostics.TraceLevel>级别。 跟踪侦听器`myListener`创建名为的文件`MyListener.log`并将输出写入文件。  
+ 下面的示例演示如何嵌入跟踪开关和跟踪侦听器 **\<system.diagnostics >** 元素。 `General`跟踪开关设置为<xref:System.Diagnostics.TraceLevel>级别。 跟踪侦听器`myListener`创建一个名为文件`MyListener.log`并将输出写入到该文件。  
   
 > [!NOTE]
->  在 .NET Framework 2.0 版中，你可以使用文本指定开关值。 例如，可以指定`true`为<xref:System.Diagnostics.BooleanSwitch>或使用如表示一个枚举值的文本`Error`为<xref:System.Diagnostics.TraceSwitch>。 行 `<add name="myTraceSwitch" value="Error" />` 等于 `<add name="myTraceSwitch" value="1" />`。  
+>  在 .NET Framework 2.0 版中，你可以使用文本指定开关值。 例如，可以指定`true`有关<xref:System.Diagnostics.BooleanSwitch>或使用表示一个枚举值，例如文本`Error`为<xref:System.Diagnostics.TraceSwitch>。 行 `<add name="myTraceSwitch" value="Error" />` 等于 `<add name="myTraceSwitch" value="1" />`。  
   
 ```xml  
 <configuration>  

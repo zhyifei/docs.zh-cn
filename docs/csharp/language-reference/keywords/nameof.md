@@ -5,12 +5,12 @@ f1_keywords:
 - nameof_CSharpKeyword
 - nameof
 ms.assetid: 33601bf3-cc2c-4496-846d-f9679bccf2a7
-ms.openlocfilehash: 2695095aa4bf2035d8766f3cbcb82f4fbb290e22
-ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
+ms.openlocfilehash: 726abfd903f37826a247e6e98c0d11f230447550
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36207861"
+ms.lasthandoff: 09/27/2018
+ms.locfileid: "47204953"
 ---
 # <a name="nameof-c-reference"></a>nameof（C# 参考）
 
@@ -133,8 +133,8 @@ class C {
 ## <a name="language-specifications"></a>语言规范  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>请参阅  
- [C# 参考](../../../csharp/language-reference/index.md)  
- [C# 编程指南](../../../csharp/programming-guide/index.md)  
- [typeof](../../../csharp/language-reference/keywords/typeof.md)  
- 
+## <a name="see-also"></a>请参阅
+
+- [C# 参考](../../../csharp/language-reference/index.md)  
+- [C# 编程指南](../../../csharp/programming-guide/index.md)  
+- [typeof](../../../csharp/language-reference/keywords/typeof.md)  

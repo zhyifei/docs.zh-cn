@@ -9,20 +9,20 @@ helpviewer_keywords:
 - enumerating [WPF], subset of print queues
 - print queues [WPF], enumerating subset of
 ms.assetid: cc4a1b5b-d46f-4c5e-bc26-22c226e4bee0
-ms.openlocfilehash: 3e616b3b61b4b1b561d5bdb7e51525f391901a22
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: bf45d6fb3fb161ca5171e94b9ab7af1e0e6f0c3d
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33543584"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43786931"
 ---
 # <a name="how-to-enumerate-a-subset-of-print-queues"></a>如何：枚举打印队列的子集
-信息技术 (IT) 专业人员负责管理公司范围内打印机所面临的常见情况是生成具有特定特征的打印机的列表。 此功能由<xref:System.Printing.PrintServer.GetPrintQueues%2A>方法<xref:System.Printing.PrintServer>对象和<xref:System.Printing.EnumeratedPrintQueueTypes>枚举。  
+负责管理公司范围内的打印机的信息技术 (IT) 专业人员所面临的常见情况是生成具有某些特征的打印机的列表。 提供此功能<xref:System.Printing.PrintServer.GetPrintQueues%2A>方法<xref:System.Printing.PrintServer>对象和<xref:System.Printing.EnumeratedPrintQueueTypes>枚举。  
   
 ## <a name="example"></a>示例  
- 在下面的示例中，代码先创建标志，用于指定我们想要列出的打印队列的特征的数组。 在此示例中，我们正在寻找打印队列打印服务器上本地安装并共享。 <xref:System.Printing.EnumeratedPrintQueueTypes>枚举提供许多其他功能。  
+ 在下面的示例中，代码先创建标志，用于指定我们想要列出的打印队列的特性数组。 在此示例中，我们正在寻找打印队列打印服务器上本地安装并共享。 <xref:System.Printing.EnumeratedPrintQueueTypes>枚举提供了许多其他的值。  
   
- 该代码随后创建<xref:System.Printing.LocalPrintServer>对象，派生自该类<xref:System.Printing.PrintServer>。 本地的打印服务器是在其运行应用程序的计算机。  
+ 该代码随后创建<xref:System.Printing.LocalPrintServer>对象，一个类派生自<xref:System.Printing.PrintServer>。 本地打印服务器是在其运行应用程序的计算机。  
   
  最后一个重要步骤是将数组传递给<xref:System.Printing.PrintServer.GetPrintQueues%2A>方法。  
   
@@ -32,7 +32,7 @@ ms.locfileid: "33543584"
  [!code-csharp[EnumerateSubsetOfPrintQueues#ListSubsetOfPrintQueues](../../../../samples/snippets/csharp/VS_Snippets_Wpf/EnumerateSubsetOfPrintQueues/CSharp/Program.cs#listsubsetofprintqueues)]
  [!code-vb[EnumerateSubsetOfPrintQueues#ListSubsetOfPrintQueues](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/EnumerateSubsetOfPrintQueues/visualbasic/program.vb#listsubsetofprintqueues)]  
   
- 您可以通过无扩展此示例`foreach`循环通过每个打印队列的步骤执行进一步屏蔽。 例如，你无法筛选掉不通过让循环调用支持双面打印的打印机每个打印队列<xref:System.Printing.PrintQueue.GetPrintCapabilities%2A>方法和测试的返回值的双工是否存在。  
+ 您可以扩展此示例通过让`foreach`循环通过每个打印队列的步骤执行进一步筛选。 例如，您可以筛选掉不支持通过循环调用双面打印的打印机每个打印队列的<xref:System.Printing.PrintQueue.GetPrintCapabilities%2A>方法和测试返回的值进行双面打印是否存在。  
   
 ## <a name="see-also"></a>请参阅  
  <xref:System.Printing.PrintServer.GetPrintQueues%2A>  
@@ -43,4 +43,4 @@ ms.locfileid: "33543584"
  <xref:System.Printing.PrintQueue.GetPrintCapabilities%2A>  
  [WPF 中的文档](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)  
  [打印概述](../../../../docs/framework/wpf/advanced/printing-overview.md)  
- [Microsoft XPS Document Writer](http://go.microsoft.com/fwlink/?LinkId=147319)
+ [Microsoft XPS 文档编写器](https://go.microsoft.com/fwlink/?LinkId=147319)

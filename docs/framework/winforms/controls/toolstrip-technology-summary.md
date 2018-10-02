@@ -7,12 +7,12 @@ helpviewer_keywords:
 - toolbars [Windows Forms], technology summary
 - menus [Windows Forms], technology summary
 ms.assetid: e8d61973-7af9-429f-9df5-05a899c15a7b
-ms.openlocfilehash: c4f7b13590457623bbdfd6e4c07317f3a0285fd0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 26317fad5796989a58a48e4f26549805b279228a
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33541906"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47201096"
 ---
 # <a name="toolstrip-technology-summary"></a>ToolStrip 技术摘要
 本主题概述了 `ToolStrip` 控件及支持其使用的类的相关信息。  
@@ -63,26 +63,26 @@ ms.locfileid: "33541906"
 ### <a name="task-dialog-boxes"></a>任务对话框  
  在 Visual Studio 中，单击设计器中控件上的智能标记会显示任务列表，用于方便访问很多常用命令。  
   
--   [MenuStrip 任务对话框](http://msdn.microsoft.com/library/ms233645\(v=vs.110\))  
+-   [MenuStrip 任务对话框](https://msdn.microsoft.com/library/ms233645\(v=vs.110\))  
   
--   [ToolStrip 任务对话框](http://msdn.microsoft.com/library/ms233648\(v=vs.110\))  
+-   [ToolStrip 任务对话框](https://msdn.microsoft.com/library/ms233648\(v=vs.110\))  
   
--   [ContextMenuStrip 任务对话框](http://msdn.microsoft.com/library/ms233646\(v=vs.110\))  
+-   [ContextMenuStrip 任务对话框](https://msdn.microsoft.com/library/ms233646\(v=vs.110\))  
   
--   [StatusStrip 任务对话框](http://msdn.microsoft.com/library/ms233642\(v=vs.110\))  
+-   [StatusStrip 任务对话框](https://msdn.microsoft.com/library/ms233642\(v=vs.110\))  
   
--   [ToolStripContainer 任务对话框](http://msdn.microsoft.com/library/ms233647\(v=vs.110\))  
+-   [ToolStripContainer 任务对话框](https://msdn.microsoft.com/library/ms233647\(v=vs.110\))  
   
 ### <a name="items-collection-editors"></a>项集合编辑器  
- 在 Visual Studio 中，当你单击**编辑项**任务列表中或右键单击控件并选择**编辑项**在快捷菜单中，显示控件的集合编辑器。 集合编辑器用于添加、删除和重新排序控件中所包含的项。 还可以查看和更改控件及其内含项的属性。  
+ 在 Visual Studio 中，单击时**编辑项**任务列表中或右键单击该控件，然后选择**编辑项**快捷菜单中显示该控件的集合编辑器。 集合编辑器用于添加、删除和重新排序控件中所包含的项。 还可以查看和更改控件及其内含项的属性。  
   
--   [MenuStrip 项集合编辑器](http://msdn.microsoft.com/library/ms233625\(v=vs.110\))  
+-   [MenuStrip 项集合编辑器](https://msdn.microsoft.com/library/ms233625\(v=vs.110\))  
   
--   [StatusStrip 项集合编辑器](http://msdn.microsoft.com/library/ms233631\(v=vs.110\))  
+-   [StatusStrip 项集合编辑器](https://msdn.microsoft.com/library/ms233631\(v=vs.110\))  
   
--   [ContextMenuStrip 项集合编辑器](http://msdn.microsoft.com/library/ms233641\(v=vs.110\))  
+-   [ContextMenuStrip 项集合编辑器](https://msdn.microsoft.com/library/ms233641\(v=vs.110\))  
   
--   [ToolStrip 项集合编辑器](http://msdn.microsoft.com/library/ms233643\(v=vs.110\))  
+-   [ToolStrip 项集合编辑器](https://msdn.microsoft.com/library/ms233643\(v=vs.110\))  
   
 ## <a name="hosting-controls"></a>承载控件  
  <xref:System.Windows.Forms.ToolStripControlHost> 类为 <xref:System.Windows.Forms.ToolStripComboBox>、<xref:System.Windows.Forms.ToolStripTextBox> 和 <xref:System.Windows.Forms.ToolStripProgressBar> 控件提供了内置包装。 还可以在 <xref:System.Windows.Forms.ToolStripControlHost> 中承载任何其他现有控件或 COM 控件。  
@@ -104,17 +104,17 @@ ms.locfileid: "33541906"
 ## <a name="rafting-and-docking"></a>漂浮和停靠  
  可以飘浮、停靠或绝对定位 <xref:System.Windows.Forms.ToolStrip> 控件。 <xref:System.Windows.Forms.ToolStrip> 项由容器的 <xref:System.Windows.Forms.ToolStrip.LayoutEngine%2A> 进行布局。  
   
- *漂浮*是对工具栏共享水平或垂直空间的能力。 Windows 窗体可具有 <xref:System.Windows.Forms.ToolStripContainer>，其中窗体的左侧、右侧、顶部和底部均带有用于定位和漂浮 <xref:System.Windows.Forms.ToolStrip>、<xref:System.Windows.Forms.MenuStrip> 和 <xref:System.Windows.Forms.StatusStrip> 控件的面板。 如果将多个 <xref:System.Windows.Forms.ToolStrip> 控件放置在 <xref:System.Windows.Forms.ToolStripContainer> 左侧或右侧，它们会垂直堆叠。 如果将其放置在 <xref:System.Windows.Forms.ToolStripContainer> 顶部或底部，则水平堆叠。 可使用 <xref:System.Windows.Forms.ToolStripContainer> 的中央 <xref:System.Windows.Forms.ToolStripContentPanel> 将传统控件放置在窗体上。  
+ *漂浮*是指工具栏共享水平或垂直空间。 Windows 窗体可具有 <xref:System.Windows.Forms.ToolStripContainer>，其中窗体的左侧、右侧、顶部和底部均带有用于定位和漂浮 <xref:System.Windows.Forms.ToolStrip>、<xref:System.Windows.Forms.MenuStrip> 和 <xref:System.Windows.Forms.StatusStrip> 控件的面板。 如果将多个 <xref:System.Windows.Forms.ToolStrip> 控件放置在 <xref:System.Windows.Forms.ToolStripContainer> 左侧或右侧，它们会垂直堆叠。 如果将其放置在 <xref:System.Windows.Forms.ToolStripContainer> 顶部或底部，则水平堆叠。 可使用 <xref:System.Windows.Forms.ToolStripContainer> 的中央 <xref:System.Windows.Forms.ToolStripContentPanel> 将传统控件放置在窗体上。  
   
  任何或所有 <xref:System.Windows.Forms.ToolStripContainer> 控件都可在设计时选择且可删除。 <xref:System.Windows.Forms.ToolStripContainer> 可扩展、可折叠的，并可调整大小适应其包含的控件。  
   
- *停靠*指定窗体的左侧、 右侧、 顶部或底部端上的控件的简单位置。  
+ *停靠*指定控件的简单窗体的左侧、 右侧、 顶部或底部位置。  
   
  相对于停靠，漂浮的优势是 <xref:System.Windows.Forms.ToolStrip>、<xref:System.Windows.Forms.MenuStrip> 和 <xref:System.Windows.Forms.StatusStrip> 控件可与其他控件共享水平和垂直空间。  
   
  换用漂浮时，大部分的 <xref:System.Windows.Forms.ToolStrip> 控件可与其他控件一样停靠在窗体。 还可以通过将其从 <xref:System.Windows.Forms.ToolStripContainer> 移除并将 `Dock` 属性设置为 `None` 自由指定 <xref:System.Windows.Forms.ToolStrip> 控件在窗体上的位置，或者可通过设置各自的 <xref:System.Windows.Forms.Control.Location%2A> 属性指定它的绝对位置。 请参阅[如何： 将 ToolStrip 从 toolstripcontainer 移到窗体](../../../../docs/framework/winforms/controls/how-to-move-a-toolstrip-out-of-a-toolstripcontainer-onto-a-form.md)。  
   
- 为提高灵活性（特别是对于多文档界面 (MDI) 应用程序）或者在无需使用 <xref:System.Windows.Forms.ToolStripContainer> 的情况下，请使用一个或多个 <xref:System.Windows.Forms.ToolStripPanel> 控件。 <xref:System.Windows.Forms.ToolStripPanel> 提供可停靠空间，用于定位和漂浮 <xref:System.Windows.Forms.ToolStrip> 控件（而不是传统控件）。 默认情况下，<xref:System.Windows.Forms.ToolStripPanel>在设计器中不显示**工具箱**，但你可以通过右键单击将该字段放**工具箱**，然后单击**选择项**。 与任何其他类一样，也可以编程方式访问 <xref:System.Windows.Forms.ToolStripPanel>。  
+ 为提高灵活性（特别是对于多文档界面 (MDI) 应用程序）或者在无需使用 <xref:System.Windows.Forms.ToolStripContainer> 的情况下，请使用一个或多个 <xref:System.Windows.Forms.ToolStripPanel> 控件。 <xref:System.Windows.Forms.ToolStripPanel> 提供可停靠空间，用于定位和漂浮 <xref:System.Windows.Forms.ToolStrip> 控件（而不是传统控件）。 默认情况下<xref:System.Windows.Forms.ToolStripPanel>不显示在设计器**工具箱**，但您可以通过右键单击将该字段放**工具箱**，然后单击**选择项**。 与任何其他类一样，也可以编程方式访问 <xref:System.Windows.Forms.ToolStripPanel>。  
   
  <xref:System.Windows.Forms.ToolStrip>、<xref:System.Windows.Forms.MenuStrip> 和 <xref:System.Windows.Forms.StatusStrip> 允许项溢出。 这与这些项在 Microsoft Office 工具栏中的操作方式很类似。  
   

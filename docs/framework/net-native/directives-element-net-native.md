@@ -4,22 +4,22 @@ ms.date: 03/30/2017
 ms.assetid: 444846f3-48d5-4341-a43e-69f7221389eb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bd571255f924c9f3878c00a2bc01397d63e6d777
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8921d2841f9a7b4228ae3b8735d7047453f71bcb
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33394441"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47176781"
 ---
 # <a name="ltdirectivesgt-element-net-native"></a>&lt;指令&gt;元素 (.NET Native)
-根元素位于 [!INCLUDE[net_native](../../../includes/net-native-md.md)] 的每个运行时指令文件中。  
+.NET native 每个运行时指令文件中的根元素。  
   
- **\<指令 xmlns ="http://schemas.microsoft.com/netfx/2013/01/metadata">**  
+ `<Directives xmlns="http://schemas.microsoft.com/netfx/2013/01/metadata">` 
   
 ## <a name="syntax"></a>语法  
   
 ```xml  
-      <Directives xmlns="http://schemas.microsoft.com/netfx/2013/01/metadata">  
+<Directives xmlns="http://schemas.microsoft.com/netfx/2013/01/metadata">  
    <!-- child elements -->   
 </Directives>  
 ```  

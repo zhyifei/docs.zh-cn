@@ -2,12 +2,12 @@
 title: 如何：从文件系统填充 XML 树 (C#)
 ms.date: 07/20/2015
 ms.assetid: 2aa2ccac-4a22-47ae-9107-3bb8df232576
-ms.openlocfilehash: fdbab0fbda3bbfe3ab91e674bb66694f71121962
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7bddab1942c5a673969e271338f17705914f81a4
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33328170"
+ms.lasthandoff: 09/27/2018
+ms.locfileid: "47231448"
 ---
 # <a name="how-to-populate-an-xml-tree-from-the-file-system-c"></a>如何：从文件系统填充 XML 树 (C#)
 XML 树有一种有用的常见应用，即作为层次结构名称/值数据存储区。 您可以使用层次结构数据填充 XML 树，然后对它进行查询、转换和序列化（如有必要）。 在这种用法中，很多 XML 特定的语义（如命名空间和空白行为）都不重要。 相反，你将 XML 树用作内存中的小型单用户层次结构数据库。  
@@ -116,5 +116,6 @@ class Program
 Total File Size:59089  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [高级查询技术 (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)
+## <a name="see-also"></a>请参阅
+
+- [高级查询技术 (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)

@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - constructors [C#], about constructors
 ms.assetid: 464253b2-fd5d-469a-836d-df0fdf2a43f7
-ms.openlocfilehash: 5fe6f10e3842c0c0aac4b2669f8ca367fa8c3be2
-ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
+ms.openlocfilehash: b19676b2549bbb54af7fb1d72ff0e98352c61383
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2018
-ms.locfileid: "34172312"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43529015"
 ---
 # <a name="using-constructors-c-programming-guide"></a>使用构造函数（C# 编程指南）
 创建[类](../../../csharp/language-reference/keywords/class.md)或[结构](../../../csharp/language-reference/keywords/struct.md)时，将会调用其构造函数。 构造函数与该类或结构具有相同名称，并且通常初始化新对象的数据成员。  
@@ -90,8 +90,9 @@ Console.WriteLine("{0}, {1}", a, b);
 ## <a name="c-language-specification"></a>C# 语言规范  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>请参阅  
- [C# 编程指南](../../../csharp/programming-guide/index.md)  
- [类和结构](../../../csharp/programming-guide/classes-and-structs/index.md)  
- [构造函数](../../../csharp/programming-guide/classes-and-structs/constructors.md)  
- [终结器](../../../csharp/programming-guide/classes-and-structs/destructors.md)
+## <a name="see-also"></a>请参阅
+
+- [C# 编程指南](../../../csharp/programming-guide/index.md)  
+- [类和结构](../../../csharp/programming-guide/classes-and-structs/index.md)  
+- [构造函数](../../../csharp/programming-guide/classes-and-structs/constructors.md)  
+- [终结器](../../../csharp/programming-guide/classes-and-structs/destructors.md)

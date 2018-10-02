@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: fea695be-617c-4977-9567-140e820436fc
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9c448e4cd4f40865a11a23af51e134da4b8ba2f7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: fb7b096a6e9bf0f71649f260c4097d5e25476957
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33575409"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44210953"
 ---
 # <a name="xslt-security-considerations"></a>XSLT 安全注意事项
 XSLT 语言具有一组丰富的功能，为您带来强大的功能和灵活性。 其中的许多功能尽管非常有用，但是也可能会被外部源利用。 为了安全地使用 XSLT，必须了解在使用 XSLT 时出现的安全问题类型以及可以用于缓解这些风险的基本策略。  
@@ -56,7 +56,8 @@ XSLT 语言具有一组丰富的功能，为您带来强大的功能和灵活性
   
 -   如果要确保不访问任何外部资源，可以为 `null` 参数指定 <xref:System.Xml.XmlResolver>。  
   
-## <a name="see-also"></a>请参阅  
- [XSLT 转换](../../../../docs/standard/data/xml/xslt-transformations.md)  
- [在 XSLT 处理期间解析外部资源](../../../../docs/standard/data/xml/resolving-external-resources-during-xslt-processing.md)  
- [代码访问安全性](http://msdn.microsoft.com/library/23a20143-241d-4fe5-9d9f-3933fd594c03)
+## <a name="see-also"></a>请参阅
+
+- [XSLT 转换](../../../../docs/standard/data/xml/xslt-transformations.md)  
+- [在 XSLT 处理期间解析外部资源](../../../../docs/standard/data/xml/resolving-external-resources-during-xslt-processing.md)  
+- [代码访问安全性](https://msdn.microsoft.com/library/23a20143-241d-4fe5-9d9f-3933fd594c03)

@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: c7f2f022-d08e-4e00-b4eb-ae84844cb1bc
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f6e257ced27812f8383edf9eb9688e9f48cfde02
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1794b47db87f636cc2ccdf2eecb9e7ca334ae659
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33583742"
+ms.lasthandoff: 09/27/2018
+ms.locfileid: "47192870"
 ---
 # <a name="how-to-listen-for-cancellation-requests-by-polling"></a>如何：通过轮询侦听取消请求
 下面的示例展示了一种方便用户代码定期轮询取消令牌，以确定是否已通过调用线程发出取消请求的方式。 此示例使用 <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> 类型，但相同的模式适用于 <xref:System.Threading.ThreadPool?displayProperty=nameWithType> 类型或 <xref:System.Threading.Thread?displayProperty=nameWithType> 类型直接创建的异步操作。  
@@ -30,5 +30,6 @@ ms.locfileid: "33583742"
   
  如果调用的是 <xref:System.Threading.CancellationToken.ThrowIfCancellationRequested%2A>，那么如果除了抛出异常之外，还要执行其他工作来响应取消，只需显式检查 <xref:System.Threading.CancellationToken.IsCancellationRequested%2A> 属性即可。 在此示例中，可以看到代码实际访问属性两次：一次是显式访问，另一次是在 <xref:System.Threading.CancellationToken.ThrowIfCancellationRequested%2A> 方法中。 不过，由于读取 <xref:System.Threading.CancellationToken.IsCancellationRequested%2A> 属性在每次访问时只涉及一个易失读取指令，因此从性能角度来看，双重访问的意义并不大。 最好仍调用此方法，而不是手动抛出 <xref:System.OperationCanceledException>。  
   
-## <a name="see-also"></a>请参阅  
- [托管线程中的取消](../../../docs/standard/threading/cancellation-in-managed-threads.md)
+## <a name="see-also"></a>请参阅
+
+- [托管线程中的取消](../../../docs/standard/threading/cancellation-in-managed-threads.md)

@@ -2,12 +2,12 @@
 title: 编写实体框架数据提供程序
 ms.date: 03/30/2017
 ms.assetid: 092e88c4-a301-453a-b5c3-5740c6575a9f
-ms.openlocfilehash: 578de94aa191d7302b762f1cdc87d4a6810037e3
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 50c0555d84c5b5f180c8c49a8419e8a414a4befe
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32762629"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43863396"
 ---
 # <a name="writing-an-entity-framework-data-provider"></a>编写实体框架数据提供程序
 本部分讨论如何编写[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]提供程序以支持 SQL Server 以外的数据源。 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]包括支持 SQL Server 的提供程序。  
@@ -32,7 +32,7 @@ ms.locfileid: "32762629"
  ![b42a7a5c&#45;0ac0&#45;4911&#45;86be&#45;0460a78760ba](../../../../../docs/framework/data/adonet/ef/media/b42a7a5c-0ac0-4911-86be-0460a78760ba.gif "b42a7a5c-0ac0-4911-86be-0460a78760ba")  
   
 ## <a name="sample"></a>示例  
- 请参阅[实体框架示例提供程序](http://go.microsoft.com/fwlink/?LinkId=180616)有关的示例[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]支持 SQL Server 以外的数据源提供程序。  
+ 请参阅[实体框架示例提供程序](https://go.microsoft.com/fwlink/?LinkId=180616)有关的示例[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]支持 SQL Server 以外的数据源的提供程序。  
   
 ## <a name="in-this-section"></a>本节内容  
  [SQL 生成](../../../../../docs/framework/data/adonet/ef/sql-generation.md)  

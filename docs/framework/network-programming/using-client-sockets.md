@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 81de9f59-8177-4d98-b25d-43fc32a98383
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 458e67861bfd40b69f7a6f756ddee8be433e9e2f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ee10681c8beddac06d5c4eae453f4070b2bf1b4e
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33395942"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47195545"
 ---
 # <a name="using-client-sockets"></a>使用客户端套接字
 在通过 <xref:System.Net.Sockets.Socket> 发起对话之前，必须在应用程序和远程设备之间创建数据管道。 尽管存在其他网络地址系列和协议，但本示例说明如何创建与远程服务的 TCP/IP 连接。  

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 1f55050a-b2a3-4868-a3c0-da20826150f3
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: b7f41bc477f8d8095bf73859c02b7e2fc2443c14
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 71d2edac1dd9a84c9d3c92049d2494c7c5bd54b0
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32742869"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47216339"
 ---
 # <a name="cryptography-settings-schema"></a>密码设置架构
 加密设置架构包含元素，这些元素指定如何将友好算法名称映射到实现加密算法的类。  

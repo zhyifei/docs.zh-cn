@@ -2,15 +2,15 @@
 title: 自定义复合设计器 — 工作流项演示器
 ms.date: 03/30/2017
 ms.assetid: f85224cf-9e30-44a5-9a81-3bc438a34364
-ms.openlocfilehash: 5bdc952bb4b920f0b5a7d272423ec2d922a94798
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7519ea560bab1e0c6651ad0b37c8477297b0d64d
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33517113"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43526825"
 ---
 # <a name="custom-composite-designers---workflow-item-presenter"></a>自定义复合设计器 — 工作流项演示器
-<xref:System.Activities.Presentation.WorkflowItemPresenter>是 WF 设计器编程模型，可以创建可在其中放置任意活动的"放置区"中的一个重要类型。 此示例演示如何生成呈现这样一个"放置区。"的活动设计器  
+<xref:System.Activities.Presentation.WorkflowItemPresenter>是可在何处可放置任意活动的"放置区"创建的 WF 设计器编程模型中的密钥类型。 此示例演示如何生成活动设计器呈现此类的"放置区。"  
   
  此示例演示：  
   
@@ -63,7 +63,7 @@ ms.locfileid: "33517113"
 </sap:ActivityDesigner>  
 ```  
   
- 请注意，应使用 WPF 数据绑定来绑定到 `ModelItem.Body`。 `ModelItem` 位于属性<xref:System.Activities.Presentation.ActivityDesigner>它引用设计器正在使用，在这种情况下，基础对象**SimpleNativeActivity**。  
+ 请注意，应使用 WPF 数据绑定来绑定到 `ModelItem.Body`。 `ModelItem` 该属性位于<xref:System.Activities.Presentation.ActivityDesigner>，是指在设计器正在使用，在这种情况下的基础对象**SimpleNativeActivity**。  
   
 #### <a name="to-setup-build-and-run-the-sample"></a>设置、生成和运行示例  
   
@@ -76,7 +76,7 @@ ms.locfileid: "33517113"
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目录不存在，请转到[Windows Communication Foundation (WCF) 和针对.NET Framework 4 的 Windows Workflow Foundation (WF) 示例](http://go.microsoft.com/fwlink/?LinkId=150780)下载所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
+>  如果此目录不存在，请转到[Windows Communication Foundation (WCF) 和.NET Framework 4 的 Windows Workflow Foundation (WF) 示例](https://go.microsoft.com/fwlink/?LinkId=150780)若要下载所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\CustomActivities\CustomActivityDesigners\WorkflowItemPresenter`  
   

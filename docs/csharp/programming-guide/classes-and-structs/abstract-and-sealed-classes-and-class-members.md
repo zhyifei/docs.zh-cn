@@ -7,12 +7,12 @@ helpviewer_keywords:
 - C# language, abstract classes
 - C# language, sealed
 ms.assetid: 99aa52f7-b435-43f9-936e-2470af734c4e
-ms.openlocfilehash: aa7c951acadd2e7b60f6da17cd7bf357fbd02d95
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0e80357a51bde270d5ed012f16f7b2e821f084c8
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33313909"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43517337"
 ---
 # <a name="abstract-and-sealed-classes-and-class-members-c-programming-guide"></a>抽象类、密封类及类成员（C# 编程指南）
 使用 [abstract](../../../csharp/language-reference/keywords/abstract.md) 关键字可以创建不完整且必须在派生类中实现的类和 [class](../../../csharp/language-reference/keywords/class.md) 成员。  
@@ -47,10 +47,11 @@ ms.locfileid: "33313909"
   
  [!code-csharp[csProgGuideInheritance#17](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/abstract-and-sealed-classes-and-class-members_5.cs)]  
   
-## <a name="see-also"></a>请参阅  
- [C# 编程指南](../../../csharp/programming-guide/index.md)  
- [类和结构](../../../csharp/programming-guide/classes-and-structs/index.md)  
- [继承](../../../csharp/programming-guide/classes-and-structs/inheritance.md)  
- [方法](../../../csharp/programming-guide/classes-and-structs/methods.md)  
- [字段](../../../csharp/programming-guide/classes-and-structs/fields.md)  
- [如何：定义抽象属性](../../../csharp/programming-guide/classes-and-structs/how-to-define-abstract-properties.md)
+## <a name="see-also"></a>请参阅
+
+- [C# 编程指南](../../../csharp/programming-guide/index.md)  
+- [类和结构](../../../csharp/programming-guide/classes-and-structs/index.md)  
+- [继承](../../../csharp/programming-guide/classes-and-structs/inheritance.md)  
+- [方法](../../../csharp/programming-guide/classes-and-structs/methods.md)  
+- [字段](../../../csharp/programming-guide/classes-and-structs/fields.md)  
+- [如何：定义抽象属性](../../../csharp/programming-guide/classes-and-structs/how-to-define-abstract-properties.md)

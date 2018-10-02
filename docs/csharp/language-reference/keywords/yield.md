@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - yield keyword [C#]
 ms.assetid: 1089194f-9e53-46a2-8642-53ccbe9d414d
-ms.openlocfilehash: b22822656860b58a2f225fadcb3c68802899a505
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c566e2c83a6c40acfd85c1822d28cbaa097e4449
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33289420"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43501465"
 ---
 # <a name="yield-c-reference"></a>yield（C# 参考）
 如果你在语句中使用 `yield` 关键字，则意味着它在其中出现的方法、运算符或 `get` 访问器是迭代器。 通过使用 `yield` 定义迭代器，可在实现自定义集合类型的 <xref:System.Collections.Generic.IEnumerator%601> 和 <xref:System.Collections.IEnumerable> 模式时无需其他显式类（保留枚举状态的类，有关示例，请参阅 <xref:System.Collections.IEnumerator>）。  
@@ -87,8 +87,9 @@ foreach (string element in elements)
 ## <a name="c-language-specification"></a>C# 语言规范  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>请参阅  
- [C# 参考](../../../csharp/language-reference/index.md)  
- [C# 编程指南](../../../csharp/programming-guide/index.md)  
- [foreach, in](../../../csharp/language-reference/keywords/foreach-in.md)  
- [迭代器](../../iterators.md)
+## <a name="see-also"></a>请参阅
+
+- [C# 参考](../../../csharp/language-reference/index.md)  
+- [C# 编程指南](../../../csharp/programming-guide/index.md)  
+- [foreach, in](../../../csharp/language-reference/keywords/foreach-in.md)  
+- [迭代器](../../iterators.md)

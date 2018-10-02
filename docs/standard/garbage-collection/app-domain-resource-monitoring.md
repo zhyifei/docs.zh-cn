@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 318bedf8-7f35-4f00-b34a-2b7b8e3fa315
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 45b0f8293b41d42114b189c3ebe917a4f64c4f27
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 50d601d711579bce2e2651a1efc65d824a50d47a
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33578325"
+ms.lasthandoff: 09/27/2018
+ms.locfileid: "47400694"
 ---
 # <a name="application-domain-resource-monitoring"></a>应用程序域资源监控
 借助应用域资源监视 (ARM)，主机可以通过应用域监视 CPU 和内存使用情况。 对于在长时间运行的进程中使用多个应用域的 ASP.NET 等主机，这就很有用。 主机可以卸载对整个进程的性能有不利影响的应用的应用域，但仅当能够发现有问题的应用时，才可以这样做。 ARM 提供的信息就有助于作出此类决定。  
@@ -83,8 +83,9 @@ ms.locfileid: "33578325"
 #### <a name="hosting-api"></a>宿主 API  
  如果使用非托管宿主 API，主机必须向 CLR 传递 [IHostGCManager](../../../docs/framework/unmanaged-api/hosting/ihostgcmanager-interface.md) 接口实现。 如果 CLR 恢复执行在回收发生时被暂停的线程，便会调用 [IHostGCManager::SuspensionEnding](../../../docs/framework/unmanaged-api/hosting/ihostgcmanager-suspensionending-method.md) 方法。 CLR 将生成的已完成回收作为方法参数进行传递，以便主机能够确定回收是完全回收还是部分回收。 实现 [IHostGCManager::SuspensionEnding](../../../docs/framework/unmanaged-api/hosting/ihostgcmanager-suspensionending-method.md) 方法可以查询保留的内存，以确保在内存更新时立即检索计数。  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.AppDomain.MonitoringIsEnabled%2A?displayProperty=nameWithType>  
- [ICLRAppDomainResourceMonitor 接口](../../../docs/framework/unmanaged-api/hosting/iclrappdomainresourcemonitor-interface.md)  
- [\<appDomainResourceMonitoring>](../../../docs/framework/configure-apps/file-schema/runtime/appdomainresourcemonitoring-element.md)  
- [CLR ETW 事件](../../../docs/framework/performance/clr-etw-events.md)
+## <a name="see-also"></a>请参阅
+
+- <xref:System.AppDomain.MonitoringIsEnabled%2A?displayProperty=nameWithType>  
+- [ICLRAppDomainResourceMonitor 接口](../../../docs/framework/unmanaged-api/hosting/iclrappdomainresourcemonitor-interface.md)  
+- [\<appDomainResourceMonitoring>](../../../docs/framework/configure-apps/file-schema/runtime/appdomainresourcemonitoring-element.md)  
+- [CLR ETW 事件](../../../docs/framework/performance/clr-etw-events.md)

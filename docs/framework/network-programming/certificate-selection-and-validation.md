@@ -4,13 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: c933aca2-4cd0-4ff1-9df9-267143f25a6f
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: f163de89a3edbf3a4ca8509fdecd10f1aa1adf1b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 01ce2ef8cb9c261e9292b0d26dd38a0a0b0958ff
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33396787"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47196121"
 ---
 # <a name="certificate-selection-and-validation"></a>证书选择和验证
 <xref:System.Net> 类支持多种针对安全套接字层 (SSL) 连接选择和验证 <xref:System.Security.Cryptography.X509Certificates> 的方法。 客户端可以选择一个或多个证书对服务器自身的客户端进行身份验证。 服务器可以要求客户端证书具有一个或多个用于身份验证的特定属性。  
@@ -41,13 +40,13 @@ ms.locfileid: "33396787"
 ## <a name="tools-for-certificate-configuration"></a>证书配置工具  
  许多工具都可用于配置客户端和服务器证书。  
   
- Winhttpcertcfg.exe 工具可用于配置客户端证书。 Winhttpcertcfg.exe 工具作为 Windows Server 2003 Resource Kit 的工具之一提供。 该工具在 www.microsoft.com 上也是作为 Windows Server 2003 Resource Kit 工具的部件可供下载。  
+ Winhttpcertcfg.exe 工具可用于配置客户端证书。 Winhttpcertcfg.exe 工具作为 Windows Server 2003 Resource Kit 的工具之一提供。 该工具在 [www.microsoft.com](https://www.microsoft.com) 上也是作为 Windows Server 2003 Resource Kit 工具的部件可供下载。  
   
- HttpCfg.exe 工具可用于配置 <xref:System.Net.HttpListener> 类的服务器证书。 HttpCfg.exe 工具作为 Windows Server 2003 和 Windows XP Service Pack 2 的支持工具之一提供。 默认情况下，Windows Server 2003 或 Windows XP 上都未安装 HttpCfg.exe 和其他支持工具。 在 Windows Server 2003 上， 支持工具单独安装在 Windows Server 2003 CD-ROM 上的以下文件夹和文件中：  
+HttpCfg.exe 工具可用于配置 <xref:System.Net.HttpListener> 类的服务器证书。 HttpCfg.exe 工具作为 Windows Server 2003 和 Windows XP Service Pack 2 的支持工具之一提供。 默认情况下，Windows Server 2003 或 Windows XP 上都未安装 HttpCfg.exe 和其他支持工具。 在 Windows Server 2003 上， 支持工具单独安装在 Windows Server 2003 CD-ROM 上的以下文件夹和文件中：  
   
  \Support\Tools\Suptools.msi  
   
- 若要使用 Windows XP Service Pack 2，可访问 www.microsoft.com 下载 Windows XP 支持工具。  
+ 若要使用 Windows XP Service Pack 2，可访问 [www.microsoft.com](https://www.microsoft.com) 下载 Windows XP 支持工具。  
   
  HttpCfg.exe 工具版本的源代码也可用作 Windows Server SDK 的示例。 HttpCfg.exe 示例的源代码使用网络示例作为 Windows SDK 的部件在以下文件夹中默认安装：  
   

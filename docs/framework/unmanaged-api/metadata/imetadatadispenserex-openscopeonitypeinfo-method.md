@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 73866ef2dc7069708887c128f977f730519603bb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: d5fd96f390b0bba60d1b95d20273bbf670208d41
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33446018"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47208323"
 ---
 # <a name="imetadatadispenserexopenscopeonitypeinfo-method"></a>IMetaDataDispenserEx::OpenScopeOnITypeInfo 方法
-未实现此方法。 如果调用，它将返回 E_NOTIMPL。  
+未实现此方法。 如果调用，则返回 E_NOTIMPL。  
   
 ## <a name="syntax"></a>语法  
   
@@ -40,7 +40,7 @@ HRESULT OpenScopeOnITypeInfo (
   
 #### <a name="parameters"></a>参数  
  `pITI`  
- [in]指向[ITypeInfo](http://msdn.microsoft.com/library/f3356463-3373-4279-bae1-953378aa2680)提供在其上打开作用域的类型信息的接口。  
+ [in]指向[ITypeInfo](https://docs.microsoft.com/previous-versions/windows/desktop/api/oaidl/nn-oaidl-itypeinfo)接口，用于提供在其上打开作用域的类型信息。  
   
  `dwOpenFlags`  
  [in]打开模式的标志。  
@@ -49,7 +49,7 @@ HRESULT OpenScopeOnITypeInfo (
  [in]所需的接口。  
   
  `ppIUnk`  
- [out]指向返回的接口指针。  
+ [out]指针到指向返回的接口。  
   
 ## <a name="requirements"></a>要求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
@@ -58,7 +58,7 @@ HRESULT OpenScopeOnITypeInfo (
   
  **库：** 用作 MsCorEE.dll 中的资源  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅  
  [IMetaDataDispenserEx 接口](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenserex-interface.md)  

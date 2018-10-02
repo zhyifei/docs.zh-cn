@@ -8,12 +8,12 @@ helpviewer_keywords:
 - target compiler options [C#], /target:library
 - /target compiler options [C#], /target:library
 ms.assetid: c5670e88-2126-47c1-8d1c-217923837d17
-ms.openlocfilehash: 39f6ad5839f7ca12b023502a3fc1ccde52e70899
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e15210d189c4a553da72b418f583e44666bac2fc
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33215344"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "45988317"
 ---
 # <a name="-targetlibrary-c-compiler-options"></a>-target:library（C# 编译器选项）
 -target:library 选项导致编译器创建动态链接库 (DLL) 而不是可执行文件 (EXE)。  
@@ -51,5 +51,6 @@ csc -target:library in.cs
 ```  
   
 ## <a name="see-also"></a>请参阅  
- [-target（C# 编译器选项）](../../../csharp/language-reference/compiler-options/target-compiler-option.md)  
- [C# 编译器选项](../../../csharp/language-reference/compiler-options/index.md)
+
+- [-target（C# 编译器选项）](../../../csharp/language-reference/compiler-options/target-compiler-option.md)  
+- [C# 编译器选项](../../../csharp/language-reference/compiler-options/index.md)

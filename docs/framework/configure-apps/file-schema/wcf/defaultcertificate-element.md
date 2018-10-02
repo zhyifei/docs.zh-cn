@@ -78,7 +78,7 @@ x509FindType="FindByThumbPrint/FindBySubjectName/FindBySubjectDistinguishedName/
  对于使用基于证书的消息安全的绑定，此配置元素指定的证书用于加密发送给服务的消息，并期望服务用它来对客户端的应答进行签名。 如果服务未指定任何证书，它只存储要使用的一个证书。  
   
 ## <a name="example"></a>示例  
- 下面的示例指定证书用于 URI 以开头的终结点http://www.contoso.com和要使用其他不执行证书协商的所有终结点的证书。  
+ 下面的示例指定证书用于 URI 以开头的终结点 http://www.contoso.com 和要使用其他不执行证书协商的所有终结点的证书。  
   
 ```xml  
 <serviceCertificate>  

@@ -12,12 +12,12 @@ helpviewer_keywords:
 - Group By statement [Visual Basic]
 - Group By clause [Visual Basic]
 ms.assetid: b1b5dcea-6654-473b-a2db-01f7e4c265d7
-ms.openlocfilehash: 7cf688dc2e0ccd10c8bfbe5f0308f0aa808fbef0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 88707ed6c0e3e5a0ecf1f0812d31634bbdca3123
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33605025"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44183114"
 ---
 # <a name="group-by-clause-visual-basic"></a>Group By 子句 (Visual Basic)
 对查询结果的元素进行分组。 也可用于将聚合函数应用于每个组。 分组运算基于一个或多个键。  
@@ -51,7 +51,7 @@ Group [ listField1 [, listField2 [...] ] By keyExp1 [, keyExp2 [...] ]
     Into Group  
     ```  
   
-     -或-  
+     或  
   
     ```  
     Into <alias> = Group  
@@ -71,7 +71,7 @@ Group [ listField1 [, listField2 [...] ] By keyExp1 [, keyExp2 [...] ]
   
 ## <a name="see-also"></a>请参阅  
  [Visual Basic 中的 LINQ 简介](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)  
- [查询](../../../visual-basic/language-reference/queries/queries.md)  
+ [查询](../../../visual-basic/language-reference/queries/index.md)  
  [Select 子句](../../../visual-basic/language-reference/queries/select-clause.md)  
  [From 子句](../../../visual-basic/language-reference/queries/from-clause.md)  
  [Order By 子句](../../../visual-basic/language-reference/queries/order-by-clause.md)  

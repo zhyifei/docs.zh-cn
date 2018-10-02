@@ -2,12 +2,12 @@
 title: 提供程序清单规范
 ms.date: 03/30/2017
 ms.assetid: bb450b47-8951-4f99-9350-26f05a4d4e46
-ms.openlocfilehash: 02faee9ad69bd75f4df608b9a4767560945c7bb3
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 9875f0ce8d7b10532d7545c05d58ab43146120f0
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32767136"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43739268"
 ---
 # <a name="provider-manifest-specification"></a>提供程序清单规范
 本节讨论数据存储提供程序如何可以支持数据存储中的类型和功能。  
@@ -23,9 +23,9 @@ ms.locfileid: "32767136"
   
  提供程序清单必须可由工具在设计时加载，而不必打开与数据存储的连接。  
   
- [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]是敏感的但可能不到基础数据存储区。 当在清单中定义和使用 EDM 项目（例如标识符和类型名称）时，这些项目必须使用[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]大小写区分。 如果可能区分大小写的数据存储元素出现在提供程序的清单中，则在提供程序清单中需要维持大小写区分。  
+ [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]是大小写敏感的但可能不是基础数据存储区。 当在清单中定义和使用 EDM 项目（例如标识符和类型名称）时，这些项目必须使用[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]大小写区分。 如果可能区分大小写的数据存储元素出现在提供程序的清单中，则在提供程序清单中需要维持大小写区分。  
   
- 对于所有数据提供程序，[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]均需要一个提供程序清单。 如果你尝试使用的提供程序没有提供程序清单[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]，你将收到错误。  
+ 对于所有数据提供程序，[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]均需要一个提供程序清单。 如果你尝试使用的提供程序没有提供程序清单与[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]，会收到错误。  
   
  下表描述了在提供程序交互过程中引发异常时，[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]将引发的异常的种类。  
   
@@ -39,7 +39,7 @@ ms.locfileid: "32767136"
  提供程序应支持下面的方案：  
   
 ### <a name="writing-a-provider-with-symmetric-type-mapping"></a>使用对称类型映射编写提供程序  
- 你可以编写的提供程序[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]其中每个存储类型映射到单个 EDM 类型，而与映射方向无关。 对于具有非常简单的映射（与 EDM 类型对应）的提供程序类型，您可以使用对称解决方案，因为此类型系统很简单或者匹配 EDM 类型。  
+ 您可以编写一个提供程序[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]其中每个存储类型映射到单个 EDM 类型，无论映射方向。 对于具有非常简单的映射（与 EDM 类型对应）的提供程序类型，您可以使用对称解决方案，因为此类型系统很简单或者匹配 EDM 类型。  
   
  您可以利用提供程序的域的简单性，生成一个静态声明性提供程序清单。  
   
@@ -61,7 +61,7 @@ ms.locfileid: "32767136"
 ## <a name="provider-manifest-discoverability"></a>提供程序清单的可发现性  
  清单可以由实体服务中的若干组件类型（例如“工具”或“查询”）间接地使用，但更多的是通过使用数据存储元数据加载程序由元数据直接利用。  
   
- ![dfb3d02b&#45;7a8c&#45;4 d 51&#45;ac5a&#45;a73d8aa145e6](../../../../../docs/framework/data/adonet/ef/media/dfb3d02b-7a8c-4d51-ac5a-a73d8aa145e6.gif "dfb3d02b-7a8c-4d51-ac5a-a73d8aa145e6")  
+ ![dfb3d02b&#45;7a8c&#45;4d 51&#45;ac5a&#45;a73d8aa145e6](../../../../../docs/framework/data/adonet/ef/media/dfb3d02b-7a8c-4d51-ac5a-a73d8aa145e6.gif "dfb3d02b-7a8c-4d51-ac5a-a73d8aa145e6")  
   
  但是，给定的提供程序可能支持不同的存储或相同存储的不同版本。 因此，对于每个支持的数据存储，提供程序必须报告不同的清单。  
   
@@ -91,7 +91,7 @@ public DbProviderManifest GetProviderManifest(string manifestToken);
 ```  
   
 #### <a name="using-a-provider-manifest-token"></a>使用提供程序清单标记  
- 对于脱机方案，此标记从 SSDL 表示形式中选取。 SSDL 允许你指定 ProviderManifestToken (请参阅[架构元素 (SSDL)](http://msdn.microsoft.com/library/fec75ae4-7f16-4421-9265-9dac61509222)有关详细信息)。 例如，如果无法打开某个连接，则 SSDL 会具有一个提供程序清单标记，用于指定有关清单的信息。  
+ 对于脱机方案，此标记从 SSDL 表示形式中选取。 SSDL 允许您指定 ProviderManifestToken (请参阅[架构元素 (SSDL)](https://msdn.microsoft.com/library/fec75ae4-7f16-4421-9265-9dac61509222)有关详细信息)。 例如，如果无法打开某个连接，则 SSDL 会具有一个提供程序清单标记，用于指定有关清单的信息。  
   
 ```  
 public DbProviderManifest GetProviderManifest(string manifestToken);  

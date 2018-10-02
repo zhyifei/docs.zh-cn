@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: c834760f-ddd4-417f-abb7-a059679d5b8c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 030b62688ba8985a2659769fe20b6ae527471df5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 03b77074323346e1a26fa07dc1ec873152da356b
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33579387"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45664678"
 ---
 # <a name="observer-design-pattern-best-practices"></a>观察程序设计模式最佳做法
 在 .NET Framework 中，将观察者设计模式作为一组接口实现。 <xref:System.IObservable%601?displayProperty=nameWithType> 接口表示数据提供程序，也负责提供允许观察者取消订阅通知的 <xref:System.IDisposable> 实现。 <xref:System.IObserver%601?displayProperty=nameWithType> 接口表示观察者。 本主题描述使用这些接口实现观察者设计模式时开发人员应遵循的最佳做法。  
@@ -53,7 +53,8 @@ ms.locfileid: "33579387"
   
  虽然可将观察者附加到多个提供程序到，建议的模式是将 <xref:System.IObserver%601> 实例附加到唯一的 <xref:System.IObservable%601> 实例。  
   
-## <a name="see-also"></a>请参阅  
- [观察程序设计模式](../../../docs/standard/events/observer-design-pattern.md)  
- [如何：实现监视程序](../../../docs/standard/events/how-to-implement-an-observer.md)  
- [如何：实现提供程序](../../../docs/standard/events/how-to-implement-a-provider.md)
+## <a name="see-also"></a>请参阅
+
+- [观察程序设计模式](../../../docs/standard/events/observer-design-pattern.md)  
+- [如何：实现监视程序](../../../docs/standard/events/how-to-implement-an-observer.md)  
+- [如何：实现提供程序](../../../docs/standard/events/how-to-implement-a-provider.md)

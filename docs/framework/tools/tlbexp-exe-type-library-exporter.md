@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: a487d61b-d166-467b-a7ca-d8b52fbff42d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3fa942af6558c16431cd716e3dd1ea1271fabab6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 843b791177b57134483a7076dbc6ec979956ef60
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33408813"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46004414"
 ---
 # <a name="tlbexpexe-type-library-exporter"></a>Tlbexp.exe（类型库导出程序）
 类型库导出程序生成一个类型库，该类型库描述公共语言运行时程序集中定义的类型。  
@@ -90,7 +90,7 @@ HRESULT StructDispSafe([out, retval] SAFEARRAY(IDispatch*)* pRetVal);
   
  请注意，Tlbexp.exe 忽略 <xref:System.Runtime.InteropServices.MarshalAsAttribute.SafeArrayUserDefinedSubType> 字段。  
   
- 由于类型库无法容纳在程序集中找到的所有信息，因此在导出过程中，Tlbexp.exe 可能会放弃一些数据。 有关对转换过程的说明和发出到类型库中的每条信息的源的标识，请参见[有关从程序集转换到类型库的摘要](http://msdn.microsoft.com/library/3a37eefb-a76c-4000-9080-7dbbf66a4896)。  
+ 由于类型库无法容纳在程序集中找到的所有信息，因此在导出过程中，Tlbexp.exe 可能会放弃一些数据。 有关对转换过程的说明和发出到类型库中的每条信息的源的标识，请参见[有关从程序集转换到类型库的摘要](https://msdn.microsoft.com/library/3a37eefb-a76c-4000-9080-7dbbf66a4896)。  
   
  请注意，类型库导出程序导出具有 <xref:System.TypedReference> 类型的 `VARIANT` 参数的方法，尽管该 <xref:System.TypedReference> 对象在非托管代码中没有意义。 在导出具有 <xref:System.TypedReference> 参数的方法时，类型库导出程序不会生成警告或错误，但使用结果类型库的非托管代码将无法正常运行。  
   
@@ -133,6 +133,6 @@ tlbexp Sample.dll
  <xref:System.Runtime.InteropServices.TypeLibExporterFlags>  
  [工具](../../../docs/framework/tools/index.md)  
  [Regasm.exe（程序集注册工具）](../../../docs/framework/tools/regasm-exe-assembly-registration-tool.md)  
- [有关从程序集转换到类型库的摘要](http://msdn.microsoft.com/library/3a37eefb-a76c-4000-9080-7dbbf66a4896)  
+ [有关从程序集转换到类型库的摘要](https://msdn.microsoft.com/library/3a37eefb-a76c-4000-9080-7dbbf66a4896)  
  [Tlbimp.exe（类型库导入程序）](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md)  
  [命令提示](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

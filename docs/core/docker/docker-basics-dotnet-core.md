@@ -6,23 +6,23 @@ ms.author: johalex
 ms.date: 11/06/2017
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 02b6b3fc9e149f5d1d5d78e310c7df257be983c1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 543b9454e826022a72752d9a24bc43b77d2501f5
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33218539"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45615295"
 ---
 # <a name="learn-docker-basics-with-net-core"></a>了解使用 .NET Core 的 Docker 的基本信息
 
-本教程介绍了 .NET Core 应用程序的 Docker 容器生成和部署任务。 在本教程中，可了解以下内容：
+本教程介绍了 .NET Core 应用程序的 Docker 容器生成和部署任务。 [Docker 平台](https://docs.docker.com/engine/docker-overview/#the-docker-platform)使用 [Docker 引擎](https://docs.docker.com/engine/docker-overview/#docker-engine)快速生成应用，并将其打包为 [Docker 映像](https://docs.docker.com/glossary/?term=image)。 这些映像以 [Dockerfile](https://docs.docker.com/glossary/?term=Dockerfile) 格式编写，可在[分层容器](https://docs.docker.com/engine/userguide/storagedriver/imagesandcontainers/#container-and-layers)中部署和运行。
+
+在本教程中可学习：
 
 > [!div class="checklist"]
 > * 如何创建 Dockerfile
 > * 如何创建 .NET Core 应用。
 > * 如何将应用部署到 Docker 容器中。
-
-[Docker 平台](https://docs.docker.com/engine/docker-overview/#the-docker-platform)使用 [Docker 引擎](https://docs.docker.com/engine/docker-overview/#docker-engine)快速生成应用，并将其打包为 [Docker 映像](https://docs.docker.com/glossary/?term=image)。 这些映像以 [Dockerfile](https://docs.docker.com/glossary/?term=Dockerfile) 格式编写，可在[分层容器](https://docs.docker.com/engine/userguide/storagedriver/imagesandcontainers/#container-and-layers)中部署和运行。
 
 ## <a name="net-core-easiest-way-to-get-started"></a>.NET Core：入门的最简单方法
 
@@ -283,7 +283,7 @@ Hello World!
 
 ## <a name="related-resources"></a>相关资源
 
-* [.NET Core Docker 示例](https://github.com/dotnet/dotnet-docker-samples/README.md)
+* [.NET Core Docker 示例](https://github.com/dotnet/dotnet-docker/tree/master/samples)
 * [Windows 容器上的 Dockerfile](https://docs.microsoft.com/virtualization/windowscontainers/manage-docker/manage-windows-dockerfile)
 * [.NET Framework Docker 示例](https://github.com/Microsoft/dotnet-framework-docker-samples)
 * [DockerHub 上的 ASP.NET Core](https://hub.docker.com/r/microsoft/aspnetcore/)

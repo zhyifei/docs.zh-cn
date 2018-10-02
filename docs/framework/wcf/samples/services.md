@@ -2,22 +2,22 @@
 title: Services2
 ms.date: 03/30/2017
 ms.assetid: 462a2218-f8c6-4fb7-95bc-64765459c429
-ms.openlocfilehash: 2b6d8322caa32246d6171af50c7773342ac11de2
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: 3987b170f216064073f14afb489bd7afb5228c77
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33806092"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47206358"
 ---
 # <a name="services"></a>服务
 本节包含演示 Windows Communication Foundation (WCF) 服务的示例。  
   
 ## <a name="in-this-section"></a>本节内容  
  [承载](../../../../docs/framework/wcf/feature-details/hosting.md)  
- 演示承载 WCF 服务的服务。  
+ 演示托管 WCF 服务。  
   
  [服务互操作性](../../../../docs/framework/wcf/samples/service-interoperability.md)  
- 演示 WCF 与其他服务技术之间的交互。  
+ 演示 WCF 和其他服务技术之间的交互。  
   
  [行为](../../../../docs/framework/wcf/samples/behaviors.md)  
  演示 WCF 服务行为。  
@@ -29,10 +29,7 @@ ms.locfileid: "33806092"
  演示如何实现和配置典型的服务和客户端使用 WCF。  
   
  [标准终结点的使用情况](../../../../docs/framework/wcf/samples/usage-of-standard-endpoints.md)  
- 演示如何在服务配置文件中使用标准终结点。  
-  
- [分层配置模型](../../../../docs/framework/wcf/samples/hierarchical-configuration-model.md)  
- 演示如何实现服务配置文件的层次结构。  
+ 演示如何在服务配置文件中使用标准终结点。
   
  [扩展保护策略](../../../../docs/framework/wcf/samples/extended-protection-policy.md)  
  演示扩展保护，这是一种针对中间人 (MITM) 攻击而提供保护的安全计划。  
@@ -56,7 +53,7 @@ ms.locfileid: "33806092"
  演示一个在单个 `ListenUri` 中承载多个终结点的服务。  
   
  [OperationContextScope](../../../../docs/framework/wcf/samples/operationcontextscope.md)  
- 演示如何将 WCF 呼叫使用标头中的额外信息发送。  
+ 演示如何将 WCF 调用使用标头上的额外信息发送。  
   
  [服务说明](../../../../docs/framework/wcf/samples/service-description.md)  
  演示服务如何在运行时检索其服务说明信息。  

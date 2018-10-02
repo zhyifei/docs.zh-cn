@@ -4,12 +4,12 @@ description: 了解 .NET Core 2.1 的新增功能。
 author: rpetrusha
 ms.author: ronpet
 ms.date: 06/06/2018
-ms.openlocfilehash: 241ac0195e5edcd17ac67ea7ea0fac159af97414
-ms.sourcegitcommit: d955cb4c681d68cf301d410925d83f25172ece86
+ms.openlocfilehash: aa80e6b7214f91c49803adde49a1e03d1971b3f6
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34826927"
+ms.lasthandoff: 09/27/2018
+ms.locfileid: "47400057"
 ---
 # <a name="whats-new-in-net-core-21"></a>.NET Core 2.1 的新增功能
 
@@ -49,7 +49,7 @@ ms.locfileid: "34826927"
    ```console
    dotnet watch -- --verbose build
    ```
-  
+
    请注意 `--verbose` 选项前面的 `--` 选项。 它分隔从传递给子 `dotnet` 进程的参数直接传递到 `dotnet watch` 命令的选项。 如果没有该选项，`--verbose` 选项将适用于 `dotnet watch` 命令，而非 `dotnet build` 命令。
   
    有关详细信息，请参阅[使用 dotnet watch 开发 ASP.NET Core 应用](/aspnet/core/tutorials/dotnet-watch)
@@ -66,7 +66,7 @@ ms.locfileid: "34826927"
 
 .NET Core 2.1 支持全局工具，即，可通过命令行在全局范围内使用的自定义工具。 以前版本的 .NET Core 中的扩展性模型只能通过使用 [`DotnetCliToolReference`](../tools/extensibility.md#consuming-per-project-tools) 在每个项目的基础上提供自定义工具。
 
-若要安装全局工具，请使用 [dotnet tool install](..\tools\dotnet-tool-install.md) 命令。 例如:
+若要安装全局工具，请使用 [dotnet tool install](../tools/dotnet-tool-install.md) 命令。 例如:
 
 ```console
 dotnet tool install -g dotnetsay
@@ -88,7 +88,7 @@ dotnet tool install -g dotnetsay
 
 ## <a name="roll-forward"></a>前滚
 
-从 .NET Core 2.0 开始，所有 .NET Core 应用程序都将自动前滚到系统上安装的最新次要版本。 
+从 .NET Core 2.0 开始，所有 .NET Core 应用程序都将自动前滚到系统上安装的最新次要版本。
 
 从 .NET Core 2.0 开始，如果在其中构建应用程序的 .NET Core 版本在运行时不存在，应用程序将针对最新安装的次要版本的 .NET Core 自动运行。 换而言之，如果应用程序在 .NET Core 2.0 中生成，而主机系统未安装 .NET Core 2.0 但安装了 .NET Core 2.1，则应用程序将通过 .NET Core 2.1 运行。
 
@@ -121,9 +121,10 @@ dotnet tool install -g dotnetsay
 
 使用 .NET Core 2.0 SDK，自包含应用程序将通过 .NET Core 2.0.0 运行时发布，除非通过 `RuntimeFrameworkVersion` 属性指定不同版本。 借助此新行为，你将不再需要设置此属性便可为自包含的应用程序选择更高版本的运行时。 最简单的方法是始终通过 .NET Core 2.1 SDK (v 2.1.300) 发布。
 
+有关详细信息，请参阅[独立部署运行时前滚](../deploying/runtime-patch-selection.md)。
 ## <a name="windows-compatibility-pack"></a>Windows 兼容包
 
-当你将现有代码从 .NET Framework 转移到 .NET Core 时，可以使用 [Windows 兼容包](https://www.nuget.org/packages/Microsoft.Windows.Compatibility)。 除了 .NET Core 中提供的 API，它使你还能够访问额外的 20,000 多个 API。 这些 API 包括 <xref:System.Drawing?displayProperty="nameWithType"> 命名空间中的类型、<xref:System.Diagnostics.EventLog> 类、WMI、性能计数器、Windows 服务以及 Windows 注册表类型和成员。
+当你将现有代码从 .NET Framework 转移到 .NET Core 时，可以使用 [Windows 兼容包](https://www.nuget.org/packages/Microsoft.Windows.Compatibility)。 除了 .NET Core 中提供的 API，它使你还能够访问额外的 20,000 多个 API。 这些 API 包括 <xref:System.Drawing?displayProperty=nameWithType> 命名空间中的类型、<xref:System.Diagnostics.EventLog> 类、WMI、性能计数器、Windows 服务以及 Windows 注册表类型和成员。
 
 ## <a name="jit-compiler-improvements"></a>JIT 编译器改进
 
@@ -195,7 +196,7 @@ dotnet tool install -g dotnetsay
 
   - <xref:System.Security.Cryptography.CryptographicOperations.ZeroMemory%2A> 是不能进行优化的内存清理例程。
 
-- 静态 <xref:System.Security.Cryptography.RandomNumberGenerator.Fill%2A?displayProperty=fullName> 方法用随机值填充 <xref:System.Span%601>。
+- 静态 <xref:System.Security.Cryptography.RandomNumberGenerator.Fill%2A?displayProperty=nameWithType> 方法用随机值填充 <xref:System.Span%601>。
 
 - <xref:System.Security.Cryptography.Pkcs.EnvelopedCms?displayProperty=nameWithType> 现在在 Linux 和 maxOS 上受支持。
 
@@ -215,14 +216,14 @@ dotnet tool install -g dotnetsay
 
 - 在所有 .NET Core 平台之间保持行为一致。
 
-<xref:System.Net.Http.SocketsHttpHandler> 是 .NET Core 2.1 中的默认实现。 但是，你可以通过调用 <xref:System.AppContext.SetSwitch%2A?displayProperty="nameWithType"> 方法配置应用程序以使用较旧的 <xref:System.Net.Http.HttpClientHandler> 类：
+<xref:System.Net.Http.SocketsHttpHandler> 是 .NET Core 2.1 中的默认实现。 但是，你可以通过调用 <xref:System.AppContext.SetSwitch%2A?displayProperty=nameWithType> 方法配置应用程序以使用较旧的 <xref:System.Net.Http.HttpClientHandler> 类：
 
 ```csharp
-AppContext.SetSwitch("System.Net.Http.useSocketsHttpHandler", false);
+AppContext.SetSwitch("System.Net.Http.UseSocketsHttpHandler", false);
 ```
 
 ```vb
-AppContext.SetSwitch("System.Net.Http.useSocketsHttpHandler", False)
+AppContext.SetSwitch("System.Net.Http.UseSocketsHttpHandler", False)
 ```
 
 还可以使用环境变量选择退出使用基于 <xref:System.Net.Http.SocketsHttpHandler> 的套接字实现。 为此，需要将 `DOTNET_SYSTEM_NET_HTTP_USESOCKETSHTTPHANDLER` 设置为 `false` 或 0。
@@ -233,6 +234,6 @@ AppContext.SetSwitch("System.Net.Http.useSocketsHttpHandler", False)
 
 ## <a name="see-also"></a>请参阅
 
-[.NET Core 的新增功能](index.md)  
-[EF Core 2.1 中的新增功能](/ef/core/what-is-new/ef-core-2.1)  
-[ASP.NET Core 2.1 的新增功能](/aspnet/core/aspnetcore-2.1)
+* [.NET Core 的新增功能](index.md)  
+* [EF Core 2.1 中的新增功能](/ef/core/what-is-new/ef-core-2.1)  
+* [ASP.NET Core 2.1 的新增功能](/aspnet/core/aspnetcore-2.1)

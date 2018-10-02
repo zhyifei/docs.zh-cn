@@ -9,12 +9,12 @@ helpviewer_keywords:
 - '[] operator [C#]'
 - indexing operator [C#]
 ms.assetid: 5c16bb45-88f7-45ff-b42c-1af1972b042c
-ms.openlocfilehash: 65908bb3bcd8912ef81fc094e5958ae8dc4ae1f1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 19283a795f8cfc444dfcb186dcecc0ea86eb27fd
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33286024"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43500447"
 ---
 # <a name="-operator-c-reference"></a>[] 运算符（C# 参考）
 方括号 (`[]`) 可用于数组、索引器和属性。 还可用于指针。  
@@ -30,7 +30,7 @@ ms.locfileid: "33286024"
   
  如果数组索引超出范围，则会引发异常。  
   
- 不能重载数组索引运算符；但类型可以定义采用一个或多个参数的索引器和属性。 索引器参数括在方括号内，这一点与数组索引类似，但可以将索引器参数声明为任何类型，这一点与数组索引不同，后者必须为整型。  
+ 不能重载数组索引运算符；但类型可以定义采用一个或多个参数的索引器。 索引器参数括在方括号内，这一点与数组索引类似，但可以将索引器参数声明为任何类型，这一点与数组索引不同，后者必须为整型。  
   
  例如，.NET Framework 定义 `Hashtable` 类型，该类型将任意类型的键和值关联在一起：  
   
@@ -49,11 +49,12 @@ ms.locfileid: "33286024"
 ## <a name="c-language-specification"></a>C# 语言规范  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>请参阅  
- [C# 参考](../../../csharp/language-reference/index.md)  
- [C# 编程指南](../../../csharp/programming-guide/index.md)  
- [C# 运算符](../../../csharp/language-reference/operators/index.md)  
- [数组](../../../csharp/programming-guide/arrays/index.md)  
- [索引器](../../../csharp/programming-guide/indexers/index.md)  
- [unsafe](../../../csharp/language-reference/keywords/unsafe.md)  
- [fixed 语句](../../../csharp/language-reference/keywords/fixed-statement.md)
+## <a name="see-also"></a>请参阅
+
+- [C# 参考](../../../csharp/language-reference/index.md)  
+- [C# 编程指南](../../../csharp/programming-guide/index.md)  
+- [C# 运算符](../../../csharp/language-reference/operators/index.md)  
+- [数组](../../../csharp/programming-guide/arrays/index.md)  
+- [索引器](../../../csharp/programming-guide/indexers/index.md)  
+- [unsafe](../../../csharp/language-reference/keywords/unsafe.md)  
+- [fixed 语句](../../../csharp/language-reference/keywords/fixed-statement.md)

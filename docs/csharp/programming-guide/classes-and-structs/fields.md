@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - fields [C#]
 ms.assetid: 3cbb2f61-75f8-4cce-b4ef-f5d1b3de0db7
-ms.openlocfilehash: 31073772fd42244167b5e68959ebb373ec759025
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 708bd4e768e795397624bcac6e5bc2594bff93f5
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33314322"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44210333"
 ---
 # <a name="fields-c-programming-guide"></a>字段（C# 编程指南）
 字段是在[类](../../../csharp/language-reference/keywords/class.md)或[结构](../../../csharp/language-reference/keywords/struct.md)中直接声明的任意类型的变量。 字段是其包含类型的成员。  
@@ -41,15 +41,16 @@ ms.locfileid: "33314322"
   
  可以选择性地将字段声明为[静态](../../../csharp/language-reference/keywords/static.md)。 这可使字段可供调用方在任何时候进行调用，即使不存在任何类的实例。 有关详细信息，请参阅[静态类和静态类成员](../../../csharp/programming-guide/classes-and-structs/static-classes-and-static-class-members.md)。  
   
- 可以将字段声明为[只读](../../../csharp/language-reference/keywords/readonly.md)。 只能在初始化期间或在构造函数中为只读字段赋值。 `static``readonly` 字段非常类似于常量，只不过 C# 编译器在编译时不具有对静态只读字段的值的访问权限，而只有在运行时才具有访问权限。 有关详细信息，请参阅[常量](../../../csharp/programming-guide/classes-and-structs/constants.md)。  
+ 可以将字段声明为[只读](../../../csharp/language-reference/keywords/readonly.md)。 只能在初始化期间或在构造函数中为只读字段赋值。 `static readonly` 字段非常类似于常量，只不过 C# 编译器在编译时不具有对静态只读字段的值的访问权限，而只有在运行时才具有访问权限。 有关详细信息，请参阅[常量](../../../csharp/programming-guide/classes-and-structs/constants.md)。  
   
 ## <a name="c-language-specification"></a>C# 语言规范  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>请参阅  
- [C# 编程指南](../../../csharp/programming-guide/index.md)  
- [类和结构](../../../csharp/programming-guide/classes-and-structs/index.md)  
- [使用构造函数](../../../csharp/programming-guide/classes-and-structs/using-constructors.md)  
- [继承](../../../csharp/programming-guide/classes-and-structs/inheritance.md)  
- [访问修饰符](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md)  
- [抽象类、密封类及类成员](../../../csharp/programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md)
+## <a name="see-also"></a>请参阅
+
+- [C# 编程指南](../../../csharp/programming-guide/index.md)  
+- [类和结构](../../../csharp/programming-guide/classes-and-structs/index.md)  
+- [使用构造函数](../../../csharp/programming-guide/classes-and-structs/using-constructors.md)  
+- [继承](../../../csharp/programming-guide/classes-and-structs/inheritance.md)  
+- [访问修饰符](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md)  
+- [抽象类、密封类及类成员](../../../csharp/programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md)

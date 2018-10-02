@@ -8,17 +8,16 @@ helpviewer_keywords:
 ms.assetid: 329891d7-b609-49e6-920a-09ea8a627d07
 author: Xansky
 ms.author: mhopkins
-manager: markl
-ms.openlocfilehash: 96760b1e4d2ad73374eb3cc2a2df42df13023c3f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 666f8f60e27a2e513d9d33ddb6ca09c312e40126
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33409147"
+ms.lasthandoff: 09/28/2018
+ms.locfileid: "47421739"
 ---
 # <a name="ui-automation-support-for-the-scrollbar-control-type"></a>UI 自动化对 ScrollBar 控件类型的支持
 > [!NOTE]
->  本文档适用于想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空间中定义的托管 <xref:System.Windows.Automation> 类的 .NET Framework 开发人员。 有关 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]的最新信息，请参阅 [Windows 自动化 API：UI 自动化](http://go.microsoft.com/fwlink/?LinkID=156746)。  
+>  本文档适用于想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空间中定义的托管 <xref:System.Windows.Automation> 类的 .NET Framework 开发人员。 有关最新信息[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]，请参阅[Windows 自动化 API: UI 自动化](https://go.microsoft.com/fwlink/?LinkID=156746)。  
   
  本主题提供有关 ScrollBar 控件类型的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 支持的信息。 在 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]中，控件类型是一组条件，控件必须满足这些条件才能使用 <xref:System.Windows.Automation.AutomationElement.ControlTypeProperty> 属性。 这些条件包括针对 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 树结构、 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 属性值和控件模式的特定准则。  
   
@@ -32,7 +31,7 @@ ms.locfileid: "33409147"
   
 |控件视图|内容视图|  
 |------------------|------------------|  
-|ScrollBar<br /><br /> -Button （2 个或 4）<br />-Thumb （0 个或 1 个）|不适用。 滚动条控件不包含内容。|  
+|ScrollBar<br /><br /> -按钮 （2 或 4）<br />-Thumb (0 或 1)|不适用。 滚动条控件不包含内容。|  
   
  滚动条控件始终具有三到五个子级。 由于子树具有多个按钮控件，因此你必须对每个项设置特定 <xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationIdProperty> 值以使测试自动化工具可发现它们。  
   
@@ -42,7 +41,7 @@ ms.locfileid: "33409147"
   
  有关 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 属性的详细信息，请参阅 [UI Automation Properties for Clients](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md)。  
   
-|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 属性|值|说明|  
+|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 属性|“值”|说明|  
 |------------------------------------------------------------------------------------|-----------|-----------|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationIdProperty>|请参阅注释。|此属性的值在应用程序的所有控件中都必须保持唯一。|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty>|请参阅注释。|包含整个控件的最外层矩形。|  

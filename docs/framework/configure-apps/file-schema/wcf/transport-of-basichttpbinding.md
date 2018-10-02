@@ -2,12 +2,12 @@
 title: '&lt;basicHttpBinding&gt; 的 &lt;transport&gt;'
 ms.date: 03/30/2017
 ms.assetid: 4c5ba293-3d7e-47a6-b84e-e9022857b7e5
-ms.openlocfilehash: 0111a1f0b7697caa584cd7fc45ad6347207100ea
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: f3f9ad2c8b587a87abea7dc22abb98fdfb6ea77e
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32751264"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43864597"
 ---
 # <a name="lttransportgt-of-ltbasichttpbindinggt"></a>&lt;basicHttpBinding&gt; 的 &lt;transport&gt;
 为 HTTP 传输定义控制身份验证参数的属性。  
@@ -47,7 +47,7 @@ ms.locfileid: "32751264"
 |特性|描述|  
 |---------------|-----------------|  
 |clientCredentialType|-指定要执行使用 HTTP 身份验证的客户端身份验证时要使用的凭据类型。  默认值为 `None`。 此属性的类型为 <xref:System.ServiceModel.HttpClientCredentialType>。|  
-|proxyCredentialType|-指定要执行从域通过 HTTP 使用代理中的客户端身份验证时要使用的凭据类型。 只有当父 `mode` 元素的 `security` 属性为 `Transport` 或 `TransportCredentialsOnly` 时，此属性才适用。 此属性的类型为 <xref:System.ServiceModel.HttpProxyCredentialType>。|  
+|proxyCredentialType|-指定要执行从使用 HTTP 上的代理服务器在域中的客户端身份验证时要使用的凭据类型。 只有当父 `mode` 元素的 `security` 属性为 `Transport` 或 `TransportCredentialsOnly` 时，此属性才适用。 此属性的类型为 <xref:System.ServiceModel.HttpProxyCredentialType>。|  
 |realm|一个字符串，指定摘要式或基本身份验证的 HTTP 身份验证方案所使用的领域。 默认值为一个空字符串。|  
 |policyEnforcement|此枚举指定应何时强制实施 <xref:System.Security.Authentication.ExtendedProtection.ExtendedProtectionPolicy>。<br /><br /> 1.Never – 绝不强制实施此策略（禁用扩展保护）。<br />2.WhenSupported – 仅在客户端支持扩展保护时才强制实施此策略。<br />3.Always – 总是强制实施此策略。 不支持扩展保护的客户端将无法进行身份验证。|  
 |protectionScenario|此枚举指定此策略强制实施的保护方案。|  
@@ -66,7 +66,7 @@ ms.locfileid: "32751264"
   
 |值|描述|  
 |-----------|-----------------|  
-|无|的在传输过程中不是安全消息。|  
+|无|的在传输过程中不是安全消息数。|  
 |Basic|指定“RFC 2617 – HTTP 身份验证：基本和摘要式身份验证”所定义的基本身份验证。|  
 |摘要|指定“RFC 2617 – HTTP 身份验证：基本和摘要式身份验证”所定义的摘要式身份验证。|  
 |Ntlm|指定 NTLM 身份验证（如果可能且 Windows 身份验证失败）。|  
@@ -125,5 +125,5 @@ ms.locfileid: "32751264"
  [保护服务和客户端的安全](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
  [绑定](../../../../../docs/framework/wcf/bindings.md)  
  [配置系统提供的绑定](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [使用绑定来配置 Windows Communication Foundation 服务和客户端](http://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
+ [使用绑定来配置 Windows Communication Foundation 服务和客户端](https://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
  [\<绑定 >](../../../../../docs/framework/misc/binding.md)

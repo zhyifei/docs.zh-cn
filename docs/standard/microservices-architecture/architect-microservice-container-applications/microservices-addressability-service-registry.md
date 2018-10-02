@@ -4,12 +4,12 @@ description: 适用于容器化 .NET 应用程序的 .NET 微服务体系结构 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.openlocfilehash: ec3ccdd823e00d148bb8a97e906132f44e7fa727
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.openlocfilehash: ec0617c5a5c1861f3596e12f3d7a7017a448239e
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37106666"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43865562"
 ---
 # <a name="microservices-addressability-and-the-service-registry"></a>微服务可寻址性和服务注册表
 
@@ -19,7 +19,7 @@ ms.locfileid: "37106666"
 
 在某些微服务部署环境中（称为集群，将在后面章节中介绍），服务发现是内置的。 例如，在 Azure 容器服务环境中，具有 Marathon 的 Kubernetes 和 DC/OS 可以处理服务实例注册和注销。 这二者还可在每个群集主机（充当服务器端发现路由器角色）上运行一个代理。 另一个示例是 Azure Service Fabric，它可通过其开箱即用的命名服务提供服务注册表。
 
-请注意，服务注册表和 API 网关模式之间存在一定的重叠，这也有助于解决此问题。 例如，[Service Fabric 反向代理](https://docs.microsoft.com/azure/service-fabric/service-fabric-reverseproxy)是 API 网关的实现类型，该网关基于 Service Fabrice 命名服务并且有助于解析内部服务的地址解析。
+请注意，服务注册表和 API 网关模式之间存在一定的重叠，这也有助于解决此问题。 例如，[Service Fabric 反向代理](https://docs.microsoft.com/azure/service-fabric/service-fabric-reverseproxy)是 API 网关的实现类型，该网关基于 Service Fabric 命名服务并且有助于解析内部服务的地址解析。
 
 ## <a name="additional-resources"></a>其他资源
 

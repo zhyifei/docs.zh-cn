@@ -6,17 +6,17 @@ helpviewer_keywords:
 - optional arguments [C#], Office programming
 - named arguments [C#], Office programming
 ms.assetid: 65b8a222-bcd8-454c-845f-84adff5a356f
-ms.openlocfilehash: 3fce8a30e9ed663f06fa04c462fc1e1fd249d27a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f86509b7257f25e8faaadfc107ad70ca794aeee0
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33321868"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44190970"
 ---
 # <a name="how-to-use-named-and-optional-arguments-in-office-programming-c-programming-guide"></a>如何：在 Office 编程中使用命名自变量和可选自变量（C# 编程指南）
 在 [!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)] 中引入的命名参数和可选参数增强了 C# 编程中的便利性、灵活性和可读性。 另外，这些功能显著方便了对 COM 接口（如 Microsoft Office 自动化 API）的访问。  
   
- 在下面的示例中，方法 [ConvertToTable](https://msdn.microsoft.com/library/bb216993.aspx) 具有十六个参数，用于表示表的各种特性，例如列数和行数、格式设置、边框、字体以及颜色。 由于大多数时候都不需要为所有十六个参数指定特定值，因此所有这些参数都是可选的。 但是，如果没有命名实参和可选实参，则必须为每个形参提供值或占位符值。 有了命名实参和可选实参，则只需为项目所需的形参指定值。  
+ 在下面的示例中，方法 [ConvertToTable](<xref:Microsoft.Office.Interop.Word.Range.ConvertToTable%2A>) 具有十六个参数，用于表示表的各种特性，例如列数和行数、格式设置、边框、字体以及颜色。 由于大多数时候都不需要为所有十六个参数指定特定值，因此所有这些参数都是可选的。 但是，如果没有命名实参和可选实参，则必须为每个形参提供值或占位符值。 有了命名实参和可选实参，则只需为项目所需的形参指定值。  
   
  必须在计算机上安装 Microsoft Office Word 才能完成这些过程。  
   
@@ -58,7 +58,7 @@ ms.locfileid: "33321868"
   
 ### <a name="to-display-text-in-a-word-document"></a>在 Word 文档中显示文本  
   
-1.  在 Program.cs 的 `Program` 类中，添加以下方法以创建 Word 应用程序和 Word 文档。 [Add](https://msdn.microsoft.com/library/microsoft.office.interop.word.documents.add.aspx) 方法具有四个可选参数。 此示例使用这些参数的默认值。 因此，调用语句中不必有参数。  
+1.  在 Program.cs 的 `Program` 类中，添加以下方法以创建 Word 应用程序和 Word 文档。 [Add](<xref:Microsoft.Office.Interop.Word.Documents.Add%2A>) 方法具有四个可选参数。 此示例使用这些参数的默认值。 因此，调用语句中不必有参数。  
   
      [!code-csharp[csProgGuideNamedAndOptional#6](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-use-named-and-optional-arguments-in-office-programming_2.cs)]  
   
@@ -97,7 +97,7 @@ ConvertToTable 参数
   
      [!code-csharp[csProgGuideNamedAndOptional#10](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-use-named-and-optional-arguments-in-office-programming_7.cs)]  
   
-2.  若要为表指定预定义的格式，请将 `DisplayInWord` 中的最后一行替换为以下语句，然后按 Ctrl+F5。 格式可以为任何 [WdTableFormat](https://msdn.microsoft.com/library/microsoft.office.interop.word.wdtableformat.aspx) 常量。  
+2.  若要为表指定预定义的格式，请将 `DisplayInWord` 中的最后一行替换为以下语句，然后按 Ctrl+F5。 格式可以为任何 [WdTableFormat](<xref:Microsoft.Office.Interop.Word.WdTableFormat>) 常量。  
   
      [!code-csharp[csProgGuideNamedAndOptional#11](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-use-named-and-optional-arguments-in-office-programming_8.cs)]  
   
@@ -106,5 +106,6 @@ ConvertToTable 参数
   
  [!code-csharp[csProgGuideNamedAndOptional#12](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-use-named-and-optional-arguments-in-office-programming_9.cs)]  
   
-## <a name="see-also"></a>请参阅  
- [命名参数和可选参数](../../../csharp/programming-guide/classes-and-structs/named-and-optional-arguments.md)
+## <a name="see-also"></a>请参阅
+
+- [命名参数和可选参数](../../../csharp/programming-guide/classes-and-structs/named-and-optional-arguments.md)

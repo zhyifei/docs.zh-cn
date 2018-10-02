@@ -2,15 +2,15 @@
 title: ETW 跟踪
 ms.date: 03/30/2017
 ms.assetid: ac99a063-e2d2-40cc-b659-d23c2f783f92
-ms.openlocfilehash: 4aa836650663a2918b51d5f9df95b55f410b8ded
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3e4dd141bd5f6a9d137b2fe981b3b412ec0c81e2
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33506034"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43855915"
 ---
 # <a name="etw-tracing"></a>ETW 跟踪
-本示例演示如何通过使用 Windows 事件跟踪 (ETW) 和本示例提供的 `ETWTraceListener` 来实现端对端 (E2E) 跟踪。 示例基于[入门](../../../../docs/framework/wcf/samples/getting-started-sample.md)并包括 ETW 跟踪。  
+本示例演示如何通过使用 Windows 事件跟踪 (ETW) 和本示例提供的 `ETWTraceListener` 来实现端对端 (E2E) 跟踪。 该示例基于[Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md)并包括 ETW 跟踪。  
   
 > [!NOTE]
 >  本主题的最后介绍了此示例的设置过程和生成说明。  
@@ -50,11 +50,11 @@ ms.locfileid: "33506034"
  在使用此侦听器之前，必须启动 ETW 跟踪会话。 可以通过使用 Logman.exe 或 Tracelog.exe 来启动此会话。 本示例随附一个 SetupETW.bat 文件，您可以和 CleanupETW.bat 文件一起使用此文件来设置 ETW 跟踪会话，以便关闭会话并完成日志文件。  
   
 > [!NOTE]
->  本主题的最后介绍了此示例的设置过程和生成说明。 有关这些工具的详细信息，请参阅 [http://go.microsoft.com/fwlink/?LinkId=56580](http://go.microsoft.com/fwlink/?LinkId=56580)  
+>  本主题的最后介绍了此示例的设置过程和生成说明。 有关这些工具的详细信息，请参阅 [https://go.microsoft.com/fwlink/?LinkId=56580](https://go.microsoft.com/fwlink/?LinkId=56580)  
   
- 使用 ETWTraceListener 时，将在二进制 .etl 文件中记录跟踪。 在打开 ServiceModel 跟踪的情况下，所有生成的跟踪都显示在同一个文件中。 使用[服务跟踪查看器工具 (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)用于查看.etl 和.svclog 日志文件。 该查看器可创建系统的端对端视图，可以从消息源到消息目标和使用点来跟踪消息。  
+ 使用 ETWTraceListener 时，将在二进制 .etl 文件中记录跟踪。 在打开 ServiceModel 跟踪的情况下，所有生成的跟踪都显示在同一个文件中。 使用[Service Trace Viewer Tool (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)用于查看.etl 和.svclog 日志文件。 该查看器可创建系统的端对端视图，可以从消息源到消息目标和使用点来跟踪消息。  
   
- ETW 跟踪侦听器支持循环记录。 若要启用此功能，请转到**启动**，**运行**和类型`cmd`以启动命令控制台。 在下面的命令中，用日志文件的名称替换 `<logfilename>` 参数。  
+ ETW 跟踪侦听器支持循环记录。 若要启用此功能，请转到**启动**，**运行**并键入`cmd`以启动命令控制台。 在下面的命令中，用日志文件的名称替换 `<logfilename>` 参数。  
   
 ```  
 logman create trace Wcf -o <logfilename> -p "{411a0819-c24b-428c-83e2-26b41091702e}" -f bincirc -max 1000  
@@ -74,13 +74,13 @@ Logman start Wcf
 Logman stop Wcf  
 ```  
   
- 此过程将生成二进制循环日志，你可以处理你的工具的选择，包括[服务跟踪查看器工具 (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)或 Tracerpt。  
+ 此过程会生成与所选的工具可以处理的二进制循环日志包括[Service Trace Viewer Tool (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)或 Tracerpt。  
   
- 此外可以查看[循环跟踪](../../../../docs/framework/wcf/samples/circular-tracing.md)示例为用于执行循环日志记录的替代侦听器的详细信息。  
+ 此外可以查看[循环跟踪](../../../../docs/framework/wcf/samples/circular-tracing.md)示例执行循环日志记录的替代侦听器的详细信息。  
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>设置、生成和运行示例  
   
-1.  请确保已执行[的 Windows Communication Foundation 示例的一次性安装过程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
+1.  确保您已执行了[的 Windows Communication Foundation 示例的一次性安装过程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
   
 2.  若要生成解决方案，请按照中的说明[生成 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/building-the-samples.md)。  
   
@@ -89,7 +89,7 @@ Logman stop Wcf
   
 3.  运行示例之前，在客户端和服务器上运行 RegisterProvider.bat。 这会设置生成的 ETWTracingSampleLog.etl 文件以生成可由服务跟踪查看器读取的跟踪。 此文件可以在 C:\logs 文件夹中找到。 如果此文件夹不存在，则必须创建此文件夹；否则将不会生成跟踪。 然后，在客户端和服务器计算机上运行 SetupETW.bat 以开始 ETW 跟踪会话。 SetupETW.bat 文件可以在 CS\Client 文件夹下找到。  
   
-4.  若要在单或跨计算机配置上运行示例，请按照中的说明[运行 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/running-the-samples.md)。  
+4.  若要在单或跨计算机配置中运行示例，请按照中的说明[运行 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/running-the-samples.md)。  
   
 5.  示例完成后，运行 CleanupETW.bat 以完成 ETWTracingSampleLog.etl 文件的创建。  
   
@@ -102,9 +102,9 @@ Logman stop Wcf
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目录不存在，请转到[Windows Communication Foundation (WCF) 和针对.NET Framework 4 的 Windows Workflow Foundation (WF) 示例](http://go.microsoft.com/fwlink/?LinkId=150780)下载所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
+>  如果此目录不存在，请转到[Windows Communication Foundation (WCF) 和.NET Framework 4 的 Windows Workflow Foundation (WF) 示例](https://go.microsoft.com/fwlink/?LinkId=150780)若要下载所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Management\AnalyticTrace`  
   
 ## <a name="see-also"></a>请参阅  
- [AppFabric 监视示例](http://go.microsoft.com/fwlink/?LinkId=193959)
+ [AppFabric 监视示例](https://go.microsoft.com/fwlink/?LinkId=193959)

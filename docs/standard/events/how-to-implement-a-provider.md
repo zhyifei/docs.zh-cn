@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 790b5d8b-d546-40a6-beeb-151b574e5ee5
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e702233c90155957d1de1a5a306d44d8faa41929
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 34ad5b9cc0014db05bc6e7483e389488e145beb3
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33576342"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44087321"
 ---
 # <a name="how-to-implement-a-provider"></a>如何：实现提供程序
 观察程序设计模式要求区分提供程序（监视数据并发送通知）和一个或多个观察程序（通过提供程序接收通知（回调））。 本主题介绍了如何创建提供程序。 相关主题[如何：实现观察程序](../../../docs/standard/events/how-to-implement-an-observer.md)介绍了如何创建观察程序。  
@@ -60,8 +60,9 @@ ms.locfileid: "33576342"
  [!code-csharp[Conceptual.ObserverDesign.HowTo#7](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.observerdesign.howto/cs/provider.cs#7)]
  [!code-vb[Conceptual.ObserverDesign.HowTo#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.observerdesign.howto/vb/provider.vb#7)]  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.IObservable%601>  
- [观察程序设计模式](../../../docs/standard/events/observer-design-pattern.md)  
- [如何：实现监视程序](../../../docs/standard/events/how-to-implement-an-observer.md)  
- [监视程序设计模式最佳做法](../../../docs/standard/events/observer-design-pattern-best-practices.md)
+## <a name="see-also"></a>请参阅
+
+- <xref:System.IObservable%601>  
+- [观察程序设计模式](../../../docs/standard/events/observer-design-pattern.md)  
+- [如何：实现监视程序](../../../docs/standard/events/how-to-implement-an-observer.md)  
+- [监视程序设计模式最佳做法](../../../docs/standard/events/observer-design-pattern-best-practices.md)

@@ -3,12 +3,12 @@ title: C# 发展历史 - C# 指南
 description: 这些语言在最早版本中是什么样的，它又是如何演化的？
 author: erikdietrich
 ms.date: 09/20/2017
-ms.openlocfilehash: 3e3bf98d1435b237b2941758b8ed245baa970237
-ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
+ms.openlocfilehash: 7a7030eb9479ebae553f3bb4d569c9a9f931db9a
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36207529"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43504408"
 ---
 # <a name="the-history-of-c"></a>C# 发展历史 #
 
@@ -34,6 +34,10 @@ C# 1.0 的主要功能包括：
 - [语句](../programming-guide/statements-expressions-operators/statements.md)
 - [特性](../programming-guide/concepts/attributes/index.md)
 - 文本
+
+## <a name="c-version-12"></a>C# 版本 1.2
+
+随 Visual Studio 2003 一起提供的 C# 版本 1.2。 它对语言做了一些小改进。 最值得注意的是，从此版本开始，当 <xref:System.Collections.IEnumerator> 实现 <xref:System.IDisposable> 时，`foreach` 循环中生成的代码会在 <xref:System.Collections.IEnumerator> 上调用 <xref:System.IDisposable.Dispose%2A>。
 
 ## <a name="c-version-20"></a>C# 2.0 版
 
@@ -73,7 +77,7 @@ C# 3.0 版和 Visual Studio 2008 一起发布于 2007 年下半年，但完整�
 - [扩展方法](https://www.codeproject.com/Tips/709310/Extension-Method-In-Csharp)
 - [隐式类型本地变量](../language-reference/keywords/var.md)
 - [分部方法](../language-reference/keywords/partial-method.md)
-- 对象和集合初始值设定项
+- [对象和集合初始值设定项](../programming-guide/classes-and-structs/object-and-collection-initializers.md)
 
 回顾过去，这些功能中大多数似乎都是不可或缺，难以分割的。 它们的组合都是经过巧妙布局。 我们通常认为 C# 版本的杀手锏是查询表达式，也就是语言集成查询 (LINQ)。
 
@@ -105,7 +109,11 @@ C# 4.0 版很难达到 3.0 版的创新水平。 在 3.0 版中，C# 已经完�
 C# 5.0 版是该语言有针对性的一个版本。 在此版本中所做的所有工作几乎都针对另一个突破性的语言概念：适用于异步编程的 `async` 和 `await` 模型。  下面是主要功能列表：
 
 - [异步成员](../async.md)
-- [调用方信息特性](https://www.codeproject.com/Tips/606379/Caller-Info-Attributes-in-Csharp)
+- [调用方信息特性](../programming-guide/concepts/caller-information.md)
+
+### <a name="see-also"></a>请参阅
+
+* [代码项目：C# 5.0 中的调用方信息属性](https://www.codeproject.com/Tips/606379/Caller-Info-Attributes-in-Csharp)
 
 调用方信息特性让你可以轻松检索上下文的信息，不需要采用大量样本反射代码。 这在诊断和日志记录任务中也很有用。
 

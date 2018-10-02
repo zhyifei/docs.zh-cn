@@ -1,17 +1,16 @@
 ---
-title: '&lt;certificateReference&gt;'
+title: '&lt;CertificateReference&gt;'
 ms.date: 03/30/2017
 ms.assetid: 2ac8bc14-e9f1-48fb-b662-f5991558fbe4
 author: BrucePerlerMS
-manager: mbaldwin
-ms.openlocfilehash: e0f9a826a4c8d292346d9efee7970a82b88fb612
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: e04dc90134aadfb8af7b0800c7144963d267f513
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32756834"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47206886"
 ---
-# <a name="ltcertificatereferencegt"></a>&lt;certificateReference&gt;
+# <a name="ltcertificatereferencegt"></a>&lt;CertificateReference&gt;
 指定用于查找和验证的证书存储区中的 X.509 证书的设置。  
   
  \<system.identityModel.services >  
@@ -45,10 +44,10 @@ ms.locfileid: "32756834"
 |特性|描述|  
 |---------------|-----------------|  
 |storeName|X.509 证书存储区的名称。 默认值为"My"。 可选。|  
-|storeLocation|A<xref:System.Security.Cryptography.X509Certificates.StoreLocation>值，该值指定 X.509 证书存储区的位置。 默认值为"LocalMachine"。 可选。|  
-|x509FindType|<xref:System.Security.Cryptography.X509Certificates.X509FindType>值，该值指定是要执行的搜索的类型。 默认值为"FindBySubjectDistinguishedName"。 可选。|  
+|storeLocation|一个<xref:System.Security.Cryptography.X509Certificates.StoreLocation>值，该值指定的 X.509 证书存储区位置。 默认值为"LocalMachine"。 可选。|  
+|x509FindType|<xref:System.Security.Cryptography.X509Certificates.X509FindType>值，该值指定要执行的搜索的类型。 默认值是"FindBySubjectDistinguishedName"。 可选。|  
 |findValue|要在 X.509 证书存储区中搜索的值。 可选。|  
-|isChainIncluded|指定是否应执行验证通过使用证书链。 默认值为"true";通过使用证书链执行验证。 可选。|  
+|isChainIncluded|指定是否应使用的证书链执行验证。 默认值为"true";通过使用证书链执行验证。 可选。|  
   
 ### <a name="child-elements"></a>子元素  
  无  
@@ -57,7 +56,7 @@ ms.locfileid: "32756834"
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<serviceCertificate >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/servicecertificate.md)|配置用来加密和解密令牌的证书。|  
+|[\<serviceCertificate >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/servicecertificate.md)|配置用于加密和解密令牌的证书。|  
   
 ## <a name="remarks"></a>备注  
  `<certificateReference>`元素指定用于查找和验证的证书存储区中的 X.509 证书的设置。 当指定的子元素为`<serviceCertficate>`元素，它指定用于加密和解密令牌的 X.509 证书的位置和验证设置。 `<certificateReference>`元素表示由<xref:System.ServiceModel.Configuration.CertificateReferenceElement>类。

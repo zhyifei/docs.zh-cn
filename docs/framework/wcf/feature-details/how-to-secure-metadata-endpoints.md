@@ -6,18 +6,17 @@ dev_langs:
 - vb
 ms.assetid: 9f71b6ae-737c-4382-8d89-0a7b1c7e182b
 author: BrucePerlerMS
-manager: mbaldwin
-ms.openlocfilehash: 659291975902ec78c1484ac77f898b4486000e8d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.openlocfilehash: f1dae4b9d2976ddbc941e49843324a29ec8885a4
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33497173"
+ms.lasthandoff: 09/27/2018
+ms.locfileid: "47400010"
 ---
 # <a name="how-to-secure-metadata-endpoints"></a>如何：保护元数据终结点
 服务的元数据中可能包含恶意用户可以利用的关于您的应用程序的敏感信息。 服务使用者可能还要求一种用于获取关于服务的元数据的安全机制。 因此，有时需要使用安全终结点来发布元数据。  
   
- 通常，使用为保护应用程序终结点定义 Windows Communication Foundation (WCF) 中的标准安全机制保护元数据终结点。 (有关详细信息，请参阅[安全概述](../../../../docs/framework/wcf/feature-details/security-overview.md)。)  
+ 通常，使用为保护应用程序终结点定义 Windows Communication Foundation (WCF) 中的标准安全机制保护元数据终结点。 (有关详细信息，请参阅[安全性概述](../../../../docs/framework/wcf/feature-details/security-overview.md)。)  
   
  本主题演示创建由安全套接字层 (SSL) 证书保护的终结点（换言之，HTTPS 终结点）的步骤。  
   
@@ -32,7 +31,7 @@ ms.locfileid: "33497173"
   
 3.  将 <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpsGetEnabled%2A> 类的 <xref:System.ServiceModel.Description.ServiceMetadataBehavior> 属性设置为 `true`。  
   
-4.  将 <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpsGetUrl%2A> 属性设置为适当的 URL。 请注意，如果指定绝对地址，则 URL 必须以方案 "https://" 开始。 如果指定相对地址，则必须为服务主机提供一个 HTTPS 基址。 如果不设置此属性，则默认地址为 ""，或者直接为服务的 HTTPS 基址。  
+4.  将 <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpsGetUrl%2A> 属性设置为适当的 URL。 请注意，如果指定绝对地址，则 URL 必须以方案 “https://” 开始。 如果指定相对地址，则必须为服务主机提供一个 HTTPS 基址。 如果不设置此属性，则默认地址为 ""，或者直接为服务的 HTTPS 基址。  
   
 5.  将该实例添加到 <xref:System.ServiceModel.Description.ServiceDescription.Behaviors%2A> 类的 <xref:System.ServiceModel.Description.ServiceDescription> 属性返回的行为集合中，如下面的代码所示：  
   
@@ -55,7 +54,7 @@ ms.locfileid: "33497173"
   
 7.  将 `httpsGetUrl` 元素的 `<serviceMetadata>` 属性设置为适当的值。 请注意，如果指定绝对地址，则 URL 必须以方案 “https://” 开始。 如果指定相对地址，则必须为服务主机提供一个 HTTPS 基址。 如果不设置此属性，则默认地址为 ""，或者直接为服务的 HTTPS 基址。  
   
-8.  若要使用服务行为，设置`behaviorConfiguration`属性[\<服务 >](../../../../docs/framework/configure-apps/file-schema/wcf/service.md)行为元素的名称属性的值的元素。 下面的配置代码演示了一个完整的示例。  
+8.  若要使用一种服务行为，设置`behaviorConfiguration`的属性[\<服务 >](../../../../docs/framework/configure-apps/file-schema/wcf/service.md)行为元素的 name 属性的值的元素。 下面的配置代码演示了一个完整的示例。  
   
     ```xml  
     <?xml version="1.0" encoding="utf-8" ?>  

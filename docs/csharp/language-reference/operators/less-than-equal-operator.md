@@ -7,12 +7,12 @@ helpviewer_keywords:
 - less than or equal to operator (<=) [C#]
 - <= operator [C#]
 ms.assetid: bb0caec9-d253-4105-b8bc-5252233251e4
-ms.openlocfilehash: 24bf274bfcb0a8e19a79aafb3bd7920054044be0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: afbb932c1be010790236bec73a36acf0f01b97f4
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33271157"
+ms.lasthandoff: 09/15/2018
+ms.locfileid: "45595050"
 ---
 # <a name="lt-operator-c-reference"></a>&lt;= 运算符（C# 参考）
 所有数值和枚举类型定义“小于或等于”关系运算符 (`<=`)，如果第一个操作数小于或等于第二个操作数，此运算符返回 `true`，否则返回 `false`。  
@@ -23,8 +23,9 @@ ms.locfileid: "33271157"
 ## <a name="example"></a>示例  
  [!code-csharp[csRefOperators#32](../../../csharp/language-reference/operators/codesnippet/CSharp/less-than-equal-operator_1.cs)]  
   
-## <a name="see-also"></a>请参阅  
- [C# 参考](../../../csharp/language-reference/index.md)  
- [C# 编程指南](../../../csharp/programming-guide/index.md)  
- [C# 运算符](../../../csharp/language-reference/operators/index.md)  
- [explicit](../../../csharp/language-reference/keywords/explicit.md)
+## <a name="see-also"></a>请参阅
+
+- [C# 参考](../../../csharp/language-reference/index.md)  
+- [C# 编程指南](../../../csharp/programming-guide/index.md)  
+- [C# 运算符](../../../csharp/language-reference/operators/index.md)  
+- [explicit](../../../csharp/language-reference/keywords/explicit.md)

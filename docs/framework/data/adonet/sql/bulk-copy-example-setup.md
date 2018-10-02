@@ -2,22 +2,22 @@
 title: 批量复制示例设置
 ms.date: 03/30/2017
 ms.assetid: d4dde6ac-b8b6-4593-965a-635c8fb2dadb
-ms.openlocfilehash: cb4e92529c8e68bd7e47e5943f7e79dcc97603e0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 71daf489fdf5e7e12594e798bc3ac01b1c76b027
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33362434"
+ms.lasthandoff: 09/22/2018
+ms.locfileid: "46579454"
 ---
 # <a name="bulk-copy-example-setup"></a>批量复制示例设置
-<xref:System.Data.SqlClient.SqlBulkCopy> 类只能用于向 SQL Server 表中写入数据。 本主题中所示的代码示例使用 SQL Server 示例数据库， **AdventureWorks**。 为避免改变现有表，代码示例将数据写入必须先创建的表。  
+<xref:System.Data.SqlClient.SqlBulkCopy> 类只能用于向 SQL Server 表中写入数据。 本主题中所示的代码示例使用 SQL Server 示例数据库**AdventureWorks**。 为避免改变现有表，代码示例将数据写入必须先创建的表。  
   
- **BulkCopyDemoMatchingColumns**和**BulkCopyDemoDifferentColumns**表两个均基于**AdventureWorks** **Production.Products**表。 在使用这些表的代码示例，数据添加从**Production.Products**到这些示例表中的一个表。 **BulkCopyDemoDifferentColumns**如果示例说明如何将映射到目标表中; 源数据中的列使用表**BulkCopyDemoMatchingColumns**适用于大多数其他示例。  
+ **BulkCopyDemoMatchingColumns**并**BulkCopyDemoDifferentColumns**表均基于**AdventureWorks** **Production.Products**表。 在使用这些表的代码示例中，添加数据从**Production.Products**到其中一个示例表的表。 **BulkCopyDemoDifferentColumns**表使用时的示例演示了如何将映射到目标表中; 将源数据列**BulkCopyDemoMatchingColumns**用于大多数其他示例。  
   
- 一些代码示例演示如何使用一个 <xref:System.Data.SqlClient.SqlBulkCopy> 类写入多个表。 对于这些示例， **BulkCopyDemoOrderHeader**和**BulkCopyDemoOrderDetail**表用作目标表。 这些表基于**Sales.SalesOrderHeader**和**Sales.SalesOrderDetail**中的表**AdventureWorks**。  
+ 一些代码示例演示如何使用一个 <xref:System.Data.SqlClient.SqlBulkCopy> 类写入多个表。 对于这些示例中， **BulkCopyDemoOrderHeader**并**BulkCopyDemoOrderDetail**表用作目标表。 这些表基于**Sales.SalesOrderHeader**并**Sales.SalesOrderDetail**中的表**AdventureWorks**。  
   
 > [!NOTE]
->  **SqlBulkCopy**提供的代码示例演示使用的语法**SqlBulkCopy**仅。 如果源表和目标表位于同一个 SQL Server 实例中，则使用 Transact-SQL `INSERT … SELECT` 语句复制数据会更加容易、更加迅速。  
+>  **SqlBulkCopy**提供的代码示例演示了使用语法**SqlBulkCopy**仅。 如果源表和目标表位于同一个 SQL Server 实例中，则使用 Transact-SQL `INSERT … SELECT` 语句复制数据会更加容易、更加迅速。  
   
 ## <a name="table-setup"></a>表设置  
  若要创建代码示例正确运行所需的表，必须在 SQL Server 数据库中运行下面的 Transact-SQL 语句。  
@@ -83,4 +83,4 @@ CREATE TABLE [dbo].[BulkCopyDemoOrderDetail]([SalesOrderID] [int] NOT NULL,
   
 ## <a name="see-also"></a>请参阅  
  [SQL Server 中的大容量复制操作](../../../../../docs/framework/data/adonet/sql/bulk-copy-operations-in-sql-server.md)  
- [ADO.NET 托管提供程序和数据集开发人员中心](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)

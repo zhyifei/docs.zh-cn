@@ -9,12 +9,12 @@ helpviewer_keywords:
 - layout [Windows Forms], TableLayoutPanel control
 - automatic sizing
 ms.assetid: f55175c6-424e-4782-a86e-3f79c1550235
-ms.openlocfilehash: 3615ab1f9a9076b8db0e5fde1e5bd4a1a804f3bf
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 671553b496520f2c2ac3fea90b1514a6cdf1764a
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33538523"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43467276"
 ---
 # <a name="tablelayoutpanel-control-windows-forms"></a>TableLayoutPanel 控件（Windows 窗体）
 <xref:System.Windows.Forms.TableLayoutPanel> 控件将其内容排列在网格中。 由于布局是同时在设计时和运行时执行的，因此它可随应用程序环境的变化而动态地变化。 这使得面板中的控件能够按比例调整大小，以便能够响应更改（例如父控件的大小调整或本地化产生的文本长度更改）。  
@@ -38,13 +38,13 @@ ms.locfileid: "33538523"
  [如何：创建可重设大小的 Windows 窗体以供输入数据](../../../../docs/framework/winforms/controls/how-to-create-a-resizable-windows-form-for-data-entry.md)  
  演示使用 <xref:System.Windows.Forms.TableLayoutPanel> 控件来生成能很好地响应大小调整的窗体。  
   
-1.  [如何：在 TableLayoutPanel 控件中对齐和拉伸控件](http://msdn.microsoft.com/library/ms171688\(v=vs.110\))  
+1.  [如何：在 TableLayoutPanel 控件中对齐和拉伸控件](how-to-align-and-stretch-a-control-in-a-tablelayoutpanel-control.md)  
   
-2.  [如何：在 TableLayoutPanel 控件中跨行和跨列](http://msdn.microsoft.com/library/ms171687\(v=vs.110\))  
+2.  [如何：在 TableLayoutPanel 控件中跨行和跨列](how-to-span-rows-and-columns-in-a-tablelayoutpanel-control.md)  
   
-3.  [如何：在 TableLayoutPanel 控件中编辑行和列](http://msdn.microsoft.com/library/ms171686\(v=vs.110\))  
+3.  [如何：在 TableLayoutPanel 控件中编辑行和列](how-to-edit-columns-and-rows-in-a-tablelayoutpanel-control.md)  
   
-4.  [演练：使用 TableLayoutPanel 在 Windows 窗体上排列控件](http://msdn.microsoft.com/library/w4yc3e8c\(v=vs.110\))  
+4.  [演练：使用 TableLayoutPanel 在 Windows 窗体上排列控件](https://msdn.microsoft.com/library/w4yc3e8c\(v=vs.110\))  
   
 ## <a name="reference"></a>参考  
  <xref:System.Windows.Forms.TableLayoutPanel>  
@@ -60,4 +60,4 @@ ms.locfileid: "33538523"
  [本地化](../../../../docs/standard/globalization-localization/localization.md)  
  提供对本地化相关主题的概述。  
   
- 另请参阅[本地化应用程序](http://msdn.microsoft.com/library/z68135h5\(v=vs.110\))或[本地化应用程序](http://msdn.microsoft.com/library/z68135h5\(v=vs.120\))
+ 另请参阅[Localizing Applications](https://msdn.microsoft.com/library/z68135h5\(v=vs.110\))或[本地化应用程序](https://msdn.microsoft.com/library/z68135h5\(v=vs.120\))

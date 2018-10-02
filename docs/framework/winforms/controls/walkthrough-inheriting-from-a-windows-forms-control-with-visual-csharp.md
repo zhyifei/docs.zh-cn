@@ -8,18 +8,18 @@ helpviewer_keywords:
 - inheritance [Windows Forms], walkthroughs
 - custom controls [Windows Forms], inheritance
 ms.assetid: 09476da0-8d4c-4a4c-b969-649519dfb438
-ms.openlocfilehash: 1e9231065369640fa49e04a491b92ebfb1e91912
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: cad15b8fb89ec17e45b0f6cfed22f3109551fc2c
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33541504"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45595719"
 ---
 # <a name="walkthrough-inheriting-from-a-windows-forms-control-with-visual-c"></a>演练：使用 Visual C# 从 Windows 窗体控件继承 #
-使用 [!INCLUDE[csprcslong](../../../../includes/csprcslong-md.md)] 可通过继承来创建功能强大的自定义控件。 通过继承，可以创建不仅保留了标准 Windows 窗体控件的所有固有功能，而且还包含自定义功能的控件。 在本演练中，将创建一个名为 `ValueButton` 的简单继承控件。 此按钮将从标准 Windows 窗体继承功能<xref:System.Windows.Forms.Button>控制，并将公开一个名为的自定义属性`ButtonValue`。  
+使用 [!INCLUDE[csprcslong](../../../../includes/csprcslong-md.md)] 可通过继承来创建功能强大的自定义控件。 通过继承，可以创建不仅保留了标准 Windows 窗体控件的所有固有功能，而且还包含自定义功能的控件。 在本演练中，将创建一个名为 `ValueButton` 的简单继承控件。 此按钮将继承标准 Windows 窗体的功能<xref:System.Windows.Forms.Button>控件，并将公开一个名为的自定义属性`ButtonValue`。  
   
 > [!NOTE]
->  显示的对话框和菜单命令可能会与“帮助”中的描述不同，具体取决于你现用的设置或版本。 若要更改设置，请在 **“工具”** 菜单上选择 **“导入和导出设置”** 。 有关详细信息，请参阅[在 Visual Studio 中自定义开发设置](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3)。  
+>  显示的对话框和菜单命令可能会与“帮助”中的描述不同，具体取决于你现用的设置或版本。 若要更改设置，请在 **“工具”** 菜单上选择 **“导入和导出设置”** 。 有关详细信息，请参阅[个性化设置 Visual Studio IDE](/visualstudio/ide/personalizing-the-visual-studio-ide)。  
   
 ## <a name="creating-the-project"></a>创建项目  
  创建新的项目时应指定其名称，以设置根命名空间、程序集名称和项目名称，并确保默认组件将位于正确的命名空间中。  
@@ -28,7 +28,7 @@ ms.locfileid: "33541504"
   
 1.  在“文件”菜单上指向“新建”，然后单击“项目”打开“新建项目”对话框。  
   
-2.  选择**Windows 窗体控件库**Visual C# 项目，然后键入列表中的项目模板`ValueButtonLib`中**名称**框。  
+2.  选择**Windows 窗体控件库**项目模板从列表中的 Visual C# 项目，然后键入`ValueButtonLib`中**名称**框。  
   
      默认情况下，项目名称 `ValueButtonLib` 也会分配到根命名空间中。 根命名空间用于限定程序集中的组件名。 例如，如果两个程序集都提供名为 `ValueButton` 的组件，则可以使用 `ValueButtonLib.ValueButton` 指定 `ValueButton` 组件。 有关详细信息，请参阅[命名空间](../../../csharp/programming-guide/namespaces/index.md)。  
   
@@ -36,16 +36,16 @@ ms.locfileid: "33541504"
   
 4.  在“解决方案资源管理器”中，右键单击“ValueButton.cs”并选择“查看代码”。  
   
-5.  找到`class`语句行`public partial class ValueButton`，并将从其继承自此控件类型更改<xref:System.Windows.Forms.UserControl>到<xref:System.Windows.Forms.Button>。 这使继承的控件继承的所有功能<xref:System.Windows.Forms.Button>控件。  
+5.  找到`class`语句行`public partial class ValueButton`，并将该控件从从中要继承的类型更改<xref:System.Windows.Forms.UserControl>到<xref:System.Windows.Forms.Button>。 这允许继承的控件继承的所有功能<xref:System.Windows.Forms.Button>控件。  
   
 6.  在“解决方案资源管理器”中打开“ValueButton.cs”节点，以显示设计器生成的代码文件 **ValueButton.Designer.cs**。 在“代码编辑器”中打开此文件。  
   
-7.  找到`InitializeComponent`方法和删除的行分配<xref:System.Windows.Forms.ContainerControl.AutoScaleMode%2A>属性。 中不存在此属性<xref:System.Windows.Forms.Button>控件。  
+7.  找到`InitializeComponent`方法，并删除的行，将分配<xref:System.Windows.Forms.ContainerControl.AutoScaleMode%2A>属性。 此属性中不存在<xref:System.Windows.Forms.Button>控件。  
   
 8.  在“文件”菜单中，选择“全部保存”以保存项目。  
   
     > [!NOTE]
-    >  可视化设计器不再可用。 因为<xref:System.Windows.Forms.Button>控件不自行绘制，则无法修改设计器中的其外观。 其可视表示形式将完全相同，从它继承的类 (即， <xref:System.Windows.Forms.Button>) 除非在代码中修改。 但仍然可以向设计器图面添加不含 UI 元素的组件。  
+    >  可视化设计器不再可用。 因为<xref:System.Windows.Forms.Button>控件不自行绘制，则无法在设计器中修改其外观。 其可视表示形式将完全从它继承的类相同 (即， <xref:System.Windows.Forms.Button>) 除非在代码中修改。 但仍然可以向设计器图面添加不含 UI 元素的组件。  
   
 ## <a name="adding-a-property-to-your-inherited-control"></a>将属性添加到继承控件  
  继承的 Windows 窗体控件的可能用途之一是创建与标准 Windows 窗体控件的外观和感受相同、但公开自定义属性的控件。 在本节中，将向控件中添加名为 `ButtonValue` 的属性。  
@@ -142,7 +142,7 @@ ms.locfileid: "33541504"
      `label1` 中显示数字“5”，表明继承的控件的 `ButtonValue` 属性已通过 `valueButton1_Click` 方法传递给 `label1`。 这样，`ValueButton` 控件便继承了标准 Windows 窗体按钮的所有功能，但是公开了一个附加的自定义属性。  
   
 ## <a name="see-also"></a>请参阅  
- [使用组件编程](http://msdn.microsoft.com/library/d4d4fcb4-e0b8-46b3-b679-7ee0026eb9e3)  
- [组件创作演练](http://msdn.microsoft.com/library/c414cca9-2489-4208-8b38-954586d91c13)  
+ [使用组件编程](https://msdn.microsoft.com/library/d4d4fcb4-e0b8-46b3-b679-7ee0026eb9e3)  
+ [组件创作演练](https://msdn.microsoft.com/library/c414cca9-2489-4208-8b38-954586d91c13)  
  [如何：在“选择工具箱项”对话框中显示控件](../../../../docs/framework/winforms/controls/how-to-display-a-control-in-the-choose-toolbox-items-dialog-box.md)  
  [演练：使用 Visual C# 创作复合控件](../../../../docs/framework/winforms/controls/walkthrough-authoring-a-composite-control-with-visual-csharp.md)

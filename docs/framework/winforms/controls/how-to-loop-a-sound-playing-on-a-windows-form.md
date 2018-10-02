@@ -10,12 +10,12 @@ helpviewer_keywords:
 - sounds [Windows Forms], looping
 - playing sounds [Windows Forms], looping
 ms.assetid: ea95dd46-10a3-46c0-8263-4b205f00df7f
-ms.openlocfilehash: 67e1f8abe6872358a29ab8f6734b58c1c1bc809c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e6b227915a98bb757b559d229ebc1ee757ffb25c
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33533752"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43480112"
 ---
 # <a name="how-to-loop-a-sound-playing-on-a-windows-form"></a>如何：在 Windows 窗体上循环播放声音
 以下代码示例重复播放声音。 当 `stopPlayingButton_Click` 事件处理程序中的代码运行时，当前播放的所有声音都将停止。 如果未播放任何声音，则无任何操作。  
@@ -31,7 +31,7 @@ ms.locfileid: "33533752"
   
 -   即，使用有效的文件名替换文件名 `"c:\Windows\Media\chimes.wav"`。  
   
- 有关生成此示例从 visual Basic 或 Visual C# 的命令行的信息，请参阅[从命令行生成](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md)或[命令行上使用 csc.exe 生成](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)。 你也可以通过将代码粘贴到新项目中生成 Visual Studio 中的此示例。  另请参阅 [如何：使用 Visual Studio 编译和运行完整的 Windows 窗体代码示例](http://msdn.microsoft.com/library/Bb129228\(v=vs.110\))。  
+ 生成此示例的 visual Basic 或 Visual C# 命令行中的信息，请参阅[从命令行生成](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md)或[命令行上使用 csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)。 也可以通过将代码粘贴到新的项目中生成此示例在 Visual Studio 中。  另请参阅[如何：使用 Visual Studio 编译和运行完整的 Windows 窗体代码示例](https://msdn.microsoft.com/library/Bb129228\(v=vs.110\))。  
   
 ## <a name="robust-programming"></a>可靠编程  
  文件操作应包含在相应的异常处理块内。  

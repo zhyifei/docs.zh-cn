@@ -2,12 +2,12 @@
 title: 查找 Word 文档中的文本 (C#)
 ms.date: 07/20/2015
 ms.assetid: 82f86677-560b-49dc-a089-610409939b2a
-ms.openlocfilehash: bd9f128fd50587b88fd899d0180e3d2ca8a8df6d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 56a99dd548eb149f6fa85370cef6a114103ce91e
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33333923"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47235593"
 ---
 # <a name="finding-text-in-word-documents-c"></a>查找 Word 文档中的文本 (C#)
 本主题扩展了以前的查询，以执行一些有用的任务：在文档中查找一个字符串的所有匹配项。  
@@ -327,7 +327,8 @@ StyleName:Code ><
   
 -   [Office Open XML WordprocessingML 文档的详细信息 (C#)](../../../../csharp/programming-guide/concepts/linq/details-of-office-open-xml-wordprocessingml-documents.md)  
   
-## <a name="see-also"></a>请参阅  
- [教程：操作 WordprocessingML 文档中的内容 (C#)](../../../../csharp/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)  
- [使用纯函数重构 (C#)](../../../../csharp/programming-guide/concepts/linq/refactoring-using-a-pure-function.md)  
- [LINQ to XML 中的延迟执行和迟缓计算 (C#)](../../../../csharp/programming-guide/concepts/linq/deferred-execution-and-lazy-evaluation-in-linq-to-xml.md)
+## <a name="see-also"></a>请参阅
+
+- [教程：操作 WordprocessingML 文档中的内容 (C#)](../../../../csharp/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)  
+- [使用纯函数重构 (C#)](../../../../csharp/programming-guide/concepts/linq/refactoring-using-a-pure-function.md)  
+- [LINQ to XML 中的延迟执行和迟缓计算 (C#)](../../../../csharp/programming-guide/concepts/linq/deferred-execution-and-lazy-evaluation-in-linq-to-xml.md)

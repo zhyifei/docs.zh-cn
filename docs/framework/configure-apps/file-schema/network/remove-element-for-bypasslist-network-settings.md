@@ -1,5 +1,5 @@
 ---
-title: '&lt;删除&gt;将 bypasslist （网络设置） 的元素'
+title: '&lt;删除&gt;bypasslist （网络设置） 的元素'
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/defaultProxy/bypasslist/remove
@@ -12,21 +12,20 @@ helpviewer_keywords:
 ms.assetid: 61dcfb4a-e3d9-4abf-a2cd-7d685fe2f64b
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 5c7918048743d53d8523ec399d1a11c67152a2bf
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: b6c72d9780088fddcaa59e644ff8069afbb4e43d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32742944"
+ms.lasthandoff: 09/27/2018
+ms.locfileid: "47397093"
 ---
-# <a name="ltremovegt-element-for-bypasslist-network-settings"></a>&lt;删除&gt;将 bypasslist （网络设置） 的元素
-从代理绕过列表中删除 IP 地址或 DNS 名称。  
+# <a name="ltremovegt-element-for-bypasslist-network-settings"></a>&lt;删除&gt;bypasslist （网络设置） 的元素
+从代理跳过列表中删除 IP 地址或 DNS 名称。  
   
  \<configuration>  
 \<system.net>  
 \<defaultProxy >  
-\<将 bypasslist >  
+\<bypasslist >  
 \<remove>  
   
 ## <a name="syntax"></a>语法  
@@ -44,7 +43,7 @@ ms.locfileid: "32742944"
   
 |**特性**|**说明**|  
 |-------------------|---------------------|  
-|`address`|正则表达式描述的 IP 地址或 DNS 名称。|  
+|`address`|正则表达式描述 IP 地址或 DNS 名称。|  
   
 ### <a name="child-elements"></a>子元素  
  无。  
@@ -53,12 +52,12 @@ ms.locfileid: "32742944"
   
 |**元素**|**说明**|  
 |-----------------|---------------------|  
-|[将 bypasslist](../../../../../docs/framework/configure-apps/file-schema/network/bypasslist-element-network-settings.md)|提供一组描述不使用代理的地址的正则表达式。|  
+|[bypasslist](../../../../../docs/framework/configure-apps/file-schema/network/bypasslist-element-network-settings.md)|提供一组描述不使用代理的地址的正则表达式。|  
   
 ## <a name="remarks"></a>备注  
- `remove`元素中删除描述 IP 地址或 DNS 服务器名称，从列表中不使用代理服务器的地址的正则表达式。 地址已在配置文件中或在配置层次结构中较高级别前面定义。  
+ `remove`元素中删除描述 IP 地址或 DNS 服务器名称，从列表中的绕过代理服务器的地址的正则表达式。 配置文件中或在配置层次结构中较高级别上，前面已定义地址。  
   
- 值`address`属性应为正则表达式描述一组 IP 地址或主机名。  
+ 值为`address`属性应为描述一组 IP 地址或主机名的正则表达式。  
   
  有关正则表达式的详细信息，请参阅。[.NET framework 正则表达式](../../../../../docs/standard/base-types/regular-expressions.md)。  
   
@@ -66,7 +65,7 @@ ms.locfileid: "32742944"
  此元素可在应用程序配置文件或计算机配置文件 (Machine.config) 中使用。  
   
 ## <a name="example"></a>示例  
- 下面的示例中删除任何以前的定义对于 adventure works.com 域中，并将 contoso.com 域添加到跳过列表。  
+ 下面的示例删除 adventure-works.com 域中，任何以前定义，然后将 contoso.com 域添加到忽略列表。  
   
 ```xml  
 <configuration>  

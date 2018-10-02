@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 67784ecd-9663-434e-bd6a-26975e447ac0
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 08dc7a55b5b0c580f19d137496b9405fa4e18a5f
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 535519c65aba7ce13703bb33a16b09cde84c3f03
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32745287"
+ms.lasthandoff: 09/27/2018
+ms.locfileid: "47400603"
 ---
 # <a name="ltbindingredirectgt-element"></a>&lt;bindingRedirect&gt;元素
 将一个程序集版本重定向到另一个版本。  
@@ -43,7 +42,7 @@ newVersion="new assembly version"/>
   
 |特性|描述|  
 |---------------|-----------------|  
-|`oldVersion`|必需的特性。<br /><br /> 指定最初请求的程序集的版本。 程序集版本号的格式是*major.minor.build.revision*。 该版本号的每个部分的有效值介于 0 和 65535 之间。<br /><br /> 你还可以按下列格式指定版本范围：<br /><br /> *n.n.n.n-n.n.n.n*|  
+|`oldVersion`|必需的特性。<br /><br /> 指定最初请求的程序集的版本。 程序集版本号的格式*major.minor.build.revision*。 该版本号的每个部分的有效值介于 0 和 65535 之间。<br /><br /> 你还可以按下列格式指定版本范围：<br /><br /> *n.n.n.n-n.n.n.n*|  
 |`newVersion`|必需的特性。<br /><br /> 指定要使用而不是最初请求的版本格式的程序集的版本： *n.n.n.n*<br /><br /> 此值可以指定 `oldVersion` 之前的版本。|  
   
 ### <a name="child-elements"></a>子元素  
@@ -66,7 +65,7 @@ newVersion="new assembly version"/>
   
  通过在一个 `bindingRedirect` 元素中包含多个 `dependentAssembly` 元素，你可以重定向多个程序集版本。 你还可从程序集的更新版本重定向到较旧版本。  
   
- 应用程序配置文件中的显式程序集绑定重定向需要安全权限。 这适用于对 .NET Framework 程序集和来自第三方的程序集的重定向。 通过设置授予此权限<xref:System.Security.Permissions.SecurityPermissionFlag>标志<xref:System.Security.Permissions.SecurityPermission>。 有关详细信息，请参阅[程序集绑定重定向安全权限](../../../../../docs/framework/configure-apps/assembly-binding-redirection-security-permission.md)。  
+ 应用程序配置文件中的显式程序集绑定重定向需要安全权限。 这适用于对 .NET Framework 程序集和来自第三方的程序集的重定向。 通过设置授予权限<xref:System.Security.Permissions.SecurityPermissionFlag>标志<xref:System.Security.Permissions.SecurityPermission>。 有关详细信息，请参阅[程序集绑定重定向安全权限](../../../../../docs/framework/configure-apps/assembly-binding-redirection-security-permission.md)。  
   
 ## <a name="example"></a>示例  
  下面的示例演示如何将一个程序集版本重定向到另一个版本。  

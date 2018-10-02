@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 11515b25-ee49-4b1d-9294-a142147c1ec5
-ms.openlocfilehash: f2b07b8d42069fa98ba51dea75f9695e7adce0b0
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 3c2158e94f936dd2b28fe46310fd96df8dbc50fb
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32759148"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47231266"
 ---
 # <a name="handling-dataadapter-events"></a>处理 DataAdapter 事件
 ADO.NET <xref:System.Data.Common.DataAdapter> 公开三个可用于响应数据源中数据更改的事件。 下表演示了 `DataAdapter` 事件。  
@@ -39,7 +39,7 @@ ADO.NET <xref:System.Data.Common.DataAdapter> 公开三个可用于响应数据�
   
  也可以使用 `ContinueUpdateOnError` 属性为更新的行处理错误。 如果 `DataAdapter.ContinueUpdateOnError` 为 `true`，那么当行的更新导致引发异常时，该异常的文本被放入特定行的 `RowError` 信息中，并且处理将会继续而不会引发异常。 这使您能够在 `Update` 完成时对错误作出响应；与此相反的是 `RowUpdated` 事件，它使您能够在遇到错误时响应错误。  
   
- 以下代码示例显示如何添加和移除事件处理程序。 `RowUpdating` 事件处理程序编写带有时间戳的所有已删除记录的日志。 `RowUpdated`事件处理程序将错误信息添加到`RowError`属性中的行`DataSet`、 取消显示异常，并继续处理 (镜像的行为`ContinueUpdateOnError`  =  `true`)。  
+ 以下代码示例显示如何添加和移除事件处理程序。 `RowUpdating` 事件处理程序编写带有时间戳的所有已删除记录的日志。 `RowUpdated`事件处理程序将错误信息添加到`RowError`属性中的一行`DataSet`、 取消显示异常，并继续处理 (镜像的行为`ContinueUpdateOnError`  =  `true`)。  
   
 ```vb  
 ' Assumes that connection is a valid SqlConnection object.  
@@ -155,7 +155,7 @@ Private Shared Sub FillError(sender As Object, _
     DataRow myRow = args.DataTable.Rows.Add(New Object() _  
       {args.Values(0), args.Values(1), DBNull.Value})  
     ' Set the RowError containing the value for the third column.  
-    args.RowError = _  
+    myRow.RowError = _  
       "OverflowException encountered. Value from data source: " & _  
       args.Values(2)  
     args.Continue = True  
@@ -178,7 +178,7 @@ protected static void FillError(object sender, FillErrorEventArgs args)
     DataRow myRow = args.DataTable.Rows.Add(new object[]  
        {args.Values[0], args.Values[1], DBNull.Value});  
     //Set the RowError containing the value for the third column.  
-    args.RowError =   
+    myRow.RowError =   
        "OverflowException Encountered. Value from data source: " +  
        args.Values[2];  
     args.Continue = true;  
@@ -191,4 +191,4 @@ protected static void FillError(object sender, FillErrorEventArgs args)
  [处理数据集事件](../../../../docs/framework/data/adonet/dataset-datatable-dataview/handling-dataset-events.md)  
  [处理数据表事件](../../../../docs/framework/data/adonet/dataset-datatable-dataview/handling-datatable-events.md)  
  [事件](../../../../docs/standard/events/index.md)  
- [ADO.NET 托管提供程序和数据集开发人员中心](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)

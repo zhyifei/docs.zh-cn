@@ -7,12 +7,12 @@ helpviewer_keywords:
 - String.Format method
 - Console.Write method
 ms.assetid: 120ba537-4448-4c62-8676-7a8fdd98f496
-ms.openlocfilehash: cc215971d63a0ee61eb25ac45834a81fbbc50b96
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8d034955d5d5d31788eafc0c21246451d7fd1f35
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33216907"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43508194"
 ---
 # <a name="formatting-numeric-results-table-c-reference"></a>设置数值结果表的格式（C# 参考）
 要设置数值结果的格式，可以使用 <xref:System.String.Format%2A?displayProperty=nameWithType> 方法、<xref:System.Console.Write%2A?displayProperty=nameWithType> 或 <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> 方法（这两种方法调用 `String.Format`）或者[字符串内插](../tokens/interpolated.md)。 通过使用格式字符串指定格式。 下表包含支持的标准格式字符串。 格式字符串采用以下形式：`Axx`，其中 `A` 是格式说明符，`xx` 是精度说明符。 格式说明符控制应用于数值的格式类型，而精度说明符则控制格式化输出的有效位数或小数位数。 精度说明符值的范围为 0 到 99。  
@@ -29,9 +29,10 @@ ms.locfileid: "33216907"
 |N 或 n|数字|Console.Write("{0:N}", 2500000);|2,500,000.00|  
 |X 或 x|十六进制|Console.Write("{0:X}", 250);<br /><br /> Console.Write("{0:X}", 0xffff);|FA<br /><br /> FFFF|  
   
-## <a name="see-also"></a>请参阅  
- [C# 参考](../../../csharp/language-reference/index.md)  
- [C# 编程指南](../../../csharp/programming-guide/index.md)  
- [标准数字格式字符串](../../../standard/base-types/standard-numeric-format-strings.md)  
- [类型参考表](../../../csharp/language-reference/keywords/reference-tables-for-types.md)  
- [string](../../../csharp/language-reference/keywords/string.md)
+## <a name="see-also"></a>请参阅
+
+- [C# 参考](../../../csharp/language-reference/index.md)  
+- [C# 编程指南](../../../csharp/programming-guide/index.md)  
+- [标准数字格式字符串](../../../standard/base-types/standard-numeric-format-strings.md)  
+- [类型参考表](../../../csharp/language-reference/keywords/reference-tables-for-types.md)  
+- [string](../../../csharp/language-reference/keywords/string.md)

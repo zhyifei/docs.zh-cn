@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: bfc20837-3d02-4fc7-8a8f-c5215b6b7913
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6f682ba370e364629d6b79c5cedd28b4af834e58
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b4dde57e03e26085d19099e749afd50ba14874a5
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33568880"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44195369"
 ---
 # <a name="hashtable-and-dictionary-collection-types"></a>哈希表和字典集合类型
 <xref:System.Collections.Hashtable?displayProperty=nameWithType> 类以及 <xref:System.Collections.Generic.Dictionary%602?displayProperty=nameWithType> 和 <xref:System.Collections.Concurrent.ConcurrentDictionary%602?displayProperty=nameWithType> 泛型类实现 <xref:System.Collections.IDictionary?displayProperty=nameWithType> 接口。 <xref:System.Collections.Generic.Dictionary%602> 泛型类还实现 <xref:System.Collections.Generic.IDictionary%602> 泛型接口。 因此，这些集合中的每个元素都是一个键值对。  
@@ -36,11 +36,12 @@ ms.locfileid: "33568880"
   
  <xref:System.Collections.Generic.Dictionary%602> 和 <xref:System.Collections.Concurrent.ConcurrentDictionary%602> 类具有与 <xref:System.Collections.Hashtable> 类相同的功能。 特定类型（不包括 <xref:System.Object>）的 <xref:System.Collections.Generic.Dictionary%602> 与 <xref:System.Collections.Hashtable> 相比可为值类型提供更好的性能。 这是因为 <xref:System.Collections.Hashtable> 的元素属于 <xref:System.Object> 类型；因此，装箱和取消装箱通常发生在存储或检索值类型时。 可能有多个线程同时访问该集合时，应使用 <xref:System.Collections.Concurrent.ConcurrentDictionary%602> 类。  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Collections.Hashtable>  
- <xref:System.Collections.IDictionary>  
- <xref:System.Collections.IHashCodeProvider>  
- <xref:System.Collections.Generic.Dictionary%602>  
- <xref:System.Collections.Generic.IDictionary%602?displayProperty=nameWithType>  
- <xref:System.Collections.Concurrent.ConcurrentDictionary%602?displayProperty=nameWithType>  
- [常用的集合类型](../../../docs/standard/collections/commonly-used-collection-types.md)
+## <a name="see-also"></a>请参阅
+
+- <xref:System.Collections.Hashtable>  
+- <xref:System.Collections.IDictionary>  
+- <xref:System.Collections.IHashCodeProvider>  
+- <xref:System.Collections.Generic.Dictionary%602>  
+- <xref:System.Collections.Generic.IDictionary%602?displayProperty=nameWithType>  
+- <xref:System.Collections.Concurrent.ConcurrentDictionary%602?displayProperty=nameWithType>  
+- [常用的集合类型](../../../docs/standard/collections/commonly-used-collection-types.md)

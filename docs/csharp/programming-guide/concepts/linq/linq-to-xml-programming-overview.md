@@ -2,12 +2,12 @@
 title: LINQ to XML 编程概述 (C#)
 ms.date: 07/20/2015
 ms.assetid: 2dfa9b6f-5890-461d-b81c-316853c7f320
-ms.openlocfilehash: c461d4b4082293d91d18538596cfa03d9445c224
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9eb86e0c9c5dada36e09c78e7070d32afa9824c1
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33339795"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43522707"
 ---
 # <a name="linq-to-xml-programming-overview-c"></a>LINQ to XML 编程概述 (C#)
 这些主题提供有关 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 类的高级概述信息，以及有关三个最重要类的详细信息。  
@@ -23,5 +23,6 @@ ms.locfileid: "33339795"
 |[XDocument 类概述 (C#)](../../../../csharp/programming-guide/concepts/linq/xdocument-class-overview.md)|介绍 <xref:System.Xml.Linq.XDocument> 类，该类表示 XML 文档。|  
 |[如何：生成 LINQ to XML 示例 (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-build-linq-to-xml-examples.md)|包含生成 LINQ to XML 示例所需的 `Using` 指令。|  
   
-## <a name="see-also"></a>请参阅  
- [编程指南 (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/programming-guide-linq-to-xml.md)
+## <a name="see-also"></a>请参阅
+
+- [编程指南 (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/programming-guide-linq-to-xml.md)

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: e380edac-da67-4276-80a5-b64decae4947
-ms.openlocfilehash: b1395c3bd81f7f9d2f12d5b1ea2ec4b784f7aab9
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 641a1cc0fd0ec53872ee3312e7da06923b82ddd7
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32766223"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43507600"
 ---
 # <a name="optimistic-concurrency"></a>开放式并发
 在多用户环境中，有两种用于更新数据库中数据的模型：开放式并发和保守式并发。 设计 <xref:System.Data.DataSet> 对象的目的是为了促进将开放式并发用于长时间运行的活动，例如对数据进行远程处理以及与数据进行交互时。  
@@ -30,7 +30,7 @@ ms.locfileid: "32766223"
   
  下午 1:00，用户 1 从具有以下值的数据库中读取一行：  
   
- **CustID LastName FirstName**  
+ **CustID 姓氏 FirstName**  
   
  101 Smith Bob  
   
@@ -42,7 +42,7 @@ ms.locfileid: "32766223"
   
  下午 1:01，用户 2 读取同一行。  
   
- 下午 1:03，用户 2 更改**FirstName**从"Bob"为"Robert"并更新数据库。  
+ 下午 1:03，User2 更改**FirstName**从"Bob"为"Robert"并更新数据库。  
   
 |列名称|原始值|当前值|数据库中的值|  
 |-----------------|--------------------|-------------------|-----------------------|  
@@ -96,14 +96,14 @@ UPDATE Table1 Set Col1 = @NewVal1
  当使用开放式并发模型时，也可以选择应用限制较少的条件。 例如，如果只在 WHERE 子句中使用主键列，那么无论自上次查询以来是否已更新其他列，数据都将被重写。 也可以只将 WHERE 子句应用于特定列，除非自上次查询特定字段以来已将其更新，否则数据也会被重写。  
   
 ### <a name="the-dataadapterrowupdated-event"></a>DataAdapter.RowUpdated 事件  
- **RowUpdated**事件<xref:System.Data.Common.DataAdapter>对象可以与上述方法更早版本，以提供到开放式并发冲突的应用程序的通知结合使用。 **RowUpdated**在每次尝试更新之后**已修改**行从**数据集**。 它使你能够添加特殊的处理代码，包括在发生异常时进行处理，添加自定义错误信息，添加重试逻辑等。 <xref:System.Data.Common.RowUpdatedEventArgs>对象返回**RecordsAffected**属性包含已修改的行在表中的特定更新命令影响的行数。 通过设置更新命令来测试是否存在开放式并发， **RecordsAffected**属性将因此，返回值为 0 时发生了开放式并发冲突，因为没有更新任何记录。 如果是这种情况，则将引发异常。 **RowUpdated**事件，可处理这种情况，并通过设置合适避免异常**RowUpdatedEventArgs.Status**值，如**UpdateStatus.SkipCurrentRow**。 有关详细信息**RowUpdated**事件，请参阅[处理 DataAdapter 事件](../../../../docs/framework/data/adonet/handling-dataadapter-events.md)。  
+ **RowUpdated**事件的<xref:System.Data.Common.DataAdapter>对象可以与更早版本，介绍如何向开放式并发冲突的应用程序提供通知的技术结合使用。 **RowUpdated**来更新每次尝试后会发生**Modified**一行**数据集**。 它使你能够添加特殊的处理代码，包括在发生异常时进行处理，添加自定义错误信息，添加重试逻辑等。 <xref:System.Data.Common.RowUpdatedEventArgs>对象返回**RecordsAffected**属性包含特定更新命令在表中已修改的行受影响的行数。 通过设置更新命令来测试来进行乐观并发**RecordsAffected**属性将因此，返回值为 0 时发生了开放式并发冲突，因为没有更新任何记录。 如果是这种情况，则将引发异常。 **RowUpdated**事件，可以处理这种情况并避免异常通过设置合适**RowUpdatedEventArgs.Status**值，例如**UpdateStatus.SkipCurrentRow**。 有关详细信息**RowUpdated**事件，请参阅[处理 DataAdapter 事件](../../../../docs/framework/data/adonet/handling-dataadapter-events.md)。  
   
- （可选） 你可以设置**DataAdapter.ContinueUpdateOnError**到**true**之前调用,**更新**，并响应错误信息存储在**RowError**属性的特定行时**更新**完成。 有关详细信息，请参阅[行错误信息](../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-error-information.md)。  
+ 或者，可以设置**DataAdapter.ContinueUpdateOnError**到**true**，然后再调用**更新**，并响应中存储的错误信息**RowError**特定属性时行**更新**完成。 有关详细信息，请参阅[行错误信息](../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-error-information.md)。  
   
 ## <a name="optimistic-concurrency-example"></a>开放式并发示例  
- 以下是设置一个简单示例**UpdateCommand**的**DataAdapter**若要测试是否存在开放式并发，然后使用**RowUpdated**事件来测试是否存在开放式并发冲突。 当遇到开放式并发冲突时，应用程序将设置**RowError**发出更新以反映开放式并发冲突的行。  
+ 以下是设置一个简单示例**UpdateCommand**的**DataAdapter**来进行乐观并发，测试，然后使用**RowUpdated**事件来测试开放式并发冲突。 当遇到开放式并发冲突时，应用程序设置**RowError**发出更新以反映开放式并发冲突的行。  
   
- 请注意，传递给 UPDATE 命令的 WHERE 子句的参数值映射到**原始**各自的列的值。  
+ 请注意，传递给 UPDATE 命令的 WHERE 子句的参数值映射到**原始**及其各自的列的值。  
   
 ```vb  
 ' Assumes connection is a valid SqlConnection.  
@@ -166,7 +166,7 @@ SqlDataAdapter adapter = new SqlDataAdapter(
 // The Update command checks for optimistic concurrency violations  
 // in the WHERE clause.  
 adapter.UpdateCommand = new SqlCommand("UPDATE Customers Set CustomerID = @CustomerID, CompanyName = @CompanyName " +  
-   "WHERE CustomerID = @oldCustomerID AND CompanyName = @oldCompanyName, connection);  
+   "WHERE CustomerID = @oldCustomerID AND CompanyName = @oldCompanyName", connection);  
 adapter.UpdateCommand.Parameters.Add(  
   "@CustomerID", SqlDbType.NChar, 5, "CustomerID");  
 adapter.UpdateCommand.Parameters.Add(  
@@ -211,4 +211,4 @@ protected static void OnRowUpdated(object sender, SqlRowUpdatedEventArgs args)
  [使用 DataAdapter 更新数据源](../../../../docs/framework/data/adonet/updating-data-sources-with-dataadapters.md)  
  [行错误信息](../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-error-information.md)  
  [事务和并发性](../../../../docs/framework/data/adonet/transactions-and-concurrency.md)  
- [ADO.NET 托管提供程序和数据集开发人员中心](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)

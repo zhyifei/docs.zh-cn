@@ -10,12 +10,12 @@ helpviewer_keywords:
 - catch keyword [C#]
 - try-catch statement [C#]
 ms.assetid: cb5503c7-bfa1-4610-8fc2-ddcd2e84c438
-ms.openlocfilehash: d6dfdf14b518582388e655ec5616904928dfd8b5
-ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
+ms.openlocfilehash: 70830b08f9be95422761e0c096071d726a3950c8
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34696434"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43517388"
 ---
 # <a name="try-catch-c-reference"></a>try-catch（C# 参考）
 Try-catch 语句包含一个后接一个或多个 `catch` 子句的 `try` 块，这些子句指定不同异常的处理程序。  
@@ -171,12 +171,13 @@ static void Main()
 ## <a name="c-language-specification"></a>C# 语言规范  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>请参阅  
- [C# 参考](../../../csharp/language-reference/index.md)  
- [C# 编程指南](../../../csharp/programming-guide/index.md)  
- [C# 关键字](../../../csharp/language-reference/keywords/index.md)  
- [try、throw 和 catch 语句 (C++)](/cpp/cpp/try-throw-and-catch-statements-cpp)  
- [异常处理语句](../../../csharp/language-reference/keywords/exception-handling-statements.md)  
- [throw](../../../csharp/language-reference/keywords/throw.md)  
- [try-finally](../../../csharp/language-reference/keywords/try-finally.md)  
- [如何显式引发异常](../../../standard/exceptions/how-to-explicitly-throw-exceptions.md)
+## <a name="see-also"></a>请参阅
+
+- [C# 参考](../../../csharp/language-reference/index.md)  
+- [C# 编程指南](../../../csharp/programming-guide/index.md)  
+- [C# 关键字](../../../csharp/language-reference/keywords/index.md)  
+- [try、throw 和 catch 语句 (C++)](/cpp/cpp/try-throw-and-catch-statements-cpp)  
+- [异常处理语句](../../../csharp/language-reference/keywords/exception-handling-statements.md)  
+- [throw](../../../csharp/language-reference/keywords/throw.md)  
+- [try-finally](../../../csharp/language-reference/keywords/try-finally.md)  
+- [如何显式引发异常](../../../standard/exceptions/how-to-explicitly-throw-exceptions.md)

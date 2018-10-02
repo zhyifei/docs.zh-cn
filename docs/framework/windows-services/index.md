@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: ba72d648-9553-4849-b829-069ad5ea014b
 author: ghogen
 manager: douge
-ms.openlocfilehash: af6e4bf7697b3139f6809295737fdd0d90b7f013
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2c7fb148b96d5ff9804bcb0bb7c842c475c0f117
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33512263"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44207091"
 ---
 # <a name="developing-windows-service-applications"></a>开发 Windows 服务应用程序
 使用 Microsoft Visual Studio 或 Microsoft [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] SDK，可以通过创建作为服务安装的应用程序来轻松创建服务。 这种类型的应用程序称为 Windows 服务。 借助框架功能，可以创建、安装服务，启动、停止服务并及控制服务的行为。  
@@ -48,5 +48,5 @@ ms.locfileid: "33512263"
  <xref:System.ServiceProcess.ServiceInstaller>  
  介绍 <xref:System.ServiceProcess.ServiceInstaller> 类的功能，该类与 <xref:System.ServiceProcess.ServiceProcessInstaller> 类一起用于安装和卸载服务。  
   
- [NIB 从模板创建项目](http://msdn.microsoft.com/library/7c36d86a-6b79-4480-8228-0f925f1204b2)  
+ [NIB 从模板创建项目](https://msdn.microsoft.com/library/7c36d86a-6b79-4480-8228-0f925f1204b2)  
  介绍本章中使用的项目类型以及如何从中进行选择。

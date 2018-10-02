@@ -2,17 +2,17 @@
 title: 招聘流程
 ms.date: 03/30/2017
 ms.assetid: d5fcacbb-c884-4b37-a5d6-02b1b8eec7b4
-ms.openlocfilehash: 87327692e35e9386dab4cf906ab33cbe08d73fdd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 41f5508ea5805581282389e0731a00dde7796bc0
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33519758"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43520633"
 ---
 # <a name="hiring-process"></a>招聘流程
 本示例演示如何使用消息传递活动和作为工作流服务承载的两个工作流来实现业务流程。 这些工作流是 Contoso, Inc 虚构公司的 IT 基础结构的一部分。  
   
- `HiringRequest` 工作流程（实现为 <xref:System.Activities.Statements.Flowchart>）需经组织的多名经理授权。 若要实现此目标，工作流时，可使用其他现有服务 （在本例中，收件箱服务和组织数据服务实现为纯 Windows Communication Foundation (WCF) 服务） 组织中。  
+ `HiringRequest` 工作流程（实现为 <xref:System.Activities.Statements.Flowchart>）需经组织的多名经理授权。 若要实现此目标，工作流 （在本例中，收件箱服务和组织数据服务实现为普通的 Windows Communication Foundation (WCF) 服务） 组织中使用其他现有服务。  
   
  `ResumeRequest` 工作流（实现为 <xref:System.Activities.Statements.Sequence>）在 Contoso 的外部工作机会网站中发布一份招聘启事并管理收到的简历。 一份招聘启事可在外部网站中存在一段固定的时间，直到截止日期到期为止，或直到 Contoso 的某名员工决定删除它为止。  
   
@@ -53,7 +53,7 @@ ms.locfileid: "33519758"
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目录不存在，请转到[Windows Communication Foundation (WCF) 和针对.NET Framework 4 的 Windows Workflow Foundation (WF) 示例](http://go.microsoft.com/fwlink/?LinkId=150780)下载所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
+>  如果此目录不存在，请转到[Windows Communication Foundation (WCF) 和.NET Framework 4 的 Windows Workflow Foundation (WF) 示例](https://go.microsoft.com/fwlink/?LinkId=150780)若要下载所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Application\HiringProcess`  
   
@@ -112,14 +112,14 @@ ms.locfileid: "33519758"
 |-------------|-----------------|-------------|  
 |流程图|业务流程表示为流程图。 此流程图说明表示流程的方式与业务在白板中绘制流程的方式相同。|HiringRequestService|  
 |工作流服务|包含流程定义的流程图承载于某服务（在此示例中，此服务承载于控制台应用程序中）。|HiringRequestService|  
-|消息传递活动|此流程图以两种方式使用消息传递活动：<br /><br /> -若要获取用户 （以每个审批步骤中接收的决定及相关的信息） 的信息。<br />-若要与其他现有服务 （InboxService 和 OrgDataService 通过服务引用使用） 进行交互。|HiringRequestService|  
-|基于内容的相关性|批准消息根据招聘请求的 ID 属性相关：<br /><br /> -当将启动的进程，使用的请求的 ID 初始化相关句柄。<br />-传入的批准消息根据 （每个批准消息的第一个参数是请求的 ID） 其 ID 相关。|HiringRequestService / ResumeRequestService|  
-|自定义活动（声明性和基于代码）|此示例中有几个自定义活动：<br /><br /> -   `SaveActionTracking`： 此活动发出一个自定义<xref:System.Activities.Tracking.TrackingRecord>(使用<xref:System.Activities.NativeActivityContext.Track%2A>)。 此活动已使用命令性代码扩展 <xref:System.Activities.NativeActivity> 进行创作。<br />-   `GetEmployeesByPositionTypes`： 此活动接收职位类型 Id 的列表，并返回对具有 Contoso 中的此位置的人员列表。 此活动已通过声明性方式进行创作（使用活动设计器）。<br />-   `SaveHiringRequestInfo`： 此活动保存的信息`HiringRequest`(使用`HiringRequestRepository.Save`)。 此活动已使用命令性代码扩展 <xref:System.Activities.CodeActivity> 进行创作。|HiringRequestService|  
+|消息传递活动|此流程图以两种方式使用消息传递活动：<br /><br /> -若要从用户 （以每个审批步骤中收到的决策和相关的信息） 中获取信息。<br />-若要与其他现有服务 （的 InboxService 和 OrgDataService 使用通过服务引用） 进行交互。|HiringRequestService|  
+|基于内容的相关性|批准消息根据招聘请求的 ID 属性相关：<br /><br /> -当在启动进程，使用请求的 ID 初始化相关性句柄。<br />-传入的批准消息根据其 ID （每个批准消息的第一个参数是请求的 ID） 将相关联。|HiringRequestService / ResumeRequestService|  
+|自定义活动（声明性和基于代码）|此示例中有几个自定义活动：<br /><br /> -   `SaveActionTracking`： 此活动发出一个自定义<xref:System.Activities.Tracking.TrackingRecord>(使用<xref:System.Activities.NativeActivityContext.Track%2A>)。 此活动已使用命令性代码扩展 <xref:System.Activities.NativeActivity> 进行创作。<br />-   `GetEmployeesByPositionTypes`： 此活动接收职位类型 Id 的列表，并返回一个具有该位置在 Contoso 中的人员列表。 此活动已通过声明性方式进行创作（使用活动设计器）。<br />-   `SaveHiringRequestInfo`： 此活动保存的信息`HiringRequest`(使用`HiringRequestRepository.Save`)。 此活动已使用命令性代码扩展 <xref:System.Activities.CodeActivity> 进行创作。|HiringRequestService|  
 |系统提供的 SQL Server 持久性|将承载流程图过程定义的 <xref:System.ServiceModel.Activities.WorkflowServiceHost> 实例配置为使用系统提供的 SQL Server 持久性。|HiringRequestService / ResumeRequestService|  
 |自定义跟踪|此示例包含保存 `HiringRequestProcess` 的历史记录（记录完成的操作、执行者以及执行时间）的自定义跟踪参与者。 源代码位于 HiringRequestService 的跟踪文件夹中。|HiringRequestService|  
 |ETW 跟踪|在 HiringRequestService 服务的 App.config 文件中配置系统提供的 ETW 跟踪。|HiringRequestService|  
 |活动的构成|此过程定义使用 <xref:System.Activities.Activity> 的自由构成。 流程图包含若干个顺序活动和并行活动，而这些活动同时又包含其他活动，等待。|HiringRequestService|  
-|并行活动|-   <xref:System.Activities.Statements.ParallelForEach%601> 用于在 CEO 和 HR 经理的收件箱中注册并行 （等待两名 HR 经理的审批步骤）。<br />-   <xref:System.Activities.Statements.Parallel> 用于执行一些清理任务。 在已完成和已拒绝步骤中|HiringRequestService|  
+|并行活动|-   <xref:System.Activities.Statements.ParallelForEach%601> 用于在 CEO 和 HR 经理的收件箱中注册以并行 （正在等待两名 HR 经理的审批步骤）。<br />-   <xref:System.Activities.Statements.Parallel> 用于执行一些清理任务中的完成和已拒绝步骤|HiringRequestService|  
 |模型取消|此流程图使用 <xref:System.Activities.Statements.CancellationScope> 创建取消行为（在此情况下它执行一些清理操作）。|HiringRequestService|  
 |客户持久性参与者|`HiringRequestPersistenceParticipant` 将工作流变量中的数据保存到 Contoso HR 数据库中存储的某个表中。|HiringRequestService|  
 |工作流服务|使用工作流服务实现 `ResumeRequestService`。 工作流定义和服务信息包含在 ResumeRequestService.xamlx 中。 此服务配置为使用持久性和跟踪。|ResumeRequestService|  
@@ -131,7 +131,7 @@ ms.locfileid: "33519758"
 ## <a name="data-storage"></a>数据存储  
  数据存储在名为 `ContosoHR` 的 SQL Server 数据库中（创建此数据库的脚本位于 `DbSetup` 文件夹中）。 工作流实例存储在名为 `InstanceStore` 的 SQL Server 数据库中（创建实例存储的脚本是 [!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)] 分布的一部分）。  
   
- 这两个数据库创建的 Visual Studio 命令提示符处运行 Setup.cmd 脚本。  
+ 通过 Visual Studio 命令提示符处运行 Setup.cmd 脚本创建两个数据库。  
   
 ## <a name="running-the-sample"></a>运行示例  
   
@@ -149,9 +149,9 @@ ms.locfileid: "33519758"
   
 1.  以管理员身份运行 Visual Studio。 打开 HiringRequest.sln。  
   
-2.  右键单击该解决方案中的**解决方案资源管理器**和选择**属性**。  
+2.  右键单击该解决方案中的**解决方案资源管理器**，然后选择**属性**。  
   
-3.  选择选项**多启动项目**并设置**CareersWebSite**， **InternalClient**， **HiringRequestService**，和**ResumeRequestService**到**启动**。 保留**ContosoHR**， **InboxService**，和**OrgService**为 None。  
+3.  选择的选项**多个启动项目**并设置**CareersWebSite**， **InternalClient**， **HiringRequestService**，和**ResumeRequestService**到**启动**。 将保留**contosohr**， **InboxService**，并**OrgService**为无。  
   
 4.  按 Ctrl+Shift+B 生成解决方案。 验证此生成是否已成功。  
   
@@ -159,19 +159,19 @@ ms.locfileid: "33519758"
   
 1.  解决方案生成后，按 Ctrl+F5 无需调试即可运行。 验证所有服务是否已启动。  
   
-2.  右键单击**InternalClient**中解决方案，然后选择**用浏览器查看**。 随即显示 `InternalClient` 的默认页。 确保服务正在运行，然后单击链接。  
+2.  右键单击**InternalClient**在解决方案中，然后选择**用浏览器查看**。 随即显示 `InternalClient` 的默认页。 确保服务正在运行，然后单击链接。  
   
-3.  **HiringRequest**显示模块。 可遵循此处详细描述的方案。  
+3.  **Hiringrequest**显示模块。 可遵循此处详细描述的方案。  
   
 4.  `HiringRequest` 完成后，可启动 `ResumeRequest`。 可遵循此处详细描述的方案。  
   
 5.  发布 `ResumeRequest` 时，信息将显示在公共网站（Contoso 工作机会网站）中。 若要查看招聘启事和申请职位，请导航到此工作机会网站。  
   
-6.  右键单击**CareersWebSite**中解决方案，选择**用浏览器查看**。  
+6.  右键单击**CareersWebSite**解决方案，然后选择**用浏览器查看**。  
   
-7.  向后定位到`InternalClient`通过右键单击**InternalClient**解决方案中，然后选择**用浏览器查看**。  
+7.  导航回到`InternalClient`通过右键单击**InternalClient**解决方案中，然后选择**用浏览器查看**。  
   
-8.  转到**JobPostings**节中的，单击**招聘广告**收件箱顶部菜单中的链接。 可遵循此处详细描述的方案。  
+8.  转到**JobPostings**通过单击部分**Job Postings**收件箱顶部菜单中的链接。 可遵循此处详细描述的方案。  
   
 ## <a name="scenarios"></a>方案  
   
@@ -179,7 +179,7 @@ ms.locfileid: "33519758"
   
 1.  Michael Alexander（软件工程师）希望请求一个新职位，以便在工程部门雇佣一名至少具有 3 年 C# 使用经验的软件开发测试工程师 (SDET)。  
   
-2.  创建后，请求将出现在 Michael 的收件箱 (单击**刷新**如果你看不到请求) 等待 Peter Brehm 的审批，Michael 的经理是。  
+2.  创建后，请求将出现在 Michael 的收件箱 (单击**刷新**如果您看不到请求) 等待 Michael 的经理 Peter Brehm 的审批。  
   
 3.  Peter 需要处理 Michael 的请求。 他认为此职位需要 5 年的 C# 工作经验而不是 3 年，因此他发回自己的建议以进行复查。  
   
@@ -195,11 +195,11 @@ ms.locfileid: "33519758"
   
 ### <a name="start-resume-request"></a>启动简历请求  
   
-1.  现在，此招聘启事正等待发布到外部网站人们可申请 (你可以看到它单击**招聘广告**链接)。 目前，此招聘启事由 HR 代表接手，他负责最后确定招聘启事并进行发布。  
+1.  现在，此招聘启事正等待发布到外部网站人们可申请 (你可以看到它单击**Job Postings**链接)。 目前，此招聘启事由 HR 代表接手，他负责最后确定招聘启事并进行发布。  
   
 2.  HR 希望编辑此招聘启事 (通过单击**编辑**链接) 通过设置超时值为 60 分钟 （现实生活中，这可能是几天或数周）。 超时允许根据指定的时间从外部网站中删除此招聘启事。  
   
-3.  后保存编辑的招聘启事，它将显示在**接收简历**选项卡中 （刷新网页可看到此新招聘启事）。  
+3.  在保存后已编辑的招聘启事，它显示在**接收简历**选项卡 （刷新网页可看到此新招聘启事）。  
   
 ### <a name="collecting-resumes"></a>收集简历  
   
@@ -211,7 +211,7 @@ ms.locfileid: "33519758"
   
 ## <a name="troubleshooting"></a>疑难解答  
   
-1.  确保使用管理员特权运行 Visual Studio。  
+1.  请确保使用管理员特权运行 Visual Studio。  
   
 2.  如果生成解决方案失败，请验证以下内容：  
   
@@ -225,9 +225,9 @@ ms.locfileid: "33519758"
   
         1.  打开 App_WebReferences 文件夹  
   
-        2.  右键单击**Contoso**和选择**更新 Web/服务引用**。  
+        2.  右键单击**Contoso** ，然后选择**更新 Web/服务引用**。  
   
-        3.  通过 Visual Studio 中按 CTRL + SHIFT + B 重新生成解决方案。  
+        3.  通过在 Visual Studio 中按 CTRL + SHIFT + B 重新生成解决方案。  
   
 ## <a name="uninstalling"></a>卸载  
   

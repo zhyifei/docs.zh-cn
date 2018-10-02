@@ -2,12 +2,12 @@
 title: '&lt;textMessageEncoding&gt;'
 ms.date: 03/30/2017
 ms.assetid: e6d834d0-356e-45eb-b530-bbefbb9ec3f0
-ms.openlocfilehash: 640cf8fce766f7107e297143e061f4f60d9f263d
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: e684c21c0b1360a9b270214ebe7b3ad00b42657f
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32753477"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43861955"
 ---
 # <a name="lttextmessageencodinggt"></a>&lt;textMessageEncoding&gt;
 指定用于基于文本的 XML 消息的字符编码和消息版本控制。  
@@ -37,13 +37,13 @@ ms.locfileid: "32753477"
 |maxReadPoolSize|一个整数，指定在无需分配新读取器的情况下可以同时读取的消息数。 池越大，系统允许的活动峰值就越大，但工作集也会随之增大。 默认值为 64。|  
 |maxWritePoolSize|一个整数，指定在无需分配新编写器的情况下可以同时发送的消息数。 池越大，系统允许的活动峰值就越大，但工作集也会随之增大。 默认值为 16。|  
 |messageVersion|指定使用此绑定发送的消息的 SOAP 版本。 有效值为<br /><br /> -   Soap11Addressing10<br />-   Soap12Addressing10<br /><br /> 默认值为 Soap12Addressing10。 此属性的类型为 <xref:System.ServiceModel.Channels.MessageVersion>。|  
-|writeEncoding|指定要用来在绑定上发出消息的字符集编码。 有效值为<br /><br /> -UnicodeFffeTextEncoding: Unicode BigEndian 编码<br />-Utf16TextEncoding: Unicode 编码<br />-Utf8TextEncoding: 8 位编码<br /><br /> 默认值为 Utf8TextEncoding。 此属性的类型为 <xref:System.Text.Encoding>。|  
+|writeEncoding|指定要用来在绑定上发出消息的字符集编码。 有效值为<br /><br /> -UnicodeFffeTextEncoding: Unicode BigEndian 编码<br />-Utf16textencoding:unicode 编码<br />-Utf8TextEncoding: 8 位编码<br /><br /> 默认值为 Utf8TextEncoding。 此属性的类型为 <xref:System.Text.Encoding>。|  
   
 ### <a name="child-elements"></a>子元素  
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<readerQuotas>](http://msdn.microsoft.com/library/3e5e42ff-cef8-478f-bf14-034449239bfd)|定义可由采用此绑定配置的终结点进行处理的 SOAP 消息的复杂性约束。 此元素的类型为 <xref:System.ServiceModel.Configuration.XmlDictionaryReaderQuotasElement>。|  
+|[\<readerQuotas>](https://msdn.microsoft.com/library/3e5e42ff-cef8-478f-bf14-034449239bfd)|定义可由采用此绑定配置的终结点进行处理的 SOAP 消息的复杂性约束。 此元素的类型为 <xref:System.ServiceModel.Configuration.XmlDictionaryReaderQuotasElement>。|  
   
 ### <a name="parent-elements"></a>父元素  
   

@@ -2,12 +2,12 @@
 title: LINQ to XML 中的延迟执行和迟缓计算 (C#)
 ms.date: 07/20/2015
 ms.assetid: 8683d1b4-b7ec-407b-be12-906ebe958a09
-ms.openlocfilehash: dd0b8413f172182edfc83f99fd418d1372984b7d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: baf6a26b1579c17adfc60b27b485ba3af66c67d7
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33340367"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44085337"
 ---
 # <a name="deferred-execution-and-lazy-evaluation-in-linq-to-xml-c"></a>LINQ to XML 中的延迟执行和迟缓计算 (C#)
 实现查询和轴操作通常是为了使用延迟执行。 本主题解释延迟执行的要求和优点，以及某些实现注意事项。  
@@ -33,8 +33,9 @@ ms.locfileid: "33340367"
   
 -   [延迟执行示例 (C#)](../../../../csharp/programming-guide/concepts/linq/deferred-execution-example.md)  
   
-## <a name="see-also"></a>请参阅  
- [教程：将查询链接在一起 (C#)](../../../../csharp/programming-guide/concepts/linq/tutorial-chaining-queries-together.md)  
- [概念和术语（功能转换）(C#)](../../../../csharp/programming-guide/concepts/linq/concepts-and-terminology-functional-transformation.md)  
- [聚合运算 (C#)](../../../../csharp/programming-guide/concepts/linq/aggregation-operations.md)  
- [yield](../../../../csharp/language-reference/keywords/yield.md)
+## <a name="see-also"></a>请参阅
+
+- [教程：将查询链接在一起 (C#)](../../../../csharp/programming-guide/concepts/linq/tutorial-chaining-queries-together.md)  
+- [概念和术语（功能转换）(C#)](../../../../csharp/programming-guide/concepts/linq/concepts-and-terminology-functional-transformation.md)  
+- [聚合运算 (C#)](../../../../csharp/programming-guide/concepts/linq/aggregation-operations.md)  
+- [yield](../../../../csharp/language-reference/keywords/yield.md)

@@ -12,14 +12,14 @@ ms.assetid: 66bdfced-bbf6-43d1-a554-bc0990315737
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: cb5d3b4c50a9c22880bdcc8406835cf51481e3cd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33654364"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43003120"
 ---
 # <a name="-reference-visual-basic"></a>-参考 (Visual Basic)
-使编译器将在指定的程序集的类型信息提供给当前正在编译项目。  
+使编译器让指定程序集中的类型信息供当前正在编译的项目。  
   
 ## <a name="syntax"></a>语法  
   
@@ -36,9 +36,9 @@ ms.locfileid: "33654364"
 |`fileList`|必须的。 程序集文件名的逗号分隔列表。 如果文件名包含空格，则将名称括在引号内。|  
   
 ## <a name="remarks"></a>备注  
- 你导入的文件必须包含程序集元数据。 仅公共类型都是程序集外部可见的。 [/Addmodule](../../../visual-basic/reference/command-line-compiler/addmodule.md)选项从模块导入元数据。  
+ 导入的文件必须包含程序集元数据。 仅公共类型都是程序集外部可见的。 [/Addmodule](../../../visual-basic/reference/command-line-compiler/addmodule.md)选项从模块导入元数据。  
   
- 如果引用的程序集 （程序集 A） 其本身引用了另一个程序集 (程序集 B)，你在下列情况下需要引用程序集 B:  
+ 如果引用的程序集 （程序集 A） 本身引用了另一个程序集 (程序集 B)，则在下列情况下需要引用程序集 B:  
   
 -   程序集 A 中的类型继承自程序集 B 中的类型或实现程序集 B 中的接口。  
   
@@ -46,14 +46,14 @@ ms.locfileid: "33654364"
   
  使用[-libpath](../../../visual-basic/reference/command-line-compiler/libpath.md)指定一个或多个程序集引用所在的目录。  
   
- 编译器识别出的程序集 （而不是模块） 的类型，必须将它强制解析类型。 如何执行此操作的一个示例是定义类型的实例。 其他方法是可用于解析在编译器的程序集中的类型名称。 例如，如果你从程序集中的类型继承，类型名称然后变得与编译器已知的。  
+ 为使编译器可以识别的程序集 （而不是模块） 中的类型，必须强制其解析的类型。 如何执行此操作的一个示例是定义类型的实例。 其他方法都可以解析为编译器的程序集中的类型名称。 例如，如果您从程序集中的类型继承，类型名称然后将成为编译器已知。  
   
- Vbc.rsp 响应文件，该引用常用文件[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]程序集，默认情况下使用。 使用`-noconfig`如果您不希望编译器使用 Vbc.rsp。  
+ Vbc.rsp 响应文件引用常用[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]程序集，默认情况下使用。 使用`-noconfig`如果不希望编译器使用 Vbc.rsp。  
   
  `-reference` 的缩写形式是 `/r`。  
   
 ## <a name="example"></a>示例  
- 下面的命令编译源文件`Input.vb`和引用程序集从`Metad1.dll`和`Metad2.dll`生成`Out.exe`。  
+ 下面的命令编译源文件`Input.vb`和引用程序集从`Metad1.dll`并`Metad2.dll`以生成`Out.exe`。  
   
 ```console
 vbc -reference:metad1.dll,metad2.dll -out:out.exe input.vb  

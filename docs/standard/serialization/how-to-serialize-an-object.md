@@ -8,12 +8,12 @@ helpviewer_keywords:
 - serializing objects
 - objects, serializing steps
 ms.assetid: a1207d05-32b2-4953-8582-959607991227
-ms.openlocfilehash: b979d63132b44ee2e05fcc55cfdd4c79309a159b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e4d6e3edb15dbf5ba4b7ec7f8658fec1a618d315
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33581441"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45748570"
 ---
 # <a name="how-to-serialize-an-object"></a>如何：序列化对象
 要序列化对象，首先应创建要序列化的对象，然后设置其公共属性和字段。 为此，必须确定 XML 流的传输格式，即它是作为流还是作为文件进行存储。 例如，如果 XML 流必须以永久形式保存，则应创建 <xref:System.IO.FileStream> 对象。  
@@ -50,6 +50,7 @@ ms.locfileid: "33581441"
     myWriter.Close();  
     ```  
   
-## <a name="see-also"></a>请参阅  
- [XML 序列化简介](../../../docs/standard/serialization/introducing-xml-serialization.md)  
- [如何：反序列化对象](../../../docs/standard/serialization/how-to-deserialize-an-object.md)
+## <a name="see-also"></a>请参阅
+
+- [XML 序列化简介](../../../docs/standard/serialization/introducing-xml-serialization.md)  
+- [如何：反序列化对象](../../../docs/standard/serialization/how-to-deserialize-an-object.md)

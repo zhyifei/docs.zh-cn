@@ -2,12 +2,12 @@
 title: 如何：查找子代元素 (XPath-LINQ to XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: b318da39-bb8b-4c56-a019-e13b12b01831
-ms.openlocfilehash: c75b797f876df7696a26bb39792fa7cc7566e6f2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: df1b151948b7b11757f2f8f312fa1f0bba00673a
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33320984"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47078573"
 ---
 # <a name="how-to-find-descendant-elements-xpath-linq-to-xml-c"></a>如何：查找子代元素 (XPath-LINQ to XML) (C#)
 本主题演示如何获取具有特定名称的后代元素。  
@@ -49,5 +49,6 @@ Results are identical
 <Name>Jessica Arnold</Name>  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [针对 XPath 用户的 LINQ to XML (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
+## <a name="see-also"></a>请参阅
+
+- [针对 XPath 用户的 LINQ to XML (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)

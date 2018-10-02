@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: a4ebdbad-087c-4cfe-acc0-17c48142f81a
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 69fcd4bd8426bb349c090fc52f7a1f1a262378ea
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 40a530190ee4b19d72399ab877cf26bad1090b9f
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33570479"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46000708"
 ---
 # <a name="xslt-extension-objects"></a>XSLT 扩展对象
 扩展对象用于扩展样式表的功能。 扩展对象通过 <xref:System.Xml.Xsl.XsltArgumentList> 类来维护。  
@@ -24,7 +24,7 @@ ms.locfileid: "33570479"
  使用 <xref:System.Xml.Xsl.XsltArgumentList> 方法将 XSLT 扩展对象添加到 <xref:System.Xml.Xsl.XsltArgumentList.AddExtensionObject%2A> 对象。 此时，限定名和命名空间 URI 与扩展对象关联。  
   
 > [!NOTE]
->  调用 <xref:System.Xml.Xsl.XsltArgumentList.AddExtensionObject%2A> 方法要求具有 FullTrust 权限集。 有关详细信息，请参阅[代码访问安全性](http://msdn.microsoft.com/library/23a20143-241d-4fe5-9d9f-3933fd594c03)和 [NIB：命名权限集](https://msdn.microsoft.com/library/08250d67-c99d-4ab0-8d2b-b0e12019f6e3)。  
+>  调用 <xref:System.Xml.Xsl.XsltArgumentList.AddExtensionObject%2A> 方法要求具有 FullTrust 权限集。 有关详细信息，请参阅[代码访问安全性](https://msdn.microsoft.com/library/23a20143-241d-4fe5-9d9f-3933fd594c03)和 [NIB：命名权限集](https://msdn.microsoft.com/library/08250d67-c99d-4ab0-8d2b-b0e12019f6e3)。  
   
  从扩展对象返回的数据类型是四种 XPath 基本数据类型之一：`number`、`string`、`Boolean` 和 `node set`。  
   
@@ -38,6 +38,7 @@ ms.locfileid: "33570479"
   
 3.  将 <xref:System.Xml.Xsl.XsltArgumentList> 对象传递给 <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A> 方法。  
   
-## <a name="see-also"></a>请参阅  
- [XSLT 转换](../../../../docs/standard/data/xml/xslt-transformations.md)  
- [XSLT 安全注意事项](../../../../docs/standard/data/xml/xslt-security-considerations.md)
+## <a name="see-also"></a>请参阅
+
+- [XSLT 转换](../../../../docs/standard/data/xml/xslt-transformations.md)  
+- [XSLT 安全注意事项](../../../../docs/standard/data/xml/xslt-security-considerations.md)

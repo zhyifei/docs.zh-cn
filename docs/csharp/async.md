@@ -4,18 +4,18 @@ description: 了解 .NET Core 提供的 C# 语言级别异步编程模式。
 author: cartermp
 ms.date: 06/20/2016
 ms.assetid: b878c34c-a78f-419e-a594-a2b44fa521a4
-ms.openlocfilehash: b753b887da6f8836e0f4363a479c12c7364ea770
-ms.sourcegitcommit: 895c7602386a6dfe7ca4facce3d965b27e5c6e87
+ms.openlocfilehash: 971295b85e5f2763eef87bfe9109524db2630120
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34312061"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43865145"
 ---
 # <a name="asynchronous-programming"></a>异步编程
 
 如果需要 I/O 绑定（例如从网络请求数据或访问数据库），则需要利用异步编程。  还可以使用 CPU 绑定代码（例如执行成本高昂的计算），对编写异步代码而言，这是一个不错的方案。
 
-C# 拥有语言级别的异步编程模型，它使你能轻松编写异步代码，而无需应付回叫或符合支持异步的库。 它遵循[基于任务的异步模式 (TAP)](https://msdn.microsoft.com/library/hh873175.aspx)。
+C# 拥有语言级别的异步编程模型，它使你能轻松编写异步代码，而无需应付回叫或符合支持异步的库。 它遵循[基于任务的异步模式 (TAP)](../standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md)。
 
 ## <a name="basic-overview-of-the-asynchronous-model"></a>异步模型的基本概述
 
@@ -118,7 +118,7 @@ calculateButton.Clicked += async (o, e) =>
 
 ### <a name="extracting-data-from-a-network"></a>从网络提取数据
 
-此代码片段从 www.dotnetfoundation.org 下载 HTML，并对 HTML 中出现字符串“.NET”的次数计数。  它使用 ASP.NET MVC 定义执行此任务的 Web 控制器方法，以便返回数字。
+此代码片段从 [www.dotnetfoundation.org](https://www.dotnetfoundation.org) 主页下载 HTML，并对 HTML 中出现字符串“.NET”的次数计数。  它使用 ASP.NET MVC 定义执行此任务的 Web 控制器方法，以便返回数字。
 
 > [!NOTE]
 > 如果打算在生产代码中进行 HTML 分析，则不要使用正则表达式。 改为使用分析库。

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 7d8e9a46-1af6-4a02-bf61-969d77ae07e0
-ms.openlocfilehash: d9dcda6b93fbc036818ad2ad43da4bfac95f6833
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: c975913ab5df9c2e7f792ed73f8c5d20bdca1c5a
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32758148"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43526880"
 ---
 # <a name="modifying-data-with-stored-procedures"></a>使用存储过程修改数据
 存储过程可以接受数据作为输入参数并可以返回数据作为输出参数、结果集或返回值。 下面的示例演示 ADO.NET 如何发送和接收输入参数、输出参数及返回值。 该示例将一条新记录插入到一个表中，该表中的主键列为 SQL Server 数据库中的标识列。  
@@ -19,7 +19,7 @@ ms.locfileid: "32758148"
 >  如果您要通过 SQL Server 存储过程使用 <xref:System.Data.SqlClient.SqlDataAdapter> 来编辑或删除数据，请确保不要在存储过程定义中使用 SET NOCOUNT ON。 这将使返回的受影响的行数为零，`DataAdapter` 会将其解释为并发冲突。 在这种情况下，将引发 <xref:System.Data.DBConcurrencyException>。  
   
 ## <a name="example"></a>示例  
- 本示例使用以下存储的过程以插入到一个新类别**Northwind** **类别**表。 存储的过程采用的值**CategoryName**列作为输入的参数，并使用 scope_identity （） 函数来检索标识字段的新值**CategoryID**，并将其返回输出参数。 RETURN 语句使用 @@ROWCOUNT函数返回插入的行数。  
+ 该示例使用以下存储的过程插入到新的类别**Northwind** **类别**表。 存储的过程将值**CategoryName**列作为输入的参数，并使用 scope_identity （） 函数来检索标识字段的新值**CategoryID**，并将其返回output 参数。 RETURN 语句使用 @@ROWCOUNT函数返回插入的行数。  
   
 ```  
 CREATE PROCEDURE dbo.InsertCategory  
@@ -43,4 +43,4 @@ RETURN @@ROWCOUNT
  [在 ADO.NET 中检索和修改数据](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)  
  [DataAdapters 和 DataReaders](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)  
  [执行命令](../../../../docs/framework/data/adonet/executing-a-command.md)  
- [ADO.NET 托管提供程序和数据集开发人员中心](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)

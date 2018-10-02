@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4e919934-6b19-42f2-b770-275a4fae87c9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9eb57aa0d6645958691c0003b07db6e8bb844fc9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5b59e0bda45b0b45b49c22d49ec2556fbcfef75d
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33579562"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44221904"
 ---
 # <a name="globalization"></a>全球化
 全球化涉及到设计和开发世界通用的应用，这些应用支持本地化界面和区域数据，供位于多个区域性的用户使用。 在设计阶段开始之前，应确定应用将支持哪些区域性。 虽然应用以单一区域性或区域作为默认目标，但可设计和编写应用，使其能够轻松地供其他区域性或区域的用户使用。  
@@ -369,6 +369,7 @@ ms.locfileid: "33579562"
   
 -   用户可使用“控制面板”中的“区域和语言”应用，自定义区域性专用设置。 在实例化 <xref:System.Globalization.CultureInfo> 对象时，可调用 <xref:System.Globalization.CultureInfo.%23ctor%28System.String%2CSystem.Boolean%29?displayProperty=nameWithType> 构造函数来确定它是否反射这些用户自定义。 通常，对最终用户应用而言，应考虑用户首选项，以用户期望的格式呈现数据。  
   
-## <a name="see-also"></a>请参阅  
- [全球化和本地化](../../../docs/standard/globalization-localization/index.md)  
- [有关使用字符串的最佳做法](../../../docs/standard/base-types/best-practices-strings.md)
+## <a name="see-also"></a>请参阅
+
+- [全球化和本地化](../../../docs/standard/globalization-localization/index.md)  
+- [有关使用字符串的最佳做法](../../../docs/standard/base-types/best-practices-strings.md)

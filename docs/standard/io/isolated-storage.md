@@ -20,18 +20,18 @@ helpviewer_keywords:
 ms.assetid: aff939d7-9e49-46f2-a8cd-938d3020e94e
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 7ab12ac28728535c3bc984d6b37d82f5bf371ba2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 88c70e6a35e0a731cd8937b188dc6ee8e9bce105
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33579465"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44185592"
 ---
 # <a name="isolated-storage"></a>独立存储
 <a name="top"></a>对于 [!INCLUDE[desktop_appname](../../../includes/desktop-appname-md.md)] 应用，独立存储是一种数据存储机制，它在代码与保存的数据之间定义了标准化的关联方式，从而提供隔离性和安全性。 同时，标准化也提供了其他好处。 管理员可以使用旨在操作独立存储的工具来配置文件存储空间、设置安全策略及删除未使用的数据。 通过独立存储，代码不再需要使用唯一的路径来指定文件系统中的安全位置，同时可以保护数据免遭只具有独立存储访问权限的其他应用程序的损坏。 不再需要指示应用程序的存储区域位置的硬编码信息。  
   
 > [!IMPORTANT]
->  独立存储不适用于 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 应用。 相反，使用 `Windows.Storage` API 中包含的 [!INCLUDE[wrt](../../../includes/wrt-md.md)] 命名空间中的应用程序数据类来存储本地数据和文件。 有关详细信息，请参阅 Windows 开发人员中心中的[应用程序数据](/previous-versions/windows/apps/hh464917(v=win.10))。  
+>  独立存储不适用于 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 应用。 相反，使用 `Windows.Storage` API 中包含的 [!INCLUDE[wrt](../../../includes/wrt-md.md)] 命名空间中的应用程序数据类来存储本地数据和文件。 有关详细信息，请参阅 Windows 开发人员中心中的[应用程序数据](https://docs.microsoft.com/previous-versions/windows/apps/hh464917(v=win.10))。  
   
  本主题包含以下各节：  
   

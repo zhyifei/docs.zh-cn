@@ -2,15 +2,15 @@
 title: 传输：UDP 示例上的自定义事务
 ms.date: 03/30/2017
 ms.assetid: 6cebf975-41bd-443e-9540-fd2463c3eb23
-ms.openlocfilehash: 911331d5f5120f33a6c442a1eb4b2be2c8269a0e
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: b3a105194ceef9d9091dfbc9521fd47978517f89
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33806141"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43521087"
 ---
 # <a name="transport-custom-transactions-over-udp-sample"></a>传输：UDP 示例上的自定义事务
-此示例基于[传输： UDP](../../../../docs/framework/wcf/samples/transport-udp.md)中 Windows Communication Foundation (WCF) 示例[传输可扩展性](../../../../docs/framework/wcf/samples/transport-extensibility.md)。 它扩展 UDP 传输示例，以支持自定义事务流并演示 <xref:System.ServiceModel.Channels.TransactionMessageProperty> 属性的用法。  
+此示例基于[传输： UDP](../../../../docs/framework/wcf/samples/transport-udp.md)在 Windows Communication Foundation (WCF) 示例[传输可扩展性](../../../../docs/framework/wcf/samples/transport-extensibility.md)。 它扩展 UDP 传输示例，以支持自定义事务流并演示 <xref:System.ServiceModel.Channels.TransactionMessageProperty> 属性的用法。  
   
 ## <a name="code-changes-in-the-udp-transport-sample"></a>UDP 传输示例中的代码更改  
  为了演示事务流，示例对 `ICalculatorContract` 的服务协定进行了更改，用于为 `CalculatorService.Add()` 设定一个事务范围。 本示例还向 `System.Guid` 操作的协定另外添加了一个 `Add` 参数。 此参数用于将客户端事务的标识符传递给服务。  
@@ -38,7 +38,7 @@ class CalculatorService : IDatagramContract, ICalculatorContract
 }  
 ```  
   
- [传输： UDP](../../../../docs/framework/wcf/samples/transport-udp.md)示例使用 UDP 数据包来将消息传递客户端和服务之间。 [传输： 自定义传输示例](../../../../docs/framework/wcf/samples/transport-custom-transactions-over-udp-sample.md)使用相同的机制以传输消息的但当事务进行流处理，则将该项插入到编码的消息以及将 UDP 数据包。  
+ [传输： UDP](../../../../docs/framework/wcf/samples/transport-udp.md)示例使用 UDP 数据包在客户端和服务之间传递消息。 [传输： 自定义传输示例](../../../../docs/framework/wcf/samples/transport-custom-transactions-over-udp-sample.md)使用相同的机制传输消息，但当事务进行流处理，则将该项插入到编码的消息以及 UDP 数据包。  
   
 ```  
 byte[] txmsgBuffer =                TransactionMessageBuffer.WriteTransactionMessageBuffer(txPropToken, messageBuffer);  
@@ -48,7 +48,7 @@ int bytesSent = this.socket.SendTo(txmsgBuffer, 0, txmsgBuffer.Length, SocketFla
   
  `TransactionMessageBuffer.WriteTransactionMessageBuffer` 是一个帮助器方法，包含用于将当前事务的传播程序令牌与消息实体合并，并将合并结果放入缓冲区中的新功能。  
   
- 对于自定义事务流传输，客户端实现必须了解哪些服务操作要求事务流，并将此信息传递到 WCF。 还应存在用于将用户事务传递到传输层的机制。 此示例使用"WCF 消息检查器"获取此信息。 此处实现的名为 `TransactionFlowInspector` 的客户端消息检查器执行下列任务：  
+ 对于自定义事务流传输，客户端实现必须知道哪些服务操作要求事务流，并将此信息传递到 WCF。 还应存在用于将用户事务传递到传输层的机制。 此示例使用"WCF 消息检查器"获取此信息。 此处实现的名为 `TransactionFlowInspector` 的客户端消息检查器执行下列任务：  
   
 -   确定对于给定的消息操作，事务是否必须进行流处理（这发生在 `IsTxFlowRequiredForThisOperation()` 中）。  
   
@@ -178,7 +178,7 @@ if (transaction != null)
   
 1.  若要生成解决方案，请按照中的说明[生成 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/building-the-samples.md)。  
   
-2.  当前的示例应类似于运行[传输： UDP](../../../../docs/framework/wcf/samples/transport-udp.md)示例。 若要运行该示例，请使用 UdpTestService.exe 启动服务。 如果运行的是 [!INCLUDE[windowsver](../../../../includes/windowsver-md.md)]，必须使用提升的特权启动服务。 为此，请右键单击 UdpTestService.exe 中的[!INCLUDE[fileExplorer](../../../../includes/fileexplorer-md.md)]单击**以管理员身份运行**。  
+2.  当前示例应类似于运行[传输： UDP](../../../../docs/framework/wcf/samples/transport-udp.md)示例。 若要运行该示例，请使用 UdpTestService.exe 启动服务。 如果运行的是 [!INCLUDE[windowsver](../../../../includes/windowsver-md.md)]，必须使用提升的特权启动服务。 为此，请右键单击在 UdpTestService.exe[!INCLUDE[fileExplorer](../../../../includes/fileexplorer-md.md)]然后单击**以管理员身份运行**。  
   
 3.  将生成以下输出。  
   
@@ -258,7 +258,7 @@ if (transaction != null)
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目录不存在，请转到[Windows Communication Foundation (WCF) 和针对.NET Framework 4 的 Windows Workflow Foundation (WF) 示例](http://go.microsoft.com/fwlink/?LinkId=150780)下载所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
+>  如果此目录不存在，请转到[Windows Communication Foundation (WCF) 和.NET Framework 4 的 Windows Workflow Foundation (WF) 示例](https://go.microsoft.com/fwlink/?LinkId=150780)若要下载所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Transactions\TransactionMessagePropertyUDPTransport`  
   

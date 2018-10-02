@@ -2,12 +2,12 @@
 title: OLE DB、ODBC 和 Oracle 连接池
 ms.date: 03/30/2017
 ms.assetid: 2bd83b1e-3ea9-43c4-bade-d9cdb9bbbb04
-ms.openlocfilehash: 5b70f6aeeae565684158aeb135d0d3e765e694d1
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: 3ce65036605b7693955c3a6064fca80263d3538f
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33803119"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43527371"
 ---
 # <a name="ole-db-odbc-and-oracle-connection-pooling"></a>OLE DB、ODBC 和 Oracle 连接池
 池连接可以显著提高应用程序的性能和可缩放性。 本节介绍用于 OLE DB、ODBC 和 Oracle 的 .NET Framework 数据提供程序的连接池。  
@@ -21,7 +21,7 @@ Provider=SQLOLEDB;OLE DB Services=-4;Data Source=localhost;Integrated Security=S
   
  我们建议您在使用完连接后始终将其关闭或释放，以便连接可以返回到池。 不是显式关闭的连接可能无法返回池。 例如，如果连接已超出范围但没有显式关闭，则仅当达到最大池大小而该连接仍然有效时，该连接才会返回到连接池中。  
   
- 有关 OLE DB 会话或资源池，以及对如何通过重写 OLE DB 提供程序服务默认值禁用池的详细信息，请参阅[OLE DB 程序员指南](http://go.microsoft.com/fwlink/?linkid=45232)。  
+ 有关 OLE DB 会话或资源池，以及如何通过重写 OLE DB 提供程序服务默认值禁用池的详细信息，请参阅[OLE DB 程序员指南](https://go.microsoft.com/fwlink/?linkid=45232)。  
   
 ## <a name="connection-pooling-for-odbc"></a>Odbc 连接池  
  ODBC .NET Framework 数据提供程序的连接池由用于该连接的 ODBC 驱动程序管理器管理，不受 ODBC .NET Framework 数据提供程序的影响。  
@@ -51,7 +51,7 @@ Provider=SQLOLEDB;OLE DB Services=-4;Data Source=localhost;Integrated Security=S
  不要在类的 `Close` 方法中对 `Dispose`、`Connection` 或任何其他托管对象调用 `DataReader` 或 `Finalize`。 在终结器中，仅释放类直接拥有的非托管资源。 如果类不拥有任何非托管资源，则不要在类定义中包含 `Finalize` 方法。 有关详细信息，请参阅[垃圾回收](../../../../docs/standard/garbage-collection/index.md)。  
   
 ### <a name="transaction-support"></a>事务支持  
- 连接是根据事务上下文来从池中取出并进行分配的。 请求线程和所分配的连接的上下文必须匹配。 因此，每个连接池实际上划分成连接与任何事务上下文关联，并放入*N*细分，每个包含与特定事务上下文的连接。  
+ 连接是根据事务上下文来从池中取出并进行分配的。 请求线程和所分配的连接的上下文必须匹配。 因此，每个连接池实际上划分成连接相关联，并到没有事务上下文*N*各自包含与特定事务上下文的连接。  
   
  当连接关闭时，它将被释放回池中，并根据其事务上下文放入相应的子部分。 因此，即使分布式事务仍然挂起，仍可以关闭该连接而不会生成错误。 这样，您就可以在随后提交或中止分布式事务。  
   
@@ -71,4 +71,4 @@ Provider=SQLOLEDB;OLE DB Services=-4;Data Source=localhost;Integrated Security=S
 ## <a name="see-also"></a>请参阅  
  [连接池](../../../../docs/framework/data/adonet/connection-pooling.md)  
  [性能计数器](../../../../docs/framework/data/adonet/performance-counters.md)  
- [ADO.NET 托管提供程序和数据集开发人员中心](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)

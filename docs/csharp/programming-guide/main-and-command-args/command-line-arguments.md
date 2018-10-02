@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - command-line arguments [C#]
 ms.assetid: 0e597e0d-ea7a-41ba-a38a-0198122f3c26
-ms.openlocfilehash: 92b3f916b58f72ab2f2f542d3a611d35861afebe
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a55e40a4a4880c39c74186c55b0886e06dc33bcb
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33335320"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44083944"
 ---
 # <a name="command-line-arguments-c-programming-guide"></a>命令行参数（C# 编程指南）
 可以通过以下方式之一定义方法来将自变量发送到 `Main` 方法：  
@@ -71,13 +71,14 @@ long num = Convert.ToInt64(s);
 > [!NOTE]
 >  在 Visual Studio 中运行应用程序时，可在[“项目设计器”->“调试”页](/visualstudio/ide/reference/debug-page-project-designer)中指定命令行参数。  
   
- 有关如何使用命令行参数的更多示例，请参阅[如何：使用命令行创建和使用程序集](http://msdn.microsoft.com/library/70f65026-3687-4e9c-ab79-c18b97dd8be4)。  
+ 有关如何使用命令行参数的更多示例，请参阅[如何：使用命令行创建和使用程序集](../../../csharp/programming-guide/concepts/assemblies-gac/how-to-create-and-use-assemblies-using-the-command-line.md)。  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Environment?displayProperty=nameWithType>  
- [C# 编程指南](../../../csharp/programming-guide/index.md)  
- [Main() 和命令行参数](../../../csharp/programming-guide/main-and-command-args/index.md)  
- [如何：显示命令行参数](../../../csharp/programming-guide/main-and-command-args/how-to-display-command-line-arguments.md)  
- [如何：使用 foreach 访问命令行参数](../../../csharp/programming-guide/main-and-command-args/how-to-access-command-line-arguments-using-foreach.md)  
- [Main() 返回值](../../../csharp/programming-guide/main-and-command-args/main-return-values.md)  
- [类](../../../csharp/programming-guide/classes-and-structs/classes.md)
+## <a name="see-also"></a>请参阅
+
+- <xref:System.Environment?displayProperty=nameWithType>  
+- [C# 编程指南](../../../csharp/programming-guide/index.md)  
+- [Main() 和命令行参数](../../../csharp/programming-guide/main-and-command-args/index.md)  
+- [如何：显示命令行参数](../../../csharp/programming-guide/main-and-command-args/how-to-display-command-line-arguments.md)  
+- [如何：使用 foreach 访问命令行参数](../../../csharp/programming-guide/main-and-command-args/how-to-access-command-line-arguments-using-foreach.md)  
+- [Main() 返回值](../../../csharp/programming-guide/main-and-command-args/main-return-values.md)  
+- [类](../../../csharp/programming-guide/classes-and-structs/classes.md)

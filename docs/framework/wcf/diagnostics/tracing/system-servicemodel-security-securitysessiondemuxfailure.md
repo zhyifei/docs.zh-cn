@@ -3,13 +3,12 @@ title: System.ServiceModel.Security.SecuritySessionDemuxFailure
 ms.date: 03/30/2017
 ms.assetid: 74b89d9a-22be-4799-b9fb-e3dfa5426dec
 author: BrucePerlerMS
-manager: mbaldwin
-ms.openlocfilehash: c5b1d815dcdcda31f90c5c4057bef0cf73fd502d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 502eb49616c4b274b59c64a3e4f2c65af9fcda5e
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33482399"
+ms.lasthandoff: 09/27/2018
+ms.locfileid: "47234567"
 ---
 # <a name="systemservicemodelsecuritysecuritysessiondemuxfailure"></a>System.ServiceModel.Security.SecuritySessionDemuxFailure
 System.ServiceModel.Security.SecuritySessionDemuxFailure  

@@ -3,13 +3,12 @@ title: Security Validation and Authentication Failures Per Second（每秒安全
 ms.date: 03/30/2017
 ms.assetid: 266c3bd3-2ffc-4471-94b7-3675443be1ac
 author: BrucePerlerMS
-manager: mbaldwin
-ms.openlocfilehash: e69dafaf2e415a0686594c4757bcf20dfd135944
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 01fb7afd363e85e9c9ac5625175f350c00f66f26
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33473218"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47204487"
 ---
 # <a name="security-validation-and-authentication-failures-per-second"></a>Security Validation and Authentication Failures Per Second（每秒安全验证和身份验证失败次数）
 计数器名称：Security Validation and Authentication Failures Per Second（每秒安全验证和身份验证失败次数）。  
@@ -31,6 +30,6 @@ ms.locfileid: "33473218"
   
 -   TLSNEGO/SPNEGO 握手过程中已发生错误。  
   
- 此计数器为性能计数器类型[PERF_COUNTER_COUNTER](http://go.microsoft.com/fwlink/?LinkID=94649)，使用以下公式计算其值：  
+ 此计数器为性能计数器类型[PERF_COUNTER_COUNTER](https://go.microsoft.com/fwlink/?LinkID=94649)，使用以下公式计算其值：  
   
  (N1-N0)/((D1-D0)/F)

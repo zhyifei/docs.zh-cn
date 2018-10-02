@@ -2,12 +2,12 @@
 title: 分析 XML (C#)
 ms.date: 07/20/2015
 ms.assetid: 7ea83f83-a779-423a-9875-4ea4e51f97fc
-ms.openlocfilehash: 876cfdf7bd5a82aba75d456d6d5cda57e080fdf0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a2dc3043c8cbf8138a164ab06d8394e4c859fa50
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33321699"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43523023"
 ---
 # <a name="parsing-xml-c"></a>分析 XML (C#)
 本节中的主题介绍如何分析 XML 文档。  
@@ -23,5 +23,6 @@ ms.locfileid: "33321699"
 |[如何：从 XmlReader 创建树 (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-create-a-tree-from-an-xmlreader.md)|演示如何从 <xref:System.Xml.XmlReader> 直接创建 XML 树。|  
 |[如何：从 XmlReader 流式处理 XML 片段 (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-stream-xml-fragments-from-an-xmlreader.md)|演示如何使用 <xref:System.Xml.XmlReader> 对 XML 片段进行流式处理。<br /><br /> 如果必须处理很大的 XML 文件，将整个 XML 树加载到内存可能不可行。 这时，可以对 XML 片段进行流式处理。|  
   
-## <a name="see-also"></a>请参阅  
- [创建 XML 树 (C#)](../../../../csharp/programming-guide/concepts/linq/creating-xml-trees.md)
+## <a name="see-also"></a>请参阅
+
+- [创建 XML 树 (C#)](../../../../csharp/programming-guide/concepts/linq/creating-xml-trees.md)

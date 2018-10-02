@@ -2,12 +2,12 @@
 title: 限制消息分布
 ms.date: 03/30/2017
 ms.assetid: 8b5ec4b8-1ce9-45ef-bb90-2c840456bcc1
-ms.openlocfilehash: 006cfaffe02752bb91e9f7d780477aecbaeb9c9e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: bec5a28abeff23929d2c0f1c363f4e08872a63fa
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33495810"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43738641"
 ---
 # <a name="limiting-message-distribution"></a>限制消息分布
 对等通道设计为一个广播网格。 其基本洪泛模型实现以下操作：将任意网格成员发送的每条消息均分发给该网格的所有其他成员。 在某个成员生成的每条消息都与所有其他成员相关且对他们有用的情况下（例如聊天室），这是一个理想的模型。 但是，许多应用程序偶尔需要限制消息分发。 例如，如果一个新成员加入网格，希望检索通过网格发送的最后一条消息，则无需将此请求群发给该网格的每个成员。 可以将请求限制为仅发送给近邻，或是筛选出本地生成的消息。也可以将消息发送到网格上的单个节点。 本主题讨论如何使用跃点计数、消息传播筛选器、本地筛选器或直接连接来控制通过网格转发消息的方式，并提供有关方式选择的通用准则。  
@@ -17,14 +17,14 @@ ms.locfileid: "33495810"
   
  可以通过将 `PeerHopCount` 作为属性 (attribute) 添加到邮件类实现中适用的属性 (property) 或字段中，来将跃点计数添加到消息中。 在将消息发送到网格之前，可以将该属性 (Property) 或字段设置为特定值。 这样，您可以根据需要使用跃点计数来限制消息在整个网格内的分发，潜在避免不必要的消息复制。 当网格包含大量的冗余数据，或者将消息发送到近邻或相距几个跃点的邻居时，这是很有用的。  
   
--   有关代码段和相关的信息，请参阅[对等通道博客](http://go.microsoft.com/fwlink/?LinkID=114531)(http://go.microsoft.com/fwlink/?LinkID=114531)。  
+-   有关代码段和相关的信息，请参阅[对等通道博客](https://go.microsoft.com/fwlink/?LinkID=114531)。  
   
 ## <a name="message-propagation-filter"></a>消息传播筛选器  
  `MessagePropagationFilter` 可以用于消息洪泛的自定义控制，尤其是在消息内容或其他特定方案确定传播时。 筛选器为通过节点的每个消息做出传播决定。 对于您的节点收到的产生自网格中其他位置的消息，以及您的应用程序创建的消息，就是这样做出决定的。 筛选器可以访问消息及其来源，因此可以基于可用的完整信息做出有关转发或丢弃消息的决定。  
   
  <xref:System.ServiceModel.PeerMessagePropagationFilter> 是具有单个函数 <xref:System.ServiceModel.PeerMessagePropagationFilter.ShouldMessagePropagate%2A> 的抽象基类。 方法调用的第一个参数传入消息的完整副本。 对消息所做的任何更改都不会影响实际的消息。 方法调用的最后一个参数标识消息的源（`PeerMessageOrigination.Local` 或 `PeerMessageOrigination.Remote`）。 此方法的具体实现必须从 <xref:System.ServiceModel.PeerMessagePropagation> 枚举返回一个常量，以表示消息是要转发给本地应用程序 (`Local`)、转发给远程客户端 (`Remote`)、同时转发给本地应用程序和远程客户端 (`LocalAndRemote`)，还是均不转发 (`None`)。 可以通过访问对应的 `PeerNode` 对象，并在 `PeerNode.MessagePropagationFilter` 属性中指定所派生传播筛选器类的实例，来应用此筛选器。 请确保在打开对等通道之前附加传播筛选器。  
   
--   有关代码段和相关的信息，请参阅[对等通道博客](http://go.microsoft.com/fwlink/?LinkID=114532)(http://go.microsoft.com/fwlink/?LinkID=114532)。  
+-   有关代码段和相关的信息，请参阅[对等通道博客](https://go.microsoft.com/fwlink/?LinkID=114532)。  
   
 ## <a name="contacting-an-individual-node-in-the-mesh"></a>与网格中的单个节点联系  
  通过设置本地筛选器或直接连接，可以与网格中的单个节点联系。  
@@ -36,15 +36,15 @@ ms.locfileid: "33495810"
 ## <a name="choosing-an-approach-for-limiting-message-distribution"></a>选择用于限制消息分发的方法  
  发现需要限制消息分发的情形时，请考虑以下问题：  
   
--   **谁**需要接收消息？ 仅仅是一个邻居节点？ 网格中其他位置的节点？ 还是半个网格？  
+-   **谁**需要接收该消息？ 仅仅是一个邻居节点？ 网格中其他位置的节点？ 还是半个网格？  
   
--   **频率**将发送此消息？  
+-   **何种频率**将发送此消息？  
   
 -   哪种类型的**带宽**此消息将使用？  
   
  对这些问题的回答将帮助您确定是使用跃点计数、消息传播筛选器、本地筛选器还是直接连接。 请考虑以下通用准则：  
   
--   **人员**  
+-   **谁**  
   
     -   *单个节点*： 本地筛选器或直接连接。  
   
@@ -52,9 +52,9 @@ ms.locfileid: "33495810"
   
     -   *复杂的网格子集*: MessagePropagationFilter。  
   
--   **频率**  
+-   **何种频率**  
   
-    -   *非常频繁*： 直接连接、 peerhopcount 或 MessagePropagationFilter。  
+    -   *非常频繁*： 直接连接、 PeerHopCount 或 MessagePropagationFilter。  
   
     -   *偶尔*： 本地筛选器。  
   
@@ -62,7 +62,7 @@ ms.locfileid: "33495810"
   
     -   *高*： 直接连接，次选 MessagePropagationFilter 或本地筛选器。  
   
-    -   *低*： 可能不需要任何，直接连接。  
+    -   *低*： 很可能不需要任何，直接连接。  
   
 ## <a name="see-also"></a>请参阅  
  [生成对等通道应用程序](../../../../docs/framework/wcf/feature-details/building-a-peer-channel-application.md)

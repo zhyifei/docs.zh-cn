@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: fb259282-84c4-4dc4-a226-78d904a6edc3
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 5bcd17cfe1f3bd7531453b62552a4907df5b96bc
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 9542332085d0b0319c55db63fd98c9dd8eb3f576
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32741979"
+ms.lasthandoff: 09/27/2018
+ms.locfileid: "47235921"
 ---
 # <a name="ltcleargt-element-for-connectionmanagement-network-settings"></a>&lt;清除&gt;connectionManagement （网络设置） 的元素
 清除连接管理列表。  
@@ -56,7 +55,7 @@ ms.locfileid: "32741979"
  此元素可在应用程序配置文件或计算机配置文件 (Machine.config) 中使用。  
   
 ## <a name="example"></a>示例  
- 下面的示例清除连接管理列表，然后添加新服务器 www.contoso.com 和所有其他网络主机的连接管理条目。  
+ 以下示例清除连接管理列表中，然后添加服务器 www.contoso.com 和所有其他网络主机的新连接管理项。  
   
 ```xml  
 <configuration>  

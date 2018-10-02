@@ -2,12 +2,12 @@
 title: '&lt;tcpTransport&gt;'
 ms.date: 03/30/2017
 ms.assetid: 8fcd18c1-9958-42e7-b442-7903f7bdb563
-ms.openlocfilehash: 4141b0f6493c51048ad60accdc1d5ee9bac01231
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 92590f556d93859e8681eea8f8f05da4f560e150
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32751072"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43738159"
 ---
 # <a name="lttcptransportgt"></a>&lt;tcpTransport&gt;
 定义通道用于传输自定义绑定消息的 TCP 传输。  
@@ -63,7 +63,7 @@ ms.locfileid: "32751072"
 |maxPendingConnections|获取或设置在服务上等待调度的最大连接数。|  
 |maxReceivedMessageSize|获取和设置允许接收的最大消息大小。|  
 |portSharingEnabled|一个布尔值，指定是否为此连接启用 TCP 端口共享。 如果此值为 `false`，则每个绑定都将使用自己的独占端口。 默认值为 `false`。<br /><br /> 此设置只与服务相关。 客户端并不会受影响。<br /><br /> 使用此设置要求通过将 Windows Communication Foundation (WCF) TCP 端口共享服务的“启动类型”设置为“手动”或“自动”来启用该服务。|  
-|teredoEnabled|一个布尔值，指定是否启用 Teredo（一种用于对防火墙后的客户端进行寻址的技术）。 默认值为 `false`。<br /><br /> 此属性为基础 TCP 套接字启用 Teredo。 有关详细信息，请参阅[Teredo 概述](http://go.microsoft.com/fwlink/?LinkId=95339)。<br /><br /> 此属性仅适用于 [!INCLUDE[wxpsp2](../../../../../includes/wxpsp2-md.md)] 和 [!INCLUDE[ws2003](../../../../../includes/ws2003-md.md)]。 [!INCLUDE[wv](../../../../../includes/wv-md.md)] 具有用于 Teredo 的计算机范围的配置选项，因此运行 Vista 时将忽略此属性。 Teredo 要求客户端和服务计算机都安装 Microsoft IPv6 堆栈，并进行正确的配置以便使用 Teredo。 有关配置 Teredo 的详细信息，请参阅[Teredo 概述](http://go.microsoft.com/fwlink/?LinkId=95339)。 有关详细信息，请参阅[Windows Server 2003 技术中心](http://go.microsoft.com/fwlink/?LinkId=49888)。|  
+|teredoEnabled|一个布尔值，指定是否启用 Teredo（一种用于对防火墙后的客户端进行寻址的技术）。 默认值为 `false`。<br /><br /> 此属性为基础 TCP 套接字启用 Teredo。 有关详细信息，请参阅[Teredo 概述](https://go.microsoft.com/fwlink/?LinkId=95339)。<br /><br /> 此属性仅适用于 [!INCLUDE[wxpsp2](../../../../../includes/wxpsp2-md.md)] 和 [!INCLUDE[ws2003](../../../../../includes/ws2003-md.md)]。 [!INCLUDE[wv](../../../../../includes/wv-md.md)] 具有用于 Teredo 的计算机范围的配置选项，因此运行 Vista 时将忽略此属性。 Teredo 要求客户端和服务计算机都安装 Microsoft IPv6 堆栈，并进行正确的配置以便使用 Teredo。 有关配置 Teredo 的详细信息，请参阅[Teredo 概述](https://go.microsoft.com/fwlink/?LinkId=95339)。 有关详细信息，请参阅[Windows Server 2003 技术中心](https://go.microsoft.com/fwlink/?LinkId=49888)。|  
 |transferMode|获取或设置一个值，该值指示通过面向连接的传输对消息进行缓冲还是流处理。|  
 |connectionPoolSettings|指定命名管道绑定的其他连接池设置。|  
   

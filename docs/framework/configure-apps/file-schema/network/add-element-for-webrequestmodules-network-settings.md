@@ -1,5 +1,5 @@
 ---
-title: '&lt;添加&gt;webRequestModules （网络设置） 的元素'
+title: '&lt;添加&gt;webRequestModules （网络设置） 的'
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/webRequestModules/add
@@ -12,15 +12,14 @@ helpviewer_keywords:
 ms.assetid: 47ec4adc-f39f-4bcd-8680-1ec21fd26890
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 921f5f2bfda1a19d022d3f3f4131e3653fd17ea7
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 64df186be7d9e503ac22e177bca8da31e165f240
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32742785"
+ms.lasthandoff: 09/27/2018
+ms.locfileid: "47402664"
 ---
-# <a name="ltaddgt-element-for-webrequestmodules-network-settings"></a>&lt;添加&gt;webRequestModules （网络设置） 的元素
+# <a name="ltaddgt-element-for-webrequestmodules-network-settings"></a>&lt;添加&gt;webRequestModules （网络设置） 的
 将自定义的 Web 请求模块添加到应用程序。  
   
  \<configuration>  
@@ -45,7 +44,7 @@ ms.locfileid: "32742785"
 |**特性**|**说明**|  
 |-------------------|---------------------|  
 |`prefix`|此 Web 请求模块处理的请求 URI 前缀。|  
-|`type`|完全限定的类型名称 (由<xref:System.Type.FullName%2A>属性) 和程序集名称 (由<xref:System.Reflection.Assembly.FullName%2A>属性)，用逗号、 实现此 Web 请求模块分隔。|  
+|`type`|完全限定的类型名 (由<xref:System.Type.FullName%2A>属性) 和程序集名称 (由<xref:System.Reflection.Assembly.FullName%2A>属性)、 分隔一个逗号，实现该 Web 请求模块。|  
   
 ### <a name="child-elements"></a>子元素  
  无。  
@@ -54,22 +53,22 @@ ms.locfileid: "32742785"
   
 |**元素**|**说明**|  
 |-----------------|---------------------|  
-|[webRequestModules](../../../../../docs/framework/configure-apps/file-schema/network/webrequestmodules-element-network-settings.md)|指定要用于从网络主机请求信息的模块。|  
+|[webRequestModules](../../../../../docs/framework/configure-apps/file-schema/network/webrequestmodules-element-network-settings.md)|指定模块用于从网络主机请求信息。|  
   
 ## <a name="remarks"></a>备注  
- `prefix`属性定义了使用指定的 Web 请求模块的 URI 前缀。 Web 请求模块通常注册用于处理特定的协议，如 HTTP 或 FTP，但可以注册用于处理请求的特定服务器或服务器上的路径。  
+ `prefix`属性定义使用指定的 Web 请求模块的 URI 前缀。 Web 请求模块通常注册用于处理特定的协议，例如 HTTP 或 FTP，但可以注册用于处理对特定服务器或服务器上的路径的请求。  
   
  当 URI 匹配的前缀传递给创建 Web 请求模块<xref:System.Net.WebRequest.Create%2A?displayProperty=nameWithType>方法。  
   
- 值`prefix`属性应为有效的 URI-例如，"http"，前导字符或"http://www.contoso.com"。  
+ 值为`prefix`属性应为有效的 URI 的前导字符。 例如，`http` 或 `http://www.contoso.com`。
   
- 值`type`属性应为有效类型名称和相应的程序集名称，用逗号分隔。  
+ 值为`type`属性应为有效的类型名称和相应的程序集名称，用逗号分隔。
   
 ## <a name="configuration-files"></a>配置文件  
  此元素可在应用程序配置文件或计算机配置文件 (Machine.config) 中使用。  
   
 ## <a name="example"></a>示例  
- 下面的示例对 HTTP 注册自定义的 Web 请求模块。 版本和 PublicKeyToken 提供值应替换为指定的模块的正确值。  
+ 下面的示例为 HTTP 注册自定义的 Web 请求模块。 应使用正确的值指定模块的版本和 PublicKeyToken 替换值。  
   
 ```xml  
 <configuration>  

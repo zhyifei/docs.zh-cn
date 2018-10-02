@@ -4,12 +4,12 @@ description: 适用于容器化 .NET 应用程序的 .NET 微服务体系结构 
 author: mjrousos
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.openlocfilehash: 171d9120e4817065ddafc9dfa9caa362694ddeb3
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.openlocfilehash: 5738b81c90c886aff48451742881807dc09a9ff9
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37105279"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43863982"
 ---
 # <a name="using-azure-key-vault-to-protect-secrets-at-production-time"></a>在生产时使用 Azure Key Vault 保护机密
 
@@ -19,7 +19,7 @@ Microsoft.Extensions.Configuration.AzureKeyVault 包允许 ASP.NET Core 应用�
 
 首先，将你的应用程序注册为 Azure AD 应用程序。 （对密钥保管库的访问由 Azure AD 管理。）可以通过 Azure 管理门户完成此操作。
 
-或者，如果希望应用程序使用凭据而非密码或客户端密码进行身份验证，则可以使用 [New-AzureRmADApplication](https://docs.microsoft.com/powershell/resourcemanager/azurerm.resources/v3.3.0/new-azurermadapplication) PowerShell cmdlet。 向 Azure Key Vault 注册的证书仅需要公钥。 （你的应用程序将使用私钥。）
+或者，如果希望应用程序使用凭据而非密码或客户端密码进行身份验证，则可以使用 [New-AzureRmADApplication](https://docs.microsoft.com/powershell/module/azurerm.resources/new-azurermadapplication) PowerShell cmdlet。 向 Azure Key Vault 注册的证书仅需要公钥。 （你的应用程序将使用私钥。）
 
 其次，通过创建新的服务主体授予已注册应用程序访问密钥保管库权限。 可以使用以下 PowerShell 命令来执行此操作：
 
@@ -71,8 +71,8 @@ var kvClient = new KeyVaultClient(new KeyVaultClient.AuthenticationCallback(asyn
 -   **密钥管理和生存期**
     [*https://docs.microsoft.com/aspnet/core/security/data-protection/configuration/default-settings\#data-protection-default-settings*](https://docs.microsoft.com/aspnet/core/security/data-protection/configuration/default-settings#data-protection-default-settings)
 
--   **Microsoft.Extensions.Configuration.DockerSecrets.** GitHub 存储库。
-    [*https://github.com/aspnet/Configuration/tree/dev/src/Microsoft.Extensions.Configuration.DockerSecrets*](https://github.com/aspnet/Configuration/tree/dev/src/Microsoft.Extensions.Configuration.DockerSecrets)
+-   Microsoft.Extensions.Configuration.KeyPerFile GitHub 存储库。
+    [*https://github.com/aspnet/Configuration/tree/master/src/Config.KeyPerFile*](https://github.com/aspnet/Configuration/tree/master/src/Config.KeyPerFile)
 
 >[!div class="step-by-step"]
 [上一页](developer-app-secrets-storage.md)

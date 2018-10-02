@@ -8,12 +8,12 @@ helpviewer_keywords:
 - DllImport attribute
 - extern keyword [C#]
 ms.assetid: 9c3f02c4-51b8-4d80-9cb2-f2b6e1ae15c7
-ms.openlocfilehash: aca1a9fa0b57e9b3b0a515a805039ade2fe0c2f1
-ms.sourcegitcommit: f9e38d31288fe5962e6be5b0cc286da633482873
+ms.openlocfilehash: 92ba2324345a6fc196dc3702e5f84886fba09ffc
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37027910"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "43892754"
 ---
 # <a name="extern-c-reference"></a>extern（C# 参考）
 
@@ -89,8 +89,8 @@ SampleMethod() returns 50.
 
 ## <a name="see-also"></a>请参阅
 
-<xref:System.Runtime.InteropServices.DllImportAttribute?displayProperty=nameWithType>  
-[C# 参考](../index.md)  
-[C# 编程指南](../../programming-guide/index.md)  
-[C# 关键字](index.md)  
-[修饰符](modifiers.md)  
+- <xref:System.Runtime.InteropServices.DllImportAttribute?displayProperty=nameWithType>  
+- [C# 参考](../index.md)  
+- [C# 编程指南](../../programming-guide/index.md)  
+- [C# 关键字](index.md)  
+- [修饰符](modifiers.md)  

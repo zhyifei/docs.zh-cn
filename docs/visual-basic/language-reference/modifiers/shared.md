@@ -11,46 +11,46 @@ helpviewer_keywords:
 - shared [elements VB]
 - elements [Visual Basic], shared
 ms.assetid: 2bf7cf2c-b0dd-485e-8749-b5d674dab4cd
-ms.openlocfilehash: b15dd08d69f372317b9140001e8072eeb66d44ab
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b76d999bfe3f7ae5205cb9486e040c1d6191b78c
+ms.sourcegitcommit: dc02d7d95f1e3efcc7166eaf431b0ec0dc9d8dca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33604544"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37143526"
 ---
 # <a name="shared-visual-basic"></a>Shared (Visual Basic)
-指定的一个或多个已声明的编程元素与类或结构在大型，而不使用的类或结构的特定实例关联。  
+指定一个或多个声明的编程元素与类或结构在整体上，而不是与类或结构的特定实例相关联。  
   
 ## <a name="remarks"></a>备注  
   
 ## <a name="when-to-use-shared"></a>何时使用共享  
- 共享的类或结构成员使其可供每个实例，而不是*非共享*，其中每个实例都需要其自己的副本。 这很有用，例如，如果变量的值应用于整个应用程序。 如果将该变量声明`Shared`，那么所有实例会都访问同一存储位置，而如果一个实例更改变量的值，所有实例都会都都访问更新后的值。  
+ 共享的类或结构成员将其提供给每个实例，而非*非共享*，其中每个实例都需要其自己的副本。 这很有用，例如，如果变量的值适用于整个应用程序。 如果声明该变量为`Shared`、 所有实例都访问相同的存储位置，然后，如果一个实例更改变量的值，所有实例都都访问更新后的值。  
   
- 共享不会更改成员的访问级别。 例如，可以共享类成员和私有 （仅可从访问类中），两种公共和非共享。 有关详细信息，请参阅[访问 Visual Basic 中的级别](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)。  
+ 共享不会更改成员的访问级别。 例如，可以共享类成员和专用 （可访问只能从类中），或非共享和公共。 有关详细信息，请参阅[访问 Visual Basic 中的级别](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)。  
   
 ## <a name="rules"></a>规则  
   
--   **声明上下文。** 只能在模块级别使用 `Shared`。 这意味着的声明上下文`Shared`元素必须是类或结构，并且不能是源文件、 命名空间或过程。  
+-   **声明上下文。** 只能在模块级别使用 `Shared`。 这意味着声明上下文`Shared`元素必须是类或结构，并且不能是源文件、 命名空间或过程。  
   
--   **组合的修饰符。** 不能指定`Shared`连同[重写](../../../visual-basic/language-reference/modifiers/overrides.md)，[可重写](../../../visual-basic/language-reference/modifiers/overridable.md)， [NotOverridable](../../../visual-basic/language-reference/modifiers/notoverridable.md)， [MustOverride](../../../visual-basic/language-reference/modifiers/mustoverride.md)，或[静态](../../../visual-basic/language-reference/modifiers/static.md)同一声明中。  
+-   **组合的修饰符。** 不能指定`Shared`连同[重写](../../../visual-basic/language-reference/modifiers/overrides.md)， [Overridable](../../../visual-basic/language-reference/modifiers/overridable.md)， [NotOverridable](../../../visual-basic/language-reference/modifiers/notoverridable.md)， [MustOverride](../../../visual-basic/language-reference/modifiers/mustoverride.md)，或[静态](../../../visual-basic/language-reference/modifiers/static.md)同一声明中。  
   
--   **访问。** 通过其类或结构名称而不是其类或结构的特定实例的变量名称限定它访问的共享的元素。 即使不需要创建的类或结构，用于访问它的共享的成员实例。  
+-   **访问。** 通过其类或结构的名称而不是类或结构的特定实例的变量名称限定其访问的共享的元素。 甚至不需要创建类或结构来访问它的共享的成员的实例。  
   
-     下面的示例调用共享的过程<xref:System.Double.IsNaN%2A>公开<xref:System.Double>结构。  
+     下面的示例调用共享的过程<xref:System.Double.IsNaN%2A>公开的<xref:System.Double>结构。  
   
      `If Double.IsNaN(result) Then MsgBox("Result is mathematically undefined.")`  
   
--   **隐式共享。** 不能使用`Shared`修饰符在[Const 语句](../../../visual-basic/language-reference/statements/const-statement.md)，但隐式共享常量。 同样，不能声明为模块或接口的成员`Shared`，但它们会被隐式共享。  
+-   **隐式共享。** 不能使用`Shared`修饰符[Const 语句](../../../visual-basic/language-reference/statements/const-statement.md)，但常量被隐式共享。 同样，不能声明为模块或接口的成员`Shared`，但它们会被隐式共享。  
   
 ## <a name="behavior"></a>行为  
   
--   **存储。** 仅一次，无论多少或少数几个实例你创建的类或结构，在内存中存储的共享的变量或事件。 同样，共享的过程或属性仅存储一组的本地变量。  
+-   **存储。** 只有一次，无论多少或少数几个实例创建的类或结构，在内存中存储的共享的变量或事件。 同样，共享的过程或属性包含只有一组本地变量。  
   
--   **通过实例变量访问。** 可通过用包含其类或结构的特定实例的变量的名称限定它访问的共享的元素。 虽然这通常按预期工作，编译器将生成一条警告消息，并使通过类或结构名称而不使用变量的访问权限。  
+-   **通过实例变量访问。** 就可以通过用包含类或结构的特定实例的变量的名称限定其访问的共享的元素。 虽然这通常按预期工作，编译器将生成一条警告消息，并使通过类或结构的名称，而不是变量的访问权限。  
   
--   **通过实例表达式进行访问。** 如果通过一个表达式，返回其类或结构的实例访问共享的元素，则编译器会通过类或结构名称而不是计算表达式的访问权限。 如果你想要执行其他操作，以及返回实例的表达式，这会产生意外的结果。 下面的示例阐释了这一点。  
+-   **通过的实例表达式进行访问。** 如果通过一个表达式，返回其类或结构的实例访问共享的元素，编译器可让通过类或结构的名称，而不是计算表达式的访问权限。 如果你想要执行其他操作以及返回实例的表达式，这将会产生意外的结果。 下面的示例阐释了这一点。  
   
-    ```  
+    ```vb
     Sub main()  
         shareTotal.total = 10  
         ' The preceding line is the preferred way to access total.  
@@ -76,7 +76,7 @@ ms.locfileid: "33604544"
     End Class  
     ```  
   
-     在前面的示例中，编译器将生成一条警告消息代码访问共享的变量两次`total`通过实例。 每种情况下它都使直接通过类访问`shareTotal`并不会进行的任何实例使用。 在预期调用的过程的情况下`returnClass`，这意味着它不甚至生成调用`returnClass`，因此不执行额外的操作显示"调用函数 returnClass()"。  
+     在前面的示例中，编译器将生成一条警告消息的代码可访问共享的变量这两个时间`total`通过实例。 每种情况下它都使通过类直接访问`shareTotal`，而不进行使用的任何实例。 在对过程的预期调用的情况下`returnClass`，这意味着即使生成调用`returnClass`，因此不执行其他操作的显示"调用函数 returnClass()"。  
   
  `Shared` 修饰符可用于下面的上下文中：  
   

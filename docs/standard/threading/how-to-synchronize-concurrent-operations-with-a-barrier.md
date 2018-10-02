@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: e1a253ff-e0fb-4df8-95ff-d01a90d4cb19
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4a2dc5e650a479e782a6739a82e247c25e196fda
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 16dc60fa9cd8782efbe1b6028413138b5991839e
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33583148"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47193700"
 ---
 # <a name="how-to-synchronize-concurrent-operations-with-a-barrier"></a>如何：使用屏障来使并发操作保持同步
 下面的示例展示了如何将并发任务与 <xref:System.Threading.Barrier> 同步。  
@@ -28,5 +28,6 @@ ms.locfileid: "33583148"
   
  <xref:System.Threading.Barrier> 对象可防止并行操作中的各个任务在所有任务到达屏障前继续执行。 如果并行操作分阶段执行，且每个阶段需要在任务之间进行同步，此对象就很有用。 在此示例中，操作分两个阶段执行。 在第一阶段中，每个任务都用数据填充缓冲部分。 在每个任务填充完缓冲部分后，任务向屏障发出信号，指明可以继续执行，然后等待。 当所有任务都向屏障发出信号后，就会取消阻止它们，此时第二阶段开始。 屏障是必要的，因为第二阶段要求每个任务都有权访问此时生成的所有数据。 如果没有屏障，首先完成的任务可能会尝试从其他任务尚未填充的缓冲读取数据。 可以按照这种方式同步任意数量的阶段。  
   
-## <a name="see-also"></a>请参阅  
- [用于并行编程的数据结构](../../../docs/standard/parallel-programming/data-structures-for-parallel-programming.md)
+## <a name="see-also"></a>请参阅
+
+- [用于并行编程的数据结构](../../../docs/standard/parallel-programming/data-structures-for-parallel-programming.md)

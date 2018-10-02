@@ -8,13 +8,12 @@ helpviewer_keywords:
 ms.assetid: 03de6972-442a-4648-9f3e-efa654e3b949
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 59f0441b79244eb529be338495c32af886a5f2b3
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 4cdf6a051552ab1effd9c4d9c783297a62602f7a
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32745092"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47204919"
 ---
 # <a name="startup-settings-schema"></a>启动设置架构
 启动设置会指定应运行应用程序的公共语言运行时的版本。  
@@ -27,4 +26,4 @@ ms.locfileid: "32745092"
   
 ## <a name="see-also"></a>请参阅  
  [配置文件架构](../../../../../docs/framework/configure-apps/file-schema/index.md)  
- [\<PaveOver> 指定要使用的运行时版本](http://msdn.microsoft.com/library/c376208d-980d-42b4-865b-fbe0d9cc97c2)
+ [\<PaveOver> 指定要使用的运行时版本](https://msdn.microsoft.com/library/c376208d-980d-42b4-865b-fbe0d9cc97c2)

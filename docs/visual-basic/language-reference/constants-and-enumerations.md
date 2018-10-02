@@ -7,74 +7,74 @@ helpviewer_keywords:
 - constants [Visual Basic], list of
 ms.assetid: 309c0ad5-83e4-4f96-99ea-83cd95107417
 ms.openlocfilehash: fcc3329d6e02a77bf54b5b9f08fddba1bc95ff54
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33591737"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43562628"
 ---
 # <a name="constants-and-enumerations-visual-basic"></a>常量和枚举 (Visual Basic)
-Visual Basic 提供许多预定义的常量和枚举的开发人员。 常数存储中保持不变的应用程序的执行中的值。 枚举提供了使用相关常量集以及将常量值与名称相关联的一个便捷方法。  
+Visual Basic 提供预定义的常量并为开发人员的枚举的数。 常量存储中保持不变的应用程序执行中的值。 枚举提供了使用相关常量集以及将常量值与名称相关联的一个便捷方法。  
   
 ## <a name="constants"></a>常量  
   
 ### <a name="conditional-compilation-constants"></a>条件编译常量  
- 下表列出可用于条件编译的预定义的常量。  
+ 下表列出了可用于条件编译的预定义的常量。  
   
 |**常量**|**说明**|  
 |---|---|  
-|`CONFIG`|对应的当前设置的字符串**活动解决方案配置**框中**Configuration Manager**。|  
-|`DEBUG`|A`Boolean`可以在中设置的值**项目属性**对话框。 默认情况下，项目的调试配置定义`DEBUG`。 当`DEBUG`定义，<xref:System.Diagnostics.Debug>类方法将生成输出复制到**输出**窗口。 当未定义时，<xref:System.Diagnostics.Debug>类方法不进行编译，不生成任何调试输出。|  
-|`TARGET`|表示对项目或命令行中的设置的输出类型的字符串**target**选项。 可能值`TARGET`是：<br /><br /> -"winexe"Windows 应用程序。<br />-"exe"控制台应用程序。<br />-类库的"库"。<br />-"模块"模块。<br />- **Target**可能在 Visual Studio 集成的开发环境中设置选项。 有关详细信息，请参阅[/target (Visual Basic 中)](../../visual-basic/reference/command-line-compiler/target.md)。|  
-|`TRACE`|A`Boolean`可以在中设置的值**项目属性**对话框。 默认情况下，项目的所有配置都定义`TRACE`。 当`TRACE`定义，<xref:System.Diagnostics.Trace>类方法将生成输出复制到**输出**窗口。 当未定义时，<xref:System.Diagnostics.Trace>类方法将不会被编译，但未`Trace`生成输出。|  
-|`VBC_VER`|一个数字，表示在 Visual Basic 版本，*主要*。*次要*格式。 版本的版本号[!INCLUDE[vbprvblong](~/includes/vbprvblong-md.md)]为 8.0。|  
+|`CONFIG`|与当前设置相对应的字符串**活动解决方案配置**框中**Configuration Manager**。|  
+|`DEBUG`|一个`Boolean`值，可以在中设置该值**项目属性**对话框。 默认情况下，定义一个项目的调试配置`DEBUG`。 当`DEBUG`定义，则<xref:System.Diagnostics.Debug>类方法生成的输出**输出**窗口。 如果它不定义，<xref:System.Diagnostics.Debug>类方法不进行编译，不生成任何调试输出。|  
+|`TARGET`|一个表示命令行中的设置或项目的输出类型的字符串 **/target**选项。 可能值`TARGET`是：<br /><br /> -"winexe"为 Windows 应用程序。<br />-"exe"的控制台应用程序。<br />-类库"库"。<br />-对于模块"模块"。<br />- **/Target**可能会在 Visual Studio 集成的开发环境中设置选项。 有关详细信息，请参阅[/target (Visual Basic)](../../visual-basic/reference/command-line-compiler/target.md)。|  
+|`TRACE`|一个`Boolean`值，可以在中设置该值**项目属性**对话框。 默认情况下，项目的所有配置都定义`TRACE`。 当`TRACE`定义，则<xref:System.Diagnostics.Trace>类方法生成的输出**输出**窗口。 未定义，当<xref:System.Diagnostics.Trace>类方法将不被编译，但不`Trace`生成输出。|  
+|`VBC_VER`|一个表示 Visual Basic 版本中的数字*主要*。*次要*格式。 版本的版本号[!INCLUDE[vbprvblong](~/includes/vbprvblong-md.md)]是 8.0。|  
   
 ### <a name="print-and-display-constants"></a>打印和显示常量  
- 当你调用输出，并显示函数时，你可以代替实际值在代码中使用以下常量。  
+ 当调用打印和显示功能时，您可以代替实际值在代码中使用以下常量。  
   
 |**常量**|**说明**|  
 |---|---|  
 |`vbCrLf`|回车/换行字符组合。|  
 |`vbCr`|回车符。|  
-|`vbLf`|换行符字符。|  
+|`vbLf`|换行字符。|  
 |`vbNewLine`|换行字符。|  
 |`vbNullChar`|Null 字符。|  
-|`vbNullString`|不同于零长度字符串 ("");用来调用外部过程。|  
-|`vbObjectError`|错误号。 用户定义的错误号应大于此值。 例如：<br /><br /> `Err.Raise(Number) = vbObjectError + 1000`|  
-|`vbTab`|制表符。|  
+|`vbNullString`|与零长度字符串 ("");用于调用外部过程。|  
+|`vbObjectError`|错误号。 用户定义的错误号应当大于此值。 例如：<br /><br /> `Err.Raise(Number) = vbObjectError + 1000`|  
+|`vbTab`|字符的选项卡。|  
 |`vbBack`|退格符。|  
-|`vbFormFeed`|未在 Microsoft Windows 中使用。|  
-|`vbVerticalTab`|Microsoft Windows 中不很有用。|  
+|`vbFormFeed`|在 Microsoft Windows 中不使用。|  
+|`vbVerticalTab`|不在 Microsoft Windows 中有用。|  
   
 ## <a name="enumerations"></a>枚举  
  下表列出并描述提供的 Visual Basic 的枚举。  
   
 |枚举|描述|  
 |---|---|  
-|<xref:Microsoft.VisualBasic.AppWinStyle>|指示要在调用时，可用于所调用的程序的窗口样式<xref:Microsoft.VisualBasic.Interaction.Shell%2A>函数。|  
-|<xref:Microsoft.VisualBasic.AudioPlayMode>|指示如何调用音频方法时播放声音。|  
-|<xref:Microsoft.VisualBasic.ApplicationServices.BuiltInRole>|指示要时调用，检查角色类型<xref:Microsoft.VisualBasic.ApplicationServices.User.IsInRole%2A>方法。|  
-|<xref:Microsoft.VisualBasic.CallType>|指示的调用时要调用的过程的类型<xref:Microsoft.VisualBasic.Interaction.CallByName%2A>函数。|  
+|<xref:Microsoft.VisualBasic.AppWinStyle>|指示要为所调用的程序在调用时使用的窗口样式<xref:Microsoft.VisualBasic.Interaction.Shell%2A>函数。|  
+|<xref:Microsoft.VisualBasic.AudioPlayMode>|指示如何在调用音频方法时播放声音。|  
+|<xref:Microsoft.VisualBasic.ApplicationServices.BuiltInRole>|指示角色检查调用时的类型<xref:Microsoft.VisualBasic.ApplicationServices.User.IsInRole%2A>方法。|  
+|<xref:Microsoft.VisualBasic.CallType>|指示在调用时要调用的过程类型<xref:Microsoft.VisualBasic.Interaction.CallByName%2A>函数。|  
 |<xref:Microsoft.VisualBasic.CompareMethod>|指示如何比较字符串时调用比较函数。|  
 |<xref:Microsoft.VisualBasic.DateFormat>|指示如何显示日期时调用<xref:Microsoft.VisualBasic.Strings.FormatDateTime%2A>函数。|  
 |<xref:Microsoft.VisualBasic.DateInterval>|指示当调用与日期相关的函数时如何确定日期间隔并设置其格式。|  
-|<xref:Microsoft.VisualBasic.FileIO.DeleteDirectoryOption>|指定要从中删除一个目录包含文件或目录时应采取的操作。|  
-|<xref:Microsoft.VisualBasic.DueDate>|指示何时付款调用财务方法时。|  
-|<xref:Microsoft.VisualBasic.FileIO.FieldType>|指示是否分隔文本字段或固定宽度。|  
-|<xref:Microsoft.VisualBasic.FileAttribute>|指示要在调用文件访问函数时使用的文件属性。|  
-|<xref:Microsoft.VisualBasic.FirstDayOfWeek>|指示调用与日期相关的函数时使用的每周的第一天。|  
+|<xref:Microsoft.VisualBasic.FileIO.DeleteDirectoryOption>|指定要删除的目录包含文件或目录时应采取的操作。|  
+|<xref:Microsoft.VisualBasic.DueDate>|指示时付款何时到期调用财务方法时。|  
+|<xref:Microsoft.VisualBasic.FileIO.FieldType>|指示文本字段分隔的还是固定宽度。|  
+|<xref:Microsoft.VisualBasic.FileAttribute>|指示要调用文件访问函数时使用的文件属性。|  
+|<xref:Microsoft.VisualBasic.FirstDayOfWeek>|指示在调用与日期相关的函数时使用的每周的第一天。|  
 |<xref:Microsoft.VisualBasic.FirstWeekOfYear>|指示要在调用与日期相关的函数时使用的年份的第一周。|  
 |<xref:Microsoft.VisualBasic.MsgBoxResult>|指示在消息框上按下了哪个按钮，由 <xref:Microsoft.VisualBasic.Interaction.MsgBox%2A> 函数返回。|  
 |<xref:Microsoft.VisualBasic.MsgBoxStyle>|指示调用 <xref:Microsoft.VisualBasic.Interaction.MsgBox%2A> 函数时显示的按钮。|  
-|<xref:Microsoft.VisualBasic.OpenAccess>|指示如何在调用文件访问函数时打开文件。|  
-|<xref:Microsoft.VisualBasic.OpenMode>|指示如何在调用文件访问函数时打开文件。|  
-|<xref:Microsoft.VisualBasic.OpenShare>|指示如何在调用文件访问函数时打开文件。|  
-|<xref:Microsoft.VisualBasic.FileIO.RecycleOption>|指定是否应永久删除文件或在置于回收站。|  
-|<xref:Microsoft.VisualBasic.FileIO.SearchOption>|指定是否搜索所有或仅顶级目录。|  
-|<xref:Microsoft.VisualBasic.TriState>|指示`Boolean`值或调用数字格式的函数时是否应使用默认值。|  
-|<xref:Microsoft.VisualBasic.FileIO.UICancelOption>|指定应该是什么如果用户单击这样做**取消**执行操作的过程。|  
+|<xref:Microsoft.VisualBasic.OpenAccess>|指示如何调用文件访问函数时打开的文件。|  
+|<xref:Microsoft.VisualBasic.OpenMode>|指示如何调用文件访问函数时打开的文件。|  
+|<xref:Microsoft.VisualBasic.OpenShare>|指示如何调用文件访问函数时打开的文件。|  
+|<xref:Microsoft.VisualBasic.FileIO.RecycleOption>|指定一个文件是应永久删除还是放入回收站。|  
+|<xref:Microsoft.VisualBasic.FileIO.SearchOption>|指定是否以搜索所有或仅顶级目录。|  
+|<xref:Microsoft.VisualBasic.TriState>|指示`Boolean`值或在调用数字格式设置函数时是否应使用默认值。|  
+|<xref:Microsoft.VisualBasic.FileIO.UICancelOption>|指定应该是什么如果用户单击这样做**取消**一次操作中。|  
 |<xref:Microsoft.VisualBasic.FileIO.UIOption>|指定复制、 删除或移动文件或目录时显示进度对话框。|  
-|<xref:Microsoft.VisualBasic.VariantType>|指示返回的变体对象的类型<xref:Microsoft.VisualBasic.Information.VarType%2A>函数。|  
+|<xref:Microsoft.VisualBasic.VariantType>|指示变量对象，返回的类型<xref:Microsoft.VisualBasic.Information.VarType%2A>函数。|  
 |<xref:Microsoft.VisualBasic.VbStrConv>|指示调用 <xref:Microsoft.VisualBasic.Strings.StrConv%2A> 函数时要执行的转换类型。|  
   
 ## <a name="see-also"></a>请参阅  

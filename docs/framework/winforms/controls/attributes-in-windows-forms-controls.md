@@ -7,12 +7,12 @@ helpviewer_keywords:
 - attributes [Windows Forms], control properties
 - attributes [Windows Forms], classes
 ms.assetid: 2c5640e9-6c6c-49d7-a5e4-a768f6be7853
-ms.openlocfilehash: e06836e53a69394ad899bedc8e545dbff9b9c29d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5bb7a28e314d6c0b007c1579f371a26d0a714fce
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33525773"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47231279"
 ---
 # <a name="attributes-in-windows-forms-controls"></a>Windows 窗体控件中的特性
 .NET Framework 提供了多种可应用于自定义控件和组件的成员的特性。 其中的一些特性会影响类的运行时行为，另一些会影响设计时行为。  
@@ -24,10 +24,10 @@ ms.locfileid: "33525773"
 |---------------|-----------------|  
 |<xref:System.ComponentModel.AmbientValueAttribute>|指定要传递给属性的值，以使该属性从另一个源中获取其值。 这称为“环境”。|  
 |<xref:System.ComponentModel.BrowsableAttribute>|指定属性或事件是否应在“属性”窗口中显示。|  
-|<xref:System.ComponentModel.CategoryAttribute>|指定要在其中进行分组的属性或事件时显示在类别的名称<xref:System.Windows.Forms.PropertyGrid>控件设置为<xref:System.Windows.Forms.PropertySort.Categorized>模式。|  
+|<xref:System.ComponentModel.CategoryAttribute>|指定在其中进行分组的属性或事件时显示在类别的名称<xref:System.Windows.Forms.PropertyGrid>控件设置为<xref:System.Windows.Forms.PropertySort.Categorized>模式。|  
 |<xref:System.ComponentModel.DefaultValueAttribute>|指定属性的默认值。|  
 |<xref:System.ComponentModel.DescriptionAttribute>|指定属性或事件的说明。|  
-|<xref:System.ComponentModel.DisplayNameAttribute>|为属性、事件或不采用参数的 `public``void` 方法指定显示名称。|  
+|<xref:System.ComponentModel.DisplayNameAttribute>|为属性、事件或不采用参数的 `public void` 方法指定显示名称。|  
 |<xref:System.ComponentModel.EditorAttribute>|指定用于更改属性的编辑器。|  
 |<xref:System.ComponentModel.EditorBrowsableAttribute>|指定可在编辑器中查看的属性或方法。|  
 |<xref:System.ComponentModel.Design.HelpKeywordAttribute>|指定类或成员的上下文关键字。|  
@@ -63,5 +63,5 @@ ms.locfileid: "33525773"
 ## <a name="see-also"></a>请参阅  
  <xref:System.Attribute>  
  [如何：在 Windows 窗体控件中应用特性](../../../../docs/framework/winforms/controls/how-to-apply-attributes-in-windows-forms-controls.md)  
- [扩展设计时支持](http://msdn.microsoft.com/library/d6ac8a6a-42fd-4bc8-bf33-b212811297e2)  
+ [扩展设计时支持](https://msdn.microsoft.com/library/d6ac8a6a-42fd-4bc8-bf33-b212811297e2)  
  [使用 .NET Framework 开发自定义 Windows 窗体控件](../../../../docs/framework/winforms/controls/developing-custom-windows-forms-controls.md)

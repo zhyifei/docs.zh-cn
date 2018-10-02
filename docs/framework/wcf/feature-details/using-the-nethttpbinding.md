@@ -2,21 +2,21 @@
 title: 使用 NetHttpBinding
 ms.date: 03/30/2017
 ms.assetid: fe134acf-ceca-49de-84a9-05a37e3841f1
-ms.openlocfilehash: a753cca008c7eb9b500afa7f3f3b55b5410522a9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: cd4a50798ff709c32db056c6aa7289993431f40e
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33498864"
+ms.lasthandoff: 09/22/2018
+ms.locfileid: "46696737"
 ---
 # <a name="using-the-nethttpbinding"></a>使用 NetHttpBinding
-<xref:System.ServiceModel.NetHttpBinding> 是为使用 HTTP 或 WebSocket 服务设计的绑定，默认情况下使用二进制编码。 <xref:System.ServiceModel.NetHttpBinding> 将检测它是否与请求-答复协定或双工协定结合使用，并更改其行为以进行匹配 ― 它将针对请求-答复协定使用 HTTP，并针对双工协定使用 WebSocket。 可以使用重写此行为<!--zz <xref:System.ServiceModel.NetHttpBinding.WebSocketTransportUsage%2A> -->`WebSocketTransportUsage`设置：  
+<xref:System.ServiceModel.NetHttpBinding> 是为使用 HTTP 或 WebSocket 服务设计的绑定，默认情况下使用二进制编码。 <xref:System.ServiceModel.NetHttpBinding> 将检测它是否与请求-答复协定或双工协定结合使用，并更改其行为以进行匹配 ― 它将针对请求-答复协定使用 HTTP，并针对双工协定使用 WebSocket。 可使用 <xref:System.ServiceModel.Channels.WebSocketTransportUsage> 设置来重写此行为：  
   
-1.  始终 - 甚至对于请求-答复协定，也会强制使用 WebSocket。  
+1. `Always` -这会强制甚至对于请求-答复协定使用 Websocket。  
   
-2.  从不 - 阻止使用 WebSocket。 尝试使用具有此设置的双工协定将导致异常。  
+2. `Never` -这可以防止使用 Websocket。 尝试使用具有此设置的双工协定将导致异常。  
   
-3.  双工时 - 这是默认值，其行为如前所述。  
+3. `WhenDuplex` -这是默认值，如上文所述的行为。  
   
  <xref:System.ServiceModel.NetHttpBinding> 支持 HTTP 模式和 WebSocket 模式下的可靠会话。 在 WebSocket 模式下，会话由传输来提供。  
   

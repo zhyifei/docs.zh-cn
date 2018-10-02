@@ -7,16 +7,15 @@ helpviewer_keywords:
 - WCF, security
 ms.assetid: 42055ee0-6d0c-443d-9d89-788dfc345d6d
 author: BrucePerlerMS
-manager: mbaldwin
-ms.openlocfilehash: 9d26acf8443967bff36637c482dd3270ef034f40
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f26369a567e89fc502f777383c22e74b96fe503c
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33497524"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47198030"
 ---
 # <a name="security-considerations-in-wcf"></a>WCF 中的安全注意事项
-本部分中的主题列出了各种与安全相关项设计 Windows Communication Foundation (WCF) 应用程序时需要考虑。  
+在本部分中的主题列出了各种与安全相关项设计的 Windows Communication Foundation (WCF) 应用程序时要考虑。  
   
 ## <a name="in-this-section"></a>本节内容  
  [信息泄漏](../../../../docs/framework/wcf/feature-details/information-disclosure.md)  

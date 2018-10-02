@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 87600781c90fe5e6e049af74a68859955153f3b2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: acfa5c138faa47c96600530ab923de102b173ed6
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33433336"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43803452"
 ---
 # <a name="iclrstrongnamegethashfromfilew-method"></a>ICLRStrongName::GetHashFromFileW 方法
-生成指定的 Unicode 字符串的文件的内容哈希代码。  
+生成由 Unicode 字符串指定的文件内容的哈希。  
   
 ## <a name="syntax"></a>语法  
   
@@ -44,7 +44,7 @@ HRESULT GetHashFromFileW (
  [in]Unicode 哈希的文件的名称。  
   
  `piHashAlg`  
- [在中，out]要生成哈希时使用的算法。 有效算法是定义的 Win32 CryptoAPI。 如果`piHashAlg`设置为 0，则使用 CALG_SHA 1 的默认算法。  
+ [in、 out]要生成哈希时使用的算法。 有效的算法是定义的 Win32 CryptoAPI。 如果`piHashAlg`设置为 0，使用 CALG_SHA 1 的默认算法。  
   
  `pbHash`  
  [out]包含生成的哈希的字节数组。  
@@ -56,10 +56,10 @@ HRESULT GetHashFromFileW (
  [out]大小，以字节为单位的`pbHash`。  
   
 ## <a name="return-value"></a>返回值  
- `S_OK` 如果成功，则完成的方法否则为该值指示失败的 HRESULT 值 (请参阅[常见的 HRESULT 值](http://go.microsoft.com/fwlink/?LinkId=213878)有关的列表)。  
+ `S_OK` 如果成功，则完成的方法否则为指示失败的 HRESULT 值 (请参阅[常见的 HRESULT 值](https://go.microsoft.com/fwlink/?LinkId=213878)列表)。  
   
 ## <a name="remarks"></a>备注  
- 此方法等同于[iclrstrongname:: Gethashfromfile](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromfile-method.md)方法，只不过文件名规范是 Unicode 而不是 ANSI。  
+ 此方法等同于[iclrstrongname:: Gethashfromfile](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromfile-method.md)方法，不同之处在于的文件的名称规范是 Unicode 而不是 ANSI。  
   
 ## <a name="requirements"></a>要求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
@@ -68,7 +68,7 @@ HRESULT GetHashFromFileW (
   
  **库：** 作为 MSCorEE.dll 中的资源  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅  
  [GetHashFromFile 方法](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromfile-method.md)  

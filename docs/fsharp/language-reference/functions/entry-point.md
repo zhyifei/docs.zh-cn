@@ -1,18 +1,17 @@
 ---
 title: 入口点 (F#)
-description: '了解如何设置为正式开始执行的可执行文件作为编译的 F # 程序的入口点。'
+description: '了解如何设置入口点为 F # 程序编译为可执行文件，正式开始执行的位置。'
 ms.date: 05/16/2016
-ms.openlocfilehash: 3d6cab755dd89f2d3d669a8763aa08660432a0ac
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 298500931d49c891a7a243295333df3a9f5d413e
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33563615"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45698370"
 ---
 # <a name="entry-point"></a>入口点
 
 本主题介绍用于将入口点设置为 F # 程序的方法。
-
 
 ## <a name="syntax"></a>语法
 
@@ -22,11 +21,12 @@ let-function-binding
 ```
 
 ## <a name="remarks"></a>备注
-在上述语法中，*让函数绑定*是中的函数的定义`let`绑定。
 
-可执行文件正式开始执行时编译的程序入口点。 通过应用指定的 F # 应用程序的入口点`EntryPoint`属性设为程序的`main`函数。 此函数 (通过创建`let`绑定) 必须是最后一个已编译文件中的最后一个函数。 最后编译的文件是项目中的最后一个文件或传递给命令行的最后一个文件。
+在上述语法中， *let 函数绑定*是中的函数的定义`let`绑定。
 
-入口点函数具有类型`string array -> int`。 在命令行上提供的自变量传递给`main`的字符串数组中的函数。 数组的第一个元素是第一个自变量;可执行文件的名称未包含在数组中，因为它是在某些其他语言中。 返回值用作进程的退出代码。 零通常指示成功;非零值指示错误。 没有特定的含义的返回代码则为非 0; 约定返回代码的意义进行了特定于应用程序。
+可执行文件正式开始执行时编译的程序入口点。 您可以通过应用指定的 F # 应用程序的入口点`EntryPoint`属性为该程序的`main`函数。 此函数 (使用创建的`let`绑定) 必须是最后一个已编译文件中的最后一个函数。 最后一个已编译的文件是项目中的最后一个文件或传递给命令行的最后一个文件。
+
+入口点函数具有类型`string array -> int`。 在命令行上提供的参数传递给`main`字符串数组中的函数。 数组的第一个元素是第一个参数;可执行文件的名称不包含在数组中，因为它是其他一些语言中。 返回的值用作进程退出代码。 零通常指示成功;非零值指示错误。 特定含义的非零返回代码; 没有约定返回代码的含义是特定于应用程序。
 
 下面的示例演示一个简单`main`函数。
 
@@ -38,11 +38,11 @@ let-function-binding
 Arguments passed to function : [|"1"; "2"; "3"|]
 ```
 
-## <a name="implicit-entry-point"></a>隐式的入口点
-当程序不具有**入口点**显式指示入口点，最后一个文件中的顶级绑定要编译的属性用作入口点。
+## <a name="implicit-entry-point"></a>隐式入口点
 
+程序没有**入口点**显式指示的入口点，最后一个文件中的最高级别绑定，要编译的属性用作入口点。
 
 ## <a name="see-also"></a>请参阅
-[函数](index.md)
 
-[let 绑定](let-bindings.md)
+- [函数](index.md)
+- [let 绑定](let-bindings.md)

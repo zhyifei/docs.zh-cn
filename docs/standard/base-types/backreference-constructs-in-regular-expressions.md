@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 567a4b8d-0e79-49dc-8df9-f4b1aa376a2a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5b16cfeda88b8e700c4d473962155a8510ce7df2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7953e34f76e23e3f9f4913726adc4b2176b172c9
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33574603"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45615321"
 ---
 # <a name="backreference-constructs-in-regular-expressions"></a>正则表达式中的反向引用构造
 反向引用提供了标识字符串中的重复字符或子字符串的方便途径。 例如，如果输入字符串包含某任意子字符串的多个匹配项，可以使用捕获组匹配第一个出现的子字符串，然后使用反向引用匹配后面出现的子字符串。  
@@ -133,5 +133,6 @@ ms.locfileid: "33574603"
  [!code-csharp[RegularExpressions.Language.Backreferences#5](../../../samples/snippets/csharp/VS_Snippets_CLR/regularexpressions.language.backreferences/cs/backreference5.cs#5)]
  [!code-vb[RegularExpressions.Language.Backreferences#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.language.backreferences/vb/backreference5.vb#5)]  
   
-## <a name="see-also"></a>请参阅  
- [正则表达式语言 - 快速参考](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)
+## <a name="see-also"></a>请参阅
+
+- [正则表达式语言 - 快速参考](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)

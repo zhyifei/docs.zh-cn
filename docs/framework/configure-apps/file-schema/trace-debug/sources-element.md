@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: c727b2e2-423a-4463-a223-013f40ff16a3
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 73fe0fb13c191843516a2218c708851abc1851b0
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: a9c5c5529e349eca2ba089ed6fb71da4bd48430a
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32752697"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47203324"
 ---
 # <a name="ltsourcesgt-element"></a>&lt;源&gt;元素
 指定启动跟踪消息的跟踪源。  
@@ -57,7 +56,7 @@ ms.locfileid: "32752697"
  计算机配置文件 (Machine.config) 和应用程序配置文件中，可以使用此元素。  
   
 ## <a name="example"></a>示例  
- 下面的示例演示如何使用`<sources>`要添加的跟踪源元素`mySource`和设置源开关的级别命名`sourceSwitch`。 将控制台跟踪侦听器添加跟踪信息写入控制台。  
+ 下面的示例演示如何使用`<sources>`要添加的跟踪源元素`mySource`，并设置源开关的级别命名为`sourceSwitch`。 控制台跟踪侦听器添加的跟踪信息写入控制台。  
   
 ```xml  
 <configuration>  

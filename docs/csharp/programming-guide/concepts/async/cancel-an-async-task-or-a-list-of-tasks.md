@@ -2,12 +2,12 @@
 title: 取消一个异步任务或一组任务 (C#)
 ms.date: 07/20/2015
 ms.assetid: eec32dbb-70ea-4c88-bd27-fa2e34546914
-ms.openlocfilehash: f24571fe6b80ea7ba0f69422cf51f5c8785df172
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2aadfccd8b38922b72dfc21daf27f610adffc922
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33334800"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45692802"
 ---
 # <a name="cancel-an-async-task-or-a-list-of-tasks-c"></a>取消一个异步任务或一组任务 (C#)
 如果不想等待异步应用程序完成，可以设置一个按钮用来取消它。 通过遵循本主题中的示例，可以为下载一个或一组网站内容的应用程序添加一个取消按钮。  
@@ -512,9 +512,10 @@ namespace CancelAListOfTasks
 }  
 ```  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Threading.CancellationTokenSource>  
- <xref:System.Threading.CancellationToken>  
- [使用 Async 和 Await 的异步编程 (C#)](../../../../csharp/programming-guide/concepts/async/index.md)  
- [微调异步应用程序 (C#)](../../../../csharp/programming-guide/concepts/async/fine-tuning-your-async-application.md)  
- [Async Sample: Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)（异步示例：微调应用程序）
+## <a name="see-also"></a>请参阅
+
+- <xref:System.Threading.CancellationTokenSource>  
+- <xref:System.Threading.CancellationToken>  
+- [使用 Async 和 Await 的异步编程 (C#)](../../../../csharp/programming-guide/concepts/async/index.md)  
+- [微调异步应用程序 (C#)](../../../../csharp/programming-guide/concepts/async/fine-tuning-your-async-application.md)  
+- [Async Sample: Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)（异步示例：微调应用程序）

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - '#pragma warning [C#]'
 ms.assetid: 723493d5-9753-4cec-babb-54e2b8eb36b6
-ms.openlocfilehash: 079045f4eb52f03afa8733620029396d80cb75fe
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 89ff8151d55ac58a1b114f7727297704ce26b9a7
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33273652"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44083647"
 ---
 # <a name="pragma-warning-c-reference"></a>#pragma warning（C# 参考）
 `#pragma warning` 可以启用或禁用特定警告。  
@@ -58,8 +58,9 @@ public class D
 }  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [C# 参考](../../../csharp/language-reference/index.md)  
- [C# 编程指南](../../../csharp/programming-guide/index.md)  
- [C# 预处理器指令](../../../csharp/language-reference/preprocessor-directives/index.md)  
- [C# 编译器错误](../../../csharp/language-reference/compiler-messages/index.md)
+## <a name="see-also"></a>请参阅
+
+- [C# 参考](../../../csharp/language-reference/index.md)  
+- [C# 编程指南](../../../csharp/programming-guide/index.md)  
+- [C# 预处理器指令](../../../csharp/language-reference/preprocessor-directives/index.md)  
+- [C# 编译器错误](../../../csharp/language-reference/compiler-messages/index.md)

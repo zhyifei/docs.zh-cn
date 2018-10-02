@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: ffd97806-ab43-4538-8de2-5828bfbbde57
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: aa03532200a89aa164648c1278c9dbafc2aee214
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7a55aa71ff3976241b96dd12baef06a9a13ef9dd
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33569525"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "45998417"
 ---
 # <a name="entity-references-are-expanded-and-not-preserved"></a>扩展但不保留实体引用
 如果实体引用进行扩展且替换为它表示的文本，将不创建 XmlEntityReference 节点。 相反，将分析实体声明，并复制通过声明内容创建的节点以取代 XmlEntityReference。 因此，`&publisher;` 示例不保存 `&publisher;`，而是创建 XmlText 节点。  
@@ -40,5 +40,6 @@ ms.locfileid: "33569525"
   
  如果使用无法解析实体的读取器，Load 方法在遇到实体引用时抛出异常。  
   
-## <a name="see-also"></a>请参阅  
- [XML 文档对象模型 (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+## <a name="see-also"></a>请参阅
+
+- [XML 文档对象模型 (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

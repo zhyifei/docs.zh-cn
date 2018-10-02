@@ -3,13 +3,13 @@ title: 使用 DDD 和 CQRS 模式降低微服务中的业务复杂性
 description: 容器化 .NET 应用程序的 .NET 微服务体系结构 | 使用 DDD 和 CQRS 模式降低微服务中的业务复杂性
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 05/26/2017
-ms.openlocfilehash: af67f94b2c56f6a1ec794abbf7d3dad0d78033ec
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.date: 06/06/2018
+ms.openlocfilehash: bc8ff6262436af6eb49a4ef8635d502e80b74b5a
+ms.sourcegitcommit: 59b51cd7c95c75be85bd6ef715e9ef8c85720bac
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37105753"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37874382"
 ---
 # <a name="tackling-business-complexity-in-a-microservice-with-ddd-and-cqrs-patterns"></a>使用 DDD 和 CQRS 模式降低微服务中的业务复杂性
 
@@ -70,5 +70,5 @@ DDD 培训
 
 
 >[!div class="step-by-step"]
-[上一页](../multi-container-microservice-net-applications/background-tasks-with-ihostedservice.md)
+[上一页](../multi-container-microservice-net-applications/implement-api-gateways-with-ocelot.md)
 [下一页](apply-simplified-microservice-cqrs-ddd-patterns.md)

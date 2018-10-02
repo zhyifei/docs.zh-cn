@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 2678dc63-c7f9-4590-9ddc-0a4df684d42e
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6c50d79f402d55a2fb5e859da4d61b04eeeb6931
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ad0649f3cebbd9adf04bdaf0f06d4c5f5797a84f
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33579738"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "44038739"
 ---
 # <a name="covariance-and-contravariance-in-generics"></a>泛型中的协变和逆变
 <a name="top"></a> 协变和逆变都是术语，前者指能够使用比原始指定的派生类型的派生程度更大（更具体的）的类型，后者指能够使用比原始指定的派生类型的派生程度更小（不太具体的）的类型。 泛型类型参数支持协变和逆变，可在分配和使用泛型类型方面提供更大的灵活性。 在引用类型系统时，协变、逆变和不变性具有如下定义。 这些示例假定一个名为 `Base` 的基类和一个名为 `Derived`的派生类。  
@@ -27,21 +27,21 @@ ms.locfileid: "33579738"
   
      使你能够使用比原始指定的类型派生程度更大的类型。  
   
-     你可以向 `IEnumerable<Derived>` 类型的变量分配`IEnumerable(Of Derived)` （在 Visual Basic 中为 `IEnumerable<Base>`）的实例。  
+     可以向 `IEnumerable<Base>` 类型的变量分配 `IEnumerable<Derived>`（在 Visual Basic 中为 `IEnumerable(Of Derived)`）的实例。  
   
 -   `Contravariance`  
   
      使你能够使用比原始指定的类型更泛型（派生程度更小）的类型。  
   
-     你可以向 `IEnumerable<Base>` 类型的变量分配`IEnumerable(Of Base)` （在 Visual Basic 中为 `IEnumerable<Derived>`）的实例。  
+     可以向 `Action<Derived>` 类型的变量分配 `Action<Base>`（在 Visual Basic 中为 `Action(Of Base)`）的实例。  
   
 -   `Invariance`  
   
      这意味着，你只能使用原始指定的类型；固定泛型类型参数既不是协变类型，也不是逆变类型。  
   
-     你无法向 `IEnumerable<Base>` 类型的变量分配 `IEnumerable(Of Base)`（在 Visual Basic 中为 `IEnumerable<Derived>`）的实例，反之亦然。  
+     无法向 `List<Derived>` 类型的变量分配 `List<Base>`（在 Visual Basic 中为 `List(Of Base)`）的实例，反之亦然。  
   
- 利用协变类型参数，你可以执行非常类似于普通的[多形性](~/docs/csharp/programming-guide/classes-and-structs/polymorphism.md)的分配，如以下代码中所示。  
+ 利用协变类型参数，你可以执行非常类似于普通的[多态性](~/docs/csharp/programming-guide/classes-and-structs/polymorphism.md)的分配，如以下代码中所示。  
   
  [!code-csharp[CoContraSimpleIEnum#1](../../../samples/snippets/csharp/VS_Snippets_CLR/cocontrasimpleienum/cs/example.cs#1)]
  [!code-vb[CoContraSimpleIEnum#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/cocontrasimpleienum/vb/example.vb#1)]  
@@ -188,7 +188,8 @@ ms.locfileid: "33579738"
 |<xref:System.Linq.IOrderedQueryable%601>|是||  
 |<xref:System.Linq.IQueryable%601>|是||  
   
-## <a name="see-also"></a>请参阅  
- [协变和逆变 (C#)](../../csharp/programming-guide/concepts/covariance-contravariance/index.md)  
- [协变和逆变 (Visual Basic)](../../visual-basic/programming-guide/concepts/covariance-contravariance/index.md)    
- [委托中的变体](https://msdn.microsoft.com/library/e3b98197-6c5b-4e55-9c6e-9739b60645ca)
+## <a name="see-also"></a>请参阅
+
+- [协变和逆变 (C#)](../../csharp/programming-guide/concepts/covariance-contravariance/index.md)  
+- [协变和逆变 (Visual Basic)](../../visual-basic/programming-guide/concepts/covariance-contravariance/index.md)    
+- [委托中的变体](https://msdn.microsoft.com/library/e3b98197-6c5b-4e55-9c6e-9739b60645ca)

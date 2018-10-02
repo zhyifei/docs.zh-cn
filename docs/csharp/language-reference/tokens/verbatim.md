@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 89bc7e53-85f5-478a-866d-1cca003c4e8c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bdf8735894594acab31586e539f90e426db97f24
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7dbab5a743b4f9fed759210e8410cd6e3459efac
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33289173"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45591394"
 ---
 # <a name="-c-reference"></a>@（C# 参考）
 
@@ -74,7 +74,8 @@ ms.locfileid: "33289173"
 
    [!code-csharp[verbatim4](../../../../samples/snippets/csharp/language-reference/keywords/verbatim4.cs#1)]
 
-## <a name="see-also"></a>请参阅  
- [C# 参考](../../../csharp/language-reference/index.md)  
- [C# 编程指南](../../../csharp/programming-guide/index.md)  
- [C# 特殊字符](../../../csharp/language-reference/tokens/index.md)
+## <a name="see-also"></a>请参阅
+
+- [C# 参考](../../../csharp/language-reference/index.md)  
+- [C# 编程指南](../../../csharp/programming-guide/index.md)  
+- [C# 特殊字符](../../../csharp/language-reference/tokens/index.md)

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 1a7e04ec-7872-41c2-96c6-52566dcb412b
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 36cf61982bb5a83e6031c35a19ba8ebf0b94aa6d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: afaa4389940bd16ee2685c2ed64fbec4626d96e1
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33393979"
+ms.lasthandoff: 09/27/2018
+ms.locfileid: "47193143"
 ---
 # <a name="cache-policy"></a>缓存策略
 缓存策略定义规则，这些规则用于确定使用已请求资源的缓存副本是否可以满足请求。 尽管应用程序为新鲜度指定客户端缓存要求，但有效的缓存策略是由客户端缓存要求、服务器的内容有效期限要求以及服务器的重新验证要求确定的。 客户端缓存策略和服务器要求的交互始终会造成最保守的缓存策略，有助于确保将最新鲜的内容返回给客户端应用程序。  

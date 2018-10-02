@@ -1,6 +1,6 @@
 ---
 title: 代码协定
-ms.date: 03/30/2017
+ms.date: 09/05/2018
 dev_langs:
 - csharp
 - vb
@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 84526045-496f-489d-8517-a258cf76f040
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 09bfa08589bda68258883e6f080392f534e8c5df
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f7f7a779cc10b32d66a184107359b502cf094979
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33365873"
+ms.lasthandoff: 09/15/2018
+ms.locfileid: "45649206"
 ---
 # <a name="code-contracts"></a>代码协定
 代码协定提供了在代码中指定前置条件、后置条件和对象固定的方法。 前置条件是输入方法或属性时必须满足的要求。 后置条件描述在方法或属性代码退出时的预期。 对象固定描述处于良好状态的类的预期状态。  
@@ -35,7 +35,7 @@ ms.locfileid: "33365873"
   
  协定类中的大多数方法都进行条件编译；即，编译器仅在你定义特殊符号 CONTRACTS_FULL 时才使用 `#define` 指令发出对这些方法的调用。 借助 CONTRACTS_FULL，你无需需使用 `#ifdef` 指令就可将协定写入代码；还可生成两种不同的版本：一种带有协定，一种未带协定。  
   
- 有关使用代码协定的工具和详细说明，请参阅 MSDN DevLabs 网站上的[代码协定](http://go.microsoft.com/fwlink/?LinkId=152461)。  
+ 有关使用代码协定的工具和详细说明，请参阅 MSDN DevLabs 网站上的[代码协定](https://go.microsoft.com/fwlink/?LinkId=152461)。  
   
 ## <a name="preconditions"></a>前置条件  
  可使用 <xref:System.Diagnostics.Contracts.Contract.Requires%2A?displayProperty=nameWithType> 方法表达前置条件。 前置条件在方法被调用时指定状态。 它们通常用于指定有效的参数值。 前置条件中提到的所有成员至少都必须与方法本身一样可以访问；否则，方法的调用方可能无法理解此前置条件。 条件必须无副作用。 运行时分析器确定前置条件失败时的运行时行为。  
@@ -148,7 +148,7 @@ Contract.Invariant(this.x > this.y);
 }  
 ```  
   
- 固定协定由 CONTRACTS_FULL 预处理器符号有条件地进行定义。 在运行时检查期间，每次公共方法结束都要检查固定协定。 如果固定协定提到相同类中的公共方法，则将禁用通常在此公共方法结束时执行的固定协定检查。 相反，仅在此方法的最外层方法调用结束时进行检查。 如果因调用其他类上的方法而重新输入类，也会发生此类情况。 对于对象终结器或任何实现 <xref:System.IDisposable.Dispose%2A> 方法的方法，不会执行固定协定检查。  
+ 固定协定由 CONTRACTS_FULL 预处理器符号有条件地进行定义。 在运行时检查期间，每次公共方法结束都要检查固定协定。 如果固定协定提到相同类中的公共方法，则将禁用通常在此公共方法结束时执行的固定协定检查。 相反，仅在此方法的最外层方法调用结束时进行检查。 如果因调用其他类上的方法而重新输入类，也会发生此类情况。 对于对象终结器不检查固定条件和一个<xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType>实现。  
   
 <a name="usage_guidelines"></a>   
 ## <a name="usage-guidelines"></a>使用准则  

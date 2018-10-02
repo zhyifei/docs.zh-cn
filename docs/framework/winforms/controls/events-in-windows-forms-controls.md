@@ -5,17 +5,17 @@ helpviewer_keywords:
 - events [Windows Forms], custom controls (using code)
 - custom controls [Windows Forms], events overview (using code)
 ms.assetid: 7e3d1379-87aa-437c-afce-c99454eff30e
-ms.openlocfilehash: 5d51b6a71bffb546c85ba253181453f6deecfa64
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d18938565c302be085b7ac51f878d83ae5ab533d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33525878"
+ms.lasthandoff: 09/27/2018
+ms.locfileid: "47235814"
 ---
 # <a name="events-in-windows-forms-controls"></a>Windows 窗体控件中的事件
-Windows 窗体控件继承来自多个六十事件<xref:System.Windows.Forms.Control?displayProperty=nameWithType>。 其中包括<xref:System.Windows.Forms.Control.Paint>事件，这会导致要绘制的控件，如显示一个窗口，与相关的事件<xref:System.Windows.Forms.Control.Resize>和<xref:System.Windows.Forms.Control.Layout>事件和低级别的鼠标和键盘事件。 某些低级别事件合成通过<xref:System.Windows.Forms.Control>到语义事件<xref:System.Windows.Forms.Control.Click>和<xref:System.Windows.Forms.Control.DoubleClick>。 有关继承的事件的详细信息，请参阅<xref:System.Windows.Forms.Control>。  
+Windows 窗体控件继承六十多个事件从<xref:System.Windows.Forms.Control?displayProperty=nameWithType>。 其中包括<xref:System.Windows.Forms.Control.Paint>事件，这会导致要绘制的控件、 事件与显示一个窗口，如相关<xref:System.Windows.Forms.Control.Resize>和<xref:System.Windows.Forms.Control.Layout>事件和低级别的鼠标和键盘事件。 某些低级别事件通过合成<xref:System.Windows.Forms.Control>到语义事件，如<xref:System.Windows.Forms.Control.Click>和<xref:System.Windows.Forms.Control.DoubleClick>。 有关继承事件的详细信息，请参阅<xref:System.Windows.Forms.Control>。  
   
- 如果自定义控件需要重写继承事件功能，请重写继承的 `On`*EventName* 方法，而不附加委托。 如果不熟悉 .NET Framework 中的事件模型，请参阅[从组件引发事件](http://msdn.microsoft.com/library/9aebf605-a87d-470b-b7c8-f9abfc8360a0)。  
+ 如果自定义控件需要重写继承事件功能，请重写继承的 `On`*EventName* 方法，而不附加委托。 如果不熟悉 .NET Framework 中的事件模型，请参阅[从组件引发事件](https://msdn.microsoft.com/library/9aebf605-a87d-470b-b7c8-f9abfc8360a0)。  
   
 ## <a name="see-also"></a>请参阅  
  [重写 OnPaint 方法](../../../../docs/framework/winforms/controls/overriding-the-onpaint-method.md)  

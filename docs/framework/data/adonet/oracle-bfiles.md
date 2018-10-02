@@ -2,19 +2,19 @@
 title: Oracle BFILE
 ms.date: 03/30/2017
 ms.assetid: 341bbf84-4734-4d44-8723-ccedee954e21
-ms.openlocfilehash: bb0a7dad2b7919130097ddd689739b8d17557ea1
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 683b4a9be826e1d0d4ee354fada10168d833e3d7
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32758407"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44087571"
 ---
 # <a name="oracle-bfiles"></a>Oracle BFILE
 Oracle .NET Framework 数据提供程序包括 <xref:System.Data.OracleClient.OracleBFile> 类，该类用于使用 Oracle <xref:System.Data.OracleClient.OracleType.BFile> 数据类型。  
   
- Oracle **BFILE**数据类型是一种 Oracle **LOB**数据类型，包含最大大小为 4 千兆字节的二进制数据的引用。 Oracle **BFILE**不同于其他 Oracle **LOB**数据类型，因为其数据存储在服务器上的物理文件中而不是操作系统。 请注意， **BFILE**数据类型提供对数据的只读访问。  
+ Oracle **BFILE**数据类型是一种 Oracle **LOB**数据类型，包含最大大小为 4 千兆字节的二进制数据的引用。 Oracle **BFILE**不同于其他 Oracle **LOB**数据类型，其数据存储在服务器上的物理文件中而不是操作系统中。 请注意， **BFILE**数据类型提供对数据的只读访问。  
   
- 其他特征**BFILE**将它从区分开来的数据类型**LOB**数据类型是：  
+ 其他特征**BFILE**将其从区分开来的数据类型**LOB**数据类型是：  
   
 -   包含非结构化数据。  
   
@@ -22,16 +22,16 @@ Oracle .NET Framework 数据提供程序包括 <xref:System.Data.OracleClient.Or
   
 -   使用引用复制语义。 例如，如果在执行复制操作**BFILE**，则只**BFILE**复制定位符 （这是对文件的引用）。 而不会复制文件中的数据。  
   
- **BFILE**数据类型应该用于引用尺寸，较大的 Lob，因此不可行，在数据库中存储。 更多的客户端、 服务器和通信系统开销时所涉及的使用**BFILE**数据类型与比较**LOB**数据类型。 它会更加高效访问**BFILE**如果你只需以获取少量的数据。 如果需要获取整个对象，访问数据库驻留的 LOB 会更加有效。  
+ **BFILE**为引用较大，Lob，应使用数据类型，因此，在数据库中存储不可行。 当使用涉及更多的客户端、 服务器和通信开销**BFILE**数据类型与比较**LOB**数据类型。 若要访问效率更高**BFILE**如果只需要获取少量的数据。 如果需要获取整个对象，访问数据库驻留的 LOB 会更加有效。  
   
- 每个非 NULL **OracleBFile**对象都与两个定义基础物理文件的位置的实体关联：  
+ 每个非 NULL **OracleBFile**对象是与定义的基础物理文件位置的两个实体相关联：  
   
 1.  一个 Oracle DIRECTORY 对象，它是文件系统中一个目录的数据库别名，以及  
   
 2.  基础物理文件的文件名，它位于与 DIRECTORY 对象关联的目录中。  
   
 ## <a name="example"></a>示例  
- 下面的 C# 示例演示如何创建**BFILE**在 Oracle 表，然后检索它的形式**OracleBFile**对象。 该示例演示如何使用<xref:System.Data.OracleClient.OracleDataReader>对象和**OracleBFile** **Seek**和**读取**方法。 请注意，若要使用此示例，你必须首先创建一个名为目录"c:\\\bfiles"和 Oracle 服务器上名为"MyFile.jpg"的文件。  
+ 下面的 C# 示例演示如何创建**BFILE**在 Oracle 表中，然后检索它的形式**OracleBFile**对象。 该示例演示了如何使用<xref:System.Data.OracleClient.OracleDataReader>对象和**OracleBFile** **Seek**并**读取**方法。 请注意，若要使用此示例，您必须首先创建一个名为"c:\\\bfiles"和 Oracle 服务器上名为"MyFile.jpg"的文件。  
   
 ```csharp  
 using System;  
@@ -88,4 +88,4 @@ public class Sample
   
 ## <a name="see-also"></a>请参阅  
  [Oracle 和 ADO.NET](../../../../docs/framework/data/adonet/oracle-and-adonet.md)  
- [ADO.NET 托管提供程序和数据集开发人员中心](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)

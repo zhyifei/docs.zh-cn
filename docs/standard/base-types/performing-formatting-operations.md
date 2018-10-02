@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 36e7e096-4e6c-4cf2-9ab6-68073026ea0e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d789101231a37bb9a2b6b3c7830f6b679fd364d7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a1d9f62055b497aa7522d589610c12badb2361d5
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33567840"
+ms.lasthandoff: 09/28/2018
+ms.locfileid: "47425766"
 ---
 # <a name="performing-formatting-operations"></a>执行格式设置操作
 以下主题提供用于执行特定格式设置操作的分步说明。  
@@ -38,5 +38,6 @@ ms.locfileid: "33567840"
   
 -   [如何：用非公历日历显示日期](../../../docs/standard/base-types/how-to-display-dates-in-non-gregorian-calendars.md)  
   
-## <a name="see-also"></a>请参阅  
- [格式设置类型](../../../docs/standard/base-types/formatting-types.md)
+## <a name="see-also"></a>请参阅
+
+- [格式设置类型](../../../docs/standard/base-types/formatting-types.md)

@@ -2,15 +2,15 @@
 title: 寻址
 ms.date: 03/30/2017
 ms.assetid: d438e6f2-d0f3-43aa-b259-b51b5bda2e64
-ms.openlocfilehash: 94ac903afb27f1b87f0ca8bf05cb891d0d9ee34c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6f2ab732fd5758358c7347087694cab8d56703bf
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33502233"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43468360"
 ---
 # <a name="addressing"></a>寻址
-“寻址”示例演示终结点地址的各个方面和功能。 示例基于[入门](../../../../docs/framework/wcf/samples/getting-started-sample.md)。 在本示例中，服务是自承载的。 服务和客户端都是控制台应用程序。 服务使用相对和绝对终结点地址的组合来定义多个终结点。  
+“寻址”示例演示终结点地址的各个方面和功能。 该示例基于[Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md)。 在本示例中，服务是自承载的。 服务和客户端都是控制台应用程序。 服务使用相对和绝对终结点地址的组合来定义多个终结点。  
   
 > [!NOTE]
 >  本主题的最后介绍了此示例的设置过程和生成说明。  
@@ -40,7 +40,7 @@ ms.locfileid: "33502233"
           contract="Microsoft.ServiceModel.Samples.ICalculator" />  
 ```  
   
- 在本例中，相对地址为空（“”），因此终结点地址与基址相同。 实际终结点地址是http://localhost:8000/servicemodelsamples/service。  
+ 在本例中，相对地址为空（“”），因此终结点地址与基址相同。 实际的终结点地址是 http://localhost:8000/servicemodelsamples/service。  
   
  第二个终结点定义也指定一个相对地址，如下面的示例配置所示。  
   
@@ -53,7 +53,7 @@ ms.locfileid: "33502233"
           contract="Microsoft.ServiceModel.Samples.ICalculator" />  
 ```  
   
- 将相对地址“test”追加到基址。 实际终结点地址是http://localhost:8000/servicemodelsamples/service/test。  
+ 将相对地址“test”追加到基址。 实际的终结点地址是 http://localhost:8000/servicemodelsamples/service/test。  
   
  第三个终结点定义指定一个绝对地址，如下面的示例配置所示。  
   
@@ -63,7 +63,7 @@ ms.locfileid: "33502233"
           contract="Microsoft.ServiceModel.Samples.ICalculator" />  
 ```  
   
- 基址在地址中不起作用。 实际终结点地址是http://localhost:8001/hello/servicemodelsamples。  
+ 基址在地址中不起作用。 实际的终结点地址是 http://localhost:8001/hello/servicemodelsamples。  
   
  第四个终结点地址指定一个绝对地址和一个不同的传输协议 (TCP)。 基址在地址中不起作用。 实际终结点地址为 net.tcp://localhost:9000/servicemodelsamples/service。  
   
@@ -118,11 +118,11 @@ Press <ENTER> to terminate client.
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>设置、生成和运行示例  
   
-1.  确保已执行[的 Windows Communication Foundation 示例的一次性安装过程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
+1.  请确保您具有执行[的 Windows Communication Foundation 示例的一次性安装过程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
   
 2.  若要生成 C# 或 Visual Basic .NET 版本的解决方案，请按照 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)中的说明进行操作。  
   
-3.  若要在单或跨计算机配置上运行示例，请按照中的说明[运行 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/running-the-samples.md)。  
+3.  若要在单或跨计算机配置中运行示例，请按照中的说明[运行 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/running-the-samples.md)。  
   
     > [!NOTE]
     >  如果使用 Svcutil.exe 为此示例重新生成配置，请确保在客户端配置中修改终结点名称以与客户端代码匹配。  
@@ -132,7 +132,7 @@ Press <ENTER> to terminate client.
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目录不存在，请转到[Windows Communication Foundation (WCF) 和针对.NET Framework 4 的 Windows Workflow Foundation (WF) 示例](http://go.microsoft.com/fwlink/?LinkId=150780)下载所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
+>  如果此目录不存在，请转到[Windows Communication Foundation (WCF) 和.NET Framework 4 的 Windows Workflow Foundation (WF) 示例](https://go.microsoft.com/fwlink/?LinkId=150780)若要下载所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\Addressing`  
   

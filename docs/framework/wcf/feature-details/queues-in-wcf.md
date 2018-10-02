@@ -4,15 +4,15 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - queues [WCF]
 ms.assetid: 43008409-1bb4-4bd4-85d7-862c8f10ae20
-ms.openlocfilehash: 96dfee3304369c300c40d595860898c51ff728aa
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 46d70a0b0ccc33755666867240be8778b5638947
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33496583"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43858364"
 ---
 # <a name="queues-in-windows-communication-foundation"></a>Windows Communication Foundation 中的队列
-本部分中的主题讨论对队列的 Windows Communication Foundation (WCF) 支持。 WCF 提供对队列利用 Microsoft 消息队列 （以前称为 MSMQ） 作为传输协议的支持，并支持以下方案：  
+在本部分中的主题讨论对队列的 Windows Communication Foundation (WCF) 支持。 WCF 利用 Microsoft 消息队列 （以前称为 MSMQ） 作为传输机制来提供支持，并支持以下方案：  
   
 -   松耦合应用程序。 发送应用程序可以将消息发送到队列，而无需知道接收应用程序是否可用于处理该消息。 队列提供了处理独立性，它允许发送应用程序将消息以一定的速率发送到队列，该速率不依赖于接收应用程序的消息处理速度。 如果向队列发送消息的操作与消息处理的操作不是紧密耦合的，则会提高系统的整体可用性。  
   
@@ -22,17 +22,17 @@ ms.locfileid: "33496583"
   
 -   断开连接的操作。 在高延迟网络或有限可用性网络上通信（例如，在移动设备中）时，发送、接收和处理操作可能会断开连接。 队列允许这些操作继续执行，即使终结点断开连接也是如此。 重新建立连接后，队列将消息转发到接收应用程序。  
   
- 若要在 WCF 应用程序中使用队列功能，你可以使用的标准绑定之一，或如果标准绑定之一不满足你的要求，你可以创建自定义绑定。 有关相关的标准绑定以及如何选择其中一个的详细信息，请参阅[如何： 使用 WCF 终结点和消息队列应用程序交换消息](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md)。 有关创建自定义绑定的详细信息，请参阅[自定义绑定](../../../../docs/framework/wcf/extending/custom-bindings.md)。  
+ 若要在 WCF 应用程序中使用队列功能，可以使用一个标准绑定，或如果标准绑定之一不满足你的要求，可以创建自定义绑定。 有关相关标准绑定和如何进行选择的详细信息，请参阅[如何： 使用 WCF 终结点和消息队列应用程序交换消息](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md)。 有关创建自定义绑定的详细信息，请参阅[自定义绑定](../../../../docs/framework/wcf/extending/custom-bindings.md)。  
   
 ## <a name="in-this-section"></a>本节内容  
  [队列概述](../../../../docs/framework/wcf/feature-details/queues-overview.md)  
  消息队列概念概述。  
   
  [在 WCF 中排队](../../../../docs/framework/wcf/feature-details/queuing-in-wcf.md)  
- WCF 队列支持概述。  
+ WCF 队列支持的概述。  
   
  [如何：使用 WCF 终结点交换排队消息](../../../../docs/framework/wcf/feature-details/how-to-exchange-queued-messages-with-wcf-endpoints.md)  
- 说明如何使用<xref:System.ServiceModel.NetMsmqBinding>类之间的 WCF 客户端和 WCF 服务进行通信。  
+ 说明如何使用<xref:System.ServiceModel.NetMsmqBinding>类 WCF 客户端和 WCF 服务之间进行通信。  
   
  [如何：与 WCF 终结点和消息队列应用程序交换消息](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md)  
  说明如何使用<xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding>WCF 和消息队列应用程序之间进行通信。  
@@ -62,7 +62,7 @@ ms.locfileid: "33496583"
  说明如何解决常见队列问题。  
   
  [排队通信的最佳做法](../../../../docs/framework/wcf/feature-details/best-practices-for-queued-communication.md)  
- 说明使用 WCF 的最佳实践排队通信。  
+ 介绍了使用 WCF 的最佳实践排队通信。  
   
 ## <a name="see-also"></a>请参阅  
- [消息队列](http://msdn.microsoft.com/library/ff917e87-05d5-478f-9430-0f560675ece1)
+ [消息队列](https://msdn.microsoft.com/library/ff917e87-05d5-478f-9430-0f560675ece1)

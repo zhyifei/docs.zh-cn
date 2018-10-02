@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 6e2aa49b-fc84-4bcf-962b-17db98b7edcb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6543c2e5ea953887e699ee6f9ca3b70e08e5ae85
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b1c8bfea5fc55bafbaa30d3b74edf60b674ef75c
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33583911"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47077793"
 ---
 # <a name="how-to-listen-for-cancellation-requests-that-have-wait-handles"></a>如何：侦听具有等待句柄的取消请求
 如果方法在等待事件收到信号时受阻止，既无法检查取消令牌的值，也无法及时响应。 第一个示例展示了如何在使用 <xref:System.Threading.ManualResetEvent?displayProperty=nameWithType> 等不本机支持统一取消框架的事件时解决此问题。 第二个示例展示了一种更简化的方法，即使用确实支持统一取消的 <xref:System.Threading.ManualResetEventSlim?displayProperty=nameWithType>。  
@@ -35,5 +35,6 @@ ms.locfileid: "33583911"
  [!code-csharp[Cancellation#10](../../../samples/snippets/csharp/VS_Snippets_Misc/cancellation/cs/cancellationex10.cs#10)]
  [!code-vb[Cancellation#10](../../../samples/snippets/visualbasic/VS_Snippets_Misc/cancellation/vb/cancellationex10.vb#10)]  
   
-## <a name="see-also"></a>请参阅  
- [托管线程中的取消](../../../docs/standard/threading/cancellation-in-managed-threads.md)
+## <a name="see-also"></a>请参阅
+
+- [托管线程中的取消](../../../docs/standard/threading/cancellation-in-managed-threads.md)

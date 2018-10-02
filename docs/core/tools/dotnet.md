@@ -4,12 +4,12 @@ description: 了解 dotnet 命令（.NET Core CLI 工具的通用驱动程序）
 author: mairaw
 ms.author: mairaw
 ms.date: 06/04/2018
-ms.openlocfilehash: 788dc746705f9328683019ab3ad9836204a1ea63
-ms.sourcegitcommit: fc70fcb9c789b6a4aefcdace46f3643fd076450f
+ms.openlocfilehash: 53e8f8bab1cbaabaa7926aa68197c18843b0b637
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/06/2018
-ms.locfileid: "34805654"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45615568"
 ---
 # <a name="dotnet-command"></a>dotnet 命令
 
@@ -17,7 +17,7 @@ ms.locfileid: "34805654"
 
 ## <a name="name"></a>name
 
-`dotnet` - 运行命令行命令的通用驱动程序。
+`dotnet` - 一款管理 .NET 源代码和二进制文件的工具。
 
 ## <a name="synopsis"></a>摘要
 
@@ -40,11 +40,9 @@ dotnet [command] [arguments] [--additionalprobingpath] [-d|--diagnostics] [--fx-
 
 ## <a name="description"></a>描述
 
-`dotnet` 是用于命令行接口 (CLI) 工具链的通用驱动程序。 它可自行调用，并提供简短的使用说明。
+`dotnet` 是一款管理 .NET 源代码和二进制文件的工具。 它公开执行特定任务的命令，例如 [`dotnet build`](dotnet-build.md) 和 [`dotnet run`](dotnet-run.md)。 每个命令都定义自己的参数。 在每个命令后键入 `--help` 以访问简要帮助文档。
 
-每种特定功能均实现为命令。 若要使用此功能，请在 `dotnet` 后指定该命令，例如 [`dotnet build`](dotnet-build.md)。 该命令后的所有参数均为其自有参数。
-
-`dotnet` 自行作为命令使用的唯一情况是运行[依赖于框架的应用](../deploying/index.md)。 在 `dotnet` 谓词后指定应用程序 DLL 便可执行该应用程序（例如，`dotnet myapp.dll`）。
+可以使用 `dotnet` 来运行应用程序，方法是指定应用程序 DLL，如 `dotnet myapp.dll`. 要了解部署选项，请参阅 [.NET Core 应用程序部署](../deploying/index.md)。
 
 ## <a name="options"></a>选项
 
@@ -64,15 +62,15 @@ dotnet [command] [arguments] [--additionalprobingpath] [-d|--diagnostics] [--fx-
 
 `--fx-version <VERSION>`
 
-运行应用程序所使用的已安装 .NET Core 运行时的版本。
+用于运行应用程序的 .NET Core 运行时版本。
 
 `-h|--help`
 
-打印出有关命令的简短帮助。 如果使用 `dotnet`，还会打印可用命令的列表。
+打印出给定命令的文档，如 `dotnet build --help`。 `dotnet --help` 打印可用命令列表。
 
 `--info`
 
-打印出有关 CLI 工具和环境的详细信息，例如当前操作系统、提交该版本的 SHA 和其他信息。
+打印出有关 .NET Core 安装和计算机环境（如当前操作系统）的详细信息，并提交 .NET Core 版本的 SHA。
 
 `--list-runtimes`
 
@@ -84,7 +82,7 @@ dotnet [command] [arguments] [--additionalprobingpath] [-d|--diagnostics] [--fx-
 
 `--roll-forward-on-no-candidate-fx`
 
- 在没有候选共享框架的情况下前滚。
+ 如果设置为 `0`，则禁用次要版本前滚。 有关详细信息，请参阅[前滚](../whats-new/dotnet-core-2-1.md#roll-forward)。
 
 `-v|--verbosity <LEVEL>`
 
@@ -110,19 +108,19 @@ dotnet [command] [arguments] [--additionalprobingpath] [-d|--diagnostics] [--fx-
 
 `--fx-version <VERSION>`
 
-运行应用程序所使用的已安装 .NET Core 运行时的版本。
+用于运行应用程序的 .NET Core 运行时版本。
 
 `-h|--help`
 
-打印出有关命令的简短帮助。 如果使用 `dotnet`，还会打印可用命令的列表。
+打印出给定命令的文档，如 `dotnet build --help`。 `dotnet --help` 打印可用命令列表。
 
 `--info`
 
-打印出有关 CLI 工具和环境的详细信息，例如当前操作系统、提交该版本的 SHA 和其他信息。
+打印出有关 .NET Core 安装和计算机环境（如当前操作系统）的详细信息，并提交 .NET Core 版本的 SHA。
 
 `--roll-forward-on-no-candidate-fx`
 
- 在没有候选共享框架的情况下前滚。
+ 如果设置为 `0`，则禁用次要版本前滚。 有关详细信息，请参阅[前滚](../whats-new/dotnet-core-2-1.md#roll-forward)。
 
 `-v|--verbosity <LEVEL>`
 
@@ -144,15 +142,15 @@ dotnet [command] [arguments] [--additionalprobingpath] [-d|--diagnostics] [--fx-
 
 `--fx-version <VERSION>`
 
-运行应用程序所使用的已安装 .NET Core 运行时的版本。
+用于运行应用程序的 .NET Core 运行时版本。
 
 `-h|--help`
 
-打印出有关命令的简短帮助。 如果使用 `dotnet`，还会打印可用命令的列表。
+打印出给定命令的文档，如 `dotnet build --help`。 `dotnet --help` 打印可用命令列表。
 
 `--info`
 
-打印出有关 CLI 工具和环境的详细信息，例如当前操作系统、提交该版本的 SHA 和其他信息。
+打印出有关 .NET Core 安装和计算机环境（如当前操作系统）的详细信息，并提交 .NET Core 版本的 SHA。
 
 `-v|--verbosity <LEVEL>`
 
@@ -259,7 +257,7 @@ dotnet [command] [arguments] [--additionalprobingpath] [-d|--diagnostics] [--fx-
 
 ### <a name="additional-tools"></a>其他工具
 
-自 .NET Core SDK 2.1.300 开始，许多使用 `DotnetCliToolReference` 的仅在每个项目的基础上可用的工具现作为 .NET Core SDK 的一部分提供。 这些工具包括：
+自 .NET Core SDK 2.1.300 开始，许多使用 `DotnetCliToolReference` 的仅在每个项目的基础上可用的工具现作为 .NET Core SDK 的一部分提供。 下表中列出了这些工具：
 
 | 工具                                              | 函数                                                     |
 | ------------------------------------------------- | ------------------------------------------------------------ |
@@ -269,7 +267,7 @@ dotnet [command] [arguments] [--additionalprobingpath] [-d|--diagnostics] [--fx-
 | [user-secrets](/aspnet/core/security/app-secrets) | 管理开发用户机密。                            |
 | [watch](/aspnet/core/tutorials/dotnet-watch)      | 启动文件观察程序，以在更改文件时运行命令。 |
 
-有关每个工具的更多信息，请执行 `dotnet <tool-name> --help`。
+有关每个工具的详细信息，请键入 `dotnet <tool-name> --help`。
 
 ## <a name="examples"></a>示例
 
@@ -287,7 +285,7 @@ dotnet [command] [arguments] [--additionalprobingpath] [-d|--diagnostics] [--fx-
 
 `dotnet build`
 
-运行名为 `myapp.dll` 的依赖于框架的应用：
+运行应用程序 DLL，如 `myapp.dll`：
 
 `dotnet myapp.dll`
 
@@ -313,7 +311,7 @@ dotnet [command] [arguments] [--additionalprobingpath] [-d|--diagnostics] [--fx-
 
 `DOTNET_ROLL_FORWARD_ON_NO_CANDIDATE_FX`
 
-禁用次要版本前滚。 有关详细信息，请参阅[前滚](../whats-new/dotnet-core-2-1.md#roll-forward)。
+如果设置为 `0`，则禁用次要版本前滚。 有关详细信息，请参阅[前滚](../whats-new/dotnet-core-2-1.md#roll-forward)。
 
 # <a name="net-core-20tabnetcore20"></a>[.NET Core 2.0](#tab/netcore20)
 

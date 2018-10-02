@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: 8cce2742-8d52-4643-9dd2-64ddf38aa878
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: fc061065caa4dad878a2a9b45e98ecb0d419d18b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 66b20c299252ff1f218a8131758e2cf03640aac6
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33398217"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47199531"
 ---
 # <a name="basic-and-digest-authentication"></a>基本和摘要式身份验证
 基本身份验证和摘要式身份验证的 <xref:System.Net> 实现符合 RFC2617 – HTTP 身份验证：基本身份验证和摘要式身份验证（适用于万维网联合会 Web 网站 (www.w3.org)）。  

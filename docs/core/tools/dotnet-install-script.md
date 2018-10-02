@@ -4,12 +4,12 @@ description: 了解用于安装 .NET Core CLI 工具和共享运行时的 dotnet
 author: blackdwarf
 ms.author: mairaw
 ms.date: 09/11/2017
-ms.openlocfilehash: acdf49950ebb49751c55ae72b3f623e590489202
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8d1c6ebb30bd45575bb61206799c9c3e5c47ff0c
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33214375"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46004005"
 ---
 # <a name="dotnet-install-scripts-reference"></a>dotnet-install 脚本引用
 
@@ -36,11 +36,11 @@ macOS/Linux：
 * https://dot.net/v1/dotnet-install.sh（bash、UNIX）
 * https://dot.net/v1/dotnet-install.ps1（Powershell、Windows）
 
-这些脚本主要用于自动化方案和非管理员安装。 共有两个脚本，一个是在 Windows 上运行的 PowerShell 脚本。 另一脚本是适用于 Linux/macOS 的 bash 脚本。 这两个脚本的行为相同。 bash 脚本也读取 PowerShell 开关。因此，可以在 Linux/macOS 系统上将 PowerShell 开关与脚本结合使用。 
+这些脚本主要用于自动化方案和非管理员安装。 共有两个脚本，一个是在 Windows 上运行的 PowerShell 脚本。 另一脚本是适用于 Linux/macOS 的 bash 脚本。 这两个脚本的行为相同。 bash 脚本也读取 PowerShell 开关。因此，可以在 Linux/macOS 系统上将 PowerShell 开关与脚本结合使用。
 
-安装脚本从 CLI 生成放置下载 ZIP/tarball 文件，并将其安装在默认位置或 `-InstallDir|--install-dir` 所指定的位置。 默认情况下，安装脚本下载 SDK 并安装它。 如果只想获取共享的运行时，请指定 `--shared-runtime` 参数。 
+安装脚本从 CLI 生成放置下载 ZIP/tarball 文件，并将其安装在默认位置或 `-InstallDir|--install-dir` 所指定的位置。 默认情况下，安装脚本下载 SDK 并安装它。 如果只想获取共享的运行时，请指定 `--shared-runtime` 参数。
 
-默认情况下，该脚本会将安装位置添加到当前会话的 $PATH。 通过指定 `--no-path` 参数覆盖此默认行为。 
+默认情况下，该脚本会将安装位置添加到当前会话的 $PATH。 通过指定 `--no-path` 参数覆盖此默认行为。
 
 运行脚本前，请安装所需的[依赖项](https://github.com/dotnet/core/blob/master/Documentation/prereqs.md)。
 
@@ -141,7 +141,7 @@ macOS/Linux：
 
 Windows：
 
-`@powershell -NoProfile -ExecutionPolicy unrestricted -Command "&([scriptblock]::Create((Invoke-WebRequest -useb 'https://dot.net/v1/dotnet-install.ps1'))) <additional install-script args>"`
+`@powershell -NoProfile -ExecutionPolicy unrestricted -Command "[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12; &([scriptblock]::Create((Invoke-WebRequest -useb 'https://dot.net/v1/dotnet-install.ps1'))) <additional install-script args>"`
 
 macOS/Linux：
 
@@ -149,5 +149,5 @@ macOS/Linux：
 
 ## <a name="see-also"></a>请参阅
 
-[.NET Core 版本](https://github.com/dotnet/core/releases)   
-[.NET Core 运行时和 SDK 下载存档](https://github.com/dotnet/core/blob/master/release-notes/download-archive.md)
+* [.NET Core 版本](https://github.com/dotnet/core/releases)
+* [.NET Core 运行时和 SDK 下载存档](https://github.com/dotnet/core/blob/master/release-notes/download-archive.md)

@@ -2,12 +2,12 @@
 title: WSStreamedHttpBinding
 ms.date: 03/30/2017
 ms.assetid: 97ce4d3d-ca6f-45fa-b33b-2429bb84e65b
-ms.openlocfilehash: b0a4c316957a002f7541d230f96299e3f43ef778
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: d2111639266612183630231dbd51be55ef9c1ee4
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33807171"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43779326"
 ---
 # <a name="wsstreamedhttpbinding"></a>WSStreamedHttpBinding
 此示例演示如何创建一个绑定，该绑定用于在使用 HTTP 传输时支持流方案。  
@@ -20,7 +20,7 @@ ms.locfileid: "33807171"
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目录不存在，请转到[Windows Communication Foundation (WCF) 和针对.NET Framework 4 的 Windows Workflow Foundation (WF) 示例](http://go.microsoft.com/fwlink/?LinkId=150780)下载所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
+>  如果此目录不存在，请转到[Windows Communication Foundation (WCF) 和.NET Framework 4 的 Windows Workflow Foundation (WF) 示例](https://go.microsoft.com/fwlink/?LinkId=150780)若要下载所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Binding\WSStreamedHttpBinding`  
   
@@ -28,7 +28,7 @@ ms.locfileid: "33807171"
   
 1.  创建新的标准绑定  
   
-     如 basicHttpBinding 和 netTcpBinding 的标准绑定中 Windows Communication Foundation (WCF) 配置的基础传输和通道堆栈的特定要求。 在该示例中，`WSStreamedHttpBinding` 将通道堆栈配置为支持流。 默认情况下，不将 WS-Security 和可靠消息传递添加到通道堆栈中，因为流不支持这两个功能。 新绑定是在派生自 `WSStreamedHttpBinding` 的 <xref:System.ServiceModel.Channels.Binding> 类中实现的。 `WSStreamedHttpBinding` 包含下列绑定元素：<xref:System.ServiceModel.Channels.HttpTransportBindingElement>、<xref:System.ServiceModel.Channels.HttpsTransportBindingElement>、<xref:System.ServiceModel.Channels.TransactionFlowBindingElement> 和 <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>。 该类提供一种 `CreateBindingElements()` 方法来配置所得到的绑定堆栈，如下面的示例代码中所示。  
+     例如，basicHttpBinding 和 netTcpBinding 的标准绑定中 Windows Communication Foundation (WCF) 配置的基础传输和通道堆栈的具体要求。 在该示例中，`WSStreamedHttpBinding` 将通道堆栈配置为支持流。 默认情况下，不将 WS-Security 和可靠消息传递添加到通道堆栈中，因为流不支持这两个功能。 新绑定是在派生自 `WSStreamedHttpBinding` 的 <xref:System.ServiceModel.Channels.Binding> 类中实现的。 `WSStreamedHttpBinding` 包含下列绑定元素：<xref:System.ServiceModel.Channels.HttpTransportBindingElement>、<xref:System.ServiceModel.Channels.HttpsTransportBindingElement>、<xref:System.ServiceModel.Channels.TransactionFlowBindingElement> 和 <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>。 该类提供一种 `CreateBindingElements()` 方法来配置所得到的绑定堆栈，如下面的示例代码中所示。  
   
     ```  
     public override BindingElementCollection CreateBindingElements()  
@@ -52,7 +52,7 @@ ms.locfileid: "33807171"
   
 2.  添加配置支持  
   
-     为了通过配置来公开传输，此示例还实现了另外两个类：`WSStreamedHttpBindingConfigurationElement` 和 `WSStreamedHttpBindingSection`。 类`WSStreamedHttpBindingSection`是<xref:System.ServiceModel.Configuration.StandardBindingCollectionElement%602>公开`WSStreamedHttpBinding`到 WCF 配置系统。 批量实现委托给从 `WSStreamedHttpBindingConfigurationElement` 派生的 <xref:System.ServiceModel.Configuration.StandardBindingElement>。 `WSStreamedHttpBindingConfigurationElement` 类具有与 `WSStreamedHttpBinding` 的属性相对应的属性，以及用来将每个配置元素映射到绑定的函数。  
+     为了通过配置来公开传输，此示例还实现了另外两个类：`WSStreamedHttpBindingConfigurationElement` 和 `WSStreamedHttpBindingSection`。 该类`WSStreamedHttpBindingSection`是<xref:System.ServiceModel.Configuration.StandardBindingCollectionElement%602>公开`WSStreamedHttpBinding`向 WCF 配置系统。 批量实现委托给从 `WSStreamedHttpBindingConfigurationElement` 派生的 <xref:System.ServiceModel.Configuration.StandardBindingElement>。 `WSStreamedHttpBindingConfigurationElement` 类具有与 `WSStreamedHttpBinding` 的属性相对应的属性，以及用来将每个配置元素映射到绑定的函数。  
   
      可通过将以下节添加到服务的配置文件中来向配置系统注册处理程序。  
   
@@ -92,13 +92,13 @@ ms.locfileid: "33807171"
     %windir%\Microsoft.NET\Framework\v4.0.XXXXX\aspnet_regiis.exe /i /enable  
     ```  
   
-2.  确保已执行中列出的步骤[的 Windows Communication Foundation 示例的一次性安装过程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
+2.  确保您已执行中列出的步骤[的 Windows Communication Foundation 示例的一次性安装过程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
   
-3.  确保已执行[Internet 信息服务 (IIS) 服务器证书安装说明](../../../../docs/framework/wcf/samples/iis-server-certificate-installation-instructions.md)。  
+3.  请确保您具有执行[Internet 信息服务 (IIS) 服务器证书安装说明](../../../../docs/framework/wcf/samples/iis-server-certificate-installation-instructions.md)。  
   
 4.  若要生成解决方案，请按照中的说明[生成 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/building-the-samples.md)。  
   
-5.  若要在跨计算机配置上运行示例，请按照中的说明[运行 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/running-the-samples.md)。  
+5.  若要跨计算机配置中运行示例，请按照中的说明[运行 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/running-the-samples.md)。  
   
 6.  在看到客户端窗口时，键入“Sample.txt”。 应当能够在目录中找到“Copy of Sample.txt”。  
   
@@ -134,7 +134,7 @@ public class StreamedEchoService : IStreamedEchoService
 ```  
   
 ## <a name="the-wsstreamedhttpbinding-sample-client"></a>WSStreamedHttpBinding 示例客户端  
- 在使用 `WSStreamedHttpBinding` 与服务进行交互时所用的客户端位于客户端子目录中。 因为此示例中使用的证书是用 Makecert.exe 创建的测试证书，当您尝试访问你的浏览器中的 HTTPS 地址，例如显示一个安全警报https://localhost/servicemodelsamples/service.svc。 若要允许 WCF 客户端以使用就地测试证书，一些附加代码已添加到客户端以禁用安全警报。 使用生产证书时，不需要此代码和随附的类。  
+ 在使用 `WSStreamedHttpBinding` 与服务进行交互时所用的客户端位于客户端子目录中。 因为此示例中使用的证书是用 Makecert.exe 创建的测试证书，安全警报显示当您尝试访问你的浏览器中的 HTTPS 地址，例如 https://localhost/servicemodelsamples/service.svc。 若要允许 WCF 客户端以使用测试证书后，某些其他代码已添加到客户端以禁用安全警报。 使用生产证书时，不需要此代码和随附的类。  
   
 ```  
 // WARNING: This code is only required for test certificates such as those created by makecert. It is   

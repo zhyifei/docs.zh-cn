@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 9029ba7f-a9d1-4526-8c84-c88716dba5d4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6a601c8f1fed04c839c2a413e4b0e44a75f4195b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 29da081784c06d8cd467f0566f9d4db92a130b53
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33586138"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44087269"
 ---
 # <a name="how-to-write-a-simple-parallelfor-loop"></a>如何：编写简单的 Parallel.For 循环
 本主题包含两个示例，这两个示例阐释了 <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> 方法。 第一个示例使用 <xref:System.Threading.Tasks.Parallel.For%28System.Int64%2CSystem.Int64%2CSystem.Action%7BSystem.Int64%7D%29?displayProperty=nameWithType> 方法重载，而第二个示例使用 <xref:System.Threading.Tasks.Parallel.For%28System.Int32%2CSystem.Int32%2CSystem.Action%7BSystem.Int32%7D%29?displayProperty=nameWithType> 重载，它们是 <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> 方法最简单的两个重载。 如果不需要取消循环、中断循环迭代或保持任何线程本地状态，则可以使用 <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> 方法的这两个重载。  
@@ -63,8 +63,9 @@ ms.locfileid: "33586138"
   
 -   将此代码复制并粘贴到 Visual Studio 2010 项目中。  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Threading.Tasks.Parallel.For%2A>  
- <xref:System.Threading.Tasks.Parallel.ForEach%2A>  
- [数据并行](../../../docs/standard/parallel-programming/data-parallelism-task-parallel-library.md)  
- [并行编程](../../../docs/standard/parallel-programming/index.md)
+## <a name="see-also"></a>请参阅
+
+- <xref:System.Threading.Tasks.Parallel.For%2A>  
+- <xref:System.Threading.Tasks.Parallel.ForEach%2A>  
+- [数据并行](../../../docs/standard/parallel-programming/data-parallelism-task-parallel-library.md)  
+- [并行编程](../../../docs/standard/parallel-programming/index.md)

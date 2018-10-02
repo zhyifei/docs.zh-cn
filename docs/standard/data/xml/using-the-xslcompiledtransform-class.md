@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: f9b074f6-d6f4-49dd-a093-df510bf0cf7b
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6b242556e6fb05cae5ff5f54d1b134e1db918e5b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0537685a91db2c0e323b3f1bda24c6cadc264e34
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33571041"
+ms.lasthandoff: 09/27/2018
+ms.locfileid: "47397863"
 ---
 # <a name="using-the-xslcompiledtransform-class"></a>使用 XslCompiledTransform 类
 <xref:System.Xml.Xsl.XslCompiledTransform> 类是 Microsoft .NET Framework XSLT 处理器。 此类用于编译样式表并执行 XSLT 转换。  
@@ -40,6 +40,7 @@ ms.locfileid: "33571041"
  [从 XslTransform 类迁移](../../../../docs/standard/data/xml/migrating-from-the-xsltransform-class.md)  
  讨论如何从 <xref:System.Xml.Xsl.XslTransform> 类迁移代码。  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Xml.Xsl.XsltSettings>  
- <xref:System.Xml.Xsl.XsltMessageEncounteredEventArgs>
+## <a name="see-also"></a>请参阅
+
+- <xref:System.Xml.Xsl.XsltSettings>  
+- <xref:System.Xml.Xsl.XsltMessageEncounteredEventArgs>

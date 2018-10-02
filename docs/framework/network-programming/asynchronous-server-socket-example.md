@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 13624cd3-f5c5-4950-8cda-31273b1fa6d1
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 9b770101e4295ea0c254905dd31f0e57527346fa
-ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
+ms.openlocfilehash: 6816b22014f9e6669abe0b1aab62d0863e1f895b
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34728396"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47398831"
 ---
 # <a name="asynchronous-server-socket-example"></a>异步服务器套接字示例
 以下示例程序创建从客户端接收连接请求的服务器。 该服务器是使用异步套接字构建的，因此在等待客户端的连接时，不会挂起服务器应用程序的执行。 应用程序从客户端接收字符串，在控制台上显示此字符串，然后将此字符串回显给客户端。 来自客户端的字符串必须包含字符串“\<EOF>”以在消息结束时发出信号。  

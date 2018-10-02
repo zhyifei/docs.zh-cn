@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 822d551c-c69a-4191-82f4-183d82c9179c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8f560e3b080f6355d4e0c433c2a2218fbcbc6d72
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 844b0edb93b93704c4886495c673dc0496f7ba71
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33574655"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44192972"
 ---
 # <a name="performing-culture-insensitive-case-changes"></a>执行不区分区域性的大小写更改
 <xref:System.String.ToUpper%2A?displayProperty=nameWithType>、<xref:System.String.ToLower%2A?displayProperty=nameWithType>、<xref:System.Char.ToUpper%2A?displayProperty=nameWithType> 和 <xref:System.Char.ToLower%2A?displayProperty=nameWithType> 方法提供不接受任何参数的重载。 默认情况下，这些不带参数的重载根据 <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType> 的值执行大小写更改。 这样生成的结果（区分大小写）可能会因区域性而异。 为了明确希望大小写更改是区域性敏感型，还是非区域性敏感型，应使用这些要求显式指定 `culture` 参数的方法重载。 对于区域性敏感型大小写更改，请为 `culture` 参数指定 `CultureInfo.CurrentCulture`。 对于非区域性敏感型大小写更改，请为 `culture` 参数指定 `CultureInfo.InvariantCulture`。  
@@ -67,9 +67,10 @@ static object LookupKey(string key)
 ## <a name="using-the-chartoupper-and-chartolower-methods"></a>使用 Char.ToUpper 和 Char.ToLower 方法  
  尽管 `Char.ToUpper` 和 `Char.ToLower` 方法的特性与 `String.ToUpper` 和 `String.ToLower` 方法相同，但受影响的区域性只有土尔其语（土尔其）和阿塞拜疆语（拉丁，阿塞拜疆）。 这些是唯一两个存在单字符大小写差异的区域性。 有关此唯一大小写映射的详细信息，请参阅 <xref:System.String> 类主题中的“大小写”部分。 为了代码清楚起见，并确保结果一致，建议始终使用这些方法重载，以便显式指定 `culture` 参数。  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.String.ToUpper%2A?displayProperty=nameWithType>  
- <xref:System.String.ToLower%2A?displayProperty=nameWithType>  
- <xref:System.Char.ToUpper%2A?displayProperty=nameWithType>  
- <xref:System.Char.ToLower%2A?displayProperty=nameWithType>  
- [执行不区分区域性的字符串操作](../../../docs/standard/globalization-localization/performing-culture-insensitive-string-operations.md)
+## <a name="see-also"></a>请参阅
+
+- <xref:System.String.ToUpper%2A?displayProperty=nameWithType>  
+- <xref:System.String.ToLower%2A?displayProperty=nameWithType>  
+- <xref:System.Char.ToUpper%2A?displayProperty=nameWithType>  
+- <xref:System.Char.ToLower%2A?displayProperty=nameWithType>  
+- [执行不区分区域性的字符串操作](../../../docs/standard/globalization-localization/performing-culture-insensitive-string-operations.md)

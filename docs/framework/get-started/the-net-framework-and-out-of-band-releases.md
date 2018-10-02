@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 721f10fa-3189-4124-a00d-56ddabd889b3
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6c0ea6590a53748c9ed85a6d13f67b260ce23af5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0e0572d2f4afb2b8637d2411102e466b25b2b703
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33390281"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43856811"
 ---
 # <a name="the-net-framework-and-out-of-band-releases"></a>.NET Framework 和带外版本
 .NET Framework 不断适应不同的平台（例如 Windows Phone 和 Windows 应用商店应用以及传统桌面和 Web 应用）以最大化代码的重复使用。 除了 .NET Framework 定期发布之外，我们还会发布处于预发布阶段 (OOB) 的新功能以改善跨平台开发或引入新功能。 本主题讨论 .NET Framework 及其 OOB 版本的未来方向。  
@@ -48,7 +48,7 @@ ms.locfileid: "33390281"
  如前所述，当你部署使用了 OOB 包的应用程序，OOB 程序集将随附你的应用程序包。  
   
 ## <a name="types-of-oob-releases"></a>OOB 版本的类型  
- 通常情况下，OOB 程序包具有一个或多个预发行版本和一个稳定的版本。 预发行附带的许可证通常不允许再发行，但可让你试用程序包并提供反馈。 任何对包的更新中都包含反馈。 最终发布版本作为稳定的包随 NuGet 分发并包含允许随应用程序重新分发 NuGet 程序包的许可证。 稳定程序包受 Microsoft 支持。 Microsoft 还提供 IntelliSense 支持以及其他文档类型（如所有程序包的博客文章和论坛答案）。 此外，只有一些程序包可使用源代码，并非所有程序包都可使用。 有关新增和更新后的包的公告，可订阅 [.NET Framework 博客](http://blogs.msdn.com/b/dotnet/)。  
+ 通常情况下，OOB 程序包具有一个或多个预发行版本和一个稳定的版本。 预发行附带的许可证通常不允许再发行，但可让你试用程序包并提供反馈。 任何对包的更新中都包含反馈。 最终发布版本作为稳定的包随 NuGet 分发并包含允许随应用程序重新分发 NuGet 程序包的许可证。 稳定程序包受 Microsoft 支持。 Microsoft 还提供 IntelliSense 支持以及其他文档类型（如所有程序包的博客文章和论坛答案）。 此外，只有一些程序包可使用源代码，并非所有程序包都可使用。 有关新增和更新后的包的公告，可订阅 [.NET Framework 博客](https://blogs.msdn.com/b/dotnet/)。  
   
  若要查找预发行版包和稳定版包，请在 NuGet 包管理器中选择“包括预发行版”。  
   

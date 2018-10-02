@@ -2,12 +2,12 @@
 title: 安全 Overview2
 ms.date: 03/30/2017
 ms.assetid: 33e09965-61d5-48cc-9e8c-3b047cc4f194
-ms.openlocfilehash: 4e8d1502096dc452d21158e4fb3684298be9b982
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 18a7496d39cd08e8b340e23c57fcd10dae5ed281
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33361934"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43861853"
 ---
 # <a name="security-overview"></a>安全性概述
 保护应用程序的安全是一个持续的过程。 因为不可能预知将来会出现哪种新的攻击技术，所以开发人员永远都不能保证某一应用程序可以免受所有的攻击。 仅因为还没有人发现（或发布）系统中的安全性缺陷，也不意味着不存在或可能不存在安全性缺陷。 在项目的设计阶段，您需要对安全性进行规划，并规划如何在应用程序生存期内维护其安全。  
@@ -18,7 +18,7 @@ ms.locfileid: "33361934"
  到最后关头再实现安全性将导致更多 Bug，因为软件无法承受新的制约，或必须重写才能容纳未预想到的功能。 每行修订的代码都可能引入新 Bug。 因此，您在开发过程的初始阶段就应考虑安全性，使得安全性可与新功能的开发同步进行。  
   
 ### <a name="threat-modeling"></a>威胁建模  
- 您只有了解系统可能会受到的所有攻击，才能使系统免受这些攻击。 评估安全威胁的过程称为*威胁建模*，必须确定的可能性及后果的 ADO.NET 应用程序中的安全违反情况。  
+ 您只有了解系统可能会受到的所有攻击，才能使系统免受这些攻击。 评估安全威胁的过程称为*威胁建模*，有必要确定的可能性及后果的 ADO.NET 应用程序中的安全漏洞。  
   
  威胁建模由三个高级步骤组成：了解攻击者的目的、辨别系统安全性和确定威胁。  
   
@@ -28,7 +28,7 @@ ms.locfileid: "33361934"
   
 |资源|描述|  
 |--------------|-----------------|  
-|[威胁建模](http://go.microsoft.com/fwlink/?LinkId=98353)MSDN 安全开发人员中心上的站点|此页上的资源将帮助您了解威胁建模的过程，并帮助您创建可以用于保护自己的应用程序的威胁模型|  
+|[威胁建模](https://go.microsoft.com/fwlink/?LinkId=98353)MSDN 安全性开发中心上的站点|此页上的资源将帮助您了解威胁建模的过程，并帮助您创建可以用于保护自己的应用程序的威胁模型|  
   
 ## <a name="the-principle-of-least-privilege"></a>最低特权原则  
  当设计、构建及部署应用程序时，您必须假定您的应用程序将受到攻击。 通常，这些攻击来自使用运行此代码的用户的权限执行的恶意代码， 其他攻击可能源自被攻击者利用的善意代码。 在规划安全性时，始终假设将出现最糟糕的情况。  
@@ -67,7 +67,7 @@ ms.locfileid: "33361934"
 |资源|描述|  
 |--------------|-----------------|  
 |[代码访问安全性和 ADO.NET](../../../../docs/framework/data/adonet/code-access-security.md)|从 ADO.NET 应用程序角度描述代码访问安全性、基于角色安全性以及部分受信任环境之间的交互。|  
-|[代码访问安全性](http://msdn.microsoft.com/library/23a20143-241d-4fe5-9d9f-3933fd594c03)|包含描述 .NET Framework 中 CAS 的主题的链接。|  
+|[代码访问安全性](https://msdn.microsoft.com/library/23a20143-241d-4fe5-9d9f-3933fd594c03)|包含描述 .NET Framework 中 CAS 的主题的链接。|  
   
 ## <a name="database-security"></a>数据库安全性  
  最小特权原则也适用于数据源。 数据库安全性一般准则包括：  
@@ -89,7 +89,7 @@ ms.locfileid: "33361934"
 |资源|描述|  
 |--------------|-----------------|  
 |[SQL Server 安全性](../../../../docs/framework/data/adonet/sql/sql-server-security.md)|提供 SQL Server 安全性和应用方案的概述，这些应用方案提供用于创建针对 SQL Server 的安全 ADO.NET 应用程序的指南。|  
-|[数据访问策略的建议](http://msdn.microsoft.com/library/72411f32-d12a-4de8-b961-e54fca7faaf5)|提供用于访问数据和执行数据库操作的建议。|  
+|[有关数据访问策略建议](https://msdn.microsoft.com/library/72411f32-d12a-4de8-b961-e54fca7faaf5)|提供用于访问数据和执行数据库操作的建议。|  
   
 ## <a name="security-policy-and-administration"></a>安全策略和管理  
  不正确管理代码访问安全性 (CAS) 策略可能会导致安全漏洞。 应用程序一旦部署，就应使用监视安全性的技术，因为将出现评估为新威胁的风险。  
@@ -98,11 +98,11 @@ ms.locfileid: "33361934"
   
 |资源|描述|  
 |--------------|-----------------|  
-|[NIB： 安全策略管理](http://msdn.microsoft.com/library/d754e05d-29dc-4d3a-a2c2-95eaaf1b82b9)|提供有关创建和管理安全策略的信息。|  
-|[NIB： 安全策略最佳实践](http://msdn.microsoft.com/library/d49bc4d5-efb7-4caa-a2fe-e4d3cec63c05)|提供描述如何管理安全策略的链接。|  
+|[NIB： 安全策略管理](https://msdn.microsoft.com/library/d754e05d-29dc-4d3a-a2c2-95eaaf1b82b9)|提供有关创建和管理安全策略的信息。|  
+|[NIB： 安全策略最佳实践](https://msdn.microsoft.com/library/d49bc4d5-efb7-4caa-a2fe-e4d3cec63c05)|提供描述如何管理安全策略的链接。|  
   
 ## <a name="see-also"></a>请参阅  
  [保证 ADO.NET 应用程序的安全](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
- [本机代码和 .NET Framework 代码的安全性](http://msdn.microsoft.com/library/bd61be84-c143-409a-a75a-44253724f784)  
+ [本机代码和 .NET Framework 代码的安全性](https://msdn.microsoft.com/library/bd61be84-c143-409a-a75a-44253724f784)  
  [SQL Server 安全性](../../../../docs/framework/data/adonet/sql/sql-server-security.md)  
- [ADO.NET 托管提供程序和数据集开发人员中心](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)

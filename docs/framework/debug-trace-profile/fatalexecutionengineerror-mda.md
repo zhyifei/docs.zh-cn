@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 8b559e44-2393-4e4e-8160-7558d37a4a89
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4595049d4ea71de30cf13334e32cd4bb2699f2ad
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f12b94198b88111d559cfe372c28bdbf4b37e3fe
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33392533"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43742639"
 ---
 # <a name="fatalexecutionengineerror-mda"></a>fatalExecutionEngineError MDA
-在公共语言运行时 (CLR) 中检测到灾难性错误时，会激活 `fatalExecutionEngine``Error` 托管调试助手 (MDA)。 进程会终止。  
+在公共语言运行时 (CLR) 中检测到灾难性错误时，会激活 `fatalExecutionEngineError` 托管调试助手 (MDA)。 进程会终止。  
   
 ## <a name="symptoms"></a>症状  
  进程意外终止。 无法确定其他症状，因为有多种原因会导致 CLR 故障。  

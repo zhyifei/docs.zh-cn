@@ -1,74 +1,72 @@
 ---
-title: 使用 Visual Studio Tools for Docker (在 Windows 上的 Visual Studio)
+title: Visual Studio Tools for Windows 上的 Docker
 description: 使用 Microsoft 平台和工具的容器化 Docker 应用程序的生命周期
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 09/22/2017
-ms.openlocfilehash: facc295399a7471edfd3e59eb1cc0e90f01ef11b
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.date: 09/12/2018
+ms.custom: vs-dotnet
+ms.openlocfilehash: cd140c12ef4a0187cce096e013937d5c98cd4b39
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37104887"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47235710"
 ---
-# <a name="using-visual-studio-tools-for-docker-visual-studio-on-windows"></a>使用 Visual Studio Tools for Docker (在 Windows 上的 Visual Studio)
+# <a name="using-visual-studio-tools-for-docker-visual-studio-on-windows"></a>使用 Visual Studio Tools for Docker (Windows 上的 Visual Studio)
 
-开发人员工作流时使用 Visual Studio 工具，使用 Visual Studio Code 和 Docker CLI 时，Docker 为类似于工作流 （事实上，它基于相同的 Docker CLI），但它可以更轻松地开始，可以简化过程，并可以提供更高工作效率的生成，运行，并构建任务。 它也是可以执行并调试 F5 和 Ctrl + F5 从 Visual Studio 之类的简单操作通过你的容器。 更多，与 Visual Studio 2017，除了能够运行和调试为一个容器，你还可以运行和调试一组的容器 （整个解决方案） 在同一时间如果定义了解决方法级别的相同 docker-compose.yml 文件中。
+Visual Studio Tools for Docker 开发人员工作流是类似于使用 Visual Studio Code 和 Docker CLI （它基于出现相同的 Docker CLI）。 Visual Studio Tools Docker 可以更容易，若要开始，可以简化此过程中，并且对于生成，提供更高的生产率运行和组合任务。 执行和调试简单的操作，例如通过容器**F5**并**Ctrl**+**F5**。
 
-## <a name="configuring-your-local-environment"></a>配置你的本地环境
+> [!NOTE]
+> 本文适用到 Windows，在 Visual Studio 并不是 Visual Studio for mac。
 
-用于 Windows 的 Docker 的最新版本，它是比以往来开发 Docker 应用程序中的以下引用所述，安装程序非常简单，因为更容易。
+## <a name="configure-your-local-environment"></a>配置在本地环境
 
-**详细信息：** 若要了解有关安装用于 Windows 的 Docker 的详细信息，请转到<https://docs.docker.com/docker-for-windows/>。
+使用 Docker 的 Windows 的最新版本 ([https://docs.docker.com/docker-for-windows/](https://docs.docker.com/docker-for-windows/))，简单的安装程序可以轻松开发 Docker 应用程序。
 
-如果你在使用 Visual Studio 2015，你必须具有 Update 3 或更高版本以及 Visual Studio Tools for Docker。
+Visual Studio 2017 中包括 docker 支持。 在此处下载 Visual Studio 2017: [https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs)
 
-**详细信息：** 安装 Visual Studio 的说明，请转到[https://visualstudio.microsoft.com/\产品/vs-2015年-产品的版本](https://visualstudio.microsoft.com/products/vs-2015-product-editions)。
+## <a name="use-docker-tools-in-visual-studio-2017"></a>在 Visual Studio 2017 中使用 Docker 工具
 
-若要查看更多有关安装 Visual Studio Tools for Docker，请转到<http://aka.ms/vstoolsfordocker>和<https://docs.microsoft.com/aspnet/core/host-and-deploy/docker/visual-studio-tools-for-docker>。
+有两个级别的可以向项目添加 Docker 支持。 在.NET Core web 应用程序项目，只是可以添加*Dockerfile*项目，方法是启用 Docker 支持的文件。 下一级别是容器业务流程协调程序支持，这会增加*Dockerfile*到项目 （如果它尚不存在） 和一个*的 docker-compose.yml*解决方案级文件。
 
-如果你使用 Visual Studio 2017 年 1，则已包含 Docker 支持。
+**外** > **Docker 支持**并**添加** > **容器业务流程协调程序支持**命令web 应用程序项目的项目节点的右键单击菜单 （或上下文菜单） 上位于**解决方案资源管理器**中图 4-26 所示：
 
-## <a name="using-docker-tools-in-visual-studio-2015"></a>在 Visual Studio 2015 中使用 Docker 工具
+![在 Visual Studio 中添加 Docker 支持菜单选项](media/add-docker-support-menu.png)
 
-Visual Studio Tools for Docker 提供一致的方法来开发和验证本地 Docker 容器的 Linux Linux Docker 主机或 VM 或你直接在 Windows 上的 Windows 容器中。
+图 4-26： 向 Visual Studio 2017 项目添加 Docker 支持
 
-如果你使用单个容器，需要开始第一件事是开启 Docker 支持在.NET 核心项目。 为此，右键单击项目文件，在图 4-25 中所示。
+### <a name="add-docker-support"></a>添加 Docker 支持
 
-![https://i1.visualstudiogallery.msdn.s-msft.com/0f5b2caa-ea00-41c8-b8a2-058c7da0b3e4/image/file/205468/1/add-docker-support.png](./media/image31.png)
+可以通过选择到现有的.NET Core web 应用程序项目添加 Docker 支持**外** > **Docker 支持**中**解决方案资源管理器**。 您还可以启用 Docker 支持在项目创建期间通过选择**启用 Docker 支持**中**新的 ASP.NET Core Web 应用程序**在单击后打开的对话框**确定**中**新建项目**对话框中，在图 4-27 所示。
 
-图 4-25： 打开 Visual Studio 项目的 Docker 支持
+![在 Visual Studio 中的新 ASP.NET Core web 应用的启用 Docker 支持](./media/enable-docker-support-visual-studio.png)
 
-## <a name="using-docker-tools-in-visual-studio-2017"></a>在 Visual Studio 2017 中使用 Docker 工具
+图 4-27: Visual Studio 2017 中的项目创建过程中启用 Docker 支持
 
-当你 Docker 将支持添加到服务项目解决方案中 （请参见图 4-26 日），Visual Studio 不只添加 DockerFile 文件到你的项目，它也添加服务部分在你的解决方案的 docker-compose.yml 文件 （或如果它们未创建文件存在）。 它是一种简单的方式开始编写 multicontainer 解决方案;然后可以打开 docker-compose.yml 文件并更新它们具有附加功能。
+在添加或启用 Docker 支持，Visual Studio 添加*Dockerfile*到项目文件。
 
-![](./media/image32.png)
+> [!NOTE]
+> 启用时 Docker Compose 支持在.NET Framework web 应用程序项目 （不.NET Core web 应用程序项目） 的项目创建期间在图 4-28 所示，还添加容器业务流程协调程序支持。
+>
+> ![启用 Docker compose 支持.NET Framework web 应用程序项目](media/enable-docker-compose-support.png)
 
-图 4-26： 打开 Visual Studio 2017 项目中的 Docker 解决方案支持
+> 图 4-28： 启用 Visual Studio 2017 中的.NET Framework web 应用项目上的 Docker Compose 支持
 
-此操作不只是向你的项目添加 DockerFile，它还将所需的配置的代码行添加到在解决方案级别设置全局 docker-compose.yml。
+### <a name="add-container-orchestrator-support"></a>添加容器业务流程协调程序支持
 
-你还可以启用 Docker 支持在 Visual Studio 2017 中, 创建 ASP.NET Core 项目时在图 4-27 中所示。
+当你想要编写多容器解决方案时，请向项目添加容器业务流程协调程序支持。 添加容器业务流程协调程序支持，请在 Visual Studio 添加*Dockerfile*到项目 （如果它尚不存在），并全局*的 docker-compose.yml*解决方案级文件。 这样就可以运行和调试容器 （整个解决方案） 的一组在同一时间，如果在同一个定义*docker compose.yml*文件。 如果*docker compose.yml*已存在，Visual Studio 只需向其添加的配置代码所需的行。
 
-![](./media/image33.png)
+将容器业务流程支持添加到你的项目后，你将看到添加到项目中的 Dockerfile 和一个**docker compose**添加到解决方案中的文件夹**解决方案资源管理器**中图 4-29 所示：
 
-图 4-27： 在创建项目时开启 Docker 支持
+![在解决方案资源管理器在 Visual Studio 中的 docker 文件](media/docker-support-solution-explorer.png)
 
-将 Docker 支持添加到你在 Visual Studio 中的解决方案后，你还将看到在解决方案资源管理器添加的 docker-compose.yml 文件中，具有的新节点树如下图所示图 4-28。
+图 4-29： 在 Visual Studio 2017 中的解决方案资源管理器中的 Docker 文件
 
-![](./media/image34.PNG)
+**详细信息：** 有关服务实现和使用的 Visual Studio Tools for Docker 的详细信息，请阅读以下文章：
 
-图 4-28: docker-compose.yml 文件现在显示在解决方案资源管理器中
+生成、 调试、 更新和刷新本地 Docker 容器中的应用： [https://docs.microsoft.com/azure/vs-azure-tools-docker-edit-and-refresh/](https://docs.microsoft.com/azure/vs-azure-tools-docker-edit-and-refresh)
 
-你可以部署 multicontainer 应用程序运行时使用单个 docker-compose.yml 文件 docker-撰写;但是，Visual Studio 将一组添加它们，以便您可以覆盖根据环境 （而不是生产开发） 和执行的值类型 （而不是调试版本）。 此功能将更好地中后面的章节所述。
-
-**详细信息：** 上的服务实现和使用 Visual Studio Tools for Docker 的进一步信息，请参阅以下文章：
-
-生成、 调试、 更新和刷新本地 Docker 容器中的应用程序： [https://docs.microsoft.com/azure/vs-azure-tools-docker-edit-and-refresh/](https://docs.microsoft.com/azure/vs-azure-tools-docker-edit-and-refresh)
-
-将 ASP.NET 容器部署到远程 Docker 主机： [https://docs.microsoft.com/azure/vs-azure-tools-docker-hosting-web-apps-in-docker/](https://docs.microsoft.com/azure/vs-azure-tools-docker-hosting-web-apps-in-docker)
-
+将 ASP.NET Core Docker 容器部署到容器注册表： [https://docs.microsoft.com/azure/vs-azure-tools-docker-hosting-web-apps-in-docker/](https://docs.microsoft.com/azure/vs-azure-tools-docker-hosting-web-apps-in-docker)
 
 >[!div class="step-by-step"]
 [上一页](docker-apps-inner-loop-workflow.md)

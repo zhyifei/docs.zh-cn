@@ -8,12 +8,12 @@ helpviewer_keywords:
 - not equals operator (!=) [C#]
 - '!= operator [C#]'
 ms.assetid: eeff7a4e-ad6f-462d-9f8d-49e9b91c6c97
-ms.openlocfilehash: e409e2a80886fd5f7f4cdbeaa9b4e3325f8a967b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e974ffb1b25944e24fca23864dc7e932ec1876d5
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33272434"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47455469"
 ---
 # <a name="-operator-c-reference"></a>!= 运算符（C# 参考）
 如果操作数相等，不相等运算符 (`!=`) 返回 false，否则返回 true。 不相等运算符针对 string 和 object 等所有类型进行预定义。 用户定义的类型可以重载 `!=` 运算符。  
@@ -26,7 +26,8 @@ ms.locfileid: "33272434"
 ## <a name="example"></a>示例  
  [!code-csharp[csRefOperators#33](../../../csharp/language-reference/operators/codesnippet/CSharp/not-equal-operator_1.cs)]  
   
-## <a name="see-also"></a>请参阅  
- [C# 参考](../../../csharp/language-reference/index.md)  
- [C# 编程指南](../../../csharp/programming-guide/index.md)  
- [C# 运算符](../../../csharp/language-reference/operators/index.md)
+## <a name="see-also"></a>请参阅
+
+- [C# 参考](../../../csharp/language-reference/index.md)  
+- [C# 编程指南](../../../csharp/programming-guide/index.md)  
+- [C# 运算符](../../../csharp/language-reference/operators/index.md)

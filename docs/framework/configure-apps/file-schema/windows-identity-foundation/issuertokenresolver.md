@@ -3,16 +3,15 @@ title: '&lt;issuerTokenResolver&gt;'
 ms.date: 03/30/2017
 ms.assetid: f74392f6-3f5b-4880-bd8a-3a9130d31e65
 author: BrucePerlerMS
-manager: mbaldwin
-ms.openlocfilehash: 646833f277c3ef4675a835ca0af3daf647e01224
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: eefd18c206b7f013c3a423df424c795583c0dde8
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32758576"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47216326"
 ---
 # <a name="ltissuertokenresolvergt"></a>&lt;issuerTokenResolver&gt;
-注册的颁发者令牌解析程序由标记处理程序集合中的处理程序。 颁发者令牌解析程序用于解析在传入令牌和消息签名的令牌。  
+注册令牌处理程序集合中的处理程序使用的颁发者令牌解析程序。 颁发者令牌解析程序用于解决签名令牌对传入令牌和消息。  
   
  \<system.identityModel>  
 \<identityConfiguration>  
@@ -42,7 +41,7 @@ ms.locfileid: "32758576"
   
 |特性|描述|  
 |---------------|-----------------|  
-|类型|指定颁发者令牌解析程序的类型。 必须为<xref:System.IdentityModel.Tokens.IssuerTokenResolver>类或派生自类型<xref:System.IdentityModel.Tokens.IssuerTokenResolver>类。 必须的。|  
+|类型|指定颁发者令牌解析器的类型。 必须是<xref:System.IdentityModel.Tokens.IssuerTokenResolver>类或派生类型<xref:System.IdentityModel.Tokens.IssuerTokenResolver>类。 必须的。|  
   
 ### <a name="child-elements"></a>子元素  
  无  
@@ -54,15 +53,15 @@ ms.locfileid: "32758576"
 |[\<securityTokenHandlerConfiguration >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/securitytokenhandlerconfiguration.md)|提供配置集合的安全令牌处理程序。|  
   
 ## <a name="remarks"></a>备注  
- 颁发者令牌解析程序用于解析在传入令牌和消息签名的令牌。 它用于检索用于检查签名的加密材料。 必须指定`type`属性。 指定的类型可以是<xref:System.IdentityModel.Tokens.IssuerTokenResolver>或派生自的自定义类型<xref:System.IdentityModel.Tokens.IssuerTokenResolver>类。  
+ 颁发者令牌解析程序用于解决签名令牌对传入令牌和消息。 它用于检索用来检查签名的加密材料。 必须指定`type`属性。 指定的类型可以是<xref:System.IdentityModel.Tokens.IssuerTokenResolver>派生的自定义类型或<xref:System.IdentityModel.Tokens.IssuerTokenResolver>类。  
   
- 某些令牌处理程序，可以在配置中指定颁发者的标记解析程序设置。 对于单个令牌处理程序的设置会覆盖上的安全令牌的处理程序集合的指定。  
+ 一些令牌处理程序，可在配置中指定颁发者令牌解析器设置。 单个标记处理程序上的设置将覆盖指定安全标记处理程序集合。  
   
 > [!NOTE]
->  指定`<issuerTokenResolver>`元素的子元素作为[ \<identityConfiguration >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md)元素已弃用，但仍支持向后兼容。 上的设置`<securityTokenHandlerConfiguration>`元素上会覆盖`<identityConfiguration>`元素。  
+>  指定`<issuerTokenResolver>`元素的子元素作为[ \<identityConfiguration >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md)元素已被弃用，但仍然支持向后兼容。 上的设置`<securityTokenHandlerConfiguration>`元素上会覆盖`<identityConfiguration>`元素。  
   
 ## <a name="example"></a>示例  
- 下面的 XML 演示基于自定义类派生自颁发者令牌解析程序的配置<xref:System.IdentityModel.Tokens.IssuerTokenResolver>。 令牌解析程序维护的受众密钥对的自定义配置元素中初始化字典 (`<AddAudienceKeyPair>`) 为类定义。 类将重写<xref:System.IdentityModel.Selectors.SecurityTokenResolver.LoadCustomConfiguration%2A>方法来处理此元素。 重写显示在下面的示例;但是，它调用的方法不会显示为简洁起见中。 有关完整示例，请参阅`CustomToken`示例。  
+ 以下 XML 显示了配置为颁发者令牌解析程序基于派生的自定义类<xref:System.IdentityModel.Tokens.IssuerTokenResolver>。 令牌解析器维护自定义配置元素中初始化受众密钥对的字典 (`<AddAudienceKeyPair>`) 为类定义。 此类替代<xref:System.IdentityModel.Selectors.SecurityTokenResolver.LoadCustomConfiguration%2A>方法来处理此元素。 在下面的示例; 显示重写但是，它将调用的方法不会显示为简洁起见。 有关完整示例，请参阅`CustomToken`示例。  
   
 ```xml  
 <issuerTokenResolver type="SimpleWebToken.CustomIssuerTokenResolver, SimpleWebToken">  

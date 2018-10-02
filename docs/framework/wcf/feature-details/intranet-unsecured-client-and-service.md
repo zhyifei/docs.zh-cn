@@ -6,18 +6,17 @@ dev_langs:
 - vb
 ms.assetid: f450f5d4-3547-47ec-9320-2809e6a12634
 author: BrucePerlerMS
-manager: mbaldwin
-ms.openlocfilehash: d08e8b5f9a22fc558af6f8f7c2ca3049e4a692ba
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e09f7c8483e1a3ca330bbee995c2d59f9005f207
+ms.sourcegitcommit: daa8788af67ac2d1cecd24f9f3409babb2f978c9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33492243"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47861680"
 ---
 # <a name="intranet-unsecured-client-and-service"></a>不安全的 Intranet 客户端和服务
-下图描绘了开发到 WCF 应用程序安全的专用网络上提供的信息的简单 Windows Communication Foundation (WCF) 服务。 因为数据重要性较低、 网络预期本质上是安全的或通过下面 WCF 基础结构层提供安全，则不需要安全。  
+下图描绘了开发到 WCF 应用程序安全的专用网络上提供信息的简单 Windows Communication Foundation (WCF) 服务。 不需要安全，因为数据重要性较低、 网络应为本质上是安全的或者在通过以下 WCF 基础结构的层来提供安全性。  
   
- ![Intranet 不安全的客户端和服务方案](../../../../docs/framework/wcf/feature-details/media/unsecuredwebservice.gif "UnsecuredWebService")  
+ ![不安全的 intranet 客户端和服务方案](../../../../docs/framework/wcf/feature-details/media/unsecuredwebservice.gif "UnsecuredWebService")  
   
 |特征|描述|  
 |--------------------|-----------------|  
@@ -83,7 +82,7 @@ ms.locfileid: "33492243"
      [!code-vb[C_SecurityScenarios#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#0)]  
   
 ### <a name="code"></a>代码  
- 下面的代码演示一个基本的 WCF 客户端访问使用 TCP 协议不安全终结点。  
+ 下面的代码演示一个基本的 WCF 客户端访问不安全终结点使用 TCP 协议。  
   
  [!code-csharp[C_UnsecuredClient#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_unsecuredclient/cs/source.cs#2)]
  [!code-vb[C_UnsecuredClient#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_unsecuredclient/vb/source.vb#2)]  
@@ -117,4 +116,4 @@ ms.locfileid: "33492243"
 ## <a name="see-also"></a>请参阅  
  <xref:System.ServiceModel.NetTcpBinding>  
  [安全性概述](../../../../docs/framework/wcf/feature-details/security-overview.md)  
- [Windows Server App Fabric 的安全模型](http://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+ [Windows Server App Fabric 的安全模型](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

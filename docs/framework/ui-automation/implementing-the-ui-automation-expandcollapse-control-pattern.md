@@ -8,17 +8,16 @@ helpviewer_keywords:
 ms.assetid: 1dbabb8c-0d68-47c1-a35e-1c01cb01af26
 author: Xansky
 ms.author: mhopkins
-manager: markl
-ms.openlocfilehash: f593fb09e8c1056c28d351bfdf0218a0161fd9e4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 307cbfa9b41440ebfe2b0d9fd15715a32b8a7cca
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33403801"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47198119"
 ---
 # <a name="implementing-the-ui-automation-expandcollapse-control-pattern"></a>实现 UI 自动化 ExpandCollapse 控件模式
 > [!NOTE]
->  本文档适用于想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空间中定义的托管 <xref:System.Windows.Automation> 类的 .NET Framework 开发人员。 有关 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]的最新信息，请参阅 [Windows 自动化 API：UI 自动化](http://go.microsoft.com/fwlink/?LinkID=156746)。  
+>  本文档适用于想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空间中定义的托管 <xref:System.Windows.Automation> 类的 .NET Framework 开发人员。 有关最新信息[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]，请参阅[Windows 自动化 API: UI 自动化](https://go.microsoft.com/fwlink/?LinkID=156746)。  
   
  本主题介绍实现 <xref:System.Windows.Automation.Provider.IExpandCollapseProvider>的准则和约定，包括有关属性、方法和事件的信息。 本概述的结尾列出了指向其他参考资料的链接。  
   

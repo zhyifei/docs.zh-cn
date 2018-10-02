@@ -8,12 +8,12 @@ helpviewer_keywords:
 - delaysign compiler option [C#]
 - /delaysign compiler option [C#]
 ms.assetid: bcb058eb-2933-4e7f-b356-5c941db4de75
-ms.openlocfilehash: 72dcba3b506dae42f67f0421ba92efee18274c37
-ms.sourcegitcommit: 77d9a94dac4c05827ed0663d95e0f9ad35d6682e
+ms.openlocfilehash: 105f564d40799c1c006caf8b59d6199dbd8e9318
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/24/2018
-ms.locfileid: "34472641"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43518325"
 ---
 # <a name="-delaysign-c-compiler-options"></a>-delaysign（C# 编译器选项）
 
@@ -52,6 +52,6 @@ ms.locfileid: "34472641"
 
 ## <a name="see-also"></a>请参阅
 
- [C# -publicsign 选项](publicsign-compiler-option.md)  
- [C# 编译器选项](index.md)  
- [管理项目和解决方案属性](/visualstudio/ide/managing-project-and-solution-properties)
+- [C# -publicsign 选项](publicsign-compiler-option.md)  
+- [C# 编译器选项](index.md)  
+- [管理项目和解决方案属性](/visualstudio/ide/managing-project-and-solution-properties)

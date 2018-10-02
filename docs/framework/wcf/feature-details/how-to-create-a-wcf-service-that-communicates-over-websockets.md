@@ -2,12 +2,12 @@
 title: 如何创建通过 WebSocket 进行通信的 WCF 服务
 ms.date: 03/30/2017
 ms.assetid: bafbbd89-eab8-4e9a-b4c3-b7b0178e12d8
-ms.openlocfilehash: 197db0b81565b93c753ad3ecfb716e4d07ea1d0f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a9b3ae8d8dcac7844e241fa668e1199669d216e6
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33493772"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47196181"
 ---
 # <a name="how-to-create-a-wcf-service-that-communicates-over-websockets"></a>如何创建通过 WebSocket 进行通信的 WCF 服务
 WCF 服务和客户端可以使用 <xref:System.ServiceModel.NetHttpBinding> 绑定通过 WebSocket 进行通信。  当 <xref:System.ServiceModel.NetHttpBinding> 确定服务协定定义回调协定时，将使用 WebSocket。 本主题描述如何实现使用 <xref:System.ServiceModel.NetHttpBinding> 通过 WebSocket 进行通信的 WCF 服务和客户端。  
@@ -228,7 +228,7 @@ namespace Server
   
 <!--  
   For more information on how to configure your ASP.NET application, please visit  
-  http://go.microsoft.com/fwlink/?LinkId=169433  
+  https://go.microsoft.com/fwlink/?LinkId=169433  
   -->  
   
 <configuration>  

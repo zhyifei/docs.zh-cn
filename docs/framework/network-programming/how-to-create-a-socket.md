@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: c64a049c-5981-43bc-a2dc-1851473589c7
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 600ea82965c332c8620db689abb50965f15f0067
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2ec87d45a4e7140aa2c1d901492952cd25634025
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33396943"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47192200"
 ---
 # <a name="how-to-create-a-socket"></a>如何：创建套接字
 必须先使用协议和网络地址信息初始化套接字，然后才能使用套接字与远程设备进行通信。 <xref:System.Net.Sockets.Socket> 类的构造函数包含的参数可以指定地址系列、套接字类型，以及套接字用于建立连接的协议类型。  

@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 618e5afb-3a97-440d-831a-70e4c526a51c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2bb1d9bdbd0874875939010ea5503fe791a2cd1b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 271042fc167331def9e427cd4fc8b510e5f2f32e
+ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33579829"
+ms.lasthandoff: 08/25/2018
+ms.locfileid: "42925719"
 ---
 # <a name="best-practices-for-regular-expressions-in-net"></a>.NET 中的正则表达式最佳做法
 <a name="top"></a> .NET 中的正则表达式引擎是一款功能强大且完备的工具，根据模式匹配（而不是比较和匹配文本）处理文本。 在大多数情况下，它可以快速、高效地执行模式匹配。 但在某些情况下，正则表达式引擎的速度似乎很慢。 在极端情况下，它甚至看似停止响应，因为它会用若干个小时甚至若干天处理相对小的输入。  
@@ -190,7 +190,7 @@ ms.locfileid: "33579829"
   
  由于单词边界与单词字符不同也不是其子集，因此正则表达式引擎在匹配单词字符时无法跨越单词边界。 这意味着，对于此正则表达式而言，回溯对任何匹配的总体成功不会有任何贡献 -- 由于正则表达式引擎被强制为单词字符的每个成功的初步匹配保存其状态，因此它只会降低性能。  
   
- 如果确定不需要回溯，可以使用 `(?>``subexpression``)` 语言元素禁用它。 下面的示例通过使用两个正则表达式来分析输入字符串。 第一个正则表达式 `\b\p{Lu}\w*\b` 依赖于回溯。 第二个正则表达式 `\b\p{Lu}(?>\w*)\b` 禁用回溯。 如示例输出所示，这两个正则表达式产生的结果相同。  
+ 如果确定不需要回溯，可以使用 `(?>subexpression)` 语言元素禁用它。 下面的示例通过使用两个正则表达式来分析输入字符串。 第一个正则表达式 `\b\p{Lu}\w*\b` 依赖于回溯。 第二个正则表达式 `\b\p{Lu}(?>\w*)\b` 禁用回溯。 如示例输出所示，这两个正则表达式产生的结果相同。  
   
  [!code-csharp[Conceptual.RegularExpressions.BestPractices#10](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.bestpractices/cs/backtrack2.cs#10)]
  [!code-vb[Conceptual.RegularExpressions.BestPractices#10](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.bestpractices/vb/backtrack2.vb#10)]  
@@ -272,20 +272,20 @@ ms.locfileid: "33579829"
  [!code-csharp[Conceptual.RegularExpressions.BestPractices#8](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.bestpractices/cs/group1.cs#8)]
  [!code-vb[Conceptual.RegularExpressions.BestPractices#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.bestpractices/vb/group1.vb#8)]  
   
- 当你只使用子表达式来对其应用限定符并且你对捕获的文本不感兴趣时，应禁用组捕获。 例如，`(?:``subexpression``)` 语言元素可防止应用此元素的组捕获匹配的子字符串。 在下面的示例中，上一示例中的正则表达式模式更改为 `\b(?:\w+[;,]?\s?)+[.?!]`。 正如输出所示，它禁止正则表达式引擎填充 <xref:System.Text.RegularExpressions.GroupCollection> 和 <xref:System.Text.RegularExpressions.CaptureCollection> 集合。  
+ 当你只使用子表达式来对其应用限定符并且你对捕获的文本不感兴趣时，应禁用组捕获。 例如，`(?:subexpression)` 语言元素可防止应用此元素的组捕获匹配的子字符串。 在下面的示例中，上一示例中的正则表达式模式更改为 `\b(?:\w+[;,]?\s?)+[.?!]`。 正如输出所示，它禁止正则表达式引擎填充 <xref:System.Text.RegularExpressions.GroupCollection> 和 <xref:System.Text.RegularExpressions.CaptureCollection> 集合。  
   
  [!code-csharp[Conceptual.RegularExpressions.BestPractices#9](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.bestpractices/cs/group2.cs#9)]
  [!code-vb[Conceptual.RegularExpressions.BestPractices#9](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.bestpractices/vb/group2.vb#9)]  
   
  可以通过以下方式之一来禁用捕获：  
   
--   使用 `(?:``subexpression``)` 语言元素。 此元素可防止在它应用的组中捕获匹配的子字符串。 它不在任何嵌套的组中禁用子字符串捕获。  
+-   使用 `(?:subexpression)` 语言元素。 此元素可防止在它应用的组中捕获匹配的子字符串。 它不在任何嵌套的组中禁用子字符串捕获。  
   
--   使用 <xref:System.Text.RegularExpressions.RegexOptions.ExplicitCapture> 选项。 在正则表达式模式中禁用所有未命名或隐式捕获。 使用此选项时，只能捕获与使用 `(?<``name``>``subexpression``)` 语言元素定义的命名组匹配的子字符串。 可将 <xref:System.Text.RegularExpressions.RegexOptions.ExplicitCapture> 标记传递给 `options` 类构造函数的 <xref:System.Text.RegularExpressions.Regex> 参数或 `options` 静态匹配方法的 <xref:System.Text.RegularExpressions.Regex> 参数。  
+-   使用 <xref:System.Text.RegularExpressions.RegexOptions.ExplicitCapture> 选项。 在正则表达式模式中禁用所有未命名或隐式捕获。 使用此选项时，只能捕获与使用 `(?<name>subexpression)` 语言元素定义的命名组匹配的子字符串。 可将 <xref:System.Text.RegularExpressions.RegexOptions.ExplicitCapture> 标记传递给 `options` 类构造函数的 <xref:System.Text.RegularExpressions.Regex> 参数或 `options` 静态匹配方法的 <xref:System.Text.RegularExpressions.Regex> 参数。  
   
 -   在 `n` 语言元素中使用 `(?imnsx)` 选项。 此选项将在元素出现的正则表达式模式中的点处禁用所有未命名或隐式捕获。 捕获将一直禁用到模式结束或 `(-n)` 选项启用未命名或隐式捕获。 有关详细信息，请参阅[其他构造](../../../docs/standard/base-types/miscellaneous-constructs-in-regular-expressions.md)。  
   
--   在 `n` 语言元素中使用 `(?imnsx:``subexpression``)` 选项。 此选项可在 `subexpression` 中禁用所有未命名或隐式捕获。 同时禁用任何未命名或隐式的嵌套捕获组进行的任何捕获。  
+-   在 `n` 语言元素中使用 `(?imnsx:subexpression)` 选项。 此选项可在 `subexpression` 中禁用所有未命名或隐式捕获。 同时禁用任何未命名或隐式的嵌套捕获组进行的任何捕获。  
   
  [返回页首](#top)  
   

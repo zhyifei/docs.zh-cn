@@ -2,12 +2,12 @@
 title: REF CURSOR 示例
 ms.date: 03/30/2017
 ms.assetid: c257da03-c6c9-4cf8-b591-b7740a962c40
-ms.openlocfilehash: 9593a30524b7d8161903b840e1bdb0ee007027a1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 803c921b76369aa9268c7fd34d1f15dd51bb17f3
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33353542"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43406053"
 ---
 # <a name="ref-cursor-examples"></a>REF CURSOR 示例
 REF CURSOR 示例包括下列三个 Visual Basic 示例，演示如何使用 REF CURSOR。  
@@ -81,4 +81,4 @@ END CURSPKG;
   
 ## <a name="see-also"></a>请参阅  
  [Oracle REF CURSORs](../../../../docs/framework/data/adonet/oracle-ref-cursors.md)  
- [ADO.NET 托管提供程序和数据集开发人员中心](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)

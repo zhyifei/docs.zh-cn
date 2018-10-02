@@ -9,15 +9,15 @@ helpviewer_keywords:
 - custom controls [Windows Forms], creating simple controls using code
 - Control class [Windows Forms], Windows Forms
 ms.assetid: 86cbe435-45b7-4cb4-9b5a-47418369758d
-ms.openlocfilehash: 04cedc0df60ef95acb79b651ddcbcbb34ae5e920
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 07a4de944e36b0be1a6196d08df33c4f3ab24bcc
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33539661"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43856669"
 ---
 # <a name="how-to-develop-a-simple-windows-forms-control"></a>如何：开发简单的 Windows 窗体控件
-本部分演示创建自定义 Windows 窗体控件的关键步骤。 在本演练中开发的简单控件允许的对齐方式其<xref:System.Windows.Forms.Control.Text%2A>要更改属性。 它不会引发或处理事件。  
+本部分演示创建自定义 Windows 窗体控件的关键步骤。 在本演练中开发的简单控件允许的对齐方式及其<xref:System.Windows.Forms.Control.Text%2A>要更改属性。 它不会引发或处理事件。  
   
 ### <a name="to-create-a-simple-custom-control"></a>创建简单的自定义控件  
   
@@ -31,27 +31,27 @@ ms.locfileid: "33539661"
     ```  
   
     ```csharp  
-    public class FirstControl:Control{}  
+    public class FirstControl:Control {}  
     ```  
   
-2.  定义属性。 (你无需定义属性，因为控件将继承从许多属性<xref:System.Windows.Forms.Control>类，但大多数自定义控件通常需要定义其他属性。)下面的代码段定义名为的属性`TextAlignment`，`FirstControl`用于设置显示的格式<xref:System.Windows.Forms.Control.Text%2A>属性从继承<xref:System.Windows.Forms.Control>。 有关定义属性的详细信息，请参阅[属性概述](http://msdn.microsoft.com/library/8f1a1ff1-0f05-40e0-bfdf-80de8fff7d52)。  
+2.  定义属性。 (不需要定义属性，因为控件继承许多属性从<xref:System.Windows.Forms.Control>类，但大多数自定义控件通常会定义其他属性。)以下代码片段定义名为的属性`TextAlignment`该`FirstControl`使用的显示格式<xref:System.Windows.Forms.Control.Text%2A>属性继承自<xref:System.Windows.Forms.Control>。 有关定义属性的详细信息，请参阅[属性概述](https://msdn.microsoft.com/library/8f1a1ff1-0f05-40e0-bfdf-80de8fff7d52)。  
   
      [!code-csharp[System.Windows.Forms.FirstControl#3](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.FirstControl/CS/FirstControl.cs#3)]
      [!code-vb[System.Windows.Forms.FirstControl#3](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.FirstControl/VB/FirstControl.vb#3)]  
   
-     当设置属性，可更改控件的可视显示时，必须调用<xref:System.Windows.Forms.Control.Invalidate%2A>方法进行重绘控件。 <xref:System.Windows.Forms.Control.Invalidate%2A> 在基类中定义<xref:System.Windows.Forms.Control>。  
+     当设置属性，可更改控件的可视显示时，必须调用<xref:System.Windows.Forms.Control.Invalidate%2A>方法来重绘控件。 <xref:System.Windows.Forms.Control.Invalidate%2A> 在基类中定义<xref:System.Windows.Forms.Control>。  
   
-3.  重写受保护<xref:System.Windows.Forms.Control.OnPaint%2A>方法继承自<xref:System.Windows.Forms.Control>提供到您的控件的呈现逻辑。 如果你不重写<xref:System.Windows.Forms.Control.OnPaint%2A>，控件将不能自行绘制。 在下面的代码片段中，<xref:System.Windows.Forms.Control.OnPaint%2A>方法显示<xref:System.Windows.Forms.Control.Text%2A>属性从继承<xref:System.Windows.Forms.Control>与由指定的对齐方式`alignmentValue`字段。  
+3.  重写受保护<xref:System.Windows.Forms.Control.OnPaint%2A>方法继承自<xref:System.Windows.Forms.Control>提供到您的控件的呈现逻辑。 如果您不会重写<xref:System.Windows.Forms.Control.OnPaint%2A>，控件将不能自我绘制。 在以下代码片段中，<xref:System.Windows.Forms.Control.OnPaint%2A>方法将显示<xref:System.Windows.Forms.Control.Text%2A>属性继承自<xref:System.Windows.Forms.Control>与由指定的对齐方式`alignmentValue`字段。  
   
      [!code-csharp[System.Windows.Forms.FirstControl#4](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.FirstControl/CS/FirstControl.cs#4)]
      [!code-vb[System.Windows.Forms.FirstControl#4](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.FirstControl/VB/FirstControl.vb#4)]  
   
-4.  为控件提供属性。 特性让视觉设计器能够在设计时适当显示控件及其属性和事件。 以下代码片段将特性应用于 `TextAlignment` 属性。 在 Visual Studio 中，如设计器<xref:System.ComponentModel.CategoryAttribute.Category%2A>属性 （如代码片段所示） 将导致要逻辑类别下显示的属性。 <xref:System.ComponentModel.DescriptionAttribute.Description%2A>属性将导致在底部显示的描述性字符串**属性**窗口时`TextAlignment`选择属性。 有关属性的详细信息，请参阅[组件的设计时属性](http://msdn.microsoft.com/library/12050fe3-9327-4509-9e21-4ee2494b95c3)。  
+4.  为控件提供属性。 特性让视觉设计器能够在设计时适当显示控件及其属性和事件。 以下代码片段将特性应用于 `TextAlignment` 属性。 在设计器中 Visual Studio 中，如<xref:System.ComponentModel.CategoryAttribute.Category%2A>属性 （如代码段所示） 会导致在逻辑类别下显示的属性。 <xref:System.ComponentModel.DescriptionAttribute.Description%2A>属性使描述性字符串显示在底部**属性**窗口时`TextAlignment`选择属性。 有关属性的详细信息，请参阅[组件的设计时属性](https://msdn.microsoft.com/library/12050fe3-9327-4509-9e21-4ee2494b95c3)。  
   
      [!code-csharp[System.Windows.Forms.FirstControl#5](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.FirstControl/CS/FirstControl.cs#5)]
      [!code-vb[System.Windows.Forms.FirstControl#5](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.FirstControl/VB/FirstControl.vb#5)]  
   
-5.  （可选）为控件提供资源。 可通过使用编译器选项（对于 C#，为 `/res`）将资源和控件进行打包，从而为控件提供资源（如位图）。 在运行时，资源可以使用检索的方法<xref:System.Resources.ResourceManager>类。 有关创建和使用资源的详细信息，请参阅[桌面应用中的资源](../../../../docs/framework/resources/index.md)。  
+5.  （可选）为控件提供资源。 可通过使用编译器选项（对于 C#，为 `/res`）将资源和控件进行打包，从而为控件提供资源（如位图）。 在运行时，可以使用检索资源的方法<xref:System.Resources.ResourceManager>类。 有关创建和使用资源的详细信息，请参阅[桌面应用中的资源](../../../../docs/framework/resources/index.md)。  
   
 6.  编译和部署控件。 要编译和部署 `FirstControl,`，请执行以下步骤：  
   
@@ -69,7 +69,7 @@ ms.locfileid: "33539661"
   
          `/t:library` 编译器选项会告知编译器正在创建的程序集是库（而不是可执行文件）。 `/out` 选项指定程序集的路径和名称。 `/r` 选项提供代码引用的程序集的名称。 在此示例中，将创建只有你的应用程序可以使用的私有程序集。 因此，必须将其保存在应用程序的目录中。 有关打包和部署控件以进行分发的详细信息，请参阅[部署](../../../../docs/framework/deployment/index.md)。  
   
- 此示例演示了 `FirstControl` 的代码。 控件包含在命名空间 `CustomWinControls` 中。 命名空间提供相关类型的逻辑分组。 可在新的或现有命名空间中创建控件。 在 C# 中，`using` 声明（在 Visual Basic 中，为 `Imports`）允许从命名空间访问类型，而无需使用类型的完全限定名称。 在下面的示例中，`using`声明允许代码访问类<xref:System.Windows.Forms.Control>从<xref:System.Windows.Forms?displayProperty=nameWithType>简单地<xref:System.Windows.Forms.Control>而无需使用完全限定的名称<xref:System.Windows.Forms.Control?displayProperty=nameWithType>。  
+ 此示例演示了 `FirstControl` 的代码。 控件包含在命名空间 `CustomWinControls` 中。 命名空间提供相关类型的逻辑分组。 可在新的或现有命名空间中创建控件。 在 C# 中，`using` 声明（在 Visual Basic 中，为 `Imports`）允许从命名空间访问类型，而无需使用类型的完全限定名称。 在以下示例中，`using`声明允许代码访问的类<xref:System.Windows.Forms.Control>从<xref:System.Windows.Forms?displayProperty=nameWithType>简单地<xref:System.Windows.Forms.Control>而无需使用完全限定的名称<xref:System.Windows.Forms.Control?displayProperty=nameWithType>。  
   
  [!code-csharp[System.Windows.Forms.FirstControl#1](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.FirstControl/CS/FirstControl.cs#1)]
  [!code-vb[System.Windows.Forms.FirstControl#1](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.FirstControl/VB/FirstControl.vb#1)]  
@@ -91,7 +91,7 @@ ms.locfileid: "33539661"
     csc -r:CustomWinControls.dll -r:System.dll -r:System.Windows.Forms.dll -r:System.Drawing.dll SimpleForm.cs  
     ```  
   
-     CustomWinControls.dll 是包含的类的程序集`FirstControl`。 此程序集必须与访问程序集的窗体的源文件（SimpleForm.cs或SimpleForms.vb）位于同一目录中。  
+     CustomWinControls.dll 是包含类的程序集`FirstControl`。 此程序集必须与访问程序集的窗体的源文件（SimpleForm.cs或SimpleForms.vb）位于同一目录中。  
   
 3.  使用以下命令执行 SimpleForm.exe。  
   

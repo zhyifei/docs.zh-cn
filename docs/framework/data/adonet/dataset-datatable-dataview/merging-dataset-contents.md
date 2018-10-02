@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: e5e9309a-3ebb-4a9c-9d78-21c4e2bafc5b
-ms.openlocfilehash: c0cc0834dc087df89131a720f517cd34f757a0f3
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 38d716552c4a52e01ef803ce197e4d588ed562c3
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32763665"
+ms.lasthandoff: 09/15/2018
+ms.locfileid: "45658790"
 ---
 # <a name="merging-dataset-contents"></a>合并数据集内容
 您可以使用 <xref:System.Data.DataSet.Merge%2A> 方法将 <xref:System.Data.DataSet>、<xref:System.Data.DataTable> 或 <xref:System.Data.DataRow> 数组的内容合并到现有的 `DataSet` 中。 若干因素和选项会影响将新数据合并到现有 `DataSet` 中的方式。  
@@ -84,4 +84,4 @@ ms.locfileid: "32763665"
  [DataAdapters 和 DataReaders](../../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)  
  [在 ADO.NET 中检索和修改数据](../../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)  
  [检索标识或自动编号值](../../../../../docs/framework/data/adonet/retrieving-identity-or-autonumber-values.md)  
- [ADO.NET 托管提供程序和数据集开发人员中心](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)

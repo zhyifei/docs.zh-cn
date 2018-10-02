@@ -7,12 +7,12 @@ helpviewer_keywords:
 - AND assignment operator (&=) [C#]
 - '&= operator [C#]'
 ms.assetid: e8d58f3f-72dd-4b5a-b995-452fcce7e6bb
-ms.openlocfilehash: 092f46ddd8ca52e2d705200768c93a3473f1520f
-ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
+ms.openlocfilehash: f3a6fe20ca89a90b5a64118d73fb39e9a364d1e9
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2018
-ms.locfileid: "34172043"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43506396"
 ---
 # <a name="amp-operator-c-reference"></a>&amp;= 运算符（C# 参考）
 AND 赋值运算符。  
@@ -37,7 +37,8 @@ x = x & y
 ## <a name="example"></a>示例  
  [!code-csharp[csRefOperators#34](../../../csharp/language-reference/operators/codesnippet/CSharp/and-assignment-operator_1.cs)]  
   
-## <a name="see-also"></a>请参阅  
- [C# 参考](../../../csharp/language-reference/index.md)  
- [C# 编程指南](../../../csharp/programming-guide/index.md)  
- [C# 运算符](../../../csharp/language-reference/operators/index.md)
+## <a name="see-also"></a>请参阅
+
+- [C# 参考](../../../csharp/language-reference/index.md)  
+- [C# 编程指南](../../../csharp/programming-guide/index.md)  
+- [C# 运算符](../../../csharp/language-reference/operators/index.md)

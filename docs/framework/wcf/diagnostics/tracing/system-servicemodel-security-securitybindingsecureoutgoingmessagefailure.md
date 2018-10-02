@@ -3,13 +3,12 @@ title: System.ServiceModel.Security.SecurityBindingSecureOutgoingMessageFailure
 ms.date: 03/30/2017
 ms.assetid: bb46c07b-f824-43fd-892c-bca4f68a8866
 author: BrucePerlerMS
-manager: mbaldwin
-ms.openlocfilehash: 3635a3cc58e044f797bfe003c951534f5b6b9eda
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1accc0c56be654b028f0ba969d6722165917dde0
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33482204"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47200485"
 ---
 # <a name="systemservicemodelsecuritysecuritybindingsecureoutgoingmessagefailure"></a>System.ServiceModel.Security.SecurityBindingSecureOutgoingMessageFailure
 System.ServiceModel.Security.SecurityBindingSecureOutgoingMessageFailure  

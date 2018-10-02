@@ -6,12 +6,12 @@ helpviewer_keywords:
 - nodes [XAML Services], XAML node stream
 - XAML [XAML Services], XAML node streams
 ms.assetid: 7c11abec-1075-474c-9d9b-778e5dab21c3
-ms.openlocfilehash: fc27426e4d48ae519fc743c8a4f7eb3d1e6a4e81
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 100de0a897538527b76b1a53cf40d59a8804d3ae
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33566647"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43519442"
 ---
 # <a name="understanding-xaml-node-stream-structures-and-concepts"></a>了解 XAML 节点流结构和概念
 .NET Framework XAML 服务中实现的 XAML 读取器和 XAML 编写器基于 XAML 节点流的设计概念。 将一组 XAML 节点概念化就生成 XAML 节点流。 在此概念化中，XAML 处理器逐一浏览 XAML 中节点关系的结构。 一个打开的 XAML 节点流中始终只存在一个当前记录或当前位置，并且 API 的很多方面只报告此位置提供的信息。 XAML 节点流中的当前节点可描述为对象、成员或值。 通过将 XAML 视为 XAML 节点流，XAML 读取器可与 XAML 编写器通信；并且在涉及 XAML 的加载路径或保存路径操作过程中可启用程序查看、更改 XAML 节点流的内容或与它交互。 XAML 读取器和编写器 API 设计以及 XAML 节点流概念都类似于上一个相关的读取器和编写器设计和概念，如： [!INCLUDE[TLA#tla_xmldom](../../../includes/tlasharptla-xmldom-md.md)] 以及 <xref:System.Xml.XmlReader> 和 <xref:System.Xml.XmlWriter> 类。 本主题阐述 XAML 节点流概念，并介绍如何编写在 XAML 节点级别上与 XAML 表示形式进行交互的例程。  
@@ -80,7 +80,7 @@ while (xxr.Read()) {
  除了用作 XAML 节点循环，可能还有其他使用 XAML 表示形式的方式。 例如，可能有 XAML 读取器可以读取索引节点，或者特别是直接通过 `x:Name`、 `x:Uid`或其他标识符访问节点。 .NET framework XAML 服务不提供完整实现，而通过服务和支持类型提供一种建议模式。 有关详细信息，请参阅 <xref:System.Xaml.IXamlIndexingReader> 和 <xref:System.Xaml.XamlNodeList>。  
   
 > [!TIP]
->  Microsoft 也会生成称为 Microsoft XAML 工具包的带外版本。 此带外版本仍处于预发布阶段。 但是，如果你想使用预发布组件，Microsoft XAML 工具包会提供一些有关 XAML 工具和 XAML 静态分析的有趣资源。 Microsoft XAML 工具包包括 XAML DOM API、对 FxCop 分析的支持以及 Silverlight 的 XAML 架构上下文。 有关详细信息，请参阅 [Microsoft XAML 工具包](http://code.msdn.microsoft.com/XAML)。  
+>  Microsoft 也会生成称为 Microsoft XAML 工具包的带外版本。 此带外版本仍处于预发布阶段。 但是，如果你想使用预发布组件，Microsoft XAML 工具包会提供一些有关 XAML 工具和 XAML 静态分析的有趣资源。 Microsoft XAML 工具包包括 XAML DOM API、对 FxCop 分析的支持以及 Silverlight 的 XAML 架构上下文。 有关详细信息，请参阅[Microsoft XAML 工具包](https://code.msdn.microsoft.com/XAML)。  
   
 <a name="working_with_the_current_node"></a>   
 ## <a name="working-with-the-current-node"></a>使用当前代码  

@@ -7,15 +7,15 @@ helpviewer_keywords:
 - timing system [WPF]
 - animation [WPF]
 ms.assetid: 587e36f6-1957-424e-9d89-c43724f26d84
-ms.openlocfilehash: bc14c0563be631662737b6d5f244d3c369d57901
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7c61e1bbd3b9c93785393c729f2af27f29d1dc40
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33557636"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "45994268"
 ---
 # <a name="animation-and-timing-how-to-topics"></a>动画和计时帮助主题
-以下主题演示如何使用[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]动画和时间系统在应用程序。  
+以下主题演示如何使用[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]动画和计时系统应用程序中的。  
   
 ## <a name="in-this-section"></a>本节内容  
  [加速或减速播放动画](../../../../docs/framework/wpf/graphics-multimedia/how-to-accelerate-or-decelerate-an-animation.md)  
@@ -31,7 +31,6 @@ ms.locfileid: "33557636"
  [使用 From、To 和 By 控制动画](../../../../docs/framework/wpf/graphics-multimedia/how-to-control-an-animation-using-from-to-and-by.md)  
  [定义名称范围](../../../../docs/framework/wpf/graphics-multimedia/how-to-define-a-name-scope.md)  
  [在时钟状态发生变化时接收通知](../../../../docs/framework/wpf/graphics-multimedia/how-to-receive-notification-when-clock-state-changes.md)  
- [如何： 删除情节提要](http://msdn.microsoft.com/library/7fe39531-de2f-46a0-a69f-b783d04235ee)  
  [重复动画](../../../../docs/framework/wpf/graphics-multimedia/how-to-repeat-an-animation.md)  
  [搜寻情节提要](../../../../docs/framework/wpf/graphics-multimedia/how-to-seek-a-storyboard.md)  
  [同步搜寻演示图板](../../../../docs/framework/wpf/graphics-multimedia/how-to-seek-a-storyboard-synchronously.md)  

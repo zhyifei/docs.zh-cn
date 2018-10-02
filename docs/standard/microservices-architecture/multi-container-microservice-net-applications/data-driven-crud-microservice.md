@@ -4,12 +4,12 @@ description: 适用于容器化 .NET 应用程序的 .NET 微服务体系结构 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 12/11/2017
-ms.openlocfilehash: d99480c1b703bc46228e25f6acd7e7fbbcae6228
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.openlocfilehash: 28955b2309b3efb321e40e19db821052b8ce42ab
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37106442"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43512111"
 ---
 # <a name="creating-a-simple-data-driven-crud-microservice"></a>创建简单的数据驱动 CRUD 微服务
 
@@ -326,7 +326,7 @@ Microsoft Flow、PowerApps 和 Azure 逻辑应用通过使用 Swagger 的元数�
 
 ### <a name="how-to-automate-api-swagger-metadata-generation-with-the-swashbuckle-nuget-package"></a>如何使用 Swashbuckle NuGet 包自动生成 API Swagger 元数据
 
-手动（在 JSON 或 YAML 文件中）生成 Swagger 元数据可能会耗时较长且较为枯燥。 但可使用 [Swashbuckle NuGet 包](http://aka.ms/swashbuckledotnetcore)动态生成 Swagger API 元数据，让 ASP.NET Web API 服务自动发现 API。
+手动（在 JSON 或 YAML 文件中）生成 Swagger 元数据可能会耗时较长且较为枯燥。 但可使用 [Swashbuckle NuGet 包](https://aka.ms/swashbuckledotnetcore)动态生成 Swagger API 元数据，让 ASP.NET Web API 服务自动发现 API。
 
 Swashbuckle 为 ASP.NET Web API 项目自动生成 Swagger 元数据。 它支持 ASP.NET Core Web API 项目和传统 ASP.NET Web API 以及任何其他风格，如 Azure API 应用、Azure 移动应用和基于 ASP.NET 的 Azure Service Fabric 微服务等。 它还支持容器上部署的普通 Web API，就像为引用应用程序提供支持那样。
 
@@ -340,7 +340,7 @@ Swashbuckle 将 API 资源管理器和 Swagger 或 [swagger ui](https://github.c
 
 此处，API 资源管理器不是最重要的部分。 一旦具有可在 Swagger 元数据中进行自我描述的 Web API 后，便可从基于 Swagger 的工具中无缝使用 API，这些工具包括可面向多个平台的客户端代理类代码生成器。 例如，之前提到过，[AutoRest](https://github.com/Azure/AutoRest) 可自动生成 .NET 客户端类。 同时还有 [swagger-codegen](https://github.com/swagger-api/swagger-codegen) 等其他工具可用，这些工具可用于自动生成 API 客户端库、服务器存根（stub）和文档的代码。
 
-目前，Swashbuckle 在用于 ASP.NET Core 应用程序的高级元包 [Swashbuckle.Swashbuckle.AspNetCoreSwaggerGen](https://www.nuget.org/packages/Swashbuckle.AspNetCore/) 1.0.0 版或更高版本下包含两个到多个内部 NuGet 包。
+目前，Swashbuckle 在用于 ASP.NET Core 应用程序的高级元包 [Swashbuckle.AspNetCore](https://www.nuget.org/packages/Swashbuckle.AspNetCore/) 1.0.0 版或更高版本下包含多个内部 NuGet 包。
 
 在 Web API 项目中安装这些 NuGet 包后，需在 Startup 类中配置 Swagger，如以下代码所示：
 

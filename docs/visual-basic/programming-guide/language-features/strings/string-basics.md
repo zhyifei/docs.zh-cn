@@ -7,14 +7,14 @@ helpviewer_keywords:
 - strings [Visual Basic], regular expressions
 ms.assetid: 5674418d-f00d-4f72-9f98-d15897793350
 ms.openlocfilehash: 7d2477070dce558aa932c822852ac8ac9c6721e4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 869b5832b667915ac4a5dd8c86b1109ed26b6c08
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33654055"
+ms.lasthandoff: 07/28/2018
+ms.locfileid: "39332649"
 ---
 # <a name="string-basics-in-visual-basic"></a>字符串基础 (Visual Basic)
-`String` 数据类型表示一系列字符（每个字符都进而表示 `Char` 数据类型的一个实例）。 本主题介绍了在 Visual Basic 中的字符串的基本概念。  
+`String` 数据类型表示一系列字符（每个字符都进而表示 `Char` 数据类型的一个实例）。 本主题介绍在 Visual Basic 中的字符串的基本概念。  
   
 ## <a name="string-variables"></a>字符串变量  
  可以向字符串的实例分配表示一系列字符的文本值。 例如：  
@@ -29,7 +29,7 @@ ms.locfileid: "33654055"
   
  [!code-vb[VbVbalrStrings#65](../../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/string-basics_3.vb)]  
   
- 此代码会导致错误，因为编译器会在第二个引号之后终止字符串，字符串的其余部分会解释为代码。 若要解决此问题，Visual Basic 会将文本字符串中的一个引号作为字符串中的两个引号解释。 下面的示例演示在字符串中包含引号的正确方法：  
+ 此代码会导致错误，因为编译器会在第二个引号之后终止字符串，字符串的其余部分会解释为代码。 若要解决此问题，Visual Basic 会将字符串文本字符串中的一个引号中的两个引号解释。 下面的示例演示在字符串中包含引号的正确方法：  
   
  [!code-vb[VbVbalrStrings#66](../../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/string-basics_4.vb)]  
   
@@ -61,7 +61,7 @@ World]]></xml>.Value
  变量 `myArray` 现在包含 `Char` 值的数组，其中每个值都表示 `myString` 中的一个字符。  
   
 ## <a name="the-immutability-of-strings"></a>字符串的不可变性  
- 一个字符串是否为*不可变*，其值不能一次更改这意味着它已创建。 但是，这不会阻止你将多个值分配给字符串变量。 请看下面的示例：  
+ 字符串是*不可变*，这意味着不能一次更改其值创建。 但是，这不会阻止你将多个值分配给字符串变量。 请看下面的示例：  
   
  [!code-vb[VbVbalrStrings#69](../../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/string-basics_7.vb)]  
   

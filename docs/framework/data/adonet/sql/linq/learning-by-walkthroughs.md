@@ -2,12 +2,12 @@
 title: 通过演练学习
 ms.date: 03/30/2017
 ms.assetid: a8ae2965-6a49-4155-89b0-7fab2c488ab1
-ms.openlocfilehash: 028bd2af9ba88136e5955c6776b0d765af20fca3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1386d0e8fadddab5cd15818cb616bf331262e654
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33362216"
+ms.lasthandoff: 09/27/2018
+ms.locfileid: "47401493"
 ---
 # <a name="learning-by-walkthroughs"></a>通过演练学习
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]文档提供了一些演练。 本主题介绍一些一般性的演练问题（包括疑难解答），并提供指向用于了解 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 的一些入门级演练的链接。  
@@ -39,11 +39,11 @@ ms.locfileid: "33362216"
   
 -   [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 演练通常需要 Northwind 示例数据库。 有关详细信息，请参阅[下载示例数据库](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)。  
   
--   显示的对话框和菜单命令在演练中看到可能有所不同具体取决于你现用的设置或 Visual Studio 版本中的帮助中, 所述。 若要更改设置，请单击 **“工具”** 菜单上的 **“导入和导出设置”** 。 有关详细信息，请参阅[在 Visual Studio 中自定义开发设置](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3)。  
+-   从中所述的帮助，具体取决于您现用的设置或 Visual Studio 版本可能不同的对话框和菜单命令在演练中看到。 若要更改设置，请单击 **“工具”** 菜单上的 **“导入和导出设置”** 。 有关详细信息，请参阅[个性化设置 Visual Studio IDE](/visualstudio/ide/personalizing-the-visual-studio-ide)。  
   
 -   对于介绍多层方案的演练，服务器必须位于与开发计算机不同的计算机上，并且您必须具有访问此服务器的相应权限。  
   
--   通常表示 Northwind 示例数据库中 Orders 表的类名为 `[Order]`。 这种转义是必需的因为`Order`是 Visual Basic 中的关键字。  
+-   通常表示 Northwind 示例数据库中 Orders 表的类名为 `[Order]`。 这种转义是必需的因为`Order`是在 Visual Basic 中的关键字。  
   
 ## <a name="troubleshooting"></a>疑难解答  
  发生运行时错误的原因可能是您没有足够的权限来访问这些演练中使用的数据库。 请参见以下步骤以帮助解决最常见的此类问题。  
@@ -53,7 +53,7 @@ ms.locfileid: "33362216"
   
 ##### <a name="to-verify-or-change-the-database-log-on"></a>验证或更改数据库登录名  
   
-1.  在 Windows**启动**菜单上，指向**所有程序**， **Microsoft SQL Server 2005**，指向**配置工具**，然后单击**SQL Server 配置管理器**。  
+1.  在 Windows 上**启动**菜单，依次指向**所有程序**， **Microsoft SQL Server 2005**，指向**配置工具**，然后单击**SQL Server 配置管理器**。  
   
 2.  在左窗格中**SQL Server 配置管理器**，单击**SQL Server 2005 Services**。  
   
@@ -66,13 +66,13 @@ ms.locfileid: "33362216"
      如果进行了更改，请单击**重新启动**重新启动服务。  
   
 ### <a name="protocols"></a>协议  
- 有时，您的应用程序用来访问数据库的协议可能未设置正确。 例如， **Named Pipes**协议中的演练需要的[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]，默认情况下未启用。  
+ 有时，您的应用程序用来访问数据库的协议可能未设置正确。 例如， **Named Pipes**协议，该演练中需要的协议[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]，默认情况下不启用。  
   
 ##### <a name="to-enable-the-named-pipes-protocol"></a>启用 Named Pipes 协议  
   
 1.  在左窗格中**SQL Server 配置管理器**，展开**SQL Server 2005 网络配置**，然后单击**SQLEXPRESS 的协议**。  
   
-2.  在右窗格中，请确保**Named Pipes**启用协议。 如果不存在，请右键单击**命名管道**，然后单击**启用**。  
+2.  在右窗格中，请确保**Named Pipes**协议处于启用状态。 如果不存在，请右击**Name Pipes** ，然后单击**启用**。  
   
      您将需要停止此服务，再重新启动它。 请按下一部分中的步骤操作。  
   

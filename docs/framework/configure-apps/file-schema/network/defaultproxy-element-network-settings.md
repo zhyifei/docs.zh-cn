@@ -10,13 +10,12 @@ helpviewer_keywords:
 ms.assetid: 9d663c4b-07b4-4f6f-9b12-efbd3630354f
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 1e9548c6d43824ea5017b73a132eb49444ed6c77
-ms.sourcegitcommit: 736ec4d3e2c74895b47a0d36126657b95da383c9
+ms.openlocfilehash: c1783776b62532a2bd28067ca9bdb6ae4c80c717
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2018
-ms.locfileid: "37140185"
+ms.lasthandoff: 09/27/2018
+ms.locfileid: "47400317"
 ---
 # <a name="ltdefaultproxygt-element-network-settings"></a>&lt;defaultProxy&gt;元素 （网络设置）
 配置超文本传输协议 (HTTP) 代理服务器。  
@@ -51,7 +50,7 @@ ms.locfileid: "37140185"
   
 |**元素**|**说明**|  
 |-----------------|---------------------|  
-|[将 bypasslist](../../../../../docs/framework/configure-apps/file-schema/network/bypasslist-element-network-settings.md)|提供一组描述不使用代理的地址的正则表达式。|  
+|[bypasslist](../../../../../docs/framework/configure-apps/file-schema/network/bypasslist-element-network-settings.md)|提供一组描述不使用代理的地址的正则表达式。|  
 |[模块](../../../../../docs/framework/configure-apps/file-schema/network/module-element-network-settings.md)|向应用程序添加新的代理模块。|  
 |[代理](../../../../../docs/framework/configure-apps/file-schema/network/proxy-element-network-settings.md)|定义代理服务器。|  
   
@@ -64,13 +63,13 @@ ms.locfileid: "37140185"
 ## <a name="remarks"></a>备注  
  如果 defaultProxy 元素为空，则将沿用 Internet Explorer 中的代理设置。 这种行为在 .NET Framework 1.1 版中有所不同。  
   
- 如果引发异常[模块](../../../../../docs/framework/configure-apps/file-schema/network/module-element-network-settings.md)元素指定非公共类型，类型不派生自<xref:System.Net.IWebProxy>类，此对象的默认构造函数的异常发生，或者出现异常时检索系统指定的默认代理。 异常的 <xref:System.Exception.InnerException%2A> 属性应具有错误根本原因的详细信息。  
+ 如果引发异常[模块](../../../../../docs/framework/configure-apps/file-schema/network/module-element-network-settings.md)元素指定非公共类型，该类型不派生自<xref:System.Net.IWebProxy>类，可能出现的默认构造函数为此对象的异常，或者出现异常时正在检索系统指定的默认代理。 异常的 <xref:System.Exception.InnerException%2A> 属性应具有错误根本原因的详细信息。  
   
 ## <a name="configuration-files"></a>配置文件  
  此元素可在应用程序配置文件或计算机配置文件 (Machine.config) 中使用。  
   
 ## <a name="example"></a>示例  
- 下面的示例使用来自 Internet 资源管理器代理的默认值，指定代理地址，并跳过代理进行本地访问和访问 contoso.com。  
+ 以下示例使用来自 Internet 资源管理器代理的默认值、 指定代理地址，并跳过本地访问和访问 contoso.com 的代理。  
   
 ```xml  
 <configuration>  

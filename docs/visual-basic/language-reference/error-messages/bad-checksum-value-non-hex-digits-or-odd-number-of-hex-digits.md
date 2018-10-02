@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC42033
 ms.assetid: 4575554d-3615-46e4-9c6a-18e9c338e4ed
-ms.openlocfilehash: 5c01e918e1f607febc10be89c3d27c50870c401a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e682c2c23dd6fe80aee87d2a86b3df2dae66b802
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33589246"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45677495"
 ---
 # <a name="bad-checksum-value-non-hex-digits-or-odd-number-of-hex-digits"></a>错误的校验和值、非十六进制数字或奇数个十六进制数字
 校验和值包含无效的十六进制数字，或数字个数为奇数。  
@@ -31,6 +31,7 @@ ms.locfileid: "33589246"
   
 3.  如果警告仍然存在或者你没有使用 ASP.NET，请收集有关此情形的信息，并通知 Microsoft 产品支持服务。  
   
-## <a name="see-also"></a>请参阅  
- [ASP.NET 概述](https://msdn.microsoft.com/library/4w3ex9c2.aspx)  
- [与我们交流](/visualstudio/ide/talk-to-us)
+## <a name="see-also"></a>请参阅
+
+- [ASP.NET 概述](/aspnet/overview)  
+- [与我们交流](/visualstudio/ide/talk-to-us)

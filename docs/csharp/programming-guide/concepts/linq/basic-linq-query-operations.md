@@ -17,12 +17,12 @@ helpviewer_keywords:
 - join clause [LINQ in C#]
 - group clause [LINQ in C#]
 ms.assetid: a7ea3421-1cf4-4df7-832a-aa22fe6379e9
-ms.openlocfilehash: 2825b79c9638fff050522da43184a8d95a3fe02f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8b8237a09b36114f7100c90cee0bd753236789fd
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33333035"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43522615"
 ---
 # <a name="basic-linq-query-operations-c"></a>基本 LINQ 查询操作 (C#)
 本主题简要介绍了 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 查询表达式和一些在查询中执行的典型操作。 下面各主题中提供了更具体的信息：  
@@ -99,9 +99,10 @@ from order in Customer.Orders...
 ## <a name="selecting-projections"></a>选择（投影）  
  `select` 子句生成查询结果并指定每个返回的元素的“形状”或类型。 例如，可以指定结果包含的是整个 `Customer` 对象、仅一个成员、成员的子集，还是某个基于计算或新对象创建的完全不同的结果类型。 当 `select` 子句生成除源元素副本以外的内容时，该操作称为投影。 使用投影转换数据是 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 查询表达式的一种强大功能。 有关详细信息，请参阅[使用 LINQ (C#)](../../../../csharp/programming-guide/concepts/linq/data-transformations-with-linq.md) 和 [select 子句](../../../../csharp/language-reference/keywords/select-clause.md)进行数据转换。  
   
-## <a name="see-also"></a>请参阅  
- [C# 中的 LINQ 入门](../../../../csharp/programming-guide/concepts/linq/getting-started-with-linq.md)  
- [LINQ 查询表达式](../../../../csharp/programming-guide/linq-query-expressions/index.md)  
- [演练：用 C# 编写查询](../../../../csharp/programming-guide/concepts/linq/walkthrough-writing-queries-linq.md)  
- [查询关键字 (LINQ)](../../../../csharp/language-reference/keywords/query-keywords.md)  
- [匿名类型](../../../../csharp/programming-guide/classes-and-structs/anonymous-types.md)
+## <a name="see-also"></a>请参阅
+
+- [C# 中的 LINQ 入门](../../../../csharp/programming-guide/concepts/linq/getting-started-with-linq.md)  
+- [LINQ 查询表达式](../../../../csharp/programming-guide/linq-query-expressions/index.md)  
+- [演练：用 C# 编写查询](../../../../csharp/programming-guide/concepts/linq/walkthrough-writing-queries-linq.md)  
+- [查询关键字 (LINQ)](../../../../csharp/language-reference/keywords/query-keywords.md)  
+- [匿名类型](../../../../csharp/programming-guide/classes-and-structs/anonymous-types.md)

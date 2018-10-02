@@ -2,12 +2,12 @@
 title: 系统函数
 ms.date: 03/30/2017
 ms.assetid: b7c71b58-09e6-44ce-a3e5-a0fdb892fb86
-ms.openlocfilehash: 91c8e178fc6903dddc287ac2ca00c3152a9e3ce7
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 277f2f9c69610b134f3f95787f065f65b01712d2
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32765719"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47204461"
 ---
 # <a name="system-functions"></a>系统函数
 SQL Server .NET Framework 数据提供程序 (SqlClient) 提供以下系统函数：  
@@ -28,7 +28,7 @@ SQL Server .NET Framework 数据提供程序 (SqlClient) 提供以下系统函�
   
 |SQL Server 2000|SQL Server 2005|SQL Server 2008|  
 |---------------------|---------------------|---------------------|  
-|[系统函数 Transact SQL)](http://go.microsoft.com/fwlink/?LinkId=115918)|[系统函数 Transact SQL)](http://go.microsoft.com/fwlink/?LinkId=115917)|[系统函数 (TRANSACT-SQL)](http://go.microsoft.com/fwlink/?LinkId=115919)|  
+|[系统函数 Transact SQL)](https://go.microsoft.com/fwlink/?LinkId=115918)|[系统函数 Transact SQL)](https://go.microsoft.com/fwlink/?LinkId=115917)|[系统函数 (Transact SQL)](https://go.microsoft.com/fwlink/?LinkId=115919)|  
   
 ## <a name="see-also"></a>请参阅  
  [实体 SQL 语言](../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-language.md)  

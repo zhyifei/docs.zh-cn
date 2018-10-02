@@ -8,12 +8,12 @@ dev_langs:
 ms.assetid: d5c87cbe-4d69-429f-aad5-3103c2ca2770
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e3f41ba7281d67cc2ce848597926f5efebf4d489
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4a6597a3a57cd68c4dd17c4fbae882590f373709
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33568688"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "46525679"
 ---
 # <a name="changing-namespace-prefix-properties"></a>更改命名空间前缀属性
 使用 XmlNode 类，可以更改与给定节点关联的命名空间前缀。 例如，下面的代码显示所更改元素的前缀。  
@@ -66,5 +66,6 @@ Console.WriteLine(doc.InnerXml);
   
  如果树由于 doc.InnerXml 调用而暂留到字符串，添加的 `xmlns:a='123'` 属性是为了暂留 `test` 元素的命名空间。 以前为 `'123'`，并保持为 `'123'`。  
   
-## <a name="see-also"></a>请参阅  
- [XML 文档对象模型 (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+## <a name="see-also"></a>请参阅
+
+- [XML 文档对象模型 (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

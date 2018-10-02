@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - class keyword [C#]
 ms.assetid: b95d8815-de18-4c3f-a8cc-a0a53bdf8690
-ms.openlocfilehash: 04e64e825e4297ceb432393c7bd145a6cf4fcb2c
-ms.sourcegitcommit: ed7b4b9b77d35e94a35a2634e8c874f46603fb2b
+ms.openlocfilehash: 52ca30fe29025e637005b95ebc14fce8f320e8f4
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36948506"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44084749"
 ---
 # <a name="class-c-reference"></a>class（C# 参考）
 
@@ -73,6 +73,8 @@ class TestClass
 
 - [结构](../../../csharp/programming-guide/classes-and-structs/structs.md)
 
+- [枚举](../../../csharp/programming-guide/enumeration-types.md)
+
 ## <a name="example"></a>示例
 
 下面的示例说明如何声明类字段、构造函数和方法。 该示例还说明如何实例化对象及如何打印实例数据。 本例声明了两个类。 第一个类 `Child` 包含两个私有字段（`name` 和 `age`）、两个公共构造函数和一个公共方法。 第二个类 `StringTest` 用于包含 `Main`。
@@ -99,7 +101,7 @@ Console.Write(child1.name);   // Error
 
 ## <a name="see-also"></a>请参阅
 
-[C# 参考](../../../csharp/language-reference/index.md)  
-[C# 编程指南](../../../csharp/programming-guide/index.md)  
-[C# 关键字](../../../csharp/language-reference/keywords/index.md)  
-[引用类型](../../../csharp/language-reference/keywords/reference-types.md)
+- [C# 参考](../../../csharp/language-reference/index.md)  
+- [C# 编程指南](../../../csharp/programming-guide/index.md)  
+- [C# 关键字](../../../csharp/language-reference/keywords/index.md)  
+- [引用类型](../../../csharp/language-reference/keywords/reference-types.md)

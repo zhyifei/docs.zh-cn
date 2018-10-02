@@ -2,12 +2,12 @@
 title: 检索段落的文本 (C#)
 ms.date: 07/20/2015
 ms.assetid: 127d635e-e559-408f-90c8-2bb621ca50ac
-ms.openlocfilehash: 07a289ec8c3f0c783a9c85cb1d25d17164008e06
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1d23addb4c4c1ea17343585392fbe08fef08568a
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33327153"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47208784"
 ---
 # <a name="retrieving-the-text-of-the-paragraphs-c"></a>检索段落的文本 (C#)
 此示例以上一个示例[检索段落及其样式 (C#)](../../../../csharp/programming-guide/concepts/linq/retrieving-the-paragraphs-and-their-styles.md) 为基础。 这个新示例将每个段落的文本作为字符串进行检索。  
@@ -142,6 +142,7 @@ StyleName:Code >Hello World<
   
 -   [使用扩展方法重构 (C#)](../../../../csharp/programming-guide/concepts/linq/refactoring-using-an-extension-method.md)  
   
-## <a name="see-also"></a>请参阅  
- [教程：操作 WordprocessingML 文档中的内容 (C#)](../../../../csharp/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)  
- [LINQ to XML 中的延迟执行和迟缓计算 (C#)](../../../../csharp/programming-guide/concepts/linq/deferred-execution-and-lazy-evaluation-in-linq-to-xml.md)
+## <a name="see-also"></a>请参阅
+
+- [教程：操作 WordprocessingML 文档中的内容 (C#)](../../../../csharp/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)  
+- [LINQ to XML 中的延迟执行和迟缓计算 (C#)](../../../../csharp/programming-guide/concepts/linq/deferred-execution-and-lazy-evaluation-in-linq-to-xml.md)

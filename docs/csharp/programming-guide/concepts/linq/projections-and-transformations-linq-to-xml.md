@@ -2,12 +2,12 @@
 title: 投影和转换 (LINQ to XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: bb0457ab-1823-47e6-9d2d-c93c958cc913
-ms.openlocfilehash: dfd10011646fb758215c8d472dacf7e16296493f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 835383e472362d38ded3862042609eaaa508efbe
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33332993"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43747829"
 ---
 # <a name="projections-and-transformations-linq-to-xml-c"></a>投影和转换 (LINQ to XML) (C#)
 本节提供 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 投影和转换的示例。  
@@ -25,5 +25,6 @@ ms.locfileid: "33332993"
 |[如何：从 XML 生成文本文件 (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-generate-text-files-from-xml.md)|演示如何将 XML 文件转换为非 XML 文本文件。|  
 |[如何：从 CSV 文件生成 XML (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-generate-xml-from-csv-files.md)|演示如何使用 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 分析 CSV 文件并从它生成 XML。|  
   
-## <a name="see-also"></a>请参阅  
- [查询 XML 树 (C#)](../../../../csharp/programming-guide/concepts/linq/querying-xml-trees.md)
+## <a name="see-also"></a>请参阅
+
+- [查询 XML 树 (C#)](../../../../csharp/programming-guide/concepts/linq/querying-xml-trees.md)

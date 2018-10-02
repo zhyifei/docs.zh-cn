@@ -2,12 +2,12 @@
 title: 线程同步 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 04f485d1-8333-4510-9e72-c334e7427e7e
-ms.openlocfilehash: 9922230e1c7f2bd30c575bd66387feb4850a298b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3278ed1e98f71e11d47f55a0d4cb50f44ae02027
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33655086"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43862989"
 ---
 # <a name="thread-synchronization-visual-basic"></a>线程同步 (Visual Basic)
 以下各节中描述的功能和类可用于同步访问多线程应用程序中的资源。  
@@ -26,8 +26,8 @@ ms.locfileid: "33655086"
   
 -   [托管线程处理的最佳做法](../../../../standard/threading/managed-threading-best-practices.md)  
   
-## <a name="the-lock-and-synclock-keywords"></a>锁定和 SyncLock 关键字  
- Visual Basic`SyncLock`语句可以用于确保不中断的情况下完成运行的代码块由其他线程。 这是通过在代码块的持续时间内获得给定对象的互斥锁来实现的。  
+## <a name="the-lock-and-synclock-keywords"></a>Lock 和 SyncLock 关键字  
+ Visual Basic`SyncLock`语句可用于确保代码块运行完成，无需中断由其他线程。 这是通过在代码块的持续时间内获得给定对象的互斥锁来实现的。  
   
  `SyncLock` 语句被作为参数赋予对象，而且后面跟随的是一次只能由一个线程运行的代码块。 例如：  
   
@@ -147,7 +147,6 @@ End Module
  <xref:System.Threading>  
  <xref:System.Threading.EventWaitHandle.Set%2A>  
  <xref:System.Threading.Monitor>  
- [多线程应用 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/threading/multithreaded-applications.md)  
  [SyncLock 语句](../../../../visual-basic/language-reference/statements/synclock-statement.md)  
  [Mutex](../../../../standard/threading/mutexes.md)  
  [互锁操作](../../../../standard/threading/interlocked-operations.md)  

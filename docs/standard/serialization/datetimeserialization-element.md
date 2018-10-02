@@ -6,12 +6,12 @@ helpviewer_keywords:
 - XML serialization, configuration
 - <dateTimeSerialization> element
 ms.assetid: 90fda55c-7730-41e9-bc4b-6423a4b920af
-ms.openlocfilehash: 5e48753b5e8383a1ad946a29636e30ef07ceee9c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: cd275cdbc51c86b1d774058db839c38349b319a6
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33581724"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47079455"
 ---
 # <a name="ltdatetimeserializationgt-element"></a>&lt;dateTimeSerialization&gt; 元素
 确定 <xref:System.DateTime> 对象的序列化模式。  
@@ -50,11 +50,12 @@ ms.locfileid: "33581724"
   
  在 .NET Framework 2.0 及更高版本中，将此属性设置为 Roundtrip 时，系统会检查 <xref:System.DateTime> 对象以确定这些对象位于本地时区、UTC 时区还是未指定的时区中。 随后会序列化 <xref:System.DateTime> 对象并保留该信息。 这是默认行为，建议为所有不与 Framework 的较早版本通信的新应用程序使用此行为。  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.DateTime>  
- <xref:System.Xml.Serialization.XmlSchemaImporter>  
- <xref:System.Xml.Serialization.Configuration.DateTimeSerializationSection.DateTimeSerializationMode>  
- [配置文件架构](../../../docs/framework/configure-apps/file-schema/index.md)  
- [\<schemaImporterExtensions> 元素](../../../docs/standard/serialization/schemaimporterextensions-element.md)  
- [\<xmlSchemaImporterExtensions> 的 \<add> 元素](../../../docs/standard/serialization/add-element-for-xmlschemaimporterextensions.md)  
- [\<system.xml.serialization> 元素](../../../docs/standard/serialization/system-xml-serialization-element.md)
+## <a name="see-also"></a>请参阅
+
+- <xref:System.DateTime>  
+- <xref:System.Xml.Serialization.XmlSchemaImporter>  
+- <xref:System.Xml.Serialization.Configuration.DateTimeSerializationSection.DateTimeSerializationMode>  
+- [配置文件架构](../../../docs/framework/configure-apps/file-schema/index.md)  
+- [\<schemaImporterExtensions> 元素](../../../docs/standard/serialization/schemaimporterextensions-element.md)  
+- [\<添加 > 元素\<schemaImporterExtensions >](../../../docs/standard/serialization/add-element-for-schemaimporterextensions.md)  
+- [\<system.xml.serialization> 元素](../../../docs/standard/serialization/system-xml-serialization-element.md)

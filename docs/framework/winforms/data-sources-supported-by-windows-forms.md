@@ -15,47 +15,47 @@ helpviewer_keywords:
 - DataSet class [Windows Forms], binding and Windows Forms
 - data [Windows Forms], data providers
 ms.assetid: 3d2c43f6-462b-4d35-9c86-13e9afe012e1
-ms.openlocfilehash: 4705c8a7153e94fa1cd23cf6c2f622d5cd66ec77
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: aee15d8d40ddd3f928c8bc5396d8bcbff17ba533
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33541172"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43858907"
 ---
 # <a name="data-sources-supported-by-windows-forms"></a>Windows 窗体支持的数据源
-传统上，数据绑定具有内使用应用程序以利用在数据库中存储的数据。 使用 Windows 窗体数据绑定，你可以在访问数据时从数据库以及其他结构，如数组和集合中的数据处理程序，但前提是已满足某些最低要求。  
+传统上，数据绑定已用于应用程序中充分利用数据库中存储数据。 使用 Windows 窗体数据绑定，您可以从数据库以及其他结构，如数组和集合中的数据访问数据，只要满足某些最低要求。  
   
-## <a name="structures-to-bind-to"></a>绑定到结构  
- 在 Windows 窗体，你可以将绑定到各种结构，从简单到如 ADO.NET 数据表 （复杂绑定） 的复杂列表的对象 （简单绑定）。 对于简单绑定，Windows 窗体上的简单对象支持绑定到的公共属性。 Windows 窗体的基于列表的绑定通常需要对象支持<xref:System.Collections.IList>接口或<xref:System.ComponentModel.IListSource>接口。 此外，如果你正在通过绑定与<xref:System.Windows.Forms.BindingSource>组件，你可以将绑定到支持的对象<xref:System.Collections.IEnumerable>接口。 有关与数据绑定相关的接口的详细信息，请参阅[与数据绑定相关的接口](../../../docs/framework/winforms/interfaces-related-to-data-binding.md)。  
+## <a name="structures-to-bind-to"></a>将绑定到结构  
+ 在 Windows 窗体中可以绑定到各种结构，从简单到复杂的列表，如 ADO.NET 数据表 （复杂绑定） 的对象 （简单绑定）。 对于简单绑定，Windows 窗体上的简单对象支持绑定到的公共属性。 Windows 窗体基于列表的绑定通常需要对象支持<xref:System.Collections.IList>接口或<xref:System.ComponentModel.IListSource>接口。 此外，如果要通过绑定与<xref:System.Windows.Forms.BindingSource>组件，可以绑定到支持的对象，<xref:System.Collections.IEnumerable>接口。 有关与数据绑定相关的接口的详细信息，请参阅[与数据绑定相关的接口](../../../docs/framework/winforms/interfaces-related-to-data-binding.md)。  
   
- 以下列表显示了你可以将绑定到 Windows 窗体中的结构。  
+ 以下列表显示了可以在 Windows 窗体中绑定到结构。  
   
  <xref:System.Windows.Forms.BindingSource>  
- A<xref:System.Windows.Forms.BindingSource>是最常见的 Windows 窗体数据源和数据源和 Windows 窗体控件之间的代理的作用。 常规<xref:System.Windows.Forms.BindingSource>用法模式是你将控件绑定到<xref:System.Windows.Forms.BindingSource>并将绑定<xref:System.Windows.Forms.BindingSource>到数据源 （例如，ADO.NET 数据表或业务对象）。 <xref:System.Windows.Forms.BindingSource>提供服务，启用和改进的数据绑定支持的级别。 例如，Windows 窗体列表基于控件如<xref:System.Windows.Forms.DataGridView>和<xref:System.Windows.Forms.ComboBox>不直接支持绑定到<xref:System.Collections.IEnumerable>数据源但是，你可以启用这种情况下通过绑定<xref:System.Windows.Forms.BindingSource>。 在这种情况下，<xref:System.Windows.Forms.BindingSource>会将转换到的数据源<xref:System.Collections.IList>。  
+ 一个<xref:System.Windows.Forms.BindingSource>是最常见的 Windows 窗体数据源和数据源和 Windows 窗体控件之间的代理的作用。 一般<xref:System.Windows.Forms.BindingSource>使用模式是将绑定到控件<xref:System.Windows.Forms.BindingSource>，并将绑定<xref:System.Windows.Forms.BindingSource>到数据源 （例如，ADO.NET 数据表或业务对象）。 <xref:System.Windows.Forms.BindingSource>提供服务，启用和改进的数据绑定支持级别。 例如，Windows 窗体列表都基于控件如<xref:System.Windows.Forms.DataGridView>并<xref:System.Windows.Forms.ComboBox>不直接支持绑定到<xref:System.Collections.IEnumerable>数据源但是，可以启用此方案中的通过绑定<xref:System.Windows.Forms.BindingSource>。 在这种情况下，<xref:System.Windows.Forms.BindingSource>将数据源转换为<xref:System.Collections.IList>。  
   
  简单对象  
- Windows 窗体支持数据绑定控件属性绑定到公共属性的对象使用的实例上<xref:System.Windows.Forms.Binding>类型。 Windows 窗体还支持绑定基于列表的控件，如<xref:System.Windows.Forms.ListControl>到对象实例时<xref:System.Windows.Forms.BindingSource>使用。  
+ Windows 窗体对象使用的实例上支持数据绑定控件属性绑定到公共属性<xref:System.Windows.Forms.Binding>类型。 Windows 窗体还支持基于列表的绑定控件，例如<xref:System.Windows.Forms.ListControl>的对象实例时<xref:System.Windows.Forms.BindingSource>使用。  
   
  数组或集合  
- 若要充当数据源，列表必须实现<xref:System.Collections.IList>接口; 一个示例将数组的实例<xref:System.Array>类。 在阵列上的详细信息，请参阅[如何： 创建数组的对象 (Visual Basic)](http://msdn.microsoft.com/library/6b64e069-0387-400c-9081-3bdc581020c3)。  
+ 若要充当数据源，列表必须实现<xref:System.Collections.IList>接口; 一个示例是数组的一个实例<xref:System.Array>类。 数组的详细信息，请参阅[如何： 创建数组的对象 (Visual Basic)](https://msdn.microsoft.com/library/6b64e069-0387-400c-9081-3bdc581020c3)。  
   
- 一般情况下，应使用<xref:System.ComponentModel.BindingList%601>当你创建的数据绑定的对象的列表。 <xref:System.ComponentModel.BindingList%601> 是一个泛型版本<xref:System.ComponentModel.IBindingList>接口。 <xref:System.ComponentModel.IBindingList>接口扩展<xref:System.Collections.IList>通过添加属性、 方法和事件所需双向数据绑定接口。  
+ 一般情况下，应使用<xref:System.ComponentModel.BindingList%601>时创建的对象的数据绑定的列表。 <xref:System.ComponentModel.BindingList%601> 泛型版本<xref:System.ComponentModel.IBindingList>接口。 <xref:System.ComponentModel.IBindingList>接口扩展<xref:System.Collections.IList>接口通过添加属性、 方法和双向数据绑定的事件。  
   
  <xref:System.Collections.IEnumerable>  
- Windows 窗体控件可以绑定到数据源仅支持<xref:System.Collections.IEnumerable>接口如果它们绑定通过<xref:System.Windows.Forms.BindingSource>组件。  
+ Windows 窗体控件可以绑定到数据源仅支持<xref:System.Collections.IEnumerable>接口，如果它们通过绑定<xref:System.Windows.Forms.BindingSource>组件。  
   
  [!INCLUDE[vstecado](../../../includes/vstecado-md.md)] 数据对象  
- [!INCLUDE[vstecado](../../../includes/vstecado-md.md)] 提供多种适用于绑定到的数据结构。 在复杂程度和复杂性，每个而异。  
+ [!INCLUDE[vstecado](../../../includes/vstecado-md.md)] 提供了许多适合绑定到数据结构。 每个在复杂程度和复杂性而异。  
   
--   <xref:System.Data.DataColumn>。 A<xref:System.Data.DataColumn>是基本的构建基块的<xref:System.Data.DataTable>，因为大量的列构成表。 每个<xref:System.Data.DataColumn>具有<xref:System.Data.DataColumn.DataType%2A>确定的数据列保留 （例如，描述汽车的表中的汽车的品牌） 类型的属性。 你可以简单绑定控件 (如<xref:System.Windows.Forms.TextBox>控件的<xref:System.Windows.Forms.Control.Text%2A>属性) 到数据表中的列。  
+-   <xref:System.Data.DataColumn>。 一个<xref:System.Data.DataColumn>是基本构建基块<xref:System.Data.DataTable>中的列数构成一个表。 每个<xref:System.Data.DataColumn>具有<xref:System.Data.DataColumn.DataType%2A>属性，用于确定类型的数据列保存 （例如，描述汽车的表中的汽车的品牌）。 您可以简单绑定控件 (如<xref:System.Windows.Forms.TextBox>控件的<xref:System.Windows.Forms.Control.Text%2A>属性) 到数据表中的列。  
   
--   <xref:System.Data.DataTable>。 A<xref:System.Data.DataTable>处于的表示形式的表，具有行和列， [!INCLUDE[vstecado](../../../includes/vstecado-md.md)]。 数据表包含两个集合： <xref:System.Data.DataColumn>，表示给定的表 （其最终确定的可以进入该表的数据类型） 中的数据的列和<xref:System.Data.DataRow>，表示给定表中的数据行。 你可以复杂绑定控件到数据表中包含的信息 (如绑定<xref:System.Windows.Forms.DataGridView>到数据表的控件)。 但是，当绑定到<xref:System.Data.DataTable>，则实际上绑定到表的默认视图。  
+-   <xref:System.Data.DataTable>。 一个<xref:System.Data.DataTable>是具有行和列的表的表示形式中[!INCLUDE[vstecado](../../../includes/vstecado-md.md)]。 数据表包含两个集合： <xref:System.Data.DataColumn>，表示给定表 （它最终确定的可以输入到该表的数据类型） 中的数据的列和<xref:System.Data.DataRow>，表示给定表中的数据行。 您可以将复杂绑定控件到数据表中包含的信息 (如绑定<xref:System.Windows.Forms.DataGridView>到数据表控件)。 但是，当绑定到<xref:System.Data.DataTable>，是实际上绑定到表的默认视图。  
   
--   <xref:System.Data.DataView>。 A<xref:System.Data.DataView>是单个的数据表可能筛选或排序的自定义的视图。 数据视图是"快照"使用的复杂绑定控件的数据。 你可以简单绑定或复杂绑定到的数据在数据视图中，但请注意你正在绑定到的固定"图片"的数据，而不是干净的、 不断更新数据源。  
+-   <xref:System.Data.DataView>。 一个<xref:System.Data.DataView>的单个数据表可能会筛选或排序的自定义视图。 数据视图是"快照"复杂绑定控件使用的数据。 您可以简单绑定或复杂绑定到数据视图中的数据，但注意要绑定到的固定"图片"的数据而不是干净的、 不断更新数据源。  
   
--   <xref:System.Data.DataSet>。 A<xref:System.Data.DataSet>是表、 关系和约束的数据库中的数据的集合。 你可以简单绑定或复杂绑定到数据集中，但请注意你正在绑定到默认值<xref:System.Data.DataViewManager>为<xref:System.Data.DataSet>（请参阅下一步项目符号的内容）。  
+-   <xref:System.Data.DataSet>。 一个<xref:System.Data.DataSet>是表、 关系和约束的数据库中的数据的集合。 您可以简单绑定或复杂绑定到数据集内的数据，但注意要绑定到默认<xref:System.Data.DataViewManager>为<xref:System.Data.DataSet>（请参阅下一步一注意点）。  
   
--   <xref:System.Data.DataViewManager>。 A<xref:System.Data.DataViewManager>是整个的自定义的视图<xref:System.Data.DataSet>，类似于<xref:System.Data.DataView>，但其中包括各种关系。 与<xref:System.Data.DataViewManager.DataViewSettings%2A>集合，你可以设置默认筛选器和任何视图的排序选项，<xref:System.Data.DataViewManager>具有给定表的。  
+-   <xref:System.Data.DataViewManager>。 一个<xref:System.Data.DataViewManager>是自定义的视图的整个<xref:System.Data.DataSet>，类似于<xref:System.Data.DataView>，但其中包括各种关系。 与<xref:System.Data.DataViewManager.DataViewSettings%2A>集合，您可以设置默认筛选器和排序选项的任何视图的<xref:System.Data.DataViewManager>具有给定的表。  
   
 ## <a name="see-also"></a>请参阅  
  [Windows 窗体数据绑定中的更改通知](../../../docs/framework/winforms/change-notification-in-windows-forms-data-binding.md)  

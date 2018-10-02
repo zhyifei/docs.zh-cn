@@ -7,42 +7,42 @@ dev_langs:
 helpviewer_keywords:
 - data binding [WPF], PriorityBinding class
 ms.assetid: d63b65ab-b3e9-4322-9aa8-1450f8d89532
-ms.openlocfilehash: cf0ed5c2b55358d3a583ac89e307b23b3ab08a9a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a7729ec3d06ec701cf2194bed5d90b5bed76573a
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33557753"
+ms.lasthandoff: 09/27/2018
+ms.locfileid: "47398805"
 ---
 # <a name="how-to-implement-prioritybinding"></a>如何：实现 PriorityBinding
-<xref:System.Windows.Data.PriorityBinding> 在[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]的工作原理是指定的绑定的列表。 绑定列表按优先级从高到最低优先级排序。 如果高优先级的绑定返回一个值成功处理时则永远不会需要处理其他列表中的绑定。 它可能是最高的优先级绑定需要很长的时间要进行求值的用例时，将使用成功返回一个值的下一步最高优先级，直到较高优先级的绑定成功返回一个值。  
+<xref:System.Windows.Data.PriorityBinding> 在[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]的工作原理是指定的绑定的列表。 绑定的列表按从最高优先级到最低优先级排序。 如果最高优先级绑定返回一个值成功时对其进行处理然后则永远不需要处理列表中的其他绑定。 这是最高优先级的绑定需要很长的时间要计算的情况下，将使用成功返回值的下一步最高优先级，直到较高优先级的绑定会成功返回一个值。  
   
 ## <a name="example"></a>示例  
- 为了演示如何<xref:System.Windows.Data.PriorityBinding>可以正常工作，`AsyncDataSource`对象已创建具有以下三个属性： `FastDP`， `SlowerDP`，和`SlowestDP`。  
+ 若要演示如何<xref:System.Windows.Data.PriorityBinding>的工作原理，`AsyncDataSource`对象已创建具有以下三个属性： `FastDP`， `SlowerDP`，和`SlowestDP`。  
   
- Get 访问器`FastDP`返回的值`_fastDP`数据成员。  
+ Get 访问器的`FastDP`返回的值`_fastDP`数据成员。  
   
- Get 访问器`SlowerDP`等待 3 秒，然后返回的值`_slowerDP`数据成员。  
+ Get 访问器的`SlowerDP`等待返回的值之前的 3 秒`_slowerDP`数据成员。  
   
- Get 访问器`SlowestDP`等待 5 秒，然后返回的值`_slowestDP`数据成员。  
+ Get 访问器的`SlowestDP`等待 5 秒钟之后返回的值`_slowestDP`数据成员。  
   
 > [!NOTE]
->  此示例只为了方便本文演示。 [!INCLUDE[TLA#tla_net](../../../../includes/tlasharptla-net-md.md)]准则建议您定义个数量级慢于字段集的属性。 有关详细信息，请参阅[NIB： 选择之间属性和方法](http://msdn.microsoft.com/library/55825e8f-7e2e-448a-9505-7217cc91b1af)。  
+>  此示例只为了方便本文演示。 [!INCLUDE[TLA#tla_net](../../../../includes/tlasharptla-net-md.md)]准则不建议将定义所数量级字段集相比，速度较慢的属性。 有关详细信息，请参阅[NIB： 选择属性和方法](https://msdn.microsoft.com/library/55825e8f-7e2e-448a-9505-7217cc91b1af)。  
   
  [!code-csharp[PriorityBinding#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PriorityBinding/CSharp/Window1.xaml.cs#1)]
  [!code-vb[PriorityBinding#1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/PriorityBinding/VisualBasic/AsyncDataSource.vb#1)]  
   
- <xref:System.Windows.Controls.TextBlock.Text%2A>属性将绑定到上述`AsyncDS`使用<xref:System.Windows.Data.PriorityBinding>:  
+ <xref:System.Windows.Controls.TextBlock.Text%2A>属性绑定到上述`AsyncDS`使用<xref:System.Windows.Data.PriorityBinding>:  
   
  [!code-xaml[PriorityBinding#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PriorityBinding/CSharp/Window1.xaml#2)]  
   
- 当处理绑定引擎<xref:System.Windows.Data.Binding>对象，它与第一个启动<xref:System.Windows.Data.Binding>，该元素绑定到`SlowestDP`属性。 当这<xref:System.Windows.Data.Binding>是处理，它不返回值成功因为它等待 5 秒，因此下一步<xref:System.Windows.Data.Binding>处理元素。 下一步<xref:System.Windows.Data.Binding>不返回值成功因为它等待 3 秒。 绑定引擎然后移到下一步<xref:System.Windows.Data.Binding>元素，它绑定到`FastDP`属性。 这<xref:System.Windows.Data.Binding>返回"快速 Value"的值。 <xref:System.Windows.Controls.TextBlock>现在显示"快速 Value"的值。  
+ 当处理绑定引擎<xref:System.Windows.Data.Binding>对象，它与第一个启动<xref:System.Windows.Data.Binding>，后者已绑定到`SlowestDP`属性。 当这<xref:System.Windows.Data.Binding>是处理，它不返回一个值成功因为它处于睡眠状态 5 秒钟，因此下一步<xref:System.Windows.Data.Binding>处理元素。 下一步<xref:System.Windows.Data.Binding>不返回值成功因为等待 3 秒。 绑定引擎随后会转至下一步<xref:System.Windows.Data.Binding>元素，它绑定到`FastDP`属性。 这<xref:System.Windows.Data.Binding>返回"快速值"的值。 <xref:System.Windows.Controls.TextBlock>现在将显示"快速值"的值。  
   
- 后 3 秒过后，`SlowerDP`属性返回的值"速度较慢值"。 <xref:System.Windows.Controls.TextBlock>然后显示值"速度较慢值"。  
+ 3 秒结束后`SlowerDP`属性返回的值"慢值"。 <xref:System.Windows.Controls.TextBlock>然后显示"慢 Value"的值。  
   
- 后 5 秒过后，`SlowestDP`属性返回的值"最慢的值"。 该绑定具有最高优先级，因为它会最先列出。 <xref:System.Windows.Controls.TextBlock>现在显示"最慢 Value"的值。  
+ 在 5 秒结束后`SlowestDP`属性返回的值"最慢值"。 该绑定具有最高优先级，因为首先列出。 <xref:System.Windows.Controls.TextBlock>现在将显示"最慢 Value"的值。  
   
- 请参阅<xref:System.Windows.Data.PriorityBinding>有关什么被视为一个成功的返回值从绑定信息。  
+ 请参阅<xref:System.Windows.Data.PriorityBinding>有关被视为成功的返回值从绑定信息。  
   
 ## <a name="see-also"></a>请参阅  
  <xref:System.Windows.Data.Binding.IsAsync%2A?displayProperty=nameWithType>  

@@ -6,12 +6,12 @@ f1_keywords:
 - whereconstraint_CSharpKeyword
 helpviewer_keywords:
 - where (generic type constraint) [C#]
-ms.openlocfilehash: 94db10c81af55030dfcf6e210a86658c84868e42
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 34246824fb8ff28e47ea424c78eca38e999a30b6
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33288315"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43500819"
 ---
 # <a name="where-generic-type-constraint-c-reference"></a>where（泛型类型约束）（C# 参考）
 
@@ -64,8 +64,8 @@ ms.locfileid: "33288315"
 
 ## <a name="see-also"></a>请参阅
 
- [C# 参考](../../../csharp/language-reference/index.md)  
- [C# 编程指南](../../../csharp/programming-guide/index.md)  
- [泛型介绍](../../../csharp/programming-guide/generics/introduction-to-generics.md)  
- [new 约束](../../../csharp/language-reference/keywords/new-constraint.md)  
- [类型参数的约束](../../../csharp/programming-guide/generics/constraints-on-type-parameters.md)  
+- [C# 参考](../../../csharp/language-reference/index.md)  
+- [C# 编程指南](../../../csharp/programming-guide/index.md)  
+- [泛型介绍](../../../csharp/programming-guide/generics/introduction-to-generics.md)  
+- [new 约束](../../../csharp/language-reference/keywords/new-constraint.md)  
+- [类型参数的约束](../../../csharp/programming-guide/generics/constraints-on-type-parameters.md)  

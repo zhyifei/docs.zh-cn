@@ -3,12 +3,12 @@ title: C# 中的字符串内插
 description: 了解如何在 C# 中使用字符串插值将有格式的表达式结果包括在结果字符串中。
 author: pkulikov
 ms.date: 05/09/2018
-ms.openlocfilehash: 447e87cd4aae49896f0efbb8ece6097181079266
-ms.sourcegitcommit: ff1d40507b3eb6e2185478e37c66c66be6de46f1
+ms.openlocfilehash: b28890034cc0ab73f96c825b5548223e1c5cd1f4
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/11/2018
-ms.locfileid: "34058934"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44086698"
 ---
 # <a name="string-interpolation-in-c"></a>C# 中的字符串内插 #
 
@@ -108,7 +108,7 @@ ms.locfileid: "34058934"
 
 ## <a name="see-also"></a>请参阅
 
-<xref:System.String.Format%2A?displayProperty=nameWithType>  
-<xref:System.FormattableString?displayProperty=nameWithType>  
-<xref:System.IFormattable?displayProperty=nameWithType>  
-[字符串](../programming-guide/strings/index.md)  
+- <xref:System.String.Format%2A?displayProperty=nameWithType>  
+- <xref:System.FormattableString?displayProperty=nameWithType>  
+- <xref:System.IFormattable?displayProperty=nameWithType>  
+- [字符串](../programming-guide/strings/index.md)  

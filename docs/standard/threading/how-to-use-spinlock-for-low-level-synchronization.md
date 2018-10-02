@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: a9ed3e4e-4f29-4207-b730-ed0a51ecbc19
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7795b25ca8e9337a53fc67ebc6f56130237d0764
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 216480e893f6dbebbb204cbf2bfebae8dc139ec4
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33582751"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45593851"
 ---
 # <a name="how-to-use-spinlock-for-low-level-synchronization"></a>如何：使用 SpinLock 进行低级别同步
 下面的示例展示了如何使用 <xref:System.Threading.SpinLock>。  
@@ -32,5 +32,6 @@ ms.locfileid: "33582751"
   
  请注意，在 <xref:System.Threading.SpinLock.Exit%2A> 调用中使用 `false`（Visual Basic 中的 `False`）。 这可提供最佳性能。 在 IA64 架构上指定 `true` (`True`) 可使用内存界定，这会刷新写入缓冲区以确保锁现在可供其他线程退出。  
   
-## <a name="see-also"></a>请参阅  
- [线程处理对象和功能](../../../docs/standard/threading/threading-objects-and-features.md)
+## <a name="see-also"></a>请参阅
+
+- [线程处理对象和功能](../../../docs/standard/threading/threading-objects-and-features.md)

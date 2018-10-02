@@ -4,12 +4,12 @@ description: dotnet test 命令可用于在给定项目中执行单元测试。
 author: mairaw
 ms.author: mairaw
 ms.date: 05/29/2018
-ms.openlocfilehash: 8a10ac9175ee5fcf8649efbb07d8d382ac3afdc7
-ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
+ms.openlocfilehash: 7946196b27489870da1c16b15cbf5f078ae89c61
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34696265"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45666897"
 ---
 # <a name="dotnet-test"></a>dotnet test
 
@@ -22,22 +22,28 @@ ms.locfileid: "34696265"
 ## <a name="synopsis"></a>摘要
 
 # <a name="net-core-21tabnetcore21"></a>[.NET Core 2.1](#tab/netcore21)
-```
+
+```console
 dotnet test [<PROJECT>] [-a|--test-adapter-path] [--blame] [-c|--configuration] [--collect] [-d|--diag] [-f|--framework] [--filter]
     [-l|--logger] [--no-build] [--no-restore] [-o|--output] [-r|--results-directory] [-s|--settings] [-t|--list-tests] [-v|--verbosity]
 dotnet test [-h|--help]
 ```
+
 # <a name="net-core-20tabnetcore20"></a>[.NET Core 2.0](#tab/netcore20)
-```
+
+```console
 dotnet test [<PROJECT>] [-a|--test-adapter-path] [-c|--configuration] [--collect] [-d|--diag] [-f|--framework] [--filter]
     [-l|--logger] [--no-build] [--no-restore] [-o|--output] [-r|--results-directory] [-s|--settings] [-t|--list-tests] [-v|--verbosity]
 dotnet test [-h|--help]
 ```
+
 # <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
-```
+
+```console
 dotnet test [<PROJECT>] [-a|--test-adapter-path] [-c|--configuration] [-d|--diag] [-f|--framework] [--filter] [-l|--logger] [--no-build] [-o|--output] [-s|--settings] [-t|--list-tests]  [-v|--verbosity]
 dotnet test [-h|--help]
 ```
+
 ---
 
 ## <a name="description"></a>描述
@@ -246,6 +252,10 @@ dotnet test [-h|--help]
 
 `dotnet test ~/projects/test1/test1.csproj`
 
+在当前目录运行项目中的测试，并以 trx 格式生成测试结果文件：
+
+`dotnet test --logger:trx`
+
 ## <a name="filter-option-details"></a>筛选选项详细信息
 
 `--filter <EXPRESSION>`
@@ -284,5 +294,5 @@ dotnet test [-h|--help]
 
 ## <a name="see-also"></a>请参阅
 
-[框架和目标](../../standard/frameworks.md)  
-[.NET Core 运行时标识符 (RID) 目录](../rid-catalog.md)
+* [框架和目标](../../standard/frameworks.md)  
+* [.NET Core 运行时标识符 (RID) 目录](../rid-catalog.md)

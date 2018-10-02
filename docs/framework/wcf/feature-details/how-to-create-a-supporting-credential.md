@@ -2,23 +2,23 @@
 title: 如何：创建支持凭据
 ms.date: 03/30/2017
 ms.assetid: d0952919-8bb4-4978-926c-9cc108f89806
-ms.openlocfilehash: 6ec7412d1de2bca349c7cfbf4a37c98ca60cc78d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ef4d9a406e6fc929e4ad59911d587e462c9b2b65
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33495881"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43499986"
 ---
 # <a name="how-to-create-a-supporting-credential"></a>如何：创建支持凭据
-自定义安全方案可能要求提供多个凭据。 例如，某个服务可能要求客户端不仅提供用户名和密码，还要提供能够证明客户端用户已满 18 岁的凭据。 第二个凭据是*支持凭据*。 本主题说明如何在 Windows Communication Foundation (WCF) 客户端中实现此类凭据。  
+自定义安全方案可能要求提供多个凭据。 例如，某个服务可能要求客户端不仅提供用户名和密码，还要提供能够证明客户端用户已满 18 岁的凭据。 第二个凭据，则*支持凭据*。 本主题说明如何在 Windows Communication Foundation (WCF) 客户端中实现此类凭据。  
   
 > [!NOTE]
->  支持凭据的规范是 WS-SecurityPolicy 规范的一部分。 有关详细信息，请参阅[Web 服务安全规范](http://go.microsoft.com/fwlink/?LinkId=88537)。  
+>  支持凭据的规范是 WS-SecurityPolicy 规范的一部分。 有关详细信息，请参阅[Web 服务安全规范](https://go.microsoft.com/fwlink/?LinkId=88537)。  
   
 ## <a name="supporting-tokens"></a>支持令牌  
- 简单地说，当使用消息安全，*主凭据*始终用于保护消息 （例如，X.509 证书或 Kerberos 票证）。  
+ 简单地说，当使用消息安全*主凭据*始终用来保护消息 （例如，X.509 证书或 Kerberos 票证）。  
   
- 如规范所定义，使用的安全绑定*令牌*来保护消息交换。 A*令牌*是的表示形式的安全凭据。  
+ 根据规范的定义，使用的安全绑定*令牌*来保护消息交换。 一个*令牌*是安全凭据的表示形式。  
   
  安全绑定使用在安全绑定策略中标识的主令牌来创建签名。 此签名称为*消息签名*。  
   
@@ -35,7 +35,7 @@ ms.locfileid: "33495881"
 |签名和加密|签名的加密支持令牌是在 `wsse:SecurityHeader` 中出现时还进行加密的签名支持令牌。|  
   
 ## <a name="programming-supporting-credentials"></a>对支持凭据进行编程  
- 若要创建使用必须创建的支持令牌的服务[ \<customBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)。 (有关详细信息，请参阅[如何： 自定义绑定使用 SecurityBindingElement 创建](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)。)  
+ 若要创建的服务，使用支持令牌，必须创建[ \<customBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)。 (有关详细信息，请参阅[如何： 创建自定义绑定使用 SecurityBindingElement](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)。)  
   
  创建自定义绑定的第一步是创建一个安全绑定元素，该元素可以是以下三种类型之一：  
   
@@ -58,9 +58,9 @@ ms.locfileid: "33495881"
 #### <a name="scopes"></a>范围  
  支持凭据存在两个范围：  
   
--   *支持令牌的终结点*支持所有操作的终结点。 即，每当调用任何终结点操作，都可以使用该支持令牌表示的凭据。  
+-   *支持令牌的终结点*支持的终结点的所有操作。 即，每当调用任何终结点操作，都可以使用该支持令牌表示的凭据。  
   
--   *操作支持令牌*支持特定终结点操作。  
+-   *操作支持令牌*支持特定的终结点操作。  
   
  正如属性名所指示的那样，支持凭据可能是必需的，也可能是可选的。 即，如果支持凭据存在，则使用支持凭据（尽管不是必需的），但如果支持凭据不存在，身份验证也不会失败。  
   

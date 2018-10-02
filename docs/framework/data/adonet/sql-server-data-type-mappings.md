@@ -2,12 +2,12 @@
 title: SQL Server 数据类型映射
 ms.date: 03/30/2017
 ms.assetid: fafdc31a-f435-4cd3-883f-1dfadd971277
-ms.openlocfilehash: 26ba7aa730eb9c30cfeaf50c59d6b9721fe5857d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9bc2747dff7b6f2bffdca4186519f2a36083e5f0
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33362460"
+ms.lasthandoff: 09/15/2018
+ms.locfileid: "45649531"
 ---
 # <a name="sql-server-data-type-mappings"></a>SQL Server 数据类型映射
 SQL Server 和 .NET Framework 基于不同的类型系统。 例如，.NET Framework <xref:System.Decimal> 结构的最大小数位数为 28，而 SQL Server 的 decimal 和 numeric 数据类型的最大小数位数为 38。 为了在读取和写入数据时维护数据的完整性，<xref:System.Data.SqlClient.SqlDataReader> 将公开用于返回 <xref:System.Data.SqlTypes> 的对象的 SQL Server 特定的类型化访问器方法以及用于返回 .NET Framework 类型的访问器方法。 SQL Server 类型和 .NET Framework 类型也可通过 <xref:System.Data.DbType> 和 <xref:System.Data.SqlDbType> 类中的枚举表示，当您指定 <xref:System.Data.SqlClient.SqlParameter> 数据类型时可以使用这些枚举。  
@@ -49,15 +49,16 @@ SQL Server 和 .NET Framework 基于不同的类型系统。 例如，.NET Frame
 |varchar|String<br /><br /> Char[]|<xref:System.Data.SqlDbType.VarChar>|<xref:System.Data.SqlClient.SqlDataReader.GetSqlString%2A>|<xref:System.Data.DbType.AnsiString>, <xref:System.Data.DbType.String>|<xref:System.Data.SqlClient.SqlDataReader.GetString%2A><br /><br /> <xref:System.Data.SqlClient.SqlDataReader.GetChars%2A>|  
 |xml|Xml|<xref:System.Data.SqlDbType.Xml>|<xref:System.Data.SqlClient.SqlDataReader.GetSqlXml%2A>|<xref:System.Data.DbType.Xml>|无|  
   
-<sup>1</sup>无法设置`DbType`属性`SqlParameter`到`SqlDbType.Date`。  
-<sup>2</sup>使用特定的类型化访问器，如果你知道的基础类型`sql_variant`。  
+<sup>1</sup>无法设置`DbType`的属性`SqlParameter`到`SqlDbType.Date`。  
+<sup>2</sup>如果您知道的基础类型，请使用特定的类型化取值函数`sql_variant`。  
   
-## <a name="sql-server-books-online-reference"></a>SQL Server 联机丛书参考  
- 有关 SQL Server 数据类型的详细信息，请参阅[数据类型 （数据库引擎）](http://go.microsoft.com/fwlink/?LinkID=107468)。  
+## <a name="sql-server-documentation"></a>SQL Server 文档
+
+有关 SQL Server 数据类型的详细信息，请参阅[数据类型 (Transact SQL)](/sql/t-sql/data-types/data-types-transact-sql)。
   
 ## <a name="see-also"></a>请参阅  
  [SQL Server 数据类型和 ADO.NET](../../../../docs/framework/data/adonet/sql/sql-server-data-types.md)  
  [SQL Server 二进制和大值数据](../../../../docs/framework/data/adonet/sql/sql-server-binary-and-large-value-data.md)  
  [ADO.NET 中的数据类型映射](../../../../docs/framework/data/adonet/data-type-mappings-in-ado-net.md)  
  [配置参数和参数数据类型](../../../../docs/framework/data/adonet/configuring-parameters-and-parameter-data-types.md)  
- [ADO.NET 托管提供程序和数据集开发人员中心](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - extension methods [C#]
 - methods [C#], extension
 ms.assetid: 175ce3ff-9bbf-4e64-8421-faeb81a0bb51
-ms.openlocfilehash: e2e63953e130dc83ce83bcdd2f8e9a2ffc7fe5f3
-ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
+ms.openlocfilehash: 7ebd04665d91f599edcb4a5c07680216dfb8925a
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2018
-ms.locfileid: "34172602"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47233075"
 ---
 # <a name="extension-methods-c-programming-guide"></a>扩展方法（C# 编程指南）
 扩展方法使你能够向现有类型“添加”方法，而无需创建新的派生类型、重新编译或以其他方式修改原始类型。 扩展方法是一种特殊的静态方法，但可以像扩展类型上的实例方法一样进行调用。 对于用 C#、F# 和 Visual Basic 编写的客户端代码，调用扩展方法与调用在类型中实际定义的方法没有明显区别。  
@@ -53,9 +53,6 @@ using System.Linq;
   
  （你可能还必须添加对 System.Core.dll 的引用。）你将注意到，标准查询运算符现在作为可供大多数 <xref:System.Collections.Generic.IEnumerable%601> 类型使用的附加方法显示在 IntelliSense 中。  
   
-> [!NOTE]
->  尽管标准查询运算符没有显示在 <xref:System.String> 的 IntelliSense 中，但它们仍然可用。  
-  
 ## <a name="binding-extension-methods-at-compile-time"></a>在编译时绑定扩展方法  
  可以使用扩展方法来扩展类或接口，但不能重写扩展方法。 与接口或类方法具有相同名称和签名的扩展方法永远不会被调用。 编译时，扩展方法的优先级总是比类型本身中定义的实例方法低。 换句话说，如果某个类型具有一个名为 `Process(int i)` 的方法，而你有一个具有相同签名的扩展方法，则编译器总是绑定到该实例方法。 当编译器遇到方法调用时，它首先在该类型的实例方法中寻找匹配的方法。 如果未找到任何匹配方法，编译器将搜索为该类型定义的任何扩展方法，并且绑定到它找到的第一个扩展方法。 下面的示例演示编译器如何确定要绑定到哪个扩展方法或实例方法。  
   
@@ -81,12 +78,13 @@ using System.Linq;
   
  针对已实现的类库，不应为了避免程序集的版本号递增而使用扩展方法。 如果要向你拥有源代码的库中添加重要功能，应遵循适用于程序集版本控制的标准 .NET Framework 准则。 有关详细信息，请参阅[程序集版本控制](../../../../docs/framework/app-domains/assembly-versioning.md)。  
   
-## <a name="see-also"></a>请参阅  
- [C# 编程指南](../../../csharp/programming-guide/index.md)  
- [并行编程示例（这些示例包括许多示例扩展方法）](http://code.msdn.microsoft.com/Samples-for-Parallel-b4b76364)  
- [Lambda 表达式](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)  
- [标准查询运算符概述](http://msdn.microsoft.com/library/24cda21e-8af8-4632-b519-c404a839b9b2)  
- [Conversion rules for Instance parameters and their impact](https://blogs.msdn.microsoft.com/sreekarc/2007/10/11/conversion-rules-for-instance-parameters-and-their-impact)（实例参数及其影响的转换规则）  
- [Extension methods Interoperability between languages](https://blogs.msdn.microsoft.com/sreekarc/2007/10/11/extension-methods-interoperability-between-languages)（语言间扩展方法的互操作性）  
- [Extension methods and Curried Delegates](https://blogs.msdn.microsoft.com/sreekarc/2007/05/01/extension-methods-and-curried-delegates)（扩展方法和扩充委托）  
- [Extension method Binding and Error reporting](https://blogs.msdn.microsoft.com/sreekarc/2007/04/26/extension-method-binding-and-error-reporting)（扩展方法绑定和错误报告）
+## <a name="see-also"></a>请参阅
+
+- [C# 编程指南](../../../csharp/programming-guide/index.md)  
+- [并行编程示例（这些示例包括许多示例扩展方法）](https://code.msdn.microsoft.com/Samples-for-Parallel-b4b76364)  
+- [Lambda 表达式](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)  
+- [标准查询运算符概述](../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)
+- [Conversion rules for Instance parameters and their impact](https://blogs.msdn.microsoft.com/sreekarc/2007/10/11/conversion-rules-for-instance-parameters-and-their-impact)（实例参数及其影响的转换规则）  
+- [Extension methods Interoperability between languages](https://blogs.msdn.microsoft.com/sreekarc/2007/10/11/extension-methods-interoperability-between-languages)（语言间扩展方法的互操作性）  
+- [Extension methods and Curried Delegates](https://blogs.msdn.microsoft.com/sreekarc/2007/05/01/extension-methods-and-curried-delegates)（扩展方法和扩充委托）  
+- [Extension method Binding and Error reporting](https://blogs.msdn.microsoft.com/sreekarc/2007/04/26/extension-method-binding-and-error-reporting)（扩展方法绑定和错误报告）

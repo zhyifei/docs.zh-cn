@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3667ac5a19664507b767ee6c5421a5e93f6cdfe0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 021f2b7a720c2190d56bdb2b35214c581a7b5f56
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33433251"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44088045"
 ---
 # <a name="corbindtocurrentruntime-function"></a>CorBindToCurrentRuntime 函数
-通过使用版本信息存储在 XML 文件中，到的进程中加载公共语言运行时 (CLR)。 XML 文件的格式是标准的应用程序配置文件之后制定的。 有关配置文件的详细信息，请参阅[配置文件架构](../../../../docs/framework/configure-apps/file-schema/index.md)。  
+通过使用版本信息的 XML 文件中存储公共语言运行时 (CLR) 加载到进程中。 XML 文件的格式只被现代性的标准应用程序配置文件。 有关配置文件的详细信息，请参阅[配置文件架构](../../../../docs/framework/configure-apps/file-schema/index.md)。  
   
- 此函数已弃用中[!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)]。 请参阅[公共语言运行时加载到进程中](http://msdn.microsoft.com/library/1e2d6dc1-6aab-43e2-bbc0-aae40756d24f)。  
+ 此函数中不推荐[!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)]。 请参阅[公共语言运行时加载到进程中](https://msdn.microsoft.com/library/1e2d6dc1-6aab-43e2-bbc0-aae40756d24f)。  
   
 ## <a name="syntax"></a>语法  
   
@@ -42,14 +42,14 @@ HRESULT CorBindToCurrentRuntime (
   
 #### <a name="parameters"></a>参数  
  `pwszFileName`  
- [in]指定要加载的 clr 版本的应用程序配置文件的名称。 如果不完全限定的文件名，则假定在进行调用的可执行文件所在的目录。  
+ [in]指定要加载的 CLR 版本应用程序配置文件的名称。 如果不完全限定的文件名，则假定要进行的调用的可执行文件所在的同一目录中。  
   
  中的版本属性描述要加载的运行时版本[ \<requiredRuntime >](../../../../docs/framework/configure-apps/file-schema/startup/requiredruntime-element.md)配置文件元素。  
   
- 如果没有指定版本，或如果`<requiredRuntime>`找不到元素，加载计算机安装的 CLR 的最新版本。  
+ 如果没有指定版本，或如果`<requiredRuntime>`找不到元素，加载的 CLR 的计算机上安装的最新版本。  
   
  `rclsid`  
- [in]`CLSID`实现的组件类的[ICorRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md)或[ICLRRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-interface.md)接口。 支持的值为 CLSID_CorRuntimeHost 或 CLSID_CLRRuntimeHost。  
+ [in]`CLSID`的实现的组件类[ICorRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md)或[ICLRRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-interface.md)接口。 支持的值为 CLSID_CorRuntimeHost 或 CLSID_CLRRuntimeHost。  
   
  `riid`  
  [in]`IID`您请求的接口。 支持的值为 IID_ICorRuntimeHost 或 IID_ICLRRuntimeHost。  
@@ -64,7 +64,7 @@ HRESULT CorBindToCurrentRuntime (
   
  **库：** MSCorEE.dll  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅  
  [CorBindToRuntime 函数](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntime-function.md)  

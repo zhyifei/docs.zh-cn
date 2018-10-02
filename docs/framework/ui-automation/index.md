@@ -8,17 +8,16 @@ helpviewer_keywords:
 ms.assetid: e7ec856e-41ee-47b1-9d57-b75a3dad088c
 author: Xansky
 ms.author: mhopkins
-manager: markl
-ms.openlocfilehash: 79e67e58e6280d176969f770f91b5ab93d728b95
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 12fc92c716cf0ff1ab15786a067ad955caee0d20
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33400323"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47205299"
 ---
 # <a name="accessibility"></a>可访问性
 > [!NOTE]
->  本文档适用于想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空间中定义的托管 <xref:System.Windows.Automation> 类的 .NET Framework 开发人员。 有关 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]的最新信息，请参阅 [Windows 自动化 API：UI 自动化](http://go.microsoft.com/fwlink/?LinkID=156746)。  
+>  本文档适用于想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空间中定义的托管 <xref:System.Windows.Automation> 类的 .NET Framework 开发人员。 有关最新信息[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]，请参阅[Windows 自动化 API: UI 自动化](https://go.microsoft.com/fwlink/?LinkID=156746)。  
   
  [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] 是 [!INCLUDE[TLA#tla_win](../../../includes/tlasharptla-win-md.md)] 新的辅助功能框架。 它通过提供对有关 [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] 的信息的按计划访问，满足辅助技术产品和自动化测试框架的需求。 此外，借助 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]，控件和应用程序开发人员可实现其产品的可访问性。  
   

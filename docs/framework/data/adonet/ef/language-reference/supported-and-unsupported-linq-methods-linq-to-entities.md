@@ -2,12 +2,12 @@
 title: 支持和不支持的 LINQ 方法 (LINQ to Entities)
 ms.date: 03/30/2017
 ms.assetid: 7f3ffa5f-f819-4730-bcdb-09b23de3b6d0
-ms.openlocfilehash: 6994632c88b4ac67c9340fc95f07687d99917933
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: a57e8facdd0ece7223ec780a9ef22a1be7c53221
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32766629"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43502238"
 ---
 # <a name="supported-and-unsupported-linq-methods-linq-to-entities"></a>支持和不支持的 LINQ 方法 (LINQ to Entities)
 本节提供有关 [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] 查询中支持和不支持的语言集成查询 (LINQ) 标准查询运算符的信息。 许多 LINQ 标准查询运算符都有可接受整数自变量的重载版本。 该整数参数对应于正在操作的序列中从零开始的索引，<xref:System.Collections.Generic.IEqualityComparer%601> 或 <xref:System.Collections.Generic.IComparer%601>。 除非专门指定，否则这些 LINQ 标准查询运算符的重载版本并不受支持，尝试使用它们将引发异常。  
@@ -145,7 +145,7 @@ ms.locfileid: "32766629"
 |<xref:System.Linq.Queryable.Sum%2A>|不支持|`Function Sum(Of TSource) ( _ source As IQueryable(Of TSource), _ selector As Expression(Of Func(Of TSource, Nullable(Of Decimal))) _ ) As Nullable(Of Decimal)`|`Nullable<decimal> Sum<TSource>( this IQueryable<TSource> source, Expression<Func<TSource, Nullable<decimal>>> selector )`|  
   
 ## <a name="type-methods"></a>类型方法  
- [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)] 中支持用于处理 CLR 类型转换和测试的 LINQ 标准查询运算符。 LINQ to Entities 中仅支持映射到概念模型类型的 CLR 类型。 有关概念模型类型的列表，请参阅[概念模型类型 (CSDL)](http://msdn.microsoft.com/library/987b995f-e429-4569-9559-b4146744def4)。 下表列出了支持的和不支持的类型方法。  
+ [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)] 中支持用于处理 CLR 类型转换和测试的 LINQ 标准查询运算符。 LINQ to Entities 中仅支持映射到概念模型类型的 CLR 类型。 有关概念模型类型的列表，请参阅[概念模型类型 (CSDL)](https://msdn.microsoft.com/library/987b995f-e429-4569-9559-b4146744def4)。 下表列出了支持的和不支持的类型方法。  
   
 |方法|支持|Visual Basic 函数签名|C# 方法签名|  
 |------------|-------------|-------------------------------------|--------------------------|  

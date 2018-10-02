@@ -8,12 +8,12 @@ helpviewer_keywords:
 - errors [Windows Forms Designer]
 - design-time errors [Windows Forms Designer]
 ms.assetid: ad408380-825a-46d8-9a4a-531b130b88ce
-ms.openlocfilehash: 00296b51563a5f973b8e5d64c55867568ff0324e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ec1801a1b695867a7edcd99394feebe1d0f6853a
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33527782"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47196000"
 ---
 # <a name="design-time-errors-in-the-windows-forms-designer"></a>Windows 窗体设计器中的设计时错误
 本主题说明 Windows 窗体设计器加载失败时出现在 Microsoft Visual Studio 中的设计时错误列表的含义和用法。 如果出现此错误列表，则不应将其视为设计器中的 Bug，而应作为纠正代码中的错误的辅助手段。  
@@ -45,15 +45,15 @@ ms.locfileid: "33527782"
 ### <a name="forum-posts-about-this-error"></a>有关此错误的论坛帖子  
  附加帮助信息包含一个指向与该错误相关的 MSDN 论坛帖子的链接。 将基于错误消息字符串来搜索论坛。 还可尝试搜索以下论坛：  
   
--   [Windows 窗体设计器论坛](http://go.microsoft.com/fwlink/?LinkId=203524)  
+-   [Windows 窗体设计器论坛](https://go.microsoft.com/fwlink/?LinkId=203524)  
   
--   [Windows 窗体论坛](http://go.microsoft.com/fwlink/?LinkId=203523)  
+-   [Windows 窗体论坛](https://go.microsoft.com/fwlink/?LinkId=203523)  
   
 ### <a name="ignore-and-continue"></a>忽略并继续  
  可选择忽略错误条件并继续加载设计器。 选择此操作可能会导致意外行为。 例如，控件可能不会显示在设计图面上。  
   
 ## <a name="see-also"></a>请参阅  
- [设计时开发的疑难解答](http://msdn.microsoft.com/library/e048d08e-fa7c-4be8-b238-4abaa199a0a6)  
+ [设计时开发故障排除](https://msdn.microsoft.com/library/e048d08e-fa7c-4be8-b238-4abaa199a0a6)  
  [控件和组件创作疑难解答](../../../../docs/framework/winforms/controls/troubleshooting-control-and-component-authoring.md)  
  [设计时开发 Windows 窗体控件](../../../../docs/framework/winforms/controls/developing-windows-forms-controls-at-design-time.md)  
- [Windows 窗体设计器错误信息](http://msdn.microsoft.com/library/cf610bf4-5fe4-471c-bce7-6a05ece07bd2)
+ [Windows 窗体设计器错误信息](https://msdn.microsoft.com/library/cf610bf4-5fe4-471c-bce7-6a05ece07bd2)

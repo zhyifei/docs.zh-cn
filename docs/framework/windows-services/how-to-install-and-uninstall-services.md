@@ -12,16 +12,15 @@ helpviewer_keywords:
 - installutil.exe tool
 ms.assetid: c89c5169-f567-4305-9d62-db31a1de5481
 author: ghogen
-manager: douge
-ms.openlocfilehash: 0d42a37b2e84c310569666771ded38e5feca3608
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: eb68809909c0550ea5fa5eab1f9d5ca6a069e314
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33513134"
+ms.lasthandoff: 09/27/2018
+ms.locfileid: "47232724"
 ---
 # <a name="how-to-install-and-uninstall-services"></a>如何：安装和卸载服务
-如果你正使用 .NET Framework 开发 Windows 服务，你可以使用名为 InstallUtil.exe 的命令行实用工具快速安装服务应用程序。 如果你是一个想要发布用户可以安装和卸载的 Windows 服务的开发人员，应使用 InstallShield。 请参阅 [Windows Installer 部署](http://msdn.microsoft.com/library/121be21b-b916-43e2-8f10-8b080516d2a0)。  
+如果你正使用 .NET Framework 开发 Windows 服务，你可以使用名为 InstallUtil.exe 的命令行实用工具快速安装服务应用程序。 如果你是一个想要发布用户可以安装和卸载的 Windows 服务的开发人员，应使用 InstallShield。 请参阅 [Windows Installer 部署](https://msdn.microsoft.com/library/121be21b-b916-43e2-8f10-8b080516d2a0)。  
   
 > [!WARNING]
 >  如果你想要从你的计算机卸载服务，不要遵循本文中的步骤。 相反，你应找出哪些程序或软件包安装了该服务，然后在控制面板中选择“添加/删除程序”卸载该程序。 请注意，许多服务是 Windows 不可或缺的部分；如果你删除它们，可能导致系统不稳定。  
@@ -61,7 +60,7 @@ ms.locfileid: "33513134"
     installutil /u <yourproject>.exe  
     ```  
   
-3.  有时，服务的可执行文件被删除后，该服务可能仍然会出现在注册表中。 这种情况下，请使用命令 [sc delete](http://technet.microsoft.com/library/cc742045.aspx) 从注册表中删除服务的条目。  
+3.  有时，服务的可执行文件被删除后，该服务可能仍然会出现在注册表中。 这种情况下，请使用命令 [sc delete](https://technet.microsoft.com/library/cc742045.aspx) 从注册表中删除服务的条目。  
   
 ## <a name="see-also"></a>请参阅  
  [Windows 服务应用程序介绍](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)  

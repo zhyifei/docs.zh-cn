@@ -1,13 +1,13 @@
 ---
-title: 在加载或分析 XML2 时保留空白
+title: 加载或分析 XML2 时保留空白
 ms.date: 07/20/2015
 ms.assetid: ef6518e0-2c8d-462c-8b92-a16e9dc737ad
 ms.openlocfilehash: 3341bfae8ff9de5e17ba18273c60b525f77bff16
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33645637"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42935964"
 ---
 # <a name="preserving-white-space-while-loading-or-parsing-xml"></a>在加载或分析 XML 时保留空白
 本主题说明如何控制 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 的空白行为。  

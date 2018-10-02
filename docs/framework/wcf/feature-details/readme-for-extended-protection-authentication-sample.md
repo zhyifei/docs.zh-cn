@@ -3,18 +3,17 @@ title: 扩展保护身份验证示例自述文件
 ms.date: 03/30/2017
 ms.assetid: 80bf2e97-398d-4db5-9040-d96478a2ccab
 author: BrucePerlerMS
-manager: mbaldwin
-ms.openlocfilehash: d45271180b7f00ba78d106f2a93d5860375da5f1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d298f1f6668078d327cf0fd78110c0cbb7b4474c
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33495075"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47216878"
 ---
 # <a name="readme-for-extended-protection-authentication-sample"></a>扩展保护身份验证示例自述文件
-扩展的保护是一种安全计划以防止拦截中 (MITM) 攻击，攻击者 （"--拦截"） 会截获客户端的凭据，并使用它们来访问客户端的目标服务器上的安全资源。  
+扩展的保护是一种安全计划中拦截 (MITM) 攻击，在其中攻击者 （"人-中-干预"） 截获客户端的凭据，并使用它们来访问客户端的目标服务器上的安全资源。  
   
- 有关详细信息，请参阅[扩展保护身份验证概述](../../../../docs/framework/wcf/feature-details/extended-protection-for-authentication-overview.md)。  
+ 有关详细信息，请参阅[扩展保护的身份验证概述](../../../../docs/framework/wcf/feature-details/extended-protection-for-authentication-overview.md)。  
   
 > [!NOTE]
 >  仅当承载于 IIS 上时，此示例才有效。 它不适用于 Visual Studio 开发服务器，原因是此服务器不支持 HTTPS。  
@@ -45,6 +44,6 @@ ms.locfileid: "33495075"
   
 10. 通过从浏览器窗口访问 URL 可测试此服务。 如果想要跨计算机访问此 URL，请确保为所有传入 HTTP 和 HTTPS 连接打开了防火墙。  
   
-11. 打开客户端配置文件，并提供完整的计算机名称为\<客户端 >-\<终结点 >-address 属性，替换 << full_machine_name >>。  
+11. 打开客户端配置文件，并提供有关完整的计算机名称\<客户端 >-\<终结点 >-address 属性，替换 << full_machine_name >>。  
   
 12. 运行客户端。 客户端通过建立安全通道并使用扩展保护与服务进行通信。

@@ -4,12 +4,12 @@ description: 适用于容器化 .NET 应用程序的 .NET 微服务体系结构 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.openlocfilehash: d675ba753903e181c67712e34eea82fed72df0d7
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.openlocfilehash: bb5f0daf0bcf824d72bb104914de03532bd3f9f7
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37105429"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44213337"
 ---
 # <a name="logical-architecture-versus-physical-architecture"></a>逻辑体系结构与物理体系结构
 
@@ -17,7 +17,7 @@ ms.locfileid: "37105429"
 
 首先，生成微服务不需要使用特殊技术。 例如，创建基于微服务的体系结构对 Docker 容器并没有强制性要求。 这些微服务也可以像普通进程那样运行。 微服务是一种逻辑体系结构。
 
-此外，即使微服务能够作为单一服务、进程或容器进行物理实现（为简化起见，此方法是 [eShopOnContainers](http://aka.ms/MicroservicesArchitecture) 原始版本采取的做法），生成由数十个甚至数百个服务组成的大型复杂应用程序时，并不需要商业微服务和物理服务或容器之间的奇偶校验。
+此外，即使微服务能够作为单一服务、进程或容器进行物理实现（为简化起见，此方法是 [eShopOnContainers](https://aka.ms/MicroservicesArchitecture) 原始版本采取的做法），生成由数十个甚至数百个服务组成的大型复杂应用程序时，并不需要商业微服务和物理服务或容器之间的奇偶校验。
 
 这就是应用程序的逻辑体系结构和物理体系结构之间存在的差异。 系统的逻辑体系结构和逻辑边界不一定要与物理或部署体系结构一对一映射。 这种情况可能会发生，但不会经常发生。
 

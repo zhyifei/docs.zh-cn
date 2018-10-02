@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - break keyword [C#]
 ms.assetid: be2571ed-efb0-4965-b122-81e5b09db0b9
-ms.openlocfilehash: 987ee1ca5601b3dd105412bf0fa18361c57a95fd
-ms.sourcegitcommit: c217b067985905cb21eafc5dd9a83568d7ff4e45
+ms.openlocfilehash: 9dc71cce3cc0ca4035df483d2b3a3ab9a3bab9c5
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/22/2018
-ms.locfileid: "36315233"
+ms.lasthandoff: 09/27/2018
+ms.locfileid: "47215842"
 ---
 # <a name="break-c-reference"></a>break（C# 参考）
 
@@ -49,9 +49,9 @@ Sorry, invalid selection.
 
 ## <a name="see-also"></a>请参阅
 
-[C# 参考](../../../csharp/language-reference/index.md)  
-[C# 编程指南](../../../csharp/programming-guide/index.md)  
-[C# 关键字](../../../csharp/language-reference/keywords/index.md)  
-[switch](../../../csharp/language-reference/keywords/switch.md)  
-[跳转语句](../../../csharp/language-reference/keywords/jump-statements.md)  
-[迭代语句](../../../csharp/language-reference/keywords/iteration-statements.md)
+- [C# 参考](../../../csharp/language-reference/index.md)  
+- [C# 编程指南](../../../csharp/programming-guide/index.md)  
+- [C# 关键字](../../../csharp/language-reference/keywords/index.md)  
+- [switch](../../../csharp/language-reference/keywords/switch.md)  
+- [跳转语句](../../../csharp/language-reference/keywords/jump-statements.md)  
+- [迭代语句](../../../csharp/language-reference/keywords/iteration-statements.md)

@@ -18,12 +18,12 @@ helpviewer_keywords:
 - format specifiers, standard numeric format strings
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f471d62ca31096b955dd6f703c70faabe91cb55b
-ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
+ms.openlocfilehash: 0618e9853eea2f4aa6e6a5dfd11b571cb3d7b123
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36208149"
+ms.lasthandoff: 09/27/2018
+ms.locfileid: "47397171"
 ---
 # <a name="standard-numeric-format-strings"></a>标准数字格式字符串
 
@@ -33,8 +33,10 @@ ms.locfileid: "36208149"
   
 -   `xx` 是称为“精度说明符”的可选整数。 精度说明符的范围从 0 到 99，并且影响结果中的位数。 请注意，精度说明符控制数字的字符串表示形式中的数字个数。 它不舍入该数字。 若要执行舍入运算，请使用 <xref:System.Math.Ceiling%2A?displayProperty=nameWithType>、<xref:System.Math.Floor%2A?displayProperty=nameWithType> 或 <xref:System.Math.Round%2A?displayProperty=nameWithType> 方法。  
   
-     如果精度说明符控制结果字符串中的小数位数，结果字符串反映远离零的一侧舍入的数字（即使用 <xref:System.MidpointRounding.AwayFromZero?displayProperty=nameWithType>）。  
-  
+    当精度说明符控制结果字符串中的小数位数时，结果字符串会反映一个数字，该数字四舍五入到最接近无限精确结果的可表示结果。 如果有两个同样接近的可表示结果：
+    - 在 .NET Framework 和.NET Core（.NET Core 2.0 及以下）上，运行时选择最低有效数字更高的结果（即使用 <xref:System.MidpointRounding.AwayFromZero?displayProperty=nameWithType>）。
+    - 在 .NET Core 2.1 及更高版本上，运行时选择最低有效数字为偶数的结果（即使用 <xref:System.MidpointRounding.ToEven?displayProperty=nameWithType>）。 
+
     > [!NOTE]
     >  精度说明符确定结果字符串中的位数。 若要使用前导或尾随空格填充结果字符串，请使用[复合格式设置](../../../docs/standard/base-types/composite-formatting.md)功能，并在格式项中定义*对齐组件*。  
   
@@ -55,7 +57,7 @@ ms.locfileid: "36208149"
 |----------------------|----------|-----------------|--------------|  
 |“C”或“c”|货币|结果：货币值。<br /><br /> 受以下类型支持：所有数值类型。<br /><br /> 精度说明符：小数位数。<br /><br /> 默认值精度说明符：由 <xref:System.Globalization.NumberFormatInfo.CurrencyDecimalDigits%2A?displayProperty=nameWithType> 定义。<br /><br /> 有关详细信息，请参阅[货币（“C”）格式说明符](#CFormatString)。|123.456 ("C", en-US) -> $123.46<br /><br /> 123.456 ("C", fr-FR) -> 123,46 €<br /><br /> 123.456 ("C", ja-JP) -> ¥123<br /><br /> -123.456 ("C3", en-US) -> ($123.456)<br /><br /> -123.456 ("C3", fr-FR) -> -123,456 €<br /><br /> -123.456 ("C3", ja-JP) -> -¥123.456|  
 |“D”或“d”|Decimal|结果：整型数字，负号可选。<br /><br /> 受以下类型支持：仅整型。<br /><br /> 精度说明符：最小位数。<br /><br /> 默认值精度说明符：所需的最小位数。<br /><br /> 有关详细信息，请参阅[十进制（“D”）格式说明符](#DFormatString)。|1234 ("D") -> 1234<br /><br /> -1234 ("D6") -> -001234|  
-|“E”或“e”|指数（科学型）|结果：指数记数法。<br /><br /> 受以下类型支持：所有数值类型。<br /><br /> 精度说明符：小数位数。<br /><br /> 默认值精度说明符：6。<br /><br /> 有关详细信息，请参阅[指数（“E”）格式说明符](#EFormatString)。|1052.0329112756 ("E", en-US) -> 1.052033E+003<br /><br /> 1052.0329112756 ("e", fr-FR) -> 1,052033e+003<br /><br /> -1052.0329112756 ("e2", en-US) -> -1.05e+003<br /><br /> -1052.0329112756 ("E2", fr_FR) -> -1,05E+003|  
+|“E”或“e”|指数（科学型）|结果：指数记数法。<br /><br /> 受以下类型支持：所有数值类型。<br /><br /> 精度说明符：小数位数。<br /><br /> 默认值精度说明符：6。<br /><br /> 有关详细信息，请参阅[指数（“E”）格式说明符](#EFormatString)。|1052.0329112756 ("E", en-US) -> 1.052033E+003<br /><br /> 1052.0329112756 ("e", fr-FR) -> 1,052033e+003<br /><br /> -1052.0329112756 ("e2", en-US) -> -1.05e+003<br /><br /> -1052.0329112756 ("E2", fr-FR) -> -1,05E+003|  
 |“F”或“f”|定点|结果：整数和小数，负号可选。<br /><br /> 受以下类型支持：所有数值类型。<br /><br /> 精度说明符：小数位数。<br /><br /> 默认值精度说明符：由 <xref:System.Globalization.NumberFormatInfo.NumberDecimalDigits%2A?displayProperty=nameWithType> 定义。<br /><br /> 有关详细信息，请参阅[定点（“F”）格式说明符](#FFormatString)。|1234.567 ("F", en-US) -> 1234.57<br /><br /> 1234.567 ("F", de-DE) -> 1234,57<br /><br /> 1234 ("F1", en-US) -> 1234.0<br /><br /> 1234 ("F1", de-DE) -> 1234,0<br /><br /> -1234.56 ("F4", en-US) -> -1234.5600<br /><br /> -1234.56 ("F4", de-DE) -> -1234,5600|  
 |“G”或“g”|常规|结果：更紧凑的定点表示法或科学记数法。<br /><br /> 受以下类型支持：所有数值类型。<br /><br /> 精度说明符：有效位数。<br /><br /> 默认值精度说明符：取决于数值类型。<br /><br /> 有关详细信息，请参阅[常规（“G”）格式说明符](#GFormatString)。|-123.456 ("G", en-US) -> -123.456<br /><br /> -123.456 ("G", sv-SE) -> -123,456<br /><br /> 123.4546 ("G4", en-US) -> 123.5<br /><br /> 123.4546 ("G4", sv-SE) -> 123,5<br /><br /> -1.234567890e-25 ("G", en-US) -> -1.23456789E-25<br /><br /> -1.234567890e-25 ("G", sv-SE) -> -1,23456789E-25|  
 |“N”或“n”|数字|结果：整数和小数、组分隔符和小数分隔符，负号可选。<br /><br /> 受以下类型支持：所有数值类型。<br /><br /> 精度说明符：所需的小数位数。<br /><br /> 默认值精度说明符：由 <xref:System.Globalization.NumberFormatInfo.NumberDecimalDigits%2A?displayProperty=nameWithType> 定义。<br /><br /> 有关详细信息，请参阅[数字（“N”）格式说明符](#NFormatString)。|1234.567 ("N", en-US) -> 1,234.57<br /><br /> 1234.567 ("N", ru-RU) -> 1 234,57<br /><br /> 1234 ("N1", en-US) -> 1,234.0<br /><br /> 1234 ("N1", ru-RU) -> 1 234,0<br /><br /> -1234.56 ("N3", en-US) -> -1,234.560<br /><br /> -1234.56 ("N3", ru-RU) -> -1 234,560|  
@@ -67,7 +69,7 @@ ms.locfileid: "36208149"
 <a name="Using"></a>   
 ## <a name="using-standard-numeric-format-strings"></a>使用标准数字格式字符串  
 
-[!INCLUDE[interactive-note](~/includes/csharp-interactive-with-culture-note.md)]
+[!INCLUDE[interactive-note](~/includes/csharp-interactive-note.md)]
 
 可采用以下两种方式之一使用标准数字格式字符串定义数值的格式：  
   
@@ -115,7 +117,7 @@ ms.locfileid: "36208149"
  下面的示例使用货币格式说明符设置 <xref:System.Double> 值的格式。  
   
  [!code-cpp[Formatting.Numeric.Standard#1](../../../samples/snippets/cpp/VS_Snippets_CLR/Formatting.Numeric.Standard/cpp/Standard.cpp#1)]
- [!code-csharp-interactive[Formatting.Numeric.Standard#1](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/Standard.cs#1)]
+ [!code-csharp[Formatting.Numeric.Standard#1](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/Standard.cs#1)]
  [!code-vb[Formatting.Numeric.Standard#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Numeric.Standard/vb/Standard.vb#1)]  
   
  [返回表首](#table)  
@@ -159,14 +161,14 @@ ms.locfileid: "36208149"
  下面的示例使用指数格式说明符设置 <xref:System.Double> 值的格式。  
   
  [!code-cpp[Formatting.Numeric.Standard#3](../../../samples/snippets/cpp/VS_Snippets_CLR/Formatting.Numeric.Standard/cpp/Standard.cpp#3)]
- [!code-csharp-interactive[Formatting.Numeric.Standard#3](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/Standard.cs#3)]
+ [!code-csharp[Formatting.Numeric.Standard#3](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/Standard.cs#3)]
  [!code-vb[Formatting.Numeric.Standard#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Numeric.Standard/vb/Standard.vb#3)]  
   
  [返回表首](#table)  
   
 <a name="FFormatString"></a>   
 ## <a name="the-fixed-point-f-format-specifier"></a>定点（“F”）格式说明符  
- 固定点 ("F") 格式说明符将数字转换为“-ddd.ddd…”格式的字符串， 其中每个“d”表示一个数字 (0-9)。 如果该数字为负，则该字符串以减号开头。  
+ 定点（“F”）格式说明符将数字转换为“-ddd.ddd…”形式的字符串，其中每个“d”表示一个数字 (0-9)。 如果该数字为负，则该字符串以减号开头。  
   
  精度说明符指示所需的小数位数。 如果省略精度说明符，则当前 <xref:System.Globalization.NumberFormatInfo.NumberDecimalDigits%2A?displayProperty=nameWithType> 属性提供数值精度。  
   
@@ -181,7 +183,7 @@ ms.locfileid: "36208149"
  下面的示例使用定点格式说明符设置 <xref:System.Double> 和 <xref:System.Int32> 值的格式。  
   
  [!code-cpp[Formatting.Numeric.Standard#4](../../../samples/snippets/cpp/VS_Snippets_CLR/Formatting.Numeric.Standard/cpp/Standard.cpp#4)]
- [!code-csharp-interactive[Formatting.Numeric.Standard#4](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/Standard.cs#4)]
+ [!code-csharp[Formatting.Numeric.Standard#4](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/Standard.cs#4)]
  [!code-vb[Formatting.Numeric.Standard#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Numeric.Standard/vb/Standard.vb#4)]  
   
  [返回表首](#table)  
@@ -226,7 +228,7 @@ ms.locfileid: "36208149"
  下面的示例使用常规格式说明符设置各种浮点值的格式。  
   
  [!code-cpp[Formatting.Numeric.Standard#5](../../../samples/snippets/cpp/VS_Snippets_CLR/Formatting.Numeric.Standard/cpp/Standard.cpp#5)]
- [!code-csharp-interactive[Formatting.Numeric.Standard#5](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/Standard.cs#5)]
+ [!code-csharp[Formatting.Numeric.Standard#5](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/Standard.cs#5)]
  [!code-vb[Formatting.Numeric.Standard#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Numeric.Standard/vb/Standard.vb#5)]  
   
  [返回表首](#table)  
@@ -249,7 +251,7 @@ ms.locfileid: "36208149"
  下面的示例使用数字格式说明符设置各种浮点值的格式。  
   
  [!code-cpp[Formatting.Numeric.Standard#6](../../../samples/snippets/cpp/VS_Snippets_CLR/Formatting.Numeric.Standard/cpp/Standard.cpp#6)]
- [!code-csharp-interactive[Formatting.Numeric.Standard#6](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/Standard.cs#6)]
+ [!code-csharp[Formatting.Numeric.Standard#6](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/Standard.cs#6)]
  [!code-vb[Formatting.Numeric.Standard#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Numeric.Standard/vb/Standard.vb#6)]  
   
  [返回表首](#table)  
@@ -274,7 +276,7 @@ ms.locfileid: "36208149"
  下面的示例使用百分比格式说明符设置浮点值的格式。  
   
  [!code-cpp[Formatting.Numeric.Standard#7](../../../samples/snippets/cpp/VS_Snippets_CLR/Formatting.Numeric.Standard/cpp/Standard.cpp#7)]
- [!code-csharp-interactive[Formatting.Numeric.Standard#7](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/Standard.cs#7)]
+ [!code-csharp[Formatting.Numeric.Standard#7](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/Standard.cs#7)]
  [!code-vb[Formatting.Numeric.Standard#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Numeric.Standard/vb/Standard.vb#7)]  
   
  [返回表首](#table)  
@@ -307,7 +309,7 @@ ms.locfileid: "36208149"
   
  若要解决使用“R”标准数字格式字符串格式化的 <xref:System.Double> 值在使用 `/platform:x64` 或 `/platform:anycpu` 交换机进行编译并在 64 位系统上运行时所出现的往返不成功的问题，可以使用“G17”标准数字格式字符格式化 <xref:System.Double> 值。 以下示例将“R”格式字符串与无法成功往返的 <xref:System.Double> 值配合使用，并使用“G17”格式字符串以成功往返原始值。  
   
- [!code-csharp-interactive[System.Double.ToString#5](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.Double.ToString/cs/roundtripex1.cs#5)]
+ [!code-csharp[System.Double.ToString#5](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.Double.ToString/cs/roundtripex1.cs#5)]
  [!code-vb[System.Double.ToString#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Double.ToString/vb/roundtripex1.vb#5)]  
   
  [返回表首](#table)  
@@ -350,17 +352,18 @@ ms.locfileid: "36208149"
   
 ## <a name="example"></a>示例  
  
-[!INCLUDE[interactive-note](~/includes/csharp-interactive-with-culture-note.md)]
+[!INCLUDE[interactive-note](~/includes/csharp-interactive-partial-note.md)]
  
  下面的示例使用 en-US 区域性和所有标准数字格式说明符设置一个整型数值和一个浮点型数值的格式。 此示例使用两个特定的数值类型（<xref:System.Double> 和 <xref:System.Int32>），但对于任何一个其他数值基类型（<xref:System.Byte>、<xref:System.SByte>、<xref:System.Int16>、<xref:System.Int32>、<xref:System.Int64>、<xref:System.UInt16>、<xref:System.UInt32>、<xref:System.UInt64>、<xref:System.Numerics.BigInteger>、<xref:System.Decimal> 和 <xref:System.Single>）都将产生类似的结果。  
   
  [!code-csharp-interactive[system.x.tostring-and-culture#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.X.ToString-and-Culture/cs/xts.cs#1)]
  [!code-vb[system.x.tostring-and-culture#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.X.ToString-and-Culture/vb/xts.vb#1)]  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Globalization.NumberFormatInfo>  
- [Custom Numeric Format Strings](../../../docs/standard/base-types/custom-numeric-format-strings.md)  
- [格式设置类型](../../../docs/standard/base-types/formatting-types.md)  
- [如何：用前导零填充数字](../../../docs/standard/base-types/how-to-pad-a-number-with-leading-zeros.md)  
- [示例：.NET Framework 4 格式设置实用工具](https://code.msdn.microsoft.com/NET-Framework-4-Formatting-9c4dae8d)  
- [复合格式设置](../../../docs/standard/base-types/composite-formatting.md)
+## <a name="see-also"></a>请参阅
+
+- <xref:System.Globalization.NumberFormatInfo>  
+- [Custom Numeric Format Strings](../../../docs/standard/base-types/custom-numeric-format-strings.md)  
+- [格式设置类型](../../../docs/standard/base-types/formatting-types.md)  
+- [如何：用前导零填充数字](../../../docs/standard/base-types/how-to-pad-a-number-with-leading-zeros.md)  
+- [示例：.NET Framework 4 格式设置实用工具](https://code.msdn.microsoft.com/NET-Framework-4-Formatting-9c4dae8d)  
+- [复合格式设置](../../../docs/standard/base-types/composite-formatting.md)

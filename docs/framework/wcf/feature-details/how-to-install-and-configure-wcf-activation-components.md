@@ -4,33 +4,33 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - HTTP activation [WCF]
 ms.assetid: 33a7054a-73ec-464d-83e5-b203aeded658
-ms.openlocfilehash: f362bd1e4a644488e85cdeca674d46ca340bde05
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8b516bb4603f33828069b5356676d8b35dc961d2
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33491743"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47088329"
 ---
 # <a name="how-to-install-and-configure-wcf-activation-components"></a>如何：安装和配置 WCF 激活组件
-本主题描述设置 Windows 进程激活服务 (也称为 WAS) 所需的步骤上[!INCLUDE[wv](../../../../includes/wv-md.md)]来承载 Windows Communication Foundation (WCF) 服务不通过 HTTP 进行通信的网络协议。 下面的部分略述此配置的步骤：  
+本主题介绍在设置 Windows 进程激活服务 (也称为 WAS) 所需的步骤[!INCLUDE[wv](../../../../includes/wv-md.md)]来承载 Windows Communication Foundation (WCF) 服务未通过 HTTP 进行通信的网络协议。 下面的部分略述此配置的步骤：  
   
--   安装 （或确认安装） 的 WCF 激活组件。  
+-   安装 （或确认安装） WCF 激活组件。  
   
 -   配置 WAS 以支持非 HTTP 协议。 下面的过程对 [!INCLUDE[wv](../../../../includes/wv-md.md)] 进行 TCP 激活配置。  
   
- 安装和配置 WAS，请参阅后[如何： 承载在 WAS 中的 WCF 服务](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-was.md)用于创建公开非 HTTP 终结点使用 WAS 的 WCF 服务的过程。  
+ 安装和配置 WAS，请参阅后[如何： 承载在 WAS 中的 WCF 服务](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-was.md)用于创建公开使用 WAS 的非 HTTP 终结点的 WCF 服务的过程。  
   
 ### <a name="to-install-the-wcf-non-http-activation-components"></a>安装 WCF 非 HTTP 激活组件  
   
-1.  单击**启动**按钮，，然后单击**控制面板**。  
+1.  单击**启动**按钮，然后依次**控制面板**。  
   
 2.  单击**程序**，然后单击**程序和功能**。  
   
-3.  上**任务**菜单上，单击**打开或关闭 Windows 功能**。  
+3.  上**任务**菜单上，单击**打开或关闭打开的 Windows 功能**。  
   
 4.  查找 [!INCLUDE[vstecwinfx](../../../../includes/vstecwinfx-md.md)] 节点，选中该节点然后将其展开。  
   
-5.  选择**WCF 非 Http 激活组件**框中，并保存设置。  
+5.  选择**WCF 非 Http 激活组件**框并保存设置。  
   
 ### <a name="to-configure-the-was-to-support-tcp-activation"></a>配置 WAS 以支持 TCP 激活  
   
@@ -51,7 +51,7 @@ ms.locfileid: "33491743"
     ```  
   
     > [!NOTE]
-    >  此命令是单行文本。 此命令启用 /\<*WCF 应用程序*> 应用程序可访问同时使用http://localhost  */ \<WCF 应用程序 >* 和 net.tcp://localhost /*\<WCF 应用程序 >*。  
+    >  此命令是单行文本。 此命令启用 /\<*WCF 应用程序*> 应用程序使用同时访问`http://localhost/<WCF Application>`和`net.tcp://localhost/<WCF Application>`。
   
      移除为此示例添加的 net.tcp 网站绑定。  
   
@@ -104,4 +104,4 @@ ms.locfileid: "33491743"
  [TCP 激活](../../../../docs/framework/wcf/samples/tcp-activation.md)  
  [MSMQ 激活](../../../../docs/framework/wcf/samples/msmq-activation.md)  
  [NamedPipe 激活](../../../../docs/framework/wcf/samples/namedpipe-activation.md)  
- [Windows Server App Fabric 承载功能](http://go.microsoft.com/fwlink/?LinkId=201276)
+ [Windows Server App Fabric 承载功能](https://go.microsoft.com/fwlink/?LinkId=201276)

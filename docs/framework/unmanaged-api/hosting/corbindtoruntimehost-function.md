@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8c1d83b32402343f3cd2b5403e328698abd6a930
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 1952121a6c0c735926944c839c3c7e8a8db5fb53
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33436210"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43861684"
 ---
 # <a name="corbindtoruntimehost-function"></a>CorBindToRuntimeHost 函数
-使主机可以加载到进程的指定公共语言运行时 (CLR) 版本。  
+使主机能够加载到进程的指定公共语言运行时 (CLR) 版本。  
   
- 此函数已弃用中[!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)]。  
+ 此函数中不推荐[!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)]。  
   
 ## <a name="syntax"></a>语法  
   
@@ -45,33 +45,33 @@ HRESULT CorBindToRuntimeHost (
   
 #### <a name="parameters"></a>参数  
  `pwszVersion`  
- [in]一个字符串，描述要加载的 clr 的版本。  
+ [in]一个字符串，描述要加载的 clr 版本。  
   
  .NET Framework 中的版本号用句点分隔的四个部分组成： *major.minor.build.revision*。 将字符串作为传递`pwszVersion`必须以字符"v"跟版本号 (例如，"v1.0.1529") 的前三个部分开头。  
   
- 某些版本的 CLR 与指定与以前版本的 CLR 的兼容性的策略语句一起安装。 默认情况下，启动填充码将评估`pwszVersion`针对策略语句和加载运行时的最新版本的适用于所请求的版本。 主机可以强制填充码可跳过策略评估，负载中指定的确切版本`pwszVersion`通过传递一个值为 STARTUP_LOADER_SAFEMODE`startupFlags`参数。  
+ 某些版本的 CLR 随指定与以前版本的 CLR 的兼容性的策略语句。 默认情况下，启动填充程序的计算结果`pwszVersion`针对策略语句和加载运行时的最新版本的是与所请求的版本兼容。 主机可以强制填充程序跳过策略评估和负载中指定的确切版本`pwszVersion`通过传递的值为 STARTUP_LOADER_SAFEMODE`startupFlags`参数。  
   
- 如果`pwszVersion`是`null,`方法不会加载任何版本的 CLR。 相反，它将返回 CLR_E_SHIM_RUNTIMELOAD，指示它未能将运行时加载。  
+ 如果`pwszVersion`是`null,`方法不会加载任何版本的 CLR。 相反，它将返回 CLR_E_SHIM_RUNTIMELOAD，指示它未能加载运行时。  
   
  `pwszBuildFlavor`  
- [in]一个字符串，指定是否以加载服务器或工作站生成的 CLR。 有效值为 `svr` 和 `wks`。 服务器版本进行了优化以利用多个处理器进行垃圾回收和工作站生成优化的单处理器计算机上运行的客户端应用程序。  
+ [in]一个字符串，指定是否加载在服务器或工作站的 clr 版本。 有效值为 `svr` 和 `wks`。 服务器生成经过优化，可充分利用多个处理器，用于垃圾回收和工作站生成优化的单处理器计算机上运行的客户端应用程序。  
   
- 如果`pwszBuildFlavor`设置为 null，则将加载工作站版本。 单处理器计算机上运行时，工作站生成始终处于加载状态，即使`pwszBuildFlavor`设置为`svr`。 但是，如果`pwszBuildFlavor`设置为`svr`和指定并发垃圾回收 (请参阅的说明`startupFlags`参数)，则服务器将加载版本。  
+ 如果`pwszBuildFlavor`设置为 null，则将加载工作站版本。 在单处理器计算机上运行时，工作站生成始终处于加载状态，即使`pwszBuildFlavor`设置为`svr`。 但是，如果`pwszBuildFlavor`设置为`svr`，并且指定并发垃圾回收 (请参阅的说明`startupFlags`参数)，将加载服务器版本。  
   
 > [!NOTE]
->  运行 WOW64 应用程序中不支持并发垃圾回收 x86 仿真程序上实现 （以前称为 ia-64） 的 Intel 的 Itanium 体系结构的 64 位系统。 有关使用 64 位 Windows 系统上的 WOW64 的详细信息，请参阅[运行 32 位应用程序](http://msdn.microsoft.com/library/windows/desktop/aa384249.aspx)。  
+>  在应用程序运行在 WOW64 中不支持并发垃圾回收 x86 仿真程序上实现 Intel Itanium 体系结构 （以前称为 IA-64） 的 64 位系统。 有关在 64 位 Windows 系统上使用 WOW64 的详细信息，请参阅[运行 32 位应用程序](/windows/desktop/WinProg64/running-32-bit-applications)。  
   
  `pwszHostConfigFile`  
- [in]指定要加载的 clr 版本的主机配置文件的名称。 如果文件名称不包含完全限定的路径，则假定文件进行调用的可执行文件所在相同目录中。  
+ [in]指定要加载的 CLR 版本的主机配置文件的名称。 如果文件名称不包括完全限定的路径，则假定文件中进行调用的可执行文件所在的目录。  
   
  `pReserved`  
- [in]留待将来扩展。  
+ [in]保留供将来的扩展。  
   
  `startupFlags`  
- [in]一组控制并发垃圾回收、 非特定于域的代码和的行为的标志`pwszVersion`参数。 如果未设置标志，则默认值是单一域。 有关支持的值的列表，请参阅[STARTUP_FLAGS 枚举](../../../../docs/framework/unmanaged-api/hosting/startup-flags-enumeration.md)。  
+ [in]一组标志，用于控制并发垃圾回收、 非特定于域的代码和行为的`pwszVersion`参数。 如果未设置标志，则默认值为单一域。 有关支持的值的列表，请参阅[STARTUP_FLAGS 枚举](../../../../docs/framework/unmanaged-api/hosting/startup-flags-enumeration.md)。  
   
  `rclsid`  
- [in]`CLSID`实现的组件类的[ICorRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md)或[ICLRRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-interface.md)接口。 支持的值为 CLSID_CorRuntimeHost 或 CLSID_CLRRuntimeHost。  
+ [in]`CLSID`的实现的组件类[ICorRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md)或[ICLRRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-interface.md)接口。 支持的值为 CLSID_CorRuntimeHost 或 CLSID_CLRRuntimeHost。  
   
  `riid`  
  [in]`IID`您请求的接口。 支持的值为 IID_ICorRuntimeHost 或 IID_ICLRRuntimeHost。  
@@ -86,7 +86,7 @@ HRESULT CorBindToRuntimeHost (
   
  **库：** MSCorEE.dll  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅  
  [CorBindToCurrentRuntime 函数](../../../../docs/framework/unmanaged-api/hosting/corbindtocurrentruntime-function.md)  

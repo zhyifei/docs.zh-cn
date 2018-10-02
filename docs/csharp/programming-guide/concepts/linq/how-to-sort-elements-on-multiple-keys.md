@@ -2,12 +2,12 @@
 title: 如何：对多个键上的元素进行排序 (C#)
 ms.date: 07/20/2015
 ms.assetid: 3b2760b6-d607-4ac7-b784-5c6524e2a0e0
-ms.openlocfilehash: 14c5e0282ce3018424461870e1d2c59814fc3f40
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0e57a423e473eb6c023d49ac2b52b577c1a30e21
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33320569"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44260105"
 ---
 # <a name="how-to-sort-elements-on-multiple-keys-c"></a>如何：对多个键上的元素进行排序 (C#)
 本主题演示如何对多个键进行排序。  
@@ -112,5 +112,6 @@ CustomerID:LAZYK EmployeeID:1 ShipPostalCode:99362 OrderDate:3/21/1997
 CustomerID:LAZYK EmployeeID:8 ShipPostalCode:99362 OrderDate:5/22/1997  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [基本查询 (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)
+## <a name="see-also"></a>请参阅
+
+- [基本查询 (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)

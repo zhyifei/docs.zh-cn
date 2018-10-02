@@ -8,17 +8,17 @@ helpviewer_keywords:
 ms.assetid: f04816ab-110d-4e28-9283-845d6d9a4a68
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6c517fe7736fd19fd93926d79ae5709b049adad1
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: a0df1f3bcf8941b5fe0a8fd19dfc7423e669a766
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32747940"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43742288"
 ---
 # <a name="runtime-settings-schema"></a>运行时设置架构
 运行设置由公共语言运行时用于配置面向 .NET Framework 的应用程序。  
 
-## <a name="the-runtime-section-and-its-parent-and-child-elements"></a>\<运行时 > 部分和其父级和子级的元素
+## <a name="the-runtime-section-and-its-parent-and-child-elements"></a>\<运行时 > 节和其父级和子级元素
   
 [\<configuration>](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)  
 &nbsp;&nbsp;[\<运行时 >](../../../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md)  
@@ -75,7 +75,7 @@ ms.locfileid: "32747940"
 &nbsp;&nbsp;\<\runtime>  
 \<\configuration>
 
-## <a name="alphabetical-list-of-runtime-elements"></a>按字母顺序列出的\<运行时 > 元素
+## <a name="alphabetical-list-of-runtime-elements"></a>按字母顺序列出的\<运行库 > 元素
 
 |元素|描述|  
 |-------------|-----------------|  
@@ -133,5 +133,5 @@ ms.locfileid: "32747940"
   
 ## <a name="see-also"></a>请参阅  
  [配置文件架构](../../../../../docs/framework/configure-apps/file-schema/index.md)  
- [如何： 禁用并发垃圾回收](http://msdn.microsoft.com/library/ba2c6c67-5778-497c-9fac-5f793b5500c7)  
+ [如何： 禁用并发垃圾回收](https://msdn.microsoft.com/library/ba2c6c67-5778-497c-9fac-5f793b5500c7)  
  [重定向程序集版本](../../../../../docs/framework/configure-apps/redirect-assembly-versions.md)

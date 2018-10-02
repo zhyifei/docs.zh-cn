@@ -4,12 +4,12 @@ description: 查看 project.json 和 csproj 元素之间的映射。
 author: natemcmaster
 ms.author: mairaw
 ms.date: 03/13/2017
-ms.openlocfilehash: d262792cd6821d35dcaf2f4bb9c05625e1bcd2fa
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0079164470f87df665be6f9de62bc98d3fb51696
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33218798"
+ms.lasthandoff: 09/27/2018
+ms.locfileid: "47397707"
 ---
 # <a name="a-mapping-between-projectjson-and-csproj-properties"></a>project.json 和 csproj 属性之间的映射
 
@@ -17,8 +17,8 @@ ms.locfileid: "33218798"
 
 .NET Core 工具的开发过程中实施了一项重要的设计更改，即不再支持 *project.json* 文件，而是将 .NET Core 项目转移到 MSBuild/csproj 格式。
 
-本文介绍 *project.json* 中的设置如何以 MSBuild/csproj 格式表示，以便用户可学习如何使用新格式，并了解将项目升级到最新版本的工具时由迁移工具做出的更改。 
- 
+本文介绍 *project.json* 中的设置如何以 MSBuild/csproj 格式表示，以便用户可学习如何使用新格式，并了解将项目升级到最新版本的工具时由迁移工具做出的更改。
+
 ## <a name="the-csproj-format"></a>csproj 格式
 
 新格式 \*.csproj 是一种基于 XML 的格式。 以下示例演示使用 `Microsoft.NET.Sdk` 的 .NET Core 项目的根节点。 对于 Web 项目，所使用的 SDK 是 `Microsoft.NET.Sdk.Web`。
@@ -32,6 +32,7 @@ ms.locfileid: "33218798"
 ## <a name="common-top-level-properties"></a>常见顶级属性
 
 ### <a name="name"></a>name
+
 ```json
 {
   "name": "MyProjectName"
@@ -40,7 +41,7 @@ ms.locfileid: "33218798"
 
 不再支持。 在 csproj 中，这取决于项目文件名（由目录名称定义）。 例如 `MyProjectName.csproj`。
 
-默认情况下，项目文件名还指定 `<AssemblyName>` 和 `<PackageId>` 属性的值。 
+默认情况下，项目文件名还指定 `<AssemblyName>` 和 `<PackageId>` 属性的值。
 
 ```xml
 <PropertyGroup>
@@ -49,7 +50,8 @@ ms.locfileid: "33218798"
 </PropertyGroup>
 ```
 
-如果 `buildOptions\outputName` 属性是在 project.json 中定义的，`<AssemblyName>` 将具有不同于 `<PackageId>` 的其他值。 有关详细信息，请参阅[其他常用生成选项](#other-common-build-options)。
+如果 `buildOptions\outputName` 属性是在 project.json 中定义的，`<AssemblyName>` 将具有不同于 `<PackageId>` 的其他值。
+有关详细信息，请参阅[其他常用生成选项](#other-common-build-options)。
 
 ### <a name="version"></a>version
 
@@ -58,6 +60,7 @@ ms.locfileid: "33218798"
   "version": "1.0.0-alpha-*"
 }
 ```
+
 使用 `VersionPrefix` 和 `VersionSuffix` 属性：
 
 ```xml
@@ -105,6 +108,7 @@ And it's really great!</Description>
 ## <a name="frameworks"></a>框架
 
 ### <a name="one-target-framework"></a>一个目标框架
+
 ```json
 {
   "frameworks": {
@@ -130,7 +134,7 @@ And it's really great!</Description>
 }
 ```
 
-使用 `TargetFrameworks` 属性定义目标框架的列表。 使用分号来分隔多个框架值。 
+使用 `TargetFrameworks` 属性定义目标框架的列表。 使用分号来分隔多个框架值。
 
 ```xml
 <PropertyGroup>
@@ -141,7 +145,8 @@ And it's really great!</Description>
 ## <a name="dependencies"></a>依赖项
 
 > [!IMPORTANT]
-> 如果依赖项是一个**项目**而不是包，则格式不同。 有关详细信息，请参阅[依赖项类型](#dependency-type)部分。
+> 如果依赖项是一个**项目**而不是包，则格式不同。
+> 有关详细信息，请参阅[依赖项类型](#dependency-type)部分。
 
 ### <a name="netstandardlibrary-metapackage"></a>NETStandard.Library 元包
 
@@ -178,6 +183,7 @@ And it's really great!</Description>
 请注意，迁移项目中的 `<RuntimeFrameworkVersion>` 值由已安装的 SDK 版本确定。
 
 ### <a name="top-level-dependencies"></a>顶级依赖项
+
 ```json
 {
   "dependencies": {
@@ -193,6 +199,7 @@ And it's really great!</Description>
 ```
 
 ### <a name="per-framework-dependencies"></a>依赖项（按框架）
+
 ```json
 {
   "framework": {
@@ -250,6 +257,7 @@ And it's really great!</Description>
 ### <a name="dependency-type"></a>依赖项类型
 
 #### <a name="type-project"></a>类型：项目
+
 ```json
 {
   "dependencies": {
@@ -271,8 +279,8 @@ And it's really great!</Description>
 > [!NOTE]
 > 这将打破 `dotnet pack --version-suffix $suffix` 确定项目引用的依赖项版本的方式。
 
-
 #### <a name="type-build"></a>类型：生成
+
 ```json
 {
   "dependencies": {
@@ -291,6 +299,7 @@ And it's really great!</Description>
 ```
 
 #### <a name="type-platform"></a>类型：平台
+
 ```json
 {
   "dependencies": {
@@ -302,9 +311,10 @@ And it's really great!</Description>
 }
 ```
 
-csproj 中没有等效项。 
+csproj 中没有等效项。
 
 ## <a name="runtimes"></a>runtimes
+
 ```json
 {
   "runtimes": {
@@ -322,6 +332,7 @@ csproj 中没有等效项。
 ```
 
 ### <a name="standalone-apps-self-contained-deployment"></a>独立应用（独立部署）
+
 在 project.json 中，定义 `runtimes` 部分意味着应用在生成和发布期间独立。
 在 MSBuild 中，生成期间所有项目均*可移植*，但可发布为独立。
 
@@ -330,6 +341,7 @@ csproj 中没有等效项。
 有关详细信息，请参阅[独立部署 (SCD)](../deploying/index.md#self-contained-deployments-scd)。
 
 ## <a name="tools"></a>工具
+
 ```json
 {
   "tools": {
@@ -442,7 +454,7 @@ csproj 中没有等效项。
 
 ```json
 {
-  "packOptions": {    
+  "packOptions": {
     "summary": "numl is a machine learning library intended to ease the use of using standard modeling techniques for both prediction and clustering.",
     "tags": ["machine learning", "framework"],
     "releaseNotes": "Version 0.9.12-beta",
@@ -474,7 +486,8 @@ csproj 中没有等效项。
 </PropertyGroup>
 ```
 
-MSBuild 中没有 `owners` 元素的等效项。 对于 `summary`，可使用 MSBuild `<Description>` 属性 - 即使 `summary` 的值未自动迁移到该属性，因为该属性已映射到 [`description`](#-other-common-root-level-options) 元素。
+MSBuild 中没有 `owners` 元素的等效项。
+对于 `summary`，可使用 MSBuild `<Description>` 属性 - 即使 `summary` 的值未自动迁移到该属性，因为该属性已映射到 [`description`](#other-common-root-level-options) 元素。
 
 ## <a name="scripts"></a>脚本
 
@@ -499,7 +512,6 @@ MSBuild 中没有 `owners` 元素的等效项。 对于 `summary`，可使用 MS
   <Exec Command="removeTempFiles.cmd" />
 </Target>
 ```
-
 
 ## <a name="runtimeoptions"></a>runtimeOptions
 
@@ -531,6 +543,7 @@ MSBuild 中没有 `owners` 元素的等效项。 对于 `summary`，可使用 MS
 ```
 
 已将“System.GC.Server”属性迁移到 csproj 文件：
+
 ```xml
 <PropertyGroup>
   <ServerGarbageCollection>true</ServerGarbageCollection>
@@ -538,6 +551,7 @@ MSBuild 中没有 `owners` 元素的等效项。 对于 `summary`，可使用 MS
 ```
 
 但可以在 csproj 以及 MSBuild 属性中设置所有这些值：
+
 ```xml
 <PropertyGroup>
   <ServerGarbageCollection>true</ServerGarbageCollection>
@@ -549,13 +563,15 @@ MSBuild 中没有 `owners` 元素的等效项。 对于 `summary`，可使用 MS
 ```
 
 ## <a name="shared"></a>共享
+
 ```json
 {
   "shared": "shared/**/*.cs"
 }
 ```
 
-在 csproj 中不支持。 而必须在 *.nuspec* 文件中创建要包含的内容文件。 有关详细信息，请参阅[包含内容文件](/nuget/schema/nuspec#including-content-files)。
+在 csproj 中不支持。 而必须在 *.nuspec* 文件中创建要包含的内容文件。
+有关详细信息，请参阅[包含内容文件](/nuget/schema/nuspec#including-content-files)。
 
 ## <a name="files"></a>文件
 
@@ -613,7 +629,8 @@ MSBuild 中没有 `owners` 元素的等效项。 对于 `summary`，可使用 MS
 
 可使用 `PackagePath="path"` 修改 .nupkg 内的包布局。
 
-除 `Content` 外，大多数项组需要显式添加要包括在包中的 `Pack="true"`。 `Content` 将被置于包中的 *content* 文件夹，因为 `<IncludeContentInPack>` 属性默认设置为 `true`。 有关详细信息，请参阅[在包中包含内容](/nuget/schema/msbuild-targets#including-content-in-a-package)。
+除 `Content` 外，大多数项组需要显式添加要包括在包中的 `Pack="true"`。 `Content` 将被置于包中的 *content* 文件夹，因为 `<IncludeContentInPack>` 属性默认设置为 `true`。
+有关详细信息，请参阅[在包中包含内容](/nuget/schema/msbuild-targets#including-content-in-a-package)。
 
 `PackagePath="%(Identity)"` 是一种将包路径设置为项目相对文件路径的快捷方法。
 
@@ -659,4 +676,4 @@ MSBuild 中没有 `owners` 元素的等效项。 对于 `summary`，可使用 MS
 
 ## <a name="see-also"></a>请参阅
 
-[CLI 中更改的简要概述](../tools/cli-msbuild-architecture.md)
+* [CLI 中更改的简要概述](../tools/cli-msbuild-architecture.md)

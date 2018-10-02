@@ -8,23 +8,22 @@ helpviewer_keywords:
 ms.assetid: 0e959fcb-50f2-413b-948d-7167d279bc11
 author: Xansky
 ms.author: mhopkins
-manager: markl
-ms.openlocfilehash: f715f183642af6e98079171f41c0e76318052809
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1ca4e0f0e0d88004d6c2059af4c774c916efd5ac
+ms.sourcegitcommit: daa8788af67ac2d1cecd24f9f3409babb2f978c9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33410372"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47863359"
 ---
 # <a name="ui-automation-support-for-the-list-control-type"></a>UI 自动化对 List 控件类型的支持
 > [!NOTE]
->  本文档适用于想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空间中定义的托管 <xref:System.Windows.Automation> 类的 .NET Framework 开发人员。 有关 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]的最新信息，请参阅 [Windows 自动化 API：UI 自动化](http://go.microsoft.com/fwlink/?LinkID=156746)。  
+>  本文档适用于想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空间中定义的托管 <xref:System.Windows.Automation> 类的 .NET Framework 开发人员。 有关最新信息[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]，请参阅[Windows 自动化 API: UI 自动化](https://go.microsoft.com/fwlink/?LinkID=156746)。  
   
  本主题介绍 List 控件类型的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 支持。 在 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]中，控件类型是一组条件，控件必须满足这些条件才能使用 <xref:System.Windows.Automation.AutomationElement.ControlTypeProperty> 属性。 这些条件包括针对 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 树结构、 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 属性值和控件模式的特定准则。  
   
  List 控件类型提供一种方法来组织平面组或项组并允许用户选择一个或多个这些项。 List 控件类型对它可能包含哪些类型的子元素具有宽松的限制。 这使 UI 自动化提供程序可以支持选择容器中的已知元素。  
   
- [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]下列部分中的要求适用于实现 List 控件类型，是否所有控件[!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)]， [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)]，或[!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)]。 List 容器控件是实现 List 控件类型的控件示例。  
+ [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]以下各节中的要求适用于所有控件是否实现 List 控件类型， [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)]， [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)]，或[!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)]。 List 容器控件是实现 List 控件类型的控件示例。  
   
 <a name="Required_UI_Automation_Tree_Structure"></a>   
 ## <a name="required-ui-automation-tree-structure"></a>必需的 UI 自动化树结构  
@@ -33,7 +32,7 @@ ms.locfileid: "33410372"
 |控件视图|内容视图|  
 |------------------|------------------|  
 |包含对应于控件的元素。|从树中删除冗余信息，以便辅助技术使用最小部分的对最终用户有意义的信息。|  
-|列表<br /><br /> -DataItem （0 个或多个）<br />-ListItem （0 个或多个）<br />-Group （0 个或多个）<br />-ScrollBar （0、 1 或 2）|列表<br /><br /> -DataItem （0 个或多个）<br />-ListItem （0 个或多个）<br />-Group （0 个或多个）|  
+|列表<br /><br /> -Dataitem(0 个或多个）<br />-ListItem （0 个或多个）<br />-组 （0 个或多个）<br />-滚动条 （0、 1 或 2）|列表<br /><br /> -Dataitem(0 个或多个）<br />-ListItem （0 个或多个）<br />-组 （0 个或多个）|  
   
  实现 List 控件类型（如列表控件）的控件的控件视图组成如下：  
   
@@ -57,13 +56,13 @@ ms.locfileid: "33410372"
   
 <a name="Required_UI_Automation_Properties"></a>   
 ## <a name="required-ui-automation-properties"></a>必需的 UI 自动化属性  
- 下表列出 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 属性，这些属性的值或定义与列表控件尤其相关。 有关详细信息[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]属性，请参阅[的客户端 UI 自动化属性](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md)。  
+ 下表列出 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 属性，这些属性的值或定义与列表控件尤其相关。 有关详细信息[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]属性，请参阅[UI Automation Properties for Clients](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md)。  
   
-|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 属性|值|说明|  
+|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 属性|“值”|说明|  
 |------------------------------------------------------------------------------------|-----------|-----------|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationIdProperty>|请参阅注释。|此属性的值在应用程序的所有控件中都必须保持唯一。|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty>|请参阅注释。|包含整个控件的最外层矩形。|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.ClickablePointProperty>|请参阅注释。|如果列表控件具有可单击的点（可通过单击使列表获得焦点的点），则必须通过此属性公开该点。<br /><br /> 如果值`IsOffScreen`属性为 true，则<xref:System.Windows.Automation.NoClickablePointException>将引发。|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.ClickablePointProperty>|请参阅注释。|如果列表控件具有可单击的点（可通过单击使列表获得焦点的点），则必须通过此属性公开该点。<br /><br /> 如果的值`IsOffScreen`属性为 true，则<xref:System.Windows.Automation.NoClickablePointException>将会引发。|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.IsKeyboardFocusableProperty>|请参阅注释。|如果该控件可以接收键盘焦点，则它必须支持此属性。|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.NameProperty>|请参阅注释。|列表控件的 Name 属性的值应传达用户需要从其中选择的选项类别。 此属性通常从静态文本标签获取其名称。 如果没有静态文本标签，则应用程序开发人员必须公开 Name 属性的值。<br /><br /> 只有在另一个控件的子树内使用控件时，列表控件才不要求此属性。|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.LabeledByProperty>|请参阅注释。|如果存在静态文本标签，则此属性必须公开对该控件的引用。|  

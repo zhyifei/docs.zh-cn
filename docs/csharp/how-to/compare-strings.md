@@ -5,18 +5,19 @@ ms.date: 03/20/2018
 helpviewer_keywords:
 - strings [C#], comparison
 - comparing strings [C#]
-ms.openlocfilehash: e9f4216af6073a352bef1efb59eea0ddeda5fc4b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3c841a1152613ec877bb6172dc8d053bf060b33b
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33218103"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43515275"
 ---
-# <a name="how-to-compare-strings-in-c"></a>如何：比较 C# 中的字符串 #
+# <a name="how-to-compare-strings-in-c"></a>如何：比较 C\# 中的字符串
 
 通过比较字符串可以回答两个问题，一个是：“这两个字符串相等吗？” 另一个是“排序时，应该按什么顺序排列这些字符串？”
 
-这两个问题非常复杂，因为字符串比较受很多因素的影响： 
+这两个问题非常复杂，因为字符串比较受很多因素的影响：
+
 - 可以选择序号比较或语义比较。
 - 可以选择是否区分大小写。
 - 可以选择区域性特定的比较。
@@ -36,14 +37,15 @@ ms.locfileid: "33218103"
 
 ## <a name="case-insensitive-ordinal-comparisons"></a>不区分大小写的序号比较
 
-采用 <xref:System.String.Equals%2A?displayProperty=nameWithType> 方法可以为 <xref:System.StringComparison.OrdinalIgnoreCase?displayProperty=nameWithType> 指定一个 <xref:System.StringComparison> 值，以指定不区分大小写的比较。 还有一个静态 <xref:System.String.Compare%2A> 方法，其中包括用于指定不区分大小写比较的布尔参数。 如以下代码所示：
+<xref:System.String.Equals%2A?displayProperty=nameWithType> 方法允许指定 <xref:System.StringComparison.OrdinalIgnoreCase?displayProperty=nameWithType> 的 <xref:System.StringComparison> 值
+用于指定不区分大小写的比较。 还有一个静态 <xref:System.String.Compare%2A> 方法，其中包括用于指定不区分大小写比较的布尔参数。 如以下代码所示：
 
 [!code-csharp-interactive[Comparing strings ignoring case](../../../samples/snippets/csharp/how-to/strings/CompareStrings.cs#2)]
 
 ## <a name="linguistic-comparisons"></a>语义比较
 
 可以使用当前区域性的语义规则来对字符串进行排序。
-这有时被称为“文字排序顺序”。 在执行语义比较时，一些非字母数字的 Unicode 字符可能分配有特殊的权重。 例如，连字符“-”分配的权重可能很小，所以“co-op”和“coop”在排序顺序中会彼此相邻。 此外，一些 Unicode 字符可能会与一些字母数字字符相同。 下面以德语短句“他们在街上跳舞。”为例， 这两个短句分别使用了“ss”和“ß”。 （在 Windows 系统中）从语义上说，“ss”在“en-US”和“de-DE”区域性中都等同于德语中的“'ß”。 
+这有时被称为“文字排序顺序”。 在执行语义比较时，一些非字母数字的 Unicode 字符可能分配有特殊的权重。 例如，连字符“-”分配的权重可能很小，所以“co-op”和“coop”在排序顺序中会彼此相邻。 此外，一些 Unicode 字符可能会与一些字母数字字符相同。 下面以德语短句“他们在街上跳舞。”为例， 这两个短句分别使用了“ss”和“ß”。 （在 Windows 系统中）从语义上说，“ss”在“en-US”和“de-DE”区域性中都等同于德语中的“'ß”。
 
 [!code-csharp-interactive[Comparing strings using linguistic rules](../../../samples/snippets/csharp/how-to/strings/CompareStrings.cs#3)]
 
@@ -86,7 +88,7 @@ ms.locfileid: "33218103"
 
 以下示例演示如何在数组中使用依赖当前区域性的语义比较对字符串进行排序和搜索。 使用采用 <xref:System.StringComparer?displayProperty=nameWithType> 参数的静态 <xref:System.Array> 方法。
 
-此示例演示如何使用当前区域性对字符串数组进行排序： 
+此示例演示如何使用当前区域性对字符串数组进行排序：
 
 [!code-csharp-interactive[Sorting an array of strings](../../../samples/snippets/csharp/how-to/strings/CompareStrings.cs#5)]
 
@@ -104,7 +106,7 @@ ms.locfileid: "33218103"
 
 [!code-csharp-interactive[csProgGuideStrings#11](../../../samples/snippets/csharp/how-to/strings/CompareStrings.cs#8)]
 
-在排序和搜索过程中，请始终确保使用相同的比较类型。 使用不同的比较类型进行排序和搜索会产生意外的结果。 
+在排序和搜索过程中，请始终确保使用相同的比较类型。 使用不同的比较类型进行排序和搜索会产生意外的结果。
 
 元素或键的类型为 `string` 时，<xref:System.Collections.Hashtable?displayProperty=nameWithType>、<xref:System.Collections.Generic.Dictionary%602?displayProperty=nameWithType> 和 <xref:System.Collections.Generic.List%601?displayProperty=nameWithType> 等集合类的构造函数具有 <xref:System.StringComparer?displayProperty=nameWithType> 参数。 通常，应尽可能使用这些构造函数，并指定 <xref:System.StringComparer.Ordinal?displayProperty=nameWithType> 或 <xref:System.StringComparer.OrdinalIgnoreCase?displayProperty=nameWithType>。
 
@@ -118,8 +120,9 @@ ms.locfileid: "33218103"
 > 测试字符串是否相等时，使用的方法应显式指定要执行的比较类型。 你的代码具备更强的可维护性和可读性。 重载采用了 <xref:System.StringComparison> 枚举参数的 <xref:System.String?displayProperty=nameWithType> 和 <xref:System.Array?displayProperty=nameWithType> 类的方法。 指定要执行的比较类型。 在测试相等性时，请避免使用 `==` 和 `!=` 运算符。 <xref:System.String.CompareTo%2A?displayProperty=nameWithType> 实例方法始终执行区分大小写的序号比较。 它们主要适用于按字母顺序进行的字符串排序。
 
 ## <a name="see-also"></a>请参阅
- <xref:System.Globalization.CultureInfo?displayProperty=nameWithType>  
- <xref:System.StringComparer?displayProperty=nameWithType>  
- [字符串](../programming-guide/strings/index.md)  
- [比较字符串](../../standard/base-types/comparing.md)  
- [对应用程序进行全球化和本地化](/visualstudio/ide/globalizing-and-localizing-applications)
+
+- <xref:System.Globalization.CultureInfo?displayProperty=nameWithType>  
+- <xref:System.StringComparer?displayProperty=nameWithType>  
+- [字符串](../programming-guide/strings/index.md)  
+- [比较字符串](../../standard/base-types/comparing.md)  
+- [对应用程序进行全球化和本地化](/visualstudio/ide/globalizing-and-localizing-applications)

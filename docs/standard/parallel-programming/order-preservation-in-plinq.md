@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 10d202bc-19e1-4b5c-bbf1-9a977322a9ca
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0b98fdcd425ae62aca0149df5136c28edc023bf0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1587b2c4d19833c615c5a10a2fe0d6b28e854aca
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33591614"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45698323"
 ---
 # <a name="order-preservation-in-plinq"></a>PLINQ 中的顺序保留
 在 PLINQ 中，目标是在保持正确性的同时，最大限度地提升性能。 虽然查询应尽可能快地运行，但仍应生成正确结果。 在某些情况下，为了满足正确性要求，必须暂留源序列的顺序；不过，顺序暂留的计算成本可能非常高。 因此，默认情况下，PLINQ 不暂留源序列的顺序。 在这方面，PLINQ 类似于 [!INCLUDE[vbtecdlinq](../../../includes/vbtecdlinq-md.md)]，但与确实暂留顺序的 LINQ to Objects 不同。  
@@ -122,6 +122,7 @@ ms.locfileid: "33591614"
   
  无序结果并不是主动随机无序；就是没有应用任何特殊顺序逻辑。 在某些情况下，无序查询可能会暂留源序列的顺序。 对于使用已编入索引的 Select 运算符的查询，PLINQ 保证输出元素按索引升序排列，但不保证向元素分配哪些索引。  
   
-## <a name="see-also"></a>请参阅  
- [并行 LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)  
- [并行编程](../../../docs/standard/parallel-programming/index.md)
+## <a name="see-also"></a>请参阅
+
+- [并行 LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)  
+- [并行编程](../../../docs/standard/parallel-programming/index.md)

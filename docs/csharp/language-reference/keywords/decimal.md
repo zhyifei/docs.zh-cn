@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - decimal keyword [C#]
 ms.assetid: b6522132-b5ee-4be3-ad13-3adfdb7de7a1
-ms.openlocfilehash: 18924abefb85012fc6c61073603c594de906b58d
-ms.sourcegitcommit: f9e38d31288fe5962e6be5b0cc286da633482873
+ms.openlocfilehash: c9d40238ca4c34238d5663185f93afbce73195cf
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37027949"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43506514"
 ---
 # <a name="decimal-c-reference"></a>decimal（C# 参考）
 
@@ -20,7 +20,7 @@ ms.locfileid: "37027949"
 
 |类型|大致范围|精度|.NET 类型|
 |----------|-----------------------|---------------|-------------------------|
-|`decimal`|(-7.9 x 10<sup>28</sup> - 7.9 x 10<sup>28</sup>) / (10<sup>0</sup> - 10<sup>28</sup>)|28-29 个有效位|<xref:System.Decimal?displayProperty=nameWithType>|
+|`decimal`|±1.0 x 10<sup>-28</sup> 至 ±7.9228 x 10<sup>28</sup>|28-29 个有效位|<xref:System.Decimal?displayProperty=nameWithType>|
 
 `decimal` 的默认值为 0m。
 
@@ -96,12 +96,12 @@ Console.WriteLine((double)dec + dub);
 
 ## <a name="see-also"></a>请参阅
 
-<xref:System.Decimal>  
-[C# 参考](../../../csharp/language-reference/index.md)  
-[C# 编程指南](../../../csharp/programming-guide/index.md)  
-[C# 关键字](../../../csharp/language-reference/keywords/index.md)  
-[整型表](../../../csharp/language-reference/keywords/integral-types-table.md)  
-[内置类型表](../../../csharp/language-reference/keywords/built-in-types-table.md)  
-[隐式数值转换表](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)  
-[显式数值转换表](../../../csharp/language-reference/keywords/explicit-numeric-conversions-table.md)  
-[标准数字格式字符串](../../../standard/base-types/standard-numeric-format-strings.md)
+- <xref:System.Decimal>  
+- [C# 参考](../../../csharp/language-reference/index.md)  
+- [C# 编程指南](../../../csharp/programming-guide/index.md)  
+- [C# 关键字](../../../csharp/language-reference/keywords/index.md)  
+- [整型表](../../../csharp/language-reference/keywords/integral-types-table.md)  
+- [内置类型表](../../../csharp/language-reference/keywords/built-in-types-table.md)  
+- [隐式数值转换表](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)  
+- [显式数值转换表](../../../csharp/language-reference/keywords/explicit-numeric-conversions-table.md)  
+- [标准数字格式字符串](../../../standard/base-types/standard-numeric-format-strings.md)

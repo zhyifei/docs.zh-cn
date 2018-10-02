@@ -2,12 +2,12 @@
 title: TREAT (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 5b77f156-55de-4cb4-8154-87f707d4c635
-ms.openlocfilehash: 932f335bf6a502b031dcf09b8050e278a0bbe9f8
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: c3291dc6d5bc79430c8bf011ee6a2f4dc213ffad
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32763971"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43510402"
 ---
 # <a name="treat-entity-sql"></a>TREAT (Entity SQL)
 将特定基类型的对象视为指定派生类型的对象。  
@@ -48,7 +48,7 @@ WHERE p IS OF (NamespaceName.Employee)
  此查询将 `Person` 实体向上转换为 `Employee` 类型。 如果 p 的值的实际类型不是 `Employee`，则表达式会生成值 `null`。  
   
 > [!NOTE]
->  指定的表达式`Employee`必须为指定的数据类型的子`Person`，或者该数据类型必须为表达式的子类型。 否则，表达式会导致编译时错误。  
+>  指定的表达式`Employee`必须是指定的数据类型的子类型`Person`，或者该数据类型必须为表达式的子类型。 否则，表达式会导致编译时错误。  
   
  下表显示了 TREAT 在某些典型模式和非常见模式下的行为。 所有异常都在调用提供程序之前从客户端引发：  
   
@@ -62,7 +62,7 @@ WHERE p IS OF (NamespaceName.Employee)
 |`TREAT (RowType AS RowType)`|引发异常。|  
   
 ## <a name="example"></a>示例  
- 下面的 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 查询使用 TREAT 运算符将类型为 Course 的对象转换为类型为 OnsiteCourse 的对象的集合。 查询基于[School 模型](http://msdn.microsoft.com/library/859a9587-81ea-4a45-9bc0-f8d330e1adac)。  
+ 下面的 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 查询使用 TREAT 运算符将类型为 Course 的对象转换为类型为 OnsiteCourse 的对象的集合。 查询基于[School 模型](https://msdn.microsoft.com/library/859a9587-81ea-4a45-9bc0-f8d330e1adac)。  
   
  [!code-csharp[DP EntityServices Concepts 2#TREAT_ISOF](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#treat_isof)]  
   

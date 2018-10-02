@@ -3,11 +3,11 @@ title: 如何： 检索元素 (LINQ to XML) 的值 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 76b9b2a5-b3ba-49da-ba74-82100e1bd21c
 ms.openlocfilehash: ff2a1712a79bdedd74fe51391f01dd900ae585e6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33643830"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43254222"
 ---
 # <a name="how-to-retrieve-the-value-of-an-element-linq-to-xml-visual-basic"></a>如何： 检索元素 (LINQ to XML) 的值 (Visual Basic)
 本主题演示如何获取元素的值。 有两种主要方法可以完成此操作。 一种方法是将 <xref:System.Xml.Linq.XElement> 或 <xref:System.Xml.Linq.XAttribute> 强制转换为所需的类型。 然后，显式转换运算符将元素或属性的内容转换为指定的类型，并将其分配给变量。 此外，还可以使用 <xref:System.Xml.Linq.XElement.Value%2A?displayProperty=nameWithType> 属性或 <xref:System.Xml.Linq.XAttribute.Value%2A?displayProperty=nameWithType> 属性。  

@@ -1,46 +1,46 @@
 ---
 title: 'F # 代码格式设置准则'
-description: '了解有关格式设置 F # 代码的准则。'
+description: '了解有关格式设置 F # 代码的指导原则。'
 ms.date: 05/14/2018
-ms.openlocfilehash: 6c8e4059fd4bf1e7450118a6df02609217c4f4db
-ms.sourcegitcommit: 2ad7d06f4f469b5d8a5280ac0e0289a81867fc8e
+ms.openlocfilehash: 0d7d2d1771710db55bf990f3a06079b2aec48fd7
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35231498"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43858000"
 ---
 # <a name="f-code-formatting-guidelines"></a>F # 代码格式设置准则
 
-本文提供有关如何设置你的代码格式，使你的 F # 代码的准则：
+本文提供有关如何设置代码格式，使 F # 代码的指导原则：
 
-* 通常被视为可读性
+* 通常以更清晰的形式查看
 * 符合应用的 Visual Studio 中的工具和其他编辑器格式设置约定
 * 类似于其他代码联机
 
-这些指导原则基于[F # 格式设置约定的全面指南](https://github.com/dungpa/fantomas/blob/master/docs/FormattingConventions.md)通过[Anh Dung Phan](https://github.com/dungpa)。
+这些指导基于[F # 格式设置约定的全面指南](https://github.com/dungpa/fantomas/blob/master/docs/FormattingConventions.md)通过[Anh Dung Phan](https://github.com/dungpa)。
 
-## <a name="general-rules-for-indentation"></a>用于缩进的一般规则
+## <a name="general-rules-for-indentation"></a>缩进的一般规则
 
-F # 默认使用有意义的空白。 以下准则旨在提供指导如何能够同时处理这可以施加一些难题。
+F # 默认情况下使用有意义的空白。 以下指南旨在提供指导如何能够同时处理这可以施加一些挑战。
 
-### <a name="using-spaces"></a>使用空间
+### <a name="using-spaces"></a>使用的空间
 
-需要缩进时，你必须使用空间，不是制表符。 需要至少一个空格。 您的组织可以创建编码标准来指定要用于缩进; 的空格数典型的缩进的出现位置的每个级别的缩进的两个、 三个或四个空格。
+需要缩进时，您必须使用空格，不是制表符。 至少一个空间是必需的。 你的组织可以创建以指定要用于缩进; 的空格数的编码标准典型的缩进发生每个级别的缩进的两个、 三个或四个空格。
 
-**我们建议每个缩进 4 个空格。**
+**我们建议每个缩进的 4 个空格。**
 
-也就是说，缩进的程序是主观一回事。 变体是确定，但应遵循的第一个规则是*缩进的一致性*。 选择广为接受的缩进样式，并在你的基本代码整个系统地使用它。
+也就是说，缩进的程序是一个主观问题。 变体是好的但应遵循的第一个规则*缩进的一致性*。 选择一种普遍接受的缩进样式，并在整个代码库系统地使用它。
 
 ## <a name="formatting-blank-lines"></a>格式设置的空行
 
-* 单独顶级函数和类定义替换为两个空白的行。
-* 类中的方法定义由一个空行分隔。
-* 可能 （尽量少） 使用额外的空白的行到单独的组相关的函数。 多个相关 one-liners （例如，虚拟实现一组） 之间，可以忽略空行。
-* 使用空白的行在函数中，谨慎，以指示逻辑部分。
+* 单独顶级函数和类定义包含两个空白行。
+* 方法定义的类的内部由一个空行分隔。
+* 可能会 （谨慎） 使用额外的空白行到单独的组相关的函数。 一系列相关一行式命令 （例如，一组虚拟实现） 之间，可以忽略空白行。
+* 使用空白行在函数中，尽量少，以指示逻辑部分。
 
 ## <a name="formatting-comments"></a>格式设置的注释
 
-通常选择多个双斜线注释而 ML 样式块注释。
+通常将多个双斜杠注释为首 ML 样式块注释。
 
 ```fsharp
 // Prefer this style of comments when you want
@@ -60,9 +60,9 @@ let f x = x + 1 // Increment by one.
 
 ## <a name="naming-conventions"></a>命名约定
 
-### <a name="use-camelcase-for-class-bound-expression-bound-and-pattern-bound-values-and-functions"></a>使用驼峰匹配类绑定、 表达式绑定和绑定模式值和函数
+### <a name="use-camelcase-for-class-bound-expression-bound-and-pattern-bound-values-and-functions"></a>使用驼峰式大小写的类绑定、 表达式绑定和绑定模式的值和函数
 
-是很常见，并且接受的 F # 要使用样式驼峰匹配的所有名称绑定为本地变量或在模式匹配和函数定义中。
+通常，并接受的 F # 样式的所有名称使用驼峰式大小写绑定为本地变量或在模式匹配和函数定义。
 
 ```fsharp
 // OK
@@ -75,7 +75,7 @@ let addIAndJ I J = I+J
 let AddIAndJ i j = i + j
 ```
 
-类中的本地绑定函数还应使用驼峰匹配。
+本地绑定类中的函数还应使用驼峰式大小写。
 
 ```fsharp
 type MyClass() =
@@ -89,9 +89,9 @@ type MyClass() =
     member x.Result = doSomething()
 ```
 
-### <a name="use-camelcase-for-module-bound-public-functions"></a>驼峰匹配用于绑定到模块的公共函数
+### <a name="use-camelcase-for-module-bound-public-functions"></a>有关绑定到模块的公共函数使用驼峰式大小写
 
-当模块绑定函数是一个公共 API 的一部分时，它应使用驼峰匹配：
+当模块绑定函数是一个公共 API 的一部分时，它应使用驼峰式大小写：
 
 ```fsharp
 module MyAPI =
@@ -100,22 +100,22 @@ module MyAPI =
     let publicFunctionTwo param1 param2 param3 = ...
 ```
 
-### <a name="use-camelcase-for-internal-and-private-module-bound-values-and-functions"></a>驼峰匹配用于内部和私有模块绑定值和函数
+### <a name="use-camelcase-for-internal-and-private-module-bound-values-and-functions"></a>使用驼峰式大小写的内部和专用模块绑定值和函数
 
-对于专用模块绑定值，其中包括使用驼峰匹配：
+对于专用模块绑定值，其中包括使用驼峰式大小写：
 
 * 在脚本中的即席函数
 
-* 组成的模块或类型的内部实现的值
+* 值组成的模块或类型的内部实现
 
 ```fsharp
 let emailMyBossTheLatestResults =
     ...
 ```
 
-### <a name="use-camelcase-for-parameters"></a>对参数使用驼峰匹配
+### <a name="use-camelcase-for-parameters"></a>对参数使用驼峰式大小写
 
-所有参数应都使用驼峰匹配根据.NET 命名约定。
+所有参数应都使用驼峰式大小写，根据.NET 命名约定。
 
 ```fsharp
 module MyModule =
@@ -125,9 +125,9 @@ type MyClass() =
     member this.MyMethod(paramOne, paramTwo) = ...
 ```
 
-### <a name="use-pascalcase-for-modules"></a>用于模块的 PascalCase
+### <a name="use-pascalcase-for-modules"></a>模块使用 pascal 命名法
 
-（顶级、 内部、 私有、 嵌套） 的所有模块都应都使用 PascalCase。
+（顶级、 内部、 专用、 嵌套） 的所有模块都应都使用 pascal 命名法。
 
 ```fsharp
 module MyTopLevelModule
@@ -139,9 +139,9 @@ module Helpers =
     ...
 ```
 
-### <a name="use-pascalcase-for-type-declarations-members-and-labels"></a>PascalCase 用于类型声明、 成员和标签
+### <a name="use-pascalcase-for-type-declarations-members-and-labels"></a>类型声明、 成员和标签的使用 pascal 命名法
 
-类、 接口、 结构、 枚举、 委托、 记录和可区分的联合所有的命名应当与 PascalCase。 类型和记录和可区分的联合的标签中的成员还应使用 PascalCase。
+类、 接口、 结构、 枚举、 委托、 记录和可区分的联合所有的命名应当使用 pascal 命名法。 类型和标签的记录和可区分的联合中的成员还应使用 pascal 命名法。
 
 ```fsharp
 type IMyInterface =
@@ -159,19 +159,19 @@ type SchoolPerson =
     | Administrator
 ```
 
-### <a name="use-pascalcase-for-constructs-intrinsic-to-net"></a>PascalCase 用于构造固有的.NET
+### <a name="use-pascalcase-for-constructs-intrinsic-to-net"></a>为.NET 中的内部构造使用 pascal 命名法
 
-命名空间、 异常、 事件和项目 /`.dll`名称还应使用 PascalCase。 不仅这会使感觉到使用者更自然的其他.NET 语言的消耗，也是与.NET，则可能会遇到的命名约定保持一致。
+命名空间、 异常、 事件和项目 /`.dll`名称还应使用 pascal 命名法。 不仅这会使来自其他.NET 语言的消耗感觉更自然向使用者，也是与你可能会遇到的.NET 命名约定保持一致。
 
 ### <a name="avoid-underscores-in-names"></a>避免在名称中的下划线
 
-从历史上看，某些 F # 库具有名称中使用下划线。 但是，这不再广泛接受，部分原因是因为它与.NET 命名约定冲突。 也就是说，某些 F # 程序员出于历史原因，很大程度，部分使用下划线，容差和遵循十分重要。 但是，请注意，该样式通常并的其他用户可以选择要使用它。
+从历史上看，一些 F # 库具有名称中使用下划线。 但是，这是不能再广受认可，部分原因是因为它与.NET 命名约定冲突。 不过，某些 F # 程序员出于历史原因，很大程度、 一定程度上使用下划线和容差和方面非常重要。 但是，请注意样式通常会不喜欢的其他用户可以选择要使用它。
 
-一些例外情况包括与互操作性本机组件下划线很常见。
+一些例外情况包括与本机组件交互下划线很常见。
 
 ### <a name="use-standard-f-operators"></a>使用标准 F # 运算符
 
-以下运算符在 F # 标准库中定义和应使用而不是定义等效项。 建议使用这些运算符，如往往会使代码更具可读性且惯例。 具有背景的 OCaml 或其他功能的编程语言的开发人员可能会习惯于不同的惯例。 以下列表总结了建议的 F # 运算符。
+以下运算符在 F # 标准库中定义，应使用而不是定义等效项。 建议使用这些运算符，因为它往往会使代码更具可读性且惯用。 具有背景的 OCaml 或其他功能的编程语言的开发人员可能习惯于不同编程惯例。 以下列表总结了建议的 F # 运算符。
 
 ```fsharp
 x |> f // Forward pipeline
@@ -193,18 +193,35 @@ x ^^^ y // Bitwise xor, also for working with “flags” enumeration
 
 ### <a name="use-prefix-syntax-for-generics-foot-in-preference-to-postfix-syntax-t-foo"></a>前缀语法用于泛型 (`Foo<T>`) 优先于后缀语法 (`T Foo`)
 
-F # 继承的命名的泛型类型的两个后缀 ML 样式 (例如， `int list`) 以及.NET 样式的前缀 (例如， `list<int>`)。 更喜欢的.NET 样式，四种特定类型除外：
+F # 继承这两个后缀机器学习的样式命名泛型类型 (例如， `int list`) 以及.NET 样式的前缀 (例如， `list<int>`)。 .NET 样式，除了四种特定类型为首选项：
 
-1. F # 列出，对于使用后缀形式：`int list`而非`list<int>`。
-2. 对于 F # 选项，使用的后缀形式：`int option`而非`option<int>`。
+1. 对于 F # 列表，请使用后缀形式：`int list`而非`list<int>`。
+2. 对于 F # 选项，请使用后缀形式：`int option`而非`option<int>`。
 3. 对于 F # 数组，使用语法名称`int[]`而非`int array`或`array<int>`。
-4. 对于引用单元格使用`int ref`而非`ref<int>`或`Ref<int>`。
+4. 对于引用单元格，请使用`int ref`而非`ref<int>`或`Ref<int>`。
 
-对于所有其他类型，使用的前缀形式。
+对于所有其他类型，请使用前缀形式。
+
+## <a name="formatting-tuples"></a>格式设置的元组
+
+元组实例化应该是用圆括号括起来，和中分隔的逗号应后跟一个空格，例如： `(1, 2)`， `(x, y, z)`。
+
+它通常被接受以忽略在模式匹配的元组中的括号：
+
+```fsharp
+let (x, y) = z // Destructuring
+let x, y = z // OK
+
+// OK
+match x, y with
+| 1, _ -> 0
+| x, 1 -> 0
+| x, y -> 1
+```
 
 ## <a name="formatting-discriminated-union-declarations"></a>格式设置可区分联合声明
 
-缩进`|`通过 4 个空格的类型定义中：
+缩进`|`由 4 个空格的类型定义中：
 
 ```fsharp
 // OK
@@ -220,7 +237,9 @@ type Volume =
 | ImperialPint of float
 ```
 
-将拆分到多个行的实例化可区分联合应提供包含的数据具有缩进的新作用域：
+## <a name="formatting-discriminated-unions"></a>格式设置可区分联合
+
+将拆分到多个行的实例化的可区分联合应为包含的数据提供具有缩进的新作用域：
 
 ```fsharp
 let tree1 =
@@ -229,7 +248,7 @@ let tree1 =
          BinaryNode(BinaryValue 3, BinaryValue 4))
 ```
 
-右括号还可以将新行上：
+右括号还可以在新的一行：
 
 ```fsharp
 let tree1 =
@@ -239,30 +258,55 @@ let tree1 =
     )
 ```
 
-## <a name="formatting-tuples"></a>格式设置的元组
+## <a name="formatting-record-declarations"></a>格式设置的记录声明
 
-元组实例化应该用圆括号括起来，并且在分界逗号应跟一个空格，例如： `(1, 2)`， `(x, y, z)`。
-
-广为接受的异常是省略括号中的元组模式匹配：
+缩进`{`类型中定义由 4 空格和同一行上开始的字段列表：
 
 ```fsharp
-let (x, y) = z // Destructuring
+// OK
+type PostalAddress =
+    { Address: string
+      City: string
+      Zip: string }
+    member x.ZipAndCity = sprintf "%s %s" x.Zip x.City
 
-match x, y with
-| 1, _ -> 0
-| x, 1 -> 0
-| x, y -> 1
+// Not OK
+type PostalAddress =
+  { Address: string
+    City: string
+    Zip: string }
+    member x.ZipAndCity = sprintf "%s %s" x.Zip x.City
+    
+// Unusual in F#
+type PostalAddress =
+    { 
+        Address: string
+        City: string
+        Zip: string
+    }
+```
+
+将打开标记放置在同一行并在新行的结束标记也是没问题，但请注意，需要使用[详细语法](../language-reference/verbose-syntax.md)来定义成员 (`with`关键字):
+
+```fsharp
+//  OK, but verbose syntax required
+type PostalAddress = { 
+    Address: string
+    City: string
+    Zip: string
+} with
+    member x.ZipAndCity = sprintf "%s %s" x.Zip x.City
 ```
 
 ## <a name="formatting-records"></a>格式设置的记录
 
-可以在一个行中编写短记录：
+可以在一行中编写短记录：
 
 ```fsharp
 let point = { X = 1.0; Y = 0.0 }
 ```
 
-较长的记录应使用标签的新行：
+较长的记录标签应使用新行：
 
 ```fsharp
 let rainbow =
@@ -270,7 +314,7 @@ let rainbow =
       Lackeys = ["Zippy"; "George"; "Bungle"] }
 ```
 
-在同一行和上一个新行的结束标记上施加打开令牌也是正常的：
+将打开标记放置在同一行并在新行的结束标记，还没问题：
 
 ```fsharp
 let rainbow = {
@@ -290,9 +334,9 @@ let rainbow = {
 
 ## <a name="formatting-lists-and-arrays"></a>格式设置的列表和数组
 
-编写`x :: l`与周围的空格`::`运算符 (`::`是中缀运算符，因此由空格括起来) 和`[1; 2; 3]`(`;`是分隔符，因此跟一个空格)。
+编写`x :: l`与周围的空格`::`运算符 (`::`为中缀运算符，因此由空格括起来) 和`[1; 2; 3]`(`;`是分隔符，因此跟一个空格)。
 
-始终使用两个不同的大括号类似运算符之间的至少一个空格。 例如，将保留之间留一个空格`[`和`{`。
+始终使用两个不同的大括号类似于运算符之间至少一个空格。 例如，将保留之间有空格`[`和一个`{`。
 
 ```fsharp
 // OK
@@ -310,7 +354,7 @@ let rainbow = {
  { IngredientName = "Lemon"; Quantity = 1 }]
 ```
 
-列表和将拆分到多个行的数组遵循类似的规则，记录一样：
+列表和拆分到多个行的数组记录一样遵循类似的规则：
 
 ```fsharp
 let pascalsTriangle = [|
@@ -328,29 +372,21 @@ let pascalsTriangle = [|
 
 ## <a name="formatting-if-expressions"></a>如果格式设置表达式
 
-条件语句的缩进量取决于把它们组合起来的表达式的大小。 如果`cond`，`e1`和`e2`很小，只需将它们写入在同一行中：
+条件语句的缩进取决于把它们组合起来的表达式的大小。 如果`cond`，`e1`和`e2`简短，只需将它们写在同一行中：
 
 ```fsharp
 if cond then e1 else e2
 ```
 
-如果`e1`和`cond`很小，但`e2`大：
+如果任一`cond`，`e1`或`e2`更长时间，但不多的行：
 
 ```fsharp
-if cond then e1
-else
-    e2
-```
-
-如果`e1`和`cond`大和`e2`小：
-
-```fsharp
-if cond then
-    e1
+if cond
+then e1
 else e2
 ```
 
-如果所有表达式都都大：
+如果是多行的任何表达式：
 
 ```fsharp
 if cond then
@@ -359,7 +395,7 @@ else
     e2
 ```
 
-使用多个条件语句`elif`和`else`都在与同一作用域缩进`if`:
+使用多个条件语句`elif`并`else`都在同一作用域为缩进`if`:
 
 ```fsharp
 if cond1 then e1
@@ -368,9 +404,9 @@ elif cond3 then e3
 else e4
 ```
 
-### <a name="pattern-matching-constructs"></a>模式匹配的构造
+### <a name="pattern-matching-constructs"></a>模式匹配构造
 
-使用`|`对于无缩进的匹配项的每个子句。 如果表达式是短，可以考虑使用单个行，如果每一子表达式也非常简单。
+使用`|`无缩进匹配项的每个子句。 如果表达式很短，则可以考虑使用单独的一行，如果每一子表达式也非常简单。
 
 ```fsharp
 // OK
@@ -386,7 +422,7 @@ match l with
     | [] -> failwith "Couldn't find David"
 ```
 
-如果模式匹配箭头右侧表达式而言太大，则将其移到下一行中的缩进一个步骤`match` / `|`。
+如果在模式匹配箭头右侧的表达式太大，则将其移动到以下行，缩进一个步骤，从`match` / `|`。
 
 ```fsharp
 match lam with
@@ -398,7 +434,7 @@ match lam with
 
 ```
 
-模式匹配的匿名函数，通过启动`function`，应通常不缩进得太长。 例如，缩进一个作用域，如下所示是正常的：
+模式匹配的匿名函数，通过启动`function`，应通常不缩进太远。 例如，按如下所示缩进一个作用域是没问题：
 
 ```fsharp
 lambdaList
@@ -408,7 +444,7 @@ lambdaList
     | Var v -> 1)
 ```
 
-通过定义的函数中的模式匹配`let`或`let rec`开始之后，应该进行缩进 4 个空格`let`，即使`function`使用关键字：
+通过定义的函数中的模式匹配`let`或`let rec`应在启动后的缩进的 4 个空格`let`，即使`function`使用关键字：
 
 ```fsharp
 let rec sizeLambda acc = function
@@ -419,9 +455,9 @@ let rec sizeLambda acc = function
 
 我们不建议对齐箭头。
 
-## <a name="formatting-trywith-expressions"></a>格式设置的 try / 使用表达式
+## <a name="formatting-trywith-expressions"></a>格式设置 try / with 表达式
 
-模式匹配的异常类型应为相同级别缩进`with`。
+模式匹配异常类型应为相同的级别缩进`with`。
 
 ```fsharp
 try
@@ -436,11 +472,11 @@ with
     printfn "A second that was a multiple of 3"
 ```
 
-## <a name="formatting-function-parameter-application"></a>格式设置的函数参数应用程序
+## <a name="formatting-function-parameter-application"></a>格式设置函数参数应用程序
 
-一般情况下，大多数函数参数应用程序是在同一行上完成。
+一般情况下，大多数函数参数应用程序可在同一行。
 
-如果你想要应用到一个新行上的函数的参数，将它们缩进一个作用域。
+如果你想要应用到新行上的函数的参数，将它们缩进按一个作用域。
 
 ```fsharp
 // OK
@@ -460,7 +496,7 @@ let printVolumes x =
         (convertVolumeImperialPint x)
 ```
 
-相同的准则将 lambda 表达式应用于函数自变量。 如果 lambda 表达式，主体的主体可以有另一个行，缩进一个作用域
+适用的 lambda 表达式作为函数参数相同的准则。 如果 lambda 表达式，主体的主体可以拥有另一个行，缩进一个作用域
 
 ```fsharp
 let printListWithOffset a list1 =
@@ -476,13 +512,13 @@ let printListWithOffset a list1 =
         list1
 ```
 
-但是，如果 lambda 表达式的主体是多个行，请考虑将其分解为单独的函数而不具有向函数应用作为单个参数的多行构造。
+但是，如果 lambda 表达式的主体是多个行，请考虑一下分离到单独的函数而不是具有多行构造为单个参数应用于函数。
 
-### <a name="formatting-infix-operators"></a>格式设置的中缀运算符
+### <a name="formatting-infix-operators"></a>格式设置中缀运算符
 
-用空格的单独运算符。 是此规则的明显例外`!`和`.`运算符。
+由空格的单独运算符。 是此规则的例外明显`!`和`.`运算符。
 
-中缀表达式是在同一列的 lineup 确定:
+中缀表达式是同一列上的配置列表确定:
 
 ```fsharp
 acc +
@@ -496,7 +532,7 @@ let function1 arg1 arg2 arg3 arg4 =
 
 ### <a name="formatting-pipeline-operators"></a>格式设置管道运算符
 
-管道`|>`运算符应转下它们对操作的表达式。
+管道`|>`运算符应发送到下对它们进行操作的表达式。
 
 ```fsharp
 // Preferred approach
@@ -519,9 +555,9 @@ let methods2 = System.AppDomain.CurrentDomain.GetAssemblies()
             |> Array.concat
 ```
 
-### <a name="formatting-modules"></a>格式设置的模块
+### <a name="formatting-modules"></a>格式设置模块
 
-本地模块中的代码必须缩进相对于该模块，但顶级模块中的代码不应缩进。 Namespace 元素无需进行缩进。
+本地模块中的代码必须将缩进，相对于该模块，但顶级模块中的代码不应缩进。 Namespace 元素无需将缩进。
 
 ```fsharp
 // A is a top-level module.
@@ -539,9 +575,9 @@ module A2 =
     let function2 a b = a*a - b*b
 ```
 
-### <a name="formatting-object-expressions-and-interfaces"></a>格式设置的对象表达式和接口
+### <a name="formatting-object-expressions-and-interfaces"></a>格式设置对象表达式和接口
 
-对象表达式和接口应对齐的方式使用相同`member`正在缩进后 4 个空格。
+应使用相同的方式对齐对象表达式和接口`member`要缩进后 4 个空格。
 
 ```fsharp
 let comparer =
@@ -553,9 +589,9 @@ let comparer =
               reversed.CompareTo (rev s2) }
 ```
 
-### <a name="formatting-whitespace-in-expressions"></a>格式设置表达式中的空格
+### <a name="formatting-white-space-in-expressions"></a>格式表达式中的空白区域
 
-请避免使用 F # 表达式中的多余空白。
+避免在 F # 表达式中的多余空白。
 
 ```fsharp
 // OK
@@ -565,7 +601,7 @@ spam (ham.[1])
 spam ( ham.[ 1 ] )
 ```
 
-命名自变量也不应有周围的空间`=`:
+命名的参数也不应具有空间周围`=`:
 
 ```fsharp
 // OK

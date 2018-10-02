@@ -2,18 +2,18 @@
 title: 推断列
 ms.date: 03/30/2017
 ms.assetid: 0e022699-c922-454c-93e2-957dd7e7247a
-ms.openlocfilehash: da98bcbc4537e08a6f8565b36f8b84b476efd027
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 56de4b4d6cf704473ec46957625ad1c376f595c2
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32761072"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43891348"
 ---
 # <a name="inferring-columns"></a>推断列
-ADO.NET 从 XML 文档中确定了哪些元素要作为 <xref:System.Data.DataSet> 的表进行推断后，即开始推断这些表的列。 ADO.NET 2.0 引入了新的架构推断引擎，为每个推断强类型的数据类型**simpleType**元素。 在以前版本的数据类型推断**simpleType**元素始终是**xsd: string**。  
+ADO.NET 从 XML 文档中确定了哪些元素要作为 <xref:System.Data.DataSet> 的表进行推断后，即开始推断这些表的列。 ADO.NET 2.0 引入了一个新的架构推断引擎，推断每个强类型化的数据类型**simpleType**元素。 在以前版本的数据类型推断**simpleType**元素始终是**xsd: string**。  
   
 ## <a name="migration-and-backward-compatibility"></a>迁移和向后兼容性  
- **ReadXml**方法采用类型的自变量**InferSchema**。 使用此自变量可以指定与以前的版本兼容的推断行为。 可用值**InferSchema**枚举显示下表中。  
+ **ReadXml**方法采用一个类型的参数**InferSchema**。 使用此自变量可以指定与以前的版本兼容的推断行为。 可用值**InferSchema**枚举下表中所示。  
   
  <xref:System.Data.XmlReadMode.InferSchema>  
  通过始终将简单类型作为 <xref:System.String> 进行推断，提供向后兼容性。  
@@ -25,7 +25,7 @@ ADO.NET 从 XML 文档中确定了哪些元素要作为 <xref:System.Data.DataSe
  忽略任何内联架构并将数据读入现有的 <xref:System.Data.DataSet> 架构。  
   
 ## <a name="attributes"></a>特性  
- 中定义[推断表](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/inferring-tables.md)，具有属性的元素将被推断为表。 然后，该元素的属性将被推断为该表的列。 **ColumnMapping**的列的属性将设置为**MappingType.Attribute**，以确保列名称将写为属性中，如果架构写回 XML。 这些属性的值存储在表的行中。 例如，考虑以下 XML：  
+ 中定义[推断表](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/inferring-tables.md)，该元素具有属性将被推断为表。 然后，该元素的属性将被推断为该表的列。 **ColumnMapping**列的属性将设置为**MappingType.Attribute**，以确保如果该架构将写回 XML 的列名称将作为特性写入。 这些属性的值存储在表的行中。 例如，考虑以下 XML：  
   
 ```xml  
 <DocumentElement>  
@@ -33,7 +33,7 @@ ADO.NET 从 XML 文档中确定了哪些元素要作为 <xref:System.Data.DataSe
 </DocumentElement>  
 ```  
   
- 推断过程将生成名为的表**Element1**具有两列， **attr1**和**attr2**。 **ColumnMapping**这两个列的属性将设置为**MappingType.Attribute**。  
+ 推断过程将生成名为的表**Element1**包含两个列**attr1**并**attr2**。 **ColumnMapping**这两个列的属性将设置为**MappingType.Attribute**。  
   
  **数据集：** DocumentElement  
   
@@ -44,7 +44,7 @@ ADO.NET 从 XML 文档中确定了哪些元素要作为 <xref:System.Data.DataSe
 |value1|value2|  
   
 ## <a name="elements-without-attributes-or-child-elements"></a>不具有属性或子元素的元素  
- 如果元素不具有子元素或属性，它将被推断为列。 **ColumnMapping**列属性将设置为**MappingType.Element**。 子元素的文本存储在表的行中。 例如，考虑以下 XML：  
+ 如果元素不具有子元素或属性，它将被推断为列。 **ColumnMapping**的列的属性将设置为**MappingType.Element**。 子元素的文本存储在表的行中。 例如，考虑以下 XML：  
   
 ```xml  
 <DocumentElement>  
@@ -55,7 +55,7 @@ ADO.NET 从 XML 文档中确定了哪些元素要作为 <xref:System.Data.DataSe
 </DocumentElement>  
 ```  
   
- 推断过程将生成名为的表**Element1**具有两列， **ChildElement1**和**ChildElement2**。 **ColumnMapping**这两个列的属性将设置为**MappingType.Element**。  
+ 推断过程将生成名为的表**Element1**包含两个列**ChildElement1**并**ChildElement2**。 **ColumnMapping**这两个列的属性将设置为**MappingType.Element**。  
   
  **数据集：** DocumentElement  
   
@@ -71,4 +71,4 @@ ADO.NET 从 XML 文档中确定了哪些元素要作为 <xref:System.Data.DataSe
  [从 XML 加载数据集构架信息](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-dataset-schema-information-from-xml.md)  
  [在数据集中使用 XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)  
  [数据集、数据表和数据视图](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
- [ADO.NET 托管提供程序和数据集开发人员中心](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)

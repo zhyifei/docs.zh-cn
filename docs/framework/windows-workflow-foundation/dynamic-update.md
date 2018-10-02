@@ -2,12 +2,12 @@
 title: 动态更新
 ms.date: 03/30/2017
 ms.assetid: 8b6ef19b-9691-4b4b-824c-3c651a9db96e
-ms.openlocfilehash: f50c8e8ed7ebaab71421ff1615051d9b828d9e4b
-ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
+ms.openlocfilehash: dea930de2103a24aa48b1d0a31a3cbf5fc0ae26c
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36207516"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44076714"
 ---
 # <a name="dynamic-update"></a>动态更新
 动态更新为工作流应用程序开发人员提供了一种机制，可用于更新持久化工作流实例的工作流定义。 操作可以是实施 bug 修复、实施新的要求或适应意外的变化。 此主题概述了 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 中引入的动态更新功能。  
@@ -15,7 +15,7 @@ ms.locfileid: "36207516"
 ## <a name="dynamic-update"></a>动态更新  
  为了将动态更新应用于持久化的工作流实例，会创建一个 <xref:System.Activities.DynamicUpdate.DynamicUpdateMap>，其中包含描述如何修改持久化工作流实例以反映所需更改的运行时说明。 更新映射一旦创建，即应用于所需的持久化工作流实例。 应用动态更新后，可能会使用新的更新工作流定义来恢复工作流实例。 创建和应用更新映射须执行四个步骤的操作。  
   
-1.  [准备以便进行动态更新工作流定义](../../../docs/framework/windows-workflow-foundation/dynamic-update.md#Prepare)  
+1.  [准备动态更新工作流定义](../../../docs/framework/windows-workflow-foundation/dynamic-update.md#Prepare)  
   
 2.  [更新工作流定义以反映所需的更改](../../../docs/framework/windows-workflow-foundation/dynamic-update.md#Update)  
   
@@ -28,13 +28,13 @@ ms.locfileid: "36207516"
   
  本主题将一个新活动添加至已编译 Xaml 工作流的持久性实例中，借此提供对动态更新过程的概述。  
   
-###  <a name="Prepare"></a> 准备以便进行动态更新工作流定义  
+###  <a name="Prepare"></a> 准备动态更新工作流定义  
  动态更新过程的第一步是准备要更新的工作流定义。 这是通过调用 <xref:System.Activities.DynamicUpdate.DynamicUpdateServices.PrepareForUpdate%2A?displayProperty=nameWithType> 方法并传入要修改的工作流定义来实现的。 方法将验证然后遍历工作流树，以标识所有对象（如需要标记的公共活动和变量），以便稍后将其与修改的工作流定义进行比较。 完成此操作后，将对工作流树进行克隆并将其附加到原始工作流定义。 创建更新映射时，将比较工作流定义的更新版本和原始工作流定义，并根据比较差异生成更新映射。  
   
  若要为动态更新准备 Xaml 工作流，可将其加载到 <xref:System.Activities.ActivityBuilder>，然后 <xref:System.Activities.ActivityBuilder> 将传入 <xref:System.Activities.DynamicUpdate.DynamicUpdateServices.PrepareForUpdate%2A?displayProperty=nameWithType>。  
   
 > [!NOTE]
->  有关使用序列化工作流和<xref:System.Activities.ActivityBuilder>，请参阅[序列化工作流和活动和从 XAML](../../../docs/framework/windows-workflow-foundation/serializing-workflows-and-activities-to-and-from-xaml.md)。  
+>  详细了解如何使用序列化工作流和<xref:System.Activities.ActivityBuilder>，请参阅[序列化工作流和活动与 XAML](../../../docs/framework/windows-workflow-foundation/serializing-workflows-and-activities-to-and-from-xaml.md)。  
   
  在以下示例中，`MortgageWorkflow` 定义（由带有若干子活动的 <xref:System.Activities.Statements.Sequence> 组成）将加载到 <xref:System.Activities.ActivityBuilder> 中，然后准备进行动态更新。 该方法返回后，<xref:System.Activities.ActivityBuilder> 包含原始工作流定义以及副本。  
   
@@ -57,7 +57,7 @@ DynamicUpdateServices.PrepareForUpdate(ab);
 ```  
   
 > [!NOTE]
->  若要下载本主题附带的示例代码，请参阅[动态更新示例代码](http://go.microsoft.com/fwlink/?LinkId=227905)。  
+>  若要下载本主题附带的示例代码，请参阅[动态更新示例代码](https://go.microsoft.com/fwlink/?LinkId=227905)。  
   
 ###  <a name="Update"></a> 更新工作流定义以反映所需的更改  
  一旦工作流定义准备好进行更新，就可以作出所需的更改。 您可以添加或删除活动，添加、移动或删除公共变量，添加或删除参数，并对活动委托的签名进行更改。 您不能删除正在运行的活动或更改正在运行的委托的签名。 这些更改可利用代码，或在预先承载的工作流设计器中进行。 在以下示例中，自定义 `VerifyAppraisal` 活动添加到 Sequence，后者构成前例中 `MortgageWorkflow` 的主体。  
@@ -164,7 +164,7 @@ foreach (Guid id in ids)
  一旦应用了动态更新，即可恢复工作流实例。 注意，必须使用新更新的定义和 <xref:System.Activities.WorkflowIdentity>。  
   
 > [!NOTE]
->  有关使用<xref:System.Activities.WorkflowApplication>和<xref:System.Activities.WorkflowIdentity>，请参阅[使用 WorkflowIdentity 和版本控制](../../../docs/framework/windows-workflow-foundation/using-workflowidentity-and-versioning.md)。  
+>  有关使用详细信息<xref:System.Activities.WorkflowApplication>并<xref:System.Activities.WorkflowIdentity>，请参阅[使用 WorkflowIdentity 和版本控制](../../../docs/framework/windows-workflow-foundation/using-workflowidentity-and-versioning.md)。  
   
  在以下示例中，前面示例中的 `MortgageWorkflow_v1.1.xaml` 工作流已经过编译，并使用更新的工作流定义进行加载和恢复。  
   
@@ -191,4 +191,4 @@ wfApp.Load(InstanceId);
 ```  
   
 > [!NOTE]
->  若要下载本主题附带的示例代码，请参阅[动态更新示例代码](http://go.microsoft.com/fwlink/?LinkId=227905)。
+>  若要下载本主题附带的示例代码，请参阅[动态更新示例代码](https://go.microsoft.com/fwlink/?LinkId=227905)。

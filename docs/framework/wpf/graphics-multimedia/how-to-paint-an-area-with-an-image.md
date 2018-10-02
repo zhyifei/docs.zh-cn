@@ -9,31 +9,31 @@ helpviewer_keywords:
 - painting [WPF], with images
 - brushes [WPF], painting with images
 ms.assetid: 3432c533-1fc7-492d-94ee-0b13d60125ae
-ms.openlocfilehash: 4efecc3c8083396d4c06d86d9ece01bd584a1c6d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5899531291c22ada76213905d0f2ca6944fcbba7
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33560953"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43857201"
 ---
 # <a name="how-to-paint-an-area-with-an-image"></a>如何：使用图像绘制区域
-此示例演示如何使用<xref:System.Windows.Media.ImageBrush>类来绘制图像的区域。 <xref:System.Windows.Media.ImageBrush>显示一幅图像，通过指定其<xref:System.Windows.Media.ImageBrush.ImageSource%2A>属性。  
+此示例演示如何使用<xref:System.Windows.Media.ImageBrush>类，以使用图像绘制区域。 <xref:System.Windows.Media.ImageBrush>显示由指定的单个映像及其<xref:System.Windows.Media.ImageBrush.ImageSource%2A>属性。  
   
 ## <a name="example"></a>示例  
- 以下示例绘制<xref:System.Windows.Controls.Control.Background%2A>使用按钮的<xref:System.Windows.Media.ImageBrush>。  
+ 以下示例绘制<xref:System.Windows.Controls.Control.Background%2A>通过使用一个按钮<xref:System.Windows.Media.ImageBrush>。  
   
  [!code-csharp[UsingImageBrush_snip#ImageBrushExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/UsingImageBrush_snip/CSharp/PaintingWithImagesExample.cs#imagebrushexamplewholepage)]  
   
- 默认情况下，<xref:System.Windows.Media.ImageBrush>拉伸其图像以完全填充你正在绘画的区域。 在以上示例中，拉伸图像以填充按钮，可能会使图像失真。 你可以通过设置来控制此行为<xref:System.Windows.Media.TileBrush.Stretch%2A>属性<xref:System.Windows.Media.TileBrush>到<xref:System.Windows.Media.Stretch.Uniform>或<xref:System.Windows.Media.Stretch.UniformToFill>，这将导致保留图像的纵横比的画笔。  
+ 默认情况下，<xref:System.Windows.Media.ImageBrush>拉伸其图像以完全填充要绘制的区域。 在以上示例中，拉伸图像以填充按钮，可能会使图像失真。 可以通过设置控制此行为<xref:System.Windows.Media.TileBrush.Stretch%2A>的属性<xref:System.Windows.Media.TileBrush>到<xref:System.Windows.Media.Stretch.Uniform>或<xref:System.Windows.Media.Stretch.UniformToFill>，这将导致要保持图像的纵横比的画笔。  
   
- 如果你设置<xref:System.Windows.Media.TileBrush.Viewport%2A>和<xref:System.Windows.Media.TileBrush.TileMode%2A>属性<xref:System.Windows.Media.ImageBrush>，你可以创建重复的模式。 以下示例通过使用从图像创建的图案来绘制按钮。  
+ 如果您设置<xref:System.Windows.Media.TileBrush.Viewport%2A>并<xref:System.Windows.Media.TileBrush.TileMode%2A>的属性<xref:System.Windows.Media.ImageBrush>，可以创建一个重复图案。 以下示例通过使用从图像创建的图案来绘制按钮。  
   
  [!code-csharp[UsingImageBrush_snip#TiledImageBrushExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/UsingImageBrush_snip/CSharp/TiledImageBrushExample.cs#tiledimagebrushexamplewholepage)]
  [!code-vb[UsingImageBrush_snip#TiledImageBrushExampleWholePage](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/UsingImageBrush_snip/VisualBasic/TiledImageBrushExample.vb#tiledimagebrushexamplewholepage)]  
   
- 有关详细信息<xref:System.Windows.Media.ImageBrush>类，请参阅[使用图像、 图形和视觉对象进行绘制](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md)。  
+ 有关详细信息<xref:System.Windows.Media.ImageBrush>类，请参阅[使用图像、 绘图和视觉对象进行绘制](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md)。  
   
- 此代码示例是一个更大的示例为提供的一部分<xref:System.Windows.Media.ImageBrush>类。 有关完整的示例，请参阅[ImageBrush 示例](http://go.microsoft.com/fwlink/?LinkID=160005)。  
+ 此代码示例是为提供一个更大示例的一部分<xref:System.Windows.Media.ImageBrush>类。 有关完整示例，请参阅[ImageBrush 示例](https://go.microsoft.com/fwlink/?LinkID=160005)。  
   
 ## <a name="see-also"></a>请参阅  
  [使用图像、绘图和视觉对象进行绘制](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md)

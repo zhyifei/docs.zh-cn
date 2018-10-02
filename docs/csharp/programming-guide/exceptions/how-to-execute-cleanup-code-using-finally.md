@@ -6,12 +6,12 @@ helpviewer_keywords:
 - exceptions [C#], try/finally block
 - exception handling [C#], try/finally block
 ms.assetid: 1b1e5aef-3f32-4a88-9d39-b5fffb33bdaf
-ms.openlocfilehash: 948281af45d04714ed6fc308b60341e87abeb830
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 47e9bb368deb077ef10ce474683d81e0cb56cef8
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33331703"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44183780"
 ---
 # <a name="how-to-execute-cleanup-code-using-finally-c-programming-guide"></a>如何：使用 finally 执行清理代码（C# 编程指南）
 `finally` 语句的用途是确保立即进行对象（通常是容纳外部资源的对象）的必要清理（即使引发异常）。 这类清理的一个示例是在使用之后立即对 <xref:System.IO.FileStream> 调用 <xref:System.IO.Stream.Close%2A>（而不是等待公共语言运行时对对象进行垃圾回收），如下所示：  
@@ -27,11 +27,12 @@ ms.locfileid: "33331703"
   
  数据库连接是在 `finally` 块中进行关闭的另一个很好的候选项。 因为与数据库服务器之间的允许连接数有时会受到限制，所以应尽快关闭数据库连接。 如果在可以关闭连接之前引发异常，则这是使用 `finally` 块比等待垃圾回收更好的另一种情况。  
   
-## <a name="see-also"></a>请参阅  
- [C# 编程指南](../../../csharp/programming-guide/index.md)  
- [异常和异常处理](../../../csharp/programming-guide/exceptions/index.md)  
- [异常处理](../../../csharp/programming-guide/exceptions/exception-handling.md)  
- [using 语句](../../../csharp/language-reference/keywords/using-statement.md)  
- [try-catch](../../../csharp/language-reference/keywords/try-catch.md)  
- [try-finally](../../../csharp/language-reference/keywords/try-finally.md)  
- [try-catch-finally](../../../csharp/language-reference/keywords/try-catch-finally.md)
+## <a name="see-also"></a>请参阅
+
+- [C# 编程指南](../../../csharp/programming-guide/index.md)  
+- [异常和异常处理](../../../csharp/programming-guide/exceptions/index.md)  
+- [异常处理](../../../csharp/programming-guide/exceptions/exception-handling.md)  
+- [using 语句](../../../csharp/language-reference/keywords/using-statement.md)  
+- [try-catch](../../../csharp/language-reference/keywords/try-catch.md)  
+- [try-finally](../../../csharp/language-reference/keywords/try-finally.md)  
+- [try-catch-finally](../../../csharp/language-reference/keywords/try-catch-finally.md)

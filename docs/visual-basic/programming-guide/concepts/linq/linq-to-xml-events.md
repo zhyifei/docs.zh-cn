@@ -3,11 +3,11 @@ title: LINQ to XML 事件 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 34923928-b99c-4004-956e-38f6db25e910
 ms.openlocfilehash: 216c2af87d2ae3a767548ccaa1efe118215cc6a0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33645985"
+ms.lasthandoff: 07/25/2018
+ms.locfileid: "39245281"
 ---
 # <a name="linq-to-xml-events-visual-basic"></a>LINQ to XML 事件 (Visual Basic)
 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 事件使你可以在 XML 树发生改变时得到通知。  

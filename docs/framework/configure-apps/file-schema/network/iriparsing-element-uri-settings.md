@@ -4,13 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 953d0b53-445e-41f9-b302-77c4030852ce
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: f05f7e35d69f789d3ebb371689aafbc84004b732
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 446447f0d279755dbc06e0e3a25d50ad86ad555b
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32743298"
+ms.lasthandoff: 09/27/2018
+ms.locfileid: "47402573"
 ---
 # <a name="ltiriparsinggt-element-uri-settings"></a>&lt;iriParsing&gt;元素 （Uri 设置）
 指定是否对 <xref:System.Uri> 应用国际资源标识符 (IRI) 分析以及是否应该应用 IRI 分析规则。  
@@ -49,9 +48,9 @@ ms.locfileid: "32743298"
 |[Uri](../../../../../docs/framework/configure-apps/file-schema/network/uri-element-uri-settings.md)|包含指定.NET Framework 如何处理使用统一资源标识符 (Uri) 表示的 web 地址的设置。|  
   
 ## <a name="remarks"></a>备注  
- 现有<xref:System.Uri>已在.NET Framework 3.5 扩展类。 3.0 SP1 和 2.0 SP1，以便对国际资源标识符 (IRI) 和国际化域名 (IDN) 的支持。 当前用户将不会看到从.NET Framework 2.0 行为的任何更改，除非专门允许 IRI 和 IDN 支持。 这确保了 NET Framework 以前版本的应用程序兼容性。  
+ 现有<xref:System.Uri>类具有.NET Framework 3.5 中进行了扩展。 3.0 SP1 和 2.0 SP1 提供对国际资源标识符 (IRI) 和国际化域名 (IDN) 的支持。 当前用户不会看到从.NET Framework 2.0 行为的任何更改，除非专门启用 IRI 和 IDN 支持。 这确保了 NET Framework 以前版本的应用程序兼容性。  
   
- 若要启用对 IRI 的支持，以下两项更改是必需的：  
+ 若要启用 IRI 支持，以下两项更改是必需的：  
   
 1.  将以下行添加到.NET Framework 2.0 目录下的 machine.config 文件  
   
@@ -59,9 +58,9 @@ ms.locfileid: "32743298"
     <section name="uri" type="System.Configuration.UriSection, System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />  
     ```  
   
-2.  指定是否应应用 IRI 分析规则。 这可以在 machine.config 或应用配置文件中完成。  
+2.  指定是否应该应用 IRI 分析规则。 这可以在 machine.config 或应用配置文件中完成。  
   
- 启用 IRI 分析 (启用 iriParsing = `true`) 将执行规范化和字符根据最新 IRI 检查规则中 RFC 3987。 默认值是`false`，将执行规范化和字符根据 RFC 2396 检查和 RFC 3986 （对于 IPv6 文本）。  
+ 启用 IRI 分析 (iriParsing 启用 = `true`) 将执行规范化和字符检查根据最新 IRI 规则在 RFC 3987。 默认值是`false`，将执行规范化和字符检查根据 RFC 2396 和 RFC 3986 （适用于 IPv6 文本）。  
   
 ### <a name="configuration-files"></a>配置文件  
  此元素可在应用程序配置文件或计算机配置文件 (Machine.config) 中使用。  
@@ -69,7 +68,7 @@ ms.locfileid: "32743298"
 ## <a name="example"></a>示例  
   
 ### <a name="description"></a>描述  
- 下面的示例演示使用的配置<xref:System.Uri>类，以支持 IRI 分析和 IDN 名称。  
+ 下面的示例演示使用的配置<xref:System.Uri>类，以支持分析 IRI 和 IDN 名称。  
   
 ### <a name="code"></a>代码  
   

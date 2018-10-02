@@ -2,15 +2,15 @@
 title: 操作数据表中的数据
 ms.date: 03/30/2017
 ms.assetid: 5cb86d48-a987-4af4-80e0-8cc2c8373d62
-ms.openlocfilehash: f21ac216ed69db99001e324eb34cacf1254fcf6e
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: a09edc6ce3098ab135d8c27ba0f6ad56cceed159
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32757637"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43521303"
 ---
 # <a name="manipulating-data-in-a-datatable"></a>操作数据表中的数据
-在 <xref:System.Data.DataTable> 中创建 <xref:System.Data.DataSet> 之后，您执行的活动可以与使用数据库中的表时执行的活动相同。 您可以添加、查看、编辑和删除表中的数据；可以监视错误和事件；并且可以查询表中的数据。 当在中修改数据**DataTable**，你还可以验证更改是否正确，并确定是否以编程方式接受或拒绝更改。  
+在 <xref:System.Data.DataTable> 中创建 <xref:System.Data.DataSet> 之后，您执行的活动可以与使用数据库中的表时执行的活动相同。 您可以添加、查看、编辑和删除表中的数据；可以监视错误和事件；并且可以查询表中的数据。 在中修改数据时**DataTable**，您还可以验证所做的更改是否正确，并确定是否要以编程方式接受或拒绝所做的更改。  
   
 ## <a name="in-this-section"></a>本节内容  
  [将数据添加到数据表中](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/adding-data-to-a-datatable.md)  
@@ -20,7 +20,7 @@ ms.locfileid: "32757637"
  说明如何访问行中的数据，包括数据的原始版本和当前版本。  
   
  [加载方法](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/the-load-method.md)  
- 描述如何使用**负载**方法以填充**DataTable**行。  
+ 介绍如何使用**负载**方法来填充**DataTable**行。  
   
  [数据表编辑](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatable-edits.md)  
  说明如何修改行中的数据，包括挂起对行的更改，直至验证并接受了建议的更改。  
@@ -40,4 +40,4 @@ ms.locfileid: "32757637"
 ## <a name="see-also"></a>请参阅  
  [数据表](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatables.md)  
  [处理数据表事件](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/handling-datatable-events.md)  
- [ADO.NET 托管提供程序和数据集开发人员中心](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)

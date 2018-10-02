@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 5fff458c-51a6-4134-ba47-8a6137ddc41e
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 56a24f93e92fbfbd2dbb1156a1c3ef786f59034e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f7720016a94d78e8a49e8566ad7b5096e9b31722
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33390456"
+ms.lasthandoff: 09/29/2018
+ms.locfileid: "47193481"
 ---
 # <a name="enabling-network-tracing"></a>启用网络跟踪
 网络跟踪允许访问有关方法调用的信息，以及有关托管应用程序所生成的网络流量的信息。 必须完成以下任务才能在应用程序中启用网络跟踪：  
@@ -51,4 +50,4 @@ ms.locfileid: "33390456"
 ## <a name="see-also"></a>请参阅  
  [解释网络跟踪](../../../docs/framework/network-programming/interpreting-network-tracing.md)  
  [.NET Framework 中的网络跟踪](../../../docs/framework/network-programming/network-tracing.md)  
- [检测和跟踪简介](http://msdn.microsoft.com/library/e924e57c-33cf-4b0e-9e7f-a45d13e38f2c)
+ [检测和跟踪简介](https://msdn.microsoft.com/library/e924e57c-33cf-4b0e-9e7f-a45d13e38f2c)

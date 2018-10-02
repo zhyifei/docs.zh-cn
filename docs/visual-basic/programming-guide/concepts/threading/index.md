@@ -2,12 +2,12 @@
 title: 线程处理 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 704bb04b-ff23-471d-ab12-3cec1c2bca59
-ms.openlocfilehash: 6f7290b611d8314391d66397bd5f0f43928b8338
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f477a36c6ffa0b5a809c8ba899b21d19a8c9a2d8
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33651858"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43861941"
 ---
 # <a name="threading-visual-basic"></a>线程处理 (Visual Basic)
 通过线程处理，Visual Basic 程序可以执行并发处理，从而能够一次执行多项操作。 例如，可使用线程处理来监视来自用户的输入、执行后台任务和处理并行输入流。  
@@ -31,17 +31,11 @@ ms.locfileid: "33651858"
  可以使用部分或全部类同步多线程的活动，但 Visual Basic 语言对线程处理提供一定程度的支持。 例如，[SynLock 语句](../../../../visual-basic/language-reference/statements/synclock-statement.md)通过隐式使用 <xref:System.Threading.Monitor> 提供同步功能。  
   
 > [!NOTE]
->  自 [!INCLUDE[net_v40_long](~/includes/net-v40-long-md.md)] 起，由于出现了 <xref:System.Threading.Tasks.Parallel?displayProperty=nameWithType> 和 <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> 类、[并行 LINQ (PLINQ)](https://msdn.microsoft.com/library/dd460688)、<xref:System.Collections.Concurrent?displayProperty=nameWithType> 命名空间中的新并发集合类，以及基于任务（而非线程）概念的新编程模型，多线程编程得到了大幅简化。 有关详细信息，请参阅[并行编程](../../../../standard/parallel-programming/index.md)。  
+>  自 [!INCLUDE[net_v40_long](~/includes/net-v40-long-md.md)] 起，由于出现了 <xref:System.Threading.Tasks.Parallel?displayProperty=nameWithType> 和 <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> 类、[并行 LINQ (PLINQ)](../../../../standard/parallel-programming/parallel-linq-plinq.md)、<xref:System.Collections.Concurrent?displayProperty=nameWithType> 命名空间中的新并发集合类，以及基于任务（而非线程）概念的新编程模型，多线程编程得到了大幅简化。 有关详细信息，请参阅[并行编程](../../../../standard/parallel-programming/index.md)。  
   
 ## <a name="related-topics"></a>相关主题  
   
 |标题|描述|  
 |-----------|-----------------|  
-|[多线程应用 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/threading/multithreaded-applications.md)|描述如何创建和使用线程。|  
-|[多线程过程的参数和返回值 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/threading/parameters-and-return-values-for-multithreaded-procedures.md)|描述如何使用多线程的应用程序传递和返回参数。|  
-|[演练：利用 BackgroundWorker 组件进行多线程处理 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/threading/walkthrough-multithreading-with-the-backgroundworker-component.md)|演示如何创建简单的多线程应用程序。|  
 |[线程同步 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/threading/thread-synchronization.md)|描述如何控制线程的交互。|  
-|[线程计时器 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/threading/thread-timers.md)|描述如何按固定时间间隔在单独的线程上运行过程。|  
-|[线程池 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/threading/thread-pooling.md)|描述如何使用由系统托管的工作线程池。|  
-|[如何：使用线程池 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/threading/how-to-use-a-thread-pool.md)|展示线程池中多线程的同步使用。|  
 |[线程处理](../../../../standard/threading/index.md)|描述如何在 .NET Framework 中实现线程处理。|

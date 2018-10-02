@@ -6,15 +6,15 @@ helpviewer_keywords:
 - issued tokens [WCF]
 - federation [WCF], issued tokens
 ms.assetid: 4c31ee7d-a820-4067-8b84-a83049021bb6
-ms.openlocfilehash: b6a5411b74b53cb5e3b18cced7fd8fc09e9a9676
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: bdbd5c49197b65816da9b0f2c87d97afb893d79f
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33491570"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43788099"
 ---
 # <a name="federation-and-issued-tokens"></a>联合令牌与颁发的令牌
-使用 Windows Communication Foundation (WCF) 中，你可以创建与实现 WS-联合身份验证和 Ws-trust 规范的服务进行安全通信的客户端。 这些规范使用 XML、SOAP 和 Web 服务描述语言 (WSDL) 来提供用来跨不同的信任领域进行身份验证和授权的机制。  
+使用 Windows Communication Foundation (WCF) 中，您可以创建与实现 WS-联合身份验证和 Ws-trust 规范的服务进行安全通信的客户端。 这些规范使用 XML、SOAP 和 Web 服务描述语言 (WSDL) 来提供用来跨不同的信任领域进行身份验证和授权的机制。  
   
 ## <a name="in-this-section"></a>本节内容  
  [联合](../../../../docs/framework/wcf/feature-details/federation.md)  
@@ -24,7 +24,7 @@ ms.locfileid: "33491570"
  列出在创建联合服务或客户端时应注意的设计问题。  
   
  [如何：创建联合客户端](../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)  
- 描述使用 WCF 创建联合客户端的基础知识。  
+ 介绍使用 WCF 创建联合客户端的基础知识。  
   
  [如何：在联合身份验证服务上配置凭据](../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)  
  描述创建联合服务的步骤。  
@@ -64,4 +64,4 @@ ms.locfileid: "33491570"
 ## <a name="see-also"></a>请参阅  
  [授权](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md)  
  [自定义令牌](../../../../docs/framework/wcf/extending/custom-tokens.md)  
- [Windows Server App Fabric 的安全模型](http://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+ [Windows Server App Fabric 的安全模型](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

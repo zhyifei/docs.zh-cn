@@ -2,12 +2,12 @@
 title: 变量和自变量跟踪
 ms.date: 03/30/2017
 ms.assetid: 8f3d9d30-d899-49aa-b7ce-a8d0d32c4ff0
-ms.openlocfilehash: f1938da55d2e1d88c88f83ff75f357e23f1eb81f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 45ed3761cd7ead82650023b93a2f32a43e847339
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33516979"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47195870"
 ---
 # <a name="variable-and-argument-tracking"></a>变量和自变量跟踪
 当跟踪工作流的执行时，提取数据往往很有用。 这在访问跟踪记录后续执行时可提供其他上下文。 在 [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] 中，您可以使用跟踪在工作流的任意活动范围内提取所有可见变量或参数。 跟踪配置文件简化了对数据的提取。  
@@ -17,7 +17,7 @@ ms.locfileid: "33516979"
   
 -   如果变量用变量名称指定，跟踪则在正跟踪的当前活动和父活动中查找变量。 系统将在当前活动范围和父范围中搜索变量。  
   
--   如果使用名称来指定要提取的变量时 ="*"，则提取正跟踪的当前活动中的所有变量。 此种情况下，将不会提取范围中在父活动中定义的变量。  
+-   如果要提取的变量使用指定的名称 ="*"，则提取正跟踪的当前活动中的所有变量。 此种情况下，将不会提取范围中在父活动中定义的变量。  
   
  当提取参数时，提取的参数依赖于活动状态。 当活动状态为 Executing 时，只能提取 `InArguments`。 对于任何其他活动状态（Closed、Faulted、Canceled），则可以提取所有参数，即 InArguments 和 OutArguments。  
   
@@ -47,5 +47,5 @@ ms.locfileid: "33516979"
 3.  对于自定义跟踪参与者，请确保 WF 代码不会泄露存储在变量或自变量中的敏感信息。  
   
 ## <a name="see-also"></a>请参阅  
- [Windows Server App Fabric 监视](http://go.microsoft.com/fwlink/?LinkId=201273)  
- [使用 App Fabric 监视应用程序](http://go.microsoft.com/fwlink/?LinkId=201275)
+ [Windows Server App Fabric 监视](https://go.microsoft.com/fwlink/?LinkId=201273)  
+ [使用 App Fabric 监视应用程序](https://go.microsoft.com/fwlink/?LinkId=201275)

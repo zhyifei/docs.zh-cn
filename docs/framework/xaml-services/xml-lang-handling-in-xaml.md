@@ -7,11 +7,12 @@ helpviewer_keywords:
 - RFC 3066 standard [XAML Services]
 - standards [XAML Services], RFC 3066
 ms.assetid: 7aac0078-a1c5-41f8-b8b0-975510d9dca0
-ms.openlocfilehash: 886f4063fa8c793fdce93431a29219cf86078593
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 025e4b2865fe3938e5f1454f87e90bae7a85bcfd
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43747965"
 ---
 # <a name="xmllang-handling-in-xaml"></a>XAML 中 xml:lang 的处理
 `xml:lang` 属性是 [!INCLUDE[TLA2#tla_xml](../../../includes/tla2sharptla-xml-md.md)]定义的属性，用于在 XML 中声明元素的语言和区域性信息。 此属性的相同含义在 XAML 中持续存在；但有一些其他注意事项。  
@@ -26,7 +27,7 @@ ms.lasthandoff: 05/04/2018
   
 |||  
 |-|-|  
-|*rfc3066lang*|派生自 [RFC 3066](http://go.microsoft.com/fwlink/?LinkId=132454) 标准的字符串，并标识一种语言或语言-地区。 当为后者时，将由一个连字符分隔语言和区域。 请参阅 <xref:System.Windows.Markup.XmlLanguage> ，以了解有关值和格式的更多信息。|  
+|*rfc3066lang*|一个字符串，派生自[RFC 3066](https://go.microsoft.com/fwlink/?LinkId=132454)标准，并标识一种语言-地区。 当为后者时，将由一个连字符分隔语言和区域。 请参阅 <xref:System.Windows.Markup.XmlLanguage> ，以了解有关值和格式的更多信息。|  
   
 ## <a name="remarks"></a>备注  
  `xml:lang` 中 [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] 属性的定义派生自 `xml:lang` ，又由 [!INCLUDE[TLA#tla_w3c](../../../includes/tlasharptla-w3c-md.md)] 定义为 [!INCLUDE[TLA2#tla_xml](../../../includes/tla2sharptla-xml-md.md)]的“特殊特性”。 语言和区域性信息可能由元素根据其实现以不同方式进行处理；但是， [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] 属性没有默认的 `xml:lang` 处理方式。  

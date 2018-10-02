@@ -10,13 +10,12 @@ helpviewer_keywords:
 ms.assetid: 189ce989-c39b-427d-b004-6b82a668b931
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 3f717705a6cd4cc29fe333f5012c7fec466d350b
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 9d6189c736e1f2843a986c3a96f8547e9a231db0
+ms.sourcegitcommit: daa8788af67ac2d1cecd24f9f3409babb2f978c9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32752473"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47862680"
 ---
 # <a name="ltsettingsgt-element-network-settings"></a>&lt;设置&gt;元素 （网络设置）
 配置 <xref:System.Net?displayProperty=nameWithType> 命名空间的基本网络选项。  
@@ -49,13 +48,13 @@ ms.locfileid: "32752473"
   
 |元素|描述|  
 |-------------|-----------------|  
-|[HttpListener](../../../../../docs/framework/configure-apps/file-schema/network/httplistener-element-network-settings.md)|自定义所使用参数<xref:System.Net.HttpListener>类。|  
+|[httpListener](../../../../../docs/framework/configure-apps/file-schema/network/httplistener-element-network-settings.md)|自定义使用参数<xref:System.Net.HttpListener>类。|  
 |[httpWebRequest](../../../../../docs/framework/configure-apps/file-schema/network/httpwebrequest-element-network-settings.md)|自定义 Web 请求参数。|  
 |[ipv6](../../../../../docs/framework/configure-apps/file-schema/network/ipv6-element-network-settings.md)|启用 Internet 协议版本 6 (IPv6) 支持。|  
-|[\<performanceCounter > 元素 （网络设置）](../../../../../docs/framework/configure-apps/file-schema/network/performancecounter-element-network-settings.md)|启用网络性能计数器。|  
-|[servicePointManager](../../../../../docs/framework/configure-apps/file-schema/network/servicepointmanager-element-network-settings.md)|配置对网络资源的连接。|  
-|[套接字](../../../../../docs/framework/configure-apps/file-schema/network/socket-element-network-settings.md)|指定的套接字操作是否使用完成端口。|  
-|[\<webProxyScript > 元素 （网络设置）](../../../../../docs/framework/configure-apps/file-schema/network/webproxyscript-element-network-settings.md)|配置用于发现 Web 代理的脚本的特征。|  
+|[\<performanceCounter > 元素 （网络设置）](../../../../../docs/framework/configure-apps/file-schema/network/performancecounter-element-network-settings.md)|启用的网络性能计数器。|  
+|[servicePointManager](../../../../../docs/framework/configure-apps/file-schema/network/servicepointmanager-element-network-settings.md)|配置连接到网络资源。|  
+|[套接字](../../../../../docs/framework/configure-apps/file-schema/network/socket-element-network-settings.md)|指定套接字操作是否使用完成端口。|  
+|[\<webProxyScript > 元素 （网络设置）](../../../../../docs/framework/configure-apps/file-schema/network/webproxyscript-element-network-settings.md)|配置用于发现 Web 代理脚本的特征。|  
   
 ### <a name="parent-elements"></a>父元素  
   

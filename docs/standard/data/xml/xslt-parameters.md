@@ -8,12 +8,12 @@ dev_langs:
 ms.assetid: fe60aaa0-ae43-4b1c-9be1-426af66ba757
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ef57d16c52100398919563205a97205be3c5dd7c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 63a394bd30b3586f084dc1a2320fa9133da19b64
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33570601"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44191881"
 ---
 # <a name="xslt-parameters"></a>XSLT 参数
 使用 <xref:System.Xml.Xsl.XsltArgumentList> 方法将 XSLT 参数添加到 <xref:System.Xml.Xsl.XsltArgumentList.AddParam%2A>。 此时，限定名和命名空间 URI 与参数对象关联。  
@@ -68,5 +68,6 @@ ms.locfileid: "33570601"
 </order>  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [XSLT 转换](../../../../docs/standard/data/xml/xslt-transformations.md)
+## <a name="see-also"></a>请参阅
+
+- [XSLT 转换](../../../../docs/standard/data/xml/xslt-transformations.md)

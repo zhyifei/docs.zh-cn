@@ -4,12 +4,12 @@ description: “dotnet store”命令可将指定的程序集存储到运行时�
 author: bleroy
 ms.author: mairaw
 ms.date: 05/29/2018
-ms.openlocfilehash: 54654522207157f7d49bb86223b7986acccf51ee
-ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
+ms.openlocfilehash: a12738d0cc8edcbb65d5b6fab6e7c8b209b0f4b5
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34696320"
+ms.lasthandoff: 09/28/2018
+ms.locfileid: "47208057"
 ---
 # <a name="dotnet-store"></a>dotnet store
 
@@ -83,4 +83,4 @@ ms.locfileid: "34696320"
 
 ## <a name="see-also"></a>请参阅
 
-[运行时包存储](../deploying/runtime-store.md)
+* [运行时包存储](../deploying/runtime-store.md)

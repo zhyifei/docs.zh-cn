@@ -6,12 +6,12 @@ helpviewer_keywords:
 - type conversion [C#], keywords
 - types [C#], conversion keywords
 ms.assetid: 8683ff14-5289-4efe-b4f5-1e6a075918ab
-ms.openlocfilehash: ffa6d7cb4b6606a5742077b823c1a3f710d2e624
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 34175f1bda169a9def9e3146214a6d5cd4d258e7
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33213943"
+ms.lasthandoff: 09/29/2018
+ms.locfileid: "47230925"
 ---
 # <a name="conversion-keywords-c-reference"></a>转换关键字（C# 参考）
 本部分介绍类型转换中使用的关键字：  
@@ -23,6 +23,7 @@ ms.locfileid: "33213943"
 -   [operator](../../../csharp/language-reference/keywords/operator.md)  
   
 ## <a name="see-also"></a>请参阅  
- [C# 参考](../../../csharp/language-reference/index.md)  
- [C# 编程指南](../../../csharp/programming-guide/index.md)  
- [C# 关键字](../../../csharp/language-reference/keywords/index.md)
+
+- [C# 参考](../../../csharp/language-reference/index.md)  
+- [C# 编程指南](../../../csharp/programming-guide/index.md)  
+- [C# 关键字](../../../csharp/language-reference/keywords/index.md)

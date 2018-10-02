@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: c95788bf-90a6-4e96-b7bc-58e36a228cc5
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 53f31402e78a15289bb996c63e1e8e3cd98e6aac
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 83451af25006e9da396a3e6618cbecee036e9fe2
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33590759"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46003758"
 ---
 # <a name="attached-and-detached-child-tasks"></a>已附加和已分离的子任务
 子任务（或嵌套任务）是在另一个任务（称为“父任务”）的用户委托中创建的 <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> 实例。 可以分离或附加子任务。 分离的子任务是独立于父级而执行的任务。 附加的子任务是使用 <xref:System.Threading.Tasks.TaskCreationOptions.AttachedToParent?displayProperty=nameWithType> 选项创建的嵌套任务，父级不显式或默认禁止附加任务。 一个任务可以创建任意数量的附加和分离子任务，这仅受系统资源限制。  
@@ -78,6 +78,7 @@ ms.locfileid: "33590759"
   
  可能还想要防止子任务在没有及时完成时附加到其父任务。 因为父任务只有在所有子任务完成后才会完成，所以长时间运行的子任务会使整个应用执行得非常缓慢。 有关展示了如何通过防止子任务附加到父任务来提升应用性能的示例，请参阅[如何：防止子任务附加到父任务](../../../docs/standard/parallel-programming/how-to-prevent-a-child-task-from-attaching-to-its-parent.md)。  
   
-## <a name="see-also"></a>请参阅  
- [并行编程](../../../docs/standard/parallel-programming/index.md)  
- [数据并行](../../../docs/standard/parallel-programming/data-parallelism-task-parallel-library.md)
+## <a name="see-also"></a>请参阅
+
+- [并行编程](../../../docs/standard/parallel-programming/index.md)  
+- [数据并行](../../../docs/standard/parallel-programming/data-parallelism-task-parallel-library.md)

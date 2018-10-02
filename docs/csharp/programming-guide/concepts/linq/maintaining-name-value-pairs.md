@@ -2,12 +2,12 @@
 title: 维护名称-值对 (C#)
 ms.date: 07/20/2015
 ms.assetid: 7b04b0f1-af64-42eb-8737-83f8861b5915
-ms.openlocfilehash: ac1e6464618c00cba4ded92492fe4a687e1a25f6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 28c01ce17881ffe7e8fcc35e2c23dec85d50955d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33325573"
+ms.lasthandoff: 09/28/2018
+ms.locfileid: "47207638"
 ---
 # <a name="maintaining-namevalue-pairs-c"></a>维护名称/值对 (C#)
 很多应用程序都必须维护需要保存为名称/值对的信息。 此信息可能是配置信息或全局设置。 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 包含一些方法，能轻松保存一组名称/值对。 可以将这些信息保存为属性，也可以保存为一组子元素。  
@@ -118,7 +118,8 @@ Console.WriteLine(root);
 </Root>  
 ```  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Xml.Linq.XElement.SetAttributeValue%2A>  
- <xref:System.Xml.Linq.XElement.SetElementValue%2A>  
- [修改 XML 树 (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/modifying-xml-trees-linq-to-xml.md)
+## <a name="see-also"></a>请参阅
+
+- <xref:System.Xml.Linq.XElement.SetAttributeValue%2A>  
+- <xref:System.Xml.Linq.XElement.SetElementValue%2A>  
+- [修改 XML 树 (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/modifying-xml-trees-linq-to-xml.md)

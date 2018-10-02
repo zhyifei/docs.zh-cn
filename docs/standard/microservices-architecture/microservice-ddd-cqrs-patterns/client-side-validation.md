@@ -4,12 +4,12 @@ description: 适用于容器化 .NET 应用程序的 .NET 微服务体系结构 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.openlocfilehash: c61a08566492a59090b19f99aaf97b5f6082c1fb
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.openlocfilehash: 70a1f716797e03acdcbf1c58d4b0302449d98fa9
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37104564"
+ms.lasthandoff: 09/29/2018
+ms.locfileid: "47421568"
 ---
 # <a name="client-side-validation-validation-in-the-presentation-layers"></a>客户端验证（表示层中的验证）
 
@@ -23,7 +23,7 @@ ms.locfileid: "37104564"
 
 因此，通常要在客户端代码中验证 ViewModel。 将客户端输出的 DTO 或命令发送到服务之前，还可以对其进行验证。
 
-客户端验证实现取决于创建的客户端应用程序类型。 如果使用 .NET 中的大多数代码验证 Web MVC Web 应用程序中的数据，情况便有所不同，使用该验证的 SPA Web 应用程序会在 JavaScript、TypeScript 或移动应用（编有代码 Xamarin 和 C\#）中进行编码。
+客户端验证实现取决于创建的客户端应用程序类型。 如果使用 .NET 中的大多数代码验证 Web MVC Web 应用程序中的数据，情况便有所不同，使用该验证的 SPA Web 应用程序会在 JavaScript、TypeScript 或移动应用（编有代码 Xamarin 和 C#）中进行编码。
 
 ## <a name="additional-resources"></a>其他资源
 
@@ -42,8 +42,8 @@ ms.locfileid: "37104564"
 
 ### <a name="validation-in-spa-web-apps-angular-2-typescript-javascript"></a>SPA Web 应用中进行的验证（Angular 2、TypeScript、JavaScript）
 
--   **Ado Kukic.Angular 2 Form Validation**（Angular 2 窗体验证）**
-    **[https://scotch.io/tutorials/angular-2-form-validation](https://scotch.io/tutorials/angular-2-form-validation)**
+-   **Ado Kukic.Angular 2 Form Validation**（Angular 2 窗体验证）
+    [https://scotch.io/tutorials/angular-2-form-validation](https://scotch.io/tutorials/angular-2-form-validation)
 
 -   **Form Validation**
     （窗体验证）[https://angular.io/docs/ts/latest/cookbook/form-validation.html](https://angular.io/docs/ts/latest/cookbook/form-validation.html)
@@ -53,16 +53,15 @@ ms.locfileid: "37104564"
 
 总之，与验证有关的最重要的概念有以下几条：
 
--   实体和聚合应确保它们自己的一致性，并保证“始终有效”。 聚合根保证同一聚合内的多实体间的一致性。
+- 实体和聚合应确保它们自己的一致性，并保证“始终有效”。 聚合根保证同一聚合内的多实体间的一致性。
 
--   如果认为实体需要进入无效状态，请考虑使用不同的对象模型 - 例如，在创建最终的域实体之前，使用临时 DTO。
+- 如果认为实体需要进入无效状态，请考虑使用不同的对象模型 - 例如，在创建最终的域实体之前，使用临时 DTO。
 
--   如果需要创建多个相关对象（如聚合），且其只有在完成创建所有对象之后才会有效，请考虑使用工厂模式。
+- 如果需要创建多个相关对象（如聚合），且其只有在完成创建所有对象之后才会有效，请考虑使用工厂模式。
 
--   验证框架最适合用于特定层，如表示层或应用程序/服务层，但通常不用于域模型层，因为这需要在基础结构框架有一个强大的依赖项。
+- 验证框架最适合用于特定层，如表示层或应用程序/服务层，但通常不用于域模型层，因为这需要在基础结构框架有一个强大的依赖项。
 
--   在大多数情况下，客户端采用冗余验证是不错的选择，因为应用程序可以是积极主动的。
-
+- 在大多数情况下，客户端采用冗余验证是不错的选择，因为应用程序可以是积极主动的。
 
 >[!div class="step-by-step"]
 [上一页](domain-model-layer-validations.md)

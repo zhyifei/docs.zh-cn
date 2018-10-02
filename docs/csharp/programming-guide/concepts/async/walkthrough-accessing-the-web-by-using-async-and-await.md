@@ -2,12 +2,12 @@
 title: 演练：使用 Async 和 Await 访问 Web (C#)
 ms.date: 07/20/2015
 ms.assetid: c95d8d71-5a98-4bf0-aaf4-45fed2ebbacd
-ms.openlocfilehash: 33145f6a7ececd85e6eeaebb80a81f3075878761
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: cb628941d53957356cfa49d81fb78f16369af86b
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33338125"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44085207"
 ---
 # <a name="walkthrough-accessing-the-web-by-using-async-and-await-c"></a>演练：使用 Async 和 Await 访问 Web (C#)
 使用 async/await 功能可以更轻松直观地编写异步程序。 你可以编写类似于同步代码的异步代码，并让编译器处理异步代码通常需要的疑难回调函数和延续。  
@@ -723,12 +723,13 @@ namespace AsyncExampleWPF
 }  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [Async Sample: Accessing the Web Walkthrough (C# and Visual Basic)](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f)（异步示例：访问 Web 演练（C# 和 Visual Basic））  
- [async](../../../../csharp/language-reference/keywords/async.md)  
- [await](../../../../csharp/language-reference/keywords/await.md)  
- [使用 Async 和 Await 的异步编程 (C#)](../../../../csharp/programming-guide/concepts/async/index.md)  
- [异步返回类型 (C#)](../../../../csharp/programming-guide/concepts/async/async-return-types.md)  
- [基于任务的异步编程 (TAP)](https://www.microsoft.com/en-us/download/details.aspx?id=19957)  
- [如何：使用 Task.WhenAll 扩展异步演练 (C#)](../../../../csharp/programming-guide/concepts/async/how-to-extend-the-async-walkthrough-by-using-task-whenall.md)  
- [如何：使用 Async 和 Await 并行发起多个 Web 请求 (C#)](../../../../csharp/programming-guide/concepts/async/how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await.md)
+## <a name="see-also"></a>请参阅
+
+- [Async Sample: Accessing the Web Walkthrough (C# and Visual Basic)](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f)（异步示例：访问 Web 演练（C# 和 Visual Basic））  
+- [async](../../../../csharp/language-reference/keywords/async.md)  
+- [await](../../../../csharp/language-reference/keywords/await.md)  
+- [使用 Async 和 Await 的异步编程 (C#)](../../../../csharp/programming-guide/concepts/async/index.md)  
+- [异步返回类型 (C#)](../../../../csharp/programming-guide/concepts/async/async-return-types.md)  
+- [基于任务的异步编程 (TAP)](https://www.microsoft.com/en-us/download/details.aspx?id=19957)  
+- [如何：使用 Task.WhenAll 扩展异步演练 (C#)](../../../../csharp/programming-guide/concepts/async/how-to-extend-the-async-walkthrough-by-using-task-whenall.md)  
+- [如何：使用 Async 和 Await 并行发起多个 Web 请求 (C#)](../../../../csharp/programming-guide/concepts/async/how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await.md)

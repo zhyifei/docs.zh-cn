@@ -6,12 +6,12 @@ ms.author: mairaw
 ms.date: 05/31/2018
 ms.custom: updateeachrelease
 ms.technology: dotnet-standard
-ms.openlocfilehash: 346eece8fdb391fd62b369db6ef65964fcd6e67a
-ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
+ms.openlocfilehash: 76bf496e957022f4d97d3cf3f3975f334b1d5c45
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34728311"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47204409"
 ---
 # <a name="target-frameworks"></a>目标框架
 
@@ -131,10 +131,10 @@ public class MyClass
 
 ## <a name="see-also"></a>请参阅
 
-[包、元包和框架](../core/packages.md)  
-[使用跨平台工具开发库](../core/tutorials/libraries.md)  
-[.NET Standard](net-standard.md)  
-[.NET Core 版本控制](../core/versions/index.md)  
-[dotnet/standard GitHub 存储库](https://github.com/dotnet/standard)  
-[NuGet 工具 GitHub 存储库](https://github.com/joelverhagen/NuGetTools)  
-[.NET 中的框架配置文件](https://blog.stephencleary.com/2012/05/framework-profiles-in-net.html)
+- [包、元包和框架](../core/packages.md)  
+- [使用跨平台工具开发库](../core/tutorials/libraries.md)  
+- [.NET Standard](net-standard.md)  
+- [.NET Core 版本控制](../core/versions/index.md)  
+- [dotnet/standard GitHub 存储库](https://github.com/dotnet/standard)  
+- [NuGet 工具 GitHub 存储库](https://github.com/joelverhagen/NuGetTools)  
+- [.NET 中的框架配置文件](https://blog.stephencleary.com/2012/05/framework-profiles-in-net.html)

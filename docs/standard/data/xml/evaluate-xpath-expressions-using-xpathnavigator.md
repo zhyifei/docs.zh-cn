@@ -8,12 +8,12 @@ dev_langs:
 ms.assetid: 2913ccf3-f932-4363-8028-9e2d22ce6093
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6dce97fd74b17154925d18bf18a9a8defd2e508e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a2712c1de4a5f4a06ba041fdc0c5df2487eebdd2
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33569114"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45664496"
 ---
 # <a name="evaluate-xpath-expressions-using-xpathnavigator"></a>使用 XPathNavigator 计算 XPath 表达式
 <xref:System.Xml.XPath.XPathNavigator> 类提供了 <xref:System.Xml.XPath.XPathNavigator.Evaluate%2A> 方法来计算 XPath 表达式。 <xref:System.Xml.XPath.XPathNavigator.Evaluate%2A> 方法使用 XPath 表达式，计算表达式，然后基于 XPath 表达式的结果返回 Boolean、Number、String 或 Node Set 的 W3C XPath 类型。  
@@ -46,13 +46,14 @@ Console.WriteLine(total);
 ### <a name="position-and-last-functions"></a>position 和 last 函数  
  <xref:System.Xml.XPath.XPathNavigator.Evaluate%2A> 方法是重载方法。 一个 <xref:System.Xml.XPath.XPathNavigator.Evaluate%2A> 方法使用 <xref:System.Xml.XPath.XPathNodeIterator> 对象作为参数。 此特定的 <xref:System.Xml.XPath.XPathNavigator.Evaluate%2A> 方法与只使用 <xref:System.Xml.XPath.XPathNavigator.Evaluate%2A> 对象作为参数的 <xref:System.Xml.XPath.XPathExpression> 方法相同，只是允许使用节点集参数指定要执行计算的当前上下文。 XPath `position()` 和 `last()` 函数需要此上下文，因为这两个函数相对于当前上下文节点。 除非在定位步骤中作为谓词使用，`position()` 和 `last()` 函数要求引用节点集以便进行计算，否则，`position` 和 `last` 函数将返回 `0`。  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Xml.XmlDocument>  
- <xref:System.Xml.XPath.XPathDocument>  
- <xref:System.Xml.XPath.XPathNavigator>  
- [使用 XPath 数据模型处理 XML 数据](../../../../docs/standard/data/xml/process-xml-data-using-the-xpath-data-model.md)  
- [使用 XPathNavigator 选择 XML 数据](../../../../docs/standard/data/xml/select-xml-data-using-xpathnavigator.md)  
- [使用 XPathNavigator 匹配节点](../../../../docs/standard/data/xml/matching-nodes-using-xpathnavigator.md)  
- [XPath 查询识别的节点类型](../../../../docs/standard/data/xml/node-types-recognized-with-xpath-queries.md)  
- [XPath 查询和命名空间](../../../../docs/standard/data/xml/xpath-queries-and-namespaces.md)  
- [已编译的 XPath 表达式](../../../../docs/standard/data/xml/compiled-xpath-expressions.md)
+## <a name="see-also"></a>请参阅
+
+- <xref:System.Xml.XmlDocument>  
+- <xref:System.Xml.XPath.XPathDocument>  
+- <xref:System.Xml.XPath.XPathNavigator>  
+- [使用 XPath 数据模型处理 XML 数据](../../../../docs/standard/data/xml/process-xml-data-using-the-xpath-data-model.md)  
+- [使用 XPathNavigator 选择 XML 数据](../../../../docs/standard/data/xml/select-xml-data-using-xpathnavigator.md)  
+- [使用 XPathNavigator 匹配节点](../../../../docs/standard/data/xml/matching-nodes-using-xpathnavigator.md)  
+- [XPath 查询识别的节点类型](../../../../docs/standard/data/xml/node-types-recognized-with-xpath-queries.md)  
+- [XPath 查询和命名空间](../../../../docs/standard/data/xml/xpath-queries-and-namespaces.md)  
+- [已编译的 XPath 表达式](../../../../docs/standard/data/xml/compiled-xpath-expressions.md)

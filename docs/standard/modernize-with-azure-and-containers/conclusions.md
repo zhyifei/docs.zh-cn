@@ -1,33 +1,33 @@
 ---
 title: 结论
-description: 更新现有的.NET 应用程序与 Azure 云和 Windows 容器 |结论
+description: 更新现有.NET 应用程序使用 Azure 云和 Windows 容器 |结论
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/26/2017
-ms.openlocfilehash: 9c115aa09c3de2cbd71a3b7dab7e8bbedc911ce1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: af6151d04622c72acdb7f27ebb220bf611418b4c
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33580505"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45743964"
 ---
 # <a name="conclusions"></a>结论
 
-- 容器基于解决方案最终提供成本节省优势。 容器是部署问题的解决方案，因为他们删除引起的生产环境中的依赖关系之间缺少的摩擦。 通过删除这些问题，它开发/测试、 DevOps 和生产操作会显著提高。
+- 最终，基于容器的解决方案提供的成本节约优势。 容器是解决部署问题的解决方案，因为他们删除引起的生产环境中的依赖关系不存在的摩擦。 通过删除这些问题，它显著提高了开发/测试、 DevOps 和生产操作。
 
 - Docker 容器正逐渐成为任何基于服务器的应用程序或服务的标准部署单位。
 
-- 对于生产环境中，你应承载可扩展基于 Windows 容器的应用程序使用 orchestrator （如 Service Fabric 或 Kubernetes）。
+- 对于生产环境，应托管可缩放基于 Windows 容器应用程序使用业务流程协调程序 （如 Service Fabric 或 Kubernetes）。
 
-- 托管容器的 azure 虚拟机是在云中创建小型开发/测试环境的快速而简单方法。
+- Azure Vm 托管容器是在云中创建小型开发/测试环境的快速而简单方法。
 
-- 关系数据库迁移到 Azure 的现有应用程序时，默认情况下建议 azure SQL 数据库托管实例。
+- 迁移到 Azure 的现有应用程序从关系数据库时，默认情况下建议 azure SQL 数据库托管实例。
 
-- Visual Studio 2017 和 Image2Docker 是开始通过加快入门开始的学习曲线 modernizing 你现有的.NET 应用程序，与 Windows 容器的基本工具。
+- Visual Studio 2017 和 Image2Docker 基本工具，您可以开始通过促进入门入门的学习曲线更新现有.NET 应用程序与 Windows 容器。
 
-- 在生产中放置容器化应用程序时你将始终创建或采用 DevOps 区域性和 CI/CD 管道，如 Visual Studio Team Services 或 Jenkins 的 DevOps 工具。
+- 在生产环境中放置容器化应用程序时将始终创建或采用 DevOps 文化和 CI/CD 管道，Azure DevOps 服务或 Jenkins 等的 DevOps 工具。
 
-- Microsoft Azure 提供的最全面且完整的环境来提升现有.NET Framework 应用程序使用 Windows 容器、 云基础结构和 PaaS 服务。
+- Microsoft Azure 提供要更新现有.NET Framework 应用程序使用 Windows 容器、 云基础结构和 PaaS 服务的最全面、 最完整的环境。
 
 >[!div class="step-by-step"]
 [上一篇](walkthroughs-technical-get-started-overview.md)

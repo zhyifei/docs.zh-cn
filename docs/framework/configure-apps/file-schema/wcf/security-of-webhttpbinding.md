@@ -3,13 +3,12 @@ title: '&lt;webHttpBinding&gt; 的 &lt;security&gt;'
 ms.date: 03/30/2017
 ms.assetid: 727cf3d2-6f56-48ad-a59f-ba423edb9c83
 author: BrucePerlerMS
-manager: mbaldwin
-ms.openlocfilehash: 2df10c0a35a5547dc2f1dafc6a2b9c0f9bbdc0a3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 28cff66cfd50229eacbb7c7c4b1d65678efb40ea
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33350447"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47236197"
 ---
 # <a name="ltsecuritygt-of-ltwebhttpbindinggt"></a>&lt;webHttpBinding&gt; 的 &lt;security&gt;
 指定与配置的终结点的安全要求[ \<wsHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)。  
@@ -52,8 +51,8 @@ ms.locfileid: "33350447"
 |值|描述|  
 |-----------|-----------------|  
 |无|禁用安全性。|  
-|传输|使用 HTTPS 提供安全性。 此服务需要使用 SSL 证书进行配置。 消息使用 HTTPS 获得全面保护，而且客户端使用服务的 SSL 证书对服务进行身份验证。 可以通过控制客户端身份验证的`ClientCredentialType`属性[\<传输 >](../../../../../docs/framework/configure-apps/file-schema/wcf/transport-of-webhttpbinding.md)。|  
-|TransportCredentialOnly|此模式并不提供消息的完整性和保密性， 而是提供基于 HTTP 的客户端身份验证。 使用此模式时应当小心。 它应在其中通过其他方式 （如 IPSec) 提供传输安全并且只有客户端身份验证由 WCF 基础结构的环境中使用。|  
+|传输|使用 HTTPS 提供安全性。 此服务需要使用 SSL 证书进行配置。 消息使用 HTTPS 获得全面保护，而且客户端使用服务的 SSL 证书对服务进行身份验证。 客户端身份验证通过`ClientCredentialType`的属性[\<传输 >](../../../../../docs/framework/configure-apps/file-schema/wcf/transport-of-webhttpbinding.md)。|  
+|TransportCredentialOnly|此模式并不提供消息的完整性和保密性， 而是提供基于 HTTP 的客户端身份验证。 使用此模式时应当小心。 它应在其中通过其他方式 （如 IPSec) 提供传输安全和 WCF 基础结构提供仅客户端身份验证的环境中使用。|  
   
 ### <a name="child-elements"></a>子元素  
   
@@ -77,6 +76,6 @@ ms.locfileid: "33350447"
  [选择凭据类型](../../../../../docs/framework/wcf/feature-details/selecting-a-credential-type.md)  
  [绑定](../../../../../docs/framework/wcf/bindings.md)  
  [配置系统提供的绑定](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [使用绑定来配置 Windows Communication Foundation 服务和客户端](http://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
+ [使用绑定来配置 Windows Communication Foundation 服务和客户端](https://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
  [\<绑定 >](../../../../../docs/framework/misc/binding.md)  
  [WCF Web HTTP 编程模型](../../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)

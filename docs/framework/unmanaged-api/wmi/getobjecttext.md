@@ -1,6 +1,6 @@
 ---
 title: GetObjectText 函数 （非托管 API 参考）
-description: GetObjectText 函数返回对象的文本呈现用 MOF 语法。
+description: GetObjectText 函数用 MOF 语法返回一个对象的文本呈现。
 ms.date: 11/06/2017
 api_name:
 - GetObjectText
@@ -16,15 +16,15 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d2f0e766a3a310bdb58f7cbffd8d49404eb5e0b0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 24ba4b37cc8221df4e018d172996c0910ec07f7d
+ms.sourcegitcommit: a1e35d4e94edab384a63406c0a5438306873031b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33459634"
+ms.lasthandoff: 08/21/2018
+ms.locfileid: "42754570"
 ---
 # <a name="getobjecttext-function"></a>GetObjectText 函数
-返回对象的文本呈现中的托管对象格式 (MOF) 语法。
+返回托管对象格式 (MOF) 语法中的对象的文本呈现。
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
     
@@ -42,47 +42,47 @@ HRESULT GetObjectText (
 ## <a name="parameters"></a>参数
 
 `vFunc`  
-[in]未使用此参数。
+[in]此参数是未使用。
 
 `ptr`  
-[in]指向的指针[IWbemClassObject](https://msdn.microsoft.com/library/aa391433%28v=vs.85%29.aspx)实例。
+[in]一个指向[IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject)实例。
 
 `lFlags`  
-[in]通常 0。 如果`WBEM_FLAG_NO_FLAVORS`（或 0x1） 指定，限定符是包含不带传播或风格的信息。
+[in]通常情况下 0。 如果`WBEM_FLAG_NO_FLAVORS`（或 0x1） 指定，限定符是包含但不传播或风格的信息。
 
 `pstrObjectText`   
-[out]指向的指针`null`条目。 返回时，新分配`BSTR`，该字符串包含对象 MOF 语法呈现。  
+[out]一个指向`null`条目。 返回时，新分配`BSTR`，其中包含的对象的 MOF 语法呈现。  
 
 ## <a name="return-value"></a>返回值
 
-此函数返回以下值中定义*WbemCli.h*标头文件，或者你可以定义它们常量作为在代码中：
+此函数返回以下值中定义*WbemCli.h*标头文件，也可以在定义它们为常量在代码中：
 
-|返回的常量  |值  |描述  |
+|返回的常量  |“值”  |描述  |
 |---------|---------|---------|
-|`WBEM_E_FAILED` | 0x80041001 | 发生了常规错误。 |
+|`WBEM_E_FAILED` | 0x80041001 | 已存在时的常见错误。 |
 |`WBEM_E_INVALID_PARAMETER` | 0x80041008 | 参数不是有效的。 |
 |`WBEM_E_OUT_OF_MEMORY` | 0x80041006 | 没有足够的内存是可用于完成该操作。 |
 |`WBEM_S_NO_ERROR` | 0 | 函数调用成功。  |
   
 ## <a name="remarks"></a>备注
 
-此函数包装对的调用[IWbemClassObject::GetObjectText](https://msdn.microsoft.com/library/aa391448(v=vs.85).aspx)方法。
+此函数包装对的调用[IWbemClassObject::GetObjectText](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-getobjecttext)方法。
 
-返回的 MOF 文本不包含所有对象的相关信息，但仅足够 MOF 编译器要能够重新创建原始对象的信息。 例如，错误报告中不包括包含任何传播的限定符或父类属性。
+返回的 MOF 文本不包含所有对象的信息，但仅 MOF 编译器要能够重新创建原始对象的足够信息。 例如，没有传播的限定符或父类属性中包含。
 
-以下算法用于重新构造方法的参数的文本：
+使用以下算法来重新构造方法的参数的文本：
 
 1. 参数被 resequenced 按其标识符值的顺序。
-1. 指定为参数`[in]`和`[out]`合并为单个参数。
+1. 指定为参数`[in]`和`[out]`合并到单个参数。
  
-`pstrObjectText` 必须是指向`null`函数调用时，它必须不指向是之前调用方法有效，因为将会释放指针的字符串。
+`pstrObjectText` 必须是指向指针`null`时调用的函数; 它必须指向是方法调用前有效，因为将释放指针的字符串。
 
 ## <a name="requirements"></a>要求  
 **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** WMINet_Utils.idl  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>请参阅  
 [WMI 和性能计数器 （非托管 API 参考）](index.md)

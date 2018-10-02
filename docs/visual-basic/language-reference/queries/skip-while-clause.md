@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Skip While clause [Visual Basic]
 - queries [Visual Basic], Skip While
 ms.assetid: 5dee8350-7520-4f1a-b00d-590cacd572d6
-ms.openlocfilehash: 9d95dc4a9f61a9ec3a50f9d594b31d673c2d3764
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a3c0749560d8cea1e46d96298347ce54f0bf9185
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33602013"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43863369"
 ---
 # <a name="skip-while-clause-visual-basic"></a>Skip While 子句 (Visual Basic)
 跳过集合中指定条件为 `true` 的任何元素，然后返回剩余元素。  
@@ -28,23 +28,23 @@ Skip While expression
   
 |术语|定义|  
 |---|---|  
-|`expression`|必须的。 一个表示要测试的元素的条件的表达式。 该表达式必须返回`Boolean`值或等效的功能，如`Integer`作为计算`Boolean`。|  
+|`expression`|必须的。 一个表达式，表示要测试的元素的条件。 该表达式必须返回`Boolean`值或功能上等效，如`Integer`被视为`Boolean`。|  
   
 ## <a name="remarks"></a>备注  
- `Skip While`子句跳过任何元素，直到所提供的查询结果从头`expression`返回`false`。 后`expression`返回`false`，查询返回所有剩余的元素。 `expression`对于剩余的结果，将忽略。  
+ `Skip While`子句跳过从之前所提供的查询结果开头的元素`expression`返回`false`。 之后`expression`返回`false`，该查询返回所有剩余元素。 `expression`忽略其余的结果。  
   
- `Skip While`子句不同于`Where`中的子句`Where`子句可用来从不满足特定条件的查询中排除的所有元素。 `Skip While`子句仅在未满足的条件的第一个时间排除元素。 `Skip While`子句在你正在使用排序的查询结果时最有用。  
+ `Skip While`子句不同于`Where`中的子句`Where`子句可用于排除不满足特定条件的查询，在所有元素。 `Skip While`子句排除仅在未满足的条件的第一个时间前的元素。 `Skip While`子句正在使用排序的查询结果时最有用。  
   
- 可以通过使用绕过特定数目的结果从开始处的查询结果`Skip`子句。  
+ 可以通过使用特定数目的结果从一开始对查询结果的绕过`Skip`子句。  
   
 ## <a name="example"></a>示例  
- 下面的代码示例使用`Skip While`子句以跳过的结果，直到找到第一个客户从美国。  
+ 下面的代码示例使用`Skip While`子句以跳过的结果，直到找到从美国的第一个客户。  
   
  [!code-vb[VbSimpleQuerySamples#3](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/skip-while-clause_1.vb)]  
   
 ## <a name="see-also"></a>请参阅  
  [Visual Basic 中的 LINQ 简介](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)  
- [查询](../../../visual-basic/language-reference/queries/queries.md)  
+ [查询](../../../visual-basic/language-reference/queries/index.md)  
  [Select 子句](../../../visual-basic/language-reference/queries/select-clause.md)  
  [From 子句](../../../visual-basic/language-reference/queries/from-clause.md)  
  [Skip 子句](../../../visual-basic/language-reference/queries/skip-clause.md)  

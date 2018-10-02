@@ -2,12 +2,12 @@
 title: 可视工作流跟踪
 ms.date: 03/30/2017
 ms.assetid: 0143448f-2044-40a0-8a3d-941f6d12468b
-ms.openlocfilehash: f010bdcf6004e84fd346d0e8649c87c008cad122
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7433d2497b9a9993093e13e88e073fb40403e3b6
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33516908"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44085723"
 ---
 # <a name="visual-workflow-tracking"></a>可视工作流跟踪
 此示例演示如何使用 [!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)] 提供的调试功能编写可视工作流跟踪应用程序。  
@@ -36,6 +36,6 @@ ms.locfileid: "33516908"
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目录不存在，请转到[Windows Communication Foundation (WCF) 和针对.NET Framework 4 的 Windows Workflow Foundation (WF) 示例](http://go.microsoft.com/fwlink/?LinkId=150780)下载所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
+>  如果此目录不存在，请转到[Windows Communication Foundation (WCF) 和.NET Framework 4 的 Windows Workflow Foundation (WF) 示例](https://go.microsoft.com/fwlink/?LinkId=150780)若要下载所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Application\VisualWorkflowTracking`

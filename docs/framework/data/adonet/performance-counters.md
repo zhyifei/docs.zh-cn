@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 0b121b71-78f8-4ae2-9aa1-0b2e15778e57
-ms.openlocfilehash: 8696bf567d8f32fc3bc3f78e127631f488c551aa
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3e66e4f34afcf8cba03c60c92b5b69d8ca01961b
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33365111"
+ms.lasthandoff: 09/23/2018
+ms.locfileid: "46706351"
 ---
 # <a name="performance-counters-in-adonet"></a>ADO.NET 中的性能计数器
 ADO.NET 2.0 引入了对性能计数器的扩展支持，包括对 <xref:System.Data.SqlClient> 和 <xref:System.Data.OracleClient> 的支持。 在早期版本的 ADO.NET 中提供的 <xref:System.Data.SqlClient> 性能计数器已被否决，并已替换为本主题讨论的新性能计数器。 可以使用 ADO.NET 性能计数器来监视应用程序的状态和应用程序所使用的连接资源。 可以使用 Windows 性能监视器来监视性能计数器，或使用 <xref:System.Diagnostics.PerformanceCounter> 命名空间中的 <xref:System.Diagnostics> 类以编程方式访问性能计数器。  
@@ -36,7 +36,7 @@ ADO.NET 2.0 引入了对性能计数器的扩展支持，包括对 <xref:System.
 |`SoftDisconnectsPerSecond`|被返回连接池的活动连接的数量。 **注意：** 默认情况下不启用此性能计数器。 若要启用此性能计数器，请参阅[激活关闭： 默认情况下计数器](#ActivatingOffByDefault)。|  
   
 ### <a name="connection-pool-groups-and-connection-pools"></a>连接池组和连接池  
- 在使用 Windows 身份验证（集成安全性）时，必须监视 `NumberOfActiveConnectionPoolGroups` 和 `NumberOfActiveConnectionPools` 性能计数器。 这样做的原因是连接池组会映射为唯一连接字符串。 在使用集成安全性时，连接池会映射为连接字符串，此外，连接池还会为各个 Windows 标识创建单独的池。 例如，如果 Fred 和 Julie 在同一 AppDomain 中，并且二者都使用连接字符串 `"Data Source=MySqlServer;Integrated Security=true"`，则将为连接字符串创建一个连接池组，还将为 Fred 和 Julie 分别创建一个其他池。 如果 John 和 Martha 将连接字符串使用相同的 SQL Server 登录名， `"Data Source=MySqlServer;User Id=lowPrivUser;Password=Strong?Password"`，然后为创建一个池**lowPrivUser**标识。  
+ 在使用 Windows 身份验证（集成安全性）时，必须监视 `NumberOfActiveConnectionPoolGroups` 和 `NumberOfActiveConnectionPools` 性能计数器。 这样做的原因是连接池组会映射为唯一连接字符串。 在使用集成安全性时，连接池会映射为连接字符串，此外，连接池还会为各个 Windows 标识创建单独的池。 例如，如果 Fred 和 Julie 在同一 AppDomain 中，并且二者都使用连接字符串 `"Data Source=MySqlServer;Integrated Security=true"`，则将为连接字符串创建一个连接池组，还将为 Fred 和 Julie 分别创建一个其他池。 如果 John 和 Martha 将连接字符串使用完全相同的 SQL Server 登录名， `"Data Source=MySqlServer;User Id=lowPrivUser;Password=Strong?Password"`，则为创建单个池中**lowPrivUser**标识。  
   
 <a name="ActivatingOffByDefault"></a>   
 ### <a name="activating-off-by-default-counters"></a>激活默认情况下为关的计数器  
@@ -55,7 +55,7 @@ ADO.NET 2.0 引入了对性能计数器的扩展支持，包括对 <xref:System.
  下面的控制台应用程序演示如何在应用程序中检索性能计数器的值。 必须打开连接并且确保连接处于活动状态，才能为所有 ADO.NET 性能计数器返回信息。  
   
 > [!NOTE]
->  此示例使用示例**AdventureWorks**包含与 SQL Server 数据库。 在此示例代码中提供的连接字符串假定安装了数据库，该数据库在实例名为 SqlExpress 的本地计算机上；还假定你已创建了 SQL Server 登录，此登录与连接字符串中提供的登录相匹配。 如果使用仅允许 Windows 身份验证的默认安全设置来配置服务器，则需要启用 SQL Server 登录。 可以根据您的环境需要修改连接字符串。  
+>  此示例使用示例**AdventureWorks** SQL Server 中包含的数据库。 在此示例代码中提供的连接字符串假定安装了数据库，该数据库在实例名为 SqlExpress 的本地计算机上；还假定你已创建了 SQL Server 登录，此登录与连接字符串中提供的登录相匹配。 如果使用仅允许 Windows 身份验证的默认安全设置来配置服务器，则需要启用 SQL Server 登录。 可以根据您的环境需要修改连接字符串。  
   
 ### <a name="example"></a>示例  
   
@@ -397,7 +397,7 @@ class Program
 ## <a name="see-also"></a>请参阅  
  [连接到数据源](../../../../docs/framework/data/adonet/connecting-to-a-data-source.md)  
  [OLE DB、ODBC 和 Oracle 连接池](../../../../docs/framework/data/adonet/ole-db-odbc-and-oracle-connection-pooling.md)  
- [ASP.NET 性能计数器](http://msdn.microsoft.com/library/1e122fcb-05c0-4f9f-bef1-f47023fa1ac6)  
+ [ASP.NET 性能计数器](https://msdn.microsoft.com/library/1e122fcb-05c0-4f9f-bef1-f47023fa1ac6)  
  [运行时分析](../../../../docs/framework/debug-trace-profile/runtime-profiling.md)  
- [监视性能阈值简介](http://msdn.microsoft.com/library/d40f10b9-e2b7-4ec8-a9b3-706929e5bf35)  
- [ADO.NET 托管提供程序和数据集开发人员中心](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [监视性能阈值简介](https://msdn.microsoft.com/library/d40f10b9-e2b7-4ec8-a9b3-706929e5bf35)  
+ [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)

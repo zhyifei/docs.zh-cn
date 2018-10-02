@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: eca16922-1c46-4f68-aefe-e7a12283641f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 40eec7c03de616b22ae7b20c56cd5a05237ec759
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1be7120b9bff5c51141a1eac80051c4b464433aa
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33399803"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43801549"
 ---
 # <a name="retrieving-resources-in-desktop-apps"></a>检索桌面应用程序中的资源
-使用 .NET Framework 桌面应用中的本地化资源时，最好用主程序集打包默认或非特定区域性的资源，并为应用支持的每种语言或区域性单独创建附属程序集。 可以使用下一节中介绍的 <xref:System.Resources.ResourceManager> 类访问已命名的资源。 如果选择不在主程序集和附属程序集中嵌入资源，也可以按本文后面的 [从 .resources 文件中检索资源](#from_file) 一节中所述直接访问二进制 .resources 文件。  若要检索 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 应用中的资源，请参阅 Windows 开发人员中心中的 [在 Windows 应用商店应用中创建和检索资源](http://go.microsoft.com/fwlink/p/?LinkID=241674) 一文。  
+使用 .NET Framework 桌面应用中的本地化资源时，最好用主程序集打包默认或非特定区域性的资源，并为应用支持的每种语言或区域性单独创建附属程序集。 可以使用下一节中介绍的 <xref:System.Resources.ResourceManager> 类访问已命名的资源。 如果选择不在主程序集和附属程序集中嵌入资源，也可以按本文后面的 [从 .resources 文件中检索资源](#from_file) 一节中所述直接访问二进制 .resources 文件。  若要检索 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 应用中的资源，请参阅 Windows 开发人员中心中的 [在 Windows 应用商店应用中创建和检索资源](https://go.microsoft.com/fwlink/p/?LinkID=241674) 一文。  
   
 <a name="from_assembly"></a>   
 ## <a name="retrieving-resources-from-assemblies"></a>从程序集中检索资源  
@@ -158,7 +158,7 @@ GetObject.exe
  创建资源并将其放置在相应的目录中后，通过调用 <xref:System.Resources.ResourceManager> 方法创建 <xref:System.Resources.ResourceManager.CreateFileBasedResourceManager%28System.String%2CSystem.String%2CSystem.Type%29> 对象以使用资源。 第一个参数指定应用的默认 .resources 文件的根名称（在上一节的示例中为 "strings"）。 第二个参数指定的资源的位置（上一个示例中为 "Resources"）。 第三个参数指定要使用的 <xref:System.Resources.ResourceSet> 实现。 如果第三个参数为 `null`，则使用默认运行时 <xref:System.Resources.ResourceSet> 。  
   
 > [!NOTE]
->  请勿使用独立 .resources 文件部署 ASP.NET 应用。 这可能会导致锁定问题并破坏 XCOPY 部署。 建议部署附属程序集中的 ASP.NET 资源。 有关更多信息，请参见 [ASP.NET Web Page Resources Overview](http://msdn.microsoft.com/library/0936b3b2-9e6e-4abe-9c06-364efef9dbbd)。  
+>  请勿使用独立 .resources 文件部署 ASP.NET 应用。 这可能会导致锁定问题并破坏 XCOPY 部署。 建议部署附属程序集中的 ASP.NET 资源。 有关更多信息，请参见 [ASP.NET Web Page Resources Overview](https://msdn.microsoft.com/library/0936b3b2-9e6e-4abe-9c06-364efef9dbbd)。  
   
  实例化 <xref:System.Resources.ResourceManager> 对象后，使用前文所述的 <xref:System.Resources.ResourceManager.GetString%2A>、 <xref:System.Resources.ResourceManager.GetObject%2A>和 <xref:System.Resources.ResourceManager.GetStream%2A> 方法检索资源。 但是，直接从 .resources 文件中检索资源与从程序集中检索嵌入的资源有所不同。 从 .resources 文件中检索资源时， <xref:System.Resources.ResourceManager.GetString%28System.String%29>、 <xref:System.Resources.ResourceManager.GetObject%28System.String%29>和 <xref:System.Resources.ResourceManager.GetStream%28System.String%29> 方法总是忽略当前区域性检索默认区域性的资源。 若要检索应用的当前区域性资源或指定区域性的资源，必须调用 <xref:System.Resources.ResourceManager.GetString%28System.String%2CSystem.Globalization.CultureInfo%29>、 <xref:System.Resources.ResourceManager.GetObject%28System.String%2CSystem.Globalization.CultureInfo%29>或 <xref:System.Resources.ResourceManager.GetStream%28System.String%2CSystem.Globalization.CultureInfo%29> 方法并指定要检索资源的区域性。 若要检索当前区域性的资源，请将 <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType> 属性的值指定为 `culture` 参数。 如果资源管理器无法检索 `culture`的资源，则使用标准资源回退规则检索相应的资源。  
   
@@ -205,4 +205,4 @@ csc Example.cs
  [桌面应用中的资源](../../../docs/framework/resources/index.md)  
  [打包和部署资源](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md)  
  [运行时如何定位程序集](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)  
- [在 Windows 应用商店应用中创建和检索资源](http://go.microsoft.com/fwlink/p/?LinkID=241674)
+ [在 Windows 应用商店应用中创建和检索资源](https://go.microsoft.com/fwlink/p/?LinkID=241674)

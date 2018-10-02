@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Visual C#, C# language specification
 - language specification [C#]
 ms.assetid: e5d5a5cc-636b-4bff-b9c8-a8edc6207c22
-ms.openlocfilehash: 5ed035d5e1e524de9f86254d03e3276966293bf6
-ms.sourcegitcommit: 77d9a94dac4c05827ed0663d95e0f9ad35d6682e
+ms.openlocfilehash: 976282ab51ec3e9990161abf2dd089798bd949dd
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/24/2018
-ms.locfileid: "34472784"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43529869"
 ---
 # <a name="c-60-draft-language-specification"></a>C# 6.0 草稿语言规范
 
@@ -26,8 +26,9 @@ C# 语言规范是 C# 语法和用法的权威来源。 此规范包含有关语
 应在 [dotnet/csharplang](https://github.com/dotnet/csharplang/issues) 存储库中创建草稿规范的相关问题。 或者，如果有兴趣修复自己所发现的任何错误，则可向同一存储库提交[拉取请求](https://github.com/dotnet/csharplang/pulls)。
 
 ## <a name="see-also"></a>请参阅
- [C# 参考](../index.md)  
- [C# 编程指南](../../programming-guide/index.md)
+
+- [C# 参考](../index.md)  
+- [C# 编程指南](../../programming-guide/index.md)
 
 >[!div class="step-by-step"]
 [下一篇](../../../../_csharplang/spec/introduction.md)

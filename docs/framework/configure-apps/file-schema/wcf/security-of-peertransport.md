@@ -3,13 +3,12 @@ title: '&lt;peerTransport&gt; 的 &lt;security&gt;'
 ms.date: 03/30/2017
 ms.assetid: f73634ed-f896-4968-bf74-5e5ac52d3b6b
 author: BrucePerlerMS
-manager: mbaldwin
-ms.openlocfilehash: 9d77c250b4843c9a0f83247cae5c2859429cf5bf
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 152087550d3fa881a7a88271d9c91dfcc5c894c8
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32749837"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47176755"
 ---
 # <a name="ltsecuritygt-of-ltpeertransportgt"></a>&lt;peerTransport&gt; 的 &lt;security&gt;
 包含与对等通道相关的安全设置，包括使用的身份验证类型和用于消息传输的安全性。  
@@ -18,7 +17,7 @@ ms.locfileid: "32749837"
 \<绑定 >  
 \<customBinding>  
 \<绑定 >  
-\<t >  
+\<peerTransport >  
 \<安全 >  
   
 ## <a name="syntax"></a>语法  
@@ -57,7 +56,7 @@ ms.locfileid: "32749837"
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<t >](../../../../../docs/framework/configure-apps/file-schema/wcf/peertransport.md)|定义自定义绑定的对等传输。|  
+|[\<peerTransport >](../../../../../docs/framework/configure-apps/file-schema/wcf/peertransport.md)|定义自定义绑定的对等传输。|  
   
 ## <a name="see-also"></a>请参阅  
  <xref:System.ServiceModel.Configuration.PeerSecurityElement>  

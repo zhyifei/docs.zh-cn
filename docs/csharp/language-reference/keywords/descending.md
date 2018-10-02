@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - descending keyword [C#]
 ms.assetid: 8d2cd1e5-9c1c-4dfc-b84c-60e2d3240927
-ms.openlocfilehash: e1393c283db4607545f14f2d7f655cfdfdc862f6
-ms.sourcegitcommit: ed7b4b9b77d35e94a35a2634e8c874f46603fb2b
+ms.openlocfilehash: a052763cdffeeea1eb9de09b1bc71a592fa70b50
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36948558"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44198200"
 ---
 # <a name="descending-c-reference"></a>descending（C# 参考）
 
@@ -26,6 +26,6 @@ ms.locfileid: "36948558"
 
 ## <a name="see-also"></a>请参阅
 
-[C# 参考](../../../csharp/language-reference/index.md)  
-[LINQ 查询表达式](../../../csharp/programming-guide/linq-query-expressions/index.md)  
-[ascending](../../../csharp/language-reference/keywords/ascending.md)
+- [C# 参考](../../../csharp/language-reference/index.md)  
+- [LINQ 查询表达式](../../../csharp/programming-guide/linq-query-expressions/index.md)  
+- [ascending](../../../csharp/language-reference/keywords/ascending.md)

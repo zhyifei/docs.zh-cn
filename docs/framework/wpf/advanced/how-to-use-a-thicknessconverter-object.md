@@ -8,18 +8,18 @@ helpviewer_keywords:
 - border thickness [WPF]
 - ThicknessConverter objects [WPF]
 ms.assetid: 52682194-d7fd-499c-8005-73fcc84e7b2c
-ms.openlocfilehash: 119c4397dee76429e776378ee89fa49747dbfce4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6c8f9e83468a7b189b96efca2e175c0f3fe0dfff
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33544338"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43856658"
 ---
 # <a name="how-to-use-a-thicknessconverter-object"></a>如何：使用 ThicknessConverter 对象
 ## <a name="example"></a>示例  
  此示例演示如何创建的实例<xref:System.Windows.ThicknessConverter>并使用它来更改边框的粗细。  
   
- 该示例定义的自定义的方法调用`changeThickness`; 此方法首先将内容转换<xref:System.Windows.Controls.ListBoxItem>，如在单独定义[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]文件、 实例<xref:System.Windows.Thickness>，和更高版本将转换到的内容<xref:System.String>。 此方法将传递<xref:System.Windows.Controls.ListBoxItem>到<xref:System.Windows.ThicknessConverter>对象，后者将转换<xref:System.Windows.Controls.ContentControl.Content%2A>的<xref:System.Windows.Controls.ListBoxItem>到实例<xref:System.Windows.Thickness>。 此值然后传递的值作为<xref:System.Windows.Controls.Border.BorderThickness%2A>属性<xref:System.Windows.Controls.Border>。  
+ 该示例定义一个名为的自定义方法`changeThickness`; 此方法首先将转换的内容<xref:System.Windows.Controls.ListBoxItem>在单独的定义，[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]文件的实例<xref:System.Windows.Thickness>，和更高版本将转换到的内容<xref:System.String>。 此方法将传递<xref:System.Windows.Controls.ListBoxItem>到<xref:System.Windows.ThicknessConverter>对象，它将转换<xref:System.Windows.Controls.ContentControl.Content%2A>的<xref:System.Windows.Controls.ListBoxItem>的实例<xref:System.Windows.Thickness>。 然后将此值传递的值为<xref:System.Windows.Controls.Border.BorderThickness%2A>属性的<xref:System.Windows.Controls.Border>。  
   
  此示例不运行。  
   
@@ -30,6 +30,6 @@ ms.locfileid: "33544338"
  <xref:System.Windows.Thickness>  
  <xref:System.Windows.ThicknessConverter>  
  <xref:System.Windows.Controls.Border>  
- [如何： 更改 Margin 属性](http://msdn.microsoft.com/library/8a313efd-5f99-4097-b4c1-8fa49d8379a2)  
- [如何： 将 ListBoxItem 转换为新的数据类型](http://msdn.microsoft.com/library/7a080b88-184e-4b27-bb61-d42bafba9727)  
+ [如何： 更改 Margin 属性](https://msdn.microsoft.com/library/8a313efd-5f99-4097-b4c1-8fa49d8379a2)  
+ [如何： 将 ListBoxItem 转换为新的数据类型](https://msdn.microsoft.com/library/7a080b88-184e-4b27-bb61-d42bafba9727)  
  [面板概述](../../../../docs/framework/wpf/controls/panels-overview.md)

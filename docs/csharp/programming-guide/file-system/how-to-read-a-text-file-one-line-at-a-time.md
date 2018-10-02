@@ -6,19 +6,19 @@ helpviewer_keywords:
 - reading text files, line by line
 - text files [C#]
 ms.assetid: d62e22c5-a13c-48db-af9b-f10c801b0cb1
-ms.openlocfilehash: 2ed0069f9313955edc2cc46ecfd395a5f1ac2852
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6ba479e341b71bebe60d9744f239b752d3d81167
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33339730"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43738763"
 ---
 # <a name="how-to-read-a-text-file-one-line-at-a-time-visual-c"></a>如何：一次一行地读取文本文件 (Visual C#)
 此示例使用 `StreamReader` 类的 `ReadLine` 方法，一次一行地将文本文件内容读入字符串。 每个文本行都存储到字符串 `line` 中并显示在屏幕上。  
   
 ## <a name="example"></a>示例  
   
-```  
+```csharp
 int counter = 0;  
 string line;  
   
@@ -27,7 +27,7 @@ System.IO.StreamReader file =
     new System.IO.StreamReader(@"c:\test.txt");  
 while((line = file.ReadLine()) != null)  
 {  
-    System.Console.WriteLine (line);  
+    System.Console.WriteLine(line);  
     counter++;  
 }  
   
@@ -50,7 +50,8 @@ System.Console.ReadLine();
 ## <a name="net-framework-security"></a>.NET Framework 安全性  
  不要根据文件的名称来判断文件的内容。 例如，文件 `myFile.cs` 可能不是 C# 源文件。  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.IO?displayProperty=nameWithType>  
- [C# 编程指南](../../../csharp/programming-guide/index.md)  
- [文件系统和注册表（C# 编程指南）](../../../csharp/programming-guide/file-system/index.md)
+## <a name="see-also"></a>请参阅
+
+- <xref:System.IO?displayProperty=nameWithType>  
+- [C# 编程指南](../../../csharp/programming-guide/index.md)  
+- [文件系统和注册表（C# 编程指南）](../../../csharp/programming-guide/file-system/index.md)

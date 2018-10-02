@@ -2,12 +2,12 @@
 title: 编程指南 (LINQ to DataSet)
 ms.date: 03/30/2017
 ms.assetid: 977aedd7-0084-46a0-b56f-345787a55da1
-ms.openlocfilehash: 70fb2d38a055a6b376a711aae28ba69e6c2dd771
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0c6b026d86a898aa52d93833ac3e447d6f6cba11
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33353281"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43513365"
 ---
 # <a name="programming-guide-linq-to-dataset"></a>编程指南 (LINQ to DataSet)
 本节提供有关使用 [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] 进行编程的概念性信息和示例。  
@@ -52,7 +52,7 @@ ms.locfileid: "33353281"
   
  <xref:System.Data.DataView>  
   
-## <a name="see-also"></a>请参阅  
- [LINQ to ADO.NET](http://msdn.microsoft.com/library/be3297b9-1b54-4d4c-82a8-add0d79c2006)  
- [不在生成中： LINQ 常规编程指南](http://msdn.microsoft.com/library/609c7a6b-cbdd-429d-99f3-78d13d3bc049)  
- [LINQ Framework](http://msdn.microsoft.com/library/897ea0fc-40db-4694-bbe5-7dd339d5bf94)
+## <a name="see-also"></a>请参阅
+
+- [LINQ 和 ADO.NET](linq-and-ado-net.md)  
+- [语言集成查询 (LINQ)](../../../csharp/programming-guide/concepts/linq/index.md)

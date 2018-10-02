@@ -2,12 +2,12 @@
 title: 如何：使用 XmlSerializer 进行序列化 (C#)
 ms.date: 07/20/2015
 ms.assetid: 2e0a0bbc-c548-4fe2-8741-be5a9ccd0cbb
-ms.openlocfilehash: 2f68253f2ce1efaaabb971350496898ab012706b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 32a23792947639c2c0eb1dc14b640c3786bdfd4c
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33319892"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "45990396"
 ---
 # <a name="how-to-serialize-using-xmlserializer-c"></a>如何：使用 XmlSerializer 进行序列化 (C#)
 本主题显示一个使用 <xref:System.Xml.Serialization.XmlSerializer> 进行序列化和反序列化的示例。  
@@ -89,5 +89,6 @@ Testing for type: XElementContainer
   Deserialized type: XElementContainer  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [序列化包含 XElement 对象的对象图 (C#)](../../../../csharp/programming-guide/concepts/linq/serializing-object-graphs-that-contain-xelement-objects.md)
+## <a name="see-also"></a>请参阅
+
+- [序列化包含 XElement 对象的对象图 (C#)](../../../../csharp/programming-guide/concepts/linq/serializing-object-graphs-that-contain-xelement-objects.md)

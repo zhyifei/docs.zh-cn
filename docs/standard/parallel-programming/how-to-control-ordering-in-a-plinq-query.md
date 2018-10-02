@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: c67eccc7-004d-4b2f-987e-919cbbd62ef7
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 89e0abf711730326b6391184a2e3a1b55b303957
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: aaa08106126212345bb594cdeabe6e7281cd7b5e
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33580206"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46004294"
 ---
 # <a name="how-to-control-ordering-in-a-plinq-query"></a>如何：在 PLINQ 查询中控制排序
 这些示例展示了如何使用 <xref:System.Linq.ParallelEnumerable.AsOrdered%2A> 扩展方法控制 PLINQ 查询中的顺序。  
@@ -45,6 +45,7 @@ ms.locfileid: "33580206"
   
  若要运行此方法，请将它粘贴到 [PLINQ 数据样本](../../../docs/standard/parallel-programming/plinq-data-sample.md)项目的 PLINQDataSample 类中，再按 F5。  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Linq.ParallelEnumerable>  
- [并行 LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)
+## <a name="see-also"></a>请参阅
+
+- <xref:System.Linq.ParallelEnumerable>  
+- [并行 LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - keywords [C#], statements
 - statements [C#]
 ms.assetid: fad0c004-e282-4ec8-a127-bca7fd7a0b6f
-ms.openlocfilehash: 2485a6258913b1dae04c093fa74a8acf1aaa3ca3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c9f253f31a7376bf0429784a031188b91cc070df
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33269656"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43515822"
 ---
 # <a name="statement-keywords-c-reference"></a>语句关键字（C# 参考）
 语句是程序指令。 除了下表中的引用主题介绍的内容外，语句都是按照顺序执行。 下表列出了 C# 语句关键字。 有关不用任何关键字表示的语句的详细信息，请参阅[语句](../../../csharp/programming-guide/statements-expressions-operators/statements.md)。  
@@ -25,7 +25,8 @@ ms.locfileid: "33269656"
 [fixed 语句](../../../csharp/language-reference/keywords/fixed-statement.md)|[fixed](../../../csharp/language-reference/keywords/fixed-statement.md)|  
 |[lock 语句](../../../csharp/language-reference/keywords/lock-statement.md)|[lock](../../../csharp/language-reference/keywords/lock-statement.md)|  
   
-## <a name="see-also"></a>请参阅  
- [C# 参考](../../../csharp/language-reference/index.md)  
- [语句](../../../csharp/programming-guide/statements-expressions-operators/statements.md)  
- [C# 关键字](../../../csharp/language-reference/keywords/index.md)
+## <a name="see-also"></a>请参阅
+
+- [C# 参考](../../../csharp/language-reference/index.md)  
+- [语句](../../../csharp/programming-guide/statements-expressions-operators/statements.md)  
+- [C# 关键字](../../../csharp/language-reference/keywords/index.md)

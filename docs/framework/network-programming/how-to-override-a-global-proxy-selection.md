@@ -7,16 +7,15 @@ dev_langs:
 ms.assetid: 0da481a9-b414-4230-beb0-e3ceba882fe5
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: c10cff979a18d8e07a1e7089f96157e4c38f040e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2be271123e34f155a79269d3b810c50fe24a40c6
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33393901"
+ms.lasthandoff: 09/29/2018
+ms.locfileid: "47235927"
 ---
 # <a name="how-to-override-a-global-proxy-selection"></a>如何：重写全局代理选择
-此示例将 WebRequest 发送到 www.contoso.com，其在端口 80 上使用名为 `alternateproxy` 的代理服务器替代全局代理选择。  
+此示例将 WebRequest 发送到 `www.contoso.com`，其在端口 80 上使用名为 `alternateproxy` 的代理服务器替代全局代理选择。  
   
 ## <a name="example"></a>示例  
   
@@ -33,7 +32,7 @@ req.Proxy = New WebProxy("http://alternateproxy:80/")
 ## <a name="compiling-the-code"></a>编译代码  
  此示例需要：  
   
--   引用 System.Net 命名空间。  
+-   System.Net 命名空间的 [`using` 指令](~/docs/csharp/language-reference/keywords/using-directive.md)。  
   
 ## <a name="see-also"></a>请参阅  
  [使用应用程序协议](../../../docs/framework/network-programming/using-application-protocols.md)  

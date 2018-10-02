@@ -20,12 +20,12 @@ helpviewer_keywords:
 - parent table navigation in DataGrid
 - child tables [Windows Forms], dataGrid control
 ms.assetid: 85604bce-bc03-49d9-9030-dda8896c44b1
-ms.openlocfilehash: 1849fd0d81b00f1fa351d2a8cf1d2ed567e04401
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9f939175a77ff080b37491a36c15edbb8af15933
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33529474"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43462459"
 ---
 # <a name="datagrid-control-overview-windows-forms"></a>DataGrid 控件概述（Windows 窗体）
 > [!NOTE]
@@ -52,9 +52,9 @@ ms.locfileid: "33529474"
 ## <a name="binding-data-to-the-control"></a>将数据绑定到控件  
  若要使 <xref:System.Windows.Forms.DataGrid> 控件起作用，应在设计时使用 <xref:System.Windows.Forms.DataGrid.DataSource%2A> 和 <xref:System.Windows.Forms.DataGrid.DataMember%2A> 属性或在运行时使用 <xref:System.Windows.Forms.DataGrid.SetDataBinding%2A> 方法将该控件绑定到数据源。 通过这种绑定，可以使 <xref:System.Windows.Forms.DataGrid> 指向一个实例化的数据源对象，如 <xref:System.Data.DataSet> 或 <xref:System.Data.DataTable>。 <xref:System.Windows.Forms.DataGrid> 控件显示对数据执行操作所产生的结果。 大多数特定于数据的操作并不是通过 <xref:System.Windows.Forms.DataGrid> 执行的，而是通过数据源执行。  
   
- 如果绑定数据集中的数据通过任何机制进行了更新，那么 <xref:System.Windows.Forms.DataGrid> 控件会反映这些变化。 如果数据网格及其表样式和列样式有`ReadOnly`属性设置为`false`，可以通过更新数据集中<xref:System.Windows.Forms.DataGrid>控件。  
+ 如果绑定数据集中的数据通过任何机制进行了更新，那么 <xref:System.Windows.Forms.DataGrid> 控件会反映这些变化。 如果数据网格及其表样式和列样式`ReadOnly`属性设置为`false`，可以通过更新数据集中<xref:System.Windows.Forms.DataGrid>控件。  
   
- <xref:System.Windows.Forms.DataGrid> 一次只能显示一张表。 如果在表与表之间定义了父-子关系，则用户可以在相关表之间移动以选择要显示在 <xref:System.Windows.Forms.DataGrid> 控件中的表。 璝惠绑定<xref:System.Windows.Forms.DataGrid>控制转移到[!INCLUDE[vstecado](../../../../includes/vstecado-md.md)]数据源在设计时或运行的时，请参阅[如何： 将 Windows 窗体 DataGrid 控件绑定到数据源](../../../../docs/framework/winforms/controls/how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md)。  
+ <xref:System.Windows.Forms.DataGrid> 一次只能显示一张表。 如果在表与表之间定义了父-子关系，则用户可以在相关表之间移动以选择要显示在 <xref:System.Windows.Forms.DataGrid> 控件中的表。 有关绑定信息<xref:System.Windows.Forms.DataGrid>控制对[!INCLUDE[vstecado](../../../../includes/vstecado-md.md)]数据源在设计时或运行的时，请参阅[如何： 将 Windows 窗体 DataGrid 控件绑定到数据源](../../../../docs/framework/winforms/controls/how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md)。  
   
  <xref:System.Windows.Forms.DataGrid> 的有效数据源包括：  
   
@@ -90,14 +90,14 @@ ms.locfileid: "33529474"
 |多个相关表。|网格可以显示树视图以便选择表格，你也可指定网格显示父表。 通过父表中的记录，用户可导航到相关的子行。|  
   
 > [!NOTE]
->  使用 <xref:System.Data.DataRelation> 使数据集中的表相关。  另请参阅[超链接"http://msdn.microsoft.com/library/dbwcse3d(v=vs.110)"数据集中的关系](http://msdn.microsoft.com/library/dbwcse3d\(v=vs.110\))或[数据集中的关系](http://msdn.microsoft.com/library/dbwcse3d\(v=vs.120\))。  
+>  使用 <xref:System.Data.DataRelation> 使数据集中的表相关。  另请参阅[超链接"http://msdn.microsoft.com/library/dbwcse3d(v=vs.110)"中的数据集的关系](https://msdn.microsoft.com/library/dbwcse3d\(v=vs.110\))或[中的数据集的关系](https://msdn.microsoft.com/library/dbwcse3d\(v=vs.120\))。  
   
  当 <xref:System.Windows.Forms.DataGrid> 控件显示表并且 <xref:System.Windows.Forms.DataGrid.AllowSorting%2A> 属性设置为 `true` 时，可通过单击列标题对数据重新排序。 用户还可以添加行和编辑单元格。  
   
  通过使用父/子导航结构，向用户显示一组表之间的关系。 父表是最高级别的数据，子表是派生自父表中各个列表的数据表。 扩展器显示在包含子表的每个父行中。 单击扩展器将生成指向子表的类似 Web 链接的列表。 当用户选择某个链接时，将显示子表。 单击“显示/隐藏父行”图标（![显示/隐藏父行图标](../../../../docs/framework/winforms/controls/media/vbicon.gif "vbIcon")）会隐藏父表的相关信息，如果用户之前已经执行过隐藏操作，则会重新显示此信息。 用户可以单击后退按钮，返回到之前查看的表。  
   
 ## <a name="columns-and-rows"></a>列和行  
- <xref:System.Windows.Forms.DataGrid> 由 <xref:System.Windows.Forms.DataGrid> 控件的 <xref:System.Windows.Forms.DataGrid.TableStyles%2A> 属性中包含的 <xref:System.Windows.Forms.DataGridTableStyle> 对象集合组成。 表样式可能具有 <xref:System.Windows.Forms.DataGridTableStyle> 的 <xref:System.Windows.Forms.DataGridTableStyle.GridColumnStyles%2A> 属性中包含的 <xref:System.Windows.Forms.DataGridColumnStyle> 对象集合。 你可以编辑<xref:System.Windows.Forms.DataGrid.TableStyles%2A>和<xref:System.Windows.Forms.DataGridTableStyle.GridColumnStyles%2A>通过使用集合编辑器通过访问**属性**窗口。  
+ <xref:System.Windows.Forms.DataGrid> 由 <xref:System.Windows.Forms.DataGrid> 控件的 <xref:System.Windows.Forms.DataGrid.TableStyles%2A> 属性中包含的 <xref:System.Windows.Forms.DataGridTableStyle> 对象集合组成。 表样式可能具有 <xref:System.Windows.Forms.DataGridTableStyle> 的 <xref:System.Windows.Forms.DataGridTableStyle.GridColumnStyles%2A> 属性中包含的 <xref:System.Windows.Forms.DataGridColumnStyle> 对象集合。 您可以编辑<xref:System.Windows.Forms.DataGrid.TableStyles%2A>并<xref:System.Windows.Forms.DataGridTableStyle.GridColumnStyles%2A>属性使用通过访问的集合编辑器**属性**窗口。  
   
  任何与 <xref:System.Windows.Forms.DataGrid> 控件关的联 <xref:System.Windows.Forms.DataGridTableStyle> 都可通过 <xref:System.Windows.Forms.GridTableStylesCollection> 进行访问。 可利用 <xref:System.Windows.Forms.DataGridTableStyle> 集合编辑器在设计器中编辑 <xref:System.Windows.Forms.GridTableStylesCollection>，或以编程方式通过 <xref:System.Windows.Forms.DataGrid> 控件的 <xref:System.Windows.Forms.DataGrid.TableStyles%2A> 属性进行编辑。  
   
@@ -124,7 +124,7 @@ ms.locfileid: "33529474"
   
  列样式与数据集中列相关，同样，表样式也与数据表相关。 与每张表每次只能定义一种表样式相同，在特定的表样式中每列也只能定义一种列样式。 此关系在列的 <xref:System.Windows.Forms.DataGridColumnStyle.MappingName%2A> 属性中定义。  
   
- 如果你已经创建表样式，但未向其添加列样式，Visual Studio 将在运行时创建的窗体和网格时添加默认列样式。 但是，如果你已经创建了表样式，并向其添加任何列样式，Visual Studio 将不会创建任何列样式。 此外，还需要定义列样式，并向它们分配映射名称以便在网格中显示你希望显示的列。  
+ 如果您已经创建表样式，而无需向其中添加列样式，Visual Studio 将在运行时创建窗体和网格时添加默认列样式。 但是，如果已经创建了表样式，并向其添加任何列样式，Visual Studio 将不创建任何列样式。 此外，还需要定义列样式，并向它们分配映射名称以便在网格中显示你希望显示的列。  
   
  由于数据网格中包含的列是通过向它们分配列样式指定的，而尚未向列分配列样式，因此可包含网格中未显示的数据集中的数据列。 然而，由于数据列包含在数据集中，因此可采用编程方式来编辑未显示的数据。  
   

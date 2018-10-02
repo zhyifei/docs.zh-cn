@@ -7,12 +7,12 @@ helpviewer_keywords:
 - OR assignment operator (|=) [C#]
 - '|= operator (OR assignment) [C#]'
 ms.assetid: 8315b8cf-dd15-402f-92f0-c7db931696ca
-ms.openlocfilehash: 18246d013275c8d6c8ad7e05409387457afc3442
-ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
+ms.openlocfilehash: fe56005ce94656b5e8a075cddfb91dc0da096cf7
+ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2018
-ms.locfileid: "34171512"
+ms.lasthandoff: 09/21/2018
+ms.locfileid: "46562078"
 ---
 # <a name="-operator-c-reference"></a>|= 运算符（C# 参考）
 OR 赋值运算符。  
@@ -37,7 +37,8 @@ x = x | y
 ## <a name="example"></a>示例  
  [!code-csharp[csRefOperators#10](../../../csharp/language-reference/operators/codesnippet/CSharp/or-assignment-operator_1.cs)]  
   
-## <a name="see-also"></a>请参阅  
- [C# 参考](../../../csharp/language-reference/index.md)  
- [C# 编程指南](../../../csharp/programming-guide/index.md)  
- [C# 运算符](../../../csharp/language-reference/operators/index.md)
+## <a name="see-also"></a>请参阅
+
+- [C# 参考](../../../csharp/language-reference/index.md)  
+- [C# 编程指南](../../../csharp/programming-guide/index.md)  
+- [C# 运算符](../../../csharp/language-reference/operators/index.md)

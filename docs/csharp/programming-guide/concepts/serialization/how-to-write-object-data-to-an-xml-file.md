@@ -2,12 +2,12 @@
 title: 如何：将对象数据写入 XML 文件 (C#)
 ms.date: 07/20/2015
 ms.assetid: 7681eb98-703d-4005-a369-26a7bca0f894
-ms.openlocfilehash: 1c8bfd00452cee63456bc3bf64ccf4a0c61aa06e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b8fb60640c9bdc0337d45b6901b1be3979dbac1f
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33320543"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44259751"
 ---
 # <a name="how-to-write-object-data-to-an-xml-file-c"></a>如何：将对象数据写入 XML 文件 (C#)
 本示例使用 <xref:System.Xml.Serialization.XmlSerializer> 类从某个类将对象写入 XML 文件。  
@@ -61,7 +61,8 @@ public class XMLWrite
 ## <a name="net-framework-security"></a>.NET Framework 安全性  
  此示例在文件尚未存在时创建新文件。 如果某个应用程序需要创建文件，则该应用程序需要针对文件夹的 `Create` 访问权限。 如果文件已存在，则该应用程序只需要 `Write` 访问权限（这是较弱的特权）。 如有可能，在部署过程中创建文件，并且仅授予针对单个文件的 `Read` 访问权限（而不是针对 `Create` 文件夹的访问权限）会更加安全。  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.IO.StreamWriter>  
- [如何：读取 XML 文件中的对象数据 (C#)](../../../../csharp/programming-guide/concepts/serialization/how-to-read-object-data-from-an-xml-file.md)  
- [序列化 (C# )](../../../../csharp/programming-guide/concepts/serialization/index.md)
+## <a name="see-also"></a>请参阅
+
+- <xref:System.IO.StreamWriter>  
+- [如何：读取 XML 文件中的对象数据 (C#)](../../../../csharp/programming-guide/concepts/serialization/how-to-read-object-data-from-an-xml-file.md)  
+- [序列化 (C#)](../../../../csharp/programming-guide/concepts/serialization/index.md)

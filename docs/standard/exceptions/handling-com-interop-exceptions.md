@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: e6104aa8-8e5f-4069-b864-def85579c96c
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9f4429d50f6b7646cb75fad44957a98812282928
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0a17752257589ea4ee4d9e58182d4448f02f6460
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33571259"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "46937536"
 ---
 # <a name="handling-com-interop-exceptions"></a>处理 COM 互操作异常
 托管和非托管代码可协同工作来处理异常。 如果方法在托管代码中引发异常，公共语言运行时可将 HRESULT 传递至 COM 对象。 如果方法因返回失败 HRESULT 而在非托管代码中失败，运行时会引发可由托管代码捕获的异常。  
@@ -31,4 +31,5 @@ ms.locfileid: "33571259"
  如果方法在非托管代码中失败，则异常可以传递至托管代码段中。 主题 [HRESULTS 和异常](../../../docs/framework/interop/how-to-map-hresults-and-exceptions.md)中的表展示了如何将 HRESULTS 映射到运行时异常对象。  
 
 ## <a name="see-also"></a>请参阅
-[异常](index.md) 
+
+- [异常](index.md)

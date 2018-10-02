@@ -7,12 +7,12 @@ helpviewer_keywords:
 - left shift operator (<<) [C#]
 - << operator [C#]
 ms.assetid: a654eb56-1ff7-4bf3-9064-b631be0cdccc
-ms.openlocfilehash: bacb444c08b1f9d6e18278337015d8a427fdbe46
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 036acd6159bcf5ca1677ee6383c9db357625cd67
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33286170"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45677378"
 ---
 # <a name="ltlt-operator-c-reference"></a>&lt;&lt; 运算符（C# 参考）
 左移运算符 (`<<`) 将第一个操作数向左移动第二个操作数指定的位数。 第二个操作数的类型必须为 [int](../../../csharp/language-reference/keywords/int.md) 或预定义隐式数值转换为 `int` 的类型。  
@@ -32,7 +32,8 @@ ms.locfileid: "33286170"
 ## <a name="comments"></a>注释  
  请注意，`i<<1` 和 `i<<33` 的结果相同，因为 1 和 33 的低序五位相同。  
   
-## <a name="see-also"></a>请参阅  
- [C# 参考](../../../csharp/language-reference/index.md)  
- [C# 编程指南](../../../csharp/programming-guide/index.md)  
- [C# 运算符](../../../csharp/language-reference/operators/index.md)
+## <a name="see-also"></a>请参阅
+
+- [C# 参考](../../../csharp/language-reference/index.md)  
+- [C# 编程指南](../../../csharp/programming-guide/index.md)  
+- [C# 运算符](../../../csharp/language-reference/operators/index.md)

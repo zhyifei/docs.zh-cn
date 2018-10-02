@@ -7,12 +7,12 @@ helpviewer_keywords:
 - exceptions [C#], creating
 - exceptions [C#], throwing
 ms.assetid: 6bbba495-a115-4c6d-90cc-1f4d7b5f39e2
-ms.openlocfilehash: 91676830d88ddee79c72211ab43b7be32fa8724e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2e792a230ccead5d9a73f9b78a83d57738c31085
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33336051"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44260066"
 ---
 # <a name="creating-and-throwing-exceptions-c-programming-guide"></a>创建和引发异常（C# 编程指南）
 异常用于指示在运行程序时发生了错误。 此时将创建一个描述错误的异常对象，然后使用 [throw](../../../csharp/language-reference/keywords/throw.md) 关键字引发。 然后，运行时搜索最兼容的异常处理程序。  
@@ -64,8 +64,9 @@ ms.locfileid: "33336051"
 ## <a name="c-language-specification"></a>C# 语言规范  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>请参阅  
- [C# 编程指南](../../../csharp/programming-guide/index.md)  
- [异常和异常处理](../../../csharp/programming-guide/exceptions/index.md)  
- [异常层次结构](http://msdn.microsoft.com/library/f7d68675-be06-40fb-a555-05f0c5a6f66b)  
- [异常处理](../../../csharp/programming-guide/exceptions/exception-handling.md)
+## <a name="see-also"></a>请参阅
+
+- [C# 编程指南](../../../csharp/programming-guide/index.md)  
+- [异常和异常处理](../../../csharp/programming-guide/exceptions/index.md)  
+- [异常层次结构](https://msdn.microsoft.com/library/f7d68675-be06-40fb-a555-05f0c5a6f66b)  
+- [异常处理](../../../csharp/programming-guide/exceptions/exception-handling.md)

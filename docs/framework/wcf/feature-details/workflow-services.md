@@ -2,12 +2,12 @@
 title: 工作流服务
 ms.date: 03/30/2017
 ms.assetid: 7b05c766-f181-425d-9a3d-2a5e150c85f7
-ms.openlocfilehash: a8871685007cdb81848848da5c6b3483d014bb20
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e7295041fe4b17e7e2b1560704badf20992d4b92
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33499188"
+ms.lasthandoff: 09/27/2018
+ms.locfileid: "47397236"
 ---
 # <a name="workflow-services"></a>工作流服务
 使用 [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]，您可以在 XAML 中以声明方式充分描述基于工作流的服务。 您完全可以在 XAML 中定义实现服务的工作流并描述服务所公开的终结点。 本节中的主题详细描述支持以声明方式编写服务的编程模型。  
@@ -30,9 +30,6 @@ ms.locfileid: "33499188"
   
  [无序消息处理](../../../../docs/framework/wcf/feature-details/out-of-order-message-processing.md)  
  说明如何将服务配置为接受无序消息。  
-  
- [如何：创建可调用其他工作流服务的工作流服务](../../../../docs/framework/wcf/feature-details/how-to-create-a-workflow-service-that-calls-another-workflow-service.md)  
- 描述如何从其他工作流服务中同步调用工作流服务。  
   
  [协定优先工作流服务开发](../../../../docs/framework/windows-workflow-foundation/contract-first-workflow-service-development.md)  
  说明如何基于现有服务协定创建工作流服务。  

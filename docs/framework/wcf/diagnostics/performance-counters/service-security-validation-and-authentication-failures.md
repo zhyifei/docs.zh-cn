@@ -3,13 +3,12 @@ title: 服务：Security Validation and Authentication Failures（安全验证�
 ms.date: 03/30/2017
 ms.assetid: 55c98268-b1ad-459d-851b-25ef52248187
 author: BrucePerlerMS
-manager: mbaldwin
-ms.openlocfilehash: e160b014b7aa7586566073b800084d44be15ccaf
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4c74cb1962bbc0f03ac33d8fcc7b10052bec8273
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33474397"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47197067"
 ---
 # <a name="service-security-validation-and-authentication-failures"></a>服务：Security Validation and Authentication Failures（安全验证和身份验证失败次数）
 计数器名称：Security Validation and Authentication Failures（安全验证和身份验证失败次数）  

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Visual C#, programming concepts
 - C# language, concepts
 ms.assetid: ac0f23a2-6bf3-4077-be99-538ae5fd3bc5
-ms.openlocfilehash: f6500fa5f8f5022c4e910da894f182dcc5525be5
-ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
+ms.openlocfilehash: a145e3e1b73db6fdfbc5f1408231e78f55b559d1
+ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36207373"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45515127"
 ---
 # <a name="c-programming-guide"></a>C# 编程指南
 此部分详细介绍了 C# 语言主要功能，以及通过 .NET Framework 可以在 C# 中使用的功能。  
@@ -69,7 +69,7 @@ ms.locfileid: "36207373"
  [XML 文档注释](../../csharp/programming-guide/xmldoc/xml-documentation-comments.md)  
   
 ## <a name="platform-sections"></a>平台部分  
- [应用程序域（C# 和 Visual Basic）](http://msdn.microsoft.com/library/1bc2939a-79db-4a4a-a677-4a2ce6de2b1e)  
+ [应用程序域](../../framework/app-domains/application-domains.md)  
   
  [程序集和全局程序集缓存](../../csharp/programming-guide/concepts/assemblies-gac/index.md)  
   
@@ -85,6 +85,7 @@ ms.locfileid: "36207373"
   
  [反射](../../csharp/programming-guide/concepts/reflection.md)  
   
-## <a name="see-also"></a>请参阅  
- [C# 参考](../../csharp/language-reference/index.md)  
- [C#](../../csharp/index.md)
+## <a name="see-also"></a>请参阅
+
+- [C# 参考](../../csharp/language-reference/index.md)  
+- [C#](../../csharp/index.md)

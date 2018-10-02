@@ -8,12 +8,12 @@ helpviewer_keywords:
 - dynamic properties
 - user preferences [Windows Forms], tracking
 ms.assetid: 0dd8bca5-a6bf-4ac4-8eec-5725d08b38dc
-ms.openlocfilehash: a827eeeca3f9d2719b4467bd19e66b3a40eb2c1f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e38be762fbfdaccc7d5ba01a1f24f5f3086ca8bf
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33520456"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43503592"
 ---
 # <a name="application-settings-overview"></a>应用程序设置概述
 本主题讨论如何代表你的应用程序和你的用户创建和存储设置数据。  
@@ -53,7 +53,7 @@ ms.locfileid: "33520456"
  <xref:System.Configuration.LocalFileSettingsProvider>  
  <xref:System.Configuration.IPersistComponentSettings>  
  [如何：验证应用程序设置](../../../../docs/framework/winforms/advanced/how-to-validate-application-settings.md)  
- [管理应用程序设置 (.NET)](http://msdn.microsoft.com/library/35254321-ad14-47d9-b8c6-39ab3203c5d9)  
+ [管理应用程序设置 (.NET)](https://msdn.microsoft.com/library/35254321-ad14-47d9-b8c6-39ab3203c5d9)  
  [如何：在运行时使用 C# 读取设置](../../../../docs/framework/winforms/advanced/how-to-read-settings-at-run-time-with-csharp.md)  
  [使用应用程序设置和用户设置](../../../../docs/framework/winforms/advanced/using-application-settings-and-user-settings.md)  
  [应用程序设置体系结构](../../../../docs/framework/winforms/advanced/application-settings-architecture.md)  

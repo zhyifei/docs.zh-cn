@@ -4,12 +4,12 @@ description: 了解任意类型 .NET 项目或文件的自定义模板。
 author: guardrex
 ms.author: mairaw
 ms.date: 08/11/2017
-ms.openlocfilehash: fe888d0bfeeb51d77b73ec481b93fec9b40aa6ad
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5cb160683ad373f1192945163495bf3e7957567b
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33217316"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43525962"
 ---
 # <a name="custom-templates-for-dotnet-new"></a>dotnet new 自定义模板
 
@@ -153,8 +153,8 @@ dotnet new <TEMPLATE>
 
 ## <a name="see-also"></a>请参阅
 
-[创建 dotnet new 自定义模板（教程）](../tutorials/create-custom-template.md)  
-[dotnet/templating GitHub 存储库 Wiki](https://github.com/dotnet/templating/wiki)  
-[dotnet/dotnet-template-samples GitHub 存储库](https://github.com/dotnet/dotnet-template-samples)  
-[如何创建自己的 dotnet new 模板](https://blogs.msdn.microsoft.com/dotnet/2017/04/02/how-to-create-your-own-templates-for-dotnet-new/)  
-[JSON 架构存储中的 template.json 架构](http://json.schemastore.org/template)  
+* [创建 dotnet new 自定义模板（教程）](../tutorials/create-custom-template.md)  
+* [dotnet/templating GitHub 存储库 Wiki](https://github.com/dotnet/templating/wiki)  
+* [dotnet/dotnet-template-samples GitHub 存储库](https://github.com/dotnet/dotnet-template-samples)  
+* [如何创建自己的 dotnet new 模板](https://blogs.msdn.microsoft.com/dotnet/2017/04/02/how-to-create-your-own-templates-for-dotnet-new/)  
+* [JSON 架构存储中的 template.json 架构](http://json.schemastore.org/template)  

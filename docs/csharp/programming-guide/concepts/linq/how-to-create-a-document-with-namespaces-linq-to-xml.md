@@ -2,12 +2,12 @@
 title: 如何：使用命名空间创建文档 (C#) (LINQ to XML)
 ms.date: 07/20/2015
 ms.assetid: 37e63c57-f86d-47ac-88a7-2c2d107def30
-ms.openlocfilehash: ab572e0af79d51205167ad60b1b80e8ba6b43707
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0fa19af47847b0d6b804528af3f766c9775e74f3
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33330686"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43863682"
 ---
 # <a name="how-to-create-a-document-with-namespaces-c-linq-to-xml"></a>如何：使用命名空间创建文档 (C#) (LINQ to XML)
 本主题演示如何创建包含命名空间的文档。  
@@ -58,7 +58,7 @@ Console.WriteLine(root);
 ## <a name="example"></a>示例  
  下面的示例演示如何创建一个包含两个命名空间的文档。 一个是默认命名空间。 另一个是具有前缀的命名空间。  
   
- 通过在根元素中包括命名空间属性，命名空间进行了序列化，从而 http://www.adventure-works.com 是默认命名空间，而 www.fourthcoffee.com 用“fc”前缀进行了序列化。 若要创建一个声明默认命名空间的属性，请创建一个名称为“xmlns”的属性，而无需命名空间。 该属性的值即是默认命名空间 URI。  
+ 通过在根元素中包括命名空间属性，命名空间进行了序列化，从而 `http://www.adventure-works.com` 是默认命名空间，而 `www.fourthcoffee.com` 用“fc”前缀进行了序列化。 若要创建一个声明默认命名空间的属性，请创建一个名称为“xmlns”的属性，而无需命名空间。 该属性的值即是默认命名空间 URI。  
   
 ```csharp  
 // The http://www.adventure-works.com namespace is forced to be the default namespace.  
@@ -142,5 +142,6 @@ Console.WriteLine(root);
 </aw:Root>  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [使用 XML 命名空间 (C#)](../../../../csharp/programming-guide/concepts/linq/working-with-xml-namespaces.md)
+## <a name="see-also"></a>请参阅
+
+- [使用 XML 命名空间 (C#)](../../../../csharp/programming-guide/concepts/linq/working-with-xml-namespaces.md)

@@ -8,12 +8,12 @@ dev_langs:
 ms.assetid: a4fb291f-5630-49ba-a49a-5b66c3b71e49
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ad649e61f4f006103d38a998eece174a07889828
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9031f5df0d0f48dc2844cdfd0654ee4ab876cc22
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33569715"
+ms.lasthandoff: 09/29/2018
+ms.locfileid: "47399042"
 ---
 # <a name="reading-an-xml-document-into-the-dom"></a>将 XML 文档读入 DOM
 XML 信息从不同的格式读入内存。 读取源包括字符串、流、URL、文本读取器或 <xref:System.Xml.XmlReader> 的派生类。  
@@ -70,5 +70,6 @@ public class Sample
 }  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [XML 文档对象模型 (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+## <a name="see-also"></a>请参阅
+
+- [XML 文档对象模型 (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

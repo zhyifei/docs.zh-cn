@@ -7,20 +7,20 @@ helpviewer_keywords:
 - browser hosting support [WPF]
 - WPF browser hosting support APIs [WPF]
 ms.assetid: 82c133a8-d760-45fb-a2b9-3a997537f1d4
-ms.openlocfilehash: bff2b51fbc8fec6e7cd2b24700d1c4dc38c007f6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f542da55b6cde2d140e1f9f391e6b2f3d6fe172f
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33550015"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43863730"
 ---
 # <a name="native-wpf-browser-hosting-support-apis"></a>承载支持 API 的本机 WPF 浏览器
-承载的[!INCLUDE[TLA#tla_titlewinclient](../../../../includes/tlasharptla-titlewinclient-md.md)]Web 浏览器中的应用程序可帮助实现活动文档服务器 (也称为 DocObject) 超出 WPF 主机注册的过程。 [!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)] 可以直接激活并将与活动文档集成。 用于承载 Xbap 和 Mozilla 浏览器中的宽松型 XAML 文档的[!INCLUDE[TLA#tla_titlewinclient](../../../../includes/tlasharptla-titlewinclient-md.md)]提供一个 NPAPI 插件，它提供类似的托管环境以[!INCLUDE[TLA#tla_titlewinclient](../../../../includes/tlasharptla-titlewinclient-md.md)]活动文档服务器作为[!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)]未。 但是，在其他浏览器中的最简单的可行方法，用于托管 Xbap 和 XAML 文档，并且独立应用程序是通过 Internet Explorer Web 浏览器控件。 Web 浏览器控件提供复杂活动文档服务器宿主环境中，但它使其自己的主机可以在自定义和扩展该环境，并直接与当前的活动文档对象进行通信。  
+托管的[!INCLUDE[TLA#tla_titlewinclient](../../../../includes/tlasharptla-titlewinclient-md.md)]Web 浏览器中的应用程序可以通过注册从 WPF 宿主的活动文档服务器 (也称为 DocObject) 加速。 [!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)] 可以直接激活，并将与活动文档集成。 Xbap 和 Mozilla 浏览器中的松散 XAML 文档的托管[!INCLUDE[TLA#tla_titlewinclient](../../../../includes/tlasharptla-titlewinclient-md.md)]提供了一个 NPAPI 插件，它提供到类似的宿主环境[!INCLUDE[TLA#tla_titlewinclient](../../../../includes/tlasharptla-titlewinclient-md.md)]活动文档服务器作为[!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)]does。 但是，在其他浏览器中的最简单的实用方法，以承载 Xbap 和 XAML 文档，独立应用程序是通过 Internet Explorer Web 浏览器控件。 Web 浏览器控件提供复杂活动文档服务器宿主环境，但它使自己的主机以自定义和扩展该环境，并直接与当前活动文档对象进行通信。  
   
- [!INCLUDE[TLA#tla_titlewinclient](../../../../includes/tlasharptla-titlewinclient-md.md)]活动文档服务器实现多个常见的托管接口，包括[IOleObject](http://go.microsoft.com/fwlink/?LinkId=162049)， [IOleDocument](http://go.microsoft.com/fwlink/?LinkId=162050)， [IOleInPlaceActiveObject](http://go.microsoft.com/fwlink/?LinkId=162051)，[IPersistMoniker](http://go.microsoft.com/fwlink/?LinkId=162045)， [IOleCommandTarget](http://go.microsoft.com/fwlink/?LinkId=162047)。 当托管在 Web 浏览器控件，这些接口可以是从返回的对象的查询[IWebBrowser2::Document](http://go.microsoft.com/fwlink/?LinkId=162048)属性。  
+ [!INCLUDE[TLA#tla_titlewinclient](../../../../includes/tlasharptla-titlewinclient-md.md)]活动文档服务器实现几个常见的托管接口，包括[IOleObject](https://go.microsoft.com/fwlink/?LinkId=162049)， [IOleDocument](https://go.microsoft.com/fwlink/?LinkId=162050)， [IOleInPlaceActiveObject](https://go.microsoft.com/fwlink/?LinkId=162051)，[IPersistMoniker](https://go.microsoft.com/fwlink/?LinkId=162045)， [IOleCommandTarget](https://go.microsoft.com/fwlink/?LinkId=162047)。 Web 浏览器控件中托管时，这些接口只能从返回的对象的查询[IWebBrowser2::Document](https://go.microsoft.com/fwlink/?LinkId=162048)属性。  
   
 ## <a name="iolecommandtarget"></a>不需要此行为  
- WPF 活动文档服务器实现[IOleCommandTarget](http://go.microsoft.com/fwlink/?LinkId=162047)支持大量导航相关和特定于浏览器的命令 （具有 null 命令组 GUID） 的标准 OLE 命令组。 此外，它将识别名 CGID_PresentationHost 的自定义命令组。 目前，没有在此组中定义的一个命令。  
+ WPF 活动文档服务器实现[IOleCommandTarget](https://go.microsoft.com/fwlink/?LinkId=162047)支持很多与导航相关的和特定于浏览器的命令 （具有空命令组 GUID） 的标准 OLE 命令组。 此外，它会识别了名为 CGID_PresentationHost 的自定义命令组。 目前，没有定义此组中只有一个命令。  
   
 ```  
 DEFINE_GUID(CGID_PresentationHost, 0xd0288c55, 0xd6, 0x4f5e, 0xa8, 0x51, 0x79, 0xde, 0xc5, 0x1b, 0x10, 0xec);  
@@ -29,7 +29,7 @@ enum PresentationHostCommands {
 };  
 ```  
   
- PHCMDID_TABINTO 指示 PresentationHost 将焦点切换到其内容，具体取决于 Shift 键的状态中的第一个或最后一个可获得焦点元素。  
+ PHCMDID_TABINTO 指示 PresentationHost 将焦点切换到在其内容，具体取决于 Shift 键的状态中的第一个或最后一个可获得焦点元素。  
   
 ## <a name="in-this-section"></a>本节内容  
  [IEnumRAWINPUTDEVICE](../../../../docs/framework/wpf/app-development/ienumrawinputdevice.md)  

@@ -2,12 +2,12 @@
 title: LINQ to XML 概述 (C#)
 ms.date: 07/20/2015
 ms.assetid: 716b94d3-0091-4de1-8e05-41bc069fa9dd
-ms.openlocfilehash: 318c5494134fd1dd3ac2adbf538d693ad4a5dbf8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5b557c95993d7f1e907a8eb6ef1e5ec23a2988ab
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33339376"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43856616"
 ---
 # <a name="linq-to-xml-overview-c"></a>LINQ to XML 概述 (C#)
 在很多环境中，XML 已广泛采用为格式化数据的方式。 例如，在 Web 上，在配置文件、Microsoft Office Word 文件以及数据库中，都可以看到 XML。  
@@ -28,7 +28,7 @@ ms.locfileid: "33339376"
   
  [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 的另一个优势是通过将查询结果用作 <xref:System.Xml.Linq.XElement> 和 <xref:System.Xml.Linq.XAttribute> 对象构造函数的参数，实现了一种功能强大的创建 XML 树的方法。 此方法称为*功能构造*，可使开发人员轻松地将 XML 树从一个形状转换成另一个形状。  
   
- 例如，你可能有一个[示例 XML 文件：典型采购订单 (LINQ to XML)](http://msdn.microsoft.com/library/0606c09f-6e43-4f8d-95c8-e8e2e08d2348) 中所述的典型 XML 采购订单。 通过使用 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]，可以运行以下查询，以获取采购单每个项元素的部件号属性值：  
+ 例如，你可能有一个[示例 XML 文件：典型采购订单 (LINQ to XML)](sample-xml-file-typical-purchase-order-linq-to-xml-1.md) 中所述的典型 XML 采购订单。 通过使用 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]，可以运行以下查询，以获取采购单每个项元素的部件号属性值：  
   
 ```csharp  
 IEnumerable<string> partNos =  
@@ -87,6 +87,7 @@ new XElement("Contacts",
   
  有关详细信息，请参阅[创建 XML 树 (C#)](../../../../csharp/programming-guide/concepts/linq/creating-xml-trees.md)。  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Xml.Linq>  
- [入门 (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/getting-started-linq-to-xml.md)
+## <a name="see-also"></a>请参阅
+
+- <xref:System.Xml.Linq>  
+- [入门 (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/getting-started-linq-to-xml.md)

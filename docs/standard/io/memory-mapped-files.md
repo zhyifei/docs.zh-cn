@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: a483d1b5-64aa-45b6-86ef-11b859f7f02e
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1cf2d7f36dbfffe1c86e32eec5137840837612f4
-ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
+ms.openlocfilehash: 5c35bbc8d4223e9404371665e7666715fa357154
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36208138"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43865834"
 ---
 # <a name="memory-mapped-files"></a>内存映射文件
 内存映射文件包含虚拟内存中文件的内容。 借助文件和内存空间之间的这种映射，应用（包括多个进程）可以直接对内存执行读取和写入操作，从而修改文件。 自 [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] 起，可以使用托管代码访问内存映射文件，就像本机 Windows 函数访问内存映射文件（如[管理内存映射文件](https://msdn.microsoft.com/library/ms810613.aspx)所述）一样。  
@@ -144,5 +144,6 @@ Process C says: True
  [!code-csharp[System.IO.MemoryMappedFiles_IPC_B#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.io.memorymappedfiles_ipc_b/cs/program.cs#1)]
  [!code-vb[System.IO.MemoryMappedFiles_IPC_B#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.io.memorymappedfiles_ipc_b/vb/program.vb#1)]  
   
-## <a name="see-also"></a>请参阅  
- [文件和流 I/O](../../../docs/standard/io/index.md)
+## <a name="see-also"></a>请参阅
+
+- [文件和流 I/O](../../../docs/standard/io/index.md)

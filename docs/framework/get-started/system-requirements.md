@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 298275e2-da1d-4618-9f74-6a3567832350
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 22e1ee593fd9599fb1fc1ab7825c79f410f109c2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 909b9369aba6b22899ae3fe7ac15eb470c5c2697
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33395887"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43509173"
 ---
 # <a name="net-framework-system-requirements"></a>.NET Framework 系统要求
 
@@ -73,7 +73,7 @@ ms.locfileid: "33395887"
 
 - .NET Framework 4 还支持 IA64 平台。
 
-- 对于所有平台，我们都建议升级到最新的 Windows Service Pack 并安装 [Windows Update 网站](http://go.microsoft.com/fwlink/?LinkId=168461)上提供的关键更新，从而确保实现最佳兼容性和安全性。
+- 对于所有平台，我们都建议升级到最新的 Windows Service Pack 并安装 [Windows Update 网站](https://go.microsoft.com/fwlink/?LinkId=168461)上提供的关键更新，从而确保实现最佳兼容性和安全性。
 
 - 在 64 位操作系统上，.NET Framework 支持 WOW64（在 64 位计算机上进行 32 位处理）和本机 64 位处理。
 
@@ -81,6 +81,7 @@ ms.locfileid: "33395887"
 
 | 操作系统 | 支持的版本 | 随 OS 预安装 | 可安装单独 |
 | ---------------- | ------------------ | ------------------------ | ---------------------- |
+| Windows Server 版本 1803 | 64 位 | .NET Framework 4.7.2 | -- |
 | Windows Server 版本 1709 | 64 位 | .NET Framework 4.7.1 | .NET Framework 4.7.2 | 
 | Windows 2016 Server | 64 位 | [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] | .NET Framework 4.7<br/><br/> .NET Framework 4.7.1<br/><br/>.NET Framework 4.7.2 |
 | Windows Server 2012 R2 | 64 位 | [!INCLUDE[net_v451](../../../includes/net-v451-md.md)] | [!INCLUDE[net_v452](../../../includes/net-v452-md.md)]<br /><br /> [!INCLUDE[net_v46](../../../includes/net-v46-md.md)]<br /><br /> [!INCLUDE[net_v461](../../../includes/net-v461-md.md)]<br /><br /> [!INCLUDE[net_v462](../../../includes/net-v462-md.md)]<br /><br />.NET Framework 4.7<br/><br/> .NET Framework 4.7.1<br/><br/>.NET Framework 4.7.2 |
@@ -98,7 +99,7 @@ ms.locfileid: "33395887"
 
 - 在 Windows Server 2008 SP2 上，.NET Framework 在服务器核心角色中不受支持。
 
-- 对于所有平台，我们都建议升级到最新的 Windows Service Pack 并安装 [Windows Update 网站](http://go.microsoft.com/fwlink/?LinkId=168461)上提供的关键更新，从而确保实现最佳兼容性和安全性。 某些操作系统上可能需要安装最新的 Windows Service Pack。
+- 对于所有平台，我们都建议升级到最新的 Windows Service Pack 并安装 [Windows Update 网站](https://go.microsoft.com/fwlink/?LinkId=168461)上提供的关键更新，从而确保实现最佳兼容性和安全性。 某些操作系统上可能需要安装最新的 Windows Service Pack。
 
 - 在 64 位操作系统上，.NET Framework 支持 WOW64（在 64 位计算机上进行 32 位处理）和本机 64 位处理。
 

@@ -5,15 +5,15 @@ helpviewer_keywords:
 - Toolbox, adding controls
 - ActiveX controls, adding to Toolbox
 ms.assetid: ec675027-866f-4c05-aaf2-92fca5200f9a
-ms.openlocfilehash: e5fe4109edfcb96704f3a39e4dce5aa7a4287e33
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8faa8fc86312df2f03ec7a70a488d0e7c12b394b
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33640524"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45668309"
 ---
 # <a name="how-to-work-with-activex-controls-visual-basic"></a>如何：使用 ActiveX 控件 (Visual Basic)
-ActiveX 控件是 COM 组件或可以插入到网页或其他应用程序来重用他人编写的打包的功能的对象。 你可以使用 Visual Basic 6.0 和早期版本开发的 ActiveX 控件以将功能添加到**工具箱**的 Visual Studio。  
+ActiveX 控件是 COM 组件或对象可以插入到网页或其他应用程序重复使用他人编写的打包的功能。 可以使用 Visual Basic 6.0 和早期版本开发的 ActiveX 控件添加到功能**工具箱**的 Visual Studio。  
   
 ### <a name="to-add-activex-controls-to-the-toolbox"></a>将 ActiveX 控件添加到工具箱  
   
@@ -23,16 +23,17 @@ ActiveX 控件是 COM 组件或可以插入到网页或其他应用程序来重�
   
 2.  单击**COM 组件**选项卡。  
   
-3.  选择想要使用，并依次的 ActiveX 控件旁边的复选框**确定**。  
+3.  选择你想要使用，然后单击该 ActiveX 控件旁边的复选框**确定**。  
   
-     新控件与其他工具中一起出现**工具箱**。  
+     与其他工具中显示该新控件**工具箱**。  
   
     > [!NOTE]
-    >  Aximp 实用工具可用于手动创建 ActiveX 控件的互操作程序集。 有关详细信息，请参阅[Aximp.exe （Windows 窗体 ActiveX 控件导入程序）](http://msdn.microsoft.com/library/482c0d83-7144-4497-b626-87d2351b78d0)。  
+    >  可以使用 Aximp 实用程序手动创建的 ActiveX 控件的互操作程序集。 有关详细信息，请参阅[Aximp.exe （Windows 窗体 ActiveX 控件导入程序）](../../../framework/tools/aximp-exe-windows-forms-activex-control-importer.md)。  
   
-## <a name="see-also"></a>请参阅  
- [COM 互操作](../../../visual-basic/programming-guide/com-interop/index.md)  
- [如何：向 Windows 窗体添加 ActiveX 控件](../../../framework/winforms/controls/how-to-add-activex-controls-to-windows-forms.md)  
- [Aximp.exe（Windows 窗体 ActiveX 控件导入程序）](http://msdn.microsoft.com/library/482c0d83-7144-4497-b626-87d2351b78d0)  
- [在 Windows 窗体上托管 ActiveX 控件时的注意事项](../../../framework/winforms/controls/considerations-when-hosting-an-activex-control-on-a-windows-form.md)  
- [互操作性疑难解答](../../../visual-basic/programming-guide/com-interop/troubleshooting-interoperability.md)
+## <a name="see-also"></a>请参阅
+
+- [COM 互操作](../../../visual-basic/programming-guide/com-interop/index.md)  
+- [如何：向 Windows 窗体添加 ActiveX 控件](../../../framework/winforms/controls/how-to-add-activex-controls-to-windows-forms.md)  
+- [Aximp.exe（Windows 窗体 ActiveX 控件导入程序）](../../../framework/tools/aximp-exe-windows-forms-activex-control-importer.md)  
+- [在 Windows 窗体上托管 ActiveX 控件时的注意事项](../../../framework/winforms/controls/considerations-when-hosting-an-activex-control-on-a-windows-form.md)  
+- [互操作性疑难解答](../../../visual-basic/programming-guide/com-interop/troubleshooting-interoperability.md)

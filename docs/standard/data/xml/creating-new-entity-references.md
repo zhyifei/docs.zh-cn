@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: a42f81b3-0403-4e34-b346-7d2129804e54
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0fefea6f8dfd74dfd31c7c07a158e4935ab0e02c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 67fdbcdbff64bcd91c80fbeaec0c41982b68d98f
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33568441"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47203366"
 ---
 # <a name="creating-new-entity-references"></a>创建新实体引用
 CreateEntityReference 方法新建 XmlEntityReference 节点。 XML 文档对象模型 (DOM) 查看是否已声明了引用的实体名称。 如果已声明，从实体声明节点复制 XmlEntityReference 节点的子节点。 如果没有匹配的实体声明，则附加一个空的文本节点作为实体引用节点的唯一子级。 由于 XmlEntityReference 节点的子节点是其他节点的副本，因此这些子节点是只读的，无法修改。  
@@ -22,5 +22,6 @@ CreateEntityReference 方法新建 XmlEntityReference 节点。 XML 文档对象
   
  尽管 XmlDataDocument 是 XmlDocument 的派生类，但 XmlDataDocument 不支持创建实体引用。 这是因为 EntityReference 子级是只读的。 EntityReference 节点的子级可以跨越多个区域。 在这种情况下，行中与包含 EntityReference 一部分的区域关联的部分是只读的。  
   
-## <a name="see-also"></a>请参阅  
- [XML 文档对象模型 (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+## <a name="see-also"></a>请参阅
+
+- [XML 文档对象模型 (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

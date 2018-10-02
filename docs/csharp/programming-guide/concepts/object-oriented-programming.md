@@ -2,21 +2,21 @@
 title: 面向对象的编程 (C#)
 ms.date: 07/20/2015
 ms.assetid: 89574786-65ef-4335-88bc-fbacd094f183
-ms.openlocfilehash: 0dee6edf966e8e2a3e430e60f1c3d51354d08bf3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8e211fec25ceb2e8e42620ff3f421e6943d8b5e5
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33340588"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43522150"
 ---
 # <a name="object-oriented-programming-c"></a>面向对象的编程 (C#)
-C# 提供对面向对象的编程（包括封装、继承和多形性）的完整支持。  
+C# 提供对面向对象的编程（包括封装、继承和多态性）的完整支持。  
   
  “封装”意味着将一组相关属性、方法和其他成员视为一个单元或对象。  
   
  “继承”描述基于现有类创建新类的能力。  
   
- 多形性意味着可以有多个可互换使用的类，即使每个类以不同方式实现相同属性或方法。  
+ 多态性意味着可以有多个可互换使用的类，即使每个类以不同方式实现相同属性或方法。  
   
  本节介绍下列概念：  
   
@@ -307,7 +307,7 @@ var sampleObject =
  从基类继承：  
   
 ```csharp  
-class DerivedClass:BaseClass{}  
+class DerivedClass:BaseClass {}  
 ```  
   
  默认情况下，可以继承所有类。 但你可以指定不得将某个类用作基类，也可以创建只能用作基类的类。  
@@ -434,5 +434,6 @@ class SampleClass
   
 -   [委托](../../../csharp/language-reference/keywords/delegate.md)  
   
-## <a name="see-also"></a>请参阅  
- [C# 编程指南](../../../csharp/programming-guide/index.md)
+## <a name="see-also"></a>请参阅
+
+- [C# 编程指南](../../../csharp/programming-guide/index.md)

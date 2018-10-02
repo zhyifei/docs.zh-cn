@@ -2,12 +2,12 @@
 title: 查找默认段落样式 (C#)
 ms.date: 07/20/2015
 ms.assetid: be102177-8ab0-444a-b671-7023e555ffdb
-ms.openlocfilehash: e29ca281e1867a72a76a28765912c39675ca0f27
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 77eb008ba6419e58541b60ac1ca7c1ef0344e316
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33335947"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43800246"
 ---
 # <a name="finding-the-default-paragraph-style-c"></a>查找默认段落样式 (C#)
 在 WordprocessingML 文档中操作信息教程中的第一项任务是在文档中查找默认段落样式。  
@@ -88,5 +88,6 @@ The default style is: Normal
   
 -   [检索段落及其样式 (C#)](../../../../csharp/programming-guide/concepts/linq/retrieving-the-paragraphs-and-their-styles.md)  
   
-## <a name="see-also"></a>请参阅  
- [教程：操作 WordprocessingML 文档中的内容](http://msdn.microsoft.com/library/2696355e-4f83-4eaf-91b2-baa721f42fb4)
+## <a name="see-also"></a>请参阅
+
+- [教程：操作 WordprocessingML 文档中的内容](../../../../csharp/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)

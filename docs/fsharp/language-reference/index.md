@@ -1,22 +1,21 @@
 ---
 title: F# 语言参考
-description: 'F # 语言功能从查找信息语言令牌、 概念、 类型、 表达式和编译器支持的结构主题对此引用。'
+description: '查找 F # 语言中的功能信息语言标记、 概念、 类型、 表达式和编译器支持的结构的主题对此引用。'
 ms.date: 05/16/2016
-ms.openlocfilehash: 1c25ab4a4936b532a21aed8b2b0202fec1dd7133
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: adce37ee393673b7611ad24f385c8b8106f6ce86
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/15/2018
+ms.locfileid: "45646410"
 ---
 # <a name="f-language-reference"></a>F# 语言参考
 
-本部分是对 F # 语言，面向.NET 多范例编程语言的引用。 F# 语言支持函数式、命令式、面向对象的编程模式。
-
+本部分是对 F # 语言，面向.NET 的多模式编程语言的引用。 F# 语言支持函数式、命令式、面向对象的编程模式。
 
 ## <a name="f-tokens"></a>F# 标记
+
 下表显示参考主题，这些主题提供在 F# 中用作标记的关键字、符号和文本表。
-
-
 
 |标题|描述|
 |-----|-----------|
@@ -25,9 +24,8 @@ ms.lasthandoff: 05/04/2018
 |[文本](literals.md)|介绍 F# 中文本值的语法以及如何指定 F# 文本的类型信息。|
 
 ## <a name="f-language-concepts"></a>F# 语言概念
+
 下表显示介绍语言概念的可用参考主题。
-
-
 
 |标题|描述|
 |-----|-----------|
@@ -37,7 +35,7 @@ ms.lasthandoff: 05/04/2018
 |[自动泛化](generics/automatic-generalization.md)|介绍 F# 中的泛型构造。|
 |[继承](inheritance.md)|介绍在面向对象的编程中，用来建模“is-a”关系或子类型化的接口。|
 |[成员](members/index.md)|介绍 F# 对象类型的成员。|
-|[形参和实参](Parameters-and-Arguments.md)|介绍对定义形参并将实参传递给函数、方法和属性的语言支持。 它包含如何通过引用进行传递的信息。|
+|[参数和自变量](Parameters-and-Arguments.md)|介绍对定义形参并将实参传递给函数、方法和属性的语言支持。 它包含如何通过引用进行传递的信息。|
 |[运算符重载](operator-overloading.md)|介绍如何在类或记录类型中，以及在全局级别下重载算术运算符。|
 |[强制转换和转换](casting-and-conversions.md)|介绍对 F# 中类型转换的支持。|
 |[访问控制](access-control.md)|介绍 F# 中的访问控制。 访问控制意指声明哪些客户端能够使用特定程序元素，如类型、方法、函数等。|
@@ -55,14 +53,13 @@ ms.lasthandoff: 05/04/2018
 |[详细语法](verbose-syntax.md)|介绍未启用轻量语法时 F# 构造的语法。 详细语法由代码文件顶部的 `#light "off"` 指令指示。|
 
 ## <a name="f-types"></a>F# 类型
+
 下表提供的参考主题介绍 F# 语言支持的类型。
-
-
 
 |标题|描述|
 |-----|-----------|
 |[值](values/index.md)|介绍值，它是具有特定类型的不可变数量；值可以是整数或浮点数、字符或文本、列表、序列、数组、元组、可区分联合、记录、类类型或函数值。|
-|[基元类型](primitive-types.md)|介绍在 F# 语言中使用的基础基元类型。 它还提供每种类型的相应 .NET 类型和最小和最大值。|
+|[基本类型](basic-types.md)|介绍 F # 语言中使用的基本基本类型。 它还提供每种类型的相应 .NET 类型和最小和最大值。|
 |[Unit 类型](unit-type.md)|介绍 `unit` 类型，它指示缺少某特定值；`unit` 类型只有一个值，不存在任何其他值或者不需要其他值时，该值作为一个占位符。|
 |[字符串](strings.md)|介绍 F# 中的字符串。 `string` 类型将不可变的文本表示为 Unicode 字符的序列。 `string` 是 .NET Framework 中 `System.String` 的别名。|
 |[元组](tuples.md)|介绍元组，它是未命名但有序的值的组合，值的类型可能不同。|
@@ -87,6 +84,7 @@ ms.lasthandoff: 05/04/2018
 |[类型提供程序](../tutorials/type-providers/index.md)|介绍类型提供程序，并提供使用内置类型提供程序访问数据库和 Web 服务的演练链接。|
 
 ## <a name="f-expressions"></a>F# 表达式
+
 下表列出了介绍 F# 表达式的主题。
 
 |标题|描述|
@@ -104,6 +102,7 @@ ms.lasthandoff: 05/04/2018
 |[查询表达式](query-expressions.md)|介绍查询表达式，它是一种语言功能，为 F# 实现 LINQ 并使你可以对数据源或可枚举集合编写查询。|
 
 ## <a name="compiler-supported-constructs"></a>编译器支持的构造
+
 下表列出了一些主题，这些主题介绍编译器支持的特殊构造。
 
 |主题|描述|
@@ -113,4 +112,5 @@ ms.lasthandoff: 05/04/2018
 |[源代码行标识符、文件标识符和路径标识符](source-line-file-path-identifiers.md)|介绍标识符 `__LINE__`、`__SOURCE_DIRECTORY__` 和 `__SOURCE_FILE__`，这些标识符是内置值，可在代码中使用这些值来访问源行号、目录和文件名。|
 
 ## <a name="see-also"></a>请参阅
-[Visual F#](../index.md)
+
+- [Visual F#](../index.md)

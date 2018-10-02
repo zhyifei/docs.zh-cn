@@ -10,20 +10,19 @@ helpviewer_keywords:
 ms.assetid: c59c9494-149b-4ce6-b38d-371f896ae85c
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: f6811a2dbd8859a8765c5e855e0fe423bd31f287
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ad1611701dca48244f3b2a93ecc3ea86363081ed
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33359382"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47230789"
 ---
 # <a name="ltcryptonamemappinggt-element"></a>&lt;cryptoNameMapping&gt;元素
 包含类到友好名称的映射。  
   
  \<configuration>  
 \<mscorlib >  
-\<g s >  
+\<cryptographySettings >  
 \<cryptoNameMapping >  
   
 ## <a name="syntax"></a>语法  
@@ -53,10 +52,10 @@ ms.locfileid: "33359382"
 |`configuration`|公共语言运行时和 .NET Framework 应用程序所使用的每个配置文件中的根元素。|  
 |`cryptographySettings`|包含加密设置。|  
 |`cryptoNameMapping`|包含类到友好名称的映射。|  
-|`mscorlib`|包含\<g s > 元素。|  
+|`mscorlib`|包含\<cryptographySettings > 元素。|  
   
 ## <a name="example"></a>示例  
- 下面的示例演示如何使用 **\<cryptoNameMapping >** 元素来引用密码类并配置运行时。 然后，你可以将字符串"RSA"传递到<xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A?displayProperty=nameWithType>方法并使用<xref:System.Security.Cryptography.AsymmetricAlgorithm.Create%2A>方法以返回`MyCryptoRSAClass`对象。  
+ 下面的示例演示如何使用 **\<cryptoNameMapping >** 元素来引用一个密码类并配置运行时。 然后可以将字符串"RSA"传递给<xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A?displayProperty=nameWithType>方法，并使用<xref:System.Security.Cryptography.AsymmetricAlgorithm.Create%2A>方法以返回`MyCryptoRSAClass`对象。  
   
 ```xml  
 <configuration>  

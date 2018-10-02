@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - new keyword [C#]
 ms.assetid: e4136516-f058-45a8-84e5-da00a5cf9b6a
-ms.openlocfilehash: 5d1cc5977994e1e17c2fd37ffac3dd2aa5f5768d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 694fcbca370d3ba628a532008af37a96e0568a75
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33266066"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43523335"
 ---
 # <a name="new-c-reference"></a>new（C# 参考）
 在 C# 中，`new` 关键字可以用作运算符、修饰符或约束。  
@@ -26,7 +26,8 @@ ms.locfileid: "33266066"
  [new 约束](../../../csharp/language-reference/keywords/new-constraint.md)  
  用于限制可能用作泛型声明中类型形式参数的实际参数的类型。  
   
-## <a name="see-also"></a>请参阅  
- [C# 参考](../../../csharp/language-reference/index.md)  
- [C# 编程指南](../../../csharp/programming-guide/index.md)  
- [C# 关键字](../../../csharp/language-reference/keywords/index.md)
+## <a name="see-also"></a>请参阅
+
+- [C# 参考](../../../csharp/language-reference/index.md)  
+- [C# 编程指南](../../../csharp/programming-guide/index.md)  
+- [C# 关键字](../../../csharp/language-reference/keywords/index.md)

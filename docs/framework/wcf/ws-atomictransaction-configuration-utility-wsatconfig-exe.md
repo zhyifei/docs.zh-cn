@@ -2,12 +2,12 @@
 title: WS-AtomicTransaction 配置实用工具 (wsatConfig.exe)
 ms.date: 03/30/2017
 ms.assetid: 1c56cf98-3963-46d5-a4e1-482deae58c58
-ms.openlocfilehash: ef2f34a6700d72c01977ea449041669a88c35e6f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 31b2b3cf16857bf08a4f8d09f47f80d9b34a53b8
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33506262"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44085874"
 ---
 # <a name="ws-atomictransaction-configuration-utility-wsatconfigexe"></a>WS-AtomicTransaction 配置实用工具 (wsatConfig.exe)
 WS-AtomicTransaction 配置实用工具用于配置基本的 WS-AtomicTransaction 支持设置。  
@@ -19,13 +19,13 @@ wsatConfig [Options]
 ```  
   
 ## <a name="remarks"></a>备注  
- 只能使用此命令行工具在本地计算机中配置基本的 WS-AT 设置。 如果你需要在本地和远程计算机上配置设置，则应中所述来使用 MMC 管理单元中[配置 Ws-atomic 事务支持](../../../docs/framework/wcf/feature-details/configuring-ws-atomic-transaction-support.md)。  
+ 只能使用此命令行工具在本地计算机中配置基本的 WS-AT 设置。 如果必须在本地和远程计算机上配置设置，则应如中所述来使用 MMC 管理单元[配置 Ws-atomic 事务支持](../../../docs/framework/wcf/feature-details/configuring-ws-atomic-transaction-support.md)。  
   
  可以在 Windows SDK 安装位置中找到此命令行工具，具体位置为  
   
  %SystemRoot%\Microsoft.Net\Framework\v3.0\Windows Communication Foundation\wsatConfig.exe  
   
- 如果运行的是 [!INCLUDE[wxp](../../../includes/wxp-md.md)] 或 [!INCLUDE[ws2003](../../../includes/ws2003-md.md)]，您必须在运行 WsatConfig.exe 之前下载更新。 有关此更新的详细信息，请参阅[Commerce Server 2007 (KB912817) 的更新](http://go.microsoft.com/fwlink/?LinkId=95340)和[可用性的 Windows XP COM + 修补程序汇总包 13](http://go.microsoft.com/fwlink/?LinkId=95341)。  
+ 如果运行的是 [!INCLUDE[wxp](../../../includes/wxp-md.md)] 或 [!INCLUDE[ws2003](../../../includes/ws2003-md.md)]，您必须在运行 WsatConfig.exe 之前下载更新。 有关此更新的详细信息，请参阅[Commerce Server 2007 (KB912817) 更新](https://go.microsoft.com/fwlink/?LinkId=95340)并[可用性的 Windows XP COM + 修补程序汇总包 13](https://go.microsoft.com/fwlink/?LinkId=95341)。  
   
  下表显示了可用于 WS-AtomicTransaction 配置实用工具 (wsatConfig.exe) 的选项。  
   
@@ -35,9 +35,9 @@ wsatConfig [Options]
 |选项|描述|  
 |-------------|-----------------|  
 |-帐户：\<帐户 >|指定可参与 WS-AtomicTransaction 的帐户的逗号分隔列表。 不会检查这些帐户的有效性。|  
-|-accountsCerts:\<thumb >&#124;"\ 主题名称">|指定可参与 WS-AtomicTransaction 的证书以逗号分隔的列表。 这些证书由指纹或“颁发者\主题名称”对指示。 如果主题名称为空，请为其使用 {EMPTY}。|  
-|-endpointCert: < 机&#124;\<thumb >&#124;"\ 主题名称">|使用由指纹或“颁发者\主题名称”对指定的计算机证书或另一个本地终结点证书。 如果主题名称为空，请为其使用 {EMPTY}。|  
-|-maxTimeout:\<秒 >|以秒为单位指定最大超时。 有效值为 0 到 3600。|  
+|-accountsCerts:\<thumb >&#124;"Issuer\SubjectName">|指定可参与 WS-AtomicTransaction 的证书以逗号分隔的列表。 这些证书由指纹或“颁发者\主题名称”对指示。 如果主题名称为空，请为其使用 {EMPTY}。|  
+|-endpointCert: < 计算机&#124;\<thumb >&#124;"Issuer\SubjectName">|使用由指纹或“颁发者\主题名称”对指定的计算机证书或另一个本地终结点证书。 如果主题名称为空，请为其使用 {EMPTY}。|  
+|-maxTimeout:\<秒 >|以秒为单位指定最大超时。 有效值为从 0 到 3600。|  
 |-网络：\<启用&#124;禁用 >|启用或禁用 WS-AtomicTransaction 网络支持。|  
 |-端口：\<portNum >|为 WS-AtomicTransaction 设置 HTTPS 端口。<br /><br /> 如果在运行此工具之前已启用了防火墙，则会在例外列表中自动注册该端口。 如果在运行此工具之前防火墙处于禁用状态，将不会对防火墙进行任何其他配置。<br /><br /> 如果在配置 WS-AT 之后启用防火墙，您必须再次运行此工具并使用此参数提供端口号。 如果在配置之后禁用防火墙，WS-AT 将继续工作，而无需附加输入。|  
 |超时：\<秒 >|以秒为单位指定默认超时。 有效值为 1 到 3600。|  

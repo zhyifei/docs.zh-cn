@@ -5,12 +5,12 @@ helpviewer_keywords:
 - C# language, constants
 - constants [C#]
 ms.assetid: 43f511be-346c-4b8a-995e-aded94542ece
-ms.openlocfilehash: 03912a71aba883ec9127d265e6f1a2b05e1e60fa
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 09d19f708570b55509a3ec2a41e439cb9c9de973
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33313217"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43739690"
 ---
 # <a name="how-to-define-constants-in-c"></a>如何：在 C# 中定义常量
 常量是在编译时设置其值并且永远不能更改其值的字段。 使用常量可以为特殊值提供有意义的名称，而不是数字文本（“幻数”）。  
@@ -27,5 +27,6 @@ ms.locfileid: "33313217"
   
  使用类名限定符有助于确保你和使用该常量的其他人了解它是常量并且不能修改。  
   
-## <a name="see-also"></a>请参阅  
- [类和结构](../../../csharp/programming-guide/classes-and-structs/index.md)
+## <a name="see-also"></a>请参阅
+
+- [类和结构](../../../csharp/programming-guide/classes-and-structs/index.md)

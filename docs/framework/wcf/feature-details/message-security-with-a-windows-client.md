@@ -6,18 +6,17 @@ dev_langs:
 - vb
 ms.assetid: 01e7d0b8-10f9-45c3-a4c5-53d44dc61eb8
 author: BrucePerlerMS
-manager: mbaldwin
-ms.openlocfilehash: 185edce5bd8a4772545ec966a6b3f74b204aa2b0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c24ced1a3f19297f06404403f1196b8a9139a919
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33494776"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47203652"
 ---
 # <a name="message-security-with-a-windows-client"></a>Windows 客户端的消息安全
 此方案显示了 Windows Communication Foundation (WCF) 客户端和服务器保护的消息安全模式。 客户端和服务使用 Windows 凭据进行身份验证。  
   
- ![消息安全的 Windows 客户端](../../../../docs/framework/wcf/feature-details/media/1c8618d4-0005-4022-beb6-32fd087a8c3c.gif "1c8618d4-0005-4022-beb6-32fd087a8c3c")  
+ ![消息安全使用 Windows 客户端](../../../../docs/framework/wcf/feature-details/media/1c8618d4-0005-4022-beb6-32fd087a8c3c.gif "1c8618d4-0005-4022-beb6-32fd087a8c3c")  
   
 |特征|描述|  
 |--------------------|-----------------|  
@@ -120,4 +119,4 @@ ms.locfileid: "33494776"
   
 ## <a name="see-also"></a>请参阅  
  [安全性概述](../../../../docs/framework/wcf/feature-details/security-overview.md)  
- [Windows Server App Fabric 的安全模型](http://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+ [Windows Server App Fabric 的安全模型](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

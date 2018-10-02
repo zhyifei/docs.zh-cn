@@ -3,14 +3,14 @@ title: C# 中的继承
 description: 了解如何在 C# 库和应用程序中运用继承。
 author: rpetrusha
 ms.author: ronpet
-ms.date: 08/16/2017
+ms.date: 07/05/2018
 ms.assetid: aeb68c74-0ea0-406f-9fbe-2ce02d47ef31
-ms.openlocfilehash: 1476425594e55531fdb56de531ee61808dccd7db
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 15e2ddd7e103857054973d6c4ed7401d6f91af0d
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33365756"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43502159"
 ---
 # <a name="inheritance-in-c-and-net"></a>C# 和 .NET 中的继承
 
@@ -32,7 +32,6 @@ ms.locfileid: "33365756"
   [!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
 
 1. 输入 [dotnet run](../../core/tools/dotnet-run.md) 命令，编译并执行示例。
-
 
 ## <a name="background-what-is-inheritance"></a>背景知识：什么是继承？
 
@@ -99,7 +98,7 @@ public class B : A // Generates CS0534.
 }
 ```
 
-继承仅适用于类和接口。 其他各种类型（结构、委托和枚举）均不支持继承。 因此，如果尝试编译以下代码，则会生成编译器错误 CS0527：“接口列表中的类型 'ValueType' 不是接口。” 此错误消息指明，尽管可以定义结构实现的接口，但不支持继承。
+继承仅适用于类和接口。 其他各种类型（结构、委托和枚举）均不支持继承。 因为这些规则的存在，如果尝试编译以下代码，则会生成编译器错误 CS0527：“接口列表中的类型 'ValueType' 不是接口。” 此错误消息指明，尽管可以定义结构实现的接口，但不支持继承。
 
 ```csharp
 using System;
@@ -111,13 +110,13 @@ public struct ValueStructure : ValueType // Generates CS0527.
 
 ## <a name="implicit-inheritance"></a>隐式继承
 
-.NET 类型系统中的所有类型除了可以通过单一继承进行继承之外，还可以隐式继承自 <xref:System.Object> 或其派生的类型。 这就确保了常见功能可用于任何类型。
+.NET 类型系统中的所有类型除了可以通过单一继承进行继承之外，还可以隐式继承自 <xref:System.Object> 或其派生的类型。 <xref:System.Object> 的常用功能可用于任何类型。
 
 为了说明隐式继承的具体含义，让我们来定义一个新类 `SimpleClass`，这只是一个空类定义：
 
 [!code-csharp[Inheritance](../../../samples/snippets/csharp/tutorials/inheritance/simpleclass.cs#1)]
 
-然后，我们可以使用反射（方便我们检查类型的元数据，从而获取此类型的相关信息），获取 `SimpleClass` 类型的成员列表。 尽管我们没有在 `SimpleClass` 类中定义任何成员，但示例输出表明它实际上有九个成员。 其中之一是由 C# 编译器自动为 `SimpleClass` 类型提供的无参数（或默认）构造函数。 剩余八个是 <xref:System.Object>（.NET 类型系统中的所有类和接口最终隐式继承自的类型）的成员。
+然后可以使用反射（便于检查类型的元数据，从而获取此类型的相关信息），获取 `SimpleClass` 类型的成员列表。 尽管没有在 `SimpleClass` 类中定义任何成员，但示例输出表明它实际上有九个成员。 这些成员的其中之一是由 C# 编译器自动为 `SimpleClass` 类型提供的无参数（或默认）构造函数。 剩余八个是 <xref:System.Object>（.NET 类型系统中的所有类和接口最终隐式继承自的类型）的成员。
 
 [!code-csharp[Inheritance](../../../samples/snippets/csharp/tutorials/inheritance/simpleclass.cs#2)]
 
@@ -133,9 +132,9 @@ public struct ValueStructure : ValueType // Generates CS0527.
 
 - 受保护 <xref:System.Object.Finalize%2A> 方法：用于在垃圾回收器回收对象的内存之前释放非托管资源。
 
-- 受保护 <xref:System.Object.MemberwiseClone%2A> 方法：创建当前对象的卷影克隆。
+- 受保护 <xref:System.Object.MemberwiseClone%2A> 方法：创建当前对象的浅表复制。
 
-由于是隐式继承，因此我们可以调用 `SimpleClass` 对象中任何继承的成员，就像它实际上是 `SimpleClass` 类中定义的成员一样。 例如，下面的示例调用 `SimpleClass` 从 <xref:System.Object> 继承而来的 `SimpleClass.ToString` 方法。
+由于是隐式继承，因此可以调用 `SimpleClass` 对象中任何继承的成员，就像它实际上是 `SimpleClass` 类中定义的成员一样。 例如，下面的示例调用 `SimpleClass` 从 <xref:System.Object> 继承而来的 `SimpleClass.ToString` 方法。
 
 [!code-csharp[Inheritance](../../../samples/snippets/csharp/tutorials/inheritance/simpleclass2.cs#1)]
 
@@ -143,7 +142,7 @@ public struct ValueStructure : ValueType // Generates CS0527.
 
 | 类型类别 | 隐式继承自                                                      |
 | ------------- | ----------------------------------------------------------------------------- |
-| 类         | <xref:System.Object>                                                          |
+| class         | <xref:System.Object>                                                          |
 | struct        | <xref:System.ValueType>, <xref:System.Object>                                 |
 | enum          | <xref:System.Enum>, <xref:System.ValueType>, <xref:System.Object>             |
 | 委托      | <xref:System.MulticastDelegate>, <xref:System.Delegate>, <xref:System.Object> |
@@ -159,7 +158,7 @@ public struct ValueStructure : ValueType // Generates CS0527.
 
 [!code-csharp[Inheritance](../../../samples/snippets/csharp/tutorials/inheritance/is-a.cs#1)]
 
-在这种情况下，我们不得依赖继承来表示特定汽车品牌和型号。 例如，我们不需要定义 `Packard` 类型来表示帕卡德制造的汽车。 相反，我们可以通过创建将相应值传递给其类构造函数的 `Automobile` 对象来进行表示，如以下示例所示。
+在这种情况下，不得依赖继承来表示特定汽车品牌和型号。 例如，不需要定义 `Packard` 类型来表示帕卡德制造的汽车。 相反，可以通过创建将相应值传递给其类构造函数的 `Automobile` 对象来进行表示，如以下示例所示。
 
 [!code-csharp[Inheritance](../../../samples/snippets/csharp/tutorials/inheritance/is-a.cs#2)]
 
@@ -167,35 +166,37 @@ public struct ValueStructure : ValueType // Generates CS0527.
 
 ## <a name="designing-the-base-class-and-derived-classes"></a>设计基类及其派生类
 
-让我们来看看如何设计基类及其派生类。 在此部分中，我们将定义一个基类 `Publication`，用于表示任何类型的出版物，如书籍、杂志、报纸、期刊、文章等。我们还将定义一个从 `Publication` 派生的 `Book` 类。 我们可以将示例轻松扩展为定义其他派生类，如 `Magazine`、`Journal`、`Newspaper` 和 `Article`。
+让我们来看看如何设计基类及其派生类。 在此部分中，将定义一个基类 `Publication`，用于表示任何类型的出版物，如书籍、杂志、报纸、期刊、文章等。还将定义一个从 `Publication` 派生的 `Book` 类。 可以将示例轻松扩展为定义其他派生类，如 `Magazine`、`Journal`、`Newspaper` 和 `Article`。
 
 ### <a name="the-base-publication-class"></a>Publication 基类
 
-设计 `Publication` 类时，我们需要做出下面几项设计决策：
+设计 `Publication` 类时，需要做出下面几项设计决策：
 
-- 要在 `Publication` 基类中添加哪些成员、`Publication` 成员是否提供方法实现代码，或 `Publication` 是否是用作派生类模板的抽象基类。
+- 要在 `Publication` 基类中添加哪些成员、`Publication` 成员是否提供方法实现或 `Publication` 是否是用作派生类模板的抽象基类。
 
   在此示例中，`Publication` 类提供方法实现代码。 [设计抽象基类及其派生类](#abstract)部分中的示例就使用抽象基类定义派生类必须重写的方法。 派生类可以随时提供适合派生类型的任意实现代码。
 
-  能够重用代码（即多个派生类共用基类方法的声明和实现代码，无需重写它们）是非抽象基类的优势所在。 因此，如果代码可能由某些或大多数特定 `Publication` 类型共用，我们应该向 `Publication` 添加成员。 如果不能有效执行此操作，那么我们最终将不得不在派生类中提供基本相同的成员实现代码，而不是共用基类中的同一实现代码。 如果需要在多个位置保留重复的代码，可能会导致 bug 出现。
+  能够重用代码（即多个派生类共用基类方法的声明和实现代码，无需重写它们）是非抽象基类的优势所在。 因此，如果代码可能由某些或大多数特定 `Publication` 类型共用，则应向 `Publication` 添加成员。 如果无法有效地提供基类实现，则最终将不得不在派生类中提供基本相同的成员实现代码，而不是共用基类中的同一实现代码。 如果需要在多个位置保留重复的代码，可能会导致 bug 出现。
 
-  为了最大限度地提高代码重用性并创建合乎逻辑的直观继承层次结构，我们希望确保在 `Publication` 类中只添加所有或大多数出版物通用的数据和功能。 然后，派生类可以实现所表示的特定出版物种类的唯一成员。
+  为了最大限度地提高代码重用性并创建合乎逻辑的直观继承层次结构，需要确保在 `Publication` 类中只添加所有或大多数出版物通用的数据和功能。 然后，派生类可以实现所表示的特定出版物种类的唯一成员。
 
-- 类层次结构的扩展空间大小。 是否要开发包含三个或多个类的层次结构，而不是仅包含一个基类和一个或多个派生类？ 例如，`Publication` 可以是 `Periodical` 的基类，同时又是 `Magazine`、`Journal` 和 `Newspaper` 的基类。
+- 类层次结构的扩展空间大小。 是否要开发包含三个或更多类的层次结构，而不是仅包含一个基类和一个或多个派生类？ 例如，`Publication` 可以是 `Periodical` 的基类，而后者又是 `Magazine`、`Journal` 和 `Newspaper` 的基类。
 
-  在我们的示例中，我们将使用包含 `Publication` 类和一个派生类 `Book` 的简单层次结构。 我们可以将此示例轻松扩展为创建其他许多派生自 `Publication` 的类，如 `Magazine` 和 `Article`。
+  在示例中，将使用包含 `Publication` 类和一个派生类 `Book` 的小型层次结构。 可以将此示例轻松扩展为创建其他许多派生自 `Publication` 的类，如 `Magazine` 和 `Article`。
 
-- 能否实例化基类。 如果不可以，我们应向类应用 [abstract](../language-reference/keywords/abstract.md) 关键字。 如果尝试通过直接调用类构造函数来实例化标记有 `abstract` 关键字的类，则 C# 编译器会生成错误 CS0144：“无法创建抽象类或接口的实例。” 如果尝试使用反射来实例化类，则反射方法会抛出 <xref:System.MemberAccessException>。 否则，可通过调用类构造函数来实例化 `Publication` 类。
+- 能否实例化基类。 如果不可以，则应向类应用 [abstract](../language-reference/keywords/abstract.md) 关键字。 否则，可通过调用类构造函数来实例化 `Publication` 类。 如果尝试通过直接调用类构造函数来实例化标记有 `abstract` 关键字的类，则 C# 编译器会生成错误 CS0144：“无法创建抽象类或接口的实例。” 如果尝试使用反射来实例化类，则反射方法会抛出 <xref:System.MemberAccessException>。
 
-  默认情况下，可以通过调用类构造函数来实例化基类。 请注意，我们无需显式定义类构造函数。 如果基类的源代码中没有类构造函数，C# 编译器会自动提供默认的（无参数）构造函数。
+  默认情况下，可以通过调用类构造函数来实例化基类。 无需显式定义类构造函数。 如果基类的源代码中没有类构造函数，C# 编译器会自动提供默认的（无参数）构造函数。
 
-  对于我们的示例，我们将把 `Publication` 类标记为 [abstract](../language-reference/keywords/abstract.md)，使其无法实例化。
+  在此示例中，将把 `Publication` 类标记为 [abstract](../language-reference/keywords/abstract.md)，使其无法实例化。  一个不具备任何 `abstract` 方法的 `abstract` 类表示该类代表一个在几个具体类（例如 `Book` 和 `Journal`）之间共享的抽象概念。
 
-- 派生类是否必须继承特定成员的基类实现代码，或能否重写基类实现代码。 我们必须使用 [virtual](../language-reference/keywords/virtual.md) 关键字，才能允许派生类重写基类方法。 默认情况下，*不*可重写基类中定义的方法。
+- 派生类是否必须继承特定成员的基类实现代码、是否能选择重写基类实现代码或者是否必须提供实现代码。 使用 [abstract](../language-reference/keywords/abstract.md) 关键字来强制派生类提供实现代码。 使用 [virtual](../language-reference/keywords/virtual.md) 关键字来允许派生类重写基类方法。 默认情况下，*不*可重写基类中定义的方法。
 
-- 派生类是否表示继承层次结构中的最终类，且本身不能用作其他派生类的基类。 默认情况下，任何类都可以用作基类。 我们可以应用 [sealed](../language-reference/keywords/sealed.md) 关键字，以指明类不能用作其他任何类的基类。 如果尝试从密封类派生，则会生成编译器错误 CS0509：“无法从密封类型 <typeName> 派生。”
+ `Publication` 类不具备任何 `abstract` 方法，不过类本身是 `abstract`。
 
-  对于我们的示例，我们将把派生类标记为 `sealed`。
+- 派生类是否表示继承层次结构中的最终类，且本身不能用作其他派生类的基类。 默认情况下，任何类都可以用作基类。 可以应用 [sealed](../language-reference/keywords/sealed.md) 关键字来指明类不能用作其他任何类的基类。 如果尝试从密封类派生，则会生成编译器错误 CS0509：“无法从密封类型 <typeName> 派生。”
+
+  在此示例中，将把派生类标记为 `sealed`。
 
 以下示例展示了 `Publication` 类的源代码，以及 `Publication.PublicationType` 属性返回的 `PublicationType` 枚举。 除了继承自 <xref:System.Object> 的成员之外，`Publication` 类还定义了以下唯一成员和成员重写：
 
@@ -250,7 +251,7 @@ public struct ValueStructure : ValueType // Generates CS0527.
 
   两个 `Book` 构造函数共用三个常见参数。 其中两个参数（*title* 和 *publisher*）对应于 `Publication` 构造函数的相应参数。 第三个参数是 *author*，存储在 `authorName` 私有字段中。 其中一个构造函数包含存储在 `ISBN` 自动属性中的 isbn 参数。
 
-  第一个构造函数使用 [this](../language-reference/keywords/this.md) 关键字来调用另一个构造函数。 这是常见的构造函数定义模式。 调用参数最多的构造函数时，由参数较少的构造函数提供默认值。
+  第一个构造函数使用 [this](../language-reference/keywords/this.md) 关键字来调用另一个构造函数。 构造函数链是常见的构造函数定义模式。 调用参数最多的构造函数时，由参数较少的构造函数提供默认值。
 
   第二个构造函数使用 [base](../language-reference/keywords/base.md) 关键字，将标题和出版商名称传递给基类构造函数。 如果没有在源代码中显式调用基类构造函数，那么 C# 编译器会自动提供对基类的默认或无参数构造函数的调用。
 
@@ -260,42 +261,42 @@ public struct ValueStructure : ValueType // Generates CS0527.
 
 - 两个与价格相关的只读属性（`Price` 和 `Currency`）。 值作为自变量提供给调用的 `SetPrice` 方法。 价格存储在 `bookPrice` 私有字段中。 `Currency` 属性是三位的 ISO 货币符号（例如，USD 表示美元），并存储在 `ISOCurrencySymbol` 私有字段中。 可以从 <xref:System.Globalization.RegionInfo.ISOCurrencySymbol%2A> 属性检索 ISO 货币符号。
 
-- `SetPrice` 方法，用于设置 `bookPrice` 和 `ISOCurrencySymbol` 字段的值。 这些是 `Price` 和 `Currency` 属性返回的值。
+- `SetPrice` 方法，用于设置 `bookPrice` 和 `ISOCurrencySymbol` 字段的值。 这些值由 `Price` 和 `Currency` 属性返回。
 
 - 重写 `ToString` 方法（继承自 `Publication`）、<xref:System.Object.Equals%28System.Object%29?displayProperty=nameWithType> 和 <xref:System.Object.GetHashCode%2A> 方法（继承自 <xref:System.Object>）。
 
-  除非重写，否则 <xref:System.Object.Equals%28System.Object%29?displayProperty=nameWithType> 方法测试的是引用相等性。 也就是说，两个对象变量必须引用同一个对象，才算相等。 相比之下，对于 `Book` 类，两个 `Book` 对象必须包含相同的 ISBN，才算相等。
+  除非重写，否则 <xref:System.Object.Equals%28System.Object%29?displayProperty=nameWithType> 方法测试的是引用相等性。 也就是说，两个对象变量必须引用同一个对象，才算相等。 相比之下，在 `Book` 类中，两个 `Book` 对象必须包含相同的 ISBN，才算相等。
 
-  重写 <xref:System.Object.Equals%28System.Object%29?displayProperty=nameWithType> 方法时，还必须重写 <xref:System.Object.GetHashCode%2A> 方法，此方法返回运行时为了实现高效检索，在经哈希处理的集合中存储项所使用的值。 哈希代码应返回与测试相等性一致的值。 由于我们已将 <xref:System.Object.Equals%28System.Object%29?displayProperty=nameWithType> 重写为在两个 `Book` 对象的 ISBN 属性相等时返回 `true`，因此我们返回的哈希代码是通过调用 `ISBN` 属性返回的字符串的 <xref:System.String.GetHashCode%2A> 方法计算得出。
+  重写 <xref:System.Object.Equals%28System.Object%29?displayProperty=nameWithType> 方法时，还必须重写 <xref:System.Object.GetHashCode%2A> 方法，此方法返回运行时为了实现高效检索，在经哈希处理的集合中存储项所使用的值。 哈希代码应返回与测试相等性一致的值。 由于已将 <xref:System.Object.Equals%28System.Object%29?displayProperty=nameWithType> 重写为在两个 `Book` 对象的 ISBN 属性相等时返回 `true`，因此返回的哈希代码是通过调用 `ISBN` 属性返回的字符串的 <xref:System.String.GetHashCode%2A> 方法计算得出。
 
 下图展示了 `Book` 类及其基类 `Publication` 之间的关系。
 
 ![Publication 和 Book 类](media/book-class.jpg)
 
-现在，我们可以实例化 `Book` 对象，调用其唯一成员和继承的成员，并将其作为自变量传递给需要 `Publication` 或 `Book` 类型参数的方法，如以下示例所示。
+现在可以实例化 `Book` 对象，调用其唯一成员和继承的成员，并将其作为自变量传递给需要 `Publication` 或 `Book` 类型参数的方法，如以下示例所示。
 
 [!code-csharp[Inheritance](../../../samples/snippets/csharp/tutorials/inheritance/use-publication.cs#1)]
 
 ## <a name="designing-abstract-base-classes-and-their-derived-classes"></a>设计抽象基类及其派生类
 <a name="abstract"></a>
 
-在上面的示例中，我们定义了一个基类，它提供了许多方法的实现代码，以便派生类可以共用代码。 然而，在许多情况下，我们并不希望基类提供实现代码。 相反，基类是*抽象类*，用作定义每个派生类必须实现的成员的模板。 通常情况下，对于抽象基类，每个派生类型的实现代码都是相应类型的专属代码。
+在上面的示例中定义了一个基类，它提供了许多方法的实现代码，以便派生类可以共用代码。 然而，在许多情况下，我们并不希望基类提供实现代码。 相反，基类是声明抽象方法的抽象类，用作定义每个派生类必须实现的成员的模板。 通常情况下，在抽象基类中，每个派生类型的实现代码都是相应类型的专属代码。 尽管该类提供了出版物通用的功能的实现代码，但由于实例化 `Publication` 对象毫无意义，因此，使用 abstract 关键字来标记该类。
 
-例如，每个封闭的二维几何形状都包含两个属性：面积（即形状的内部空间）和周长（或沿形状一周的长度）。 然而，这两个属性的计算方式完全取决于具体的形状。 例如，圆和三角形的周长计算公式就迥然不同。
+例如，每个封闭的二维几何形状都包含两个属性：面积（即形状的内部空间）和周长（或沿形状一周的长度）。 然而，这两个属性的计算方式完全取决于具体的形状。 例如，圆和三角形的周长计算公式就有所不同。 `Shape` 类是一个包含 `abstract` 方法的 `abstract` 类。 这表示派生类共享相同的功能，但这些派生类以不同的方式实现该功能。
 
-以下示例定义了 `Shape` 抽象基类，此基类又定义了两个属性：`Area` 和 `Perimeter`。 请注意，除了用 [abstract](../language-reference/keywords/abstract.md) 关键字标记类之外，还需要用 [abstract](../language-reference/keywords/abstract.md) 关键字标记每个实例成员。 在此示例中，`Shape` 还将 <xref:System.Object.ToString%2A?displayProperty=nameWithType> 方法重写为返回类型的名称，而不是其完全限定的名称。 基类还定义了两个静态成员（`GetArea` 和 `GetPerimeter`），以便调用方可以轻松检索任何派生类实例的面积和周长。 将派生类实例传递给两个方法中的任意一个时，运行时调用的是派生类重写的方法。
+以下示例定义了 `Shape` 抽象基类，此基类又定义了两个属性：`Area` 和 `Perimeter`。 除了用 [abstract](../language-reference/keywords/abstract.md) 关键字标记类之外，还需要用 [abstract](../language-reference/keywords/abstract.md) 关键字标记每个实例成员。 在此示例中，`Shape` 还将 <xref:System.Object.ToString%2A?displayProperty=nameWithType> 方法重写为返回类型的名称，而不是其完全限定的名称。 基类还定义了两个静态成员（`GetArea` 和 `GetPerimeter`），以便调用方可以轻松检索任何派生类实例的面积和周长。 将派生类实例传递给两个方法中的任意一个时，运行时调用的是派生类重写的方法。
 
 [!code-csharp[Inheritance](../../../samples/snippets/csharp/tutorials/inheritance/shape.cs#1)]
 
-然后，我们可以从表示特定形状的 `Shape` 派生一些类。 以下示例定义了三个类：`Triangle`、`Rectangle` 和 `Circle`。 每个类都使用特定形状的专属公式来计算面积和周长。 一些派生类还定义所表示形状的专属属性（如 `Rectangle.Diagonal` 和 `Circle.Diameter`）。
+然后可以从表示特定形状的 `Shape` 派生一些类。 以下示例定义了三个类：`Triangle`、`Rectangle` 和 `Circle`。 每个类都使用特定形状的专属公式来计算面积和周长。 一些派生类还定义所表示形状的专属属性（如 `Rectangle.Diagonal` 和 `Circle.Diameter`）。
 
 [!code-csharp[Inheritance](../../../samples/snippets/csharp/tutorials/inheritance/shape.cs#2)]
 
-以下示例使用派生自 `Shape` 的对象。 它实例化派生自 `Shape` 的一组对象，然后调用 `Shape` 类的静态方法，用于包装返回的 `Shape` 属性值。 请注意，运行时从派生类型的重写属性检索值。 以下示例还将数组中的每个 `Shape` 对象显式转换成其派生类型；如果显式转换成功，则检索 `Shape` 的特定子类的属性。 
+以下示例使用派生自 `Shape` 的对象。 它实例化派生自 `Shape` 的一组对象，然后调用 `Shape` 类的静态方法，用于包装返回的 `Shape` 属性值。 运行时从派生类型的重写属性检索值。 以下示例还将数组中的每个 `Shape` 对象显式转换成其派生类型；如果显式转换成功，则检索 `Shape` 的特定子类的属性。 
 
 [!code-csharp[Inheritance](../../../samples/snippets/csharp/tutorials/inheritance/shape.cs#3)]
 
 ## <a name="see-also"></a>请参阅
 
-[类和对象](../tour-of-csharp/classes-and-objects.md)   
-[继承（C# 编程指南）](../programming-guide/classes-and-structs/inheritance.md)
+- [类和对象](../tour-of-csharp/classes-and-objects.md)   
+- [继承（C# 编程指南）](../programming-guide/classes-and-structs/inheritance.md)

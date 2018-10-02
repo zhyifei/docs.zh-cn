@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Help [Windows Forms], displaying on Windows Forms
 - HelpProvider component [Windows Forms]
 ms.assetid: a09a6e0b-79d8-457f-bb36-86fad2beeada
-ms.openlocfilehash: 9a88e34de40d04b89b909afeb8a9b273078dd4c7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 63574e6a4f7a9c5a1c2bcb267c64baa5c5e392f3
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33524152"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47195624"
 ---
 # <a name="helpprovider-component-windows-forms"></a>HelpProvider 组件（Windows 窗体）
 Windows 窗体 `HelpProvider` 组件用于将基于 Windows 的应用程序与 HTML Help 1.x 帮助文件（HTML Help Workshop 生成的 .chm 文件，或 .htm 文件）关联。  
@@ -33,4 +33,4 @@ Windows 窗体 `HelpProvider` 组件用于将基于 Windows 的应用程序与 H
  [在 Windows 窗体上使用的控件](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
  提供 Windows 窗体控件的完整列表，附带其使用情况相关信息的链接。  
   
- 另请参阅[Windows 窗体应用程序中的帮助系统](http://msdn.microsoft.com/library/55dct0a1\(v=vs.110\))。
+ 另请参阅[在 Windows 窗体应用程序中的帮助系统](https://msdn.microsoft.com/library/55dct0a1\(v=vs.110\))。

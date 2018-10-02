@@ -2,12 +2,12 @@
 title: '&lt;custom&gt;'
 ms.date: 03/30/2017
 ms.assetid: a6f65a00-bd1a-4d4a-955a-fe009ec02ab8
-ms.openlocfilehash: 19f960c14b6171557ec0f353dae34f26d7a7686c
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 7d558be66b8a1e46d9743c5f8bf0bb9a8b4c349e
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32748355"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47207807"
 ---
 # <a name="ltcustomgt"></a>&lt;custom&gt;
 指定自定义对等解析程序服务的设置。  
@@ -53,7 +53,7 @@ ms.locfileid: "32748355"
 |[\<resolver>](../../../../../docs/framework/configure-apps/file-schema/wcf/resolver.md)|一个对等解析程序，可用于将对等网格 ID 解析为一组对等节点地址，这些地址表示参与网格的若干节点。|  
   
 ## <a name="remarks"></a>备注  
- 此元素可定义自定义对等解析程序服务的基本设置，其中包括执行服务的对等解析程序的终结点地址和所有特定绑定设置。 有关创建自定义解析程序的详细信息，请参阅[向对等通道应用程序添加自定义解析程序](http://msdn.microsoft.com/library/12aa3787-2962-439c-ad27-46523c8b0419)。  
+ 此元素可定义自定义对等解析程序服务的基本设置，其中包括执行服务的对等解析程序的终结点地址和所有特定绑定设置。 有关创建自定义冲突解决程序的详细信息，请参阅[PeerChannel 应用程序中添加自定义冲突解决程序](https://msdn.microsoft.com/library/12aa3787-2962-439c-ad27-46523c8b0419)。  
   
 ## <a name="see-also"></a>请参阅  
  <xref:System.ServiceModel.PeerResolvers.CustomPeerResolverService>  
@@ -61,4 +61,4 @@ ms.locfileid: "32748355"
  <xref:System.ServiceModel.Configuration.PeerResolverElement.Custom%2A>  
  <xref:System.ServiceModel.Configuration.PeerCustomResolverElement>  
  [对等解析程序](../../../../../docs/framework/wcf/feature-details/peer-resolvers.md)  
- [将自定义解析程序添加到对等通道应用程序](http://msdn.microsoft.com/library/12aa3787-2962-439c-ad27-46523c8b0419)
+ [对等通道应用程序中添加自定义冲突解决程序](https://msdn.microsoft.com/library/12aa3787-2962-439c-ad27-46523c8b0419)

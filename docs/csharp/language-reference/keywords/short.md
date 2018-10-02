@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - short keyword [C#]
 ms.assetid: 04c10688-e51a-4a87-bfec-83f7fb42ff11
-ms.openlocfilehash: 7991259aadd391288caa37b35addd6e16e234878
-ms.sourcegitcommit: f9e38d31288fe5962e6be5b0cc286da633482873
+ms.openlocfilehash: f402b9d2d62bcc3ba265755d59a657b88c197482
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37027858"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43855785"
 ---
 # <a name="short-c-reference"></a>short（C# 参考）
 
@@ -100,12 +100,13 @@ short y = (short)3.0;   // OK: explicit conversion
 ## <a name="c-language-specification"></a>C# 语言规范  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Int16>  
- [C# 参考](../../../csharp/language-reference/index.md)  
- [C# 编程指南](../../../csharp/programming-guide/index.md)  
- [C# 关键字](../../../csharp/language-reference/keywords/index.md)  
- [整型表](../../../csharp/language-reference/keywords/integral-types-table.md)  
- [内置类型表](../../../csharp/language-reference/keywords/built-in-types-table.md)  
- [隐式数值转换表](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)  
- [显式数值转换表](../../../csharp/language-reference/keywords/explicit-numeric-conversions-table.md)
+## <a name="see-also"></a>请参阅
+
+- <xref:System.Int16>  
+- [C# 参考](../../../csharp/language-reference/index.md)  
+- [C# 编程指南](../../../csharp/programming-guide/index.md)  
+- [C# 关键字](../../../csharp/language-reference/keywords/index.md)  
+- [整型表](../../../csharp/language-reference/keywords/integral-types-table.md)  
+- [内置类型表](../../../csharp/language-reference/keywords/built-in-types-table.md)  
+- [隐式数值转换表](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)  
+- [显式数值转换表](../../../csharp/language-reference/keywords/explicit-numeric-conversions-table.md)

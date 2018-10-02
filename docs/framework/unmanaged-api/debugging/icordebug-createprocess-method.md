@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 044f94a567dc4bc2b169ba2a5f2a5d7b4f98e516
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: dfda61706af3e1043d271c0aa74264bd99a4076c
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33408572"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43508631"
 ---
 # <a name="icordebugcreateprocess-method"></a>ICorDebug::CreateProcess 方法
-将启动一个进程和调试器的控制之下其主线程。  
+启动进程和调试器的控制下其主线程。  
   
 ## <a name="syntax"></a>语法  
   
@@ -48,58 +48,58 @@ HRESULT CreateProcess (
   
 #### <a name="parameters"></a>参数  
  `lpApplicationName`  
- [in]指向一个以 null 结尾的字符串，指定要启动的进程执行的模块的指针。 该模块是在调用进程的安全上下文中执行的。  
+ [in]指向一个以 null 结尾的字符串，指定要执行的启动进程的模块。 调用进程的安全上下文中执行模块。  
   
  `lpCommandLine`  
- [in]为一个以 null 结尾的字符串，指定要启动的进程执行的命令行的指针。 应用程序名称 (例如，"SomeApp.exe") 必须是第一个参数。  
+ [in]指定要执行的启动进程的命令行的以 null 结尾的字符串指针。 应用程序名称 (例如，"SomeApp.exe") 必须是第一个参数。  
   
  `lpProcessAttributes`  
- [in]指向 Win32`SECURITY_ATTRIBUTES`结构，它指定进程的安全描述符。 如果`lpProcessAttributes`是 null，则进程获取默认安全描述符。  
+ [in]指向 Win32`SECURITY_ATTRIBUTES`结构，它指定进程的安全描述符。 如果`lpProcessAttributes`是 null，则该过程获取的默认安全描述符。  
   
  `lpThreadAttributes`  
- [in]指向 Win32`SECURITY_ATTRIBUTES`结构，它指定进程的主线程的安全描述符。 如果`lpThreadAttributes`是 null，则该线程将获取默认安全描述符。  
+ [in]指向 Win32`SECURITY_ATTRIBUTES`结构，它指定进程的主线程的安全描述符。 如果`lpThreadAttributes`是 null，该线程将获取的默认安全描述符。  
   
  `bInheritHandles`  
- [in]设置为`true`以指示的启动过程中，将继承调用进程中的每个可继承句柄或`false`以指示句柄不会继承。 继承句柄具有相同的值和访问权限作为原始句柄。  
+ [in]设置为`true`以指示，在启动过程中，由继承调用进程中的每个可继承句柄或`false`以指示不会继承句柄。 继承的句柄具有相同值和访问权限，作为原始句柄。  
   
  `dwCreationFlags`  
- [in]按位组合[Win32 进程创建标志](http://go.microsoft.com/fwlink/?linkid=69981)控制的优先级类和启动进程的行为。  
+ [in]按位组合[Win32 进程创建标志](https://go.microsoft.com/fwlink/?linkid=69981)用于控制优先级类和启动过程的行为。  
   
  `lpEnvironment`  
  [in]指向新的进程的环境块的指针。  
   
  `lpCurrentDirectory`  
- [in]指向一个以 null 结尾的字符串，指定进程的当前目录的完整路径。 如果此参数为 null，则新进程将具有的相同当前的驱动器及目录作为调用进程。  
+ [in]指向一个以 null 结尾的字符串，指定进程的当前目录的完整路径。 如果此参数为 null，新进程将与调用进程具有相同的当前驱动器和目录。  
   
  `lpStartupInfo`  
- [in]指向 Win32`STARTUPINFOW`结构，它指定窗口工作站、 桌面、 标准句柄，和已启动的进程的主窗口的外观。  
+ [in]指向 Win32`STARTUPINFOW`结构，它指定窗口区域、 桌面、 标准句柄和启动进程的主窗口的外观。  
   
  `lpProcessInformation`  
- [in]指向 Win32`PROCESS_INFORMATION`结构，它指定有关要启动的过程的标识信息。  
+ [in]指向 Win32`PROCESS_INFORMATION`结构，它指定要启动的进程的标识信息。  
   
  `debuggingFlags`  
- [in]CorDebugCreateProcessFlags 枚举指定的调试选项的值。  
+ [in]CorDebugCreateProcessFlags 枚举，指定调试选项的值。  
   
  `ppProcess`  
- [out]ICorDebugProcess 对象表示进程的地址指针。  
+ [out]指向表示流程 ICorDebugProcess 对象的地址的指针。  
   
 ## <a name="remarks"></a>备注  
- 此方法的参数是不同于 Win32`CreateProcess`方法。  
+ 此方法的参数都是相同的 Win32`CreateProcess`方法。  
   
- 若要启用非托管的混合模式调试，设置`dwCreationFlags`到 DEBUG_PROCESS &#124; DEBUG_ONLY_THIS_PROCESS。 如果你想要使用仅托管调试，则不要设置这些标志。  
+ 若要启用非托管混合模式调试，请设置`dwCreationFlags`DEBUG_PROCESS 到&#124;DEBUG_ONLY_THIS_PROCESS。 如果你想要使用仅托管调试，则不要设置这些标志。  
   
- 如果调试器和进程要调试 （附加的进程） 共享单个控制台中，并且如果使用互操作调试，则可能会附加进程保持控制台锁定并在调试事件处停止。 然后，调试器将阻止使用控制台的任何尝试。 若要避免此问题，在设置 CREATE_NEW_CONSOLE 标志`dwCreationFlags`参数。  
+ 如果调试器和过程来进行调试 （附加的进程） 共享单个控制台中，并使用互操作调试时，是否可以为附加的进程，以保存控制台锁并在调试事件处停止。 然后，调试器将阻止使用控制台的任何尝试。 若要避免此问题，在中设置 CREATE_NEW_CONSOLE 标志`dwCreationFlags`参数。  
   
- 不支持 Win9x 和非 x86 平台，例如-基于 IA-64 和 AMD64 基于平台进行互操作调试。  
+ 不支持 Win9x 和非 x86 平台，例如基于 IA-64 和 AMD64 基于平台进行互操作调试。  
   
 ## <a name="requirements"></a>要求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** CorDebug.idl、 CorDebug.h  
+ **标头**：CorDebug.idl、CorDebug.h  
   
  **库：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅  
  [ICorDebug 接口](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)

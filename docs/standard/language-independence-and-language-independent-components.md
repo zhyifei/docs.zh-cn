@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4f0b77d0-4844-464f-af73-6e06bedeafc6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bf18fb7238eb35b5ceb1624c14b83486485ddc1b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 90b3e7246046a979f3ee02e332fbb6a843ea9e8c
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33579621"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43864782"
 ---
 # <a name="language-independence-and-language-independent-components"></a>语言独立性和与语言无关的组件
 .NET Framework 是独立于语言的。 这意味着，作为开发人员，您可以使用面向 .NET Framework 的多种语言（例如，C#、C++/CLI、Eiffel、F#、IronPython、IronRuby、PowerBuilder、Visual Basic、Visual COBOL 以及 Windows PowerShell）之一进行开发。 您可以访问针对 .NET Framework 开发的类库的类型和成员，而不必了解它们的初始编写语言，也不必遵循任何原始语言的约定。 如果您是组件开发人员，无论组件采用哪种语言，均可由任何 .NET Framework 应用程序访问。  
@@ -585,5 +585,6 @@ vbc example.vb /r:UtilityLib.dll
 csc example.cs /r:UtilityLib.dll  
 ```  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.CLSCompliantAttribute>
+## <a name="see-also"></a>请参阅
+
+- <xref:System.CLSCompliantAttribute>

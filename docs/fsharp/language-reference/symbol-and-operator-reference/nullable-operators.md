@@ -2,22 +2,22 @@
 title: 可以为 null 的运算符 (F#)
 description: '了解有关 F # 编程语言中可用的可以为 null 运算符。'
 ms.date: 05/16/2016
-ms.openlocfilehash: 63ad7da2d584b96eee8765b57fc671befbcbd38b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 42df74a56831fb0a5d6df34db4321f5b228993c2
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33566345"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44086278"
 ---
 # <a name="nullable-operators"></a>可以为 null 的运算符
 
-可以为 null 的运算符都是二元一端或两端使用可以为 null 的算术类型的算术或比较运算符。 经常当您使用如允许 null 值来代替实际值的数据库的源中的数据时，会出现可以为 null 的类型。 在查询表达式中经常使用可以为 null 的运算符。 除了算术运算符和比较的可以为 null 的运算符，可以使用转换运算符，可以为 null 的类型之间进行转换。 也有某些查询运算符的可以为 null 版本。
+可以为 null 的运算符是二元一端或两端使用可以为 null 的算术类型的算术或比较运算符。 使用源如允许使用空值来替代实际值的数据库中的数据时经常会出现可以为 null 的类型。 在查询表达式中通常使用可以为 null 的运算符。 除了可以为 null 的算术运算符和比较运算符，可以使用转换运算符可以为 null 的类型之间进行转换。 也有某些查询运算符的为空版本。
 
+## <a name="table-of-nullable-operators"></a>可以为 Null 的运算符的表
 
-## <a name="table-of-nullable-operators"></a>可以为 Null 的运算符表
-下表列出了 F # 语言中支持的可以为 null 运算符。
+下表列出了可以为 null 的 F # 语言支持的运算符。
 
-|在左侧的可以为 Null|右侧可以为 null|双方可以为 null|
+|在左侧可以为 null|右侧可以为 null|双方可以为 null|
 |---|---|---|
 |[?>=](https://msdn.microsoft.com/library/94d29e32-a204-4f60-a527-6b0af86268f3)|[>=?](https://msdn.microsoft.com/library/0a255d8e-8cae-4160-ae61-243a5d96583f)|[?>=?](https://msdn.microsoft.com/library/3051a50f-d276-4c84-9d73-bf2efeddef94)|
 |[?>](https://msdn.microsoft.com/library/62dc0021-1312-4ac3-be87-798b60b81bb6)|[>?](https://msdn.microsoft.com/library/0ad1284b-de48-4a04-83d8-b6f13c9c8936)|[?>?](https://msdn.microsoft.com/library/dc18b6fa-30c4-47b0-9057-794439378a05)|
@@ -32,11 +32,12 @@ ms.locfileid: "33566345"
 |[?%](https://msdn.microsoft.com/library/44297bba-1bd9-4ed2-a848-f1e1e598db87)|[%?](https://msdn.microsoft.com/library/a4c178e5-eec4-42e8-847f-90b24fc609fe)|[?%?](https://msdn.microsoft.com/library/dd555f20-1be3-4b8d-81f1-bf1921e62fda)|
 
 ## <a name="remarks"></a>备注
-可以为 null 的运算符都将纳入[NullableOperators](https://msdn.microsoft.com/library/2c3633c5-3f31-4d62-a9f8-272ad6b19007)命名空间中的模块[Microsoft.FSharp.Linq](https://msdn.microsoft.com/library/4765b4e8-4006-4d8c-a405-39c218b3c82d)。 对于可以为 null 的数据类型是`System.Nullable<'T>`。
 
-在查询表达式中，选择允许空值而不是值的数据源的数据时，会出现可以为 null 的类型。 在 SQL Server 数据库中，表中的每个数据列具有属性，该值指示是否允许 null 值。 如果允许 null 值，从数据库中返回的数据可能包含不能如通过基元数据类型表示的 null `int`， `float`，依次类推。 因此，将数据返回为`System.Nullable<int>`而不是`int`，和`System.Nullable<float>`而不是`float`。 可以从获取的实际值`System.Nullable<'T>`对象使用`Value`属性，并且可以确定如果`System.Nullable<'T>`对象具有一个值，通过调用`HasValue`方法。 另一个有用方法是`System.Nullable<'T>.GetValueOrDefault`方法，使你能获取的值或相应类型的默认值。 默认值是某种形式的"零"值，例如 0，0.0，或`false`。
+中包含的可以为 null 的运算符[NullableOperators](https://msdn.microsoft.com/library/2c3633c5-3f31-4d62-a9f8-272ad6b19007)命名空间中的模块[Microsoft.FSharp.Linq](https://msdn.microsoft.com/library/4765b4e8-4006-4d8c-a405-39c218b3c82d)。 对于可以为 null 的数据类型是`System.Nullable<'T>`。
 
-可以为 null 的类型可能转换为不可为 null 的基元类型，如使用常用转换运算符`int`或`float`。 还有可能将通过使用转换运算符适用于可以为 null 的类型从一种可以为 null 的类型转换为另一种可以为 null 的类型。 相应的转换运算符具有相同的名称的标准，但它们在单独模块中[可以为 Null](https://msdn.microsoft.com/library/e7a4ea13-28cc-462e-bc3a-33131ace976e)中的模块[Microsoft.FSharp.Linq](https://msdn.microsoft.com/library/4765b4e8-4006-4d8c-a405-39c218b3c82d)命名空间。 通常情况下，使用查询表达式时打开此命名空间。 在这种情况下，可以通过添加前缀使用可以为 null 的转换运算符`Nullable.`到相应的转换运算符，如下面的代码中所示。
+在查询表达式中，选择从允许空值而不是值的数据源的数据时，会出现可以为 null 的类型。 在 SQL Server 数据库中，表中的每个数据列具有一个属性，指示是否允许 null 值。 如果允许空值，从数据库返回的数据可以包含 null 值的基元数据类型如不能表示`int`， `float`，依次类推。 因此，作为返回的数据`System.Nullable<int>`而不是`int`，并`System.Nullable<float>`而不是`float`。 可以从获取实际值`System.Nullable<'T>`通过使用对象`Value`属性，并且可以确定是否`System.Nullable<'T>`的对象的值通过调用`HasValue`方法。 另一个有用的方法是`System.Nullable<'T>.GetValueOrDefault`方法，让你能够获取的值或默认值为适当的类型。 默认值是某种形式的"零"值，例如 0、 0.0 或`false`。
+
+可能会为 null 的类型转换为不可为 null 的基元类型，如使用常用转换运算符`int`或`float`。 还有可能要从一种可以为 null 的类型转换为另一种可以为 null 的类型，通过使用转换运算符可以为 null 的类型。 适当的转换运算符具有相同的名称作为标准的但它们是在单独的模块， [Nullable](https://msdn.microsoft.com/library/e7a4ea13-28cc-462e-bc3a-33131ace976e)中的模块[Microsoft.FSharp.Linq](https://msdn.microsoft.com/library/4765b4e8-4006-4d8c-a405-39c218b3c82d)命名空间。 通常情况下，使用查询表达式时打开此命名空间。 在这种情况下，可以通过添加前缀使用可以为 null 的转换运算符`Nullable.`到适当的转换运算符，如以下代码所示。
 
 ```fsharp
 open Microsoft.FSharp.Linq
@@ -52,9 +53,9 @@ printfn "%f" (float nullableFloat)
 
 输出为 `10.000000`。
 
-查询运算符上可以为 null 的数据字段，如`sumByNullable`，也存在在查询表达式中使用。 不可为 null 的类型的查询运算符不与可以为 null 的类型的类型兼容，因此你必须使用相应的查询运算符的可以为 null 版本，当您正在使用可以为 null 数据值。 有关详细信息，请参阅[查询表达式](../query-expressions.md)。
+查询运算符可以为 null 的数据字段，如`sumByNullable`，也存在在查询表达式中使用。 不可以为 null 的类型的查询运算符不兼容的类型与 null 的类型，因此使用可以为 null 数据值时，必须使用相应的查询运算符的可以为 null 版本。 有关详细信息，请参阅[查询表达式](../query-expressions.md)。
 
-下面的示例演示在 F # 查询表达式可以为 null 的运算符的使用。 第一个查询显示如何编写查询中不可以为 null 的运算符;第二个查询显示等效的查询使用可以为 null 的运算符。 有关完整的上下文，包括如何将数据库设置为使用此代码示例，请参阅[演练： 访问 SQL 数据库使用类型提供程序](../../tutorials/type-providers/accessing-a-sql-database.md)。
+下面的示例演示 F # 查询表达式中使用可以为 null 的运算符。 第一个查询显示如何编写查询中不可以为 null 的运算符;第二个查询显示了使用可以为 null 的运算符的等效查询。 有关完整的上下文，包括如何将数据库设置为使用此代码示例，请参阅[演练： 访问 SQL 数据库的使用类型提供程序](../../tutorials/type-providers/accessing-a-sql-database.md)。
 
 ```fsharp
 open System
@@ -84,6 +85,5 @@ query {
 
 ## <a name="see-also"></a>请参阅
 
-[类型提供程序](../../tutorials/type-providers/index.md)
-
-[查询表达式](../query-expressions.md)
+- [类型提供程序](../../tutorials/type-providers/index.md)
+- [查询表达式](../query-expressions.md)

@@ -12,12 +12,12 @@ helpviewer_keywords:
 - command line [C#], arguments
 - command-line arguments [C#], Main method
 ms.assetid: 73a17231-cf96-44ea-aa8a-54807c6fb1f4
-ms.openlocfilehash: 03d6e7185a0a16589fb612724be52ce51e813173
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 144d03edf28464717430bd0ae83db637578d8296
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33332363"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45698579"
 ---
 # <a name="main-and-command-line-arguments-c-programming-guide"></a>Main() 和命令行参数（C# 编程指南）
 
@@ -42,7 +42,8 @@ ms.locfileid: "33332363"
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
 ## <a name="see-also"></a>请参阅
-[在命令行上使用 csc.exe 生成](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)  
-[C# 编程指南](../../../csharp/programming-guide/index.md)  
-[方法](../../../csharp/programming-guide/classes-and-structs/methods.md)  
-[在 C# 程序内部](../../../csharp/programming-guide/inside-a-program/index.md)  
+
+- [在命令行上使用 csc.exe 生成](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)  
+- [C# 编程指南](../../../csharp/programming-guide/index.md)  
+- [方法](../../../csharp/programming-guide/classes-and-structs/methods.md)  
+- [在 C# 程序内部](../../../csharp/programming-guide/inside-a-program/index.md)  

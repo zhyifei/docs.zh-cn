@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - is keyword [C#]
 ms.assetid: bc62316a-d41f-4f90-8300-c6f4f0556e43
-ms.openlocfilehash: 16d318c1c1a5d8e560b97d9e996f1165a4566c6a
-ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
+ms.openlocfilehash: 974e0c3ab29da582e7b22c909650a61d179ec3f7
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36207872"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43523934"
 ---
 # <a name="is-c-reference"></a>is（C# 参考） #
 
@@ -147,9 +147,10 @@ ms.locfileid: "36207872"
   
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>请参阅  
- [C# 参考](../../../csharp/language-reference/index.md)  
- [C# 关键字](../../../csharp/language-reference/keywords/index.md)  
- [typeof](../../../csharp/language-reference/keywords/typeof.md)  
- [as](../../../csharp/language-reference/keywords/as.md)  
- [运算符关键字](../../../csharp/language-reference/keywords/operator-keywords.md)
+## <a name="see-also"></a>请参阅
+
+- [C# 参考](../../../csharp/language-reference/index.md)  
+- [C# 关键字](../../../csharp/language-reference/keywords/index.md)  
+- [typeof](../../../csharp/language-reference/keywords/typeof.md)  
+- [as](../../../csharp/language-reference/keywords/as.md)  
+- [运算符关键字](../../../csharp/language-reference/keywords/operator-keywords.md)

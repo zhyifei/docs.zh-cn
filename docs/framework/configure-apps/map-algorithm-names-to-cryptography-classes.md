@@ -9,33 +9,32 @@ helpviewer_keywords:
 ms.assetid: 01327c69-c5e1-4ef6-b73f-0a58351f0492
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 2dc03c3aa6808ed4ce0c22f4e69fa8c98cb7aebd
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: cd57cc7bbe39b042e11d0dad3fd54373bcaae98b
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32758251"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47196234"
 ---
 # <a name="mapping-algorithm-names-to-cryptography-classes"></a>将算法名称映射到加密类
 有四种方法，开发人员可以创建加密对象使用[!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)]:  
   
--   通过创建对象**新**运算符。  
+-   使用创建对象**新**运算符。  
   
--   创建一个对象，通过调用实现特定的加密算法**创建**该算法的抽象类上的方法。  
+-   创建一个对象，通过调用来实现特定加密算法**创建**的抽象类上为该算法的方法。  
   
--   创建一个对象，通过调用实现特定的加密算法<xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A?displayProperty=nameWithType>方法。  
+-   创建一个对象，通过调用来实现特定加密算法<xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A?displayProperty=nameWithType>方法。  
   
--   创建实现加密算法 （如一种对称的块密码） 的类通过调用的对象**创建**算法该类型的抽象类上的方法 (如<xref:System.Security.Cryptography.SymmetricAlgorithm>)。  
+-   创建一个对象，通过调用实现加密算法 （如一种对称块密码） 的类**创建**方法的抽象类上为该类型的算法 (如<xref:System.Security.Cryptography.SymmetricAlgorithm>)。  
   
- 例如，假设开发人员想要计算的一组字节的 SHA1 哈希。 <xref:System.Security.Cryptography>命名空间包含 SHA1 算法、 一个纯托管的实现和一个包装 CryptoAPI 的两个实现。 开发人员可以选择实例化特定 SHA1 实现 (如<xref:System.Security.Cryptography.SHA1Managed>) 通过调用**新**运算符。 但是，如果它并不重要公共语言运行时加载，只要类实现的 SHA1 哈希算法的类，开发人员可以创建一个对象通过调用<xref:System.Security.Cryptography.SHA1.Create%2A?displayProperty=nameWithType>方法。 此方法调用**System.Security.Cryptography.CryptoConfig.CreateFromName("System.Security.Cryptography.SHA1")**，其必须返回 SHA1 哈希算法实现。  
+ 例如，假设开发人员想要计算的一组字节的 SHA1 哈希。 <xref:System.Security.Cryptography>命名空间包含的 SHA1 算法、 一种纯托管的实现和一个包装 CryptoAPI 的两种实现。 开发人员可以选择要实例化特定 SHA1 实现 (如<xref:System.Security.Cryptography.SHA1Managed>) 通过调用**新**运算符。 但是，如果并不重要，只要类实现的 SHA1 哈希算法，公共语言运行时将加载哪些类，开发人员可以创建一个对象通过调用<xref:System.Security.Cryptography.SHA1.Create%2A?displayProperty=nameWithType>方法。 此方法调用**System.Security.Cryptography.CryptoConfig.CreateFromName("System.Security.Cryptography.SHA1")**，其必须返回的 SHA1 哈希算法的实现。  
   
  开发人员还可以调用**System.Security.Cryptography.CryptoConfig.CreateFromName("SHA1")** 因为默认情况下，加密配置包括在.NET Framework 中提供的算法的短名称。  
   
- 如果它并不重要使用的哈希算法，开发人员可以调用<xref:System.Security.Cryptography.HashAlgorithm.Create%2A?displayProperty=nameWithType>方法，返回实现哈希转换的对象。  
+ 如果并不重要的哈希算法使用，开发人员可以调用<xref:System.Security.Cryptography.HashAlgorithm.Create%2A?displayProperty=nameWithType>方法，它将返回实现哈希转换的对象。  
   
-## <a name="mapping-algorithm-names-in-configuration-files"></a>映射算法名称在配置文件中  
- 默认情况下，运行时返回<xref:System.Security.Cryptography.SHA1CryptoServiceProvider>所有四种方案的对象。 但是，计算机管理员可以更改中的最后两个方案的方法返回的对象的类型。 若要执行此操作，你必须映射到你想要在计算机配置文件 (Machine.config) 中使用的类的友好算法名称。  
+## <a name="mapping-algorithm-names-in-configuration-files"></a>在配置文件中的算法名称映射  
+ 默认情况下，运行时将返回<xref:System.Security.Cryptography.SHA1CryptoServiceProvider>所有四种方案的对象。 但是，计算机管理员可以更改的最后两个方案中的方法返回的对象的类型。 若要执行此操作，必须将友好算法名称映射到你想要使用计算机配置文件 (Machine.config) 中的类中。  
   
  下面的示例演示如何配置运行时，以便**System.Security.Cryptography.SHA1.Create**， **System.Security.CryptoConfig.CreateFromName("SHA1")**，和**System.Security.Cryptography.HashAlgorithm.Create**返回`MySHA1HashClass`对象。  
   
@@ -61,14 +60,14 @@ ms.locfileid: "32758251"
 </configuration>  
 ```  
   
- 你可以指定中的属性的名称[< cryptoClass\>元素](../../../docs/framework/configure-apps/file-schema/cryptography/cryptoclass-element.md)(前面的示例将该特性命名`MySHA1Hash`)。 中的属性的值 **\<cryptoClass >** 元素是一个字符串，公共语言运行时使用找到的类。 你可以使用任何字符串都满足中指定的要求[指定完全限定的类型名称](../../../docs/framework/reflection-and-codedom/specifying-fully-qualified-type-names.md)。  
+ 可以指定的名称中的属性[< cryptoClass\>元素](../../../docs/framework/configure-apps/file-schema/cryptography/cryptoclass-element.md)(前面的示例将该特性命名`MySHA1Hash`)。 中的属性的值 **\<cryptoClass >** 元素是一个字符串，公共语言运行时使用找到的类。 可以使用任何字符串都满足中指定的要求[指定完全限定的类型名称](../../../docs/framework/reflection-and-codedom/specifying-fully-qualified-type-names.md)。  
   
- 许多算法名称可以映射到同一个类。 [ \<NameEntry > 元素](../../../docs/framework/configure-apps/file-schema/cryptography/nameentry-element.md)将类映射到一个友好算法名称。 **名称**属性可以是在调用时使用的任一字符串**System.Security.Cryptography.CryptoConfig.CreateFromName**方法或在抽象加密类的名称<xref:System.Security.Cryptography>命名空间。 值**类**特性是中的属性的名称 **\<cryptoClass >** 元素。  
+ 许多将算法名称可以映射到同一个类。 [ \<NameEntry > 元素](../../../docs/framework/configure-apps/file-schema/cryptography/nameentry-element.md)将类映射到一个友好算法名称。 **名称**属性可以是调用时使用的是一个字符串**System.Security.Cryptography.CryptoConfig.CreateFromName**方法或抽象加密类中的名称<xref:System.Security.Cryptography>命名空间。 值**类**特性是中的属性的名称 **\<cryptoClass >** 元素。  
   
 > [!NOTE]
->  你可以通过调用获取 SHA1 算法<xref:System.Security.Cryptography.SHA1.Create%2A?displayProperty=nameWithType>或**Security.CryptoConfig.CreateFromName("SHA1")** 方法。 每个方法仅保证它返回实现 SHA1 算法的对象。 无需将每个友好算法名称映射到配置文件中的同一个类。  
+>  可以通过调用获取 SHA1 算法<xref:System.Security.Cryptography.SHA1.Create%2A?displayProperty=nameWithType>或**Security.CryptoConfig.CreateFromName("SHA1")** 方法。 它返回一个对象，用于实现 SHA1 算法，每个方法可仅保证。 无需将一种算法的每个友好名称映射到配置文件中的同一个类。  
   
- 默认名称以及它们映射到的类的列表，请参阅<xref:System.Security.Cryptography.CryptoConfig>。  
+ 默认名称和它们映射到的类的列表，请参阅<xref:System.Security.Cryptography.CryptoConfig>。  
   
 ## <a name="see-also"></a>请参阅  
  [Cryptographic Services](../../../docs/standard/security/cryptographic-services.md)  

@@ -2,12 +2,12 @@
 title: 如何：列出树中的所有节点 (C#)
 ms.date: 07/20/2015
 ms.assetid: 3e934371-f4c6-458b-9f6b-f9061b596f5b
-ms.openlocfilehash: 0ee4c51946ff6116fa37f4ca61bc42deed562532
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e014de90935830df3ea5454dcd4d5a840f4d04ad
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33322125"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43513679"
 ---
 # <a name="how-to-list-all-nodes-in-a-tree-c"></a>如何：列出树中的所有节点 (C#)
 有时，列出树中的所有节点会有帮助。 它可帮助准确了解方法或属性是如何影响树的。 以文本形式列出所有节点的一种方法是生成准确逐一地标识树中所有节点的 XPath 表达式。  
@@ -348,5 +348,6 @@ class Program
 /Root/aw:ElementInNamespace/aw:ChildInNamespace  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [高级查询技术 (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)
+## <a name="see-also"></a>请参阅
+
+- [高级查询技术 (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)

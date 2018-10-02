@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - byte keyword [C#]
 ms.assetid: 111f1db9-ca32-4f0e-b497-4783517eda47
-ms.openlocfilehash: 28acbe67b85637550fdb1f5e290a9abb60bf5c65
-ms.sourcegitcommit: f9e38d31288fe5962e6be5b0cc286da633482873
+ms.openlocfilehash: ee70b7c804423a35e2db3fe20ac4b66d8d1b98e2
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37027884"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43505090"
 ---
 # <a name="byte-c-reference"></a>byte（C# 参考）
 
@@ -105,11 +105,12 @@ SampleMethod((byte)5);
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>请参阅  
- <xref:System.Byte>  
- [C# 参考](../../../csharp/language-reference/index.md)  
- [C# 编程指南](../../../csharp/programming-guide/index.md)  
- [C# 关键字](../../../csharp/language-reference/keywords/index.md)  
- [整型表](../../../csharp/language-reference/keywords/integral-types-table.md)  
- [内置类型表](../../../csharp/language-reference/keywords/built-in-types-table.md)  
- [隐式数值转换表](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)  
- [显式数值转换表](../../../csharp/language-reference/keywords/explicit-numeric-conversions-table.md)
+
+- <xref:System.Byte>  
+- [C# 参考](../../../csharp/language-reference/index.md)  
+- [C# 编程指南](../../../csharp/programming-guide/index.md)  
+- [C# 关键字](../../../csharp/language-reference/keywords/index.md)  
+- [整型表](../../../csharp/language-reference/keywords/integral-types-table.md)  
+- [内置类型表](../../../csharp/language-reference/keywords/built-in-types-table.md)  
+- [隐式数值转换表](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)  
+- [显式数值转换表](../../../csharp/language-reference/keywords/explicit-numeric-conversions-table.md)

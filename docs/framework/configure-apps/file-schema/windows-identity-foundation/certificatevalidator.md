@@ -3,20 +3,19 @@ title: '&lt;certificateValidator&gt;'
 ms.date: 03/30/2017
 ms.assetid: 86161897-c20f-4ad8-9d7f-050c247251bf
 author: BrucePerlerMS
-manager: mbaldwin
-ms.openlocfilehash: a4663b0c3a2a6965a977a1d551c47de7e13d144b
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 65b8aa6fa4422579ce0d1c5e33d3418ea051612a
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32766889"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47236775"
 ---
 # <a name="ltcertificatevalidatorgt"></a>&lt;certificateValidator&gt;
-指定证书验证的自定义类型。 仅当使用此类型`certificateValidationMode`属性[ \<certificateValidation >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/certificatevalidation.md)元素设置为"Custom"。  
+指定证书验证的自定义类型。 仅当使用此类型`certificateValidationMode`的属性[ \<certificatevalidation 设置 >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/certificatevalidation.md)元素设置为"自定义"。  
   
  \<system.identityModel>  
 \<identityConfiguration>  
-\<certificateValidation >  
+\<certificatevalidation 设置 >  
 \<certificateValidator >  
   
 ## <a name="syntax"></a>语法  
@@ -39,7 +38,7 @@ ms.locfileid: "32766889"
   
 |特性|描述|  
 |---------------|-----------------|  
-|类型|指定自定义类型派生自<xref:System.IdentityModel.Selectors.X509CertificateValidator>类。 设置`certificateValidationMode`属性[ \<certificateValidation >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/certificatevalidation.md)为"Custom"以使用此类型的元素。 有关如何指定详细信息`type`属性，请参阅[自定义类型引用](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/index.md)。 可选。|  
+|类型|指定派生的自定义类型<xref:System.IdentityModel.Selectors.X509CertificateValidator>类。 设置`certificateValidationMode`的属性[ \<certificatevalidation 设置 >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/certificatevalidation.md)为"Custom"要使用此类型的元素。 有关如何指定详细信息`type`属性，请参阅[自定义类型引用](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/index.md)。 可选。|  
   
 ### <a name="child-elements"></a>子元素  
  无  
@@ -48,7 +47,7 @@ ms.locfileid: "32766889"
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<certificateValidation >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/certificatevalidation.md)|控制令牌处理程序用来验证证书的设置。|  
+|[\<certificatevalidation 设置 >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/certificatevalidation.md)|控制令牌处理程序用来验证证书的设置。|  
   
 ## <a name="example"></a>示例  
   

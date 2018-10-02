@@ -2,12 +2,12 @@
 title: 输出 Office Open XML 文档部件的示例 (C#)
 ms.date: 07/20/2015
 ms.assetid: 6cd37055-89b4-42e8-bf27-5a29717e35f3
-ms.openlocfilehash: e63f6eafb32a6426d6c3fd7296c0e8fa6595efee
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5dd8e4238ff4015130160b5297f807d79013ce7b
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33325365"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43505666"
 ---
 # <a name="example-that-outputs-office-open-xml-document-parts-c"></a>输出 Office Open XML 文档部件的示例 (C#)
 本主题演示如何打开 Office Open XML 文档并访问其中的部分。  
@@ -66,5 +66,6 @@ using (Package wdPackage = Package.Open(fileName, FileMode.Open, FileAccess.Read
 }  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [Office Open XML WordprocessingML 文档的详细信息 (C#)](../../../../csharp/programming-guide/concepts/linq/details-of-office-open-xml-wordprocessingml-documents.md)
+## <a name="see-also"></a>请参阅
+
+- [Office Open XML WordprocessingML 文档的详细信息 (C#)](../../../../csharp/programming-guide/concepts/linq/details-of-office-open-xml-wordprocessingml-documents.md)

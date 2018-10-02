@@ -8,12 +8,12 @@ helpviewer_keywords:
 - /target compiler options [C#], /target:exe
 - -target compiler options [C#], /target:exe
 ms.assetid: bda5717d-1b91-4848-956b-fcf85c30e432
-ms.openlocfilehash: 194e4f7efaebd9523791090bcab09c019f8554a4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4a2d3ea2bda56caf6a16f52877ad36b3947357e8
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33218824"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43518154"
 ---
 # <a name="-targetexe-c-compiler-options"></a>-target:exe（C# 编译器选项）
 -target:exe 选项将使编译器创建可执行文件 (EXE) 和控制台应用程序。  
@@ -54,5 +54,6 @@ csc in.cs
 ```  
   
 ## <a name="see-also"></a>请参阅  
- [-target（C# 编译器选项）](../../../csharp/language-reference/compiler-options/target-compiler-option.md)  
- [C# 编译器选项](../../../csharp/language-reference/compiler-options/index.md)
+
+- [-target（C# 编译器选项）](../../../csharp/language-reference/compiler-options/target-compiler-option.md)  
+- [C# 编译器选项](../../../csharp/language-reference/compiler-options/index.md)

@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: fa93af15-28af-4b5e-846b-897308410edb
-ms.openlocfilehash: 2c95125182a352d3cd2b0b4c51ffac3f74fff5a7
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 75918450d3e08436578b1535316f19d2adf32695
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32764809"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43511252"
 ---
 # <a name="method-based-query-syntax-examples-set-operators-linq-to-dataset"></a>基于方法的查询语法示例：集运算符 (LINQ to DataSet)
-本主题中的示例演示如何使用<xref:System.Linq.Enumerable.Distinct%2A>， <xref:System.Linq.Enumerable.Except%2A>， <xref:System.Linq.Enumerable.Intersect%2A>，和<xref:System.Linq.Enumerable.Union%2A>运算符执行的数据行集的基于值的比较运算。[加载数据到显示数据集](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md)请参阅[比较 Datarow](../../../../docs/framework/data/adonet/comparing-datarows-linq-to-dataset.md)有关详细信息<xref:System.Data.DataRowComparer>。  
+本主题中的示例演示如何使用<xref:System.Linq.Enumerable.Distinct%2A>， <xref:System.Linq.Enumerable.Except%2A>， <xref:System.Linq.Enumerable.Intersect%2A>，和<xref:System.Linq.Enumerable.Union%2A>运算符以对数据行集执行基于值的比较运算。[正在加载数据到数据集](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md)请参阅[比较 Datarow](../../../../docs/framework/data/adonet/comparing-datarows-linq-to-dataset.md)有关详细信息<xref:System.Data.DataRowComparer>。  
   
  `FillDataSet`中指定这些示例中使用的方法[加载数据到数据集](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md)。  
   
@@ -61,4 +61,4 @@ ms.locfileid: "32764809"
 ## <a name="see-also"></a>请参阅  
  [将数据加载到数据集中](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md)  
  [LINQ to DataSet 示例](../../../../docs/framework/data/adonet/linq-to-dataset-examples.md)  
- [标准查询运算符概述](http://msdn.microsoft.com/library/24cda21e-8af8-4632-b519-c404a839b9b2)
+ [标准查询运算符概述](https://msdn.microsoft.com/library/24cda21e-8af8-4632-b519-c404a839b9b2)

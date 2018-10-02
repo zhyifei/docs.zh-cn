@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 4fccbb35-eaa5-44e9-a252-a5c3d4bc7604
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3dd16f46b7d7eb80021a67583f51feae182a2cc9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0e7ef42bab2d7567741a433cbcacf10a5e689f6a
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33590889"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43867928"
 ---
 # <a name="plinq-data-sample"></a>PLINQ 数据示例
 此示例包含 .csv 格式的示例数据，以及将它转换为“客户”、“产品”、“订单”和“订单详情”内存中集合的方法。 若要进一步试验 PLINQ，可以将其他一些主题中的代码示例粘贴到本主题的代码中，并通过 `Main` 方法调用它。 也可以将此类数据用于自己的 PLINQ 查询。  
@@ -862,5 +862,6 @@ PRODUCTS
 END PRODUCTS  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [并行 LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)
+## <a name="see-also"></a>请参阅
+
+- [并行 LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)

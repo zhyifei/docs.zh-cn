@@ -8,12 +8,12 @@ dev_langs:
 ms.assetid: 450e350b-6a68-4634-a2a5-33f4dc33baf0
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 45f39701d409ba76e3c3f428f484b6fd5e538fbe
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b1808121049c6344b72b1c9d99e19c46422dfa0c
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33577197"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "44042551"
 ---
 # <a name="mapping-the-object-hierarchy-to-xml-data"></a>将对象层次结构映射到 XML 数据
 当 XML 文档在内存中时，概念上的表示形式是树。 编程时可使用对象层次结构访问树节点。 下面的示例显示 XML 内容如何成为节点。  
@@ -220,5 +220,6 @@ public class Sample
   
  若要向 DOM 添加新节点，请参阅[将节点插入 XML 文档中](../../../../docs/standard/data/xml/inserting-nodes-into-an-xml-document.md)。 若要从 DOM 中删除节点，请参阅[从 XML 文档中删除节点、内容和值](../../../../docs/standard/data/xml/removing-nodes-content-and-values-from-an-xml-document.md)。 若要修改 DOM 中的节点内容，请参阅[修改 XML 文档中的节点、内容和值](../../../../docs/standard/data/xml/modifying-nodes-content-and-values-in-an-xml-document.md)。  
   
-## <a name="see-also"></a>请参阅  
- [XML 文档对象模型 (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+## <a name="see-also"></a>请参阅
+
+- [XML 文档对象模型 (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

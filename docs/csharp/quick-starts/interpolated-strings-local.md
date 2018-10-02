@@ -5,12 +5,12 @@ author: rpetrusha
 ms.author: ronpet
 ms.date: 04/14/2018
 ms.custom: mvc
-ms.openlocfilehash: 80b7a2c39094f1101e714b47f0e77f0a7c4907f2
-ms.sourcegitcommit: 77d9a94dac4c05827ed0663d95e0f9ad35d6682e
+ms.openlocfilehash: da111790ebbc299df16297650347045b9395a90f
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/24/2018
-ms.locfileid: "34472758"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47201044"
 ---
 # <a name="string-interpolation"></a>字符串内插
 
@@ -77,7 +77,7 @@ public class Vegetable
 
 public class Program
 {
-   public enum Unit { item, pound, ounce, dozen };
+   public enum Unit { item, kilogram, gram, dozen };
 
    public static void Main()
    {

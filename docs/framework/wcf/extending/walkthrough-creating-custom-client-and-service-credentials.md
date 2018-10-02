@@ -5,18 +5,18 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 2b5ba5c3-0c6c-48e9-9e46-54acaec443ba
-ms.openlocfilehash: 5ba6d2016a36809910561543a531dd4d44aac9b9
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: 7035eb0b57a8dd6f6e75b27f227d7dc924a98454
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33808479"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43528733"
 ---
 # <a name="walkthrough-creating-custom-client-and-service-credentials"></a>演练：创建自定义客户端和服务凭据
 本主题演示如何实现自定义客户端和服务凭据以及如何在应用程序代码中使用自定义凭据。  
   
 ## <a name="credentials-extensibility-classes"></a>凭据扩展性类  
- <xref:System.ServiceModel.Description.ClientCredentials>和<xref:System.ServiceModel.Description.ServiceCredentials>类是 Windows Communication Foundation (WCF) 安全扩展性的主入口点。 这些凭据类提供 API，应用程序代码可以使用这些 API 来设置凭据信息和将凭据类型转换为安全令牌。 (*安全令牌*是用于传输 SOAP 消息内的凭据信息的形式。)这些凭据类的责任可以分成两部分：  
+ <xref:System.ServiceModel.Description.ClientCredentials>和<xref:System.ServiceModel.Description.ServiceCredentials>类是 Windows Communication Foundation (WCF) 安全扩展性的主入口点。 这些凭据类提供 API，应用程序代码可以使用这些 API 来设置凭据信息和将凭据类型转换为安全令牌。 (*安全令牌*是用来传输凭据信息到 SOAP 消息内部的形式。)这些凭据类的责任可以分成两部分：  
   
 -   为应用程序提供 API 以设置凭据信息。  
   
@@ -24,12 +24,12 @@ ms.locfileid: "33808479"
   
  <xref:System.ServiceModel.Description.ClientCredentials> 和 <xref:System.ServiceModel.Description.ServiceCredentials> 类都继承自用于定义返回 <xref:System.ServiceModel.Security.SecurityCredentialsManager> 的协定的抽象 <xref:System.IdentityModel.Selectors.SecurityTokenManager> 类。  
   
- 有关凭据类和如何适应 WCF 安全体系结构的详细信息，请参阅[安全体系结构](http://msdn.microsoft.com/library/16593476-d36a-408d-808c-ae6fd483e28f)。  
+ 有关凭据类及其如何适应 WCF 安全体系结构的详细信息，请参阅[安全体系结构](https://msdn.microsoft.com/library/16593476-d36a-408d-808c-ae6fd483e28f)。  
   
  WCF 中提供的默认实现支持系统提供的凭据类型，并创建安全令牌管理器能够处理这些凭据类型。  
   
 ## <a name="reasons-to-customize"></a>自定义原因  
- 自定义客户端或服务凭据类有多种原因。 最重要是需要更改与处理系统提供的凭据类型，特别是由于以下原因有关的默认 WCF 安全行为：  
+ 自定义客户端或服务凭据类有多种原因。 首要理由是需要更改默认的 WCF 安全行为方面处理系统提供的凭据类型，尤其是出于以下原因：  
   
 -   无法使用其他扩展点进行的更改。  
   
@@ -40,7 +40,7 @@ ms.locfileid: "33808479"
  本主题说明如何实现自定义客户端和服务凭据以及如何在应用程序代码中使用它们。  
   
 ## <a name="first-in-a-series"></a>系列主题中的第一个主题  
- 创建自定义凭据类是仅的第一步，因为自定义凭据的原因是更改有关凭据配置、 安全令牌序列化或身份验证的 WCF 行为。 本节中的其他主题说明如何创建自定义序列化程序和身份验证器。 在这一方面，创建自定义凭据类是系列主题中的第一个主题。 后续操作（创建自定义序列化程序和身份验证器）只有在创建自定义凭据后才能进行。 基于本主题的其他主题包括：  
+ 创建自定义凭据类是仅第一步，因为自定义凭据的原因是为了更改有关凭据配置、 安全令牌序列化或身份验证的 WCF 行为。 本节中的其他主题说明如何创建自定义序列化程序和身份验证器。 在这一方面，创建自定义凭据类是系列主题中的第一个主题。 后续操作（创建自定义序列化程序和身份验证器）只有在创建自定义凭据后才能进行。 基于本主题的其他主题包括：  
   
 -   [如何：创建自定义安全令牌提供程序](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-provider.md)  
   
@@ -109,13 +109,13 @@ ms.locfileid: "33808479"
      [!code-csharp[c_CustomCredentials#7](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customcredentials/cs/source.cs#7)]
      [!code-vb[c_CustomCredentials#7](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customcredentials/vb/service/service.vb#7)]  
   
- 后配置处理程序类，它可以集成到了 WCF 配置架构。 这使自定义客户端凭据能够用于客户端终结点行为元素中，如下一个过程所示。  
+ 配置处理程序类后，它可以集成到了 WCF 配置架构。 这使自定义客户端凭据能够用于客户端终结点行为元素中，如下一个过程所示。  
   
 #### <a name="to-register-and-use-a-custom-client-credentials-configuration-handler-in-the-application-configuration"></a>在应用程序配置中注册和使用自定义客户端凭据配置处理程序  
   
-1.  添加 <`extensions`> 元素和 <`behaviorExtensions`> 到配置文件的元素。  
+1.  添加 <`extensions`> 元素和一个 <`behaviorExtensions`> 元素的配置文件。  
   
-2.  添加 <`add`> 元素添加 <`behaviorExtensions`> 元素，并设置`name`属性设为适当的值。  
+2.  添加 <`add`> 元素为 <`behaviorExtensions`> 元素，并设置`name`属性为适当的值。  
   
 3.  将 `type` 特性设置为完全限定类型名称。 此外还包括程序集名称和其他程序集属性。  
   
@@ -129,7 +129,7 @@ ms.locfileid: "33808479"
     <system.serviceModel>  
     ```  
   
-4.  注册之后配置处理程序，自定义凭据元素可在相同的配置文件，而不是系统提供 <`clientCredentials`> 元素。 可以同时使用系统提供的属性和任何添加到配置处理程序实现的新属性。 下面的示例使用 `creditCardNumber` 属性设置自定义属性的值。  
+4.  注册配置处理程序之后, 自定义凭据元素可以使用而不是系统提供相同的配置文件中 <`clientCredentials`> 元素。 可以同时使用系统提供的属性和任何添加到配置处理程序实现的新属性。 下面的示例使用 `creditCardNumber` 属性设置自定义属性的值。  
   
     ```xml  
     <behaviors>  

@@ -1,17 +1,17 @@
 ---
 title: '#如果是预处理器指令（C# 参考）'
-ms.date: 02/13/2017
+ms.date: 06/30/2018
 f1_keywords:
 - '#if'
 helpviewer_keywords:
 - '#if directive [C#]'
 ms.assetid: 48cabbff-ca82-491f-a56a-eeccd528c7c2
-ms.openlocfilehash: 2ae0af6971dbf549b52e8168e035d8582bdab61d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c54a1fe0dba5f6d57b03b2ffeb4f1737fadfe039
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33287678"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43510227"
 ---
 # <a name="if-c-reference"></a>#if（C# 参考）
 
@@ -33,9 +33,9 @@ ms.locfileid: "33287678"
 
 `#define` 允许你定义一个符号。 然后通过将该符号用作传递给 `#if` 指令的表达式，该表达式的计算结果为 `true`。
 
-还可以通过 [/define](../compiler-options/define-compiler-option.md) 编译器选项来定义符号。 可以通过 [#undef](preprocessor-undef.md) 取消定义符号。
+还可以通过 [-define](../compiler-options/define-compiler-option.md) 编译器选项来定义符号。 可以通过 [#undef](preprocessor-undef.md) 取消定义符号。
 
-使用 `/define` 或 `#define` 定义的符号与具有相同名称的变量不冲突。 也就是说，变量名称不应传递给预处理器指令，且符号仅能由预处理器指令评估。
+使用 `-define` 或 `#define` 定义的符号与具有相同名称的变量不冲突。 也就是说，变量名称不应传递给预处理器指令，且符号仅能由预处理器指令评估。
 
 使用 `#define` 创建的符号的作用域是在其中定义它的文件。
 
@@ -88,7 +88,7 @@ public class MyClass
 
 ## <a name="see-also"></a>请参阅
 
-[C# 参考](../../../csharp/language-reference/index.md)  
-[C# 编程指南](../../../csharp/programming-guide/index.md)  
-[C# 预处理器指令](index.md)  
-[如何：使用跟踪和调试进行有条件地编译](../../../framework/debug-trace-profile/how-to-compile-conditionally-with-trace-and-debug.md)。
+- [C# 参考](../../../csharp/language-reference/index.md)  
+- [C# 编程指南](../../../csharp/programming-guide/index.md)  
+- [C# 预处理器指令](index.md)  
+- [如何：使用跟踪和调试进行有条件地编译](../../../framework/debug-trace-profile/how-to-compile-conditionally-with-trace-and-debug.md)。

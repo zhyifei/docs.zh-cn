@@ -4,12 +4,12 @@ description: 学习如何通过 dotnet vstest 命令测试已发布的输出。
 author: kendrahavens
 ms.author: kehavens
 ms.date: 10/18/2017
-ms.openlocfilehash: dbce1b6e616916e60e56318b773e8fcecbc55580
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e99000996f5dfa9f9d4f9b823e36ecbe325da835
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33210248"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43508128"
 ---
 # <a name="test-published-output-with-dotnet-vstest"></a>通过 dotnet vstest 测试已发布的输出
 
@@ -34,5 +34,6 @@ dotnet vstest out/MyProject.Tests.dll
 > 注意：如果你的应用以 `netcoreapp` 之外的框架为目标，则仍然可以通过使用框架标志传入目标框架来运行 `dotnet vstest` 命令。 例如 `dotnet vstest <MyPublishedTests>.dll  --Framework:".NETFramework,Version=v4.6"`。 在 Visual Studio 2017 Update 5 中，自动检测所需的框架。
 
 ## <a name="see-also"></a>请参阅
- [使用 dotnet 测试和 xUnit 进行单元测试](unit-testing-with-dotnet-test.md)  
- [使用 dotnet 测试和 MSTest 进行单元测试](unit-testing-with-mstest.md)  
+- [使用 dotnet 测试和 xUnit 进行单元测试](unit-testing-with-dotnet-test.md)
+- [使用 dotnet 测试和 NUnit 进行单元测试](unit-testing-with-nunit.md)
+- [使用 dotnet 测试和 MSTest 进行单元测试](unit-testing-with-mstest.md)

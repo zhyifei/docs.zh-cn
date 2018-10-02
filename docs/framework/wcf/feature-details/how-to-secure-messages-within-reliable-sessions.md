@@ -3,13 +3,12 @@ title: 如何：在可靠会话内保护消息
 ms.date: 03/30/2017
 ms.assetid: aee33e50-936f-4486-9ca8-c1520c19a62d
 author: BrucePerlerMS
-manager: mbaldwin
-ms.openlocfilehash: 4c320d74f7e7966bfa35c824dbe30da768cd1447
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f3269dc96dee2d534a8dd6677abeb6afae8776bd
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33493238"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47196715"
 ---
 # <a name="how-to-secure-messages-within-reliable-sessions"></a>如何：在可靠会话内保护消息
 
@@ -23,34 +22,34 @@ ms.locfileid: "33493238"
 
 1. 指定客户端必须用来向服务进行身份验证的客户端凭据类型。
 
-务必在第一个终结点配置元素包含的任务中`bindingConfiguration`引用 （在本示例中） 名为的绑定配置的属性`MessageSecurity`。 [ **\<绑定 >** ](../../../../docs/framework/misc/binding.md)配置元素然后引用此名称来启用可靠会话通过设置`enabled`属性[  **\<reliableSession >** ](http://msdn.microsoft.com/library/9c93818a-7dfa-43d5-b3a1-1aafccf3a00b)元素`true`。 通过将 `ordered` 属性设置为 `true`，可以要求可靠会话内的有序传送保证。
+它是在终结点配置元素包含的第一个任务中重要`bindingConfiguration`引用 （在此示例中） 名为的绑定配置的属性`MessageSecurity`。 [ **\<绑定 >** ](../../../../docs/framework/misc/binding.md)配置元素然后引用此名称来启用可靠会话通过设置`enabled`属性的[  **\<reliableSession >** ](https://msdn.microsoft.com/library/9c93818a-7dfa-43d5-b3a1-1aafccf3a00b)元素`true`。 通过将 `ordered` 属性设置为 `true`，可以要求可靠会话内的有序传送保证。
 
-此配置过程所基于的示例源副本，请参阅[WS 可靠会话](../../../../docs/framework/wcf/samples/ws-reliable-session.md)。
+基于此配置过程的示例的源副本，请参阅[WS 可靠会话](../../../../docs/framework/wcf/samples/ws-reliable-session.md)。
 
-第二个任务的重要项通过设置来完成`mode`属性**\<安全 >** 中包含的元素**\<绑定 >** 元素的客户端和服务`Message`。
+项的第二个任务的基本项通过设置来实现`mode`的属性**\<安全 >** 元素中包含**\<绑定 >** 元素的客户端和服务将`Message`。
 
-第三个任务的重要项通过设置来完成`clientCredentialType`属性**\<消息 >** 中包含的元素**\<安全 >** 元素的客户端和服务`Certificate`。
+项的第三个任务的基本项通过设置来实现`clientCredentialType`的属性**\<消息 >** 元素中包含**\<安全 >** 元素的客户端和服务将`Certificate`。
 
 > [!NOTE]
-> 当使用可靠会话的消息安全，可靠消息传递尝试进行的未经身份验证的客户端身份验证直到发生超时，而不是引发异常后第一次失败。
+> 当使用可靠会话消息安全性，可靠消息传递尝试对未经身份验证的客户端进行身份验证，直到发生超时，而不是引发异常后第一次失败。
 
-### <a name="configure-the-service-with-a-wshttpbinding-to-use-a-reliable-session"></a>使用 WSHttpBinding 以使用可靠会话配置服务
+### <a name="configure-the-service-with-a-wshttpbinding-to-use-a-reliable-session"></a>将服务配置为使用 WSHttpBinding 使用可靠会话
 
-中介绍了此过程[How to: Exchange 消息在可靠会话](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-within-a-reliable-session.md)。
+此过程所述[如何： 交换消息内可靠会话](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-within-a-reliable-session.md)。
 
-### <a name="configure-the-client-with-a-wshttpbinding-to-use-a-reliable-session"></a>使用 WSHttpBinding 以使用可靠会话配置客户端
+### <a name="configure-the-client-with-a-wshttpbinding-to-use-a-reliable-session"></a>使用 WSHttpBinding 使用可靠会话配置客户端
 
-中介绍了此过程[How to: Exchange 消息在可靠会话](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-within-a-reliable-session.md)。
+此过程所述[如何： 交换消息内可靠会话](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-within-a-reliable-session.md)。
 
 ### <a name="set-the-mode-and-clientcredentialtype-in-configuration"></a>在配置中设置 mode 和 ClientCredentialType
 
-1. 添加到合适的绑定元素[ **\<绑定 >** ](../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)配置文件元素。 下面的示例添加[  **\<wsHttpBinding >** ](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)元素。
+1. 添加到相应的绑定元素[ **\<绑定 >** ](../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)配置文件元素。 以下示例将添加[  **\<wsHttpBinding >** ](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)元素。
 
-1. 添加**\<绑定 >** 元素，并设置其`name`属性设为适当的值。 该示例使用名称`MessageSecurity`。
+1. 添加**\<绑定 >** 元素，并设置其`name`属性为适当的值。 该示例使用名称`MessageSecurity`。
 
-1. 添加**\<安全 >** 元素，并设置`mode`属性设为`Message`。
+1. 添加**\<安全 >** 元素，并设置`mode`归于`Message`。
 
-1. 在**\<安全 >** 元素中，添加**\<消息 >** 元素，并设置`clientCredentialType`属性设为`Certificate`。
+1. 内**\<安全 >** 元素中，添加**\<消息 >** 元素，并设置`clientCredentialType`归于`Certificate`。
 
 ```xml
 <wsHttpBinding>

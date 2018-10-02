@@ -20,15 +20,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: db818f638898da6379ce4dadfada8eccc3adeb12
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 9ad328d484ba01e22557d7d23d1cfa21813de9c8
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33455414"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "44041432"
 ---
 # <a name="strongnameerrorinfo-function"></a>StrongNameErrorInfo 函数
-获取引发的强名称函数之一的最后一个错误代码。  
+获取由其中一个强名称函数引发的最后一个错误代码。  
   
  此函数已弃用。  
   
@@ -39,10 +39,10 @@ HRESULT StrongNameErrorInfo ();
 ```  
   
 ## <a name="return-value"></a>返回值  
- 设置由某一个强名称函数的最后一个 COM 错误代码。  
+ 其中一个强名称函数设置的最后一个 COM 错误代码。  
   
 ## <a name="remarks"></a>备注  
- 大多数的强名称方法返回一个简单`true`或`false`成功完成的指示。 使用`StrongNameErrorInfo`函数可检索指定生成的强名称函数的最后一个错误的 HRESULT。  
+ 大多数的强名称方法返回一个简单`true`或`false`成功完成的指示。 使用`StrongNameErrorInfo`函数以检索指定的强名称函数生成的最后一个错误的 HRESULT。  
   
 ## <a name="requirements"></a>要求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
@@ -51,7 +51,7 @@ HRESULT StrongNameErrorInfo ();
   
  **库：** 作为 MsCorEE.dll 中的资源  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅  
- [强命名的全局静态函数](http://msdn.microsoft.com/library/efa715df-e8cc-48f2-9ec4-26586f0dc8d0)
+ [强命名全局静态函数](https://msdn.microsoft.com/library/efa715df-e8cc-48f2-9ec4-26586f0dc8d0)

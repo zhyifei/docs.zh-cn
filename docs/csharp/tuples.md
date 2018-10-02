@@ -3,12 +3,12 @@ title: 元组类型 - C# 指南
 description: 了解 C# 中的未命名元组类型和命名元组类型
 ms.date: 05/15/2018
 ms.assetid: ee8bf7c3-aa3e-4c9e-a5c6-e05cc6138baa
-ms.openlocfilehash: 6c3b6edb0481b8c2e4d92989b605f657aac607fa
-ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
+ms.openlocfilehash: b0c838791e640c9813005b8a32d009153a794c14
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36208293"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43509441"
 ---
 # <a name="c-tuple-types"></a>C# 元组类型 #
 
@@ -71,7 +71,7 @@ C# 元组是使用轻量语法定义的类型。 其优点包括：更简单的�
 
 [!code-csharp[ExplicitNamedTuple](../../samples/snippets/csharp/tuples/tuples/program.cs#ProjectionExample_Explicit "Explicitly named tuple")]
 
-对于任何未提供显式名称的字段，将投影适用的隐式名称。 不要求提供显式或隐式语义名称。 以下初始化表达式具有字段名称 `Item1`其值为 `42`和 `StringContent`（其值为“The answer to everything”）：
+对于任何未提供显式名称的字段，将投影适用的隐式名称。 不要求提供显式或隐式语义名称。 以下初始化表达式具有字段名称 `Item1`其值为 `42`和 `stringContent`（其值为“The answer to everything”）：
 
 [!code-csharp[MixedTuple](../../samples/snippets/csharp/tuples/tuples/program.cs#MixedTuple "mixed tuple")]
 
@@ -92,7 +92,7 @@ C# 元组是使用轻量语法定义的类型。 其优点包括：更简单的�
 
 [!code-csharp[TupleEquality](../../samples/snippets/csharp/tuples/tuples/program.cs#Equality "Testing tuples for equality")]
 
-有几条规则，可使元组相等测试更方便。 如果其中一个元组是可以为空值的元组，则元组相等将执行[提升转换](/dotnet/csharp/language-reference/language-specification/conversions#lifted-conversion-operators)，如以下代码中所示：
+有几条规则，可使元组相等测试更方便。 如果其中一个元组是可以为空值的元组，则元组相等将执行[提升转换](language-reference/language-specification/index.md)，如以下代码中所示：
 
 
 [!code-csharp[NullableTupleEquality](../../samples/snippets/csharp/tuples/tuples/program.cs#NullableEquality "Comparing Tuples and nullable tuples")]

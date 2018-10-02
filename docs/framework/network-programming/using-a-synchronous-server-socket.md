@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: d1ce882e-653e-41f5-9289-844ec855b804
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 4f04255edf9533612dd6b0733331fb18587ff3f8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2e79c9a75e4513be91af1104195af3614b49092d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33398139"
+ms.lasthandoff: 09/28/2018
+ms.locfileid: "47398545"
 ---
 # <a name="using-a-synchronous-server-socket"></a>使用同步服务器套接字
 同步服务器套接字会挂起应用程序的执行，直到在套接字上收到连接请求。 同步服务器套接字不适用于在其操作中大量使用网络的应用程序，但它们可能适用于简单的网络应用程序。  

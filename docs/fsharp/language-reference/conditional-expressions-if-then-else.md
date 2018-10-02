@@ -1,18 +1,17 @@
 ---
 title: 条件表达式：if... then...else (F#)
-description: '了解如何编写 F # 可执行代码的不同分支中的条件的表达式。'
+description: '了解如何编写在 F # 中执行代码的不同分支的条件表达式。'
 ms.date: 05/16/2016
-ms.openlocfilehash: a3ca3c20a659ccf5dc432d0a747ff176ec889e9d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 10e4224bef772f00520cf5a0fff2f2920147c2fc
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33563128"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44177596"
 ---
 # <a name="conditional-expressions-ifthenelse"></a>条件表达式： `if...then...else`
 
-`if...then...else`表达式运行代码的不同分支，还可以计算为不同的值，具体取决于给定的布尔表达式。
-
+`if...then...else`表达式在运行代码的不同分支，还可以为不同的值，具体取决于给定的布尔表达式计算。
 
 ## <a name="syntax"></a>语法
 
@@ -21,11 +20,13 @@ if boolean-expression then expression1 [ else expression2 ]
 ```
 
 ## <a name="remarks"></a>备注
+
 在上述语法中， *expression1*运行时的布尔表达式的计算结果为`true`; 否则为*expression2*运行。
 
-与其他语言版本，`if...then...else`构造是一个表达式，而不是语句。 这意味着它生成一个值，即执行的分支中的最后一个表达式的值。 每个分支中生成的值的类型必须匹配。 如果没有显式`else`分支，其类型是`unit`。 因此，如果的一种`then`分支是任何类型，而不`unit`，必须有`else`分支以及相同的返回类型。 在将链接时`if...then...else`表达式组合在一起，可以使用关键字`elif`而不是`else if`; 它们是等效的。
+不同于其他语言中`if...then...else`构造是一个表达式，而不是语句。 这意味着它会生成一个值，该值是在执行的分支中的最后一个表达式的值。 每个分支中生成的值的类型必须匹配。 如果未显式`else`分支，其类型是`unit`。 因此，如果的类型`then`分支而不是任何类型`unit`，必须有`else`分支具有相同的返回类型。 当链接`if...then...else`表达式组合在一起，可以使用关键字`elif`而不是`else if`; 它们是等效。
 
 ## <a name="example"></a>示例
+
 下面的示例演示如何使用`if...then...else`表达式。
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet4501.fs)]
@@ -38,5 +39,5 @@ You are only 9 years old and already learning F#? Wow!
 ```
 
 ## <a name="see-also"></a>请参阅
-[F# 语言参考](index.md)
 
+- [F# 语言参考](index.md)

@@ -10,19 +10,19 @@ helpviewer_keywords:
 - data grids [Windows Forms], font styles
 - data grids [Windows Forms], color styles
 ms.assetid: 588f2c57-d963-41b1-9c1d-d02d71818113
-ms.openlocfilehash: e8aec1915fabb7e18d6dc3ed584d041c273cb78d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 739f49caa50a3cff85fcac98506d82f01c23af75
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33538802"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43857162"
 ---
 # <a name="how-to-set-font-and-color-styles-in-the-windows-forms-datagridview-control"></a>如何：设置 Windows 窗体 DataGridView 控件中的字体和颜色样式
 可以通过设置 <xref:System.Windows.Forms.DataGridViewCellStyle> 类的属性，指定 <xref:System.Windows.Forms.DataGridView> 控件内单元格的可视外观。 可以从 <xref:System.Windows.Forms.DataGridView> 类及其伴生类的各个属性检索此类的实例，或可实例化 <xref:System.Windows.Forms.DataGridViewCellStyle> 对象以分配到这些属性。  
   
  以下步骤演示使用 <xref:System.Windows.Forms.DataGridView.DefaultCellStyle%2A> 属性进行单元格外观的基本自定义。 控件中每个单元格将继承通过此属性指定的样式，除非它们在列、行或单元格级别中重写。 有关样式继承的示例，请参阅[如何： 设置 Windows 窗体 DataGridView 控件的默认单元格样式](../../../../docs/framework/winforms/controls/how-to-set-default-cell-styles-for-the-windows-forms-datagridview-control.md)。 有关的 <xref:System.Windows.Forms.DataGridViewCellStyle> 类更多用法的信息，请参阅“另请参阅”部分中列出的主题。  
   
- Visual Studio 中对此任务提供广泛支持。  另请参阅[如何： 设置默认单元格样式和数据格式以获得 Windows 窗体 DataGridView 控件使用设计器](http://msdn.microsoft.com/library/95y5fz2x\(v=vs.110\))。  
+ Visual Studio 中对此任务提供广泛支持。  另请参阅[如何： 设置默认单元格样式和数据格式以获得 Windows 窗体 DataGridView 控件使用设计器](https://msdn.microsoft.com/library/95y5fz2x\(v=vs.110\))。  
   
 ### <a name="to-specify-the-font-used-by-datagridview-cells"></a>若要指定 DataGridView 单元格所使用的字体  
   

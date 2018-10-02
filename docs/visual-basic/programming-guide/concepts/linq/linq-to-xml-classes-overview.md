@@ -3,11 +3,11 @@ title: LINQ to XML 类概述 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: f11b62b5-d522-4c23-92ae-23186dc16447
 ms.openlocfilehash: dd9e392c1fec86bfb1fe0e0f8bee0cd0c7919fe4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33649173"
+ms.lasthandoff: 07/25/2018
+ms.locfileid: "39244083"
 ---
 # <a name="linq-to-xml-classes-overview-visual-basic"></a>LINQ to XML 类概述 (Visual Basic)
 本主题提供 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 命名空间中 <xref:System.Xml.Linq> 类的列表及每个类的简短说明。  
@@ -15,7 +15,7 @@ ms.locfileid: "33649173"
 ## <a name="linq-to-xml-classes"></a>LINQ to XML 类  
   
 ### <a name="xattribute-class"></a>XAttribute 类  
- <xref:System.Xml.Linq.XAttribute> 表示一个 XML 属性。 有关详细的信息和示例，请参阅[XAttribute 类概述 (Visual Basic 中)](../../../../visual-basic/programming-guide/concepts/linq/xattribute-class-overview.md)。  
+ <xref:System.Xml.Linq.XAttribute> 表示一个 XML 属性。 有关详细的信息和示例，请参阅[XAttribute 类概述 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/xattribute-class-overview.md)。  
   
 ### <a name="xcdata-class"></a>XCData 类  
  <xref:System.Xml.Linq.XCData> 表示一个 CDATA 文本节点。  
@@ -34,16 +34,16 @@ ms.locfileid: "33649173"
  <xref:System.Xml.Linq.XDeclaration> 表示一个 XML 声明。 XML 声明用于声明 XML 版本和文档的编码。 此外，XML 声明还指定 XML 文档是否为独立文档。 如果文档是独立文档，则在外部 DTD 或从内部子集引用的外部参数实体中不存在外部标记声明。  
   
 ### <a name="xdocument-class"></a>XDocument 类  
- <xref:System.Xml.Linq.XDocument> 表示一个 XML 文档。 有关详细的信息和示例，请参阅[XDocument 类概述 (Visual Basic 中)](../../../../visual-basic/programming-guide/concepts/linq/xdocument-class-overview.md)。  
+ <xref:System.Xml.Linq.XDocument> 表示一个 XML 文档。 有关详细的信息和示例，请参阅[XDocument 类概述 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/xdocument-class-overview.md)。  
   
 ### <a name="xdocumenttype-class"></a>XDocumentType 类  
  <xref:System.Xml.Linq.XDocumentType> 表示一个 XML 文档类型定义 (DTD)。  
   
 ### <a name="xelement-class"></a>XElement 类  
- <xref:System.Xml.Linq.XElement> 表示一个 XML 元素。 有关详细的信息和示例，请参阅[XElement 类概述 (Visual Basic 中)](../../../../visual-basic/programming-guide/concepts/linq/xelement-class-overview.md)。  
+ <xref:System.Xml.Linq.XElement> 表示一个 XML 元素。 有关详细的信息和示例，请参阅[XElement 类概述 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/xelement-class-overview.md)。  
   
 ### <a name="xname-class"></a>XName 类  
- <xref:System.Xml.Linq.XName> 表示元素 (<xref:System.Xml.Linq.XElement>) 和属性 (<xref:System.Xml.Linq.XAttribute>) 的名称。 有关详细的信息和示例，请参阅[XDocument 类概述 (Visual Basic 中)](../../../../visual-basic/programming-guide/concepts/linq/xdocument-class-overview.md)。  
+ <xref:System.Xml.Linq.XName> 表示元素 (<xref:System.Xml.Linq.XElement>) 和属性 (<xref:System.Xml.Linq.XAttribute>) 的名称。 有关详细的信息和示例，请参阅[XDocument 类概述 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/xdocument-class-overview.md)。  
   
  [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 旨在使 XML 名称尽可能简单。 XML 名称由于复杂而通常被视为 XML 中的高级主题。 有证据证明，这种复杂性不是由开发人员编程时通常使用的命名空间造成的，而是由命名空间前缀造成的。 使用命名空间前缀可以减少输入 XML 时需要的击键数或使 XML 更具可读性。 但是，前缀通常只是使用完整的 XML 命名空间的快捷方式，而且在大多数情况下都不是必需的。 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 通过将所有前缀解析为其对应的 XML 命名空间来简化 XML 名称。 如果需要，可以通过 <xref:System.Xml.Linq.XElement.GetPrefixOfNamespace%2A> 方法可以使用前缀。  
   

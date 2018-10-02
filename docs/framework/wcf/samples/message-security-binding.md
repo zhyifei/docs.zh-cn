@@ -3,20 +3,19 @@ title: 消息安全绑定
 ms.date: 03/30/2017
 ms.assetid: a4570ce7-864e-461b-85d8-0f7bcc53c2c8
 author: BrucePerlerMS
-manager: mbaldwin
-ms.openlocfilehash: 50e9b831430eefc202dd3128502a7f916b96aef6
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: 22daa3edbda5be44ce67a6b9a93946505f3fcc12
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33805036"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47200056"
 ---
 # <a name="message-security-binding"></a>消息安全绑定
 本节包含演示在 WCF 中的 Windows 服务中的消息安全绑定的示例。  
   
 ## <a name="in-this-section"></a>本节内容  
  [匿名消息安全](../../../../docs/framework/wcf/samples/message-security-anonymous.md)  
- 此示例演示如何实现 Windows Communication Foundation (WCF) 应用程序，使用消息级安全性不客户端身份验证，但需要使用服务器的 X.509 证书的服务器身份验证。  
+ 此示例演示如何实现 Windows Communication Foundation (WCF) 应用程序使用消息级安全的无客户端身份验证，但需要使用服务器的 X.509 证书进行服务器身份验证。  
   
  [消息安全证书](../../../../docs/framework/wcf/samples/message-security-certificate.md)  
  此示例演示如何实现一个应用程序，该应用程序对客户端使用 WS 安全性和 X.509 v3 证书身份验证，并要求使用服务器的 X.509 v3 证书进行服务器身份验证。  

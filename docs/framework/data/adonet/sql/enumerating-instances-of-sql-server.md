@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: ddf1c83c-9d40-45e6-b04d-9828c6cbbfdc
-ms.openlocfilehash: d9456926b228fadca940f6c4698829494382e237
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 043f156f96d6ebc9ac5a6487287ad327928d9bf0
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33355517"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43776296"
 ---
 # <a name="enumerating-instances-of-sql-server-adonet"></a>枚举 SQL Server 的实例 (ADO.NET)
-SQL Server 允许应用程序查找当前的网络中的 SQL Server 实例。 <xref:System.Data.Sql.SqlDataSourceEnumerator> 类向应用程序开发人员公开此信息，提供包含所有可见服务器的信息的 <xref:System.Data.DataTable>。 此返回的表包含与用户尝试创建一个新的连接时提供的列表匹配和扩展包含在所有可用的服务器上的下拉列表的网络上可用的服务器实例的列表**连接属性**对话框。 显示的结果并非总是完整的。  
+SQL Server 允许应用程序以查找在当前网络中的 SQL Server 实例。 <xref:System.Data.Sql.SqlDataSourceEnumerator> 类向应用程序开发人员公开此信息，提供包含所有可见服务器的信息的 <xref:System.Data.DataTable>。 返回表包含与匹配用户尝试创建新的连接时提供的列表并展开下拉列表包含所有可用的服务器上的网络上可用的服务器实例的列表，此**连接属性**对话框。 显示的结果并非总是完整的。  
   
 > [!NOTE]
 >  与大多数 Windows 服务一样，最好使用尽可能少的权限运行 SQL 浏览器服务。 有关 SQL 浏览器服务以及如何管理其行为的更多信息，请参见“SQL Server 联机图书”。  
@@ -45,7 +45,7 @@ System.Data.DataTable dataTable = instance.GetDataSources();
   
 |列|描述|  
 |------------|-----------------|  
-|**ServerName**|服务器的名称。|  
+|**服务器名称**|服务器的名称。|  
 |**InstanceName**|服务器实例的名称。 如果服务器作为默认实例运行，则为空白。|  
 |**IsClustered**|指示服务器是否属于群集。|  
 |**Version**|服务器的版本。 例如：<br /><br /> -   9.00.x ([!INCLUDE[ssVersion2005](../../../../../includes/ssversion2005-md.md)])<br />-   10.0.xx ([!INCLUDE[ssKatmai](../../../../../includes/sskatmai-md.md)])<br />-   10.50.x ([!INCLUDE[ssKilimanjaro](../../../../../includes/sskilimanjaro-md.md)])<br />-11.0.xx (SQL Server 2012)|  
@@ -126,4 +126,4 @@ class Program
   
 ## <a name="see-also"></a>请参阅  
  [SQL Server 和 ADO.NET](../../../../../docs/framework/data/adonet/sql/index.md)  
- [ADO.NET 托管提供程序和数据集开发人员中心](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)

@@ -5,13 +5,13 @@ author: mairaw
 ms.author: mairaw
 ms.date: 05/29/2018
 ms.openlocfilehash: 0eaab1aa1bc52bd5b3c51a6ed2dd7a59c35a4aa5
-ms.sourcegitcommit: 736ec4d3e2c74895b47a0d36126657b95da383c9
+ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2018
-ms.locfileid: "37140250"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37960582"
 ---
-# <a name="dotnet-restore"></a>dotnet restore
+# <a name="dotnet-restore"></a>dotnet 还原
 
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 
@@ -65,7 +65,7 @@ dotnet restore [-h|--help]
 
 有时，隐式运行 `dotnet restore` 可能不方便。 例如，某些自动化系统（如生成系统）需要显式调用 `dotnet restore`，以控制还原发生的时间，以便可以控制网络使用量。 要防止隐式运行 `dotnet restore`，可以通过上述任意命令使用 `--no-restore` 标记以禁用隐式还原。
 
-## <a name="arguments"></a>自变量
+## <a name="arguments"></a>参数
 
 `ROOT`
 

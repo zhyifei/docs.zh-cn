@@ -2,12 +2,12 @@
 title: SELECT (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 9a33bd0d-ded1-41e7-ba3c-305502755e3b
-ms.openlocfilehash: f815c08b9be11efc71b04678d9780cabcdd69ab5
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 93eea5d539e943c57ed7c6236caa854486ac238e
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32765979"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43505104"
 ---
 # <a name="select-entity-sql"></a>SELECT (Entity SQL)
 指定查询所返回的元素。  
@@ -32,7 +32,7 @@ SELECT VALUE [ ALL | DISTINCT ] [ topSubclause ] expr FROM fromClause [ WHERE wh
  仅允许指定一个项，且不添加到行包装上。  
   
  `topSubclause`  
- 任何指示从查询返回的首批结果数的有效表达式（形式为 `top (``expr``)`）。  
+ 任何有效的表达式，用于指示第一个要返回的结果格式的查询从`top(expr)`。  
   
  LIMIT 参数[ORDER BY](../../../../../../docs/framework/data/adonet/ef/language-reference/order-by-entity-sql.md)运算符，您还可以选择在结果集中的前 n 个项。  
   
@@ -45,7 +45,7 @@ SELECT VALUE [ ALL | DISTINCT ] [ topSubclause ] expr FROM fromClause [ WHERE wh
  文本或表达式。  
   
 ## <a name="remarks"></a>备注  
- SELECT 子句在计算后[FROM](../../../../../../docs/framework/data/adonet/ef/language-reference/from-entity-sql.md)， [GROUP BY](../../../../../../docs/framework/data/adonet/ef/language-reference/group-by-entity-sql.md)，和[HAVING](../../../../../../docs/framework/data/adonet/ef/language-reference/having-entity-sql.md)子句已经过评估。 SELECT 子句只能引用当前处于范围内的项（FROM 子句指定的范围或外部范围）。 如果指定了 GROUP BY 子句，则仅允许 SELECT 子句引用 GROUP BY 键的别名。 仅允许在聚合函数中引用 FROM 子句项。  
+ SELECT 子句在计算后[FROM](../../../../../../docs/framework/data/adonet/ef/language-reference/from-entity-sql.md)， [GROUP BY](../../../../../../docs/framework/data/adonet/ef/language-reference/group-by-entity-sql.md)，并[HAVING](../../../../../../docs/framework/data/adonet/ef/language-reference/having-entity-sql.md)子句已经过评估。 SELECT 子句只能引用当前处于范围内的项（FROM 子句指定的范围或外部范围）。 如果指定了 GROUP BY 子句，则仅允许 SELECT 子句引用 GROUP BY 键的别名。 仅允许在聚合函数中引用 FROM 子句项。  
   
  跟在 SELECT 关键字之后的一个或多个查询表达式的列表称为“选择列表”，更加正式的名称为“投影”。 最普通的投影形式为单个查询表达式。 如果从集合 `member1` 选择一个成员 `collection1`，则会生成 `member1` 中每个对象的所有 `collection1`值的新集合（如下面的示例所示）。  
   
@@ -94,7 +94,7 @@ SELECT a1, a2 FROM T1 AS a1, T2 AS a2
 ## <a name="example"></a>示例  
  下面的 Entity SQL 查询使用 SELECT 运算符指定查询要返回的元素。 此查询基于 AdventureWorks 销售模型。 若要编译并运行此查询，请执行下列步骤：  
   
-1.  执行 [如何：执行返回 StructuralType 结果的查询](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md)中的过程。  
+1.  执行 [How to: Execute a Query that Returns StructuralType Results](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md)中的过程。  
   
 2.  将以下查询作为参数传递给 `ExecuteStructuralTypeQuery` 方法：  
   

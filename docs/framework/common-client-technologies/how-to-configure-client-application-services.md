@@ -4,15 +4,15 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - client application services, configuring
 ms.assetid: 34a8688a-a32c-40d3-94be-c8e610c6a4e8
-ms.openlocfilehash: 004798ce8cf429f2a94d856e6b3a55447c2ad5fa
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: a65c216397f240b77eb81f88d8f2a2da122e1ccf
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32744751"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43861619"
 ---
 # <a name="how-to-configure-client-application-services"></a>如何：配置客户端应用程序服务
-本主题介绍了如何使用 Visual Studio 的“项目设计器”来启用和配置客户端应用程序服务。 你可以使用客户端应用程序服务来验证用户，并从现有 [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] 应用程序服务检索用户角色和设置。 完成配置后，可以访问应用程序代码中启用的服务，如[客户端应用程序服务概述](../../../docs/framework/common-client-technologies/client-application-services-overview.md)所述。 有关 [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] 应用程序服务的详细信息，请参阅 [ASP.NET 应用程序服务概述](http://msdn.microsoft.com/library/1162e529-0d70-44b2-b3ab-83e60c695013)。  
+本主题介绍了如何使用 Visual Studio 的“项目设计器”来启用和配置客户端应用程序服务。 你可以使用客户端应用程序服务来验证用户，并从现有 [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] 应用程序服务检索用户角色和设置。 完成配置后，可以访问应用程序代码中启用的服务，如[客户端应用程序服务概述](../../../docs/framework/common-client-technologies/client-application-services-overview.md)所述。 有关 [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] 应用程序服务的详细信息，请参阅 [ASP.NET 应用程序服务概述](https://msdn.microsoft.com/library/1162e529-0d70-44b2-b3ab-83e60c695013)。  
   
  可以在“项目设计器”的“服务”页上启用并配置客户端应用程序服务。 “服务”页会更新项目的 App.config 文件中的值。 若要访问“项目设计器”，请使用“项目”菜单上的“属性”命令。 有关“服务”页的详细信息，请参阅[“项目设计器”->“服务”页](https://msdn.microsoft.com/library/bb398109)。  
   
@@ -65,7 +65,7 @@ ms.locfileid: "32744751"
   
 2.  选中或清除“将密码哈希保存在本地以实现脱机登录”。 选择此选项时，将以加密形式在本地缓存用户的密码。 这对实现应用程序的脱机模式非常有用。 选择此选项时，即使是在<xref:System.Web.ClientServices.ConnectivityStatus.IsOffline%2A>属性设置为 `true` 时也可以对用户进行验证。  
   
-3.  选中或清除“每次服务器 Cookie 到期时要求用户重新登录”。 已在远程服务上配置了身份验证 Cookie，并指示用户的登录将保持活动状态的时间。 有关如何配置 Cookie 的详细信息，请参阅 [authentication 的 forms 元素（ASP.NET 设置架构）](http://msdn.microsoft.com/library/8163b8b5-ea6c-46c8-b5a9-c4c3de31c0b3)中的 `timeout` 属性。  
+3.  选中或清除“每次服务器 Cookie 到期时要求用户重新登录”。 已在远程服务上配置了身份验证 Cookie，并指示用户的登录将保持活动状态的时间。 有关如何配置 Cookie 的详细信息，请参阅 [authentication 的 forms 元素（ASP.NET 设置架构）](https://msdn.microsoft.com/library/8163b8b5-ea6c-46c8-b5a9-c4c3de31c0b3)中的 `timeout` 属性。  
   
      如果选择此选项，则在身份验证 Cookie 过期后尝试访问远程角色或 Web 设置服务将引发 <xref:System.Net.WebException>。 你可以处理此异常，并显示登录对话框来重新验证用户。 有关此行为的示例，请参阅[演练：使用客户端应用程序服务](../../../docs/framework/common-client-technologies/walkthrough-using-client-application-services.md)。 此选项可用于公共位置中部署的应用程序，可确保让应用程序在使用后保持运行状态的用户不会无限期地保持通过身份验证的状态。  
   
@@ -114,7 +114,7 @@ ms.locfileid: "32744751"
 ## <a name="using-custom-providers"></a>使用自定义提供程序  
  默认情况下，客户端应用程序服务功能使用 <xref:System.Web.ClientServices.Providers?displayProperty=nameWithType> 命名空间中的提供程序。 使用“项目设计器”的“服务”页配置应用程序时，对这些提供程序的引用会添加到 App.config 文件中。 这些默认的提供程序访问服务器上相应的提供程序。 Web 服务通常配置为通过提供程序（如 <xref:System.Web.Security.SqlMembershipProvider> 和 <xref:System.Web.Security.SqlRoleProvider>）访问用户数据。  
   
- 如果想要使用自定义服务提供程序，则通常将在服务器端更改提供程序，以便这些提供程序对访问服务器的所有客户端应用程序产生影响。 但是，你可以选择在客户端使用非默认提供程序。 你可以在项目的 App.config 文件中指定自定义身份验证或角色提供程序，如下面的步骤所示。 有关如何创建自定义身份验证和角色提供程序的信息，请参阅[实现成员资格提供程序](http://msdn.microsoft.com/library/d8658b8e-c962-4f64-95e1-4acce35e4582)和[实现角色提供程序](http://msdn.microsoft.com/library/851671ce-bf9b-43f2-aba4-bc9d28b11c7d)。 你还可通过修改项目的`Settings`类（在 C# 中作为 `Properties.Settings.Default` 访问，在 `My.Settings` 中作为 Visual Basic 访问）来使用自定义设置提供程序。 有关详细信息，请参阅[应用程序设置体系结构](../../../docs/framework/winforms/advanced/application-settings-architecture.md)。  
+ 如果想要使用自定义服务提供程序，则通常将在服务器端更改提供程序，以便这些提供程序对访问服务器的所有客户端应用程序产生影响。 但是，你可以选择在客户端使用非默认提供程序。 你可以在项目的 App.config 文件中指定自定义身份验证或角色提供程序，如下面的步骤所示。 有关如何创建自定义身份验证和角色提供程序的信息，请参阅[实现成员资格提供程序](https://msdn.microsoft.com/library/d8658b8e-c962-4f64-95e1-4acce35e4582)和[实现角色提供程序](https://msdn.microsoft.com/library/851671ce-bf9b-43f2-aba4-bc9d28b11c7d)。 你还可通过修改项目的`Settings`类（在 C# 中作为 `Properties.Settings.Default` 访问，在 `My.Settings` 中作为 Visual Basic 访问）来使用自定义设置提供程序。 有关详细信息，请参阅[应用程序设置体系结构](../../../docs/framework/winforms/advanced/application-settings-architecture.md)。  
   
 #### <a name="to-configure-client-application-services-to-use-non-default-providers"></a>将客户端应用程序服务配置为使用非默认提供程序  
   
@@ -147,7 +147,7 @@ ms.locfileid: "32744751"
  [“高级服务设置”对话框](/visualstudio/ide/reference/advanced-settings-for-services-dialog-box)  
  [如何：使用客户端应用程序服务来实现用户登录](../../../docs/framework/common-client-technologies/how-to-implement-user-login-with-client-application-services.md)  
  [演练：使用客户端应用程序服务](../../../docs/framework/common-client-technologies/walkthrough-using-client-application-services.md)  
- [实现成员资格提供程序](http://msdn.microsoft.com/library/d8658b8e-c962-4f64-95e1-4acce35e4582)  
- [实现角色提供程序](http://msdn.microsoft.com/library/851671ce-bf9b-43f2-aba4-bc9d28b11c7d)  
+ [实现成员资格提供程序](https://msdn.microsoft.com/library/d8658b8e-c962-4f64-95e1-4acce35e4582)  
+ [实现角色提供程序](https://msdn.microsoft.com/library/851671ce-bf9b-43f2-aba4-bc9d28b11c7d)  
  [应用程序设置体系结构](../../../docs/framework/winforms/advanced/application-settings-architecture.md)  
- [为 SQL Server 创建和配置应用程序服务数据库](http://msdn.microsoft.com/library/ab894e83-7e2f-4af8-a116-b1bff8f815b2)
+ [为 SQL Server 创建和配置应用程序服务数据库](https://msdn.microsoft.com/library/ab894e83-7e2f-4af8-a116-b1bff8f815b2)

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - method parameters [C#]
 - parameters [C#]
 ms.assetid: 680e39ff-775b-48b0-9f47-4186a5bfc4a1
-ms.openlocfilehash: 8a8d300661eec42030900dd9ee85a17e66aa0922
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 446a5239fa1de8559dea50f7e8b8869aed0297c5
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33269341"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43512780"
 ---
 # <a name="method-parameters-c-reference"></a>方法参数（C# 参考）
 
@@ -27,7 +27,8 @@ ms.locfileid: "33269341"
   
 -   [out](../../../csharp/language-reference/keywords/out-parameter-modifier.md) 指定此参数由引用传递，由调用方法写入。
   
-## <a name="see-also"></a>请参阅  
- [C# 参考](../../../csharp/language-reference/index.md)  
- [C# 编程指南](../../../csharp/programming-guide/index.md)  
- [C# 关键字](../../../csharp/language-reference/keywords/index.md)
+## <a name="see-also"></a>请参阅
+
+- [C# 参考](../../../csharp/language-reference/index.md)  
+- [C# 编程指南](../../../csharp/programming-guide/index.md)  
+- [C# 关键字](../../../csharp/language-reference/keywords/index.md)

@@ -8,12 +8,12 @@ dev_langs:
 ms.assetid: fde6f43f-c594-486f-abcb-2211197fae20
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 23961caa7b307df46b20b3811d0883d4c702a357
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c4d7dee9ebaed20970f715026661c29aae701289
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33577158"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "45970625"
 ---
 # <a name="script-blocks-using-msxslscript"></a>使用 msxsl:script 的脚本块
 <xref:System.Xml.Xsl.XslCompiledTransform> 类使用 `msxsl:script` 元素支持嵌入的脚本。 在加载样式表式，任何已定义的函数将通过代码文档对象模型 (CodeDOM) 编译为 Microsoft 中间语言 (MSIL) 并在运行时执行。 从嵌入的脚本块生成的程序集比为样式表生成的程序集独立。  
@@ -148,6 +148,7 @@ ms.locfileid: "33577158"
 </circles>  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [XSLT 转换](../../../../docs/standard/data/xml/xslt-transformations.md)  
- [动态源代码生成和编译](../../../../docs/framework/reflection-and-codedom/dynamic-source-code-generation-and-compilation.md)
+## <a name="see-also"></a>请参阅
+
+- [XSLT 转换](../../../../docs/standard/data/xml/xslt-transformations.md)  
+- [动态源代码生成和编译](../../../../docs/framework/reflection-and-codedom/dynamic-source-code-generation-and-compilation.md)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - increment operator (++) [C#]
 - ++ operator [C#]
 ms.assetid: e9dec353-070b-44fb-98ed-eb8fdf753feb
-ms.openlocfilehash: 0fe1150ca7267d02feeab33168eab7f79734c2a1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a52f614ce1bbfb8e9d9be686b277c1e69f6f9d35
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33275059"
+ms.lasthandoff: 09/28/2018
+ms.locfileid: "47202246"
 ---
 # <a name="-operator-c-reference"></a>++ 运算符（C# 参考）
 递增运算符 (`++`) 按 1 递增其操作数。 递增运算符可以在其操作数之前或之后出现： `++variable` 和 `variable++`。  
@@ -27,7 +27,8 @@ ms.locfileid: "33275059"
 ## <a name="example"></a>示例  
  [!code-csharp[csRefOperators#3](../../../csharp/language-reference/operators/codesnippet/CSharp/increment-operator_1.cs)]  
   
-## <a name="see-also"></a>请参阅  
- [C# 参考](../../../csharp/language-reference/index.md)  
- [C# 编程指南](../../../csharp/programming-guide/index.md)  
- [C# 运算符](../../../csharp/language-reference/operators/index.md)
+## <a name="see-also"></a>请参阅
+
+- [C# 参考](../../../csharp/language-reference/index.md)  
+- [C# 编程指南](../../../csharp/programming-guide/index.md)  
+- [C# 运算符](../../../csharp/language-reference/operators/index.md)

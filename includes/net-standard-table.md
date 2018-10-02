@@ -1,6 +1,6 @@
 | .NET Standard              | [1.0] | [1.1]  | [1.2] | [1.3] | [1.4] | [1.5]      | [1.6]      | [2.0]      |
 |----------------------------|-------|--------|-------|-------|-------|------------|------------|------------|
-| .NET 核心                  | 1.0   | 1.0    | 1.0   | 1.0   | 1.0   | 1.0        | 1.0        | 2.0        |
+| .NET Core                  | 1.0   | 1.0    | 1.0   | 1.0   | 1.0   | 1.0        | 1.0        | 2.0        |
 | .NET Framework <sup>1</sup>| 4.5   | 4.5    | 4.5.1 | 4.6   | 4.6.1 | 4.6.1      | 4.6.1      | 4.6.1      |
 | Mono                       | 4.6   | 4.6    | 4.6   | 4.6   | 4.6   | 4.6        | 4.6        | 5.4        |
 | Xamarin.iOS                | 10.0  | 10.0   | 10.0  | 10.0  | 10.0  | 10.0       | 10.0       | 10.14      |
@@ -11,7 +11,7 @@
 | Windows Phone              | 8.1   | 8.1    | 8.1   |       |       |            |            |            |
 | Windows Phone Silverlight  | 8.0   |        |       |       |       |            |            |            |
 
-<sup>1 针对 .NET framework 列出的版本适用于 .NET Core SDK 2.0 和更高版本的工具。旧版本使用 .NET Standard 1.5 和更高版本的不同映射。</sup>
+<sup>1 针对 .NET framework 列出的版本适用于 .NET Core SDK 2.0 和更高版本的工具。旧版本对 .NET Standard 1.5 及更高版本使用了不同映射。如果无法升级到 Visual Studio 2017，可[下载适用于 Visual Studio 2015 的 .NET Core 工具](https://github.com/dotnet/core/blob/master/release-notes/download-archive.md)。</sup>
 
 - 列表示 .NET Standard 版本。 每个标题单元格都是一个文档链接，其中介绍了相应版本的 .NET Standard 中新增了哪些 API。
 - 行表示不同的 .NET 实现。

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - '- operator [C#]'
 - subtraction operator (-) [C#]
 ms.assetid: 4de7a4fa-c69d-48e6-aff1-3130af970b2d
-ms.openlocfilehash: ed4c46d21be41762f875ff38ceded8919112b6d0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: bd852f96ece9c8d5d5e2ec42e802596e795ce04a
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33271061"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44210099"
 ---
 # <a name="--operator-c-reference"></a>- 运算符（C# 参考）
 `-` 运算符既可作为一元运算符也可作为二元运算符。  
@@ -29,7 +29,8 @@ ms.locfileid: "33271061"
 ## <a name="example"></a>示例  
  [!code-csharp[csRefOperators#40](../../../csharp/language-reference/operators/codesnippet/CSharp/subtraction-operator_1.cs)]  
   
-## <a name="see-also"></a>请参阅  
- [C# 参考](../../../csharp/language-reference/index.md)  
- [C# 编程指南](../../../csharp/programming-guide/index.md)  
- [C# 运算符](../../../csharp/language-reference/operators/index.md)
+## <a name="see-also"></a>请参阅
+
+- [C# 参考](../../../csharp/language-reference/index.md)  
+- [C# 编程指南](../../../csharp/programming-guide/index.md)  
+- [C# 运算符](../../../csharp/language-reference/operators/index.md)

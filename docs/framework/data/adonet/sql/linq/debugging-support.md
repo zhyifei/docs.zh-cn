@@ -2,15 +2,15 @@
 title: 调试支持
 ms.date: 03/30/2017
 ms.assetid: 262d8e60-8e71-42d7-8340-1b5276a0ad35
-ms.openlocfilehash: 58eb4961a31dd51aca3addc1f5aad441b2f8b51a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 70823d7480d59f96f3f8f4ad2b28102917ec2d80
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33361768"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43856824"
 ---
 # <a name="debugging-support"></a>调试支持
-[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 提供有关常规调试支持[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]项目。  另请参阅[调试 LINQ](http://msdn.microsoft.com/library/Bb385795\(v=vs.110\))或[调试 LINQ](http://msdn.microsoft.com/library/Bb385795\(v=vs.120\))。  
+[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 提供了有关常规调试支持[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]项目。  另请参阅[调试 LINQ](/visualstudio/debugger/debugging-linq)或[调试 LINQ](/visualstudio/debugger/debugging-linq)。  
   
  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 还提供了用于查看 SQL 代码的特殊工具。 有关更多信息，请参见本节中的各主题。  
   

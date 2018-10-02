@@ -4,12 +4,12 @@ description: dotnet tool list 命令从计算机中列出指定的 .NET Core 全
 author: mairaw
 ms.author: mairaw
 ms.date: 05/29/2018
-ms.openlocfilehash: 5f4793cd37c3a8df06eb6930ad9f381ac70d4e67
-ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
+ms.openlocfilehash: e2bea974207d3098ed67b69ed16a72a03c44cd8b
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34696720"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47203471"
 ---
 # <a name="dotnet-tool-list"></a>dotnet tool list
 
@@ -21,7 +21,7 @@ ms.locfileid: "34696720"
 
 ## <a name="synopsis"></a>摘要
 
-```
+```console
 dotnet tool list <-g|--global>
 dotnet tool list <--tool-path>
 dotnet tool list <-h|--help>
@@ -61,4 +61,4 @@ dotnet tool list <-h|--help>
 
 ## <a name="see-also"></a>请参阅
 
-[.NET Core 全局工具](global-tools.md)
+* [.NET Core 全局工具](global-tools.md)

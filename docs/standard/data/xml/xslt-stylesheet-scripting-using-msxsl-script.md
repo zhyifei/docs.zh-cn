@@ -8,12 +8,12 @@ dev_langs:
 ms.assetid: 60e2541b-0cea-4b2e-a4fa-85f4c50f1bef
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5b1fb13e33f759c44e090a9294548c224e10344e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 68c98b3b4effbe7cea1a3c4443d2222e6bbcd43c
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33577171"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "46584248"
 ---
 # <a name="xslt-stylesheet-scripting-using-ltmsxslscriptgt"></a>使用 &lt;msxsl:script&gt; 编写 XSLT 样式表脚本
 <xref:System.Xml.Xsl.XslTransform> 类使用 `script` 元素支持嵌入的脚本。  
@@ -229,5 +229,6 @@ public class Sample
 </circles>    
 ```  
   
-## <a name="see-also"></a>请参阅  
- [XslTransform 类实现 XSLT 处理器](../../../../docs/standard/data/xml/xsltransform-class-implements-the-xslt-processor.md)
+## <a name="see-also"></a>请参阅
+
+- [XslTransform 类实现 XSLT 处理器](../../../../docs/standard/data/xml/xsltransform-class-implements-the-xslt-processor.md)

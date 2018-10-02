@@ -12,12 +12,12 @@ helpviewer_keywords:
 - classes, overriding
 - overriding classes
 ms.assetid: 5cc1c0b0-f94b-4525-9a41-88a582cd6668
-ms.openlocfilehash: d0e48c9c28c8d9447b22fa5ea7a8024442e09295
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8cb6a66f9fc7a67ae99574e783fd889537b9b11a
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33587705"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47208310"
 ---
 # <a name="how-to-specify-an-alternate-element-name-for-an-xml-stream"></a>如何：指定 XML 流的替代元素名称
 [代码示例](#cpconoverridingserializationofclasseswithxmlattributeoverridesclassanchor1)  
@@ -92,12 +92,13 @@ public class SerializeOverride()
 </Book>  
 ```  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Xml.Serialization.XmlElementAttribute>  
- <xref:System.Xml.Serialization.XmlAttributes>  
- <xref:System.Xml.Serialization.XmlAttributeOverrides>  
- [XML 和 SOAP 序列化](../../../docs/standard/serialization/xml-and-soap-serialization.md)  
- [XmlSerializer](https://msdn.microsoft.com/library/system.xml.serialization.xmlserializer.aspx)  
- [如何：序列化对象](../../../docs/standard/serialization/how-to-serialize-an-object.md)  
- [如何：反序列化对象](../../../docs/standard/serialization/how-to-deserialize-an-object.md)  
- [如何：反序列化对象](../../../docs/standard/serialization/how-to-deserialize-an-object.md)
+## <a name="see-also"></a>请参阅
+
+- <xref:System.Xml.Serialization.XmlElementAttribute>  
+- <xref:System.Xml.Serialization.XmlAttributes>  
+- <xref:System.Xml.Serialization.XmlAttributeOverrides>  
+- [XML 和 SOAP 序列化](../../../docs/standard/serialization/xml-and-soap-serialization.md)  
+- [XmlSerializer](https://msdn.microsoft.com/library/system.xml.serialization.xmlserializer.aspx)  
+- [如何：序列化对象](../../../docs/standard/serialization/how-to-serialize-an-object.md)  
+- [如何：反序列化对象](../../../docs/standard/serialization/how-to-deserialize-an-object.md)  
+- [如何：反序列化对象](../../../docs/standard/serialization/how-to-deserialize-an-object.md)

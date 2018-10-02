@@ -8,18 +8,18 @@ helpviewer_keywords:
 - OnPaint method [Windows Forms]
 - custom controls [Windows Forms], creating
 ms.assetid: 46ba0df3-5cf7-443c-a3b4-a72660172476
-ms.openlocfilehash: da80d46f27d7cd721af7a9600d2b0cde84876d23
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1a0eea1930699ed85fcf0eaf184ba0aabe398d73
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33534578"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46002692"
 ---
 # <a name="how-to-inherit-from-the-control-class"></a>如何：从 Control 类继承
-如果你想要创建使用 Windows 窗体上的完全自定义控件，应从继承<xref:System.Windows.Forms.Control>类。 时从继承<xref:System.Windows.Forms.Control>类要求你执行详细的规划和实现，它还提供的选项的最大范围。 从继承时<xref:System.Windows.Forms.Control>，继承使控件能够运行的最基本功能。 中的固有功能<xref:System.Windows.Forms.Control>类处理通过键盘和鼠标的用户输入，定义的边界和控件大小，提供 windows 句柄，并提供消息处理和安全性。 它没有纳入任何绘图功能（这里指的是控件的图形界面的实际呈现），也没有纳入任何特定的用户交互功能。 必须通过自定义代码提供所有的这些功能。  
+如果你想要创建 Windows 窗体上使用的完全自定义控件，则应从继承<xref:System.Windows.Forms.Control>类。 同时继承自<xref:System.Windows.Forms.Control>类需要执行更多的规划和实施，它还提供了最大程度的选项。 从继承时<xref:System.Windows.Forms.Control>，继承使控件能够工作的最基本功能。 中的固有功能<xref:System.Windows.Forms.Control>类处理用户通过键盘和鼠标输入，定义的边界和控件的大小，提供 windows 句柄，并提供消息处理和安全性。 它没有纳入任何绘图功能（这里指的是控件的图形界面的实际呈现），也没有纳入任何特定的用户交互功能。 必须通过自定义代码提供所有的这些功能。  
   
 > [!NOTE]
->  显示的对话框和菜单命令可能会与“帮助”中的描述不同，具体取决于你现用的设置或版本。 若要更改设置，请在 **“工具”** 菜单上选择 **“导入和导出设置”** 。 有关详细信息，请参阅[在 Visual Studio 中自定义开发设置](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3)。  
+>  显示的对话框和菜单命令可能会与“帮助”中的描述不同，具体取决于你现用的设置或版本。 若要更改设置，请在 **“工具”** 菜单上选择 **“导入和导出设置”** 。 有关详细信息，请参阅[个性化设置 Visual Studio IDE](/visualstudio/ide/personalizing-the-visual-studio-ide)。  
   
 ### <a name="to-create-a-custom-control"></a>创建自定义控件  
   
@@ -33,7 +33,7 @@ ms.locfileid: "33534578"
   
 4.  按 F7 打开自定义控件的“代码编辑器”。  
   
-5.  找到<xref:System.Windows.Forms.Control.OnPaint%2A>方法，将为空除外调用<xref:System.Windows.Forms.Control.OnPaint%2A>基本类的方法。  
+5.  找到<xref:System.Windows.Forms.Control.OnPaint%2A>方法，将为空 （除外） 的调用<xref:System.Windows.Forms.Control.OnPaint%2A>基类的方法。  
   
 6.  修改代码以纳入控件所需的任何自定义绘图。  
   

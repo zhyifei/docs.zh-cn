@@ -6,21 +6,21 @@ helpviewer_keywords:
 - objects [Visual Basic]
 ms.assetid: c68c5752-1006-46e1-975a-6717b62a42fc
 ms.openlocfilehash: 2917a698f9aa7828c201a048f443f5941797c704
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33655858"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42934285"
 ---
 # <a name="objects-and-classes-in-visual-basic"></a>Visual Basic 中的对象和类
 *对象*结合了可以视为一个单元的代码和数据。 对象可以是应用程序的一部分（如控件或窗体）， 也可以是整个应用程序。
 
-在 Visual Basic 中创建应用程序，你将不断地处理对象。 你可以使用提供的 Visual Basic 中，如控件、 窗体和数据访问对象的对象。 你还可以在 Visual Basic 应用程序中使用从其他应用程序的对象。 甚至可以创建你自己的对象，并为它们定义附加属性和方法。 对象类似于程序的预制构建基块，可方便你编写一次代码片段，然后不断重用它。  
+在 Visual Basic 中创建应用程序时，你将不断地处理对象。 可以使用提供的 Visual Basic 中，如控件、 窗体和数据访问对象的对象。 此外可以在 Visual Basic 应用程序中使用从其他应用程序的对象。 甚至可以创建你自己的对象，并为它们定义附加属性和方法。 对象类似于程序的预制构建基块，可方便你编写一次代码片段，然后不断重用它。  
   
 此主题详细介绍了对象。  
 
 ## <a name="objects-and-classes"></a>对象和类
-在 Visual Basic 中的每个对象由定义*类*。 类描述了对象的变量、属性、过程和事件。 对象是类实例；定义类之后，便可以根据需要创建任意多个对象。
+在 Visual Basic 中的每个对象定义由*类*。 类描述了对象的变量、属性、过程和事件。 对象是类实例；定义类之后，便可以根据需要创建任意多个对象。
 
 想想饼干切模和饼干，即可理解对象与其类之间的关系。 饼干切模是类。 它定义了每个饼干的特征，例如大小和形状。 类用于创建对象。 对象是饼干。
 
@@ -232,7 +232,7 @@ End Sub
 另一种对象关联方式是使用*包含关系*。 容器对象在逻辑上封装其他对象。 例如，<xref:System.OperatingSystem> 对象在逻辑上包含一个通过其 <xref:System.OperatingSystem.Version%2A> 属性返回的 <xref:System.Version> 对象。 请注意，容器对象实际上并不包含其他任何对象。
 
 #### <a name="collections"></a>集合
-一种特殊类型的对象包含关系用*集合*来表示。 集合是一组可以枚举的类似对象。 Visual Basic 支持中的特定语法[每个...下一条语句](../../../../visual-basic/language-reference/statements/for-each-next-statement.md)，可以循环访问集合中的项。 此外，借助集合，通常还可以使用 <xref:Microsoft.VisualBasic.Collection.Item%2A> 根据索引检索元素，或通过将元素与唯一字符串相关联进行检索。 集合比数组更易于使用，因为无需使用索引，即可添加或删除项。 鉴于它的易用性，集合通常用于存储窗体和控件。
+一种特殊类型的对象包含关系用*集合*来表示。 集合是一组可以枚举的类似对象。 Visual Basic 支持中的特定语法[为每个...下一条语句](../../../../visual-basic/language-reference/statements/for-each-next-statement.md)，可用于循环访问集合中的项。 此外，借助集合，通常还可以使用 <xref:Microsoft.VisualBasic.Collection.Item%2A> 根据索引检索元素，或通过将元素与唯一字符串相关联进行检索。 集合比数组更易于使用，因为无需使用索引，即可添加或删除项。 鉴于它的易用性，集合通常用于存储窗体和控件。
 
 ## <a name="related-topics"></a>相关主题  
  [演练：定义类](../../../../visual-basic/programming-guide/language-features/objects-and-classes/walkthrough-defining-classes.md)  

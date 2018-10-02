@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: ed324eff-4aff-4a76-b6c0-04e6c0d8f5a9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3da8a524af872a724ee6cbe206912572d6338624
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 63af71f92af9c2f3a5986dcb73f44d0e53c00f58
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33574743"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44079449"
 ---
 # <a name="how-to-display-dates-in-non-gregorian-calendars"></a>如何：用非公历日历显示日期
 <xref:System.DateTime> 和 <xref:System.DateTimeOffset> 类型使用公历作为默认日历。 这意味着，调用日期和时间值的 `ToString` 方法会用公历日历显示该日期和时间的字符串表示形式，即使该日期和时间是使用其他日历创建的。 下面的示例对此进行了展示，虽然使用两种不同的方式创建采用波斯历的日期和时间值，但在调用 <xref:System.DateTime.ToString%2A> 方法时仍采用公历显示这些日期和时间值。 此示例对于用特定日历显示日期，反映了两种常用但不正确的方法。  
@@ -90,5 +90,6 @@ ms.locfileid: "33574743"
   
  使用 csc.exe 或 vb.exe 通过命令行编译代码。 若要在 Visual Studio 中编译代码，请将代码置于控制台应用程序项目模板中。  
   
-## <a name="see-also"></a>请参阅  
- [执行格式设置操作](../../../docs/standard/base-types/performing-formatting-operations.md)
+## <a name="see-also"></a>请参阅
+
+- [执行格式设置操作](../../../docs/standard/base-types/performing-formatting-operations.md)

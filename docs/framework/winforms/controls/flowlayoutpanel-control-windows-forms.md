@@ -6,12 +6,12 @@ helpviewer_keywords:
 - layout [Windows Forms]
 - Windows Forms, arranging contents
 ms.assetid: 630c9305-9ecf-4f99-94f9-ddf06de82713
-ms.openlocfilehash: c164a77314f7127056e2367e7e9c4fac331d723d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 714613253c5d3e90750f4ffad1cab34064995877
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33524395"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43418047"
 ---
 # <a name="flowlayoutpanel-control-windows-forms"></a>FlowLayoutPanel 控件（Windows 窗体）
 `FlowLayoutPanel` 控件沿水平或纵排方向排列其内容。 可从一行到下一行，或从一列到下列进行内容换行。 还可以剪切内容，而不是进行换行。  
@@ -25,7 +25,7 @@ ms.locfileid: "33524395"
  [如何：在 FlowLayoutPanel 控件中锚定和停靠子控件](../../../../docs/framework/winforms/controls/how-to-anchor-and-dock-child-controls-in-a-flowlayoutpanel-control.md)  
  说明如何使用 <xref:System.Windows.Forms.Control.Anchor%2A> 和 <xref:System.Windows.Forms.Control.Dock%2A> 属性在 <xref:System.Windows.Forms.FlowLayoutPanel> 控件中锚定和停靠子控件。  
   
- 另请参阅[演练： 在 Windows 窗体使用 FlowLayoutPanel 上排列控件](http://msdn.microsoft.com/library/z9w7ek2f\(v=vs.110\))。  
+ 另请参阅[演练： 在 Windows 窗体使用 FlowLayoutPanel 排列控件](https://msdn.microsoft.com/library/z9w7ek2f\(v=vs.110\))。  
   
 ## <a name="reference"></a>参考  
  <xref:System.Windows.Forms.FlowLayoutPanel>  

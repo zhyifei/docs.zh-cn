@@ -1,16 +1,16 @@
 ---
 title: 行状态和行版本
-ms.date: 03/30/2017
+ms.date: 07/19/2018
 dev_langs:
 - csharp
 - vb
 ms.assetid: 2e6642c9-bfc6-425c-b3a7-e4912ffa6c1f
-ms.openlocfilehash: d36556b62a95a7af1097d8fe88597569c81c0111
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 629e8b0bea1cd5c1dd80409acd7c03e0e033b5bc
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32759408"
+ms.lasthandoff: 09/23/2018
+ms.locfileid: "46702928"
 ---
 # <a name="row-states-and-row-versions"></a>行状态和行版本
 ADO.NET 用行状态和行版本管理表中的行。 行状态指示行的状态；行版本在修改行中存储的值时维护各个阶段的值，包括当前值、原始值和默认值。 例如，在修改了行中的某列后，该行的行状态将为 `Modified`，并且有两个行版本：`Current`（包含行的当前值）和 `Original`（包含列修改前行的值）。  
@@ -44,7 +44,7 @@ string custID = custRow["CustomerID", DataRowVersion.Original].ToString();
 |DataRowVersion 值|描述|  
 |--------------------------|-----------------|  
 |<xref:System.Data.DataRowVersion.Current>|行的当前值。 如果行的 `RowState` 为 `Deleted`，则不存在此行版本。|  
-|<xref:System.Data.DataRowVersion.Default>|特定行的默认行版本。 `Added`、`Modified` 或 `Unchanged` 行的默认行版本是 `Current`。 `Deleted` 行的默认行版本是 `Original`。 `Detached` 行的默认行版本是 `Proposed`。|  
+|<xref:System.Data.DataRowVersion.Default>|特定行的默认行版本。 `Added`、`Modified` 或 `Deleted` 行的默认行版本是 `Current`。 `Detached` 行的默认行版本是 `Proposed`。|  
 |<xref:System.Data.DataRowVersion.Original>|行的原始值。 如果行的 `RowState` 为 `Added`，则不存在此行版本。|  
 |<xref:System.Data.DataRowVersion.Proposed>|行的建议值。 在对行进行编辑操作的过程中，或者对于不属于 `DataRowCollection` 的行，存在此行版本。|  
   
@@ -98,4 +98,4 @@ foreach (DataRow delRow in delRows)
  [操作数据表中的数据](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/manipulating-data-in-a-datatable.md)  
  [数据集、数据表和数据视图](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
  [DataAdapters 和 DataReaders](../../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)  
- [ADO.NET 托管提供程序和数据集开发人员中心](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)

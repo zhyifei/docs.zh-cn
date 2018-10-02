@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - command-line arguments [C#]
 ms.assetid: 89c3e335-3f5b-4e24-8c5a-b8036561fe8a
-ms.openlocfilehash: 2f1723efd4056539e12605bc1a4229f94bc9e055
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 811ee09aec7afac70f3f2c2fe5fb002232935028
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33332502"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43511331"
 ---
 # <a name="how-to-access-command-line-arguments-using-foreach-c-programming-guide"></a>如何：使用 foreach 访问命令行自变量（C# 编程指南）
 循环访问数组的另一种方法是使用 [foreach](../../../csharp/language-reference/keywords/foreach-in.md) 语句，如本例所示。 `foreach` 语句可用于循环访问数组、.NET Framework 集合类或任何实现 <xref:System.Collections.IEnumerable> 接口的类或结构。  
@@ -24,12 +24,13 @@ ms.locfileid: "33332502"
   
  [!code-csharp[csProgGuideMain#11](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/how-to-access-command-line-arguments-using-foreach_2.cs)]  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Array>  
- <xref:System.Collections>  
- [在命令行上使用 csc.exe 生成](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)  
- [C# 编程指南](../../../csharp/programming-guide/index.md)  
- [foreach, in](../../../csharp/language-reference/keywords/foreach-in.md)  
- [Main() 和命令行参数](../../../csharp/programming-guide/main-and-command-args/index.md)  
- [如何：显示命令行参数](../../../csharp/programming-guide/main-and-command-args/how-to-display-command-line-arguments.md)  
- [Main() 返回值](../../../csharp/programming-guide/main-and-command-args/main-return-values.md)
+## <a name="see-also"></a>请参阅
+
+- <xref:System.Array>  
+- <xref:System.Collections>  
+- [在命令行上使用 csc.exe 生成](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)  
+- [C# 编程指南](../../../csharp/programming-guide/index.md)  
+- [foreach, in](../../../csharp/language-reference/keywords/foreach-in.md)  
+- [Main() 和命令行参数](../../../csharp/programming-guide/main-and-command-args/index.md)  
+- [如何：显示命令行参数](../../../csharp/programming-guide/main-and-command-args/how-to-display-command-line-arguments.md)  
+- [Main() 返回值](../../../csharp/programming-guide/main-and-command-args/main-return-values.md)

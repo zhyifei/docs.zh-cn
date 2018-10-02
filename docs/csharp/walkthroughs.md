@@ -6,12 +6,12 @@ helpviewer_keywords:
 - walkthroughs [Visual Studio], Visual C#
 - Visual C#, walkthroughs
 ms.assetid: 2d07b972-ef69-4676-9aef-e1784728e1ff
-ms.openlocfilehash: aaf57e666faf18010c7f267f96e6958c73e58bcf
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a2efaae7cd861842f92ba3cdedc5ae77beec9f6f
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33359444"
+ms.lasthandoff: 09/29/2018
+ms.locfileid: "47202230"
 ---
 # <a name="c-walkthroughs"></a>C# 演练
 演练提供有关常见方案的分步说明，这使它们成为了解产品或特定功能部分的良好开端。  
@@ -50,16 +50,16 @@ ms.locfileid: "33359444"
  [用 C# 编写查询 (LINQ)](../csharp/programming-guide/concepts/linq/walkthrough-writing-queries-linq.md)  
  演示用于编写 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 查询表达式的 C# 语言功能。  
   
- [操作数据 (C#) (LINQ to SQL)](https://msdn.microsoft.com/library/bb386927.aspx)  
+ [操作数据 (C#) (LINQ to SQL)](../framework/data/adonet/sql/linq/walkthrough-manipulating-data-csharp.md)  
  描述在数据库中添加、修改以及删除数据的 [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] 方案。  
   
- [简单对象模型和查询 (C#) (LINQ to SQL)](https://msdn.microsoft.com/library/bb386940.aspx)  
+ [简单对象模型和查询 (C#) (LINQ to SQL)](../framework/data/adonet/sql/linq/walkthrough-simple-object-model-and-query-csharp.md)  
  演示如何创建实体类和筛选实体类的简单查询。  
   
- [仅使用存储过程 (C#) (LINQ to SQL)](https://msdn.microsoft.com/library/bb399407.aspx)  
+ [仅使用存储过程 (C#) (LINQ to SQL)](../framework/data/adonet/sql/linq/walkthrough-using-only-stored-procedures-csharp.md)  
  演示如何使用 LINQ to SQL 来访问数据（仅执行存储过程）。  
   
- [跨关系查询 (C#) (LINQ to SQL)](https://msdn.microsoft.com/library/bb386951.aspx)  
+ [跨关系查询 (C#) (LINQ to SQL)](../framework/data/adonet/sql/linq/walkthrough-querying-across-relationships-csharp.md)  
  演示如何使用 [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] 关联来表示数据库中的外键关系。  
 
  [用 C# 编写可视化工具](/visualstudio/debugger/walkthrough-writing-a-visualizer-in-csharp)  
@@ -69,6 +69,7 @@ ms.locfileid: "33359444"
  [部署示例和演练](/visualstudio/deployment/clickonce-deployment-samples-and-walkthroughs)  
  提供常见部署方案的分步示例。  
   
-## <a name="see-also"></a>请参阅  
- [C# 编程指南](../csharp/programming-guide/index.md)  
- [Visual Studio 示例](/visualstudio/ide/visual-studio-samples)
+## <a name="see-also"></a>请参阅
+
+- [C# 编程指南](../csharp/programming-guide/index.md)  
+- [Visual Studio 示例](/visualstudio/ide/visual-studio-samples)

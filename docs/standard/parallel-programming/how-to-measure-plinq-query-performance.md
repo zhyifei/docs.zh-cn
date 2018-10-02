@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 491ba43b-2c10-473d-9aab-e2cb96446711
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c662c442f7f2cea23e1afe131704585e7a9bca7a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: dd9e3a0ead62450e87225212f4fc6ecec6ec9489
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33584600"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "45749104"
 ---
 # <a name="how-to-measure-plinq-query-performance"></a>如何：衡量 PLINQ 查询性能
 此示例展示了如何使用 <xref:System.Diagnostics.Stopwatch> 类度量 PLINQ 查询的执行时间。  
@@ -28,5 +28,6 @@ ms.locfileid: "33584600"
   
  试验查询实现时，总执行时间是有用的指标，但它并不总是能说明一切。 为了更深入全面地了解查询线程相互之间以及查询线程和其他运行进程之前的交互，请使用并发可视化工具。 有关详细信息，请参阅[并发可视化工具](/visualstudio/profiling/concurrency-visualizer)。  
   
-## <a name="see-also"></a>请参阅  
- [并行 LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)
+## <a name="see-also"></a>请参阅
+
+- [并行 LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)

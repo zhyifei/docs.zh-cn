@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f5b4ef7777c9d45c2d255cc2915f8c4ccdeef4a9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: cd6cb0116e1080a68c91df365cc7dd1485b21791
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33432604"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44083671"
 ---
 # <a name="iclrstrongnamestrongnamegetblobfromimage-method"></a>ICLRStrongName::StrongNameGetBlobFromImage 方法
-获取位于指定的内存地址处的二进制表示形式的程序集映像。  
+获取指定内存地址处程序集映像的二进制表示形式。  
   
 ## <a name="syntax"></a>语法  
   
@@ -40,19 +40,19 @@ HRESULT StrongNameGetBlobFromImage (
   
 #### <a name="parameters"></a>参数  
  `pbBase`  
- [in]映射程序集清单内存地址。  
+ [in]映射的程序集清单的内存地址。  
   
  `dwLength`  
- [in]大小，以字节为单位，在图像的`pbBase`。  
+ [in]大小 （字节） 的图像`pbBase`。  
   
  `pbBlob`  
- [in]用于包含图像的二进制表示的缓冲区。  
+ [in]用于包含图像的二进制表示形式的缓冲区。  
   
  `pcbBlob`  
- [在中，out]请求的最大大小，以字节为单位， `pbBlob`。 返回时，实际大小，以字节为单位的`pbBlob`。  
+ [in、 out]请求的最大大小，以字节为单位， `pbBlob`。 在返回时，实际大小，以字节为单位的`pbBlob`。  
   
 ## <a name="return-value"></a>返回值  
- `S_OK` 如果成功，则完成的方法否则为该值指示失败的 HRESULT 值 (请参阅[常见的 HRESULT 值](http://go.microsoft.com/fwlink/?LinkId=213878)有关的列表)。  
+ `S_OK` 如果成功，则完成的方法否则为指示失败的 HRESULT 值 (请参阅[常见的 HRESULT 值](https://go.microsoft.com/fwlink/?LinkId=213878)列表)。  
   
 ## <a name="requirements"></a>要求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
@@ -61,7 +61,7 @@ HRESULT StrongNameGetBlobFromImage (
   
  **库：** 作为 MSCorEE.dll 中的资源  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅  
  [StrongNameGetBlob 方法](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamegetblob-method.md)  

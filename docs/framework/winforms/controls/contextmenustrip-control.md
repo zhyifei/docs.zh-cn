@@ -6,12 +6,12 @@ helpviewer_keywords:
 - ContextMenuStrip control [Windows Forms]
 - shortcut menus
 ms.assetid: 76e070b2-65d7-457f-8300-d104e4e01e5e
-ms.openlocfilehash: 45b37a3cc542295368a9304cb49078d88c347228
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c5f2246ef70ed627ecd311c1f3e5666afcd9b5ef
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33525531"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43748897"
 ---
 # <a name="contextmenustrip-control"></a>ContextMenuStrip 控件
 <xref:System.Windows.Forms.ContextMenuStrip> 控件提供与控件关联的快捷菜单。  
@@ -35,7 +35,7 @@ ms.locfileid: "33525531"
  [如何：处理 ContextMenuStrip 打开事件](../../../../docs/framework/winforms/controls/how-to-handle-the-contextmenustrip-opening-event.md)  
  描述如何通过处理 <xref:System.Windows.Forms.ToolStripDropDown.Opening> 事件自定义 <xref:System.Windows.Forms.ContextMenuStrip> 控件的行为。  
   
- 另请参阅[ContextMenuStrip 任务对话框](http://msdn.microsoft.com/library/ms233646\(v=vs.110\))或[ContextMenuStrip 项集合编辑器](http://msdn.microsoft.com/library/ms233641\(v=vs.110\))。  
+ 另请参阅[ContextMenuStrip 任务对话框](https://msdn.microsoft.com/library/ms233646\(v=vs.110\))或[ContextMenuStrip 项集合编辑器](https://msdn.microsoft.com/library/ms233641\(v=vs.110\))。  
   
 ## <a name="reference"></a>参考  
  <xref:System.Windows.Forms.MenuStrip>  

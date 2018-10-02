@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 4ff084d5-5956-4db1-8e18-c5a66b000882
-ms.openlocfilehash: 4fc9a787aa03af311ed219f0831a4d0e41544be8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6b0d298e1959ff2fdcd46a9f218eb980671407be
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33363388"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47210196"
 ---
 # <a name="polling-in-console-applications"></a>在控制台应用程序中轮询
 ADO.NET 中的异步操作使你可以在一个线程上启动需要很长时间的数据库操作，同时在另一个线程上执行其他任务。 但是，在大多数方案中，最终将到达一个临界点，此时，应用程序在数据库操作完成后才应继续。 在这种情况下，可以轮询异步操作，确定操作是否已完成。  
@@ -192,4 +192,4 @@ class Class1
   
 ## <a name="see-also"></a>请参阅  
  [异步操作](../../../../../docs/framework/data/adonet/sql/asynchronous-operations.md)  
- [ADO.NET 托管提供程序和数据集开发人员中心](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)

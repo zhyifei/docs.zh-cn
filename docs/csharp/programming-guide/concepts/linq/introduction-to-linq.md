@@ -2,12 +2,12 @@
 title: LINQ 简介 (C#)
 ms.date: 07/20/2015
 ms.assetid: 54874feb-55e5-4ca8-a9d6-1c1127fd7fb1
-ms.openlocfilehash: 3c32c20efec55568a668c5dba55baf8f3ebbee7a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 990a47d6ecfe38d9efa7d505eb3c23a28c05f58c
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33323311"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43740242"
 ---
 # <a name="introduction-to-linq-c"></a>LINQ 简介 (C#)
 语言集成查询 (LINQ) 是 .NET Framework 3.5 版中引入的一项创新功能，它在对象领域和数据领域之间架起了一座桥梁。  
@@ -33,5 +33,6 @@ ms.locfileid: "33323311"
   
 -   .NET 集合、文件、字符串等：[LINQ to Objects (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-objects.md)  
   
-## <a name="see-also"></a>请参阅  
- [语言集成查询 (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/index.md)
+## <a name="see-also"></a>请参阅
+
+- [语言集成查询 (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/index.md)

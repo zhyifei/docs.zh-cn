@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 97f1bbd8ff04ccfbfe93fd5b75fc89fc28f393d0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: f589225dde1ba2aabc4ca32542339a771c3287d4
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33449103"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47192766"
 ---
 # <a name="imetadatatablesgetguid-method"></a>IMetaDataTables::GetGuid 方法
-从指定索引处的行获取的 GUID。  
+获取从指定索引处的行的 GUID。  
   
 ## <a name="syntax"></a>语法  
   
@@ -41,10 +41,10 @@ HRESULT GetGuid (
  [in]要从其中获取 GUID 的行的索引。  
   
  `ppGuid`  
- [out]指向 GUID 的指针的指针。  
+ [out]指向 GUID 的指针指向的指针。  
   
 ## <a name="remarks"></a>备注  
- 不建议使用此方法，因为它不返回一致的结果。 GUID 表有关的信息，请参阅公共语言基础结构 (CLI) 文档，尤其是"第 ii 部分： 元数据定义和语义"。 可联机获取该文档；请参阅 MSDN 上的 [ECMA C# 和公共语言基础结构标准](http://go.microsoft.com/fwlink/?LinkID=99212)和 Ecma International 网站上的[标准 ECMA-335 - 公共语言基础结构 (CLI)](http://go.microsoft.com/fwlink/?LinkID=65552)。  
+ 不建议使用此方法，因为它不会返回一致的结果。 GUID 表有关的信息，请参阅公共语言基础结构 (CLI) 文档，尤其是"分区 II:: 元数据定义和语义"。 可联机获取该文档；请参阅 MSDN 上的 [ECMA C# 和公共语言基础结构标准](https://go.microsoft.com/fwlink/?LinkID=99212)和 Ecma International 网站上的[标准 ECMA-335 - 公共语言基础结构 (CLI)](https://go.microsoft.com/fwlink/?LinkID=65552)。  
   
 ## <a name="requirements"></a>要求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
@@ -53,7 +53,7 @@ HRESULT GetGuid (
   
  **库：** 用作 MsCorEE.dll 中的资源  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅  
  [IMetaDataTables 接口](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md)  

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - from clause [C#]
 - from keyword [C#]
 ms.assetid: 1aefd18c-1314-47f8-99ec-9bcefb09e699
-ms.openlocfilehash: e8bb7782fc60a3af20d5926e609a5edea68fd1a3
-ms.sourcegitcommit: f9e38d31288fe5962e6be5b0cc286da633482873
+ms.openlocfilehash: c8c124f44df292b8323560cce541cca2765e2790
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37027975"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47216404"
 ---
 # <a name="from-clause-c-reference"></a>from 子句（C# 参考）
 
@@ -55,5 +55,5 @@ ms.locfileid: "37027975"
 
 ## <a name="see-also"></a>请参阅
 
-[查询关键字 (LINQ)](query-keywords.md)  
-[语言集成查询 (LINQ)](../../linq/index.md)  
+- [查询关键字 (LINQ)](query-keywords.md)  
+- [语言集成查询 (LINQ)](../../linq/index.md)  

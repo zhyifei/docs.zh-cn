@@ -2,12 +2,12 @@
 title: 线程同步 (C#)
 ms.date: 07/20/2015
 ms.assetid: e42b1be6-c93c-479f-a148-be0759f1a4e1
-ms.openlocfilehash: 138b94ef8ae5fc54e42277127f9b22f88803457f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6f0fe42c06b27369612cf586c7a93ce098822162
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33338606"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43509381"
 ---
 # <a name="thread-synchronization-c"></a>线程同步 (C#)
 以下各节中描述的功能和类可用于同步访问多线程应用程序中的资源。  
@@ -142,27 +142,27 @@ class ThreadingExample
 ## <a name="deadlocks"></a>死锁  
  线程同步在多线程应用程序中非常有用，但是产生 `deadlock` 总是十分危险。一旦产生了死锁，将有多个线程互相等待，从而导致应用程序暂停。 死锁类似于汽车停在十字路口一样，每个人都在等待别人先出发。 因此，避免死锁很重要；关键是要仔细规划。 开始编码之前，通常可以通过绘制多线程应用程序来预测死锁情况。  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Threading.Thread>  
- <xref:System.Threading.WaitHandle.WaitOne%2A>  
- <xref:System.Threading.WaitHandle.WaitAny%2A>  
- <xref:System.Threading.WaitHandle.WaitAll%2A>  
- <xref:System.Threading.Thread.Join%2A>  
- <xref:System.Threading.Thread.Start%2A>  
- <xref:System.Threading.Thread.Sleep%2A>  
- <xref:System.Threading.Monitor>  
- <xref:System.Threading.Mutex>  
- <xref:System.Threading.AutoResetEvent>  
- <xref:System.Threading.ManualResetEvent>  
- <xref:System.Threading.Interlocked>  
- <xref:System.Threading.WaitHandle>  
- <xref:System.Threading.EventWaitHandle>  
- <xref:System.Threading>  
- <xref:System.Threading.EventWaitHandle.Set%2A>  
- <xref:System.Threading.Monitor>  
- [多线程应用程序 (C#)](../../../../csharp/programming-guide/concepts/threading/multithreaded-applications.md)  
- [lock 语句](../../../../csharp/language-reference/keywords/lock-statement.md)  
- [Mutex](../../../../standard/threading/mutexes.md)  
- [互锁操作](../../../../standard/threading/interlocked-operations.md)  
- [AutoResetEvent](../../../../standard/threading/autoresetevent.md)  
- [为多线程处理同步数据](../../../../standard/threading/synchronizing-data-for-multithreading.md)
+## <a name="see-also"></a>请参阅
+
+- <xref:System.Threading.Thread>  
+- <xref:System.Threading.WaitHandle.WaitOne%2A>  
+- <xref:System.Threading.WaitHandle.WaitAny%2A>  
+- <xref:System.Threading.WaitHandle.WaitAll%2A>  
+- <xref:System.Threading.Thread.Join%2A>  
+- <xref:System.Threading.Thread.Start%2A>  
+- <xref:System.Threading.Thread.Sleep%2A>  
+- <xref:System.Threading.Monitor>  
+- <xref:System.Threading.Mutex>  
+- <xref:System.Threading.AutoResetEvent>  
+- <xref:System.Threading.ManualResetEvent>  
+- <xref:System.Threading.Interlocked>  
+- <xref:System.Threading.WaitHandle>  
+- <xref:System.Threading.EventWaitHandle>  
+- <xref:System.Threading>  
+- <xref:System.Threading.EventWaitHandle.Set%2A>  
+- <xref:System.Threading.Monitor>  
+- [lock 语句](../../../../csharp/language-reference/keywords/lock-statement.md)  
+- [Mutex](../../../../standard/threading/mutexes.md)  
+- [互锁操作](../../../../standard/threading/interlocked-operations.md)  
+- [AutoResetEvent](../../../../standard/threading/autoresetevent.md)  
+- [为多线程处理同步数据](../../../../standard/threading/synchronizing-data-for-multithreading.md)

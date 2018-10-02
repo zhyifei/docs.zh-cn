@@ -5,21 +5,21 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 60887eed-df40-4412-b812-41e1dd329d15
-ms.openlocfilehash: 6c2329fe69941341dff1536b213ca4f1b961889a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 05bec31cb0d1dca3dc906c183d001fb526173bb5
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33505748"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43502546"
 ---
 # <a name="side-by-side-versioning-in-workflowservicehost"></a>WorkflowServiceHost 中的并行版本控制
 <xref:System.ServiceModel.Activities.WorkflowServiceHost> 中引入的 [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)] 并行版本控制功能提供了在单个终结点上承载工作流服务的多个版本的能力。 所提供的并行功能允许配置工作流服务，以便使用新的工作流定义来创建工作流服务的新实例，而对于正在运行的实例则使用现有的定义来完成。 本主题概述了使用 <xref:System.ServiceModel.Activities.WorkflowServiceHost> 的工作流服务并行执行。  
   
 > [!NOTE]
->  若要下载示例并观看工作流服务的并行版本控制的视频演练，请参阅[web 承载的 Xamlx 工作流服务并行版本控制](http://go.microsoft.com/fwlink/?LinkId=393746)。  
+>  若要下载示例并观看工作流服务的并行版本控制的视频演练，请参阅[与 web 承载的 Xamlx 工作流服务并行版本控制](https://go.microsoft.com/fwlink/?LinkId=393746)。  
   
 ## <a name="hosting-multiple-versions-in-a-workflow-service"></a>在工作流服务中承载多个版本  
- <xref:System.ServiceModel.Activities.WorkflowServiceHost> 包含两个属性，它们可配置为允许工作流的多个版本并行执行：<xref:System.ServiceModel.Activities.WorkflowServiceHost.SupportedVersions%2A> 和 <xref:System.ServiceModel.Activities.WorkflowService.DefinitionIdentity%2A>。 <xref:System.ServiceModel.Activities.WorkflowServiceHost.SupportedVersions%2A> 包含所支持的工作流服务版本，而 <xref:System.ServiceModel.Activities.WorkflowService.DefinitionIdentity%2A> 用于唯一地标识每个工作流服务。 这一点通过将 <xref:System.Activities.WorkflowIdentity> 与工作流服务关联来实现。 <xref:System.Activities.WorkflowIdentity> 包含三条标识信息。 <xref:System.Activities.WorkflowIdentity.Name%2A> 和 <xref:System.Activities.WorkflowIdentity.Version%2A> 包含一个名称和一个 <xref:System.Version>，并且是必需的；而 <xref:System.Activities.WorkflowIdentity.Package%2A> 则是可选的，可用于指定包含如程序集名称或其他所需信息的附加字符串。 <xref:System.ServiceModel.Activities.WorkflowServiceHost.SupportedVersions%2A> 集合中包含的每个工作流服务都必须具有唯一的 <xref:System.Activities.WorkflowIdentity>。 如果 <xref:System.Activities.WorkflowIdentity> 的三个属性中有任一属性不同于其他 <xref:System.Activities.WorkflowIdentity>，则它是唯一的。 A `null` <xref:System.Activities.WorkflowIdentity>是允许的值<xref:System.ServiceModel.Activities.WorkflowService.DefinitionIdentity%2A>，但只有一个以前版本的工作流服务可能有`null` <xref:System.Activities.WorkflowIdentity>。  
+ <xref:System.ServiceModel.Activities.WorkflowServiceHost> 包含两个属性，它们可配置为允许工作流的多个版本并行执行：<xref:System.ServiceModel.Activities.WorkflowServiceHost.SupportedVersions%2A> 和 <xref:System.ServiceModel.Activities.WorkflowService.DefinitionIdentity%2A>。 <xref:System.ServiceModel.Activities.WorkflowServiceHost.SupportedVersions%2A> 包含所支持的工作流服务版本，而 <xref:System.ServiceModel.Activities.WorkflowService.DefinitionIdentity%2A> 用于唯一地标识每个工作流服务。 这一点通过将 <xref:System.Activities.WorkflowIdentity> 与工作流服务关联来实现。 <xref:System.Activities.WorkflowIdentity> 包含三条标识信息。 <xref:System.Activities.WorkflowIdentity.Name%2A> 和 <xref:System.Activities.WorkflowIdentity.Version%2A> 包含一个名称和一个 <xref:System.Version>，并且是必需的；而 <xref:System.Activities.WorkflowIdentity.Package%2A> 则是可选的，可用于指定包含如程序集名称或其他所需信息的附加字符串。 <xref:System.ServiceModel.Activities.WorkflowServiceHost.SupportedVersions%2A> 集合中包含的每个工作流服务都必须具有唯一的 <xref:System.Activities.WorkflowIdentity>。 如果 <xref:System.Activities.WorkflowIdentity> 的三个属性中有任一属性不同于其他 <xref:System.Activities.WorkflowIdentity>，则它是唯一的。 一个`null`<xref:System.Activities.WorkflowIdentity>是大值<xref:System.ServiceModel.Activities.WorkflowService.DefinitionIdentity%2A>，但只有一个以前版本的工作流服务可能有`null` <xref:System.Activities.WorkflowIdentity>。  
   
 > [!IMPORTANT]
 >  <xref:System.Activities.WorkflowIdentity> 不应包含任何个人身份信息 (PII)。 <xref:System.Activities.WorkflowIdentity> 由三部分组成：<xref:System.Activities.WorkflowIdentity.Name%2A> (<xref:System.String>)、<xref:System.Activities.WorkflowIdentity.Version%2A> (<xref:System.Version>) 和 <xref:System.Activities.WorkflowIdentity.Package%2A> (<xref:System.String>)。 在几个不同活动生命周期点，运行时将向任何已配置的跟踪服务发出有关用于创建实例的 <xref:System.Activities.WorkflowIdentity> 的信息。 WF 跟踪没有任何隐藏 PII（敏感用户信息）的机制。 因此，<xref:System.Activities.WorkflowIdentity> 实例不应该包含任何 PII 数据，因为运行时将在跟踪记录中发出这些数据，任何有权查看跟踪记录的人都能够看到这些数据。  
@@ -31,7 +31,7 @@ ms.locfileid: "33505748"
   
 -   在其 <xref:System.ServiceModel.Activities.Receive> 中不得有主版本中不存在的任何 <xref:System.ServiceModel.Activities.SendReply> 或 <xref:System.ServiceModel.Activities.WorkflowService.Body%2A> 活动，并且这些活动必须与操作协定相匹配。  
   
--   具有唯一的 <xref:System.ServiceModel.Activities.WorkflowService.DefinitionIdentity%2A>。 可能有一个且仅有一个工作流定义`null` <xref:System.ServiceModel.Activities.WorkflowService.DefinitionIdentity%2A>。  
+-   具有唯一的 <xref:System.ServiceModel.Activities.WorkflowService.DefinitionIdentity%2A>。 可能有一个且只有一个工作流定义`null` <xref:System.ServiceModel.Activities.WorkflowService.DefinitionIdentity%2A>。  
   
  允许进行一些更改。 以下各项在各版本间可能有所不同：  
   
@@ -44,11 +44,11 @@ ms.locfileid: "33505748"
 -   <xref:System.ServiceModel.Activities.WorkflowService.ImplementedContracts%2A> 可能不同于主版本。  
   
 ### <a name="configuring-the-definitionidentity"></a>配置 DefinitionIdentity  
- 使用工作流设计器中，创建工作流服务时<xref:System.ServiceModel.Activities.WorkflowService.DefinitionIdentity%2A>使用设置**属性**窗口。 在设计器中选择工作流服务，然后选择服务的根活动外单击**属性窗口**从**视图**菜单。 选择**WorkflowIdentity**旁边显示的下拉列表从**DefinitionIdentity**属性，然后展开，并指定所需<xref:System.Activities.WorkflowIdentity>属性。 在下面的示例<xref:System.ServiceModel.Activities.WorkflowService.DefinitionIdentity%2A>使用配置<xref:System.Activities.WorkflowIdentity.Name%2A>`MortgageWorkflow`和<xref:System.Activities.WorkflowIdentity.Version%2A>的`1.0.0.0`。 <xref:System.Activities.WorkflowIdentity.Package%2A> 是可选的，在此示例中是 `null`。  
+ 使用工作流设计器中，创建工作流服务时<xref:System.ServiceModel.Activities.WorkflowService.DefinitionIdentity%2A>使用设置**属性**窗口。 单击外部服务的根活动在设计器中选择工作流服务，并选择**属性窗口**从**视图**菜单。 选择**WorkflowIdentity**旁边显示的下拉列表从**DefinitionIdentity**属性，然后展开，并指定所需<xref:System.Activities.WorkflowIdentity>属性。 在下面的示例<xref:System.ServiceModel.Activities.WorkflowService.DefinitionIdentity%2A>配备<xref:System.Activities.WorkflowIdentity.Name%2A>`MortgageWorkflow`和一个<xref:System.Activities.WorkflowIdentity.Version%2A>的`1.0.0.0`。 <xref:System.Activities.WorkflowIdentity.Package%2A> 是可选的，在此示例中是 `null`。  
   
  ![DefinitionIdentity](../../../../docs/framework/wcf/feature-details/media/workflowservicedefinitionidentityv1.bmp "WorkflowServiceDefinitionIdentityv1")  
   
- 如果工作流服务是自承载的，则 <xref:System.ServiceModel.Activities.WorkflowService.DefinitionIdentity%2A> 在构造工作流服务时配置。 在下面的示例中，<xref:System.ServiceModel.Activities.WorkflowService.DefinitionIdentity%2A>配置了与前面的示例中，相同的值有<xref:System.Activities.WorkflowIdentity.Name%2A>`MortgageWorkflow`和<xref:System.Activities.WorkflowIdentity.Name%2A>的`1.0.0.0`。  
+ 如果工作流服务是自承载的，则 <xref:System.ServiceModel.Activities.WorkflowService.DefinitionIdentity%2A> 在构造工作流服务时配置。 在以下示例中，<xref:System.ServiceModel.Activities.WorkflowService.DefinitionIdentity%2A>配置了相同的值与上面的示例中，有<xref:System.Activities.WorkflowIdentity.Name%2A>`MortgageWorkflow`和一个<xref:System.Activities.WorkflowIdentity.Name%2A>的`1.0.0.0`。  
   
 ```csharp  
 WorkflowService service = new WorkflowService  
@@ -76,7 +76,7 @@ With service
 End With  
 ```  
   
- A<xref:System.ServiceModel.Activities.WorkflowService.DefinitionIdentity%2A>不必需的但只有一个版本的工作流服务可能有**null**<xref:System.ServiceModel.Activities.WorkflowService.DefinitionIdentity%2A>。  
+ 一个<xref:System.ServiceModel.Activities.WorkflowService.DefinitionIdentity%2A>不是必需的尽管只有一个版本的工作流服务可能有**null**<xref:System.ServiceModel.Activities.WorkflowService.DefinitionIdentity%2A>。  
   
 > [!NOTE]
 >  如果最初部署服务时未配置 <xref:System.ServiceModel.Activities.WorkflowService.DefinitionIdentity%2A>，则这一点非常有用，然后会创建一个更新的版本。  

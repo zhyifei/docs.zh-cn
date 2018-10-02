@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 653a4a97-1e4a-4b2d-8d24-7dbe1f2a5c84
-ms.openlocfilehash: 6df3e5f08e6f6a2058c44079c15da37ace3752c5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1e3ee4372c1c2173cff0d93dfdf84c96c60130d4
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33352189"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "45998586"
 ---
 # <a name="query-expression-syntax-examples-ordering-linq-to-dataset"></a>查询表达式语法示例：排序 (LINQ to DataSet)
 本主题中的示例演示如何使用 <xref:System.Linq.Enumerable.OrderBy%2A>、<xref:System.Linq.Enumerable.OrderByDescending%2A>、<xref:System.Linq.Enumerable.Reverse%2A> 和 <xref:System.Linq.Enumerable.ThenByDescending%2A> 方法来查询 <xref:System.Data.DataSet> 并使用查询表达式语法对结果排序。  
@@ -67,4 +67,4 @@ ms.locfileid: "33352189"
 ## <a name="see-also"></a>请参阅  
  [将数据加载到数据集中](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md)  
  [LINQ to DataSet 示例](../../../../docs/framework/data/adonet/linq-to-dataset-examples.md)  
- [标准查询运算符概述](http://msdn.microsoft.com/library/24cda21e-8af8-4632-b519-c404a839b9b2)
+ [标准查询运算符概述](https://msdn.microsoft.com/library/24cda21e-8af8-4632-b519-c404a839b9b2)

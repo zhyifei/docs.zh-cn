@@ -3,20 +3,18 @@ title: 常用客户端 Web 技术
 description: 使用 ASP.NET Core 和 Azure 构建新式 Web 应用程序 | 常用客户端 Web 技术
 author: ardalis
 ms.author: wiwagn
-ms.date: 10/07/2017
-ms.openlocfilehash: 79dac220e40274889783d29c0e04679dd878fda5
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.date: 6/28/2018
+ms.openlocfilehash: 692c1bf243c26ef6dcf441be9324e43d6a93fe50
+ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37106757"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37404601"
 ---
 # <a name="common-client-side-web-technologies"></a>常用客户端 Web 技术
 
 > “优秀的网站应表里如一。”  
 > _- Paul Cookson_
-
-## <a name="summary"></a>总结
 
 ASP.NET Core 应用程序属于 Web 应用程序，并且通常依赖于 HTML、CSS 和 JavaScript 等客户端 Web 技术。 通过将页面 (HTML) 内容从其布局和样式 (CSS) 以及行为 (JavaScript) 中分离出来，复杂的 Web 应用也可以利用“关注分离”原则。 将来，当这些关注点不相互交织时，可以更轻松地对应用程序的结构、设计或行为进行更改。
 
@@ -38,7 +36,7 @@ CSS（级联样式表）用于控制 HTML 元素的外观和布局。 CSS 样式
 
 ### <a name="css-preprocessors"></a>CSS 预处理器
 
-CSS 样式表缺少对条件逻辑、变量以及其他编程语言功能的支持。 因此，大型样式表通常包含大量重复，如将相同的颜色、字体或其他设置应用于 HTML 元素和 CSS 类的多个不同的变体。 通过添加对变量和逻辑的支持，CSS 预处理器可帮助样式表遵循 [DRY 原则](http://deviq.com/don-t-repeat-yourself/)。
+CSS 样式表缺少对条件逻辑、变量以及其他编程语言功能的支持。 因此，大型样式表通常包含大量重复，如将相同的颜色、字体或其他设置应用于 HTML 元素和 CSS 类的多个不同的变体。 通过添加对变量和逻辑的支持，CSS 预处理器可帮助样式表遵循 [DRY 原则](https://deviq.com/don-t-repeat-yourself/)。
 
 最常用的 CSS 预处理器是 Sass 和 LESS。 两者均可扩展 CSS 并与其后向兼容，表示无格式 CSS 文件即为有效的 Sass 或 LESS 文件。 Sass 基于 Ruby，而 LESS 基于 JavaScript，二者通常作为本地部署过程的一部分运行。 两者都提供命令行工具，以及 Visual Studio 中的内置支持，可使用 Gulp 或 Grunt 任务运行它们。
 
@@ -48,13 +46,13 @@ JavaScript 是动态的解释性编程语言，已在 ECMAScript 语言规范中
 
 在 Web 应用程序中使用 JavaScript 时，通常需要执行以下几项任务：
 
--   选择 HTML 元素并检索和/或更新其值
+- 选择 HTML 元素并检索和/或更新其值。
 
--   查询 Web API 的数据
+- 查询 Web API 以获取数据。
 
--   向 Web API 发送命令（并使用其结果响应回调）
+- 向 Web API 发送命令（并使用其结果响应回叫）。
 
--   执行验证
+- 执行验证。
 
 可以仅使用 JavaScript 执行上述所有任务，但存在的许多库可简化这些任务。 其中一个，也是最成功的库是 jQuery，仍是在网页上简化这些任务的热门选择。 对于单页应用程序 (SPA)，jQuery 不会提供 Angular 和 React 提供的众多所需功能。
 
@@ -100,9 +98,9 @@ export class AppComponent { name = 'Angular'; }
 
 通过使用组件和模板，而不是 DOM 元素，Angular 应用可以更高的抽象级别操作，且比单独使用 JavaScript（也称为“vanilla JS”）或 jQuery 编写的应用具有更少的总体代码。 Angular 还强加了有关如何组织客户端脚本文件的特定顺序。 按照约定，Angular 应用使用常用文件夹结构，同时模块和组件脚本文件位于应用文件夹中。 与生成、部署和测试应用相关的 Angular 脚本通常位于更高级别的文件夹中。
 
-Angular 还可充分利用命令行接口 (CLI) 工具。 从本地入门 Angular 开发（假设已安装 git 和 npm）包括简单地从 GitHub 中克隆存储库以及运行 \`npm install\` 和 \`npm start\`。 除此之外，Angular 附带自己的 CLI 工具，可用于创建项目、添加工具，并协助测试、打包和部署任务。 这种 CLI 工具友好性也使 Angular 特别兼容 ASP.NET Core，后者也可提供很好的 CLI 支持。
+Angular 还可充分利用命令行接口 (CLI) 工具。 从本地入门 Angular 开发（假设已安装 git 和 npm）包括简单地从 GitHub 中克隆存储库以及运行 `npm install` 和 `npm start`。 除此之外，Angular 附带自己的 CLI 工具，可用于创建项目、添加工具，并协助测试、打包和部署任务。 这种 CLI 工具友好性也使 Angular 特别兼容 ASP.NET Core，后者也可提供很好的 CLI 支持。
 
-Microsoft 开发了一个参考应用程序，[eShopOnContainers](http://aka.ms/MicroservicesArchitecture)，其中包含 Angular SPA 实现。 此应用包含 Angular 模块，可用于管理在线商店的购物篮，加载和显示其目录中的商品并处理订单创建。 可以在 [GitHub](https://github.com/dotnet-architecture/eShopOnContainers/tree/master/src/Web/WebSPA) 中查看和下载该示例应用程序。
+Microsoft 开发了一个参考应用程序，[eShopOnContainers](https://aka.ms/MicroservicesArchitecture)，其中包含 Angular SPA 实现。 此应用包含 Angular 模块，可用于管理在线商店的购物篮，加载和显示其目录中的商品并处理订单创建。 可以在 [GitHub](https://github.com/dotnet-architecture/eShopOnContainers/tree/master/src/Web/WebSPA) 中查看和下载该示例应用程序。
 
 ### <a name="react"></a>React
 
@@ -128,17 +126,17 @@ React 很少使用与 HTML 配合的方式。 React 直接在其 JavaScript 代�
 
 考虑哪个 JavaScript 框架最适合支持 SPA 时，请注意以下几项：
 
--   团队是否熟悉该框架及其依赖关系（某些情况下还包括 TypeScript）？
+- 团队是否熟悉该框架及其依赖关系（某些情况下还包括 TypeScript）？
 
--   框架的“固执”程度如何，以及是否同意它处理事情的默认方式？
+- 框架的“固执”程度如何，以及是否同意它处理事情的默认方式？
 
--   它（或伴随库）是否包括应用需要的所有功能？
+- 它（或伴随库）是否包括应用需要的所有功能？
 
--   是否有大量文件可查？
+- 是否有大量文件可查？
 
--   它在社区中的活跃程度？ 新项目是否使用它生成？
+- 它在社区中的活跃程度？ 新项目是否使用它生成？
 
--   它的核心团队活跃程度如何？ 是否定期解决问题和发布新版本？
+- 它的核心团队活跃程度如何？ 是否定期解决问题和发布新版本？
 
 JavaScript 框架仍以极快的速度发展。 使用上面列出的注意事项，可帮助减轻选择之后会后悔依赖的框架的风险。 如果你特别不愿意承担风险，请考虑提供商业支持和/或大型企业开发的框架。
 

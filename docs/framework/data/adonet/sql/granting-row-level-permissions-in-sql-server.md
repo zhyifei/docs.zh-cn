@@ -2,12 +2,12 @@
 title: 在 SQL Server 中授予行级权限
 ms.date: 03/30/2017
 ms.assetid: a55aaa12-34ab-41cd-9dec-fd255b29258c
-ms.openlocfilehash: 5f777b47c9b2f92c40fec01b4ff0c35fc28dbd89
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4a4b45e13a16b357be28a1383648e98890567ea9
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33361301"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43873700"
 ---
 # <a name="granting-row-level-permissions-in-sql-server"></a>在 SQL Server 中授予行级权限
 在某些情况下，会要求更为细致地控制数据访问，而不仅仅是授予、撤消或拒绝提供的权限。 例如，医院数据库应用程序可能需要限制各个医生只访问与自己的患者相关的信息。 在很多环境（包括财务、法律、政府和军事应用程序）中都存在类似的要求。 为了满足这些情况，SQL Server 2016 提供了 [行级安全](https://msdn.microsoft.com/library/dn765131.aspx) 功能，可以用于简化并集中化安全策略中的行级访问逻辑。 对于 SQL Server 的早期版本，可以通过使用视图制定行级筛选来实现类似功能。  
@@ -21,7 +21,7 @@ ms.locfileid: "33361301"
   
 -   启用行级筛选：  
   
-    -   如果你使用的 SQL Server 2016 或更高版本，或[Azure SQL 数据库](https://docs.microsoft.com/azure/sql-database/)，创建将添加的谓词的限制的行的表返回给那些与任一条件匹配 （使用 CURRENT_USER() 对当前数据库用户的安全策略内置函数） 或 （使用 suser_sname （） 内置函数） 的当前登录名：  
+    -   如果使用 SQL Server 2016 或更高版本，或[Azure SQL 数据库](https://docs.microsoft.com/azure/sql-database/)，创建一个安全策略，将添加的谓词的表的行限制返回给那些匹配当前的数据库用户 （使用 CURRENT_USER内置函数） 或当前登录名 （使用 suser_sname （） 内置函数）：  
   
         ```tsql  
         CREATE SCHEMA Security  
@@ -64,13 +64,13 @@ ms.locfileid: "33361301"
   
 |||  
 |-|-|  
-|SQL Server TechCenter 站点上的[使用 SQL Server 2005 在分类数据库中实现行级和单元格级安全](http://go.microsoft.com/fwlink/?LinkId=98227) 。|说明如何使用行级和单元格级安全性来满足分类数据库的安全要求。|  
+|[在已分类的数据库使用 SQL Server 2005 中实现行级和单元格级安全性](https://go.microsoft.com/fwlink/?LinkId=98227)SQL Server TechCenter 站点上。|说明如何使用行级和单元格级安全性来满足分类数据库的安全要求。|  
   
 ## <a name="see-also"></a>请参阅  
- [行级安全性](https://msdn.microsoft.com/library/dn765131.aspx)  
+ [行级别安全性](https://msdn.microsoft.com/library/dn765131.aspx)  
  [保证 ADO.NET 应用程序的安全](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
  [SQL Server 安全性概述](../../../../../docs/framework/data/adonet/sql/overview-of-sql-server-security.md)  
  [SQL Server 中的应用程序安全性方案](../../../../../docs/framework/data/adonet/sql/application-security-scenarios-in-sql-server.md)  
  [在 SQL Server 中使用存储过程管理权限](../../../../../docs/framework/data/adonet/sql/managing-permissions-with-stored-procedures-in-sql-server.md)  
  [在 SQL Server 中编写安全的动态 SQL](../../../../../docs/framework/data/adonet/sql/writing-secure-dynamic-sql-in-sql-server.md)  
- [ADO.NET 托管提供程序和数据集开发人员中心](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)

@@ -10,16 +10,15 @@ helpviewer_keywords:
 ms.assetid: 10fcfaad-82ef-4692-871a-0aec9dfbe75e
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 6d7f811a5746fa07264a192efdc4c5c02323e1f4
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 394a686fe07036d6c3ac2bc51fb3503e1ee4a9e6
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32743324"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47235869"
 ---
 # <a name="ltauthenticationmodulesgt-element-network-settings"></a>&lt;authenticationModules&gt;元素 （网络设置）
-指定用来验证网络请求的模块。  
+指定使用网络请求进行身份验证模块。  
   
  \<configuration>  
 \<system.net>  
@@ -42,9 +41,9 @@ ms.locfileid: "32743324"
   
 |**元素**|**说明**|  
 |-----------------|---------------------|  
-|[add](../../../../../docs/framework/configure-apps/file-schema/network/add-element-for-authenticationmodules-network-settings.md)|向应用程序添加身份验证模块。|  
-|[clear](../../../../../docs/framework/configure-apps/file-schema/network/clear-element-for-authenticationmodules-network-settings.md)|清除从应用程序的所有身份验证模块。|  
-|[remove](../../../../../docs/framework/configure-apps/file-schema/network/remove-element-for-authenticationmodules-network-settings.md)|从应用程序中移除一个身份验证模块。|  
+|[add](../../../../../docs/framework/configure-apps/file-schema/network/add-element-for-authenticationmodules-network-settings.md)|将身份验证模块添加到应用程序。|  
+|[clear](../../../../../docs/framework/configure-apps/file-schema/network/clear-element-for-authenticationmodules-network-settings.md)|清除所有身份验证模块从应用程序。|  
+|[remove](../../../../../docs/framework/configure-apps/file-schema/network/remove-element-for-authenticationmodules-network-settings.md)|从应用程序中删除身份验证模块。|  
   
 ### <a name="parent-elements"></a>父元素  
   
@@ -53,13 +52,13 @@ ms.locfileid: "32743324"
 |[system.net](../../../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md)|包含指定 .NET Framework 如何连接到网络的设置。|  
   
 ## <a name="remarks"></a>备注  
- `authenticationModule`元素指定执行身份验证过程与服务器的身份验证模块。 身份验证模块必须实现<xref:System.Net.IAuthenticationModule>接口。  
+ `authenticationModule`元素指定进行身份验证过程与服务器的身份验证模块。 身份验证模块都必须实现<xref:System.Net.IAuthenticationModule>接口。  
   
 ## <a name="configuration-files"></a>配置文件  
  此元素可在应用程序配置文件或计算机配置文件 (Machine.config) 中使用。  
   
 ## <a name="example"></a>示例  
- 以下示例启用一个身份验证模块。 版本和 PublicKeyToken 提供值应替换为指定的模块的正确值。  
+ 以下示例启用身份验证模块。 应使用正确的值指定模块的版本和 PublicKeyToken 替换值。  
   
 ```xml  
 <configuration>  

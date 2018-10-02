@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: e35c7f9e-648b-4fcc-9361-d365c3e42c9a
-ms.openlocfilehash: 851c724d354b0e819ca320c32e98249f2ec66506
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 0e38bc663d3c2143703ba178eb8ac420bb1baa08
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32765836"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43400541"
 ---
 # <a name="modifying-data-with-a-dbdataadapter"></a>使用 DbDataAdapter 修改数据
 <xref:System.Data.Common.DbProviderFactory.CreateDataAdapter%2A> 对象的 <xref:System.Data.Common.DbProviderFactory> 方法为您提供 <xref:System.Data.Common.DbDataAdapter> 对象，该对象强类型化为创建工厂时指定的基础数据提供程序。 然后您可以使用 <xref:System.Data.Common.DbCommandBuilder> 创建命令，以插入、更新和删除数据源的 <xref:System.Data.DataSet> 中的数据。  
@@ -46,4 +46,4 @@ ms.locfileid: "32765836"
  [DbProviderFactories](../../../../docs/framework/data/adonet/dbproviderfactories.md)  
  [获取 DbProviderFactory](../../../../docs/framework/data/adonet/obtaining-a-dbproviderfactory.md)  
  [DbConnection、DbCommand 和 DbException](../../../../docs/framework/data/adonet/dbconnection-dbcommand-and-dbexception.md)  
- [ADO.NET 托管提供程序和数据集开发人员中心](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)

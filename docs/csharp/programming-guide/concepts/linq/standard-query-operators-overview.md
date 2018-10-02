@@ -2,12 +2,12 @@
 title: 标准查询运算符概述 (C#)
 ms.date: 07/20/2015
 ms.assetid: 812fa119-5f65-4139-b4fa-55dccd8dc3ac
-ms.openlocfilehash: 36bd5927e64ffacb97beac28b8e7790204e08c5c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 397d1368a3c4e0b20a0bc9c694421ed60119d1aa
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33337319"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43502434"
 ---
 # <a name="standard-query-operators-overview-c"></a>标准查询运算符概述 (C#)
 *标准查询运算符*是组成 LINQ 模式的方法。 这些方法中的大多数都作用于序列；其中序列指其类型实现 <xref:System.Collections.Generic.IEnumerable%601> 接口或 <xref:System.Linq.IQueryable%601> 接口的对象。 标准查询运算符提供包括筛选、投影、聚合、排序等在内的查询功能。  
@@ -103,10 +103,11 @@ foreach (var obj in query)
   
  [聚合运算 (C#)](../../../../csharp/programming-guide/concepts/linq/aggregation-operations.md)  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Linq.Enumerable>  
- <xref:System.Linq.Queryable>  
- [LINQ 查询简介 (C#)](../../../../csharp/programming-guide/concepts/linq/introduction-to-linq-queries.md)  
- [标准查询运算符的查询表达式语法 (C#)](../../../../csharp/programming-guide/concepts/linq/query-expression-syntax-for-standard-query-operators.md)  
- [标准查询运算符按执行方式的分类 (C#)](../../../../csharp/programming-guide/concepts/linq/classification-of-standard-query-operators-by-manner-of-execution.md)  
- [扩展方法](../../../../csharp/programming-guide/classes-and-structs/extension-methods.md)
+## <a name="see-also"></a>请参阅
+
+- <xref:System.Linq.Enumerable>  
+- <xref:System.Linq.Queryable>  
+- [LINQ 查询简介 (C#)](../../../../csharp/programming-guide/concepts/linq/introduction-to-linq-queries.md)  
+- [标准查询运算符的查询表达式语法 (C#)](../../../../csharp/programming-guide/concepts/linq/query-expression-syntax-for-standard-query-operators.md)  
+- [标准查询运算符按执行方式的分类 (C#)](../../../../csharp/programming-guide/concepts/linq/classification-of-standard-query-operators-by-manner-of-execution.md)  
+- [扩展方法](../../../../csharp/programming-guide/classes-and-structs/extension-methods.md)

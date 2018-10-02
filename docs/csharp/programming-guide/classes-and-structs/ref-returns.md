@@ -4,12 +4,12 @@ description: 了解如何定义和使用 ref 返回值和 ref 局部变量
 author: rpetrusha
 ms.author: ronpet
 ms.date: 04/04/2018
-ms.openlocfilehash: e749b9c9309a4b1a737a0c1d0b5e1cfe5748114a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6250d2b0c3490cce18623d6b06d5e1a352f22c09
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33339613"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45616135"
 ---
 # <a name="ref-returns-and-ref-locals"></a>ref 返回值和局部变量
 
@@ -35,16 +35,19 @@ ms.locfileid: "33339613"
  
 ## <a name="defining-a-ref-return-value"></a>定义 ref 返回值
 
-通过向方法签名的返回类型添加 [ref](../../language-reference/keywords/ref.md) 关键字来定义 ref 返回值。 例如下列签名表示，`GetContactInformation` 属性将对 `Person` 对象的引用返回给调用方：
+返回引用返回值的方法必须满足以下两个条件：
+
+- 方法签名在返回类型前面有 [ref](../../language-reference/keywords/ref.md) 关键字。
+- 方法主体中的每个 [return](../../language-reference/keywords/return.md) 语句都在返回实例的名称前面有 [ref](../../language-reference/keywords/ref.md) 关键字。
+
+下面的示例方法满足这些条件，且返回对名为 `p` 的 `Person` 对象的引用：
 
 ```csharp
-public ref Person GetContactInformation(string fname, string lname);
-```
-
-此外，方法正文中每个 [return](../../language-reference/keywords/return.md) 语句所返回对象的名称前面须有 [ref](../../language-reference/keywords/ref.md) 关键字。 例如，下面的 `return` 语句返回对 `Person` 对象的引用 `p`：
-
-```csharp
-return ref p;
+public ref Person GetContactInformation(string fname, string lname)
+{
+    // ...method implementation...
+    return ref p;
+}
 ```
 
 ## <a name="consuming-a-ref-return-value"></a>使用 ref 返回值
@@ -55,7 +58,7 @@ return ref p;
 - 读取值时，就是读取它取别名的变量的值。
 - 如果以引用方式返回它，就是返回对相同变量所取的别名。
 - 如果以引用方式将它传递到另一个方法，就是传递对它取别名的变量的引用。
-- 如果返回[引用本地](#ref-local)别名，就是返回相同变量的新别名。
+- 如果返回[引用本地](#ref-locals)别名，就是返回相同变量的新别名。
 
 
 ## <a name="ref-locals"></a>ref 局部变量
@@ -121,5 +124,5 @@ refLocal = ref anotherVeryLargeStruct; // reassigned, refLocal refers to differe
 
 ## <a name="see-also"></a>请参阅
 
-[ref 关键字](../../language-reference/keywords/ref.md)  
-[具有值类型的引用语义](../../../csharp/reference-semantics-with-value-types.md)
+- [ref 关键字](../../language-reference/keywords/ref.md)  
+- [具有值类型的引用语义](../../../csharp/reference-semantics-with-value-types.md)

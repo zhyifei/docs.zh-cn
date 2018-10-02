@@ -2,12 +2,12 @@
 title: 如何：查找根元素 (XPath-LINQ to XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: 4fd824e0-4d39-429b-b092-f6a5c046ee6c
-ms.openlocfilehash: a7c15c8eb688f70b2d1633fc5c094b02cc97031c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a0197a34f2e9d1b42a71d3c8cb1a4281ba495c4f
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33321917"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47195601"
 ---
 # <a name="how-to-find-the-root-element-xpath-linq-to-xml-c"></a>如何：查找根元素 (XPath-LINQ to XML) (C#)
 本主题演示如何使用 XPath 和 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 获取根元素。  
@@ -44,5 +44,6 @@ Results are identical
 PurchaseOrders  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [针对 XPath 用户的 LINQ to XML (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
+## <a name="see-also"></a>请参阅
+
+- [针对 XPath 用户的 LINQ to XML (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)

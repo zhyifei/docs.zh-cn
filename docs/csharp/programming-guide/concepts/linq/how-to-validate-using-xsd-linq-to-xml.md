@@ -2,12 +2,12 @@
 title: 如何：使用 XSD 进行验证 (LINQ to XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: 6a7f83a9-2d74-4c2b-8417-0a8595879516
-ms.openlocfilehash: 9b26481eb1e0fd103f92ed56e0e2f7c83d2ccbb5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e58005d80cf763f773efa67530c14d199b0b5bfb
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33321592"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43505789"
 ---
 # <a name="how-to-validate-using-xsd-linq-to-xml-c"></a>如何：使用 XSD 进行验证 (LINQ to XML) (C#)
 <xref:System.Xml.Schema> 命名空间包含扩展方法，这些扩展方法可以简化针对 XML 架构定义语言 (XSD) 文件验证 XML 树的过程。 有关更多信息，请参见 <xref:System.Xml.Schema.Extensions.Validate%2A> 方法文档。  
@@ -120,6 +120,7 @@ The key sequence 'AAAAA' in Keyref fails to refer to some key.
 custOrdDoc did not validate  
 ```  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Xml.Schema.Extensions.Validate%2A>  
- [创建 XML 树 (C#)](../../../../csharp/programming-guide/concepts/linq/creating-xml-trees.md)
+## <a name="see-also"></a>请参阅
+
+- <xref:System.Xml.Schema.Extensions.Validate%2A>  
+- [创建 XML 树 (C#)](../../../../csharp/programming-guide/concepts/linq/creating-xml-trees.md)

@@ -3,12 +3,12 @@ title: 使用 .NET Core 创建 REST 客户端
 description: 此教程将介绍 .NET Core 和 C# 语言的许多功能。
 ms.date: 03/06/2017
 ms.assetid: 51033ce2-7a53-4cdd-966d-9da15c8204d2
-ms.openlocfilehash: bc3c23b277b233efba9f32cc49b29ac905f3abc8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 13466b717d0676c2db5edf4c98a4ead3e673b96c
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33357616"
+ms.lasthandoff: 09/27/2018
+ms.locfileid: "47397915"
 ---
 # <a name="rest-client"></a>REST 客户端
 
@@ -37,7 +37,7 @@ ms.locfileid: "33357616"
 还原包后，运行 `dotnet build`。 这将运行生成引擎，并创建应用程序。 最后，执行 `dotnet run` 来运行应用程序。
 
 ## <a name="adding-new-dependencies"></a>添加新的依赖项
-.NET Core 的主要设计目标之一是，最大限度地减少 .NET 框架安装大小。 .NET Core 应用程序框架只包含 .NET 完整框架的最常用元素。 如果应用程序需要使用其他库来生成某些功能，请将这些依赖项添加到 C# 项目 (\*.csproj) 文件中。 对于我们的示例，将需要添加 `System.Runtime.Serialization.Json` 包，以便应用程序可以处理 JSON 响应。
+.NET Core 的主要设计目标之一是最小化 .NET 安装的大小。 如果应用程序需要使用其他库来生成某些功能，请将这些依赖项添加到 C# 项目 (\*.csproj) 文件中。 对于我们的示例，将需要添加 `System.Runtime.Serialization.Json` 包，以便应用程序可以处理 JSON 响应。
 
 打开 `csproj` 项目文件。 此文件的第一行应如下所示：
 

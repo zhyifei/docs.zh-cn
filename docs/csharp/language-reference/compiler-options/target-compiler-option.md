@@ -9,12 +9,12 @@ helpviewer_keywords:
 - assemblies [C#], compiling
 - -target compiler options [C#]
 ms.assetid: a18bbd8e-bbf7-49e7-992c-717d0eb1f76f
-ms.openlocfilehash: 7736b8850a7b09f7212e83e05acf0e1994bce0fe
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a337ecbc614ff40eda42fc5263dbb52aa92b905f
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33215493"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45698164"
 ---
 # <a name="-target-c-compiler-options"></a>-target（C# 编译器选项）
 -target 编译器选项可指定为以下四种形式之一：  
@@ -63,6 +63,7 @@ public class TestClass
  有关如何以编程方式设置此编译器选项的详细信息，请参阅 <xref:VSLangProj80.ProjectProperties3.OutputType%2A>。  
   
 ## <a name="see-also"></a>请参阅  
- [C# 编译器选项](../../../csharp/language-reference/compiler-options/index.md)  
- [管理项目和解决方案属性](/visualstudio/ide/managing-project-and-solution-properties)  
- [-subsystemversion（C# 编译器选项）](../../../csharp/language-reference/compiler-options/subsystemversion-compiler-option.md)
+
+- [C# 编译器选项](../../../csharp/language-reference/compiler-options/index.md)  
+- [管理项目和解决方案属性](/visualstudio/ide/managing-project-and-solution-properties)  
+- [-subsystemversion（C# 编译器选项）](../../../csharp/language-reference/compiler-options/subsystemversion-compiler-option.md)

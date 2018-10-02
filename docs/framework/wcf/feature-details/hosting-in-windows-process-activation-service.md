@@ -4,17 +4,17 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - hosting services [WCF], WAS
 ms.assetid: d2b9d226-15b7-41fc-8c9a-cb651ac20ecd
-ms.openlocfilehash: 5cd2244c4b44592e436dfd983985dca3c1a50144
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0fe38b690d093e5a0bbe90d2b62e56b5d0cb4816
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33492442"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44188379"
 ---
 # <a name="hosting-in-windows-process-activation-service"></a>在 Windows 进程激活服务中承载
-Windows 进程激活服务 (WAS) 管理激活和生存期，包含该主机 Windows Communication Foundation (WCF) 服务的应用程序的辅助进程。 WAS 进程模型通过移除对 HTTP 的依赖性使 HTTP 服务器的 [!INCLUDE[iis601](../../../../includes/iis601-md.md)] 进程模型通用化。 这使 WCF 服务能够使用 HTTP 和非 HTTP 协议，如 Net.TCP，在宿主环境支持基于消息的激活并提供承载大量的给定计算机上的应用程序的能力。  
+Windows 进程激活服务 (WAS) 管理激活和包含该主机 Windows Communication Foundation (WCF) 服务的应用程序的工作进程的生存期。 WAS 进程模型通过移除对 HTTP 的依赖性使 HTTP 服务器的 [!INCLUDE[iis601](../../../../includes/iis601-md.md)] 进程模型通用化。 这使 WCF 服务能够使用 HTTP 和非 HTTP 协议，例如 Net.TCP，在宿主环境支持基于消息的激活并提供承载大量在给定计算机上的应用程序的能力。  
   
- 在 WAS 承载环境中运行生成的 WCF 服务的详细信息，请参阅[如何： 承载在 WAS 中的 WCF 服务](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-was.md)。  
+ 在 WAS 宿主环境中运行生成的 WCF 服务的详细信息，请参阅[如何： 承载在 WAS 中的 WCF 服务](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-was.md)。  
   
  WAS 进程模型提供了一些功能，可以以一种更为可靠、更易管理并有效地使用资源的方式承载应用程序：  
   
@@ -26,14 +26,14 @@ Windows 进程激活服务 (WAS) 管理激活和生存期，包含该主机 Wind
   
 -   允许应用程序利用 IIS 进程模型，而无需完全 IIS 安装的部署需求量。  
   
- WAS 功能的详细信息，请参阅[IIS 7.0 Beta: IIS 7.0 Web 管理](../../../../docs/framework/wcf/feature-details/hosting-in-windows-process-activation-service.md)。  
+ 有关 WAS 功能的详细信息，请参阅[IIS 7.0 Beta: IIS 7.0 Web 管理](../../../../docs/framework/wcf/feature-details/hosting-in-windows-process-activation-service.md)。  
   
- [Windows Server AppFabric](http://go.microsoft.com/fwlink/?LinkId=196496)配合[!INCLUDE[iisver](../../../../includes/iisver-md.md)]和 Windows 进程激活服务 (WAS) 提供丰富的应用程序宿主环境为 NET4 WCF 和 WF 服务。 这些优点包括进程生命周期管理、进程回收、共享承载、快速失败保护、进程孤立、按需激活和运行状况监视。 有关详细信息，请参阅[AppFabric 承载功能](http://go.microsoft.com/fwlink/?LinkId=196494)和[AppFabric 承载概念](http://go.microsoft.com/fwlink/?LinkId=196495)。  
+ [Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkId=196496)适用于[!INCLUDE[iisver](../../../../includes/iisver-md.md)]和 Windows 进程激活服务 (WAS) 提供丰富的应用程序宿主环境为 NET4 WCF 和 WF 服务。 这些优点包括进程生命周期管理、进程回收、共享承载、快速失败保护、进程孤立、按需激活和运行状况监视。 有关详细信息，请参阅[AppFabric 承载功能](https://go.microsoft.com/fwlink/?LinkId=196494)并[AppFabric 承载概念](https://go.microsoft.com/fwlink/?LinkId=196495)。  
   
 ## <a name="elements-of-the-was-addressing-model"></a>WAS 寻址模型的元素  
- 应用程序具有统一资源标识符 (URI) 地址，这些地址是一些代码单元，其生存期和执行环境由服务器管理。 一个 WAS 服务器实例可以承载多个不同的应用程序。 服务器将分组称为应用程序组织*站点*。 在网站中，应用程序是以分层的方式排列的，这种方式反映了充当其外部地址的 URI 的结构。  
+ 应用程序具有统一资源标识符 (URI) 地址，这些地址是一些代码单元，其生存期和执行环境由服务器管理。 一个 WAS 服务器实例可以承载多个不同的应用程序。 服务器将应用程序分组称为组织*站点*。 在网站中，应用程序是以分层的方式排列的，这种方式反映了充当其外部地址的 URI 的结构。  
   
- 应用程序地址分为两个部分：基本 URI 前缀和应用程序特定的相对地址（路径）。这两个部分结合在一起时可提供应用程序的外部地址。 基本 URI 前缀从网站绑定构造的，并且适用于网站中的所有应用程序。 通过拍摄应用程序特定的路径片段然后构造应用程序地址 (例如，"/ applicationOne") 并将其追加到基的 URI 前缀 (例如，"net.tcp: //localhost")，以形成完整的应用程序 URI。  
+ 应用程序地址分为两个部分：基本 URI 前缀和应用程序特定的相对地址（路径）。这两个部分结合在一起时可提供应用程序的外部地址。 基本 URI 前缀从网站绑定构造的，并且适用于网站中的所有应用程序。 通过采用特定于应用程序的路径片段然后构造应用程序地址 (例如，"/ applicationOne") 并将其追加到基的 URI 前缀 (例如，"net.tcp: //localhost")，以形成完整的应用程序 URI。  
   
  下表演示了使用 HTTP 和非 HTTP 网站绑定的 WAS 网站的几个可能的寻址方案。  
   
@@ -56,4 +56,4 @@ net.tcp://contoso.com/Billing/GetOrders.svc/SecureEndpoint
  [配置 WAS 以用于 WCF](../../../../docs/framework/wcf/feature-details/configuring-the-wpa--service-for-use-with-wcf.md)  
  [如何：安装和配置 WCF 激活组件](../../../../docs/framework/wcf/feature-details/how-to-install-and-configure-wcf-activation-components.md)  
  [如何：在 WAS 中承载 WCF 服务](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-was.md)  
- [Windows Server App Fabric 承载功能](http://go.microsoft.com/fwlink/?LinkId=201276)
+ [Windows Server App Fabric 承载功能](https://go.microsoft.com/fwlink/?LinkId=201276)

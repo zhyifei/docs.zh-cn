@@ -1,15 +1,15 @@
 ---
-title: 异步任务取消剩余一个后完成 (Visual Basic)
+title: 后取消剩余异步任务之一完成 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: c928b5a1-622f-4441-8baf-adca1dde197f
-ms.openlocfilehash: baf18ed4c2a4693f0765358d9f9a56842991cf29
-ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
+ms.openlocfilehash: 0f241d2769edf3efbba0aca3b19ef35b9cdad601
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34728334"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46003551"
 ---
-# <a name="cancel-remaining-async-tasks-after-one-is-complete-visual-basic"></a>异步任务取消剩余一个后完成 (Visual Basic)
+# <a name="cancel-remaining-async-tasks-after-one-is-complete-visual-basic"></a>后取消剩余异步任务之一完成 (Visual Basic)
 通过结合使用 <xref:System.Threading.Tasks.Task.WhenAny%2A?displayProperty=nameWithType> 方法和 <xref:System.Threading.CancellationToken>，可在一个任务完成时取消所有剩余任务。 `WhenAny` 方法采用任务集合中的一个参数。 该方法启动所有任务，并返回单个任务。 当集合中任意任务完成时，完成单个任务。  
   
  此示例演示如何结合使用取消标记与 `WhenAny` 保留任务集合中第一个要完成的任务，并取消剩余任务。 每个任务都下载网站内容。 本示例显示第一个完成的下载的内容长度，并取消其他下载。  
@@ -24,7 +24,7 @@ ms.locfileid: "34728334"
   
 2.  在菜单栏上，依次选择 **“文件”**、 **“打开”** 和 **“项目/解决方案”**。  
   
-3.  在**打开项目**对话框中，打开保存解压缩，示例代码的文件夹，然后为 AsyncFineTuningVB 打开解决方案 (.sln) 文件。  
+3.  在中**打开项目**对话框中，打开包含您解压缩的示例代码的文件夹，然后打开 AsyncFineTuningVB 的解决方案 (.sln) 文件。  
   
 4.  在“解决方案资源管理器”中，打开“CancelAfterOneTask”项目的快捷菜单，然后选择“设为启动项目”。  
   
@@ -34,14 +34,14 @@ ms.locfileid: "34728334"
   
 6.  运行程序若干次，以验证首先完成的下载是不同的。  
   
- 如果你不想要下载的项目，你可以查看本主题末尾的 MainWindow.xaml.vb 文件。  
+ 如果不想下载项目，可以查看本主题末尾处的 MainWindow.xaml.vb 文件。  
   
 ## <a name="building-the-example"></a>生成示例  
- 本主题中的示例将添加到项目中开发[取消一个异步任务或任务列表](http://msdn.microsoft.com/library/d6e4e801-df64-4705-98fc-df725a577fb0)取消的任务的列表。 该示例使用相同的 UI，但未显示使用“取消”按钮。  
+ 本主题中的示例将添加到项目中开发[取消一个异步任务或任务列表](../../../../visual-basic/programming-guide/concepts/async/cancel-an-async-task-or-a-list-of-tasks.md)取消的任务的列表。 该示例使用相同的 UI，但未显示使用“取消”按钮。  
   
  若要自行生成示例，请按“下载示例”部分的说明逐步操作，选择“CancelAListOfTasks”作为“启动项目”。 将此主题中的更改添加到该项目。  
   
- 在 MainWindow.xaml.vb 文件的**CancelAListOfTasks**项目中，通过将每个网站的处理步骤移从中的循环开始转换`AccessTheWebAsync`与以下的异步方法。  
+ MainWindow.xaml.vb 文件中**CancelAListOfTasks**项目中，通过从循环中每个网站的处理步骤来启动转换`AccessTheWebAsync`到以下异步方法。  
   
 ```vb  
 ' ***Bundle the processing steps for a website into one async method.  
@@ -103,7 +103,7 @@ resultsTextBox.Text &= String.Format(vbCrLf & "Length of the downloaded website:
  运行程序若干次，以验证首先完成的下载是不同的。  
   
 ## <a name="complete-example"></a>完整的示例  
- 下面的代码是此示例的完整 MainWindow.xaml.vb 或 MainWindow.xaml.cs 文件。 对添加到此示例的元素进行了星号标记。  
+ 以下代码是示例的完整 MainWindow.xaml.vb 或 MainWindow.xaml.cs 文件。 对添加到此示例的元素进行了星号标记。  
   
  请注意，必须为 <xref:System.Net.Http> 添加引用。  
   
@@ -232,8 +232,9 @@ End Class
 ' Download complete.  
 ```  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Threading.Tasks.Task.WhenAny%2A>  
- [微调异步应用程序 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/fine-tuning-your-async-application.md)  
- [使用 Async 和 Await 的异步编程 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md)  
- [Async Sample: Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)（异步示例：微调应用程序）
+## <a name="see-also"></a>请参阅
+
+- <xref:System.Threading.Tasks.Task.WhenAny%2A>  
+- [微调异步应用程序 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/fine-tuning-your-async-application.md)  
+- [使用 Async 和 Await 的异步编程 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md)  
+- [Async Sample: Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)（异步示例：微调应用程序）

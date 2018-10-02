@@ -2,12 +2,12 @@
 title: 聚合查询
 ms.date: 03/30/2017
 ms.assetid: 13ec5580-05ce-4a1f-9d3d-8660be7891a2
-ms.openlocfilehash: e4d5e0a9dc1ffb0bf1857fee788d46947f3901d4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1c8f6191cfb832a71bd32c60db492eafb8ca22ca
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33358838"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43858687"
 ---
 # <a name="aggregate-queries"></a>聚合查询
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 支持 `Average`、`Count`、`Max`、`Min` 和 `Sum` 聚合运算符。 请注意 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 中聚合运算符的以下特征：  
@@ -18,7 +18,7 @@ ms.locfileid: "33358838"
   
 -   聚合查询通常返回一个数字，而非一个集合。  
   
-     有关详细信息，请参阅[聚合操作](http://msdn.microsoft.com/library/36d97c83-5de5-457d-971d-10a69365e7c4)。  
+     有关详细信息，请参阅[聚合操作](https://msdn.microsoft.com/library/36d97c83-5de5-457d-971d-10a69365e7c4)。  
   
 -   不能对匿名类型调用聚合。  
   

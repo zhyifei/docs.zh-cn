@@ -2,12 +2,12 @@
 title: 企业采购过程
 ms.date: 03/30/2017
 ms.assetid: a5e57336-4290-41ea-936d-435593d97055
-ms.openlocfilehash: 34d9280fb1d4009aa729cb2eba55b817db9fff56
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a5e0d6191967c592d5a32baa7eee3f1659a27e50
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33520037"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43802906"
 ---
 # <a name="corporate-purchase-process"></a>企业采购过程
 此示例演示如何使用自动最佳建议书选择来创建基于购买过程的非常基本的征求建议书 (RFP)。 它将 <xref:System.Activities.Statements.Parallel>、<xref:System.Activities.Statements.ParallelForEach%601>、<xref:System.Activities.Statements.ForEach%601> 和一个自定义活动组合在一起来创建一个表示该过程的工作流。  
@@ -43,12 +43,12 @@ ms.locfileid: "33520037"
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目录不存在，请转到[Windows Communication Foundation (WCF) 和针对.NET Framework 4 的 Windows Workflow Foundation (WF) 示例](http://go.microsoft.com/fwlink/?LinkId=150780)下载所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
+>  如果此目录不存在，请转到[Windows Communication Foundation (WCF) 和.NET Framework 4 的 Windows Workflow Foundation (WF) 示例](https://go.microsoft.com/fwlink/?LinkId=150780)若要下载所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Application\PurchaseProcess`  
   
 ## <a name="description-of-the-process"></a>流程说明  
- 此示例演示 Windows Workflow Foundation (WF) 程序收集由为一般公司的供应商的建议书的实现。  
+ 此示例演示 Windows Workflow Foundation (WF) 程序，以便从供应商为一般公司收集征求建议书的实现。  
   
 1.  公司 X 的一名员工创建了一份征求建议书 (RFP)。  
   
@@ -145,7 +145,7 @@ ms.locfileid: "33520037"
   
 1.  使用 [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] 打开 PurchaseProcess.sln 解决方案文件。  
   
-2.  若要执行 Web Client 项目，打开**解决方案资源管理器**，然后右键单击**Web 客户端**项目。 选择**设为启动项目**。  
+2.  若要执行 Web 客户端项目，请打开**解决方案资源管理器**，然后右键单击**Web 客户端**项目。 选择**设为启动项目**。  
   
 3.  若要执行 WinForms Client 项目，请打开**解决方案资源管理器**，然后右键单击**WinForms Client**项目。 选择**设为启动项目**。  
   
@@ -155,20 +155,20 @@ ms.locfileid: "33520037"
   
 ### <a name="web-client-options"></a>Web Client 选项  
   
--   **创建新的 RFP**： 创建新请求征求建议书 (RFP) 并启动购买过程工作流。  
+-   **创建新的 RFP**： 创建新的请求的征求建议书 (RFP) 并启动购买过程工作流。  
   
--   **刷新**： 刷新活动和主窗口中完成的 Rfp 的列表。  
+-   **刷新**： 刷新活动和在主窗口中已完成的 Rfp 的列表。  
   
 -   **视图**： 显示现有 RFP 的内容。 供应商可提交其建议书（如果受到邀请或 RFP 尚未完成）。  
   
--   View As： 用户可以访问通过选择所需的参与者中使用不同的标识 RFP**查看作为**中活动的 Rfp 网格的组合框。  
+-   为视图： 用户可以访问通过选择所需的参与者中使用不同的标识 RFP**视作**中活动的 Rfp 网格的组合框。  
   
 ### <a name="winforms-client-options"></a>WinForms Client 选项  
   
--   **创建 RFP**： 创建新请求征求建议书 (RFP) 并启动购买过程工作流。  
+-   **创建 RFP**： 创建新的请求的征求建议书 (RFP) 并启动购买过程工作流。  
   
--   **刷新**： 刷新活动和主窗口中完成的 Rfp 的列表。  
+-   **刷新**： 刷新活动和在主窗口中已完成的 Rfp 的列表。  
   
 -   **查看 RFP**： 显示现有 RFP 的内容。 供应商可提交其建议书（如果受到邀请或 RFP 尚未完成）。  
   
--   **Connect As**： 用户可以访问通过选择所需的参与者中使用不同的标识 RFP**查看作为**中活动的 Rfp 网格的组合框。
+-   **Connect As**： 用户可以访问通过选择所需的参与者中使用不同的标识 RFP**视为**中活动的 Rfp 网格的组合框。

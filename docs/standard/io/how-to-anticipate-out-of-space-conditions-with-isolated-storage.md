@@ -24,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: e35d4535-3732-421e-b1a3-37412e036145
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9b99803970b205e3dbbb1d78c9bdaf0fefa73a04
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 16b12a1ab274a63b8d190278d6312d36a61efe16
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33575575"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45649375"
 ---
 # <a name="how-to-anticipate-out-of-space-conditions-with-isolated-storage"></a>如何：预见独立存储中的空间不足条件
 使用独立存储的代码受[配额](../../../docs/standard/io/isolated-storage.md#quotas)限制，配额指定了独立存储文件和目录所在数据隔离舱的大小上限。 该配额由安全策略定义，管理员可以对其进行配置。 如果尝试写入数据时超过了所允许的最大大小，将引发 <xref:System.IO.IsolatedStorage.IsolatedStorageException> 异常并使操作失败。 这有助于防止恶意的拒绝服务攻击，此类攻击可能会导致应用因为数据存储已满而拒绝请求。  
@@ -45,7 +45,8 @@ ms.locfileid: "33575575"
  [!code-csharp[Conceptual.IsolatedStorage#8](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.isolatedstorage/cs/source7.cs#8)]
  [!code-vb[Conceptual.IsolatedStorage#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.isolatedstorage/vb/source7.vb#8)]  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.IO.IsolatedStorage.IsolatedStorageFile>  
- [独立存储](../../../docs/standard/io/isolated-storage.md)  
- [如何：获取独立存储的存储区](../../../docs/standard/io/how-to-obtain-stores-for-isolated-storage.md)
+## <a name="see-also"></a>请参阅
+
+- <xref:System.IO.IsolatedStorage.IsolatedStorageFile>  
+- [独立存储](../../../docs/standard/io/isolated-storage.md)  
+- [如何：获取独立存储的存储区](../../../docs/standard/io/how-to-obtain-stores-for-isolated-storage.md)

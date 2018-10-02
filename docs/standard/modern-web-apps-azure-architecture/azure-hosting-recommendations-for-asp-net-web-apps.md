@@ -3,34 +3,32 @@ title: 关于 ASP.NET Core Web 应用的 Azure 托管建议
 description: 使用 ASP.NET Core 和 Azure 构建新式 Web 应用程序 | 关于 ASP.NET Web 应用的 Azure 托管建议
 author: ardalis
 ms.author: wiwagn
-ms.date: 10/07/2017
-ms.openlocfilehash: 756f74cacec0a9f5be502ee02659510869d79746
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.date: 06/27/2018
+ms.openlocfilehash: a70cb822c789638ca107b090d1aed2b88ccc6a5d
+ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37105704"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37404523"
 ---
 # <a name="azure-hosting-recommendations-for-aspnet-core-web-apps"></a>关于 ASP.NET Core Web 应用的 Azure 托管建议
 
 > “全球各地的业务线领导绕过 IT 部门，从云获取应用程序（又称 SaaS）并支付使用费用，就像订阅杂志一样。 不再需要服务时，他们可取消订阅，不会出现设备闲置的情况。”  
 > \-Gartner 分析师 Daryl Plummer
 
-## <a name="summary"></a>总结
-
-无论面对何种应用程序需要和体系结构，Microsoft Azure 均可提供支持。 托管需求可以非常简单（例如静态网站），也可以非常复杂（例如由多个服务组成的极其复杂的应用程序）。 对于 ASP.NET Core 整体 Web 应用程序和支持服务，推荐以下几种常见配置。 无论是完整应用程序、单个进程或数据，以下推荐配置均按待托管资源的类型分组。
+无论面对何种应用程序需要和体系结构，Microsoft Azure 均可提供支持。 托管需求可以非常简单（例如静态网站），也可以非常复杂（例如由多个服务组成的复杂的应用程序）。 对于 ASP.NET Core 整体 Web 应用程序和支持服务，推荐以下几种常见配置。 无论是完整应用程序、单个进程或数据，本文中的建议配置均按待托管资源的类型分组。
 
 ## <a name="web-applications"></a>Web 应用程序
 
 可通过以下方式托管 Web 应用程序：
 
--   应用服务 Web 应用
+- 应用服务 Web 应用
 
--   容器
+- 容器
 
--   Azure Service Fabric
+- Azure Service Fabric
 
--   虚拟机 (VM)
+- 虚拟机 (VM)
 
 其中，对于大多数方案，推荐使用应用服务 Web 应用方法。 对于微服务体系结构，请考虑使用基于容器的方法或 Service Fabric。 如果需要更好地控制运行应用程序的计算机，请考虑使用 Azure 虚拟机。
 
@@ -38,29 +36,30 @@ ms.locfileid: "37105704"
 
 应用服务 Web 应用提供的完全托管平台针对托管 Web 应用程序进行了优化。 它是一种平台即服务 (PaaS) 产品/服务，可使你专注于业务逻辑，而由 Azure 负责维护应用运行和缩放所需的基础结构。 应用服务 Web 应用的一些关键功能：
 
--   DevOps 优化（持续集成和交付、多环境、A/B 测试和脚本支持）
+- DevOps 优化（持续集成和交付、多环境、A/B 测试和脚本支持）。
 
--   全球缩放和高可用性
+- 全球缩放和高可用性。
 
--   可连接至 SaaS 平台和本地数据
+- 可连接至 SaaS 平台和本地数据。
 
--   安全性和符合性
+- 安全性和符合性。
 
--   Visual Studio 集成
+- Visual Studio 集成。
 
 Azure 应用服务是适合大多数 Web 应用的最佳选择。 该平台集成部署与管理，站点可快速缩放以处理高流量负载，内置负载均衡和流量管理器提供高可用性。 可通过在线迁移工具将现有站点轻松移动到 Azure 应用服务、使用 Web 应用程序库中的开源应用或使用框架和你选择的工具创建新的站点。 通过 WebJobs 功能可将后台作业处理轻松添加到应用服务 Web 应用。
 
-### <a name="containers-and-azure-container-service"></a>容器和 Azure 容器服务
+### <a name="azure-kubernetes-service"></a>Azure Kubernetes 服务
 
-通过使用 Azure 容器服务，轻松创建、配置和管理预配置为运行容器化应用程序的虚拟机群集。 它使用热门开源计划和业务流程工具的优化配置。 因此，你可利用现有技能或大量不断增长的社区专业知识，在 Microsoft Azure 上部署和管理基于容器的应用程序。
+Azure Kubernetes 服务 (AKS) 管理托管的 Kubernetes 环境，即使没有容器业务流程专业知识，也可快速轻松地部署和管理容器化应用程序。 此外，它还通过预配、升级和按需缩放资源，消除了持续操作和维护的负担，而无需应用程序脱机。
 
-通过使用 Azure 容器服务，轻松创建、配置和管理预配置为运行容器化应用程序的虚拟机群集。 它使用热门开源计划和业务流程工具的优化配置。 因此，你可利用现有技能或大量不断增长的社区专业知识，在 Microsoft Azure 上部署和管理基于容器的应用程序。
+通过将大量责任转移至 Azure，AKS 降低了管理 Kubernetes 群集的复杂性和运营开销。 作为一项托管的 Kubernetes 服务，Azure 将为你处理运行状况监视和维护等关键任务。 并且，你仅需支付群集中的代理节点，而无需支付主节点。 作为一项托管的 Kubernetes 服务，AKS 提供以下功能：
 
-Azure 容器服务的一个目标是使用 Microsoft 客户现在常用的开源工具和技术提供容器托管环境。 为此，Azure 容器服务公开所选业务流程协调程序（DC/OS、Docker Swarm 或 Kubernetes）的标准 API 终结点。 通过使用这些终结点，可以利用能与这些终结点通信的任何软件。 例如，对于 Docker Swarm 终结点，可选择使用 Docker 命令行接口 (CLI)。 对于 DC/OS，可以选择 DCOS CLI。 对于 Kubernetes，可以选择 kubectl。 图 11-1 介绍了如何使用这些终结点管理容器群集。
+- 自动化的 Kubernetes 版本升级和修补。
+- 轻松的群集缩放。
+- 自我修复型托管控制平面（主节点）。
+- 节省成本：仅支付运行的代理池节点。
 
-![](./media/image11-1.png)
-
-**Figure 11-1**。 使用 Docker、Kubernetes 或 DC/OS 终结点的 Azure 容器服务管理。
+由于 Azure 会负责管理 AKS 群集中的节点，因此，很多任务（例如群集升级）不再需要手动执行。 由于 Azure 会处理这些关键维护任务，因此，AKS 不提供对群集的直接访问（例如使用 SSH）。
 
 ### <a name="azure-service-fabric"></a>Azure Service Fabric
 
@@ -68,24 +67,24 @@ Azure 容器服务的一个目标是使用 Microsoft 客户现在常用的开源
 
 ### <a name="azure-virtual-machines"></a>Azure 虚拟机
 
-如果现有应用需要经过大量修改才可在应用服务或 Service Fabric 中运行，为简化迁移到云，可选择虚拟机。 然而，与 Azure 应用服务和 Service Fabric 相比，正确配置、保护和维护 VM 需要更多时间和 IT 专业知识。 如要使用 Azure 虚拟机，请务必考虑到 VM 环境修补、更新和管理所需的持续性维护工作。 Azure 虚拟机属于基础设施即服务 (IaaS)，而应用服务和 Service Fabric 属于平台即服务 (Paas)。
+如果现有应用需要经过大量修改才可在应用服务或 Service Fabric 中运行，为简化迁移到云，可选择虚拟机。 然而，与 Azure 应用服务和 Service Fabric 相比，正确配置、保护和维护 VM 需要更多时间和 IT 专业知识。 如要使用 Azure 虚拟机，请务必考虑到 VM 环境的修补、更新和管理所需的持续性维护工作。 Azure 虚拟机属于基础设施即服务 (IaaS)，而应用服务和 Service Fabric 属于 PaaS。
 
 #### <a name="feature-comparison"></a>功能比较
 
-| 应用服务功能 | Service Fabric | 虚拟机 |
-|---------|----------|----------|
-| 近即时部署 | X | X | |
-| 无需重新部署即可扩展至较大的计算机 | X | X | |
-| 实例共享内容和配置；缩放时无需重新部署或重新配置 | X | X | |
-| 多部署环境（生产、暂存） | X | X | |
-| 自动操作系统更新管理 | X | | |
-| 32/64 位平台无缝切换 | X | | |
-| 使用 Git 和 FTP 部署代码 | X | | X |
-| 使用 WebDeploy 部署代码 | X | | X |
-| 使用 TFS 部署代码 | X | X | X |
-| 托管多层体系结构的 Web 或 Web 服务层 | X | X | X |
-| 访问服务总线、存储、SQL 数据库等 Azure 服务 | X | X | X |
-| 安装任何自定义 MSI | | X | X |
+| 功能                                                                                    | 应用服务 | 容器 (AKS) | Service Fabric | 虚拟机 |
+| ------------------------------------------------------------------------------------------ | ----------- | ---------------- | -------------- | --------------- |
+| 近即时部署                                                                    | X           | X                | X              |                 |
+| 无需重新部署即可扩展至较大的计算机                                               | X           | X                | X              |                 |
+| 实例共享内容和配置；缩放时无需重新部署或重新配置 | X           | X                | X              |                 |
+| 多部署环境（生产、暂存）                                     | X           | X                | X              |                 |
+| 自动操作系统更新管理                                                             | X           | X                |                |                 |
+| 32/64 位平台无缝切换                                             | X           | X                |                |                 |
+| 使用 Git 和 FTP 部署代码                                                                  | X           | X                |                | X               |
+| 使用 WebDeploy 部署代码                                                                 | X           | X                |                | X               |
+| 使用 TFS 部署代码                                                                       | X           | X                | X              | X               |
+| 托管多层体系结构的 Web 或 Web 服务层                                    | X           | X                | X              | X               |
+| 访问服务总线、存储、SQL 数据库等 Azure 服务                              | X           | X                | X              | X               |
+| 安装任何自定义 MSI                                                                     |             | X                | X              | X               |
 
 ## <a name="logical-processes"></a>逻辑进程
 
@@ -103,27 +102,30 @@ Azure 提供多种数据存储选择，以便应用程序可使用恰当的数�
 
 ## <a name="architecture-recommendations"></a>体系结构建议
 
-应用程序要求应决定其体系结构。 由于可使用多种不同的 Azure 服务，因此选择恰当服务是非常重要的决定。 Microsoft 提供一系列参考体系结构，帮助用户确定针对常见方案优化的典型体系结构。 可绑定与应用程序要求高度契合或至少提供一个出发点的参考体系结构。
+应用程序要求应决定其体系结构。 有多种不同的 Azure 服务可供使用。 选择正确的服务是一项重要决定。 Microsoft 提供一系列参考体系结构，帮助用户确定针对常见方案优化的典型体系结构。 可找到一个与应用程序要求高度契合或至少提供一个出发点的参考体系结构。
 
 图 11-2 显示了一个示例参考体系结构。 该图介绍了一个建议用于为市场营销而优化的 Sitecore 内容管理系统网站的体系结构方式。
 
 ![](./media/image11-2.png)
 
-**图 11-2**。 Sitecore 市场营销网站参考体系结构。
+**Figure 11-1**。 Sitecore 市场营销网站参考体系结构。
 
-**参考 – Azure 托管建议**
+**参考：Azure 托管建议**
 
--   Azure解决方案体系结构\
-    <https://azure.microsoft.com/solutions/architecture/>
+- Azure解决方案体系结构\
+  <https://azure.microsoft.com/solutions/architecture/>
 
--   Azure 开发人员指南\
-    <https://azure.microsoft.com/campaigns/developer-guide/>
+- Azure 开发人员指南\
+  <https://azure.microsoft.com/campaigns/developer-guide/>
 
--   什么是 Azure 应用服务？\
-    <https://docs.microsoft.com/azure/app-service/app-service-value-prop-what-is>
+- Web 应用概述\
+  <https://docs.microsoft.com/azure/app-service/app-service-web-overview>
 
--   Azure 应用服务、虚拟机、Service Fabric 和云服务的比较\
-    <https://docs.microsoft.com/azure/app-service-web/choose-web-site-cloud-service-vm>
+- Azure 应用服务、虚拟机、Service Fabric 和云服务的比较\
+  <https://docs.microsoft.com/azure/app-service-web/choose-web-site-cloud-service-vm>
+
+- Azure Kubernetes 服务 (AKS) 简介\
+  <https://docs.microsoft.com/azure/aks/intro-kubernetes>
 
 >[!div class="step-by-step"]
 [上一篇](development-process-for-azure.md)

@@ -3,13 +3,12 @@ title: 如何：启用 WIF 跟踪
 ms.date: 03/30/2017
 ms.assetid: 271b6889-3454-46ff-96ab-9feb15e742ee
 author: BrucePerlerMS
-manager: mbaldwin
-ms.openlocfilehash: 459d74f3faf9fab4cba047a87ccff77d193e9026
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f763c279c29bec73d4fc20d59dc86726d84e21bd
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33399534"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47207106"
 ---
 # <a name="how-to-enable-wif-tracing"></a>如何：启用 WIF 跟踪
 ## <a name="applies-to"></a>适用于  
@@ -19,7 +18,7 @@ ms.locfileid: "33399534"
 -   ASP.NET® Web 窗体  
   
 ## <a name="summary"></a>总结  
- 此“如何”主题提供了详细的分步过程，用于说明如何在 ASP.NET 应用程序中启用 WIF 跟踪。 还说明了如何测试应用程序，以验证跟踪侦听器和日志是否正常工作。 此“如何”主题未详细介绍如何创建安全令牌服务 (STS)，而是使用随标识和访问工具提供的开发 STS。 开发 STS 不执行实际的身份验证操作，只是用来进行测试。 你将需要安装标识和访问工具才能完成此“如何”主题。 此工具可以从下列位置下载：[标识和访问工具](http://go.microsoft.com/fwlink/?LinkID=245849)  
+ 此“如何”主题提供了详细的分步过程，用于说明如何在 ASP.NET 应用程序中启用 WIF 跟踪。 还说明了如何测试应用程序，以验证跟踪侦听器和日志是否正常工作。 此“如何”主题未详细介绍如何创建安全令牌服务 (STS)，而是使用随标识和访问工具提供的开发 STS。 开发 STS 不执行实际的身份验证操作，只是用来进行测试。 你将需要安装标识和访问工具才能完成此“如何”主题。 此工具可以从下列位置下载：[标识和访问工具](https://go.microsoft.com/fwlink/?LinkID=245849)  
   
 > [!IMPORTANT]
 >  为被动应用程序（即使用 WS 联合身份验证协议的应用程序）启用 WIF 跟踪有可能使应用程序受到拒绝服务 (DoS) 攻击或使信息泄漏给恶意方。 这包括被动 RP 和被动 STS。 因此，我们建议不要在生产环境中为被动 RP 和被动 STS 启用 WIF 跟踪。  

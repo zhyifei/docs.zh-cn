@@ -2,12 +2,12 @@
 title: 如何：检索单个子元素 (LINQ to XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: ce37db9e-76fa-46eb-b4cc-e8f32d22ad90
-ms.openlocfilehash: 664b9496c8411055fcd09a1ea0709cdfdae79524
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 77ccd56d1d131a740bb90ef4258ef35504f5e3cb
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33321332"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45597871"
 ---
 # <a name="how-to-retrieve-a-single-child-element-linq-to-xml-c"></a>如何：检索单个子元素 (LINQ to XML) (C#)
 本主题说明如何在给定子元素名称的情况下检索单个子元素。 如果知道子元素的名称并且只有一个元素具有此名称，则只检索一个元素而不是一个集合会很方便。  
@@ -53,5 +53,6 @@ Console.WriteLine(e);
 <aw:DeliveryNotes xmlns:aw="http://www.adventure-works.com">Please leave packages in shed by driveway.</aw:DeliveryNotes>  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [LINQ to XML 轴 (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-axes.md)
+## <a name="see-also"></a>请参阅
+
+- [LINQ to XML 轴 (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-axes.md)

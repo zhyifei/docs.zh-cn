@@ -12,11 +12,12 @@ helpviewer_keywords:
 ms.assetid: e51988e7-7f4b-4646-a06d-1416cee8d557
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 15261291f40b6a41e0d6033fb92e1b23b4042019
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f95fb3ccab7362021a7a195ea199a1370e003dd2
+ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/21/2018
+ms.locfileid: "46562367"
 ---
 # <a name="managed-threading-best-practices"></a>托管线程处理的最佳做法
 多线程处理需在编程时倍加注意。 对于多数任务，通过将执行请求以线程池线程的方式排队，可以降低复杂性。 本主题将探讨更复杂的情形，比如协调多个线程的工作或处理造成阻止的线程。  
@@ -195,6 +196,7 @@ else {
   
 -   避免提供可更改静态状态的静态方法。 在常见服务器方案中，静态状态可在各个请求之间共享，这意味着多个线程可同时执行该代码。 这可能导致线程出现 bug。 请考虑使用一种设计模式，将数据封装到在各请求之间不共享的实例中。 此外，如果同步静态数据，更改状态的静态方法间的调用可导致死锁或冗余同步，进而降低性能。  
   
-## <a name="see-also"></a>请参阅  
- [线程处理](../../../docs/standard/threading/index.md)  
- [线程与线程处理](../../../docs/standard/threading/threads-and-threading.md)
+## <a name="see-also"></a>请参阅
+
+- [线程处理](../../../docs/standard/threading/index.md)  
+- [线程与线程处理](../../../docs/standard/threading/threads-and-threading.md)

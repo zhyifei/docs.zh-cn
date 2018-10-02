@@ -2,12 +2,12 @@
 title: LINQ 消息查询相关性
 ms.date: 03/30/2017
 ms.assetid: b746872e-57b1-4514-b337-53398a0e0deb
-ms.openlocfilehash: 5b215764f7e02f07873f63872f4ac8c3fcaffbcc
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7881140f2926bc27073a0be425a63566f313b50c
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33515834"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43855980"
 ---
 # <a name="linq-message-query-correlation"></a>LINQ 消息查询相关性
 此示例演示如何使用一个与系统提供的 <xref:System.ServiceModel.Dispatcher.MessageQuery> 相对的自定义 <xref:System.ServiceModel.XPathMessageQuery> 实现，执行基于内容的相关性。  
@@ -20,7 +20,7 @@ ms.locfileid: "33515834"
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>设置、生成和运行示例  
   
-1.  此示例使用 HTTP 终结点公开一个工作流服务。 若要运行此示例，正确的 URL Acl 必须将添加 (请参阅[配置 HTTP 和 HTTPS](http://go.microsoft.com/fwlink/?LinkId=70353)有关详细信息)，通过以管理员身份运行 Visual Studio 或通过执行下面的命令在提升的提示符将添加相应的 Acl。 确保替换了域和用户名。  
+1.  此示例使用 HTTP 终结点公开一个工作流服务。 若要运行此示例，正确的 URL Acl 必须添加 (请参阅[配置 HTTP 和 HTTPS](https://go.microsoft.com/fwlink/?LinkId=70353)有关详细信息)，以管理员身份运行 Visual Studio 或通过执行在提升的提示符处执行以下命令来添加适当的 Acl。 确保替换了域和用户名。  
   
     ```  
     netsh http add urlacl url=http://+:8000/ user=%DOMAIN%\%UserName%  
@@ -30,7 +30,7 @@ ms.locfileid: "33515834"
   
     1.  生成解决方案。  
   
-    2.  通过右击该解决方案并选择设置多个启动项目**设置启动项目**。 添加**服务**和**客户端**（按此顺序） 作为多个启动项目。  
+    2.  右键单击解决方案并选择设置多个启动项目**设置启动项目**。 添加**服务**并**客户端**（按此顺序） 为多个启动项目。  
   
     3.  运行该应用程序。 客户端控制台演示工作流如何发送订单、接收订购单 ID 以及随后确认订单。 服务窗口将显示正在处理的请求。  
   
@@ -39,6 +39,6 @@ ms.locfileid: "33515834"
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目录不存在，请转到[Windows Communication Foundation (WCF) 和针对.NET Framework 4 的 Windows Workflow Foundation (WF) 示例](http://go.microsoft.com/fwlink/?LinkId=150780)下载所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
+>  如果此目录不存在，请转到[Windows Communication Foundation (WCF) 和.NET Framework 4 的 Windows Workflow Foundation (WF) 示例](https://go.microsoft.com/fwlink/?LinkId=150780)若要下载所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\Services\LinqMessageQueryCorrelation`

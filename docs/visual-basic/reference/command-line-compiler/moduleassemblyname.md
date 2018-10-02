@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 013a57b6-f425-4dd3-b333-512d72c42f55
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b8b579c2c3ae22469706326ee17109b8e39dab60
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 479f9f639548eb81351d1df3f8f08b29b393cba1
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33650785"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44085022"
 ---
 # <a name="-moduleassemblyname"></a>-moduleassemblyname
 指定此模块所属程序集的名称。  
@@ -31,18 +31,18 @@ ms.locfileid: "33650785"
 |`assembly_name`|此模块的程序集的名称。|  
   
 ## <a name="remarks"></a>备注  
- 编译器进程`-moduleassemblyname`选项仅当`-target:module`指定选项。 这将导致编译器创建的模块。 由编译器创建的模块是仅对与指定的程序集有效`-moduleassemblyname`选项。 如果将模块放在不同的程序集时，将发生运行时错误。  
+ 编译器进程`-moduleassemblyname`选项仅当`-target:module`指定选项。 这将导致编译器创建一个模块。 由编译器创建的模块是仅对与指定的程序集的有效`-moduleassemblyname`选项。 如果将模块置于不同的程序集，将发生运行时错误。  
   
- `-moduleassemblyname`仅当满足以下条件时，才需要选项：  
+ `-moduleassemblyname`选项仅当满足以下条件时，才需要：  
   
--   模块中的数据类型需要访问`Friend`引用的程序集中的类型。  
+-   该模块中的数据类型需要有权`Friend`中引用的程序集中的类型。  
   
--   引用的程序集具有友元程序集访问权限授予将在其中生成该模块的程序集。  
+-   将在其中生成该模块的程序集引用的程序集具有授予友元程序集访问权限。  
   
- 有关创建模块的详细信息，请参阅[/target (Visual Basic 中)](../../../visual-basic/reference/command-line-compiler/target.md)。 友元程序集有关的详细信息，请参阅[友元程序集](http://msdn.microsoft.com/library/df0c70ea-2c2a-4bdc-9526-df951ad2d055)。  
+ 有关创建模块的详细信息，请参阅[/target (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md)。 有关友元程序集的详细信息，请参阅[友元程序集](../../programming-guide/concepts/assemblies-gac/friend-assemblies.md)。  
   
 > [!NOTE]
->  `-moduleassemblyname`选项不是可从 Visual Studio 开发环境中; 它是可用仅编译时从命令提示符。  
+>  `-moduleassemblyname`选项不是可从 Visual Studio 开发环境中; 它是可仅在编译时从命令提示符。  
   
 ## <a name="see-also"></a>请参阅  
  [如何：生成多文件程序集](../../../framework/app-domains/how-to-build-a-multifile-assembly.md)  
@@ -53,4 +53,4 @@ ms.locfileid: "33650785"
  [-addmodule](../../../visual-basic/reference/command-line-compiler/addmodule.md)  
  [程序集和全局程序集缓存](../../../visual-basic/programming-guide/concepts/assemblies-gac/index.md)  
  [示例编译命令行](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)  
- [友元程序集](http://msdn.microsoft.com/library/df0c70ea-2c2a-4bdc-9526-df951ad2d055)
+ [友元程序集](../../programming-guide/concepts/assemblies-gac/friend-assemblies.md)

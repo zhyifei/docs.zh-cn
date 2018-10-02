@@ -2,12 +2,12 @@
 title: 带 XML 声明的序列化 (C#)
 ms.date: 07/20/2015
 ms.assetid: c237fa4a-a042-40fd-886f-17b54c66bb75
-ms.openlocfilehash: 3f331f1226e7e5a905471f4a793f9a415bdd858a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 613280efc8c734c53c4af9252b4b83e2dd942f36
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33329782"
+ms.lasthandoff: 09/22/2018
+ms.locfileid: "46586283"
 ---
 # <a name="serializing-with-an-xml-declaration-c"></a>带 XML 声明的序列化 (C#)
 本主题说明如何控制序列化是否生成 XML 声明。  
@@ -61,5 +61,6 @@ Console.WriteLine(sb.ToString());
 <Root><Child>child content</Child></Root>  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [序列化 XML 树 (C#)](../../../../csharp/programming-guide/concepts/linq/serializing-xml-trees.md)
+## <a name="see-also"></a>请参阅
+
+- [序列化 XML 树 (C#)](../../../../csharp/programming-guide/concepts/linq/serializing-xml-trees.md)

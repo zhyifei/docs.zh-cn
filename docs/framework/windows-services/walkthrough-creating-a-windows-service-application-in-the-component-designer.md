@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: e24d8a3d-edc6-485c-b6e0-5672d91fb607
 author: ghogen
 manager: douge
-ms.openlocfilehash: c33b8badcacd4e228d70f8e770d4bf27144c29eb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6d70db7139d82b6e219e2c417282333f950ef402
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33520508"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43509848"
 ---
 # <a name="walkthrough-creating-a-windows-service-application-in-the-component-designer"></a>演练：在组件设计器中创建 Windows 服务应用程序
 本文演示了如何在 Visual Studio 中创建向事件日志中写入消息的简单 Windows 服务应用程序。 下面是创建和使用你的服务所执行的基本步骤：  
@@ -55,11 +55,11 @@ ms.locfileid: "33520508"
   
 2.  在 Visual Basic 或 Visual C# 项目模板列表中，选择“Windows 服务” ，然后对项目 **MyNewService**命名。 选择 **“确定”**。  
   
-     项目模板自动添加从 `Service1` 继承的名为 <xref:System.ServiceProcess.ServiceBase?displayProperty=nameWithType> 的组件类。  
+     项目模板自动添加从 <xref:System.ServiceProcess.ServiceBase?displayProperty=nameWithType> 继承的名为 `Service1` 的组件类。  
   
 3.  在“编辑”  菜单上，依次选择“查找和替换” 、“在文件中查找”  （键盘：Ctrl+Shift+F）。 更改 `Service1` 到 `MyNewService`的所有匹配项。 你将在 Service1.cs、Program.cs 和 Service1.Designer.cs（或它们的 .vb 等效项）中找到实例。  
   
-4.  在“Service1.cs [Design]”  或“Service1.vb [Design]”  的“属性” 窗口中，将 <xref:System.ServiceProcess.ServiceBase.ServiceName%2A> 和 **的“(Name)”**`Service1` 属性设置为 **MyNewService**（如果尚未设置）。  
+4.  在“Service1.cs [Design]”  或“Service1.vb [Design]”  的“属性” 窗口中，将`Service1`的 <xref:System.ServiceProcess.ServiceBase.ServiceName%2A> 和 **“(Name)”** 属性设置为 **MyNewService**（如果尚未设置）。  
   
 5.  在解决方案资源管理器中，将 **Service1.cs** 重命名为 **MyNewService.cs**，或将 **Service1.vb** 重命名为 **MyNewService.vb**。  
   
@@ -161,7 +161,7 @@ ms.locfileid: "33520508"
   
 <a name="BK_SetStatus"></a>   
 ## <a name="setting-service-status"></a>设置服务状态  
- 服务向服务控制管理器报告其状态，以便用户可以判断服务是否运行正常。 默认情况下，从 <xref:System.ServiceProcess.ServiceBase> 继承的服务会报告有限的状态设置，包括已停止、已暂停和正在运行。 如果服务启动所需的时间很短，则可能对报告“启动挂起”状态有帮助。 你也可以通过添加调入 Windows [SetServiceStatus 函数](http://msdn.microsoft.com/library/windows/desktop/ms686241.aspx)的代码来实现“启动挂起”和“停止挂起”状态设置。  
+ 服务向服务控制管理器报告其状态，以便用户可以判断服务是否运行正常。 默认情况下，从 <xref:System.ServiceProcess.ServiceBase> 继承的服务会报告有限的状态设置，包括已停止、已暂停和正在运行。 如果服务启动所需的时间很短，则可能对报告“启动挂起”状态有帮助。 也可通过添加调入 Windows [SetServiceStatus 函数](/windows/desktop/api/winsvc/nf-winsvc-setservicestatus)的代码来实现“启动挂起”和“停止挂起”状态设置。  
   
 #### <a name="to-implement-service-pending-status"></a>若要实现服务挂起状态  
   
@@ -225,7 +225,7 @@ ms.locfileid: "33520508"
     End Structure  
     ```  
   
-3.  现在，在 `MyNewService` 类中，使用平台调用声明 [SetServiceStatus 函数](http://msdn.microsoft.com/library/windows/desktop/ms686241.aspx) ：  
+3.  现在，在 `MyNewService` 类中，使用平台调用声明 [SetServiceStatus 函数](/windows/desktop/api/winsvc/nf-winsvc-setservicestatus)：  
   
     ```csharp  
     [DllImport("advapi32.dll", SetLastError=true)]  
@@ -271,7 +271,7 @@ ms.locfileid: "33520508"
 6.  （可选）针对 <xref:System.ServiceProcess.ServiceBase.OnStop%2A> 方法重复此过程。  
   
 > [!CAUTION]
->  服务的操作开始之后， [服务控制管理器](http://msdn.microsoft.com/library/windows/desktop/ms685150.aspx) 使用 `dwWaitHint` 和 `dwCheckpoint` 和 [dwCheckpoint](http://msdn.microsoft.com/library/windows/desktop/ms685996.aspx) 成员确定等待 Windows 服务启动或关闭需要多长时间。 如果你的 <xref:System.ServiceProcess.ServiceBase.OnStart%2A> 和 <xref:System.ServiceProcess.ServiceBase.OnStop%2A> 方法运行时间较长，你的服务可以使用递增的 [dwCheckPoint](http://msdn.microsoft.com/library/windows/desktop/ms686241.aspx) 值再次调用 `dwCheckPoint` 来请求更多时间。  
+>  [服务控制管理器](/windows/desktop/Services/service-control-manager)使用 [SERVICE_STATUS 结构](/windows/desktop/api/winsvc/ns-winsvc-_service_status)的 `dwWaitHint` 和 `dwCheckpoint` 成员来确定等待 Windows 服务启动或关闭所需的时间。 如果你的 <xref:System.ServiceProcess.ServiceBase.OnStart%2A> 和 <xref:System.ServiceProcess.ServiceBase.OnStop%2A> 方法运行时间较长，服务可以使用递增的 `dwCheckPoint` 值再次调用 [SetServiceStatus](/windows/desktop/api/winsvc/nf-winsvc-setservicestatus) 来请求更多时间。  
   
 <a name="BK_AddInstallers"></a>   
 ## <a name="adding-installers-to-the-service"></a>向服务添加安装程序  
@@ -477,7 +477,7 @@ End Sub
      如果服务成功卸载，installutil.exe 将报告已成功移除服务。 有关更多信息，请参见 [How to: Install and Uninstall Services](../../../docs/framework/windows-services/how-to-install-and-uninstall-services.md)。  
   
 ## <a name="next-steps"></a>后续步骤  
- 你可以创建其他人可以用来安装你的 Windows 服务的独立安装程序，但需要额外的步骤。 ClickOnce 不支持 Windows 服务，因此你无法使用发布向导。 可使用 InstallShield 的完整版（Microsoft 不提供）。 有关 InstallShield 的详细信息，请参阅 [InstallShield Limited Edition](/visualstudio/deployment/installshield-limited-edition)。 你也可以使用 [Windows Installer XML 工具集](http://go.microsoft.com/fwlink/?LinkId=249067) 来为 Windows 服务创建安装程序。  
+ 你可以创建其他人可以用来安装你的 Windows 服务的独立安装程序，但需要额外的步骤。 ClickOnce 不支持 Windows 服务，因此你无法使用发布向导。 可使用 InstallShield 的完整版（Microsoft 不提供）。 有关 InstallShield 的详细信息，请参阅 [InstallShield Limited Edition](/visualstudio/deployment/installshield-limited-edition)。 也可以使用 [Windows Installer XML 工具集](https://go.microsoft.com/fwlink/?LinkId=249067) 为 Windows 服务创建安装程序。  
   
  你可以浏览 <xref:System.ServiceProcess.ServiceController> 组件的用途，这将使你能发送命令到你已经安装的服务。  
   
@@ -487,4 +487,4 @@ End Sub
  [Windows 服务应用程序](../../../docs/framework/windows-services/index.md)  
  [Windows 服务应用程序介绍](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)  
  [如何：调试 Windows 服务应用程序](../../../docs/framework/windows-services/how-to-debug-windows-service-applications.md)  
- [服务 (Windows)](http://msdn.microsoft.com/library/windows/desktop/ms685141.aspx)
+ [服务 (Windows)](https://msdn.microsoft.com/library/windows/desktop/ms685141.aspx)

@@ -1,5 +1,5 @@
 ---
-title: '#Region 指令'
+title: '#区域指令 (Visual Basic)'
 ms.date: 07/20/2015
 f1_keywords:
 - vb.Region
@@ -10,12 +10,12 @@ helpviewer_keywords:
 - region directive (#region)
 - '#Region keyword [Visual Basic]'
 ms.assetid: 90a6a104-3cbf-47d0-bdc4-b585d0921b87
-ms.openlocfilehash: d25871140ef0674c013fc70d1306b2b4d0858556
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 204b53751fce4f9a3e038ae7c44634522d54657c
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33588430"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45617216"
 ---
 # <a name="region-directive"></a>#Region 指令
 折叠并隐藏 Visual Basic 文件中的代码段。  
@@ -35,7 +35,7 @@ ms.locfileid: "33588430"
 |`#End Region`|终止 `#Region` 块。|  
   
 ## <a name="remarks"></a>备注  
- 使用 `#Region` 指令指定使用 Visual Studio 代码编辑器的大纲显示功能时要展开或折叠的代码块。 你可以将放置，或*嵌套*，在将类似区域组合在一起其他区域。  
+ 使用 `#Region` 指令指定使用 Visual Studio 代码编辑器的大纲显示功能时要展开或折叠的代码块。 您可以将放置，或*嵌套*中其他区域将类似区域组合在一起, 的区域。  
   
 ## <a name="example"></a>示例  
  此示例使用 `#Region` 指令。  

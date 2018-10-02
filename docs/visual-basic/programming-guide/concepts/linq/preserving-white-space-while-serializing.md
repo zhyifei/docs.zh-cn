@@ -1,13 +1,13 @@
 ---
-title: 保留空白时 Serializing2
+title: 时保留空白 Serializing2
 ms.date: 07/20/2015
 ms.assetid: 2d7abbd4-37f4-422b-89dd-0a694b5edc17
 ms.openlocfilehash: a08d69a817c3e493e571d1b3b98f6f2a144ad995
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33644974"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43254511"
 ---
 # <a name="preserving-white-space-while-serializing"></a>在序列化时保留空白
 本主题描述在序列化 XML 树时如何控制空白。  

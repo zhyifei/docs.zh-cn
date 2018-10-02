@@ -2,21 +2,21 @@
 title: 'How to: Create a Workflow'
 ms.date: 03/30/2017
 ms.assetid: 87234108-8e21-4cb3-9340-4a1a13f3f98c
-ms.openlocfilehash: 98235eac9309ecb0229281160f210079e712b755
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: adaa322d4129f56abcad4fd848204ee373e907bd
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33513258"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43502479"
 ---
 # <a name="how-to-create-a-workflow"></a>How to: Create a Workflow
-工作流可基于内置活动以及自定义活动来构造。 在此部分步骤中通过创建工作流使用这两个内置的活动，如本主题<xref:System.Activities.Statements.Flowchart>活动和自定义活动与上一[如何： 创建活动](../../../docs/framework/windows-workflow-foundation/how-to-create-an-activity.md)主题。 该工作流模拟猜数游戏。 本节中只有一个主题是完成本教程所必需的；您应该选择感兴趣的样式并按照该步骤执行。 但是，您可以完成所有主题（如果需要）。  
+工作流可基于内置活动以及自定义活动来构造。 此部分分步介绍如何创建使用内置活动，如工作流中的本主题<xref:System.Activities.Statements.Flowchart>活动，并从以前的自定义活动[如何： 创建活动](../../../docs/framework/windows-workflow-foundation/how-to-create-an-activity.md)主题。 该工作流模拟猜数游戏。 本节中只有一个主题是完成本教程所必需的；您应该选择感兴趣的样式并按照该步骤执行。 但是，您可以完成所有主题（如果需要）。  
   
 > [!NOTE]
 >  入门教程中的每个主题都依赖于前面的主题。 若要完成本主题，必须先完成[如何： 创建活动](../../../docs/framework/windows-workflow-foundation/how-to-create-an-activity.md)。  
   
 > [!NOTE]
->  若要下载完整版教程，请参阅 [Windows Workflow Foundation (WF45) — 入门教程](http://go.microsoft.com/fwlink/?LinkID=248976)。  
+>  若要下载本教程的完整的版本，请参阅[Windows Workflow Foundation (WF45)-入门教程](https://go.microsoft.com/fwlink/?LinkID=248976)。  
   
 ## <a name="in-this-section"></a>本节内容  
  [如何：创建顺序工作流](../../../docs/framework/windows-workflow-foundation/how-to-create-a-sequential-workflow.md)  

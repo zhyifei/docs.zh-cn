@@ -2,12 +2,12 @@
 title: 持久性实例上下文
 ms.date: 03/30/2017
 ms.assetid: 97bc2994-5a2c-47c7-927a-c4cd273153df
-ms.openlocfilehash: fb331fc0e5f384f0ffb268c1c6f7a5ffc99478ec
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: f5c066ae06e44f6cac4b9a7b98487aa6226b969f
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33808603"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43524421"
 ---
 # <a name="durable-instance-context"></a>持久性实例上下文
 此示例演示如何自定义 Windows Communication Foundation (WCF) 运行时以启用持久性实例上下文。 它使用 SQL Server 2005 作为其后备存储（在本例中为 SQL Server 2005 Express）。 但是，它还提供了一种访问自定义存储机制的方法。  
@@ -120,7 +120,7 @@ if (isFirstMessage)
 }  
 ```  
   
- 这些通道实现随后添加到 WCF 通道运行时由`DurableInstanceContextBindingElement`类和`DurableInstanceContextBindingElementSection`正确类。 请参阅[HttpCookieSession](../../../../docs/framework/wcf/samples/httpcookiesession.md)通道绑定元素和绑定元素节有关的更多详细信息的示例文档。  
+ 这些通道实现随后将添加到 WCF 通道运行时由`DurableInstanceContextBindingElement`类和`DurableInstanceContextBindingElementSection`类相应地。 请参阅[HttpCookieSession](../../../../docs/framework/wcf/samples/httpcookiesession.md)通道示例文档有关绑定元素和绑定元素节的更多详细信息。  
   
 ## <a name="service-model-layer-extensions"></a>服务模型层扩展  
  既然上下文 ID 已经穿过了通道层，可以实现服务行为来自定义实例化了。 在该实例中，存储管理器用来从持久性存储中加载状态或将状态保存到持久性存储中。 如上所述，该实例提供一个将 SQL Server 2005 用作其后备存储的存储管理器。 但是，还可以向该扩展中添加自定义存储机制。 为此，需要声明一个必须由所有的存储管理器实现的公共接口。  
@@ -231,13 +231,13 @@ else
   
  作为此过程的第一步，我们必须保存已通过通道层到达当前 InstanceContext 的上下文 ID。 InstanceContext 是充当 WCF 调度程序和服务实例之间的链接的运行时组件。 可用来向服务实例提供其他状态和行为。 这是必不可少的，因为在会话通信中，上下文 ID 仅随第一条消息发送。  
   
- WCF 允许扩展它的 InstanceContext 运行时组件方法来添加新的状态和使用的可扩展对象模式的行为。 可扩展对象模式用于在 WCF 中可以用来扩展现有运行时类的新功能或将新的状态功能添加到对象。 可扩展对象模式 IExtensibleObject 中有三个接口\<T >，IExtension\<T >，和 IExtensionCollection\<T >:  
+ WCF 允许通过添加新的状态和使用其可扩展对象模式的行为来扩展它的 InstanceContext 的运行时组件。 若要使用新功能扩展现有的运行时类，或者，或将新的状态功能添加到一个对象，WCF 中使用的可扩展对象模式。 有三个接口中的可扩展对象模式-IExtensibleObject\<T >，IExtension\<T >，和 IExtensionCollection\<T >:  
   
--   IExtensibleObject\<T > 接口由允许进行自定义其功能的扩展对象实现。  
+-   IExtensibleObject\<T > 接口由允许自定义其功能的扩展对象实现。  
   
--   IExtension\<T > 接口实现的类型为 t。 类扩展的对象  
+-   IExtension\<T > 接口实现的 T 类型的类扩展的对象  
   
--   IExtensionCollection\<T > 接口是 Iextension 的集合，可用于按其类型来检索 Iextension。  
+-   IExtensionCollection\<T > 接口是 Iextension，来检索 Iextension 按其类型的集合。  
   
  因此，应当创建一个 InstanceContextExtension 类，该类实现 IExtension 接口并定义保存上下文 ID 所必需的状态。 此类还提供用来存放正使用的存储管理器的状态。 在保存了新状态之后，就无法对其进行修改。 因此，状态是在构造实例时提供并保存到实例中的，之后，只能使用只读属性来进行访问。  
   
@@ -279,7 +279,7 @@ public void Initialize(InstanceContext instanceContext, Message message)
   
  如上所述，上下文 ID 读取自 `Properties` 类的 `Message` 集合并传递到扩展类的构造函数。 这演示了如何以一致的方式在层之间交换信息。  
   
- 下一个重要步骤是重写服务实例的创建过程。 WCF 允许实现自定义实例化行为并将它们挂钩到运行库使用 IInstanceProvider 接口。 这可以通过实现新的 `InstanceProvider` 类来完成。 在构造函数中，可以接受来自实例提供程序的服务类型。 以后，可以使用此服务类型来创建新实例。 在 `GetInstance` 实现中，创建了一个存储管理器实例并查找持久性实例。 如果返回的是 `null`，则会实例化此服务类型的新实例并将其返回到调用方。  
+ 下一个重要步骤是重写服务实例的创建过程。 WCF 允许实现自定义实例化行为并将它们挂钩到运行时使用 IInstanceProvider 接口。 这可以通过实现新的 `InstanceProvider` 类来完成。 在构造函数中，可以接受来自实例提供程序的服务类型。 以后，可以使用此服务类型来创建新实例。 在 `GetInstance` 实现中，创建了一个存储管理器实例并查找持久性实例。 如果返回的是 `null`，则会实例化此服务类型的新实例并将其返回到调用方。  
   
 ```  
 public object GetInstance(InstanceContext instanceContext, Message message)  
@@ -350,9 +350,9 @@ foreach (ChannelDispatcherBase cdb in serviceHostBase.ChannelDispatchers)
   
  总之，到目前为止，此示例已经生成了一个针对自定义上下文 ID 交换启用了自定义网络协议的通道，而且还覆盖了默认实例化行为，以便从持久性存储中加载实例。  
   
- 剩下的就是通过某种方法来将服务实例保存到持久性存储中。 如上所述，已经有一个必需的功能来将状态保存在 `IStorageManager` 实现中。 我们现在必须集成这与 WCF 运行时。 需要另一个适用于服务实现类中的方法的属性。 此属性假设应用于对服务实例的状态进行更改的方法。  
+ 剩下的就是通过某种方法来将服务实例保存到持久性存储中。 如上所述，已经有一个必需的功能来将状态保存在 `IStorageManager` 实现中。 我们现在必须将其与 WCF 运行时。 需要另一个适用于服务实现类中的方法的属性。 此属性假设应用于对服务实例的状态进行更改的方法。  
   
- `SaveStateAttribute` 类实现了此功能。 它还实现`IOperationBehavior`类来修改每个操作的 WCF 运行时。 在使用此特性标记方法，WCF 运行时将调用`ApplyBehavior`方法，同时相应`DispatchOperation`正在构建。 在该方法实现中，有下面的一行代码：  
+ `SaveStateAttribute` 类实现了此功能。 它还实现`IOperationBehavior`类来修改 WCF 运行时为每个操作。 当使用此特性标记一个方法时，WCF 运行时将调用`ApplyBehavior`方法，同时相应`DispatchOperation`正在构造。 在该方法实现中，有下面的一行代码：  
   
 ```  
 dispatch.Invoker = new OperationInvoker(dispatch.Invoker);  
@@ -374,7 +374,7 @@ return result;
 ```  
   
 ## <a name="using-the-extension"></a>使用扩展  
- 同时完成的通道层和服务模型层扩展，现在可以在 WCF 应用程序中使用它们。 服务必须使用自定义绑定将通道添加到通道堆栈中，然后使用相应的属性来标记服务实现类。  
+ 同时按通道层和服务模型层扩展，现在可以在 WCF 应用程序中使用它们。 服务必须使用自定义绑定将通道添加到通道堆栈中，然后使用相应的属性来标记服务实现类。  
   
 ```  
 [DurableInstanceContext]  
@@ -442,11 +442,11 @@ Press ENTER to shut down client
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>设置、生成和运行示例  
   
-1.  确保已执行[的 Windows Communication Foundation 示例的一次性安装过程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
+1.  请确保您具有执行[的 Windows Communication Foundation 示例的一次性安装过程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
   
 2.  若要生成解决方案，请按照中的说明[生成 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/building-the-samples.md)。  
   
-3.  若要在单或跨计算机配置上运行示例，请按照中的说明[运行 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/running-the-samples.md)。  
+3.  若要在单或跨计算机配置中运行示例，请按照中的说明[运行 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/running-the-samples.md)。  
   
 > [!NOTE]
 >  必须运行 SQL Server 2005 或 SQL Express 2005 才能运行此示例。 如果您运行的是 SQL Server 2005，则必须修改服务连接字符串的配置。 在跨计算机运行时，只需要在服务器计算机上安装 SQL Server。  
@@ -456,7 +456,7 @@ Press ENTER to shut down client
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目录不存在，请转到[Windows Communication Foundation (WCF) 和针对.NET Framework 4 的 Windows Workflow Foundation (WF) 示例](http://go.microsoft.com/fwlink/?LinkId=150780)下载所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
+>  如果此目录不存在，请转到[Windows Communication Foundation (WCF) 和.NET Framework 4 的 Windows Workflow Foundation (WF) 示例](https://go.microsoft.com/fwlink/?LinkId=150780)若要下载所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Instancing\Durable`  
   

@@ -2,12 +2,12 @@
 title: LINQ to XML 事件 (C#)
 ms.date: 07/20/2015
 ms.assetid: ce7de951-cba7-4870-9962-733eb01cd680
-ms.openlocfilehash: 3dd4eaa0261ae7d878e188572d260b34b64fc031
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6308d81eac830e11b6d58f8e460dfa377663cd21
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33322388"
+ms.lasthandoff: 09/29/2018
+ms.locfileid: "47230730"
 ---
 # <a name="linq-to-xml-events-c"></a>LINQ to XML 事件 (C#)
 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 事件使你可以在 XML 树发生改变时得到通知。  
@@ -97,5 +97,6 @@ Total:308
 </Root>  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [高级 LINQ to XML 编程 (C#)](../../../../csharp/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)
+## <a name="see-also"></a>请参阅
+
+- [高级 LINQ to XML 编程 (C#)](../../../../csharp/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)

@@ -2,23 +2,23 @@
 title: 传输：UDP
 ms.date: 03/30/2017
 ms.assetid: 738705de-ad3e-40e0-b363-90305bddb140
-ms.openlocfilehash: 64452e36f34f87aef491cf66f6dd94ddc3a59f34
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.openlocfilehash: e3e01634c496a3673b49ae7329e4221e0d568803
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37106033"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43485935"
 ---
 # <a name="transport-udp"></a>传输：UDP
-UDP 传输示例演示如何实现 UDP 单播和多播作为自定义 Windows Communication Foundation (WCF) 传输。 此示例介绍了使用通道框架并遵循 WCF 最佳做法在 WCF 中, 创建自定义传输的推荐的过程。 创建自定义传输的步骤如下：  
+UDP 传输示例演示如何实现 UDP 单播和多播作为自定义 Windows Communication Foundation (WCF) 传输。 此示例介绍了使用通道框架并遵循 WCF 最佳做法在 WCF 中，创建自定义传输的推荐的过程。 创建自定义传输的步骤如下：  
   
-1.  决定哪种通道[消息交换模式](#MessageExchangePatterns)（IOutputChannel、 IInputChannel、 IDuplexChannel、 IRequestChannel 或 IReplyChannel） 您的 ChannelFactory 和 ChannelListener 将要支持。 然后确定是否要支持这些接口的会话变体。  
+1.  决定哪些通道[消息交换模式](#MessageExchangePatterns)（IOutputChannel、 IInputChannel、 IDuplexChannel、 IRequestChannel 或 IReplyChannel） 您的 ChannelFactory 和 ChannelListener 将要支持。 然后确定是否要支持这些接口的会话变体。  
   
 2.  创建支持您的消息交换模式的通道工厂和侦听器。  
   
 3.  请确保将特定于网络的任何异常正常化为 <xref:System.ServiceModel.CommunicationException> 的相应派生类。  
   
-4.  添加[\<绑定 >](../../../../docs/framework/misc/binding.md)向通道堆栈中添加自定义传输的元素。 有关详细信息，请参阅[添加绑定元素](#AddingABindingElement)。  
+4.  添加[\<绑定 >](../../../../docs/framework/misc/binding.md)将自定义传输添加到通道堆栈的元素。 有关详细信息，请参阅[添加绑定元素](#AddingABindingElement)。  
   
 5.  添加一个绑定元素扩展部分，以便将新的绑定元素公开到配置系统。  
   
@@ -50,7 +50,7 @@ UDP 传输示例演示如何实现 UDP 单播和多播作为自定义 Windows Co
 >  对于 UDP 传输，所支持的唯一 MEP 是数据报，因为 UDP 的性质是一个“启动后不管”协议。  
   
 ### <a name="the-icommunicationobject-and-the-wcf-object-lifecycle"></a>ICommunicationObject 和 WCF 对象生存期  
- WCF 具有用于管理等对象的生命周期的常见状态机<xref:System.ServiceModel.Channels.IChannel>， <xref:System.ServiceModel.Channels.IChannelFactory>，和<xref:System.ServiceModel.Channels.IChannelListener>通信所用的。 这些通信对象可以处于五种状态。 这些状态通过 <xref:System.ServiceModel.CommunicationState> 枚举来表示，如下所示：  
+ WCF 具有一个常见的状态机，用于管理的对象，如生命周期<xref:System.ServiceModel.Channels.IChannel>， <xref:System.ServiceModel.Channels.IChannelFactory>，和<xref:System.ServiceModel.Channels.IChannelListener>用于进行通信。 这些通信对象可以处于五种状态。 这些状态通过 <xref:System.ServiceModel.CommunicationState> 枚举来表示，如下所示：  
   
 -   已创建：这是 <xref:System.ServiceModel.ICommunicationObject> 在首次实例化后的状态。 在此状态中不会发生输入/输出 (I/O)。  
   
@@ -62,19 +62,19 @@ UDP 传输示例演示如何实现 UDP 单播和多播作为自定义 Windows Co
   
 -   已关闭：在“已关闭”状态下，对象无法再使用。 一般情况下，仍然可以访问大多数配置以进行检查，但不能进行通信。 此状态相当于被释放。  
   
--   出错：在“出错”状态下，可以访问对象以进行检查，但对象无法再使用。 当发生不可恢复的错误时，对象即转换到此状态。 从这种状态的唯一有效的转换属到`Closed`状态。  
+-   出错：在“出错”状态下，可以访问对象以进行检查，但对象无法再使用。 当发生不可恢复的错误时，对象即转换到此状态。 从这种状态的唯一有效的转换是到`Closed`状态。  
   
  每次状态转换都会触发事件。 可以随时调用 <xref:System.ServiceModel.ICommunicationObject.Abort%2A> 方法，它将导致对象立即从当前状态转换到“已关闭”状态。 调用 <xref:System.ServiceModel.ICommunicationObject.Abort%2A> 将终止任何未完成的工作。  
   
 <a name="ChannelAndChannelListener"></a>   
 ## <a name="channel-factory-and-channel-listener"></a>通道工厂和通道侦听器  
- 编写自定义传输的下一步是为客户端通道创建 <xref:System.ServiceModel.Channels.IChannelFactory> 的实现，并为服务通道创建 <xref:System.ServiceModel.Channels.IChannelListener> 的实现。 通道层使用工厂模式构建通道。 WCF 为上述过程提供基类帮助器。  
+ 编写自定义传输的下一步是为客户端通道创建 <xref:System.ServiceModel.Channels.IChannelFactory> 的实现，并为服务通道创建 <xref:System.ServiceModel.Channels.IChannelListener> 的实现。 通道层使用工厂模式构建通道。 WCF 为此过程提供基类帮助器。  
   
 -   <xref:System.ServiceModel.Channels.CommunicationObject> 类实现 <xref:System.ServiceModel.ICommunicationObject> 并强制执行前面步骤 2 中所述的状态机。 
 
 -   <xref:System.ServiceModel.Channels.ChannelManagerBase> 类实现 <xref:System.ServiceModel.Channels.CommunicationObject> 并为 <xref:System.ServiceModel.Channels.ChannelFactoryBase> 和 <xref:System.ServiceModel.Channels.ChannelListenerBase> 提供统一的基类。 <xref:System.ServiceModel.Channels.ChannelManagerBase> 类与 <xref:System.ServiceModel.Channels.ChannelBase>（用来实现 <xref:System.ServiceModel.Channels.IChannel> 的基类）结合使用。  
   
--   <xref:System.ServiceModel.Channels.ChannelFactoryBase>类实现<xref:System.ServiceModel.Channels.ChannelManagerBase>和<xref:System.ServiceModel.Channels.IChannelFactory>，并将整合`CreateChannel`成一个重载`OnCreateChannel`抽象方法。  
+-   <xref:System.ServiceModel.Channels.ChannelFactoryBase>类实现<xref:System.ServiceModel.Channels.ChannelManagerBase>并<xref:System.ServiceModel.Channels.IChannelFactory>并将合并`CreateChannel`成一个重载`OnCreateChannel`抽象方法。  
   
 -   <xref:System.ServiceModel.Channels.ChannelListenerBase> 类实现 <xref:System.ServiceModel.Channels.IChannelListener>。 它负责执行基本状态管理。  
   
@@ -96,7 +96,7 @@ this.socket = new Socket(this.remoteEndPoint.AddressFamily, SocketType.Dgram, Pr
 this.socket.Close(0);  
 ```  
   
- 我们然后实现`Send()`和`BeginSend()` / `EndSend()`。 这将分解为两个主要部分。 首先，将消息序列化为字节数组。  
+ 我们然后实现`Send()`并`BeginSend()` / `EndSend()`。 这将分解为两个主要部分。 首先，将消息序列化为字节数组。  
   
 ```csharp
 ArraySegment<byte> messageBuffer = EncodeMessage(message);  
@@ -109,20 +109,20 @@ this.socket.SendTo(messageBuffer.Array, messageBuffer.Offset, messageBuffer.Coun
 ```  
   
 ### <a name="the-udpchannellistener"></a>UdpChannelListener  
- `UdpChannelListener`此示例实现派生自<xref:System.ServiceModel.Channels.ChannelListenerBase>类。 它使用单个 UDP 套接字来接收数据报。 `OnOpen` 方法使用该 UDP 套接字以异步循环形式接收数据。 收到的数据随后将借助于消息编码系统转换为消息。  
+ `UdpChannelListener`该示例实现派生自<xref:System.ServiceModel.Channels.ChannelListenerBase>类。 它使用单个 UDP 套接字来接收数据报。 `OnOpen` 方法使用该 UDP 套接字以异步循环形式接收数据。 收到的数据随后将借助于消息编码系统转换为消息。  
   
 ```csharp
 message = MessageEncoderFactory.Encoder.ReadMessage(new ArraySegment<byte>(buffer, 0, count), bufferManager);  
 ```  
   
- 由于可以用同一个数据报通道来表示来自多个源的消息，因此 `UdpChannelListener` 是一个单一实例侦听器。 不存在，在大多数，1 个活动<xref:System.ServiceModel.Channels.IChannel>一次与此侦听器相关联。 只有当随后释放了由 `AcceptChannel` 方法返回的通道时，该示例才生成另一个通道。 收到的消息将排入这个单一实例通道的队列中。  
+ 由于可以用同一个数据报通道来表示来自多个源的消息，因此 `UdpChannelListener` 是一个单一实例侦听器。 不存在，最多一个活动<xref:System.ServiceModel.Channels.IChannel>一次与此侦听器相关联。 只有当随后释放了由 `AcceptChannel` 方法返回的通道时，该示例才生成另一个通道。 收到的消息将排入这个单一实例通道的队列中。  
   
 #### <a name="udpinputchannel"></a>UdpInputChannel  
  `UdpInputChannel` 类实现 `IInputChannel`。 该类包括一个传入消息队列，该队列由 `UdpChannelListener` 的套接字来填充。 这些消息可以由 `IInputChannel.Receive` 方法取消排队。  
   
 <a name="AddingABindingElement"></a>   
 ## <a name="adding-a-binding-element"></a>添加绑定元素  
- 现在已经生成了工厂和通道，必须通过绑定将它们公开给 ServiceModel 运行库。 绑定是指绑定元素的集合，该集合表示与服务地址相关联的通信堆栈。 堆栈中的每个元素都表示通过[\<绑定 >](../../../../docs/framework/misc/binding.md)元素。  
+ 现在已经生成了工厂和通道，必须通过绑定将它们公开给 ServiceModel 运行库。 绑定是指绑定元素的集合，该集合表示与服务地址相关联的通信堆栈。 堆栈中的每个元素表示由[\<绑定 >](../../../../docs/framework/misc/binding.md)元素。  
   
  在下面的示例中，绑定元素为 `UdpTransportBindingElement`，它派生自 <xref:System.ServiceModel.Channels.TransportBindingElement>。 它重写以下方法以生成与我们的绑定相关联的工厂。  
   
@@ -141,7 +141,7 @@ public IChannelListener<TChannel> BuildChannelListener<TChannel>(BindingContext 
  它还包含用于克隆 `BindingElement` 并返回我们自己的方案 (soap.udp) 的成员。  
   
 ## <a name="adding-metadata-support-for-a-transport-binding-element"></a>为传输绑定元素添加元数据支持  
- 若要将我们的传输集成到元数据系统中，我们必须支持策略的导入和导出。 这使得我们可以生成客户端通过我们的绑定的[ServiceModel 元数据实用工具 (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)。  
+ 若要将我们的传输集成到元数据系统中，我们必须支持策略的导入和导出。 这使我们能够生成我们的绑定通过客户端[ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)。  
   
 ### <a name="adding-wsdl-support"></a>添加 WSDL 支持  
  绑定中的传输绑定元素负责导出和导入元数据中的寻址信息。 当使用 SOAP 绑定时，传输绑定元素还应在元数据中导出正确的传输 URI。  
@@ -204,7 +204,7 @@ if (transportBindingElement is UdpTransportBindingElement)
  自定义绑定元素可以在 WSDL 绑定中为服务终结点导出策略断言以表示该绑定元素的功能。  
   
 #### <a name="policy-export"></a>策略导出  
- `UdpTransportBindingElement`类型实现`IPolicyExportExtension`来添加对导出策略支持。 因此，`System.ServiceModel.MetadataExporter` 在为任何包含它的绑定而生成策略时都包含 `UdpTransportBindingElement`。  
+ `UdpTransportBindingElement`类型实现`IPolicyExportExtension`以添加对导出策略的支持。 因此，`System.ServiceModel.MetadataExporter` 在为任何包含它的绑定而生成策略时都包含 `UdpTransportBindingElement`。  
   
  在 `IPolicyExportExtension.ExportPolicy` 中，如果我们在多播模式下，则添加 UDP 的断言和另一个断言。 这是因为，多路广播模式影响通信堆栈的构造方式，因此必须在两端之间进行协调。  
   
@@ -257,7 +257,7 @@ AddWSAddressingAssertion(context, encodingBindingElement.MessageVersion.Addressi
   
 -   通过自定义绑定：自定义绑定允许用户根据任意一组绑定元素创建自己的绑定。  
   
--   通过使用系统提供的、包含我们的绑定元素的绑定。 WCF 提供了大量的这些系统定义的绑定，如`BasicHttpBinding`， `NetTcpBinding`，和`WsHttpBinding`。 这些绑定中的每个绑定与一个准确定义的配置文件相关联。  
+-   通过使用系统提供的、包含我们的绑定元素的绑定。 WCF 提供了几个系统定义的绑定，如`BasicHttpBinding`， `NetTcpBinding`，和`WsHttpBinding`。 这些绑定中的每个绑定与一个准确定义的配置文件相关联。  
   
  此示例在从 `SampleProfileUdpBinding` 派生的 <xref:System.ServiceModel.Channels.Binding> 中实现配置文件绑定。 `SampleProfileUdpBinding` 中最多包含四个绑定元素：`UdpTransportBindingElement`、`TextMessageEncodingBindingElement CompositeDuplexBindingElement` 和 `ReliableSessionBindingElement`。  
   
@@ -337,7 +337,7 @@ if (context.Endpoint.Binding is CustomBinding)
 ```  
   
 ### <a name="binding-section"></a>绑定节  
- `SampleProfileUdpBindingCollectionElement` 节是一个 `StandardBindingCollectionElement`，它向配置系统公开 `SampleProfileUdpBinding`。 批量实现委派给从 `SampleProfileUdpBindingConfigurationElement` 派生的 `StandardBindingElement`。 `SampleProfileUdpBindingConfigurationElement`具有在对应于属性的属性`SampleProfileUdpBinding`，和函数，以便从中映射`ConfigurationElement`绑定。 最后，在 `OnApplyConfiguration` 中重写 `SampleProfileUdpBinding` 方法，如下面的示例代码所示。  
+ `SampleProfileUdpBindingCollectionElement` 节是一个 `StandardBindingCollectionElement`，它向配置系统公开 `SampleProfileUdpBinding`。 批量实现委派给从 `SampleProfileUdpBindingConfigurationElement` 派生的 `StandardBindingElement`。 `SampleProfileUdpBindingConfigurationElement`属性相对应的属性上`SampleProfileUdpBinding`，并从映射的函数`ConfigurationElement`绑定。 最后，在 `OnApplyConfiguration` 中重写 `SampleProfileUdpBinding` 方法，如下面的示例代码所示。  
   
 ```csharp
 protected override void OnApplyConfiguration(string configurationName)  
@@ -394,7 +394,7 @@ protected override void OnApplyConfiguration(string configurationName)
 ```  
   
 ## <a name="the-udp-test-service-and-client"></a>UDP 测试服务和客户端  
- 用于使用此示例传输的测试代码位于 UdpTestService 和 UdpTestClient 目录中。 服务代码包含两个测试 - 一个测试从代码中设置绑定和终结点，另一个测试通过配置完成这些操作。 这两个测试都使用两个终结点。 一个终结点使用`SampleUdpProfileBinding`与[ \<reliableSession >](http://msdn.microsoft.com/library/9c93818a-7dfa-43d5-b3a1-1aafccf3a00b)设置为`true`。 另一个终结点使用具有 `UdpTransportBindingElement` 的自定义绑定。 这相当于使用`SampleUdpProfileBinding`与[ \<reliableSession >](http://msdn.microsoft.com/library/9c93818a-7dfa-43d5-b3a1-1aafccf3a00b)设置为`false`。 这两个测试都创建一个服务，为每个绑定添加一个终结点，打开该服务，然后等待用户按 Enter 后再关闭该服务。  
+ 用于使用此示例传输的测试代码位于 UdpTestService 和 UdpTestClient 目录中。 服务代码包含两个测试 - 一个测试从代码中设置绑定和终结点，另一个测试通过配置完成这些操作。 这两个测试都使用两个终结点。 一个终结点使用`SampleUdpProfileBinding`与[ \<reliableSession >](https://msdn.microsoft.com/library/9c93818a-7dfa-43d5-b3a1-1aafccf3a00b)设置为`true`。 另一个终结点使用具有 `UdpTransportBindingElement` 的自定义绑定。 这相当于使用`SampleUdpProfileBinding`与[ \<reliableSession >](https://msdn.microsoft.com/library/9c93818a-7dfa-43d5-b3a1-1aafccf3a00b)设置为`false`。 这两个测试都创建一个服务，为每个绑定添加一个终结点，打开该服务，然后等待用户按 Enter 后再关闭该服务。  
   
  当您启动服务测试应用程序时，应看到如下输出。  
   
@@ -468,7 +468,7 @@ svcutil http://localhost:8000/udpsample/ /reference:UdpTranport\bin\UdpTransport
   
 1.  若要生成解决方案，请按照中的说明[生成 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/building-the-samples.md)。  
   
-2.  若要在单或跨计算机配置上运行示例，请按照中的说明[运行 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/running-the-samples.md)。  
+2.  若要在单或跨计算机配置中运行示例，请按照中的说明[运行 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/running-the-samples.md)。  
   
 3.  请参阅前面的“UDP 测试服务和客户端”一节。  
   
@@ -477,6 +477,6 @@ svcutil http://localhost:8000/udpsample/ /reference:UdpTranport\bin\UdpTransport
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目录不存在，请转到[Windows Communication Foundation (WCF) 和针对.NET Framework 4 的 Windows Workflow Foundation (WF) 示例](http://go.microsoft.com/fwlink/?LinkId=150780)下载所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
+>  如果此目录不存在，请转到[Windows Communication Foundation (WCF) 和.NET Framework 4 的 Windows Workflow Foundation (WF) 示例](https://go.microsoft.com/fwlink/?LinkId=150780)若要下载所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Transport\Udp`

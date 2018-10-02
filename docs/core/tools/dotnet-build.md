@@ -4,14 +4,14 @@ description: dotnet build 命令可生成项目及其所有依赖项。
 author: mairaw
 ms.author: mairaw
 ms.date: 05/25/2018
-ms.openlocfilehash: 6b0b7bc11b560d8632b38f1dfa4e7eb3ce6c54d2
-ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
+ms.openlocfilehash: da33647e583af8441218f64fb8ac76d5de3cee38
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34697126"
+ms.lasthandoff: 09/23/2018
+ms.locfileid: "46580104"
 ---
-# <a name="dotnet-build"></a>dotnet-build
+# <a name="dotnet-build"></a>dotnet 生成
 
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 
@@ -47,7 +47,7 @@ dotnet build [-h|--help]
 
 `dotnet build` 使用 MSBuild 生成项目，因此它支持并行生成和增量生成。 有关详细信息，请参阅[增量生成](/visualstudio/msbuild/incremental-builds)。
 
-除其自己的选项外，`dotnet build` 命令也接受 MSBuild 选项，如用来设置属性的 `/p` 或用来定义记录器的 `/l`。 有关这些选项的详细信息，请参阅 [MSBuild 命令行参考](/visualstudio/msbuild/msbuild-command-line-reference)。
+除其自己的选项外，`dotnet build` 命令也接受 MSBuild 选项，如用来设置属性的 `-p` 或用来定义记录器的 `-l`。 有关这些选项的详细信息，请参阅 [MSBuild 命令行参考](/visualstudio/msbuild/msbuild-command-line-reference)。
 
 项目是否可执行由项目文件中的 `<OutputType>` 属性决定。 以下示例显示生成可执行代码的项目：
 

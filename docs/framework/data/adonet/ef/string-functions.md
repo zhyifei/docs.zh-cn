@@ -2,12 +2,12 @@
 title: 字符串函数
 ms.date: 03/30/2017
 ms.assetid: 338f0c26-8aee-43eb-bd1a-ec0849a376b9
-ms.openlocfilehash: 0faac7eb37a1405c38137ce9887cf7de4c36df3a
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: b23261d013a1a7485fe36c7904e5b0b2e5eab21c
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32766473"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43465624"
 ---
 # <a name="string-functions"></a>字符串函数
 SQL Server .NET Framework 数据提供程序 (SqlClient) 提供了各种 `String` 函数，这些函数针对输入 `String` 执行操作并返回 `String` 或数值结果。 这些函数位于 SqlServer 命名空间中，该命名空间在您使用 SqlClient 时可用。 提供程序的命名空间属性使实体框架可以确定此提供程序对特定构造（如类型和函数）使用哪个前缀。  
@@ -18,7 +18,7 @@ SQL Server .NET Framework 数据提供程序 (SqlClient) 提供了各种 `String
 |--------------|-----------------|  
 |`ASCII(expression)`|返回字符串表达式中最左侧字符的 ASCII 代码值。<br /><br /> **参数**<br /><br /> `expression`：ASCII `String` 类型的任何有效表达式。<br /><br /> **返回值**<br /><br /> 一个 `Int32`。<br /><br /> **示例**<br /><br /> `SqlServer.ASCII('A')`|  
 |`CHAR(expression)`|将 `Int32` 代码转换为 ASCII 字符串。<br /><br /> **参数**<br /><br /> `expression`：`Int32`。<br /><br /> **返回值**<br /><br /> ASCII `String`。<br /><br /> **示例**<br /><br /> `SqlServer.char(97)`|  
-|`CHARINDEX(expression1, expression2 [, start_location])`|返回字符串中指定表达式的起始位置。<br /><br /> **参数**<br /><br /> `expression1`：包含要查找的字符序列的表达式。 表达式可以为 String（ASCII 或 Unicode）类型或 Binary 类型。<br /><br /> `expression2`：用于搜索指定序列的表达式（通常是列）。 表达式可以为 String（ASCII 或 Unicode）类型或 Binary 类型。<br /><br /> `start_location`: （可选) Int64 （在 SQL Server 2000 中不返回） 或 Int32，表示的字符位置开始搜索 expression1 expression2 中。 如果未指定 start_location、或者指定值为负数或零，那么搜索将会开始于 expression2 的起始位置。<br /><br /> **返回值**<br /><br /> 一个 `Int32`。<br /><br /> **示例**<br /><br /> `SqlServer.CHARINDEX('h', 'habcdefgh', 2)`|  
+|`CHARINDEX(expression1, expression2 [, start_location])`|返回字符串中指定表达式的起始位置。<br /><br /> **参数**<br /><br /> `expression1`：包含要查找的字符序列的表达式。 表达式可以为 String（ASCII 或 Unicode）类型或 Binary 类型。<br /><br /> `expression2`：用于搜索指定序列的表达式（通常是列）。 表达式可以为 String（ASCII 或 Unicode）类型或 Binary 类型。<br /><br /> `start_location`: （可选) Int64 （在 SQL Server 2000 中不返回） 或 Int32，表示要开始搜索 expression1 在 expression2 中的字符位置。 如果未指定 start_location、或者指定值为负数或零，那么搜索将会开始于 expression2 的起始位置。<br /><br /> **返回值**<br /><br /> 一个 `Int32`。<br /><br /> **示例**<br /><br /> `SqlServer.CHARINDEX('h', 'habcdefgh', 2)`|  
 |`DIFFERENCE(expression, expression)`|比较两个字符串的 `SOUNDEX` 值，并评估它们之间的相似性。<br /><br /> **参数**<br /><br /> ASCII 或 Unicode `String` 类型。 `expression` 可以是常量、变量或列。<br /><br /> **返回值**<br /><br /> 返回 `Int32`，表示两个字符表达式的 SOUNDEX 值之间的差异。 范围为从 0 到 4。 0 表示几乎不同或完全不同，4 表示几乎相同或完全相同。<br /><br /> **示例**<br /><br /> `// The following example returns a DIFFERENCE value of 4,`<br /><br /> `//the least possible difference or the best match.`<br /><br /> `SqlServer.DIFFERENCE('Green','Greene');`|  
 |`LEFT(expression, count)`|返回字符串中从左边开始的指定个数的字符。<br /><br /> **参数**<br /><br /> `expression`：Unicode 或 ASCII String 类型。 使用 CAST 函数可以显式转换 character_expression。<br /><br /> `count`：`Int64`（在 SQL Server 2000 中不返回）或 `Int32` 类型，指定将返回 character_expression 中的多少个字符。<br /><br /> **返回值**<br /><br /> Unicode 或 ASCII `String`。<br /><br /> **示例**<br /><br /> `SqlServer.LEFT('SQL Server', 4)`|  
 |`LEN(expression)`|返回指定 String 表达式中的字符数，其中不包含尾随空格。<br /><br /> **参数**<br /><br /> `expression`：`String`（Unicode 或 ASCII）类型或 `Binary` 类型的表达式<br /><br /> **返回值**<br /><br /> 一个 `Int32`。<br /><br /> **示例**<br /><br /> `SqlServer.LEN('abcd')`|  
@@ -32,10 +32,10 @@ SQL Server .NET Framework 数据提供程序 (SqlClient) 提供了各种 `String
 |`REVERSE(expression)`|返回将输入字符串的字符顺序反转后的 Unicode 或 ASCII String。<br /><br /> **参数**<br /><br /> `expression`：Unicode 或 ASCII `String` 类型。<br /><br /> **返回值**<br /><br /> Unicode 或 ASCII `String` 类型。<br /><br /> **示例**<br /><br /> `SqlServer.REVERSE('abcd')`|  
 |`RIGHT(char_expression, count)`|返回字符串中从右边开始的指定个数的字符。<br /><br /> **参数**<br /><br /> `char_expression`: Unicode 或 ASCII String 类型。 使用 CAST 函数可以显式转换 character_expression。<br /><br /> `count`：`Int64`（在 SQL Server 2000 中不返回）或 `Int32` 类型，指定将返回 character_expression 中的多少个字符。<br /><br /> **返回值**<br /><br /> ASCII `String` 类型。<br /><br /> **示例**<br /><br /> `SqlServer.RIGHT('SQL Server', 6)`|  
 |`RTRIM(expression)`|返回删除了尾随空格的 Unicode 或 ASCII String。<br /><br /> **参数**<br /><br /> `expression`：Unicode 或 ASCII `String` 类型。<br /><br /> **返回值**<br /><br /> Unicode 或 ASCII `String` 类型。<br /><br /> **示例**<br /><br /> `SqlServer.RTRIM('   d   e      ')`|  
-|`SOUNDEX(expression)`|返回一个四字符代码 (SOUNDEX) 以评估两个字符串的相似性。**自变量**<br /><br /> `expression`：Unicode 或 ASCII String 类型。<br /><br /> **返回值**<br /><br /> ASCII `String`。 一个由四个字符组成的代码 (SOUNDEX)，用于评估两个字符串的相似性。<br /><br /> **示例**<br /><br /> `Select SqlServer.SOUNDEX('Smith'), SqlServer.SOUNDEX('Smythe') FROM {1}`<br /><br /> **返回**<br /><br /> `----- -----  S530  S530`|  
+|`SOUNDEX(expression)`|返回一个四字符代码 (SOUNDEX) 以评估两个字符串的相似性。**参数**<br /><br /> `expression`：Unicode 或 ASCII String 类型。<br /><br /> **返回值**<br /><br /> ASCII `String`。 一个由四个字符组成的代码 (SOUNDEX)，用于评估两个字符串的相似性。<br /><br /> **示例**<br /><br /> `Select SqlServer.SOUNDEX('Smith'), SqlServer.SOUNDEX('Smythe') FROM {1}`<br /><br /> **返回**<br /><br /> `----- -----  S530  S530`|  
 |`SPACE(int_expression)`|返回由重复的空格组成的 ASCII `String`。<br /><br /> **参数**<br /><br /> `int_expression`：指示空格数的 `Int64`（在 SQL Server 2000 中不返回）或 `Int32`。<br /><br /> **返回值**<br /><br /> ASCII `String`。<br /><br /> **示例**<br /><br /> `SqlServer.SPACE(2)`|  
 |`STR(float_expression [, length [, decimal]])`|返回从数值数据转换而成的 ASCII `String`。<br /><br /> **参数**<br /><br /> `float _expression`：带小数点的近似数值 (`Double`) 数据类型的表达式。<br /><br /> `length`：（可选）表示总长度的 `Int32`。 它包括小数点、符号、数字以及空格。 默认值为 10。<br /><br /> `decimal`: (可选)`Int32`表示小数点右侧的位数。 小数必须小于或等于 16 位。 如果小数超过 16 位，则会将结果截断至小数点右侧 16 位。<br /><br /> **返回值**<br /><br /> ASCII `String`。<br /><br /> **示例**<br /><br /> `SqlServer.STR(212.0)`|  
-|`STUFF(str_expression, start, length, str_expression_to_insert)`|在字符串表达式中，在指定的起始点删除指定长度的字符并插入另一组字符。<br /><br /> **参数**<br /><br /> `str_expression`：Unicode 或 ASCII `String`。<br /><br /> `start:` `Int64` （在 SQL Server 2000 中不返回） 或`Int32`值，该值指定要开始删除和插入的位置。<br /><br /> `length`：`Int64`（在 SQL Server 2000 中不返回）或 `Int32` 值，指定要删除的字符数。<br /><br /> `str_expression_to_insert`：Unicode 或 ASCII `String`。<br /><br /> **返回值**<br /><br /> Unicode 或 ASCII `String`。<br /><br /> **示例**<br /><br /> `SqlServer.STUFF('abcd', 2, 2, 'zz')`|  
+|`STUFF(str_expression, start, length, str_expression_to_insert)`|在字符串表达式中，在指定的起始点删除指定长度的字符并插入另一组字符。<br /><br /> **参数**<br /><br /> `str_expression`：Unicode 或 ASCII `String`。<br /><br /> `start:` `Int64` （在 SQL Server 2000 中不返回） 或`Int32`值，该值指定开始删除和插入的位置。<br /><br /> `length`：`Int64`（在 SQL Server 2000 中不返回）或 `Int32` 值，指定要删除的字符数。<br /><br /> `str_expression_to_insert`：Unicode 或 ASCII `String`。<br /><br /> **返回值**<br /><br /> Unicode 或 ASCII `String`。<br /><br /> **示例**<br /><br /> `SqlServer.STUFF('abcd', 2, 2, 'zz')`|  
 |`SUBSTRING(str_expression, start, length)`|返回 `String` 表达式的一部分。<br /><br /> **参数**<br /><br /> `str_expression`：`String`（ASCII 或 Unicode）类型或 `Binary` 类型的表达式。<br /><br /> `start`：`Int64`（在 SQL Server 2000 中不返回）或 `Int32`，指定子字符串的开始位置。 1 指此字符串中的第一个字符。<br /><br /> `length`：`Int64`（在 SQL Server 2000 中不返回）或 `Int32`，指定将返回表达式中的多少个字符。<br /><br /> **返回值**<br /><br /> `String`（ASCII 或 Unicode）类型或 `Binary` 类型。<br /><br /> **示例**<br /><br /> `SqlServer.SUBSTRING('abcd', 2, 2)`|  
 |`UNICODE(expression)`|如 Unicode 标准所定义，返回输入表达式的第一个字符的整数值。<br /><br /> **参数**<br /><br /> `expression`：Unicode `String`。<br /><br /> **返回值**<br /><br /> 一个 `Int32`。<br /><br /> **示例**<br /><br /> `SqlServer.UNICODE('a')`|  
 |`UPPER(expression)`|将小写字符数据转换成大写后返回 `String` 表达式。<br /><br /> **参数**<br /><br /> `expression`：ASCII 或 Unicode String 类型的表达式。<br /><br /> **返回值**<br /><br /> ASCII 或 Unicode `String` 类型。<br /><br /> **示例**<br /><br /> `SqlServer.UPPER('AbB')`|  
@@ -44,7 +44,7 @@ SQL Server .NET Framework 数据提供程序 (SqlClient) 提供了各种 `String
   
 |SQL Server 2000|SQL Server 2005|SQL Server 2008|  
 |---------------------|---------------------|---------------------|  
-|[字符串函数 (TRANSACT-SQL)](http://go.microsoft.com/fwlink/?LinkId=115915)|[字符串函数 (TRANSACT-SQL)](http://go.microsoft.com/fwlink/?LinkId=115916)|[字符串函数 (TRANSACT-SQL)](http://go.microsoft.com/fwlink/?LinkId=115914)|  
+|[字符串函数 (Transact SQL)](https://go.microsoft.com/fwlink/?LinkId=115915)|[字符串函数 (Transact SQL)](https://go.microsoft.com/fwlink/?LinkId=115916)|[字符串函数 (Transact SQL)](https://go.microsoft.com/fwlink/?LinkId=115914)|  
   
 ## <a name="see-also"></a>请参阅  
  [用于实体框架函数的 SqlClient](../../../../../docs/framework/data/adonet/ef/sqlclient-for-ef-functions.md)  

@@ -1,16 +1,16 @@
 ---
 title: Visual Basic 入门
-ms.date: 08/10/2017
+ms.date: 09/10/2018
 helpviewer_keywords:
 - get started, Visual Basic
 - Visual Basic, get started
 ms.assetid: 6685467b-28fa-4cde-9516-f0e00ad08911
-ms.openlocfilehash: 9d51aca4c7ad491c0b807ef6a40cb2581f97355b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c17b3e1849664bb1a5d56b60e8f4121fedfcdae3
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33589836"
+ms.lasthandoff: 09/15/2018
+ms.locfileid: "45638764"
 ---
 # <a name="get-started-with-visual-basic"></a>Visual Basic 入门
 文档的本节内容将帮助你了解  Visual Basic  应用程序开发的入门知识。  
@@ -31,12 +31,6 @@ ms.locfileid: "33589836"
   
 [为 Visual Basic 程序员提供的附加资源](additional-resources.md)  
 提供网站和新闻组列表，它们能够帮助您找到常见问题的答案。  
-
-## <a name="develop-net-core-applications-with-visual-basic"></a>使用 Visual Basic 开发 .NET Core 应用程序
-
-[使用 Visual Studio 2017 生成 Visual Basic .NET Core Hello World 应用](../../core/tutorials/vb-with-visual-studio.md) 
-
-[使用 Visual Studio 2017 生成 Visual Basic 和 .NET Core 类库](../../core/tutorials/vb-library-with-visual-studio.md) 
 
 ## <a name="see-also"></a>请参阅
  [获得 Visual Basic](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs)  
@@ -65,5 +59,5 @@ ms.locfileid: "33589836"
  [Visual C++](/cpp/)  
  提供 Visual C++ 文档的链接。  
   
- [Office 和 SharePoint 开发](https://msdn.microsoft.com/library/d2tx7z6d)  
+ [Office 和 SharePoint 开发](/visualstudio/vsto/office-and-sharepoint-development-in-visual-studio)  
  提供有关将 Microsoft Office 和 Visual Studio 用作业务应用程序一部分的信息。

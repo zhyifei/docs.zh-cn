@@ -3,13 +3,16 @@ title: 使用 CLI 工具部署 .NET Core 应用
 description: 了解如何使用命令行接口 (CLI) 工具部署 .NET Core 应用
 author: rpetrusha
 ms.author: ronpet
-ms.date: 04/18/2017
-ms.openlocfilehash: 7b009068422686442ebff83b9400c365f34a3154
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.date: 09/05/2018
+dev_langs:
+- csharp
+- vb
+ms.openlocfilehash: a7e810372d831699eae777186385e45fe65cdf45
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33217826"
+ms.lasthandoff: 09/28/2018
+ms.locfileid: "47208245"
 ---
 # <a name="deploying-net-core-apps-with-command-line-interface-cli-tools"></a>使用命令行接口 (CLI) 工具部署 .NET Core 应用
 
@@ -26,7 +29,7 @@ ms.locfileid: "33217826"
 
 ## <a name="framework-dependent-deployment"></a>依赖框架的部署
 
-如果不使用第三方依赖项，部属依赖框架的部署只包括生成、测试和发布应用。 一个用 C# 编写的简单示例可说明此过程。 
+如果不使用第三方依赖项，部属依赖框架的部署只包括生成、测试和发布应用。 一个用 C# 编写的简单示例可说明此过程。
 
 1. 创建项目目录。
 
@@ -34,16 +37,17 @@ ms.locfileid: "33217826"
 
 1. 创建项目。
 
-   在命令栏行中，键入 [dotnet new console](../tools/dotnet-new.md)，在该目录中创建新的 C# 控制台项目。
+   在命令行中，键入 [dotnet new console](../tools/dotnet-new.md) 以创建新的 C# 控制台项目或键入 [dotnet new console -lang vb](../tools/dotnet-new.md) 以在该目录中创建新的 Visual Basic 控制台项目。
 
 1. 添加应用程序的源代码。
 
-   在编辑器中打开 Program.cs 文件，然后使用下列代码替换自动生成的代码。 它会提示用户输入文本，并显示用户输入的个别词。 它使用正则表达式 `\w+` 来将输入文本中的词分开。
+   在编辑器中打开 Program.cs 文件或 Program.vb 文件，然后使用下列代码替换自动生成的代码。 它会提示用户输入文本，并显示用户输入的个别词。 它使用正则表达式 `\w+` 来将输入文本中的词分开。
 
-   [!code-csharp[deployment#1](../../../samples/snippets/core/deploying/deployment-example.cs)]
+   [!code-csharp[deployment#1](~/samples/snippets/core/deploying/cs/deployment-example.cs)]
+   [!code-vb[deployment#1](~/samples/snippets/core/deploying/vb/deployment-example.vb)]
 
 1. 更新项目的依赖项和工具。
- 
+
    运行 [dotnet restore](../tools/dotnet-restore.md)（[请参阅注释](#dotnet-restore-note)）命令，还原项目中指定的依赖项。
 
 1. 创建应用的调试版本。
@@ -55,7 +59,7 @@ ms.locfileid: "33217826"
    完成程序调试和测试后，使用下列命令创建部署：
 
       ```console
-      dotnet publish -f netcoreapp1.1 -c Release
+      dotnet publish -f netcoreapp2.1 -c Release
       ```
    这将创建一个应用的发行版（而不是调试版）。 生成的文件位于名为“发布”的目录中，该目录位于项目的 bin 目录的子目录中。
 
@@ -101,11 +105,11 @@ ms.locfileid: "33217826"
 
    在编辑器中打开 Program.cs 文件，然后使用下列代码替换自动生成的代码。 它会提示用户输入文本，并显示用户输入的个别词。 它使用正则表达式 `\w+` 来将输入文本中的词分开。
 
-   [!code-csharp[deployment#1](../../../samples/snippets/core/deploying/deployment-example.cs)]
-
+   [!code-csharp[deployment#1](~/samples/snippets/core/deploying/cs/deployment-example.cs)]
+   [!code-vb[deployment#1](~/samples/snippets/core/deploying/vb/deployment-example.vb)]
 1. 定义应用的目标平台。
 
-   在 csproj 文件（该文件用于定义应用的目标平台）的 `<PropertyGroup>` 部分中创建 `<RuntimeIdentifiers>` 标记，然后指定每个目标平台的运行时标识符 (RID)。 请注意，还需要添加分号来分隔 RID。 请查看[运行时标识符目录](../rid-catalog.md)，获取运行时标识符列表。 
+   在 csproj 文件（该文件用于定义应用的目标平台）的 `<PropertyGroup>` 部分中创建 `<RuntimeIdentifiers>` 标记，然后指定每个目标平台的运行时标识符 (RID)。 请注意，还需要添加分号来分隔 RID。 请查看[运行时标识符目录](../rid-catalog.md)，获取运行时标识符列表。
 
    例如，以下 `<PropertyGroup>` 部分表明应用在 64 位 Windows 10 操作系统和 64 位 OS X 10.11 版本的操作系统上运行。
 
@@ -121,6 +125,14 @@ ms.locfileid: "33217826"
 
    运行 [dotnet restore](../tools/dotnet-restore.md)（[请参阅注释](#dotnet-restore-note)）命令，还原项目中指定的依赖项。
 
+1. 确定是否要使用全球化固定模式。
+
+   特别是如果应用面向 Linux，则可以通过利用[全球化固定模式](https://github.com/dotnet/corefx/blob/master/Documentation/architecture/globalization-invariant-mode.md)来减小部署的总规模。 全球化固定模式适用于不具有全局意识且可以使用[固定区域性](xref:System.Globalization.CultureInfo.InvariantCulture)的格式约定、大小写约定以及字符串比较和排序顺序的应用程序。
+
+   要启用固定模式，右键单击“解决方案资源管理器”中的项目（不是解决方案），然后选择“编辑 SCD.csproj”或“编辑 SCD.vbproj”。 然后将以下突出显示的行添加到文件中：
+
+ [!code-xml[globalization-invariant-mode](~/samples/snippets/core/deploying/xml/invariant.csproj)]
+
 1. 创建应用的调试版本。
 
    在命令行中，使用 [dotnet 生成](../tools/dotnet-build.md)命令。
@@ -134,7 +146,7 @@ ms.locfileid: "33217826"
       dotnet publish -c Release -r osx.10.11-x64
       ```
 
-   这将为每个目标平台创建一个应用的发行版（而不是调试版）。 生成的文件位于名为“发布”的子目录中，该子目录位于项目的 .\bin\Release\netcoreapp1.1\<runtime_identifier> 子目录的子目录中。 请注意，每个子目录中都包含完整的启动应用所需的文件集（既有应用文件，也有所有 .NET Core 文件）。
+   这将为每个目标平台创建一个应用的发行版（而不是调试版）。 生成的文件位于名为“发布”的子目录中，该子目录位于项目的 .\bin\Release\netcoreapp2.1\<runtime_identifier> 子目录的子目录中。 请注意，每个子目录中都包含完整的启动应用所需的文件集（既有应用文件，也有所有 .NET Core 文件）。
 
 与应用程序的文件一起，发布过程将发出包含应用调试信息的程序数据库 (.pdb) 文件。 该文件主要用于调试异常。 可以选择不使用应用程序文件打包该文件。 但是，如果要调试应用的发布版本，则应保存该文件。
 
@@ -146,7 +158,7 @@ ms.locfileid: "33217826"
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <OutputType>Exe</OutputType>
-    <TargetFramework>netcoreapp1.1</TargetFramework>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
     <RuntimeIdentifiers>win10-x64;osx.10.11-x64</RuntimeIdentifiers>
   </PropertyGroup>
 </Project>
@@ -172,7 +184,7 @@ ms.locfileid: "33217826"
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <OutputType>Exe</OutputType>
-    <TargetFramework>netcoreapp1.1</TargetFramework>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
     <RuntimeIdentifiers>win10-x64;osx.10.11-x64</RuntimeIdentifiers>
   </PropertyGroup>
   <ItemGroup>
@@ -188,8 +200,7 @@ ms.locfileid: "33217826"
 <a name="dotnet-restore-note"></a>
 [!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
 
-# <a name="see-also"></a>请参阅
+## <a name="see-also"></a>请参阅
 
-[.NET Core 应用程序部署](index.md)   
-[.NET Core 运行时标识符 (RID) 目录](../rid-catalog.md)   
-
+* [.NET Core 应用程序部署](index.md)
+* [.NET Core 运行时标识符 (RID) 目录](../rid-catalog.md)

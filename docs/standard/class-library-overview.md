@@ -39,12 +39,12 @@ helpviewer_keywords:
 ms.assetid: 7e4c5921-955d-4b06-8709-101873acf157
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7b6730e621a85dc8e656723647f949449241c407
-ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
+ms.openlocfilehash: acc51287a8c670da63d0ec421aa232864ea91c2b
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36207451"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47232899"
 ---
 # <a name="net-class-library-overview"></a>.NET 类库概述
 
@@ -110,7 +110,8 @@ ms.locfileid: "36207451"
   
  有关命名空间的详细信息，请使用 [.NET API 浏览器](https://docs.microsoft.com/dotnet/api)来浏览 .NET 类库。 API 参考文档提供了有关每个名称空间及其类型和每个成员的文档。  
   
-## <a name="see-also"></a>请参阅  
- [常规类型系统](../../docs/standard/base-types/common-type-system.md)  
- [.NET API 浏览器](https://docs.microsoft.com/dotnet/api)  
- [概述](../../docs/framework/get-started/overview.md)
+## <a name="see-also"></a>请参阅
+
+- [常规类型系统](../../docs/standard/base-types/common-type-system.md)  
+- [.NET API 浏览器](https://docs.microsoft.com/dotnet/api)  
+- [概述](../../docs/framework/get-started/overview.md)

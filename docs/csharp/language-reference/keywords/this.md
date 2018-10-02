@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - this keyword [C#]
 ms.assetid: d4f827fe-4710-410b-89b8-867dad44b8a3
-ms.openlocfilehash: 04496079114be45388926993b67e8f1d3f2e9f15
-ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
+ms.openlocfilehash: df1bf6a3e6d24b231bf5e3c7a960f49084c4e53a
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2018
-ms.locfileid: "34172030"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47209381"
 ---
 # <a name="this-c-reference"></a>this（C# 参考）
 `this` 关键字指代类的当前实例，还可用作扩展方法的第一个参数的修饰符。  
@@ -47,9 +47,10 @@ ms.locfileid: "34172030"
 ## <a name="c-language-specification"></a>C# 语言规范  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>请参阅  
- [C# 参考](../../../csharp/language-reference/index.md)  
- [C# 编程指南](../../../csharp/programming-guide/index.md)  
- [C# 关键字](../../../csharp/language-reference/keywords/index.md)  
- [base](../../../csharp/language-reference/keywords/base.md)  
- [方法](../../../csharp/programming-guide/classes-and-structs/methods.md)
+## <a name="see-also"></a>请参阅
+
+- [C# 参考](../../../csharp/language-reference/index.md)  
+- [C# 编程指南](../../../csharp/programming-guide/index.md)  
+- [C# 关键字](../../../csharp/language-reference/keywords/index.md)  
+- [base](../../../csharp/language-reference/keywords/base.md)  
+- [方法](../../../csharp/programming-guide/classes-and-structs/methods.md)

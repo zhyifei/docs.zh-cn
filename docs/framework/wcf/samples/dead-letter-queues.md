@@ -2,15 +2,15 @@
 title: 死信队列
 ms.date: 03/30/2017
 ms.assetid: ff664f33-ad02-422c-9041-bab6d993f9cc
-ms.openlocfilehash: 9f92aeb02d997820fa2955419a3cdcf1c4369b45
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4f30e9486c8798e3610e13e6abe1c2612c70b69f
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33507976"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43801880"
 ---
 # <a name="dead-letter-queues"></a>死信队列
-本示例演示如何处理传递失败的消息。 它基于[事务性 MSMQ 绑定](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md)示例。 本示例使用 `netMsmqBinding` 绑定。 此服务是自承载控制台应用程序，通过它可以观察服务接收排队消息。  
+本示例演示如何处理传递失败的消息。 它基于[事务处理 MSMQ 绑定](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md)示例。 本示例使用 `netMsmqBinding` 绑定。 此服务是自承载控制台应用程序，通过它可以观察服务接收排队消息。  
   
 > [!NOTE]
 >  本主题的最后介绍了此示例的设置过程和生成说明。  
@@ -49,7 +49,7 @@ public interface IOrderProcessor
 }  
 ```
 
- 此示例中的服务代码是[事务性 MSMQ 绑定](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md)。  
+ 此示例中的服务代码是[事务处理 MSMQ 绑定](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md)。  
   
  与服务的通信发生在事务范围内。 服务读取队列中的消息，执行操作，然后显示操作的结果。 应用程序还为死信消息创建死信队列。  
 
@@ -169,7 +169,7 @@ public void SubmitPurchaseOrder(PurchaseOrder po)
 }
 ```
 
- 死信队列中的消息是被发送到处理消息的服务的消息。 因此，当死信消息服务从队列中读取消息，Windows Communication Foundation (WCF) 通道层终结点中发现不匹配，并且不会调度消息。 在这种情况下，会将消息发送到订单处理服务，但由死信消息服务接收。 若要接收发送到不同终结点的消息，请在 `ServiceBehavior` 中指定一个可匹配任何地址的地址筛选器。 这是成功处理从死信队列中读取的消息所必需的。  
+ 死信队列中的消息是被发送到处理消息的服务的消息。 因此，当死信消息服务从队列读取消息，Windows Communication Foundation (WCF) 通道层中的终结点发现不匹配，并且不会调度该消息。 在这种情况下，会将消息发送到订单处理服务，但由死信消息服务接收。 若要接收发送到不同终结点的消息，请在 `ServiceBehavior` 中指定一个可匹配任何地址的地址筛选器。 这是成功处理从死信队列中读取的消息所必需的。  
   
  在本示例中，如果失败的原因是消息超时，则死信消息服务会重新发送该消息。对于所有其他原因，则显示传送失败，如下面的示例代码所示：  
 
@@ -310,7 +310,7 @@ Processing Purchase Order: 97897eff-f926-4057-a32b-af8fb11b9bf9
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>设置、生成和运行示例  
   
-1.  确保已执行[的 Windows Communication Foundation 示例的一次性安装过程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
+1.  请确保您具有执行[的 Windows Communication Foundation 示例的一次性安装过程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
   
 2.  如果先运行服务，则它将检查以确保队列存在。 如果队列不存在，则服务将创建一个队列。 可以先运行服务以创建队列或通过 MSMQ 队列管理器创建一个队列。 执行下面的步骤来在 Windows 2008 中创建队列。  
   
@@ -320,13 +320,13 @@ Processing Purchase Order: 97897eff-f926-4057-a32b-af8fb11b9bf9
   
     3.  右键单击**私有消息队列**，然后选择**新建**，**专用队列**。  
   
-    4.  检查**事务**框。  
+    4.  检查**事务性**框。  
   
     5.  输入`ServiceModelSamplesTransacted`作为新队列的名称。  
   
 3.  若要生成 C# 或 Visual Basic .NET 版本的解决方案，请按照 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)中的说明进行操作。  
   
-4.  在运行示例单或跨计算机配置更改队列名称，相应地替换的计算机的完整名称为 localhost 并按照中的说明[运行 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+4.  若要运行示例单一或跨计算机配置更改队列名称相应地，计算机的全名替换 localhost 并按照中的说明[运行 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
 ### <a name="to-run-the-sample-on-a-computer-joined-to-a-workgroup"></a>在加入到工作组的计算机上运行此示例  
   
@@ -357,7 +357,7 @@ Processing Purchase Order: 97897eff-f926-4057-a32b-af8fb11b9bf9
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目录不存在，请转到[Windows Communication Foundation (WCF) 和针对.NET Framework 4 的 Windows Workflow Foundation (WF) 示例](http://go.microsoft.com/fwlink/?LinkId=150780)下载所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
+>  如果此目录不存在，请转到[Windows Communication Foundation (WCF) 和.NET Framework 4 的 Windows Workflow Foundation (WF) 示例](https://go.microsoft.com/fwlink/?LinkId=150780)若要下载所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\Net\MSMQ\DeadLetter`  
   

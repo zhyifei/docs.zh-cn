@@ -12,12 +12,12 @@ helpviewer_keywords:
 - cross-references [C#], tags
 - <seealso> C# XML tag
 ms.assetid: 8e157f3f-f220-4fcf-9010-88905b080b18
-ms.openlocfilehash: e3c9d68884e5cd4f5a4f81580f60cdde775458a3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: bb881c5309aaa721f12cfd60469aeeddd0a68446
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33349130"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43865795"
 ---
 # <a name="ltseealsogt-c-programming-guide"></a>&lt;seealso&gt;（C# 编程指南）
 ## <a name="syntax"></a>语法  
@@ -40,6 +40,7 @@ ms.locfileid: "33349130"
 ## <a name="example"></a>示例  
  有关使用 \<seealso> 的示例，请参阅 [\<summary>](../../../csharp/programming-guide/xmldoc/summary.md)。  
   
-## <a name="see-also"></a>请参阅  
- [C# 编程指南](../../../csharp/programming-guide/index.md)  
- [建议的文档注释标记](../../../csharp/programming-guide/xmldoc/recommended-tags-for-documentation-comments.md)
+## <a name="see-also"></a>请参阅
+
+- [C# 编程指南](../../../csharp/programming-guide/index.md)  
+- [建议的文档注释标记](../../../csharp/programming-guide/xmldoc/recommended-tags-for-documentation-comments.md)

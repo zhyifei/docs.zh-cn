@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - int keyword [C#]
 ms.assetid: 212447b4-5d2a-41aa-88ab-84fe710bdb52
-ms.openlocfilehash: 41ee5ecdae815eaddf8652a4873c060fb8f92bc3
-ms.sourcegitcommit: f9e38d31288fe5962e6be5b0cc286da633482873
+ms.openlocfilehash: 95ac267bc70d2e7873593c08e0b10cb50fefd8c8
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37028261"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43524039"
 ---
 # <a name="int-c-reference"></a>int（C# 参考）
 
@@ -78,12 +78,13 @@ int y = (int)3.0;    // OK: explicit conversion.
 ## <a name="c-language-specification"></a>C# 语言规范  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Int32>  
- [C# 参考](../../../csharp/language-reference/index.md)  
- [C# 编程指南](../../../csharp/programming-guide/index.md)  
- [C# 关键字](../../../csharp/language-reference/keywords/index.md)  
- [整型表](../../../csharp/language-reference/keywords/integral-types-table.md)  
- [内置类型表](../../../csharp/language-reference/keywords/built-in-types-table.md)  
- [隐式数值转换表](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)  
- [显式数值转换表](../../../csharp/language-reference/keywords/explicit-numeric-conversions-table.md)
+## <a name="see-also"></a>请参阅
+
+- <xref:System.Int32>  
+- [C# 参考](../../../csharp/language-reference/index.md)  
+- [C# 编程指南](../../../csharp/programming-guide/index.md)  
+- [C# 关键字](../../../csharp/language-reference/keywords/index.md)  
+- [整型表](../../../csharp/language-reference/keywords/integral-types-table.md)  
+- [内置类型表](../../../csharp/language-reference/keywords/built-in-types-table.md)  
+- [隐式数值转换表](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)  
+- [显式数值转换表](../../../csharp/language-reference/keywords/explicit-numeric-conversions-table.md)

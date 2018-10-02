@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 0af3bd64-92a2-4b47-ae62-f5df35f131a6
-ms.openlocfilehash: 11bacf436daf2a77a9cf46b4883d282143572e27
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 9c7a656e82198568c39b9bb58f8708f563d6caa2
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32756392"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43520822"
 ---
 # <a name="creating-expression-columns"></a>创建表达式列
 您可以为列定义表达式，让它能够包含根据同一行中其他列值或根据表中多行的列值计算而得的值。 要定义要计算的表达式，可使用目标列的 <xref:System.Data.DataColumn.Expression%2A> 属性，并使用 <xref:System.Data.DataColumn.ColumnName%2A> 属性在表达式中引用其他列。 用于表达式列的 <xref:System.Data.DataColumn.DataType%2A> 必须适合于表达式将返回的值。  
@@ -23,7 +23,7 @@ ms.locfileid: "32756392"
 |计算|"UnitPrice * Quantity"|  
 |聚合|Sum(Price)|  
   
- 你可以设置**表达式**在现有的属性**DataColumn**对象，也可以将该属性用作第三个自变量传递给<xref:System.Data.DataColumn>构造函数，如下面的示例中所示。  
+ 可以设置**表达式**上的现有属性**DataColumn**对象，或者您可以将该属性用作第三个参数传递给<xref:System.Data.DataColumn>构造函数，如下面的示例中所示。  
   
 ```vb  
 workTable.Columns.Add("Total",Type.GetType("System.Double"))  
@@ -36,7 +36,7 @@ workTable.Columns.Add("Total", typeof(Double));
 workTable.Columns.Add("SalesTax", typeof(Double), "Total * 0.086");  
 ```  
   
- 表达式可以引用其他表达式列，但循环引用（其中两个表达式相互引用）将产生异常。 有关编写表达式的规则，请参阅<xref:System.Data.DataColumn.Expression%2A>属性**DataColumn**类。  
+ 表达式可以引用其他表达式列，但循环引用（其中两个表达式相互引用）将产生异常。 有关编写表达式的规则，请参阅<xref:System.Data.DataColumn.Expression%2A>的属性**DataColumn**类。  
   
 ## <a name="see-also"></a>请参阅  
  <xref:System.Data.DataColumn>  
@@ -44,4 +44,4 @@ workTable.Columns.Add("SalesTax", typeof(Double), "Total * 0.086");
  <xref:System.Data.DataTable>  
  [数据表架构定义](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatable-schema-definition.md)  
  [数据表](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatables.md)  
- [ADO.NET 托管提供程序和数据集开发人员中心](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)

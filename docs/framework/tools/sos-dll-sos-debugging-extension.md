@@ -8,15 +8,15 @@ helpviewer_keywords:
 ms.assetid: 9ac1b522-77ab-4cdc-852a-20fcdc9ae498
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 608211221d0f6f6a24b85561cd16fb21e15c336b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0c038b66e4ed62d614a25e717c52fdcc9c5f9a23
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33409901"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45615529"
 ---
 # <a name="sosdll-sos-debugging-extension"></a>SOS.dll（SOS 调试扩展）
-SOS 调试扩展 (SOS.dll) 通过提供有关内部公共语言运行时 (CLR) 环境的信息，帮助你在 Visual Studio 和 Windows 调试器 (WinDbg.exe) 中调试托管程序。 此工具需要你启用项目的非托管调试。 SOS.dll 自动随 .NET Framework 一起安装。 若要在 Visual Studio 中使用 SOS.dll，请安装 [Windows 驱动程序工具包 (WDK)](http://msdn.microsoft.com/windows/hardware/hh852362)。  
+SOS 调试扩展 (SOS.dll) 通过提供有关内部公共语言运行时 (CLR) 环境的信息，帮助你在 Visual Studio 和 Windows 调试器 (WinDbg.exe) 中调试托管程序。 此工具需要你启用项目的非托管调试。 SOS.dll 自动随 .NET Framework 一起安装。 若要在 Visual Studio 中使用 SOS.dll，请安装 [Windows 驱动程序工具包 (WDK)](https://msdn.microsoft.com/windows/hardware/hh852362)。  
   
 > [!NOTE]
 >  如果使用的是 [!INCLUDE[vs_dev12](../../../includes/vs-dev12-md.md)]，则 Visual Studio 中的 Windows 调试器支持 SOS.dll，但 Visual Studio 调试器的“即时”窗口不支持 SOS.dll。  
@@ -89,7 +89,7 @@ SOS 调试扩展 (SOS.dll) 通过提供有关内部公共语言运行时 (CLR) �
 |**Token2EE** \<*module name*> \<*token*>|将指定模块中的指定元数据标记转换成 `MethodTable` 结构或 `MethodDesc` 结构。<br /><br /> 可以传递 `*` 作为模块名参数，以便在每个已加载的托管模块中查找该标记映射到的内容。 也可以传递某个模块的调试器名称，如 `mscorlib` 或 `image00400000`。|  
 |**Threads** [**-live**] [**-special**]|显示进程中的所有托管线程。<br /><br /> Threads 命令显示调试程序速记 ID、CLR 线程 ID 以及操作系统线程 ID。  此外，**Threads** 命令还会显示“Domain”列、“APT”列和“Exception”列，这三列分别用于指示正在执行某线程的应用程序域、显示 COM 单元模式以及显示该线程中引发的上一个异常。<br /><br /> **-live** 选项显示与活动线程关联的线程。<br /><br />  选项显示由 CLR 创建的所有特殊线程。 特殊线程包括垃圾回收线程（在并发垃圾回收和服务器垃圾回收中）、调试器帮助程序线程、终结器线程、<xref:System.AppDomain> 卸载线程和线程池计时器线程。|  
 |**ThreadState \<** *State value field* **>**|显示线程的状态。 `value` 参数为 **Threads** 报告输出中的 `State` 字段的值。<br /><br /> 示例:<br /><br /> `0:003> !Threads     ThreadCount:      2     UnstartedThread:  0     BackgroundThread: 1     PendingThread:    0     DeadThread:       0     Hosted Runtime:   no                                           PreEmptive   GC Alloc           Lock            ID OSID ThreadOBJ    State     GC       Context       Domain   Count APT Exception        0    1  250 0019b068      a020 Disabled 02349668:02349fe8 0015def0     0 MTA        2    2  944 001a6020      b220 Enabled  00000000:00000000 0015def0     0 MTA (Finalizer)     0:003> !ThreadState b220         Legal to Join         Background         CLR Owns         CoInitialized         In Multi Threaded Apartment`|  
-|**TraverseHeap** [**-xml**] \<*filename*>|以 CLR 探查器能够识别的格式将堆信息写入指定文件。 **-xml** 选项使 **TraverseHeap** 命令将文件格式化为 XML。<br /><br /> 可以从 [Microsoft 下载中心](http://go.microsoft.com/fwlink/?LinkID=67325)下载 CLR 探查器。|  
+|**TraverseHeap** [**-xml**] \<*filename*>|以 CLR 探查器能够识别的格式将堆信息写入指定文件。 **-xml** 选项使 **TraverseHeap** 命令将文件格式化为 XML。<br /><br /> 可以从 [Microsoft 下载中心](https://go.microsoft.com/fwlink/?LinkID=67325)下载 CLR 探查器。|  
 |**U** [**-gcinfo**] [**-ehinfo**] [**-n**] \<*MethodDesc address*> &#124; \<*Code address*>|显示由方法的 `MethodDesc` 结构指针或方法体内的代码地址指定的托管方法的反汇编（带有批注）。 **U** 命令将从开始到结束显示整个方法，并带有将元数据标记转换为名称的批注。<br /><br /> **-gcinfo** 选项使 **U** 命令显示方法的 `GCInfo` 结构。<br /><br /> **-ehinfo** 选项显示方法的异常信息。 也可以使用 **EHInfo** 命令获取此信息。<br /><br /> **-n** 选项禁止显示源文件名和行号。 如果调试器已指定选项 SYMOPT_LOAD_LINES，则 SOS 将查找每个托管帧的符号，如果成功，则将显示对应的源文件名和行号。 可以指定 **-n** 选项来禁用此行为。|  
 |**VerifyHeap**|检查垃圾回收器堆中是否有损坏迹象，并显示找到的任何错误。<br /><br /> 错误构造的平台调用可能导致堆损坏。|  
 |**VerifyObj** \<*object address*>|检查作为自变量传递的对象是否有损坏迹象。|  
@@ -99,9 +99,9 @@ SOS 调试扩展 (SOS.dll) 通过提供有关内部公共语言运行时 (CLR) �
 ## <a name="remarks"></a>备注  
  SOS 调试扩展允许你查看有关在 CLR 内运行的代码的信息。 例如，可以使用 SOS 调试扩展显示有关托管堆的信息、查找堆损坏情况、显示运行时所使用的内部数据类型以及查看有关在运行时内运行的所有托管代码的信息。  
   
- 若要在 Visual Studio 中使用 SOS 调试扩展，请安装 [Windows 驱动程序工具包 (WDK)](http://msdn.microsoft.com/windows/hardware/hh852362)。 有关 Visual Studio 中的集成调试环境的信息，请参见 Windows 开发人员中心中的[调试环境](http://msdn.microsoft.com/library/windows/hardware/hh406268.aspx)。  
+ 若要在 Visual Studio 中使用 SOS 调试扩展，请安装 [Windows 驱动程序工具包 (WDK)](https://msdn.microsoft.com/windows/hardware/hh852362)。 有关 Visual Studio 中的集成调试环境的信息，请参见 Windows 开发人员中心中的[调试环境](https://msdn.microsoft.com/library/windows/hardware/hh406268.aspx)。  
   
- 还可以通过将 SOS 调试扩展加载到 WinDbg.exe 调试器（可从 [WDK 和开发人员工具网站](http://go.microsoft.com/fwlink/?LinkId=103787)获取）中并在 WinDbg.exe 中执行命令来使用此扩展。  
+ 还可以通过将 SOS 调试扩展加载到 WinDbg.exe 调试器（可从 [WDK 和开发人员工具网站](https://go.microsoft.com/fwlink/?LinkId=103787)获取）中并在 WinDbg.exe 中执行命令来使用此扩展。  
   
  若要将 SOS 调试扩展加载到 WinDbg.exe 调试器中，请在工具中运行以下命令：  
   

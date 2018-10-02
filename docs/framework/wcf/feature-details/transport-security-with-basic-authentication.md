@@ -6,18 +6,17 @@ dev_langs:
 - vb
 ms.assetid: b54f491d-196b-4279-876c-76b83ec0442c
 author: BrucePerlerMS
-manager: mbaldwin
-ms.openlocfilehash: 65d076a9fef716fca4fe87df6bc5c7773e2dda0f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4a6ad2746bea9dfea1999e272796d44f0341e64d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33499110"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47235567"
 ---
 # <a name="transport-security-with-basic-authentication"></a>通过基本身份验证确保的传输安全
-下图显示 Windows Communication Foundation (WCF) 服务和客户端。 服务器需要一个有效的可用于安全套接字层 (SSL) 的 X.509 证书，并且客户端必须信任此服务器证书。 而且，Web 服务已经有了一个可以使用的 SSL 实现。 有关详细信息启用基本身份验证在 Internet 信息服务 (IIS)，请参阅[ http://go.microsoft.com/fwlink/?LinkId=83822 ](http://go.microsoft.com/fwlink/?LinkId=83822)。  
+下图显示了 Windows Communication Foundation (WCF) 服务和客户端。 服务器需要一个有效的可用于安全套接字层 (SSL) 的 X.509 证书，并且客户端必须信任此服务器证书。 而且，Web 服务已经有了一个可以使用的 SSL 实现。 有关详细信息启用基本身份验证在 Internet 信息服务 (IIS)，请参阅[ https://go.microsoft.com/fwlink/?LinkId=83822 ](https://go.microsoft.com/fwlink/?LinkId=83822)。  
   
- ![传输安全基本身份验证](../../../../docs/framework/wcf/feature-details/media/securedbyusername.gif "SecuredbyUsername")  
+ ![传输安全使用基本身份验证](../../../../docs/framework/wcf/feature-details/media/securedbyusername.gif "SecuredbyUsername")  
   
 |特征|描述|  
 |--------------------|-----------------|  
@@ -37,7 +36,7 @@ ms.locfileid: "33499110"
 -   使用提供的配置创建服务，但不定义任何终结点。  
   
 ### <a name="code"></a>代码  
- 下面的代码演示如何创建使用 Windows 域用户名和密码确保传输安全的服务终结点。 请注意，此服务要求使用 X.509 证书向客户端进行身份验证。 有关详细信息，请参阅[使用证书](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)和[如何： 使用 SSL 证书配置端口](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)。  
+ 下面的代码演示如何创建使用 Windows 域用户名和密码确保传输安全的服务终结点。 请注意，此服务要求使用 X.509 证书向客户端进行身份验证。 有关详细信息，请参阅[Working with Certificates](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)并[如何： 使用 SSL 证书配置端口](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)。  
   
  [!code-csharp[C_SecurityScenarios#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#1)]
  [!code-vb[C_SecurityScenarios#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#1)]  
@@ -119,4 +118,4 @@ ms.locfileid: "33499110"
  [如何：使用 SSL 证书配置端口](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)  
  [安全性概述](../../../../docs/framework/wcf/feature-details/security-overview.md)  
  [\<clientCredentials>](../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md)  
- [Windows Server App Fabric 的安全模型](http://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+ [Windows Server App Fabric 的安全模型](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

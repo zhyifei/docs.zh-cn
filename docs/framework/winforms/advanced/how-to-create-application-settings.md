@@ -8,30 +8,30 @@ helpviewer_keywords:
 - application settings [Windows Forms], Windows Forms
 - application settings [Windows Forms], creating
 ms.assetid: 1e7aa347-af75-41e5-89ca-f53cab704f72
-ms.openlocfilehash: e6e268169949994e1b58b5b8a7dcd0429895fb38
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7a84fc85b42f2b78ccafcae3c815847633b9916d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33524165"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47206357"
 ---
 # <a name="how-to-create-application-settings"></a>如何：创建应用程序设置
 使用托管代码时，你可以创建新的应用程序设置并将其绑定窗体或窗体控件的属性上，以便在运行时自动加载和保存这些设置。  
   
  在以下过程中，手动创建从 <xref:System.Configuration.ApplicationSettingsBase> 派生的包装类。 对于此类，你可以为每个想要公开的应用程序设置添加可公开访问的属性。  
   
- 你还可以使用 Visual Studio 设计器中的最小代码执行该过程。  另请参阅[如何： 使用设计器创建应用程序设置](http://msdn.microsoft.com/library/wabtadw6\(v=vs.110\))。  
+ 你还可以使用 Visual Studio 设计器中的最小代码执行该过程。  另请参阅[如何： 使用设计器创建应用程序设置](https://msdn.microsoft.com/library/wabtadw6\(v=vs.110\))。  
   
 ### <a name="to-create-new-application-settings-programmatically"></a>以编程的方式创建新的应用程序设置  
   
-1.  向你的项目添加新类，并对其重命名。 对于此过程，我们将调用此类`MyUserSettings`。 更改类定义，以使类从 <xref:System.Configuration.ApplicationSettingsBase> 派生。  
+1.  向你的项目添加新类，并对其重命名。 对于此过程中，我们将调用此类`MyUserSettings`。 更改类定义，以使类从 <xref:System.Configuration.ApplicationSettingsBase> 派生。  
   
 2.  为你需要的每个应用程序设置定义此包装类的属性，并将该属性应用到 <xref:System.Configuration.ApplicationScopedSettingAttribute> 或 <xref:System.Configuration.UserScopedSettingAttribute>，具体取决于设置的作用域。 有关设置作用域的详细信息，请参阅[应用程序设置概述](../../../../docs/framework/winforms/advanced/application-settings-overview.md)。 现在，代码应如下所示：  
   
      [!code-csharp[ApplicationSettings.Create#1](../../../../samples/snippets/csharp/VS_Snippets_Winforms/ApplicationSettings.Create/CS/MyAppSettings.cs#1)]
      [!code-vb[ApplicationSettings.Create#1](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/ApplicationSettings.Create/VB/MyAppSettings.vb#1)]  
   
-3.  在你的应用程序中创建此包装类的实例。 该实例通常为主窗体的私有成员。 对类进行定义后，你需要将其绑定到属性；在这种情况下，是指绑定到你窗体的 <xref:System.Windows.Forms.Form.BackColor%2A> 属性。 你可以在你的窗体中完成此`Load`事件处理程序。  
+3.  在你的应用程序中创建此包装类的实例。 该实例通常为主窗体的私有成员。 对类进行定义后，你需要将其绑定到属性；在这种情况下，是指绑定到你窗体的 <xref:System.Windows.Forms.Form.BackColor%2A> 属性。 可以完成此操作在窗体的`Load`事件处理程序。  
   
      [!code-csharp[ApplicationSettings.Create#2](../../../../samples/snippets/csharp/VS_Snippets_Winforms/ApplicationSettings.Create/CS/Form1.cs#2)]
      [!code-vb[ApplicationSettings.Create#2](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/ApplicationSettings.Create/VB/Form1.vb#2)]  

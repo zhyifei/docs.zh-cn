@@ -1,5 +1,5 @@
 ---
-title: My.Settings 对象
+title: My.Settings 对象 (Visual Basic)
 ms.date: 07/20/2015
 f1_keywords:
 - My.MySettingsProperty.Settings
@@ -7,29 +7,29 @@ f1_keywords:
 helpviewer_keywords:
 - My.Settings object
 ms.assetid: 41f30dc1-202a-4273-b9b7-5728941f996c
-ms.openlocfilehash: 54176ae6706311b17227c7dc21a5060c9b369753
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 83bba35340a917b649369fc1eb7a01a2bc6a2188
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33603027"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43861671"
 ---
 # <a name="mysettings-object"></a>My.Settings 对象
-提供属性和方法可以访问应用程序的设置。  
+提供用于访问应用程序的设置属性和方法。  
   
 ## <a name="remarks"></a>备注  
- `My.Settings`对象提供对应用程序的设置访问权限和可以动态存储和检索属性设置以及你的应用程序的其他信息。 有关详细信息，请参阅[管理应用程序设置 (.NET)](/visualstudio/ide/managing-application-settings-dotnet)。  
+ `My.Settings`对象提供对应用程序的设置的访问，并允许您动态存储和检索属性设置，并且你的应用程序的其他信息。 有关详细信息，请参阅[管理应用程序设置 (.NET)](/visualstudio/ide/managing-application-settings-dotnet)。  
   
 ## <a name="properties"></a>属性  
- `My.Settings` 对象的属性提供对应用程序设置的访问。 若要添加或删除设置，使用**设置设计器**。  
+ `My.Settings` 对象的属性提供对应用程序设置的访问。 若要添加或删除设置，请使用**设置设计器**。  
   
- 每个设置具有**名称**，**类型**，**作用域**，和**值**，并且这些设置确定如何用于访问每个设置的属性将出现在`My.Settings`对象：  
+ 每个设置具有**名称**，**类型**，**作用域**，以及**值**，并且这些设置确定如何要访问每个设置的属性将出现在`My.Settings`对象：  
   
 -   **名称**确定属性的名称。  
   
 -   **类型**确定属性的类型。  
   
--   **作用域**指示属性是否是只读的。 如果值为**应用程序**，该属性是只读的; 如果值为**用户**，属性为读写。  
+-   **作用域**指示该属性是只读的。 如果值为**应用程序**，该属性是只读的; 如果值为**用户**，属性为读写。  
   
 -   **值**是属性的默认值。  
   
@@ -37,8 +37,8 @@ ms.locfileid: "33603027"
   
 |方法|描述|  
 |---|---|  
-|`Reload`|将重新加载上次保存的值中的用户设置。|  
-|`Save`|将保存当前的用户设置。|  
+|`Reload`|重新加载上次保存的值中的用户设置。|  
+|`Save`|保存当前用户设置。|  
   
  `My.Settings`对象还提供了高级的属性和方法，继承自<xref:System.Configuration.ApplicationSettingsBase>类。  
   

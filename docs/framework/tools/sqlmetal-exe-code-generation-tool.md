@@ -9,12 +9,12 @@ helpviewer_keywords:
 - LINQ to SQL, DBML files
 - LINQ to SQL, SQLMetal
 ms.assetid: 819e5a96-7646-4fdb-b14b-fe31221b0614
-ms.openlocfilehash: c9dab959628343cd99f75ffeda30e3f423f2aaf7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 94ed6328857f6e77cea150d69719322d3aaaea69
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33409797"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46002887"
 ---
 # <a name="sqlmetalexe-code-generation-tool"></a>SqlMetal.exe（代码生成工具）
 SqlMetal 命令行工具可为 [!INCLUDE[vbtecdlinq](../../../includes/vbtecdlinq-md.md)] 的 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]组件生成代码和映射。 通过应用本主题后面出现的选项，可以指示 SqlMetal 执行若干种不同的操作，其中包括：  
@@ -25,7 +25,7 @@ SqlMetal 命令行工具可为 [!INCLUDE[vbtecdlinq](../../../includes/vbtecdlin
   
 -   从 .dbml 文件生成代码和映射特性或映射文件。  
   
- 此工具会自动随 Visual Studio 一起安装。 默认情况下，此文件位于 `drive`:\Program Files\Microsoft SDKs\Windows\v`n.nn`\bin 下。 如果没有安装 Visual Studio，也可以通过下载 [Windows SDK](http://go.microsoft.com/fwlink/?LinkId=142225)获取 SQLMetal 文件。  
+ 此工具会自动随 Visual Studio 一起安装。 默认情况下，此文件位于 `drive`:\Program Files\Microsoft SDKs\Windows\v`n.nn`\bin 下。 如果没有安装 Visual Studio，也可以通过下载 [Windows SDK](https://go.microsoft.com/fwlink/?LinkId=142225)获取 SQLMetal 文件。  
   
 > [!NOTE]
 >  使用 Visual Studio 的开发人员还可以使用 [!INCLUDE[vs_ordesigner_long](../../../includes/vs-ordesigner-long-md.md)] 生成实体类。 对于大型数据库，这种命令行方法具有很好的扩展性。 由于 SqlMetal 是一个命令行工具，因此可以在生成过程中使用它。  

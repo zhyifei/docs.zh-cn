@@ -10,12 +10,12 @@ helpviewer_keywords:
 - toolbars [Windows Forms], wrapping controls
 - ToolStrip control [Windows Forms], hosting controls
 ms.assetid: e2ce4990-661d-4882-a116-8a9eb575dc84
-ms.openlocfilehash: 09509705fc8e23b1b5e4fd8c67c12d0be84fc17a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b502890fcad051d2393bb175bb0795acee2df613
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33538299"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47196027"
 ---
 # <a name="how-to-wrap-a-windows-forms-control-with-toolstripcontrolhost"></a>如何：使用 ToolStripControlHost 包装 Windows 窗体控件
 <xref:System.Windows.Forms.ToolStripControlHost> 旨在通过使用 <xref:System.Windows.Forms.ToolStripControlHost> 构造函数或扩展 <xref:System.Windows.Forms.ToolStripControlHost> 本身启用任意 Windows 窗体控件的托管。 通过扩展 <xref:System.Windows.Forms.ToolStripControlHost> 并实现公开控件常用属性和方法的属性和方法，可轻松包装控件。 还可以公开控件在 <xref:System.Windows.Forms.ToolStripControlHost> 级别的事件。  
@@ -63,7 +63,7 @@ ms.locfileid: "33538299"
   
 -   对 System 和 System.Windows.Forms 程序集的引用。  
   
- 为 Visual Basic 或 Visual C# 中生成此示例从命令行有关的信息，请参阅[从命令行生成](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md)或[命令行上使用 csc.exe 生成](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)。 你也可以通过将代码粘贴到新项目中生成 Visual Studio 中的此示例。  另请参阅 [如何：使用 Visual Studio 编译和运行完整的 Windows 窗体代码示例](http://msdn.microsoft.com/library/Bb129228\(v=vs.110\))。  
+ Visual Basic 或 Visual C# 生成命令行中的此示例的信息，请参阅[从命令行生成](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md)或[命令行上使用 csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)。 也可以通过将代码粘贴到新的项目中生成此示例在 Visual Studio 中。  另请参阅[如何：使用 Visual Studio 编译和运行完整的 Windows 窗体代码示例](https://msdn.microsoft.com/library/Bb129228\(v=vs.110\))。  
   
 ## <a name="see-also"></a>请参阅  
  <xref:System.Windows.Forms.ToolStripControlHost>  

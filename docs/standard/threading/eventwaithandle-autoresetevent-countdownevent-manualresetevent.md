@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: cd94fc34-ac15-427f-b723-a1240a4fab7d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 543853f581436a5fb7e5c897012b99bef20dc289
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2f61e614696e731a85a030e34aa4356137d9000d
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33582924"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44260144"
 ---
 # <a name="eventwaithandle-autoresetevent-countdownevent-manualresetevent"></a>EventWaitHandle、AutoResetEvent、CountdownEvent、ManualResetEvent
 事件等待句柄允许线程通过相互发送信号和等待信号来同步活动。 这些同步事件基于 Win32 等待句柄，可分为两种类型：收到信号时自动重置的事件和手动重置的事件。  
@@ -35,13 +35,14 @@ ms.locfileid: "33582924"
  <xref:System.Threading.CountdownEvent> 类可以在使用等待句柄的代码中轻松实现分支/联接并行度模式。  
   
 ## <a name="related-sections"></a>相关章节  
- [等待句柄](http://msdn.microsoft.com/library/48d10b6f-5fd7-407c-86ab-0179aef72489)  
+ [等待句柄](https://msdn.microsoft.com/library/48d10b6f-5fd7-407c-86ab-0179aef72489)  
  <xref:System.Threading.WaitHandle> 类是 <xref:System.Threading.EventWaitHandle>、<xref:System.Threading.Semaphore> 和 <xref:System.Threading.Mutex> 类的基类。 它包含静态方法（如 <xref:System.Threading.WaitHandle.SignalAndWait%2A> 和 <xref:System.Threading.WaitHandle.WaitAll%2A>），这些方法在处理所有类型的等待句柄时非常有用。  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Threading.EventWaitHandle>  
- <xref:System.Threading.WaitHandle>  
- <xref:System.Threading.AutoResetEvent>  
- <xref:System.Threading.ManualResetEvent>  
- [线程处理对象和功能](../../../docs/standard/threading/threading-objects-and-features.md)  
- [托管线程处理基本知识](../../../docs/standard/threading/managed-threading-basics.md)
+## <a name="see-also"></a>请参阅
+
+- <xref:System.Threading.EventWaitHandle>  
+- <xref:System.Threading.WaitHandle>  
+- <xref:System.Threading.AutoResetEvent>  
+- <xref:System.Threading.ManualResetEvent>  
+- [线程处理对象和功能](../../../docs/standard/threading/threading-objects-and-features.md)  
+- [托管线程处理基本知识](../../../docs/standard/threading/managed-threading-basics.md)

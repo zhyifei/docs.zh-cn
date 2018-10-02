@@ -1,6 +1,6 @@
 ---
 title: GetPropertyHandle 函数 （非托管 API 参考）
-description: GetPropertyHandle 函数返回一个唯一的句柄该 identies 属性。
+description: GetPropertyHandle 函数返回一个唯一的句柄的 identies 属性。
 ms.date: 11/06/2017
 api_name:
 - GetPropertyHandle
@@ -16,15 +16,15 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 103e81dfa0e455157cfce5914b711347b15b578d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 94171b0708c97eb7510e916e451ed03645d706f3
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33460578"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47231450"
 ---
 # <a name="getpropertyhandle-function"></a>GetPropertyHandle 函数
-返回一个唯一的句柄，标识属性。
+返回标识属性的唯一句柄。
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
     
@@ -43,25 +43,25 @@ HRESULT GetPropertyHandle (
 ## <a name="parameters"></a>参数
 
 `vFunc`  
-[in]未使用此参数。
+[in]此参数是未使用。
 
 `ptr`  
-[in]指向的指针[IWbemObjectAccess](https://msdn.microsoft.com/library/aa391770(v=vs.85).aspx)实例。
+[in]一个指向[IWbemObjectAccess](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemobjectaccess)实例。
 
 `wszPropertyName`  
-[in]包含属性名称的 UTF16 编码 characaters 的以 null 结尾的字符串。   
+[in]一个以 null 结尾的 UTF16 编码 characaters 包含属性名称的字符串。   
 
 `pType`  
-[out]指向的指针[ `CIMTYPE` ](https://msdn.microsoft.com/library/aa386309(v=vs.85).aspx)表示属性的 CIM 类型的枚举成员。
+[out]一个指向[ `CIMTYPE` ](https://msdn.microsoft.com/library/aa386309(v=vs.85).aspx)表示属性的 CIM 类型的枚举成员。
 
 `pHandle`   
-[out]指向一个包含属性句柄整数的指针。
+[out]指向一个整数，包含属性句柄的指针。
 
 ## <a name="return-value"></a>返回值
 
-此函数返回以下值中定义*WbemCli.h*标头文件，或者你可以定义它们常量作为在代码中：
+此函数返回以下值中定义*WbemCli.h*标头文件，也可以在定义它们为常量在代码中：
 
-|返回的常量  |值  |描述  |
+|返回的常量  |“值”  |描述  |
 |---------|---------|---------|
 |`WBEM_E_NOT_FOUND` | 0x80041002 | 找不到指定的属性名称。 |
 |`WBEM_E_INVALID_PARAMETER` | 0x80041008 | 参数不是有效的。 |
@@ -70,18 +70,18 @@ HRESULT GetPropertyHandle (
   
 ## <a name="remarks"></a>备注
 
-此函数包装对的调用[IWbemClassObject::GetPropertyHandle](https://msdn.microsoft.com/library/aa391771(v=vs.85).aspx)方法。
+此函数包装对的调用[IWbemClassObject::GetPropertyHandle](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemobjectaccess-getpropertyhandle)方法。
 
-你可以使用此句柄来标识属性，使用时[IWbemObjectAccess](https://msdn.microsoft.com/library/aa391770(v=vs.85).aspx)方法读取或写入属性值。
+可以使用此句柄来标识属性，使用时[IWbemObjectAccess](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemobjectaccess)方法来读取或写入属性值。
 
-句柄可以检索的属性的所有数据类型以外`CIM_OBJECT`和`CIM_ARRAY`。 返回在类的所有实例的句柄的工作。
+句柄可以检索所有数据类型的属性以外`CIM_OBJECT`和`CIM_ARRAY`。 返回一个类的所有实例句柄的工作。
 
 ## <a name="requirements"></a>要求  
 **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** WMINet_Utils.idl  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>请参阅  
 [WMI 和性能计数器 （非托管 API 参考）](index.md)

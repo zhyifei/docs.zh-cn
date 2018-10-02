@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 353c0a8b-4cee-44f6-8e65-60e286743df9
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 6cf25d3d7dcde963f06729794716b75dffdb64ae
-ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
+ms.openlocfilehash: f4ae905b7500a8555691557b264985acf538d075
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36207360"
+ms.lasthandoff: 09/29/2018
+ms.locfileid: "47401246"
 ---
 # <a name="proxy-configuration"></a>代理配置
 代理服务器处理客户端对资源的请求。 代理可以从其缓存中返回已请求的资源，或将请求转发到资源驻留的服务器。 代理可以通过减少发送到远程服务器的请求数量来提高网络性能。 代理还可以用于限制对资源的访问。  

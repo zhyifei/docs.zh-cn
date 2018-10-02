@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: eedf2fbd-f407-4f62-bb1a-c00eb001b1dd
-ms.openlocfilehash: 8c01709f062048db34680ef8ba987f6e08bf15f2
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 2a52bf4a2a4999257377c7303cb6d362136d73a5
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32764146"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47192360"
 ---
 # <a name="method-based-query-syntax-examples-element-operators-linq-to-dataset"></a>基于方法的查询语法示例：元素运算符 (LINQ to DataSet)
 本主题中的示例演示如何使用 <xref:System.Linq.Enumerable.First%2A> 和 <xref:System.Linq.Enumerable.ElementAt%2A> 方法以便使用查询表达式语法从 <xref:System.Data.DataRow> 中获取 <xref:System.Data.DataSet> 元素。  
@@ -45,4 +45,4 @@ ms.locfileid: "32764146"
 ## <a name="see-also"></a>请参阅  
  [将数据加载到数据集中](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md)  
  [LINQ to DataSet 示例](../../../../docs/framework/data/adonet/linq-to-dataset-examples.md)  
- [标准查询运算符概述](http://msdn.microsoft.com/library/24cda21e-8af8-4632-b519-c404a839b9b2)
+ [标准查询运算符概述](https://msdn.microsoft.com/library/24cda21e-8af8-4632-b519-c404a839b9b2)

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - message logging [WCF]
 ms.assetid: 0ff4c857-8f09-4b85-9dc0-89084706e4c9
-ms.openlocfilehash: cea307b4e3920ff6413d6db28c2ce1e640b673f9
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: 80d852dd08e935d4c06e9b6d2e52b0a075849ef5
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33807835"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44085142"
 ---
 # <a name="configuring-message-logging"></a>配置消息日志记录
 本主题描述如何针对不同的方案配置消息日志记录。  
@@ -22,14 +22,14 @@ ms.locfileid: "33807835"
 ```xml  
 <system.diagnostics>  
   <sources>  
-      <source name="System.ServiceModel.MessageLogging">  
-        <listeners>  
-                 <add name="messages"  
-                 type="System.Diagnostics.XmlWriterTraceListener"  
-                 initializeData="c:\logs\messages.svclog" />  
-          </listeners>  
-      </source>  
-    </sources>  
+    <source name="System.ServiceModel.MessageLogging">  
+      <listeners>  
+         <add name="messages"  
+              type="System.Diagnostics.XmlWriterTraceListener"  
+              initializeData="c:\logs\messages.svclog" />  
+        </listeners>  
+    </source>  
+  </sources>  
 </system.diagnostics>  
   
 <system.serviceModel>  
@@ -45,7 +45,7 @@ ms.locfileid: "33807835"
 </system.serviceModel>  
 ```  
   
- 有关消息日志记录设置的详细信息，请参阅[建议的设置进行跟踪和消息日志记录](../../../../docs/framework/wcf/diagnostics/tracing/recommended-settings-for-tracing-and-message-logging.md)。  
+ 有关消息日志记录设置的详细信息，请参阅[建议的设置，用于跟踪和消息日志记录](../../../../docs/framework/wcf/diagnostics/tracing/recommended-settings-for-tracing-and-message-logging.md)。  
   
  可以使用 `add` 指定要使用的侦听器的名称和类型。 在示例配置中，侦听器命名为“messages”，并添加了标准 .NET Framework 跟踪侦听器(`System.Diagnostics.XmlWriterTraceListener`)，作为要使用的类型。 如果使用 `System.Diagnostics.XmlWriterTraceListener`，则必须在配置文件中指定输出文件的位置和名称。 这是通过将 `initializeData` 设置为该日志文件的名称来完成的。 否则，系统将引发异常。 还可以实现能向默认文件发出日志的自定义侦听器。  
   
@@ -78,7 +78,7 @@ ms.locfileid: "33807835"
  在这个层上记录的消息已准备好进行编码以便在网络上传输，或已准备好在经过网络传输后进行解码。 如果已定义筛选器，则仅记录与筛选器相匹配的消息。 否则将记录传输层上的所有消息。 所有基础结构消息都在此层上记录，包括可靠传递消息。 对于经过流处理的消息，则只记录标头。 此外，安全消息在此级别上按加密记录，但使用诸如 HTTPS 的安全传输时除外。  
   
 ### <a name="malformed-level"></a>“格式不正确”级别  
- 格式不正确的消息是由 WCF 堆栈情况下在处理的任何阶段被拒绝的消息。 格式错误的消息将被如实记录：已加密（如果是加密的）、带有不适当的 XML 等。 `maxSizeOfMessageToLog` 定义了记录为 CDATA 的消息大小。 默认情况下，`maxSizeOfMessageToLog` 等于 256K。 有关此属性的详细信息，请参阅其他选项部分。  
+ 格式不正确的消息是在任何阶段处理拒绝的 WCF 堆栈的消息。 格式错误的消息将被如实记录：已加密（如果是加密的）、带有不适当的 XML 等。 `maxSizeOfMessageToLog` 定义了记录为 CDATA 的消息大小。 默认情况下，`maxSizeOfMessageToLog` 等于 256K。 有关此属性的详细信息，请参阅其他选项部分。  
   
 ### <a name="other-options"></a>其他选项  
  除了日志记录的级别外，用户可以指定以下选项：  
@@ -94,7 +94,7 @@ ms.locfileid: "33807835"
   
  如果在配置文件中没有定义跟踪侦听器，则不论指定什么记录级别，都不会生成记录输出。  
   
- 对于消息日志记录选项（例如在本部分描述的属性），可以使用 Windows Management Instrumentation (WMI) 在运行时进行更改。 这可以通过访问[AppDomainInfo](../../../../docs/framework/wcf/diagnostics/wmi/appdomaininfo.md)实例，公开下列布尔属性： `LogMessagesAtServiceLevel`， `LogMessagesAtTransportLevel`，和`LogMalformedMessages`。 因此，如果为消息日志记录配置了跟踪侦听器，但是在配置中将这些选项设置为 `false`，那么可以在以后运行应用程序时将它们更改为 `true`。 这会在运行时有效地启用消息日志记录。 同样，如果在配置文件中启用了消息日志记录，可以在运行时使用 WMI 将其禁用。 有关详细信息，请参阅[使用 Windows Management Instrumentation 进行诊断](../../../../docs/framework/wcf/diagnostics/wmi/index.md)。  
+ 对于消息日志记录选项（例如在本部分描述的属性），可以使用 Windows Management Instrumentation (WMI) 在运行时进行更改。 这可以通过访问[AppDomainInfo](../../../../docs/framework/wcf/diagnostics/wmi/appdomaininfo.md)实例，它公开下列布尔属性： `LogMessagesAtServiceLevel`， `LogMessagesAtTransportLevel`，和`LogMalformedMessages`。 因此，如果为消息日志记录配置了跟踪侦听器，但是在配置中将这些选项设置为 `false`，那么可以在以后运行应用程序时将它们更改为 `true`。 这会在运行时有效地启用消息日志记录。 同样，如果在配置文件中启用了消息日志记录，可以在运行时使用 WMI 将其禁用。 有关详细信息，请参阅[使用 Windows Management Instrumentation 进行诊断](../../../../docs/framework/wcf/diagnostics/wmi/index.md)。  
   
  消息记录中的 `source` 字段指定了在何种上下文中记录消息：在发送/接收请求消息时、在进行请求-答复或单向请求时、在服务模型或传输层上或者在发现格式不正确的消息时。  
   

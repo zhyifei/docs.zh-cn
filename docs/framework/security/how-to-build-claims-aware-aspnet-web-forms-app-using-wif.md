@@ -3,13 +3,12 @@ title: 如何：使用 WIF 生成声明感知 ASP.NET Web 窗体应用程序
 ms.date: 03/30/2017
 ms.assetid: efb264dd-f47b-49a9-85ee-9f45d4425765
 author: BrucePerlerMS
-manager: mbaldwin
-ms.openlocfilehash: e8dc6b1c5073ac55be224eb0d410ad7f87d135d2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 83b5808ced1bc6243294b23d9784ec7993e3ba4a
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33400089"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47207149"
 ---
 # <a name="how-to-build-claims-aware-aspnet-web-forms-application-using-wif"></a>如何：使用 WIF 生成声明感知 ASP.NET Web 窗体应用程序
 ## <a name="applies-to"></a>适用于  
@@ -122,8 +121,8 @@ ms.locfileid: "33400089"
     </system.identityModel>  
     <system.identityModel.services>  
         <federationConfiguration>  
-            <cookieHandler requireSsl="false" />  
-            <wsFederation passiveRedirectEnabled="true" issuer="http://localhost:13922/wsFederationSTS/Issue" realm="http://localhost:28503/" reply="http://localhost:28503/" requireHttps="false" />  
+            <cookieHandler requireSsl="true" />  
+            <wsFederation passiveRedirectEnabled="true" issuer="http://localhost:13922/wsFederationSTS/Issue" realm="http://localhost:28503/" reply="http://localhost:28503/" requireHttps="true" />  
         </federationConfiguration>  
     </system.identityModel.services>  
     ```  

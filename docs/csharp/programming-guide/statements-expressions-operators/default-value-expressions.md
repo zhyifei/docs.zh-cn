@@ -5,12 +5,12 @@ ms.date: 04/25/2018
 helpviewer_keywords:
 - generics [C#], default keyword
 - default keyword [C#], generic programming
-ms.openlocfilehash: be51ad253a2939f538144caf4500f39e144c1664
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 94866f22fb3ad921a834cffb16fe17e44cef5965
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33336796"
+ms.lasthandoff: 09/27/2018
+ms.locfileid: "47192623"
 ---
 # <a name="default-value-expressions-c-programming-guide"></a>默认值表达式（C# 编程指南）
 
@@ -61,9 +61,9 @@ T t = default(T);
 
 ## <a name="see-also"></a>请参阅
 
- <xref:System.Collections.Generic>  
- [C# 编程指南](../index.md)  
- [泛型（C# 编程指南）](../generics/index.md)  
- [泛型方法](../generics/generic-methods.md)  
- [.NET 中的泛型](~/docs/standard/generics/index.md)  
- [默认值表](../../language-reference/keywords/default-values-table.md)
+- <xref:System.Collections.Generic>  
+- [C# 编程指南](../index.md)  
+- [泛型（C# 编程指南）](../generics/index.md)  
+- [泛型方法](../generics/generic-methods.md)  
+- [.NET 中的泛型](~/docs/standard/generics/index.md)  
+- [默认值表](../../language-reference/keywords/default-values-table.md)

@@ -2,12 +2,12 @@
 title: 中间具体化 (C#)
 ms.date: 07/20/2015
 ms.assetid: 7922d38f-5044-41cf-8e17-7173d6553a5e
-ms.openlocfilehash: b98f9765f5c54a49f26a9d1a3ac351f3eebcf9c2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 56c4bb57a931362b3e14f6a8da917ae6907565d6
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33320633"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43516538"
 ---
 # <a name="intermediate-materialization-c"></a>中间具体化 (C#)
 有时，稍不小心就会导致查询中的集合过早具体化，从而显著改变应用程序的内存和性能配置文件。 有些标准查询运算符会在生成单个元素之前导致其源集合具体化。 例如，<xref:System.Linq.Enumerable.OrderBy%2A?displayProperty=nameWithType> 首先循环访问其整个源集合，然后对所有项排序，最后生成第一项。 这意味着获取排序集合中的第一项需要高开销；其后的每一项不需要高开销。 这样做很有意义：该查询运算符将不可能以其他方式操作。  
@@ -86,5 +86,6 @@ Main: str >GHI!!!<
   
 -   [将标准查询运算符链接在一起 (C#)](../../../../csharp/programming-guide/concepts/linq/chaining-standard-query-operators-together.md)  
   
-## <a name="see-also"></a>请参阅  
- [教程：将查询链接在一起 (C#)](../../../../csharp/programming-guide/concepts/linq/tutorial-chaining-queries-together.md)
+## <a name="see-also"></a>请参阅
+
+- [教程：将查询链接在一起 (C#)](../../../../csharp/programming-guide/concepts/linq/tutorial-chaining-queries-together.md)

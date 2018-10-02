@@ -5,15 +5,15 @@ helpviewer_keywords:
 - examples [C#], COM classes
 - COM, exposing Visual C# objects to
 ms.assetid: 6504dea9-ad1c-4993-a794-830fec5270af
-ms.openlocfilehash: 2dd1092d9c1f6bb7482c306339a3d7f6684940eb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a77f022b4cf7659d506a7893923ce47270cb8c1b
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33322268"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "45745476"
 ---
 # <a name="example-com-class-c-programming-guide"></a>COM 类示例（C# 编程指南）
-下面是将公开为 COM 对象的类的示例。 在将此代码放置在 .cs 文件中并添加到项目后，将“注册 COM 互操作”属性设置为“True”。 有关详细信息，请参阅 [NIB：如何：为 COM 互操作注册组件](http://msdn.microsoft.com/library/4de7d474-56e8-4027-994d-d47ca4725c5e)。  
+下面是将公开为 COM 对象的类的示例。 在将此代码放置在 .cs 文件中并添加到项目后，将“注册 COM 互操作”属性设置为“True”。 有关详细信息，请参阅[如何：为 COM 互操作注册组件](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/w29wacsy(v=vs.100))。
   
  对 COM 公开 Visual C# 对象需要声明类接口、事件接口（如有必要）和类本身。 类成员必须遵循这些规则才能显示在 COM 中：  
   
@@ -36,7 +36,8 @@ ms.locfileid: "33322268"
 ## <a name="example"></a>示例  
  [!code-csharp[csProgGuideInterop#8](../../../csharp/programming-guide/interop/codesnippet/CSharp/example-com-class_1.cs)]  
   
-## <a name="see-also"></a>请参阅  
- [C# 编程指南](../../../csharp/programming-guide/index.md)  
- [互操作性](../../../csharp/programming-guide/interop/index.md)  
- [“项目设计器”->“生成”页 (C#)](/visualstudio/ide/reference/build-page-project-designer-csharp)
+## <a name="see-also"></a>请参阅
+
+- [C# 编程指南](../../../csharp/programming-guide/index.md)  
+- [互操作性](../../../csharp/programming-guide/interop/index.md)  
+- [“项目设计器”->“生成”页 (C#)](/visualstudio/ide/reference/build-page-project-designer-csharp)

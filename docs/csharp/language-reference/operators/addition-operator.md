@@ -8,12 +8,12 @@ helpviewer_keywords:
 - concatenation operator [C#]
 - addition operator [C#]
 ms.assetid: 93e56486-bb42-43c1-bd43-60af11e64e67
-ms.openlocfilehash: d4a269c07e0d6dc2ac6a6a101f200653c6ea7a29
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b49694bc8937c58bd295f0f8e57c378802d0dfb9
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33267402"
+ms.lasthandoff: 09/28/2018
+ms.locfileid: "47232379"
 ---
 # <a name="-operator-c-reference"></a>+ 运算符（C# 参考）
 `+` 运算符既可作为一元运算符也可作为二元运算符。  
@@ -33,8 +33,9 @@ ms.locfileid: "33267402"
 ## <a name="c-language-specification"></a>C# 语言规范  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>请参阅  
- [C# 参考](../../../csharp/language-reference/index.md)  
- [C# 编程指南](../../../csharp/programming-guide/index.md)  
- [C# 运算符](../../../csharp/language-reference/operators/index.md)  
- [运算符（C# 参考）](../../../csharp/language-reference/keywords/operator.md)
+## <a name="see-also"></a>请参阅
+
+- [C# 参考](../../../csharp/language-reference/index.md)  
+- [C# 编程指南](../../../csharp/programming-guide/index.md)  
+- [C# 运算符](../../../csharp/language-reference/operators/index.md)  
+- [运算符（C# 参考）](../../../csharp/language-reference/keywords/operator.md)

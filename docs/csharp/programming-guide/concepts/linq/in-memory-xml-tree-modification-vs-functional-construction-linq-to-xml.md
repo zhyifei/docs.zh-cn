@@ -2,12 +2,12 @@
 title: 内存中 XML 树修改与函数构造 (LINQ to XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: b5afc31d-a325-4ec6-bf17-0ff90a20ffca
-ms.openlocfilehash: 3e6d86ac11f10d7dbb3d270410415fb23acb2e01
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 836141185629683106698cc9b505c063de6c445e
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33333731"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45597571"
 ---
 # <a name="in-memory-xml-tree-modification-vs-functional-construction-linq-to-xml-c"></a>内存中 XML 树修改与函数构造 (LINQ to XML) (C#)
 就地修改 XML 树是更改 XML 文档形状的传统方法。 典型的应用程序将文档加载到数据存储区（如 DOM 或 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]）；使用编程接口插入节点、删除节点或更改节点的内容；然后将 XML 保存到文件或通过网络传输。  
@@ -73,5 +73,6 @@ Console.WriteLine(newTree);
   
  这是一个很简单的示例，但它显示了这两种方法之间基本原理上的差异。 对于转换较大的 XML 文档，函数方法可以产生更高的效率增益。  
   
-## <a name="see-also"></a>请参阅  
- [修改 XML 树 (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/modifying-xml-trees-linq-to-xml.md)
+## <a name="see-also"></a>请参阅
+
+- [修改 XML 树 (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/modifying-xml-trees-linq-to-xml.md)

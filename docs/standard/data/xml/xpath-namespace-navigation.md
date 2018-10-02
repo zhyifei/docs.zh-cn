@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: 06cc7abb-7416-415c-9dd6-67751b8cabd5
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: fed73c0a9c9bb4fba2644d76f470a8bdcace2b83
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e6d4f63dacc09208176b47dbca38783f1e9bc0a1
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33572923"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "45743977"
 ---
 # <a name="xpath-namespace-navigation"></a>XPath 命名空间浏览
 要对 XML 文档使用 XPath 查询，必须正确定位 XML 命名空间以及命名空间中包含的元素。 命名空间可防止在多个上下文中使用名称时可能产生的混淆情况；例如，名称 `ID` 可能引用与 XML 文档的不同元素相关联的多个标识符。 命名空间语法指定了 URI、名称和前缀，可区分 XML 文档的各个元素。  
@@ -70,6 +70,7 @@ using (XmlReader reader = XmlReader.Create("response.xml"))
   
  完全限定的命名空间和名称的精确度不仅仅是一种方便。 对前面的示例中的文档定义和代码进行一项小实验，可以验证如果不使用完全限定的元素名称进行浏览，就会引发异常。 例如，元素定义为 `<Search xmlns="http://schemas.microsoft.com/v1/Search">`，而查询字符串 `xpath = "/s:Envelope/s:Body/Search";` 没有对 `Search` 元素使用命名空间前缀，则此查询将返回 `null`，而不是 `Search` 元素。  
   
-## <a name="see-also"></a>请参阅  
- [使用 XPathNavigator 访问 XML 数据](../../../../docs/standard/data/xml/accessing-xml-data-using-xpathnavigator.md)  
- [使用 XPathNavigator 选择、计算和匹配 XML 数据](../../../../docs/standard/data/xml/selecting-evaluating-and-matching-xml-data-using-xpathnavigator.md)
+## <a name="see-also"></a>请参阅
+
+- [使用 XPathNavigator 访问 XML 数据](../../../../docs/standard/data/xml/accessing-xml-data-using-xpathnavigator.md)  
+- [使用 XPathNavigator 选择、计算和匹配 XML 数据](../../../../docs/standard/data/xml/selecting-evaluating-and-matching-xml-data-using-xpathnavigator.md)

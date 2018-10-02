@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: e12d8e74-31e3-4035-a87d-f3e66f0a9b89
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d3470ebdd55adc97a60f07228c441cb7c94a53e6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 10f947fc44e69368e30614e0b41eaf7c73fb6563
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33579153"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44084944"
 ---
 # <a name="garbage-collection-notifications"></a>垃圾回收通知
 在有些情况下，公共语言运行时执行的完整垃圾回收（即第 2 代回收）可能会对性能产生负面影响。 特别是，处理大量请求的服务器可能会出现此问题；在这种情况下，长时间垃圾回收会导致请求超时。为了防止在关键时期发生完全回收，可以接收即将执行完全垃圾回收的通知，再采取措施将工作负载重定向到另一个服务器实例。 也可以自行诱导回收，前提是当前服务器实例不需要处理请求。  
@@ -122,5 +122,6 @@ ms.locfileid: "33579153"
  [!code-csharp[GCNotification#1](../../../samples/snippets/csharp/VS_Snippets_CLR/GCNotification/cs/Program.cs#1)]
  [!code-vb[GCNotification#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/GCNotification/vb/program.vb#1)]  
   
-## <a name="see-also"></a>请参阅  
- [垃圾回收](../../../docs/standard/garbage-collection/index.md)
+## <a name="see-also"></a>请参阅
+
+- [垃圾回收](../../../docs/standard/garbage-collection/index.md)

@@ -9,12 +9,12 @@ dev_langs:
 ms.assetid: 2c61c920-d0f8-4c72-bfcc-6524570f3060
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b77d26a79796a9de87c07e366929cb516169907b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d0f5ae64eb1017570a56efab59a4bf1a66d5e02b
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33576306"
+ms.lasthandoff: 09/29/2018
+ms.locfileid: "47398912"
 ---
 # <a name="validating-an-xml-document-in-the-dom"></a>在 DOM 中验证 XML 文档
 默认情况下，在文档对象模型 (DOM) 中，<xref:System.Xml.XmlDocument> 类不针对 XML 架构定义语言 (XSD) 架构或文档类型定义 (DTD) 验证 XML；只验证 XML 的格式是否正确。  
@@ -82,10 +82,11 @@ ms.locfileid: "33576306"
   
  有关说明 <xref:System.Xml.Schema.ValidationEventHandler> 的示例，请参见上面的“在 XML 文档加载到 DOM 时进行验证”和“在 DOM 中验证 XML 文档”。  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Xml.XmlDocument>  
- <xref:System.Xml.XmlReader>  
- <xref:System.Xml.Schema.ValidationEventHandler>  
- <xref:System.Xml.XmlReaderSettings>  
- [使用 DOM 模型处理 XML 数据](../../../../docs/standard/data/xml/process-xml-data-using-the-dom-model.md)  
- [使用 XML 架构](../../../../docs/standard/data/xml/working-with-xml-schemas.md)
+## <a name="see-also"></a>请参阅
+
+- <xref:System.Xml.XmlDocument>  
+- <xref:System.Xml.XmlReader>  
+- <xref:System.Xml.Schema.ValidationEventHandler>  
+- <xref:System.Xml.XmlReaderSettings>  
+- [使用 DOM 模型处理 XML 数据](../../../../docs/standard/data/xml/process-xml-data-using-the-dom-model.md)  
+- [使用 XML 架构](../../../../docs/standard/data/xml/working-with-xml-schemas.md)

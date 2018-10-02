@@ -2,12 +2,12 @@
 title: 示例 XML 文件：合并的采购订单 2
 ms.date: 07/20/2015
 ms.assetid: 9d9698a5-95f2-4564-813b-ba536cdf3bfb
-ms.openlocfilehash: d9a97b097f208cdabb63023b36db1e374ac61c3f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3f7f24d0607be9a657e00b9e81c821ac3b41c3b2
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33329379"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43520468"
 ---
 # <a name="sample-xml-file-consolidated-purchase-orders"></a>示例 XML 文件：合并的采购订单
 下面的 XML 文件用在 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 文档的很多示例中。 此文件是一组来自多家公司、具有不同形状的采购订单。 每家公司的采购订单位于单独的命名空间中。  
@@ -144,5 +144,6 @@ ms.locfileid: "33329379"
 </PurchaseOrders>  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [示例 XML 文档 (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)
+## <a name="see-also"></a>请参阅
+
+- [示例 XML 文档 (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)

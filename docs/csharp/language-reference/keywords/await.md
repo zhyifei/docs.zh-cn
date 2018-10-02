@@ -7,12 +7,12 @@ helpviewer_keywords:
 - await keyword [C#]
 - await [C#]
 ms.assetid: 50725c24-ac76-4ca7-bca1-dd57642ffedb
-ms.openlocfilehash: e32c7007ca98ce2153386665b60c45ff9e90cc3b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7ca7554c81b7e8b54665700869c4f7788ebc3dbb
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33218915"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43511940"
 ---
 # <a name="await-c-reference"></a>await（C# 参考）
 `await` 运算符应用于异步方法中的任务，在方法的执行中插入挂起点，直到所等待的任务完成。 任务表示正在进行的工作。  
@@ -68,6 +68,6 @@ TResult result = await AsyncMethodThatReturnsValueTaskTResult();
 由于不支持在应用程序入口点中使用 `async` 和`await`，因此我们无法将 `async` 属性应用到 `Main` 方法，也无法等待 `GetPageLengthsAsync` 方法调用。 我们可通过检索 <xref:System.Threading.Tasks.Task%601.Result?displayProperty=nameWithType> 属性的值来确保 `Main` 方法等待异步操作完成。 对于不返回值的任务，可调用 <xref:System.Threading.Tasks.Task.Wait%2A?displayProperty=nameWithType> 方法。 
 
 ## <a name="see-also"></a>请参阅  
-[使用 Async 和 Await 的异步编程](../../../csharp/programming-guide/concepts/async/index.md)   
-[演练：使用 Async 和 Await 访问 Web](../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)   
-[async](../../../csharp/language-reference/keywords/async.md)
+- [使用 async 和 await 的异步编程](../../../csharp/programming-guide/concepts/async/index.md)   
+- [演练：使用 Async 和 Await 访问 Web](../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)   
+- [async](../../../csharp/language-reference/keywords/async.md)

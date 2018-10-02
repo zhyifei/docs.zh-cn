@@ -2,12 +2,12 @@
 title: Pooling
 ms.date: 03/30/2017
 ms.assetid: 688dfb30-b79a-4cad-a687-8302f8a9ad6a
-ms.openlocfilehash: 6554ec9c5eaefaf8c9e39d2a8d92982716cc18c5
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: ee57763674d194f71c85b1318dbb116dc829bd55
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33809815"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43393302"
 ---
 # <a name="pooling"></a>Pooling
 此示例演示如何扩展 Windows Communication Foundation (WCF) 以支持对象池。 本示例演示如何创建在语法和语义上与企业服务的 `ObjectPoolingAttribute` 属性功能相似的属性。 对象池可以显著提高应用程序的性能。 但是，如果使用不正确也可能产生负面影响。 对象池有助于减少重新创建经常使用且要求频繁进行初始化的对象的开销。 但是，如果调用缓冲池对象上的方法要花大量时间完成，则对象池在刚达到最大池大小时就会对其他请求排队。 因此可能不能为某些对象创建请求提供服务，这时将引发超时异常。  
@@ -15,14 +15,14 @@ ms.locfileid: "33809815"
 > [!NOTE]
 >  本主题的最后介绍了此示例的设置过程和生成说明。  
   
- 创建 WCF 扩展的第一步是决定要使用的扩展点。  
+ 创建 WCF 扩展的第一步是决定要使用的可扩展性点。  
   
- 在 WCF 术语*调度程序*指负责将传入消息转换为用户的服务上的方法调用，并从该方法的返回值转换为传出消息的运行时组件。 WCF 服务创建每个终结点调度程序。 如果与该客户端关联的协定是双工协定，WCF 客户端必须使用调度程序。  
+ 在 WCF 术语*调度程序*指的运行时组件负责将传入消息转换成用户服务上的方法调用，并将该方法的返回值转换成传出消息。 WCF 服务创建每个终结点调度的程序。 如果与该客户端关联的协定是双工协定，WCF 客户端必须使用调度程序。  
   
  通道和终结点调度程序通过公开用于控制调度程序行为的不同属性，来提供通道和协定范围的扩展性。 使用 <xref:System.ServiceModel.Dispatcher.EndpointDispatcher.DispatchRuntime%2A> 属性还可以检查、修改或自定义调度过程。 本示例重点介绍 <xref:System.ServiceModel.Dispatcher.DispatchRuntime.InstanceProvider%2A> 属性，该属性指向提供服务类实例的对象。  
   
 ## <a name="the-iinstanceprovider"></a>IInstanceProvider  
- WCF，调度程序创建的服务类使用的实例<xref:System.ServiceModel.Dispatcher.DispatchRuntime.InstanceProvider%2A>，该类实现<xref:System.ServiceModel.Dispatcher.IInstanceProvider>接口。 此接口有三个方法：  
+ 在 WCF 中，调度程序创建服务类使用的实例<xref:System.ServiceModel.Dispatcher.DispatchRuntime.InstanceProvider%2A>，它可以实现<xref:System.ServiceModel.Dispatcher.IInstanceProvider>接口。 此接口有三个方法：  
   
 -   <xref:System.ServiceModel.Dispatcher.IInstanceProvider.GetInstance%28System.ServiceModel.InstanceContext%2CSystem.ServiceModel.Channels.Message%29>：当消息到达调度程序时，调用 <xref:System.ServiceModel.Dispatcher.IInstanceProvider.GetInstance%28System.ServiceModel.InstanceContext%2CSystem.ServiceModel.Channels.Message%29> 方法创建服务类的实例处理消息。 调用此方法的频率由 <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A> 属性决定。 例如，如果 <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A> 属性设置为 <xref:System.ServiceModel.InstanceContextMode.PerCall>，则创建一个新的服务类实例来处理到达的每个消息，因此每当消息到达时，都将调用 <xref:System.ServiceModel.Dispatcher.IInstanceProvider.GetInstance%28System.ServiceModel.InstanceContext%2CSystem.ServiceModel.Channels.Message%29>。  
   
@@ -101,7 +101,7 @@ void IInstanceProvider.ReleaseInstance(InstanceContext instanceContext, object i
   
  本示例使用自定义属性。 当构造 <xref:System.ServiceModel.ServiceHost> 时，本示例检查用于服务的类型定义的属性并将可用行为添加到服务说明的行为集合中。  
   
- 接口 <xref:System.ServiceModel.Description.IServiceBehavior> 包含三个方法 -- <xref:System.ServiceModel.Description.IServiceBehavior.Validate%2A>、<xref:System.ServiceModel.Description.IServiceBehavior.AddBindingParameters%2A> 和 <xref:System.ServiceModel.Description.IServiceBehavior.ApplyDispatchBehavior%2A>。 <xref:System.ServiceModel.Description.IServiceBehavior.Validate%2A> 方法用于确保该行为可以应用于服务。 在本示例中，此实现确保不使用 <xref:System.ServiceModel.InstanceContextMode.Single> 配置服务。 <xref:System.ServiceModel.Description.IServiceBehavior.AddBindingParameters%2A> 方法用于配置服务的绑定。 它不是本方案所必需的。 <xref:System.ServiceModel.Description.IServiceBehavior.ApplyDispatchBehavior%2A> 用于配置服务的调度程序。 WCF 通过调用此方法时<xref:System.ServiceModel.ServiceHost>正在初始化。 下列参数将传递到此方法：  
+ 接口 <xref:System.ServiceModel.Description.IServiceBehavior> 包含三个方法 -- <xref:System.ServiceModel.Description.IServiceBehavior.Validate%2A>、<xref:System.ServiceModel.Description.IServiceBehavior.AddBindingParameters%2A> 和 <xref:System.ServiceModel.Description.IServiceBehavior.ApplyDispatchBehavior%2A>。 <xref:System.ServiceModel.Description.IServiceBehavior.Validate%2A> 方法用于确保该行为可以应用于服务。 在本示例中，此实现确保不使用 <xref:System.ServiceModel.InstanceContextMode.Single> 配置服务。 <xref:System.ServiceModel.Description.IServiceBehavior.AddBindingParameters%2A> 方法用于配置服务的绑定。 它不是本方案所必需的。 <xref:System.ServiceModel.Description.IServiceBehavior.ApplyDispatchBehavior%2A> 用于配置服务的调度程序。 通过 WCF 来调用此方法时<xref:System.ServiceModel.ServiceHost>正在初始化。 下列参数将传递到此方法：  
   
 -   `Description`：此参数提供整个服务的服务说明。 它可用于检查有关服务的终结点、协定、绑定和其他数据的说明数据。  
   
@@ -178,7 +178,7 @@ InvalidOperationException(ResourceHelper.GetString("ExNullThrottle"));
   
  除了 <xref:System.ServiceModel.Description.IServiceBehavior> 实现外，<xref:System.EnterpriseServices.ObjectPoolingAttribute> 类有多个可以使用属性参数自定义对象池的成员。 这些成员包括 <xref:System.EnterpriseServices.ObjectPoolingAttribute.MaxPoolSize%2A>、<xref:System.EnterpriseServices.ObjectPoolingAttribute.MinPoolSize%2A> 和 <xref:System.EnterpriseServices.ObjectPoolingAttribute.CreationTimeout%2A>，用于匹配由 .NET 企业服务提供的对象池功能集。  
   
- 将对象池行为现在可以添加到 WCF 服务使用新创建的自定义服务实现进行批注`ObjectPooling`属性。  
+ 对象池行为现在的 WCF 服务通过对使用新创建的自定义的服务实现进行批注添加`ObjectPooling`属性。  
   
 ```  
 [ObjectPooling(MaxPoolSize=1024, MinPoolSize=10, CreationTimeout=30000)]      
@@ -237,11 +237,11 @@ Press <ENTER> to exit.
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>设置、生成和运行示例  
   
-1.  确保已执行[的 Windows Communication Foundation 示例的一次性安装过程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
+1.  请确保您具有执行[的 Windows Communication Foundation 示例的一次性安装过程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
   
 2.  若要生成解决方案，请按照中的说明[生成 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/building-the-samples.md)。  
   
-3.  若要在单或跨计算机配置上运行示例，请按照中的说明[运行 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/running-the-samples.md)。  
+3.  若要在单或跨计算机配置中运行示例，请按照中的说明[运行 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/running-the-samples.md)。  
   
 > [!NOTE]
 >  如果使用 Svcutil.exe 为此示例重新生成配置，请确保在客户端配置中修改终结点名称以与客户端代码匹配。  
@@ -251,7 +251,7 @@ Press <ENTER> to exit.
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目录不存在，请转到[Windows Communication Foundation (WCF) 和针对.NET Framework 4 的 Windows Workflow Foundation (WF) 示例](http://go.microsoft.com/fwlink/?LinkId=150780)下载所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
+>  如果此目录不存在，请转到[Windows Communication Foundation (WCF) 和.NET Framework 4 的 Windows Workflow Foundation (WF) 示例](https://go.microsoft.com/fwlink/?LinkId=150780)若要下载所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Instancing\Pooling`  
   

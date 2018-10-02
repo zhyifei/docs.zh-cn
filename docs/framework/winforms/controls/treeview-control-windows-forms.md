@@ -7,12 +7,12 @@ helpviewer_keywords:
 - list items [Windows Forms], Windows Forms controls that display
 - TreeView control [Windows Forms]
 ms.assetid: 879438b4-4eac-45c6-b345-0229c9b21ab0
-ms.openlocfilehash: ee6c5583718f871c96929d659fe4a681528b27ef
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0b4db06eedc0ada7c34f3ba6f6c80b783866bed2
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33538231"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44253023"
 ---
 # <a name="treeview-control-windows-forms"></a>TreeView 控件（Windows 窗体）
 Windows 窗体 `TreeView` 控件显示节点的层次结构，如同文件和文件夹在 Windows 操作系统的 Windows 资源管理器功能的左窗格中的显示方式。  
@@ -38,8 +38,8 @@ Windows 窗体 `TreeView` 控件显示节点的层次结构，如同文件和文
   
  [如何：将快捷菜单附加到 TreeView 节点](../../../../docs/framework/winforms/controls/how-to-attach-a-shortcut-menu-to-a-treeview-node.md)  
  演示如何向树视图节点添加快捷菜单。  
-  
- 另请参阅[如何： 添加和删除与 Windows 窗体 TreeView 控件使用设计器的节点](http://msdn.microsoft.com/library/ms233651\(v=vs.110\))，[如何： 将快捷菜单附加到 TreeNode 使用设计器](http://msdn.microsoft.com/library/ms171708\(v=vs.110\))。  
+
+另请参阅[如何： 添加和删除 Windows 窗体 TreeView 控件设计器中使用的节点](add-and-remove-nodes-with-wf-treeview-control-using-the-designer.md)，并[如何： 将快捷菜单附加到 TreeNode 使用设计器](how-to-attach-a-shortcut-menu-to-a-treenode-using-the-designer.md)。  
   
 ## <a name="reference"></a>参考  
  <xref:System.Windows.Forms.TreeView> 类  

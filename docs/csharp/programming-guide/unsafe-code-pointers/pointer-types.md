@@ -4,12 +4,12 @@ ms.date: 04/20/2018
 helpviewer_keywords:
 - unsafe code [C#], pointers
 - pointers [C#]
-ms.openlocfilehash: cbc75a2ec6fe826cb192b1e8bef61c7295f13916
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2950d92f877a7e99734267a3071b2bcb25ce1023
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33337163"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43509273"
 ---
 # <a name="pointer-types-c-programming-guide"></a>指针类型（C# 编程指南）
 
@@ -89,12 +89,13 @@ int* myVariable;
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
 ## <a name="see-also"></a>请参阅
- [C# 编程指南](../index.md)  
- [不安全代码和指针](index.md)  
- [指针转换](pointer-conversions.md)  
- [指针表达式](pointer-expressions.md)  
- [类型](../../language-reference/keywords/types.md)  
- [unsafe](../../language-reference/keywords/unsafe.md)  
- [fixed 语句](../../language-reference/keywords/fixed-statement.md)  
- [stackalloc](../../language-reference/keywords/stackalloc.md)  
- [装箱和取消装箱](../types/boxing-and-unboxing.md)
+
+- [C# 编程指南](../index.md)  
+- [不安全代码和指针](index.md)  
+- [指针转换](pointer-conversions.md)  
+- [指针表达式](pointer-expressions.md)  
+- [类型](../../language-reference/keywords/types.md)  
+- [unsafe](../../language-reference/keywords/unsafe.md)  
+- [fixed 语句](../../language-reference/keywords/fixed-statement.md)  
+- [stackalloc](../../language-reference/keywords/stackalloc.md)  
+- [装箱和取消装箱](../types/boxing-and-unboxing.md)

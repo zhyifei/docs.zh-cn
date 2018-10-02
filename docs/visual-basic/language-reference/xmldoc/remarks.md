@@ -5,12 +5,12 @@ helpviewer_keywords:
 - <remarks> XML tag
 - remarks XML tag
 ms.assetid: c6241773-a7ed-41c9-9a8b-9722a0c606a9
-ms.openlocfilehash: 6e4e280760b9238fdc403ac5fe586743334e4c69
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 97fca8758d9c21ac0b8f15bf9d5831750fbabe77
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33598178"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43863028"
 ---
 # <a name="ltremarksgt-visual-basic"></a>&lt;备注&gt;(Visual Basic)
 指定成员的备注部分。  
@@ -26,9 +26,9 @@ ms.locfileid: "33598178"
  对成员的说明。  
   
 ## <a name="remarks"></a>备注  
- 使用`<remarks>`标记来将有关补充与指定的信息的类型信息添加[\<摘要 >](../../../visual-basic/language-reference/xmldoc/summary.md)。  
+ 使用`<remarks>`标记添加有关某个类型，对与指定的信息进行了补充[\<摘要 >](../../../visual-basic/language-reference/xmldoc/summary.md)。  
   
- 此信息显示在对象浏览器。 有关对象浏览器的信息，请参阅[查看代码结构](/visualstudio/ide/viewing-the-structure-of-code)。  
+ 此信息显示在对象浏览器中。 对象浏览器有关的信息，请参阅[查看代码结构](/visualstudio/ide/viewing-the-structure-of-code)。  
   
  使用 [/doc](../../../visual-basic/reference/command-line-compiler/doc.md) 进行编译可以将文档注释处理到文件中。  
   
@@ -38,4 +38,4 @@ ms.locfileid: "33598178"
  [!code-vb[VbVbcnXmlDocComments#6](../../../visual-basic/language-reference/xmldoc/codesnippet/VisualBasic/remarks_1.vb)]  
   
 ## <a name="see-also"></a>请参阅  
- [XML 注释标记](../../../visual-basic/language-reference/xmldoc/recommended-xml-tags-for-documentation-comments.md)
+ [XML 注释标记](../../../visual-basic/language-reference/xmldoc/index.md)

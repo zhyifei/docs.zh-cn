@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - pointers [C#], member access
 ms.assetid: 1e998498-8c85-4a78-8ce2-4d8c20f08342
-ms.openlocfilehash: 20f0dd18bb5ca132d05335953958d8f747b6abc4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 715bc2c493b58757154aa114d1e0527cbad46f46
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33332197"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43511297"
 ---
 # <a name="how-to-access-a-member-with-a-pointer-c-programming-guide"></a>如何：通过指针访问成员（C# 编程指南）
 若要访问不安全上下文中声明的结构成员，可使用成员访问运算符，如以下示例所示，其中 `p` 是包含成员 `x` 的 [struct](../../../csharp/language-reference/keywords/struct.md) 的指针。  
@@ -29,11 +29,12 @@ p -> x = 25; //member access operator ->
   
  [!code-csharp[csProgGuidePointers#10](../../../csharp/programming-guide/unsafe-code-pointers/codesnippet/CSharp/how-to-access-a-member-with-a-pointer_2.cs)]  
   
-## <a name="see-also"></a>请参阅  
- [C# 编程指南](../../../csharp/programming-guide/index.md)  
- [指针表达式](../../../csharp/programming-guide/unsafe-code-pointers/pointer-expressions.md)  
- [指针类型](../../../csharp/programming-guide/unsafe-code-pointers/pointer-types.md)  
- [类型](../../../csharp/language-reference/keywords/types.md)  
- [unsafe](../../../csharp/language-reference/keywords/unsafe.md)  
- [fixed 语句](../../../csharp/language-reference/keywords/fixed-statement.md)  
- [stackalloc](../../../csharp/language-reference/keywords/stackalloc.md)
+## <a name="see-also"></a>请参阅
+
+- [C# 编程指南](../../../csharp/programming-guide/index.md)  
+- [指针表达式](../../../csharp/programming-guide/unsafe-code-pointers/pointer-expressions.md)  
+- [指针类型](../../../csharp/programming-guide/unsafe-code-pointers/pointer-types.md)  
+- [类型](../../../csharp/language-reference/keywords/types.md)  
+- [unsafe](../../../csharp/language-reference/keywords/unsafe.md)  
+- [fixed 语句](../../../csharp/language-reference/keywords/fixed-statement.md)  
+- [stackalloc](../../../csharp/language-reference/keywords/stackalloc.md)

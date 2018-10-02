@@ -2,12 +2,12 @@
 title: 使用 TryCatch 在 Flowchart 活动中进行错误处理
 ms.date: 03/30/2017
 ms.assetid: 50922964-bfe0-4ba8-9422-0e7220d514fd
-ms.openlocfilehash: cc7630be868a5bdc1a07e8d935e5dd3269b4ae22
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e89c80ecfa8ec93fdde82b5638c504ded681a4fc
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33518058"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43864688"
 ---
 # <a name="fault-handling-in-a-flowchart-activity-using-trycatch"></a>使用 TryCatch 在 Flowchart 活动中进行错误处理
 此示例演示如何在复杂控制流活动中使用 <xref:System.Activities.Statements.TryCatch> 活动。  
@@ -18,7 +18,7 @@ ms.locfileid: "33518058"
   
 |参数|描述|  
 |----------------|-----------------|  
-|promoCode|促销代码。 类型：String<br /><br /> 可能的值，括号中带有说明：<br /><br /> -单 （单个）<br />-MNK （已婚但没有孩子。）<br />-MWK （已婚并且有孩子）。|  
+|promoCode|促销代码。 类型：String<br /><br /> 可能的值，括号中带有说明：<br /><br /> -单个 （单精度）<br />-Mnk （已婚但没有孩子。）<br />-Mwk （已婚并且有孩子。）|  
 |numKids|孩子数量。 类型：int|  
   
  `CreateFlowchartWithFaults` 活动使用 <xref:System.Activities.Statements.FlowSwitch%601> 活动，后者根据 `promoCode` 参数进行切换并使用以下公式计算折扣。  
@@ -42,7 +42,7 @@ ms.locfileid: "33518058"
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目录不存在，请转到[Windows Communication Foundation (WCF) 和针对.NET Framework 4 的 Windows Workflow Foundation (WF) 示例](http://go.microsoft.com/fwlink/?LinkId=150780)下载所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
+>  如果此目录不存在，请转到[Windows Communication Foundation (WCF) 和.NET Framework 4 的 Windows Workflow Foundation (WF) 示例](https://go.microsoft.com/fwlink/?LinkId=150780)若要下载所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Built-InActivities\FlowChartWithFaultHandling`  
   

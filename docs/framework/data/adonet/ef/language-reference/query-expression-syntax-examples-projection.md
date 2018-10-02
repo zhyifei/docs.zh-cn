@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 079926c5-e6b5-4fb9-b4cf-9c63886dd626
-ms.openlocfilehash: 69c807bdc052dda9e62216aa1611b4a6b2155a27
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: cc50b2564d295f1c81feacdeb52008f9f0004adc
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32762808"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43396621"
 ---
 # <a name="query-expression-syntax-examples-projection"></a>查询表达式语法示例：投影
-本主题中的示例演示如何使用`Select`方法和`From … From …`关键字来查询[AdventureWorks 销售模型](http://msdn.microsoft.com/library/f16cd988-673f-4376-b034-129ca93c7832)使用查询表达式语法。 `From … From …`与 `SelectMany` 方法等效，但前者基于查询。 这些示例中使用的 AdventureWorks 销售模型从 AdventureWorks 示例数据库中的 Contact、Address、Product、SalesOrderHeader 和 SalesOrderDetail 等表生成。  
+本主题中的示例演示如何使用`Select`方法和`From … From …`关键字来查询[AdventureWorks 销售模型](https://msdn.microsoft.com/library/f16cd988-673f-4376-b034-129ca93c7832)使用查询表达式语法。 `From … From …`与 `SelectMany` 方法等效，但前者基于查询。 这些示例中使用的 AdventureWorks 销售模型从 AdventureWorks 示例数据库中的 Contact、Address、Product、SalesOrderHeader 和 SalesOrderDetail 等表生成。  
   
  本主题中的示例使用以下`using` / `Imports`语句：  
   

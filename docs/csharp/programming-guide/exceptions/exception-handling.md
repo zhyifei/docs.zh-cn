@@ -5,12 +5,12 @@ helpviewer_keywords:
 - exception handling [C#], about exception handling
 - exceptions [C#], handling
 ms.assetid: b4e4ecf2-b907-4e58-891f-2563762258e9
-ms.openlocfilehash: bbe9db48ab5cc1313c18fce66312f4334b40b9c5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f6cc48843518a5d8791b6eda3e82a9f140039ceb
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33337482"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43514037"
 ---
 # <a name="exception-handling-c-programming-guide"></a>异常处理（C# 编程指南）
 C# 程序员使用 [try](../../../csharp/language-reference/keywords/try-catch.md) 块来对可能受异常影响的代码进行分区。 关联的 [catch](../../../csharp/language-reference/keywords/try-catch.md) 块用于处理生成的任何异常。 [finally](../../../csharp/language-reference/keywords/try-finally.md) 块包含无论 `try` 块中是否引发异常都会运行的代码，如发布 `try` 块中分配的资源。 `try` 块需要一个或多个关联的 `catch` 块或一个 `finally` 块，或两者皆之。  
@@ -54,11 +54,12 @@ C# 程序员使用 [try](../../../csharp/language-reference/keywords/try-catch.m
 ## <a name="c-language-specification"></a>C# 语言规范  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>请参阅  
- [C# 参考](../../../csharp/language-reference/index.md)  
- [C# 编程指南](../../../csharp/programming-guide/index.md)  
- [异常和异常处理](../../../csharp/programming-guide/exceptions/index.md)  
- [try-catch](../../../csharp/language-reference/keywords/try-catch.md)  
- [try-finally](../../../csharp/language-reference/keywords/try-finally.md)  
- [try-catch-finally](../../../csharp/language-reference/keywords/try-catch-finally.md)  
- [using 语句](../../../csharp/language-reference/keywords/using-statement.md)
+## <a name="see-also"></a>请参阅
+
+- [C# 参考](../../../csharp/language-reference/index.md)  
+- [C# 编程指南](../../../csharp/programming-guide/index.md)  
+- [异常和异常处理](../../../csharp/programming-guide/exceptions/index.md)  
+- [try-catch](../../../csharp/language-reference/keywords/try-catch.md)  
+- [try-finally](../../../csharp/language-reference/keywords/try-finally.md)  
+- [try-catch-finally](../../../csharp/language-reference/keywords/try-catch-finally.md)  
+- [using 语句](../../../csharp/language-reference/keywords/using-statement.md)

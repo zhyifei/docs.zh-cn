@@ -7,12 +7,12 @@ helpviewer_keywords:
 - ^ operator [C#]
 - bitwise exclusive OR operator [C#]
 ms.assetid: b09bc815-570f-4db6-a637-5b4ed99d014a
-ms.openlocfilehash: 5cc3cd2cfc932646e5b2dd6ec034555b07582379
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b1333f9d06e2804029550e6364a225558e096431
+ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33271245"
+ms.lasthandoff: 08/25/2018
+ms.locfileid: "42925293"
 ---
 # <a name="-operator-c-reference"></a>^ 运算符（C# 参考）
 针对整型类型和 `bool` 预定义了二元 `^` 运算符。 对于整型类型，`^` 会计算其操作数的按位异或。 对于 `bool` 操作数，`^` 计算其操作数的逻辑异或；即，当且仅当其一个操作数为 `true` 时，结果才为 `true`。  
@@ -31,7 +31,8 @@ ms.locfileid: "33271245"
   
  异或的结果是 `1100 0111`，即十六进制中的 C7。  
   
-## <a name="see-also"></a>请参阅  
- [C# 参考](../../../csharp/language-reference/index.md)  
- [C# 编程指南](../../../csharp/programming-guide/index.md)  
- [C# 运算符](../../../csharp/language-reference/operators/index.md)
+## <a name="see-also"></a>请参阅
+
+- [C# 参考](../../../csharp/language-reference/index.md)  
+- [C# 编程指南](../../../csharp/programming-guide/index.md)  
+- [C# 运算符](../../../csharp/language-reference/operators/index.md)

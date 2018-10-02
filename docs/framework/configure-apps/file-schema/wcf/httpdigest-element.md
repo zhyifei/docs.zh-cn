@@ -2,12 +2,12 @@
 title: '&lt;httpDigest&gt; 元素'
 ms.date: 03/30/2017
 ms.assetid: 3da4f276-dfd9-4247-8c07-01d83618727c
-ms.openlocfilehash: 8ea4597dbfc704f669a514b0d6c5976c80c5c3a6
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 4f3edb4a525429bfc55c4e4cfaffbfc5726dcef8
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32748888"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43521982"
 ---
 # <a name="lthttpdigestgt-element"></a>&lt;httpDigest&gt; 元素
 指定一个在向服务证明客户端身份时使用的摘要类型凭据。  
@@ -32,7 +32,7 @@ ms.locfileid: "32748888"
   
 |特性|描述|  
 |---------------|-----------------|  
-|`impersonationLevel`|设置客户端用于与服务器进行通信的模拟首选项。 服务器上不强制使用客户端所选择的模拟模式。 包括以下有效值：<br /><br /> -Identification： 服务器可以获取的标识和权限的客户端，但不能模拟客户端。<br />-模拟： 服务器可以模拟客户端的本地系统上的安全上下文。<br />-Delegation： 服务器可以模拟在远程系统上的客户端的安全上下文。<br />-Anonymous： 服务器无法模拟或标识客户端。<br />-None： 模拟级别未分配。<br /><br /> 默认值为 Identification。 此属性的类型为 <xref:System.Security.Principal.TokenImpersonationLevel>。|  
+|`impersonationLevel`|设置客户端用于与服务器进行通信的模拟首选项。 服务器上不强制使用客户端所选择的模拟模式。 包括以下有效值：<br /><br /> -标识： 服务器可以获取标识和权限的客户端，但不能模拟客户端。<br />模拟： 服务器可以模拟客户端的本地系统上的安全上下文。<br />-Delegation： 服务器可以模拟远程系统上的客户端的安全上下文。<br />-Anonymous： 服务器无法模拟或标识客户端。<br />-None： 模拟级别不会分配。<br /><br /> 默认值为 Identification。 此属性的类型为 <xref:System.Security.Principal.TokenImpersonationLevel>。|  
   
 ### <a name="child-elements"></a>子元素  
  无  
@@ -46,7 +46,7 @@ ms.locfileid: "32748888"
 ## <a name="remarks"></a>备注  
  摘要是使用算法和一组输入确定的哈希。 身份验证器和被验证方一致同意某种算法并交换用作输入的数据。 客户端可以计算哈希并将其发送给服务。 服务也可以计算哈希并比较值。 如果匹配，则客户端将通过验证。  
   
- 必须使用 Windows 上的 Active Directory 和 Internet 信息服务 (IIS) 启用此功能。 有关详细信息，请参阅[摘要式身份验证在 IIS 6.0 中](http://go.microsoft.com/fwlink/?LinkId=88443)。  
+ 必须使用 Windows 上的 Active Directory 和 Internet 信息服务 (IIS) 启用此功能。 有关详细信息，请参阅[摘要式身份验证在 IIS 6.0 中](https://go.microsoft.com/fwlink/?LinkId=88443)。  
   
 ## <a name="see-also"></a>请参阅  
  <xref:System.ServiceModel.Configuration.ClientCredentialsElement>  

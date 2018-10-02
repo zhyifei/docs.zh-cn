@@ -1,26 +1,26 @@
 ---
-title: My.Computer.Mouse 对象
+title: My.Computer.Mouse 对象 (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
 - My.Computer.Mouse object
 ms.assetid: da473357-2120-47dd-bd42-c63d695157eb
-ms.openlocfilehash: 899caca985bfdb4deaf148b2d434f62428e2952a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7b3914870db6d30eb21c997a39cab4db1511e4ee
+ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33593611"
+ms.lasthandoff: 07/27/2018
+ms.locfileid: "39296242"
 ---
 # <a name="mycomputermouse-object"></a>My.Computer.Mouse 对象
-提供用于获取有关格式和本地计算机上安装的鼠标的配置信息的属性。  
+提供用于获取有关的格式和在本地计算机上安装的鼠标的配置信息的属性。  
   
 ## <a name="remarks"></a>备注  
- 有关的方法和属性的信息`My.Computer.Mouse`对象，请参阅<xref:Microsoft.VisualBasic.Devices.Mouse>。  
+ 有关方法和属性的信息`My.Computer.Mouse`对象，请参阅<xref:Microsoft.VisualBasic.Devices.Mouse>。  
   
  有关详细信息，请参阅[访问鼠标](../../../visual-basic/developing-apps/programming/computer-resources/accessing-the-mouse.md)。  
   
 ## <a name="requirements"></a>要求  
- **Namespace:** <xref:Microsoft.VisualBasic.Devices>  
+ **Namespace**：<xref:Microsoft.VisualBasic.Devices>  
   
  **类：** <xref:Microsoft.VisualBasic.Devices.Mouse>  
   

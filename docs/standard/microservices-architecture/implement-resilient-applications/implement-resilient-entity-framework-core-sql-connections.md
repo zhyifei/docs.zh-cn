@@ -1,17 +1,17 @@
 ---
 title: 实现复原 Entity Framework Core SQL 连接
-description: 适用于容器化 .NET 应用程序的 .NET 微服务体系结构 | 实现复原 Entity Framework Core SQL 连接
+description: 适用于容器化 .NET 应用程序的 .NET 微服务体系结构 | 实现复原 Entity Framework Core SQL 连接。 在云中使用 Azure SQL 数据库时，此技术尤为重要。
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 05/26/2017
-ms.openlocfilehash: 79f115a2d897463c213eda6f4d6951ff0cbeb3ca
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.date: 06/08/2018
+ms.openlocfilehash: 59db9cdb894f76f54e77732be47dc6140a594121
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37105470"
+ms.lasthandoff: 09/28/2018
+ms.locfileid: "47231409"
 ---
-# <a name="implementing-resilient-entity-framework-core-sql-connections"></a>实现复原 Entity Framework Core SQL 连接
+# <a name="implement-resilient-entity-framework-core-sql-connections"></a>实现复原 Entity Framework Core SQL 连接
 
 对于 Azure SQL DB，Entity Framework Core 早已提供了内部数据库连接复原和重试逻辑。 但如果想要[复原 EF Core 连接](https://docs.microsoft.com/ef/core/miscellaneous/connection-resiliency)，则需要为每个 DbContext 连接启用 Entity Framework 执行策略。
 
@@ -25,13 +25,13 @@ public class Startup
     public IServiceProvider ConfigureServices(IServiceCollection services)
     {
         // ...
-        services.AddDbContext<OrderingContext>(options =>
+        services.AddDbContext<CatalogContext>(options =>
         {
             options.UseSqlServer(Configuration["ConnectionString"],
             sqlServerOptionsAction: sqlOptions =>
             {
                 sqlOptions.EnableRetryOnFailure(
-                maxRetryCount: 5,
+                maxRetryCount: 10,
                 maxRetryDelay: TimeSpan.FromSeconds(30),
                 errorNumbersToAdd: null);
             });
@@ -85,13 +85,14 @@ public async Task<IActionResult> UpdateProduct([FromBody]CatalogItem
 
 ## <a name="additional-resources"></a>其他资源
 
+-   **EF 连接复原** (Entity Framework Core)[*https://docs.microsoft.com/ef/core/miscellaneous/connection-resiliency*](https://docs.microsoft.com/ef/core/miscellaneous/connection-resiliency)
+
 -   **通过 Entity Framework 连接复原和命令截获**
     [*https://docs.microsoft.com/azure/architecture/patterns/category/resiliency*](https://docs.microsoft.com/azure/architecture/patterns/category/resiliency)
 
 -   **Cesar de la Torre。使用复原 Entity Framework Core SQL 连接和事务**
     <https://blogs.msdn.microsoft.com/cesardelatorre/2017/03/26/using-resilient-entity-framework-core-sql-connections-and-transactions-retries-with-exponential-backoff/>
 
-
 >[!div class="step-by-step"]
 [上一页](implement-retries-exponential-backoff.md)
-[下一页](implement-custom-http-call-retries-exponential-backoff.md)
+[下一页](explore-custom-http-call-retries-exponential-backoff.md)

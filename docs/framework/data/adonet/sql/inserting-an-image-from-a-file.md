@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 35900aa2-5615-4174-8212-ba184c6b82fb
-ms.openlocfilehash: 3b5b6f2f267f19b3ea42c352a8a1e3721a1ceb86
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d3cbf4fa0eb0b261bb752370c95cdfb2bca0b7e6
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33359310"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43517758"
 ---
 # <a name="inserting-an-image-from-a-file"></a>从文件中插入图像
 可以将二进制大对象 (BLOB) 作为二进制或字符数据写入数据库，具体视数据源的字段类型而定。 BLOB 是一个表示 `text`、`ntext` 和 `image` 数据类型的通用术语，这些数据类型通常包含文档和图片。  
   
- 将 BLOB 值写入到你的数据库，发出相应的 INSERT 或 UPDATE 语句并将 BLOB 值作为输入参数传递 (请参阅[配置参数和参数数据类型](../../../../../docs/framework/data/adonet/configuring-parameters-and-parameter-data-types.md))。 如果 BLOB 存储为文本格式（如 SQL Server `text` 字段），则可将 BLOB 作为字符串参数传递。 如果 BLOB 存储为二进制格式（如 SQL Server `image` 字段），则可将类型 `byte` 的数组作为二进制参数传递。  
+ 若要将 BLOB 值写入数据库，发出相应的 INSERT 或 UPDATE 语句，并将 BLOB 值作为输入参数传递 (请参阅[配置参数和参数数据类型](../../../../../docs/framework/data/adonet/configuring-parameters-and-parameter-data-types.md))。 如果 BLOB 存储为文本格式（如 SQL Server `text` 字段），则可将 BLOB 作为字符串参数传递。 如果 BLOB 存储为二进制格式（如 SQL Server `image` 字段），则可将类型 `byte` 的数组作为二进制参数传递。  
   
 ## <a name="example"></a>示例  
  下面的代码示例将雇员信息添加到 Northwind 数据库中的“Employees”表中。 从文件中读取雇员的照片并将其添加到表中的“照片”字段，此字段是一个图像字段。  
@@ -135,4 +135,4 @@ public static byte[] GetPhoto(string filePath)
  [检索二进制数据](../../../../../docs/framework/data/adonet/retrieving-binary-data.md)  
  [SQL Server 二进制和大值数据](../../../../../docs/framework/data/adonet/sql/sql-server-binary-and-large-value-data.md)  
  [SQL Server 数据类型映射](../../../../../docs/framework/data/adonet/sql-server-data-type-mappings.md)  
- [ADO.NET 托管提供程序和数据集开发人员中心](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)

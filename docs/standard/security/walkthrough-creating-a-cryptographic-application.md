@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: abf48c11-1e72-431d-9562-39cf23e1a8ff
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 77debed932b78ae0aa1d8eebf54bd2d3bfbfea7a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 873b6120929c8c7cf67d53d8f793964361ae88b8
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33591958"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45964697"
 ---
 # <a name="walkthrough-creating-a-cryptographic-application"></a>演练：创建加密应用程序
 本演练演示如何对内容进行加密和解密。 下面的代码示例是特为 Windows 窗体应用程序设计的。 此应用程序不演示实际方案，例如使用智能卡。 而演示加密和解密的基础知识。  
@@ -53,7 +53,7 @@ ms.locfileid: "33591958"
 ## <a name="creating-a-windows-forms-application"></a>创建 Window 窗体应用程序  
  本演练中的大多数代码示例均设计为按钮控件的事件处理程序。 下表列出了示例应用程序所需的控件及其匹配代码示例所需的名称。  
   
-|控件|名称|文本属性（根据需要）|  
+|控件|name|文本属性（根据需要）|  
 |-------------|----------|---------------------------------|  
 |<xref:System.Windows.Forms.Button>|`buttonEncryptFile`|加密文件|  
 |<xref:System.Windows.Forms.Button>|`buttonDecryptFile`|解密文件|  
@@ -82,7 +82,7 @@ ms.locfileid: "33591958"
  [!code-vb[CryptoWalkThru#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CryptoWalkThru/vb/Form1.vb#2)]  
   
 ## <a name="encrypting-a-file"></a>加密文件  
- 此任务涉及两种方法： 的事件处理程序方法`Encrypt File`按钮 (`buttonEncryptFile_Click`) 和`EncryptFile`方法。 第一种方法显示一个用于选择文件的对话框，并将文件名传递给第二种方法，后者将执行加密。  
+ 此任务涉及两个方法： 的事件处理程序方法`Encrypt File`按钮 (`buttonEncryptFile_Click`) 和`EncryptFile`方法。 第一种方法显示一个用于选择文件的对话框，并将文件名传递给第二种方法，后者将执行加密。  
   
  加密的内容、密钥和 IV 全都保存到一个 <xref:System.IO.FileStream> 中，这被称为加密包。  
   
@@ -123,7 +123,7 @@ ms.locfileid: "33591958"
  [!code-vb[CryptoWalkThru#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CryptoWalkThru/vb/Form1.vb#5)]  
   
 ## <a name="decrypting-a-file"></a>解密文件  
- 此任务涉及两种方法，即 `Decrypt File` 按钮 (`buttonEncryptFile_Click`) 的事件处理程序方法和 `DecryptFile` 方法。 第一种方法显示一个用于选择文件的对话框，并将其文件名传递给第二种方法，后者将执行解密。  
+ 此任务涉及两种方法，即 `Decrypt File` 按钮 (`buttonDecryptFile_Click`) 的事件处理程序方法和 `DecryptFile` 方法。 第一种方法显示一个用于选择文件的对话框，并将其文件名传递给第二种方法，后者将执行解密。  
   
  `Decrypt` 方法执行以下操作：  
   
@@ -210,5 +210,6 @@ ms.locfileid: "33591958"
   
 2.  单击 `Decrypt File` 按钮，然后选择刚刚加密的文件。 这将会成功，因为你具有用于解密的完整密钥对。  
   
-## <a name="see-also"></a>请参阅  
- [Cryptographic Services](../../../docs/standard/security/cryptographic-services.md)
+## <a name="see-also"></a>请参阅
+
+- [Cryptographic Services](../../../docs/standard/security/cryptographic-services.md)

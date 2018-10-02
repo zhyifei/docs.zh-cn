@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 7722a333-b974-47a2-a7c0-f09097fb644e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1f9c6df23ae1a142d208672a03ffeb74709a0a05
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8e98862aba937724c799adef597260a06ed495f6
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33591307"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44199760"
 ---
 # <a name="semaphore-and-semaphoreslim"></a>Semaphore 和 SemaphoreSlim
 <xref:System.Threading.Semaphore?displayProperty=nameWithType> 类表示一个命名（系统范围内）或本地信号量。 它是环绕 Win32 信号量对象的精简包装器。 Win32 信号量是计数信号量，该可用于控制对资源池的访问。  
@@ -46,7 +46,8 @@ ms.locfileid: "33591307"
   
  使用访问控制安全性来保护表示命名信号量的 <xref:System.Threading.Semaphore> 对象，最好通过使用指定 <xref:System.Security.AccessControl.SemaphoreSecurity?displayProperty=nameWithType> 对象的构造函数。 你还可以通过使用 <xref:System.Threading.Semaphore.SetAccessControl%2A?displayProperty=nameWithType> 方法应用访问控制安全，但这会使窗口在创建信号量的时间以及信号量受到保护的时间之间留下漏洞。 使用访问控制安全机制来保护信号量有助于阻止恶意攻击，但不能解决的意外的名称冲突问题。  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Threading.Semaphore>  
- <xref:System.Threading.SemaphoreSlim>  
- [线程处理对象和功能](../../../docs/standard/threading/threading-objects-and-features.md)
+## <a name="see-also"></a>请参阅
+
+- <xref:System.Threading.Semaphore>  
+- <xref:System.Threading.SemaphoreSlim>  
+- [线程处理对象和功能](../../../docs/standard/threading/threading-objects-and-features.md)

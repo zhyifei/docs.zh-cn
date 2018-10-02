@@ -4,15 +4,15 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - WCF Data Services, providers
 ms.assetid: 650b5eb6-c71d-4dc1-8b64-b6beaf752114
-ms.openlocfilehash: 0b6e76e6c05a091c57f27fc759044d3567cd976a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 88c3b8bdb9f4d85516479707e5ef6578fad37967
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33365023"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43486084"
 ---
 # <a name="entity-framework-provider-wcf-data-services"></a>实体框架提供程序（WCF 数据服务）
-与 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 类似，ADO.NET 实体框架也基于实体数据模型（一种实体关系模型）。 实体框架将针对实体数据模型中，调用其实现*概念模型*，转换为针对数据源的等效操作。 这使实体框架成为基于关系数据的数据服务的理想提供程序，任何具有支持实体框架的数据提供程序的数据库都可用于 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]。 有关当前支持实体框架的数据源的列表，请参阅[用于实体框架的第三方提供商](http://go.microsoft.com/fwlink/?LinkId=143699)。  
+与 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 类似，ADO.NET 实体框架也基于实体数据模型（一种实体关系模型）。 实体框架将针对实体数据模型，这称为其实现操作转换为*概念模型*，对数据源的等效操作。 这使实体框架成为基于关系数据的数据服务的理想提供程序，任何具有支持实体框架的数据提供程序的数据库都可用于 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]。 有关当前支持实体框架的数据源的列表，请参阅[实体框架的第三方提供程序](https://go.microsoft.com/fwlink/?LinkId=143699)。  
   
  在概念模型中，实体容器是服务的根。 必须先在实体框架中定义一个概念模型，数据服务才能公开数据。 有关详细信息，请参阅[如何： 创建数据服务使用 ADO.NET 实体框架数据源](../../../../docs/framework/data/wcf/create-a-data-service-using-an-adonet-ef-data-wcf.md)。  
   

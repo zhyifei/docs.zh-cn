@@ -2,12 +2,12 @@
 title: 如何：使用 XPath 查询 LINQ to XML (C#)
 ms.date: 07/20/2015
 ms.assetid: ee5af263-4ab1-45e5-b792-33a3221b426d
-ms.openlocfilehash: a02149719afa19350a9baf15c41bd3548daa1344
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3d4a75e4688725f2444d3bbc4d55bec828485a5d
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33317081"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43511186"
 ---
 # <a name="how-to-query-linq-to-xml-using-xpath-c"></a>如何：使用 XPath 查询 LINQ to XML (C#)
 本主题介绍一些扩展方法，通过这些扩展方法可以使用 XPath 查询 XML 树。 有关使用这些扩展方法的详细信息，请参见 <xref:System.Xml.XPath.Extensions?displayProperty=nameWithType>。  
@@ -39,5 +39,6 @@ foreach (XElement el in list)
 <Child2>6</Child2>  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [高级查询技术 (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)
+## <a name="see-also"></a>请参阅
+
+- [高级查询技术 (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)

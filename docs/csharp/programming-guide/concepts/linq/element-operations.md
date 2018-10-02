@@ -2,14 +2,15 @@
 title: 元素运算 (C#)
 ms.date: 07/20/2015
 ms.assetid: 283206c9-3246-4c48-b01a-d9de409a7231
-ms.openlocfilehash: 5c10603d9e074faf891d41fa6b39614fcc167c8a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 14fdfbc38e1c25aa00056a42e116be98a489ce0f
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33317442"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43856885"
 ---
 # <a name="element-operations-c"></a>元素运算 (C#)
+
 元素运算从序列中返回唯一、特定的元素。  
   
  下节列出了执行元素运算的标准查询运算符方法。  
@@ -27,7 +28,8 @@ ms.locfileid: "33317442"
 |Single|返回集合的唯一一个元素或满足条件的唯一一个元素。|不适用。|<xref:System.Linq.Enumerable.Single%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Single%2A?displayProperty=nameWithType>|  
 |SingleOrDefault|返回集合的唯一一个元素或满足条件的唯一一个元素。 如果此类元素不存在，或该集合不是仅包含一个元素，则返回默认值。|不适用。|<xref:System.Linq.Enumerable.SingleOrDefault%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.SingleOrDefault%2A?displayProperty=nameWithType>|  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Linq>  
- [标准查询运算符概述 (C#)](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)  
- [如何：查询目录树中的一个或多个最大的文件 (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-query-for-the-largest-file-or-files-in-a-directory-tree-linq.md)
+## <a name="see-also"></a>请参阅
+
+- <xref:System.Linq>  
+- [标准查询运算符概述 (C#)](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)  
+- [如何：查询目录树中的一个或多个最大的文件 (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-query-for-the-largest-file-or-files-in-a-directory-tree-linq.md)

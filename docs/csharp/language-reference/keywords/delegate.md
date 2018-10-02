@@ -9,12 +9,12 @@ helpviewer_keywords:
 - delegate keyword [C#]
 - function pointers [C#]
 ms.assetid: 0bb8cb6d-2f87-47c7-9d1f-d65c1cd01e9f
-ms.openlocfilehash: ba1cfdcc56b3d2301a07ffa4af793e7002da21bb
-ms.sourcegitcommit: ed7b4b9b77d35e94a35a2634e8c874f46603fb2b
+ms.openlocfilehash: 7a5f46d137e22da01b2ab6cd3eee57d66c411e8f
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36948418"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45648455"
 ---
 # <a name="delegate-c-reference"></a>委托（C# 参考）
 
@@ -45,11 +45,11 @@ public delegate int TestDelegate(MyType m, long num);
 
 ## <a name="see-also"></a>请参阅
 
-[C# 参考](../../../csharp/language-reference/index.md)  
-[C# 编程指南](../../../csharp/programming-guide/index.md)  
-[C# 关键字](../../../csharp/language-reference/keywords/index.md)  
-[引用类型](../../../csharp/language-reference/keywords/reference-types.md)  
-[委托](../../../csharp/programming-guide/delegates/index.md)  
-[事件](../../../csharp/programming-guide/events/index.md)  
-[带有命名方法的委托与带有匿名方法的委托](../../../csharp/programming-guide/delegates/delegates-with-named-vs-anonymous-methods.md)  
-[匿名方法](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md)
+- [C# 参考](../../../csharp/language-reference/index.md)  
+- [C# 编程指南](../../../csharp/programming-guide/index.md)  
+- [C# 关键字](../../../csharp/language-reference/keywords/index.md)  
+- [引用类型](../../../csharp/language-reference/keywords/reference-types.md)  
+- [委托](../../../csharp/programming-guide/delegates/index.md)  
+- [事件](../../../csharp/programming-guide/events/index.md)  
+- [带有命名方法的委托与带有匿名方法的委托](../../../csharp/programming-guide/delegates/delegates-with-named-vs-anonymous-methods.md)  
+- [匿名方法](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md)

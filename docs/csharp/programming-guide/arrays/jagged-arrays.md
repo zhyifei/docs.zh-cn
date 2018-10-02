@@ -5,14 +5,15 @@ helpviewer_keywords:
 - jagged arrays [C#]
 - arrays [C#], jagged
 ms.assetid: 537c65a6-0e0a-4a00-a2b8-086f38519c70
-ms.openlocfilehash: c1825e1a731c40a5945060f8085bd612b5d62008
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2e4988439000712f4d1bd9b5abe412e7fd5d43eb
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33297363"
+ms.lasthandoff: 09/27/2018
+ms.locfileid: "47396872"
 ---
 # <a name="jagged-arrays-c-programming-guide"></a>交错数组（C# 编程指南）
+
 交错数组是元素为数组的数组。 交错数组元素的维度和大小可以不同。 交错数组有时称为“数组的数组”。 以下示例说明如何声明、初始化和访问交错数组。  
   
  下面声明一个具有三个元素的一维数组，其中每个元素都是一维整数数组：  
@@ -57,14 +58,16 @@ ms.locfileid: "33297363"
   
  返回值 3。  
   
-## <a name="example"></a>示例  
+## <a name="example"></a>示例
+
  本例生成一个数组，该数组的元素为数组自身。 每一个数组元素都有不同的大小。  
   
  [!code-csharp[csProgGuideArrays#18](../../../csharp/programming-guide/arrays/codesnippet/CSharp/jagged-arrays_10.cs)]  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Array>  
- [C# 编程指南](../../../csharp/programming-guide/index.md)  
- [数组](../../../csharp/programming-guide/arrays/index.md)  
- [一维数组](../../../csharp/programming-guide/arrays/single-dimensional-arrays.md)  
- [多维数组](../../../csharp/programming-guide/arrays/multidimensional-arrays.md)
+## <a name="see-also"></a>请参阅
+
+- <xref:System.Array>  
+- [C# 编程指南](../../../csharp/programming-guide/index.md)  
+- [数组](../../../csharp/programming-guide/arrays/index.md)  
+- [一维数组](../../../csharp/programming-guide/arrays/single-dimensional-arrays.md)  
+- [多维数组](../../../csharp/programming-guide/arrays/multidimensional-arrays.md)

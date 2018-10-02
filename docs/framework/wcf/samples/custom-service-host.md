@@ -2,12 +2,12 @@
 title: 自定义服务主机
 ms.date: 03/30/2017
 ms.assetid: fe16ff50-7156-4499-9c32-13d8a79dc100
-ms.openlocfilehash: c02ceb114a5346ea2a851f711f1ab9b50373cb75
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: 51256b115749aef4ed3691e49ccf36ee65f5cbf1
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33806791"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43529285"
 ---
 # <a name="custom-service-host"></a>自定义服务主机
 本示例演示如何使用 <xref:System.ServiceModel.ServiceHost> 类的自定义派生来改变服务的运行时行为。 此方法为通过通用方式配置大量服务提供了一个可重用的替代方法。 此示例还演示如何使用 <xref:System.ServiceModel.Activation.ServiceHostFactory> 类在 Internet 信息服务 (IIS) 或 Windows 进程激活服务 (WAS) 承载环境中使用自定义 ServiceHost。  
@@ -17,12 +17,12 @@ ms.locfileid: "33806791"
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目录不存在，请转到[Windows Communication Foundation (WCF) 和针对.NET Framework 4 的 Windows Workflow Foundation (WF) 示例](http://go.microsoft.com/fwlink/?LinkId=150780)下载所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
+>  如果此目录不存在，请转到[Windows Communication Foundation (WCF) 和.NET Framework 4 的 Windows Workflow Foundation (WF) 示例](https://go.microsoft.com/fwlink/?LinkId=150780)若要下载所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Hosting\CustomServiceHost`  
   
 ## <a name="about-the-scenario"></a>关于方案  
- 为了防止无意中泄露潜在的敏感服务元数据，Windows Communication Foundation (WCF) 服务的默认配置，请禁用元数据发布。 默认情况下此行为是安全的，但也意味着你无法使用元数据导入工具（例如 Svcutil.exe）生成调用服务所需的客户端代码，除非在配置中显式启用服务的元数据发布行为。  
+ 若要防止无意中泄漏可能敏感的服务元数据，Windows Communication Foundation (WCF) 服务的默认配置，请禁用元数据发布。 默认情况下此行为是安全的，但也意味着你无法使用元数据导入工具（例如 Svcutil.exe）生成调用服务所需的客户端代码，除非在配置中显式启用服务的元数据发布行为。  
   
  对大量服务启用元数据发布需要向每个单独的服务添加相同的配置元素，这会生成实质上相同的大量配置信息。 作为分别配置每个服务的一种替代方法，可以编写命令性代码来启用一次元数据发布，然后在多个不同的服务中重复使用该代码。 这是通过创建一个从 <xref:System.ServiceModel.ServiceHost> 派生的新类并重写 `ApplyConfiguration`() 方法以便强制添加元数据发布行为来实现的。  
   
@@ -122,7 +122,7 @@ host.Open();
  自定义主机仍然从应用程序的配置文件中读取服务的终结点配置，就好象使用默认 <xref:System.ServiceModel.ServiceHost> 类承载服务一样。 但由于我们添加了在自定义主机内启用元数据发布的逻辑，因此不再需要在配置中显式启用元数据发布行为。 如果要生成的应用程序包含多个服务并需要在每个服务上启用元数据发布，而不想反复编写同样的配置元素，则使用此方法具有明显的优势。  
   
 ## <a name="using-a-custom-servicehost-in-iis-or-was"></a>在 IIS 或 WAS 中使用自定义 ServiceHost  
- 在自承载方案中使用自定义服务主机非常简单，因为最终负责创建和打开服务主机实例的是应用程序代码。 在 IIS 或 WAS 承载环境中，但是，WCF 基础结构动态实例化以响应传入消息的服务主机。 自定义服务主机也可用于此承载环境，但它们需要一些 ServiceHostFactory 形式的附加代码。 下面的代码演示可返回自定义 <xref:System.ServiceModel.Activation.ServiceHostFactory> 的实例的 `SelfDescribingServiceHost` 的派生。  
+ 在自承载方案中使用自定义服务主机非常简单，因为最终负责创建和打开服务主机实例的是应用程序代码。 在 IIS 或 WAS 承载环境中，但是，WCF 基础结构动态实例化以响应传入消息的服务的主机。 自定义服务主机也可用于此承载环境，但它们需要一些 ServiceHostFactory 形式的附加代码。 下面的代码演示可返回自定义 <xref:System.ServiceModel.Activation.ServiceHostFactory> 的实例的 `SelfDescribingServiceHost` 的派生。  
   
 ```  
 public class SelfDescribingServiceHostFactory : ServiceHostFactory  
@@ -151,7 +151,7 @@ public class SelfDescribingServiceHostFactory : ServiceHostFactory
                language=c# Debug="true" %>  
 ```  
   
- 在此我们向 `Factory` 指令添加了一个附加 `@ServiceHost` 属性，并作为该属性的值传递自定义工厂的 CLR 类型名称。 当 IIS 或 WAS 收到关于此服务的消息时，WCF 宿主基础结构首先创建 ServiceHostFactory 的一个实例，然后通过调用来实例化服务主机本身`ServiceHostFactory.CreateServiceHost()`。  
+ 在此我们向 `Factory` 指令添加了一个附加 `@ServiceHost` 属性，并作为该属性的值传递自定义工厂的 CLR 类型名称。 当 IIS 或 WAS 收到此服务的消息时，WCF 托管基础结构首先创建 ServiceHostFactory 的一个实例，然后通过调用实例化服务主机本身`ServiceHostFactory.CreateServiceHost()`。  
   
 ## <a name="running-the-sample"></a>运行示例  
  虽然本示例提供功能完整的客户端和服务实现，但本示例的目的主要是演示如何通过自定义主机改变服务的运行时行为。请执行下面的步骤：  
@@ -160,17 +160,17 @@ public class SelfDescribingServiceHostFactory : ServiceHostFactory
   
 1.  打开服务的 Web.config 文件并观察其中的配置是否未显式启用服务的元数据。  
   
-2.  打开服务的.svc 文件，并观察其@ServiceHost指令包含指定的自定义 ServiceHostFactory 的名称的 Factory 属性。  
+2.  打开服务的.svc 文件，并观察其@ServiceHost指令包含 Factory 属性指定自定义 ServiceHostFactory 的名称。  
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>设置、生成和运行示例  
   
-1.  确保已执行[的 Windows Communication Foundation 示例的一次性安装过程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
+1.  请确保您具有执行[的 Windows Communication Foundation 示例的一次性安装过程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
   
 2.  若要生成解决方案，请按照中的说明[生成 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/building-the-samples.md)。  
   
 3.  生成解决方案后，运行 Setup.bat 在 [!INCLUDE[iisver](../../../../includes/iisver-md.md)] 中设置 ServiceModelSamples 应用程序。 现在，ServiceModelSamples 目录应显示为 [!INCLUDE[iisver](../../../../includes/iisver-md.md)] 应用程序。  
   
-4.  若要在单或跨计算机配置上运行示例，请按照中的说明[运行 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/running-the-samples.md)。  
+4.  若要在单或跨计算机配置中运行示例，请按照中的说明[运行 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/running-the-samples.md)。  
   
 5.  若要删除 [!INCLUDE[iisver](../../../../includes/iisver-md.md)] 应用程序，请运行 Cleanup.bat。  
   

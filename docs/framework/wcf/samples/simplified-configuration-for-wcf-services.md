@@ -2,12 +2,12 @@
 title: WCF 服务的简化配置
 ms.date: 03/30/2017
 ms.assetid: 1e39ec25-18a3-4fdc-b6a3-9dfafbd60112
-ms.openlocfilehash: 80e2ac83ec0e07176d6afe6d34c63fb4d8e836d1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ebdf7ab62676bb0c8ac99a5335a3047fcdd5a9b3
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33502259"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43500708"
 ---
 # <a name="simplified-configuration-for-wcf-services"></a>WCF 服务的简化配置
 此示例演示如何实现和配置典型的服务和客户端使用 Windows Communication Foundation (WCF)。 此示例是所有其他基本技术示例的基础。  
@@ -37,7 +37,7 @@ ms.locfileid: "33502259"
 </configuration>  
 ```  
   
- 在 [!INCLUDE[netfx40_short](../../../../includes/netfx40-short-md.md)] 中，`<service>` 元素是可选的。 当一个服务未定义任何终结点时，会将已实现的每个基址和协定的终结点添加到该服务。 基址将追加到协定名称后面以确定终结点，该地址方案将确定绑定。 以下代码示例演示一个简化的配置文件。 经过配置之后，可以在访问服务http://localhost/servicemodelsamples/service.svc通过同一台计算机上的客户端。 若要使远程计算机上的客户端能够访问该服务，必须指定完全限定域名，而不是本地主机。 默认情况下，该服务不公开元数据。 因此，该服务将打开 <xref:System.ServiceModel.Description.ServiceMetadataBehavior> 行为。  
+ 在 [!INCLUDE[netfx40_short](../../../../includes/netfx40-short-md.md)] 中，`<service>` 元素是可选的。 当一个服务未定义任何终结点时，会将已实现的每个基址和协定的终结点添加到该服务。 基址将追加到协定名称后面以确定终结点，该地址方案将确定绑定。 以下代码示例演示一个简化的配置文件。 经过配置之后，可以在访问服务 http://localhost/servicemodelsamples/service.svc在同一台计算机上的客户端。 若要使远程计算机上的客户端能够访问该服务，必须指定完全限定域名，而不是本地主机。 默认情况下，该服务不公开元数据。 因此，该服务将打开 <xref:System.ServiceModel.Description.ServiceMetadataBehavior> 行为。  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8" ?>  
@@ -57,7 +57,7 @@ ms.locfileid: "33502259"
   
 ### <a name="to-use-this-sample"></a>使用此示例  
   
-1.  确保已执行[的 Windows Communication Foundation 示例的一次性安装过程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
+1.  请确保您具有执行[的 Windows Communication Foundation 示例的一次性安装过程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
   
 2.  若要生成解决方案，请按照中的说明[生成 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/building-the-samples.md)。  
   
@@ -74,10 +74,10 @@ ms.locfileid: "33502259"
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目录不存在，请转到[Windows Communication Foundation (WCF) 和针对.NET Framework 4 的 Windows Workflow Foundation (WF) 示例](http://go.microsoft.com/fwlink/?LinkId=150780)下载所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
+>  如果此目录不存在，请转到[Windows Communication Foundation (WCF) 和.NET Framework 4 的 Windows Workflow Foundation (WF) 示例](https://go.microsoft.com/fwlink/?LinkId=150780)若要下载所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\ConfigSimplificationIn40`  
   
 ## <a name="see-also"></a>请参阅  
- [AppFabric 管理示例](http://go.microsoft.com/fwlink/?LinkId=193960)  
+ [AppFabric 管理示例](https://go.microsoft.com/fwlink/?LinkId=193960)  
  [简化配置](../../../../docs/framework/wcf/simplified-configuration.md)

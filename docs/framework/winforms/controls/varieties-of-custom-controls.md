@@ -11,12 +11,12 @@ helpviewer_keywords:
 - custom controls [Windows Forms]
 - controls [Windows Forms], composite
 ms.assetid: 3cea09e5-4344-4ccb-9858-b66ccac210ff
-ms.openlocfilehash: f35fdb0f82370ed3e40aeeda01b3c88f0a8c5ec0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9883f9166007405c3f47a9a1d66a3f4c546197d0
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33541224"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43884557"
 ---
 # <a name="varieties-of-custom-controls"></a>各种自定义控件
 使用 .NET Framework 可以开发和实现新的控件。 可以通过继承来扩展熟悉的用户控件和现有控件的功能。 还可以编写自定义控件，这些控件执行自己的绘制。  
@@ -24,12 +24,12 @@ ms.locfileid: "33541224"
  确定创建何种类型的控件可能令人困惑。 本主题重点介绍各种可继承控件之间的差异，并提供有关如何为项目选择某种特定控件的信息。  
   
 > [!NOTE]
->  有关如何创作用于 Web 窗体的控件的信息，请参阅[开发自定义 ASP.NET 服务器控件](http://msdn.microsoft.com/library/fbe26c16-cff4-4089-b3dd-877411f0c0ef)。  
+>  有关如何创作用于 Web 窗体的控件的信息，请参阅[开发自定义 ASP.NET 服务器控件](https://msdn.microsoft.com/library/fbe26c16-cff4-4089-b3dd-877411f0c0ef)。  
   
 ## <a name="base-control-class"></a>基控件类  
  <xref:System.Windows.Forms.Control>类是 Windows 窗体控件的基类。 它提供了在 Windows 窗体应用程序中进行可视显示所需的基础结构。  
   
- <xref:System.Windows.Forms.Control>类执行以下任务以提供 Windows 窗体应用程序中的可视显示：  
+ <xref:System.Windows.Forms.Control>类执行以下任务以提供可在 Windows 窗体应用程序中的可视显示：  
   
 -   公开窗口句柄。  
   
@@ -53,9 +53,9 @@ ms.locfileid: "33541224"
   
  复合控件包含与每个包含的 Windows 窗体控件相关联的所有固有功能，允许选择性地公开和绑定它们的属性。 复合控件还提供了大量的默认键盘处理功能，用户不需要进行任何额外的开发。  
   
- 例如，可以生成复合控件，以显示来自数据库的客户地址数据。 此控件可以包括<xref:System.Windows.Forms.DataGridView>控件来显示的数据库字段中，<xref:System.Windows.Forms.BindingSource>来处理到数据源的绑定和一个<xref:System.Windows.Forms.BindingNavigator>记录之间移动控件。 可以选择性地公开数据绑定属性，还可以将整个控件打包并在不同应用程序之间重复使用。 有关这种复合控件的示例，请参阅[如何：应用 Windows 窗体控件中的特性](../../../../docs/framework/winforms/controls/how-to-apply-attributes-in-windows-forms-controls.md)。  
+ 例如，可以生成复合控件，以显示来自数据库的客户地址数据。 此控件可包括<xref:System.Windows.Forms.DataGridView>控件来显示数据库字段中，<xref:System.Windows.Forms.BindingSource>来处理到数据源的绑定和一个<xref:System.Windows.Forms.BindingNavigator>控件以在记录之间移动。 可以选择性地公开数据绑定属性，还可以将整个控件打包并在不同应用程序之间重复使用。 有关这种复合控件的示例，请参阅[如何：应用 Windows 窗体控件中的特性](../../../../docs/framework/winforms/controls/how-to-apply-attributes-in-windows-forms-controls.md)。  
   
- 若要创作复合控件，派生自<xref:System.Windows.Forms.UserControl>类。 <xref:System.Windows.Forms.UserControl>基类提供了键盘路由子控件，并使子控件作为组进行工作。 有关详细信息，请参阅[开发复合 Windows 窗体控件](../../../../docs/framework/winforms/controls/developing-a-composite-windows-forms-control.md)。  
+ 若要创作复合控件，派生<xref:System.Windows.Forms.UserControl>类。 <xref:System.Windows.Forms.UserControl>基类提供了键盘路由子控件，并使子控件作为组进行处理。 有关详细信息，请参阅[开发复合 Windows 窗体控件](../../../../docs/framework/winforms/controls/developing-a-composite-windows-forms-control.md)。  
   
  **建议**  
   
@@ -66,9 +66,9 @@ ms.locfileid: "33541224"
 ### <a name="extended-controls"></a>扩展控件  
  你可以从任何现有的 Windows 窗体控件派生继承的控件。 使用此方法，你可以保留 Windows 窗体控件的所有固有功能，然后通过添加自定义属性、方法或其他功能来扩展该功能。 可以使用此选项重写基控件的绘制逻辑，然后通过更改该控件的外观来扩展其用户界面。  
   
- 例如，你可以创建派生自的控件<xref:System.Windows.Forms.Button>跟踪用户的次数的控件已单击它。  
+ 例如，可以创建一个派生自控件<xref:System.Windows.Forms.Button>控件，用于跟踪多少次用户单击它。  
   
- 在某些控件中，你还可以添加自定义外观的控件的图形用户界面通过重写<xref:System.Windows.Forms.Control.OnPaint%2A>基本类的方法。 对于跟踪下鼠标扩展按钮，您可以重写<xref:System.Windows.Forms.Control.OnPaint%2A>方法来调用基实现的<xref:System.Windows.Forms.Control.OnPaint%2A>，然后在一个角绘制单击计数<xref:System.Windows.Forms.Button>控件的工作区。  
+ 在某些控件中，您还可以自定义外观到您的控件的图形用户界面通过重写<xref:System.Windows.Forms.Control.OnPaint%2A>基类的方法。 对于跟踪单击次数的扩展按钮，您可以重写<xref:System.Windows.Forms.Control.OnPaint%2A>方法调用的基实现<xref:System.Windows.Forms.Control.OnPaint%2A>，然后的一角绘制单击计数<xref:System.Windows.Forms.Button>控件的客户端区域。  
   
  **建议**  
   
@@ -79,13 +79,13 @@ ms.locfileid: "33541224"
 -   不需要自定义图形用户界面，或者想为现有控件设计一个新的图形用户界面。  
   
 ### <a name="custom-controls"></a>自定义控件  
- 若要创建的控件的另一种方法是通过继承创建一个从头<xref:System.Windows.Forms.Control>。 <xref:System.Windows.Forms.Control>类提供的所有控件，包括鼠标和键盘处理事件，所需的基本功能，但没有特定于控件的功能或图形界面。  
+ 创建控件的另一种方法是创建继承，开始通过继承<xref:System.Windows.Forms.Control>。 <xref:System.Windows.Forms.Control>类提供了所有基本功能所需的控件，包括鼠标和键盘处理事件，但没有特定于控件的功能或图形界面。  
   
- 通过继承创建控件<xref:System.Windows.Forms.Control>类需要更多的心思和精力相比从<xref:System.Windows.Forms.UserControl>或现有的 Windows 窗体控件。 由于用户还需执行大量的实现，因此，控件可以具有比复合控件或扩展控件更好的灵活性，而且可以使控件完全满足自己的需要。  
+ 通过继承创建控件<xref:System.Windows.Forms.Control>类需要更多的心思和精力相比从<xref:System.Windows.Forms.UserControl>或现有 Windows 窗体控件。 由于用户还需执行大量的实现，因此，控件可以具有比复合控件或扩展控件更好的灵活性，而且可以使控件完全满足自己的需要。  
   
- 若要实现自定义控件，你必须编写代码的<xref:System.Windows.Forms.Control.OnPaint%2A>事件的控件，以及任何所需的特定于功能的代码。 你也可以替代<xref:System.Windows.Forms.Control.WndProc%2A>直接方法，处理 windows 消息。 这是创建控件的最强大的方法，但若要有效地使用此技术，需熟悉 Microsoft Win32® API。  
+ 若要实现自定义控件，必须编写代码<xref:System.Windows.Forms.Control.OnPaint%2A>事件的控件，以及任何所需的特定于功能的代码。 此外可以重写<xref:System.Windows.Forms.Control.WndProc%2A>直接方法，并处理 windows 消息。 这是创建控件的最强大的方法，但若要有效地使用此技术，需熟悉 Microsoft Win32® API。  
   
- 时钟控件即是一个自定义控件，它复制模拟时钟的外观和行为。 自定义绘制调用来使指针移动，以响应<xref:System.Windows.Forms.Timer.Tick>从内部事件<xref:System.Windows.Forms.Timer>组件。 有关详细信息，请参阅[如何：开发简单的 Windows 窗体控件](../../../../docs/framework/winforms/controls/how-to-develop-a-simple-windows-forms-control.md)。  
+ 时钟控件即是一个自定义控件，它复制模拟时钟的外观和行为。 调用自定义绘制来使指针移动，以响应<xref:System.Windows.Forms.Timer.Tick>从内部事件<xref:System.Windows.Forms.Timer>组件。 有关详细信息，请参阅[如何：开发简单的 Windows 窗体控件](../../../../docs/framework/winforms/controls/how-to-develop-a-simple-windows-forms-control.md)。  
   
  **建议**  
   
@@ -102,13 +102,13 @@ ms.locfileid: "33541224"
  Microsoft Visual Basic® 6.0 和 ActiveX 技术支持无窗口控件。 Windows 窗体中不支持无窗口控件。  
   
 ## <a name="custom-design-experience"></a>自定义设计体验  
- 如果需要实现自定义设计时体验，可以创作自己的设计器。 复合控件派生自定义设计器类从<xref:System.Windows.Forms.Design.ParentControlDesigner>或<xref:System.Windows.Forms.Design.DocumentDesigner>类。 对于扩展和自定义控件，派生自定义设计器类从<xref:System.Windows.Forms.Design.ControlDesigner>类。  
+ 如果需要实现自定义设计时体验，可以创作自己的设计器。 对于复合控件类派生自定义设计器从<xref:System.Windows.Forms.Design.ParentControlDesigner>或<xref:System.Windows.Forms.Design.DocumentDesigner>类。 对于扩展和自定义控件类派生自定义设计器从<xref:System.Windows.Forms.Design.ControlDesigner>类。  
   
- 使用<xref:System.ComponentModel.DesignerAttribute>以将控件与您的设计器相关联。 有关详细信息，请参阅[扩展设计时支持](http://msdn.microsoft.com/library/d6ac8a6a-42fd-4bc8-bf33-b212811297e2)和[如何：创建利用设计时功能的 Windows 窗体控件](http://msdn.microsoft.com/library/8e0bad0e-56f3-43d2-bf63-a945c654d97c)。  
+ 使用<xref:System.ComponentModel.DesignerAttribute>以将控件与您的设计器相关联。 有关详细信息，请参阅[扩展设计时支持](https://msdn.microsoft.com/library/d6ac8a6a-42fd-4bc8-bf33-b212811297e2)和[如何：创建利用设计时功能的 Windows 窗体控件](https://msdn.microsoft.com/library/8e0bad0e-56f3-43d2-bf63-a945c654d97c)。  
   
 ## <a name="see-also"></a>请参阅  
  [使用 .NET Framework 开发自定义 Windows 窗体控件](../../../../docs/framework/winforms/controls/developing-custom-windows-forms-controls.md)  
  [如何：开发简单的 Windows 窗体控件](../../../../docs/framework/winforms/controls/how-to-develop-a-simple-windows-forms-control.md)  
  [开发复合 Windows 窗体控件](../../../../docs/framework/winforms/controls/developing-a-composite-windows-forms-control.md)  
- [扩展设计时支持](http://msdn.microsoft.com/library/d6ac8a6a-42fd-4bc8-bf33-b212811297e2)  
- [如何：创建利用设计时功能的 Windows 窗体控件](http://msdn.microsoft.com/library/8e0bad0e-56f3-43d2-bf63-a945c654d97c)
+ [扩展设计时支持](https://msdn.microsoft.com/library/d6ac8a6a-42fd-4bc8-bf33-b212811297e2)  
+ [如何：创建利用设计时功能的 Windows 窗体控件](https://msdn.microsoft.com/library/8e0bad0e-56f3-43d2-bf63-a945c654d97c)

@@ -1,23 +1,23 @@
 ---
 title: LINQ to Entities 查询中的标准查询运算符
-ms.date: 03/30/2017
+ms.date: 08/21/2018
 ms.assetid: 7fa55a9b-6219-473d-b1e5-2884a32dcdff
-ms.openlocfilehash: a65f759ef51d34cc3ac6d37fe3575b9e89aadf7c
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 302fa281767fc95e9a9a2192382034b3a519cd92
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32766395"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47198692"
 ---
 # <a name="standard-query-operators-in-linq-to-entities-queries"></a>LINQ to Entities 查询中的标准查询运算符
-在查询中，您可以指定要从数据源检索哪些信息。 查询也可以指定返回信息之前信息的排序、分组和表现方式。 LINQ 提供了一组可在查询中使用的标准查询方法。 这些方法的大多数作用于序列;在此上下文中，序列是其类型实现的对象<xref:System.Collections.Generic.IEnumerable%601>接口或<xref:System.Linq.IQueryable%601>接口。 标准查询运算符查询功能包括筛选、投影、聚合、排序、分组和分页等。 一些更为频繁使用的标准查询运算符包含专用关键字语法，以便可通过查询表达式语法调用。 查询表达式是另一种比基于方法的等式更具可读性的查询表达方法。 查询表达式子句在编译时被转换为对查询方法的调用。 具有等效的查询表达式子句的标准查询运算符的列表，请参阅[标准查询运算符概述](http://msdn.microsoft.com/library/24cda21e-8af8-4632-b519-c404a839b9b2)。  
+在查询中，您可以指定要从数据源检索哪些信息。 查询也可以指定返回信息之前信息的排序、分组和表现方式。 LINQ 提供了一组可在查询中使用的标准查询方法。 这些方法中的大多数都作用于序列;在此上下文中，序列是一个对象，其类型实现<xref:System.Collections.Generic.IEnumerable%601>接口或<xref:System.Linq.IQueryable%601>接口。 标准查询运算符查询功能包括筛选、投影、聚合、排序、分组和分页等。 一些更为频繁使用的标准查询运算符包含专用关键字语法，以便可通过查询表达式语法调用。 查询表达式是另一种比基于方法的等式更具可读性的查询表达方法。 查询表达式子句在编译时被转换为对查询方法的调用。 有关包含等效查询表达式子句的标准查询运算符的列表，请参阅[标准查询运算符概述](https://msdn.microsoft.com/library/24cda21e-8af8-4632-b519-c404a839b9b2)。  
   
- [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] 查询并不支持所有标准查询运算符。 有关详细信息，请参阅[支持和不受支持的 LINQ 方法 (LINQ to Entities)](../../../../../../docs/framework/data/adonet/ef/language-reference/supported-and-unsupported-linq-methods-linq-to-entities.md)。 本主题提供有关特定于 [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] 的标准查询运算符的信息。 有关中的已知问题的详细信息[!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)]查询，请参阅[已知问题和注意事项在 LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/known-issues-and-considerations-in-linq-to-entities.md)。  
+ [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] 查询并不支持所有标准查询运算符。 有关详细信息，请参阅[支持和不受支持的 LINQ 方法 (LINQ to Entities)](../../../../../../docs/framework/data/adonet/ef/language-reference/supported-and-unsupported-linq-methods-linq-to-entities.md)。 本主题提供有关特定于 [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] 的标准查询运算符的信息。 有关中的已知问题的详细信息[!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)]查询，请参阅[已知问题在 LINQ to Entities 和注意事项](../../../../../../docs/framework/data/adonet/ef/language-reference/known-issues-and-considerations-in-linq-to-entities.md)。  
   
 ## <a name="projection-and-filtering-methods"></a>投影和筛选方法  
- *投影*指将转换结果设置为所需的形式的元素。 例如，可以从结果集中的每个对象投影所需的属性子集，可以投影一个属性并对其执行数学计算，也可以从结果集投影整个对象。 投影方法有 `Select` 和 `SelectMany`。  
+ *投影*指的是转换的结果集到所需的窗体中的元素。 例如，可以从结果集中的每个对象投影所需的属性子集，可以投影一个属性并对其执行数学计算，也可以从结果集投影整个对象。 投影方法有 `Select` 和 `SelectMany`。  
   
- *筛选*引用的设置以包含与指定的条件匹配的这些元素将结果限制为该操作。 筛选方法为 `Where`。  
+ *筛选*指限制结果集包含与指定的条件匹配的元素的操作。 筛选方法为 `Where`。  
   
  [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] 中支持大多数投影和筛选方法的重载，除了那些接受位置参数的方法。  
   
@@ -67,15 +67,15 @@ ms.locfileid: "32766395"
 |`Sum`|返回 Null。|返回 Null。|返回序列中非 null 值的和。|计算数值序列的和。|  
   
 ## <a name="type-methods"></a>类型方法  
- 在 [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)] 上下文中支持处理类型转换和测试的两个 LINQ 方法。 这就意味着仅支持映射到相应 [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)] 类型的类型。 有关这些类型的列表，请参阅[概念模型类型 (CSDL)](http://msdn.microsoft.com/library/987b995f-e429-4569-9559-b4146744def4)。 类型方法有 `Convert` 和 `OfType`。  
+ 在 [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)] 上下文中支持处理类型转换和测试的两个 LINQ 方法。 这就意味着仅支持映射到相应 [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)] 类型的类型。 有关这些类型的列表，请参阅[概念模型类型 (CSDL)](https://msdn.microsoft.com/library/987b995f-e429-4569-9559-b4146744def4)。 类型方法有 `Convert` 和 `OfType`。  
   
  对于实体类型支持 `OfType`。 对概念模型基元类型支持 `Convert`。  还支持 C# 的 `is` 和 `as` 方法。  
   
 ## <a name="paging-methods"></a>分页方法  
- 分页操作从序列中返回唯一、特定的元素。 这些元素方法有 `ElementAt`、`First`、`FirstOrDefault`、`Last`、`LastOrDefault`、`Single`、`Skip`、`Take` 和 `TakeWhile`。  
+ 分页操作从序列中返回单个元素或多个元素。 支持的分页方法为`First`， `FirstOrDefault`， `Single`， `SingleOrDefault`， `Skip`，并`Take`。  
   
- 有些分页方法不受支持，原因可能是无法将函数映射到数据源，或是数据源上缺少集的隐式排序。 返回默认值的方法仅限于默认值为 null 的概念模型基元类型和引用类型。 对空序列执行的分页方法将返回 null。  
+ 大量的分页方法不支持，原因可能是不能将函数映射到数据源或缺乏隐式排序数据源上的集。 返回默认值的方法仅限于默认值为 null 的概念模型基元类型和引用类型。 对空序列执行的分页方法将返回 null。  
   
 ## <a name="see-also"></a>请参阅  
  [支持和不支持的 LINQ 方法 (LINQ to Entities)](../../../../../../docs/framework/data/adonet/ef/language-reference/supported-and-unsupported-linq-methods-linq-to-entities.md)  
- [标准查询运算符概述](http://msdn.microsoft.com/library/24cda21e-8af8-4632-b519-c404a839b9b2)
+ [标准查询运算符概述](https://msdn.microsoft.com/library/24cda21e-8af8-4632-b519-c404a839b9b2)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: d899d43c-335a-433e-a589-cd187192984f
 dev_langs:
 - CSharp
-ms.openlocfilehash: faa91d3e72ebd94b2f849f824ca7e47876793109
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: cb42c265d9057ea4fdb76e72fc9cdb2368309cae
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33583261"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47081080"
 ---
 # <a name="basic-serialization"></a>基本序列化
 
@@ -94,6 +94,7 @@ public class MyStuff : MyObject
   
  使用 [Serializable](xref:System.SerializableAttribute) 属性非常方便，但有以上所述的限制。 有关何时应标记类以进行序列化的信息，请参阅[序列化准则](serialization-guidelines.md)。 若类已编译，则无法对其进行序列化。  
   
-## <a name="see-also"></a>请参阅  
- [二进制序列化](binary-serialization.md)  
- [XML 和 SOAP 序列化](xml-and-soap-serialization.md)
+## <a name="see-also"></a>请参阅
+
+- [二进制序列化](binary-serialization.md)  
+- [XML 和 SOAP 序列化](xml-and-soap-serialization.md)

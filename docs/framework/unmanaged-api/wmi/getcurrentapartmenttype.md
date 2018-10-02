@@ -1,6 +1,6 @@
 ---
 title: GetCurrentApartmentType 函数 （非托管 API 参考）
-description: GetCurrentApartmentType 函数检索的单元在其中执行调用方的类型。
+description: GetCurrentApartmentType 函数检索在其中执行调用方的单元的类型。
 ms.date: 11/06/2017
 api_name:
 - GetCurrentApartmentType
@@ -16,15 +16,15 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ca7b5fa5bf6d845d542d3e80c0571e59f3d4c1e0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 4de85eb310de70dc8fd61f7c06abca95ec267f87
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33461719"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43522520"
 ---
 # <a name="getcurrentapartmenttype-function"></a>GetCurrentApartmentType 函数
-检索在其中执行调用方的单元的类型。   
+检索调用方执行操作所在的单元类型。   
   
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
   
@@ -41,32 +41,32 @@ HRESULT GetCurrentApartmentType (
 ## <a name="parameters"></a>参数
 
 `vFunc`  
-[in]未使用此参数。
+[in]此参数是未使用。
 
 `ptr`  
-[in]指向的指针[IComThreadingInfo](https://msdn.microsoft.com/library/windows/desktop/ms694502(v=vs.85).aspx)实例。
+[in]一个指向[IComThreadingInfo](/windows/desktop/api/objidlbase/nn-objidlbase-icomthreadinginfo)实例。
 
 `aptType`  
-[out]指向的指针[APTTYPE](https://msdn.microsoft.com/library/windows/desktop/ms693793(v=vs.85).aspx)枚举值，该值指示调用方的单元。
+[out]一个指向[APTTYPE](/windows/desktop/api/objidlbase/ne-objidlbase-_apttype)枚举值，该值指示调用方的单元。
 
 ## <a name="return-value"></a>返回值
 
 
-|返回的常量  |值  |描述  |
+|返回的常量  |“值”  |描述  |
 |---------|---------|---------|
 | `S_OK` | 0 | 已成功完成该函数。 |
-| `E_FAIL` | 0x80000008 | 在单元中未执行调用方。 |
+| `E_FAIL` | 0x80000008 | 调用方不在一个单元执行。 |
   
 ## <a name="remarks"></a>备注
 
-此函数包装对的调用[IComThreadingInfo::GetCurrentApartmentType](https://msdn.microsoft.com/library/windows/desktop/ms683752(v=vs.85).aspx)方法。
+此函数包装对的调用[IComThreadingInfo::GetCurrentApartmentType](/windows/desktop/api/objidlbase/nf-objidlbase-icomthreadinginfo-getcurrentapartmenttype)方法。
 
 ## <a name="requirements"></a>要求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** WMINet_Utils.idl  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>请参阅  
 [WMI 和性能计数器 （非托管 API 参考）](index.md)

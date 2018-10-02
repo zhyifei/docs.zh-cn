@@ -3,13 +3,12 @@ title: 生成我的第一个声明感知 WCF 服务
 ms.date: 03/30/2017
 ms.assetid: e0e6d091-9a97-4888-8f2c-cbcee42d90ee
 author: BrucePerlerMS
-manager: mbaldwin
-ms.openlocfilehash: 3b88835cc7836d9d6c323de3c0386b3f4c7c3078
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e6324087afa62f276766c733284dc69e425b89bc
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33399608"
+ms.lasthandoff: 09/28/2018
+ms.locfileid: "47425857"
 ---
 # <a name="building-my-first-claims-aware-wcf-service"></a>生成我的第一个声明感知 WCF 服务
 ## <a name="applies-to"></a>适用于  
@@ -33,13 +32,13 @@ ms.locfileid: "33399608"
   
  STS 是一项在身份验证成功后颁发令牌的服务。 Microsoft 提供两个行业标准 STS：  
   
--   [Active Directory 联合身份验证服务 (AD FS) 2.0](http://go.microsoft.com/fwlink/?LinkID=247516) (http://go.microsoft.com/fwlink/?LinkID=247516)  
+-   [Active Directory 联合身份验证服务 (AD FS) 2.0](https://go.microsoft.com/fwlink/?LinkID=247516)
   
--   [Windows Azure 访问控制服务 (ACS)](http://go.microsoft.com/fwlink/?LinkID=247517) (http://go.microsoft.com/fwlink/?LinkID=247517)。  
+-   [Windows Azure 访问控制服务 (ACS)](https://go.microsoft.com/fwlink/?LinkID=247517)
   
- AD FS 2.0 是 Windows Server R2 的一部分并可用作本地方案的 STS。 Azure Active Directory 访问控制（也称为访问控制服务或 ACS）是作为 Microsoft Azure 的一部分提供的云服务。 出于测试或教学目的，你还可以使用其他 STS 以生成声明感知应用程序。 例如，你可以使用属于本地开发 STS [Identity and Access Tool for Visual Studio](http://go.microsoft.com/fwlink/?LinkID=245849) (http://go.microsoft.com/fwlink/?LinkID=245849)这是免费提供联机。  
+ AD FS 2.0 是 Windows Server R2 的一部分并可用作本地方案的 STS。 Azure Active Directory 访问控制（也称为访问控制服务或 ACS）是作为 Microsoft Azure 的一部分提供的云服务。 出于测试或教学目的，你还可以使用其他 STS 以生成声明感知应用程序。 例如，可以使用属于本地开发 STS[标识和访问工具，用于 Visual Studio](https://go.microsoft.com/fwlink/?LinkID=245849)即联机免费提供。  
   
- 若要生成使用 WIF 对第一个声明感知 WCF 服务，请参阅[How To: WCF Web 服务应用程序启用 WIF](../../../docs/framework/security/how-to-enable-wif-for-a-wcf-web-service-application.md)。
+ 若要生成第一个声明感知 WCF 服务使用 WIF，请参阅[如何： 为 WCF Web 服务应用程序启用 WIF](../../../docs/framework/security/how-to-enable-wif-for-a-wcf-web-service-application.md)。
   
 ## <a name="see-also"></a>请参阅  
  [WIF 入门](../../../docs/framework/security/getting-started-with-wif.md)

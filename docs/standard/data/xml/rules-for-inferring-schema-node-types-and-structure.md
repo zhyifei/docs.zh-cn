@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: d74ce896-717d-4871-8fd9-b070e2f53cb0
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b1593f703f1f8b4465b46d3b22b763d35c582744
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a518df5b016552de25091e7a9d89f737a1a66151
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33578230"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44087653"
 ---
 # <a name="rules-for-inferring-schema-node-types-and-structure"></a>推断架构节点类型和结构的规则
 本主题介绍架构推断过程如何将 XML 文档中的节点类型转换为 XML 架构定义语言 (XSD) 结构。  
@@ -146,9 +146,10 @@ ms.locfileid: "33578230"
   
  若要详细了解架构推理进程，请参阅[从 XML 文档推理架构](../../../../docs/standard/data/xml/inferring-schemas-from-xml-documents.md)。  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Xml.Schema.XmlSchemaInference>  
- [XML 架构对象模型 (SOM)](../../../../docs/standard/data/xml/xml-schema-object-model-som.md)  
- [推断 XML 架构](../../../../docs/standard/data/xml/inferring-an-xml-schema.md)  
- [从 XML 文档推断架构](../../../../docs/standard/data/xml/inferring-schemas-from-xml-documents.md)  
- [推断简单类型的规则](../../../../docs/standard/data/xml/rules-for-inferring-simple-types.md)
+## <a name="see-also"></a>请参阅
+
+- <xref:System.Xml.Schema.XmlSchemaInference>  
+- [XML 架构对象模型 (SOM)](../../../../docs/standard/data/xml/xml-schema-object-model-som.md)  
+- [推断 XML 架构](../../../../docs/standard/data/xml/inferring-an-xml-schema.md)  
+- [从 XML 文档推断架构](../../../../docs/standard/data/xml/inferring-schemas-from-xml-documents.md)  
+- [推断简单类型的规则](../../../../docs/standard/data/xml/rules-for-inferring-simple-types.md)

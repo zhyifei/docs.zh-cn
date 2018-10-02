@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: f91fc5f7-de5a-4f23-b6ac-f450e63c662e
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 67db256f4c328b12d6cc30abfbe5d5ccc12e8b0a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b92592500f0babf29891710cedf1228b0ddcb0e4
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33397827"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "45970729"
 ---
 # <a name="enabling-jit-attach-debugging"></a>启用 JIT 附加调试
 JIT 附加调试是用于描述如何在发生错误时将调试器附加到进程的词组，它也可以由特定的方法或函数触发。  
@@ -21,7 +21,7 @@ JIT 附加调试是用于描述如何在发生错误时将调试器附加到进�
   
 -   未经处理的异常（在本机代码和托管代码中）。  
   
--   <xref:System.Environment.FailFast%2A?displayProperty=nameWithType> 方法或 [RaiseFailFastException](http://go.microsoft.com/fwlink/?LinkId=182107) 函数（Windows 7 系列）。  
+-   <xref:System.Environment.FailFast%2A?displayProperty=nameWithType> 方法或 [RaiseFailFastException](https://go.microsoft.com/fwlink/?LinkId=182107) 函数（Windows 7 系列）。  
   
 -   运行时灾难性错误。  
   
@@ -31,11 +31,11 @@ JIT 附加调试是用于描述如何在发生错误时将调试器附加到进�
   
 -   <xref:System.Diagnostics.Debugger.Break%2A?displayProperty=nameWithType> 方法。  
   
--   [DebugBreak](http://go.microsoft.com/fwlink/?LinkId=182106) 函数 (Win32)。  
+-   [DebugBreak](https://go.microsoft.com/fwlink/?LinkId=182106) 函数 (Win32)。  
   
- [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] 之前的 .NET Framework 提供单独的注册表项来控制本机调试器和托管调试器的行为。 从 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] 开始，控制合并到了一个注册表项下：HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\Current Version\AeDebug。 用户可为该注册表项设置值来确定是否调用调试器，如果调用，则确定是否使用需用户交互的对话框来调用。 有关设置此注册表项的信息，请参阅[配置自动调试](http://go.microsoft.com/fwlink/?LinkId=181767)。  
+ [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] 之前的 .NET Framework 提供单独的注册表项来控制本机调试器和托管调试器的行为。 从 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] 开始，控制合并到了一个注册表项下：HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\Current Version\AeDebug。 用户可为该注册表项设置值来确定是否调用调试器，如果调用，则确定是否使用需用户交互的对话框来调用。 有关设置此注册表项的信息，请参阅[配置自动调试](https://go.microsoft.com/fwlink/?LinkId=181767)。  
   
 ## <a name="see-also"></a>请参阅  
  [调试、跟踪和分析](../../../docs/framework/debug-trace-profile/index.md)  
  [使映像更易于调试](../../../docs/framework/debug-trace-profile/making-an-image-easier-to-debug.md)  
- [启用分析](http://msdn.microsoft.com/library/3b669676-f0e0-4ebf-8674-68986dd2020d)
+ [启用分析](https://msdn.microsoft.com/library/3b669676-f0e0-4ebf-8674-68986dd2020d)

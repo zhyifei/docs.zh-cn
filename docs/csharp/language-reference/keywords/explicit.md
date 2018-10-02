@@ -1,26 +1,28 @@
 ---
 title: explicit 关键字（C# 参考）
-ms.date: 07/20/2015
+ms.date: 08/24/2018
 f1_keywords:
 - explicit_CSharpKeyword
 - explicit
 helpviewer_keywords:
 - explicit keyword [C#]
 ms.assetid: cfb8f42a-e411-4db2-af9b-796b05644846
-ms.openlocfilehash: 66d271fdac0bad356ee0bafc1732e2f410854da1
-ms.sourcegitcommit: f9e38d31288fe5962e6be5b0cc286da633482873
+ms.openlocfilehash: 3567a2c5aa549aa3141ed59c3e93e7b07975da70
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37027936"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43525456"
 ---
 # <a name="explicit-c-reference"></a>explicit（C# 参考）
 
-`explicit` 关键字声明必须通过转换来调用的用户定义的类型转换运算符。 例如，此运算符将名为华氏度的类转换为名为摄氏度的类：
+`explicit` 关键字声明必须通过转换来调用的用户定义的类型转换运算符。
+
+以下示例定义从 `Fahrenheit` 类转换为 `Celsius` 类的运算符。 必须在 `Fahrenheit` 类或 `Celsius` 类中定义运算符：
 
 [!code-csharp[csrefKeywordsConversion#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsConversion/CS/csrefKeywordsConversion.cs#2)]
 
-可用如下方式调用此转换运算符：
+如以下示例所示，使用强制转换调用定义的转换运算符：
 
 [!code-csharp[csrefKeywordsConversion#3](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsConversion/CS/csrefKeywordsConversion.cs#3)]
 
@@ -48,10 +50,10 @@ ms.locfileid: "37027936"
 
 ## <a name="see-also"></a>请参阅
 
-[C# 参考](../index.md)  
-[C# 编程指南](../../programming-guide/index.md)  
-[C# 关键字](index.md)  
-[implicit](implicit.md)  
-[运算符（C# 参考）](operator.md)  
-[如何：在结构之间实现用户定义的转换](../../programming-guide/statements-expressions-operators/how-to-implement-user-defined-conversions-between-structs.md)  
-[Chained user-defined explicit conversions in C#](https://blogs.msdn.microsoft.com/ericlippert/2007/04/16/chained-user-defined-explicit-conversions-in-c/)（C# 中链接在一起的用户定义的显式转换）  
+- [C# 参考](../index.md)  
+- [C# 编程指南](../../programming-guide/index.md)  
+- [C# 关键字](index.md)  
+- [implicit](implicit.md)  
+- [运算符（C# 参考）](operator.md)  
+- [如何：在结构之间实现用户定义的转换](../../programming-guide/statements-expressions-operators/how-to-implement-user-defined-conversions-between-structs.md)  
+- [Chained user-defined explicit conversions in C#](https://blogs.msdn.microsoft.com/ericlippert/2007/04/16/chained-user-defined-explicit-conversions-in-c/)（C# 中链接在一起的用户定义的显式转换）  

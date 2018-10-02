@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: fd4026bc-2c3d-4b27-86dc-ec5e96018181
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2fe12f67814b2fc049ec26c745b43aa85627d555
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 8cfe1f76cfe489095dfa996bce8005d2777966b7
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32744270"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43748085"
 ---
 # <a name="64-bit-applications"></a>64 位应用程序
 编译应用程序时，您可以将其指定为在 Windows 64 位操作系统上作为本机应用程序或在 WOW64（Windows 64 位下的 Windows 32 位）下运行。 WOW64 是一种兼容性环境，它使 32 位应用能够在 64 位系统上运行。 WOW64 包括在所有 64 位版本的 Windows 操作系统中。  
@@ -43,13 +43,13 @@ ms.locfileid: "32744270"
 ## <a name="general-64-bit-programming-information"></a>常规 64 位编程信息  
  有关 64 位编程的常规信息，请参阅以下文档：  
   
--   有关 64 位 Windows 计算机上的 64 位版 CLR 的详细信息，请参阅 MSDN 网站上的 [.NET Framework 开发人员中心](http://go.microsoft.com/fwlink/?LinkId=37079)。  
+-   有关 64 位 Windows 计算机上的 64 位版 CLR 的详细信息，请参阅 MSDN 网站上的 [.NET Framework 开发人员中心](https://go.microsoft.com/fwlink/?LinkId=37079)。  
   
--   在 [!INCLUDE[winsdkshort](../../includes/winsdkshort-md.md)] 文档中，请参阅 [64 位 Windows 编程指南](http://go.microsoft.com/fwlink/p/?LinkId=253512)。  
+-   在 [!INCLUDE[winsdkshort](../../includes/winsdkshort-md.md)] 文档中，请参阅 [64 位 Windows 编程指南](https://go.microsoft.com/fwlink/p/?LinkId=253512)。  
   
--   有关如何下载 64 位版 CLR 的信息，请参阅 MSDN 网站上的 [.NET Framework 开发人员中心下载](http://go.microsoft.com/fwlink/?LinkId=50953)。  
+-   有关如何下载 64 位版 CLR 的信息，请参阅 MSDN 网站上的 [.NET Framework 开发人员中心下载](https://go.microsoft.com/fwlink/?LinkId=50953)。  
   
--   有关 Visual Studio 对创建 64 位应用程序提供的支持的信息，请参阅 [Visual Studio IDE 64 位支持](http://msdn.microsoft.com/library/b08ff3ad-c6fd-468f-94d5-01a61aab6833)。  
+-   有关 Visual Studio 对创建 64 位应用程序提供的支持的信息，请参阅 [Visual Studio IDE 64 位支持](https://msdn.microsoft.com/library/b08ff3ad-c6fd-468f-94d5-01a61aab6833)。  
   
 ## <a name="compiler-support-for-creating-64-bit-applications"></a>创建 64 位应用程序的编译器支持  
  默认情况下，如果您使用 .NET Framework 在 32 位或 64 位计算机中生成一个应用程序，该应用程序将会在 64 位计算机中作为本机应用程序运行（即不是在 WOW64 下运行）。 有关如何使用 Visual Studio 编译器创建 64 位应用程序，并且应用程序会作为本机应用程序运行和/或在 WOW64 下运行的信息，请参阅下表中的文档。  
@@ -58,7 +58,7 @@ ms.locfileid: "32744270"
 |--------------|---------------------|  
 |Visual Basic|[/platform (Visual Basic)](~/docs/visual-basic/reference/command-line-compiler/platform.md)|  
 |Visual C#|[/platform（C# 编译器选项）](~/docs/csharp/language-reference/compiler-options/platform-compiler-option.md)|  
-|Visual C++|可以通过使用 **/clr:safe** 创建与平台无关的 Microsoft 中间语言 (MSIL) 应用程序。 有关详细信息，请参阅 [/clr（公共语言运行时编译）](/cpp/build/reference/clr-common-language-runtime-compilation)。<br /><br /> Visual c++ 为每个 64 位操作系统均包括一个单独的编译器。 有关如何使用 Visual C++ 创建可在 64 位 Windows 操作系统上运行的本机应用程序的详细信息，请参阅 [64 位编程](http://msdn.microsoft.com/library/h2k70f3s\(v=vs.80\))。|  
+|Visual C++|可以通过使用 **/clr:safe** 创建与平台无关的 Microsoft 中间语言 (MSIL) 应用程序。 有关详细信息，请参阅 [/clr（公共语言运行时编译）](/cpp/build/reference/clr-common-language-runtime-compilation)。<br /><br /> Visual c++ 为每个 64 位操作系统均包括一个单独的编译器。 有关如何使用 Visual C++ 创建可在 64 位 Windows 操作系统上运行的本机应用程序的详细信息，请参阅 [64 位编程](https://msdn.microsoft.com/library/h2k70f3s\(v=vs.80\))。|  
   
 ## <a name="determining-the-status-of-an-exe-file-or-dll-file"></a>确定 .exe 文件或 .dll 文件的状态  
  若要确定 .exe 文件或 .dll 文件是只能在特定平台上运行还是可在 WOW64 下运行，请使用不带任何选项的 [CorFlags.exe（CorFlags 转换工具）](../../docs/framework/tools/corflags-exe-corflags-conversion-tool.md)。 您也可以使用 CorFlags.exe 更改 .exe 文件或 .dll 文件的平台状态。 Visual Studio 程序集的 CLR 头的主运行时版本号设置为 2，次运行时版本号设置为 5。 将次运行时版本设置为 0 的应用程序会被视为旧版应用程序，且始终在 WOW64 下执行。  

@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 465694cf-258b-4747-9dae-35b01a5bcdbb
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 65fd078b6be9dbcdfc03e34285d70a6bfe42d87b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 79b5e05fe9133eb2282eedefa001e64ece5e0f57
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33581773"
+ms.lasthandoff: 09/28/2018
+ms.locfileid: "47421133"
 ---
 # <a name="how-to-create-genericprincipal-and-genericidentity-objects"></a>如何：创建 GenericPrincipal 和 GenericIdentity 对象
-你可以使用<xref:System.Security.Principal.GenericIdentity>结合类<xref:System.Security.Principal.GenericPrincipal>类，以创建独立的 Windows 域存在授权方案。  
+可以使用<xref:System.Security.Principal.GenericIdentity>类结合<xref:System.Security.Principal.GenericPrincipal>类，以创建独立于 Windows 域存在的授权方案。  
   
 ### <a name="to-create-a-genericprincipal-object"></a>创建 GenericPrincipal 对象  
   
@@ -47,7 +47,7 @@ ms.locfileid: "33581773"
     GenericPrincipal MyPrincipal = new GenericPrincipal(MyIdentity, MyStringArray);  
     ```  
   
-3.  使用以下代码将主体附加到当前线程中。 这是十分重要，其中主体必须验证几次，它必须由其他应用程序中运行的代码来验证或它必须由来验证的情况下<xref:System.Security.Permissions.PrincipalPermission>对象。 不将主体附加到线程中，仍可对主体对象执行基于角色的验证。 有关详细信息，请参阅[替换主体对象](../../../docs/standard/security/replacing-a-principal-object.md)。  
+3.  使用以下代码将主体附加到当前线程中。 此操作的主体必须验证几次，则必须验证你的应用程序中运行其他代码或必须通过验证的情况下很有用<xref:System.Security.Permissions.PrincipalPermission>对象。 不将主体附加到线程中，仍可对主体对象执行基于角色的验证。 有关详细信息，请参阅[替换主体对象](../../../docs/standard/security/replacing-a-principal-object.md)。  
   
     ```vb  
     Thread.CurrentPrincipal = MyPrincipal  
@@ -140,9 +140,10 @@ The IsAuthenticated is: True
 Is this a Manager? True  
 ```  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Security.Principal.GenericIdentity>  
- <xref:System.Security.Principal.GenericPrincipal>  
- <xref:System.Security.Permissions.PrincipalPermission>  
- [替换主体对象](../../../docs/standard/security/replacing-a-principal-object.md)  
- [主体和标识对象](../../../docs/standard/security/principal-and-identity-objects.md)
+## <a name="see-also"></a>请参阅
+
+- <xref:System.Security.Principal.GenericIdentity>  
+- <xref:System.Security.Principal.GenericPrincipal>  
+- <xref:System.Security.Permissions.PrincipalPermission>  
+- [替换主体对象](../../../docs/standard/security/replacing-a-principal-object.md)  
+- [主体和标识对象](../../../docs/standard/security/principal-and-identity-objects.md)

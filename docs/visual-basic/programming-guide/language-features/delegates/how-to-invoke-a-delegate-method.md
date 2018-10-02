@@ -2,17 +2,17 @@
 title: 如何：调用委托方法 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: b56866ae-abf9-4a5a-a855-486359455e9c
-ms.openlocfilehash: aca87dd9fa1990d44c99aab7753f2fd7d508adc1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c50a32d300aaf52efe0c55cef69d5793a98305ac
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33646947"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44204599"
 ---
 # <a name="how-to-invoke-a-delegate-method-visual-basic"></a>如何：调用委托方法 (Visual Basic)
-此示例演示如何将一种方法的委托相关联，然后通过调用该方法的委托。  
+此示例演示如何将一种方法与委托相关联，然后调用该方法通过委托。  
   
-### <a name="create-the-delegate-and-matching-procedures"></a>创建的委托和匹配的过程  
+### <a name="create-the-delegate-and-matching-procedures"></a>创建委托和匹配过程  
   
 1.  创建名为的委托`MySubDelegate`。  
   
@@ -30,7 +30,7 @@ ms.locfileid: "33646947"
     End Class  
     ```  
   
-3.  定义一个方法创建委托的一个实例，并通过调用内置关联与委托的方法时，将调用`Invoke`方法。  
+3.  定义一个方法，创建委托的实例并调用该方法通过调用内置与委托相关联`Invoke`方法。  
   
     ```  
     Protected Sub DelegateTest()  
@@ -42,8 +42,9 @@ ms.locfileid: "33646947"
     End Sub  
     ```  
   
-## <a name="see-also"></a>请参阅  
- [Delegate 语句](../../../../visual-basic/language-reference/statements/delegate-statement.md)  
- [委托](../../../../visual-basic/programming-guide/language-features/delegates/index.md)  
- [事件](../../../../visual-basic/programming-guide/language-features/events/index.md)  
- [多线程应用程序](http://msdn.microsoft.com/library/a06a1a56-dd16-44e8-bc01-2c2255511bc6)
+## <a name="see-also"></a>请参阅
+
+- [Delegate 语句](../../../../visual-basic/language-reference/statements/delegate-statement.md)  
+- [委托](../../../../visual-basic/programming-guide/language-features/delegates/index.md)  
+- [事件](../../../../visual-basic/programming-guide/language-features/events/index.md)  
+- [多线程应用程序](../../../../standard/threading/using-threads-and-threading.md)

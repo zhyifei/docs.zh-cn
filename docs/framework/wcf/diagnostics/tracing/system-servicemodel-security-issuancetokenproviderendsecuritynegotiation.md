@@ -3,13 +3,12 @@ title: System.ServiceModel.Security.IssuanceTokenProviderEndSecurityNegotiation
 ms.date: 03/30/2017
 ms.assetid: 44a0b49e-fbd7-4649-a29a-1d1a6cd36a90
 author: BrucePerlerMS
-manager: mbaldwin
-ms.openlocfilehash: a83a72afb2eb4945134870aea9174565618e8390
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9a567d51b8c9ebaeea734a1b0cb6ac00bb0a3310
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33483222"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47197904"
 ---
 # <a name="systemservicemodelsecurityissuancetokenproviderendsecuritynegotiation"></a>System.ServiceModel.Security.IssuanceTokenProviderEndSecurityNegotiation
 System.ServiceModel.Security.IssuanceTokenProviderEndSecurityNegotiation  

@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: ae275793-857d-4102-9095-b4c2a02d57f4
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 728bac6985d47afdb4263f8c41a9d282dd2574b5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3d5d91db9256cdfb3aa0062d66333f13797ee1bb
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33396408"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47208115"
 ---
 # <a name="net-performance-tips"></a>.NET 性能提示
 术语“性能”通常指程序的执行速度。 有时通过遵循源代码中的一些基本规则便可以提高执行速度。 在某些程序中，十分重要的一点是需要仔细检查代码并使用探查器确保程序尽可能快地运行。 而在其他程序中，由于代码在编写时便运行得足够快，因此不必执行此类优化。 本文列出了一些性能可能遭受影响的常见领域以及相关改进建议，并提供其他性能主题的链接。 有关规划和测量性能的详细信息，请参阅[性能](../../../docs/framework/performance/index.md)  
@@ -30,20 +30,20 @@ ms.locfileid: "33396408"
   
 ## <a name="other-resources"></a>其他资源  
   
--   [编写更快的托管代码：了解代价](http://go.microsoft.com/fwlink/?LinkId=99294)  
+-   [编写更快的托管代码：了解代价](https://go.microsoft.com/fwlink/?LinkId=99294)  
   
--   [编写高性能的托管应用程序：入门](http://go.microsoft.com/fwlink/?LinkId=99295)  
+-   [编写高性能的托管应用程序：入门](https://go.microsoft.com/fwlink/?LinkId=99295)  
   
--   [垃圾回收器基础知识和性能提示](http://go.microsoft.com/fwlink/?LinkId=99296)  
+-   [垃圾回收器基础知识和性能提示](https://go.microsoft.com/fwlink/?LinkId=99296)  
   
--   [.NET 应用程序的性能提示和技巧](http://go.microsoft.com/fwlink/?LinkId=99297)  
+-   [.NET 应用程序的性能提示和技巧](https://go.microsoft.com/fwlink/?LinkId=99297)  
 
--   [Rico Mariani 关于性能问题的见解](http://go.microsoft.com/fwlink/?LinkId=115679)  
+-   [Rico Mariani 关于性能问题的见解](https://go.microsoft.com/fwlink/?LinkId=115679)  
 
 -   [Vance Morrison 的博客](https://blogs.msdn.microsoft.com/vancem/)
   
 ## <a name="see-also"></a>请参阅  
  [性能](../../../docs/framework/performance/index.md)  
- [编程概念](http://msdn.microsoft.com/library/65c12cca-af4f-4017-886e-2dbc00a189d6)  
+ [编程概念](https://msdn.microsoft.com/library/65c12cca-af4f-4017-886e-2dbc00a189d6)  
  [Visual Basic 编程指南](../../visual-basic/programming-guide/index.md)  
- [C# 编程指南](http://msdn.microsoft.com/library/ac0f23a2-6bf3-4077-be99-538ae5fd3bc5)
+ [C# 编程指南](https://msdn.microsoft.com/library/ac0f23a2-6bf3-4077-be99-538ae5fd3bc5)

@@ -1,5 +1,5 @@
 ---
-title: '&lt;删除&gt;webRequestModules （网络设置） 的元素'
+title: '&lt;删除&gt;webRequestModules （网络设置） 的'
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/webRequestModules/remove
@@ -12,15 +12,14 @@ helpviewer_keywords:
 ms.assetid: dd84d2fe-2f4f-457a-9d3c-441d0d21cc10
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 40eda14d4d578f10a77aa06843abd48f58c55f6a
-ms.sourcegitcommit: 9e18e4a18284ae9e54c515e30d019c0bbff9cd37
+ms.openlocfilehash: d0da0fd2edae4687ea80b4a23cc82a25ead9cb7b
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37073016"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47208576"
 ---
-# <a name="ltremovegt-element-for-webrequestmodules-network-settings"></a>&lt;删除&gt;webRequestModules （网络设置） 的元素
+# <a name="ltremovegt-element-for-webrequestmodules-network-settings"></a>&lt;删除&gt;webRequestModules （网络设置） 的
 从应用程序中删除自定义的 Web 请求模块。  
   
  \<configuration>  
@@ -52,7 +51,7 @@ ms.locfileid: "37073016"
   
 |**元素**|**说明**|  
 |-----------------|---------------------|  
-|[webRequestModules](../../../../../docs/framework/configure-apps/file-schema/network/webrequestmodules-element-network-settings.md)|指定要用于从网络主机请求信息的模块。|  
+|[webRequestModules](../../../../../docs/framework/configure-apps/file-schema/network/webrequestmodules-element-network-settings.md)|指定模块用于从网络主机请求信息。|  
   
 ## <a name="remarks"></a>备注  
  `remove`元素中移除指定的 URI 前缀已注册的 Web 请求模块。  
@@ -63,7 +62,7 @@ ms.locfileid: "37073016"
  此元素可在应用程序配置文件或计算机配置文件 (Machine.config) 中使用。  
   
 ## <a name="example"></a>示例  
- 下面的示例将对 HTTP 中删除该现有的 Web 请求模块，然后注册新的自定义 Web 请求模块到 www.contoso.com 的 HTTP 请求。  
+ 下面的示例 http 删除现有的 Web 请求模块，然后注册到 www.contoso.com 的 HTTP 请求的自定义新 Web 请求模块。  
   
 ```xml  
 <configuration>  

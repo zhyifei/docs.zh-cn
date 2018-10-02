@@ -5,14 +5,15 @@ helpviewer_keywords:
 - arrays [C#], multidimensional
 - multidimensional arrays [C#]
 ms.assetid: 020ce02e-7dff-4273-8e53-bf0b33747232
-ms.openlocfilehash: 12cc7ff4f0a688145f2dee130e66dbe9a05ec7e7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a1d7a0a014c330682316e869f6727082fa3b31ef
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33313844"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47421474"
 ---
 # <a name="multidimensional-arrays-c-programming-guide"></a>多维数组（C# 编程指南）
+
 数组可具有多个维度。 例如，以下声明创建一个具有四行两列的二维数组。  
   
  [!code-csharp[csProgGuideArrays#11](../../../csharp/programming-guide/arrays/codesnippet/CSharp/multidimensional-arrays_1.cs)]  
@@ -21,7 +22,8 @@ ms.locfileid: "33313844"
   
  [!code-csharp[csProgGuideArrays#12](../../../csharp/programming-guide/arrays/codesnippet/CSharp/multidimensional-arrays_2.cs)]  
   
-## <a name="array-initialization"></a>数组初始化  
+## <a name="array-initialization"></a>数组初始化
+
  声明后即可初始化数组，如以下示例所示。  
   
  [!code-csharp[csProgGuideArrays#13](../../../csharp/programming-guide/arrays/codesnippet/CSharp/multidimensional-arrays_3.cs)]  
@@ -46,8 +48,9 @@ ms.locfileid: "33313844"
   
  [!code-csharp[csProgGuideArrays#17](../../../csharp/programming-guide/arrays/codesnippet/CSharp/multidimensional-arrays_8.cs)]  
   
-## <a name="see-also"></a>请参阅  
- [C# 编程指南](../../../csharp/programming-guide/index.md)  
- [数组](../../../csharp/programming-guide/arrays/index.md)  
- [一维数组](../../../csharp/programming-guide/arrays/single-dimensional-arrays.md)  
- [交错数组](../../../csharp/programming-guide/arrays/jagged-arrays.md)
+## <a name="see-also"></a>请参阅
+
+- [C# 编程指南](../../../csharp/programming-guide/index.md)  
+- [数组](../../../csharp/programming-guide/arrays/index.md)  
+- [一维数组](../../../csharp/programming-guide/arrays/single-dimensional-arrays.md)  
+- [交错数组](../../../csharp/programming-guide/arrays/jagged-arrays.md)

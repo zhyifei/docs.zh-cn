@@ -1,66 +1,102 @@
 ---
 title: 使用 ASP.NET Core 和 Azure 构建新式 Web 应用程序
-description: 使用 ASP.NET Core 和 Azure 构建新式 Web 应用程序 | 简介
+description: 本指南提供了使用 ASP.NET Core 和 Azure 生成单片式 Web 应用的端到端指导。
 author: ardalis
 ms.author: wiwagn
-ms.date: 10/06/2017
-ms.openlocfilehash: 085ec85002fc1661d6e20b3c3f11cf4b6ea2161b
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.date: 06/28/2018
+ms.openlocfilehash: e2d2545108b55043c322baffbd609b2422d2743b
+ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37103914"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37936979"
 ---
 # <a name="architect-modern-web-applications-with-aspnet-core-and-azure"></a>使用 ASP.NET Core 和 Azure 构建新式 Web 应用程序
 
-![封面图像](./media/cover.jpg)
+![封面图像](./media/cover.png)
 
+发布者
+
+Microsoft 开发人员部门、.NET 和 Visual Studio 产品团队
+
+Microsoft Corporation 的一个部门
+
+One Microsoft Way
+
+Redmond, Washington 98052-6399
+
+版权所有 © 2018 Microsoft Corporation
+
+保留所有权利。 未经发布者书面许可，不得以任何形式或任何方式复制或传播本书中的任何内容。
+
+本书“按原样”提供，表达作者的观点和看法。 本书中表达的观点、看法和信息（包括 URL 和其他 Internet 网站引用）如有更改，恕不另行通知。
+
+本书中提及的一些示例仅用于说明，纯属虚构。 不存在任何实际关联或联系，请勿妄加推断。
+
+Microsoft 和 https://www.microsoft.com 上“商标”网页列出的商标是 Microsoft 集团公司的商标。
+
+Mac 和 macOS 是 Apple Inc. 的商标
+
+Docker 的鲸鱼徽标是 Docker Inc. 的注册商标经许可方可使用。
+
+所有其他标记和徽标均为其各自所有者的财产。
+
+作者:
+
+> Steve Smith (@ardalis)，[Ardalis.com 软件体系结构顾问](https://ardalis.com)
+
+编辑：
+
+> Maira Wenzel
+
+## <a name="introduction"></a>介绍
 
 相比传统 .NET 开发，.NET Core 和 ASP.NET Core 具有一系列优势。 如果以下所有方面或一些方面对于你的应用程序成功至关重要，应将 .NET Core 用于服务器应用程序：
 
--   跨平台支持
+- 跨平台支持。
 
--   微服务的使用
+- 微服务的使用。
 
--   Docker 容器的使用
+- Docker 容器的使用。
 
--   高性能和可伸缩性要求
+- 高性能和可伸缩性需求。
 
--   在同一服务器上通过应用程序对 .NET 版本进行并行版本控制
+- 在同一服务器上通过应用程序对 .NET 版本进行并行版本控制。
 
 传统 .NET 应用程序虽然支持以上要求，但是 ASP.NET Core 和 .NET Core 已经过优化，可为以上方案提供完善的支持。
 
 越来越多的组织选择使用 Microsoft Azure 等服务，在云中托管 web 应用程序。 如果以下方面对你的应用程序或组织至关重要，应该考虑在云中托管应用程序：
 
--   减少对数据中心的成本投入（硬件、软件、空间、实用工具等）
+- 减少对数据中心的成本投入（硬件、软件、空间、实用工具等）
 
--   灵活的定价（基于使用情况付费，无需为空闲容量付费）
+- 灵活的定价（基于使用情况付费，无需为空闲容量付费）。
 
--   高可靠性
+- 高可靠性。
 
--   改善应用移动性；可轻松更改部署应用的位置和方式
+- 改善应用移动性；可轻松更改部署应用的位置和方式。
 
--   灵活的容量；基于实际需要增加或减少
+- 灵活的容量；基于实际需要增加或减少。
 
-使用 Microsoft Azure 中托管的 ASP.NET Core 生成 web 应用程序，与传统替代方法相比，这能提供许多竞争优势。 ASP.NET Core 针对新式 web 应用程序开发做法和云托管方案进行了优化。 本指南介绍如何构建 ASP.NET Core 应用程序，充分利用这些功能。
+使用 Azure 中托管的 ASP.NET Core 生成 Web 应用，与传统替代方法相比，这能提供许多竞争优势。 ASP.NET Core 针对新式 web 应用程序开发做法和云托管方案进行了优化。 本指南介绍如何构建 ASP.NET Core 应用程序以充分利用这些功能。
 
-## <a name="purpose"></a>目标
+## <a name="purpose"></a>目的
 
 本指南提供了使用 ASP.NET Core 和 Azure 构建单片 web 应用程序的端到端指导。
 
-本指南是对“使用 .NET 构建和开发容器化和基于微服务的应用程序”的补充，偏重于 Docker、微服务和托管企业应用程序的容器部署。
+本指南是[“_.NET 微服务 - 容器化 .NET 应用程序体系结构_”](../microservices-architecture/index.md)的补充，该文章更侧重于介绍 Docker、微服务和部署容器以托管企业应用程序。
 
-> ### <a name="architecting-and-developing-containerized-microservice-based-apps-in-net"></a>在 .NET 中构建和开发基于微服务的容器化应用
-> - 电子书  
-> <http://aka.ms/MicroservicesEbook>
-> - 示例应用程序  
-> <http://aka.ms/microservicesarchitecture>
+### <a name="net-microservices-architecture-for-containerized-net-applications"></a>.NET 微服务。 适用于容器化 .NET 应用程序的体系结构
+
+- 电子书  
+  <https://aka.ms/MicroservicesEbook>
+- 示例应用程序  
+  <https://aka.ms/microservicesarchitecture>
 
 ## <a name="who-should-use-this-guide"></a>本指南的目标读者
 
 本指南的受众主要是对使用云中的 Microsoft 技术和服务生成新式 web 应用程序感兴趣的开发者、开发潜在顾客和架构师。
 
-次要受众是技术决策制定者，他们已经熟悉 ASP.NET 和/或 Azure，并想要了解是否需要为新项目或现有项目升级到 ASP.NET Core。
+次要受众是技术决策者，他们已经熟悉 ASP.NET 或 Azure，并想要了解是否需要为新项目或现有项目升级到 ASP.NET Core。
 
 ## <a name="how-you-can-use-this-guide"></a>如何使用本指南
 
@@ -69,8 +105,9 @@ ms.locfileid: "37103914"
 请将本指南转发到团队中，这有助于确保对这些注意事项和机会的共同理解。 确保每个人使用共同的术语和基础原则工作，这有助于构建模式和做法的一致应用。
 
 ## <a name="references"></a>参考资料
+
 - **为服务器应用选择 .NET Core 或 .NET Framework**  
-<https://docs.microsoft.com/dotnet/standard/choosing-core-framework-server>
+  <https://docs.microsoft.com/dotnet/standard/choosing-core-framework-server>
 
 >[!div class="step-by-step"]
 [下一篇](modern-web-applications-characteristics.md)

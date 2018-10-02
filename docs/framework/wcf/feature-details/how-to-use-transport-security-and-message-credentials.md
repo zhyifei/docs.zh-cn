@@ -8,16 +8,15 @@ helpviewer_keywords:
 - TransportWithMessageCredentials
 ms.assetid: 6cc35346-c37a-4859-b82b-946c0ba6e68f
 author: BrucePerlerMS
-manager: mbaldwin
-ms.openlocfilehash: b94c6fd4761a5b0383c21d36a6d717f78a8825de
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 40fe7b1fa6a61b56d5dfdde75a92834f096a8be4
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33496034"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47200407"
 ---
 # <a name="how-to-use-transport-security-and-message-credentials"></a>如何：使用传输安全和消息凭据
-保护具有传输和消息凭据的服务使用的传输和消息安全模式的最佳中 Windows Communication Foundation (WCF)。 总之，传输层安全提供了完整性和机密性，而消息层安全则提供了严格的传输安全机制所不可能提供的多种凭据。 本主题演示使用 <xref:System.ServiceModel.WSHttpBinding> 和 <xref:System.ServiceModel.NetTcpBinding> 绑定通过消息凭据实现传输的基本步骤。 有关设置安全模式的详细信息，请参阅[如何： 将安全模式设置](../../../../docs/framework/wcf/how-to-set-the-security-mode.md)。  
+保护具有传输和消息凭据的服务使用的传输和消息安全模式的最佳 Windows Communication Foundation (WCF) 中。 总之，传输层安全提供了完整性和机密性，而消息层安全则提供了严格的传输安全机制所不可能提供的多种凭据。 本主题演示使用 <xref:System.ServiceModel.WSHttpBinding> 和 <xref:System.ServiceModel.NetTcpBinding> 绑定通过消息凭据实现传输的基本步骤。 有关设置安全模式的详细信息，请参阅[如何： 将安全模式设置](../../../../docs/framework/wcf/how-to-set-the-security-mode.md)。  
   
  在将安全模式设置为 `TransportWithMessageCredential` 时，传输会确定实际提供传输级安全的机制。 对于 HTTP，该机制为基于 HTTP 的安全套接字层 (SSL)（SSL over HTPP，或 HTTPS）；对于 TCP，该机制为 SSL over TCP 或 Windows。  
   
@@ -86,9 +85,9 @@ ms.locfileid: "33496034"
   
 #### <a name="to-use-the-wshttpbinding"></a>使用 WSHttpBinding  
   
-1.  使用绑定到某个端口的 SSL 证书配置计算机。 (有关详细信息，请参阅[如何： 使用 SSL 证书配置端口](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md))。 不需要设置 <`transport`> 使用此配置元素值。  
+1.  使用绑定到某个端口的 SSL 证书配置计算机。 (有关详细信息，请参阅[如何： 使用 SSL 证书配置端口](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md))。 不需要设置 <`transport`> 使用此配置元素的值。  
   
-2.  指定消息级安全的客户端凭据类型。 下面的示例设置`clientCredentialType`属性 <`message`> 元素`UserName`。  
+2.  指定消息级安全的客户端凭据类型。 下面的示例设置`clientCredentialType`属性的 <`message`> 元素`UserName`。  
   
     ```xml  
     <wsHttpBinding>  
@@ -117,13 +116,13 @@ ms.locfileid: "33496034"
     </behaviors>  
     ```  
   
-2.  添加[ \<netTcpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/nettcpbinding.md)绑定部分  
+2.  添加[ \<netTcpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/nettcpbinding.md)到绑定节  
   
 3.  添加一个绑定元素，并将 `name` 属性设置为适当的值。  
   
-4.  添加 <`security`> 元素，并设置`mode`属性设为`TransportWithMessageCredential`。  
+4.  添加 <`security`> 元素，并将设置`mode`属性为`TransportWithMessageCredential`。  
   
-5.  添加 <`message>`元素，并设置`clientCredentialType`属性设为适当的值。  
+5.  添加 <`message>`元素，并将设置`clientCredentialType`属性为适当的值。  
   
     ```xml  
     <bindings>  
@@ -139,15 +138,15 @@ ms.locfileid: "33496034"
   
 #### <a name="to-use-the-nettcpbinding-with-windows-for-transport-security"></a>使用 NetTcpBinding 和 Windows 来获得传输安全  
   
-1.  添加[ \<netTcpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/nettcpbinding.md)到绑定部分中，  
+1.  添加[ \<netTcpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/nettcpbinding.md)到绑定节  
   
-2.  添加 <`binding`> 元素，并设置`name`属性设为适当的值。  
+2.  添加 <`binding`> 元素，并设置`name`属性为适当的值。  
   
-3.  添加 <`security`> 元素，并设置`mode`属性设为`TransportWithMessageCredential`。  
+3.  添加 <`security`> 元素，并将设置`mode`属性为`TransportWithMessageCredential`。  
   
-4.  添加 <`transport`> 元素，并设置`clientCredentialType`属性设为`Windows`。  
+4.  添加 <`transport`> 元素，并设置`clientCredentialType`属性为`Windows`。  
   
-5.  添加 <`message`> 元素，并设置`clientCredentialType`属性设为适当的值。 下面的代码将该值设置为一个证书。  
+5.  添加 <`message`> 元素，并设置`clientCredentialType`属性为适当的值。 下面的代码将该值设置为一个证书。  
   
     ```xml  
     <bindings>  

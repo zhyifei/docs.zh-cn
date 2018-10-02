@@ -15,65 +15,57 @@ helpviewer_keywords:
 - easing functions [WPF], customizing
 - animations [WPF], applying
 ms.assetid: 075b9c2b-82c4-43fa-b3cd-de0b6236eb38
-ms.openlocfilehash: 3ce7c1824dc53c154ba1091ea62c1b8950b757c1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 038d9423ddae6f16165ed0618beab8391c462ac9
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33557558"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43461704"
 ---
 # <a name="easing-functions"></a>缓动函数
 缓动函数允许将自定义的数学公式应用到动画。 例如，用户可能希望某个对象逼真地弹跳或表现出像在弹簧上一样。 可使用关键帧甚至 From/To/By 动画来近似地实现这些效果，但它将需要大量工作，并且动画不如使用数学公式准确。  
   
- 除了通过继承创建你自己的自定义缓动函数外<xref:System.Windows.Media.Animation.EasingFunctionBase>，可以使用运行时提供的若干缓动函数之一来创建常见效果。  
+ 除了通过继承创建自定义的缓动函数<xref:System.Windows.Media.Animation.EasingFunctionBase>，可以使用由运行时提供的多个缓动函数之一创建常见效果。  
   
--   <xref:System.Windows.Media.Animation.BackEase>： 将收回动画的运动略有开始进行动画处理中指定的路径之前。  
+-   <xref:System.Windows.Media.Animation.BackEase>： 将收回动画的动作略有才能开始进行动画处理指示的路径中。  
   
 -   <xref:System.Windows.Media.Animation.BounceEase>： 创建弹跳效果。  
   
--   <xref:System.Windows.Media.Animation.CircleEase>： 创建动画加速和/或减速使用圆形函数。  
+-   <xref:System.Windows.Media.Animation.CircleEase>： 创建加速和/或减速使用循环函数的动画。  
   
--   <xref:System.Windows.Media.Animation.CubicEase>： 创建动画加速和/或减速使用公式*f*(*t*) = *t*<sup>3</sup>。  
+-   <xref:System.Windows.Media.Animation.CubicEase>： 创建加速和/或减速使用的公式的动画*f*(*t*) = *t*<sup>3</sup>。  
   
--   <xref:System.Windows.Media.Animation.ElasticEase>： 创建类似于弹簧 rest 直到显示来回振荡的动画。  
+-   <xref:System.Windows.Media.Animation.ElasticEase>： 创建类似于弹簧来回直到静止的动画。  
   
--   <xref:System.Windows.Media.Animation.ExponentialEase>： 创建动画加速和/或减速使用指数的公式。  
+-   <xref:System.Windows.Media.Animation.ExponentialEase>： 创建加速和/或减速使用指数公式的动画。  
   
--   <xref:System.Windows.Media.Animation.PowerEase>： 创建动画加速和/或减速使用公式*f*(*t*) = *t*<sup>p</sup> p 等于<xref:System.Windows.Media.Animation.PowerEase.Power%2A>属性。  
+-   <xref:System.Windows.Media.Animation.PowerEase>： 创建加速和/或减速使用的公式的动画*f*(*t*) = *t*<sup>p</sup>其中 p 等于<xref:System.Windows.Media.Animation.PowerEase.Power%2A>属性。  
   
--   <xref:System.Windows.Media.Animation.QuadraticEase>： 创建动画加速和/或减速使用公式*f*(*t*) = *t*<sup>2</sup>。  
+-   <xref:System.Windows.Media.Animation.QuadraticEase>： 创建加速和/或减速使用的公式的动画*f*(*t*) = *t*<sup>2</sup>。  
   
--   <xref:System.Windows.Media.Animation.QuarticEase>： 创建动画加速和/或减速使用公式*f*(*t*) = *t*<sup>4</sup>。  
+-   <xref:System.Windows.Media.Animation.QuarticEase>： 创建加速和/或减速使用的公式的动画*f*(*t*) = *t*<sup>4</sup>。  
   
--   <xref:System.Windows.Media.Animation.QuinticEase>： 创建动画加速和/或减速使用公式*f*(*t*) = *t*<sup>5</sup>。  
+-   <xref:System.Windows.Media.Animation.QuinticEase>： 创建加速和/或减速使用的公式的动画*f*(*t*) = *t*<sup>5</sup>。  
   
--   <xref:System.Windows.Media.Animation.SineEase>： 创建动画加速和/或减速使用正弦值的公式。  
+-   <xref:System.Windows.Media.Animation.SineEase>： 创建加速和/或减速使用正弦公式的动画。  
   
- 可以通过以下示例探索这些缓动函数的行为。  
-  
- [运行此示例](http://go.microsoft.com/fwlink/?LinkId=139798&sref=easing_functions_gallery)  
-  
- 若要应用到动画的缓动函数，使用`EasingFunction`动画的属性指定要应用到动画的缓动函数。 下面的示例应用<xref:System.Windows.Media.Animation.BounceEase>缓动函数<xref:System.Windows.Media.Animation.DoubleAnimation>创建弹跳效果。  
-  
- [运行此示例](http://go.microsoft.com/fwlink/?LinkId=139798&sref=BounceEase)  
+ 若要应用到动画的缓动函数，使用`EasingFunction`动画属性指定要应用到动画的缓动函数。 下面的示例应用<xref:System.Windows.Media.Animation.BounceEase>缓动函数到<xref:System.Windows.Media.Animation.DoubleAnimation>创建弹跳效果。  
   
  [!code-xaml[BounceEase_snippet#BounceEase](../../../../samples/snippets/csharp/VS_Snippets_Wpf/bounceease_snippet/CS/window1.xaml#bounceease)]  
   
  在上一示例中，缓动函数应用于 From/To/By 动画。 还可以将这些缓动函数应用到关键帧动画。 以下示例显示如何将关键帧与其相关联的缓动函数结合使用，以创建一个协定上升、减速、向下展开（如同下落），然后弹跳至停止的矩形的动画。  
   
- [运行此示例](http://go.microsoft.com/fwlink/?LinkId=139798&sref=EasingFunctionDoubleKeyFrame)  
-  
  [!code-xaml[EasingFunctionDoubleKeyFrame_snippet#EasingFunctionDoubleKeyFrame](../../../../samples/snippets/csharp/VS_Snippets_Wpf/easingfunctiondoublekeyframe_snippet/CS/window1.xaml#easingfunctiondoublekeyframe)]  
   
- 你可以使用<xref:System.Windows.Media.Animation.EasingFunctionBase.EasingMode%2A>属性更改的缓动函数的行为方式，即，更改动画的内插。 有三个可能的值会使<xref:System.Windows.Media.Animation.EasingFunctionBase.EasingMode%2A>:  
+ 可以使用<xref:System.Windows.Media.Animation.EasingFunctionBase.EasingMode%2A>属性更改缓动函数的行为方式，即更改动画的内插。 有三个可能的值可以为<xref:System.Windows.Media.Animation.EasingFunctionBase.EasingMode%2A>:  
   
--   <xref:System.Windows.Media.Animation.EasingMode.EaseIn>： 内插遵循的缓动函数与关联的数学公式。  
+-   <xref:System.Windows.Media.Animation.EasingMode.EaseIn>： 内插遵循与缓动函数相关联的数学公式。  
   
--   <xref:System.Windows.Media.Animation.EasingMode.EaseOut>： 内插遵循的缓动函数与关联的公式的 100%减去输出的内插。  
+-   <xref:System.Windows.Media.Animation.EasingMode.EaseOut>： 内插遵循 100%内插值减去输出与缓动函数相关联的公式。  
   
--   <xref:System.Windows.Media.Animation.EasingMode.EaseInOut>： 内插使用<xref:System.Windows.Media.Animation.EasingMode.EaseIn>动画上半年和<xref:System.Windows.Media.Animation.EasingMode.EaseOut>为第二部分。  
+-   <xref:System.Windows.Media.Animation.EasingMode.EaseInOut>： 使用内插<xref:System.Windows.Media.Animation.EasingMode.EaseIn>动画的第一个另一半和<xref:System.Windows.Media.Animation.EasingMode.EaseOut>虚拟机。  
   
- 下图演示的不同值<xref:System.Windows.Media.Animation.EasingFunctionBase.EasingMode%2A>其中*f*(*x*) 表示的动画进度和*t*表示时间。  
+ 下图演示了不同的值<xref:System.Windows.Media.Animation.EasingFunctionBase.EasingMode%2A>其中*f*(*x*) 表示动画进度和*t*表示时间。  
   
  <xref:System.Windows.Media.Animation.BackEase>  
   
@@ -120,11 +112,9 @@ ms.locfileid: "33557558"
  ![不同 EasingMode 值的 SineEase](../../../../docs/framework/wpf/graphics-multimedia/media/sineease-graph.png "SineEase_Graph")  
   
 > [!NOTE]
->  你可以使用<xref:System.Windows.Media.Animation.PowerEase>创建相同的行为<xref:System.Windows.Media.Animation.CubicEase>， <xref:System.Windows.Media.Animation.QuadraticEase>， <xref:System.Windows.Media.Animation.QuarticEase>，和<xref:System.Windows.Media.Animation.QuinticEase>使用<xref:System.Windows.Media.Animation.PowerEase.Power%2A>属性。 例如，如果你想要使用<xref:System.Windows.Media.Animation.PowerEase>用于替换<xref:System.Windows.Media.Animation.CubicEase>，指定<xref:System.Windows.Media.Animation.PowerEase.Power%2A>值为 3。  
+>  可以使用<xref:System.Windows.Media.Animation.PowerEase>来创建相同的行为<xref:System.Windows.Media.Animation.CubicEase>， <xref:System.Windows.Media.Animation.QuadraticEase>， <xref:System.Windows.Media.Animation.QuarticEase>，并<xref:System.Windows.Media.Animation.QuinticEase>使用<xref:System.Windows.Media.Animation.PowerEase.Power%2A>属性。 例如，如果你想要使用<xref:System.Windows.Media.Animation.PowerEase>将替换为<xref:System.Windows.Media.Animation.CubicEase>，指定<xref:System.Windows.Media.Animation.PowerEase.Power%2A>值为 3。  
   
- 除了使用运行时中附带的缓动函数，您可以通过继承创建您自己的自定义缓动函数<xref:System.Windows.Media.Animation.EasingFunctionBase>。 以下示例演示如何创建简单的自定义缓动函数。 可以添加您自己的通过重写的缓动函数的行为方式的数学逻辑<xref:System.Windows.Media.Animation.EasingFunctionBase.EaseInCore%2A>方法。  
-  
- [运行此示例](http://go.microsoft.com/fwlink/?LinkId=139798&sref=CustomEasingFunction)  
+ 除了使用运行时中附带的缓动函数，可以创建自己的自定义缓动函数，通过继承<xref:System.Windows.Media.Animation.EasingFunctionBase>。 以下示例演示如何创建简单的自定义缓动函数。 可以添加您自己的数学逻辑通过重写的缓动函数的行为方式<xref:System.Windows.Media.Animation.EasingFunctionBase.EaseInCore%2A>方法。   
   
  [!code-csharp[CustomEasingFunction#CustomEasingFunction](../../../../samples/snippets/csharp/VS_Snippets_Wpf/customeasingfunction/csharp/customlog10easingfunction.cs#customeasingfunction)]
  [!code-vb[CustomEasingFunction#CustomEasingFunction](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/customeasingfunction/visualbasic/customlog10easingfunction.vb#customeasingfunction)]

@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 7e828566-fffe-4d38-abb2-4d68fd73f663
-ms.openlocfilehash: c785cc69289440918f45974c711ae0b112130c5d
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: a1718429360d79c4628e9948eb1b052c3ac01964
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32762405"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47208041"
 ---
 # <a name="performing-an-xpath-query-on-a-dataset"></a>对数据集执行 XPath 查询
-同步之间的关系<xref:System.Data.DataSet>和<xref:System.Xml.XmlDataDocument>让你可以使用 XML 访问的服务，例如 XML 路径语言 (XPath) 查询， **XmlDataDocument**和可以执行某些功能比访问更方便地**数据集**直接。 例如，而不是使用**选择**方法<xref:System.Data.DataTable>来导航到其他表中的关系**数据集**，你可以对执行 XPath 查询**XmlDataDocument**与同步**数据集**，若要获取的窗体中的 XML 元素的列表<xref:System.Xml.XmlNodeList>。 中的节点**XmlNodeList**、 强制转换为<xref:System.Xml.XmlElement>节点，则传递给**GetRowFromElement**方法**XmlDataDocument**，则返回匹配<xref:System.Data.DataRow>对中同步的表的行的引用**数据集**。  
+同步之间的关系<xref:System.Data.DataSet>和<xref:System.Xml.XmlDataDocument>让你可以使用 XML 的访问的服务，例如 XML 路径语言 (XPath) 查询**XmlDataDocument** ，并且可以执行特定功能比访问更方便地**数据集**直接。 例如，而不是使用**选择**方法<xref:System.Data.DataTable>导航到其他表中的关系**数据集**，可以执行 XPath 查询**XmlDataDocument**与同步**数据集**，以获取 XML 元素的列表中的窗体<xref:System.Xml.XmlNodeList>。 中的节点**XmlNodeList**强制转换为<xref:System.Xml.XmlElement>节点，然后传递给**GetRowFromElement**方法**XmlDataDocument**，则返回匹配<xref:System.Data.DataRow>对中同步的表的行的引用**数据集**。  
   
- 例如，以下代码示例执行“孙级”XPath 查询。 **数据集**将填充这三个表：**客户**，**订单**，和**OrderDetails**。 在示例中，父-子关系首次创建之间**客户**和**订单**表，和介于**订单**和**OrderDetails**表。 然后，执行 XPath 查询来返回**XmlNodeList**的**客户**节点，孙级**OrderDetails**节点具有**ProductID**节点值为 43。 从根本上而言，该示例使用 XPath 查询来确定哪些客户订购的产品**ProductID**为 43。  
+ 例如，以下代码示例执行“孙级”XPath 查询。 **数据集**将填充这三个表：**客户**，**订单**，以及**OrderDetails**。 在示例中，父-子关系首次创建之间**客户**并**订单**表，以及**订单**和**OrderDetails**表。 然后，执行 XPath 查询以返回**XmlNodeList**的**客户**节点，孙级**OrderDetails**节点具有**ProductID**值为 43 的节点。 从本质上讲，该示例使用 XPath 查询来确定哪些客户订购的产品**ProductID**为 43。  
   
 ```vb  
 ' Assumes that connection is a valid SqlConnection.  
@@ -103,4 +103,4 @@ foreach (XmlNode xmlNode in nodeList)
   
 ## <a name="see-also"></a>请参阅  
  [数据集和 XmlDataDocument 同步](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataset-and-xmldatadocument-synchronization.md)  
- [ADO.NET 托管提供程序和数据集开发人员中心](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)

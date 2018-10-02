@@ -2,12 +2,12 @@
 title: 友元程序集 (C#)
 ms.date: 07/20/2015
 ms.assetid: b65ea7de-0801-477a-a39c-e914c2cc107c
-ms.openlocfilehash: c9265a6ce53d97f1d0b8aaeb0f1aae3b7b75f2cf
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e8c295fe23685e39e20a14ff23139339f24564c7
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33320861"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43510080"
 ---
 # <a name="friend-assemblies-c"></a>友元程序集 (C#)
 友元程序集是可以访问其他程序集的[内部](../../../../csharp/language-reference/keywords/internal.md)类型和成员的程序集。 如果将一个程序集标识为友元程序集，则无需再将类型和成员标记为公共，其他程序集就能访问它们。 此举在下列情境中尤其方便：  
@@ -70,10 +70,11 @@ public class ClassWithFriendMethod
   
  有关如何从模块文件（扩展名为 .netmodule 的文件）访问程序集的 `internal` 类型和方法，请参阅 [/moduleassemblyname (C#)](../../../../csharp/language-reference/compiler-options/moduleassemblyname-compiler-option.md)。  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>  
- <xref:System.Security.Permissions.StrongNameIdentityPermission>  
- [如何：创建未签名的友元程序集 (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/how-to-create-unsigned-friend-assemblies.md)  
- [如何：创建签名的友元程序集 (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/how-to-create-signed-friend-assemblies.md)  
- [程序集和全局程序集缓存 (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/index.md)  
- [C# 编程指南](../../../../csharp/programming-guide/index.md)
+## <a name="see-also"></a>请参阅
+
+- <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>  
+- <xref:System.Security.Permissions.StrongNameIdentityPermission>  
+- [如何：创建未签名的友元程序集 (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/how-to-create-unsigned-friend-assemblies.md)  
+- [如何：创建签名的友元程序集 (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/how-to-create-signed-friend-assemblies.md)  
+- [程序集和全局程序集缓存 (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/index.md)  
+- [C# 编程指南](../../../../csharp/programming-guide/index.md)

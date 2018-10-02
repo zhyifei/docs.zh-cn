@@ -2,12 +2,12 @@
 title: 如何：投影对象图 (C#)
 ms.date: 07/20/2015
 ms.assetid: 293d15d5-3eaf-48de-9a02-3e13cb117b5b
-ms.openlocfilehash: 8a1eef77e1e4cb25ffed489c49311dd40f7c9b58
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f8e15e80a6914a8dcb848d91a13958f7e4175342
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33321608"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47196078"
 ---
 # <a name="how-to-project-an-object-graph-c"></a>如何：投影对象图 (C#)
 本主题演示如何从 XML 投影或填充对象图。  
@@ -256,7 +256,8 @@ USPrice: 39.98
 ShipDate: 5/21/1999  
 ```  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Linq.Enumerable.Select%2A>  
- <xref:System.Linq.Enumerable.ToList%2A>  
- [投影和转换 (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/projections-and-transformations-linq-to-xml.md)
+## <a name="see-also"></a>请参阅
+
+- <xref:System.Linq.Enumerable.Select%2A>  
+- <xref:System.Linq.Enumerable.ToList%2A>  
+- [投影和转换 (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/projections-and-transformations-linq-to-xml.md)

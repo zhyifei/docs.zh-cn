@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - basic samples [WCF], getting started
 ms.assetid: 967a3d94-0261-49ff-b85a-20bb07f1af20
-ms.openlocfilehash: dfba7062d4226f3644aa6c4cc0efcd7c5fb9eab8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: dda11511904d452a3a5101417f8ab8a33c00204f
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33505764"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43857090"
 ---
 # <a name="getting-started-sample"></a>入门示例
 此入门示例演示如何实现典型的服务和典型的客户端使用 Windows Communication Foundation (WCF)。 此示例是所有其他基本技术示例的基础。  
@@ -25,18 +25,18 @@ ms.locfileid: "33505764"
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目录不存在，请转到[Windows Communication Foundation (WCF) 和针对.NET Framework 4 的 Windows Workflow Foundation (WF) 示例](http://go.microsoft.com/fwlink/?LinkId=150780)下载所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
+>  如果此目录不存在，请转到[Windows Communication Foundation (WCF) 和.NET Framework 4 的 Windows Workflow Foundation (WF) 示例](https://go.microsoft.com/fwlink/?LinkId=150780)若要下载所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\GettingStarted\GettingStarted`  
   
  服务描述它在服务协定中执行的操作，服务协定由服务作为元数据公开。 服务中还包含用来实现操作的代码。  
   
- 客户端中包含服务协定的定义，以及一个用来访问服务的代理类。 从服务元数据中使用生成代理代码[ServiceModel 元数据实用工具 (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)。  
+ 客户端中包含服务协定的定义，以及一个用来访问服务的代理类。 从服务元数据中使用生成代理代码[ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)。  
   
  在 [!INCLUDE[wv](../../../../includes/wv-md.md)] 上，服务承载于 Windows 激活服务 (WAS) 中。 在 [!INCLUDE[wxp](../../../../includes/wxp-md.md)] 和 [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] 上，服务由 Internet 信息服务 (IIS) 和 ASP.NET 承载。 如果将服务承载于 IIS 或 WAS 中，那么，在首次访问服务时，系统将自动激活服务。  
   
 > [!NOTE]
->  如果你想要开始使用示例承载控制台应用程序而不是 IIS 中的服务，请参阅[自承载](../../../../docs/framework/wcf/samples/self-host.md)示例。  
+>  如果你想要开始使用示例承载控制台应用程序而不是 IIS 中的服务，请参阅[自托管](../../../../docs/framework/wcf/samples/self-host.md)示例。  
   
  服务和客户端的配置文件设置中均指定了访问详细信息，这些设置在部署时提供了灵活性。 其中包括指定地址、绑定和协定的终结点定义。 绑定为如何访问服务指定了传输和安全详细信息。  
   
@@ -141,9 +141,9 @@ public class CalculatorService : ICalculator
   
  服务在 IIS 或 WAS 主机所提供的基址处公开该终结点。 绑定是用标准 <xref:System.ServiceModel.WSHttpBinding> 进行配置的，该标准配置提供 HTTP 通信以及用来进行寻址和实现安全性的标准 Web 服务协议。 协定是由服务实现的 `ICalculator`。  
   
- 经过配置之后，可以在访问服务http://localhost/servicemodelsamples/service.svc通过同一台计算机上的客户端。 若要使远程计算机上的客户端能够访问该服务，必须指定完全限定域名，而不是本地主机。  
+ 经过配置之后，可以在访问服务 http://localhost/servicemodelsamples/service.svc在同一台计算机上的客户端。 若要使远程计算机上的客户端能够访问该服务，必须指定完全限定域名，而不是本地主机。  
   
- 默认情况下，框架不公开任何元数据。 在这种情况下，该服务将打开<xref:System.ServiceModel.Description.ServiceMetadataBehavior>和公开元数据交换 (MEX) 终结点在http://localhost/servicemodelsamples/service.svc/mex。 下面的配置对此进行了演示。  
+ 默认情况下，框架不公开任何元数据。 在这种情况下，该服务将打开<xref:System.ServiceModel.Description.ServiceMetadataBehavior>，并公开一个元数据交换 (MEX) 终结点位于 http://localhost/servicemodelsamples/service.svc/mex。 下面的配置对此进行了演示。  
   
 ```xaml  
 <system.serviceModel>  
@@ -173,7 +173,7 @@ public class CalculatorService : ICalculator
 </system.serviceModel>  
 ```  
   
- 客户端通信使用给定的协定类型使用由生成的客户端类[ServiceModel 元数据实用工具 (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)。 所生成的这个客户端类包含在 generatedClient.cs 文件或 generatedClient.vb 文件中。 此实用工具检索给定服务的元数据，并生成要由客户端应用程序使用给定的协定类型进行通信的客户端。 承载服务必须可用于生成客户端代码，因为将使用该服务来检索更新的元数据。  
+ 客户端通信使用给定的协定类型，通过生成的客户端类[ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)。 所生成的这个客户端类包含在 generatedClient.cs 文件或 generatedClient.vb 文件中。 此实用工具检索给定服务的元数据，并生成要由客户端应用程序使用给定的协定类型进行通信的客户端。 承载服务必须可用于生成客户端代码，因为将使用该服务来检索更新的元数据。  
   
  在客户端目录中通过从 SDK 命令提示运行以下命令来生成类型化代理：  
   
@@ -272,15 +272,15 @@ Divide(22,7) = 3.14285714285714
 Press <ENTER> to terminate client.  
 ```  
   
- 此入门示例演示了一种创建服务和客户端的标准方法。 其他[基本](../../../../docs/framework/wcf/samples/basic-sample.md)基于此示例来演示特定产品功能。  
+ 此入门示例演示了一种创建服务和客户端的标准方法。 另[基本](../../../../docs/framework/wcf/samples/basic-sample.md)在此示例，用于演示特定产品功能上构建。  
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>设置、生成和运行示例  
   
-1.  确保已执行[的 Windows Communication Foundation 示例的一次性安装过程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
+1.  请确保您具有执行[的 Windows Communication Foundation 示例的一次性安装过程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
   
 2.  若要生成 C# 或 Visual Basic .NET 版本的解决方案，请按照 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)中的说明进行操作。  
   
-3.  若要在单或跨计算机配置上运行示例，请按照中的说明[运行 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/running-the-samples.md)。  
+3.  若要在单或跨计算机配置中运行示例，请按照中的说明[运行 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/running-the-samples.md)。  
   
 ## <a name="see-also"></a>请参阅  
  [如何：在托管应用程序中托管 WCF 服务](../../../../docs/framework/wcf/how-to-host-a-wcf-service-in-a-managed-application.md)  

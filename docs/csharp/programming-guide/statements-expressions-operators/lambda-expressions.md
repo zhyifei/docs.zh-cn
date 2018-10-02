@@ -8,17 +8,18 @@ helpviewer_keywords:
 - expression lambda [C#]
 - expressions [C#], lambda
 ms.assetid: 57e3ba27-9a82-4067-aca7-5ca446b7bf93
-ms.openlocfilehash: f20ba6845a6a84a57fa7636355d08b2f4e5cea2a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 47e066f8eb7402fedabc70cf1e3b4a1bb974ff62
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33340640"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43504687"
 ---
 # <a name="lambda-expressions-c-programming-guide"></a>Lambda 表达式（C# 编程指南）
-Lambda 表达式是一种可用于创建 [委托](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md) 或 [表达式目录树](../../../csharp/programming-guide/delegates/using-delegates.md) 类型的 [匿名函数](http://msdn.microsoft.com/library/fb1d3ed8-d5b0-4211-a71f-dd271529294b) 。 通过使用 lambda 表达式，可以写入可作为参数传递或作为函数调用值返回的本地函数。 Lambda 表达式对于编写 LINQ 查询表达式特别有用。  
+
+Lambda 表达式是一种可用于创建 [委托](anonymous-methods.md) 或 [表达式目录树](../delegates/using-delegates.md) 类型的 [匿名函数](../concepts/expression-trees/index.md) 。 通过使用 lambda 表达式，可以写入可作为参数传递或作为函数调用值返回的本地函数。 Lambda 表达式对于编写 LINQ 查询表达式特别有用。
   
- 若要创建 Lambda 表达式，需要在 Lambda 运算符 [=>](../../../csharp/language-reference/operators/lambda-operator.md)左侧指定输入参数（如果有），然后在另一侧输入表达式或语句块。 例如，lambda 表达式 `x => x * x` 指定名为 `x` 的参数并返回 `x` 的平方值。 如下面的示例所示，你可以将此表达式分配给委托类型：  
+若要创建 Lambda 表达式，需要在 Lambda 运算符 [=>](../../../csharp/language-reference/operators/lambda-operator.md)左侧指定输入参数（如果有），然后在另一侧输入表达式或语句块。 例如，lambda 表达式 `x => x * x` 指定名为 `x` 的参数并返回 `x` 的平方值。 如下面的示例所示，你可以将此表达式分配给委托类型：  
   
 ```csharp  
 delegate int del(int i);  
@@ -58,8 +59,9 @@ namespace ConsoleApplication1
   
  适用于匿名方法的所有限制也适用于 Lambda 表达式。 有关详细信息，请参阅[匿名方法](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md)。  
   
-## <a name="expression-lambdas"></a>表达式 lambda  
- 表达式位于 => 运算符右侧的 Lambda 表达式称为“表达式 lambda”。 表达式 lambda 广泛用于[表达式树](http://msdn.microsoft.com/library/fb1d3ed8-d5b0-4211-a71f-dd271529294b)的构造。 表达式 lambda 会返回表达式的结果，并采用以下基本形式：  
+## <a name="expression-lambdas"></a>表达式 lambda
+
+ 表达式位于 => 运算符右侧的 Lambda 表达式称为“表达式 lambda”。 表达式 lambda 广泛用于[表达式树](../concepts/expression-trees/index.md)的构造。 表达式 lambda 会返回表达式的结果，并采用以下基本形式：
   
 ```csharp
 (input-parameters) => expression
@@ -76,6 +78,7 @@ namespace ConsoleApplication1
 ```csharp
 (int x, string s) => s.Length > x
 ```
+ 输入参数类型必须全部为显示或全部为隐式； 否则，C# 将生成 [CS0748](../../misc/cs0748.md) 编译器错误。
 
  使用空括号指定零个输入参数：  
   
@@ -271,11 +274,12 @@ class Test
 ## <a name="featured-book-chapter"></a>重要章节  
  [C# 3.0 手册，第三版：为 C# 3.0 程序员提供的 250 多个解决方案](https://msdn.microsoft.com/library/orm-9780596516109-03-09.aspx) 中的 [委托、事件和 Lambda 表达式](https://msdn.microsoft.com/library/orm-9780596516109-03.aspx)  
   
-## <a name="see-also"></a>请参阅  
- [C# 编程指南](../../../csharp/programming-guide/index.md)  
- [LINQ（语言集成查询）](../../../csharp/programming-guide/concepts/linq/index.md)  
- [匿名方法](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md)  
- [is](../../../csharp/language-reference/keywords/is.md)  
- [表达式树](../../../csharp/programming-guide/concepts/expression-trees/index.md)  
- [Visual Studio 2008 C# 示例（请参阅 LINQ 示例查询文件和 XQuery 程序）](http://code.msdn.microsoft.com/Visual-Studio-2008-C-d295cdba)  
- [递归 lambda 表达式](https://blogs.msdn.microsoft.com/madst/2007/05/11/recursive-lambda-expressions/)
+## <a name="see-also"></a>请参阅
+
+- [C# 编程指南](../../../csharp/programming-guide/index.md)  
+- [LINQ（语言集成查询）](../../../csharp/programming-guide/concepts/linq/index.md)  
+- [匿名方法](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md)  
+- [is](../../../csharp/language-reference/keywords/is.md)  
+- [表达式树](../../../csharp/programming-guide/concepts/expression-trees/index.md)  
+- [Visual Studio 2008 C# 示例（请参阅 LINQ 示例查询文件和 XQuery 程序）](https://code.msdn.microsoft.com/Visual-Studio-2008-C-d295cdba)  
+- [递归 lambda 表达式](https://blogs.msdn.microsoft.com/madst/2007/05/11/recursive-lambda-expressions/)

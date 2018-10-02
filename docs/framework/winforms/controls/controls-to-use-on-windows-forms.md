@@ -5,12 +5,12 @@ helpviewer_keywords:
 - controls [Windows Forms]
 - Windows Forms controls, list of
 ms.assetid: dec51976-eae0-4398-a537-20bca7974722
-ms.openlocfilehash: 53474de53375546e2a7f416488cf7758b3f9cd22
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 18c3cf638934551ba40306d98b3bf28dfdd03463
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33529711"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "44041136"
 ---
 # <a name="controls-to-use-on-windows-forms"></a>在 Windows 窗体上使用的控件
 下面按字母顺序列出了可在 Windows 窗体上使用的控件和组件。 除本节介绍的 Windows 窗体控件外，还可向 Windows 窗体添加 ActiveX 控件和自定义控件。 如果在此处列出的控件中未找到所需控件，还可创建自己的控件。 有关详细信息，请参阅[设计时开发 Windows 窗体控件](../../../../docs/framework/winforms/controls/developing-windows-forms-controls-at-design-time.md)。 有关选择所需控件的详细信息，请参阅[按功能列出的 Windows 窗体控件](../../../../docs/framework/winforms/controls/windows-forms-controls-by-function.md)。  
@@ -50,10 +50,10 @@ ms.locfileid: "33529711"
  在下拉式组合框中显示数据。  
   
  [ContextMenu 组件](../../../../docs/framework/winforms/controls/contextmenu-component-windows-forms.md)  
- 向用户提供易于访问的菜单，该菜单包含与选定对象关联的常用命令。 尽管<xref:System.Windows.Forms.ContextMenuStrip>替换并添加了功能<xref:System.Windows.Forms.ContextMenu>的早期版本中，控件<xref:System.Windows.Forms.ContextMenu>如果需要的话，以备向后兼容性和将来使用保留。  
+ 向用户提供易于访问的菜单，该菜单包含与选定对象关联的常用命令。 尽管<xref:System.Windows.Forms.ContextMenuStrip>替换并添加了功能<xref:System.Windows.Forms.ContextMenu>的早期版本中，控制<xref:System.Windows.Forms.ContextMenu>如果需要保留向后兼容性和将来使用。  
   
  [ContextMenuStrip 控件](../../../../docs/framework/winforms/controls/contextmenustrip-control.md)  
- 表示快捷菜单。 尽管<xref:System.Windows.Forms.ContextMenuStrip>替换并添加了功能<xref:System.Windows.Forms.ContextMenu>的早期版本中，控件<xref:System.Windows.Forms.ContextMenu>如果需要的话，以备向后兼容性和将来使用保留。  
+ 表示快捷菜单。 尽管<xref:System.Windows.Forms.ContextMenuStrip>替换并添加了功能<xref:System.Windows.Forms.ContextMenu>的早期版本中，控制<xref:System.Windows.Forms.ContextMenu>如果需要保留向后兼容性和将来使用。  
   
  [DataGrid 控件](../../../../docs/framework/winforms/controls/datagrid-control-windows-forms.md)  
  显示数据集中的表格数据，并允许对数据源进行更新。  
@@ -73,7 +73,7 @@ ms.locfileid: "33529711"
  [ErrorProvider 组件](../../../../docs/framework/winforms/controls/errorprovider-component-windows-forms.md)  
  以非打扰方式向用户显示错误信息。  
   
- [FileDialog 类](../../../../docs/framework/winforms/controls/filedialog-class.md)提供文件对话框基类功能。
+ [FileDialog 类](../../../../docs/framework/winforms/controls/filedialog-class.md)为文件对话框提供基类功能。
 
  [FlowLayoutPanel 控件](../../../../docs/framework/winforms/controls/flowlayoutpanel-control-windows-forms.md)  
  表示以水平或垂直方式动态布置其内容的面板。  
@@ -109,13 +109,13 @@ ms.locfileid: "33529711"
  按照 Windows 资源管理器的方式显示带图标的项列表。  
   
  [MainMenu 组件](../../../../docs/framework/winforms/controls/mainmenu-component-windows-forms.md)  
- 在运行时显示菜单。 尽管<xref:System.Windows.Forms.MenuStrip>替换并添加了功能<xref:System.Windows.Forms.MainMenu>的早期版本中，控件<xref:System.Windows.Forms.MainMenu>可以选择保留向后兼容性和将来使用。  
+ 在运行时显示菜单。 尽管<xref:System.Windows.Forms.MenuStrip>替换并添加了功能<xref:System.Windows.Forms.MainMenu>的早期版本中，控制<xref:System.Windows.Forms.MainMenu>如果选择保留向后兼容性和将来使用。  
   
  [MaskedTextBox 控件](../../../../docs/framework/winforms/controls/maskedtextbox-control-windows-forms.md)  
  约束窗体中用户输入的格式。  
   
  [MenuStrip 控件](../../../../docs/framework/winforms/controls/menustrip-control-windows-forms.md)  
- 为窗体提供菜单系统。 尽管<xref:System.Windows.Forms.MenuStrip>替换并添加了功能<xref:System.Windows.Forms.MainMenu>的早期版本中，控件<xref:System.Windows.Forms.MainMenu>可以选择保留向后兼容性和将来使用。  
+ 为窗体提供菜单系统。 尽管<xref:System.Windows.Forms.MenuStrip>替换并添加了功能<xref:System.Windows.Forms.MainMenu>的早期版本中，控制<xref:System.Windows.Forms.MainMenu>如果选择保留向后兼容性和将来使用。  
   
  [MonthCalendar 控件](../../../../docs/framework/winforms/controls/monthcalendar-control-windows-forms.md)  
  显示直观的图形界面，供用户查看和设置日期信息。  
@@ -162,7 +162,7 @@ ms.locfileid: "33529711"
  [SaveFileDialog 组件](../../../../docs/framework/winforms/controls/savefiledialog-component-windows-forms.md)  
  选择要保存的文件及要保存的位置。  
   
- [SoundPlayer 类](../../../../docs/framework/winforms/controls/soundplayer-class.md)使你能够轻松地将声音纳入应用程序。
+ [SoundPlayer 类](../../../../docs/framework/winforms/controls/soundplayer-class.md)使您能够轻松地将声音纳入应用程序。
   
  [SplitContainer 控件](../../../../docs/framework/winforms/controls/splitcontainer-control-windows-forms.md)  
  允许用户调整停靠控件的大小。  
@@ -189,16 +189,16 @@ ms.locfileid: "33529711"
  按固定间隔引发事件。  
   
  [ToolBar 控件](../../../../docs/framework/winforms/controls/toolbar-control-windows-forms.md)  
- 显示激活命令的菜单和位图化按钮。 可扩展此控件的功能，并修改其外观和行为。 尽管<xref:System.Windows.Forms.ToolStrip>替换并添加了功能<xref:System.Windows.Forms.ToolBar>的早期版本中，控件<xref:System.Windows.Forms.ToolBar>可以选择保留向后兼容性和将来使用。  
+ 显示激活命令的菜单和位图化按钮。 可扩展此控件的功能，并修改其外观和行为。 尽管<xref:System.Windows.Forms.ToolStrip>替换并添加了功能<xref:System.Windows.Forms.ToolBar>的早期版本中，控制<xref:System.Windows.Forms.ToolBar>如果选择保留向后兼容性和将来使用。  
   
  [ToolStrip 控件](../../../../docs/framework/winforms/controls/toolstrip-control-windows-forms.md)  
- 在 Windows 窗体应用程序中创建自定义工具栏和菜单。 尽管<xref:System.Windows.Forms.ToolStrip>替换并添加了功能<xref:System.Windows.Forms.ToolBar>的早期版本中，控件<xref:System.Windows.Forms.ToolBar>可以选择保留向后兼容性和将来使用。  
+ 在 Windows 窗体应用程序中创建自定义工具栏和菜单。 尽管<xref:System.Windows.Forms.ToolStrip>替换并添加了功能<xref:System.Windows.Forms.ToolBar>的早期版本中，控制<xref:System.Windows.Forms.ToolBar>如果选择保留向后兼容性和将来使用。  
   
  [ToolStripContainer 控件](../../../../docs/framework/winforms/controls/toolstripcontainer-control.md)  
- 为停靠、 漂浮，和排列窗体的每一侧提供面板<xref:System.Windows.Forms.ToolStrip>控件和中部<xref:System.Windows.Forms.ToolStripContentPanel>传统控件。  
+ 为停靠、 漂浮和排列窗体的每一侧提供面板<xref:System.Windows.Forms.ToolStrip>控件和中央<xref:System.Windows.Forms.ToolStripContentPanel>用于传统控件。  
   
  [ToolStripPanel 控件](../../../../docs/framework/winforms/controls/toolstrippanel-control.md)  
- 提供一个面板停靠、 漂浮和排列<xref:System.Windows.Forms.ToolStrip>控件。  
+ 提供用于停靠、 漂浮和排列的一个面板<xref:System.Windows.Forms.ToolStrip>控件。  
   
  [ToolStripProgressBar 控件概述](../../../../docs/framework/winforms/controls/toolstripprogressbar-control-overview.md)  
  以图形方式指示操作的完成进度。 <xref:System.Windows.Forms.ToolStripProgressBar>通常包含在<xref:System.Windows.Forms.StatusStrip>。  
@@ -228,7 +228,7 @@ ms.locfileid: "33529711"
  [设计时开发 Windows 窗体控件](../../../../docs/framework/winforms/controls/developing-windows-forms-controls-at-design-time.md)  
  提供一些链接，这些链接指向分步说明主题、有关创建何种控件的建议和与创建自己的控件相关的其他信息。  
   
- [不同语言和库中的控件和可编程对象的比较](http://msdn.microsoft.com/library/021f2a1b-8247-4348-a5ad-e1d9ab23004b)  
+ [不同语言和库中的控件和可编程对象的比较](https://msdn.microsoft.com/library/021f2a1b-8247-4348-a5ad-e1d9ab23004b)  
  提供一个表，该表将 Visual Basic 6.0 中的控件映射到 [!INCLUDE[vbprvblong](../../../../includes/vbprvblong-md.md)] 中的相应控件。 请注意，控件现在是 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 中的类。  
   
  [如何：向 Windows 窗体添加 ActiveX 控件](../../../../docs/framework/winforms/controls/how-to-add-activex-controls-to-windows-forms.md)  

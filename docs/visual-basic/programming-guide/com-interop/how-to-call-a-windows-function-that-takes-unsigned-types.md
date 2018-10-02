@@ -14,27 +14,27 @@ helpviewer_keywords:
 - data types [Visual Basic], numeric
 - unsigned types [Visual Basic], using
 ms.assetid: c2c0e712-8dc2-43b9-b4c6-345fbb02e7ce
-ms.openlocfilehash: afec9965c4ff728094e901eb4924ac94c432b300
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d66b74f06abe6b337c24859c444f7a8c2aa52c13
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33643021"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43524560"
 ---
 # <a name="how-to-call-a-windows-function-that-takes-unsigned-types-visual-basic"></a>如何：调用采用无符号类型的 Windows 函数 (Visual Basic)
-如果你使用的类、 模块或结构，它具有无符号的整数类型的成员，则可以访问使用 Visual Basic 这些成员。  
+如果您正在使用类、 模块或结构，它具有无符号的整数类型的成员，可以访问这些成员与 Visual Basic。  
   
 ### <a name="to-call-a-windows-function-that-takes-an-unsigned-type"></a>若要调用采用无符号的类型的 Windows 函数  
   
-1.  使用[声明语句](../../../visual-basic/language-reference/statements/declare-statement.md)，其中库包含函数、 什么其名称是在库中，其调用的序列是什么，和如何将字符串转换调用它时告诉 Visual Basic。  
+1.  使用[Declare 语句](../../../visual-basic/language-reference/statements/declare-statement.md)来判断 Visual Basic 的库包含该函数的什么其名称是在该库中，其调用的序列是什么，以及如何将字符串转换调用它时。  
   
-2.  在`Declare`语句，使用`UInteger`， `ULong`， `UShort`，或`Byte`为适合于与无符号类型的每个参数。  
+2.  在中`Declare`语句，使用`UInteger`， `ULong`， `UShort`，或`Byte`根据需要为每个参数使用一个无符号类型。  
   
-3.  查阅文档以获取要调用若要查找的名称和它所使用的常量值的 Windows 函数。 其中许多参见 WinUser.h 文件中定义。  
+3.  要调用若要查找的名称和值的常量，它使用的 Windows 函数，请参阅文档。 其中许多 WinUser.h 文件中定义。  
   
-4.  声明在代码中的必要常量。 许多 Windows 常量是 32 位无符号的值，并应将这些声明`As``UInteger`。  
+4.  声明在代码中的必要常量。 许多 Windows 常量是 32 位无符号的值，并应声明这些`As``UInteger`。  
   
-5.  以常规方式调用函数。 下面的示例调用 Windows 函数`MessageBox`，它将采用一个无符号的整数自变量。  
+5.  以正常方式调用函数。 下面的示例调用 Windows 函数`MessageBox`，其将无符号的整数自变量。  
   
     ```  
     Public Class windowsMessage  
@@ -59,7 +59,7 @@ ms.locfileid: "33643021"
     End Class  
     ```  
   
-     你可以测试函数`messageThroughWindows`替换为以下代码。  
+     你可以测试该函数`messageThroughWindows`用下面的代码。  
   
     ```  
     Public Sub consumeWindowsMessage()  
@@ -69,16 +69,16 @@ ms.locfileid: "33643021"
     ```  
   
     > [!CAUTION]
-    >  `UInteger`， `ULong`， `UShort`，和`SByte`数据类型不属于[语言独立性和独立于语言的组件](../../../standard/language-independence-and-language-independent-components.md)(CLS)，因此符合 cls 的代码不能使用的组件，使用它们。  
+    >  `UInteger`， `ULong`， `UShort`，和`SByte`数据类型不属于[语言独立性和与语言无关的组件](../../../standard/language-independence-and-language-independent-components.md)(CLS)，因此符合 cls 的代码不能使用的组件，使用它们。  
   
     > [!IMPORTANT]
-    >  Windows 应用程序编程接口 (API)，例如在调用非托管代码，公开将代码移植到潜在的安全风险。  
+    >  Windows 应用程序编程接口 (API)，如在非托管代码调用公开您的代码与潜在的安全风险。  
   
     > [!IMPORTANT]
-    >  调用 Windows API 需要非托管的代码的权限，这可能会影响在部分信任情况下其执行。 有关详细信息，请参阅<xref:System.Security.Permissions.SecurityPermission>和[代码访问权限](http://msdn.microsoft.com/library/e5ae402f-6dda-4732-bbe8-77296630f675)。  
+    >  调用 Windows API 要求非托管的代码的权限，这可能会影响在部分信任情况下执行。 有关详细信息，请参阅<xref:System.Security.Permissions.SecurityPermission>并[代码访问权限](https://msdn.microsoft.com/library/e5ae402f-6dda-4732-bbe8-77296630f675)。  
   
 ## <a name="see-also"></a>请参阅  
- [数据类型](../../../visual-basic/language-reference/data-types/data-type-summary.md)  
+ [数据类型](../../../visual-basic/language-reference/data-types/index.md)  
  [Integer 数据类型](../../../visual-basic/language-reference/data-types/integer-data-type.md)  
  [UInteger 数据类型](../../../visual-basic/language-reference/data-types/uinteger-data-type.md)  
  [Declare 语句](../../../visual-basic/language-reference/statements/declare-statement.md)  

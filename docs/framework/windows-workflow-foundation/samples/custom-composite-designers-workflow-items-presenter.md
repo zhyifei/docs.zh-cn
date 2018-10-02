@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 70055c4b-1173-47a3-be80-b5bce6f59e9a
-ms.openlocfilehash: e78a738bf74f49eaa192b45324db5e4bb7a3e872
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 708b62290900db3e668de81c31f3a1dc85eb6d19
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33516518"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43528931"
 ---
 # <a name="custom-composite-designers---workflow-items-presenter"></a>自定义复合设计器 — 工作流项演示器
 <xref:System.Activities.Presentation.WorkflowItemsPresenter?displayProperty=nameWithType> 是 WF 设计器编程模型中的一个重要类型，可用于编辑包含元素的集合。 此示例演示如何生成一个呈现此类可编辑集合的活动设计器。  
@@ -19,13 +19,13 @@ ms.locfileid: "33516518"
   
 -   使用 <xref:System.Activities.Presentation.WorkflowItemsPresenter?displayProperty=nameWithType> 创建自定义活动设计器。  
   
--   使用"可折叠"并且"可扩展的"视图中创建活动设计器。  
+-   使用"折叠"和"展开"视图中创建活动设计器。  
   
 -   在重新承载的应用程序中重写默认设计器。  
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>设置、生成和运行示例  
   
-1.  打开**UsingWorkflowItemsPresenter.sln**示例解决方案，对于 C# 或 VB 的[!INCLUDE[vs2010](../../../../includes/vs2010-md.md)]。  
+1.  打开**UsingWorkflowItemsPresenter.sln**示例解决方案，适用于 C# 或 VB 的[!INCLUDE[vs2010](../../../../includes/vs2010-md.md)]。  
   
 2.  生成和运行解决方案。 重写承载的工作流设计器应用程序应会打开，并且您可以将活动拖动到画布上。  
   
@@ -153,7 +153,7 @@ End Sub
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目录不存在，请转到[Windows Communication Foundation (WCF) 和针对.NET Framework 4 的 Windows Workflow Foundation (WF) 示例](http://go.microsoft.com/fwlink/?LinkId=150780)下载所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
+>  如果此目录不存在，请转到[Windows Communication Foundation (WCF) 和.NET Framework 4 的 Windows Workflow Foundation (WF) 示例](https://go.microsoft.com/fwlink/?LinkId=150780)若要下载所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\CustomActivities\CustomActivityDesigners\WorkflowItemsPresenter`  
   

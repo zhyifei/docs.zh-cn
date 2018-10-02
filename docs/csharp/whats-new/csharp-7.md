@@ -48,7 +48,7 @@ C# 7.0 向 C# 语言添加了许多新功能：
 
 [!code-csharp[OutVariableDeclarations](../../../samples/snippets/csharp/new-in-7/program.cs#01_OutVariableDeclarations "Out variable declarations")]
 
-为清晰明了，可能需指定 `out` 变量的类型，如上所示。 但是，该语言不支持使用隐式类型的局部变量：
+为清晰明了，可能需指定 `out` 变量的类型，如上所示。 但是，该语言支持使用隐式类型的局部变量：
 
 [!code-csharp[OutVarVariableDeclarations](../../../samples/snippets/csharp/new-in-7/program.cs#02_OutVarVariableDeclarations "Implicitly typed Out variable")]
 
@@ -76,7 +76,7 @@ return result;
 > 新的元组功能需要 <xref:System.ValueTuple> 类型。
 > 为在不包括该类型的平台上使用它，必须添加 NuGet 包 [`System.ValueTuple`](https://www.nuget.org/packages/System.ValueTuple/)。
 >
-> 这类似于依赖框架提供的类型的其他语言功能。 例如，依赖 `INotifyCompletion` 接口的 `async` 和 `await`，以及依赖 `IEnumerable<T>` 的 LINQ。 但是，随着 .NET 越来越不依赖平台，交付机制也在发生改变。 .NET Framework 交付频率可能不会与语言编译器的始终相同。 新语言功能依赖于新类型时，这些类型将在交付语言功能时以 NuGet 包的形式提供。 这些新类型添加到 .NET 标准 API 并作为框架的一部分交付后，将删除 NuGet 包要求。
+> 这类似于依赖框架提供的类型的其他语言功能。 例如，依赖 `INotifyCompletion` 接口的 `async` 和 `await`，以及依赖 `IEnumerable<T>` 的 LINQ。 但是，随着 .NET 越来越不依赖平台，交付机制也在发生改变。 .NET Framework 交付频率可能不会与语言编译器的始终相同。 新语言功能依赖于新类型时，这些类型将在交付语言功能时以 NuGet 包的形式提供。 这些新类型添加到 .NET Standard API 并作为框架的一部分交付后，将删除 NuGet 包要求。
 
 C# 为用于说明设计意图的类和结构提供了丰富的语法。 但是，这种丰富的语法有时会需要额外的工作，但益处却很少。 你可能经常编写需要包含多个数据元素的简单结构的方法。 为了支持这些方案，已将元组添加到了 C#。 元组是包含多个字段以表示数据成员的轻量级数据结构。
 这些字段没有经过验证，并且你无法定义自己的方法

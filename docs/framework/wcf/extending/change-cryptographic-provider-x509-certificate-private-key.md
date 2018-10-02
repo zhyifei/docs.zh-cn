@@ -1,5 +1,5 @@
 ---
-title: 如何： 更改 X.509 证书加密的提供程序&#39;s 私钥
+title: 如何： 更改 X.509 证书的加密提供程序&#39;s 私钥
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,17 +8,17 @@ helpviewer_keywords:
 - cryptographic provider [WCF], changing
 - cryptographic provider [WCF]
 ms.assetid: b4254406-272e-4774-bd61-27e39bbb6c12
-ms.openlocfilehash: 633e87bca302adc0963e1bf52d2470c9dbae81a5
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: bb345b3106895a75c00a0d80b8665a0e9239598f
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33808086"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43510474"
 ---
-# <a name="how-to-change-the-cryptographic-provider-for-an-x509-certificate39s-private-key"></a>如何： 更改 X.509 证书加密的提供程序&#39;s 私钥
-本主题说明如何更改用于提供 X.509 证书的私钥的加密提供程序以及如何将提供程序集成到 Windows Communication Foundation (WCF) 安全框架。 有关使用证书的详细信息，请参阅[使用证书](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)。  
+# <a name="how-to-change-the-cryptographic-provider-for-an-x509-certificate39s-private-key"></a>如何： 更改 X.509 证书的加密提供程序&#39;s 私钥
+本主题说明如何更改用于提供 X.509 证书的私钥的加密提供程序以及如何将提供程序集成到 Windows Communication Foundation (WCF) 安全框架。 有关使用证书的详细信息，请参阅[Working with Certificates](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)。  
   
- WCF 安全框架提供了引入新的安全令牌类型中所述的方法[如何： 创建自定义令牌](../../../../docs/framework/wcf/extending/how-to-create-a-custom-token.md)。 还可以使用自定义令牌替换系统提供的现有令牌类型。  
+ WCF 安全框架提供了一种引入新的安全令牌类型，如中所述[如何： 创建自定义令牌](../../../../docs/framework/wcf/extending/how-to-create-a-custom-token.md)。 还可以使用自定义令牌替换系统提供的现有令牌类型。  
   
  在本主题中，系统提供的 X.509 安全令牌替换为自定义 X.509 令牌，此自定义令牌提供了一种不同的证书私钥的实现。 当实际私钥是由默认 Windows 加密提供程序之外的其他加密提供程序提供时，这是非常有用的。 可选的加密提供程序的一个示例是硬件安全模块，该模块执行所有私钥相关的加密操作并且没有将私钥存储在内存中，从而提高了系统的安全性。  
   
@@ -35,7 +35,7 @@ ms.locfileid: "33808086"
   
 3.  重写 <xref:System.IdentityModel.Tokens.SecurityKey.DecryptKey%2A> 方法。 通过使用证书的私钥对称密钥进行解密的 WCF 安全框架调用此方法。 （此密钥之前使用证书的公钥进行加密。）  
   
-4.  重写 <xref:System.IdentityModel.Tokens.AsymmetricSecurityKey.GetAsymmetricAlgorithm%2A> 方法。 若要获取的实例的 WCF 安全框架调用此方法<xref:System.Security.Cryptography.AsymmetricAlgorithm>类表示的加密提供程序证书的私有或公共密钥，具体取决于参数传递给方法。  
+4.  重写 <xref:System.IdentityModel.Tokens.AsymmetricSecurityKey.GetAsymmetricAlgorithm%2A> 方法。 若要获取的实例的 WCF 安全框架调用此方法<xref:System.Security.Cryptography.AsymmetricAlgorithm>表示证书的私有或公共密钥，具体取决于参数的加密提供程序的类传递给该方法。  
   
 5.  可选。 重写 <xref:System.IdentityModel.Tokens.AsymmetricSecurityKey.GetHashAlgorithmForSignature%2A> 方法。 如果需要 <xref:System.Security.Cryptography.HashAlgorithm> 类的另一个实现，请重写此方法。  
   
@@ -46,7 +46,7 @@ ms.locfileid: "33808086"
      [!code-csharp[c_CustomX509Token#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customx509token/cs/source.cs#1)]
      [!code-vb[c_CustomX509Token#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customx509token/vb/source.vb#1)]  
   
- 以下过程显示如何集成自定义 X.509 非对称安全密钥实现与 WCF 安全框架前面过程中创建以替换系统提供的 X.509 安全令牌。  
+ 以下过程显示了如何将集成自定义 X.509 非对称安全密钥实现 WCF 安全框架使用在前面过程中创建以替换系统提供的 X.509 安全令牌。  
   
 #### <a name="to-replace-the-system-provided-x509-security-token-with-a-custom-x509-asymmetric-security-key-token"></a>将系统提供的 X.509 安全令牌替换为自定义 X.509 非对称安全密钥令牌  
   
@@ -87,4 +87,4 @@ ms.locfileid: "33808086"
  [如何：创建自定义安全令牌验证器](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-authenticator.md)  
  [如何：创建自定义安全令牌提供程序](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-provider.md)  
  [如何：创建自定义令牌](../../../../docs/framework/wcf/extending/how-to-create-a-custom-token.md)  
- [安全体系结构](http://msdn.microsoft.com/library/16593476-d36a-408d-808c-ae6fd483e28f)
+ [安全体系结构](https://msdn.microsoft.com/library/16593476-d36a-408d-808c-ae6fd483e28f)

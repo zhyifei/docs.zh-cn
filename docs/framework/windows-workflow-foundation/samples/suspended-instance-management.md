@@ -2,12 +2,12 @@
 title: 挂起的实例管理
 ms.date: 03/30/2017
 ms.assetid: f5ca3faa-ba1f-4857-b92c-d927e4b29598
-ms.openlocfilehash: 8e8bb40b22633aa83b7a70ee94f37cefe48ba68e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f614770121185644c3395f923cf7835141653f55
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33519218"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43524910"
 ---
 # <a name="suspended-instance-management"></a>挂起的实例管理
 此示例演示如何管理已挂起的工作流实例。  <xref:System.ServiceModel.Activities.Description.WorkflowUnhandledExceptionBehavior> 的默认操作为 `AbandonAndSuspend`。 这意味着，在默认情况下，从 <xref:System.ServiceModel.WorkflowServiceHost> 中承载的某个工作流实例抛出的未处理异常会导致从内存中释放（放弃）该实例，而该实例的持久版本将被标记为已挂起。 已挂起的工作流实例在取消挂起之前无法运行。  
@@ -32,7 +32,7 @@ ms.locfileid: "33519218"
   
 2.  设置 SQL Server 数据库。  
   
-    1.  从[!INCLUDE[vs2010](../../../../includes/vs2010-md.md)]命令提示符下，运行 SuspendedInstanceManagement 示例目录中，执行以下从的"setup.cmd":  
+    1.  从[!INCLUDE[vs2010](../../../../includes/vs2010-md.md)]命令提示符处，运行"setup.cmd"，从 SuspendedInstanceManagement 示例目录执行以下操作：  
   
         1.  使用 SQL Server Express 创建持久性数据库。 如果持久性数据库已存在，则删除该数据库并重新创建一个  
   
@@ -42,9 +42,9 @@ ms.locfileid: "33519218"
   
 3.  设置服务队列。  
   
-    1.  在[!INCLUDE[vs2010](../../../../includes/vs2010-md.md)]，右键单击**SampleWorkflowApp**项目，然后单击**设为启动项目**。  
+    1.  在中[!INCLUDE[vs2010](../../../../includes/vs2010-md.md)]，右键单击**SampleWorkflowApp**项目，然后单击**设为启动项目**。  
   
-    2.  编译和运行 SampleWorkflowApp 按**F5**。 这将创建所需队列。  
+    2.  编译并运行 SampleWorkflowApp 通过按**F5**。 这将创建所需队列。  
   
     3.  按**Enter**停止 SampleWorkflowApp。  
   
@@ -54,11 +54,11 @@ ms.locfileid: "33519218"
   
     6.  右键单击**ReceiveTx**队列，然后选择**属性**。  
   
-    7.  选择**安全**选项卡上，并允许**Everyone**对具有权限**接收消息**，**扫视消息**，和**发送消息**。  
+    7.  选择**安全**选项卡上，并允许**Everyone**有权**接收消息**，**扫视消息**，和**将消息发送**。  
   
 4.  现在运行示例。  
   
-    1.  在[!INCLUDE[vs2010](../../../../includes/vs2010-md.md)]，再次运行 SampleWorkflowApp 项目而不进行调试按**Ctrl + F5**。 将在控制台窗口中输出两个终结点地址：一个用于应用程序终结点，另一个来自 <xref:System.ServiceModel.Activities.WorkflowControlEndpoint>。 随后会创建一个工作流实例，该实例的跟踪记录会出现在控制台窗口中。 该工作流实例会引发异常，从而导致该实例挂起或中止。  
+    1.  在中[!INCLUDE[vs2010](../../../../includes/vs2010-md.md)]，再次运行 SampleWorkflowApp 项目而不进行调试通过按**Ctrl + F5**。 将在控制台窗口中输出两个终结点地址：一个用于应用程序终结点，另一个来自 <xref:System.ServiceModel.Activities.WorkflowControlEndpoint>。 随后会创建一个工作流实例，该实例的跟踪记录会出现在控制台窗口中。 该工作流实例会引发异常，从而导致该实例挂起或中止。  
   
     2.  随后可以使用命令行实用工具对这些实例中的任何一个进行进一步操作。 命令行自变量的语法如下：  
   
@@ -81,6 +81,6 @@ ms.locfileid: "33519218"
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目录不存在，请转到[Windows Communication Foundation (WCF) 和针对.NET Framework 4 的 Windows Workflow Foundation (WF) 示例](http://go.microsoft.com/fwlink/?LinkId=150780)下载所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
+>  如果此目录不存在，请转到[Windows Communication Foundation (WCF) 和.NET Framework 4 的 Windows Workflow Foundation (WF) 示例](https://go.microsoft.com/fwlink/?LinkId=150780)若要下载所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Application\SuspendedInstanceManagement`

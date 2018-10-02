@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 8aca5f00-d80e-4320-81b3-016d0466f7ee
-ms.openlocfilehash: 285803d92474efd3268816d1af06eb3ff4abbc79
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ea079a0b55dde8df7b3442f3d604b2b6467ba785
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33365587"
+ms.lasthandoff: 09/22/2018
+ms.locfileid: "46584326"
 ---
 # <a name="modifying-large-value-max-data-in-adonet"></a>在 ADO.NET 中修改大值 (max) 数据
 大型对象 (LOB) 数据类型是那些超过 8 千字节 (KB) 最大行大小的数据类型。 SQL Server 为 `max`、`varchar` 和 `nvarchar` 数据类型提供了 `varbinary` 说明符以允许存储最大为 2^32 字节的值。 表列和 Transact-SQL 变量可以指定 `varchar(max)`、`nvarchar(max)` 或 `varbinary(max)` 数据类型。 在 ADO.NET 中，`max` 数据类型可通过 `DataReader` 来获取，并可指定为输入和输出参数值而无需任何特殊处理。 对于大型 `varchar` 数据类型，可以增量检索和更新数据。  
@@ -21,7 +21,7 @@ ms.locfileid: "33365587"
   
  **SQL Server 联机丛书**  
   
-1.  [使用大值数据类型](http://go.microsoft.com/fwlink/?LinkId=120498)  
+1.  [使用大值数据类型](https://go.microsoft.com/fwlink/?LinkId=120498)  
   
 ## <a name="large-value-type-restrictions"></a>大值类型限制  
  下面的限制适用于 `max` 数据类型，但对于较小的数据类型则不存在此限制：  
@@ -37,9 +37,9 @@ ms.locfileid: "33365587"
   
  `OPENROWSET` 功能包含 `BULK` 行集提供程序，通过此提供程序，您可以直接从文件读取数据而不必将数据加载到目标表 这使您可以在简单的 INSERT SELECT 语句中使用 `OPENROWSET`。  
   
- `OPENROWSET``BULK`选项参数有效地控制在何处开始和结束读取数据、 如何处理错误，以及如何解释数据。 例如，可以指定将数据文件作为 `varbinary`、`varchar` 或 `nvarchar` 类型的单行单列行集合进行读取。 有关完整语法和选项，请参见 SQL Server 联机图书。  
+ `OPENROWSET BULK`选项参数有效地控制在何处开始和结束读取数据、 如何处理错误，以及如何解释数据。 例如，可以指定将数据文件作为 `varbinary`、`varchar` 或 `nvarchar` 类型的单行单列行集合进行读取。 有关完整语法和选项，请参见 SQL Server 联机图书。  
   
- 下面的示例将一幅照片插入 AdventureWorks 示例数据库的 ProductPhoto 表中。 使用时`BULK``OPENROWSET`提供程序，您必须提供命名的列表列甚至如果不将值插入到每个列。 在本例中，主键定义为标识列，并可从列的列表中省略。 请注意，您还必须在 `OPENROWSET` 语句的末尾提供一个相关名称，在本例中该名称是 ThumbnailPhoto。 该名称与文件要加载到的 `ProductPhoto` 表中的列关联。  
+ 下面的示例将一幅照片插入 AdventureWorks 示例数据库的 ProductPhoto 表中。 当使用`BULK OPENROWSET`提供程序，也必须提供甚至列的命名的列表不将值插入到每个列。 在本例中，主键定义为标识列，并可从列的列表中省略。 请注意，您还必须在 `OPENROWSET` 语句的末尾提供一个相关名称，在本例中该名称是 ThumbnailPhoto。 该名称与文件要加载到的 `ProductPhoto` 表中的列关联。  
   
 ```  
 INSERT Production.ProductPhoto (  
@@ -63,12 +63,12 @@ FROM OPENROWSET
   
  { *column_name* = {。写入 (*表达式*， @Offset ， @Length )}  
   
- WRITE 方法指定的值的部分*column_name*将进行相应修改。 表达式是将复制到的值*column_name*、`@Offset`是从该处将写入表达式的开始点和`@Length`自变量是列中部分的长度。  
+ WRITE 方法指定的值的一部分*column_name*将进行相应修改。 表达式是将复制到的值*column_name*，则`@Offset`是从该处将写入表达式的开始点和`@Length`参数是列中的该部分的长度。  
   
 |如果|Then|  
 |--------|----------|  
-|表达式设置为 NULL|`@Length` 将忽略和中的值*column_name*将被截断处指定`@Offset`。|  
-|`@Offset` 为 NULL|更新操作将在现有的末尾表达式追加*column_name*值和`@Length`将被忽略。|  
+|表达式设置为 NULL|`@Length` 将忽略和中的值*column_name*会被截断处指定`@Offset`。|  
+|`@Offset` 为 NULL|更新操作将表达式的现有末尾追加*column_name*值和`@Length`将被忽略。|  
 |`@Offset` 大于 column_name 值的长度|SQL Server 返回一个错误。|  
 |`@Length` 为 NULL|更新操作移除从 `@Offset` 到 `column_name` 值末尾的所有数据。|  
   
@@ -104,7 +104,7 @@ GO
 ```  
   
 ## <a name="working-with-large-value-types-in-adonet"></a>在 ADO.NET 中使用大值类型  
- 你可以使用大值类型在 ADO.NET 中通过指定较大的值类型作为<xref:System.Data.SqlClient.SqlParameter>中的对象<xref:System.Data.SqlClient.SqlDataReader>以返回结果集，或者通过使用<xref:System.Data.SqlClient.SqlDataAdapter>以填充`DataSet` / `DataTable`。 使用大值类型的方式和使用其相关的较小值数据类型的方式之间没有什么不同。  
+ 可以使用大值类型在 ADO.NET 中通过指定大值类型作为<xref:System.Data.SqlClient.SqlParameter>中的对象<xref:System.Data.SqlClient.SqlDataReader>以返回结果集，或者通过使用<xref:System.Data.SqlClient.SqlDataAdapter>填充`DataSet` / `DataTable`。 使用大值类型的方式和使用其相关的较小值数据类型的方式之间没有什么不同。  
   
 ### <a name="using-getsqlbytes-to-retrieve-data"></a>使用 GetSqlBytes 检索数据  
  `GetSqlBytes` 的 <xref:System.Data.SqlClient.SqlDataReader> 方法可用于检索 `varbinary(max)` 列的内容。 下面的代码段假定一个名为 <xref:System.Data.SqlClient.SqlCommand> 的 `cmd` 对象（该对象可从表中选择 `varbinary(max)` 数据）和一个名为 <xref:System.Data.SqlClient.SqlDataReader> 的 `reader` 对象（该对象可将该数据检索为 <xref:System.Data.SqlTypes.SqlBytes>）。  
@@ -222,13 +222,13 @@ while (reader.Read())
 ```  
   
 ### <a name="example"></a>示例  
- 下面的代码检索 `LargePhoto` 数据库的 `ProductPhoto` 表中的名称和 `AdventureWorks` 对象，并将其保存到文件。 编译程序集时需要引用 <xref:System.Drawing> 命名空间。  <xref:System.Data.SqlClient.SqlDataReader.GetSqlBytes%2A> 的 <xref:System.Data.SqlClient.SqlDataReader> 方法返回一个 <xref:System.Data.SqlTypes.SqlBytes> 对象，该对象公开 `Stream` 属性。 代码使用此创建新`Bitmap`对象，并将它保存在 Gif `ImageFormat`。  
+ 下面的代码检索 `LargePhoto` 数据库的 `ProductPhoto` 表中的名称和 `AdventureWorks` 对象，并将其保存到文件。 编译程序集时需要引用 <xref:System.Drawing> 命名空间。  <xref:System.Data.SqlClient.SqlDataReader.GetSqlBytes%2A> 的 <xref:System.Data.SqlClient.SqlDataReader> 方法返回一个 <xref:System.Data.SqlTypes.SqlBytes> 对象，该对象公开 `Stream` 属性。 代码使用此创建新`Bitmap`对象，并将其保存在 Gif `ImageFormat`。  
   
  [!code-csharp[DataWorks LargeValueType.Photo#1](../../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks LargeValueType.Photo/CS/source.cs#1)]
  [!code-vb[DataWorks LargeValueType.Photo#1](../../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks LargeValueType.Photo/VB/source.vb#1)]  
   
 ## <a name="using-large-value-type-parameters"></a>使用大值类型参数  
- 在 <xref:System.Data.SqlClient.SqlParameter> 对象中使用大型值类型的方法与在 <xref:System.Data.SqlClient.SqlParameter> 对象中使用较小值类型的方法相同。 你可以检索较大的值类型作为<xref:System.Data.SqlClient.SqlParameter>值，如下面的示例中所示。 代码假定在 AdventureWorks 示例数据库中存在以下 GetDocumentSummary 存储过程。 该存储的过程采用名为的输入的参数@DocumentID并返回 DocumentSummary 列中的内容@DocumentSummary输出参数。  
+ 在 <xref:System.Data.SqlClient.SqlParameter> 对象中使用大型值类型的方法与在 <xref:System.Data.SqlClient.SqlParameter> 对象中使用较小值类型的方法相同。 您可以检索大值类型作为<xref:System.Data.SqlClient.SqlParameter>值，如下面的示例中所示。 代码假定在 AdventureWorks 示例数据库中存在以下 GetDocumentSummary 存储过程。 存储的过程将一个名为的输入的参数@DocumentID，并返回 DocumentSummary 列中的内容@DocumentSummary输出参数。  
   
 ```  
 CREATE PROCEDURE GetDocumentSummary   
@@ -244,7 +244,7 @@ WHERE   DocumentID=@DocumentID
 ```  
   
 ### <a name="example"></a>示例  
- ADO.NET 代码创建 <xref:System.Data.SqlClient.SqlConnection> 和 <xref:System.Data.SqlClient.SqlCommand> 对象，以执行 GetDocumentSummary 存储过程并检索以大值类型存储的文档摘要。 代码中传递的值@DocumentID输入参数，并显示结果传递进来@DocumentSummary输出在控制台窗口中的参数。  
+ ADO.NET 代码创建 <xref:System.Data.SqlClient.SqlConnection> 和 <xref:System.Data.SqlClient.SqlCommand> 对象，以执行 GetDocumentSummary 存储过程并检索以大值类型存储的文档摘要。 代码将值传递@DocumentID输入参数，并显示结果传递回@DocumentSummary输出控制台窗口中的参数。  
   
  [!code-csharp[DataWorks LargeValueType.Param#1](../../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks LargeValueType.Param/CS/source.cs#1)]
  [!code-vb[DataWorks LargeValueType.Param#1](../../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks LargeValueType.Param/VB/source.vb#1)]  
@@ -253,4 +253,4 @@ WHERE   DocumentID=@DocumentID
  [SQL Server 二进制和大值数据](../../../../../docs/framework/data/adonet/sql/sql-server-binary-and-large-value-data.md)  
  [SQL Server 数据类型映射](../../../../../docs/framework/data/adonet/sql-server-data-type-mappings.md)  
  [ADO.NET 中的 SQL Server 数据操作](../../../../../docs/framework/data/adonet/sql/sql-server-data-operations.md)  
- [ADO.NET 托管提供程序和数据集开发人员中心](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)

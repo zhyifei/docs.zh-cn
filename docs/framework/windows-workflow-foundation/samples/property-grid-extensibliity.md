@@ -2,12 +2,12 @@
 title: 属性网格扩展性
 ms.date: 03/30/2017
 ms.assetid: 3530c3a3-756d-4712-9f10-fb2897414d3a
-ms.openlocfilehash: 50fb2fce2fa8c52942a221401f88523c7b407dab
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b7c3e3dbc3ccd95fc12dffd40927b3e2bbbc8226
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33519589"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43865808"
 ---
 # <a name="property-grid-extensibliity"></a>属性网格扩展性
 开发人员可以自定义属性网格，此网格将在设计器中选择给定活动时显示。 执行此操作可获得丰富的编辑体验。 此示例演示如何完成此操作。  
@@ -20,7 +20,7 @@ ms.locfileid: "33519589"
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目录不存在，请转到[Windows Communication Foundation (WCF) 和针对.NET Framework 4 的 Windows Workflow Foundation (WF) 示例](http://go.microsoft.com/fwlink/?LinkId=150780)下载所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
+>  如果此目录不存在，请转到[Windows Communication Foundation (WCF) 和.NET Framework 4 的 Windows Workflow Foundation (WF) 示例](https://go.microsoft.com/fwlink/?LinkId=150780)若要下载所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Designer\PropertyGridExtensibility`  
   
@@ -32,7 +32,7 @@ ms.locfileid: "33519589"
   
 -   创建一个从 <xref:System.Activities.Presentation.PropertyEditing.PropertyValueEditor> 派生的类型。  
   
--   在构造函数中，<xref:System.Activities.Presentation.PropertyEditing.PropertyValueEditor.InlineEditorTemplate%2A>使用 Windows Presentation Foundation (WPF) 数据模板设置值。 虽然可以将其绑定到 XAML 模板，但在此示例中，代码用于初始化数据绑定。  
+-   在构造函数<xref:System.Activities.Presentation.PropertyEditing.PropertyValueEditor.InlineEditorTemplate%2A>用 Windows Presentation Foundation (WPF) 数据模板设置值。 虽然可以将其绑定到 XAML 模板，但在此示例中，代码用于初始化数据绑定。  
   
 -   数据模板具有在属性网格中呈现的项的 <xref:System.Activities.Presentation.PropertyEditing.PropertyValue> 的数据上下文。 请注意，在下面的代码（此代码来自 CustomInlineEditor.cs）中，稍后会将此上下文绑定到 `Value` 属性。  
   
@@ -89,7 +89,7 @@ ms.locfileid: "33519589"
     this.InlineEditorTemplate.VisualTree = stack;  
     ```  
   
-4.  重写<!--zz <xref:Microsoft.Windows.Design.PropertyEditing.ShowDialog%2A>-->`Microsoft.Windows.Design.PropertyEditing.ShowDialog`设计器的类型，以处理对话框的显示中的方法。 在此示例中，显示了基本 <xref:System.Windows.Forms.FileDialog>。  
+4.  重写<!--zz <xref:Microsoft.Windows.Design.PropertyEditing.ShowDialog%2A>-->`Microsoft.Windows.Design.PropertyEditing.ShowDialog`中要处理对话框的显示的设计器类型的方法。 在此示例中，显示了基本 <xref:System.Windows.Forms.FileDialog>。  
   
     ```  
     public override void ShowDialog(PropertyValue propertyValue, IInputElement commandSource)  
@@ -118,15 +118,15 @@ ms.locfileid: "33519589"
   
 1.  生成解决方案，然后打开 Workflow1.xaml。  
   
-2.  拖动**SimpleCodeActivity**从工具箱拖动到设计器画布。  
+2.  拖动**simplecodeactivity**从工具箱拖动到设计器画布上。  
   
-3.  单击**SimpleCodeActivity** ，然后打开滑块控件和文件选取控件的属性网格。  
+3.  单击**simplecodeactivity** ，然后打开在属性网格，其中的滑块控件和文件选取控件。  
   
 > [!IMPORTANT]
 >  您的计算机上可能已安装这些示例。 在继续操作之前，请先检查以下（默认）目录：  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目录不存在，请转到[Windows Communication Foundation (WCF) 和针对.NET Framework 4 的 Windows Workflow Foundation (WF) 示例](http://go.microsoft.com/fwlink/?LinkId=150780)下载所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
+>  如果此目录不存在，请转到[Windows Communication Foundation (WCF) 和.NET Framework 4 的 Windows Workflow Foundation (WF) 示例](https://go.microsoft.com/fwlink/?LinkId=150780)若要下载所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Designer\PropertyGridExtensibility`

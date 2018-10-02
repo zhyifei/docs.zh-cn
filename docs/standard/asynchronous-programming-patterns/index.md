@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 4ece5c0b-f8fe-4114-9862-ac02cfe5a5d7
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 809385bda48c6fb8dae125fe348228aaee375a6c
-ms.sourcegitcommit: 9e18e4a18284ae9e54c515e30d019c0bbff9cd37
+ms.openlocfilehash: e399a512d2bee636aec35e008c0632ce9c5fa781
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37071300"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44249031"
 ---
 # <a name="asynchronous-programming-patterns"></a>异步编程模式
 
@@ -79,6 +79,6 @@ public class MyClass
 
 ## <a name="see-also"></a>请参阅
 
-[C# 中的异步编程](~/docs/csharp/async.md)   
-[F# 中的异步编程](~/docs/fsharp/tutorials/asynchronous-and-concurrent-programming/async.md)   
-[使用 Async 和 Await 的异步编程 (Visual Basic)](~/docs/visual-basic/programming-guide/concepts/async/index.md)
+- [C# 中的异步编程](~/docs/csharp/async.md)   
+- [F# 中的异步编程](~/docs/fsharp/tutorials/asynchronous-and-concurrent-programming/async.md)   
+- [使用 Async 和 Await 的异步编程 (Visual Basic)](~/docs/visual-basic/programming-guide/concepts/async/index.md)

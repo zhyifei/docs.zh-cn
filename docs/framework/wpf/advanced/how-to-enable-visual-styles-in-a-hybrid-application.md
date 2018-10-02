@@ -8,19 +8,19 @@ helpviewer_keywords:
 - hybrid applications [WPF interoperability]
 - visual styles [Windows Forms]
 ms.assetid: 95de9b9c-d804-405c-b2d1-49a88c1e0fe1
-ms.openlocfilehash: 2d714ad020f2f7b6a6343c8f8e3901b59dfd23a8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f4684e277335a119d41d5bd79d504ed37a76d6fc
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33545618"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45750227"
 ---
 # <a name="how-to-enable-visual-styles-in-a-hybrid-application"></a>如何：在混合应用程序中启用视觉样式
-本主题演示如何启用[!INCLUDE[TLA#tla_winxp](../../../../includes/tlasharptla-winxp-md.md)]视觉样式上[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]控件中托管[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-基于应用程序。  
+本主题演示如何启用[!INCLUDE[TLA#tla_winxp](../../../../includes/tlasharptla-winxp-md.md)]上的视觉样式[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]控件中托管[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-基于应用程序。  
   
- 如果你的应用程序调用<xref:System.Windows.Forms.Application.EnableVisualStyles%2A>方法，大部分你[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]控件自动将你的应用程序在运行时使用可视样式[!INCLUDE[TLA#tla_winxp](../../../../includes/tlasharptla-winxp-md.md)]。 有关详细信息，请参阅[以视觉样式呈现控件](../../../../docs/framework/winforms/controls/rendering-controls-with-visual-styles.md)。  
+ 如果你的应用程序调用<xref:System.Windows.Forms.Application.EnableVisualStyles%2A>方法中，大部分你[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]控件将自动使用视觉样式时上运行你的应用程序[!INCLUDE[TLA#tla_winxp](../../../../includes/tlasharptla-winxp-md.md)]。 有关详细信息，请参阅[以视觉样式呈现控件](../../../../docs/framework/winforms/controls/rendering-controls-with-visual-styles.md)。  
   
- 本主题中所示的任务的完整代码清单，请参阅[启用混合应用程序示例中的视觉样式](http://go.microsoft.com/fwlink/?LinkID=159986)。  
+ 本主题中所涉及任务的完整代码列表，请参阅[混合应用程序示例中启用视觉样式](https://go.microsoft.com/fwlink/?LinkID=159986)。  
   
 ## <a name="enabling-windows-forms-visual-styles"></a>启用 Windows 窗体视觉样式  
   
@@ -36,7 +36,7 @@ ms.locfileid: "33545618"
   
 3.  在工具箱中，双击<xref:System.Windows.Controls.Grid>图标将<xref:System.Windows.Controls.Grid>设计图面上的元素。  
   
-4.  在属性窗口中，设置的值<xref:System.Windows.FrameworkElement.Height%2A>和<xref:System.Windows.FrameworkElement.Width%2A>属性设置为**自动**。  
+4.  在属性窗口中设置的值<xref:System.Windows.FrameworkElement.Height%2A>并<xref:System.Windows.FrameworkElement.Width%2A>属性设置为**自动**。  
   
 5.  在设计视图或 XAML 视图中，选择<xref:System.Windows.Window>。  
   
@@ -51,10 +51,10 @@ ms.locfileid: "33545618"
   
 9. 按 F5 生成并运行该应用程序。  
   
-     [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]使用视觉样式绘制控件。  
+     [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]用视觉样式绘制控件。  
   
 ## <a name="disabling-windows-forms-visual-styles"></a>禁用 Windows 窗体视觉样式  
- 若要禁用视觉样式，只需删除对的调用<xref:System.Windows.Forms.Application.EnableVisualStyles%2A>方法。  
+ 若要禁用视觉样式，只需删除对调用<xref:System.Windows.Forms.Application.EnableVisualStyles%2A>方法。  
   
 #### <a name="to-disable-windows-forms-visual-styles"></a>禁用 Windows 窗体视觉样式  
   
@@ -64,7 +64,7 @@ ms.locfileid: "33545618"
   
 3.  按 F5 生成并运行该应用程序。  
   
-     [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]使用默认系统样式绘制控件。  
+     [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]控件变为默认系统样式。  
   
 ## <a name="see-also"></a>请参阅  
  <xref:System.Windows.Forms.Application.EnableVisualStyles%2A>  

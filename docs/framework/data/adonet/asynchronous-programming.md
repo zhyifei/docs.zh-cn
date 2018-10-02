@@ -2,16 +2,16 @@
 title: 异步编程
 ms.date: 03/30/2017
 ms.assetid: 85da7447-7125-426e-aa5f-438a290d1f77
-ms.openlocfilehash: 29324a07ffdaf99d1b7631ad8e94e773ed509fcc
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 0c5c3f52f6afa0e1fa48d33167feabeb8d5b76f5
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32759902"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43504970"
 ---
 # <a name="asynchronous-programming"></a>异步编程
 
-本主题讨论对中的异步编程的支持[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]for SQL Server (SqlClient) 的数据提供程序包括进行以支持异步编程功能中引入的增强功能[!INCLUDE[net_v45](../../../../includes/net-v45-md.md)]。  
+本主题讨论对中的异步编程的支持[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]用于 SQL Server (SqlClient) 的数据提供程序包括支持中引入的异步编程功能进行增强[!INCLUDE[net_v45](../../../../includes/net-v45-md.md)]。  
   
 ## <a name="legacy-asynchronous-programming"></a>旧版异步编程  
  在 [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)] 之前，使用 SqlClient 进行的异步编程是通过以下方法和 `Asynchronous Processing=true` 连接属性完成的：  
@@ -43,7 +43,7 @@ ms.locfileid: "32759902"
   
  现在，您可以调用异步方法而无需使用回调，也不需要跨多个方法或 lambda 表达式来拆分代码。  
   
- `async` 修饰符用于指定异步方法。 调用 `async` 方法时，将返回一个任务。 当`await`运算符应用于一项任务时，当前方法立即退出。 在该任务完成时，执行会在同一方法中恢复。
+ `async` 修饰符用于指定异步方法。 调用 `async` 方法时，将返回一个任务。 当`await`运算符应用到任务时，当前方法立即退出。 在该任务完成时，执行会在同一方法中恢复。
   
 > [!WARNING]
 >  如果应用程序还使用 `Context Connection` 连接字符串关键字，则不支持异步调用。  
@@ -172,7 +172,7 @@ class A {
 ### <a name="using-the-base-provider-model-and-the-new-asynchronous-feature"></a>使用基本提供程序模型和新的异步功能  
  您可能需要创建一个能够连接到不同数据库并执行查询的工具。 您可以使用基本提供程序模型和新的异步功能。  
   
- 必须在服务器上启用 Microsoft 分布式事务处理控制器 (MSDTC) 以使用分布式事务。 有关如何启用 MSDTC 的信息，请参阅[如何在 Web 服务器上启用 MSDTC](http://msdn.microsoft.com/library/dd327979.aspx)。  
+ 必须在服务器上启用 Microsoft 分布式事务处理控制器 (MSDTC) 以使用分布式事务。 有关如何启用 MSDTC 的信息，请参阅[如何在 Web 服务器上启用 MSDTC](https://msdn.microsoft.com/library/dd327979.aspx)。  
   
 ```csharp
 using System;  
@@ -627,10 +627,10 @@ namespace SqlBulkCopyAsyncCodeSample {
 ```  
   
 ## <a name="asynchronously-using-multiple-commands-with-mars"></a>异步使用多个命令与 MARS  
- 该示例打开一个连接到**AdventureWorks**数据库。 使用 <xref:System.Data.SqlClient.SqlCommand> 对象创建一个 <xref:System.Data.SqlClient.SqlDataReader> 对象。 在使用该读取器时，打开第二个 <xref:System.Data.SqlClient.SqlDataReader>，使用来自第一个 <xref:System.Data.SqlClient.SqlDataReader> 的数据作为第二个读取器的 WHERE 子句的输入。  
+ 该示例打开一个到连接**AdventureWorks**数据库。 使用 <xref:System.Data.SqlClient.SqlCommand> 对象创建一个 <xref:System.Data.SqlClient.SqlDataReader> 对象。 在使用该读取器时，打开第二个 <xref:System.Data.SqlClient.SqlDataReader>，使用来自第一个 <xref:System.Data.SqlClient.SqlDataReader> 的数据作为第二个读取器的 WHERE 子句的输入。  
   
 > [!NOTE]
->  下面的示例使用示例**AdventureWorks**包含与 SQL Server 数据库。 示例代码中提供的连接字符串假定数据库在本地计算机上已安装并且可用。 根据环境的需要修改连接字符串。  
+>  下面的示例使用示例**AdventureWorks** SQL Server 中包含的数据库。 示例代码中提供的连接字符串假定数据库在本地计算机上已安装并且可用。 根据环境的需要修改连接字符串。  
   
 ```csharp
 using System;  
@@ -697,12 +697,12 @@ class Class1 {
 ```  
   
 ## <a name="asynchronously-reading-and-updating-data-with-mars"></a>使用 MARS 异步读取和更新数据  
- MARS 允许连接供读取操作以及数据操作语言 (DML) 操作使用，包含多个挂起操作。 通过此功能，应用程序不需要处理连接忙的错误。 此外，MARS 可以取代服务器端游标的用户，后者通常会占用更多资源。 最后，可以在单个连接上执行多个操作，因为它们可以共享相同的事务上下文，不需要使用**sp_getbindtoken**和**sp_bindsession**系统存储过程。  
+ MARS 允许连接供读取操作以及数据操作语言 (DML) 操作使用，包含多个挂起操作。 通过此功能，应用程序不需要处理连接忙的错误。 此外，MARS 可以取代服务器端游标的用户，后者通常会占用更多资源。 最后，因为多个操作可以在单个连接上执行操作，它们可以共享相同的事务上下文，无需使用**sp_getbindtoken**并**sp_bindsession**系统存储过程。  
   
- 以下控制台应用程序演示如何对三个 <xref:System.Data.SqlClient.SqlDataReader> 对象和单个启用了 MARS 的 <xref:System.Data.SqlClient.SqlCommand> 对象使用两个 <xref:System.Data.SqlClient.SqlConnection> 对象。 第一个命令对象检索信用评级为 5 的供应商列表。 第二个命令对象使用 <xref:System.Data.SqlClient.SqlDataReader> 提供的供应商 ID 为第二个 <xref:System.Data.SqlClient.SqlDataReader> 加载特定供应商的所有产品。 每个产品记录通过第二个 <xref:System.Data.SqlClient.SqlDataReader> 访问。 执行计算来确定新**OnOrderQty**应为。 第三个命令对象然后用于更新**ProductVendor**使用新值的表。 整个过程在单个事务中进行，在结束时回滚。  
+ 以下控制台应用程序演示如何对三个 <xref:System.Data.SqlClient.SqlDataReader> 对象和单个启用了 MARS 的 <xref:System.Data.SqlClient.SqlCommand> 对象使用两个 <xref:System.Data.SqlClient.SqlConnection> 对象。 第一个命令对象检索信用评级为 5 的供应商列表。 第二个命令对象使用 <xref:System.Data.SqlClient.SqlDataReader> 提供的供应商 ID 为第二个 <xref:System.Data.SqlClient.SqlDataReader> 加载特定供应商的所有产品。 每个产品记录通过第二个 <xref:System.Data.SqlClient.SqlDataReader> 访问。 执行计算来确定新**OnOrderQty**应为。 第三个命令对象然后用于更新**ProductVendor**具有新值的表。 整个过程在单个事务中进行，在结束时回滚。  
   
 > [!NOTE]
->  下面的示例使用示例**AdventureWorks**包含与 SQL Server 数据库。 示例代码中提供的连接字符串假定数据库在本地计算机上已安装并且可用。 根据环境的需要修改连接字符串。  
+>  下面的示例使用示例**AdventureWorks** SQL Server 中包含的数据库。 示例代码中提供的连接字符串假定数据库在本地计算机上已安装并且可用。 根据环境的需要修改连接字符串。  
   
 ```csharp
 using System;  

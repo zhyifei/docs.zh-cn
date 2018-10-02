@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 6a600fe5-3af3-4c64-82da-10a0a8e2d79b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 03da36090c255f635036a9bd518bdacd99404ed4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 65492beb888da1986f456d3fd000fc02f340f3c4
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33575650"
+ms.lasthandoff: 09/27/2018
+ms.locfileid: "47398701"
 ---
 # <a name="weak-references"></a>弱引用
 如果应用程序的代码可以访问一个正由该程序使用的对象，垃圾回收器就不能回收该对象， 那么，就认为应用程序对该对象具有强引用。  
@@ -52,5 +52,6 @@ ms.locfileid: "33575650"
   
  避免将弱引用作为内存管理问题的自动解决方案， 而应开发一个有效的缓存策略来处理应用程序的对象。  
   
-## <a name="see-also"></a>请参阅  
- [垃圾回收](../../../docs/standard/garbage-collection/index.md)
+## <a name="see-also"></a>请参阅
+
+- [垃圾回收](../../../docs/standard/garbage-collection/index.md)

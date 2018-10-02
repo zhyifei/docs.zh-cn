@@ -9,12 +9,12 @@ helpviewer_keywords:
 - data [Visual Basic], Clipboard
 - reading data, from Clipboard
 ms.assetid: f690119a-4378-4f7d-b20e-d9377ef49496
-ms.openlocfilehash: eb8ae25f260ed434c4aafcc064be8fb6bebaaac1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7964a39bb84ac6af6b6c196c053f51c30301985c
+ms.sourcegitcommit: 8c6c62ba1eefa492701e264e41890ee20fae77a3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33591374"
+ms.lasthandoff: 08/20/2018
+ms.locfileid: "42792356"
 ---
 # <a name="storing-data-to-and-reading-from-the-clipboard-visual-basic"></a>将数据存储到剪贴板以及从剪贴板读取数据 (Visual Basic)
 剪贴板可用于存储文本和图像等数据。 由于所有活动进程都共享剪贴板，因此它可用于在这些活动进程之间传输数据。 使用 `My.Computer.Clipboard` 对象可轻松访问剪贴板并从中读取和向其写入数据。  
@@ -57,7 +57,7 @@ ms.locfileid: "33591374"
   
  [!code-vb[VbVbcnMyClipboard#2](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/storing-data-to-and-reading-from-the-clipboard_6.vb)]  
   
- 使用 <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy.SetData%2A> 方法将数据写入剪贴板。 此示例将以自定义格式 `specialFormat` 向剪贴板写入 `DataObject``dataChunk`。  
+ 使用 <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy.SetData%2A> 方法将数据写入剪贴板。 此示例以自定义格式 `specialFormat` 向剪贴板写入 `DataObject` `dataChunk`。  
   
  [!code-vb[VbVbcnMyClipboard#7](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/storing-data-to-and-reading-from-the-clipboard_7.vb)]  
   

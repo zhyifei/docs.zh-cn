@@ -2,12 +2,12 @@
 title: C# 7.3 中的新增功能
 description: C# 7.3 中的新增功能概述
 ms.date: 05/16/2018
-ms.openlocfilehash: 135351fa06a498e4aa90cb4d9372880b8119de0f
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.openlocfilehash: 921374773d57d3fa6f8dd614f2691d345cf6eab7
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37106770"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43511606"
 ---
 # <a name="whats-new-in-c-73"></a>C# 7.3 中的新增功能
 
@@ -136,7 +136,7 @@ Span<int> arr = stackalloc [] {1, 2, 3};
 
 C# 元组类型现在支持 `==` 和 `!=`。 有关详细信息，请参阅有关[元组](../tuples.md)文章中的转换[等式](../tuples.md#equality-and-tuples)部分。
 
-### <a name="attach-attributes-to-the-backing-fields-for-auto-implemented-properties"></a>将属性添加到自动实现的属性的支持字段
+### <a name="attach-attributes-to-the-backing-fields-for-auto-implemented-properties"></a>将特性添加到自动实现的属性的支持字段
 
 现在支持此语法：
 
@@ -178,7 +178,7 @@ public class B
 
 public class D : B
 {
-   public D(int i) : B(i, out var j)
+   public D(int i) : base(i, out var j)
    {
       Console.WriteLine($"The value of 'j' is {j}");
    }

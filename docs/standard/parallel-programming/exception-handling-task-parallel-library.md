@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: beb51e50-9061-4d3d-908c-56a4f7c2e8c1
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 16ab0b8967ac394540f201fcc9098024faaccaa7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f3deaba0c8589eaa0ba24bc66669f5a76e60467f
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33591291"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43877802"
 ---
 # <a name="exception-handling-task-parallel-library"></a>异常处理（任务并行库）
 由在任务内部运行的用户代码引发的未处理异常会传播回调用线程，但本主题稍后部分介绍的某些情况除外。 如果使用静态或实例 <xref:System.Threading.Tasks.Task.Wait%2A?displayProperty=nameWithType> 或 <!--zz <xref:System.Threading.Tasks.Task%601.Wait%2A?displayProperty=nameWithType>  --> `Wait` 方法之一，异常会传播，异常处理方法为将调用封闭到 `try`/`catch` 语句中。 如果任务是所附加子任务的父级，或在等待多个任务，那么可能会引发多个异常。  
@@ -91,5 +91,6 @@ ms.locfileid: "33591291"
 ## <a name="unobservedtaskexception-event"></a>UnobservedTaskException 事件  
  在某些情况下（例如承载不受信任的插件时），良性异常可能比较普遍，因此很难以手动方式观察到所有异常。 在这种情况下，可以处理 <xref:System.Threading.Tasks.TaskScheduler.UnobservedTaskException?displayProperty=nameWithType> 事件。 传递到处理程序的 <xref:System.Threading.Tasks.UnobservedTaskExceptionEventArgs?displayProperty=nameWithType> 实例可用于阻止未观察到的异常传播回联接线程。  
   
-## <a name="see-also"></a>请参阅  
- [任务并行库 (TPL)](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md)
+## <a name="see-also"></a>请参阅
+
+- [任务并行库 (TPL)](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md)

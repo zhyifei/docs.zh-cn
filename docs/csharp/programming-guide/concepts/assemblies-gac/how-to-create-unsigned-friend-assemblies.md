@@ -2,12 +2,12 @@
 title: 如何：创建未签名的友元程序集 (C#)
 ms.date: 07/20/2015
 ms.assetid: 78cbc4f0-b021-4141-a4ff-eb4edbd814ca
-ms.openlocfilehash: 676b9d3c641f45736af50bc2290426e261b591c4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7244f17c24a16569903783c730fc356b11e20aa8
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33340198"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44211796"
 ---
 # <a name="how-to-create-unsigned-friend-assemblies-c"></a>如何：创建未签名的友元程序集 (C#)
 本示例演示如何将友元程序集和未签名的程序集一起使用。  
@@ -90,9 +90,10 @@ ms.locfileid: "33340198"
 ## <a name="net-framework-security"></a>.NET Framework 安全性  
  <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> 属性和 <xref:System.Security.Permissions.StrongNameIdentityPermission> 类之间具有相似之处。 主要区别是，<xref:System.Security.Permissions.StrongNameIdentityPermission> 可以要求安全权限来运行一段特定代码，而 <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> 属性控制 `internal` 类型和成员的可见性。  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>  
- [程序集和全局程序集缓存 (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/index.md)  
- [友元程序集 (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/friend-assemblies.md)  
- [如何：创建签名的友元程序集 (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/how-to-create-signed-friend-assemblies.md)  
- [C# 编程指南](../../../../csharp/programming-guide/index.md)
+## <a name="see-also"></a>请参阅
+
+- <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>  
+- [程序集和全局程序集缓存 (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/index.md)  
+- [友元程序集 (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/friend-assemblies.md)  
+- [如何：创建签名的友元程序集 (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/how-to-create-signed-friend-assemblies.md)  
+- [C# 编程指南](../../../../csharp/programming-guide/index.md)

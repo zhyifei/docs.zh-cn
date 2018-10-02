@@ -6,13 +6,12 @@ helpviewer_keywords:
 ms.assetid: 31b44dd3-b903-4a48-8419-40419a3e4038
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 964e76a008e1c18fe9f609f1dd63bce565e95d44
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b5293afbda1bdf13db318b072696c597a12b8187
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33396312"
+ms.lasthandoff: 09/27/2018
+ms.locfileid: "47205351"
 ---
 # <a name="networkinformation"></a>NetworkInformation
 <xref:System.Net.NetworkInformation> 命名空间使你能够收集有关网络事件、更改、统计信息和属性的信息。 还可使用 <xref:System.Net.NetworkInformation.Ping?displayProperty=nameWithType> 类来确定是否可以访问远程主机。  
@@ -28,6 +27,6 @@ ms.locfileid: "33396312"
   
 ## <a name="see-also"></a>请参阅  
  [网络编程示例](../../../docs/framework/network-programming/network-programming-samples.md)  
- [网络信息技术示例](http://go.microsoft.com/fwlink/?LinkID=179564)  
- [NetStat 工具技术示例](http://go.microsoft.com/fwlink/?LinkID=179562)  
- [Ping 客户端技术示例](http://go.microsoft.com/fwlink/?LinkID=179565)
+ [网络信息技术示例](https://go.microsoft.com/fwlink/?LinkID=179564)  
+ [NetStat 工具技术示例](https://go.microsoft.com/fwlink/?LinkID=179562)  
+ [Ping 客户端技术示例](https://go.microsoft.com/fwlink/?LinkID=179565)

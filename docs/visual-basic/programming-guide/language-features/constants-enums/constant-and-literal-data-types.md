@@ -9,35 +9,35 @@ helpviewer_keywords:
 - literals [Visual Basic], coercing data type
 - declarations [Visual Basic], data types
 ms.assetid: 057206d2-3a5b-40b9-b3af-57446f9b52fa
-ms.openlocfilehash: 8d110ec17bcdb03f339d779b2950ba56d77957cc
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1d030f8058cd497212c20bca8f064f2bedc99fce
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33649843"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43507812"
 ---
 # <a name="constant-and-literal-data-types-visual-basic"></a>常量和 Literal 数据类型 (Visual Basic)
-文本是一个值，表示为本身而不是变量的值或表达式，如数字 3 或字符串"Hello"的结果。 常量是有意义的名称，它接受文本的位置，并保留在整个程序，而不是一个变量，其值可能会更改此相同的值。  
+文本是一个值，表示为本身而不是变量的值或表达式，如数字 3 或字符串"Hello"的结果。 常量是有意义的名称，它接受文本的位置，并将保留在整个程序，而不是变量，其值可能会更改此相同的值。  
   
- 当[Option Infer](../../../../visual-basic/language-reference/statements/option-infer-statement.md)是`Off`和[Option Strict](../../../../visual-basic/language-reference/statements/option-strict-statement.md)是`On`，你必须显式声明所有常量具有数据类型。 以下示例中中的数据类型`MyByte`显式声明数据类型为`Byte`:  
+ 当[Option Infer](../../../../visual-basic/language-reference/statements/option-infer-statement.md)是`Off`并[Option Strict](../../../../visual-basic/language-reference/statements/option-strict-statement.md)是`On`，您必须显式声明的所有常量具有数据类型。 在下面的示例中的数据类型`MyByte`显式声明数据类型为`Byte`:  
   
  [!code-vb[VbVbalrConstants#1](../../../../visual-basic/programming-guide/language-features/constants-enums/codesnippet/VisualBasic/constant-and-literal-data-types_1.vb)]  
   
- 当`Option Infer`是`On`或`Option Strict`是`Off`，你可以声明变量，而无需指定的数据类型`As`子句。 编译器确定常量的表达式的类型的类型。 数字的整数文本被强制转换为默认情况下`Integer`数据类型。 默认数据类型为浮点数字`Double`，和关键字`True`和`False`指定`Boolean`常量。  
+ 当`Option Infer`是`On`或`Option Strict`是`Off`，你可以声明变量，而无需指定数据类型为`As`子句。 编译器确定的常量表达式的类型的类型。 默认情况下强制转换数字的整数文本`Integer`数据类型。 默认数据类型为浮点数`Double`，和关键字`True`并`False`指定`Boolean`常量。  
   
-## <a name="literals-and-type-coercion"></a>文本和类型强制  
- 在某些情况下，你可能想要文本强制转换为特定的数据类型;例如，将特别大的整型文本值分配给类型的变量时`Decimal`。 下面的示例将生成错误：  
+## <a name="literals-and-type-coercion"></a>文本和类型强制转换  
+ 在某些情况下，你可能想要将文本强制为特定的数据类型;例如，如果将特别大的整数文字值分配到类型的变量的`Decimal`。 下面的示例将生成错误：  
   
 ```  
 Dim myDecimal as Decimal  
 myDecimal = 100000000000000000000   ' This causes a compiler error.  
 ```  
   
- 中的文本表示形式的错误结果。 `Decimal`数据类型可以保存值过大，但文本隐式表示为`Long`，哪些不能。  
+ 从文本表示形式会导致错误。 `Decimal`数据类型可以保存值过大，但文本隐式表示为`Long`，哪些不能。  
   
- 可以强制转换为特定数据类型以两种方式是文本： 通过将类型字符追加到它，或将它放置在封闭字符。 类型字符或封闭字符必须立即之前和/或之后的文本，没有干预空格或任何类型的字符。  
+ 您可以强制转换为两种方法中的特定数据类型的文字： 通过将类型字符追加到它，或将其放在封闭字符。 类型字符或封闭字符必须立即之前和/或按照文本，不带任何干预空格或任何类型的字符。  
   
- 若要使前面的示例工作，你可以将附加`D`键入文本，使其表示为字符`Decimal`:  
+ 若要使上一个示例工作，您可以将附加`D`类型为文本，这会导致它无法表示为字符`Decimal`:  
   
  [!code-vb[VbVbalrConstants#2](../../../../visual-basic/programming-guide/language-features/constants-enums/codesnippet/VisualBasic/constant-and-literal-data-types_2.vb)]  
   
@@ -53,7 +53,7 @@ myDecimal = 100000000000000000000   ' This causes a compiler error.
 |`Byte`|(无)|(无)|  
 |`Char`|"|C|  
 |`Date`|#|(无)|  
-|`Decimal`|(无)|D 或 @|  
+|`Decimal`|(无)|D 或使用 @|  
 |`Double`|(无)|R 或 #|  
 |`Integer`|(无)|I 或 %|  
 |`Long`|(无)|L 或 （& a)|  
@@ -70,5 +70,5 @@ myDecimal = 100000000000000000000   ' This causes a compiler error.
  [枚举概述](../../../../visual-basic/programming-guide/language-features/constants-enums/enumerations-overview.md)  
  [如何： 声明枚举](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-declare-enumerations.md)  
  [枚举和名称限定](../../../../visual-basic/programming-guide/language-features/constants-enums/enumerations-and-name-qualification.md)  
- [数据类型](../../../../visual-basic/language-reference/data-types/data-type-summary.md)  
+ [数据类型](../../../../visual-basic/language-reference/data-types/index.md)  
  [常量和枚举](../../../../visual-basic/language-reference/constants-and-enumerations.md)

@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 99692ac1-d8c9-42d7-b1bf-2737b01037e4
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 829be8663068d4eb492631ccc4194b4e4c3000aa
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 361dfd8cc9264f86bfc94a150635d9891274c9ac
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33590294"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45664600"
 ---
 # <a name="how-to-sign-xml-documents-with-digital-signatures"></a>如何：使用数字签名为 XML 文档签名
-可以使用 <xref:System.Security.Cryptography.Xml> 命名空间中的类通过数字签名对 XML 文档或部分 XML 文档进行签名。  使用 XML 数字签名 (XMLDSIG)，你可以验证签名后的数据没有被更改。  有关 XMLDSIG 标准的详细信息，请参阅万维网联合会 (W3C) 建议[XML 签名语法和处理](https://www.w3.org/TR/xmldsig-core/)。  
+可以使用 <xref:System.Security.Cryptography.Xml> 命名空间中的类通过数字签名对 XML 文档或部分 XML 文档进行签名。  使用 XML 数字签名 (XMLDSIG)，你可以验证签名后的数据没有被更改。  有关 XMLDSIG 标准的详细信息，请参阅 World Wide Web 联合会 (W3C) 建议[XML 签名语法和处理](https://www.w3.org/TR/xmldsig-core/)。  
   
  此过程中的代码示例演示了如何对整个 XML 文档进行数字签名，以及如何将签名附加到文档中的 <`Signature`> 元素中。  该示例创建一个 RSA 签名密钥，并将该密钥添加到安全密钥容器，然后使用该密钥对 XML 文档进行数字签名。  然后可以检索该密码来验证 XML 数字签名，或使用它对另一个 XML 文档进行签名。  
   
@@ -114,10 +114,11 @@ ms.locfileid: "33590294"
 -   包括以下命名空间：<xref:System.Xml>、<xref:System.Security.Cryptography> 和 <xref:System.Security.Cryptography.Xml>。  
   
 ## <a name="net-framework-security"></a>.NET Framework 安全性  
- 切勿用纯文本存储或传输非对称密钥对的私钥。  有关对称和非对称加密密钥的详细信息，请参阅[生成加密和解密的密钥](../../../docs/standard/security/generating-keys-for-encryption-and-decryption.md)。  
+ 切勿用纯文本存储或传输非对称密钥对的私钥。  有关对称和非对称加密密钥的详细信息，请参阅[生成的密钥进行加密和解密](../../../docs/standard/security/generating-keys-for-encryption-and-decryption.md)。  
   
- 切勿将私钥直接嵌入到源代码中。  嵌入的密钥可以轻松从程序集使用读取[Ildasm.exe （IL 反汇编程序）](../../../docs/framework/tools/ildasm-exe-il-disassembler.md)或通过在诸如记事本之类的文本编辑器中打开程序集。  
+ 切勿将私钥直接嵌入到源代码中。  从使用程序集可以轻松地读取嵌入的密钥[Ildasm.exe （IL 反汇编程序）](../../../docs/framework/tools/ildasm-exe-il-disassembler.md)或通过在诸如记事本之类的文本编辑器中打开该程序集。  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Security.Cryptography.Xml>  
- [如何：验证 XML 文档的数字签名](../../../docs/standard/security/how-to-verify-the-digital-signatures-of-xml-documents.md)
+## <a name="see-also"></a>请参阅
+
+- <xref:System.Security.Cryptography.Xml>  
+- [如何：验证 XML 文档的数字签名](../../../docs/standard/security/how-to-verify-the-digital-signatures-of-xml-documents.md)

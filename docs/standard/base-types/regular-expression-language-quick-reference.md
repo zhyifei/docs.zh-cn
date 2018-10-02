@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 930653a6-95d2-4697-9d5a-52d11bb6fd4c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cc0c1ebdc4f774858916dcc8ec8db2ba386b7a88
-ms.sourcegitcommit: ed7b4b9b77d35e94a35a2634e8c874f46603fb2b
+ms.openlocfilehash: 53f0f0d82ee751b66168fff68c31d952f480be2e
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36948600"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "44041611"
 ---
 # <a name="regular-expression-language---quick-reference"></a>正则表达式语言 - 快速参考
 <a name="top"></a> 正则表达式是正则表达式引擎尝试匹配输入文本的一种模式。 模式由一个或多个字符文本、运算符或构造组成。  有关简要介绍，请参阅 [.NET 正则表达式](../../../docs/standard/base-types/regular-expressions.md)。  
@@ -93,11 +93,11 @@ ms.locfileid: "36948600"
   
 |断言|描述|模式|匹配|  
 |---------------|-----------------|-------------|-------------|  
-|`^`|默认情况下，必须从字符串的开头开始匹配；在多行模式中，必须从该行的开头开始。|`^\d{3}`|“901”<br /><br /> “901-”|  
-|`$`|默认情况下，匹配必须出现在字符串的末尾，或在字符串末尾的 `\n` 之前；在多行模式中，必须出现在该行的末尾之前，或在该行末尾的 `\n` 之前。|`-\d{3}$`|“-333”<br /><br /> “-333”|  
-|`\A`|匹配必须出现在字符串的开头。|`\A\d{3}`|“901”<br /><br /> “901-”|  
-|`\Z`|匹配必须出现在字符串的末尾或出现在字符串末尾的 `\n` 之前。|`-\d{3}\Z`|“-333”<br /><br /> “-333”|  
-|`\z`|匹配必须出现在字符串的末尾。|`-\d{3}\z`|“-333”<br /><br /> “-333”|  
+|`^`|默认情况下，必须从字符串的开头开始匹配；在多行模式中，必须从该行的开头开始。|`^\d{3}`|“901-333-”中的<br /><br /> “901”|  
+|`$`|默认情况下，匹配必须出现在字符串的末尾，或在字符串末尾的 `\n` 之前；在多行模式中，必须出现在该行的末尾之前，或在该行末尾的 `\n` 之前。|`-\d{3}$`|“-333-333”中的<br /><br /> “-333”|  
+|`\A`|匹配必须出现在字符串的开头。|`\A\d{3}`|“901-333-”中的<br /><br /> “901-”|  
+|`\Z`|匹配必须出现在字符串的末尾或出现在字符串末尾的 `\n` 之前。|`-\d{3}\Z`|“-333-333”中的<br /><br /> “-901-333”|  
+|`\z`|匹配必须出现在字符串的末尾。|`-\d{3}\z`|“-333”<br /><br /> “-901-333”|  
 |`\G`|匹配必须出现在上一个匹配结束的地方。|`\G\(\d\)`|“(1)(3)(5)[7](9\)”中的“(1)”、“(3)”、“(5)”|  
 |`\b`|匹配必须出现在 `\w`（字母数字）和 `\W`（非字母数字）字符之间的边界上。|`\b\w+\s\w+\b`|“them theme them them”中的“them theme”、“them them”|  
 |`\B`|匹配不得出现在 `\b` 边界上。|`\Bend\w*\b`|“end sends endure lender”中的“ends”和“ender”|  
@@ -216,11 +216,12 @@ ms.locfileid: "36948600"
 |`(?#` *注释* `)`|内联注释。 该注释在第一个右括号处终止。|`\bA(?#Matches words starting with A)\w+\b`|  
 |`#` [至行尾]|X 模式注释。 该注释以非转义的 `#` 开头，并继续到行的结尾。|`(?x)\bA\w+\b#Matches words starting with A`|  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Text.RegularExpressions?displayProperty=nameWithType>  
- <xref:System.Text.RegularExpressions.Regex>  
- [正则表达式](regular-expressions.md)  
- [正则表达式类](the-regular-expression-object-model.md)  
- [正则表达式示例](regular-expression-examples.md)  
- [正则表达式 - 快速参考（以 Word 格式下载）](https://download.microsoft.com/download/D/2/4/D240EBF6-A9BA-4E4F-A63F-AEB6DA0B921C/Regular%20expressions%20quick%20reference.docx)  
- [正则表达式 — 快速参考（以 PDF 格式下载）](https://download.microsoft.com/download/D/2/4/D240EBF6-A9BA-4E4F-A63F-AEB6DA0B921C/Regular%20expressions%20quick%20reference.pdf)
+## <a name="see-also"></a>请参阅
+
+- <xref:System.Text.RegularExpressions?displayProperty=nameWithType>  
+- <xref:System.Text.RegularExpressions.Regex>  
+- [正则表达式](regular-expressions.md)  
+- [正则表达式类](the-regular-expression-object-model.md)  
+- [正则表达式示例](regular-expression-examples.md)  
+- [正则表达式 - 快速参考（以 Word 格式下载）](https://download.microsoft.com/download/D/2/4/D240EBF6-A9BA-4E4F-A63F-AEB6DA0B921C/Regular%20expressions%20quick%20reference.docx)  
+- [正则表达式 — 快速参考（以 PDF 格式下载）](https://download.microsoft.com/download/D/2/4/D240EBF6-A9BA-4E4F-A63F-AEB6DA0B921C/Regular%20expressions%20quick%20reference.pdf)

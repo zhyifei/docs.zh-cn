@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - pointers [C#], arithmetic operations
 ms.assetid: d4f0b623-827e-45ce-8649-cfcebc8692aa
-ms.openlocfilehash: c40b125e42649093aa1f1fe860a3e8f5d2690359
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3694699466f7a200eecd5eef85f60fa19f9584a8
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33324296"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43862298"
 ---
 # <a name="arithmetic-operations-on-pointers-c-programming-guide"></a>指针的算术运算（C# 编程指南）
 本主题讨论如何使用算术运算符 `+` 和 **-** 操作指针。  
@@ -35,14 +35,15 @@ ms.locfileid: "33324296"
 ## <a name="c-language-specification"></a>C# 语言规范  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>请参阅  
- [C# 编程指南](../../../csharp/programming-guide/index.md)  
- [不安全代码和指针](../../../csharp/programming-guide/unsafe-code-pointers/index.md)  
- [指针表达式](../../../csharp/programming-guide/unsafe-code-pointers/pointer-expressions.md)  
- [C# 运算符](../../../csharp/language-reference/operators/index.md)  
- [操作指针](../../../csharp/programming-guide/unsafe-code-pointers/manipulating-pointers.md)  
- [指针类型](../../../csharp/programming-guide/unsafe-code-pointers/pointer-types.md)  
- [类型](../../../csharp/language-reference/keywords/types.md)  
- [unsafe](../../../csharp/language-reference/keywords/unsafe.md)  
- [fixed 语句](../../../csharp/language-reference/keywords/fixed-statement.md)  
- [stackalloc](../../../csharp/language-reference/keywords/stackalloc.md)
+## <a name="see-also"></a>请参阅
+
+- [C# 编程指南](../../../csharp/programming-guide/index.md)  
+- [不安全代码和指针](../../../csharp/programming-guide/unsafe-code-pointers/index.md)  
+- [指针表达式](../../../csharp/programming-guide/unsafe-code-pointers/pointer-expressions.md)  
+- [C# 运算符](../../../csharp/language-reference/operators/index.md)  
+- [操作指针](../../../csharp/programming-guide/unsafe-code-pointers/manipulating-pointers.md)  
+- [指针类型](../../../csharp/programming-guide/unsafe-code-pointers/pointer-types.md)  
+- [类型](../../../csharp/language-reference/keywords/types.md)  
+- [unsafe](../../../csharp/language-reference/keywords/unsafe.md)  
+- [fixed 语句](../../../csharp/language-reference/keywords/fixed-statement.md)  
+- [stackalloc](../../../csharp/language-reference/keywords/stackalloc.md)

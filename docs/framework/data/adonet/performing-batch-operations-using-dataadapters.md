@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: e72ed5af-b24f-486c-8429-c8fd2208f844
-ms.openlocfilehash: e585d8a3c21f4a256a2e706389fc9f8adc7900da
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: cfc77ff3b030ffebf52feab0190f81fc4e581cf9
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33361980"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47231133"
 ---
 # <a name="performing-batch-operations-using-dataadapters"></a>使用 DataAdapter 执行批处理操作
 通过 ADO.NET 中的批处理支持，<xref:System.Data.Common.DataAdapter> 可以将 <xref:System.Data.DataSet> 或 <xref:System.Data.DataTable> 中的 INSERT、UPDATE 和 DELETE 操作分组发向服务器，而不是每次发送一项操作。 因为减少了与服务器的往返次数，通常可以大大提高性能。 SQL Server .NET 数据提供程序 (<xref:System.Data.SqlClient>) 和 Oracle .NET 数据提供程序 (<xref:System.Data.OracleClient>) 支持批量更新。  
@@ -24,7 +24,7 @@ ms.locfileid: "33361980"
 ## <a name="using-the-updatebatchsize-property"></a>使用 UpdateBatchSize 属性  
  启用批处理更新时，的 <xref:System.Data.IDbCommand.UpdatedRowSource%2A>、`UpdateCommand` 和 `InsertCommand` 的 `DeleteCommand` 属性值应设置为 <xref:System.Data.UpdateRowSource.None> 或 <xref:System.Data.UpdateRowSource.OutputParameters>。 执行批处理更新时，命令的 <xref:System.Data.IDbCommand.UpdatedRowSource%2A> 或 <xref:System.Data.UpdateRowSource.FirstReturnedRecord> 的 <xref:System.Data.UpdateRowSource.Both> 属性值无效。  
   
- 下面的过程演示 `UpdateBatchSize` 属性的用法。 该过程采用两个自变量，<xref:System.Data.DataSet>具有列，表示对象**ProductCategoryID**和**名称**中的字段**Production.ProductCategory**表和一个整数，表示批大小 （批处理中的行数）。 代码创建一个新的 <xref:System.Data.SqlClient.SqlDataAdapter> 对象，并设置其 <xref:System.Data.SqlClient.SqlDataAdapter.UpdateCommand%2A>、<xref:System.Data.SqlClient.SqlDataAdapter.InsertCommand%2A> 和 <xref:System.Data.SqlClient.SqlDataAdapter.DeleteCommand%2A> 属性。 代码假定 <xref:System.Data.DataSet> 对象具有经过修改的行。 它设置 `UpdateBatchSize` 属性并执行更新。  
+ 下面的过程演示 `UpdateBatchSize` 属性的用法。 该过程采用两个参数，<xref:System.Data.DataSet>对象，它具有列，表示**ProductCategoryID**并**名称**中的字段**Production.ProductCategory**表和一个整数，表示批大小 （批处理中的行数）。 代码创建一个新的 <xref:System.Data.SqlClient.SqlDataAdapter> 对象，并设置其 <xref:System.Data.SqlClient.SqlDataAdapter.UpdateCommand%2A>、<xref:System.Data.SqlClient.SqlDataAdapter.InsertCommand%2A> 和 <xref:System.Data.SqlClient.SqlDataAdapter.DeleteCommand%2A> 属性。 代码假定 <xref:System.Data.DataSet> 对象具有经过修改的行。 它设置 `UpdateBatchSize` 属性并执行更新。  
   
 ```vb  
 Public Sub BatchUpdate( _  
@@ -126,7 +126,7 @@ public static void BatchUpdate(DataTable dataTable,Int32 batchSize)
 ```  
   
 ## <a name="handling-batch-update-related-events-and-errors"></a>处理与批处理更新相关的事件和错误  
- **DataAdapter**具有两个与更新相关的事件： **RowUpdating**和**RowUpdated**。 在 ADO.NET 的以前版本中，如果禁用批处理，则每处理一行就会生成一次这些事件。 **RowUpdating**更新之前，生成和**RowUpdated**数据库更新完成后生成。  
+ **DataAdapter**有两个与更新相关的事件： **RowUpdating**并**RowUpdated**。 在 ADO.NET 的以前版本中，如果禁用批处理，则每处理一行就会生成一次这些事件。 **RowUpdating**之前发生更新时，生成并**RowUpdated**数据库更新完成后生成。  
   
 ### <a name="event-behavior-changes-with-batch-updates"></a>批处理更新的事件行为更改  
  启用批处理时，在单个数据库操作中可更新多行。 因此，每个批处理只发生一次 `RowUpdated` 事件，而对于处理每一行，`RowUpdating` 事件都会发生。 禁用批处理时，这两个事件一对一交错触发，即一行触发一个 `RowUpdating` 事件和一个 `RowUpdated` 事件，下一行触发一个 `RowUpdating` 事件和一个 `RowUpdated` 事件，直到处理完所有行。  
@@ -145,4 +145,4 @@ public static void BatchUpdate(DataTable dataTable,Int32 batchSize)
  [DataAdapters 和 DataReaders](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)  
  [使用 DataAdapter 更新数据源](../../../../docs/framework/data/adonet/updating-data-sources-with-dataadapters.md)  
  [处理 DataAdapter 事件](../../../../docs/framework/data/adonet/handling-dataadapter-events.md)  
- [ADO.NET 托管提供程序和数据集开发人员中心](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)

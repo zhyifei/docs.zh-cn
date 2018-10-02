@@ -2,12 +2,12 @@
 title: 如何：控制命名空间前缀 (C#) (LINQ to XML)
 ms.date: 07/20/2015
 ms.assetid: 64de5186-b81a-4ddd-8327-8693df59a01b
-ms.openlocfilehash: af864139d56bd3ebb22cca6369b82539b9d007da
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: dd2a91fde868425cadbc395d6db0f913e2be600f
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33327748"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45649700"
 ---
 # <a name="how-to-control-namespace-prefixes-c-linq-to-xml"></a>如何：控制命名空间前缀 (C#) (LINQ to XML)
 本主题介绍在序列化 XML 树时如何控制命名空间前缀。  
@@ -54,5 +54,6 @@ Console.WriteLine(root);
 </aw:Root>  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [使用 XML 命名空间 (C#)](../../../../csharp/programming-guide/concepts/linq/working-with-xml-namespaces.md)
+## <a name="see-also"></a>请参阅
+
+- [使用 XML 命名空间 (C#)](../../../../csharp/programming-guide/concepts/linq/working-with-xml-namespaces.md)

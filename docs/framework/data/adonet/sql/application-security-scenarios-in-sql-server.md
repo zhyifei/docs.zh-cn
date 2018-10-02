@@ -2,12 +2,12 @@
 title: SQL Server 中的应用程序安全性方案
 ms.date: 03/30/2017
 ms.assetid: 0164f3a4-406e-4693-bec3-03c8e18b46d7
-ms.openlocfilehash: 1239715678bda648bc962f9b23667b954b540e3f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: bf4f4adfd5f49bd210026e40bd5fa4e67da10d75
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33363320"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "45994038"
 ---
 # <a name="application-security-scenarios-in-sql-server"></a>SQL Server 中的应用程序安全性方案
 没有用于创建安全 SQL Server 客户端应用程序的一种通用的正确方法。 每个应用程序在其要求、部署环境和用户群方面都是不同的。 最初部署时相当安全的应用程序随着时间的推移可能会变得不太安全。 无法准确预测未来可能出现的威胁。  
@@ -60,4 +60,4 @@ ms.locfileid: "33363320"
  [SQL Server 安全性](../../../../../docs/framework/data/adonet/sql/sql-server-security.md)  
  [SQL Server 安全性概述](../../../../../docs/framework/data/adonet/sql/overview-of-sql-server-security.md)  
  [保证 ADO.NET 应用程序的安全](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
- [ADO.NET 托管提供程序和数据集开发人员中心](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)

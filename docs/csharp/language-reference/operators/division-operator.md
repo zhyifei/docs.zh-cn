@@ -7,12 +7,12 @@ helpviewer_keywords:
 - / operator [C#]
 - division operator [C#]
 ms.assetid: d155e496-678f-4efa-bebe-2bd08da2c5af
-ms.openlocfilehash: 9d0bbff1fd9f4ab3c93c879d12ccd5fde1187b44
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: bddf6d234f3536ad64f0cd876cc7ade4494916d9
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33272566"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43800750"
 ---
 # <a name="-operator-c-reference"></a>/ 运算符（C# 参考）
 除法运算符 (`/`) 将其第一操作数除以第二操作数。 所有数值类型都具有预定义的除法运算符。
@@ -29,7 +29,8 @@ ms.locfileid: "33272566"
 ## <a name="example"></a>示例  
  [!code-csharp[csRefOperators#42](../../../csharp/language-reference/operators/codesnippet/CSharp/division-operator_1.cs)]  
   
-## <a name="see-also"></a>请参阅  
- [C# 参考](../../../csharp/language-reference/index.md)  
- [C# 编程指南](../../../csharp/programming-guide/index.md)  
- [C# 运算符](../../../csharp/language-reference/operators/index.md)
+## <a name="see-also"></a>请参阅
+
+- [C# 参考](../../../csharp/language-reference/index.md)  
+- [C# 编程指南](../../../csharp/programming-guide/index.md)  
+- [C# 运算符](../../../csharp/language-reference/operators/index.md)

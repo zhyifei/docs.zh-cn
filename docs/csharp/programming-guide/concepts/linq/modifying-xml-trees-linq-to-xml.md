@@ -2,12 +2,12 @@
 title: 修改 XML 树 (LINQ to XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: 8ec47e6d-2363-4694-be46-8d5ca4d15fc9
-ms.openlocfilehash: 4afb071b5229b3a585ea032effc2985c9a9f7c3a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 55e75762772a071b97eecb7d6d78e28c3002a179
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33324205"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43505714"
 ---
 # <a name="modifying-xml-trees-linq-to-xml-c"></a>修改 XML 树 (LINQ to XML) (C#)
 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 是一个 XML 树在内存中的存储区。 在从源中加载或分析 XML 树之后，[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 允许就地修改该树，然后序列化该树，可以将它保存到文件中或发送到远程服务器。  
@@ -27,5 +27,6 @@ ms.locfileid: "33324205"
 |[维护名称/值对 (C#)](../../../../csharp/programming-guide/concepts/linq/maintaining-name-value-pairs.md)|描述如何维护最好保存为名称/值对的应用程序信息，例如配置信息或全局设置。|  
 |[如何：更改整个 XML 树的命名空间 (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-change-the-namespace-for-an-entire-xml-tree.md)|演示如何将 XML 树从一个命名空间移动到另一个命名空间。|  
   
-## <a name="see-also"></a>请参阅  
- [编程指南 (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/programming-guide-linq-to-xml.md)
+## <a name="see-also"></a>请参阅
+
+- [编程指南 (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/programming-guide-linq-to-xml.md)

@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 67c5a20d-1be1-4ea7-8a9a-92b0b08658d2
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d4dd3e16edae6e30d93083694a2d2d18c0815933
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 741ddd0171244daceb4d5e283c0172e71b82f3d2
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33579530"
+ms.lasthandoff: 09/29/2018
+ms.locfileid: "47216976"
 ---
 # <a name="fundamentals-of-garbage-collection"></a>垃圾回收的基础
 <a name="top"></a> 在公共语言运行时 (CLR) 中，垃圾回收器用作自动内存管理器。 它提供如下优点：  
@@ -296,5 +296,6 @@ ms.locfileid: "33579530"
  ![后台服务器垃圾回收](../../../docs/standard/garbage-collection/media/backgroundserver.png "BackgroundServer")  
 后台服务器垃圾回收  
   
-## <a name="see-also"></a>请参阅  
- [垃圾回收](../../../docs/standard/garbage-collection/index.md)
+## <a name="see-also"></a>请参阅
+
+- [垃圾回收](../../../docs/standard/garbage-collection/index.md)

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - indexers [C#], in interfaces
 - accessors [C#], indexers
 ms.assetid: e16b54bd-4a83-4f52-bd75-65819fca79e8
-ms.openlocfilehash: 120b6e72a6ab906437c593d6eb33024d1df8f52b
-ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
+ms.openlocfilehash: c3ddb48590087d49402482e8cbf3760027da1a2a
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36207865"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43799458"
 ---
 # <a name="indexers-in-interfaces-c-programming-guide"></a>接口中的索引器（C# 编程指南）
 可以在[接口](../../../csharp/language-reference/keywords/interface.md)上声明索引器。 接口索引器的访问器与[类](../../../csharp/language-reference/keywords/class.md)索引器的访问器有所不同，差异如下：  
@@ -58,8 +58,9 @@ string ICitizen.this[int index]
   
  在 `ICitizen` 接口中实现索引器。  
   
-## <a name="see-also"></a>请参阅  
- [C# 编程指南](../../../csharp/programming-guide/index.md)  
- [索引器](../../../csharp/programming-guide/indexers/index.md)  
- [属性](../../../csharp/programming-guide/classes-and-structs/properties.md)  
- [接口](../../../csharp/programming-guide/interfaces/index.md)
+## <a name="see-also"></a>请参阅
+
+- [C# 编程指南](../../../csharp/programming-guide/index.md)  
+- [索引器](../../../csharp/programming-guide/indexers/index.md)  
+- [属性](../../../csharp/programming-guide/classes-and-structs/properties.md)  
+- [接口](../../../csharp/programming-guide/interfaces/index.md)

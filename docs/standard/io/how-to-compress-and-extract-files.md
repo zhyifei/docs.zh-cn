@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: e9876165-3c60-4c84-a272-513e47acf579
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f045f2137d65a66ac025c81e58e66c96bcaca031
-ms.sourcegitcommit: d955cb4c681d68cf301d410925d83f25172ece86
+ms.openlocfilehash: 669936d15cfe1ea125ed36ffdfcfd093b6aacbe1
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34827119"
+ms.lasthandoff: 09/28/2018
+ms.locfileid: "47424423"
 ---
 # <a name="how-to-compress-and-extract-files"></a>如何：压缩和解压缩文件
 
@@ -70,9 +70,9 @@ ms.locfileid: "34827119"
 
 ## <a name="see-also"></a>请参阅
 
-<xref:System.IO.Compression.ZipArchive>  
-<xref:System.IO.Compression.ZipFile>  
-<xref:System.IO.Compression.ZipArchiveEntry>  
-<xref:System.IO.Compression.DeflateStream>  
-<xref:System.IO.Compression.GZipStream>  
-[文件和流 I/O](../../../docs/standard/io/index.md)
+- <xref:System.IO.Compression.ZipArchive>  
+- <xref:System.IO.Compression.ZipFile>  
+- <xref:System.IO.Compression.ZipArchiveEntry>  
+- <xref:System.IO.Compression.DeflateStream>  
+- <xref:System.IO.Compression.GZipStream>  
+- [文件和流 I/O](../../../docs/standard/io/index.md)

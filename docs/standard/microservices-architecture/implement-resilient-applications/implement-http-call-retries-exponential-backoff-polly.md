@@ -1,175 +1,92 @@
 ---
-title: 使用 Polly 实现使用指数退避算法的 HTTP 调用重试
-description: 适用于容器化 .NET 应用程序的 .NET 微服务体系结构 | 使用 Polly 实现使用指数退避算法的 HTTP 调用重试
+title: 通过 Polly 实现使用指数退避算法的 HTTP 调用重试
+description: 了解如何使用 Polly 和 HttpClientFactory 处理 HTTP 故障
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 05/26/2017
-ms.openlocfilehash: cce1392bb381859e7cad89c9f2518113241ae724
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.date: 06/10/2018
+ms.openlocfilehash: c16f4c0f2ef09f346c8b46ff8089883cedcf0c7e
+ms.sourcegitcommit: 59b51cd7c95c75be85bd6ef715e9ef8c85720bac
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37106926"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37874892"
 ---
-# <a name="implementing-http-call-retries-with-exponential-backoff-with-polly"></a>使用 Polly 实现使用指数退避算法的 HTTP 调用重试
+# <a name="implement-http-call-retries-with-exponential-backoff-with-httpclientfactory-and-polly-policies"></a>通过 HttpClientFactory 和 Polly 策略实现使用指数退避算法的 HTTP 调用重试
 
 建议的使用指数退避算法的重试方法是利用更高级的 .NET 库，如开放源 [Polly](https://github.com/App-vNext/Polly) 库。
 
-Polly 是一个 .NET 库，提供恢复能力和瞬态故障处理功能。 通过应用 Polly 策略（如重试、断路器、舱壁隔离、超时和回退）可以轻松地实现这些功能。 Polly 面向 .NET 4.x 和 .NET Standard 版本 1.0 （支持 .NET Core）。
+Polly 是一个 .NET 库，提供恢复能力和瞬态故障处理功能。 通过应用 Polly 策略（如重试、断路器、舱壁隔离、超时和回退）即可实现这些功能。 Polly 面向 .NET 4.x 和 .NET Standard 库 1.0（支持 .NET Core）。
 
-Polly 中的重试策略是实现 HTTP 重试时在 eShopOnContainers 中使用的方法。 可以实现接口以便可以使用 Polly 注入标准 HttpClient 功能或弹性版本的 HttpClient，具体取决于想要使用的重试策略配置。
+但是，将包含自定义代码的 Polly 库与 HttpClient 配合使用的过程非常复杂。 eShopOnContainers 的原始版本中包含基于 Polly 的 [ResilientHttpClient 构建基块](https://github.com/dotnet-architecture/eShopOnContainers/blob/master/src/BuildingBlocks/Resilience/Resilience.Http/ResilientHttpClient.cs)。 但随着 HttpClientFactory 的发布，复原 Http 通信变得更易于实现，因此已弃用 eShopOnContainers 中的构建基块。 
 
-下面的示例演示在 eShopOnContainers 中实现的接口。
+以下步骤说明如何通过集成到 HttpClientFactory 中的 Polly（已在上一部分中说明）使用 Http 重试。
+
+**引用 ASP.NET Core 2.1 包**
+
+项目必须使用来自 NuGet 的 ASP.NET Core 2.1 包。 通常需要 `AspNetCore` 元包和扩展包 `Microsoft.Extensions.Http.Polly`。
+
+**使用 Polly 的重试策略在 Startup 中配置客户端**
+
+如前面部分中所示，需要在标准 Startup.ConfigureServices(...) 方法中定义已命名或类型化的客户端 HttpClient 配置，但现在，可使用指数退避算法添加用于指定 Http 重试策略的增量代码，如下所示：
 
 ```csharp
-public interface IHttpClient
+//ConfigureServices()  - Startup.cs
+services.AddHttpClient<IBasketService, BasketService>()
+        .SetHandlerLifetime(TimeSpan.FromMinutes(5))  //Set lifetime to five minutes
+        .AddPolicyHandler(GetRetryPolicy());
+```
+
+将策略添加至将要使用的 `HttpClient` 对象需要使用 AddPolicyHandler() 方法。 在此示例中，将使用指数退避算法为 Http 重试添加 Polly 策略。
+
+若要获得更加模块化的方法，可在 ConfigureServices() 方法内的单独方法中定义 Http 重试策略，如以下代码所示。
+
+```csharp
+static IAsyncPolicy<HttpResponseMessage> GetRetryPolicy()
 {
-    Task<string> GetStringAsync(string uri, string authorizationToken = null,
-        string authorizationMethod = "Bearer");
-        Task<HttpResponseMessage> PostAsync<T>(string uri, T item,
-        string authorizationToken = null, string requestId = null,
-        string authorizationMethod = "Bearer");
-
-    Task<HttpResponseMessage> DeleteAsync(string uri,
-        string authorizationToken = null, string requestId = null,
-        string authorizationMethod = "Bearer");
-
-    // Other methods ...
+    return HttpPolicyExtensions
+        .HandleTransientHttpError()
+        .OrResult(msg => msg.StatusCode == System.Net.HttpStatusCode.NotFound)
+        .WaitAndRetryAsync(6, retryAttempt => TimeSpan.FromSeconds(Math.Pow(2,
+                                                                    retryAttempt)));
 }
 ```
 
-如果不想使用弹性机制，可以使用标准实现，就像在开发或测试更简单的方法时一样。 下面的代码演示标准 HttpClient 实现，允许将带有身份验证令牌的请求作为可选情况。
+使用 Polly 可定义一个重试策略，其中包含重试次数、指数退避算法配置以及在出现 HTTP 异常时要采取的操作，例如记录错误。 在此示例中，该策略配置为尝试 6 次（采用指数重试），以 2 秒为起始值。 
+
+也就是说，它将以 2 秒为起始值尝试 6 次，且每两次重试之间的秒数为指数关系。
+
+### <a name="adding-a-jitter-strategy-to-the-retry-policy"></a>将抖动策略添加到重试策略
+
+在高并发率、高可伸缩性和高争用的情况下，常规重试策略可能会对系统产生影响。 在部分运行中断的情况下，有可能会有许多客户端同时发出相似的重试操作，从而形成操作高峰，为克服这种情况，一个好办法是向重试算法或策略中添加抖动策略。 由于增加了指数退避的随机性，这可能会改进端到端系统的整体性能。 这样在出现问题时可以分散峰值。 使用普通 Polly 策略时，用于实现抖动的代码类似下面的示例：
 
 ```csharp
-public class StandardHttpClient : IHttpClient
-{
-    private HttpClient _client;
-    private ILogger<StandardHttpClient> _logger;
-
-    public StandardHttpClient(ILogger<StandardHttpClient> logger)
-    {
-        _client = new HttpClient();
-        _logger = logger;
-    }
-
-    public async Task<string> GetStringAsync(string uri,
-        string authorizationToken = null,
-        string authorizationMethod = "Bearer")
-    {
-        var requestMessage = new HttpRequestMessage(HttpMethod.Get, uri);
-        if (authorizationToken != null)
-        {
-            requestMessage.Headers.Authorization =
-                new AuthenticationHeaderValue(authorizationMethod, authorizationToken);
-        }
-        var response = await _client.SendAsync(requestMessage);
-        return await response.Content.ReadAsStringAsync();
-    }
-
-    public async Task<HttpResponseMessage> PostAsync<T>(string uri, T item,
-        string authorizationToken = null, string requestId = null,
-        string authorizationMethod = "Bearer")
-    {
-        // Rest of the code and other Http methods ...
+Random jitterer = new Random(); 
+Policy
+  .Handle<HttpResponseException>() // etc
+  .WaitAndRetry(5,    // exponential back-off plus some jitter
+      retryAttempt => TimeSpan.FromSeconds(Math.Pow(2, retryAttempt))  
+                    + TimeSpan.FromMilliseconds(jitterer.Next(0, 100)) 
+  );
 ```
 
-有趣的实现是编写另一个类似的类，但是使用 Polly 来实现想要使用的弹性机制，在下面的示例中，使用指数退避算法重试。
+## <a name="additional-resources"></a>其他资源
 
-```csharp
-public class ResilientHttpClient : IHttpClient
-{
-    private HttpClient _client;
-    private PolicyWrap _policyWrapper;
-    private ILogger<ResilientHttpClient> _logger;
+-   **重试模式** 
+    [*https://docs.microsoft.com/azure/architecture/patterns/retry*](https://docs.microsoft.com/azure/architecture/patterns/retry)
 
-    public ResilientHttpClient(Policy[] policies,
-        ILogger<ResilientHttpClient> logger)
-    {
-        _client = new HttpClient();
-        _logger = logger;
-        // Add Policies to be applied
-        _policyWrapper = Policy.WrapAsync(policies);
-    }
+-   **Polly 和 HttpClientFactory**
+    [*https://github.com/App-vNext/Polly/wiki/Polly-and-HttpClientFactory*](https://github.com/App-vNext/Polly/wiki/Polly-and-HttpClientFactory)
 
-    private Task<T> HttpInvoker<T>(Func<Task<T>> action)
-    {
-        // Executes the action applying all
-        // the policies defined in the wrapper
-        return _policyWrapper.ExecuteAsync(() => action());
-    }
+-   **Polly（.NET 的恢复和暂时性故障处理库）**
 
-    public Task<string> GetStringAsync(string uri,
-        string authorizationToken = null,
-        string authorizationMethod = "Bearer")
-    {
-        return HttpInvoker(async () =>
-        {
-            var requestMessage = new HttpRequestMessage(HttpMethod.Get, uri);
-            // The Token's related code eliminated for clarity in code snippet
-            var response = await _client.SendAsync(requestMessage);
-            return await response.Content.ReadAsStringAsync();
-        });
-    }
-    // Other Http methods executed through HttpInvoker so it applies Polly policies
-    // ...
-}
-```
+    [*https://github.com/App-vNext/Polly*](https://github.com/App-vNext/Polly)
 
-使用 Polly 定义一个重试策略，其中包含重试次数、指数退避算法配置以及在出现 HTTP 异常时要采取的操作，例如记录错误。 此时将配置策略，以便尝试在 IoC 容器中注册类型时指定的次数。 由于指数退避算法配置，每当代码检测到 HttpRequest 异常时，它都会在等待了一段时间之后重试发送 Http 请求，这一时间会随策略的配置方式呈指数增长。
+-   **Marc Brooker。抖动：随机性使操作变得更好**
 
-重要的方法是 HttpInvoker，它使 HTTP 在整个此实用类发出请求。 该方法使用 \_policyWrapper.ExecuteAsync 在内部执行 HTTP 请求并考虑到重试策略。
+    [*https://brooker.co.za/blog/2015/03/21/backoff.html*](https://brooker.co.za/blog/2015/03/21/backoff.html)
 
-在 eShopOnContainers 中，在 IoC 容器注册类型时指定 Polly 策略，如 [MVC Web 应用在 startup.cs](https://github.com/dotnet-architecture/eShopOnContainers/blob/master/src/Web/WebMVC/Startup.cs) 类中的以下代码所示。
-
-```csharp
-// Startup.cs class
-if (Configuration.GetValue<string>("UseResilientHttp") == bool.TrueString)
-{
-    services.AddTransient<IResilientHttpClientFactory,
-        ResilientHttpClientFactory>();
-    services.AddSingleton<IHttpClient,
-        ResilientHttpClient>(sp =>
-            sp.GetService<IResilientHttpClientFactory>().
-            CreateResilientHttpClient());
-}
-else
-{
-    services.AddSingleton<IHttpClient, StandardHttpClient>();
-}
-```
-
-请注意，IHttpClient 对象被实例化为单例，而不是临时的，这样服务就可以有效地使用 TCP 连接，并且不会发生[套接字问题](https://aspnetmonsters.com/2016/08/2016-08-27-httpclientwrong/)。
-
-但是关于复原的重要一点是在 CreateResilientHttpClient 方法中的 ResilientHttpClientFactory 中应用 Polly WaitAndRetryAsync 策略，如以下代码所示：
-
-```csharp
-public ResilientHttpClient CreateResilientHttpClient()
-    => new ResilientHttpClient(CreatePolicies(), _logger);
-
-// Other code
-private Policy[] CreatePolicies()
-    => new Policy[]
-    {
-        Policy.Handle<HttpRequestException>()
-            .WaitAndRetryAsync(
-        // number of retries
-        6,
-        // exponential backoff
-        retryAttempt => TimeSpan.FromSeconds(Math.Pow(2, retryAttempt)),
-        // on retry
-        (exception, timeSpan, retryCount, context) =>
-        {
-            var msg = $"Retry {retryCount} implemented with Pollys RetryPolicy " +
-            $"of {context.PolicyKey} " +
-            $"at {context.ExecutionKey}, " +
-            $"due to: {exception}.";
-            _logger.LogWarning(msg);
-            _logger.LogDebug(msg);
-        }),
-    }
-```
 
 
 >[!div class="step-by-step"]
-[上一页](implement-custom-http-call-retries-exponential-backoff.md)
+[上一页](explore-custom-http-call-retries-exponential-backoff.md)
 [下一页](implement-circuit-breaker-pattern.md)

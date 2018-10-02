@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: f3fc7533-6956-42c6-bbc3-73e5a221027d
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 963a33975836531290a9471dbf9c727dc53ab557
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b744690cf2af1c2935a381c3edc2198840704425
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33395848"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47197898"
 ---
 # <a name="socket-code-examples"></a>Socket 代码示例
 以下代码示例演示如何使用 <xref:System.Net.Sockets.Socket> 类作为客户端连接到远程网络服务，以及如何将它用作服务器以侦听来自远程客户端的连接。  

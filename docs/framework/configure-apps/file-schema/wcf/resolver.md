@@ -2,12 +2,12 @@
 title: '&lt;resolver&gt;'
 ms.date: 03/30/2017
 ms.assetid: 0c00200c-f135-4e5c-a024-76b72bcbc021
-ms.openlocfilehash: f29c34f53a8bdaee4b30c72bb5d764ae3935fe7a
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 48b6b6ca315f7ab63a8f7a64b97167fa04fe1e4e
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32749018"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44180795"
 ---
 # <a name="ltresolvergt"></a>&lt;resolver&gt;
 指定对等解析程序，对等解析程序用于将对等网格 ID 解析为一组对等节点地址，这些地址表示参与网格的若干节点。  
@@ -58,4 +58,4 @@ ms.locfileid: "32749018"
  <xref:System.ServiceModel.Configuration.NetPeerTcpBindingElement.Resolver%2A>  
  <xref:System.ServiceModel.Configuration.PeerResolverElement>  
  [对等解析程序](../../../../../docs/framework/wcf/feature-details/peer-resolvers.md)  
- [将自定义解析程序添加到对等通道应用程序](http://msdn.microsoft.com/library/12aa3787-2962-439c-ad27-46523c8b0419)
+ [对等通道应用程序中添加自定义冲突解决程序](https://msdn.microsoft.com/library/12aa3787-2962-439c-ad27-46523c8b0419)

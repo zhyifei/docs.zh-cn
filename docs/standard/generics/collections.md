@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 5b646751-6ab7-465c-916c-b1a76aefa9f5
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 829ef35d2e26f67ea956a0838d93b9667ad58df4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: cdead5a54c6e8dbe6fd61f82fc3985913bd7d381
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33576615"
+ms.lasthandoff: 09/27/2018
+ms.locfileid: "47202572"
 ---
 # <a name="generic-collections-in-net"></a>.NET 中的泛型集合
 
@@ -50,9 +50,10 @@ ms.locfileid: "33576615"
  [!code-csharp[Conceptual.Generics.Overview#7](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.generics.overview/cs/source2.cs#7)]
  [!code-vb[Conceptual.Generics.Overview#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.generics.overview/vb/source2.vb#7)]  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Collections.Generic?displayProperty=nameWithType>  
- <xref:System.Collections.ObjectModel?displayProperty=nameWithType>  
- [泛型](../../../docs/standard/generics/index.md)  
- [用于控制数组和列表的泛型委托](../../../docs/standard/generics/delegates-for-manipulating-arrays-and-lists.md)  
- [泛型接口](../../../docs/standard/generics/interfaces.md)
+## <a name="see-also"></a>请参阅
+
+- <xref:System.Collections.Generic?displayProperty=nameWithType>  
+- <xref:System.Collections.ObjectModel?displayProperty=nameWithType>  
+- [泛型](../../../docs/standard/generics/index.md)  
+- [用于控制数组和列表的泛型委托](../../../docs/standard/generics/delegates-for-manipulating-arrays-and-lists.md)  
+- [泛型接口](../../../docs/standard/generics/interfaces.md)

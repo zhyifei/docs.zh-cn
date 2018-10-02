@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: d8461a44-aa2c-4ef4-b3e4-ab7cbaaee1b5
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d9fa06ed0befd82a3efdd46deaa2362b1f10fa35
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f5c221dc05787c6d76d998977069ad327a3dfa83
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33586070"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44177192"
 ---
 # <a name="how-to-encrypt-xml-elements-with-symmetric-keys"></a>如何：用对称密钥对 XML 元素进行加密
 可以使用 <xref:System.Security.Cryptography.Xml> 命名空间中的类加密 XML 文档内的元素。  XML 加密可用于存储或传输敏感 XML，而无需担心数据被轻易读取。  此过程使用高级加密标准 (AES) 算法（也称为 Rijndael）对 XML 元素进行解密。  
@@ -101,6 +101,7 @@ ms.locfileid: "33586070"
   
  当你使用加密密钥执行操作后，通过将每个字节设置为零或通过调用托管加密类的 <xref:System.Security.Cryptography.SymmetricAlgorithm.Clear%2A> 方法来将它从内存中清除。  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Security.Cryptography.Xml>  
- [如何：使用对称密钥解密 XML 元素](../../../docs/standard/security/how-to-decrypt-xml-elements-with-symmetric-keys.md)
+## <a name="see-also"></a>请参阅
+
+- <xref:System.Security.Cryptography.Xml>  
+- [如何：使用对称密钥解密 XML 元素](../../../docs/standard/security/how-to-decrypt-xml-elements-with-symmetric-keys.md)

@@ -2,22 +2,22 @@
 title: 在 SQL Server 中编写安全的动态 SQL
 ms.date: 03/30/2017
 ms.assetid: df5512b0-c249-40d2-82f9-f9a2ce6665bc
-ms.openlocfilehash: cbfbfd59d78cb5504679fd8ae78f79d0c180dc4d
-ms.sourcegitcommit: d8bf4976eafe3289275be3811e7cb721bfff7e1e
+ms.openlocfilehash: 5357bb4ad82f5fe9a70f15a540aba355e847ad71
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34753469"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43857909"
 ---
 # <a name="writing-secure-dynamic-sql-in-sql-server"></a>在 SQL Server 中编写安全的动态 SQL
-SQL 注入是恶意用户输入 Transact-SQL 语句来取代有效输入的过程。 如果输入的语句没有经过验证直接传递到服务器，并且应用程序不慎执行了注入的代码，这种攻击有可能损坏或销毁数据。  
+SQL 注入是恶意用户输入 Transact-SQL 语句来取代有效输入的过程。 如果输入的语句没有经过验证直接传递到服务器，并且应用程序不慎执行了注入的代码，这种攻击有可能损坏或毁坏数据。  
   
  任何构造 SQL 语句的过程都应该针对注入漏洞进行审核，因为 SQL Server 将执行它扪收到的所有语法上有效的查询。 技术熟练的蓄意攻击者甚至可以操作参数化数据。 如果您使用动态 SQL，请确保将命令参数化，绝不要在查询字符串中直接包括参数值。  
   
 ## <a name="anatomy-of-a-sql-injection-attack"></a>SQL 注入攻击剖析  
  注入过程的工作原理是过早终止某一文本字符串并追加一个新命令。 因为插入的命令可能在执行之前已追加了其他字符串，攻击者可以使用注释标记“--”终止注入的字符串。 执行时会忽略后续的文本。 通过使用分号 (;) 分隔符可以插入多个命令。  
   
- 只要注入的 SQL 代码在语法上正确，就无法通过编程方式检测到这种篡改。 因此，您必须验证所有用户输入并仔细评审将在您使用的服务器上执行构造的 SQL 命令的代码。 切勿连接未经验证的用户输入。 字符串连接是脚本注入的主要入口点。  
+ 只要注入的 SQL 代码在语法上正确，就无法通过编程方式检测到这种篡改。 因此，您必须验证所有用户输入并仔细检查将在您使用的服务器上执行构造的 SQL 命令的代码。 切勿连接未经验证的用户输入。 字符串连接是脚本注入的主要入口点。  
   
  下面是几条有帮助的准则：  
   
@@ -73,4 +73,4 @@ SQL 注入是恶意用户输入 Transact-SQL 语句来取代有效输入的过�
  [在 SQL Server 中使用存储过程管理权限](../../../../../docs/framework/data/adonet/sql/managing-permissions-with-stored-procedures-in-sql-server.md)  
  [在 SQL Server 中对存储过程签名](../../../../../docs/framework/data/adonet/sql/signing-stored-procedures-in-sql-server.md)  
  [在 SQL Server 中使用模拟自定义权限](../../../../../docs/framework/data/adonet/sql/customizing-permissions-with-impersonation-in-sql-server.md)  
- [ADO.NET 托管提供程序和数据集开发人员中心](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)

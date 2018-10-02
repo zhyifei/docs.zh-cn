@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - generics [C#], benefits
 ms.assetid: 80f037cd-9ea7-48be-bfc1-219bfb2d4277
-ms.openlocfilehash: bd0a133c6ce1a9623bfe8598d1dc786c44e6eaad
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2770f8bc7fc4242beb02bf9e0555b5cbb8db0180
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33336825"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43503789"
 ---
 # <a name="benefits-of-generics-c-programming-guide"></a>泛型的优点（C# 编程指南）
 公共语言运行时和 C# 语言早期版本中存在一个局限，其中通过将类型与通用基类型 <xref:System.Object> 相互强制完成泛化，泛型提供了此局限的解决方案。 通过创建泛型类，可在编译时创建类型安全的集合。  
@@ -34,10 +34,11 @@ ms.locfileid: "33336825"
   
  对于客户端代码，与 <xref:System.Collections.ArrayList> 相比，<xref:System.Collections.Generic.List%601> 添加的唯一语法是声明和实例化中的类型参数。 虽然编码略为复杂，但与 <xref:System.Collections.ArrayList> 相比，你创建的列表不仅更加安全，而且创建速度大为提高，尤其是在列表项为值类型时。  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Collections.Generic>  
- [C# 编程指南](../../../csharp/programming-guide/index.md)  
- [泛型介绍](../../../csharp/programming-guide/generics/introduction-to-generics.md)  
- [装箱和取消装箱](../../../csharp/programming-guide/types/boxing-and-unboxing.md)  
- [何时使用泛型集合](../../../standard/collections/when-to-use-generic-collections.md)  
- [集合准则](../../../standard/design-guidelines/guidelines-for-collections.md)   
+## <a name="see-also"></a>请参阅
+
+- <xref:System.Collections.Generic>  
+- [C# 编程指南](../../../csharp/programming-guide/index.md)  
+- [泛型介绍](../../../csharp/programming-guide/generics/introduction-to-generics.md)  
+- [装箱和取消装箱](../../../csharp/programming-guide/types/boxing-and-unboxing.md)  
+- [何时使用泛型集合](../../../standard/collections/when-to-use-generic-collections.md)  
+- [集合准则](../../../standard/design-guidelines/guidelines-for-collections.md)   

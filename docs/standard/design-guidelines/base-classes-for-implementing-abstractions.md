@@ -8,32 +8,33 @@ helpviewer_keywords:
 ms.assetid: 37a2d9a4-9721-482a-a40f-eee2c1d97875
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8c247ed7273687dbd61a6f19923b71e07e9ed960
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9f326ee895251678c7a23ea84a11e83951edf2cc
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33571503"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45677066"
 ---
 # <a name="base-classes-for-implementing-abstractions"></a>用于实现抽象的基类
-严格地说，一个类成为基类，当另一个类派生自它时。 但是，对于本部分中，基类是主要用于提供公共抽象或重复使用某些其他类的默认实现但继承的类。 继承层次结构，在层次结构的根的抽象和一些自定义实现底部之间的中间通常位于基类，这些类。  
+严格地说，一个类成为基类时另一个类派生。 但是，对于本部分中，基类是主要用于提供常见抽象或重复使用某些其他类的默认实现但继承的类。 基类，这些类通常位于继承层次结构，层次结构的根处的抽象和底部的多个自定义实现之间的中间。  
   
- 它们作为实现帮助器用于实现抽象。 例如，其中一个有序集合的项的框架的抽象是<xref:System.Collections.Generic.IList%601>接口。 实现<xref:System.Collections.Generic.IList%601>非同小可，并因此框架提供多个基类，例如<xref:System.Collections.ObjectModel.Collection%601>和<xref:System.Collections.ObjectModel.KeyedCollection%602>，其用于实现自定义集合用作帮助器。  
+ 它们用于实现抽象处理为实现帮助器。 例如，一项的有序集合的框架的抽象是<xref:System.Collections.Generic.IList%601>接口。 实现<xref:System.Collections.Generic.IList%601>并非易事，并因此框架提供多个基类，例如<xref:System.Collections.ObjectModel.Collection%601>和<xref:System.Collections.ObjectModel.KeyedCollection%602>，它用于实现自定义集合作为帮助程序。  
   
- 基类，这些类通常是不适合用作抽象本身，因为它们往往包含过多的实现。 例如，`Collection<T>`基类包含大量与它实现非泛型的事实相关的实现`IList`接口 （以与非泛型集合更好地集成），并在事实项的集合存储在内存中其域中的一个。  
+ 基本类并通常不适合作为抽象本身，因为他们往往会包含太多实现。 例如，`Collection<T>`基类提供了很多实现这一事实，它实现非泛型相关的`IList`接口 （若要将与非泛型集合更好地集成），它是一系列项存储在中的一个字段的内存。  
   
- 如前面所述，基类，这些类可以提供有用的帮助的用户需要实现抽象，但同时也可以是重大的责任。 他们添加外围应用和增加继承层次结构的深度并因此从概念上讲在框架上变得复杂化。 因此，仅当它们对框架的用户提供巨大价值，则应使用基类，这些类。 如果它们仅对的框架，在其中的内部实现，而不是继承自基类的区分大小委派应强考虑实施者提供值，它们应避免使用。  
+ 如前面所述，基类，这些类可以提供宝贵帮助的用户需要实现的抽象，但在同一时间可重大的责任。 他们添加外围和增加的继承层次结构的深度和使框架，因此在概念上变得复杂。 因此，仅当它们带来巨大价值的框架用户，则应使用基类，这些类。 如果它们仅对 framework，在其中写委派而不是继承的内部实现从基类则强烈建议的实施者提供的值，它们应避免使用。  
   
- **请考虑 ✓**进行基本类抽象，即使它们不包含任何抽象成员。 它清楚地与用户建立通信，类旨在只是为了从继承。  
+ **✓ CONSIDER** 进行基本类抽象，即使它们不包含任何抽象成员。 这清楚地传达给用户的类仅用于从继承。  
   
- **请考虑 ✓**置于单独的命名空间从主线方案类型的基类，这些类。 根据定义，基类，这些类旨在供高级的扩展性方案，因此不感兴趣的大多数用户。  
+ **✓ CONSIDER** 置于单独的命名空间从主线方案类型的基类，这些类。 根据定义，基类，这些类适用于高级的扩展性方案，因此都不会用到的大部分用户。  
   
- **请避免 x**命名为"基本"后缀的基类，如果类旨在用于在公共 Api 中使用。  
+ **X AVOID** 命名为"基本"后缀的基类，如果类旨在用于在公共 Api 中使用。  
   
- *部分 © 2005年，2009 Microsoft Corporation。保留所有权利。*  
+ *部分版权 © 2005, 2009 Microsoft Corporation。保留所有权利。*  
   
- *通过从皮尔逊教育版，Inc.的权限重新打印[Framework 设计准则： 约定、 语法和可重用.NET 库，版本 2 的模式](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619)通过 Krzysztof Cwalina 和 Brad Abrams，发布 2008 年 10 月 22，通过Microsoft Windows 开发系列的一部分的 Addison Wesley Professional。*  
+ *经 Pearson Education, Inc 授权，转载自[框架设计准则：可重用的 .NET 库的约定、习惯用语和模式，第2版](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) 作者：Krzysztof Cwalina 和 Brad Abrams，由 Addison Wesley Professional 于 2008 年 10 月 22 日印发，作为 Microsoft Windows 开发系列的一部分。*  
   
-## <a name="see-also"></a>请参阅  
- [框架设计指南](../../../docs/standard/design-guidelines/index.md)  
- [扩展性设计](../../../docs/standard/design-guidelines/designing-for-extensibility.md)
+## <a name="see-also"></a>请参阅
+
+- [框架设计指南](../../../docs/standard/design-guidelines/index.md)  
+- [扩展性设计](../../../docs/standard/design-guidelines/designing-for-extensibility.md)

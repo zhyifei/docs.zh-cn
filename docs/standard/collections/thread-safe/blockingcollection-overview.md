@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 987ea3d7-0ad5-4238-8b64-331ce4eb3f0b
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 67e752b9997301fcb3140539255fc32572bfd6e7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 257435516b38d0e4389b7feceba68371bcc8f90e
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33573615"
+ms.lasthandoff: 09/27/2018
+ms.locfileid: "47397551"
 ---
 # <a name="blockingcollection-overview"></a>BlockingCollection 概述
 <xref:System.Collections.Concurrent.BlockingCollection%601> 是一个线程安全集合类，可提供以下功能：  
@@ -80,7 +80,8 @@ BlockingCollection<string> bc = new BlockingCollection<string>(new ConcurrentBag
 ## <a name="using-many-blockingcollections-as-one"></a>将多个 BlockingCollection 作为整体使用  
  在使用者需要同时取出多个集合中的项的情况下，可以创建 <xref:System.Collections.Concurrent.BlockingCollection%601> 的数组并使用静态方法，如 <xref:System.Collections.Concurrent.BlockingCollection%601.TakeFromAny%2A> 和 <xref:System.Collections.Concurrent.BlockingCollection%601.AddToAny%2A> 方法，这两个方法可以在该数组的任意集合中添加或取出项。 如果一个集合发生阻塞，此方法会立即尝试其他集合，直到找到能够执行该操作的集合。 有关详细信息，请参阅[如何：在管道中使用阻塞集合的数组](../../../../docs/standard/collections/thread-safe/how-to-use-arrays-of-blockingcollections.md)。  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Collections.Concurrent?displayProperty=nameWithType>  
- [集合和数据结构](../../../../docs/standard/collections/index.md)  
- [线程安全集合](../../../../docs/standard/collections/thread-safe/index.md)
+## <a name="see-also"></a>请参阅
+
+- <xref:System.Collections.Concurrent?displayProperty=nameWithType>  
+- [集合和数据结构](../../../../docs/standard/collections/index.md)  
+- [线程安全集合](../../../../docs/standard/collections/thread-safe/index.md)

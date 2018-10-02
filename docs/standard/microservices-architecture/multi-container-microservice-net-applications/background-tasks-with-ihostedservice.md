@@ -4,12 +4,12 @@ description: 用于容器化 .NET 应用程序的 .NET 微服务体系结构 | �
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 12/11/2017
-ms.openlocfilehash: 79ad437ef809486b3315de223697ac78109556ba
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.openlocfilehash: 6ce9e40334e80e8bd17ce2f3d2569a1e3c39d09e
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37105896"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46003745"
 ---
 # <a name="implement-background-tasks-in-microservices-with-ihostedservice-and-the-backgroundservice-class"></a>使用 IHostedService 和 BackgroundService 类在微服务中实现后台任务
 
@@ -255,9 +255,7 @@ WebHost.CreateDefaultBuilder(args)
 
 -   **ASP.NET Core 2.1 托管示例** 
 
-    [*https://github.com/aspnet/Hosting/tree/dev/samples/GenericHostSample*](https://github.com/aspnet/Hosting/tree/dev/samples/GenericHostSample)
-
-
+    [*https://github.com/aspnet/Hosting/tree/release/2.1/samples/GenericHostSample*](https://github.com/aspnet/Hosting/tree/release/2.1/samples/GenericHostSample)
 
 >[!div class="step-by-step"]
 [上一页](test-aspnet-core-services-web-apps.md)

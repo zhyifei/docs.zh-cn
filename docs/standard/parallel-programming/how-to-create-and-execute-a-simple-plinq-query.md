@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 983b4213-bddd-4a44-9262-cbe59186df4c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2e5bd27dda4bacc50672cca2db38a6eda746d79b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 544ea0f89dfa518c2ef18bffe2609d72e6fdee70
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33580372"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44085035"
 ---
 # <a name="how-to-create-and-execute-a-simple-plinq-query"></a>如何：创建并执行简单的 PLINQ 查询
 下面的示例演示如何通过对源序列使用 <xref:System.Linq.ParallelEnumerable.AsParallel%2A> 扩展方法来创建一个简单的并行 LINQ 查询，并使用 <xref:System.Linq.ParallelEnumerable.ForAll%2A> 方法执行该查询。  
@@ -29,5 +29,6 @@ ms.locfileid: "33580372"
   
  此示例演示用于在结果序列的排序不重要的情况下创建和执行任何并行 LINQ 查询的基本模式；未排序的查询通常比已排序的查询快。 查询将源分区为多个任务，这些任务将在多个线程上异步执行。 每个任务的完成顺序不仅取决于处理分区中的元素所涉及的工作量，还取决于诸如操作系统如何调度每个线程之类的外部因素。 本示例旨在演示用法，运行速度可能不如等效的顺序 LINQ to Objects 查询快。 若要详细了解加速，请参阅[了解 PLINQ 中的加速](../../../docs/standard/parallel-programming/understanding-speedup-in-plinq.md)。 若要详细了解如何在查询中暂留元素顺序，请参阅[如何：控制 PLINQ 查询中的顺序](../../../docs/standard/parallel-programming/how-to-control-ordering-in-a-plinq-query.md)。  
   
-## <a name="see-also"></a>请参阅  
- [并行 LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)
+## <a name="see-also"></a>请参阅
+
+- [并行 LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)

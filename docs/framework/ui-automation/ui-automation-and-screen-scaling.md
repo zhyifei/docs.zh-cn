@@ -12,17 +12,16 @@ helpviewer_keywords:
 ms.assetid: 4380cad7-e509-448f-b9a5-6de042605fd4
 author: Xansky
 ms.author: mhopkins
-manager: markl
-ms.openlocfilehash: c34c10ee1701adba2dfb64be8ef39d6bf9f203e2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4fe6a0c39388e72807043e9e1ccd2deb59afb656
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33399673"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47202502"
 ---
 # <a name="ui-automation-and-screen-scaling"></a>UI 自动化和屏幕缩放
 > [!NOTE]
->  本文档适用于想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空间中定义的托管 <xref:System.Windows.Automation> 类的 .NET Framework 开发人员。 有关 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]的最新信息，请参阅 [Windows 自动化 API：UI 自动化](http://go.microsoft.com/fwlink/?LinkID=156746)。  
+>  本文档适用于想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空间中定义的托管 <xref:System.Windows.Automation> 类的 .NET Framework 开发人员。 有关最新信息[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]，请参阅[Windows 自动化 API: UI 自动化](https://go.microsoft.com/fwlink/?LinkID=156746)。  
   
  [!INCLUDE[TLA#tla_longhorn](../../../includes/tlasharptla-longhorn-md.md)] 让用户能够更改 [!INCLUDE[TLA#tla_dpi](../../../includes/tlasharptla-dpi-md.md)] 设置，以便屏幕上的大多数 [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] 元素显示得更大。 虽然 [!INCLUDE[TLA#tla_win](../../../includes/tlasharptla-win-md.md)]中之前就已提供了此项功能，但在早期版本中，必须由应用程序实现缩放。 在 [!INCLUDE[TLA#tla_longhorn](../../../includes/tlasharptla-longhorn-md.md)]中，桌面窗口管理器为所有不会处理其自身缩放的应用程序执行默认缩放。 UI 自动化客户端应用程序必须考虑到此功能。  
   
@@ -66,7 +65,7 @@ ms.locfileid: "33399673"
      [!code-csharp[Highlighter#101](../../../samples/snippets/csharp/VS_Snippets_Wpf/Highlighter/CSharp/NativeMethods.cs#101)]
      [!code-vb[Highlighter#101](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/Highlighter/VisualBasic/NativeMethods.vb#101)]  
   
-     此函数使得整个进程成为 [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)]感知的进程，这意味着属于该进程的所有窗口都不会被缩放。 在[突出显示示例](http://msdn.microsoft.com/library/19ba4577-753e-4efd-92cc-c02ee67c1b69)，例如，构成突出显示矩形的四个窗口位于从获取的物理坐标[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]，非逻辑坐标。 如果该示例不是 [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)]感知的，将在桌面上的逻辑坐标处绘制突出显示，这将导致在非 96 [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)] 环境中错误放置。  
+     此函数使得整个进程成为 [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)]感知的进程，这意味着属于该进程的所有窗口都不会被缩放。 在中[Highlighter Sample](https://msdn.microsoft.com/library/19ba4577-753e-4efd-92cc-c02ee67c1b69)，例如，构成突出显示矩形的四个窗口位于从获取的物理坐标上[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]，非逻辑坐标。 如果该示例不是 [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)]感知的，将在桌面上的逻辑坐标处绘制突出显示，这将导致在非 96 [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)] 环境中错误放置。  
   
 2.  若要获取光标坐标，请调用 [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)] 函数 `GetPhysicalCursorPos`。 下面的示例演示如何声明和使用此函数。  
   
@@ -79,4 +78,4 @@ ms.locfileid: "33399673"
  如果你的应用程序与非 [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)]感知应用程序进行直接的跨进程通信，你可能需要通过使用 [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)] 函数 `PhysicalToLogicalPoint` 和 `LogicalToPhysicalPoint`在逻辑和物理坐标之间转换。  
   
 ## <a name="see-also"></a>请参阅  
- [突出显示示例](http://msdn.microsoft.com/library/19ba4577-753e-4efd-92cc-c02ee67c1b69)
+ [荧光笔示例](https://msdn.microsoft.com/library/19ba4577-753e-4efd-92cc-c02ee67c1b69)

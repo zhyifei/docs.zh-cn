@@ -1,6 +1,6 @@
 ---
 title: 面向多个平台的库的应用程序资源
-ms.date: 03/30/2017
+ms.date: 07/18/2018
 ms.technology: dotnet-standard
 dev_langs:
 - csharp
@@ -14,19 +14,21 @@ helpviewer_keywords:
 ms.assetid: 72c76f0b-7255-4576-9261-3587f949669c
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f4682b9ffcb0edb4e54c427968c3d40c0de134d1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a6c589a393ccfb5610a19776af6e33e4046bf5d3
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33578208"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47079670"
 ---
 # <a name="app-resources-for-libraries-that-target-multiple-platforms"></a>面向多个平台的库的应用程序资源
-你可以使用.NET Framework[可移植类库](../../../docs/standard/cross-platform/cross-platform-development-with-the-portable-class-library.md)项目类型以确保可以从多个平台访问类库中的资源。 此项目类型适用于 [!INCLUDE[vs_dev11_long](../../../includes/vs-dev11-long-md.md)]，且面向 .NET Framework 类库的可移植子集。 使用[!INCLUDE[net_portable](../../../includes/net-portable-md.md)]确保可从桌面应用、Silverlight 应用、Windows Phone 应用和 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]应用访问你的库。  
+可以使用.NET Framework[可移植类库](../../../docs/standard/cross-platform/cross-platform-development-with-the-portable-class-library.md)项目类型以确保可以从多个平台访问类库中的资源。 此项目类型适用于 [!INCLUDE[vs_dev11_long](../../../includes/vs-dev11-long-md.md)]，且面向 .NET Framework 类库的可移植子集。 使用[!INCLUDE[net_portable](../../../includes/net-portable-md.md)]确保可从桌面应用、Silverlight 应用、Windows Phone 应用和 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]应用访问你的库。  
+
+[!INCLUDE[standard](../../../includes/pcl-to-standard.md)]
   
  虽然[!INCLUDE[net_portable](../../../includes/net-portable-md.md)]项目仅使 <xref:System.Resources> 命名空间中的极少数类型对你的应用程序可用，但它允许你使用 <xref:System.Resources.ResourceManager> 类检索资源。 但是，如果你使用 Visual Studio 创建应用，则应使用 Visual Studio 创建的强类型包装器而不是直接使用 <xref:System.Resources.ResourceManager> 类。  
   
- 若要在 Visual Studio 中创建强类型包装器，将设置主资源文件的**访问修饰符**到 Visual Studio 资源设计器中**公共**。 这将创建一个包含强类型 ResourceManager 包装器的 [resourceFileName].designer.cs 或 [resourceFileName].designer.vb 文件。 有关使用强类型的资源包装器的详细信息，请参阅中的"生成强类型资源类"一节[Resgen.exe （资源文件生成器）](../../../docs/framework/tools/resgen-exe-resource-file-generator.md)主题。  
+ 若要在 Visual Studio 中创建的强类型化的包装器，设置主资源文件**访问修饰符**到 Visual Studio 资源设计器**公共**。 这将创建一个包含强类型 ResourceManager 包装器的 [resourceFileName].designer.cs 或 [resourceFileName].designer.vb 文件。 有关使用强类型的资源包装器的详细信息，请参阅中的"生成强类型资源类"一节[Resgen.exe （资源文件生成器）](../../../docs/framework/tools/resgen-exe-resource-file-generator.md)主题。  
   
 ## <a name="resource-manager-in-the-includenetportableincludesnet-portable-mdmd"></a>[!INCLUDE[net_portable](../../../includes/net-portable-md.md)]中的资源管理器  
  在[!INCLUDE[net_portable](../../../includes/net-portable-md.md)]项目中，所有对资源的访问均由 <xref:System.Resources.ResourceManager> 类处理。 由于 <xref:System.Resources> 命名空间中的类型（例如 <xref:System.Resources.ResourceReader> 和 <xref:System.Resources.ResourceSet>）不可从[!INCLUDE[net_portable](../../../includes/net-portable-md.md)]项目进行访问，因此它们不能用于访问资源。  
@@ -80,7 +82,7 @@ ms.locfileid: "33578208"
  [!code-csharp[Conceptual.Resources.PortableMetro#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.portablemetro/cs/blankpage.xaml.cs#1)]  
   
 ## <a name="example-localized-includenetportableincludesnet-portable-mdmd"></a>示例：本地化的[!INCLUDE[net_portable](../../../includes/net-portable-md.md)]  
- 下面的本地化的[!INCLUDE[net_portable](../../../includes/net-portable-md.md)]示例包括法语（法国）和英语（美国）区域性的资源。 英语 （美国） 区域性是应用程序的默认区域性;其资源显示的表中[上一节](../../../docs/standard/cross-platform/app-resources-for-libraries-that-target-multiple-platforms.md#NonLoc)。 法语（法国）区域性的资源文件命名为 LibResources.fr-FR.resx，该文件包含下表中列出的字符串资源。 `UILibrary` 类的源代码与上一部分中所示的相同。  
+ 下面的本地化的[!INCLUDE[net_portable](../../../includes/net-portable-md.md)]示例包括法语（法国）和英语（美国）区域性的资源。 英语 （美国） 区域性是应用程序的默认区域性;在表中显示其资源[上一节](../../../docs/standard/cross-platform/app-resources-for-libraries-that-target-multiple-platforms.md#NonLoc)。 法语（法国）区域性的资源文件命名为 LibResources.fr-FR.resx，该文件包含下表中列出的字符串资源。 `UILibrary` 类的源代码与上一部分中所示的相同。  
   
 |资源名称|资源值|  
 |-------------------|--------------------|  
@@ -102,7 +104,8 @@ ms.locfileid: "33578208"
  [!code-csharp[Conceptual.Resources.PortableMetroLoc#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.portablemetroloc/cs/blankpage.xaml.cs#1)]
  [!code-vb[Conceptual.Resources.PortableMetroLoc#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.portablemetroloc/vb/blankpage.xaml.vb#1)]  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Resources.ResourceManager>  
- [桌面应用中的资源](../../../docs/framework/resources/index.md)  
- [打包和部署资源](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md)
+## <a name="see-also"></a>请参阅
+
+- <xref:System.Resources.ResourceManager>  
+- [桌面应用中的资源](../../../docs/framework/resources/index.md)  
+- [打包和部署资源](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md)

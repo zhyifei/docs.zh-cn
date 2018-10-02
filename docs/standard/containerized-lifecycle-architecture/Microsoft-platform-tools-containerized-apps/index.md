@@ -4,12 +4,12 @@ description: 使用 Microsoft 平台和工具的容器化 Docker 应用程序的
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/21/2017
-ms.openlocfilehash: b14d361fb93b98de68b828514c7ea72811075fb8
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.openlocfilehash: bc13a0c8d6f14b8ea7ea2017009ba074f9a96ab3
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37106186"
+ms.lasthandoff: 09/27/2018
+ms.locfileid: "47400577"
 ---
 # <a name="introduction-to-the-microsoft-platform-and-tools-for-containerized-apps"></a>有关适用于容器化应用的 Microsoft 平台和工具的简介
 
@@ -29,17 +29,17 @@ ms.locfileid: "37106186"
 | Host | Microsoft 技术 | 第三方 - Azure 可插入 |
 | ---------------------------| ----------------------------------------------------| --------------------------------------------------------------------------------|
 | Docker 应用平台   | • Microsoft Visual Studio 和 Visual Studio Code<br /> • .NET<br /> • Microsoft Azure 容器服务<br /> • Azure Service Fabric<br /> • Azure 容器注册表<br /> | •任何代码编辑器（如 Sublime）<br /> •任何语言（Node.js、Java、 Go 等）<br /> •任何业务流程协调程序和计划程序<br /> •任何 Docker 注册表<br /> |
-| Docker 应用的 DevOps     | • Visual Studio Team Services<br /> • Microsoft Team Foundation Server<br /> • Azure 容器服务<br /> • Azure Service Fabric<br /> | • GitHub、Git、Subversion 等<br /> • Jenkins、Chef、Puppet、Velocity、CircleCI、TravisCI 等<br /> •本地 Docker 数据中心、Docker Swarm、Mesos DC/OS、Kubernetes 等<br /> |
+| Docker 应用的 DevOps     | • Azure DevOps 服务<br /> • Microsoft Team Foundation Server<br /> • Azure 容器服务<br /> • Azure Service Fabric<br /> | • GitHub、Git、Subversion 等<br /> • Jenkins、Chef、Puppet、Velocity、CircleCI、TravisCI 等<br /> •本地 Docker 数据中心、Docker Swarm、Mesos DC/OS、Kubernetes 等<br /> |
 | 管理与监视  | • 操作管理套件<br /> • Applications Insights<br /> | • Marathon、 Chronos 等<br />
 
 如表 3-1 所定义，适用于容器化 Docker 应用的 Microsoft 平台和工具包含以下组件：
 
 -   **适用于 Docker 应用开发的平台** 构建“应用”的一个服务或服务集合的开发。 开发平台提供将代码推送到共享代码存储库前，开发人员所需的所有工作。 开发部署为容器的服务与开发不具有 Docker 的相同应用或服务非常相似。 你可继续使用首选语言（.NET、Node.js、Go 等）和首选编辑器或 IDE（如 Visual Studio 或 Visual Studio Code）。 但是，请不要将 Docker 视为部署目标，你是在 Docker 环境中开发服务。 可以在本地生成、运行、测试和调试容器中的代码，以在开发时提供目标环境。 通过本地提供目标环境，Docker 容器可通过设置大幅度改善 DevOps 生命周期。 Visual Studio 和 Visual Studio Code 具有可在开发过程中集成 Docker 容器的扩展。
 
--   **Docker 应用的 DevOps** 创建 Docker 应用程序的开发者可以使用 Visual Studio Team Services (VSTS) 或任何第三方产品（如 Jenkins）来构建综合的自动化应用程序生命周期管理 (ALM)。
+-   **Docker 应用的 DevOps**创建 Docker 应用程序的开发人员可以使用 Azure DevOps 服务或任何其他第三方产品，如 Jenkins，若要构建综合自动应用程序生命周期管理 (ALM)。
 
-借助 VSTS，开发人员可创建以容器为重点的 DevOps，以实现快速迭代过程，该过程涵盖任意位置（VSTS-Git、GitHub、远程 Git 存储库或 Subversion）的源代码管理、持续集成 (CI)、内部单元测试、内部容器/服务集成测试、持续交付 (CD) 和发布管理 (RM)。 开发人员还能将其 Docker 应用程序版本自动化到 Azure 容器服务中，从开发到暂存和生产环境。
-
+使用 Azure DevOps 服务，开发人员可以创建容器为重点 DevOps 快速、 迭代的过程涵盖源代码控制从任何位置 （Azure DevOps 服务-Git、 GitHub、 任何远程 Git 存储库或 Subversion） 持续集成 (CI)内部单元测试，间容器/服务集成测试、 持续交付 (CD) 和版本管理 (RM)。 开发人员还能将其 Docker 应用程序版本自动化到 Azure 容器服务中，从开发到暂存和生产环境。
+ 
 -   IT 生产管理和监视。
 
 **管理** IT 可以在几个方面管理生产应用程序和服务：

@@ -2,12 +2,12 @@
 title: 持久性数据库架构
 ms.date: 03/30/2017
 ms.assetid: 34f69f4c-df81-4da7-b281-a525a9397a5c
-ms.openlocfilehash: 4dd49d08e522c842d0f21f176b4d77ac0adb4b47
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2c8d74413be64cdf88f7f1821c3678b2bcd2e2b1
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33519442"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43515253"
 ---
 # <a name="persistence-database-schema"></a>持久性数据库架构
 本主题介绍 SQL 工作流实例存储区支持的公共视图。  
@@ -27,10 +27,10 @@ ms.locfileid: "33519442"
 |ActiveBookmarks|Nvarchar(max)|如果工作流实例处于空闲状态，则此属性指示该实例是在哪个书签上发生阻塞的。 如果该实例没有处于空闲状态，则此列为 NULL。|  
 |CurrentMachine|Nvarchar(128)|指示当前已将工作流实例加载到内存中的计算机的名称。|  
 |LastMachine|Nvarchar(450)|指示最后加载工作流实例的计算机。|  
-|ExecutionStatus|Nvarchar(450)|指示工作流的当前执行状态。 可能的状态包括**执行**，**空闲**，**已关闭**。|  
+|ExecutionStatus|Nvarchar(450)|指示工作流的当前执行状态。 可能的状态包括**Executing**，**空闲**，**已关闭**。|  
 |IsInitialized|位|指示工作流实例是否已初始化。 已初始化的工作流实例是至少已持久化一次的工作流实例。|  
 |IsSuspended|位|指示工作流实例是否已挂起。|  
-|IsCompleted|位|指示工作流实例是否已执行完毕。 **注意：** Iif **InstanceCompletionAction**属性设置为**DeleteAll**，从视图完成后删除的实例。|  
+|IsCompleted|位|指示工作流实例是否已执行完毕。 **注意：** Iif **InstanceCompletionAction**属性设置为**DeleteAll**，完成后视图中删除的实例。|  
 |EncodingOption|TinyInt|描述用于序列化数据属性的编码。<br /><br /> -0 – 无编码<br />-1 – GzipStream|  
 |ReadWritePrimitiveDataProperties|Varbinary(max)|包含已序列化的实例数据属性，当加载实例时，这些属性将会重新提供给工作流运行时。<br /><br /> 每个基元属性都是本机 CLR 类型，这意味着，对 Blob 进行反序列化不需要特殊程序集。|  
 |WriteOnlyPrimitiveDataProperties|Varbinary(max)|包含已序列化的实例数据属性，当加载实例时，这些属性不会重新提供给工作流运行时。<br /><br /> 每个基元属性都是本机 CLR 类型，这意味着，对 Blob 进行反序列化不需要特殊程序集。|  
@@ -44,10 +44,10 @@ ms.locfileid: "33519442"
 |Revision|BigInt|工作流版本的修订号。|  
   
 > [!CAUTION]
->  **实例**视图还包含一个 Delete 触发器。 具有适当权限的用户可以对此视图执行 Delete 语句，这将从数据库中强制移除工作流实例。 由于从工作流运行时的下面删除实例可能会导致意外的结果，所以，建议不到万不得已，不要直接从视图删除， 而应使用工作流实例管理终结点来使工作流运行时终止实例。 如果需要从视图中删除大量实例，请确保没有可能正在对这些实例进行操作的活动的运行时。  
+>  **实例**视图还包含 Delete 触发器。 具有适当权限的用户可以对此视图执行 Delete 语句，这将从数据库中强制移除工作流实例。 由于从工作流运行时的下面删除实例可能会导致意外的结果，所以，建议不到万不得已，不要直接从视图删除， 而应使用工作流实例管理终结点来使工作流运行时终止实例。 如果需要从视图中删除大量实例，请确保没有可能正在对这些实例进行操作的活动的运行时。  
   
 ## <a name="servicedeployments-view"></a>ServiceDeployments 视图  
- **ServiceDeployments**视图包含所有 web 部署信息 (IIS / WAS) 承载的工作流服务。 是 Web 承载的每个工作流实例将包含**ServiceDeploymentId** ，引用此视图中的一行。  
+ **ServiceDeployments**视图包含所有 Web 的部署信息 (IIS / WAS) 承载的工作流服务。 是 Web 承载的每个工作流实例将包含**ServiceDeploymentId** ，是指在此视图的行。  
   
 |列名|列名称|描述|  
 |-----------------|-----------------|-----------------|  
@@ -62,10 +62,10 @@ ms.locfileid: "33519442"
   
 1.  从此视图中删除项的开销很大，因为在执行此操作之前必须锁定整个数据库。 为了避免出现工作流实例可能引用一个不存在的 ServiceDeployment 项的情况，这是必需的。 请仅在停机期间/维护期间在此视图中进行删除操作。  
   
-2.  任何尝试删除中存在的项引用的 ServiceDeployment 行**实例**视图将导致不执行任何操作。 仅可以删除没有任何引用的 ServiceDeployment 行。  
+2.  若要删除通过中的项引用的 ServiceDeployment 行的任何尝试**实例**视图将导致执行任何操作。 仅可以删除没有任何引用的 ServiceDeployment 行。  
   
 ## <a name="instancepromotedproperties-view"></a>InstancePromotedProperties 视图  
- **InstancePromotedProperties**视图包含由用户指定的所有促销属性的信息。 促销属性用作一类属性，用户可以在查询中使用它来检索实例。  例如，用户可以添加 PurchaseOrder 促销，它始终存储中的订单的成本**Value1**列。 这样用户可以查询所有成本超过某个值的购买订单。  
+ **InstancePromotedProperties**视图包含所有用户指定的已升级属性的信息。 促销属性用作一类属性，用户可以在查询中使用它来检索实例。  例如，用户可以添加 PurchaseOrder 促销，它始终存储中的订单的成本**Value1**列。 这样用户可以查询所有成本超过某个值的购买订单。  
   
 |列名称|列名称|描述|  
 |-|-|-|  
@@ -78,4 +78,4 @@ ms.locfileid: "33519442"
  InstancePromotedProperties 视图与架构绑定在一起，这意味着，用户可以在一个列或多个列上添加索引，以便针对此视图优化查询。  
   
 > [!NOTE]
->  索引视图需要更大的存储空间，并增加额外的处理开销。 请参阅[与 SQL Server 2008 索引视图提高性能](http://go.microsoft.com/fwlink/?LinkId=179529)有关详细信息。
+>  索引视图需要更大的存储空间，并增加额外的处理开销。 请参阅[使用 SQL Server 2008 索引视图提高性能](https://go.microsoft.com/fwlink/?LinkId=179529)有关详细信息。

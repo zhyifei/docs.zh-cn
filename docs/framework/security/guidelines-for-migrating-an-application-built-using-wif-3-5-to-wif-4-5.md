@@ -3,13 +3,12 @@ title: 使用 WIF 3.5 至 WIF 4.5 构建的应用程序迁移指南
 ms.date: 03/30/2017
 ms.assetid: 7a32fe6e-5f68-4693-9371-19411fa8063c
 author: BrucePerlerMS
-manager: mbaldwin
-ms.openlocfilehash: 60e9dd96824b2c9bef81d236bab8f577f9fb2062
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ec66803edc21f186fa9a8c5bcb91b5181789893d
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33399290"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47086861"
 ---
 # <a name="guidelines-for-migrating-an-application-built-using-wif-35-to-wif-45"></a>使用 WIF 3.5 至 WIF 4.5 构建的应用程序迁移指南
 ## <a name="applies-to"></a>适用于  
@@ -27,7 +26,7 @@ ms.locfileid: "33399290"
 ### <a name="assembly-and-namespace-changes"></a>程序集和命名空间更改  
  在 WIF 3.5 中，所有的 WIF 类都包含在 `Microsoft.IdentityModel` 程序集 (microsoft.identitymicrosoft.identitymodel.dll) 中。 在 WIF 4.5 中，已将 WIF 类拆分在以下程序集中：`mscorlib` (mscorlib.dll)、`System.IdentityModel` (System.IdentityModel.dll)、`System.IdentityModel.Services` (System.IdentityModel.Services.dll) 和 `System.ServiceModel` (System.ServiceModel.dll)。  
   
- WIF 3.5 类都包含在其中一个 `Microsoft.IdentityModel` 命名空间中；例如，`Microsoft.IdentityModel`、`Microsoft.IdentityModel.Tokens` 和 `Microsoft.IdentityModel.Web` 等。 在 WIF 4.5 中，WIF 类现已分布在 [System.IdentityModel](http://go.microsoft.com/fwlink/?LinkId=272004) 命名空间、<xref:System.Security.Claims?displayProperty=nameWithType> 命名空间和 <xref:System.ServiceModel.Security?displayProperty=nameWithType> 命名空间中。 除此重组外，一些 WIF 3.5 类已被放置在 WIF 4.5 中。  
+ WIF 3.5 类都包含在其中一个 `Microsoft.IdentityModel` 命名空间中；例如，`Microsoft.IdentityModel`、`Microsoft.IdentityModel.Tokens` 和 `Microsoft.IdentityModel.Web` 等。 在 WIF 4.5 中，WIF 类现已分布在 [System.IdentityModel](https://go.microsoft.com/fwlink/?LinkId=272004) 命名空间、<xref:System.Security.Claims?displayProperty=nameWithType> 命名空间和 <xref:System.ServiceModel.Security?displayProperty=nameWithType> 命名空间中。 除此重组外，一些 WIF 3.5 类已被放置在 WIF 4.5 中。  
   
  下表显示了一些更重要的 WIF 4.5 命名空间以及它们所包含的类的类型。 有关命名空间在 WIF 3.5 和 WIF 4.5 之间的映射关系以及有关已被放置在 WIF 4.5 中的命名空间和类的详细信息，请参阅 [WIF 3.5 和 WIF 4.5 之间的命名空间映射](../../../docs/framework/security/namespace-mapping-between-wif-3-5-and-wif-4-5.md)。  
   
@@ -95,7 +94,7 @@ ms.locfileid: "33399290"
 ### <a name="visual-studio-tooling-changes"></a>Visual Studio 工具更改  
  WIF 3.5 SDK 提供独立的 Federation Utility (FedUtil.exe (FedUtil))，用于将启用 WIF 的应用程序中的标识管理外包给安全令牌服务 (STS)。 此工具将 WIF 设置添加到应用程序配置文件，使应用程序能够从一个或多个 STS 获取安全令牌，并通过“添加 STS 服务引用”按钮出现在 Visual Studio 中。 FedUtil 不随附 WIF 4.5。 相反，WIF 4.5 支持名为用于 Visual Studio 2012 的标识和访问工具的新 Visual Studio 扩展，可用于通过将标识管理外包给 STS 所需的 WIF 设置修改应用程序的配置文件。 标识和访问工具也实现了名为本地 STS 的 STS，可用于测试启用 WIF 的应用程序。 在许多情况下，使用此功能便无需生成自定义 STS，通常需要在 WIF 3.5 中生成此 STS 以测试正在开发的解决方案。 因此，Visual Studio 2012 中不再支持此类 STS 模板；然而，支持 STS 开发的类仍然在 WIF 4.5 中可用。  
   
- 可以从 Visual Studio 中的扩展和更新管理器安装标识和访问工具，或者从代码库中的以下页面进行下载：[代码库上用于 Visual Studio 2012 的标识和访问工具](http://go.microsoft.com/fwlink/?LinkID=245849)。 下表中汇总了 Visual Studio 工具更改：  
+ 可以从 Visual Studio 中的扩展和更新管理器安装标识和访问工具，或者从代码库中的以下页面进行下载：[代码库上用于 Visual Studio 2012 的标识和访问工具](https://go.microsoft.com/fwlink/?LinkID=245849)。 下表中汇总了 Visual Studio 工具更改：  
   
 -   删除了“添加 STS 服务引用”功能。 替换为了标识和访问工具。  
   
@@ -136,7 +135,7 @@ ms.locfileid: "33399290"
 ## <a name="enabling-wif-35-in-windows-8"></a>在 Windows 8 中启用 WIF 3.5  
  由于 WIF 4.5 是 .NET 4.5 的一部分，所以它在运行 Windows 8 和 Windows Server 2012 的计算机上自动启用，并且使用 WIF 4.5 生成的应用程序将默认在 Windows 8 和 Windows Server 2012 下运行。 然而，你可能需要在运行 Windows 8 或 Windows Server 2012 的计算机上运行使用 WIF 3.5 生成的应用程序。 在此情况下，需要在目标计算机上启用 WIF 3.5。 在运行 Windows 8 的计算机上，可以使用部署映像服务和管理 (DISM) 工具来实现这点。 在运行 Windows Server 2012 的计算机上，可以使用 DISM 工具，或使用 Windows PowerShell `Add-WindowsFeature` cmdlet。 在这两种情况下，可以在命令行或从 Windows PowerShell 环境内部调用适当的命令。  
   
- 以下命令将演示如何从命令行或 Windows PowerShell 环境内部使用 DISM 工具。 默认情况下，DISM PowerShell 模块包含在 Windows 8 和 Windows Server 2012 中，无需进行导入操作。 有关将 DISM 用于 Windows PowerShell 的详细信息，请参阅[如何在 Windows PowerShell 中使用 DISM](http://go.microsoft.com/fwlink/?LinkId=254419)。  
+ 以下命令将演示如何从命令行或 Windows PowerShell 环境内部使用 DISM 工具。 默认情况下，DISM PowerShell 模块包含在 Windows 8 和 Windows Server 2012 中，无需进行导入操作。 有关将 DISM 用于 Windows PowerShell 的详细信息，请参阅[如何在 Windows PowerShell 中使用 DISM](https://go.microsoft.com/fwlink/?LinkId=254419)。  
   
  使用 DISM 启用 WIF 3.5：  
   

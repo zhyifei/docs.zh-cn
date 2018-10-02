@@ -2,15 +2,15 @@
 title: NamedPipe 激活
 ms.date: 03/30/2017
 ms.assetid: f3c0437d-006c-442e-bfb0-6b29216e4e29
-ms.openlocfilehash: 46b59dab0f67c66ca364d9e880ef519386d0df94
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: 97221bfd00fb6b50b63eab11ed82356b002a38de
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33806378"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43504267"
 ---
 # <a name="namedpipe-activation"></a>NamedPipe 激活
-本示例演示如何承载使用 Windows 进程激活服务 (WAS) 的服务以激活通过命名管道进行通信的服务。 此示例基于[入门](../../../../docs/framework/wcf/samples/getting-started-sample.md)和需要[!INCLUDE[wv](../../../../includes/wv-md.md)]运行。  
+本示例演示如何承载使用 Windows 进程激活服务 (WAS) 的服务以激活通过命名管道进行通信的服务。 此示例基于[Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md)并且需要[!INCLUDE[wv](../../../../includes/wv-md.md)]运行。  
   
 > [!NOTE]
 >  本主题的最后介绍了此示例的设置过程和生成说明。  
@@ -20,7 +20,7 @@ ms.locfileid: "33806378"
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目录不存在，请转到[Windows Communication Foundation (WCF) 和针对.NET Framework 4 的 Windows Workflow Foundation (WF) 示例](http://go.microsoft.com/fwlink/?LinkId=150780)下载所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
+>  如果此目录不存在，请转到[Windows Communication Foundation (WCF) 和.NET Framework 4 的 Windows Workflow Foundation (WF) 示例](https://go.microsoft.com/fwlink/?LinkId=150780)若要下载所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\Hosting\WASHost\NamedPipeActivation`  
   
@@ -159,17 +159,17 @@ Press <ENTER> to terminate client.
   
 1.  确保已安装 [!INCLUDE[iisver](../../../../includes/iisver-md.md)]。 WAS 激活需要 [!INCLUDE[iisver](../../../../includes/iisver-md.md)]。  
   
-2.  确保已执行[的 Windows Communication Foundation 示例的一次性安装过程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
+2.  请确保具有执行[的 Windows Communication Foundation 示例的一次性安装过程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
   
-     此外，你必须安装 WCF 非 HTTP 激活组件：  
+     此外，必须安装 WCF 非 HTTP 激活组件：  
   
-    1.  从**启动**菜单上，选择**控制面板**。  
+    1.  从**启动**菜单中，选择**控制面板**。  
   
     2.  选择**程序和功能**。  
   
     3.  单击**打开或关闭 Windows 组件**。  
   
-    4.  展开**Microsoft.NET Framework 3.0**节点并选中**Windows Communication Foundation 非 HTTP 激活**功能。  
+    4.  展开**Microsoft.NET Framework 3.0**节点并检查**Windows Communication Foundation 非 HTTP 激活**功能。  
   
 3.  将 Windows 进程激活服务 (WAS) 配置为支持命名管道激活。  
   
@@ -196,7 +196,7 @@ Press <ENTER> to terminate client.
         > [!NOTE]
         >  此命令是单行文本。  
   
-         此命令启用 /servicemodelsamples 应用程序使用同时访问http://localhost/servicemodelsamples和 net.tcp: //localhost/servicemodelsamples。  
+         此命令启用 /servicemodelsamples 应用程序使用同时访问 http://localhost/servicemodelsamples 和 net.tcp: //localhost/servicemodelsamples。  
   
 4.  若要生成 C# 或 Visual Basic .NET 版本的解决方案，请按照 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)中的说明进行操作。  
   
@@ -223,4 +223,4 @@ Press <ENTER> to terminate client.
         >  必须以单行文本的形式键入此命令。  
   
 ## <a name="see-also"></a>请参阅  
- [AppFabric 承载和持久性示例](http://go.microsoft.com/fwlink/?LinkId=193961)
+ [AppFabric 承载和持久性示例](https://go.microsoft.com/fwlink/?LinkId=193961)

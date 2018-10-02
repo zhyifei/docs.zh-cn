@@ -8,27 +8,26 @@ helpviewer_keywords:
 - bindings [WCF]
 ms.assetid: 4de03dd3-968a-4e65-af43-516e903d7f95
 author: BrucePerlerMS
-manager: mbaldwin
-ms.openlocfilehash: 938b04f6c612f38be41d278273aa18d41677f84c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 904ea64bd6e76e7bf99aa4a31ef752bfb2760c23
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33496742"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47198457"
 ---
 # <a name="bindings-and-security"></a>绑定与安全
-系统提供的绑定包括与 Windows Communication Foundation (WCF) 提供程序 WCF 应用程序的快速方法。 但有一个例外，就是所有绑定都启用了默认的安全方案。 本主题将帮助你根据安全需要来选择正确的绑定。  
+系统提供的绑定包括与 Windows Communication Foundation (WCF) 提供程序的 WCF 应用程序的快速方法。 但有一个例外，就是所有绑定都启用了默认的安全方案。 本主题将帮助你根据安全需要来选择正确的绑定。  
   
- WCF 安全的概述，请参阅[安全概述](../../../../docs/framework/wcf/feature-details/security-overview.md)。 有关对 WCF 中使用绑定进行编程的详细信息，请参阅[编程 WCF 安全](../../../../docs/framework/wcf/feature-details/programming-wcf-security.md)。  
+ 有关 WCF 安全的概述，请参阅[安全性概述](../../../../docs/framework/wcf/feature-details/security-overview.md)。 有关对 WCF 使用绑定进行编程的详细信息，请参阅[编程 WCF 安全](../../../../docs/framework/wcf/feature-details/programming-wcf-security.md)。  
   
- 如果你已选择一个绑定，则可以了解有关在中与安全性相关联的运行时行为的详细信息[安全行为](../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)。  
+ 如果您已经选择一个绑定，您可以找出有关中的安全性与相关联的运行时行为的详细信息[安全行为](../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)。  
   
  部分安全性功能无法用系统提供的绑定进行编程。 使用自定义绑定的更多控制，请参阅[使用自定义绑定的安全功能](../../../../docs/framework/wcf/feature-details/security-capabilities-with-custom-bindings.md)。  
   
 ## <a name="security-functions-of-bindings"></a>绑定的安全功能  
- WCF 包含许多系统提供满足大多数需求的绑定。 如果某个特定绑定不能满足要求，你还可以创建自定义绑定。 系统提供的绑定的列表，请参阅[系统提供的绑定](../../../../docs/framework/wcf/system-provided-bindings.md)。 有关自定义绑定的详细信息，请参阅[自定义绑定](../../../../docs/framework/wcf/extending/custom-bindings.md)。  
+ WCF 包含大量的系统提供满足大多数需求的绑定。 如果某个特定绑定不能满足要求，你还可以创建自定义绑定。 有关系统提供的绑定的列表，请参阅[System-Provided Bindings](../../../../docs/framework/wcf/system-provided-bindings.md)。 有关自定义绑定的详细信息，请参阅[自定义绑定](../../../../docs/framework/wcf/extending/custom-bindings.md)。  
   
- 在 WCF 中的每个绑定有两种形式： API，在配置文件中使用的 XML 元素。 例如， `WSHttpBinding` (API) 具有一个对应[ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)。  
+ WCF 中的每个绑定有两种形式： 为 API 和配置文件中使用的 XML 元素形式。 例如， `WSHttpBinding` (API) 中具有对应[ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)。  
   
  下一节列出了每个绑定的两种形式，并概括了安全功能。  
   
@@ -41,7 +40,7 @@ ms.locfileid: "33496742"
   
 -   Web Service Enhancements (WSE) 应用程序。  
   
--   基本配置文件定义在 Web 服务互操作性 (WS-我) 规范 ([http://go.microsoft.com/fwlink/?LinkId=38955](http://go.microsoft.com/fwlink/?LinkId=38955))。  
+-   Web 服务互操作性中定义的基本配置文件 (WS-我) 规范 ([https://go.microsoft.com/fwlink/?LinkId=38955](https://go.microsoft.com/fwlink/?LinkId=38955))。  
   
 -   WS-I 中定义的基本安全配置文件。  
   
@@ -138,7 +137,7 @@ ms.locfileid: "33496742"
 ### <a name="msmqintegrationbinding"></a>MsmqIntegrationBinding  
  在代码中，使用<xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding>类; 在配置中，使用[ \<msmqIntegrationBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/msmqintegrationbinding.md)。  
   
- 此绑定最适合用于创建具有非-WCF Microsoft 消息队列 MSMQ 终结点的 WCF 客户端和服务进行互操作。  
+ 此绑定最适合于与非-WCF Microsoft 消息队列 MSMQ 终结点创建 WCF 客户端和服务进行互操作。  
   
  默认情况下，此绑定使用传输安全性并提供下列安全特征：  
   
@@ -151,7 +150,7 @@ ms.locfileid: "33496742"
 ### <a name="netmsmqbinding"></a>NetMsmqBinding  
  在代码中，使用<xref:System.ServiceModel.NetMsmqBinding>类; 在配置中，使用[ \<netMsmqBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/netmsmqbinding.md)。  
   
- 当创建需要 MSMQ 的 WCF 服务排队消息支持，此绑定旨在供。  
+ 创建 WCF 服务需要 MSMQ 排队消息支持时，此绑定旨在用于。  
   
  默认情况下，此绑定使用传输安全性并提供下列安全特征：  
   
@@ -207,8 +206,8 @@ ms.locfileid: "33496742"
 |类型|描述|  
 |----------|-----------------|  
 |无|指定客户端不需要提供任何凭据。 这相当于匿名客户端。|  
-|Basic|基本身份验证 有关详细信息，请参阅 RFC 2617 – HTTP 身份验证： 基本和摘要式身份验证，在[ http://go.microsoft.com/fwlink/?LinkId=84023 ](http://go.microsoft.com/fwlink/?LinkId=84023)。|  
-|摘要|摘要式身份验证。 有关详细信息，请参阅 RFC 2617 – HTTP 身份验证： 基本和摘要式身份验证，在[ http://go.microsoft.com/fwlink/?LinkId=84023 ](http://go.microsoft.com/fwlink/?LinkId=84023)。|  
+|Basic|基本身份验证 有关详细信息，请参阅 RFC 2617 – HTTP 身份验证： 基本和摘要式身份验证，可在[ https://go.microsoft.com/fwlink/?LinkId=84023 ](https://go.microsoft.com/fwlink/?LinkId=84023)。|  
+|摘要|摘要式身份验证。 有关详细信息，请参阅 RFC 2617 – HTTP 身份验证： 基本和摘要式身份验证，可在[ https://go.microsoft.com/fwlink/?LinkId=84023 ](https://go.microsoft.com/fwlink/?LinkId=84023)。|  
 |NTLM|NT LAN Manager (NTLM) 身份验证。|  
 |Windows|Windows 身份验证。|  
 |证书|使用证书执行的身份验证。|  
@@ -221,7 +220,7 @@ ms.locfileid: "33496742"
 |----------|-----------------|  
 |无|允许服务与匿名客户端交互。|  
 |Windows|允许在 Windows 凭据的已通过身份验证的上下文中执行 SOAP 消息交换。|  
-|UserName|允许服务要求使用用户名凭据对客户端进行身份验证。 请注意，当安全模式设置为`TransportWithMessageCredential`，WCF 不支持发送密码摘要或派生密钥使用的密码，并使用这样的密钥用于 Message 模式安全。 在这种情况下，WCF 将确保传输的安全性时使用用户名凭据。|  
+|UserName|允许服务要求使用用户名凭据对客户端进行身份验证。 请注意，当安全模式设置为`TransportWithMessageCredential`，WCF 不支持发送密码摘要，也派生密钥密码并使用此类密钥用于 Message 模式安全。 在这种情况下，WCF 强制执行传输的安全性时使用用户名凭据。|  
 |证书|允许服务要求使用证书对客户端进行身份验证。|  
 |IssuedToken|允许服务使用安全令牌服务来提供自定义令牌。|  
   
@@ -231,4 +230,4 @@ ms.locfileid: "33496742"
  [选择凭据类型](../../../../docs/framework/wcf/feature-details/selecting-a-credential-type.md)  
  [使用自定义绑定的安全功能](../../../../docs/framework/wcf/feature-details/security-capabilities-with-custom-bindings.md)  
  [安全行为](../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)  
- [Windows Server App Fabric 的安全模型](http://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+ [Windows Server App Fabric 的安全模型](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

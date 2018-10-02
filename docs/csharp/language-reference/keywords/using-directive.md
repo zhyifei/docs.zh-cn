@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - using directive [C#]
 ms.assetid: b42b8e61-5e7e-439c-bb71-370094b44ae8
-ms.openlocfilehash: 180c038987e7de6b39a8eae0e86871eea41a40bb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1ed7ac49cde6792cddff898e8b9930a83598e02c
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33280086"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47231532"
 ---
 # <a name="using-directive-c-reference"></a>using 指令（C# 参考）
 `using` 指令有三种用途：  
@@ -20,7 +20,7 @@ ms.locfileid: "33280086"
     using System.Text;  
     ```  
   
--   允许访问类型的静态成员，而无需限定使用类型名称进行访问。 
+-   允许访问类型的静态成员和嵌套类型，而无需限定使用类型名称进行访问。 
   
     ```csharp  
     using static System.Math;  
@@ -52,13 +52,23 @@ class Program
 ```  
   
 ## <a name="remarks"></a>备注  
- `using` 指令的范围限于显示它的文件。  
+ `using` 指令的范围限于显示它的文件。
+ 
+ 可能出现 `using` 指令的位置：
+- 源代码文件的开头，位于任何命名空间或类型定义之前。
+- 在任何命名空间中，但位于此命名空间中声明的任何命名空间或类型之前。
+
+否则，将生成编译器错误 [CS1529](../../misc/cs1529.md)。
   
- 创建 `using` 别名，以便更易于将标识符限定为命名空间或类型。 using 别名指令的右侧必须始终是一个完全限定类型，而与前面的 using 指令无关。  
+ 创建 `using` 别名指令，以便更易于将标识符限定为命名空间或类型。 在任何 `using` 指令中，都必须使用完全限定的命名空间或类型，而无需考虑它之前的 `using` 指令。 `using` 指令的声明中不能使用 `using` 别名。 例如，以下代码生成一个编译器错误：
+ ```csharp
+ using s = System.Text;
+ using s.RegularExpressions; 
+ ```
   
  创建 `using` 指令，以便在命名空间中使用类型而不必指定命名空间。 `using` 指令不为你提供对嵌套在指定命名空间中的任何命名空间的访问权限。  
   
- 命名空间分为两类：用户定义的命名空间和系统定义的命名空间。 用户定义的命名空间是在代码中定义的命名空间。 有关系统定义的命名空间的列表，请参阅 [.NET Framework 类库概述](../../../standard/class-library-overview.md)。  
+ 命名空间分为两类：用户定义的命名空间和系统定义的命名空间。 用户定义的命名空间是在代码中定义的命名空间。 有关系统定义的命名空间的列表，请参阅 [.NET API 浏览器](https://docs.microsoft.com/en-us/dotnet/api/)。  
   
  有关在其他程序集中引用方法的示例，请参阅[使用命令行创建和使用程序集](../../programming-guide/concepts/assemblies-gac/how-to-create-and-use-assemblies-using-the-command-line.md)。  
   
@@ -79,11 +89,12 @@ class Program
 ## <a name="c-language-specification"></a>C# 语言规范  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>请参阅  
- [C# 参考](../../../csharp/language-reference/index.md)  
- [C# 编程指南](../../../csharp/programming-guide/index.md)  
- [使用命名空间](../../../csharp/programming-guide/namespaces/using-namespaces.md)  
- [C# 关键字](../../../csharp/language-reference/keywords/index.md)  
- [命名空间关键字](../../../csharp/language-reference/keywords/namespace-keywords.md)  
- [命名空间](../../../csharp/programming-guide/namespaces/index.md)  
- [using 语句](../../../csharp/language-reference/keywords/using-statement.md)
+## <a name="see-also"></a>请参阅
+
+- [C# 参考](../../../csharp/language-reference/index.md)  
+- [C# 编程指南](../../../csharp/programming-guide/index.md)  
+- [使用命名空间](../../../csharp/programming-guide/namespaces/using-namespaces.md)  
+- [C# 关键字](../../../csharp/language-reference/keywords/index.md)  
+- [命名空间关键字](../../../csharp/language-reference/keywords/namespace-keywords.md)  
+- [命名空间](../../../csharp/programming-guide/namespaces/index.md)  
+- [using 语句](../../../csharp/language-reference/keywords/using-statement.md)

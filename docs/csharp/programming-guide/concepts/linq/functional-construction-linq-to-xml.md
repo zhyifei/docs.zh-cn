@@ -2,12 +2,12 @@
 title: 函数构造 (LINQ to XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: 57a82bcf-de03-4f1c-a0c8-9a76e989d542
-ms.openlocfilehash: c837660adf9c62c8f4304b92d37f732795c981c9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c2579da6e3cdfea6469742d29935b0137e320bbb
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33329850"
+ms.lasthandoff: 09/29/2018
+ms.locfileid: "47207669"
 ---
 # <a name="functional-construction-linq-to-xml-c"></a>函数构造 (LINQ to XML) (C#)
 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 为创建 XML 元素提供了一种称为“函数构造”的有效方式。 函数构造是指在单个语句中创建 XML 树的能力。  
@@ -70,5 +70,6 @@ Console.WriteLine(xmlTree);
 </Root>  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [创建 XML 树 (C#)](../../../../csharp/programming-guide/concepts/linq/creating-xml-trees.md)
+## <a name="see-also"></a>请参阅
+
+- [创建 XML 树 (C#)](../../../../csharp/programming-guide/concepts/linq/creating-xml-trees.md)

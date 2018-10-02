@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 8fcc0dea-435b-4d40-ba4d-ba056265c202
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9e8de7a1b5de580ca768ec0dfbcbfab2d8cb6271
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4b324cc391bc784ac558ed3eb634506b5eea0d63
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33573482"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44214558"
 ---
 # <a name="how-to-delete-files-and-directories-in-isolated-storage"></a>如何：在独立存储中删除文件和目录
 可以删除独立存储文件中的目录和文件。 在存储区中，文件名和目录名依赖于操作系统，并指定为虚拟文件系统根目录的相对路径。 在 Windows 操作系统中，它们不区分大小写。  
@@ -40,6 +40,7 @@ ms.locfileid: "33573482"
  [!code-csharp[Conceptual.IsolatedStorage#4](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.isolatedstorage/cs/source4.cs#4)]
  [!code-vb[Conceptual.IsolatedStorage#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.isolatedstorage/vb/source4.vb#4)]  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.IO.IsolatedStorage.IsolatedStorageFile?displayProperty=nameWithType>  
- [独立存储](../../../docs/standard/io/isolated-storage.md)
+## <a name="see-also"></a>请参阅
+
+- <xref:System.IO.IsolatedStorage.IsolatedStorageFile?displayProperty=nameWithType>  
+- [独立存储](../../../docs/standard/io/isolated-storage.md)

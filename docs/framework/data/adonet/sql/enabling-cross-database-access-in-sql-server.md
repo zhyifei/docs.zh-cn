@@ -2,12 +2,12 @@
 title: 在 SQL Server 中启用跨数据库访问
 ms.date: 03/30/2017
 ms.assetid: 10663fb6-434c-4c81-8178-ec894b9cf895
-ms.openlocfilehash: 22fa2b48d795fb81b4740ce882f9bff632deabbd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7018a500f777935d35bac0010c07258a313b08fe
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33353457"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43742106"
 ---
 # <a name="enabling-cross-database-access-in-sql-server"></a>在 SQL Server 中启用跨数据库访问
 当某个数据库中的某一过程依赖另一个数据库中的对象时，会发生跨数据库所有权链接。 跨数据库所有权链与单个数据库中的所有权链接的工作方式相同，不同之处在于完整的所有权链要求将所有对象拥有者映射为同一登录帐户。 如果同一登录帐户拥有源数据库中的源对象和目标数据库中的目标对象，则 SQL Server 不会检查对目标对象的权限。  
@@ -41,14 +41,14 @@ ALTER DATABASE Database2 SET DB_CHAINING ON;
 ```  
   
 ### <a name="dynamic-sql"></a>动态 SQL  
- 在执行了动态创建的 SQL 语句的情况下跨数据库所有权链接将不起作用，除非同一用户同时存在于两个数据库中。 你可以解决此 SQL Server 中通过创建一个可访问另一个数据库中的数据的存储的过程并签名具有这两个数据库中存在的证书的过程。 这可为用户提供访问该过程所使用的数据库资源的权限，而不必向他们授予数据库访问权或权限。  
+ 在执行了动态创建的 SQL 语句的情况下跨数据库所有权链接将不起作用，除非同一用户同时存在于两个数据库中。 在 SQL Server 中，可以通过创建一个可访问另一个数据库中数据的存储过程并用两个数据库中都存在的证书为此过程签名来解决这个问题。 这可为用户提供访问该过程所使用的数据库资源的权限，而不必向他们授予数据库访问权或权限。  
   
 ## <a name="external-resources"></a>外部资源  
  有关更多信息，请参见以下资源。  
   
 |资源|描述|  
 |--------------|-----------------|  
-|[通过使用 EXECUTE AS 扩展数据库模拟](http://msdn.microsoft.com/library/ms188304\(SQL.105\).aspx)和[Cross DB Ownership Chaining 选项](http://msdn.microsoft.com/library/ms188694.aspx)SQL Server 联机丛书。|主题介绍如何配置跨数据库所有权链接的 SQL Server 实例。|  
+|[通过使用 EXECUTE AS 扩展数据库模拟](https://msdn.microsoft.com/library/ms188304\(SQL.105\).aspx)并[Cross DB Ownership Chaining 选项](/sql/database-engine/configure-windows/cross-db-ownership-chaining-server-configuration-option)SQL Server 联机丛书。|主题介绍如何配置跨数据库所有权链接的 SQL Server 实例。|  
   
 ## <a name="see-also"></a>请参阅  
  [保证 ADO.NET 应用程序的安全](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
@@ -56,4 +56,4 @@ ALTER DATABASE Database2 SET DB_CHAINING ON;
  [在 SQL Server 中使用存储过程管理权限](../../../../../docs/framework/data/adonet/sql/managing-permissions-with-stored-procedures-in-sql-server.md)  
  [在 SQL Server 中编写安全的动态 SQL](../../../../../docs/framework/data/adonet/sql/writing-secure-dynamic-sql-in-sql-server.md)  
  [在 SQL Server 中对存储过程签名](../../../../../docs/framework/data/adonet/sql/signing-stored-procedures-in-sql-server.md)  
- [ADO.NET 托管提供程序和数据集开发人员中心](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)

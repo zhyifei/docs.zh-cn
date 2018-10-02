@@ -2,12 +2,12 @@
 title: 示例 XML 文件：命名空间 2 中的客户和订单
 ms.date: 07/20/2015
 ms.assetid: 2da1c474-f658-4dca-a457-c35ef5ba4aff
-ms.openlocfilehash: 53ad3633361772dc4a9be337df7ae2e1b8a60a5a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1af227118f5c3c03d1559797d5977f5c71469678
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33337205"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44217030"
 ---
 # <a name="sample-xml-file-customers-and-orders-in-a-namespace"></a>示例 XML 文件：命名空间中的客户和订单
 下面的 XML 文件用在 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 文档的很多示例中。 此文件包含客户和订单。 该 XML 在某个命名空间中。  
@@ -430,5 +430,6 @@ ms.locfileid: "33337205"
 </Root>  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [示例 XML 文档 (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)
+## <a name="see-also"></a>请参阅
+
+- [示例 XML 文档 (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)

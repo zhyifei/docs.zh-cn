@@ -8,21 +8,20 @@ helpviewer_keywords:
 ms.assetid: ac178408-1485-436f-8d3e-eee3bf80cb24
 author: Xansky
 ms.author: mhopkins
-manager: markl
-ms.openlocfilehash: e28ac8762c2c3a58a282b92da2b0a2dfadf32dbb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e5d5e82c5c2cfc48c98559bd6ce14519bdfaa522
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33398965"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47196550"
 ---
 # <a name="implementing-the-ui-automation-tableitem-control-pattern"></a>实现 UI 自动化 TableItem 控件模式
 > [!NOTE]
->  本文档适用于想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空间中定义的托管 <xref:System.Windows.Automation> 类的 .NET Framework 开发人员。 有关 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]的最新信息，请参阅 [Windows 自动化 API：UI 自动化](http://go.microsoft.com/fwlink/?LinkID=156746)。  
+>  本文档适用于想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空间中定义的托管 <xref:System.Windows.Automation> 类的 .NET Framework 开发人员。 有关最新信息[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]，请参阅[Windows 自动化 API: UI 自动化](https://go.microsoft.com/fwlink/?LinkID=156746)。  
   
  本主题介绍的实现准则和约定<xref:System.Windows.Automation.Provider.ITableItemProvider>，包括有关事件和属性的信息。 本概述的结尾列出了指向其他参考资料的链接。  
   
- <xref:System.Windows.Automation.TableItemPattern>控件模式用于支持实现的容器的子控件<xref:System.Windows.Automation.Provider.ITableProvider>。 对个别单元格功能的访问必需的并发实现提供<xref:System.Windows.Automation.Provider.IGridItemProvider>。 此控件模式相当于<xref:System.Windows.Automation.Provider.IGridItemProvider>任何控件实现区别<xref:System.Windows.Automation.Provider.ITableItemProvider>必须以编程方式公开各个单元格与其行和列信息之间的关系。 有关实现此控件模式的控件示例，请参阅 [Control Pattern Mapping for UI Automation Clients](../../../docs/framework/ui-automation/control-pattern-mapping-for-ui-automation-clients.md)。  
+ <xref:System.Windows.Automation.TableItemPattern>控件模式用于支持实现的容器的子控件<xref:System.Windows.Automation.Provider.ITableProvider>。 对个别单元格功能的访问必需的并发实现提供<xref:System.Windows.Automation.Provider.IGridItemProvider>。 此控件模式是类似于<xref:System.Windows.Automation.Provider.IGridItemProvider>与任何控件实现的区别<xref:System.Windows.Automation.Provider.ITableItemProvider>必须以编程方式公开各个单元格与其行和列信息之间的关系。 有关实现此控件模式的控件示例，请参阅 [Control Pattern Mapping for UI Automation Clients](../../../docs/framework/ui-automation/control-pattern-mapping-for-ui-automation-clients.md)。  
   
 <a name="Implementation_Guidelines_and_Conventions"></a>   
 ## <a name="implementation-guidelines-and-conventions"></a>实现准则和约定  

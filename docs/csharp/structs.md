@@ -3,12 +3,12 @@ title: 结构 - C# 指南
 description: 了解结构类型及其创建方式
 ms.date: 10/12/2016
 ms.assetid: a7094b8c-7229-4b6f-82fc-824d0ea0ec40
-ms.openlocfilehash: 9fe4e0278ecf46f762a93aa489030c0a9e5563b3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 26b7b075dbe159d43fd7f84e9599d2d8d6a8332c
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33349764"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43513081"
 ---
 # <a name="structs"></a>结构
 结构是一个值类型。 创建结构时，分配给结构的变量保留结构的实际数据。 将结构分配给新变量时，会复制结构。 因此，新变量和原始变量包含相同数据的副本（共两个）。 对一个副本所做的更改不会影响另一个副本。
@@ -66,6 +66,6 @@ ms.locfileid: "33349764"
 普通值类型不能具有 [null](./language-reference/keywords/null.md) 值。 但是，可以通过在类型后面附加 **?** 来创建可以为 null 的值类型。 例如，**int?** 属于 **int** 类型，也可以具有值 [null](./language-reference/keywords/null.md)。 在 CTS 中，可以为 null 的类型是泛型结构类型 <xref:System.Nullable%601> 的实例。 在将数据传入和传出数据库（数值可能为 null）时，可以为 null 的类型特别有用。 有关详细信息，请参阅[可以为 Null 的类型（C# 编程指南）](./programming-guide/nullable-types/index.md)。
 
 ## <a name="see-also"></a>请参阅
-[类](classes.md)
 
-[基本类型](basic-types.md)
+- [类](classes.md)
+- [基本类型](basic-types.md)

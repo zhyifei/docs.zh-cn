@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 74f0bcaf-5c95-40c1-9967-f3bbf1d2360a
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: f25f04a144fa806297b018bf3548b8feb506f67d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d24fa2ece34d20a3d9e8d6f971eebae5da0f496e
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33392546"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47198080"
 ---
 # <a name="time-based-cache-policies"></a>基于时间的缓存策略
 基于时间的缓存策略使用检索资源的时间、随资源返回的标头和当前时间来定义缓存条目的新鲜度。 设置基于时间的缓存策略时，可使用 <xref:System.Net.Cache.HttpRequestCacheLevel.Default> 基于时间的策略，也可创建自定义的基于时间的策略。 当对使用超文本传输协议 (HTTP) 获得的资源使用默认的基于时间的策略时，由缓存响应中包含的标头以及 RFC 2616 第 13 和 14 节（可在 [http://www.ietf.org](http://www.ietf.org/) 处查找）中指定的行为来确定精确的缓存行为。有关演示如何为 HTTP 资源设置默认的基于时间策略的代码示例，请参阅[如何：为应用程序设置默认基于时间的缓存策略](../../../docs/framework/network-programming/how-to-set-the-default-time-based-cache-policy-for-an-application.md)。 有关演示如何创建和使用缓存策略的代码示例，请参阅[在网络应用程序中配置缓存](../../../docs/framework/network-programming/configuring-caching-in-network-applications.md)。  

@@ -10,13 +10,12 @@ helpviewer_keywords:
 ms.assetid: 0121f49d-bff2-4bc6-af06-f1628dcd61f1
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 3a982bdbe4953691d4e8e7663f14059ff4771934
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: b62dc1a9118f7d4f1f693ade36626deaecd23999
+ms.sourcegitcommit: daa8788af67ac2d1cecd24f9f3409babb2f978c9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32743971"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47863645"
 ---
 # <a name="ltspecifiedpickupdirectorygt-element-network-settings"></a>&lt;specifiedPickupDirectory&gt;元素 （网络设置）
 配置简单邮件传输协议 (SMTP) 服务器的本地目录。  
@@ -42,7 +41,7 @@ ms.locfileid: "32743971"
   
 |特性|描述|  
 |---------------|-----------------|  
-|`pickupDirectoryLocation`|应用程序保存以供以后处理的 SMTP 服务器的电子邮件的目录。|  
+|`pickupDirectoryLocation`|在应用程序在其中保存以供以后处理的 SMTP 服务器的电子邮件的目录。|  
   
 ### <a name="child-elements"></a>子元素  
  无。  
@@ -57,13 +56,13 @@ ms.locfileid: "32743971"
  `specifiedPickupDirectory` 特性设置应用程序保存邮件以供 SMTP 服务器处理的目录。  
   
 ## <a name="example"></a>示例  
- 下面的示例指定 c:\maildrop 作为邮件选取目录。  
+ 下面的示例指定 c:\maildrop 作为邮件的拾取目录。  
   
 ```xml  
 <configuration>  
   <system.net>  
     <mailSettings>  
-      <smtp deliveryMethod="specifiedPickupDirectory">  
+      <smtp deliveryMethod="SpecifiedPickupDirectory">  
         <specifiedPickupDirectory  
           pickupDirectoryLocation="c:\maildrop"  
         />  

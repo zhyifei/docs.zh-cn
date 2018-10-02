@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - events [C#], in derived classes
 ms.assetid: 2d20556a-0aad-46fc-845e-f85d86ea617a
-ms.openlocfilehash: e064c318f16c2fe87aa980b7dec7468b1e61ab25
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 51bc6621d49bbb16313c900a92b539c30eb61ff0
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33320087"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43525194"
 ---
 # <a name="how-to-raise-base-class-events-in-derived-classes-c-programming-guide"></a>如何：在派生类中引发基类事件（C# 编程指南）
 下面的简单示例演示用于在基类中声明事件，以便也可以从派生类引发它们的标准方法。 在 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 类库的 Windows 窗体类中广泛使用了此模式。  
@@ -22,9 +22,10 @@ ms.locfileid: "33320087"
 ## <a name="example"></a>示例  
  [!code-csharp[csProgGuideEvents#1](../../../csharp/programming-guide/events/codesnippet/CSharp/how-to-raise-base-class-events-in-derived-classes_1.cs)]  
   
-## <a name="see-also"></a>请参阅  
- [C# 编程指南](../../../csharp/programming-guide/index.md)  
- [事件](../../../csharp/programming-guide/events/index.md)  
- [委托](../../../csharp/programming-guide/delegates/index.md)  
- [访问修饰符](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md)  
- [在 Windows 窗体中创建事件处理程序](../../../../docs/framework/winforms/creating-event-handlers-in-windows-forms.md)
+## <a name="see-also"></a>请参阅
+
+- [C# 编程指南](../../../csharp/programming-guide/index.md)  
+- [事件](../../../csharp/programming-guide/events/index.md)  
+- [委托](../../../csharp/programming-guide/delegates/index.md)  
+- [访问修饰符](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md)  
+- [在 Windows 窗体中创建事件处理程序](../../../../docs/framework/winforms/creating-event-handlers-in-windows-forms.md)

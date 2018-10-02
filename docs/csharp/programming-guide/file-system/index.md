@@ -6,12 +6,12 @@ helpviewer_keywords:
 - registry [C#]
 - files [C#]
 ms.assetid: 0f2511cf-2b02-4b41-b001-b1754677c38f
-ms.openlocfilehash: 20e8b857759253736d11bc31988fadb4843fa87a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3625f7a108675a3a9ab6be16ef94ae7e7c107612
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33334855"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45971231"
 ---
 # <a name="file-system-and-the-registry-c-programming-guide"></a>文件系统和注册表（C# 编程指南）
 下面各主题介绍了如何使用 C# 和 .NET Framework 对文件、文件夹和注册表执行各种基本操作。  
@@ -31,7 +31,7 @@ ms.locfileid: "33334855"
 |[如何：在注册表中创建注册表项](../../../csharp/programming-guide/file-system/how-to-create-a-key-in-the-registry.md)|介绍了如何将注册表项写入系统注册表。|  
   
 ## <a name="related-sections"></a>相关章节  
- [文件和流 I/O](https://msdn.microsoft.com/library/k3352a4t)  
+ [文件和流 I/O](../../../standard/io/index.md)  
   
  [如何：复制、删除、移动文件和文件夹（C# 编程指南）](../../../csharp/programming-guide/file-system/how-to-copy-delete-and-move-files-and-folders.md)  
   

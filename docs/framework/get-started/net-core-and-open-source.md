@@ -16,7 +16,7 @@ ms.locfileid: "33389247"
   
 <a name="BKMK_WhatisNETCore"></a>   
 ## <a name="what-is-net-core"></a>.NET Core 是什么？   
- .NET Core 是 .NET 标准的常规用途、模块化、跨平台和开放源代码实现。 它包含 .NET Framework 这样的许多相同 API（但 .NET Core 是较小的集）并包括支持不同操作系统和芯片目标的运行时、框架、编译器和工具组件。 .NET Core 实现主要由 ASP.NET Core 工作负载驱动，但同时也由拥有一个更现代的实现这一需求和愿望驱动。 它可以用于设备、云和嵌入式/IoT 方案。  
+ .NET Core 是 .NET Standard 的常规用途、模块化、跨平台和开放源代码实现。 它包含 .NET Framework 这样的许多相同 API（但 .NET Core 是较小的集）并包括支持不同操作系统和芯片目标的运行时、框架、编译器和工具组件。 .NET Core 实现主要由 ASP.NET Core 工作负载驱动，但同时也由拥有一个更现代的实现这一需求和愿望驱动。 它可以用于设备、云和嵌入式/IoT 方案。  
   
  若要开始使用 .NET Core，请访问 [.NET Core 主页](https://www.microsoft.com/net/core)。  
   

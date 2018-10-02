@@ -4,12 +4,12 @@ description: 了解如何使用 Visual Studio Code 创建和调试首个 C# .NET
 author: kendrahavens
 ms.author: mairaw
 ms.date: 09/27/2017
-ms.openlocfilehash: 8958c39ba16cadbfab95e35fa36e8e85ce0a4ab8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 321edcebdea141b7290fa57b47c8d9fc91d3521c
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33213610"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45668218"
 ---
 # <a name="get-started-with-c-and-visual-studio-code"></a>C# 和 Visual Studio Code 入门
 
@@ -50,7 +50,7 @@ ms.locfileid: "33213610"
 
 4. 运行“Hello World”程序：
 
-    * 键入 `dotnet run`。 
+    * 键入 `dotnet run`。
 
       ![dotnet run 命令](media/with-visual-studio-code/dotnetrun.png)
 
@@ -62,7 +62,7 @@ ms.locfileid: "33213610"
 
     ![打开 Program.cs 文件](media/with-visual-studio-code/opencs.png)
 
-2. Visual Studio Code 会提示添加缺少的资产，以生成和调试应用。 选择 **“是”**。 
+2. Visual Studio Code 会提示添加缺少的资产，以生成和调试应用。 选择 **“是”**。
 
     ![提示添加缺少的资产](media/with-visual-studio-code/missing-assets.png)
 
@@ -74,7 +74,7 @@ ms.locfileid: "33213610"
 
     ![选择 .NET Core](media/with-visual-studio-code/selectcore.png)
 
-5. 单击第 9 行旁边的编辑器边距（编辑器中行号左侧的空间），为项目添加断点。
+5. 单击第 9 行旁边的编辑器边距（编辑器中行号左侧的空间）或者将文本光标移动到编辑器中的第 9 行并按 <kbd>F9</kbd>，为项目添加断点。
 
     ![设置断点](media/with-visual-studio-code/setbreakpoint.png)
 
@@ -85,9 +85,16 @@ ms.locfileid: "33213610"
 
 7. 选择最上面的绿色箭头以继续调试，或选择最上面的红色方块以停止调试。
 
-> [!TIP] 
+> [!TIP]
 > 若要详细了解如何使用 OmniSharp 在 Visual Studio Code 中进行 .NET Core 调试，以及相关的疑难解答提示，请参阅[有关设置 .NET Core 调试器的说明](https://github.com/OmniSharp/omnisharp-vscode/blob/master/debugger.md)。
 
+## <a name="faq"></a>FAQ
+
+### <a name="im-missing-required-assets-to-build-and-debug-c-in-visual-studio-code-my-debugger-says-no-configuration"></a>缺少在 Visual Studio Code 中生成和调试 C# 所需的资产。 调试器显示“无配置”。
+
+Visual Studio Code C# 扩展可生成用于生成和调试的资产。 首次打开 C# 项目时，Visual Studio Code 会提示用户生成这些资产。 如果当时并未生成这些资产，仍可以通过打开命令面板（“视图”>“命令面板”）并键入“>.NET: Generate Assets for Build and Debug”来运行此命令。 选择此方法可生成所需的 .vscode、launch.json 和 tasks.jsonn 配置文件。
+
 ## <a name="see-also"></a>请参阅
-[设置 Visual Studio Code](https://code.visualstudio.com/docs/setup/setup-overview)   
-[在 Visual Studio Code 中进行调试](https://code.visualstudio.com/Docs/editor/debugging)
+
+* [设置 Visual Studio Code](https://code.visualstudio.com/docs/setup/setup-overview)
+* [在 Visual Studio Code 中进行调试](https://code.visualstudio.com/Docs/editor/debugging)

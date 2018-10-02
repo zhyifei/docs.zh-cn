@@ -2,12 +2,12 @@
 title: 命名空间概述 (LINQ to XML)
 ms.date: 07/20/2015
 ms.assetid: 16283322-8238-4918-ab11-802ac6748eb7
-ms.openlocfilehash: 03451f50605adf6de0d43f19d220aaeed382f13c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4d422d9f72eb3297cffda72c441d6370d519f450
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33323844"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45698427"
 ---
 # <a name="namespaces-overview-linq-to-xml"></a>命名空间概述 (LINQ to XML)
 本主题介绍命名空间、<xref:System.Xml.Linq.XName> 类和 <xref:System.Xml.Linq.XNamespace> 类。  
@@ -23,5 +23,6 @@ ms.locfileid: "33323844"
   
  有关详细信息，请参阅 <xref:System.Xml.Linq.XNamespace> 和 <xref:System.Xml.Linq.XName>。  
   
-## <a name="see-also"></a>请参阅  
- [使用 XML 命名空间 (C#)](../../../../csharp/programming-guide/concepts/linq/working-with-xml-namespaces.md)
+## <a name="see-also"></a>请参阅
+
+- [使用 XML 命名空间 (C#)](../../../../csharp/programming-guide/concepts/linq/working-with-xml-namespaces.md)

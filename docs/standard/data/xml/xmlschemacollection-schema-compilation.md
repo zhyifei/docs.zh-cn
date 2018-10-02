@@ -8,12 +8,12 @@ dev_langs:
 ms.assetid: 76f28770-7126-428f-9ed5-7b5ae8bad5ee
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d64443f213603b1f5db9c256acc88e998e3f009a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d7b6ea782020dde83aa7d59be8ec3058a27075ad
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33571480"
+ms.lasthandoff: 09/29/2018
+ms.locfileid: "47216115"
 ---
 # <a name="xmlschemacollection-schema-compilation"></a>XmlSchemaCollection 架构编译
 XmlSchemaCollection 是可用于存储和验证 XML 数据缩减 (XDR) 和 XML 架构定义语言 (XSD) 架构的缓存或库。 XmlSchemaCollection 在内存中缓存架构，而不是通过文件或 URL 访问架构，从而提升了性能。  
@@ -57,6 +57,7 @@ xsc.Add("urn:bookstore-schema", "Books.xsd");
 vr.Schemas.Add(xsc);  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [使用 XmlSchemaCollection 进行 XDR 验证](../../../../docs/standard/data/xml/xdr-validation-with-xmlschemacollection.md)  
- [使用 XmlSchemaCollection 进行 XML 架构 (XSD) 验证](../../../../docs/standard/data/xml/xml-schema-xsd-validation-with-xmlschemacollection.md)
+## <a name="see-also"></a>请参阅
+
+- [使用 XmlSchemaCollection 进行 XDR 验证](../../../../docs/standard/data/xml/xdr-validation-with-xmlschemacollection.md)  
+- [使用 XmlSchemaCollection 进行 XML 架构 (XSD) 验证](../../../../docs/standard/data/xml/xml-schema-xsd-validation-with-xmlschemacollection.md)

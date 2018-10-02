@@ -15,12 +15,12 @@ helpviewer_keywords:
 - Visual C# compiler, enabling
 - compiling source code, from command line
 ms.assetid: 7ec09480-5612-4f6a-8d00-ad90ea9bca5d
-ms.openlocfilehash: 0935cb62244691af7fa450fef9c1ab8f6c616579
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 77375e428fe0563c0b533ca97abd21070e850682
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33214986"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43857844"
 ---
 # <a name="how-to-set-environment-variables-for-the-visual-studio-command-line"></a>如何：为 Visual Studio 命令行设置环境变量
 
@@ -43,4 +43,5 @@ VsDevCmd.bat 文件设置适当的环境变量来生成命令行。 有关 VsDev
     >  VsDevCmd.bat 可能因计算机而异。 请勿使用其他计算机上的 VsDevCmd.bat 替换缺失或损坏的 VsDevCmd.bat 文件。 而是应重新运行安装程序以替换丢失的文件。  
   
 ## <a name="see-also"></a>请参阅  
- [在命令行上使用 csc.exe 生成](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)
+
+- [在命令行上使用 csc.exe 生成](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: e41d7f1a-0a6a-4dee-97d1-c6a8b6a07fc2
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: b4109cef8d527d397903854e05a2204a3e551938
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0344bbfc02a66a6f2ec9dace126bfae6811860be
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33394498"
+ms.lasthandoff: 09/29/2018
+ms.locfileid: "47209496"
 ---
 # <a name="location-based-cache-policies"></a>基于位置的缓存策略
 基于位置的缓存策略根据可从中获取所请求资源的位置来定义有效缓存条目的新鲜度。 如果使用它不违反服务器指定的重新验证要求，则缓存资源为有效。 基于位置的缓存策略通过使用 <xref:System.Net.Cache.RequestCachePolicy> 或 <xref:System.Net.Cache.HttpRequestCachePolicy> 类构造函数以编程方式创建。 使用 <xref:System.Net.Cache.RequestCacheLevel> 或 <xref:System.Net.Cache.HttpRequestCacheLevel> 枚举值将基于位置的策略的类型传递给构造函数。 有关创建基于位置的缓存策略的代码示例，请参阅[如何：为应用程序设置基于位置的缓存策略](../../../docs/framework/network-programming/how-to-set-a-location-based-cache-policy-for-an-application.md)。 以下部分介绍超文本传输协议（http 和 https）资源每种基于位置的缓存策略。  

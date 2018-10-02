@@ -6,12 +6,12 @@ helpviewer_keywords:
 - XAML [XAML Services], TypeConverter
 - type conversion for XAML [XAML Services]
 ms.assetid: 51a65860-efcb-4fe0-95a0-1c679cde66b7
-ms.openlocfilehash: df6b7f212a60d8d51bb684891055de7e285ddf4f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 25705b573be74ea5a2d71537b0c165a6f619d1d9
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33566816"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43519148"
 ---
 # <a name="type-converters-for-xaml-overview"></a>XAML 的类型转换器概述
 类型转换器为对象编写器提供逻辑，用于从 XAML 标记中的字符串转换为对象图中的特定对象。 在 .NET Framework XAML 服务中，类型转换器必须是派生自 <xref:System.ComponentModel.TypeConverter>的类。 某些转换器还支持 XAML 保存路径，可以用于将对象从序列化标记序列化为字符串形式。 本主题介绍如何以及何时调用 XAML 中的类型转换器，以及为 <xref:System.ComponentModel.TypeConverter>的方法重写提供实现建议。  
@@ -32,7 +32,7 @@ ms.locfileid: "33566816"
  标记扩展用法必须先由 XAML 处理器进行处理，然后才能检查属性类型和其他注意事项。 例如，如果设置为特性的属性通常具有类型转换，但在特定情况下通过标记扩展用法进行设置，则标记扩展行为会首先进行处理。 需要标记扩展的一种常见情况是使对已存在的对象进行引用。 对于这种情况，无状态类型转换器只能生成新实例，这可能并不理想。 有关标记扩展的详细信息，请参阅 [Markup Extensions for XAML Overview](../../../docs/framework/xaml-services/markup-extensions-for-xaml-overview.md)。  
   
 ### <a name="native-type-converters"></a>本机类型转换器  
- 在 WPF 和.NET XAML 服务实现中，某些 CLR 类型具有本机类型转换处理，但是，这些 CLR 类型都不会按惯例视为基元。 这种类型的一个示例是 <xref:System.DateTime>。 造成这种情况的原因之一是 .NET Framework 体系结构的工作原理：类型 <xref:System.DateTime> 在 mscorlib（.NET 中最基本的库中）中定义。 不允许<xref:System.DateTime> 使用来自引入依赖关系的另一个程序集的特性进行特性化（<xref:System.ComponentModel.TypeConverterAttribute> 来自系统）；因此，无法支持通过特性化进行的正常类型转换器发现机制。 相反，XAML 分析器具有需要本机处理的类型的列表，它可通过与真正基元的处理方式类似的方式来处理这些类型。 对于 <xref:System.DateTime>，这种处理涉及调用 <xref:System.DateTime.Parse%2A>。  
+ 在 WPF 和.NET XAML 服务实现中，具有本机类型转换处理某些 CLR 类型，但是，这些 CLR 类型都不会按惯例视为基元。 这种类型的一个示例是 <xref:System.DateTime>。 造成这种情况的原因之一是 .NET Framework 体系结构的工作原理：类型 <xref:System.DateTime> 在 mscorlib（.NET 中最基本的库中）中定义。 不允许<xref:System.DateTime> 使用来自引入依赖关系的另一个程序集的特性进行特性化（<xref:System.ComponentModel.TypeConverterAttribute> 来自系统）；因此，无法支持通过特性化进行的正常类型转换器发现机制。 相反，XAML 分析器具有需要本机处理的类型的列表，它可通过与真正基元的处理方式类似的方式来处理这些类型。 对于 <xref:System.DateTime>，这种处理涉及调用 <xref:System.DateTime.Parse%2A>。  
   
 <a name="Implementing_a_Type_Converter"></a>   
 ## <a name="implementing-a-type-converter"></a>实现类型转换器  
@@ -60,7 +60,7 @@ ms.locfileid: "33566816"
  <xref:System.ComponentModel.TypeConverter.CanConvertTo%2A> 和 <xref:System.ComponentModel.TypeConverter.CanConvertFrom%2A> 是在服务查询 <xref:System.ComponentModel.TypeConverter> 实现的功能时使用的支持方法。 必须实现这些方法以便为转换器的等效转换方法支持的特定于类型的情况返回 `true` 。 对于 XAML 用途，这通常意味着 <xref:System.String> 类型。  
   
 ### <a name="culture-information-and-type-converters-for-xaml"></a>XAML 的区域性信息和类型转换器  
- 每个 <xref:System.ComponentModel.TypeConverter> 实现都可以唯一地解释对于转换是有效字符串的内容，它还可以使用或忽略作为参数传递的类型说明。 区域性和 XAML 类型转换的一个重要注意事项如下所示：尽管 XAML 支持使用可本地化的字符串作为特性值，但是不能使用这些可本地化的字符串作为具有特定区域性要求的类型转换器输入。 存在此限制是因为 XAML 特性值的类型转换器涉及使用 `en-US` 区域性的必定固定的语言 XAML 处理行为。 有关此限制的设计原因的详细信息，请参阅 XAML 语言规范 ([\[MS-XAML\]](http://go.microsoft.com/fwlink/?LinkId=114525)) 或[WPF 全球化和本地化概述](../../../docs/framework/wpf/advanced/wpf-globalization-and-localization-overview.md).  
+ 每个 <xref:System.ComponentModel.TypeConverter> 实现都可以唯一地解释对于转换是有效字符串的内容，它还可以使用或忽略作为参数传递的类型说明。 区域性和 XAML 类型转换的一个重要注意事项如下所示：尽管 XAML 支持使用可本地化的字符串作为特性值，但是不能使用这些可本地化的字符串作为具有特定区域性要求的类型转换器输入。 存在此限制是因为 XAML 特性值的类型转换器涉及使用 `en-US` 区域性的必定固定的语言 XAML 处理行为。 有关此限制的设计原因的详细信息，请参阅 XAML 语言规范 ([\[MS XAML\]](https://go.microsoft.com/fwlink/?LinkId=114525)) 或[WPF 全球化和本地化概述](../../../docs/framework/wpf/advanced/wpf-globalization-and-localization-overview.md).  
   
  区域性可能会产生问题的一个示例是，某些区域性使用逗号而不是句点作为字符串形式的数字的小数点分隔符。 这种用法与许多现有类型转换器所具有的行为（即使用逗号作为分隔符）冲突。 在周围的 XAML 中通过 `xml:lang` 传递区域性无法解决此问题。  
   
@@ -70,7 +70,7 @@ ms.locfileid: "33566816"
  每个 <xref:System.ComponentModel.TypeConverter> 实现都可以唯一地解释对于转换构成效字符串的内容，它还可以使用或忽略作为参数传递的类型说明或区域性上下文。 但是，WPF XAML 处理可能不会在所有情况下都将值传递给类型说明上下文，还可能不会基于 `xml:lang`传递区域性。  
   
 > [!NOTE]
->  不使用大括号 ({})，具体而言左大括号 （{），为字符串格式的一个元素。 这些字符保留作为标记扩展序列的入口和出口。  
+>  不使用大括号 ({})，特别是左大括号 （{}） 为元素的字符串格式。 这些字符保留作为标记扩展序列的入口和出口。  
   
  当类型转换器必须可以从 .NET Framework XAML 服务对象编写器访问 XAML 服务，但是针对上下文进行的 <xref:System.IServiceProvider.GetService%2A> 调用未返回该服务时，适合引发异常。  
   
@@ -95,7 +95,7 @@ ms.locfileid: "33566816"
 ## <a name="applying-the-typeconverterattribute"></a>应用 TypeConverterAttribute  
  对于要由 .NET Framework XAML 服务用作自定义类的操作类型转换器的自定义类型转换器，必须将 [!INCLUDE[TLA#tla_netframewkattr](../../../includes/tlasharptla-netframewkattr-md.md)] <xref:System.ComponentModel.TypeConverterAttribute> 应用于类定义。 通过特性指定的 <xref:System.ComponentModel.TypeConverterAttribute.ConverterTypeName%2A> 必须是自定义类型转换器的类型名。 如果应用此特性，则当 XAML 处理器处理属性类型使用自定义类类型的值时，它可以输入字符串并返回对象实例。  
   
- 还可以基于每个属性提供类型转换器。 应将 [!INCLUDE[TLA#tla_netframewkattr](../../../includes/tlasharptla-netframewkattr-md.md)] <xref:System.ComponentModel.TypeConverterAttribute> 应用于属性定义（主定义，不是它包含的 `get`/`set` 的实现），而不是将它应用于类定义。 属性的类型必须与自定义类型转换器处理的类型匹配。 应用此特性时，当 XAML 处理器处理该属性的值时，它可以处理输入字符串并返回对象实例。 每个属性类型转换器方法是特别有用，如果你选择使用的属性类型从 Microsoft.NET Framework 或某种其他库其中无法控制类定义并且无法应用<xref:System.ComponentModel.TypeConverterAttribute>存在。  
+ 还可以基于每个属性提供类型转换器。 应将 [!INCLUDE[TLA#tla_netframewkattr](../../../includes/tlasharptla-netframewkattr-md.md)] <xref:System.ComponentModel.TypeConverterAttribute> 应用于属性定义（主定义，不是它包含的 `get`/`set` 的实现），而不是将它应用于类定义。 属性的类型必须与自定义类型转换器处理的类型匹配。 应用此特性时，当 XAML 处理器处理该属性的值时，它可以处理输入字符串并返回对象实例。 每个属性类型转换器方法会特别有用，如果您选择使用 Microsoft.NET Framework 中或某些其他库其中无法控制类定义并且无法应用的属性类型<xref:System.ComponentModel.TypeConverterAttribute>存在。  
   
  若要为自定义附加成员提供类型转换行为，请将 <xref:System.ComponentModel.TypeConverterAttribute> 应用于附加成员的实现模式的 `Get` 访问器方法。  
   

@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: cabdfcad-f359-479b-b71c-8b2fad42ca49
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d06876b91c72b939768d480e40631a8e85170bc9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9cff30147da82896fb3a757ba2fed16d794ec3c9
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33568526"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46004044"
 ---
 # <a name="mapping-xml-data-types-to-clr-types"></a>将 XML 数据类型映射到 CLR 类型
 下表介绍 XML 数据类型与公共语言运行库 (CLR) 类型之间的默认映射。  
@@ -79,5 +79,6 @@ ms.locfileid: "33568526"
 |Comment 节点|<xref:System.Xml.XPath.XPathNavigator>|  
 |Processing Instruction 节点|<xref:System.Xml.XPath.XPathNavigator>|  
   
-## <a name="see-also"></a>请参阅  
- [System.Xml 类中的类型支持](../../../../docs/standard/data/xml/type-support-in-the-system-xml-classes.md)
+## <a name="see-also"></a>请参阅
+
+- [System.Xml 类中的类型支持](../../../../docs/standard/data/xml/type-support-in-the-system-xml-classes.md)

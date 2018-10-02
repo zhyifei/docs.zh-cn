@@ -1,6 +1,6 @@
 ---
 title: EndEnumeration 函数 （非托管 API 参考）
-description: EndEnumeration 函数将终止枚举。
+description: EndEnumeration 函数终止枚举。
 ms.date: 11/06/2017
 api_name:
 - EndEnumeration
@@ -16,15 +16,15 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d77497beb122bef580d6eb142fede33b8cf220e3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 33c73e58be39a7f1ffa9300947c3ee552231adab
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33459513"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43786344"
 ---
 # <a name="endenumeration-function"></a>EndEnumeration 函数
-终止通过调用启动枚举序列[BeginEnumeration 函数](beginenumeration.md)。  
+终止通过调用开始枚举序列[BeginEnumeration 函数](beginenumeration.md)。  
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
     
@@ -40,33 +40,33 @@ HRESULT EndEnumeration (
 ## <a name="parameters"></a>参数
 
 `vFunc`  
-[in]未使用此参数。
+[in]此参数是未使用。
 
 `ptr`  
-[in]指向的指针[IWbemClassObject](https://msdn.microsoft.com/library/aa391433%28v=vs.85%29.aspx)实例。
+[in]一个指向[IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject)实例。
 
 
 ## <a name="return-value"></a>返回值
 
-此函数返回以下值中定义*WbemCli.h*标头文件，或者你可以定义它们常量作为在代码中：
+此函数返回以下值中定义*WbemCli.h*标头文件，也可以在定义它们为常量在代码中：
 
-|返回的常量  |值  |描述  |
+|返回的常量  |“值”  |描述  |
 |---------|---------|---------|
-|`WBEM_E_FAILED` | 0x80041001 | 发生了常规错误。 |
+|`WBEM_E_FAILED` | 0x80041001 | 已存在时的常见错误。 |
 |`WBEM_S_NO_ERROR` | 0 | 函数调用成功。  |
   
 ## <a name="remarks"></a>备注
 
-此函数包装对的调用[IWbemClassObject::EndEnumeration](https://msdn.microsoft.com/library/aa391433%28v=vs.85%29.aspx)方法。
+此函数包装对的调用[IWbemClassObject::EndEnumeration](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject)方法。
 
-调用`EndEnumeration`函数不是必需的但它建议，因为它会释放枚举与关联的资源。 但是，resoruces 后被释放自动启动下一步枚举或释放的对象。
+调用`EndEnumeration`函数不是必需的但它建议，因为它释放与枚举关联的资源。 但是，资源将释放自动启动下一步枚举或释放的对象时。
 
 ## <a name="requirements"></a>要求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** WMINet_Utils.idl  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>请参阅  
 [WMI 和性能计数器 （非托管 API 参考）](index.md)

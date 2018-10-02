@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 6f4f3804-2ed7-41b4-a97a-6e32b93f6e05
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: afa22ed1fe1986712493c2aaa844d7f2c6ffd5bc
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 16ba8000544d0b7d35a818d41a75f38e6fd0293d
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33583125"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44178556"
 ---
 # <a name="how-to-listen-for-multiple-cancellation-requests"></a>如何：侦听多个取消请求
 此示例展示了如何同时侦听两个取消令牌，以便在其中任意一个令牌发出请求时取消操作。  
@@ -34,5 +34,6 @@ ms.locfileid: "33583125"
   
  虽然 <xref:System.AggregateException> 不得抛出，但此示例捕获到它的原因是，在实际情况下，任务委托抛出的除 <xref:System.OperationCanceledException> 外其他任何异常都包装在 <xref:System.OperationCanceledException> 中。  
   
-## <a name="see-also"></a>请参阅  
- [托管线程中的取消](../../../docs/standard/threading/cancellation-in-managed-threads.md)
+## <a name="see-also"></a>请参阅
+
+- [托管线程中的取消](../../../docs/standard/threading/cancellation-in-managed-threads.md)

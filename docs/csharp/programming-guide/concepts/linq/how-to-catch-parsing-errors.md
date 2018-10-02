@@ -2,12 +2,12 @@
 title: 如何：捕捉分析错误 (C#)
 ms.date: 07/20/2015
 ms.assetid: bfb612d4-5605-48ef-8c93-915cf9d5dcfb
-ms.openlocfilehash: 037e490fa7b0600b906ec310201e5d33c2f55baa
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 879a8f037e9d31051ef0d4059ee3ce2a2fca7a4d
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33333380"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43503920"
 ---
 # <a name="how-to-catch-parsing-errors-c"></a>如何：捕捉分析错误 (C#)
 本主题演示如何检测格式不正确或无效的 XML。  
@@ -42,5 +42,6 @@ The 'Contacts' start tag on line 1 does not match the end tag of 'Contcts'. Line
   
  有关 <xref:System.Xml.Linq.XElement.Parse%2A?displayProperty=nameWithType>、<xref:System.Xml.Linq.XDocument.Parse%2A?displayProperty=nameWithType>、<xref:System.Xml.Linq.XElement.Load%2A?displayProperty=nameWithType> 和 <xref:System.Xml.Linq.XDocument.Load%2A?displayProperty=nameWithType> 方法可能会引发的异常的更多信息，请参见 <xref:System.Xml.XmlReader> 文档。  
   
-## <a name="see-also"></a>请参阅  
- [分析 XML (C#)](../../../../csharp/programming-guide/concepts/linq/parsing-xml.md)
+## <a name="see-also"></a>请参阅
+
+- [分析 XML (C#)](../../../../csharp/programming-guide/concepts/linq/parsing-xml.md)

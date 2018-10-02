@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# language, finalizers
 - finalizers [C#]
 ms.assetid: 1ae6e46d-a4b1-4a49-abe5-b97f53d9e049
-ms.openlocfilehash: fc15818883736015419f8599d482185bbab5120a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b98d5eac29f498672000a7b0354734c15fd7400c
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33313961"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43526030"
 ---
 # <a name="finalizers-c-programming-guide"></a>终结器（C# 编程指南）
 终结器用于析构类的实例。  
@@ -57,7 +57,9 @@ protected override void Finalize()
 > [!NOTE]
 >  不应使用空终结器。 如果类包含终结器，会在 `Finalize` 队列中创建一个条目。 调用终结器时，会调用垃圾回收器来处理该队列。 空终结器只会导致不必要的性能损失。  
   
- 程序员无法控制何时调用终结器，因为这由垃圾回收器决定。 垃圾回收器检查应用程序不再使用的对象。 如果它认为某个对象符合终止条件，则调用终结器（如果有），并回收用来存储此对象的内存。 还可在程序退出后调用终结器。  
+ 程序员无法控制何时调用终结器，因为这由垃圾回收器决定。 垃圾回收器检查应用程序不再使用的对象。 如果它认为某个对象符合终止条件，则调用终结器（如果有），并回收用来存储此对象的内存。 
+ 
+ 在 .NET Framework 应用程序中（但不在 .NET Core 应用程序中），程序退出时也会调用终结器。 
   
  可以通过调用 <xref:System.GC.Collect%2A> 强制进行垃圾回收，但多数情况下应避免此操作，因为它可能会造成性能问题。  
   
@@ -83,8 +85,9 @@ protected override void Finalize()
 ## <a name="c-language-specification"></a>C# 语言规范  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.IDisposable>  
- [C# 编程指南](../../../csharp/programming-guide/index.md)  
- [构造函数](../../../csharp/programming-guide/classes-and-structs/constructors.md)  
- [垃圾回收](../../../standard/garbage-collection/index.md)
+## <a name="see-also"></a>请参阅
+
+- <xref:System.IDisposable>  
+- [C# 编程指南](../../../csharp/programming-guide/index.md)  
+- [构造函数](../../../csharp/programming-guide/classes-and-structs/constructors.md)  
+- [垃圾回收](../../../standard/garbage-collection/index.md)

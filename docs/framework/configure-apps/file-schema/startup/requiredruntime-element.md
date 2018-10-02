@@ -11,16 +11,15 @@ helpviewer_keywords:
 ms.assetid: 9fa1639e-beb8-43be-b7a4-12f7b229c34b
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 184547dd47e728f17f28105e74b2ca67c1436efc
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 7cb5e29f3d7fc1faffdba01a5322f1883fca8af0
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32749977"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47237080"
 ---
 # <a name="ltrequiredruntimegt-element"></a>&lt;requiredRuntime&gt;元素
-指定应用程序仅支持 1.0 版本的公共语言运行时。 此元素已弃用，并应不再使用。 [ `supportedRuntime` ](supportedruntime-element.md)元素应改为使用。
+指定应用程序仅支持 1.0 版本的公共语言运行时。 此元素已弃用，应不再使用。 [ `supportedRuntime` ](supportedruntime-element.md)元素应改为使用。
   
  \<configuration>  
 \<启动 >  
@@ -41,12 +40,12 @@ safemode="true|false"/>
   
 |特性|描述|  
 |---------------|-----------------|  
-|`version`|可选特性。<br /><br /> 一个字符串值，指定此应用程序支持的.NET framework 的版本。 字符串值必须与在.NET Framework 安装根目录下找到的目录名称匹配。 未分析的字符串值的内容。|  
-|`safemode`|可选特性。<br /><br /> 指定运行时启动代码是否搜索注册表项以确定运行时版本。|  
+|`version`|可选特性。<br /><br /> 一个字符串值，该值指定此应用程序支持的.NET framework 版本。 字符串值必须与.NET Framework 安装根目录下找到的目录名称匹配。 未分析的字符串值的内容。|  
+|`safemode`|可选特性。<br /><br /> 指定是否在运行时启动代码搜索注册表，以确定运行时版本。|  
   
 ## <a name="safemode-attribute"></a>安全模式属性  
   
-|值|描述|  
+|“值”|描述|  
 |-----------|-----------------|  
 |`false`|在注册表中查找运行时启动代码。 这是默认值。|  
 |`true`|运行时启动代码不会在注册表中查找。|  
@@ -62,12 +61,12 @@ safemode="true|false"/>
 |`startup`|包含`<requiredRuntime>`元素。|  
   
 ## <a name="remarks"></a>备注  
- 为支持仅运行时 1.0 版而生成的应用程序必须使用`<requiredRuntime>`元素。 使用版本 1.1 或更高版本的运行时生成的应用程序必须使用`<supportedRuntime>`元素。  
+ 仅支持 1.0 版的运行时生成的应用程序必须使用`<requiredRuntime>`元素。 构建使用 1.1 版或更高版本的运行时版本的应用程序必须使用`<supportedRuntime>`元素。  
   
 > [!NOTE]
->  如果你使用[CorBindToRuntimeByCfg](../../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimebycfg-function.md)函数来指定配置文件，必须使用`<requiredRuntime>`所有的运行时版本的元素。 `<supportedRuntime>`元素将被忽略，当你使用[CorBindToRuntimeByCfg](../../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimebycfg-function.md)。  
+>  如果您使用[CorBindToRuntimeByCfg](../../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimebycfg-function.md)函数以指定配置文件，则必须使用`<requiredRuntime>`所有版本的运行时的元素。 `<supportedRuntime>`使用时，将忽略元素[CorBindToRuntimeByCfg](../../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimebycfg-function.md)。  
   
- `version`属性字符串必须匹配的指定版本的.NET framework 的安装文件夹名。 此字符串不会被解释。 如果运行时启动代码未找到匹配的文件夹，则不会加载运行时;启动代码将显示一条错误消息并退出。  
+ `version`属性字符串必须匹配指定版本的.NET framework 的安装文件夹名称。 此字符串不解释。 如果运行时启动代码没有找到匹配的文件夹，则不会加载运行时;启动代码显示了一条错误消息并退出。  
   
 > [!NOTE]
 >  Microsoft Internet Explorer 中承载的应用程序的启动代码将忽略`<requiredRuntime>`元素。  
@@ -86,4 +85,4 @@ safemode="true|false"/>
 ## <a name="see-also"></a>请参阅  
  [启动设置架构](../../../../../docs/framework/configure-apps/file-schema/startup/index.md)  
  [配置文件架构](../../../../../docs/framework/configure-apps/file-schema/index.md)  
- [\<PaveOver> 指定要使用的运行时版本](http://msdn.microsoft.com/library/c376208d-980d-42b4-865b-fbe0d9cc97c2)
+ [\<PaveOver> 指定要使用的运行时版本](https://msdn.microsoft.com/library/c376208d-980d-42b4-865b-fbe0d9cc97c2)

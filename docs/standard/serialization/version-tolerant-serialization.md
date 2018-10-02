@@ -13,12 +13,12 @@ helpviewer_keywords:
 - BinaryFormatter class, samples
 - serialization, attributes
 ms.assetid: bea0ffe3-2708-4a16-ac7d-e586ed6b8e8d
-ms.openlocfilehash: 3be5c08ae2bffcf548fe1d635dd96ba29dcadca9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f26de2dbf8ec200a4b53195ae97bbb174e815166
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33592335"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "44042642"
 ---
 # <a name="version-tolerant-serialization"></a>版本容错序列化
 在 .NET Framework 1.0 和 1.1 版本中，创建可从应用程序的一个版本重用至下一个版本的可序列化类型时会产生问题。 如果通过添加额外字段来修改类型，则会出现以下问题：  
@@ -280,16 +280,17 @@ End Class
   
 -   避免版本管理分支。  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.SerializableAttribute>  
- <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter>  
- <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter>  
- <xref:System.Runtime.Serialization.OptionalFieldAttribute.VersionAdded%2A>  
- <xref:System.Runtime.Serialization.OptionalFieldAttribute>  
- <xref:System.Runtime.Serialization.OnDeserializingAttribute>  
- <xref:System.Runtime.Serialization.OnDeserializedAttribute>  
- <xref:System.Runtime.Serialization.OnDeserializingAttribute>  
- <xref:System.Runtime.Serialization.OnSerializedAttribute>  
- <xref:System.Runtime.Serialization.StreamingContext>  
- <xref:System.NonSerializedAttribute>  
- [二进制序列化](binary-serialization.md)
+## <a name="see-also"></a>请参阅
+
+- <xref:System.SerializableAttribute>  
+- <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter>  
+- <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter>  
+- <xref:System.Runtime.Serialization.OptionalFieldAttribute.VersionAdded%2A>  
+- <xref:System.Runtime.Serialization.OptionalFieldAttribute>  
+- <xref:System.Runtime.Serialization.OnDeserializingAttribute>  
+- <xref:System.Runtime.Serialization.OnDeserializedAttribute>  
+- <xref:System.Runtime.Serialization.OnDeserializingAttribute>  
+- <xref:System.Runtime.Serialization.OnSerializedAttribute>  
+- <xref:System.Runtime.Serialization.StreamingContext>  
+- <xref:System.NonSerializedAttribute>  
+- [二进制序列化](binary-serialization.md)

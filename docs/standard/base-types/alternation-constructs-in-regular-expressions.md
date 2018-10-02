@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 071e22e9-fbb0-4ecf-add1-8d2424f9f2d1
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 956d16b47fb31549de8f25c513d73c43ab41c267
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6b653972fad71ce3a89c35598513b94f71fb4bf0
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33574730"
+ms.lasthandoff: 09/28/2018
+ms.locfileid: "47425987"
 ---
 # <a name="alternation-constructs-in-regular-expressions"></a>正则表达式中的备用构造
 <a name="top"></a> 替换构造可修改正则表达式以启用 either/or 或条件匹配。 .NET 支持三种备用构造：  
@@ -132,5 +132,6 @@ ms.locfileid: "33574730"
  [!code-csharp[RegularExpressions.Language.Alternation#5](../../../samples/snippets/csharp/VS_Snippets_CLR/regularexpressions.language.alternation/cs/alternation5.cs#5)]
  [!code-vb[RegularExpressions.Language.Alternation#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.language.alternation/vb/alternation5.vb#5)]  
   
-## <a name="see-also"></a>请参阅  
- [正则表达式语言 - 快速参考](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)
+## <a name="see-also"></a>请参阅
+
+- [正则表达式语言 - 快速参考](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)

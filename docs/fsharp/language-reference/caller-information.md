@@ -1,13 +1,13 @@
 ---
 title: '调用方信息 （F #）'
-description: 描述如何使用调用方信息自变量特性来从方法获取调用方信息。
+description: 介绍如何使用调用方信息参数特性从一种方法获取调用方信息。
 ms.date: 04/25/2017
-ms.openlocfilehash: 6fd80213cdaf2c4662fd4c2ed9eaf8949e397efe
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0f2f4b16804d9156d234cc29d1f72ebe80a5b556
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33564752"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47216365"
 ---
 # <a name="caller-information"></a>调用方信息
 
@@ -23,7 +23,7 @@ ms.locfileid: "33564752"
 
 ## <a name="example"></a>示例
 
-下面的示例演示如何使用这些特性来跟踪调用方。
+下面的示例演示如何使用这些属性来跟踪调用方。
 
 ```fsharp
 open System.Diagnostics
@@ -47,18 +47,18 @@ type Tracer() =
 
 调用方信息特性只能应用于可选参数。 必须提供每个可选参数的显式值。 调用方信息特性会导致编译器编写使用调用方信息特性修饰每个可选参数的正确值。
 
-在编译时，调用方信息值将作为文本传入中间语言 (IL)。 与不同的结果[StackTrace](/dotnet/api/system.diagnostics.stacktrace)的异常，结果的属性不受模糊处理。
+在编译时，调用方信息值将作为文本传入中间语言 (IL)。 与不同的结果[StackTrace](/dotnet/api/system.diagnostics.stacktrace)模糊处理，不会影响有关例外情况，结果的属性。
 
 你可显式提供可选参数来控制调用方信息或隐藏调用方信息。
 
 ## <a name="member-names"></a>成员名称
 
-你可以使用[ `CallerMemberName` ](/dotnet/api/system.runtime.compilerservices.callermembernameattribute)特性来避免将成员名称指定`String`为调用的方法的自变量。 通过使用这种方法，你可以避免重命名重构不会更改的问题`String`值。 此好处对于以下任务特别有用：
+可以使用[ `CallerMemberName` ](/dotnet/api/system.runtime.compilerservices.callermembernameattribute)属性，若要避免指定将成员名称`String`到被调用方法的参数。 通过使用此方法，避免重命名重构不会更改的问题`String`值。 此好处对于以下任务特别有用：
 
 * 使用跟踪和诊断例程。
-* 实现[INotifyPropertyChanged](/dotnet/api/system.componentmodel.inotifypropertychanged)接口绑定数据时。 此接口允许对象的属性通知绑定控件该属性已更改，以便此控件能够显示更新的信息。 而无需[ `CallerMemberName` ](/dotnet/api/system.runtime.compilerservices.callermembernameattribute)属性，则必须将属性名称指定为文本。
+* 实现[INotifyPropertyChanged](/dotnet/api/system.componentmodel.inotifypropertychanged)接口时将数据绑定。 此接口允许对象的属性通知绑定控件该属性已更改，以便此控件能够显示更新的信息。 无需[ `CallerMemberName` ](/dotnet/api/system.runtime.compilerservices.callermembernameattribute)属性，您必须指定属性名称的文本。
 
-下图显示该成员时使用 CallerMemberName 属性返回的名称。
+下图显示了成员时使用 CallerMemberName 属性返回的名称。
 
 |调用发生中|成员名称结果|
 |-------------------|------------------|
@@ -71,6 +71,7 @@ type Tracer() =
 |无包含的成员（例如，程序集级别或应用于类型的特性）|可选参数的默认值。|
 
 ## <a name="see-also"></a>请参阅
- [特性](attributes.md)  
- [命名自变量](parameters-and-arguments.md#named-arguments)  
- [可选参数](parameters-and-arguments.md#optional-parameters)  
+
+- [特性](attributes.md)  
+- [命名的参数](parameters-and-arguments.md#named-arguments)  
+- [可选参数](parameters-and-arguments.md#optional-parameters)  

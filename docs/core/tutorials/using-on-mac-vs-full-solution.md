@@ -4,18 +4,18 @@ description: 本主题演示了构建包含可重用的库和单元测试的 .NE
 author: guardrex
 ms.author: mairaw
 ms.date: 06/12/2017
-ms.openlocfilehash: f8dfbb712957d22e5b4aa16920e7b003a79c4444
-ms.sourcegitcommit: c217b067985905cb21eafc5dd9a83568d7ff4e45
+ms.openlocfilehash: 17d7cc5b085b4d47ebf1e5ed9a766be9d5d8b01f
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/22/2018
-ms.locfileid: "36314693"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43530491"
 ---
 # <a name="building-a-complete-net-core-solution-on-macos-using-visual-studio-for-mac"></a>使用 Visual Studio for Mac 在 macOS 上构建完整的 .NET Core 解决方案
 
 Visual Studio for Mac 提供用于开发 .NET Core 应用程序的功能全面的集成开发环境 (IDE)。 本主题演示了构建包含可重用的库和单元测试的 .NET Core 解决方案。
 
-本教程介绍了如何创建接受来自用户的搜索词和文本字符串、使用类库中的方法计算字符串中出现的搜索词的次数，并将结果返回给用户的应用程序。 该解决方案还包括针对类库的单元测试作为测试驱动开发 (TDD) 概念的介绍。 如果希望使用完整的示例学习该教程，请下载[示例解决方案](https://github.com/dotnet/samples/blob/master/core/tutorials/using-on-mac-vs-full-solution/WordCounter)。 有关下载说明，请参阅[示例和教程](../../samples-and-tutorials/index.md#viewing-and-downloading-samples)。
+本教程介绍了如何创建接受来自用户的搜索词和文本字符串、使用类库中的方法计算字符串中出现的搜索词的次数，并将结果返回给用户的应用程序。 该解决方案还包括类库的单元测试（作为单元测试概念的介绍）。 如果希望使用完整的示例学习该教程，请下载[示例解决方案](https://github.com/dotnet/samples/blob/master/core/tutorials/using-on-mac-vs-full-solution/WordCounter)。 有关下载说明，请参阅[示例和教程](../../samples-and-tutorials/index.md#viewing-and-downloading-samples)。
 
 > [!NOTE]
 > 你的反馈非常有价值。 有两种方法可以向开发团队提供有关 Visual Studio for Mac 的反馈：
@@ -95,7 +95,7 @@ Visual Studio for Mac 提供用于开发 .NET Core 应用程序的功能全面�
            public void IgnoreCasing()
            {
                var wordCount = WordCount.GetWordCount("Jack", "Jack jack");
-   
+
                Assert.NotEqual(2, wordCount);
            }
        }
@@ -106,18 +106,18 @@ Visual Studio for Mac 提供用于开发 .NET Core 应用程序的功能全面�
 
    ![在 IDE 主窗口中检查 GetWordCount 的初始单元测试](./media/using-on-mac-vs-full-solution/vsmacfull08.png)
 
-   使用 TDD 时，请务必使新的测试失败一次，以确定其测试逻辑正确无误。 该方法使用“Jack”和“jack”（大写和小写）传递名称“Jack”（大写）和字符串。 如果 `GetWordCount` 方法运行正常，则返回搜索词的两个实例的计数。 为了有意进行失败测试，首先实现测试断言，即搜索词“Jack”的两个实例不是由 `GetWordCount` 方法返回的。 继续执行下一步骤，有意使测试失败。
+   请务必使新的测试失败一次，以确定其测试逻辑正确无误。 该方法使用“Jack”和“jack”（大写和小写）传递名称“Jack”（大写）和字符串。 如果 `GetWordCount` 方法运行正常，则返回搜索词的两个实例的计数。 为了有意进行失败测试，首先实现测试断言，即搜索词“Jack”的两个实例不是由 `GetWordCount` 方法返回的。 继续执行下一步骤，有意使测试失败。
 
 1. 打开屏幕右侧的“单元测试”面板。
 
-![“单元测试”面板](./media/using-on-mac-vs-full-solution/vsmacfull_UnitTestPanel.png)
+   ![“单元测试”面板](./media/using-on-mac-vs-full-solution/vsmacfull_UnitTestPanel.png)
 
 1. 单击“停靠”图标使此面板保持打开状态。
 
-![“单元测试”面板“停靠”图标](./media/using-on-mac-vs-full-solution/vsmacfull_UnitTestPanelDockIcon.png)
+   ![“单元测试”面板“停靠”图标](./media/using-on-mac-vs-full-solution/vsmacfull_UnitTestPanelDockIcon.png)
 
 1. 单击“全部运行”按钮。
-   
+
    测试失败，这是正确的结果。 测试方法断言不会从提供给 `GetWordCount` 的方法的字符串“Jack jack”中返回 `inputString`“Jack”的两个实例。 因为已在 `GetWordCount` 方法中对单词的大小写进行了分解，所以返回了两个实例。 2 *不等于* 2 的断言失败。 这是正确的结果，且测试的逻辑良好。
 
    ![测试失败](./media/using-on-mac-vs-full-solution/vsmacfull09.png)
@@ -135,8 +135,8 @@ Visual Studio for Mac 提供用于开发 .NET Core 应用程序的功能全面�
    [InlineData(0, "Ting", "Does not appear in the string.")]
    [InlineData(1, "Ting", "Ting appears once.")]
    [InlineData(2, "Ting", "Ting appears twice with Ting.")]
-   public void CountInstancesCorrectly(int count, 
-                                       string searchWord, 
+   public void CountInstancesCorrectly(int count,
+                                       string searchWord,
                                        string inputString)
    {
        Assert.NotEqual(count, WordCount.GetWordCount(searchWord,
@@ -145,7 +145,7 @@ Visual Studio for Mac 提供用于开发 .NET Core 应用程序的功能全面�
    ```
 
    `CountInstancesCorrectly` 检查 `GetWordCount` 方法计数是否正确。 `InlineData` 提供计数、搜索词和要检查的输入字符串。 测试方法为数据的每行运行一次。 请再次注意，使用 `Assert.NotEqual` 首先声明失败，即使知道数据中的计数是正确的，且这些值与 `GetWordCount` 方法所返回的计数相匹配。 有意执行测试失败的步骤起初看起来像是浪费时间，但是首先通过失败测试检查测试的逻辑对于测试逻辑而言，是一项重要检查。 如果在预期失败时找到一种可通过的测试方法，则你已在测试逻辑中找到 bug。 每次创建测试方法时，都值得采取此步骤。
-   
+
 1. 保存文件并重新运行测试。 大小写测试通过，但三个计数测试失败。 这与我们预期的结果完全一致。
 
    ![测试失败](./media/using-on-mac-vs-full-solution/vsmacfull11.png)
@@ -192,4 +192,4 @@ Visual Studio for Mac 提供用于开发 .NET Core 应用程序的功能全面�
 
 ## <a name="see-also"></a>请参阅
 
-[Visual Studio 2017 for Mac 发行说明](/visualstudio/releasenotes/vs2017-mac-relnotes)
+* [Visual Studio 2017 for Mac 发行说明](/visualstudio/releasenotes/vs2017-mac-relnotes)

@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: eea11fe5-d8b0-4314-bb5d-8a58166fb1c3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a764912e46707b6f10e720f95a7d971ec4fc8e15
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 088faaf454d3b188cff681fb7c41f3966b2e93fd
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33592166"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "45989847"
 ---
 # <a name="cancellation-in-managed-threads"></a>托管线程中的取消
 从 [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] 开始，.NET Framework 在协作取消异步操作或长时间运行的同步操作时使用通过一的模型。 此模型基于被称为取消标记的轻量对象。 调用一个或多个可取消操作的对象（例如通过创建新线程或任务）将标记传递给每个操作。 单个操作反过来可将标记的副本传递给其他操作。 稍后，创建标记的对象可使用此标记请求停止执行操作内容。 只有发出请求的对象，才能发出取消请求，而每个侦听器负责侦听是否有请求，并及时适当地响应请求。  
@@ -148,5 +148,6 @@ ms.locfileid: "33592166"
   
  <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> 和 <xref:System.Linq.ParallelEnumerable?displayProperty=nameWithType> 是遵循这些准则的示例类。 有关详细信息，请参阅[任务取消](../../../docs/standard/parallel-programming/task-cancellation.md)和[如何：取消 PLINQ 查询](../../../docs/standard/parallel-programming/how-to-cancel-a-plinq-query.md)。  
   
-## <a name="see-also"></a>请参阅  
- [托管线程处理基本知识](../../../docs/standard/threading/managed-threading-basics.md)
+## <a name="see-also"></a>请参阅
+
+- [托管线程处理基本知识](../../../docs/standard/threading/managed-threading-basics.md)

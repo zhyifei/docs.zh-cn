@@ -2,22 +2,22 @@
 title: 持久性已颁发令牌提供程序
 ms.date: 03/30/2017
 ms.assetid: 76fb27f5-8787-4b6a-bf4c-99b4be1d2e8b
-ms.openlocfilehash: 145faaae709119708240863f85eb5352fb2c5a1b
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: 7def23a00e42e134d8c0b9bd911710917681ad31
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33807546"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43504586"
 ---
 # <a name="durable-issued-token-provider"></a>持久性已颁发令牌提供程序
 此示例演示如何实现一个自定义客户端已颁发令牌提供程序。  
   
 ## <a name="discussion"></a>讨论  
- 令牌提供程序在 Windows Communication Foundation (WCF) 用于向安全基础结构提供凭据。 令牌提供程序一般检查目标并颁发相应的凭据，以使安全基础结构能够确保消息的安全。 WCF 配有[!INCLUDE[infocard](../../../../includes/infocard-md.md)]令牌提供程序。 自定义令牌提供程序在下列情况下有用：  
+ Windows Communication Foundation (WCF) 中的令牌提供程序用于向安全基础结构提供凭据。 令牌提供程序一般检查目标并颁发相应的凭据，以使安全基础结构能够确保消息的安全。 WCF 配有[!INCLUDE[infocard](../../../../includes/infocard-md.md)]令牌提供程序。 自定义令牌提供程序在下列情况下有用：  
   
 -   存在不能由内置令牌提供程序操作的凭据存储区。  
   
--   如果你想要提供您自己自定义机制，用于在用户提供详细信息，以便当 WCF 客户端使用凭据时转换从点的凭据。  
+-   如果你想要提供您自己自定义机制，用于转换从点凭据时用户提供到 WCF 客户端时使用的凭据的详细信息。  
   
 -   要生成一个自定义令牌。  
   
@@ -110,7 +110,7 @@ ms.locfileid: "33807546"
  安全令牌服务使用标准 wsHttpBinding 来公开一个终结点。 安全令牌服务响应客户端对令牌的请求，使用 Windows 帐户提供客户端身份验证，并颁发包含客户端用户名（作为已颁发令牌中的声明）的令牌。 作为创建令牌的一部分，安全令牌服务使用与 CN=STS 证书关联的私钥对令牌进行签名。 另外，它还创建对称密钥并使用与 CN=localhost 证书关联的公钥对该密钥进行加密。 在向客户端返回令牌的过程中，安全令牌服务还返回对称密钥。 客户端向计算器服务出示颁发的令牌，并通过使用该对称密钥对消息进行签名来证明客户端知道该密钥。  
   
 ## <a name="custom-client-credentials-and-token-provider"></a>自定义客户端凭据和令牌提供程序  
- 以下步骤显示如何开发一个自定义令牌提供程序缓存已颁发令牌并将其与 WCF 集成： 安全。  
+ 以下步骤演示如何开发用于缓存已颁发令牌的自定义令牌提供程序并将其与 WCF 集成： 安全。  
   
 #### <a name="to-develop-a-custom-token-provider"></a>开发自定义安全令牌提供程序  
   
@@ -250,7 +250,7 @@ ms.locfileid: "33807546"
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目录不存在，请转到[Windows Communication Foundation (WCF) 和针对.NET Framework 4 的 Windows Workflow Foundation (WF) 示例](http://go.microsoft.com/fwlink/?LinkId=150780)下载所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
+>  如果此目录不存在，请转到[Windows Communication Foundation (WCF) 和.NET Framework 4 的 Windows Workflow Foundation (WF) 示例](https://go.microsoft.com/fwlink/?LinkId=150780)若要下载所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Security\DurableIssuedTokenProvider`  
   

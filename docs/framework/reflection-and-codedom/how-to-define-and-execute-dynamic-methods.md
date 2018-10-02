@@ -11,15 +11,15 @@ helpviewer_keywords:
 ms.assetid: 07d08a99-62c5-4254-bce2-2a75e55a18ab
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 53142ffa38bda036dd558dd6d23912ebd2e393ec
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 865d9aa6806e00bb9cf7b3991b4f323d361cbb63
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33397021"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43785295"
 ---
 # <a name="how-to-define-and-execute-dynamic-methods"></a>如何：定义和执行动态方法
-以下过程介绍如何定义和执行简单的动态方法和绑定到类实例的动态方法。 有关动态方法的更多信息，请参阅 <xref:System.Reflection.Emit.DynamicMethod> 类和[反射发出动态方法应用场景](http://msdn.microsoft.com/library/7c27ea3d-0f24-4bf3-8ceb-f49d33faca5e)。  
+以下过程介绍如何定义和执行简单的动态方法和绑定到类实例的动态方法。 有关动态方法的更多信息，请参阅 <xref:System.Reflection.Emit.DynamicMethod> 类和[反射发出动态方法应用场景](https://msdn.microsoft.com/library/7c27ea3d-0f24-4bf3-8ceb-f49d33faca5e)。  
   
 ### <a name="to-define-and-execute-a-dynamic-method"></a>定义和执行动态方法  
   
@@ -124,5 +124,5 @@ ms.locfileid: "33397021"
   
 ## <a name="see-also"></a>请参阅  
  <xref:System.Reflection.Emit.DynamicMethod>  
- [使用反射发出](http://msdn.microsoft.com/library/ccc6540d-0e2c-4d89-b456-eb7353f9e9ac)  
- [反射发出动态方法应用场景](http://msdn.microsoft.com/library/7c27ea3d-0f24-4bf3-8ceb-f49d33faca5e)
+ [使用反射发出](https://msdn.microsoft.com/library/ccc6540d-0e2c-4d89-b456-eb7353f9e9ac)  
+ [反射发出动态方法应用场景](https://msdn.microsoft.com/library/7c27ea3d-0f24-4bf3-8ceb-f49d33faca5e)

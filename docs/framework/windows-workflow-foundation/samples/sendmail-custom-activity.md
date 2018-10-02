@@ -2,15 +2,15 @@
 title: SendMail 自定义活动
 ms.date: 03/30/2017
 ms.assetid: 947a9ae6-379c-43a3-9cd5-87f573a5739f
-ms.openlocfilehash: 4ad250b42ca06867d307148f93e11c59846a61f5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e9d27711754c3aa8ff7f68c23f528c9f5c4356f7
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33519699"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45747200"
 ---
 # <a name="sendmail-custom-activity"></a>SendMail 自定义活动
-本示例演示如何创建派生自 <xref:System.Activities.AsyncCodeActivity> 的自定义活动，以使用 SMTP 发送邮件供在工作流应用程序内使用。 自定义活动使用的功能<xref:System.Net.Mail.SmtpClient>以异步方式发送电子邮件以及发送邮件使用身份验证。 它还提供一些最终用户功能，例如测试模式、标记替换、文件模板和测试放置路径。  
+本示例演示如何创建派生自 <xref:System.Activities.AsyncCodeActivity> 的自定义活动，以使用 SMTP 发送邮件供在工作流应用程序内使用。 自定义活动使用的功能的<xref:System.Net.Mail.SmtpClient>以异步方式发送电子邮件以及发送身份验证的邮件。 它还提供一些最终用户功能，例如测试模式、标记替换、文件模板和测试放置路径。  
   
  下表详细描述了 `SendMail` 活动的参数。  
   
@@ -23,15 +23,15 @@ ms.locfileid: "33519699"
 |密码|String|设置用于验证发件人 <xref:System.Net.Mail.SmtpClient.Credentials%2A> 属性的凭据的密码。|  
 |Subject|<xref:System.Activities.InArgument%601>\<string>|邮件主题。|  
 |正文|<xref:System.Activities.InArgument%601>\<string>|邮件正文。|  
-|附件|<xref:System.Activities.InArgument%601>\<string>|用于存储附加到此电子邮件数据的附件集合。|  
+|附件|<xref:System.Activities.InArgument%601>\<string>|用于存储数据附加到此电子邮件的附件集合。|  
 |From|<xref:System.Net.Mail.MailAddress>|来自此电子邮件地址。|  
 |到|<xref:System.Activities.InArgument%601>\<<xref:System.Net.Mail.MailAddressCollection>>|包含此电子邮件的收件人的地址集合。|  
 |CC|<xref:System.Activities.InArgument%601>\<<xref:System.Net.Mail.MailAddressCollection>>|地址包含此电子邮件的抄送 (CC) 收件人的集合。|  
 |BCC|<xref:System.Activities.InArgument%601>\<<xref:System.Net.Mail.MailAddressCollection>>|包含此电子邮件的密件抄送 (BCC) 收件人的地址集合。|  
 |标记|<xref:System.Activities.InArgument%601>< IDictionary\<字符串、 字符串 >>|会在正文中进行替换的标记。 此功能允许用户在正文中指定一些值，这些值稍后可由使用此属性提供的标记进行替换。|  
 |BodyTemplateFilePath|String|正文模板的路径。 `SendMail` 活动将此文件的内容复制到其 body 属性中。<br /><br /> 此模板可包含由 tokens 属性的内容替换的标记。|  
-|TestMailTo|<xref:System.Net.Mail.MailAddress>|当设置此属性时，所有电子邮件发送到在其中指定的地址。<br /><br /> 此属性应在测试工作流时使用。 例如，如果你想要确保而无需将它们发送到实际收件人发送所有电子邮件。|  
-|TestDropPath|String|当设置此属性时，所有电子邮件还保存在指定的文件。<br /><br /> 此属性被用于在测试或调试工作流，以确保的格式和传出的电子邮件内容是适当的时间。|  
+|TestMailTo|<xref:System.Net.Mail.MailAddress>|当设置此属性时，所有电子邮件发送到在其中指定的地址。<br /><br /> 此属性应在测试工作流时使用。 例如，如果想要确保不将它们发送到实际收件人的情况下发送所有电子邮件。|  
+|TestDropPath|String|如果设置此属性，还会在指定的文件中保存所有电子邮件。<br /><br /> 此属性应在测试或调试工作流，以确保为相应的格式和内容的传出电子邮件时使用。|  
   
 ## <a name="solution-contents"></a>解决方案内容  
  解决方案包含两个项目。  
@@ -84,7 +84,7 @@ new SendMail
 ```  
   
 ### <a name="sending-mails-in-testing-mode"></a>在测试模式下发送电子邮件  
- 此代码段演示如何设置两个测试属性： 通过设置`TestMailTo`所有消息都将都发送到john.doe@contoso.con（不带 To、 Cc 和 Bcc 的值考虑）。 通过设置 TestDropPath，所有传出电子邮件还将记录在提供的路径中。 可单独设置这些属性（它们不相关）。  
+ 此代码片段演示如何设置两个测试属性： 通过设置`TestMailTo`到所有消息将发送到john.doe@contoso.con（而无需考虑的值的收件人、 抄送、 密件抄送）。 通过设置 TestDropPath，所有传出电子邮件还将记录在提供的路径中。 可单独设置这些属性（它们不相关）。  
   
 ```  
 new SendMail  
@@ -107,13 +107,13 @@ new SendMail
   
  有关设置 SMTP 服务器的详细信息，请参阅以下链接。  
   
--   [Microsoft Technet](http://go.microsoft.com/fwlink/?LinkId=166060)  
+-   [Microsoft Technet](https://go.microsoft.com/fwlink/?LinkId=166060)  
   
--   [配置 SMTP 服务 (IIS 6.0)](http://go.microsoft.com/fwlink/?LinkId=150456)  
+-   [配置 SMTP 服务 (IIS 6.0)](https://go.microsoft.com/fwlink/?LinkId=150456)  
   
--   [IIS 7.0： 配置 SMTP 电子邮件](http://go.microsoft.com/fwlink/?LinkId=150457)  
+-   [IIS 7.0： 配置 SMTP 电子邮件](https://go.microsoft.com/fwlink/?LinkId=150457)  
   
--   [如何安装 SMTP 服务](http://go.microsoft.com/fwlink/?LinkId=150458)  
+-   [如何安装 SMTP 服务](https://go.microsoft.com/fwlink/?LinkId=150458)  
   
  可下载第三方提供的 SMTP 模拟器。  
   
@@ -123,9 +123,9 @@ new SendMail
   
 2.  确保您具有对有效 SMTP 服务器的访问权限。 查看设置说明。  
   
-3.  使用您的服务器地址、 发件人和到电子邮件地址配置程序。  
+3.  使用你的服务器地址，并从 / 向电子邮件地址，请配置该程序。  
   
-     若要正确运行此示例，你可能需要在 Program.cs 中和 Sequence.xaml 中配置 From 和 To 电子邮件地址和 SMTP 服务器的地址的值。 您将需要更改这两个位置中的地址，因为程序用两种不同的方式发送邮件。  
+     若要正确运行此示例，可能需要在 Program.cs 中和 Sequence.xaml 中配置从 / 向电子邮件地址和 SMTP 服务器的地址的值。 您将需要更改这两个位置中的地址，因为程序用两种不同的方式发送邮件。  
   
 4.  要生成解决方案，按 Ctrl+Shift+B。  
   
@@ -136,6 +136,6 @@ new SendMail
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目录不存在，请转到[Windows Communication Foundation (WCF) 和针对.NET Framework 4 的 Windows Workflow Foundation (WF) 示例](http://go.microsoft.com/fwlink/?LinkId=150780)下载所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
+>  如果此目录不存在，请转到[Windows Communication Foundation (WCF) 和.NET Framework 4 的 Windows Workflow Foundation (WF) 示例](https://go.microsoft.com/fwlink/?LinkId=150780)若要下载所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\ActivityLibrary\SendMail`

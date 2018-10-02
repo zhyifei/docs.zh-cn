@@ -2,24 +2,24 @@
 title: 部分信任功能兼容性
 ms.date: 03/30/2017
 ms.assetid: a36a540b-1606-4e63-88e0-b7c59e0e6ab7
-ms.openlocfilehash: f8c63079161e6be16e2d36f721aeb98937f72097
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 97a51fe29677f46f9d3053250b65b3d818ca47dc
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33496780"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43864519"
 ---
 # <a name="partial-trust-feature-compatibility"></a>部分信任功能兼容性
-在部分受信任的环境中运行时，Windows Communication Foundation (WCF) 支持功能的有限的的子集。 部分信任中支持的功能围绕 [Supported Deployment Scenarios](../../../../docs/framework/wcf/feature-details/supported-deployment-scenarios.md) 主题中所述的一组特定的方案而设计。  
+在部分受信任的环境中运行时，Windows Communication Foundation (WCF) 支持有限的功能子集。 部分信任中支持的功能围绕 [Supported Deployment Scenarios](../../../../docs/framework/wcf/feature-details/supported-deployment-scenarios.md) 主题中所述的一组特定的方案而设计。  
   
 ## <a name="minimum-permission-requirements"></a>最低权限要求  
- WCF 下任一以下标准命名的权限集运行的应用程序中支持功能的子集：  
+ WCF 支持以下标准命名的权限集下运行的应用程序中的功能子集：  
   
 -   “中等信任”权限  
   
 -   “Internet 区域”权限  
   
- 尝试在部分受信任具有限制性更强的权限的应用程序中使用 WCF 可能会导致在运行时的安全异常。  
+ 尝试使用 WCF 在部分受信任应用程序中使用限制性更强的权限可能会导致在运行时的安全异常。  
   
 ## <a name="contracts"></a>协定  
  在部分信任环境下运行时，协定受到以下限制：  
@@ -63,7 +63,7 @@ ms.locfileid: "33496780"
   
 -   所有可序列化的 `[DataContract]` 类型必须为 `public`。  
   
--   `[DataMember]` 类型中的所有可序列化的 `[DataContract]` 字段或属性必须是公共字段或属性并且可以读取/写入。 序列化和反序列化[readonly](http://go.microsoft.com/fwlink/?LinkID=98854)在部分受信任的应用程序中运行 WCF 时，不支持字段。  
+-   `[DataMember]` 类型中的所有可序列化的 `[DataContract]` 字段或属性必须是公共字段或属性并且可以读取/写入。 序列化和反序列化[readonly](https://go.microsoft.com/fwlink/?LinkID=98854)部分受信任的应用程序中运行 WCF 时，不支持字段。  
   
 -   在部分信任环境中， `[Serializable]`/ISerializable 编程模型不受支持。  
   
@@ -76,7 +76,7 @@ ms.locfileid: "33496780"
 ### <a name="collection-types"></a>集合类型  
  一些集合类型可实现 <xref:System.Collections.Generic.IEnumerable%601> 和 <xref:System.Collections.IEnumerable>。 示例包括实现 <xref:System.Collections.Generic.ICollection%601>的类型。 这些类型可以实现 `public` 的 `GetEnumerator()`实现和 `GetEnumerator()`的显式实现。 在此情况下， <xref:System.Runtime.Serialization.DataContractSerializer> 调用 `public` 的 `GetEnumerator()`，而不调用 `GetEnumerator()`的显式实现。 如果所有 `GetEnumerator()` 实现都不是 `public` 而全部是显式实现，则 <xref:System.Runtime.Serialization.DataContractSerializer> 调用 `IEnumerable.GetEnumerator()`。  
   
- 当 WCF 运行时在部分信任环境中，如果集合类型`GetEnumerator()`实现`public`，或其中任何一个是显式接口实现，则引发安全异常。  
+ 对于集合类型，如果没有任何 WCF 在部分信任环境中，运行时`GetEnumerator()`实现`public`，或其中任何一个是显式接口实现，则引发安全异常。  
   
 ### <a name="netdatacontractserializer"></a>NetDataContractSerializer  
  在部分信任环境中， <xref:System.Collections.Generic.List%601>不支持许多 .NET Framework 集合类型，如 <xref:System.Collections.ArrayList>、 <xref:System.Collections.Generic.Dictionary%602> 、 <xref:System.Collections.Hashtable> 和 <xref:System.Runtime.Serialization.NetDataContractSerializer> 。 这些类型设置了 `[Serializable]` 属性，如前面“序列化”一节中所述，此属性在部分信任环境中不受支持。 <xref:System.Runtime.Serialization.DataContractSerializer> 以特殊方式处理集合，因而能够避开此限制， <xref:System.Runtime.Serialization.NetDataContractSerializer> 没有这类机制可避开此限制。  
@@ -86,16 +86,16 @@ ms.locfileid: "33496780"
  在部分信任环境中运行时，无法将代理项用于 <xref:System.Runtime.Serialization.NetDataContractSerializer> （使用 <xref:System.Runtime.Serialization.SurrogateSelector> 机制）。 请注意，此限制适用于使用代理项，而不适用于序列化代理项。  
   
 ## <a name="enabling-common-behaviors-to-run"></a>使常见行为能够运行  
- 服务或终结点行为未用标记<xref:System.Security.AllowPartiallyTrustedCallersAttribute>特性 (APTCA) 添加到[ \<commonBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/commonbehaviors.md)在部分信任中运行的应用程序时，将不会运行配置文件节发生此情况时引发环境和任何异常。 若要强制运行常见行为，必须执行下列选项之一：  
+ 服务或终结点行为未标有<xref:System.Security.AllowPartiallyTrustedCallersAttribute>特性 (APTCA) 添加到[ \<commonBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/commonbehaviors.md)节的配置文件，则不运行应用程序在部分信任环境中运行时发生这种情况时，将引发环境和任何异常。 若要强制运行常见行为，必须执行下列选项之一：  
   
 -   使用 <xref:System.Security.AllowPartiallyTrustedCallersAttribute> 属性标记常见行为，以使其在部署为部分信任应用程序时能够运行。 请注意，可以在计算机上设置注册表项，以防运行标有 APTCA 的程序集。 方法。  
   
 -   确保在将应用程序作为完全受信任的应用程序部署时，用户不能修改代码访问安全设置，从而无法在部分信任环境中运行该应用程序。 如果用户可以这样做，则不会运行该行为，且不引发任何异常。 若要确保这一点，请参阅**levelfinal**选项使用[Caspol.exe （代码访问安全策略工具）](../../../../docs/framework/tools/caspol-exe-code-access-security-policy-tool.md)。  
   
- 有关常见行为的示例，请参阅[如何： 在企业中锁定下终结点](../../../../docs/framework/wcf/extending/how-to-lock-down-endpoints-in-the-enterprise.md)。  
+ 有关常见行为的一个示例，请参阅[如何： 在企业中 Lock Down Endpoints](../../../../docs/framework/wcf/extending/how-to-lock-down-endpoints-in-the-enterprise.md)。  
   
 ## <a name="configuration"></a>配置  
- 有一个例外，部分受信任的代码只能加载本地 WCF 配置节`app.config`文件。 要加载 WCF 配置节引用 WCF 节在 machine.config 或根 web.config 文件，需要 configurationpermission （unrestricted）。 如果没有此权限，引用的 WCF 配置节 （行为、 绑定） 在异常中的本地配置文件结果之外时加载配置。  
+ 有一个例外，部分受信任的代码只能加载本地 WCF 配置节`app.config`文件。 若要加载 WCF 配置节引用 WCF 节在 machine.config 或根中的 web.config 文件需要 configurationpermission （unrestricted）。 如果没有此权限引用向 WCF 配置节 （行为、 绑定） 之外的本地配置文件会引发异常时加载配置。  
   
  一个例外情况是序列化的已知类型配置，如本主题中的“序列化”一节所述。  
   
@@ -108,7 +108,7 @@ ms.locfileid: "33496780"
  部分信任环境下支持有限的事件日志记录。 事件日志中仅记录服务激活错误和跟踪/消息日志记录错误。 为了避免向事件日志写入过多消息，一个进程最多可以记录 5 个事件。  
   
 ### <a name="message-logging"></a>消息日志记录  
- 当在部分信任环境中运行 WCF，消息日志记录将不起作用。 如果在部分信任下启用消息日志记录，不会出现服务激活失败，但不记录消息。  
+ 时在部分信任环境中运行 WCF 消息日志记录无效。 如果在部分信任下启用消息日志记录，不会出现服务激活失败，但不记录消息。  
   
 ### <a name="tracing"></a>跟踪  
  在部分信任环境中运行时可使用有限的跟踪功能。 在配置文件的 <`listeners`> 元素中，可以添加的类型仅有 <xref:System.Diagnostics.TextWriterTraceListener> 和新的 <xref:System.Diagnostics.EventSchemaTraceListener>。 使用标准的 <xref:System.Diagnostics.XmlWriterTraceListener> 可能会造成日志不完整或不正确。  
@@ -138,13 +138,13 @@ ms.locfileid: "33496780"
  在部分信任环境中使用跟踪时，应确保应用程序具有足够的权限来存储跟踪侦听器的输出。 例如，在使用 <xref:System.Diagnostics.TextWriterTraceListener> 将跟踪输出写入到文本文件中时，应确保应用程序具有成功写入到跟踪文件中所需的必要的 FileIOPermission。  
   
 > [!NOTE]
->  为了避免重复错误在跟踪文件中造成泛滥，WCF 禁用资源或第一次安全失败之后的操作跟踪。 对于在第一次尝试访问资源或执行操作时出现的每个失败的资源访问，将会有一个异常跟踪。  
+>  若要避免填满出现重复的错误的跟踪文件，WCF 会禁用资源或后第一次安全失败操作的跟踪。 对于在第一次尝试访问资源或执行操作时出现的每个失败的资源访问，将会有一个异常跟踪。  
   
 ## <a name="wcf-service-host"></a>WCF 服务主机  
- WCF 服务主机不支持部分信任。 如果你想要在部分信任环境中使用 WCF 服务，不要使用 WCF 服务库项目模板在 Visual Studio 中生成服务。 相反，新的网站在 Visual Studio 中通过选择创建 WCF 服务网站模板的说明进行操作，其中可托管 WCF 部分信任支持在其的 Web 服务器中的服务。  
+ WCF 服务主机不支持部分信任。 如果你想要在部分信任环境中使用的 WCF 服务，不要使用 WCF 服务库项目模板在 Visual Studio 中生成服务。 相反，新的 Web 站点在 Visual Studio 中通过选择创建 WCF 服务网站模板，可以托管在其支持 WCF 部分信任的 Web 服务器中的服务。  
   
 ## <a name="other-limitations"></a>其他限制  
- WCF 是通常仅限于由主机应用程序带来的安全注意事项。 例如，如果 WCF 托管在 XAML 浏览器应用程序 (XBAP)，它受到 XBAP 限制中所述[Windows Presentation Foundation 部分信任安全性](http://go.microsoft.com/fwlink/?LinkId=89138)。  
+ WCF 是通常仅适用于主机应用程序带来的安全注意事项。 例如，如果 WCF 托管在 XAML 浏览器应用程序 (XBAP) 中，则遵守 XBAP 限制，如中所述[Windows Presentation Foundation 部分信任安全](https://go.microsoft.com/fwlink/?LinkId=89138)。  
   
  在部分信任环境中运行 indigo2 时，不启用以下的其他功能：  
   
@@ -154,10 +154,10 @@ ms.locfileid: "33496780"
   
 -   性能计数器  
   
- 使用部分信任环境中不支持的 WCF 功能可能会导致在运行时异常。  
+ 使用不支持在部分信任环境中的 WCF 功能可能会导致在运行时异常。  
   
 ## <a name="unlisted-features"></a>未列出的功能  
- 若要在部分信任环境中运行时发现不可用的信息或操作，最好的方法是尝试在 `try` 块的内部访问资源或执行操作，然后 `catch` 失败。 为了避免重复错误在跟踪文件中造成泛滥，WCF 禁用资源或第一次安全失败之后的操作跟踪。 对于在第一次尝试访问资源或执行操作时出现的每个失败的资源访问，将会有一个异常跟踪。  
+ 若要在部分信任环境中运行时发现不可用的信息或操作，最好的方法是尝试在 `try` 块的内部访问资源或执行操作，然后 `catch` 失败。 若要避免填满出现重复的错误的跟踪文件，WCF 会禁用资源或后第一次安全失败操作的跟踪。 对于在第一次尝试访问资源或执行操作时出现的每个失败的资源访问，将会有一个异常跟踪。  
   
 ## <a name="see-also"></a>请参阅  
  <xref:System.ServiceModel.Channels.HttpTransportBindingElement>  

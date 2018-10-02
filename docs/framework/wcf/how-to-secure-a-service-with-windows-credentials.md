@@ -8,16 +8,15 @@ helpviewer_keywords:
 - WCF, security
 ms.assetid: d171b5ca-96ef-47ff-800c-c138023cf76e
 author: BrucePerlerMS
-manager: mbaldwin
-ms.openlocfilehash: 2fa8d753d5fb168c14ee71cbbf6de62e0e4aff9e
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: bf88073c25351aac0e421d69a947605de3e37759
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33806391"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47200693"
 ---
 # <a name="how-to-secure-a-service-with-windows-credentials"></a>如何：使用 Windows 凭据保护服务的安全
-本主题演示如何启用 Windows Communication Foundation (WCF) 服务驻留在 Windows 域中并由同一个域中的客户端上的传输安全。 有关此方案的详细信息，请参阅[使用 Windows 身份验证的传输安全性](../../../docs/framework/wcf/feature-details/transport-security-with-windows-authentication.md)。 有关示例应用程序，请参阅[WSHttpBinding](../../../docs/framework/wcf/samples/wshttpbinding.md)示例。  
+本主题演示如何启用驻留在 Windows 域，并且由同一个域中的客户端调用的 Windows Communication Foundation (WCF) 服务上的传输安全。 有关此方案的详细信息，请参阅[使用 Windows 身份验证的传输安全性](../../../docs/framework/wcf/feature-details/transport-security-with-windows-authentication.md)。 示例应用程序，请参阅[WSHttpBinding](../../../docs/framework/wcf/samples/wshttpbinding.md)示例。  
   
  本主题假定您已定义一个现有的协定接口和实现及其加载项。 您还可以修改一个现有的服务和客户端。  
   
@@ -68,7 +67,7 @@ ms.locfileid: "33806391"
      [!code-vb[c_SecureWindowsService#2](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securewindowsservice/vb/secureservice.vb#2)]  
   
 ### <a name="using-the-binding-in-a-client"></a>在客户端中使用该绑定  
- 此过程演示如何生成与服务进行通信的代理。 使用生成代理[ServiceModel 元数据实用工具 (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)它用服务元数据来创建代理。  
+ 此过程演示如何生成与服务进行通信的代理。 使用生成代理[ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)它使用服务元数据来创建代理。  
   
  此过程还创建 <xref:System.ServiceModel.WSHttpBinding> 类的实例以便与服务进行通信，然后调用服务。  
   
@@ -76,7 +75,7 @@ ms.locfileid: "33806391"
   
 ##### <a name="to-use-a-binding-in-a-client-with-code"></a>通过代码在客户端中使用绑定  
   
-1.  使用 SvcUtil.exe 工具根据服务的元数据生成代理代码。 有关详细信息，请参阅[如何： 创建客户端](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)。 生成的代理代码继承自<xref:System.ServiceModel.ClientBase%601>类，这确保每个客户端具有必要的构造函数、 方法和属性与 WCF 服务进行通信。 在本示例中，生成的代码包括 `CalculatorClient` 类，该类实现了 `ICalculator` 接口，以便与服务代码兼容。  
+1.  使用 SvcUtil.exe 工具根据服务的元数据生成代理代码。 有关详细信息，请参阅[如何： 创建客户端](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)。 生成的代理代码继承<xref:System.ServiceModel.ClientBase%601>类，该类可确保每个客户端具有必要的构造函数、 方法和属性与 WCF 服务进行通信。 在本示例中，生成的代码包括 `CalculatorClient` 类，该类实现了 `ICalculator` 接口，以便与服务代码兼容。  
   
 2.  在客户端程序的 `Main` 方法的开头插入此过程的代码。  
   
@@ -96,9 +95,9 @@ ms.locfileid: "33806391"
 ## <a name="using-the-configuration-file"></a>使用配置文件  
  如果不用程序代码创建绑定，还可以使用下面所示的配置文件绑定节的代码。  
   
- 如果你还没有定义的某个服务，请参阅[设计和实现服务](../../../docs/framework/wcf/designing-and-implementing-services.md)，和[配置服务](../../../docs/framework/wcf/configuring-services.md)。  
+ 如果你还没有定义的服务，请参阅[设计和实现服务](../../../docs/framework/wcf/designing-and-implementing-services.md)，并[配置服务](../../../docs/framework/wcf/configuring-services.md)。  
   
- **请注意**在服务和客户端配置文件中使用此配置代码。  
+ **请注意**服务和客户端配置文件中使用此配置代码。  
   
 #### <a name="to-enable-transfer-security-on-a-service-in-a-windows-domain-using-configuration"></a>使用配置在 Windows 域中的服务上启用传输安全  
   
@@ -110,7 +109,7 @@ ms.locfileid: "33806391"
   
 4.  添加一个 <`message`> 元素，并将 `clientCredentialType` 属性设置为 Windows。  
   
-5.  在服务的配置文件中，使用下面的代码替换 `<bindings>` 节。 如果你还没有服务配置文件，请参阅[到配置的服务和客户端使用的绑定](../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)。  
+5.  在服务的配置文件中，使用下面的代码替换 `<bindings>` 节。 如果你还没有服务配置文件，请参阅[到配置服务和客户端使用的绑定](../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)。  
   
     ```xml  
     <bindings>  
@@ -131,7 +130,7 @@ ms.locfileid: "33806391"
   
 1.  使用 SvcUtil.exe 工具根据服务的元数据生成代理代码和配置文件。 有关详细信息，请参阅[如何： 创建客户端](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)。  
   
-2.  替换[\<绑定 >](../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)包含上一节中的配置代码的生成的配置文件的部分。  
+2.  替换[\<绑定 >](../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)部分与上一节中的配置代码生成的配置文件。  
   
 3.  在客户端程序的 `Main` 方法的开头插入程序代码。  
   

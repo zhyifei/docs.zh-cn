@@ -2,12 +2,12 @@
 title: ISOF (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 5b2b0d34-d0a7-4bcd-baf2-58aa8456d00b
-ms.openlocfilehash: 7aecb8e2740ffd711278bfd5735c71c2dacf9c3c
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: dbea0c3a0087c88bf5ffda7b921764b8a0f9f21d
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32762135"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43465442"
 ---
 # <a name="isof-entity-sql"></a>ISOF (Entity SQL)
 确定表达式的类型是否为指定类型或指定类型的某个子类型。  
@@ -35,7 +35,7 @@ expression IS [ NOT ] OF ( [ ONLY ] type )
  如果 `true` 的类型为 T 且 T 为基类型或 `expression` 的派生类型，则返回 `type`；如果 `expression` 在运行时为 null，则返回 null；否则返回 `false`。  
   
 ## <a name="remarks"></a>备注  
- 表达式`expression IS NOT OF (type)`和`expression IS NOT OF (ONLY type)`语法上等效于`NOT (expression IS OF (type))`和`NOT (expression IS OF (ONLY type))`分别。  
+ 表达式`expression IS NOT OF (type)`并`expression IS NOT OF (ONLY type)`语法上等效于`NOT (expression IS OF (type))`和`NOT (expression IS OF (ONLY type))`分别。  
   
  下表显示了 `IS OF` 运算符在某些典型和非常见模式下的行为。 所有异常都在调用提供程序之前从客户端引发：  
   
@@ -52,7 +52,7 @@ expression IS [ NOT ] OF ( [ ONLY ] type )
 |RowType IS OF (RowType)|引发|  
   
 ## <a name="example"></a>示例  
- 下面的 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 查询使用 IS OF 运算符确定一个查询表达式的类型，然后使用 TREAT 运算符将一个类型为 Course 的对象转换为类型为 OnsiteCourse 的对象的集合。 查询基于[School 模型](http://msdn.microsoft.com/library/859a9587-81ea-4a45-9bc0-f8d330e1adac)。  
+ 下面的 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 查询使用 IS OF 运算符确定一个查询表达式的类型，然后使用 TREAT 运算符将一个类型为 Course 的对象转换为类型为 OnsiteCourse 的对象的集合。 查询基于[School 模型](https://msdn.microsoft.com/library/859a9587-81ea-4a45-9bc0-f8d330e1adac)。  
   
  [!code-csharp[DP EntityServices Concepts 2#TREAT_ISOF](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#treat_isof)]  
   

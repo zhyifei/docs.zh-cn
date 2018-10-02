@@ -7,12 +7,12 @@ helpviewer_keywords:
 - data [Windows Forms], architecture
 - Windows Forms controls, data binding
 ms.assetid: c3826d8e-ea25-4ad4-a669-45bfb19192aa
-ms.openlocfilehash: f0267a774d284cac1672ff971d6af3ec3439c84d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: cfb4c59c76142420f479b0b16a6d80317e98d159
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33540639"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43486005"
 ---
 # <a name="windows-forms-data-binding"></a>Windows 窗体数据绑定
 Windows 窗体中的数据绑定使你可以显示和更改窗体上的控件中的数据源的信息。 可以绑定到传统数据源和几乎任何包含数据的结构。  
@@ -37,7 +37,7 @@ Windows 窗体中的数据绑定使你可以显示和更改窗体上的控件中
  演示如何实现 <xref:System.ComponentModel.INotifyPropertyChanged> 接口。 该接口与属性在业务对象上更改的绑定控件通信  
   
  [如何：应用 PropertyNameChanged 模式](../../../docs/framework/winforms/how-to-apply-the-propertynamechanged-pattern.md)  
- 演示如何将应用*PropertyName*到 Windows 窗体用户控件的属性已更改模式。  
+ 演示如何将应用*PropertyName*Changed 模式 Windows 窗体用户控件的属性。  
   
  [如何：实现 ITypedList 接口](../../../docs/framework/winforms/how-to-implement-the-itypedlist-interface.md)  
  演示如何通过实现 <xref:System.ComponentModel.ITypedList> 接口，启用可绑定列表的架构发现。  
@@ -51,7 +51,7 @@ Windows 窗体中的数据绑定使你可以显示和更改窗体上的控件中
  [如何：确保子表中的选定行保持在正确的位置](../../../docs/framework/winforms/ensure-the-selected-row-in-a-child-table-correct.md)  
  演示如何确保在更改父表的字段时，选定的子表行不会更改。  
   
- 另请参阅[与数据绑定相关的接口](http://msdn.microsoft.com/library/41e17s4b\(v=vs.110\))，[如何： 在 Windows 窗体中导航数据](http://msdn.microsoft.com/library/b63ha24w\(v=vs.110\))，[如何： 创建 Windows 窗体上的简单绑定控件](http://msdn.microsoft.com/library/sw223a62\(v=vs.110\))。  
+ 另请参阅[与数据绑定相关的接口](https://msdn.microsoft.com/library/41e17s4b\(v=vs.110\))，[如何： 在 Windows 窗体中导航数据](https://msdn.microsoft.com/library/b63ha24w\(v=vs.110\))，[如何： 创建 Windows 窗体上的简单绑定控件](https://msdn.microsoft.com/library/sw223a62\(v=vs.110\))。  
   
 ## <a name="reference"></a>参考  
  <xref:System.Windows.Forms.Binding?displayProperty=nameWithType>  

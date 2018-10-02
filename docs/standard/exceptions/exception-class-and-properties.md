@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: e2e1f8c4-e7b4-467d-9a66-13c90861221d
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9cdc464234871fc07feeeb8dd02635ebdd151d76
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 283b3b1aa0d56b50b6f9e67b66de3e0b68ae2331
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33573114"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44216537"
 ---
 # <a name="exception-class-and-properties"></a>异常类和属性
 
@@ -41,5 +41,6 @@ Object
 
 建议仅抛出和捕获派生自 <xref:System.Exception> 的对象，但可以将派生自 <xref:System.Object> 类的任何对象作为异常抛出。 请注意，并非所有语言都支持引发和捕获不是从 <xref:System.Exception> 派生的对象。
   
-## <a name="see-also"></a>请参阅  
-[异常](index.md)
+## <a name="see-also"></a>请参阅
+
+- [异常](index.md)

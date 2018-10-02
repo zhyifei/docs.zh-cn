@@ -8,12 +8,12 @@ dev_langs:
 ms.assetid: 9f436bca-1b96-494b-a6d2-e102c7551752
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 87dc7d83692f081f2c48a34cef8a33564f0e3089
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1827e40256bc4307006ce081cbb6cbc44a89a0bc
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33577028"
+ms.lasthandoff: 09/28/2018
+ms.locfileid: "47216625"
 ---
 # <a name="remove-xml-data-using-xpathnavigator"></a>使用 XPathNavigator 移除 XML 数据
 <xref:System.Xml.XPath.XPathNavigator> 类提供一组方法用于移除 XML 文档中的节点和值。 要使用这些方法，<xref:System.Xml.XPath.XPathNavigator> 对象必须可编辑，即其 <xref:System.Xml.XPath.XPathNavigator.CanEdit%2A> 属性必须为 `true`。  
@@ -181,10 +181,11 @@ Console.WriteLine(navigator.OuterXml);
 ## <a name="saving-an-xml-document"></a>保存 XML 文档  
  使用 <xref:System.Xml.XmlDocument> 类的方法保存本主题中所述的方法对 <xref:System.Xml.XmlDocument> 对象的更改。 若要详细了解如何保存对 <xref:System.Xml.XmlDocument> 对象所做的更改，请参阅[保存和编写文档](../../../../docs/standard/data/xml/saving-and-writing-a-document.md)。  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Xml.XmlDocument>  
- <xref:System.Xml.XPath.XPathDocument>  
- <xref:System.Xml.XPath.XPathNavigator>  
- [使用 XPath 数据模型处理 XML 数据](../../../../docs/standard/data/xml/process-xml-data-using-the-xpath-data-model.md)  
- [使用 XPathNavigator 插入 XML 数据](../../../../docs/standard/data/xml/insert-xml-data-using-xpathnavigator.md)  
- [使用 XPathNavigator 修改 XML 数据](../../../../docs/standard/data/xml/modify-xml-data-using-xpathnavigator.md)
+## <a name="see-also"></a>请参阅
+
+- <xref:System.Xml.XmlDocument>  
+- <xref:System.Xml.XPath.XPathDocument>  
+- <xref:System.Xml.XPath.XPathNavigator>  
+- [使用 XPath 数据模型处理 XML 数据](../../../../docs/standard/data/xml/process-xml-data-using-the-xpath-data-model.md)  
+- [使用 XPathNavigator 插入 XML 数据](../../../../docs/standard/data/xml/insert-xml-data-using-xpathnavigator.md)  
+- [使用 XPathNavigator 修改 XML 数据](../../../../docs/standard/data/xml/modify-xml-data-using-xpathnavigator.md)

@@ -4,12 +4,12 @@ ms.date: 03/06/2018
 helpviewer_keywords:
 - parameters [C#], in
 - in parameters [C#]
-ms.openlocfilehash: 58500cf2caa1446af6b663f1b765c0be92309f1d
-ms.sourcegitcommit: 895c7602386a6dfe7ca4facce3d965b27e5c6e87
+ms.openlocfilehash: 54abd5192d0d9bb49be0a9feb8e5e4eaeb691a0c
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34311905"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43512010"
 ---
 # <a name="in-parameter-modifier-c-reference"></a>in 参数修饰符（C# 参考）
 
@@ -118,8 +118,10 @@ Method(in i); // passed by readonly reference, explicitly using `in`
 ## <a name="c-language-specification"></a>C# 语言规范  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>请参阅  
- [C# 参考](../index.md)  
- [C# 编程指南](../../programming-guide/index.md)  
- [C# 关键字](index.md)  
- [方法参数](method-parameters.md)[具有值类型的引用语义](../../reference-semantics-with-value-types.md)
+## <a name="see-also"></a>请参阅
+
+- [C# 参考](../index.md)  
+- [C# 编程指南](../../programming-guide/index.md)  
+- [C# 关键字](index.md)  
+- [方法参数](method-parameters.md)  
+- [具有值类型的引用语义](../../reference-semantics-with-value-types.md)  

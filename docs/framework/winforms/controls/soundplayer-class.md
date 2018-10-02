@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - sounds [Windows Forms], playing
 ms.assetid: f3945af9-045c-4e2d-b251-377c37ca2d77
-ms.openlocfilehash: 39d3c9d54eb61c0220a13870d5bd2ff69f8dfc38
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 57d9affa76a5f24e8a3ab6b3d13516396a82eb92
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33538803"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46002863"
 ---
 # <a name="soundplayer-class"></a>SoundPlayer 类
 `SoundPlayer` 类使你能够轻松地将声音纳入应用程序。  
@@ -51,4 +51,4 @@ ms.locfileid: "33538803"
  [在 Windows 窗体上使用的控件](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
  提供 Windows 窗体控件的完整列表，附带其使用情况相关信息的链接。  
   
- 另请参阅[超链接"http://msdn.microsoft.com/library/11bxex12(v=vs.110)"My.Computer 对象](http://msdn.microsoft.com/library/11bxex12\(v=vs.110\))或[My.Computer 对象](http://msdn.microsoft.com/library/11bxex12\(v=vs.120\))。
+ 另请参阅[超链接"http://msdn.microsoft.com/library/11bxex12(v=vs.110)"My.Computer 对象](https://msdn.microsoft.com/library/11bxex12\(v=vs.110\))或[My.Computer 对象](https://msdn.microsoft.com/library/11bxex12\(v=vs.120\))。

@@ -2,12 +2,12 @@
 title: FUNCTION (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 0bb88992-37ed-4991-ace5-55be612a2c4d
-ms.openlocfilehash: c101032aed3e94e6bbf1d16319a616131fa6b60b
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 1c02583400f9092dcb5008239bfd1fd73c63c326
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32760669"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43485542"
 ---
 # <a name="function-entity-sql"></a>FUNCTION (Entity SQL)
 在 Entity SQL 查询命令的范围内定义函数。  
@@ -61,9 +61,9 @@ FUNCTION function-name
   
  `A()`  
   
- 有关详细信息，请参阅[如何： 调用用户定义函数](http://msdn.microsoft.com/library/ad131b86-8b4e-4747-8605-d4fc64fb9d02)。  
+ 有关详细信息，请参阅[如何： 调用用户定义的函数](https://msdn.microsoft.com/library/ad131b86-8b4e-4747-8605-d4fc64fb9d02)。  
   
- 还可以在模型本身中声明函数。 在模型中声明的函数的执行方式与在命令中内联声明的函数的执行方式相同。 有关详细信息，请参阅[用户定义函数](../../../../../../docs/framework/data/adonet/ef/language-reference/user-defined-functions-entity-sql.md)。  
+ 还可以在模型本身中声明函数。 在模型中声明的函数的执行方式与在命令中内联声明的函数的执行方式相同。 有关详细信息，请参阅[用户定义的函数](../../../../../../docs/framework/data/adonet/ef/language-reference/user-defined-functions-entity-sql.md)。  
   
 ## <a name="example"></a>示例  
  下面的 Entity SQL 命令定义一个函数 `Products` ，该函数采用整数值来筛选返回的产品。  

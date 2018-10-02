@@ -6,13 +6,12 @@ helpviewer_keywords:
 ms.assetid: 3f694a1c-de5d-47cf-a6eb-cfc369fb8a9f
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 2213b5401c7b82771dcf7a1c982f1b3d0f347832
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a7fe54911755863adc6a9b2bd91eff5cad9f9d4e
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33395253"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47193039"
 ---
 # <a name="configuring-caching-in-network-applications"></a>配置网络应用程序中的缓存
 若要配置缓存，需要在应用程序级别或 <xref:System.Net.WebRequest> 级别指定缓存策略。 以下主题提供代码示例，演示如何配置应用程序和请求来使用缓存。  

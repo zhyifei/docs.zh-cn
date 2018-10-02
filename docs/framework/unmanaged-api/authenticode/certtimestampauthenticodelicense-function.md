@@ -10,12 +10,12 @@ api_type:
 ms.assetid: d468325a-21c5-43ce-8567-84e342b22308
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b110adac8c1ae68a3918a9e0fdf3f3eb4d017f0f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: fd77a8a81718837d55f3018564d0f4ba8fdc95ee
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33406203"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47198899"
 ---
 # <a name="certtimestampauthenticodelicense-function"></a>CertTimestampAuthenticodeLicense 函数
 为验证码 XrML 许可证添加时间戳。  
@@ -32,13 +32,13 @@ HRESULT CertTimestampAuthenticodeLicense (
   
 #### <a name="parameters"></a>参数  
  `pSignedLicenseBlob`  
- [in] 要添加时间戳的已签名验证码 XrML 许可证。 请参阅[CRYPTOAPI_BLOB](http://msdn.microsoft.com/library/windows/desktop/aa380238.aspx)结构。  
+ [in] 要添加时间戳的已签名验证码 XrML 许可证。 请参阅[CRYPTOAPI_BLOB](/windows/desktop/api/dpapi/ns-dpapi-_cryptoapi_blob)结构。  
   
  `pwszTimestampURI`  
  [in] 时间戳服务器的 URI。  
   
  `pTimestampSignatureBlob`  
- [out] 指向 CRYPT_DATA_BLOB 的指针，用于接收 base64 编码的时间戳签名。 在调用方负责释放`pTimestampSignatureBlob` -> `pbData`与`HepFree()`后使用。 请参阅[CRYPTOAPI_BLOB](http://msdn.microsoft.com/library/windows/desktop/aa380238.aspx)结构。  
+ [out] 指向 CRYPT_DATA_BLOB 的指针，用于接收 base64 编码的时间戳签名。 它是调用方负责释放`pTimestampSignatureBlob` -> `pbData`与`HepFree()`后使用。 请参阅[CRYPTOAPI_BLOB](/windows/desktop/api/dpapi/ns-dpapi-_cryptoapi_blob)结构。  
   
 ## <a name="remarks"></a>备注  
  时间戳签名实际上是一条 PKCS #7 SignedData 消息，其内容是许可证签名中 SignatureValue 的二进制格式。 基本上，它充当许可证的副署。  

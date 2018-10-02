@@ -2,17 +2,17 @@
 title: 参考
 ms.date: 03/30/2017
 ms.assetid: 312c3935-a947-4220-a837-0039d9fc458b
-ms.openlocfilehash: 144b41a5847bee997253f1b39a27dbadc6429338
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3edfbe7d650fead507946610de8e76d27e94136f
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33360111"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47202704"
 ---
 # <a name="reference"></a>参考
 本节提供针对 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 开发人员的参考信息。  
   
- 您还将建议以搜索特定问题，Microsoft 文档，尤其是参与[LINQ 论坛](http://go.microsoft.com/fwlink/?LinkId=76488)，可以与专家们讨论更复杂的主题的详细信息。 此外，您还可以学习详细介绍 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 技术并包含 Visual Basic 和 C# 代码示例的白皮书。 有关详细信息，请参阅[LINQ to SQL： 关系数据的.net 语言集成查询](http://go.microsoft.com/fwlink/?LinkId=93205)。  
+ 您还将搜索特定问题，Microsoft 文档，尤其是参与我们鼓励[LINQ 论坛](https://go.microsoft.com/fwlink/?LinkId=76488)，可以与专家们讨论更复杂的主题的详细信息。 此外，您还可以学习详细介绍 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 技术并包含 Visual Basic 和 C# 代码示例的白皮书。 有关详细信息，请参阅[LINQ to SQL： 关系数据的.net 语言集成查询](https://go.microsoft.com/fwlink/?LinkId=93205)。  
   
 ## <a name="in-this-section"></a>本节内容  
  [数据类型和函数](../../../../../../docs/framework/data/adonet/sql/linq/data-types-and-functions.md)  
@@ -31,7 +31,7 @@ ms.locfileid: "33360111"
  提供有关 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 的常见问题解答。  
   
  [SQL Server Compact 与 LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/sql-server-compact-and-linq-to-sql.md)  
- 描述如何[!INCLUDE[ssEW](../../../../../../includes/ssew-md.md)]区别中的 SQL Server[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]应用程序。  
+ 介绍如何[!INCLUDE[ssEW](../../../../../../includes/ssew-md.md)]不同于中的 SQL Server[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]应用程序。  
   
  [标准查询运算符转换](../../../../../../docs/framework/data/adonet/sql/linq/standard-query-operator-translation.md)  
  介绍 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 如何将标准查询运算符转换为 SQL 命令。  
@@ -40,8 +40,8 @@ ms.locfileid: "33360111"
  [LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/index.md)  
  提供访问 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 主题的门户。  
   
- [LINQ（语言集成查询）](http://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d)  
+ [LINQ（语言集成查询）](https://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d)  
  提供访问 [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)] 主题的门户。  
   
- [LinqDataSource 技术概述](http://msdn.microsoft.com/library/104cfc3f-7385-47d3-8a51-830dfa791136)  
+ [LinqDataSource 技术概述](https://msdn.microsoft.com/library/104cfc3f-7385-47d3-8a51-830dfa791136)  
  介绍 <xref:System.Web.UI.WebControls.LinqDataSource> 控件如何通过 [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)] 数据源控件结构向 Web 开发人员公开 [!INCLUDE[vstecasp](../../../../../../includes/vstecasp-md.md)]。

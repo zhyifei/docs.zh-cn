@@ -6,25 +6,24 @@ dev_langs:
 - vb
 ms.assetid: 12300bf4-c730-4405-9f65-d286f68b5a43
 author: BrucePerlerMS
-manager: mbaldwin
-ms.openlocfilehash: 715c813015fdb4b52444efca0bdcfc99acc92c21
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 25e48125cff5a9761d0b880bf755a94463d42f19
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33507749"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47193876"
 ---
 # <a name="securitybindingelement-authentication-modes"></a>SecurityBindingElement 身份验证模式
-Windows Communication Foundation (WCF) 提供了几种模式的客户端和服务互相进行身份验证。 您可以通过使用 <xref:System.ServiceModel.Channels.SecurityBindingElement> 类上的静态方法或通过配置为这些身份验证模式创建安全绑定元素。 本主题简要说明 18 种身份验证模式。  
+Windows Communication Foundation (WCF) 提供了多个模式的客户端和服务互相进行身份验证。 您可以通过使用 <xref:System.ServiceModel.Channels.SecurityBindingElement> 类上的静态方法或通过配置为这些身份验证模式创建安全绑定元素。 本主题简要说明 18 种身份验证模式。  
   
- 有关身份验证模式之一中使用元素的示例，请参阅[如何： 为指定的身份验证模式创建 SecurityBindingElement](../../../../docs/framework/wcf/feature-details/how-to-create-a-securitybindingelement-for-a-specified-authentication-mode.md)。  
+ 有关使用该元素的一种身份验证模式的示例，请参阅[如何： 为指定身份验证模式创建 SecurityBindingElement](../../../../docs/framework/wcf/feature-details/how-to-create-a-securitybindingelement-for-a-specified-authentication-mode.md)。  
   
 ## <a name="basic-configuration-programming"></a>基本配置编程  
  下面的过程说明如何在配置文件中设置身份验证模式。  
   
 #### <a name="to-set-the-authentication-mode-in-configuration"></a>在配置中设置身份验证模式  
   
-1.  到[\<绑定 >](../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)元素中，添加[ \<customBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)。  
+1.  向[\<绑定 >](../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)元素中，添加[ \<customBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)。  
   
 2.  作为子元素添加[\<绑定 >](../../../../docs/framework/misc/binding.md)元素`<customBinding>`元素。  
   
@@ -56,7 +55,7 @@ Windows Communication Foundation (WCF) 提供了几种模式的客户端和服�
 ## <a name="mode-descriptions"></a>模式说明  
   
 ### <a name="anonymousforcertificate"></a>AnonymousForCertificate  
- 在此身份验证模式中，客户端是匿名的，因此使用 X.509 证书对服务进行身份验证。 安全绑定元素是由 <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> 方法返回的 <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateAnonymousForCertificateBindingElement%2A>。 或者，设置`authenticationMode`属性 <`security`> 元素`AnonymousForCertificate`。  
+ 在此身份验证模式中，客户端是匿名的，因此使用 X.509 证书对服务进行身份验证。 安全绑定元素是由 <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> 方法返回的 <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateAnonymousForCertificateBindingElement%2A>。 或者，设置`authenticationMode`属性的 <`security`> 元素`AnonymousForCertificate`。  
   
 ### <a name="anonymousforsslnegotiated"></a>AnonymousForSslNegotiated  
  在此身份验证模式中，客户端是匿名的，因此使用在运行时进行协商的 X.509 证书对服务进行身份验证。 安全绑定元素是在为第一个参数传递 <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> 值时由 <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateSslNegotiationBindingElement%2A> 方法返回的 `false`。 或者，将 `authenticationMode` 属性设置为 `AnonymousForSslNegotiated`。  
@@ -80,7 +79,7 @@ Windows Communication Foundation (WCF) 提供了几种模式的客户端和服�
  在此身份验证模式下，客户端使用 Kerberos 票证向服务进行身份验证。 该票证还提供服务器身份验证。 安全绑定元素是由 `SymmetricSecurityBindingElement` 方法返回的 <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateKerberosBindingElement%2A>。 或者，将 `authenticationMode` 属性设置为 `Kerberos`。  
   
 > [!NOTE]
->  若要使用此身份验证模式，服务帐户必须与服务主体名称 (SPN) 关联。 为此，请在 NETWORK SERVICE 帐户或 LOCAL SYSTEM 帐户下运行服务。 也可以使用 SetSpn.exe 工具为服务帐户创建一个 SPN。 在任一情况下，客户端必须使用正确的 SPN 中[ \<servicePrincipalName >](../../../../docs/framework/configure-apps/file-schema/wcf/serviceprincipalname.md)元素，或通过使用<xref:System.ServiceModel.EndpointAddress>构造函数。 有关详细信息，请参阅[服务标识和身份验证](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)。  
+>  若要使用此身份验证模式，服务帐户必须与服务主体名称 (SPN) 关联。 为此，请在 NETWORK SERVICE 帐户或 LOCAL SYSTEM 帐户下运行服务。 也可以使用 SetSpn.exe 工具为服务帐户创建一个 SPN。 在任一情况下，客户端必须使用在正确的 SPN [ \<servicePrincipalName >](../../../../docs/framework/configure-apps/file-schema/wcf/serviceprincipalname.md)元素，或使用<xref:System.ServiceModel.EndpointAddress>构造函数。 有关详细信息，请参阅[服务标识和身份验证](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)。  
   
 > [!NOTE]
 >  当使用 `Kerberos` 身份验证模式时，不支持 <xref:System.Security.Principal.TokenImpersonationLevel.Anonymous> 和 <xref:System.Security.Principal.TokenImpersonationLevel.Delegation> 模拟级别。  
@@ -89,7 +88,7 @@ Windows Communication Foundation (WCF) 提供了几种模式的客户端和服�
  在此身份验证模式下，客户端使用 Kerberos 票证向服务进行身份验证。 Kerberos 令牌作为认可的支持令牌（即签署消息签名的令牌）显示在 SOAP 层上。 在传输层，服务是用 X.509 证书进行身份验证的。 安全绑定元素是由 `TransportSecurityBindingElement` 方法返回的 <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateKerberosOverTransportBindingElement%2A>。 或者，将 `authenticationMode` 属性设置为 `KerberosOverTransport`。  
   
 > [!NOTE]
->  若要使用此身份验证模式，服务帐户必须与 SPN 关联。 为此，请在 NETWORK SERVICE 帐户或 LOCAL SYSTEM 帐户下运行服务。 也可以使用 SetSpn.exe 工具为服务帐户创建一个 SPN。 在任一情况下，客户端必须使用正确的 SPN 中[ \<servicePrincipalName >](../../../../docs/framework/configure-apps/file-schema/wcf/serviceprincipalname.md)元素，或通过使用<xref:System.ServiceModel.EndpointAddress>构造函数。 有关详细信息，请参阅[服务标识和身份验证](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)。  
+>  若要使用此身份验证模式，服务帐户必须与 SPN 关联。 为此，请在 NETWORK SERVICE 帐户或 LOCAL SYSTEM 帐户下运行服务。 也可以使用 SetSpn.exe 工具为服务帐户创建一个 SPN。 在任一情况下，客户端必须使用在正确的 SPN [ \<servicePrincipalName >](../../../../docs/framework/configure-apps/file-schema/wcf/serviceprincipalname.md)元素，或使用<xref:System.ServiceModel.EndpointAddress>构造函数。 有关详细信息，请参阅[服务标识和身份验证](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)。  
   
 ### <a name="mutualcertificate"></a>MutualCertificate  
  在此身份验证模式中，客户端使用 X.509 证书进行身份验证，此证书作为认可的支持令牌（即签署消息签名的令牌）显示在 SOAP 层上。 同样使用 X.509 证书对服务进行身份验证。 安全绑定元素是由 `SymmetricSecurityBindingElement` 方法返回的 <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateMutualCertificateBindingElement%2A>。 或者，将 `authenticationMode` 属性设置为 `MutualCertificate`。  
@@ -97,7 +96,7 @@ Windows Communication Foundation (WCF) 提供了几种模式的客户端和服�
 ### <a name="mutualcertificateduplex"></a>MutualCertificateDuplex  
  在此身份验证模式中，客户端使用 X.509 证书进行身份验证，此证书作为认可的支持令牌（即签署消息签名的令牌）显示在 SOAP 层上。 同样使用 X.509 证书对服务进行身份验证。 此绑定是由 `AsymmetricSecurityBindingElement` 方法返回的 <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateMutualCertificateDuplexBindingElement%2A>。 或者，将 `authenticationMode` 属性设置为 `MutualCertificateDuplex`。  
   
-### <a name="mutalsslnegotiation"></a>MutalSslNegotiation  
+### <a name="mutualsslnegotiated"></a>MutualSslNegotiated  
  在此身份验证模式中，客户端和服务都使用 X.509 证书进行身份验证。 安全绑定元素是在为第一个参数传递 `SymmetricSecurityBindingElement` 值时由 <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateSslNegotiationBindingElement%2A> 方法返回的 `true`。 或者，将 `authenticationMode` 属性设置为 `MutualSslNegotiated`。  
   
 ### <a name="secureconversation"></a>SecureConversation  

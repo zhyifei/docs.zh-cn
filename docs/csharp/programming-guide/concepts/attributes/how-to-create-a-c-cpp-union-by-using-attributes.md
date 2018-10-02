@@ -2,12 +2,12 @@
 title: 如何：使用特性创建 C-C++ 联合 (C#)
 ms.date: 07/20/2015
 ms.assetid: 85f35e56-26e0-4d31-9f3a-89bd4005e71a
-ms.openlocfilehash: 30a8be9021495aa4cf61010508762999cdf91ff4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8b5a88656b1172407c3e5b9f5198d5acae7bf9e0
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33315836"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43798504"
 ---
 # <a name="how-to-create-a-cc-union-by-using-attributes-c"></a>如何：使用特性创建 C/C++ 联合 (C#)
 通过使用特性，可自定义结构在内存中的布局方式。 例如，可使用 `StructLayout(LayoutKind.Explicit)` 和 `FieldOffset` 特性在 C/C++ 中创建所谓的联合。  
@@ -66,12 +66,13 @@ ms.locfileid: "33315836"
   
  两个整数字段 `i1` 和 `i2` 共享与 `lg` 相同的内存位置。 使用平台调用时，这种对结构布局的控制很有用。  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Reflection>  
- <xref:System.Attribute>  
- [C# 编程指南](../../../../csharp/programming-guide/index.md)  
- [特性](../../../../../docs/standard/attributes/index.md)  
- [反射 (C#)](../../../../csharp/programming-guide/concepts/reflection.md)  
- [特性 (C#)](../../../../csharp/programming-guide/concepts/attributes/index.md)  
- [创建自定义特性 (C#)](../../../../csharp/programming-guide/concepts/attributes/creating-custom-attributes.md)  
- [使用反射访问特性 (C#)](../../../../csharp/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md)
+## <a name="see-also"></a>请参阅
+
+- <xref:System.Reflection>  
+- <xref:System.Attribute>  
+- [C# 编程指南](../../../../csharp/programming-guide/index.md)  
+- [特性](../../../../../docs/standard/attributes/index.md)  
+- [反射 (C#)](../../../../csharp/programming-guide/concepts/reflection.md)  
+- [特性 (C#)](../../../../csharp/programming-guide/concepts/attributes/index.md)  
+- [创建自定义特性 (C#)](../../../../csharp/programming-guide/concepts/attributes/creating-custom-attributes.md)  
+- [使用反射访问特性 (C#)](../../../../csharp/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md)

@@ -4,12 +4,12 @@ description: 单元测试从未如此简单。 了解如何在 .NET Core 和 .NE
 author: ardalis
 ms.author: wiwagn
 ms.date: 08/30/2017
-ms.openlocfilehash: b3d8393cf285eae3493328b16c3dc038af208da6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4a1d880da796aac40da93ca2513b6163200ca3c1
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33212363"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46004385"
 ---
 # <a name="unit-testing-in-net-core-and-net-standard"></a>.NET Core 和 .NET Standard 中的单元测试
 
@@ -17,7 +17,7 @@ ms.locfileid: "33212363"
 
 .NET Core 2.0 支持 [.NET Standard 2.0](../../standard/net-standard.md)。 本部分中用于演示单元测试的库依赖 .NET Standard，同时也适用于其他项目类型。
 
-自 .NET Core 2.0 起，提供适用于 Visual Basic、F# 和 C# 的单元测试项目模板。
+自 .NET Core 2.0 起，提供适用于 C#、F# 和 Visual Basic 的单元测试项目模板。
 
 ## <a name="getting-started-with-testing"></a>测试入门
 
@@ -34,18 +34,18 @@ ms.locfileid: "33212363"
 
 下面的演练介绍了这些组合使用方式：
 
-* [结合使用 .NET Core CLI 与 XUnit 和 C#](unit-testing-with-dotnet-test.md) 创建单元测试。
+* [结合使用 .NET Core CLI 与 xUnit 和 C#](unit-testing-with-dotnet-test.md) 创建单元测试。
 * [结合使用 .NET Core CLI 与 NUnit 和 C#](unit-testing-with-nunit.md) 创建单元测试。
 * [结合使用 .NET Core CLI 与 MSTest 和 C#](unit-testing-with-mstest.md) 创建单元测试。
-* [结合使用 .NET Core CLI 与 XUnit 和 F#](unit-testing-fsharp-with-dotnet-test.md) 创建单元测试。
+* [结合使用 .NET Core CLI 与 xUnit 和 F#](unit-testing-fsharp-with-dotnet-test.md) 创建单元测试。
 * [结合使用 .NET Core CLI 与 NUnit 和 F#](unit-testing-fsharp-with-nunit.md) 创建单元测试。
 * [结合使用 .NET Core CLI 与 MSTest 和 F#](unit-testing-fsharp-with-mstest.md) 创建单元测试。
-* [结合使用 .NET Core CLI 与 XUnit 和 Visual Basic](unit-testing-visual-basic-with-dotnet-test.md) 创建单元测试。
+* [结合使用 .NET Core CLI 与 xUnit 和 Visual Basic](unit-testing-visual-basic-with-dotnet-test.md) 创建单元测试。
 * [结合使用 .NET Core CLI 与 NUnit 和 Visual Basic](unit-testing-visual-basic-with-nunit.md) 创建单元测试。
 * [结合使用 .NET Core CLI 与 MSTest 和 Visual Basic](unit-testing-visual-basic-with-mstest.md) 创建单元测试。
 
 可以选择不同的语言用于类库和单元测试库。 通过混合搭配参考上面引用的演练，可以了解具体操作方法。
 
 * Visual Studio Enterprise 提供用于 .NET Core 的卓越测试工具。 有关详细信息，请查看 [Live Unit Testing](/visualstudio/test/live-unit-testing) 或[代码覆盖率](https://github.com/Microsoft/vstest-docs/blob/master/docs/analyze.md#working-with-code-coverage)。
-* 有关如何使用选择性单元测试筛选的其他信息和示例，请参阅[运行选择性单元测试](selective-unit-tests.md)或[使用 Visual Studio 添加和排除测试](/visualstudio/test/live-unit-testing#including-and-excluding-test-projects-and-test-methods)。
+* 有关如何使用选择性单元测试筛选的其他信息和示例，请参阅[运行选择性单元测试](selective-unit-tests.md)或[使用 Visual Studio 添加和排除测试](/visualstudio/test/live-unit-testing#include-and-exclude-test-projects-and-test-methods)。
 * XUnit 团队编写了一个教程，介绍[如何通过 .NET Core 和 Visual Studio 使用 xUnit](http://xunit.github.io/docs/getting-started-dotnet-core.html)。

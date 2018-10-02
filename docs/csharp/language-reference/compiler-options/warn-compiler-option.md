@@ -12,12 +12,12 @@ helpviewer_keywords:
 - w compiler option [C#]
 - warn compiler option [C#]
 ms.assetid: 5f80ff59-4991-4382-9f9a-77da18446e71
-ms.openlocfilehash: 65a6348bb0364d79ed0e69daf3a31ea7aa1bf8ea
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 14656fa25ea1d01339bd63efb999e938e1243db8
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33218866"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43865603"
 ---
 # <a name="-warn-c-compiler-options"></a>-warn（C# 编译器选项）
 -warn 选项指定编译器显示的警告等级。  
@@ -65,5 +65,6 @@ csc -warn:1 in.cs
 ```  
   
 ## <a name="see-also"></a>请参阅  
- [C# 编译器选项](../../../csharp/language-reference/compiler-options/index.md)  
- [管理项目和解决方案属性](/visualstudio/ide/managing-project-and-solution-properties)
+
+- [C# 编译器选项](../../../csharp/language-reference/compiler-options/index.md)  
+- [管理项目和解决方案属性](/visualstudio/ide/managing-project-and-solution-properties)

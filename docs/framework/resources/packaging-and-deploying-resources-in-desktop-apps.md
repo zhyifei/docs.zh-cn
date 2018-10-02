@@ -28,12 +28,12 @@ helpviewer_keywords:
 ms.assetid: b224d7c0-35f8-4e82-a705-dd76795e8d16
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0a6e6219d6449fedabe6e7cb0b349efb6fc74ee6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7aca04c191234686de5a15cb3dc1336080a3a344
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33399686"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43485698"
 ---
 # <a name="packaging-and-deploying-resources-in-desktop-apps"></a>打包和部署桌面应用程序中的资源
 应用程序依靠 .NET Framework Resource Manager（由 <xref:System.Resources.ResourceManager> 类表示）来检索已本地化的资源。 Resource Manager 假定使用中枢轮辐式模型来打包和部署资源。 中枢即主程序集，包含不可本地化的可执行代码和单个区域性（称作非特定区域性或默认区域性）的资源。 默认区域性是应用程序的回退区域性；如果找不到已本地化的资源，则使用默认区域性的资源。 每条轮辐均连接到一个附属程序集，该附属程序集包含单个区域性的资源，但不包含任何代码。  
@@ -53,7 +53,7 @@ ms.locfileid: "33399686"
 -   测试应用程序的初始成本增加，因为必须测试多种配置。 请注意，从长远角度看，测试使用多个附属程序集测试多个核心应用程序会比测试并维护多个并行国际版本更轻松，成本更低。  
   
 ## <a name="resource-naming-conventions"></a>资源命名约定  
- 在打包应用程序的资源时，必须使用公共语言运行时所要求的资源命名约定对其进行命名。 运行时可按其区域性名称标识资源。 每个区域性均被赋予唯一名称，通常是与语言相关的两个小写字母的区域性名称和必要情况下，与国家或地区相关的两个大写子母的区域性名称的组合。 子区域性名称跟在区域性名称后，以短划线 (-) 隔开。 例如：ja-JP 表示日本日语，en-US 表示美国英语，de-DE 表示德国德语，de-AT 表示奥地利德语。 有关区域性名称的完整列表，请参阅全球开发人员中心的[国际支持 (NLS) API 参考](http://go.microsoft.com/fwlink/?LinkId=200048)。  
+ 在打包应用程序的资源时，必须使用公共语言运行时所要求的资源命名约定对其进行命名。 运行时可按其区域性名称标识资源。 每个区域性均被赋予唯一名称，通常是与语言相关的两个小写字母的区域性名称和必要情况下，与国家或地区相关的两个大写子母的区域性名称的组合。 子区域性名称跟在区域性名称后，以短划线 (-) 隔开。 例如：ja-JP 表示日本日语，en-US 表示美国英语，de-DE 表示德国德语，de-AT 表示奥地利德语。 有关区域性名称的完整列表，请参阅全球开发人员中心的[国际支持 (NLS) API 参考](https://go.microsoft.com/fwlink/?LinkId=200048)。  
   
 > [!NOTE]
 >  有关创建资源文件的信息，请参阅[创建资源文件](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md)和[创建附属程序集](../../../docs/framework/resources/creating-satellite-assemblies-for-desktop-apps.md)。  

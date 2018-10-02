@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Code Editor, event handlers
 - events [C#], creating using the IDE
 ms.assetid: 6319f39f-282c-4173-8a62-6c4657cf51cd
-ms.openlocfilehash: 51b611237422ef30730850369627467c152f7579
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e27473ca34f634f4a3125a2e87e6d0ef918a6f9d
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33336198"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "45999135"
 ---
 # <a name="how-to-subscribe-to-and-unsubscribe-from-events-c-programming-guide"></a>如何：订阅和取消订阅事件（C# 编程指南）
 如果想编写引发事件时调用的自定义代码，则可以订阅由其他类发布的事件。 例如，可以订阅某个按钮的 `click` 事件，以使应用程序在用户单击该按钮时执行一些有用的操作。  
@@ -98,9 +98,10 @@ ms.locfileid: "33336198"
   
      所有订户都取消订阅事件后，发行者类中的事件实例将设置为 `null`。  
   
-## <a name="see-also"></a>请参阅  
- [事件](../../../csharp/programming-guide/events/index.md)  
- [event](../../../csharp/language-reference/keywords/event.md)  
- [如何：发布符合 .NET Framework 准则的事件](../../../csharp/programming-guide/events/how-to-publish-events-that-conform-to-net-framework-guidelines.md)  
- [-= 运算符（C# 参考）](../../language-reference/operators/subtraction-assignment-operator.md)  
- [+= 运算符](../../../csharp/language-reference/operators/addition-assignment-operator.md)
+## <a name="see-also"></a>请参阅
+
+- [事件](../../../csharp/programming-guide/events/index.md)  
+- [event](../../../csharp/language-reference/keywords/event.md)  
+- [如何：发布符合 .NET Framework 准则的事件](../../../csharp/programming-guide/events/how-to-publish-events-that-conform-to-net-framework-guidelines.md)  
+- [-= 运算符（C# 参考）](../../language-reference/operators/subtraction-assignment-operator.md)  
+- [+= 运算符](../../../csharp/language-reference/operators/addition-assignment-operator.md)

@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 25819a5a-f915-4fc8-b924-a76915674e04
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 90bf9d6dbfebf8f7c1aa22e5844cf4e30b89b8d6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: dca313fad896ac1c8eac37c853657bea44a8b777
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33572796"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44192231"
 ---
 # <a name="how-to-create-user-defined-exceptions"></a>如何创建用户定义的异常
 
@@ -33,5 +33,6 @@ ms.locfileid: "33572796"
 > [!NOTE]
 > 使用远程处理时，必须确保所有用户定义的异常的元数据在服务器（被调用方）可用，在客户端（代理对象或调用方）也可用。 有关详细信息，请参阅[异常的最佳做法](best-practices-for-exceptions.md)。
 
-## <a name="see-also"></a>请参阅  
-[异常](index.md)
+## <a name="see-also"></a>请参阅
+
+- [异常](index.md)

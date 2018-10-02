@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5e43f42d01bf61e8ab15fd45fa43329d71ba3b26
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 49041031742332fbc275a9dbde91e640eb428c28
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33435318"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45609640"
 ---
 # <a name="iclrstrongnamestrongnamesignatureverification-method"></a>ICLRStrongName::StrongNameSignatureVerification 方法
-获取一个值，该值指示是否提供的路径的程序集清单包含强名称签名，验证根据指定的标志。  
+获取一个值，该值指示是否在提供的路径处的程序集清单包含强名称签名，验证根据指定的标志。  
   
 ## <a name="syntax"></a>语法  
   
@@ -44,25 +44,25 @@ HRESULT StrongNameSignatureVerification (
  `dwInFlags`  
  [in]若要修改的验证行为的标志。 支持以下值：  
   
--   `SN_INFLAG_FORCE_VER` (0x00000001) — 即使需要重写注册表设置强制执行验证。  
+-   `SN_INFLAG_FORCE_VER` (0x00000001)-强制实施验证，即使需要重写注册表设置。  
   
--   `SN_INFLAG_INSTALL` (0x00000002) — 指定这是首次验证清单。  
+-   `SN_INFLAG_INSTALL` (0x00000002)-指定这是首次验证清单。  
   
 -   `SN_INFLAG_ADMIN_ACCESS` (0x00000004)-指定缓存将允许仅对具有管理权限的用户的访问。  
   
--   `SN_INFLAG_USER_ACCESS` (0x00000008)-指定程序集仅对当前用户可以访问。  
+-   `SN_INFLAG_USER_ACCESS` (0x00000008)-指定程序集可以访问仅向当前用户。  
   
--   `SN_INFLAG_ALL_ACCESS` (0x00000010)-指定缓存将提供不能保证的访问限制。  
+-   `SN_INFLAG_ALL_ACCESS` (0x00000010)-指定缓存将提供不保证其访问限制。  
   
--   `SN_INFLAG_RUNTIME` (0x80000000)-保留供内部调试。  
+-   `SN_INFLAG_RUNTIME` (0x80000000)-保留以用于内部调试。  
   
  `pdwOutFlags`  
- [out]标志，指示是否已验证强名称签名。 支持以下值：  
+ [out]标志，该值指示是否已验证强名称签名。 支持以下值：  
   
--   `SN_OUTFLAG_WAS_VERIFIED` 此值设置为 (0x00000001) —`false`指定验证成功由于注册表设置。  
+-   `SN_OUTFLAG_WAS_VERIFIED` (0x00000001)-此值设置为`false`指定注册表设置使验证成功。  
   
 ## <a name="return-value"></a>返回值  
- `S_OK` 如果成功，则完成的方法否则为该值指示失败的 HRESULT 值 (请参阅[常见的 HRESULT 值](http://go.microsoft.com/fwlink/?LinkId=213878)有关的列表)。  
+ `S_OK` 如果成功，则完成的方法否则为指示失败的 HRESULT 值 (请参阅[常见的 HRESULT 值](https://go.microsoft.com/fwlink/?LinkId=213878)列表)。  
   
 ## <a name="requirements"></a>要求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
@@ -71,7 +71,7 @@ HRESULT StrongNameSignatureVerification (
   
  **库：** 作为 MSCorEE.dll 中的资源  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅  
  [StrongNameSignatureVerificationEx 方法](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignatureverificationex-method.md)  

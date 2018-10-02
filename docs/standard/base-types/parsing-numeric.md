@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: e39324ee-72e5-42d4-a80d-bf3ee7fc6c59
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8e79c6cf8bfce4fa1ce37f7253e8583a67afe2f2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 07ad8b278f6a44fce78bccc980acdc0dc93b1a7a
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33576176"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47237444"
 ---
 # <a name="parsing-numeric-strings-in-net"></a>分析 .NET 中的数字字符串
 所有数字类型都具有两个静态分析方法（`Parse` 和 `TryParse`），可以使用它们将数字的字符串表示形式转换为数字类型。 这两个方法使你可以分析使用[标准数字格式字符串](../../../docs/standard/base-types/standard-numeric-format-strings.md)和[自定义数字格式字符串](../../../docs/standard/base-types/custom-numeric-format-strings.md)中所述的格式字符串生成的字符串。 默认情况下，`Parse` 和 `TryParse` 方法可以成功地将仅包含整数十进制数字的字符串转化为整数值。 它们可以将包含整数和小数十进制数字、组分隔符和十进制分隔符的字符串转换为浮点值。 `Parse` 方法在操作失败时引发异常，而 `TryParse` 方法返回 `false`。  
@@ -83,7 +83,8 @@ ms.locfileid: "33576176"
  [!code-csharp[Parsing.Numbers#3](../../../samples/snippets/csharp/VS_Snippets_CLR/parsing.numbers/cs/unicode1.cs#3)]
  [!code-vb[Parsing.Numbers#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/parsing.numbers/vb/unicode1.vb#3)]  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Globalization.NumberStyles>  
- [Parsing Strings](../../../docs/standard/base-types/parsing-strings.md)  
- [格式设置类型](../../../docs/standard/base-types/formatting-types.md)
+## <a name="see-also"></a>请参阅
+
+- <xref:System.Globalization.NumberStyles>  
+- [分析字符串](../../../docs/standard/base-types/parsing-strings.md)  
+- [格式设置类型](../../../docs/standard/base-types/formatting-types.md)

@@ -4,12 +4,12 @@ description: 适用于容器化 .NET 应用程序的 .NET 微服务体系结构 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.openlocfilehash: 1d66f5d40234e689685b1b8c36367cc9dc2fc7c6
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.openlocfilehash: 6a3fc0e86de673fea5f8e81c14c6456a2256aaa6
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37106861"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43502172"
 ---
 # <a name="data-sovereignty-per-microservice"></a>每个微服务的数据主权
 

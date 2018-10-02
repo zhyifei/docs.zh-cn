@@ -5,12 +5,12 @@ helpviewer_keywords:
 - C# Language, access modifiers
 - access modifiers [C#], about
 ms.assetid: 6e81ee82-224f-4a12-9baf-a0dca2656c5b
-ms.openlocfilehash: ec275d4782fee047b16fd114c4d22ceb03eecb11
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6be0ae4f6497dfb2db9607f61c4ede5083d57dc7
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33314104"
+ms.lasthandoff: 09/28/2018
+ms.locfileid: "47193416"
 ---
 # <a name="access-modifiers-c-programming-guide"></a>访问修饰符（C# 编程指南）
 所有类型和类型成员都具有可访问性级别，该级别可以控制是否可以从你的程序集或其他程序集中的其他代码中使用它们。 可以使用以下访问修饰符在进行声明时指定类型或成员的可访问性：  
@@ -43,7 +43,7 @@ ms.locfileid: "33314104"
   
  派生类不能具有高于其基类型的可访问性。 换而言之，不能具有派生自内部类 `A` 的公共类 `B`。 如果允许这样，则它将具有使 `A` 公开的效果，因为可从派生类访问 `A` 的所有受保护的或内部成员。  
   
- 可以通过使用 InternalsVisibleToAttribute 启用特定的其他程序集访问内部类型。 有关详细信息，请参阅[友元程序集](http://msdn.microsoft.com/library/df0c70ea-2c2a-4bdc-9526-df951ad2d055)。  
+ 可以通过使用 InternalsVisibleToAttribute 启用特定的其他程序集访问内部类型。 有关详细信息，请参阅[友元程序集](../concepts/assemblies-gac/friend-assemblies.md)。  
   
 ## <a name="class-and-struct-member-accessibility"></a>类和结构成员可访问性  
  可以使用六种访问类型中的任意一种声明类成员（包括嵌套的类和结构）。 结构成员无法声明为受保护，因为结构不支持继承。  
@@ -73,16 +73,17 @@ ms.locfileid: "33314104"
 ## <a name="c-language-specification"></a>C# 语言规范  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>请参阅  
- [C# 编程指南](../../../csharp/programming-guide/index.md)  
- [类和结构](../../../csharp/programming-guide/classes-and-structs/index.md)  
- [接口](../../../csharp/programming-guide/interfaces/index.md)  
- [private](../../../csharp/language-reference/keywords/private.md)  
- [public](../../../csharp/language-reference/keywords/public.md)  
- [internal](../../../csharp/language-reference/keywords/internal.md)  
- [protected](../../../csharp/language-reference/keywords/protected.md)  
- [受保护的内部](../../../csharp/language-reference/keywords/protected-internal.md)  
- [专用受保护](../../../csharp/language-reference/keywords/private-protected.md)  
- [class](../../../csharp/language-reference/keywords/class.md)  
- [struct](../../../csharp/language-reference/keywords/struct.md)  
- [interface](../../../csharp/language-reference/keywords/interface.md)
+## <a name="see-also"></a>请参阅
+
+- [C# 编程指南](../../../csharp/programming-guide/index.md)  
+- [类和结构](../../../csharp/programming-guide/classes-and-structs/index.md)  
+- [接口](../../../csharp/programming-guide/interfaces/index.md)  
+- [private](../../../csharp/language-reference/keywords/private.md)  
+- [public](../../../csharp/language-reference/keywords/public.md)  
+- [internal](../../../csharp/language-reference/keywords/internal.md)  
+- [protected](../../../csharp/language-reference/keywords/protected.md)  
+- [受保护的内部](../../../csharp/language-reference/keywords/protected-internal.md)  
+- [专用受保护](../../../csharp/language-reference/keywords/private-protected.md)  
+- [class](../../../csharp/language-reference/keywords/class.md)  
+- [struct](../../../csharp/language-reference/keywords/struct.md)  
+- [interface](../../../csharp/language-reference/keywords/interface.md)

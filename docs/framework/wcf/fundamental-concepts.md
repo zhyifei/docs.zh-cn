@@ -7,27 +7,27 @@ helpviewer_keywords:
 - fundamentals [WCF]
 - Windows Communication Foundation [WCF], concepts
 ms.assetid: 3e7e0afd-7913-499d-bafb-eac7caacbc7a
-ms.openlocfilehash: 41bef6bf5a69a51738c6848050972a1a4e01c153
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: c19169d61a96314e9fcfad94b013af18440e1ff5
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33808047"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43503609"
 ---
 # <a name="fundamental-windows-communication-foundation-concepts"></a>Windows Communication Foundation 基础概念
-本文档提供 Windows Communication Foundation (WCF) 体系结构的高级视图。 本文档旨在解释关键概念以及这些概念之间的关系。 有关创建的最简单的 WCF 服务和客户端版本的教程，请参阅[入门教程](../../../docs/framework/wcf/getting-started-tutorial.md)。 若要了解 WCF 编程，请参阅[基本 WCF 编程](../../../docs/framework/wcf/basic-wcf-programming.md)。  
+本文档提供 Windows Communication Foundation (WCF) 体系结构的高级视图。 本文档旨在解释关键概念以及这些概念之间的关系。 有关创建 WCF 服务和客户端的最简单版本的教程，请参阅[入门教程](../../../docs/framework/wcf/getting-started-tutorial.md)。 若要了解 WCF 编程，请参阅[基本 WCF 编程](../../../docs/framework/wcf/basic-wcf-programming.md)。  
   
 ## <a name="wcf-fundamentals"></a>WCF 基础知识  
  WCF 是用于创建服务和客户端之间发送消息的系统运行时和一组 Api。 它使用相同的基础结构和 API 来创建应用程序，这些应用程序可与同一计算机系统上或驻留在另一家公司内并通过 Internet 访问的系统上的其他应用程序进行通信。  
   
 ### <a name="messaging-and-endpoints"></a>消息和终结点  
- WCF 基于可以建模为消息 （例如，HTTP 请求或消息队列 (也称为 MSMQ) 消息） 可以表示以统一的方式在编程模型的概念基于消息的通信和任何内容。 这样，就可以在不同传输机制间提供一个统一的 API。  
+ WCF 基于可以建模为一条消息 （例如，HTTP 请求或消息队列 (也称为 MSMQ) 消息） 可以表示以统一的方式在编程模型的基于消息的通信，以及任何概念。 这样，就可以在不同传输机制间提供一个统一的 API。  
   
- 模型区分*客户端*，这是应用程序启动的通信，和*服务*，这是等待客户端以与它们进行通信和的响应的应用程序通信。 单个应用程序既可以充当客户端，也可以充当服务。 有关示例，请参阅[双工服务](../../../docs/framework/wcf/feature-details/duplex-services.md)和[对等网络](../../../docs/framework/wcf/feature-details/peer-to-peer-networking.md)。  
+ 模型区分*客户端*，这是应用程序启动的通信，并*服务*，这是应用程序，等待客户端与它们进行通信并做出响应，通信。 单个应用程序既可以充当客户端，也可以充当服务。 有关示例，请参阅[双工服务](../../../docs/framework/wcf/feature-details/duplex-services.md)并[对等网络](../../../docs/framework/wcf/feature-details/peer-to-peer-networking.md)。  
   
- 消息在终结点之间发送。 *终结点*位置发送或接收消息 （或两者），并且他们会定义所需的消息交换的所有信息。 服务公开一个或多个应用程序终结点（以及零个或更多个基础结构终结点），而客户端生成一个与服务的其中一个终结点兼容的终结点。  
+ 消息在终结点之间发送。 *终结点*是发送或接收消息的位置 （或两者），并且它们定义消息交换所需的所有信息。 服务公开一个或多个应用程序终结点（以及零个或更多个基础结构终结点），而客户端生成一个与服务的其中一个终结点兼容的终结点。  
   
- *终结点*介绍基于标准的方式，消息应发送，它们应如何发送，以及消息应如下所示。 服务可以公开此信息作为客户端可以处理以生成适当的 WCF 客户端和通信的元数据*堆栈*。  
+ *终结点*描述基于标准的方式，应发送消息的位置、 如何应发送它们，以及消息应如下所示。 服务可以公开此信息作为客户端可以处理以生成适当的 WCF 客户端和通信的元数据*堆栈*。  
   
 ### <a name="communication-protocols"></a>通信协议  
  一个必需的通信堆栈的元素是*传输协议*。 可以使用常用传输协议（如 HTTP 和 TCP）通过 Intranet 和 Internet 发送消息。 也可以使用其他支持与消息队列应用程序和对等网络网格上的节点进行通信的传输协议。 可以使用 WCF 的内置扩展点添加更多传输机制。  
@@ -46,7 +46,7 @@ ms.locfileid: "33808047"
  WCF 支持多种消息模式，包括请求-答复、 单向和双工通信。 不同传输协议支持不同的消息模式，因而会影响它们所支持的交互类型。 WCF Api 和运行时还帮助您安全可靠地发送消息。  
   
 ## <a name="wcf-terms"></a>WCF 术语  
- 其他概念和术语使用 WCF 文档中包括以下内容。  
+ 其他概念和术语 WCF 文档中使用包括以下内容。  
   
  消息  
  消息是一个独立的数据单元，它可能由几个部分组成，包括消息正文和消息头。  
@@ -108,7 +108,7 @@ HTTPS://cohowinery:8005/ServiceModelSamples/CalculatorService
  服务使用的数据类型必须在元数据中进行描述， 以使其他各方可以与该服务进行交互操作。 数据类型可以在消息的任何部分使用（例如，作为参数或返回类型）。 如果服务仅使用简单类型，则无需显式使用数据协定。  
   
  承载  
- 服务必须承载于某个进程中。 A*主机*是控制服务的生存期的应用。 服务可以是自承载的，也可以由现有的托管进程进行管理。  
+ 服务必须承载于某个进程中。 一个*主机*是控制服务的生存期的应用程序。 服务可以是自承载的，也可以由现有的托管进程进行管理。  
   
  自我承载的服务  
  自承载服务是在开发人员创建的进程应用程序中运行的服务。 开发人员控制服务的生存期、设置服务的属性、打开服务（这会将服务设置为侦听模式）以及关闭服务。  
@@ -128,23 +128,23 @@ HTTPS://cohowinery:8005/ServiceModelSamples/CalculatorService
  WCF client（WCF 客户端）  
  WCF 客户端是一个将服务操作作为方法公开的客户端应用程序构造（用您所选的 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 编程语言编写，如 Visual Basic 或 Visual C#）。 任何应用程序都可以承载 WCF 客户端，包括承载服务的应用程序。 因此，可以创建一个包含其他服务的 WCF 客户端的服务。  
   
- 可以通过使用自动生成 WCF 客户端[ServiceModel 元数据实用工具 (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)并指向正在运行的服务发布的元数据。  
+ 可以通过使用自动生成 WCF 客户端[ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)并指向正在运行的服务发布的元数据。  
   
  元数据  
- 服务的元数据描述服务的各种特征，外部实体需要了解这些特征以便与该服务进行通信。 元数据可供[ServiceModel 元数据实用工具 (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)以生成 WCF 客户端和客户端应用程序可用于与服务交互的伴随配置。  
+ 服务的元数据描述服务的各种特征，外部实体需要了解这些特征以便与该服务进行通信。 元数据可供[ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)生成 WCF 客户端和客户端应用程序可用于与服务交互的伴随配置。  
   
  服务所公开的元数据包括 XML 架构文档（用于定义服务的数据协定）和 WSDL 文档（用于描述服务的方法）。  
   
  启用元数据后，WCF 可通过检查服务及其终结点来自动生成服务的元数据。 若要发布服务的元数据，必须显式启用元数据行为。  
   
  安全性  
- 在 WCF 中，包括保密性 （为防止窃听的消息加密）、 完整性 （用于检测消息篡改行为的方法）、 身份验证 （用于验证服务器和客户端方法） 和授权 （控制的访问权限资源）。 通过利用现有安全机制（如 TLS over HTTP，也称为 HTTPS）或通过实现各种 WS-* 安全规范中的一个或多个规范，可以提供这些功能。  
+ 在 WCF 中，包括保密性 （加密的消息，以防止窃听）、 完整性 （用于检测消息篡改行为的方法）、 身份验证 （用于验证服务器和客户端方法） 和授权 （控制的访问权限资源）。 通过利用现有安全机制（如 TLS over HTTP，也称为 HTTPS）或通过实现各种 WS-* 安全规范中的一个或多个规范，可以提供这些功能。  
   
  传输安全模式  
  传输安全模式指定由传输层机制（如 HTTPS）提供保密性、完整性和身份验证。 在使用像 HTTPS 这样的传输协议时，此模式的优点在于性能出色，而且由于它在 Internet 上非常流行，因此很容易理解。 其缺点在于，这种安全分别应用于通信路径中的每个跃点，这使得通信容易遭受“中间人”攻击。  
   
  消息安全模式  
- 指定安全通过实现一个或多个安全规范中，提供，如规范名为[Web 服务安全： SOAP 消息安全](http://go.microsoft.com/fwlink/?LinkId=94684)。 每个消息都包含必要的安全机制，用于在消息传输过程中保证安全，并使接收方能够检测到篡改和对消息进行解密。 从这种意义上说，安全信息包装在每个消息中，从而提供了跨多个跃点的端到端安全。 由于安全信息成为消息的一部分，还有可能包含多种凭据并显示消息 (这些被称为*声明*)。 这种方法还具有这样一个优点，即消息可以通过任意传输协议（包括在其起点和目标之间的多个传输协议）安全地传送。 这种方法的缺点在于所使用的加密机制较为复杂，使性能受到影响。  
+ 指定安全提供通过实现一个或多个安全规范，如名为规范[Web 服务安全： SOAP 消息安全](https://go.microsoft.com/fwlink/?LinkId=94684)。 每个消息都包含必要的安全机制，用于在消息传输过程中保证安全，并使接收方能够检测到篡改和对消息进行解密。 从这种意义上说，安全信息包装在每个消息中，从而提供了跨多个跃点的端到端安全。 由于安全信息成为消息的一部分，还有可能包含多种凭据并显示消息 (这些称为*声明*)。 这种方法还具有这样一个优点，即消息可以通过任意传输协议（包括在其起点和目标之间的多个传输协议）安全地传送。 这种方法的缺点在于所使用的加密机制较为复杂，使性能受到影响。  
   
  使用消息凭据的传输安全模式  
  此模式指定使用传输层来提供消息的保密性、身份验证和完整性，并且每个消息都可以包含消息接收方所要求的多个凭据（声明）。  
@@ -155,4 +155,4 @@ HTTPS://cohowinery:8005/ServiceModelSamples/CalculatorService
 ## <a name="see-also"></a>请参阅  
  [什么是 Windows Communication Foundation](../../../docs/framework/wcf/whats-wcf.md)  
  [Windows Communication Foundation 体系结构](../../../docs/framework/wcf/architecture.md)  
- [安全体系结构](http://msdn.microsoft.com/library/16593476-d36a-408d-808c-ae6fd483e28f)
+ [安全体系结构](https://msdn.microsoft.com/library/16593476-d36a-408d-808c-ae6fd483e28f)

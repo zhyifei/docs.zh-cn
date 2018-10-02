@@ -3,23 +3,22 @@ title: 传输安全
 ms.date: 03/30/2017
 ms.assetid: 86c94153-e48d-4539-b6cf-cd8060582e7f
 author: BrucePerlerMS
-manager: mbaldwin
-ms.openlocfilehash: e7f804d34a47c5508839636a6fe5045ebce3972e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7a52ac584abe766a7517436e697aff89333c9833
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33498210"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47198158"
 ---
 # <a name="transport-security"></a>传输安全
-传输安全中 Windows Communication Foundation (WCF) 取决于所选的绑定。 绑定所实现的传输决定实际的安全机制。 本节中的主题说明所实现的机制及其选项。  
+Windows Communication Foundation (WCF) 中的传输安全性取决于选定的绑定。 绑定所实现的传输决定实际的安全机制。 本节中的主题说明所实现的机制及其选项。  
   
 ## <a name="in-this-section"></a>本节内容  
  [传输安全性概述](../../../../docs/framework/wcf/feature-details/transport-security-overview.md)  
- 介绍 WCF 中的传输安全性的基础知识。  
+ 介绍了 WCF 中的传输安全性的基础知识。  
   
  [HTTP 传输安全性](../../../../docs/framework/wcf/feature-details/http-transport-security.md)  
- 解释如何 WCF 实现安全套接字层 （SSL 或 HTTPS）。  
+ 介绍了 WCF 如何实现安全套接字层 （SSL 或 HTTPS）。  
   
  [了解 HTTP 身份验证](../../../../docs/framework/wcf/feature-details/understanding-http-authentication.md)  
  描述 HTTP 身份验证方案，如基本、摘要式、NT LAN Manager (NTLM) 及其他。  

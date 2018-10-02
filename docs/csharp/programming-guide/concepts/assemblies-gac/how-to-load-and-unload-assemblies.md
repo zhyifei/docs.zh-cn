@@ -2,12 +2,12 @@
 title: 如何：加载和卸载程序集 (C#)
 ms.date: 07/20/2015
 ms.assetid: 6a4f490f-3576-471f-9533-003737cad4a3
-ms.openlocfilehash: fe9f78e145e6b7bc8ef138ff5cdb98aa345b90c3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2934ff07026d520f52309e50eb7da24731608292
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33329509"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44259644"
 ---
 # <a name="how-to-load-and-unload-assemblies-c"></a>如何：加载和卸载程序集 (C#)
 在生成时自动加载程序所引用的程序集，但也可以在运行时将特定的程序集加载到当前的应用程序域。 有关详细信息，请参阅 [How to: Load Assemblies into an Application Domain](../../../../framework/app-domains/how-to-load-assemblies-into-an-application-domain.md)（如何：将程序集加载到应用程序域中）。  
@@ -24,7 +24,8 @@ ms.locfileid: "33329509"
   
 1.  在没有卸载所有包含单个程序集的应用程序域之前，无法卸载此程序集。 使用 <xref:System.AppDomain> 中的 `Unload` 方法卸载应用程序域。 有关详细信息，请参阅 [How to: Unload an Application Domain](../../../../framework/app-domains/how-to-unload-an-application-domain.md)（如何：卸载应用程序域）。  
   
-## <a name="see-also"></a>请参阅  
- [C# 编程指南](../../../../csharp/programming-guide/index.md)  
- [程序集和全局程序集缓存 (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/index.md)  
- [如何：将程序集加载到应用程序域中](../../../../framework/app-domains/how-to-load-assemblies-into-an-application-domain.md)
+## <a name="see-also"></a>请参阅
+
+- [C# 编程指南](../../../../csharp/programming-guide/index.md)  
+- [程序集和全局程序集缓存 (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/index.md)  
+- [如何：将程序集加载到应用程序域中](../../../../framework/app-domains/how-to-load-assemblies-into-an-application-domain.md)

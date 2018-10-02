@@ -6,12 +6,12 @@ helpviewer_keywords:
 - exceptions [C#], try/catch blocks
 - try/catch blocks [C#]
 ms.assetid: ca8e3773-980e-4767-8633-7408540e9818
-ms.openlocfilehash: b67a3d7b6d2e10519363a273b7dd1d8b61317d1c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 74503c510007b132a7bbb14da7eade4c379b2179
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33338066"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43856568"
 ---
 # <a name="how-to-handle-an-exception-using-trycatch-c-programming-guide"></a>如何：使用 try/catch 处理异常（C# 编程指南）
 [try-catch](../../../csharp/language-reference/keywords/try-catch.md) 块的用途是捕获并处理工作代码产生的异常。 某些异常可以在 `catch` 块中进行处理，问题得以解决并不再出现异常；但是，大多数情况下你唯一可做的是确保引发的异常是合理异常。  
@@ -24,7 +24,8 @@ ms.locfileid: "33338066"
 ## <a name="comments"></a>注释  
  引发异常的代码包含在 `try` 块中。 在此块后面紧挨着添加 `catch` 语句以处理 `IndexOutOfRangeException` 异常（如果发生此异常）。 `catch` 块处理 `IndexOutOfRangeException` 异常并改为引发更合理的 `ArgumentOutOfRangeException` 异常。 为了向调用方提供尽可能多的信息，请考虑将原始异常指定为新异常的 <xref:System.Exception.InnerException%2A>。 因为 <xref:System.Exception.InnerException%2A> 属性为 [readonly](../../../csharp/language-reference/keywords/readonly.md)，所以必须在新异常的构造函数中指定此属性。  
   
-## <a name="see-also"></a>请参阅  
- [C# 编程指南](../../../csharp/programming-guide/index.md)  
- [异常和异常处理](../../../csharp/programming-guide/exceptions/index.md)  
- [异常处理](../../../csharp/programming-guide/exceptions/exception-handling.md)
+## <a name="see-also"></a>请参阅
+
+- [C# 编程指南](../../../csharp/programming-guide/index.md)  
+- [异常和异常处理](../../../csharp/programming-guide/exceptions/index.md)  
+- [异常处理](../../../csharp/programming-guide/exceptions/exception-handling.md)

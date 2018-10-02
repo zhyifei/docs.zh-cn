@@ -5,19 +5,19 @@ helpviewer_keywords:
 - Visual Basic code, elements of
 - Visual Basic code
 ms.assetid: b0b21730-298c-47e6-9a2f-cc81f628067b
-ms.openlocfilehash: 3446b6b8eeb646fa8929efa10366cb6a83627eae
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 975bec73235b3b8f82088325e0d4abc50ce6b1dd
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33652007"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "45972645"
 ---
 # <a name="visual-basic-language-features"></a>Visual Basic 语言功能
-以下主题介绍和讨论 Visual Basic 中，面向对象的编程语言的基本组件。 使用窗体和控件创建应用程序的用户界面后，需要编写代码来定义应用程序的行为。 与任何现代编程语言一样，Visual Basic 支持许多通用编程构造和语言元素。  
+以下主题介绍并讨论 Visual Basic 中，面向对象的编程语言的基本组件。 使用窗体和控件创建应用程序的用户界面后，需要编写代码来定义应用程序的行为。 与任何现代编程语言，Visual Basic 支持许多常见的编程构造和语言元素。  
   
- 如果你已使用其他语言进行过编程，可能会对此部分中介绍的大部分资料感到熟悉。 尽管大部分构造都是类似于其他语言中，Visual Basic 的事件驱动性质引入了一些细微的差异。  
+ 如果你已使用其他语言进行过编程，可能会对此部分中介绍的大部分资料感到熟悉。 类似于其他语言中的大多数构造时，Visual Basic 的事件驱动本质上引入了一些细微的差异。  
   
- 如果是刚开始接触编程，可通过此部分中的资料，了解用于编写代码的基本构建基块的入门知识。 一旦你已了解基础知识，你可以创建使用 Visual Basic 的强大应用程序。  
+ 如果是刚开始接触编程，可通过此部分中的资料，了解用于编写代码的基本构建基块的入门知识。 一旦您了解基础知识，您可以创建强大的应用程序使用的 Visual Basic。  
   
 ## <a name="in-this-section"></a>本节内容  
  [数组](../../../visual-basic/programming-guide/language-features/arrays/index.md)  
@@ -77,8 +77,9 @@ ms.locfileid: "33652007"
  [XML](../../../visual-basic/programming-guide/language-features/xml/index.md)  
  收录了主题链接，有助于你了解如何在 Visual Basic 中使用 XML。  
   
-## <a name="related-sections"></a>相关章节  
- [集合](http://msdn.microsoft.com/library/e76533a9-5033-4a0b-b003-9c2be60d185b)  
+## <a name="related-sections"></a>相关章节
+
+ [集合](../../../visual-basic/programming-guide/concepts/collections.md)  
  介绍了 .NET Framework 提供的一些类型集合。 展示了如何使用简单的集合和键/值对集合。  
   
  [Visual Basic 语言参考](../../../visual-basic/language-reference/index.md)  

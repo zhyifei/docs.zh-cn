@@ -3,16 +3,15 @@ title: 自定义安全元数据终结点
 ms.date: 03/30/2017
 ms.assetid: 9e369e99-ea4a-49ff-aed2-9fdf61091a48
 author: BrucePerlerMS
-manager: mbaldwin
-ms.openlocfilehash: 2baa99ddaf5de60407b233b5a6ea013ad87401f3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: af3c7ca70ea38a1ee07e077440b3936d83a34d56
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33508056"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47200732"
 ---
 # <a name="custom-secure-metadata-endpoint"></a>自定义安全元数据终结点
-此示例演示如何实现使用安全的元数据终结点使用的非元数据交换绑定，其中一个服务以及如何配置[ServiceModel 元数据实用工具 (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)或客户端进行提取此类的元数据终结点从元数据。 有两个系统提供的绑定可供公开元数据终结点：mexHttpBinding 和 mexHttpsBinding。 mexHttpBinding 用于以非安全的方式，通过 HTTP 公开元数据终结点。 mexHttpsBinding 用于以安全的方式，通过 HTTP 公开元数据终结点。 本示例演示如何使用 <xref:System.ServiceModel.WSHttpBinding> 公开安全元数据终结点。 要更改绑定的安全设置但不想使用 HTTPS 时需要这样做。 如果使用 mexHttpsBinding，则元数据终结点是安全的，但无法修改绑定设置。  
+此示例演示如何实现具有安全元数据终结点使用的非元数据交换绑定，其中一个服务以及如何配置[ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)或客户端以获取从类元数据终结点元数据。 有两个系统提供的绑定可供公开元数据终结点：mexHttpBinding 和 mexHttpsBinding。 mexHttpBinding 用于以非安全的方式，通过 HTTP 公开元数据终结点。 mexHttpsBinding 用于以安全的方式，通过 HTTP 公开元数据终结点。 本示例演示如何使用 <xref:System.ServiceModel.WSHttpBinding> 公开安全元数据终结点。 要更改绑定的安全设置但不想使用 HTTPS 时需要这样做。 如果使用 mexHttpsBinding，则元数据终结点是安全的，但无法修改绑定设置。  
   
 > [!NOTE]
 >  本主题的最后介绍了此示例的设置过程和生成说明。  
@@ -91,7 +90,7 @@ svcutil http://localhost/servicemodelsamples/service.svc/mex
 .\svcutil.exe http://localhost/servicemodelsamples/service.svc/mex  
 ```  
   
- 前导"。\\"可确保运行此目录 （其中一个拥有相应的 Svcutil.exe.config） 中的 Svcutil.exe 副本。  
+ 前导"。\\"可确保运行此目录 （具有相应的 Svcutil.exe.config 的目录） 中的 Svcutil.exe 副本。  
   
 ## <a name="metadataresolver-client"></a>MetadataResolver 客户端  
  如果客户端在设计时知道协定和如何与元数据交谈，客户端就可以使用 `MetadataResolver` 动态找到应用程序终结点的绑定和地址。 本示例客户端对此进行了演示，显示如何通过创建和配置 `MetadataResolver` 来配置 `MetadataExchangeClient` 使用的绑定和凭据。  
@@ -134,25 +133,25 @@ ChannelFactory<ICalculator> cf = new    ChannelFactory<ICalculator>(endpoint.Bin
   
 #### <a name="to-set-up-and-build-the-sample"></a>设置和生成示例  
   
-1.  确保已执行[的 Windows Communication Foundation 示例的一次性安装过程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
+1.  请确保您具有执行[的 Windows Communication Foundation 示例的一次性安装过程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
   
 2.  若要生成解决方案，请按照中的说明[生成 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/building-the-samples.md)。  
   
 #### <a name="to-run-the-sample-on-the-same-machine"></a>在同一计算机上运行示例  
   
-1.  运行示例安装文件夹中的 Setup.bat。 这将安装运行示例所需的所有证书。 请注意，Setup.bat 使用 FindPrivateKey.exe 工具，通过运行 setupCertTool.bat 从安装[的 Windows Communication Foundation 示例的一次性安装过程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
+1.  运行示例安装文件夹中的 Setup.bat。 这将安装运行示例所需的所有证书。 请注意，Setup.bat 使用 FindPrivateKey.exe 工具，通过运行中的 setupcerttool.bat 可安装[的 Windows Communication Foundation 示例的一次性安装过程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
   
 2.  运行 \MetadataResolverClient\bin 或 \SvcutilClient\bin 中的客户端应用程序。 客户端活动将显示在客户端控制台应用程序上。  
   
-3.  如果客户端和服务不能够进行通信，请参阅[疑难解答提示](http://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b)。  
+3.  如果客户端和服务能够进行通信，请参见[故障排除提示](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b)。  
   
 4.  在运行完该示例后运行 Cleanup.bat 移除证书。 其他安全示例使用相同的证书。  
   
 #### <a name="to-run-the-sample-across-machines"></a>跨计算机运行示例  
   
-1.  在服务器上运行 `setup.bat service`。 运行`setup.bat`与`service`自变量的计算机的完全限定域名创建一个服务证书，并将服务证书导出到名为 Service.cer 的文件。  
+1.  在服务器上运行 `setup.bat service`。 运行`setup.bat`与`service`参数与计算机的完全限定域名创建一个服务证书，并将服务证书导出到名为 Service.cer 的文件。  
   
-2.  在服务器上，编辑 Web.config 以反映新证书名称。 也就是说，将更改`findValue`属性中[ \<serviceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-clientcredentials-element.md)到的计算机的完全限定域名的元素。  
+2.  在服务器上，编辑 Web.config 以反映新证书名称。 也就是说，更改`findValue`中的属性[ \<serviceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-clientcredentials-element.md)元素在计算机的完全限定域名。  
   
 3.  将服务目录中的 Service.cer 文件复制到客户端计算机上的客户端目录中。  
   
@@ -170,21 +169,21 @@ ChannelFactory<ICalculator> cf = new    ChannelFactory<ICalculator>(endpoint.Bin
   
 10. 在客户端计算机上，运行 VS 中的 MetadataResolverClient 或 SvcutilClient。  
   
-    1.  如果客户端和服务不能够进行通信，请参阅[疑难解答提示](http://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b)。  
+    1.  如果客户端和服务能够进行通信，请参见[故障排除提示](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b)。  
   
 #### <a name="to-clean-up-after-the-sample"></a>运行示例后进行清理  
   
 -   运行完示例后运行示例文件夹中的 Cleanup.bat。  
   
     > [!NOTE]
-    >  此脚本不会在跨计算机运行此示例时移除客户端上的服务证书。 如果已运行跨计算机使用证书的 Windows Communication Foundation (WCF) 示例，请确保清除已安装在 CurrentUser-TrustedPeople 存储区中的服务证书。 为此，请使用以下命令：`certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>`。 例如：`certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`。  
+    >  此脚本不会在跨计算机运行此示例时移除客户端上的服务证书。 如果您运行多个计算机之间使用证书的 Windows Communication Foundation (WCF) 示例，请确保清除已安装在 CurrentUser-TrustedPeople 存储区中的服务证书。 为此，请使用以下命令：`certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>`。 例如：`certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`。  
   
 > [!IMPORTANT]
 >  您的计算机上可能已安装这些示例。 在继续操作之前，请先检查以下（默认）目录：  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目录不存在，请转到[Windows Communication Foundation (WCF) 和针对.NET Framework 4 的 Windows Workflow Foundation (WF) 示例](http://go.microsoft.com/fwlink/?LinkId=150780)下载所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
+>  如果此目录不存在，请转到[Windows Communication Foundation (WCF) 和.NET Framework 4 的 Windows Workflow Foundation (WF) 示例](https://go.microsoft.com/fwlink/?LinkId=150780)若要下载所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Metadata\CustomMexEndpoint`  
   

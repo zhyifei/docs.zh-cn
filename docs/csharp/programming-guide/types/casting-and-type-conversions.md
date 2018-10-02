@@ -9,19 +9,20 @@ helpviewer_keywords:
 - casting [C#]
 - converting types [C#]
 ms.assetid: 568df58a-d292-4b55-93ba-601578722878
-ms.openlocfilehash: 0c17fc89d93bdbb01bdef7935e72f8a7d96b0a55
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6b691939d2592cc72a232a09ab2a7e950b810281
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33336552"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44086772"
 ---
 # <a name="casting-and-type-conversions-c-programming-guide"></a>强制转换和类型转换（C# 编程指南）
-由于 C# 是在编译时静态类型化的，因此变量在声明后就无法再次声明，或者无法用于存储其他类型的值，除非该类型可以转换为变量的类型。 例如，不存在从整数到任意字符串的转换。 因此，在将 `i` 声明为整数后，无法将字符串“Hello”赋予它，如下面的代码中所示。  
+
+由于 C# 是在编译时静态类型化的，因此变量在声明后就无法再次声明，或无法分配另一种类型的值，除非该类型可以隐式转换为变量的类型。 例如，`string` 无法隐式转换为 `int`。 因此，在将 `i` 声明为 `int` 后，无法将字符串“Hello”分配给它，如以下代码所示：
   
 ```csharp  
 int i;  
-i = "Hello"; // Error: "Cannot implicitly convert type 'string' to 'int'"  
+i = "Hello"; // error CS0029: Cannot implicitly convert type 'string' to 'int'
 ```  
   
  但有时可能需要将值复制到其他类型的变量或方法参数中。 例如，可能需要将一个整数变量传递给参数类型化为 `double` 的方法。 或者可能需要将类变量分配给接口类型的变量。 这些类型的操作称为类型转换。 在 C# 中，可以执行以下几种类型的转换：  
@@ -35,7 +36,7 @@ i = "Hello"; // Error: "Cannot implicitly convert type 'string' to 'int'"
 -   **使用帮助程序类进行转换**：若要在非兼容类型之间转换（例如整数和 <xref:System.DateTime?displayProperty=nameWithType> 对象之间，或十六进制字符串和字节数组之间），可使用 <xref:System.BitConverter?displayProperty=nameWithType> 类、<xref:System.Convert?displayProperty=nameWithType> 类和内置数值类型的 `Parse` 方法（例如 <xref:System.Int32.Parse%2A?displayProperty=nameWithType>）。 有关详细信息，请参见[如何：将字节数组转换为 int](../../../csharp/programming-guide/types/how-to-convert-a-byte-array-to-an-int.md)、[如何：将字符串转换为数字](../../../csharp/programming-guide/types/how-to-convert-a-string-to-a-number.md)和[如何：在十六进制字符串与数值类型之间转换](../../../csharp/programming-guide/types/how-to-convert-between-hexadecimal-strings-and-numeric-types.md)。  
   
 ## <a name="implicit-conversions"></a>隐式转换  
- 对于内置数值类型，如果要存储的值无需截断或四舍五入即可适应变量，则可以进行隐式转换。 例如，[long](../../../csharp/language-reference/keywords/long.md) 类型的变量（8 字节整数）能够存储 [int](../../../csharp/language-reference/keywords/int.md)（在 32 位计算机上为 4 字节）可存储的任何值。 在下面的示例中，编译器先将右侧的值隐式转换为 `long` 类型，再将它赋给 `bigNum`。  
+ 对于内置数值类型，如果要存储的值无需截断或四舍五入即可适应变量，则可以进行隐式转换。 例如，[long](../../../csharp/language-reference/keywords/long.md) 类型的变量（64 位整数）能够存储 [int](../../../csharp/language-reference/keywords/int.md)（32 位整数）可存储的任何值。 在下面的示例中，编译器先将右侧的 `num` 值隐式转换为 `long` 类型，再将它赋给 `bigNum`。  
   
  [!code-csharp[csProgGuideTypes#34](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/casting-and-type-conversions_1.cs)]  
   
@@ -71,25 +72,26 @@ Animal a = g;
 Giraffe g2 = (Giraffe) a;  
 ```  
   
- 引用类型之间的强制转换操作不会更改基础对象的运行时类型；它只更改用作对该对象引用的值的类型。 有关详细信息，请参阅[多形性](../../../csharp/programming-guide/classes-and-structs/polymorphism.md)。  
+ 引用类型之间的强制转换操作不会更改基础对象的运行时类型；它只更改用作对该对象引用的值的类型。 有关详细信息，请参阅[多态性](../../../csharp/programming-guide/classes-and-structs/polymorphism.md)。  
   
 ## <a name="type-conversion-exceptions-at-run-time"></a>运行时的类型转换异常  
  在某些引用类型转换中，编译器无法确定强制转换是否会有效。 正确进行编译的强制转换操作有可能在运行时失败。 如下面的示例所示，类型转换在运行时失败将导致引发 <xref:System.InvalidCastException>。  
   
  [!code-csharp[csProgGuideTypes#41](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/casting-and-type-conversions_3.cs)]  
   
- C# 提供 [is](../../../csharp/language-reference/keywords/is.md) 和 [as](../../../csharp/language-reference/keywords/as.md) 运算符，使你可以在实际执行强制转换之前测试兼容性。 有关详细信息，请参阅[如何：使用 as 和 is 运算符安全地进行强制转换](../../../csharp/programming-guide/types/how-to-safely-cast-by-using-as-and-is-operators.md)。  
+ C# 提供 [is](../../../csharp/language-reference/keywords/is.md) 和 [as](../../../csharp/language-reference/keywords/as.md) 运算符，使你可以在实际执行强制转换之前测试兼容性。 有关详细信息，请参阅[如何：使用模式匹配以及 is 和 as 运算符安全地进行强制转换](../../how-to/safely-cast-using-pattern-matching-is-and-as-operators.md)。  
   
 ## <a name="c-language-specification"></a>C# 语言规范  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
 
-## <a name="see-also"></a>请参阅  
- [C# 编程指南](../../../csharp/programming-guide/index.md)  
- [类型](../../../csharp/programming-guide/types/index.md)  
- [() 运算符](../../../csharp/language-reference/operators/invocation-operator.md)  
- [explicit](../../../csharp/language-reference/keywords/explicit.md)  
- [implicit](../../../csharp/language-reference/keywords/implicit.md)  
- [转换运算符](../../../csharp/programming-guide/statements-expressions-operators/conversion-operators.md)  
- [通用类型转换](http://msdn.microsoft.com/library/49253ae6-7657-4810-82ab-1176a6feeada)  
- [导出类型转换](http://msdn.microsoft.com/library/1dfe55f4-07a2-4b61-aabf-a8cf65783a6b)  
- [如何：将字符串转换为数字](../../../csharp/programming-guide/types/how-to-convert-a-string-to-a-number.md)
+## <a name="see-also"></a>请参阅
+
+- [C# 编程指南](../../../csharp/programming-guide/index.md)  
+- [类型](../../../csharp/programming-guide/types/index.md)  
+- [() 运算符](../../../csharp/language-reference/operators/invocation-operator.md)  
+- [explicit](../../../csharp/language-reference/keywords/explicit.md)  
+- [implicit](../../../csharp/language-reference/keywords/implicit.md)  
+- [转换运算符](../../../csharp/programming-guide/statements-expressions-operators/conversion-operators.md)  
+- [通用类型转换](https://msdn.microsoft.com/library/49253ae6-7657-4810-82ab-1176a6feeada)  
+- [导出类型转换](https://msdn.microsoft.com/library/1dfe55f4-07a2-4b61-aabf-a8cf65783a6b)  
+- [如何：将字符串转换为数字](../../../csharp/programming-guide/types/how-to-convert-a-string-to-a-number.md)

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - dynamic objects
 - dynamic objects [C#]
 ms.assetid: 568f1645-1305-4906-8625-5d77af81e04f
-ms.openlocfilehash: f315b6500e68812863da722791d257930e190602
-ms.sourcegitcommit: 6c480773ae896f45af4671fb3e26611a50e4dd81
+ms.openlocfilehash: 79e7ef99d9d21eb161d8981e166963df7dd57be5
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/09/2018
-ms.locfileid: "35251137"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43858894"
 ---
 # <a name="walkthrough-creating-and-using-dynamic-objects-c-and-visual-basic"></a>演练：创建和使用动态对象（C# 和 Visual Basic）
 
@@ -157,10 +157,11 @@ ms.locfileid: "35251137"
   
 9. 保存文件，然后按 Ctrl+F5 生成并运行应用程序。  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Dynamic?displayProperty=nameWithType>  
- <xref:System.Dynamic.DynamicObject?displayProperty=nameWithType>  
- [使用类型 dynamic](../../../csharp/programming-guide/types/using-type-dynamic.md)  
- [早期绑定和后期绑定](../../../visual-basic/programming-guide/language-features/early-late-binding/index.md)  
- [dynamic](../../../csharp/language-reference/keywords/dynamic.md)  
- [实现动态接口（可从 Microsoft TechNet 下载 PDF）](http://download.microsoft.com/download/5/4/B/54B83DFE-D7AA-4155-9687-B0CF58FF65D7/implementing-dynamic-interfaces.pdf)
+## <a name="see-also"></a>请参阅
+
+- <xref:System.Dynamic?displayProperty=nameWithType>  
+- <xref:System.Dynamic.DynamicObject?displayProperty=nameWithType>  
+- [使用类型 dynamic](../../../csharp/programming-guide/types/using-type-dynamic.md)  
+- [早期绑定和后期绑定](../../../visual-basic/programming-guide/language-features/early-late-binding/index.md)  
+- [dynamic](../../../csharp/language-reference/keywords/dynamic.md)  
+- [实现动态接口（可从 Microsoft TechNet 下载 PDF）](https://download.microsoft.com/download/5/4/B/54B83DFE-D7AA-4155-9687-B0CF58FF65D7/implementing-dynamic-interfaces.pdf)

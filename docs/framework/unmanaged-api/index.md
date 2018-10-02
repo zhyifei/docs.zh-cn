@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 9aa000ee-c04c-492c-ae4f-83ecdf4fdbbe
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d9a716244c779a25ad75c9db37aade0524e9e740
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 955efad34f816cd0445c4ebdf120d8b614f0d351
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33442912"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43508517"
 ---
 # <a name="unmanaged-api-reference"></a>非托管 API 参考
 本节包括有关可由与托管代码相关的应用程序（例如运行时主机、编译器、反汇编程序、模糊处理程序、调试器和探查器）使用的非托管 API 的信息。  
@@ -32,7 +32,7 @@ ms.locfileid: "33442912"
  [常量](../../../docs/framework/unmanaged-api/constants-unmanaged-api-reference.md)  
  描述在 CorSym.idl 中定义的常量。  
   
- [自定义接口特性](http://msdn.microsoft.com/library/940952f9-46ad-4a1a-920f-118dc0bdcd9f)  
+ [自定义接口特性](https://msdn.microsoft.com/library/940952f9-46ad-4a1a-920f-118dc0bdcd9f)  
  描述组件对象模型 (COM) 的自定义接口特性。  
   
  [调试](../../../docs/framework/unmanaged-api/debugging/index.md)  
@@ -57,7 +57,7 @@ ms.locfileid: "33442912"
  描述强命名 API，该 API 允许客户端管理程序集的强名称签名。  
 
  [WMI 和性能计数器](wmi/index.md)  
- 描述包装对 Windows Management Instrumentation (WMI) 库的调用的 Api。
+ 介绍了包装对 Windows Management Instrumentation (WMI) 库的调用的 API。
   
  [Tlbexp Helper 函数](../../../docs/framework/unmanaged-api/tlbexp/index.md)  
  描述类型库导出程序 (Tlbexp.exe) 在从程序集到类型库的转换过程中使用的两个 Helper 函数和接口。  
@@ -65,4 +65,4 @@ ms.locfileid: "33442912"
 ## <a name="related-sections"></a>相关章节  
  [开发指南](../../../docs/framework/development-guide.md)  
   
- [.NET Framework 高级读物](http://msdn.microsoft.com/library/faae8083-fecb-4514-b133-b0a5a32a7c3c)
+ [.NET Framework 高级读物](https://msdn.microsoft.com/library/faae8083-fecb-4514-b133-b0a5a32a7c3c)

@@ -3,13 +3,12 @@ title: System.ServiceModel.Security.SecurityServerSessionAbortedFaultSent
 ms.date: 03/30/2017
 ms.assetid: a27f4243-2b80-44da-bb79-674912395d93
 author: BrucePerlerMS
-manager: mbaldwin
-ms.openlocfilehash: 8c5eef0cf33c2fa4c38d8c189feafc1b7d256e0d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: af24cd7b3db8b55f78c7a5c87ff3e1b56f339047
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33483503"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47196798"
 ---
 # <a name="systemservicemodelsecuritysecurityserversessionabortedfaultsent"></a>System.ServiceModel.Security.SecurityServerSessionAbortedFaultSent
 System.ServiceModel.Security.SecurityServerSessionAbortedFaultSent  

@@ -2,12 +2,12 @@
 title: Web 服务泛型序列化技术示例
 ms.date: 03/30/2017
 ms.assetid: cdc15ea4-f678-4729-8ebe-188ae720bef7
-ms.openlocfilehash: 799206b1bd86e98c87441771174441d07074a325
-ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
+ms.openlocfilehash: b233ed4374231c7e7ff2b6617a63c4e4c94612c2
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37936771"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47108931"
 ---
 # <a name="web-services-generics-serialization-technology-sample"></a>Web 服务泛型序列化技术示例
 [下载示例](https://download.microsoft.com/download/4/7/B/47B2164C-E780-4B10-8DE4-2CB5B886E0A6/Technologies/Serialization/Xml%20Serialization/GenericsSerialization.zip.exe)  
@@ -63,9 +63,10 @@ ms.locfileid: "37936771"
 ## <a name="remarks"></a>备注  
  该示例将显示默认的 ASP.NET 页面，该页面包含指向 Web 服务定义的链接。 除了修改 Web 服务的源代码以外，还可以自定义其显示方式。 有关详细信息，请参阅[生成 XML Web services 客户端](https://msdn.microsoft.com/library/c606f3cb-4111-45b4-ae42-9300420fa16c)。  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Collections.Generic>  
- <xref:System.Web.Services>  
- <xref:System.Xml.Serialization>  
- [序列化](../../../docs/standard/serialization/index.md)  
- [使用 ASP.NET 创建的 XML Web service 以及 XML Web Service 客户端](https://msdn.microsoft.com/library/1e64af78-d705-4384-b08d-591a45f4379c)
+## <a name="see-also"></a>请参阅
+
+- <xref:System.Collections.Generic>  
+- <xref:System.Web.Services>  
+- <xref:System.Xml.Serialization>  
+- [序列化](../../../docs/standard/serialization/index.md)  
+- [使用 ASP.NET 创建的 XML Web service 以及 XML Web Service 客户端](https://msdn.microsoft.com/library/1e64af78-d705-4384-b08d-591a45f4379c)

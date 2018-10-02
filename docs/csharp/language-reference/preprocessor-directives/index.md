@@ -7,12 +7,12 @@ helpviewer_keywords:
 - preprocessor directives [C#]
 - keywords [C#], preprocessor directives
 ms.assetid: f2406090-b244-4f7e-ab72-3698fefed724
-ms.openlocfilehash: 63a7bdb6d36794e0380ca84443926338fe926e4d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1c0a97cabce347be0bc9367f3d090a1fc699db19
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33279914"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47459641"
 ---
 # <a name="c-preprocessor-directives"></a>C# 预处理器指令
 本节介绍了以下 C# 预处理器指令：
@@ -39,5 +39,6 @@ ms.locfileid: "33279914"
 预处理器指令必须是一行中唯一的说明。
 
 ## <a name="see-also"></a>请参阅
- [C# 参考](../../../csharp/language-reference/index.md)  
- [C# 编程指南](../../../csharp/programming-guide/index.md)
+
+- [C# 参考](../../../csharp/language-reference/index.md)  
+- [C# 编程指南](../../../csharp/programming-guide/index.md)

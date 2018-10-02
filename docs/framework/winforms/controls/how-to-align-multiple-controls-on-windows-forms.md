@@ -7,26 +7,26 @@ helpviewer_keywords:
 - controls [Windows Forms], positioning
 - controls [Windows Forms], aligning
 ms.assetid: b7175656-f532-49e9-b0b1-177d1b40af3e
-ms.openlocfilehash: 6520aef7d04694b6fcd7f50da84a2a9cea6e7b64
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 44bbf2503087a0e8b7f178b1c7b7fe65b50496d8
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33528585"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43524008"
 ---
 # <a name="how-to-align-multiple-controls-on-windows-forms"></a>如何：在 Windows 窗体上对齐多个控件
-标准化的基于 Windows 的应用程序的用户界面 (UI) 的布局，您可以定位控件使用单个命令组。  
+若要标准化用户界面 (UI) 的基于 Windows 的应用程序的布局，可以定位通过单个命令的控件组。  
   
 > [!NOTE]
->  显示的对话框和菜单命令可能会与“帮助”中的描述不同，具体取决于你现用的设置或版本。 若要更改设置，请在 **“工具”** 菜单上选择 **“导入和导出设置”** 。 有关详细信息，请参阅[在 Visual Studio 中自定义开发设置](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3)。  
+>  显示的对话框和菜单命令可能会与“帮助”中的描述不同，具体取决于你现用的设置或版本。 若要更改设置，请在 **“工具”** 菜单上选择 **“导入和导出设置”** 。 有关详细信息，请参阅[个性化设置 Visual Studio IDE](/visualstudio/ide/personalizing-the-visual-studio-ide)。  
   
-### <a name="to-align-multiple-controls-on-a-form"></a>若要对齐窗体上的多个控件  
+### <a name="to-align-multiple-controls-on-a-form"></a>若要将多个控件在窗体上对齐  
   
 1.  打开包含你想要在中定位的控件的窗体**Windows 窗体设计器**。  
   
-2.  选择你想要对齐，以便你选择的第一个控件是其他应对齐到的主控件的控件。  
+2.  选择你想要对齐，以便您选择的第一个控件是其他应对齐到的主控件的控件。  
   
-3.  上**格式**菜单上，指向**Align**，，然后单击一个可用的七个选项。  
+3.  上**格式**菜单，依次指向**对齐**，然后单击其中一个可用的七个选项。  
   
 ## <a name="see-also"></a>请参阅  
  [Windows 窗体控件](../../../../docs/framework/winforms/controls/index.md)  

@@ -4,12 +4,12 @@ description: 了解如何从源代码生成 .NET Core 和 .NET Core CLI。
 author: bleroy
 ms.author: mairaw
 ms.date: 06/28/2017
-ms.openlocfilehash: 55a35223a4bc11156e056cceb7f86365c4906222
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: fa9c193ea4088f04745bdadc6040552e18c0858a
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33216002"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47188984"
 ---
 # <a name="build-net-core-from-source"></a>从源生成 .NET Core
 
@@ -21,44 +21,45 @@ ms.locfileid: "33216002"
 有关 .NET CoreCLR 的源代码，可以访问 GitHub 上的 [dotnet/coreclr](https://github.com/dotnet/coreclr/) 存储库。
 
 生成目前依赖于以下系统必备组件：
+
 * [Git](https://git-scm.com/)
 * [CMake](https://cmake.org/)
 * [Python](https://www.python.org/)
 * C++ 编译器。
 
-安装完这些必备组件后，可以 [dotnet/coreclr 存储库](https://github.com/dotnet/coreclr/)为基础，调用生成脚本（Windows 中的 `build.cmd`，或 Linux 和 macOS 中的 `build.sh`）生成 CLR。
+安装完这些必备组件后，可以 [dotnet/coreclr](https://github.com/dotnet/coreclr/) 存储库为基础，调用生成脚本（Windows 中的 `build.cmd`，或 Linux 和 macOS 中的 `build.sh`）生成 CLR。
 
 组件的安装因操作系统 (OS) 而异。 请参阅特定 OS 的生成说明：
 
- * [Windows](https://github.com/dotnet/coreclr/blob/master/Documentation/building/windows-instructions.md)
- * [Linux](https://github.com/dotnet/coreclr/blob/master/Documentation/building/linux-instructions.md)
- * [macOS](https://github.com/dotnet/coreclr/blob/master/Documentation/building/osx-instructions.md)
- * [FreeBSD](https://github.com/dotnet/coreclr/blob/master/Documentation/building/freebsd-instructions.md) 
- * [NetBSD](https://github.com/dotnet/coreclr/blob/master/Documentation/building/netbsd-instructions.md)
+* [Windows](https://github.com/dotnet/coreclr/blob/master/Documentation/building/windows-instructions.md)
+* [Linux](https://github.com/dotnet/coreclr/blob/master/Documentation/building/linux-instructions.md)
+* [macOS](https://github.com/dotnet/coreclr/blob/master/Documentation/building/osx-instructions.md)
+* [FreeBSD](https://github.com/dotnet/coreclr/blob/master/Documentation/building/freebsd-instructions.md)
+* [NetBSD](https://github.com/dotnet/coreclr/blob/master/Documentation/building/netbsd-instructions.md)
 
 不能跨 OS 进行交叉生成（仅适用于基于 X64 的 ARM）。  
 必须在特定的平台上生成该平台。  
 
 生成具有两个主要的 `buildTypes`：
 
- * 调试（默认）- 以最低优化水平编译运行时并进行额外的运行时检查（断言）。 这种优化级别的降低和额外的检查会减慢运行时的执行速度，但对于调试来说是很有价值的。 这是开发和测试环境的推荐设置。
- * 发布 - 以完全优化水平编译运行时，无需进行额外的运行时检查。 这将产生更快的运行时性能，但需要更长时间进行生成，并且难以进行调试。 将 `release` 传递给生成脚本以选择此生成类型。
+* 调试（默认）- 以最低优化水平编译运行时并进行额外的运行时检查（断言）。 这种优化级别的降低和额外的检查会减慢运行时的执行速度，但对于调试来说是很有价值的。 这是开发和测试环境的推荐设置。
+* 发布 - 以完全优化水平编译运行时，无需进行额外的运行时检查。 这将产生更快的运行时性能，但需要更长时间进行生成，并且难以进行调试。 将 `release` 传递给生成脚本以选择此生成类型。
 
 此外，默认情况下，生成不仅会创建运行时可执行文件，还会生成所有测试。
 这其中有不少测试都需花费大量时间，但如果只想试验一下更改，则不必执行此操作。
 可以通过向生成脚本添加 `skiptests` 参数来跳过测试生成，如下例所示（在 Unix 计算机上将 `.\build` 替换为 `./build.sh`）：
 
 ```bat
-    .\build skiptests 
+    .\build skiptests
 ```
 
 之前的示例演示了如何生成 `Debug` 风格，该风格启用了开发时间检查（断言）并禁用优化。 若要生成发布（全速）风格，请执行以下操作：
 
-```bat 
+```bat
     .\build release skiptests
 ```
 
-可使用 -? 或 -help 限定符找到 更多生成选项。   
+可使用 -? 或 -help 限定符找到 更多生成选项。
 
 ### <a name="using-your-build"></a>使用生成
 
@@ -71,7 +72,7 @@ bin\Log 目录包含生成期间生成的日志文件（生成失败时这些日
 可通过两种基本方法使用新的运行时：
 
  1. **使用 dotnet.exe 和 NuGet 撰写应用程序**。
-    请参阅[使用生成](https://github.com/dotnet/coreclr/blob/master/Documentation/workflow/UsingYourBuild.md)了解如何通过使用刚创建的 NuGet 包和“dotnet”命令行接口 (CLI) 来创建使用你的新运行时的程序。 非运行时开发人员常通过此方法使用你的新运行时。    
+    请参阅[使用生成](https://github.com/dotnet/coreclr/blob/master/Documentation/workflow/UsingYourBuild.md)了解如何通过使用刚创建的 NuGet 包和“dotnet”命令行接口 (CLI) 来创建使用你的新运行时的程序。 非运行时开发人员常通过此方法使用你的新运行时。
 
  2. **使用 corerun.exe 运行通过未打包的 DLL 运行应用程序**。
     此存储库还定义了一个名为 corerun.exe 的简单主机，它与 NuGet 没有任何依赖关系。
@@ -86,13 +87,13 @@ bin\Log 目录包含生成期间生成的日志文件（生成失败时这些日
 为了生成 .NET Core CLI，需要在计算机上安装以下项。
 
 * Windows 和 Linux：
-    - PATH 上的 git
+  * PATH 上的 git
 * macOS：
-    - PATH 上的 git
-    - Xcode
-    - Openssl
+  * PATH 上的 git
+  * Xcode
+  * Openssl
 
-若要进行生成，请在 Windows 上从根运行 `build.cmd`，在 Linux 和 macOS 上从根运行 `build.sh`。 如果不希望执行测试，请运行 `build.cmd /t:Compile` 或 `./build.sh /t:Compile`。 若要在 macOS Sierra 中生成 CLI，需通过运行 `export DOTNET_RUNTIME_ID=osx.10.11-x64` 设置 DOTNET_RUNTIME_ID 环境变量。
+若要进行生成，请在 Windows 上从根运行 `build.cmd`，在 Linux 和 macOS 上从根运行 `build.sh`。 如果不希望执行测试，请运行 `build.cmd -t:Compile` 或 `./build.sh -t:Compile`。 若要在 macOS Sierra 中生成 CLI，需通过运行 `export DOTNET_RUNTIME_ID=osx.10.11-x64` 设置 DOTNET_RUNTIME_ID 环境变量。
 
 ### <a name="using-your-build"></a>使用生成
 

@@ -2,12 +2,12 @@
 title: 函数编程与过程编程 (LINQ to XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: fc64e39c-a487-4882-9169-da4de97917d9
-ms.openlocfilehash: 16d78e967fd5379940ac93c82e3bb59c60941e58
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 888c360e1b868c79d378f2fc46a26c152121300f
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33328209"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47108775"
 ---
 # <a name="functional-vs-procedural-programming-linq-to-xml-c"></a>函数编程与过程编程 (LINQ to XML) (C#)
 XML 应用程序有多种类型：  
@@ -40,5 +40,6 @@ XML 应用程序有多种类型：
   
  有关编写功能转换的教程，请参阅 [XML 的纯功能转换 (C#)](../../../../csharp/programming-guide/concepts/linq/pure-functional-transformations-of-xml.md)。  
   
-## <a name="see-also"></a>请参阅  
- [LINQ to XML 编程概述 (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-programming-overview.md)
+## <a name="see-also"></a>请参阅
+
+- [LINQ to XML 编程概述 (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-programming-overview.md)

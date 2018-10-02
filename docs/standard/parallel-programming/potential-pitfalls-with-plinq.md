@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 75a38b55-4bc4-488a-87d5-89dbdbdc76a2
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 73ec2d2fb73ee95b39a15307d136c35542578c41
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e44fd3e6f806eef3805416dafd90a4855e79b3c7
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33591711"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47206406"
 ---
 # <a name="potential-pitfalls-with-plinq"></a>PLINQ 的潜在缺陷
 在许多情况下，与顺序 LINQ to Objects 查询相比，PLINQ 可以显著提升性能。 不过，并行执行查询增加了工作复杂性，可能会导致在顺序代码中不常见或根本不会遇到的问题。 本主题列出了一些在编写 PLINQ 查询时要避免的做法。  
@@ -83,41 +83,38 @@ a.Where(...).OrderBy(...).Select(...).ForAll(x => fs.Write(x));
   
 ```vb  
 Dim mre = New ManualResetEventSlim()  
-    Enumerable.Range(0, ProcessorCount * 100).AsParallel().ForAll(Sub(j)   
-  
-                                                     If j = Environment.ProcessorCount Then  
-  
-                                                         Console.WriteLine("Set on {0} with value of {1}", Thread.CurrentThread.ManagedThreadId, j)  
-                                                         mre.Set()  
-  
-                                                     Else  
-  
-                                                         Console.WriteLine("Waiting on {0} with value of {1}", Thread.CurrentThread.ManagedThreadId, j)  
-                                                         mre.Wait()  
-                                                     End If  
-    End Sub) ' deadlocks  
+Enumerable.Range(0, Environment.ProcessorCount * 100).AsParallel().ForAll(Sub(j)   
+   If j = Environment.ProcessorCount Then  
+       Console.WriteLine("Set on {0} with value of {1}", Thread.CurrentThread.ManagedThreadId, j)  
+       mre.Set()  
+   Else  
+       Console.WriteLine("Waiting on {0} with value of {1}", Thread.CurrentThread.ManagedThreadId, j)  
+       mre.Wait()  
+   End If  
+End Sub) ' deadlocks  
 ```  
   
 ```csharp  
 ManualResetEventSlim mre = new ManualResetEventSlim();  
-            Enumerable.Range(0, ProcessorCount * 100).AsParallel().ForAll((j) =>  
-            {  
-                if (j == Environment.ProcessorCount)  
-                {  
-                    Console.WriteLine("Set on {0} with value of {1}", Thread.CurrentThread.ManagedThreadId, j);  
-                    mre.Set();  
-                }  
-                else  
-                {  
-                    Console.WriteLine("Waiting on {0} with value of {1}", Thread.CurrentThread.ManagedThreadId, j);  
-                    mre.Wait();  
-                }  
-            }); //deadlocks  
+Enumerable.Range(0, Environment.ProcessorCount * 100).AsParallel().ForAll((j) =>  
+{  
+    if (j == Environment.ProcessorCount)  
+    {  
+        Console.WriteLine("Set on {0} with value of {1}", Thread.CurrentThread.ManagedThreadId, j);  
+        mre.Set();  
+    }  
+    else  
+    {  
+        Console.WriteLine("Waiting on {0} with value of {1}", Thread.CurrentThread.ManagedThreadId, j);  
+        mre.Wait();  
+    }  
+}); //deadlocks  
 ```  
   
  在此示例中，一个迭代设置一个事件，而所有的其他迭代则等待该事件。 在设置事件的迭代完成之前，任何等待迭代均无法完成。 但是，在设置事件的迭代有机会执行之前，等待迭代可能会阻止用于执行并行循环的所有线程。 这将导致死锁 – 设置事件的迭代将永不会执行，并且等待迭代将永远不会醒来。  
   
  具体而言，并行循环的一个迭代绝不应该等待循环的另一个迭代来继续执行。 如果并行循环决定按相反的顺序安排迭代，则会发生死锁。  
   
-## <a name="see-also"></a>请参阅  
- [并行 LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)
+## <a name="see-also"></a>请参阅
+
+- [并行 LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)

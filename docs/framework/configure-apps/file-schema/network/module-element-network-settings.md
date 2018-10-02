@@ -10,13 +10,12 @@ helpviewer_keywords:
 ms.assetid: 10318725-9666-4d65-ab61-b94c64e59f13
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 06c653d8759224e1112183a7e86e9797a97402af
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 4d51010d6236103d252507802e14d01230d90219
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32753763"
+ms.lasthandoff: 09/27/2018
+ms.locfileid: "47397184"
 ---
 # <a name="ltmodulegt-element-network-settings"></a>&lt;模块&gt;元素 （网络设置）
 向应用程序添加新的代理模块。  
@@ -41,7 +40,7 @@ ms.locfileid: "32753763"
   
 |**特性**|**说明**|  
 |-------------------|---------------------|  
-|`type`|完全限定的类型名称 (由<xref:System.Type.FullName%2A>属性) 和程序集名称 (由<xref:System.Reflection.Assembly.FullName%2A>属性)，用逗号、 来实现该代理分隔。|  
+|`type`|完全限定的类型名 (由<xref:System.Type.FullName%2A>属性) 和程序集名称 (由<xref:System.Reflection.Assembly.FullName%2A>属性)、 分隔一个逗号，来实现该代理。|  
   
 ### <a name="child-elements"></a>子元素  
  无。  
@@ -53,9 +52,9 @@ ms.locfileid: "32753763"
 |[defaultProxy](../../../../../docs/framework/configure-apps/file-schema/network/defaultproxy-element-network-settings.md)|配置超文本传输协议 (HTTP) 代理服务器。|  
   
 ## <a name="remarks"></a>备注  
- `module`元素注册实现的代理类<xref:System.Net.IWebProxy>接口。 在注册代理类之后，该 `module` 可用于通过所支持的代理请求信息。  
+ `module`元素注册代理类实现的<xref:System.Net.IWebProxy>接口。 在注册代理类之后，该 `module` 可用于通过所支持的代理请求信息。  
   
- 值`type`属性应为模块的类名称和名称的其相应的动态链接库 (DLL)。  
+ 值为`type`属性应为该模块的类名和名称的其对应的动态链接库 (DLL)。  
   
 ## <a name="configuration-files"></a>配置文件  
  此元素可在应用程序配置文件或计算机配置文件 (Machine.config) 中使用。  

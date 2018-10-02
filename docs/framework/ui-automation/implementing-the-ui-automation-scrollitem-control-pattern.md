@@ -8,17 +8,16 @@ helpviewer_keywords:
 ms.assetid: 903bab5c-80c1-44d7-bdc2-0a418893b987
 author: Xansky
 ms.author: mhopkins
-manager: markl
-ms.openlocfilehash: cdf663b2989ccf93fa9bb6742bfb491a691dea02
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4c3dfc6eb42fef0c3464b49f7513425038d9091b
+ms.sourcegitcommit: daa8788af67ac2d1cecd24f9f3409babb2f978c9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33399029"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47862766"
 ---
 # <a name="implementing-the-ui-automation-scrollitem-control-pattern"></a>实现 UI 自动化 ScrollItem 控件模式
 > [!NOTE]
->  本文档适用于想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空间中定义的托管 <xref:System.Windows.Automation> 类的 .NET Framework 开发人员。 有关 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]的最新信息，请参阅 [Windows 自动化 API：UI 自动化](http://go.microsoft.com/fwlink/?LinkID=156746)。  
+>  本文档适用于想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空间中定义的托管 <xref:System.Windows.Automation> 类的 .NET Framework 开发人员。 有关最新信息[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]，请参阅[Windows 自动化 API: UI 自动化](https://go.microsoft.com/fwlink/?LinkID=156746)。  
   
  本主题介绍的实现准则和约定<xref:System.Windows.Automation.Provider.IScrollItemProvider>，包括有关属性、 方法和事件的信息。 本主题的结尾列出了指向其他参考资料的链接。  
   
@@ -28,7 +27,7 @@ ms.locfileid: "33399029"
 ## <a name="implementation-guidelines-and-conventions"></a>实现准则和约定  
  在实现“滚动项”控件模式时，请注意以下准则和约定：  
   
--   包含在 Window 或 Canvas 控件内的项不需要实现 IScrollItemProvider 接口。 作为替代方法，但是，它们必须公开的有效位置<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty>。 这将允许 UI 自动化客户端应用程序，以使用<xref:System.Windows.Automation.ScrollPattern>控件模式上要显示子项的容器的方法。  
+-   包含在 Window 或 Canvas 控件内的项不需要实现 IScrollItemProvider 接口。 作为替代方法，但是，它们必须公开的有效位置<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty>。 这将允许 UI 自动化客户端应用程序，以使用<xref:System.Windows.Automation.ScrollPattern>控件模式上容器以显示子项目的方法。  
   
 <a name="Required_Members_for_IScrollItemProvider"></a>   
 ## <a name="required-members-for-iscrollitemprovider"></a>IScrollItemProvider 必需的成员  

@@ -2,12 +2,12 @@
 title: 设计和实现自定义活动
 ms.date: 03/30/2017
 ms.assetid: 4e30e63d-6e33-4842-a7a4-ce807cef1fad
-ms.openlocfilehash: 2ed80b5cbb27c6647053ee9b8f4cd2bedb0c6cde
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 673145c856e950c8648a87cb3dcb9665ffa51ba9
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33513808"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47216705"
 ---
 # <a name="designing-and-implementing-custom-activities"></a>设计和实现自定义活动
 [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] 中自定义活动的创建途径有二：或是将系统提供的活动组装成组合活动，或是创建派生自 <xref:System.Activities.CodeActivity>、<xref:System.Activities.AsyncCodeActivity> 或 <xref:System.Activities.NativeActivity> 的新类型。 本节介绍如何使用任一方法来创建自定义活动。  
@@ -35,10 +35,7 @@ ms.locfileid: "33513808"
  描述如何使用工作流执行属性将上下文特定属性添加到活动的环境中。  
   
  [使用活动委托](../../../docs/framework/windows-workflow-foundation/using-activity-delegates.md)  
- 讨论如何编写和使用包含活动代理的活动。  
-  
- [活动本地化](../../../docs/framework/windows-workflow-foundation/activity-localization.md)  
- 描述如何在活动中使用本地化的字符串资源。  
+ 讨论如何编写和使用包含活动代理的活动。
   
  [使用活动扩展](../../../docs/framework/windows-workflow-foundation/using-activity-extensions.md)  
  描述如何编写和使用活动扩展。  

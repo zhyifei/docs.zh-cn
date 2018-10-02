@@ -5,14 +5,15 @@ helpviewer_keywords:
 - single-dimensional arrays [C#]
 - arrays [C#], single-dimensional
 ms.assetid: 2cec1196-1de0-49d2-baf2-c607c33310e8
-ms.openlocfilehash: 2f5dcb032c5dea764cdd212bbcd02e1640089d96
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c2f26fd74a596ada21eef578e58c9cd8e0305d6c
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33313948"
+ms.lasthandoff: 09/29/2018
+ms.locfileid: "47399380"
 ---
 # <a name="single-dimensional-arrays-c-programming-guide"></a>一维数组（C# 编程指南）
+
 可以声明五个整数的一维数组，如以下示例所示：  
   
  [!code-csharp[csProgGuideArrays#4](../../../csharp/programming-guide/arrays/codesnippet/CSharp/single-dimensional-arrays_1.cs)]  
@@ -23,7 +24,8 @@ ms.locfileid: "33313948"
   
  [!code-csharp[csProgGuideArrays#5](../../../csharp/programming-guide/arrays/codesnippet/CSharp/single-dimensional-arrays_2.cs)]  
   
-## <a name="array-initialization"></a>数组初始化  
+## <a name="array-initialization"></a>数组初始化
+
  可以在声明时初始化数组，在这种情况下，无需秩说明符，因为它已由初始化列表中的元素数目提供。 例如:  
   
  [!code-csharp[csProgGuideArrays#6](../../../csharp/programming-guide/arrays/codesnippet/CSharp/single-dimensional-arrays_3.cs)]  
@@ -42,7 +44,8 @@ ms.locfileid: "33313948"
   
  C# 3.0 引入了隐式类型化数组。 有关详细信息，请参阅[隐式类型化数组](../../../csharp/programming-guide/arrays/implicitly-typed-arrays.md)。  
   
-## <a name="value-type-and-reference-type-arrays"></a>值类型和引用类型数组  
+## <a name="value-type-and-reference-type-arrays"></a>值类型和引用类型数组
+
  请考虑以下数组声明：  
   
  [!code-csharp[csProgGuideArrays#10](../../../csharp/programming-guide/arrays/codesnippet/CSharp/single-dimensional-arrays_7.cs)]  
@@ -51,9 +54,10 @@ ms.locfileid: "33313948"
   
  有关值类型和引用类型的详细信息，请参阅[类型](../../../csharp/language-reference/keywords/types.md)。  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Array>  
- [C# 编程指南](../../../csharp/programming-guide/index.md)  
- [数组](../../../csharp/programming-guide/arrays/index.md)  
- [多维数组](../../../csharp/programming-guide/arrays/multidimensional-arrays.md)  
- [交错数组](../../../csharp/programming-guide/arrays/jagged-arrays.md)
+## <a name="see-also"></a>请参阅
+
+- <xref:System.Array>  
+- [C# 编程指南](../../../csharp/programming-guide/index.md)  
+- [数组](../../../csharp/programming-guide/arrays/index.md)  
+- [多维数组](../../../csharp/programming-guide/arrays/multidimensional-arrays.md)  
+- [交错数组](../../../csharp/programming-guide/arrays/jagged-arrays.md)

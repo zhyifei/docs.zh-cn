@@ -8,22 +8,22 @@ helpviewer_keywords:
 - graphics [WPF], rendering
 - rendering graphics [WPF]
 ms.assetid: 6dec9657-4d8c-4e46-8c54-40fb80008265
-ms.openlocfilehash: 305af1025abb98950d90f46e75a9f261704a8ebe
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: cbbaba8cbdaf6dfd7b7c18447d425298b4911e94
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33566725"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44260119"
 ---
 # <a name="wpf-graphics-rendering-overview"></a>WPF 图形呈现疑难解答
-本主题概述 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 可视化层。 它注重的角色<xref:System.Windows.Media.Visual>呈现中的支持的类[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]模型。  
+本主题概述 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 可视化层。 它主要关注的角色<xref:System.Windows.Media.Visual>类中呈现支持[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]模型。  
   
   
 <a name="role_of_visual_object"></a>   
 ## <a name="role-of-the-visual-object"></a>视觉对象的角色  
- <xref:System.Windows.Media.Visual>类是从其基本提取每个<xref:System.Windows.FrameworkElement>对象派生。 该类还用作在 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 中编写新控件的入口点，在 Win32 应用程序模型中，该类在许多方面可视为窗口句柄 (HWND)。  
+ <xref:System.Windows.Media.Visual>类是从其的基本抽象每个<xref:System.Windows.FrameworkElement>对象派生。 该类还用作在 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 中编写新控件的入口点，在 Win32 应用程序模型中，该类在许多方面可视为窗口句柄 (HWND)。  
   
- <xref:System.Windows.Media.Visual>对象是一项核心[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]对象，它的主要角色是提供呈现支持。 用户界面控件，如<xref:System.Windows.Controls.Button>和<xref:System.Windows.Controls.TextBox>，派生自<xref:System.Windows.Media.Visual>类，并使用它来保持其呈现数据。 <xref:System.Windows.Media.Visual>对象提供支持：  
+ <xref:System.Windows.Media.Visual>对象是一项核心[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]对象，它的主要角色是提供呈现支持。 用户界面控件，如<xref:System.Windows.Controls.Button>并<xref:System.Windows.Controls.TextBox>，派生自<xref:System.Windows.Media.Visual>类，并使用该类来保持其呈现数据。 <xref:System.Windows.Media.Visual>对象提供支持：  
   
 -   输出显示：呈现视觉对象的持久、序列化的绘图内容。  
   
@@ -35,7 +35,7 @@ ms.locfileid: "33566725"
   
 -   边框计算：确定视觉对象的边框。  
   
- 但是，<xref:System.Windows.Media.Visual>对象不包含支持非呈现功能，如：  
+ 但是，<xref:System.Windows.Media.Visual>如对象不包含对非呈现功能的支持：  
   
 -   事件处理  
   
@@ -47,37 +47,37 @@ ms.locfileid: "33566725"
   
 -   全球化  
   
- <xref:System.Windows.Media.Visual> 将公开为公共被子类必须派生自抽象类。 下图显示了 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 中所公开的视觉对象的层次结构。  
+ <xref:System.Windows.Media.Visual> 公开为公共抽象类必须从中派生子类。 下图显示了 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 中所公开的视觉对象的层次结构。  
   
- ![从 Visual 对象派生的类的示意图](../../../../docs/framework/wpf/graphics-multimedia/media/visualclass01.png "VisualClass01")  
+ ![从 Visual 对象派生的类关系图](../../../../docs/framework/wpf/graphics-multimedia/media/visualclass01.png "VisualClass01")  
 视觉对象类层次结构  
   
 ### <a name="drawingvisual-class"></a>DrawingVisual 类  
- <xref:System.Windows.Media.DrawingVisual>是一种轻型绘制用于呈现形状、 图像或文本的类。 此类之所以为轻量类是因为它不提供布局或事件处理，从而提升其运行时性能。 因此，绘图非常适用于背景和剪贴画。 <xref:System.Windows.Media.DrawingVisual>可以用于创建自定义视觉对象。 有关详细信息，请参阅[使用 DrawingVisual 对象](../../../../docs/framework/wpf/graphics-multimedia/using-drawingvisual-objects.md)。  
+ <xref:System.Windows.Media.DrawingVisual>是一个轻量绘图类，用于呈现形状、 图像或文本。 此类之所以为轻量类是因为它不提供布局或事件处理，从而提升其运行时性能。 因此，绘图非常适用于背景和剪贴画。 <xref:System.Windows.Media.DrawingVisual>可用于创建自定义视觉对象。 有关详细信息，请参阅[使用 DrawingVisual 对象](../../../../docs/framework/wpf/graphics-multimedia/using-drawingvisual-objects.md)。  
   
 ### <a name="viewport3dvisual-class"></a>Viewport3DVisual 类  
- <xref:System.Windows.Media.Media3D.Viewport3DVisual>二维之间的桥梁<xref:System.Windows.Media.Visual>和<xref:System.Windows.Media.Media3D.Visual3D>对象。 <xref:System.Windows.Media.Media3D.Visual3D>类是所有三维可视元素的基类。 <xref:System.Windows.Media.Media3D.Viewport3DVisual>要求您定义<xref:System.Windows.Media.Media3D.Viewport3DVisual.Camera%2A>值和<xref:System.Windows.Media.Media3D.Viewport3DVisual.Viewport%2A>值。 借助照相机，可以查看场景。 视区确定投影映射到 2D 图面的位置。 有关 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 中 3D 的详细信息，请参阅 [3-D 图形概述](../../../../docs/framework/wpf/graphics-multimedia/3-d-graphics-overview.md)。  
+ <xref:System.Windows.Media.Media3D.Viewport3DVisual> 2D 之间的桥梁<xref:System.Windows.Media.Visual>和<xref:System.Windows.Media.Media3D.Visual3D>对象。 <xref:System.Windows.Media.Media3D.Visual3D>类是所有 3D 可视化元素的基类。 <xref:System.Windows.Media.Media3D.Viewport3DVisual>要求您定义<xref:System.Windows.Media.Media3D.Viewport3DVisual.Camera%2A>值和一个<xref:System.Windows.Media.Media3D.Viewport3DVisual.Viewport%2A>值。 借助照相机，可以查看场景。 视区确定投影映射到 2D 图面的位置。 有关 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 中 3D 的详细信息，请参阅 [3-D 图形概述](../../../../docs/framework/wpf/graphics-multimedia/3-d-graphics-overview.md)。  
   
 ### <a name="containervisual-class"></a>ContainerVisual 类  
- <xref:System.Windows.Media.ContainerVisual>类用作的集合的容器<xref:System.Windows.Media.Visual>对象。 <xref:System.Windows.Media.DrawingVisual>类派生自<xref:System.Windows.Media.ContainerVisual>类，使其能够包含的视觉对象的集合。  
+ <xref:System.Windows.Media.ContainerVisual>类用作一系列的容器<xref:System.Windows.Media.Visual>对象。 <xref:System.Windows.Media.DrawingVisual>类派生自<xref:System.Windows.Media.ContainerVisual>类，使其能够包含视觉对象的集合。  
   
 ### <a name="drawing-content-in-visual-objects"></a>视觉对象中的绘图内容  
- A<xref:System.Windows.Media.Visual>对象将作为其呈现数据存储**向量图形指令列表**。 指令列表中的每一项都以序列化格式表示一组低级别的图形数据及其相关资源。 共有四种不同类型的呈现数据可以包含绘图内容。  
+ 一个<xref:System.Windows.Media.Visual>对象将存储其呈现数据作为**矢量图形指令列表**。 指令列表中的每一项都以序列化格式表示一组低级别的图形数据及其相关资源。 共有四种不同类型的呈现数据可以包含绘图内容。  
   
 |绘图内容类型|描述|  
 |--------------------------|-----------------|  
-|矢量图形|表示矢量图形数据，并且任何关联<xref:System.Windows.Media.Brush>和<xref:System.Windows.Media.Pen>信息。|  
-|图像|表示定义的区域中的某个图像<xref:System.Windows.Rect>。|  
-|标志符号|表示呈现绘制<xref:System.Windows.Media.GlyphRun>，即从指定的字体资源的标志符号的序列。 这是文本的表示方式。|  
+|矢量图形|表示矢量图形数据以及任何相关联<xref:System.Windows.Media.Brush>和<xref:System.Windows.Media.Pen>信息。|  
+|图像|表示所定义区域内的图像<xref:System.Windows.Rect>。|  
+|标志符号|表示呈现绘图<xref:System.Windows.Media.GlyphRun>，这是一系列字形从指定的字体资源。 这是文本的表示方式。|  
 |视频|表示用于呈现视频的绘图。|  
   
- <xref:System.Windows.Media.DrawingContext>可以来填充<xref:System.Windows.Media.Visual>可视化内容。 当你使用<xref:System.Windows.Media.DrawingContext>对象的绘图命令时，实际上存储一组图形系统将更高版本使用的呈现数据; 你不绘制到实时屏幕。  
+ <xref:System.Windows.Media.DrawingContext> ，可填充<xref:System.Windows.Media.Visual>可视化内容。 当你使用<xref:System.Windows.Media.DrawingContext>对象的绘图命令时，实际上存储一组更高版本将由图形系统使用的呈现数据; 您不绘制到屏幕上实时。  
   
- 当你创建[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]控件，如<xref:System.Windows.Controls.Button>，该控件隐式生成为绘图对象本身的呈现数据。 例如，设置<xref:System.Windows.Controls.ContentControl.Content%2A>属性<xref:System.Windows.Controls.Button>导致要存储的标志符号的呈现表示的控件。  
+ 当您创建[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]控件，如<xref:System.Windows.Controls.Button>，控件隐式生成呈现数据为绘图本身。 例如，设置<xref:System.Windows.Controls.ContentControl.Content%2A>属性的<xref:System.Windows.Controls.Button>会导致该控件存储字形的呈现表示形式。  
   
- A<xref:System.Windows.Media.Visual>其内容描述为一个或多个<xref:System.Windows.Media.Drawing>对象中包含<xref:System.Windows.Media.DrawingGroup>。 A<xref:System.Windows.Media.DrawingGroup>还描述不透明蒙板、 转换、 位图效果和应用于其内容的其他操作。 <xref:System.Windows.Media.DrawingGroup> 当呈现的内容将操作应用按以下顺序： <xref:System.Windows.Media.DrawingGroup.OpacityMask%2A>， <xref:System.Windows.Media.DrawingGroup.Opacity%2A>， <xref:System.Windows.Media.DrawingGroup.BitmapEffect%2A>， <xref:System.Windows.Media.DrawingGroup.ClipGeometry%2A>， <xref:System.Windows.Media.DrawingGroup.GuidelineSet%2A>，，然后<xref:System.Windows.Media.DrawingGroup.Transform%2A>。  
+ 一个<xref:System.Windows.Media.Visual>其内容描述为一个或多个<xref:System.Windows.Media.Drawing>中包含的对象<xref:System.Windows.Media.DrawingGroup>。 一个<xref:System.Windows.Media.DrawingGroup>还介绍了不透明蒙板、 转换、 位图效果和其他应用于其内容的操作。 <xref:System.Windows.Media.DrawingGroup> 呈现内容时，操作将按以下顺序应用： <xref:System.Windows.Media.DrawingGroup.OpacityMask%2A>， <xref:System.Windows.Media.DrawingGroup.Opacity%2A>， <xref:System.Windows.Media.DrawingGroup.BitmapEffect%2A>， <xref:System.Windows.Media.DrawingGroup.ClipGeometry%2A>， <xref:System.Windows.Media.DrawingGroup.GuidelineSet%2A>，，然后<xref:System.Windows.Media.DrawingGroup.Transform%2A>。  
   
- 下图显示在其中顺序<xref:System.Windows.Media.DrawingGroup>在呈现序列过程中应用操作。  
+ 下图中的显示顺序<xref:System.Windows.Media.DrawingGroup>呈现序列期间应用操作。  
   
  ![DrawingGroup 操作顺序](../../../../docs/framework/wpf/graphics-multimedia/media/graphcismm-drawinggroup-order.png "graphcismm_drawinggroup_order")  
 DrawingGroup 操作的顺序  
@@ -85,55 +85,55 @@ DrawingGroup 操作的顺序
  有关详细信息，请参阅 [Drawing 对象概述](../../../../docs/framework/wpf/graphics-multimedia/drawing-objects-overview.md)。  
   
 #### <a name="drawing-content-at-the-visual-layer"></a>可视化层中的绘图内容  
- 你永远不会直接实例化<xref:System.Windows.Media.DrawingContext>; 但是，可以获取绘制上下文从某些方法，如<xref:System.Windows.Media.DrawingGroup.Open%2A?displayProperty=nameWithType>和<xref:System.Windows.Media.DrawingVisual.RenderOpen%2A?displayProperty=nameWithType>。 下面的示例检索<xref:System.Windows.Media.DrawingContext>从<xref:System.Windows.Media.DrawingVisual>并使用它来绘制矩形。  
+ 您永远不会直接实例化<xref:System.Windows.Media.DrawingContext>; 但是，可以获取绘图上下文通过某些方法，如<xref:System.Windows.Media.DrawingGroup.Open%2A?displayProperty=nameWithType>和<xref:System.Windows.Media.DrawingVisual.RenderOpen%2A?displayProperty=nameWithType>。 下面的示例检索<xref:System.Windows.Media.DrawingContext>从<xref:System.Windows.Media.DrawingVisual>并使用它来绘制一个矩形。  
   
  [!code-csharp[drawingvisualsample#101](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DrawingVisualSample/CSharp/Window1.xaml.cs#101)]
  [!code-vb[drawingvisualsample#101](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DrawingVisualSample/visualbasic/window1.xaml.vb#101)]  
   
 #### <a name="enumerating-drawing-content-at-the-visual-layer"></a>在可视化层中枚举绘图内容  
- 除了其其他用法，<xref:System.Windows.Media.Drawing>对象还可用于枚举的内容提供的对象模型<xref:System.Windows.Media.Visual>。  
+ 除了其其他用途，请<xref:System.Windows.Media.Drawing>对象还提供用于枚举的内容的对象模型<xref:System.Windows.Media.Visual>。  
   
 > [!NOTE]
->  当你枚举视觉对象的内容时，就在检索<xref:System.Windows.Media.Drawing>对象，且不基础数据的表示形式呈现为向量图形指令列表。  
+>  当枚举视觉对象的内容时，就在检索<xref:System.Windows.Media.Drawing>对象和表示形式呈现数据作为矢量图形指令列表不基础。  
   
- 下面的示例使用<xref:System.Windows.Media.VisualTreeHelper.GetDrawing%2A>方法来检索<xref:System.Windows.Media.DrawingGroup>值<xref:System.Windows.Media.Visual>并枚举该值。  
+ 下面的示例使用<xref:System.Windows.Media.VisualTreeHelper.GetDrawing%2A>方法来检索<xref:System.Windows.Media.DrawingGroup>的值<xref:System.Windows.Media.Visual>并枚举该值。  
   
  [!code-csharp[DrawingMiscSnippets_snip#GraphicsMMRetrieveDrawings](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DrawingMiscSnippets_snip/CSharp/EnumerateDrawingsExample.xaml.cs#graphicsmmretrievedrawings)]  
   
 <a name="how_visual_objects_are_used_to_build_controls"></a>   
 ## <a name="how-visual-objects-are-used-to-build-controls"></a>如何使用视觉对象来生成控件  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 中的许多对象都由其他视觉对象组成，这意味着它们可以包含子代对象的各种层次结构。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 中的许多用户界面元素（如控件）都由多个表示不同类型呈现元素的视觉对象组成。 例如，<xref:System.Windows.Controls.Button>控件可以包含多个其他对象，包括<xref:Microsoft.Windows.Themes.ClassicBorderDecorator>， <xref:System.Windows.Controls.ContentPresenter>，和<xref:System.Windows.Controls.TextBlock>。  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 中的许多对象都由其他视觉对象组成，这意味着它们可以包含子代对象的各种层次结构。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 中的许多用户界面元素（如控件）都由多个表示不同类型呈现元素的视觉对象组成。 例如，<xref:System.Windows.Controls.Button>控件可以包含其他对象，其中包括许多<xref:Microsoft.Windows.Themes.ClassicBorderDecorator>， <xref:System.Windows.Controls.ContentPresenter>，和<xref:System.Windows.Controls.TextBlock>。  
   
  下面的代码演示<xref:System.Windows.Controls.Button>在标记中定义的控件。  
   
  [!code-xaml[VisualsOverview#VisualsOverviewSnippet1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/VisualsOverview/CSharp/Window1.xaml#visualsoverviewsnippet1)]  
   
- 如果您打算枚举包含默认的 visual 对象<xref:System.Windows.Controls.Button>控件，则将发现如下所示的视觉对象的层次结构：  
+ 如果你打算枚举包含默认值的视觉对象<xref:System.Windows.Controls.Button>控件，您将看到如下图所示的视觉对象的层次结构：  
   
- ![可视化树层次结构示意图](../../../../docs/framework/wpf/graphics-multimedia/media/visuallayeroverview03.gif "VisualLayerOverview03")  
+ ![可视化树层次结构关系图](../../../../docs/framework/wpf/graphics-multimedia/media/visuallayeroverview03.gif "VisualLayerOverview03")  
 可视化树层次结构示意图  
   
- <xref:System.Windows.Controls.Button>控件包含<xref:Microsoft.Windows.Themes.ClassicBorderDecorator>元素，它又包含<xref:System.Windows.Controls.ContentPresenter>元素。 <xref:Microsoft.Windows.Themes.ClassicBorderDecorator>元素负责绘制边框和背景的<xref:System.Windows.Controls.Button>。 <xref:System.Windows.Controls.ContentPresenter>元素负责显示的内容<xref:System.Windows.Controls.Button>。 在这种情况下，由于您要显示文本，<xref:System.Windows.Controls.ContentPresenter>元素包含<xref:System.Windows.Controls.TextBlock>元素。 这一事实，<xref:System.Windows.Controls.Button>控件使用<xref:System.Windows.Controls.ContentPresenter>意味着内容无法表示由其他元素，如<xref:System.Windows.Controls.Image>或几何形状，如<xref:System.Windows.Media.EllipseGeometry>。  
+ <xref:System.Windows.Controls.Button>控件包含<xref:Microsoft.Windows.Themes.ClassicBorderDecorator>元素，它又包含<xref:System.Windows.Controls.ContentPresenter>元素。 <xref:Microsoft.Windows.Themes.ClassicBorderDecorator>元素负责绘制边框和背景的<xref:System.Windows.Controls.Button>。 <xref:System.Windows.Controls.ContentPresenter>元素负责显示的内容<xref:System.Windows.Controls.Button>。 在这种情况下，由于您要显示的文本，<xref:System.Windows.Controls.ContentPresenter>元素包含<xref:System.Windows.Controls.TextBlock>元素。 这一事实，<xref:System.Windows.Controls.Button>控件使用<xref:System.Windows.Controls.ContentPresenter>意味着无法通过其他元素，如表示内容<xref:System.Windows.Controls.Image>或几何形状，如<xref:System.Windows.Media.EllipseGeometry>。  
   
 ### <a name="control-templates"></a>控件模板  
- 为控件的层次结构扩展为控件的关键是<xref:System.Windows.Controls.ControlTemplate>。 控件模板为控件指定了默认的可视化层次结构。 显式引用某个控件时，会隐式引用它的可视化层次结构。 可以重写控件模板的默认值，以便为控件创建自定义的可视化外观。 例如，无法修改的背景颜色值<xref:System.Windows.Controls.Button>控制，以便它而不是纯颜色值使用线性渐变的颜色值。 有关详细信息，请参阅[按钮样式和模板](../../../../docs/framework/wpf/controls/button-styles-and-templates.md)。  
+ 为控件的层次结构扩展为控件的关键是<xref:System.Windows.Controls.ControlTemplate>。 控件模板为控件指定了默认的可视化层次结构。 显式引用某个控件时，会隐式引用它的可视化层次结构。 可以重写控件模板的默认值，以便为控件创建自定义的可视化外观。 例如，可以修改的背景颜色值<xref:System.Windows.Controls.Button>控件，以便它而不是使用纯色值使用线性渐变颜色值。 有关详细信息，请参阅[按钮样式和模板](../../../../docs/framework/wpf/controls/button-styles-and-templates.md)。  
   
- 用户界面元素，如<xref:System.Windows.Controls.Button>控件，则包含描述控件的整个呈现定义的多个向量图形指令列表。 下面的代码演示<xref:System.Windows.Controls.Button>在标记中定义的控件。  
+ 用户界面元素，如<xref:System.Windows.Controls.Button>控件，包含描述控件的全部呈现定义的多个矢量图形指令列表。 下面的代码演示<xref:System.Windows.Controls.Button>在标记中定义的控件。  
   
  [!code-xaml[VisualsOverview#VisualsOverviewSnippet2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/VisualsOverview/CSharp/Window1.xaml#visualsoverviewsnippet2)]  
   
- 如果你打算枚举视觉对象和矢量图形指令列表，前者构成<xref:System.Windows.Controls.Button>控件，则将发现如下所示的对象的层次结构：  
+ 如果要枚举的视觉对象和矢量图形指令列表的构成<xref:System.Windows.Controls.Button>控件，您将看到如下所示对象的层次结构：  
   
  ![可视化树和呈现数据示意图](../../../../docs/framework/wpf/graphics-multimedia/media/visuallayeroverview04.png "VisualLayerOverview04")  
 可视化树和呈现数据示意图  
   
- <xref:System.Windows.Controls.Button>控件包含<xref:Microsoft.Windows.Themes.ClassicBorderDecorator>元素，它又包含<xref:System.Windows.Controls.ContentPresenter>元素。 <xref:Microsoft.Windows.Themes.ClassicBorderDecorator>元素负责绘制所有离散图形元素构成的边框和背景的按钮。 <xref:System.Windows.Controls.ContentPresenter>元素负责显示的内容<xref:System.Windows.Controls.Button>。 在这种情况下，由于您要显示一个映像，<xref:System.Windows.Controls.ContentPresenter>元素包含<xref:System.Windows.Controls.Image>元素。  
+ <xref:System.Windows.Controls.Button>控件包含<xref:Microsoft.Windows.Themes.ClassicBorderDecorator>元素，它又包含<xref:System.Windows.Controls.ContentPresenter>元素。 <xref:Microsoft.Windows.Themes.ClassicBorderDecorator>元素负责绘制所有离散图形元素的边框和背景的按钮构成。 <xref:System.Windows.Controls.ContentPresenter>元素负责显示的内容<xref:System.Windows.Controls.Button>。 在这种情况下，由于您要显示图像，<xref:System.Windows.Controls.ContentPresenter>元素包含<xref:System.Windows.Controls.Image>元素。  
   
  对于视觉对象和矢量图形指令列表的层次结构，需要注意多个事项：  
   
 -   该层次结构中的排序表示绘图信息的呈现顺序。 从可视化元素的根，按照从左到右、从上到下的顺序遍历子元素。 如果某个元素有可视化子元素，则会先遍历该元素的子元素，然后再遍历该元素的同级。  
   
--   层次结构中的非叶节点元素如<xref:System.Windows.Controls.ContentPresenter>，用于包含子元素，它们不包含指令列表。  
+-   非叶节点元素中层次结构，如<xref:System.Windows.Controls.ContentPresenter>，用于包含子元素，它们不包含指令列表。  
   
 -   如果可视化元素既包含矢量图形指令列表又包含可视化子级，则会先呈现父级可视化元素中的指令列表，然后再呈现任何可视化子对象中的绘图。  
   
@@ -147,9 +147,9 @@ DrawingGroup 操作的顺序
   
  [!code-xaml[VisualsOverview#VisualsOverviewSnippet3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/VisualsOverview/CSharp/Window1.xaml#visualsoverviewsnippet3)]  
   
- 如果您打算枚举视觉对象，前者构成<xref:System.Windows.Controls.StackPanel>标记示例中的元素，则将发现如下所示的视觉对象的层次结构：  
+ 如果你打算枚举包含的视觉对象<xref:System.Windows.Controls.StackPanel>标记示例中的元素，您将看到如下图所示的视觉对象的层次结构：  
   
- ![可视化树层次结构示意图](../../../../docs/framework/wpf/graphics-multimedia/media/visuallayeroverview05.gif "VisualLayerOverview05")  
+ ![可视化树层次结构关系图](../../../../docs/framework/wpf/graphics-multimedia/media/visuallayeroverview05.gif "VisualLayerOverview05")  
 可视化树层次结构示意图  
   
 ### <a name="rendering-order"></a>呈现顺序  
@@ -159,34 +159,34 @@ DrawingGroup 操作的顺序
 可视化树呈现顺序示意图  
   
 ### <a name="root-visual"></a>可视化元素根  
- **可视化元素根**是可视化树层次结构中最顶层的元素。 在大多数应用程序，根视觉效果的基类是<xref:System.Windows.Window>或<xref:System.Windows.Navigation.NavigationWindow>。 但是，如果在 Win32 应用程序中承载视觉对象，则可视化元素根将是在 Win32 窗口中承载的最顶层的可视化元素。 有关详细信息，请参阅[教程：在 Win32 应用程序中承载视觉对象](../../../../docs/framework/wpf/graphics-multimedia/tutorial-hosting-visual-objects-in-a-win32-application.md)。  
+ **可视化元素根**是可视化树层次结构中最顶层的元素。 在大多数应用程序的根可视化对象的基类是<xref:System.Windows.Window>或<xref:System.Windows.Navigation.NavigationWindow>。 但是，如果在 Win32 应用程序中承载视觉对象，则可视化元素根将是在 Win32 窗口中承载的最顶层的可视化元素。 有关详细信息，请参阅[教程：在 Win32 应用程序中承载视觉对象](../../../../docs/framework/wpf/graphics-multimedia/tutorial-hosting-visual-objects-in-a-win32-application.md)。  
   
 ### <a name="relationship-to-the-logical-tree"></a>与逻辑树的关系  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 中的逻辑树表示应用程序在运行时的元素。 尽管不直接操作该树，但是该应用程序视图对于了解属性继承和事件路由非常有用。 与可视化树中，不同的逻辑树可以表示非视觉对象数据对象，如<xref:System.Windows.Documents.ListItem>。 在许多情况下，逻辑树密切映射到应用程序的标记定义。 下面的代码演示<xref:System.Windows.Controls.DockPanel>在标记中定义的元素。  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 中的逻辑树表示应用程序在运行时的元素。 尽管不直接操作该树，但是该应用程序视图对于了解属性继承和事件路由非常有用。 与可视化树中，不同的逻辑树可以表示非可视化数据对象，如<xref:System.Windows.Documents.ListItem>。 在许多情况下，逻辑树密切映射到应用程序的标记定义。 下面的代码演示<xref:System.Windows.Controls.DockPanel>在标记中定义的元素。  
   
  [!code-xaml[VisualsOverview#VisualsOverviewSnippet5](../../../../samples/snippets/csharp/VS_Snippets_Wpf/VisualsOverview/CSharp/Window1.xaml#visualsoverviewsnippet5)]  
   
- 如果您打算枚举构成逻辑对象<xref:System.Windows.Controls.DockPanel>标记示例中的元素，则将发现如下所示的逻辑对象的层次结构：  
+ 如果你打算枚举包含的逻辑对象<xref:System.Windows.Controls.DockPanel>标记示例中的元素，您将看到如下所示逻辑对象的层次结构：  
   
  ![树关系图](../../../../docs/framework/wpf/graphics-multimedia/media/tree1-wcp.gif "Tree1_wcp")  
 逻辑树关系图  
   
- 可视化树和逻辑树与当前的应用程序元素集合同步，并反映对元素进行的任何添加、删除或修改。 但是，这些树表示不同的应用程序视图。 与可视化树中，不同的逻辑树不展开控件的<xref:System.Windows.Controls.ContentPresenter>元素。 这意味着同一组对象的逻辑树和可视化树之间不存在直接的一对一对应关系。 实际上，调用**LogicalTreeHelper**对象的<xref:System.Windows.LogicalTreeHelper.GetChildren%2A>方法和**VisualTreeHelper**对象的<xref:System.Windows.Media.VisualTreeHelper.GetChild%2A>方法使用相同的元素，作为一个参数会产生不同的结果.  
+ 可视化树和逻辑树与当前的应用程序元素集合同步，并反映对元素进行的任何添加、删除或修改。 但是，这些树表示不同的应用程序视图。 与不同的可视化树中，逻辑树不展开控件的<xref:System.Windows.Controls.ContentPresenter>元素。 这意味着同一组对象的逻辑树和可视化树之间不存在直接的一对一对应关系。 实际上，调用**LogicalTreeHelper**对象的<xref:System.Windows.LogicalTreeHelper.GetChildren%2A>方法并**VisualTreeHelper**对象的<xref:System.Windows.Media.VisualTreeHelper.GetChild%2A>方法使用同一个元素，如参数会产生不同的结果.  
   
  有关逻辑树的详细信息，请参阅 [WPF 中的树](../../../../docs/framework/wpf/advanced/trees-in-wpf.md)。  
   
 ### <a name="viewing-the-visual-tree-with-xamlpad"></a>使用 XamlPad 查看可视化树  
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 工具 (XamlPad) 提供了一个用来查看和浏览可视化树的选项，该树与当前所定义的 [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)] 内容相对应。 单击菜单栏上的“显示可视化树”按钮可显示相应的可视化树。 下面将说明如何在 XamlPad 的“可视化树资源管理器”面板中将 [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)] 内容扩展为可视化树节点：  
   
- ![XamlPad 中的可视化树资源管理器面板](../../../../docs/framework/wpf/graphics-multimedia/media/visuallayeroverview08.png "VisualLayerOverview08")  
+ ![可视化树资源管理器面板中 XamlPad](../../../../docs/framework/wpf/graphics-multimedia/media/visuallayeroverview08.png "VisualLayerOverview08")  
 XamlPad 中的“可视化树资源管理器”面板  
   
- 请注意如何<xref:System.Windows.Controls.Label>， <xref:System.Windows.Controls.TextBox>，和<xref:System.Windows.Controls.Button>每个控件都显示在单独的视觉对象层次结构**可视化树资源管理器**XamlPad 面板。 这是因为[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]控件具有<xref:System.Windows.Controls.ControlTemplate>，其中包含该控件的可视化树。 显式引用某个控件时，会隐式引用它的可视化层次结构。  
+ 请注意如何<xref:System.Windows.Controls.Label>， <xref:System.Windows.Controls.TextBox>，并<xref:System.Windows.Controls.Button>每个控件都显示在一个单独的视觉对象层次结构**可视化树资源管理器**XamlPad 的面板。 这是因为[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]控件具有<xref:System.Windows.Controls.ControlTemplate>，其中包含该控件的可视化树。 显式引用某个控件时，会隐式引用它的可视化层次结构。  
   
 ### <a name="profiling-visual-performance"></a>分析可视化性能  
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 提供了一套性能分析工具，此工具可帮助分析应用程序的运行时行为，并确定可应用的性能优化类型。 可视化探查器工具通过直接映射到应用程序的可视化树来为性能数据提供一个丰富的图形视图。 在此屏幕快照中，通过可视化探查器的“CPU 使用率”部分可以清楚地了解对象对 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 服务（如呈现和布局）的使用情况。  
   
- ![可视探查器显示输出](../../../../docs/framework/wpf/graphics-multimedia/media/wpfperf-visualprofiler-04.png "WPFPerf_VisualProfiler_04")  
+ ![Visual Profiler 显示输出](../../../../docs/framework/wpf/graphics-multimedia/media/wpfperf-visualprofiler-04.png "WPFPerf_VisualProfiler_04")  
 可视化探查器显示输出  
   
 <a name="visual_rendering_behavior"></a>   
@@ -205,7 +205,7 @@ Win32 呈现序列示意图
 WPF 呈现序列示意图  
   
 #### <a name="intelligent-redrawing"></a>智能重绘  
- 使用保留模型图形的最大好处之一就是，[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 可以高效率地优化需要在应用程序中重绘的内容。 即使存在一个具有各种不透明度的复杂场景，通常也不必编写特殊用途的代码来优化重绘功能。 将该功能与 Win32 编程进行比较，在后者中可以通过最小化更新区域中的重绘量来尽力优化应用程序。 有关在 Win32 应用程序中优化重绘功能时涉及到的复杂度类型的示例，请参阅[在更新区域中重绘](https://msdn.microsoft.com/library/dd162909.aspx)。  
+ 使用保留模型图形的最大好处之一就是，[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 可以高效率地优化需要在应用程序中重绘的内容。 即使存在一个具有各种不透明度的复杂场景，通常也不必编写特殊用途的代码来优化重绘功能。 将该功能与 Win32 编程进行比较，在后者中可以通过最小化更新区域中的重绘量来尽力优化应用程序。 有关在 Win32 应用程序中优化重绘功能时涉及到的复杂度类型的示例，请参阅[在更新区域中重绘](/windows/desktop/gdi/redrawing-in-the-update-region)。  
   
 ### <a name="vector-graphics"></a>矢量图形  
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 使用**矢量图形**作为其呈现数据的格式。 矢量图形（包括可缩放的矢量图形 (SVG)、Windows 元文件 (.wmf) 和 TrueType 字体）存储呈现数据，并以指令列表的形式传输呈现数据，这些指令描述如何使用图形基元来重新创建图像。 例如，TrueType 字体是描述一组直线、曲线和命令（而不是像素数组）的矢量字。 矢量图形的主要好处之一就是能够缩放到任何大小和分辨率。  
@@ -217,7 +217,7 @@ WPF 呈现序列示意图
  ![光栅图与矢量图之间的区别](../../../../docs/framework/wpf/graphics-multimedia/media/vectorgraphics01.png "VectorGraphics01")  
 光栅图与矢量图之间的区别  
   
- 以下标记显示了两个<xref:System.Windows.Shapes.Path>定义的元素。 第二个元素使用<xref:System.Windows.Media.ScaleTransform>300%通过调整大小的第一个元素的绘制指令。 请注意，中的绘制说明<xref:System.Windows.Shapes.Path>元素保持不变。  
+ 以下标记显示了两个<xref:System.Windows.Shapes.Path>定义的元素。 第二个元素使用<xref:System.Windows.Media.ScaleTransform>调整的第一个元素的绘图指令大小 300%。 请注意，中的绘图指令<xref:System.Windows.Shapes.Path>元素保持不变。  
   
  [!code-xaml[VectorGraphicsSnippets#VectorGraphicsSnippet1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/VectorGraphicsSnippets/CS/PageOne.xaml#vectorgraphicssnippet1)]  
   
@@ -235,24 +235,24 @@ WPF 呈现序列示意图
   
 <a name="visualtreehelper_class"></a>   
 ## <a name="visualtreehelper-class"></a>VisualTreeHelper 类  
- <xref:System.Windows.Media.VisualTreeHelper>类是一个静态帮助器类，用于在视觉对象级别，这很有用非常具体的情况下，例如开发高性能的自定义控件的编程提供低级别的功能。 在大多数情况下，更高级别的[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]framework 对象，如<xref:System.Windows.Controls.Canvas>和<xref:System.Windows.Controls.TextBlock>，提供更大的灵活性和易于使用。  
+ <xref:System.Windows.Media.VisualTreeHelper>类是一个静态帮助器类，它在视觉对象级别，可在非常具体的情况下，如开发高性能自定义控件的编程提供低级别的功能。 在大多数情况下，更高级别的[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]framework 对象，如<xref:System.Windows.Controls.Canvas>和<xref:System.Windows.Controls.TextBlock>，提供更大的灵活性和易于使用。  
   
 ### <a name="hit-testing"></a>命中测试  
- <xref:System.Windows.Media.VisualTreeHelper>类提供用于命中测试视觉对象上，默认值命中测试支持时并不满足你的需求的方法。 你可以使用<xref:System.Windows.Media.VisualTreeHelper.HitTest%2A>中的方法<xref:System.Windows.Media.VisualTreeHelper>类以确定几何图形或点的坐标值是否在给定的对象，如控件或图形元素的边界内。 例如，可以使用命中测试确定对象的边框内的鼠标单击落在圆的几何内。还可以选择重写命中测试的默认实现，以执行自己的自定义命中测试计算。  
+ <xref:System.Windows.Media.VisualTreeHelper>类提供方法的命中测试可视化对象上，当默认命中测试支持不满足你的需求。 可以使用<xref:System.Windows.Media.VisualTreeHelper.HitTest%2A>中的方法<xref:System.Windows.Media.VisualTreeHelper>类，以确定几何或点坐标值是否在给定的对象，如控件或图形元素的边界内。 例如，可以使用命中测试确定对象的边框内的鼠标单击落在圆的几何内。还可以选择重写命中测试的默认实现，以执行自己的自定义命中测试计算。  
   
  有关命中测试的详细信息，请参阅[可视化层中的命中测试](../../../../docs/framework/wpf/graphics-multimedia/hit-testing-in-the-visual-layer.md)。  
   
 ### <a name="enumerating-the-visual-tree"></a>枚举可视化树  
- <xref:System.Windows.Media.VisualTreeHelper>类提供用于枚举的成员的可视化树的功能。 若要检索父，调用<xref:System.Windows.Media.VisualTreeHelper.GetParent%2A>方法。 若要检索的子级或直接子代，视觉对象，调用<xref:System.Windows.Media.VisualTreeHelper.GetChild%2A>方法。 此方法返回子<xref:System.Windows.Media.Visual>的指定索引处的父级。  
+ <xref:System.Windows.Media.VisualTreeHelper>类提供用于枚举可视化树的成员的功能。 若要检索父级，调用<xref:System.Windows.Media.VisualTreeHelper.GetParent%2A>方法。 若要检索的子级或直接后代，视觉对象，调用<xref:System.Windows.Media.VisualTreeHelper.GetChild%2A>方法。 此方法返回子<xref:System.Windows.Media.Visual>的指定索引处的父级。  
   
  下面的示例演示如何枚举视觉对象的所有后代，如果你对序列化可视化对象层次结构的所有呈现信息感兴趣，则可能希望使用该技术。  
   
  [!code-csharp[VisualsOverview#101](../../../../samples/snippets/csharp/VS_Snippets_Wpf/VisualsOverview/CSharp/Window1.xaml.cs#101)]
  [!code-vb[VisualsOverview#101](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/VisualsOverview/visualbasic/window1.xaml.vb#101)]  
   
- 在大多数情况下，逻辑树是 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 应用程序中元素的更有用的表示形式。 尽管不直接操作逻辑树，但是该应用程序视图对于了解属性继承和事件路由非常有用。 与可视化树中，不同的逻辑树可以表示非视觉对象数据对象，如<xref:System.Windows.Documents.ListItem>。 有关逻辑树的详细信息，请参阅 [WPF 中的树](../../../../docs/framework/wpf/advanced/trees-in-wpf.md)。  
+ 在大多数情况下，逻辑树是 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 应用程序中元素的更有用的表示形式。 尽管不直接操作逻辑树，但是该应用程序视图对于了解属性继承和事件路由非常有用。 与可视化树中，不同的逻辑树可以表示非可视化数据对象，如<xref:System.Windows.Documents.ListItem>。 有关逻辑树的详细信息，请参阅 [WPF 中的树](../../../../docs/framework/wpf/advanced/trees-in-wpf.md)。  
   
- <xref:System.Windows.Media.VisualTreeHelper>类提供了用于返回视觉对象的边框的方法。 你可以通过调用返回的视觉对象的边框<xref:System.Windows.Media.VisualTreeHelper.GetContentBounds%2A>。 你可以返回的视觉对象，包括的视觉对象本身，通过调用的所有后代的边框<xref:System.Windows.Media.VisualTreeHelper.GetDescendantBounds%2A>。 下面的代码演示如何计算可视化对象及其所有子代的边框。  
+ <xref:System.Windows.Media.VisualTreeHelper>类提供了用于返回边框的视觉对象的方法。 可以通过调用返回的视觉对象的边界矩形<xref:System.Windows.Media.VisualTreeHelper.GetContentBounds%2A>。 可以返回的视觉对象，通过调用包括视觉对象本身的所有子代的边框<xref:System.Windows.Media.VisualTreeHelper.GetDescendantBounds%2A>。 下面的代码演示如何计算可视化对象及其所有子代的边框。  
   
  [!code-csharp[VisualsOverview#102](../../../../samples/snippets/csharp/VS_Snippets_Wpf/VisualsOverview/CSharp/Window1.xaml.cs#102)]
  [!code-vb[VisualsOverview#102](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/VisualsOverview/visualbasic/window1.xaml.vb#102)]  

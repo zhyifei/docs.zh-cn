@@ -7,21 +7,41 @@ f1_keywords:
 helpviewer_keywords:
 - sizeof keyword [C#]
 ms.assetid: c548592c-677c-4f40-a4ce-e613f7529141
-ms.openlocfilehash: 83038255160ec778c71120566cf8f99092761add
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f2507dd8528e2e66016524873ada890227a74ed8
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33270573"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43517033"
 ---
 # <a name="sizeof-c-reference"></a>sizeof（C# 参考）
-用于获取非托管类型的大小（以字节为单位）。 非托管类型包括下表列出的内置类型以及以下类型：  
+用于获取非托管类型的大小（以字节为单位）。
+
+非托管类型包括：
+
+-   下表列出了简单类型：
   
--   枚举类型  
+   |表达式|常量值|  
+   |----------------|--------------------|  
+   |`sizeof(sbyte)`|1|  
+   |`sizeof(byte)`|1|  
+   |`sizeof(short)`|2|  
+   |`sizeof(ushort)`|2|  
+   |`sizeof(int)`|4|  
+   |`sizeof(uint)`|4|  
+   |`sizeof(long)`|8|  
+   |`sizeof(ulong)`|8|  
+   |`sizeof(char)`|2 (Unicode)|  
+   |`sizeof(float)`|4|  
+   |`sizeof(double)`|8|  
+   |`sizeof(decimal)`|16|  
+   |`sizeof(bool)`|1| 
   
--   指针类型  
+-   枚举类型。
   
--   用户定义的结构，不包含任何属于引用类型的字段或属性  
+-   指针类型。
+  
+-   用户定义的结构，不包含任何实例字段或作为引用类型或构造类型的自动实现的实例属性。
   
  下面的示例演示如何检索 `int` 的大小：  
   
@@ -31,26 +51,10 @@ int intSize = sizeof(int);
 ```  
   
 ## <a name="remarks"></a>备注  
- 从 C# 2.0 版开始，将 `sizeof` 应用于内置类型不再要求使用 [unsafe](../../../csharp/language-reference/keywords/unsafe.md) 模式。  
+ 从 C# 2.0 版开始，将 `sizeof` 应用于简单类型或枚举类型不再需要在[不安全](unsafe.md)上下文中编译代码。
   
- 不能重载 `sizeof` 运算符。 `sizeof` 运算符的返回值是 `int` 类型。 下表列出了一些常量值，这些值对应于以某些内置类型为操作数的 `sizeof` 表达式。  
-  
-|表达式|常量值|  
-|----------------|--------------------|  
-|`sizeof(sbyte)`|1|  
-|`sizeof(byte)`|1|  
-|`sizeof(short)`|2|  
-|`sizeof(ushort)`|2|  
-|`sizeof(int)`|4|  
-|`sizeof(uint)`|4|  
-|`sizeof(long)`|8|  
-|`sizeof(ulong)`|8|  
-|`sizeof(char)`|2 (Unicode)|  
-|`sizeof(float)`|4|  
-|`sizeof(double)`|8|  
-|`sizeof(decimal)`|16|  
-|`sizeof(bool)`|1|  
-  
+ 不能重载 `sizeof` 运算符。 `sizeof` 运算符的返回值是 `int` 类型。 上表列出了一些常量值，这些值对应于以某些简单类型为操作数的 `sizeof` 表达式。  
+    
  对于所有其他类型（包括结构），`sizeof` 运算符只能在不安全代码块中使用。 虽然可以使用 <xref:System.Runtime.InteropServices.Marshal.SizeOf%2A?displayProperty=nameWithType> 方法，但此方法返回的值并不总是与 `sizeof` 返回的值相同。 <xref:System.Runtime.InteropServices.Marshal.SizeOf%2A?displayProperty=nameWithType> 在封送类型后返回大小，而 `sizeof` 返回公共语言运行时分配的大小（包括所有填充）。  
   
 ## <a name="example"></a>示例  
@@ -59,12 +63,13 @@ int intSize = sizeof(int);
 ## <a name="c-language-specification"></a>C# 语言规范  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>请参阅  
- [C# 参考](../../../csharp/language-reference/index.md)  
- [C# 编程指南](../../../csharp/programming-guide/index.md)  
- [C# 关键字](../../../csharp/language-reference/keywords/index.md)  
- [运算符关键字](../../../csharp/language-reference/keywords/operator-keywords.md)  
- [enum](../../../csharp/language-reference/keywords/enum.md)  
- [不安全代码和指针](../../../csharp/programming-guide/unsafe-code-pointers/index.md)  
- [结构](../../../csharp/programming-guide/classes-and-structs/structs.md)  
- [常量](../../../csharp/programming-guide/classes-and-structs/constants.md)
+## <a name="see-also"></a>请参阅
+
+- [C# 参考](../../../csharp/language-reference/index.md)  
+- [C# 编程指南](../../../csharp/programming-guide/index.md)  
+- [C# 关键字](../../../csharp/language-reference/keywords/index.md)  
+- [运算符关键字](../../../csharp/language-reference/keywords/operator-keywords.md)  
+- [enum](../../../csharp/language-reference/keywords/enum.md)  
+- [不安全代码和指针](../../../csharp/programming-guide/unsafe-code-pointers/index.md)  
+- [结构](../../../csharp/programming-guide/classes-and-structs/structs.md)  
+- [常量](../../../csharp/programming-guide/classes-and-structs/constants.md)

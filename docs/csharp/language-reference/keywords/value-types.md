@@ -8,12 +8,12 @@ helpviewer_keywords:
 - types [C#], value types
 - C# language, value types
 ms.assetid: 471eb994-2958-49d5-a6be-19b4313f80a3
-ms.openlocfilehash: 49043a9fe9eabbb54176a0106007ef0d26ed795f
-ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
+ms.openlocfilehash: 3bbaea9247d975c27ed6f49dedb749312f675296
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2018
-ms.locfileid: "34172207"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43526458"
 ---
 # <a name="value-types-c-reference"></a>值类型（C# 参考）
 值类型包含两个主要类别：  
@@ -29,8 +29,6 @@ ms.locfileid: "34172207"
     -   [整型类型](../../../csharp/language-reference/keywords/integral-types-table.md)  
   
     -   [浮点类型](../../../csharp/language-reference/keywords/floating-point-types-table.md)  
-  
-    -   [decimal](../../../csharp/language-reference/keywords/decimal.md)  
   
 -   [bool](../../../csharp/language-reference/keywords/bool.md)  
   
@@ -99,10 +97,12 @@ Point p = new Point(); // Invoke default constructor for the struct.
   
  有关设置数值类型的输出格式的信息，请参阅[设置数值结果表的格式](../../../csharp/language-reference/keywords/formatting-numeric-results-table.md)。  
   
-## <a name="see-also"></a>请参阅  
- [C# 参考](../../../csharp/language-reference/index.md)  
- [C# 编程指南](../../../csharp/programming-guide/index.md)  
- [C# 关键字](../../../csharp/language-reference/keywords/index.md)  
- [类型](../../../csharp/language-reference/keywords/types.md)  
- [类型参考表](../../../csharp/language-reference/keywords/reference-tables-for-types.md)  
- [引用类型](../../../csharp/language-reference/keywords/reference-types.md)
+## <a name="see-also"></a>请参阅
+
+- [C# 参考](../../../csharp/language-reference/index.md)  
+- [C# 编程指南](../../../csharp/programming-guide/index.md)  
+- [C# 关键字](../../../csharp/language-reference/keywords/index.md)  
+- [类型](../../../csharp/language-reference/keywords/types.md)  
+- [类型参考表](../../../csharp/language-reference/keywords/reference-tables-for-types.md)  
+- [引用类型](../../../csharp/language-reference/keywords/reference-types.md)  
+- [可以为 null 的类型](../../programming-guide/nullable-types/index.md)  

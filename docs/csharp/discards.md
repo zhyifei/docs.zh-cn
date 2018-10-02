@@ -1,19 +1,19 @@
 ---
-title: 占位符 - C# 指南
-description: 介绍 C# 对占位符的支持（占位符是未赋值的可丢弃变量），以及占位符的使用方式。
+title: 弃元 - C# 指南
+description: 介绍 C# 对弃元的支持（弃元是未赋值的可丢弃变量），以及弃元的使用方式。
 author: rpetrusha
 ms.author: ronpet
 ms.date: 07/21/2017
-ms.openlocfilehash: 9688ea596fa3d534c6c48d5874b04bb257d0dbce
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d70067194ea9921f8af31fe436d04e2b780e1a73
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33219227"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43524198"
 ---
-# <a name="discards---c-guide"></a>占位符 - C# 指南
+# <a name="discards---c-guide"></a>弃元 - C# 指南
 
-从 C# 7.0 开始，C# 支持占位符，这是一种在应用程序代码中人为取消使用的临时虚拟变量。 占位符相当于未赋值的变量；它们没有值。 因为只有一个弃元变量，甚至不为该变量分配存储空间，所以弃元可减少内存分配。 因为它们使代码的意图清楚，增强了其可读性和可维护性。
+从 C# 7.0 开始，C# 支持弃元，这是一种在应用程序代码中人为取消使用的临时虚拟变量。 弃元相当于未赋值的变量；它们没有值。 因为只有一个弃元变量，甚至不为该变量分配存储空间，所以弃元可减少内存分配。 因为它们使代码的意图清楚，增强了其可读性和可维护性。
 
 通过将下划线 (`_`) 赋给一个变量作为其变量名，指示该变量为一个占位符变量。 例如，下面的方法调用返回 3 元组，其中的第一个和第二个值是弃元，*area* 是一个以前声明的变量，它将设置为 *GetCityInformation* 返回的相应的第三个部分:
 
@@ -21,7 +21,7 @@ ms.locfileid: "33219227"
 (_, _, area) = city.GetCityInformation(cityName);
 ```
 
-在 C# 7.0 中，支持在以下上下文的分配中使用占位符：
+在 C# 7.0 中，支持在以下上下文的分配中使用弃元：
 
 - 元组和对象[析构](deconstruct.md)。
 - 使用 [is](language-reference/keywords/is.md) 和 [switch](language-reference/keywords/switch.md) 的模式匹配。
@@ -46,7 +46,7 @@ ms.locfileid: "33219227"
 
 ## <a name="pattern-matching-with-switch-and-is"></a>使用 `switch` 和 `is` 的模式匹配
 
-占位符模式可通过 [is](language-reference/keywords/is.md) 和 [switch](language-reference/keywords/switch.md) 关键字用于模式匹配。 每个表达式始终匹配占位符模式。
+弃元模式可通过 [is](language-reference/keywords/is.md) 和 [switch](language-reference/keywords/switch.md) 关键字用于模式匹配。 每个表达式始终匹配弃元模式。
 
 以下示例定义了一个 `ProvidesFormatInfo` 方法，该方法使用 [is](language-reference/keywords/is.md) 语句来确定对象是否提供 <xref:System.IFormatProvider> 实现并测试对象是否为 `null`。 它还使用占位符模式来处理任何其他类型的非 null 对象。
 
@@ -54,15 +54,15 @@ ms.locfileid: "33219227"
 
 ## <a name="calls-to-methods-with-out-parameters"></a>使用 out 参数调用方法
 
-当调用 `Deconstruct` 方法来析构用户定义类型（类、结构或接口的实例）时，可使用占位符表示单个 `out` 参数的值。 但当使用 out 参数调用任何方法时，也可使用占位符表示 `out` 参数的值。 
+当调用 `Deconstruct` 方法来析构用户定义类型（类、结构或接口的实例）时，可使用占位符表示单个 `out` 参数的值。 但当使用 out 参数调用任何方法时，也可使用占位符表示 `out` 参数的值。
 
 以下示例调用 [DateTime.TryParse(String, out DateTime)](<xref:System.DateTime.TryParse(System.String,System.DateTime@)>) 方法来确定日期的字符串表示形式在当前区域性中是否有效。 因为该示例侧重验证日期字符串，而不是解析它来提取日期，所以方法的 `out` 参数为占位符。
 
 [!code-csharp[discard-with-out](../../samples/snippets/csharp/programming-guide/discards/discard-out1.cs)]
 
-## <a name="a-standalone-discard"></a>独立占位符
+## <a name="a-standalone-discard"></a>独立弃元
 
-可使用独立占位符来指示要忽略的任何变量。 以下示例使用独立占位符来忽略异步操作返回的 <xref:System.Threading.Tasks.Task> 对象。 这一操作的效果等同于抑制操作即将完成时所引发的异常。
+可使用独立弃元来指示要忽略的任何变量。 以下示例使用独立占位符来忽略异步操作返回的 <xref:System.Threading.Tasks.Task> 对象。 这一操作的效果等同于抑制操作即将完成时所引发的异常。
 
 [!code-csharp[standalone-discard](../../samples/snippets/csharp/programming-guide/discards/standalone-discard1.cs)]
 
@@ -71,16 +71,17 @@ ms.locfileid: "33219227"
 - 将预期的占位符的值赋给范围内 `_` 变量，会导致该变量的值被意外修改。 例如:
 
    [!code-csharp[standalone-discard](../../samples/snippets/csharp/programming-guide/discards/standalone-discard2.cs#1)]
- 
+
 - 因违反类型安全而发生的编译器错误。 例如:
 
    [!code-csharp[standalone-discard](../../samples/snippets/csharp/programming-guide/discards/standalone-discard2.cs#2)]
- 
-- 编译器错误 CS0136：“无法在此范围中声明名为“_”的局部变量或参数，因为该名称用于在封闭的局部范围中定义局部变量或参数”。 例如:
+
+- 编译器错误 CS0136：“无法在此范围中声明名为“\_”的局部变量或参数，因为该名称用于在封闭的局部范围中定义局部变量或参数”。 例如:
 
    [!code-csharp[standalone-discard](../../samples/snippets/csharp/programming-guide/discards/standalone-discard2.cs#3)]
 
 ## <a name="see-also"></a>请参阅
-[解构元组和其他类型](deconstruct.md)   
-[`is` 关键字](language-reference/keywords/is.md)   
-[`switch` 关键字](language-reference/keywords/switch.md)   
+
+- [解构元组和其他类型](deconstruct.md)
+- [`is` 关键字](language-reference/keywords/is.md)
+- [`switch` 关键字](language-reference/keywords/switch.md)

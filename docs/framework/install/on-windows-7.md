@@ -5,12 +5,12 @@ description: 了解如何在 Windows 7 SP1 上安装 .NET Framework。
 author: rlander
 ms.author: mairaw
 ms.date: 04/10/2018
-ms.openlocfilehash: 4f63bed0bad41c31bd28ae63b50440e4144a9bda
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 828680c0591f9603d14c57dd9e82fe1f3970ede3
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33387973"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43861866"
 ---
 # <a name="install-the-net-framework-on-windows-7-sp1-and-windows-server-2008-r2"></a>在 Windows 7 SP1 和 Windows Server 2008 R2 上安装 .NET Framework
 
@@ -18,14 +18,14 @@ ms.locfileid: "33387973"
 
 ![无法启动此应用程序](./media/this-application-could-not-be-started.png)
 
-这些说明可帮助安装所需的 .NET Framework 版本。 [.NET Framework 4.7.2](http://go.microsoft.com/fwlink/?LinkID=863255) 是最新版本。 它支持 Windows 7 SP1 和 Windows Server 2008 R2，且包含在 [Windows 10 2018 年 4 月更新](https://www.microsoft.com/software-download/windows10)中。
+这些说明可帮助安装所需的 .NET Framework 版本。 [.NET Framework 4.7.2](https://go.microsoft.com/fwlink/?LinkID=863255) 是最新版本。 它支持 Windows 7 SP1 和 Windows Server 2008 R2，且包含在 [Windows 10 2018 年 4 月更新](https://www.microsoft.com/software-download/windows10)中。
 
 ## <a name="net-framework-472"></a>.NET Framework 4.7.2
 
 > [!div class="button"]
 [下载 .NET Framework 4.7.2](https://www.microsoft.com/net/download/thank-you/net472?utm_source=ms-docs&utm_medium=referral)
 
-[.NET Framework 4.7.2](http://go.microsoft.com/fwlink/?LinkID=863255) 可用于运行针对 .NET Framework 4.0 或更高版本生成的应用程序。
+[.NET Framework 4.7.2](https://go.microsoft.com/fwlink/?LinkID=863255) 可用于运行针对 .NET Framework 4.0 或更高版本生成的应用程序。
 
 ## <a name="net-framework-35"></a>.NET Framework 3.5
 

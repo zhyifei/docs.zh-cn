@@ -11,11 +11,12 @@ helpviewer_keywords:
 ms.assetid: 5beb4983-80c2-4f60-8c51-a07f9fd94cb3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bcd12d5c3cfe341b22a5421930a22c272878006b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: fb3f50459eeafcbb9f4882e56fb08b2001a35fb3
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "44042328"
 ---
 # <a name="walkthrough-using-batchblock-and-batchedjoinblock-to-improve-efficiency"></a>演练：使用 BatchBlock 和 BatchedJoinBlock 提高效率
 TPL 数据流库提供 <xref:System.Threading.Tasks.Dataflow.BatchBlock%601?displayProperty=nameWithType> 和 <xref:System.Threading.Tasks.Dataflow.BatchedJoinBlock%602?displayProperty=nameWithType> 类，以便可以接收和缓冲一个或多个源的数据，再将缓冲的数据作为一个集合传播出去。 如果从一个或多个源收集数据，再批处理多个数据元素，就会发现这种批处理机制非常有用。 例如，假设应用使用数据流将记录插入数据库。 如果同时插入多项，而不是顺序一次插入一个，此操作可能会更高效。 本文档介绍了如何使用 <xref:System.Threading.Tasks.Dataflow.BatchBlock%601> 类，提高此类数据库插入操作的效率。 它还介绍了如何使用 <xref:System.Threading.Tasks.Dataflow.BatchedJoinBlock%602> 类，捕获程序从数据库读取数据时的结果和发生的任何异常。
@@ -117,5 +118,6 @@ TPL 数据流库提供 <xref:System.Threading.Tasks.Dataflow.BatchBlock%601?disp
  [!code-csharp[TPLDataflow_BatchDatabase#100](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_batchdatabase/cs/dataflowbatchdatabase.cs#100)]
  [!code-vb[TPLDataflow_BatchDatabase#100](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_batchdatabase/vb/dataflowbatchdatabase.vb#100)]  
   
-## <a name="see-also"></a>请参阅  
- [数据流](../../../docs/standard/parallel-programming/dataflow-task-parallel-library.md)
+## <a name="see-also"></a>请参阅
+
+- [数据流](../../../docs/standard/parallel-programming/dataflow-task-parallel-library.md)

@@ -2,17 +2,17 @@
 title: 到 Windows Communication Foundation 的消息队列
 ms.date: 03/30/2017
 ms.assetid: 6d718eb0-9f61-4653-8a75-d2dac8fb3520
-ms.openlocfilehash: b3c16a95b21dcdea941e605f3e25e560b7193b03
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: 16b9c9fa3c66ad86fe9502b14fc09ff8d543d58a
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33807572"
+ms.lasthandoff: 09/27/2018
+ms.locfileid: "47396989"
 ---
 # <a name="message-queuing-to-windows-communication-foundation"></a>到 Windows Communication Foundation 的消息队列
-此示例演示如何消息队列 (MSMQ) 应用程序可以将 MSMQ 消息发送到 Windows Communication Foundation (WCF) 服务。 此服务是自承载控制台应用程序，通过它可以观察服务接收排队消息。  
+此示例演示消息队列 (MSMQ) 应用程序如何可以将 MSMQ 消息发送到 Windows Communication Foundation (WCF) 服务。 此服务是自承载控制台应用程序，通过它可以观察服务接收排队消息。  
   
- 服务协定是 `IOrderProcessor`，它定义了适合与队列一起使用的单向服务。 MSMQ 消息没有 Action 标头，因此无法将不同的 MSMQ 消息自动映射到操作协定。 所以只能有一个操作协定。 如果希望为服务定义多个操作协定，则应用程序必须提供有关 MSMQ 消息中的哪个标头（例如，标签或 correlationID）可用于确定要调度的操作协定的信息。 此进行了演示[自定义多路分解器](../../../../docs/framework/wcf/samples/custom-demux.md)。  
+ 服务协定是 `IOrderProcessor`，它定义了适合与队列一起使用的单向服务。 MSMQ 消息没有 Action 标头，因此无法将不同的 MSMQ 消息自动映射到操作协定。 所以只能有一个操作协定。 如果希望为服务定义多个操作协定，则应用程序必须提供有关 MSMQ 消息中的哪个标头（例如，标签或 correlationID）可用于确定要调度的操作协定的信息。
   
  MSMQ 消息不包含有关哪些标头可映射到操作协定的不同参数的信息。 该参数属于 <xref:System.ServiceModel.MsmqIntegration.MsmqMessage%601>(`MsmqMessage<T>`) 类型，包含基础 MSMQ 消息。 <xref:System.ServiceModel.MsmqIntegration.MsmqMessage%601>(`MsmqMessage<T>`) 类中的“T”类型代表序列化到 MSMQ 消息正文中的数据。 在此示例中，`PurchaseOrder` 类型序列化到 MSMQ 消息正文中。  
   
@@ -114,7 +114,7 @@ Console.ReadLine();
   
 ### <a name="to-setup-build-and-run-the-sample"></a>设置、生成和运行示例  
   
-1.  确保已执行[的 Windows Communication Foundation 示例的一次性安装过程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
+1.  请确保您具有执行[的 Windows Communication Foundation 示例的一次性安装过程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
   
 2.  如果先运行服务，则它将检查以确保队列存在。 如果队列不存在，则服务将创建一个队列。 可以先运行服务以创建队列或通过 MSMQ 队列管理器创建一个队列。 执行下面的步骤来在 Windows 2008 中创建队列。  
   
@@ -124,13 +124,13 @@ Console.ReadLine();
   
     3.  右键单击**私有消息队列**，然后选择**新建**，**专用队列**。  
   
-    4.  检查**事务**框。  
+    4.  检查**事务性**框。  
   
     5.  输入`ServiceModelSamplesTransacted`作为新队列的名称。  
   
 3.  若要生成 C# 或 Visual Basic .NET 版本的解决方案，请按照 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)中的说明进行操作。  
   
-4.  若要在单台计算机配置上运行示例，请按照中的说明[运行 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/running-the-samples.md)。  
+4.  若要在单计算机配置中运行示例，请按照中的说明[运行 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/running-the-samples.md)。  
   
 ### <a name="to-run-the-sample-across-computers"></a>跨计算机运行示例  
   
@@ -149,11 +149,11 @@ Console.ReadLine();
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目录不存在，请转到[Windows Communication Foundation (WCF) 和针对.NET Framework 4 的 Windows Workflow Foundation (WF) 示例](http://go.microsoft.com/fwlink/?LinkId=150780)下载所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
+>  如果此目录不存在，请转到[Windows Communication Foundation (WCF) 和.NET Framework 4 的 Windows Workflow Foundation (WF) 示例](https://go.microsoft.com/fwlink/?LinkId=150780)若要下载所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\MSMQIntegration\MsmqToWcf`  
   
 ## <a name="see-also"></a>请参阅  
  [WCF 中的队列](../../../../docs/framework/wcf/feature-details/queues-in-wcf.md)  
  [如何：与 WCF 终结点和消息队列应用程序交换消息](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md)  
- [消息队列](http://go.microsoft.com/fwlink/?LinkId=94968)
+ [消息队列](https://go.microsoft.com/fwlink/?LinkId=94968)

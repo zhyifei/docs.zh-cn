@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c5020c31f590f527856f966ede512e98c07496ac
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 3eb23da5accd89931ee4b883bfa162035ec26ddd
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33435383"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43861031"
 ---
 # <a name="iclrstrongnamestrongnamecompareassemblies-method"></a>ICLRStrongName::StrongNameCompareAssemblies 方法
-确定是否两个程序集的差异仅在于其强名称签名。  
+确定两个程序集是否仅是强名称签名不同。  
   
 ## <a name="syntax"></a>语法  
   
@@ -49,12 +49,12 @@ HRESULT StrongNameCompareAssemblies (
   
 -   `SN_CMP_DIFFERENT` (0)-指定程序集包含不同的数据。  
   
--   `SN_CMP_IDENTICAL` (1)-指定程序程序集完全相同，包括其签名和校验和。  
+-   `SN_CMP_IDENTICAL` (1)-指定程序的程序集完全相同，包括其签名和校验和。  
   
--   `SN_CMP_SIGONLY` (2)-指定程序集不同只能由签名和校验和。  
+-   `SN_CMP_SIGONLY` (2)-指定程序集仅签名和校验和不同。  
   
 ## <a name="return-value"></a>返回值  
- `S_OK` 如果成功，则完成的方法否则为该值指示失败的 HRESULT 值 (请参阅[常见的 HRESULT 值](http://go.microsoft.com/fwlink/?LinkId=213878)有关的列表)。  
+ `S_OK` 如果成功，则完成的方法否则为指示失败的 HRESULT 值 (请参阅[常见的 HRESULT 值](https://go.microsoft.com/fwlink/?LinkId=213878)列表)。  
   
 ## <a name="requirements"></a>要求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
@@ -63,10 +63,10 @@ HRESULT StrongNameCompareAssemblies (
   
  **库：** 作为 MSCorEE.dll 中的资源  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="remarks"></a>备注  
- 程序集的强名称签名组成程序集的文本名称、 版本、 区域性和公钥标记。  
+ 程序集的强名称签名包含程序集的文本名称、 版本、 区域性和公钥标记。  
   
 ## <a name="see-also"></a>请参阅  
  [ICLRStrongName 接口](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)

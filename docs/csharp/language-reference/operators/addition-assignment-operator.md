@@ -7,12 +7,12 @@ helpviewer_keywords:
 - += operator [C#]
 - addition assignment operator (+=) [C#]
 ms.assetid: 9cdf97e6-331d-492b-85e1-3ec3171484e9
-ms.openlocfilehash: bcd56acad8e2b08585e5ae60f1c3cf8183b5664a
-ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
+ms.openlocfilehash: bd0997ec5b7d79a41e01f9c2b17533293e412c1e
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2018
-ms.locfileid: "34171874"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43857502"
 ---
 # <a name="-operator-c-reference"></a>+= 运算符（C# 参考）
 加法赋值运算符。  
@@ -39,7 +39,8 @@ x = x + y
 ## <a name="example"></a>示例  
  [!code-csharp[csRefOperators#35](../../../csharp/language-reference/operators/codesnippet/CSharp/addition-assignment-operator_1.cs)]  
   
-## <a name="see-also"></a>请参阅  
- [C# 参考](../../../csharp/language-reference/index.md)  
- [C# 编程指南](../../../csharp/programming-guide/index.md)  
- [C# 运算符](../../../csharp/language-reference/operators/index.md)
+## <a name="see-also"></a>请参阅
+
+- [C# 参考](../../../csharp/language-reference/index.md)  
+- [C# 编程指南](../../../csharp/programming-guide/index.md)  
+- [C# 运算符](../../../csharp/language-reference/operators/index.md)

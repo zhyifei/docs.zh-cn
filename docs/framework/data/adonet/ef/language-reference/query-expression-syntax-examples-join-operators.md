@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 343e8dda-70b2-409d-9334-ce9a880c3cea
-ms.openlocfilehash: af7bea7c9fda7a3c1eb1e419c50dcd61df8c63d1
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 4db511d74c4cce82bfd010f77cb1580dbb704b41
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32765914"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43501893"
 ---
 # <a name="query-expression-syntax-examples-join-operators"></a>查询表达式语法示例：联接运算符
-联接是面向相互之间没有可导航关系的数据源（如关系数据库表）的查询中的一项重要操作。 联接两个数据源就是将一个数据源中的对象与另一个数据源中具有相同公共属性的对象相关联。 有关详细信息，请参阅[标准查询运算符概述](http://msdn.microsoft.com/library/24cda21e-8af8-4632-b519-c404a839b9b2)。  
+联接是面向相互之间没有可导航关系的数据源（如关系数据库表）的查询中的一项重要操作。 联接两个数据源就是将一个数据源中的对象与另一个数据源中具有相同公共属性的对象相关联。 有关详细信息，请参阅[标准查询运算符概述](https://msdn.microsoft.com/library/24cda21e-8af8-4632-b519-c404a839b9b2)。  
   
- 本主题中的示例演示如何使用<xref:System.Linq.Enumerable.GroupJoin%2A>和<xref:System.Linq.Enumerable.Join%2A>方法来查询[AdventureWorks 销售模型](http://msdn.microsoft.com/library/f16cd988-673f-4376-b034-129ca93c7832)使用查询表达式语法。 这些示例中使用的 AdventureWorks 销售模型从 AdventureWorks 示例数据库中的 Contact、Address、Product、SalesOrderHeader 和 SalesOrderDetail 等表生成。  
+ 本主题中的示例演示如何使用<xref:System.Linq.Enumerable.GroupJoin%2A>并<xref:System.Linq.Enumerable.Join%2A>方法来查询[AdventureWorks 销售模型](https://msdn.microsoft.com/library/f16cd988-673f-4376-b034-129ca93c7832)使用查询表达式语法。 这些示例中使用的 AdventureWorks 销售模型从 AdventureWorks 示例数据库中的 Contact、Address、Product、SalesOrderHeader 和 SalesOrderDetail 等表生成。  
   
  本主题中的示例使用以下`using` / `Imports`语句：  
   

@@ -2,12 +2,12 @@
 title: 公告示例
 ms.date: 03/30/2017
 ms.assetid: 954a75e4-9a97-41d6-94fc-43765d4205a9
-ms.openlocfilehash: ee58a2fef970fa3e7936e2fc26a9e7fd31633347
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a82056844c9ec8f77bce4b0adec481a025894d1f
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33500033"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43865717"
 ---
 # <a name="announcements-sample"></a>公告示例
 此示例显示如何使用发现功能的公告功能。 服务使用公告可以发出包含有关服务的元数据的公告消息。 默认情况下，服务启动时会发送 Hello 公告，服务关闭时会发送 Bye 公告。 这些公告可以进行多播，也可点到点发送。 此示例由两个项目组成，即服务项目和客户端项目。  
@@ -68,7 +68,7 @@ static void OnOfflineEvent(object sender, AnnouncementEventArgs e)
   
 #### <a name="to-use-this-sample"></a>使用此示例  
   
-1.  此示例使用 HTTP 终结点，若要运行此示例，正确的 URL Acl 必须将添加，请参阅[配置 HTTP 和 HTTPS](http://go.microsoft.com/fwlink/?LinkId=70353)有关详细信息。 使用提升的特权执行下面的命令应添加相应的 ACL。 如果该命令无效，则可能需要使用你的域和用户名替换以下自变量。 `netsh http add urlacl url=http://+:8000/ user=%DOMAIN%\%UserName%`  
+1.  此示例使用 HTTP 终结点，若要运行此示例，正确的 URL Acl 必须添加，请参阅[配置 HTTP 和 HTTPS](https://go.microsoft.com/fwlink/?LinkId=70353)有关详细信息。 使用提升的特权执行下面的命令应添加相应的 ACL。 如果该命令无效，则可能需要使用你的域和用户名替换以下自变量。 `netsh http add urlacl url=http://+:8000/ user=%DOMAIN%\%UserName%`  
   
 2.  生成解决方案。  
   
@@ -83,7 +83,7 @@ static void OnOfflineEvent(object sender, AnnouncementEventArgs e)
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目录不存在，请转到[Windows Communication Foundation (WCF) 和针对.NET Framework 4 的 Windows Workflow Foundation (WF) 示例](http://go.microsoft.com/fwlink/?LinkId=150780)下载所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
+>  如果此目录不存在，请转到[Windows Communication Foundation (WCF) 和.NET Framework 4 的 Windows Workflow Foundation (WF) 示例](https://go.microsoft.com/fwlink/?LinkId=150780)若要下载所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Discovery\Announcements`  
   

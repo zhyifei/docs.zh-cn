@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - '#error directive [C#]'
 ms.assetid: f2a7f3af-4cf9-4111-b369-70204d24b26b
-ms.openlocfilehash: 9ea4c24dcc3c0a4d39499bee5900cb9c6cc768c9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ed43c1f85142ec6c54e44db5e3b0b7de3ef36bb8
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33269394"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44259870"
 ---
 # <a name="error-c-reference"></a>#error（C# 参考）
-`#error` 可从代码中的特定位置生成错误。 例如:  
+`#error` 可从代码中的特定位置生成 [CS1029](../compiler-messages/cs1029.md) 用户定义的错误。 例如:  
   
 ```csharp
 #error Deprecated code in this method.  
@@ -42,7 +42,8 @@ class MainClass
 }  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [C# 参考](../../../csharp/language-reference/index.md)  
- [C# 编程指南](../../../csharp/programming-guide/index.md)  
- [C# 预处理器指令](../../../csharp/language-reference/preprocessor-directives/index.md)
+## <a name="see-also"></a>请参阅
+
+- [C# 参考](../../../csharp/language-reference/index.md)  
+- [C# 编程指南](../../../csharp/programming-guide/index.md)  
+- [C# 预处理器指令](../../../csharp/language-reference/preprocessor-directives/index.md)

@@ -11,12 +11,12 @@ helpviewer_keywords:
 - C# language, types
 - strong typing [C#]
 ms.assetid: f782d7cc-035e-4500-b1b1-36a9881130ad
-ms.openlocfilehash: 15f3a774255923aba83f15700540369040c02dcd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ba019d4104ec6669ef07b608f40fc1489c994cbf
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33338713"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43525483"
 ---
 # <a name="types-c-programming-guide"></a>类型（C# 编程指南）
 ## <a name="types-variables-and-values"></a>类型、变量和值  
@@ -99,7 +99,7 @@ int i = 5;
 char c = 'Z';  
 ```  
   
- 例如，值类型为“密封”，这意味着不能从 <xref:System.Int32?displayProperty=nameWithType> 派生类型，并且不能将结构定义为从任何用户定义的类或结构继承，因为结构只能从 <xref:System.ValueType?displayProperty=nameWithType> 继承。 但是，一个结构可以实现一个或多个接口。 可将结构类型强制转换为接口类型；这将导致“装箱”操作，以将结构包装在托管堆上的引用类型对象内。 当将值类型传递到接受 <xref:System.Object?displayProperty=nameWithType> 作为输入参数的方法时，将发生装箱操作。 有关详细信息，请参阅[装箱和取消装箱](../../../csharp/programming-guide/types/boxing-and-unboxing.md)。  
+ 例如，值类型为“密封”，这意味着不能从 <xref:System.Int32?displayProperty=nameWithType> 派生类型，并且不能将结构定义为从任何用户定义的类或结构继承，因为结构只能从 <xref:System.ValueType?displayProperty=nameWithType> 继承。 但是，一个结构可以实现一个或多个接口。 可将结构类型强制转换为它实现的任何接口类型；这会导致装箱操作发生，以将结构包装在托管堆上的引用类型对象内。 当你将值类型传递给使用 <xref:System.Object?displayProperty=nameWithType> 或任何接口类型作为输入参数的方法时，就会发生装箱操作。 有关详细信息，请参阅[装箱和取消装箱](../../../csharp/programming-guide/types/boxing-and-unboxing.md)。  
   
  使用 [struct](../../../csharp/language-reference/keywords/struct.md) 关键字可以创建你自己的自定义值类型。 结构通常用作一小组相关变量的容器，如以下示例所示：  
   
@@ -183,8 +183,9 @@ stringList.Add(4);
 ## <a name="c-language-specification"></a>C# 语言规范  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>请参阅  
- [C# 参考](../../../csharp/language-reference/index.md)  
- [C# 编程指南](../../../csharp/programming-guide/index.md)  
- [XML 数据类型转换](../../../standard/data/xml/conversion-of-xml-data-types.md)  
- [整型表](../../../csharp/language-reference/keywords/integral-types-table.md)
+## <a name="see-also"></a>请参阅
+
+- [C# 参考](../../../csharp/language-reference/index.md)  
+- [C# 编程指南](../../../csharp/programming-guide/index.md)  
+- [XML 数据类型转换](../../../standard/data/xml/conversion-of-xml-data-types.md)  
+- [整型表](../../../csharp/language-reference/keywords/integral-types-table.md)

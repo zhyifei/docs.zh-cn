@@ -3,13 +3,12 @@ title: '&lt;system.identityModel&gt;'
 ms.date: 03/30/2017
 ms.assetid: 210ce7e9-d07b-400c-800f-5f525dcf95e8
 author: BrucePerlerMS
-manager: mbaldwin
-ms.openlocfilehash: 6faeadc9fcdffc8c8aa14fdcc744896b45a941f0
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 1b3121a6e7e036ec268cf83ffbf545c0e669a9b9
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32755248"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47206133"
 ---
 # <a name="ltsystemidentitymodelgt"></a>&lt;system.identityModel&gt;
 提供用于启用应用程序中的 Windows Identity Foundation (WIF) 选项的配置。  
@@ -42,10 +41,10 @@ ms.locfileid: "32755248"
 |`<configuration>`|公共语言运行时和 .NET Framework 应用程序所使用的每个配置文件中的根元素。|  
   
 ## <a name="remarks"></a>备注  
- 添加`<system.identityModel>`要配置服务或应用程序以使用 Windows Identity Foundation (WIF) 的配置文件的部分。 `<system.identityModel>`元素表示由<xref:System.IdentityModel.Configuration.SystemIdentityModelSection>类。  
+ 添加`<system.identityModel>`到配置文件来配置服务或应用程序以使用 Windows Identity Foundation (WIF) 部分。 `<system.identityModel>`元素表示由<xref:System.IdentityModel.Configuration.SystemIdentityModelSection>类。  
   
 ## <a name="example"></a>示例  
- 下面的示例演示如何将添加`<system.identityModel>`到配置文件的部分。 您必须首先添加下的配置节和命名空间声明`<configSections>`元素。 然后，可以添加`<system.IdentityModel>`为配置文件指定一个或多个标识配置的元素。  
+ 下面的示例演示如何添加`<system.identityModel>`到配置文件的部分。 必须首先添加下的配置节和命名空间声明`<configSections>`元素。 然后，可以添加`<system.IdentityModel>`为配置文件指定一个或多个标识配置元素。  
   
 ```xml  
 <configuration>  

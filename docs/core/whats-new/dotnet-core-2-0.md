@@ -4,12 +4,12 @@ description: 了解 .NET Core 的新增功能。
 author: rpetrusha
 ms.author: ronpet
 ms.date: 08/13/2017
-ms.openlocfilehash: 59a1f61de365218d649e3392fbce84cd6d530ed5
-ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
+ms.openlocfilehash: 4be579f2000c86b3dad412b24589fa8e7024d2f0
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34566310"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45591758"
 ---
 # <a name="whats-new-in-net-core-20"></a>.NET Core 2.0 的新增功能
 
@@ -30,7 +30,7 @@ ms.locfileid: "34566310"
 
 [!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
 
-还可以将 `--no-restore` 开关传递到 `new`、`run`、`build`、`publish`、`pack` 和 `test` 命令，从而禁用自动调用 `dotnet restore`。 
+还可以将 `--no-restore` 开关传递到 `new`、`run`、`build`、`publish`、`pack` 和 `test` 命令，从而禁用自动调用 `dotnet restore`。
 
 ### <a name="retargeting-to-net-core-20"></a>重定目标到 .NET Core 2.0
 
@@ -76,7 +76,7 @@ ms.locfileid: "34566310"
 
    此命令创建文件扩展名为 `.vbproj` 的项目文件，以及名为 Program.vb 的 Visual Basic 源代码文件。 此文件包含用于将字符串“Hello World!”写入控制台窗口的源代码 。
 
-1.  输入命令 `dotnet run`。 [.NET Core CLI](../tools/index.md) 自动编译并执行应用程序，在控制台窗口中 显示文本字符串“Hello World!”。
+1. 输入命令 `dotnet run`。 [.NET Core CLI](../tools/index.md) 自动编译并执行应用程序，在控制台窗口中 显示文本字符串“Hello World!”。
 
 ### <a name="support-for-c-71"></a>支持 C# 7.1
 
@@ -158,8 +158,9 @@ Visual Studio 2017 版本 15.3 和（在某些情况下）Visual Studio for Mac 
 
 - [微服务和 Docker 容器](../../standard/microservices-architecture/index.md)
 - [使用 ASP.NET 的 Web 应用程序](../../standard/modern-web-apps-azure-architecture/index.md)
-- [使用 Xamarin 的移动应用](/xamarin/xamarin-forms/enterprise-application-patterns/index.md)
-- [使用 Azure 部署到云的应用程序](/azure/architecture/reference-architectures/index.md)
+- [使用 Xamarin 的移动应用](/xamarin/xamarin-forms/enterprise-application-patterns/index)
+- [使用 Azure 部署到云的应用程序](/azure/architecture/reference-architectures/index)
 
 ## <a name="see-also"></a>请参阅
-[ASP.NET Core 2.0 的新增功能](/aspnet/core/aspnetcore-2.0)
+
+* [ASP.NET Core 2.0 的新增功能](/aspnet/core/aspnetcore-2.0)

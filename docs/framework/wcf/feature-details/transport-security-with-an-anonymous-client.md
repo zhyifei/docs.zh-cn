@@ -6,20 +6,19 @@ dev_langs:
 - vb
 ms.assetid: 056653a5-384e-4a02-ae3c-1b0157d2ccb4
 author: BrucePerlerMS
-manager: mbaldwin
-ms.openlocfilehash: ad22abe84289cac8f57bebb564ee129bcc2334c3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d09d2a2ad4e48e67f2d3930517a2ed3f8cc4403d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33499175"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47216077"
 ---
 # <a name="transport-security-with-an-anonymous-client"></a>匿名客户端的传输安全
-此 Windows Communication Foundation (WCF) 方案使用传输安全 (HTTPS) 确保保密性和完整性。 必须使用安全套接字层 (SSL) 证书对服务器进行身份验证，并且客户端必须信任服务器的证书。 客户端不通过任何机制进行身份验证，因此是匿名的。  
+此 Windows Communication Foundation (WCF) 方案中使用传输安全 (HTTPS) 确保保密性和完整性。 必须使用安全套接字层 (SSL) 证书对服务器进行身份验证，并且客户端必须信任服务器的证书。 客户端不通过任何机制进行身份验证，因此是匿名的。  
   
- 有关示例应用程序，请参阅[WS 传输安全](../../../../docs/framework/wcf/samples/ws-transport-security.md)。 有关传输安全的详细信息，请参阅[传输安全概述](../../../../docs/framework/wcf/feature-details/transport-security-overview.md)。  
+ 示例应用程序，请参阅[WS 传输安全性](../../../../docs/framework/wcf/samples/ws-transport-security.md)。 有关传输安全性的详细信息，请参阅[传输安全概述](../../../../docs/framework/wcf/feature-details/transport-security-overview.md)。  
   
- 有关使用服务证书的详细信息，请参阅[使用证书](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)和[如何： 使用 SSL 证书配置端口](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)。  
+ 有关与服务使用的证书的详细信息，请参阅[Working with Certificates](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)并[如何： 使用 SSL 证书配置端口](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)。  
   
  ![与匿名客户端使用传输安全](../../../../docs/framework/wcf/feature-details/media/8fa2e931-0cfb-4aaa-9272-91d652b85d8d.gif "8fa2e931-0cfb-4aaa-9272-91d652b85d8d")  
   
@@ -120,4 +119,4 @@ ms.locfileid: "33499175"
  [安全性概述](../../../../docs/framework/wcf/feature-details/security-overview.md)  
  [WS 传输安全性](../../../../docs/framework/wcf/samples/ws-transport-security.md)  
  [传输安全性概述](../../../../docs/framework/wcf/feature-details/transport-security-overview.md)  
- [Windows Server App Fabric 的安全模型](http://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+ [Windows Server App Fabric 的安全模型](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

@@ -9,12 +9,12 @@ dev_langs:
 ms.assetid: 2ed8c28b-b88d-4be7-9c87-92df01f0821f
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f597696514f53259b4ad0f388b6474259d77bea5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8b9eedfab68dc6aeacf9ed51ffc7205b73c062ca
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33579374"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45698329"
 ---
 # <a name="insert-xml-data-using-xpathnavigator"></a>使用 XPathNavigator 插入 XML 数据
 <xref:System.Xml.XPath.XPathNavigator> 类提供一组方法用于在 XML 文档中插入同级节点、子节点和属性节点。 要使用这些方法，<xref:System.Xml.XPath.XPathNavigator> 对象必须可编辑，即其 <xref:System.Xml.XPath.XPathNavigator.CanEdit%2A> 属性必须为 `true`。  
@@ -330,10 +330,11 @@ document.Save("book.xml");
 ## <a name="saving-an-xml-document"></a>保存 XML 文档  
  使用 <xref:System.Xml.XmlDocument> 类的方法保存本主题中所述的方法对 <xref:System.Xml.XmlDocument> 对象的更改。 若要详细了解如何保存对 <xref:System.Xml.XmlDocument> 对象所做的更改，请参阅[保存和编写文档](../../../../docs/standard/data/xml/saving-and-writing-a-document.md)。  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Xml.XmlDocument>  
- <xref:System.Xml.XPath.XPathDocument>  
- <xref:System.Xml.XPath.XPathNavigator>  
- [使用 XPath 数据模型处理 XML 数据](../../../../docs/standard/data/xml/process-xml-data-using-the-xpath-data-model.md)  
- [使用 XPathNavigator 修改 XML 数据](../../../../docs/standard/data/xml/modify-xml-data-using-xpathnavigator.md)  
- [使用 XPathNavigator 删除 XML 数据](../../../../docs/standard/data/xml/remove-xml-data-using-xpathnavigator.md)
+## <a name="see-also"></a>请参阅
+
+- <xref:System.Xml.XmlDocument>  
+- <xref:System.Xml.XPath.XPathDocument>  
+- <xref:System.Xml.XPath.XPathNavigator>  
+- [使用 XPath 数据模型处理 XML 数据](../../../../docs/standard/data/xml/process-xml-data-using-the-xpath-data-model.md)  
+- [使用 XPathNavigator 修改 XML 数据](../../../../docs/standard/data/xml/modify-xml-data-using-xpathnavigator.md)  
+- [使用 XPathNavigator 删除 XML 数据](../../../../docs/standard/data/xml/remove-xml-data-using-xpathnavigator.md)

@@ -12,22 +12,22 @@ helpviewer_keywords:
 ms.assetid: 3c96d83a-a057-4496-abb0-8f4b12712558
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4dd7e6db78b76d737cb4646c2fad79d96fb60aee
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 921874e774d18751c29db495dac1bc53d10cc8ad
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33576264"
+ms.lasthandoff: 09/15/2018
+ms.locfileid: "45653329"
 ---
 # <a name="how-to-save-time-zones-to-an-embedded-resource"></a>如何： 将时区保存到嵌入的资源
 
-时区感知的应用程序通常需要特定时区的状态。 但是，因为单个可用性<xref:System.TimeZoneInfo>对象依赖于本地系统注册表中存储信息，即使通常可用的时区可能不存在。 此外，有关自定义时区信息使用的实例化<xref:System.TimeZoneInfo.CreateCustomTimeZone%2A>方法不会存储与注册表中的其他时区信息。 若要确保这些时区提供了在需要时，你可以通过序列化，将其保存，并在以后还原它们进行反序列化它们。
+时区感知应用程序通常需要某个特定时区存在。 但是，因为单个可用性<xref:System.TimeZoneInfo>对象取决于存储在本地系统注册表中的信息，即使通常可用的时区可能不存在。 此外，有关自定义时区的信息通过使用实例化<xref:System.TimeZoneInfo.CreateCustomTimeZone%2A>方法不会存储在注册表中其他时区信息。 若要确保这些时间区域可在需要时，可以通过序列化，将其保存，并更高版本进行反序列化这些还原它们。
 
-通常情况下，序列化<xref:System.TimeZoneInfo>对象出现于时区识别应用程序。 具体取决于用来保存序列化数据存储区<xref:System.TimeZoneInfo>对象，作为 （例如，当数据存储在注册表的应用程序密钥时），安装程序或安装例程的一部分或作为运行实用程序例程的一部分，时区数据可能会进行序列化之前 （例如，当序列化的数据存储在一个.NET XML 资源 (.resx) 文件） 编译最终应用程序。
+通常情况下，序列化<xref:System.TimeZoneInfo>对象出现除了时区感知应用程序。 具体取决于用来保存序列化数据存储<xref:System.TimeZoneInfo>对象所在的时区数据可能会进行序列化 （例如，当数据存储在注册表的应用程序密钥），设置或安装例程的一部分或作为运行实用程序例程的一部分之前在最终应用程序 （例如，当序列化的数据存储在.NET XML 资源 (.resx) 文件） 编译。
 
-除了进行编译的应用程序资源文件，多个其他数据存储可以用于时区信息。 其中包括：
+与应用程序编译的资源文件，除了几个其他数据存储可以用于时区信息。 其中包括：
 
-* 注册表中。 请注意应用程序应使用其自己的应用程序项的子项来存储自定义时区数据，而不是无需使用 HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Time 区域的子项。
+* 在注册表中。 请注意应用程序应使用其自己的应用程序项的子项来存储自定义时区数据，而不是使用 HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Time Zones 的子项。
 
 * 配置文件。
 
@@ -37,17 +37,17 @@ ms.locfileid: "33576264"
 
 1. 检索现有的时区，或者创建新的时区。
 
-   若要检索现有的时区，请参阅[如何： 访问预定义的 UTC 和当地时间区域对象](../../../docs/standard/datetime/access-utc-and-local.md)和[如何： 实例化 TimeZoneInfo 对象](../../../docs/standard/datetime/instantiate-time-zone-info.md)。
+   若要检索现有的时区，请参阅[如何： 访问预定义的 UTC 和本地时区对象](../../../docs/standard/datetime/access-utc-and-local.md)并[如何： 实例化 TimeZoneInfo 对象](../../../docs/standard/datetime/instantiate-time-zone-info.md)。
 
-   若要创建新的时区，调用的重载之一<xref:System.TimeZoneInfo.CreateCustomTimeZone%2A>方法。 有关详细信息，请参阅[如何： 创建不带调整规则的时区](../../../docs/standard/datetime/create-time-zones-without-adjustment-rules.md)和[如何： 创建带有调整规则的时区](../../../docs/standard/datetime/create-time-zones-with-adjustment-rules.md)。
+   若要创建新的时区，请调用的重载之一<xref:System.TimeZoneInfo.CreateCustomTimeZone%2A>方法。 有关详细信息，请参阅[如何： 创建不含调整规则的时区](../../../docs/standard/datetime/create-time-zones-without-adjustment-rules.md)并[如何： 创建含调整规则的时区](../../../docs/standard/datetime/create-time-zones-with-adjustment-rules.md)。
 
 2. 调用<xref:System.TimeZoneInfo.ToSerializedString%2A>方法来创建包含时区的数据的字符串。
 
-3. 实例化<xref:System.IO.StreamWriter>对象提供的名称和 （可选） 的.resx 文件的路径<xref:System.IO.StreamWriter>类构造函数。
+3. 实例化<xref:System.IO.StreamWriter>对象提供名称和 （可选） 的.resx 文件的路径<xref:System.IO.StreamWriter>类构造函数。
 
-4. 实例化<xref:System.Resources.ResXResourceWriter>通过传递的对象<xref:System.IO.StreamWriter>对象传递给<xref:System.Resources.ResXResourceWriter>类构造函数。
+4. 实例化<xref:System.Resources.ResXResourceWriter>对象通过传递<xref:System.IO.StreamWriter>对象传递给<xref:System.Resources.ResXResourceWriter>类构造函数。
 
-5. 序列化到的字符串传递传递时区<xref:System.Resources.ResXResourceWriter.AddResource%2A?displayProperty=nameWithType>方法。
+5. Pass 时区的序列化到字符串<xref:System.Resources.ResXResourceWriter.AddResource%2A?displayProperty=nameWithType>方法。
 
 6. 调用 <xref:System.Resources.ResXResourceWriter.Generate%2A?displayProperty=nameWithType> 方法。
 
@@ -61,22 +61,22 @@ ms.locfileid: "33576264"
 
 ## <a name="example"></a>示例
 
-下面的示例序列化<xref:System.TimeZoneInfo>表示中部标准时间的对象和一个<xref:System.TimeZoneInfo>到名为 SerializedTimeZones.resx 的.NET XML 资源文件中表示的 Palmer 工作站、 南极洲时间的对象。 在注册表中; 通常定义中部标准时间Palmer 工作站、 南极洲是自定义时区。
+下面的示例序列化为<xref:System.TimeZoneInfo>对象，表示中部标准时间和<xref:System.TimeZoneInfo>表示帕默站，南极时间名为 SerializedTimeZones.resx.NET XML 资源文件的对象。 在注册表中; 通常定义中部标准时间帕默站，南极是自定义时区。
 
 [!code-csharp[TimeZone2.Serialization#1](../../../samples/snippets/csharp/VS_Snippets_CLR/TimeZone2.Serialization/cs/SerializeTimeZoneData.cs#1)]
 [!code-vb[TimeZone2.Serialization#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/TimeZone2.Serialization/vb/SerializeTimeZoneData.vb#1)]
 
-此示例将序列化为<xref:System.TimeZoneInfo>对象，以便它们可在资源文件在编译时。
+此示例中序列化<xref:System.TimeZoneInfo>对象，使他们能够在资源文件在编译时。
 
-因为<xref:System.Resources.ResXResourceWriter.Generate%2A?displayProperty=nameWithType>方法将完整的标头信息添加到.NET XML 资源文件，所以不能用来将资源添加到现有文件。 通过检查 SerializedTimeZones.resx 文件，该示例处理这，并且，如果存在，而不存储它的所有资源两个都序列泛型时区<xref:System.Collections.Generic.Dictionary%602>对象。 现有文件被删除，并且现有资源添加到新的 SerializedTimeZones.resx 文件。 序列化的时区数据也添加到此文件中。
+因为<xref:System.Resources.ResXResourceWriter.Generate%2A?displayProperty=nameWithType>方法将完整的标头信息添加到.NET XML 资源文件，所以不能用来将资源添加到现有文件。 通过检查 SerializedTimeZones.resx 文件，该示例处理这和，如果存在，而不存储所有其资源的两个序列化时区为泛型<xref:System.Collections.Generic.Dictionary%602>对象。 然后删除现有文件和现有的资源添加到新的 SerializedTimeZones.resx 文件。 序列化的时区数据也添加到此文件。
 
-密钥 (或**名称**) 的资源的字段不应包含嵌入的空格。 <xref:System.String.Replace%28System.String%2CSystem.String%29>方法调用之前分配给资源文件，它们所在的时区标识符中移除所有嵌入的空格。
+密钥 (或**名称**) 的资源的字段不应包含嵌入的空格。 <xref:System.String.Replace%28System.String%2CSystem.String%29>调用方法之前分配给资源文件所在的时区标识符中删除所有嵌入的空格。
 
 ## <a name="compiling-the-code"></a>编译代码
 
 此示例需要：
 
-* 对 System.Windows.Forms.dll 和 System.Core.dll 的引用无法添加到项目。
+* 对 system.windows.forms.dll 的引用和 System.Core.dll 的引用将添加到项目。
 
 * 将导入以下命名空间：
 
@@ -85,6 +85,6 @@ ms.locfileid: "33576264"
 
 ## <a name="see-also"></a>请参阅
 
-[日期、 时间和时区](../../../docs/standard/datetime/index.md)
-[时区概述](../../../docs/standard/datetime/time-zone-overview.md)
-[如何： 从嵌入的资源还原时区](../../../docs/standard/datetime/restore-time-zones-from-an-embedded-resource.md)
+* [日期、时间和时区](../../../docs/standard/datetime/index.md)
+* [时区概述](../../../docs/standard/datetime/time-zone-overview.md)
+* [如何：从嵌入的资源还原时区](../../../docs/standard/datetime/restore-time-zones-from-an-embedded-resource.md)

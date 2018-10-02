@@ -2,12 +2,12 @@
 title: 操作指南（C# 指南）
 description: 快速提示及重点短代码示例集合
 ms.date: 12/20/2017
-ms.openlocfilehash: 209af8858de1a791997d254f5a2ddd5dd1803bff
-ms.sourcegitcommit: 54231aa56fca059e9297888a96fbca1d4cf3746c
+ms.openlocfilehash: 9326235341ee38e46f4204b7b3d7f67cae2774af
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/25/2018
-ms.locfileid: "34549371"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44260186"
 ---
 # <a name="how-to-c"></a>操作指南 (C#)
 
@@ -21,7 +21,7 @@ ms.locfileid: "34549371"
 - [了解向方法传递结构和传递类的区别](../programming-guide/classes-and-structs/how-to-know-the-difference-passing-a-struct-and-passing-a-class-to-a-method.md)。
 - [如何使用 Lambda 表达式](../programming-guide/statements-expressions-operators/how-to-use-lambda-expressions-outside-linq.md)。
 - [使用全局命名空间别名解决类型名冲突](../programming-guide/namespaces/how-to-use-the-global-namespace-alias.md)。
-- [使用运算符重载](../programming-guide/statements-expressions-operators/how-to-use-operator-overloading-to-create-a-complex-number-class.md)。
+- [使用运算符重载](../language-reference/keywords/operator.md)。
 - [实现和调用自定义扩展方法](../programming-guide/classes-and-structs/how-to-implement-and-call-a-custom-extension-method.md)。
 - 即使是 C# 程序员也可能需要[使用 VB `My` 命名空间](../programming-guide/namespaces/how-to-use-the-my-namespace.md)。
 - [使用扩展方法创建新 `enum` 类型方法](../programming-guide/classes-and-structs/how-to-create-a-new-method-for-an-enumeration.md)。
@@ -65,10 +65,10 @@ ms.locfileid: "34549371"
 - [将字符串转换为 `DateTime`](../../standard/base-types/parsing-datetime.md)。
 - [将字节数组转换为 int](../programming-guide/types/how-to-convert-a-byte-array-to-an-int.md)。
 - [将字符串转换为数字](../programming-guide/types/how-to-convert-a-string-to-a-number.md)。
-- [使用 `as` 和 `is` 安全地转换为另一种类型](../programming-guide/types/how-to-safely-cast-by-using-as-and-is-operators.md)。
+- [使用模式匹配、`as` 和 `is` 运算符安全强制转换为其他类型](../how-to/safely-cast-using-pattern-matching-is-and-as-operators.md)。
 - [定义 `struct` 类型的转换运算符](../programming-guide/statements-expressions-operators/how-to-implement-user-defined-conversions-between-structs.md)。
 - [确定类型是否为可为 null 的值类型](../programming-guide/nullable-types/how-to-identify-a-nullable-type.md)。
-- [在可为 null 和不可为 null 的值类型之间转换](../programming-guide/nullable-types/how-to-safely-cast-from-bool-to-bool.md)。
+- [在可为 null 和不可为 null 的值类型之间转换](../programming-guide/nullable-types/using-nullable-types.md#conversion-from-a-nullable-type-to-an-underlying-type)。
 
 ## <a name="equality-and-ordering-comparisons"></a>相等比较和排序比较
 
@@ -126,7 +126,7 @@ ms.locfileid: "34549371"
 
 - [使用 `System.Threading.Tasks.Task.WhenAll` 提高异步性能](../programming-guide/concepts/async/how-to-extend-the-async-walkthrough-by-using-task-whenall.md)。
 - [使用 `async` 和 `await` 并行发出多个 Web 请求](../programming-guide/concepts/async/how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await.md)。
-- [使用线程池](../programming-guide/concepts/threading/how-to-use-a-thread-pool.md)。
+- [使用线程池](../../standard/threading/the-managed-thread-pool.md#using-the-thread-pool)。
 
 ## <a name="command-line-args-to-your-program"></a>程序的命令行参数
 

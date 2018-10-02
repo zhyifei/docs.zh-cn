@@ -3,11 +3,11 @@ title: 如何： 查找根元素 (XPATH-LINQ to XML) (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 72c3aed5-9522-4454-a876-2070aad13f2e
 ms.openlocfilehash: 112be85e8af8fbe31f62ef91db04de72a3793082
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33641075"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43483666"
 ---
 # <a name="how-to-find-the-root-element-xpath-linq-to-xml-visual-basic"></a>如何： 查找根元素 (XPATH-LINQ to XML) (Visual Basic)
 本主题演示如何使用 XPath 和 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 获取根元素。  

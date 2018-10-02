@@ -5,22 +5,22 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 56c5a9e3-31f1-482f-bce0-ff1c41a658d0
-ms.openlocfilehash: 302c26571e9843a4b7c3c440969e4159ef2d10ae
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ec4ef17687e4e1bf2cc18182a64fc7361fe3b6f7
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33362571"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43421978"
 ---
 # <a name="retrieving-binary-data"></a>检索二进制数据
-默认情况下， **DataReader**作为行加载传入数据，只要整个行的数据是可用。 但是，对于二进制大对象 (BLOB) 则需要进行不同的处理，因为它们可能包含数十亿字节的数据，而单个行中无法包含如此多的数据。 **Command.ExecuteReader**方法具有一个重载需要较长的<xref:System.Data.CommandBehavior>自变量来修改的默认行为**DataReader**。 你可以将传递<xref:System.Data.CommandBehavior.SequentialAccess>到**ExecuteReader**方法可以修改的默认行为**DataReader**以便而不是加载的数据行，它将加载数据按顺序接收。 这是加载 BLOB 或其他大数据结构的理想方案。 请注意，该行为可能会因数据源的不同而不同。 例如，从 Microsoft Access 中返回 BLOB 会将整个 BLOB 加载到内存中，而不是按照顺序在接收到数据时立即将其加载。  
+默认情况下**DataReader**作为行加载传入数据，只要整个行的数据不可用。 但是，对于二进制大对象 (BLOB) 则需要进行不同的处理，因为它们可能包含数十亿字节的数据，而单个行中无法包含如此多的数据。 **Command.ExecuteReader**方法具有需要较长的一个重载<xref:System.Data.CommandBehavior>参数来修改的默认行为**DataReader**。 可以将传递<xref:System.Data.CommandBehavior.SequentialAccess>到**ExecuteReader**方法来修改的默认行为**DataReader**以便而不是加载的数据行，它将加载数据按顺序接收。 这是加载 BLOB 或其他大数据结构的理想方案。 请注意，该行为可能会因数据源的不同而不同。 例如，从 Microsoft Access 中返回 BLOB 会将整个 BLOB 加载到内存中，而不是按照顺序在接收到数据时立即将其加载。  
   
- 设置时**DataReader**使用**SequentialAccess**，务必要注意访问返回的字段的序列。 默认行为**DataReader**，这会将加载整个行后立即按原样提供，允许你访问读取下一行之前按任何顺序返回的字段。 使用时**SequentialAccess**但是，你必须访问返回的字段**DataReader**顺序。 例如，如果查询返回三个列，其中第三列是 BLOB，则必须在访问第三个字段中的 BLOB 数据之前返回第一个和第二个字段的值。 如果在访问第一个或第二个字段之前访问第三个字段，则第一个和第二个字段值将不再可用。 这是因为**SequentialAccess**进行了修改**DataReader**返回数据序列和数据将不可用**DataReader**已经读取超过它。  
+ 设置时**DataReader**若要使用**SequentialAccess**，务必要注意访问返回的字段的序列。 默认行为**DataReader**，这会加载整个行，只要它不可用，可用于访问读取下一行之前按任何顺序返回的字段。 使用时**SequentialAccess**但是，必须访问返回的字段**DataReader**顺序。 例如，如果查询返回三个列，其中第三列是 BLOB，则必须在访问第三个字段中的 BLOB 数据之前返回第一个和第二个字段的值。 如果在访问第一个或第二个字段之前访问第三个字段，则第一个和第二个字段值将不再可用。 这是因为**SequentialAccess**进行了修改**DataReader**序列和数据中返回数据将不可用**DataReader**已经读取超过它。  
   
- 在访问 BLOB 字段中的数据，使用**GetBytes**或**GetChars**类型化访问器的**DataReader**，它们将用数据填充数组。 你还可以使用**GetString**为字符数据; 但是。 为了节省系统资源，您可能不希望将整个 BLOB 值加载到单个字符串变量中。 您可以指定要返回的特定数据缓冲区大小，以及从返回的数据中读取的第一个字节或字符的起始位置。 **GetBytes**和**GetChars**将返回`long`值，它表示返回的字节或字符数。 如果传递到一个空数组**GetBytes**或**GetChars**，返回长值将是 BLOB 中字节或字符的总数。 您可以选择将数组中的某个索引指定为所读取数据的起始位置。  
+ 当访问该 BLOB 字段中的数据，使用**GetBytes**或**GetChars**类型化访问器的**DataReader**，其中用数据填充数组。 此外可以使用**GetString**为字符数据; 但是。 为了节省系统资源，您可能不希望将整个 BLOB 值加载到单个字符串变量中。 您可以指定要返回的特定数据缓冲区大小，以及从返回的数据中读取的第一个字节或字符的起始位置。 **GetBytes**并**GetChars**将返回`long`值，该值表示的字节数或返回的字符数。 如果为一个空数组传递**GetBytes**或**GetChars**，返回长值将是 BLOB 中字节或字符的总数。 您可以选择将数组中的某个索引指定为所读取数据的起始位置。  
   
 ## <a name="example"></a>示例  
- 下面的示例返回的发布者 ID 和徽标从**pubs**中 Microsoft SQL Server 示例数据库。 发行者 ID (`pub_id`) 是字符字段，而徽标则是图像，属于 BLOB。 因为**徽标**字段是位图，此示例将返回二进制数据使用**GetBytes**。 请注意，由于必须按顺序访问字段，所以将在访问徽标之前访问当前数据行的发行者 ID。  
+ 下面的示例返回发行者 ID 和从徽标**pubs**中 Microsoft SQL Server 示例数据库。 发行者 ID (`pub_id`) 是字符字段，而徽标则是图像，属于 BLOB。 因为**徽标**字段是位图，该示例将返回二进制数据使用**GetBytes**。 请注意，由于必须按顺序访问字段，所以将在访问徽标之前访问当前数据行的发行者 ID。  
   
 ```vb  
 ' Assumes that connection is a valid SqlConnection object.  
@@ -154,6 +154,6 @@ connection.Close();
 ```  
   
 ## <a name="see-also"></a>请参阅  
- [使用 Datareader](http://msdn.microsoft.com/library/126a966a-d08d-4d22-a19f-f432908b2b54)  
+ [使用 Datareader](https://msdn.microsoft.com/library/126a966a-d08d-4d22-a19f-f432908b2b54)  
  [SQL Server 二进制和大值数据](../../../../docs/framework/data/adonet/sql/sql-server-binary-and-large-value-data.md)  
- [ADO.NET 托管提供程序和数据集开发人员中心](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)

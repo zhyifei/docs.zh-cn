@@ -2,12 +2,12 @@
 title: FILESTREAM 数据
 ms.date: 03/30/2017
 ms.assetid: bd8b845c-0f09-4295-b466-97ef106eefa8
-ms.openlocfilehash: 782674cb38669c400bd5d730c2fd0c144778a985
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: eef03d171d288cb2bc62c3aaa477a95a5ce718c3
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33357764"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47176794"
 ---
 # <a name="filestream-data"></a>FILESTREAM 数据
 FILESTREAM 存储特性用于 varbinary(max) 列中存储的二进制 (BLOB) 数据。 在 FILESTREAM 之前，存储二进制数据需要特殊处理。 非结构化的数据（例如文本文档、图像和视频）通常存储在数据库之外，从而使得难以管理此类数据。  
@@ -18,10 +18,10 @@ FILESTREAM 存储特性用于 varbinary(max) 列中存储的二进制 (BLOB) 数
  在 varbinary(max) 列上指定 FILESTREAM 属性可使 SQL Server 将数据存储在本地 NTFS 文件系统中，而不是存储在数据库文件中。 虽然数据是单独存储的，但您可以使用所支持的相同 [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] 语句来处理存储在数据库中的 varbinary(max) 数据。  
   
 ## <a name="sqlclient-support-for-filestream"></a>SqlClient 对 FILESTREAM 的支持  
- [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] Data Provider for SQL Server <xref:System.Data.SqlClient>、 支持读取和写入 FILESTREAM 数据使用<xref:System.Data.SqlTypes.SqlFileStream>中定义的类<xref:System.Data.SqlTypes>命名空间。 `SqlFileStream` 继承自 <xref:System.IO.Stream> 类，该类提供了用于读写数据流的方法。 从流读取数据可将数据从流传输到一个数据结构，例如一个字节数组。 写入操作可将数据从该数据结构传输到一个流。  
+ [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] SQL Server 数据提供程序<xref:System.Data.SqlClient>，支持对 FILESTREAM 数据使用读取和写入<xref:System.Data.SqlTypes.SqlFileStream>类中定义<xref:System.Data.SqlTypes>命名空间。 `SqlFileStream` 继承自 <xref:System.IO.Stream> 类，该类提供了用于读写数据流的方法。 从流读取数据可将数据从流传输到一个数据结构，例如一个字节数组。 写入操作可将数据从该数据结构传输到一个流。  
   
 ### <a name="creating-the-sql-server-table"></a>创建 SQL Server 表  
- 下列 [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] 语句将创建一个名为 employees 的表并插入一行数据。 启用 FILESTREAM 存储之后，你可以将此表与下面的代码示例结合使用。 本主题的最后介绍了 SQL Server 联机丛书中的资源的链接。  
+ 下列 [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] 语句将创建一个名为 employees 的表并插入一行数据。 启用 FILESTREAM 存储之后，你可以将此表与下面的代码示例结合使用。 SQL Server 联机丛书中的资源的链接位于本主题末尾处。  
   
 ```  
 CREATE TABLE employees  
@@ -167,22 +167,22 @@ namespace FileStreamTest
 }
 ```  
   
- 另一个示例，请参阅[如何存储和提取到文件流列的二进制数据](http://www.codeproject.com/Articles/32216/How-to-store-and-fetch-binary-data-into-a-file-str)。  
+ 另一个示例，请参阅[如何存储和二进制数据提取到文件流列](http://www.codeproject.com/Articles/32216/How-to-store-and-fetch-binary-data-into-a-file-str)。  
   
 ## <a name="resources-in-sql-server-books-online"></a>SQL Server 联机丛书中的资源  
- 有关 FILESTREAM 的完整文档位于 SQL Server 联机丛书中的下列部分中。  
+ FILESTREAM 的完整文档位于 SQL Server 联机丛书中的下列部分中。  
   
 |主题|描述|  
 |-----------|-----------------|  
 |[设计和实现 FILESTREAM 存储](http://msdn2.microsoft.com/library/bb895234\(SQL.105\).aspx)|提供指向 FILESTREAM 文档和相关主题的链接。|  
 |[FILESTREAM 概述](http://msdn2.microsoft.com/library/bb933993\(SQL.105\).aspx)|介绍何时使用 FILESTREAM 存储以及该存储如何将 SQL Server 数据库引擎与 NTFS 文件系统集成。|  
-|[FILESTREAM 存储入门](http://msdn.microsoft.com/library/bb933995\(SQL.105\).aspx)|介绍如何在 SQL Server 的实例上启用 FILESTREAM，如何创建数据库和表以存储 FILESTREAM 数据以及如何操作包含 FILESTREAM 数据的行。|  
-|[在客户端应用程序中使用 FILESTREAM 存储](http://msdn.microsoft.com/library/bb933877\(SQL.105\).aspx)|介绍用于处理 FILESTREAM 数据的 Win32 API 函数。|  
-|[FILESTREAM 与其他 SQL Server 功能](http://msdn.microsoft.com/library/bb895334\(SQL.105\).aspx)|提供将 FILESTREAM 数据与 SQL Server 的其他功能一起使用时的注意事项、准则和限制。|  
+|[使用 FILESTREAM 存储入门](https://msdn.microsoft.com/library/bb933995\(SQL.105\).aspx)|介绍如何在 SQL Server 的实例上启用 FILESTREAM，如何创建数据库和表以存储 FILESTREAM 数据以及如何操作包含 FILESTREAM 数据的行。|  
+|[在客户端应用程序中使用 FILESTREAM 存储](https://msdn.microsoft.com/library/bb933877\(SQL.105\).aspx)|介绍用于处理 FILESTREAM 数据的 Win32 API 函数。|  
+|[FILESTREAM 与其他 SQL Server 功能](/sql/relational-databases/blob/filestream-compatibility-with-other-sql-server-features)|提供将 FILESTREAM 数据与 SQL Server 的其他功能一起使用时的注意事项、准则和限制。|  
   
 ## <a name="see-also"></a>请参阅  
  [SQL Server 数据类型和 ADO.NET](../../../../../docs/framework/data/adonet/sql/sql-server-data-types.md)  
  [在 ADO.NET 中检索和修改数据](../../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)  
  [代码访问安全性和 ADO.NET](../../../../../docs/framework/data/adonet/code-access-security.md)  
  [SQL Server 二进制和大值数据](../../../../../docs/framework/data/adonet/sql/sql-server-binary-and-large-value-data.md)  
- [ADO.NET 托管提供程序和数据集开发人员中心](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)

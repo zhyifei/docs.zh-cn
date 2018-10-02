@@ -11,13 +11,12 @@ helpviewer_keywords:
 - ServiceProcessInstaller class, adding installers to services
 ms.assetid: 8b698e9a-b88e-4f44-ae45-e0c5ea0ae5a8
 author: ghogen
-manager: douge
-ms.openlocfilehash: faece1d7ee752e4c17f39027ff8a97fc95ed451b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b73d7cf694e7bce5d055f8a3c9f78c27bb8cd5b9
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33514355"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47196214"
 ---
 # <a name="how-to-add-installers-to-your-service-application"></a>如何：将安装程序添加到服务应用程序
 Visual Studio 提供可安装与服务应用程序关联资源的安装组件。 安装组件在安装它的系统上注册单个服务，并让服务控制管理器知道存在该服务。 当使用服务应用程序时，你可以在“属性”窗口中选择一个链接，以将相应的安装程序自动添加到项目中。  
@@ -30,7 +29,7 @@ Visual Studio 提供可安装与服务应用程序关联资源的安装组件。
  无需在安装程序中执行任何特殊编码就可以正确安装服务。 但是，如果需要为安装进程添加特殊功能，则可能偶尔需要修改安装程序的内容。  
   
 > [!NOTE]
->  显示的对话框和菜单命令可能会与“帮助”中的描述不同，具体取决于你现用的设置或版本。 若要更改设置，请在 **“工具”** 菜单上选择 **“导入和导出设置”** 。 有关详细信息，请参阅[在 Visual Studio 中自定义开发设置](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3)。  
+>  显示的对话框和菜单命令可能会与“帮助”中的描述不同，具体取决于你现用的设置或版本。 若要更改设置，请在 **“工具”** 菜单上选择 **“导入和导出设置”** 。 有关详细信息，请参阅[个性化设置 Visual Studio IDE](/visualstudio/ide/personalizing-the-visual-studio-ide)。  
   
 ### <a name="to-add-installers-to-your-service-application"></a>将安装程序添加到服务应用程序  
   

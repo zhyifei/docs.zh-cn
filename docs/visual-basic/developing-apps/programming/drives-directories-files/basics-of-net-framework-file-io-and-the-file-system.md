@@ -10,11 +10,11 @@ helpviewer_keywords:
 - streams, definition
 ms.assetid: 49d837c0-cf28-416f-8606-4d83d7b479ef
 ms.openlocfilehash: c978f79571494d9b716df4e8a42e7f40d20766f6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 869b5832b667915ac4a5dd8c86b1109ed26b6c08
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33591776"
+ms.lasthandoff: 07/28/2018
+ms.locfileid: "39332945"
 ---
 # <a name="basics-of-net-framework-file-io-and-the-file-system-visual-basic"></a>.NET Framework 文件 I/O 和文件系统基础知识 (Visual Basic)
 使用 <xref:System.IO> 命名空间中的类与驱动器、文件和目录一起工作。  

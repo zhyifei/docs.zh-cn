@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: c119657a-9ce6-4940-91e4-ac1d5f0d9584
-ms.openlocfilehash: 5b34f93348c43a26f603140f2393389e1bce107a
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 93cc0cf34d2bba23ff0938c8c13d7343d665192d
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32759135"
+ms.lasthandoff: 09/15/2018
+ms.locfileid: "45649209"
 ---
 # <a name="adonet-code-examples"></a>ADO.NET 代码示例
 本主题中的代码列表演示如何使用下面的 ADO.NET 技术从数据库中检索数据：
@@ -39,7 +39,7 @@ ms.locfileid: "32759135"
 以下代码列表演示如何使用 ADO.NET 数据提供程序从数据库中检索数据。 数据在一个 `DataReader` 中返回。 有关详细信息，请参阅[使用 DataReader 检索数据](../../../../docs/framework/data/adonet/retrieving-data-using-a-datareader.md)。
 
 ### <a name="sqlclient"></a>SqlClient
-此示例中的代码假定你可以连接到`Northwind`Microsoft SQL Server 上的示例数据库。 在此情形 5 中，示例代码创建一个 <xref:System.Data.SqlClient.SqlCommand> 以从 Products 表中选择行，并添加 <xref:System.Data.SqlClient.SqlParameter> 来将结果限制为其 UnitPrice 大于指定参数值的行。 <xref:System.Data.SqlClient.SqlConnection>在内部打开`using`块，这将确保关闭和释放在代码退出时会资源。 示例代码使用 <xref:System.Data.SqlClient.SqlDataReader> 执行命令，并在控制台窗口中显示结果。
+此示例中的代码假定你可以连接到`Northwind`Microsoft SQL Server 上的示例数据库。 在此情形 5 中，示例代码创建一个 <xref:System.Data.SqlClient.SqlCommand> 以从 Products 表中选择行，并添加 <xref:System.Data.SqlClient.SqlParameter> 来将结果限制为其 UnitPrice 大于指定参数值的行。 <xref:System.Data.SqlClient.SqlConnection>内部打开`using`块中，这可确保关闭和释放在代码退出时会资源。 示例代码使用 <xref:System.Data.SqlClient.SqlDataReader> 执行命令，并在控制台窗口中显示结果。
 
  [!code-csharp[DataWorks SampleApp.SqlClient#1](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SampleApp.SqlClient/CS/source.cs#1)]
  [!code-vb[DataWorks SampleApp.SqlClient#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SampleApp.SqlClient/VB/source.vb#1)]
@@ -51,7 +51,7 @@ ms.locfileid: "32759135"
  [!code-vb[DataWorks SampleApp.OleDb#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SampleApp.OleDb/VB/source.vb#1)]
 
 ### <a name="odbc"></a>Odbc
-此示例中的代码假定您可以连接到 Microsoft Access Northwind 示例数据库。 在此情形 5 中，示例代码创建一个 <xref:System.Data.Odbc.OdbcCommand> 以从 Products 表中选择行，并添加 <xref:System.Data.Odbc.OdbcParameter> 来将结果限制为其 UnitPrice 大于指定参数值的行。 <xref:System.Data.Odbc.OdbcConnection>在内部打开`using`块，这将确保关闭和释放在代码退出时会资源。 示例代码使用 <xref:System.Data.Odbc.OdbcDataReader> 执行命令，并在控制台窗口中显示结果。
+此示例中的代码假定您可以连接到 Microsoft Access Northwind 示例数据库。 在此情形 5 中，示例代码创建一个 <xref:System.Data.Odbc.OdbcCommand> 以从 Products 表中选择行，并添加 <xref:System.Data.Odbc.OdbcParameter> 来将结果限制为其 UnitPrice 大于指定参数值的行。 <xref:System.Data.Odbc.OdbcConnection>内部打开`using`块中，这可确保关闭和释放在代码退出时会资源。 示例代码使用 <xref:System.Data.Odbc.OdbcDataReader> 执行命令，并在控制台窗口中显示结果。
 
 [!code-csharp[DataWorks SampleApp.Odbc#1](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SampleApp.Odbc/CS/source.cs#1)] 
 [!code-vb[DataWorks SampleApp.Odbc#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SampleApp.Odbc/VB/source.vb#1)] 
@@ -63,10 +63,10 @@ ms.locfileid: "32759135"
  [!code-vb[DataWorks SampleApp.Oracle#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SampleApp.Oracle/VB/source.vb#1)]
 
 ## <a name="entity-framework-examples"></a>实体框架示例
-以下代码列表演示如何通过查询实体数据模型 (EDM) 中的实体来从数据源检索数据。 这些示例使用[Northwind 模型](http://msdn.microsoft.com/74521f8c-e974-48cb-8858-c08deff52638)。 有关详细信息，请参阅[实体框架概述](../../../../docs/framework/data/adonet/ef/overview.md)。
+以下代码列表演示如何通过查询实体数据模型 (EDM) 中的实体来从数据源检索数据。 这些示例使用[Northwind 模型](https://msdn.microsoft.com/74521f8c-e974-48cb-8858-c08deff52638)。 有关详细信息，请参阅[实体框架概述](../../../../docs/framework/data/adonet/ef/overview.md)。
 
 ### <a name="linq-to-entities"></a>LINQ to Entities
-此示例中的代码使用 LINQ 查询以 Categories 对象的形式返回数据，这些对象将作为仅包含 CategoryID 和 CategoryName 属性的匿名类型提取。 有关详细信息，请参阅[LINQ to Entities 概述](http://msdn.microsoft.com/86d87a27-c17a-45ac-b28d-72c8500333c6)。
+此示例中的代码使用 LINQ 查询以 Categories 对象的形式返回数据，这些对象将作为仅包含 CategoryID 和 CategoryName 属性的匿名类型提取。 有关详细信息，请参阅[LINQ to Entities 概述](https://msdn.microsoft.com/86d87a27-c17a-45ac-b28d-72c8500333c6)。
 
 ```csharp
 using System;
@@ -137,7 +137,7 @@ End Class
 ```
 
 ### <a name="typed-objectquery"></a>类型化 ObjectQuery
-此示例中的代码使用 <xref:System.Data.Objects.ObjectQuery%601> 以 Categories 对象的形式返回数据。 有关详细信息，请参阅[对象查询](http://msdn.microsoft.com/0768033c-876f-471d-85d5-264884349276)。
+此示例中的代码使用 <xref:System.Data.Objects.ObjectQuery%601> 以 Categories 对象的形式返回数据。 有关详细信息，请参阅[对象查询](https://msdn.microsoft.com/0768033c-876f-471d-85d5-264884349276)。
 
 ```csharp
 using System;
@@ -187,7 +187,7 @@ End Class
 ```
 
 ### <a name="entityclient"></a>EntityClient
-此示例中的代码使用 <xref:System.Data.EntityClient.EntityCommand> 来执行实体 SQL 查询。 此查询会返回表示 Categories 实体类型的实例的记录的列表。 <xref:System.Data.EntityClient.EntityDataReader> 用于访问结果集中的数据记录。 有关详细信息，请参阅[用于实体框架的 EntityClient 提供程序](../../../../docs/framework/data/adonet/ef/entityclient-provider-for-the-entity-framework.md)。
+此示例中的代码使用 <xref:System.Data.EntityClient.EntityCommand> 来执行实体 SQL 查询。 此查询会返回表示 Categories 实体类型的实例的记录的列表。 <xref:System.Data.EntityClient.EntityDataReader> 用于访问结果集中的数据记录。 有关详细信息，请参阅[针对实体框架的 EntityClient Provider](../../../../docs/framework/data/adonet/ef/entityclient-provider-for-the-entity-framework.md)。
 
 ```csharp
 using System;
@@ -346,7 +346,7 @@ End Class
 ## <a name="see-also"></a>请参阅
  [ADO.NET 概述](../../../../docs/framework/data/adonet/ado-net-overview.md)  
  [在 ADO.NET 中检索和修改数据](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)  
- [创建数据应用程序](http://msdn.microsoft.com/library/ab334d5f-4f49-4346-bce0-3325d6130b3e)  
- [查询实体数据模型 （实体框架任务）](http://msdn.microsoft.com/187f1caa-e4d3-4e31-bd99-5d5c2b329c77)  
- [如何： 执行返回匿名类型的对象的查询](http://msdn.microsoft.com/3b264025-e911-4d73-90ce-992d2b9d189d)  
- [ADO.NET 托管提供程序和数据集开发人员中心](http://go.microsoft.com/fwlink/?LinkId=217917)  
+ [创建数据应用程序](https://msdn.microsoft.com/library/ab334d5f-4f49-4346-bce0-3325d6130b3e)  
+ [查询实体数据模型 （实体框架任务）](https://msdn.microsoft.com/187f1caa-e4d3-4e31-bd99-5d5c2b329c77)  
+ [如何： 执行返回匿名类型对象的查询](https://msdn.microsoft.com/3b264025-e911-4d73-90ce-992d2b9d189d)  
+ [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)  

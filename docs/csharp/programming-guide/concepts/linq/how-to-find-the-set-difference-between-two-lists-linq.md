@@ -2,12 +2,12 @@
 title: 如何：查找两个列表之间的差集 (LINQ) (C#)
 ms.date: 07/20/2015
 ms.assetid: 8e8945f0-4aba-439d-8d5d-c8d1eeef4e71
-ms.openlocfilehash: 8a0f7a06a226c0fee1f0174e187060e4b25faea2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e416e97b8fe3a1a76a0f04ea46353d9fd8c0ad8c
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33322934"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43527148"
 ---
 # <a name="how-to-find-the-set-difference-between-two-lists-linq-c"></a>如何：查找两个列表之间的差集 (LINQ) (C#)
 此示例演示如何使用 LINQ 对两个字符串列表进行比较，并输出那些位于 names1.txt 中但不在 names2.txt 中的行。  
@@ -57,5 +57,6 @@ class CompareLists
 ## <a name="compiling-the-code"></a>编译代码  
  创建面向 .NET Framework 3.5 或更高版本的项目，此项目包含对 System.Core.dll 的引用和针对 System.Linq 和 System.IO 命名空间的 `using` 指令。  
   
-## <a name="see-also"></a>请参阅  
- [LINQ 和字符串 (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-strings.md)
+## <a name="see-also"></a>请参阅
+
+- [LINQ 和字符串 (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-strings.md)

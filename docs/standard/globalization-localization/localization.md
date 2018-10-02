@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 49d520d7-92d7-44ee-bb24-8b615db1d41b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7fc995843c1e2f5977acbfe2158457d30ac355ec
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ee7de15130644e63b17a6d067c5cce9088d199a0
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33573908"
+ms.lasthandoff: 09/29/2018
+ms.locfileid: "47236457"
 ---
 # <a name="localization"></a>本地化
 本地化是针对应用支持的每个区域性，将应用资源转换为本地化版本的过程。 只有在完成[可本地化评审](../../../docs/standard/globalization-localization/localizability-review.md)步骤，以验证全球化应用是否做好本地化准备后，才应继续执行本地化步骤。  
@@ -32,8 +32,9 @@ ms.locfileid: "33573908"
   
  [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)] 提供了 Windows 窗体资源编辑器 (Winres.exe)，以便于针对目标区域性快速本地化 Windows 窗体。 若要了解如何使用此工具，请参阅 [Winres.exe（Windows 窗体资源编辑器）](../../../docs/framework/tools/winres-exe-windows-forms-resource-editor.md)。  
   
-## <a name="see-also"></a>请参阅  
- [全球化和本地化](../../../docs/standard/globalization-localization/index.md)  
- [可本地化性审核](../../../docs/standard/globalization-localization/localizability-review.md)  
- [全球化](../../../docs/standard/globalization-localization/globalization.md)  
- [桌面应用中的资源](../../../docs/framework/resources/index.md)
+## <a name="see-also"></a>请参阅
+
+- [全球化和本地化](../../../docs/standard/globalization-localization/index.md)  
+- [可本地化性审核](../../../docs/standard/globalization-localization/localizability-review.md)  
+- [全球化](../../../docs/standard/globalization-localization/globalization.md)  
+- [桌面应用中的资源](../../../docs/framework/resources/index.md)

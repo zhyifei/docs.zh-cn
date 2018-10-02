@@ -2,25 +2,25 @@
 title: ADO.NET 概述
 ms.date: 03/30/2017
 ms.assetid: ee3bc1d8-11db-4be4-89eb-c708cf04117d
-ms.openlocfilehash: 50881c05c8b6f2602d19817373a16e4661d3d133
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 697911201171a540d6749d03c51f14efba945765
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32757939"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43529918"
 ---
 # <a name="adonet-overview"></a>ADO.NET 概述
 ADO.NET 提供对诸如 SQL Server 和 XML 这样的数据源以及通过 OLE DB 和 ODBC 公开的数据源的一致访问。 共享数据的使用方应用程序可以使用 ADO.NET 连接到这些数据源，并可以检索、处理和更新其中包含的数据。  
   
  ADO.NET 通过数据处理将数据访问分解为多个可以单独使用或一前一后使用的不连续组件。 ADO.NET 包含用于连接到数据库、执行命令和检索结果的 .NET Framework 数据提供程序。 这些结果或者被直接处理，放在 ADO.NET <xref:System.Data.DataSet> 对象中以便以特别的方式向用户公开，并与来自多个源的数据组合；或者在层之间传递。 `DataSet` 对象也可以独立于 .NET Framework 数据提供程序，用于管理应用程序本地的数据或源自 XML 的数据。  
   
- ADO.NET 类位于 System.Data.dll 中，并与 System.Xml.dll 中的 XML 类集成。 有关示例代码可连接到数据库，从它，检索数据，然后将该数据显示在控制台窗口中，请参阅[ADO.NET 代码示例](../../../../docs/framework/data/adonet/ado-net-code-examples.md)。  
+ ADO.NET 类位于 System.Data.dll 中，并与 System.Xml.dll 中的 XML 类集成。 有关连接到的数据库的示例代码检索数据，并在控制台窗口中，然后显示该数据请参阅[ADO.NET 代码示例](../../../../docs/framework/data/adonet/ado-net-code-examples.md)。  
   
  ADO.NET 向编写托管代码的开发人员提供类似于 ActiveX 数据对象 (ADO) 向本机组件对象模型 (COM) 开发人员提供的功能。 建议您在 .NET 应用程序中使用 ADO.NET 而不使用 ADO 来访问数据。  
   
- ADO.NET 在 .NET Framework 中提供最直接的数据访问方法。 允许应用程序来处理针对概念模型而不是基础的存储模型的更高级别的抽象，请参阅[ADO.NET 实体框架](../../../../docs/framework/data/adonet/ef/index.md)。  
+ ADO.NET 在 .NET Framework 中提供最直接的数据访问方法。 有关更高级别的抽象，让应用程序能够对概念模型而不是基础存储模型的说明，请参阅[ADO.NET 实体框架](../../../../docs/framework/data/adonet/ef/index.md)。  
   
- **隐私声明**: System.Data.dll、 System.Data.Design.dll、 System.Data.OracleClient.dll、 System.Data.SqlXml.dll、 System.Data.Linq.dll、 System.Data.SqlServerCe.dll 和 System.Data.DataSetExtensions.dll 程序集不这样做区分用户的私有数据和非隐私数据。  这些程序集不收集、存储或传输任何用户隐私数据。 不过，第三方应用程序可能会使用这些程序集收集、存储或传输用户的隐私数据。  
+ **隐私声明**: System.Data.dll、 System.Data.Design.dll、 System.Data.OracleClient.dll、 System.Data.SqlXml.dll、 System.Data.Linq.dll、 System.Data.SqlServerCe.dll 和 System.Data.DataSetExtensions.dll 程序集不这样做区分用户的隐私数据和非隐私数据。  这些程序集不收集、存储或传输任何用户隐私数据。 不过，第三方应用程序可能会使用这些程序集收集、存储或传输用户的隐私数据。  
   
 ## <a name="in-this-section"></a>本节内容  
  [ADO.NET 体系结构](../../../../docs/framework/data/adonet/ado-net-architecture.md)  
@@ -60,4 +60,4 @@ ADO.NET 提供对诸如 SQL Server 和 XML 这样的数据源以及通过 OLE DB
 ## <a name="see-also"></a>请参阅  
  [ADO.NET](../../../../docs/framework/data/adonet/index.md)  
  [在 Visual Studio 中访问数据](/visualstudio/data-tools/accessing-data-in-visual-studio)  
- [ADO.NET 托管提供程序和数据集开发人员中心](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)

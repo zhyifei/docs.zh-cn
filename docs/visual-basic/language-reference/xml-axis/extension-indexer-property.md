@@ -9,12 +9,12 @@ helpviewer_keywords:
 - extension indexer [Visual Basic]
 - XML [Visual Basic], accessing
 ms.assetid: a16a4b13-54be-432c-82b3-a87091464ada
-ms.openlocfilehash: a7718a4aa85a000d0c83e8c9556a448ceaf13c82
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ab9eacc3fb3796139d8ed8382146a4a6c2b28a97
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33603465"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44189496"
 ---
 # <a name="extension-indexer-property-visual-basic"></a>扩展索引器属性 (Visual Basic)
 提供对集合中各个元素的访问。  
@@ -29,25 +29,25 @@ object(index)
   
 |术语|定义|  
 |---|---|  
-|`object`|必须的。 查询的集合。 也就是说，集合可实现<xref:System.Collections.Generic.IEnumerable%601>或<xref:System.Linq.IQueryable%601>。|  
+|`object`|必须的。 可查询的集合。 也就是说，集合实现<xref:System.Collections.Generic.IEnumerable%601>或<xref:System.Linq.IQueryable%601>。|  
 |(|必须的。 表示索引器属性的开头。|  
-|`index`|必须的。 一个整数表达式，指定集合的某个元素的从零开始的位置。|  
-|)|必须的。 表示索引器属性的末尾。|  
+|`index`|必须的。 一个整数表达式，指定集合的元素的从零开始的位置。|  
+|)|必须的。 表示索引器属性的结尾。|  
   
 ## <a name="return-value"></a>返回值  
- 在集合中，指定的位置中的对象或`Nothing`如果索引超出范围。  
+ 从集合中指定的位置的对象或`Nothing`如果索引超出范围。  
   
 ## <a name="remarks"></a>备注  
- 扩展索引器属性可用于访问集合中的各个元素。 XML 轴属性的输出通常用于此索引器属性。 XML 子和 XML 子代轴属性返回的集合<xref:System.Xml.Linq.XElement>对象或属性值。  
+ 扩展索引器属性可用于访问集合中的各个元素。 XML 轴属性的输出通常使用此索引器属性。 XML 子和 XML 子代轴属性返回的集合<xref:System.Xml.Linq.XElement>对象或属性值。  
   
- Visual Basic 编译器将扩展索引器属性转换为调用`ElementAtOrDefault`方法。 与数组索引器，不同`ElementAtOrDefault`方法返回`Nothing`如果索引超出范围。 当你将无法轻松确定集合中的元素的数目时，此行为很有用。  
+ Visual Basic 编译器将扩展索引器属性转换为对调用`ElementAtOrDefault`方法。 与数组索引器，不同`ElementAtOrDefault`方法将返回`Nothing`如果索引超出范围。 此行为时，你无法轻松确定集合中的元素数。  
   
- 此索引器属性是实现的集合的扩展属性相似<xref:System.Collections.Generic.IEnumerable%601>或<xref:System.Linq.IQueryable%601>： 仅当集合不具有一个索引器或默认属性时，才使用它。  
+ 此索引器属性是为实现的集合的扩展属性相似<xref:System.Collections.Generic.IEnumerable%601>或<xref:System.Linq.IQueryable%601>： 仅当集合不具有索引器或默认属性使用它。  
   
- 若要访问的集合中的第一个元素的值<xref:System.Xml.Linq.XElement>或<xref:System.Xml.Linq.XAttribute>对象，你可以使用 XML`Value`属性。 有关详细信息，请参阅[XML 值属性](../../../visual-basic/language-reference/xml-axis/xml-value-property.md)。  
+ 若要访问的集合中的第一个元素的值<xref:System.Xml.Linq.XElement>或<xref:System.Xml.Linq.XAttribute>对象，可以使用 XML`Value`属性。 有关详细信息，请参阅[XML 值属性](../../../visual-basic/language-reference/xml-axis/xml-value-property.md)。  
   
 ## <a name="example"></a>示例  
- 下面的示例演示如何扩展索引器用于访问集合中的第二个子节点<xref:System.Xml.Linq.XElement>对象。 通过使用子轴属性，它将获取名为的所有子元素属性访问集合`phone`中`contact`对象。  
+ 下面的示例演示如何使用扩展索引器访问的集合中的第二个子节点<xref:System.Xml.Linq.XElement>对象。 通过使用子轴属性，它将获取名为的所有子元素访问集合`phone`在`contact`对象。  
   
  [!code-vb[VbXMLSamples#24](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/extension-indexer-property_1.vb)]  
   
@@ -57,7 +57,7 @@ object(index)
   
 ## <a name="see-also"></a>请参阅  
  <xref:System.Xml.Linq.XElement>  
- [XML 轴属性](../../../visual-basic/language-reference/xml-axis/xml-axis-properties.md)  
+ [XML 轴属性](../../../visual-basic/language-reference/xml-axis/index.md)  
  [XML 文本](../../../visual-basic/language-reference/xml-literals/index.md)  
  [在 Visual Basic 中创建 XML](../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)  
  [XML 值属性](../../../visual-basic/language-reference/xml-axis/xml-value-property.md)

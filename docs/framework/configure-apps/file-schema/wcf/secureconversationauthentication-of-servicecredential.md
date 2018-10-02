@@ -3,13 +3,12 @@ title: '&lt;serviceCredential&gt; 的 &lt;secureConversationAuthentication&gt;'
 ms.date: 03/30/2017
 ms.assetid: 0bd3fac7-befd-4a45-ba51-c200b33be0fd
 author: BrucePerlerMS
-manager: mbaldwin
-ms.openlocfilehash: 7b56d12793ad35e6f951638465e77b92a66a6fd0
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 3adcf7ba9814bcf494d345cf0e3f47c57df2152c
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32749327"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47206458"
 ---
 # <a name="ltsecureconversationauthenticationgt-of-ltservicecredentialgt"></a>&lt;serviceCredential&gt; 的 &lt;secureConversationAuthentication&gt;
 指定安全对话服务的设置。  

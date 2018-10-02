@@ -8,12 +8,12 @@ dev_langs:
 ms.assetid: 76ee440b-d134-4f8f-8262-b917ad6dcbf6
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d8f29b1274e6e8436aed0dfb698ede4864a15417
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ef0d47ae18b8bdd3f1d49a20937b65e9872ab551
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33569498"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44201746"
 ---
 # <a name="how-to-perform-an-xslt-transformation-by-using-an-assembly"></a>如何：通过使用程序集执行 XSLT 转换
 XSLT 编译器 (xsltc.exe) 编译 XSLT 样式表并生成一个程序集。 可以将该程序集直接传递到 <xref:System.Xml.Xsl.XslCompiledTransform.Load%28System.Type%29?displayProperty=nameWithType> 方法中。  
@@ -181,8 +181,9 @@ xslt.Load(System.Reflection.Assembly.Load("Transform").GetType("Transform"))
   
  。 有关 Assembly.Load 方法的更多信息，请参见 <xref:System.Reflection.Assembly.Load%2A>  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Xml.Xsl.XslCompiledTransform>  
- [XSLT 编译器 (xsltc.exe)](../../../../docs/standard/data/xml/xslt-compiler-xsltc-exe.md)  
- [XSLT 转换](../../../../docs/standard/data/xml/xslt-transformations.md)  
- [在命令行上使用 csc.exe 生成](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)
+## <a name="see-also"></a>请参阅
+
+- <xref:System.Xml.Xsl.XslCompiledTransform>  
+- [XSLT 编译器 (xsltc.exe)](../../../../docs/standard/data/xml/xslt-compiler-xsltc-exe.md)  
+- [XSLT 转换](../../../../docs/standard/data/xml/xslt-transformations.md)  
+- [在命令行上使用 csc.exe 生成](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)

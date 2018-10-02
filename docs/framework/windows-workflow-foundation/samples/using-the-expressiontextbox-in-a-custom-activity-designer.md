@@ -2,12 +2,12 @@
 title: 在自定义设计器中使用 ExpressionTextBox
 ms.date: 03/30/2017
 ms.assetid: f82e73e7-a256-4a4d-82b7-c0d62f4ab5e7
-ms.openlocfilehash: ad0c29e2661c82e663fd6b68fdcd74f542ef28b1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 34a2d7b2217fb5ce072ad4bc243022ec27828af1
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33516781"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47192740"
 ---
 # <a name="using-the-expressiontextbox-in-a-custom-activity-designer"></a>在自定义设计器中使用 ExpressionTextBox
 此示例演示如何在自定义活动设计器中使用 <xref:System.Activities.Presentation.View.ExpressionTextBox>。 自定义活动 `MultiAssign` 将两个字符串值分配给两个字符串变量。 某些 <xref:System.Activities.Presentation.View.ExpressionTextBox> 控件绑定到 <xref:System.Activities.InArgument>，而某些控件绑定到 <xref:System.Activities.OutArgument>。  
@@ -15,7 +15,7 @@ ms.locfileid: "33516781"
 ## <a name="sample-details"></a>示例详细信息  
  `ArgumentToExpressionConverter` 是在将表达式绑定到参数时使用的类型转换器。 根据需要，必须将 `ConverterParameter` 设置为 `In` 或 `Out`。 不支持 `InOut`。  
   
- `UseLocationExpression`上使用属性`OutArgument`s 指定表达式应是左值 （"左侧的值"或"位置值"） 表达式。 在大多数情况下，左值表达式是有效的 Visual Basic 标识符，用于指示要返回的 `OutArgument` 是变量还是参数名称。  
+ `UseLocationExpression`上使用特性`OutArgument`s，指定表达式应为左值 （"左侧的值"或"位置值"） 表达式。 在大多数情况下，左值表达式是有效的 Visual Basic 标识符，用于指示要返回的 `OutArgument` 是变量还是参数名称。  
   
  在此示例中，将 `MaxLines` 特性设置为 1，未设置 `MinLines`。 这表示无论用户键入多少文本，<xref:System.Activities.Presentation.View.ExpressionTextBox> 都是大小固定的一行。 若要允许 <xref:System.Activities.Presentation.View.ExpressionTextBox> 增大以容纳用户输入，请将 `MaxLines` 设置为大于 `MinLines`。  
   
@@ -31,7 +31,7 @@ ms.locfileid: "33516781"
   
 1.  向解决方案添加新工作流控制台应用程序。  
   
-2.  添加对的引用**ExpressionTextBoxSample**从新的工作流控制台应用程序项目的项目。  
+2.  添加对的引用**expressiontextboxsample**从新的工作流控制台应用程序项目的项目。  
   
 3.  生成解决方案。  
   
@@ -42,7 +42,7 @@ ms.locfileid: "33516781"
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目录不存在，请转到[Windows Communication Foundation (WCF) 和针对.NET Framework 4 的 Windows Workflow Foundation (WF) 示例](http://go.microsoft.com/fwlink/?LinkId=150780)下载所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
+>  如果此目录不存在，请转到[Windows Communication Foundation (WCF) 和.NET Framework 4 的 Windows Workflow Foundation (WF) 示例](https://go.microsoft.com/fwlink/?LinkId=150780)若要下载所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\CustomActivities\CustomActivityDesigners\ExpressionTextBox`  
   

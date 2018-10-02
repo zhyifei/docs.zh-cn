@@ -8,17 +8,16 @@ helpviewer_keywords:
 ms.assetid: a3db4a3f-feb5-4e5f-9b42-aae7fa816e8a
 author: Xansky
 ms.author: mhopkins
-manager: markl
-ms.openlocfilehash: fa898064a3b2930499a5d3b4a8c409f562162e34
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 88ef124176642137e363a36563a236d6c6029398
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33410249"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47203873"
 ---
 # <a name="ui-automation-support-for-the-datagrid-control-type"></a>UI 自动化对 DataGrid 控件类型的支持
 > [!NOTE]
->  本文档适用于想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空间中定义的托管 <xref:System.Windows.Automation> 类的 .NET Framework 开发人员。 有关 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]的最新信息，请参阅 [Windows 自动化 API：UI 自动化](http://go.microsoft.com/fwlink/?LinkID=156746)。  
+>  本文档适用于想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空间中定义的托管 <xref:System.Windows.Automation> 类的 .NET Framework 开发人员。 有关最新信息[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]，请参阅[Windows 自动化 API: UI 自动化](https://go.microsoft.com/fwlink/?LinkID=156746)。  
   
  本主题介绍 [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] 对 DataGrid 控件类型的支持。 在 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]中，控件类型是一组条件，控件必须满足这些条件才能使用 `ControlType` 属性。 这些条件包括针对 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 树结构、 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 属性值和控件模式的特定准则。  
   
@@ -32,13 +31,13 @@ ms.locfileid: "33410249"
   
 |[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 树 - 控件视图|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 树 - 内容视图|  
 |------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------|  
-|DataGrid<br /><br /> <ul><li>标头（0 个、1 个 或 2 个）<br /><br /> <ul><li>HeaderItem（列数或行数）</li></ul></li><li>DataItem（0 个或更多；可采用层次结构的形式构成）</li></ul>|DataGrid<br /><br /> -DataItem (0 个或更多; 可采用层次结构形式构成)|  
+|DataGrid<br /><br /> <ul><li>标头（0 个、1 个 或 2 个）<br /><br /> <ul><li>HeaderItem（列数或行数）</li></ul></li><li>DataItem（0 个或更多；可采用层次结构的形式构成）</li></ul>|DataGrid<br /><br /> -DataItem (0 或更多; 可以采用层次结构)|  
   
 <a name="Required_UI_Automation_Properties"></a>   
 ## <a name="required-ui-automation-properties"></a>必需的 UI 自动化属性  
- 下表列出了值或定义与数据网格控件密切相关的属性。 有关详细信息[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]属性，请参阅[的客户端 UI 自动化属性](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md)。  
+ 下表列出了值或定义与数据网格控件密切相关的属性。 有关详细信息[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]属性，请参阅[UI Automation Properties for Clients](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md)。  
   
-|属性|值|说明|  
+|属性|“值”|说明|  
 |--------------|-----------|-----------|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationIdProperty>|请参阅注释。|此属性的值在应用程序的所有控件中都必须保持唯一。|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty>|请参阅注释。|包含整个控件的最外层矩形。|  
@@ -97,13 +96,13 @@ ms.locfileid: "33410249"
 ## <a name="date-grid-control-type-example"></a>Date Grid 控件类型示例  
  下图阐释了实现 DataGrid 控件类型的列表视图控件。  
   
- ![具有两个数据项的列表视图控件图形](../../../docs/framework/ui-automation/media/uiauto-data-grid-detailed.GIF "uiauto_data_grid_detailed")  
+ ![具有两个数据项的列表视图控件的图形](../../../docs/framework/ui-automation/media/uiauto-data-grid-detailed.GIF "uiauto_data_grid_detailed")  
   
  下面显示了与 List View 控件有关的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 树的控件视图和内容视图。 每个自动化元素的控件模式均显示在括号中。  
   
 |[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 树 - 控件视图|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 树 - 内容视图|  
 |------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------|  
-|<ul><li>DataGrid（Table、Grid、Selection）</li><li>Header<br /><br /> <ul><li>HeaderItem“名称”(Invoke)</li><li>HeaderItem“修改日期” (Invoke)</li><li>HeaderItem“大小” (Invoke)</li></ul></li><li>组"Contoso"(TableItem、 GridItem、 SelectionItem、 表 *、 网格\*)<br /><br /> <ul><li>DataItem"Accounts Receivable.doc"(SelectionItem、 Invoke、 TableItem\*，GridItem\*)</li><li>DataItem"Accounts Payable.doc"(SelectionItem、 Invoke、 TableItem\*，GridItem\*)</li></ul></li></ul>|<ul><li>DataGrid（Table、Grid、Selection）</li><li>组"Contoso"(TableItem、 GridItem、 SelectionItem、 表 *、 网格\*)<br /><br /> <ul><li>DataItem"Accounts Receivable.doc"(SelectionItem、 Invoke、 TableItem\*，GridItem\*)</li><li>DataItem"Accounts Payable.doc"(SelectionItem、 Invoke、 TableItem\*，GridItem\*)</li></ul></li></ul>|  
+|<ul><li>DataGrid（Table、Grid、Selection）</li><li>Header<br /><br /> <ul><li>HeaderItem“名称”(Invoke)</li><li>HeaderItem“修改日期” (Invoke)</li><li>HeaderItem“大小” (Invoke)</li></ul></li><li>组"Contoso"(TableItem、 GridItem、 SelectionItem、 表 *、 网格\*)<br /><br /> <ul><li>DataItem"Accounts Receivable.doc"(SelectionItem、 调用 TableItem\*，GridItem\*)</li><li>DataItem"Accounts Payable.doc"(SelectionItem、 调用 TableItem\*，GridItem\*)</li></ul></li></ul>|<ul><li>DataGrid（Table、Grid、Selection）</li><li>组"Contoso"(TableItem、 GridItem、 SelectionItem、 表 *、 网格\*)<br /><br /> <ul><li>DataItem"Accounts Receivable.doc"(SelectionItem、 调用 TableItem\*，GridItem\*)</li><li>DataItem"Accounts Payable.doc"(SelectionItem、 调用 TableItem\*，GridItem\*)</li></ul></li></ul>|  
   
  *上面的示例显示了包含多个控件级别的 DataGrid。 Group（“Contoso”）控件包含两个 DataItem 控件（“Accounts Receivable.doc”和“Accounts Payable.doc”）。 DataGrid/GridItem 对不依赖于其他级别的对。 Group 下的 DataItem 控件还能以 ListItem 控件类型公开，使它们能够更清楚地呈现为可选择的对象，而不是简单的数据元素。 此示例不包括分组数据项的子元素。  
   

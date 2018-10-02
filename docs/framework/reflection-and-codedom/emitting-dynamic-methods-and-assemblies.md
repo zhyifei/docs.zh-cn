@@ -9,12 +9,12 @@ helpviewer_keywords:
 - assemblies [.NET Framework], emitting dynamic assemblies
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 527da43807a0dbba8f5365c92f566053f10d49f5
-ms.sourcegitcommit: c03eef711abe961a85db2b4d0715257d1524aef6
+ms.openlocfilehash: 1a0ed1d02fd40a94d4ae63deea3c09b04bfc9bd8
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33848292"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44183127"
 ---
 # <a name="emitting-dynamic-methods-and-assemblies"></a>发出动态方法和程序集
 本节介绍 <xref:System.Reflection.Emit> 命名空间中的一组托管类型，它们允许编译器或工具在运行时发出元数据和 Microsoft 中间语言 (MSIL)，并在磁盘上生成可移植可执行 (PE) 文件（可选）。 脚本引擎和编译器是此命名空间的主要使用者。 在本节中，<xref:System.Reflection.Emit> 命名空间提供的功能被称为反射发出。  
@@ -35,7 +35,7 @@ ms.locfileid: "33848292"
   
  除了 <xref:System.Reflection.Emit> 命名空间中的托管类型，还有非托管元数据接口，非托管元数据接口在[元数据接口](../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md)参考文档中介绍。 托管的反射发出提供比非托管元数据接口更强的语义错误检查和更高级别的元数据抽象。  
   
- 元数据和 MSIL 的另一个有用资源是《公共语言基础结构 (CLI)》文档，尤其是“第二部分：元数据定义和语义”和“第三部分: CIL 指令集”。 该文档可在 [MSDN](http://go.microsoft.com/fwlink/?LinkID=65555) 和 [Ecma 网站](http://go.microsoft.com/fwlink/?LinkId=116487)上联机获取。  
+ 元数据和 MSIL 的另一个有用资源是《公共语言基础结构 (CLI)》文档，尤其是“第二部分：元数据定义和语义”和“第三部分: CIL 指令集”。 该文档可在 [MSDN](https://go.microsoft.com/fwlink/?LinkID=65555) 和 [Ecma 网站](https://go.microsoft.com/fwlink/?LinkId=116487)上联机获取。  
   
 ## <a name="in-this-section"></a>本节内容
   

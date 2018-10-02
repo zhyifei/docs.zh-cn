@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: bf6d9823-4c2d-48af-b280-919c5af66ae9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 357f380a7103f186f7a66ea92a1a8b7930adead8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: cac7e0fca4a009b7f5b6f677abed70cf2519052d
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33579712"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "46711752"
 ---
 # <a name="character-encoding-in-net"></a>.NET 中的字符编码
 字符是可以许多不同的方式表示的抽象实体。 字符编码是用代表字符的某个值与受支持的字符集中的每个字符配对的系统。 例如，莫尔斯电码就是一种用点线模式与罗马字母表中的每个字符（适合通过电报线路进行传输）进行配对的字符编码。 计算机的字符编码将代表字符的数字值与受支持的字符集中的每个字符配对。 一种字符编码有两个不同组件：  
@@ -263,10 +263,11 @@ ms.locfileid: "33579712"
  [!code-csharp[Conceptual.Encoding#7](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.encoding/cs/custom1.cs#7)]
  [!code-vb[Conceptual.Encoding#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.encoding/vb/custom1.vb#7)]  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Text.Encoder>  
- <xref:System.Text.Decoder>  
- <xref:System.Text.DecoderFallback>  
- <xref:System.Text.Encoding>  
- <xref:System.Text.EncoderFallback>  
- [全球化和本地化](../../../docs/standard/globalization-localization/index.md)
+## <a name="see-also"></a>请参阅
+
+- <xref:System.Text.Encoder>  
+- <xref:System.Text.Decoder>  
+- <xref:System.Text.DecoderFallback>  
+- <xref:System.Text.Encoding>  
+- <xref:System.Text.EncoderFallback>  
+- [全球化和本地化](../../../docs/standard/globalization-localization/index.md)

@@ -9,23 +9,23 @@ helpviewer_keywords:
 - Windows Forms, dynamic layout
 - FlowLayoutPanel control [Windows Forms], about FlowLayoutPanel control
 ms.assetid: 3883e024-f5a0-456d-9c27-b4dfa1cc9045
-ms.openlocfilehash: 58d95c2238687b4822155916177172a34c3abb87
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 73767114da1c04222fb8ceaf812153421c4597aa
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33526720"
+ms.lasthandoff: 09/27/2018
+ms.locfileid: "47235947"
 ---
 # <a name="flowlayoutpanel-control-overview"></a>FlowLayoutPanel 控件概述
 <xref:System.Windows.Forms.FlowLayoutPanel> 控件沿水平或纵排方向排列其内容。 可从一行到下一行，或从一列到下一列来进行控件内容换行。 或者，可以剪切其内容，而非进行换行。  
   
  可以通过设置 <xref:System.Windows.Forms.FlowLayoutPanel.FlowDirection%2A> 属性的值来指定排列方向。 <xref:System.Windows.Forms.FlowLayoutPanel> 控件在从右到左 (RTL) 布局中正确地反转其排列方向。 也可通过设置 <xref:System.Windows.Forms.FlowLayoutPanel.WrapContents%2A> 属性的值来指定是对 <xref:System.Windows.Forms.FlowLayoutPanel> 控件的内容进行换行还是剪切。  
   
- 将 <xref:System.Windows.Forms.Control.AutoSize%2A> 属性设置为 `true` 时，<xref:System.Windows.Forms.FlowLayoutPanel> 控件自动调整根据其内容调整大小。 它还提供了**FlowBreak**于其子控件的属性。 将 FlowBreak 属性的值设置为 `true` 导致 <xref:System.Windows.Forms.FlowLayoutPanel> 控件停止按当前排列方向对控件进行布局，并换行到下一行或下一列。  
+ 将 <xref:System.Windows.Forms.Control.AutoSize%2A> 属性设置为 `true` 时，<xref:System.Windows.Forms.FlowLayoutPanel> 控件自动调整根据其内容调整大小。 它还提供了**FlowBreak**给其子控件的属性。 将 FlowBreak 属性的值设置为 `true` 导致 <xref:System.Windows.Forms.FlowLayoutPanel> 控件停止按当前排列方向对控件进行布局，并换行到下一行或下一列。  
   
  任何 Windows 窗体控件均可以是 <xref:System.Windows.Forms.FlowLayoutPanel> 控制的子控件，包括 <xref:System.Windows.Forms.FlowLayoutPanel> 的其他实例。 使用此功能，可以构造在运行时适应窗体尺寸的复杂布局。  
   
- 另请参阅[演练： 在 Windows 窗体使用 FlowLayoutPanel 上排列控件](http://msdn.microsoft.com/library/z9w7ek2f\(v=vs.110\))。  
+ 另请参阅[演练： 在 Windows 窗体使用 FlowLayoutPanel 排列控件](https://msdn.microsoft.com/library/z9w7ek2f\(v=vs.110\))。  
   
 ## <a name="see-also"></a>请参阅  
  <xref:System.Windows.Forms.FlowLayoutPanel.FlowDirection%2A>  

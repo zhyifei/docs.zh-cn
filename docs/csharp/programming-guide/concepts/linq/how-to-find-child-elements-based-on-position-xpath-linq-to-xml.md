@@ -2,12 +2,12 @@
 title: 如何：基于位置查找子元素 (XPath-LINQ to XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: e35bb269-ec86-4c96-8321-12491a0eb2c3
-ms.openlocfilehash: ffe10bd5b263e56b6f2ee1708688523a2b0dd018
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5d62418fe6d89c8dc5c7ddb4975404f1a7e0aa2d
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33317497"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43517088"
 ---
 # <a name="how-to-find-child-elements-based-on-position-xpath-linq-to-xml-c"></a>如何：基于位置查找子元素 (XPath-LINQ to XML) (C#)
 有时需要根据元素的位置查找元素。 您可能想查找第二个元素，或者查找第三到第五个元素。  
@@ -78,5 +78,6 @@ Results are identical
 </Test>  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [针对 XPath 用户的 LINQ to XML (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
+## <a name="see-also"></a>请参阅
+
+- [针对 XPath 用户的 LINQ to XML (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)

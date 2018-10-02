@@ -3,12 +3,12 @@ title: 事件介绍
 description: 本概述中介绍 .NET Core 中的事件和事件的语言设计目标。
 ms.date: 06/20/2016
 ms.assetid: 9b8d2a00-1584-4a5b-8994-5003d54d8e0c
-ms.openlocfilehash: 2a2230ea5fba1b0cd5b13319677965e7a776549e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9f14954dd2e8aeacf3c5ae70a9e891ad11a6f0d7
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33213469"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "45747090"
 ---
 # <a name="introduction-to-events"></a>事件介绍
 
@@ -65,7 +65,7 @@ Progress?.Invoke(this, new FileListArgs(file));
 ```csharp
 EventHandler<FileListArgs> onProgress = (sender, eventArgs) => 
     Console.WriteLine(eventArgs.FoundFile);
-lister.Progress += OnProgress;
+lister.Progress += onProgress;
 ```
 
 处理程序方法通常为前缀“On”，后跟事件名称，如上所示。

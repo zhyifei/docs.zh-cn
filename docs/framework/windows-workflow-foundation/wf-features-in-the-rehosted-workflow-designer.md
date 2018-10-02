@@ -2,20 +2,21 @@
 title: 重新承载的工作流设计器中新 Workflow Foundation 4.5 功能的支持
 ms.date: 03/30/2017
 ms.assetid: 1a4a4038-d8e6-41dd-99ea-93bd76286772
-ms.openlocfilehash: 9476249a657d009deba190a3db4726f50b2d7747
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f0afc9f0a6254b0df1e0c6e724ec5b3cfd1f86d0
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43800630"
 ---
 # <a name="support-for-new-workflow-foundation-45-features-in-the-rehosted-workflow-designer"></a>重新承载的工作流设计器中新 Workflow Foundation 4.5 功能的支持
-中的 Windows Workflow Foundation (WF)[!INCLUDE[net_v45](../../../includes/net-v45-md.md)]引入了许多新功能，包括对工作流设计器体验的多项增强。 本主题详细介绍重新承载的设计器中支持哪些功能以及当前不支持哪些功能。  
+中的 Windows Workflow Foundation (WF)[!INCLUDE[net_v45](../../../includes/net-v45-md.md)]引入了许多新功能，包括多个工作流设计器体验的增强功能。 本主题详细介绍重新承载的设计器中支持哪些功能以及当前不支持哪些功能。  
   
 > [!NOTE]
->  有关所有中引入的新 Windows Workflow Foundation (WF) 功能的列表[!INCLUDE[net_v45](../../../includes/net-v45-md.md)]，包括那些与设计器重新承载无关，请参阅[.NET 4.5 中的 Windows Workflow Foundation 中的新增](../../../docs/framework/windows-workflow-foundation/whats-new-in-wf-in-dotnet.md)。  
+>  有关所有中引入的新 Windows Workflow Foundation (WF) 功能的列表[!INCLUDE[net_v45](../../../includes/net-v45-md.md)]，包括那些与设计器重新承载无关，请参阅[What's New in.NET 4.5 中的 Windows Workflow Foundation](../../../docs/framework/windows-workflow-foundation/whats-new-in-wf-in-dotnet.md)。  
   
 ## <a name="activities"></a>活动  
- 内置活动库包含新活动和现有活动的新功能。 重新承载的设计器支持所有这些新活动。 有关这些新活动的详细信息，请参阅[活动](../../../docs/framework/windows-workflow-foundation/whats-new-in-wf-in-dotnet.md#BKMK_NewActivities)部分[.NET 4.5 中的 Windows Workflow Foundation 中的新增](../../../docs/framework/windows-workflow-foundation/whats-new-in-wf-in-dotnet.md)。  
+ 内置活动库包含新活动和现有活动的新功能。 重新承载的设计器支持所有这些新活动。 有关这些新活动的详细信息，请参阅[活动](../../../docs/framework/windows-workflow-foundation/whats-new-in-wf-in-dotnet.md#BKMK_NewActivities)一部分[What's New in.NET 4.5 中的 Windows Workflow Foundation](../../../docs/framework/windows-workflow-foundation/whats-new-in-wf-in-dotnet.md)。  
   
 ## <a name="c-expressions"></a>C# 表达式  
  在 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 之前，工作流中的所有表达式只能用 Visual Basic 来编写。 在 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 中，Visual Basic 表达式仅用于使用 Visual Basic 创建的项目。 Visual C# 项目现在将 C# 用于表达式。 在 [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)] 创作工作流时，可使用所提供的功能完全的 C# 表达式编辑器，其中包括语法突出显示和 Intellisense 等功能。 在使用 Visual Basic 表达式的以前版本中创建的 C# 工作流项目仍可继续使用。  
@@ -26,10 +27,10 @@ ms.lasthandoff: 05/04/2018
 ## <a name="new-designer-capabilities"></a>新设计器功能  
   
 ### <a name="designer-search"></a>设计器搜索  
- [快速查找](../../../docs/framework/windows-workflow-foundation/whats-new-in-wf-in-dotnet.md#BKMK_QuickFind)和[在文件中查找](../../../docs/framework/windows-workflow-foundation/whats-new-in-wf-in-dotnet.md#BKMK_FindInFiles)功能引入了[!INCLUDE[net_v45](../../../includes/net-v45-md.md)]不支持在重新承载设计器中。 重新承载的设计器不支持 `Toolbox` 搜索。 有关这些功能的详细信息，请参阅[设计器搜索](../../../docs/framework/windows-workflow-foundation/whats-new-in-wf-in-dotnet.md#BKMK_DesignerSearch)。  
+ [快速查找](../../../docs/framework/windows-workflow-foundation/whats-new-in-wf-in-dotnet.md#BKMK_QuickFind)并[在文件中查找](../../../docs/framework/windows-workflow-foundation/whats-new-in-wf-in-dotnet.md#BKMK_FindInFiles)功能引入[!INCLUDE[net_v45](../../../includes/net-v45-md.md)]重新承载的设计器不支持。 重新承载的设计器不支持 `Toolbox` 搜索。 有关这些功能的详细信息，请参阅[设计器搜索](../../../docs/framework/windows-workflow-foundation/whats-new-in-wf-in-dotnet.md#BKMK_DesignerSearch)。  
   
 > [!WARNING]
->  [快速查找](../../../docs/framework/windows-workflow-foundation/whats-new-in-wf-in-dotnet.md#BKMK_QuickFind)和[在文件中查找](../../../docs/framework/windows-workflow-foundation/whats-new-in-wf-in-dotnet.md#BKMK_FindInFiles)不支持在重新承载设计器中。  
+>  [快速查找](../../../docs/framework/windows-workflow-foundation/whats-new-in-wf-in-dotnet.md#BKMK_QuickFind)并[在文件中查找](../../../docs/framework/windows-workflow-foundation/whats-new-in-wf-in-dotnet.md#BKMK_FindInFiles)重新承载的设计器不支持。  
   
 ### <a name="delete-context-menu-item-in-variable-and-argument-designer"></a>删除变量和自变量设计器中的上下文菜单项  
  在 [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] 中，只能使用键盘来删除设计器中的变量和参数。 从 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 开始，可以使用上下文菜单来删除变量和参数。 重新承载的编辑器支持此功能。  
@@ -43,7 +44,7 @@ ms.lasthandoff: 05/04/2018
   
  以下屏幕快照显示了 `WriteLine` 的 `Body` 中的 `NoPersistScope` 活动。  
   
- ![自动&#45;包围放置位置](../../../docs/framework/windows-workflow-foundation/media/autosurround1.png "AutoSurround1")  
+ ![自动&#45;括起来的放置位置](../../../docs/framework/windows-workflow-foundation/media/autosurround1.png "AutoSurround1")  
   
  以下屏幕快照显示了在第一个 `Sequence` 下面丢弃第二个时在 `Body` 中自动创建的 `WriteLine` 活动。  
   
@@ -64,9 +65,9 @@ ms.lasthandoff: 05/04/2018
  也可以在设计器中拖动并放置多个选择的活动，并使用上下文菜单与这些活动交互。  
   
 ### <a name="outline-view-of-workflow-items"></a>工作流项的大纲视图  
- 为了更加方便地浏览分层工作流，工作流的组件显示在树样式的大纲视图中。 大纲视图将显示在**文档大纲**视图。 若要在 Visual Studio 中，打开此视图，从顶部菜单中，选择**视图**，**其他窗口**，**文档大纲**，或按 Ctrl W、 u。 单击大纲视图中的节点将会定位到工作流设计器中的相应活动，并且该大纲视图将会更新以显示在设计器中选择的活动。 重新承载的编辑器支持此功能。  
+ 为了更加方便地浏览分层工作流，工作流的组件显示在树样式的大纲视图中。 大纲视图将显示在**文档大纲**视图。 若要打开此视图在 Visual Studio 中，从顶部菜单中，选择**视图**，**其他 Windows**，**文档大纲**，或按 Ctrl W、 u。 单击大纲视图中的节点将会定位到工作流设计器中的相应活动，并且该大纲视图将会更新以显示在设计器中选择的活动。 重新承载的编辑器支持此功能。  
   
- 从完成的工作流的以下屏幕截图[入门教程](../../../docs/framework/windows-workflow-foundation/getting-started-tutorial.md)显示大纲视图中的，一个顺序工作流。  
+ 以下屏幕截图中的已完成工作流[入门教程](../../../docs/framework/windows-workflow-foundation/getting-started-tutorial.md)显示大纲视图中的，顺序工作流。  
   
  ![大纲视图中工作流设计器](../../../docs/framework/windows-workflow-foundation/media/outlineviewinworkflowdesigner.jpg "OutlineViewinWorkflowDesigner")  
   
@@ -82,7 +83,7 @@ ms.lasthandoff: 05/04/2018
   
  也可以将活动拖动到流程图节点和状态之间的连接上，以在两个其他节点之间自动插入该节点。 以下屏幕快照显示了突出显示的连接线，可在此连接线处从工具箱拖动并放置活动。  
   
- ![自动&#45;插入放置活动的句柄](../../../docs/framework/windows-workflow-foundation/media/autoinsert.png "自动插入")  
+ ![自动&#45;放置活动的句柄插入](../../../docs/framework/windows-workflow-foundation/media/autoinsert.png "自动插入")  
   
  重新承载的设计器支持自动连接和自动插入。  
   
@@ -110,7 +111,7 @@ ms.lasthandoff: 05/04/2018
  重新承载的设计器支持设计时后台验证。  
   
 ### <a name="view-state-located-in-a-separate-location-in-xaml-files"></a>位于 XAML 文件中的单独位置处的视图状态  
- 在 [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] 中，工作流的视图状态信息存储在 XAML 文件中的许多不同位置。 这对于想直接读取 XAML 或编写用于删除视图状态信息的代码的开发人员来说很不方便。 在[!INCLUDE[net_v45](../../../includes/net-v45-md.md)]，XAML 文件中的视图状态信息序列化为 XAML 文件中的一个单独的元素。  开发人员可以轻松地找到和编辑视图状态信息的一项活动，或完全删除的视图状态。  
+ 在 [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] 中，工作流的视图状态信息存储在 XAML 文件中的许多不同位置。 这对于想直接读取 XAML 或编写用于删除视图状态信息的代码的开发人员来说很不方便。 在[!INCLUDE[net_v45](../../../includes/net-v45-md.md)]，XAML 文件中的视图状态信息序列化为 XAML 文件中的单独元素。  开发人员可以轻松地查找和编辑活动，该活动的视图状态信息或完全删除的视图状态。  
   
  重新承载的工作流编辑器支持此功能。  
   
@@ -121,7 +122,7 @@ ms.lasthandoff: 05/04/2018
  除流程图和顺序工作流开发模型外，此版本还包括状态机工作流和协定优先工作流服务。  
   
 ### <a name="state-machine-workflows"></a>状态机工作流  
- 状态机工作流中的.NET Framework 4.0.1 的一部分引入[Microsoft.NET Framework 4 平台更新 1](http://go.microsoft.com/fwlink/?LinkID=215092)。 此更新包括多个新类和活动，允许开发人员创建状态机工作流。 这些类和活动已针对 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 进行更新。 更新包括：  
+ 状态机工作流中的.NET Framework 4.0.1 的一部分引入了[Microsoft.NET Framework 4 平台更新 1](https://go.microsoft.com/fwlink/?LinkID=215092)。 此更新包括多个新类和活动，允许开发人员创建状态机工作流。 这些类和活动已针对 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 进行更新。 更新包括：  
   
 1.  能够对状态设置断点  
   
@@ -133,12 +134,12 @@ ms.lasthandoff: 05/04/2018
   
  以下屏幕截图显示完成的状态机工作流从[入门教程](../../../docs/framework/windows-workflow-foundation/getting-started-tutorial.md)步骤[如何： 创建状态机工作流](../../../docs/framework/windows-workflow-foundation/how-to-create-a-state-machine-workflow.md)。  
   
- ![已完成状态机工作流](../../../docs/framework/windows-workflow-foundation/media/wfstatemachinegettingstartedtutorialcomplete.JPG "WFStateMachineGettingStartedTutorialComplete")  
+ ![完整的状态机工作流](../../../docs/framework/windows-workflow-foundation/media/wfstatemachinegettingstartedtutorialcomplete.JPG "WFStateMachineGettingStartedTutorialComplete")  
   
  有关创建状态机工作流的详细信息，请参阅[状态机工作流](../../../docs/framework/windows-workflow-foundation/state-machine-workflows.md)。 重新承载的工作流编辑器状态机工作流。  
   
 ### <a name="contract-first-workflow-development"></a>协定优先工作流开发  
- 协定优先工作流开发工具允许开发人员可以先，设计一个协定在代码中的，然后在 Visual Studio 中单击几下，自动生成活动模板在工具箱中表示每个操作。 这些活动随后用于创建实现由该协定定义的操作的工作流。 工作流设计器将对该工作流服务进行验证，以确保实现这些操作并且工作流的签名与协定签名匹配。 开发人员还可以将工作流服务与所实现的协定的集合进行关联。 协定优先工作流服务开发的详细信息，请参阅[如何： 创建使用现有服务协定的工作流服务](../../../docs/framework/windows-workflow-foundation/how-to-create-a-workflow-service-that-consumes-an-existing-service-contract.md)。  
+ 协定优先工作流开发工具，开发人员可设计为先，在代码中的协定，然后在 Visual Studio 中单击几下，自动生成的活动模板在工具箱中表示每个操作。 这些活动随后用于创建实现由该协定定义的操作的工作流。 工作流设计器将对该工作流服务进行验证，以确保实现这些操作并且工作流的签名与协定签名匹配。 开发人员还可以将工作流服务与所实现的协定的集合进行关联。 协定优先工作流服务开发的详细信息，请参阅[如何： 创建使用现有服务协定的工作流服务](../../../docs/framework/windows-workflow-foundation/how-to-create-a-workflow-service-that-consumes-an-existing-service-contract.md)。  
   
 > [!WARNING]
 >  工作流设计器不支持协定优先工作流开发。

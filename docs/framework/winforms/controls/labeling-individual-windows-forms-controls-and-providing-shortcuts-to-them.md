@@ -7,12 +7,12 @@ helpviewer_keywords:
 - keyboard shortcuts [Windows Forms], controls
 - Windows Forms controls, labels
 ms.assetid: 6eaf868c-819f-4131-8f59-048e20c286f7
-ms.openlocfilehash: 0b75a4f59cdba4ff732a92996086b77bc65cf46c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a5504095814cdfc04699bf24b9b96191e94b22c3
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33535510"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43520999"
 ---
 # <a name="labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them"></a>标记单个 Windows 窗体控件并提供它们的快捷方式
 添加到 Windows 窗体的控件具有用于进一步专用化用户体验的属性和方法。 对于设计良好的 Windows 应用程序而言，自定义用户界面以满足用户需求至关重要。  
@@ -34,4 +34,4 @@ ms.locfileid: "33535510"
  [Windows 窗体控件](../../../../docs/framework/winforms/controls/index.md)  
  链接到可用控件执行的其他基本操作。  
   
- 另请参阅[如何： 创建访问键的 Windows 窗体控件使用设计器](http://msdn.microsoft.com/library/ms233673\(v=vs.110\))，[如何： 设置 Windows 窗体控件使用文本显示设计器](http://msdn.microsoft.com/library/ms233665\(v=vs.110\))，[如何： 设置图像通过显示 Windows 窗体控件使用设计器](http://msdn.microsoft.com/library/ms233656\(v=vs.110\))。
+ 另请参阅[如何： 创建访问密钥的 Windows 窗体控件使用设计器](how-to-create-access-keys-for-windows-forms-controls-using-the-designer.md)，[如何： 通过使用 Windows 窗体控件显示的文本将设计器设置](how-to-set-the-text-displayed-by-a-windows-forms-control-using-the-designer.md)，[如何： 设置的图像显示 Windows 窗体控件使用设计器](how-to-set-the-image-displayed-by-a-windows-forms-control-using-the-designer.md)。

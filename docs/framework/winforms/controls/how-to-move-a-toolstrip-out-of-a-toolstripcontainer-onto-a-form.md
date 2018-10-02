@@ -5,30 +5,30 @@ helpviewer_keywords:
 - ToolStrip control [Windows Forms], parenting to forms
 - Windows Forms, parenting ToolStrip controls
 ms.assetid: a1c94a7f-6fc5-4e4c-84cf-ff11dc573d33
-ms.openlocfilehash: 6cc54264033eca541ce845b75d608087fee8a542
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a4b6e3bbc0750ba69607b5c0f96bdbb542aea1be
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33532311"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43529393"
 ---
 # <a name="how-to-move-a-toolstrip-out-of-a-toolstripcontainer-onto-a-form"></a>如何：将 ToolStrip 从 ToolStripContainer 移到窗体上
-使用以下过程移动<xref:System.Windows.Forms.ToolStrip>外<xref:System.Windows.Forms.ToolStripContainer>拖到窗体。  
+使用以下过程将移<xref:System.Windows.Forms.ToolStrip>共<xref:System.Windows.Forms.ToolStripContainer>拖到窗体。  
   
 > [!NOTE]
->  显示的对话框和菜单命令可能会与“帮助”中的描述不同，具体取决于你现用的设置或版本。 若要更改设置，请在 **“工具”** 菜单上选择 **“导入和导出设置”** 。 有关详细信息，请参阅[在 Visual Studio 中自定义开发设置](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3)。  
+>  显示的对话框和菜单命令可能会与“帮助”中的描述不同，具体取决于你现用的设置或版本。 若要更改设置，请在 **“工具”** 菜单上选择 **“导入和导出设置”** 。 有关详细信息，请参阅[个性化设置 Visual Studio IDE](/visualstudio/ide/personalizing-the-visual-studio-ide)。  
   
-### <a name="to-move-a-toolstrip-out-of-a-toolstripcontainer-onto-a-form"></a>若要移动的 ToolStrip 从 toolstripcontainer 移到窗体外  
+### <a name="to-move-a-toolstrip-out-of-a-toolstripcontainer-onto-a-form"></a>若要将移动到窗体从 toolstripcontainer 移出 ToolStrip  
   
 1.  选择 <xref:System.Windows.Forms.ToolStrip>。  
   
-2.  剪切<xref:System.Windows.Forms.ToolStrip>通过按 CTRL + X，或右键单击<xref:System.Windows.Forms.ToolStrip>选择**剪切**从上下文菜单。  
+2.  剪切<xref:System.Windows.Forms.ToolStrip>通过按 CTRL + X，或右键单击<xref:System.Windows.Forms.ToolStrip>，然后选择**剪切**从上下文菜单。  
   
 3.  选择窗体。  
   
 4.  粘贴<xref:System.Windows.Forms.ToolStrip>通过按 CTRL + V，或选择**粘贴**从**编辑**菜单。  
   
-5.  设置<xref:System.Windows.Forms.ToolStrip.Dock%2A>属性<xref:System.Windows.Forms.ToolStrip>到**顶部**。  
+5.  设置<xref:System.Windows.Forms.ToolStrip.Dock%2A>的属性<xref:System.Windows.Forms.ToolStrip>到**顶部**。  
   
 ## <a name="see-also"></a>请参阅  
  <xref:System.Windows.Forms.ToolStrip>  

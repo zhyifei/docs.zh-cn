@@ -2,12 +2,12 @@
 title: 数据类型和函数
 ms.date: 03/30/2017
 ms.assetid: 683413c5-0312-4e60-8619-9a97bdc6e62a
-ms.openlocfilehash: a7205d7fbdeb2b6cffcf49fb30e2ff2a25137403
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 34f8f0a59f1a962eaa6a747e124f47d1570ca455
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33362180"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43520734"
 ---
 # <a name="data-types-and-functions"></a>数据类型和函数
 下表列出的主题介绍了对公共语言运行库 (CLR) 的成员、构造和强制转换的 LINQ to SQL 支持。 受支持的成员和构造可以在 LINQ to SQL 查询中使用。  
@@ -34,4 +34,4 @@ ms.locfileid: "33362180"
 ## <a name="see-also"></a>请参阅  
  [SQL-CLR 类型不匹配](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mismatches.md)  
  [参考](../../../../../../docs/framework/data/adonet/sql/linq/reference.md)  
- [Visual Studio 中的.NET framework 类库](http://msdn.microsoft.com/library/a03e374c-3d5c-4169-937b-49857ab273ae)
+ [在 Visual Studio 中的.NET framework 类库](https://msdn.microsoft.com/library/a03e374c-3d5c-4169-937b-49857ab273ae)

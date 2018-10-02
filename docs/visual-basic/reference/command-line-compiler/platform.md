@@ -1,5 +1,5 @@
 ---
-title: -平台 (Visual Basic)
+title: 平台 (Visual Basic)
 ms.date: 03/13/2018
 helpviewer_keywords:
 - platform compiler option [Visual Basic]
@@ -9,13 +9,13 @@ ms.assetid: f9bc61e6-e854-4ae1-87b9-d6244de23fd1
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: ec3a7e01e62b60688080fee95cf70e0ed38917f2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33656173"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43552187"
 ---
-# <a name="-platform-visual-basic"></a>-平台 (Visual Basic)
+# <a name="-platform-visual-basic"></a>平台 (Visual Basic)
 指定公共语言运行时 (CLR) 的哪个平台版本可以运行输出文件。  
   
 ## <a name="syntax"></a>语法  
@@ -50,7 +50,7 @@ ms.locfileid: "33656173"
   
 -   将平台调用或 COM 互操作与不存在于任何平台的组件一起使用。  
   
- **-平台**选项将减少一些问题，如果你知道你的代码将在运行的体系结构进行的假设。 尤其是在下列情况下：  
+ **-平台**选项将会减少一些问题，如果您知道您的代码将在运行的体系结构做出判定。 尤其是在下列情况下：  
   
 -   如果你针对 64 位平台且应用程序在 32 位计算机上运行，则相对于不使用此开关而出现的错误，此错误消息更早出现且更加针对问题。  
   
@@ -66,15 +66,15 @@ ms.locfileid: "33656173"
   
 -   用 `-platform:anycpu32bitpreferred` 编译的可执行文件将在 32 位 CLR 上执行。  
   
- 了解如何开发 64 位版本的 Windows 上运行的应用程序的详细信息，请参阅[64 位应用程序](../../../framework/64-bit-apps.md)。  
+ 有关如何开发 Windows 64 位版本上运行的应用程序的详细信息，请参阅[64 位应用程序](../../../framework/64-bit-apps.md)。  
   
 ### <a name="to-set--platform-in-the-visual-studio-ide"></a>若要设置的 Visual Studio IDE 中的平台  
   
-1.  在**解决方案资源管理器**，选择项目，打开**项目**菜单，，然后单击**属性**。  
+1.  在中**解决方案资源管理器**，选择项目，打开**项目**菜单，并单击**属性**。  
   
 2.  上**编译**选项卡上，选中或清除**首选 32 位**复选框，或者，在**目标 CPU**列表中，选择一个值。  
   
-     有关详细信息，请参阅[编译页，项目设计器 (Visual Basic 中)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic)。  
+     有关详细信息，请参阅[编译页，项目设计器 (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic)。  
   
 ## <a name="example"></a>示例  
  下例阐释使用 `-platform` 编译器选项的方式。  

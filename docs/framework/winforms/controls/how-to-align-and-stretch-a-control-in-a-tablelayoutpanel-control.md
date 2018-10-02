@@ -8,36 +8,36 @@ helpviewer_keywords:
 - controls [Windows Forms], stretching
 - controls [Windows Forms], aligning
 ms.assetid: 7dc1a157-6fee-4995-8ebc-b65bdc0909a8
-ms.openlocfilehash: 5abe233a240e74e41d4defad060383aec155ea71
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 06e152058337955164bd526e20e023d759340f01
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33529271"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43504148"
 ---
 # <a name="how-to-align-and-stretch-a-control-in-a-tablelayoutpanel-control"></a>如何：在 TableLayoutPanel 控件中对齐和拉伸控件
 您可以对齐和拉伸控件中的<xref:System.Windows.Forms.TableLayoutPanel>与<xref:System.Windows.Forms.Control.Anchor%2A>和<xref:System.Windows.Forms.Control.Dock%2A>属性。  
   
 > [!NOTE]
->  显示的对话框和菜单命令可能会与“帮助”中的描述不同，具体取决于你现用的设置或版本。 若要更改设置，请在 **“工具”** 菜单上选择 **“导入和导出设置”** 。 有关详细信息，请参阅[在 Visual Studio 中自定义开发设置](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3)。  
+>  显示的对话框和菜单命令可能会与“帮助”中的描述不同，具体取决于你现用的设置或版本。 若要更改设置，请在 **“工具”** 菜单上选择 **“导入和导出设置”** 。 有关详细信息，请参阅[个性化设置 Visual Studio IDE](/visualstudio/ide/personalizing-the-visual-studio-ide)。  
   
 ### <a name="to-align-and-stretch-a-control"></a>若要对齐和拉伸控件  
   
 1.  拖动<xref:System.Windows.Forms.TableLayoutPanel>控件从**工具箱**拖动到窗体。  
   
-2.  拖动<xref:System.Windows.Forms.Button>控件从**工具箱**到的左上角单元格中<xref:System.Windows.Forms.TableLayoutPanel>控件。 <xref:System.Windows.Forms.Button>控件居中的单元格中。  
+2.  拖动<xref:System.Windows.Forms.Button>控件从**工具箱**到的左上角单元格<xref:System.Windows.Forms.TableLayoutPanel>控件。 <xref:System.Windows.Forms.Button>控件居中单元格中。  
   
-3.  设置的值<xref:System.Windows.Forms.Button>控件的<xref:System.Windows.Forms.Control.Anchor%2A>属性`Left,Right`。 <xref:System.Windows.Forms.Button>控件将拉伸到匹配的单元格的宽度。  
+3.  设置的值<xref:System.Windows.Forms.Button>控件的<xref:System.Windows.Forms.Control.Anchor%2A>属性设置为`Left,Right`。 <xref:System.Windows.Forms.Button>控件将拉伸到匹配的单元格的宽度。  
   
-4.  设置的值<xref:System.Windows.Forms.Button>控件的<xref:System.Windows.Forms.Control.Anchor%2A>属性`Top,Bottom`。 <xref:System.Windows.Forms.Button>控件将拉伸到匹配的单元格的高度。  
+4.  设置的值<xref:System.Windows.Forms.Button>控件的<xref:System.Windows.Forms.Control.Anchor%2A>属性设置为`Top,Bottom`。 <xref:System.Windows.Forms.Button>控件将拉伸到匹配的单元格的高度。  
   
-5.  设置的值<xref:System.Windows.Forms.Button>控件的<xref:System.Windows.Forms.Control.Dock%2A>属性<xref:System.Windows.Forms.DockStyle.Fill>。 <xref:System.Windows.Forms.Button>控件扩展以填充单元格。  
+5.  设置的值<xref:System.Windows.Forms.Button>控件的<xref:System.Windows.Forms.Control.Dock%2A>属性设置为<xref:System.Windows.Forms.DockStyle.Fill>。 <xref:System.Windows.Forms.Button>控件扩展以填充单元格。  
   
-6.  设置的值<xref:System.Windows.Forms.Button>控件的<xref:System.Windows.Forms.Control.Dock%2A>属性<xref:System.Windows.Forms.DockStyle.None>。 <xref:System.Windows.Forms.Button>控件返回到其原始大小，并将移动到单元格的左上角。 **Windows 窗体设计器**已设置<xref:System.Windows.Forms.Control.Anchor%2A>属性`Top, Left`。  
+6.  设置的值<xref:System.Windows.Forms.Button>控件的<xref:System.Windows.Forms.Control.Dock%2A>属性设置为<xref:System.Windows.Forms.DockStyle.None>。 <xref:System.Windows.Forms.Button>控件返回到其原始大小，并将移动到单元格的左上角。 **Windows 窗体设计器**已设置<xref:System.Windows.Forms.Control.Anchor%2A>属性设置为`Top, Left`。  
   
-7.  设置的值<xref:System.Windows.Forms.Button>控件的<xref:System.Windows.Forms.Control.Anchor%2A>属性`Bottom,Right`。 <xref:System.Windows.Forms.Button>控件移动到单元格右下角。  
+7.  设置的值<xref:System.Windows.Forms.Button>控件的<xref:System.Windows.Forms.Control.Anchor%2A>属性设置为`Bottom,Right`。 <xref:System.Windows.Forms.Button>控件移动到右下角的单元格。  
   
-8.  设置的值<xref:System.Windows.Forms.Button>控件的<xref:System.Windows.Forms.Control.Anchor%2A>属性<xref:System.Windows.Forms.AnchorStyles.None>。 <xref:System.Windows.Forms.Button>控件将移动到单元格的中心。  
+8.  设置的值<xref:System.Windows.Forms.Button>控件的<xref:System.Windows.Forms.Control.Anchor%2A>属性设置为<xref:System.Windows.Forms.AnchorStyles.None>。 <xref:System.Windows.Forms.Button>控件移动到单元格的中心。  
   
 ## <a name="see-also"></a>请参阅  
  [TableLayoutPanel 控件](../../../../docs/framework/winforms/controls/tablelayoutpanel-control-windows-forms.md)

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - local functions [C#]
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 208ac3d4a7b803dd081edfd9f5227a779f7cf211
-ms.sourcegitcommit: fc70fcb9c789b6a4aefcdace46f3643fd076450f
+ms.openlocfilehash: 42b980bcbb47ed98b9cb8d7234044ae2c92c3124
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/06/2018
-ms.locfileid: "34805615"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43529484"
 ---
 # <a name="local-functions-c-programming-guide"></a>本地函数（C# 编程指南）
 
@@ -79,4 +79,5 @@ ms.locfileid: "34805615"
 [!code-csharp[LocalFunctionAsync`](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/local-functions-async2.cs)] 
 
 ## <a name="see-also"></a>请参阅
-[方法](methods.md)
+
+- [方法](methods.md)

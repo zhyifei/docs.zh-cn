@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: e7b868b1-11fe-4ac5-bed3-de68aca47739
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1ea40542b235dd51bfec38aae9718b2278d7073b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9831212cf65e3913bae2431e4746b5def03430b6
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33572640"
+ms.lasthandoff: 09/28/2018
+ms.locfileid: "47210092"
 ---
 # <a name="when-to-use-generic-collections"></a>何时使用泛型集合
 通常建议使用泛型集合，因为这样你可以获得类型安全的直接优点而无需从基集合类型派生和实现特定类型的成员。 当集合元素为值类型时，泛型集合类型也通常优于对应的非泛型集合类型（比从非泛型基集合类型派生的类型好），因为使用泛型时不必对元素进行装箱。  
@@ -53,7 +53,8 @@ ms.locfileid: "33572640"
   
  <xref:System.Collections.Generic.List%601> 类使你可以指定你自己的用于排序和搜索列表的 <xref:System.Collections.Generic.IComparer%601> 泛型接口实现。 <xref:System.Collections.Generic.SortedDictionary%602> 和 <xref:System.Collections.Generic.SortedList%602> 类也有这个功能。 另外，这些类使你可以在创建集合时指定比较器。 同样地，<xref:System.Collections.Generic.Dictionary%602> 和 <xref:System.Collections.ObjectModel.KeyedCollection%602> 类让你指定自己的相等比较器。  
   
-## <a name="see-also"></a>请参阅  
- [集合和数据结构](../../../docs/standard/collections/index.md)  
- [常用的集合类型](../../../docs/standard/collections/commonly-used-collection-types.md)  
- [泛型](../../../docs/standard/generics/index.md)
+## <a name="see-also"></a>请参阅
+
+- [集合和数据结构](../../../docs/standard/collections/index.md)  
+- [常用的集合类型](../../../docs/standard/collections/commonly-used-collection-types.md)  
+- [泛型](../../../docs/standard/generics/index.md)

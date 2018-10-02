@@ -2,12 +2,12 @@
 title: 从 XML 树中删除元素、属性和节点 (C#)
 ms.date: 07/20/2015
 ms.assetid: 07dd06d6-1117-4077-bf98-9120cf51176e
-ms.openlocfilehash: 85c1adc06321abf90fe478abf5375882069f11ec
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9ce63ce6a4ef75dedc788efca11e8dd2bdb471eb
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33339964"
+ms.lasthandoff: 09/23/2018
+ms.locfileid: "46584104"
 ---
 # <a name="removing-elements-attributes-and-nodes-from-an-xml-tree-c"></a>从 XML 树中删除元素、属性和节点 (C#)
 可以修改 XML 树，移除元素、属性和其他类型的节点。  
@@ -78,5 +78,6 @@ Console.WriteLine(root);
   
  请注意，第一个孙元素已从 `Child1` 中移除。 所有孙元素都已从 `Child2` 和 `Child3` 中移除。  
   
-## <a name="see-also"></a>请参阅  
- [修改 XML 树 (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/modifying-xml-trees-linq-to-xml.md)
+## <a name="see-also"></a>请参阅
+
+- [修改 XML 树 (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/modifying-xml-trees-linq-to-xml.md)

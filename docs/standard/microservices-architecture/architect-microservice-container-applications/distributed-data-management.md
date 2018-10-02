@@ -4,12 +4,12 @@ description: 用于容器化 .NET 应用程序的 .NET 微服务体系结构 | �
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.openlocfilehash: 1d079dc7eef2f4abfbdec5a01b4233c8504d449d
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.openlocfilehash: 7574a28fc3e8eb3288a81fa5a7ad26f34f1a3eb9
+ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37106484"
+ms.lasthandoff: 09/21/2018
+ms.locfileid: "46562343"
 ---
 # <a name="challenges-and-solutions-for-distributed-data-management"></a>分布式数据管理的挑战和解决方案
 
@@ -19,7 +19,7 @@ ms.locfileid: "37106484"
 
 首先，需要着重关注应用程序的逻辑域模型和相关数据。 必须尝试识别同一应用程序中数据和不同上下文的分离岛。 每个上下文可能具有不同的业务语言（不同的业务术语）。 应独立定义和管理上下文。 不同上下文中所用的术语和实体可能听起来很相似，但你可能会发现在特定上下文中，某个业务概念可在另一个上下文中用于不同目的，甚至名称也不同。 例如，用户在身份或成员身份上下文中称为用户，在 CRM 上下文中称为客户，在订购上下文中称为购买者等等。
 
-多个应用程序上下文（各上下文具有不同域）之间的边界识别方法，也可用于识别各业务微服务及其相关域模型和数据的边界。 始终尝试最大程度减少这些微服务之间的耦合度。 本指南稍后将在[识别每个微服务的域模型边界](#identifying-domain-model-boundaries-for-each-microservice)部分详细介绍此识别方法和域模型设计。
+多个应用程序上下文（各上下文具有不同域）之间的边界识别方法，也可用于识别各业务微服务及其相关域模型和数据的边界。 始终尝试最大程度减少这些微服务之间的耦合度。 本指南稍后将在[识别每个微服务的域模型边界](identify-microservice-domain-model-boundaries.md)部分详细介绍此识别方法和域模型设计。
 
 ## <a name="challenge-2-how-to-create-queries-that-retrieve-data-from-several-microservices"></a>挑战 \#2：如何创建从多个微服务中检索数据的查询
 
@@ -43,7 +43,7 @@ ms.locfileid: "37106484"
 
 如前所述，每个微服务拥有的数据是该微服务专有的，并且只能通过其本身的微服务 API 访问。 因此，面临的挑战是如何在保持多个微服务的一致性的同时实现端到端的业务进程。
 
-要分析此问题，请先查看来自 [eShopOnContainers 引用应用程序](http://aka.ms/eshoponcontainers)的一个示例。 目录微服务保存所有产品的相关信息，包括它们的库存水平。 订购微服务管理订单，并且必须验证新订单是否超过可用目录产品库存。 （或该方案是否可能涉及处理缺货产品的逻辑。）在该应用程序的假设单片版本中，订购子系统可简单地使用 ACID 事务来检查可用库存、在订单表中创建订单以及更新产品表中的可用库存。
+要分析此问题，请先查看来自 [eShopOnContainers 引用应用程序](https://aka.ms/eshoponcontainers)的一个示例。 目录微服务保存所有产品的相关信息，包括它们的库存水平。 订购微服务管理订单，并且必须验证新订单是否超过可用目录产品库存。 （或该方案是否可能涉及处理缺货产品的逻辑。）在该应用程序的假设单片版本中，订购子系统可简单地使用 ACID 事务来检查可用库存、在订单表中创建订单以及更新产品表中的可用库存。
 
 但是，在基于微服务的应用程序中，订单和产品表属于其各自的微服务。 如图 4-9 所示，微服务不应包含其他微服务在其事务或查询中所拥有的数据库。
 
@@ -51,13 +51,13 @@ ms.locfileid: "37106484"
 
 **图 4-9**. 微服务不能直接访问其他微服务中的表
 
-订购微服务不应直接更新产品表，因为产品表属于目录微服务。 要更新目录微服务，订购微服务应只使用异步通信，如集成事件（消息和基于事件的通信）。 这是 [eShopOnContainers](http://aka.ms/eshoponcontainers) 引用应用程序执行此更新类型的方式。
+订购微服务不应直接更新产品表，因为产品表属于目录微服务。 要更新目录微服务，订购微服务应只使用异步通信，如集成事件（消息和基于事件的通信）。 这是 [eShopOnContainers](https://aka.ms/eshoponcontainers) 引用应用程序执行此更新类型的方式。
 
 如 [CAP 定理](https://en.wikipedia.org/wiki/CAP_theorem)所阐述的，需要选择可用性或 ACID 非常一致性。 大多数基于微服务的方案都需要可用性和高可伸缩性，而不是非常一致性。 任务关键应用程序必须保持最新并且处于运行状态，开发人员可通过用于处理弱或最终一致性的技术来实现非常一致性。 这是大多数基于微服务的体系结构采用的方法。
 
 此外，ACID 式或两阶段提交事务不仅针对微服务原则；大多数 NoSQL 数据库（如 Azure Cosmos DB、MongoDB 等）不支持两阶段提交事务。 但是，维护服务和数据库的数据一致性至关重要。 此挑战还涉及，当某些数据需要冗余时（例如，需要在目录微服务和购物篮微服务中使用产品名称或说明时），如何在多个微服务之间传播更改。
 
-针对此问题的一个良好解决方案是，在通过事件驱动通信和发布订阅系统形成的微服务之间使用最终一致性。 本指南后面的[异步事件驱动通信](#async_event_driven_communication)部分将介绍这些主题。
+针对此问题的一个良好解决方案是，在通过事件驱动通信和发布订阅系统形成的微服务之间使用最终一致性。 本指南后面的[异步事件驱动通信](asynchronous-message-based-communication.md#asynchronous-event-driven-communication)部分将介绍这些主题。
 
 ## <a name="challenge-4-how-to-design-communication-across-microservice-boundaries"></a>挑战 \#4：如何设计跨微服务边界的通信
 
@@ -79,7 +79,7 @@ ms.locfileid: "37106484"
 
 因此，为强化微服务自治并且提升复原能力，应尽可能少地使用跨微服务的请求/响应通信链。 建议只使用异步交互进行微服务之间的通信，方法是使用基于消息和事件的异步通信，或使用独立于原始 HTTP 请求/响应周期的 HTTP 轮询。
 
-异步通信的使用将在本指南的[异步微服务集成强化了微服务的自治性](#asynchronous-microservice-integration-enforce-microservices-autonomy)和[基于消息的异步通信](#asynchronous-message-based-communication)部分详细介绍。
+异步通信的使用将在本指南的[异步微服务集成强化了微服务的自治性](communication-in-microservice-architecture.md#asynchronous-microservice-integration-enforces-microservices-autonomy)和[基于消息的异步通信](asynchronous-message-based-communication.md)部分详细介绍。
 
 ## <a name="additional-resources"></a>其他资源
 

@@ -3,12 +3,12 @@ title: 隐式类型化 lambda 表达式
 description: 了解为什么不能使用隐式类型化变量声明来声明 lambda 表达式。
 ms.date: 06/20/2016
 ms.assetid: a3851da9-e018-4389-9922-233db7d0f841
-ms.openlocfilehash: f06c55f51c30c941d6d507ac8e2edd95c5152742
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0a6b52ba49ea39c0cb37e72b0ad40e18986c9be0
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33211818"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43517662"
 ---
 # <a name="implicitly-typed-lambda-expressions"></a>隐式类型化 lambda 表达式
 
@@ -17,6 +17,6 @@ ms.locfileid: "33211818"
 
 赋值两侧都无法告知编译器查看赋值运算符另一侧的对象并查看我的类型是否匹配。
 
-通过阅读[这篇文章](http://download.microsoft.com/download/5/4/B/54B83DFE-D7AA-4155-9687-B0CF58FF65D7/type-inference.pdf)（PDF 下载），甚至可以获得有关 C# 语言为何指定该行为的详细信息
+通过阅读[这篇文章](https://download.microsoft.com/download/5/4/B/54B83DFE-D7AA-4155-9687-B0CF58FF65D7/type-inference.pdf)（PDF 下载），甚至可以获得有关 C# 语言为何指定该行为的详细信息
 
 

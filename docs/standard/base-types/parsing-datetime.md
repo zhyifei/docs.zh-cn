@@ -16,12 +16,12 @@ helpviewer_keywords:
 - time strings
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4c093f22f77284d15e56c8f1d4a95afbeb75202d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1d10384955e07198a4b5ea7202722bea4b831e02
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33576098"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44207611"
 ---
 # <a name="parsing-date-and-time-strings-in-net"></a>分析 .NET 中的日期和时间字符串
 
@@ -87,9 +87,10 @@ ms.locfileid: "33576098"
 
 <xref:System.DateTime.Parse%2A> 和 <xref:System.DateTime.ParseExact%2A> 方法的每个重载还包含 <xref:System.IFormatProvider> 参数，用于提供有关字符串格式设置的区域性专用信息。 此 <xref:System.IFormatProvider> 对象为 <xref:System.Globalization.CultureInfo> 对象，表示标准区域性或 <xref:System.Globalization.CultureInfo.DateTimeFormat%2A?displayProperty=nameWithType> 属性返回的 <xref:System.Globalization.DateTimeFormatInfo> 对象。  <xref:System.DateTime.ParseExact%2A> 还使用定义一个或多个自定义日期和时间格式的其他字符串或字符串数组参数。  
 
-## <a name="see-also"></a>请参阅  
- [分析字符串](parsing-strings.md)  
- [格式设置类型](formatting-types.md)  
- [.NET 中的类型转换](type-conversion.md)  
- [标准日期和时间格式](standard-date-and-time-format-strings.md)  
- [自定义日期和时间格式字符串](custom-date-and-time-format-strings.md)
+## <a name="see-also"></a>请参阅
+
+- [分析字符串](parsing-strings.md)  
+- [格式设置类型](formatting-types.md)  
+- [.NET 中的类型转换](type-conversion.md)  
+- [标准日期和时间格式](standard-date-and-time-format-strings.md)  
+- [自定义日期和时间格式字符串](custom-date-and-time-format-strings.md)

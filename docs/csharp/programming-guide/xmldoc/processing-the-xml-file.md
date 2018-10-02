@@ -5,12 +5,12 @@ helpviewer_keywords:
 - XML processing [C#]
 - XML [C#], processing
 ms.assetid: 60c71193-9dac-4cd3-98c5-100bd0edcc42
-ms.openlocfilehash: 659562864ad323162f15351aa960c2a54164c77d
-ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
+ms.openlocfilehash: 1cc5925f33c2d06054e7a88c6c6f90ef026f4dee
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34458055"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43506023"
 ---
 # <a name="processing-the-xml-file-c-programming-guide"></a>处理 XML 文件（C# 编程指南）
 编译器为代码（已标记以生成文档）中的每个构造生成一个 ID 字符串。 （有关如何标记代码的信息，请参阅[文档注释的建议标记](../../../csharp/programming-guide/xmldoc/recommended-tags-for-documentation-comments.md)。）ID 字符串唯一标识构造。 处理 XML 文件的程序可以使用 ID 字符串来标识文档应用于的相应 .NET Framework 元数据/反射项目。  
@@ -80,7 +80,8 @@ ms.locfileid: "34458055"
   
  [!code-csharp[csProgGuidePointers#21](../../../csharp/programming-guide/unsafe-code-pointers/codesnippet/CSharp/processing-the-xml-file_1.cs)]  
   
-## <a name="see-also"></a>请参阅  
- [C# 编程指南](../../../csharp/programming-guide/index.md)  
- [/doc（C# 编译器选项）](../../../csharp/language-reference/compiler-options/doc-compiler-option.md)  
- [XML 文档注释](../../../csharp/programming-guide/xmldoc/xml-documentation-comments.md)
+## <a name="see-also"></a>请参阅
+
+- [C# 编程指南](../../../csharp/programming-guide/index.md)  
+- [/doc（C# 编译器选项）](../../../csharp/language-reference/compiler-options/doc-compiler-option.md)  
+- [XML 文档注释](../../../csharp/programming-guide/xmldoc/xml-documentation-comments.md)

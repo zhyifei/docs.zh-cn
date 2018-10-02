@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 0ea65c59-85eb-4a52-94ca-c36d3bd13058
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fc2698a37dc77ccd8c58164ec5a34f21251b6dbe
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 86642da8647d185d863607819bbb18de9e976e6b
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33571108"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45664535"
 ---
 # <a name="type-conversion-tables-in-net"></a>.NET 中的类型转换表
 当一种类型的值转换为大小相等或更大的另一类型时，将发生扩大转换。 当一种类型的值转换为较小的另一种类型时，将发生收缩转换。 本主题中的表格解释了这两种转换类型的行为。  
@@ -71,6 +71,7 @@ ms.locfileid: "33571108"
 |<xref:System.Single>|<xref:System.Byte>, <xref:System.SByte>, <xref:System.Int16>, <xref:System.UInt16>, <xref:System.Int32>, <xref:System.UInt32>, <xref:System.Int64>, <xref:System.UInt64>|  
 |<xref:System.Double>|<xref:System.Byte>, <xref:System.SByte>, <xref:System.Int16>, <xref:System.UInt16>, <xref:System.Int32>, <xref:System.UInt32>, <xref:System.Int64>, <xref:System.UInt64>|  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Convert?displayProperty=nameWithType>  
- [.NET 中的类型转换](../../../docs/standard/base-types/type-conversion.md)
+## <a name="see-also"></a>请参阅
+
+- <xref:System.Convert?displayProperty=nameWithType>  
+- [.NET 中的类型转换](../../../docs/standard/base-types/type-conversion.md)

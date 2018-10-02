@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - WPF application [WPF], building
 ms.assetid: a58696fd-bdad-4b55-9759-136dfdf8b91c
-ms.openlocfilehash: 1bb092ed74a2c4c67be9a52d9cab25dc98520a01
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 89ceb39b08250bc400eed6ca8f8c24013446b453
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33549378"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44084080"
 ---
 # <a name="building-a-wpf-application-wpf"></a>生成 WPF 应用程序 (WPF)
 Windows Presentation Foundation (WPF) 应用程序可以生成为[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]可执行文件 (.exe)、 库 (.dll) 或这两种类型的程序集的组合。 本主题将介绍如何生成 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 应用程序，并对生成过程中的各个关键步骤进行说明。  
@@ -26,7 +26,7 @@ Windows Presentation Foundation (WPF) 应用程序可以生成为[!INCLUDE[dnprd
   
 -   Microsoft 生成引擎 (MSBuild)。 除了代码和 XAML 文件之外，应用程序还必须包含一个 MSBuild 项目文件。 有关详细信息，请参阅“MSBuild”。  
   
--   Visual Studio。 Visual Studio 是一个集成式开发环境，可编译使用 MSBuild 生成的 WPF 应用程序，并包含可用于创建 UI 的可视化设计器。 有关详细信息，请参阅 [Visual Studio 中的应用程序开发](http://msdn.microsoft.com/library/97490c1b-a247-41fb-8f2c-bc4c201eff68)和 [WPF 设计器](http://msdn.microsoft.com/library/c6c65214-8411-4e16-b254-163ed4099c26)。  
+-   Visual Studio。 Visual Studio 是一个集成式开发环境，可编译使用 MSBuild 生成的 WPF 应用程序，并包含可用于创建 UI 的可视化设计器。 有关详细信息，请参阅[Visual Studio 中的应用程序开发](https://msdn.microsoft.com/library/97490c1b-a247-41fb-8f2c-bc4c201eff68)并[在 Visual Studio 中设计 XAML](/visualstudio/designers/designing-xaml-in-visual-studio)。  
   
 <a name="The_Windows_Presentation_Foundation_Build_Pipeline"></a>   
 ## <a name="wpf-build-pipeline"></a>WPF 生成管道  
@@ -50,7 +50,7 @@ Windows Presentation Foundation (WPF) 应用程序可以生成为[!INCLUDE[dnprd
   
 <a name="Resolving_references"></a>   
 ### <a name="resolving-references"></a>解析引用  
- 生成进程会查找并绑定生成应用程序项目所需的程序集。 这个逻辑包含在 `ResolveAssemblyReference` 任务中。 在项目文件中声明为 `Reference` 的所有程序集会连同有关搜索路径的信息以及系统上已安装的程序集的元数据一并提供给任务。 该任务会查找程序集，并使用已安装的程序集的元数据来筛选出那些无需显示在输出清单中的核心 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 程序集。 这么做可以避免 ClickOnce 清单中出现冗余信息。 例如，由于 PresentationFramework.dll 就被认为是代表应用程序生成在上以及为[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]和此外以来所有[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]程序集位于.NET Framework 的每台计算机上的相同位置安装，则无需包括在清单中的所有.NET Framework 引用程序集上的所有信息。  
+ 生成进程会查找并绑定生成应用程序项目所需的程序集。 这个逻辑包含在 `ResolveAssemblyReference` 任务中。 在项目文件中声明为 `Reference` 的所有程序集会连同有关搜索路径的信息以及系统上已安装的程序集的元数据一并提供给任务。 该任务会查找程序集，并使用已安装的程序集的元数据来筛选出那些无需显示在输出清单中的核心 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 程序集。 这么做可以避免 ClickOnce 清单中出现冗余信息。 例如，由于 PresentationFramework.dll 可以被视为代表应用程序生成和有关[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]而且以来所有[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]程序集位于.NET Framework 的每台计算机上的相同位置安装，没有无需在清单中包含所有.NET Framework 引用程序集上的所有信息。  
   
 <a name="Markup_Compilation___Pass_1"></a>   
 ### <a name="markup-compilationpass-1"></a>标记编译 - 第 1 次传递  
@@ -64,9 +64,9 @@ Windows Presentation Foundation (WPF) 应用程序可以生成为[!INCLUDE[dnprd
   
 3.  创建 CodeDOM 型新分部类并将其复制到 obj\Release 文件夹。  
   
- 另外，还会针对每一个 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 文件生成特定于语言的代码文件。 例如，对于 Visual Basic 项目中的 Page1.xaml 页，Page1.g.vb 都会生成;对于 C# 项目中的 Page1.xaml 页中，将生成 Page1.g.cs。 文件名中的“.g”表明文件包含的是生成的代码，这些代码针对标记文件的顶级元素（如 `Page` 或 `Window`）进行了分部类声明。 类的声明与`partial`修饰符在 C# (`Extends`在 Visual Basic 中) 以指示没有为类在其他位置的另一个声明，通常在代码隐藏文件 page1.xaml.cs。  
+ 另外，还会针对每一个 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 文件生成特定于语言的代码文件。 例如，对于 Visual Basic 项目中的 Page1.xaml 页面，Page1.g.vb 生成;对于 C# 项目中的 Page1.xaml 页面，会生成 Page1.g.cs。 文件名中的“.g”表明文件包含的是生成的代码，这些代码针对标记文件的顶级元素（如 `Page` 或 `Window`）进行了分部类声明。 使用声明该类`partial`C# 中的修饰符 (`Extends`在 Visual Basic 中) 以指示该类在其他位置的另一个声明，通常在代码隐藏文件 page1.xaml.cs。  
   
- 分部类扩展从适当的基类 (如<xref:System.Windows.Controls.Page>页) 并实现<xref:System.Windows.Markup.IComponentConnector?displayProperty=nameWithType>接口。 <xref:System.Windows.Markup.IComponentConnector>接口具有初始化组件和连接名称和其内容中的元素上的事件的方法。 因此，生成的代码文件中都包含如下所示的方法实现：  
+ 分部类扩展自相应的基类 (如<xref:System.Windows.Controls.Page>页面)，并实现<xref:System.Windows.Markup.IComponentConnector?displayProperty=nameWithType>接口。 <xref:System.Windows.Markup.IComponentConnector>接口具有用于初始化组件和连接的名称和其内容中的元素上的事件的方法。 因此，生成的代码文件中都包含如下所示的方法实现：  
   
 ```csharp  
 public void InitializeComponent() {  
@@ -98,7 +98,7 @@ Public Sub InitializeComponent() _
 End Sub  
 ```  
   
- 默认情况下，标记编译运行在同一<xref:System.AppDomain>作为[!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)]引擎。 这可以显著提高性能。 此行为可通过 `AlwaysCompileMarkupFilesInSeparateDomain` 属性来切换。 这样做的卸载单独卸载所有的引用程序集的优势<xref:System.AppDomain>。  
+ 默认情况下，运行在同一个标记编译<xref:System.AppDomain>作为[!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)]引擎。 这可以显著提高性能。 此行为可通过 `AlwaysCompileMarkupFilesInSeparateDomain` 属性来切换。 这一优点是： 通过卸载单独卸载所有引用程序集<xref:System.AppDomain>。  
   
 <a name="Pass_2_of_Markup_Compilation"></a>   
 ### <a name="markup-compilationpass-2"></a>标记编译 - 第 2 次传递  
@@ -124,7 +124,7 @@ End Sub
   
  对于 [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)]，始终会创建这些清单文件。 对于已安装的应用程序，这些文件不会创建，除非在项目文件中为 `GenerateManifests` 属性指定值 `true`。  
   
- [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] 获取这些权限分配给典型 Internet 区域的应用程序遇到两个其他权限：<xref:System.Security.Permissions.WebBrowserPermission>和<xref:System.Security.Permissions.MediaPermission>。 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 生成系统会在应用程序清单中声明这些权限。  
+ [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] 获取这些权限分配给典型 Internet 区域应用程序之上的两个额外权限：<xref:System.Security.Permissions.WebBrowserPermission>和<xref:System.Security.Permissions.MediaPermission>。 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 生成系统会在应用程序清单中声明这些权限。  
   
 <a name="Incremental_Build_Support"></a>   
 ## <a name="incremental-build-support"></a>增量生成支持  
@@ -148,7 +148,7 @@ End Sub
   
     -   如果 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 在项目中被声明为 `Page`：如果 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 没有引用本地定义的类型，则会重新编译 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 以及包含本地引用的所有 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 页面；如果 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 包含本地引用，则会重新编译包含本地引用的所有 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 页面。  
   
-    -   如果[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]声明为`ApplicationDefinition`项目中： 重新编译所有[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]页 (原因： 每个[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]具有对引用<xref:System.Windows.Application>可能已更改的类型)。  
+    -   如果[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]被声明为`ApplicationDefinition`项目中： 重新编译所有[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]页面 (原因： 每个[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]具有对引用<xref:System.Windows.Application>可能已更改的类型)。  
   
 -   如果项目文件将代码文件声明为应用程序定义，而不是 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 文件：  
   

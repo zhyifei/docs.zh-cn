@@ -2,12 +2,12 @@
 title: 高级 LINQ to XML 编程 (C#)
 ms.date: 07/20/2015
 ms.assetid: 2e012d40-532b-49ea-b1fc-152e616bdfa3
-ms.openlocfilehash: e455b2b579c56632d5e06b4da5c44a71ea150416
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 684c91724ad8f283dc47f38e31697884f4d216d2
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33321530"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43855811"
 ---
 # <a name="advanced-linq-to-xml-programming-c"></a>高级 LINQ to XML 编程 (C#)
 本节为高级开发人员提供一些只适用于某些 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 方案的信息。  
@@ -28,5 +28,6 @@ ms.locfileid: "33321530"
 |[序列化包含 XElement 对象的对象图 (C#)](../../../../csharp/programming-guide/concepts/linq/serializing-object-graphs-that-contain-xelement-objects.md)|介绍如何序列化包含 <xref:System.Xml.Linq.XElement> 和 <xref:System.Xml.Linq.XDocument> 对象的对象图。|  
 |[使用 LINQ to XML 进行 WPF 数据绑定](/visualstudio/designers/wpf-data-binding-with-linq-to-xml)|介绍如何将 LINQ to XML 用作 Windows Presentation Foundation 应用程序中数据绑定的数据源。|  
   
-## <a name="see-also"></a>请参阅  
- [编程指南 (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/programming-guide-linq-to-xml.md)
+## <a name="see-also"></a>请参阅
+
+- [编程指南 (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/programming-guide-linq-to-xml.md)

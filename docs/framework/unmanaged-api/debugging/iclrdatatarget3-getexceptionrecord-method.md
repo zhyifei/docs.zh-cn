@@ -14,15 +14,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2b6a5a12cb2eac655600e1425a6f9480910caa34
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: a43863477e902f6f02007ba291a25d2469283e91
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33407696"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43525625"
 ---
 # <a name="iclrdatatarget3getexceptionrecord-method"></a>ICLRDataTarget3::GetExceptionRecord 方法
-由公共语言运行时 (CLR) 数据访问服务调用，以检索与目标进程关联的异常记录。 例如，对于转储目标时，这将是等效于通过传入的异常记录`ExceptionParam`参数[MiniDumpWriteDump](http://msdn.microsoft.com/library/windows/desktop/ms680360.aspx) Windows 调试帮助库中 (DbgHelp) 的函数。  
+由公共语言运行时 (CLR) 数据访问服务调用，以检索与目标进程关联的异常记录。 例如，对于转储目标，这将是等效于通过传入异常记录`ExceptionParam`自变量[MiniDumpWriteDump](/windows/desktop/api/minidumpapiset/nf-minidumpapiset-minidumpwritedump) Windows 调试帮助库 (DbgHelp) 中的函数。  
   
 ## <a name="syntax"></a>语法  
   
@@ -36,13 +36,13 @@ HRESULT GetExceptionRecord(
   
 #### <a name="parameters"></a>参数  
  `bufferSize`  
- [in] 输入缓冲区大小（以字节为单位）。 这必须是等于`sizeof(` [MINIDUMP_EXCEPTION](http://msdn.microsoft.com/library/windows/desktop/ms680367.aspx)`)`。  
+ [in] 输入缓冲区大小（以字节为单位）。 这必须等于`sizeof(` [MINIDUMP_EXCEPTION](/windows/desktop/api/minidumpapiset/ns-minidumpapiset-_minidump_exception)`)`。  
   
  `bufferUsed`  
  [out] 指向接收实际写入缓冲区的字节数的 `ULONG32` 类型的指针。  
   
  `buffer`  
- [out] 指向接收异常记录副本的内存缓冲区的指针。 异常记录将作为[MINIDUMP_EXCEPTION](http://msdn.microsoft.com/library/windows/desktop/ms680367.aspx)类型。  
+ [out] 指向接收异常记录副本的内存缓冲区的指针。 作为返回的异常记录[MINIDUMP_EXCEPTION](/windows/desktop/api/minidumpapiset/ns-minidumpapiset-_minidump_exception)类型。  
   
 ## <a name="return-value"></a>返回值  
  如果成功，则返回值是 `S_OK`；如果失败，则返回失败 `HRESULT` 代码。 `HRESULT` 代码可以包括但不限于以下代码：  
@@ -54,7 +54,7 @@ HRESULT GetExceptionRecord(
 |`HRESULT_FROM_WIN32(ERROR_BAD_LENGTH)`|输入缓冲区大小不等于 `sizeof(MINIDUMP_EXCEPTION)`。|  
   
 ## <a name="remarks"></a>备注  
- [MINIDUMP_EXCEPTION](http://msdn.microsoft.com/library/windows/desktop/ms680367.aspx)是 dbghelp.h 和 imagehlp.h 中 Windows SDK 中定义的结构。  
+ [MINIDUMP_EXCEPTION](/windows/desktop/api/minidumpapiset/ns-minidumpapiset-_minidump_exception)是 dbghelp.h 和 imagehlp.h 中 Windows SDK 中定义的结构。  
   
  此方法由调试应用程序的编写器实现。  
   
@@ -65,7 +65,7 @@ HRESULT GetExceptionRecord(
   
  **库：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[v451_update](../../../../includes/v451-update-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[v451_update](../../../../includes/v451-update-md.md)]  
   
 ## <a name="see-also"></a>请参阅  
  [ICLRDataTarget3 接口](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget3-interface.md)  

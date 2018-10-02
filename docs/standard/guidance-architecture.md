@@ -5,12 +5,12 @@ author: BillWagner
 ms.author: wiwagn
 ms.date: 10/26/2017
 ms.technology: dotnet
-ms.openlocfilehash: 7d636e842c7ec91949f2557f74ae724def858053
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e63f7043b2dfdbe367ed2cbfba13bc6985c1ead6
+ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33570494"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37404169"
 ---
 # <a name="net-architecture-guidance"></a>.NET 体系结构指南
 
@@ -28,4 +28,8 @@ ms.locfileid: "33570494"
 
 ## <a name="architecting-container-and-microservice-based-applicationsmicroservices-architectureindexmd"></a>[构建容器化微服务应用](microservices-architecture/index.md)
 
-本指南介绍如何使用容器开发基于微服务的应用程序并对其进行管理。 本指南探讨使用 .NET Core 和 Docker 容器的体系结构设计和实现方法。 
+本指南介绍如何使用容器开发基于微服务的应用程序并对其进行管理。 本指南探讨使用 .NET Core 和 Docker 容器的体系结构设计和实现方法。
+
+## <a name="serverless-apps-architecture-patterns-and-azure-implementationserverless-architectureindexmd"></a>[无服务器应用：体系结构、模式和 Azure 实现](serverless-architecture/index.md)
+
+本指南介绍如何使用 Azure 生成无服务器应用程序，其中包含了一些示例。 其中介绍了多种体系结构和设计方法以及无服务器带来的优势和挑战，并提供有关无服务器应用的方案和用例。

@@ -7,24 +7,24 @@ helpviewer_keywords:
 - controls [WPF], Label
 - Label control [WPF]
 ms.assetid: 241c1ce2-60f8-4613-a0ec-9b9bb25fb6af
-ms.openlocfilehash: 310c9549814a2686fb29e98ea81baa642b6a16bc
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ec5dda6c2a4690106e47ecb447ea2a409e474856
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33553723"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43500290"
 ---
 # <a name="label"></a>Label
-<xref:System.Windows.Controls.Label> 控件通常提供中的信息[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]。  从历史上看，<xref:System.Windows.Controls.Label>具有包含纯文本，但是，由于<xref:System.Windows.Controls.Label>附带[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]是<xref:System.Windows.Controls.ContentControl>，它可以包含文本或<xref:System.Windows.UIElement>。  
+<xref:System.Windows.Controls.Label> 控件通常会提供中的信息[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]。  从历史上看，<xref:System.Windows.Controls.Label>具有包含纯文本，但由于<xref:System.Windows.Controls.Label>随[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]是<xref:System.Windows.Controls.ContentControl>，它可以包含文本或<xref:System.Windows.UIElement>。  
   
- A<xref:System.Windows.Controls.Label>提供访问密钥的功能和视觉支持。 它经常用于启用对控件进行快速的键盘访问，例如<xref:System.Windows.Controls.TextBox>。 若要将分配<xref:System.Windows.Controls.Label>到<xref:System.Windows.Controls.Control>，将其设置<xref:System.Windows.Controls.Label.Target%2A?displayProperty=nameWithType>到应在用户按下访问键时获得焦点的控件的属性。  
+ 一个<xref:System.Windows.Controls.Label>提供访问密钥的功能和视觉支持。 它通常用于启用对控件的快速键盘访问，例如<xref:System.Windows.Controls.TextBox>。 若要将分配<xref:System.Windows.Controls.Label>到<xref:System.Windows.Controls.Control>，将<xref:System.Windows.Controls.Label.Target%2A?displayProperty=nameWithType>属性设置为在用户按访问密钥时，应获得焦点的控件。  
   
- 下图显示<xref:System.Windows.Controls.Label>"主题"面向<xref:System.Windows.Controls.ComboBox>。  当用户按下时，<xref:System.Windows.Controls.ComboBox>接收焦点。  有关详细信息，请参阅[如何： 设置标签的目标属性](http://msdn.microsoft.com/library/b24c6977-ebcb-4855-a9bb-3fd4435af8f8)。  
+ 下图显示<xref:System.Windows.Controls.Label>"主题"面向<xref:System.Windows.Controls.ComboBox>。  当用户按下时，<xref:System.Windows.Controls.ComboBox>接收焦点。  有关详细信息，请参阅[如何： 将标签的目标属性设置](https://msdn.microsoft.com/library/b24c6977-ebcb-4855-a9bb-3fd4435af8f8)。  
   
  ![显示属性显示按用法标记](../../../../docs/framework/wpf/controls/media/labeledby.JPG "LabeledBy")  
   
 ## <a name="in-this-section"></a>本节内容  
- [如何：设置 Label 的目标属性](http://msdn.microsoft.com/library/b24c6977-ebcb-4855-a9bb-3fd4435af8f8)  
+ [如何：设置 Label 的目标属性](https://msdn.microsoft.com/library/b24c6977-ebcb-4855-a9bb-3fd4435af8f8)  
   
 ## <a name="reference"></a>参考  
  <xref:System.Windows.Controls.Label>

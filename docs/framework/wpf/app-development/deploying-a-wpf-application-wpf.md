@@ -5,20 +5,20 @@ helpviewer_keywords:
 - WPF applications [WPF], deployment
 - deployment [WPF], applications
 ms.assetid: 12cadca0-b32c-4064-9a56-e6a306dcc76d
-ms.openlocfilehash: 057f5e9c2fddfc839bd7eff62ce657d6a4b6036e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 800e8a1e8400a11a7eadd0c352f5bfab334c9fbb
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33548625"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43511703"
 ---
 # <a name="deploying-a-wpf-application-wpf"></a>部署 WPF 应用程序 (WPF)
-Windows Presentation Foundation (WPF) 应用程序都生成后，它们需要进行部署。 [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] 和.NET Framework 包含多种部署技术。 用于部署 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 应用程序的部署技术取决于应用程序的类型。 本主题将简要概述各项部署技术，以及如何使用这些技术来满足各类 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 应用程序的部署要求。  
+Windows Presentation Foundation (WPF) 应用程序构建后，它们需要部署。 [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] 和.NET Framework 包括多项部署技术。 用于部署 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 应用程序的部署技术取决于应用程序的类型。 本主题将简要概述各项部署技术，以及如何使用这些技术来满足各类 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 应用程序的部署要求。  
   
    
 <a name="Deployment_Technologies"></a>   
 ## <a name="deployment-technologies"></a>部署技术  
- [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] 和.NET Framework 包含多种部署技术，包括：  
+ [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] 和.NET Framework 包括多项部署技术，包括：  
   
 -   XCopy 部署。  
   
@@ -44,7 +44,7 @@ Windows Presentation Foundation (WPF) 应用程序都生成后，它们需要进
   
  [!INCLUDE[TLA2#tla_wininstall](../../../../includes/tla2sharptla-wininstall-md.md)] 简化了应用程序的安装和卸载，但它不会提供相应工具以确保已安装的应用程序始终为最新版本。  
   
- 有关 [!INCLUDE[TLA2#tla_wininstall](../../../../includes/tla2sharptla-wininstall-md.md)] 的详细信息，请参阅 [Windows Installer 部署](http://msdn.microsoft.com/library/121be21b-b916-43e2-8f10-8b080516d2a0)。  
+ 有关 [!INCLUDE[TLA2#tla_wininstall](../../../../includes/tla2sharptla-wininstall-md.md)] 的详细信息，请参阅 [Windows Installer 部署](https://msdn.microsoft.com/library/121be21b-b916-43e2-8f10-8b080516d2a0)。  
   
 <a name="ClickOnce_Deployment"></a>   
 ### <a name="clickonce-deployment"></a>ClickOnce 部署  
@@ -99,7 +99,7 @@ Windows Presentation Foundation (WPF) 应用程序都生成后，它们需要进
 > [!NOTE]
 >  有关部署和应用程序清单的详细信息，请参阅[生成 WPF 应用程序](../../../../docs/framework/wpf/app-development/building-a-wpf-application-wpf.md)。  
   
- 这些文件在 [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] 生成时产生。 有关详细信息，请参阅[如何：创建新的 WPF 浏览器应用程序项目](http://msdn.microsoft.com/library/72ef4d90-e163-42a1-8df0-ea7ccfd1901f)。 和仅标记 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 页面一样，[!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] 通常会发布到 Web 服务器并使用 [!INCLUDE[TLA2#tla_iegeneric](../../../../includes/tla2sharptla-iegeneric-md.md)] 来查看。  
+ 这些文件在 [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] 生成时产生。 有关详细信息，请参阅[如何：创建新的 WPF 浏览器应用程序项目](https://msdn.microsoft.com/library/72ef4d90-e163-42a1-8df0-ea7ccfd1901f)。 和仅标记 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 页面一样，[!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] 通常会发布到 Web 服务器并使用 [!INCLUDE[TLA2#tla_iegeneric](../../../../includes/tla2sharptla-iegeneric-md.md)] 来查看。  
   
  [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] 可以使用任意部署技术部署到客户端。 但是，建议使用 [!INCLUDE[TLA#tla_clickonce](../../../../includes/tlasharptla-clickonce-md.md)]，因为它提供以下功能：  
   
@@ -113,13 +113,13 @@ Windows Presentation Foundation (WPF) 应用程序都生成后，它们需要进
   
 <a name="Installing__NET_Framework_3_0"></a>   
 ## <a name="installing-the-net-framework"></a>安装 .NET Framework  
- 若要运行[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]应用程序中，客户端必须安装 Microsoft.NET Framework。 [!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)] 自动检测是否将客户端安装使用.NET Framework 时[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]查看浏览器承载的应用程序。 如果未安装.NET Framework，[!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)]就会提示用户安装它。  
+ 若要运行[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]应用程序，必须在客户端上安装 Microsoft.NET Framework。 [!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)] 使用.NET Framework 是否安装了客户端将自动检测时[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]查看浏览器承载的应用程序。 如果未安装.NET Framework，[!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)]会提示用户安装它。  
   
- 若要检测是否安装了.NET Framework，[!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)]包括的引导程序应用程序注册为回退[!INCLUDE[TLA#tla_mime](../../../../includes/tlasharptla-mime-md.md)]处理程序具有以下扩展名的内容文件：.xaml、.xps、.xbap 和.application。 如果你导航到这些文件类型，并且客户端上未安装.NET Framework，则引导应用程序请求安装它的权限。 如果未提供权限，则安装.NET Framework 和应用程序都不。  
+ 若要检测是否安装了.NET Framework，[!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)]包括一个引导程序应用程序注册为回退[!INCLUDE[TLA#tla_mime](../../../../includes/tlasharptla-mime-md.md)]具有以下扩展名的内容文件的处理程序：.xaml、.xps、.xbap 和.application。 如果你导航到这些文件类型，并且在客户端上未安装.NET Framework，引导程序应用程序请求权限以完成安装。 如果未提供权限，.NET Framework 和应用程序都不会安装。  
   
- 如果授予权限，[!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)]下载并安装.NET Framework 使用[!INCLUDE[TLA#tla_bits](../../../../includes/tlasharptla-bits-md.md)]。 安装完成后成功的.NET framework，最初请求的文件是在新的浏览器窗口中打开。  
+ 如果授予权限，[!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)]下载并安装.NET Framework 使用[!INCLUDE[TLA#tla_bits](../../../../includes/tlasharptla-bits-md.md)]。 安装成功后的.NET framework，最初请求的文件是在新的浏览器窗口中打开。  
   
- .NET framework 自动检测位于[!INCLUDE[TLA#tla_longhorn](../../../../includes/tlasharptla-longhorn-md.md)]， [!INCLUDE[TLA#tla_winxpsp2](../../../../includes/tlasharptla-winxpsp2-md.md)]，和[!INCLUDE[TLA#tla_winnetsvrfamsp1](../../../../includes/tlasharptla-winnetsvrfamsp1-md.md)]有的客户端[!INCLUDE[TLA2#tla_ie7](../../../../includes/tla2sharptla-ie7-md.md)]或更高版本。  
+ .NET framework 自动检测已接入[!INCLUDE[TLA#tla_longhorn](../../../../includes/tlasharptla-longhorn-md.md)]， [!INCLUDE[TLA#tla_winxpsp2](../../../../includes/tlasharptla-winxpsp2-md.md)]，并[!INCLUDE[TLA#tla_winnetsvrfamsp1](../../../../includes/tlasharptla-winnetsvrfamsp1-md.md)]具有的客户端[!INCLUDE[TLA2#tla_ie7](../../../../includes/tla2sharptla-ie7-md.md)]或更高版本。  
   
  有关详细信息，请参阅[部署 .NET Framework 和应用程序](../../../../docs/framework/deployment/index.md)。  
   

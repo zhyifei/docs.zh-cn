@@ -13,12 +13,12 @@ helpviewer_keywords:
 - DataSet class, serializing
 - XML Schema, serializing
 ms.assetid: eec46337-9696-435b-a375-dc5effae6992
-ms.openlocfilehash: 8d30afa0b517f31ded2bc5229927c698e476f790
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7d5ffc0b19e53cdc35f2d2e2cd224f692a0a80ed
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33592023"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44085144"
 ---
 # <a name="examples-of-xml-serialization"></a>XML 序列化示例
 XML 序列化可以采用从简单到复杂的多种形式。 例如，可以序列化只包含公共字段和公共属性的类，如 [XML 序列化简介](../../../docs/standard/serialization/introducing-xml-serialization.md)中所示。 下面的代码示例讨论各种高级方案，包括如何使用 XML 序列化生成符合特定 XML 架构 (XSD) 文档的 XML 流。  
@@ -296,7 +296,7 @@ using System.IO;
 using System.Collections;  
 using System.Xml.Serialization;  
   
-public class Test{  
+public class Test {  
     static void Main(){  
         Test t = new Test();  
         t.SerializeCollection("coll.xml");  
@@ -314,7 +314,7 @@ public class Test{
         x.Serialize(writer, Emps);  
     }  
 }  
-public class Employees:ICollection{  
+public class Employees:ICollection {  
     public string CollectionName;  
     private ArrayList empArray = new ArrayList();   
   
@@ -343,7 +343,7 @@ public class Employees:ICollection{
     }  
 }  
   
-public class Employee{  
+public class Employee {  
     public string EmpName;  
     public string EmpID;  
     public Employee(){}  
@@ -762,10 +762,11 @@ public class Test
 </PurchaseOrder>  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [XML 序列化简介](../../../docs/standard/serialization/introducing-xml-serialization.md)  
- [使用属性控制 XML 序列化](../../../docs/standard/serialization/controlling-xml-serialization-using-attributes.md)  
- [用来控制 XML 序列化的属性](../../../docs/standard/serialization/attributes-that-control-xml-serialization.md)  
- [XmlSerializer 类](https://msdn.microsoft.com/library/system.xml.serialization.xmlserializer.aspx)  
- [如何：序列化对象](../../../docs/standard/serialization/how-to-serialize-an-object.md)  
- [如何：反序列化对象](../../../docs/standard/serialization/how-to-deserialize-an-object.md)
+## <a name="see-also"></a>请参阅
+
+- [XML 序列化简介](../../../docs/standard/serialization/introducing-xml-serialization.md)  
+- [使用属性控制 XML 序列化](../../../docs/standard/serialization/controlling-xml-serialization-using-attributes.md)  
+- [用来控制 XML 序列化的属性](../../../docs/standard/serialization/attributes-that-control-xml-serialization.md)  
+- [XmlSerializer 类](https://msdn.microsoft.com/library/system.xml.serialization.xmlserializer.aspx)  
+- [如何：序列化对象](../../../docs/standard/serialization/how-to-serialize-an-object.md)  
+- [如何：反序列化对象](../../../docs/standard/serialization/how-to-deserialize-an-object.md)

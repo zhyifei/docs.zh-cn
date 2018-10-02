@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 7b9e729732175b7249e4d3be91996bc5e4050855
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 01b326765e792bf97658d951a2d5590d22eff546
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33450201"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47192533"
 ---
 # <a name="imetadatatablesgetnextuserstring-method"></a>IMetaDataTables::GetNextUserString 方法
-获取包含当前表列中的下一步的硬编码字符串的行的索引。  
+获取包含在当前表列中的下一步的硬编码字符串的行的索引。  
   
 ## <a name="syntax"></a>语法  
   
@@ -38,13 +38,13 @@ HRESULT GetNextUserString (
   
 #### <a name="parameters"></a>参数  
  `ixUserString`  
- [in]从当前的字符串列的索引值。  
+ [in]从当前字符串列的索引值。  
   
  `pNext`  
- [out]指向下一个字符串列中的行索引的指针。  
+ [out]一个指向下一个字符串列中的行索引。  
   
 ## <a name="remarks"></a>备注  
- 不建议使用此方法，因为它不返回一致的结果。 GUID 表有关的信息，请参阅公共语言基础结构 (CLI) 文档，尤其是"第 ii 部分： 元数据定义和语义"。 可联机获取该文档；请参阅 MSDN 上的 [ECMA C# 和公共语言基础结构标准](http://go.microsoft.com/fwlink/?LinkID=99212)和 Ecma International 网站上的[标准 ECMA-335 - 公共语言基础结构 (CLI)](http://go.microsoft.com/fwlink/?LinkID=65552)。  
+ 不建议使用此方法，因为它不会返回一致的结果。 GUID 表有关的信息，请参阅公共语言基础结构 (CLI) 文档，尤其是"分区 II:: 元数据定义和语义"。 可联机获取该文档；请参阅 MSDN 上的 [ECMA C# 和公共语言基础结构标准](https://go.microsoft.com/fwlink/?LinkID=99212)和 Ecma International 网站上的[标准 ECMA-335 - 公共语言基础结构 (CLI)](https://go.microsoft.com/fwlink/?LinkID=65552)。  
   
 ## <a name="requirements"></a>要求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
@@ -53,7 +53,7 @@ HRESULT GetNextUserString (
   
  **库：** 用作 MsCorEE.dll 中的资源  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅  
  [IMetaDataTables 接口](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md)  

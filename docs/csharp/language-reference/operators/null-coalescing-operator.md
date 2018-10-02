@@ -8,12 +8,12 @@ helpviewer_keywords:
 - ?? operator [C#]
 - conditional-AND operator (&&) [C#]
 ms.assetid: 088b1f0d-c1af-4fe1-b4b8-196fd5ea9132
-ms.openlocfilehash: 8fa751654acaf5939fb8f8068c7323e365f7bdab
-ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
+ms.openlocfilehash: 03d81d4216dabce2ea75b9fdcf6ef0971cc32490
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34458095"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43530101"
 ---
 # <a name="-operator-c-reference"></a>?? 运算符（C# 参考）
 `??` 运算符称作 null 合并运算符。  如果此运算符的左操作数不为 null，则此运算符将返回左操作数；否则返回右操作数。  
@@ -28,9 +28,10 @@ ms.locfileid: "34458095"
 ## <a name="example"></a>示例  
  [!code-csharp[csRefOperators#53](../../../csharp/language-reference/operators/codesnippet/CSharp/null-conditional-operator_1.cs)]  
   
-## <a name="see-also"></a>请参阅  
- [C# 参考](../../../csharp/language-reference/index.md)  
- [C# 编程指南](../../../csharp/programming-guide/index.md)  
- [C# 运算符](../../../csharp/language-reference/operators/index.md)  
- [可以为 null 的类型](../../../csharp/programming-guide/nullable-types/index.md)  
- [“提升”的准确含义是什么？](https://blogs.msdn.microsoft.com/ericlippert/2007/06/27/what-exactly-does-lifted-mean/)
+## <a name="see-also"></a>请参阅
+
+- [C# 参考](../../../csharp/language-reference/index.md)  
+- [C# 编程指南](../../../csharp/programming-guide/index.md)  
+- [C# 运算符](../../../csharp/language-reference/operators/index.md)  
+- [可以为 null 的类型](../../../csharp/programming-guide/nullable-types/index.md)  
+- [“提升”的准确含义是什么？](https://blogs.msdn.microsoft.com/ericlippert/2007/06/27/what-exactly-does-lifted-mean/)

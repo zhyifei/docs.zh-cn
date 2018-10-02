@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - files [C#], getting information about
 ms.assetid: 22fc2da6-5494-405b-995e-c0b99142a93e
-ms.openlocfilehash: c4f29cd2ae65fb05a2636ae3674c7ffd1613b0f3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8ebacff0f3a1704ec001e3570d0df136f54baf9d
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33338534"
+ms.lasthandoff: 09/23/2018
+ms.locfileid: "46702954"
 ---
 # <a name="how-to-get-information-about-files-folders-and-drives--c-programming-guide"></a>如何：获取有关文件、文件夹和驱动器的信息（C# 编程指南）
 在 .NET Framework 中，可以使用以下类访问文件系统信息：  
@@ -52,7 +52,8 @@ System.IO.DriveInfo di = new System.IO.DriveInfo(@"C:\");
   
  如果应用程序没有足够权限来读取指定文件，`Exists` 方法会返回 `false`（无论路径是否存在）；该方法不会引发异常。  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.IO?displayProperty=nameWithType>  
- [C# 编程指南](../../../csharp/programming-guide/index.md)  
- [文件系统和注册表（C# 编程指南）](../../../csharp/programming-guide/file-system/index.md)
+## <a name="see-also"></a>请参阅
+
+- <xref:System.IO?displayProperty=nameWithType>  
+- [C# 编程指南](../../../csharp/programming-guide/index.md)  
+- [文件系统和注册表（C# 编程指南）](../../../csharp/programming-guide/file-system/index.md)

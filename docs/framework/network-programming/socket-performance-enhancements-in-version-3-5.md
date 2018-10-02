@@ -4,13 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 225aa5f9-c54b-4620-ab64-5cd100cfd54c
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: db52123167648744141657d885f3d3dcc524dd3d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ddf098d0da7411515592c5bfa5bbac2153d7f0eb
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33395874"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47197111"
 ---
 # <a name="socket-performance-enhancements-in-version-35"></a>版本 3.5 中的套接字性能增强
 版本 3.5 中增强了 <xref:System.Net.Sockets.Socket?displayProperty=nameWithType> 类，以供使用异步网络 I/O 实现最高性能的应用程序使用。 已添加了一系列新类，作为 <xref:System.Net.Sockets.Socket> 类的一组增强功能的一部分，这些增强功能提供了一种可供专用高性能套接字应用程序使用的替代异步模式。 这些增强功能专为需要高性能的网络服务器应用程序而设计。 应用程序可以独占方式使用增强型异步模式，或仅在其应用程序的目标热区域（例如，接收大量数据时）使用。  
@@ -42,4 +41,4 @@ ms.locfileid: "33395874"
  <xref:System.Net.Sockets.SocketAsyncEventArgs?displayProperty=nameWithType>  
  <xref:System.Net.Sockets.SocketAsyncOperation?displayProperty=nameWithType>  
  [网络编程示例](../../../docs/framework/network-programming/network-programming-samples.md)  
- [套接字性能技术示例](http://go.microsoft.com/fwlink/?LinkID=179570)
+ [Socket 代码示例](socket-code-examples.md)

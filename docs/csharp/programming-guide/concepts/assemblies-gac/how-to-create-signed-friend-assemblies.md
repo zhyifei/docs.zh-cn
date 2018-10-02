@@ -2,12 +2,12 @@
 title: 如何：创建签名的友元程序集 (C#)
 ms.date: 07/20/2015
 ms.assetid: bab62063-61e6-453f-905f-77673df9534e
-ms.openlocfilehash: 34243a65f57f41c358439baac82a1ce169233259
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8f310055db6899bf315310efc22b67bca2c4500f
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33340653"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44260001"
 ---
 # <a name="how-to-create-signed-friend-assemblies-c"></a>如何：创建签名的友元程序集 (C#)
 本示例演示如何将友元程序集和具有强名称的程序集一起使用。 这两种程序集必须都使用强名称。 尽管本示例中的两种程序集使用相同的密钥，但可以对这两种程序集使用不同的密钥。  
@@ -16,7 +16,7 @@ ms.locfileid: "33340653"
   
 1.  打开命令提示。  
   
-2.  使用强名称工具，通过以下命令序列生成 keyfile 并显示其公钥。 有关详细信息，请参阅 [Sn.exe （强名称工具）](https://msdn.microsoft.com/library/k5b5tt23)。  
+2.  使用强名称工具，通过以下命令序列生成 keyfile 并显示其公钥。 有关详细信息，请参阅 [Sn.exe （强名称工具）](../../../../framework/tools/sn-exe-strong-name-tool.md)。  
   
     1.  生成此示例的强名称密钥，并将其存储在 FriendAssemblies.snk 文件中：  
   
@@ -88,12 +88,13 @@ ms.locfileid: "33340653"
 ## <a name="net-framework-security"></a>.NET Framework 安全性  
  <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> 属性和 <xref:System.Security.Permissions.StrongNameIdentityPermission> 类之间具有相似之处。 主要区别是，<xref:System.Security.Permissions.StrongNameIdentityPermission> 可以要求安全权限来运行一段特定代码，而 <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> 属性控制 `internal` 类型和成员的可见性。  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>  
- [程序集和全局程序集缓存 (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/index.md)  
- [友元程序集 (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/friend-assemblies.md)  
- [如何：创建未签名的友元程序集 (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/how-to-create-unsigned-friend-assemblies.md)  
- [/keyfile](../../../../visual-basic/reference/command-line-compiler/keyfile.md)  
- [Sn.exe（强名称工具）](https://msdn.microsoft.com/library/k5b5tt23)  
- [创建和使用具有强名称的程序集](../../../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md)  
- [C# 编程指南](../../../../csharp/programming-guide/index.md)
+## <a name="see-also"></a>请参阅
+
+- <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>  
+- [程序集和全局程序集缓存 (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/index.md)  
+- [友元程序集 (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/friend-assemblies.md)  
+- [如何：创建未签名的友元程序集 (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/how-to-create-unsigned-friend-assemblies.md)  
+- [/keyfile](../../../../csharp/language-reference/compiler-options/keyfile-compiler-option.md)  
+- [Sn.exe（强名称工具）](../../../../framework/tools/sn-exe-strong-name-tool.md)  
+- [创建和使用具有强名称的程序集](../../../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md)  
+- [C# 编程指南](../../../../csharp/programming-guide/index.md)

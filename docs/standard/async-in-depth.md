@@ -6,12 +6,12 @@ ms.author: wiwagn
 ms.date: 06/20/2016
 ms.technology: dotnet-standard
 ms.assetid: 1e38f9d9-8f84-46ee-a15f-199aec4f2e34
-ms.openlocfilehash: fbee7e6ad0fad312e9e5524f7b3fcc7c417ad47b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0c098d0697dff3e1e772c348597a84ac9d262104
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33577417"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44085311"
 ---
 # <a name="async-in-depth"></a>深入了解异步
 
@@ -90,7 +90,7 @@ public async Task<string> GetFirstCharactersCountAsync(string url, int count)
 
 0-1————————————————————————————————————————————————–2-3
 
-*   从点 `0` 到 `1` 所花费时间直到异步方法将控制让步于调用方才结束。
+*   从点 `0` 到 `1` 所花费时间很长，直到异步方法将控制让步于其调用方才结束。
 *   从点 `1` 到点 `2` 所用时间是花费在 I/O 上的时间，且 CPU 没有耗时。
 *   最后，点 `2` 到点 `3` 所花费时间用于将控制（和可能的值）传递回异步方法，此时将再次执行。
 
@@ -114,7 +114,7 @@ public async Task<string> GetFirstCharactersCountAsync(string url, int count)
 
 此外，使用 `async` 方法将工作调度到 UI 线程（例如，更新 UI）十分简单，且无需额外的工作（例如调用线程安全的委托）。
 
-## <a name="deeper-dive-into-task-and-taskt-for-a-cpu-bound-operation"></a>深入了解绑定 CPU 的操作的任务和 Task<T>
+## <a name="deeper-dive-into-task-and-tasklttgt-for-a-cpu-bound-operation"></a>深入了解绑定 CPU 的操作的任务和 Task&lt;T&gt;
 
 绑定 CPU 的 `async` 代码与绑定 I/O 的 `async` 代码有些许不同。  由于工作在 CPU 上执行，无法解决线程专用于计算的问题。  `async` 和 `await` 的运用使得可以与后台线程交互并让异步方法调用方可响应。  请注意这不会为共享数据提供任何保护。  如果正在使用共享数据，仍需要采用合适的同步策略。
 
@@ -136,7 +136,7 @@ public async Task<int> CalculateResult(InputData data)
 }
 ```
 
-`CalculateResult()` 在调用它的线程上执行。  调用 `Task.Run` 时，它会在线程池上对昂贵的绑定 CPU 的操作 `DoExpensiveCalculation()` 进行排队，并收到一个 `Task<int>` 句柄。  `DoExpensiveCalculation()` 最终在下一个可用线程上并行运行（很可能在另一个 CPU 内核上）。  当 `DoExpensiveCalculation()` 忙于处理另一线程时它可能进行并行工作，因为调用 `CalculateResult()` 的线程仍在执行。
+`CalculateResult()` 在调用它的线程上执行。  调用 `Task.Run` 时，它会在线程池上对昂贵的绑定 CPU 的操作 `DoExpensiveCalculation()` 进行排队，并收到一个 `Task<int>` 句柄。  `DoExpensiveCalculation()` 最终在下一个可用线程上并行运行（很可能在另一个 CPU 内核上）。  当 `DoExpensiveCalculation()` 在另一线程处理任务时，由于调用 `CalculateResult()` 的线程仍在执行，这时可能会出现并行工作的情况。
 
 一旦遇到 `await`，`CalculateResult()` 执行会让步于调用方，在 `DoExpensiveCalculation()` 产生结果的同时，允许其他工作完成当前线程。  完成后，结果会排队等待在主线程上运行。  最后，主线程将返回执行 `CalculateResult()`，此时将得到结果 `DoExpensiveCalculation()`。
 
@@ -146,7 +146,7 @@ public async Task<int> CalculateResult(InputData data)
 
 ## <a name="see-also"></a>请参阅
 
-[C# 中的异步编程](~/docs/csharp/async.md)   
-[使用 Async 和 Await 的异步编程 (C#)](../csharp/programming-guide/concepts/async/index.md)  
-[F# 中的异步编程](~/docs/fsharp/tutorials/asynchronous-and-concurrent-programming/async.md)   
-[使用 Async 和 Await 的异步编程 (Visual Basic)](~/docs/visual-basic/programming-guide/concepts/async/index.md)
+* [C# 中的异步编程](~/docs/csharp/async.md)   
+* [使用 Async 和 Await 的异步编程 (C#)](../csharp/programming-guide/concepts/async/index.md)  
+* [F# 中的异步编程](~/docs/fsharp/tutorials/asynchronous-and-concurrent-programming/async.md)   
+* [使用 Async 和 Await 的异步编程 (Visual Basic)](~/docs/visual-basic/programming-guide/concepts/async/index.md)

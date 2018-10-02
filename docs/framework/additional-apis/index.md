@@ -9,18 +9,19 @@ helpviewer_keywords:
 ms.assetid: cf2d9006-b631-4e5d-81cd-20aab78c60f1
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: bdba02feb8cacc6ab1886c12f88716184aa2a81a
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.topic: conceptual
+ms.openlocfilehash: 7659dde4a2cb08fc3257d2f613ce4146522072b6
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32752424"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47170699"
 ---
 # <a name="additional-class-libraries-and-apis"></a>其他类库和 API
 
-.NET Framework 不断发展，为了改善跨平台开发或尽早为客户引入新功能，我们还会发布带外 (OOB) 这一新功能。 本主题列出了我们提供了有关文档的 OOB 项目。  
+.NET Framework 在不断发展。 若要改善跨平台开发，并尽早引入新功能，带外 (OOB) 发布新功能。 本主题列出了我们提供了有关文档的 OOB 项目。  
   
-此外，一些库面向 .NET Framework 的特定平台或实现。 例如，<xref:System.Text.CodePagesEncodingProvider>类，使代码页编码可用于 UWP 应用使用.NET Framework 开发。 本主题还列出了以下库。  
+此外，一些库面向 .NET Framework 的特定平台或实现。 例如，<xref:System.Text.CodePagesEncodingProvider>类使代码页编码可用于使用.NET Framework 开发的 UWP 应用。 本主题还列出了以下库。  
   
 ## <a name="oob-projects"></a>OOB 项目
   
@@ -35,7 +36,7 @@ ms.locfileid: "32752424"
   
 | 项目 | 描述 |  
 | ------- | ----------- |  
-| <xref:System.Text.CodePagesEncodingProvider> | 扩展<xref:System.Text.EncodingProvider>要提供给面向通用 Windows 平台的应用代码页编码的类。 |  
+| <xref:System.Text.CodePagesEncodingProvider> | 扩展了<xref:System.Text.EncodingProvider>类，以使代码页编码可用于面向通用 Windows 平台的应用。 |  
   
 ## <a name="private-apis"></a>私有 API  
 

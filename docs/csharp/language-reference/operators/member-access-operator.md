@@ -8,12 +8,12 @@ helpviewer_keywords:
 - . operator [C#]
 - dot operator (.) [C#]
 ms.assetid: a1f54b52-b686-4ae5-a48e-a2a9ebd0eb7b
-ms.openlocfilehash: 088f1991cafa92a69e11ca14bd2d983b36c0e3ca
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a092c1a916e3dc4bf6d96660c532540945e57554
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33271024"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43520703"
 ---
 # <a name="-operator-c-reference"></a>. 运算符（C# 参考）
 点运算符 (`.`) 用于成员访问。 点运算符指定类型或命名空间的成员。 例如，点运算符用于访问 .NET Framework 类库中的特定方法：  
@@ -45,7 +45,8 @@ ms.locfileid: "33271024"
 ## <a name="c-language-specification"></a>C# 语言规范  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>请参阅  
- [C# 参考](../../../csharp/language-reference/index.md)  
- [C# 编程指南](../../../csharp/programming-guide/index.md)  
- [C# 运算符](../../../csharp/language-reference/operators/index.md)
+## <a name="see-also"></a>请参阅
+
+- [C# 参考](../../../csharp/language-reference/index.md)  
+- [C# 编程指南](../../../csharp/programming-guide/index.md)  
+- [C# 运算符](../../../csharp/language-reference/operators/index.md)
