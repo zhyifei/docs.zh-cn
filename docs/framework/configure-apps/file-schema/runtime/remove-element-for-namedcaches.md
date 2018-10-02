@@ -8,21 +8,21 @@ ms.assetid: 24211ea5-163e-4fe5-aed8-004d8499760c
 author: mcleblanc
 ms.author: markl
 ms.openlocfilehash: f885416629ae58949cc688f4e6fbd41e77e872aa
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: daa8788af67ac2d1cecd24f9f3409babb2f978c9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47425805"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47861894"
 ---
-# <a name="ltremovegt-element-for-ltnamedcachesgt"></a><span data-ttu-id="68067-102">&lt;删除&gt;元素&lt;namedCaches&gt;</span><span class="sxs-lookup"><span data-stu-id="68067-102">&lt;remove&gt; Element for &lt;namedCaches&gt;</span></span>
-<span data-ttu-id="68067-103">从内存缓存的 `namedCaches` 集合中删除一个命名的缓存条目。</span><span class="sxs-lookup"><span data-stu-id="68067-103">Removes a named cache entry from the `namedCaches` collection for a memory cache.</span></span>  
+# <a name="ltremovegt-element-for-ltnamedcachesgt"></a><span data-ttu-id="bd185-102">&lt;删除&gt;元素&lt;namedCaches&gt;</span><span class="sxs-lookup"><span data-stu-id="bd185-102">&lt;remove&gt; Element for &lt;namedCaches&gt;</span></span>
+<span data-ttu-id="bd185-103">从内存缓存的 `namedCaches` 集合中删除一个命名的缓存条目。</span><span class="sxs-lookup"><span data-stu-id="bd185-103">Removes a named cache entry from the `namedCaches` collection for a memory cache.</span></span>  
   
- <span data-ttu-id="68067-104">\<system.runtime.caching></span><span class="sxs-lookup"><span data-stu-id="68067-104">\<system.runtime.caching></span></span>  
-<span data-ttu-id="68067-105">\<memoryCache></span><span class="sxs-lookup"><span data-stu-id="68067-105">\<memoryCache></span></span>  
-<span data-ttu-id="68067-106">\<namedCaches ></span><span class="sxs-lookup"><span data-stu-id="68067-106">\<namedCaches></span></span>  
-<span data-ttu-id="68067-107">\<remove></span><span class="sxs-lookup"><span data-stu-id="68067-107">\<remove></span></span>  
+ <span data-ttu-id="bd185-104">\<system.runtime.caching></span><span class="sxs-lookup"><span data-stu-id="bd185-104">\<system.runtime.caching></span></span>  
+<span data-ttu-id="bd185-105">\<memoryCache></span><span class="sxs-lookup"><span data-stu-id="bd185-105">\<memoryCache></span></span>  
+<span data-ttu-id="bd185-106">\<namedCaches ></span><span class="sxs-lookup"><span data-stu-id="bd185-106">\<namedCaches></span></span>  
+<span data-ttu-id="bd185-107">\<remove></span><span class="sxs-lookup"><span data-stu-id="bd185-107">\<remove></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="68067-108">语法</span><span class="sxs-lookup"><span data-stu-id="68067-108">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="bd185-108">语法</span><span class="sxs-lookup"><span data-stu-id="bd185-108">Syntax</span></span>  
   
 ```xml  
 <namedCaches>  
@@ -31,26 +31,26 @@ ms.locfileid: "47425805"
  </namedCaches>  
 ```  
   
-## <a name="type"></a><span data-ttu-id="68067-109">类型</span><span class="sxs-lookup"><span data-stu-id="68067-109">Type</span></span>  
+## <a name="type"></a><span data-ttu-id="bd185-109">类型</span><span class="sxs-lookup"><span data-stu-id="bd185-109">Type</span></span>  
  `None`  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="68067-110">特性和元素</span><span class="sxs-lookup"><span data-stu-id="68067-110">Attributes and Elements</span></span>  
- <span data-ttu-id="68067-111">下列各节描述了特性、子元素和父元素。</span><span class="sxs-lookup"><span data-stu-id="68067-111">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="bd185-110">特性和元素</span><span class="sxs-lookup"><span data-stu-id="bd185-110">Attributes and Elements</span></span>  
+ <span data-ttu-id="bd185-111">下列各节描述了特性、子元素和父元素。</span><span class="sxs-lookup"><span data-stu-id="bd185-111">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="68067-112">特性</span><span class="sxs-lookup"><span data-stu-id="68067-112">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="bd185-112">特性</span><span class="sxs-lookup"><span data-stu-id="bd185-112">Attributes</span></span>  
  `None`  
   
-### <a name="child-elements"></a><span data-ttu-id="68067-113">子元素</span><span class="sxs-lookup"><span data-stu-id="68067-113">Child Elements</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="bd185-113">子元素</span><span class="sxs-lookup"><span data-stu-id="bd185-113">Child Elements</span></span>  
  `None`  
   
-### <a name="parent-elements"></a><span data-ttu-id="68067-114">父元素</span><span class="sxs-lookup"><span data-stu-id="68067-114">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="bd185-114">父元素</span><span class="sxs-lookup"><span data-stu-id="bd185-114">Parent Elements</span></span>  
   
-|<span data-ttu-id="68067-115">元素</span><span class="sxs-lookup"><span data-stu-id="68067-115">Element</span></span>|<span data-ttu-id="68067-116">描述</span><span class="sxs-lookup"><span data-stu-id="68067-116">Description</span></span>|  
+|<span data-ttu-id="bd185-115">元素</span><span class="sxs-lookup"><span data-stu-id="bd185-115">Element</span></span>|<span data-ttu-id="bd185-116">描述</span><span class="sxs-lookup"><span data-stu-id="bd185-116">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="68067-117">\<namedCaches></span><span class="sxs-lookup"><span data-stu-id="68067-117">\<namedCaches></span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/namedcaches-element-cache-settings.md)|<span data-ttu-id="68067-118">包含的配置设置的命名集合<xref:System.Runtime.Caching.MemoryCache>实例。</span><span class="sxs-lookup"><span data-stu-id="68067-118">Contains a collection of configuration settings for the named <xref:System.Runtime.Caching.MemoryCache> instances.</span></span>|  
+|[<span data-ttu-id="bd185-117">\<namedCaches></span><span class="sxs-lookup"><span data-stu-id="bd185-117">\<namedCaches></span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/namedcaches-element-cache-settings.md)|<span data-ttu-id="bd185-118">包含的配置设置的命名集合<xref:System.Runtime.Caching.MemoryCache>实例。</span><span class="sxs-lookup"><span data-stu-id="bd185-118">Contains a collection of configuration settings for the named <xref:System.Runtime.Caching.MemoryCache> instances.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="68067-119">备注</span><span class="sxs-lookup"><span data-stu-id="68067-119">Remarks</span></span>  
- <span data-ttu-id="68067-120">`remove`元素中移除`namedCache`内存缓存的命名的缓存集合中的条目。</span><span class="sxs-lookup"><span data-stu-id="68067-120">The `remove` element removes a `namedCache` entry from the named cache collection for a memory cache.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="bd185-119">备注</span><span class="sxs-lookup"><span data-stu-id="bd185-119">Remarks</span></span>  
+ <span data-ttu-id="bd185-120">`remove`元素中移除`namedCache`内存缓存的命名的缓存集合中的条目。</span><span class="sxs-lookup"><span data-stu-id="bd185-120">The `remove` element removes a `namedCache` entry from the named cache collection for a memory cache.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="68067-121">请参阅</span><span class="sxs-lookup"><span data-stu-id="68067-121">See Also</span></span>  
- [<span data-ttu-id="68067-122">\<namedCaches > 元素 （缓存设置）</span><span class="sxs-lookup"><span data-stu-id="68067-122">\<namedCaches> Element (Cache Settings)</span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/namedcaches-element-cache-settings.md)
+## <a name="see-also"></a><span data-ttu-id="bd185-121">请参阅</span><span class="sxs-lookup"><span data-stu-id="bd185-121">See Also</span></span>  
+ [<span data-ttu-id="bd185-122">\<namedCaches > 元素 （缓存设置）</span><span class="sxs-lookup"><span data-stu-id="bd185-122">\<namedCaches> Element (Cache Settings)</span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/namedcaches-element-cache-settings.md)
