@@ -18,7 +18,7 @@ ms.lasthandoff: 10/02/2018
 ms.locfileid: "48030650"
 ---
 # <a name="design-guidelines-for-exceptions"></a>异常设计准则
-异常处理有很多优于基于返回值的错误报告。 良好的框架设计可帮助应用程序开发人员的好处的异常。 本部分讨论其优势的异常，并提供了有效地使用它们的准则。  
+与基于返回值的错误报告相比，异常处理具有许多优势。良好的框架设计有助于应用程序开发人员理解异常的优势。本节讨论异常的优势，并提供如何有效使用它们的准则。
   
 ## <a name="in-this-section"></a>本节内容  
  [异常引发](../../../docs/standard/design-guidelines/exception-throwing.md)  
