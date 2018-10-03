@@ -42,7 +42,7 @@ ms.locfileid: "47397681"
   
  `CompanyName`、 `ProductName`和 `ProductVersion` 的值来自应用程序的程序集信息。 日志文件名称的格式为 *AssemblyName*.log，其中 *AssemblyName* 是程序集的文件名称（不含扩展名）。 如果需要多个日志文件（如原始日志不可用或应用程序尝试写入日志时），日志文件名称的格式为 *AssemblyName*-*iteration*.log，其中 `iteration` 为一个正 `Integer`。  
   
- 可以通过添加或更改计算机和应用程序的配置文件来重写默认行为。 有关详细信息，请参阅 [Walkthrough: Changing Where My.Application.Log Writes Information](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-changing-where-my-application-log-writes-information.md)。  
+ 可以通过添加或更改计算机和应用程序的配置文件来重写默认行为。 有关详细信息，请参阅 [演练：更改 My.Application.Log 写入信息的位置](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-changing-where-my-application-log-writes-information.md)。  
   
 ## <a name="configuring-log-settings"></a>配置日志设置  
  `Log` 对象具有默认的实现，即使没有应用程序配置文件 app.config 也可工作。若要更改默认设置，必须添加包含新设置的配置文件。 有关更多信息，请参见 [Walkthrough: Filtering My.Application.Log Output](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-filtering-my-application-log-output.md)。  
