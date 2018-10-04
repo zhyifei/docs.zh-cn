@@ -4,17 +4,17 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - routing [WCF], message filters
 ms.assetid: cb33ba49-8b1f-4099-8acb-240404a46d9a
-ms.openlocfilehash: e129924de53fb0dba61798cc492729c8af69ed94
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: fc4656a76894eb3a844bc9f2187847fd9eff0ffe
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33496930"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48780448"
 ---
 # <a name="message-filters"></a>消息筛选器
 为了实现基于内容的路由，路由服务使用 <xref:System.ServiceModel.Dispatcher.MessageFilter> 实现，这些实现检查消息的特定部分，例如地址、终结点名称或特定 XPath 语句。 如果随 [!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)] 一起提供的消息筛选器均无法满足您的需求，则您可以通过创建 <xref:System.ServiceModel.Dispatcher.MessageFilter> 基类的新实现来创建自定义筛选器。  
   
- 配置路由服务时，你必须定义筛选器元素 (<xref:System.ServiceModel.Routing.Configuration.FilterElement>对象) 描述的类型**MessageFilter**以及创建筛选器，例如要搜索的特定字符串值所需的任何支持数据有关消息中。 请注意，创建筛选器元素仅定义了单独的消息筛选器；若要使用筛选器计算和路由消息，还必须定义筛选器表 (<xref:System.ServiceModel.Routing.Configuration.FilterTableEntryCollection>)。  
+ 配置路由服务时，必须定义筛选器元素 (<xref:System.ServiceModel.Routing.Configuration.FilterElement>对象)，用于描述的类型**MessageFilter**和创建筛选器，如要搜索的特定字符串值所需的任何支持数据有关消息中。 请注意，创建筛选器元素仅定义了单独的消息筛选器；若要使用筛选器计算和路由消息，还必须定义筛选器表 (<xref:System.ServiceModel.Routing.Configuration.FilterTableEntryCollection>)。  
   
  筛选器表中的每个条目都引用一个筛选器元素，并指定当消息与筛选器匹配时消息将路由到的客户端终结点。 通过筛选器表条目，您还可以指定一个备份终结点集合 (<xref:System.ServiceModel.Routing.Configuration.BackupEndpointCollection>)，该集合定义在向主终结点发送消息但出现传输故障时，该消息将传输到的目标终结点的列表。 将按指定顺序尝试这些终结点，直至某个终结点成功为止。  
   
@@ -26,9 +26,9 @@ ms.locfileid: "33496930"
 |筛选器类型|描述|筛选器数据含义|示例筛选器|  
 |------------------|-----------------|-------------------------|--------------------|  
 |操作|使用 <xref:System.ServiceModel.Dispatcher.ActionMessageFilter> 类匹配包含特定操作的消息。|筛选器基于的操作。|\<filter name="action1" filterType="Action" filterData="http://namespace/contract/operation" />|  
-|EndpointAddress|使用<xref:System.ServiceModel.Dispatcher.EndpointAddressMessageFilter>类，与<xref:System.ServiceModel.Dispatcher.EndpointAddressMessageFilter.IncludeHostNameInComparison%2A>  ==  `true`匹配包含特定地址的消息。|筛选器基于的地址（在 To 标头中）。|\<filter name="address1" filterType="EndpointAddress" filterData="http://host/vdir/s.svc/b"  />|  
-|EndpointAddressPrefix|使用<xref:System.ServiceModel.Dispatcher.PrefixEndpointAddressMessageFilter>类，与<xref:System.ServiceModel.Dispatcher.PrefixEndpointAddressMessageFilter.IncludeHostNameInComparison%2A>  ==  `true`匹配包含特定地址前缀的消息。|筛选器基于的地址（使用最长的前缀匹配项）。|\<filter name="prefix1" filterType="EndpointAddressPrefix" filterData="http://host/" />|  
-|And|使用始终在返回前计算两个条件的 <xref:System.ServiceModel.Dispatcher.StrictAndMessageFilter> 类。|不使用 filterData;而 filter1 和 filter2 具有相应消息筛选器的名称 （也在表中），它应**AND**它们连接起来。|\<filter name="and1" filterType="And" filter1="address1" filter2="action1" />|  
+|EndpointAddress|使用<xref:System.ServiceModel.Dispatcher.EndpointAddressMessageFilter>类，与<xref:System.ServiceModel.Dispatcher.EndpointAddressMessageFilter.IncludeHostNameInComparison%2A>  ==  `true`来匹配包含特定地址的消息。|筛选器基于的地址（在 To 标头中）。|\<filter name="address1" filterType="EndpointAddress" filterData="http://host/vdir/s.svc/b"  />|  
+|EndpointAddressPrefix|使用<xref:System.ServiceModel.Dispatcher.PrefixEndpointAddressMessageFilter>类，与<xref:System.ServiceModel.Dispatcher.PrefixEndpointAddressMessageFilter.IncludeHostNameInComparison%2A>  ==  `true`来匹配包含特定地址前缀的消息。|筛选器基于的地址（使用最长的前缀匹配项）。|\<filter name="prefix1" filterType="EndpointAddressPrefix" filterData="http://host/" />|  
+|And|使用始终在返回前计算两个条件的 <xref:System.ServiceModel.Dispatcher.StrictAndMessageFilter> 类。|不使用 filterData;而 filter1 和 filter2 具有相应消息筛选器的名称 （也在表中），应**AND**ed 组合在一起。|\<filter name="and1" filterType="And" filter1="address1" filter2="action1" />|  
 |自定义|一个用户定义的类型，此类型扩展 <xref:System.ServiceModel.Dispatcher.MessageFilter> 类并具有采用字符串的构造函数。|customType 特性是要创建的类的完全限定类型名称；filterData 是在创建筛选器时要传递给构造函数的字符串。|\<filter name="custom1" filterType="Custom" customType="CustomAssembly.CustomMsgFilter, CustomAssembly" filterData="Custom Data" />|  
 |EndpointName|使用 <xref:System.ServiceModel.Dispatcher.EndpointNameMessageFilter> 类根据消息已到达的服务终结点的名称来匹配消息。|名称的服务终结点，例如:"serviceEndpoint1"。  该终结点应为在路由服务上公开的终结点之一。|\<filter name="stock1" filterType="Endpoint" filterData="SvcEndpoint" />|  
 |MatchAll|使用 <xref:System.ServiceModel.Dispatcher.MatchAllMessageFilter> 类。 该筛选器匹配所有到达的消息。|不使用 filterData。 该筛选器将始终匹配所有消息。|\<filter name="matchAll1" filterType="MatchAll" />|  
@@ -63,15 +63,15 @@ ms.locfileid: "33496930"
   
 |前缀|命名空间|  
 |------------|---------------|  
-|s11|http://schemas.xmlsoap.org/soap/envelope|  
-|s12|http://www.w3.org/2003/05/soap-envelope|  
-|wsaAugust2004|http://schemas.xmlsoap.org/ws/2004/08/addressing|  
-|wsa10|http://www.w3.org/2005/08/addressing|  
-|sm|http://schemas.microsoft.com/serviceModel/2004/05/xpathfunctions|  
-|tempuri|http://tempuri.org|  
-|ser|http://schemas.microsoft.com/2003/10/Serialization|  
+|s11|`http://schemas.xmlsoap.org/soap/envelope`|  
+|s12|`http://www.w3.org/2003/05/soap-envelope`|  
+|wsaAugust2004|`http://schemas.xmlsoap.org/ws/2004/08/addressing`|  
+|wsa10|`http://www.w3.org/2005/08/addressing`|  
+|sm|`http://schemas.microsoft.com/serviceModel/2004/05/xpathfunctions`|  
+|tempuri|`http://tempuri.org`|  
+|ser|`http://schemas.microsoft.com/2003/10/Serialization`|  
   
- 如果您确定您将在 XPath 查询中使用特定命名空间，则可以将此命名空间和唯一的命名空间前缀添加到命名空间表中，并在所有 XPath 查询中使用该前缀而不是使用完整命名空间。 下面的示例定义的命名空间的前缀 " http://my.custom.namespace "，然后在 filterData 包含的 XPath 查询中使用。  
+ 如果您确定您将在 XPath 查询中使用特定命名空间，则可以将此命名空间和唯一的命名空间前缀添加到命名空间表中，并在所有 XPath 查询中使用该前缀而不是使用完整命名空间。 下面的示例定义的命名空间前缀"custom" `"http://my.custom.namespace"`，然后在 filterData 包含的 XPath 查询中使用。  
   
 ```xml  
 <namespaceTable>  
@@ -133,7 +133,7 @@ ms.locfileid: "33496930"
 >  如有可能，请使用独占筛选器，而不是指定优先级，因为优先级计算可能会导致性能降级。  
   
 ### <a name="backup-lists"></a>备份列表  
- 筛选器表中的各个筛选器可以选择指定一个备份列表，即终结点的命名集合 (<xref:System.ServiceModel.Routing.Configuration.BackupEndpointCollection>)。 该集合包含在向主终结点（在 <xref:System.ServiceModel.CommunicationException> 中指定）发送消息期间发生 <xref:System.ServiceModel.Routing.Configuration.FilterTableEntryElement.EndpointName%2A> 时，消息将传输到的终结点的有序列表。 下面的示例定义一个名为"backupServiceEndpoints"包含两个终结点的备份列表。  
+ 筛选器表中的各个筛选器可以选择指定一个备份列表，即终结点的命名集合 (<xref:System.ServiceModel.Routing.Configuration.BackupEndpointCollection>)。 该集合包含在向主终结点（在 <xref:System.ServiceModel.CommunicationException> 中指定）发送消息期间发生 <xref:System.ServiceModel.Routing.Configuration.FilterTableEntryElement.EndpointName%2A> 时，消息将传输到的终结点的有序列表。 下面的示例定义名为"backupServiceEndpoints"包含两个终结点的备份列表。  
   
 ```xml  
 <filterTables>  
@@ -149,4 +149,4 @@ ms.locfileid: "33496930"
 </backupLists>  
 ```  
   
- 在前面的示例中，如果向主终结点"Destination"失败，路由服务将尝试向它们列在序列中的每个终结点发送第一个发送到 backupServiceQueue，如果随后发送到 alternateServiceQueue发送到 backupServiceQueue 失败。 如果所有备份终结点均失败，则会返回错误。
+ 在前面的示例中，如果发送到主终结点"Destination"失败，路由服务将尝试将发送到每个终结点的列出顺序，第一个发送到 backupServiceQueue，如果随后发送到 alternateServiceQueue发送到 backupServiceQueue 失败。 如果所有备份终结点均失败，则会返回错误。

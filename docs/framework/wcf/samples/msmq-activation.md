@@ -2,12 +2,12 @@
 title: MSMQ 激活
 ms.date: 03/30/2017
 ms.assetid: e3834149-7b8c-4a54-806b-b4296720f31d
-ms.openlocfilehash: a03f5783e732c4a0f3f13cf6abd7ec4803c07c8f
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: a179fca70a97b4fd9c7b21bdf548afdda59dda91
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43779307"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48780149"
 ---
 # <a name="msmq-activation"></a>MSMQ 激活
 本示例演示如何在 Windows 进程激活服务 (WAS) 中承载从消息队列读取的应用程序。 此示例使用`netMsmqBinding`，并基于[双向通信](../../../../docs/framework/wcf/samples/two-way-communication.md)示例。 本示例中的服务是一个 Web 承载的应用程序，而客户端是自承载的，并输出到控制台以观察提交的采购订单的状态。  
@@ -20,7 +20,7 @@ ms.locfileid: "43779307"
 >   
 >  \<InstallDrive>:\WF_WCF_Samples  
 >   
->  如果此目录不存在，请转到 Windows Communication Foundation (WCF) 超链接 "https://go.microsoft.com/fwlink/?LinkId=150780" \t "_blank"和 Windows Workflow Foundation (WF) 示例[!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)] 若要下载所有 WCF 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
+>  如果此目录不存在，请转到 Windows Communication Foundation (WCF) 超链接"https://go.microsoft.com/fwlink/?LinkId=150780"\t"\_空白"和 Windows Workflow Foundation (WF) 示例[!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)]若要下载所有 WCF 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
 >   
 >  \<InstallDrive>:\Samples\WCFWFCardSpace\WCF\Basic\Services\Hosting\WASHost\MsmqActivation.  
   
@@ -76,7 +76,8 @@ public class OrderProcessorService : IOrderProcessor
             client.OrderStatus(po.PONumber, po.Status);  
             scope.Complete();  
         }  
-    }  
+    }
+}
 ```  
   
  要使用的客户端绑定是使用配置文件指定的。  
@@ -173,7 +174,7 @@ public class OrderStatusService : IOrderStatus
   
  订单状态队列在 `Main` 方法中创建。 客户端配置包括订单状态服务配置，以便承载订单状态服务，如下面的示例配置所示。  
   
-```csharp  
+```xml  
 <appSettings>  
     <!-- use appSetting to configure MSMQ queue name -->  
     <add key="targetQueueName" value=".\private$\ServiceModelSamples/service.svc" />  
@@ -269,7 +270,7 @@ Status of order 70cf9d63-3dfa-4e69-81c2-23aa4478ebed :Pending
         > [!NOTE]
         >  此命令是单行文本。  
   
-         此命令将启用 /servicemodelsamples 应用程序使用访问 http://localhost/servicemodelsamples和 net.msmq: //localhost/servicemodelsamples。  
+         此命令将启用 /servicemodelsamples 应用程序来进行访问`http://localhost/servicemodelsamples`和`net.msmq://localhost/servicemodelsamples`。
   
 7.  如果您以前没有进行此操作，应确保启用 MSMQ 激活服务。 从**启动**菜单上，单击**运行**，然后键入`Services.msc`。 搜索的服务列表**Net.Msmq Listener Adapter**。 右键单击并选择**属性**。 设置**启动类型**到**自动**，单击**应用**然后单击**启动**按钮。 此步骤只能在第一次使用 Net.Msmq Listener Adapter 服务之前操作一次。  
   
