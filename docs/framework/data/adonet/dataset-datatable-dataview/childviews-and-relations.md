@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: d475d356-6abb-4701-8fd1-2906fb93dfba
 ms.openlocfilehash: e27ef72f0341524524a8f267eeeb13a6f46deb52
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
-ms.translationtype: MT
+ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47402509"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48244929"
 ---
 # <a name="childviews-and-relations"></a>ChildView 和关系
 如果 <xref:System.Data.DataSet> 中的表之间存在关系，则可以使用 <xref:System.Data.DataView> 的 <xref:System.Data.DataRowView.CreateChildView%2A> 方法为父表中的行创建一个 <xref:System.Data.DataRowView>，包含相关子表中的行。 例如，下面的代码显示**类别**及其相关**产品**按字母顺序**CategoryName**和**ProductName**.  

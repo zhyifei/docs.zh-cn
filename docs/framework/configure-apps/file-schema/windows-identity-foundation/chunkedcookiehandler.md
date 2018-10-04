@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 ms.assetid: 7220de45-1d14-4aec-a29e-4a2ea8ac861f
 author: BrucePerlerMS
 ms.openlocfilehash: f5592e0fd02d34b2882182196e0aa9425672a8fe
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47400811"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48244928"
 ---
 # <a name="ltchunkedcookiehandlergt"></a>&lt;chunkedCookieHandler&gt;
 配置<xref:System.IdentityModel.Services.ChunkedCookieHandler>。 此元素仅可能存在如果`mode`属性的`<cookieHandler>`元素是"Default"块"。  
