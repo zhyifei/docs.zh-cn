@@ -13,49 +13,49 @@ ms.assetid: fb259282-84c4-4dc4-a226-78d904a6edc3
 author: mcleblanc
 ms.author: markl
 ms.openlocfilehash: 9542332085d0b0319c55db63fd98c9dd8eb3f576
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47235921"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48244810"
 ---
-# <a name="ltcleargt-element-for-connectionmanagement-network-settings"></a><span data-ttu-id="089fd-102">&lt;清除&gt;connectionManagement （网络设置） 的元素</span><span class="sxs-lookup"><span data-stu-id="089fd-102">&lt;clear&gt; Element for connectionManagement (Network Settings)</span></span>
-<span data-ttu-id="089fd-103">清除连接管理列表。</span><span class="sxs-lookup"><span data-stu-id="089fd-103">Clears the connection management list.</span></span>  
+# <a name="ltcleargt-element-for-connectionmanagement-network-settings"></a><span data-ttu-id="fdcc0-102">&lt;清除&gt;connectionManagement （网络设置） 的元素</span><span class="sxs-lookup"><span data-stu-id="fdcc0-102">&lt;clear&gt; Element for connectionManagement (Network Settings)</span></span>
+<span data-ttu-id="fdcc0-103">清除连接管理列表。</span><span class="sxs-lookup"><span data-stu-id="fdcc0-103">Clears the connection management list.</span></span>  
   
- <span data-ttu-id="089fd-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="089fd-104">\<configuration></span></span>  
-<span data-ttu-id="089fd-105">\<system.net></span><span class="sxs-lookup"><span data-stu-id="089fd-105">\<system.net></span></span>  
-<span data-ttu-id="089fd-106">\<connectionManagement ></span><span class="sxs-lookup"><span data-stu-id="089fd-106">\<connectionManagement></span></span>  
-<span data-ttu-id="089fd-107">\<清除 ></span><span class="sxs-lookup"><span data-stu-id="089fd-107">\<clear></span></span>  
+ <span data-ttu-id="fdcc0-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="fdcc0-104">\<configuration></span></span>  
+<span data-ttu-id="fdcc0-105">\<system.net></span><span class="sxs-lookup"><span data-stu-id="fdcc0-105">\<system.net></span></span>  
+<span data-ttu-id="fdcc0-106">\<connectionManagement ></span><span class="sxs-lookup"><span data-stu-id="fdcc0-106">\<connectionManagement></span></span>  
+<span data-ttu-id="fdcc0-107">\<清除 ></span><span class="sxs-lookup"><span data-stu-id="fdcc0-107">\<clear></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="089fd-108">语法</span><span class="sxs-lookup"><span data-stu-id="089fd-108">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="fdcc0-108">语法</span><span class="sxs-lookup"><span data-stu-id="fdcc0-108">Syntax</span></span>  
   
 ```xml  
 <clear/>  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="089fd-109">特性和元素</span><span class="sxs-lookup"><span data-stu-id="089fd-109">Attributes and Elements</span></span>  
- <span data-ttu-id="089fd-110">下列各节描述了特性、子元素和父元素。</span><span class="sxs-lookup"><span data-stu-id="089fd-110">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="fdcc0-109">特性和元素</span><span class="sxs-lookup"><span data-stu-id="fdcc0-109">Attributes and Elements</span></span>  
+ <span data-ttu-id="fdcc0-110">下列各节描述了特性、子元素和父元素。</span><span class="sxs-lookup"><span data-stu-id="fdcc0-110">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="089fd-111">特性</span><span class="sxs-lookup"><span data-stu-id="089fd-111">Attributes</span></span>  
- <span data-ttu-id="089fd-112">无。</span><span class="sxs-lookup"><span data-stu-id="089fd-112">None.</span></span>  
+### <a name="attributes"></a><span data-ttu-id="fdcc0-111">特性</span><span class="sxs-lookup"><span data-stu-id="fdcc0-111">Attributes</span></span>  
+ <span data-ttu-id="fdcc0-112">无。</span><span class="sxs-lookup"><span data-stu-id="fdcc0-112">None.</span></span>  
   
-### <a name="child-elements"></a><span data-ttu-id="089fd-113">子元素</span><span class="sxs-lookup"><span data-stu-id="089fd-113">Child Elements</span></span>  
- <span data-ttu-id="089fd-114">无。</span><span class="sxs-lookup"><span data-stu-id="089fd-114">None.</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="fdcc0-113">子元素</span><span class="sxs-lookup"><span data-stu-id="fdcc0-113">Child Elements</span></span>  
+ <span data-ttu-id="fdcc0-114">无。</span><span class="sxs-lookup"><span data-stu-id="fdcc0-114">None.</span></span>  
   
-### <a name="parent-elements"></a><span data-ttu-id="089fd-115">父元素</span><span class="sxs-lookup"><span data-stu-id="089fd-115">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="fdcc0-115">父元素</span><span class="sxs-lookup"><span data-stu-id="fdcc0-115">Parent Elements</span></span>  
   
-|<span data-ttu-id="089fd-116">**元素**</span><span class="sxs-lookup"><span data-stu-id="089fd-116">**Element**</span></span>|<span data-ttu-id="089fd-117">**说明**</span><span class="sxs-lookup"><span data-stu-id="089fd-117">**Description**</span></span>|  
+|<span data-ttu-id="fdcc0-116">**元素**</span><span class="sxs-lookup"><span data-stu-id="fdcc0-116">**Element**</span></span>|<span data-ttu-id="fdcc0-117">**说明**</span><span class="sxs-lookup"><span data-stu-id="fdcc0-117">**Description**</span></span>|  
 |-----------------|---------------------|  
-|[<span data-ttu-id="089fd-118">connectionManagement</span><span class="sxs-lookup"><span data-stu-id="089fd-118">connectionManagement</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/connectionmanagement-element-network-settings.md)|<span data-ttu-id="089fd-119">指定到网络主机的最大连接数。</span><span class="sxs-lookup"><span data-stu-id="089fd-119">Specifies the maximum number of connections to a network host.</span></span>|  
+|[<span data-ttu-id="fdcc0-118">connectionManagement</span><span class="sxs-lookup"><span data-stu-id="fdcc0-118">connectionManagement</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/connectionmanagement-element-network-settings.md)|<span data-ttu-id="fdcc0-119">指定到网络主机的最大连接数。</span><span class="sxs-lookup"><span data-stu-id="fdcc0-119">Specifies the maximum number of connections to a network host.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="089fd-120">备注</span><span class="sxs-lookup"><span data-stu-id="089fd-120">Remarks</span></span>  
- <span data-ttu-id="089fd-121">`clear`元素清除连接管理列表中的所有条目。</span><span class="sxs-lookup"><span data-stu-id="089fd-121">The `clear` element clears all entries from the connection management list.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="fdcc0-120">备注</span><span class="sxs-lookup"><span data-stu-id="fdcc0-120">Remarks</span></span>  
+ <span data-ttu-id="fdcc0-121">`clear`元素清除连接管理列表中的所有条目。</span><span class="sxs-lookup"><span data-stu-id="fdcc0-121">The `clear` element clears all entries from the connection management list.</span></span>  
   
-## <a name="configuration-files"></a><span data-ttu-id="089fd-122">配置文件</span><span class="sxs-lookup"><span data-stu-id="089fd-122">Configuration Files</span></span>  
- <span data-ttu-id="089fd-123">此元素可在应用程序配置文件或计算机配置文件 (Machine.config) 中使用。</span><span class="sxs-lookup"><span data-stu-id="089fd-123">This element can be used in the application configuration file or the machine configuration file (Machine.config).</span></span>  
+## <a name="configuration-files"></a><span data-ttu-id="fdcc0-122">配置文件</span><span class="sxs-lookup"><span data-stu-id="fdcc0-122">Configuration Files</span></span>  
+ <span data-ttu-id="fdcc0-123">此元素可在应用程序配置文件或计算机配置文件 (Machine.config) 中使用。</span><span class="sxs-lookup"><span data-stu-id="fdcc0-123">This element can be used in the application configuration file or the machine configuration file (Machine.config).</span></span>  
   
-## <a name="example"></a><span data-ttu-id="089fd-124">示例</span><span class="sxs-lookup"><span data-stu-id="089fd-124">Example</span></span>  
- <span data-ttu-id="089fd-125">以下示例清除连接管理列表中，然后添加服务器 www.contoso.com 和所有其他网络主机的新连接管理项。</span><span class="sxs-lookup"><span data-stu-id="089fd-125">The following example clears the connection management list and then adds new connection management entries for the server www.contoso.com and all other network hosts.</span></span>  
+## <a name="example"></a><span data-ttu-id="fdcc0-124">示例</span><span class="sxs-lookup"><span data-stu-id="fdcc0-124">Example</span></span>  
+ <span data-ttu-id="fdcc0-125">以下示例清除连接管理列表中，然后添加服务器 www.contoso.com 和所有其他网络主机的新连接管理项。</span><span class="sxs-lookup"><span data-stu-id="fdcc0-125">The following example clears the connection management list and then adds new connection management entries for the server www.contoso.com and all other network hosts.</span></span>  
   
 ```xml  
 <configuration>  
@@ -69,7 +69,7 @@ ms.locfileid: "47235921"
 </configuration>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="089fd-126">请参阅</span><span class="sxs-lookup"><span data-stu-id="089fd-126">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="fdcc0-126">请参阅</span><span class="sxs-lookup"><span data-stu-id="fdcc0-126">See Also</span></span>  
  <xref:System.Net.ServicePoint>  
  <xref:System.Net.ServicePointManager>  
- [<span data-ttu-id="089fd-127">网络设置架构</span><span class="sxs-lookup"><span data-stu-id="089fd-127">Network Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+ [<span data-ttu-id="fdcc0-127">网络设置架构</span><span class="sxs-lookup"><span data-stu-id="fdcc0-127">Network Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
