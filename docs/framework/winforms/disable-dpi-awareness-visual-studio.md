@@ -6,12 +6,12 @@ ms.prod: visual-studio-dev15
 ms.technology: vs-ide-designers
 author: gewarren
 ms.author: gewarren
-ms.openlocfilehash: 7ecffedbe536f293945227d817e507f012816737
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 3b290b67ca97065dfc408c09850cf0b5720d65ae
+ms.sourcegitcommit: 700b9003ea6bdd83a53458bbc436c9b5778344f1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48037036"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48263500"
 ---
 # <a name="disable-dpi-awareness-in-visual-studio"></a>禁用 Visual Studio 中的 DPI 识别功能
 
@@ -68,6 +68,10 @@ Visual Studio 运行时作为不识别 DPI 的进程，设计器布局问题已�
 若要设置您的显示设置为 100%缩放 Windows 10 中，键入**显示设置**在搜索框中，然后选择任务栏**更改显示设置**。 在中**设置**窗口中，将**更改的文本、 应用和其他项大小**到**100%**。
 
 缩放到 100%将显示设置可能不希望如此，因为这可以使用户界面太小，才能使用。
+
+## <a name="troubleshoot"></a>疑难解答
+
+如果 Visual Studio 中的预期，DPI 识别转换不起作用，检查以查看是否有`dpiAwareness`中的值**HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image 文件执行 Options\devenv.exe**子项在注册表编辑器中。 如果存在，请删除值。
 
 ## <a name="see-also"></a>请参阅
 

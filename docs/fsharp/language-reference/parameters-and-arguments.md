@@ -3,11 +3,11 @@ title: 参数和自变量 (F#)
 description: '了解有关 F # 语言支持对定义形参并将参数传递给函数、 方法和属性。'
 ms.date: 05/16/2016
 ms.openlocfilehash: a1e2a70ca560bbb09d2cd10f47485cbe5c5e029d
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.sourcegitcommit: 700b9003ea6bdd83a53458bbc436c9b5778344f1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48037295"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48263711"
 ---
 # <a name="parameters-and-arguments"></a>形参和实参
 

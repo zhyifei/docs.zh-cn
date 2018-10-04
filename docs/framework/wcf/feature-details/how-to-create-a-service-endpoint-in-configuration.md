@@ -2,15 +2,15 @@
 title: 如何：在配置中创建服务终结点
 ms.date: 06/16/2016
 ms.assetid: f474e25d-2a27-4f31-84c5-395c442b8e70
-ms.openlocfilehash: f1a2696e2aeb8d0c704d008b064a8f8c8b0745d5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 63a40576b805952197cec5af2f89a5dc4b5d3545
+ms.sourcegitcommit: 700b9003ea6bdd83a53458bbc436c9b5778344f1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33490222"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48266268"
 ---
 # <a name="how-to-create-a-service-endpoint-in-configuration"></a>如何：在配置中创建服务终结点
-终结点提供有权访问 Windows Communication Foundation (WCF) 服务提供的功能的客户端。 您可以通过使用相对和绝对终结点地址的组合来定义一个或多个终结点，或者如果您未定义任何服务终结点，则默认情况下运行时为您提供一些终结点。 本主题演示如何使用同时包含相对和绝对地址的配置文件来添加终结点。  
+终结点向客户端有权访问 Windows Communication Foundation (WCF) 服务提供的功能。 您可以通过使用相对和绝对终结点地址的组合来定义一个或多个终结点，或者如果您未定义任何服务终结点，则默认情况下运行时为您提供一些终结点。 本主题演示如何使用同时包含相对和绝对地址的配置文件来添加终结点。  
   
 ## <a name="example"></a>示例  
  下列服务配置指定一个基址和五个终结点。  
@@ -83,7 +83,7 @@ ms.locfileid: "33490222"
 ```  
   
 ## <a name="example"></a>示例  
- 在以下示例中显示的第一个终结点指定一个相对地址，这意味着该终结点地址是遵循统一资源标识符 (URI) 构成规则的基址和相对地址的结合。 相对地址为空 ("")，因此终结点地址与基址相同。 实际终结点地址是http://localhost:8000/servicemodelsamples/service。  
+ 在以下示例中显示的第一个终结点指定一个相对地址，这意味着该终结点地址是遵循统一资源标识符 (URI) 构成规则的基址和相对地址的结合。 相对地址为空 ("")，因此终结点地址与基址相同。 实际的终结点地址是`http://localhost:8000/servicemodelsamples/service`。  
   
 ```xml  
 <endpoint address=""   
@@ -92,7 +92,7 @@ ms.locfileid: "33490222"
 ```  
   
 ## <a name="example"></a>示例  
- 第二个终结点定义也指定一个相对地址，如下面的示例配置所示。 将相对地址“test”追加到基址。 实际终结点地址是http://localhost:8000/servicemodelsamples/service/test。  
+ 第二个终结点定义也指定一个相对地址，如下面的示例配置所示。 将相对地址“test”追加到基址。 实际的终结点地址是`http://localhost:8000/servicemodelsamples/service/test`。  
   
 ```xml  
 <endpoint address="/test"  
@@ -101,7 +101,7 @@ ms.locfileid: "33490222"
 ```  
   
 ## <a name="example"></a>示例  
- 第三个终结点定义指定一个绝对地址，如下面的示例配置所示。 基址在地址中不起作用。 实际终结点地址是http://localhost:8001/hello/servicemodelsamples。  
+ 第三个终结点定义指定一个绝对地址，如下面的示例配置所示。 基址在地址中不起作用。 实际的终结点地址是`http://localhost:8001/hello/servicemodelsamples`。  
   
 ```xml  
 <endpoint address="http://localhost:8001/hello/servicemodelsamples"  
@@ -119,7 +119,7 @@ ms.locfileid: "33490222"
 ```  
   
 ## <a name="example"></a>示例  
- 若要使用运行时提供的默认终结点，请不要在代码或配置文件中指定任何服务终结点。 在此示例中，运行时在打开服务时创建默认终结点。 有关默认终结点、 绑定和行为的详细信息，请参阅[简化配置](../../../../docs/framework/wcf/simplified-configuration.md)和[简化配置 WCF 服务](../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md)。  
+ 若要使用运行时提供的默认终结点，请不要在代码或配置文件中指定任何服务终结点。 在此示例中，运行时在打开服务时创建默认终结点。 有关默认终结点、绑定和行为的详细信息，请参阅[简化配置](../../../../docs/framework/wcf/simplified-configuration.md)和 [WCF 服务的简化配置](../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md)。  
   
 ```xml  
 <configuration>  

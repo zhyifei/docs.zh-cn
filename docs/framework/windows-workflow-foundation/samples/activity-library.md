@@ -2,64 +2,29 @@
 title: 活动库
 ms.date: 03/30/2017
 ms.assetid: 5323e9d4-71d6-47eb-bfa6-31feac62044d
-ms.openlocfilehash: 29b3efd648ac103526f572a2cac5b8b67c4b220a
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 7e8777d0068e6cca9c9324a6fd2668e6ff9e9da7
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45698466"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48778952"
 ---
 # <a name="activity-library"></a>活动库
 本节包含演示高级自定义活动在 Windows Workflow Foundation (WF) 的示例。  
   
-## <a name="in-this-section"></a>本节内容  
- [.NET Framework 4.5 中的策略活动](../../../../docs/framework/windows-workflow-foundation/samples/policy-activity-in-net-framework-4-5.md)  
- 演示 Policy4 活动如何使 Windows Workflow Foundation [!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)] (WF 3.5)<xref:System.Workflow.Activities.Rules.RuleSet>在 Windows Workflow Foundation 中使用对象[!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)](WF 4.5) 直接通过使用在 WF 3.5 中提供的规则引擎。  
-  
- [要基于一系列值进行切换的自定义活动](../../../../docs/framework/windows-workflow-foundation/samples/custom-activity-to-switch-on-a-range-of-values.md)  
- 演示如何创建扩展对 <xref:System.Activities.Statements.Switch%601> 的使用的自定义活动。  
-  
- [LINQ to Objects 活动](../../../../docs/framework/windows-workflow-foundation/samples/linq-to-objects-activity.md)  
- 演示如何创建活动以使用 LINQ to Objects 查询集合中的元素。  
-  
- [LINQ to SQL 示例](../../../../docs/framework/windows-workflow-foundation/samples/linq-to-sql-sample.md)  
- 演示如何创建活动以使用 LINQ to SQL 查询 SQL Server 数据库的表中的实体。  
-  
- [使用 InvokePowerShell 活动](../../../../docs/framework/windows-workflow-foundation/samples/using-the-invokepowershell-activity.md)  
- 演示如何使用 InvokePowerShell 活动调用 Windows PowerShell 命令。  
-  
- [RangeEnumeration 活动](../../../../docs/framework/windows-workflow-foundation/samples/rangeenumeration-activity.md)  
- 演示如何创建可循环访问数字集合的自定义活动。  
-  
- [正则表达式活动](../../../../docs/framework/windows-workflow-foundation/samples/regular-expression-activities.md)  
- 演示如何创建一组公开 <xref:System.Text.RegularExpressions> 命名空间的正则表达式功能的活动。  
-  
+## <a name="in-this-section"></a>本节内容
+
  [SendMail 自定义活动](../../../../docs/framework/windows-workflow-foundation/samples/sendmail-custom-activity.md)  
  演示如何创建派生自 <xref:System.Activities.AsyncCodeActivity> 的自定义活动，以使用 SMTP 发送邮件供在工作流应用程序内使用。  
   
- [For 活动](../../../../docs/framework/windows-workflow-foundation/samples/for-activity.md)  
- 演示如何生成一个从 <xref:System.Activities.NativeActivity> 继承的自定义活动，以及如何在工作流中使用它来循环访问一个值范围。  
-  
- [等待输入活动](../../../../docs/framework/windows-workflow-foundation/samples/wait-for-input-activity.md)  
- 演示如何在工作流中创建命名书签。  
-  
  [限制并行 ForEach](../../../../docs/framework/windows-workflow-foundation/samples/throttled-parallel-foreach.md)  
- 演示 `ThrottleParallelForEach` 活动与 <xref:System.Activities.Statements.ParallelForEach%601> 活动的相似之处，二者的不同之处在于，前者允许设置一个并发因子来限制要同时执行的分支的数量。  
-  
- [实体活动](../../../../docs/framework/windows-workflow-foundation/samples/entity-activities.md)  
- 演示如何使用 Windows Workflow Foundation 与 ADO.NET 实体框架来简化数据访问。  
+ 演示 `ThrottleParallelForEach` 活动与 <xref:System.Activities.Statements.ParallelForEach%601> 活动的相似之处，二者的不同之处在于，前者允许设置一个并发因子来限制要同时执行的分支的数量。
   
  [数据库访问活动](../../../../docs/framework/windows-workflow-foundation/samples/database-access-activities.md)  
  演示如何创建可以访问数据库以检索或修改信息并使用活动[ADO.NET](https://go.microsoft.com/fwlink/?LinkId=166081)来访问数据库。  
   
- [CommentOut 活动](../../../../docs/framework/windows-workflow-foundation/samples/commentout-activity.md)  
- 演示如何编写一个自定义活动，该活动从执行路径中移除其他活动，从而有效注释掉这些活动。  
-  
  [.NET Framework 4.5 中的外部化策略活动](../../../../docs/framework/windows-workflow-foundation/samples/externalized-policy-activity-in-net-framework-4-5.md)  
- 演示 ExternalizedPolicy4 活动如何允许执行中的现有 Windows Workflow Foundation [!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)] (WF 3.5)<xref:System.Workflow.Activities.Rules.RuleSet>中的 Windows Workflow Foundation 中的对象[!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)](WF 4.5) 直接通过使用规则引擎，它是在 WF 3.5 中提供。  
-  
- [NoPersistScope 活动](../../../../docs/framework/windows-workflow-foundation/samples/nopersistscope-activity.md)  
- 演示如何操作工作流中的不可序列化且可释放的状态。  
+ 演示 ExternalizedPolicy4 活动如何允许执行中的现有 Windows Workflow Foundation [!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)] (WF 3.5)<xref:System.Workflow.Activities.Rules.RuleSet>中的 Windows Workflow Foundation 中的对象[!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)](WF 4.5) 直接通过使用规则引擎，它是在 WF 3.5 中提供。 
   
  [非泛型 ForEach](../../../../docs/framework/windows-workflow-foundation/samples/non-generic-foreach.md)  
  演示了如何创建非泛型版本的 <xref:System.Activities.Statements.ForEach%601> 活动。  

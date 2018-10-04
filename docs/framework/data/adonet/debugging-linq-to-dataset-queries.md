@@ -2,15 +2,16 @@
 title: 调试 LINQ to DataSet 查询
 ms.date: 03/30/2017
 ms.assetid: f4c54015-8ce2-4c5c-8d18-7038144cc66d
-ms.openlocfilehash: fd10e6c715529ba937ba09732a254d311158b0f1
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: c1014db4cad54420b917585becd2a2031638c1d9
+ms.sourcegitcommit: 700b9003ea6bdd83a53458bbc436c9b5778344f1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44085999"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48266255"
 ---
 # <a name="debugging-linq-to-dataset-queries"></a>调试 LINQ to DataSet 查询
-[!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] 支持 [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] 代码的调试。 但是，有一些调试之间的差异[!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]代码和非-[!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]托管代码。 大多数调试功能都使用[!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]语句，其中包括单步执行、 设置断点，以及查看调试器窗口中显示的结果。 但是，延迟查询执行一些在调试时应考虑的副作用[!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]代码并使用编辑并继续的一些限制。 本主题讨论调试方面的问题，该调试对于与非 [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] 托管代码对比的 [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] 来说是唯一的。  
+
+Visual Studio 支持的调试[!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]代码。 但是，有一些调试之间的差异[!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]代码和非-[!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]托管代码。 大多数调试功能都使用[!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]语句，其中包括单步执行、 设置断点，以及查看调试器窗口中显示的结果。 但是，延迟查询执行一些在调试时应考虑的副作用[!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]代码并使用编辑并继续的一些限制。 本主题讨论调试方面的问题，该调试对于与非 [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] 托管代码对比的 [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] 来说是唯一的。  
   
 ## <a name="viewing-results"></a>查看结果  
  你可以查看的结果[!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]通过使用数据提示、 监视窗口和快速监视对话框中的语句。 使用源窗口，可以将指针暂时停留在源窗口中的查询上，这样数据提示就会出现。 可以复制 [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] 变量，然后将其粘贴到“监视”窗口或“快速监视”对话框。 在 [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] 中，创建或声明查询时并不计算查询，而只在执行查询时才计算。 这称为*延迟执行*。 因此，查询变量直到计算时才有值。 有关详细信息，请参阅[LINQ to DataSet 中的查询](../../../../docs/framework/data/adonet/queries-in-linq-to-dataset.md)。  

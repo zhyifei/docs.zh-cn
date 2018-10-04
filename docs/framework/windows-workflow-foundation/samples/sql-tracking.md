@@ -2,26 +2,26 @@
 title: SQL 跟踪
 ms.date: 03/30/2017
 ms.assetid: bcaebeb1-b9e5-49e8-881b-e49af66fd341
-ms.openlocfilehash: 5f8d7bbd57965b4d7399373416caea87d4d84187
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 84d3fb994c790301ceb55b945bf972c21ed2a971
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43779138"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48584309"
 ---
 # <a name="sql-tracking"></a>SQL 跟踪
-此示例演示如何编写一个自定义 SQL 跟踪参与者，该参与者将跟踪记录写入到一个 SQL 数据库。 Windows Workflow Foundation (WF) 提供了工作流跟踪来深入了解工作流实例的执行。 跟踪运行时在工作流执行过程中会发出工作流跟踪记录。 有关工作流跟踪的详细信息，请参阅[工作流跟踪](../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)。  
-  
-#### <a name="to-use-this-sample"></a>使用此示例  
-  
-1.  确认您已安装 SQL Server 2008、 SQL Server 2008 Express 或更新版本。 与示例打包在一起的脚本假定在您的本地计算机上使用 SQL Express 实例。 如果您安装了不同的实例，请在运行此示例之前修改与数据库相关的脚本。  
-  
-2.  通过在脚本目录 (\WF\Basic\Tracking\SqlTracking\CS\Scripts) 中运行 Trackingsetup.cmd 来创建 SQL Server 跟踪数据库。 这会创建一个名为 TrackingSample 的数据库。  
-  
+此示例演示如何编写一个自定义 SQL 跟踪参与者，该参与者将跟踪记录写入到一个 SQL 数据库。 Windows Workflow Foundation (WF) 提供了工作流跟踪来深入了解工作流实例的执行。 跟踪运行时在工作流执行过程中会发出工作流跟踪记录。 有关工作流跟踪的详细信息，请参阅[工作流跟踪](../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)。
+
+#### <a name="to-use-this-sample"></a>使用此示例
+
+1.  确认您已安装 SQL Server 2008、 SQL Server 2008 Express 或更新版本。 与示例打包在一起的脚本假定在您的本地计算机上使用 SQL Express 实例。 如果您安装了不同的实例，请在运行此示例之前修改与数据库相关的脚本。
+
+2.  通过在脚本目录 (\WF\Basic\Tracking\SqlTracking\CS\Scripts) 中运行 Trackingsetup.cmd 来创建 SQL Server 跟踪数据库。 这会创建一个名为 TrackingSample 的数据库。
+
     > [!NOTE]
     >  脚本将在 SQL Express 的默认实例上创建该数据库。 如果您想在不同的数据库实例上安装该数据库，请编辑 Trackingsetup.cmd 脚本。  
   
-3.  在 [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] 中打开 SqlTrackingSample.sln。  
+3.  在 Visual Studio 2010 中打开 SqlTrackingSample.sln。  
   
 4.  按 Ctrl+Shift+B 生成解决方案。  
   
@@ -48,8 +48,8 @@ ms.locfileid: "43779138"
 1.  在示例目录 (\WF\Basic\Tracking\SqlTracking) 中运行 Trackingcleanup.cmd 脚本。  
   
     > [!NOTE]
-    >  Trackingcleanup.cmd 将尝试删除本地计算机 SQL Express 中的数据库。 如果您使用的是其他 SQL Server 实例，请编辑 Trackingcleanup.cmd。  
-  
+    >  Trackingcleanup.cmd 将尝试删除本地计算机 SQL Express 中的数据库。 如果您使用的是其他 SQL Server 实例，请编辑 Trackingcleanup.cmd。
+
 > [!IMPORTANT]
 >  您的计算机上可能已安装这些示例。 在继续操作之前，请先检查以下（默认）目录：  
 >   

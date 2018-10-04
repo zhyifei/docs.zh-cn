@@ -5,19 +5,19 @@ helpviewer_keywords:
 - NT Service
 - NT Service Host Sample [Windows Communication Foundation]
 ms.assetid: 1b2f45c5-2bed-4979-b0ee-8f9efcfec028
-ms.openlocfilehash: 0283fd8b3fd275be9787bb75763e9395091426a3
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 65797863fc8187ffebbcb660e9fb285bfa1aabd0
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43513666"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48583849"
 ---
 # <a name="windows-service-host"></a>Windows 服务主机
-此示例演示在托管 Windows 服务中承载的 Windows Communication Foundation (WCF) 服务。 Windows 服务均使用中的服务小程序控制**控制面板**，可以配置要启动的系统重启后自动启动。 此示例包含一个客户端程序和一个 Windows 服务程序。 服务作为一个 .exe 程序实现，并包含其自己的主机代码。 在其他承载环境（如 Windows 进程激活服务 (WAS) 或 Internet Information Services (IIS)）中，你没有必要编写承载代码。  
-  
+此示例演示在托管 Windows 服务中承载的 Windows Communication Foundation (WCF) 服务。 Windows 服务均使用中的服务小程序控制**控制面板**，可以配置要启动的系统重启后自动启动。 此示例包含一个客户端程序和一个 Windows 服务程序。 服务作为一个 .exe 程序实现，并包含其自己的主机代码。 在其他承载环境（如 Windows 进程激活服务 (WAS) 或 Internet Information Services (IIS)）中，你没有必要编写承载代码。
+
 > [!NOTE]
->  本主题的最后介绍了此示例的设置过程和生成说明。  
-  
+>  本主题的最后介绍了此示例的设置过程和生成说明。
+
 > [!IMPORTANT]
 >  您的计算机上可能已安装这些示例。 在继续操作之前，请先检查以下（默认）目录：  
 >   
@@ -59,7 +59,7 @@ ms.locfileid: "43513666"
   
 2.  若要生成 C# 或 Visual Basic .NET 版本的解决方案，请按照 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)中的说明进行操作。  
   
-3.  生成解决方案后，在提升后的 [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] 命令提示中运行 Setup.bat 以使用 Installutil.exe 工具安装 Windows 服务。 该服务应出现在“服务”中。  
+3.  解决方案生成后，从提升的 Visual Studio 2012 命令提示符安装使用 Installutil.exe 工具的 Windows 服务中运行 Setup.bat。 该服务应出现在“服务”中。  
   
 4.  若要在单或跨计算机配置中运行示例，请按照中的说明[运行 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/running-the-samples.md)。  
   

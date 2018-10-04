@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 ms.assetid: 6c54c704-b55e-4631-88ff-4d4a5621554c
 author: BrucePerlerMS
 ms.openlocfilehash: 29881be43f02d275ad135efd97dc8b25a7409beb
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47235450"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48778164"
 ---
 # <a name="ltcertificatevalidationgt"></a>&lt;certificatevalidation 设置&gt;
 控制令牌处理程序用来验证证书的设置。 如果特定的处理程序配置了其自己的验证程序，则将重写这些设置。  

@@ -2,125 +2,125 @@
 title: 服务标识示例
 ms.date: 03/30/2017
 ms.assetid: 79fa8c1c-85bb-4b67-bc67-bfaf721303f8
-ms.openlocfilehash: 8cd6688802628a484cc9fe1fc1dffa82ddecd12a
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 913795f9d9e35b4ecce5998320cc64c0c0b46ba7
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44084904"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48582614"
 ---
 # <a name="service-identity-sample"></a>服务标识示例
-此服务标识示例演示如何为服务设置标识。 客户端可以在设计时使用服务的元数据来检索标识，然后在运行时对服务的标识进行身份验证。 服务标识的概念是允许客户端在调用服务的任何操作之前对服务进行身份验证，从而保护客户端，防止进行未经身份验证的调用。 在安全连接中，服务还在允许客户端访问其之前对客户端的凭据进行身份验证，但这不是此示例要介绍的重点。 请参阅中的示例[客户端](../../../../docs/framework/wcf/samples/client.md)演示服务器身份验证。  
-  
+此服务标识示例演示如何为服务设置标识。 客户端可以在设计时使用服务的元数据来检索标识，然后在运行时对服务的标识进行身份验证。 服务标识的概念是允许客户端在调用服务的任何操作之前对服务进行身份验证，从而保护客户端，防止进行未经身份验证的调用。 在安全连接中，服务还在允许客户端访问其之前对客户端的凭据进行身份验证，但这不是此示例要介绍的重点。 请参阅中的示例[客户端](../../../../docs/framework/wcf/samples/client.md)演示服务器身份验证。
+
 > [!NOTE]
->  本主题的最后介绍了此示例的设置过程和生成说明。  
-  
- 此示例介绍以下功能：  
-  
--   如何在服务的不同终结点上设置不同类型的标识。 每种标识具有不同的功能。 要使用哪种标识取决于终结点绑定中使用的安全凭据的类型。  
-  
--   可以在配置中通过声明方式设置标识，也可以在代码中强制设置标识。 通常，对于客户端和服务，应使用配置来设置标识。  
-  
--   如何在客户端设置自定义标识。 自定义标识通常是对现有标识类型的自定义，客户端可以通过它检查服务凭据中提供的其他声明信息，以便在调用服务之前做出身份验证决策。  
-  
+>  本主题的最后介绍了此示例的设置过程和生成说明。
+
+ 此示例介绍以下功能：
+
+-   如何在服务的不同终结点上设置不同类型的标识。 每种标识具有不同的功能。 要使用哪种标识取决于终结点绑定中使用的安全凭据的类型。
+
+-   可以在配置中通过声明方式设置标识，也可以在代码中强制设置标识。 通常，对于客户端和服务，应使用配置来设置标识。
+
+-   如何在客户端设置自定义标识。 自定义标识通常是对现有标识类型的自定义，客户端可以通过它检查服务凭据中提供的其他声明信息，以便在调用服务之前做出身份验证决策。
+
     > [!NOTE]
-    >  此示例检查称为 identity.com 的特定证书的标识以及此证书中包含的 RSA 密钥。 在客户端上的配置中使用证书和 RSA 标识类型时，获取这些值的简便方法是检查在其中序列化这些值的服务的 WSDL。  
-  
- 下面的示例代码演示如何使用 WSHttpBinding 向证书的域名服务器 (DNS) 配置服务终结点的标识。  
-  
-```  
-//Create a service endpoint and set its identity to the certificate's DNS                 
-WSHttpBinding wsAnonbinding = new WSHttpBinding (SecurityMode.Message);  
-// Client are Anonymous to the service  
-wsAnonbinding.Security.Message.ClientCredentialType = MessageCredentialType.None;  
-WServiceEndpoint ep = serviceHost.AddServiceEndpoint(typeof(ICalculator),wsAnonbinding, String.Empty);  
-EndpointAddress epa = new EndpointAddress(dnsrelativeAddress,EndpointIdentity.CreateDnsIdentity("identity.com"));  
-ep.Address = epa;  
-```  
-  
- 还可以在 App.config 文件的配置中指定标识。 下面的示例演示如何为服务终结点设置 UPN（用户主要名称）标识。  
-  
-```xml  
-<endpoint address="upnidentity"  
-        behaviorConfiguration=""  
-        binding="wsHttpBinding"  
-        bindingConfiguration="WSHttpBinding_Windows"  
-        name="WSHttpBinding_ICalculator_Windows"  
-        contract="Microsoft.ServiceModel.Samples.ICalculator">  
-  <!-- Set the UPN identity for this endpoint -->  
-  <identity>  
-      <userPrincipalName value="host\myservice.com" />  
-  </identity >  
-</endpoint>  
-```  
-  
- 通过从 <xref:System.ServiceModel.EndpointIdentity> 和 <xref:System.ServiceModel.Security.IdentityVerifier> 类派生，可以在客户端设置自定义标识。 从概念上讲，可以将 <xref:System.ServiceModel.Security.IdentityVerifier> 类视为服务的 `AuthorizationManager` 类的客户端等效类。 下面的代码示例演示了 `OrgEndpointIdentity` 的实现，它用于存储组织名称，以便与服务器证书的主题名称相匹配。 对该组织名称的授权检查发生在 `CheckAccess` 类的 `CustomIdentityVerifier` 方法上。  
-  
-```  
-// This custom EndpointIdentity stores an organization name   
-public class OrgEndpointIdentity : EndpointIdentity  
-{  
-    private string orgClaim;  
-    public OrgEndpointIdentity(string orgName)  
-    {  
-        orgClaim = orgName;  
-    }  
-    public string OrganizationClaim  
-    {  
-        get { return orgClaim; }  
-        set { orgClaim = value; }  
-    }  
-}  
-  
-//This custom IdentityVerifier uses the supplied OrgEndpointIdentity to  
-//check that X.509 certificate's distinguished name claim contains  
-//the organization name e.g. the string value "O=Contoso"   
-class CustomIdentityVerifier : IdentityVerifier  
-{  
-    public override bool CheckAccess(EndpointIdentity identity, AuthorizationContext authContext)  
-    {  
-        bool returnvalue = false;  
-        foreach (ClaimSet claimset in authContext.ClaimSets)  
-        {  
-            foreach (Claim claim in claimset)  
-            {  
-                if (claim.ClaimType == "http://schemas.microsoft.com/ws/2005/05/identity/claims/x500distinguishedname")  
-                {  
-                    X500DistinguishedName name = (X500DistinguishedName)claim.Resource;  
-                    if (name.Name.Contains(((OrgEndpointIdentity)identity).OrganizationClaim))  
-                    {  
-                        Console.WriteLine("Claim Type: {0}",claim.ClaimType);  
-                        Console.WriteLine("Right: {0}", claim.Right);  
-                        Console.WriteLine("Resource: {0}",claim.Resource);  
-                        Console.WriteLine();  
-                        returnvalue = true;  
-                    }  
-                }  
-            }  
-        }  
-        return returnvalue;  
-    }  
-}  
-```  
-  
- 此示例使用称为 identity.com 的证书，此证书位于特定于语言的 Identity 解决方案文件夹中。  
-  
-### <a name="to-set-up-build-and-run-the-sample"></a>设置、生成和运行示例  
-  
-1.  请确保您具有执行[的 Windows Communication Foundation 示例的一次性安装过程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
-  
-2.  若要生成 C# 或 Visual Basic .NET 版本的解决方案，请按照 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)中的说明进行操作。  
-  
-3.  若要在单或跨计算机配置中运行示例，请按照中的说明[运行 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/running-the-samples.md)。  
-  
-### <a name="to-run-the-sample-on-the-same-computer"></a>在同一计算机上运行示例  
-  
-1.  在 [!INCLUDE[wxp](../../../../includes/wxp-md.md)] 或 [!INCLUDE[wv](../../../../includes/wv-md.md)] 上，使用 MMC 管理单元工具将 Identity 解决方案文件夹中的 Identity.pfx 证书文件导入 LocalMachine/My（个人）证书存储区中。 此文件受密码保护。 在导入过程中，将提示您输入密码。 类型`xyz`到密码框。 有关详细信息，请参阅[如何： 使用 MMC 管理单元查看证书](../../../../docs/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in.md)主题。 完成此操作后，使用管理员特权在 Visual Studio 命令提示中运行 Setup.bat，将此证书复制到 CurrentUser/Trusted People 存储中以便在客户端上使用。  
-  
-2.  在 [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] 上，使用管理员特权在 [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] 命令提示中运行示例安装文件夹中的 Setup.bat。 这将安装运行示例所需的所有证书。  
-  
+    >  此示例检查称为 identity.com 的特定证书的标识以及此证书中包含的 RSA 密钥。 在客户端上的配置中使用证书和 RSA 标识类型时，获取这些值的简便方法是检查在其中序列化这些值的服务的 WSDL。
+
+ 下面的示例代码演示如何使用 WSHttpBinding 向证书的域名服务器 (DNS) 配置服务终结点的标识。
+
+```
+//Create a service endpoint and set its identity to the certificate's DNS
+WSHttpBinding wsAnonbinding = new WSHttpBinding (SecurityMode.Message);
+// Client are Anonymous to the service
+wsAnonbinding.Security.Message.ClientCredentialType = MessageCredentialType.None;
+WServiceEndpoint ep = serviceHost.AddServiceEndpoint(typeof(ICalculator),wsAnonbinding, String.Empty);
+EndpointAddress epa = new EndpointAddress(dnsrelativeAddress,EndpointIdentity.CreateDnsIdentity("identity.com"));
+ep.Address = epa;
+```
+
+ 还可以在 App.config 文件的配置中指定标识。 下面的示例演示如何为服务终结点设置 UPN（用户主要名称）标识。
+
+```xml
+<endpoint address="upnidentity"
+        behaviorConfiguration=""
+        binding="wsHttpBinding"
+        bindingConfiguration="WSHttpBinding_Windows"
+        name="WSHttpBinding_ICalculator_Windows"
+        contract="Microsoft.ServiceModel.Samples.ICalculator">
+  <!-- Set the UPN identity for this endpoint -->
+  <identity>
+      <userPrincipalName value="host\myservice.com" />
+  </identity >
+</endpoint>
+```
+
+ 通过从 <xref:System.ServiceModel.EndpointIdentity> 和 <xref:System.ServiceModel.Security.IdentityVerifier> 类派生，可以在客户端设置自定义标识。 从概念上讲，可以将 <xref:System.ServiceModel.Security.IdentityVerifier> 类视为服务的 `AuthorizationManager` 类的客户端等效类。 下面的代码示例演示了 `OrgEndpointIdentity` 的实现，它用于存储组织名称，以便与服务器证书的主题名称相匹配。 对该组织名称的授权检查发生在 `CheckAccess` 类的 `CustomIdentityVerifier` 方法上。
+
+```
+// This custom EndpointIdentity stores an organization name
+public class OrgEndpointIdentity : EndpointIdentity
+{
+    private string orgClaim;
+    public OrgEndpointIdentity(string orgName)
+    {
+        orgClaim = orgName;
+    }
+    public string OrganizationClaim
+    {
+        get { return orgClaim; }
+        set { orgClaim = value; }
+    }
+}
+
+//This custom IdentityVerifier uses the supplied OrgEndpointIdentity to
+//check that X.509 certificate's distinguished name claim contains
+//the organization name e.g. the string value "O=Contoso"
+class CustomIdentityVerifier : IdentityVerifier
+{
+    public override bool CheckAccess(EndpointIdentity identity, AuthorizationContext authContext)
+    {
+        bool returnvalue = false;
+        foreach (ClaimSet claimset in authContext.ClaimSets)
+        {
+            foreach (Claim claim in claimset)
+            {
+                if (claim.ClaimType == "http://schemas.microsoft.com/ws/2005/05/identity/claims/x500distinguishedname")
+                {
+                    X500DistinguishedName name = (X500DistinguishedName)claim.Resource;
+                    if (name.Name.Contains(((OrgEndpointIdentity)identity).OrganizationClaim))
+                    {
+                        Console.WriteLine("Claim Type: {0}",claim.ClaimType);
+                        Console.WriteLine("Right: {0}", claim.Right);
+                        Console.WriteLine("Resource: {0}",claim.Resource);
+                        Console.WriteLine();
+                        returnvalue = true;
+                    }
+                }
+            }
+        }
+        return returnvalue;
+    }
+}
+```
+
+ 此示例使用称为 identity.com 的证书，此证书位于特定于语言的 Identity 解决方案文件夹中。
+
+### <a name="to-set-up-build-and-run-the-sample"></a>设置、生成和运行示例
+
+1.  请确保您具有执行[的 Windows Communication Foundation 示例的一次性安装过程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。
+
+2.  若要生成 C# 或 Visual Basic .NET 版本的解决方案，请按照 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)中的说明进行操作。
+
+3.  若要在单或跨计算机配置中运行示例，请按照中的说明[运行 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/running-the-samples.md)。
+
+### <a name="to-run-the-sample-on-the-same-computer"></a>在同一计算机上运行示例
+
+1.  在 [!INCLUDE[wxp](../../../../includes/wxp-md.md)] 或 [!INCLUDE[wv](../../../../includes/wv-md.md)] 上，使用 MMC 管理单元工具将 Identity 解决方案文件夹中的 Identity.pfx 证书文件导入 LocalMachine/My（个人）证书存储区中。 此文件受密码保护。 在导入过程中，将提示您输入密码。 类型`xyz`到密码框。 有关详细信息，请参阅[如何： 使用 MMC 管理单元查看证书](../../../../docs/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in.md)主题。 完成此操作后，使用管理员特权在 Visual Studio 命令提示中运行 Setup.bat，将此证书复制到 CurrentUser/Trusted People 存储中以便在客户端上使用。
+
+2.  在[!INCLUDE[ws2003](../../../../includes/ws2003-md.md)]，从示例安装文件夹中具有管理员权限的 Visual Studio 2012 命令提示符中运行 Setup.bat。 这将安装运行示例所需的所有证书。
+
     > [!NOTE]
-    >  Setup.bat 批处理文件设计为通过 [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] 命令提示运行。 [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] 命令提示中设置的 PATH 环境变量指向包含 Setup.bat 脚本所需的可执行文件的目录。 请确保在运行完该示例后通过运行 Cleanup.bat 来移除证书。 其他安全示例使用相同的证书。  
+    >  Setup.bat 批处理文件旨在为从 Visual Studio 2012 命令提示运行。 在 Visual Studio 2012 命令提示符点设置为包含 Setup.bat 脚本所需的可执行文件的目录路径环境变量。 请确保在运行完该示例后通过运行 Cleanup.bat 来移除证书。 其他安全示例使用相同的证书。  
   
 3.  启动 \service\bin 目录中的 Service.exe。 请确保该服务指示它已准备并按显示一条提示\<Enter > 以终止服务。  
   
@@ -157,6 +157,6 @@ class CustomIdentityVerifier : IdentityVerifier
 -   运行完示例后运行示例文件夹中的 Cleanup.bat。  
   
     > [!NOTE]
-    >  此脚本不会在跨计算机运行此示例时移除客户端上的服务证书。 如果有运行在计算机之间使用证书的 Windows Communication Foundation (WCF) 示例，请确保清除已安装在 CurrentUser-TrustedPeople 存储区中的服务证书。 为此，请使用以下命令：`certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>`，例如：`certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`。  
-  
+    >  此脚本不会在跨计算机运行此示例时移除客户端上的服务证书。 如果有运行在计算机之间使用证书的 Windows Communication Foundation (WCF) 示例，请确保清除已安装在 CurrentUser-TrustedPeople 存储区中的服务证书。 为此，请使用以下命令：`certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>`，例如：`certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`。
+
 ## <a name="see-also"></a>请参阅

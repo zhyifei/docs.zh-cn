@@ -2,19 +2,19 @@
 title: 如何：以编程方式向 WCF 服务和客户端添加可检测性
 ms.date: 03/30/2017
 ms.assetid: 4f7ae7ab-6fc8-4769-9730-c14d43f7b9b1
-ms.openlocfilehash: e32128a20a765762249e6892232447c56036c2d8
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 407777b1545fb12eb3ed1787fdba86991c894fdb
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43524135"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48779889"
 ---
 # <a name="how-to-programmatically-add-discoverability-to-a-wcf-service-and-client"></a>如何：以编程方式向 WCF 服务和客户端添加可检测性
 本主题说明如何使 Windows Communication Foundation (WCF) 服务可发现。 它基于[自托管](https://go.microsoft.com/fwlink/?LinkId=145523)示例。  
   
 ### <a name="to-configure-the-existing-self-host-service-sample-for-discovery"></a>针对 Discovery 配置现有自承载服务示例  
   
-1.  在 [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] 中打开自承载解决方案。 示例位于 TechnologySamples\Basic\Service\Hosting\SelfHost 目录中。  
+1.  在 Visual Studio 2012 中打开自承载解决方案。 示例位于 TechnologySamples\Basic\Service\Hosting\SelfHost 目录中。  
   
 2.  将对 `System.ServiceModel.Discovery.dll` 的引用添加到服务项目中。 可能会看到错误消息，指出"系统。 ServiceModel.Discovery.dll 或其某个依赖项需要更高版本的[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]比项目中指定..."如果看到此消息，请右键单击解决方案资源管理器中的项目并选择**属性**。 在中**项目属性**窗口中，请确保**目标框架**是[!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]。  
   

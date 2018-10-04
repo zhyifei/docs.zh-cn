@@ -2,80 +2,80 @@
 title: 挂起的实例管理
 ms.date: 03/30/2017
 ms.assetid: f5ca3faa-ba1f-4857-b92c-d927e4b29598
-ms.openlocfilehash: f614770121185644c3395f923cf7835141653f55
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: d977e058b2de2939d64c91aa9353f6559b3c7013
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43524910"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48583864"
 ---
 # <a name="suspended-instance-management"></a>挂起的实例管理
-此示例演示如何管理已挂起的工作流实例。  <xref:System.ServiceModel.Activities.Description.WorkflowUnhandledExceptionBehavior> 的默认操作为 `AbandonAndSuspend`。 这意味着，在默认情况下，从 <xref:System.ServiceModel.WorkflowServiceHost> 中承载的某个工作流实例抛出的未处理异常会导致从内存中释放（放弃）该实例，而该实例的持久版本将被标记为已挂起。 已挂起的工作流实例在取消挂起之前无法运行。  
-  
- 此示例演示如何实现用于查询已挂起实例的命令行实用工具，以及如何为用户提供恢复或终止实例的选项。 在此示例中，一个工作流服务有意引发异常，从而使该服务挂起。 然后可以使用命令行实用工具查询该实例，并随后恢复或终止该实例。  
-  
-## <a name="demonstrates"></a>演示  
- <xref:System.ServiceModel.WorkflowServiceHost> 与<xref:System.ServiceModel.Activities.Description.WorkflowUnhandledExceptionBehavior>和<xref:System.ServiceModel.Activities.WorkflowControlEndpoint>Windows Workflow Foundation (WF) 中。  
-  
-## <a name="discussion"></a>讨论  
- 本示例中实现的命令行实用工具特定于 [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] 中附带的 SQL 实例存储区实现。 如果您具有该实例存储区的自定义实现，则可以使用特定于您实例存储区的实现替换示例中的 `WorkflowInstanceCommand` 实现，来改编此实用工具。  
-  
- 所提供的实现直接针对 SQL 实例存储区来运行 SQL 命令以列出挂起的实例，并依赖于添加到 <xref:System.ServiceModel.Activities.WorkflowControlEndpoint> 的 <xref:System.ServiceModel.WorkflowServiceHost>，以便恢复或终止实例。  
-  
-#### <a name="to-set-up-build-and-run-the-sample"></a>设置、生成和运行示例  
-  
-1.  此示例要求启用以下 Windows 组件：  
-  
-    1.  Microsoft Message Queues (MSMQ) Server  
-  
-    2.  SQL Server Express  
-  
-2.  设置 SQL Server 数据库。  
-  
-    1.  从[!INCLUDE[vs2010](../../../../includes/vs2010-md.md)]命令提示符处，运行"setup.cmd"，从 SuspendedInstanceManagement 示例目录执行以下操作：  
-  
-        1.  使用 SQL Server Express 创建持久性数据库。 如果持久性数据库已存在，则删除该数据库并重新创建一个  
-  
-        2.  设置持久性数据库。  
-  
-        3.  将 IIS APPPOOL\DefaultAppPool 和 NT AUTHORITY\Network Service 添加到设置持久性数据库时定义的 InstanceStoreUsers 角色。  
-  
-3.  设置服务队列。  
-  
-    1.  在中[!INCLUDE[vs2010](../../../../includes/vs2010-md.md)]，右键单击**SampleWorkflowApp**项目，然后单击**设为启动项目**。  
-  
-    2.  编译并运行 SampleWorkflowApp 通过按**F5**。 这将创建所需队列。  
-  
-    3.  按**Enter**停止 SampleWorkflowApp。  
-  
-    4.  通过在命令提示符下运行 Compmgmt.msc 来打开计算机管理控制台。  
-  
-    5.  展开**服务和应用程序**，**消息队列**，**专用队列**。  
-  
-    6.  右键单击**ReceiveTx**队列，然后选择**属性**。  
-  
-    7.  选择**安全**选项卡上，并允许**Everyone**有权**接收消息**，**扫视消息**，和**将消息发送**。  
-  
-4.  现在运行示例。  
-  
-    1.  在中[!INCLUDE[vs2010](../../../../includes/vs2010-md.md)]，再次运行 SampleWorkflowApp 项目而不进行调试通过按**Ctrl + F5**。 将在控制台窗口中输出两个终结点地址：一个用于应用程序终结点，另一个来自 <xref:System.ServiceModel.Activities.WorkflowControlEndpoint>。 随后会创建一个工作流实例，该实例的跟踪记录会出现在控制台窗口中。 该工作流实例会引发异常，从而导致该实例挂起或中止。  
-  
-    2.  随后可以使用命令行实用工具对这些实例中的任何一个进行进一步操作。 命令行自变量的语法如下：  
-  
-         `SuspendedInstanceManagement -Command:[CommandName] -Server:[ServerName] -Database:[DatabaseName] -InstanceId:[InstanceId]`  
-  
-         支持的命令为：`Query`、`Resume` 和 `Terminate`。  只有 `Resume` 和 `Terminate` 才需要 InstanceId 开关。  
-  
-#### <a name="to-cleanup-optional"></a>清理（可选）  
-  
-1.  通过在 `vs2010` 命令提示符下运行 Compmgmt.msc 来打开计算机管理控制台。  
-  
-2.  展开**服务和应用程序**，**消息队列**，**专用队列**。  
-  
-3.  删除**ReceiveTx**队列。  
-  
-4.  若要删除持久性数据库，请运行 cleanup.cmd。  
-  
+此示例演示如何管理已挂起的工作流实例。  <xref:System.ServiceModel.Activities.Description.WorkflowUnhandledExceptionBehavior> 的默认操作为 `AbandonAndSuspend`。 这意味着，在默认情况下，从 <xref:System.ServiceModel.WorkflowServiceHost> 中承载的某个工作流实例抛出的未处理异常会导致从内存中释放（放弃）该实例，而该实例的持久版本将被标记为已挂起。 已挂起的工作流实例在取消挂起之前无法运行。
+
+ 此示例演示如何实现用于查询已挂起实例的命令行实用工具，以及如何为用户提供恢复或终止实例的选项。 在此示例中，一个工作流服务有意引发异常，从而使该服务挂起。 然后可以使用命令行实用工具查询该实例，并随后恢复或终止该实例。
+
+## <a name="demonstrates"></a>演示
+ <xref:System.ServiceModel.WorkflowServiceHost> 与<xref:System.ServiceModel.Activities.Description.WorkflowUnhandledExceptionBehavior>和<xref:System.ServiceModel.Activities.WorkflowControlEndpoint>Windows Workflow Foundation (WF) 中。
+
+## <a name="discussion"></a>讨论
+ 本示例中实现的命令行实用工具特定于 [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] 中附带的 SQL 实例存储区实现。 如果您具有该实例存储区的自定义实现，则可以使用特定于您实例存储区的实现替换示例中的 `WorkflowInstanceCommand` 实现，来改编此实用工具。
+
+ 所提供的实现直接针对 SQL 实例存储区来运行 SQL 命令以列出挂起的实例，并依赖于添加到 <xref:System.ServiceModel.Activities.WorkflowControlEndpoint> 的 <xref:System.ServiceModel.WorkflowServiceHost>，以便恢复或终止实例。
+
+#### <a name="to-set-up-build-and-run-the-sample"></a>设置、生成和运行示例
+
+1.  此示例要求启用以下 Windows 组件：
+
+    1.  Microsoft Message Queues (MSMQ) Server
+
+    2.  SQL Server Express
+
+2.  设置 SQL Server 数据库。
+
+    1.  从 Visual Studio 2010 命令提示符下，从将执行以下 SuspendedInstanceManagement 示例目录运行"setup.cmd":
+
+        1.  使用 SQL Server Express 创建持久性数据库。 如果持久性数据库已存在，则删除该数据库并重新创建一个
+
+        2.  设置持久性数据库。
+
+        3.  将 IIS APPPOOL\DefaultAppPool 和 NT AUTHORITY\Network Service 添加到设置持久性数据库时定义的 InstanceStoreUsers 角色。
+
+3.  设置服务队列。
+
+    1.  在 Visual Studio 2010 中，右键单击**SampleWorkflowApp**项目，然后单击**设为启动项目**。
+
+    2.  编译并运行 SampleWorkflowApp 通过按**F5**。 这将创建所需队列。
+
+    3.  按**Enter**停止 SampleWorkflowApp。
+
+    4.  通过在命令提示符下运行 Compmgmt.msc 来打开计算机管理控制台。
+
+    5.  展开**服务和应用程序**，**消息队列**，**专用队列**。
+
+    6.  右键单击**ReceiveTx**队列，然后选择**属性**。
+
+    7.  选择**安全**选项卡上，并允许**Everyone**有权**接收消息**，**扫视消息**，和**将消息发送**。
+
+4.  现在运行示例。
+
+    1.  在 Visual Studio 2010 中，再次运行该 SampleWorkflowApp 项目而不进行调试通过按**Ctrl + F5**。 将在控制台窗口中输出两个终结点地址：一个用于应用程序终结点，另一个来自 <xref:System.ServiceModel.Activities.WorkflowControlEndpoint>。 随后会创建一个工作流实例，该实例的跟踪记录会出现在控制台窗口中。 该工作流实例会引发异常，从而导致该实例挂起或中止。
+
+    2.  随后可以使用命令行实用工具对这些实例中的任何一个进行进一步操作。 命令行自变量的语法如下：
+
+         `SuspendedInstanceManagement -Command:[CommandName] -Server:[ServerName] -Database:[DatabaseName] -InstanceId:[InstanceId]`
+
+         支持的命令为：`Query`、`Resume` 和 `Terminate`。  只有 `Resume` 和 `Terminate` 才需要 InstanceId 开关。
+
+#### <a name="to-cleanup-optional"></a>清理（可选）
+
+1.  通过在 `vs2010` 命令提示符下运行 Compmgmt.msc 来打开计算机管理控制台。
+
+2.  展开**服务和应用程序**，**消息队列**，**专用队列**。
+
+3.  删除**ReceiveTx**队列。
+
+4.  若要删除持久性数据库，请运行 cleanup.cmd。
+
 > [!IMPORTANT]
 >  您的计算机上可能已安装这些示例。 在继续操作之前，请先检查以下（默认）目录：  
 >   

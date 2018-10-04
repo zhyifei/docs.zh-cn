@@ -2,12 +2,12 @@
 title: 工作流执行属性
 ms.date: 03/30/2017
 ms.assetid: a50e088e-3a45-4267-bd51-1a3e6c2d246d
-ms.openlocfilehash: 2681152ba89baa2f65d5402a8c8c9d872cadb65b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2b72782b4b9fef127e61bb22b7800740af1d8d2b
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33518639"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48582065"
 ---
 # <a name="workflow-execution-properties"></a>工作流执行属性
 通过线程本地存储区 (TLS)，CLR 可为每个线程维护一个执行上下文。 此执行上下文管理已知的线程属性，例如，线程标识、环境事务、当前权限集以及用户定义的线程属性（如已命名的槽）。  
@@ -18,9 +18,6 @@ ms.locfileid: "33518639"
   
 ## <a name="creating-and-using-workflow-execution-properties"></a>创建和使用工作流执行属性  
  工作流执行属性通常实现 <xref:System.Activities.IExecutionProperty> 接口，尽管着重于消息传递的属性可能会实现 <xref:System.ServiceModel.Activities.ISendMessageCallback> 和 <xref:System.ServiceModel.Activities.IReceiveMessageCallback>。 若要创建工作流执行属性，请创建一个实现 <xref:System.Activities.IExecutionProperty> 接口并实现成员 <xref:System.Activities.IExecutionProperty.SetupWorkflowThread%2A> 和 <xref:System.Activities.IExecutionProperty.CleanupWorkflowThread%2A> 的类。 通过这些成员，该执行属性可在包含该属性的活动（包括任何子活动）的每个工作脉冲期间正确设置和关闭线程本地存储区。 在本示例中，创建了设置 `ConsoleColorProperty` 的 `Console.ForegroundColor`。  
-  
-> [!NOTE]
->  本主题中的以下示例代码基于[执行属性](../../../docs/framework/windows-workflow-foundation/samples/execution-properties.md)示例。  
   
 ```csharp  
 class ConsoleColorProperty : IExecutionProperty  

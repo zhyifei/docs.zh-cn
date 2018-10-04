@@ -2,19 +2,19 @@
 title: 如何：使用消息传递活动创建工作流服务
 ms.date: 03/30/2017
 ms.assetid: 53d094e2-6901-4aa1-88b8-024b27ccf78b
-ms.openlocfilehash: 6ccc4ddc6ba273f6f41efb023f077dd6b87c7ffb
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 12fc8706eb81df281571bb6ab54f7c2a2805f351
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47196546"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48580416"
 ---
 # <a name="how-to-create-a-workflow-service-with-messaging-activities"></a>如何：使用消息传递活动创建工作流服务
 此主题说明如何使用消息传递活动创建简单工作流服务， 本主题着重介绍工作流服务的创建机制，其中的服务仅包含消息传递活动。 在实际服务中，工作流包含其他许多活动。 该服务实现一个名为 Echo 的操作，来获取一个字符串并将该字符串返回到调用方。 本主题是一系列主题（包含两个主题）中的第一个。 下一个主题[如何： 访问服务从工作流应用程序一](../../../../docs/framework/wcf/feature-details/how-to-access-a-service-from-a-workflow-application.md)讨论如何创建可以调用在本主题中创建服务工作流应用程序。  
   
 ### <a name="to-create-a-workflow-service-project"></a>创建工作流服务项目  
   
-1.  启动 [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)]。  
+1.  启动 Visual Studio 2012。  
   
 2.  单击**文件**菜单中，选择**新建**，然后**项目**以显示**新建项目对话框**。 选择**工作流**从已安装模板列表并**WCF 工作流服务应用程序**从项目类型列表。 将项目命名`MyWFService`和使用的默认位置，如以下插图所示。  
   
