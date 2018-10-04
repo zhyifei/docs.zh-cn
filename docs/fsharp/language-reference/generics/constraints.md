@@ -3,11 +3,11 @@ title: 约束 (F#)
 description: '了解有关 F # 约束应用于泛型类型参数，以在泛型类型或函数中指定的类型参数的要求。'
 ms.date: 05/16/2016
 ms.openlocfilehash: 9534db4ffd195022366af8c993658bd94f375f53
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
-ms.translationtype: MT
+ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47231149"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48034832"
 ---
 # <a name="constraints"></a>约束
 
