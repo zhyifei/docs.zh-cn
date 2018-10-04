@@ -4,23 +4,23 @@ ms.date: 03/30/2017
 ms.assetid: d818c917-07b4-40db-9801-8676561859fd
 author: BrucePerlerMS
 ms.openlocfilehash: c390cecc265b27dfa8d9d0a892f5930c982f7054
-ms.sourcegitcommit: daa8788af67ac2d1cecd24f9f3409babb2f978c9
+ms.sourcegitcommit: 700b9003ea6bdd83a53458bbc436c9b5778344f1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47862761"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48261002"
 ---
-# <a name="lttrustedissuersgt"></a><span data-ttu-id="30b07-102">&lt;trustedIssuers&gt;</span><span class="sxs-lookup"><span data-stu-id="30b07-102">&lt;trustedIssuers&gt;</span></span>
-<span data-ttu-id="30b07-103">配置使用的基于配置的颁布者名称注册表的受信任的颁发者证书的列表 (<xref:System.IdentityModel.Tokens.ConfigurationBasedIssuerNameRegistry>)。</span><span class="sxs-lookup"><span data-stu-id="30b07-103">Configures the list of trusted issuer certificates used by the configuration-based issuer name registry (<xref:System.IdentityModel.Tokens.ConfigurationBasedIssuerNameRegistry>).</span></span>  
+# <a name="lttrustedissuersgt"></a><span data-ttu-id="a7323-102">&lt;trustedIssuers&gt;</span><span class="sxs-lookup"><span data-stu-id="a7323-102">&lt;trustedIssuers&gt;</span></span>
+<span data-ttu-id="a7323-103">配置使用的基于配置的颁布者名称注册表的受信任的颁发者证书的列表 (<xref:System.IdentityModel.Tokens.ConfigurationBasedIssuerNameRegistry>)。</span><span class="sxs-lookup"><span data-stu-id="a7323-103">Configures the list of trusted issuer certificates used by the configuration-based issuer name registry (<xref:System.IdentityModel.Tokens.ConfigurationBasedIssuerNameRegistry>).</span></span>  
   
- <span data-ttu-id="30b07-104">\<system.identityModel></span><span class="sxs-lookup"><span data-stu-id="30b07-104">\<system.identityModel></span></span>  
-<span data-ttu-id="30b07-105">\<identityConfiguration></span><span class="sxs-lookup"><span data-stu-id="30b07-105">\<identityConfiguration></span></span>  
-<span data-ttu-id="30b07-106">\<securityTokenHandlers></span><span class="sxs-lookup"><span data-stu-id="30b07-106">\<securityTokenHandlers></span></span>  
-<span data-ttu-id="30b07-107">\<securityTokenHandlerConfiguration ></span><span class="sxs-lookup"><span data-stu-id="30b07-107">\<securityTokenHandlerConfiguration></span></span>  
-<span data-ttu-id="30b07-108">\<issuerNameRegistry ></span><span class="sxs-lookup"><span data-stu-id="30b07-108">\<issuerNameRegistry></span></span>  
-<span data-ttu-id="30b07-109">\<trustedIssuers ></span><span class="sxs-lookup"><span data-stu-id="30b07-109">\<trustedIssuers></span></span>  
+ <span data-ttu-id="a7323-104">\<system.identityModel></span><span class="sxs-lookup"><span data-stu-id="a7323-104">\<system.identityModel></span></span>  
+<span data-ttu-id="a7323-105">\<identityConfiguration></span><span class="sxs-lookup"><span data-stu-id="a7323-105">\<identityConfiguration></span></span>  
+<span data-ttu-id="a7323-106">\<securityTokenHandlers></span><span class="sxs-lookup"><span data-stu-id="a7323-106">\<securityTokenHandlers></span></span>  
+<span data-ttu-id="a7323-107">\<securityTokenHandlerConfiguration ></span><span class="sxs-lookup"><span data-stu-id="a7323-107">\<securityTokenHandlerConfiguration></span></span>  
+<span data-ttu-id="a7323-108">\<issuerNameRegistry ></span><span class="sxs-lookup"><span data-stu-id="a7323-108">\<issuerNameRegistry></span></span>  
+<span data-ttu-id="a7323-109">\<trustedIssuers ></span><span class="sxs-lookup"><span data-stu-id="a7323-109">\<trustedIssuers></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="30b07-110">语法</span><span class="sxs-lookup"><span data-stu-id="30b07-110">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="a7323-110">语法</span><span class="sxs-lookup"><span data-stu-id="a7323-110">Syntax</span></span>  
   
 ```xml  
 <system.identityModel>  
@@ -40,33 +40,33 @@ ms.locfileid: "47862761"
 </system.identityModel>  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="30b07-111">特性和元素</span><span class="sxs-lookup"><span data-stu-id="30b07-111">Attributes and Elements</span></span>  
- <span data-ttu-id="30b07-112">下列各节描述了特性、子元素和父元素。</span><span class="sxs-lookup"><span data-stu-id="30b07-112">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="a7323-111">特性和元素</span><span class="sxs-lookup"><span data-stu-id="a7323-111">Attributes and Elements</span></span>  
+ <span data-ttu-id="a7323-112">下列各节描述了特性、子元素和父元素。</span><span class="sxs-lookup"><span data-stu-id="a7323-112">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="30b07-113">特性</span><span class="sxs-lookup"><span data-stu-id="30b07-113">Attributes</span></span>  
- <span data-ttu-id="30b07-114">无</span><span class="sxs-lookup"><span data-stu-id="30b07-114">None</span></span>  
+### <a name="attributes"></a><span data-ttu-id="a7323-113">特性</span><span class="sxs-lookup"><span data-stu-id="a7323-113">Attributes</span></span>  
+ <span data-ttu-id="a7323-114">无</span><span class="sxs-lookup"><span data-stu-id="a7323-114">None</span></span>  
   
-### <a name="child-elements"></a><span data-ttu-id="30b07-115">子元素</span><span class="sxs-lookup"><span data-stu-id="30b07-115">Child Elements</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="a7323-115">子元素</span><span class="sxs-lookup"><span data-stu-id="a7323-115">Child Elements</span></span>  
   
-|<span data-ttu-id="30b07-116">元素</span><span class="sxs-lookup"><span data-stu-id="30b07-116">Element</span></span>|<span data-ttu-id="30b07-117">描述</span><span class="sxs-lookup"><span data-stu-id="30b07-117">Description</span></span>|  
+|<span data-ttu-id="a7323-116">元素</span><span class="sxs-lookup"><span data-stu-id="a7323-116">Element</span></span>|<span data-ttu-id="a7323-117">描述</span><span class="sxs-lookup"><span data-stu-id="a7323-117">Description</span></span>|  
 |-------------|-----------------|  
-|`<add thumbprint=xs:string name=xs:string>`|<span data-ttu-id="30b07-118">将证书添加到受信任颁发者的集合。</span><span class="sxs-lookup"><span data-stu-id="30b07-118">Adds a certificate to the collection of trusted issuers.</span></span> <span data-ttu-id="30b07-119">使用指定的证书`thumbprint`属性。</span><span class="sxs-lookup"><span data-stu-id="30b07-119">The certificate is specified with the `thumbprint` attribute.</span></span> <span data-ttu-id="30b07-120">此属性是必需的并且应包含证书指纹的 ASN.1 编码形式。</span><span class="sxs-lookup"><span data-stu-id="30b07-120">This attribute is required and should contain the ASN.1 encoded form of the certificate thumbprint.</span></span> <span data-ttu-id="30b07-121">`name`属性是可选的可用于指定证书的友好名称。</span><span class="sxs-lookup"><span data-stu-id="30b07-121">The `name` attribute is optional and can be used to specify a friendly name for the certificate.</span></span>|  
-|`<clear>`|<span data-ttu-id="30b07-122">清除所有证书从受信任颁发者的集合。</span><span class="sxs-lookup"><span data-stu-id="30b07-122">Clears all certificates from the collection of trusted issuers.</span></span>|  
-|`<remove thumbprint=xs:string>`|<span data-ttu-id="30b07-123">从受信任颁发者集合中删除证书。</span><span class="sxs-lookup"><span data-stu-id="30b07-123">Removes a certificate from the collection of trusted issuers.</span></span> <span data-ttu-id="30b07-124">使用指定的证书`thumbprint`属性。</span><span class="sxs-lookup"><span data-stu-id="30b07-124">The certificate is specified with the `thumbprint` attribute.</span></span> <span data-ttu-id="30b07-125">该属性是必选项。</span><span class="sxs-lookup"><span data-stu-id="30b07-125">This attribute is required.</span></span>|  
+|`<add thumbprint=xs:string name=xs:string>`|<span data-ttu-id="a7323-118">将证书添加到受信任颁发者的集合。</span><span class="sxs-lookup"><span data-stu-id="a7323-118">Adds a certificate to the collection of trusted issuers.</span></span> <span data-ttu-id="a7323-119">使用指定的证书`thumbprint`属性。</span><span class="sxs-lookup"><span data-stu-id="a7323-119">The certificate is specified with the `thumbprint` attribute.</span></span> <span data-ttu-id="a7323-120">此属性是必需的并且应包含证书指纹的 ASN.1 编码形式。</span><span class="sxs-lookup"><span data-stu-id="a7323-120">This attribute is required and should contain the ASN.1 encoded form of the certificate thumbprint.</span></span> <span data-ttu-id="a7323-121">`name`属性是可选的可用于指定证书的友好名称。</span><span class="sxs-lookup"><span data-stu-id="a7323-121">The `name` attribute is optional and can be used to specify a friendly name for the certificate.</span></span>|  
+|`<clear>`|<span data-ttu-id="a7323-122">清除所有证书从受信任颁发者的集合。</span><span class="sxs-lookup"><span data-stu-id="a7323-122">Clears all certificates from the collection of trusted issuers.</span></span>|  
+|`<remove thumbprint=xs:string>`|<span data-ttu-id="a7323-123">从受信任颁发者集合中删除证书。</span><span class="sxs-lookup"><span data-stu-id="a7323-123">Removes a certificate from the collection of trusted issuers.</span></span> <span data-ttu-id="a7323-124">使用指定的证书`thumbprint`属性。</span><span class="sxs-lookup"><span data-stu-id="a7323-124">The certificate is specified with the `thumbprint` attribute.</span></span> <span data-ttu-id="a7323-125">该属性是必选项。</span><span class="sxs-lookup"><span data-stu-id="a7323-125">This attribute is required.</span></span>|  
   
-### <a name="parent-elements"></a><span data-ttu-id="30b07-126">父元素</span><span class="sxs-lookup"><span data-stu-id="30b07-126">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="a7323-126">父元素</span><span class="sxs-lookup"><span data-stu-id="a7323-126">Parent Elements</span></span>  
   
-|<span data-ttu-id="30b07-127">元素</span><span class="sxs-lookup"><span data-stu-id="30b07-127">Element</span></span>|<span data-ttu-id="30b07-128">描述</span><span class="sxs-lookup"><span data-stu-id="30b07-128">Description</span></span>|  
+|<span data-ttu-id="a7323-127">元素</span><span class="sxs-lookup"><span data-stu-id="a7323-127">Element</span></span>|<span data-ttu-id="a7323-128">描述</span><span class="sxs-lookup"><span data-stu-id="a7323-128">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="30b07-129">\<issuerNameRegistry ></span><span class="sxs-lookup"><span data-stu-id="30b07-129">\<issuerNameRegistry></span></span>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/issuernameregistry.md)|<span data-ttu-id="30b07-130">配置颁发者名称注册表。</span><span class="sxs-lookup"><span data-stu-id="30b07-130">Configures the issuer name registry.</span></span> <span data-ttu-id="30b07-131">**重要说明：** `type`的属性`<issuerNameRegistry>`元素必须引用<xref:System.IdentityModel.Tokens.ConfigurationBasedIssuerNameRegistry>类`<trustedIssuers>`元素有效。</span><span class="sxs-lookup"><span data-stu-id="30b07-131">**Important:**  The `type` attribute of the `<issuerNameRegistry>` element must reference the <xref:System.IdentityModel.Tokens.ConfigurationBasedIssuerNameRegistry> class for the `<trustedIssuers>` element to be valid.</span></span>|  
+|[<span data-ttu-id="a7323-129">\<issuerNameRegistry ></span><span class="sxs-lookup"><span data-stu-id="a7323-129">\<issuerNameRegistry></span></span>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/issuernameregistry.md)|<span data-ttu-id="a7323-130">配置颁发者名称注册表。</span><span class="sxs-lookup"><span data-stu-id="a7323-130">Configures the issuer name registry.</span></span> <span data-ttu-id="a7323-131">**重要说明：** `type`的属性`<issuerNameRegistry>`元素必须引用<xref:System.IdentityModel.Tokens.ConfigurationBasedIssuerNameRegistry>类`<trustedIssuers>`元素有效。</span><span class="sxs-lookup"><span data-stu-id="a7323-131">**Important:**  The `type` attribute of the `<issuerNameRegistry>` element must reference the <xref:System.IdentityModel.Tokens.ConfigurationBasedIssuerNameRegistry> class for the `<trustedIssuers>` element to be valid.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="30b07-132">备注</span><span class="sxs-lookup"><span data-stu-id="30b07-132">Remarks</span></span>  
- <span data-ttu-id="30b07-133">Windows Identity Foundation (WIF) 提供的单一实现<xref:System.IdentityModel.Tokens.IssuerNameRegistry>默认情况下，类<xref:System.IdentityModel.Tokens.ConfigurationBasedIssuerNameRegistry>类。</span><span class="sxs-lookup"><span data-stu-id="30b07-133">Windows Identity Foundation (WIF) provides a single implementation of the <xref:System.IdentityModel.Tokens.IssuerNameRegistry> class out of the box, the <xref:System.IdentityModel.Tokens.ConfigurationBasedIssuerNameRegistry> class.</span></span> <span data-ttu-id="30b07-134">配置颁发者名称注册表维护从配置中加载的受信任颁发者列表。</span><span class="sxs-lookup"><span data-stu-id="30b07-134">The configuration issuer name registry maintains a list of trusted issuers that is loaded from configuration.</span></span> <span data-ttu-id="30b07-135">列表将与所需验证颁发者生成的令牌签名的 X.509 证书关联的每个颁发者名称。</span><span class="sxs-lookup"><span data-stu-id="30b07-135">The list associates each issuer name with the X.509 certificate that is needed to verify the signature of tokens produced by the issuer.</span></span> <span data-ttu-id="30b07-136">在指定的受信任的颁发者证书的列表`<trustedIssuers>`元素。</span><span class="sxs-lookup"><span data-stu-id="30b07-136">The list of trusted issuer certificates is specified under the `<trustedIssuers>` element.</span></span> <span data-ttu-id="30b07-137">在列表中的每个元素将与验证生成的该颁发者的令牌签名所需的 X.509 证书关联的助记键的颁发者名称。</span><span class="sxs-lookup"><span data-stu-id="30b07-137">Each element in the list associates a mnemonic issuer name with the X.509 certificate that is needed to verify the signature of tokens produced by that issuer.</span></span> <span data-ttu-id="30b07-138">受信任的证书使用 ASN.1 编码的证书指纹的形式指定，并且通过使用添加集合`<add>`元素。</span><span class="sxs-lookup"><span data-stu-id="30b07-138">Trusted certificates are specified using the ASN.1 encoded form of the certificate thumbprint and are added the collection by using `<add>` element.</span></span> <span data-ttu-id="30b07-139">您可以清除或通过从列表中删除 （证书） 的颁发者`<clear>`和`<remove>`元素。</span><span class="sxs-lookup"><span data-stu-id="30b07-139">You can clear or remove issuers (certificates) from the list by using the `<clear>` and `<remove>` elements.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="a7323-132">备注</span><span class="sxs-lookup"><span data-stu-id="a7323-132">Remarks</span></span>  
+ <span data-ttu-id="a7323-133">Windows Identity Foundation (WIF) 提供的单一实现<xref:System.IdentityModel.Tokens.IssuerNameRegistry>默认情况下，类<xref:System.IdentityModel.Tokens.ConfigurationBasedIssuerNameRegistry>类。</span><span class="sxs-lookup"><span data-stu-id="a7323-133">Windows Identity Foundation (WIF) provides a single implementation of the <xref:System.IdentityModel.Tokens.IssuerNameRegistry> class out of the box, the <xref:System.IdentityModel.Tokens.ConfigurationBasedIssuerNameRegistry> class.</span></span> <span data-ttu-id="a7323-134">配置颁发者名称注册表维护从配置中加载的受信任颁发者列表。</span><span class="sxs-lookup"><span data-stu-id="a7323-134">The configuration issuer name registry maintains a list of trusted issuers that is loaded from configuration.</span></span> <span data-ttu-id="a7323-135">列表将与所需验证颁发者生成的令牌签名的 X.509 证书关联的每个颁发者名称。</span><span class="sxs-lookup"><span data-stu-id="a7323-135">The list associates each issuer name with the X.509 certificate that is needed to verify the signature of tokens produced by the issuer.</span></span> <span data-ttu-id="a7323-136">在指定的受信任的颁发者证书的列表`<trustedIssuers>`元素。</span><span class="sxs-lookup"><span data-stu-id="a7323-136">The list of trusted issuer certificates is specified under the `<trustedIssuers>` element.</span></span> <span data-ttu-id="a7323-137">在列表中的每个元素将与验证生成的该颁发者的令牌签名所需的 X.509 证书关联的助记键的颁发者名称。</span><span class="sxs-lookup"><span data-stu-id="a7323-137">Each element in the list associates a mnemonic issuer name with the X.509 certificate that is needed to verify the signature of tokens produced by that issuer.</span></span> <span data-ttu-id="a7323-138">受信任的证书使用 ASN.1 编码的证书指纹的形式指定，并且通过使用添加集合`<add>`元素。</span><span class="sxs-lookup"><span data-stu-id="a7323-138">Trusted certificates are specified using the ASN.1 encoded form of the certificate thumbprint and are added the collection by using `<add>` element.</span></span> <span data-ttu-id="a7323-139">您可以清除或通过从列表中删除 （证书） 的颁发者`<clear>`和`<remove>`元素。</span><span class="sxs-lookup"><span data-stu-id="a7323-139">You can clear or remove issuers (certificates) from the list by using the `<clear>` and `<remove>` elements.</span></span>  
   
- <span data-ttu-id="30b07-140">`type`的属性`<issuerNameRegistry>`元素必须引用<xref:System.IdentityModel.Tokens.ConfigurationBasedIssuerNameRegistry>类`<trustedIssuers>`元素有效。</span><span class="sxs-lookup"><span data-stu-id="30b07-140">The `type` attribute of the `<issuerNameRegistry>` element must reference the <xref:System.IdentityModel.Tokens.ConfigurationBasedIssuerNameRegistry> class for the `<trustedIssuers>` element to be valid.</span></span>  
+ <span data-ttu-id="a7323-140">`type`的属性`<issuerNameRegistry>`元素必须引用<xref:System.IdentityModel.Tokens.ConfigurationBasedIssuerNameRegistry>类`<trustedIssuers>`元素有效。</span><span class="sxs-lookup"><span data-stu-id="a7323-140">The `type` attribute of the `<issuerNameRegistry>` element must reference the <xref:System.IdentityModel.Tokens.ConfigurationBasedIssuerNameRegistry> class for the `<trustedIssuers>` element to be valid.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="30b07-141">示例</span><span class="sxs-lookup"><span data-stu-id="30b07-141">Example</span></span>  
- <span data-ttu-id="30b07-142">下面的 XML 演示如何指定配置基于颁发者名称注册表。</span><span class="sxs-lookup"><span data-stu-id="30b07-142">The following XML shows how to specify the configuration based issuer name registry.</span></span>  
+## <a name="example"></a><span data-ttu-id="a7323-141">示例</span><span class="sxs-lookup"><span data-stu-id="a7323-141">Example</span></span>  
+ <span data-ttu-id="a7323-142">下面的 XML 演示如何指定配置基于颁发者名称注册表。</span><span class="sxs-lookup"><span data-stu-id="a7323-142">The following XML shows how to specify the configuration based issuer name registry.</span></span>  
   
 ```xml  
 <issuerNameRegistry type="System.IdentityModel.Tokens.ConfigurationBasedIssuerNameRegistry, System.IdentityModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">  
@@ -76,6 +76,6 @@ ms.locfileid: "47862761"
 </issuerNameRegistry>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="30b07-143">请参阅</span><span class="sxs-lookup"><span data-stu-id="30b07-143">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="a7323-143">请参阅</span><span class="sxs-lookup"><span data-stu-id="a7323-143">See Also</span></span>  
  <xref:System.IdentityModel.Tokens.ConfigurationBasedIssuerNameRegistry>  
  <xref:System.IdentityModel.Tokens.IssuerNameRegistry>
