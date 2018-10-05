@@ -5,11 +5,11 @@ author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
 ms.openlocfilehash: f7933cc25a5fde13113d0c9c278e9bd1730d4f9d
-ms.sourcegitcommit: 700b9003ea6bdd83a53458bbc436c9b5778344f1
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48264145"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48780708"
 ---
 # <a name="architecting-container--and-microservice-based-applications"></a>构建基于容器和微服务的应用程序
 
@@ -23,7 +23,7 @@ ms.locfileid: "48264145"
 
 在容器模型中，容器映像实例表示单个进程。 将容器映像定义为进程边界，可以创建可用于对进程进行缩放或批处理的基元。
 
-设计容器映像时，可在 Dockerfile 中看到 [入口点](https://docs.docker.com/engine/reference/builder/) 定义。 这定义了一个进程，其生命周期控制容器的生命周期。 该进程完成，则容器的生命周期结束。 容器可以表示 Web 服务器等长时间运行的进程，但也可表示批处理作业等生存期较短的进程，这些进程以前可能已实现为 Azure [WebJobs](https://docs.microsoft.com/azure/app-service-web/websites-webjobs-resources)。
+当你设计的容器映像时，你将看到[入口点](https://docs.docker.com/engine/reference/builder/)Dockerfile 中的定义。 这定义了一个进程，其生命周期控制容器的生命周期。 该进程完成，则容器的生命周期结束。 容器可以表示 Web 服务器等长时间运行的进程，但也可表示批处理作业等生存期较短的进程，这些进程以前可能已实现为 Azure [WebJobs](https://docs.microsoft.com/azure/app-service-web/websites-webjobs-resources)。
 
 如果进程失败，则容器结束，Orchestrator 接管。 如果 Orchestrator 已配置为使五个实例保持运行，而其中一个实例失败，则 Orchestrator 会创建另一个容器实例，来替换失败的进程。 在批处理作业中，使用参数启动该进程。 进程完成，则工作完成。 本指南接下来将深入介绍业务流程协调程序。
 
