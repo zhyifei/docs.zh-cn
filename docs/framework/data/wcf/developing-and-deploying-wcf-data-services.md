@@ -111,7 +111,7 @@ WCF 数据服务在选择承载数据服务的过程方面很灵活。 Visual St
      有关的部署选项的详细信息[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]应用程序，请参阅[Visual Studio 和 ASP.NET 的 Web 部署概述](https://msdn.microsoft.com/library/99bd1927-b59f-4e02-87b4-55c6ba2adbc3)。
 
     > [!TIP]
-    > 在尝试将数据服务部署到 IIS 之前，请确保已测试了向运行 IIS 的 Web 服务器的部署。 有关详细信息，请参阅 [How to: Develop a WCF Data Service Running on IIS](../../../../docs/framework/data/wcf/how-to-develop-a-wcf-data-service-running-on-iis.md)。
+    > 在尝试将数据服务部署到 IIS 之前，请确保已测试了向运行 IIS 的 Web 服务器的部署。 有关详细信息，请参阅 [如何：开发在 IIS 上运行的 WCF 数据服务](../../../../docs/framework/data/wcf/how-to-develop-a-wcf-data-service-running-on-iis.md)。
 
 -   **Microsoft Azure**
 
