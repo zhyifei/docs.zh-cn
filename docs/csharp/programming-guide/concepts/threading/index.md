@@ -2,12 +2,12 @@
 title: 线程处理 (C#)
 ms.date: 07/20/2015
 ms.assetid: 236d157d-37c0-4ee8-89fc-721e6c596325
-ms.openlocfilehash: ca5b2b2d38e72d3511a570c22a153e792a27a04a
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: c90816a14bfbcd2ddd469c1240e94d99bfbbb5e5
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43507784"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48844873"
 ---
 # <a name="threading-c"></a>线程处理 (C#)
 通过线程处理，C# 程序可执行并行处理，让你可一次执行多个操作。 例如，可使用线程处理来监视来自用户的输入、执行后台任务和处理并行输入流。  
@@ -37,5 +37,4 @@ ms.locfileid: "43507784"
   
 |标题|描述|  
 |-----------|-----------------|  
-|[线程同步 (C#)](../../../../csharp/programming-guide/concepts/threading/thread-synchronization.md)|描述如何控制线程的交互。|  
 |[线程处理](../../../../../docs/standard/threading/index.md)|描述如何在 .NET Framework 中实现线程处理。|
