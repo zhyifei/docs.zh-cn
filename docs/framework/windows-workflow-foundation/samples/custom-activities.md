@@ -3,11 +3,11 @@ title: 自定义活动
 ms.date: 03/30/2017
 ms.assetid: 5cde06b3-51b2-4e46-900d-11140bae77f4
 ms.openlocfilehash: 66a22f254c2f5d7a6453bd6d4d85629018f40782
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48780110"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48838112"
 ---
 # <a name="custom-activities"></a>自定义活动
 本节包含演示如何创建 Windows Workflow Foundation (WF) 中的自定义活动的示例。  

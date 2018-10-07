@@ -2,12 +2,12 @@
 title: '&lt;localIssuer&gt;'
 ms.date: 03/30/2017
 ms.assetid: 26bdd0df-0e7d-4b9e-bbeb-f28c53769385
-ms.openlocfilehash: 9118d1462d4790bb457fc8dc2f7c74b6e69de43a
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: cb5afb0e73ad0a07ea43f06915f4e477d7f8f985
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32749109"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48841548"
 ---
 # <a name="ltlocalissuergt"></a>&lt;localIssuer&gt;
 指定要用于颁发安全令牌的本地颁发者的地址和绑定。  
@@ -17,7 +17,7 @@ ms.locfileid: "32749109"
 endpointBehaviors 部分  
 \<行为 >  
 \<clientCredentials>  
-\<k e n >  
+\<issuedToken >  
 \<localIssuer >  
   
 ## <a name="syntax"></a>语法  
@@ -36,7 +36,7 @@ endpointBehaviors 部分
 |特性|描述|  
 |---------------|-----------------|  
 |address|必选字符串。 指定本地颁发者的 URI。|  
-|绑定|可选的字符串。 系统提供的一个绑定。 有关列表，请参阅[系统提供的绑定](../../../../../docs/framework/wcf/system-provided-bindings.md)。|  
+|绑定|可选的字符串。 系统提供的一个绑定。 有关列表，请参阅[System-Provided Bindings](../../../../../docs/framework/wcf/system-provided-bindings.md)。|  
 |bindingConfiguration|可选的字符串。 指定在配置文件中找到的绑定配置。|  
   
 ### <a name="child-elements"></a>子元素  
@@ -50,10 +50,10 @@ endpointBehaviors 部分
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<k e n >](../../../../../docs/framework/configure-apps/file-schema/wcf/issuedtoken.md)|指定用于向服务验证客户端身份的自定义令牌。|  
+|[\<issuedToken >](../../../../../docs/framework/configure-apps/file-schema/wcf/issuedtoken.md)|指定用于向服务验证客户端身份的自定义令牌。|  
   
 ## <a name="remarks"></a>备注  
- 从安全令牌服务 (STS) 获取已颁发的令牌时，必须使用地址和绑定配置客户端应用程序，以将其用于与 STS 进行通信。 当<xref:System.ServiceModel.WSFederationHttpBinding>不提供的 URL 的安全令牌服务，或者联合绑定的颁发者地址为http://schemas.microsoft.com/2005/12/ServiceModel/Addressing/Anonymous或`null`，客户端的 Windows Communication Foundation (WCF) 通道使用指定的值`address`和`binding`与以获取颁发的令牌的 STS 进行通信。 配置本地颁发者的详细信息，请参阅[如何： 配置本地颁发者](../../../../../docs/framework/wcf/feature-details/how-to-configure-a-local-issuer.md)。  
+ 从安全令牌服务 (STS) 获取已颁发的令牌时，必须使用地址和绑定配置客户端应用程序，以将其用于与 STS 进行通信。 当<xref:System.ServiceModel.WSFederationHttpBinding>不提供安全令牌服务，或者当联合绑定的颁发者地址的 URL`http://schemas.microsoft.com/2005/12/ServiceModel/Addressing/Anonymous`或`null`，客户端的 Windows Communication Foundation (WCF) 通道使用指定的值来`address`和`binding`与 STS 以获取已颁发的令牌进行通信。 有关配置本地颁发者的详细信息，请参阅[如何： 配置本地颁发者](../../../../../docs/framework/wcf/feature-details/how-to-configure-a-local-issuer.md)。  
   
 ## <a name="example"></a>示例  
  下面的示例设置 `address` 元素的 `binding`、`bindingConfiguration` 和 `localIssuer` 属性。  

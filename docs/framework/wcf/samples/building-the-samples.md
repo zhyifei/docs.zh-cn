@@ -2,12 +2,12 @@
 title: 生成 Windows Communication Foundation 示例
 ms.date: 03/30/2017
 ms.assetid: 2899e7a5-9cb2-4e8d-b8d2-f31391549198
-ms.openlocfilehash: 46f4015c00916a5cab932e8fd2539c7c86588a30
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: d39419d766c52fb3822e935b08289bba95102dc1
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45596905"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48841373"
 ---
 # <a name="building-the-windows-communication-foundation-samples"></a>生成 Windows Communication Foundation 示例
 
@@ -64,7 +64,7 @@ ms.locfileid: "45596905"
     svcutil.exe /n:"http://Microsoft.ServiceModel.Samples,Microsoft.ServiceModel.Samples" http://localhost:8000/servicemodelsamples/service.svc/mex /out:generatedClient.cs
     ```
 
-     替换为 http://localhost:8000/ServiceModelSamples/service.svc/mex与自承载的服务的 mex 终结点的地址。
+     替换为`http://localhost:8000/ServiceModelSamples/service.svc/mex`与自承载的服务的 mex 终结点的地址。
 
      若要在 Visual Basic 类型中生成客户端，请使用以下命令。
 

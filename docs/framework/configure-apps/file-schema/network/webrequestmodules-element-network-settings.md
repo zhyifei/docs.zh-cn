@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 1263de11-3e0a-4f94-97c9-710b2ae53817
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: 34173812f4f6fac940632e23e6641e458250a4ee
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 7cd25b980afa067ac78fc081c0a7a8e65a23258b
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48028158"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48838255"
 ---
 # <a name="ltwebrequestmodulesgt-element-network-settings"></a>&lt;webRequestModules&gt;元素 （网络设置）
 指定模块用于从网络主机请求信息。  
@@ -54,7 +54,7 @@ ms.locfileid: "48028158"
 ## <a name="remarks"></a>备注  
  此 `webRequestModules` 元素注册 <xref:System.Net.WebRequest> 类的子代，以处理向网络主机发出的信息请求。 Web 请求模块必须实现<xref:System.Net.IWebRequestCreate>接口。  
   
- .NET Framework 包括以 http://、 https:// 和 file:// 开头的 Uri Web 请求模块。 仅在配置文件中注册自定义模块可以覆盖默认模块。  
+ .NET Framework 包括以开头的 Uri Web 请求模块`http://`， `https://`，和`file://`。 仅在配置文件中注册自定义模块可以覆盖默认模块。  
   
 ## <a name="configuration-files"></a>配置文件  
  此元素可在应用程序配置文件或计算机配置文件 (Machine.config) 中使用。  

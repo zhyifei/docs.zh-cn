@@ -2,12 +2,12 @@
 title: SQL 跟踪
 ms.date: 03/30/2017
 ms.assetid: bcaebeb1-b9e5-49e8-881b-e49af66fd341
-ms.openlocfilehash: 84d3fb994c790301ceb55b945bf972c21ed2a971
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: 741df337187b2a5fffe63052c9fafbd430f7c2fc
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48584309"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48836376"
 ---
 # <a name="sql-tracking"></a>SQL 跟踪
 此示例演示如何编写一个自定义 SQL 跟踪参与者，该参与者将跟踪记录写入到一个 SQL 数据库。 Windows Workflow Foundation (WF) 提供了工作流跟踪来深入了解工作流实例的执行。 跟踪运行时在工作流执行过程中会发出工作流跟踪记录。 有关工作流跟踪的详细信息，请参阅[工作流跟踪](../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)。
@@ -33,7 +33,7 @@ ms.locfileid: "48584309"
   
 7.  浏览器显示 StockPriceService 页，其中包含本地服务 WSDL 地址。 复制此地址。  
   
-     本地服务 WSDL 地址的一个示例是 http://localhost:65193/StockPriceService.xamlx?wsdl。  
+     本地服务 WSDL 地址的一个示例是`http://localhost:65193/StockPriceService.xamlx?wsdl`。  
   
 8.  使用 [!INCLUDE[fileExplorer](../../../../includes/fileexplorer-md.md)]，运行 WCF 测试客户端 (WcfTestClient.exe)。 它位于 Microsoft Visual Studio 10.0\Common7\IDE 目录下。  
   

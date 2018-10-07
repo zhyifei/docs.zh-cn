@@ -2,12 +2,12 @@
 title: Internet 信息服务承载最佳实践
 ms.date: 03/30/2017
 ms.assetid: 0834768e-9665-46bf-86eb-d4b09ab91af5
-ms.openlocfilehash: 0ca5e20b846a1b10f5a52748ff06a4af958b2f4c
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: 2cb193cd2f504b5010ede6887e814e0c4d0a1a3c
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47073588"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48840740"
 ---
 # <a name="internet-information-services-hosting-best-practices"></a>Internet 信息服务承载最佳实践
 本主题概述了用于承载 Windows Communication Foundation (WCF) 服务的一些最佳做法。  
@@ -33,7 +33,7 @@ ms.locfileid: "47073588"
  中间层方案还通过使用由 `svcutil /a` 选项生成的异步 API 来产生性能提升。 `/a`选项使[ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)生成`BeginXXX/EndXXX`对于每个服务操作，它允许对远程服务可能需要长时间运行调用，使其上的方法后台线程。  
   
 ## <a name="wcf-in-multi-homed-or-multi-named-scenarios"></a>多宿主或多名称方案中的 WCF  
- 你可以部署 WCF 服务内部的 IIS Web 场，其中的一组计算机共享公共外部名称 (如 http://www.contoso.com) 但由不同的主机名单独寻址 (例如， http://www.contoso.com 可能会将流量定向到两个不同的计算机名为 http://machine1.internal.contoso.com 和 http://machine2.internal.contoso.com)。 此部署方案中完全支持由 WCF，但需要承载 WCF 服务在服务的元数据 （Web 服务描述语言） 中显示正确的 （外部） 主机名的 IIS 网站的特殊配置。  
+ 可以部署 WCF 服务内部的 IIS Web 场，其中的一组计算机共享公共外部名称 (如`http://www.contoso.com`)，但由不同的主机名单独寻址 (例如，`http://www.contoso.com`可能会将流量定向到两个不同的计算机名为`http://machine1.internal.contoso.com`和`http://machine2.internal.contoso.com`)。 此部署方案中完全支持由 WCF，但需要承载 WCF 服务在服务的元数据 （Web 服务描述语言） 中显示正确的 （外部） 主机名的 IIS 网站的特殊配置。  
   
  若要确保正确的主机名显示在 WCF 服务元数据生成、 托管 WCF 服务以使用显式主机名的 IIS 网站的默认标识配置。 例如，驻留在 www.contoso.com 场内的计算机应使用的 IIS 站点绑定 *:80:www.contoso.com 为 HTTP 和\*: 443:www.contoso.com 为支持 HTTPS。  
   

@@ -2,12 +2,12 @@
 title: 运行 Windows Communication Foundation 示例
 ms.date: 03/30/2017
 ms.assetid: db8a83da-95c1-4a21-a9d2-48caeb6398ea
-ms.openlocfilehash: d6fc93af217bfc282ce7030973be32baf7d864cd
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 3e49a88fa5369cc2ad2251e48f3eca74fa7c4445
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45618687"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48836891"
 ---
 # <a name="running-the-windows-communication-foundation-samples"></a>运行 Windows Communication Foundation 示例
 可以在单一计算机或跨计算机配置中运行的 Windows Communication Foundation (WCF) 示例。 示例在提供时就可用于在单机上运行。 在跨计算机配置中，必须修改示例的配置文件设置。 下面的过程说明如何用同一计算机配置和跨计算机配置来运行示例。 请注意，Internet 信息服务 (IIS) 中承载的服务和自承载示例在步骤上有所不同。 大多数示例承载于 IIS 中，请参见示例自述文件信息以确定示例的承载方式。  
@@ -19,7 +19,7 @@ ms.locfileid: "45618687"
   
 ### <a name="to-run-the-sample-on-the-same-machine"></a>在同一计算机上运行示例  
   
-1.  如果服务由 IIS 承载，请确保您可以访问使用浏览器通过输入以下地址的服务： http://localhost/servicemodelsamples/service.svc。 在响应中应显示确认页。 如果未显示确认页，请参阅[故障排除提示](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b)。  
+1.  如果服务由 IIS 承载，请确保您可以访问使用浏览器通过输入以下地址的服务： `http://localhost/servicemodelsamples/service.svc`。 在响应中应显示确认页。 如果未显示确认页，请参阅[故障排除提示](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b)。  
   
 2.  如果服务是自承载的，请从 \service\bin（在语言特定文件夹内）中运行 Service.exe。 服务活动显示在服务控制台窗口上。  
   
@@ -63,7 +63,7 @@ ms.locfileid: "45618687"
   
 2.  如果服务在 IIS 中承载：  
   
-    1.  激活服务使用的浏览器通过输入地址 http://localhost/servicemodelsamples/service.svc。  
+    1.  激活服务使用的浏览器通过输入地址`http://localhost/servicemodelsamples/service.svc`。  
   
     2.  在解决方案中，选择**调试**菜单并**附加到进程**菜单项。  
   

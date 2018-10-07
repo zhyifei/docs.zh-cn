@@ -5,208 +5,208 @@ helpviewer_keywords:
 - WS Security
 ms.assetid: c321cbf9-8c05-4cce-b5a5-4bf7b230ee03
 author: BrucePerlerMS
-ms.openlocfilehash: 23f814b036d698a4973ca923cd534ea5f0f5b25c
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: e90232a9e30a7da6234cb2884cdaaceb936d69ab
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47196832"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48839877"
 ---
 # <a name="message-security-anonymous"></a>匿名消息安全
-匿名消息安全的示例演示如何实现 Windows Communication Foundation (WCF) 应用程序使用消息级安全的无客户端身份验证，但需要使用服务器的 X.509 服务器身份验证证书。 客户端与服务器之间的所有应用程序消息均已进行签名和加密。 此示例基于[WSHttpBinding](../../../../docs/framework/wcf/samples/wshttpbinding.md)示例。 此示例由客户端控制台程序 (.exe) 和 Internet 信息服务 (IIS) 所承载的服务库 (.dll) 组成。 该服务实现定义“请求-答复”通信模式的协定。  
-  
+匿名消息安全的示例演示如何实现 Windows Communication Foundation (WCF) 应用程序使用消息级安全的无客户端身份验证，但需要使用服务器的 X.509 服务器身份验证证书。 客户端与服务器之间的所有应用程序消息均已进行签名和加密。 此示例基于[WSHttpBinding](../../../../docs/framework/wcf/samples/wshttpbinding.md)示例。 此示例由客户端控制台程序 (.exe) 和 Internet 信息服务 (IIS) 所承载的服务库 (.dll) 组成。 该服务实现定义“请求-答复”通信模式的协定。
+
 > [!NOTE]
->  本主题的最后介绍了此示例的设置过程和生成说明。  
-  
- 如果不对客户端进行身份验证，则本示例向返回 `True` 的计算器接口添加新运算。  
+>  本主题的最后介绍了此示例的设置过程和生成说明。
+
+ 如果不对客户端进行身份验证，则本示例向返回 `True` 的计算器接口添加新运算。
 
 ```csharp
-public class CalculatorService : ICalculator  
-{  
-    public bool IsCallerAnonymous()  
-    {  
-        // ServiceSecurityContext.IsAnonymous returns true if the caller is not authenticated.  
-        return ServiceSecurityContext.Current.IsAnonymous;  
-    }  
-    ...  
-}  
+public class CalculatorService : ICalculator
+{
+    public bool IsCallerAnonymous()
+    {
+        // ServiceSecurityContext.IsAnonymous returns true if the caller is not authenticated.
+        return ServiceSecurityContext.Current.IsAnonymous;
+    }
+    ...
+}
 ```
 
- 服务公开单一终结点，以便与使用配置文件 (Web.config) 定义的服务进行通信。 终结点由地址、绑定和协定组成。 此绑定是用 `wsHttpBinding` 绑定配置的。 `wsHttpBinding` 绑定的默认安全模式是 `Message`。 `clientCredentialType` 属性设置为 `None`。  
-  
-```xml  
-<system.serviceModel>  
-  
-  <protocolMapping>  
-    <add scheme="http" binding="wsHttpBinding" />  
-  </protocolMapping>  
-  
-  <bindings>  
-    <wsHttpBinding>  
-     <!--   
-     <!--This configuration defines the security mode as Message and-->  
-     <!--the clientCredentialType as None. This mode provides -- >  
-     <!--server authentication only using the service certificate.-->  
-  
-     <binding>  
-       <security mode="Message">  
-         <message clientCredentialType="None" />  
-       </security>  
-     </binding>  
-    </wsHttpBinding>  
-  </bindings>  
-  ...  
-</system.serviceModel>  
-```  
-  
- 中指定要用于服务身份验证的凭据[\<行为 >](../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)。 服务器证书包含的 `SubjectName` 的值必须与为 `findValue` 属性指定的值相同，如下面的示例代码所示。  
-  
-```xml  
-<behaviors>  
-  <serviceBehaviors>  
-    <behavior>  
-      <!--   
-    The serviceCredentials behavior allows you to define a service certificate.  
-    A service certificate is used by a client to authenticate the service and provide message protection.  
-    This configuration references the "localhost" certificate installed during the setup instructions.  
-    -->  
-      <serviceCredentials>  
-        <serviceCertificate findValue="localhost" storeLocation="LocalMachine" storeName="My" x509FindType="FindBySubjectName" />  
-      </serviceCredentials>  
-      <serviceMetadata httpGetEnabled="True"/>  
-      <serviceDebug includeExceptionDetailInFaults="False" />  
-    </behavior>  
-  </serviceBehaviors>  
-</behaviors>  
-```  
-  
- 客户端终结点配置由服务终结点的绝对地址、绑定和协定组成。 `wsHttpBinding` 绑定的客户端安全模式为 `Message`。 `clientCredentialType` 属性设置为 `None`。  
-  
-```xml  
-<system.serviceModel>  
-  <client>  
-    <endpoint name=""  
-             address="http://localhost/servicemodelsamples/service.svc"   
-             binding="wsHttpBinding"   
-             behaviorConfiguration="ClientCredentialsBehavior"  
-             bindingConfiguration="Binding1"   
-             contract="Microsoft.ServiceModel.Samples.ICalculator" />  
-  </client>  
-  
-  <bindings>  
-    <wsHttpBinding>  
-      <!--This configuration defines the security mode as -->  
-      <!--Message and the clientCredentialType as None. -->  
-      <binding name="Binding1">  
-        <security mode = "Message">  
-          <message clientCredentialType="None"/>  
-        </security>  
-      </binding>  
-    </wsHttpBinding>  
-  </bindings>   
-  ...  
-</system.serviceModel>  
-```  
-  
- 本示例将 <xref:System.ServiceModel.Security.X509ServiceCertificateAuthentication.CertificateValidationMode%2A> 设置为 <xref:System.ServiceModel.Security.X509CertificateValidationMode.PeerOrChainTrust> 以便对服务的证书进行身份验证。 这是在`behaviors`一节中的客户端的 App.config 文件中实现的。 这意味着如果证书在用户的“受信任人”存储中，则信任此证书，而不对证书的颁发者链执行身份验证。 此处使用的设置是为了方便起见，使示例可以不需要证书颁发机构 (CA) 颁发的证书就能运行。 此设置没有默认设置 ChainTrust 安全。 在生产代码中使用 `PeerOrChainTrust` 之前，应仔细考虑此设置的安全含义。  
-  
- 客户端实现添加到调用`IsCallerAnonymous`方法，否则与并无差异[WSHttpBinding](../../../../docs/framework/wcf/samples/wshttpbinding.md)示例。  
+ 服务公开单一终结点，以便与使用配置文件 (Web.config) 定义的服务进行通信。 终结点由地址、绑定和协定组成。 此绑定是用 `wsHttpBinding` 绑定配置的。 `wsHttpBinding` 绑定的默认安全模式是 `Message`。 `clientCredentialType` 属性设置为 `None`。
+
+```xml
+<system.serviceModel>
+
+  <protocolMapping>
+    <add scheme="http" binding="wsHttpBinding" />
+  </protocolMapping>
+
+  <bindings>
+    <wsHttpBinding>
+     <!--
+     <!--This configuration defines the security mode as Message and-->
+     <!--the clientCredentialType as None. This mode provides -- >
+     <!--server authentication only using the service certificate.-->
+
+     <binding>
+       <security mode="Message">
+         <message clientCredentialType="None" />
+       </security>
+     </binding>
+    </wsHttpBinding>
+  </bindings>
+  ...
+</system.serviceModel>
+```
+
+ 中指定要用于服务身份验证的凭据[\<行为 >](../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)。 服务器证书包含的 `SubjectName` 的值必须与为 `findValue` 属性指定的值相同，如下面的示例代码所示。
+
+```xml
+<behaviors>
+  <serviceBehaviors>
+    <behavior>
+      <!--
+    The serviceCredentials behavior allows you to define a service certificate.
+    A service certificate is used by a client to authenticate the service and provide message protection.
+    This configuration references the "localhost" certificate installed during the setup instructions.
+    -->
+      <serviceCredentials>
+        <serviceCertificate findValue="localhost" storeLocation="LocalMachine" storeName="My" x509FindType="FindBySubjectName" />
+      </serviceCredentials>
+      <serviceMetadata httpGetEnabled="True"/>
+      <serviceDebug includeExceptionDetailInFaults="False" />
+    </behavior>
+  </serviceBehaviors>
+</behaviors>
+```
+
+ 客户端终结点配置由服务终结点的绝对地址、绑定和协定组成。 `wsHttpBinding` 绑定的客户端安全模式为 `Message`。 `clientCredentialType` 属性设置为 `None`。
+
+```xml
+<system.serviceModel>
+  <client>
+    <endpoint name=""
+             address="http://localhost/servicemodelsamples/service.svc"
+             binding="wsHttpBinding"
+             behaviorConfiguration="ClientCredentialsBehavior"
+             bindingConfiguration="Binding1"
+             contract="Microsoft.ServiceModel.Samples.ICalculator" />
+  </client>
+
+  <bindings>
+    <wsHttpBinding>
+      <!--This configuration defines the security mode as -->
+      <!--Message and the clientCredentialType as None. -->
+      <binding name="Binding1">
+        <security mode = "Message">
+          <message clientCredentialType="None"/>
+        </security>
+      </binding>
+    </wsHttpBinding>
+  </bindings>
+  ...
+</system.serviceModel>
+```
+
+ 本示例将 <xref:System.ServiceModel.Security.X509ServiceCertificateAuthentication.CertificateValidationMode%2A> 设置为 <xref:System.ServiceModel.Security.X509CertificateValidationMode.PeerOrChainTrust> 以便对服务的证书进行身份验证。 这是在`behaviors`一节中的客户端的 App.config 文件中实现的。 这意味着如果证书在用户的“受信任人”存储中，则信任此证书，而不对证书的颁发者链执行身份验证。 此处使用的设置是为了方便起见，使示例可以不需要证书颁发机构 (CA) 颁发的证书就能运行。 此设置没有默认设置 ChainTrust 安全。 在生产代码中使用 `PeerOrChainTrust` 之前，应仔细考虑此设置的安全含义。
+
+ 客户端实现添加到调用`IsCallerAnonymous`方法，否则与并无差异[WSHttpBinding](../../../../docs/framework/wcf/samples/wshttpbinding.md)示例。
 
 ```csharp
-// Create a client with a client endpoint configuration.  
-CalculatorClient client = new CalculatorClient();  
-  
-// Call the GetCallerIdentity operation.  
-Console.WriteLine("IsCallerAnonymous returned: {0}", client.IsCallerAnonymous());  
-  
-// Call the Add service operation.  
-double value1 = 100.00D;  
-double value2 = 15.99D;  
-double result = client.Add(value1, value2);  
-Console.WriteLine("Add({0},{1}) = {2}", value1, value2, result);  
-  
-...  
-  
-//Closing the client gracefully closes the connection and cleans up resources.  
-client.Close();  
-  
-Console.WriteLine();  
-Console.WriteLine("Press <ENTER> to terminate client.");  
-Console.ReadLine();  
+// Create a client with a client endpoint configuration.
+CalculatorClient client = new CalculatorClient();
+
+// Call the GetCallerIdentity operation.
+Console.WriteLine("IsCallerAnonymous returned: {0}", client.IsCallerAnonymous());
+
+// Call the Add service operation.
+double value1 = 100.00D;
+double value2 = 15.99D;
+double result = client.Add(value1, value2);
+Console.WriteLine("Add({0},{1}) = {2}", value1, value2, result);
+
+...
+
+//Closing the client gracefully closes the connection and cleans up resources.
+client.Close();
+
+Console.WriteLine();
+Console.WriteLine("Press <ENTER> to terminate client.");
+Console.ReadLine();
 ```
 
- 运行示例时，操作请求和响应将显示在客户端控制台窗口中。 在客户端窗口中按 Enter 可以关闭客户端。  
-  
-```  
-IsCallerAnonymous returned: True  
-Add(100,15.99) = 115.99  
-Subtract(145,76.54) = 68.46  
-Multiply(9,81.25) = 731.25  
-Divide(22,7) = 3.14285714285714  
-Press <ENTER> to terminate client.  
-```  
-  
- “匿名消息安全”示例随附的 Setup.bat 批处理文件使您可以用相关的证书来配置服务器，以运行所承载的需要基于证书的安全的应用程序。 可以在两种模式中运行此批处理文件。 若要在单一计算机模式下运行该批处理文件，请在命令行键入 `setup.bat`。 若要在服务模式中运行此文件，请键入 `setup.bat service`。 跨计算机运行示例时，请使用此模式。 有关详细信息，请参见本主题末尾的设置过程。  
-  
- 下面提供了有关此批处理文件的不同部分的简要概述：  
-  
--   创建服务器证书。  
-  
-     Setup.bat 批处理文件中的以下行创建将要使用的服务器证书。  
-  
+ 运行示例时，操作请求和响应将显示在客户端控制台窗口中。 在客户端窗口中按 Enter 可以关闭客户端。
+
+```
+IsCallerAnonymous returned: True
+Add(100,15.99) = 115.99
+Subtract(145,76.54) = 68.46
+Multiply(9,81.25) = 731.25
+Divide(22,7) = 3.14285714285714
+Press <ENTER> to terminate client.
+```
+
+ “匿名消息安全”示例随附的 Setup.bat 批处理文件使您可以用相关的证书来配置服务器，以运行所承载的需要基于证书的安全的应用程序。 可以在两种模式中运行此批处理文件。 若要在单一计算机模式下运行该批处理文件，请在命令行键入 `setup.bat`。 若要在服务模式中运行此文件，请键入 `setup.bat service`。 跨计算机运行示例时，请使用此模式。 有关详细信息，请参见本主题末尾的设置过程。
+
+ 下面提供了有关此批处理文件的不同部分的简要概述：
+
+-   创建服务器证书。
+
+     Setup.bat 批处理文件中的以下行创建将要使用的服务器证书。
+
     ```bat
-    echo ************  
-    echo Server cert setup starting  
-    echo %SERVER_NAME%  
-    echo ************  
-    echo making server cert  
-    echo ************  
-    makecert.exe -sr LocalMachine -ss MY -a sha1 -n CN=%SERVER_NAME% -sky exchange -pe  
-    ```  
-  
-     %SERVER_NAME% 变量指定服务器名称。 该证书存储在 LocalMachine 存储区中。 如果用服务参数（如 `setup.bat service`）运行 setup 批处理文件，则 %SERVER_NAME% 包含计算机的完全限定域名。 否则，它默认为 localhost。  
-  
--   将服务器证书安装到客户端的受信任证书存储区中。  
-  
-     以下行将服务器证书复制到客户端的受信任人存储中。 因为客户端系统不隐式信任 Makecert.exe 生成的证书，所以需要执行此步骤。 如果已经拥有一个证书，该证书来源于客户端的受信任根证书（例如由 Microsoft 颁发的证书），则不需要执行使用服务器证书填充客户端证书存储区这一步骤。  
-  
-    ```  
-    certmgr.exe -add -r LocalMachine -s My -c -n %SERVER_NAME% -r CurrentUser -s TrustedPeople  
-    ```  
-  
--   授予对证书私钥的权限。  
-  
-     Setup.bat 批处理文件中的以下行可以让 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 辅助进程帐户访问 LocalMachine 存储区中存储的服务器证书。  
-  
+    echo ************
+    echo Server cert setup starting
+    echo %SERVER_NAME%
+    echo ************
+    echo making server cert
+    echo ************
+    makecert.exe -sr LocalMachine -ss MY -a sha1 -n CN=%SERVER_NAME% -sky exchange -pe
+    ```
+
+     %SERVER_NAME% 变量指定服务器名称。 该证书存储在 LocalMachine 存储区中。 如果用服务参数（如 `setup.bat service`）运行 setup 批处理文件，则 %SERVER_NAME% 包含计算机的完全限定域名。 否则，它默认为 localhost。
+
+-   将服务器证书安装到客户端的受信任证书存储区中。
+
+     以下行将服务器证书复制到客户端的受信任人存储中。 因为客户端系统不隐式信任 Makecert.exe 生成的证书，所以需要执行此步骤。 如果已经拥有一个证书，该证书来源于客户端的受信任根证书（例如由 Microsoft 颁发的证书），则不需要执行使用服务器证书填充客户端证书存储区这一步骤。
+
+    ```
+    certmgr.exe -add -r LocalMachine -s My -c -n %SERVER_NAME% -r CurrentUser -s TrustedPeople
+    ```
+
+-   授予对证书私钥的权限。
+
+     Setup.bat 批处理文件中的以下行可以让 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 辅助进程帐户访问 LocalMachine 存储区中存储的服务器证书。
+
     ```bat
-    echo ************  
-    echo setting privileges on server certificates  
-    echo ************  
-    for /F "delims=" %%i in ('"%MSSDK%\bin\FindPrivateKey.exe" My LocalMachine -n CN^=%SERVER_NAME% -a') do set PRIVATE_KEY_FILE=%%i set WP_ACCOUNT=NT AUTHORITY\NETWORK SERVICE  
-    (ver | findstr "5.1") && set WP_ACCOUNT=%COMPUTERNAME%\ASPNET  
-    echo Y|cacls.exe "%PRIVATE_KEY_FILE%" /E /G "%WP_ACCOUNT%":R  
-    iisreset  
-    ```  
-  
+    echo ************
+    echo setting privileges on server certificates
+    echo ************
+    for /F "delims=" %%i in ('"%MSSDK%\bin\FindPrivateKey.exe" My LocalMachine -n CN^=%SERVER_NAME% -a') do set PRIVATE_KEY_FILE=%%i set WP_ACCOUNT=NT AUTHORITY\NETWORK SERVICE
+    (ver | findstr "5.1") && set WP_ACCOUNT=%COMPUTERNAME%\ASPNET
+    echo Y|cacls.exe "%PRIVATE_KEY_FILE%" /E /G "%WP_ACCOUNT%":R
+    iisreset
+    ```
+
 > [!NOTE]
->  如果您使用的是非美国英文版本的 Windows，则必须编辑 Setup.bat 文件，并用与您所在的区域对应的帐户名替换 `NT AUTHORITY\NETWORK SERVICE` 帐户名。  
-  
-### <a name="to-set-up-build-and-run-the-sample"></a>设置、生成和运行示例  
-  
-1.  请确保您具有执行[的 Windows Communication Foundation 示例的一次性安装过程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
-  
-2.  若要生成 C# 或 Visual Basic .NET 版本的解决方案，请按照 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)中的说明进行操作。  
-  
-### <a name="to-run-the-sample-on-the-same-computer"></a>在同一计算机上运行示例  
-  
-1.  请确保路径包括 Makecert.exe 和 FindPrivateKey.exe 所在的文件夹。  
-  
-2.  在使用管理员特权运行的 Visual Studio 命令提示中，运行示例安装文件夹中的 Setup.bat。 这将安装运行示例所需的所有证书。  
-  
+>  如果您使用的是非美国英文版本的 Windows，则必须编辑 Setup.bat 文件，并用与您所在的区域对应的帐户名替换 `NT AUTHORITY\NETWORK SERVICE` 帐户名。
+
+### <a name="to-set-up-build-and-run-the-sample"></a>设置、生成和运行示例
+
+1.  请确保您具有执行[的 Windows Communication Foundation 示例的一次性安装过程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。
+
+2.  若要生成 C# 或 Visual Basic .NET 版本的解决方案，请按照 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)中的说明进行操作。
+
+### <a name="to-run-the-sample-on-the-same-computer"></a>在同一计算机上运行示例
+
+1.  请确保路径包括 Makecert.exe 和 FindPrivateKey.exe 所在的文件夹。
+
+2.  在使用管理员特权运行的 Visual Studio 命令提示中，运行示例安装文件夹中的 Setup.bat。 这将安装运行示例所需的所有证书。
+
     > [!NOTE]
-    >  Setup 批处理文件设计为通过 [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] 命令提示运行。 这要求路径环境变量指向 SDK 的安装目录。 将在 [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] 命令提示中自动设置此环境变量。  
+    > Setup 批处理文件设计为运行通过 Visual Studio 命令提示。 这要求路径环境变量指向 SDK 的安装目录。 将在 Visual Studio 命令提示中自动设置此环境变量。  
   
-3.  验证是否可以通过输入地址使用浏览器的服务访问 http://localhost/servicemodelsamples/service.svc 。  
+3.  验证是否可以通过输入地址使用浏览器的服务访问 `http://localhost/servicemodelsamples/service.svc` 。  
   
 4.  启动 \client\bin 中的 Client.exe。 客户端活动将显示在客户端控制台应用程序上。  
   
@@ -239,6 +239,6 @@ Press <ENTER> to terminate client.
 -   运行完示例后运行示例文件夹中的 Cleanup.bat。  
   
 > [!NOTE]
->  此脚本不会在跨计算机运行此示例时移除客户端上的服务证书。 如果有运行在计算机之间使用证书的 Windows Communication Foundation (WCF) 示例，请确保清除已安装在 CurrentUser-TrustedPeople 存储区中的服务证书。 为此，请使用以下命令：`certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>`，例如：`certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com.`。  
-  
+>  此脚本不会在跨计算机运行此示例时移除客户端上的服务证书。 如果有运行在计算机之间使用证书的 Windows Communication Foundation (WCF) 示例，请确保清除已安装在 CurrentUser-TrustedPeople 存储区中的服务证书。 为此，请使用以下命令：`certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>`，例如：`certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com.`。
+
 ## <a name="see-also"></a>请参阅

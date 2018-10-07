@@ -2,12 +2,12 @@
 title: 筛选
 ms.date: 03/30/2017
 ms.assetid: 4002946c-e34a-4356-8cfb-e25912a4be63
-ms.openlocfilehash: 74915a45ed5ca1d13790f64c7921d1f750fa04d3
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 49813ac0f493d628a941b3060be93ef19bb1e802
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47208102"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48836062"
 ---
 # <a name="filtering"></a>筛选
 Windows Communication Foundation (WCF) 筛选系统可以使用声明性筛选器匹配的消息以及做出操作决定。 使用筛选器，可以通过检查消息的某个部分来确定如何处理消息。 例如，查询过程可以使用 XPath 1.0 查询来检查已知标头的优先级元素，以确定是否将消息移动到队列的靠前位置。  
@@ -42,7 +42,7 @@ Windows Communication Foundation (WCF) 筛选系统可以使用声明性筛选�
   
 ### <a name="prefix-endpoint-address-filters"></a>前缀终结点地址筛选器  
   
-1.  <xref:System.ServiceModel.Dispatcher.PrefixEndpointAddressMessageFilter> 的工作方式与 <xref:System.ServiceModel.Dispatcher.EndpointAddressMessageFilter> 筛选器非常类似，不同之处在于可以对消息 URI 的前缀进行匹配。 例如，指定地址的筛选器 http://www.adatum.com匹配消息发送到 http://www.adatum.com/userA。  
+1.  <xref:System.ServiceModel.Dispatcher.PrefixEndpointAddressMessageFilter> 的工作方式与 <xref:System.ServiceModel.Dispatcher.EndpointAddressMessageFilter> 筛选器非常类似，不同之处在于可以对消息 URI 的前缀进行匹配。 例如，指定地址的筛选器`http://www.adatum.com`匹配消息发送到`http://www.adatum.com/userA`。  
   
 ### <a name="xpath-message-filters"></a>XPath 消息筛选器  
  <xref:System.ServiceModel.Dispatcher.XPathMessageFilter> 使用 XPath 表达式来确定 XML 文档是否包含特定元素、属性、文本或其他 XML 语法构造。 该筛选器经过优化，可以非常高效地筛选 XPath 的严格子集。 XML 路径语言中所述[W3C XML Path Language 1.0 规范](https://go.microsoft.com/fwlink/?LinkId=94779)。  

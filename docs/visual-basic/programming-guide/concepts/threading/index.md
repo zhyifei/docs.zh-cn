@@ -2,12 +2,12 @@
 title: 线程处理 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 704bb04b-ff23-471d-ab12-3cec1c2bca59
-ms.openlocfilehash: f477a36c6ffa0b5a809c8ba899b21d19a8c9a2d8
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 366c88db5d229120b1e626f275b4eeb8ecd42dba
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43861941"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48844990"
 ---
 # <a name="threading-visual-basic"></a>线程处理 (Visual Basic)
 通过线程处理，Visual Basic 程序可以执行并发处理，从而能够一次执行多项操作。 例如，可使用线程处理来监视来自用户的输入、执行后台任务和处理并行输入流。  
@@ -37,5 +37,4 @@ ms.locfileid: "43861941"
   
 |标题|描述|  
 |-----------|-----------------|  
-|[线程同步 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/threading/thread-synchronization.md)|描述如何控制线程的交互。|  
 |[线程处理](../../../../standard/threading/index.md)|描述如何在 .NET Framework 中实现线程处理。|
