@@ -35,10 +35,10 @@ for (int i = 65; i < 123; i++)
 
 [!code-csharp[csProgGuidePointers#12](../../../csharp/programming-guide/unsafe-code-pointers/codesnippet/CSharp/how-to-access-an-array-element-with-a-pointer_2.cs)]
 
-大写字母：
-ABCDEFGHIJKLMNOPQRSTUVWXYZ
-小写字母：
-abcdefghijklmnopqrstuvwxyz****************
+**大写字母：**
+**ABCDEFGHIJKLMNOPQRSTUVWXYZ**
+**小写字母：**
+**abcdefghijklmnopqrstuvwxyz**
 
 ## <a name="see-also"></a>请参阅
 
