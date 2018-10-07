@@ -6,12 +6,12 @@ helpviewer_keywords:
 - WCF, privacy information
 - privacy information [WCF]
 ms.assetid: c9553724-f3e7-45cb-9ea5-450a22d309d9
-ms.openlocfilehash: 9c2a8d89fc62f8e3e0ce17f13604a6ba05df1a6f
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 717e38b15767b744816c0a57c97827a1a35c95b3
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44083876"
+ms.lasthandoff: 10/07/2018
+ms.locfileid: "48847810"
 ---
 # <a name="windows-communication-foundation-privacy-information"></a>Windows Communication Foundation 隐私信息
 Microsoft 承诺保护最终用户的隐私。 生成使用 Windows Communication Foundation (WCF) 3.0 版，它的应用程序时你的应用程序可能会影响最终用户的隐私。 例如，应用程序可能显式收集用户联系信息，或者通过 Internet 向你的网站请求或发送信息。 如果您在应用程序中嵌入了 Microsoft 技术，则该技术可能具有可能会影响隐私的自己的行为。 WCF 不发送任何信息向 Microsoft 从你的应用程序除非你或最终用户选择将其发送给我们。  
@@ -316,45 +316,45 @@ Microsoft 承诺保护最终用户的隐私。 生成使用 Windows Communicatio
   
  还要删除下列每个操作的信息：  
   
- http://schemas.xmlsoap.org/ws/2005/02/trust/RST/Issue  
+- `http://schemas.xmlsoap.org/ws/2005/02/trust/RST/Issue`
   
- http://schemas.xmlsoap.org/ws/2005/02/trust/RSTR/Issue  
+- `http://schemas.xmlsoap.org/ws/2005/02/trust/RSTR/Issue`
   
- http://schemas.xmlsoap.org/ws/2005/02/trust/RST/Renew  
+- `http://schemas.xmlsoap.org/ws/2005/02/trust/RST/Renew`
   
- http://schemas.xmlsoap.org/ws/2005/02/trust/RSTR/Renew  
+- `http://schemas.xmlsoap.org/ws/2005/02/trust/RSTR/Renew`
   
- http://schemas.xmlsoap.org/ws/2005/02/trust/RST/Cancel  
+- `http://schemas.xmlsoap.org/ws/2005/02/trust/RST/Cancel`
   
- http://schemas.xmlsoap.org/ws/2005/02/trust/RSTR/Cancel  
+- `http://schemas.xmlsoap.org/ws/2005/02/trust/RSTR/Cancel`
   
- http://schemas.xmlsoap.org/ws/2005/02/trust/RST/Validate  
+- `http://schemas.xmlsoap.org/ws/2005/02/trust/RST/Validate`
   
- http://schemas.xmlsoap.org/ws/2005/02/trust/RSTR/Validate  
+- `http://schemas.xmlsoap.org/ws/2005/02/trust/RSTR/Validate`
   
- http://schemas.xmlsoap.org/ws/2005/02/trust/RST/SCT  
+- `http://schemas.xmlsoap.org/ws/2005/02/trust/RST/SCT`
   
- http://schemas.xmlsoap.org/ws/2005/02/trust/RSTR/SCT  
+- `http://schemas.xmlsoap.org/ws/2005/02/trust/RSTR/SCT`
   
- http://schemas.xmlsoap.org/ws/2005/02/trust/RST/SCT/Amend  
+- `http://schemas.xmlsoap.org/ws/2005/02/trust/RST/SCT/Amend`
   
- http://schemas.xmlsoap.org/ws/2005/02/trust/RSTR/SCT/Amend  
+- `http://schemas.xmlsoap.org/ws/2005/02/trust/RSTR/SCT/Amend`
   
- http://schemas.xmlsoap.org/ws/2005/02/trust/RST/SCT/Renew  
+- `http://schemas.xmlsoap.org/ws/2005/02/trust/RST/SCT/Renew`
   
- http://schemas.xmlsoap.org/ws/2005/02/trust/RSTR/SCT/Renew  
+- `http://schemas.xmlsoap.org/ws/2005/02/trust/RSTR/SCT/Renew`
   
- http://schemas.xmlsoap.org/ws/2005/02/trust/RST/SCT/Cancel  
+- `http://schemas.xmlsoap.org/ws/2005/02/trust/RST/SCT/Cancel`
   
- http://schemas.xmlsoap.org/ws/2005/02/trust/RSTR/SCT/Cancel  
+- `http://schemas.xmlsoap.org/ws/2005/02/trust/RSTR/SCT/Cancel`
   
- http://schemas.xmlsoap.org/ws/2004/04/security/trust/RST/SCT  
+- `http://schemas.xmlsoap.org/ws/2004/04/security/trust/RST/SCT`
   
- http://schemas.xmlsoap.org/ws/2004/04/security/trust/RSTR/SCT  
+- `http://schemas.xmlsoap.org/ws/2004/04/security/trust/RSTR/SCT`
   
- http://schemas.xmlsoap.org/ws/2004/04/security/trust/RST/SCT-Amend  
+- `http://schemas.xmlsoap.org/ws/2004/04/security/trust/RST/SCT-Amend`
   
- http://schemas.xmlsoap.org/ws/2004/04/security/trust/RSTR/SCT-Amend  
+- `http://schemas.xmlsoap.org/ws/2004/04/security/trust/RSTR/SCT-Amend`
   
 #### <a name="no-information-is-removed-from-application-specific-headers-and-body-data"></a>不会从特定于应用程序的标头和正文数据中删除任何信息  
  WCF 不跟踪特定于应用程序的标头 （例如，查询字符串） 或正文数据 （例如，信用卡号） 中的个人信息。  

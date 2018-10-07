@@ -8,12 +8,12 @@ helpviewer_keywords:
 - WCF, security
 ms.assetid: d171b5ca-96ef-47ff-800c-c138023cf76e
 author: BrucePerlerMS
-ms.openlocfilehash: bf88073c25351aac0e421d69a947605de3e37759
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: b9b7d78601790cfcd7cf54688db1750df96a19f9
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47200693"
+ms.lasthandoff: 10/07/2018
+ms.locfileid: "48848226"
 ---
 # <a name="how-to-secure-a-service-with-windows-credentials"></a>如何：使用 Windows 凭据保护服务的安全
 本主题演示如何启用驻留在 Windows 域，并且由同一个域中的客户端调用的 Windows Communication Foundation (WCF) 服务上的传输安全。 有关此方案的详细信息，请参阅[使用 Windows 身份验证的传输安全性](../../../docs/framework/wcf/feature-details/transport-security-with-windows-authentication.md)。 示例应用程序，请参阅[WSHttpBinding](../../../docs/framework/wcf/samples/wshttpbinding.md)示例。  
@@ -55,7 +55,7 @@ ms.locfileid: "47200693"
   
 3.  创建另一个名为 `Type` 的 `serviceType` 变量，并为其分配所实现的协定的类型 (`Calculator`)。  
   
-4.  使用该服务的基址创建 <xref:System.Uri> 类的一个实例，该实例名为 `baseAddress`。 基址必须具有与传输匹配的方案。 在这种情况下，传输方案为 HTTP，且地址包含特殊的统一资源标识符 (URI)"localhost"和端口号 (8036) 以及终结点基址 ("serviceModelSamples /): http://localhost:8036/serviceModelSamples/。  
+4.  使用该服务的基址创建 <xref:System.Uri> 类的一个实例，该实例名为 `baseAddress`。 基址必须具有与传输匹配的方案。 在这种情况下，传输方案为 HTTP，且地址包含特殊的统一资源标识符 (URI)"localhost"和端口号 (8036) 以及终结点基址 ("serviceModelSamples /): `http://localhost:8036/serviceModelSamples/`。  
   
 5.  使用 <xref:System.ServiceModel.ServiceHost> 和 `serviceType` 变量创建 `baseAddress` 类的一个实例。  
   

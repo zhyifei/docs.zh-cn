@@ -3,11 +3,11 @@ title: MSMQ 4.0 中的病毒消息处理
 ms.date: 03/30/2017
 ms.assetid: ec8d59e3-9937-4391-bb8c-fdaaf2cbb73e
 ms.openlocfilehash: 4555a6d322cbf9ca43aca0f93bc6eafe021fa569
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48266516"
+ms.lasthandoff: 10/07/2018
+ms.locfileid: "48846212"
 ---
 # <a name="poison-message-handling-in-msmq-40"></a>MSMQ 4.0 中的病毒消息处理
 本示例演示如何在服务中执行病毒消息处理。 此示例基于[事务处理 MSMQ 绑定](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md)示例。 其中使用到了 `netMsmqBinding`。 此服务是自承载控制台应用程序，通过它可以观察服务接收排队消息。

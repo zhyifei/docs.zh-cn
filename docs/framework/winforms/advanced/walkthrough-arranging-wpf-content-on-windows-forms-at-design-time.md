@@ -10,11 +10,11 @@ helpviewer_keywords:
 - interoperability [WPF]
 ms.assetid: 5efb1c53-1484-43d6-aa8a-f4861b99bb8a
 ms.openlocfilehash: 062b9b943d187ccd4105f3772688c563f540d696
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48266660"
+ms.lasthandoff: 10/07/2018
+ms.locfileid: "48846469"
 ---
 # <a name="walkthrough-arranging-wpf-content-on-windows-forms-at-design-time"></a>演练：设计时在 Windows 窗体上排列 WPF 内容
 本演练演示如何使用 Windows 窗体布局功能（例如锚定和对齐线）排列 Windows Presentation Foundation (WPF) 控件。

@@ -2,12 +2,12 @@
 title: '&lt;defaultCertificate&gt; 元素'
 ms.date: 03/30/2017
 ms.assetid: f1ddf364-9a00-45d3-b989-ff381c154ce6
-ms.openlocfilehash: a4af1c6ec452b24634fa50162fa71f069e2451f5
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 9b99ee36fdb924ea12f3023984a3aa4b590937e8
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32751007"
+ms.lasthandoff: 10/07/2018
+ms.locfileid: "48847849"
 ---
 # <a name="ltdefaultcertificategt-element"></a>&lt;defaultCertificate&gt; 元素
 指定在服务或 STS 未通过协商协议提供证书时要使用的 X.509 证书。  
@@ -78,7 +78,7 @@ x509FindType="FindByThumbPrint/FindBySubjectName/FindBySubjectDistinguishedName/
  对于使用基于证书的消息安全的绑定，此配置元素指定的证书用于加密发送给服务的消息，并期望服务用它来对客户端的应答进行签名。 如果服务未指定任何证书，它只存储要使用的一个证书。  
   
 ## <a name="example"></a>示例  
- 下面的示例指定证书用于 URI 以开头的终结点 http://www.contoso.com 和要使用其他不执行证书协商的所有终结点的证书。  
+ 下面的示例指定证书用于 URI 以开头的终结点 `http://www.contoso.com` 和要使用其他不执行证书协商的所有终结点的证书。  
   
 ```xml  
 <serviceCertificate>  
@@ -101,6 +101,6 @@ x509FindType="FindByThumbPrint/FindBySubjectName/FindBySubjectDistinguishedName/
  <xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential>  
  <xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential.DefaultCertificate%2A>  
  [使用证书](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)  
- [\<身份验证 >](../../../../../docs/framework/configure-apps/file-schema/wcf/authentication-of-clientcertificate-element.md)  
+ [\<authentication>](../../../../../docs/framework/configure-apps/file-schema/wcf/authentication-of-clientcertificate-element.md)  
  [保护客户端](../../../../../docs/framework/wcf/securing-clients.md)  
  [保护服务和客户端的安全](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)

@@ -12,11 +12,11 @@ ms.assetid: 006c54c9-50bf-48d9-a855-9d62eb95603a
 author: Xansky
 ms.author: mhopkins
 ms.openlocfilehash: d948ff2f71ff7d4335cacc0fa3815dd75af4ad45
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48778229"
+ms.lasthandoff: 10/07/2018
+ms.locfileid: "48846170"
 ---
 # <a name="get-supported-ui-automation-control-patterns"></a>获取受支持的 UI 自动化控件模式
 > [!NOTE]

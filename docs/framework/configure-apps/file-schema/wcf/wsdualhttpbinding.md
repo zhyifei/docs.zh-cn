@@ -5,11 +5,11 @@ helpviewer_keywords:
 - wsDualHttpBinding Element
 ms.assetid: fd8ac4e2-5641-473b-9115-73f14ab1c065
 ms.openlocfilehash: 1c03dd0a38264b75b31c9638cf5985a4375aea67
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48782020"
+ms.lasthandoff: 10/07/2018
+ms.locfileid: "48846014"
 ---
 # <a name="ltwsdualhttpbindinggt"></a>&lt;wsDualHttpBinding&gt;
 定义一个安全可靠且可互操作的绑定，该绑定适合于双工服务协定或通过 SOAP 中介进行的通信。  

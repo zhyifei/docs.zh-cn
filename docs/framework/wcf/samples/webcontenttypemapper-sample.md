@@ -2,12 +2,12 @@
 title: WebContentTypeMapper 示例
 ms.date: 03/30/2017
 ms.assetid: a4fe59e7-44d8-43c6-a1f8-40c45223adca
-ms.openlocfilehash: 91e5cca478521a343f7528f878f114b85eff2d08
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 572bea9fc38668d554ef467be7689ac01b652fb8
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45618527"
+ms.lasthandoff: 10/07/2018
+ms.locfileid: "48847589"
 ---
 # <a name="webcontenttypemapper-sample"></a>WebContentTypeMapper 示例
 此示例演示如何将新内容类型映射到 Windows Communication Foundation (WCF) 消息正文格式。  
@@ -58,7 +58,7 @@ public class JsonContentTypeMapper : WebContentTypeMapper
   
 2.  如中所述生成解决方案 WebContentTypeMapperSample.sln[生成 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/building-the-samples.md)。  
   
-3.  导航到 http://localhost/ServiceModelSamples/JCTMClientPage.htm（不要打开 JCTMClientPage.htm 在浏览器中从项目目录中）。  
+3.  导航到`http://localhost/ServiceModelSamples/JCTMClientPage.htm`（不要打开 JCTMClientPage.htm 在浏览器中从项目目录中）。  
   
 > [!IMPORTANT]
 >  您的计算机上可能已安装这些示例。 在继续操作之前，请先检查以下（默认）目录：  

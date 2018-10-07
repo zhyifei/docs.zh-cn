@@ -2,12 +2,12 @@
 title: 对 WCF Web HTTP 服务的缓存支持
 ms.date: 03/30/2017
 ms.assetid: 7f8078e0-00d9-415c-b8ba-c1b6d5c31799
-ms.openlocfilehash: 25b564235b5d2b3b26b5d657f3e5f0bd5d594125
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: ef7a03a9e4c6e188e3c7a000fc4a6050e678556d
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45972983"
+ms.lasthandoff: 10/07/2018
+ms.locfileid: "48847629"
 ---
 # <a name="caching-support-for-wcf-web-http-services"></a>对 WCF Web HTTP 服务的缓存支持
 [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] 可以使用已在 WCF Web HTTP 服务在 ASP.NET 中提供的声明性缓存机制。 这样，你可以缓存来自 WCF Web HTTP 服务操作的响应。 如果用户向配置为进行缓存的服务发送了 HTTP GET，ASP.NET 将发送回已缓存的响应且不会调用服务方法。 在缓存过期后，下次用户发送 HTTP GET 时，将会调用服务方法且再次缓存响应。 有关 ASP.NET 缓存的详细信息，请参阅[ASP.NET 缓存概述](https://go.microsoft.com/fwlink/?LinkId=152534)  
@@ -58,7 +58,7 @@ public class Service
 </system.web>  
 ```  
   
- 这是可供 ASP.NET 应用程序使用的同一配置元素。 有关 ASP.NET 缓存配置文件的详细信息，请参阅<xref:System.Web.Configuration.OutputCacheProfile>。 对于 Web HTTP 服务，缓存配置文件中最重要的特性是 `cacheDuration` 和 `varyByParam`。 这两个特性都是必需的。 `cacheDuration` 以秒为单位设置应缓存响应的时间。 `varyByParam` 允许您指定用于缓存响应的查询字符串参数。 对于使用不同查询字符串参数值发出的所有请求，将单独进行缓存。 例如，一旦对进行初始请求 http://MyServer/MyHttpService/MyOperation?param=10具有相同的 URI 发出的所有后续请求将返回缓存的响应 （只要缓存持续时间尚未结束）。 对于形式相同但具有不同参数查询字符串参数值的类似请求的响应，将单独进行缓存。 如果不需要此单独缓存行为，请将 `varyByParam` 设置为“无”。  
+ 这是可供 ASP.NET 应用程序使用的同一配置元素。 有关 ASP.NET 缓存配置文件的详细信息，请参阅<xref:System.Web.Configuration.OutputCacheProfile>。 对于 Web HTTP 服务，缓存配置文件中最重要的特性是 `cacheDuration` 和 `varyByParam`。 这两个特性都是必需的。 `cacheDuration` 以秒为单位设置应缓存响应的时间。 `varyByParam` 允许您指定用于缓存响应的查询字符串参数。 对于使用不同查询字符串参数值发出的所有请求，将单独进行缓存。 例如，一旦对进行初始请求`http://MyServer/MyHttpService/MyOperation?param=10`，具有相同的 URI 发出的所有后续请求将返回缓存的响应 （只要缓存持续时间尚未结束）。 对于形式相同但具有不同参数查询字符串参数值的类似请求的响应，将单独进行缓存。 如果不需要此单独缓存行为，请将 `varyByParam` 设置为“无”。  
   
 ## <a name="sql-cache-dependency"></a>SQL 缓存依赖项  
  还可以跟随 SQL 缓存依赖项来缓存 Web HTTP 服务响应。 如果 WCF Web HTTP 服务依赖于 SQL 数据库中存储的数据，则当 SQL 数据库表中的数据更改时，您可能希望缓存服务的响应并使已缓存的响应无效。 此行为完全在 Web.config 文件中配置。 您必须首先定义中的连接字符串 <`connectionStrings`> 元素。  

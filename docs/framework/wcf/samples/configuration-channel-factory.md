@@ -3,11 +3,11 @@ title: 配置通道工厂
 ms.date: 03/30/2017
 ms.assetid: 3b749493-bd8a-4ccb-893e-5948901a1486
 ms.openlocfilehash: b5dbabf8cdc28cc2beaf343b0377528c6ced1c66
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48778539"
+ms.lasthandoff: 10/07/2018
+ms.locfileid: "48846287"
 ---
 # <a name="configuration-channel-factory"></a>配置通道工厂
 此示例介绍 <xref:System.ServiceModel.Configuration.ConfigurationChannelFactory%601> 的用法。 <xref:System.ServiceModel.Configuration.ConfigurationChannelFactory%601>允许 WCF 客户端配置的集中管理。 这可能在应用程序域加载时间之后选择或更改配置的方案中也非常有用。
