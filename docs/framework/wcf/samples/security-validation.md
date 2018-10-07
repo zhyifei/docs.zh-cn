@@ -4,20 +4,20 @@ ms.date: 03/30/2017
 ms.assetid: 48dcd496-0c4f-48ce-8b9b-0e25b77ffa58
 author: BrucePerlerMS
 ms.openlocfilehash: 4b80457fb551c2ee99f910710c5f30fa59c53a01
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48776369"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48844535"
 ---
-# <a name="security-validation"></a><span data-ttu-id="5f21f-102">安全性验证</span><span class="sxs-lookup"><span data-stu-id="5f21f-102">Security Validation</span></span>
-<span data-ttu-id="5f21f-103">此示例演示如何使用自定义行为来验证计算机上的服务，以确保服务符合特定条件。</span><span class="sxs-lookup"><span data-stu-id="5f21f-103">This sample demonstrates how to use a custom behavior to validate services on a computer to ensure they meet specific criteria.</span></span> <span data-ttu-id="5f21f-104">在此示例中，自定义行为通过以下方法验证服务：扫描服务上的每个终结点，并查看这些终结点是否包含安全的绑定元素。</span><span class="sxs-lookup"><span data-stu-id="5f21f-104">In this sample, services are validated by the custom behavior by scanning through each endpoint on the service and checking to see whether they contain secure binding elements.</span></span> <span data-ttu-id="5f21f-105">此示例基于[Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md)。</span><span class="sxs-lookup"><span data-stu-id="5f21f-105">This sample is based on the [Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md).</span></span>  
+# <a name="security-validation"></a><span data-ttu-id="fd850-102">安全性验证</span><span class="sxs-lookup"><span data-stu-id="fd850-102">Security Validation</span></span>
+<span data-ttu-id="fd850-103">此示例演示如何使用自定义行为来验证计算机上的服务，以确保服务符合特定条件。</span><span class="sxs-lookup"><span data-stu-id="fd850-103">This sample demonstrates how to use a custom behavior to validate services on a computer to ensure they meet specific criteria.</span></span> <span data-ttu-id="fd850-104">在此示例中，自定义行为通过以下方法验证服务：扫描服务上的每个终结点，并查看这些终结点是否包含安全的绑定元素。</span><span class="sxs-lookup"><span data-stu-id="fd850-104">In this sample, services are validated by the custom behavior by scanning through each endpoint on the service and checking to see whether they contain secure binding elements.</span></span> <span data-ttu-id="fd850-105">此示例基于[Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md)。</span><span class="sxs-lookup"><span data-stu-id="fd850-105">This sample is based on the [Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md).</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="5f21f-106">本主题的最后介绍了此示例的设置过程和生成说明。</span><span class="sxs-lookup"><span data-stu-id="5f21f-106">The setup procedure and build instructions for this sample are located at the end of this topic.</span></span>  
+>  <span data-ttu-id="fd850-106">本主题的最后介绍了此示例的设置过程和生成说明。</span><span class="sxs-lookup"><span data-stu-id="fd850-106">The setup procedure and build instructions for this sample are located at the end of this topic.</span></span>  
   
-## <a name="endpoint-validation-custom-behavior"></a><span data-ttu-id="5f21f-107">终结点验证自定义行为</span><span class="sxs-lookup"><span data-stu-id="5f21f-107">Endpoint Validation Custom Behavior</span></span>  
- <span data-ttu-id="5f21f-108">通过将用户代码添加到 `Validate` 接口中包含的 <xref:System.ServiceModel.Description.IServiceBehavior> 方法，可以为某个服务或终结点指定自定义行为，以便执行用户定义的操作。</span><span class="sxs-lookup"><span data-stu-id="5f21f-108">By adding user code to the `Validate` method contained in the <xref:System.ServiceModel.Description.IServiceBehavior> interface, custom behavior can be given to a service or endpoint to perform user-defined actions.</span></span> <span data-ttu-id="5f21f-109">下面的代码用于遍历服务中包含的每个终结点，这将在其绑定集合中搜索安全的绑定。</span><span class="sxs-lookup"><span data-stu-id="5f21f-109">The following code is used to loop through each endpoint contained in a service, which searches through their binding collections for secure bindings.</span></span>  
+## <a name="endpoint-validation-custom-behavior"></a><span data-ttu-id="fd850-107">终结点验证自定义行为</span><span class="sxs-lookup"><span data-stu-id="fd850-107">Endpoint Validation Custom Behavior</span></span>  
+ <span data-ttu-id="fd850-108">通过将用户代码添加到 `Validate` 接口中包含的 <xref:System.ServiceModel.Description.IServiceBehavior> 方法，可以为某个服务或终结点指定自定义行为，以便执行用户定义的操作。</span><span class="sxs-lookup"><span data-stu-id="fd850-108">By adding user code to the `Validate` method contained in the <xref:System.ServiceModel.Description.IServiceBehavior> interface, custom behavior can be given to a service or endpoint to perform user-defined actions.</span></span> <span data-ttu-id="fd850-109">下面的代码用于遍历服务中包含的每个终结点，这将在其绑定集合中搜索安全的绑定。</span><span class="sxs-lookup"><span data-stu-id="fd850-109">The following code is used to loop through each endpoint contained in a service, which searches through their binding collections for secure bindings.</span></span>  
   
 ```  
 public void Validate(ServiceDescription serviceDescription,   
@@ -48,7 +48,7 @@ public void Validate(ServiceDescription serviceDescription,
 }  
 ```  
   
- <span data-ttu-id="5f21f-110">通过将下面的代码添加到 Web.config 文件可以添加服务可识别的 `serviceValidate` 行为扩展。</span><span class="sxs-lookup"><span data-stu-id="5f21f-110">Adding the following code to Web.config file adds the `serviceValidate` behavior extension for the service to recognize.</span></span>  
+ <span data-ttu-id="fd850-110">通过将下面的代码添加到 Web.config 文件可以添加服务可识别的 `serviceValidate` 行为扩展。</span><span class="sxs-lookup"><span data-stu-id="fd850-110">Adding the following code to Web.config file adds the `serviceValidate` behavior extension for the service to recognize.</span></span>  
   
 ```xml  
 <system.serviceModel>  
@@ -60,7 +60,7 @@ public void Validate(ServiceDescription serviceDescription,
 ...  
 ```  
   
- <span data-ttu-id="5f21f-111">将行为扩展添加到服务之后，现在即可将 `endpointValidate` 行为添加到 Web.config 文件的行为列表中，从而添加到服务中。</span><span class="sxs-lookup"><span data-stu-id="5f21f-111">Once the behavior extension is added to the service, it is now possible to add the `endpointValidate` behavior to the list of behaviors in the Web.config file and thus, to the service.</span></span>  
+ <span data-ttu-id="fd850-111">将行为扩展添加到服务之后，现在即可将 `endpointValidate` 行为添加到 Web.config 文件的行为列表中，从而添加到服务中。</span><span class="sxs-lookup"><span data-stu-id="fd850-111">Once the behavior extension is added to the service, it is now possible to add the `endpointValidate` behavior to the list of behaviors in the Web.config file and thus, to the service.</span></span>  
   
 ```xml  
 <behaviors>  
@@ -73,39 +73,39 @@ public void Validate(ServiceDescription serviceDescription,
 </behaviors>  
 ```  
   
- <span data-ttu-id="5f21f-112">添加到 Web.config 文件的行为及其扩展可将行为应用到各个服务，而添加到 Machine.config 文件的行为及其扩展则将行为应用到计算机上的每个活动服务。</span><span class="sxs-lookup"><span data-stu-id="5f21f-112">Behaviors and their extensions that are added to the Web.config file apply behavior to individual services, while when added to the Machine.config file apply behavior to every service active on the computer.</span></span>  
+ <span data-ttu-id="fd850-112">添加到 Web.config 文件的行为及其扩展可将行为应用到各个服务，而添加到 Machine.config 文件的行为及其扩展则将行为应用到计算机上的每个活动服务。</span><span class="sxs-lookup"><span data-stu-id="fd850-112">Behaviors and their extensions that are added to the Web.config file apply behavior to individual services, while when added to the Machine.config file apply behavior to every service active on the computer.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="5f21f-113">向所有服务中添加行为时，建议在进行任何更改之前备份 Machine.config 文件。</span><span class="sxs-lookup"><span data-stu-id="5f21f-113">When adding behavior to all services, it is suggested to backup the Machine.config file before making any change.</span></span>  
+>  <span data-ttu-id="fd850-113">向所有服务中添加行为时，建议在进行任何更改之前备份 Machine.config 文件。</span><span class="sxs-lookup"><span data-stu-id="fd850-113">When adding behavior to all services, it is suggested to backup the Machine.config file before making any change.</span></span>  
   
- <span data-ttu-id="5f21f-114">现在运行此示例的 client\bin 目录中提供的客户端。</span><span class="sxs-lookup"><span data-stu-id="5f21f-114">Now run the client provided in the client\bin directory of this sample.</span></span> <span data-ttu-id="5f21f-115">异常已出现并显示以下消息:"请求的服务 http://localhost/servicemodelsamples/service.svc无法激活。"</span><span class="sxs-lookup"><span data-stu-id="5f21f-115">An exception has occurs with the following message: "The requested service, 'http://localhost/servicemodelsamples/service.svc' could not be activated."</span></span> <span data-ttu-id="5f21f-116">这是预期的行为，因为终结点验证行为认为某个终结点不安全，并阻止服务启动。</span><span class="sxs-lookup"><span data-stu-id="5f21f-116">This is expected because an endpoint is considered insecure by the endpoint validating behavior and prevents the service from being started.</span></span> <span data-ttu-id="5f21f-117">该行为还会引发一个内部异常，以描述哪个终结点不安全，并在“System.ServiceModel 4.0.0.0”源和“WebHost”类别下的系统事件查看器中写入一则消息。</span><span class="sxs-lookup"><span data-stu-id="5f21f-117">The behavior also throws an internal exception that describes which endpoint is insecure and writes a message to the system Event Viewer under the "System.ServiceModel 4.0.0.0" source and the "WebHost" category.</span></span> <span data-ttu-id="5f21f-118">还可以在此示例中打开对服务的跟踪。</span><span class="sxs-lookup"><span data-stu-id="5f21f-118">It is also possible to turn on tracing on the service in this sample.</span></span> <span data-ttu-id="5f21f-119">这样可以使用户查看终结点验证行为引发的异常，方法是：使用服务跟踪查看器工具打开生成的服务跟踪。</span><span class="sxs-lookup"><span data-stu-id="5f21f-119">This allows the user to view the exceptions thrown by endpoint validating behavior by opening the resulting service traces using the Service Trace Viewer tool.</span></span>  
+ <span data-ttu-id="fd850-114">现在运行此示例的 client\bin 目录中提供的客户端。</span><span class="sxs-lookup"><span data-stu-id="fd850-114">Now run the client provided in the client\bin directory of this sample.</span></span> <span data-ttu-id="fd850-115">异常已出现并显示以下消息:"请求的服务 http://localhost/servicemodelsamples/service.svc无法激活。"</span><span class="sxs-lookup"><span data-stu-id="fd850-115">An exception has occurs with the following message: "The requested service, 'http://localhost/servicemodelsamples/service.svc' could not be activated."</span></span> <span data-ttu-id="fd850-116">这是预期的行为，因为终结点验证行为认为某个终结点不安全，并阻止服务启动。</span><span class="sxs-lookup"><span data-stu-id="fd850-116">This is expected because an endpoint is considered insecure by the endpoint validating behavior and prevents the service from being started.</span></span> <span data-ttu-id="fd850-117">该行为还会引发一个内部异常，以描述哪个终结点不安全，并在“System.ServiceModel 4.0.0.0”源和“WebHost”类别下的系统事件查看器中写入一则消息。</span><span class="sxs-lookup"><span data-stu-id="fd850-117">The behavior also throws an internal exception that describes which endpoint is insecure and writes a message to the system Event Viewer under the "System.ServiceModel 4.0.0.0" source and the "WebHost" category.</span></span> <span data-ttu-id="fd850-118">还可以在此示例中打开对服务的跟踪。</span><span class="sxs-lookup"><span data-stu-id="fd850-118">It is also possible to turn on tracing on the service in this sample.</span></span> <span data-ttu-id="fd850-119">这样可以使用户查看终结点验证行为引发的异常，方法是：使用服务跟踪查看器工具打开生成的服务跟踪。</span><span class="sxs-lookup"><span data-stu-id="fd850-119">This allows the user to view the exceptions thrown by endpoint validating behavior by opening the resulting service traces using the Service Trace Viewer tool.</span></span>  
   
-#### <a name="to-view-failed-endpoint-validation-exception-messages-in-the-event-viewer"></a><span data-ttu-id="5f21f-120">查看事件查看器中失败的终结点验证异常消息</span><span class="sxs-lookup"><span data-stu-id="5f21f-120">To view failed endpoint validation exception messages in the Event Viewer</span></span>  
+#### <a name="to-view-failed-endpoint-validation-exception-messages-in-the-event-viewer"></a><span data-ttu-id="fd850-120">查看事件查看器中失败的终结点验证异常消息</span><span class="sxs-lookup"><span data-stu-id="fd850-120">To view failed endpoint validation exception messages in the Event Viewer</span></span>  
   
-1.  <span data-ttu-id="5f21f-121">单击**启动**菜单，然后选择**运行...**.</span><span class="sxs-lookup"><span data-stu-id="5f21f-121">Click the **Start** menu and select **Run…**.</span></span>  
+1.  <span data-ttu-id="fd850-121">单击**启动**菜单，然后选择**运行...**.</span><span class="sxs-lookup"><span data-stu-id="fd850-121">Click the **Start** menu and select **Run…**.</span></span>  
   
-2.  <span data-ttu-id="5f21f-122">类型`eventvwr`然后单击**确定**。</span><span class="sxs-lookup"><span data-stu-id="5f21f-122">Type `eventvwr` and click **OK**.</span></span>  
+2.  <span data-ttu-id="fd850-122">类型`eventvwr`然后单击**确定**。</span><span class="sxs-lookup"><span data-stu-id="fd850-122">Type `eventvwr` and click **OK**.</span></span>  
   
-3.  <span data-ttu-id="5f21f-123">在事件查看器窗口中，单击**应用程序**。</span><span class="sxs-lookup"><span data-stu-id="5f21f-123">In the Event Viewer window, click **Application**.</span></span>  
+3.  <span data-ttu-id="fd850-123">在事件查看器窗口中，单击**应用程序**。</span><span class="sxs-lookup"><span data-stu-id="fd850-123">In the Event Viewer window, click **Application**.</span></span>  
   
-4.  <span data-ttu-id="5f21f-124">双击新添加的"System.ServiceModel 4.0.0.0"事件中"WebHost"类别下**应用程序**窗口以查看不安全终结点消息。</span><span class="sxs-lookup"><span data-stu-id="5f21f-124">Double-click the recently added "System.ServiceModel 4.0.0.0" event under the "WebHost" category in the **Application** window to view insecure endpoint messages.</span></span>  
+4.  <span data-ttu-id="fd850-124">双击新添加的"System.ServiceModel 4.0.0.0"事件中"WebHost"类别下**应用程序**窗口以查看不安全终结点消息。</span><span class="sxs-lookup"><span data-stu-id="fd850-124">Double-click the recently added "System.ServiceModel 4.0.0.0" event under the "WebHost" category in the **Application** window to view insecure endpoint messages.</span></span>  
   
-#### <a name="to-set-up-build-and-run-the-sample"></a><span data-ttu-id="5f21f-125">设置、生成和运行示例</span><span class="sxs-lookup"><span data-stu-id="5f21f-125">To set up, build, and run the sample</span></span>  
+#### <a name="to-set-up-build-and-run-the-sample"></a><span data-ttu-id="fd850-125">设置、生成和运行示例</span><span class="sxs-lookup"><span data-stu-id="fd850-125">To set up, build, and run the sample</span></span>  
   
-1.  <span data-ttu-id="5f21f-126">请确保您具有执行[的 Windows Communication Foundation 示例的一次性安装过程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。</span><span class="sxs-lookup"><span data-stu-id="5f21f-126">Ensure that you have performed the [One-Time Setup Procedure for the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span></span>  
+1.  <span data-ttu-id="fd850-126">请确保您具有执行[的 Windows Communication Foundation 示例的一次性安装过程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。</span><span class="sxs-lookup"><span data-stu-id="fd850-126">Ensure that you have performed the [One-Time Setup Procedure for the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span></span>  
   
-2.  <span data-ttu-id="5f21f-127">若要生成 C# 或 Visual Basic .NET 版本的解决方案，请按照 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)中的说明进行操作。</span><span class="sxs-lookup"><span data-stu-id="5f21f-127">To build the C# or Visual Basic .NET edition of the solution, follow the instructions in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).</span></span>  
+2.  <span data-ttu-id="fd850-127">若要生成 C# 或 Visual Basic .NET 版本的解决方案，请按照 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)中的说明进行操作。</span><span class="sxs-lookup"><span data-stu-id="fd850-127">To build the C# or Visual Basic .NET edition of the solution, follow the instructions in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).</span></span>  
   
-3.  <span data-ttu-id="5f21f-128">若要在单或跨计算机配置中运行示例，请按照中的说明[运行 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/running-the-samples.md)。</span><span class="sxs-lookup"><span data-stu-id="5f21f-128">To run the sample in a single- or cross-machine configuration, follow the instructions in [Running the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/running-the-samples.md).</span></span>  
+3.  <span data-ttu-id="fd850-128">若要在单或跨计算机配置中运行示例，请按照中的说明[运行 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/running-the-samples.md)。</span><span class="sxs-lookup"><span data-stu-id="fd850-128">To run the sample in a single- or cross-machine configuration, follow the instructions in [Running the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/running-the-samples.md).</span></span>  
   
 > [!IMPORTANT]
->  <span data-ttu-id="5f21f-129">您的计算机上可能已安装这些示例。</span><span class="sxs-lookup"><span data-stu-id="5f21f-129">The samples may already be installed on your computer.</span></span> <span data-ttu-id="5f21f-130">在继续操作之前，请先检查以下（默认）目录：</span><span class="sxs-lookup"><span data-stu-id="5f21f-130">Check for the following (default) directory before continuing.</span></span>  
+>  <span data-ttu-id="fd850-129">您的计算机上可能已安装这些示例。</span><span class="sxs-lookup"><span data-stu-id="fd850-129">The samples may already be installed on your computer.</span></span> <span data-ttu-id="fd850-130">在继续操作之前，请先检查以下（默认）目录：</span><span class="sxs-lookup"><span data-stu-id="fd850-130">Check for the following (default) directory before continuing.</span></span>  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  <span data-ttu-id="5f21f-131">如果此目录不存在，请转到[Windows Communication Foundation (WCF) 和.NET Framework 4 的 Windows Workflow Foundation (WF) 示例](https://go.microsoft.com/fwlink/?LinkId=150780)若要下载所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。</span><span class="sxs-lookup"><span data-stu-id="5f21f-131">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) to download all Windows Communication Foundation (WCF) and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="5f21f-132">此示例位于以下目录：</span><span class="sxs-lookup"><span data-stu-id="5f21f-132">This sample is located in the following directory.</span></span>  
+>  <span data-ttu-id="fd850-131">如果此目录不存在，请转到[Windows Communication Foundation (WCF) 和.NET Framework 4 的 Windows Workflow Foundation (WF) 示例](https://go.microsoft.com/fwlink/?LinkId=150780)若要下载所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。</span><span class="sxs-lookup"><span data-stu-id="fd850-131">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) to download all Windows Communication Foundation (WCF) and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="fd850-132">此示例位于以下目录：</span><span class="sxs-lookup"><span data-stu-id="fd850-132">This sample is located in the following directory.</span></span>  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Management\ServiceValidation`  
   
-## <a name="see-also"></a><span data-ttu-id="5f21f-133">请参阅</span><span class="sxs-lookup"><span data-stu-id="5f21f-133">See Also</span></span>  
- [<span data-ttu-id="5f21f-134">AppFabric 监视示例</span><span class="sxs-lookup"><span data-stu-id="5f21f-134">AppFabric Monitoring Samples</span></span>](https://go.microsoft.com/fwlink/?LinkId=193959)
+## <a name="see-also"></a><span data-ttu-id="fd850-133">请参阅</span><span class="sxs-lookup"><span data-stu-id="fd850-133">See Also</span></span>  
+ [<span data-ttu-id="fd850-134">AppFabric 监视示例</span><span class="sxs-lookup"><span data-stu-id="fd850-134">AppFabric Monitoring Samples</span></span>](https://go.microsoft.com/fwlink/?LinkId=193959)
