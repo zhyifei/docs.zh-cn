@@ -20,12 +20,12 @@ helpviewer_keywords:
 - parent table navigation in DataGrid
 - child tables [Windows Forms], dataGrid control
 ms.assetid: 85604bce-bc03-49d9-9030-dda8896c44b1
-ms.openlocfilehash: 9f939175a77ff080b37491a36c15edbb8af15933
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: a4a8f33b45fa8433013cfa34fbc55f0db90737c4
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43462459"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48850682"
 ---
 # <a name="datagrid-control-overview-windows-forms"></a>DataGrid 控件概述（Windows 窗体）
 > [!NOTE]
@@ -90,7 +90,7 @@ ms.locfileid: "43462459"
 |多个相关表。|网格可以显示树视图以便选择表格，你也可指定网格显示父表。 通过父表中的记录，用户可导航到相关的子行。|  
   
 > [!NOTE]
->  使用 <xref:System.Data.DataRelation> 使数据集中的表相关。  另请参阅[超链接"http://msdn.microsoft.com/library/dbwcse3d(v=vs.110)"中的数据集的关系](https://msdn.microsoft.com/library/dbwcse3d\(v=vs.110\))或[中的数据集的关系](https://msdn.microsoft.com/library/dbwcse3d\(v=vs.120\))。  
+> 使用 <xref:System.Data.DataRelation> 使数据集中的表相关。 另请参阅[创建数据集之间的关系](/visualstudio/data-tools/relationships-in-datasets)。
   
  当 <xref:System.Windows.Forms.DataGrid> 控件显示表并且 <xref:System.Windows.Forms.DataGrid.AllowSorting%2A> 属性设置为 `true` 时，可通过单击列标题对数据重新排序。 用户还可以添加行和编辑单元格。  
   

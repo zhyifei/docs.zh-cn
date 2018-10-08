@@ -3,11 +3,11 @@ title: 数据库访问活动
 ms.date: 03/30/2017
 ms.assetid: 174a381e-1343-46a8-a62c-7c2ae2c4f0b2
 ms.openlocfilehash: efcdd25ee3e6b86d87d551623b166eab4fa76845
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48777901"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48850388"
 ---
 # <a name="database-access-activities"></a>数据库访问活动
 数据库访问活动可用于在一个工作流内访问数据库。 这些活动可以访问数据库以检索或修改信息并使用[ADO.NET](https://go.microsoft.com/fwlink/?LinkId=166081)来访问数据库。  

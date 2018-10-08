@@ -2,12 +2,12 @@
 title: 协变和逆变 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 59224c46-9931-466b-8c6e-3648c3e609c6
-ms.openlocfilehash: 322cb452e0a3391812e58b68406657651f7a430f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 241b8f5864b6e9b3e1caddde25d032a24e4d0bb7
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33644038"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48850444"
 ---
 # <a name="covariance-and-contravariance-visual-basic"></a>协变和逆变 (Visual Basic)
 在 Visual Basic 中，协变和逆变能够实现数组类型、委托类型和泛型类型参数的隐式引用转换。 协变保留分配兼容性，逆变则与之相反。  
@@ -78,7 +78,7 @@ Shared Sub Test()
 End Sub  
 ```  
   
- 在 .NET Framework 4 或更高版本的 Visual Basic 中，支持在泛型接口和委托中使用协变和逆变，并允许隐式转换泛型类型参数。 有关详细信息，请参阅[泛型接口中的变体 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md) 和[委托中的变体 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-delegates.md)。  
+ 在.NET Framework 4 或更高版本，Visual Basic 支持协变和逆变在泛型接口和委托中，并允许进行隐式转换泛型类型参数。 有关详细信息，请参阅[泛型接口中的变体 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md) 和[委托中的变体 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-delegates.md)。  
   
  以下代码示例演示泛型接口的隐式引用转换。  
   
