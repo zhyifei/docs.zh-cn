@@ -10,22 +10,22 @@ helpviewer_keywords:
 ms.assetid: 3afa1586-e1b8-473d-8985-c3fc90cf561b
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: 549f3dcfd7225937fd04ad2116e2be311687861b
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 259d8e0297025d496b3a10c3ef3ec2b3c96cffaa
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47399445"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48849784"
 ---
-# <a name="ltperformancecountergt-element-network-settings"></a><span data-ttu-id="f40e5-102">&lt;performanceCounter&gt;元素 （网络设置）</span><span class="sxs-lookup"><span data-stu-id="f40e5-102">&lt;performanceCounter&gt; Element (Network Settings)</span></span>
-<span data-ttu-id="f40e5-103">启用或禁用网络性能计数器。</span><span class="sxs-lookup"><span data-stu-id="f40e5-103">Enables or disables networking performance counters.</span></span>  
+# <a name="ltperformancecountergt-element-network-settings"></a><span data-ttu-id="890b5-102">&lt;performanceCounter&gt;元素 （网络设置）</span><span class="sxs-lookup"><span data-stu-id="890b5-102">&lt;performanceCounter&gt; Element (Network Settings)</span></span>
+<span data-ttu-id="890b5-103">启用或禁用网络性能计数器。</span><span class="sxs-lookup"><span data-stu-id="890b5-103">Enables or disables networking performance counters.</span></span>  
   
- <span data-ttu-id="f40e5-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="f40e5-104">\<configuration></span></span>  
-<span data-ttu-id="f40e5-105">\<system.net></span><span class="sxs-lookup"><span data-stu-id="f40e5-105">\<system.net></span></span>  
-<span data-ttu-id="f40e5-106">\<设置 ></span><span class="sxs-lookup"><span data-stu-id="f40e5-106">\<settings></span></span>  
-<span data-ttu-id="f40e5-107">\<performanceCounters></span><span class="sxs-lookup"><span data-stu-id="f40e5-107">\<performanceCounters></span></span>  
+ <span data-ttu-id="890b5-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="890b5-104">\<configuration></span></span>  
+<span data-ttu-id="890b5-105">\<system.net></span><span class="sxs-lookup"><span data-stu-id="890b5-105">\<system.net></span></span>  
+<span data-ttu-id="890b5-106">\<设置 ></span><span class="sxs-lookup"><span data-stu-id="890b5-106">\<settings></span></span>  
+<span data-ttu-id="890b5-107">\<performanceCounters></span><span class="sxs-lookup"><span data-stu-id="890b5-107">\<performanceCounters></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="f40e5-108">语法</span><span class="sxs-lookup"><span data-stu-id="f40e5-108">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="890b5-108">语法</span><span class="sxs-lookup"><span data-stu-id="890b5-108">Syntax</span></span>  
   
 ```xml  
 <performanceCounters  
@@ -33,35 +33,35 @@ ms.locfileid: "47399445"
 />  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="f40e5-109">特性和元素</span><span class="sxs-lookup"><span data-stu-id="f40e5-109">Attributes and Elements</span></span>  
- <span data-ttu-id="f40e5-110">下列各节描述了特性、子元素和父元素。</span><span class="sxs-lookup"><span data-stu-id="f40e5-110">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="890b5-109">特性和元素</span><span class="sxs-lookup"><span data-stu-id="890b5-109">Attributes and Elements</span></span>  
+ <span data-ttu-id="890b5-110">下列各节描述了特性、子元素和父元素。</span><span class="sxs-lookup"><span data-stu-id="890b5-110">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="f40e5-111">特性</span><span class="sxs-lookup"><span data-stu-id="f40e5-111">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="890b5-111">特性</span><span class="sxs-lookup"><span data-stu-id="890b5-111">Attributes</span></span>  
   
-|<span data-ttu-id="f40e5-112">特性</span><span class="sxs-lookup"><span data-stu-id="f40e5-112">Attribute</span></span>|<span data-ttu-id="f40e5-113">描述</span><span class="sxs-lookup"><span data-stu-id="f40e5-113">Description</span></span>|  
+|<span data-ttu-id="890b5-112">特性</span><span class="sxs-lookup"><span data-stu-id="890b5-112">Attribute</span></span>|<span data-ttu-id="890b5-113">描述</span><span class="sxs-lookup"><span data-stu-id="890b5-113">Description</span></span>|  
 |---------------|-----------------|  
-|`enabled`|<span data-ttu-id="f40e5-114">指定是否启用网络性能计数器。</span><span class="sxs-lookup"><span data-stu-id="f40e5-114">Specifies whether the networking performance counters are enabled.</span></span> <span data-ttu-id="f40e5-115">默认值为 `false`。</span><span class="sxs-lookup"><span data-stu-id="f40e5-115">The default value is `false`.</span></span>|  
+|`enabled`|<span data-ttu-id="890b5-114">指定是否启用网络性能计数器。</span><span class="sxs-lookup"><span data-stu-id="890b5-114">Specifies whether the networking performance counters are enabled.</span></span> <span data-ttu-id="890b5-115">默认值为 `false`。</span><span class="sxs-lookup"><span data-stu-id="890b5-115">The default value is `false`.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="f40e5-116">子元素</span><span class="sxs-lookup"><span data-stu-id="f40e5-116">Child Elements</span></span>  
- <span data-ttu-id="f40e5-117">无。</span><span class="sxs-lookup"><span data-stu-id="f40e5-117">None.</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="890b5-116">子元素</span><span class="sxs-lookup"><span data-stu-id="890b5-116">Child Elements</span></span>  
+ <span data-ttu-id="890b5-117">无。</span><span class="sxs-lookup"><span data-stu-id="890b5-117">None.</span></span>  
   
-### <a name="parent-elements"></a><span data-ttu-id="f40e5-118">父元素</span><span class="sxs-lookup"><span data-stu-id="f40e5-118">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="890b5-118">父元素</span><span class="sxs-lookup"><span data-stu-id="890b5-118">Parent Elements</span></span>  
   
-|<span data-ttu-id="f40e5-119">元素</span><span class="sxs-lookup"><span data-stu-id="f40e5-119">Element</span></span>|<span data-ttu-id="f40e5-120">描述</span><span class="sxs-lookup"><span data-stu-id="f40e5-120">Description</span></span>|  
+|<span data-ttu-id="890b5-119">元素</span><span class="sxs-lookup"><span data-stu-id="890b5-119">Element</span></span>|<span data-ttu-id="890b5-120">描述</span><span class="sxs-lookup"><span data-stu-id="890b5-120">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="f40e5-121">设置</span><span class="sxs-lookup"><span data-stu-id="f40e5-121">settings</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/settings-element-network-settings.md)|<span data-ttu-id="f40e5-122">配置 <xref:System.Net> 命名空间的基本网络选项。</span><span class="sxs-lookup"><span data-stu-id="f40e5-122">Configures basic network options for the <xref:System.Net> namespace.</span></span>|  
+|[<span data-ttu-id="890b5-121">设置</span><span class="sxs-lookup"><span data-stu-id="890b5-121">settings</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/settings-element-network-settings.md)|<span data-ttu-id="890b5-122">配置 <xref:System.Net> 命名空间的基本网络选项。</span><span class="sxs-lookup"><span data-stu-id="890b5-122">Configures basic network options for the <xref:System.Net> namespace.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="f40e5-123">备注</span><span class="sxs-lookup"><span data-stu-id="f40e5-123">Remarks</span></span>  
- <span data-ttu-id="f40e5-124">此元素可在应用程序配置文件或计算机配置文件 (Machine.config) 中使用。</span><span class="sxs-lookup"><span data-stu-id="f40e5-124">This element can be used in the application configuration file or the machine configuration file (Machine.config).</span></span>  
+## <a name="remarks"></a><span data-ttu-id="890b5-123">备注</span><span class="sxs-lookup"><span data-stu-id="890b5-123">Remarks</span></span>  
+ <span data-ttu-id="890b5-124">此元素可在应用程序配置文件或计算机配置文件 (Machine.config) 中使用。</span><span class="sxs-lookup"><span data-stu-id="890b5-124">This element can be used in the application configuration file or the machine configuration file (Machine.config).</span></span>  
   
- <span data-ttu-id="f40e5-125">需要在要使用的配置文件中启用网络性能计数器。</span><span class="sxs-lookup"><span data-stu-id="f40e5-125">Networking performance counters need to be enabled in the configuration file to be used.</span></span> <span data-ttu-id="f40e5-126">通过配置文件中的单个设置即可启用或禁用所有网络性能计数器。</span><span class="sxs-lookup"><span data-stu-id="f40e5-126">All networking performance counters are enabled or disabled with a single setting in the configuration file.</span></span> <span data-ttu-id="f40e5-127">不能启用或禁用单个网络性能计数器。</span><span class="sxs-lookup"><span data-stu-id="f40e5-127">Individual networking performance counters cannot be enabled or disabled.</span></span> <span data-ttu-id="f40e5-128">有关特定的网络性能计数器的详细信息，请参阅[网络性能计数器](https://msdn.microsoft.com/library/d1860235-f643-46ae-846c-ff0ed8b0e3cd)。</span><span class="sxs-lookup"><span data-stu-id="f40e5-128">For more information on the specific networking performance counters, see [Networking Performance Counters](https://msdn.microsoft.com/library/d1860235-f643-46ae-846c-ff0ed8b0e3cd).</span></span>  
+ <span data-ttu-id="890b5-125">需要在要使用的配置文件中启用网络性能计数器。</span><span class="sxs-lookup"><span data-stu-id="890b5-125">Networking performance counters need to be enabled in the configuration file to be used.</span></span> <span data-ttu-id="890b5-126">通过配置文件中的单个设置即可启用或禁用所有网络性能计数器。</span><span class="sxs-lookup"><span data-stu-id="890b5-126">All networking performance counters are enabled or disabled with a single setting in the configuration file.</span></span> <span data-ttu-id="890b5-127">不能启用或禁用单个网络性能计数器。</span><span class="sxs-lookup"><span data-stu-id="890b5-127">Individual networking performance counters cannot be enabled or disabled.</span></span> <span data-ttu-id="890b5-128">有关特定的网络性能计数器的详细信息，请参阅[网络性能计数器](../../../../../docs/framework/debug-trace-profile/performance-counters.md#networking)。</span><span class="sxs-lookup"><span data-stu-id="890b5-128">For more information on the specific networking performance counters, see [Networking Performance Counters](../../../../../docs/framework/debug-trace-profile/performance-counters.md#networking).</span></span>  
   
- <span data-ttu-id="f40e5-129">默认值为的性能计数器已禁用的网络。</span><span class="sxs-lookup"><span data-stu-id="f40e5-129">The default value is that networking performance counters are disabled.</span></span>  
+ <span data-ttu-id="890b5-129">默认值为的性能计数器已禁用的网络。</span><span class="sxs-lookup"><span data-stu-id="890b5-129">The default value is that networking performance counters are disabled.</span></span>  
   
- <span data-ttu-id="f40e5-130"><xref:System.Net.Configuration.PerformanceCountersElement.Enabled%2A?displayProperty=nameWithType>属性可以用于获取的当前值**启用**适用的配置文件中的属性。</span><span class="sxs-lookup"><span data-stu-id="f40e5-130">The <xref:System.Net.Configuration.PerformanceCountersElement.Enabled%2A?displayProperty=nameWithType> property can be used to get the current value of the **enabled** attribute from applicable configuration files.</span></span>  
+ <span data-ttu-id="890b5-130"><xref:System.Net.Configuration.PerformanceCountersElement.Enabled%2A?displayProperty=nameWithType>属性可以用于获取的当前值**启用**适用的配置文件中的属性。</span><span class="sxs-lookup"><span data-stu-id="890b5-130">The <xref:System.Net.Configuration.PerformanceCountersElement.Enabled%2A?displayProperty=nameWithType> property can be used to get the current value of the **enabled** attribute from applicable configuration files.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="f40e5-131">示例</span><span class="sxs-lookup"><span data-stu-id="f40e5-131">Example</span></span>  
- <span data-ttu-id="f40e5-132">下面的示例演示如何配置<xref:System.Net>和相关命名空间，以启用网络性能计数器。</span><span class="sxs-lookup"><span data-stu-id="f40e5-132">The following example shows how to configure the <xref:System.Net> and related namespaces to enable networking performance counters.</span></span>  
+## <a name="example"></a><span data-ttu-id="890b5-131">示例</span><span class="sxs-lookup"><span data-stu-id="890b5-131">Example</span></span>  
+ <span data-ttu-id="890b5-132">下面的示例演示如何配置<xref:System.Net>和相关命名空间，以启用网络性能计数器。</span><span class="sxs-lookup"><span data-stu-id="890b5-132">The following example shows how to configure the <xref:System.Net> and related namespaces to enable networking performance counters.</span></span>  
   
 ```xml  
 <configuration>  
@@ -75,8 +75,8 @@ ms.locfileid: "47399445"
 </configuration>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="f40e5-133">请参阅</span><span class="sxs-lookup"><span data-stu-id="f40e5-133">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="890b5-133">请参阅</span><span class="sxs-lookup"><span data-stu-id="890b5-133">See Also</span></span>  
  <xref:System.Net.Configuration.PerformanceCountersElement?displayProperty=nameWithType>  
  <xref:System.Net.Configuration.PerformanceCountersElement.Enabled%2A?displayProperty=nameWithType>  
- [<span data-ttu-id="f40e5-134">网络设置架构</span><span class="sxs-lookup"><span data-stu-id="f40e5-134">Network Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/index.md)  
- [<span data-ttu-id="f40e5-135">网络性能计数器</span><span class="sxs-lookup"><span data-stu-id="f40e5-135">Networking Performance Counters</span></span>](https://msdn.microsoft.com/library/d1860235-f643-46ae-846c-ff0ed8b0e3cd)
+ [<span data-ttu-id="890b5-134">网络设置架构</span><span class="sxs-lookup"><span data-stu-id="890b5-134">Network Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/index.md)  
+ [<span data-ttu-id="890b5-135">网络性能计数器</span><span class="sxs-lookup"><span data-stu-id="890b5-135">Networking Performance Counters</span></span>](../../../../../docs/framework/debug-trace-profile/performance-counters.md#networking)

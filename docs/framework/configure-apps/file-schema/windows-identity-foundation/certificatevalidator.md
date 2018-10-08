@@ -4,21 +4,21 @@ ms.date: 03/30/2017
 ms.assetid: 86161897-c20f-4ad8-9d7f-050c247251bf
 author: BrucePerlerMS
 ms.openlocfilehash: 65b8aa6fa4422579ce0d1c5e33d3418ea051612a
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48776878"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48849693"
 ---
-# <a name="ltcertificatevalidatorgt"></a><span data-ttu-id="dfc03-102">&lt;certificateValidator&gt;</span><span class="sxs-lookup"><span data-stu-id="dfc03-102">&lt;certificateValidator&gt;</span></span>
-<span data-ttu-id="dfc03-103">指定证书验证的自定义类型。</span><span class="sxs-lookup"><span data-stu-id="dfc03-103">Specifies a custom type for certificate validation.</span></span> <span data-ttu-id="dfc03-104">仅当使用此类型`certificateValidationMode`的属性[ \<certificatevalidation 设置 >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/certificatevalidation.md)元素设置为"自定义"。</span><span class="sxs-lookup"><span data-stu-id="dfc03-104">This type is used only if the `certificateValidationMode` attribute of the [\<certificateValidation>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/certificatevalidation.md) element is set to "Custom".</span></span>  
+# <a name="ltcertificatevalidatorgt"></a><span data-ttu-id="f83eb-102">&lt;certificateValidator&gt;</span><span class="sxs-lookup"><span data-stu-id="f83eb-102">&lt;certificateValidator&gt;</span></span>
+<span data-ttu-id="f83eb-103">指定证书验证的自定义类型。</span><span class="sxs-lookup"><span data-stu-id="f83eb-103">Specifies a custom type for certificate validation.</span></span> <span data-ttu-id="f83eb-104">仅当使用此类型`certificateValidationMode`的属性[ \<certificatevalidation 设置 >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/certificatevalidation.md)元素设置为"自定义"。</span><span class="sxs-lookup"><span data-stu-id="f83eb-104">This type is used only if the `certificateValidationMode` attribute of the [\<certificateValidation>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/certificatevalidation.md) element is set to "Custom".</span></span>  
   
- <span data-ttu-id="dfc03-105">\<system.identityModel></span><span class="sxs-lookup"><span data-stu-id="dfc03-105">\<system.identityModel></span></span>  
-<span data-ttu-id="dfc03-106">\<identityConfiguration></span><span class="sxs-lookup"><span data-stu-id="dfc03-106">\<identityConfiguration></span></span>  
-<span data-ttu-id="dfc03-107">\<certificatevalidation 设置 ></span><span class="sxs-lookup"><span data-stu-id="dfc03-107">\<certificateValidation></span></span>  
-<span data-ttu-id="dfc03-108">\<certificateValidator ></span><span class="sxs-lookup"><span data-stu-id="dfc03-108">\<certificateValidator></span></span>  
+ <span data-ttu-id="f83eb-105">\<system.identityModel></span><span class="sxs-lookup"><span data-stu-id="f83eb-105">\<system.identityModel></span></span>  
+<span data-ttu-id="f83eb-106">\<identityConfiguration></span><span class="sxs-lookup"><span data-stu-id="f83eb-106">\<identityConfiguration></span></span>  
+<span data-ttu-id="f83eb-107">\<certificatevalidation 设置 ></span><span class="sxs-lookup"><span data-stu-id="f83eb-107">\<certificateValidation></span></span>  
+<span data-ttu-id="f83eb-108">\<certificateValidator ></span><span class="sxs-lookup"><span data-stu-id="f83eb-108">\<certificateValidator></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="dfc03-109">语法</span><span class="sxs-lookup"><span data-stu-id="dfc03-109">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="f83eb-109">语法</span><span class="sxs-lookup"><span data-stu-id="f83eb-109">Syntax</span></span>  
   
 ```xml  
 <system.identityModel>  
@@ -31,25 +31,25 @@ ms.locfileid: "48776878"
 </system.identityModel>  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="dfc03-110">特性和元素</span><span class="sxs-lookup"><span data-stu-id="dfc03-110">Attributes and Elements</span></span>  
- <span data-ttu-id="dfc03-111">下列各节描述了特性、子元素和父元素。</span><span class="sxs-lookup"><span data-stu-id="dfc03-111">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="f83eb-110">特性和元素</span><span class="sxs-lookup"><span data-stu-id="f83eb-110">Attributes and Elements</span></span>  
+ <span data-ttu-id="f83eb-111">下列各节描述了特性、子元素和父元素。</span><span class="sxs-lookup"><span data-stu-id="f83eb-111">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="dfc03-112">特性</span><span class="sxs-lookup"><span data-stu-id="dfc03-112">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="f83eb-112">特性</span><span class="sxs-lookup"><span data-stu-id="f83eb-112">Attributes</span></span>  
   
-|<span data-ttu-id="dfc03-113">特性</span><span class="sxs-lookup"><span data-stu-id="dfc03-113">Attribute</span></span>|<span data-ttu-id="dfc03-114">描述</span><span class="sxs-lookup"><span data-stu-id="dfc03-114">Description</span></span>|  
+|<span data-ttu-id="f83eb-113">特性</span><span class="sxs-lookup"><span data-stu-id="f83eb-113">Attribute</span></span>|<span data-ttu-id="f83eb-114">描述</span><span class="sxs-lookup"><span data-stu-id="f83eb-114">Description</span></span>|  
 |---------------|-----------------|  
-|<span data-ttu-id="dfc03-115">类型</span><span class="sxs-lookup"><span data-stu-id="dfc03-115">type</span></span>|<span data-ttu-id="dfc03-116">指定派生的自定义类型<xref:System.IdentityModel.Selectors.X509CertificateValidator>类。</span><span class="sxs-lookup"><span data-stu-id="dfc03-116">Specifies a custom type that derives from the <xref:System.IdentityModel.Selectors.X509CertificateValidator> class.</span></span> <span data-ttu-id="dfc03-117">设置`certificateValidationMode`的属性[ \<certificatevalidation 设置 >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/certificatevalidation.md)为"Custom"要使用此类型的元素。</span><span class="sxs-lookup"><span data-stu-id="dfc03-117">Set the `certificateValidationMode` attribute of the [\<certificateValidation>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/certificatevalidation.md) element to "Custom" to use this type.</span></span> <span data-ttu-id="dfc03-118">有关如何指定详细信息`type`属性，请参阅[自定义类型引用](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/index.md)。</span><span class="sxs-lookup"><span data-stu-id="dfc03-118">For more information about how to specify the `type` attribute, see [Custom Type References](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/index.md).</span></span> <span data-ttu-id="dfc03-119">可选。</span><span class="sxs-lookup"><span data-stu-id="dfc03-119">Optional.</span></span>|  
+|<span data-ttu-id="f83eb-115">类型</span><span class="sxs-lookup"><span data-stu-id="f83eb-115">type</span></span>|<span data-ttu-id="f83eb-116">指定派生的自定义类型<xref:System.IdentityModel.Selectors.X509CertificateValidator>类。</span><span class="sxs-lookup"><span data-stu-id="f83eb-116">Specifies a custom type that derives from the <xref:System.IdentityModel.Selectors.X509CertificateValidator> class.</span></span> <span data-ttu-id="f83eb-117">设置`certificateValidationMode`的属性[ \<certificatevalidation 设置 >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/certificatevalidation.md)为"Custom"要使用此类型的元素。</span><span class="sxs-lookup"><span data-stu-id="f83eb-117">Set the `certificateValidationMode` attribute of the [\<certificateValidation>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/certificatevalidation.md) element to "Custom" to use this type.</span></span> <span data-ttu-id="f83eb-118">有关如何指定详细信息`type`属性，请参阅[自定义类型引用](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/index.md)。</span><span class="sxs-lookup"><span data-stu-id="f83eb-118">For more information about how to specify the `type` attribute, see [Custom Type References](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/index.md).</span></span> <span data-ttu-id="f83eb-119">可选。</span><span class="sxs-lookup"><span data-stu-id="f83eb-119">Optional.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="dfc03-120">子元素</span><span class="sxs-lookup"><span data-stu-id="dfc03-120">Child Elements</span></span>  
- <span data-ttu-id="dfc03-121">无</span><span class="sxs-lookup"><span data-stu-id="dfc03-121">None</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="f83eb-120">子元素</span><span class="sxs-lookup"><span data-stu-id="f83eb-120">Child Elements</span></span>  
+ <span data-ttu-id="f83eb-121">无</span><span class="sxs-lookup"><span data-stu-id="f83eb-121">None</span></span>  
   
-### <a name="parent-elements"></a><span data-ttu-id="dfc03-122">父元素</span><span class="sxs-lookup"><span data-stu-id="dfc03-122">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="f83eb-122">父元素</span><span class="sxs-lookup"><span data-stu-id="f83eb-122">Parent Elements</span></span>  
   
-|<span data-ttu-id="dfc03-123">元素</span><span class="sxs-lookup"><span data-stu-id="dfc03-123">Element</span></span>|<span data-ttu-id="dfc03-124">描述</span><span class="sxs-lookup"><span data-stu-id="dfc03-124">Description</span></span>|  
+|<span data-ttu-id="f83eb-123">元素</span><span class="sxs-lookup"><span data-stu-id="f83eb-123">Element</span></span>|<span data-ttu-id="f83eb-124">描述</span><span class="sxs-lookup"><span data-stu-id="f83eb-124">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="dfc03-125">\<certificatevalidation 设置 ></span><span class="sxs-lookup"><span data-stu-id="dfc03-125">\<certificateValidation></span></span>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/certificatevalidation.md)|<span data-ttu-id="dfc03-126">控制令牌处理程序用来验证证书的设置。</span><span class="sxs-lookup"><span data-stu-id="dfc03-126">Controls the settings that token handlers use to validate certificates.</span></span>|  
+|[<span data-ttu-id="f83eb-125">\<certificatevalidation 设置 ></span><span class="sxs-lookup"><span data-stu-id="f83eb-125">\<certificateValidation></span></span>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/certificatevalidation.md)|<span data-ttu-id="f83eb-126">控制令牌处理程序用来验证证书的设置。</span><span class="sxs-lookup"><span data-stu-id="f83eb-126">Controls the settings that token handlers use to validate certificates.</span></span>|  
   
-## <a name="example"></a><span data-ttu-id="dfc03-127">示例</span><span class="sxs-lookup"><span data-stu-id="dfc03-127">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="f83eb-127">示例</span><span class="sxs-lookup"><span data-stu-id="f83eb-127">Example</span></span>  
   
 ```xml  
 <certificateValidation certificateValidationMode="Custom"  
