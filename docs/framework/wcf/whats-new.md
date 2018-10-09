@@ -6,11 +6,11 @@ helpviewer_keywords:
 - Windows Communication Foundation [WCF], what's new
 ms.assetid: 7e93fe73-af93-46b5-9f63-32f761ee40cf
 ms.openlocfilehash: 1fe3ea53be6305553e789f8644e378d95bfac71b
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48793512"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48873513"
 ---
 # <a name="whats-new-in-windows-communication-foundation-45"></a>Windows Communication Foundation 4.5 中的新增功能
 
@@ -75,7 +75,7 @@ ms.locfileid: "48793512"
  为了帮助新的和现有 WCF 服务开发人员配置服务，Visual Studio XML 编辑器现在为属于服务配置文件的每个配置元素及其属性提供了工具提示。
 
 ## <a name="configuring-wcf-services-in-code"></a>在代码中配置 WCF 服务
- Windows Communication Foundation (WCF) 允许开发人员使用代码或配置文件配置服务。  当部署之后需要对服务进行配置时，配置文件十分有用。 在使用配置文件时，IT 专业人员只需要更新配置文件，无需重新编译。 不过，配置文件可能十分复杂，难以维护。 不支持对配置文件进行调试，并且将按名称来引用配置元素，这使得配置文件的创作易于出错且较为困难。 WCF 还允许您在代码中配置服务。 在早期版本的代码中的 WCF （4.0 及更早版本） 配置服务很容易在自承载方案中，<xref:System.ServiceModel.ServiceHost>类允许您配置终结点和调用 ServiceHost.Open 之前的行为。 但是，在 Web 承载方案中，您没有访问 <xref:System.ServiceModel.ServiceHost> 类的权限。 若要配置 Web 承载的服务，您需要创建 `System.ServiceModel.ServiceHostFactory`，后者会创建 <xref:System.ServiceModel.Activation.ServiceHostFactory> 并执行任何所需的配置。 从.NET 4.5 开始，WCF 提供了更简单的方法同时配置两者自托管，web 托管代码中的服务。 有关详细信息，请参阅[代码中配置 WCF 服务](../../../docs/framework/wcf/configuring-wcf-services-in-code.md)。
+ Windows Communication Foundation (WCF) 允许开发人员使用代码或配置文件配置服务。  当部署之后需要对服务进行配置时，配置文件十分有用。 在使用配置文件时，IT 专业人员只需要更新配置文件，无需重新编译。 不过，配置文件可能十分复杂，难以维护。 不支持对配置文件进行调试，并且将按名称来引用配置元素，这使得配置文件的创作易于出错且较为困难。 WCF 还允许您在代码中配置服务。 在早期版本的代码中的 WCF （4.0 及更早版本） 配置服务很容易在自承载方案中，<xref:System.ServiceModel.ServiceHost>类允许您配置终结点和调用 ServiceHost.Open 之前的行为。 但是，在 Web 承载方案中，你没有访问 <xref:System.ServiceModel.ServiceHost> 类的权限。 若要配置 Web 承载的服务，你需要创建 `System.ServiceModel.ServiceHostFactory`，后者会创建 <xref:System.ServiceModel.Activation.ServiceHostFactory> 并执行任何所需的配置。 从.NET 4.5 开始，WCF 提供了更简单的方法同时配置两者自托管，web 托管代码中的服务。 有关详细信息，请参阅[代码中配置 WCF 服务](../../../docs/framework/wcf/configuring-wcf-services-in-code.md)。
 
 ## <a name="channelfactory-caching"></a>ChannelFactory 缓存
  WCF 客户端应用程序使用 <xref:System.ServiceModel.ChannelFactory%601> 类来创建 WCF 服务的通信通道。  创建 <xref:System.ServiceModel.ChannelFactory%601> 实例会带来一定的开销，因为这涉及以下操作：

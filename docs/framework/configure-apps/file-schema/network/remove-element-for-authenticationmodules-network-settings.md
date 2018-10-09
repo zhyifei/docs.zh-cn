@@ -13,11 +13,11 @@ ms.assetid: abf79949-b05c-465a-b51c-bbeda9a74173
 author: mcleblanc
 ms.author: markl
 ms.openlocfilehash: 332f8eb4fb1a5a02df76c5745522037b029a2407
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48780643"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48873263"
 ---
 # <a name="ltremovegt-element-for-authenticationmodules-network-settings"></a>&lt;删除&gt;authenticationModules （网络设置） 的
 从应用程序中删除身份验证模块。  

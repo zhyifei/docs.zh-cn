@@ -3,12 +3,12 @@ title: 使用 WIF 的基于声明的授权
 ms.date: 03/30/2017
 ms.assetid: e24000a3-8fd8-4c0e-bdf0-39882cc0f6d8
 author: BrucePerlerMS
-ms.openlocfilehash: c13ea5c9f2f62c9c01139741d06de35dd2ff4be1
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 65254b31570ebf65d10c4d8c1f0fa776a6e2bae1
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47236051"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48872914"
 ---
 # <a name="claims-based-authorization-using-wif"></a>使用 WIF 的基于声明的授权
 在依赖方应用程序中，授权可确定允许已经过身份验证的标识访问的资源以及允许该标识对这些资源执行的操作。 授权不当会导致信息泄露和数据篡改。 本主题概述了可用于通过 Windows Identity Foundation (WIF) 和安全令牌服务 (STS) 来实现针对声明感知 ASP.NET Web 应用程序和服务（例如，Microsoft Azure 访问控制服务 (ACS)）的授权的方法。  
@@ -36,7 +36,7 @@ ms.locfileid: "47236051"
 ### <a name="expressing-roles-as-claims"></a>将角色表示为声明  
  调用 IsInRole() 方法时，会进行一次检查以查明当前用户是否拥有该角色。 在声明感知应用程序中，该角色由应在令牌中可用的角色声明类型表示。 使用以下 URI 表示此角色声明类型：  
   
- http://schemas.microsoft.com/ws/2008/06/identity/claims/role  
+ `http://schemas.microsoft.com/ws/2008/06/identity/claims/role`
   
  可通过几种方法增强带角色声明类型的令牌：  
   

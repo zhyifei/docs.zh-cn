@@ -2,12 +2,12 @@
 title: NamedPipe 激活
 ms.date: 03/30/2017
 ms.assetid: f3c0437d-006c-442e-bfb0-6b29216e4e29
-ms.openlocfilehash: 97221bfd00fb6b50b63eab11ed82356b002a38de
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 5f277d2c72822d8828355d3d728864bedb6dc4f4
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43504267"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48873357"
 ---
 # <a name="namedpipe-activation"></a>NamedPipe 激活
 本示例演示如何承载使用 Windows 进程激活服务 (WAS) 的服务以激活通过命名管道进行通信的服务。 此示例基于[Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md)并且需要[!INCLUDE[wv](../../../../includes/wv-md.md)]运行。  
@@ -196,7 +196,7 @@ Press <ENTER> to terminate client.
         > [!NOTE]
         >  此命令是单行文本。  
   
-         此命令启用 /servicemodelsamples 应用程序使用同时访问 http://localhost/servicemodelsamples 和 net.tcp: //localhost/servicemodelsamples。  
+         此命令将启用 /servicemodelsamples 应用程序使用同时访问`http://localhost/servicemodelsamples`和`net.tcp://localhost/servicemodelsamples`。  
   
 4.  若要生成 C# 或 Visual Basic .NET 版本的解决方案，请按照 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)中的说明进行操作。  
   

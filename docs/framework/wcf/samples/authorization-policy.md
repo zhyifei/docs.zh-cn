@@ -2,12 +2,12 @@
 title: 授权策略
 ms.date: 03/30/2017
 ms.assetid: 1db325ec-85be-47d0-8b6e-3ba2fdf3dda0
-ms.openlocfilehash: 78ca42abfd2df56edeeb273fcd8ba585aa16f635
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 16549b90692d8061abe729521075e0f248446513
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47198314"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48873474"
 ---
 # <a name="authorization-policy"></a>授权策略
 
@@ -284,7 +284,7 @@ serviceHost.Credentials.UserNameAuthentication.CustomUserNamePasswordValidator =
 
 Windows Communication Foundation (WCF) 提供丰富的基于声明的模型，用于执行访问检查。 <xref:System.ServiceModel.ServiceAuthorizationManager> 对象用于执行访问检查，并确定与客户端关联的声明是否满足访问服务方法的必需要求。
 
-出于演示目的，此示例演示的实现<xref:System.ServiceModel.ServiceAuthorizationManager>，它实现<xref:System.ServiceModel.ServiceAuthorizationManager.CheckAccessCore%2A>方法，以允许对方法的用户的访问权限基于声明的类型 http://example.com/claims/allowedoperation其值是为该操作的操作 URI允许调用。
+出于演示目的，此示例演示的实现<xref:System.ServiceModel.ServiceAuthorizationManager>，它实现<xref:System.ServiceModel.ServiceAuthorizationManager.CheckAccessCore%2A>方法，以允许对方法的用户的访问权限基于声明的类型`http://example.com/claims/allowedoperation`其值是为该操作的操作 URI允许调用。
 
 ```csharp
 public class MyServiceAuthorizationManager : ServiceAuthorizationManager
@@ -460,7 +460,7 @@ public class MyAuthorizationPolicy : IAuthorizationPolicy
 
 1. 从启动 Client.exe *\client\bin*。 客户端活动将显示在客户端控制台应用程序上。
 
-  如果客户端和服务能够进行通信，请参见[故障排除提示](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b)。
+  如果客户端与服务无法进行通信，请参见 [Troubleshooting Tips](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b)。
 
 ### <a name="to-run-the-sample-across-computers"></a>跨计算机运行示例
 
@@ -500,7 +500,7 @@ public class MyAuthorizationPolicy : IAuthorizationPolicy
 
 14. 在客户端计算机上，从命令提示窗口中启动 Client.exe。
 
-   如果客户端和服务能够进行通信，请参见[故障排除提示](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b)。
+   如果客户端与服务无法进行通信，请参见 [Troubleshooting Tips](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b)。
 
 ### <a name="clean-up-after-the-sample"></a>在此示例后清理
 

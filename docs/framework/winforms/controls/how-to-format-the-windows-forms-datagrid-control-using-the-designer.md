@@ -9,14 +9,15 @@ helpviewer_keywords:
 - tables [Windows Forms], formatting in DataGrid control
 - formatting [Windows Forms]
 ms.assetid: 533b9814-6124-49dc-9fda-085f1502609f
-ms.openlocfilehash: e0d703e16ab89243c7f7cf57dc858a0a3889a590
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 7a63ff5e070c9986fb5890fbf09fb7d4e8cccc9f
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44253255"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48873159"
 ---
 # <a name="how-to-format-the-windows-forms-datagrid-control-using-the-designer"></a>如何：使用设计器设置 Windows 窗体 DataGrid 控件的格式
+
 > [!NOTE]
 >  <xref:System.Windows.Forms.DataGridView> 控件取代了 <xref:System.Windows.Forms.DataGrid> 控件并添加了功能；但是，可以选择保留 <xref:System.Windows.Forms.DataGrid> 控件以实现向后兼容并供将来使用。 有关详细信息，请参阅 [Windows 窗体 DataGridView 控件与 DataGrid 控件之间的区别](../../../../docs/framework/winforms/controls/differences-between-the-windows-forms-datagridview-and-datagrid-controls.md)。  
   
@@ -32,7 +33,7 @@ ms.locfileid: "44253255"
   
  作为在格式设置数据网格中的初始步骤，可以设置的属性<xref:System.Windows.Forms.DataGrid>本身。 这些颜色和格式选择窗体从其然后可以进行更改，具体取决于数据的表和列显示的基础。  
   
- 下面的过程需要**Windows 应用程序**包含一个窗体，其中包含项目<xref:System.Windows.Forms.DataGrid>控件。 有关设置此类项目的信息，请参阅[如何： 创建 Windows 应用程序项目](https://msdn.microsoft.com/library/b2f93fed-c635-4705-8d0e-cf079a264efa)并[如何： 向 Windows 窗体添加控件](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md)。 在中[!INCLUDE[vsprvslong](../../../../includes/vsprvslong-md.md)]，则<xref:System.Windows.Forms.DataGrid>控件将不处于**工具箱**默认情况下。 有关详细信息，请参阅[如何： 将项添加到工具箱](https://msdn.microsoft.com/library/458e119e-17fe-450b-b889-e31c128bd7e0)。  
+ 下面的过程需要**Windows 应用程序**包含一个窗体，其中包含项目<xref:System.Windows.Forms.DataGrid>控件。 有关设置此类项目的信息，请参阅[如何： 创建 Windows 应用程序项目](https://msdn.microsoft.com/library/b2f93fed-c635-4705-8d0e-cf079a264efa)并[如何： 向 Windows 窗体添加控件](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md)。 在 Visual Studio 2005 中，<xref:System.Windows.Forms.DataGrid>控件不在**工具箱**默认情况下。 有关详细信息，请参阅[如何： 将项添加到工具箱](https://msdn.microsoft.com/library/458e119e-17fe-450b-b889-e31c128bd7e0)。  
   
 > [!NOTE]
 >  显示的对话框和菜单命令可能会与“帮助”中的描述不同，具体取决于你现用的设置或版本。 若要更改设置，请在 **“工具”** 菜单上选择 **“导入和导出设置”** 。 有关详细信息，请参阅[个性化设置 Visual Studio IDE](/visualstudio/ide/personalizing-the-visual-studio-ide)。  
@@ -70,36 +71,37 @@ ms.locfileid: "44253255"
     |<xref:System.Windows.Forms.DataGrid.SelectionForeColor%2A>|选择行或单元格后，这是的前景色。|  
   
     > [!NOTE]
-    >  当您要自定义控件的颜色时，就可以使控件无法访问，因为不佳的颜色选择 （例如，红色和绿色）。 使用提供的颜色**种系统颜色**调色板，若要避免此问题。  
-  
-     下面的过程需要<xref:System.Windows.Forms.DataGrid>控件绑定到数据表。 有关详细信息，请参阅[如何： 将 Windows 窗体 DataGrid 控件绑定到数据源](../../../../docs/framework/winforms/controls/how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md)。  
-  
-### <a name="to-set-the-table-and-column-style-of-a-data-table-at-design-time"></a>若要在设计时设置数据表的表和列样式  
-  
-1.  选择<xref:System.Windows.Forms.DataGrid>窗体上的控件。  
-  
-2.  在中**属性**窗口中，选择<xref:System.Windows.Forms.DataGrid.TableStyles%2A>属性，单击**省略号**(![VisualStudioEllipsesButton 屏幕快照](../../../../docs/framework/winforms/media/vbellipsesbutton.png "vbEllipsesButton")) 按钮。  
-  
-3.  在中**DataGridTableStyle 集合编辑器**对话框中，单击**添加**要添加到集合的表样式。  
-  
-     与**DataGridTableStyle 集合编辑器**，可以添加和删除表样式，集显示和布局属性集的映射名称的表样式。  
-  
-4.  设置<xref:System.Windows.Forms.DataGridTableStyle.MappingName%2A>属性设置为每个表样式的映射名称。  
-  
-     映射名称用于指定应与表中的哪些表样式。  
-  
-5.  在中**DataGridTableStyle 集合编辑器**，选择<xref:System.Windows.Forms.DataGridTableStyle.GridColumnStyles%2A>属性，然后单击省略号按钮 (![VisualStudioEllipsesButton 屏幕快照](../../../../docs/framework/winforms/media/vbellipsesbutton.png "vbEllipsesButton")).  
-  
-6.  在中**DataGridColumnStyle 集合编辑器**对话框框中，将列样式添加到你创建的表样式。  
-  
-     与**DataGridColumnStyle 集合编辑器**，可以添加和删除列样式，设置显示和布局的属性，以及设置的映射名称和格式设置字符串的数据列。  
-  
+    >  当您要自定义控件的颜色时，就可以使控件无法访问，因为不佳的颜色选择 （例如，红色和绿色）。 使用提供的颜色**种系统颜色**调色板，若要避免此问题。
+
+     下面的过程需要<xref:System.Windows.Forms.DataGrid>控件绑定到数据表。 有关详细信息，请参阅[如何： 将 Windows 窗体 DataGrid 控件绑定到数据源](../../../../docs/framework/winforms/controls/how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md)。
+
+### <a name="to-set-the-table-and-column-style-of-a-data-table-at-design-time"></a>若要在设计时设置数据表的表和列样式
+
+1.  选择<xref:System.Windows.Forms.DataGrid>窗体上的控件。
+
+2.  在中**属性**窗口中，选择<xref:System.Windows.Forms.DataGrid.TableStyles%2A>属性，单击**省略号**(![VisualStudioEllipsesButton 屏幕快照](../../../../docs/framework/winforms/media/vbellipsesbutton.png "vbEllipsesButton")) 按钮。
+
+3.  在中**DataGridTableStyle 集合编辑器**对话框中，单击**添加**要添加到集合的表样式。
+
+     与**DataGridTableStyle 集合编辑器**，可以添加和删除表样式，集显示和布局属性集的映射名称的表样式。
+
+4.  设置<xref:System.Windows.Forms.DataGridTableStyle.MappingName%2A>属性设置为每个表样式的映射名称。
+
+     映射名称用于指定应与表中的哪些表样式。
+
+5.  在中**DataGridTableStyle 集合编辑器**，选择<xref:System.Windows.Forms.DataGridTableStyle.GridColumnStyles%2A>属性，然后单击省略号按钮 (![VisualStudioEllipsesButton 屏幕快照](../../../../docs/framework/winforms/media/vbellipsesbutton.png "vbEllipsesButton")).
+
+6.  在中**DataGridColumnStyle 集合编辑器**对话框框中，将列样式添加到你创建的表样式。
+
+     与**DataGridColumnStyle 集合编辑器**，可以添加和删除列样式，设置显示和布局的属性，以及设置的映射名称和格式设置字符串的数据列。
+
     > [!NOTE]
-    >  有关格式设置字符串的详细信息，请参阅[格式设置类型](../../../../docs/standard/base-types/formatting-types.md)。  
-  
-## <a name="see-also"></a>请参阅  
- <xref:System.Windows.Forms.GridTableStylesCollection>  
- <xref:System.Windows.Forms.GridColumnStylesCollection>  
- <xref:System.Windows.Forms.DataGrid>  
- [如何：在 Windows 窗体 DataGrid 控件中删除或隐藏列](../../../../docs/framework/winforms/controls/how-to-delete-or-hide-columns-in-the-windows-forms-datagrid-control.md)  
- [DataGrid 控件](../../../../docs/framework/winforms/controls/datagrid-control-windows-forms.md)
+    >  有关格式设置字符串的详细信息，请参阅[格式设置类型](../../../../docs/standard/base-types/formatting-types.md)。
+
+## <a name="see-also"></a>请参阅
+
+- <xref:System.Windows.Forms.GridTableStylesCollection>
+- <xref:System.Windows.Forms.GridColumnStylesCollection>
+- <xref:System.Windows.Forms.DataGrid>
+- [如何：在 Windows 窗体 DataGrid 控件中删除或隐藏列](../../../../docs/framework/winforms/controls/how-to-delete-or-hide-columns-in-the-windows-forms-datagrid-control.md)
+- [DataGrid 控件](../../../../docs/framework/winforms/controls/datagrid-control-windows-forms.md)
