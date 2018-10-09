@@ -1,4 +1,4 @@
----
+﻿---
 title: 异常设计准则
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
