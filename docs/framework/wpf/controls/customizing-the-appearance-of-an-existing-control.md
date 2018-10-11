@@ -13,11 +13,11 @@ helpviewer_keywords:
 - templates [WPF], custom for existing controls
 ms.assetid: 678dd116-43a2-4b8c-82b5-6b826f126e31
 ms.openlocfilehash: 435789e0d1bc601a9eb51488254407fefd334e05
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48778044"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49087838"
 ---
 # <a name="customizing-the-appearance-of-an-existing-control-by-creating-a-controltemplate"></a>通过创建 ControlTemplate 自定义现有控件的外观
 <a name="introduction"></a> 一个<xref:System.Windows.Controls.ControlTemplate>指定可视结构和控件的可视行为。 您可以通过提供一个新的 it 自定义控件的外观<xref:System.Windows.Controls.ControlTemplate>。 当你创建<xref:System.Windows.Controls.ControlTemplate>，而无需更改其功能替换现有控件的外观。 例如，您可以将按钮在应用程序中圆形而不是默认的方形，但按钮仍将引发<xref:System.Windows.Controls.Primitives.ButtonBase.Click>事件。  
@@ -34,7 +34,7 @@ ms.locfileid: "48778044"
   
   
 <a name="prerequisites"></a>   
-## <a name="prerequisites"></a>系统必备  
+## <a name="prerequisites"></a>先决条件  
  本主题假设用户了解如何创建和使用[控件](../../../../docs/framework/wpf/controls/index.md)中讨论的控件和样式。 本主题中讨论的概念适用于从继承元素<xref:System.Windows.Controls.Control>类，除<xref:System.Windows.Controls.UserControl>。 无法应用<xref:System.Windows.Controls.ControlTemplate>到<xref:System.Windows.Controls.UserControl>。  
   
 <a name="when_you_should_create_a_controltemplate"></a>   

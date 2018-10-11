@@ -2,12 +2,12 @@
 title: WCF 的 &lt;faultPropagationQuery&gt;
 ms.date: 03/30/2017
 ms.assetid: fabafbc8-3e45-4feb-8321-0725e9f4079c
-ms.openlocfilehash: fe3dd90a5c6b26537ab461b4bf4993df5be625a8
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: df7119363e94a070bb898c984c12cf82755c3407
+ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32747354"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49087695"
 ---
 # <a name="ltfaultpropagationquerygt-of-wcf"></a>WCF 的 &lt;faultPropagationQuery&gt;
 表示一个用于跟踪在活动中发生的错误的处理的查询。  每次 FaultHandler 处理错误时，都会发生此事件。 应使用此类查询来跟踪对在活动中出现的错误进行的处理。 跟踪参与者需要用此查询来订阅错误传播记录。  
@@ -24,7 +24,16 @@ ms.locfileid: "32747354"
 ## <a name="syntax"></a>语法  
   
 ```xml
-<tracking>   <trackingProfile name="Name">       <workflow>          <faultPropagationQueries>             <faultPropagationQuery activityName="String"                 faultHandlerActivityName="String"/>          </faultPropagationQueries>       </workflow>   </trackingProfile></tracking>  
+<tracking>
+  <trackingProfile name="Name">
+    <workflow>
+      <faultPropagationQueries>
+        <faultPropagationQuery activityName="String"
+                               faultHandlerActivityName="String"/>
+      </faultPropagationQueries>
+    </workflow>
+  </trackingProfile>
+</tracking>  
 ```
   
 ## <a name="attributes-and-elements"></a>特性和元素  

@@ -2,12 +2,12 @@
 title: 'F # 编码约定'
 description: '编写 F # 代码时，了解一般指导原则和惯例。'
 ms.date: 05/14/2018
-ms.openlocfilehash: b9afd1fbfbd9d8e04d9bfaa07615de045b7e05fe
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 21119b6d69e00f359104bfb6eab7681bdbfb8d78
+ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47237392"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49087383"
 ---
 # <a name="f-coding-conventions"></a>F # 编码约定
 
@@ -225,7 +225,7 @@ let handleWithdrawal amount =
 
 可在 F # 中用于引发异常的目的的主要构造应考虑按以下顺序的首选项：
 
-| 函数 | 语法 | 目标 |
+| 函数 | 语法 | 用途 |
 |----------|--------|---------|
 | `nullArg` | `nullArg "argumentName"` | 引发`System.ArgumentNullException`与指定的参数名称。 |
 | `invalidArg` | `invalidArg "argumentName" "message"` | 引发`System.ArgumentException`使用指定的参数名称和消息。 |
@@ -420,7 +420,7 @@ let ``Test withdrawal transaction with 0.0 for balance``() =
 
 F # 的多个选项[访问控制](../language-reference/access-control.md)继承从所用的.NET 运行时中可用。 这些不是只可用于类型-您也可以使用它们对于函数。
 
-* 更喜欢非`public`类型和成员，直到需要它们是公开使用。 这也将减少到哪些使用者几
+* 更喜欢非`public`类型和成员，直到需要它们是公开使用。 这还可以尽量降低到哪些使用者几。
 * 尽量保证所有帮助器功能`private`。
 * 请考虑使用`[<AutoOpen>]`上的帮助器函数，如果它们可以大量专用模块。
 

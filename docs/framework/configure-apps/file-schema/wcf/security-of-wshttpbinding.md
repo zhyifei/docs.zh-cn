@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 ms.assetid: 8658b162-2ddf-4162-a869-aa517a42288a
 author: BrucePerlerMS
 ms.openlocfilehash: cee14a1ed8aa9f11aa77006ee2ed4e205ceedbe3
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48793430"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49086361"
 ---
 # <a name="ltsecuritygt-of-ltwshttpbindinggt"></a>&lt;wsHttpBinding&gt; 的 &lt;security&gt;
 表示的安全功能[ \<wsHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)。  
@@ -53,7 +53,7 @@ ms.locfileid: "48793430"
 |-----------|-----------------|  
 |无|禁用安全性。|  
 |传输|使用 HTTPS 提供安全性。 此服务需要使用 SSL 证书进行配置。 消息使用 HTTPS 得到了全面保护，客户端使用服务的 SSL 证书对消息进行身份验证。 客户端身份验证通过`ClientCredentials` [\<传输 >](../../../../../docs/framework/configure-apps/file-schema/wcf/transport-of-wshttpbinding.md)。|  
-|消息|使用 SOAP 消息安全提供安全性。 默认情况下，将对 SOAP 正文进行加密和签名。 此模式提供了各种各样的功能，例如服务凭据在带外客户端是否可用、要使用的算法套件以及通过 Security.Message 属性要应用于消息正文的保护级别。 每个会话将执行一次客户端身份验证，身份验证的结果在会话过程中将被缓存。|  
+|消息|使用 SOAP 消息安全提供安全性。 默认情况下，将对 SOAP 正文进行加密和签名。 此模式提供了各种各样的功能，例如服务凭据在带外客户端是否可用、要使用的算法组以及通过 Security.Message 属性要应用于消息正文的保护级别。 每个会话将执行一次客户端身份验证，身份验证的结果在会话过程中将被缓存。|  
 |TransportWithMessageCredential|在此模式下，HTTPS 将提供完整性、保密性和服务器身份验证，SOAP 消息安全将提供客户端身份验证。 默认情况下，每个会话将执行一次客户端身份验证，身份验证的结果在会话过程中将被缓存。|  
   
 ### <a name="child-elements"></a>子元素  

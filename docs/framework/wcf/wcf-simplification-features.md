@@ -3,11 +3,11 @@ title: WCF 简化功能
 ms.date: 03/30/2017
 ms.assetid: 4535a511-6064-4da0-b361-80262a891663
 ms.openlocfilehash: 2a2b1bc90729f2c8c3303c5d8ce6befc4dff3980
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/07/2018
-ms.locfileid: "48847953"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49087357"
 ---
 # <a name="wcf-simplification-features"></a>WCF 简化功能
 本主题讨论可使编写 WCF 应用程序更简单的新功能。  
@@ -91,7 +91,7 @@ ms.locfileid: "48847953"
 |属性|On|新默认值|详细信息|  
 |--------------|--------|-----------------|----------------------|  
 |channelInitializationTimeout|<xref:System.ServiceModel.NetTcpBinding>|30 秒|此属性确定 TCP 连接可使用 .Net Framing 协议对自身进行身份验证的时间。 客户端需要发送一些初始数据，然后服务器才有足够的信息来执行身份验证。 此超时被有意设置为小于 ReceiveTimeout（10 分钟），这样，未经身份验证的恶意客户端就无法长时间保持绑到该服务器的连接。 默认值为 30 秒。 有关详细信息 <xref:System.ServiceModel.Channels.ConnectionOrientedTransportBindingElement.ChannelInitializationTimeout%2A>|  
-|listenBacklog|<xref:System.ServiceModel.NetTcpBinding>|16 * 处理器数目|此套接字级别的属性描述了要排队的“挂起接受”请求的数目。 如果侦听积压工作 (backlog) 队列已满，则会拒绝新的套接字请求。 有关详细信息 <xref:System.ServiceModel.NetTcpBinding.ListenBacklog%2A>|  
+|listenBacklog|<xref:System.ServiceModel.NetTcpBinding>|16 * 处理器数目|此套接字级别的属性描述了要排队的“挂起接受”请求的数目。 如果侦听积压工作队列已满，则会拒绝新的套接字请求。 有关详细信息 <xref:System.ServiceModel.NetTcpBinding.ListenBacklog%2A>|  
 |maxPendingAccepts|ConnectionOrientedTransportBindingElement<br /><br /> SMSvcHost.exe|2 * 传输处理器的数目<br /><br /> 4 \* SMSvcHost.exe 的处理器数|此属性会限制服务器可具有的等待侦听器的通道数目。 当 MaxPendingAccepts 太低时，会有一个较小的时间间隔，在此间隔内，所有等待的通道都已开始服务连接，但没有新通道已开始侦听。 连接可在此间隔内到达，但将会因服务器上没有等待它的内容而失败。 可通过将 <xref:System.ServiceModel.Channels.ConnectionOrientedTransportBindingElement.MaxPendingConnections%2A> 属性设置为较大的数字来配置此属性。 有关详细信息，请参阅<xref:System.ServiceModel.Channels.ConnectionOrientedTransportBindingElement.MaxPendingAccepts%2A>和[配置 Net.TCP 端口共享服务](../../../docs/framework/wcf/feature-details/configuring-the-net-tcp-port-sharing-service.md)|  
 |maxPendingConnections|ConnectionOrientedTransportBindingElement|12 * 处理器数目|此属性控制一个传输已接受但 ServiceModel 调度程序尚未选取的连接的数目。 若要设置此值，请对该绑定使用 `MaxConnections` 或对该绑定元素使用 `maxOutboundConnectionsPerEndpoint`。 有关详细信息 <xref:System.ServiceModel.Channels.ConnectionOrientedTransportBindingElement.MaxPendingConnections%2A>|  
 |receiveTimeout|SMSvcHost.exe|30 秒|此属性为读取 TCP 组帧数据并执行来自基础连接的连接调度指定超时值。 此超时值用于对该时间段施加一个限制，SMSvcHost.exe 服务将在该时段内保持从传入连接读取前导码数据。 有关详细信息，请参阅[配置 Net.TCP 端口共享服务](../../../docs/framework/wcf/feature-details/configuring-the-net-tcp-port-sharing-service.md)。|  
@@ -104,11 +104,11 @@ ms.locfileid: "48847953"
   
 |配额名称|默认值|描述|  
 |----------------|-------------------|-----------------|  
-|<xref:System.Xml.XmlDictionaryReaderQuotas.MaxArrayLength%2A>|Int32.MaxValue|获取并设置允许的最大数组长度。 此配额限制 XML 读取器返回的基元数组（包括字节数组）的最大大小。 此配额不限制 XML 读取器本身的内存消耗，但限制使用该读取器的所有组件的内存消耗。 例如，当 <xref:System.Runtime.Serialization.DataContractSerializer> 使用一个以 <xref:System.Xml.XmlDictionaryReaderQuotas.MaxArrayLength%2A>保护的读取器时，将不会反序列化大于此配额的字节数组。|  
+|<xref:System.Xml.XmlDictionaryReaderQuotas.MaxArrayLength%2A>|Int32.MaxValue|获取并设置允许的最大数组长度。 此配额限制 XML 读取器返回的基元数组（包括字节数组）的最大大小。 此配额不限制 XML 读取器本身的内存消耗，但限制使用该读取器的所有组件的内存消耗。 例如，当 <xref:System.Runtime.Serialization.DataContractSerializer> 使用一个以 <xref:System.Xml.XmlDictionaryReaderQuotas.MaxArrayLength%2A> 保护的读取器时，将不会反序列化大于此配额的字节数组。|  
 |<xref:System.Xml.XmlDictionaryReaderQuotas.MaxBytesPerRead%2A>|Int32.MaxValue|获取并设置允许每次读取返回的最大字节数。 此配额限制在当读取元素开始标记及其属性时在一次 Read 操作中读取的字节数目。 （在非流模式情况下，不会根据配额对元素名称本身进行计数）。 具有太多的 XML 特性可能会耗用过长的处理时间，因为必须检查特性名称的唯一性。 <xref:System.Xml.XmlDictionaryReaderQuotas.MaxBytesPerRead%2A> 可缓解这一威胁。|  
 |<xref:System.Xml.XmlDictionaryReaderQuotas.MaxDepth%2A>|节点深度为 128|此配额限制 XML 元素的最大嵌套深度。  <xref:System.Xml.XmlDictionaryReaderQuotas.MaxDepth%2A> 与 <xref:System.Xml.XmlDictionaryReaderQuotas.MaxBytesPerRead%2A> 交互：读取器始终在内存中保留当前元素以及它的所有上级的数据，因此读取器的最大内存消耗与这两个设置的积成比例。 当反序列化深度嵌套的对象图时，会迫使反序列化程序访问整个堆栈并引发一个不可恢复的 <xref:System.StackOverflowException>。 对于 <xref:System.Runtime.Serialization.DataContractSerializer> 和 <xref:System.Xml.Serialization.XmlSerializer>，XML 嵌套和对象嵌套之间存在直接关联。 <xref:System.Xml.XmlDictionaryReaderQuotas.MaxDepth%2A> 用于缓解这一威胁。|  
 |<xref:System.Xml.XmlDictionaryReaderQuotas.MaxNameTableCharCount%2A>|Int32.MaxValue|此配额限制名称表中所允许的最大字符数。 名称表包含在处理 XML 文档时遇到的一些字符串（例如，命名空间和前缀）。 由于这些字符串在内存中进行缓冲，因此，此配额用于防止在预期使用流处理时进行过度缓冲。|  
-|<xref:System.Xml.XmlDictionaryReaderQuotas.MaxStringContentLength%2A>|Int32.MaxValue|此配额限制 XML 读取器返回的最大字符串大小。 此配额不限制 XML 读取器本身的内存消耗，但限制使用该读取器的组件中的内存消耗。 例如，当 <xref:System.Runtime.Serialization.DataContractSerializer> 使用一个以 <xref:System.Xml.XmlDictionaryReaderQuotas.MaxStringContentLength%2A>保护的读取器时，将不会反序列化大于此配额的字符串。|  
+|<xref:System.Xml.XmlDictionaryReaderQuotas.MaxStringContentLength%2A>|Int32.MaxValue|此配额限制 XML 读取器返回的最大字符串大小。 此配额不限制 XML 读取器本身的内存消耗，但限制使用该读取器的组件中的内存消耗。 例如，当 <xref:System.Runtime.Serialization.DataContractSerializer> 使用一个以 <xref:System.Xml.XmlDictionaryReaderQuotas.MaxStringContentLength%2A> 保护的读取器时，将不会反序列化大于此配额的字符串。|  
   
 > [!IMPORTANT]
 >  请参阅"安全地使用 XML"下[数据的安全注意事项](../../../docs/framework/wcf/feature-details/security-considerations-for-data.md)有关保护你的数据的详细信息。  

@@ -8,11 +8,11 @@ helpviewer_keywords:
 - endpoints [WCF], overview
 ms.assetid: f4dce0fb-6f54-47e6-8054-86d7f574b91c
 ms.openlocfilehash: b72c3959b2a42c6a5abc8ef31975d5bdb9ce220e
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48781604"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49086838"
 ---
 # <a name="endpoint-creation-overview"></a>终结点创建概述
 与 Windows Communication Foundation (WCF) 服务的所有通信都是通过*终结点*的服务。 终结点向客户端访问 WCF 服务提供的功能。 本节描述终结点的结构，并概述如何在配置和代码中定义终结点。  
@@ -22,7 +22,7 @@ ms.locfileid: "48781604"
   
 -   **地址**。 地址唯一标识终结点并告知潜在客户服务的所在位置。 通过在 WCF 对象模型中表示<xref:System.ServiceModel.EndpointAddress>地址，其中包含统一资源标识符 (URI) 和地址属性，包括标识、 一些 Web 服务描述语言 (WSDL) 元素，以及一系列可选标头。 可选标头提供用于标识终结点或与终结点交互的其他详细寻址信息。 有关详细信息，请参阅[指定一个终结点地址](../../../docs/framework/wcf/specifying-an-endpoint-address.md)。  
   
--   **绑定**。 绑定指定如何与终结点进行通信。 绑定指定终结点如何与世界通信，包括使用哪种传输协议（例如，TCP 或 HTTP）、对消息使用何种编码（例如，文本或二进制），以及需要何种安全需求（例如，安全套接字层 [SSL] 或 SOAP 消息安全）。 有关详细信息，请参阅[到配置服务和客户端使用的绑定](../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)。  
+-   **绑定**。 绑定指定如何与终结点进行通信。 绑定指定终结点如何与世界通信，包括使用哪种传输协议（例如，TCP 或 HTTP）、对消息使用何种编码（例如，文本或二进制），以及需要何种安全要求（例如，安全套接字层 [SSL] 或 SOAP 消息安全）。 有关详细信息，请参阅[到配置服务和客户端使用的绑定](../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)。  
   
 -   **服务协定**。 服务协定概述了终结点向客户端公开的功能。 协定指定客户端可以调用的操作、消息的形式、输入参数的类型或调用操作所需的数据，以及客户端应收到的处理消息或响应消息的种类。 三种基本的协定类型与基本消息交换模式 (MEP) 相对应：数据报（单向）、请求/答复和双工（双向）。 当访问服务协定时，服务协定也可以采用数据和消息协定要求特定的数据类型和消息格式。 有关如何定义服务协定的详细信息，请参阅[Designing Service Contracts](../../../docs/framework/wcf/designing-service-contracts.md)。 请注意，也可以要求客户端实现服务定义的协定（称为回调协定），以便在双工 MEP 下接收服务的消息。 有关详细信息，请参阅[双工服务](../../../docs/framework/wcf/feature-details/duplex-services.md)。  
   

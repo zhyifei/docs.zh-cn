@@ -3,35 +3,35 @@ title: 安全协议版本 1.0
 ms.date: 03/30/2017
 ms.assetid: ee3402d2-1076-410b-a3cb-fae0372bd7af
 author: BrucePerlerMS
-ms.openlocfilehash: 043a092855b7f5827c03b1d247b03328ba561edf
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 59d82fc3238f12b33f3111c88854b9d6348a5e27
+ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48036274"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49086786"
 ---
 # <a name="security-protocols-version-10"></a>安全协议版本 1.0
 Web 服务安全协议提供 Web 服务安全机制，这些机制可满足所有现有企业的消息传递安全要求。 本部分介绍 Windows Communication Foundation (WCF) 1.0 版细节 (在中实现<xref:System.ServiceModel.Channels.SecurityBindingElement>) 以下 Web 服务安全协议。  
   
 |规范/文档|Link|  
 |-|-|  
-|WSS：SOAP 消息安全 1.0|http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-soap-message-security-1.0.pdf|  
-|WSS：用户名令牌配置文件 1.0|http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0.pdf|  
-|WSS：X509 令牌配置文件 1.0|http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-x509-token-profile-1.0.pdf|  
-|WSS：SAML 1.1 令牌配置文件 1.0|http://docs.oasis-open.org/wss/oasis-wss-saml-token-profile-1.0.pdf|  
-|WSS：SOAP 消息安全 1.1|http://www.oasis-open.org/committees/download.php/16790/wss-v1.1-spec-os-SOAPMessageSecurity.pdf|  
-|WSS 用户名令牌配置文件 1.1|http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0.pdf|  
-|WSS：X.509 令牌配置文件 1.1|http://www.oasis-open.org/committees/download.php/16785/wss-v1.1-spec-os-x509TokenProfile.pdf|  
-|WSS：Kerberos 令牌配置文件 1.1|http://www.oasis-open.org/committees/download.php/16788/wss-v1.1-spec-os-KerberosTokenProfile.pdf|  
-|WSS：SAML 1.1 令牌配置文件 1.1|http://www.oasis-open.org/committees/download.php/16768/wss-v1.1-spec-os-SAMLTokenProfile.pdf|  
-|WS-Secure 对话|http://msdn.microsoft.com/ws/2005/02/ws-secure-conversation/|  
-|WS-Trust|http://msdn.microsoft.com/ws/2005/02/ws-trust/|  
+|WSS：SOAP 消息安全 1.0|<https://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-soap-message-security-1.0.pdf>|
+|WSS：用户名令牌配置文件 1.0|<https://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0.pdf>|
+|WSS：X509 令牌配置文件 1.0|<https://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-x509-token-profile-1.0.pdf>|
+|WSS：SAML 1.1 令牌配置文件 1.0|<https://docs.oasis-open.org/wss/oasis-wss-saml-token-profile-1.0.pdf>|
+|WSS：SOAP 消息安全 1.1|<https://www.oasis-open.org/committees/download.php/16790/wss-v1.1-spec-os-SOAPMessageSecurity.pdf>|
+|WSS 用户名令牌配置文件 1.1|<https://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0.pdf>|
+|WSS：X.509 令牌配置文件 1.1|<https://www.oasis-open.org/committees/download.php/16785/wss-v1.1-spec-os-x509TokenProfile.pdf>|
+|WSS：Kerberos 令牌配置文件 1.1|<https://www.oasis-open.org/committees/download.php/16788/wss-v1.1-spec-os-KerberosTokenProfile.pdf>|
+|WSS：SAML 1.1 令牌配置文件 1.1|<https://www.oasis-open.org/committees/download.php/16768/wss-v1.1-spec-os-SAMLTokenProfile.pdf>|
+|WS-Secure 对话|<http://specs.xmlsoap.org/ws/2005/02/sc/WS-SecureConversation.pdf>|
+|WS-Trust|<http://specs.xmlsoap.org/ws/2005/02/trust/ws-trust.pdf>|
 |应用说明：<br /><br /> 将 WS-Trust 用于 TLS 握手|即将发布|  
 |应用说明：<br /><br /> 将 WS-Trust 用于 SPNEGO|即将发布|  
 |应用说明：<br /><br /> Web 服务寻址终结点引用和标识|即将发布|  
-|WS-SecurityPolicy 1.1<br /><br /> (2005/07)|http://msdn.microsoft.com/ws/2005/07/ws-security-policy/<br /><br /> 如已修正的提交到 OASIS WS-SX 技术委员会的勘误表 http://www.oasis-open.org/archives/ws-sx/200512/msg00017.html|  
+|WS-SecurityPolicy 1.1<br /><br /> (2005/07)|<http://specs.xmlsoap.org/ws/2005/07/securitypolicy/ws-securitypolicy.pdf><br /><br /> 如了修正[勘误表](https://lists.oasis-open.org/archives/ws-sx/200512/msg00017.html)提交到 OASIS WS-SX 技术委员会 |  
   
- WCF，版本 1，提供了可用作 Web 服务安全配置的基础的 17 身份验证模式。 每一种模式都针对一组常用部署需求进行了优化，如：  
+ WCF，版本 1，提供了可用作 Web 服务安全配置的基础的 17 身份验证模式。 每一种模式都针对一组常用部署要求进行了优化，如：  
   
 -   用于对客户端和服务进行身份验证的凭据。  
   
@@ -69,9 +69,9 @@ Web 服务安全协议提供 Web 服务安全机制，这些机制可满足所�
   
 |前缀|命名空间|  
 |------------|---------------|  
-|秒|http://www.w3.org/2003/05/soap-envelope|  
-|sp|http://schemas.xmlsoap.org/ws/2005/07/securitypolicy|  
-|a|http://www.w3.org/2005/08/addressing|  
+|s|<https://www.w3.org/2003/05/soap-envelope/>|
+|sp|<http://schemas.xmlsoap.org/ws/2005/07/securitypolicy/>|
+|a|<https://www.w3.org/2005/08/addressing>|  
 |wsse|TBD – OASIS WSS 1.0 URI|  
 |wsse11|TBD – OASIS WSS 1.1 URI|  
 |wsu|TBD – OASIS WSS 1.0 Utility URI|  
@@ -79,8 +79,8 @@ Web 服务安全协议提供 Web 服务安全机制，这些机制可满足所�
 |wst|TBD – WS-Trust 2005/02 URI|  
 |wssc|TBD – WS-SecureConversation 2005/02 URI|  
 |wsaw|TBD - WS-Addressing 策略命名空间|  
-|wsp|http://schemas.xmlsoap.org/ws/2004/09/policy|  
-|mssp|http://schemas.microsoft.com/ws/2005/07/securitypolicy|  
+|wsp|<http://schemas.xmlsoap.org/ws/2004/09/policy>|  
+|mssp|<http://schemas.xmlsoap.org/ws/2005/07/securitypolicy>|
   
 ## <a name="1-token-profiles"></a>1.令牌配置文件  
  Web 服务安全规范将凭据表示为安全令牌。 WCF 支持以下令牌类型：  
@@ -143,7 +143,7 @@ Web 服务安全协议提供 Web 服务安全机制，这些机制可满足所�
 ### <a name="23-signature-protection"></a>2.3 签名保护  
  在使用“签名前加密”时，建议保护签名以防止对加密内容或签名密钥进行猜测的蛮力攻击（尤其是在自定义令牌与弱密钥材料一起使用时）。  
   
-### <a name="24-algorithm-suite"></a>2.4 算法套件  
+### <a name="24-algorithm-suite"></a>2.4 算法组  
  WCF 支持 Security Policy 1.1 中列出的所有算法套件。  
   
 ### <a name="25-key-derivation"></a>2.5 密钥派生  

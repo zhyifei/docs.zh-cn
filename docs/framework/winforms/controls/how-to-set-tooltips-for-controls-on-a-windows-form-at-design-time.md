@@ -9,12 +9,12 @@ helpviewer_keywords:
 - tooltips [Windows Forms], for controls
 - examples [Windows Forms], tooltips
 ms.assetid: c4b60637-4c0a-44c2-a103-f66dff887936
-ms.openlocfilehash: 7f698a517fbf72ceafde4a117b4d92dd9d352834
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 689b06e8fbebe490f79ab6c12f144546472a95ff
+ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45964394"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49087214"
 ---
 # <a name="how-to-set-tooltips-for-controls-on-a-windows-form-at-design-time"></a>如何：在设计时为 Windows 窗体上的控件设置工具提示
 可以设置<xref:System.Windows.Forms.ToolTip>字符串在代码中或在 Windows 窗体设计器中。 有关详细信息<xref:System.Windows.Forms.ToolTip>组件，请参阅[ToolTip 组件概述](../../../../docs/framework/winforms/controls/tooltip-component-overview-windows-forms.md)。  
@@ -50,8 +50,33 @@ ms.locfileid: "45964394"
 2.  选择将显示工具提示，或将其添加到窗体的控件。  
   
 3.  在中**属性**窗口中，将**ToolTip1 上的工具提示**为相应的文本字符串的值。  
+
+### <a name="to-remove-a-tooltip-programmatically"></a>若要以编程方式删除工具提示  
   
+1.  使用<xref:System.Windows.Forms.ToolTip.SetToolTip%2A>方法的<xref:System.Windows.Forms.ToolTip>组件。  
+  
+    ```vb  
+    ' In this example, Button1 is the control displaying the ToolTip.  
+    ToolTip1.SetToolTip(Button1, Nothing)  
+    ```  
+  
+    ```csharp  
+    // In this example, button1 is the control displaying the ToolTip.  
+    toolTip1.SetToolTip(button1, null);  
+    ```  
+  
+    ```cpp  
+    // In this example, button1 is the control displaying the ToolTip.  
+    toolTip1->SetToolTip(button1, NULL);  
+    ```  
+  
+### <a name="to-remove-a-tooltip-in-the-designer"></a>若要在设计器中删除一个工具提示  
+  
+1.  选择显示工具提示的控件。  
+  
+2.  在中**属性**窗口中，删除中的文本**ToolTip1 上的工具提示**。  
+
 ## <a name="see-also"></a>请参阅  
- [ToolTip 组件概述](../../../../docs/framework/winforms/controls/tooltip-component-overview-windows-forms.md)  
- [如何：更改 Windows 窗体 ToolTip 组件的延迟](../../../../docs/framework/winforms/controls/how-to-change-the-delay-of-the-windows-forms-tooltip-component.md)  
- [ToolTip 组件](../../../../docs/framework/winforms/controls/tooltip-component-windows-forms.md)
+- [ToolTip 组件概述](../../../../docs/framework/winforms/controls/tooltip-component-overview-windows-forms.md)  
+- [如何：更改 Windows 窗体 ToolTip 组件的延迟](../../../../docs/framework/winforms/controls/how-to-change-the-delay-of-the-windows-forms-tooltip-component.md)  
+- [ToolTip 组件](../../../../docs/framework/winforms/controls/tooltip-component-windows-forms.md)

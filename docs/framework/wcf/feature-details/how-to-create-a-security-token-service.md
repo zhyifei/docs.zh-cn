@@ -9,29 +9,29 @@ helpviewer_keywords:
 - federation
 ms.assetid: 98e82101-4cff-4bb8-a220-f7abed3556e5
 author: BrucePerlerMS
-ms.openlocfilehash: dd2c4f32978107a82ce940e0ef984c70f461b2c3
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 6dbf0e2be0a75fccd84a82fe2b3c8ab41762de83
+ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48046729"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49087721"
 ---
 # <a name="how-to-create-a-security-token-service"></a>如何：创建安全令牌服务
 安全令牌服务实现在 WS-Trust 规范中定义的协议。 此协议为颁发、续订、取消和验证安全令牌定义消息格式和消息交换模式。 给定的安全令牌服务提供这些功能中的一个或多个功能。 本主题考虑最常见的情况：实现令牌颁发。  
   
 ## <a name="issuing-tokens"></a>颁发令牌  
- WS-Trust 基于 `RequestSecurityToken` XML 架构定义语言 (XSD) 架构元素和用于执行令牌颁发的 `RequestSecurityTokenResponse` XSD 架构元素来定义消息格式。 此外，它还定义关联的操作统一资源标识符 (URI)。 URI 与关联的操作`RequestSecurityToken`消息是 http://schemas.xmlsoap.org/ws/2005/02/trust/RST/Issue。 URI 与关联的操作`RequestSecurityTokenResponse`消息是 http://schemas.xmlsoap.org/ws/2005/02/trust/RSTR/Issue。  
+ WS-Trust 基于 `RequestSecurityToken` XML 架构定义语言 (XSD) 架构元素和用于执行令牌颁发的 `RequestSecurityTokenResponse` XSD 架构元素来定义消息格式。 此外，它还定义关联的操作统一资源标识符 (URI)。 URI 与关联的操作`RequestSecurityToken`消息是`http://schemas.xmlsoap.org/ws/2005/02/trust/RST/Issue`。 URI 与关联的操作`RequestSecurityTokenResponse`消息是`http://schemas.xmlsoap.org/ws/2005/02/trust/RSTR/Issue`。  
   
 ### <a name="request-message-structure"></a>请求消息结构  
  颁发请求消息结构通常包括以下项：  
   
--   请求的值键入 URI http://schemas.xmlsoap.org/ws/2005/02/trust/Issue。  
+-   请求的值键入 URI `http://schemas.xmlsoap.org/ws/2005/02/trust/Issue`。
   
--   令牌类型 URI。 安全断言标记语言 (SAML) 1.1 令牌，此 URI 的值都是 http://docs.oasis-open.org/wss/oasis-wss-saml-token-profile-1.1#SAMLV1.1。  
+-   令牌类型 URI。 安全断言标记语言 (SAML) 1.1 令牌，此 URI 的值都是`http://docs.oasis-open.org/wss/oasis-wss-saml-token-profile-1.1#SAMLV1.1`。  
   
 -   密钥大小值，指示与颁发的令牌关联的密钥中的位数。  
   
--   密钥类型 URI。 对于对称密钥，此 URI 的值是 http://schemas.xmlsoap.org/ws/2005/02/trust/SymmetricKey。  
+-   密钥类型 URI。 对于对称密钥，此 URI 的值是`http://schemas.xmlsoap.org/ws/2005/02/trust/SymmetricKey`。  
   
  此外，可能会显示几个其他项：  
   

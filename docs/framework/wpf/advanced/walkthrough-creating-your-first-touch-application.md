@@ -11,16 +11,16 @@ helpviewer_keywords:
 - creating a touchscreen application [WPF]
 ms.assetid: d69e602e-9a25-4e24-950b-e89eaa2a906b
 ms.openlocfilehash: 935999fd5ada93bedebb38462f9faa93b8ec923f
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48781474"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49086721"
 ---
 # <a name="walkthrough-creating-your-first-touch-application"></a>演练：创建您的第一个触控应用程序
 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 使应用程序能够响应触摸。 例如，可以使用一个与应用程序交互或敏式设备，如本演练中创建该应用程序，用户可以移动，触摸屏上的多个手指重设大小，或使用触摸来旋转的单个对象。  
   
-## <a name="prerequisites"></a>系统必备  
+## <a name="prerequisites"></a>先决条件  
  你需要以下组件来完成本演练：  
   
 -   Visual Studio。  

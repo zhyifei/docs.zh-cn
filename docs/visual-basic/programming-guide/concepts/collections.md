@@ -3,11 +3,11 @@ title: 集合 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 5f7749f3-aaf2-4319-b63c-bfa72e1e2b7a
 ms.openlocfilehash: 60519de1f580bf1cfa4aa067d4a999b20ea8d54d
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/07/2018
-ms.locfileid: "48847459"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49087370"
 ---
 # <a name="collections-visual-basic"></a>集合 (Visual Basic)
 对于许多应用程序，你会想要创建和管理相关对象的组。 有两种方法对对象进行分组：通过创建对象的数组，以及通过创建对象的集合。  
@@ -182,7 +182,7 @@ End Class
   
 -   <xref:System.Collections> 类  
   
--   Visual Basic`Collection`类  
+-   Visual Basic `Collection` 类  
   
 <a name="BKMK_Generic"></a>
 ### <a name="systemcollectionsgeneric-classes"></a>System.Collections.Generic 类  
@@ -228,15 +228,15 @@ End Class
 
 <a name="BKMK_VisualBasic"></a> 
 ###  <a name="visual-basic-collection-class"></a>Visual Basic 集合类  
- 可以使用 Visual Basic<xref:Microsoft.VisualBasic.Collection>类以访问集合项使用数字索引或`String`密钥。 你可以向集合对象中添加一个已经或还未指定键的项。 如果你添加了不带有键的项，必须使用其数字索引来访问它。  
+ 可以使用 Visual Basic <xref:Microsoft.VisualBasic.Collection> 类以使用数字索引或 `String` 键访问集合项。 你可以向集合对象中添加一个已经或还未指定键的项。 如果你添加了不带有键的项，必须使用其数字索引来访问它。  
   
- Visual Basic`Collection`类将其所有元素都存储为类型`Object`，因此可以添加任何数据类型的项。 没有任何保护措施来防止添加不适当的数据类型。  
+ Visual Basic `Collection` 类将其所有元素存储为 `Object` 类型，因此你可以添加任何数据类型的项。 没有任何保护措施来防止添加不适当的数据类型。  
   
- 当使用 Visual Basic`Collection`类，在集合中的第一项的索引为 1。 这不同于 .NET Framework 集合类，其起始索引为 0。  
+ 当你使用 Visual Basic `Collection` 类时，集合中的第一项的索引为 1。 这不同于 .NET Framework 集合类，其起始索引为 0。  
   
- 只要有可能，应使用中的泛型集合<xref:System.Collections.Generic?displayProperty=nameWithType>命名空间或<xref:System.Collections.Concurrent>命名空间而不是 Visual Basic`Collection`类。  
+ 只要可能，则应使用 <xref:System.Collections.Generic?displayProperty=nameWithType> 命名空间或 <xref:System.Collections.Concurrent> 命名空间中的泛型集合而不是 Visual Basic `Collection` 类。  
   
- 有关详细信息，请参阅<xref:Microsoft.VisualBasic.Collection>。  
+ 有关详细信息，请参阅 <xref:Microsoft.VisualBasic.Collection> 。  
   
 <a name="BKMK_KeyValuePairs"></a>
 ## <a name="implementing-a-collection-of-keyvalue-pairs"></a>实现键/值对集合   
@@ -539,7 +539,7 @@ End Class
 ```  
   
 <a name="BKMK_Iterators"></a>
-##  <a name="iterators"></a>Iterators  
+##  <a name="iterators"></a>迭代器  
  迭代器用于对集合执行自定义迭代。 迭代器可以是一种方法，或是一个 `get` 访问器。 迭代器使用[产生](../../../visual-basic/language-reference/statements/yield-statement.md)语句返回一次的集合的每个元素。  
   
  通过使用调用迭代器[为每个...下一步](../../../visual-basic/language-reference/statements/for-each-next-statement.md)语句。 `For Each` 循环的每次迭代都会调用迭代器。 迭代器中到达 `Yield` 语句时，会返回一个表达式，并保留当前在代码中的位置。 下次调用迭代器时，将从该位置重新开始执行。  

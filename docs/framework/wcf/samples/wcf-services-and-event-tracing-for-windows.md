@@ -2,12 +2,12 @@
 title: 针对 Windows 的 WCF 服务和事件跟踪
 ms.date: 03/30/2017
 ms.assetid: eda4355d-0bd0-4dc9-80a2-d2c832152272
-ms.openlocfilehash: 26ce5fcb07b06a52f69ad8655adea563c177b055
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: 6684f6415fa6ee82a59fc9b54911b5c65d6dadb2
+ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48266866"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49086578"
 ---
 # <a name="wcf-services-and-event-tracing-for-windows"></a>针对 Windows 的 WCF 服务和事件跟踪
 此示例演示如何使用 Windows Communication Foundation (WCF) 中的分析跟踪来发出事件中事件跟踪 Windows (ETW)。 分析跟踪是 WCF 堆栈中允许在生产环境中的 WCF 服务的故障排除的关键点处发出的事件。
@@ -34,7 +34,7 @@ ms.locfileid: "48266866"
 
 5.  在 WCF 测试客户端，通过选择添加服务**文件**，然后**添加的服务**。
 
-     在输入框中添加终结点地址。 默认值为 http://localhost:1378/Calculator.svc。
+     在输入框中添加终结点地址。 默认值为 `http://localhost:1378/Calculator.svc`。
 
 6.  打开事件查看器应用程序。
 

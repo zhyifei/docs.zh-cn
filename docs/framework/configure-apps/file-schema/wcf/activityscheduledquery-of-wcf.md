@@ -2,12 +2,12 @@
 title: WCF 的 &lt;activityScheduledQuery&gt;
 ms.date: 03/30/2017
 ms.assetid: 25f6eee1-3d98-4c39-b517-c0813f03f106
-ms.openlocfilehash: 4efd6ba13e8a54d3338c25b077477d4abdbe9ab5
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 9a53d72316dad0178f24e05656a4fb4531b88aec
+ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32746233"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49087760"
 ---
 # <a name="ltactivityscheduledquerygt-of-wcf"></a>WCF 的 &lt;activityScheduledQuery&gt;
 表示一个查询集合，这些查询用于跟踪安排给父活动来执行的活动。 跟踪参与者需要用此查询来订阅活动安排记录。  
@@ -24,7 +24,16 @@ ms.locfileid: "32746233"
 ## <a name="syntax"></a>语法  
   
 ```xml
-<tracking>     <trackingProfile name="Name">       <workflow>          <activityScheduledQueries>             <activityScheduledQuery activityName="String"                 childActivityName="String"/>          </activityScheduledQueries>       </workflow>     </trackingProfile></tracking>  
+<tracking>
+  <trackingProfile name="Name">
+    <workflow>
+      <activityScheduledQueries>
+        <activityScheduledQuery activityName="String"   
+                                childActivityName="String"/>
+      </activityScheduledQueries>
+    </workflow>
+  </trackingProfile>
+</tracking> 
 ```  
   
 ## <a name="attributes-and-elements"></a>特性和元素  

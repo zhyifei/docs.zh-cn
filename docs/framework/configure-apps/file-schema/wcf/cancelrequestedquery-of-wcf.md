@@ -2,12 +2,12 @@
 title: WCF 的 &lt;cancelRequestedQuery&gt;
 ms.date: 03/30/2017
 ms.assetid: b690d870-02eb-4c56-8bc3-e5ca99d7097b
-ms.openlocfilehash: 41964561a460babc41de755e213971593047b707
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 38d946a213131e8dcb6f4100d0ad67f7c167f342
+ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32748511"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49086396"
 ---
 # <a name="ltcancelrequestedquerygt-of-wcf"></a>WCF 的 &lt;cancelRequestedQuery&gt;
 表示一个查询，该查询用于跟踪父活动取消子活动的请求。 跟踪参与者需要用此查询来订阅取消请求记录对象。  
@@ -24,7 +24,16 @@ ms.locfileid: "32748511"
 ## <a name="syntax"></a>语法  
   
 ```xml
-<tracking>   <trackingProfile name="Name">       <workflow>          <cancelRequestQueries>             <cancelRequestQuery activityName="String"                 childActivityName="String"/>          </cancelRequestQueries>       </workflow>   </trackingProfile></tracking>  
+<tracking>
+  <trackingProfile name="Name">
+    <workflow>
+      <cancelRequestQueries>
+        <cancelRequestQuery activityName="String"
+                            childActivityName="String"/>
+      </cancelRequestQueries>
+    </workflow>
+  </trackingProfile>
+</tracking>  
 ```
 
 ## <a name="attributes-and-elements"></a>特性和元素  

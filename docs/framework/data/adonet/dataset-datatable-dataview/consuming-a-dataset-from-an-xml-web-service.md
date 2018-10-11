@@ -5,20 +5,20 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 9edd6b71-0fa5-4649-ae1d-ac1c12541019
-ms.openlocfilehash: ab96e8f3395a78c88184872a2c78b71fb2bf7b9e
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 7e43d423109ea39a725a4bfa8b9d2b22a25cfb5c
+ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43522106"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49087331"
 ---
 # <a name="consuming-a-dataset-from-an-xml-web-service"></a>通过 XML Web 服务使用数据集
-<xref:System.Data.DataSet> 是用断开式设计来构建的，其部分目的是为了便于通过 Internet 来传输数据。 **数据集**是"可序列化"，它可以被指定为输入还是输出而无需任何其他编码的 XML Web services 所需流式传输的内容**数据集**从 XML Web 服务到客户端并返回。 **数据集**隐式转换为使用 DiffGram 格式的 XML 流、 通过网络发送和从 XML 流作为然后重新构造**数据集**在接收端。 它为你使用 XML Web services 传输和返回关系数据提供了非常简单而灵活的方法。 有关 DiffGram 格式的详细信息，请参阅[Diffgram](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/diffgrams.md)。  
+<xref:System.Data.DataSet> 是用断开式设计来构建的，其部分目的是为了便于通过 Internet 来传输数据。 **数据集**是"可序列化"，它可以被指定为输入还是输出而无需任何其他编码的 XML Web services 所需流式传输的内容**数据集**从 XML Web 服务到客户端并返回。 **数据集**隐式转换为使用 DiffGram 格式的 XML 流、 通过网络发送和从 XML 流作为然后重新构造**数据集**在接收端。 它为您使用 XML Web services 传输和返回关系数据提供了非常简单而灵活的方法。 有关 DiffGram 格式的详细信息，请参阅[Diffgram](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/diffgrams.md)。  
   
  下面的示例演示如何创建 XML Web 服务和使用客户端**数据集**传输关系数据 （包括修改后的数据） 并解决任何更新回原始数据源。  
   
 > [!NOTE]
->  我们建议你在创建 XML Web services 时，应始终考虑到安全问题。 有关保护的 XML Web 服务的信息，请参阅[保护 ASP.NET XML Web Services 创建使用](https://msdn.microsoft.com/library/354b2ab1-2782-4542-b32a-dc560178b90c)。  
+>  我们建议您在创建 XML Web services 时，应始终考虑到安全问题。 有关保护的 XML Web 服务的信息，请参阅[保护 ASP.NET XML Web Services 创建使用](https://msdn.microsoft.com/library/354b2ab1-2782-4542-b32a-dc560178b90c)。  
   
 ### <a name="to-create-an-xml-web-service-that-returns-and-consumes-a-dataset"></a>创建返回和使用 DataSet 的 XML Web services  
   
@@ -163,7 +163,7 @@ ms.locfileid: "43522106"
   
      XML Web services 的客户端将需要通过 SOAP 代理来使用公开的方法。 可以使用 Visual Studio 生成此代理。 通过从 Visual Studio 中设置对现有 Web 服务的 Web 引用，此步骤中所述的所有行为均将透明地发生。 如果要自己创建代理类，请继续阅读本讨论。 但是，在大多数情况下，使用 Visual Studio 足以为客户端应用程序创建代理类。  
   
-     代理可以使用 Web 服务描述语言工具来创建。 例如，如果 XML Web 服务的 URL 公开 http://myserver/data/DataSetSample.asmx，发出的命令如下所示，若要使用的命名空间中创建的 Visual Basic.NET 代理**WebData.DSSample**并将其存储在文件 sample.vb 中。  
+     代理可以使用 Web 服务描述语言工具来创建。 例如，如果 XML Web 服务的 URL 公开`http://myserver/data/DataSetSample.asmx`，发出的命令如下所示，若要使用的命名空间中创建的 Visual Basic.NET 代理**WebData.DSSample**并将其存储在文件 sample.vb 中。  
   
     ```console
     wsdl /l:VB -out:sample.vb http://myserver/data/DataSetSample.asmx /n:WebData.DSSample  

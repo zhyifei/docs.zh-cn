@@ -1,5 +1,5 @@
 ---
-title: WPF 中的形状和基本图形概述
+title: WPF 中的形状和基本绘图概述
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,13 +13,13 @@ helpviewer_keywords:
 - Shape objects [WPF]
 ms.assetid: 66d7a6d6-e3b6-47bc-8dfe-8a1b26f7d901
 ms.openlocfilehash: 47df352c3b001f088f34ea057b34698efc4f4b53
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48845785"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49086799"
 ---
-# <a name="shapes-and-basic-drawing-in-wpf-overview"></a>WPF 中的形状和基本图形概述
+# <a name="shapes-and-basic-drawing-in-wpf-overview"></a>WPF 中的形状和基本绘图概述
 本主题概述了如何绘制与<xref:System.Windows.Shapes.Shape>对象。 一个<xref:System.Windows.Shapes.Shape>是一种<xref:System.Windows.UIElement>，使您可以在屏幕上绘制一个形状。 由于它们是 UI 元素<xref:System.Windows.Shapes.Shape>对象可以用在<xref:System.Windows.Controls.Panel>元素和多数控件。  
   
  [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 为图形和绘制服务提供多层访问。 在顶层，<xref:System.Windows.Shapes.Shape>对象是易于使用和提供许多有用的功能，例如布局和参与[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]事件系统。  
