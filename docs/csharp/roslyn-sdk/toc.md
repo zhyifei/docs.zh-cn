@@ -8,7 +8,8 @@
 ### [语法分析](get-started/syntax-analysis.md)
 ### [语义分析](get-started/semantic-analysis.md)
 ### [语法转换](get-started/syntax-transformation.md)
-
+## 教程
+### [生成第一个分析器和代码修补程序](tutorials/how-to-write-csharp-analyzer-code-fix.md)
 
 <!-- Taken from https://github.com/dotnet/roslyn/wiki/Samples-and-Walkthroughs -->
 <!--
