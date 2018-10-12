@@ -12,23 +12,23 @@ helpviewer_keywords:
 ms.assetid: 94fcf524-9045-4993-bfb2-e2d8bad44219
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4c95074190419dd3e984c7659ede917b83b97f08
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 20dc7caa9e4c3e023bf2848b1dd8c63a9b94a01b
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43524711"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47170004"
 ---
 # <a name="developer-command-prompt-for-visual-studio"></a>Visual Studio 开发人员命令提示
 
-Visual Studio 开发人员命令提示会自动设置环境变量，这些变量使你能够轻松使用 .NET Framework 工具。
+Visual Studio 的开发人员命令提示符使你可以更轻松地使用 .NET Framework 工具。 它是一个自动设置特定环境变量的命令提示符。
 
 > [!div class="button"]
 [下载 Visual Studio](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017)
 
-## <a name="searching-for-the-command-prompt-on-your-machine"></a>在计算机中搜索命令提示符
+## <a name="search-for-the-command-prompt-on-your-machine"></a>在计算机中搜索命令提示符
 
-你可能会有多个命令提示符，具体取决于你安装的 Visual Studio 及其他任何 SDK 的版本。 例如，Visual Studio 的 64 位版本同时提供 32 位和 64 位命令提示。 （大多数工具的 32 位和 64 位版本都相同；但少数工具针对具体的 32 位和 64 位环境做了一些改变。）如果以下步骤不起作用，可以尝试[在计算机中手动查找文件](#manually-locating-the-files-on-your-machine)或[从 Visual Studio 内部运行命令提示符](#running-command-prompt-from-inside-visual-studio)。
+你可能会有多个命令提示符，具体取决于你安装的 Visual Studio 及其他任何 SDK 的版本。 例如，Visual Studio 的 64 位版本同时提供 32 位和 64 位命令提示。 （大多数工具的 32 位和 64 位版本都相同；但少数工具针对具体的 32 位和 64 位环境做了一些改变。）如果以下步骤不起作用，可以尝试[在计算机中手动查找文件](#manually-locate-the-files-on-your-machine)或[从 Visual Studio 内部运行命令提示符](#run-the-command-prompt-from-inside-visual-studio)。
 
 ### <a name="in-windows-10"></a>在 Windows 10 中
 
@@ -40,7 +40,7 @@ Visual Studio 开发人员命令提示会自动设置环境变量，这些变量
 
 1. 通过按键盘上的 Windows 徽标键 ![Windows 徽标](../get-started/media/windowskeyboardlogo.png "Windowskeyboardlogo")（举例说明），转到“开始”屏幕。
 
-2. 在“开始”屏幕上，按 `CTRL + TAB` 打开“应用”列表，然后输入 `V`。 然后显示一个列表，其中包含所有已安装的 Visual Studio 命令提示。
+2. 在“开始”屏幕上，按 Ctrl+Tab 打开“应用程序”列表，然后输入 `V`。 然后显示一个列表，其中包含所有已安装的 Visual Studio 命令提示。
 
 3. 选择“开发人员命令提示”（或者你想使用的命令提示）。
 
@@ -66,7 +66,7 @@ Visual Studio 开发人员命令提示会自动设置环境变量，这些变量
 
 已安装的命令提示的快捷方式通常放在 Visual Studio 的“开始菜单”文件夹中，例如 C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Visual Studio 2017\Visual Studio Tools。 但是如果出于某种原因，搜索命令提示未产生预期的效果，你可以尝试在计算机中手动查找快捷方式。 请尝试搜索命令提示文件的名称，例如 VsDevCmd.bat，或者转到“工具”文件夹，例如 C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\Tools（该路径根据你的 Visual Studio 版本和安装位置而变化）。
 
-## <a name="run-command-prompt-from-inside-visual-studio"></a>从 Visual Studio 内部运行命令提示符
+## <a name="run-the-command-prompt-from-inside-visual-studio"></a>从 Visual Studio 内部运行命令提示符
 
 为便于访问，你可以将 Visual Studio 开发人员命令提示或其他任何命令提示符添加到 Visual Studio 中的“工具”菜单中。 要使该工具可用，请将其添加到外部工具列表中。 步骤如下：
 
@@ -87,6 +87,8 @@ Visual Studio 开发人员命令提示会自动设置环境变量，这些变量
 8. 选择“确定”  按钮。
 
    系统添加了新菜单项，并且你可以从“工具”菜单访问命令提示符。
+
+   ![Visual Studio 中的命令提示符菜单项](media/command-prompt-vs-menu.png)
 
 ## <a name="see-also"></a>请参阅
 

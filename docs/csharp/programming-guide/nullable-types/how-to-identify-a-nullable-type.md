@@ -1,20 +1,20 @@
 ---
 title: 如何：标识可以为 null 的类型（C# 编程指南）
 description: 了解如何确定类型是否是可以为 null 的类型或实例是否是可以为 null 的类型
-ms.date: 08/06/2018
+ms.date: 09/24/2018
 helpviewer_keywords:
 - nullable types [C#], identifying
 ms.assetid: d4b67ee2-66e8-40c1-ae9d-545d32c71387
-ms.openlocfilehash: c65f80974154d81b5ddf239b617eeeda68434e09
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: f9957568d3c68f60cc9286718be9f5a496f876e6
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45624939"
+ms.lasthandoff: 09/28/2018
+ms.locfileid: "47400538"
 ---
 # <a name="how-to-identify-a-nullable-type-c-programming-guide"></a>如何：确定可以为 null 的类型（C# 编程指南）
 
-以下示例显示如何确定 <xref:System.Type?displayProperty=nameWithType> 实例是否表示可以为 null 的类型：
+下面的示例演示如何确定 <xref:System.Type?displayProperty=nameWithType> 实例是否表示可以为 null 的封闭式泛型类型，即，具有指定类型参数 `T` 的 <xref:System.Nullable%601?displayProperty=nameWithType> 类型：
 
 [!code-csharp-interactive[whether Type is nullable](../../../../samples/snippets/csharp/programming-guide/nullable-types/IdentifyNullableType.cs#1)]
 

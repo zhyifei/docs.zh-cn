@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Manifest Generation and Editing tool
 - Mage.exe
 ms.assetid: 77dfe576-2962-407e-af13-82255df725a1
-ms.openlocfilehash: 8f4e60eef443f772de3574d988ce48470f8c2017
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 3eb1c665067d08a86fd4128381139c6829ebfd89
+ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43856174"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46009767"
 ---
 # <a name="mageexe-manifest-generation-and-editing-tool"></a>Mage.exe（清单生成和编辑工具）
 
@@ -30,7 +30,7 @@ Mage [commands] [commandOptions]
 
 ### <a name="parameters"></a>参数
 
-下表显示了 Mage.exe 所支持的命令。 有关这些命令所支持的选项的更多信息，请参见 [新建和更新命令选项](#NewUpdate) 以及 [签名命令选项](#Sign)。
+下表显示了 Mage.exe 所支持的命令。 有关这些命令所支持的选项的详细信息，请参阅[新建和更新命令选项](#new-and-update-command-options)以及[签名命令选项](#sign-command-options)。
 
 |命令|描述|
 |-------------|-----------------|
@@ -40,7 +40,6 @@ Mage [commands] [commandOptions]
 |**-s, -Sign** `[signOptions]`|使用密钥对或 X509 证书对文件签名。 签名将作为 XML 元素插入文件内。<br /><br /> 在为指定 **-TimestampUri** 值的清单签名时，必须连接到 Internet。|
 |**-h, -?, -Help** *[verbose]*|描述所有可用的命令及其选项。 指定 `verbose` 可获得详细的帮助。|
 
-<a name="NewUpdate"></a>
 ## <a name="new-and-update-command-options"></a>新建和更新命令选项
 
 下表显示了 `-New` 和 `-Update` 命令支持的选项：
@@ -70,9 +69,9 @@ Mage [commands] [commandOptions]
 |**-v, -Version** `versionNumber`|1.0.0.0|应用程序清单。<br /><br /> 部署清单。|部署的版本。 参数必须是格式为“*N.N.N.N*”的有效版本字符串，其中，“*N*”是一个无符号的 32 位整数。|
 |**-wpf, -WPFBrowserApp**  `isWPFApp`|False|应用程序清单。<br /><br /> 部署清单。|仅当应用程序是将在 Internet Explorer 内承载的 Windows Presentation Foundation (WPF) 应用程序且不是独立的可执行文件时，才使用此标志。 有效值为“true”或“t”以及“false”或“f”。<br /><br /> 对于应用程序清单，请在应用程序清单的 `hostInBrowser` 元素下插入 `entryPoint` 特性。<br /><br /> 对于部署清单，请将 `install` 元素上的 `deployment` 特性设置为 false，并使用 .xbap 扩展名保存部署清单。 同时指定此自变量与 **-Install** 自变量将产生一个错误，因为浏览器承载的应用程序不可以是已安装的脱机应用程序。|
 
-<a name="Sign"></a>
 ## <a name="sign-command-options"></a>签名命令选项
- 下表显示了 `-Sign` 命令支持的选项。该命令适用于所有类型的文件。
+
+下表显示了 `-Sign` 命令支持的选项。该命令适用于所有类型的文件。
 
 |选项|描述|
 |-------------|-----------------|
@@ -105,7 +104,11 @@ mage -Update c:\HelloWorldDeployment\HelloWorld.deploy -CertFile cert.pfx
 
  应用程序清单还支持自定义信任部分。 这有助于应用程序遵守请求最低权限的安全原则，这是因为你可以对清单进行配置，使其只需要应用程序运行所需的那些特定权限。 Mage.exe 不直接支持添加自定义信任部分。 可以使用文本编辑器、XML 分析器或图形工具 MageUI.exe 添加自定义信任部分。 有关如何使用 MageUI.exe 添加自定义信任部分的详细信息，请参阅 [MageUI.exe（图形化客户端中的清单生成和编辑工具）](../../../docs/framework/tools/mageui-exe-manifest-generation-and-editing-tool-graphical-client.md)。
 
- 使用 Visual Studio 2010 附带的 Mage.exe 版本 4 创建的新清单以 [!INCLUDE[net_client_v40_long](../../../includes/net-client-v40-long-md.md)] 为目标。 若要以早期版本的 .NET Framework 为目标，则必须使用 Mage.exe 的早期版本。 在现有清单中添加或移除程序集时，或者为现有清单重新签名时，Mage.exe 不会将清单更新为以 [!INCLUDE[net_client_v40_long](../../../includes/net-client-v40-long-md.md)] 为目标。 下表显示了这些功能和限制。
+Visual Studio 2017 包括 4.6.1 版 Mage.exe。 使用此版本的 Mage.exe 创建的清单适用于 .NET Framework 4。 若要以早期版本的 .NET Framework 为目标，请使用 Mage.exe 的早期版本。
+
+在现有清单中添加或移除程序集时，或者为现有清单重新签名时，Mage.exe 不会将清单更新为针对 .NET Framework 4。
+
+下表显示了这些功能和限制：
 
 |清单版本|操作|Mage v2.0|Mage v4.0|
 |----------------------|---------------|---------------|---------------|
@@ -131,7 +134,9 @@ mage -Update c:\HelloWorldDeployment\HelloWorld.deploy -CertFile cert.pfx
 ||添加程序集|不支持|确定|
 ||删除程序集|不支持|确定|
 
- Mage.exe 创建以 [!INCLUDE[net_client_v40_long](../../../includes/net-client-v40-long-md.md)]为目标的新清单。 面向 [!INCLUDE[net_client_v40_long](../../../includes/net-client-v40-long-md.md)] 的 ClickOnce 应用程序可同时在 [!INCLUDE[net_client_v40_long](../../../includes/net-client-v40-long-md.md)] 和完整版的 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]上运行。 如果你的应用程序以完整版的 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] 为目标并且不能在 [!INCLUDE[net_client_v40_long](../../../includes/net-client-v40-long-md.md)]上运行，请通过使用文本编辑器并对清单重新签名来删除客户端 `<framework>` 元素。 下面是一个以 `<framework>` 为目标的示例 [!INCLUDE[net_client_v40_long](../../../includes/net-client-v40-long-md.md)]元素。
+ Mage.exe 创建以 [!INCLUDE[net_client_v40_long](../../../includes/net-client-v40-long-md.md)]为目标的新清单。 面向 [!INCLUDE[net_client_v40_long](../../../includes/net-client-v40-long-md.md)] 的 ClickOnce 应用程序可同时在 [!INCLUDE[net_client_v40_long](../../../includes/net-client-v40-long-md.md)] 和完整版的 .NET Framework 4 上运行。 如果你的应用程序面向完整版的 .NET Framework 4 并且不能在 [!INCLUDE[net_client_v40_long](../../../includes/net-client-v40-long-md.md)]上运行，请通过使用文本编辑器并对清单重新签名来删除客户端 `<framework>` 元素。
+
+下面是一个面向 [!INCLUDE[net_client_v40_long](../../../includes/net-client-v40-long-md.md)] 的示例 `<framework>` 元素：
 
 ```xml
 <framework targetVersion="4.0" profile="client" supportedRuntime="4.0.20506" />

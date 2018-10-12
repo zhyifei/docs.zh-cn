@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: df478548-8c05-4de2-8ba7-adcdbe1c2a60
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0e3a7024489078a21a8665bf8e875e3f7393680f
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 351bf675d33a060019cbf22437d7945537a21707
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43503025"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47236132"
 ---
 # <a name="net-framework-4-migration-issues"></a>.NET Framework 4 迁移问题
 
@@ -32,11 +32,9 @@ ms.locfileid: "43503025"
 
 * [XML](#xml)
 
-有关本主题中问题的更高级概述，请参阅 [Migration Guide to the .NET Framework 4](https://msdn.microsoft.com/library/ff657133(v=vs.100).aspx)（.NET Framework 4 的迁移指南）。
+有关本主题中问题的更高级概述，请参阅 [Migration Guide to the .NET Framework 4](/previous-versions/dotnet/netframework-4.0/ff657133(v=vs.100))（.NET Framework 4 的迁移指南）。
 
-有关 Beta 2 之后的迁移问题，请参阅 [Migration Issues for .NET Framework 4 Applications: Beta 2 to RTM](https://go.microsoft.com/fwlink/?LinkId=191505)（.NET Framework 4 应用程序的迁移问题：Beta 2 到 RTM）。
-
-有关新增功能的信息，请参阅 [.NET Framework 4 中的新增功能](https://msdn.microsoft.com/library/ms171868(v=vs.100).aspx)。
+有关新增功能的信息，请参阅 [.NET Framework 4 中的新增功能](/previous-versions/dotnet/netframework-4.0/ms171868(v=vs.100))。
 
 ## <a name="aspnet-and-web"></a>ASP.NET 和 Web
 
@@ -46,10 +44,10 @@ ms.locfileid: "43503025"
 | ------- | ------------------------ | ------------------- |
 | **浏览器定义文件** | 浏览器定义文件已更新，以包括有关新的和已更新的浏览器和设备的信息。 旧式浏览器和设备（如 Netscape Navigator）已被删除，并且已添加更新的浏览器和设备（如 Google Chrome 和 Apple iPhone）。<br><br>如果应用程序包含的自定义浏览器定义继承自一个已删除的浏览器定义，将会出现错误。<br><br><xref:System.Web.HttpBrowserCapabilities> 对象（由页的 `Request.Browse` 属性公开）由浏览器定义文件驱动。 因此，通过在 ASP.NET 4 中访问此对象的属性返回的信息可能与早期版本的 ASP.NET 中已返回的信息不同。 | 如果应用程序依赖于旧式浏览器定义文件，可从以下文件夹复制这些文件：<br><br>Windows\\Microsoft.NET\\Framework\\v2.0.50727\\CONFIG\\Browsers<br><br>将这些文件复制到 ASP.NET 4 对应的 \\CONFIG\\Browsers 文件夹中。 复制这些文件之后，请运行 [Aspnet_regbrowsers.exe](https://msdn.microsoft.com/library/ms229858.aspx) 命令行工具。 有关详细信息，请参阅 [http://www.asp.net/mobile](https://go.microsoft.com/fwlink/?LinkId=182900) 网站。 |
 | **在混合版本的 ASP.NET 下运行的子应用程序** | 由于配置或编译错误，配置为运行 ASP.NET 早期版本的应用程序子级的 ASP.NET 4 应用程序可能无法启动。 发生的具体错误取决于应用程序是在 IIS 6.0、IIS 7 还是 IIS 7.5 下运行。 | 可对受影响应用程序的配置文件进行更改，以便配置系统能正确识别 ASP.NET 4 应用程序。 有关必须进行的更改的信息，请参阅 ASP.NET 网站上的 [ASP.NET 4 Breaking Changes](https://go.microsoft.com/fwlink/?LinkId=182908)（ASP.NET 4 重大更改）文档中“ASP.NET 4 子应用程序在 ASP.NET 2.0 或 ASP.NET 3.5 应用程序下启动失败”一节。 |
-| **ClientID 更改** | 利用 ASP.NET 4 中的新 `clientIDMode` 设置，可指定 ASP.NET 生成 HTML 元素的 `id` 特性的方式。 在 ASP.NET 的早期版本中，默认行为与 `clientIDMode` 的 `AutoID` 设置等效。 现在的默认设置为 `Predictable`。 有关详细信息，请参阅 [ASP.NET Web 服务器控件标识](https://msdn.microsoft.com/library/1d04y8ss(v=vs.100).aspx)。 | 如果使用 Visual Studio 2010 从 ASP.NET 2.0 或 ASP.NET 3.5 升级应用程序，则此工具会自动向 Web.config 文件添加设置，保留早期版本的 .NET Framework 的行为。 但是，如果通过在 IIS 中将应用程序池更改为面向 .NET Framework 4 来升级应用程序，ASP.NET 默认使用新的模式。 若要禁用新的客户端 ID 模式，请将以下设置添加到 Web.config 文件：<br><br>`<pages clientIDMode="AutoID" />` |
+| **ClientID 更改** | 利用 ASP.NET 4 中的新 `clientIDMode` 设置，可指定 ASP.NET 生成 HTML 元素的 `id` 特性的方式。 在 ASP.NET 的早期版本中，默认行为与 `clientIDMode` 的 `AutoID` 设置等效。 现在的默认设置为 `Predictable`。 有关详细信息，请参阅 [ASP.NET Web 服务器控件标识](https://msdn.microsoft.com/library/1d04y8ss(v=vs.100).aspx)。 | 如果使用 Visual Studio 从 ASP.NET 2.0 或 ASP.NET 3.5 升级应用程序，则此工具会自动向 Web.config 文件添加设置，保留早期版本的 .NET Framework 的行为。 但是，如果通过在 IIS 中将应用程序池更改为面向 .NET Framework 4 来升级应用程序，ASP.NET 默认使用新的模式。 若要禁用新的客户端 ID 模式，请将以下设置添加到 Web.config 文件：<br><br>`<pages clientIDMode="AutoID" />` |
 | **代码访问安全性 (CAS)** | ASP.NET 3.5 中已添加的 ASP.NET 2.0 NET 功能使用 .NET Framework 1.1 和 .NET Framework 2.0 代码访问安全性 (CAS) 模型。 但是，实质上已对 ASP.NET 4 中的 CAS 实现进行了检查。 因此，依赖于在全局程序集缓存中运行的受信任代码的部分信任 ASP.NET 应用程序可能失败，并引发各种安全异常。 此外，依赖于对计算机 CAS 策略进行的大量修改的部分信任应用程序也可能失败，并引发安全异常。 | 可通过使用 `trust` 配置元素中的新 `legacyCasModel` 特性，将部分信任 ASP.NET 4 应用程序还原为 ASP.NET 1.1 和 2.0 的行为，如下面的示例所示：<br><br>`<trust level= "Medium" legacyCasModel="true" />`<br><br>重要说明：还原为早期 CAS 模型可能会降低安全性。<br><br>有关新 ASP.NET 4 代码访问安全性模型的详细信息，请参阅 [ASP.NET 4 应用程序中的代码访问安全性](https://msdn.microsoft.com/library/dd984947.aspx)。 |
-| **配置文件** | .NET Framework 和 ASP.NET 4 的根配置文件（machine.config 文件和根 Web.config 文件）已经更新，包含在 ASP.NET 3.5 的应用程序 Web.config 文件中找到的大多数样本配置信息。 由于托管 IIS 7 和 IIS 7.5 配置系统的复杂性，在 ASP.NET 4 下以及在 IIS 7 和 IIS 7.5 下运行 ASP.NET 3.5 应用程序会导致 ASP.NET 出错或 IIS 出错。 | 使用 Visual Studio 2010 中的项目升级工具将 ASP.NET 3.5 应用程序升级到 ASP.NET 4。 Visual Studio 2010 自动修改 ASP.NET 3.5 应用程序的 Web.config 文件，以包含 ASP.NET 4 的相应设置。<br><br>不过，可使用 .NET Framework 4 运行 ASP.NET 3.5 应用程序，而无需重新编译。 在此情况下，可能必须先手动修改应用程序的 Web.config 文件，然后在 .NET Framework 4 和 IIS 7 或 IIS 7.5 下运行应用程序。 必须进行的特定更改取决于所使用的软件组合，包括 Service Pack (SP) 版本。 有关受此更改影响的可能软件组合以及如何解决特定组合相关问题的信息，请参阅 ASP.NET 网站上的 [ASP.NET 4 Breaking Changes](https://go.microsoft.com/fwlink/?LinkId=182908)（ASP.NET 4 重大更改）文档中“有关新的 ASP.NET 4 根配置的配置错误”一节。 |
-| **控件呈现** | 在 ASP.NET 的早期版本中，某些控件发出了无法禁用的标记。 默认情况下，ASP.NET 4 中不再生成此类标记。 呈现更改将影响下列控件：<br><br>* `Image` 和 `ImageButton` 控件不再呈现 `border="0"` 特性。<br>* 默认情况下，`BaseValidator` 类和派生自该类的验证控件不再呈现红色文本。<br>* `HtmlForm` 控件不呈现 `name` 特性。<br>* `Table` 控件不再呈现 `border="0"` 特性。<br><br>对于并不设计用于用户输入的控件（例如，`Label` 控件），如果其 `Enabled` 属性设置为 `false`（或者它们从容器控件继承此设置），则这些控件不再呈现 `disabled="disabled"` 特性。 | 如果使用 Visual Studio 2010 从 ASP.NET 2.0 或 ASP.NET 3.5 升级应用程序，此工具会自动向 Web.config 文件添加设置，保留旧式呈现方式。 但是，如果通过在 IIS 中将应用程序池更改为面向 .NET Framework 4 来升级应用程序，ASP.NET 默认使用新的呈现模式。 若要禁用新的呈现模式，请将以下设置添加到 Web.config 文件：<br><br>`<pages controlRenderingCompatibilityVersion="3.5" />` |
+| **配置文件** | .NET Framework 和 ASP.NET 4 的根配置文件（machine.config 文件和根 Web.config 文件）已经更新，包含在 ASP.NET 3.5 的应用程序 Web.config 文件中找到的大多数样本配置信息。 由于托管 IIS 7 和 IIS 7.5 配置系统的复杂性，在 ASP.NET 4 下以及在 IIS 7 和 IIS 7.5 下运行 ASP.NET 3.5 应用程序会导致 ASP.NET 出错或 IIS 出错。 | 使用 Visual Studio 中的项目升级工具将 ASP.NET 3.5 应用程序升级到 ASP.NET 4。 Visual Studio 2010 自动修改 ASP.NET 3.5 应用程序的 Web.config 文件，以包含 ASP.NET 4 的相应设置。<br><br>不过，可使用 .NET Framework 4 运行 ASP.NET 3.5 应用程序，而无需重新编译。 在此情况下，可能必须先手动修改应用程序的 Web.config 文件，然后在 .NET Framework 4 和 IIS 7 或 IIS 7.5 下运行应用程序。 必须进行的特定更改取决于所使用的软件组合，包括 Service Pack (SP) 版本。 有关受此更改影响的可能软件组合以及如何解决特定组合相关问题的信息，请参阅 ASP.NET 网站上的 [ASP.NET 4 Breaking Changes](https://go.microsoft.com/fwlink/?LinkId=182908)（ASP.NET 4 重大更改）文档中“有关新的 ASP.NET 4 根配置的配置错误”一节。 |
+| **控件呈现** | 在 ASP.NET 的早期版本中，某些控件发出了无法禁用的标记。 默认情况下，ASP.NET 4 中不再生成此类标记。 呈现更改将影响下列控件：<br><br>* `Image` 和 `ImageButton` 控件不再呈现 `border="0"` 特性。<br>* 默认情况下，`BaseValidator` 类和派生自该类的验证控件不再呈现红色文本。<br>* `HtmlForm` 控件不呈现 `name` 特性。<br>* `Table` 控件不再呈现 `border="0"` 特性。<br><br>对于并不设计用于用户输入的控件（例如，`Label` 控件），如果其 `Enabled` 属性设置为 `false`（或者它们从容器控件继承此设置），则这些控件不再呈现 `disabled="disabled"` 特性。 | 如果使用 Visual Studio 从 ASP.NET 2.0 或 ASP.NET 3.5 升级应用程序，此工具会自动向 Web.config 文件添加设置，保留旧的呈现方式。 但是，如果通过在 IIS 中将应用程序池更改为面向 .NET Framework 4 来升级应用程序，ASP.NET 默认使用新的呈现模式。 若要禁用新的呈现模式，请将以下设置添加到 Web.config 文件：<br><br>`<pages controlRenderingCompatibilityVersion="3.5" />` |
 | **默认文档中的事件处理程序** | 在对无扩展的 URL 发出请求（此 URL 具有已映射到它的默认文档）时，ASP.NET 4 会将 HTML `form` 元素的 `action` 特性呈现为空字符串。 在 ASP.NET 的早期版本中，对 `http://contoso.com` 的请求会导致对 Default.aspx 的请求。 在该文档中，开始 `form` 标记的呈现方式如以下示例所示：<br><br>`<form action="Default.aspx" />`<br><br>在 ASP.NET 4 中，对 `http://contoso.com` 的请求还会导致对 Default.aspx 的请求，但此时 ASP.NET 会按以下示例所示方式呈现 HTML 开始 `form` 标记：<br><br>`<form action="" />`<br><br>当 `action` 特性为空字符串时，IIS `DefaultDocumentModule` 对象将创建对 Default.aspx 的子请求。 在大多数情况下，此子请求对于应用程序代码是透明的，并且 Default.aspx 页会正常运行。 但托管代码和 IIS 7 或 IIS 7.5 集成模式之间可能的交互会导致托管 .aspx 页在子请求期间停止正常工作。 如果出现以下情况，则对默认 .aspx 文档的子请求将导致发生错误或意外行为：<br><br>* 将 .aspx 页发送到其 `form` 元素的 `action` 特性设置为 "" 的浏览器。<br>* 将窗体回发到 ASP.NET。<br>* 托管 HTTP 模块读取实体正文的某一部分，如 `Request.Form` 或 `Request.Params`。 这会使 POST 请求的实体正文读入托管内存中。 因此，实体正文不再对在 IIS 7 或 IIS 7.5 集成模式中运行的任何本机代码模块可用。<br>* IIS `DefaultDocumentModule` 对象最终运行并创建对 Default.aspx 文档的子请求。 但由于一段托管代码已读取实体正文，因此没有可发送给子请求的实体正文。<br>* 在对子请求运行 HTTP 管道时，将在处理程序执行阶段运行 .aspx 文件的处理程序。<br><br>由于没有实体正文，因此不存在窗体变量和视图状态。 这样一来，便没有可供 .aspx 页处理程序用来确定应引发哪个事件（如果有）的信息。 因此，不会运行针对受影响 .aspx 页的任何回发事件处理程序。 | 有关解决可能因为此更改而引发的问题的方法，请参阅 ASP.NET 网站上的 [ASP.NET 4 Breaking Changes](https://go.microsoft.com/fwlink/?LinkId=182908)（ASP.NET 4 重大更改）文档中“可能会在 IIS 7 或 IIS 7.5 集成模式下的默认文档中引发的事件处理程序”。 |
 | **哈希算法** | ASP.NET 使用加密算法和哈希算法来帮助保护数据（如窗体身份验证 Cookie 和视图状态）。 默认情况下，ASP.NET 4 使用 <xref:System.Security.Cryptography.HMACSHA256> 算法对 Cookie 和视图状态进行哈希操作。 早期版本的 ASP.NET 使用较早的 <xref:System.Security.Cryptography.HMACSHA1> 算法。 | 如果运行混合了 ASP.NET 2.0 和 ASP.NET 4 的应用程序，其中的数据（如窗体身份验证 Cookie）必须跨多个 .NET Framework 版本工作，请通过在 Web.config 文件中添加以下设置，将 ASP.NET 4 Web 应用程序配置为使用较早的 <xref:System.Security.Cryptography.HMACSHA1> 算法：<br><br>`<machineKey validation="SHA1" />` |
 | **在 Internet Explorer 中托管控件** | 无法再使用 Internet Explorer 来托管 Windows 窗体控件，因为可通过更优的解决方案在 Web 上托管控件。 因此，已从 .NET Framework 中删除 IEHost.dll 和 IEExec.exe 程序集。 | 可使用以下技术在 Web 应用程序中进行自定义控件开发：<br><br>* 可创建 Silverlight 应用程序并将其配置为在浏览器外部运行。 有关详细信息，请参阅[浏览器外支持](https://msdn.microsoft.com/library/dd550721(v=vs.100).aspx)。<br>* 可生成 XAML 浏览器应用程序 (XBAP) 来利用 WPF 功能（需要客户端计算机上装有 .NET Framework）。 有关详细信息，请参阅 [WPF XAML 浏览器应用程序概述](/dotnet/framework/wpf/app-development/wpf-xaml-browser-applications-overview)。 |
@@ -63,9 +61,9 @@ ms.locfileid: "43503025"
 | **Passport 类型** | 由于 Passport（现在为 Live ID SDK）中的更改，ASP.NET 2.0 中内置的 Passport 支持已过时且不受支持。 因此，现在用 `ObsoleteAttribute` 特性标记 <xref:System.Web.Security> 中与 Passport 相关的类型。 | 更改使用 <xref:System.Web.Security> 命名空间中的 Passport 类型（例如，<xref:System.Web.Security.PassportIdentity>）的所有代码，以使用 [SDK](https://go.microsoft.com/fwlink/?LinkId=106346)。 |
 | **FilePath 属性中的 PathInfo 信息** | ASP.NET 4 不再将 `PathInfo` 值加入从属性（如 <xref:System.Web.HttpRequest.FilePath>、<xref:System.Web.HttpRequest.AppRelativeCurrentExecutionFilePath> 和 <xref:System.Web.HttpRequest.CurrentExecutionFilePath>）返回的值中。 而是在 <xref:System.Web.HttpRequest.PathInfo> 中提供 `PathInfo` 信息。 例如，假定以下 URL 片段：<br><br>`/testapp/Action.mvc/SomeAction`<br><br>在 ASP.NET 的早期版本中，<xref:System.Web.HttpRequest> 属性具有以下值：<br><br>* <xref:System.Web.HttpRequest.FilePath>：`/testapp/Action.mvc/SomeAction`<br>* <xref:System.Web.HttpRequest.PathInfo>：（空）<br><br>而在 ASP.NET 4 中，<xref:System.Web.HttpRequest> 属性具有以下值：<br><br>* <xref:System.Web.HttpRequest.FilePath>：`/testapp/Action.mvc`<br>* <xref:System.Web.HttpRequest.PathInfo>：`SomeAction` | 检查所依赖 <xref:System.Web.HttpRequest> 类的属性所在位置的代码以返回路径信息；更改代码以反映对返回路径信息的方式的更改。 |
 | **请求验证** | 为了改进请求验证，将在请求生命周期中提早调用 ASP.NET 请求验证。 因此，将为不是针对 .aspx 文件的请求（如针对 Web 服务调用和自定义处理程序的请求）运行请求验证。 此外，在请求处理管道中运行自定义 HTTP 模块时，请求验证也处于活动状态。<br><br>进行此更改后，针对 .aspx 文件之外的资源的请求可能会引发请求验证错误。 在请求管道（例如，自定义 HTTP 模块）中运行的自定义代码也可能会引发请求验证错误。 | 如有必要，可通过使用 Web 配置文件中的以下设置，还原为仅让 .aspx 页触发请求验证这一旧行为：<br><br>`<httpRuntime requestValidationMode="2.0" />`<br><br>警告：如果还原为旧行为，请确保现有处理程序中的所有代码、模块和其他自定义代码对潜在的不安全 HTTP 输入（可能是 XSS 攻击途径）进行检查。 |
-| **路由** | 如果在 Visual Studio 2010 中创建一个文件系统网站，并且该网站位于其名称包含点 (.) 的文件夹中，则 URL 路由不会可靠地工作。 从某些虚拟路径返回 HTTP 404 错误。 发生此情况的原因是，Visual Studio 2010 使用错误的根虚拟目录路径启动了 Visual Studio 开发服务器 (Cassini)。 | * 在基于文件的网站的“属性”页中，将“虚拟路径”特性更改为“/”。<br><br>或<br><br>* 创建 Web 应用程序项目而非网站项目。 Web 应用程序项目不会出现此问题，并且 URL 路由会正常工作，即使项目文件夹的名称中包含点也是如此。<br><br>或<br><br>* 创建在 IIS 中托管的基于 HTTP 的网站。 IIS 托管的网站可在虚拟路径和项目文件文件夹中包含点。 |
+| **路由** | 如果在 Visual Studio 2010 中创建一个文件系统网站，并且该网站位于其名称包含点 (.) 的文件夹中，则 URL 路由不会可靠地工作。 从某些虚拟路径返回 HTTP 404 错误。 发生此情况的原因是，Visual Studio 2010 使用错误的根虚拟目录路径启动了 Visual Studio 开发服务器。 | * 在基于文件的网站的“属性”页中，将“虚拟路径”特性更改为“/”。<br><br>或<br><br>* 创建 Web 应用程序项目而非网站项目。 Web 应用程序项目不会出现此问题，并且 URL 路由会正常工作，即使项目文件夹的名称中包含点也是如此。<br><br>或<br><br>* 创建在 IIS 中托管的基于 HTTP 的网站。 IIS 托管的网站可在虚拟路径和项目文件文件夹中包含点。 |
 | **SharePoint 站点** | 如果尝试运行部署为 SharePoint 网站（包含名为 `WSS_Minimal` 的自定义部分信任级别）的子级的 ASP.NET 4 网站，将出现以下错误：<br><br>`Could not find permission set named 'ASP.Net'.` | 目前，所有版本的 SharePoint 都与 ASP.NET 不兼容。 因此，不应尝试将 ASP.NET 4 网站作为 SharePoint 网站的子级运行。 |
-| **XHTML 1.1 标准** | 为了实现新网站的 XHTML 1.1 符合性，.NET Framework 4 中的 ASP.NET 控件将生成符合 XHTML 1.1 的 HTML。 使用 `<system.Web>` 元素内 Web.config 文件中的以下选项可启用此呈现：<br><br>`<pages controlRenderingCompatibilityVersion="4.0"/>`<br><br>默认情况下，此选项设置为 4.0。 从 Visual Studio 2008 升级到 Visual Studio 的 Web 项目将启用 3.5 设置以实现兼容性。 | 无。 |
+| **XHTML 1.1 标准** | 为了实现新网站的 XHTML 1.1 符合性，.NET Framework 4 中的 ASP.NET 控件将生成符合 XHTML 1.1 的 HTML。 使用 `<system.Web>` 元素内 Web.config 文件中的以下选项可启用此呈现：<br><br>`<pages controlRenderingCompatibilityVersion="4.0"/>`<br><br>默认情况下，此选项设置为 4.0。 从 Visual Studio 2008 进行升级的 Web 项目启用 3.5 设置以实现兼容性。 | 无。 |
 
 ## <a name="core"></a>核心
 
@@ -133,7 +131,7 @@ ms.locfileid: "43503025"
 | ------- | ------------------------ | ------------------- |
 | **缓冲区长度**（非托管 API） | 为了节省内存，已更改 [ICorProfilerInfo2::GetStringLayout](../unmanaged-api/profiling/icorprofilerinfo2-getstringlayout-method.md) 方法的 `pBufferLengthOffset` 参数的功能，以匹配 `pStringLengthOffset` 参数。 这两个参数目前都指向字符串长度的偏移量位置。 已从字符串类的表示形式中删除缓冲区长度。 | 删除缓冲区长度的任何依赖项。 |
 | **JIT 调试** | 为了简化实时 (JIT) 调试的注册过程，.NET Framework 调试器现仅使用 AeDebug 注册表项，此注册表项可控制本机代码的 JIT 调试行为。 此更改产生以下结果：<br><br>* 不再能够为托管代码和本机代码注册两个不同的调试器。<br>* 不再能够为非交互式进程自动启动调试器，但可就交互式进程提示用户。<br>* 当调试器无法启动或当没有应启动的任何注册的调试器时，不再收到通知。<br>* 不再支持依赖于应用程序交互性的自动启动策略。 | 根据需要调整调试操作。 |
-| **平台调用** | 为了改进与非托管代码的互操作性的性能，平台调用中不正确的调用约定会导致应用程序失败。 在早期版本中，封送层在堆栈中向上解析这些错误。 | 在 Microsoft Visual Studio 2010 中调试应用程序时，将向用户通知这些错误，以便能够纠正它们。<br><br>如果二进制文件无法更新，可将 [\<NetFx40_PInvokeStackResilience>](../configure-apps/file-schema/runtime/netfx40-pinvokestackresilience-element.md) 元素包含在应用程序的配置文件中，以便能够在早期版本中的堆栈上解析这些调用错误。 但这可能会影响应用程序的性能。 |
+| **平台调用** | 为了改进与非托管代码的互操作性的性能，平台调用中不正确的调用约定会导致应用程序失败。 在早期版本中，封送层在堆栈中向上解析这些错误。 | 在 Microsoft Visual Studio 中调试应用程序时，将向用户通知这些错误，以便能够纠正它们。<br><br>如果二进制文件无法更新，可将 [\<NetFx40_PInvokeStackResilience>](../configure-apps/file-schema/runtime/netfx40-pinvokestackresilience-element.md) 元素包含在应用程序的配置文件中，以便能够在早期版本中的堆栈上解析这些调用错误。 但这可能会影响应用程序的性能。 |
 | **移除的接口**（非托管 API） | 为了避免开发人员产生困惑，已移除以下接口，因为这些接口不提供任何有用的运行时方案，并且 CLR 不提供或接受任何实现：<br><br>* INativeImageINativeImageDependency<br>* INativeImageInstallInfo<br>* INativeImageEvaluate<br>* INativeImageConverter<br>* ICorModule<br>* IMetaDataConverter | 无。 |
 
 ## <a name="data"></a>数据
@@ -244,7 +242,7 @@ ms.locfileid: "43503025"
 
 | 功能 | 与 3.5 SP1 的差异 | 建议的更改 |
 | ------- | ------------------------ | ------------------- |
-| **位图效果** | 为了改进性能，<xref:System.Windows.Media.Effects.BitmapEffect> 类和继承自 <xref:System.Windows.Media.Effects.BitmapEffect> 类的类虽然仍存在，但已被禁用。 如果以下条件为 true，则将使用硬件加速呈现管道呈现该效果：<br><br>* 应用程序会使用 <xref:System.Windows.Media.Effects.DropShadowBitmapEffect> 或半径属性设置为小于 100 DIU 的 <xref:System.Windows.Media.Effects.BlurBitmapEffect>。<br>* 运行应用程序的计算机上的视频卡支持像素着色器 2.0。<br><br>如果不满足以上条件，则 <xref:System.Windows.Media.Effects.BitmapEffect> 对象将不起作用。<br><br>此外，Visual Studio 2010 在遇到 <xref:System.Windows.Media.Effects.BitmapEffect> 对象或子类时还会生成一条编译器警告。<br><br><xref:System.Windows.Media.DrawingContext.PushEffect%2A> 方法被标记为已过时。 | 停止使用旧的 <xref:System.Windows.Media.Effects.BitmapEffect> 及派生类，改用派生自 <xref:System.Windows.Media.Effects.Effect> 的新类：<xref:System.Windows.Media.Effects.BlurEffect>、<xref:System.Windows.Media.Effects.DropShadowEffect> 和 <xref:System.Windows.Media.Effects.ShaderEffect>。<br><br>此外，还可通过从 <xref:System.Windows.Media.Effects.ShaderEffect> 类继承，创建自己的效果。 |
+| **位图效果** | 为了改进性能，<xref:System.Windows.Media.Effects.BitmapEffect> 类和继承自 <xref:System.Windows.Media.Effects.BitmapEffect> 类的类虽然仍存在，但已被禁用。 如果以下条件为 true，则将使用硬件加速呈现管道呈现该效果：<br><br>* 应用程序会使用 <xref:System.Windows.Media.Effects.DropShadowBitmapEffect> 或半径属性设置为小于 100 DIU 的 <xref:System.Windows.Media.Effects.BlurBitmapEffect>。<br>* 运行应用程序的计算机上的视频卡支持像素着色器 2.0。<br><br>如果不满足以上条件，则 <xref:System.Windows.Media.Effects.BitmapEffect> 对象将不起作用。<br><br>此外，Visual Studio 在遇到 <xref:System.Windows.Media.Effects.BitmapEffect> 对象或子类时还会生成一条编译器警告。<br><br><xref:System.Windows.Media.DrawingContext.PushEffect%2A> 方法被标记为已过时。 | 停止使用旧的 <xref:System.Windows.Media.Effects.BitmapEffect> 及派生类，改用派生自 <xref:System.Windows.Media.Effects.Effect> 的新类：<xref:System.Windows.Media.Effects.BlurEffect>、<xref:System.Windows.Media.Effects.DropShadowEffect> 和 <xref:System.Windows.Media.Effects.ShaderEffect>。<br><br>此外，还可通过从 <xref:System.Windows.Media.Effects.ShaderEffect> 类继承，创建自己的效果。 |
 | **位图帧** | 克隆的 <xref:System.Windows.Media.Imaging.BitmapFrame> 对象现会接收 <xref:System.Windows.Media.Imaging.BitmapSource.DownloadProgress>、<xref:System.Windows.Media.Imaging.BitmapSource.DownloadCompleted> 和 <xref:System.Windows.Media.Imaging.BitmapSource.DownloadFailed> 事件。 这使从网站下载并通过 <xref:System.Windows.Style> 应用于 <xref:System.Windows.Controls.Image> 控件的图像可正常工作。<br><br>仅当以下所有表述均成立时，才会看到行为更改：<br><br>* 订阅了 <xref:System.Windows.Media.Imaging.BitmapSource.DownloadProgress>、<xref:System.Windows.Media.Imaging.BitmapSource.DownloadCompleted> 或 <xref:System.Windows.Media.Imaging.BitmapSource.DownloadFailed> 事件。<br>* <xref:System.Windows.Media.Imaging.BitmapFrame> 的源来自 Web。<br>* 在下载仍在进行时对 <xref:System.Windows.Media.Imaging.BitmapFrame> 进行了克隆。 | 检查事件处理程序中的发送方，并仅在该发送方为原始 <xref:System.Windows.Media.Imaging.BitmapFrame> 时才采取操作。 |
 | **解码图像** | 为了防止在图像无法解码时不会处理 <xref:System.IO.IOException>，<xref:System.Windows.Media.Imaging.BitmapSource> 类将在不解码图像时引发 <xref:System.Windows.Media.Imaging.BitmapSource.DecodeFailed> 事件。 | 删除针对 <xref:System.IO.IOException> 的任何异常处理并使用 <xref:System.Windows.Media.Imaging.BitmapSource.DecodeFailed> 事件检查解码失败。 |
 
@@ -321,16 +319,15 @@ ms.locfileid: "43503025"
 
 ### <a name="reference"></a>参考
 
-[.NET Framework 4 中的新增类型和成员](https://msdn.microsoft.com/library/ff641764(v=vs.100).aspx)
+- [.NET Framework 4 中的新增类型和成员](https://msdn.microsoft.com/library/ff641764(v=vs.100).aspx)
 
 ### <a name="concepts"></a>概念
 
-[.NET Framework 4 的迁移指南](https://msdn.microsoft.com/library/ff657133(v=vs.100).aspx)   
-[.NET Framework 4 中的新增功能](https://msdn.microsoft.com/library/ms171868(v=vs.100).aspx)   
-[.NET Framework 的版本兼容性](../../../docs/framework/migration-guide/version-compatibility.md)   
-[将 Office 解决方案迁移到 .NET Framework 4](https://msdn.microsoft.com/library/ee207231.aspx)
+- [.NET Framework 4 的迁移指南](https://msdn.microsoft.com/library/ff657133(v=vs.100).aspx)
+- [.NET Framework 4 的新增功能](https://msdn.microsoft.com/library/ms171868(v=vs.100).aspx)
+- [.NET Framework 的版本兼容性](../../../docs/framework/migration-guide/version-compatibility.md)
+- [将 Office 解决方案迁移到 .NET Framework 4](https://msdn.microsoft.com/library/ee207231.aspx)
 
 ### <a name="other-resources"></a>其他资源
 
-[.NET Framework 中的过时功能](https://msdn.microsoft.com/library/ee461502(v=vs.110).aspx)   
-[Migration Issues for .NET Framework 4 Applications: Beta 2 to RTM](https://go.microsoft.com/fwlink/?LinkId=191505)（.NET Framework 4 应用程序的迁移问题：Beta 2 到 RTM）
+- [.NET Framework 类库中过时的内容](../whats-new/whats-obsolete.md)

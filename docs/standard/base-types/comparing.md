@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 977dc094-fe19-4955-98ec-d2294d04a4ba
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b1fa907be4571e0a5f95ab798210bedb154e9170
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.openlocfilehash: d8f126aa5b69c99beae740de261ac3da3c5d2544
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44264670"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45698557"
 ---
 # <a name="comparing-strings-in-net"></a>比较 .NET 中的字符串
 .NET 提供几种方法来比较字符串的值。 下表列出和描述值比较方法。  
@@ -154,4 +154,5 @@ ms.locfileid: "44264670"
 
 - [基本字符串操作](../../../docs/standard/base-types/basic-string-operations.md)  
 - [执行不区分区域性的字符串操作](../../../docs/standard/globalization-localization/performing-culture-insensitive-string-operations.md)
-- [排序权重表](https://www.microsoft.com/en-us/download/details.aspx?id=10921)
+- [排序权重表（适用于 Windows 上的 .NET）](https://www.microsoft.com/en-us/download/details.aspx?id=10921)
+- [默认 Unicode 排序元素表（适用于 Linux 和 macOS 上 .NET Core）](https://www.unicode.org/Public/UCA/latest/allkeys.txt)

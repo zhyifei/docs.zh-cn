@@ -18,12 +18,12 @@ helpviewer_keywords:
 - threading [Windows Forms], asynchronous features
 - AsyncCompletedEventArgs class
 ms.assetid: 61f676b5-936f-40f6-83ce-f22805ec9c2f
-ms.openlocfilehash: 09746f01115a4b6bf3ca54cdc72c6ad936fbaaae
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 3fd01e19bc8aad8af709aee2fdaa020d8192d530
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44042434"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46003810"
 ---
 # <a name="how-to-implement-a-component-that-supports-the-event-based-asynchronous-pattern"></a>如何：实现支持基于事件的异步模式的组件
 若要编写的类有一些可能会带来明显延迟的操作，请考虑按照[基于事件的异步模式概述](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)中的步骤操作，为它实现异步功能。  
@@ -58,7 +58,7 @@ ms.locfileid: "44042434"
 -   创建继承自 <xref:System.ComponentModel.Component> 的类 `PrimeNumberCalculator`。  
   
 ## <a name="defining-public-asynchronous-events-and-delegates"></a>定义公共异步事件和委托  
- 组件使用事件与客户端进行通信。 MethodNameCompleted ****** 事件预警客户端注意异步任务完成，MethodNameProgressChanged ****** 事件向客户端告知异步任务的进度。  
+ 组件使用事件与客户端进行通信。 _MethodName_**Completed** 事件预警客户端注意异步任务完成，_MethodName_**ProgressChanged** 事件向客户端告知异步任务的进度。  
   
 #### <a name="to-define-asynchronous-events-for-clients-of-your-component"></a>若要定义组件客户端的异步事件，请执行以下步骤：  
   

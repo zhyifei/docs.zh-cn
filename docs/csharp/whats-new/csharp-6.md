@@ -3,12 +3,12 @@ title: C# 6 中的新增功能 - C# 指南
 description: 了解 C# 版本 6 中的新增功能
 ms.date: 09/22/2016
 ms.assetid: 4d879f69-f889-4d3f-a781-75194e143400
-ms.openlocfilehash: 5ba5d8f4cc5c7cecdda030594273324d14d1582a
-ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
+ms.openlocfilehash: f6f953eacc935d38cc7d45173109c96c52a5e2f3
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34565873"
+ms.lasthandoff: 09/29/2018
+ms.locfileid: "47208180"
 ---
 # <a name="whats-new-in-c-6"></a>C# 6 中的新增功能
 
@@ -45,7 +45,7 @@ C# 6.0 版本包含许多可提高开发人员工作效率的功能。 此版本
 
 此主题的其余部分提供有关上述每种功能的详细信息。
 
-## <a name="auto-property-enhancements"></a>自动属性增强功能 
+## <a name="auto-property-enhancements"></a>自动属性增强功能
 
 通过自动实现属性的语法（通常称为“自动属性”），可轻松创建具有简单 get 和 set 访问器的属性：
 
@@ -88,6 +88,8 @@ public class Student
 
 此功能实现用于创建不可变类型和使用更简洁且方便的自动属性语法的真正语言支持。
 
+如果添加此语法不会删除可访问的方法，则为[二进制兼容的更改](version-update-considerations.md#binary-compatible-changes)。
+
 ### <a name="auto-property-initializers"></a>自动属性初始值设定项
 
 自动属性初始值设定项可让你在属性声明中声明自动属性的初始值。  在早期版本中，这些属性需要具有资源库，你需要使用该资源库来初始化支持字段使用的数据存储。 对于包含姓名和学生成绩列表的学生，请考虑此类：
@@ -115,6 +117,9 @@ public class Student
 还可以在只读属性中使用 expression-bodied 成员：
 
 [!code-csharp[FullNameExpressionMember](../../../samples/snippets/csharp/new-in-6/newcode.cs#FullNameExpressionMember)]
+
+将现有成员更改为 expression bodied 成员是[二进制兼容的更改](version-update-considerations.md#binary-compatible-changes)。
+
 
 ## <a name="using-static"></a>using static
 
@@ -398,4 +403,3 @@ C# 6 编译器正确地确定 `Task.Run(Func<Task>())` 是更好的选择。
 默认情况下，每个编译都生成唯一的输出内容。 编译器添加一个时间戳和一个随机生成的 GUID。 如果想按字节比较输出以确保各项生成之间的一致性，请使用此选项。
 
 有关详细信息，请参阅 [-deterministic 编译器选项](../language-reference/compiler-options/deterministic-compiler-option.md)文章。
-

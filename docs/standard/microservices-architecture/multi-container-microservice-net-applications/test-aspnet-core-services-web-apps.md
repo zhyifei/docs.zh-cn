@@ -4,12 +4,12 @@ description: 适用于容器化 .NET 应用程序的 .NET 微服务体系结构 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 12/11/2017
-ms.openlocfilehash: 63576445a44df0c0bdbd22b263754bb3d2919963
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 2702a273ade0e58ba93d556cfd1ecc5531027f93
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44195616"
+ms.lasthandoff: 09/28/2018
+ms.locfileid: "47232854"
 ---
 # <a name="testing-aspnet-core-services-and-web-apps"></a>测试 ASP.NET Core 服务和 Web 应用
 
@@ -121,7 +121,7 @@ public class PrimeWebDefaultRequestShould
 
 可以使用多种方法。 在用于部署应用程序的 docker-compose.yml 文件（或 docker-compose.ci.build.yml 等类似文件）中，可在解决方案级别扩展入口点，以使用 [dotnet 测试](../../../core/tools/dotnet-test.md)。 还可以使用将在设置为目标的映像中运行测试的其他 compose 文件。 通过使用包括容器上的微服务和数据库的其他集成测试 compose 文件，可确保运行测试前相关数据始终重置为其初始状态。
 
-compose 应用程序运行后，如果运行 Visual Studio，可利用断点和异常。 或者可在 Visual Studio Team Services 或其他任何支持 Docker 容器的 CI/CD 系统中的 CI 管道中自动运行集成测试。
+compose 应用程序运行后，如果运行 Visual Studio，可利用断点和异常。 或者可在 Azure DevOps Services 或支持 Docker 容器的其他任何 CI/CD 系统中的 CI 管道中自动运行集成测试。
 
 >[!div class="step-by-step"]
 [上一页](subscribe-events.md)

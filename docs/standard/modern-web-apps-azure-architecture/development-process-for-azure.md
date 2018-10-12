@@ -4,12 +4,12 @@ description: 使用 ASP.NET Core 和 Azure 构建新式 Web 应用程序 | Azure
 author: ardalis
 ms.author: wiwagn
 ms.date: 06/28/2018
-ms.openlocfilehash: bde771051af034e7da72e9648fb3b0f37a95fa01
-ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
+ms.openlocfilehash: a614cfe3d3437426893d8748165b2ef4d6389765
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37404384"
+ms.lasthandoff: 09/29/2018
+ms.locfileid: "47231240"
 ---
 # <a name="development-process-for-azure"></a>Azure 的开发过程
 
@@ -44,15 +44,15 @@ ms.locfileid: "37404384"
 
 应用程序开发生命周期始于每位开发人员的计算机，开发人员使用其首选语言对应用进行编码和本地测试。 开发人员可选择其青睐的源代码管理系统，并可使用生成服务器或基于内置 Azure 功能配置持续集成 (CI) 和/或持续交付/部署 (CD)。
 
-若要开始使用 CI/CD 开发 ASP.NET Core 应用程序，可使用 Visual Studio Team Services 或组织自身的 Team Foundation Server (TFS)。
+若要开始使用 CI/CD 开发 ASP.NET Core 应用程序，可使用 Azure DevOps Services 或组织自身的 Team Foundation Server (TFS)。
 
 ### <a name="initial-setup"></a>初始设置
 
 若要为应用创建发布管道，需要具备源代码管理中的应用程序代码。 设置一个本地存储库，并将其连接到团队项目中的远程存储库。 请按照以下说明执行操作：
 
-- [使用 Git 和 Visual Studio 分享代码](https://docs.microsoft.com/vsts/git/share-your-code-in-git-vs)或
+- [使用 Git 和 Visual Studio 分享代码](https://docs.microsoft.com/azure/devops/git/share-your-code-in-git-vs)或
 
-- [使用 TFVC 和 Visual Studio 分享代码](https://docs.microsoft.com/vsts/tfvc/share-your-code-in-tfvc-vs)
+- [使用 TFVC 和 Visual Studio 分享代码](https://docs.microsoft.com/azure/devops/tfvc/share-your-code-in-tfvc-vs)
 
 创建要在其中部署应用程序的 Azure 应用服务。 转至 Azure 门户上的“应用服务”选项卡，创建一个 Web 应用。 单击“+添加”，选择 Web 应用模板，单击“创建”并提供名称或其他详细信息。 该 Web 应用可通过 {name}.azurewebsites.net 进行访问。
 
@@ -62,13 +62,13 @@ ms.locfileid: "37404384"
 
 无论新代码何时提交至项目的源代码管理存储库，CI 生成过程均会执行自动生成。 由此你可获得即时反馈，知悉代码已生成（且理想情况下可通过自动测试），并且或许可进行部署。 此 CI 生成将生成一个 Web 部署包项目，并将其发布，以供 CD 进程使用。
 
-[定义 CI 生成过程](https://docs.microsoft.com/vsts/build-release/apps/aspnet/build-aspnet-core#ci)
+[定义 CI 生成过程](https://docs.microsoft.com/azure/devops/build-release/apps/aspnet/build-aspnet-core#ci)
 
 请务必启用持续集成，从而使得无论何时团队成员提交新代码，系统均可将生成排队。 测试该生成，并验证其是否生成 Web 部署包作为其中一个项目。
 
 生成成功后，CD 过程会将 CI 生成结果部署到 Azure Web 应用。 如需对其配置，请创建并配置一个 Release（它将部署到 Azure 应用服务）。
 
-[定义 CD 发布过程](https://docs.microsoft.com/vsts/build-release/apps/aspnet/build-aspnet-core#cd)
+[定义 CD 发布过程](https://docs.microsoft.com/azure/devops/build-release/apps/aspnet/build-aspnet-core#cd)
 
 配置 CI/CD 管道后，即可更新 Web 应用，并将更新提交至源代码管理以进行部署。
 
@@ -86,7 +86,7 @@ ms.locfileid: "37404384"
 
 #### <a name="step-2-application-code-repository"></a>步骤 2。 应用程序代码存储库
 
-无论何时准备与团队共享代码，均应将更改从本地源存储库中推送到团队共享源存储库。 如果一直在自定义分支中工作，此步骤通常涉及将代码合并到共享分支中（或许通过[拉取请求](https://docs.microsoft.com/vsts/git/pull-requests)方式）。
+无论何时准备与团队共享代码，均应将更改从本地源存储库中推送到团队共享源存储库。 如果一直在自定义分支中工作，此步骤通常涉及将代码合并到共享分支中（或许通过[拉取请求](https://docs.microsoft.com/azure/devops/git/pull-requests)方式）。
 
 #### <a name="step-3-build-server-continuous-integration-build-test-package"></a>步骤 3。 生成服务器：持续集成。 生成、测试、打包
 
@@ -107,7 +107,7 @@ ms.locfileid: "37404384"
 ## <a name="references"></a>参考资料
 
 **构建 ASP.NET Core 应用并将其部署到 Azure**  
-<https://docs.microsoft.com/vsts/build-release/apps/aspnet/build-aspnet-core>
+<https://docs.microsoft.com/azure/devops/build-release/apps/aspnet/build-aspnet-core>
 
 >[!div class="step-by-step"]
 [上一页](test-asp-net-core-mvc-apps.md)

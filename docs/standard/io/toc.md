@@ -14,6 +14,7 @@
 ### [撰写流](composing-streams.md)
 ### [如何：在 .NET Framework 流和 Windows 运行时流之间进行转换](how-to-convert-between-dotnet-streams-and-winrt-streams.md)
 ## [异步文件 I/O](asynchronous-file-i-o.md)
+## [处理 I/O 错误](handling-io-errors.md)
 ## [独立存储](isolated-storage.md)
 ### [隔离的类型](types-of-isolation.md)
 ### [如何：获取独立存储的存储区](how-to-obtain-stores-for-isolated-storage.md)

@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: eb4e1af0-3b48-4fbc-ad4e-fc2f64138bf9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 176ae3589443937331259ee4716570c66053de3c
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 36526da1fc678e933a75e19bac9c8e1d0a40909c
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44186183"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "45743383"
 ---
 # <a name="implementing-a-dispose-method"></a>实现 Dispose 方法
 
@@ -107,7 +107,7 @@ ms.locfileid: "44186183"
 
 从实现 <xref:System.IDisposable> 接口的类派生的类不应实现 <xref:System.IDisposable>，因为 <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType> 的基类实现由其派生类继承。 相反，若要实现派生类的释放模式，你可提供以下内容：  
   
-* `protected Dispose(Boolean)` 方法，用于替代基类方法并执行释放派生类的资源的实际工作。 此方法还应调用基类的 `Dispose(Boolean)` 方法并向其传递 *disposing* 参数的 `true` 值。  
+* `protected Dispose(Boolean)` 方法，用于替代基类方法并执行释放派生类的资源的实际工作。 此方法还应调用基类的 `Dispose(Boolean)` 方法并传递参数的释放状态。  
   
 * 从包装非托管资源的 <xref:System.Runtime.InteropServices.SafeHandle> 派生的类（推荐），或对 <xref:System.Object.Finalize%2A?displayProperty=nameWithType> 方法的重写。 <xref:System.Runtime.InteropServices.SafeHandle> 类提供了一个使你无需编写代码的终结器。 如果你提供了终结器，则应调用 *disposing* 参数为 `false` 的 `Dispose(Boolean)` 重载。  
   

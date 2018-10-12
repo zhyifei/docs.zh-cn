@@ -5,12 +5,12 @@ author: jralexander
 ms.author: johalex
 ms.date: 11/06/2017
 ms.custom: mvc
-ms.openlocfilehash: 0fe3fcdee1c508f5c8165b7709ca08e42d0b1d55
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: d578ec5a25dbb5de3c88386e212e68cf3b267749
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44251766"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "45970638"
 ---
 # <a name="introduction-to-net-and-docker"></a>.NET 和 Docker 简介
 
@@ -147,11 +147,11 @@ Microsoft 对 .NET 存储库的打算是要有细化和集中存储库，表示�
 
 * [DockerHub 上的用于 Windows 容器的 Microsoft SQL Server Developer Edition 映像](https://hub.docker.com/r/microsoft/mssql-server-windows-developer/)
 
-#### <a name="visual-studio-team-services-vsts-agent"></a>Visual Studio Team Services (VSTS) 代理
+#### <a name="azure-devops-services-agent"></a>Azure DevOps Services 代理
 
-* [DockerHub 上的 Visual Studio Team Services (VSTS) 代理映像](https://hub.docker.com/r/microsoft/vsts-agent/)
+* [DockerHub 上的 Azure DevOps Services 代理映像](https://hub.docker.com/r/microsoft/vsts-agent/)
 
-* [GitHub 上的 Visual Studio Team Services (VSTS) 代理映像](https://github.com/Microsoft/vsts-agent-docker)
+* [GitHub 上的 Azure DevOps Services 代理映像](https://github.com/Microsoft/vsts-agent-docker)
 
 #### <a name="operations-management-suite-oms-linux-agent"></a>Operations Management Suite (OMS) Linux 代理
 

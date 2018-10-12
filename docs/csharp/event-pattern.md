@@ -3,12 +3,12 @@ title: 标准 .NET 事件模式
 description: 介绍 .NET 事件模式，如何创建标准事件源以及订阅并处理代码中的标准事件。
 ms.date: 06/20/2016
 ms.assetid: 8a3133d6-4ef2-46f9-9c8d-a8ea8898e4c9
-ms.openlocfilehash: 9bd9f71726647966dd1e4426b260484decb048c6
-ms.sourcegitcommit: d955cb4c681d68cf301d410925d83f25172ece86
+ms.openlocfilehash: 0b10c440f4d05533032aa94819ec879f6a1ca2a4
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34827243"
+ms.lasthandoff: 09/29/2018
+ms.locfileid: "47399945"
 ---
 # <a name="standard-net-event-patterns"></a>标准 .NET 事件模式
 
@@ -49,7 +49,7 @@ void OnEventRaised(object sender, EventArgs args);
 
 [!code-csharp[FileSearxcher](../../samples/csharp/events/Program.cs#FileSearcherV1 "Create the initial file searcher")]
 
-## <a name="definining-and-raising-field-like-events"></a>定义并引发类似字段的事件
+## <a name="defining-and-raising-field-like-events"></a>定义并引发类似字段的事件
 
 要将事件添加到类，最简单的方式是将该事件声明为公共字段，如上面的示例中所示：
 

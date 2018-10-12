@@ -5,12 +5,12 @@ helpviewer_keywords:
 - C# language, strings
 - strings [C#]
 ms.assetid: 21580405-cb25-4541-89d5-037846a38b07
-ms.openlocfilehash: 9b108a1613e01016c541d088612303c6aaa13629
-ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
+ms.openlocfilehash: a06a5144e91901417906f071efd8e19c10cf2cba
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37961457"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47170647"
 ---
 # <a name="strings-c-programming-guide"></a>字符串（C# 编程指南）
 字符串是值为文本的 <xref:System.String> 类型对象。 文本在内部存储为 <xref:System.Char> 对象的依序只读集合。 在 C# 字符串末尾没有 null 终止字符；因此，一个 C# 字符串可以包含任何数量的嵌入的 null 字符 ('\0')。 字符串的 <xref:System.String.Length%2A> 属性表示其包含的 `Char` 对象数量，而非 Unicode 字符数。 若要访问字符串中的各个 Unicode 码位，请使用 <xref:System.Globalization.StringInfo> 对象。  
@@ -64,7 +64,7 @@ ms.locfileid: "37961457"
 |\U|代理项对的 Unicode 转义序列。|\Unnnnnnnn|  
 |\u|Unicode 转义序列|\u0041 = "A"|  
 |\v|垂直制表符|0x000B|  
-|\x|除长度可变外，Unicode 转义序列与“\u”类似。|\x0041 = "A"|  
+|\x|除长度可变外，Unicode 转义序列与“\u”类似。|\x0041 或 \x41 = "A"|  
   
 > [!NOTE]
 >  在编译时，逐字字符串被转换为普通字符串，并具有所有相同的转义序列。 因此，如果在调试器监视窗口中查看逐字字符串，将看到由编译器添加的转义字符，而不是来自你的源代码的逐字字符串版本。 例如，原义字符串 @"C:\files.txt" 在监视窗口中显示为“C:\\\files.txt”。  

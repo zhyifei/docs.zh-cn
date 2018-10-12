@@ -4,12 +4,12 @@ description: 用于容器化 .NET 应用程序的 .NET 微服务体系结构 | �
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/30/2017
-ms.openlocfilehash: 0c4eda54fbb1f48095d52fa798ea839eb509a636
-ms.sourcegitcommit: bd4fa78f5a46133efdead1bc692a9aa2811d7868
+ms.openlocfilehash: d1c4166129716ccbbc86855e38d631f493b82290
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "42754724"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "46937600"
 ---
 # <a name="defining-your-multi-container-application-with-docker-composeyml"></a>使用 docker-compose.yml 定义多容器应用程序 
 
@@ -126,7 +126,7 @@ services:
 
 -   SQL Server 的名称是 sql.data，与运行适用于 Linux 的 SQL Server 实例的容器的名称相同。 这很方便，因为使用此名称解析（Docker 主机内部）可解析网络地址，这样从其他容器访问容器时，无需了解受访容器的内部 IP。
 
-由于连接字符串由环境变量定义，因此可在不同的时间通过不同机制设置该变量。 例如，在最终主机中部署到生产时，可设置不同的连接字符串，或通过 VSTS 中的 CI/CD 管道或喜爱的 DevOps 系统来完成。
+由于连接字符串由环境变量定义，因此可在不同的时间通过不同机制设置该变量。 例如，在最终主机中部署到生产时，可设置不同的连接字符串，或通过 Azure DevOps Services 中的 CI/CD 管道或喜爱的 DevOps 系统来完成。
 
 -   它公开了端口 80，用于对 Docker 主机中的 catalog.api 服务进行内部访问。 目前的主机是 Linux VM，因为它以适用于 Linux 的 Docker 映像为基础，但开发人员可配置该容器，使其在 Windows 映像上运行。
 
@@ -180,7 +180,7 @@ docker-compose down
 
 开发人员可使用单个 docker-compose.yml 文件，如前面部分中的简化示例所示。 但是，对于大多数应用程序不建议这样做。
 
-默认情况下，Compose 读取两个文件，docker-compose.yml 和可选的 docker-compose.override.yml 文件。 如图 8-11 所示，使用 Visual Studio 并启用 Docker 支持时，Visual Studio 还会创建一个额外的 docker-compose.ci.build,yml 文件，以供开发人员在 CI/CD 管道（如 VSTS）中使用。
+默认情况下，Compose 读取两个文件，docker-compose.yml 和可选的 docker-compose.override.yml 文件。 如图 8-11 所示，使用 Visual Studio 并启用 Docker 支持时，Visual Studio 还会创建一个额外的 docker-compose.ci.build,yml 文件，以供开发人员在 CI/CD 管道（如 Azure DevOps Services）中使用。
 
 ![](./media/image12.png)
 
