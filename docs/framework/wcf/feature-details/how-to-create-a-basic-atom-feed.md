@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 6e0cacc1-9b11-4665-adb7-577a62626fd6
 ms.openlocfilehash: ac356ac9acd3f0b14fb3da902f1a9c3cfbdd9ef7
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/07/2018
-ms.locfileid: "48847888"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49122603"
 ---
 # <a name="how-to-create-a-basic-atom-feed"></a>如何：创建基本 Atom 源
 Windows Communication Foundation (WCF) 可以创建公开联合源的服务。 本主题讨论如何创建公开 Atom 联合源的联合服务。  

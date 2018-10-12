@@ -2,12 +2,12 @@
 title: 寻址
 ms.date: 03/30/2017
 ms.assetid: d438e6f2-d0f3-43aa-b259-b51b5bda2e64
-ms.openlocfilehash: 6f2ab732fd5758358c7347087694cab8d56703bf
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 0e18039db51a1060661b435640c356fd0610a68a
+ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43468360"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49123197"
 ---
 # <a name="addressing"></a>寻址
 “寻址”示例演示终结点地址的各个方面和功能。 该示例基于[Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md)。 在本示例中，服务是自承载的。 服务和客户端都是控制台应用程序。 服务使用相对和绝对终结点地址的组合来定义多个终结点。  
@@ -40,7 +40,7 @@ ms.locfileid: "43468360"
           contract="Microsoft.ServiceModel.Samples.ICalculator" />  
 ```  
   
- 在本例中，相对地址为空（“”），因此终结点地址与基址相同。 实际的终结点地址是 http://localhost:8000/servicemodelsamples/service。  
+ 在本例中，相对地址为空（“”），因此终结点地址与基址相同。 实际的终结点地址是`http://localhost:8000/servicemodelsamples/service`。
   
  第二个终结点定义也指定一个相对地址，如下面的示例配置所示。  
   
@@ -53,7 +53,7 @@ ms.locfileid: "43468360"
           contract="Microsoft.ServiceModel.Samples.ICalculator" />  
 ```  
   
- 将相对地址“test”追加到基址。 实际的终结点地址是 http://localhost:8000/servicemodelsamples/service/test。  
+ 将相对地址“test”追加到基址。 实际的终结点地址是`http://localhost:8000/servicemodelsamples/service/test`。
   
  第三个终结点定义指定一个绝对地址，如下面的示例配置所示。  
   
@@ -63,9 +63,9 @@ ms.locfileid: "43468360"
           contract="Microsoft.ServiceModel.Samples.ICalculator" />  
 ```  
   
- 基址在地址中不起作用。 实际的终结点地址是 http://localhost:8001/hello/servicemodelsamples。  
+ 基址在地址中不起作用。 实际的终结点地址是`http://localhost:8001/hello/servicemodelsamples`。
   
- 第四个终结点地址指定一个绝对地址和一个不同的传输协议 (TCP)。 基址在地址中不起作用。 实际终结点地址为 net.tcp://localhost:9000/servicemodelsamples/service。  
+ 第四个终结点地址指定一个绝对地址和一个不同的传输协议 (TCP)。 基址在地址中不起作用。 实际的终结点地址是`net.tcp://localhost:9000/servicemodelsamples/service`。
   
 ```xml  
 <!-- The absolute address specified, different transport: -->  

@@ -2,12 +2,12 @@
 title: Windows Workflow Foundation 4 性能
 ms.date: 03/30/2017
 ms.assetid: 67d2b3e8-3777-49f8-9084-abbb33b5a766
-ms.openlocfilehash: c7dc098eee5f17e18f76c0b54a097a22f5d844b1
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: 78e9ac1cc350fe8c04222b2698569412961d3b52
+ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48873688"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49123808"
 ---
 # <a name="windows-workflow-foundation-4-performance"></a>Windows Workflow Foundation 4 性能
 Dustin Metzgar
@@ -287,7 +287,7 @@ public sealed class CompensableActivityEmptyCompensation : CodeActivity
  即使是具有许多深度和大量活动的复杂工作流，性能结果仍与本文前面显示的吞吐量数字一致。  WF4 的吞吐量速度呈现几个数量级的增长，必须在对数刻度上进行比较。
 
 ### <a name="memory"></a>内存
- Windows Workflow Foundation 的内存开销从两个主要方面进行测量：工作流复杂程度和工作流定义数。  内存测量是在 Windows 7 64 位工作站上进行的。  有多种方法可以获得工作集大小，如监控性能计数器、 轮询 Environment.WorkingSet，或使用 VMMap 可从之类的工具的测量值[VMMap](https://technet.microsoft.com/sysinternals/dd535533.aspx)。 使用各种方法的组合来获得并验证每个测试的结果。
+ Windows Workflow Foundation 的内存开销从两个主要方面进行测量：工作流复杂程度和工作流定义数。  内存测量是在 Windows 7 64 位工作站上进行的。  有多种方法可以获得工作集大小，如监控性能计数器、 轮询 Environment.WorkingSet，或使用 VMMap 可从之类的工具的测量值[VMMap](/sysinternals/downloads/vmmap)。 使用各种方法的组合来获得并验证每个测试的结果。
 
 ### <a name="workflow-complexity-test"></a>工作流复杂程度测试
  工作流复杂程度测试根据工作流的复杂程度测试工作集的差异。  除了上一节中使用的复杂工作流外，还添加了新的变种以覆盖两种基本情况：单个活动工作流和包含 1000 个活动的序列。  对于这些测试，这些工作流在一分钟的时间里，在单个序列循环中初始化并执行完成。  每个测试变体都运行三次，记录的数据是这三次运行的平均值。
