@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 84526045-496f-489d-8517-a258cf76f040
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f7f7a779cc10b32d66a184107359b502cf094979
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 569be83b902e7634a0c22e78c3f3c3a23985076c
+ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/15/2018
-ms.locfileid: "45649206"
+ms.lasthandoff: 10/13/2018
+ms.locfileid: "49308547"
 ---
 # <a name="code-contracts"></a>代码协定
 代码协定提供了在代码中指定前置条件、后置条件和对象固定的方法。 前置条件是输入方法或属性时必须满足的要求。 后置条件描述在方法或属性代码退出时的预期。 对象固定描述处于良好状态的类的预期状态。  
@@ -79,7 +79,7 @@ Contract.EndContractBlock(); // All previous "if" checks are preconditions
   
  `Contract.EnsuresOnThrow<T>( this.F > 0 );`  
   
- 参数是指每次引发作为 `T` 的子类型的异常时必须为 `true` 的条件。  
+ 自变量是指每次引发作为 `T` 的子类型的异常时必须为 `true` 的条件。  
   
  有一些异常类型很难在异常后置条件中使用。 例如，若要使用 `T` 的 <xref:System.Exception> 类型，则无论引发的异常类型如何（即使是堆栈溢出或其他不可控制的异常），方法都必须保证条件。 应仅将异常后置条件用于调用成员时可能引发的特定异常，例如，当对 <xref:System.TimeZoneInfo> 方法调用引发 <xref:System.InvalidTimeZoneException> 时。  
   
@@ -90,7 +90,7 @@ Contract.EndContractBlock(); // All previous "if" checks are preconditions
   
 -   后置条件中的预状态值是指方法或属性开头的表达式的值。 它使用表达式 `Contract.OldValue<T>(e)`，其中 `T` 是 `e` 的类型。 每次编译器可推断出类型时，都可发出泛型类型参数。 （例如，C# 编译器始终可推断出类型，因为它采用了参数。）对于 `e` 和可能出现旧表达式的上下文中会执行的操作，存在一些限制。 旧表达式中不能包含其他旧表达式。 最重要的是，旧表达式必须引用方法前置条件状态中的一个值。 换言之，只要方法前置条件为 `true`，此表达式都必须可以进行计算。 以下是此规则的几个实例。  
   
-    -   方法的前置条件状态中必须存在值。 为了引用对象上的字段，前置条件必须保证此对象始终为非 null。  
+    -   方法的前置条件状态中必须存在值。 若要引用的对象上的字段，前置条件必须保证对象始终为非 null。  
   
     -   不能引用旧表达式中方法的返回值：  
   

@@ -3,11 +3,11 @@ title: 基于命令性代码的验证
 ms.date: 03/30/2017
 ms.assetid: ae12537c-455e-42b1-82f4-cea4c46c023e
 ms.openlocfilehash: ac77132e3469bdffa6f88f8c6d617c6faa1c9323
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48779668"
+ms.lasthandoff: 10/13/2018
+ms.locfileid: "49308287"
 ---
 # <a name="imperative-code-based-validation"></a>基于命令性代码的验证
 
@@ -15,10 +15,10 @@ ms.locfileid: "48779668"
   
 ## <a name="using-code-based-validation"></a>使用基于代码的验证
 
-从 <xref:System.Activities.CodeActivity>、<xref:System.Activities.AsyncCodeActivity> 和 <xref:System.Activities.NativeActivity> 派生的活动支持基于代码的验证。 可以将验证代码放置在 <xref:System.Activities.CodeActivity.CacheMetadata%2A> 重写中，并且可以将验证错误或警告添加到元数据参数中。 在下面的示例中，如果 `Cost` 大于 `Price`，则会向元数据中添加一个验证错误。  
+从 <xref:System.Activities.CodeActivity>、<xref:System.Activities.AsyncCodeActivity> 和 <xref:System.Activities.NativeActivity> 派生的活动支持基于代码的验证。 可以将验证代码放置在 <xref:System.Activities.CodeActivity.CacheMetadata%2A> 重写中，并且可以将验证错误或警告添加到元数据自变量中。 在下面的示例中，如果 `Cost` 大于 `Price`，则会向元数据中添加一个验证错误。  
   
 > [!NOTE]
-> 请注意，`Cost` 和 `Price` 不是针对活动的参数，而是在设计时设置的属性。 这就是为什么可以在 <xref:System.Activities.CodeActivity.CacheMetadata%2A> 重写中验证其值的原因。 流过某一参数的数据值不能在设计时验证，因为在运行时之前数据不流动，但可以对活动参数进行验证，以便确保通过使用 `RequiredArgument` 特性和重载组对它们进行限定。 此示例代码查看 `RequiredArgument` 参数的 `Description` 特性，如果未绑定，则会生成验证错误。   中介绍了所需的参数[所需自变量和重载组](../../../docs/framework/windows-workflow-foundation/required-arguments-and-overload-groups.md)。  
+> 请注意，`Cost` 和 `Price` 不是针对活动的自变量，而是在设计时设置的属性。 这就是为什么可以在 <xref:System.Activities.CodeActivity.CacheMetadata%2A> 重写中验证其值的原因。 流过某一参数的数据值不能在设计时验证，因为在运行时之前数据不流动，但可以对活动参数进行验证，以便确保通过使用 `RequiredArgument` 特性和重载组对它们进行限定。 此示例代码查看 `Description` 自变量的 `RequiredArgument` 特性，如果未绑定，则会生成验证错误。 中介绍了所需的参数[所需自变量和重载组](../../../docs/framework/windows-workflow-foundation/required-arguments-and-overload-groups.md)。  
   
 ```csharp  
 public sealed class CreateProduct : CodeActivity  
