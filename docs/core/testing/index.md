@@ -4,12 +4,12 @@ description: 单元测试从未如此简单。 了解如何在 .NET Core 和 .NE
 author: ardalis
 ms.author: wiwagn
 ms.date: 08/30/2017
-ms.openlocfilehash: 4a1d880da796aac40da93ca2513b6163200ca3c1
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 5b54e7936fb19a94fad9585c00904ae67a59e064
+ms.sourcegitcommit: d88024e6d6d8b242feae5f4007a709379355aa24
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46004385"
+ms.lasthandoff: 10/13/2018
+ms.locfileid: "49314845"
 ---
 # <a name="unit-testing-in-net-core-and-net-standard"></a>.NET Core 和 .NET Standard 中的单元测试
 
@@ -21,16 +21,16 @@ ms.locfileid: "46004385"
 
 ## <a name="getting-started-with-testing"></a>测试入门
 
-确保软件应用程序按作者的期望执行操作，其中最好的一种方法是拥有自动化测试套件。 可以对软件应用程序进行各种不同的测试，包括集成测试、Web 测试、负载测试等。 测试各个软件组件或方法的单元测试是最低级测试。 单元测试只应测试开发人员控件中的代码，而不应测试基础结构问题，如数据库、文件系统或网络资源等。 可以使用[测试驱动开发 (TDD)](http://deviq.com/test-driven-development/) 编写单元测试，或将其添加到现有代码以确认其正确性。 无论属于上述哪种情况，单元测试都应该是命名恰当且运行速度快的小型测试，因为理想情况下，都希望能够先运行数百个单元测试，再将更改推送到项目的共享代码存储库中。
+确保软件应用程序按作者的期望执行操作，其中最好的一种方法是拥有自动化测试套件。 可以对软件应用程序进行各种不同的测试，包括集成测试、Web 测试、负载测试等。 测试各个软件组件或方法的单元测试是最低级测试。 单元测试只应测试开发人员控件中的代码，而不应测试基础结构问题，如数据库、文件系统或网络资源等。 可以使用[测试驱动开发 (TDD)](https://deviq.com/test-driven-development/) 编写单元测试，或将其添加到现有代码以确认其正确性。 无论属于上述哪种情况，单元测试都应该是命名恰当且运行速度快的小型测试，因为理想情况下，都希望能够先运行数百个单元测试，再将更改推送到项目的共享代码存储库中。
 
 > [!NOTE]
 > 开发人员经常要想方设法地为测试类和方法提供合适的名称。 作为起点，ASP.NET 产品团队会遵循[这些约定](https://github.com/aspnet/Home/wiki/Engineering-guidelines#unit-tests-and-functional-tests)。
 
-编写单元测试时，注意不要在基础结构上意外引入了依赖项。 这些依赖项往往会降低测试速度，使测试更加脆弱，因此应将其保留供集成测试使用。 可以通过遵循 [Explicit Dependencies Principle](http://deviq.com/explicit-dependencies-principle/)（显示依赖项原则）和使用 [Dependency Injection](/aspnet/core/fundamentals/dependency-injection)（依赖项注入）从框架中请求依赖项，以此避免应用程序代码中的这些隐藏依赖项。 还可以将单元测试保留在单独的项目中，与集成测试相分隔，并确保单元测试项目没有引用或依赖于基础结构包。
+编写单元测试时，注意不要在基础结构上意外引入了依赖项。 这些依赖项往往会降低测试速度，使测试更加脆弱，因此应将其保留供集成测试使用。 可以通过遵循 [Explicit Dependencies Principle](https://deviq.com/explicit-dependencies-principle/)（显示依赖项原则）和使用 [Dependency Injection](/aspnet/core/fundamentals/dependency-injection)（依赖项注入）从框架中请求依赖项，以此避免应用程序代码中的这些隐藏依赖项。 还可以将单元测试保留在单独的项目中，与集成测试相分隔，并确保单元测试项目没有引用或依赖于基础结构包。
 
 了解有关 .NET Core 项目中的单元测试的详细信息：
 
-支持对 .NET Core 单元测试项目使用 [C#](../../csharp/index.md)、[F#](../../fsharp/index.md) 和 [Visual Basic](../../visual-basic/index.md)。 还可以在 [xUnit](http://xunit.github.io)、[NUnit](http://nunit.org) 与 [MSTest](https://github.com/Microsoft/vstest-docs) 之间进行选择。
+支持对 .NET Core 单元测试项目使用 [C#](../../csharp/index.md)、[F#](../../fsharp/index.md) 和 [Visual Basic](../../visual-basic/index.md)。 还可以在 [xUnit](https://xunit.github.io)、[NUnit](https://nunit.org) 与 [MSTest](https://github.com/Microsoft/vstest-docs) 之间进行选择。
 
 下面的演练介绍了这些组合使用方式：
 
@@ -48,4 +48,4 @@ ms.locfileid: "46004385"
 
 * Visual Studio Enterprise 提供用于 .NET Core 的卓越测试工具。 有关详细信息，请查看 [Live Unit Testing](/visualstudio/test/live-unit-testing) 或[代码覆盖率](https://github.com/Microsoft/vstest-docs/blob/master/docs/analyze.md#working-with-code-coverage)。
 * 有关如何使用选择性单元测试筛选的其他信息和示例，请参阅[运行选择性单元测试](selective-unit-tests.md)或[使用 Visual Studio 添加和排除测试](/visualstudio/test/live-unit-testing#include-and-exclude-test-projects-and-test-methods)。
-* XUnit 团队编写了一个教程，介绍[如何通过 .NET Core 和 Visual Studio 使用 xUnit](http://xunit.github.io/docs/getting-started-dotnet-core.html)。
+* XUnit 团队编写了一个教程，介绍[如何通过 .NET Core 和 Visual Studio 使用 xUnit](https://xunit.github.io/docs/getting-started-dotnet-core.html)。
