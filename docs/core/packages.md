@@ -4,12 +4,12 @@ description: 了解包、元包和框架的术语。
 author: richlander
 ms.author: mairaw
 ms.date: 06/20/2016
-ms.openlocfilehash: f10965a8f5f2848f2b942b92577adf3185d8bd3c
-ms.sourcegitcommit: 77d9a94dac4c05827ed0663d95e0f9ad35d6682e
+ms.openlocfilehash: e68c63d26133ac76b718bb3696d16c81bd943dc2
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/24/2018
-ms.locfileid: "34472797"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45597656"
 ---
 # <a name="packages-metapackages-and-frameworks"></a>包、元包和框架
 
@@ -56,7 +56,7 @@ ms.locfileid: "34472797"
 
 元包就是一个 NuGet 包约定，描述了一组意义相关的包。 开发团队利用依赖项来描述这一组包。 他们通过这一组包来描述一个框架，然后有选择地发布出去。 
 
-默认情况下，早期版本的 .NET Core 工具（同时基于 project.json 和 csproj 的工具）指定一个框架和一个元包。 但目前，由目标框架隐式引用元包，以便将每个元包绑定到一个目标框架。 例如，`netstandard1.6` 框架引用 NetStandard.Library 1.6.0 版元包。 同样， `netcoreapp1.1` 框架引用 Microsoft.NETCore.App 1.1.0 版元包。 有关详细信息，请参阅 [.NET Core SDK 中的隐式元包引用](https://github.com/dotnet/core/blob/master/release-notes/1.0/sdk/1.0-rc3-implicit-package-refs.md)。
+默认情况下，早期版本的 .NET Core 工具（同时基于 project.json 和 csproj 的工具）指定一个框架和一个元包。 但目前，由目标框架隐式引用元包，以便将每个元包绑定到一个目标框架。 例如，`netstandard1.6` 框架引用 NetStandard.Library 1.6.0 版元包。 同样，`netcoreapp2.1` 框架引用 Microsoft.NETCore.App 2.1.0 版元包。 有关详细信息，请参阅 [.NET Core SDK 中的隐式元包引用](https://github.com/dotnet/core/blob/master/release-notes/1.0/sdk/1.0-rc3-implicit-package-refs.md)。
 
 以某个框架为目标以及隐式引用元包，这实际上是添加了对元包中每一个独立包的引用依赖。 这使这些包中的所有库都可用于 IntelliSense（或类似体验），同时也可用于发布应用。  
 
@@ -109,7 +109,7 @@ ms.locfileid: "34472797"
 
 ### <a name="net-standard"></a>.NET Standard
 
-.NET Standard（目标框架名字对象：`netstandard`）框架表示在 [.NET Standard](../standard/net-standard.md) 基础之上生成并由其定义的 API。 如果构建的库将用于在多个运行时上运行，就应将此框架作为目标。 这样便可在任何一种兼容 .NET Standard 的运行时上受支持，例如 .NET Core、.NET Framework 和 Mono/Xamarin。 每个运行时都支持一组 .NET Standard 版本，具体取决于实现的 API。
+.NET Standard（目标框架名字对象：`netstandard`）框架表示在 [.NET Standard](../standard/net-standard.md) 基础之上生成并由其定义的 API。 如果构建的库将用于在多个运行时上运行，就应将此框架作为目标。 这样便可在任何一种兼容 .NET 标准的运行时上受支持，例如 .NET Core、.NET Framework 和 Mono/Xamarin。 每个运行时都支持一组 .NET Standard 版本，具体取决于实现的 API。
 
 `netstandard` 框架隐式引用 [`NETStandard.Library`](https://www.nuget.org/packages/NETStandard.Library) 元包。 例如，以下 MSBuild 项目文件指示项目以 `netstandard1.6` 为目标，其引用 [`NETStandard.Library` 1.6 版](https://www.nuget.org/packages/NETStandard.Library/1.6.0)元包。
 

@@ -10,18 +10,18 @@ helpviewer_keywords:
 ms.assetid: 11ee0b38-d663-4617-b793-35eb6c64e9fc
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cdb11b283cc008e7f4bb060d1c2cb18706c824b7
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 86376919d7456167c58ada4145d213b39e050e33
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44084713"
+ms.lasthandoff: 09/23/2018
+ms.locfileid: "46702772"
 ---
 # <a name="eventwaithandle"></a>EventWaitHandle
 借助 <xref:System.Threading.EventWaitHandle> 类，线程可以通过发出信号和等待信号进行相互通信。 事件等待句柄（亦简称为“事件”）是可以收到信号以释放一个或多个等待线程的等待句柄。 收到信号后，事件等待句柄便会进行手动或自动重置。 <xref:System.Threading.EventWaitHandle> 类可以表示本地事件等待句柄（本地事件），也可以表示命名系统事件等待句柄（对所有进程可见的命名事件或系统事件）。  
   
 > [!NOTE]
->  事件等待句柄与 .NET Framework 中通常意义下的事件不同。 并不涉及任何委托或事件处理程序。 之所以使用“事件”一词是因为，它们一直都被称为操作系统事件，并且向等待句柄发出信号可以向等待线程指明事件已发生。  
+>  事件等待句柄不是 .NET [事件](../events/index.md)。 并不涉及任何委托或事件处理程序。 之所以使用“事件”一词是因为，它们一直都被称为操作系统事件，并且向等待句柄发出信号可以向等待线程指明事件已发生。  
   
  本地和命名事件等待句柄均使用系统同步对象。为了确保资源获得释放，这些对象受 <xref:Microsoft.Win32.SafeHandles.SafeWaitHandle> 包装器保护。 可以使用 <xref:System.Threading.WaitHandle.Dispose%2A> 方法，在使用完对象后立即释放资源。  
   

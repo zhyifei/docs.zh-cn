@@ -15,11 +15,11 @@ helpviewer_keywords:
 - Type markup extension in XAML [XAML Services]
 ms.assetid: e0e0ce6f-e873-49c7-8ad7-8b840eb353ec
 ms.openlocfilehash: e4d56c5b5deda0bd1df8827020e0b76cc6276c1c
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48030767"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49086630"
 ---
 # <a name="xtype-markup-extension"></a>x:Type 标记扩展
 提供 CLR<xref:System.Type>是指定的 XAML 类型的基础类型的对象。  
@@ -41,7 +41,7 @@ ms.locfileid: "48030767"
 |||  
 |-|-|  
 |`prefix`|可选。 将非默认 XAML 命名空间映射前缀。 指定前缀经常是不必要。 请参阅“备注”。|  
-|`typeNameValue`|必须的。 类型名称解析为当前的默认 XAML 命名空间;或指定的映射前缀如果`prefix`提供。|  
+|`typeNameValue`|必需。 类型名称解析为当前的默认 XAML 命名空间;或指定的映射前缀如果`prefix`提供。|  
   
 ## <a name="remarks"></a>备注  
  `x:Type`标记扩展有函数相似`typeof()`C# 中的运算符或`GetType`运算符在 Microsoft Visual Basic。  

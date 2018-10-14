@@ -3,11 +3,11 @@ title: 'Byref （F #）'
 description: '了解有关 byref 和类似 byref 类型在 F # 中，用于低级编程。'
 ms.date: 09/02/2018
 ms.openlocfilehash: 6131104e4325f77da84368c337f998c6b2b5309b
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48030809"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48836876"
 ---
 # <a name="byrefs"></a>Byref
 

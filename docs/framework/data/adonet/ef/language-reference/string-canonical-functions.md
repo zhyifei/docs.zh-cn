@@ -3,11 +3,11 @@ title: 字符串规范函数
 ms.date: 03/30/2017
 ms.assetid: 5e2cbebd-5df3-47c7-b0e2-49a17ab22bfb
 ms.openlocfilehash: d4758f8325b99bc4bd91575dd774d2dabde1f925
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48027983"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48850356"
 ---
 # <a name="string-canonical-functions"></a>字符串规范函数
 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 包含字符串规范函数。  

@@ -2,12 +2,12 @@
 title: C# 7.3 中的新增功能
 description: C# 7.3 中的新增功能概述
 ms.date: 05/16/2018
-ms.openlocfilehash: 921374773d57d3fa6f8dd614f2691d345cf6eab7
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 570da53059242c0242609ddcba5cb23f1728aa9f
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43511606"
+ms.lasthandoff: 09/28/2018
+ms.locfileid: "47235226"
 ---
 # <a name="whats-new-in-c-73"></a>C# 7.3 中的新增功能
 
@@ -36,7 +36,7 @@ C# 7.3 版本有两个主要主题。 第一个主题提供使安全代码的性
 
 本文的剩余部分提供了详细信息和链接，以便你详细了解每项改进。
 
-## <a name="enabling-more-performant-safe-code"></a>使用性能更好的安全代码
+## <a name="enabling-more-efficient-safe-code"></a>启用更高效的安全代码
 
 你应能够安全地编写性能与不安全代码一样好的 C# 代码。 安全代码可避免错误类，例如缓冲区溢出、杂散指针和其他内存访问错误。 这些新功能扩展了可验证安全代码的功能。 努力使用安全结构编写更多代码。 这些功能使其更容易实现。
 
@@ -128,13 +128,15 @@ Span<int> arr = stackalloc [] {1, 2, 3};
 
 有关详细信息，请参阅有关 [`where` 泛型约束](../language-reference/keywords/where-generic-type-constraint.md)和[类型参数的约束](../programming-guide/generics/constraints-on-type-parameters.md)的文章。
 
+将这些约束添加到现有类型是[不兼容的更改](version-update-considerations.md#incompatible-changes)。 封闭式泛型类型可能不再满足这些新约束的要求。
+
 ## <a name="make-existing-features-better"></a>提升了现有功能
 
 第二个主题提供了对语言中的功能的改进。 这些功能提升了在编写 C# 时的效率。
 
 ### <a name="tuples-support--and-"></a>元组支持 `==` 和 `!=`
 
-C# 元组类型现在支持 `==` 和 `!=`。 有关详细信息，请参阅有关[元组](../tuples.md)文章中的转换[等式](../tuples.md#equality-and-tuples)部分。
+C# 元组类型现在支持 `==` 和 `!=`。 有关详细信息，请参阅有关[元组](../tuples.md)一文中的转换[等式](../tuples.md#equality-and-tuples)部分。
 
 ### <a name="attach-attributes-to-the-backing-fields-for-auto-implemented-properties"></a>将特性添加到自动实现的属性的支持字段
 

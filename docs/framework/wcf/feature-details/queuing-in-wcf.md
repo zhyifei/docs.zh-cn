@@ -3,11 +3,11 @@ title: 在 WCF 中排队
 ms.date: 03/30/2017
 ms.assetid: e98d76ba-1acf-42cd-b137-0f8214661112
 ms.openlocfilehash: f04055df2c6d4b0a51b36040a5b377bb8738c534
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47204152"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49086591"
 ---
 # <a name="queuing-in-wcf"></a>在 WCF 中排队
 本部分介绍如何使用 Windows Communication Foundation (WCF) 中的排队的通信。  

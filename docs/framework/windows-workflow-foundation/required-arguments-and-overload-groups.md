@@ -2,12 +2,12 @@
 title: 必需自变量和重载组
 ms.date: 03/30/2017
 ms.assetid: 4ca3ed06-b9af-4b85-8b70-88c2186aefa3
-ms.openlocfilehash: 794a0a531fbd26d9e4242d40be5147ab41547192
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d25702e573acd9a0815c232cdf6935d6e9651631
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33517555"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48842068"
 ---
 # <a name="required-arguments-and-overload-groups"></a>必需自变量和重载组
 可以对活动进行配置，以便必须绑定某些自变量才能有效执行该活动。 `RequiredArgument` 特性用于指示活动中的某些参数是必需参数，`OverloadGroup` 特性用于将必需参数的多个类别组合在一起。 使用这些特性，活动作者可以提供简单或复杂的活动验证配置。  
@@ -61,12 +61,13 @@ public sealed class Add : CodeActivity<int>
   
  如果使用了该活动，但未绑定任何一个必需自变量，则会返回以下验证错误。  
   
- **未提供必要的活动自变量 Operand1 的值。**  
+ **未提供必需的活动自变量 Operand1 的值。**  
 > [!NOTE]
->  有关检查和处理验证错误和警告的详细信息，请参阅[调用活动验证](../../../docs/framework/windows-workflow-foundation/invoking-activity-validation.md)。  
+> 有关检查和处理验证错误和警告的详细信息，请参阅[调用活动验证](../../../docs/framework/windows-workflow-foundation/invoking-activity-validation.md)。  
   
-## <a name="using-overload-groups"></a>使用重载组  
- 重载组提供了一种方法，指示哪些参数组合在活动中有效。 使用 <xref:System.Activities.OverloadGroupAttribute> 将参数组合在一起。 将为每个组提供一个名称，该名称由 <xref:System.Activities.OverloadGroupAttribute> 指定，仅当绑定重载组中的一组参数时，该活动才有效。 在下面的示例，摘自[OverloadGroups](../../../docs/framework/windows-workflow-foundation/samples/overloadgroups.md)示例中，`CreateLocation`定义类。  
+## <a name="using-overload-groups"></a>使用重载组
+
+重载组提供了一种方法，指示哪些参数组合在活动中有效。 使用 <xref:System.Activities.OverloadGroupAttribute> 将参数组合在一起。 每个组指定名称指定的<xref:System.Activities.OverloadGroupAttribute>。 只有一组重载组中的参数绑定时，该活动才有效。 下面的示例定义了一个 `CreateLocation` 类。  
   
 ```csharp  
 class CreateLocation: Activity  
@@ -105,7 +106,7 @@ class CreateLocation: Activity
   
  该活动的目的是指定美国的某个位置。 为此，活动用户可以使用三组参数中的一组来指定该位置。 若要指定参数的有效组合，请定义三个重载组。 `G1` 包含 `Latitude` 和 `Longitude` 参数。 `G2` 包含 `Street`、`City` 和 `State`。 `G3` 包含 `Street` 和 `Zip`。 `Name` 也是一个必需的参数，但它不是重载组的一部分。 为使该活动有效，必须一起绑定 `Name` 和一个（且只有一个）重载组中的所有参数。  
   
- 在下面的示例，摘自[数据库访问活动](../../../docs/framework/windows-workflow-foundation/samples/database-access-activities.md)示例，有两个重载组：`ConnectionString`和`ConfigFileSectionName`。 为使此活动有效，必须绑定 `ProviderName` 和 `ConnectionString` 参数，或者绑定 `ConfigName` 参数，但不能这些参数一起绑定。   
+ 在以下示例中，来自[数据库访问活动](../../../docs/framework/windows-workflow-foundation/samples/database-access-activities.md)示例，有两个重载组：`ConnectionString`和`ConfigFileSectionName`。 为使此活动有效，必须绑定 `ProviderName` 和 `ConnectionString` 参数，或者绑定 `ConfigName` 参数，但不能这些参数一起绑定。   
   
 ```  
 Public class DbUpdate: AsyncCodeActivity  

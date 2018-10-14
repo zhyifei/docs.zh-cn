@@ -129,7 +129,7 @@ ms.locfileid: "44260199"
   
 -   任一类型的 WCF 客户端对象上的终止操作 （默认情况下，不终止任何操作; 协定必须显式指定的终止操作）。 当调用的第一个操作时，WCF 客户端对象自动打开通道并启动会话。  
   
- 有关示例，请参阅 [How to: Create a Service That Requires Sessions](../../../docs/framework/wcf/feature-details/how-to-create-a-service-that-requires-sessions.md) 以及 [Default Service Behavior](../../../docs/framework/wcf/samples/default-service-behavior.md) 和 [Instancing](../../../docs/framework/wcf/samples/instancing.md) 示例。  
+ 有关示例，请参阅 [如何：创建要求会话的服务](../../../docs/framework/wcf/feature-details/how-to-create-a-service-that-requires-sessions.md) 以及 [Default Service Behavior](../../../docs/framework/wcf/samples/default-service-behavior.md) 和 [Instancing](../../../docs/framework/wcf/samples/instancing.md) 示例。  
   
  有关客户端和会话的详细信息，请参阅[使用 WCF 客户端访问服务](../../../docs/framework/wcf/feature-details/accessing-services-using-a-client.md)。  
   

@@ -2,16 +2,16 @@
 title: 文档审批过程
 ms.date: 03/30/2017
 ms.assetid: 9b240937-76a7-45cd-8823-7f82c34d03bd
-ms.openlocfilehash: 874ee560407c3054b4f270a35e5100eaf9e174b8
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 34b63acaacde274210343a1135f3ed39a2df885e
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43508925"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48582705"
 ---
 # <a name="document-approval-process"></a>文档审批过程
-此示例演示在一起的多个 Windows Workflow Foundation (WF) 和 Windows Communication Foundation (WCF) 功能的使用。 这些功能一起使用实现一个文档审批过程方案。 客户端应用程序既可提交等待审批的文档，也可批准文档。 有一个审批管理器应用程序，可用于促进客户端之间的通信和强制执行审批过程的规则。 审批过程是一个可执行多种类型的审批的工作流。 存在多个活动来获取个人审批过程、团体审批过程（一定百分比的审批者）和复合审批过程（由团体审批和个人审批按顺序组成）。  
-  
+此示例演示在一起的多个 Windows Workflow Foundation (WF) 和 Windows Communication Foundation (WCF) 功能的使用。 这些功能一起使用实现一个文档审批过程方案。 客户端应用程序既可提交等待审批的文档，也可批准文档。 有一个审批管理器应用程序，可用于促进客户端之间的通信和强制执行审批过程的规则。 审批过程是一个可执行多种类型的审批的工作流。 存在多个活动来获取个人审批过程、团体审批过程（一定百分比的审批者）和复合审批过程（由团体审批和个人审批按顺序组成）。
+
 > [!IMPORTANT]
 >  您的计算机上可能已安装这些示例。 在继续操作之前，请先检查以下（默认）目录：  
 >   
@@ -80,11 +80,11 @@ ms.locfileid: "43508925"
   
 ##### <a name="to-set-up-the-database"></a>安装数据库  
   
-1.  从使用管理员特权打开的 [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] 命令提示中，导航到此 DocumentApprovalProcess 文件夹并运行 Setup.cmd。  
+1.  使用管理员特权打开 Visual Studio 2010 命令提示符下，导航到此 DocumentApprovalProcess 文件夹并运行 Setup.cmd。  
   
 ##### <a name="to-set-up-the-application"></a>设置应用程序  
   
-1.  使用 [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] 打开 DocumentApprovalProcess.sln 解决方案文件。  
+1.  使用 Visual Studio 2010 打开 DocumentApprovalProcess.sln 解决方案文件。  
   
 2.  要生成解决方案，按 Ctrl+Shift+B。  
   
@@ -146,4 +146,4 @@ ms.locfileid: "43508925"
   
 ##### <a name="to-clean-up"></a>清理  
   
-1.  在 [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] 命令提示符下，导航到 DocumentApprovalProcess 文件夹并运行 Cleanup.cmd。
+1.  从 Visual Studio 2010 命令提示符，导航到 DocumentApprovalProcess 文件夹并运行 Cleanup.cmd。

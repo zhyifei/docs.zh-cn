@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Windows applications
 - Windows Forms, Visual Basic
 ms.assetid: 0b919d30-7fd6-42db-85c8-543d15312441
-ms.openlocfilehash: b900b85b4e3e56dbc587a15edea40f6e3032cbd1
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 59b21bf9bbe3e78a1ac8cedd3812863cbcae7382
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46004492"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48582564"
 ---
 # <a name="windows-forms-application-basics-visual-basic"></a>Windows 窗体应用程序基础知识 (Visual Basic)
 Visual Basic 的一个重要部分是能够创建用户的计算机本地运行的 Windows 窗体应用程序。 可以使用 Visual Studio 来创建使用 Windows 窗体的应用程序和用户界面。 Windows 窗体应用程序基于类从<xref:System.Windows.Forms>命名空间。  
@@ -54,7 +54,7 @@ Visual Basic 的一个重要部分是能够创建用户的计算机本地运行�
 ## <a name="displaying-and-manipulating-data"></a>显示和操作数据  
  许多应用程序必须显示数据库、XML 文件、XML Web 服务或其他数据源中的数据。 Windows 窗体提供了一个灵活的控件称为<xref:System.Windows.Forms.DataGridView>呈现在传统的行和列的格式，此类表格数据，以便每段数据块均占据其自己的单元格的控件。 使用<xref:System.Windows.Forms.DataGridView>可以自定义各个单元格的外观、 任意行和列锁定在的位置，并显示复杂控件中单元格，此外还具有其他功能。  
   
- 通过网络连接到数据源对于 Windows 窗体智能客户端而言是一个简单的任务。 <xref:System.Windows.Forms.BindingSource> 组件（对于 [!INCLUDE[vsprvslong](~/includes/vsprvslong-md.md)] 和 [!INCLUDE[dnprdnlong](~/includes/dnprdnlong-md.md)] 中的 Windows 窗体而言是全新内容）表示与数据源的连接，公开将数据绑定到控件的方法，导航到上一个和下一个记录，编辑记录并且将更改保存到原始源。 <xref:System.Windows.Forms.BindingNavigator> 控件通过 <xref:System.Windows.Forms.BindingSource> 组件提供一个简单界面，可供用户在记录间导航。  
+ 通过网络连接到数据源对于 Windows 窗体智能客户端而言是一个简单的任务。 <xref:System.Windows.Forms.BindingSource>组件，new 与 Visual Studio 2005 中的 Windows 窗体和[!INCLUDE[dnprdnlong](~/includes/dnprdnlong-md.md)]，表示与数据源的连接，公开将数据绑定到控件，导航到上一页和下一页记录、 编辑记录和保存方法更改回原始的源。 <xref:System.Windows.Forms.BindingNavigator> 控件通过 <xref:System.Windows.Forms.BindingSource> 组件提供一个简单界面，可供用户在记录间导航。  
   
 ### <a name="data-bound-controls"></a>数据绑定控件  
  可以创建数据绑定控件轻松地使用数据源窗口，其中显示您项目中的数据源，例如数据库、 Web 服务和对象。 可以通过将此窗口中的项拖动到项目中的窗体上来创建数据绑定控件。 还可以通过将对象从“数据源”窗口拖动到现有控件上来将现有控件与数据进行数据绑定。  

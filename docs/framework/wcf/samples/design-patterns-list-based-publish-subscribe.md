@@ -2,12 +2,12 @@
 title: 设计模式：基于列表的发布-订阅
 ms.date: 03/30/2017
 ms.assetid: f4257abc-12df-4736-a03b-0731becf0fd4
-ms.openlocfilehash: 2807cc8cc197ff39417e3b6375ebbd595cf73c54
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: caec9a9aa6de267cb5407ad4a7166701740f9a63
+ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45664691"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49086565"
 ---
 # <a name="design-patterns-list-based-publish-subscribe"></a>设计模式：基于列表的发布-订阅
 此示例演示基于列表的发布-订阅模式实现作为 Windows Communication Foundation (WCF) 的程序。  
@@ -118,7 +118,7 @@ public class PriceChangeEventArgs : EventArgs
   
 ### <a name="to-run-the-sample-on-the-same-machine"></a>在同一计算机上运行示例  
   
-1.  测试是否可以访问使用浏览器通过输入以下地址的服务： http://localhost/servicemodelsamples/service.svc。 在响应中应显示确认页。  
+1.  测试是否可以访问使用浏览器通过输入以下地址的服务： `http://localhost/servicemodelsamples/service.svc`。 在响应中应显示确认页。  
   
 2.  从 \client\bin 运行 Client.exe\\，从特定于语言的文件夹下。 客户端活动将显示在客户端控制台窗口上。 启动多个客户端。  
   

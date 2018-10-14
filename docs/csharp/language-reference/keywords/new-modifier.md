@@ -19,7 +19,7 @@ ms.locfileid: "46702668"
 
 [!code-csharp[csrefKeywordsOperator#8](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsOperator/CS/csrefKeywordsOperators.cs#8)]
 
-在此示例中，使用 `BaseC.Invoke` 隐藏了 `DerivedC.Invoke`。 字段 `x` 不受影响，因为未使用类似名称将其隐藏。
+在此示例中，使用 `DerivedC.Invoke` 隐藏了 `BaseC.Invoke`。 字段 `x` 不受影响，因为未使用类似名称将其隐藏。
 
 通过继承隐藏名称采用下列形式之一：
 

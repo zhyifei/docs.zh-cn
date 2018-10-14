@@ -3,11 +3,11 @@ title: 属性 (F#)
 description: '了解 F # 属性，分别表示与对象相关联的值的成员。'
 ms.date: 05/16/2016
 ms.openlocfilehash: 75d21415b44ccc1c26ef5f478d5f5de20c3412e8
-ms.sourcegitcommit: daa8788af67ac2d1cecd24f9f3409babb2f978c9
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47863268"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48266568"
 ---
 # <a name="properties"></a>属性
 

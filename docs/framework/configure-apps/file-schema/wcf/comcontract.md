@@ -3,11 +3,11 @@ title: '&lt;comContract&gt;'
 ms.date: 03/30/2017
 ms.assetid: 3f8e1c0c-cfdf-4c79-ac65-c64e9323a51c
 ms.openlocfilehash: e2addbada7f55076ae919d93c897991a7ec0fcd8
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47207949"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48839532"
 ---
 # <a name="ltcomcontractgt"></a>&lt;comContract&gt;
 指定 COM+ 集成服务协定。  

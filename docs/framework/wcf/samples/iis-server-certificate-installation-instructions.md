@@ -2,12 +2,12 @@
 title: Internet Information Services (IIS) 服务器证书安装说明
 ms.date: 03/30/2017
 ms.assetid: 11281490-d2ac-4324-8f33-e7714611a34b
-ms.openlocfilehash: 46d1acf758dd50b881527a16570a1e4a45933958
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ae1f90a68acc4b1217c46a6570031a88e60c6e88
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33502600"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48838242"
 ---
 # <a name="internet-information-services-iis-server-certificate-installation-instructions"></a>Internet Information Services (IIS) 服务器证书安装说明
 若要运行可与 Internet 信息服务 (IIS) 安全通信的示例，您必须创建和安装服务器证书。  
@@ -26,7 +26,7 @@ makecert -sr LocalMachine -ss My -n CN=ServiceModelSamples-HTTPS-Server -sky exc
   
 1.  打开 Internet 信息服务管理器 MMC 管理单元。  
   
-2.  右击默认网站并选择**属性**。  
+2.  右键单击默认网站，然后选择**属性**。  
   
 3.  选择**目录安全性**选项卡。  
   
@@ -36,7 +36,7 @@ makecert -sr LocalMachine -ss My -n CN=ServiceModelSamples-HTTPS-Server -sky exc
   
      ![IIS 证书向导](../../../../docs/framework/wcf/samples/media/iiscertificate-wizard.GIF "IISCertificate_Wizard")  
   
-6.  通过使用 HTTPS 地址在浏览器中测试对服务的访问https://localhost/servicemodelsamples/service.svc。  
+6.  通过使用 HTTPS 地址在浏览器中测试对服务的访问`https://localhost/servicemodelsamples/service.svc`。  
   
 #### <a name="if-ssl-was-previously-configured-by-using-httpcfgexe"></a>如果以前使用 Httpcfg.exe 配置了 SSL  
   
@@ -55,17 +55,17 @@ PermissiveCertificatePolicy.Enact("CN=ServiceModelSamples-HTTPS-Server");
   
 #### <a name="to-install-iis-on-iis-70-windows-vista-and-windows-server-2008"></a>在 IIS 7.0（Windows Vista 和 Windows Server 2008）上安装 IIS  
   
-1.  从**启动**菜单上，单击**运行**，然后键入**inetmgr**若要打开 Internet 信息服务 (IIS) MMC 管理单元。  
+1.  从**启动**菜单上，单击**运行**，然后键入**inetmgr**以打开 Internet 信息服务 (IIS) MMC 管理单元。  
   
-2.  右键单击**Default Web Site**和选择**编辑绑定...**  
+2.  右键单击**Default Web Site** ，然后选择**编辑绑定...**  
   
-3.  单击**添加**按钮**站点绑定**对话框。  
+3.  单击**外**的按钮**站点绑定**对话框。  
   
 4.  选择**HTTPS**从**类型**下拉列表。  
   
 5.  选择**ServiceModelSamples HTTPS 服务器**从**SSL 证书**下拉列表，然后单击**确定**。  
   
-6.  通过使用 HTTPS 地址在浏览器中测试对服务的访问https://localhost/servicemodelsamples/service.svc。  
+6.  通过使用 HTTPS 地址在浏览器中测试对服务的访问`https://localhost/servicemodelsamples/service.svc`。  
   
 > [!NOTE]
 >  由于刚刚安装的测试证书不是受信任的证书，因此，在浏览用此证书保护的本地 Web 地址时，你可能会遇到其他 Internet Explorer 安全警告。  

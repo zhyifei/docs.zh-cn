@@ -12,11 +12,11 @@ ms.assetid: 5eba950e-b9e1-48eb-ab8e-b69db76bf589
 author: Xansky
 ms.author: mhopkins
 ms.openlocfilehash: ac5d539f99fe4f7a20d9030986120318840801bb
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48036932"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48850343"
 ---
 # <a name="return-properties-from-a-ui-automation-provider"></a>从 UI 自动化提供程序返回属性
 > [!NOTE]

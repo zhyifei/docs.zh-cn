@@ -13,26 +13,35 @@ helpviewer_keywords:
 ms.assetid: c5f786a0-969b-4f14-9f02-e77c3384d9af
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3650de934cb3d2940d0e8e971d03aff856bddfd7
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 4142c3f12cc5a0e2277cc8dba28a281d5cf0ba55
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43515474"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47198210"
 ---
 # <a name="how-to-view-the-contents-of-the-global-assembly-cache"></a>如何：查看全局程序集缓存的内容
-使用[全局程序集缓存工具 (Gacutil.exe)](../../../docs/framework/tools/gacutil-exe-gac-tool.md) 可查看全局程序集缓存的内容。  
-  
-### <a name="to-view-a-list-of-the-assemblies-in-the-global-assembly-cache"></a>查看全局程序集缓存中的程序集列表  
-  
-1.  在 [Visual Studio 命令提示符](../../../docs/framework/tools/developer-command-prompt-for-vs.md)处，键入以下命令：  
-  
-     gacutil -l   
-     或  
-    gacutil -l  
-  
- 在 .NET Framework 的早期版本中，可通过 [Shfusion.dll](https://msdn.microsoft.com/library/0d9464cf-ddba-4ca9-bbec-f678fb58f380) Windows shell 扩展在文件资源管理器中查看全局程序集缓存。 从 [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)]开始，Shfusion.dll 已过时。  
-  
-## <a name="see-also"></a>请参阅  
- [使用程序集和全局程序集缓存](../../../docs/framework/app-domains/working-with-assemblies-and-the-gac.md)  
- [Gacutil.exe（全局程序集缓存工具）](../../../docs/framework/tools/gacutil-exe-gac-tool.md)
+
+使用[全局程序集缓存工具 (Gacutil.exe)](../tools/gacutil-exe-gac-tool.md) 可查看全局程序集缓存 (GAC) 的内容。
+
+## <a name="view-the-assemblies-in-the-gac"></a>查看 GAC 中的程序集
+
+要查看全局程序集缓存中的程序集列表，请打开 [Visual Studio 适用的开发人员命令提示](../tools/developer-command-prompt-for-vs.md)，然后输入以下命令：
+
+```shell
+gacutil -l
+```
+
+或
+
+```shell
+gacutil /l
+```
+
+> [!NOTE]
+> 在 .NET Framework 的早期版本中，可通过 [Shfusion.dll](/previous-versions/dotnet/netframework-4.0/34149zk3(v=vs.100)) Windows shell 扩展在文件资源管理器中查看全局程序集缓存。 从 [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)]开始，Shfusion.dll 已过时。
+
+## <a name="see-also"></a>请参阅
+
+- [使用程序集和全局程序集缓存](working-with-assemblies-and-the-gac.md)
+- [Gacutil.exe（全局程序集缓存工具）](../tools/gacutil-exe-gac-tool.md)

@@ -3,11 +3,11 @@ title: 持久双工相关
 ms.date: 03/30/2017
 ms.assetid: 8eb0e49a-6d3b-4f7e-a054-0d4febee2ffb
 ms.openlocfilehash: f2f5fe557f1f8754758d0dd9b4042cacc62cc61f
-ms.sourcegitcommit: daa8788af67ac2d1cecd24f9f3409babb2f978c9
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47862884"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48850793"
 ---
 # <a name="durable-duplex-correlation"></a>持久双工相关
 当工作流服务要求向初始调用方发送回调时，持久双工相关性（也称为回调相关性）非常有用。 与 WCF 双工不同的是，该回调可以在将来的任何时间发生，并且不会绑定到同一通道或通道生存期；唯一要求是，调用方应具有一个用于侦听回调消息的活动终结点。 这样，这两个工作流服务便可在长期运行的对话中进行通信。 本主题概述了持久双工相关性。  

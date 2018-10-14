@@ -4,12 +4,12 @@ description: 了解如何在二元分类方案中使用 ML.NET，以了解如何
 ms.date: 06/04/2018
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: dec44bf114472e19fdac131e0af6c13854957fe3
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 7d2935fafe9dbad28205c8a896d97d80474a686f
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43864769"
+ms.lasthandoff: 09/29/2018
+ms.locfileid: "47436136"
 ---
 # <a name="tutorial-use-mlnet-in-a-sentiment-analysis-binary-classification-scenario"></a>教程：在情绪分析二元分类方案中使用 ML.NET
 
@@ -55,7 +55,7 @@ ms.locfileid: "43864769"
 
 ### <a name="understand-the-problem"></a>了解问题
 
-首先需要了解问题，因此可以将其分解为能够支持构建和定型模型的几个部分。 分解问题以预测和评估结果。
+首先需要了解问题，因此可以将其分解为能够支持构建和定型模型的几个部分。 分解问题可以预测和评估结果。
 
 本教程中的问题是了解传入网站评论情绪以采取相应的措施。
 

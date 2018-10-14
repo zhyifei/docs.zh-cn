@@ -5,11 +5,11 @@ author: bleroy
 ms.author: mairaw
 ms.date: 06/28/2017
 ms.openlocfilehash: fa9c193ea4088f04745bdadc6040552e18c0858a
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47188984"
+ms.lasthandoff: 09/27/2018
+ms.locfileid: "47231107"
 ---
 # <a name="build-net-core-from-source"></a>从源生成 .NET Core
 
@@ -71,10 +71,10 @@ bin\Log 目录包含生成期间生成的日志文件（生成失败时这些日
 
 可通过两种基本方法使用新的运行时：
 
- 1. **使用 dotnet.exe 和 NuGet 撰写应用程序**。
+ 1. 使用 dotnet.exe 和 NuGet 撰写应用程序。
     请参阅[使用生成](https://github.com/dotnet/coreclr/blob/master/Documentation/workflow/UsingYourBuild.md)了解如何通过使用刚创建的 NuGet 包和“dotnet”命令行接口 (CLI) 来创建使用你的新运行时的程序。 非运行时开发人员常通过此方法使用你的新运行时。
 
- 2. **使用 corerun.exe 运行通过未打包的 DLL 运行应用程序**。
+ 2. 使用 corerun.exe 运行通过未打包的 DLL 运行应用程序。
     此存储库还定义了一个名为 corerun.exe 的简单主机，它与 NuGet 没有任何依赖关系。
     需要告诉主机在何处获取实际使用的所需 DLL，且必须手动将它们聚集在一起。
     [dotnet/coreclr 存储库](https://github.com/dotnet/coreclr)中的所有测试都使用这种方式，可用于快速本地“编辑-编译-调试”循环（如初步单元测试）。
@@ -91,7 +91,7 @@ bin\Log 目录包含生成期间生成的日志文件（生成失败时这些日
 * macOS：
   * PATH 上的 git
   * Xcode
-  * Openssl
+  * OpenSSL
 
 若要进行生成，请在 Windows 上从根运行 `build.cmd`，在 Linux 和 macOS 上从根运行 `build.sh`。 如果不希望执行测试，请运行 `build.cmd -t:Compile` 或 `./build.sh -t:Compile`。 若要在 macOS Sierra 中生成 CLI，需通过运行 `export DOTNET_RUNTIME_ID=osx.10.11-x64` 设置 DOTNET_RUNTIME_ID 环境变量。
 
@@ -99,7 +99,7 @@ bin\Log 目录包含生成期间生成的日志文件（生成失败时这些日
 
 使用 artifacts/{os}-{arch}/stage2 中的 `dotnet` 可执行文件来试用新生成的 CLI。 如果想在从当前控制台调用 `dotnet` 时使用生成输出，也可以将 artifacts/{os}-{arch}/stage2 添加到 PATH。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 * [.NET Core 公共语言运行时 (CoreCLR)](https://github.com/dotnet/coreclr/blob/master/README.md)
 * [.NET Core CLI 开发人员指南](https://github.com/dotnet/cli/blob/master/Documentation/project-docs/developer-guide.md)

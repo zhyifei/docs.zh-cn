@@ -6,12 +6,12 @@ helpviewer_keywords:
 - WCF [WCF], system-provided bindings
 - bindings [WCF], system-provided
 ms.assetid: 443f8d65-f1f2-4311-83b3-4d8fdf7ccf16
-ms.openlocfilehash: 184f4da26df2c688b2b6f30f063bab058af37a4a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 343cdc4e30984e75bd2fede2706679839a573153
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33496833"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48845701"
 ---
 # <a name="configuring-system-provided-bindings"></a>配置系统提供的绑定
 绑定可指定在与终结点通话时所使用的通信机制，并指示如何连接到终结点。 绑定包含的元素的定义方式的 Windows Communication Foundation (WCF) 通道进行分层以提供所需的通信功能。 绑定包含三种类型的元素：  
@@ -22,7 +22,7 @@ ms.locfileid: "33496833"
   
 -   消息编码绑定元素，用于确定要对发送到终结点的消息使用的网络编码，例如，文本/XML、二进制或消息传输优化机制 (MTOM)。  
   
- 本主题提供的所有系统提供的 Windows Communication Foundation (WCF) 绑定。 如果这些绑定没有一个完全符合应用程序的要求，则可以使用 <xref:System.ServiceModel.Channels.CustomBinding> 类创建一个绑定。 有关创建自定义绑定的详细信息，请参阅[自定义绑定](../../../../docs/framework/wcf/extending/custom-bindings.md)。  
+ 本主题介绍了所有系统提供的 Windows Communication Foundation (WCF) 绑定。 如果这些绑定没有一个完全符合应用程序的要求，则可以使用 <xref:System.ServiceModel.Channels.CustomBinding> 类创建一个绑定。 有关创建自定义绑定的详细信息，请参阅[自定义绑定](../../../../docs/framework/wcf/extending/custom-bindings.md)。  
   
 > [!IMPORTANT]
 >  选择启用了安全性的绑定。 默认情况下，除 <xref:System.ServiceModel.BasicHttpBinding> 绑定之外的所有绑定都启用了安全性。 如果不选择安全绑定或禁用了安全性，请确保以某种其他方式保护网络交换，例如在安全的数据中心或独立的网络上进行网络交换。  
@@ -31,7 +31,7 @@ ms.locfileid: "33496833"
 >  不要将双工协定用于不支持安全性或已禁用安全性的绑定，除非通过其他一些方式来确保网络交换的安全。  
   
 ## <a name="system-provided-bindings"></a>系统提供的绑定  
- 下面的绑定都附带了 WCF。  
+ WCF 附带有以下绑定。  
   
 |绑定|配置元素|描述|  
 |-------------|---------------------------|-----------------|  
@@ -41,12 +41,12 @@ ms.locfileid: "33496833"
 |<xref:System.ServiceModel.WSDualHttpBinding>|[\<wsDualHttpBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/wsdualhttpbinding.md)|一个安全且可互操作的绑定，适用于双工服务协定或通过 SOAP 媒介进行的通信。|  
 |<xref:System.ServiceModel.WSFederationHttpBinding>|[\<wsFederationHttpBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md)|一个安全且可互操作的绑定，支持 WS 联合协议并使联合中的组织可以高效地对用户进行身份验证和授权。|  
 |<xref:System.ServiceModel.WS2007FederationHttpBinding>|[\<ws2007FederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/ws2007federationhttpbinding.md)|一个安全且可互操作的绑定，它派生自 <xref:System.ServiceModel.WS2007HttpBinding>并支持联合安全性。|  
-|<xref:System.ServiceModel.NetTcpBinding>|[\<netTcpBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/nettcpbinding.md)|一个安全且经过优化适合于绑定 WCF 应用程序之间跨计算机通信。|  
-|<xref:System.ServiceModel.NetNamedPipeBinding>|[\<netNamedPipeBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/netnamedpipebinding.md)|安全、 可靠且经过优化的绑定，适用于计算机上的 WCF 应用程序之间的通信。|  
-|<xref:System.ServiceModel.NetMsmqBinding>|[\<netMsmqBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/netmsmqbinding.md)|一个排队的绑定，适用于 WCF 应用程序之间跨计算机通信。|  
-|<xref:System.ServiceModel.NetPeerTcpBinding>|[\<netPeerTcpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/netpeertcpbinding.md)|一个支持多计算机安全通信的绑定。|  
-|<xref:System.ServiceModel.WebHttpBinding>|[\<webHttpBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/webhttpbinding.md)|用于为通过而不是 SOAP 消息的 HTTP 请求公开的 WCF Web 服务配置终结点的绑定。|  
-|<xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding>|[\<msmqIntegrationBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/msmqintegrationbinding.md)|一个绑定，适合于跨计算机通信之间的 WCF 应用程序和现有消息队列 (也称为 MSMQ) 应用程序。|  
+|<xref:System.ServiceModel.NetTcpBinding>|[\<netTcpBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/nettcpbinding.md)|一个安全且经过优化的绑定，适用于 WCF 应用程序之间跨计算机的通信。|  
+|<xref:System.ServiceModel.NetNamedPipeBinding>|[\<netNamedPipeBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/netnamedpipebinding.md)|一个安全、可靠且经过优化的绑定，适用于 WCF 应用程序之间计算机上的通信。|  
+|<xref:System.ServiceModel.NetMsmqBinding>|[\<netMsmqBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/netmsmqbinding.md)|一个排队绑定，适用于 WCF 应用程序之间的计算机间的通信。|  
+|<xref:System.ServiceModel.NetPeerTcpBinding>|[\<netPeerTcpBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/netpeertcpbinding.md)|一个支持多计算机安全通信的绑定。|  
+|<xref:System.ServiceModel.WebHttpBinding>|[\<webHttpBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/webhttpbinding.md)|一个绑定，可用于为通过 HTTP 请求（而不是 SOAP 消息）公开的 WCF Web 服务配置终结点。|  
+|<xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding>|[\<msmqIntegrationBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/msmqintegrationbinding.md)|一个绑定，它是适用于 WCF 应用程序和现有消息队列 (也称为 MSMQ) 之间的跨计算机通信的应用程序。|  
   
 ## <a name="binding-features"></a>绑定功能  
  下表显示了每个系统提供的绑定所提供的一些主要功能。 第一列中列出了这些绑定，并在表中描述有关功能的信息。 下表提供所用绑定缩写的概要。 若要选择绑定，应确定哪列能满足所需的所有行中的功能。  
@@ -63,6 +63,7 @@ ms.locfileid: "33496833"
 |<xref:System.ServiceModel.NetNamedPipeBinding>|.NET|无、<br /><br /> （传输）|无、（传输）|（无）、是|是|  
 |<xref:System.ServiceModel.NetMsmqBinding>|.NET|无、消息、（传输）、两者|（无）|（无）、是|否|  
 |<xref:System.ServiceModel.NetPeerTcpBinding>|对等|无、消息、（传输）、混合|（无）|（无）|是|  
+|<xref:System.ServiceModel.WebHttpBinding>|.Net|无、 传输、 TransportCredentialOnly|（无）|（无）|n/a|  
 |<xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding>|MSMQ|无、（传输）|（无）|（无）、是|n/a|  
   
  下表解释上一个表中的功能。  
@@ -70,7 +71,7 @@ ms.locfileid: "33496833"
 |功能|描述|  
 |-------------|-----------------|  
 |互操作性类型|指定绑定用来确保互操作的协议或技术。|  
-|安全性|指定如何保护通道：<br /><br /> -None: SOAP 消息不进行保护，客户端未经过身份验证。<br />-传输： 在传输层上满足安全要求。<br />-消息： 在消息层上满足安全要求。<br />混合： 此安全模式称为`TransportWithMessageCredentials`。 此模式在消息级别上处理凭据，并由传输层来满足完整性和保密性需求。<br />-: 消息级别和传输级别安全将使用它们。 此功能仅可用于 <xref:System.ServiceModel.NetMsmqBinding>。|  
+|安全性|指定如何保护通道：<br /><br /> -None: SOAP 消息不安全的并且客户端未经过身份验证。<br />-传输： 在传输层上满足安全要求。<br />-消息： 在消息层上满足安全要求。<br />混合： 此安全模式称为`TransportWithMessageCredentials`。 此模式在消息级别上处理凭据，并由传输层来满足完整性和保密性需求。<br />-: 消息级别和传输级别安全性将使用它们。 此功能仅可用于 <xref:System.ServiceModel.NetMsmqBinding>。|  
 |会话|指定此绑定是否支持会话协定。|  
 |事务|指定是否启用事务。|  
 |双工|指定是否支持双工协定。 注意，此功能要求在绑定中支持会话。|  

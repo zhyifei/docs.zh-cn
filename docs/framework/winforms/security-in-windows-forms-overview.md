@@ -8,12 +8,12 @@ helpviewer_keywords:
 - security [Windows Forms], about security
 - access control [Windows Forms], Windows Forms
 ms.assetid: 4810dc9f-ea23-4ce1-8ea1-657f0ff1d820
-ms.openlocfilehash: 54fc56e5e7d6ee5cd0e7bc55bd22c7d4127eb4d3
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 36d38756f7df88ec04aca781525f0f6b0a48b768
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45747119"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48839126"
 ---
 # <a name="security-in-windows-forms-overview"></a>Windows 窗体中的安全性概述
 在发布 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 之前，用户计算机上运行的所有代码都有相同的权利或权限来访问该计算机的用户所拥有的资源。 例如，如果允许用户访问文件系统，则会允许代码访问文件系统；如果允许用户访问数据库，则会允许代码访问数据库。 尽管这些权利或权限对用户显式安装在本地计算机上的可执行文件中的代码来说是可接受的，但对来自 Internet 或本地 Intranet 的恶意代码来说可能是不可接受的。 此代码没有权限时应不能访问用户的计算机资源。  
@@ -49,7 +49,7 @@ ms.locfileid: "45747119"
   
  当请求可选的权限时，如果应用程序执行一个操作，但未获得执行该操作所需的权限时会生成安全性异常，这时必须处理此安全性异常。 适当地处理 <xref:System.Security.SecurityException> 将确保你的应用程序可以继续运行。 你的应用程序可以使用异常来确定是否应对用户禁用一项功能。 例如，如果未授予所需的文件权限，应用程序可以禁用“保存”菜单选项。  
   
- 有时，很难知道你是否已断言所有适当的权限。 例如，看似无关紧要的方法调用可能在其执行期间的某个点上访问文件系统。 如果未给应用程序部署所有所需的权限，它可能在桌面上调试时测试结果为正常，但在部署时失败。 这两个[!INCLUDE[dnprdnlong](../../../includes/dnprdnlong-md.md)]SDK 和[!INCLUDE[vsprvslong](../../../includes/vsprvslong-md.md)]包含计算应用程序所需的权限： MT.exe 分别命令行工具和 Visual Studio 的计算权限功能。  
+ 有时，很难知道你是否已断言所有适当的权限。 例如，看似无关紧要的方法调用可能在其执行期间的某个点上访问文件系统。 如果未给应用程序部署所有所需的权限，它可能在桌面上调试时测试结果为正常，但在部署时失败。 这两个[!INCLUDE[dnprdnlong](../../../includes/dnprdnlong-md.md)]SDK 和 Visual Studio 2005 包含计算应用程序所需的权限： MT.exe 分别命令行工具和 Visual Studio 的计算权限功能。  
   
  以下主题介绍其他 Windows 窗体安全功能。  
   

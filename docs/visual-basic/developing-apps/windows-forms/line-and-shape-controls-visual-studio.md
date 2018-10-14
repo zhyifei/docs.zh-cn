@@ -8,11 +8,11 @@ helpviewer_keywords:
 - Line control [Visual Basic], topic list
 ms.assetid: 29ee3a5f-920f-4677-85bc-bd7425ab57e8
 ms.openlocfilehash: 6d052af15257f00f43ad21b08765ab3c882b31bf
-ms.sourcegitcommit: daa8788af67ac2d1cecd24f9f3409babb2f978c9
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47863564"
+ms.lasthandoff: 10/07/2018
+ms.locfileid: "48846176"
 ---
 # <a name="line-and-shape-controls-visual-studio"></a>Line 和 Shape 控件 (Visual Studio)
 Visual Basic Power Pack Line 和 Shape 控件是图形控件，可用于在窗体或容器上绘制水平线、垂线、对角线和矩形、正方形、椭圆、圆以及具有圆角的矩形和正方形。  

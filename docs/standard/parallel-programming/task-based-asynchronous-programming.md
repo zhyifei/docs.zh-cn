@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 458b5e69-5210-45e5-bc44-3888f86abd6f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e3dad3e33968b72d199b412c65f04a4079020f78
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6a879cce8eb429e2daeaa5db963b3d95d1e944da
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33592584"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47171369"
 ---
 # <a name="task-based-asynchronous-programming"></a>基于任务的异步编程
 任务并行库 (TPL) 以“任务”的概念为基础，后者表示异步操作。 在某些方面，任务类似于线程或 <xref:System.Threading.ThreadPool> 工作项，但是抽象级别更高。 术语“任务并行”是指一个或多个独立的任务同时运行。 任务提供两个主要好处：  
@@ -59,10 +59,10 @@ ms.locfileid: "33592584"
  [!code-csharp[TPL_TaskIntro#2](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_taskintro/cs/run1.cs#2)]
  [!code-vb[TPL_TaskIntro#2](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_taskintro/vb/run1.vb#2)]  
   
- 你还可以使用 <xref:System.Threading.Tasks.TaskFactory.StartNew%2A?displayProperty=nameWithType> 方法在一个操作中创建并启动任务。 不必将创建和计划分开并且你需要其他任务创建选项或使用特定计划程序时，或者需要通过 <xref:System.Threading.Tasks.Task.AsyncState%2A> 属性将其他状态传递到任务时，请使用此方法，如下例所示。  
+ 你还可以使用 <xref:System.Threading.Tasks.TaskFactory.StartNew%2A?displayProperty=nameWithType> 方法在一个操作中创建并启动任务。 不必将创建和计划分开并且需要其他任务创建选项或使用特定计划程序时，或者需要将其他状态传递到可以通过 <xref:System.Threading.Tasks.Task.AsyncState%2A?displayProperty=nameWithType> 属性检索到的任务时，请使用此方法，如下例所示。  
   
- [!code-csharp[TPL_TaskIntro#3](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_taskintro/cs/startnew1.cs#3)]
- [!code-vb[TPL_TaskIntro#3](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_taskintro/vb/startnew1.vb#3)]  
+ [!code-csharp[TPL_TaskIntro#3](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_taskintro/cs/asyncstate.cs#23)]
+ [!code-vb[TPL_TaskIntro#3](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_taskintro/vb/asyncstate.vb#23)]  
   
  <xref:System.Threading.Tasks.Task> 和 <xref:System.Threading.Tasks.Task%601> 均公开静态 <xref:System.Threading.Tasks.Task.Factory%2A> 属性，该属性返回 <xref:System.Threading.Tasks.TaskFactory> 的默认实例，因此你可以调用该方法为 `Task.Factory.StartNew()`。 此外，在以下示例中，由于任务的类型为 <xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType>，因此每个任务都具有包含计算结果的公共 <xref:System.Threading.Tasks.Task%601.Result%2A?displayProperty=nameWithType> 属性。 任务以异步方式运行，可以按任意顺序完成。 如果在计算完成之前访问 <xref:System.Threading.Tasks.Task%601.Result%2A> 属性，则该属性将阻止调用线程，直到值可用为止。  
   
@@ -267,6 +267,7 @@ ms.locfileid: "33592584"
 |[数据并行](../../../docs/standard/parallel-programming/data-parallelism-task-parallel-library.md)|描述如何使用 <xref:System.Threading.Tasks.Parallel.For%2A> 和 <xref:System.Threading.Tasks.Parallel.ForEach%2A> 来创建循环访问数据的并行循环。|  
 |[并行编程](../../../docs/standard/parallel-programming/index.md)|.NET Framework 并行编程的顶级节点。|  
   
-## <a name="see-also"></a>请参阅  
- [并行编程](../../../docs/standard/parallel-programming/index.md)  
- [使用 .NET Framework 进行并行编程的示例](https://code.msdn.microsoft.com/Samples-for-Parallel-b4b76364)
+## <a name="see-also"></a>请参阅
+
+- [并行编程](../../../docs/standard/parallel-programming/index.md)  
+- [使用 .NET Framework 进行并行编程的示例](https://code.msdn.microsoft.com/Samples-for-Parallel-b4b76364)

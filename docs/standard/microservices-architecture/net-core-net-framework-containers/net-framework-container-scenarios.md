@@ -3,13 +3,13 @@ title: 何时为 Docker 容器选择 .NET Framework
 description: 适用于容器化 .NET 应用程序的 .NET 微服务体系结构 | 何时为 Docker 容器选择 .NET Framework
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 06/07/2018
-ms.openlocfilehash: 2fdf0c24999891e48e1867e8fa7b4ba0f5302850
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.date: 09/11/2018
+ms.openlocfilehash: 9e1ff03421f1a5d23878c74f13423cec9625c4c5
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37106705"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45609939"
 ---
 # <a name="when-to-choose-net-framework-for-docker-containers"></a>何时为 Docker 容器选择 .NET Framework
 
@@ -23,23 +23,27 @@ ms.locfileid: "37106705"
 
 ## <a name="using-third-party-net-libraries-or-nuget-packages-not-available-for-net-core"></a>使用不可用于 .NET Core 的第三方 .NET 库或 NuGet 包
 
-第三方库正在迅速采用 [.NET Standard](../../net-standard.md)，这样可跨各种 .NET 版本（包括 .NET Core）共享代码。 在 .NET Standard 库 2.0 及更高版本中，跨不同框架的 API 表面兼容性变得更加庞大；在 .NET Core 2.x 中，应用程序还可以直接引用现有的 .NET Framework 库（请参阅[兼容性填充程序](https://github.com/dotnet/standard/blob/master/docs/faq.md#how-does-net-standard-versioning-work)）。
+第三方库正在迅速采用 [.NET Standard](https://docs.microsoft.com/dotnet/articles/standard/library)，这样可跨各种 .NET 版本（包括 .NET Core）共享代码。 在 .NET Standard 库 2.0 及更高版本中，跨不同框架的 API 表面兼容性变得更加庞大；在 .NET Core 2.x 中，应用程序还可以直接引用现有的 .NET Framework 库（请参阅[兼容性填充程序](https://github.com/dotnet/standard/blob/master/docs/netstandard-20/README.md#net-framework-461-supporting-net-standard-20)）。
 
-但即使 .NET Standard 2.0 和 .NET Core 2.0 取得了如此重大的进展，也可能出现某些 NuGet 包需要在 Windows 上运行并且可能不支持 .NET Core 的情况。 如果这些软件包对于应用程序至关重要，那么将需要在 Windows 容器上使用 .NET Framework。
+此外，[Windows 兼容包](https://docs.microsoft.com/dotnet/core/porting/windows-compat-pack)已于 2017 年 11 月发布，用于扩展可供 Windows 上的 .NET Standard 2.0 使用的 API 接口。 通过此包，只需略微修改或无需修改即可将大多数现有代码重新编译到 .NET Standard 2.x 以在 Windows 上运行。
+
+但即使 .NET Standard 2.0 和 .NET Core 2.1 取得了如此重大的进展，也可能出现某些 NuGet 包需要在 Windows 上运行并且可能不支持 .NET Core 的情况。 如果这些软件包对于应用程序至关重要，那么将需要在 Windows 容器上使用 .NET Framework。
 
 ## <a name="using-net-technologies-not-available-for-net-core"></a>使用不可用于 .NET Core 的 .NET 技术 
 
 当前版本的 .NET Core（撰写本文时为 2.1 版）中没有提供某些 .NET Framework 技术。 虽然某些技术将在更高版本的 .NET Core (.NET Core 2.x) 中提供，但其他技术不适用于 .NET Core 面向的新应用程序模式，因此可能永远不可用。
 
-以下列表展示了在 .NET Core 2.1 中不可用的大多数技术：
+以下列表展示了在 .NET Core 2.x 中不可用的大多数技术：
 
 -   ASP.NET Web 窗体。 该技术仅在 .NET Framework 上可用。 目前没有将 ASP.NET Web 窗体引入 .NET Core 的计划。
 
--   WCF 服务。 即使从 2017 年年中开始，可通过 [WCF 客户端库](https://github.com/dotnet/wcf)从 .NET Core 使用 WCF 服务， WCF 服务器实现也只在 .NET Framework 上可用。 未来的 .NET Core 版本可能会考虑这种情况。
+-   WCF 服务。 虽然 [WCF 客户端库](https://github.com/dotnet/wcf)可从 .NET Core 使用 WCF 服务，但从 2017 年年中起，WCF 服务器实现仅在 .NET Framework 上可用。 未来版本的 .NET Core 可能会考虑此方案，甚至会考虑将某些 API 包含在 [Windows 兼容包](https://docs.microsoft.com/dotnet/core/porting/windows-compat-pack)中。
 
 -   与工作流相关的服务。 Windows Workflow Foundation (WF)、工作流服务（WCF + 单个服务中的 WF）和 WCF Data Services（以前称为 ADO.NET Data Services）仅在 .NET Framework 上可用。 尚未计划将其引入 .NET Core。
 
 除了官方 [.NET Core 路线图](https://github.com/aspnet/Home/wiki/Roadmap)中列出的技术之外，可能还会将其他功能移植到 .NET Core 中。 有关完整列表，请查看 CoreFX GitHub 站点上标记为 [port-to-core](https://github.com/dotnet/corefx/issues?q=is%3Aopen+is%3Aissue+label%3Aport-to-core) 的项目。 请注意，此列表不代表 Microsoft 承诺将这些组件引入 .NET Core，而只表示从社区搜集到的一些请求。 如果对以上所列的任何组件感兴趣，请参与 GitHub 上的讨论，发表你的看法。 如果认为丢失了某些内容，请[在 CoreFX 存储库中提出新的问题](https://github.com/dotnet/corefx/issues/new)。
+
+即使 .NET Core 3（正在撰写本文时）将包括对许多现有 .NET Framework API 的支持，但这些 API 是面向桌面的，因此它们当前在容器中没有用处。
 
 ## <a name="using-a-platform-or-api-that-does-not-support-net-core"></a>使用不支持 .NET Core 的平台或 API
 
@@ -49,16 +53,16 @@ ms.locfileid: "37106705"
 
 ### <a name="additional-resources"></a>其他资源
 
--   **.NET Core 指南**
-    [*https://docs.microsoft.com/dotnet/core/index*](../../../core/index.md)
+-   **.NET Core 指南**  
+    [https://docs.microsoft.com/dotnet/articles/core/index](https://docs.microsoft.com/dotnet/articles/core/index)
 
--   **从 .NET Framework 移植到 .NET Core**
-    [*https://docs.microsoft.com/dotnet/core/porting/index*](../../../core/porting/index.md)
+-   **从 .NET Framework 移植到 .NET Core**  
+    [https://docs.microsoft.com/dotnet/articles/core/porting/index](https://docs.microsoft.com/dotnet/articles/core/porting/index)
 
--   **Docker 上的 .NET Framework 指南**
-    [*https://docs.microsoft.com/dotnet/framework/docker/*](../../../framework/docker/index.md)
+-   **Docker 上的 .NET Framework 指南**  
+    [https://docs.microsoft.com/dotnet/articles/framework/docker/](https://docs.microsoft.com/dotnet/articles/framework/docker/)
 
--   **.NET 组件概述**
+-   **.NET 组件概述**  
     [*https://docs.microsoft.com/dotnet/standard/components*](../../components.md)
 
 

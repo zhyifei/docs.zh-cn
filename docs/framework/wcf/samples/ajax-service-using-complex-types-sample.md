@@ -2,12 +2,12 @@
 title: 使用复杂类型的 AJAX 服务示例
 ms.date: 03/30/2017
 ms.assetid: 88242b99-4811-4cbe-8201-52ddf48fb174
-ms.openlocfilehash: 4574e5d33ebed7184e229c71e03496db34a95575
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: ef44dc0eddb165c93b912da4fed994074668a250
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43528280"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48837555"
 ---
 # <a name="ajax-service-using-complex-types-sample"></a>使用复杂类型的 AJAX 服务示例
 此示例演示如何使用 Windows Communication Foundation (WCF) 来创建用于创建复杂类型的实例，并将其发送服务和客户端作为 JavaScript 对象表示法 (JSON) 之间的 ASP.NET 异步 JavaScript 和 XML (AJAX) 服务。 可以从 Web 浏览器客户端使用 JavaScript 代码来访问 AJAX 服务。 此示例是基于[基本 AJAX 服务](../../../../docs/framework/wcf/samples/basic-ajax-service.md)示例。  
@@ -55,7 +55,7 @@ function onSuccess(mathResult){
   
 2.  如中所述生成解决方案 ComplexTypeAjaxService.sln[生成 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/building-the-samples.md)。  
   
-3.  导航到 http://localhost/ServiceModelSamples/ComplexTypeClientPage.aspx（不要打开 ComplexTypeClientPage.aspx 在浏览器中从项目目录中）。  
+3.  导航到`http://localhost/ServiceModelSamples/ComplexTypeClientPage.aspx`（不要打开 ComplexTypeClientPage.aspx 在浏览器中从项目目录中）。  
   
 > [!IMPORTANT]
 >  您的计算机上可能已安装这些示例。 在继续操作之前，请先检查以下（默认）目录：  

@@ -7,22 +7,22 @@ dev_langs:
 helpviewer_keywords:
 - message contracts [WCF]
 ms.assetid: 1e19c64a-ae84-4c2f-9155-91c54a77c249
-ms.openlocfilehash: ea0a107a67753e919439a6be2035ab77001641ff
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 84640387e6d77e02d3b0d19b73c0d2b20d8d8831
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33508574"
+ms.lasthandoff: 10/07/2018
+ms.locfileid: "48848304"
 ---
 # <a name="using-message-contracts"></a>使用消息约定
-通常在生成 Windows Communication Foundation (WCF) 应用程序时，开发人员将密切注意数据结构和序列化问题，无需自己考虑在其中执行数据的消息的结构。 对于这些应用程序，为参数或返回值创建数据协定的过程很简单。 (有关详细信息，请参阅[指定服务协定中的数据传输](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md)。)  
+通常在生成 Windows Communication Foundation (WCF) 应用程序时，开发人员密切关注数据结构和序列化问题而无需自己考虑在其中执行数据的消息的结构。 对于这些应用程序，为参数或返回值创建数据协定的过程很简单。 (有关详细信息，请参阅[Specifying Data Transfer in Service Contracts](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md)。)  
   
- 但是，有时完全控制 SOAP 消息的结构与控制其内容一样重要。 当必须提供互操作性或需要在消息或消息部分级别特别控制安全问题时，更是如此。 在这些情况下，你可以创建*消息协定*可用于指定所需的精确 SOAP 消息的结构。  
+ 但是，有时完全控制 SOAP 消息的结构与控制其内容一样重要。 当必须提供互操作性或需要在消息或消息部分级别特别控制安全问题时，更是如此。 在这些情况下，您可以创建*消息协定*，可用于指定所需的精确 SOAP 消息的结构。  
   
  本主题讨论如何使用各种消息协定属性为操作创建特定消息协定。  
   
 ## <a name="using-message-contracts-in-operations"></a>在操作中使用消息协定  
- WCF 支持上建模的操作*远程过程调用 (RPC) 样式*或*消息样式*。 在 RPC 样式的操作中，可以使用任何可序列化的类型并可以访问可用于本地调用的功能，如多个参数以及 `ref` 和 `out` 参数。 在此样式中，选择的序列化的窗体控件的基础消息中的数据的结构和 WCF 运行时创建消息后，以支持该操作。 这使对 SOAP 和 SOAP 消息不熟悉的开发人员能够快速容易地创建和使用服务应用程序。  
+ WCF 支持操作上建模*远程过程调用 (RPC) 样式*或*消息样式*。 在 RPC 样式的操作中，可以使用任何可序列化的类型并可以访问可用于本地调用的功能，如多个参数以及 `ref` 和 `out` 参数。 在此样式中，选的序列化形式控制基础消息中数据的结构和 WCF 运行时创建消息以支持该操作。 这使对 SOAP 和 SOAP 消息不熟悉的开发人员能够快速容易地创建和使用服务应用程序。  
   
  下面的代码示例演示在 RPC 样式上建模的服务操作。  
   
@@ -31,7 +31,7 @@ ms.locfileid: "33508574"
 public BankingTransactionResponse PostBankingTransaction(BankingTransaction bt);  
 ```  
   
- 通常，定义消息的架构时使用数据协定就足够了。 例如，在前面的示例中，如果 `BankingTransaction` 和 `BankingTransactionResponse` 具有定义基础 SOAP 消息内容的数据协定，则对于大多数应用程序就足够了。 有关数据协定的详细信息，请参阅[使用数据协定](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)。  
+ 通常，定义消息的架构时使用数据协定就足够了。 例如，在前面的示例中，如果 `BankingTransaction` 和 `BankingTransactionResponse` 具有定义基础 SOAP 消息内容的数据协定，则对于大多数应用程序就足够了。 有关数据协定的详细信息，请参阅[Using Data Contracts](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)。  
   
  但是，有时需要精确控制 SOAP 消息的结构如何通过网络进行传输。 对于这种情况，最常见的方案是插入自定义 SOAP 标头。 另一种常见方案是定义消息头和正文的安全属性，也就是说，确定是否对这些元素进行数字签名和加密。 最后，一些第三方 SOAP 堆栈要求消息采用特定的格式。 消息样式的操作可提供这种控制。  
   
@@ -102,7 +102,7 @@ public class BankingTransaction
   
  可以对所有字段、属性和事件应用 <xref:System.ServiceModel.MessageHeaderAttribute> 和 <xref:System.ServiceModel.MessageBodyMemberAttribute>，而不管这些字段、属性和事件是公用的、私有的、受保护的还是内部的。  
   
- <xref:System.ServiceModel.MessageContractAttribute> 允许您指定 WrapperName 和 WrapperNamespace 特性，这些特性控制 SOAP 消息的正文中包装元素的名称。 默认情况下，消息协定的名称类型用于包装，而在其中定义消息协定的命名空间`HYPERLINK "http://tempuri.org/" http://tempuri.org/`用作默认命名空间。  
+ <xref:System.ServiceModel.MessageContractAttribute> 允许您指定 WrapperName 和 WrapperNamespace 特性，这些特性控制 SOAP 消息的正文中包装元素的名称。 默认情况下，消息协定类型的名称用于包装，而在其中定义消息协定的命名空间 `http://tempuri.org/` 用作默认的命名空间。  
   
 > [!NOTE]
 >  消息协定中会忽略 <xref:System.Runtime.Serialization.KnownTypeAttribute> 属性。 如果需要 <xref:System.Runtime.Serialization.KnownTypeAttribute>，可以将其放在使用所述消息协定的操作上。  
@@ -154,7 +154,7 @@ public class BankingTransaction
 >  消息中具有多个未包装的消息正文部分不符合 WS-I 基本配置文件 1.1 的规定，在设计新消息协定时不建议这样做。 但是，在某些特定的互操作性方案中，必需要具有多个未包装的消息正文部分。 如果要在消息正文中传输多段数据，则建议使用默认（包装）模式。 未包装的消息中具有多个消息头是完全可以的。  
   
 ## <a name="using-custom-types-inside-message-contracts"></a>在消息协定内部使用自定义类型  
- 每个单独的消息头和消息正文部分均使用为消息所使用的服务协定选择的序列化引擎进行序列化（转换为 XML）。 默认序列化引擎 `XmlFormatter` 可以显式处理（通过具有 <xref:System.Runtime.Serialization.DataContractAttribute?displayProperty=nameWithType>）或隐式处理（通过作为基元类型而具有 <xref:System.SerializableAttribute?displayProperty=nameWithType>等）具有数据协定的任何类型。 有关详细信息，请参阅[使用数据协定](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)。  
+ 每个单独的消息头和消息正文部分均使用为消息所使用的服务协定选择的序列化引擎进行序列化（转换为 XML）。 默认序列化引擎 `XmlFormatter` 可以显式处理（通过具有 <xref:System.Runtime.Serialization.DataContractAttribute?displayProperty=nameWithType>）或隐式处理（通过作为基元类型而具有 <xref:System.SerializableAttribute?displayProperty=nameWithType>等）具有数据协定的任何类型。 有关详细信息，请参阅[Using Data Contracts](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)。  
   
  在前面的示例中，`Operation` 和 `BankingTransactionData` 类型必须具有数据约，定且 `transactionDate` 可序列化，因为 <xref:System.DateTime> 是基元类型（因此具有隐式数据协定）。  
   
@@ -250,7 +250,7 @@ public class PatientRecord
   
 -   `Relay`  
   
- `Actor` 或 `Role` 属性指定要使用给定标头的节点的统一资源标识符 (URI)。 `MustUnderstand` 属性指定处理标头的节点是否必须理解该标头。 `Relay` 特性指定标头是否要中继到下游节点。 WCF 不执行任何处理传入消息，这些特性除外`MustUnderstand`属性，在本主题后面的"消息协定版本管理"部分中指定。 但它允许您根据需要读取和写入这些属性，如下所述。  
+ `Actor` 或 `Role` 属性指定要使用给定标头的节点的统一资源标识符 (URI)。 `MustUnderstand` 属性指定处理标头的节点是否必须理解该标头。 `Relay` 特性指定标头是否要中继到下游节点。 WCF 不会执行对传入的消息，这些属性的任何处理除`MustUnderstand`特性，如本主题后面的"消息协定版本管理"部分中指定。 但它允许您根据需要读取和写入这些属性，如下所述。  
   
  发送消息时，默认情况下不会发出这些属性。 您可以采取两种方式更改这一行为。 第一种方式是通过更改 <xref:System.ServiceModel.MessageHeaderAttribute.Actor%2A?displayProperty=nameWithType>、<xref:System.ServiceModel.MessageHeaderAttribute.MustUnderstand%2A?displayProperty=nameWithType> 和 <xref:System.ServiceModel.MessageHeaderAttribute.Relay%2A?displayProperty=nameWithType> 属性，以静态方式将这些特性设置为任何需要的值，如下面的代码示例所示。 （请注意，没有 `Role` 属性；如果使用 SOAP 1.2，则设置 <xref:System.ServiceModel.MessageHeaderAttribute.Actor%2A> 属性会发出 `Role` 特性）。  
   
@@ -323,9 +323,9 @@ public class BankingTransaction
   
  下面的规则适用于标头的版本管理：  
   
--   WCF 不反对缺少标头-相应的成员将保留其默认值。  
+-   WCF 不反对缺少标头，相应的成员将保留其默认值。  
   
--   WCF 还忽略意外的额外标头。 此规则的一种例外情况是在传入的 SOAP 消息中，额外标头的 `MustUnderstand` 属性设置为 `true`。在这种情况下，由于存在一个无法处理但必须理解的标头，因此会引发异常。  
+-   WCF 还会忽略意外的额外标头。 此规则的一种例外情况是在传入的 SOAP 消息中，额外标头的 `MustUnderstand` 属性设置为 `true`。在这种情况下，由于存在一个无法处理但必须理解的标头，因此会引发异常。  
   
  消息正文具有类似的版本管理规则，即忽略缺少和附加的消息正文部分。  
   
@@ -370,7 +370,7 @@ public class PatientRecord : PersonRecord
 -   在多个操作中使用同一个消息协定时，会在 WSDL 文档中生成多个消息类型。 对于后续使用，会在名称中添加数字“2”、“3”等以使名称唯一。 在导回 WSDL 时，会创建多个消息协定类型，除了名称不同外，这些消息协定类型完全相同。  
   
 ## <a name="soap-encoding-considerations"></a>SOAP 编码注意事项  
- WCF 允许你使用的旧式 SOAP 编码样式的 XML，但是，其建议不要使用。 使用这种样式时（在应用于服务协定的 `Use` 上将 `Encoded` 属性设置为 <xref:System.ServiceModel.XmlSerializerFormatAttribute?displayProperty=nameWithType>），下面的附加注意事项适用：  
+ WCF 允许你使用的旧式 SOAP 编码样式的 XML，但是，不是建议使用。 使用这种样式时（在应用于服务协定的 `Use` 上将 `Encoded` 属性设置为 <xref:System.ServiceModel.XmlSerializerFormatAttribute?displayProperty=nameWithType>），下面的附加注意事项适用：  
   
 -   不支持消息头；这意味着属性 <xref:System.ServiceModel.MessageHeaderAttribute> 和数组属性 <xref:System.ServiceModel.MessageHeaderArrayAttribute> 与 SOAP 编码不兼容。  
   

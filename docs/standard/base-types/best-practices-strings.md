@@ -1,6 +1,6 @@
 ---
 title: 有关使用 .NET 中字符串的最佳做法
-ms.date: 08/22/2018
+ms.date: 09/13/2018
 ms.technology: dotnet-standard
 dev_langs:
 - csharp
@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: b9f0bf53-e2de-4116-8ce9-d4f91a1df4f7
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 14945cc6812e4bcb14085656337c7df1abc0a5bf
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.openlocfilehash: 6114553c6bcdac8521c80c10f470d4c38b15e738
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43000146"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47080333"
 ---
 # <a name="best-practices-for-using-strings-in-net"></a>有关使用 .NET 中字符串的最佳做法
 <a name="top"></a> .NET 为开发本地化和全球化应用提供广泛支持，并方便用户在执行排序和显示字符串等常见操作时，轻松应用当前区域性或特定区域性的约定。 但排序或比较字符串并不总是区分区域性的操作。 例如，对于应用程序内部使用的字符串，通常应该跨所有区域性以相同的方式对其进行处理。 如果将 XML 标记、HTML 标记、用户名、文件路径和系统对象名称等与区域性无关的字符串数据解释为区分区域性，则应用程序代码会遭遇细微的错误、不佳的性能，在某些情况下，还会遭遇安全性问题。  
@@ -123,10 +123,12 @@ ms.locfileid: "43000146"
  字符串比较是许多字符串相关操作的核心，特别是排序和相等性测试操作。 字符串以确定的顺序进行排序：如果在排序的字符串列表中，“my”出现在“string”之前，则“my”必定小于或等于“string”。 此外，比较可隐式确定相等性。 对于认为是相等的字符串，比较操作将返回零。 对此很好的解释是两个字符串都不小于对方。 涉及到字符串的最有意义的操作包括这些步骤中的一个或两个步骤：与另一个字符串进行比较和执行明确的排序操作。  
 
 > [!NOTE]
-> 可以下载[排序权重表](https://www.microsoft.com/en-us/download/details.aspx?id=10921)，这是一组文本文件，其中包含有关 Windows 操作系统排序和比较操作中使用的字符权重的信息。
+> 可以下载[排序权重表](https://www.microsoft.com/en-us/download/details.aspx?id=10921)，这是一组文本文件，其中包含有关 Windows 操作系统排序和比较操作中所使用的字符权重的信息，也可以下载[默认 Unicode 排序元素表](https://www.unicode.org/Public/UCA/latest/allkeys.txt)，这是适用于 Linux 和 macOS 的最新版排序权重表。 Linux 和 macOS 上的特定排序权重表版本取决于系统上安装的 [International Components for Unicode](http://site.icu-project.org/) 库的版本。 有关 ICU 版本及它们所实现的 Unicode 版本的信息，请参阅[下载 ICU](http://site.icu-project.org/download)。
 
  但是，评估两个字符串的相等性或排序顺序不会生成一个正确的结果；其结果取决于用于比较这两个字符串的条件。 特别是，序号或基于当前区域性或固定区域性（基于英语语言的区域设置不明确的区域性）的大小写和排序约定的字符串比较可能会产生不同的结果。  
-  
+
+此外，使用不同 .NET 版本或在不同操作系统或不同的操作系统版本上使用 .NET 进行字符串比较时，返回的结果可能不同。 有关详细信息，请参阅[字符串和 Unicode 标准](xref:System.String#Unicode)。 
+
 <a name="current_culture"></a>   
 ### <a name="string-comparisons-that-use-the-current-culture"></a>使用当前区域性的字符串比较  
  一个条件涉及在比较字符串时使用当前区域性的约定。 基于当前区域性的比较使用线程的当前区域性或区域设置。 如果用户未设置该区域性，则默认为“控制面板”中“区域选项”  窗口中的设置。 当数据与语言相关并反映区分区域性的用户交互时，应始终使用基于当前区域性的比较。  
@@ -370,5 +372,6 @@ ms.locfileid: "43000146"
 18.02.1905 15:12  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [控制字符串](../../../docs/standard/base-types/manipulating-strings.md)
+## <a name="see-also"></a>请参阅
+
+- [控制字符串](../../../docs/standard/base-types/manipulating-strings.md)

@@ -13,12 +13,12 @@ helpviewer_keywords:
 - security [.NET Framework], Internet
 - permissions [.NET Framework], Internet
 author: blowdart
-ms.openlocfilehash: a45d57af1069bba9e3afe8c2e6e6d463115a4e39
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 96d37934b5e852b69c692bb1606d2998dac6f63a
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43798907"
+ms.lasthandoff: 09/28/2018
+ms.locfileid: "47424475"
 ---
 # <a name="transport-layer-security-tls-best-practices-with-the-net-framework"></a>.NET Framework 中的传输层安全性 (TLS) 最佳做法
 
@@ -179,7 +179,10 @@ WCF 框架的这些版本被硬编码为使用值 SSL 3.0 和 TLS 1.0。 这些�
 
 ## <a name="configuring-security-via-the-windows-registry"></a>通过 Windows 注册表配置安全性
 
-如果不能设置一个或两个 `AppContext` 开关，可以使用本节中所述的 Windows 注册表项来控制应用所使用的安全协议。 如果你的应用面向 .NET Framework 4.6 之前的版本，则可能无法使用一个或两个 `AppContext` 开关，或无法编辑配置文件。 如果想要在注册表中配置安全性，则不要在你的代码中指定安全协议，这样做将会替代该注册表。
+> [!WARNING]
+> 设置注册表项会影响系统上的所有应用程序。 仅当你完全控制计算机并可以控制对注册表的更改时才可使用此选项。
+
+如果不能设置一个或两个 `AppContext` 开关，可以使用本节中所述的 Windows 注册表项来控制应用所使用的安全协议。 如果你的应用在 .NET Framework 4.5.2 或之前的版本上运行或你无法编辑配置文件，则可能无法使用一个或两个 `AppContext` 开关。 如果想要在注册表中配置安全性，则不要在你的代码中指定安全协议，这样做将会替代该注册表设置。
 
 注册表项的名称类似于相应 `AppContext` 开关的名称，但其不带预置的 `DontEnable`。 例如，`AppContext` 开关 `DontEnableSchUseStrongCrypto` 是名为 [SchUseStrongCrypto](#schusestrongcrypto) 的注册表项。
 

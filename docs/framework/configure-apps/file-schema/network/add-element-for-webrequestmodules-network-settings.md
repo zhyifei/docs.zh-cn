@@ -13,11 +13,11 @@ ms.assetid: 47ec4adc-f39f-4bcd-8680-1ec21fd26890
 author: mcleblanc
 ms.author: markl
 ms.openlocfilehash: 64df186be7d9e503ac22e177bca8da31e165f240
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48032590"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48837006"
 ---
 # <a name="ltaddgt-element-for-webrequestmodules-network-settings"></a>&lt;添加&gt;webRequestModules （网络设置） 的
 将自定义的 Web 请求模块添加到应用程序。  

@@ -1,38 +1,60 @@
 ---
 title: 设置数值结果表的格式（C# 参考）
-ms.date: 07/20/2015
+description: 了解 C# 标准数字格式字符串
+ms.date: 09/20/2018
 helpviewer_keywords:
 - formatting [C#]
 - numeric formatting [C#]
 - String.Format method
-- Console.Write method
 ms.assetid: 120ba537-4448-4c62-8676-7a8fdd98f496
-ms.openlocfilehash: 8d034955d5d5d31788eafc0c21246451d7fd1f35
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 6f1cb5b49139cf9661e678cfc0ecc884a2749622
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43508194"
+ms.lasthandoff: 09/28/2018
+ms.locfileid: "47203886"
 ---
 # <a name="formatting-numeric-results-table-c-reference"></a>设置数值结果表的格式（C# 参考）
-要设置数值结果的格式，可以使用 <xref:System.String.Format%2A?displayProperty=nameWithType> 方法、<xref:System.Console.Write%2A?displayProperty=nameWithType> 或 <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> 方法（这两种方法调用 `String.Format`）或者[字符串内插](../tokens/interpolated.md)。 通过使用格式字符串指定格式。 下表包含支持的标准格式字符串。 格式字符串采用以下形式：`Axx`，其中 `A` 是格式说明符，`xx` 是精度说明符。 格式说明符控制应用于数值的格式类型，而精度说明符则控制格式化输出的有效位数或小数位数。 精度说明符值的范围为 0 到 99。  
-  
- 有关标准格式字符串和自定义格式字符串的详细信息，请参阅[格式设置类型](../../../standard/base-types/formatting-types.md)。
-  
-|格式说明符|描述|示例|输出|  
+
+下表显示了设置数值结果格式的受支持格式说明符。 最后一列中的格式化结果对应于“en-US”<xref:System.Globalization.CultureInfo>。
+
+|格式说明符|描述|示例|结果|  
 |----------------------|-----------------|--------------|------------|  
-|C 或 c|货币|Console.Write("{0:C}", 2.5);<br /><br /> Console.Write("{0:C}", -2.5);|$2.50<br /><br /> ($2.50)|  
-|D 或 d|十进制|Console.Write("{0:D5}", 25);|00025|  
-|E 或 e|科学记数法|Console.Write("{0:E}", 250000);|2.500000E+005|  
-|F 或 f|定点|Console.Write("{0:F2}", 25);<br /><br /> Console.Write("{0:F0}", 25);|25.00<br /><br /> 25|  
-|G 或 g|常规|Console.Write("{0:G}", 2.5);|2.5|  
-|N 或 n|数字|Console.Write("{0:N}", 2500000);|2,500,000.00|  
-|X 或 x|十六进制|Console.Write("{0:X}", 250);<br /><br /> Console.Write("{0:X}", 0xffff);|FA<br /><br /> FFFF|  
-  
+|C 或 c|货币|`string s = $"{2.5:C}";`<br /><br /> `string s = $"{-2.5:C}";`|$2.50<br /><br /> ($2.50)|  
+|D 或 d|十进制|`string s = $"{25:D5}";`|00025|  
+|E 或 e|指数|`string s = $"{250000:E2}";`|2.50E+005|  
+|F 或 f|定点|`string s = $"{2.5:F2}";`<br /><br /> `string s = $"{2.5:F0}";`|2.50<br /><br /> 3|  
+|G 或 g|常规|`string s = $"{2.5:G}";`|2.5|  
+|N 或 n|Numeric|`string s = $"{2500000:N}";`|2,500,000.00|  
+|P 或 p|百分比|`string s = $"{0.25:P}";`|25.00%|  
+|R 或 r|往返过程|`string s = $"{2.5:R}";`|2.5|  
+|X 或 x|十六进制|`string s = $"{250:X}";`<br /><br /> `string s = $"{0xffff:X}";`|FA<br /><br /> FFFF|  
+
+## <a name="remarks"></a>备注
+
+使用格式说明符可以创建格式字符串。 格式字符串的格式如下：`Axx`，其中
+
+- `A` 是格式说明符，控制应用于数值的格式设置类型。
+- `xx` 是精度说明符，影响格式化输出中的位数。 精度说明符值的范围为 0 到 99。
+
+十进制（“D”或“d”）和十六进制（“X”或“x”）格式说明符仅支持用于整型类型。 往返（“R”或“r”）格式说明符仅支持用于 <xref:System.Single>、<xref:System.Double> 和 <xref:System.Numerics.BigInteger> 类型。
+
+下列支持标准数字格式字符串：
+
+- 所有数字类型的一些 `ToString` 方法重载。 例如，可以向 <xref:System.Int32.ToString%28System.String%29?displayProperty=nameWithType> 和 <xref:System.Int32.ToString%28System.String%2CSystem.IFormatProvider%29?displayProperty=nameWithType> 方法提供数字格式字符串。
+
+- 例如，由 <xref:System.String.Format%2A?displayProperty=nameWithType> 方法提供支持的 .NET [复合格式设置功能](../../../standard/base-types/composite-formatting.md)。
+
+- [内插字符串](../tokens/interpolated.md).
+
+有关详细信息，请参阅[标准数值格式字符串](../../../standard/base-types/standard-numeric-format-strings.md)。
+
 ## <a name="see-also"></a>请参阅
 
-- [C# 参考](../../../csharp/language-reference/index.md)  
-- [C# 编程指南](../../../csharp/programming-guide/index.md)  
-- [标准数字格式字符串](../../../standard/base-types/standard-numeric-format-strings.md)  
-- [类型参考表](../../../csharp/language-reference/keywords/reference-tables-for-types.md)  
-- [string](../../../csharp/language-reference/keywords/string.md)
+- [C# 参考](../index.md)
+- [C# 编程指南](../../programming-guide/index.md)
+- [类型引用表](reference-tables-for-types.md)
+- [格式设置类型](../../../standard/base-types/formatting-types.md)
+- [复合格式设置](../../../standard/base-types/composite-formatting.md)
+- [字符串内插](../tokens/interpolated.md)
+- [string](string.md)

@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 3afa1586-e1b8-473d-8985-c3fc90cf561b
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: 549f3dcfd7225937fd04ad2116e2be311687861b
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 259d8e0297025d496b3a10c3ef3ec2b3c96cffaa
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47399445"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48849784"
 ---
 # <a name="ltperformancecountergt-element-network-settings"></a>&lt;performanceCounter&gt;元素 （网络设置）
 启用或禁用网络性能计数器。  
@@ -54,7 +54,7 @@ ms.locfileid: "47399445"
 ## <a name="remarks"></a>备注  
  此元素可在应用程序配置文件或计算机配置文件 (Machine.config) 中使用。  
   
- 需要在要使用的配置文件中启用网络性能计数器。 通过配置文件中的单个设置即可启用或禁用所有网络性能计数器。 不能启用或禁用单个网络性能计数器。 有关特定的网络性能计数器的详细信息，请参阅[网络性能计数器](https://msdn.microsoft.com/library/d1860235-f643-46ae-846c-ff0ed8b0e3cd)。  
+ 需要在要使用的配置文件中启用网络性能计数器。 通过配置文件中的单个设置即可启用或禁用所有网络性能计数器。 不能启用或禁用单个网络性能计数器。 有关特定的网络性能计数器的详细信息，请参阅[网络性能计数器](../../../../../docs/framework/debug-trace-profile/performance-counters.md#networking)。  
   
  默认值为的性能计数器已禁用的网络。  
   
@@ -79,4 +79,4 @@ ms.locfileid: "47399445"
  <xref:System.Net.Configuration.PerformanceCountersElement?displayProperty=nameWithType>  
  <xref:System.Net.Configuration.PerformanceCountersElement.Enabled%2A?displayProperty=nameWithType>  
  [网络设置架构](../../../../../docs/framework/configure-apps/file-schema/network/index.md)  
- [网络性能计数器](https://msdn.microsoft.com/library/d1860235-f643-46ae-846c-ff0ed8b0e3cd)
+ [网络性能计数器](../../../../../docs/framework/debug-trace-profile/performance-counters.md#networking)

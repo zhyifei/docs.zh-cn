@@ -4,12 +4,12 @@ description: 了解如何在生成服务器上使用 .NET Core SDK 及其工具�
 author: guardrex
 ms.author: mairaw
 ms.date: 05/18/2017
-ms.openlocfilehash: 0835ffafc6c091c311b03c90f665cbd669cccfe9
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 207a6740f2a483d532c194b2bf8112898e9c3463
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43749929"
+ms.lasthandoff: 09/29/2018
+ms.locfileid: "47233227"
 ---
 # <a name="using-net-core-sdk-and-tools-in-continuous-integration-ci"></a>在持续集成 (CI) 中使用 .NET Core SDK 和工具
 
@@ -34,11 +34,13 @@ macOS 用户应使用 PKG 安装程序。 在 Linux 上，可选择使用基于�
 安装程序脚本在开始生成时自动运行，以提取和安装相应版本的 SDK。 相应版本是指生成项目所需的任意 SDK 版本。 使用安装程序脚本，可以在服务器的本地目录中安装 SDK，并能从安装位置运行工具，还可以在生成后进行清理（或让 CI 服务进行清理）。 这样，可以封装和隔离整个生成进程。 有关安装脚本参考，请参阅 [dotnet-install](dotnet-install-script.md) 主题。
 
 > [!NOTE]
+> **Azure DevOps Services**
+>
 > 使用安装程序脚本时，不会自动安装本机依赖项。 如果操作系统没有本机依赖项，必须手动安装。 请参阅 [.NET Core 本机先决条件](https://github.com/dotnet/core/blob/master/Documentation/prereqs.md)主题中的先决条件列表。
 
 ## <a name="ci-setup-examples"></a>CI 安装示例
 
-此部分介绍了如何使用 PowerShell 或 bash 脚本进行手动安装，同时还介绍了多个服务型软件 (SaaS) CI 解决方案。 涵盖的 SaaS CI 解决方案包括 [Travis CI](https://travis-ci.org/)、[AppVeyor](https://www.appveyor.com/) 和 [Visual Studio Team Services 生成](https://docs.microsoft.com/vsts/build-release/index)。
+此部分介绍了如何使用 PowerShell 或 bash 脚本进行手动安装，同时还介绍了多个服务型软件 (SaaS) CI 解决方案。 涵盖的 SaaS CI 解决方案包括 [Travis CI](https://travis-ci.org/)、[AppVeyor](https://www.appveyor.com/) 和[生成](https://docs.microsoft.com/azure/devops/build-release/index)。
 
 ### <a name="manual-setup"></a>手动安装
 
@@ -142,16 +144,16 @@ install:
   # See appveyor.yml example for install script
 ```
 
-### <a name="visual-studio-team-services-vsts"></a>Visual Studio Team Services (VSTS)
+### <a name="azure-devops-services"></a>Azure DevOps Services
 
-将 Visual Studio Team Services (VSTS) 配置为使用以下方法之一生成 .NET Core 项目：
+将 Azure DevOps Services 配置为使用以下方法之一生成 .NET Core 项目：
 
 1. 使用命令运行[手动安装步骤](#manual-setup)中的脚本。
-1. 创建包含多个 VSTS 内置生成任务的生成，这些任务被配置为使用 .NET Core。
+1. 创建包含多个 Azure DevOps Services 内置生成任务（这些任务被配置为使用 .NET Core 工具）的生成。
 
-这两种均为有效解决方案。 使用手动安装脚本，可以控制收到的工具版本，因为工具是作为生成的一部分进行下载。 此生成是通过必须创建的脚本进行运行。 本主题仅涉及手动选项。 若要详细了解如何撰写包含 VSTS 生成任务的生成，请参阅 VSTS [持续集成和部署](https://docs.microsoft.com/vsts/build-release/index)主题。
+这两种均为有效解决方案。 使用手动安装脚本，可以控制收到的工具版本，因为工具是作为生成的一部分进行下载。 此生成是通过必须创建的脚本进行运行。 本主题仅涉及手动选项。 若要详细了解如何撰写包含 Azure DevOps Services 生成任务的生成，请参阅 Azure DevOps Services [持续集成和部署](https://docs.microsoft.com/azure/devops/build-release/index)主题。
 
-若要在 VSTS 中使用手动安装脚本，请新建生成定义，并指定要对生成步骤运行的脚本。 为此，请使用 VSTS 用户界面：
+若要在 Azure DevOps Services 中使用手动安装脚本，请新建生成定义，并指定要对生成步骤运行的脚本。 为此，请使用 Azure DevOps Services 用户界面：
 
 1. 首先，新建生成定义。 到达可以定义要创建的生成类型的屏幕后，选择“空”选项。
 
@@ -171,7 +173,7 @@ install:
 
 ## <a name="orchestrating-the-build"></a>安排生成
 
-本文档的大部分内容介绍了如何获取 .NET Core 工具和配置各种 CI 服务，并未介绍如何安排或实际生成 .NET Core 代码。 具体如何构建生成进程取决于许多因素，我们无法在本文中笼统概述。 请浏览 [Travis CI](https://travis-ci.org/)、[AppVeyor](https://www.appveyor.com/) 和 [VSTS](https://docs.microsoft.com/vsts/build-release/index) 文档集中提供的资源和示例，详细了解如何使用每种技术安排生成。
+本文档的大部分内容介绍了如何获取 .NET Core 工具和配置各种 CI 服务，并未介绍如何安排或实际生成 .NET Core 代码。 具体如何构建生成进程取决于许多因素，我们无法在本文中笼统概述。 请浏览 [Travis CI](https://travis-ci.org/)、[AppVeyor](https://www.appveyor.com/) 和 [Azure DevOps Services](https://docs.microsoft.com/azure/devops/build-release/index) 文档集中提供的资源和示例，详细了解如何使用每种技术安排生成。
 
 使用 .NET Core 工具构建 .NET Core 代码生成进程的两种常规方法是，直接使用 MSBuild 或使用 .NET Core 命令行命令。 应采用哪种方法取决于对方法的熟悉程度和复杂性取舍。 使用 MSBuild，可以将生成进程表达为任务和目标，但需要学习 MSBuild 项目文件语法，这增加了复杂性。 使用 .NET Core 命令行工具可能更为简单，但需要在 `bash` 或 PowerShell 等脚本语言中编写业务流程逻辑。
 

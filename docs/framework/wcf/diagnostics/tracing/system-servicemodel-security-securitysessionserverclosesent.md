@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 ms.assetid: 712716fd-6c89-4dea-9398-d2c5b30f6563
 author: BrucePerlerMS
 ms.openlocfilehash: e6702e3841e9fa7b061adb745f8fc157dde20525
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.sourcegitcommit: d88024e6d6d8b242feae5f4007a709379355aa24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48031518"
+ms.lasthandoff: 10/13/2018
+ms.locfileid: "49314827"
 ---
 # <a name="systemservicemodelsecuritysecuritysessionserverclosesent"></a>System.ServiceModel.Security.SecuritySessionServerCloseSent
 System.ServiceModel.Security.SecuritySessionServerCloseSent  

@@ -10,11 +10,11 @@ ms.assetid: e1ed1197-3e9e-4e78-8845-92e82787faed
 author: Xansky
 ms.author: mhopkins
 ms.openlocfilehash: 524c950d19c84b28b44593e5aa42a92ee7bcb8a8
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47202216"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48840610"
 ---
 # <a name="ui-automation-clients-for-managed-code"></a>托管代码的 UI 自动化客户端
 > [!NOTE]

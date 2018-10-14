@@ -2,12 +2,12 @@
 title: Windows Workflow Foundation 功能详细信息
 ms.date: 03/30/2017
 ms.assetid: e84d12da-a055-45f6-b4d1-878d127b46b6
-ms.openlocfilehash: b18c6dd76762f4495ac475cd3dfa4e1995733b59
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 6929150f786f0d6b4a5887eb5c0758ebcfdd411c
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44205070"
+ms.lasthandoff: 10/07/2018
+ms.locfileid: "48846001"
 ---
 # <a name="windows-workflow-foundation-feature-specifics"></a>Windows Workflow Foundation 功能详细信息
 [!INCLUDE[netfx40_long](../../../includes/netfx40-long-md.md)] 向 Windows Workflow Foundation 添加了大量功能。 本文档介绍了大量新的功能，并详述了这些功能可用于的方案。  
@@ -17,19 +17,11 @@ ms.locfileid: "44205070"
   
 ### <a name="getting-started-with-messaging-activities"></a>消息传递活动入门  
   
--   在 [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)] 中，创建一个 WCF 工作流服务应用程序项目。 <xref:System.ServiceModel.Activities.Receive> 和 <xref:System.ServiceModel.Activities.SendReply> 对将置于画布上。  
+-   在 Visual Studio 2012 中，创建一个 WCF 工作流服务应用程序项目。 <xref:System.ServiceModel.Activities.Receive> 和 <xref:System.ServiceModel.Activities.SendReply> 对将置于画布上。  
   
--   右键单击项目并选择**添加服务引用**。  指向现有 web 服务 WSDL 并单击**确定**。  生成项目以显示生成的活动 (使用实现<xref:System.ServiceModel.Activities.Send>和<xref:System.ServiceModel.Activities.ReceiveReply>) 您的工具箱中。  
+-   右键单击项目并选择**添加服务引用**。  指向现有 web 服务 WSDL 并单击**确定**。  生成项目以显示生成的活动 (使用实现<xref:System.ServiceModel.Activities.Send>和<xref:System.ServiceModel.Activities.ReceiveReply>) 您的工具箱中。
   
--   这些活动的示例可在以下部分找到：  
-  
-    -   Basic:[服务](../../../docs/framework/windows-workflow-foundation/samples/services.md)  
-  
-    -   方案：[服务](../../../docs/framework/windows-workflow-foundation/samples/services.md)  
-  
--   [概念文档](https://go.microsoft.com/fwlink/?LinkId=204801)  
-  
--   [消息传递活动设计器文档](https://go.microsoft.com/fwlink/?LinkId=204802)  
+-   [工作流服务文档](../wcf/feature-details/workflow-services.md)
   
 ### <a name="messaging-activities-example-scenario"></a>消息传递活动示例方案  
  一个`BestPriceFinder`服务将调用多个航空公司服务来查找最佳票证的特定路由。  实现此方案需要您使用消息活动来接收价格请求、 从后端服务检索价格以及向最优惠的价格价格请求回复。  它还将要求您使用其他现成可用的活动来创建用于计算最佳价格的业务逻辑。  
@@ -47,15 +39,11 @@ ms.locfileid: "44205070"
   
 -   <xref:System.ServiceModel.WorkflowServiceHost> 的示例可在以下部分找到：  
   
-    -   [执行](../../../docs/framework/windows-workflow-foundation/samples/execution.md)  
+    -   [执行](samples/execution.md)
   
-    -   Basic:[服务](../../../docs/framework/windows-workflow-foundation/samples/services.md)  
+    -   应用程序：[挂起实例管理](samples/suspended-instance-management.md)  
   
-    -   方案：[服务](../../../docs/framework/windows-workflow-foundation/samples/services.md)  
-  
-    -   应用程序：[挂起实例管理](../../../docs/framework/windows-workflow-foundation/samples/suspended-instance-management.md)  
-  
--   [WorkflowServiceHost 概念文档](https://go.microsoft.com/fwlink/?LinkId=204807)  
+-   [承载工作流服务概述](../wcf/feature-details/hosting-workflow-services-overview.md)  
   
 ### <a name="workflowservicehost-scenario"></a>WorkflowServiceHost 方案  
  BestPriceFinder 服务将调用多个航空公司服务来查找最佳票证的特定路由。  实现此方案需要您中承载工作流<xref:System.ServiceModel.WorkflowServiceHost>。  它还使用消息活动来接收价格请求、 从后端服务检索价格以及向最优惠的价格价格请求回复。  
@@ -79,15 +67,9 @@ ms.locfileid: "44205070"
   
 -   将一段数据映射到一个服务实例的示例为基于内容的相关性，它将一段数据（例如，订单 ID）映射到一个特定的工作流实例。  
   
-    -   在任何消息传递活动上，单击 `CorrelationInitializers` 属性，并使用上面创建的 <xref:System.ServiceModel.Activities.QueryCorrelationInitializer> 变量添加 <xref:System.ServiceModel.Activities.CorrelationHandle>。 从下拉菜单中，双击消息上的所需属性（如 OrderID）。 将 `CorrelatesWith` 属性设置为上面使用的 <xref:System.ServiceModel.Activities.CorrelationHandle> 变量。  
+    -   在任何消息传递活动上，单击 `CorrelationInitializers` 属性，并使用上面创建的 <xref:System.ServiceModel.Activities.QueryCorrelationInitializer> 变量添加 <xref:System.ServiceModel.Activities.CorrelationHandle>。 从下拉菜单中，双击消息上的所需属性（如 OrderID）。 将 `CorrelatesWith` 属性设置为上面使用的 <xref:System.ServiceModel.Activities.CorrelationHandle> 变量。 
   
--   示例：  
-  
-    -   Basic:[服务](../../../docs/framework/windows-workflow-foundation/samples/services.md)  
-  
-    -   方案：[服务](../../../docs/framework/windows-workflow-foundation/samples/services.md)  
-  
-    -   [相关性概念文档](https://go.microsoft.com/fwlink/?LinkId=204939)  
+-   [相关性概念文档](../wcf/feature-details/correlation.md)  
   
 ### <a name="correlation-scenario"></a>相关性方案  
  订单处理工作流用于处理新订单创建和更新过程中的现有订单。  实现此方案需要您中承载工作流<xref:System.ServiceModel.WorkflowServiceHost>和使用消息传递活动。  此外需要基于相关`orderId`以确保对正确的工作流进行更新。  
@@ -155,7 +137,7 @@ ms.locfileid: "44205070"
   
 ### <a name="getting-started"></a>入门  
   
--   在 [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)] 中，创建一个工作流控制台应用程序。 在工作流设计器中添加流程图。  
+-   在 Visual Studio 2012 中，创建一个工作流控制台应用程序。 在工作流设计器中添加流程图。  
   
 -   流程图功能使用以下类：  
   
@@ -171,9 +153,7 @@ ms.locfileid: "44205070"
   
 -   示例：  
   
-    -   [使用 TryCatch 在 Flowchart 活动中进行错误处理](../../../docs/framework/windows-workflow-foundation/samples/fault-handling-in-a-flowchart-activity-using-trycatch.md)  
-  
-    -   [使用 FlowChart 与 Pick 的组合的 StateMachine 方案](../../../docs/framework/windows-workflow-foundation/samples/statemachine-scenario-using-a-combination-of-flowchart-and-pick.md)  
+    -   [使用 TryCatch 在 Flowchart 活动中进行错误处理](../../../docs/framework/windows-workflow-foundation/samples/fault-handling-in-a-flowchart-activity-using-trycatch.md) 
   
     -   [招聘流程](../../../docs/framework/windows-workflow-foundation/samples/hiring-process.md)  
   
@@ -201,7 +181,7 @@ ms.locfileid: "44205070"
   
 ### <a name="getting-started"></a>入门  
   
--   在 [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)] 中，创建一个工作流控制台应用程序。 在工作流设计器中添加过程活动。  
+-   在 Visual Studio 2012 中，创建一个工作流控制台应用程序。 在工作流设计器中添加过程活动。  
   
 -   示例：  
   
@@ -226,11 +206,7 @@ ms.locfileid: "44205070"
   
 ### <a name="getting-started"></a>入门  
   
--   在 [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)] 中，创建一个工作流控制台应用程序。 在工作流设计器中添加一个 <xref:System.Activities.Statements.InvokeMethod> 活动，并对该活动配置静态和实例方法。  
-  
--   示例：  
-  
-    -   [InvokeMethod](../../../docs/framework/windows-workflow-foundation/samples/invokemethod.md)  
+-   在 Visual Studio 2012 中，创建一个工作流控制台应用程序。 在工作流设计器中添加一个 <xref:System.Activities.Statements.InvokeMethod> 活动，并对该活动配置静态和实例方法。  
   
 -   设计器文档： [InvokeMethod 活动设计器](/visualstudio/workflow-designer/invokemethod-activity-designer)  
   
@@ -245,13 +221,9 @@ ms.locfileid: "44205070"
   
 ### <a name="getting-started"></a>入门  
   
--   在 [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)] 中，创建一个工作流控制台应用程序。 在工作流设计器中添加 <xref:System.Activities.Statements.TryCatch> 活动。  
+-   在 Visual Studio 2012 中，创建一个工作流控制台应用程序。 在工作流设计器中添加 <xref:System.Activities.Statements.TryCatch> 活动。  
   
--   示例：  
-  
-    1.  [使用 TryCatch 在 Flowchart 活动中进行错误处理](../../../docs/framework/windows-workflow-foundation/samples/fault-handling-in-a-flowchart-activity-using-trycatch.md)  
-  
-    2.  [使用过程性活动](../../../docs/framework/windows-workflow-foundation/samples/using-procedural-activities.md)  
+-   示例：[错误使用 TryCatch Flowchart 活动中的处理](../../../docs/framework/windows-workflow-foundation/samples/fault-handling-in-a-flowchart-activity-using-trycatch.md)  
   
 -   设计器文档：[错误处理活动设计器](/visualstudio/workflow-designer/error-handling-activity-designers)  
   
@@ -263,7 +235,7 @@ ms.locfileid: "44205070"
   
 ### <a name="getting-started"></a>入门  
   
--   在 [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)] 中，创建一个工作流控制台应用程序。 在工作流设计器中添加 <xref:System.Activities.Statements.Pick> 活动。  
+-   在 Visual Studio 2012 中，创建一个工作流控制台应用程序。 在工作流设计器中添加 <xref:System.Activities.Statements.Pick> 活动。  
   
 -   示例：[使用 Pick 活动](../../../docs/framework/windows-workflow-foundation/samples/using-the-pick-activity.md)  
   
@@ -337,7 +309,7 @@ ms.locfileid: "44205070"
   
 ### <a name="getting-started"></a>入门  
   
-1.  在 [!INCLUDE[vs2010](../../../includes/vs2010-md.md)] 中，创建一个 WCF 工作流服务应用程序项目。 <xref:System.ServiceModel.Activities.Receive> 和 <xref:System.ServiceModel.Activities.SendReply> 对将置于画布上以开始操作。  
+1.  在 Visual Studio 2010 中，创建 WCF 工作流服务应用程序项目。 <xref:System.ServiceModel.Activities.Receive> 和 <xref:System.ServiceModel.Activities.SendReply> 对将置于画布上以开始操作。  
   
 2.  打开 web.config 并添加一个无配置文件的 ETW 跟踪行为。  
   
@@ -358,7 +330,7 @@ ms.locfileid: "44205070"
   
 ### <a name="getting-started"></a>入门  
   
-1.  在 [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)] 中，创建一个包含隐式或显式 <xref:System.Activities.Statements.Persist> 活动的工作流。 将 <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> 行为添加到工作流服务主机。 这可以在代码或应用程序配置文件中完成。  
+1.  在 Visual Studio 2012 中，创建包含隐式或显式的工作流<xref:System.Activities.Statements.Persist>活动。 将 <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> 行为添加到工作流服务主机。 这可以在代码或应用程序配置文件中完成。  
   
 2.  示例：[暂留](../../../docs/framework/windows-workflow-foundation/samples/persistence.md)  
   

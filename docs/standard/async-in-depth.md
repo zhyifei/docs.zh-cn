@@ -138,7 +138,7 @@ public async Task<int> CalculateResult(InputData data)
 
 `CalculateResult()` 在调用它的线程上执行。  调用 `Task.Run` 时，它会在线程池上对昂贵的绑定 CPU 的操作 `DoExpensiveCalculation()` 进行排队，并收到一个 `Task<int>` 句柄。  `DoExpensiveCalculation()` 最终在下一个可用线程上并行运行（很可能在另一个 CPU 内核上）。  当 `DoExpensiveCalculation()` 在另一线程处理任务时，由于调用 `CalculateResult()` 的线程仍在执行，这时可能会出现并行工作的情况。
 
-一旦遇到 `await`，`CalculateResult()` 执行会让步于调用方，在 `DoExpensiveCalculation()` 产生结果的同时，允许其他工作完成当前线程。  完成后，结果会排队等待在主线程上运行。  最后，主线程将返回执行 `CalculateResult()`，此时将得到结果 `DoExpensiveCalculation()`。
+一旦遇到 `await`，`CalculateResult()` 执行会让步于调用方，在 `DoExpensiveCalculation()` 执行运算的同时，允许其他任务在当前线程执行。  `DoExpensiveCalculation()` 完成后，结果会在主线程上排队等待运行。  最后，主线程将返回执行得到 `DoExpensiveCalculation()` 结果的 `CalculateResult()`，。
 
 ### <a name="why-does-async-help-here"></a>异步为什么在此处会起作用？
 

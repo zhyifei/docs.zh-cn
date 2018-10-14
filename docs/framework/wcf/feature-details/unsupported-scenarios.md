@@ -2,12 +2,12 @@
 title: 不支持的方案
 ms.date: 03/30/2017
 ms.assetid: 72027d0f-146d-40c5-9d72-e94392c8bb40
-ms.openlocfilehash: 6c0ee061f754e85244bffdc06cbe23aee68d2222
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 2e44cbf159d5df724a5213648b28d952f49b8e8d
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43858054"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48845671"
 ---
 # <a name="unsupported-scenarios"></a>不支持的方案
 由于各种原因，Windows Communication Foundation (WCF) 不支持某些特定安全方案。 例如， [!INCLUDE[wxp](../../../../includes/wxp-md.md)] Home Edition 没有实现 SSPI 或 Kerberos 身份验证协议，并因此 WCF 不支持该平台上运行使用 Windows 身份验证的服务。 运行 Windows XP Home Edition 下的 WCF 时，支持其他身份验证机制，例如用户名/密码和 HTTP/HTTPS 集成身份验证。  
@@ -93,11 +93,11 @@ ms.locfileid: "43858054"
   
  举例来说，若某个服务具有以下三个终结点地址，便可能出现此情况：  
   
--   http://localhost/CalculatorService/service （服务）  
+- `http://localhost/CalculatorService/service` （服务）  
   
--   http://localhost/CalculatorService/issue_ticket (STS)  
+- `http://localhost/CalculatorService/issue_ticket` (STS)  
   
--   http://localhost/CalculatorService/mex （元数据终结点）  
+- `http://localhost/CalculatorService/mex` （元数据终结点）  
   
  这将引发异常。  
   

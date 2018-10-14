@@ -2,133 +2,133 @@
 title: Windows Communication Foundation 到消息队列
 ms.date: 03/30/2017
 ms.assetid: 78d0d0c9-648e-4d4a-8f0a-14d9cafeead9
-ms.openlocfilehash: ea0723d178b37b1ff2581981f8f49a6953c913cc
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: f6a686e658f4cc0097f86dfb19def2d0ba91b8ab
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45597782"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48582458"
 ---
 # <a name="windows-communication-foundation-to-message-queuing"></a>Windows Communication Foundation 到消息队列
-此示例演示如何，Windows Communication Foundation (WCF) 应用程序可以向消息队列 (MSMQ) 应用程序发送消息。 此服务是自承载控制台应用程序，通过它可以观察服务接收排队消息。 服务和客户端不需要同时运行。  
-  
- 服务从队列接收消息并处理订单。 服务创建一个事务性队列，并为收到的消息设置消息处理程序，如下面的示例代码所示。  
+此示例演示如何，Windows Communication Foundation (WCF) 应用程序可以向消息队列 (MSMQ) 应用程序发送消息。 此服务是自承载控制台应用程序，通过它可以观察服务接收排队消息。 服务和客户端不需要同时运行。
+
+ 服务从队列接收消息并处理订单。 服务创建一个事务性队列，并为收到的消息设置消息处理程序，如下面的示例代码所示。
 
 ```csharp
-static void Main(string[] args)  
-{  
-    if (!MessageQueue.Exists(  
-              ConfigurationManager.AppSettings["queueName"]))  
-       MessageQueue.Create(  
-           ConfigurationManager.AppSettings["queueName"], true);  
-        //Connect to the queue  
-        MessageQueue Queue = new   
-    MessageQueue(ConfigurationManager.AppSettings["queueName"]);  
-    Queue.ReceiveCompleted +=   
-                 new ReceiveCompletedEventHandler(ProcessOrder);  
-    Queue.BeginReceive();  
-    Console.WriteLine("Order Service is running");  
-    Console.ReadLine();  
-}  
+static void Main(string[] args)
+{
+    if (!MessageQueue.Exists(
+              ConfigurationManager.AppSettings["queueName"]))
+       MessageQueue.Create(
+           ConfigurationManager.AppSettings["queueName"], true);
+        //Connect to the queue
+        MessageQueue Queue = new
+    MessageQueue(ConfigurationManager.AppSettings["queueName"]);
+    Queue.ReceiveCompleted +=
+                 new ReceiveCompletedEventHandler(ProcessOrder);
+    Queue.BeginReceive();
+    Console.WriteLine("Order Service is running");
+    Console.ReadLine();
+}
 ```
 
- 当消息到达队列中时，将调用消息处理程序 `ProcessOrder`。  
+ 当消息到达队列中时，将调用消息处理程序 `ProcessOrder`。
 
 ```csharp
-public static void ProcessOrder(Object source,  
-    ReceiveCompletedEventArgs asyncResult)  
-{  
-    try  
-    {  
-        // Connect to the queue.  
-        MessageQueue Queue = (MessageQueue)source;  
-        // End the asynchronous receive operation.  
-        System.Messaging.Message msg =   
-                     Queue.EndReceive(asyncResult.AsyncResult);  
-        msg.Formatter = new System.Messaging.XmlMessageFormatter(  
-                                new Type[] { typeof(PurchaseOrder) });  
-        PurchaseOrder po = (PurchaseOrder) msg.Body;  
-        Random statusIndexer = new Random();  
-        po.Status = PurchaseOrder.OrderStates[statusIndexer.Next(3)];  
-        Console.WriteLine("Processing {0} ", po);  
-        Queue.BeginReceive();  
-    }  
-    catch (System.Exception ex)  
-    {  
-        Console.WriteLine(ex.Message);  
-    }  
-  
-}  
+public static void ProcessOrder(Object source,
+    ReceiveCompletedEventArgs asyncResult)
+{
+    try
+    {
+        // Connect to the queue.
+        MessageQueue Queue = (MessageQueue)source;
+        // End the asynchronous receive operation.
+        System.Messaging.Message msg =
+                     Queue.EndReceive(asyncResult.AsyncResult);
+        msg.Formatter = new System.Messaging.XmlMessageFormatter(
+                                new Type[] { typeof(PurchaseOrder) });
+        PurchaseOrder po = (PurchaseOrder) msg.Body;
+        Random statusIndexer = new Random();
+        po.Status = PurchaseOrder.OrderStates[statusIndexer.Next(3)];
+        Console.WriteLine("Processing {0} ", po);
+        Queue.BeginReceive();
+    }
+    catch (System.Exception ex)
+    {
+        Console.WriteLine(ex.Message);
+    }
+
+}
 ```
 
- 服务从 MSMQ 消息正文中提取 `ProcessOrder` 并处理订单。  
-  
- MSMQ 队列名称在配置文件的 appSettings 节中指定，如以下示例配置所示。  
-  
-```xml  
-<appSettings>  
-    <add key="orderQueueName" value=".\private$\Orders" />  
-</appSettings>  
-```  
-  
+ 服务从 MSMQ 消息正文中提取 `ProcessOrder` 并处理订单。
+
+ MSMQ 队列名称在配置文件的 appSettings 节中指定，如以下示例配置所示。
+
+```xml
+<appSettings>
+    <add key="orderQueueName" value=".\private$\Orders" />
+</appSettings>
+```
+
 > [!NOTE]
->  队列名称为本地计算机使用圆点 (.)，并在其路径中使用反斜杠分隔符。  
-  
- 客户端创建采购订单并在事务的范围内提交该采购订单，如下面的示例代码所示。  
+>  队列名称为本地计算机使用圆点 (.)，并在其路径中使用反斜杠分隔符。
+
+ 客户端创建采购订单并在事务的范围内提交该采购订单，如下面的示例代码所示。
 
 ```csharp
-// Create the purchase order  
-PurchaseOrder po = new PurchaseOrder();  
-// Fill in the details  
-...  
-  
-OrderProcessorClient client = new OrderProcessorClient("OrderResponseEndpoint");  
-  
-MsmqMessage<PurchaseOrder> ordermsg = new MsmqMessage<PurchaseOrder>(po);  
-using (TransactionScope scope = new TransactionScope(TransactionScopeOption.Required))  
-{  
-    client.SubmitPurchaseOrder(ordermsg);  
-    scope.Complete();  
-}  
-Console.WriteLine("Order has been submitted:{0}", po);  
-  
-//Closing the client gracefully closes the connection and cleans up resources  
-client.Close();  
+// Create the purchase order
+PurchaseOrder po = new PurchaseOrder();
+// Fill in the details
+...
+
+OrderProcessorClient client = new OrderProcessorClient("OrderResponseEndpoint");
+
+MsmqMessage<PurchaseOrder> ordermsg = new MsmqMessage<PurchaseOrder>(po);
+using (TransactionScope scope = new TransactionScope(TransactionScopeOption.Required))
+{
+    client.SubmitPurchaseOrder(ordermsg);
+    scope.Complete();
+}
+Console.WriteLine("Order has been submitted:{0}", po);
+
+//Closing the client gracefully closes the connection and cleans up resources
+client.Close();
 ```
 
- 客户端按顺序使用自定义客户端将 MSMQ 消息发送给队列。 接收并处理该消息的应用程序是 MSMQ 应用程序并是 WCF 应用程序，因为没有任何隐式服务协定之间两个应用程序。 所以在此方案中，我们不能使用 Svcutil.exe 工具创建代理。  
-  
- 自定义客户端是实质上是相同的使用的所有 WCF 应用程序`MsmqIntegration`绑定发送消息。 与其他客户端不同，它不包含一系列服务操作。 它只是一个提交消息操作。  
+ 客户端按顺序使用自定义客户端将 MSMQ 消息发送给队列。 接收并处理该消息的应用程序是 MSMQ 应用程序并是 WCF 应用程序，因为没有任何隐式服务协定之间两个应用程序。 所以在此方案中，我们不能使用 Svcutil.exe 工具创建代理。
+
+ 自定义客户端是实质上是相同的使用的所有 WCF 应用程序`MsmqIntegration`绑定发送消息。 与其他客户端不同，它不包含一系列服务操作。 它只是一个提交消息操作。
 
 ```csharp
-[System.ServiceModel.ServiceContractAttribute(Namespace = "http://Microsoft.ServiceModel.Samples")]  
-public interface IOrderProcessor  
-{  
-    [OperationContract(IsOneWay = true, Action = "*")]  
-    void SubmitPurchaseOrder(MsmqMessage<PurchaseOrder> msg);  
-}  
-  
-public partial class OrderProcessorClient : System.ServiceModel.ClientBase<IOrderProcessor>, IOrderProcessor  
-{  
-    public OrderProcessorClient(){}  
-  
-    public OrderProcessorClient(string configurationName)  
-        : base(configurationName)  
-    { }  
-  
-    public OrderProcessorClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress address)  
-        : base(binding, address)  
-    { }  
-  
-    public void SubmitPurchaseOrder(MsmqMessage<PurchaseOrder> msg)  
-    {  
-        base.Channel.SubmitPurchaseOrder(msg);  
-    }  
-}  
+[System.ServiceModel.ServiceContractAttribute(Namespace = "http://Microsoft.ServiceModel.Samples")]
+public interface IOrderProcessor
+{
+    [OperationContract(IsOneWay = true, Action = "*")]
+    void SubmitPurchaseOrder(MsmqMessage<PurchaseOrder> msg);
+}
+
+public partial class OrderProcessorClient : System.ServiceModel.ClientBase<IOrderProcessor>, IOrderProcessor
+{
+    public OrderProcessorClient(){}
+
+    public OrderProcessorClient(string configurationName)
+        : base(configurationName)
+    { }
+
+    public OrderProcessorClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress address)
+        : base(binding, address)
+    { }
+
+    public void SubmitPurchaseOrder(MsmqMessage<PurchaseOrder> msg)
+    {
+        base.Channel.SubmitPurchaseOrder(msg);
+    }
+}
 ```
 
- 运行示例时，客户端和服务活动将显示在服务和客户端控制台窗口中。 您可以看到服务从客户端接收消息。 在每个控制台窗口中按 Enter 可以关闭服务和客户端。 请注意：由于正在使用队列，因此不必同时启动和运行客户端和服务。 例如，可以先运行客户端，再将其关闭，然后启动服务，这样服务仍然会收到客户端的消息。  
-  
+ 运行示例时，客户端和服务活动将显示在服务和客户端控制台窗口中。 您可以看到服务从客户端接收消息。 在每个控制台窗口中按 Enter 可以关闭服务和客户端。 请注意：由于正在使用队列，因此不必同时启动和运行客户端和服务。 例如，可以先运行客户端，再将其关闭，然后启动服务，这样服务仍然会收到客户端的消息。
+
 > [!NOTE]
 >  此示例需要安装消息队列。 请参阅中的安装说明[消息队列](https://go.microsoft.com/fwlink/?LinkId=94968)。  
   
@@ -138,7 +138,7 @@ public partial class OrderProcessorClient : System.ServiceModel.ClientBase<IOrde
   
 2.  如果先运行服务，则它将检查以确保队列存在。 如果队列不存在，则服务将创建一个队列。 可以先运行服务以创建队列或通过 MSMQ 队列管理器创建一个队列。 执行下面的步骤来在 Windows 2008 中创建队列。  
   
-    1.  在 [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] 中打开服务器管理器。  
+    1.  在 Visual Studio 2012 中打开服务器管理器。  
   
     2.  展开**功能**选项卡。  
   

@@ -2,12 +2,12 @@
 title: XML Schema Definition Tool (Xsd.exe)
 ms.date: 03/30/2017
 ms.assetid: a6e6e65c-347f-4494-9457-653bf29baac2
-ms.openlocfilehash: a3a16e92dab6994de6bfa99c248ff0b13658e22d
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 23dea344b123b377224aad5816137aa246b8f596
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45615438"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48850858"
 ---
 # <a name="xml-schema-definition-tool-xsdexe"></a>XML Schema Definition Tool (Xsd.exe)
 XML 架构定义 (Xsd.exe) 工具从 XDR、XML 和 XSD 文件或者从运行时程序集中的类生成 XML 架构或公共语言运行时类。  
@@ -86,7 +86,7 @@ xsd {file.dll | file.exe} [/outputdir:directory] [/type:typename [...]][/paramet
  类到 XSD  
  使用运行时程序集文件中的一个或多个类型生成 XML 架构。 生成的架构定义了 `System.Xml.Serialization.XmlSerializer` 使用的 XML 格式。  
   
- Xsd.exe 只允许操作遵循由万维网联合会 (W3C) 提议的 XML 架构定义 (XSD) 语言的 XML 架构。 有关 XML 架构定义提议或 XML 标准的详细信息，请参阅 http://w3.org。  
+ Xsd.exe 只允许操作遵循由万维网联合会 (W3C) 提议的 XML 架构定义 (XSD) 语言的 XML 架构。 有关 XML 架构定义提议或 XML 标准的详细信息，请参阅<https://w3.org>。  
   
 ## <a name="setting-options-with-an-xml-file"></a>通过 XML 文件设置选项  
  通过使用 `/parameters` 开关，可指定设置各种选项的单个 XML 文件。 可设置的选项取决于您如何使用 XSD.exe 工具。 选择包括生成架构、生成代码文件，或生成包含 `DataSet` 功能的代码文件。 例如，生成架构时可将 `<assembly\>` 元素设置为可执行文件 (.exe) 或类库文件 (.dll) 的名称，但生成代码文件时则不能。 下面的 XML 演示如何将 `<generateSchemas\>` 元素用于指定的可执行文件：  

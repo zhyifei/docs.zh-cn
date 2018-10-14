@@ -4,12 +4,12 @@ description: dotnet pack 命令可为 .NET Core 项目创建 NuGet 包。
 author: mairaw
 ms.author: mairaw
 ms.date: 05/29/2018
-ms.openlocfilehash: 8c2569ec7598b21fe9b673176143d0e54b9eb065
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 434f1c97af24d1417cd79edd52b63814fd4c6512
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44204846"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47231152"
 ---
 # <a name="dotnet-pack"></a>dotnet 包
 
@@ -43,7 +43,7 @@ dotnet pack [-h|--help]
 
 默认情况下，`dotnet pack` 先构建项目。 如果希望避免此行为，则传递 `--no-build` 选项。 此选项在持续集成 (CI) 生成方案中通常非常有用，你可以知道代码是之前生成的。
 
-可向 `dotnet pack` 命令提供 MSBuild 属性，用于打包进程。 有关详细信息，请参阅 [NuGet 元数据属性](csproj.md#nuget-metadata-properties)和 [MSBuild 命令行引用](/visualstudio/msbuild/msbuild-command-line-reference)。 [示例](#examples)部分介绍了如何在不同的情况下使用 MSBuild /p 开关。
+可向 `dotnet pack` 命令提供 MSBuild 属性，用于打包进程。 有关详细信息，请参阅 [NuGet 元数据属性](csproj.md#nuget-metadata-properties)和 [MSBuild 命令行引用](/visualstudio/msbuild/msbuild-command-line-reference)。 [示例](#examples)部分介绍了如何在不同的情况下使用 MSBuild -p 开关。
 
 [!INCLUDE[dotnet restore note + options](~/includes/dotnet-restore-note-options.md)]
 
@@ -109,6 +109,14 @@ dotnet pack [-h|--help]
 
 设置命令的详细级别。 允许使用的值为 `q[uiet]`、`m[inimal]`、`n[ormal]`、`d[etailed]` 和 `diag[nostic]`。
 
+> [!NOTE]
+> 默认情况下，Web 项目不可打包。 若要覆盖默认行为，请将以下属性添加到 .csproj 文件中：
+> ```xml
+> <PropertyGroup>
+>    <IsPackable>true</IsPackable>
+> </PropertyGroup>
+> ```
+
 # <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
 
 `-c|--configuration {Debug|Release}`
@@ -173,11 +181,11 @@ dotnet pack [-h|--help]
 
 使用 `PackageVersion` MSBuild 属性将包版本设置为 `2.1.0`：
 
-`dotnet pack /p:PackageVersion=2.1.0`
+`dotnet pack -p:PackageVersion=2.1.0`
 
 打包特定[目标框架](../../standard/frameworks.md)的项目：
 
-`dotnet pack /p:TargetFrameworks=net45`
+`dotnet pack -p:TargetFrameworks=net45`
 
 打包项目，并使用特定运行时 (Windows 10) 进行还原操作（.NET Core SDK 2.0 及更高版本）：
 

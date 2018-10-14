@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 ms.assetid: 66b46f95-fa2d-4b5b-b6ce-0572ab0cdd50
 author: BrucePerlerMS
 ms.openlocfilehash: 703e89342cbfd4a957c10419d6583e85ec6f6d2a
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48034644"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48837450"
 ---
 # <a name="ltsecureconversationbootstrapgt"></a>&lt;secureConversationBootstrap&gt;
 指定用于启动安全对话服务的默认值。  

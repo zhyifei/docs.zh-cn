@@ -2,12 +2,12 @@
 title: WCF 分析跟踪
 ms.date: 03/30/2017
 ms.assetid: 6029c7c7-3515-4d36-9d43-13e8f4971790
-ms.openlocfilehash: 006f8aa0bc2f32e43269aa83433e8ca7a773a1c9
-ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
+ms.openlocfilehash: 9464f2a4c9bc52134e439c98b06ae50c828a14f6
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46532803"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48850252"
 ---
 # <a name="wcf-analytic-tracing"></a>WCF 分析跟踪
 此示例演示如何将您自己的跟踪事件添加到 Windows Communication Foundation (WCF) 将写入到 ETW 中的分析跟踪流[!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]。 跟踪分析是为了便于查看服务，而不会导致较高性能损失。 此示例演示如何使用<xref:System.Diagnostics.Eventing?displayProperty=nameWithType>Api 来与 WCF 服务集成的写入事件。  
@@ -43,7 +43,7 @@ ms.locfileid: "46532803"
   
 #### <a name="to-use-this-sample"></a>使用此示例  
   
-1.  使用 [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] 打开 WCFAnalyticTracingExtensibility.sln 解决方案文件。  
+1.  使用 Visual Studio 2012 打开 WCFAnalyticTracingExtensibility.sln 解决方案文件。  
   
 2.  要生成解决方案，按 Ctrl+Shift+B。  
   
@@ -53,7 +53,7 @@ ms.locfileid: "46532803"
   
 4.  运行 WCF 测试客户端 (WcfTestClient.exe)。  
   
-     WCF 测试客户端 (WcfTestClient.exe) 位于\<[!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)]安装目录 > \Common7\IDE\ WcfTestClient.exe (默认[!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)]安装目录为 C:\Program Files\Microsoft Visual Studio 10.0)。  
+     WCF 测试客户端 (WcfTestClient.exe) 位于\<Visual Studio 2012 安装目录 > \Common7\IDE\ WcfTestClient.exe （默认 Visual Studio 2012 安装目录为 C:\Program Files\Microsoft Visual Studio 10.0）。  
   
 5.  在 WCF 测试客户端，通过选择添加服务**文件**，然后**添加的服务**。  
   

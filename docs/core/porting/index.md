@@ -4,12 +4,12 @@ description: 了解移植过程以及发现在将 .NET Framework 项目移植到
 author: cartermp
 ms.author: mairaw
 ms.date: 06/20/2016
-ms.openlocfilehash: bf4f50ca915f21cdda6b99ae6bdf9e837eca3ae7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d273b3abe46de59aa55b5b9a531d3c572a065124
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33210077"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48835387"
 ---
 # <a name="porting-to-net-core-from-net-framework"></a>从 .NET Framework 移植到 .NET Core
 
@@ -27,7 +27,7 @@ ms.locfileid: "33210077"
 
    这可确保在 .NET Core 不支持特殊 API 的情况下，可以为特定于 .NET Framework 的目标使用备用 API。
    
-3. 使用 [API Portability Analyzer 工具](https://github.com/Microsoft/dotnet-apiport/)来分析程序集并基于结果制定移植计划。
+3. 使用 [.NET Portability Analyzer](../../standard/analyzers/portability-analyzer.md) 来分析程序集并基于结果制定移植计划。
 
    API Portability Analyzer 工具将分析已编译的程序集并生成报表，该报表将显示高级可移植性摘要和不可用于 .NET Core 上的正在使用的每个 API 的细目。  可以使用此报表和代码库的分析结果一起制定移植代码的计划。
    

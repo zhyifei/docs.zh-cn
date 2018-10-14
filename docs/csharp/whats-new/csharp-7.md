@@ -3,12 +3,12 @@ title: C# 7.0 中的新增功能 - C# 指南
 description: 大致了解 C# 语言即将发布的版本 7 中将推出的新功能。
 ms.date: 12/21/2016
 ms.assetid: fd41596d-d0c2-4816-b94d-c4d00a5d0243
-ms.openlocfilehash: a78b30411d734d6dadc52b7dbd402763d4eb7f5e
-ms.sourcegitcommit: 88f251b08bf0718ce119f3d7302f514b74895038
+ms.openlocfilehash: 734fdf962ef481a3b434e9ce17e535eadd52f420
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "33956404"
+ms.lasthandoff: 09/27/2018
+ms.locfileid: "47237379"
 ---
 # <a name="whats-new-in-c-70"></a>C# 7.0 中的新增功能
 
@@ -159,7 +159,7 @@ C# 为用于说明设计意图的类和结构提供了丰富的语法。 但是�
 [!code-csharp[Tuple-discard](../../../samples/snippets/csharp/programming-guide/deconstructing-tuples/discard-tuple1.cs)]
 
 有关详细信息，请参阅[弃元](../discards.md)。
- 
+
 ## <a name="pattern-matching"></a>模式匹配
 
 模式匹配是一种可让你对除对象类型以外的属性实现方法分派的功能。 你可能已经熟悉基于对象类型的方法分派。 在面向对象的编程中，虚拟和重写方法提供语言语法来实现基于对象类型的方法分派。 基类和派生类提供不同的实现。 模式匹配表达式扩展了这一概念，以便你可以通过继承层次结构为不相关的类型和数据元素轻松实现类似的分派模式。 
@@ -277,7 +277,9 @@ C# 语言还设有三条规则，可防止你误用 `ref` 局部变量和返回�
 * `ref` 局部变量和返回结果不可用于异步方法。
     - 编译器无法知道异步方法返回时，引用的变量是否已设置为其最终值。
 
-添加 ref 局部变量和 ref 返回结果可通过避免复制值或多次执行取消引用操作，允许更为高效的算法。 
+添加 ref 局部变量和 ref 返回结果可通过避免复制值或多次执行取消引用操作，允许更为高效的算法。
+
+向返回值添加 `ref` 是[源兼容的更改](version-update-considerations.md#source-compatible-changes)。 现有代码会进行编译，但在分配时复制 ref 返回值。 调用方必须将存储的返回值更新为 `ref` 局部变量，从而将返回值存储为引用。
 
 ## <a name="local-functions"></a>本地函数
 
@@ -327,6 +329,8 @@ C# 6 为成员函数和只读属性引入了 [expression-bodied 成员](csharp-6
 
 这些针对 expression-bodied 成员的新位置代表了 C# 语言的一个重要里程碑：这些功能由致力于开放源代码 [Roslyn](https://github.com/dotnet/Roslyn) 项目的社区成员实现。
 
+将方法更改为 expression bodied 成员是[二进制兼容的更改](version-update-considerations.md#binary-compatible-changes)。
+
 ## <a name="throw-expressions"></a>引发表达式
 
 在 C# 中，`throw` 始终是一个语句。 因为 `throw` 是一个语句而非表达式，所以在某些 C# 构造中无法使用它。 它们包括条件表达式、null 合并表达式和一些 lambda 表达式。 添加 expression-bodied 成员将添加更多位置，在这些位置中，`throw` 表达式会很有用。 为了可以编写任何这些构造，C# 7.0 引入了引发表达式。
@@ -362,8 +366,10 @@ C# 6 为成员函数和只读属性引入了 [expression-bodied 成员](csharp-6
 一个简单的优化是在之前使用 `Task` 的地方使用 `ValueTask`。 但是，如果要手动执行额外的优化，则可以缓存来自异步工作的结果，并在后续调用中重用结果。 `ValueTask` 结构具有带 `Task` 参数的构造函数，以便你可以从任何现有异步方法的返回值构造 `ValueTask`：
 
 [!code-csharp[AsyncOptimizedValueTask](../../../samples/snippets/csharp/new-in-7/AsyncWork.cs#31_AsyncOptimizedValueTask "Return async result or cached value")]
- 
+
 与所有性能建议一样，应在对代码进行大规模更改之前对两个版本进行基准测试。
+
+如果返回值是 `await` 语句的目标，那么将 API 从 <xref:System.Threading.Tasks.Task%601> 更改为 <xref:System.Threading.Tasks.ValueTask%601> 是[源兼容的更改](version-update-considerations.md#source-compatible-changes)。 一般情况下，更改为 `ValueTask` 则不是如此。
 
 ## <a name="numeric-literal-syntax-improvements"></a>数字文本语法改进
 

@@ -40,7 +40,7 @@ ms.locfileid: "45698369"
   
  BeginOperationName 方法采用该方法的同步版本的签名中声明的任何参数（由值传递或由引用传递）。 BeginOperationName 方法签名中不包含任何输出参数。 BeginOperationName 方法签名另外还包括两个其他参数。 第一个参数定义一个 <xref:System.AsyncCallback> 委托，此委托引用在异步操作完成时调用的方法。 如果调用方不希望在操作完成后调用方法，它可以指定 `null` （在 Visual Basic 中为`Nothing` ）。 第二个参数是一个用户定义的对象。 此对象可用来向异步操作完成时调用的方法传递应用程序特定的状态信息。 如果 BeginOperationName 方法还采用其他一些操作特定的参数（例如，一个用于存储从文件读取的字节的字节数组），则 <xref:System.AsyncCallback> 和应用程序状态对象将是 BeginOperationName 方法签名中的最后两个参数。  
   
- BeginOperationName 立即返回对调用线程的控制*。 如果 BeginOperationName 方法引发异常，则会在开始异步操作之前引发异常。 如果 BeginOperationName 方法引发异常，则意味着没有调用回调方法。  
+ BeginOperationName 立即返回对调用线程的控制 *。 如果 BeginOperationName 方法引发异常，则会在开始异步操作之前引发异常。 如果 BeginOperationName 方法引发异常，则意味着没有调用回调方法。  
   
 ## <a name="ending-an-asynchronous-operation"></a>结束异步操作  
  EndOperationName 方法可结束异步操作 OperationName。 EndOperationName 方法的返回值与其同步对应方法的返回值类型相同，并且是特定于异步操作的。 例如， <xref:System.IO.FileStream.EndRead%2A> 方法返回从 <xref:System.IO.FileStream> 读取的字节数， <xref:System.Net.Dns.EndGetHostByName%2A> 方法返回包含有关主机的信息的 <xref:System.Net.IPHostEntry> 对象。 EndOperationName 方法采用该方法同步版本的签名中声明的所有输出参数或引用参数。 除了来自同步方法的参数外，EndOperationName 方法还包括 <xref:System.IAsyncResult> 参数。 调用方必须将对应调用返回的实例传递给 BeginOperationName。  

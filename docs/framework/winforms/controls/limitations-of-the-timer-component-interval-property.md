@@ -7,12 +7,12 @@ helpviewer_keywords:
 - timers [Windows Forms], Windows-based
 - Timer component [Windows Forms], limitations of Interval property
 ms.assetid: 7e5fb513-77e7-4046-a8e8-aab94e61ca0f
-ms.openlocfilehash: e5b9e7e43369913f0cdc9c7f2111bd4fe58675e6
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 9710568c3c21878aa6aad626e3152168a2f0c2fe
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43465650"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48836389"
 ---
 # <a name="limitations-of-the-windows-forms-timer-component39s-interval-property"></a>Windows 窗体 Timer 组件的限制&#39;s 间隔属性
 Windows 窗体<xref:System.Windows.Forms.Timer>组件具有<xref:System.Windows.Forms.Timer.Interval%2A>属性，它指定一个计时器事件和下一步之间传递的毫秒数。 除非禁用该组件，计时器会继续接收<xref:System.Windows.Forms.Timer.Tick>事件的时间大致相同时间间隔。  
@@ -26,7 +26,7 @@ Windows 窗体<xref:System.Windows.Forms.Timer>组件具有<xref:System.Windows.
   
 -   不保证所精确经过的时间间隔。 若要确保准确性，计时器应检查系统时钟根据需要而不是尝试进行内部跟踪的累计的时间。  
   
--   精度为<xref:System.Windows.Forms.Timer.Interval%2A>属性是以毫秒为单位。 某些计算机提供的高分辨率计数器，分辨率高于毫秒。 此类计数器的可用性取决于您的计算机的处理器硬件。 有关详细信息，请参阅 172338，"如何为使用 QueryPerformanceCounter 来时间代码，"在 Microsoft 知识库文章在 http://support.microsoft.com。  
+-   精度为<xref:System.Windows.Forms.Timer.Interval%2A>属性是以毫秒为单位。 某些计算机提供的高分辨率计数器，分辨率高于毫秒。 此类计数器的可用性取决于您的计算机的处理器硬件。
   
 ## <a name="see-also"></a>请参阅  
  <xref:System.Windows.Forms.Timer>  

@@ -2,12 +2,12 @@
 title: 在 WF 中创建异步活动
 ms.date: 03/30/2017
 ms.assetid: 497e81ed-5eef-460c-ba55-fae73c05824f
-ms.openlocfilehash: 8df876c9be020ece29683d1c101a4045b1c76322
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 31c0d5a87a7979bc59c3e1d942ed0594d128c80a
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33520063"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48266554"
 ---
 # <a name="creating-asynchronous-activities-in-wf"></a>在 WF 中创建异步活动
 <xref:System.Activities.AsyncCodeActivity> 提供一个可供活动作者使用的基类，该基类允许派生的活动实现异步执行逻辑。 这对如下自定义活动非常有用：必须执行异步工作，而不会保持工作流计划程序线程并阻止可以并行运行的所有活动。 本主题概述了如何使用 <xref:System.Activities.AsyncCodeActivity> 创建自定义异步活动。  
@@ -31,7 +31,7 @@ ms.locfileid: "33520063"
  [!code-csharp[CFX_ActivityExample#10](../../../samples/snippets/csharp/VS_Snippets_CFX/CFX_ActivityExample/cs/Program.cs#10)]  
   
 ### <a name="invoking-asynchronous-methods-on-a-class"></a>对类调用异步方法  
- [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 中的许多类都提供了异步功能，可以使用基于 <xref:System.Activities.AsyncCodeActivity> 的活动来异步调用此功能。 在下面的示例从[在活动中使用 AsyncOperationContext](../../../docs/framework/windows-workflow-foundation/samples/using-asyncoperationcontext-in-an-activity-sample.md)，创建一个活动以异步方式通过使用创建文件<xref:System.IO.FileStream>类。  
+ [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 中的许多类都提供了异步功能，可以使用基于 <xref:System.Activities.AsyncCodeActivity> 的活动来异步调用此功能。 在以下示例中，创建一个活动是以异步方式通过使用创建文件<xref:System.IO.FileStream>类。  
   
  [!code-csharp[CFX_ActivityExample#12](../../../samples/snippets/csharp/VS_Snippets_CFX/CFX_ActivityExample/cs/Program.cs#12)]  
   
@@ -44,9 +44,9 @@ ms.locfileid: "33520063"
  [!code-csharp[CFX_ActivityExample#9](../../../samples/snippets/csharp/VS_Snippets_CFX/CFX_ActivityExample/cs/Program.cs#9)]  
   
 ### <a name="scheduling-actions-or-child-activities-using-asynccodeactivity"></a>使用 AsyncCodeActivity 安排操作或子活动  
- <xref:System.Activities.AsyncCodeActivity> 派生的自定义活动提供了以异步方式执行与工作流线程相关的工作的方法，但不提供安排子活动或操作的功能。  但是，可以通过组合方式将异步行为纳入子活动的安排。 可以创建一个异步活动，然后将其与 <xref:System.Activities.Activity> 或 <xref:System.Activities.NativeActivity> 派生活动组合在一起，以便提供异步行为以及子活动或操作的安排。 例如，可以创建一个活动，该活动派生自 <xref:System.Activities.Activity>，并且作为其实现令 <xref:System.Activities.Statements.Sequence> 包含异步活动以及实现该活动的逻辑的其他活动。 有关更多示例撰写活动使用<xref:System.Activities.Activity>和<xref:System.Activities.NativeActivity>，请参阅[如何： 创建活动](../../../docs/framework/windows-workflow-foundation/how-to-create-an-activity.md)，[活动创作选项](../../../docs/framework/windows-workflow-foundation/activity-authoring-options-in-wf.md)，和[复合](../../../docs/framework/windows-workflow-foundation/samples/composite.md)活动示例。  
+ <xref:System.Activities.AsyncCodeActivity> 派生的自定义活动提供了以异步方式执行与工作流线程相关的工作的方法，但不提供安排子活动或操作的功能。  但是，可以通过组合方式将异步行为纳入子活动的安排。 可以创建一个异步活动，然后将其与 <xref:System.Activities.Activity> 或 <xref:System.Activities.NativeActivity> 派生活动组合在一起，以便提供异步行为以及子活动或操作的安排。 例如，可以创建一个活动，该活动派生自 <xref:System.Activities.Activity>，并且作为其实现令 <xref:System.Activities.Statements.Sequence> 包含异步活动以及实现该活动的逻辑的其他活动。 有关组合使用的活动的更多示例<xref:System.Activities.Activity>并<xref:System.Activities.NativeActivity>，请参阅[如何： 创建活动](../../../docs/framework/windows-workflow-foundation/how-to-create-an-activity.md)并[活动创作选项](../../../docs/framework/windows-workflow-foundation/activity-authoring-options-in-wf.md)。  
   
 ## <a name="see-also"></a>请参阅  
- <xref:System.Action>  
- <xref:System.Func%602>  
- [在活动中使用 AsyncOperationContext](../../../docs/framework/windows-workflow-foundation/samples/using-asyncoperationcontext-in-an-activity-sample.md)
+
+- <xref:System.Action>  
+- <xref:System.Func%602>  

@@ -5,19 +5,19 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: fe374932-67f5-487d-9325-f868812b92e4
-ms.openlocfilehash: 4780e43679d461509911a4abda689a0c16112e4a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6b26dabb9ed5c2c7bb2410dc1e844add6a69bdf3
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33493420"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48842718"
 ---
 # <a name="how-to-expose-a-feed-as-both-atom-and-rss"></a>如何：作为 Atom 和 RSS 公开源
-Windows Communication Foundation (WCF) 允许你创建公开联合源的服务。 本主题讨论如何使用 Atom 1.0 和 RSS 2.0 创建公开联合源的联合服务。 此服务公开一个可以返回任一联合格式的终结点。 为了简单起见，本示例中使用的服务为自承载服务。 在生产环境中，此类型的服务将承载在 IIS 或 WAS 下。 有关不同 WCF 宿主选项的详细信息，请参阅[宿主](../../../../docs/framework/wcf/feature-details/hosting.md)。  
+Windows Communication Foundation (WCF) 可以创建公开联合源的服务。 本主题讨论如何使用 Atom 1.0 和 RSS 2.0 创建公开联合源的联合服务。 此服务公开一个可以返回任一联合格式的终结点。 为了简单起见，本示例中使用的服务为自承载服务。 在生产环境中，此类型的服务将承载在 IIS 或 WAS 下。 有关不同 WCF 托管选项的详细信息，请参阅[Hosting](../../../../docs/framework/wcf/feature-details/hosting.md)。  
   
 ### <a name="to-create-a-basic-syndication-service"></a>创建基本联合服务  
   
-1.  使用通过 <xref:System.ServiceModel.Web.WebGetAttribute> 属性标记的接口定义服务协定。 作为联合源公开的每个操作都会返回一个 <xref:System.ServiceModel.Syndication.SyndicationFeedFormatter> 对象。 请注意 <xref:System.ServiceModel.Web.WebGetAttribute> 的参数。 `UriTemplate` 指定用于调用此服务操作的 URL。 此参数的字符串包含文本和大括号中的变量 ({*格式*})。 此变量与服务操作的 `format` 参数相对应。 有关详细信息，请参阅<xref:System.UriTemplate>。 `BodyStyle` 会影响此服务操作所发送和接收的消息的写入方式。 <xref:System.ServiceModel.Web.WebMessageBodyStyle.Bare> 指定不使用基础结构定义的 XML 元素包装发送到和接收自此服务操作的数据。 有关详细信息，请参阅<xref:System.ServiceModel.Web.WebMessageBodyStyle>。  
+1.  使用通过 <xref:System.ServiceModel.Web.WebGetAttribute> 属性标记的接口定义服务协定。 作为联合源公开的每个操作都会返回一个 <xref:System.ServiceModel.Syndication.SyndicationFeedFormatter> 对象。 请注意 <xref:System.ServiceModel.Web.WebGetAttribute> 的参数。 `UriTemplate` 指定用于调用此服务操作的 URL。 为此参数字符串包含文本和大括号中的变量 ({*格式*})。 此变量与服务操作的 `format` 参数相对应。 有关详细信息，请参阅<xref:System.UriTemplate>。 `BodyStyle` 会影响此服务操作所发送和接收的消息的写入方式。 <xref:System.ServiceModel.Web.WebMessageBodyStyle.Bare> 指定不使用基础结构定义的 XML 元素包装发送到和接收自此服务操作的数据。 有关详细信息，请参阅<xref:System.ServiceModel.Web.WebMessageBodyStyle>。  
   
      [!code-csharp[htAtomRss#0](../../../../samples/snippets/csharp/VS_Snippets_CFX/htatomrss/cs/program.cs#0)]
      [!code-vb[htAtomRss#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/htatomrss/vb/program.vb#0)]  
@@ -64,9 +64,9 @@ Windows Communication Foundation (WCF) 允许你创建公开联合源的服务�
   
 ### <a name="to-call-getblog-with-an-http-get"></a>使用 HTTP GET 调用 GetBlog  
   
-1.  打开 Internet Explorer，键入下面的 URL，然后按 ENTER。 http://localhost:8000/BlogService/GetBlog  
+1.  打开 Internet Explorer，键入以下 URL，并按 ENTER: `http://localhost:8000/BlogService/GetBlog`。
   
-     URL 包含服务的基址 (http://localhost:8000/BlogService)，终结点，以及要调用的服务操作的相对地址。  
+     URL 包含服务的基址 (`http://localhost:8000/BlogService`)，终结点和要调用的服务操作的相对地址。  
   
 ### <a name="to-call-getblog-from-code"></a>从代码中调用 GetBlog()  
   

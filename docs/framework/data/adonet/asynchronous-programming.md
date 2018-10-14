@@ -1,13 +1,13 @@
 ---
 title: 异步编程
-ms.date: 03/30/2017
+ms.date: 10/18/2018
 ms.assetid: 85da7447-7125-426e-aa5f-438a290d1f77
-ms.openlocfilehash: 0c5c3f52f6afa0e1fa48d33167feabeb8d5b76f5
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 0c16fecc9e79f36c122c13909be0eeba848b7c20
+ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43504970"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49123652"
 ---
 # <a name="asynchronous-programming"></a>异步编程
 
@@ -23,15 +23,16 @@ ms.locfileid: "43504970"
 3.  <xref:System.Data.SqlClient.SqlCommand.BeginExecuteXmlReader%2A?displayProperty=nameWithType>  
   
  [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)] 中的 SqlClient 中仍保留了此功能。  
-  
- 从 [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)] 开始，这些方法不再需要连接字符串中的 `Asynchronous Processing=true`。  
+
+> [!TIP]
+> 从开始[!INCLUDE[net_v45](../../../../includes/net-v45-md.md)]，这些旧方法不再需要`Asynchronous Processing=true`连接字符串中。  
   
 ## <a name="asynchronous-programming-features-added-in-includenetv45includesnet-v45-mdmd"></a>[!INCLUDE[net_v45](../../../../includes/net-v45-md.md)] 中增加了异步编程功能  
  该新的异步编程功能提供了一种用于使代码异步的简单技术。  
   
  有关 [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)] 中引入的异步编程功能的更多信息，请参见：  
   
-- [在 C# 中的异步编程](../../../csharp/async.md)
+- [C# 中的异步编程](../../../csharp/async.md)
 
 - [使用 Async 和 Await 的异步编程 (Visual Basic)](../../../visual-basic/programming-guide/concepts/async/index.md)
 
@@ -87,6 +88,9 @@ ms.locfileid: "43504970"
 -   <xref:System.Data.SqlClient.SqlBulkCopy.WriteToServerAsync%2A?displayProperty=nameWithType>  
   
  添加了其他异步成员以支持[SqlClient 流支持](../../../../docs/framework/data/adonet/sqlclient-streaming-support.md)。  
+
+> [!TIP]
+> 新的异步方法不需要`Asynchronous Processing=true`连接字符串中。  
   
 ### <a name="synchronous-to-asynchronous-connection-open"></a>同步到异步连接打开  
  您可以将现有应用程序升级以使用新的异步功能。 例如，假设应用程序具有同步连接算法，并在每次 UI 线程连接到数据库时加以阻止，连接后，该应用程序将调用向刚登录的用户之外的其他用户发送信号的存储过程。  

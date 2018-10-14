@@ -2,12 +2,12 @@
 title: 设置 Use 和 Style 属性
 ms.date: 03/30/2017
 ms.assetid: c09a0600-116f-41cf-900a-1b7e4ea4e300
-ms.openlocfilehash: d5e6409e3921d40b14b940786f6344aea657b84b
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: c4cee5fac84d8fb47565cc4ebde47f04365b989e
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43865535"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48836839"
 ---
 # <a name="setting-the-use-and-style-properties"></a>设置 Use 和 Style 属性
 本示例演示如何使用 <xref:System.ServiceModel.XmlSerializerFormatAttribute> 和 <xref:System.ServiceModel.DataContractFormatAttribute> 的 Use 和 Style 属性。 这些属性影响如何格式化消息。 默认情况下，使用设置为 <xref:System.ServiceModel.OperationFormatStyle.Document> 的样式格式化消息正文。 可以在服务协定级别或在操作协定级别指定这些设置。  
@@ -73,7 +73,7 @@ public interface IUseAndStyleCalculator
 }  
 ```  
   
- 若要查看不同的 <xref:System.ServiceModel.XmlSerializerFormatAttribute.Use%2A> 和 <xref:System.ServiceModel.XmlSerializerFormatAttribute.Style%2A> 设置之间的差异，请在服务中修改这些设置、重新生成客户端、运行示例并用服务跟踪查看器工具检查 c:\logs\message.logs 文件。 此外通过查看观察对元数据的影响 http://localhost/ServiceModelSamples/service.svc?wsdl 。 服务的元数据通常分为多页。 Wsdl 主页包含 WSDL 绑定，但查看 http://localhost/ServiceModelSamples/service.svc?wsdl=wsdl0 可观察到消息定义。  
+ 若要查看不同的 <xref:System.ServiceModel.XmlSerializerFormatAttribute.Use%2A> 和 <xref:System.ServiceModel.XmlSerializerFormatAttribute.Style%2A> 设置之间的差异，请在服务中修改这些设置、重新生成客户端、运行示例并用服务跟踪查看器工具检查 c:\logs\message.logs 文件。 此外通过查看观察对元数据的影响 `http://localhost/ServiceModelSamples/service.svc?wsdl` 。 服务的元数据通常分为多页。 Wsdl 主页包含 WSDL 绑定，但查看 `http://localhost/ServiceModelSamples/service.svc?wsdl=wsdl0` 可观察到消息定义。  
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>设置、生成和运行示例  
   

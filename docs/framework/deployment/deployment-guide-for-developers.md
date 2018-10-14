@@ -230,7 +230,7 @@ dotNetFx45_Full_x86_x64.exe /q /norestart /ChainingPackage Contoso
 
 - [检测](#detecting-the-language-packs) 用户计算机中是否已安装语言包。
 
-- 如果要控制部署，则静默启动并跟踪 .NET Framework 安装过程（请参阅 [How to: Get Progress from the .NET Framework 4.5 Installer](../../../docs/framework/deployment/how-to-get-progress-from-the-dotnet-installer.md)）。
+- 如果要控制部署，则静默启动并跟踪 .NET Framework 安装过程（请参阅 [如何：获取 .NET Framework 4.5 安装程序的进度](../../../docs/framework/deployment/how-to-get-progress-from-the-dotnet-installer.md)
 
 - 如果要部署脱机安装程序，则 [单独链接语言包](#chain_langpack)。
 

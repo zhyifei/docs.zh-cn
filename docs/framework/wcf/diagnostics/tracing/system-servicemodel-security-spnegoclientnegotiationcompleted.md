@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 ms.assetid: e80b1390-bb37-46aa-ab91-4ed187b2e09d
 author: BrucePerlerMS
 ms.openlocfilehash: e870e43fe4571b8bb6de499ecab5fa1c71ce0f3b
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48027161"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48844080"
 ---
 # <a name="systemservicemodelsecurityspnegoclientnegotiationcompleted"></a>System.ServiceModel.Security.SpnegoClientNegotiationCompleted
 System.ServiceModel.Security.SpnegoClientNegotiationCompleted  

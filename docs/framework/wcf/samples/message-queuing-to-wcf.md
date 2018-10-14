@@ -2,12 +2,12 @@
 title: 到 Windows Communication Foundation 的消息队列
 ms.date: 03/30/2017
 ms.assetid: 6d718eb0-9f61-4653-8a75-d2dac8fb3520
-ms.openlocfilehash: 16b9c9fa3c66ad86fe9502b14fc09ff8d543d58a
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: cbbbab700a6602fa02160733c383a0fcaa84297b
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47396989"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48850669"
 ---
 # <a name="message-queuing-to-windows-communication-foundation"></a>到 Windows Communication Foundation 的消息队列
 此示例演示消息队列 (MSMQ) 应用程序如何可以将 MSMQ 消息发送到 Windows Communication Foundation (WCF) 服务。 此服务是自承载控制台应用程序，通过它可以观察服务接收排队消息。  
@@ -19,131 +19,131 @@ ms.locfileid: "47396989"
  下面的示例代码演示订单处理服务的服务协定。  
 
 ```csharp
-// Define a service contract.  
-[ServiceContract(Namespace = "http://Microsoft.ServiceModel.Samples")]  
-[ServiceKnownType(typeof(PurchaseOrder))]  
-public interface IOrderProcessor  
-{  
-    [OperationContract(IsOneWay = true, Action = "*")]  
-    void SubmitPurchaseOrder(MsmqMessage<PurchaseOrder> msg);  
-}  
+// Define a service contract.
+[ServiceContract(Namespace = "http://Microsoft.ServiceModel.Samples")]
+[ServiceKnownType(typeof(PurchaseOrder))]
+public interface IOrderProcessor
+{
+    [OperationContract(IsOneWay = true, Action = "*")]
+    void SubmitPurchaseOrder(MsmqMessage<PurchaseOrder> msg);
+}
 ```
 
- 服务是自承载服务。 使用 MSMQ 时，必须提前创建所使用的队列。 可以手动或通过代码完成此操作。 在此示例中，该服务检查队列是否存在并在必要时创建队列。 从配置文件中读取队列名称。  
+ 服务是自承载服务。 使用 MSMQ 时，必须提前创建所使用的队列。 可以手动或通过代码完成此操作。 在此示例中，该服务检查队列是否存在并在必要时创建队列。 从配置文件中读取队列名称。
 
 ```csharp
-public static void Main()  
-{  
-    // Get the MSMQ queue name from the application settings in   
-    // configuration.  
-    string queueName = ConfigurationManager.AppSettings["queueName"];  
-    // Create the MSMQ queue if necessary.  
-    if (!MessageQueue.Exists(queueName))  
-        MessageQueue.Create(queueName, true);  
-    …  
-}  
+public static void Main()
+{
+    // Get the MSMQ queue name from the application settings in
+    // configuration.
+    string queueName = ConfigurationManager.AppSettings["queueName"];
+    // Create the MSMQ queue if necessary.
+    if (!MessageQueue.Exists(queueName))
+        MessageQueue.Create(queueName, true);
+    …
+}
 ```
 
- 该服务为 <xref:System.ServiceModel.ServiceHost> 创建和打开 `OrderProcessorService`，如下面的示例代码所示。  
+ 该服务为 <xref:System.ServiceModel.ServiceHost> 创建和打开 `OrderProcessorService`，如下面的示例代码所示。
 
 ```csharp
-using (ServiceHost serviceHost = new ServiceHost(typeof(OrderProcessorService)))  
-{  
-    serviceHost.Open();  
-    Console.WriteLine("The service is ready.");  
-    Console.WriteLine("Press <ENTER> to terminate service.");  
-    Console.ReadLine();  
-    serviceHost.Close();  
-}  
+using (ServiceHost serviceHost = new ServiceHost(typeof(OrderProcessorService)))
+{
+    serviceHost.Open();
+    Console.WriteLine("The service is ready.");
+    Console.WriteLine("Press <ENTER> to terminate service.");
+    Console.ReadLine();
+    serviceHost.Close();
+}
 ```
 
- MSMQ 队列名称在配置文件的 appSettings 节中指定，如以下示例配置所示。  
-  
+ MSMQ 队列名称在配置文件的 appSettings 节中指定，如以下示例配置所示。
+
 > [!NOTE]
->  队列名称为本地计算机使用圆点 (.)，并在其路径中使用反斜杠分隔符。 WCF 终结点地址指定 msmq.formatname 方案，并为本地计算机使用 localhost。 用于每个 MSMQ 格式名寻址指南的队列地址遵从 msmq.formatname 方案。  
-  
-```xml  
-<appSettings>  
-    <add key="orderQueueName" value=".\private$\Orders" />  
-</appSettings>  
-```  
-  
- 该客户端应用程序是一个 MSMQ 应用程序，它使用 <xref:System.Messaging.MessageQueue.Send%2A> 方法向队列发送持久的事务性消息，如下面的示例代码所示。  
+>  队列名称为本地计算机使用圆点 (.)，并在其路径中使用反斜杠分隔符。 WCF 终结点地址指定 msmq.formatname 方案，并为本地计算机使用 localhost。 用于每个 MSMQ 格式名寻址指南的队列地址遵从 msmq.formatname 方案。
 
-```csharp
-//Connect to the queue.  
-MessageQueue orderQueue = new MessageQueue(ConfigurationManager.AppSettings["orderQueueName"]);  
-  
-// Create the purchase order.  
-PurchaseOrder po = new PurchaseOrder();  
-po.CustomerId = "somecustomer.com";  
-po.PONumber = Guid.NewGuid().ToString();  
-  
-PurchaseOrderLineItem lineItem1 = new PurchaseOrderLineItem();  
-lineItem1.ProductId = "Blue Widget";  
-lineItem1.Quantity = 54;  
-lineItem1.UnitCost = 29.99F;  
-  
-PurchaseOrderLineItem lineItem2 = new PurchaseOrderLineItem();  
-lineItem2.ProductId = "Red Widget";  
-lineItem2.Quantity = 890;  
-lineItem2.UnitCost = 45.89F;  
-  
-po.orderLineItems = new PurchaseOrderLineItem[2];  
-po.orderLineItems[0] = lineItem1;  
-po.orderLineItems[1] = lineItem2;  
-  
-// Submit the purchase order.  
-Message msg = new Message();  
-msg.Body = po;  
-//Create a transaction scope.  
-using (TransactionScope scope = new TransactionScope(TransactionScopeOption.Required))  
-{  
-  
-    orderQueue.Send(msg, MessageQueueTransactionType.Automatic);  
-    // Complete the transaction.  
-    scope.Complete();  
-  
-}  
-Console.WriteLine("Placed the order:{0}", po);  
-Console.WriteLine("Press <ENTER> to terminate client.");  
-Console.ReadLine();  
+```xml
+<appSettings>
+    <add key="orderQueueName" value=".\private$\Orders" />
+</appSettings>
 ```
 
- 运行示例时，客户端和服务活动将显示在服务和客户端控制台窗口中。 您可以看到服务从客户端接收消息。 在每个控制台窗口中按 Enter 可以关闭服务和客户端。 请注意：由于正在使用队列，因此不必同时启动和运行客户端和服务。 例如，可以先运行客户端，再将其关闭，然后启动服务，这样服务仍然会收到客户端的消息。  
-  
-### <a name="to-setup-build-and-run-the-sample"></a>设置、生成和运行示例  
-  
-1.  请确保您具有执行[的 Windows Communication Foundation 示例的一次性安装过程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
-  
-2.  如果先运行服务，则它将检查以确保队列存在。 如果队列不存在，则服务将创建一个队列。 可以先运行服务以创建队列或通过 MSMQ 队列管理器创建一个队列。 执行下面的步骤来在 Windows 2008 中创建队列。  
-  
-    1.  在 [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] 中打开服务器管理器。  
-  
-    2.  展开**功能**选项卡。  
-  
-    3.  右键单击**私有消息队列**，然后选择**新建**，**专用队列**。  
-  
-    4.  检查**事务性**框。  
-  
-    5.  输入`ServiceModelSamplesTransacted`作为新队列的名称。  
-  
-3.  若要生成 C# 或 Visual Basic .NET 版本的解决方案，请按照 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)中的说明进行操作。  
-  
-4.  若要在单计算机配置中运行示例，请按照中的说明[运行 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/running-the-samples.md)。  
-  
-### <a name="to-run-the-sample-across-computers"></a>跨计算机运行示例  
-  
-1.  将 \service\bin\ 文件夹（在语言特定文件夹内）中的服务程序文件复制到服务计算机上。  
-  
-2.  将 \client\bin\ 文件夹（在语言特定文件夹内）中的客户端程序文件复制到客户端计算机上。  
-  
-3.  在 Client.exe.config 文件中，更改 orderQueueName 以指定服务计算机名称，而不是使用“.”。  
-  
-4.  在服务计算机上，在命令提示符下启动 Service.exe。  
-  
-5.  在客户端计算机上，在命令提示符下启动 Client.exe。  
-  
+ 该客户端应用程序是一个 MSMQ 应用程序，它使用 <xref:System.Messaging.MessageQueue.Send%2A> 方法向队列发送持久的事务性消息，如下面的示例代码所示。
+
+```csharp
+//Connect to the queue.
+MessageQueue orderQueue = new MessageQueue(ConfigurationManager.AppSettings["orderQueueName"]);
+
+// Create the purchase order.
+PurchaseOrder po = new PurchaseOrder();
+po.CustomerId = "somecustomer.com";
+po.PONumber = Guid.NewGuid().ToString();
+
+PurchaseOrderLineItem lineItem1 = new PurchaseOrderLineItem();
+lineItem1.ProductId = "Blue Widget";
+lineItem1.Quantity = 54;
+lineItem1.UnitCost = 29.99F;
+
+PurchaseOrderLineItem lineItem2 = new PurchaseOrderLineItem();
+lineItem2.ProductId = "Red Widget";
+lineItem2.Quantity = 890;
+lineItem2.UnitCost = 45.89F;
+
+po.orderLineItems = new PurchaseOrderLineItem[2];
+po.orderLineItems[0] = lineItem1;
+po.orderLineItems[1] = lineItem2;
+
+// Submit the purchase order.
+Message msg = new Message();
+msg.Body = po;
+//Create a transaction scope.
+using (TransactionScope scope = new TransactionScope(TransactionScopeOption.Required))
+{
+
+    orderQueue.Send(msg, MessageQueueTransactionType.Automatic);
+    // Complete the transaction.
+    scope.Complete();
+
+}
+Console.WriteLine("Placed the order:{0}", po);
+Console.WriteLine("Press <ENTER> to terminate client.");
+Console.ReadLine();
+```
+
+ 运行示例时，客户端和服务活动将显示在服务和客户端控制台窗口中。 您可以看到服务从客户端接收消息。 在每个控制台窗口中按 Enter 可以关闭服务和客户端。 请注意：由于正在使用队列，因此不必同时启动和运行客户端和服务。 例如，可以先运行客户端，再将其关闭，然后启动服务，这样服务仍然会收到客户端的消息。
+
+### <a name="to-setup-build-and-run-the-sample"></a>设置、生成和运行示例
+
+1.  请确保您具有执行[的 Windows Communication Foundation 示例的一次性安装过程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。
+
+2.  如果先运行服务，则它将检查以确保队列存在。 如果队列不存在，则服务将创建一个队列。 可以先运行服务以创建队列或通过 MSMQ 队列管理器创建一个队列。 执行下面的步骤来在 Windows 2008 中创建队列。
+
+    1.  在 Visual Studio 2012 中打开服务器管理器。
+
+    2.  展开**功能**选项卡。
+
+    3.  右键单击**私有消息队列**，然后选择**新建**，**专用队列**。
+
+    4.  检查**事务性**框。
+
+    5.  输入`ServiceModelSamplesTransacted`作为新队列的名称。
+
+3.  若要生成 C# 或 Visual Basic .NET 版本的解决方案，请按照 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)中的说明进行操作。
+
+4.  若要在单计算机配置中运行示例，请按照中的说明[运行 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/running-the-samples.md)。
+
+### <a name="to-run-the-sample-across-computers"></a>跨计算机运行示例
+
+1.  将 \service\bin\ 文件夹（在语言特定文件夹内）中的服务程序文件复制到服务计算机上。
+
+2.  将 \client\bin\ 文件夹（在语言特定文件夹内）中的客户端程序文件复制到客户端计算机上。
+
+3.  在 Client.exe.config 文件中，更改 orderQueueName 以指定服务计算机名称，而不是使用“.”。
+
+4.  在服务计算机上，在命令提示符下启动 Service.exe。
+
+5.  在客户端计算机上，在命令提示符下启动 Client.exe。
+
 > [!IMPORTANT]
 >  您的计算机上可能已安装这些示例。 在继续操作之前，请先检查以下（默认）目录：  
 >   

@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - basic samples [WCF], getting started
 ms.assetid: 967a3d94-0261-49ff-b85a-20bb07f1af20
-ms.openlocfilehash: dda11511904d452a3a5101417f8ab8a33c00204f
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 74c3b825bbd51a082f20e8e2009e1ca5f0b35100
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43857090"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48837142"
 ---
 # <a name="getting-started-sample"></a>入门示例
 此入门示例演示如何实现典型的服务和典型的客户端使用 Windows Communication Foundation (WCF)。 此示例是所有其他基本技术示例的基础。  
@@ -141,9 +141,9 @@ public class CalculatorService : ICalculator
   
  服务在 IIS 或 WAS 主机所提供的基址处公开该终结点。 绑定是用标准 <xref:System.ServiceModel.WSHttpBinding> 进行配置的，该标准配置提供 HTTP 通信以及用来进行寻址和实现安全性的标准 Web 服务协议。 协定是由服务实现的 `ICalculator`。  
   
- 经过配置之后，可以在访问服务 http://localhost/servicemodelsamples/service.svc在同一台计算机上的客户端。 若要使远程计算机上的客户端能够访问该服务，必须指定完全限定域名，而不是本地主机。  
+ 经过配置之后，可以在访问服务`http://localhost/servicemodelsamples/service.svc`在同一台计算机上的客户端。 若要使远程计算机上的客户端能够访问该服务，必须指定完全限定域名，而不是本地主机。  
   
- 默认情况下，框架不公开任何元数据。 在这种情况下，该服务将打开<xref:System.ServiceModel.Description.ServiceMetadataBehavior>，并公开一个元数据交换 (MEX) 终结点位于 http://localhost/servicemodelsamples/service.svc/mex。 下面的配置对此进行了演示。  
+ 默认情况下，框架不公开任何元数据。 在这种情况下，该服务将打开<xref:System.ServiceModel.Description.ServiceMetadataBehavior>，并公开一个元数据交换 (MEX) 终结点位于`http://localhost/servicemodelsamples/service.svc/mex`。 下面的配置对此进行了演示。  
   
 ```xaml  
 <system.serviceModel>  

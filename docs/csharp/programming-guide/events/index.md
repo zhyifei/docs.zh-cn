@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# language, events
 - events [C#]
 ms.assetid: a8e51b22-d294-44fb-9539-0072f06c4cb3
-ms.openlocfilehash: 03c2ffc37bc6c2e820b8e28599f415cde1be9be5
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 4031ff08bee945f019974ad590e9b3df6d9c263c
+ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43521952"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49086227"
 ---
 # <a name="events-c-programming-guide"></a>事件（C# 编程指南）
 [类](../../../csharp/language-reference/keywords/class.md) 或对象可以通过事件向其他类或对象通知发生的相关事情。 发送（或 *引发*）事件的类称为“发行者”  ，接收（或 *处理*）事件的类称为“订户” 。  
@@ -43,8 +43,6 @@ ms.locfileid: "43521952"
 -   [如何：在派生类中引发基类事件](../../../csharp/programming-guide/events/how-to-raise-base-class-events-in-derived-classes.md)  
   
 -   [如何：实现接口事件](../../../csharp/programming-guide/events/how-to-implement-interface-events.md)  
-  
--   [线程同步](../../../csharp/programming-guide/concepts/threading/thread-synchronization.md)  
   
 -   [如何：使用字典存储事件实例](../../../csharp/programming-guide/events/how-to-use-a-dictionary-to-store-event-instances.md)  
   

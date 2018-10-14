@@ -2,42 +2,42 @@
 title: 企业采购过程
 ms.date: 03/30/2017
 ms.assetid: a5e57336-4290-41ea-936d-435593d97055
-ms.openlocfilehash: a5e0d6191967c592d5a32baa7eee3f1659a27e50
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 1817b7af00abd9240eb427f61ed9f0255d51c60d
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43802906"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48837176"
 ---
 # <a name="corporate-purchase-process"></a>企业采购过程
-此示例演示如何使用自动最佳建议书选择来创建基于购买过程的非常基本的征求建议书 (RFP)。 它将 <xref:System.Activities.Statements.Parallel>、<xref:System.Activities.Statements.ParallelForEach%601>、<xref:System.Activities.Statements.ForEach%601> 和一个自定义活动组合在一起来创建一个表示该过程的工作流。  
-  
- 此示例包含一个 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 客户端应用程序，此应用程序允许以不同的参与者身份（如原始请求方或特定的供应商）与该过程进行交互。  
-  
-## <a name="requirements"></a>要求  
-  
--   [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)]。  
-  
--   [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]。  
-  
-## <a name="demonstrates"></a>演示  
-  
--   自定义活动。  
-  
--   活动的构成。  
-  
--   书签。  
-  
--   持久性。  
-  
--   程式化的持久性。  
-  
--   追踪。  
-  
--   跟踪。  
-  
--   在不同的客户端（[!INCLUDE[wf1](../../../../includes/wf1-md.md)] Web 应用程序和 WinForms 应用程序）中承载 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]。  
-  
+此示例演示如何使用自动最佳建议书选择来创建基于购买过程的非常基本的征求建议书 (RFP)。 它将 <xref:System.Activities.Statements.Parallel>、<xref:System.Activities.Statements.ParallelForEach%601>、<xref:System.Activities.Statements.ForEach%601> 和一个自定义活动组合在一起来创建一个表示该过程的工作流。
+
+ 此示例包含一个 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 客户端应用程序，此应用程序允许以不同的参与者身份（如原始请求方或特定的供应商）与该过程进行交互。
+
+## <a name="requirements"></a>要求
+
+-   Visual Studio 2012。
+
+-   [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]。
+
+## <a name="demonstrates"></a>演示
+
+-   自定义活动。
+
+-   活动的构成。
+
+-   书签。
+
+-   持久性。
+
+-   程式化的持久性。
+
+-   追踪。
+
+-   跟踪。
+
+-   在不同的客户端（[!INCLUDE[wf1](../../../../includes/wf1-md.md)] Web 应用程序和 WinForms 应用程序）中承载 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]。
+
 > [!IMPORTANT]
 >  您的计算机上可能已安装这些示例。 在继续操作之前，请先检查以下（默认）目录：  
 >   
@@ -143,7 +143,7 @@ ms.locfileid: "43802906"
   
 #### <a name="to-use-this-sample"></a>使用此示例  
   
-1.  使用 [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] 打开 PurchaseProcess.sln 解决方案文件。  
+1.  使用 Visual Studio 2010 打开 PurchaseProcess.sln 解决方案文件。  
   
 2.  若要执行 Web 客户端项目，请打开**解决方案资源管理器**，然后右键单击**Web 客户端**项目。 选择**设为启动项目**。  
   

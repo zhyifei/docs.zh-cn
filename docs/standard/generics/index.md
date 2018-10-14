@@ -28,12 +28,12 @@ helpviewer_keywords:
 ms.assetid: 2994d786-c5c7-4666-ab23-4c83129fe39c
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5e5aea783640a2aa2c9f4fa7754b9a3a435d1f13
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 104a0018896eb95255cf4054f9402ce5160b95f7
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33579062"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48584138"
 ---
 # <a name="generics-in-net"></a>.NET 中的泛型
 
@@ -115,7 +115,7 @@ ms.locfileid: "33579062"
   
 -   泛型委托可以在无需创建多个委托类的情况下进行类型安全的回调。 例如， <xref:System.Predicate%601> 泛型委托允许你创建一种为特定类型实现你自己的搜索标准的方法并将你的方法与 <xref:System.Array> 类型比如 <xref:System.Array.Find%2A>、 <xref:System.Array.FindLast%2A>和 <xref:System.Array.FindAll%2A>方法一起使用。  
   
--   泛型简化动态生成的代码。 使用具有动态生成的代码的泛型时，无需生成类型。 这会增加方案数量，在这些方案中你可以使用轻量动态方法而非生成整个程序集。 有关详细信息，请参阅“如何：定义和执行动态方法和 DynamicMethod。”  
+-   泛型简化动态生成的代码。 使用具有动态生成的代码的泛型时，无需生成类型。 这会增加方案数量，在这些方案中你可以使用轻量动态方法而非生成整个程序集。 有关详细信息，请参阅[如何：定义和执行动态方法](../../../docs/framework/reflection-and-codedom/how-to-define-and-execute-dynamic-methods.md)和 <xref:System.Reflection.Emit.DynamicMethod>。  
   
  以下是泛型的一些局限：  
   

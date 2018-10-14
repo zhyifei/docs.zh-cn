@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 431879b8-a5f8-4947-ad1e-4768c726aca8
-ms.openlocfilehash: d5b62d968c38401a19fc9009954450bef210e5a4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: bf8f719a47fda8b592165368234a2db0467c59ce
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33493277"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48835782"
 ---
 # <a name="how-to-create-a-basic-rss-feed"></a>如何：创建基本 RSS 源
-Windows Communication Foundation (WCF) 允许你创建公开联合源的服务。 本主题讨论如何创建公开 RSS 联合源的联合服务。  
+Windows Communication Foundation (WCF) 可以创建公开联合源的服务。 本主题讨论如何创建公开 RSS 联合源的联合服务。  
   
 ### <a name="to-create-a-basic-syndication-service"></a>创建基本联合服务  
   
@@ -64,7 +64,7 @@ Windows Communication Foundation (WCF) 允许你创建公开联合源的服务�
   
 ### <a name="to-call-getblog-with-an-http-get"></a>使用 HTTP GET 调用 GetBlog()  
   
-1.  打开 Internet Explorer，键入下面的 URL，然后按 ENTER: http://localhost:8000/BlogService/GetBlog。 URL 包含服务的基址 (http://localhost:8000/BlogService)，终结点，以及要调用的服务操作的相对地址。  
+1.  打开 Internet Explorer，键入以下 URL，并按 ENTER: `http://localhost:8000/BlogService/GetBlog`。 URL 包含服务的基址 (`http://localhost:8000/BlogService`)，终结点和要调用的服务操作的相对地址。  
   
 ### <a name="to-call-getblog-from-code"></a>从代码中调用 GetBlog()  
   

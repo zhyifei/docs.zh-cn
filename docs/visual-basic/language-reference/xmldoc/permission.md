@@ -6,11 +6,11 @@ helpviewer_keywords:
 - permission XML tag
 ms.assetid: 0edf0500-5cd7-49c0-9255-64c48f972b77
 ms.openlocfilehash: bcec5d968f5d0c5400c28e772df151b164888a47
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47205164"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48838203"
 ---
 # <a name="ltpermissiongt-visual-basic"></a>&lt;权限&gt;(Visual Basic)
 指定成员所需的权限。  

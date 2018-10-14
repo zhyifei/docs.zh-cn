@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1dc87b201638bab974c59722a69300977b14cf08
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 5825f0425947f109ed834879684357fef7b70959
+ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33426931"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49123769"
 ---
 # <a name="isymunmanagedwriterdefinesequencepoints-method"></a>ISymUnmanagedWriter::DefineSequencePoints 方法
-在当前方法内定义一组序列点。 每个起始行和起始列定义方法中的语句的开始。 每个结束行和结束列定义的方法内语句的末尾。 数组应按偏移量的升序排序。 位移始终被指从开始处的方法，以字节为单位。  
+在当前方法内定义一组序列点。 每个起始行和起始列定义一种方法中的语句的开始。 每个结束行和结束列定义一种方法中的语句的结束。 数组应以偏移量的升序进行排序。 偏移量始终是从开始处的方法，以字节为单位度量的。  
   
 ## <a name="syntax"></a>语法  
   
@@ -42,13 +42,13 @@ HRESULT DefineSequencePoints(
   
 #### <a name="parameters"></a>参数  
  `document`  
- [in]正在为其定义的序列点文档对象。  
+ [in]要为其定义序列点的文档对象。  
   
  `spCount`  
- [in]A `ULONG32` ，指示每个大小`offsets`， `lines`， `columns`， `endLines`，和`endColumns`缓冲区。  
+ [in]一个`ULONG32`，该值指示每个的大小`offsets`， `lines`， `columns`， `endLines`，并`endColumns`缓冲区。  
   
  `offsets`  
- [in]从方法的开头算起的序列点的偏移量。  
+ [in]从方法开始测量的序列点的偏移量。  
   
  `lines`  
  [in]序列点的起始行号。  
@@ -63,7 +63,7 @@ HRESULT DefineSequencePoints(
  [in]序列点的结束列号。 此参数可选。  
   
 ## <a name="return-value"></a>返回值  
- 如果该方法成功; 则为 S_OK否则为 E_FAIL 或某些其他错误代码。  
+ 如果方法成功，则为 S_OK否则为 E_FAIL 或某些其他错误代码。  
   
 ## <a name="requirements"></a>要求  
  **标头：** CorSym.idl、 CorSym.h  

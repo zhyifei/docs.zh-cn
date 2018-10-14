@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Svcutil.exe
 - clients [WCF], consuming services
 ms.assetid: 1abf3d9f-b420-46f1-b628-df238751f308
-ms.openlocfilehash: f9ae53aeb988f23611adb4b00354f65918790d3b
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 01a30ac6cb252eba51cfff8a221c28425f347b0a
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47200758"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48837254"
 ---
 # <a name="servicemodel-metadata-utility-tool-svcutilexe"></a>ServiceModel 元数据实用工具 (Svcutil.exe)
 
@@ -236,7 +236,7 @@ Svcutil.exe 可依据应用程序的已编译程序集生成必要的 C# 序列�
 
 使用 svcutil 生成服务的元数据时，您会收到以下消息：
 
-错误： 无法获取元数据从 http://localhost:8000/somesservice/mex读取 XML 数据时超过了最大名称表字符计数配额 (16384)。 名称表是用于存储在处理 XML 时所遇到的字符串的数据结构 - 具有非重复元素名称、特性名称和特性值的长 XML 文档可能会触发此配额。 通过更改在创建 XML 读取器时所使用的 XmlDictionaryReaderQuotas 对象的 MaxNameTableCharCount 属性，可增加此配额。
+错误： 无法获取元数据从`http://localhost:8000/somesservice/mex`读取 XML 数据时超过了最大名称表字符计数配额 (16384)。 名称表是用于存储在处理 XML 时所遇到的字符串的数据结构 - 具有非重复元素名称、特性名称和特性值的长 XML 文档可能会触发此配额。 通过更改在创建 XML 读取器时所使用的 XmlDictionaryReaderQuotas 对象的 MaxNameTableCharCount 属性，可增加此配额。
 
 如果您请求某个服务的元数据时返回大 WSDL 文件，则该服务会导致此错误。 问题在于超过了 svcutil.exe 工具的字符配额。 设置此值是为了帮助防止遭受拒绝服务 (dos) 攻击。 您可以通过为 svcutil 指定下面的配置文件来增加此配额。
 

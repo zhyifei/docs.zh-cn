@@ -9,21 +9,21 @@ helpviewer_keywords:
 - certificates [WCF], making X.509 certificates accessible to WCF
 - X.509 certificates [WCF], making accessible to WCF
 ms.assetid: a54e407c-c2b5-4319-a648-60e43413664b
-ms.openlocfilehash: cd13eae0a72ceaf5abfb93dfe84a53cfc3c8dec4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0917569b556c31413b715d75c83a96f3a4b015d7
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33493701"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48579967"
 ---
 # <a name="how-to-make-x509-certificates-accessible-to-wcf"></a>如何：使 X.509 证书可由 WCF 访问
-若要使 X.509 证书对 Windows Communication Foundation (WCF) 访问，应用程序代码必须指定的证书存储名称和位置。 在某些情况下，进程标识必须具有对包含私钥的文件的访问权限，此私钥与 X.509 证书相关联。 若要获取与证书存储中的 X.509 证书关联的私钥，WCF 必须有权这样做。 默认情况下，只有所有者和“系统”帐户才可以访问证书的私钥。  
+若要使 X.509 证书对 Windows Communication Foundation (WCF) 访问，应用程序代码必须指定证书存储区名称和位置。 在某些情况下，进程标识必须具有对包含私钥的文件的访问权限，此私钥与 X.509 证书相关联。 若要获取与证书存储区中的 X.509 证书关联的私钥，WCF 必须有权执行此操作。 默认情况下，只有所有者和“系统”帐户才可以访问证书的私钥。  
   
 ### <a name="to-make-x509-certificates-accessible-to-wcf"></a>使 X.509 证书可由 WCF 访问  
   
 1.  为提供的 WCF 的运行的帐户读取访问权限到包含与 X.509 证书关联的私钥的文件。  
   
-    1.  确定 WCF 是否需要的 X.509 证书的私钥的读取访问。  
+    1.  确定是否 WCF 需要读取访问权限的私钥的 X.509 证书。  
   
          下表详细描述在使用某个 X.509 证书时是否必须提供私钥。  
   
@@ -41,9 +41,9 @@ ms.locfileid: "33493701"
          [!code-csharp[x509Accessible#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/x509accessible/cs/source.cs#1)]
          [!code-vb[x509Accessible#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/x509accessible/vb/source.vb#1)]  
   
-    3.  确定证书的私钥的计算机上位于使用[FindPrivateKey](../../../../docs/framework/wcf/samples/findprivatekey.md)工具。  
+    3.  确定证书的私钥在计算机上位于通过[FindPrivateKey](../../../../docs/framework/wcf/samples/findprivatekey.md)工具。  
   
-         [FindPrivateKey](../../../../docs/framework/wcf/samples/findprivatekey.md)工具需要证书存储名称、 证书存储位置和内容唯一标识该证书。 此工具接受将证书的主题名称或其指纹作为唯一标识符。 有关如何确定证书的指纹的详细信息，请参阅[如何： 检索证书的指纹](../../../../docs/framework/wcf/feature-details/how-to-retrieve-the-thumbprint-of-a-certificate.md)。  
+         [FindPrivateKey](../../../../docs/framework/wcf/samples/findprivatekey.md)工具需要证书存储区名称、 证书存储区位置和内容可唯一标识的证书。 此工具接受将证书的主题名称或其指纹作为唯一标识符。 有关如何确定证书的指纹的详细信息，请参阅[如何： 检索证书的指纹](../../../../docs/framework/wcf/feature-details/how-to-retrieve-the-thumbprint-of-a-certificate.md)。  
   
          下面的代码示例使用[FindPrivateKey](../../../../docs/framework/wcf/samples/findprivatekey.md)工具来确定的位置中的证书的私钥`My`将存储在`CurrentUser`指纹为`46 dd 0e 7a ed 0b 7a 31 9b 02 a3 a0 43 7a d8 3f 60 40 92 9d`。  
   
@@ -53,7 +53,7 @@ ms.locfileid: "33493701"
   
     4.  确定 WCF 下运行的帐户。  
   
-         下表详细说明了在给定方案在其下运行 WCF 的帐户。  
+         下表详细说明 WCF 运行在给定方案的帐户。  
   
         |方案|进程标识|  
         |--------------|----------------------|  
@@ -62,15 +62,15 @@ ms.locfileid: "33493701"
         |在 IIS 6.0 ([!INCLUDE[ws2003](../../../../includes/ws2003-md.md)]) 或 IIS 7.0 ([!INCLUDE[wv](../../../../includes/wv-md.md)]) 中承载的服务。|NETWORK SERVICE|  
         |在 IIS 5.X ([!INCLUDE[wxp](../../../../includes/wxp-md.md)]) 中承载的服务。|由 Machine.config 文件中的 `<processModel>` 元素控制。 默认帐户为 ASPNET。|  
   
-    5.  授予对包含到 WCF 运行时所使用 cacls.exe 等工具的帐户的私钥的文件的读取访问权限。  
+    5.  授予对包含到 WCF 运行时所使用 icacls.exe 之类的工具的帐户的私钥的文件的读取访问权限。  
   
-         下面的代码示例编辑 (/E) 指定文件的访问控制列表 (ACL)，以向“NETWORK SERVICE”帐户授予 (/G) 对此文件的读 (:R) 访问权限。  
+         下面的代码示例编辑的自由访问控制列表 (DACL) 授予 NETWORK SERVICE 帐户读取指定的文件 (: R) 对文件的访问。  
   
         ```  
-        cacls.exe "C:\Documents and Settings\All Users\Application Data\Microsoft\Crypto\RSA\MachineKeys\8aeda5eb81555f14f8f9960745b5a40d_38f7de48-5ee9-452d-8a5a-92789d7110b1" /E /G "NETWORK SERVICE":R  
+        icacls.exe "C:\Documents and Settings\All Users\Application Data\Microsoft\Crypto\RSA\MachineKeys\8aeda5eb81555f14f8f9960745b5a40d_38f7de48-5ee9-452d-8a5a-92789d7110b1" /grant "NETWORK SERVICE":R  
         ```  
   
 ## <a name="see-also"></a>请参阅  
- [FindPrivateKey](../../../../docs/framework/wcf/samples/findprivatekey.md)  
- [如何：检索证书的指纹](../../../../docs/framework/wcf/feature-details/how-to-retrieve-the-thumbprint-of-a-certificate.md)  
- [使用证书](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
+- [FindPrivateKey](../../../../docs/framework/wcf/samples/findprivatekey.md)  
+- [如何：检索证书的指纹](../../../../docs/framework/wcf/feature-details/how-to-retrieve-the-thumbprint-of-a-certificate.md)  
+- [使用证书](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)

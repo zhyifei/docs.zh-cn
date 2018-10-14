@@ -3,12 +3,12 @@ title: 控制台应用程序
 description: 此教程将介绍 .NET Core 和 C# 语言的许多功能。
 ms.date: 03/06/2017
 ms.assetid: 883cd93d-50ce-4144-b7c9-2df28d9c11a0
-ms.openlocfilehash: bae03c9ae02f2888b1b70617ca712ef7927e9dce
-ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
+ms.openlocfilehash: da3f8f913d452b5c3c9dcda6079067c879a678dd
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37961412"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "46937587"
 ---
 # <a name="console-application"></a>控制台应用程序
 
@@ -20,7 +20,7 @@ ms.locfileid: "37961412"
 - .NET 中文件 I/O API 的基础知识
 - .NET 中基于任务的异步编程基础知识
 
-你将生成一个应用程序，用于读取文本文件，然后将文本文件的内容回显到控制台。 按配速大声朗读控制台输出。 可以按“<”或“>”键加速或减速显示。
+你将生成一个应用程序，用于读取文本文件，然后将文本文件的内容回显到控制台。 按配速大声朗读控制台输出。 可以按“<”（小于）或“>”（大于）键加速或减速显示。
 
 此教程将介绍许多功能。 我们将逐个生成这些功能。
 
@@ -190,7 +190,7 @@ ShowTeleprompter().Wait();
 > [!NOTE]
 > 如果使用 C# 7.1 或更高版本，则可以使用 [`async` `Main` 方法](../whats-new/csharp-7-1.md#async-main)创建控制台应用程序。
 
-接下来，需要编写第二个异步方法，从控制台读取键，并监视“<”和“>”键。 下面是为此任务添加的方法：
+接下来，需要编写第二个异步方法，从控制台读取键，并监视“<”（小于）和“>”（大于）键。 下面是为此任务添加的方法：
 
 ```csharp
 private static async Task GetInput()
@@ -214,7 +214,7 @@ private static async Task GetInput()
 }
 ```
 
-这创建了一个表示 <xref:System.Action> 委托的 lambda 表达式，用于在用户按“<”或“>”键时，从控制台读取键，并修改表示延迟的局部变量。 此方法使用 <xref:System.Console.ReadKey> 来阻止并等待用户按键。
+这创建了一个表示 <xref:System.Action> 委托的 lambda 表达式，用于在用户按“<”（小于）或“>”（大于）键时，从控制台读取键，并修改表示延迟的局部变量。 此方法使用 <xref:System.Console.ReadKey> 来阻止并等待用户按键。
 
 若要完成这项功能，需要新建 `async Task` 返回方法，用于启动这两项任务（`GetInput` 和 `ShowTeleprompter`），并管理这两项任务之间共享的数据。
 
@@ -277,10 +277,10 @@ private static async Task RunTeleprompter()
 private static async Task ShowTeleprompter(TelePrompterConfig config)
 {
     var words = ReadFrom("sampleQuotes.txt");
-    foreach (var line in words)
+    foreach (var word in words)
     {
-        Console.Write(line);
-        if (!string.IsNullOrWhiteSpace(line))
+        Console.Write(word);
+        if (!string.IsNullOrWhiteSpace(word))
         {
             await Task.Delay(config.DelayInMilliseconds);
         }

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - service behaviors, metadata publishing sample
 - Metadata Publishing Behaviors Sample [Windows Communication Foundation]
 ms.assetid: 78c13633-d026-4814-910e-1c801cffdac7
-ms.openlocfilehash: c3e26454cc9b29620d80a86df7d7aee131e18200
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: b728d1c5a794fa6e0cadef136050d8fa31fb4afe
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47197070"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48838788"
 ---
 # <a name="metadata-publishing-behavior"></a>元数据发布行为
 “元数据发布行为”示例演示如何控制服务的元数据发布功能。 若要防止无意中泄漏可能敏感的服务元数据，Windows Communication Foundation (WCF) 服务的默认配置，请禁用元数据发布。 默认情况下此行为是安全的，但也意味着你无法使用元数据导入工具（例如 Svcutil.exe）生成调用服务所需的客户端代码，除非在配置中显式启用服务的元数据发布行为。  
@@ -23,7 +23,7 @@ ms.locfileid: "47197070"
 > [!NOTE]
 >  本主题的最后介绍了此示例的设置过程和生成说明。  
   
- 若要使服务公开元数据，必须在服务上配置 <xref:System.ServiceModel.Description.ServiceMetadataBehavior>。 当存在此行为时，可以通过如下方法发布元数据：配置一个终结点，将 <xref:System.ServiceModel.Description.IMetadataExchange> 协定作为 WS-MetadataExchange (MEX) 协议的实现来公开。 为方便起见，为此协定指定了缩写的配置名称“IMetadataExchange”。 此示例使用的是 `mexHttpBinding`，这是一种便于使用的标准绑定，与安全模式设置为 `wsHttpBinding` 的 `None` 等效。 使用相对地址"mex"在终结点，此操作时解决针对基本服务地址会导致终结点地址的 http://localhost/servicemodelsamples/service.svc/mex。 下面演示了行为配置：  
+ 若要使服务公开元数据，必须在服务上配置 <xref:System.ServiceModel.Description.ServiceMetadataBehavior>。 当存在此行为时，可以通过如下方法发布元数据：配置一个终结点，将 <xref:System.ServiceModel.Description.IMetadataExchange> 协定作为 WS-MetadataExchange (MEX) 协议的实现来公开。 为方便起见，为此协定指定了缩写的配置名称“IMetadataExchange”。 此示例使用的是 `mexHttpBinding`，这是一种便于使用的标准绑定，与安全模式设置为 `wsHttpBinding` 的 `None` 等效。 使用相对地址"mex"在终结点，此操作时解决针对基本服务地址会导致终结点地址的`http://localhost/servicemodelsamples/service.svc/mex`。 下面演示了行为配置：  
   
 ```xml  
 <behaviors>  
@@ -55,7 +55,7 @@ ms.locfileid: "47197070"
           contract="IMetadataExchange" />  
 ```  
   
- 此示例将 <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpGetEnabled%2A> 属性设置为 `true`，它还使用 HTTP GET 公开服务的元数据。 若要启用 HTTP GET 元数据终结点，服务必须具有 HTTP 基址。 在服务的基址中使用了查询字符串 `?wsdl` 以访问元数据。 例如，若要查看 Web 浏览器中服务的 WSDL 应该使用的地址 http://localhost/servicemodelsamples/service.svc?wsdl。 或者，可以通过将 <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpsGetEnabled%2A> 设置为 `true`，使用此行为通过 HTTPS 公开元数据。 这需要一个 HTTPS 基址。  
+ 此示例将 <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpGetEnabled%2A> 属性设置为 `true`，它还使用 HTTP GET 公开服务的元数据。 若要启用 HTTP GET 元数据终结点，服务必须具有 HTTP 基址。 在服务的基址中使用了查询字符串 `?wsdl` 以访问元数据。 例如，若要查看 Web 浏览器中服务的 WSDL 应该使用的地址`http://localhost/servicemodelsamples/service.svc?wsdl`。 或者，可以通过将 <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpsGetEnabled%2A> 设置为 `true`，使用此行为通过 HTTPS 公开元数据。 这需要一个 HTTPS 基址。  
   
  若要访问服务的 MEX 终结点，请使用[ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)。  
   
@@ -63,7 +63,7 @@ ms.locfileid: "47197070"
   
  这将根据服务的元数据生成一个客户端。  
   
- 若要访问使用 HTTP GET 的服务的元数据，在浏览器指向 http://localhost/servicemodelsamples/service.svc?wsdl。  
+ 若要访问使用 HTTP GET 的服务的元数据，在浏览器指向`http://localhost/servicemodelsamples/service.svc?wsdl`。  
   
  如果移除此行为并尝试打开服务，将引发异常。 发生此错误是因为，如果没有该行为，使用 `IMetadataExchange` 协定配置的终结点则没有实现。  
   

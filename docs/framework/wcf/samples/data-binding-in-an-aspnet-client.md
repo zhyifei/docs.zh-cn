@@ -2,12 +2,12 @@
 title: ASP.NET 客户端中的数据绑定
 ms.date: 03/30/2017
 ms.assetid: 68b49fa6-94e7-4d4c-a34e-902a2b3770b6
-ms.openlocfilehash: a3d4213729c8025592a756242a6174d7ace63eaa
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: dde5ec9ac944b205051b2499c7aceac2e6d84b92
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43511639"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48850229"
 ---
 # <a name="data-binding-in-an-aspnet-client"></a>ASP.NET 客户端中的数据绑定
 此示例演示如何将 Web 窗体应用程序中的典型 Windows Communication Foundation (WCF) 服务返回的数据绑定。  
@@ -27,7 +27,7 @@ ms.locfileid: "43511639"
   
 2.  若要生成 C# 或 Visual Basic .NET 版本的解决方案，请按照 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)中的说明进行操作。  
   
-3.  本示例的客户端是运行在开发 Web 服务器下的网站。 若要启动开发 Web 服务器，在命令提示符下键入以下内容:"`%SystemDrive%\Program Files\Common Files\Microsoft Shared\DevServer\9.0\WebDev.WebServer.EXE" /port:8000 /path:<WebFormsSamplePath>\CS\client /vpath:/client`。 然后浏览到 http://localhost:8000/client。 若要跨计算机运行此示例，请在客户端的 Web.config 文件中将所有对 `localhost` 的引用替换为服务器的计算机名称。  
+3.  本示例的客户端是运行在开发 Web 服务器下的网站。 若要启动开发 Web 服务器，在命令提示符下键入以下内容： `%SystemDrive%\Program Files\Common Files\Microsoft Shared\DevServer\9.0\WebDev.WebServer.EXE" /port:8000 /path:<WebFormsSamplePath>\CS\client /vpath:/client`。 然后浏览到`http://localhost:8000/client`。 若要跨计算机运行此示例，请在客户端的 Web.config 文件中将所有对 `localhost` 的引用替换为服务器的计算机名称。  
   
 > [!IMPORTANT]
 >  您的计算机上可能已安装这些示例。 在继续操作之前，请先检查以下（默认）目录：  
@@ -36,6 +36,4 @@ ms.locfileid: "43511639"
 >   
 >  如果此目录不存在，请转到[Windows Communication Foundation (WCF) 和.NET Framework 4 的 Windows Workflow Foundation (WF) 示例](https://go.microsoft.com/fwlink/?LinkId=150780)若要下载所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
 >   
->  `<InstallDrive>:\WF_WCF_Samples\WCF\Scenario\DataBinding\WebForms`  
-  
-## <a name="see-also"></a>请参阅
+>  `<InstallDrive>:\WF_WCF_Samples\WCF\Scenario\DataBinding\WebForms`

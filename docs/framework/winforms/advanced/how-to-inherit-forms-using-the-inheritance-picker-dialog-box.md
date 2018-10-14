@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Inheritance Picker dialog box
 - inherited forms [Windows Forms], creating
 ms.assetid: 969b4c04-12aa-4297-93a2-0ae747447823
-ms.openlocfilehash: 5bcd29531858f9cf014042db7ee447cecfdd89b1
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 7a6de60ec7621792b4f19857a2743f64cbdc686c
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43525739"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48837292"
 ---
 # <a name="how-to-inherit-forms-using-the-inheritance-picker-dialog-box"></a>如何：使用“继承选择器”对话框继承窗体
 继承窗体或其他对象最简单的方法是使用“继承选择器”对话框。 通过该对话框，可以充分利用在其他解决方案中创建的代码或用户界面 (UI)。  
@@ -27,7 +27,7 @@ ms.locfileid: "43525739"
   
      此时将打开“添加新项”对话框。  
   
-2.  选择“继承的窗体”模板，并在“名称”框中命名。 单击“添加”按钮继续。  
+2.  搜索**继承的窗体**模板从 searchbox 或通过单击**Windows 窗体**类别中，选择它，并将其在命名**名称**框。 单击“添加”按钮继续。  
   
      此时将打开“继承选择器”。 如果当前项目已经包含窗体，则它们将显示在“继承选择器”对话框中。  
   

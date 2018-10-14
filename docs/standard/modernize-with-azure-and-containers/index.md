@@ -3,13 +3,13 @@ title: 更新现有.NET 应用程序与 Azure 云和 Windows 容器 （第二版
 description: 了解如何迁移并更新现有应用程序对 Azure 云以及与此电子书的容器。
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 4/28/2018
-ms.openlocfilehash: 07e1a1e2ef145dce1b292d9425f33fcd99ffd1ae
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.date: 04/28/2018
+ms.openlocfilehash: f4ca3789ec4b3d84960f2ecd4494a899339a787b
+ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45746999"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49121436"
 ---
 # <a name="modernize-existing-net-applications-with-azure-cloud-and-windows-containers-2nd-edition"></a>更新现有.NET 应用程序使用 Azure 云和 Windows 容器 （第二版）
 
@@ -25,7 +25,7 @@ Redmond, Washington 98052-6399
 
 保留所有权利。 未经发布者书面许可，不得以任何形式或任何方式复制本书中的任何内容。
 
-本书位于免费电子书 （电子图书） 可通过 microsoft 的多个通道的形式如 http://dot.net/architecture 。
+本书位于免费电子书 （电子图书） 可通过 microsoft 的多个通道的形式如 <http://dot.net/architecture> 。
 
 若要了解本书的相关问题，请发送电子邮件至 [dotnet-architecture-ebooks-feedback@service.microsoft.com](mailto:dotnet-architecture-ebooks-feedback@service.microsoft.com?subject=Feedback%20for%20.NET%20Container%20&%20Microservices%20Architecture%20book)
 
@@ -33,7 +33,7 @@ Redmond, Washington 98052-6399
 
 本书中提及的一些示例仅用于说明，纯属虚构。 不存在任何实际关联或联系，请勿妄加推断。
 
-Microsoft 和 http://www.microsoft.com 上“商标”网页列出的商标是 Microsoft 集团公司的商标。 所有其他标记均为其各自所有者的财产。
+Microsoft 和 <https://www.microsoft.com> 上“商标”网页列出的商标是 Microsoft 集团公司的商标。 所有其他标记均为其各自所有者的财产。
 
 作者:
 > **Cesar de la Torre**，Microsoft Corp. .NET 产品团队的高级项目经理。

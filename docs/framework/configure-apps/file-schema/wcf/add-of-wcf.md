@@ -2,17 +2,17 @@
 title: WCF 的 &lt;add&gt;
 ms.date: 03/30/2017
 ms.assetid: c196f6d7-77f6-4266-973c-305b2b4dd8a2
-ms.openlocfilehash: 31c2274b4e9f40f503e9cd2e673572f61ef66083
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 8b1bd0ef77cb1ecad4ada8db66c6c7da3b6ba997
+ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32748183"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49087188"
 ---
 # <a name="ltaddgt-of-wcf"></a>WCF 的 &lt;add&gt;
 配置一个跟踪参与者，它侦听直接从运行时发出的跟踪记录，并按照配置跟踪参与者的任何方式处理这些记录。 这包括写入特定输出（例如，文件、控制台、ETW）、处理/聚合记录或可能需要的任何其他组合。  
   
- 工作流跟踪和跟踪参与者的详细信息，请参阅[工作流跟踪](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)和[跟踪参与者](../../../../../docs/framework/windows-workflow-foundation/tracking-participants.md)。  
+ 工作流跟踪和跟踪参与者的详细信息，请参阅[工作流跟踪](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)并[跟踪参与者](../../../../../docs/framework/windows-workflow-foundation/tracking-participants.md)。  
   
  \<system.serviceModel>  
 \<跟踪 >  
@@ -22,7 +22,13 @@ ms.locfileid: "32748183"
 ## <a name="syntax"></a>语法  
   
 ```xml
-   <tracking>    <participants>       <add name="String"            profileName="String"           type="String" />    </participants> </tracking>
+<tracking>
+  <participants>
+    <add name="String"           
+         profileName="String"
+         type="String" />
+  </participants>
+</tracking>  
 ```
 
 ## <a name="attributes-and-elements"></a>特性和元素  
@@ -50,7 +56,7 @@ ms.locfileid: "32748183"
   
  多个跟踪参与者可同时使用跟踪事件。 每个跟踪参与者都可与不同的跟踪配置文件关联。  
   
- 提供了将跟踪记录写入 ETW 会话的标准跟踪参与者。 通过在配置文件中添加特定于跟踪的行为，可以对工作流服务配置参与者。 通过启用 ETW 跟踪参与者，可以在事件查看器中查看跟踪记录。 如果这不能满足您的需求，您还可以编写自定义跟踪参与者。  
+ 提供了将跟踪记录写入 ETW 会话的标准跟踪参与者。 通过在配置文件中添加特定于跟踪的行为，可以对工作流服务配置参与者。 通过启用 ETW 跟踪参与者，可以在事件查看器中查看跟踪记录。 如果这不能满足您的要求，您还可以编写自定义跟踪参与者。  
   
 ## <a name="example"></a>示例  
  下面的配置示例演示在 Web.config 文件中配置的标准 ETW 跟踪参与者。  

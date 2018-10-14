@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - data contracts [WCF], schema reference
 ms.assetid: 9ebb0ebe-8166-4c93-980a-7c8f1f38f7c0
-ms.openlocfilehash: 5eb4caee5c2057e112ed4f5a88f46fa82b1f57cc
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 33661061e1a5db4f7826c1a8eca188f8c782b58f
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44088032"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48873714"
 ---
 # <a name="data-contract-schema-reference"></a>数据协定架构参考
 本主题介绍 <xref:System.Runtime.Serialization.DataContractSerializer> 用来描述 XML 序列化的公共语言运行库 (CLR) 类型的 XML 架构 (XSD) 的子集。  
@@ -32,7 +32,7 @@ ms.locfileid: "44088032"
   
 ## <a name="general-information"></a>常规信息  
   
--   架构命名空间所述[XML 架构](https://go.microsoft.com/fwlink/?LinkId=95475)。 在此文档中使用前缀“xs”。  
+-   架构命名空间在 [XML 架构](https://go.microsoft.com/fwlink/?LinkId=95475)中描述。 在此文档中使用前缀“xs”。  
   
 -   将忽略具有非架构命名空间的任何属性。  
   
@@ -47,7 +47,7 @@ ms.locfileid: "44088032"
 |`elementFormDefault`|必须进行限定。 必须对一个架构的所有元素进行限定才能得到 `DataContractSerializer`的支持。 这可以通过这两个设置来实现xs:schema/@elementFormDefault为"qualified"或通过设置xs:element/@form为"qualified"上每个单独元素声明。|  
 |`finalDefault`|已忽略。|  
 |`Id`|已忽略。|  
-|`targetNamespace`|支持，并已映射到数据协定命名空间。 如果未指定此属性，则使用空白命名空间。 不能为保留的命名空间 http://schemas.microsoft.com/2003/10/Serialization/ 。|  
+|`targetNamespace`|支持，并已映射到数据协定命名空间。 如果未指定此属性，则使用空白命名空间。 不能为保留的命名空间 `http://schemas.microsoft.com/2003/10/Serialization/` 。|  
 |`version`|已忽略。|  
   
 ### <a name="xsschema-contents"></a>\<xs:schema >： 内容  
@@ -56,13 +56,13 @@ ms.locfileid: "44088032"
 |--------------|------------|  
 |`include`|支持。 `DataContractSerializer` 支持 xs:include 和 xs:import。 但是，从本地文件加载元数据时，Svcutil.exe 会限制下面的 `xs:include/@schemaLocation` 和 `xs:import/@location` 引用。 在这种情况下，必须通过带外机制而非通过 `include` 来传递架构文件的列表；将忽略 `include`架构文档。|  
 |`redefine`|已禁止。 出于安全方面的原因， `xs:redefine` 禁止使用 `DataContractSerializer` ： `x:redefine` 要求后跟 `schemaLocation` 。 在某些情况下，使用 DataContract 的 Svcutil.exe 会限制 `schemaLocation`的使用。|  
-|`import`|支持。 `DataContractSerializer` 支持 `xs:include` 和 `xs:import`。 但是，从本地文件加载元数据时，Svcutil.exe 会限制下面的 `xs:include/@schemaLocation` 和 `xs:import/@location` 引用。 在这种情况下，必须通过带外机制而非通过 `include` 来传递架构文件的列表；将忽略 `include`架构文档。|  
+|`import`|支持。 `DataContractSerializer` 支持 `xs:include` 和 `xs:import`。 但是，从本地文件加载元数据时，Svcutil.exe 会限制下面的 `xs:include/@schemaLocation` 和 `xs:import/@location` 引用。 在这种情况下，必须通过带外机制而非通过 `include` 来传递架构文件的列表；将忽略 `include` 架构文档。|  
 |`simpleType`|支持。 请参见“ `xs:simpleType` ”一节。|  
 |`complexType`|支持，将映射到数据协定。 请参见“ `xs:complexType` ”一节。|  
-|`group`|已忽略。 `DataContractSerializer` 不支持使用 `xs:group`、 `xs:attributeGroup`和 `xs:attribute`。 这些声明将作为 `xs:schema`子级被忽略，但无法从 `complexType` 或其他支持的结构内引用。|  
+|`group`|已忽略。 `DataContractSerializer` 不支持使用 `xs:group`、 `xs:attributeGroup`和 `xs:attribute`。 这些声明将作为 `xs:schema` 子级被忽略，但无法从 `complexType` 或其他支持的结构内引用。|  
 |`attributeGroup`|已忽略。 `DataContractSerializer` 不支持使用 `xs:group`、 `xs:attributeGroup`和 `xs:attribute`。 这些声明将作为 `xs:schema`子级被忽略，但无法从 `complexType` 或其他支持的结构内引用。|  
 |`element`|支持。 请参见“全局元素声明 (GED)”。|  
-|`attribute`|已忽略。 `DataContractSerializer` 不支持使用 `xs:group`、 `xs:attributeGroup`和 `xs:attribute`。 这些声明将作为 `xs:schema`子级被忽略，但无法从 `complexType` 或其他支持的结构内引用。|  
+|`attribute`|已忽略。 `DataContractSerializer` 不支持使用 `xs:group`、 `xs:attributeGroup`和 `xs:attribute`。 这些声明将作为 `xs:schema` 子级被忽略，但无法从 `complexType` 或其他支持的结构内引用。|  
 |`notation`|已忽略。|  
   
 ## <a name="complex-types--xscomplextype"></a>复杂类型 – \<xs:complexType >  
@@ -524,7 +524,7 @@ public class Employee : Person
 |`positiveInteger`|<xref:System.Int64>。|  
   
 ## <a name="iserializable-types-mapping"></a>ISerializable 类型映射  
- 在 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 版本 1.0 中，已引入 `ISerializable` 作为一种用于序列化持久性或数据传输对象的机制。 有许多实现 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 的 `ISerializable` 类型，这些类型可以在应用程序之间进行传递。 `DataContractSerializer` 自然支持 `ISerializable` 类。 `DataContractSerializer` 映射到 `ISerializable` 实现架构类型，这些类型仅在类型的 QName（限定名）上存在不同，并且实际上是属性集合。 例如，`DataContractSerializer`映射<xref:System.Exception>到中的以下 XSD 类型 http://schemas.datacontract.org/2004/07/System 命名空间。  
+ 在 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 版本 1.0 中，已引入 `ISerializable` 作为一种用于序列化持久性或数据传输对象的机制。 有许多实现 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 的 `ISerializable` 类型，这些类型可以在应用程序之间进行传递。 `DataContractSerializer` 自然支持 `ISerializable` 类。 `DataContractSerializer` 映射到 `ISerializable` 实现架构类型，这些类型仅在类型的 QName（限定名）上存在不同，并且实际上是属性集合。 例如，`DataContractSerializer`映射<xref:System.Exception>到中的以下 XSD 类型 `http://schemas.datacontract.org/2004/07/System` 命名空间。  
   
 ```xml  
 <xs:complexType name="Exception">  
@@ -541,7 +541,7 @@ public class Employee : Person
 ## <a name="datacontract-serialization-schema"></a>DataContract 序列化架构  
  许多由 `DataContractSerializer` 导出的架构都使用一个特殊数据协定序列化命名空间中的类型、元素和属性：  
   
- http://schemas.microsoft.com/2003/10/Serialization  
+ `http://schemas.microsoft.com/2003/10/Serialization`
   
  下面是一个完整的数据协定序列化架构声明。  
   

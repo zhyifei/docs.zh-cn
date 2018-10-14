@@ -4,12 +4,12 @@ description: 了解如何检测和缓解与使用填充的密码块链 (CBC) 模
 ms.date: 06/12/2018
 author: blowdart
 ms.author: mairaw
-ms.openlocfilehash: 6d16b6849bfd4744f1828cda38a537f842243c1d
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: 4f1d6df3c0368fa0273d871ff32564c159e62a2c
+ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47109295"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49123639"
 ---
 # <a name="timing-vulnerabilities-with-cbc-mode-symmetric-decryption-using-padding"></a>计时漏洞 CBC 模式下使用填充的对称解密
 
@@ -65,7 +65,7 @@ Oracle 是指"告诉"它为提供了有关他们正在执行的操作是否是�
 
 为"填充 oracle 攻击"已知存在超过 10 年的已知漏洞的类。 这些漏洞允许攻击者能够解密加密的对称块算法，如 AES 和 3DES，使用不超过 4096 个尝试每个数据块的数据。 这些漏洞使这一事实的块加密法使用最常用的末尾的可验证填充数据。 已找到它，是否攻击者可以篡改已加密文本，并找出是否被篡改的末尾填充格式导致出现错误，则攻击者可以解密的数据。
 
-最初，实际的攻击已根据服务将返回不同的错误代码根据填充是否有效，如 ASP.NET 漏洞[MS10 070](https://technet.microsoft.com/library/security/ms10-070.aspx)。 但是，Microsoft 现在认为它是实际执行类似的攻击使用仅计时处理有效和无效的填充之间的差异。
+最初，实际的攻击已根据服务将返回不同的错误代码根据填充是否有效，如 ASP.NET 漏洞[MS10 070](/security-updates/SecurityBulletins/2010/ms10-070)。 但是，Microsoft 现在认为它是实际执行类似的攻击使用仅计时处理有效和无效的填充之间的差异。
 
 提供的加密方案使用一个签名，而与给定长度的 （不考虑内容） 的数据固定的运行时执行签名验证，数据完整性可以验证而不发送到的任何信息攻击者通过[端通道](https://en.wikipedia.org/wiki/Side-channel_attack)。 完整性检查会拒绝被篡改的任何消息，因为填充 oracle 威胁缓解。
 

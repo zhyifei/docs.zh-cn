@@ -4,12 +4,12 @@ description: 适用于容器化 .NET 应用程序的 .NET 微服务体系结构 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 12/11/2017
-ms.openlocfilehash: 28955b2309b3efb321e40e19db821052b8ce42ab
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: b443f1b066d3c8ef0e798206510616aace32b377
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43512111"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45617138"
 ---
 # <a name="creating-a-simple-data-driven-crud-microservice"></a>创建简单的数据驱动 CRUD 微服务
 
@@ -252,7 +252,7 @@ catalog.api:
     - "5101:80"
 ```
 
-相较于项目或微服务级别的配置文件，解决方法级别的 docker-compose.yml 文件不仅更灵活，而且如果使用从部署工具（如 VSTS Docker 部署任务）设置的值替换在 docker-compose 文件中声明的环境变量，使用该文件会更安全。 
+相较于项目或微服务级别的配置文件，解决方法级别的 docker-compose.yml 文件不仅更灵活，而且如果使用从部署工具（如 Azure DevOps Services Docker 部署任务）设置的值替换在 docker-compose 文件中声明的环境变量，使用该文件会更安全。 
 
 最后，可使用配置 \["ConnectionString"\] 从代码中获取该值，如前面的代码示例中的 ConfigureServices 方法中所示。
 

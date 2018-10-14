@@ -2,12 +2,12 @@
 title: '&lt;udpBinding&gt;'
 ms.date: 03/30/2017
 ms.assetid: fa291901-8340-45c6-9c44-5d9281c70bc3
-ms.openlocfilehash: e17919ead6d6f7656c39d18b0ce1817c18da524a
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 62752ca74c7e5332c025a42d87608bb4c7f725ae
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44086656"
+ms.lasthandoff: 10/07/2018
+ms.locfileid: "48846196"
 ---
 # <a name="ltudpbindinggt"></a>&lt;udpBinding&gt;
 用于配置 <xref:System.ServiceModel.UdpBinding> 绑定的配置元素。  
@@ -108,5 +108,5 @@ ms.locfileid: "44086656"
  <xref:System.ServiceModel.Configuration.BasicHttpBindingElement>  
  [绑定](../../../../../docs/framework/wcf/bindings.md)  
  [配置系统提供的绑定](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [使用绑定来配置 Windows Communication Foundation 服务和客户端](https://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
+ [使用绑定配置服务和客户端](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)  
  [\<绑定 >](../../../../../docs/framework/misc/binding.md)
