@@ -2,12 +2,12 @@
 title: 动态更新
 ms.date: 03/30/2017
 ms.assetid: 8b6ef19b-9691-4b4b-824c-3c651a9db96e
-ms.openlocfilehash: dea930de2103a24aa48b1d0a31a3cbf5fc0ae26c
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 9b26bde8e524275d2eef34afc3f6442e2ebeea6f
+ms.sourcegitcommit: d88024e6d6d8b242feae5f4007a709379355aa24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44076714"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49323118"
 ---
 # <a name="dynamic-update"></a>动态更新
 动态更新为工作流应用程序开发人员提供了一种机制，可用于更新持久化工作流实例的工作流定义。 操作可以是实施 bug 修复、实施新的要求或适应意外的变化。 此主题概述了 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 中引入的动态更新功能。  
@@ -24,7 +24,7 @@ ms.locfileid: "44076714"
 4.  [将更新映射应用于所需的持久化工作流实例](../../../docs/framework/windows-workflow-foundation/dynamic-update.md#Apply)  
   
 > [!NOTE]
->  请注意，步骤 1 到 3 涵盖更新映射的创建，可不通过应用更新来执行。 一个常见的方案是工作流开发人员脱机创建更新映射，然后由管理员在以后应用更新。  
+>  请注意，步骤 1 到 3 涵盖更新映射的创建，可不通过应用更新来执行。 一种常见方案，工作流开发人员将创建更新映射脱机，然后管理员将在以后的更新。  
   
  本主题将一个新活动添加至已编译 Xaml 工作流的持久性实例中，借此提供对动态更新过程的概述。  
   
