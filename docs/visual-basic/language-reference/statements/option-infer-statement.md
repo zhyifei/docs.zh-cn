@@ -11,12 +11,12 @@ helpviewer_keywords:
 - declaring variables [Visual Basic], inferred
 - inferred variable declaration
 ms.assetid: 4ad3e6e9-8f5b-4209-a248-de22ef6e4652
-ms.openlocfilehash: f5c824df43997282d50c9c2a458fb1d854cc160a
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: d6a05abec36f97094adaac7572f6015b10874442
+ms.sourcegitcommit: fd8d4587cc26e53f0e27e230d6e27d828ef4306b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43862214"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "49347885"
 ---
 # <a name="option-infer-statement"></a>Option Infer 语句
 允许声明变量时使用局部类型推理。  
@@ -50,7 +50,7 @@ Option Infer 处于打开状态时的 IntelliSense
 Option Infer 处于关闭状态时的 IntelliSense  
   
 > [!NOTE]
->  变量声明为 `Object` 时，可在程序运行时更改运行时类型。 Visual Basic 执行调用的操作*装箱*并*取消装箱*之间进行转换`Object`和值类型，这会使执行速度较慢。 有关装箱和取消装箱的信息，请参阅[Visual Basic 语言规范](../../../visual-basic/reference/language-specification/index.md)。
+>  变量声明为 `Object` 时，可在程序运行时更改运行时类型。 Visual Basic 执行调用的操作*装箱*并*取消装箱*之间进行转换`Object`和值类型，这会使执行速度较慢。 有关装箱和取消装箱的信息，请参阅[Visual Basic 语言规范](~/_vblang/spec/conversions.md#value-type-conversions)。
   
  类型推理适用于过程级，且在类、结构、模块或接口中的过程之外不适用。  
   

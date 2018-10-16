@@ -2,15 +2,15 @@
 title: 使用 WorkflowInvoker 和 WorkflowApplication
 ms.date: 03/30/2017
 ms.assetid: cd0e583c-a3f9-4fa2-b247-c7b3368c48a7
-ms.openlocfilehash: 6cbfca14eddeb82fc2d88b70703cae0fe59d63ad
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: cc315013ce50539eb4b72d26848a99164bb6b2d0
+ms.sourcegitcommit: fd8d4587cc26e53f0e27e230d6e27d828ef4306b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33519621"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "49347976"
 ---
 # <a name="using-workflowinvoker-and-workflowapplication"></a>使用 WorkflowInvoker 和 WorkflowApplication
-Windows Workflow Foundation (WF) 提供承载工作流的若干方法。 <xref:System.Activities.WorkflowInvoker> 提供一种简单工作流调用方法，就像方法调用一样，仅可用于不使用持久性的工作流。 <xref:System.Activities.WorkflowApplication> 为执行工作流（包括生命周期事件通知、执行控制、书签恢复和持久性）提供更丰富的模型。 <xref:System.ServiceModel.Activities.WorkflowServiceHost> 为消息传递活动提供支持，主要用于工作流服务。 本主题介绍使用 <xref:System.Activities.WorkflowInvoker> 和 <xref:System.Activities.WorkflowApplication> 的工作流承载。 有关承载工作流与<xref:System.ServiceModel.Activities.WorkflowServiceHost>，请参阅[工作流服务](../../../docs/framework/wcf/feature-details/workflow-services.md)和[承载工作流服务概述](../../../docs/framework/wcf/feature-details/hosting-workflow-services-overview.md)。  
+Windows Workflow Foundation (WF) 提供了多种方法来承载工作流。 <xref:System.Activities.WorkflowInvoker> 提供一种简单工作流调用方法，就像方法调用一样，仅可用于不使用持久性的工作流。 <xref:System.Activities.WorkflowApplication> 为执行工作流（包括生命周期事件通知、执行控制、书签恢复和持久性）提供更丰富的模型。 <xref:System.ServiceModel.Activities.WorkflowServiceHost> 为消息传递活动提供支持，主要用于工作流服务。 本主题介绍使用 <xref:System.Activities.WorkflowInvoker> 和 <xref:System.Activities.WorkflowApplication> 的工作流承载。 有关承载工作流的详细信息<xref:System.ServiceModel.Activities.WorkflowServiceHost>，请参阅[工作流服务](../../../docs/framework/wcf/feature-details/workflow-services.md)并[承载工作流服务概述](../../../docs/framework/wcf/feature-details/hosting-workflow-services-overview.md)。  
   
 ## <a name="using-workflowinvoker"></a>使用 WorkflowInvoker  
  <xref:System.Activities.WorkflowInvoker> 提供一种执行工作流的模型，如同使用方法调用。 若要使用 <xref:System.Activities.WorkflowInvoker> 调用工作流，请调用 <xref:System.Activities.WorkflowInvoker.Invoke%2A> 方法，并传入要调用的工作流的工作流定义。 在本示例中，使用 <xref:System.Activities.Statements.WriteLine> 调用 <xref:System.Activities.WorkflowInvoker> 活动。  
@@ -60,7 +60,7 @@ Windows Workflow Foundation (WF) 提供承载工作流的若干方法。 <xref:S
  [!code-csharp[CFX_WorkflowApplicationExample#30](../../../samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowapplicationexample/cs/program.cs#30)]  
   
 ### <a name="retrieving-output-arguments-of-a-workflow"></a>检索工作流的输出实参  
- 当工作流完成时，可通过访问 <xref:System.Activities.WorkflowApplication.Completed%2A> 字典在 <xref:System.Activities.WorkflowApplicationCompletedEventArgs.Outputs%2A?displayProperty=nameWithType> 处理程序中检索任何输出实参。 下面的示例使用 <xref:System.Activities.WorkflowApplication> 承载一个工作流。 该示例使用包含单个 <xref:System.Activities.WorkflowApplication> 活动的工作流定义构造一个  `DiceRoll` 实例。 `DiceRoll` 活动包含两个表示掷骰子操作结果的输出参数。 当工作流完成时，将在 <xref:System.Activities.WorkflowApplication.Completed%2A> 处理程序中检索输出。  
+ 当工作流完成时，可通过访问 <xref:System.Activities.WorkflowApplication.Completed%2A> 字典在 <xref:System.Activities.WorkflowApplicationCompletedEventArgs.Outputs%2A?displayProperty=nameWithType> 处理程序中检索任何输出实参。 下面的示例使用 <xref:System.Activities.WorkflowApplication> 承载一个工作流。 一个<xref:System.Activities.WorkflowApplication>实例使用包含单个工作流定义构造`DiceRoll`活动。 `DiceRoll` 活动包含两个表示掷骰子操作结果的输出自变量。 当工作流完成时，将在 <xref:System.Activities.WorkflowApplication.Completed%2A> 处理程序中检索输出。  
   
  [!code-csharp[CFX_WorkflowApplicationExample#130](../../../samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowapplicationexample/cs/program.cs#130)]  
   
@@ -91,7 +91,7 @@ Windows Workflow Foundation (WF) 提供承载工作流的若干方法。 <xref:S
 
 [!code-csharp[CFX_WorkflowApplicationExample#14](../../../samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowapplicationexample/cs/program.cs#14)]  
   
- 下面的代码示例检查传递给 <xref:System.Activities.WorkflowApplicationIdleEventArgs> 实例的 <xref:System.Activities.WorkflowApplication.Idle%2A>  处理程序的 <xref:System.Activities.WorkflowApplication>。 在此示例中，进入空闲状态的工作流包含一个由名为 <xref:System.Activities.Bookmark> 的活动所拥有的名为 `EnterGuess` 的 `ReadInt`。 基于此代码示例[如何： 运行工作流](../../../docs/framework/windows-workflow-foundation/how-to-run-a-workflow.md)，这是属于[入门教程](../../../docs/framework/windows-workflow-foundation/getting-started-tutorial.md)。 如果修改了该阶段中的 <xref:System.Activities.WorkflowApplication.Idle%2A> 处理程序以包含此示例中的代码，则将显示以下输出。  
+ 下面的代码示例检查传递给 <xref:System.Activities.WorkflowApplicationIdleEventArgs> 实例的 <xref:System.Activities.WorkflowApplication.Idle%2A>  处理程序的 <xref:System.Activities.WorkflowApplication>。 在此示例中，进入空闲状态的工作流包含一个由名为 <xref:System.Activities.Bookmark> 的活动所拥有的名为 `EnterGuess` 的 `ReadInt`。 此代码示例为基础的中断[如何： 运行工作流](../../../docs/framework/windows-workflow-foundation/how-to-run-a-workflow.md)，这是的一部分[入门教程](../../../docs/framework/windows-workflow-foundation/getting-started-tutorial.md)。 如果修改了该阶段中的 <xref:System.Activities.WorkflowApplication.Idle%2A> 处理程序以包含此示例中的代码，则将显示以下输出。  
   
  **BookmarkName: EnterGuess-OwnerDisplayName: ReadInt**
  

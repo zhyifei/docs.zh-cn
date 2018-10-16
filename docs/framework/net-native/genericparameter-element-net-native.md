@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: cbd49732-3615-49a5-a900-f96947cdc3e6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9c0bf4aff9d7cc657b3005f0a19b09f3df10957c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: dd0d9851f62381a16f628607c326c6690492628b
+ms.sourcegitcommit: fd8d4587cc26e53f0e27e230d6e27d828ef4306b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33393089"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "49347846"
 ---
 # <a name="ltgenericparametergt-element-net-native"></a>&lt;泛型参数&gt;元素 (.NET Native)
 将策略应用到一个泛型类型或方法的参数类型。  
@@ -74,7 +74,7 @@ ms.locfileid: "33393089"
 ## <a name="remarks"></a>备注  
  `<GenericParameter>` 元素是 [\<Method>](../../../docs/framework/net-native/method-element-net-native.md) 或 [\<Type>](../../../docs/framework/net-native/type-element-net-native.md) 元素的子元素，用于将策略应用到一个特定的泛型类型参数，该参数由其在泛型类型或方法签名中的名称指定。  
   
- `<GenericParameter>` 元素在同序列化程序一起使用时非常有用。 以下示例使用 `<GenericParameter>` 元素在对 NewtonSoft JSON 序列化程序的 [JsonConvert.DeserializeObject\<T>(String)](http://james.newtonking.com/json/help/index.html?topic=html/T_Newtonsoft_Json_JsonConvert.htm) 方法重载的调用中，将策略应用到类型 `T`。  
+ `<GenericParameter>` 元素在同序列化程序一起使用时非常有用。 以下示例使用 `<GenericParameter>` 元素在对 NewtonSoft JSON 序列化程序的 [JsonConvert.DeserializeObject\<T>(String)](https://www.newtonsoft.com/json/help/html/M_Newtonsoft_Json_JsonConvert_DeserializeObject__1.htm) 方法重载的调用中，将策略应用到类型 `T`。  
   
 ```xml  
 <Directives xmlns="http://schemas.microsoft.com/netfx/2013/01/metadata">  

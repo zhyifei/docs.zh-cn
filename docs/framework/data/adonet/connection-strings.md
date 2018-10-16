@@ -1,31 +1,32 @@
 ---
 title: 在 ADO.NET 中的连接字符串
-ms.date: 03/30/2017
+ms.date: 10/10/2018
 ms.assetid: 745c5f95-2f02-4674-b378-6d51a7ec2490
-ms.openlocfilehash: 1e6e2b6870195c99279639e1f4576a30b7126d4d
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: 4dab2656ae8f39976b21f949c9548a3f718dfafc
+ms.sourcegitcommit: fd8d4587cc26e53f0e27e230d6e27d828ef4306b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48583680"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "49347937"
 ---
 # <a name="connection-strings-in-adonet"></a>在 ADO.NET 中的连接字符串
-.NET Framework 2.0 引入了用于处理连接字符串的新功能（包括将新的关键字引入到连接字符串生成器类），这将有助于在运行时创建有效的连接字符串。  
-  
-连接字符串包含作为参数从数据提供程序传递到数据源的初始化信息。 其语法取决于数据提供程序，并且会在试图打开连接的过程中对连接字符串进行分析。 语法错误会生成运行时异常，但其他错误只有在数据源收到连接信息后才会发生。 经过验证后，数据源将应用连接字符串中指定的选项并打开连接。
-  
-连接字符串的格式是使用分号分隔的键/值参数对列表：
+
+连接字符串包含作为参数从数据提供程序传递到数据源的初始化信息。 数据提供程序接收的连接字符串的值作为<xref:System.Data.Common.DbConnection.ConnectionString?displayProperty=nameWithType>属性。 提供程序来分析连接字符串，并确保语法正确，以及支持的关键字。 然后<xref:System.Data.Common.DbConnection.Open?displayProperty=nameWithType>方法将已分析的连接参数传递到数据源。 数据源执行进一步的验证，并建立的连接。
+
+## <a name="connection-string-syntax"></a>连接字符串语法
+
+连接字符串是以分号分隔的键/值参数对的列表：
   
     keyword1=value; keyword2=value;
   
-关键字不区分大小写。 但是，值可能区分大小写，具体取决于数据源。 关键字和值可能包含[空白字符](https://en.wikipedia.org/wiki/Whitespace_character#Unicode)，尽管在关键字中忽略和不带引号的前导和尾随空格的值。
+关键字不区分大小写。 但是，值可能区分大小写，具体取决于数据源。 关键字和值可能包含[空白字符](https://en.wikipedia.org/wiki/Whitespace_character#Unicode)。 在关键字中忽略和不带引号的前导空格和尾随空格的值。
 
-如果值包含分号[Unicode 控制字符](https://en.wikipedia.org/wiki/Unicode_control_characters)、 前导空格或尾随的空格，则必须用单引号或双引号括起来，例如：
+如果值包含分号[Unicode 控制字符](https://en.wikipedia.org/wiki/Unicode_control_characters)，或前导空格或尾随空格，则必须用单引号或双引号括起来。 例如：
 
     Keyword=" whitespace  ";
     Keyword='special;character';
 
-它包含的值中可能不是封闭字符。 因此，仅在两个双引号，反之亦然，则可以包含一个值，包含单引号引起来：
+它包含的值中可能不是封闭字符。 因此，仅在两个双引号，反之亦然，可以用一个值，包含单引号引起来：
 
     Keyword='double"quotation;mark';
     Keyword="single'quotation;mark";
@@ -37,10 +38,12 @@ ms.locfileid: "48583680"
 
 由于直到下一步分号或字符串的末尾读取每个值，后者的示例中的值是`a=b=c`，并最终分号是可选的。
 
-有效的连接字符串语法因提供程序而异，从早期的 API（如 ODBC）开始，已经过了多年的发展演变。 适用于 SQL Server 的 .NET Framework 数据提供程序 (SqlClient) 并入了早期语法中的许多元素，并且在使用通常的连接字符串语法时更具灵活性。 连接字符串语法元素经常会出现一些同等有效的同义词，但有些语法和拼写错误可能会导致出现问题。 例如，“`Integrated Security=true`”是有效的，而“`IntegratedSecurity=true`”则会导致出错。 另外，在运行时从未验证的用户输入构造的连接字符串可能导致字符串注入式攻击，从而危害数据源的安全。
-  
-为了解决这些问题，ADO.NET 2.0 为每个 .NET Framework 数据提供程序引入了新的连接字符串生成器。 关键字作为属性公开，以便在将连接字符串提交到数据源之前，能够对连接字符串语法进行验证。
-  
+所有连接字符串都共享相同的基本语法上面所述。 已识别的关键字集合取决于提供程序，但是，并已发展多年来从早期的 Api 如*ODBC*。 *.NET Framework*的数据提供程序*SQL Server* (`SqlClient`) 支持很多关键字从较旧的 Api，但更具灵活性并接受同义词的许多常见的连接字符串关键字。
+
+键入了错误可能会导致错误。 例如，`Integrated Security=true`有效，但`IntegratedSecurity=true`将导致错误。
+
+手动构造在运行时从未经验证的用户输入的连接字符串容易受到字符串注入式攻击，并会危及数据源的安全性。 若要解决这些问题*ADO.NET* 2.0 引入[的连接字符串生成器](../../../../docs/framework/data/adonet/connection-string-builders.md)每个 *.NET Framework*数据提供程序。 这些连接字符串生成器公开作为强类型化属性的参数，并使其可以发送到数据源之前验证的连接字符串。
+
 ## <a name="in-this-section"></a>本节内容  
  [连接字符串生成器](../../../../docs/framework/data/adonet/connection-string-builders.md)  
  演示如何使用 `ConnectionStringBuilder` 类在运行时构造有效的连接字符串。
