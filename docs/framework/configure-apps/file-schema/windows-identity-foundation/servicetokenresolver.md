@@ -4,22 +4,22 @@ ms.date: 03/30/2017
 ms.assetid: 6e9001e1-e064-4f47-84b2-46225c177746
 author: BrucePerlerMS
 ms.openlocfilehash: d4b64e2c88e153834b7cf5a83bd6258b6dfd471f
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.sourcegitcommit: fd8d4587cc26e53f0e27e230d6e27d828ef4306b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/07/2018
-ms.locfileid: "48847758"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "49347495"
 ---
-# <a name="ltservicetokenresolvergt"></a><span data-ttu-id="20daa-102">&lt;serviceTokenResolver&gt;</span><span class="sxs-lookup"><span data-stu-id="20daa-102">&lt;serviceTokenResolver&gt;</span></span>
-<span data-ttu-id="20daa-103">注册的服务令牌解析程序使用的令牌处理程序集合中的处理程序。</span><span class="sxs-lookup"><span data-stu-id="20daa-103">Registers the service token resolver that is used by handlers in the token handler collection.</span></span> <span data-ttu-id="20daa-104">服务标记解析器用于解析传入的令牌和消息中的加密令牌。</span><span class="sxs-lookup"><span data-stu-id="20daa-104">The service token resolver is used to resolve the encryption token on incoming tokens and messages.</span></span>  
+# <a name="ltservicetokenresolvergt"></a><span data-ttu-id="8210c-102">&lt;serviceTokenResolver&gt;</span><span class="sxs-lookup"><span data-stu-id="8210c-102">&lt;serviceTokenResolver&gt;</span></span>
+<span data-ttu-id="8210c-103">注册的服务令牌解析程序使用的令牌处理程序集合中的处理程序。</span><span class="sxs-lookup"><span data-stu-id="8210c-103">Registers the service token resolver that is used by handlers in the token handler collection.</span></span> <span data-ttu-id="8210c-104">服务标记解析器用于解析传入的令牌和消息中的加密令牌。</span><span class="sxs-lookup"><span data-stu-id="8210c-104">The service token resolver is used to resolve the encryption token on incoming tokens and messages.</span></span>  
   
- <span data-ttu-id="20daa-105">\<system.identityModel></span><span class="sxs-lookup"><span data-stu-id="20daa-105">\<system.identityModel></span></span>  
-<span data-ttu-id="20daa-106">\<identityConfiguration></span><span class="sxs-lookup"><span data-stu-id="20daa-106">\<identityConfiguration></span></span>  
-<span data-ttu-id="20daa-107">\<securityTokenHandlers></span><span class="sxs-lookup"><span data-stu-id="20daa-107">\<securityTokenHandlers></span></span>  
-<span data-ttu-id="20daa-108">\<securityTokenHandlerConfiguration ></span><span class="sxs-lookup"><span data-stu-id="20daa-108">\<securityTokenHandlerConfiguration></span></span>  
-<span data-ttu-id="20daa-109">\<serviceTokenResolver ></span><span class="sxs-lookup"><span data-stu-id="20daa-109">\<serviceTokenResolver></span></span>  
+ <span data-ttu-id="8210c-105">\<system.identityModel></span><span class="sxs-lookup"><span data-stu-id="8210c-105">\<system.identityModel></span></span>  
+<span data-ttu-id="8210c-106">\<identityConfiguration></span><span class="sxs-lookup"><span data-stu-id="8210c-106">\<identityConfiguration></span></span>  
+<span data-ttu-id="8210c-107">\<securityTokenHandlers></span><span class="sxs-lookup"><span data-stu-id="8210c-107">\<securityTokenHandlers></span></span>  
+<span data-ttu-id="8210c-108">\<securityTokenHandlerConfiguration ></span><span class="sxs-lookup"><span data-stu-id="8210c-108">\<securityTokenHandlerConfiguration></span></span>  
+<span data-ttu-id="8210c-109">\<serviceTokenResolver ></span><span class="sxs-lookup"><span data-stu-id="8210c-109">\<serviceTokenResolver></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="20daa-110">语法</span><span class="sxs-lookup"><span data-stu-id="20daa-110">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="8210c-110">语法</span><span class="sxs-lookup"><span data-stu-id="8210c-110">Syntax</span></span>  
   
 ```xml  
 <system.identityModel>  
@@ -34,33 +34,33 @@ ms.locfileid: "48847758"
 </system.identityModel>  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="20daa-111">特性和元素</span><span class="sxs-lookup"><span data-stu-id="20daa-111">Attributes and Elements</span></span>  
- <span data-ttu-id="20daa-112">下列各节描述了特性、子元素和父元素。</span><span class="sxs-lookup"><span data-stu-id="20daa-112">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="8210c-111">特性和元素</span><span class="sxs-lookup"><span data-stu-id="8210c-111">Attributes and Elements</span></span>  
+ <span data-ttu-id="8210c-112">下列各节描述了特性、子元素和父元素。</span><span class="sxs-lookup"><span data-stu-id="8210c-112">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="20daa-113">特性</span><span class="sxs-lookup"><span data-stu-id="20daa-113">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="8210c-113">特性</span><span class="sxs-lookup"><span data-stu-id="8210c-113">Attributes</span></span>  
   
-|<span data-ttu-id="20daa-114">特性</span><span class="sxs-lookup"><span data-stu-id="20daa-114">Attribute</span></span>|<span data-ttu-id="20daa-115">描述</span><span class="sxs-lookup"><span data-stu-id="20daa-115">Description</span></span>|  
+|<span data-ttu-id="8210c-114">特性</span><span class="sxs-lookup"><span data-stu-id="8210c-114">Attribute</span></span>|<span data-ttu-id="8210c-115">描述</span><span class="sxs-lookup"><span data-stu-id="8210c-115">Description</span></span>|  
 |---------------|-----------------|  
-|<span data-ttu-id="20daa-116">类型</span><span class="sxs-lookup"><span data-stu-id="20daa-116">type</span></span>|<span data-ttu-id="20daa-117">指定的服务令牌解析程序的类型。</span><span class="sxs-lookup"><span data-stu-id="20daa-117">Specifies the type of the service token resolver.</span></span> <span data-ttu-id="20daa-118">任一<xref:System.IdentityModel.Selectors.SecurityTokenResolver>类型或派生类型<xref:System.IdentityModel.Selectors.SecurityTokenResolver>类。</span><span class="sxs-lookup"><span data-stu-id="20daa-118">Either the <xref:System.IdentityModel.Selectors.SecurityTokenResolver> type or a type that derives from the <xref:System.IdentityModel.Selectors.SecurityTokenResolver> class.</span></span> <span data-ttu-id="20daa-119">详细了解如何指定`type`属性，请参阅 [自定义类型引用]。</span><span class="sxs-lookup"><span data-stu-id="20daa-119">For more information about how to specify the `type` attribute, see [Custom Type References].</span></span> <span data-ttu-id="20daa-120">必须的。</span><span class="sxs-lookup"><span data-stu-id="20daa-120">Required.</span></span>|  
+|<span data-ttu-id="8210c-116">类型</span><span class="sxs-lookup"><span data-stu-id="8210c-116">type</span></span>|<span data-ttu-id="8210c-117">指定的服务令牌解析程序的类型。</span><span class="sxs-lookup"><span data-stu-id="8210c-117">Specifies the type of the service token resolver.</span></span> <span data-ttu-id="8210c-118">任一<xref:System.IdentityModel.Selectors.SecurityTokenResolver>类型或派生类型<xref:System.IdentityModel.Selectors.SecurityTokenResolver>类。</span><span class="sxs-lookup"><span data-stu-id="8210c-118">Either the <xref:System.IdentityModel.Selectors.SecurityTokenResolver> type or a type that derives from the <xref:System.IdentityModel.Selectors.SecurityTokenResolver> class.</span></span> <span data-ttu-id="8210c-119">详细了解如何指定`type`属性，请参阅 [自定义类型引用]。</span><span class="sxs-lookup"><span data-stu-id="8210c-119">For more information about how to specify the `type` attribute, see [Custom Type References].</span></span> <span data-ttu-id="8210c-120">必须的。</span><span class="sxs-lookup"><span data-stu-id="8210c-120">Required.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="20daa-121">子元素</span><span class="sxs-lookup"><span data-stu-id="20daa-121">Child Elements</span></span>  
- <span data-ttu-id="20daa-122">无</span><span class="sxs-lookup"><span data-stu-id="20daa-122">None</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="8210c-121">子元素</span><span class="sxs-lookup"><span data-stu-id="8210c-121">Child Elements</span></span>  
+ <span data-ttu-id="8210c-122">无</span><span class="sxs-lookup"><span data-stu-id="8210c-122">None</span></span>  
   
-### <a name="parent-elements"></a><span data-ttu-id="20daa-123">父元素</span><span class="sxs-lookup"><span data-stu-id="20daa-123">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="8210c-123">父元素</span><span class="sxs-lookup"><span data-stu-id="8210c-123">Parent Elements</span></span>  
   
-|<span data-ttu-id="20daa-124">元素</span><span class="sxs-lookup"><span data-stu-id="20daa-124">Element</span></span>|<span data-ttu-id="20daa-125">描述</span><span class="sxs-lookup"><span data-stu-id="20daa-125">Description</span></span>|  
+|<span data-ttu-id="8210c-124">元素</span><span class="sxs-lookup"><span data-stu-id="8210c-124">Element</span></span>|<span data-ttu-id="8210c-125">描述</span><span class="sxs-lookup"><span data-stu-id="8210c-125">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="20daa-126">\<securityTokenHandlerConfiguration ></span><span class="sxs-lookup"><span data-stu-id="20daa-126">\<securityTokenHandlerConfiguration></span></span>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/securitytokenhandlerconfiguration.md)|<span data-ttu-id="20daa-127">提供配置集合的安全令牌处理程序。</span><span class="sxs-lookup"><span data-stu-id="20daa-127">Provides configuration for a collection of security token handlers.</span></span>|  
+|[<span data-ttu-id="8210c-126">\<securityTokenHandlerConfiguration ></span><span class="sxs-lookup"><span data-stu-id="8210c-126">\<securityTokenHandlerConfiguration></span></span>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/securitytokenhandlerconfiguration.md)|<span data-ttu-id="8210c-127">提供配置集合的安全令牌处理程序。</span><span class="sxs-lookup"><span data-stu-id="8210c-127">Provides configuration for a collection of security token handlers.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="20daa-128">备注</span><span class="sxs-lookup"><span data-stu-id="20daa-128">Remarks</span></span>  
- <span data-ttu-id="20daa-129">服务标记解析器可用于解析传入的令牌和消息中的加密令牌。</span><span class="sxs-lookup"><span data-stu-id="20daa-129">The service token resolver can be used to resolve the encryption token on incoming tokens and messages.</span></span> <span data-ttu-id="20daa-130">它用于检索应该用于解密传入令牌的密钥。</span><span class="sxs-lookup"><span data-stu-id="20daa-130">It is used to retrieve the key that should be used to decrypt incoming tokens.</span></span> <span data-ttu-id="20daa-131">必须指定`type`属性。</span><span class="sxs-lookup"><span data-stu-id="20daa-131">You must specify the `type` attribute.</span></span> <span data-ttu-id="20daa-132">指定的类型可以是<xref:System.IdentityModel.Selectors.SecurityTokenResolver>派生的自定义类型或<xref:System.IdentityModel.Selectors.SecurityTokenResolver>类。</span><span class="sxs-lookup"><span data-stu-id="20daa-132">The type specified can be either <xref:System.IdentityModel.Selectors.SecurityTokenResolver> or a custom type that derives from the <xref:System.IdentityModel.Selectors.SecurityTokenResolver> class.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="8210c-128">备注</span><span class="sxs-lookup"><span data-stu-id="8210c-128">Remarks</span></span>  
+ <span data-ttu-id="8210c-129">服务标记解析器可用于解析传入的令牌和消息中的加密令牌。</span><span class="sxs-lookup"><span data-stu-id="8210c-129">The service token resolver can be used to resolve the encryption token on incoming tokens and messages.</span></span> <span data-ttu-id="8210c-130">它用于检索应该用于解密传入令牌的密钥。</span><span class="sxs-lookup"><span data-stu-id="8210c-130">It is used to retrieve the key that should be used to decrypt incoming tokens.</span></span> <span data-ttu-id="8210c-131">必须指定`type`属性。</span><span class="sxs-lookup"><span data-stu-id="8210c-131">You must specify the `type` attribute.</span></span> <span data-ttu-id="8210c-132">指定的类型可以是<xref:System.IdentityModel.Selectors.SecurityTokenResolver>派生的自定义类型或<xref:System.IdentityModel.Selectors.SecurityTokenResolver>类。</span><span class="sxs-lookup"><span data-stu-id="8210c-132">The type specified can be either <xref:System.IdentityModel.Selectors.SecurityTokenResolver> or a custom type that derives from the <xref:System.IdentityModel.Selectors.SecurityTokenResolver> class.</span></span>  
   
- <span data-ttu-id="20daa-133">一些令牌处理程序，可在配置中指定服务令牌解析器设置。</span><span class="sxs-lookup"><span data-stu-id="20daa-133">Some token handlers allow you to specify service token resolver settings in configuration.</span></span> <span data-ttu-id="20daa-134">单个标记处理程序上的设置将覆盖指定安全标记处理程序集合。</span><span class="sxs-lookup"><span data-stu-id="20daa-134">Settings on individual token handlers override those specified on the security token handler collection.</span></span>  
+ <span data-ttu-id="8210c-133">一些令牌处理程序，可在配置中指定服务令牌解析器设置。</span><span class="sxs-lookup"><span data-stu-id="8210c-133">Some token handlers allow you to specify service token resolver settings in configuration.</span></span> <span data-ttu-id="8210c-134">单个标记处理程序上的设置将覆盖指定安全标记处理程序集合。</span><span class="sxs-lookup"><span data-stu-id="8210c-134">Settings on individual token handlers override those specified on the security token handler collection.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="20daa-135">指定`<serviceTokenResolver>`元素的子元素作为[ \<identityConfiguration >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md)元素已被弃用，但仍然支持向后兼容。</span><span class="sxs-lookup"><span data-stu-id="20daa-135">Specifying the `<serviceTokenResolver>` element as a child element of the [\<identityConfiguration>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md) element has been deprecated, but is still supported for backward compatibility.</span></span> <span data-ttu-id="20daa-136">上的设置`<securityTokenHandlerConfiguration>`元素上会覆盖`<identityConfiguration>`元素。</span><span class="sxs-lookup"><span data-stu-id="20daa-136">Settings on the `<securityTokenHandlerConfiguration>` element override those on the `<identityConfiguration>` element.</span></span>  
+>  <span data-ttu-id="8210c-135">指定`<serviceTokenResolver>`元素的子元素作为[ \<identityConfiguration >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md)元素已被弃用，但仍然支持向后兼容。</span><span class="sxs-lookup"><span data-stu-id="8210c-135">Specifying the `<serviceTokenResolver>` element as a child element of the [\<identityConfiguration>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md) element has been deprecated, but is still supported for backward compatibility.</span></span> <span data-ttu-id="8210c-136">上的设置`<securityTokenHandlerConfiguration>`元素上会覆盖`<identityConfiguration>`元素。</span><span class="sxs-lookup"><span data-stu-id="8210c-136">Settings on the `<securityTokenHandlerConfiguration>` element override those on the `<identityConfiguration>` element.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="20daa-137">示例</span><span class="sxs-lookup"><span data-stu-id="20daa-137">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="8210c-137">示例</span><span class="sxs-lookup"><span data-stu-id="8210c-137">Example</span></span>  
   
 ```xml  
 <serviceTokenResolver type="MyNamespace.CustomTokenResolver, MyAssembly" />  
