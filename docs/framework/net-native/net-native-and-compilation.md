@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: e38ae4f3-3e3d-42c3-a4b8-db1aa9d84f85
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 046b71a8f1d948a785a15cfc148b93292bf673f7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0a89474ddfe3bcde1c44271818b7e3c730469f48
+ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33395523"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49372379"
 ---
 # <a name="net-native-and-compilation"></a>.NET Native 和编译
 面向 .Net Framework 的 Windows 8.1 应用程序和 Windows 桌面应用程序由特定的编程语言进行编写并编译为中间语言 (IL)。 在运行时，实时 (JIT) 编译器负责恰好在首次执行方法前为本地计算机将 IL 编译到本机代码中。 与此相反，.NET 本机工具链在编译时将源代码转换为本机代码。 本主题将 .NET 本机与其他可用于 .NET Framework 应用程序的编译技术进行比较，还提供了 .NET 本机如何生成本机代码的实用概述，可帮助用户了解使用 .NET 本机编译的代码中发生的异常为什么不会出现在 JIT 编译的代码中。  
@@ -102,6 +102,6 @@ ms.locfileid: "33395523"
   
 ## <a name="see-also"></a>请参阅  
  [元数据和自描述组件](../../../docs/standard/metadata-and-self-describing-components.md)  
- [内部.NET Native （第 9 频道视频）](http://channel9.msdn.com/Shows/Going+Deep/Inside-NET-Native)  
+ [内部.NET Native （第 9 频道视频）](https://channel9.msdn.com/Shows/Going+Deep/Inside-NET-Native)  
  [反射和 .NET Native](../../../docs/framework/net-native/reflection-and-net-native.md)  
  [.NET Native 一般疑难解答](../../../docs/framework/net-native/net-native-general-troubleshooting.md)

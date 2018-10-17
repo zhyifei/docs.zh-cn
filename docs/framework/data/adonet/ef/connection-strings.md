@@ -1,32 +1,33 @@
 ---
-title: 连接字符串
-ms.date: 03/30/2017
+title: ADO.NET 实体框架中的连接字符串
+ms.date: 10/15/2018
 ms.assetid: 78d516bc-c99f-4865-8ff1-d856bc1a01c0
-ms.openlocfilehash: 17d91c9b97e370afe3704d2a58f5228e3fec95f1
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 99b6b1b7a38477dc17d3960ee5bc0b63ec0cb819
+ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48842173"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49372481"
 ---
-# <a name="connection-strings"></a>连接字符串
+# <a name="connection-strings-in-the-adonet-entity-framework"></a>ADO.NET 实体框架中的连接字符串
 连接字符串包含作为参数从数据提供程序传递到数据源的初始化信息。 其语法取决于数据提供程序，并且会在试图打开连接的过程中对连接字符串进行分析。 实体框架使用的连接字符串包含用于连接到支持实体框架的基础 ADO.NET 数据提供程序的信息。 它们还包含有关所需的模型和映射文件的信息。  
   
  在访问模型，映射元数据以及连接到数据源时，EntityClient 提供程序将使用该连接字符串。 连接字符串可通过 <xref:System.Data.EntityClient.EntityConnection.ConnectionString%2A> 的 <xref:System.Data.EntityClient.EntityConnection> 属性访问或设置。 <xref:System.Data.EntityClient.EntityConnectionStringBuilder> 类可用于以编程方式构造或访问连接字符串中的参数。 有关详细信息，请参阅[如何： 生成 EntityConnection 连接字符串](../../../../../docs/framework/data/adonet/ef/how-to-build-an-entityconnection-connection-string.md)。  
   
  [Entity Data Model 工具](https://msdn.microsoft.com/library/91076853-0881-421b-837a-f582f36be527)生成应用程序的配置文件中存储的连接字符串。 在创建对象查询时，<xref:System.Data.Objects.ObjectContext> 将自动检索此连接信息。 可通过 <xref:System.Data.EntityClient.EntityConnection> 属性访问 <xref:System.Data.Objects.ObjectContext> 实例所使用的 <xref:System.Data.Objects.ObjectContext.Connection%2A>。 有关详细信息，请参阅[管理连接和事务](https://msdn.microsoft.com/library/b6659d2a-9a45-4e98-acaa-d7a8029e5b99)。  
-  
+
+## <a name="connection-string-syntax"></a>连接字符串语法
+
+若要了解有关连接字符串的常规语法，请参阅[连接字符串语法 |在 ADO.NET 中的连接字符串](../connection-strings.md#connection-string-syntax)。
+
 ## <a name="connection-string-parameters"></a>连接字符串参数  
- 连接字符串的格式是使用分号分隔的键/值参数对列表：  
-  
- `keyword1=value; keyword2=value;`  
-  
- 每个关键字和它的值之间用等号 (=) 连接。 关键字不区分大小写，并将忽略键/值对之间的空格。 不过，根据数据源的不同，值可能是区分大小写的。 任何包含分号、单引号或双引号的值必须用双引号引起来。 下表列出了 <xref:System.Data.EntityClient.EntityConnection.ConnectionString%2A> 中的关键字值的有效名称。  
+
+下表列出了 <xref:System.Data.EntityClient.EntityConnection.ConnectionString%2A> 中的关键字值的有效名称。  
   
 |关键字|描述|  
 |-------------|-----------------|  
 |`Provider`|此关键字在未指定 `Name` 关键字时是必需的。 提供程序名称，用于检索基础提供程序的 <xref:System.Data.Common.DbProviderFactory> 对象。 该值为常量。<br /><br /> 如果实体连接字符串中未包含 `Name` 关键字，则需要一个非空 `Provider` 关键字值。 此关键字与 `Name` 关键字互斥。|  
-|`Provider Connection String`|可选。 指定要传递给基础数据源的提供程序特定的连接字符串。 此连接字符串用数据提供程序的有效关键字/值对表示。 如果 `Provider Connection String` 无效，则当数据源计算此字符串时，将导致运行时错误。<br /><br /> 此关键字与 `Name` 关键字互斥。<br /><br /> `Provider Connection String` 的值必须用引号引起来。 下面是一个示例：<br /><br /> `Provider Connection String ="Server=serverName; User ID = userID";`<br /><br /> 以下示例将无效：<br /><br /> `Provider Connection String =Server=serverName; User ID = userID`|  
+|`Provider Connection String`|可选。 指定要传递给基础数据源的提供程序特定的连接字符串。 此连接字符串包含有效的关键字/值对的数据提供程序。 如果 `Provider Connection String` 无效，则当数据源计算此字符串时，将导致运行时错误。<br /><br /> 此关键字与 `Name` 关键字互斥。<br /><br /> 请确保进行转义的值根据常规语法来[ADO.NET 连接字符串](../../../../../docs/framework/data/adonet/connection-strings.md)。 例如，考虑下面的连接字符串： `Server=serverName; User ID = userID`。 因为它包含分号，则必须进行转义。 因为它不包含双引号引起来，它们可用于进行转义：<br /><br /> `Provider Connection String ="Server=serverName; User ID = userID";`|  
 |`Metadata`|此关键字在未指定 `Name` 关键字时是必需的。 一个由竖线分隔的目录、文件和资源位置的列表，供查找元数据和映射信息使用。 下面是一个示例：<br /><br /> `Metadata=`<br /><br /> `c:\model &#124; c:\model\sql\mapping.msl;`<br /><br /> 竖线分隔符两侧的空格将被忽略。<br /><br /> 此关键字与 `Name` 关键字互斥。|  
 |`Name`|应用程序可以选择在应用程序配置文件中指定连接名称，以用于提供所需的关键字/值连接字符串值。 在此情况下，无法在连接字符串中直接提供这些值。 配置文件中不允许出现 `Name` 关键字。<br /><br /> 如果连接字符串中未包含 `Name` 关键字，则需要一个非空的 Provider 关键字值。<br /><br /> 此关键字与所有其他连接字符串关键字互斥。|  
   

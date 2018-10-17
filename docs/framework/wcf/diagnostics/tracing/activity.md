@@ -2,12 +2,12 @@
 title: 活动
 ms.date: 03/30/2017
 ms.assetid: 70471705-f55f-4da1-919f-4b580f172665
-ms.openlocfilehash: 3100d5bb60dc1b11d23b0705f4d6f23a3675ac51
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: 00115d51cff40be726ccf94c3cac09242c0bdab8
+ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33806827"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49372364"
 ---
 # <a name="activity"></a>活动
 本主题介绍 Windows Communication Foundation (WCF) 跟踪模型中的活动跟踪。 活动是帮助用户缩小故障范围的处理单位。 在同一活动中发生的错误直接相关。 例如，消息解密失败可导致操作失败。 操作失败和消息解密失败的跟踪出现在同一活动中，表明解密错误和请求错误之间直接相关。  
@@ -15,25 +15,25 @@ ms.locfileid: "33806827"
 ## <a name="configuring-activity-tracing"></a>配置活动跟踪  
  WCF 提供了用于处理应用程序的预定义的活动 (请参阅[活动列表](../../../../../docs/framework/wcf/diagnostics/tracing/activity-list.md))。 您还可以用编程方式定义活动，以便对用户跟踪进行分组。 有关详细信息，请参阅[发出用户代码跟踪](../../../../../docs/framework/wcf/diagnostics/tracing/emitting-user-code-traces.md)。  
   
- 若要在运行时发出活动跟踪，使用`ActivityTracing`设置`System.ServiceModel`跟踪源或其他 WCF 或自定义跟踪源，如下面的配置代码所示。  
+ 若要在运行时发出活动跟踪，请使用`ActivityTracing`设置为`System.ServiceModel`跟踪源，或者其他 WCF 或自定义跟踪源，如以下配置代码所示。  
   
 ```xml  
 <source name="System.ServiceModel" switchValue="Verbose,ActivityTracing">  
 ```  
   
- 若要了解有关配置元素，并正在使用的特性的详细信息，请参阅[配置跟踪](../../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md)主题。  
+ 若要了解有关的配置元素和属性所使用的详细信息，请参阅[配置跟踪](../../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md)主题。  
   
 ## <a name="viewing-activities"></a>查看活动  
- 你可以查看的活动，并且在其实用工具[服务跟踪查看器工具 (SvcTraceViewer.exe)](../../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)。 启用 ActivityTracing 后，此工具将获得跟踪并基于活动对它们进行分类。 您还可以查看跟踪传输。 跟踪传输指示不同的活动如何互相关联。 您可以看到某个特定活动导致另外一个活动启动。 例如，消息请求可启动安全握手以获取安全对话令牌。  
+ 您可以查看的活动，并且在其实用性[Service Trace Viewer Tool (SvcTraceViewer.exe)](../../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)。 启用 ActivityTracing 后，此工具将获得跟踪并基于活动对它们进行分类。 您还可以查看跟踪传输。 跟踪传输指示不同的活动如何互相关联。 您可以看到某个特定活动导致另外一个活动启动。 例如，消息请求可启动安全握手以获取安全对话令牌。  
   
 ### <a name="correlating-activities-in-service-trace-viewer"></a>在服务跟踪查看器中关联活动  
  服务跟踪查看器工具提供了两个活动视图：  
   
--   **列表**视图，其中的活动 ID 用于直接在进程之间关联跟踪。 来自不同进程（例如客户端和服务）但具有相同活动 ID 的跟踪被分组到同一活动中。 因此，如果在服务上发生一个错误，然后该错误又导致客户端上发生错误，那么这两个错误都将出现在该工具的同一活动视图中。  
+-   **列表**视图，其中的活动 ID 用于跨进程直接关联跟踪。 来自不同进程（例如客户端和服务）但具有相同活动 ID 的跟踪被分组到同一活动中。 因此，如果在服务上发生一个错误，然后该错误又导致客户端上发生错误，那么这两个错误都将出现在该工具的同一活动视图中。  
   
--   **关系图**视图中，活动按进程分组。 在此视图中，具有相同活动 ID 的客户端和服务的跟踪位于不同的活动中。 为了将位于不同进程但具有相同活动 ID 的活动相互关联，该工具显示了跨越相关活动的消息流。  
+-   **图形**视图中，活动按进程分组。 在此视图中，具有相同活动 ID 的客户端和服务的跟踪位于不同的活动中。 为了将位于不同进程但具有相同活动 ID 的活动相互关联，该工具显示了跨越相关活动的消息流。  
   
- 有关详细信息，并查看服务跟踪查看器工具的图形视图，请参阅[服务跟踪查看器工具 (SvcTraceViewer.exe)](../../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)和[使用服务跟踪查看器查看相关跟踪和故障排除](../../../../../docs/framework/wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md)。  
+ 有关详细信息，以及若要查看服务跟踪查看器工具的图形视图，请参阅[Service Trace Viewer Tool (SvcTraceViewer.exe)](../../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)和[使用服务跟踪查看器查看相关跟踪和故障排除](../../../../../docs/framework/wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md)。  
   
 ## <a name="defining-the-scope-of-an-activity"></a>定义活动范围  
  活动是在设计时定义的，并且表示一个逻辑工作单元。 所发出的具有相同活动标识符的跟踪直接相关，它们都属于同一个活动。 因为一个活动可能跨越终结点边界（请求），所以为活动定义两个范围。  
@@ -43,18 +43,18 @@ ms.locfileid: "33806827"
 -   以终结点为边界的 `Local` 范围。 在此范围中，活动由它的 gAId 以及发出活动跟踪的跟踪源名称和进程 ID 标识。这三部分内容构成了本地活动 ID，即 lAId。 lAId 用于定义活动的（本地）边界。  
   
 ## <a name="trace-schema"></a>跟踪架构  
- 可以使用任何架构以及跨 Microsoft 平台发出跟踪。 "e2e"（表示"端到端"） 是一个常用的架构。 此架构包含一个 128 位标识符 (gAId)、跟踪源名称和进程 ID。 在托管代码中，<xref:System.Diagnostics.XmlWriterTraceListener> 可在 E2E 架构中发出跟踪。  
+ 可以使用任何架构以及跨 Microsoft 平台发出跟踪。 "e2e"（表示"端到端"） 是常用的架构。 此架构包含一个 128 位标识符 (gAId)、跟踪源名称和进程 ID。 在托管代码中，<xref:System.Diagnostics.XmlWriterTraceListener> 可在 E2E 架构中发出跟踪。  
   
  开发人员可以通过使用线程本地存储 (TLS) 上的 Guid 设置 <xref:System.Diagnostics.CorrelationManager.ActivityId%2A> 属性来设置随跟踪发出的 AID。 下面的示例演示这一操作。  
   
-```  
+```csharp
 // set the current Activity ID to a new GUID.  
 CorrelationManager.ActivityId = Guid.NewGuid();  
-```  
+```
   
  使用跟踪源发出跟踪时，设置 TLS 中的 gAId 非常简单，如下面的示例所示。  
   
-```  
+```csharp
 TraceSource traceSource = new TraceSource("myTraceSource");  
 traceSource.TraceEvent(TraceEventType.Warning, eventId, "Information");  
 ```  
@@ -66,13 +66,13 @@ traceSource.TraceEvent(TraceEventType.Warning, eventId, "Information");
   
 -   开始：指示活动开始。 "开始"跟踪提供开始新的处理里程碑的记录。 它包含给定进程中给定跟踪源的新活动 ID，但是，当活动 ID 跨越终结点传播时除外 — 在这种情况下，我们会在每个终结点中看到一个“开始”跟踪。 开始新活动的示例包括创建新的处理线程或进入新的公共方法。  
   
--   停止：指示活动结束。 "停止"跟踪提供结束现有处理里程碑的记录。 它包含给定进程中给定跟踪源的现有活动 ID，但在终结点之间传播活动 ID 时除外。在这种情况下，我们会在每个终结点中看到一个“停止”跟踪。  停止活动的示例包括终止处理线程或退出使用"开始"跟踪表示开始的方法。  
+-   停止：指示活动结束。 "停止"跟踪提供结束现有处理里程碑的记录。 它包含给定进程中给定跟踪源的现有活动 ID，但在终结点之间传播活动 ID 时除外。在这种情况下，我们会在每个终结点中看到一个“停止”跟踪。  停止活动的示例包括终止处理线程或退出的方法开始时表示为"开始"跟踪。  
   
 -   挂起：指示活动的处理已挂起。 "挂起"跟踪包含其处理预期在以后恢复一个现有活动 ID。 在“挂起”和“恢复”事件之间，不会从当前跟踪源发出具有此 ID 的跟踪。 示例包括调用外部库函数或等待资源（如 I/O 完成端口）时暂停一个活动。  
   
--   恢复：指示继续处理活动。 "恢复"跟踪包含当前跟踪源从其最后一个发出的跟踪是"挂起"跟踪一个现有活动 id。 示例包括从对外部库函数的调用返回或发出让资源（如 I/O 完成端口）恢复处理的信号。  
+-   恢复：指示继续处理活动。 "恢复"跟踪包含从当前跟踪源发出的最后一个跟踪是"挂起"跟踪一个现有活动 id。 示例包括从对外部库函数的调用返回或发出让资源（如 I/O 完成端口）恢复处理的信号。  
   
--   传输： 因为一些活动由其他人，或与其他相关，可以将相关的活动通过"转换"跟踪其他活动。 转换跟踪记录了活动之间的定向关系。  
+-   传输： 因为一些活动由其他人，或与其他人，可以将与相关的活动"转换"跟踪通过其他活动。 转换跟踪记录了活动之间的定向关系。  
   
  “开始”和“停止”跟踪并不是关联所必需的。 然而，它们可以帮助提高性能、分析和验证活动范围。  
   
@@ -89,13 +89,13 @@ traceSource.TraceEvent(TraceEventType.Warning, eventId, "Information");
   
 -   活动表示一个处理边界，该边界对于系统管理员可能很有意义，或者可以用来实现可支持性。  
   
--   每个 WCF 方法，同时在客户端和服务器限制由开始一个新的活动，然后 （工作完成） 后结束该新活动并返回到环境的活动。  
+-   每个 WCF 方法，同时在客户端和服务器受限于由开始一个新的活动，然后 （在工作完成） 之后结束该新活动并将返回到环境活动。  
   
 -   长时间运行（正在运行）的活动（例如，侦听连接或等待消息）由相应的开始/停止标记表示。  
   
 -   由接收或处理消息触发的活动由跟踪边界来表示。  
   
--   活动表示的是活动本身，而未必是对象。 活动应被视为"这时。 . . （发出有意义的跟踪）时发生的”。  
+-   活动表示的是活动本身，而未必是对象。 活动应解释为"这发生的情况时。 . . （发出有意义的跟踪）时发生的”。  
   
 ## <a name="see-also"></a>请参阅  
  [配置跟踪](../../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md)  

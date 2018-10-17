@@ -4,12 +4,12 @@ description: 更新现有.NET 应用程序使用 Azure 云和 Windows 容器 |�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 04/28/2018
-ms.openlocfilehash: 41fbeb3abc201ef03cf0c237a069e7687c98dd18
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 1c23acc16698446bc07c0047b68186e21c2ceb2d
+ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45594006"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49372846"
 ---
 # <a name="walkthroughs-and-technical-get-started-overview"></a>演练和技术可帮助入门的概述
 
@@ -203,7 +203,7 @@ Azure 当前提供了一个名为的虚拟机**Windows Server 2016 with Containe
 
 ### <a name="overview"></a>概述
 
-[Azure 容器实例 (ACI)](https://docs.microsoft.com/en-us/azure/container-instances/)是具有可在其中部署容器的单个实例的容器开发/测试/暂存环境的最快方法。
+[Azure 容器实例 (ACI)](https://docs.microsoft.com/azure/container-instances/)是具有可在其中部署容器的单个实例的容器开发/测试/暂存环境的最快方法。
 
 ### <a name="goals"></a>目标
 

@@ -2,12 +2,12 @@
 title: 配置应用程序
 ms.date: 03/30/2017
 ms.assetid: a2f995b0-669d-4721-b00f-4561ec7eb6a4
-ms.openlocfilehash: e06c428526c5383c6908521075cd2eca977ce89f
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: e9a5429ef573fdee9478b63b76d2da8005215c93
+ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43481231"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49370921"
 ---
 # <a name="configuring-your-application"></a>配置应用程序
 Windows Communication Foundation (WCF) 使用.NET 配置系统，并且允许您在计算机和应用程序范围配置服务。  

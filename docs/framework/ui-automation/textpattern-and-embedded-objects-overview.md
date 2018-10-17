@@ -9,16 +9,16 @@ helpviewer_keywords:
 ms.assetid: 93fdfbb9-0025-4b72-8ca0-0714adbb70d5
 author: Xansky
 ms.author: mhopkins
-ms.openlocfilehash: c3904ad60df3d9d7ce2b58d5911e4e19a2ebb7e3
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 78c511555065528d1ab34ee3ec9f8859a15bbc61
+ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47193900"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49372378"
 ---
 # <a name="textpattern-and-embedded-objects-overview"></a>TextPattern 和嵌入式对象概述
 > [!NOTE]
->  本文档适用于想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空间中定义的托管 <xref:System.Windows.Automation> 类的 .NET Framework 开发人员。 有关最新信息[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]，请参阅[Windows 自动化 API: UI 自动化](https://go.microsoft.com/fwlink/?LinkID=156746)。  
+>  本文档适用于想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空间中定义的托管 <xref:System.Windows.Automation> 类的 .NET Framework 开发人员。 有关 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]的最新信息，请参阅 [Windows 自动化 API：UI 自动化](https://go.microsoft.com/fwlink/?LinkID=156746)。  
   
  本概述介绍 [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] 如何在文本文档或容器中公开嵌入对象或子元素。  
   
@@ -45,7 +45,7 @@ ms.locfileid: "47193900"
   
  如果需要遍历文本范围的内容，为使 <xref:System.Windows.Automation.Text.TextPatternRange.Move%2A> 方法成功执行，将在后台进行一系列步骤。  
   
-1.  对文本范围进行了规范化。也就是说，已在 <xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.Start> 终结点将文本范围折叠为退化范围，这使得 <xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.End> 终结点成为多余。 此步骤是必需的文本范围跨越的情况下消除歧义<xref:System.Windows.Automation.Text.TextUnit>边界： 例如，"{The U} RL [ http://www.microsoft.com ](https://www.microsoft.com)文本中嵌入"其中"{"和"}"是文本范围的终结点。  
+1.  对文本范围进行了规范化。也就是说，已在 <xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.Start> 终结点将文本范围折叠为退化范围，这使得 <xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.End> 终结点成为多余。 此步骤是必需的文本范围跨越的情况下消除歧义<xref:System.Windows.Automation.Text.TextUnit>边界： 例如，`{The URL https://www.microsoft.com is embedded in text`其中"{"和"}"是文本范围的终结点。  
   
 2.  生成的范围在 <xref:System.Windows.Automation.TextPattern.DocumentRange%2A> 中向后移动到所请求的 <xref:System.Windows.Automation.Text.TextUnit> 边界的开头。  
   
@@ -66,22 +66,22 @@ ms.locfileid: "47193900"
   
  } = <xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.End>  
   
-<a name="Hyperlink"></a>   
 ### <a name="hyperlink"></a>超链接  
- **示例 1 - 包含嵌入文本超链接的文本范围**  
+
+**示例 1 - 包含嵌入文本超链接的文本范围**
   
- {URL [ http://www.microsoft.com ](https://www.microsoft.com)嵌入在文本}。  
+`{The URL https://www.microsoft.com is embedded in text}.`
   
 |调用方法|结果|  
 |-------------------|------------|  
-|<xref:System.Windows.Automation.Text.TextPatternRange.GetText%2A>|返回字符串"URL http://www.microsoft.com嵌入在文本"。|  
+|<xref:System.Windows.Automation.Text.TextPatternRange.GetText%2A>|返回字符串 `The URL https://www.microsoft.com is embedded in text`。|  
 |<xref:System.Windows.Automation.Text.TextPatternRange.GetEnclosingElement%2A>|返回结束文本范围的最内层 <xref:System.Windows.Automation.AutomationElement> 。在本例中，即为表示文本提供程序本身的 <xref:System.Windows.Automation.AutomationElement> 。|  
 |<xref:System.Windows.Automation.Text.TextPatternRange.GetChildren%2A>|返回表示超链接控件的 <xref:System.Windows.Automation.AutomationElement> 。|  
-|<xref:System.Windows.Automation.TextPattern.RangeFromChild%2A> ，其中 <xref:System.Windows.Automation.AutomationElement> 是由上一个 `GetChildren` 方法返回的对象。|返回表示的范围"http://www.microsoft.com"。|  
+|<xref:System.Windows.Automation.TextPattern.RangeFromChild%2A> ，其中 <xref:System.Windows.Automation.AutomationElement> 是由上一个 `GetChildren` 方法返回的对象。|返回表示的范围"https://www.microsoft.com"。|  
   
  **示例 2 - 部分跨越嵌入文本超链接的文本范围**  
   
- URL`http://{[www]}`嵌入在文本中。  
+ URL`https://{[www]}`嵌入在文本中。  
   
 |调用方法|结果|  
 |-------------------|------------|  
@@ -89,9 +89,9 @@ ms.locfileid: "47193900"
 |<xref:System.Windows.Automation.Text.TextPatternRange.GetEnclosingElement%2A>|返回结束文本范围的最内层 <xref:System.Windows.Automation.AutomationElement> 。在本例中，即为超链接控件。|  
 |<xref:System.Windows.Automation.Text.TextPatternRange.GetChildren%2A>|由于文本范围未跨越整个 URL 字符串，因此返回 `null` 。|  
   
- **示例 3-部分跨越文本容器的内容的文本范围。文本容器包含不属于文本范围的嵌入的文本超链接。**  
+**示例 3-部分跨越文本容器的内容的文本范围。文本容器包含不属于文本范围的嵌入的文本超链接。**  
   
- {URL}[ http://www.microsoft.com ](https://www.microsoft.com)嵌入在文本中。  
+`{The URL} [https://www.microsoft.com](https://www.microsoft.com) is embedded in text.`
   
 |调用方法|结果|  
 |-------------------|------------|  
@@ -148,7 +148,7 @@ ms.locfileid: "47193900"
 |调用方法|结果|  
 |-------------------|------------|  
 |具有参数 (1,1) 的<xref:System.Windows.Automation.GridPattern.GetItem%2A> 。|返回表示表格单元格内容的 <xref:System.Windows.Automation.AutomationElement>。在本例中，该元素是文本控件。|  
-|<xref:System.Windows.Automation.TextPattern.RangeFromChild%2A> ，其中 <xref:System.Windows.Automation.AutomationElement> 是由上一个 `GetItem` 方法返回的对象。|返回“Y”。|  
+|<xref:System.Windows.Automation.TextPattern.RangeFromChild%2A>，其中 <xref:System.Windows.Automation.AutomationElement> 是由上一个 `GetItem` 方法返回的对象。|返回“Y”。|  
   
 ## <a name="see-also"></a>请参阅  
  <xref:System.Windows.Automation.TextPattern>  

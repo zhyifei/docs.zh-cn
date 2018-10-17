@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1149a3c3589cec0e952088a772ca036028c58ff5
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: b905c8bb89e4b163952b9640b53fc3992ba5ca10
+ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43521349"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49373879"
 ---
 # <a name="icordebugmetadatalocatorgetmetadata-method"></a>ICorDebugMetaDataLocator::GetMetaData 方法
 要求调试器返回模块（完成该调试器请求的操作需要其元数据）的完整路径。  
@@ -46,7 +46,7 @@ HRESULT GetMetaData(
  [in] 以 null 结尾的字符串，表示文件的完整路径。 如果不可用，完整路径的名称和扩展名的文件 (*文件名*。*扩展*)。  
   
  `dwImageTimeStamp`  
- [in] 来自图像 PE 文件头的时间戳。 此参数可潜在用于符号服务器 ([SymSrv](https://msdn.microsoft.com/library/cc266470.aspx)) 查找。  
+ [in] 来自图像 PE 文件头的时间戳。 此参数可潜在用于符号服务器 ([SymSrv](/windows/desktop/debug/using-symsrv)) 查找。  
   
  `dwImageSize`  
  [in] PE 文件头中的图像大小。 此参数可能可以用于 SymSrv 查找。  

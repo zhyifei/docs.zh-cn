@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - user-defined bindings [WCF]
 ms.assetid: c4960675-d701-4bc9-b400-36a752fdd08b
-ms.openlocfilehash: c9d37163770f2fd192a6fd2a03878b28f0237646
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: 7be7c156ec20a15cf8d1a12d8d1f429b6c2c33a9
+ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33806737"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49372201"
 ---
 # <a name="creating-user-defined-bindings"></a>创建用户定义的绑定
 有多种方式可以创建系统未提供的绑定：  
@@ -25,11 +25,11 @@ ms.locfileid: "33806737"
   
  有三种主要的绑定元素类型：协议绑定元素、编码绑定元素和传输绑定元素。  
   
- 协议绑定元素 – 这些元素表示对消息执行的更高级别的处理步骤。 由这些绑定元素创建的通道和侦听器可以添加、移除或修改消息内容。 给定的绑定可以具有任意数量的协议绑定元素，每一个元素都从 <xref:System.ServiceModel.Channels.BindingElement> 继承。 Windows Communication Foundation (WCF) 包含几种协议绑定元素，包括<xref:System.ServiceModel.Channels.ReliableSessionBindingElement>和<xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement>。  
+ 协议绑定元素 – 这些元素表示对消息执行的更高级别的处理步骤。 由这些绑定元素创建的通道和侦听器可以添加、移除或修改消息内容。 给定的绑定可以具有任意数量的协议绑定元素，每一个元素都从 <xref:System.ServiceModel.Channels.BindingElement> 继承。 Windows Communication Foundation (WCF) 包括多个协议绑定元素，其中包括<xref:System.ServiceModel.Channels.ReliableSessionBindingElement>和<xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement>。  
   
- 编码绑定元素 – 这些元素表示消息与准备用于网络传输的编码之间的转换。 典型的 WCF 绑定正好包括一个编码绑定元素。 编码绑定元素的示例包括 <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement>、<xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement> 和 <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>。 如果未对绑定指定编码绑定元素，则使用默认的编码。 当传输协议是 HTTP 时，默认编码为文本，对于其他传输协议，默认编码为二进制。  
+ 编码绑定元素 – 这些元素表示消息与准备用于网络传输的编码之间的转换。 典型的 WCF 绑定包含一个编码绑定元素。 编码绑定元素的示例包括 <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement>、<xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement> 和 <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>。 如果未对绑定指定编码绑定元素，则使用默认的编码。 当传输协议是 HTTP 时，默认编码为文本，对于其他传输协议，默认编码为二进制。  
   
- 传输绑定元素 – 这些元素表示传输协议上编码消息的传输。 典型的 WCF 绑定正好包括一个传输绑定元素，该类继承自<xref:System.ServiceModel.Channels.TransportBindingElement>。 传输绑定元素的示例包括 <xref:System.ServiceModel.Channels.TcpTransportBindingElement>、<xref:System.ServiceModel.Channels.HttpTransportBindingElement> 和 <xref:System.ServiceModel.Channels.NamedPipeTransportBindingElement>。  
+ 传输绑定元素 – 这些元素表示传输协议上编码消息的传输。 典型的 WCF 绑定包括一个传输绑定元素，继承自<xref:System.ServiceModel.Channels.TransportBindingElement>。 传输绑定元素的示例包括 <xref:System.ServiceModel.Channels.TcpTransportBindingElement>、<xref:System.ServiceModel.Channels.HttpTransportBindingElement> 和 <xref:System.ServiceModel.Channels.NamedPipeTransportBindingElement>。  
   
  创建新的绑定时，添加绑定元素的顺序很重要。 应始终按照以下顺序添加绑定元素：  
   
@@ -42,10 +42,10 @@ ms.locfileid: "33806737"
 |编码|文本、二进制、MTOM、自定义|是*|  
 |传输|TCP、命名管道、HTTP、HTTPS、MSMQ、自定义|是|  
   
- * 因为如果不指定编码，都需要每个绑定，一个编码，WCF 将添加一个默认编码。 对于 HTTP 和 HTTPS 传输，默认编码为 Text/XML，对于其他传输，默认编码为二进制。  
+ * 因为如果未指定的编码，都需要为每个绑定，一个编码，WCF 将添加一个默认编码。 对于 HTTP 和 HTTPS 传输，默认编码为 Text/XML，对于其他传输，默认编码为二进制。  
   
 ## <a name="creating-a-new-binding-element"></a>创建新的绑定元素  
- 除了从中派生的类型<xref:System.ServiceModel.Channels.BindingElement>都提供 wcf，你可以创建自己的绑定元素。 这样，您就可以通过创建自己的、可与堆栈中其他的系统提供的类型组合的 <xref:System.ServiceModel.Channels.BindingElement>，自定义创建绑定堆栈的方式和进入其中的组件。  
+ 除了类型派生自<xref:System.ServiceModel.Channels.BindingElement>所提供的 WCF，可以创建自己的绑定元素。 这样，您就可以通过创建自己的、可与堆栈中其他的系统提供的类型组合的 <xref:System.ServiceModel.Channels.BindingElement>，自定义创建绑定堆栈的方式和进入其中的组件。  
   
  例如，如果实现一个 `LoggingBindingElement` 以提供将消息记录到数据库中的能力，则必须将其放置在通道堆栈中传输通道的上方。 在此情况下，应用程序创建一个将 `LoggingBindingElement` 与 `TcpTransportBindingElement` 组合在一起的自定义绑定，如以下示例中所示。  
   
@@ -56,25 +56,25 @@ Binding customBinding = new CustomBinding(
 );  
 ```  
   
- 写入新的绑定元素的方式取决于元素的确切功能。 其中一个示例，[传输： UDP](../../../../docs/framework/wcf/samples/transport-udp.md)，提供了如何实现一种类型的绑定元素的详细的说明。  
+ 写入新的绑定元素的方式取决于元素的确切功能。 其中一个示例中，[传输： UDP](../../../../docs/framework/wcf/samples/transport-udp.md)，提供了如何实现一种类型的绑定元素的详细的说明。  
   
 ## <a name="creating-a-new-binding"></a>创建新的绑定  
  可以通过两种方式使用用户创建的绑定元素。 上一节演示了第一种方式：通过自定义绑定。 自定义绑定允许用户基于任意一组绑定元素（包括用户创建的绑定元素）创建自己的绑定。  
   
- 如果在多个应用程序中使用绑定，则可创建自己的绑定并扩展 <xref:System.ServiceModel.Channels.Binding>。 这样就避免了在每次使用时都需要手动创建自定义绑定。 用户定义的绑定允许你定义绑定的行为并包括用户定义的绑定元素。 它并且*预包装*： 无需每次使用它重新生成绑定。  
+ 如果在多个应用程序中使用绑定，则可创建自己的绑定并扩展 <xref:System.ServiceModel.Channels.Binding>。 这样就避免了在每次使用时都需要手动创建自定义绑定。 用户定义的绑定允许你定义绑定的行为并包括用户定义的绑定元素。 它是*预先打包*： 无需每次使用它重新绑定。  
   
  用户定义的绑定至少必须实现 <xref:System.ServiceModel.Channels.Binding.CreateBindingElements%2A> 方法和 <xref:System.ServiceModel.Channels.Binding.Scheme%2A> 属性。  
   
  <xref:System.ServiceModel.Channels.Binding.CreateBindingElements%2A> 方法返回一个新的 <xref:System.ServiceModel.Channels.BindingElementCollection>，其中包含绑定的绑定元素。 此集合已经过排序，应首先包含协议绑定元素，接下来是编码绑定元素，再接下来是传输绑定元素。 当使用 WCF 系统提供的绑定元素，您必须遵循排序规则中指定的绑定元素[自定义绑定](../../../../docs/framework/wcf/extending/custom-bindings.md)。 此集合不得引用在用户定义的绑定类中引用的对象；因此，绑定作者必须在每次调用 `Clone()` 时返回 <xref:System.ServiceModel.Channels.BindingElementCollection> 的 <xref:System.ServiceModel.Channels.Binding.CreateBindingElements%2A>。  
   
- <xref:System.ServiceModel.Channels.Binding.Scheme%2A> 属性表示在绑定上使用的传输协议的 URI 方案。 例如， *WSHttpBinding*和*NetTcpBinding*从各自返回"http"和"net.tcp"<xref:System.ServiceModel.Channels.Binding.Scheme%2A>属性。  
+ <xref:System.ServiceModel.Channels.Binding.Scheme%2A> 属性表示在绑定上使用的传输协议的 URI 方案。 例如， *WSHttpBinding*并*NetTcpBinding*返回其各自的"http"和"net.tcp"<xref:System.ServiceModel.Channels.Binding.Scheme%2A>属性。  
   
  有关用户定义的绑定的可选方法和属性的完整列表，请参见 <xref:System.ServiceModel.Channels.Binding>。  
   
 ### <a name="example"></a>示例  
- 本示例在派生自 `SampleProfileUdpBinding` 的 <xref:System.ServiceModel.Channels.Binding> 中实现配置文件绑定。 `SampleProfileUdpBinding`包含最多四个绑定元素： 一个用户创建`UdpTransportBindingElement`; 三个系统提供： `TextMessageEncodingBindingElement`， `CompositeDuplexBindingElement`，和`ReliableSessionBindingElement`。  
+ 本示例在派生自 `SampleProfileUdpBinding` 的 <xref:System.ServiceModel.Channels.Binding> 中实现配置文件绑定。 `SampleProfileUdpBinding`包含最多四个绑定元素： 一个用户创建`UdpTransportBindingElement`; 和三个系统提供： `TextMessageEncodingBindingElement`， `CompositeDuplexBindingElement`，和`ReliableSessionBindingElement`。  
   
-```  
+```csharp
 public override BindingElementCollection CreateBindingElements()  
 {     
     BindingElementCollection bindingElements = new BindingElementCollection();  
@@ -93,7 +93,7 @@ public override BindingElementCollection CreateBindingElements()
  不是所有绑定元素都彼此兼容。 具体而言，安全绑定元素在用于双工协定时存在一些限制。  
   
 ### <a name="one-shot-security"></a>单步安全  
- 你可以实现"单稳"的安全，通过设置一条消息中发送所有必需的安全凭据位置`negotiateServiceCredential`属性\<消息 > 配置元素到`false`。  
+ 可以实现"单稳"安全性，其中所有必要的安全凭据会在单个消息中，通过设置`negotiateServiceCredential`的属性\<消息 > 配置元素`false`。  
   
  单步身份验证无法与双工协定一起工作。  
   

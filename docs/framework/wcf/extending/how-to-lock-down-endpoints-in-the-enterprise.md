@@ -2,12 +2,12 @@
 title: 如何：在企业中锁定终结点
 ms.date: 03/30/2017
 ms.assetid: 1b7eaab7-da60-4cf7-9d6a-ec02709cf75d
-ms.openlocfilehash: 032b69c1fae38576b0374b329f1ab6fe90e2b1a0
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 23264159d30790cd54557509b0bc7c62edc1b5b7
+ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48836892"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49374152"
 ---
 # <a name="how-to-lock-down-endpoints-in-the-enterprise"></a>如何：在企业中锁定终结点
 大企业往往要求开发的应用程序符合企业安全策略。 以下主题讨论如何开发和安装客户端的终结点验证程序，它可以用来验证安装在计算机上的所有 Windows Communication Foundation (WCF) 客户端应用程序。  
@@ -39,7 +39,7 @@ ms.locfileid: "48836892"
   
 1.  使用恰当的机制安装终结点验证程序。 在企业中，可以使用组策略和 Systems Management Server (SMS)。  
   
-2.  强名称程序集安装到全局程序集缓存使用[Gacutil.exe （全局程序集缓存工具）](https://msdn.microsoft.com/library/ex0ss12c\(v=vs.110\).aspx)。  
+2.  强名称程序集安装到全局程序集缓存使用[Gacutil.exe （全局程序集缓存工具）](../../../../docs/framework/tools/gacutil-exe-gac-tool.md)。  
   
 3.  使用 <xref:System.Configuration?displayProperty=nameWithType> 命名空间类型执行以下操作：  
   

@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 94171b0708c97eb7510e916e451ed03645d706f3
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 2383003012ce1f6adffe0ad78ab614323840496f
+ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48837428"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49370999"
 ---
 # <a name="getpropertyhandle-function"></a>GetPropertyHandle 函数
 返回标识属性的唯一句柄。
@@ -52,7 +52,7 @@ HRESULT GetPropertyHandle (
 [in]一个以 null 结尾的 UTF16 编码 characaters 包含属性名称的字符串。   
 
 `pType`  
-[out]一个指向[ `CIMTYPE` ](https://msdn.microsoft.com/library/aa386309(v=vs.85).aspx)表示属性的 CIM 类型的枚举成员。
+[out]一个指向[ `CIMTYPE` ](/windows/desktop/api/wbemcli/ne-wbemcli-tag_cimtype_enumeration)表示属性的 CIM 类型的枚举成员。
 
 `pHandle`   
 [out]指向一个整数，包含属性句柄的指针。

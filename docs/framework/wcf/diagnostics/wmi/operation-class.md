@@ -2,19 +2,19 @@
 title: Operation 类
 ms.date: 03/30/2017
 ms.assetid: b19d1496-ef06-4d0c-b2ae-e728ec00cca0
-ms.openlocfilehash: d9256915afe9fdb8e4c91d186131fe41a7094c56
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 16de8b25594896349ea546d3def52dd256fe5c70
+ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33487563"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49371584"
 ---
 # <a name="operation-class"></a>Operation 类
 操作  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```csharp
 class Operation  
 {  
   string Action;  
@@ -50,7 +50,7 @@ class Operation
   
  访问类型：只读  
   
- 指示使用以异步方式实现某个操作`Begin`[左/右尖括号] 和`End`[左/右尖括号] 方法对服务协定中的。  
+ 指示操作以异步方式使用实现`Begin`[左/右尖括号] 和`End`[左/右尖括号] 方法对服务协定中的。  
   
 ### <a name="behaviors"></a>行为  
  数据类型：Behavior array  
@@ -94,7 +94,7 @@ class Operation
   
  操作的方法签名。  
   
-### <a name="name"></a>名称  
+### <a name="name"></a>name  
  数据类型：String  
   
  访问类型：只读  

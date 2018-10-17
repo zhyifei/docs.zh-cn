@@ -2,17 +2,17 @@
 title: 自定义编码器
 ms.date: 03/30/2017
 ms.assetid: fa0e1d7f-af36-4bf4-aac9-cd4eab95bc4f
-ms.openlocfilehash: ae3904af83452dd76723abb78a7a06fdb0f798cc
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: cd8b9172278ce5bcca2965872d697b03698bd850
+ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33809272"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49372689"
 ---
 # <a name="custom-encoders"></a>自定义编码器
 本主题讨论如何创建自定义编码器。  
   
- 在 Windows Communication Foundation (WCF) 中，你使用*绑定*可以指定如何在网络终结点之间传输数据。 绑定由一系列组成*绑定元素*。 绑定包括多个可选协议绑定元素，如安全，必需*消息编码器*绑定元素以及一个必需的传输绑定元素。 消息编码器由消息编码绑定元素表示。 WCF 中包含三种消息编码器： 二进制、 消息传输优化机制 (MTOM) 和文本。  
+ 在 Windows Communication Foundation (WCF) 中，使用*绑定*指定终结点之间通过网络传输数据的方式。 绑定由一系列组成*绑定元素*。 绑定包括多个可选协议绑定元素，如安全性、 所需*消息编码器*绑定元素和必需的传输绑定元素。 消息编码器由消息编码绑定元素表示。 WCF 中包含三种消息编码器： 二进制、 消息传输优化机制 (MTOM) 和文本。  
   
  消息编码绑定元素将序列化传出 <xref:System.ServiceModel.Channels.Message> 并将其传递到传输层，或从传输层接收已序列化的消息并将其传递到协议层（如果存在），如果不存在协议层，则传递到应用程序。  
   
@@ -21,9 +21,9 @@ ms.locfileid: "33809272"
  当连接至预先存在的客户端或服务器时，您不能选择使用特定消息编码。 但是，WCF 服务可进行访问通过多个终结点，每个都有不同的消息编码器。 当一个编码器不涵盖服务的全部用户时，请考虑在多个终结点上公开您的服务。 然后，客户端应用程序即可选择最适用的终结点。 使用多个终结点使您可以将不同消息编码器的优点与其他绑定元素结合起来。  
   
 ## <a name="system-provided-encoders"></a>系统提供的编码器  
- WCF 提供了几个旨在涵盖最常见的应用程序方案的系统提供的绑定。 这些绑定中的每个绑定均由传输选项、消息编码器选项和其他选项（如安全性）组成。 本主题介绍如何扩展`Text`， `Binary`，和`MTOM`消息编码器是否包括在 WCF 中，或创建您自己的自定义编码器。 文本消息编码器同时支持纯 XML 编码和 SOAP 编码。 文本消息编码器的纯 XML 编码模式称为 POX（“Plain Old XML”）编码器，以便与基于文本的 SOAP 编码进行区分。  
+ WCF 提供了多个旨在涵盖最常见的应用程序方案的系统提供的绑定。 这些绑定中的每个绑定均由传输选项、消息编码器选项和其他选项（如安全性）组成。 本主题介绍如何扩展`Text`， `Binary`，和`MTOM`消息编码器是否包括在 WCF 中，或创建您自己的自定义编码器。 文本消息编码器同时支持纯 XML 编码和 SOAP 编码。 文本消息编码器的纯 XML 编码模式称为 POX（“Plain Old XML”）编码器，以便与基于文本的 SOAP 编码进行区分。  
   
- 有关的系统提供的绑定所提供的绑定元素组合的详细信息，请参阅中的相应部分[选择传输](../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)。  
+ 有关系统提供的绑定所提供的绑定元素的组合的详细信息，请参阅中的相应章节[选择传输](../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)。  
   
 ## <a name="how-to-work-with-system-provided-encoders"></a>如何使用系统提供的编码器  
  使用派生自 <xref:System.ServiceModel.Channels.MessageEncodingBindingElement> 的类将编码添加到绑定中。  
@@ -32,9 +32,9 @@ ms.locfileid: "33809272"
   
 -   <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>：互操作性最强，但效率最低的 XML 消息编码器。 Web 服务或 Web 服务客户端通常都能理解文本 XML。 但是，将大型二进制数据块作为文本传输不是有效的传输方式。  
   
--   <xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement>：表示指定基于二进制的 XML 消息所使用的字符编码和消息版本管理的绑定元素。 这是效率最高的编码选项，但互操作性最低，因为它仅支持由 WCF 终结点。  
+-   <xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement>：表示指定基于二进制的 XML 消息所使用的字符编码和消息版本管理的绑定元素。 这是最有效的编码选项，但互操作性最低，因为它仅支持由 WCF 终结点。  
   
--   <<!--zz xref:System.ServiceModel.Channels.MTOMMessageEncodingBindingElement --> `System.ServiceModel.Channels.MTOMMessageEncodingBindingElement`>： 表示绑定元素，指定的字符编码和消息版本管理用于使用消息传输优化机制 (MTOM) 编码的消息。 MTOM 是一种用于在 WCF 消息中传输二进制数据的有效技术。 MTOM 编码器力图在效率和互操作性之间取得平衡。 MTOM 编码以文本形式传输大多数 XML，但是会通过按原样（即不转换为文本）的方式传输来优化大型二进制数据块。  
+-   <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement>：表示指定使用消息传输优化机制 (MTOM) 编码的消息所使用的字符编码和消息版本管理的绑定元素。 MTOM 是一种用于在 WCF 消息中传输二进制数据的有效技术。 MTOM 编码器力图在效率和互操作性之间取得平衡。 MTOM 编码以文本形式传输大多数 XML，但是会通过按原样（即不转换为文本）的方式传输来优化大型二进制数据块。  
   
  绑定元素创建二进制、MTOM 或文本 <xref:System.ServiceModel.Channels.MessageEncoderFactory>。 工厂创建二进制、MTOM 或文本 <xref:System.ServiceModel.Channels.MessageEncoderFactory> 实例。 通常，只有一个实例。 但是如果使用会话，将为每个会话提供一个不同的编码器。 二进制编码器用此来调整动态字典（请参见“XML 基础结构”）。  
   
@@ -57,7 +57,7 @@ ms.locfileid: "33809272"
   
  这些字符串通过内部 `AddSessionInformationToMessage` 方法附加到消息中。 此方法将字符串作为 UTF-8 添加到以它们的长度为前缀的消息前面。 随后，整个字典标头都将以数据长度作为前缀。 反向操作可通过内部 `ExtractSessionInformationFromMessage` 方法执行。  
   
- 除了处理动态字典关键字之外，缓冲的会话消息将采用独有的方式接收。 二进制编码器不是对文档创建一个编码器并处理该文档，而是使用内部 `MessagePatterns` 类解构二进制流。 思路是大多数消息都具有某组显示在特定的顺序时生成的 WCF 中的标头。 模式系统将基于它所期待的方式拆分消息。 如果成功了，它将初始化 <xref:System.ServiceModel.Channels.MessageHeaders> 对象而无需分析 XML。 如果不成功，将转而使用标准方法。  
+ 除了处理动态字典关键字之外，缓冲的会话消息将采用独有的方式接收。 二进制编码器不是对文档创建一个编码器并处理该文档，而是使用内部 `MessagePatterns` 类解构二进制流。 其理念是，大多数消息都具有某组显示在特定的顺序时生成的 WCF 的标头。 模式系统将基于它所期待的方式拆分消息。 如果成功了，它将初始化 <xref:System.ServiceModel.Channels.MessageHeaders> 对象而无需分析 XML。 如果不成功，将转而使用标准方法。  
   
 ### <a name="mtom-encoding"></a>MTOM 编码  
  <<!--zz xref:System.ServiceModel.Channels.MTOMMessageEncodingBindingElement --> `System.ServiceModel.Channels.MTOMMessageEncodingBindingElement`> 类具有名为额外的配置属性 <<!--zz xref:System.ServiceModel.Channels.MTOMMessageEncodingBindingElement --> `System.ServiceModel.Channels.MTOMMessageEncodingBindingElement`。MaxBufferSize %2a >。 此属性用于设置在读取消息的过程中允许缓冲的数据量上限。 XML 信息集 (Infoset)，或其他 MIME 部分，可能需要进行缓冲以便将所有 MIME 部分集合到一条消息中。  
@@ -89,7 +89,7 @@ ms.locfileid: "33809272"
   
  然后通过重写 <xref:System.ServiceModel.Channels.MessageEncoderFactory> 方法将自定义的 <xref:System.ServiceModel.Channels.MessageEncodingBindingElement.CreateMessageEncoderFactory%2A> 连接至用于配置服务或客户端的绑定元素堆栈，以便返回此工厂的实例。  
   
- 有两个示例使用 WCF 提供演示示例代码使用此过程：[自定义消息编码器： 自定义文本编码器](../../../../docs/framework/wcf/samples/custom-message-encoder-custom-text-encoder.md)和[自定义消息编码器： 压缩编码器](../../../../docs/framework/wcf/samples/custom-message-encoder-compression-encoder.md)。  
+ 有两个示例使用 WCF 提供的说明此过程的示例代码：[自定义消息编码器： 自定义文本编码器](../../../../docs/framework/wcf/samples/custom-message-encoder-custom-text-encoder.md)并[自定义消息编码器： 压缩编码器](../../../../docs/framework/wcf/samples/custom-message-encoder-compression-encoder.md)。  
   
 ## <a name="see-also"></a>请参阅  
  <xref:System.ServiceModel.Channels.MessageEncodingBindingElement>  

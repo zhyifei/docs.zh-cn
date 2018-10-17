@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 ms.assetid: 7b50602f-d7b5-42e9-8e92-1f0413df0d8b
 author: BrucePerlerMS
 ms.openlocfilehash: 09c261afb2c64a46fc1f4619c4ec6b2e87b3fbbf
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/07/2018
-ms.locfileid: "48847381"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49371702"
 ---
 # <a name="secure-sessions"></a>安全会话
 Windows Communication Foundation (WCF) 的一项功能是保证按发送的顺序接收消息的可靠会话。 本节中的主题讨论在创建可靠会话时要考虑的安全性问题。 有关可靠会话的详细信息，请参阅[使用会话的](../../../../docs/framework/wcf/using-sessions.md)。  
