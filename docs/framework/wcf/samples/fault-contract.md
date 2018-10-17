@@ -2,12 +2,12 @@
 title: 错误协定
 ms.date: 03/30/2017
 ms.assetid: b31b140e-dc3b-408b-b3c7-10b6fe769725
-ms.openlocfilehash: 5b3348f31d239d6bf7e64852ba02010115062669
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 37b977feffd7ce46d2f4bc7b8a4e5dc89d21b137
+ms.sourcegitcommit: fd8d4587cc26e53f0e27e230d6e27d828ef4306b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46003927"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "49347765"
 ---
 # <a name="fault-contract"></a>错误协定
 “错误协定”示例演示如何将错误信息从服务传达到客户端。 示例基于[Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md)，并且一些附加代码添加到服务，以便将内部异常转换为错误。 客户端试图执行除数为零的运算以在服务上强制产生错误情况。  
@@ -17,7 +17,7 @@ ms.locfileid: "46003927"
   
  已将计算器协定修改为包括 <xref:System.ServiceModel.FaultContractAttribute>，如下面的示例代码所示。  
   
-```  
+```csharp
 [ServiceContract(Namespace="http://Microsoft.ServiceModel.Samples")]  
 public interface ICalculator  
 {  
@@ -35,7 +35,7 @@ public interface ICalculator
   
  <xref:System.ServiceModel.FaultContractAttribute> 属性指示 `Divide` 运算可能返回一个 `MathFault` 类型的错误。 错误可以是可序列化的任何类型。 在本例中，`MathFault` 为数据协定，如下所示：  
   
-```  
+```csharp
 [DataContract(Namespace="http://Microsoft.ServiceModel.Samples")]  
 public class MathFault  
 {      
@@ -60,7 +60,7 @@ public class MathFault
   
  如下面的示例代码所示，发生除数为零异常时，`Divide` 方法引发 <xref:System.ServiceModel.FaultException%601> 异常。 此异常导致向客户端发送一个错误。  
   
-```  
+```csharp
 public int Divide(int n1, int n2)  
 {  
     try  
@@ -79,7 +79,7 @@ public int Divide(int n1, int n2)
   
  通过请求除数为零，客户端代码强制产生错误。 运行示例时，操作请求和响应将显示在客户端控制台窗口中。 您会看到将除数为零报告为错误。 在客户端窗口中按 Enter 可以关闭客户端。  
   
-```  
+```console  
 Add(15,3) = 18  
 Subtract(145,76) = 69  
 Multiply(9,81) = 729  
@@ -90,7 +90,7 @@ Press <ENTER> to terminate client.
   
  客户端通过捕获相应 `FaultException<MathFault>` 异常来完成此操作：  
   
-```  
+```csharp
 catch (FaultException<MathFault> e)  
 {  
     Console.WriteLine("FaultException<MathFault>: Math fault while doing " + e.Detail.operation + ". Problem: " + e.Detail.problemType);  

@@ -2,12 +2,12 @@
 title: 对象引用
 ms.date: 03/30/2017
 ms.assetid: 7a93d260-91c3-4448-8f7a-a66fb562fc23
-ms.openlocfilehash: 1aa8b1c9d135186dba9e4da75f0c7cb9297d8e5c
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 00caccaeed8cebeec2e053d418ae6a5bf9a12138
+ms.sourcegitcommit: fd8d4587cc26e53f0e27e230d6e27d828ef4306b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46000237"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "49347739"
 ---
 # <a name="object-references"></a>对象引用
 此示例演示如何在服务器与客户端之间通过引用来传递对象。 此示例使用模拟*社交网络*。 社会网络由一个 `Person` 类组成，该类包含一个朋友列表，其中每个朋友都是 `Person` 类的一个实例，并有自己的朋友列表。 这将创建一个对象图。 服务在这些社会网络上公开操作。  
@@ -20,7 +20,7 @@ ms.locfileid: "46000237"
 ## <a name="service"></a>服务  
  `Person` 类应用了 <xref:System.Runtime.Serialization.DataContractAttribute> 属性，<xref:System.Runtime.Serialization.DataContractAttribute.IsReference%2A> 字段设置为 `true` 以将其声明为引用类型。 所有属性 (Property) 都应用了 <xref:System.Runtime.Serialization.DataMemberAttribute> 属性 (Attribute)。  
   
-```  
+```csharp
 [DataContract(IsReference=true)]  
 public class Person  
 {  
@@ -53,7 +53,7 @@ public class Person
   
  `GetPeopleInNetwork` 操作采用一个 `Person` 类型的参数，并返回网络中的所有人；也就是说，返回 `friends` 列表中的所有人、朋友的朋友等等（没有重复项）。  
   
-```  
+```csharp
 public List<Person> GetPeopleInNetwork(Person p)  
 {  
     List<Person> people = new List<Person>();  
@@ -65,7 +65,7 @@ public List<Person> GetPeopleInNetwork(Person p)
   
  `GetMutualFriends` 采用一个 `Person` 类型的参数，返回列表中所有符合以下条件的朋友：在其 `friends` 列表中也包含这个人。  
   
-```  
+```csharp
 public List<Person> GetMutualFriends(Person p)  
 {  
     List<Person> mutual = new List<Person>();  
@@ -80,7 +80,7 @@ public List<Person> GetMutualFriends(Person p)
   
  `GetCommonFriends` 操作采用一个 `Person` 类型的列表。 该列表应当有两个 `Person` 对象。 该操作返回 `Person` 对象的列表，这些对象位于输入列表中的 `friends` 对象的 `Person` 列表中。  
   
-```  
+```csharp
 public List<Person> GetCommonFriends(List<Person> people)  
 {  
     List<Person> common = new List<Person>();  

@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: bedccaab-12a2-4511-8f67-e961f249aec6
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: bc0b75db5b3f35087df70c9155a1ba3b39ceae4d
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 1736dd8fcb308bceee5f100149919ff9ec45510d
+ms.sourcegitcommit: d88024e6d6d8b242feae5f4007a709379355aa24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48028415"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49316319"
 ---
 # <a name="ltconnectionmanagementgt-element-network-settings"></a>&lt;connectionManagement&gt;元素 （网络设置）
 指定到网络主机的最大连接数。  
@@ -58,7 +58,7 @@ ms.locfileid: "48028415"
  此元素可在应用程序配置文件或计算机配置文件 (Machine.config) 中使用。  
   
 ## <a name="example"></a>示例  
- 下面的示例配置应用程序使用与服务器 www.contoso.com 的四个连接和两个连接到所有其他服务器。  
+ 下面的示例配置应用程序使用与服务器的四个连接`www.contoso.com`和两个连接到所有其他服务器。  
   
 ```xml  
 <configuration>  

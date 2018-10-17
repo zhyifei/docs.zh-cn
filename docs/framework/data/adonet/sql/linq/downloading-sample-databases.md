@@ -1,56 +1,56 @@
 ---
-title: 下载示例数据库
-ms.date: 03/30/2017
+title: 获取示例数据库的 ADO.NET 代码示例
+description: 下载 ADO.NET 文档以及 SQL Server 和管理工具中的代码示例中使用的示例数据库
+ms.date: 10/12/2018
 ms.assetid: ef9d69a1-9461-43fe-94bb-7c836754bcb5
-ms.openlocfilehash: e0b842385762a486ffcc775974e15334c77b589b
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.openlocfilehash: 75ae1895d683b669f51b33130fc2f47010e39814
+ms.sourcegitcommit: fd8d4587cc26e53f0e27e230d6e27d828ef4306b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/22/2018
-ms.locfileid: "46585449"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "49347492"
 ---
-# <a name="downloading-sample-databases"></a>下载示例数据库
-[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 中的许多示例和演练都使用 Northwind 示例数据库和 SQL Server Express Edition。 您可以从 Microsoft 下载网站免费下载这些产品。  
+# <a name="get-the-sample-databases-for-adonet-code-samples"></a>获取示例数据库的 ADO.NET 代码示例
+
+示例和演练中的大量[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]文档使用示例数据库和 SQL Server Express。 可从 Microsoft 下载这些免费的产品。
+
+## <a name="get-the-adventureworks-sample-database"></a>获取 AdventureWorks 示例数据库
+
+从以下 GitHub 存储库下载 AdventureWorks 示例数据库：
+
+[AdventureWorks 示例数据库](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks)
+
+下载一个数据库备份后 (\*.bak) 文件，将备份还原到的 SQL Server 实例使用 SQL Server Management Studio (SSMS)。 请参阅[获取 SQL Server Management Studio](#get_ssms)。
+
+## <a name="get-the-northwind-sample-database"></a>获取 Northwind 示例数据库
+
+从 Microsoft 下载中心中的以下页面下载 Northwind 示例数据库：
+
+[Northwind 和 Pubs 示例数据库](https://go.microsoft.com/fwlink?linkid=64296)
+
+下载文件后，双击文件以提取数据库和脚本。 默认情况下，文件安装在文件夹中`<drive>:\SQL Server 2000 Sample Databases`。
+
+可以使用 Northwind 数据库之前，必须执行以下操作之一：
+
+- 通过运行重新创建的 SQL Server 实例上数据库`instnwnd.sql`安装文件夹中的脚本文件。
+
+- 附加`northwnd.mdf`与其对应的文件`*.ldf`到的 SQL Server 实例的日志文件。
+
+## <a name="get_sql"></a> 获取 SQL Server Express
+
+SQL Server Express 是免费的入门级版本可以与应用程序重新发布的 SQL Server。 下载 SQL Server Express 的以下页面：
   
-## <a name="downloading-the-northwind-database"></a>下载 Northwind 数据库  
+[SQL Server Express 版本](https://www.microsoft.com/sql-server/sql-server-editions-express)
+
+如果您使用的[Visual Studio](https://www.visualstudio.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017)，在社区版和专业和更高版本包括 SQL Server Express LocalDB。  
+
+## <a name="get_ssms"></a> 获取 SQL Server Management Studio
+如果你想要查看或修改已下载的数据库，可以使用 SQL Server Management Studio (SSMS)。 从以下页面下载 SSMS:
+
+[下载 SQL Server Management Studio (SSMS)](/sql/ssms/download-sql-server-management-studio-ssms) 
+
+您还可以查看和管理 Visual Studio 集成的开发环境 (IDE) 中的数据库。 在中[Visual Studio](https://www.visualstudio.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017)，连接到从数据库**SQL Server 对象资源管理器**，或创建到数据库中的数据连接**服务器资源管理器**。 打开从这些资源管理器窗格**视图**菜单。
   
-#### <a name="to-download-and-install-the-northwind-sample-database-for-sql-server"></a>下载和安装用于 SQL Server 的 Northwind 示例数据库  
-  
-1.  启动 Internet Explorer。  
-  
-2.  转到[Northwind 和 Pubs 示例数据库](https://go.microsoft.com/fwlink?linkid=64296)Web 站点。  
-  
-3.  单击 **“下载”**。  
-  
-4.  在中**文件下载**对话框中，选择**保存**。  
-  
-5.  下载文件后，双击**Nwind.exe**文件来安装数据库。  
-  
-     默认情况下，数据库安装在*驱动器*: \SQL Server 2000 Sample Databases。  
-  
-## <a name="downloading-sql-server-express-edition"></a>下载 SQL Server Express Edition  
- SQL Server Express Edition 免费提供，您可以利用应用程序重新发布它。 如果使用的 Visual Studio，专业版和更高版本都包含 SQL Server Express Edition。  
-  
-#### <a name="to-download-and-install-sql-server-express-edition"></a>下载并安装 SQL Server Express Edition  
-  
-1.  启动 Internet Explorer。  
-  
-2.  转到[Microsoft Download Center](https://go.microsoft.com/fwlink?linkid=74602) Web 站点。  
-  
-3.  在关键字框中，键入**SQL Server Express**。  
-  
-4.  单击 **“转到”**。  
-  
-5.  在结果页上，单击指向**Microsoft SQL Server 2005 Express Edition**下载页。  
-  
-6.  按照网站上的安装说明操作。  
-  
-## <a name="downloading-management-studio-express"></a>下载 Management Studio Express  
- 如果你想要修改已下载的数据库，则可以访问数据库从**服务器资源管理器**在 Visual Studio 集成开发环境 (IDE)，或使用 Microsoft SQL Server Management Studio Express (SSMSE).  
-  
-#### <a name="to-download-management-studio-express"></a>下载 Management Studio Express  
-  
--   按照的说明[SSMSE 站点](https://go.microsoft.com/fwlink/?LinkId=95933)。  
-  
-## <a name="see-also"></a>请参阅  
- [入门](../../../../../../docs/framework/data/adonet/sql/linq/getting-started.md)
+## <a name="see-also"></a>请参阅
+
+- [入门](../../../../../../docs/framework/data/adonet/sql/linq/getting-started.md)

@@ -2,12 +2,12 @@
 title: XMLSerializer 错误
 ms.date: 03/30/2017
 ms.assetid: c6b80f14-64f4-4162-ae76-71664cf42fd3
-ms.openlocfilehash: 760b88a6682032b8c8915fd0ea657029d2d0444e
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 763e2c60e3cd1b2511b229f470a64cdd5a01d5a6
+ms.sourcegitcommit: fd8d4587cc26e53f0e27e230d6e27d828ef4306b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44040884"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "49347752"
 ---
 # <a name="xmlserializer-faults"></a>XMLSerializer 错误
 <xref:System.Xml.Serialization.XmlSerializer> 错误协定示例演示如何使用 <xref:System.Xml.Serialization.XmlSerializer> 将错误信息从服务传达到客户端。 示例基于[Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md)，并且一些附加代码添加到服务，以便将内部异常转换为错误。 客户端试图执行除数为零的运算以在服务上强制产生错误情况。  
@@ -17,7 +17,7 @@ ms.locfileid: "44040884"
   
  已将计算器协定修改为包括 <xref:System.ServiceModel.FaultContractAttribute>，如下面的示例代码所示。 另外，<xref:System.ServiceModel.XmlSerializerFormatAttribute> 还用于使用 <xref:System.Xml.Serialization.XmlSerializer> 启用序列化 对于此属性 (Attribute)，<xref:System.ServiceModel.XmlSerializerFormatAttribute.SupportFaults%2A> 属性 (Property) 设置为 `true`，它指示序列化程序使用 <xref:System.Xml.Serialization.XmlSerializer> 读取和写入错误。  
   
-```  
+```csharp
 [XmlSerializerFormat(SupportFaults=true)]  
 [ServiceContract(Namespace="http://Microsoft.ServiceModel.Samples")]  
 public interface ICalculator  

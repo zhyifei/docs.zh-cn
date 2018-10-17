@@ -2,12 +2,12 @@
 title: 使用 Async 和 Await 的异步编程 (C#)
 ms.date: 05/22/2017
 ms.assetid: 9bcf896a-5826-4189-8c1a-3e35fa08243a
-ms.openlocfilehash: bd1493319dd7f742158fe7d3e1b286a4900b05b5
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 7e95010f966119db72a32c21408852d6c3bd6521
+ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43529158"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49122826"
 ---
 # <a name="asynchronous-programming-with-async-and-await-c"></a>使用 Async 和 Await 的异步编程 (C#)
 通过使用异步编程，你可以避免性能瓶颈并增强应用程序的总体响应能力。 但是，编写异步应用程序的传统技术可能比较复杂，使它们难以编写、调试和维护。  
@@ -173,7 +173,7 @@ string urlContents = await client.GetStringAsync();
   
 如果方法不含任何 return 语句或包含不返回操作数的 return 语句，将 <xref:System.Threading.Tasks.Task> 用作返回类型。  
 
-自 C# 7.0 起，还可以指定其他任何返回类型，前提是返回类型包含 `GetAwaiter` 方法。 例如，<xref:System.Threading.Tasks.ValueTask%601> 就是这种类型。 可用于 [System.Threading.Tasks.Extension](https://www.nuget.org/packages/System.Threading.Tasks.Extensions/) NuGet 包。
+自 C# 7.0 起，还可以指定任何其他返回类型，前提是类型包含 `GetAwaiter` 方法。 例如，<xref:System.Threading.Tasks.ValueTask%601> 就是这种类型。 可用于 [System.Threading.Tasks.Extension](https://www.nuget.org/packages/System.Threading.Tasks.Extensions/) NuGet 包。
   
  下面的示例演示如何声明并调用可返回 <xref:System.Threading.Tasks.Task%601> 或 <xref:System.Threading.Tasks.Task> 的方法。  
   

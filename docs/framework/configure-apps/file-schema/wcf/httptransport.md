@@ -2,12 +2,12 @@
 title: '&lt;httpTransport&gt;'
 ms.date: 03/30/2017
 ms.assetid: 8b30c065-b32a-4fa3-8eb4-5537a9c6b897
-ms.openlocfilehash: cbd375652a2051c22e12e12e7650077e56ed2d7d
-ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
+ms.openlocfilehash: ddce1053a7494a84d0266c7ad14f6b1937365fa5
+ms.sourcegitcommit: d88024e6d6d8b242feae5f4007a709379355aa24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49086409"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49316423"
 ---
 # <a name="lthttptransportgt"></a>&lt;httpTransport&gt;
 为自定义绑定指定用于传输 SOAP 消息的 HTTP 传输。  
@@ -47,7 +47,7 @@ IntegratedWindowsAuthentication: Specifies Windows authentication"
 |allowCookies|一个布尔值，指定客户端是否接受 Cookie 并在今后的请求中传播这些 Cookie。 默认值为 `false`。<br /><br /> 在与使用 Cookie 的 ASMX Web 服务进行交互时，可以使用此属性。 通过这种方式，可以确保从服务器返回的 Cookie 自动复制到客户端今后对该服务的所有请求。|  
 |authenticationScheme|指定用来验证 HTTP 侦听器正在处理的客户端请求的协议。 包括以下有效值：<br /><br /> -Digest： 指定摘要式身份验证。<br />-Negotiate： 协商使用客户端，以确定身份验证方案。 如果客户端和服务器均支持 Kerberos，则使用 Kerberos；否则使用 NTLM。<br />-Ntlm： 指定 NTLM 身份验证。<br />-基本： 指定基本身份验证。<br />-Anonymous： 指定匿名身份验证。<br /><br /> 默认值为 Anonymous。 此属性的类型为 <xref:System.Net.AuthenticationSchemes>。 此属性只能设置一次。|  
 |bypassProxyOnLocal|一个布尔值，指示是否对本地地址不使用代理服务器。 默认值为 `false`。<br /><br /> 本地地址是指位于本地 LAN 或 Intranet 上的地址。<br /><br /> Windows Communication Foundation (WCF) 总是忽略代理，如果服务地址以开始 `http://localhost` 。<br /><br /> 如果希望客户端在与同一台计算机上的服务通话时使用代理，则应使用主机名称而非 localhost。|  
-|hostnameComparisonMode|指定用于分析 URI 的 HTTP 主机名比较模式。 有效值为<br /><br /> -StrongWildcard: （"+"） 与指定的方案、 端口和相对 URI 的上下文中的所有可能的主机名相匹配。<br />-精确： 无通配符<br />-WeakWildcard: ("*") 匹配的指定的方案、 端口和相对 UIR 尚未显式匹配或通过强通配符机制的上下文中的所有可能主机名。<br /><br /> 默认值为 StrongWildcard。 此属性的类型为 `System.ServiceModel.HostnameComparisonMode`。|  
+|hostnameComparisonMode|指定用于分析 URI 的 HTTP 主机名比较模式。 有效值为<br /><br /> -StrongWildcard: （"+"） 与指定的方案、 端口和相对 URI 的上下文中的所有可能的主机名相匹配。<br />-精确： 无通配符<br />-WeakWildcard: ("\*") 匹配的指定的方案、 端口和相对 UIR 尚未显式匹配或通过强通配符机制的上下文中的所有可能主机名。<br /><br /> 默认值为 StrongWildcard。 此属性的类型为 `System.ServiceModel.HostnameComparisonMode`。|  
 |keepAliveEnabled|一个布尔值，指定是否与 Internet 资源建立持久性连接。|  
 |maxBufferSize|一个正整数，指定缓冲区的最大大小。 默认值为 524288。|  
 |proxyAddress|一个指定 HTTP 代理的地址的 URI。 如果 `useSystemWebProxy` 为 `true`，则此设置必须为 `null`。 默认值为 `null`。|  

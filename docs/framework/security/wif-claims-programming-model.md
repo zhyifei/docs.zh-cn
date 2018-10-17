@@ -3,12 +3,12 @@ title: WIF 声明编程模型
 ms.date: 03/30/2017
 ms.assetid: 149cb875-9b1c-4695-b88a-fbf1725a02f9
 author: BrucePerlerMS
-ms.openlocfilehash: 95df026684f536a64ffe15f65264c470dff164da
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 91b719967cd4ab9fd412e5c0799bb5e1921a4801
+ms.sourcegitcommit: d88024e6d6d8b242feae5f4007a709379355aa24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47197549"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49316501"
 ---
 # <a name="wif-claims-programming-model"></a>WIF 声明编程模型
 ASP.NET 和 Windows Communication Foundation (WCF) 开发人员通常使用 IIdentity 和 IPrincipal 接口处理用户的标识信息。 .NET 4.5 中集成了 Windows Identity Foundation (WIF)，因此对于任何主体，声明都将始终存在，如下图所示：
@@ -23,7 +23,7 @@ ASP.NET 和 Windows Communication Foundation (WCF) 开发人员通常使用 IIde
 
 - <xref:System.Security.Claims.Claim.Value%2A> 包含声明的值，表现形式为字符串。 例如，电子邮件地址可以表示为"someone@contoso.com"。
 
-- <xref:System.Security.Claims.Claim.ValueType%2A> 表示声明值的类型，通常是一个 URI。 例如，字符串类型表示为 `http://www.w3.org/2001/XMLSchema#string`。 根据 XML 架构，该值类型必须为 QName。 为使 WIF 输出有效的 QName 值，值的格式必须为 `namespace#format`。 如果命名空间不是定义完善的命名空间，生成的 XML 可能无法进行架构验证，因为没有为该命名空间发布的 XSD 文件。 默认值类型为 `http://www.w3.org/2001/XMLSchema#string`。 请参阅[ http://www.w3.org/2001/XMLSchema ](https://go.microsoft.com/fwlink/?LinkId=209155)的已知值类型，您可以安全地使用。
+- <xref:System.Security.Claims.Claim.ValueType%2A> 表示声明值的类型，通常是一个 URI。 例如，字符串类型表示为 `http://www.w3.org/2001/XMLSchema#string`。 根据 XML 架构，该值类型必须为 QName。 为使 WIF 输出有效的 QName 值，值的格式必须为 `namespace#format`。 如果命名空间不是定义完善的命名空间，生成的 XML 可能无法进行架构验证，因为没有为该命名空间发布的 XSD 文件。 默认值类型为 `http://www.w3.org/2001/XMLSchema#string`。 有关可安全使用的已知值类型的信息，请参阅[W3C XML 架构](https://www.w3.org/2001/XMLSchema)页。
 
 - <xref:System.Security.Claims.Claim.Issuer%2A> 是颁发声明的安全令牌服务 (STS) 标识符。 这可以表示为 STS 或者代表 STS名称的 URL ，例如 `https://sts1.contoso.com/sts`。
 
@@ -45,7 +45,7 @@ ASP.NET 和 Windows Communication Foundation (WCF) 开发人员通常使用 IIde
 ClaimsPrincipal claimsPrincipal = Thread.CurrentPrincipal as ClaimsPrincipal;
 ```
 
-有关详细信息，请参阅<xref:System.Security.Claims>。
+有关详细信息，请参阅 <xref:System.Security.Claims> 。
 
 ### <a name="role-claim-type"></a>角色声明类型
 配置声明感知应用程序的过程中，应确定使用的角色声明类型。 此声明类型由 System.Security.Claims.ClaimsPrincipal.IsInRole (System.String) 使用。 默认声明类型为 `http://schemas.microsoft.com/ws/2008/06/identity/claims/role`。

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - COM+ [WCF], configuring service settings
 ms.assetid: f42a55a8-3af8-4394-9fdd-bf12a93780eb
-ms.openlocfilehash: d14fd1434cb87dc62babeabb79cb780e568aacb7
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: 9cbeb03e21ed3b8ec272d47815ac7e9c48d77499
+ms.sourcegitcommit: fd8d4587cc26e53f0e27e230d6e27d828ef4306b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48581820"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "49348765"
 ---
 # <a name="how-to-configure-com-service-settings"></a>如何：配置 COM+ 服务设置
 使用 COM+ 服务配置工具添加或移除应用程序接口时，应用程序配置文件中的 Web 服务配置将更新。 在 COM + 承载模式中，Application.config 文件被放置在应用程序根目录中 (应用程序 %PROGRAMFILES%\ComPlus\\{appid} 是默认值)。 无论在哪种 Web 宿主模式中，Web.config 文件均放置在指定的 vroot 目录中。  
@@ -97,4 +97,4 @@ public interface IFinancesContract : IDisposable
 ```  
   
 ## <a name="see-also"></a>请参阅  
- [与 COM+ 应用程序集成](../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications.md)
+* [与 COM+ 应用程序集成](../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications.md)
