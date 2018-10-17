@@ -5,12 +5,12 @@ author: richlander
 ms.author: mairaw
 ms.date: 08/01/2018
 ms.custom: updateeachrelease
-ms.openlocfilehash: b302b6fc7e097a811c718d2244f603246cb5c259
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: 692d49cc940925f629e55cf5cc103522bd3cbb38
+ms.sourcegitcommit: fd8d4587cc26e53f0e27e230d6e27d828ef4306b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49121033"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "49348962"
 ---
 # <a name="net-core-guide"></a>.NET Core 指南
 
@@ -18,7 +18,7 @@ ms.locfileid: "49121033"
 
 请参阅[关于 .NET Core](about.md)，以详细了解 .NET Core，包括它的特征、支持的语言和框架以及密钥 API。
 
-请学习 [.NET Core 教程](tutorials/index.md)，了解如何创建简单的 .NET Core 应用程序。 只需几分钟即可生成并运行第一个应用。 若要尝试在浏览器中使用 .NET Core，请参阅 [C# 中的数字](https://docs.microsoft.com/dotnet/csharp/quick-starts/numbers-in-csharp)快速入门。
+请学习 [.NET Core 教程](tutorials/index.md)，了解如何创建简单的 .NET Core 应用程序。 只需几分钟即可生成并运行第一个应用。 若要尝试在浏览器中使用 .NET Core，请参阅 [C# 中的数字](../csharp/quick-starts/numbers-in-csharp.yml)快速入门。
 
 ## <a name="download-net-core-21"></a>下载 .NET Core 2.1
 
