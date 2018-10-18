@@ -13,9 +13,9 @@ ms.lasthandoff: 09/07/2018
 ms.locfileid: "44079082"
 ---
 # <a name="dependency-properties"></a>依赖属性
-依赖属性（DP）是一种常规属性，它将其值存储在属性存储中，而不是将其存储在类型变量（字段）中。
+依赖项属性 (DP) 是一种常规属性，它将其值存储在属性存储中而不是其他位置（例如类型变量（字段））中。
 
-附加依赖属性是一种依赖属性，它被建模为静态 Get 和 Set 方法，表示描述对象及其容器之间关系的“属性”（例如， `Panel` 容器上 `Button` 对象的位置）。
+附加依赖项属性是一种建模为静态 Get 和 Set 方法的依赖项属性，表示那些描述对象及其容器之间关系的“属性”（例如，`Panel` 容器中 `Button` 对象的位置）。
   
 **✓ 务必** 提供依赖属性，如果您需要支持 WPF 功能的属性的话（如样式、触发器、数据绑定、动画、动态资源和继承）。
   
@@ -34,14 +34,14 @@ ms.locfileid: "44079082"
   
 **X 不要** 将代码放在标准代码以外的属性访问器中以访问静态字段。
   
-如果属性是通过隐式方式设置的，例如样式，则该代码将不会执行，因为样式直接使用静态字段。
+如果属性是通过隐式方式（例如样式）设置的，则该代码不会执行，因为样式直接使用静态字段。
   
  **X 不要** 使用依赖属性来存储安全数据。就算是私有依赖属性也可以公开访问。
   
 ## <a name="attached-dependency-property-design"></a>附加依赖属性设计
-上一部分中描述的依赖属性表示声明类型的内在属性；例如，`Text` 属性是 `TextButton` 的一个属性，用来声明它。一种特殊的依赖属性是附加依赖属性。
+上一部分中描述的依赖项属性表示声明类型的内在属性；例如，`Text` 属性是 `TextButton` 的一个属性，用来声明它。一种特殊的依赖项属性是附加依赖项属性。
   
-附加属性的典型示例是 <xref:System.Windows.Controls.Grid.Column%2A?displayProperty=nameWithType> 属性。该属性表示 Button 的（不是 Grid 的）列位置，但仅当 Button 包含在 Grid 中时它才有用，因此它被 Grid “附加” 到 Button。
+附加属性的典型示例是 <xref:System.Windows.Controls.Grid.Column%2A?displayProperty=nameWithType> 属性。该属性表示 Button（而不是 Grid）的列位置，但仅当 Button 包含在 Grid 中时才生效，因此它是被 Grid“附加”到 Button 的。
   
 ```xaml
 <Grid>  
@@ -55,7 +55,7 @@ ms.locfileid: "44079082"
 </Grid>  
 ```
   
-附加属性的定义看起来大致类似于常规的依赖属性，除了访问器由静态 Get 和 Set 方法表示：
+附加属性的定义看起来大致类似于常规的依赖项属性，除了访问器由静态 Get 和 Set 方法表示：
   
 ```csharp
 public class Grid {  
@@ -78,9 +78,9 @@ public class Grid {
 ```
   
 ## <a name="dependency-property-validation"></a>依赖属性验证
-属性通常会实现所谓的验证。当尝试更改属性的值时，将执行验证逻辑。
+属性通常会实施所谓的验证。尝试更改属性的值时，系统会执行验证逻辑。
   
-遗憾的是依赖属性访问器不能包含任意验证代码。相反，需要在属性注册期间指定依赖属性的验证逻辑。
+遗憾的是，依赖项属性访问器不能包含任意验证代码，只能在属性注册期间指定依赖项属性的验证逻辑。
   
 **X 不要** 将依赖属性验证逻辑放在属性的访问器中，而是将验证回调传递给 `DependencyProperty.Register` 方法。
   
@@ -88,15 +88,15 @@ public class Grid {
 **X 不要** 在依赖项属性访问器中实现更改通知逻辑。依赖属性具有一个内置的更改通知功能，必须通过向 <xref:System.Windows.PropertyMetadata> 提供更改通知回调来使用该功能。
   
 ## <a name="dependency-property-value-coercion"></a>依赖属性值强制转换
-在实际修改属性存储之前，赋给属性 setter 的值被 setter 修改时，会发生属性强制转换。
+在实际修改属性存储之前，如果赋给属性 setter 的值被 setter 修改，则会发生属性强制转换。
   
 **X 不要** 在依赖属性访问器中实现强制逻辑。
 
-依赖属性具有一个内置的强制转换功能，可以通过向 `PropertyMetadata` 提供强制回调来使用它。
+依赖项属性有一个内置的强制转换功能，可以通过向 `PropertyMetadata` 提供强制回调来使用它。
   
-*部分版权 © 2005, 2009 Microsoft Corporation。保留所有权利。*
+*部分版权 © 2005、2009 Microsoft Corporation。保留所有权利。*
 
-*经 Pearson Education, Inc 授权，转载自《框架设计准则：可重用的 .NET 库的约定、习惯用语和模式，第2版》(https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) 作者：Krzysztof Cwalina 和 Brad Abrams，由 Addison Wesley Professional 于 2008 年 10 月 22 日印发，作为 Microsoft Windows 开发系列的一部分。*
+*经 Pearson Education, Inc 授权，转载自[框架设计准则：可重用的 .NET 库的约定、习惯用语和模式，第 2 版](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) 作者：Krzysztof Cwalina 和 Brad Abrams，由 Addison Wesley Professional 于 2008 年 10 月 22 日印发，作为 Microsoft Windows 开发系列的一部分。*
 
 ## <a name="see-also"></a>请参阅
 
