@@ -104,6 +104,12 @@
       "feedback_product_url": {
         "docs/fsharp/**/**.md": "https://github.com/Microsoft/visualfsharp"
       },
+    "feedback_github_repo": {
+	      "_csharplang/**/*.md": "dotnet/csharplang.zh-cn",
+		    "_csharplang/**/*.yml": "dotnet/csharplang.zh-cn",
+		    "_vblang/**/*.md": "dotnet/vblang.zh-cn",
+		    "_vblang/**/*.yml": "dotnet/vblang.zh-cn"
+	    },
       "ms.prod": {
         "_csharplang/spec/*.md": "dotnet-csharp",
         "_vblang/spec/*.md": "dotnet-visualbasic",
