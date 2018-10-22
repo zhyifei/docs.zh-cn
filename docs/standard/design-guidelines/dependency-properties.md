@@ -80,7 +80,7 @@ public class Grid {
 ## <a name="dependency-property-validation"></a>依赖项属性验证  
  属性通常会实施所谓的验证。 尝试更改属性的值时，系统会执行验证逻辑。  
   
- 遗憾的是依赖项属性访问器不能包含任意验证代码。 相反，需要在注册过程中指定依赖项属性验证逻辑。  
+ 遗憾的是，依赖项属性访问器不能包含任意验证代码， 相反，只能在属性注册期间指定依赖项属性的验证逻辑。  
   
  **X DO NOT** 将依赖项属性的验证逻辑放入的属性访问器。 相反，传递验证回调到`DependencyProperty.Register`方法。  
   
@@ -94,9 +94,9 @@ public class Grid {
   
  依赖项属性有一个内置的强制转换功能，可以通过向 `PropertyMetadata` 提供强制回调来使用它。  
   
- *部分版权 © 2005, 2009 Microsoft Corporation。保留所有权利。*  
+ *部分版权 © 2005、2009 Microsoft Corporation。保留所有权利。*  
   
- *经 Pearson Education, Inc 授权，转载自[框架设计准则：可重用的 .NET 库的约定、习惯用语和模式，第2版](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) 作者：Krzysztof Cwalina 和 Brad Abrams，由 Addison Wesley Professional 于 2008 年 10 月 22 日印发，作为 Microsoft Windows 开发系列的一部分。*  
+ *经 Pearson Education, Inc 授权，转载自[框架设计准则：可重用的 .NET 库的约定、习惯用语和模式，第 2 版](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) 作者：Krzysztof Cwalina 和 Brad Abrams，由 Addison Wesley Professional 于 2008 年 10 月 22 日印发，作为 Microsoft Windows 开发系列的一部分。*  
   
 ## <a name="see-also"></a>请参阅
 
