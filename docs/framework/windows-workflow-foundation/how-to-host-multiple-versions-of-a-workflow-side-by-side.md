@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 09c575df-e0a3-4f3b-9e01-a7ac59d65287
-ms.openlocfilehash: 721ab72ab1f67d2dc42574ed0147fa7686e02fd1
-ms.sourcegitcommit: d88024e6d6d8b242feae5f4007a709379355aa24
+ms.openlocfilehash: 04586f22076b6e2cf4175c7d9d985820ef7885c6
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49316462"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50181613"
 ---
 # <a name="how-to-host-multiple-versions-of-a-workflow-side-by-side"></a>如何：并行承载多个版本的工作流
 `WorkflowIdentity` 为工作流应用程序开发人员提供了一种将名称和版本与工作流定义关联的方法，这种方法还可用于将此信息与持久化工作流实例相关联。 工作流应用程序开发人员可以使用这些标识信息，为一些情景（如并行执行一个工作流定义的多个版本）提供支持，并为其他功能（如动态更新）提供基础。 该教程中的此步骤演示了如何使用 `WorkflowIdentity` 来同时承载多个版本的工作流。
@@ -555,14 +555,15 @@ ms.locfileid: "49316462"
 
 2.  通过单击启动新工作流**新游戏**。 工作流的版本显示在状态窗口下面，它反映了关联 `WorkflowIdentity` 的更新版本。 请记下 `InstanceId`，这样您就可以在工作流完成时查看该工作流的跟踪文件，然后在游戏完成之前输入猜测。 请注意用户猜测基于 `WriteLine` 活动的更新在状态窗口中的信息中显示的方式。
 
- **请输入介于 1 和 10 之间的数字**
-**5 是过高。**
-**请输入介于 1 和 10 之间的数字**
-**3 是过高。**
-**请输入介于 1 和 10 之间的数字**
-**1 是过低。**
-**请输入介于 1 和 10 之间的数字**
-**恭喜您，您猜到了数 4 人轮流。**
+ **请输入介于 1 和 10 之间的数字**  
+**5 是过高。**  
+**请输入介于 1 和 10 之间的数字**  
+**3 是过高。**  
+**请输入介于 1 和 10 之间的数字**  
+**1 是过低。**  
+**请输入介于 1 和 10 之间的数字**  
+**祝贺你，4 人轮流猜数。**  
+
     > [!NOTE]
     >  将显示 `WriteLine` 活动的更新文本，但不显示已在本主题中添加的最终 `WriteLine` 活动的输出。 这是因为，此状态窗口将由 `PersistableIdle` 处理程序进行更新。 由于该工作流在最终活动之后完成且不会转为空闲状态，因此不会调用 `PersistableIdle` 处理程序。 但是，`Completed` 处理程序会在状态窗口中显示类似的消息。 如果需要，可以向 `Completed` 处理程序添加代码，以便从 `StringWriter` 提取文本并在状态窗口中显示。
 

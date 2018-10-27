@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 123457ac-4223-4273-bb58-3bc0e4957e9d
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 4c90e914273de9f9121a979accdb4798b31e05cb
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
-ms.translationtype: MT
+ms.openlocfilehash: 947e443fc1561e86cf9c5fe7c19d4290cc364bd5
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44041650"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50170375"
 ---
 # <a name="writing-large-responsive-net-framework-apps"></a>编写大型的响应式 .NET Framework 应用
 本文提供用于改进大型 .NET Framework 应用或处理大量数据（如文件或数据库）的应用的性能的提示。 这些提示来自在托管代码中重写的 C# 和 Visual Basic 编译器，并且本文包括来自 C# 编译器的几个真实示例。  
@@ -23,8 +23,7 @@ ms.locfileid: "44041650"
   
  当你的最终用户与你的应用交互时，他们期望应用能够响应。  永远不应阻止键入或命令处理。  帮助应该迅速弹出，如果用户继续键入则帮助应中止。  你的应用应该避免通过使应用感觉迟钝的长计算阻止 UI 线程。  
   
- Roslyn 编译器有关的详细信息，请访问[dotnet/roslyn](https://github.com/dotnet/roslyn) GitHub 上的存储库。
- <!-- TODO: replace with link to Roslyn conceptual docs once that's published -->
+ Roslyn 编译器有关的详细信息，请参阅[.NET 编译器平台 SDK](../../csharp/roslyn-sdk/index.md)。
   
 ## <a name="just-the-facts"></a>事实小结  
  在优化性能和创建响应性 .NET Framework 应用时，请考虑以下事实。  
@@ -40,7 +39,7 @@ ms.locfileid: "44041650"
 ### <a name="fact-3-good-tools-make-all-the-difference"></a>事实 3：好的工具将使一切大不相同  
  好的工具可以让你快速深入地了解最大的性能问题（CPU、内存或磁盘）并帮助你找到导致那些瓶颈的代码。  Microsoft 提供多种性能工具，如 [Visual Studio 探查器](/visualstudio/profiling/beginners-guide-to-performance-profiling)、[Windows Phone 分析工具](https://msdn.microsoft.com/library/e67e3199-ea43-4d14-ab7e-f7f19266253f)和 [PerfView](https://www.microsoft.com/download/details.aspx?id=28567)。  
   
- PerfView 是一个免费且功能极为强大的工具，它可以帮助你专注于深层问题，如磁盘 I/O、GC 事件和内存。  可以捕获与性能相关的 [Windows 事件跟踪](../../../docs/framework/wcf/samples/etw-tracing.md) (ETW) 事件，并很轻松地查看每个应用、每个进程、每个堆栈和每个线程信息。  PerfView 向你显示应用分配了多少内存以及分配了何种内存，并显示哪些函数或调用堆栈提供了内存分配以及他们提供了多少。 有关详细信息，请参见丰富的帮助主题、演示以及工具随附的视频（如第 9 频道上的 [PerfView 教程](http://channel9.msdn.com/Series/PerfView-Tutorial)）。  
+ PerfView 是一个免费且功能极为强大的工具，它可以帮助你专注于深层问题，如磁盘 I/O、GC 事件和内存。  可以捕获与性能相关的 [Windows 事件跟踪](../../../docs/framework/wcf/samples/etw-tracing.md) (ETW) 事件，并很轻松地查看每个应用、每个进程、每个堆栈和每个线程信息。  PerfView 向你显示应用分配了多少内存以及分配了何种内存，并显示哪些函数或调用堆栈提供了内存分配以及他们提供了多少。 有关详细信息，请参见丰富的帮助主题、演示以及工具随附的视频（如第 9 频道上的 [PerfView 教程](https://channel9.msdn.com/Series/PerfView-Tutorial)）。  
   
 ### <a name="fact-4-its-all-about-allocations"></a>事实 4：一切皆与分配有关  
  你可能会认为构建一个响应性 .NET Framework 应用只与算法（如使用快速排序，而不是气泡排序）相关，但事实并非如此。  构建一个响应性应用的最关键因素是分配内存，尤其是当你的应用非常大或需要处理大量数据的时候。  
@@ -341,7 +340,7 @@ var predicate = new Func<Symbol, bool>(l.Evaluate);
   
  `symbols` 变量具有类型 <xref:System.Collections.Generic.List%601>。  <xref:System.Collections.Generic.List%601> 集合类型实现 <xref:System.Collections.Generic.IEnumerable%601> 并且巧妙地定义了一个 <xref:System.Collections.Generic.IEnumerator%601> 使用 <xref:System.Collections.Generic.List%601> 实现的枚举器（`struct` 接口）。  使用结构而不是类意味着你通常避免任何堆分配，而后者可能会影响垃圾回收性能。  枚举器通常与语言的 `foreach` 循环结合使用，该循环使用枚举器结构，因为它是在调用堆栈上返回的。  递增调用堆栈指针从而为对象腾出空间，不会像堆分配那样影响 GC。  
   
- 对于扩展的 `FirstOrDefault` 调用，代码需要在一个 `GetEnumerator()` 上调用 <xref:System.Collections.Generic.IEnumerable%601>。  将 `symbols` 分配到类型 `enumerable` 的 `IEnumerable<Symbol>` 变量失去了实际对象是一个 <xref:System.Collections.Generic.List%601> 的信息。  这意味着当代码使用 `enumerable.GetEnumerator()` 获取枚举器时，.NET Framework 必须装箱返回的结构以将其分配到 `enumerator` 变量。  
+ 对于扩展的 `FirstOrDefault` 调用，代码需要在一个 `GetEnumerator()` 上调用 <xref:System.Collections.Generic.IEnumerable%601>。  将 `symbols` 分配到类型 `enumerable` 的 `IEnumerable<Symbol>` 变量失去了实际对象是一个 <xref:System.Collections.Generic.List%601> 的信息。  这意味着当代码使用 `enumerable.GetEnumerator()` 提取枚举器时，.NET Framework 必须装箱返回的结构以将其分配到 `enumerator` 变量。  
   
  **示例 5 的修复**  
   
@@ -461,13 +460,14 @@ class Compilation { /*...*/
   
 -   一切皆与分配有关 – 这就是编译器平台团队花大部分时间改进新编译器性能的原因所在。  
   
-## <a name="see-also"></a>请参阅  
- [本主题的演示视频](http://channel9.msdn.com/Events/TechEd/NorthAmerica/2013/DEV-B333)  
- [性能分析初学者指南](/visualstudio/profiling/beginners-guide-to-performance-profiling)  
- [性能](../../../docs/framework/performance/index.md)  
- [.NET 性能提示](https://msdn.microsoft.com/library/ms973839.aspx)  
- [Windows Phone 性能分析工具](https://msdn.microsoft.com/magazine/hh781024.aspx)  
- [查找与 Visual Studio Profiler 的应用程序瓶颈](https://msdn.microsoft.com/magazine/cc337887.aspx)  
- [通道 9 PerfView 教程](http://channel9.msdn.com/Series/PerfView-Tutorial)  
- [高级性能提示](https://curah.microsoft.com/4604/improving-your-net-apps-startup-performance)  
- [GitHub 上的 dotnet/roslyn 存储库](https://github.com/dotnet/roslyn)
+## <a name="see-also"></a>请参阅
+
+- [本主题的演示视频](https://channel9.msdn.com/Events/TechEd/NorthAmerica/2013/DEV-B333)  
+- [性能分析初学者指南](/visualstudio/profiling/beginners-guide-to-performance-profiling)  
+- [性能](../../../docs/framework/performance/index.md)  
+- [.NET 性能提示](https://msdn.microsoft.com/library/ms973839.aspx)  
+- [Windows Phone 性能分析工具](https://msdn.microsoft.com/magazine/hh781024.aspx)  
+- [查找与 Visual Studio Profiler 的应用程序瓶颈](https://msdn.microsoft.com/magazine/cc337887.aspx)  
+- [通道 9 PerfView 教程](https://channel9.msdn.com/Series/PerfView-Tutorial)  
+- [.NET 编译器平台 SDK](../../csharp/roslyn-sdk/index.md)
+- [GitHub 上的 dotnet/roslyn 存储库](https://github.com/dotnet/roslyn)

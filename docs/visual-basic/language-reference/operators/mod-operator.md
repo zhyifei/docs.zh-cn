@@ -12,14 +12,12 @@ helpviewer_keywords:
 - arithmetic operators [Visual Basic], Mod
 - math operators [Visual Basic]
 ms.assetid: 6ff7e40e-cec8-4c77-bff6-8ddd2791c25b
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 456c19fc8e28517a0662b58e338028e1c75cd8c8
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: a04a294d5505180a41edeba4643d25667a301c1d
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47424397"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50170804"
 ---
 # <a name="mod-operator-visual-basic"></a>Mod 运算符 (Visual Basic)
 使两个数字相除，仅返回余数。  
@@ -90,7 +88,7 @@ End Module
  当使用浮点数时，请记住在内存中不一定有精确的十进制表示形式。 这可能会导致意外的结果从某些操作，如值比较和`Mod`运算符。 有关详细信息，请参阅[故障排除数据类型](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)。  
   
 ## <a name="overloading"></a>重载  
- `Mod`运算符可以被*重载*，这意味着类或结构可以重新定义其行为。 如果你的代码适用`Mod`到类或结构，其中包含此类重载的实例，请确保了解其被重新定义的行为。 有关详细信息，请参阅[运算符过程](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)。  
+ `Mod`运算符可以被*重载*，这意味着类或结构可以重新定义其行为。 如果你的代码适用`Mod`到类或结构，其中包含此类重载的实例，请确保了解其被重新定义的行为。 有关详细信息，请参阅 [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)。  
   
 ## <a name="example"></a>示例  
  下面的示例使用`Mod`运算符将两个数相除，并只返回余数。 如果一个数是浮点数，结果是表示余数的浮点数。  

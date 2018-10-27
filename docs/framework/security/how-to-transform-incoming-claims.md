@@ -3,12 +3,12 @@ title: 如何：转换传入声明
 ms.date: 03/30/2017
 ms.assetid: 2831d514-d9d8-4200-9192-954bb6da1126
 author: BrucePerlerMS
-ms.openlocfilehash: 8673b4520d9727ae1aa78ef0bc9f435defb02598
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: 83c6f650580a673d308c7ffd580c785cdb2ab9f5
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48582117"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50181624"
 ---
 # <a name="how-to-transform-incoming-claims"></a>如何：转换传入声明
 ## <a name="applies-to"></a>适用于  
@@ -173,4 +173,4 @@ ms.locfileid: "48582117"
   
     ||||||  
     |-|-|-|-|-|  
-    |本地机构|本地机构|http://schemas.microsoft.com/ws/2008/06/identity/claims/role|管理员|http://www.w3.org/2001/XMLSchema#string|
+    |本地机构|本地机构|`http://schemas.microsoft.com/ws/2008/06/identity/claims/role`|管理员|<https://www.w3.org/2001/XMLSchema#string>|

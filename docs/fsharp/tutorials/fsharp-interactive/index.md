@@ -1,13 +1,13 @@
 ---
 title: F# Interactive (fsi.exe) 参考
-description: '了解如何 F # Interactive (fsi.exe) 用于在控制台以交互方式运行 F # 代码或执行 F # 脚本。'
+description: 了解如何F#Interactive (fsi.exe) 用于运行F#代码以交互方式在控制台上或执行F#脚本。
 ms.date: 05/16/2016
-ms.openlocfilehash: b16ebcfe361ef50c7c7ba8510f01f6704e62ce3b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.openlocfilehash: 459a2a4ba49ba0f55455797617781d010efecc0b
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33564869"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50170713"
 ---
 # <a name="interactive-programming-with-f"></a>使用 F# 进行交互式编程 #
 
@@ -19,7 +19,15 @@ API 参考链接将转至 MSDN。  Docs.microsoft.com API 参考尚未完成。
 
 F# Interactive (fsi.exe) 用于在控制台以交互方式运行 F# 代码，或执行 F# 脚本。 换句话说，F# Interactive 对 F# 语言执行 REPL（读取、计算、打印循环）。
 
-若要从控制台运行 F# Interactive，请运行 fsi.exe。  你可以找到 fsi.exe 中的"c:\Program 文件 (x86) \Microsoft SDKs\F#\<版本 > \Framework\<版本 >\"。 有关可用命令行选项的信息，请参阅 [F# Interactive 选项](../../language-reference/fsharp-interactive-options.md)。
+若要从控制台运行 F# Interactive，请运行 fsi.exe。  您将找到 fsi.exe 中：
+
+```console
+C:\Program Files (x86)\Microsoft Visual Studio\2017\<sku>\Common7\IDE\CommonExtensions\Microsoft\FSharp
+```
+
+其中`sku`可以是`Community`， `Professional`，或`Enterprise`。
+
+有关可用命令行选项的信息，请参阅 [F# Interactive 选项](../../language-reference/fsharp-interactive-options.md)。
 
 若要通过 Visual Studio 运行 F# Interactive，可以单击标记为“F# Interactive”的相应工具栏按钮，或使用组合键 **Ctrl+Alt+F**。 执行此操作将打开交互式窗口，该窗口是运行 F# Interactive 会话的工具窗口。 还可以选择一些希望在交互式窗口中运行的代码，然后点击组合键 **ALT+ENTER**。 F# Interactive 在标记为“F# Interactive”的工具窗口中启动。 当您使用此组合键时，请确保焦点位于编辑器窗口内。
 
@@ -91,5 +99,5 @@ test
 
 |标题|描述|
 |-----|-----------|
-|[F# Interactive 选项](../../language-reference/fsharp-interactive-options.md)|描述的 F # Interactive，命令行语法和选项 fsi.exe。|
+|[F# Interactive 选项](../../language-reference/fsharp-interactive-options.md)|介绍命令行语法和选项F#交互式，fsi.exe。|
 |[F# Interactive 库参考](https://msdn.microsoft.com/visualfsharpdocs/conceptual/fsharp-interactive-library-reference)|描述在 F# Interactive 中执行代码时可用的库功能。|

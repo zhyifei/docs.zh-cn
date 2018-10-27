@@ -2,12 +2,12 @@
 title: SendMail 自定义活动
 ms.date: 03/30/2017
 ms.assetid: 947a9ae6-379c-43a3-9cd5-87f573a5739f
-ms.openlocfilehash: f51914ae01ea680ae09be8080cce1aa866bd6ec7
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: 4cd2ed8c80bd5ab4c4e784f4c5c86a58ecceda2f
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48845250"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50181285"
 ---
 # <a name="sendmail-custom-activity"></a>SendMail 自定义活动
 本示例演示如何创建派生自 <xref:System.Activities.AsyncCodeActivity> 的自定义活动，以使用 SMTP 发送邮件供在工作流应用程序内使用。 自定义活动使用的功能的<xref:System.Net.Mail.SmtpClient>以异步方式发送电子邮件以及发送身份验证的邮件。 它还提供一些最终用户功能，例如测试模式、标记替换、文件模板和测试放置路径。  
@@ -84,7 +84,7 @@ new SendMail
 ```  
   
 ### <a name="sending-mails-in-testing-mode"></a>在测试模式下发送电子邮件  
- 此代码片段演示如何设置两个测试属性： 通过设置`TestMailTo`到所有消息将发送到john.doe@contoso.con（而无需考虑的值的收件人、 抄送、 密件抄送）。 通过设置 TestDropPath，所有传出电子邮件还将记录在提供的路径中。 可单独设置这些属性（它们不相关）。  
+ 此代码片段演示如何设置两个测试属性： 通过设置`TestMailTo`到所有消息将发送到`john.doe@contoso.con`（而无需考虑的值的收件人、 抄送、 密件抄送）。 通过设置 TestDropPath，所有传出电子邮件还将记录在提供的路径中。 可单独设置这些属性（它们不相关）。  
   
 ```  
 new SendMail  

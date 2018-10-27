@@ -2,12 +2,12 @@
 title: 编译器指令 (F#)
 description: '了解有关 F # 语言预处理器指令、 条件编译指令、 行指令和编译器指令。'
 ms.date: 05/16/2016
-ms.openlocfilehash: eeb33cd3b1d6a228555724a307bf2e2407c6b4c3
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 5ac375ac5acd0609a6556f9e0481d169df827c98
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44042448"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50181363"
 ---
 # <a name="compiler-directives"></a>编译器指令
 
@@ -33,7 +33,7 @@ ms.locfileid: "44042448"
 
 ## <a name="conditional-compilation-directives"></a>条件编译指令
 
-通过这些指令之一停用的代码显示为灰色 Visual StudioCode 编辑器中。
+通过这些指令之一停用的代码显示为灰色 Visual Studio 代码编辑器中。
 
 >[!NOTE]
 条件编译指令的行为与它在其他语言中的行为不同。 例如，不能使用涉及符号的布尔表达式，并且 `true` 和 `false` 没有特殊含义。 在 `if` 指令中使用的符号必须通过命令行或在项目设置中定义；没有 `define` 预处理器指令。

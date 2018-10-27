@@ -5,13 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 056653a5-384e-4a02-ae3c-1b0157d2ccb4
-author: BrucePerlerMS
-ms.openlocfilehash: 54391356648a8f4a8c7175f690b00fd88393b712
-ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
+ms.openlocfilehash: 858ceb217ce30708a7d24c62ca18f8f59ba49d4c
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "48914161"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50183057"
 ---
 # <a name="transport-security-with-an-anonymous-client"></a>匿名客户端的传输安全
 此 Windows Communication Foundation (WCF) 方案中使用传输安全 (HTTPS) 确保保密性和完整性。 必须使用安全套接字层 (SSL) 证书对服务器进行身份验证，并且客户端必须信任服务器的证书。 客户端不通过任何机制进行身份验证，因此是匿名的。  

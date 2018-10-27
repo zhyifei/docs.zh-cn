@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 03db52ef-010e-44ea-b6fd-b9c900ecad50
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: e74cc5fa99473562b158cd5068fb8bbaeb6a4a17
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: aec786123357337cbaa6251191a023c092af3049
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47196975"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50181064"
 ---
 # <a name="ltcryptoclassgt-element"></a>&lt;cryptoClass&gt;元素
 包含一个密码类，该类具有到 [\<nameEntry>](../../../../../docs/framework/configure-apps/file-schema/cryptography/nameentry-element.md) 元素中的友好名称的映射。  
@@ -78,7 +78,7 @@ ms.locfileid: "47196975"
 ```  
   
 ## <a name="see-also"></a>请参阅  
- [配置文件架构](../../../../../docs/framework/configure-apps/file-schema/index.md)  
- [加密设置架构](../../../../../docs/framework/configure-apps/file-schema/cryptography/index.md)  
- [加密服务](../../../../../docs/standard/security/cryptographic-services.md)  
- [配置加密类](../../../../../docs/framework/configure-apps/configure-cryptography-classes.md)
+- [配置文件架构](../../../../../docs/framework/configure-apps/file-schema/index.md)  
+- [加密设置架构](../../../../../docs/framework/configure-apps/file-schema/cryptography/index.md)  
+- [Cryptographic Services](../../../../../docs/standard/security/cryptographic-services.md)  
+- [配置加密类](../../../../../docs/framework/configure-apps/configure-cryptography-classes.md)
