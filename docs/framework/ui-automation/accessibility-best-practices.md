@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: e6d5cd98-21a3-4b01-999c-fb953556d0e6
 author: Xansky
 ms.author: mhopkins
-ms.openlocfilehash: 8bdb16ca40142f3ef989708c567b940e1da2c0ac
-ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
+ms.openlocfilehash: a7f3a13d05b8a3c4554810655bbda670efb2b3fd
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "49372676"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50191072"
 ---
 # <a name="accessibility-best-practices"></a>辅助功能最佳方案
 > [!NOTE]
@@ -135,4 +135,4 @@ ms.locfileid: "49372676"
 ## <a name="see-also"></a>请参阅  
  <xref:System.Windows.Automation.Peers>  
  [带有主题和 UI 自动化支持示例的 NumericUpDown 自定义控件](https://msdn.microsoft.com/library/9aed3c10-68eb-419e-a57f-1d2af15a8253)  
- [键盘用户界面设计的准则](/previous-versions/windows/desktop/dnacc/guidelines-for-keyboard-user-interface-design)
+ [键盘用户界面设计的准则](https://docs.microsoft.com/previous-versions/windows/desktop/dnacc/guidelines-for-keyboard-user-interface-design)

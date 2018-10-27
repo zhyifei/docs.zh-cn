@@ -2,13 +2,12 @@
 title: 自定义安全元数据终结点
 ms.date: 03/30/2017
 ms.assetid: 9e369e99-ea4a-49ff-aed2-9fdf61091a48
-author: BrucePerlerMS
-ms.openlocfilehash: af3c7ca70ea38a1ee07e077440b3936d83a34d56
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: d9c1e8755e32f3d1a38287e2e88d1026c27af1e8
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47200732"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50191228"
 ---
 # <a name="custom-secure-metadata-endpoint"></a>自定义安全元数据终结点
 此示例演示如何实现具有安全元数据终结点使用的非元数据交换绑定，其中一个服务以及如何配置[ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)或客户端以获取从类元数据终结点元数据。 有两个系统提供的绑定可供公开元数据终结点：mexHttpBinding 和 mexHttpsBinding。 mexHttpBinding 用于以非安全的方式，通过 HTTP 公开元数据终结点。 mexHttpsBinding 用于以安全的方式，通过 HTTP 公开元数据终结点。 本示例演示如何使用 <xref:System.ServiceModel.WSHttpBinding> 公开安全元数据终结点。 要更改绑定的安全设置但不想使用 HTTPS 时需要这样做。 如果使用 mexHttpsBinding，则元数据终结点是安全的，但无法修改绑定设置。  
@@ -143,7 +142,7 @@ ChannelFactory<ICalculator> cf = new    ChannelFactory<ICalculator>(endpoint.Bin
   
 2.  运行 \MetadataResolverClient\bin 或 \SvcutilClient\bin 中的客户端应用程序。 客户端活动将显示在客户端控制台应用程序上。  
   
-3.  如果客户端和服务能够进行通信，请参见[故障排除提示](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b)。  
+3.  如果客户端与服务无法进行通信，请参见 [Troubleshooting Tips](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b)。  
   
 4.  在运行完该示例后运行 Cleanup.bat 移除证书。 其他安全示例使用相同的证书。  
   
@@ -169,7 +168,7 @@ ChannelFactory<ICalculator> cf = new    ChannelFactory<ICalculator>(endpoint.Bin
   
 10. 在客户端计算机上，运行 VS 中的 MetadataResolverClient 或 SvcutilClient。  
   
-    1.  如果客户端和服务能够进行通信，请参见[故障排除提示](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b)。  
+    1.  如果客户端与服务无法进行通信，请参见 [Troubleshooting Tips](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b)。  
   
 #### <a name="to-clean-up-after-the-sample"></a>运行示例后进行清理  
   

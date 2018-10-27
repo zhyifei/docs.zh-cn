@@ -2,12 +2,12 @@
 title: 流
 ms.date: 03/30/2017
 ms.assetid: 58a3db81-20ab-4627-bf31-39d30b70b4fe
-ms.openlocfilehash: 54601b92efcb621d36432d870514fe9a9dc0b46e
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: ed77d8231df8a2272e398f5b1a126c6ed8cab354
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43861109"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50191176"
 ---
 # <a name="stream"></a>流
 流示例演示流传输模式通信的用法。 收发流的若干操作都由服务公开。 此示例是自承载的。 客户端和服务都是控制台程序。  
@@ -20,7 +20,7 @@ ms.locfileid: "43861109"
 ## <a name="streaming-and-service-contracts"></a>流处理和服务协定  
  在设计服务协定时，可以考虑进行流处理。 如果某个操作接收或返回大量数据，则应当考虑对该数据进行流处理，以免因对输入或输出消息进行缓冲而导致内存使用率过高。 若要对数据进行流处理，用来存放该数据的参数必须是消息中的唯一参数。 例如，如果要对输入消息进行流处理，则该操作必须正好具有一个输入参数。 同样，如果要对输出消息进行流处理，则该操作必须正好具有一个输出参数或一个返回值。 在任一情况下，该参数或返回值类型必须是 `Stream`、`Message` 或 `IXmlSerializable`。 下面是该流处理示例中使用的服务协定。  
   
-```  
+```csharp
 [ServiceContract(Namespace="http://Microsoft.ServiceModel.Samples")]  
 public interface IStreamingSample  
 {  
@@ -68,7 +68,7 @@ public interface IStreamingSample
   
  `GetReversedStream` 创建并返回 `ReverseStream` 的新实例。 当系统从该 `ReverseStream` 对象中进行读取时，会发生实际的处理。 `ReverseStream.Read` 实现从基础文件中读取字节块区，反转字节，然后返回经过反转的字节。 这不会反转整个文件内容，而是一次仅反转一个字节块区。 下面的示例演示在流中读取或写入内容时如何进行流处理。  
   
-```  
+```csharp
 class ReverseStream : Stream  
 {  
   
@@ -117,7 +117,7 @@ class ReverseStream : Stream
   
  服务输出：  
   
-```  
+```console  
 The streaming service is ready.  
 Press <ENTER> to terminate service.  
   
@@ -131,7 +131,7 @@ File D:\...\uploadedfile saved
   
  客户端输出：  
   
-```  
+```console  
 Press <ENTER> when service is ready  
 ------ Using HTTP ------   
 Calling GetStream()  

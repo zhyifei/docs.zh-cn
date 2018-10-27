@@ -3,11 +3,11 @@ title: XML (Visual Basic 中) 的功能转换
 ms.date: 07/20/2015
 ms.assetid: fdbe5b91-f457-4b4e-a11b-def4bdd77bab
 ms.openlocfilehash: 06803feb0fe23ae4afe2237b64bf920f6e229060
-ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "49371675"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50190471"
 ---
 # <a name="functional-transformation-of-xml-visual-basic"></a>XML (Visual Basic 中) 的功能转换
 本主题讨论用于修改 XML 文档的纯函数转换方法，并将该方法与过程方法进行比较。  

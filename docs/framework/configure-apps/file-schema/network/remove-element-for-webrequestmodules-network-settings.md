@@ -10,14 +10,12 @@ helpviewer_keywords:
 - <remove> element, webRequestModules
 - <webRequestModules>, remove element
 ms.assetid: dd84d2fe-2f4f-457a-9d3c-441d0d21cc10
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: d0da0fd2edae4687ea80b4a23cc82a25ead9cb7b
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 2f787206c503c047a34383e12c5676296e39c1fe
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47208576"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50190744"
 ---
 # <a name="ltremovegt-element-for-webrequestmodules-network-settings"></a>&lt;删除&gt;webRequestModules （网络设置） 的
 从应用程序中删除自定义的 Web 请求模块。  
@@ -56,13 +54,14 @@ ms.locfileid: "47208576"
 ## <a name="remarks"></a>备注  
  `remove`元素中移除指定的 URI 前缀已注册的 Web 请求模块。  
   
- 值`prefix`属性应为有效的 URI-例如，"http"，前导字符或"`http://www.contoso.com` "。  
+ 值`prefix`属性应为有效的 URI-前导字符，如"`http`"，或"`http://www.contoso.com`"。  
   
 ## <a name="configuration-files"></a>配置文件  
  此元素可在应用程序配置文件或计算机配置文件 (Machine.config) 中使用。  
   
 ## <a name="example"></a>示例  
- 下面的示例 http 删除现有的 Web 请求模块，然后注册到 www.contoso.com 的 HTTP 请求的自定义新 Web 请求模块。  
+
+以下示例将删除现有的 Web 请求模块的 HTTP，然后寄存器新自定义 Web 请求模块的 HTTP 请求设置为`www.contoso.com`。
   
 ```xml  
 <configuration>  
@@ -79,5 +78,5 @@ ms.locfileid: "47208576"
 ```  
   
 ## <a name="see-also"></a>请参阅  
- <xref:System.Net.WebRequest>  
- [网络设置架构](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+- <xref:System.Net.WebRequest>  
+- [网络设置架构](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

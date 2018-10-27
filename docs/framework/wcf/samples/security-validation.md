@@ -2,13 +2,12 @@
 title: 安全性验证
 ms.date: 03/30/2017
 ms.assetid: 48dcd496-0c4f-48ce-8b9b-0e25b77ffa58
-author: BrucePerlerMS
-ms.openlocfilehash: df056287c216b92fa0bcbab2bcbc9bedf799873c
-ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
+ms.openlocfilehash: 16a12a031845a8898c32ac43bbb2e2a44fd7c7ea
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "49374443"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50190913"
 ---
 # <a name="security-validation"></a>安全性验证
 此示例演示如何使用自定义行为来验证计算机上的服务，以确保服务符合特定条件。 在此示例中，自定义行为通过以下方法验证服务：扫描服务上的每个终结点，并查看这些终结点是否包含安全的绑定元素。 此示例基于[Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md)。  

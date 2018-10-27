@@ -2,17 +2,17 @@
 title: SqlClient 流支持
 ms.date: 03/30/2017
 ms.assetid: c449365b-470b-4edb-9d61-8353149f5531
-ms.openlocfilehash: f881318677949f5507c3e1c4a4b5606dd880c396
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7c9c7300678b9e285965a3c1b673a92b6f26973e
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33364731"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50191032"
 ---
 # <a name="sqlclient-streaming-support"></a>SqlClient 流支持
-SQL Server 和应用程序之间的流支持 (中的新增功能[!INCLUDE[net_v45](../../../../includes/net-v45-md.md)]) 服务器 （文档、 图像和媒体文件） 上支持将非结构化的数据。 SQL Server 数据库可以存储二进制大型对象 (Blob)，但检索 BLOB 会使用大量的内存。  
+SQL Server 和应用程序之间的流支持 (中的新增功能[!INCLUDE[net_v45](../../../../includes/net-v45-md.md)]) 支持在服务器 （文档、 图像和媒体文件） 上的非结构化的数据。 SQL Server 数据库可以存储二进制大型对象 (Blob)，但检索 BLOB 会使用大量内存。  
   
- 流式处理支持与其他 SQL Server 简化了编写应用程序流数据，而无需完全将数据加载到内存，从而导致较少内存溢出异常中。  
+ 流式处理支持与 SQL Server 简化了编写应用程序的流数据，而无需完全将数据加载到内存，从而减少了内存溢出异常中。  
   
  通过流支持，中间层应用程序还可以更好地扩展，尤其是在业务对象连接到 SQL Azure 以发送、检索和操作大型 BLOB 的方案中。  
   
@@ -21,10 +21,10 @@ SQL Server 和应用程序之间的流支持 (中的新增功能[!INCLUDE[net_v4
 >   
 >  为支持流处理而添加的成员用于从查询中检索数据，并将参数传递给查询和存储过程。 这种流功能面向基本的 OLTP 和数据迁移方案，适用于本地和非本地数据迁移环境。  
   
-## <a name="streaming-support-from-sql-server"></a>SQL Server 中的流支持  
- 流式处理从 SQL Server 的支持引入了中的新增功能<xref:System.Data.Common.DbDataReader>并在<xref:System.Data.SqlClient.SqlDataReader>类，以便获取<xref:System.IO.Stream>， <xref:System.Xml.XmlReader>，和<xref:System.IO.TextReader>对象，并对其做出反应。  这些类用于检索查询中的数据。 因此，从 SQL Server 的流式处理支持面向 OLTP 方案，适用于本地和非本地环境。  
+## <a name="streaming-support-from-sql-server"></a>从 SQL Server 的流式处理支持  
+ 流式处理从 SQL Server 的支持引入了中的新增功能<xref:System.Data.Common.DbDataReader>然后在<xref:System.Data.SqlClient.SqlDataReader>类，以便获取<xref:System.IO.Stream>， <xref:System.Xml.XmlReader>，和<xref:System.IO.TextReader>对象，并对其做出反应。  这些类用于检索查询中的数据。 因此，从 SQL Server 的流式处理支持面向 OLTP 方案，适用于在本地和非本地环境。  
   
- 将以下成员添加到<xref:System.Data.SqlClient.SqlDataReader>以启用 SQL Server 中的流支持：  
+ 以下成员添加到<xref:System.Data.SqlClient.SqlDataReader>启用流式处理支持从 SQL Server:  
   
 1.  <xref:System.Data.SqlClient.SqlDataReader.IsDBNullAsync%2A>  
   
@@ -38,7 +38,7 @@ SQL Server 和应用程序之间的流支持 (中的新增功能[!INCLUDE[net_v4
   
 6.  <xref:System.Data.SqlClient.SqlDataReader.GetXmlReader%2A>  
   
- 将以下成员添加到<xref:System.Data.Common.DbDataReader>以启用 SQL Server 中的流支持：  
+ 以下成员添加到<xref:System.Data.Common.DbDataReader>启用流式处理支持从 SQL Server:  
   
 1.  <xref:System.Data.Common.DbDataReader.GetFieldValue%2A>  
   
@@ -47,7 +47,7 @@ SQL Server 和应用程序之间的流支持 (中的新增功能[!INCLUDE[net_v4
 3.  <xref:System.Data.Common.DbDataReader.GetTextReader%2A>  
   
 ## <a name="streaming-support-to-sql-server"></a>到 SQL Server 的流式处理支持  
- 流式处理到 SQL Server 的支持引入了中的新增功能<xref:System.Data.SqlClient.SqlParameter>类，以便它可以接受和响应<xref:System.Xml.XmlReader>， <xref:System.IO.Stream>，和<xref:System.IO.TextReader>对象。 <xref:System.Data.SqlClient.SqlParameter> 用于将参数传递给查询和存储过程。  
+ 流式处理到 SQL Server 的支持引入了中的新增功能<xref:System.Data.SqlClient.SqlParameter>类使它能够接受并应对<xref:System.Xml.XmlReader>， <xref:System.IO.Stream>，和<xref:System.IO.TextReader>对象。 <xref:System.Data.SqlClient.SqlParameter> 用于将参数传递给查询和存储过程。  
   
  释放 <xref:System.Data.SqlClient.SqlCommand> 对象或调用 <xref:System.Data.SqlClient.SqlCommand.Cancel%2A> 必须取消任何流操作。 如果应用程序发送 <xref:System.Threading.CancellationToken>，则不保证取消。  
   
@@ -73,7 +73,7 @@ SQL Server 和应用程序之间的流支持 (中的新增功能[!INCLUDE[net_v4
   
  <xref:System.Xml.XmlReader>、<xref:System.IO.TextReader> 和 <xref:System.IO.Stream> 对象将转移到由 <xref:System.Data.SqlClient.SqlParameter.Size%2A> 定义的值。  
   
-## <a name="sample----streaming-from-sql-server"></a>示例--流从 SQL Server  
+## <a name="sample----streaming-from-sql-server"></a>从 SQL Server 流式处理示例-  
  请使用以下 [!INCLUDE[tsql](../../../../includes/tsql-md.md)] 来创建示例数据库：  
   
 ```  
@@ -97,13 +97,13 @@ GO
   
 -   通过提供用于检索大型文件的异步方法来避免阻止用户接口线程。  
   
--   从 SQL Server 传输大型文本文件[!INCLUDE[net_v45](../../../../includes/net-v45-md.md)]。  
+-   从 SQL Server 传输较大文本文件[!INCLUDE[net_v45](../../../../includes/net-v45-md.md)]。  
   
--   从 SQL Server 传输大型的 XML 文件[!INCLUDE[net_v45](../../../../includes/net-v45-md.md)]。  
+-   从 SQL Server 传输较大的 XML 文件[!INCLUDE[net_v45](../../../../includes/net-v45-md.md)]。  
   
--   从 SQL Server 检索数据。  
+-   从 SQL Server 中检索数据。  
   
--   从一个 SQL Server 数据库的大型文件 (Blob) 传输到另一个没有内存不足。  
+-   将大型文件 (Blob) 从一个 SQL Server 数据库传输到另一个没有内存不足。  
   
 ```  
 using System;  
@@ -241,7 +241,7 @@ namespace StreamingFromServer {
             Async = true,  
             // Since we will immediately wrap the TextReader we are creating in an XmlReader, we will permit the XmlReader to take care of closing\disposing it  
             CloseInput = true,  
-            // If the Xml you are reading is not a valid document (as per http://msdn.microsoft.com/library/6bts1x50.aspx) you will need to set the conformance level to Fragment  
+            // If the Xml you are reading is not a valid document (as per <https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/6bts1x50(v=vs.100)>) you will need to set the conformance level to Fragment  
             ConformanceLevel = ConformanceLevel.Fragment  
          };  
   
@@ -328,7 +328,7 @@ GO
   
 -   正在取消大型 BLOB 传输...  
   
--   到另一个使用新的异步功能从一个 SQL Server 流式处理。  
+-   从一台 SQL 服务器流到另一个使用新的异步功能。  
   
 ```  
 using System;  
@@ -450,8 +450,8 @@ namespace StreamingToServer {
 }  
 ```  
   
-## <a name="sample----streaming-from-one-sql-server-to-another-sql-server"></a>示例--流式传输一个 SQL Server 到另一个 SQL Server  
- 此示例演示如何以异步方式流式传输到另一个，支持取消大型 BLOB 从一个 SQL Server。  
+## <a name="sample----streaming-from-one-sql-server-to-another-sql-server"></a>示例--流从一台 SQL 服务器到另一个 SQL Server  
+ 此示例演示如何以异步方式流式传输到另一个，支持取消将大型 BLOB 从一个 SQL Server。  
   
 ```  
 using System;  

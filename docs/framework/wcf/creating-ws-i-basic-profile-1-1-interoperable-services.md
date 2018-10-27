@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - configuration [WCF], interoperable services
 ms.assetid: 91b70a21-8f5c-4679-808c-2ed5fa6b2013
-ms.openlocfilehash: 80c61f11f82a13fe5aedb9d21ae2555f86fd4aff
-ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
+ms.openlocfilehash: f32308a17e2934b6884140307074f97e6b51f5f9
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "49371207"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50190536"
 ---
 # <a name="creating-ws-i-basic-profile-11-interoperable-services"></a>创建 WS-I 基本配置文件 1.1 可互操作服务
 若要配置为可与互操作的 WCF 服务端点[!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)]Web 服务客户端：  
@@ -29,7 +29,7 @@ ms.locfileid: "49371207"
   
 -   由 <xref:System.ServiceModel.BasicHttpBinding.Security%2A?displayProperty=nameWithType> 值控制的消息安全提供符合 WS-I 基本安全配置文件 1.0 的 WS-Security 支持。 将此属性保留为其默认值（即 <xref:System.ServiceModel.SecurityMode.Transport?displayProperty=nameWithType>）以便不使用 WS-Security。  
   
- 若要使 WCF 服务的元数据可供[!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)]，使用 Web 服务客户端生成工具： [Web 服务描述语言工具 (Wsdl.exe)](/previous-versions/dotnet/netframework-4.0/7h3ystb6%28v=vs.100%29)， [Web 服务发现工具 (Disco.exe)](/previous-versions/dotnet/netframework-4.0/cy2a3ybs%28v=vs.100%29)，和`Add Web Reference`Visual Studio 中的功能; 必须启用元数据发布。 有关详细信息，请参阅[发布元数据终结点](../../../docs/framework/wcf/publishing-metadata-endpoints.md)。  
+ 若要使 WCF 服务的元数据可供[!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)]，使用 Web 服务客户端生成工具： [Web 服务描述语言工具 (Wsdl.exe)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/7h3ystb6%28v=vs.100%29)， [Web 服务发现工具 (Disco.exe)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cy2a3ybs%28v=vs.100%29)，和`Add Web Reference`Visual Studio 中的功能; 必须启用元数据发布。 有关详细信息，请参阅[发布元数据终结点](../../../docs/framework/wcf/publishing-metadata-endpoints.md)。  
   
 ## <a name="example"></a>示例  
   
