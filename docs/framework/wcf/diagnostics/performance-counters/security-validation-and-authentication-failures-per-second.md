@@ -2,34 +2,33 @@
 title: Security Validation and Authentication Failures Per Second（每秒安全验证和身份验证失败次数）
 ms.date: 03/30/2017
 ms.assetid: 266c3bd3-2ffc-4471-94b7-3675443be1ac
-author: BrucePerlerMS
-ms.openlocfilehash: 01fb7afd363e85e9c9ac5625175f350c00f66f26
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: e3db8cb20399bdff9b73a428ea2a53909da4eee1
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47204487"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50088762"
 ---
-# <a name="security-validation-and-authentication-failures-per-second"></a><span data-ttu-id="86fb3-102">Security Validation and Authentication Failures Per Second（每秒安全验证和身份验证失败次数）</span><span class="sxs-lookup"><span data-stu-id="86fb3-102">Security Validation and Authentication Failures Per Second</span></span>
-<span data-ttu-id="86fb3-103">计数器名称：Security Validation and Authentication Failures Per Second（每秒安全验证和身份验证失败次数）。</span><span class="sxs-lookup"><span data-stu-id="86fb3-103">Counter name: Security Validation and Authentication Failures Per Second.</span></span>  
+# <a name="security-validation-and-authentication-failures-per-second"></a><span data-ttu-id="edbf8-102">Security Validation and Authentication Failures Per Second（每秒安全验证和身份验证失败次数）</span><span class="sxs-lookup"><span data-stu-id="edbf8-102">Security Validation and Authentication Failures Per Second</span></span>
+<span data-ttu-id="edbf8-103">计数器名称：Security Validation and Authentication Failures Per Second（每秒安全验证和身份验证失败次数）。</span><span class="sxs-lookup"><span data-stu-id="edbf8-103">Counter name: Security Validation and Authentication Failures Per Second.</span></span>  
   
-## <a name="description"></a><span data-ttu-id="86fb3-104">描述</span><span class="sxs-lookup"><span data-stu-id="86fb3-104">Description</span></span>  
- <span data-ttu-id="86fb3-105">每当消息由于“Security Calls Not Authorized”（未授权的安全调用次数）计数器中未包括的安全问题而遭到拒绝时，此计数器即会递增。</span><span class="sxs-lookup"><span data-stu-id="86fb3-105">This counter is incremented whenever a message is rejected due to a security problem not covered by the "Security Calls Not Authorized" counter.</span></span> <span data-ttu-id="86fb3-106">此类问题包括：</span><span class="sxs-lookup"><span data-stu-id="86fb3-106">Such problems include:</span></span>  
+## <a name="description"></a><span data-ttu-id="edbf8-104">描述</span><span class="sxs-lookup"><span data-stu-id="edbf8-104">Description</span></span>  
+ <span data-ttu-id="edbf8-105">每当消息由于“Security Calls Not Authorized”（未授权的安全调用次数）计数器中未包括的安全问题而遭到拒绝时，此计数器即会递增。</span><span class="sxs-lookup"><span data-stu-id="edbf8-105">This counter is incremented whenever a message is rejected due to a security problem not covered by the "Security Calls Not Authorized" counter.</span></span> <span data-ttu-id="edbf8-106">此类问题包括：</span><span class="sxs-lookup"><span data-stu-id="edbf8-106">Such problems include:</span></span>  
   
--   <span data-ttu-id="86fb3-107">无法从消息中读取客户端令牌。</span><span class="sxs-lookup"><span data-stu-id="86fb3-107">Client token cannot be read from the message.</span></span>  
+-   <span data-ttu-id="edbf8-107">无法从消息中读取客户端令牌。</span><span class="sxs-lookup"><span data-stu-id="edbf8-107">Client token cannot be read from the message.</span></span>  
   
--   <span data-ttu-id="86fb3-108">客户端令牌身份验证失败（如密码错误）。</span><span class="sxs-lookup"><span data-stu-id="86fb3-108">Client token has failed authentication (for example, bad password).</span></span>  
+-   <span data-ttu-id="edbf8-108">客户端令牌身份验证失败（如密码错误）。</span><span class="sxs-lookup"><span data-stu-id="edbf8-108">Client token has failed authentication (for example, bad password).</span></span>  
   
--   <span data-ttu-id="86fb3-109">签名验证失败（如消息已被篡改）。</span><span class="sxs-lookup"><span data-stu-id="86fb3-109">Signature verification has failed (for example, the message has been tampered).</span></span>  
+-   <span data-ttu-id="edbf8-109">签名验证失败（如消息已被篡改）。</span><span class="sxs-lookup"><span data-stu-id="edbf8-109">Signature verification has failed (for example, the message has been tampered).</span></span>  
   
--   <span data-ttu-id="86fb3-110">消息与上一条消息重复，这种情况可能在重放攻击过程中发生。</span><span class="sxs-lookup"><span data-stu-id="86fb3-110">The message is a duplicate from a previous one, which can happen during a replay attack.</span></span>  
+-   <span data-ttu-id="edbf8-110">消息与上一条消息重复，这种情况可能在重放攻击过程中发生。</span><span class="sxs-lookup"><span data-stu-id="edbf8-110">The message is a duplicate from a previous one, which can happen during a replay attack.</span></span>  
   
--   <span data-ttu-id="86fb3-111">已发生解密失败。</span><span class="sxs-lookup"><span data-stu-id="86fb3-111">A decryption failure has occurred.</span></span>  
+-   <span data-ttu-id="edbf8-111">已发生解密失败。</span><span class="sxs-lookup"><span data-stu-id="edbf8-111">A decryption failure has occurred.</span></span>  
   
--   <span data-ttu-id="86fb3-112">消息中缺少一些必需元素（如缺少时间戳或加密的数据块）。</span><span class="sxs-lookup"><span data-stu-id="86fb3-112">Some required elements (for example, missing timestamp or encrypted data block) are missing from the message.</span></span>  
+-   <span data-ttu-id="edbf8-112">消息中缺少一些必需元素（如缺少时间戳或加密的数据块）。</span><span class="sxs-lookup"><span data-stu-id="edbf8-112">Some required elements (for example, missing timestamp or encrypted data block) are missing from the message.</span></span>  
   
--   <span data-ttu-id="86fb3-113">TLSNEGO/SPNEGO 握手过程中已发生错误。</span><span class="sxs-lookup"><span data-stu-id="86fb3-113">Errors have occurred during TLSNEGO/SPNEGO handshake.</span></span>  
+-   <span data-ttu-id="edbf8-113">TLSNEGO/SPNEGO 握手过程中已发生错误。</span><span class="sxs-lookup"><span data-stu-id="edbf8-113">Errors have occurred during TLSNEGO/SPNEGO handshake.</span></span>  
   
- <span data-ttu-id="86fb3-114">此计数器为性能计数器类型[PERF_COUNTER_COUNTER](https://go.microsoft.com/fwlink/?LinkID=94649)，使用以下公式计算其值：</span><span class="sxs-lookup"><span data-stu-id="86fb3-114">This counter is of performance counter type [PERF_COUNTER_COUNTER](https://go.microsoft.com/fwlink/?LinkID=94649), whose value is calculated using the following formula:</span></span>  
+ <span data-ttu-id="edbf8-114">此计数器为性能计数器类型[PERF_COUNTER_COUNTER](https://go.microsoft.com/fwlink/?LinkID=94649)，使用以下公式计算其值：</span><span class="sxs-lookup"><span data-stu-id="edbf8-114">This counter is of performance counter type [PERF_COUNTER_COUNTER](https://go.microsoft.com/fwlink/?LinkID=94649), whose value is calculated using the following formula:</span></span>  
   
- <span data-ttu-id="86fb3-115">(N1-N0)/((D1-D0)/F)</span><span class="sxs-lookup"><span data-stu-id="86fb3-115">(N1-N0)/((D1-D0)/F)</span></span>
+ <span data-ttu-id="edbf8-115">(N1-N0)/((D1-D0)/F)</span><span class="sxs-lookup"><span data-stu-id="edbf8-115">(N1-N0)/((D1-D0)/F)</span></span>
