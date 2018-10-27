@@ -3,11 +3,11 @@ title: 扩展保护身份验证示例自述文件
 ms.date: 03/30/2017
 ms.assetid: 80bf2e97-398d-4db5-9040-d96478a2ccab
 ms.openlocfilehash: 19fe961e346874346485442bd0ba90badab5f79f
-ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
-ms.translationtype: HT
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50047275"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50192468"
 ---
 # <a name="readme-for-extended-protection-authentication-sample"></a>扩展保护身份验证示例自述文件
 扩展的保护是一种安全计划中拦截 (MITM) 攻击，在其中攻击者 （"人-中-干预"） 截获客户端的凭据，并使用它们来访问客户端的目标服务器上的安全资源。  

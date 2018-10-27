@@ -2,12 +2,12 @@
 title: '在 Visual Studio Code 中的 F # 入门'
 description: '了解如何使用 F # 与 Visual Studio Code 和 Ionide 插件套件。'
 ms.date: 05/28/2018
-ms.openlocfilehash: 1afe985a4fe73d18b1e47b071b119c15a4672022
-ms.sourcegitcommit: 59b51cd7c95c75be85bd6ef715e9ef8c85720bac
+ms.openlocfilehash: e962be2796cf0d6eb90d459730659e492f864716
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37874346"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50192663"
 ---
 # <a name="get-started-with-f-in-visual-studio-code"></a>在 Visual Studio Code 中的 F # 入门
 
@@ -19,7 +19,7 @@ ms.locfileid: "37874346"
 
 若要创建一个新的 F # 项目，请在 （可将其命名任意） 的新文件夹中打开 Visual Studio Code。
 
-接下来，打开命令调色板 (**视图 > 命令调色板**) 并键入以下命令：
+接下来，打开命令面板 (**视图 > 命令面板**) 并键入以下命令：
 
 ```
 > F# new project

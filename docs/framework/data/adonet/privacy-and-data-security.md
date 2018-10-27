@@ -3,11 +3,11 @@ title: 隐私和数据安全性
 ms.date: 03/30/2017
 ms.assetid: 46fa5839-adf7-4c7c-bce3-71e941fa7de9
 ms.openlocfilehash: 078b5e09e800511c3edfa78596b5bdb67ebcc6d7
-ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
-ms.translationtype: HT
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50042826"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50194925"
 ---
 # <a name="privacy-and-data-security"></a>隐私和数据安全性
 保护和管理 ADO.NET 应用程序中的敏感信息依赖于用于创建这些信息的基础产品和技术。 ADO.NET 不直接提供用于保护或加密数据的服务。  
