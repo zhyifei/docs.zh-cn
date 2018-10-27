@@ -2,12 +2,12 @@
 title: '&lt;endpointDiscovery&gt;'
 ms.date: 03/30/2017
 ms.assetid: 70812717-888a-4748-9640-0df6715ff029
-ms.openlocfilehash: c5971ce79ac2f03fbdc91653d5d282804e98cf8a
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 0dde8150632c5d8a7bcea3dbeffe70b380d3a322
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32754244"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50183836"
 ---
 # <a name="ltendpointdiscoverygt"></a>&lt;endpointDiscovery&gt;
 指定终结点的各种发现设置，例如终结点的可发现性、范围以及对终结点元数据的任何自定义扩展。  
@@ -42,7 +42,7 @@ ms.locfileid: "32754244"
   
 |特性|描述|  
 |---------------|-----------------|  
-|enabled|一个布尔值，指定是否对此终结点启用可发现性。 默认值为 `false`。|  
+|enabled|一个布尔值，该值指定是否在此终结点上启用可发现性。 默认值为 `false`。|  
   
 ### <a name="child-elements"></a>子元素  
   
@@ -60,9 +60,9 @@ ms.locfileid: "32754244"
 |||  
   
 ## <a name="remarks"></a>备注  
- 如果将此配置元素添加到终结点的行为配置，并将 `enabled` 特性设置为 `true`，此配置元素将启用该终结点的可发现性。 此外，你可以使用[\<作用域 >](../../../../../docs/framework/configure-apps/file-schema/wcf/scopes.md)与指定自定义范围 Uri 可以用于在查询时筛选服务终结点的子元素以及[\<扩展 >](../../../../../docs/framework/configure-apps/file-schema/wcf/extensions.md)子元素可指定应随标准可发现元数据 （EPR、 ContractTypeName、 BindingName、 作用域和 ListenURI） 一起发布的自定义元数据。  
+ 如果将此配置元素添加到终结点的行为配置，并将 `enabled` 特性设置为 `true`，此配置元素将启用该终结点的可发现性。 此外，还可以使用[\<作用域 >](../../../../../docs/framework/configure-apps/file-schema/wcf/scopes.md)子元素指定自定义范围可用于在查询期间筛选服务终结点的 Uri 并将[\<扩展 >](../../../../../docs/framework/configure-apps/file-schema/wcf/extensions.md)子元素指定应随标准可发现元数据 （EPR、 ContractTypeName、 BindingName、 范围和 ListenURI） 一起发布的自定义元数据。  
   
- 此配置元素是依赖于[ \<serviceDiscovery >](../../../../../docs/framework/configure-apps/file-schema/wcf/servicediscovery.md)提供可发现性服务级别控制的元素。 这意味着如果将忽略此元素的设置[ \<serviceDiscovery >](../../../../../docs/framework/configure-apps/file-schema/wcf/servicediscovery.md)不是配置中存在。  
+ 此配置元素是依赖于[ \<serviceDiscovery >](../../../../../docs/framework/configure-apps/file-schema/wcf/servicediscovery.md)元素，它提供服务级别控制的可发现性。 这意味着，如果将忽略此元素的设置[ \<serviceDiscovery >](../../../../../docs/framework/configure-apps/file-schema/wcf/servicediscovery.md)配置中不存在。  
   
 ## <a name="example"></a>示例  
  下面的配置示例指定要对终结点发布的筛选范围和扩展元数据。  

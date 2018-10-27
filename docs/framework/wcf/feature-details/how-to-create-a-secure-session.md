@@ -7,13 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - security [WCF], creating a session
 ms.assetid: b6f42b5a-bbf7-45cf-b917-7ec9fa7ae110
-author: BrucePerlerMS
-ms.openlocfilehash: 01ad849090bd66ba7e0b4e062f78ad7a04ad059d
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: c0e5281d227d343d8734809b27b57d8a2bead627
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47200225"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50185793"
 ---
 # <a name="how-to-create-a-secure-session"></a>如何：创建安全会话
 除[ \<basicHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md)绑定，Windows Communication Foundation (WCF) 中的系统提供绑定将自动使用启用了消息安全性的安全会话。  

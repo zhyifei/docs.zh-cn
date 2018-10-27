@@ -2,12 +2,12 @@
 title: '值选项 （F #）'
 description: '了解有关 F # 值选项类型，即选项类型的结构版本。'
 ms.date: 06/16/2018
-ms.openlocfilehash: 5647ef61725401b10a6045b14eef11f5b041e3e9
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 978bd1713c16f7c050ccb097cb134973d10ef6f5
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44041205"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50185831"
 ---
 # <a name="value-options"></a>值选项
 
@@ -20,19 +20,14 @@ ms.locfileid: "44041205"
 
 ## <a name="definition"></a>定义
 
-值选项指[结构的可区分联合](discriminated-unions.md#struct-discriminated-unions)类似于引用选项类型：
+值选项指[结构的可区分联合](discriminated-unions.md#struct-discriminated-unions)类似于引用选项类型。 这种方式可被视为其定义：
 
 ```fsharp
 [<StructuralEquality; StructuralComparison>]
-[<CompiledName("FSharpValueOption`1")>]
 [<Struct>]
 type ValueOption<'T> =
-    | ValueNone: 'T voption
-    | ValueSome: 'T -> 'T voption
-
-    member Value : 'T
-
-and 'T voption = ValueOption<'T>
+    | ValueNone
+    | ValueSome of 'T
 ```
 
 值选项符合结构相等和比较。 主要区别是已编译的名称、 类型名称和大小写的名称所有指示它是值类型。

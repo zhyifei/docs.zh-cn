@@ -6,19 +6,19 @@ helpviewer_keywords:
 ms.assetid: ce13088e-3095-4f0e-9f6b-fad30bbd3d41
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1bee42db7b9a92723b0640d0b3747a7921b8617c
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 1b16ad5b3426316197d69fc137e2da7f96e7ab49
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43525757"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50185636"
 ---
 # <a name="controlling-net-framework-logging"></a>控制 .NET Framework 日志记录
 可以使用 Windows 事件跟踪 (ETW) 来记录公共语言运行时 (CLR) 事件。 可以使用以下工具来创建和查看跟踪：  
   
--   Windows 操作系统附带的 [Logman](https://go.microsoft.com/fwlink/?LinkId=150916) 和 [Tracerpt](https://go.microsoft.com/fwlink/?LinkId=150919) 命令行工具。  
+-   Windows 操作系统附带的 [Logman](/windows-server/administration/windows-commands/logman) 和 [Tracerpt](/windows-server/administration/windows-commands/tracerpt_1) 命令行工具。  
   
--   [Windows 性能工具包](https://msdn.microsoft.com/library/windows/hardware/hh162945.aspx)中的 [Xperf](https://msdn.microsoft.com/library/windows/hardware/hh162920.aspx) 工具。 有关 Xperf 的详细信息，请参阅 [Windows 性能博客](https://go.microsoft.com/fwlink/?LinkId=179509)。  
+-   [Windows 性能工具包](/windows-hardware/test/wpt/)中的 [Xperf](/windows-hardware/test/wpt/xperf-command-line-reference) 工具。 有关 Xperf 的详细信息，请参阅 [Windows 性能博客](https://go.microsoft.com/fwlink/?LinkId=179509)。  
   
  若要捕获 CLR 事件信息，必须在计算机上安装 CLR 提供程序。 若要确认该提供程序已安装，请在命令提示符处键入 `logman query providers`。 将显示提供程序的列表。 此列表应包含与 CLR 提供程序对应的项，如下所示。  
   
@@ -28,12 +28,12 @@ Provider                                 GUID
 .NET Common Language Runtime    {E13C0D23-CCBC-4E12-931B-D9CC2EEE27E4}.  
 ```  
   
- 如果未列出 CLR 提供程序，则可以通过使用 Windows [Wevtutil](https://go.microsoft.com/fwlink/?LinkID=150915) 命令行工具在 Windows Vista 和更高版本的操作系统上安装该提供程序。 以管理员身份打开命令提示符窗口。 将提示目录更改为 [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] 文件夹（%WINDIR%\Microsoft.NET\Framework[64]\v4.\<.NET 版本>\）。 此文件夹包含 CLR-ETW.man 文件。 在命令提示符处，键入以下命令来安装 CLR 提供程序：  
+ 如果未列出 CLR 提供程序，则可以通过使用 Windows [Wevtutil](/windows-server/administration/windows-commands/wevtutil) 命令行工具在 Windows Vista 和更高版本的操作系统上安装该提供程序。 以管理员身份打开命令提示符窗口。 将提示目录更改为 [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] 文件夹（%WINDIR%\Microsoft.NET\Framework[64]\v4.\<.NET 版本>\）。 此文件夹包含 CLR-ETW.man 文件。 在命令提示符处，键入以下命令来安装 CLR 提供程序：  
   
  `wevtutil im CLR-ETW.man`  
   
 ## <a name="capturing-clr-etw-events"></a>捕获 CLR ETW 事件  
- 可使用 [Logman](https://go.microsoft.com/fwlink/?LinkId=150916) 和 [Xperf](https://msdn.microsoft.com/library/windows/hardware/hh162920.aspx) 命令行工具来捕获 ETW 事件，并使用 [Tracerpt](https://go.microsoft.com/fwlink/?LinkId=150919) 和 [Xperf](https://msdn.microsoft.com/library/windows/hardware/hh162920.aspx) 工具来解码跟踪事件。  
+ 可使用 [Logman](/windows-server/administration/windows-commands/logman) 和 [Xperf](/windows-hardware/test/wpt/xperf-command-line-reference) 命令行工具来捕获 ETW 事件，并使用 [Tracerpt](/windows-server/administration/windows-commands/tracerpt_1) 和 [Xperf](/windows-hardware/test/wpt/xperf-command-line-reference) 工具来解码跟踪事件。  
   
  若要启用日志记录，用户必须指定以下三项：  
   
@@ -109,5 +109,5 @@ Provider                                 GUID
      此命令可使 XPerf 将事件转储为可以查看的逗号分隔值 (CSV) 文件。 由于各个事件具有不同的字段，因此该 CSV 文件中的数据之前有多个标题行。 每行的第一个字段为事件类型，它指示应使用哪一个标题来确定字段的其余部分。  
   
 ## <a name="see-also"></a>请参阅  
- [Windows 性能工具包](https://go.microsoft.com/fwlink/?LinkID=161141)  
+ [Windows 性能工具包](/windows-hardware/test/wpt/)  
  [公共语言运行时中的 ETW 事件](../../../docs/framework/performance/etw-events-in-the-common-language-runtime.md)

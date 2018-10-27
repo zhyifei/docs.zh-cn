@@ -2,12 +2,12 @@
 title: 相关概述
 ms.date: 03/30/2017
 ms.assetid: edcc0315-5d26-44d6-a36d-ea554c418e9f
-ms.openlocfilehash: d831452c384e5aede6ede37af7de6e86b6772342
-ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
+ms.openlocfilehash: cc165bb4b74c70b740632c5cb873ed200b2283bb
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "49372637"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50185857"
 ---
 # <a name="correlation-overview"></a>相关概述
 相关是指使工作流服务消息彼此相关或与应用程序实例状态相关的机制，例如，使答复与初始请求相关，或者使特定订单 ID 与订单处理工作流的保留状态相关。 本主题概述了相关。 本节中的其他主题提供了相关的各种类型的附加信息。  
@@ -21,7 +21,7 @@ ms.locfileid: "49372637"
 
 基于协议的相关使用传输机制使消息彼此相关或与相应实例相关。 系统提供的一些协议相关包括请求-答复相关和基于上下文的相关。 请求-答复相关用于将一对消息传递活动相关以形成双向操作，如 <xref:System.ServiceModel.Activities.Send> 与 <xref:System.ServiceModel.Activities.ReceiveReply> 成对，或 <xref:System.ServiceModel.Activities.Receive> 与 <xref:System.ServiceModel.Activities.SendReply> 成对。 在 Visual Studio 工作流设计器还提供了一组活动模板，用于快速实现此模式。 基于上下文的相关基于中所述的上下文交换机制[.NET 上下文交换协议规范](https://go.microsoft.com/fwlink/?LinkID=166059)。 若要使用基于上下文的相关，必须在终结点上使用诸如 <xref:System.ServiceModel.BasicHttpContextBinding>、<xref:System.ServiceModel.WSHttpContextBinding> 或 <xref:System.ServiceModel.NetTcpContextBinding> 之类的基于上下文的绑定。  
   
-有关协议相关的详细信息，请参阅[持久双工](../../../../docs/framework/wcf/feature-details/durable-duplex-correlation.md)并[请求-答复](../../../../docs/framework/wcf/feature-details/request-reply-correlation.md)。 有关使用 Visual Studio 工作流设计器活动模板的详细信息，请参阅[消息传递活动](../../../../docs/framework/wcf/feature-details/messaging-activities.md)。 有关示例代码，请参阅[NetContextExchangeCorrelation](/previous-versions/dotnet/netframework-4.0/ee662963%28v%3dvs.100%29)示例。  
+有关协议相关的详细信息，请参阅[持久双工](../../../../docs/framework/wcf/feature-details/durable-duplex-correlation.md)并[请求-答复](../../../../docs/framework/wcf/feature-details/request-reply-correlation.md)。 有关使用 Visual Studio 工作流设计器活动模板的详细信息，请参阅[消息传递活动](../../../../docs/framework/wcf/feature-details/messaging-activities.md)。 有关示例代码，请参阅[NetContextExchangeCorrelation](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ee662963%28v%3dvs.100%29)示例。  
   
 ## <a name="content-based-correlation"></a>基于内容的相关
 
@@ -29,4 +29,4 @@ ms.locfileid: "49372637"
   
 ## <a name="see-also"></a>请参阅  
 
-- [NetContextExchangeCorrelation](/previous-versions/dotnet/netframework-4.0/ee662963%28v%3dvs.100%29)
+- [NetContextExchangeCorrelation](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ee662963%28v%3dvs.100%29)

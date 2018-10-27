@@ -2,12 +2,12 @@
 title: 消息协议
 ms.date: 03/30/2017
 ms.assetid: 5b20bca7-87b3-4c8f-811b-f215b5987104
-ms.openlocfilehash: 7d94b917f3d8d2fd7faed28b9320edc240724e0b
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.openlocfilehash: 4678980520266879b41bea6e10f075a2df116457
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/23/2018
-ms.locfileid: "46703006"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50183849"
 ---
 # <a name="messaging-protocols"></a>消息协议
 
@@ -47,7 +47,7 @@ Windows Communication Foundation (WCF) 通道堆栈采用编码和传输通道�
 
 在本主题中使用以下 XML 命名空间和关联的前缀：
 
-|前缀 |Namespace 统一资源标识符 (URI) |[---|---| | s11 |`http://schemas.xmlsoap.org/soap/envelope`| | s12 |`http://www.w3.org/2003/05/soap-envelope`| | wsa |`http://www.w3.org/2004/08/addressing`| | wsam |`http://www.w3.org/2007/05/addressing/metadata`| | wsap |`http://schemas.xmlsoap.org/ws/2004/09/policy/addressing`| | wsa10 |`http://www.w3.org/2005/08/addressing`| | wsaw10 |`http://www.w3.org/2006/05/addressing/wsdl`| | xop |`http://www.w3.org/2004/08/xop/include`| | xmime |`http://www.w3.org/2004/06/xmlmime`<br /><br /> `http://www.w3.org/2005/05/xmlmime`| | dp |`http://schemas.microsoft.com/net/2006/06/duplex`|
+|前缀 |Namespace 统一资源标识符 (URI) |[---|---| | s11 |`http://schemas.xmlsoap.org/soap/envelope` | | s12 |`http://www.w3.org/2003/05/soap-envelope` | | wsa |`http://www.w3.org/2004/08/addressing` | | wsam |`http://www.w3.org/2007/05/addressing/metadata` | | wsap |`http://schemas.xmlsoap.org/ws/2004/09/policy/addressing` | | wsa10 |`http://www.w3.org/2005/08/addressing` | | wsaw10 |`http://www.w3.org/2006/05/addressing/wsdl` | | xop |`http://www.w3.org/2004/08/xop/include` | | xmime |`http://www.w3.org/2004/06/xmlmime`<br /><br /> `http://www.w3.org/2005/05/xmlmime` | |dp |`http://schemas.microsoft.com/net/2006/06/duplex` |
 
 ## <a name="soap-11-and-soap-12"></a>SOAP 1.1 和 SOAP 1.2
 
@@ -190,20 +190,20 @@ WCF 终结点配置为使用一条消息时给定`Action`遵循请求-答复模�
 ### <a name="web-services-addressing-faults"></a>Web 服务寻址错误
 R3411: WCF 生成的 Ws-addressing 2004/08 所定义的以下错误。
 
-|代码|原因|
+| 代码 | 原因 |
 |----------|-----------|
-|`wsa:DestinationUnreachable`|到达的消息所带有的 `ReplyTo` 不同于为此通道建立的答复地址；在 To 标头中指定的地址上，没有终结点在进行侦听。|
-|`wsa:ActionNotSupported`|与终结点关联的基础结构通道或调度程序不能识别在 `Action` 标头中指定的操作。|
+| `wsa:DestinationUnreachable` | 到达的消息所带有的 `ReplyTo` 不同于为此通道建立的答复地址；在 To 标头中指定的地址上，没有终结点在进行侦听。 |
+| `wsa:ActionNotSupported` | 与终结点关联的基础结构通道或调度程序不能识别在 `Action` 标头中指定的操作。 |
 
 R3412: WCF 生成的 Ws-addressing 1.0 定义的以下错误。
 
-|代码|原因|
+| 代码 | 原因 |
 |----------|-----------|
-|`wsa10:InvalidAddressingHeader`|重复`wsa:To`， `wsa:ReplyTo`，`wsa:From`或`wsa:MessageID`。 重复`wsa:RelatesTo`具有相同`RelationshipType`。|
-|`wsa10:MessageAddressingHeaderRequired`|缺少必需的 Addressing 标头。|
-|`wsa10:DestinationUnreachable`|到达的消息所带有的 `ReplyTo` 不同于为此通道建立的答复地址。 在 To 标头中指定的地址上没有终结点在进行侦听。|
-|`wsa10:ActionNotSupported`|与终结点关联的基础结构通道或调度程序不能识别在 `Action` 标头中指定的操作。|
-|`wsa10:EndpointUnavailable`|RM 通道发送回此错误，指示终结点将不会根据对 `CreateSequence` 消息的寻址标头的检查结果来处理序列。|
+| `wsa10:InvalidAddressingHeader` | 重复`wsa:To`， `wsa:ReplyTo`，`wsa:From`或`wsa:MessageID`。 重复`wsa:RelatesTo`具有相同`RelationshipType`。 |
+| `wsa10:MessageAddressingHeaderRequired` | 缺少必需的 Addressing 标头。 |
+| `wsa10:DestinationUnreachable` | 到达的消息所带有的 `ReplyTo` 不同于为此通道建立的答复地址。 在 To 标头中指定的地址上没有终结点在进行侦听。 |
+| `wsa10:ActionNotSupported` | 与终结点关联的基础结构通道或调度程序不能识别在 `Action` 标头中指定的操作。 |
+| `wsa10:EndpointUnavailable` | RM 通道发送回此错误，指示终结点将不会根据对 `CreateSequence` 消息的寻址标头的检查结果来处理序列。 |
 
 上表中的代码对应于 SOAP 1.1 中的 `FaultCode` 和 SOAP 1.2 中的 `SubCode` (Code=Sender)。
 

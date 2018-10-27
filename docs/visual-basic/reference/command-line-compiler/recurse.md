@@ -6,17 +6,15 @@ helpviewer_keywords:
 - -recurse compiler option [Visual Basic]
 - recurse compiler option [Visual Basic]
 ms.assetid: 84a0b670-33ae-44c4-a46a-b90388809317
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: bd5dde46cdea67825b14a6f5fa96a82c8bab8d3f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1edb648ec574c0052b7b8314f4ada710c8b0fe01
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33652417"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50183329"
 ---
 # <a name="-recurse"></a>-recurse
-编译源代码文件的指定的目录或项目目录的所有子目录中。  
+编译源代码文件中指定的目录或项目目录的所有子目录。  
   
 ## <a name="syntax"></a>语法  
   
@@ -26,16 +24,16 @@ ms.locfileid: "33652417"
   
 ## <a name="arguments"></a>自变量  
  `dir`  
- 可选。 希望从中开始搜索的目录。 如果未指定，在项目目录中开始执行搜索。  
+ 可选。 希望从中开始搜索的目录。 如果未指定，在项目目录中开始搜索。  
   
  `file`  
  必须的。 要搜索的文件。 允许通配符。  
   
 ## <a name="remarks"></a>备注  
- 可以在文件名中使用通配符来编译项目目录中的所有匹配的文件而无需使用`-recurse`。 如果不指定任何输出文件的名称，则编译器将基于上处理的第一个输入文件的输出文件名称。 这通常是在编译时按字母顺序查看的文件列表中的第一个文件。 为此，最好是指定输出文件使用`-out`选项。  
+ 可以在文件名中使用通配符来编译项目目录中的所有匹配文件无需使用`-recurse`。 如果不指定任何输出文件的名称，编译器将基于处理的第一个输入文件上的输出文件名称。 这通常是在编译时按字母顺序查看的文件列表中的第一个文件。 出于此原因，最好指定输出文件使用`-out`选项。  
   
 > [!NOTE]
->  `-recurse`选项不是可从 Visual Studio 开发环境中; 仅当从命令行进行编译时，它才可用。  
+>  `-recurse`选项不适用于从 Visual Studio 开发环境中，仅当从命令行编译时便可。  
   
 ## <a name="example"></a>示例  
  下面的命令编译当前目录中的所有 Visual Basic 文件。  
@@ -44,7 +42,7 @@ ms.locfileid: "33652417"
 vbc *.vb  
 ```  
   
- 下面的命令编译中的所有 Visual Basic 文件`Test\ABC`目录和它下面的任何目录，然后生成`Test.ABC.dll`。  
+ 下面的命令编译中的所有 Visual Basic 文件`Test\ABC`directory 和任何目录，然后生成`Test.ABC.dll`。  
   
 ```console
 vbc -target:library -out:Test.ABC.dll -recurse:Test\ABC\*.vb  

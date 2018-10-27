@@ -1,14 +1,12 @@
 ---
 title: $ （Visual Basic 参考）
 ms.date: 10/31/2017
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: ea1e8a7c7cb343adfd8269a7d131e2c5fa9cc662
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f4651849241ec0ccf8052cc012ae97babd299e62
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33596868"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50183433"
 ---
 # <a name="-visual-basic-reference"></a>$ （Visual Basic 参考）
 
@@ -22,4 +20,4 @@ ms.locfileid: "33596868"
 
 ## <a name="see-also"></a>请参阅  
  [Visual Basic 参考](../index.md)  
- [Visual Basic 特殊字符](index.md)
+ [Visual Basic 的特殊字符](index.md)

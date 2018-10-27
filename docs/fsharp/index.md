@@ -3,12 +3,12 @@ title: F# 指南
 description: '本指南提供有关 F #、 功能性的编程语言，在.NET 上运行的各种学习资料的概述。'
 author: cartermp
 ms.date: 08/03/2018
-ms.openlocfilehash: d3e10b6eb99f35b8eddeaa1f0ae257dd17d5cc41
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 5cd5bd95373c8a52a8d2b2348a51970560e8b272
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43480673"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50188360"
 ---
 # <a name="f-guide"></a>F# 指南
 
@@ -56,7 +56,7 @@ F # 指南提供了许多资源来学习 F # 语言。
 
 [F # 代码段网站](http://www.fssnip.net)包含一组大规模的代码段显示了如何执行几乎任何在 F # 中，范围从初学者到很高级的代码段。
 
-[F # 软件 Foundation Slack](http://fsharp.org/guides/slack/)初学者和专家相似，就是非常活跃，是一个很好，具有一些世界上最佳 F # 程序员可用于聊天。 我们强烈建议加入。
+[F # 软件 Foundation Slack](https://fsharp.org/guides/slack/)初学者和专家相似，就是非常活跃，是一个很好，具有一些世界上最佳 F # 程序员可用于聊天。 我们强烈建议加入。
 
 ## <a name="the-f-software-foundation"></a>F# 软件基金会
 
@@ -64,4 +64,4 @@ F # 指南提供了许多资源来学习 F # 语言。
 
 F# 软件基金会的任务是提升、保护和改进 F# 编程语言，以及支持和促进国际化的多元 F# 程序员社区的成长。
 
-若要了解详细信息并参与，请查看 [fsharp.org](http://fsharp.org)。它是免费加入，和 F # 开发人员 foundation 中的网络是想要您不会错过精彩的内容 ！
+若要了解详细信息并参与，请查看 [fsharp.org](https://fsharp.org)。它是免费加入，和 F # 开发人员 foundation 中的网络是想要您不会错过精彩的内容 ！

@@ -2,12 +2,12 @@
 title: '教程： 创建类型提供程序 （F #）'
 description: '了解如何在 F # 3.0 中创建你自己 F # 类型提供程序，通过检查几个简单类型提供程序来演示基本概念。'
 ms.date: 05/16/2016
-ms.openlocfilehash: 3c998377b2c3a408d536ef416f3799bf7f04b6bd
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: c9dedbeed3ee081a6b1e1ffffe843fc962d2c60b
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47397954"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50183914"
 ---
 # <a name="tutorial-create-a-type-provider"></a>教程： 创建类型提供程序
 
@@ -353,7 +353,7 @@ t.AddMembersDelayed(fun () ->
           p.AddXmlDocDelayed(fun () -> 
               sprintf "This is StaticProperty%d on NestedType" i)
 
-          yield p ]
+          yield p ]
 
     staticPropsInNestedType)
 
@@ -748,7 +748,7 @@ do ()
 
 - 标头名称为单元无或窗体"Name （单位）"并且不能包含逗号。
 
-- 单位是作为所有 Systeme 国际 (SI) 单元[Microsoft.FSharp.Data.UnitSystems.SI.UnitNames 模块 （F #）](https://msdn.microsoft.com/library/3cb43485-11f5-4aa7-a779-558f19d4013b)模块定义。
+- 单位是为所有系统国际 (SI) 单元[Microsoft.FSharp.Data.UnitSystems.SI.UnitNames 模块 (F#)](https://msdn.microsoft.com/library/3cb43485-11f5-4aa7-a779-558f19d4013b)模块定义。
 
 - 单位为所有简单 （例如，计量） 而不是复合 （例如，计量器每秒）。
 
@@ -1110,7 +1110,7 @@ F # 中的类型提供程序机制具有以下限制：
 
 ## <a name="development-tips"></a>开发提示
 
-您可能会发现以下提示有助于在开发过程中。
+您可能会发现以下提示有助于开发过程中：
 
 ### <a name="run-two-instances-of-visual-studio"></a>运行 Visual Studio 的两个实例
 

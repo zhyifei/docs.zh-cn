@@ -2,13 +2,12 @@
 title: '&lt;serviceSecurityAudit&gt;'
 ms.date: 03/30/2017
 ms.assetid: ba517369-a034-4f8e-a2c4-66517716062b
-author: BrucePerlerMS
-ms.openlocfilehash: 3cdadedd3c9fda3874409ecad9a0f63ac34f2497
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 4a3ac74ad369864f01fc6925657d4ab4c140495e
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47196171"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50183720"
 ---
 # <a name="ltservicesecurityauditgt"></a>&lt;serviceSecurityAudit&gt;
 指定用于在服务操作过程中启用安全事件审核的设置。  
@@ -39,7 +38,7 @@ ms.locfileid: "47196171"
 |auditLogLocation|指定审核日志的位置。 包括以下有效值：<br /><br /> -默认值： 安全事件写入到应用程序日志在 Windows XP 中，并在事件日志在 Windows Server 2003 和 Windows Vista 上。<br />-应用程序： 审核事件写入到应用程序事件日志中。<br />安全性： 审核事件写入安全事件日志。<br /><br /> 默认值为 Default。 有关详细信息，请参阅<xref:System.ServiceModel.AuditLogLocation>。|  
 |suppressAuditFailure|一个布尔值，指定取消显示审核日志写入失败的行为。<br /><br /> 应将对审核日志的写入错误通知给应用程序。 如果应用程序并不用于处理审核错误，则应使用此属性取消显示审核日志写入失败。<br /><br /> 如果此属性为 `true`，则因尝试写入审核事件而导致的异常（OutOfMemoryException、StackOverFlowException、ThreadAbortException 和 ArgumentException 除外）将由系统进行处理并且不会传播到应用程序。 如果此属性为 `false`，则因尝试写入审核事件而导致的所有异常都将向上传递给应用程序。<br /><br /> 默认值为 `true`。|  
 |serviceAuthorizationAuditLevel|指定审核日志中记录的授权事件的类型。 包括以下有效值：<br /><br /> -None： 无的服务授权事件执行审核。<br />成功： 仅成功的服务授权事件进行审核。<br />-失败： 仅失败服务授权事件进行审核。<br />-SuccessOrFailure： 同时审核成功和失败的服务授权事件。<br /><br /> 默认值为 None。 有关详细信息，请参阅<xref:System.ServiceModel.AuditLevel>。|  
-|messageAuthenticationAuditLevel|指定所记录的消息身份验证审核事件的类型。 包括以下有效值：<br /><br /> -None： 不生成审核事件。<br />-Success： 只成功的安全 （完全验证，包括消息签名验证、 密码和令牌验证） 记录事件。<br />的记录失败： 仅失败的事件。<br />-SuccessOrFailure： 同时记录成功和失败事件。<br /><br /> 默认值为 None。 有关详细信息，请参阅<xref:System.ServiceModel.AuditLevel>。|  
+|messageAuthenticationAuditLevel|指定所记录的消息身份验证审核事件的类型。 包括以下有效值：<br /><br /> -None： 不生成审核事件。<br />-Success： 只成功的安全 （完全验证，包括消息签名验证、 密码和令牌验证） 记录事件。<br />的记录失败： 仅失败的事件。<br />-SuccessOrFailure： 同时记录成功和失败事件。<br /><br /> 默认值为 None。 有关详细信息，请参阅 <xref:System.ServiceModel.AuditLevel> 。|  
   
 ### <a name="child-elements"></a>子元素  
  无。  
