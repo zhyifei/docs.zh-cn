@@ -15,18 +15,18 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 83928696fc7fdfaf2eb944f4cdb9eebecdece0b3
-ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
+ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "49373670"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49452909"
 ---
-# <a name="cordebugehclause-structure"></a><span data-ttu-id="27d73-102">CorDebugEHClause 结构</span><span class="sxs-lookup"><span data-stu-id="27d73-102">CorDebugEHClause Structure</span></span>
-<span data-ttu-id="27d73-103">[仅在 .NET Framework 4.5.2 及更高版本中受支持]</span><span class="sxs-lookup"><span data-stu-id="27d73-103">[Supported in the .NET Framework 4.5.2 and later versions]</span></span>  
+# <a name="cordebugehclause-structure"></a><span data-ttu-id="4e6ef-102">CorDebugEHClause 结构</span><span class="sxs-lookup"><span data-stu-id="4e6ef-102">CorDebugEHClause Structure</span></span>
+<span data-ttu-id="4e6ef-103">[仅在 .NET Framework 4.5.2 及更高版本中受支持]</span><span class="sxs-lookup"><span data-stu-id="4e6ef-103">[Supported in the .NET Framework 4.5.2 and later versions]</span></span>  
   
- <span data-ttu-id="27d73-104">表示给定的一段中间语言 (IL) 代码的异常处理 (EH) 子句。</span><span class="sxs-lookup"><span data-stu-id="27d73-104">Represents an exception handling (EH) clause for a given piece of intermediate language (IL) code.</span></span>  
+ <span data-ttu-id="4e6ef-104">表示给定的一段中间语言 (IL) 代码的异常处理 (EH) 子句。</span><span class="sxs-lookup"><span data-stu-id="4e6ef-104">Represents an exception handling (EH) clause for a given piece of intermediate language (IL) code.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="27d73-105">语法</span><span class="sxs-lookup"><span data-stu-id="27d73-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="4e6ef-105">语法</span><span class="sxs-lookup"><span data-stu-id="4e6ef-105">Syntax</span></span>  
   
 ```cpp
 typedef struct _CorDebugEHClause {  
@@ -40,41 +40,41 @@ typedef struct _CorDebugEHClause {
 } CorDebugEHClause;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="27d73-106">成员</span><span class="sxs-lookup"><span data-stu-id="27d73-106">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="4e6ef-106">成员</span><span class="sxs-lookup"><span data-stu-id="4e6ef-106">Members</span></span>  
   
-|<span data-ttu-id="27d73-107">成员</span><span class="sxs-lookup"><span data-stu-id="27d73-107">Member</span></span>|<span data-ttu-id="27d73-108">描述</span><span class="sxs-lookup"><span data-stu-id="27d73-108">Description</span></span>|  
+|<span data-ttu-id="4e6ef-107">成员</span><span class="sxs-lookup"><span data-stu-id="4e6ef-107">Member</span></span>|<span data-ttu-id="4e6ef-108">描述</span><span class="sxs-lookup"><span data-stu-id="4e6ef-108">Description</span></span>|  
 |------------|-----------------|  
-|`Flags`|<span data-ttu-id="27d73-109">描述 EH 子句中的异常信息的位字段。</span><span class="sxs-lookup"><span data-stu-id="27d73-109">A bit field that describes the exception information in the EH clause.</span></span> <span data-ttu-id="27d73-110">有关详细信息，请参阅“备注”部分。</span><span class="sxs-lookup"><span data-stu-id="27d73-110">For more information, see the Remarks section.</span></span>|  
-|`TryOffset`|<span data-ttu-id="27d73-111">方法主体开头的 `try` 块的偏移量（以字节为单位）。</span><span class="sxs-lookup"><span data-stu-id="27d73-111">The offset, in bytes, of the `try` block from the start of the method body.</span></span>|  
-|`TryLength`|<span data-ttu-id="27d73-112">`try` 块的长度（以字节为单位）。</span><span class="sxs-lookup"><span data-stu-id="27d73-112">The length, in bytes, of the `try` block.</span></span>|  
-|`HandlerOffset`|<span data-ttu-id="27d73-113">此 `try` 块的处理程序的位置。</span><span class="sxs-lookup"><span data-stu-id="27d73-113">The location of the handler for this `try` block.</span></span>|  
-|`HandlerLength`|<span data-ttu-id="27d73-114">处理程序代码的大小（以字节为单位）。</span><span class="sxs-lookup"><span data-stu-id="27d73-114">The size of the handler code in bytes.</span></span>|  
-|`ClassToken`|<span data-ttu-id="27d73-115">基于类型的异常处理程序的元数据标记。</span><span class="sxs-lookup"><span data-stu-id="27d73-115">The metadata token for a type-based exception handler.</span></span>|  
-|`FilterOffset`|<span data-ttu-id="27d73-116">基于筛选器的异常处理程序的方法主体开头的偏移量（以字节为单位）。</span><span class="sxs-lookup"><span data-stu-id="27d73-116">The offset, in bytes, from the start of the method body for a filter-based exception handler.</span></span>|  
+|`Flags`|<span data-ttu-id="4e6ef-109">描述 EH 子句中的异常信息的位字段。</span><span class="sxs-lookup"><span data-stu-id="4e6ef-109">A bit field that describes the exception information in the EH clause.</span></span> <span data-ttu-id="4e6ef-110">有关详细信息，请参阅“备注”部分。</span><span class="sxs-lookup"><span data-stu-id="4e6ef-110">For more information, see the Remarks section.</span></span>|  
+|`TryOffset`|<span data-ttu-id="4e6ef-111">方法主体开头的 `try` 块的偏移量（以字节为单位）。</span><span class="sxs-lookup"><span data-stu-id="4e6ef-111">The offset, in bytes, of the `try` block from the start of the method body.</span></span>|  
+|`TryLength`|<span data-ttu-id="4e6ef-112">`try` 块的长度（以字节为单位）。</span><span class="sxs-lookup"><span data-stu-id="4e6ef-112">The length, in bytes, of the `try` block.</span></span>|  
+|`HandlerOffset`|<span data-ttu-id="4e6ef-113">此 `try` 块的处理程序的位置。</span><span class="sxs-lookup"><span data-stu-id="4e6ef-113">The location of the handler for this `try` block.</span></span>|  
+|`HandlerLength`|<span data-ttu-id="4e6ef-114">处理程序代码的大小（以字节为单位）。</span><span class="sxs-lookup"><span data-stu-id="4e6ef-114">The size of the handler code in bytes.</span></span>|  
+|`ClassToken`|<span data-ttu-id="4e6ef-115">基于类型的异常处理程序的元数据标记。</span><span class="sxs-lookup"><span data-stu-id="4e6ef-115">The metadata token for a type-based exception handler.</span></span>|  
+|`FilterOffset`|<span data-ttu-id="4e6ef-116">基于筛选器的异常处理程序的方法主体开头的偏移量（以字节为单位）。</span><span class="sxs-lookup"><span data-stu-id="4e6ef-116">The offset, in bytes, from the start of the method body for a filter-based exception handler.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="27d73-117">备注</span><span class="sxs-lookup"><span data-stu-id="27d73-117">Remarks</span></span>  
- <span data-ttu-id="27d73-118">一个数组`CoreDebugEHClause`返回的值[GetEHClauses](../../../../docs/framework/unmanaged-api/debugging/icordebugilcode-getehclauses-method.md)方法。</span><span class="sxs-lookup"><span data-stu-id="27d73-118">An array of `CoreDebugEHClause` values is returned by the [GetEHClauses](../../../../docs/framework/unmanaged-api/debugging/icordebugilcode-getehclauses-method.md) method.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="4e6ef-117">备注</span><span class="sxs-lookup"><span data-stu-id="4e6ef-117">Remarks</span></span>  
+ <span data-ttu-id="4e6ef-118">一个数组`CoreDebugEHClause`返回的值[GetEHClauses](../../../../docs/framework/unmanaged-api/debugging/icordebugilcode-getehclauses-method.md)方法。</span><span class="sxs-lookup"><span data-stu-id="4e6ef-118">An array of `CoreDebugEHClause` values is returned by the [GetEHClauses](../../../../docs/framework/unmanaged-api/debugging/icordebugilcode-getehclauses-method.md) method.</span></span>  
   
- <span data-ttu-id="27d73-119">EH 子句信息由 CLI 规范定义。</span><span class="sxs-lookup"><span data-stu-id="27d73-119">The EH clause information is defined by the CLI specification.</span></span> <span data-ttu-id="27d73-120">有关详细信息，请参阅[标准 ECMA-355： 公共语言基础结构 (CLI)，第 6 版](https://www.ecma-international.org/publications/standards/Ecma-335.htm)。</span><span class="sxs-lookup"><span data-stu-id="27d73-120">For more information, see [Standard ECMA-355: Common Language Infrastructure (CLI), 6th Edition](https://www.ecma-international.org/publications/standards/Ecma-335.htm).</span></span>  
+ <span data-ttu-id="4e6ef-119">EH 子句信息由 CLI 规范定义。</span><span class="sxs-lookup"><span data-stu-id="4e6ef-119">The EH clause information is defined by the CLI specification.</span></span> <span data-ttu-id="4e6ef-120">有关详细信息，请参阅[标准 ECMA-355： 公共语言基础结构 (CLI)，第 6 版](https://www.ecma-international.org/publications/standards/Ecma-335.htm)。</span><span class="sxs-lookup"><span data-stu-id="4e6ef-120">For more information, see [Standard ECMA-355: Common Language Infrastructure (CLI), 6th Edition](https://www.ecma-international.org/publications/standards/Ecma-335.htm).</span></span>  
   
- <span data-ttu-id="27d73-121">`flags` 字段可以包含以下标志。</span><span class="sxs-lookup"><span data-stu-id="27d73-121">The `flags` field can contain the following flags.</span></span> <span data-ttu-id="27d73-122">请注意，它们不会在 CorDebug.idl 或 CorDebug.h 中定义。</span><span class="sxs-lookup"><span data-stu-id="27d73-122">Note that they are not defined in CorDebug.idl or CorDebug.h.</span></span>  
+ <span data-ttu-id="4e6ef-121">`flags` 字段可以包含以下标志。</span><span class="sxs-lookup"><span data-stu-id="4e6ef-121">The `flags` field can contain the following flags.</span></span> <span data-ttu-id="4e6ef-122">请注意，它们不会在 CorDebug.idl 或 CorDebug.h 中定义。</span><span class="sxs-lookup"><span data-stu-id="4e6ef-122">Note that they are not defined in CorDebug.idl or CorDebug.h.</span></span>  
   
-|<span data-ttu-id="27d73-123">Flag</span><span class="sxs-lookup"><span data-stu-id="27d73-123">Flag</span></span>|<span data-ttu-id="27d73-124">值</span><span class="sxs-lookup"><span data-stu-id="27d73-124">Value</span></span>|<span data-ttu-id="27d73-125">描述</span><span class="sxs-lookup"><span data-stu-id="27d73-125">Description</span></span>|  
+|<span data-ttu-id="4e6ef-123">Flag</span><span class="sxs-lookup"><span data-stu-id="4e6ef-123">Flag</span></span>|<span data-ttu-id="4e6ef-124">值</span><span class="sxs-lookup"><span data-stu-id="4e6ef-124">Value</span></span>|<span data-ttu-id="4e6ef-125">描述</span><span class="sxs-lookup"><span data-stu-id="4e6ef-125">Description</span></span>|  
 |----------|-----------|-----------------|  
-|`COR_ILEXCEPTION_CLAUSE_EXCEPTION`|<span data-ttu-id="27d73-126">0x00000000</span><span class="sxs-lookup"><span data-stu-id="27d73-126">0x00000000</span></span>|<span data-ttu-id="27d73-127">键入的异常子句。</span><span class="sxs-lookup"><span data-stu-id="27d73-127">A typed exception clause.</span></span>|  
-|`COR_ILEXCEPTION_CLAUSE_FILTER`|<span data-ttu-id="27d73-128">0x00000001</span><span class="sxs-lookup"><span data-stu-id="27d73-128">0x00000001</span></span>|<span data-ttu-id="27d73-129">异常筛选器和处理程序子句。</span><span class="sxs-lookup"><span data-stu-id="27d73-129">An exception filter and handler clause.</span></span>|  
-|`COR_ILEXCEPTION_CLAUSE_FINALLY`|<span data-ttu-id="27d73-130">0x00000002</span><span class="sxs-lookup"><span data-stu-id="27d73-130">0x00000002</span></span>|<span data-ttu-id="27d73-131">`finally` 子句。</span><span class="sxs-lookup"><span data-stu-id="27d73-131">A `finally` clause.</span></span>|  
-|`COR_ILEXCEPTION_CLAUSE_FAULT`|<span data-ttu-id="27d73-132">0x00000004</span><span class="sxs-lookup"><span data-stu-id="27d73-132">0x00000004</span></span>|<span data-ttu-id="27d73-133">Fault 子句（仅当引发异常时才调用的 `finally` 子句）。</span><span class="sxs-lookup"><span data-stu-id="27d73-133">A fault clause (a `finally` clause that is called only when an exception is thrown).</span></span>|  
+|`COR_ILEXCEPTION_CLAUSE_EXCEPTION`|<span data-ttu-id="4e6ef-126">0x00000000</span><span class="sxs-lookup"><span data-stu-id="4e6ef-126">0x00000000</span></span>|<span data-ttu-id="4e6ef-127">键入的异常子句。</span><span class="sxs-lookup"><span data-stu-id="4e6ef-127">A typed exception clause.</span></span>|  
+|`COR_ILEXCEPTION_CLAUSE_FILTER`|<span data-ttu-id="4e6ef-128">0x00000001</span><span class="sxs-lookup"><span data-stu-id="4e6ef-128">0x00000001</span></span>|<span data-ttu-id="4e6ef-129">异常筛选器和处理程序子句。</span><span class="sxs-lookup"><span data-stu-id="4e6ef-129">An exception filter and handler clause.</span></span>|  
+|`COR_ILEXCEPTION_CLAUSE_FINALLY`|<span data-ttu-id="4e6ef-130">0x00000002</span><span class="sxs-lookup"><span data-stu-id="4e6ef-130">0x00000002</span></span>|<span data-ttu-id="4e6ef-131">`finally` 子句。</span><span class="sxs-lookup"><span data-stu-id="4e6ef-131">A `finally` clause.</span></span>|  
+|`COR_ILEXCEPTION_CLAUSE_FAULT`|<span data-ttu-id="4e6ef-132">0x00000004</span><span class="sxs-lookup"><span data-stu-id="4e6ef-132">0x00000004</span></span>|<span data-ttu-id="4e6ef-133">Fault 子句（仅当引发异常时才调用的 `finally` 子句）。</span><span class="sxs-lookup"><span data-stu-id="4e6ef-133">A fault clause (a `finally` clause that is called only when an exception is thrown).</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="27d73-134">要求</span><span class="sxs-lookup"><span data-stu-id="27d73-134">Requirements</span></span>  
- <span data-ttu-id="27d73-135">**平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="27d73-135">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="4e6ef-134">要求</span><span class="sxs-lookup"><span data-stu-id="4e6ef-134">Requirements</span></span>  
+ <span data-ttu-id="4e6ef-135">**平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="4e6ef-135">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="27d73-136">**标头**：CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="27d73-136">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="4e6ef-136">**标头**：CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="4e6ef-136">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="27d73-137">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="27d73-137">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="4e6ef-137">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="4e6ef-137">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="27d73-138">**.NET Framework 版本：**[!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="27d73-138">**.NET Framework Versions:** [!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]</span></span>  
+ <span data-ttu-id="4e6ef-138">**.NET Framework 版本：**[!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="4e6ef-138">**.NET Framework Versions:** [!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="27d73-139">请参阅</span><span class="sxs-lookup"><span data-stu-id="27d73-139">See Also</span></span>  
- [<span data-ttu-id="27d73-140">GetEHClauses 方法</span><span class="sxs-lookup"><span data-stu-id="27d73-140">GetEHClauses Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugilcode-getehclauses-method.md)  
- [<span data-ttu-id="27d73-141">调试结构</span><span class="sxs-lookup"><span data-stu-id="27d73-141">Debugging Structures</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
+## <a name="see-also"></a><span data-ttu-id="4e6ef-139">请参阅</span><span class="sxs-lookup"><span data-stu-id="4e6ef-139">See Also</span></span>  
+ [<span data-ttu-id="4e6ef-140">GetEHClauses 方法</span><span class="sxs-lookup"><span data-stu-id="4e6ef-140">GetEHClauses Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugilcode-getehclauses-method.md)  
+ [<span data-ttu-id="4e6ef-141">调试结构</span><span class="sxs-lookup"><span data-stu-id="4e6ef-141">Debugging Structures</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)

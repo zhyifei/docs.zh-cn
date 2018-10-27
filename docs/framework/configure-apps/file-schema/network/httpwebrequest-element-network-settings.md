@@ -8,24 +8,22 @@ helpviewer_keywords:
 - <httpWebRequest> element
 - httpWebRequest element
 ms.assetid: 52acd9d2-5bdc-4dc4-9c2a-f0a476ccbb31
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: e83f12d849f6f6a587bccc85fbf6fe8fe24026f0
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 586b3e7219c72b6cd00653d6d0be3a74f6359709
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47397223"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50048978"
 ---
-# <a name="lthttpwebrequestgt-element-network-settings"></a><span data-ttu-id="c20f1-102">&lt;httpWebRequest&gt;元素 （网络设置）</span><span class="sxs-lookup"><span data-stu-id="c20f1-102">&lt;httpWebRequest&gt; Element (Network Settings)</span></span>
-<span data-ttu-id="c20f1-103">自定义 Web 请求参数。</span><span class="sxs-lookup"><span data-stu-id="c20f1-103">Customizes Web request parameters.</span></span>  
+# <a name="lthttpwebrequestgt-element-network-settings"></a><span data-ttu-id="16d29-102">&lt;httpWebRequest&gt;元素 （网络设置）</span><span class="sxs-lookup"><span data-stu-id="16d29-102">&lt;httpWebRequest&gt; Element (Network Settings)</span></span>
+<span data-ttu-id="16d29-103">自定义 Web 请求参数。</span><span class="sxs-lookup"><span data-stu-id="16d29-103">Customizes Web request parameters.</span></span>  
   
- <span data-ttu-id="c20f1-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="c20f1-104">\<configuration></span></span>  
-<span data-ttu-id="c20f1-105">\<system.net></span><span class="sxs-lookup"><span data-stu-id="c20f1-105">\<system.net></span></span>  
-<span data-ttu-id="c20f1-106">\<设置 ></span><span class="sxs-lookup"><span data-stu-id="c20f1-106">\<settings></span></span>  
-<span data-ttu-id="c20f1-107">\<httpWebRequest ></span><span class="sxs-lookup"><span data-stu-id="c20f1-107">\<httpWebRequest></span></span>  
+ <span data-ttu-id="16d29-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="16d29-104">\<configuration></span></span>  
+<span data-ttu-id="16d29-105">\<system.net></span><span class="sxs-lookup"><span data-stu-id="16d29-105">\<system.net></span></span>  
+<span data-ttu-id="16d29-106">\<设置 ></span><span class="sxs-lookup"><span data-stu-id="16d29-106">\<settings></span></span>  
+<span data-ttu-id="16d29-107">\<httpWebRequest ></span><span class="sxs-lookup"><span data-stu-id="16d29-107">\<httpWebRequest></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="c20f1-108">语法</span><span class="sxs-lookup"><span data-stu-id="c20f1-108">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="16d29-108">语法</span><span class="sxs-lookup"><span data-stu-id="16d29-108">Syntax</span></span>  
   
 ```xml  
 <httpWebRequest  
@@ -36,35 +34,35 @@ ms.locfileid: "47397223"
 />  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="c20f1-109">特性和元素</span><span class="sxs-lookup"><span data-stu-id="c20f1-109">Attributes and Elements</span></span>  
- <span data-ttu-id="c20f1-110">下列各节描述了特性、子元素和父元素。</span><span class="sxs-lookup"><span data-stu-id="c20f1-110">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="16d29-109">特性和元素</span><span class="sxs-lookup"><span data-stu-id="16d29-109">Attributes and Elements</span></span>  
+ <span data-ttu-id="16d29-110">下列各节描述了特性、子元素和父元素。</span><span class="sxs-lookup"><span data-stu-id="16d29-110">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="c20f1-111">特性</span><span class="sxs-lookup"><span data-stu-id="c20f1-111">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="16d29-111">特性</span><span class="sxs-lookup"><span data-stu-id="16d29-111">Attributes</span></span>  
   
-|<span data-ttu-id="c20f1-112">**特性**</span><span class="sxs-lookup"><span data-stu-id="c20f1-112">**Attribute**</span></span>|<span data-ttu-id="c20f1-113">**说明**</span><span class="sxs-lookup"><span data-stu-id="c20f1-113">**Description**</span></span>|  
+|<span data-ttu-id="16d29-112">**特性**</span><span class="sxs-lookup"><span data-stu-id="16d29-112">**Attribute**</span></span>|<span data-ttu-id="16d29-113">**说明**</span><span class="sxs-lookup"><span data-stu-id="16d29-113">**Description**</span></span>|  
 |-------------------|---------------------|  
-|`maximumResponseHeadersLength`|<span data-ttu-id="c20f1-114">指定以千字节为单位的响应标头的最大长度。</span><span class="sxs-lookup"><span data-stu-id="c20f1-114">Specifies the maximum length of a response header, in kilobytes.</span></span> <span data-ttu-id="c20f1-115">默认值为 64。</span><span class="sxs-lookup"><span data-stu-id="c20f1-115">The default is 64.</span></span> <span data-ttu-id="c20f1-116">值为-1 指示没有大小限制将施加的响应标头。</span><span class="sxs-lookup"><span data-stu-id="c20f1-116">A value of -1 indicates that no size limit will be imposed on the response headers.</span></span>|  
-|`maximumErrorResponseLength`|<span data-ttu-id="c20f1-117">指定的最大长度的错误响应，以千字节为单位。</span><span class="sxs-lookup"><span data-stu-id="c20f1-117">Specifies the maximum length of an error response, in kilobytes.</span></span> <span data-ttu-id="c20f1-118">默认值为 64。</span><span class="sxs-lookup"><span data-stu-id="c20f1-118">The default is 64.</span></span> <span data-ttu-id="c20f1-119">值为-1 指示没有大小限制将施加的错误响应。</span><span class="sxs-lookup"><span data-stu-id="c20f1-119">A value of -1 indicates that no size limit will be imposed on the error response.</span></span>|  
-|`maximumUnauthorizedUploadLength`|<span data-ttu-id="c20f1-120">在响应未经授权的错误代码，以字节为单位指定上传的最大长度。</span><span class="sxs-lookup"><span data-stu-id="c20f1-120">Specifies the maximum length of an upload in response to an unauthorized error code, in bytes.</span></span> <span data-ttu-id="c20f1-121">默认值为 -1。</span><span class="sxs-lookup"><span data-stu-id="c20f1-121">The default is -1.</span></span> <span data-ttu-id="c20f1-122">值为-1 指示，将对上载施加没有大小限制。</span><span class="sxs-lookup"><span data-stu-id="c20f1-122">A value of -1 indicates that no size limit will be imposed on the upload.</span></span>|  
-|`useUnsafeHeaderParsing`|<span data-ttu-id="c20f1-123">指定是否启用不安全标题解析。</span><span class="sxs-lookup"><span data-stu-id="c20f1-123">Specifies whether unsafe header parsing is enabled.</span></span> <span data-ttu-id="c20f1-124">默认值为 `false`。</span><span class="sxs-lookup"><span data-stu-id="c20f1-124">The default value is `false`.</span></span>|  
+|`maximumResponseHeadersLength`|<span data-ttu-id="16d29-114">指定以千字节为单位的响应标头的最大长度。</span><span class="sxs-lookup"><span data-stu-id="16d29-114">Specifies the maximum length of a response header, in kilobytes.</span></span> <span data-ttu-id="16d29-115">默认值为 64。</span><span class="sxs-lookup"><span data-stu-id="16d29-115">The default is 64.</span></span> <span data-ttu-id="16d29-116">值为-1 指示没有大小限制将施加的响应标头。</span><span class="sxs-lookup"><span data-stu-id="16d29-116">A value of -1 indicates that no size limit will be imposed on the response headers.</span></span>|  
+|`maximumErrorResponseLength`|<span data-ttu-id="16d29-117">指定的最大长度的错误响应，以千字节为单位。</span><span class="sxs-lookup"><span data-stu-id="16d29-117">Specifies the maximum length of an error response, in kilobytes.</span></span> <span data-ttu-id="16d29-118">默认值为 64。</span><span class="sxs-lookup"><span data-stu-id="16d29-118">The default is 64.</span></span> <span data-ttu-id="16d29-119">值为-1 指示没有大小限制将施加的错误响应。</span><span class="sxs-lookup"><span data-stu-id="16d29-119">A value of -1 indicates that no size limit will be imposed on the error response.</span></span>|  
+|`maximumUnauthorizedUploadLength`|<span data-ttu-id="16d29-120">在响应未经授权的错误代码，以字节为单位指定上传的最大长度。</span><span class="sxs-lookup"><span data-stu-id="16d29-120">Specifies the maximum length of an upload in response to an unauthorized error code, in bytes.</span></span> <span data-ttu-id="16d29-121">默认值为 -1。</span><span class="sxs-lookup"><span data-stu-id="16d29-121">The default is -1.</span></span> <span data-ttu-id="16d29-122">值为-1 指示，将对上载施加没有大小限制。</span><span class="sxs-lookup"><span data-stu-id="16d29-122">A value of -1 indicates that no size limit will be imposed on the upload.</span></span>|  
+|`useUnsafeHeaderParsing`|<span data-ttu-id="16d29-123">指定是否启用不安全标题解析。</span><span class="sxs-lookup"><span data-stu-id="16d29-123">Specifies whether unsafe header parsing is enabled.</span></span> <span data-ttu-id="16d29-124">默认值为 `false`。</span><span class="sxs-lookup"><span data-stu-id="16d29-124">The default value is `false`.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="c20f1-125">子元素</span><span class="sxs-lookup"><span data-stu-id="c20f1-125">Child Elements</span></span>  
- <span data-ttu-id="c20f1-126">无。</span><span class="sxs-lookup"><span data-stu-id="c20f1-126">None.</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="16d29-125">子元素</span><span class="sxs-lookup"><span data-stu-id="16d29-125">Child Elements</span></span>  
+ <span data-ttu-id="16d29-126">无。</span><span class="sxs-lookup"><span data-stu-id="16d29-126">None.</span></span>  
   
-### <a name="parent-elements"></a><span data-ttu-id="c20f1-127">父元素</span><span class="sxs-lookup"><span data-stu-id="c20f1-127">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="16d29-127">父元素</span><span class="sxs-lookup"><span data-stu-id="16d29-127">Parent Elements</span></span>  
   
-|<span data-ttu-id="c20f1-128">**元素**</span><span class="sxs-lookup"><span data-stu-id="c20f1-128">**Element**</span></span>|<span data-ttu-id="c20f1-129">**说明**</span><span class="sxs-lookup"><span data-stu-id="c20f1-129">**Description**</span></span>|  
+|<span data-ttu-id="16d29-128">**元素**</span><span class="sxs-lookup"><span data-stu-id="16d29-128">**Element**</span></span>|<span data-ttu-id="16d29-129">**说明**</span><span class="sxs-lookup"><span data-stu-id="16d29-129">**Description**</span></span>|  
 |-----------------|---------------------|  
-|[<span data-ttu-id="c20f1-130">设置</span><span class="sxs-lookup"><span data-stu-id="c20f1-130">settings</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/settings-element-network-settings.md)|<span data-ttu-id="c20f1-131">配置 <xref:System.Net> 命名空间的基本网络选项。</span><span class="sxs-lookup"><span data-stu-id="c20f1-131">Configures basic network options for the <xref:System.Net> namespace.</span></span>|  
+|[<span data-ttu-id="16d29-130">设置</span><span class="sxs-lookup"><span data-stu-id="16d29-130">settings</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/settings-element-network-settings.md)|<span data-ttu-id="16d29-131">配置 <xref:System.Net> 命名空间的基本网络选项。</span><span class="sxs-lookup"><span data-stu-id="16d29-131">Configures basic network options for the <xref:System.Net> namespace.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="c20f1-132">备注</span><span class="sxs-lookup"><span data-stu-id="c20f1-132">Remarks</span></span>  
- <span data-ttu-id="c20f1-133">默认情况下，.NET Framework 将严格强制执行 RFC 2616 的 URI 分析。</span><span class="sxs-lookup"><span data-stu-id="c20f1-133">By default, the .NET Framework strictly enforces RFC 2616 for URI parsing.</span></span> <span data-ttu-id="c20f1-134">某些服务器响应可能包含控制字符，在被禁止字段中，这将导致<xref:System.Net.HttpWebRequest.GetResponse?displayProperty=nameWithType>方法会引发<xref:System.Net.WebException>。</span><span class="sxs-lookup"><span data-stu-id="c20f1-134">Some server responses may include control characters in prohibited fields, which will cause the <xref:System.Net.HttpWebRequest.GetResponse?displayProperty=nameWithType> method to throw a <xref:System.Net.WebException>.</span></span> <span data-ttu-id="c20f1-135">如果**useUnsafeHeaderParsing**设置为**true**，<xref:System.Net.HttpWebRequest.GetResponse?displayProperty=nameWithType>不会引发这种情况下; 但是，你的应用程序将很容易受到几种形式的 URI 分析攻击。</span><span class="sxs-lookup"><span data-stu-id="c20f1-135">If **useUnsafeHeaderParsing** is set to **true**, <xref:System.Net.HttpWebRequest.GetResponse?displayProperty=nameWithType> will not throw in this case; however, your application will be vulnerable to several forms of URI parsing attacks.</span></span> <span data-ttu-id="c20f1-136">最佳解决方案是更改的服务器，以便响应不包含控制字符。</span><span class="sxs-lookup"><span data-stu-id="c20f1-136">The best solution is to change the server so that the response does not include control characters.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="16d29-132">备注</span><span class="sxs-lookup"><span data-stu-id="16d29-132">Remarks</span></span>  
+ <span data-ttu-id="16d29-133">默认情况下，.NET Framework 将严格强制执行 RFC 2616 的 URI 分析。</span><span class="sxs-lookup"><span data-stu-id="16d29-133">By default, the .NET Framework strictly enforces RFC 2616 for URI parsing.</span></span> <span data-ttu-id="16d29-134">某些服务器响应可能包含控制字符，在被禁止字段中，这将导致<xref:System.Net.HttpWebRequest.GetResponse?displayProperty=nameWithType>方法会引发<xref:System.Net.WebException>。</span><span class="sxs-lookup"><span data-stu-id="16d29-134">Some server responses may include control characters in prohibited fields, which will cause the <xref:System.Net.HttpWebRequest.GetResponse?displayProperty=nameWithType> method to throw a <xref:System.Net.WebException>.</span></span> <span data-ttu-id="16d29-135">如果**useUnsafeHeaderParsing**设置为**true**，<xref:System.Net.HttpWebRequest.GetResponse?displayProperty=nameWithType>不会引发这种情况下; 但是，你的应用程序将很容易受到几种形式的 URI 分析攻击。</span><span class="sxs-lookup"><span data-stu-id="16d29-135">If **useUnsafeHeaderParsing** is set to **true**, <xref:System.Net.HttpWebRequest.GetResponse?displayProperty=nameWithType> will not throw in this case; however, your application will be vulnerable to several forms of URI parsing attacks.</span></span> <span data-ttu-id="16d29-136">最佳解决方案是更改的服务器，以便响应不包含控制字符。</span><span class="sxs-lookup"><span data-stu-id="16d29-136">The best solution is to change the server so that the response does not include control characters.</span></span>  
   
-## <a name="configuration-files"></a><span data-ttu-id="c20f1-137">配置文件</span><span class="sxs-lookup"><span data-stu-id="c20f1-137">Configuration Files</span></span>  
- <span data-ttu-id="c20f1-138">此元素可在应用程序配置文件或计算机配置文件 (Machine.config) 中使用。</span><span class="sxs-lookup"><span data-stu-id="c20f1-138">This element can be used in the application configuration file or the machine configuration file (Machine.config).</span></span>  
+## <a name="configuration-files"></a><span data-ttu-id="16d29-137">配置文件</span><span class="sxs-lookup"><span data-stu-id="16d29-137">Configuration Files</span></span>  
+ <span data-ttu-id="16d29-138">此元素可在应用程序配置文件或计算机配置文件 (Machine.config) 中使用。</span><span class="sxs-lookup"><span data-stu-id="16d29-138">This element can be used in the application configuration file or the machine configuration file (Machine.config).</span></span>  
   
-## <a name="example"></a><span data-ttu-id="c20f1-139">示例</span><span class="sxs-lookup"><span data-stu-id="c20f1-139">Example</span></span>  
- <span data-ttu-id="c20f1-140">下面的示例演示如何指定一个较大比正常的最大标头长度。</span><span class="sxs-lookup"><span data-stu-id="c20f1-140">The following example shows how to specify a larger than normal maximum header length.</span></span>  
+## <a name="example"></a><span data-ttu-id="16d29-139">示例</span><span class="sxs-lookup"><span data-stu-id="16d29-139">Example</span></span>  
+ <span data-ttu-id="16d29-140">下面的示例演示如何指定一个较大比正常的最大标头长度。</span><span class="sxs-lookup"><span data-stu-id="16d29-140">The following example shows how to specify a larger than normal maximum header length.</span></span>  
   
 ```xml  
 <configuration>  
@@ -78,6 +76,6 @@ ms.locfileid: "47397223"
 </configuration>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="c20f1-141">请参阅</span><span class="sxs-lookup"><span data-stu-id="c20f1-141">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="16d29-141">请参阅</span><span class="sxs-lookup"><span data-stu-id="16d29-141">See Also</span></span>  
  <xref:System.Net.HttpWebRequest.MaximumResponseHeadersLength%2A>  
- [<span data-ttu-id="c20f1-142">网络设置架构</span><span class="sxs-lookup"><span data-stu-id="c20f1-142">Network Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+ [<span data-ttu-id="16d29-142">网络设置架构</span><span class="sxs-lookup"><span data-stu-id="16d29-142">Network Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
