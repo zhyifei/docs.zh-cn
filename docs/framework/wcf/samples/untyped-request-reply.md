@@ -3,26 +3,26 @@ title: 非类型化的请求-答复
 ms.date: 03/30/2017
 ms.assetid: 0bf0f9d9-7caf-4d3d-8c9e-2d468cca16a5
 ms.openlocfilehash: b6e93ad0782fcacbc4ce20c0e9bb407abdf2366f
-ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
-ms.translationtype: HT
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50047626"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50195302"
 ---
-# <a name="untyped-requestreply"></a><span data-ttu-id="ed0e4-102">非类型化请求/答复</span><span class="sxs-lookup"><span data-stu-id="ed0e4-102">Untyped Request/Reply</span></span>
-<span data-ttu-id="ed0e4-103">此示例演示如何定义使用 Message 类的操作协定。</span><span class="sxs-lookup"><span data-stu-id="ed0e4-103">This sample demonstrates how to define operation contracts that use the Message class.</span></span>  
+# <a name="untyped-requestreply"></a><span data-ttu-id="2a6cd-102">非类型化请求/答复</span><span class="sxs-lookup"><span data-stu-id="2a6cd-102">Untyped Request/Reply</span></span>
+<span data-ttu-id="2a6cd-103">此示例演示如何定义使用 Message 类的操作协定。</span><span class="sxs-lookup"><span data-stu-id="2a6cd-103">This sample demonstrates how to define operation contracts that use the Message class.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="ed0e4-104">本主题的最后介绍了此示例的设置过程和生成说明。</span><span class="sxs-lookup"><span data-stu-id="ed0e4-104">The setup procedure and build instructions for this sample are located at the end of this topic.</span></span>  
+>  <span data-ttu-id="2a6cd-104">本主题的最后介绍了此示例的设置过程和生成说明。</span><span class="sxs-lookup"><span data-stu-id="2a6cd-104">The setup procedure and build instructions for this sample are located at the end of this topic.</span></span>  
   
- <span data-ttu-id="ed0e4-105">此示例基于[Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md)。</span><span class="sxs-lookup"><span data-stu-id="ed0e4-105">This sample is based on the [Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md).</span></span> <span data-ttu-id="ed0e4-106">服务协定定义一个采用消息类型作为自变量并返回一个消息的操作。</span><span class="sxs-lookup"><span data-stu-id="ed0e4-106">The service contract defines one operation that takes in a message type as an argument and returns a message.</span></span> <span data-ttu-id="ed0e4-107">该操作从消息正文收集所有所需数据并计算总和，然后在返回消息中将此总和作为正文进行发送。</span><span class="sxs-lookup"><span data-stu-id="ed0e4-107">The operation collects all required data to compute the sum from the message body and then sends the sum as body in the return message.</span></span>  
+ <span data-ttu-id="2a6cd-105">此示例基于[Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md)。</span><span class="sxs-lookup"><span data-stu-id="2a6cd-105">This sample is based on the [Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md).</span></span> <span data-ttu-id="2a6cd-106">服务协定定义一个采用消息类型作为自变量并返回一个消息的操作。</span><span class="sxs-lookup"><span data-stu-id="2a6cd-106">The service contract defines one operation that takes in a message type as an argument and returns a message.</span></span> <span data-ttu-id="2a6cd-107">该操作从消息正文收集所有所需数据并计算总和，然后在返回消息中将此总和作为正文进行发送。</span><span class="sxs-lookup"><span data-stu-id="2a6cd-107">The operation collects all required data to compute the sum from the message body and then sends the sum as body in the return message.</span></span>  
   
 ```csharp
 [OperationContract(Action = CalculatorService.RequestAction, ReplyAction = CalculatorService.ReplyAction)]  
 Message ComputeSum(Message request);  
 ```  
   
- <span data-ttu-id="ed0e4-108">在服务上，该操作检索在输入消息中传递的整数数组，然后计算总和。</span><span class="sxs-lookup"><span data-stu-id="ed0e4-108">On the service, the operation retrieves the array of integers passed in the input message and then computes the sum.</span></span> <span data-ttu-id="ed0e4-109">为了发送响应消息，该示例创建一个具有适当消息版本和 Action 的新消息，并将计算出的总和添加为此消息的正文。</span><span class="sxs-lookup"><span data-stu-id="ed0e4-109">To send a response message, the sample creates a new message with the appropriate message version and Action and adds the computed sum as its body.</span></span> <span data-ttu-id="ed0e4-110">下面的示例代码对此进行了演示。</span><span class="sxs-lookup"><span data-stu-id="ed0e4-110">The following sample code demonstrates this.</span></span>  
+ <span data-ttu-id="2a6cd-108">在服务上，该操作检索在输入消息中传递的整数数组，然后计算总和。</span><span class="sxs-lookup"><span data-stu-id="2a6cd-108">On the service, the operation retrieves the array of integers passed in the input message and then computes the sum.</span></span> <span data-ttu-id="2a6cd-109">为了发送响应消息，该示例创建一个具有适当消息版本和 Action 的新消息，并将计算出的总和添加为此消息的正文。</span><span class="sxs-lookup"><span data-stu-id="2a6cd-109">To send a response message, the sample creates a new message with the appropriate message version and Action and adds the computed sum as its body.</span></span> <span data-ttu-id="2a6cd-110">下面的示例代码对此进行了演示。</span><span class="sxs-lookup"><span data-stu-id="2a6cd-110">The following sample code demonstrates this.</span></span>  
   
 ```csharp
 public Message ComputeSum(Message request)  
@@ -43,7 +43,7 @@ public Message ComputeSum(Message request)
 }  
 ```  
   
- <span data-ttu-id="ed0e4-111">客户端使用由生成的代码[ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)创建远程服务的代理。</span><span class="sxs-lookup"><span data-stu-id="ed0e4-111">The client uses code that is generated by [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) to create a proxy to the remote service.</span></span> <span data-ttu-id="ed0e4-112">若要发送请求消息，客户端必须具有视基础通道而定的消息版本。</span><span class="sxs-lookup"><span data-stu-id="ed0e4-112">To send a request message, the client must have the message version, which depends on the underlying channel.</span></span> <span data-ttu-id="ed0e4-113">因此，它创建一个以其创建的代理通道为范围的新 <xref:System.ServiceModel.OperationContextScope>，后者创建一个 <xref:System.ServiceModel.OperationContext>，它在它的 `OutgoingMessageHeaders.MessageVersion` 属性中填充正确的消息版本。</span><span class="sxs-lookup"><span data-stu-id="ed0e4-113">Thus, it creates a new <xref:System.ServiceModel.OperationContextScope> scoped to the proxy channel it created, which creates an <xref:System.ServiceModel.OperationContext> with the correct message version populated in its `OutgoingMessageHeaders.MessageVersion` property.</span></span> <span data-ttu-id="ed0e4-114">客户端将一个输入数组作为正文传递给请求消息，然后对代理调用 `ComputeSum`。</span><span class="sxs-lookup"><span data-stu-id="ed0e4-114">The client passes an input array as the body to the request message and then invokes the `ComputeSum` on the proxy.</span></span> <span data-ttu-id="ed0e4-115">客户端随后通过访问答复消息的 `GetBody<T>` 方法来检索它传递的输入总和。</span><span class="sxs-lookup"><span data-stu-id="ed0e4-115">The client then retrieves the sum of the inputs it passed by accessing the `GetBody<T>` method on the reply message.</span></span> <span data-ttu-id="ed0e4-116">下面的示例代码对此进行了演示。</span><span class="sxs-lookup"><span data-stu-id="ed0e4-116">The following sample code demonstrates this.</span></span>  
+ <span data-ttu-id="2a6cd-111">客户端使用由生成的代码[ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)创建远程服务的代理。</span><span class="sxs-lookup"><span data-stu-id="2a6cd-111">The client uses code that is generated by [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) to create a proxy to the remote service.</span></span> <span data-ttu-id="2a6cd-112">若要发送请求消息，客户端必须具有视基础通道而定的消息版本。</span><span class="sxs-lookup"><span data-stu-id="2a6cd-112">To send a request message, the client must have the message version, which depends on the underlying channel.</span></span> <span data-ttu-id="2a6cd-113">因此，它创建一个以其创建的代理通道为范围的新 <xref:System.ServiceModel.OperationContextScope>，后者创建一个 <xref:System.ServiceModel.OperationContext>，它在它的 `OutgoingMessageHeaders.MessageVersion` 属性中填充正确的消息版本。</span><span class="sxs-lookup"><span data-stu-id="2a6cd-113">Thus, it creates a new <xref:System.ServiceModel.OperationContextScope> scoped to the proxy channel it created, which creates an <xref:System.ServiceModel.OperationContext> with the correct message version populated in its `OutgoingMessageHeaders.MessageVersion` property.</span></span> <span data-ttu-id="2a6cd-114">客户端将一个输入数组作为正文传递给请求消息，然后对代理调用 `ComputeSum`。</span><span class="sxs-lookup"><span data-stu-id="2a6cd-114">The client passes an input array as the body to the request message and then invokes the `ComputeSum` on the proxy.</span></span> <span data-ttu-id="2a6cd-115">客户端随后通过访问答复消息的 `GetBody<T>` 方法来检索它传递的输入总和。</span><span class="sxs-lookup"><span data-stu-id="2a6cd-115">The client then retrieves the sum of the inputs it passed by accessing the `GetBody<T>` method on the reply message.</span></span> <span data-ttu-id="2a6cd-116">下面的示例代码对此进行了演示。</span><span class="sxs-lookup"><span data-stu-id="2a6cd-116">The following sample code demonstrates this.</span></span>  
   
 ```csharp
 using (new OperationContextScope(client.InnerChannel))  
@@ -61,7 +61,7 @@ using (new OperationContextScope(client.InnerChannel))
 }  
 ```  
   
- <span data-ttu-id="ed0e4-117">此示例是 Web 承载的示例，因此必须只运行客户端可执行文件。</span><span class="sxs-lookup"><span data-stu-id="ed0e4-117">This sample is a Web-hosted sample and so only the client executable must be run.</span></span> <span data-ttu-id="ed0e4-118">下面是客户端上的示例输出。</span><span class="sxs-lookup"><span data-stu-id="ed0e4-118">The following is the sample output on the client.</span></span>  
+ <span data-ttu-id="2a6cd-117">此示例是 Web 承载的示例，因此必须只运行客户端可执行文件。</span><span class="sxs-lookup"><span data-stu-id="2a6cd-117">This sample is a Web-hosted sample and so only the client executable must be run.</span></span> <span data-ttu-id="2a6cd-118">下面是客户端上的示例输出。</span><span class="sxs-lookup"><span data-stu-id="2a6cd-118">The following is the sample output on the client.</span></span>  
   
 ```console  
 Prompt>Client.exe  
@@ -70,23 +70,23 @@ Sum of numbers passed (1,2,3,4,5) = 15
 Press <ENTER> to terminate client.  
 ```  
   
- <span data-ttu-id="ed0e4-119">此示例是 Web 承载的示例，因此请查看步骤 3 中提供的链接以了解如何生成和运行此示例。</span><span class="sxs-lookup"><span data-stu-id="ed0e4-119">This sample is a Web-hosted sample and so check the link provided in step 3 to see how to build and run the sample.</span></span>  
+ <span data-ttu-id="2a6cd-119">此示例是 Web 承载的示例，因此请查看步骤 3 中提供的链接以了解如何生成和运行此示例。</span><span class="sxs-lookup"><span data-stu-id="2a6cd-119">This sample is a Web-hosted sample and so check the link provided in step 3 to see how to build and run the sample.</span></span>  
   
-### <a name="to-set-up-build-and-run-the-sample"></a><span data-ttu-id="ed0e4-120">设置、生成和运行示例</span><span class="sxs-lookup"><span data-stu-id="ed0e4-120">To set up, build, and run the sample</span></span>  
+### <a name="to-set-up-build-and-run-the-sample"></a><span data-ttu-id="2a6cd-120">设置、生成和运行示例</span><span class="sxs-lookup"><span data-stu-id="2a6cd-120">To set up, build, and run the sample</span></span>  
   
-1.  <span data-ttu-id="ed0e4-121">请确保您具有执行[的 Windows Communication Foundation 示例的一次性安装过程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。</span><span class="sxs-lookup"><span data-stu-id="ed0e4-121">Ensure that you have performed the [One-Time Setup Procedure for the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span></span>  
+1.  <span data-ttu-id="2a6cd-121">请确保您具有执行[的 Windows Communication Foundation 示例的一次性安装过程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。</span><span class="sxs-lookup"><span data-stu-id="2a6cd-121">Ensure that you have performed the [One-Time Setup Procedure for the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span></span>  
   
-2.  <span data-ttu-id="ed0e4-122">若要生成 C# 或 Visual Basic .NET 版本的解决方案，请按照 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)中的说明进行操作。</span><span class="sxs-lookup"><span data-stu-id="ed0e4-122">To build the C# or Visual Basic .NET edition of the solution, follow the instructions in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).</span></span>  
+2.  <span data-ttu-id="2a6cd-122">若要生成 C# 或 Visual Basic .NET 版本的解决方案，请按照 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)中的说明进行操作。</span><span class="sxs-lookup"><span data-stu-id="2a6cd-122">To build the C# or Visual Basic .NET edition of the solution, follow the instructions in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).</span></span>  
   
-3.  <span data-ttu-id="ed0e4-123">若要在单或跨计算机配置中运行示例，请按照中的说明[运行 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/running-the-samples.md)。</span><span class="sxs-lookup"><span data-stu-id="ed0e4-123">To run the sample in a single- or cross-machine configuration, follow the instructions in [Running the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/running-the-samples.md).</span></span>  
+3.  <span data-ttu-id="2a6cd-123">若要在单或跨计算机配置中运行示例，请按照中的说明[运行 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/running-the-samples.md)。</span><span class="sxs-lookup"><span data-stu-id="2a6cd-123">To run the sample in a single- or cross-machine configuration, follow the instructions in [Running the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/running-the-samples.md).</span></span>  
   
 > [!IMPORTANT]
->  <span data-ttu-id="ed0e4-124">您的计算机上可能已安装这些示例。</span><span class="sxs-lookup"><span data-stu-id="ed0e4-124">The samples may already be installed on your machine.</span></span> <span data-ttu-id="ed0e4-125">在继续操作之前，请先检查以下（默认）目录：</span><span class="sxs-lookup"><span data-stu-id="ed0e4-125">Check for the following (default) directory before continuing.</span></span>  
+>  <span data-ttu-id="2a6cd-124">您的计算机上可能已安装这些示例。</span><span class="sxs-lookup"><span data-stu-id="2a6cd-124">The samples may already be installed on your machine.</span></span> <span data-ttu-id="2a6cd-125">在继续操作之前，请先检查以下（默认）目录：</span><span class="sxs-lookup"><span data-stu-id="2a6cd-125">Check for the following (default) directory before continuing.</span></span>  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  <span data-ttu-id="ed0e4-126">如果此目录不存在，请转到[Windows Communication Foundation (WCF) 和.NET Framework 4 的 Windows Workflow Foundation (WF) 示例](https://go.microsoft.com/fwlink/?LinkId=150780)若要下载所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。</span><span class="sxs-lookup"><span data-stu-id="ed0e4-126">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) to download all Windows Communication Foundation (WCF) and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="ed0e4-127">此示例位于以下目录：</span><span class="sxs-lookup"><span data-stu-id="ed0e4-127">This sample is located in the following directory.</span></span>  
+>  <span data-ttu-id="2a6cd-126">如果此目录不存在，请转到[Windows Communication Foundation (WCF) 和.NET Framework 4 的 Windows Workflow Foundation (WF) 示例](https://go.microsoft.com/fwlink/?LinkId=150780)若要下载所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。</span><span class="sxs-lookup"><span data-stu-id="2a6cd-126">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) to download all Windows Communication Foundation (WCF) and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="2a6cd-127">此示例位于以下目录：</span><span class="sxs-lookup"><span data-stu-id="2a6cd-127">This sample is located in the following directory.</span></span>  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Contract\Message\Untyped`  
   
-## <a name="see-also"></a><span data-ttu-id="ed0e4-128">请参阅</span><span class="sxs-lookup"><span data-stu-id="ed0e4-128">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="2a6cd-128">请参阅</span><span class="sxs-lookup"><span data-stu-id="2a6cd-128">See Also</span></span>

@@ -6,40 +6,39 @@ helpviewer_keywords:
 - Windows Communication Foundation, security
 - WCF, security
 ms.assetid: 42055ee0-6d0c-443d-9d89-788dfc345d6d
-author: BrucePerlerMS
-ms.openlocfilehash: f26369a567e89fc502f777383c22e74b96fe503c
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: f7bcaff5cd30566f2bf729695a7c4c44cd45c5d3
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47198030"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50192832"
 ---
-# <a name="security-considerations-in-wcf"></a><span data-ttu-id="8f38b-102">WCF 中的安全注意事项</span><span class="sxs-lookup"><span data-stu-id="8f38b-102">Security Considerations in WCF</span></span>
-<span data-ttu-id="8f38b-103">在本部分中的主题列出了各种与安全相关项设计的 Windows Communication Foundation (WCF) 应用程序时要考虑。</span><span class="sxs-lookup"><span data-stu-id="8f38b-103">The topics in this section list various security-related items to consider when designing a Windows Communication Foundation (WCF) application.</span></span>  
+# <a name="security-considerations-in-wcf"></a><span data-ttu-id="91ef9-102">WCF 中的安全注意事项</span><span class="sxs-lookup"><span data-stu-id="91ef9-102">Security Considerations in WCF</span></span>
+<span data-ttu-id="91ef9-103">在本部分中的主题列出了各种与安全相关项设计的 Windows Communication Foundation (WCF) 应用程序时要考虑。</span><span class="sxs-lookup"><span data-stu-id="91ef9-103">The topics in this section list various security-related items to consider when designing a Windows Communication Foundation (WCF) application.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="8f38b-104">本节内容</span><span class="sxs-lookup"><span data-stu-id="8f38b-104">In This Section</span></span>  
- [<span data-ttu-id="8f38b-105">信息泄漏</span><span class="sxs-lookup"><span data-stu-id="8f38b-105">Information Disclosure</span></span>](../../../../docs/framework/wcf/feature-details/information-disclosure.md)  
- <span data-ttu-id="8f38b-106">讨论信息可能泄露或受到攻击的各种方式，以及如何缓解这些问题。</span><span class="sxs-lookup"><span data-stu-id="8f38b-106">Discusses the various ways that information can be disclosed or attacked, and how to mitigate this.</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="91ef9-104">本节内容</span><span class="sxs-lookup"><span data-stu-id="91ef9-104">In This Section</span></span>  
+ [<span data-ttu-id="91ef9-105">信息泄漏</span><span class="sxs-lookup"><span data-stu-id="91ef9-105">Information Disclosure</span></span>](../../../../docs/framework/wcf/feature-details/information-disclosure.md)  
+ <span data-ttu-id="91ef9-106">讨论信息可能泄露或受到攻击的各种方式，以及如何缓解这些问题。</span><span class="sxs-lookup"><span data-stu-id="91ef9-106">Discusses the various ways that information can be disclosed or attacked, and how to mitigate this.</span></span>  
   
- [<span data-ttu-id="8f38b-107">特权提升</span><span class="sxs-lookup"><span data-stu-id="8f38b-107">Elevation of Privilege</span></span>](../../../../docs/framework/wcf/feature-details/elevation-of-privilege.md)  
- <span data-ttu-id="8f38b-108">讨论给予攻击者的权限超出最初授予的权限范围的后果，以及如何减轻这种后果。</span><span class="sxs-lookup"><span data-stu-id="8f38b-108">Discusses the effects of giving an attacker authorization permissions beyond those initially granted and how to mitigate this.</span></span>  
+ [<span data-ttu-id="91ef9-107">特权提升</span><span class="sxs-lookup"><span data-stu-id="91ef9-107">Elevation of Privilege</span></span>](../../../../docs/framework/wcf/feature-details/elevation-of-privilege.md)  
+ <span data-ttu-id="91ef9-108">讨论给予攻击者的权限超出最初授予的权限范围的后果，以及如何减轻这种后果。</span><span class="sxs-lookup"><span data-stu-id="91ef9-108">Discusses the effects of giving an attacker authorization permissions beyond those initially granted and how to mitigate this.</span></span>  
   
- [<span data-ttu-id="8f38b-109">拒绝服务</span><span class="sxs-lookup"><span data-stu-id="8f38b-109">Denial of Service</span></span>](../../../../docs/framework/wcf/feature-details/denial-of-service.md)  
- <span data-ttu-id="8f38b-110">讨论当系统无法正确处理消息时所发生的情况，以及如何缓解这一问题。</span><span class="sxs-lookup"><span data-stu-id="8f38b-110">Discusses what happens when a system is unable to process messages appropriately and how to mitigate it.</span></span>  
+ [<span data-ttu-id="91ef9-109">拒绝服务</span><span class="sxs-lookup"><span data-stu-id="91ef9-109">Denial of Service</span></span>](../../../../docs/framework/wcf/feature-details/denial-of-service.md)  
+ <span data-ttu-id="91ef9-110">讨论当系统无法正确处理消息时所发生的情况，以及如何缓解这一问题。</span><span class="sxs-lookup"><span data-stu-id="91ef9-110">Discusses what happens when a system is unable to process messages appropriately and how to mitigate it.</span></span>  
   
- [<span data-ttu-id="8f38b-111">篡改</span><span class="sxs-lookup"><span data-stu-id="8f38b-111">Tampering</span></span>](../../../../docs/framework/wcf/feature-details/tampering.md)  
- <span data-ttu-id="8f38b-112">讨论消息或消息传递的篡改以及如何缓解这种问题。</span><span class="sxs-lookup"><span data-stu-id="8f38b-112">Discusses the altering of messages or the delivery of messages and how to mitigate it.</span></span>  
+ [<span data-ttu-id="91ef9-111">篡改</span><span class="sxs-lookup"><span data-stu-id="91ef9-111">Tampering</span></span>](../../../../docs/framework/wcf/feature-details/tampering.md)  
+ <span data-ttu-id="91ef9-112">讨论消息或消息传递的篡改以及如何缓解这种问题。</span><span class="sxs-lookup"><span data-stu-id="91ef9-112">Discusses the altering of messages or the delivery of messages and how to mitigate it.</span></span>  
   
- [<span data-ttu-id="8f38b-113">重放攻击</span><span class="sxs-lookup"><span data-stu-id="8f38b-113">Replay Attacks</span></span>](../../../../docs/framework/wcf/feature-details/replay-attacks.md)  
- <span data-ttu-id="8f38b-114">讨论当攻击者复制通信双方之间的消息流并将该消息流向一方或多方重播时将发生的情况，以及如何缓解这一问题。</span><span class="sxs-lookup"><span data-stu-id="8f38b-114">Discusses what happens when an attacker copies a stream of messages between two parties and replays the stream to one or more of the parties, and how to mitigate this.</span></span>  
+ [<span data-ttu-id="91ef9-113">重放攻击</span><span class="sxs-lookup"><span data-stu-id="91ef9-113">Replay Attacks</span></span>](../../../../docs/framework/wcf/feature-details/replay-attacks.md)  
+ <span data-ttu-id="91ef9-114">讨论当攻击者复制通信双方之间的消息流并将该消息流向一方或多方重播时将发生的情况，以及如何缓解这一问题。</span><span class="sxs-lookup"><span data-stu-id="91ef9-114">Discusses what happens when an attacker copies a stream of messages between two parties and replays the stream to one or more of the parties, and how to mitigate this.</span></span>  
   
- [<span data-ttu-id="8f38b-115">安全会话的安全性注意事项</span><span class="sxs-lookup"><span data-stu-id="8f38b-115">Security Considerations for Secure Sessions</span></span>](../../../../docs/framework/wcf/feature-details/security-considerations-for-secure-sessions.md)  
- <span data-ttu-id="8f38b-116">讨论在实现安全会话时影响安全的下列事项。</span><span class="sxs-lookup"><span data-stu-id="8f38b-116">Discusses the following items that affect security when implementing secure sessions.</span></span>  
+ [<span data-ttu-id="91ef9-115">安全会话的安全性注意事项</span><span class="sxs-lookup"><span data-stu-id="91ef9-115">Security Considerations for Secure Sessions</span></span>](../../../../docs/framework/wcf/feature-details/security-considerations-for-secure-sessions.md)  
+ <span data-ttu-id="91ef9-116">讨论在实现安全会话时影响安全的下列事项。</span><span class="sxs-lookup"><span data-stu-id="91ef9-116">Discusses the following items that affect security when implementing secure sessions.</span></span>  
   
- [<span data-ttu-id="8f38b-117">不支持的方案</span><span class="sxs-lookup"><span data-stu-id="8f38b-117">Unsupported Scenarios</span></span>](../../../../docs/framework/wcf/feature-details/unsupported-scenarios.md)  
- <span data-ttu-id="8f38b-118">列出不支持某个特定安全方面的各种方案，应当避免或谨慎考虑这些方案。</span><span class="sxs-lookup"><span data-stu-id="8f38b-118">Lists various scenarios that do not support a particular aspect of security and should be avoided or considered.</span></span>  
+ [<span data-ttu-id="91ef9-117">不支持的方案</span><span class="sxs-lookup"><span data-stu-id="91ef9-117">Unsupported Scenarios</span></span>](../../../../docs/framework/wcf/feature-details/unsupported-scenarios.md)  
+ <span data-ttu-id="91ef9-118">列出不支持某个特定安全方面的各种方案，应当避免或谨慎考虑这些方案。</span><span class="sxs-lookup"><span data-stu-id="91ef9-118">Lists various scenarios that do not support a particular aspect of security and should be avoided or considered.</span></span>  
   
-## <a name="reference"></a><span data-ttu-id="8f38b-119">参考</span><span class="sxs-lookup"><span data-stu-id="8f38b-119">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="91ef9-119">参考</span><span class="sxs-lookup"><span data-stu-id="91ef9-119">Reference</span></span>  
  <xref:System.IdentityModel.Tokens>  
   
  <xref:System.IdentityModel.Claims>  
@@ -48,8 +47,8 @@ ms.locfileid: "47198030"
   
  <xref:System.ServiceModel>  
   
-## <a name="related-sections"></a><span data-ttu-id="8f38b-120">相关章节</span><span class="sxs-lookup"><span data-stu-id="8f38b-120">Related Sections</span></span>  
- [<span data-ttu-id="8f38b-121">安全指导和最佳做法</span><span class="sxs-lookup"><span data-stu-id="8f38b-121">Security Guidance and Best Practices</span></span>](../../../../docs/framework/wcf/feature-details/security-guidance-and-best-practices.md)  
+## <a name="related-sections"></a><span data-ttu-id="91ef9-120">相关章节</span><span class="sxs-lookup"><span data-stu-id="91ef9-120">Related Sections</span></span>  
+ [<span data-ttu-id="91ef9-121">安全指导和最佳做法</span><span class="sxs-lookup"><span data-stu-id="91ef9-121">Security Guidance and Best Practices</span></span>](../../../../docs/framework/wcf/feature-details/security-guidance-and-best-practices.md)  
   
-## <a name="see-also"></a><span data-ttu-id="8f38b-122">请参阅</span><span class="sxs-lookup"><span data-stu-id="8f38b-122">See Also</span></span>  
- [<span data-ttu-id="8f38b-123">安全性</span><span class="sxs-lookup"><span data-stu-id="8f38b-123">Security</span></span>](../../../../docs/framework/wcf/feature-details/security.md)
+## <a name="see-also"></a><span data-ttu-id="91ef9-122">请参阅</span><span class="sxs-lookup"><span data-stu-id="91ef9-122">See Also</span></span>  
+ [<span data-ttu-id="91ef9-123">安全性</span><span class="sxs-lookup"><span data-stu-id="91ef9-123">Security</span></span>](../../../../docs/framework/wcf/feature-details/security.md)
