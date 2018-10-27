@@ -10,24 +10,22 @@ helpviewer_keywords:
 - add element, webRequestModules
 - <add> element, webRequestModules
 ms.assetid: 47ec4adc-f39f-4bcd-8680-1ec21fd26890
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: 64df186be7d9e503ac22e177bca8da31e165f240
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 4c823f366baf51b35c15a87c2a9f6c9c4d3102d0
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48837006"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50188520"
 ---
-# <a name="ltaddgt-element-for-webrequestmodules-network-settings"></a><span data-ttu-id="1a9a8-102">&lt;添加&gt;webRequestModules （网络设置） 的</span><span class="sxs-lookup"><span data-stu-id="1a9a8-102">&lt;add&gt; Element for webRequestModules (Network Settings)</span></span>
-<span data-ttu-id="1a9a8-103">将自定义的 Web 请求模块添加到应用程序。</span><span class="sxs-lookup"><span data-stu-id="1a9a8-103">Adds a custom Web request module to the application.</span></span>  
+# <a name="ltaddgt-element-for-webrequestmodules-network-settings"></a><span data-ttu-id="491be-102">&lt;添加&gt;webRequestModules （网络设置） 的</span><span class="sxs-lookup"><span data-stu-id="491be-102">&lt;add&gt; Element for webRequestModules (Network Settings)</span></span>
+<span data-ttu-id="491be-103">将自定义的 Web 请求模块添加到应用程序。</span><span class="sxs-lookup"><span data-stu-id="491be-103">Adds a custom Web request module to the application.</span></span>  
   
- <span data-ttu-id="1a9a8-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="1a9a8-104">\<configuration></span></span>  
-<span data-ttu-id="1a9a8-105">\<system.net></span><span class="sxs-lookup"><span data-stu-id="1a9a8-105">\<system.net></span></span>  
-<span data-ttu-id="1a9a8-106">\<webRequestModules></span><span class="sxs-lookup"><span data-stu-id="1a9a8-106">\<webRequestModules></span></span>  
-<span data-ttu-id="1a9a8-107">\<add></span><span class="sxs-lookup"><span data-stu-id="1a9a8-107">\<add></span></span>  
+ <span data-ttu-id="491be-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="491be-104">\<configuration></span></span>  
+<span data-ttu-id="491be-105">\<system.net></span><span class="sxs-lookup"><span data-stu-id="491be-105">\<system.net></span></span>  
+<span data-ttu-id="491be-106">\<webRequestModules></span><span class="sxs-lookup"><span data-stu-id="491be-106">\<webRequestModules></span></span>  
+<span data-ttu-id="491be-107">\<add></span><span class="sxs-lookup"><span data-stu-id="491be-107">\<add></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="1a9a8-108">语法</span><span class="sxs-lookup"><span data-stu-id="1a9a8-108">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="491be-108">语法</span><span class="sxs-lookup"><span data-stu-id="491be-108">Syntax</span></span>  
   
 ```xml  
 <add   
@@ -36,39 +34,39 @@ ms.locfileid: "48837006"
 />  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="1a9a8-109">特性和元素</span><span class="sxs-lookup"><span data-stu-id="1a9a8-109">Attributes and Elements</span></span>  
- <span data-ttu-id="1a9a8-110">下列各节描述了特性、子元素和父元素。</span><span class="sxs-lookup"><span data-stu-id="1a9a8-110">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="491be-109">特性和元素</span><span class="sxs-lookup"><span data-stu-id="491be-109">Attributes and Elements</span></span>  
+ <span data-ttu-id="491be-110">下列各节描述了特性、子元素和父元素。</span><span class="sxs-lookup"><span data-stu-id="491be-110">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="1a9a8-111">特性</span><span class="sxs-lookup"><span data-stu-id="1a9a8-111">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="491be-111">特性</span><span class="sxs-lookup"><span data-stu-id="491be-111">Attributes</span></span>  
   
-|<span data-ttu-id="1a9a8-112">**特性**</span><span class="sxs-lookup"><span data-stu-id="1a9a8-112">**Attribute**</span></span>|<span data-ttu-id="1a9a8-113">**说明**</span><span class="sxs-lookup"><span data-stu-id="1a9a8-113">**Description**</span></span>|  
+|<span data-ttu-id="491be-112">**特性**</span><span class="sxs-lookup"><span data-stu-id="491be-112">**Attribute**</span></span>|<span data-ttu-id="491be-113">**说明**</span><span class="sxs-lookup"><span data-stu-id="491be-113">**Description**</span></span>|  
 |-------------------|---------------------|  
-|`prefix`|<span data-ttu-id="1a9a8-114">此 Web 请求模块处理的请求 URI 前缀。</span><span class="sxs-lookup"><span data-stu-id="1a9a8-114">The URI prefix for requests handled by this Web request module.</span></span>|  
-|`type`|<span data-ttu-id="1a9a8-115">完全限定的类型名 (由<xref:System.Type.FullName%2A>属性) 和程序集名称 (由<xref:System.Reflection.Assembly.FullName%2A>属性)、 分隔一个逗号，实现该 Web 请求模块。</span><span class="sxs-lookup"><span data-stu-id="1a9a8-115">The fully qualified type name (indicated by the <xref:System.Type.FullName%2A> property) and the assembly name (indicated by the <xref:System.Reflection.Assembly.FullName%2A> property), separated by a comma, that implements this Web request module.</span></span>|  
+|`prefix`|<span data-ttu-id="491be-114">此 Web 请求模块处理的请求 URI 前缀。</span><span class="sxs-lookup"><span data-stu-id="491be-114">The URI prefix for requests handled by this Web request module.</span></span>|  
+|`type`|<span data-ttu-id="491be-115">完全限定的类型名 (由<xref:System.Type.FullName%2A>属性) 和程序集名称 (由<xref:System.Reflection.Assembly.FullName%2A>属性)、 分隔一个逗号，实现该 Web 请求模块。</span><span class="sxs-lookup"><span data-stu-id="491be-115">The fully qualified type name (indicated by the <xref:System.Type.FullName%2A> property) and the assembly name (indicated by the <xref:System.Reflection.Assembly.FullName%2A> property), separated by a comma, that implements this Web request module.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="1a9a8-116">子元素</span><span class="sxs-lookup"><span data-stu-id="1a9a8-116">Child Elements</span></span>  
- <span data-ttu-id="1a9a8-117">无。</span><span class="sxs-lookup"><span data-stu-id="1a9a8-117">None.</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="491be-116">子元素</span><span class="sxs-lookup"><span data-stu-id="491be-116">Child Elements</span></span>  
+ <span data-ttu-id="491be-117">无。</span><span class="sxs-lookup"><span data-stu-id="491be-117">None.</span></span>  
   
-### <a name="parent-elements"></a><span data-ttu-id="1a9a8-118">父元素</span><span class="sxs-lookup"><span data-stu-id="1a9a8-118">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="491be-118">父元素</span><span class="sxs-lookup"><span data-stu-id="491be-118">Parent Elements</span></span>  
   
-|<span data-ttu-id="1a9a8-119">**元素**</span><span class="sxs-lookup"><span data-stu-id="1a9a8-119">**Element**</span></span>|<span data-ttu-id="1a9a8-120">**说明**</span><span class="sxs-lookup"><span data-stu-id="1a9a8-120">**Description**</span></span>|  
+|<span data-ttu-id="491be-119">**元素**</span><span class="sxs-lookup"><span data-stu-id="491be-119">**Element**</span></span>|<span data-ttu-id="491be-120">**说明**</span><span class="sxs-lookup"><span data-stu-id="491be-120">**Description**</span></span>|  
 |-----------------|---------------------|  
-|[<span data-ttu-id="1a9a8-121">webRequestModules</span><span class="sxs-lookup"><span data-stu-id="1a9a8-121">webRequestModules</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/webrequestmodules-element-network-settings.md)|<span data-ttu-id="1a9a8-122">指定模块用于从网络主机请求信息。</span><span class="sxs-lookup"><span data-stu-id="1a9a8-122">Specifies modules to use to request information from network hosts.</span></span>|  
+|[<span data-ttu-id="491be-121">webRequestModules</span><span class="sxs-lookup"><span data-stu-id="491be-121">webRequestModules</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/webrequestmodules-element-network-settings.md)|<span data-ttu-id="491be-122">指定模块用于从网络主机请求信息。</span><span class="sxs-lookup"><span data-stu-id="491be-122">Specifies modules to use to request information from network hosts.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="1a9a8-123">备注</span><span class="sxs-lookup"><span data-stu-id="1a9a8-123">Remarks</span></span>  
- <span data-ttu-id="1a9a8-124">`prefix`属性定义使用指定的 Web 请求模块的 URI 前缀。</span><span class="sxs-lookup"><span data-stu-id="1a9a8-124">The `prefix` attribute defines the URI prefix that uses the specified Web request module.</span></span> <span data-ttu-id="1a9a8-125">Web 请求模块通常注册用于处理特定的协议，例如 HTTP 或 FTP，但可以注册用于处理对特定服务器或服务器上的路径的请求。</span><span class="sxs-lookup"><span data-stu-id="1a9a8-125">Web request modules are typically registered to handle a specific protocol, such as HTTP or FTP, but can be registered to handle a request to a specific server or path on a server.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="491be-123">备注</span><span class="sxs-lookup"><span data-stu-id="491be-123">Remarks</span></span>  
+ <span data-ttu-id="491be-124">`prefix`属性定义使用指定的 Web 请求模块的 URI 前缀。</span><span class="sxs-lookup"><span data-stu-id="491be-124">The `prefix` attribute defines the URI prefix that uses the specified Web request module.</span></span> <span data-ttu-id="491be-125">Web 请求模块通常注册用于处理特定的协议，例如 HTTP 或 FTP，但可以注册用于处理对特定服务器或服务器上的路径的请求。</span><span class="sxs-lookup"><span data-stu-id="491be-125">Web request modules are typically registered to handle a specific protocol, such as HTTP or FTP, but can be registered to handle a request to a specific server or path on a server.</span></span>  
   
- <span data-ttu-id="1a9a8-126">当 URI 匹配的前缀传递给创建 Web 请求模块<xref:System.Net.WebRequest.Create%2A?displayProperty=nameWithType>方法。</span><span class="sxs-lookup"><span data-stu-id="1a9a8-126">The Web request module is created when a URI matching prefix is passed to the <xref:System.Net.WebRequest.Create%2A?displayProperty=nameWithType> method.</span></span>  
+ <span data-ttu-id="491be-126">当 URI 匹配的前缀传递给创建 Web 请求模块<xref:System.Net.WebRequest.Create%2A?displayProperty=nameWithType>方法。</span><span class="sxs-lookup"><span data-stu-id="491be-126">The Web request module is created when a URI matching prefix is passed to the <xref:System.Net.WebRequest.Create%2A?displayProperty=nameWithType> method.</span></span>  
   
- <span data-ttu-id="1a9a8-127">值为`prefix`属性应为有效的 URI 的前导字符。</span><span class="sxs-lookup"><span data-stu-id="1a9a8-127">The value for the `prefix` attribute should be the leading characters of a valid URI.</span></span> <span data-ttu-id="1a9a8-128">例如，`http` 或 `http://www.contoso.com`。</span><span class="sxs-lookup"><span data-stu-id="1a9a8-128">For example, `http` or `http://www.contoso.com`.</span></span>
+ <span data-ttu-id="491be-127">值为`prefix`属性应为有效的 URI 的前导字符。</span><span class="sxs-lookup"><span data-stu-id="491be-127">The value for the `prefix` attribute should be the leading characters of a valid URI.</span></span> <span data-ttu-id="491be-128">例如，`http` 或 `http://www.contoso.com`。</span><span class="sxs-lookup"><span data-stu-id="491be-128">For example, `http` or `http://www.contoso.com`.</span></span>
   
- <span data-ttu-id="1a9a8-129">值为`type`属性应为有效的类型名称和相应的程序集名称，用逗号分隔。</span><span class="sxs-lookup"><span data-stu-id="1a9a8-129">The value for the `type` attribute should be a valid type name and corresponding assembly name, separated by a comma.</span></span>
+ <span data-ttu-id="491be-129">值为`type`属性应为有效的类型名称和相应的程序集名称，用逗号分隔。</span><span class="sxs-lookup"><span data-stu-id="491be-129">The value for the `type` attribute should be a valid type name and corresponding assembly name, separated by a comma.</span></span>
   
-## <a name="configuration-files"></a><span data-ttu-id="1a9a8-130">配置文件</span><span class="sxs-lookup"><span data-stu-id="1a9a8-130">Configuration Files</span></span>  
- <span data-ttu-id="1a9a8-131">此元素可在应用程序配置文件或计算机配置文件 (Machine.config) 中使用。</span><span class="sxs-lookup"><span data-stu-id="1a9a8-131">This element can be used in the application configuration file or the machine configuration file (Machine.config).</span></span>  
+## <a name="configuration-files"></a><span data-ttu-id="491be-130">配置文件</span><span class="sxs-lookup"><span data-stu-id="491be-130">Configuration Files</span></span>  
+ <span data-ttu-id="491be-131">此元素可在应用程序配置文件或计算机配置文件 (Machine.config) 中使用。</span><span class="sxs-lookup"><span data-stu-id="491be-131">This element can be used in the application configuration file or the machine configuration file (Machine.config).</span></span>  
   
-## <a name="example"></a><span data-ttu-id="1a9a8-132">示例</span><span class="sxs-lookup"><span data-stu-id="1a9a8-132">Example</span></span>  
- <span data-ttu-id="1a9a8-133">下面的示例为 HTTP 注册自定义的 Web 请求模块。</span><span class="sxs-lookup"><span data-stu-id="1a9a8-133">The following example registers a custom Web request module for HTTP.</span></span> <span data-ttu-id="1a9a8-134">应使用正确的值指定模块的版本和 PublicKeyToken 替换值。</span><span class="sxs-lookup"><span data-stu-id="1a9a8-134">You should replace the values for Version and PublicKeyToken with the correct values for the specified module.</span></span>  
+## <a name="example"></a><span data-ttu-id="491be-132">示例</span><span class="sxs-lookup"><span data-stu-id="491be-132">Example</span></span>  
+ <span data-ttu-id="491be-133">下面的示例为 HTTP 注册自定义的 Web 请求模块。</span><span class="sxs-lookup"><span data-stu-id="491be-133">The following example registers a custom Web request module for HTTP.</span></span> <span data-ttu-id="491be-134">应使用正确的值指定模块的版本和 PublicKeyToken 替换值。</span><span class="sxs-lookup"><span data-stu-id="491be-134">You should replace the values for Version and PublicKeyToken with the correct values for the specified module.</span></span>  
   
 ```xml  
 <configuration>  
@@ -83,6 +81,6 @@ ms.locfileid: "48837006"
 </configuration>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="1a9a8-135">请参阅</span><span class="sxs-lookup"><span data-stu-id="1a9a8-135">See Also</span></span>  
- <xref:System.Net.WebRequest>  
- [<span data-ttu-id="1a9a8-136">网络设置架构</span><span class="sxs-lookup"><span data-stu-id="1a9a8-136">Network Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+## <a name="see-also"></a><span data-ttu-id="491be-135">请参阅</span><span class="sxs-lookup"><span data-stu-id="491be-135">See Also</span></span>  
+- <xref:System.Net.WebRequest>  
+- [<span data-ttu-id="491be-136">网络设置架构</span><span class="sxs-lookup"><span data-stu-id="491be-136">Network Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
