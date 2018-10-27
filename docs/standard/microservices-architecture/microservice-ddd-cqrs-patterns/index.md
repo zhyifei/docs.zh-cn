@@ -4,12 +4,12 @@ description: 容器化 .NET 应用程序的 .NET 微服务体系结构 | 使用 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 06/06/2018
-ms.openlocfilehash: bc8ff6262436af6eb49a4ef8635d502e80b74b5a
-ms.sourcegitcommit: 59b51cd7c95c75be85bd6ef715e9ef8c85720bac
+ms.openlocfilehash: 1af53f8f37e516219767fdde49eb7da9927d9e29
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37874382"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50047262"
 ---
 # <a name="tackling-business-complexity-in-a-microservice-with-ddd-and-cqrs-patterns"></a>使用 DDD 和 CQRS 模式降低微服务中的业务复杂性
 
@@ -66,7 +66,7 @@ DDD 是一个大主题，具有一套丰富的学习资源。 开始时可以阅
 DDD 培训
 
 -   **Julie Lerman 与 Steve Smith。Domain-Driven Design Fundamentals**
-    [http://bit.ly/PS-DDD](http://bit.ly/PS-DDD)（域驱动设计基础知识）
+    [https://bit.ly/PS-DDD](https://bit.ly/PS-DDD)（域驱动设计基础知识）
 
 
 >[!div class="step-by-step"]

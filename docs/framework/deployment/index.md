@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 238d8284-6042-4a38-a7f6-1ee8efd719da
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f38ed31748560292753789e38595a5e30f6ea08a
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: a650fa0340ce63a573074746eef60994e2254c86
+ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43509649"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49453224"
 ---
 # <a name="deploying-the-net-framework-and-applications"></a>部署 .NET Framework 和应用程序
 本文有助于你开始部署应用程序的 .NET Framework。 大部分信息都是供开发人员、OEM 和企业管理人员使用的。 想在其自己的计算机上安装 .NET Framework 的用户应阅读[安装 .NET Framework](~/docs/framework/install/index.md)。  
@@ -167,4 +167,4 @@ ms.locfileid: "43509649"
 |[如何：获取 .NET Framework 4.5 安装程序的进度](../../../docs/framework/deployment/how-to-get-progress-from-the-dotnet-installer.md)|描述如何在没有提示的情况下启动和跟踪 .NET Framework 安装进度，同时显示你自己的安装进度视图。|  
   
 ## <a name="see-also"></a>请参阅  
- [开发指南](../../../docs/framework/development-guide.md)
+- [开发指南](../../../docs/framework/development-guide.md)

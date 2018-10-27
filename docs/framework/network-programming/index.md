@@ -7,14 +7,12 @@ helpviewer_keywords:
 - Internet, .NET Framework Internet services
 - Network Resources
 ms.assetid: 8d455610-67a0-4fa8-a62f-7747064a9256
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: b949c9fd50ee4d09d7237bc14898a1b55689f2f4
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: 1d35951aef3692d82bdfa648df48eb8c1bca88ff
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48582620"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50045121"
 ---
 # <a name="network-programming-in-the-net-framework"></a>.NET Framework 中的网络编程
 Microsoft .NET Framework 为 Internet 服务提供了一种分层、可扩展且托管的实现，可以快速、轻松地将其集成到你的应用程序中。 你的网络应用程序可以基于可插入协议而构建，以便自动利用新的 Internet 协议，或者，它们可以使用 Windows 套接字接口的托管实现在套接字级别上使用网络。  
@@ -43,7 +41,7 @@ Microsoft .NET Framework 为 Internet 服务提供了一种分层、可扩展且
  说明如何使用网络跟踪来获取有关方法调用的信息，以及有关托管应用程序所生成网络流量的信息。  
   
  [网络应用程序的缓存管理](../../../docs/framework/network-programming/cache-management-for-network-applications.md)  
- 描述如何使用应用程序（采用 <xref:System.Net.WebClient?displayProperty=nameWithType>、<xref:System.Net.WebRequest?displayProperty=nameWithType> 和 <xref:System.Net.HttpWebRequest?displayProperty=nameWithType> 类）的缓存。  
+ 描述如何使用应用程序（采用 <xref:System.Net.WebClient?displayProperty=nameWithType>、 <xref:System.Net.WebRequest?displayProperty=nameWithType>和 <xref:System.Net.HttpWebRequest?displayProperty=nameWithType> 类）的缓存。  
   
  [网络编程中的安全性](../../../docs/framework/network-programming/security-in-network-programming.md)  
  描述如何使用 Internet 标准安全性和身份验证方法。  
@@ -73,13 +71,13 @@ Microsoft .NET Framework 为 Internet 服务提供了一种分层、可扩展且
  描述在版本 3.5 中添加的支持，它们用于支持基于 PNRP 而构建的对等协作。 这些新功能由 <xref:System.Net.PeerToPeer.Collaboration?displayProperty=nameWithType> 命名空间提供支持。  
   
  [3.5 SP1 版本中对 HttpWebRequest 的 NTLM 身份验证的更改](../../../docs/framework/network-programming/changes-to-ntlm-authentication-for-httpwebrequest-in-version-3-5-sp1.md)  
- 描述在版本 3.5 SP1 中做出的安全性更改，这些更改可影响以下类处理集成式 Windows 身份验证的方式：<xref:System.Net.HttpWebRequest?displayProperty=nameWithType>、<xref:System.Net.HttpListener?displayProperty=nameWithType>、<xref:System.Net.Security.NegotiateStream?displayProperty=nameWithType>，以及 System.Net 命名空间中的相关类。  
+ 描述在版本 3.5 SP1 中做出的安全性更改，这些更改可影响以下类处理集成式 Windows 身份验证的方式： <xref:System.Net.HttpWebRequest?displayProperty=nameWithType>、 <xref:System.Net.HttpListener?displayProperty=nameWithType>、 <xref:System.Net.Security.NegotiateStream?displayProperty=nameWithType>，以及 System.Net 命名空间中的相关类。  
   
  [带有扩展保护的集成 Windows 身份验证](../../../docs/framework/network-programming/integrated-windows-authentication-with-extended-protection.md)  
- 描述扩展保护方面的增强，这些增强可影响以下类处理集成式 Windows 身份验证的方式：<xref:System.Net.HttpWebRequest?displayProperty=nameWithType>、<xref:System.Net.HttpListener?displayProperty=nameWithType>、<xref:System.Net.Mail.SmtpClient?displayProperty=nameWithType>、<xref:System.Net.Security.SslStream?displayProperty=nameWithType>、<xref:System.Net.Security.NegotiateStream?displayProperty=nameWithType> 以及 <xref:System.Net?displayProperty=nameWithType> 和相关命名空间中的相关类。  
+ 描述扩展保护方面的增强，这些增强可影响以下类处理集成式 Windows 身份验证的方式： <xref:System.Net.HttpWebRequest?displayProperty=nameWithType>、 <xref:System.Net.HttpListener?displayProperty=nameWithType>、 <xref:System.Net.Mail.SmtpClient?displayProperty=nameWithType>、 <xref:System.Net.Security.SslStream?displayProperty=nameWithType>、 <xref:System.Net.Security.NegotiateStream?displayProperty=nameWithType>以及 <xref:System.Net?displayProperty=nameWithType> 和相关命名空间中的相关类。  
   
  [使用 IPv6 和 Teredo 的 NAT 遍历](../../../docs/framework/network-programming/nat-traversal-using-ipv6-and-teredo.md)  
- 描述添加到 <xref:System.Net?displayProperty=nameWithType>、<xref:System.Net.NetworkInformation?displayProperty=nameWithType> 和 <xref:System.Net.Sockets?displayProperty=nameWithType> 命名空间的增强，这些增强用于支持使用 IPv6 和 Teredo 进行 NAT 遍历。  
+ 描述添加到 <xref:System.Net?displayProperty=nameWithType>、 <xref:System.Net.NetworkInformation?displayProperty=nameWithType>和 <xref:System.Net.Sockets?displayProperty=nameWithType> 命名空间的增强，这些增强用于支持使用 IPv6 和 Teredo 进行 NAT 遍历。  
   
  [Windows 应用商店应用的网络隔离](../../../docs/framework/network-programming/network-isolation-for-windows-store-apps.md)  
  描述当在 <xref:System.Net>应用中使用 <xref:System.Net.Http>、 <xref:System.Net.Http.Headers> 和 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 命名空间中的类时，网络隔离所产生的影响。  

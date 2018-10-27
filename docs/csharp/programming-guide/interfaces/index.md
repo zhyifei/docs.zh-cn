@@ -5,12 +5,12 @@ helpviewer_keywords:
 - interfaces [C#]
 - C# language, interfaces
 ms.assetid: 2feda177-ce11-432d-81b4-d50f5f35fd37
-ms.openlocfilehash: fba595cca4d96fc9cd0f0966f45d1668181b2ec9
-ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
+ms.openlocfilehash: 1365b3e0dbc2ae095698b66f2b527301fe474a00
+ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46321400"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49454429"
 ---
 # <a name="interfaces-c-programming-guide"></a>接口（C# 编程指南）
 
@@ -36,7 +36,7 @@ ms.locfileid: "46321400"
   
 当类或结构实现接口时，类或结构必须为该接口定义的所有成员提供实现。 接口本身不提供类或结构可以通过继承基类功能的方式来继承的任何功能。 但是，如果基类实现接口，则从基类派生的任何类都会继承该实现。  
   
-下面的示例展示了 IEquatable<T\> 接口的实现代码。 实现类 `Car` 必须提供 <xref:System.IEquatable%601.Equals%2A> 方法的实现。  
+下面的示例演示 <xref:System.IEquatable%601> 接口的实现。 实现类 `Car` 必须提供 <xref:System.IEquatable%601.Equals%2A> 方法的实现。  
   
 [!code-csharp[csProgGuideInheritance#48](../classes-and-structs/codesnippet/CSharp/interfaces_2.cs)]  
   
