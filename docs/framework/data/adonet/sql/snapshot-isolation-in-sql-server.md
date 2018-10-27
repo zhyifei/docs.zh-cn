@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 43ae5dd3-50f5-43a8-8d01-e37a61664176
-ms.openlocfilehash: 52c5dba1a21b0e8d8e5af1dc159941e5f4b4aa5f
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: d2683ead92eb4e76494e3e23bff1c688578a316d
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45970067"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50034294"
 ---
 # <a name="snapshot-isolation-in-sql-server"></a>SQL Server 中的快照隔离
 快照隔离可增强 OLTP 应用程序的并发性。  
@@ -24,7 +24,7 @@ ms.locfileid: "45970067"
   
  在事务中使用快照隔离之前，必须先通过设置 ALLOW_SNAPSHOT_ISOLATION ON 数据库选项来启用快照隔离。 这将激活在临时数据库中存储行版本的机制 (**tempdb**)。 在每个要将快照隔离与 Transact-SQL ALTER DATABASE 语句一起使用的数据库中，必须启用快照隔离。 从这个方面来说，快照隔离与传统的隔离级别 READ COMMITTED、REPEATABLE READ、SERIALIZABLE 和 READ UNCOMMITTED 不同，这些传统的隔离级别不需要任何配置。 下列语句激活快照隔离，并将默认的 READ COMMITTED 行为替换为 SNAPSHOT：  
   
-```  
+```sql  
 ALTER DATABASE MyDatabase  
 SET ALLOW_SNAPSHOT_ISOLATION ON  
   
@@ -49,7 +49,7 @@ SET READ_COMMITTED_SNAPSHOT ON
   
 -   SERIALIZABLE 是限制性最强的隔离级别，因为该级别锁定整个范围的键，并一直持有锁，直到事务完成。 该级别包括 REPEATABLE READ，并增加了在事务完成之前，其他事务不能向事务已读取的范围插入新行的限制。  
   
- 有关更多信息，请参见“SQL Server 联机图书”中的“隔离级别”。  
+ 有关详细信息，请参阅[事务锁定和行版本控制指南](/sql/relational-databases/sql-server-transaction-locking-and-row-versioning-guide)。  
   
 ### <a name="snapshot-isolation-level-extensions"></a>快照隔离级别扩展  
  SQL Server 通过引入 SNAPSHOT 隔离级别并另外实现 READ COMMITTED 而引入了对 SQL-92 隔离级别的扩展。 READ_COMMITTED_SNAPSHOT 隔离级别可以透明地替换所有事务的 READ COMMITTED。  
@@ -132,7 +132,7 @@ SqlTransaction sqlTran =
 ### <a name="using-lock-hints-with-snapshot-isolation"></a>对快照隔离使用锁提示  
  在前面的示例中，第一个事务选择数据，第二个事务在第一个事务完成前更新数据，在第一个事务尝试更新相同行时造成更新冲突。 通过在事务开始时提供锁提示，可以降低在需要很长时间的快照事务中发生更新冲突的机率。 以下 SELECT 语句使用 UPDLOCK 提示锁定所选行：  
   
-```  
+```sql  
 SELECT * FROM TestSnapshotUpdate WITH (UPDLOCK)   
   WHERE PriKey BETWEEN 1 AND 3  
 ```  
@@ -143,4 +143,5 @@ SELECT * FROM TestSnapshotUpdate WITH (UPDLOCK)
   
 ## <a name="see-also"></a>请参阅  
  [SQL Server 和 ADO.NET](../../../../../docs/framework/data/adonet/sql/index.md)  
- [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)      
+ [事务锁定和行版本控制指南](/sql/relational-databases/sql-server-transaction-locking-and-row-versioning-guide)

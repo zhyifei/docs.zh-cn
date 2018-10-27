@@ -2,13 +2,12 @@
 title: Security Calls Not Authorized Per Second（每秒未授权的安全调用次数）
 ms.date: 03/30/2017
 ms.assetid: 0f189767-8c05-478a-8f0b-9228e5d351e5
-author: BrucePerlerMS
-ms.openlocfilehash: 20c8da5fcdca0c99fd53fb5ce0d7cbf15552997a
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 15890506aece94a07d4b97101519007accf3570a
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48035748"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50037780"
 ---
 # <a name="security-calls-not-authorized-per-second"></a>Security Calls Not Authorized Per Second（每秒未授权的安全调用次数）
 计数器名称：Security Calls Not Authorized Per Second（每秒未授权的安全调用次数）。  

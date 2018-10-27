@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Impersonating the Client Sample [Windows Communication Foundation]
 - impersonation, Windows Communication Foundation sample
 ms.assetid: 8bd974e1-90db-4152-95a3-1d4b1a7734f8
-ms.openlocfilehash: 29ed1f988819a47d8ac8845a379aeda5e15c655e
-ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
+ms.openlocfilehash: 9e1c38abd1c9cacfd4db953d9fb875437b2f1093
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49086461"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50047665"
 ---
 # <a name="impersonating-the-client"></a>模拟客户端
 此模拟示例演示如何在服务中模拟调用方应用程序，以便服务可以代表调用方访问系统资源。  
@@ -23,7 +23,7 @@ ms.locfileid: "49086461"
   
  对于服务代码已经进行了修改，以便服务上的 `Add` 方法使用 <xref:System.ServiceModel.OperationBehaviorAttribute> 来模拟调用方，如下面的示例代码中所示。  
   
-```  
+```csharp
 [OperationBehavior(Impersonation = ImpersonationOption.Required)]  
 public double Add(double n1, double n2)  
 {  
@@ -39,7 +39,7 @@ public double Add(double n1, double n2)
   
  以下示例代码中所示的 `DisplayIdentityInformation` 方法是一个用来显示调用方标识的实用工具函数。  
   
-```  
+```csharp
 static void DisplayIdentityInformation()  
 {  
     Console.WriteLine("\t\tThread Identity            :{0}",  
@@ -54,14 +54,14 @@ static void DisplayIdentityInformation()
   
  服务上的 `Subtract` 方法使用命令性调用来模拟调用方，如下面的示例代码中所示。  
   
-```  
+```csharp
 public double Subtract(double n1, double n2)  
 {  
     double result = n1 - n2;  
     Console.WriteLine("Received Subtract({0},{1})", n1, n2);  
     Console.WriteLine("Return: {0}", result);  
-Console.WriteLine("Before impersonating");  
-DisplayIdentityInformation();  
+    Console.WriteLine("Before impersonating");  
+    DisplayIdentityInformation();  
   
     if (ServiceSecurityContext.Current.WindowsIdentity.ImpersonationLevel == TokenImpersonationLevel.Impersonation ||  
         ServiceSecurityContext.Current.WindowsIdentity.ImpersonationLevel == TokenImpersonationLevel.Delegation)  
@@ -80,8 +80,8 @@ DisplayIdentityInformation();
         Console.WriteLine("ImpersonationLevel is not high enough to perform this operation.");  
     }  
   
-Console.WriteLine("After reverting");  
-DisplayIdentityInformation();  
+    Console.WriteLine("After reverting");  
+    DisplayIdentityInformation();  
     return result;  
 }  
 ```  
@@ -92,7 +92,7 @@ DisplayIdentityInformation();
   
  已经对客户端代码进行了修改，以便将模拟级别设置为 <xref:System.Security.Principal.TokenImpersonationLevel.Impersonation>。 客户端通过使用 <xref:System.Security.Principal.TokenImpersonationLevel> 枚举来指定要由服务使用的模拟级别。 枚举支持下列值：<xref:System.Security.Principal.TokenImpersonationLevel.None>、<xref:System.Security.Principal.TokenImpersonationLevel.Anonymous>、<xref:System.Security.Principal.TokenImpersonationLevel.Identification>、<xref:System.Security.Principal.TokenImpersonationLevel.Impersonation> 和 <xref:System.Security.Principal.TokenImpersonationLevel.Delegation>。 如果要在访问使用 Windows ACL 保护的本地计算机上的系统资源时执行访问检查，则必须将模拟级别设置为 <xref:System.Security.Principal.TokenImpersonationLevel.Impersonation>，如下面的示例代码中所示。  
   
-```  
+```csharp
 // Create a client with given client endpoint configuration  
 CalculatorClient client = new CalculatorClient();  
   

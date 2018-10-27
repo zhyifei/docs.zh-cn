@@ -16,12 +16,12 @@ helpviewer_keywords:
 - data templates [WPF]
 - thread [WPF], affinity
 ms.assetid: 8579c10b-76ab-4c52-9691-195ce02333c8
-ms.openlocfilehash: 70afa7e193832837650d72837b25e26e3b64c180
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.openlocfilehash: 50a7e1b08c31b5d0fb779dabf617a08bbb4c6cf4
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33549641"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50045569"
 ---
 # <a name="wpf-architecture"></a>WPF 体系结构
 本主题提供 Windows Presentation Foundation (WPF) 类层次结构的指导的教程。 本主题涵盖了 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 的大部分主要子系统，并说明它们的交互方式。 本主题还详细介绍了 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 架构师所做的一些选择。  
@@ -45,31 +45,31 @@ ms.locfileid: "33549641"
   
  在 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 的设计阶段，目标是移动到单一线程的执行，但这不是一种与线程“关联的”模型。 当一个组件使用执行线程的标识来存储某种类型的状态时，将发生线程关联。 最常见的形式是使用线程本地存储 (TLS) 来存储状态。 线程关联要求执行的每个逻辑线程仅由操作系统中的一个物理线程所拥有，这将占用大量内存。 最后，WPF 的线程处理模型通过线程关联与单一线程执行的现有 User32 线程处理模型保持同步。 主要原因是互操作性 - 类似于 [!INCLUDE[TLA2#tla_ole2.0](../../../../includes/tla2sharptla-ole2-0-md.md)] 的系统、剪贴板和 Internet Explorer 均需要单一线程关联 (STA) 执行。  
   
- 假设你具有带有 STA 线程的对象，则需要在线程之间通信并验证你是否位于正确的线程上的一种方法。 调度程序的作用就在于此。 调度程序是一个基本的消息调度系统，具有多个按优先顺序排列的队列。 消息的示例包括原始输入通知（鼠标移动）、框架函数（布局）或用户命令（执行此方法）。 通过从派生<xref:System.Windows.Threading.DispatcherObject>，你创建[!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]对象具有 STA 行为，并将赋予一个指针，调度程序在创建时。  
+ 假设你具有带有 STA 线程的对象，则需要在线程之间通信并验证你是否位于正确的线程上的一种方法。 调度程序的作用就在于此。 调度程序是一个基本的消息调度系统，具有多个按优先顺序排列的队列。 消息的示例包括原始输入通知（鼠标移动）、框架函数（布局）或用户命令（执行此方法）。 通过派生自<xref:System.Windows.Threading.DispatcherObject>，创建[!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]对象具有 STA 行为的并将获得一个指向调度程序在创建时。  
   
 <a name="System_Windows_DependencyObject"></a>   
 ## <a name="systemwindowsdependencyobject"></a>System.Windows.DependencyObject  
  生成 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 时使用的主要体系结构原理之一是首选属性而不是方法或事件。 属性具有声明性，可更方便地指定用途而不是操作。 它还支持模型驱动或数据驱动的系统，以显示用户界面内容。 这种理念的预期效果是创建更多可以绑定到的属性，从而更好地控制应用程序的行为。  
   
- 为了更加充分地利用由属性驱动的系统，需要一个比 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] 提供的功能更丰富的属性系统。 这种丰富性的一个简单示例是更改通知。 若要实现双向绑定，需要绑定的双方支持更改通知。 若要使行为与属性值相关联，需要在属性值更改时收到通知。 Microsoft.NET Framework 提供一个接口， **INotifyPropertyChange**，这允许对象发布更改通知，但它是可选的。  
+ 为了更加充分地利用由属性驱动的系统，需要一个比 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] 提供的功能更丰富的属性系统。 这种丰富性的一个简单示例是更改通知。 若要实现双向绑定，需要绑定的双方支持更改通知。 若要使行为与属性值相关联，需要在属性值更改时收到通知。 Microsoft.NET Framework 中的一个接口， **INotifyPropertyChange**，这允许对象发布更改通知，但它是可选的。  
   
- [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 提供了更丰富的属性系统、 派生自<xref:System.Windows.DependencyObject>类型。 该属性系统实际是一个“依赖”属性系统，因为它会跟踪属性表达式之间的依赖关系，并在依赖关系更改时自动重新验证属性值。 例如，如果你有一个属性，继承 (如<xref:System.Windows.Controls.Control.FontSize%2A>)，如果在属性变化的父项继承值的元素上，系统将自动更新。  
+ [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 提供了更丰富的属性系统，派生自<xref:System.Windows.DependencyObject>类型。 该属性系统实际是一个“依赖”属性系统，因为它会跟踪属性表达式之间的依赖关系，并在依赖关系更改时自动重新验证属性值。 例如，如果您有一个继承的属性 (如<xref:System.Windows.Controls.Control.FontSize%2A>)，如果继承值的元素的父级发生属性更改，系统会自动更新。  
   
  [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 属性系统的基础是属性表达式的概念。 在 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 的第一个版本中，属性表达式系统是关闭的，表达式均作为框架的一部分提供。 表达式致使属性系统不具有数据绑定、样式调整或继承硬编码，而是由框架内后面的层来提供这些功能。  
   
  属性系统还提供属性值的稀疏存储。 因为对象可能有数十个（如果达不到上百个）属性，并且大部分值处于其默认状态（被继承、由样式设置等），所以并非对象的每个实例都需要具有在其上定义的每个属性的完全权重。  
   
- 属性系统的最后一个新功能是附加属性的概念。 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 元素是基于组合和组件重用的原则生成的。 它通常是这种情况，某些包含元素 (如<xref:System.Windows.Controls.Grid>布局元素) 需要在子元素可控制其行为 （如行/列信息中） 上的其他数据。 任何对象都可以为任何其他对象提供属性定义，而不是将所有这些属性与每个元素相关联。 这与 JavaScript 中的“expando”功能相似。  
+ 属性系统的最后一个新功能是附加属性的概念。 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 元素是基于组合和组件重用的原则生成的。 它通常是这种情况，某些包含元素 (如<xref:System.Windows.Controls.Grid>布局元素) 需要在子元素来控制其行为 （如行/列信息中） 上的其他数据。 任何对象都可以为任何其他对象提供属性定义，而不是将所有这些属性与每个元素相关联。 这与 JavaScript 中的“expando”功能相似。  
   
 <a name="System_Windows_Media_Visual"></a>   
 ## <a name="systemwindowsmediavisual"></a>System.Windows.Media.Visual  
- 定义一个系统后，下一步是将像素绘制到屏幕上。 <xref:System.Windows.Media.Visual>类提供了用于生成树的视觉对象，每个可以选择性地包含绘制说明和有关如何呈现这些指令 （剪辑、 转换等） 的元数据。 <xref:System.Windows.Media.Visual> 旨在是非常轻量和灵活，因此的大多数功能均未公开[!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)]公开和受保护的回调函数依赖于。  
+ 定义一个系统后，下一步是将像素绘制到屏幕上。 <xref:System.Windows.Media.Visual>类提供了用于每个可以选择性地包含绘制指令以及有关如何呈现这些指令 （剪裁、 转换等） 的元数据生成视觉对象的树。 <xref:System.Windows.Media.Visual> 设计为极其轻量且灵活，因此大部分功能均未公开[!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)]公开并且非常依赖受保护的回调函数。  
   
- <xref:System.Windows.Media.Visual> 实际上是入口点[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]组合系统。 <xref:System.Windows.Media.Visual> 是托管这些两个子系统之间的连接点[!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)]和非托管的 milcore。  
+ <xref:System.Windows.Media.Visual> 是真正的入口点[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]复合系统。 <xref:System.Windows.Media.Visual> 是托管这两个子系统之间的连接点[!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)]和非托管的 milcore。  
   
  [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 通过遍历由 milcore 管理的非托管数据结构来显示数据。 这些结构（称为组合节点）代表层次结构显示树，其中每个节点都有呈现指令。 只能通过消息传递协议来访问此树（如下图右侧所示）。  
   
- 编程时[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]，你创建<xref:System.Windows.Media.Visual>元素和派生的类型，通过此消息传递协议组合树与内部通信。 每个<xref:System.Windows.Media.Visual>中[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]可能创建一个、 none、 或组合的多个节点。  
+ 编程时[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]，创建<xref:System.Windows.Media.Visual>元素和派生的类型，它们在内部与此消息传递协议通过此组合树进行通信。 每个<xref:System.Windows.Media.Visual>在[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]可能会创建一个、 none、 或多个组合节点。  
   
  ![Windows Presentation Foundation 可视化树。](../../../../docs/framework/wpf/advanced/media/wpf-architecture2.PNG "wpf_architecture2")  
   
@@ -89,49 +89,49 @@ ms.locfileid: "33549641"
   
 <a name="System_Windows_UIElement"></a>   
 ## <a name="systemwindowsuielement"></a>System.Windows.UIElement  
- <xref:System.Windows.UIElement> 定义核心子系统包括布局、 输入和事件。  
+ <xref:System.Windows.UIElement> 定义核心子系统，包括布局、 输入和事件。  
   
- 布局是 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 中的核心概念。 在许多系统中，可能有一组固定的布局模型（HTML 支持三种布局模型：流、绝对和表），也可能没有布局模型（User32 实际仅支持绝对定位）。 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 先假设开发人员和设计人员需要灵活的可扩展布局模型，该模型可能是由属性值而不是命令性逻辑驱动的。 在<xref:System.Windows.UIElement>布局的基本协定引入的级别，– 了两个阶段具有模型<xref:System.Windows.UIElement.Measure%2A>和<xref:System.Windows.UIElement.Arrange%2A>传递。  
+ 布局是 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 中的核心概念。 在许多系统中，可能有一组固定的布局模型（HTML 支持三种布局模型：流、绝对和表），也可能没有布局模型（User32 实际仅支持绝对定位）。 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 先假设开发人员和设计人员需要灵活的可扩展布局模型，该模型可能是由属性值而不是命令性逻辑驱动的。 在<xref:System.Windows.UIElement>级别，引入布局的基本协定-阶段使用的模型的两阶段<xref:System.Windows.UIElement.Measure%2A>和<xref:System.Windows.UIElement.Arrange%2A>传递。  
   
- <xref:System.Windows.UIElement.Measure%2A> 允许的组件以确定它想要学习的大小。 这是从单独阶段<xref:System.Windows.UIElement.Arrange%2A>因为有很多情况下，其中一个父元素将要求子测量数次以确定其最佳位置和大小。 父元素要求子元素测量这一事实体现了 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 的另一关键原则 - 调整内容大小。 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 中的所有控件支持调整到内容自然大小的功能。 这使本地化更加容易，并可实现调整内容大小时进行动态元素布局。 <xref:System.Windows.UIElement.Arrange%2A>阶段允许父元素的位置，并确定每个子级的最终大小。  
+ <xref:System.Windows.UIElement.Measure%2A> 允许组件确定所要采取的大小。 这是从单独阶段<xref:System.Windows.UIElement.Arrange%2A>因为有很多情况下，父元素会要求子测量若干次以确定其最佳位置和大小。 父元素要求子元素测量这一事实体现了 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 的另一关键原则 - 调整内容大小。 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 中的所有控件支持调整到内容自然大小的功能。 这使本地化更加容易，并可实现调整内容大小时进行动态元素布局。 <xref:System.Windows.UIElement.Arrange%2A>阶段允许父元素定位并确定每个子级的最终大小。  
   
- 大量的时间通常会花费谈论的输出一端[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]–<xref:System.Windows.Media.Visual>及其相关对象。 然而，在输入端也有许多创新。 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 输入模型中的最基本更改也许是一致模型，借助此模型可通过系统对输入事件进行路由。  
+ 很多时间通常会花费谈论的输出一端[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]–<xref:System.Windows.Media.Visual>和相关对象。 然而，在输入端也有许多创新。 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 输入模型中的最基本更改也许是一致模型，借助此模型可通过系统对输入事件进行路由。  
   
  输入是作为内核模式设备驱动程序上的信号发出的，并通过涉及 Windows 内核和 User32 的复杂过程路由到正确的进程和线程。 与输入相对应的 User32 消息路由到 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 后，转换为 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 原始输入消息，并发送到调度程序。 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 允许将原始输入事件转换为多个实际事件，在保证传递到位的情况下在低系统级别实现类似“MouseEnter”的功能。  
   
- 每个输入事件至少会转换为两个事件 -“预览”事件和实际事件。 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 中的所有事件都具有通过元素树路由的概念。 如果事件从目标向上遍历树直到根，称为“浮升”，如果从根开始向下遍历到目标，称为“隧道”。 输入预览事件隧道，使树中的任何元素都有机会筛选事件或对事件采取操作。 然后，常规（非预览）事件将从目标向上浮升到根。  
+ 每个输入事件至少会转换为两个事件 -“预览”事件和实际事件。 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 中的所有事件都具有通过元素树路由的概念。 事件被称为"浮升"如果用户从目标树中向上遍历到根目录，并从根开始并遍历到目标被称为"隧道"。 输入预览事件隧道，使树中的任何元素都有机会筛选事件或对事件采取操作。 然后，常规（非预览）事件将从目标向上浮升到根。  
   
  隧道和浮升阶段之间的划分使键盘快捷键等功能的实现在复合环境中采用一致的方式。 在 User32 中，可以通过使用一个全局表来实现键盘快捷键，该表中包含你希望支持的所有快捷键（Ctrl+N 映射到“新建”）。 在应用程序的调度程序中，可以调用 **TranslateAccelerator**，它会探查 User32 中的输入消息，并确定是否有任何消息与已注册的快捷键匹配。 在 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 中，上述内容无效，因为系统是完全“可组合”的 - 任何元素都可以处理和使用任何键盘快捷键。 将此两阶段模型用于输入，可允许组件实现其自己的“TranslateAccelerator”。  
   
- 若要执行此一次性更多，<xref:System.Windows.UIElement>还引入了 CommandBindings 的概念。 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]命令系统允许开发人员内容定义在命令终结点 – 方面的功能用于实现<xref:System.Windows.Input.ICommand>。 命令绑定使元素可以定义输入笔势 (Ctrl+N) 和命令（“新建”）之间的映射。 输入笔势和命令定义都是可扩展的，并且可以在使用时联系到一起。 这使得一些操作（例如，允许最终用户自定义其要在应用程序内使用的键绑定）显得无关紧要。  
+ 若要进一步此步骤，<xref:System.Windows.UIElement>还引入了 CommandBindings 的概念。 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]命令系统允许开发人员的方式定义功能命令终结点 – 内容实现<xref:System.Windows.Input.ICommand>。 命令绑定使元素可以定义输入笔势 (Ctrl+N) 和命令（“新建”）之间的映射。 输入笔势和命令定义都是可扩展的，并且可以在使用时联系到一起。 这使得一些操作（例如，允许最终用户自定义其要在应用程序内使用的键绑定）显得无关紧要。  
   
- 至此，本主题已重点讨论了 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 的“核心”功能 - PresentationCore 程序集中实现的功能。 生成时[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]、 清理基础组件之间的分离 (如与布局的协定**度量值**和**排列**) 和 framework 部分 （例如特定的实现像布局<xref:System.Windows.Controls.Grid>) 是希望的结果。 目标是提供在堆栈中处于较低位置的可扩展性点，这将允许外部开发人员在需要时创建自己的框架。  
+ 至此，本主题已重点讨论了 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 的“核心”功能 - PresentationCore 程序集中实现的功能。 生成时[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]、 明确划分基础部分 (如与布局的协定**度量值**并**排列**) 和框架部分 （例如特定的实现像布局<xref:System.Windows.Controls.Grid>) 是所需的结果。 目标是提供在堆栈中处于较低位置的可扩展性点，这将允许外部开发人员在需要时创建自己的框架。  
   
 <a name="System_Windows_FrameworkElement"></a>   
 ## <a name="systemwindowsframeworkelement"></a>System.Windows.FrameworkElement  
  <xref:System.Windows.FrameworkElement> 可以查看两个不同的方式。 它在 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 的较低层中引入的子系统上引入一组策略和自定义项。 它还引入了一组新的子系统。  
   
- 通过引入的主要策略<xref:System.Windows.FrameworkElement>周围应用程序布局。 <xref:System.Windows.FrameworkElement> 基于由引入的基本布局协定<xref:System.Windows.UIElement>并添加布局"槽"，以便更轻松布局作者具有一致的驱动布局语义的属性集的概念。 属性，例如<xref:System.Windows.FrameworkElement.HorizontalAlignment%2A>， <xref:System.Windows.FrameworkElement.VerticalAlignment%2A>， <xref:System.Windows.FrameworkElement.MinWidth%2A>，和<xref:System.Windows.FrameworkElement.Margin%2A>（若要仅举几例） 为派生自的所有组件都提供<xref:System.Windows.FrameworkElement>布局容器内一致的行为。  
+ 通过引入的主要策略<xref:System.Windows.FrameworkElement>与应用程序布局。 <xref:System.Windows.FrameworkElement> 基础上引入的基本布局协定构建<xref:System.Windows.UIElement>并添加布局"插槽"可使布局作者具有一组一致的属性驱动的布局语义更方便的概念。 属性，如<xref:System.Windows.FrameworkElement.HorizontalAlignment%2A>， <xref:System.Windows.FrameworkElement.VerticalAlignment%2A>， <xref:System.Windows.FrameworkElement.MinWidth%2A>，和<xref:System.Windows.FrameworkElement.Margin%2A>（若要仅举几例） 派生自的所有组件<xref:System.Windows.FrameworkElement>在布局容器内一致的行为。  
   
- <xref:System.Windows.FrameworkElement> 此外可以更方便地[!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)]遭受许多功能的核心层中找到[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]。 例如，<xref:System.Windows.FrameworkElement>提供直接访问权限通过动画<xref:System.Windows.FrameworkElement.BeginStoryboard%2A>方法。 A<xref:System.Windows.Media.Animation.Storyboard>使您能够编写脚本针对一组属性的多个动画。  
+ <xref:System.Windows.FrameworkElement> 此外可以更方便地[!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)]的核心层中找到的许多功能认识[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]。 例如，<xref:System.Windows.FrameworkElement>提供直接访问权限通过动画<xref:System.Windows.FrameworkElement.BeginStoryboard%2A>方法。 一个<xref:System.Windows.Media.Animation.Storyboard>地针对一组属性的多个动画编写脚本。  
   
- 两个最重要事项，<xref:System.Windows.FrameworkElement>引入了将数据绑定和样式。  
+ 最重要的两点，<xref:System.Windows.FrameworkElement>引入了将数据绑定和样式。  
   
  曾经使用 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 或 [!INCLUDE[TLA#tla_aspnet](../../../../includes/tlasharptla-aspnet-md.md)] 创建应用程序 [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] 的用户应当对 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 中的数据绑定子系统较为熟悉。 在上述每个系统中，可通过一种简单的方式来表达希望将给定元素中的一个或多个属性绑定到一个数据片段。 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 完全支持属性绑定、转换和列表绑定。  
   
  [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 中数据绑定的最值得关注的功能之一是引入了数据模板。 利用数据模板，可以通过声明方式指定某个数据片断的可视化方式。 无需创建可绑定到数据的自定义用户界面，而是转而让数据来确定要创建的显示内容。  
   
- 样式实际上是轻量型的数据绑定。 使用样式，可以将共享定义的一组属性绑定到元素的一个或多个实例。 样式应用到元素通过显式引用 (通过设置<xref:System.Windows.FrameworkElement.Style%2A>属性) 或通过将关联的样式来隐式[!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]元素的类型。  
+ 样式实际上是轻量型的数据绑定。 使用样式，可以将共享定义的一组属性绑定到元素的一个或多个实例。 样式应用到元素通过显式引用 (通过设置<xref:System.Windows.FrameworkElement.Style%2A>属性) 或通过关联与样式来隐式[!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]元素的类型。  
   
 <a name="System_Windows_Controls_Control"></a>   
 ## <a name="systemwindowscontrolscontrol"></a>System.Windows.Controls.Control  
- 控件的最重要功能是模板化。 如果将 WPF 的组合系统视为一个保留模式绘制系统，则控件可通过模板化以一种参数化的声明性方式描述其绘制。 A<xref:System.Windows.Controls.ControlTemplate>实际上只是一个脚本来创建一组子元素，同时绑定到提供的控件的属性。  
+ 控件的最重要功能是模板化。 如果将 WPF 的组合系统视为一个保留模式绘制系统，则控件可通过模板化以一种参数化的声明性方式描述其绘制。 一个<xref:System.Windows.Controls.ControlTemplate>实际上只不过是一个脚本来创建一组子元素，同时绑定到由控件提供的属性。  
   
- <xref:System.Windows.Controls.Control> 提供了一组常用属性<xref:System.Windows.Controls.Control.Foreground%2A>， <xref:System.Windows.Controls.Control.Background%2A>， <xref:System.Windows.Controls.Control.Padding%2A>，仅举几例，模板作者然后可以使用自定义控件的显示。 控件的实现提供了数据模型和交互模型。 交互模型定义了一组命令（如窗口的“关闭”），以及到输入笔势的绑定（如单击窗口右上角的红叉）。 数据模型提供了一组属性，用于自定义交互模型或自定义显示内容（由模板确定）。  
+ <xref:System.Windows.Controls.Control> 提供了一组常用属性<xref:System.Windows.Controls.Control.Foreground%2A>， <xref:System.Windows.Controls.Control.Background%2A>， <xref:System.Windows.Controls.Control.Padding%2A>，仅举几例，模板作者可以使用自定义控件的显示。 控件的实现提供了数据模型和交互模型。 交互模型定义了一组命令（如窗口的“关闭”），以及到输入笔势的绑定（如单击窗口右上角的红叉）。 数据模型提供了一组属性，用于自定义交互模型或自定义显示内容（由模板确定）。  
   
  数据模型（属性）、交互模型（命令和事件）及显示模型（模板）之间的划分，可实现对控件的外观和行为的完全自定义。  
   
- 最常见的控件数据模型是内容模型。 如果你看一下控件喜欢<xref:System.Windows.Controls.Button>，你将看到它具有名为"内容"类型的属性<xref:System.Object>。 在 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 和 [!INCLUDE[TLA#tla_aspnet](../../../../includes/tlasharptla-aspnet-md.md)] 中，此属性通常是一个字符串 - 不过，这会限制可以在按钮中添加的内容类型。 按钮的内容可以是简单的字符串、复杂的数据对象或整个元素树。 如果是数据对象，可以使用数据模板构造显示内容。  
+ 最常见的控件数据模型是内容模型。 如果您看一下控件喜欢<xref:System.Windows.Controls.Button>，你将看到它有一个名为"Content"的类型属性<xref:System.Object>。 在 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 和 [!INCLUDE[TLA#tla_aspnet](../../../../includes/tlasharptla-aspnet-md.md)] 中，此属性通常是一个字符串 - 不过，这会限制可以在按钮中添加的内容类型。 按钮的内容可以是简单的字符串、复杂的数据对象或整个元素树。 如果是数据对象，可以使用数据模板构造显示内容。  
   
 <a name="Summary"></a>   
 ## <a name="summary"></a>总结  

@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 1f9bcd9b-8f8f-47fa-8f1e-0d47236eb800
-ms.openlocfilehash: 2e01d3de6ee7b415c7b3f18a20e840b8ec4ab9b6
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
-ms.translationtype: MT
+ms.openlocfilehash: 3de4bb4546d3ee20e961ecf5a9d130e8e6c713a8
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45698440"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50037147"
 ---
 # <a name="how-to-access-a-wse-30-service-with-a-wcf-client"></a>如何：使用 WCF 客户端访问 WSE 3.0 服务
 WCF 客户端配置为使用 2004 年 8 月版的 Ws-addressing 规范时，Windows Communication Foundation (WCF) 客户端是 Microsoft.NET 服务的网络级别兼容性与 Web Services Enhancements (WSE) 3.0。 但是，WSE 3.0 服务不支持元数据交换 (MEX) 协议，因此当你使用[ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)若要创建 WCF 客户端类，安全设置不会应用到生成WCF 客户端。 因此，必须指定安全设置 WSE 3.0 服务，需要生成 WCF 客户端之后。  
   
- 可以通过使用自定义绑定 WSE 3.0 服务的要求以及 WSE 3.0 服务与 WCF 客户端之间的互操作性要求，需要考虑应用这些安全设置。 这些互操作性要求包括前面提到的使用 2004 年 8 月版的 WS-Addressing 规范和 <xref:System.ServiceModel.Security.MessageProtectionOrder.SignBeforeEncrypt> 的 WSE 3.0 默认消息保护。 WCF 的默认消息保护是<xref:System.ServiceModel.Security.MessageProtectionOrder.SignBeforeEncryptAndEncryptSignature>。 本主题详细介绍了如何创建与 WSE 3.0 服务互操作的 WCF 绑定。 WCF 还提供了融入此绑定的示例。 有关此示例的详细信息，请参阅[与 ASMX Web 服务互操作](../../../../docs/framework/wcf/samples/interoperating-with-asmx-web-services.md)。  
+ 可以通过使用自定义绑定 WSE 3.0 服务的要求以及 WSE 3.0 服务与 WCF 客户端之间的互操作性要求，需要考虑应用这些安全设置。 这些互操作性需求包括前面提到的使用 2004 年 8 月版的 WS-Addressing 规范和 <xref:System.ServiceModel.Security.MessageProtectionOrder.SignBeforeEncrypt> 的 WSE 3.0 默认消息保护。 WCF 的默认消息保护是<xref:System.ServiceModel.Security.MessageProtectionOrder.SignBeforeEncryptAndEncryptSignature>。 本主题详细介绍了如何创建与 WSE 3.0 服务互操作的 WCF 绑定。 WCF 还提供了融入此绑定的示例。 有关此示例的详细信息，请参阅[与 ASMX Web 服务互操作](../../../../docs/framework/wcf/samples/interoperating-with-asmx-web-services.md)。  
   
 ### <a name="to-access-a-wse-30-web-service-with-a-wcf-client"></a>使用 WCF 客户端访问 WSE 3.0 Web 服务  
   
@@ -27,7 +27,7 @@ WCF 客户端配置为使用 2004 年 8 月版的 Ws-addressing 规范时，Wind
   
 2.  创建一个类，表示可与 WSE 3.0 Web 服务进行通信的绑定。  
   
-     下面的类是一部分[与 WSE 互操作](https://msdn.microsoft.com/library/f6816861-96a0-45f9-8736-8e4e82cd3a41)示例：  
+     下面的类是一部分[与 WSE 互操作](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms752257%28v=vs.90%29)示例：  
   
     1.  创建一个从 <xref:System.ServiceModel.Channels.Binding> 类派生的类。  
   
@@ -64,4 +64,4 @@ WCF 客户端配置为使用 2004 年 8 月版的 Ws-addressing 规范时，Wind
   
 ## <a name="see-also"></a>请参阅  
  <xref:System.ServiceModel.Channels.Binding>  
- [与 WSE 互操作](https://msdn.microsoft.com/library/f6816861-96a0-45f9-8736-8e4e82cd3a41)
+ [与 WSE 互操作](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms752257%28v=vs.90%29)

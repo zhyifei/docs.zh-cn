@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 370c16d5-db7b-43e3-945b-ccaab35b739b
 ms.openlocfilehash: 8654a415ee0701680064aec2ee45f975086ec2c0
-ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "49374641"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50088580"
 ---
 # <a name="table-valued-parameters"></a>表值参数
 表值参数提供一种将客户端应用程序中的多行数据封送到 SQL Server 的简单方式，不需要多次往返或特殊服务器端逻辑来处理数据。 您可以使用表值参数来包装客户端应用程序中的数据行，并使用单个参数化命令将数据发送到服务器。 传入的数据行存储在一个表变量中，然后您可以通过使用 [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] 对该表变量进行操作。  

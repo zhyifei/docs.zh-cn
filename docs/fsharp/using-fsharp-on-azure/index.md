@@ -3,12 +3,12 @@ title: 在 Azure 上使用 F#
 description: '使用 F # 中使用 Azure 服务的指南'
 author: sylvanc
 ms.date: 09/22/2016
-ms.openlocfilehash: b0efa919e846086e2dee131fb5791abc409b5bcb
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 96dec342379b06e997107cc5d6cc05e9fc737452
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48033540"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50033949"
 ---
 # <a name="using-f-on-azure"></a>在 Azure 上使用 F#
 
@@ -23,7 +23,7 @@ F# 是一种出色的云编程语言，常用于编写 Web 应用程序、云服
 
 Azure 支持各种不同的虚拟机 (VM) 配置，请参阅 [Linux 和 Azure 虚拟机](https://azure.microsoft.com/services/virtual-machines/)。
 
-若要在虚拟机上安装 F# 用来执行、编译和/或编写脚本，请参阅[在 Linux 上使用 F#](http://fsharp.org/use/linux) 和[在 Windows 上使用 F#](http://fsharp.org/use/windows)。
+若要在虚拟机上安装 F# 用来执行、编译和/或编写脚本，请参阅[在 Linux 上使用 F#](https://fsharp.org/use/linux) 和[在 Windows 上使用 F#](https://fsharp.org/use/windows)。
 
 
 ## <a name="using-azure-functions-with-f"></a>使用 F # 中使用 Azure Functions #
@@ -47,7 +47,7 @@ Azure 存储是一种基层存储服务，用于依赖于持久性、可用性�
 * [通过 F# 实现 Azure 队列存储入门](queue-storage.md)
 * [通过 F# 实现 Azure 表格存储入门](table-storage.md)
 
-Azure 存储还可以通过声明性配置（而非显式 API 调用）与 Azure Functions 结合使用。 请参阅 [Azure Functions triggers and bindings for Azure Storage](/azure/azure-functions/functions-bindings-storage)（用于 Azure 存储的 Azure Functions 触发器和绑定），其中包括 F # 示例。
+Azure 存储还可以通过声明性配置（而非显式 API 调用）与 Azure Functions 结合使用。 请参阅 [Azure Functions triggers and bindings for Azure Storage](/azure/azure-functions/functions-bindings-storage)（用于 Azure 存储的 Azure Functions 触发器和绑定），其中包括 F# 示例。
 
 ## <a name="using-azure-app-service-with-f"></a>使用 F # 中使用 Azure 应用服务 #
 

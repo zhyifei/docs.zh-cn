@@ -3,11 +3,11 @@ title: 必需自变量和重载组
 ms.date: 03/30/2017
 ms.assetid: 4ca3ed06-b9af-4b85-8b70-88c2186aefa3
 ms.openlocfilehash: d7cfe00d93f1eede77bcda5881c63843722c9a17
-ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
+ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "49374256"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49452896"
 ---
 # <a name="required-arguments-and-overload-groups"></a>必需自变量和重载组
 可以对活动进行配置，以便必须绑定某些自变量才能有效执行该活动。 `RequiredArgument` 特性用于指示活动中的某些参数是必需参数，`OverloadGroup` 特性用于将必需参数的多个类别组合在一起。 使用这些特性，活动作者可以提供简单或复杂的活动验证配置。  

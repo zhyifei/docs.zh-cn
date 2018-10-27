@@ -2,12 +2,12 @@
 title: NamedPipe 激活
 ms.date: 03/30/2017
 ms.assetid: f3c0437d-006c-442e-bfb0-6b29216e4e29
-ms.openlocfilehash: 5f277d2c72822d8828355d3d728864bedb6dc4f4
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
-ms.translationtype: MT
+ms.openlocfilehash: 05dea4e4faa91e4df9fdde8bdafc29473e49214e
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48873357"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50170492"
 ---
 # <a name="namedpipe-activation"></a>NamedPipe 激活
 本示例演示如何承载使用 Windows 进程激活服务 (WAS) 的服务以激活通过命名管道进行通信的服务。 此示例基于[Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md)并且需要[!INCLUDE[wv](../../../../includes/wv-md.md)]运行。  
@@ -29,7 +29,7 @@ ms.locfileid: "48873357"
   
  该服务实现定义“请求-答复”通信模式的协定。 该协定由 `ICalculator` 接口定义，该接口公开数学运算（加、减、乘和除），如下面的示例代码所示：  
   
-```  
+```csharp
 [ServiceContract(Namespace="http://Microsoft.ServiceModel.Samples")]  
 public interface ICalculator  
 {  
@@ -46,7 +46,7 @@ public interface ICalculator
   
  客户端向给定的数学运算发出同步请求，服务实现进行计算并返回相应的结果。  
   
-```  
+```csharp
 // Service class that implements the service contract.  
 public class CalculatorService : ICalculator  
 {  
@@ -146,7 +146,7 @@ public class CalculatorService : ICalculator
   
  运行示例时，操作请求和响应将显示在客户端控制台窗口中。 在客户端窗口中按 Enter 可以关闭客户端。  
   
-```  
+```console
 Add(100,15.99) = 115.99  
 Subtract(145,76.54) = 68.46  
 Multiply(9,81.25) = 731.25  
@@ -155,7 +155,7 @@ Divide(22,7) = 3.14285714285714
 Press <ENTER> to terminate client.  
 ```  
   
-#### <a name="to-set-up-build-and-run-the-sample"></a>设置、生成和运行示例  
+### <a name="to-set-up-build-and-run-the-sample"></a>设置、生成和运行示例  
   
 1.  确保已安装 [!INCLUDE[iisver](../../../../includes/iisver-md.md)]。 WAS 激活需要 [!INCLUDE[iisver](../../../../includes/iisver-md.md)]。  
   
@@ -222,5 +222,6 @@ Press <ENTER> to terminate client.
         > [!NOTE]
         >  必须以单行文本的形式键入此命令。  
   
-## <a name="see-also"></a>请参阅  
- [AppFabric 承载和持久性示例](https://go.microsoft.com/fwlink/?LinkId=193961)
+## <a name="see-also"></a>请参阅
+
+- [AppFabric 承载和持久性示例](https://docs.microsoft.com/previous-versions/appfabric/ff383418(v=azure.10))

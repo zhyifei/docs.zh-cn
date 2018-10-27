@@ -2,13 +2,12 @@
 title: WCF 中的安全行为
 ms.date: 03/30/2017
 ms.assetid: 513232c0-39fd-4409-bda6-5ebd5e0ea7b0
-author: BrucePerlerMS
-ms.openlocfilehash: d995ce4c37084cb8641199ec7dfa826b65e02b65
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
-ms.translationtype: MT
+ms.openlocfilehash: 221e9cb23e05378b68e4b53bc9d678c119738af5
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48841399"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50041552"
 ---
 # <a name="security-behaviors-in-wcf"></a>WCF 中的安全行为
 在 Windows Communication Foundation (WCF) 行为修改运行时行为在服务级别或终结点级别。 (有关行为一般情况下，请参阅[指定服务运行时行为](../../../../docs/framework/wcf/specifying-service-run-time-behavior.md)。)*安全行为*允许控制凭据、 身份验证、 授权和审核日志。 可以通过编程或通过配置来使用行为。 本主题重点讨论如何配置下列与安全功能相关的行为：  
@@ -83,7 +82,7 @@ ms.locfileid: "48841399"
   
 -   将有效 URI 添加到此集合，以指定有效 URI 集。 若要执行此操作，插入[\<添加 >](../../../../docs/framework/configure-apps/file-schema/wcf/add-of-allowedaudienceuris.md)为每个 URI  
   
- 有关详细信息，请参阅<xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator>。  
+ 有关详细信息，请参阅 <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator> 。  
   
  有关使用此配置元素的详细信息，请参阅[如何： 在联合身份验证服务上配置凭据](../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)。  
   

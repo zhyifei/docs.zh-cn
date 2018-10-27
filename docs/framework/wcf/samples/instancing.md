@@ -6,11 +6,11 @@ helpviewer_keywords:
 - Instancing Sample [Windows Communication Foundation]
 ms.assetid: c290fa54-f6ae-45a1-9186-d9504ebc6ee6
 ms.openlocfilehash: 61d966599d06c65690e317be0d514eba944beb77
-ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
-ms.translationtype: MT
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "49373751"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50045213"
 ---
 # <a name="instancing"></a>实例化
 “实例化”示例演示实例化行为设置，此设置控制如何响应客户端请求来创建服务类的实例。 该示例基于[Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md)，它可以实现`ICalculator`服务协定。 本示例定义从 `ICalculatorInstance` 继承的新协定 `ICalculator`。 用 `ICalculatorInstance` 指定的协定提供了三个附加操作，用于检查服务实例的状态。 通过更改实例化设置，运行客户端时可以观察到行为中的更改。  

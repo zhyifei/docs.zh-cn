@@ -5,13 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 9f71b6ae-737c-4382-8d89-0a7b1c7e182b
-author: BrucePerlerMS
-ms.openlocfilehash: f1dae4b9d2976ddbc941e49843324a29ec8885a4
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: e6fbaabb97e4a8de3e4bdbcc0c105b6cf999c0d5
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48836347"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50037582"
 ---
 # <a name="how-to-secure-metadata-endpoints"></a>如何：保护元数据终结点
 服务的元数据中可能包含恶意用户可以利用的关于您的应用程序的敏感信息。 服务使用者可能还要求一种用于获取关于服务的元数据的安全机制。 因此，有时需要使用安全终结点来发布元数据。  

@@ -2,12 +2,12 @@
 title: 异步程序 (Visual Basic 中) 中的控制流
 ms.date: 07/20/2015
 ms.assetid: b0443af7-c586-4cb0-b476-742ae4098a96
-ms.openlocfilehash: a6783373f4b556694fd79401546665b09f55919d
-ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
-ms.translationtype: MT
+ms.openlocfilehash: 368422338f6452bf5dbe968d4798bc0d5e937c92
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34728500"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50041578"
 ---
 # <a name="control-flow-in-async-programs-visual-basic"></a>异步程序 (Visual Basic 中) 中的控制流
 可以使用 `Async` 和 `Await` 关键字更加轻松地编写和维护异步程序。 但是，如果不了解程序的运行方式，结果可能会让你大吃一惊。 此主题通过一个简单的异步程序跟踪控制流，以显示控制从一种方法移动到另一种方法的情况，以及每次所传输的信息。  
@@ -15,7 +15,7 @@ ms.locfileid: "34728500"
 > [!NOTE]
 >  `Async` 和 `Await` 关键字是在 Visual Studio 2012 中引入的。  
   
- 一般情况下，将包含与异步代码的方法的标记[异步](../../../../visual-basic/language-reference/modifiers/async.md)修饰符。 在使用异步修饰符标记方法，你可以使用[Await (Visual Basic 中)](../../../../visual-basic/language-reference/operators/await-operator.md)运算符来指定位置暂停方法等待完成异步调用过程。 有关详细信息，请参阅[使用 Async 和 Await (Visual Basic 中) 的异步编程](../../../../visual-basic/programming-guide/concepts/async/index.md)。  
+ 一般情况下，将包含与异步代码的方法的标记[异步](../../../../visual-basic/language-reference/modifiers/async.md)修饰符。 在使用 async 修饰符标记的方法，你可以使用[等待 (Visual Basic)](../../../../visual-basic/language-reference/operators/await-operator.md)运算符来指定暂停该方法以等待完成异步调用过程的位置。 有关详细信息，请参阅[使用 Async 和 Await (Visual Basic 中) 的异步编程](../../../../visual-basic/programming-guide/concepts/async/index.md)。  
   
  下面的示例使用异步方法以字符串的形式下载指定网站的内容，并显示该字符串的长度。 此示例包含以下两种方法。  
   
@@ -49,7 +49,7 @@ Class MainWindow
         ' TWO  
         Dim client As HttpClient = New HttpClient()   
         Dim getStringTask As Task(Of String) =   
-            client.GetStringAsync("http://msdn.microsoft.com")  
+            client.GetStringAsync("https://msdn.microsoft.com")  
   
         ' THREE  
         Dim urlContents As String = Await getStringTask  
@@ -95,7 +95,7 @@ Length of the downloaded string: 33946.
  可以从 MSDN 下载本主题使用的代码，也可以自行生成该代码。  
   
 > [!NOTE]
->  若要运行该示例，必须具有 Visual Studio 2012 或更高版本和.NET Framework 4.5 或更高版本安装在计算机上。  
+>  若要运行该示例，必须具有 Visual Studio 2012 或更高版本和.NET Framework 4.5 或更高版本安装在您的计算机上。  
   
 ### <a name="download-the-program"></a>下载程序  
  可以从[异步示例：异步程序中的控制流](https://code.msdn.microsoft.com/Async-Sample-Control-Flow-5c804fc0)中下载此主题的应用程序。 以下步骤将打开并运行该程序。  
@@ -117,7 +117,7 @@ Length of the downloaded string: 33946.
   
      **“新建项目”** 对话框随即打开。  
   
-3.  在**已安装的模板**窗格中，选择**Visual Basic**，然后选择**WPF 应用程序**从项目类型列表。  
+3.  在中**已安装的模板**窗格中，选择**Visual Basic**，然后选择**WPF 应用程序**从项目类型列表。  
   
 4.  输入 `AsyncTracer` 作为项目名称，然后选择“确定”按钮。  
   
@@ -147,9 +147,9 @@ Length of the downloaded string: 33946.
   
 7.  对 <xref:System.Net.Http> 添加引用。  
   
-8.  在**解决方案资源管理器**，打开 MainWindow.xaml.vb，快捷菜单，然后选择**查看代码**。  
+8.  在中**解决方案资源管理器**，打开 MainWindow.xaml.vb，快捷菜单，然后选择**查看代码**。  
   
-9. 在 MainWindow.xaml.vb，替换为以下代码中替换代码。  
+9. 在 MainWindow.xaml.vb，将代码替换下面的代码。  
   
     ```vb  
     ' Add an Imports statement and a reference for System.Net.Http.  
@@ -190,7 +190,7 @@ Length of the downloaded string: 33946.
             ResultsTextBox.Text &= vbCrLf & "           Calling HttpClient.GetStringAsync." & vbCrLf  
   
             ' GetStringAsync returns a Task(Of String).   
-            Dim getStringTask As Task(Of String) = client.GetStringAsync("http://msdn.microsoft.com")  
+            Dim getStringTask As Task(Of String) = client.GetStringAsync("https://msdn.microsoft.com")  
   
             ResultsTextBox.Text &= vbCrLf & "THREE: Back in AccessTheWebAsync." & vbCrLf &  
                 "           Task getStringTask is started."  
@@ -253,7 +253,7 @@ Length of the downloaded string: 33946.
   
  ![步骤 1 和步骤 2](../../../../csharp/programming-guide/concepts/async/media/asynctrace-onetwo.png "AsyncTrace-ONETWO")  
   
- `AccessTheWebAsync` 和 `client.GetStringAsync` 的返回类型都是 <xref:System.Threading.Tasks.Task%601>。 对于 `AccessTheWebAsync`，TResult 是一个整数。 对于 `GetStringAsync`，TResult 是一个字符串。 有关异步方法的返回类型的详细信息，请参阅[异步返回类型 (Visual Basic 中)](../../../../visual-basic/programming-guide/concepts/async/async-return-types.md)。  
+ `AccessTheWebAsync` 和 `client.GetStringAsync` 的返回类型都是 <xref:System.Threading.Tasks.Task%601>。 对于 `AccessTheWebAsync`，TResult 是一个整数。 对于 `GetStringAsync`，TResult 是一个字符串。 有关异步方法返回类型的详细信息，请参阅[异步返回类型 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/async-return-types.md)。  
   
  在控制切换回调用方时，任务返回异步方法将返回一个任务实例。 在调用的方法中遇到 `Await` 运算符或在调用的方法结束时，控制会从异步方法返回其调用方。 标记为“3”到“6”的显示行将跟踪过程的这一部分。  
   
@@ -263,7 +263,7 @@ Length of the downloaded string: 33946.
  `client.GetStringAsync` 方法将返回分配给 `AccessTheWebAsync` 中的 `getStringTask` 变量的字符串任务。 该示例程序中的以下行说明了对 `client.GetStringAsync` 的调用和赋值。  
   
 ```vb  
-Dim getStringTask As Task(Of String) = client.GetStringAsync("http://msdn.microsoft.com")  
+Dim getStringTask As Task(Of String) = client.GetStringAsync("https://msdn.microsoft.com")  
 ```  
   
  可以将任务视为 `client.GetStringAsync` 的一个承诺，用于最终生成实际字符串。 同时，如果 `AccessTheWebAsync` 有要执行的工作，且该工作不依赖于 `client.GetStringAsync` 中承诺的字符串，则可在 `client.GetStringAsync` 等待时继续此工作。 在示例中，以下标记为“3”的输出行表示执行独立工作的机会  
@@ -280,14 +280,14 @@ THREE: Back in AccessTheWebAsync.
 Dim urlContents As String = Await getStringTask  
 ```  
   
- 下图显示了从控制流`client.GetStringAsync`到分配给的`getStringTask`和从创建`getStringTask`到 Await 运算符的应用程序。  
+ 下图显示了从控制流`client.GetStringAsync`到分配给`getStringTask`并从创建`getStringTask`到 Await 运算符的应用程序。  
   
  ![步骤 3](../../../../csharp/programming-guide/concepts/async/media/asynctrace-three.png "AsyncTrace-Three")  
   
  Await 表达式将暂停 `AccessTheWebAsync`，直到返回 `client.GetStringAsync`。 同时，控件返回至 `AccessTheWebAsync` 的调用方 `startButton_Click`。  
   
 > [!NOTE]
->  通常情况下，应立即等待对异步方法的调用。 例如，以下赋值可以替换前面创建的代码，然后等待 `getStringTask`：`Dim urlContents As String = Await client.GetStringAsync("http://msdn.microsoft.com")`  
+>  通常情况下，应立即等待对异步方法的调用。 例如，以下赋值可以替换前面创建的代码，然后等待 `getStringTask`：`Dim urlContents As String = Await client.GetStringAsync("https://msdn.microsoft.com")`  
 >   
 >  在本主题中，稍后将应用 await 运算符，以容纳通过程序标记控制流的输出行。  
   

@@ -2,15 +2,15 @@
 title: WCF 和 ASP.NET Web API
 ms.date: 03/30/2017
 ms.assetid: 08ceded3-fd9a-4467-9715-c4cbd9c7228e
-ms.openlocfilehash: ca44a439fa73b16764725ff56019a1d01cc0c8cd
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: 9ff974ca59b5a6448a140cbb1e7d6e8114840bdf
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/13/2018
-ms.locfileid: "49308366"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50040631"
 ---
 # <a name="wcf-and-aspnet-web-api"></a>WCF 和 ASP.NET Web API
-WCF 是 Microsoft 为生成面向服务的应用程序而提供的统一编程模型。 借助这一模型，开发人员可以构建既能跨平台与现有投资集成又能与现有投资交互的安全、可靠的事务处理解决方案。 [ASP.NET Web API](http://www.asp.net/web-api)是一个框架，可以轻松地构建 HTTP 服务访问范围广泛的客户端，包括浏览器和移动设备。 ASP.NET Web API 是用于在 .NET Framework 上生成 RESTful 应用程序的理想平台。 本主题提供了一些指南，可帮助您决定哪种技术能够最佳满足您的需要。  
+WCF 是 Microsoft 为生成面向服务的应用程序而提供的统一编程模型。 借助这一模型，开发人员可以构建既能跨平台与现有投资集成又能与现有投资交互的安全、可靠的事务处理解决方案。 [ASP.NET Web API](https://www.asp.net/web-api)是一个框架，可以轻松地构建 HTTP 服务访问范围广泛的客户端，包括浏览器和移动设备。 ASP.NET Web API 是用于在 .NET Framework 上生成 RESTful 应用程序的理想平台。 本主题提供了一些指南，可帮助您决定哪种技术能够最佳满足您的需要。  
   
 ## <a name="choosing-which-technology-to-use"></a>选择要使用的技术  
  下表介绍了每种技术的主要功能。  

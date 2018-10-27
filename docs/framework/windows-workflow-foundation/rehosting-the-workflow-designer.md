@@ -3,11 +3,11 @@ title: 重新承载工作流设计器
 ms.date: 03/30/2017
 ms.assetid: bec1fc28-f902-4edb-86c5-436cec802c2b
 ms.openlocfilehash: f5964b5c150dbe2a4132d072672a621315270fd5
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48579928"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49452935"
 ---
 # <a name="rehosting-the-workflow-designer"></a>重新承载工作流设计器
 [!INCLUDE[wfd1](../../../includes/wfd1-md.md)]可以重新承载在 Visual Studio 2012 以外的环境中用于创建、 修改和监视工作流。

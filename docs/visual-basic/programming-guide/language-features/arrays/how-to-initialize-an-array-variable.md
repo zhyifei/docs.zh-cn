@@ -7,49 +7,49 @@ helpviewer_keywords:
 - arrays [Visual Basic], initializing
 - arrays [Visual Basic], declaring
 ms.assetid: aadd7a60-7ca4-4608-b986-091f19e7fc10
-ms.openlocfilehash: ee8cb91fd2fae9637a0d0e33fca63a4cdb9d2fce
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4ce2e061c5f523fae3020b08034875422a0062a7
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33651565"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50170167"
 ---
 # <a name="how-to-initialize-an-array-variable-in-visual-basic"></a>如何：在 Visual Basic 中初始化数组变量
-可以通过包括数组文本中初始化数组变量`New`子句和指定数组的初始值。 你可以指定的类型，或允许其被推断从数组文本中的值。 有关如何推断出的类型的详细信息，请参见"填充数组与初始值"[数组](../../../../visual-basic/programming-guide/language-features/arrays/index.md)。  
+通过包括数组文本中初始化数组变量`New`子句并指定数组的初始值。 你可以指定的类型，或允许其从数组文本中的值推断出来。 有关如何推断出的类型的详细信息，请参阅"填充数组初始值"中[数组](../../../../visual-basic/programming-guide/language-features/arrays/index.md)。  
   
-### <a name="to-initialize-an-array-variable-by-using-an-array-literal"></a>若要通过使用数组文本中初始化数组变量  
+### <a name="to-initialize-an-array-variable-by-using-an-array-literal"></a>若要通过使用数组文本初始化数组变量  
   
--   在`New`子句，或当分配的数组值时，提供在括号内的元素值 (`{}`)。 下面的示例演示通过多种方式来声明、 创建和初始化一个变量来包含具有类型的元素的数组的`Char`。  
+-   在`New`子句，或分配的数组值时，提供在大括号内的元素值 (`{}`)。 下面的示例演示如何声明、 创建和初始化一个变量来包含包含类型的元素的数组的几个`Char`。  
   
      [!code-vb[VbVbalrArrays#16](../../../../visual-basic/programming-guide/language-features/arrays/codesnippet/VisualBasic/how-to-initialize-an-array-variable_1.vb)]  
   
-     每个语句执行后，数组创建有长度为 3，与通过索引包含初始值的 2 的索引 0 处的元素。 如果你提供的上限和值，则必须包含从 0 到上限的每个元素的值。  
+     每个语句执行后，创建的数组长度为 3，在索引 0 到 2 包含初始值的元素。 如果你提供上限和值，则必须包含从 0 到上限的每个元素的值。  
   
-     请注意你无需指定索引上限，如果你提供数组文本中的元素值。 如果指定没有上限，则数组的大小是基于推断出的数组文本中的值的数目。  
+     请注意，不需要指定索引上限，如果您提供了数组文本中的元素值。 如果指定没有上限，则根据数组文本中的值的数量推断数组的大小。  
   
-### <a name="to-initialize-a-multidimensional-array-variable-by-using-array-literals"></a>若要通过使用数组文本初始化多维数组变量  
+### <a name="to-initialize-a-multidimensional-array-variable-by-using-array-literals"></a>若要使用数组文本初始化多维数组变量  
   
--   嵌套在括号内的值 (`{}`) 在大括号内。 请确保所有推断为相同类型和长度的数组的嵌套的数组文本。 下面的代码示例显示几个示例的多维数组初始化。  
+-   嵌套在括号内的值 (`{}`) 大括号内。 请确保嵌套的数组文本全都推断为相同类型和长度的数组。 下面的代码示例显示了多维数组初始化的几个示例。  
   
      [!code-vb[VbVbalrArrays#17](../../../../visual-basic/programming-guide/language-features/arrays/codesnippet/VisualBasic/how-to-initialize-an-array-variable_2.vb)]  
   
--   你可以显式指定数组界限，或省略它们并让编译器推断基于文本数组中的值的数组边界。 如果你提供了上限和值，则必须每个维度中包含从 0 到上限的每个元素的值。 下面的示例演示通过多种方式来声明、 创建和初始化一个变量来包含一个具有类型的元素的二维数组 `Short`  
+-   可以显式指定数组界限或省略这些并让编译器推断数组界限的数组文本中的值。 如果你提供上限和值，则必须在每个维度中包含从 0 到上限的每个元素的值。 下面的示例演示几种方法声明、 创建和初始化一个变量来包含一个二维数组具有类型的元素。 `Short`  
   
      [!code-vb[VbVbalrArrays#18](../../../../visual-basic/programming-guide/language-features/arrays/codesnippet/VisualBasic/how-to-initialize-an-array-variable_3.vb)]  
   
-     每个语句执行后，创建的数组包含有索引的六个初始化的元素`(0,0)`， `(0,1)`， `(0,2)`， `(1,0)`， `(1,1)`，和`(1,2)`。 每个数组位置包含的值`10`。  
+     每个语句执行后，创建的数组包含六个初始化的元素的索引`(0,0)`， `(0,1)`， `(0,2)`， `(1,0)`， `(1,1)`，并`(1,2)`。 每个数组位置都包含值`10`。  
   
--   下面的示例循环访问一个多维数组。 在 Windows 控制台应用程序在 Visual Basic 中编写的将粘贴内的代码`Sub Main()`方法。 最后一个注释显示输出。  
+-   下面的示例循环访问多维数组。 在用 Visual Basic 编写的 Windows 控制台应用程序，将粘贴的代码将在`Sub Main()`方法。 最后一个注释显示输出。  
   
      [!code-vb[VbVbalrArrays#31](../../../../visual-basic/programming-guide/language-features/arrays/codesnippet/VisualBasic/how-to-initialize-an-array-variable_4.vb)]  
   
-### <a name="to-initialize-a-jagged-array-variable-by-using-array-literals"></a>若要通过使用数组文本初始化交错的数组变量  
+### <a name="to-initialize-a-jagged-array-variable-by-using-array-literals"></a>若要使用数组文本初始化交错的数组变量  
   
--   嵌套在括号内的对象值 (`{}`)。 虽然你还可以嵌套数组文本指定数组的不同长度，对于交错数组，请确保嵌套的数组文本括在括号中 (`()`)。 括号强制的嵌套的数组文本中，计算，生成的数组可用作交错数组的初始值。 下面的代码示例显示交错的数组初始化的两个示例。  
+-   将大括号内的对象值嵌套 (`{}`)。 尽管您还可以嵌套指定不同长度，对于交错数组的数组的数组文本，但请确保嵌套的数组文本括在小括号 (`()`)。 括号强制先计算嵌套的数组文本，并生成数组将用作交错数组的初始值。 下面的代码示例演示了交错的数组初始化的两个示例。  
   
      [!code-vb[VbVbalrArrays#19](../../../../visual-basic/programming-guide/language-features/arrays/codesnippet/VisualBasic/how-to-initialize-an-array-variable_5.vb)]  
   
--   下面的示例循环访问一个交错数组。 在 Windows 控制台应用程序在 Visual Basic 中编写的将粘贴内的代码`Sub Main()`方法。  在代码中的最后一个注释显示输出。  
+-   下面的示例循环访问交错数组。 在用 Visual Basic 编写的 Windows 控制台应用程序，将粘贴的代码将在`Sub Main()`方法。  在代码中的最后一个注释显示输出。  
   
      [!code-vb[VbVbalrArrays#32](../../../../visual-basic/programming-guide/language-features/arrays/codesnippet/VisualBasic/how-to-initialize-an-array-variable_6.vb)]  
   

@@ -3,12 +3,12 @@ title: '&lt;trackingProfile&gt;'
 ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: 154830ff-ddd3-4397-a3b5-5b334907777f
-ms.openlocfilehash: fe8d129769d0948160d581aa578b5ac2d0dc0e4d
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: 8ab3c0c30c193d176febbf832274a54b214b5458
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49121796"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50047964"
 ---
 # <a name="lttrackingprofilegt"></a>&lt;trackingProfile&gt;
 表示用于创建工作流跟踪记录中跟踪参与者的订阅的配置节。 跟踪配置文件包含跟踪查询，这些查询允许跟踪参与者订阅当工作流实例的状态在运行时发生更改时发出的工作流事件。 跟踪配置文件节中定义的查询用于定义订阅返回的事件类型。  
@@ -90,7 +90,7 @@ ms.locfileid: "49121796"
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<参与者 >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/participants.md)|一个配置元素，包含 <xref:System.ServiceModel.Activities.Tracking.Configuration.ProfileWorkflowElement.ActivityDefinitionId?displayProperty=nameWithType> 属性所标识的特定工作流的所有查询。|  
+|[\<参与者 >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/participants.md)|一个配置元素，包含 <xref:System.ServiceModel.Activities.Tracking.Configuration.ProfileWorkflowElement.ActivityDefinitionId%2A?displayProperty=nameWithType> 属性所标识的特定工作流的所有查询。|  
   
 ### <a name="parent-elements"></a>父元素  
   

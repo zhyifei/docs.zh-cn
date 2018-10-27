@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Service Transaction Behavior Sample [Windows Communication Foundation]
 ms.assetid: 1a9842a3-e84d-427c-b6ac-6999cbbc2612
-ms.openlocfilehash: 69f65ca833dc9a0f719541733be9e6066db37f6e
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: bfdf0c9ddb8654bf7a6736bcccb0d9350e9a12a6
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43858104"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50042488"
 ---
 # <a name="service-transaction-behavior"></a>服务事务行为
 此示例演示客户端协调事务的用法，以及为了控制服务事务行为而对 ServiceBehaviorAttribute 和 OperationBehaviorAttribute 进行的设置。 此示例基于[Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md) ，实现计算器服务，但扩展来维护数据库表和有状态运行总数计算器操作中所执行操作的服务器日志。 持久写入服务器日志表依赖于客户端协调事务的结果 - 如果客户端事务未完成，Web 服务事务可以确保不会提交对数据库的更新。  
@@ -19,7 +19,7 @@ ms.locfileid: "43858104"
   
  服务协定定义所有操作都要求通过请求对事务进行流处理：  
   
-```  
+```csharp
 [ServiceContract(Namespace = "http://Microsoft.ServiceModel.Samples",  
                     SessionMode = SessionMode.Required)]  
 public interface ICalculator  
@@ -51,7 +51,7 @@ public interface ICalculator
   
  启动与服务和事务的连接后，客户端访问该事务范围内的几个服务操作，然后完成该事务并断开连接：  
   
-```  
+```csharp
 // Create a client  
 CalculatorClient client = new CalculatorClient();  
   
@@ -114,7 +114,7 @@ client.Close();
   
  属性化服务实现如下：  
   
-```  
+```csharp
 [ServiceBehavior(  
     TransactionIsolationLevel = System.Transactions.IsolationLevel.Serializable,  
     TransactionTimeout = "00:00:30",  
@@ -168,7 +168,7 @@ public class CalculatorService : ICalculator
   
  运行示例时，操作请求和响应将显示在客户端控制台窗口中。 在客户端窗口中按 Enter 可以关闭客户端。  
   
-```  
+```console  
 Starting transaction  
 Performing calculations...  
   Adding 100, running total=100  
@@ -182,7 +182,7 @@ Press <ENTER> to terminate client.
   
  服务操作请求的日志记录显示在服务的控制台窗口中。 在客户端窗口中按 Enter 可以关闭客户端。  
   
-```  
+```console  
 Press <ENTER> to terminate service.  
 Creating new service instance...  
   Writing row 1 to database: Adding 100 to 0  

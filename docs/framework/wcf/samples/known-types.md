@@ -2,12 +2,12 @@
 title: 已知类型
 ms.date: 03/30/2017
 ms.assetid: 88d83720-ca38-4b2c-86a6-f149ed1d89ec
-ms.openlocfilehash: ec1dfa426c19b5471acb1c359f5068854fa8aa71
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 76e0dadd372df4bc2755db0c3ff7cce5cc31ba20
+ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44192489"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49454403"
 ---
 # <a name="known-types"></a>已知类型
 此示例演示如何在数据协定中指定有关派生类型的信息。 数据协定允许您在服务中传入和传出结构化数据。 在面向对象的编程中，可以用从另一个类型继承的类型来代替原始类型。 在面向服务的编程中，传递的是架构（而不是类型），因此，类型之间的关系将不保留。 <xref:System.Runtime.Serialization.KnownTypeAttribute> 属性允许在数据协定中包括有关派生类型的信息。 如果不使用此机制，则不能在应当使用基类型的情况下发送或接收派生类型。  
@@ -17,7 +17,7 @@ ms.locfileid: "44192489"
   
  此服务的服务协定使用复数，如下面的示例代码中所示。  
   
-```  
+```csharp
 // Define a service contract.  
 [ServiceContract(Namespace="http://Microsoft.ServiceModel.Samples")]  
 public interface ICalculator  
@@ -35,7 +35,7 @@ public interface ICalculator
   
  <xref:System.Runtime.Serialization.DataContractAttribute> 和 <xref:System.Runtime.Serialization.DataMemberAttribute> 应用于 `ComplexNumber` 类，这将指示在客户端和服务之间可以传递类的哪些字段。 可以用 `ComplexNumberWithMagnitude` 派生类来代替 `ComplexNumber`。 <xref:System.Runtime.Serialization.KnownTypeAttribute> 类型的 `ComplexNumber` 属性说明了这一点。  
   
-```  
+```csharp
 [DataContract(Namespace="http://Microsoft.ServiceModel.Samples")]  
 [KnownType(typeof(ComplexNumberWithMagnitude))]  
 public class ComplexNumber  
@@ -55,7 +55,7 @@ public class ComplexNumber
   
  `ComplexNumberWithMagnitude` 类型派生自 `ComplexNumber`，但是额外添加了一个数据成员 `Magnitude`。  
   
-```  
+```csharp
 [DataContract(Namespace="http://Microsoft.ServiceModel.Samples")]  
 public class ComplexNumberWithMagnitude : ComplexNumber  
 {  
@@ -73,7 +73,7 @@ public class ComplexNumberWithMagnitude : ComplexNumber
   
  为了演示已知的类型功能，该服务实现它将返回方式`ComplexNumberWithMagnitude`只针对加法和减法。 （由于 `ComplexNumber` 属性的存在，即使协定中指定了 `KnownTypeAttribute`，这也是允许的。） 乘法和除法仍返回基`ComplexNumber`类型。  
   
-```  
+```csharp
 public class DataContractCalculatorService : IDataContractCalculator  
 {  
     public ComplexNumber Add(ComplexNumber n1, ComplexNumber n2)  
@@ -116,14 +116,14 @@ public class DataContractCalculatorService : IDataContractCalculator
   
  在客户端上的服务协定和数据协定中定义源 generatedclient.cs 文件中，由[ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)从服务元数据。 由于在服务的数据协定中指定了 <xref:System.Runtime.Serialization.KnownTypeAttribute> 属性，因此在使用服务时，客户端既能够接收 `ComplexNumber` 类又能够接收 `ComplexNumberWithMagnitude` 类。 客户端检测它是否获得了 `ComplexNumberWithMagnitude` 并生成相应的输出：  
   
-```  
+```csharp
 // Create a client  
 DataContractCalculatorClient client =   
     new DataContractCalculatorClient();  
   
 // Call the Add service operation.  
-ComplexNumber value1 = new ComplexNumber(); value1.real = 1; value1.imaginary = 2;  
-ComplexNumber value2 = new ComplexNumber(); value2.real = 3; value2.imaginary = 4;  
+ComplexNumber value1 = new ComplexNumber() { real = 1, imaginary = 2 };  
+ComplexNumber value2 = new ComplexNumber() { real = 3, imaginary = 4 };  
 ComplexNumber result = client.Add(value1, value2);  
 Console.WriteLine("Add({0} + {1}i, {2} + {3}i) = {4} + {5}i",  
     value1.real, value1.imaginary, value2.real, value2.imaginary,  
@@ -141,7 +141,7 @@ else
   
  运行示例时，操作的请求和响应将显示在客户端控制台窗口中。 请注意，对加法和减法列显了数量级，而对乘法和除法却没有列显，这是由服务的实现方式确定的。 在客户端窗口中按 Enter 可以关闭客户端。  
   
-```  
+```console  
 Add(1 + 2i, 3 + 4i) = 4 + 6i  
 Magnitude: 7.21110255092798  
 Subtract(1 + 2i, 3 + 4i) = -2 + -2i  

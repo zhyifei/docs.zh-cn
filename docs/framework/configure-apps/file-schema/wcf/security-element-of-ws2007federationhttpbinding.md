@@ -2,13 +2,12 @@
 title: '&lt;ws2007FederationHttpBinding&gt; 的 &lt;security&gt; 元素'
 ms.date: 03/30/2017
 ms.assetid: 826219b4-3a16-45fc-832d-0cd7cbbd3b84
-author: BrucePerlerMS
-ms.openlocfilehash: f413a7f978df1a0ef3d731abee93c34824c8a6c6
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: e212e73f03d52bdfcba8559db5ab62288b3ebcc2
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48841146"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50043024"
 ---
 # <a name="ltsecuritygt-element-of-ltws2007federationhttpbindinggt"></a>&lt;ws2007FederationHttpBinding&gt; 的 &lt;security&gt; 元素
 定义的安全设置[ \<ws2007FederationHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/ws2007federationhttpbinding.md)元素。  

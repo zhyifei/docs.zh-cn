@@ -5,11 +5,11 @@ helpviewer_keywords:
 - XML Reader
 ms.assetid: 60e5848d-7d9c-4ea5-bed9-22758c9ac16c
 ms.openlocfilehash: 5ac97afd2efc1bb57a81f5cd2d78fed18ca3804d
-ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "49374672"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50039252"
 ---
 # <a name="xmlreader-sample"></a>XmlReader 示例
 XmlReader 示例演示如何使用 <xref:System.Xml.XmlReader> 处理消息正文。 该示例基于[Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md)，它可实现计算器服务。 示例中还添加了一个服务操作 `Sum`，它接受包含要加在一起的值数组的消息。 该服务使用 <xref:System.Xml.XmlReader> 读取消息。  

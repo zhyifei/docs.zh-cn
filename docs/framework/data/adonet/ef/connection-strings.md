@@ -3,11 +3,11 @@ title: ADO.NET 实体框架中的连接字符串
 ms.date: 10/15/2018
 ms.assetid: 78d516bc-c99f-4865-8ff1-d856bc1a01c0
 ms.openlocfilehash: 99b6b1b7a38477dc17d3960ee5bc0b63ec0cb819
-ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
-ms.translationtype: MT
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "49372481"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50048146"
 ---
 # <a name="connection-strings-in-the-adonet-entity-framework"></a>ADO.NET 实体框架中的连接字符串
 连接字符串包含作为参数从数据提供程序传递到数据源的初始化信息。 其语法取决于数据提供程序，并且会在试图打开连接的过程中对连接字符串进行分析。 实体框架使用的连接字符串包含用于连接到支持实体框架的基础 ADO.NET 数据提供程序的信息。 它们还包含有关所需的模型和映射文件的信息。  

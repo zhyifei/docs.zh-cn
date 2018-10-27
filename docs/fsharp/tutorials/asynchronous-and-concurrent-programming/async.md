@@ -1,26 +1,26 @@
 ---
-title: 'F # 中的异步编程'
-description: '了解如何通过是易于使用和自然语言的语言级别编程模型实现 F # 异步编程。'
+title: 异步编程中F#
+description: 了解如何F#通过是易于使用和自然语言的语言级别编程模型实现异步编程。
 ms.date: 06/20/2016
-ms.openlocfilehash: 93ecd05efc493489435214dcd7ae78fffcccec1f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.openlocfilehash: de07f1252df56e3dfec5ea7a34a283b1c9508523
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33566868"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50034412"
 ---
-# <a name="async-programming-in-f"></a>F # 中的异步编程 #
+# <a name="async-programming-in-f"></a>异步编程中F# #
 
 > [!NOTE]
-> 已在本文中发现了一些不精确性。  它是正在重写。  请参阅[问题 #666](https://github.com/dotnet/docs/issues/666)若要了解有关所做的更改。
+> 在本文中发现了一些错误。  它是被重写。  请参阅[问题 #666](https://github.com/dotnet/docs/issues/666)若要了解有关所做的更改。
 
-异步编程 F # 中可以通过设计为易于使用和自然语言的语言级别编程模型来完成。
+异步编程中F#可以通过设计为易于使用和自然语言的语言级别编程模型来完成。
 
-F # 中的异步编程的核心是`Async<'T>`，可以触发在后台中运行的工作的表示其中`'T`通过这两个特殊返回的任一类型`return`关键字或`unit`如果异步工作流未包含任何若要返回的结果。
+异步编程中的核心F#是`Async<'T>`，表示形式可以触发以便在后台运行的工作位置`'T`通过特殊的返回类型`return`关键字或`unit`如果异步工作流具有要返回的结果。
 
-若要了解的关键概念是一个异步表达式的类型是`Async<'T>`，即仅_规范_进行异步上下文中工作。 它不执行显式启动之前与起始函数之一 (如`Async.RunSynchronously`)。 虽然这是另一种执行工作的考虑，它最终正在实际上非常简单。
+若要了解的关键概念在于异步表达式的类型是`Async<'T>`，即只_规范_的异步上下文中完成的工作。 不执行直到它显式启动其中一个起始函数 (如`Async.RunSynchronously`)。 虽然这是以不同的方式考虑执行工作的但它最终实际上非常简单。
 
-例如，假设你想要从 dotnetfoundation.org 下载 HTML，而不会阻止主线程。 你可以实现它如下：
+例如，假设你想要从 dotnetfoundation.org 下载 HTML，而不会阻止主线程。 您可以实现它像这样：
 
 ```fsharp
 open System
@@ -41,23 +41,23 @@ let html = "https://dotnetfoundation.org" |> fetchHtmlAsync |> Async.RunSynchron
 printfn "%s" html
 ```
 
-就是这么简单！ 除了使用外`async`， `let!`，和`return`，这是仅正常 F # 代码。
+就是这么简单！ 除了使用`async`， `let!`，并`return`，这是正常的只是F#代码。
 
-有几个语法构造该数据类型值得注意：
+有几个语法构造是值得一提：
 
-*   `let!` 将绑定 （它运行在另一个上下文） 异步表达式的结果。
-*   `use!` 工作方式就像`let!`，但在超出范围时释放其绑定的资源。
-*   `do!` 将等待异步工作流，它不返回任何内容。
-*   `return` 只需从一个异步表达式将返回结果。
+*   `let!` 将一个异步表达式 （其在另一个上下文中运行） 的结果绑定。
+*   `use!` 工作方式就类似于`let!`，但它超出范围时释放其绑定的资源。
+*   `do!` 将 await 的异步工作流，这不会返回任何内容。
+*   `return` 只需从异步表达式将返回结果。
 *   `return!` 执行另一个异步工作流并返回其返回值作为结果。
 
-此外，普通`let`， `use`，和`do`关键字可以与异步版本一起使用，就像一个常规函数中。
+此外，正常`let`， `use`，和`do`关键字可以用异步版本，就像在普通函数中。
 
-## <a name="how-to-start-async-code-in-f"></a>如何启动 F # 中的异步代码 #
+## <a name="how-to-start-async-code-in-f"></a>如何在启动异步代码F# #
 
-如前所述，异步代码是的需要显式启动另一个上下文中进行工作的规范。 以下是两种主要方式来实现此目的：
+前面曾提到，异步代码将是一种规范，需要对其显式启动另一个上下文中完成工作。 下面是两种主要方法来实现此目的：
 
-1.  `Async.RunSynchronously` 将在另一个线程上启动的异步工作流，并等待其结果。
+1.  `Async.RunSynchronously` 将另一个线程上启动异步工作流，并等待其结果。
 
 ```fsharp
 open System
@@ -78,7 +78,7 @@ let fetchHtmlAsync url =
  printfn "%s" html
  ```
 
-2.  `Async.Start` 将在另一个线程上启动的异步工作流并将**不**等待其结果。
+2.  `Async.Start` 将另一个线程上启动的异步工作流，并将**不**等待其结果。
 
 ```fsharp
 open System
@@ -99,17 +99,17 @@ Async.Start(workflow)
 printfn "%s" "uploadDataAsync is running in the background..."
  ```
 
-还有其他方法来启动异步工作流可用于更具体的方案。 对其进行详细[异步引用中](https://msdn.microsoft.com/library/ee370232.aspx)。
+还有其他方法来启动异步工作流可用于更多特定方案。 对其进行详细[异步参考中](https://msdn.microsoft.com/library/ee370232.aspx)。
 
-### <a name="a-note-on-threads"></a>在线程上注释
+### <a name="a-note-on-threads"></a>有关线程的说明
 
-上述"在另一个线程"短语，但务必要知道**这并不意味着异步工作流是的外观的多线程处理**。 工作流实际上"跳转"之间线程，借贷它们对于少量的时间来执行有用的工作。 时的异步工作流有效地"等待"（例如，等待为返回的内容的网络调用），它已在时间借贷任何线程将被释放到转有用的工作上其他内容。 这允许的系统在其运行尽可能情况下，有效地利用异步工作流，并使它们尤其是对于大量 I/O 方案强。
+上述"在另一个线程"短语，但务必要知道**这并不意味着异步工作流是用于的外观的多线程处理**。 工作流实际"跳转"借用的少量时间来执行有用的工作线程之间。 时异步工作流有效地"等待"（例如，等待网络调用，以返回某些内容），在时，它借用了任何线程被释放到转执行有用的工作在别的事情上。 这允许异步工作流，以利用它们尽可能有效地运行的系统并使这些极强的大量 I/O 方案。
 
-## <a name="how-to-add-parallelism-to-async-code"></a>如何将并行添加到异步代码
+## <a name="how-to-add-parallelism-to-async-code"></a>如何将并行处理添加到异步代码
 
-有时你可能需要并行执行多个异步作业收集其结果和解释它们以某种方式。 `Async.Parallel` 允许你执行此操作而无需使用任务并行库，这将涉及到无需强制`Task<'T>`和`Async<'T>`类型。
+有时您可能需要并行执行多个异步作业收集其结果，并以某种方式进行解释。 `Async.Parallel` 允许您执行此操作而无需使用任务并行库，这会涉及无需强制转换`Task<'T>`和`Async<'T>`类型。
 
-下面的示例将使用`Async.Parallel`若要从并行的四个流行网站下载的 HTML，等待这些任务完成，然后输出下载的 HTML。
+下面的示例将使用`Async.Parallel`从并行的四个常用网站下载 HTML，等待这些任务完成，然后输出已下载的 HTML。
 
 ```fsharp
 open System
@@ -144,55 +144,56 @@ for html in htmlList do
 
 ## <a name="important-info-and-advice"></a>重要信息和建议
 
-*   将"Async"追加到你将使用的任何函数的末尾
+*   将"Async"追加到末尾将使用的任何函数
 
- 尽管这是命名约定，但它确实使 API 可发现性等更容易。 特别是如果有相同的例程的同步和异步版本，则这是异步通过名称来显式声明一个好办法。
+ 虽然这是命名约定，但它确实使 API 可发现性等内容更容易。 尤其是例程的当有相同的同步和异步版本，它是例程的显式声明为异步通过名称的一个好办法。
 
 *   侦听编译器 ！
 
- F # 编译器是非常严格，使几乎不可能执行其他操作如 troubling 同步运行"async"代码。 如果您遇到一条警告，则代码不会执行你认为它将一个符号。 如果编译器可以为取悦，你的代码将很可能会按预期方式执行。
+ F#编译器是非常严格，因此几乎不可能执行一些麻烦的问题等操作以同步方式运行"async"代码。 如果您遇到一条警告，则代码不会执行认为它将如何登录。 如果编译器可以为取悦，按预期方式将很可能执行代码。
 
-## <a name="for-the-cvb-programmer-looking-into-f"></a>为 C# /VB 程序员研究 F # #
+## <a name="for-the-cvb-programmer-looking-into-f"></a>有关C#/VB 程序员深入研究F# #
 
-本部分假定你熟悉 C# 中的异步模型 / VB. 如果你不可以， [C# 中的异步编程](../../../csharp/async.md)是一个起始点。
+本部分假定您熟悉使用中的异步模型C#/VB. 如果你不可以，[中的异步编程C#](../../../csharp/async.md)是一个起始点。
 
-没有本质上 C# /VB 异步模型和 F # 异步模型之间的区别。
+没有本质上之间的区别C#/VB 异步模型和F#异步模型。
 
-当调用返回的函数`Task`或`Task<'T>`，该作业是否已经开始执行。 返回的句柄表示已在运行异步作业。 与此相反，当你调用的异步函数在 F # 中，`Async<'a>`返回表示一个作业，它将**生成**在某个时间点。 了解此模型是功能强大，因为它允许 F # 中的异步作业可以链接在一起变得更容易，有条件地执行和入门的更细粒度的控制。
+当调用一个函数，它返回`Task`或`Task<'T>`，该作业已开始执行。 返回的句柄表示已在运行异步作业。 与此相反，当您调用异步函数F#，则`Async<'a>`返回表示一个作业，它将是**生成**在某个时间点。 了解此模型非常强大，因为它允许在异步作业F#链接起来变得更容易，有条件地执行和入门的更细粒度的控制。
 
 有几个其他的相似之处和值得注意的区别。
 
 ### <a name="similarities"></a>相似之处
 
-*   `let!``use!`，和`do!`类似于`await`内调用异步作业时`async{ }`块。
+*   `let!``use!`，并`do!`类似于`await`内调用的异步作业时`async{ }`块。
 
- 三个关键字只能在`async { }`块，类似于如何`await`仅会在内部进行调用`async`方法。 简单地说，`let!`是为了确保你想要捕获和使用的结果时`use!`内容应会清理其资源，使用它之后, 是同一但和`do!`适用于你想要等待的异步工作流完成不返回值再继续。
+ 只能在使用三个关键字`async { }`块中，类似于如何`await`只能在调用`async`方法。 简单地说，`let!`适用于你想要捕获和使用结果`use!`是相同，但某些内容在使用后，应会清理其资源和`do!`适用于你想要等待的异步工作流完成不返回值再继续。
 
-*   F # 支持类似的方式的数据并行。
+*   F#类似的方式支持数据并行。
 
- 虽然它的操作方式差别很大，`Async.Parallel`对应于`Task.WhenAll`了所需的一组异步作业的结果，它们都完成时的方案。
+ 尽管它以非常不同的方式，运行`Async.Parallel`对应于`Task.WhenAll`想的一组异步作业结果，它们全部完成时的方案。
 
 ### <a name="differences"></a>差异
 
 *   嵌套`let!`不允许，与不同嵌套 `await`
 
- 与不同`await`，可以嵌套; 如果无限期，`let!`无法，并且必须绑定使用在另一个内部之前其结果`let!`， `do!`，或`use!`。
+ 与不同`await`，可以嵌套无限期`let!`能并且必须包含另一个内部使用它之前绑定其结果`let!`， `do!`，或`use!`。
 
-*   取消支持为在 F # 中比在 C# 中更简单 / VB.
+*   取消支持是在F#比C#/VB.
 
- 在 C# /VB 中支持的中途其执行任务的取消需要检查`IsCancellationRequested`属性或调用`ThrowIfCancellationRequested()`上`CancellationToken`传递给异步方法的对象。
+ 支持的任务在执行中途取消C#/VB 需要检查`IsCancellationRequested`属性或调用`ThrowIfCancellationRequested()`上`CancellationToken`传递到异步方法的对象。
 
-与此相反，F # 异步工作流是更自然可取消的。 取消是一个简单的三个步骤过程。
+与此相反，F#异步工作流是更自然可取消。 取消是一个简单的三步骤过程。
 
 1.  创建一个新的 `CancellationTokenSource`。
 2.  将它传递到起始函数。
-3.  调用`Cancel`令牌上。
+3.  调用`Cancel`的令牌。
 
 示例:
 
 ```fsharp
 open System
 open System.Net
+open System.Threading
 
 let uploadDataAsync url data = 
     async {
@@ -204,7 +205,7 @@ let uploadDataAsync url data =
 let workflow = uploadDataAsync "https://url-to-upload-to.com" "hello, world!"
 
 let token = new CancellationTokenSource()
-Async.Start (workflow, token)
+Async.Start (workflow, token.Token)
 
 // Immediately cancel uploadDataAsync after it's been started.
 token.Cancel()
@@ -215,5 +216,5 @@ token.Cancel()
 ## <a name="further-resources"></a>其他资源：
 
 *   [MSDN 上的异步工作流](https://msdn.microsoft.com/library/dd233250.aspx)
-*   [F # 的异步序列](https://fsprojects.github.io/FSharp.Control.AsyncSeq/library/AsyncSeq.html)
-*   [F # 数据 HTTP 实用程序](https://fsharp.github.io/FSharp.Data/library/Http.html)
+*   [异步序列F#](https://fsprojects.github.io/FSharp.Control.AsyncSeq/library/AsyncSeq.html)
+*   [F#HTTP 数据实用程序](https://fsharp.github.io/FSharp.Data/library/Http.html)

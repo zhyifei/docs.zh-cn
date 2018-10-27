@@ -3,11 +3,11 @@ title: 针对 Windows 的 WCF 服务和事件跟踪
 ms.date: 03/30/2017
 ms.assetid: eda4355d-0bd0-4dc9-80a2-d2c832152272
 ms.openlocfilehash: 100f9c0ce71eedaa4061fc894521597074b21b00
-ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
+ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "49372461"
+ms.lasthandoff: 10/22/2018
+ms.locfileid: "49480026"
 ---
 # <a name="wcf-services-and-event-tracing-for-windows"></a>针对 Windows 的 WCF 服务和事件跟踪
 此示例演示如何使用 Windows Communication Foundation (WCF) 中的分析跟踪来发出事件中事件跟踪 Windows (ETW)。 分析跟踪是 WCF 堆栈中允许在生产环境中的 WCF 服务的故障排除的关键点处发出的事件。

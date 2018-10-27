@@ -2,13 +2,12 @@
 title: 可靠安全配置文件
 ms.date: 03/30/2017
 ms.assetid: 921edc41-e91b-40f9-bde9-b6148b633e61
-author: BrucePerlerMS
-ms.openlocfilehash: 8bb7c6f9835fc7c0926e918563f85a28281f8a89
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
-ms.translationtype: MT
+ms.openlocfilehash: 98e12e2cbe57313981c863307d3bb65ce88f6589
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47073562"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50037488"
 ---
 # <a name="reliable-secure-profile"></a>可靠安全配置文件
 此示例演示如何编写 WCF 并[可靠安全配置文件](https://go.microsoft.com/fwlink/?LinkId=178140)(RSP)。 此示例演示如何实现[建立连接](https://go.microsoft.com/fwlink/?LinkId=178141)通道以及可靠的消息传送和 （可选） 可以编写基于 RSP 规范的创建的可靠安全绑定的安全通道。  

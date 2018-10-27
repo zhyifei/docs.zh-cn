@@ -2,12 +2,12 @@
 title: Web 服务协议互操作性指南
 ms.date: 03/30/2017
 ms.assetid: f2981678-ebdb-433d-899b-467f7df95fb2
-ms.openlocfilehash: 37416a80c8b6f2ac086dbface1cda37609698bfc
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 9aeceff9dc2b714016d2f7c379e538d885489bb9
+ms.sourcegitcommit: 4621e67f69e7a9503ea93313ff60d69683207889
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48842150"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "49995394"
 ---
 # <a name="web-services-protocols-interoperability-guide"></a>Web 服务协议互操作性指南
 Windows Communication Foundation (WCF) 实现多个 Web 服务协议。 这些协议中有许多都包含大量留给实施者来决定的选项和扩展点。 本主题提供了一系列 WCF 实现的 Web 服务协议。 本节中的其他主题介绍每个受支持的协议的实现详细信息。  
@@ -36,7 +36,7 @@ Windows Communication Foundation (WCF) 实现多个 Web 服务协议。 这些�
 |W3C Web 服务寻址 1.0 - 核心|[Web 服务寻址 1.0-核心](https://go.microsoft.com/fwlink/?LinkId=96688)|  
 |W3C Web 服务寻址 1.0 - SOAP 绑定|[Web 服务寻址 1.0-SOAP 绑定](https://go.microsoft.com/fwlink/?LinkId=96689)|  
 |W3C Web 服务寻址 1.0 - WSDL 绑定*|[Web 服务寻址 1.0-WSDL 绑定](https://go.microsoft.com/fwlink/?LinkId=96690)|  
-|W3C Web 服务寻址 1.0 元数据|[Web 服务寻址 1.0-元数据](http://www.w3.org/TR/ws-addr-metadata/)|  
+|W3C Web 服务寻址 1.0 元数据|[Web 服务寻址 1.0-元数据](https://www.w3.org/TR/ws-addr-metadata/)|  
 |WSDL SOAP1.1 绑定|[Web 服务描述语言 (WSDL) 1.1](https://go.microsoft.com/fwlink/?LinkId=96160)|  
 |WSDL SOAP1.2 绑定|[用于 SOAP 1.2 的 WSDL 1.1 绑定扩展](https://go.microsoft.com/fwlink/?LinkId=96691)|  
   

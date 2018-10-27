@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - documents [WPF], features for
 ms.assetid: 7bf37ccb-5d09-4eae-9661-929582aeb259
-ms.openlocfilehash: 4a0d2b99368dc985c11951089adbabf8e1cdc8b9
-ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
+ms.openlocfilehash: 145c28a2f36b2d53487004af214f3c6048f0687e
+ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "49372143"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49415196"
 ---
 # <a name="documents"></a>文档
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 提供一组功能丰富的组件，使用这些组件，开发人员能够生成具有高级文档功能和提供更好阅读体验的应用程序。 除增强功能和质量外，[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 还针对文档打包、安全性和存储提供简单的管理服务。  
@@ -28,4 +28,4 @@ ms.locfileid: "49372143"
  <xref:System.Windows.Controls.DocumentViewer>  
  <xref:System.Windows.Documents.FlowDocument>  
  <xref:System.Windows.Xps>  
- [isXPS.exe（isXPS 合规性工具）](/previous-versions/dotnet/netframework-4.0/aa348104(v=vs.100))
+ [isXPS.exe（isXPS 合规性工具）](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/aa348104(v=vs.100))

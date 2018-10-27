@@ -2,12 +2,12 @@
 title: 非类型化的请求-答复
 ms.date: 03/30/2017
 ms.assetid: 0bf0f9d9-7caf-4d3d-8c9e-2d468cca16a5
-ms.openlocfilehash: 55692282aa06b8e988f44806394bdfcbb6e2f3ec
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
-ms.translationtype: MT
+ms.openlocfilehash: b6e93ad0782fcacbc4ce20c0e9bb407abdf2366f
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43528588"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50047626"
 ---
 # <a name="untyped-requestreply"></a>非类型化请求/答复
 此示例演示如何定义使用 Message 类的操作协定。  
@@ -17,14 +17,14 @@ ms.locfileid: "43528588"
   
  此示例基于[Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md)。 服务协定定义一个采用消息类型作为自变量并返回一个消息的操作。 该操作从消息正文收集所有所需数据并计算总和，然后在返回消息中将此总和作为正文进行发送。  
   
-```  
+```csharp
 [OperationContract(Action = CalculatorService.RequestAction, ReplyAction = CalculatorService.ReplyAction)]  
 Message ComputeSum(Message request);  
 ```  
   
  在服务上，该操作检索在输入消息中传递的整数数组，然后计算总和。 为了发送响应消息，该示例创建一个具有适当消息版本和 Action 的新消息，并将计算出的总和添加为此消息的正文。 下面的示例代码对此进行了演示。  
   
-```  
+```csharp
 public Message ComputeSum(Message request)  
 {  
     //The body of the message contains a list of numbers which will be   
@@ -45,7 +45,7 @@ public Message ComputeSum(Message request)
   
  客户端使用由生成的代码[ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)创建远程服务的代理。 若要发送请求消息，客户端必须具有视基础通道而定的消息版本。 因此，它创建一个以其创建的代理通道为范围的新 <xref:System.ServiceModel.OperationContextScope>，后者创建一个 <xref:System.ServiceModel.OperationContext>，它在它的 `OutgoingMessageHeaders.MessageVersion` 属性中填充正确的消息版本。 客户端将一个输入数组作为正文传递给请求消息，然后对代理调用 `ComputeSum`。 客户端随后通过访问答复消息的 `GetBody<T>` 方法来检索它传递的输入总和。 下面的示例代码对此进行了演示。  
   
-```  
+```csharp
 using (new OperationContextScope(client.InnerChannel))  
 {  
     // Call the Sum service operation.  
@@ -63,7 +63,7 @@ using (new OperationContextScope(client.InnerChannel))
   
  此示例是 Web 承载的示例，因此必须只运行客户端可执行文件。 下面是客户端上的示例输出。  
   
-```  
+```console  
 Prompt>Client.exe  
 Sum of numbers passed (1,2,3,4,5) = 15  
   

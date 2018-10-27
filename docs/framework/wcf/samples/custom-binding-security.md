@@ -2,13 +2,12 @@
 title: 自定义绑定安全性
 ms.date: 03/30/2017
 ms.assetid: a6383dff-4308-46d2-bc6d-acd4e18b4b8d
-author: BrucePerlerMS
-ms.openlocfilehash: 85d069fed9fb1e82670c81003b5ef091c22a8e92
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
-ms.translationtype: MT
+ms.openlocfilehash: 72812c23bca5cd5c61f906cfd98f1929b0edee1a
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48841568"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50042696"
 ---
 # <a name="custom-binding-security"></a>自定义绑定安全性
 本示例演示如何使用自定义绑定配置安全性。 并演示如何使用自定义绑定实现消息级安全性和安全传输。 如果在客户端和服务之间传输消息时需要进行安全的传输，同时消息必须在消息级别上保持安全，这非常有用。 系统提供的绑定不支持此配置。
@@ -123,7 +122,7 @@ Equation(0 + 100 - 50 * 17.65 / 2 = 441.25)
   
 3.  启动 \client\bin 中的 Client.exe。 客户端活动将显示在客户端控制台应用程序上。  
   
-4.  如果客户端和服务能够进行通信，请参见[故障排除提示](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b)。  
+4.  如果客户端与服务无法进行通信，请参见 [Troubleshooting Tips](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b)。  
   
 ### <a name="to-run-the-sample-across-computers"></a>跨计算机运行示例  
   
