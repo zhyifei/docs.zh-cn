@@ -10,52 +10,50 @@ helpviewer_keywords:
 - webRequestModules, clear element
 - clear element, webRequestModules
 ms.assetid: 48f38bcb-f30c-4b74-a8f0-1a3caf1aa96f
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: 2b313aa2481b1257715ac4dbc6d452e2120f4726
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 39d4a184972036677aaa9fdb33e672521033d35f
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48838320"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50190523"
 ---
-# <a name="ltcleargt-element-for-webrequestmodules-network-settings"></a><span data-ttu-id="bc758-102">&lt;清除&gt;webRequestModules （网络设置） 的</span><span class="sxs-lookup"><span data-stu-id="bc758-102">&lt;clear&gt; Element for webRequestModules (Network Settings)</span></span>
-<span data-ttu-id="bc758-103">从应用程序中删除所有已注册的 Web 请求模块。</span><span class="sxs-lookup"><span data-stu-id="bc758-103">Removes all registered Web request modules from the application.</span></span>  
+# <a name="ltcleargt-element-for-webrequestmodules-network-settings"></a><span data-ttu-id="bf67b-102">&lt;清除&gt;webRequestModules （网络设置） 的</span><span class="sxs-lookup"><span data-stu-id="bf67b-102">&lt;clear&gt; Element for webRequestModules (Network Settings)</span></span>
+<span data-ttu-id="bf67b-103">从应用程序中删除所有已注册的 Web 请求模块。</span><span class="sxs-lookup"><span data-stu-id="bf67b-103">Removes all registered Web request modules from the application.</span></span>  
   
- <span data-ttu-id="bc758-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="bc758-104">\<configuration></span></span>  
-<span data-ttu-id="bc758-105">\<system.net></span><span class="sxs-lookup"><span data-stu-id="bc758-105">\<system.net></span></span>  
-<span data-ttu-id="bc758-106">\<webRequestModules></span><span class="sxs-lookup"><span data-stu-id="bc758-106">\<webRequestModules></span></span>  
-<span data-ttu-id="bc758-107">\<清除 ></span><span class="sxs-lookup"><span data-stu-id="bc758-107">\<clear></span></span>  
+ <span data-ttu-id="bf67b-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="bf67b-104">\<configuration></span></span>  
+<span data-ttu-id="bf67b-105">\<system.net></span><span class="sxs-lookup"><span data-stu-id="bf67b-105">\<system.net></span></span>  
+<span data-ttu-id="bf67b-106">\<webRequestModules></span><span class="sxs-lookup"><span data-stu-id="bf67b-106">\<webRequestModules></span></span>  
+<span data-ttu-id="bf67b-107">\<清除 ></span><span class="sxs-lookup"><span data-stu-id="bf67b-107">\<clear></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="bc758-108">语法</span><span class="sxs-lookup"><span data-stu-id="bc758-108">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="bf67b-108">语法</span><span class="sxs-lookup"><span data-stu-id="bf67b-108">Syntax</span></span>  
   
 ```xml  
 <clear/>  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="bc758-109">特性和元素</span><span class="sxs-lookup"><span data-stu-id="bc758-109">Attributes and Elements</span></span>  
- <span data-ttu-id="bc758-110">下列各节描述了特性、子元素和父元素。</span><span class="sxs-lookup"><span data-stu-id="bc758-110">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="bf67b-109">特性和元素</span><span class="sxs-lookup"><span data-stu-id="bf67b-109">Attributes and Elements</span></span>  
+ <span data-ttu-id="bf67b-110">下列各节描述了特性、子元素和父元素。</span><span class="sxs-lookup"><span data-stu-id="bf67b-110">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="bc758-111">特性</span><span class="sxs-lookup"><span data-stu-id="bc758-111">Attributes</span></span>  
- <span data-ttu-id="bc758-112">无。</span><span class="sxs-lookup"><span data-stu-id="bc758-112">None.</span></span>  
+### <a name="attributes"></a><span data-ttu-id="bf67b-111">特性</span><span class="sxs-lookup"><span data-stu-id="bf67b-111">Attributes</span></span>  
+ <span data-ttu-id="bf67b-112">无。</span><span class="sxs-lookup"><span data-stu-id="bf67b-112">None.</span></span>  
   
-### <a name="child-elements"></a><span data-ttu-id="bc758-113">子元素</span><span class="sxs-lookup"><span data-stu-id="bc758-113">Child Elements</span></span>  
- <span data-ttu-id="bc758-114">无。</span><span class="sxs-lookup"><span data-stu-id="bc758-114">None.</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="bf67b-113">子元素</span><span class="sxs-lookup"><span data-stu-id="bf67b-113">Child Elements</span></span>  
+ <span data-ttu-id="bf67b-114">无。</span><span class="sxs-lookup"><span data-stu-id="bf67b-114">None.</span></span>  
   
-### <a name="parent-elements"></a><span data-ttu-id="bc758-115">父元素</span><span class="sxs-lookup"><span data-stu-id="bc758-115">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="bf67b-115">父元素</span><span class="sxs-lookup"><span data-stu-id="bf67b-115">Parent Elements</span></span>  
   
-|<span data-ttu-id="bc758-116">**元素**</span><span class="sxs-lookup"><span data-stu-id="bc758-116">**Element**</span></span>|<span data-ttu-id="bc758-117">**说明**</span><span class="sxs-lookup"><span data-stu-id="bc758-117">**Description**</span></span>|  
+|<span data-ttu-id="bf67b-116">**元素**</span><span class="sxs-lookup"><span data-stu-id="bf67b-116">**Element**</span></span>|<span data-ttu-id="bf67b-117">**说明**</span><span class="sxs-lookup"><span data-stu-id="bf67b-117">**Description**</span></span>|  
 |-----------------|---------------------|  
-|[<span data-ttu-id="bc758-118">webRequestModules</span><span class="sxs-lookup"><span data-stu-id="bc758-118">webRequestModules</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/webrequestmodules-element-network-settings.md)|<span data-ttu-id="bc758-119">指定模块用于从网络主机请求信息。</span><span class="sxs-lookup"><span data-stu-id="bc758-119">Specifies modules to use to request information from network hosts.</span></span>|  
+|[<span data-ttu-id="bf67b-118">webRequestModules</span><span class="sxs-lookup"><span data-stu-id="bf67b-118">webRequestModules</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/webrequestmodules-element-network-settings.md)|<span data-ttu-id="bf67b-119">指定模块用于从网络主机请求信息。</span><span class="sxs-lookup"><span data-stu-id="bf67b-119">Specifies modules to use to request information from network hosts.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="bc758-120">备注</span><span class="sxs-lookup"><span data-stu-id="bc758-120">Remarks</span></span>  
- <span data-ttu-id="bc758-121">`clear`元素中删除所有已注册的配置文件中或在配置层次结构中较高级别上前面定义的 Web 请求模块。</span><span class="sxs-lookup"><span data-stu-id="bc758-121">The `clear` element removes all registered Web request modules that were defined earlier in the configuration file or at a higher level in the configuration hierarchy.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="bf67b-120">备注</span><span class="sxs-lookup"><span data-stu-id="bf67b-120">Remarks</span></span>  
+ <span data-ttu-id="bf67b-121">`clear`元素中删除所有已注册的配置文件中或在配置层次结构中较高级别上前面定义的 Web 请求模块。</span><span class="sxs-lookup"><span data-stu-id="bf67b-121">The `clear` element removes all registered Web request modules that were defined earlier in the configuration file or at a higher level in the configuration hierarchy.</span></span>  
   
-## <a name="configuration-files"></a><span data-ttu-id="bc758-122">配置文件</span><span class="sxs-lookup"><span data-stu-id="bc758-122">Configuration Files</span></span>  
- <span data-ttu-id="bc758-123">此元素可在应用程序配置文件或计算机配置文件 (Machine.config) 中使用。</span><span class="sxs-lookup"><span data-stu-id="bc758-123">This element can be used in the application configuration file or the machine configuration file (Machine.config).</span></span>  
+## <a name="configuration-files"></a><span data-ttu-id="bf67b-122">配置文件</span><span class="sxs-lookup"><span data-stu-id="bf67b-122">Configuration Files</span></span>  
+ <span data-ttu-id="bf67b-123">此元素可在应用程序配置文件或计算机配置文件 (Machine.config) 中使用。</span><span class="sxs-lookup"><span data-stu-id="bf67b-123">This element can be used in the application configuration file or the machine configuration file (Machine.config).</span></span>  
   
-## <a name="example"></a><span data-ttu-id="bc758-124">示例</span><span class="sxs-lookup"><span data-stu-id="bc758-124">Example</span></span>  
- <span data-ttu-id="bc758-125">下面的示例将清除所有 Web 请求模块，然后为 HTTP 注册 Web 请求模块。</span><span class="sxs-lookup"><span data-stu-id="bc758-125">The following example clears all Web request modules and then registers a Web request module for HTTP.</span></span>  
+## <a name="example"></a><span data-ttu-id="bf67b-124">示例</span><span class="sxs-lookup"><span data-stu-id="bf67b-124">Example</span></span>  
+ <span data-ttu-id="bf67b-125">下面的示例将清除所有 Web 请求模块，然后为 HTTP 注册 Web 请求模块。</span><span class="sxs-lookup"><span data-stu-id="bf67b-125">The following example clears all Web request modules and then registers a Web request module for HTTP.</span></span>  
   
 ```xml  
 <configuration>  
@@ -71,6 +69,6 @@ ms.locfileid: "48838320"
 </configuration>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="bc758-126">请参阅</span><span class="sxs-lookup"><span data-stu-id="bc758-126">See Also</span></span>  
- <xref:System.Net.WebRequest>  
- [<span data-ttu-id="bc758-127">网络设置架构</span><span class="sxs-lookup"><span data-stu-id="bc758-127">Network Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+## <a name="see-also"></a><span data-ttu-id="bf67b-126">请参阅</span><span class="sxs-lookup"><span data-stu-id="bf67b-126">See Also</span></span>  
+- <xref:System.Net.WebRequest>  
+- [<span data-ttu-id="bf67b-127">网络设置架构</span><span class="sxs-lookup"><span data-stu-id="bf67b-127">Network Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
