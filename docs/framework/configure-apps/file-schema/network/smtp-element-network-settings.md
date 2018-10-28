@@ -8,12 +8,12 @@ helpviewer_keywords:
 - <smtp> element
 - smtp element
 ms.assetid: 220b0329-e384-4e0c-86b4-0945ad17efd9
-ms.openlocfilehash: f095883ef32e57937c61a025b67f0cad2c8b096b
-ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
-ms.translationtype: HT
+ms.openlocfilehash: 362c5ba479c845a8183fe705e72ea3a12fb7a94c
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50044849"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50195640"
 ---
 # <a name="ltsmtpgt-element-network-settings"></a>&lt;smtp&gt;元素 （网络设置）
 配置传递格式、 传递方法和发件人发送电子邮件地址。  
@@ -79,8 +79,8 @@ ms.locfileid: "50044849"
 ```  
   
 ## <a name="see-also"></a>请参阅  
- <xref:System.Net.Configuration.SmtpSection?displayProperty=nameWithType>  
- <xref:System.Net.Mail.SmtpClient?displayProperty=nameWithType>  
- <xref:System.Net.Mail.SmtpDeliveryFormat>  
- <xref:System.Net.Mail.SmtpDeliveryMethod>  
- [网络设置架构](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+- <xref:System.Net.Configuration.SmtpSection?displayProperty=nameWithType>  
+- <xref:System.Net.Mail.SmtpClient?displayProperty=nameWithType>  
+- <xref:System.Net.Mail.SmtpDeliveryFormat>  
+- <xref:System.Net.Mail.SmtpDeliveryMethod>  
+- [网络设置架构](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
