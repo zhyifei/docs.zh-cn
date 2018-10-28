@@ -10,55 +10,55 @@ helpviewer_keywords:
 ms.assetid: 22fb88b0-bf27-489c-9ca0-e65950ac136c
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: c5be6ef95693f274e5cb2002e5642d5e58a7661a
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 1729ad4d07fdc0d3dbb31c2bfc29edce647373d4
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48033124"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50193651"
 ---
-# <a name="ltoidentrygt-element"></a><span data-ttu-id="37a8b-102">&lt;oidEntry&gt;元素</span><span class="sxs-lookup"><span data-stu-id="37a8b-102">&lt;oidEntry&gt; Element</span></span>
-<span data-ttu-id="37a8b-103">将 ASN.1 对象标识符 (OID) 映射到友好名称。</span><span class="sxs-lookup"><span data-stu-id="37a8b-103">Maps an ASN.1 object identifier (OID) to a friendly name.</span></span>  
+# <a name="ltoidentrygt-element"></a><span data-ttu-id="81548-102">&lt;oidEntry&gt;元素</span><span class="sxs-lookup"><span data-stu-id="81548-102">&lt;oidEntry&gt; Element</span></span>
+<span data-ttu-id="81548-103">将 ASN.1 对象标识符 (OID) 映射到友好名称。</span><span class="sxs-lookup"><span data-stu-id="81548-103">Maps an ASN.1 object identifier (OID) to a friendly name.</span></span>  
   
- <span data-ttu-id="37a8b-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="37a8b-104">\<configuration></span></span>  
-<span data-ttu-id="37a8b-105">\<mscorlib ></span><span class="sxs-lookup"><span data-stu-id="37a8b-105">\<mscorlib></span></span>  
-<span data-ttu-id="37a8b-106">\<cryptographySettings ></span><span class="sxs-lookup"><span data-stu-id="37a8b-106">\<cryptographySettings></span></span>  
-<span data-ttu-id="37a8b-107">\<oidMap ></span><span class="sxs-lookup"><span data-stu-id="37a8b-107">\<oidMap></span></span>  
-<span data-ttu-id="37a8b-108">\<oidEntry ></span><span class="sxs-lookup"><span data-stu-id="37a8b-108">\<oidEntry></span></span>  
+ <span data-ttu-id="81548-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="81548-104">\<configuration></span></span>  
+<span data-ttu-id="81548-105">\<mscorlib ></span><span class="sxs-lookup"><span data-stu-id="81548-105">\<mscorlib></span></span>  
+<span data-ttu-id="81548-106">\<cryptographySettings ></span><span class="sxs-lookup"><span data-stu-id="81548-106">\<cryptographySettings></span></span>  
+<span data-ttu-id="81548-107">\<oidMap ></span><span class="sxs-lookup"><span data-stu-id="81548-107">\<oidMap></span></span>  
+<span data-ttu-id="81548-108">\<oidEntry ></span><span class="sxs-lookup"><span data-stu-id="81548-108">\<oidEntry></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="37a8b-109">语法</span><span class="sxs-lookup"><span data-stu-id="37a8b-109">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="81548-109">语法</span><span class="sxs-lookup"><span data-stu-id="81548-109">Syntax</span></span>  
   
 ```xml  
 <oidEntry OID="object identifier number" name="friendly name" />  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="37a8b-110">特性和元素</span><span class="sxs-lookup"><span data-stu-id="37a8b-110">Attributes and Elements</span></span>  
- <span data-ttu-id="37a8b-111">下列各节描述了特性、子元素和父元素。</span><span class="sxs-lookup"><span data-stu-id="37a8b-111">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="81548-110">特性和元素</span><span class="sxs-lookup"><span data-stu-id="81548-110">Attributes and Elements</span></span>  
+ <span data-ttu-id="81548-111">下列各节描述了特性、子元素和父元素。</span><span class="sxs-lookup"><span data-stu-id="81548-111">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="37a8b-112">特性</span><span class="sxs-lookup"><span data-stu-id="37a8b-112">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="81548-112">特性</span><span class="sxs-lookup"><span data-stu-id="81548-112">Attributes</span></span>  
   
-|<span data-ttu-id="37a8b-113">特性</span><span class="sxs-lookup"><span data-stu-id="37a8b-113">Attribute</span></span>|<span data-ttu-id="37a8b-114">描述</span><span class="sxs-lookup"><span data-stu-id="37a8b-114">Description</span></span>|  
+|<span data-ttu-id="81548-113">特性</span><span class="sxs-lookup"><span data-stu-id="81548-113">Attribute</span></span>|<span data-ttu-id="81548-114">描述</span><span class="sxs-lookup"><span data-stu-id="81548-114">Description</span></span>|  
 |---------------|-----------------|  
-|<span data-ttu-id="37a8b-115">**OID**</span><span class="sxs-lookup"><span data-stu-id="37a8b-115">**OID**</span></span>|<span data-ttu-id="37a8b-116">必需的特性。</span><span class="sxs-lookup"><span data-stu-id="37a8b-116">Required attribute.</span></span><br /><br /> <span data-ttu-id="37a8b-117">指定的 ASN.1 OID 对应于您的类所实现的算法。</span><span class="sxs-lookup"><span data-stu-id="37a8b-117">Specifies the ASN.1 OID corresponding to the algorithm implemented by your class.</span></span>|  
-|<span data-ttu-id="37a8b-118">**name**</span><span class="sxs-lookup"><span data-stu-id="37a8b-118">**name**</span></span>|<span data-ttu-id="37a8b-119">必需的特性。</span><span class="sxs-lookup"><span data-stu-id="37a8b-119">Required attribute.</span></span><br /><br /> <span data-ttu-id="37a8b-120">指定的值**名称**属性中[ \<nameEntry >](../../../../../docs/framework/configure-apps/file-schema/cryptography/nameentry-element.md)标记。</span><span class="sxs-lookup"><span data-stu-id="37a8b-120">Specifies the value for the **name** attribute in the [\<nameEntry>](../../../../../docs/framework/configure-apps/file-schema/cryptography/nameentry-element.md) tag.</span></span>|  
+|<span data-ttu-id="81548-115">**OID**</span><span class="sxs-lookup"><span data-stu-id="81548-115">**OID**</span></span>|<span data-ttu-id="81548-116">必需的特性。</span><span class="sxs-lookup"><span data-stu-id="81548-116">Required attribute.</span></span><br /><br /> <span data-ttu-id="81548-117">指定的 ASN.1 OID 对应于您的类所实现的算法。</span><span class="sxs-lookup"><span data-stu-id="81548-117">Specifies the ASN.1 OID corresponding to the algorithm implemented by your class.</span></span>|  
+|<span data-ttu-id="81548-118">**name**</span><span class="sxs-lookup"><span data-stu-id="81548-118">**name**</span></span>|<span data-ttu-id="81548-119">必需的特性。</span><span class="sxs-lookup"><span data-stu-id="81548-119">Required attribute.</span></span><br /><br /> <span data-ttu-id="81548-120">指定的值**名称**属性中[ \<nameEntry >](../../../../../docs/framework/configure-apps/file-schema/cryptography/nameentry-element.md)标记。</span><span class="sxs-lookup"><span data-stu-id="81548-120">Specifies the value for the **name** attribute in the [\<nameEntry>](../../../../../docs/framework/configure-apps/file-schema/cryptography/nameentry-element.md) tag.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="37a8b-121">子元素</span><span class="sxs-lookup"><span data-stu-id="37a8b-121">Child Elements</span></span>  
- <span data-ttu-id="37a8b-122">无。</span><span class="sxs-lookup"><span data-stu-id="37a8b-122">None.</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="81548-121">子元素</span><span class="sxs-lookup"><span data-stu-id="81548-121">Child Elements</span></span>  
+ <span data-ttu-id="81548-122">无。</span><span class="sxs-lookup"><span data-stu-id="81548-122">None.</span></span>  
   
-### <a name="parent-elements"></a><span data-ttu-id="37a8b-123">父元素</span><span class="sxs-lookup"><span data-stu-id="37a8b-123">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="81548-123">父元素</span><span class="sxs-lookup"><span data-stu-id="81548-123">Parent Elements</span></span>  
   
-|<span data-ttu-id="37a8b-124">元素</span><span class="sxs-lookup"><span data-stu-id="37a8b-124">Element</span></span>|<span data-ttu-id="37a8b-125">描述</span><span class="sxs-lookup"><span data-stu-id="37a8b-125">Description</span></span>|  
+|<span data-ttu-id="81548-124">元素</span><span class="sxs-lookup"><span data-stu-id="81548-124">Element</span></span>|<span data-ttu-id="81548-125">描述</span><span class="sxs-lookup"><span data-stu-id="81548-125">Description</span></span>|  
 |-------------|-----------------|  
-|`configuration`|<span data-ttu-id="37a8b-126">公共语言运行时和 .NET Framework 应用程序所使用的每个配置文件中的根元素。</span><span class="sxs-lookup"><span data-stu-id="37a8b-126">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
-|`cryptographySettings`|<span data-ttu-id="37a8b-127">包含加密设置。</span><span class="sxs-lookup"><span data-stu-id="37a8b-127">Contains cryptography settings.</span></span>|  
-|`mscorlib`|<span data-ttu-id="37a8b-128">包含`cryptographySettings`元素。</span><span class="sxs-lookup"><span data-stu-id="37a8b-128">Contains the `cryptographySettings` element.</span></span>|  
-|`oidMap`|<span data-ttu-id="37a8b-129">包含类的 ASN.1 对象标识符 (OID) 映射。</span><span class="sxs-lookup"><span data-stu-id="37a8b-129">Contains ASN.1 object identifier (OID) mappings to classes.</span></span>|  
+|`configuration`|<span data-ttu-id="81548-126">公共语言运行时和 .NET Framework 应用程序所使用的每个配置文件中的根元素。</span><span class="sxs-lookup"><span data-stu-id="81548-126">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
+|`cryptographySettings`|<span data-ttu-id="81548-127">包含加密设置。</span><span class="sxs-lookup"><span data-stu-id="81548-127">Contains cryptography settings.</span></span>|  
+|`mscorlib`|<span data-ttu-id="81548-128">包含`cryptographySettings`元素。</span><span class="sxs-lookup"><span data-stu-id="81548-128">Contains the `cryptographySettings` element.</span></span>|  
+|`oidMap`|<span data-ttu-id="81548-129">包含类的 ASN.1 对象标识符 (OID) 映射。</span><span class="sxs-lookup"><span data-stu-id="81548-129">Contains ASN.1 object identifier (OID) mappings to classes.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="37a8b-130">备注</span><span class="sxs-lookup"><span data-stu-id="37a8b-130">Remarks</span></span>  
- <span data-ttu-id="37a8b-131">ASN.1 对象标识符标识中某些加密格式的算法。</span><span class="sxs-lookup"><span data-stu-id="37a8b-131">ASN.1 object identifiers identify algorithms in some cryptographic formats.</span></span> <span data-ttu-id="37a8b-132">将对象标识符映射到你想要识别的算法的友好名称。</span><span class="sxs-lookup"><span data-stu-id="37a8b-132">Map object identifiers to friendly names for the algorithms you want to identify.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="81548-130">备注</span><span class="sxs-lookup"><span data-stu-id="81548-130">Remarks</span></span>  
+ <span data-ttu-id="81548-131">ASN.1 对象标识符标识中某些加密格式的算法。</span><span class="sxs-lookup"><span data-stu-id="81548-131">ASN.1 object identifiers identify algorithms in some cryptographic formats.</span></span> <span data-ttu-id="81548-132">将对象标识符映射到你想要识别的算法的友好名称。</span><span class="sxs-lookup"><span data-stu-id="81548-132">Map object identifiers to friendly names for the algorithms you want to identify.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="37a8b-133">示例</span><span class="sxs-lookup"><span data-stu-id="37a8b-133">Example</span></span>  
- <span data-ttu-id="37a8b-134">下面的示例演示如何使用 **\<oidEntry >** 元素将 RIPEMD-160 哈希算法的对象标识符映射到该哈希算法的实现。</span><span class="sxs-lookup"><span data-stu-id="37a8b-134">The following example shows how to use the **\<oidEntry>** element to map an object identifier for the RIPEMD-160 hash algorithm to an implementation of that hash algorithm.</span></span>  
+## <a name="example"></a><span data-ttu-id="81548-133">示例</span><span class="sxs-lookup"><span data-stu-id="81548-133">Example</span></span>  
+ <span data-ttu-id="81548-134">下面的示例演示如何使用 **\<oidEntry >** 元素将 RIPEMD-160 哈希算法的对象标识符映射到该哈希算法的实现。</span><span class="sxs-lookup"><span data-stu-id="81548-134">The following example shows how to use the **\<oidEntry>** element to map an object identifier for the RIPEMD-160 hash algorithm to an implementation of that hash algorithm.</span></span>  
   
 ```xml  
 <configuration>  
@@ -80,9 +80,9 @@ ms.locfileid: "48033124"
 </configuration>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="37a8b-135">请参阅</span><span class="sxs-lookup"><span data-stu-id="37a8b-135">See Also</span></span>  
- [<span data-ttu-id="37a8b-136">配置文件架构</span><span class="sxs-lookup"><span data-stu-id="37a8b-136">Configuration File Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/index.md)  
- [<span data-ttu-id="37a8b-137">加密设置架构</span><span class="sxs-lookup"><span data-stu-id="37a8b-137">Cryptography Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/cryptography/index.md)  
- [<span data-ttu-id="37a8b-138">加密服务</span><span class="sxs-lookup"><span data-stu-id="37a8b-138">Cryptographic Services</span></span>](../../../../../docs/standard/security/cryptographic-services.md)  
- [<span data-ttu-id="37a8b-139">配置加密类</span><span class="sxs-lookup"><span data-stu-id="37a8b-139">Configuring Cryptography Classes</span></span>](../../../../../docs/framework/configure-apps/configure-cryptography-classes.md)  
- [<span data-ttu-id="37a8b-140">将对象标识符映射到加密算法</span><span class="sxs-lookup"><span data-stu-id="37a8b-140">Mapping Object Identifiers to Cryptography Algorithms</span></span>](../../../../../docs/framework/configure-apps/map-object-identifiers-to-cryptography-algorithms.md)
+## <a name="see-also"></a><span data-ttu-id="81548-135">请参阅</span><span class="sxs-lookup"><span data-stu-id="81548-135">See Also</span></span>  
+- [<span data-ttu-id="81548-136">配置文件架构</span><span class="sxs-lookup"><span data-stu-id="81548-136">Configuration File Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/index.md)  
+- [<span data-ttu-id="81548-137">加密设置架构</span><span class="sxs-lookup"><span data-stu-id="81548-137">Cryptography Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/cryptography/index.md)  
+- [<span data-ttu-id="81548-138">Cryptographic Services</span><span class="sxs-lookup"><span data-stu-id="81548-138">Cryptographic Services</span></span>](../../../../../docs/standard/security/cryptographic-services.md)  
+- [<span data-ttu-id="81548-139">配置加密类</span><span class="sxs-lookup"><span data-stu-id="81548-139">Configuring Cryptography Classes</span></span>](../../../../../docs/framework/configure-apps/configure-cryptography-classes.md)  
+- [<span data-ttu-id="81548-140">将对象标识符映射到加密算法</span><span class="sxs-lookup"><span data-stu-id="81548-140">Mapping Object Identifiers to Cryptography Algorithms</span></span>](../../../../../docs/framework/configure-apps/map-object-identifiers-to-cryptography-algorithms.md)
