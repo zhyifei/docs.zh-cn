@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 22fb88b0-bf27-489c-9ca0-e65950ac136c
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: c5be6ef95693f274e5cb2002e5642d5e58a7661a
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 1729ad4d07fdc0d3dbb31c2bfc29edce647373d4
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48033124"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50193651"
 ---
 # <a name="ltoidentrygt-element"></a>&lt;oidEntry&gt;元素
 将 ASN.1 对象标识符 (OID) 映射到友好名称。  
@@ -81,8 +81,8 @@ ms.locfileid: "48033124"
 ```  
   
 ## <a name="see-also"></a>请参阅  
- [配置文件架构](../../../../../docs/framework/configure-apps/file-schema/index.md)  
- [加密设置架构](../../../../../docs/framework/configure-apps/file-schema/cryptography/index.md)  
- [加密服务](../../../../../docs/standard/security/cryptographic-services.md)  
- [配置加密类](../../../../../docs/framework/configure-apps/configure-cryptography-classes.md)  
- [将对象标识符映射到加密算法](../../../../../docs/framework/configure-apps/map-object-identifiers-to-cryptography-algorithms.md)
+- [配置文件架构](../../../../../docs/framework/configure-apps/file-schema/index.md)  
+- [加密设置架构](../../../../../docs/framework/configure-apps/file-schema/cryptography/index.md)  
+- [Cryptographic Services](../../../../../docs/standard/security/cryptographic-services.md)  
+- [配置加密类](../../../../../docs/framework/configure-apps/configure-cryptography-classes.md)  
+- [将对象标识符映射到加密算法](../../../../../docs/framework/configure-apps/map-object-identifiers-to-cryptography-algorithms.md)
