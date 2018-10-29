@@ -15,14 +15,12 @@ helpviewer_keywords:
 - listening with sockets
 - Internet, sockets
 ms.assetid: 40e426cc-13db-4371-95eb-f7388bd23ebf
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: c518c3bea980e23367477bd1b9851630454b728b
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 2b19b6d29d0117d4822f370dcc9abc840a18ad3d
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47209881"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50045032"
 ---
 # <a name="listening-with-sockets"></a>使用套接字侦听
 侦听器或服务器套接字打开网络上的端口，然后等待客户端连接到该端口。 虽然存在其他网络地址系列和协议，但本示例演示如何创建 TCP/IP 网络的远程服务。  

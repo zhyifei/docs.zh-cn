@@ -3,11 +3,11 @@ title: 异步返回类型 (C#)
 ms.date: 05/29/2017
 ms.assetid: ddb2539c-c898-48c1-ad92-245e4a996df8
 ms.openlocfilehash: 3d3c7d610dd1287d2c7284a5edd9c92810a74dba
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47157621"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48036235"
 ---
 # <a name="async-return-types-c"></a>异步返回类型 (C#)
 异步方法可以具有以下返回类型：

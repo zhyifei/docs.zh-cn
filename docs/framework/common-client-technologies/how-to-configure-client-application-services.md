@@ -4,17 +4,17 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - client application services, configuring
 ms.assetid: 34a8688a-a32c-40d3-94be-c8e610c6a4e8
-ms.openlocfilehash: a65c216397f240b77eb81f88d8f2a2da122e1ccf
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 6f754a2a66187ac94d31d0d5a3a665c969652d26
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43861619"
+ms.lasthandoff: 10/07/2018
+ms.locfileid: "48846508"
 ---
 # <a name="how-to-configure-client-application-services"></a>如何：配置客户端应用程序服务
 本主题介绍了如何使用 Visual Studio 的“项目设计器”来启用和配置客户端应用程序服务。 你可以使用客户端应用程序服务来验证用户，并从现有 [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] 应用程序服务检索用户角色和设置。 完成配置后，可以访问应用程序代码中启用的服务，如[客户端应用程序服务概述](../../../docs/framework/common-client-technologies/client-application-services-overview.md)所述。 有关 [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] 应用程序服务的详细信息，请参阅 [ASP.NET 应用程序服务概述](https://msdn.microsoft.com/library/1162e529-0d70-44b2-b3ab-83e60c695013)。  
   
- 可以在“项目设计器”的“服务”页上启用并配置客户端应用程序服务。 “服务”页会更新项目的 App.config 文件中的值。 若要访问“项目设计器”，请使用“项目”菜单上的“属性”命令。 有关“服务”页的详细信息，请参阅[“项目设计器”->“服务”页](https://msdn.microsoft.com/library/bb398109)。  
+ 可以在“项目设计器”的“服务”页上启用并配置客户端应用程序服务。 “服务”页会更新项目的 App.config 文件中的值。 若要访问“项目设计器”，请使用“项目”菜单上的“属性”命令。 有关“服务”页的详细信息，请参阅[“项目设计器”->“服务”页](/visualstudio/ide/reference/services-page-project-designer)。  
   
  下面的过程介绍如何为客户端应用程序服务执行基本配置。 后面的部分中将介绍高级配置选项。  
   
@@ -143,7 +143,7 @@ ms.locfileid: "43861619"
 ## <a name="see-also"></a>请参阅  
  [客户端应用程序服务](../../../docs/framework/common-client-technologies/client-application-services.md)  
  [客户端应用程序服务概述](../../../docs/framework/common-client-technologies/client-application-services-overview.md)  
- [“项目设计器”->“服务”页](https://msdn.microsoft.com/library/bb398109)  
+ [“项目设计器”->“服务”页](/visualstudio/ide/reference/services-page-project-designer)  
  [“高级服务设置”对话框](/visualstudio/ide/reference/advanced-settings-for-services-dialog-box)  
  [如何：使用客户端应用程序服务来实现用户登录](../../../docs/framework/common-client-technologies/how-to-implement-user-login-with-client-application-services.md)  
  [演练：使用客户端应用程序服务](../../../docs/framework/common-client-technologies/walkthrough-using-client-application-services.md)  

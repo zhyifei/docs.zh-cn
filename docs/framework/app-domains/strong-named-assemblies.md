@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: d4a80263-f3e0-4d81-9b61-f0cbeae3797b
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 7cbef005c913d818dba23d85404fe0382fe79f4a
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 6fe3847d9ee4530a776f43c67ac17085a9cd9d7b
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32741940"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50190900"
 ---
 # <a name="strong-named-assemblies"></a>具有强名称的程序集
 强命名一个程序集可为程序集创建唯一的标识，并且可以防止程序集冲突。  
@@ -43,7 +43,7 @@ ms.locfileid: "32741940"
  如果你是开源开发人员且希望利用强命名程序集的标识优势，不妨签入与源代码管理系统内程序集相关联的私钥。  
   
 ## <a name="see-also"></a>请参阅  
- [全局程序集缓存](../../../docs/framework/app-domains/gac.md)  
- [如何：使用强名称为程序集签名](../../../docs/framework/app-domains/how-to-sign-an-assembly-with-a-strong-name.md)  
- [Sn.exe（强名称工具）](../../../docs/framework/tools/sn-exe-strong-name-tool.md)  
- [创建和使用具有强名称的程序集](../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md)
+- [全局程序集缓存](../../../docs/framework/app-domains/gac.md)  
+- [如何：使用强名称为程序集签名](../../../docs/framework/app-domains/how-to-sign-an-assembly-with-a-strong-name.md)  
+- [Sn.exe（强名称工具）](../../../docs/framework/tools/sn-exe-strong-name-tool.md)  
+- [创建和使用具有强名称的程序集](../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md)

@@ -7,17 +7,15 @@ dev_langs:
 helpviewer_keywords:
 - request cache policies
 ms.assetid: 39c15e40-586b-4ac9-9cce-146f74b7e545
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: 03ddcbacf7de3753ca74c398e585447b2d769cd6
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: f2e3e7ccc16dc24cf79574f8607245b66ea53cb1
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47210622"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50190653"
 ---
 # <a name="how-to-set-cache-policy-for-a-request"></a>如何为请求设置缓存策略
-以下示例演示如何为请求设置缓存策略。 该示例输入是一个 URI，如 http://www.contoso.com/。  
+以下示例演示如何为请求设置缓存策略。 该示例输入是一个 URI，如 `http://www.contoso.com/`。  
   
 ## <a name="example"></a>示例  
  以下代码示例创建一个缓存策略，该策略允许从缓存使用请求的资源，前提是该资源在缓存中的存在时间未超过一天。 该示例显示一条消息，指示使用的资源是否来自缓存（例如 `"The response was retrieved from the cache : False."`），然后显示该资源。 可以由客户端和服务器之间的任何缓存实现请求。  

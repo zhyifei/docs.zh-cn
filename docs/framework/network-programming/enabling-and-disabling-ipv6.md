@@ -2,14 +2,12 @@
 title: 启用和禁用 IPv6
 ms.date: 03/30/2017
 ms.assetid: 6408d3ef-c9ba-49d9-b15e-fe74bd3ef031
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: f63d62c7605d32dfbe97193f8aed53f0fc547cff
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 9dbbbbb522628de81be3d3d1382867de99c570d0
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47195600"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50183082"
 ---
 # <a name="enabling-and-disabling-ipv6"></a>启用和禁用 IPv6
 若要使用 IPv6 协议，请确保当前运行的操作系统版本支持 IPv6，并确保正确配置了操作系统和网络类。  

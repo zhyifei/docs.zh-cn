@@ -9,12 +9,12 @@ helpviewer_keywords:
 - types [C#], explicit numeric conversions
 - type conversion [C#], explicit numeric
 ms.assetid: f3bb9e76-6b92-4df7-bc36-f866c24e1dfd
-ms.openlocfilehash: 22bb2117e7b78596e1fb6af63584f51b066564c9
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 948961d19518343c1f8ee14cd48dc33ec72cf23d
+ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/29/2018
-ms.locfileid: "47208232"
+ms.lasthandoff: 10/22/2018
+ms.locfileid: "49478916"
 ---
 # <a name="explicit-numeric-conversions-table-c-reference"></a>显式数值转换表（C# 参考）
 
@@ -61,7 +61,7 @@ ms.locfileid: "47208232"
   
 - 将 `decimal` 转换为 `float` 或 `double` 时，`decimal` 值舍入到最接近的 `double` 或 `float` 值。  
   
- 有关显式转换的详细信息，请参阅 [C# 语言规范](../language-specification/index.md)的[显式转换](/dotnet/csharp/language-reference/language-specification/conversions#explicit-conversions)章节。
+ 有关显式转换的详细信息，请参阅 [C# 语言规范](../language-specification/index.md)的[显式转换](~/_csharplang/spec/conversions.md#explicit-conversions)章节。
   
 ## <a name="see-also"></a>请参阅
 

@@ -11,14 +11,12 @@ helpviewer_keywords:
 - application configuration files, network tracing
 - sockets, trace output
 ms.assetid: 5ef9fe4b-8d3d-490e-9259-1d014b2181af
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: 4b8fa55375de5057eca92591cbf4d9da628a3f85
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 257f417fa573577ca8e8ceb4edc9c4f481af1f72
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47193796"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50192442"
 ---
 # <a name="how-to-configure-network-tracing"></a>如何：配置网络跟踪
 应用程序或计算机配置文件可保存用于确定网络跟踪的格式和内容的设置。 在执行此过程之前，请确保启用跟踪。 有关如何启用跟踪的信息，请参阅[启用网络跟踪](../../../docs/framework/network-programming/enabling-network-tracing.md)。  
@@ -102,4 +100,4 @@ ms.locfileid: "47193796"
  [解释网络跟踪](../../../docs/framework/network-programming/interpreting-network-tracing.md)  
  [.NET Framework 中的网络跟踪](../../../docs/framework/network-programming/network-tracing.md)  
  [启用网络跟踪](../../../docs/framework/network-programming/enabling-network-tracing.md)  
- [检测和跟踪简介](https://msdn.microsoft.com/library/e924e57c-33cf-4b0e-9e7f-a45d13e38f2c)
+ [跟踪应用程序和在应用程序中插入检测点](../../../docs/framework/debug-trace-profile/tracing-and-instrumenting-applications.md)

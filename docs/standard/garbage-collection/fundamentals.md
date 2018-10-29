@@ -13,11 +13,11 @@ ms.assetid: 67c5a20d-1be1-4ea7-8a9a-92b0b08658d2
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 741ddd0171244daceb4d5e283c0172e71b82f3d2
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/29/2018
-ms.locfileid: "47216976"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48582744"
 ---
 # <a name="fundamentals-of-garbage-collection"></a>垃圾回收的基础
 <a name="top"></a> 在公共语言运行时 (CLR) 中，垃圾回收器用作自动内存管理器。 它提供如下优点：  
@@ -98,7 +98,7 @@ ms.locfileid: "47216976"
   
  每个托管进程都有一个托管堆。 进程中的所有线程都在同一堆上分配对象记忆。  
   
- 若要保留内存，垃圾回收器会调用 Win32 [VirtualAlloc](https://msdn.microsoft.com/library/aa366887.aspx) 函数，并且每次为托管应用保留一个内存段。 垃圾回收器还会根据需要保留内存段，并调用 Win32 [VirtualFree](https://msdn.microsoft.com/library/aa366892.aspx) 函数，将内存段释放回操作系统（在清除所有对象的内存段后）。  
+ 若要保留内存，垃圾回收器将调用 Win32 [VirtualAlloc](https://msdn.microsoft.com/library/aa366887.aspx) 函数，并且每次会为托管应用程序保留一个内存段。 垃圾回收器还会根据需要保留段，并通过调用 Win32 [VirtualFree](https://msdn.microsoft.com/library/aa366892.aspx) 函数将段释放回操作系统（在清除所有对象的段之后）。  
   
 > [!IMPORTANT]
 >  垃圾回收器分配的段大小特定于实现，并且随时可能更改（包括定期更新）。 应用程序不应假设特定段的大小或依赖于此大小，也不应尝试配置段分配可用的内存量。  
@@ -168,7 +168,7 @@ ms.locfileid: "47216976"
   
      因为第 2 代回收可以占用多个段，所以可以将已提升到第 2 代中的对象移动到时间较早的段中。 可以将第 1 代幸存者和第 2 代幸存者都移动到不同的段，因为它们已被提升到第 2 代。  
   
-     通常，由于复制大型对象会造成性能代偿，因此不会压缩大型对象堆。 但是，从 [!INCLUDE[net_v451](../../../includes/net-v451-md.md)] 开始，你可以使用 <xref:System.Runtime.GCSettings.LargeObjectHeapCompactionMode%2A?displayProperty=nameWithType> 属性按需压缩大对象堆。  
+     通常，由于复制大型对象会造成性能代偿，因此不会压缩大型对象堆。 但是，从 [!INCLUDE[net_v451](../../../includes/net-v451-md.md)]开始，你可以使用 <xref:System.Runtime.GCSettings.LargeObjectHeapCompactionMode%2A?displayProperty=nameWithType> 属性按需压缩大对象堆。  
   
  垃圾回收器使用以下信息来确定对象是否为活动对象：  
   

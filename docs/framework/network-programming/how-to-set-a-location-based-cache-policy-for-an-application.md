@@ -11,14 +11,12 @@ helpviewer_keywords:
 - request cache policies
 - cache [.NET Framework], location-based policies
 ms.assetid: 683bb88e-3411-4f46-9686-3411b6ba511c
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: 61eb598ff2ca228e76b2a3633fe4d2bf37f2a476
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: e47b7de00941a8da24052c21f28e91391cff390d
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47209803"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50193677"
 ---
 # <a name="how-to-set-a-location-based-cache-policy-for-an-application"></a>如何：为应用程序设置基于位置的缓存策略
 基于位置的缓存策略允许应用程序基于所请求资源的位置显式定义缓存行为。 本主题演示如何以编程方式设置缓存策略。 有关使用配置文件为应用程序设置策略的信息，请参阅 [ \<requestCaching > 元素（网络设置）](../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md)。  

@@ -4,12 +4,12 @@ description: 适用于容器化 .NET 应用程序的 .NET 微服务体系结构 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.openlocfilehash: c071d269977ccecea9a7d4d79da78d7967bb1618
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.openlocfilehash: 6ff325bb062da2ebff815fc847d2247707a0bf7f
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37105730"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50188048"
 ---
 # <a name="designing-validations-in-the-domain-model-layer"></a>在域模型层中设计验证
 
@@ -17,7 +17,7 @@ ms.locfileid: "37105730"
 
 域实体应始终为有效的实体。 应始终为 true 的对象存在一定数量的不变量。 例如，订单项对象始终得有一个必须为正整数的数量，以及项目名称和价格。 因此，执行不变量是域实体（尤其是聚合根）的职责，而实体对象应不能在无效的情况下存在。 不变量规则只需表达为协定，当它们遭违反时会引发异常或通知。
 
-这背后的原因是，很多 bug 因对象处于它们不应处于的状态而发生。 下面是来自 Greg Young 在[联机讨论](http://jeffreypalermo.com/blog/the-fallacy-of-the-always-valid-entity/)中的很好的解释：
+这背后的原因是，很多 bug 因对象处于它们不应处于的状态而发生。 下面是来自 Greg Young 在[联机讨论](https://jeffreypalermo.com/blog/the-fallacy-of-the-always-valid-entity/)中的很好的解释：
 
 比如说，我们现在有一个采用 UserProfile 的 SendUserCreationEmailService...我们可以如何理性解释该服务中其名称不为 null？ 是不是要再次检查？ 或者更有可能...不需要花精力检查而是“期待更好的发生”- 希望其他人在将其发送给你之前花时间进行了验证。 当然，使用 TDD 时，我们首先应该编写的一个测试是，我是否向客户发送了会引发错误的 null 名称。 但是，一旦我们开始反复编写这些类型的测试，我们认识到...“等一下，如果我们从不允许名称成为 null，我们就不会有所有这些测试”
 

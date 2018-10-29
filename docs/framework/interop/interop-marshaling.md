@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 115f7a2f-d422-4605-ab36-13a8dd28142a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1995c367039591c086054a086f2107e4a88ecefb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a70548231454991060098908ce954bf699eff838
+ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33395364"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49453250"
 ---
 # <a name="interop-marshaling"></a>互操作封送处理
 <a name="top"></a> 互操作封送处理控制调用期间，通过方法自变量和返回值在托管内存和非托管内存之间传递数据的方式。 互操作封送处理是由公共语言运行时的封送处理服务执行的运行时活动。  
@@ -96,7 +96,7 @@ ms.locfileid: "33395364"
     > [!NOTE]
     >  将 C# 客户端的线程设置为 STA 后，对 MTA COM 组件的调用将需要跨单元封送。  
   
- 有关显式选择单元模型的说明， 请参阅 [托管和非托管线程处理](https://msdn.microsoft.com/library/db425c20-4b2f-4433-bf96-76071c7881e5(v=vs.100))。  
+ 有关显式选择单元模型的说明， 请参阅 [托管和非托管线程处理](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/5s8ee185(v=vs.100))。  
   
  [返回页首](#top)  
   
@@ -152,7 +152,7 @@ ms.locfileid: "33395364"
 |[如何：映射 HRESULT 和异常](how-to-map-hresults-and-exceptions.md)|描述如何将自定义异常映射到 HRESULT，并提供从每个 HRESULT 到其在 .NET Framework 中的相似异常类的完整映射。|  
 |[使用泛型类型进行交互操作](https://msdn.microsoft.com/library/26b88e03-085b-4b53-94ba-a5a9c709ce58(v=vs.100))|描述在使用用于 COM 互操作性的泛型类型时，哪些操作受支持。|  
 |[与非托管代码交互操作](index.md)|描述由公共语言运行时提供的互操作性服务。|  
-|[高级 COM 互操作性](https://msdn.microsoft.com/library/3ada36e5-2390-4d70-b490-6ad8de92f2fb(v=vs.100))|提供一些链接，指向关于将 COM 组件并入 .NET Framework 应用程序中的详细信息。|  
+|[高级 COM 互操作性](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bd9cdfyx(v=vs.100))|提供一些链接，指向关于将 COM 组件并入 .NET Framework 应用程序中的详细信息。|  
 |[互操作的设计注意事项](https://msdn.microsoft.com/library/b59637f6-fe35-40d6-ae72-901e7a707689(v=vs.100))|提供有关编写集成 COM 组件的提示。|  
   
  [返回页首](#top)  

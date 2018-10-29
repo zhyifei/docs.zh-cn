@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 465fdcf9-ba24-4d8d-a43f-d983b7cb0cc6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4949540b9f61e71301647a83a1c05d8b4c941412
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.openlocfilehash: c85d0c5c291743c6daac549e15d479fcf332235c
+ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/23/2018
-ms.locfileid: "46581267"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49452818"
 ---
 # <a name="manualresetevent-and-manualreseteventslim"></a>ManualResetEvent 和 ManualResetEventSlim
 <xref:System.Threading.ManualResetEvent?displayProperty=nameWithType> 类表示必须在收到信号后手动重置的本地等待句柄事件。 此类表示其基类 <xref:System.Threading.EventWaitHandle?displayProperty=nameWithType> 的特例。 有关手动重置的用法和功能，请参阅 [EventWaitHandle](../../../docs/standard/threading/eventwaithandle.md) 概念文档。  
@@ -24,9 +24,10 @@ ms.locfileid: "46581267"
   
 ## <a name="see-also"></a>请参阅
 
-- [线程处理](../../../docs/standard/threading/index.md)  
-- [线程处理对象和功能](../../../docs/standard/threading/threading-objects-and-features.md)  
-- [等待句柄](https://msdn.microsoft.com/library/48d10b6f-5fd7-407c-86ab-0179aef72489)  
-- [AutoResetEvent](../../../docs/standard/threading/autoresetevent.md)  
-- [SpinWait](../../../docs/standard/threading/spinwait.md)  
-- [Semaphore 和 SemaphoreSlim](../../../docs/standard/threading/semaphore-and-semaphoreslim.md)
+- <xref:System.Threading.WaitHandle?displayProperty=nameWithType>
+- [AutoResetEvent](autoresetevent.md)  
+- [SpinWait](spinwait.md)  
+- [Semaphore 和 SemaphoreSlim](semaphore-and-semaphoreslim.md)
+- [EventWaitHandle、AutoResetEvent、CountdownEvent、ManualResetEvent](eventwaithandle-autoresetevent-countdownevent-manualresetevent.md)  
+- [线程处理对象和功能](threading-objects-and-features.md)  
+- [线程处理](index.md)  

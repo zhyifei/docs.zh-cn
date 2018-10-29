@@ -9,14 +9,12 @@ helpviewer_keywords:
 - sockets, code examples
 - sockets, asynchronous client sockets
 ms.assetid: d4ac53a0-b50b-4232-9726-d47d25fcc38a
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: 562129b7deea4af9b91dfc92f83a538f6f89f06a
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: c3c40d8e188581f18669a4db7396269056f05349
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/29/2018
-ms.locfileid: "47208297"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50192312"
 ---
 # <a name="asynchronous-client-socket-example"></a>异步客户端套接字示例
 以下示例程序创建连接到服务器的客户端。 该客户端是使用异步套接字构建的，因此当服务器返回响应时，不会挂起客户端应用程序的执行。 应用程序向服务器发送一个字符串，然后控制台上显示服务器返回的字符串。  

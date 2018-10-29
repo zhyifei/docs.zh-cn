@@ -9,11 +9,11 @@ ms.assetid: dd6dc920-b011-418a-b3db-f1580a7d9251
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 870e800220031338557792fa612d4a3101e79f90
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47236012"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48024566"
 ---
 # <a name="creating-new-attributes-for-elements-in-the-dom"></a>为 DOM 中的元素创建新属性
 新建属性不同于创建其他节点类型，因为属性不是节点，而是元素节点的属性，包含在与元素关联的 XmlAttributeCollection 中。 有多种方法可创建属性并将其附加到元素：  

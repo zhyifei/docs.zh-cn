@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 7aa8cb72-dee9-4716-ac54-b17b9ae8218f
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f7e45a863c46090dd62d5e1c80b5f0149d9460cf
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: b24cc4b0ad2839d2c2fa099f963b13a5532d39df
+ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43529998"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49452883"
 ---
 # <a name="reducing-system-restarts-during-net-framework-45-installations"></a>在 .NET Framework 4.5 安装期间减少系统重新启动
 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 安装程序使用[重启管理器](https://go.microsoft.com/fwlink/?LinkId=231425)来防止安装期间可能出现的系统重启。 如果应用安装程序安装了 .NET Framework，则此程序可通过使用重启管理器来利用此功能。 有关详细信息，请参阅[如何：获取 .NET Framework 4.5 安装程序的进度](../../../docs/framework/deployment/how-to-get-progress-from-the-dotnet-installer.md)。  
@@ -35,6 +35,6 @@ ms.locfileid: "43529998"
  如果使用的是链接的安装程序，但不希望提供自己的消息框用于关闭应用，则链接 .NET Framework 安装过程时可以使用命令行上的 `/showrmui` 和 `/passive` 选项。 一起使用这些选项时，如果可以通过关闭应用避免系统重启，安装程序将显示关闭应用的消息框。 此消息框在被动模式下的行为与在完全用户界面下的行为相同。 请参阅[面向开发人员的部署指南](../../../docs/framework/deployment/deployment-guide-for-developers.md)，了解用于重新分发 .NET Framework 的一组完整命令行选项。  
   
 ## <a name="see-also"></a>请参阅  
- [部署](../../../docs/framework/deployment/index.md)  
- [面向开发人员的部署指南](../../../docs/framework/deployment/deployment-guide-for-developers.md)  
- [如何：获取 .NET Framework 4.5 安装程序的进度](../../../docs/framework/deployment/how-to-get-progress-from-the-dotnet-installer.md)
+- [部署](../../../docs/framework/deployment/index.md)  
+- [面向开发人员的部署指南](../../../docs/framework/deployment/deployment-guide-for-developers.md)  
+- [如何：获取 .NET Framework 4.5 安装程序的进度](../../../docs/framework/deployment/how-to-get-progress-from-the-dotnet-installer.md)

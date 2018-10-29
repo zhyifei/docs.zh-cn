@@ -15,14 +15,12 @@ helpviewer_keywords:
 - NetworkCredential class, about NetworkCredential class
 - client authentication, classes for authentication
 ms.assetid: d342e87c-f672-4660-a513-41a2f2b80c4a
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: e0f1ad373f8ec7687b44856a53e1e35b8b6baf8c
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: 245e94cab61c0c60672476aadb417fc798b30362
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47089057"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50181038"
 ---
 # <a name="internet-authentication"></a>Internet 身份验证
 <xref:System.Net> 类支持多种客户端身份验证机制，包括标准 Internet 身份验证方法、基本、摘要式、协商、NTLM 和 Kerberos 身份验证，以及可以创建的自定义方法。  

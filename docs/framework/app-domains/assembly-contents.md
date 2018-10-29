@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 28116714-da77-45f7-826d-fa035d121948
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 38c0081e5677ca65e8c730c7199ebac5d4c86261
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 1aed7e1e9e85f746c4b55b10c59dd82e85565b00
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32741823"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50194827"
 ---
 # <a name="assembly-contents"></a>程序集内容
 通常，静态程序集可能由以下四个元素组成：  
@@ -49,6 +49,6 @@ ms.locfileid: "32741823"
  现在设计源代码时，你会作出有关如何将应用程序的功能划分到一个或多个文件的明确的决定。 在设计 .NET Framework 代码时，你也将作出类似的决定，即如何将应用程序的功能划分到一个或多个程序集中。  
   
 ## <a name="see-also"></a>请参阅  
- [Assemblies in the Common Language Runtime](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)（公共语言运行时中的程序集）  
- [程序集清单](../../../docs/framework/app-domains/assembly-manifest.md)  
- [程序集安全注意事项](../../../docs/framework/app-domains/assembly-security-considerations.md)
+- [Assemblies in the Common Language Runtime](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)（公共语言运行时中的程序集）  
+- [程序集清单](../../../docs/framework/app-domains/assembly-manifest.md)  
+- [程序集安全注意事项](../../../docs/framework/app-domains/assembly-security-considerations.md)

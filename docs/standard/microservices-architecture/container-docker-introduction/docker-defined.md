@@ -4,12 +4,12 @@ description: 适用于容器化 .NET 应用程序的 .NET 微服务体系结构 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 08/31/2018
-ms.openlocfilehash: b79e687d75f133b64e6e7dcb8dc78cce98e8b175
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 63f3714fce317d915b65075922b323f2aa5061f0
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47233188"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50185922"
 ---
 # <a name="what-is-docker"></a>什么是 Docker？
 
@@ -25,7 +25,7 @@ Docker 映像容器可以在 Linux 和 Windows 上本机运行。 但是，Windo
 
 为了在开发环境中承载容器，并提供其他开发人员工具，Docker 为 Windows 或 macOS 提供了 [Docker 社区版 (CE)](https://www.docker.com/community-edition)。 这些产品安装了承载容器所需的 VM（Docker 主机）。 Docker 还提供 [Docker 企业版 (EE)](https://www.docker.com/enterprise-edition)，该版本专为企业开发而设计，供生成、交付和在生产中运行大型业务关键型应用程序的 IT 团队使用。
 
-若要运行 [Windows 容器](https://msdn.microsoft.com/en-us/virtualization/windowscontainers/about/about_overview)，有两种类型的运行时可供使用：
+若要运行 [Windows 容器](/virtualization/windowscontainers/about/)，有两种类型的运行时可供使用：
 
 - Windows Server 容器通过进程和命名空间隔离技术提供应用程序隔离。 Windows Server 容器与容器主机和主机上运行的所有容器共享内核。
 

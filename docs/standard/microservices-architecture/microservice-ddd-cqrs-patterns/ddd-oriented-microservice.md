@@ -4,12 +4,12 @@ description: 适用于容器化 .NET 应用程序的 .NET 微服务体系结构 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 11/06/2017
-ms.openlocfilehash: 7793a3ffded788698fcbc4ba28edefde44268989
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.openlocfilehash: 4d6810e03414e8462dd90c4da686476da0b66032
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37105766"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50183498"
 ---
 # <a name="designing-a-ddd-oriented-microservice"></a>设计面向 DDD 的微服务
 
@@ -57,7 +57,7 @@ ms.locfileid: "37105766"
 
 域模型层是表述业务的地方。 在 .NET 中实现微服务域模型层时，该层被编码为类库，具有用于捕获数据和行为（方法和逻辑）的域实体。
 
-为遵循[持久性忽略](http://deviq.com/persistence-ignorance/)（Persistence Ignorance）和[基础结构忽略](https://ayende.com/blog/3137/infrastructure-ignorance)（Infrastructure Ignorance）原则，此层必须完全忽略数据持久性细节。 应由基础结构层来执行这些持久性任务。 因此，此层不应在基础结构上设置直接的依赖关系，这意味着存在一个重要规则，即域模型实体类应为普通旧 CLR 对象（[POCO](https://en.wikipedia.org/wiki/Plain_Old_CLR_Object)）。
+为遵循[持久性忽略](https://deviq.com/persistence-ignorance/)（Persistence Ignorance）和[基础结构忽略](https://ayende.com/blog/3137/infrastructure-ignorance)（Infrastructure Ignorance）原则，此层必须完全忽略数据持久性细节。 应由基础结构层来执行这些持久性任务。 因此，此层不应在基础结构上设置直接的依赖关系，这意味着存在一个重要规则，即域模型实体类应为普通旧 CLR 对象（[POCO](https://en.wikipedia.org/wiki/Plain_Old_CLR_Object)）。
 
 域实体不应在任何数据访问基础结构框架（如 Entity Framework 或 NHibernate）上具有任何直接的依赖关系（如派生自基类）。 理想情况下，域实体不应派生自或实现任何在基础结构框架中定义的类型。
 
@@ -83,7 +83,7 @@ ms.locfileid: "37105766"
 
 基础结构层是关于如何将最初存放在域实体中的数据（内存中）持久保存在数据库或另一个持久性存储区中。 一个例子是使用 Entity Framework Core 代码实现存储库模式类，该类使用 DBContext 将数据持久保存在关系数据库中。
 
-为遵循之前提到的[持久性忽略](http://deviq.com/persistence-ignorance/)和[基础结构忽略](https://ayende.com/blog/3137/infrastructure-ignorance)原则，基础结构层不得“污染”域模型层。 必须通过不在框架上设置硬依赖关系，让域模型实体类对用于保存数据的基础结构（EF 或任何其他框架）保持为不可知状态。 域模型层类库应只具有域代码，且仅为 [POCO](https://en.wikipedia.org/wiki/Plain_Old_CLR_Object) 实体类，用于实现软件核心，并完全脱离基础结构技术。
+为遵循之前提到的[持久性忽略](https://deviq.com/persistence-ignorance/)和[基础结构忽略](https://ayende.com/blog/3137/infrastructure-ignorance)原则，基础结构层不得“污染”域模型层。 必须通过不在框架上设置硬依赖关系，让域模型实体类对用于保存数据的基础结构（EF 或任何其他框架）保持为不可知状态。 域模型层类库应只具有域代码，且仅为 [POCO](https://en.wikipedia.org/wiki/Plain_Old_CLR_Object) 实体类，用于实现软件核心，并完全脱离基础结构技术。
 
 因此，层或类库和项目应最终取决于域模型层（库），但反之则不成立，如图 9-7 中所示。
 
@@ -96,7 +96,7 @@ ms.locfileid: "37105766"
 #### <a name="additional-resources"></a>其他资源
 
 -   **DevIQ.Persistence Ignorance principle**（持久性忽略原则）
-    [http://deviq.com/persistence-ignorance/](http://deviq.com/persistence-ignorance/)
+    [https://deviq.com/persistence-ignorance/](https://deviq.com/persistence-ignorance/)
 
 -   **Oren Eini。Infrastructure Ignorance**（基础结构忽略）
     [https://ayende.com/blog/3137/infrastructure-ignorance](https://ayende.com/blog/3137/infrastructure-ignorance)

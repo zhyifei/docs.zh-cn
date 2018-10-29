@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 6ddd7866-9804-4571-84de-83f5cc017a5a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ff875f2807a14493ab81a9e354b5c4dcdf3d5feb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 579bc56a538707fd19d6d089c7f3c0c0561ea9eb
+ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33389377"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49454416"
 ---
 # <a name="marshaling-a-delegate-as-a-callback-method"></a>将委托作为回调方法进行封送
 此示例演示如何将委托传递给需要函数指针的非托管函数。 委托是可以容纳方法引用的类，等效于类型安全函数指针或回调函数。  
@@ -38,7 +38,7 @@ ms.locfileid: "33389377"
     void TestCallBack2(FPTR2 pf2, char* value);  
     ```  
   
- [PinvokeLib.dll](https://msdn.microsoft.com/library/5d1438d7-9946-489d-8ede-6c694a08f614(v=vs.100)) 是一种自定义的非托管库，包含上述函数的实现。  
+ [PinvokeLib.dll](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/as6wyhwt(v=vs.100)) 是一种自定义的非托管库，包含上述函数的实现。  
   
  在此示例中，`LibWrap` 类包含 `TestCallBack` 和 `TestCallBack2` 方法的托管原型。 这两种方法都作为参数将委托传递给回调函数。 委托的签名必须匹配它引用的方法的签名。 例如，`FPtr` 和 `FPtr2`委托的签名与 `DoSomething` 和 `DoSomething2` 方法相同。  
   

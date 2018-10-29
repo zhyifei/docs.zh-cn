@@ -2,12 +2,12 @@
 title: 创建 GamePiece 类
 ms.date: 03/30/2017
 ms.assetid: 37a27a86-ac1c-47be-b477-cb4b819459d3
-ms.openlocfilehash: eb73918cc03e2621d39a98158d40a839dbc69d80
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: f9f08437cda685d2ec1d2d0c8d54d370d9d38341
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43857896"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50195874"
 ---
 # <a name="creating-the-gamepiece-class"></a>创建 GamePiece 类
 GamePiece 类封装加载 Microsoft XNA 游戏块图像、跟踪与游戏块相关的鼠标状态、捕获鼠标、提供操作和惯性处理以及在游戏块达到视区限制时提供弹跳功能所需的所有功能。  
@@ -25,7 +25,7 @@ GamePiece 类封装加载 Microsoft XNA 游戏块图像、跟踪与游戏块相�
 ## <a name="class-constructor"></a>类构造函数  
  GamePiece 类的构造函数接受以下参数：  
   
--   [SpriteBatch](https://msdn.microsoft.com/library/microsoft.xna.framework.graphics.spritebatch.aspx) 类型。 在此处传递的引用被分配给私有成员 `spriteBatch`，并在游戏块呈现自身时用于访问 [SpriteBatch.Draw](https://msdn.microsoft.com/library/microsoft.xna.framework.graphics.spritebatch.draw.aspx) 方法。 此外，[GraphicsDevice](https://msdn.microsoft.com/library/microsoft.xna.framework.graphics.spritebatch.graphicsdevice.aspx) 属性用于创建与游戏块关联的 [Texture](https://msdn.microsoft.com/library/microsoft.xna.framework.graphics.texture.aspx) 对象，及获取视区大小，从而检测出游戏块遇到窗口边界的时间，实现游戏块回弹。  
+-   [SpriteBatch](https://docs.microsoft.com/previous-versions/windows/xna/bb199034%28v%3dxnagamestudio.41%29) 类型。 在此处传递的引用被分配给私有成员 `spriteBatch`，并在游戏块呈现自身时用于访问 [SpriteBatch.Draw](https://docs.microsoft.com/previous-versions/windows/xna/bb196426%28v%3dxnagamestudio.41%29) 方法。 此外，[GraphicsDevice](https://docs.microsoft.com/previous-versions/windows/xna/bb197338%28v%3dxnagamestudio.41%29) 属性用于创建与游戏块关联的 [Texture](https://docs.microsoft.com/previous-versions/windows/xna/bb199375%28v%3xnagamestudio.41%29) 对象，及获取视区大小，从而检测出游戏块遇到窗口边界的时间，实现游戏块回弹。  
   
 -   指定要用于游戏块的图像的文件名的字符串。  
   
@@ -78,11 +78,11 @@ GamePiece 类封装加载 Microsoft XNA 游戏块图像、跟踪与游戏块相�
   
  [!code-csharp[ManipulationXNA#_GamePiece_OnInertiaCompleted](../../../samples/snippets/csharp/VS_Snippets_Misc/manipulationxna/cs/gamepiece.cs#_gamepiece_oninertiacompleted)]  
   
- 没有任何迄今存在的逻辑实际导致惯性外推的发生。 这是在 ProcessInertia 方法中完成的。 从游戏更新循环中反复调用的这一方法（[Game.Update](https://msdn.microsoft.com/library/microsoft.xna.framework.game.update.aspx) 方法）检查是否已将 processInertia 标志设置为 `true`，如果是，则调用 <xref:System.Windows.Input.Manipulations.InertiaProcessor2D.Process%2A> 方法。 调用此方法会导致发生外推，并引发 <xref:System.Windows.Input.Manipulations.InertiaProcessor2D.Delta> 事件。  
+ 没有任何迄今存在的逻辑实际导致惯性外推的发生。 这是在 ProcessInertia 方法中完成的。 从游戏更新循环中反复调用的这一方法（[Game.Update](https://docs.microsoft.com/previous-versions/windows/xna/bb199616%28v%3dxnagamestudio.41%29) 方法）检查是否已将 processInertia 标志设置为 `true`，如果是，则调用 <xref:System.Windows.Input.Manipulations.InertiaProcessor2D.Process%2A> 方法。 调用此方法会导致发生外推，并引发 <xref:System.Windows.Input.Manipulations.InertiaProcessor2D.Delta> 事件。  
   
  [!code-csharp[ManipulationXNA#_GamePiece_ProcessInertia](../../../samples/snippets/csharp/VS_Snippets_Misc/manipulationxna/cs/gamepiece.cs#_gamepiece_processinertia)]  
   
- 直到调用了 Draw 方法重载之一，才会实际呈现游戏块。 程序会反复从游戏绘制循环中调用此方法的第一个重载（[Game.Draw](https://msdn.microsoft.com/library/microsoft.xna.framework.game.draw.aspx) 方法）。 这会使游戏块呈现当前的位置、旋转和比例因子。  
+ 直到调用了 Draw 方法重载之一，才会实际呈现游戏块。 程序会反复从游戏绘制循环中调用此方法的第一个重载（[Game.Draw](https://docs.microsoft.com/previous-versions/windows/xna/bb196422%28v%3dxnagamestudio.41%29) 方法）。 这会使游戏块呈现当前的位置、旋转和比例因子。  
   
  [!code-csharp[ManipulationXNA#_GamePiece_Draw](../../../samples/snippets/csharp/VS_Snippets_Misc/manipulationxna/cs/gamepiece.cs#_gamepiece_draw)]  
   
