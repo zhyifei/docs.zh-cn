@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: a7c7747a-5b8c-463f-8493-7266dac75066
 ms.openlocfilehash: afc89d14623a25dbaa1ac5c9a58e11dd3e963617
-ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50088671"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50197569"
 ---
 # <a name="how-to-create-a-securitybindingelement-for-a-specified-authentication-mode"></a>如何：为指定的身份验证模式创建 SecurityBindingElement
 Windows Communication Foundation (WCF) 提供了多个模式的客户端和服务互相进行身份验证。 你可以通过在 <xref:System.ServiceModel.Channels.SecurityBindingElement> 类上使用静态方法或通过配置来为这些身份验证模式创建安全绑定元素，如下面的示例所示。  

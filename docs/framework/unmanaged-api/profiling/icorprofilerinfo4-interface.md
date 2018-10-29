@@ -17,11 +17,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 27cce8a77d4236829124b45650d5d0ac32a5150c
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2018
-ms.locfileid: "49634088"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50197998"
 ---
 # <a name="icorprofilerinfo4-interface"></a>ICorProfilerInfo4 接口
 提供代码探查器可以使用与公共语言运行时 (CLR)，从而控制事件监视及请求信息进行通信的方法。 . `ICorProfilerInfo4`接口是其他扩展`ICorProfilerInfo`接口。 它提供了新方法来支持新增的实时 (JIT) 重新编译[!INCLUDE[net_v45](../../../../includes/net-v45-md.md)]。  
