@@ -1,14 +1,6 @@
 ---
-title: "ISymUnmanagedBinder::GetReaderForFile 方法"
-ms.custom: 
+title: ISymUnmanagedBinder::GetReaderForFile 方法
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ISymUnmanagedBinder.GetReaderForFile
 api_location:
@@ -23,24 +15,21 @@ helpviewer_keywords:
 ms.assetid: 46c06258-831e-47c8-a50a-8650af6b637e
 topic_type:
 - apiref
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 9c50bb4ca36043fc2491c9a0615b682c94c422e5
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: df6a35dcaebc681aa5463a014d3283c81efea617
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50199859"
 ---
-# <a name="isymunmanagedbindergetreaderforfile-method"></a><span data-ttu-id="db4c2-102">ISymUnmanagedBinder::GetReaderForFile 方法</span><span class="sxs-lookup"><span data-stu-id="db4c2-102">ISymUnmanagedBinder::GetReaderForFile Method</span></span>
-<span data-ttu-id="db4c2-103">指定元数据接口和文件名称，则会返回正确 <<!--zz xref:ISymUnmanagedReader --> `ISymUnmanagedReader`> 将读取与模块关联的调试符号的结构。</span><span class="sxs-lookup"><span data-stu-id="db4c2-103">Given a metadata interface and a file name, returns the correct <<!--zz xref:ISymUnmanagedReader --> `ISymUnmanagedReader`> structure that will read the debugging symbols associated with the module.</span></span>  
+# <a name="isymunmanagedbindergetreaderforfile-method"></a><span data-ttu-id="d2b89-102">ISymUnmanagedBinder::GetReaderForFile 方法</span><span class="sxs-lookup"><span data-stu-id="d2b89-102">ISymUnmanagedBinder::GetReaderForFile Method</span></span>
+<span data-ttu-id="d2b89-103">给定元数据接口和文件名称，返回的正确[ISymUnmanagedReader](isymunmanagedreader-interface.md)将读取与模块关联的调试符号的接口。</span><span class="sxs-lookup"><span data-stu-id="d2b89-103">Given a metadata interface and a file name, returns the correct [ISymUnmanagedReader](isymunmanagedreader-interface.md) interface that will read the debugging symbols associated with the module.</span></span>  
   
- <span data-ttu-id="db4c2-104">仅当它旁边的可执行文件时，此方法将打开程序数据库 (PDB) 文件。</span><span class="sxs-lookup"><span data-stu-id="db4c2-104">This method will open the program database (PDB) file only if it is next to the executable file.</span></span> <span data-ttu-id="db4c2-105">出于安全目的做出此更改。</span><span class="sxs-lookup"><span data-stu-id="db4c2-105">This change has been made for security purposes.</span></span> <span data-ttu-id="db4c2-106">如果你需要的 PDB 文件更广泛的搜索，使用[isymunmanagedbinder2:: Getreaderforfile2](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder2-getreaderforfile2-method.md)方法。</span><span class="sxs-lookup"><span data-stu-id="db4c2-106">If you need a more extensive search for the PDB file, use the [ISymUnmanagedBinder2::GetReaderForFile2](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder2-getreaderforfile2-method.md) method.</span></span>  
+ <span data-ttu-id="d2b89-104">仅当可执行文件旁边，此方法将打开程序数据库 (PDB) 文件。</span><span class="sxs-lookup"><span data-stu-id="d2b89-104">This method will open the program database (PDB) file only if it is next to the executable file.</span></span> <span data-ttu-id="d2b89-105">以安全为目的做出此更改。</span><span class="sxs-lookup"><span data-stu-id="d2b89-105">This change has been made for security purposes.</span></span> <span data-ttu-id="d2b89-106">如果你需要的 PDB 文件更广泛的搜索，使用[ISymUnmanagedBinder2::GetReaderForFile2](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder2-getreaderforfile2-method.md)方法。</span><span class="sxs-lookup"><span data-stu-id="d2b89-106">If you need a more extensive search for the PDB file, use the [ISymUnmanagedBinder2::GetReaderForFile2](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder2-getreaderforfile2-method.md) method.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="db4c2-107">语法</span><span class="sxs-lookup"><span data-stu-id="db4c2-107">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="d2b89-107">语法</span><span class="sxs-lookup"><span data-stu-id="d2b89-107">Syntax</span></span>  
   
 ```  
 HRESULT GetReaderForFile(  
@@ -50,25 +39,25 @@ HRESULT GetReaderForFile(
     [out, retval] ISymUnmanagedReader  **pRetVal);  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="db4c2-108">参数</span><span class="sxs-lookup"><span data-stu-id="db4c2-108">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="d2b89-108">参数</span><span class="sxs-lookup"><span data-stu-id="d2b89-108">Parameters</span></span>  
  `importer`  
- <span data-ttu-id="db4c2-109">[in]指向元数据导入接口的指针。</span><span class="sxs-lookup"><span data-stu-id="db4c2-109">[in] A pointer to the metadata import interface.</span></span>  
+ <span data-ttu-id="d2b89-109">[in]指向元数据导入接口的指针。</span><span class="sxs-lookup"><span data-stu-id="d2b89-109">[in] A pointer to the metadata import interface.</span></span>  
   
  `fileName`  
- <span data-ttu-id="db4c2-110">[in]指向的文件名称的指针。</span><span class="sxs-lookup"><span data-stu-id="db4c2-110">[in] A pointer to the file name.</span></span>  
+ <span data-ttu-id="d2b89-110">[in]一个指向的文件的名称。</span><span class="sxs-lookup"><span data-stu-id="d2b89-110">[in] A pointer to the file name.</span></span>  
   
  `searchPath`  
- <span data-ttu-id="db4c2-111">[in]搜索路径指向的指针。</span><span class="sxs-lookup"><span data-stu-id="db4c2-111">[in] A pointer to the search path.</span></span>  
+ <span data-ttu-id="d2b89-111">[in]搜索路径指向的指针。</span><span class="sxs-lookup"><span data-stu-id="d2b89-111">[in] A pointer to the search path.</span></span>  
   
  `pRetVal`  
- <span data-ttu-id="db4c2-112">[out]一个指针，它设置为返回 <<!--zz xref:ISymUnmanagedReader --> `ISymUnmanagedReader`> 接口。</span><span class="sxs-lookup"><span data-stu-id="db4c2-112">[out] A pointer that is set to the returned <<!--zz xref:ISymUnmanagedReader --> `ISymUnmanagedReader`> interface.</span></span>  
+ <span data-ttu-id="d2b89-112">[out]一个指针，它设置为返回[ISymUnmanagedReader](isymunmanagedreader-interface.md)接口。</span><span class="sxs-lookup"><span data-stu-id="d2b89-112">[out] A pointer that is set to the returned [ISymUnmanagedReader](isymunmanagedreader-interface.md) interface.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="db4c2-113">返回值</span><span class="sxs-lookup"><span data-stu-id="db4c2-113">Return Value</span></span>  
- <span data-ttu-id="db4c2-114">如果该方法成功; 则为 S_OK否则为 E_FAIL 或某些其他错误代码。</span><span class="sxs-lookup"><span data-stu-id="db4c2-114">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="d2b89-113">返回值</span><span class="sxs-lookup"><span data-stu-id="d2b89-113">Return Value</span></span>  
+ <span data-ttu-id="d2b89-114">如果方法成功，则为 S_OK否则为 E_FAIL 或某些其他错误代码。</span><span class="sxs-lookup"><span data-stu-id="d2b89-114">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="db4c2-115">惠?</span><span class="sxs-lookup"><span data-stu-id="db4c2-115">Requirements</span></span>  
- <span data-ttu-id="db4c2-116">**标头：** CorSym.idl、 CorSym.h</span><span class="sxs-lookup"><span data-stu-id="db4c2-116">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="d2b89-115">要求</span><span class="sxs-lookup"><span data-stu-id="d2b89-115">Requirements</span></span>  
+ <span data-ttu-id="d2b89-116">**标头：** CorSym.idl、 CorSym.h</span><span class="sxs-lookup"><span data-stu-id="d2b89-116">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="db4c2-117">请参阅</span><span class="sxs-lookup"><span data-stu-id="db4c2-117">See Also</span></span>  
- [<span data-ttu-id="db4c2-118">ISymUnmanagedBinder 接口</span><span class="sxs-lookup"><span data-stu-id="db4c2-118">ISymUnmanagedBinder Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder-interface.md)  
- [<span data-ttu-id="db4c2-119">GetReaderForFile2 方法</span><span class="sxs-lookup"><span data-stu-id="db4c2-119">GetReaderForFile2 Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder2-getreaderforfile2-method.md)
+## <a name="see-also"></a><span data-ttu-id="d2b89-117">请参阅</span><span class="sxs-lookup"><span data-stu-id="d2b89-117">See Also</span></span>  
+ [<span data-ttu-id="d2b89-118">ISymUnmanagedBinder 接口</span><span class="sxs-lookup"><span data-stu-id="d2b89-118">ISymUnmanagedBinder Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder-interface.md)  
+ [<span data-ttu-id="d2b89-119">GetReaderForFile2 方法</span><span class="sxs-lookup"><span data-stu-id="d2b89-119">GetReaderForFile2 Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder2-getreaderforfile2-method.md)
