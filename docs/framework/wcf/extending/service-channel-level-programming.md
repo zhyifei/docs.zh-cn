@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 8d8dcd85-0a05-4c44-8861-4a0b3b90cca9
-ms.openlocfilehash: 4d1ee0671a45b12e70f8f43ed2ea83b0a22d6c98
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: e00b5ae2c72a4d4dcd2140e9c280d5bfda3531c2
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33805855"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50197192"
 ---
 # <a name="service-channel-level-programming"></a>服务通道级编程
-本主题介绍如何编写 Windows Communication Foundation (WCF) 服务应用程序时无需使用<xref:System.ServiceModel.ServiceHost?displayProperty=nameWithType>及其关联的对象模型。  
+本主题介绍如何编写 Windows Communication Foundation (WCF) 服务应用程序而无需使用<xref:System.ServiceModel.ServiceHost?displayProperty=nameWithType>及其关联的对象模型。  
   
 ## <a name="receiving-messages"></a>接收消息  
  若要准备接收并处理消息，必须执行下列步骤：  
@@ -29,12 +29,12 @@ ms.locfileid: "33805855"
 5.  关闭所有通道对象。  
   
 #### <a name="creating-a-binding"></a>创建绑定  
- 侦听和接收消息的第一步是创建绑定。 WCF 配有多个的内置或系统提供绑定，可直接通过实例化其中之一。 另外，你还可以创建自己的自定义绑定，方法是实例化 CustomBinding 类，这同时也是列表 1 中的代码所执行的操作。  
+ 侦听和接收消息的第一步是创建绑定。 WCF 配有可直接通过实例化其中一个的多个内置或系统提供绑定。 另外，你还可以创建自己的自定义绑定，方法是实例化 CustomBinding 类，这同时也是列表 1 中的代码所执行的操作。  
   
  下面的代码示例创建了 <xref:System.ServiceModel.Channels.CustomBinding?displayProperty=nameWithType> 的一个实例，并将 <xref:System.ServiceModel.Channels.HttpTransportBindingElement?displayProperty=nameWithType> 添加到其 Elements 集合（这是用于生成通道堆栈的绑定元素的集合）。 在此示例中，由于元素集合只有 <xref:System.ServiceModel.Channels.HttpTransportBindingElement>，所以生成的通道堆栈仅具有 HTTP 传输通道。  
   
 #### <a name="building-a-channellistener"></a>生成 ChannelListener  
- 在创建绑定时之后，我们调用<!--zz<xref:System.ServiceModel.Channels.Binding.BuildChannelListener%601%2A?displayProperty=nameWithType>-->`System.ServiceModel.Channels.Binding.BuildChannelListener`来生成通道侦听器，其中类型参数是要创建的通道形状。 在此示例中使用 <xref:System.ServiceModel.Channels.IReplyChannel?displayProperty=nameWithType>，这是因为我们希望以请求/答复消息交换模式侦听传入的消息。  
+ 在创建绑定后，我们调用 <xref:System.ServiceModel.Channels.Binding.BuildChannelListener%2A?displayProperty=nameWithType> 来生成通道侦听器，其中类型参数就是要创建的通道形状。 在此示例中使用 <xref:System.ServiceModel.Channels.IReplyChannel?displayProperty=nameWithType>，这是因为我们希望以请求/答复消息交换模式侦听传入的消息。  
   
  <xref:System.ServiceModel.Channels.IReplyChannel> 用于接收请求消息，并发回答复消息。 调用 <xref:System.ServiceModel.Channels.IReplyChannel.ReceiveRequest%2A?displayProperty=nameWithType> 会返回一个 <xref:System.ServiceModel.Channels.IRequestChannel?displayProperty=nameWithType>，可以用于接收请求消息以及发回答复消息。  
   

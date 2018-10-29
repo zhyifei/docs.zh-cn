@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 218c4464-e007-4539-803f-7c8b0a909fd8
 author: guardrex
 ms.author: mairaw
-ms.openlocfilehash: 21fedf064596979dbfb4190d9956da616295af3c
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: e9b79a8319b320289f43adac5a82ef22fa5e32b0
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32752112"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50199690"
 ---
 # <a name="remove-element-for-appsettings"></a>\<删除 > 元素\<appSettings >
 
@@ -50,7 +50,7 @@ ms.locfileid: "32752112"
 
 ## <a name="example"></a>示例
 
-下面的示例演示如何删除的自定义配置设置`ApplicationName`:
+下面的示例演示如何删除自定义配置设置为`ApplicationName`:
 
 ```xml
 <appSettings>
@@ -60,4 +60,4 @@ ms.locfileid: "32752112"
 
 ## <a name="see-also"></a>请参阅
 
-[.NET Framework 的配置文件架构](~/docs/framework/configure-apps/file-schema/index.md)
+- [.NET Framework 的配置文件架构](~/docs/framework/configure-apps/file-schema/index.md)

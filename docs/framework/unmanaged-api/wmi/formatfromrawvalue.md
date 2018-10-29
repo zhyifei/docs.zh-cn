@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 95ef445d41672c5c2895bd7115afb6a73a57e8f9
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 90af7d01d78cf74cbb304e3b987d5fe58e23f76e
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44086132"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50196695"
 ---
 # <a name="formatfromrawvalue-function"></a>FormatFromRawValue 函数
 如果格式转换是基于时间的，则将一个或两个原始性能数据值转换为指定格式。   
@@ -65,11 +65,11 @@ int FormatFromRawValue (
 `pTimeBase`  
 [in]时间基准，如有必要格式转换为指向的指针。 如果没有格式转换所需时间基本信息，则忽略此参数的值。
 
-`pRawValue1` [in]一个指向[ `PDH_RAW_COUNTER` ](https://msdn.microsoft.com/library/windows/desktop/aa373060(v=vs.85).aspx)结构，它表示原始性能值。
+`pRawValue1` [in]一个指向[ `PDH_RAW_COUNTER` ](/windows/desktop/api/pdh/ns-pdh-_pdh_raw_counter)结构，它表示原始性能值。
 
-`pRawValue2` [in]一个指向[ `PDH_RAW_COUNTER` ](https://msdn.microsoft.com/library/windows/desktop/aa373060(v=vs.85).aspx)结构，它表示第二个原始性能值。 如果第二个原始性能值不是必需的此参数应为`null`。
+`pRawValue2` [in]一个指向[ `PDH_RAW_COUNTER` ](/windows/desktop/api/pdh/ns-pdh-_pdh_raw_counter)结构，它表示第二个原始性能值。 如果第二个原始性能值不是必需的此参数应为`null`。
 
-`pFmtValue` [out]一个指向[ `PDH_FMT_COUNTERVALUE` ](https://msdn.microsoft.com/library/windows/desktop/aa373050(v=vs.85).aspx)接收格式化的性能值的结构。
+`pFmtValue` [out]一个指向[ `PDH_FMT_COUNTERVALUE` ](/windows/desktop/api/pdh/ns-pdh-_pdh_fmt_countervalue)接收格式化的性能值的结构。
 
 ## <a name="return-value"></a>返回值
 
@@ -83,7 +83,7 @@ int FormatFromRawValue (
   
 ## <a name="remarks"></a>备注
 
-此函数包装对的调用[FormatFromRawValue](https://msdn.microsoft.com/library/ms231047(v=vs.85).aspx)函数。
+此函数包装对的调用[FormatFromRawValue](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.0/ms231047%28v=vs.85%29)函数。
 
 ## <a name="requirements"></a>要求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
