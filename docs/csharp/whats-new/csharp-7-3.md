@@ -3,11 +3,11 @@ title: C# 7.3 中的新增功能
 description: C# 7.3 中的新增功能概述
 ms.date: 05/16/2018
 ms.openlocfilehash: 570da53059242c0242609ddcba5cb23f1728aa9f
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47235226"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48873795"
 ---
 # <a name="whats-new-in-c-73"></a>C# 7.3 中的新增功能
 

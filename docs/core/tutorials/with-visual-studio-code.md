@@ -4,12 +4,12 @@ description: 了解如何使用 Visual Studio Code 创建和调试首个 C# .NET
 author: kendrahavens
 ms.author: mairaw
 ms.date: 09/27/2017
-ms.openlocfilehash: 321edcebdea141b7290fa57b47c8d9fc91d3521c
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 74fdd9ce122482a027931405cc9a94011a9c13bb
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45668218"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50192572"
 ---
 # <a name="get-started-with-c-and-visual-studio-code"></a>C# 和 Visual Studio Code 入门
 
@@ -58,7 +58,7 @@ ms.locfileid: "45668218"
 
 ## <a name="debug"></a>调试
 
-1. 单击打开 *Program.cs*。 在 Visual Studio Code 中首次打开 C# 文件时，会在编辑器中加载 [OmniSharp](http://www.omnisharp.net/)。
+1. 单击打开 *Program.cs*。 在 Visual Studio Code 中首次打开 C# 文件时，会在编辑器中加载 [OmniSharp](https://www.omnisharp.net/)。
 
     ![打开 Program.cs 文件](media/with-visual-studio-code/opencs.png)
 

@@ -4,12 +4,12 @@ description: 了解用于安装 .NET Core CLI 工具和共享运行时的 dotnet
 author: blackdwarf
 ms.author: mairaw
 ms.date: 09/11/2017
-ms.openlocfilehash: 8d1c6ebb30bd45575bb61206799c9c3e5c47ff0c
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: ea14424297dcf1dab8711197bee1d3b3e19879c1
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46004005"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48837071"
 ---
 # <a name="dotnet-install-scripts-reference"></a>dotnet-install 脚本引用
 
@@ -33,8 +33,8 @@ macOS/Linux：
 
 建议使用在 [.NET Core 主网站](https://dot.net)上托管的稳定版本。 脚本的直接路径为：
 
-* https://dot.net/v1/dotnet-install.sh（bash、UNIX）
-* https://dot.net/v1/dotnet-install.ps1（Powershell、Windows）
+* <https://dot.net/v1/dotnet-install.sh>（bash、UNIX）
+* <https://dot.net/v1/dotnet-install.ps1>（Powershell、Windows）
 
 这些脚本主要用于自动化方案和非管理员安装。 共有两个脚本，一个是在 Windows 上运行的 PowerShell 脚本。 另一脚本是适用于 Linux/macOS 的 bash 脚本。 这两个脚本的行为相同。 bash 脚本也读取 PowerShell 开关。因此，可以在 Linux/macOS 系统上将 PowerShell 开关与脚本结合使用。
 
@@ -65,7 +65,7 @@ macOS/Linux：
 
 - `latest` - 频道上的最新内部版本（与 `-Channel` 选项结合使用）
 - `coherent` - 频道上的最新相干内部版本；使用最新的稳定包组合（与分支名称 `-Channel` 选项结合使用）
-- 由三部分组成的版本，采用 X.Y.Z 格式，表示特定的内部版本；取代 `-Channel` 选项。 例如：`2.0.0-preview2-006120`
+- 由三部分组成的版本，采用 X.Y.Z 格式，表示特定的内部版本；取代 `-Channel` 选项。 例如： `2.0.0-preview2-006120`
 
 如果省略，`-Version` 默认为 `latest`。
 

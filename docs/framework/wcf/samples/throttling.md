@@ -6,11 +6,11 @@ helpviewer_keywords:
 - Throttling Sample [Windows Communication Foundation]
 ms.assetid: 40bb3582-8ae9-4410-96f0-6c515bfaf47c
 ms.openlocfilehash: 1337b5d1c4c18700f0722bbb6912e934b2170b01
-ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "49374035"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50202050"
 ---
 # <a name="throttling"></a>遏制
 遏制示例演示如何使用遏制控制。 限制控件会对并发调用、实例或会话的数目施加限制以防止过度使用资源。 您可以在服务配置文件设置中指定遏制行为。 此示例基于[Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md)实现计算器服务。  

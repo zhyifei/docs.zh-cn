@@ -5,11 +5,11 @@ helpviewer_keywords:
 - attaching extensions using behaviors [WCF]
 ms.assetid: 149b99b6-6eb6-4f45-be22-c967279677d9
 ms.openlocfilehash: 707b365a0f64055497e6b8814633acf7f4d7097c
-ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50041188"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50200054"
 ---
 # <a name="configuring-and-extending-the-runtime-with-behaviors"></a>使用行为配置和扩展运行时
 行为，可以修改默认行为并添加自定义扩展插件的检查和验证服务配置或修改 Windows Communication Foundation (WCF) 客户端和服务应用程序中的运行时行为。 本主题说明行为接口、如何实现这些接口以及如何以编程方式将它们添加到服务说明（在服务应用程序中）或终结点（在客户端应用程序中）或配置文件中。 有关使用系统提供的行为的详细信息，请参阅[指定服务运行时行为](../../../../docs/framework/wcf/specifying-service-run-time-behavior.md)并[指定客户端运行时行为](../../../../docs/framework/wcf/specifying-client-run-time-behavior.md)。  

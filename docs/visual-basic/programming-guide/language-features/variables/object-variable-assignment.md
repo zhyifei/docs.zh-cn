@@ -14,11 +14,11 @@ helpviewer_keywords:
 - Me keyword [Visual Basic], as object variable
 ms.assetid: 3706811d-fd40-44fe-8727-d692e8e55d6d
 ms.openlocfilehash: 571b09a0783ec0dfd09970b000faec39dca682b3
-ms.sourcegitcommit: 4621e67f69e7a9503ea93313ff60d69683207889
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "49995357"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50201933"
 ---
 # <a name="object-variable-assignment-visual-basic"></a>对象变量赋值 (Visual Basic)
 使用普通赋值语句将对象分配给对象变量。 可以分配对象表达式或[Nothing](../../../../visual-basic/language-reference/nothing.md)关键字，如下面的示例说明了。  

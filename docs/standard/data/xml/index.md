@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: e695047f-3c0f-4045-8708-5baea91cc380
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5f286d0f64478bfc46ca207086e4a6b918ee47b5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3b5c774d566766936ebe043f264040ce26b8e9e3
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33576085"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50202954"
 ---
 # <a name="xml-documents-and-data"></a>XML 文档和数据
 .NET Framework 提供了一组全面而集成的类，可用来方便地生成可以识别 XML 的应用程序。 通过以下命名空间中的类，可以分析和编写 XML，编辑内存中的 XML 数据，进行数据验证以及 XSLT 转换。  
@@ -35,7 +35,7 @@ ms.locfileid: "33576085"
   
 -   <xref:System.Xml.Schema.XmlSchemaSet?displayProperty=nameWithType> 类中的架构支持 [W3C XML 架构第 1 部分：结构](https://www.w3.org/TR/xmlschema-1/)和 [XML 架构第 2 部分：数据类型](https://www.w3.org/TR/xmlschema-2/)建议。  
   
--   <xref:System.Xml.Xsl?displayProperty=nameWithType> 命名空间中的类支持符合 [W3C XSLT 1.0](http://www.w3.org/TR/xslt) 建议的 XSLT 转换。  
+-   <xref:System.Xml.Xsl?displayProperty=nameWithType> 命名空间中的类支持符合 [W3C XSLT 1.0](https://www.w3.org/TR/xslt) 建议的 XSLT 转换。  
   
  .NET Framework 中的 XML 类具有以下优点：  
   

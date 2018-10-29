@@ -2,12 +2,12 @@
 title: 列表 (F#)
 description: '了解有关 F # 列表，相同类型的元素的有序的、 不可变序列。'
 ms.date: 05/16/2016
-ms.openlocfilehash: 60e7edb56bdf498e3ba51aff028d8564eb68d0f1
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: b48bf04f5ec490b49e63462affc0d4eadebe10ef
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47210157"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50201619"
 ---
 # <a name="lists"></a>列表
 
@@ -48,7 +48,7 @@ F# 中的列表是一个有序的、不可变的同类型元素系列。 若要�
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet1305.fs)]
 
-可以使用 `@` 运算符来串联具有可兼容类型的列表，如以下代码所示。 如果 `list1` 为 `[2; 3; 4]`，且 `list2` 为 `[100; 2; 3; 4 ]`，则此代码会将 `list3` 创建为 `[2; 3; 4; 100; 2; 3; 4]`。
+可以使用 `@` 运算符来串联具有可兼容类型的列表，如以下代码所示。 如果 `list1` 为 `[2; 3; 4]`，且 `list2` 为 `[100; 2; 3; 4]`，则此代码会将 `list3` 创建为 `[2; 3; 4; 100; 2; 3; 4]`。
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet1306.fs)]
 

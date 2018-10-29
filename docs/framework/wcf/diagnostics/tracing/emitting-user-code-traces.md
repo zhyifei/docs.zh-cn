@@ -3,11 +3,11 @@ title: 发出用户代码跟踪
 ms.date: 03/30/2017
 ms.assetid: fa54186a-8ffa-4332-b0e7-63867126fd49
 ms.openlocfilehash: 0664c11d8020ee5e712ce6d4843c85a1f30b11a3
-ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50049160"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50200582"
 ---
 # <a name="emitting-user-code-traces"></a>发出用户代码跟踪
 除了启用跟踪以收集检测数据生成由 Windows Communication Foundation (WCF)，您还可以发出以编程方式在用户代码中的跟踪。 这样，您就可以主动创建检测数据，过后您可以细读这些数据以进行诊断。 本主题讨论如何实现这一目的。  

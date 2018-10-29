@@ -3,13 +3,13 @@ title: dotnet new 命令 - .NET Core CLI
 description: dotnet new 命令可根据指定模板新建 .NET Core 项目。
 author: mairaw
 ms.author: mairaw
-ms.date: 07/31/2018
-ms.openlocfilehash: 396c4ddf09854fa4582226bdb1422f8c929e459b
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.date: 10/24/2018
+ms.openlocfilehash: 56d76f1dd54097f9cf20129d74057235290c273c
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47208628"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50188192"
 ---
 # <a name="dotnet-new"></a>dotnet new
 
@@ -65,27 +65,27 @@ dotnet new [-h|--help]
 
 此命令包含默认的模板列表。 使用 `dotnet new -l` 获取可用模板的列表。 下表列出了随 .NET Core SDK 2.1.300 一起预安装的模板。 模板的默认语言显示在括号内。
 
-|模板描述                          | 模板名称   | 语言     |
-|----------------------------------------------|-----------------|---------------|
-| 控制台应用程序                          | `console`       | [C#]、F#、VB  |
-| 类库                                | `classlib`      | [C#]、F#、VB  |
-| 单元测试项目                            | `mstest`        | [C#]、F#、VB  |
-| xUnit 测试项目                           | `xunit`         | [C#]、F#、VB  |
-| Razor 页                                   | `page`          | [C#]          |
-| MVC ViewImports                              | `viewimports`   | [C#]          |
-| MVC ViewStart                                | `viewstart`     | [C#]          |
-| ASP.NET Core 空                           | `web`           | [C#]，F#      |
-| ASP.NET Core Web 应用程序 (Model-View-Controller) | `mvc`           | [C#]，F#      |
-| ASP.NET Core Web 应用程序                         | `razor`         | [C#]          |
-| 含 Angular 的 ASP.NET Core                    | `angular`       | [C#]          |
-| 含 React.js 的 ASP.NET Core                   | `react`         | [C#]          |
-| 含 React.js 和 Redux 的 ASP.NET Core         | `reactredux`    | [C#]          |
-| ASP.NET Core Web API                         | `webapi`        | [C#]，F#      |
-| Razor 类库                          | `razorclasslib` | [C#]          |
-| global.json 文件                             | `globaljson`    |               |
-| NuGet 配置                                 | `nugetconfig`   |               |
-| Web 配置                                   | `webconfig`     |               |
-| 解决方案文件                                | `sln`           |               |
+|模板描述                          | 模板名称    | 语言     |
+|----------------------------------------------|------------------|---------------|
+| 控制台应用程序                          | `console`        | [C#]、F#、VB  |
+| 类库                                | `classlib`       | [C#]、F#、VB  |
+| 单元测试项目                            | `mstest`         | [C#]、F#、VB  |
+| xUnit 测试项目                           | `xunit`          | [C#]、F#、VB  |
+| Razor 页                                   | `page`           | [C#]          |
+| MVC ViewImports                              | `viewimports`    | [C#]          |
+| MVC ViewStart                                | `viewstart`      | [C#]          |
+| ASP.NET Core 空                           | `web`            | [C#]，F#      |
+| ASP.NET Core Web 应用程序 (Model-View-Controller) | `mvc`            | [C#]，F#      |
+| ASP.NET Core Web 应用程序                         | `razor`， `webapp`| [C#]          |
+| 含 Angular 的 ASP.NET Core                    | `angular`        | [C#]          |
+| 含 React.js 的 ASP.NET Core                   | `react`          | [C#]          |
+| 含 React.js 和 Redux 的 ASP.NET Core         | `reactredux`     | [C#]          |
+| ASP.NET Core Web API                         | `webapi`         | [C#]，F#      |
+| Razor 类库                          | `razorclasslib`  | [C#]          |
+| global.json 文件                             | `globaljson`     |               |
+| NuGet 配置                                 | `nugetconfig`    |               |
+| Web 配置                                   | `webconfig`      |               |
+| 解决方案文件                                | `sln`            |               |
 
 # <a name="net-core-20tabnetcore20"></a>[.NET Core 2.0](#tab/netcore20)
 

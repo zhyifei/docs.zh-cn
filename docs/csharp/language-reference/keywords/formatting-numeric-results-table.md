@@ -8,11 +8,11 @@ helpviewer_keywords:
 - String.Format method
 ms.assetid: 120ba537-4448-4c62-8676-7a8fdd98f496
 ms.openlocfilehash: 6f1cb5b49139cf9661e678cfc0ecc884a2749622
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47203886"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "47863697"
 ---
 # <a name="formatting-numeric-results-table-c-reference"></a>设置数值结果表的格式（C# 参考）
 

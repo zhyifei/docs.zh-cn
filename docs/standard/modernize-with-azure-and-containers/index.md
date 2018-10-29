@@ -4,12 +4,12 @@ description: 了解如何迁移并更新现有应用程序对 Azure 云以及与
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 04/28/2018
-ms.openlocfilehash: b8c293730b0921924584359ffad32efd2b83a19b
-ms.sourcegitcommit: dfc8aa44246a97f4611cc441d9ef71b03cc31260
+ms.openlocfilehash: 0cfb052daa41264ae00d48906477eae99ea159d8
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "49413932"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50200080"
 ---
 # <a name="modernize-existing-net-applications-with-azure-cloud-and-windows-containers-2nd-edition"></a>更新现有.NET 应用程序使用 Azure 云和 Windows 容器 （第二版）
 
@@ -25,7 +25,7 @@ Redmond, Washington 98052-6399
 
 保留所有权利。 未经发布者书面许可，不得以任何形式或任何方式复制本书中的任何内容。
 
-本书位于免费电子书 （电子图书） 可通过 microsoft 的多个通道的形式如 <http://dot.net/architecture> 。
+本书位于免费电子书 （电子图书） 可通过 microsoft 的多个通道的形式如 <https://dot.net/architecture> 。
 
 若要了解本书的相关问题，请发送电子邮件至 [dotnet-architecture-ebooks-feedback@service.microsoft.com](mailto:dotnet-architecture-ebooks-feedback@service.microsoft.com?subject=Feedback%20for%20.NET%20Container%20&%20Microservices%20Architecture%20book)
 
@@ -72,7 +72,7 @@ Microsoft 和 <https://www.microsoft.com> 上“商标”网页列出的商标�
 
 图 1-1 显示了采用递增性方法将现有 .NET 应用程序移动到云时可能使用的途径。
 
- ![现有 .NET 应用程序和服务的更新途径](./media/image1-1.png)
+ ![现有 .NET 应用程序和服务的更新途径](./media/image1-1.png)
 
 > **图 1-1**。 现有 .NET 应用程序和服务的更新途径
 

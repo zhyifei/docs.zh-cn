@@ -7,12 +7,12 @@ ms.date: 09/05/2018
 dev_langs:
 - csharp
 - vb
-ms.openlocfilehash: a7e810372d831699eae777186385e45fe65cdf45
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 6c0eb82b6be5d65c70287dd601bb97868af1c943
+ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47208245"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49454442"
 ---
 # <a name="deploying-net-core-apps-with-command-line-interface-cli-tools"></a>使用命令行接口 (CLI) 工具部署 .NET Core 应用
 
@@ -77,7 +77,7 @@ ms.locfileid: "47208245"
 
 要使用一个或多个第三方依赖项来部署依赖框架的部署，需要这些依赖项都可供项目使用。 在运行 `dotnet restore`（[请参阅注释](#dotnet-restore-note)）命令之前，还需执行额外两个步骤：
 
-1. 向 csproj 文件的 `<ItemGroup>` 部分添加对所需第三方库的引用。 以下 `<ItemGroup>` 部分包含 [Json.NET](http://www.newtonsoft.com/json) 的依赖项（作为第三方库）：
+1. 向 csproj 文件的 `<ItemGroup>` 部分添加对所需第三方库的引用。 以下 `<ItemGroup>` 部分包含 [Json.NET](https://www.newtonsoft.com/json) 的依赖项（作为第三方库）：
 
       ```xml
       <ItemGroup>

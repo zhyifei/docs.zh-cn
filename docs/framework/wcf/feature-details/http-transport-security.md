@@ -3,11 +3,11 @@ title: HTTP 传输安全
 ms.date: 03/30/2017
 ms.assetid: d3439262-c58e-4d30-9f2b-a160170582bb
 ms.openlocfilehash: 043154095d4600bd824457750effe9ea5494dcf5
-ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50036952"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50201525"
 ---
 # <a name="http-transport-security"></a>HTTP 传输安全
 如果使用 HTTP 作为传输，则由安全套接字层 (SSL) 实现提供安全。 SSL 广泛用于 Internet 中，以便向客户端证明服务的身份，并且随后向通道提供保密性（加密）。 本主题说明 SSL 的工作原理以及它如何实现 Windows Communication Foundation (WCF) 中。  

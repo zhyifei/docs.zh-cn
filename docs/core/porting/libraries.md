@@ -4,12 +4,12 @@ description: 了解如何将 .NET Framework 中的库项目移植到 .NET Core�
 author: cartermp
 ms.author: mairaw
 ms.date: 07/14/2017
-ms.openlocfilehash: 0f1d79623b4ece836732010e76a3c93fbbf8099f
-ms.sourcegitcommit: f9e38d31288fe5962e6be5b0cc286da633482873
+ms.openlocfilehash: eb6b8506d8df218a053242cd0b8d3097fa6d9fd3
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37028040"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50199846"
 ---
 # <a name="porting-to-net-core---libraries"></a>移植到 .NET Core - 库
 
@@ -162,11 +162,11 @@ AppDomain 可将应用相互隔离。 AppDomain 需要运行时支持并且通�
 要确保移植代码后一切正常的最佳方式是在将代码移植到 .NET Core 时进行测试。 为此，需要使用将针对 .NET Core 生成和运行测试的测试框架。 当前，有三个选择：
 
 - [xUnit](https://xunit.github.io/)
-  * [入门](http://xunit.github.io/docs/getting-started-dotnet-core.html)
+  * [入门](https://xunit.github.io/docs/getting-started-dotnet-core.html)
   * [将 MSTest 项目转换为 xUnit 的工具](https://github.com/dotnet/codeformatter/tree/master/src/XUnitConverter)
-- [NUnit](http://www.nunit.org/)
+- [NUnit](https://nunit.org/)
   * [入门](https://github.com/nunit/docs/wiki/Installation)
-  * [关于从 MSTest 迁移到 NUnit 的博客文章](http://www.florian-rappl.de/News/Page/275/convert-mstest-to-nunit)
+  * [关于从 MSTest 迁移到 NUnit 的博客文章](https://www.florian-rappl.de/News/Page/275/convert-mstest-to-nunit)
 - [MSTest](https://docs.microsoft.com/visualstudio/test/unit-test-basics)
 
 ## <a name="recommended-approach-to-porting"></a>移植的推荐方法

@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: fd0ddda898911da2c96a53d941c4290af9028154
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: b54ceb099df15855b6b30b8c28d7d8917a9c71eb
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33446569"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50184944"
 ---
 # <a name="imetadataemitdefinefield-method"></a>IMetaDataEmit::DefineField 方法
-使用指定的元数据签名中，创建一个字段的定义并获取指向该字段定义的标记。  
+使用指定的元数据签名中，创建一个字段的定义并获取该字段定义的标记。  
   
 ## <a name="syntax"></a>语法  
   
@@ -51,25 +51,25 @@ HRESULT DefineField (
  [in]Unicode 中的字段名称。  
   
  `dwFieldFlags`  
- [in]中的字段特性。 这是一个位掩码的`CorFieldAttr`值。  
+ [in]字段特性。 这是一个位掩码的`CorFieldAttr`值。  
   
  `pvSigBlob`  
- [in]作为 BLOB 的字段签名。  
+ [in]作为 BLOB 字段签名。  
   
  `cbSigBlob`  
  [in]中的字节计数`pvSigBlob`。  
   
- `dwCPlusTypeFlage`  
- [in]`ELEMENT_TYPE_` *\** 的常量值。 这是`CorElementType`值。 如果不定义字段的常量值，使用`ELEMENT_TYPE_END`。  
+ `dwCPlusTypeFlag`  
+ [in]`ELEMENT_TYPE_` *\** 的常量值。 这是`CorElementType`值。 如果不定义该字段的常数值，使用`ELEMENT_TYPE_END`。  
   
  `pValue`  
  [in]字段的常量值。  
   
  `cchValue`  
- [in]以 (Unicode) 字符为单位的大小`pValue`。  
+ [in]\(Unicode) 字符中的大小`pValue`。  
   
  `pmd`  
- [out]`mdFieldDef`分配的令牌。  
+ [out]`mdFieldDef`分配标记。  
   
 ## <a name="requirements"></a>要求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
@@ -78,7 +78,7 @@ HRESULT DefineField (
   
  **库：** 用作 MSCorEE.dll 中的资源  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅  
  [IMetaDataEmit Interface](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)  

@@ -5,28 +5,28 @@ helpviewer_keywords:
 - layout [WPF], automatic
 - automatic layout [WPF]
 ms.assetid: 6fed9264-18bb-4d05-8867-1fe356c6f687
-ms.openlocfilehash: a43b3c0e008025171e3b1fdeba3bc514d01e28c8
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: d6ed0da9be32a4a4de4111acfb2d347b7bd5096d
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43856032"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50201551"
 ---
 # <a name="use-automatic-layout-overview"></a>使用自动布局概述
-本主题介绍如何编写上面向开发人员的指导原则[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]具有可本地化的应用程序[!INCLUDE[TLA#tla_ui#plural](../../../../includes/tlasharptla-uisharpplural-md.md)]。 在过去的本地化[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]是一个耗时的过程。 每种语言的[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]改写必需的按像素逐一调整。 使用适当的设计和编码标准，今天[!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)]可以构建，这样本地化人员较少的调整大小和重新定位的工作量。 种编写可以更轻松地重设大小和重新定位应用程序的方法称为自动布局，可以通过使用[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]应用程序设计。  
-  
+本主题介绍如何编写上面向开发人员的指导原则[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]具有可本地化的应用程序[!INCLUDE[TLA#tla_ui#plural](../../../../includes/tlasharptla-uisharpplural-md.md)]。 在过去，UI 的本地化是一个耗时的过程。 UI 适用于每种语言需要按像素逐一调整。 使用适当的设计和编码标准，今天[!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)]可以构建，这样本地化人员较少的调整大小和重新定位的工作量。 种编写可以更轻松地重设大小和重新定位应用程序的方法称为自动布局，可以通过使用[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]应用程序设计。  
+
 <a name="advantages_of_autolayout"></a>   
 ## <a name="advantages-of-using-automatic-layout"></a>使用自动布局的优点  
  因为[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]的演示系统，是功能强大且灵活，它提供到可以进行调整以适应不同语言的要求的应用程序中的布局元素的功能。 下面列出自动布局的部分优点。  
-  
--   [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 可通过任意语言正常显示。  
-  
+
+-   UI 会显示在任何语言中。  
+
 -   减少了文本转换完后重新调整控件位置和大小的需要。  
   
 -   减少了重新调整窗口大小的需要。  
-  
--   [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 布局可通过任意语言正确呈现。  
-  
+
+-   UI 布局中的任何语言正确呈现。  
+
 -   本地化过程可缩减为与进行字符串转换差不多。  
   
 <a name="autolayout_controls"></a>   
@@ -46,20 +46,52 @@ ms.locfileid: "43856032"
   
 <a name="autolayout_coding"></a>   
 ## <a name="automatic-layout-and-coding-standards"></a>自动布局和编码标准  
- 使用自动布局方法需要一组的编码及设计标准和规则，用于生成可完全本地化[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]。 下列准则可帮助完成自动布局编码。  
-  
-| 编码标准 | 描述 |
-| ---------------------- | ----------------- |
-| 不使用绝对位置。 | <ul><li>不要使用<xref:System.Windows.Controls.Canvas>因为它会以绝对方式定位元素。</li><li>使用<xref:System.Windows.Controls.DockPanel>， <xref:System.Windows.Controls.StackPanel>，和<xref:System.Windows.Controls.Grid>来定位控件。</li><li>有关各种面板类型的讨论，请参阅[面板概述](../../../../docs/framework/wpf/controls/panels-overview.md)。</li></ul> |
-| 不设定固定的窗口大小。 | -使用<xref:System.Windows.Window.SizeToContent%2A>。<br />例如：<br /><br /> [!code-xaml[LocalizationGrid#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/LocalizationGrid/CS/Pane1.xaml#2)] |
-| 添加一个 <xref:System.Windows.FrameworkElement.FlowDirection%2A>。 | <ul><li>添加<xref:System.Windows.FrameworkElement.FlowDirection%2A>到你的应用程序的根元素。</li><li>WPF 提供了方便地支持水平、 双向和垂直布局。 在演示框架<xref:System.Windows.FrameworkElement.FlowDirection%2A>属性可以用于定义布局。 流方向模式包括：<br /><br /> <ul><li><xref:System.Windows.FlowDirection.LeftToRight> (LrTb) — 拉丁语、 东亚语言等的水平布局。</li><li><xref:System.Windows.FlowDirection.RightToLeft> (RlTb) — 有关阿拉伯语、 希伯来语等双向。</li></ul></li></ul> |
-| 使用复合字体而不是实体字体。 | <ul><li>使用复合字体<xref:System.Windows.Controls.Control.FontFamily%2A>属性不需要进行本地化。</li><li>开发人员可以使用以下字体之一，也可以创建自己的字体。<br /><br /> <ul><li>Global User Interface</li><li>Global San Serif</li><li>Global Serif</li></ul></li></ul> |
-| 添加 xml:lang。 | <ul><li>添加`xml:lang`中的根元素属性您[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]，如`xml:lang="en-US"`英文应用程序。</li><li>因为复合字体使用`xml:lang`若要确定要使用的字体，请设置此属性以支持多语言方案。</li></ul> |
-  
+ 使用自动布局方法需要一组编码和设计标准和规则以生成可完全本地化的 UI。 下列准则可帮助完成自动布局编码。  
+
+**不要使用绝对位置**
+
+- 不要使用<xref:System.Windows.Controls.Canvas>因为它会以绝对方式定位元素。
+
+- 使用<xref:System.Windows.Controls.DockPanel>， <xref:System.Windows.Controls.StackPanel>，和<xref:System.Windows.Controls.Grid>来定位控件。
+
+有关各种面板类型的讨论，请参阅[面板概述](../../../../docs/framework/wpf/controls/panels-overview.md)。
+
+**未设置固定的大小的窗口**
+
+- 请使用 <xref:System.Windows.Window.SizeToContent%2A?displayProperty=nameWithType>。 例如：
+
+   [!code-xaml[LocalizationGrid#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/LocalizationGrid/CS/Pane1.xaml#2)]
+
+**添加 <xref:System.Windows.FrameworkElement.FlowDirection%2A>**
+
+- 添加<xref:System.Windows.FrameworkElement.FlowDirection%2A>到你的应用程序的根元素。
+
+   WPF 提供了方便地支持水平、 双向和垂直布局。 在演示框架<xref:System.Windows.FrameworkElement.FlowDirection%2A>属性可以用于定义布局。 流方向模式包括：
+   
+     - <xref:System.Windows.FlowDirection.LeftToRight?displayProperty=nameWithType> (LrTb) — 拉丁语、 东亚语言等的水平布局。
+     
+     - <xref:System.Windows.FlowDirection.RightToLeft?displayProperty=nameWithType> (RlTb) — 有关阿拉伯语、 希伯来语等双向。
+
+**使用复合字体而不是物理字体**
+
+- 使用复合字体<xref:System.Windows.Controls.Control.FontFamily%2A>属性不需要进行本地化。
+
+- 开发人员可以使用以下字体之一，也可以创建自己的字体。
+
+   - Global User Interface
+   - Global San Serif
+   - Global Serif
+
+**添加 xml: lang**
+
+- 添加`xml:lang`特性中的根元素的 UI，如`xml:lang="en-US"`英文应用程序。
+
+- 因为复合字体使用`xml:lang`若要确定要使用的字体，请设置此属性以支持多语言方案。
+
 <a name="autolay_grids"></a>   
 ## <a name="automatic-layout-and-grids"></a>自动布局和网格  
- <xref:System.Windows.Controls.Grid>元素，是对于自动布局很有用，因为它使开发人员来定位元素。 一个<xref:System.Windows.Controls.Grid>控件是支持的分发在其子元素，使用列和行排列方式的可用空间。 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]元素可跨多个单元格，并且可能具有在网格内的网格。 网格非常有用，因为它们使您能够创建和定位复杂[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]。 下面的示例演示使用网格来定位某些按钮和文本。 请注意，高度和宽度的单元格设置为<xref:System.Windows.GridUnitType.Auto>; 因此，包含带图像按钮的单元格调整以适合图像。  
-  
+ <xref:System.Windows.Controls.Grid>元素，是对于自动布局很有用，因为它使开发人员来定位元素。 一个<xref:System.Windows.Controls.Grid>控件是支持的分发在其子元素，使用列和行排列方式的可用空间。 UI 元素可以跨多个单元格，并且可能具有在网格内的网格。 网格非常有用，因为它们使您能够创建和定位复杂的 UI。 下面的示例演示使用网格来定位某些按钮和文本。 请注意，高度和宽度的单元格设置为<xref:System.Windows.GridUnitType.Auto>; 因此，包含带图像按钮的单元格调整以适合图像。  
+
  [!code-xaml[LocalizationGrid#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/LocalizationGrid/CS/Pane1.xaml#1)]  
   
  下图显示了以上代码生成的网格。  

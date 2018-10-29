@@ -4,12 +4,12 @@ description: 了解如何在二元分类方案中使用 ML.NET，以了解如何
 ms.date: 06/04/2018
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 7d2935fafe9dbad28205c8a896d97d80474a686f
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: fd0a1ad246c6d50db35e3d0f0332a82b256902c1
+ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/29/2018
-ms.locfileid: "47436136"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49453157"
 ---
 # <a name="tutorial-use-mlnet-in-a-sentiment-analysis-binary-classification-scenario"></a>教程：在情绪分析二元分类方案中使用 ML.NET
 
@@ -175,11 +175,11 @@ public static async Task<PredictionModel<SentimentData, SentimentPrediction>> Tr
 
 ## <a name="ingest-the-data"></a>引入数据
 
-初始化 <xref:Microsoft.ML.LearningPipeline> 的新实例以包含数据加载、数据处理/特征化和模型。 将以下代码添加为 `Train` 方法的首行：
+初始化 <xref:Microsoft.ML.Legacy.LearningPipeline> 的新实例以包含数据加载、数据处理/特征化和模型。 将以下代码添加为 `Train` 方法的首行：
 
 [!code-csharp[LearningPipeline](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#5 "Create a learning pipeline")]
 
-<xref:Microsoft.ML.Data.TextLoader> 对象是管道的第一部分，并加载定型文件数据。
+<xref:Microsoft.ML.Legacy.Data.TextLoader> 对象是管道的第一部分，并加载定型文件数据。
 
 [!code-csharp[TextLoader](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#6 "Add a text loader to the pipeline")]
 
@@ -187,23 +187,23 @@ public static async Task<PredictionModel<SentimentData, SentimentPrediction>> Tr
 
 预处理和清除数据任务至关重要，需要首先执行才能将数据集有效地用于机器学习。 原始数据通常嘈杂不可靠，并且可能缺少值。 在没有这些建模任务的情况下使用数据会产生误导性结果。 可以通过 ML.NET 的转换管道撰写一组自定义转换，在定型或测试数据之前将其应用到数据。 转换的主要目的是为了特征化数据。 转换管道的优点是，在转换管道定义之后，保存管道以将其应用于测试数据。
 
-应用 <xref:Microsoft.ML.Transforms.TextFeaturizer> 将 `SentimentText` 列转换为机器学习算法使用的名为 `Features` 的[数值向量](../resources/glossary.md#numerical-feature-vector)。 这是预处理/特征化步骤。 使用 ML.NET 中可用的其他组件可以在使用模型时生成更佳结果。 将 `TextFeaturizer` 添加到管道作为下一行代码：
+应用 <xref:Microsoft.ML.Legacy.Transforms.TextFeaturizer> 将 `SentimentText` 列转换为机器学习算法使用的名为 `Features` 的[数值向量](../resources/glossary.md#numerical-feature-vector)。 这是预处理/特征化步骤。 使用 ML.NET 中可用的其他组件可以在使用模型时生成更佳结果。 将 `TextFeaturizer` 添加到管道作为下一行代码：
 
 [!code-csharp[TextFeaturizer](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#7 "Add a TextFeaturizer to the pipeline")]
 
 ## <a name="choose-a-learning-algorithm"></a>选择学习算法
 
-<xref:Microsoft.ML.Trainers.FastTreeBinaryClassifier> 对象是一个将在此管道中使用的决策树学习器。 与特征化步骤类似，尝试使用 ML.NET 中提供的其他学习器和更改其参数会导致不同结果。 对于优化，可以设置[超参数](../resources/glossary.md#hyperparameter)，如 <xref:Microsoft.ML.Trainers.FastTreeBinaryClassifier.NumTrees>、<xref:Microsoft.ML.Trainers.FastTreeBinaryClassifier.NumLeaves> 和 <xref:Microsoft.ML.Trainers.FastTreeBinaryClassifier.MinDocumentsInLeafs>。 这些超参数是在任何影响模型的情况下设置的，并且特定于模型。 它们用于优化决策树的性能，因此较大的值可以会对性能产生负面影响。
+<xref:Microsoft.ML.Legacy.Trainers.FastTreeBinaryClassifier> 对象是一个将在此管道中使用的决策树学习器。 与特征化步骤类似，尝试使用 ML.NET 中提供的其他学习器和更改其参数会导致不同结果。 对于优化，可以设置[超参数](../resources/glossary.md#hyperparameter)，如 <xref:Microsoft.ML.Legacy.Trainers.FastTreeBinaryClassifier.NumTrees>、<xref:Microsoft.ML.Legacy.Trainers.FastTreeBinaryClassifier.NumLeaves> 和 <xref:Microsoft.ML.Legacy.Trainers.FastTreeBinaryClassifier.MinDocumentsInLeafs>。 这些超参数是在任何影响模型的情况下设置的，并且特定于模型。 它们用于优化决策树的性能，因此较大的值可以会对性能产生负面影响。
 
-将以下代码添加到 `Train` 方法：
+将以下代码添加到 `Train` 方法中：
 
 [!code-csharp[BinaryClassifier](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#8 "Add a fast binary tree classifier")]
 
 ## <a name="train-the-model"></a>定型模型
 
-根据已加载和转换的数据集定型模型 <xref:Microsoft.ML.PredictionModel%602>。 `pipeline.Train<SentimentData, SentimentPrediction>()` 定型管道（加载数据、定型特征化程序和学习器）。 在发生这种情况之前不会执行此试验。
+根据已加载和转换的数据集定型模型 <xref:Microsoft.ML.Legacy.PredictionModel%602>。 `pipeline.Train<SentimentData, SentimentPrediction>()` 定型管道（加载数据、定型特征化程序和学习器）。 在发生这种情况之前不会执行此试验。
 
-将以下代码添加到 `Train` 方法：
+将以下代码添加到 `Train` 方法中：
 
 [!code-csharp[TrainModel](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#9 "Train the model")]
 
@@ -239,15 +239,15 @@ public static void Evaluate(PredictionModel<SentimentData, SentimentPrediction> 
 
 [!code-csharp[CallEvaluate](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#12 "Call the Evaluate method")]
 
-<xref:Microsoft.ML.Data.TextLoader> 类使用相同的架构加载新的测试数据集。 可以将此数据集作为质量检查来评估模型。 将以下代码添加到 `Evaluate` 方法：
+<xref:Microsoft.ML.Legacy.Data.TextLoader> 类使用相同的架构加载新的测试数据集。 可以将此数据集作为质量检查来评估模型。 将以下代码添加到 `Evaluate` 方法中：
 
 [!code-csharp[LoadText](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#13 "Load the test dataset")]
 
-<xref:Microsoft.ML.Models.BinaryClassificationEvaluator> 对象使用指定数据集计算 `PredictionModel` 的质量指标。 要查看这些指标，使用以下代码将计算器添加为 `Evaluate` 方法中的下一行：
+<xref:Microsoft.ML.Legacy.Models.BinaryClassificationEvaluator> 对象使用指定数据集计算 `PredictionModel` 的质量指标。 要查看这些指标，使用以下代码将计算器添加为 `Evaluate` 方法中的下一行：
 
 [!code-csharp[BinaryEvaluator](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#14 "Create the binary evaluator")]
 
-<xref:Microsoft.ML.Models.BinaryClassificationMetrics> 包含由二元分类计算器计算出的总体指标。 若要显示这些指标来确定模型质量，需要先获取指标。 添加以下代码：
+<xref:Microsoft.ML.Legacy.Models.BinaryClassificationMetrics> 包含由二元分类计算器计算出的总体指标。 若要显示这些指标来确定模型质量，需要先获取指标。 添加以下代码：
 
 [!code-csharp[CreateMetrics](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#15 "Evaluate the model and create metrics")]
 
@@ -283,7 +283,7 @@ public static void Predict(PredictionModel<SentimentData, SentimentPrediction> m
 
 [!code-csharp[PredictionData](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#18 "Create test data for predictions")]
 
-现在你有一个模型，可以使用它来预测使用 <xref:Microsoft.ML.PredictionModel.Predict%2A?displayProperty=nameWithType> 方法的评论数据的正面或负面情绪。 要获得预测，请使用新数据上的 `Predict`。 请注意，输入数据是一个字符串，且模型包含特征化。 管道在定型和预测期间同步。 不必专门为预测编写预处理/特征化代码，并且相同 API 负责批处理和一次性预测。
+现在你有一个模型，可以使用它来预测使用 <xref:Microsoft.ML.Legacy.PredictionModel.Predict%2A?displayProperty=nameWithType> 方法的评论数据的正面或负面情绪。 要获得预测，请使用新数据上的 `Predict`。 请注意，输入数据是一个字符串，且模型包含特征化。 管道在定型和预测期间同步。 不必专门为预测编写预处理/特征化代码，并且相同 API 负责批处理和一次性预测。
 
 [!code-csharp[Predict](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#19 "Create predictions of sentiments")]
 

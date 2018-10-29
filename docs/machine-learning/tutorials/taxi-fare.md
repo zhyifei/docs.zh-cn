@@ -6,12 +6,12 @@ ms.author: johalex
 ms.date: 07/02/2018
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 133b7ad17a98e4eea510f1704555b690b98e9091
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: bfae97d65ec192e9289841c82d84807b4937b09a
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44252839"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50183810"
 ---
 # <a name="tutorial-use-mlnet-to-predict-new-york-taxi-fares-regression"></a>教程：使用 ML.NET 预测纽约出租车费（回归）
 
@@ -150,13 +150,13 @@ pipeline.Add(new TextLoader(_datapath).CreateFrom<TaxiTrip>(useHeader: true, sep
 
 在后续步骤中，我们按 `TaxiTrip` 类中定义的名称引用列。
 
-定型和评估模型时，默认情况下，将“标签”列中的值视为要预测的正确值。 希望预测出租车费时，将 `FareAmount` 列复制到“标签”列。 为此，请使用 <xref:Microsoft.ML.Transforms.ColumnCopier> 并添加以下代码：
+定型和评估模型时，默认情况下，将“标签”列中的值视为要预测的正确值。 希望预测出租车费时，将 `FareAmount` 列复制到“标签”列。 为此，请使用 <xref:Microsoft.ML.Legacy.Transforms.ColumnCopier> 并添加以下代码：
 
 ```csharp
 pipeline.Add(new ColumnCopier(("FareAmount", "Label")));
 ```
 
-定型模型的算法需要数值特征，所以必须将分类数据（`VendorId`、`RateCode` 和 `PaymentType`）值转换为数字。 为此，请使用 <xref:Microsoft.ML.Transforms.CategoricalOneHotVectorizer>，它将不同的数字键值分配到每行的不同值，并添加以下代码：
+定型模型的算法需要数值特征，所以必须将分类数据（`VendorId`、`RateCode` 和 `PaymentType`）值转换为数字。 为此，请使用 <xref:Microsoft.ML.Legacy.Transforms.CategoricalOneHotVectorizer>，它将不同的数字键值分配到每行的不同值，并添加以下代码：
 
 ```csharp
 pipeline.Add(new CategoricalOneHotVectorizer("VendorId",
@@ -164,7 +164,7 @@ pipeline.Add(new CategoricalOneHotVectorizer("VendorId",
                                              "PaymentType"));
 ```
 
-数据准备最后一步使用 <xref:Microsoft.ML.Transforms.ColumnConcatenator> 转换类将所有功能列合并到“功能”列。 默认情况下，学习算法仅处理“特征”列的特征。 添加以下代码：
+数据准备最后一步使用 <xref:Microsoft.ML.Legacy.Transforms.ColumnConcatenator> 转换类将所有功能列合并到“功能”列。 默认情况下，学习算法仅处理“特征”列的特征。 添加以下代码：
 
 ```csharp
 pipeline.Add(new ColumnConcatenator("Features",
@@ -182,9 +182,9 @@ pipeline.Add(new ColumnConcatenator("Features",
 
 ## <a name="choose-a-learning-algorithm"></a>选择学习算法
 
-在将数据添加到管道，并将其转换为正确的输入格式之后，可以选择学习算法（学习器）。 学习器定型模型。 为此问题选择了“回归任务”，所以使用 <xref:Microsoft.ML.Trainers.FastTreeRegressor> 学习器（ML.NET 提供的一种回归学习器）。
+在将数据添加到管道，并将其转换为正确的输入格式之后，可以选择学习算法（学习器）。 学习器定型模型。 为此问题选择了“回归任务”，所以使用 <xref:Microsoft.ML.Legacy.Trainers.FastTreeRegressor> 学习器（ML.NET 提供的一种回归学习器）。
 
-<xref:Microsoft.ML.Trainers.FastTreeRegressor> 学习器利用梯度提升。 梯度提升是针对回归问题的一项机器学习技术。 它将以步进方式生成每个回归树。 它使用预定义的损失函数测量每个步骤中的错误，并在下一步中对其进行校正。 其结果是一种预测模型，实际上是一组较弱的预测模型。 有关梯度提升的详细信息，请参阅[提升的决策树回归](/azure/machine-learning/studio-module-reference/boosted-decision-tree-regression)。
+<xref:Microsoft.ML.Legacy.Trainers.FastTreeRegressor> 学习器利用梯度提升。 梯度提升是针对回归问题的一项机器学习技术。 它将以步进方式生成每个回归树。 它使用预定义的损失函数测量每个步骤中的错误，并在下一步中对其进行校正。 其结果是一种预测模型，实际上是一组较弱的预测模型。 有关梯度提升的详细信息，请参阅[提升的决策树回归](/azure/machine-learning/studio-module-reference/boosted-decision-tree-regression)。
 
 将下面的代码添加到在上一步中添加的数据处理代码后面的 `Train` 方法中：
 

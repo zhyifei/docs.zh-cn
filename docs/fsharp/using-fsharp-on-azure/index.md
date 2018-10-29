@@ -3,12 +3,12 @@ title: 在 Azure 上使用 F#
 description: '使用 F # 中使用 Azure 服务的指南'
 author: sylvanc
 ms.date: 09/22/2016
-ms.openlocfilehash: 96dec342379b06e997107cc5d6cc05e9fc737452
-ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.openlocfilehash: 1fbb85a07fc057c1b89a4c4a1ad356066cebf2b8
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50033949"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50201499"
 ---
 # <a name="using-f-on-azure"></a>在 Azure 上使用 F#
 
@@ -40,7 +40,7 @@ Azure Functions 支持 F# 作为第一类语言，它执行 F# 代码时高效�
 
 ## <a name="using-azure-storage-with-f"></a>使用 Azure 存储的 F # #
 
-Azure 存储是一种基层存储服务，用于依赖于持久性、可用性和可缩放性来满足其客户需求的现代应用程序。 F# 程序可使用以下文章中所述的技术，直接与 Azure 存储服务交互。
+Azure 存储是一种基层存储服务，用于依赖于持久性、可用性和可缩放性来满足其客户需求的现代应用程序。 F#程序可以直接与 Azure 存储服务，使用以下文章中所述的技术进行交互。
 
 * [通过 F# 实现 Azure Blob 入门](blob-storage.md)
 * [通过 F# 实现 Azure 文件存储入门](file-storage.md)

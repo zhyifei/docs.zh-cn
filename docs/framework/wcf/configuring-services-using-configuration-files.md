@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - configuring services [WCF]
 ms.assetid: c9c8cd32-2c9d-4541-ad0d-16dff6bd2a00
-ms.openlocfilehash: 4b390ea0ffc6551d57a99a54985632135964fb7a
-ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
+ms.openlocfilehash: 11d24bec46cfb190fe1a7c2a7b9ac78ac4d5e799
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "49374802"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50200857"
 ---
 # <a name="configuring-services-using-configuration-files"></a>使用配置文件配置服务
 使用配置文件配置 Windows Communication Foundation (WCF) 服务使你能够灵活提供终结点，并设计时在部署时而非在服务行为数据。 本主题概述了当前可用的主要技术。  
@@ -186,9 +186,9 @@ ms.locfileid: "49374802"
 ## <a name="behavior-merge"></a>行为合并  
  当您需要统一使用一组公共行为时，利用行为合并功能，可更加轻松地管理行为。 此功能允许您在配置层次结构的各个层上指定行为，并使服务能够从配置层次结构的多个层继承行为。 为了演示此功能的工作方式，假定您的 IIS 中包含以下虚拟目录布局：  
   
- ~\Web.config~\Service.svc~\Child\Web.config~\Child\Service.svc  
+ `~\Web.config~\Service.svc~\Child\Web.config~\Child\Service.svc`
   
- ~\Web.config 文件包含以下内容：  
+ 和您`~\Web.config`文件包含以下内容：  
   
 ```xml  
 <configuration>  
