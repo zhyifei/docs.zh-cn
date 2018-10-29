@@ -9,26 +9,24 @@ helpviewer_keywords:
 - text, network tracing output
 - includehex
 ms.assetid: ad22b4b8-00af-4778-9cca-cb609ce1f8ff
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: d05e0f374f4454c95dd02be8bd2eff573040f97e
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 94a64efcd7b4f354eaa22d1b646f36212f9c8fbb
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47209137"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50042293"
 ---
-# <a name="interpreting-network-tracing"></a><span data-ttu-id="52be4-102">解释网络跟踪</span><span class="sxs-lookup"><span data-stu-id="52be4-102">Interpreting Network Tracing</span></span>
-<span data-ttu-id="52be4-103">启用网络跟踪之后，可以通过跟踪捕获应用程序对各种 <xref:System.Net> 类成员的调用。</span><span class="sxs-lookup"><span data-stu-id="52be4-103">When network tracing is enabled, you can use tracing to capture calls your application makes to various <xref:System.Net> class members.</span></span> <span data-ttu-id="52be4-104">这些调用的输出可能类似于以下示例。</span><span class="sxs-lookup"><span data-stu-id="52be4-104">The output from these calls may be similar to the following examples.</span></span>  
+# <a name="interpreting-network-tracing"></a><span data-ttu-id="215d2-102">解释网络跟踪</span><span class="sxs-lookup"><span data-stu-id="215d2-102">Interpreting Network Tracing</span></span>
+<span data-ttu-id="215d2-103">启用网络跟踪之后，可以通过跟踪捕获应用程序对各种 <xref:System.Net> 类成员的调用。</span><span class="sxs-lookup"><span data-stu-id="215d2-103">When network tracing is enabled, you can use tracing to capture calls your application makes to various <xref:System.Net> class members.</span></span> <span data-ttu-id="215d2-104">这些调用的输出可能类似于以下示例。</span><span class="sxs-lookup"><span data-stu-id="215d2-104">The output from these calls may be similar to the following examples.</span></span>  
   
 ```  
 [588]   (4357)   Entering Socket#33574638::Send()  
 [588]   (4387)   Exiting Socket#33574638::Send()-> 61#61  
 ```  
   
- <span data-ttu-id="52be4-105">在上一示例中，[588] 是当前线程的唯一标识符。</span><span class="sxs-lookup"><span data-stu-id="52be4-105">In the preceding example, [588] is the current thread's unique identifier.</span></span> <span data-ttu-id="52be4-106">(4357) 和 (4387) 是一种时间戳，它表示应用程序启动以来已经经过的毫秒数。</span><span class="sxs-lookup"><span data-stu-id="52be4-106">(4357) and (4387) are timestamps denoting the number of milliseconds that have elapsed since the application started.</span></span> <span data-ttu-id="52be4-107">时间戳之后的数据显示了进入和退出“Socket.Send”方法的应用程序。</span><span class="sxs-lookup"><span data-stu-id="52be4-107">The data following the timestamp shows the application entering and exiting the method **Socket.Send**.</span></span> <span data-ttu-id="52be4-108">执行“Send”方法的对象使用 33574638 作为其唯一标识符。</span><span class="sxs-lookup"><span data-stu-id="52be4-108">The object executing the **Send** method has 33574638 as its unique identifier.</span></span> <span data-ttu-id="52be4-109">退出跟踪方法包括返回值（上一示例中为 61）。</span><span class="sxs-lookup"><span data-stu-id="52be4-109">The method exit trace includes the return value (61 in the preceding example).</span></span>  
+ <span data-ttu-id="215d2-105">在上一示例中，[588] 是当前线程的唯一标识符。</span><span class="sxs-lookup"><span data-stu-id="215d2-105">In the preceding example, [588] is the current thread's unique identifier.</span></span> <span data-ttu-id="215d2-106">(4357) 和 (4387) 是一种时间戳，它表示应用程序启动以来已经经过的毫秒数。</span><span class="sxs-lookup"><span data-stu-id="215d2-106">(4357) and (4387) are timestamps denoting the number of milliseconds that have elapsed since the application started.</span></span> <span data-ttu-id="215d2-107">时间戳之后的数据显示了进入和退出“Socket.Send”方法的应用程序。</span><span class="sxs-lookup"><span data-stu-id="215d2-107">The data following the timestamp shows the application entering and exiting the method **Socket.Send**.</span></span> <span data-ttu-id="215d2-108">执行“Send”方法的对象使用 33574638 作为其唯一标识符。</span><span class="sxs-lookup"><span data-stu-id="215d2-108">The object executing the **Send** method has 33574638 as its unique identifier.</span></span> <span data-ttu-id="215d2-109">退出跟踪方法包括返回值（上一示例中为 61）。</span><span class="sxs-lookup"><span data-stu-id="215d2-109">The method exit trace includes the return value (61 in the preceding example).</span></span>  
   
- <span data-ttu-id="52be4-110">网络跟踪可以使用诸如 Hypertext Transfer Protocol (HTTP) 应用程序级协议捕获由应用程序发送或接收的网络流量。</span><span class="sxs-lookup"><span data-stu-id="52be4-110">Network traces can capture network traffic that is sent from or received by your application using application-level protocols such as Hypertext Transfer Protocol (HTTP).</span></span> <span data-ttu-id="52be4-111">此数据可捕获为文本或十六进制数据。</span><span class="sxs-lookup"><span data-stu-id="52be4-111">This data can be captured as text and, optionally, hexadecimal data.</span></span> <span data-ttu-id="52be4-112">如果将“includehex”指定为“tracemode”属性的值，可使用十六进制数据。</span><span class="sxs-lookup"><span data-stu-id="52be4-112">Hexadecimal data is available when you specify **includehex** as the value of the **tracemode** attribute.</span></span> <span data-ttu-id="52be4-113">（有关此属性的详细信息，请参阅[如何：配置网络跟踪](../../../docs/framework/network-programming/how-to-configure-network-tracing.md)。）下例通过“includehex”生成跟踪。</span><span class="sxs-lookup"><span data-stu-id="52be4-113">(For detailed information about this attribute, see [How to: Configure Network Tracing](../../../docs/framework/network-programming/how-to-configure-network-tracing.md).) The following example trace was generated using **includehex**.</span></span>  
+ <span data-ttu-id="215d2-110">网络跟踪可以使用诸如 Hypertext Transfer Protocol (HTTP) 应用程序级协议捕获由应用程序发送或接收的网络流量。</span><span class="sxs-lookup"><span data-stu-id="215d2-110">Network traces can capture network traffic that is sent from or received by your application using application-level protocols such as Hypertext Transfer Protocol (HTTP).</span></span> <span data-ttu-id="215d2-111">此数据可捕获为文本或十六进制数据。</span><span class="sxs-lookup"><span data-stu-id="215d2-111">This data can be captured as text and, optionally, hexadecimal data.</span></span> <span data-ttu-id="215d2-112">如果将“includehex”指定为“tracemode”属性的值，可使用十六进制数据。</span><span class="sxs-lookup"><span data-stu-id="215d2-112">Hexadecimal data is available when you specify **includehex** as the value of the **tracemode** attribute.</span></span> <span data-ttu-id="215d2-113">（有关此属性的详细信息，请参阅[如何：配置网络跟踪](../../../docs/framework/network-programming/how-to-configure-network-tracing.md)。）下例通过“includehex”生成跟踪。</span><span class="sxs-lookup"><span data-stu-id="215d2-113">(For detailed information about this attribute, see [How to: Configure Network Tracing](../../../docs/framework/network-programming/how-to-configure-network-tracing.md).) The following example trace was generated using **includehex**.</span></span>  
   
  `[1692]   (1142)   00000000 : 47 45 54 20 2F 77 70 61-64 2E 64 61 74 20 48 54 : GET /wpad.dat HT`  
   
@@ -38,7 +36,7 @@ ms.locfileid: "47209137"
   
  `[1692]   (1142)   00000030 : 6F 6E 3A 20 43 6C 6F 73-65 0D 0A 0D 0A     : on: Close....`  
   
- <span data-ttu-id="52be4-114">若要省略十六进制数据，请将“protocolonly”指定为“tracemode”属性的值。</span><span class="sxs-lookup"><span data-stu-id="52be4-114">To omit hexadecimal data, specify **protocolonly** as the value for the **tracemode** attribute.</span></span> <span data-ttu-id="52be4-115">下例演示了指定“protocolonly”时的跟踪。</span><span class="sxs-lookup"><span data-stu-id="52be4-115">The following example shows the trace when **protocolonly** is specified.</span></span>  
+ <span data-ttu-id="215d2-114">若要省略十六进制数据，请将“protocolonly”指定为“tracemode”属性的值。</span><span class="sxs-lookup"><span data-stu-id="215d2-114">To omit hexadecimal data, specify **protocolonly** as the value for the **tracemode** attribute.</span></span> <span data-ttu-id="215d2-115">下例演示了指定“protocolonly”时的跟踪。</span><span class="sxs-lookup"><span data-stu-id="215d2-115">The following example shows the trace when **protocolonly** is specified.</span></span>  
   
  `[2444]   (594)   Data from ConnectStream#33574638::WriteHeaders<<GET /wpad.dat HTTP/1.1`  
   
@@ -46,7 +44,7 @@ ms.locfileid: "47209137"
   
  `Connection: Close`  
   
-## <a name="see-also"></a><span data-ttu-id="52be4-116">请参阅</span><span class="sxs-lookup"><span data-stu-id="52be4-116">See Also</span></span>  
- [<span data-ttu-id="52be4-117">启用网络跟踪</span><span class="sxs-lookup"><span data-stu-id="52be4-117">Enabling Network Tracing</span></span>](../../../docs/framework/network-programming/enabling-network-tracing.md)  
- [<span data-ttu-id="52be4-118">如何：配置网络跟踪</span><span class="sxs-lookup"><span data-stu-id="52be4-118">How to: Configure Network Tracing</span></span>](../../../docs/framework/network-programming/how-to-configure-network-tracing.md)  
- [<span data-ttu-id="52be4-119">.NET Framework 中的网络跟踪</span><span class="sxs-lookup"><span data-stu-id="52be4-119">Network Tracing in the .NET Framework</span></span>](../../../docs/framework/network-programming/network-tracing.md)
+## <a name="see-also"></a><span data-ttu-id="215d2-116">请参阅</span><span class="sxs-lookup"><span data-stu-id="215d2-116">See Also</span></span>  
+ [<span data-ttu-id="215d2-117">启用网络跟踪</span><span class="sxs-lookup"><span data-stu-id="215d2-117">Enabling Network Tracing</span></span>](../../../docs/framework/network-programming/enabling-network-tracing.md)  
+ [<span data-ttu-id="215d2-118">如何：配置网络跟踪</span><span class="sxs-lookup"><span data-stu-id="215d2-118">How to: Configure Network Tracing</span></span>](../../../docs/framework/network-programming/how-to-configure-network-tracing.md)  
+ [<span data-ttu-id="215d2-119">.NET Framework 中的网络跟踪</span><span class="sxs-lookup"><span data-stu-id="215d2-119">Network Tracing in the .NET Framework</span></span>](../../../docs/framework/network-programming/network-tracing.md)

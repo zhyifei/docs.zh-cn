@@ -2,28 +2,26 @@
 title: 如何：修改计算机配置文件以启用 IPv6 支持
 ms.date: 03/30/2017
 ms.assetid: 5611b677-b9cc-43b8-a434-60e18d89aada
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: 77ad110a4f087ff21395fe4330793f8a1928b275
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 32aa1c3fa50d5c0486da4ef6799c77ead605b504
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47198054"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50187252"
 ---
-# <a name="how-to-modify-the-computer-configuration-file-to-enable-ipv6-support"></a><span data-ttu-id="d4e34-102">如何：修改计算机配置文件以启用 IPv6 支持</span><span class="sxs-lookup"><span data-stu-id="d4e34-102">How to: Modify the Computer Configuration File to Enable IPv6 Support</span></span>
-<span data-ttu-id="d4e34-103">下面的代码示例演示如何修改计算机配置文件 machine.config，以启用 IPv6 支持。</span><span class="sxs-lookup"><span data-stu-id="d4e34-103">The following code example shows how to modify the computer configuration file, *machine.config*, to enable IPv6 support.</span></span> <span data-ttu-id="d4e34-104">machine.config 文件存储在 Windows 安装目录的 %Windir%\Microsoft.NET\Framework 文件夹中。</span><span class="sxs-lookup"><span data-stu-id="d4e34-104">The *machine.config* file is stored in the *%Windir%\Microsoft.NET\Framework* folder in the directory where Windows was installed.</span></span> <span data-ttu-id="d4e34-105">安装在计算机上的每个 .NET Framework 版本，在 %Windir%\Microsoft.NET\Framework 下的文件夹中分别有一个单独的 machine.config 文件（例如，C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\machine.config）。</span><span class="sxs-lookup"><span data-stu-id="d4e34-105">There is a separate *machine.config* file in the folders under *%Windir%\Microsoft.NET\Framework* for each version of the .NET Framework installed on the computer (for example, *C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\machine.config*).</span></span>  
+# <a name="how-to-modify-the-computer-configuration-file-to-enable-ipv6-support"></a><span data-ttu-id="e0088-102">如何：修改计算机配置文件以启用 IPv6 支持</span><span class="sxs-lookup"><span data-stu-id="e0088-102">How to: Modify the Computer Configuration File to Enable IPv6 Support</span></span>
+<span data-ttu-id="e0088-103">下面的代码示例演示如何修改计算机配置文件 machine.config，以启用 IPv6 支持。</span><span class="sxs-lookup"><span data-stu-id="e0088-103">The following code example shows how to modify the computer configuration file, *machine.config*, to enable IPv6 support.</span></span> <span data-ttu-id="e0088-104">machine.config 文件存储在 Windows 安装目录的 %Windir%\Microsoft.NET\Framework 文件夹中。</span><span class="sxs-lookup"><span data-stu-id="e0088-104">The *machine.config* file is stored in the *%Windir%\Microsoft.NET\Framework* folder in the directory where Windows was installed.</span></span> <span data-ttu-id="e0088-105">安装在计算机上的每个 .NET Framework 版本，在 %Windir%\Microsoft.NET\Framework 下的文件夹中分别有一个单独的 machine.config 文件（例如，C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\machine.config）。</span><span class="sxs-lookup"><span data-stu-id="e0088-105">There is a separate *machine.config* file in the folders under *%Windir%\Microsoft.NET\Framework* for each version of the .NET Framework installed on the computer (for example, *C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\machine.config*).</span></span>  
   
- <span data-ttu-id="d4e34-106">也可以在应用程序的配置文件中做出这些设置，其优先级别高于计算机配置文件。</span><span class="sxs-lookup"><span data-stu-id="d4e34-106">These settings can also be made in the configuration file for the application, which has precedence over the computer configuration file.</span></span>  
+ <span data-ttu-id="e0088-106">也可以在应用程序的配置文件中做出这些设置，其优先级别高于计算机配置文件。</span><span class="sxs-lookup"><span data-stu-id="e0088-106">These settings can also be made in the configuration file for the application, which has precedence over the computer configuration file.</span></span>  
   
- <span data-ttu-id="d4e34-107">对于 .NET Framework 1.1 及更早版本，ipv6 enabled 配置开关的值指定 <xref:System.Net.Dns?displayProperty=nameWithType> 类的成员是否返回 IPv6 地址。</span><span class="sxs-lookup"><span data-stu-id="d4e34-107">For .NET Framework version 1.1 and earlier, the value of the **ipv6 enabled** configuration switch specifies whether members of the <xref:System.Net.Dns?displayProperty=nameWithType> class return IPv6 addresses.</span></span>  
+ <span data-ttu-id="e0088-107">对于 .NET Framework 1.1 及更早版本，ipv6 enabled 配置开关的值指定 <xref:System.Net.Dns?displayProperty=nameWithType> 类的成员是否返回 IPv6 地址。</span><span class="sxs-lookup"><span data-stu-id="e0088-107">For .NET Framework version 1.1 and earlier, the value of the **ipv6 enabled** configuration switch specifies whether members of the <xref:System.Net.Dns?displayProperty=nameWithType> class return IPv6 addresses.</span></span>  
   
- <span data-ttu-id="d4e34-108">对于 .NET Framework 2.0 和更高版本，如果 Windows 支持 IPv6，则 <xref:System.Net.Dns?displayProperty=nameWithType> 类的所有成员（例如 <xref:System.Net.Dns.GetHostEntry%2A?displayProperty=nameWithType> 方法）将返回含一个限制的 IPv6 地址。</span><span class="sxs-lookup"><span data-stu-id="d4e34-108">For .NET Framework version 2.0 and later, if Windows supports IPv6, then all members of the <xref:System.Net.Dns?displayProperty=nameWithType> class (for example, the <xref:System.Net.Dns.GetHostEntry%2A?displayProperty=nameWithType> method), will return IPv6 addresses with one limitation.</span></span> <span data-ttu-id="d4e34-109"><xref:System.Net.Dns?displayProperty=nameWithType> 类的已过时成员（例如，<xref:System.Net.Dns.Resolve%2A?displayProperty=nameWithType> 方法）将读取并识别配置文件中的值。</span><span class="sxs-lookup"><span data-stu-id="d4e34-109">Obsolete members of the <xref:System.Net.Dns?displayProperty=nameWithType> class (for example, the <xref:System.Net.Dns.Resolve%2A?displayProperty=nameWithType> method) will read and recognize the value in the configuration file.</span></span>  
+ <span data-ttu-id="e0088-108">对于 .NET Framework 2.0 和更高版本，如果 Windows 支持 IPv6，则 <xref:System.Net.Dns?displayProperty=nameWithType> 类的所有成员（例如 <xref:System.Net.Dns.GetHostEntry%2A?displayProperty=nameWithType> 方法）将返回含一个限制的 IPv6 地址。</span><span class="sxs-lookup"><span data-stu-id="e0088-108">For .NET Framework version 2.0 and later, if Windows supports IPv6, then all members of the <xref:System.Net.Dns?displayProperty=nameWithType> class (for example, the <xref:System.Net.Dns.GetHostEntry%2A?displayProperty=nameWithType> method), will return IPv6 addresses with one limitation.</span></span> <span data-ttu-id="e0088-109"><xref:System.Net.Dns?displayProperty=nameWithType> 类的已过时成员（例如，<xref:System.Net.Dns.Resolve%2A?displayProperty=nameWithType> 方法）将读取并识别配置文件中的值。</span><span class="sxs-lookup"><span data-stu-id="e0088-109">Obsolete members of the <xref:System.Net.Dns?displayProperty=nameWithType> class (for example, the <xref:System.Net.Dns.Resolve%2A?displayProperty=nameWithType> method) will read and recognize the value in the configuration file.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="d4e34-110">.NET Framework 2.0 及更高版本默认启用 IPv6。</span><span class="sxs-lookup"><span data-stu-id="d4e34-110">For .NET Framework version 2.0 and later, IPv6 is enabled by default.</span></span> <span data-ttu-id="d4e34-111">.NET Framework 1.1 及更低版本默认禁用 IPv6。</span><span class="sxs-lookup"><span data-stu-id="d4e34-111">For .NET Framework version 1.1 and earlier, IPv6 is disabled by default.</span></span>  
+>  <span data-ttu-id="e0088-110">.NET Framework 2.0 及更高版本默认启用 IPv6。</span><span class="sxs-lookup"><span data-stu-id="e0088-110">For .NET Framework version 2.0 and later, IPv6 is enabled by default.</span></span> <span data-ttu-id="e0088-111">.NET Framework 1.1 及更低版本默认禁用 IPv6。</span><span class="sxs-lookup"><span data-stu-id="e0088-111">For .NET Framework version 1.1 and earlier, IPv6 is disabled by default.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="d4e34-112">示例</span><span class="sxs-lookup"><span data-stu-id="d4e34-112">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="e0088-112">示例</span><span class="sxs-lookup"><span data-stu-id="e0088-112">Example</span></span>  
   
 ```xml  
 <system.net>  
@@ -37,7 +35,7 @@ ms.locfileid: "47198054"
 <system.net>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="d4e34-113">请参阅</span><span class="sxs-lookup"><span data-stu-id="d4e34-113">See Also</span></span>  
- [<span data-ttu-id="d4e34-114">IPv6 寻址</span><span class="sxs-lookup"><span data-stu-id="d4e34-114">IPv6 Addressing</span></span>](../../../docs/framework/network-programming/ipv6-addressing.md)  
- [<span data-ttu-id="d4e34-115">网络设置架构</span><span class="sxs-lookup"><span data-stu-id="d4e34-115">Network Settings Schema</span></span>](../../../docs/framework/configure-apps/file-schema/network/index.md)  
- [<span data-ttu-id="d4e34-116">\<ipv6> 元素（网络设置）</span><span class="sxs-lookup"><span data-stu-id="d4e34-116">\<ipv6> Element (Network Settings)</span></span>](../../../docs/framework/configure-apps/file-schema/network/ipv6-element-network-settings.md)
+## <a name="see-also"></a><span data-ttu-id="e0088-113">请参阅</span><span class="sxs-lookup"><span data-stu-id="e0088-113">See Also</span></span>  
+ [<span data-ttu-id="e0088-114">IPv6 寻址</span><span class="sxs-lookup"><span data-stu-id="e0088-114">IPv6 Addressing</span></span>](../../../docs/framework/network-programming/ipv6-addressing.md)  
+ [<span data-ttu-id="e0088-115">网络设置架构</span><span class="sxs-lookup"><span data-stu-id="e0088-115">Network Settings Schema</span></span>](../../../docs/framework/configure-apps/file-schema/network/index.md)  
+ [<span data-ttu-id="e0088-116">\<ipv6> 元素（网络设置）</span><span class="sxs-lookup"><span data-stu-id="e0088-116">\<ipv6> Element (Network Settings)</span></span>](../../../docs/framework/configure-apps/file-schema/network/ipv6-element-network-settings.md)
