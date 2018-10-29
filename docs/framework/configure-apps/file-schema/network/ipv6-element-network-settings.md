@@ -8,12 +8,12 @@ helpviewer_keywords:
 - <ipv6> element
 - ipv6 element
 ms.assetid: 10b79aef-327b-4718-a892-e11f55e4d169
-ms.openlocfilehash: 02ac6ecb372b1e902d65d4b35ef71fbf0ac093c4
-ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.openlocfilehash: 5e1afdd372c2198c00bf8c02939d2167261b5d5c
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50170115"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50205134"
 ---
 # <a name="ltipv6gt-element-network-settings"></a>&lt;ipv6&gt;元素 （网络设置）
 启用 Internet 协议版本 6 (IPv6) 的过时成员的响应<xref:System.Net.Dns>类。  
@@ -69,7 +69,7 @@ ms.locfileid: "50170115"
 ```  
   
 ## <a name="see-also"></a>请参阅  
- <xref:System.Net?displayProperty=nameWithType>  
- <xref:System.Net.Dns?displayProperty=nameWithType>  
- <xref:System.Net.Sockets.Socket.OSSupportsIPv6%2A?displayProperty=nameWithType>  
- [网络设置架构](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+- <xref:System.Net?displayProperty=nameWithType>  
+- <xref:System.Net.Dns?displayProperty=nameWithType>  
+- <xref:System.Net.Sockets.Socket.OSSupportsIPv6%2A?displayProperty=nameWithType>  
+- [网络设置架构](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

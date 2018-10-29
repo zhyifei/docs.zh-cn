@@ -18,14 +18,12 @@ helpviewer_keywords:
 - output, network tracing
 - method invocations
 ms.assetid: e993b7c3-087f-45d8-9c02-9dded936d804
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: 65bd172d184b1346000c2bc84cb888dfab28bb61
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 812fbd0a3f12f9b44e419986b5f3198d95d1e3a7
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47459771"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50199638"
 ---
 # <a name="network-tracing-in-the-net-framework"></a>.NET Framework 中的网络跟踪
 .NET Framework 中的网络跟踪允许访问有关方法调用的信息，以及有关托管应用程序所生成的网络流量的信息。 此功能可用于调试正在开发的应用程序，也可用于分析已部署的应用程序。 可以自定义网络跟踪所提供的输出，以支持在开发时和在生产环境中的不同使用方案。  
@@ -41,4 +39,4 @@ ms.locfileid: "47459771"
  [启用网络跟踪](../../../docs/framework/network-programming/enabling-network-tracing.md)  
  [如何：配置网络跟踪](../../../docs/framework/network-programming/how-to-configure-network-tracing.md)  
  [解释网络跟踪](../../../docs/framework/network-programming/interpreting-network-tracing.md)  
- [检测和跟踪简介](https://msdn.microsoft.com/library/e924e57c-33cf-4b0e-9e7f-a45d13e38f2c)
+[跟踪应用程序和在应用程序中插入检测点](../../../docs/framework/debug-trace-profile/tracing-and-instrumenting-applications.md)

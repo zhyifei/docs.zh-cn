@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 5c540161-6e40-42e9-be92-6175aee2c46a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f45e68d9d340d857bc25b3848bd687e46fd73c52
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2cedcb20ba12e7c362c60d33dfedfa1882eaa7e7
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33391028"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50198492"
 ---
 # <a name="guidelines-for-creating-components-for-side-by-side-execution"></a>并行执行的组件的创建指南
 创建适用于并行执行的托管应用程序或组件时，请遵循下列一般性准则：  
@@ -63,5 +63,5 @@ ms.locfileid: "33391028"
  仅当文件版本号更新时，[全局程序集缓存工具 (Gacutil.exe)](../../../docs/framework/tools/gacutil-exe-gac-tool.md) 才允许用户替换程序集。 安装程序在安装时通常不会覆盖程序集，除非该程序集版本号较大。  
   
 ## <a name="see-also"></a>请参阅  
- [并行执行](../../../docs/framework/deployment/side-by-side-execution.md)  
- [如何：启用和禁用自动绑定重定向](../../../docs/framework/configure-apps/how-to-enable-and-disable-automatic-binding-redirection.md)
+- [并行执行](../../../docs/framework/deployment/side-by-side-execution.md)  
+- [如何：启用和禁用自动绑定重定向](../../../docs/framework/configure-apps/how-to-enable-and-disable-automatic-binding-redirection.md)

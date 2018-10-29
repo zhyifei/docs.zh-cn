@@ -4,12 +4,12 @@ description: 适用于容器化 .NET 应用程序的 .NET 微服务体系结构 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 12/12/2017
-ms.openlocfilehash: 6003252d7e87428c7f954b57c3b67a041e3f3b15
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.openlocfilehash: 663515e0a863ef703006df0f96b4bc8a2976ca78
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37106471"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50205290"
 ---
 # <a name="implementing-the-infrastructure-persistence-layer-with-entity-framework-core"></a>使用 Entity Framework Core 实现基础结构持久性层
 
@@ -39,7 +39,7 @@ EF 简介已提供于 Microsoft 文档中，因此这里我们只提供指向该
 
 ## <a name="infrastructure-in-entity-framework-core-from-a-ddd-perspective"></a>Entity Framework Core 中的基础结构（DDD 角度）
 
-从 DDD 的角度来看，EF 的一个重要功能是能够使用 POCO 域实体，在 EF 术语中也称为 POCO 代码优先实体。 如果使用 POCO 域实体，根据[持久性无感知](http://deviq.com/persistence-ignorance/)和[基础结构无感知](https://ayende.com/blog/3137/infrastructure-ignorance)原则，域模型类对于持久性是无感知的。
+从 DDD 的角度来看，EF 的一个重要功能是能够使用 POCO 域实体，在 EF 术语中也称为 POCO 代码优先实体。 如果使用 POCO 域实体，根据[持久性无感知](https://deviq.com/persistence-ignorance/)和[基础结构无感知](https://ayende.com/blog/3137/infrastructure-ignorance)原则，域模型类对于持久性是无感知的。
 
 根据 DDD 模式，应在实体类自身内封装域行为和规则，以便在访问任何集合时，它可以控制不变量、验证和规则。 因此，从 DDD 角度来看，允许公开访问子实体或值对象的集合不是一个好做法。 相反，建议公开用于控制如何及何时更新字段和属性集合的方法，以及这种情况下应发生什么行为和操作的方法。
 
@@ -400,7 +400,7 @@ public abstract class BaseSpecification<T> : ISpecification<T>
 }
 ```
 
-以下规范在给定购物篮 ID 或购物篮所属买家的 ID 情况下来加载单个购物篮实体。 它将[立即加载](https://docs.microsoft.com/en-us/ef/core/querying/related-data)购物篮的项集合。
+以下规范在给定购物篮 ID 或购物篮所属买家的 ID 情况下来加载单个购物篮实体。 它将[立即加载](https://docs.microsoft.com/ef/core/querying/related-data)购物篮的项集合。
 
 ```csharp
 // SAMPLE QUERY SPECIFICATION IMPLEMENTATION
@@ -467,7 +467,7 @@ public IEnumerable<T> List(ISpecification<T> spec)
     [https://docs.microsoft.com/ef/core/modeling/shadow-properties](https://docs.microsoft.com/ef/core/modeling/shadow-properties)
 
 -   **规范模式**
-    [http://deviq.com/specification-pattern/](http://deviq.com/specification-pattern/)
+    [https://deviq.com/specification-pattern/](https://deviq.com/specification-pattern/)
     
 
 >[!div class="step-by-step"]

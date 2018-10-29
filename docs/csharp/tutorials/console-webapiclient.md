@@ -3,12 +3,12 @@ title: 使用 .NET Core 创建 REST 客户端
 description: 此教程将介绍 .NET Core 和 C# 语言的许多功能。
 ms.date: 03/06/2017
 ms.assetid: 51033ce2-7a53-4cdd-966d-9da15c8204d2
-ms.openlocfilehash: 13466b717d0676c2db5edf4c98a4ead3e673b96c
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 521c6edfa7163219ea86c6fb8444bc95859c9aa1
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47397915"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50199900"
 ---
 # <a name="rest-client"></a>REST 客户端
 
@@ -57,7 +57,7 @@ ms.locfileid: "47397915"
 进行这些更改之后，应再次运行 `dotnet restore`（[请参阅备注](#dotnet-restore-note)），以便在系统上安装包。
 
 ## <a name="making-web-requests"></a>发出 Web 请求
-现在，可以开始检索 Web 数据了。 在此应用程序中，需要读取 [GitHub API](https://developer.github.com/v3/) 返回的信息。 让我们在 [.NET Foundation](http://www.dotnetfoundation.org/) 的保护下读取项目信息。 先向 GitHub API 发出请求，以检索项目信息。 将使用终结点 [https://api.github.com/orgs/dotnet/repos](https://api.github.com/orgs/dotnet/repos)。 由于要检索这些项目的所有信息，因此将发出 HTTP GET 请求。
+现在，可以开始检索 Web 数据了。 在此应用程序中，需要读取 [GitHub API](https://developer.github.com/v3/) 返回的信息。 让我们在 [.NET Foundation](https://www.dotnetfoundation.org/) 的保护下读取项目信息。 先向 GitHub API 发出请求，以检索项目信息。 将使用终结点 [https://api.github.com/orgs/dotnet/repos](https://api.github.com/orgs/dotnet/repos)。 由于要检索这些项目的所有信息，因此将发出 HTTP GET 请求。
 此外，浏览器也使用 HTTP GET 请求，以便你可以将相应的 URL 粘贴到浏览器，查看将要收到并处理的信息。
 
 使用 <xref:System.Net.Http.HttpClient> 类发出 Web 请求。 与所有新式 .NET API 一样，<xref:System.Net.Http.HttpClient> 只支持长时间运行 API 的异步方法。
