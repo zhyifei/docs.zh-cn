@@ -3,17 +3,17 @@ title: 从 .NET Framework 移植到 .NET Core
 description: 了解移植过程以及发现在将 .NET Framework 项目移植到 .NET Core 时可能有用的工具。
 author: cartermp
 ms.author: mairaw
-ms.date: 06/20/2016
-ms.openlocfilehash: d273b3abe46de59aa55b5b9a531d3c572a065124
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.date: 10/23/2018
+ms.openlocfilehash: 0c0ec3d8ab09e34e8dae24623903ca571f2cca6c
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48835387"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50192767"
 ---
 # <a name="porting-to-net-core-from-net-framework"></a>从 .NET Framework 移植到 .NET Core
 
-如果已在 .NET Framework 上运行了代码，则可能会对在 .NET Core 1.0 上运行代码感兴趣。  本文提供移植过程的概述以及在移植到 .NET Core 时可能非常有用的工具列表。
+如果已在 .NET Framework 上运行了代码，则可能会对在 .NET Core 上运行代码感兴趣。  本文提供移植过程的概述以及在移植到 .NET Core 时可能非常有用的工具列表。
 
 ## <a name="overview-of-the-porting-process"></a>移植过程概述
 
@@ -23,7 +23,7 @@ ms.locfileid: "48835387"
 
    因此需要了解什么是第三方依赖项，如何依赖于它们，如何查看它们是否也在 .NET Core 上运行，以及如果没有在其上运行可以采取的步骤。
    
-2. 将希望移植的所有项目重定向目标到目标 .NET Framework 4.6.2。
+2. 将希望移植的所有项目重定向到目标 .NET Framework 的最新版本。
 
    这可确保在 .NET Core 不支持特殊 API 的情况下，可以为特定于 .NET Framework 的目标使用备用 API。
    
@@ -33,7 +33,7 @@ ms.locfileid: "48835387"
    
 4. 移植测试代码。
 
-   由于移植到 .NET Core 对代码库来说是很大的更改，因此强烈建议移植测试代码，以便在移植代码时可以进行测试。  如今，MSTest、xUnit 和 NUnit 都支持 .NET Core 1.0。
+   由于移植到 .NET Core 对代码库来说是很大的更改，因此强烈建议移植测试代码，以便在移植代码时可以进行测试。  如今，MSTest、xUnit 和 NUnit 都支持 .NET Core。
    
 6. 执行移植计划！
 

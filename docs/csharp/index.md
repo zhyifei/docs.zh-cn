@@ -8,19 +8,19 @@ helpviewer_keywords:
 - Help, Visual C# documentation
 - C# language
 - Visual C#
-ms.openlocfilehash: 2f888fbc063799e258040edf5116fc02e3f9a668
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 32da68206e2415d42df9cc820ff1ca2814fbf58f
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43512333"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50195835"
 ---
 # <a name="c-guide"></a>C# 指南
 
 C# 指南提供了许多有关 C# 语言的资源。 此网站面向许多不同的受众群体。 你可能希望探索本指南的不同部分，具体视你的编程经验或 C# 语言和 .NET 使用经验而定。
 
 * 对于从未接触过编程的开发者：
-  * 请从[快速入门](quick-starts/index.md)部分着手。 这些快速入门可让你在浏览器中交互式浏览 C# 语言。 从这里你可以转到[教程](tutorials/index.md)部分。 这些教程介绍了如何从头开始创建 C# 程序。 其中分步介绍了如何创建程序。 同时还解释了语言概念以及如何自行生成 C# 程序。 如果希望先阅读概述内容，请尝试阅读 [C# 语言介绍](tour-of-csharp/index.md)。 其中介绍了 C# 语言的概念。 阅读完这一部分后，你将会对 C# 语言有一个基本的了解，可以尝试阅读各个教程或自行生成一些程序。
+  * 从浏览 [C# 教程简介](tutorials/intro-to-csharp/index.md)开始。 通过了解这些教程，可以在浏览器中交互式浏览 C# 语言。 可以从这里转到其他[教程](tutorials/index.md)。 这些教程介绍了如何从头开始创建 C# 程序。 其中分步介绍了如何创建程序。 同时还解释了语言概念以及如何自行生成 C# 程序。 如果希望先阅读概述内容，请尝试阅读 [C# 语言介绍](tour-of-csharp/index.md)。 其中介绍了 C# 语言的概念。 阅读完这一部分后，你将会对 C# 语言有一个基本的了解，可以尝试阅读各个教程或自行生成一些程序。
 
 * 对于刚开始接触 C# 的开发者：
   * 如果以前从事过开发工作，但是刚开始接触 C#，请阅读 [C# 语言介绍](tour-of-csharp/index.md)。 其中涵盖了该语言的基本语法和结构，你可以通过“语言介绍部分”将 C# 与你用过的其他语言进行比较。 还可以浏览[教程](tutorials/index.md)，尝试生成基本的 C# 程序。
@@ -35,8 +35,8 @@ C# 指南分为多个部分。 可以按顺序阅读，也可以直接跳到最�
 * [入门](getting-started/index.md)
   * 此部分介绍了在首选平台上创建 C# 开发环境需要安装的程序。 此部分下的各个主题介绍了如何在不同的受支持环境中创建首个 C# 程序。
 
-* [C# 快速入门](quick-starts/index.md)
-  * C# 快速入门是为新手开发人员提供的互动教程，可让他们使用读取–求值–打印循环 (REPL) 接口在浏览器中探索和学习 C# 语言。 完成互动课程后，可以通过在自己的计算机上练习相同的课程来提高你的编码技能。
+* [C# 教程简介](tutorials/intro-to-csharp/index.md)：
+  * C# 教程简介是为新手开发人员提供的互动教程，可让他们使用读取–求值–打印循环 (REPL) 接口在浏览器中探索和学习 C# 语言。 完成互动课程后，可以通过在自己的计算机上练习相同的课程来提高你的编码技能。
 
 * [教程](tutorials/index.md)
   * 此部分介绍了各种端到端方案，其中包括说明和代码。 其中演示了为什么首选特定的惯用做法、最适用于不同方案的 C# 功能，以及常见任务的参考实现。 如果最佳学习方式是查看代码，请先阅读此部分。 还可以下载所有代码，然后在你自己的环境中进行尝试。

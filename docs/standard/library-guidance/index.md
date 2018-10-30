@@ -3,13 +3,13 @@ title: 开放源代码库指南
 description: 有关创建高质量的 .NET 库的开发人员最佳做法建议。
 author: jamesnk
 ms.author: mairaw
-ms.date: 10/02/2018
-ms.openlocfilehash: 50fb745f7eb65abcaca76cebaf9991c48f559e59
-ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
+ms.date: 10/17/2018
+ms.openlocfilehash: ca95cb5ba1ebf27464397b7850ac02aabded1a5b
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "49374889"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50188620"
 ---
 # <a name="open-source-library-guidance"></a>开放源代码库指南
 
@@ -18,7 +18,7 @@ ms.locfileid: "49374889"
 有关优质开源 .NET 库的方方面面：
 
 > [!div class="checklist"]
-> * 包容性：优秀的 .NET 库致力于支持众多平台和应用程序。
+> * 包容性 - 优秀的 .NET 库致力于支持众多平台、编程语言和应用程序。
 > * 稳定性：优秀的 .NET 系统在具有众多库的应用程序中运行的 .NET 生态系统中共存。
 > * 设计为可改进：.NET 库要随着时间的推移进行改进和演变，同时支持现有用户。
 > * 可调试：.NET 库要使用最新的工具，为用户打造卓越的调试体验。
@@ -27,11 +27,11 @@ ms.locfileid: "49374889"
 > [!div class="nextstepaction"]
 > [入门](./get-started.md)
 
-## <a name="recommendations"></a>建议
+## <a name="types-of-recommendations"></a>建议类型
 
-每篇文章中都有一个列表，使用“请执行”、“请考虑”、“请避免”和“请勿”等词给出有关 .NET 库的建议。 每条建议的用词表示了应遵循的程度。
+每篇文章介绍四种类型的建议：“请执行”、“请考虑”、、“请避免”、和“请勿”。 建议类型表示了应遵循的程度。
 
-“请执行”建议是指基本要始终遵循的建议：
+应始终遵循“请执行”建议。 例如:
 
 ✔️请通过 NuGet 包分发库。
 
@@ -39,11 +39,11 @@ ms.locfileid: "49374889"
 
 ✔️请考虑使用 [SemVer 2.0.0](https://semver.org/) 控制 NuGet 包的版本。
 
-“请避免”建议针对的是在一般情况下不应执行的操作，但有时也可以打破规则：
+“请避免”建议是指在一般情况下不应执行的操作，但有时也可以打破规则：
 
 ❌请避免使用需要确切版本的 NuGet 包引用。
 
-最后，“请勿”是指在大多数情况下不得执行的操作：
+最后，“请勿”建议是指在大多数情况下不得执行的操作：
 
 ❌请勿发布库的强名称或非强名称版本。 例如，`Contoso.Api` 和 `Contoso.Api.StrongNamed`。
 
