@@ -3,10 +3,10 @@ title: 索引属性 (F#)
 description: 了解如何在中的索引属性F#，这允许对有序数据的类似数组的访问。
 ms.date: 10/17/2018
 ms.openlocfilehash: 3dac60eba3d9e7a9c3e76ad7ee051e6b30b88636
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2018
+ms.lasthandoff: 11/02/2018
 ms.locfileid: "49452243"
 ---
 # <a name="indexed-properties"></a>索引属性

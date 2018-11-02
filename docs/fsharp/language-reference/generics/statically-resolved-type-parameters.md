@@ -3,10 +3,10 @@ title: 静态解析的类型参数 (F#)
 description: '了解如何使用 F # 静态解析的类型参数，它将被替换为实际类型在编译时而不是在运行时。'
 ms.date: 05/16/2016
 ms.openlocfilehash: 747917fef2746dcbf363ef4b717ace5e47229800
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
+ms.lasthandoff: 11/02/2018
 ms.locfileid: "48032772"
 ---
 # <a name="statically-resolved-type-parameters"></a>静态解析的类型参数
@@ -29,7 +29,7 @@ ms.locfileid: "48032772"
 
 |功能|泛型|静态解析的|
 |-------|-------|-------------------|
-|语法|`'T`, `'U`|`^T`, `^U`|
+|语法|`'T`， `'U`|`^T`， `^U`|
 |解决时间|运行时|编译时间|
 |成员约束|不能与成员约束一起使用。|可以与成员约束一起使用。|
 |代码生成|使用标准的泛型类型参数的类型 （或方法） 会导致单个泛型类型或方法的生成。|生成多个实例化的类型和方法，每个类型的需要。|

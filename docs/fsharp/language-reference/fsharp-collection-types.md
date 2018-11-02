@@ -3,10 +3,10 @@ title: F# 集合类型
 description: '了解有关 F # 集合类型以及从.NET Framework 中的集合类型之间的区别。'
 ms.date: 05/16/2016
 ms.openlocfilehash: a3cfc3f06582c31a79dce43b583eca39f69ddf1e
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
+ms.lasthandoff: 11/02/2018
 ms.locfileid: "43864756"
 ---
 # <a name="f-collection-types"></a>F# 集合类型

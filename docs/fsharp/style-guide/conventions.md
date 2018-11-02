@@ -3,10 +3,10 @@ title: 'F # 编码约定'
 description: '编写 F # 代码时，了解一般指导原则和惯例。'
 ms.date: 05/14/2018
 ms.openlocfilehash: 21119b6d69e00f359104bfb6eab7681bdbfb8d78
-ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
+ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/11/2018
+ms.lasthandoff: 11/02/2018
 ms.locfileid: "49087383"
 ---
 # <a name="f-coding-conventions"></a>F # 编码约定
@@ -225,7 +225,7 @@ let handleWithdrawal amount =
 
 可在 F # 中用于引发异常的目的的主要构造应考虑按以下顺序的首选项：
 
-| 函数 | 语法 | 用途 |
+| 函数 | 语法 | 目标 |
 |----------|--------|---------|
 | `nullArg` | `nullArg "argumentName"` | 引发`System.ArgumentNullException`与指定的参数名称。 |
 | `invalidArg` | `invalidArg "argumentName" "message"` | 引发`System.ArgumentException`使用指定的参数名称和消息。 |

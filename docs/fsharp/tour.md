@@ -2,12 +2,12 @@
 title: F# 教程
 description: 检查某些 F# 编程语言中的代码示例本教程的主要功能。
 ms.date: 02/28/2018
-ms.openlocfilehash: d129e2312ae3da64f04b3bbb0bbd0b4d77aad36e
-ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
+ms.openlocfilehash: 7a512b5fead8de69f025e791b6086c60dbfc1b24
+ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2018
-ms.locfileid: "42924516"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "50235708"
 ---
 # <a name="tour-of-f"></a>F# 教程 #
 
@@ -193,6 +193,6 @@ F# 还具有对.NET 类的完全支持[接口](language-reference/interfaces.md)
 
 现在，已了解的一些主要功能的语言，您应准备好开始编写第一个 F# 程序 ！  请查看[Getting Started](tutorials/getting-started/index.md)若要了解如何设置开发环境，编写一些代码。
 
-了解更多的后续步骤可以是任意，但我们建议[函数作为一类值](introduction-to-functional-programming/functions-as-first-class-values.md)<!--[Introduction to Functional Programming in F#](introduction-to-functional-programming/index.md)-->熟悉函数编程的核心概念。  这些将是在中构建 F# 中的可靠程序必不可少。
+了解更多的后续步骤可以是任意，但我们建议[中的函数编程简介F#](introduction-to-functional-programming/index.md)熟悉函数编程的核心概念。  这些将是在中构建 F# 中的可靠程序必不可少。
 
 此外，请查看[F# 语言参考](language-reference/index.md)若要查看有关 F# 的概念内容全面集合。

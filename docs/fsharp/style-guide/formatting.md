@@ -3,10 +3,10 @@ title: 'F # 代码格式设置准则'
 description: '了解有关格式设置 F # 代码的指导原则。'
 ms.date: 05/14/2018
 ms.openlocfilehash: 0d7d2d1771710db55bf990f3a06079b2aec48fd7
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
+ms.lasthandoff: 11/02/2018
 ms.locfileid: "43858000"
 ---
 # <a name="f-code-formatting-guidelines"></a>F # 代码格式设置准则

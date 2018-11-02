@@ -3,10 +3,10 @@ title: 模式匹配 (F#)
 description: '了解如何使用模式在 F # 中的逻辑结构的数据进行比较、 将数据分解为各个构成部分，或从数据中提取信息。'
 ms.date: 05/16/2016
 ms.openlocfilehash: 5ad3d3e1a78246afdfa2948fd0fb84fa04686d30
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
+ms.lasthandoff: 11/02/2018
 ms.locfileid: "45991419"
 ---
 # <a name="pattern-matching"></a>模式匹配

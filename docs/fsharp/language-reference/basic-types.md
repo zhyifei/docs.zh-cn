@@ -3,10 +3,10 @@ title: '基本类型 （F #）'
 description: '了解 F # 语言中使用的基础的基本类型。'
 ms.date: 07/09/2018
 ms.openlocfilehash: 8f948d066323527b09b1d3f9f4167b95b1c875cf
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
+ms.lasthandoff: 11/02/2018
 ms.locfileid: "48026928"
 ---
 # <a name="basic-types"></a>基本类型
@@ -31,8 +31,8 @@ ms.locfileid: "48026928"
 |`decimal`|<xref:System.Decimal>|一个浮点数据类型的至少 28 个有效位。|
 |`unit`|不适用|表示实际值不的存在。 该类型具有只有一个正式的值，该值表示`()`。 单元值， `()`，通常用作其中需要的值，但没有实际值是可用或者有意义的占位符。|
 |`void`|<xref:System.Void>|指示没有类型或值。|
-|`float32`, `single`|<xref:System.Single>|32 位浮点类型。|
-|`float`, `double`|<xref:System.Double>|64 位浮点类型。|
+|`float32`， `single`|<xref:System.Single>|32 位浮点类型。|
+|`float`， `double`|<xref:System.Double>|64 位浮点类型。|
 
 >[!NOTE]
 通过执行 64 位整数类型具有整数太大的计算[bigint](https://msdn.microsoft.com/library/dc8be18d-4042-46c4-b136-2f21a84f6efa)类型。 `bigint` 不被视为一种基本类型;是的缩写`System.Numerics.BigInteger`。

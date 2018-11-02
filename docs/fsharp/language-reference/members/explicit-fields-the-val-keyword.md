@@ -3,10 +3,10 @@ title: 显式字段：val 关键字 (F#)
 description: '了解有关 F # val 关键字用于声明类或结构类型中存储一个值，而不初始化该类型的位置。'
 ms.date: 05/16/2016
 ms.openlocfilehash: 9cd06f7e90192be79490dd0ff67f118cce4339c3
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2018
+ms.lasthandoff: 11/02/2018
 ms.locfileid: "45746352"
 ---
 # <a name="explicit-fields-the-val-keyword"></a>显式字段：val 关键字
@@ -65,9 +65,9 @@ val [ mutable ] [ access-modifier ] field-name : type-name
 
 输出为 `11 xyz`。
 
-显式字段不适用于例程使用。 通常，在可能的情况下，应在类中使用 `let` 绑定，而不是显式字段。 显式字段在某些互操作性方案中十分有用，例如，当需要定义一个结构，该结构将用在对本机 API 的平台调用中，或用在 COM 互操作方案中。 有关详细信息，请参阅[外部函数](../functions/external-functions.md)。 另一种要用到显式字段的情况是当使用 F# 代码生成器时，该生成器会发出不具有主构造函数的类。 显式字段对于线程静态变量或类似的构造而言也十分有用。 有关详细信息，请参阅`System.ThreadStaticAttribute`。
+显式字段不适用于例程使用。 通常，在可能的情况下，应在类中使用 `let` 绑定，而不是显式字段。 显式字段在某些互操作性方案中十分有用，例如，当需要定义一个结构，该结构将用在对本机 API 的平台调用中，或用在 COM 互操作方案中。 有关详细信息，请参阅[外部函数](../functions/external-functions.md)。 另一种要用到显式字段的情况是当使用 F# 代码生成器时，该生成器会发出不具有主构造函数的类。 显式字段对于线程静态变量或类似的构造而言也十分有用。 有关详细信息，请参阅 `System.ThreadStaticAttribute` 。
 
-当关键字 `member val` 在一个类型定义中同时出现，它就是一个自动实现属性的定义。 有关详细信息，请参阅[属性](properties.md)。
+当关键字 `member val` 在一个类型定义中同时出现，它就是一个自动实现属性的定义。 有关更多信息，请参见 [属性](properties.md)中定义的接口的私有 C++ 特定实现。
 
 ## <a name="see-also"></a>请参阅
 

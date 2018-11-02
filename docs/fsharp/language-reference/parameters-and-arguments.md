@@ -2,12 +2,12 @@
 title: 参数和自变量 (F#)
 description: '了解有关 F # 语言支持对定义形参并将参数传递给函数、 方法和属性。'
 ms.date: 05/16/2016
-ms.openlocfilehash: a1e2a70ca560bbb09d2cd10f47485cbe5c5e029d
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: 6ccef89fe411096ed66f481dd4ae2d91259fe1c4
+ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49123353"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "50744452"
 ---
 # <a name="parameters-and-arguments"></a>形参和实参
 
@@ -111,6 +111,8 @@ let angle (Polar(_, theta)) = theta
 
 可以通过使用参数名称前面的问号指定一种方法的可选参数。 可选参数被解释为 F # 选项类型，因此您可以将这些查询，查询选项类型，通过常规方式`match`与表达式`Some`和`None`。 仅在成员上，通过使用创建的函数上不允许使用可选参数`let`绑定。
 
+您可以现有可选将值传递给方法的参数名称，如`?arg=None`或`?arg=Some(3)`或`?arg=arg`。 构建一种方法将可选参数传递给另一种方法时，这很有用。
+
 此外可以使用一个函数`defaultArg`，用于设置默认值为可选的参数。 `defaultArg`函数使用的第一个参数的可选参数，以及为第二个的默认值。
 
 下面的示例演示如何使用可选参数。
@@ -123,7 +125,29 @@ let angle (Polar(_, theta)) = theta
 Baud Rate: 9600 Duplex: Full Parity: false
 Baud Rate: 4800 Duplex: Half Parity: false
 Baud Rate: 300 Duplex: Half Parity: true
+Baud Rate: 9600 Duplex: Full Parity: false
+Baud Rate: 9600 Duplex: Full Parity: false
+Baud Rate: 4800 Duplex: Half Parity: false
 ```
+
+对于C#和 Visual Basic 互操作可以使用的特性`[<Optional; DefaultParameterValue<(...)>]`在F#，以便调用方将看到为可选参数。 这相当于定义该参数为可选中C#中作为`MyMethod(int i = 3)`。
+
+```fsharp
+open System
+open System.Runtime.InteropServices
+type C = 
+    static member Foo([<Optional; DefaultParameterValue("Hello world")>] message) =
+        printfn "%s" message
+```
+
+作为参数的给定值`DefaultParameterValue`必须匹配的类型的参数，即不允许以下内容：
+
+```fsharp
+type C =
+    static member Wrong([<Optional; DefaultParameterValue("string")>] i:int) = ()
+```
+
+在这种情况下，编译器会生成警告，并将完全忽略这两个属性。 请注意，默认值`null`需要类型批注，否则编译器将推断类型错误，即`[<Optional; DefaultParameterValue(null:obj)>] o:obj`。
 
 ## <a name="passing-by-reference"></a>按引用传递
 
