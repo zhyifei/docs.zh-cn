@@ -1,6 +1,6 @@
 ---
 title: 字符串 (F#)
-description: 了解 F# 'string' 类型如何表示为一系列 Unicode 字符的不可变的文本。
+description: "了解 F # 'string' 类型如何表示为一系列 Unicode 字符的不可变的文本。"
 ms.date: 05/16/2016
 ms.openlocfilehash: 21971602093bc84b0df47d4ae46a14fb936c28bb
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
@@ -18,7 +18,7 @@ ms.locfileid: "43799338"
 
 ## <a name="remarks"></a>备注
 
-字符串文本用引号 （"） 字符分隔。 反斜杠字符 ( \\ ) 使用某些特殊字符进行编码。 反斜杠和组合在一起的下一个字符被称为*转义序列*。 转义序列在 F# 字符串文本会显示下表中受支持。
+字符串文本用引号 （"） 字符分隔。 反斜杠字符 ( \\ ) 使用某些特殊字符进行编码。 反斜杠和组合在一起的下一个字符被称为*转义序列*。 转义序列在 F # 字符串文本会显示下表中受支持。
 
 |字符|转义序列|
 |---------|---------------|
@@ -78,7 +78,7 @@ def
 
 ## <a name="string-class"></a>字符串类
 
-因为 F# 中的字符串类型是实际.NET Framework`System.String`类型，所有`System.String`成员均可。 这包括`+`运算符，用来连接字符串`Length`属性，并`Chars`Unicode 字符数组的形式返回字符串的属性。 有关字符串的详细信息，请参阅`System.String`。
+因为 F # 中的字符串类型是实际.NET Framework`System.String`类型，所有`System.String`成员均可。 这包括`+`运算符，用来连接字符串`Length`属性，并`Chars`Unicode 字符数组的形式返回字符串的属性。 有关字符串的详细信息，请参阅`System.String`。
 
 通过使用`Chars`属性的`System.String`，可以通过指定一个索引，如下面的代码中所示访问字符串中的单个字符。
 

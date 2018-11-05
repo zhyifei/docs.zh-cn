@@ -1,6 +1,6 @@
 ---
 title: 泛型 (F#)
-description: 了解如何使用 F# 泛型函数和类型，以便你能够编写代码，而无需重复代码适用于不同的类型。
+description: '了解如何使用 F # 泛型函数和类型，以便你能够编写代码，而无需重复代码适用于不同的类型。'
 ms.date: 05/16/2016
 ms.openlocfilehash: fc061f19c6c7fa737f7ca05aae83fd42c0010b37
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2

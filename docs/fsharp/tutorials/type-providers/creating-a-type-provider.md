@@ -1,6 +1,6 @@
 ---
-title: 教程： 创建类型提供程序 （F#）
-description: 了解如何在 F# 3.0 中创建你自己 F# 类型提供程序，通过检查几个简单类型提供程序来演示基本概念。
+title: '教程： 创建类型提供程序 （F #）'
+description: '了解如何在 F # 3.0 中创建你自己 F # 类型提供程序，通过检查几个简单类型提供程序来演示基本概念。'
 ms.date: 05/16/2016
 ms.openlocfilehash: c9dedbeed3ee081a6b1e1ffffe843fc962d2c60b
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
@@ -11,15 +11,15 @@ ms.locfileid: "50183914"
 ---
 # <a name="tutorial-create-a-type-provider"></a>教程： 创建类型提供程序
 
-F# 中的类型提供程序机制是支持的信息丰富的编程的重要部分。 本教程介绍如何创建你自己的类型提供程序通过引导您完成开发的几个简单类型提供程序来演示基本概念。 有关 F# 中的类型提供程序机制的详细信息，请参阅[类型提供程序](index.md)。
+F # 中的类型提供程序机制是支持的信息丰富的编程的重要部分。 本教程介绍如何创建你自己的类型提供程序通过引导您完成开发的几个简单类型提供程序来演示基本概念。 有关 F # 中的类型提供程序机制的详细信息，请参阅[类型提供程序](index.md)。
 
-F# 生态系统包含一系列常用 Internet 和企业数据服务的类型提供程序。 例如：
+F # 生态系统包含一系列常用 Internet 和企业数据服务的类型提供程序。 例如：
 
 - [FSharp.Data](https://fsharp.github.io/FSharp.Data/)包括 JSON、 XML、 CSV 和 HTML 文档格式类型提供程序。
 
-- [SQLProvider](https://fsprojects.github.io/SQLProvider/)提供强类型化访问 SQL 数据库通过对象映射和 F# LINQ 查询对这些数据源。
+- [SQLProvider](https://fsprojects.github.io/SQLProvider/)提供强类型化访问 SQL 数据库通过对象映射和 F # LINQ 查询对这些数据源。
 
-- [FSharp.Data.SqlClient](https://fsprojects.github.io/FSharp.Data.SqlClient/)的编译时类型提供程序的一组已检查的 T-SQL 的 F# 中嵌入内容。
+- [FSharp.Data.SqlClient](https://fsprojects.github.io/FSharp.Data.SqlClient/)的编译时类型提供程序的一组已检查的 T-SQL 的 F # 中嵌入内容。
 
 - [FSharp.Data.TypeProviders](https://fsprojects.github.io/FSharp.Data.TypeProviders/)是较旧的使用仅与用于访问 SQL、 实体框架、 OData 和 WSDL 数据服务的.NET Framework 编程的类型提供程序集。
 
@@ -27,7 +27,7 @@ F# 生态系统包含一系列常用 Internet 和企业数据服务的类型提�
 
 ## <a name="before-you-start"></a>安装前
 
-类型提供程序机制主要用于将稳定数据和服务信息空间注入到 F# 编程体验。
+类型提供程序机制主要用于将稳定数据和服务信息空间注入到 F # 编程体验。
 
 此机制不被设计用于注入有相关程序逻辑的方式的程序执行期间更改其架构的信息空间。 此外，机制不被设计内部语言元编程，即使该域包含一些有效的用法。 只在必要时，应使用此机制和其中的类型提供程序的开发产生很高的值。
 
@@ -35,7 +35,7 @@ F# 生态系统包含一系列常用 Internet 和企业数据服务的类型提�
 
 在开始之前，您可能会提出以下问题：
 
-- 你是否架构信息源？ 如果是这样，什么是映射到 F# 和.NET 类型系统？
+- 你是否架构信息源？ 如果是这样，什么是映射到 F # 和.NET 类型系统？
 
 - 可以使用现有的 （动态类型化） API 作为起始点在实现？
 
@@ -53,7 +53,7 @@ F# 生态系统包含一系列常用 Internet 和企业数据服务的类型提�
 
 ## <a name="a-simple-type-provider"></a>简单类型提供程序
 
-此示例为 samples.helloworldtypeprovider，位于，类似于中的示例`examples`目录[F# 类型提供程序 SDK](https://github.com/fsprojects/FSharp.TypeProviders.SDK/)。 提供程序提供"类型空间"包含 100 已清除的类型，如以下代码所示通过使用 F# 签名语法和省略详细信息的全部除了`Type1`。 有关已清除的类型的详细信息，请参阅[详细信息有关擦除提供类型](#details-about-erased-provided-types)本主题中更高版本。
+此示例为 samples.helloworldtypeprovider，位于，类似于中的示例`examples`目录[F # 类型提供程序 SDK](https://github.com/fsprojects/FSharp.TypeProviders.SDK/)。 提供程序提供"类型空间"包含 100 已清除的类型，如以下代码所示通过使用 F # 签名语法和省略详细信息的全部除了`Type1`。 有关已清除的类型的详细信息，请参阅[详细信息有关擦除提供类型](#details-about-erased-provided-types)本主题中更高版本。
 
 ```fsharp
 namespace Samples.HelloWorldTypeProvider
@@ -128,7 +128,7 @@ type SampleTypeProvider(config: TypeProviderConfig) as this =
 do()
 ```
 
-若要使用此提供程序，打开 Visual Studio 的一个单独实例、 创建 F# 脚本，以及如何将从您的脚本中引用提供程序使用 #r 如以下代码所示：
+若要使用此提供程序，打开 Visual Studio 的一个单独实例、 创建 F # 脚本，以及如何将从您的脚本中引用提供程序使用 #r 如以下代码所示：
 
 ```fsharp
 #r @".\bin\Debug\Samples.HelloWorldTypeProvider.dll"
@@ -148,7 +148,7 @@ let data1 = Samples.HelloWorldTypeProvider.Type1.NestedType.StaticProperty35
 
 然后寻找下类型`Samples.HelloWorldTypeProvider`类型提供程序生成的命名空间。
 
-重新编译提供程序之前，请确保已关闭的 Visual Studio 和 F# Interactive 使用提供程序 DLL 的所有实例。 否则，将发生生成错误的原因将锁定输出 DLL。
+重新编译提供程序之前，请确保已关闭的 Visual Studio 和 F # Interactive 使用提供程序 DLL 的所有实例。 否则，将发生生成错误的原因将锁定输出 DLL。
 
 若要调试此提供程序通过使用 print 语句，使脚本公开提供程序，问题以及如何将以下代码：
 
@@ -175,7 +175,7 @@ devenv.exe /debugexe fsc.exe -r:bin\Debug\HelloWorldTypeProvider.dll script.fsx
 type SampleTypeProvider(config: TypeProviderConfig) as this =
 ```
 
-此类型必须是公共的并必须将其与标记[TypeProvider](https://msdn.microsoft.com/library/bdf7b036-7490-4ace-b79f-c5f1b1b37947)属性，以便在一个单独的 F# 项目引用包含类型的程序集时，编译器会识别的类型提供程序。 *Config*参数是可选的，和 （如果存在） 包含 F# 编译器创建的类型提供程序实例的上下文的配置信息。
+此类型必须是公共的并必须将其与标记[TypeProvider](https://msdn.microsoft.com/library/bdf7b036-7490-4ace-b79f-c5f1b1b37947)属性，以便在一个单独的 F # 项目引用包含类型的程序集时，编译器会识别的类型提供程序。 *Config*参数是可选的，和 （如果存在） 包含 F # 编译器创建的类型提供程序实例的上下文的配置信息。
 
 接下来，实现[ITypeProvider](https://msdn.microsoft.com/library/2c2b0571-843d-4a7d-95d4-0a7510ed5e2f)接口。 在这种情况下，使用`TypeProviderForNamespaces`类型从`ProvidedTypes`API 作为基类型。 此帮助程序类型可以自愿提供的有限集合，提供命名空间，其中每个直接包含有限数量的修复，自愿提供的类型。 在此上下文中，提供程序*积极*生成类型，即使他们不需要或使用。
 
@@ -255,7 +255,7 @@ let staticProp = ProvidedProperty(propertyName = "StaticProperty",
                                   getterCode = (fun args -> <@@ "Hello!" @@>))
 ```
 
-获取此属性将计算结果始终为字符串"Hello ！"。 `GetterCode`属性使用 F# 报价，其表示为获取属性的宿主编译器生成的代码。 有关引用的详细信息，请参阅[代码引用 （F#）](https://msdn.microsoft.com/library/6f055397-a1f0-4f9a-927c-f0d7c6951155)。
+获取此属性将计算结果始终为字符串"Hello ！"。 `GetterCode`属性使用 F # 报价，其表示为获取属性的宿主编译器生成的代码。 有关引用的详细信息，请参阅[代码引用 （F #）](https://msdn.microsoft.com/library/6f055397-a1f0-4f9a-927c-f0d7c6951155)。
 
 将 XML 文档添加到该属性。
 
@@ -276,7 +276,7 @@ let ctor = ProvidedConstructor(parameters = [ ],
                                invokeCode = (fun args -> <@@ "The object data" :> obj @@>))
 ```
 
-`InvokeCode`的构造函数将返回 F# 报价，其表示时调用的构造函数，宿主编译器将生成的代码。 例如，可以使用以下构造函数：
+`InvokeCode`的构造函数将返回 F # 报价，其表示时调用的构造函数，宿主编译器将生成的代码。 例如，可以使用以下构造函数：
 
 ```fsharp
 new Type10()
@@ -300,7 +300,7 @@ ProvidedConstructor(parameters = [ ProvidedParameter("data",typeof<string>) ],
                     invokeCode = (fun args -> <@@ (%%(args.[0]) : string) :> obj @@>))
 ```
 
-`InvokeCode`的构造函数将再次返回 F# 报价，其表示为对方法的调用宿主编译器生成的代码。 例如，可以使用以下构造函数：
+`InvokeCode`的构造函数将再次返回 F # 报价，其表示为对方法的调用宿主编译器生成的代码。 例如，可以使用以下构造函数：
 
 ```fsharp
 new Type10("ten")
@@ -318,7 +318,7 @@ instanceProp.AddXmlDocDelayed(fun () -> "This is an instance property")
 t.AddMember instanceProp
 ```
 
-获取此属性将返回字符串，即表示对象的长度。 `GetterCode`属性将返回指定主机编译器将生成要获取其属性的代码的 F# 报价。 像`InvokeCode`，则`GetterCode`函数返回的引用。 主机编译器将调用此函数的参数列表。 在这种情况下，参数包括只是单个表达式表示的实例对其调用 getter，使用户能够通过使用`args.[0]`。实现`GetterCode`然后拼接到在清除类型结果引号`obj`，以及使用强制转换来满足编译器的机制，用于检查该对象是一个字符串的类型。 下的一部分`makeOneProvidedType`为实例方法提供了一个参数。
+获取此属性将返回字符串，即表示对象的长度。 `GetterCode`属性将返回指定主机编译器将生成要获取其属性的代码的 F # 报价。 像`InvokeCode`，则`GetterCode`函数返回的引用。 主机编译器将调用此函数的参数列表。 在这种情况下，参数包括只是单个表达式表示的实例对其调用 getter，使用户能够通过使用`args.[0]`。实现`GetterCode`然后拼接到在清除类型结果引号`obj`，以及使用强制转换来满足编译器的机制，用于检查该对象是一个字符串的类型。 下的一部分`makeOneProvidedType`为实例方法提供了一个参数。
 
 ```fsharp
 let instanceMeth = 
@@ -370,7 +370,7 @@ t.AddMembersDelayed(fun () ->
 
 - 当你正在编写信息空间，因此大型进行相互关联，这并不从技术上讲可行，若要生成的信息空间的实际.NET 类型的提供程序。
 
-在此示例中，提供的每个类型擦除键入`obj`，，所有使用该类型将都显示为类型`obj`中编译的代码。 实际上，在这些示例中的基础对象都是字符串，但该类型将显示为`System.Object`在.NET 中编译的代码。 如使用的类型擦除的所有用法，您可以使用显式装箱，取消装箱，并将强制转换来破坏清除类型。 在这种情况下，使用对象时，可能会导致无效强制转换异常。 提供程序运行时可以定义其自己的私有表示形式类型，以帮助防范 false 表示形式。 不能在 F# 本身中定义已清除的类型。 提供的类型可能会消除。 你必须了解后果，这两个实用，擦写的语义，使用任一已清除的类型的类型提供程序或提供的提供程序类型。 已清除的类型没有任何实际的.NET 类型。 因此，不能通过类型进行准确反射和可能破坏已清除的类型，如果你使用运行时转换和其他依赖于确切运行时类型语义的方法。 已清除的类型的 subversion 经常会导致在运行时类型强制转换异常。
+在此示例中，提供的每个类型擦除键入`obj`，，所有使用该类型将都显示为类型`obj`中编译的代码。 实际上，在这些示例中的基础对象都是字符串，但该类型将显示为`System.Object`在.NET 中编译的代码。 如使用的类型擦除的所有用法，您可以使用显式装箱，取消装箱，并将强制转换来破坏清除类型。 在这种情况下，使用对象时，可能会导致无效强制转换异常。 提供程序运行时可以定义其自己的私有表示形式类型，以帮助防范 false 表示形式。 不能在 F # 本身中定义已清除的类型。 提供的类型可能会消除。 你必须了解后果，这两个实用，擦写的语义，使用任一已清除的类型的类型提供程序或提供的提供程序类型。 已清除的类型没有任何实际的.NET 类型。 因此，不能通过类型进行准确反射和可能破坏已清除的类型，如果你使用运行时转换和其他依赖于确切运行时类型语义的方法。 已清除的类型的 subversion 经常会导致在运行时类型强制转换异常。
 
 ### <a name="choosing-representations-for-erased-provided-types"></a>有关清除选择表示形式提供类型
 
@@ -388,7 +388,7 @@ t.AddMembersDelayed(fun () ->
 
 - 可能已清除类型提供的对象集称为它的表示形式。 在本文档中示例中，所有已清除提供的表示形式类型`Type1..Type100`永远是字符串对象。
 
-所有表示形式提供的类型都必须与所提供的类型擦除兼容。 （否则为 F# 编译器将产生错误的使用类型提供程序，或将生成无法验证不是有效的.NET 代码。 如果类型提供程序返回的代码给出无效的表示形式，则该类型提供程序无效。）
+所有表示形式提供的类型都必须与所提供的类型擦除兼容。 （否则为 F # 编译器将产生错误的使用类型提供程序，或将生成无法验证不是有效的.NET 代码。 如果类型提供程序返回的代码给出无效的表示形式，则该类型提供程序无效。）
 
 通过使用以下方法，这两者都是很常见，可以选择提供的对象的表示形式：
 
@@ -469,7 +469,7 @@ let r = reg.Match("425-123-2345").Groups.["AreaCode"].Value //r equals "425"
 
 - 每个命名的组会导致提供的属性，并访问属性导致的匹配项的索引器使用`Groups`集合。
 
-下面的代码的逻辑来实现此类提供程序，core 和此示例中省略为提供的类型的所有成员的添加。 有关每个已添加成员的信息，请参阅本主题后面的相应部分。 如需完整的代码下载中的示例[F# 3.0 示例包](https://fsharp3sample.codeplex.com)Codeplex 网站上。
+下面的代码的逻辑来实现此类提供程序，core 和此示例中省略为提供的类型的所有成员的添加。 有关每个已添加成员的信息，请参阅本主题后面的相应部分。 如需完整的代码下载中的示例[F # 3.0 示例包](https://fsharp3sample.codeplex.com)Codeplex 网站上。
 
 ```fsharp
 namespace Samples.FSharp.RegexTypeProvider
@@ -1052,7 +1052,7 @@ ProvidedTypes API 提供帮助器提供度量值批注。 例如，若要提供�
 
 ### <a name="invalidation"></a>失效
 
-提供程序可以引发失效信号来通知架构假设可能已更改的 F# 语言服务。 失效时，如果提供程序托管在 Visual Studio 中，是重做一次。 当在 F# Interactive 中或通过 F# 编译器 (fsc.exe) 托管提供程序时，将忽略此信号。
+提供程序可以引发失效信号来通知架构假设可能已更改的 F # 语言服务。 失效时，如果提供程序托管在 Visual Studio 中，是重做一次。 当在 F # Interactive 中或通过 F # 编译器 (fsc.exe) 托管提供程序时，将忽略此信号。
 
 ### <a name="caching-schema-information"></a>缓存的架构信息
 
@@ -1060,7 +1060,7 @@ ProvidedTypes API 提供帮助器提供度量值批注。 例如，若要提供�
 
 ### <a name="backing-assembly"></a>后备程序集
 
-在编译时`.dll`或`.exe`文件，支持.dll 文件生成的类型以静态方式链接到生成的程序集。 通过将中间语言 (IL) 类型定义和任何托管的资源复制到最终的程序集的后备程序集从创建此链接。 当您使用 F# Interactive 时，支持.dll 文件不会复制和改为直接加载到 F# 交互式过程。
+在编译时`.dll`或`.exe`文件，支持.dll 文件生成的类型以静态方式链接到生成的程序集。 通过将中间语言 (IL) 类型定义和任何托管的资源复制到最终的程序集的后备程序集从创建此链接。 当您使用 F # Interactive 时，支持.dll 文件不会复制和改为直接加载到 F # 交互式过程。
 
 ### <a name="exceptions-and-diagnostics-from-type-providers"></a>异常和来自类型提供程序的诊断
 
@@ -1070,11 +1070,11 @@ ProvidedTypes API 提供帮助器提供度量值批注。 例如，若要提供�
 
 - 类型提供程序无法将报告警告。
 
-- 当类型提供程序托管在 F# 编译器、 F# 开发环境中，或 F# Interactive 中时，从该提供程序的所有异常被都捕获。 消息属性始终为错误文本，并没有堆栈跟踪显示。 如果您要引发异常，可能会引发下面的示例： `System.NotSupportedException`， `System.IO.IOException`， `System.Exception`。
+- 当类型提供程序托管在 F # 编译器、 F # 开发环境中，或 F # Interactive 中时，从该提供程序的所有异常被都捕获。 消息属性始终为错误文本，并没有堆栈跟踪显示。 如果您要引发异常，可能会引发下面的示例： `System.NotSupportedException`， `System.IO.IOException`， `System.Exception`。
 
 #### <a name="providing-generated-types"></a>提供生成的类型
 
-到目前为止，本文档介绍了如何提供已清除的类型。 您可以在 F# 中使用类型提供程序机制提供生成添加到用户的程序的实际.NET 类型定义为的类型。 您必须引用生成提供的使用类型定义的类型。
+到目前为止，本文档介绍了如何提供已清除的类型。 您可以在 F # 中使用类型提供程序机制提供生成添加到用户的程序的实际.NET 类型定义为的类型。 您必须引用生成提供的使用类型定义的类型。
 
 ```fsharp
 open Microsoft.FSharp.TypeProviders 
@@ -1082,7 +1082,7 @@ open Microsoft.FSharp.TypeProviders
 type Service = ODataService<"http://services.odata.org/Northwind/Northwind.svc/">
 ```
 
-ProvidedTypes 0.2 帮助器代码是 F# 3.0 发行版的一部分，仅提供有限支持用于提供生成的类型。 下面的语句必须是生成的类型定义，则返回 true:
+ProvidedTypes 0.2 帮助器代码是 F # 3.0 发行版的一部分，仅提供有限支持用于提供生成的类型。 下面的语句必须是生成的类型定义，则返回 true:
 
 - `isErased` 必须设置为`false`。
 
@@ -1102,9 +1102,9 @@ ProvidedTypes 0.2 帮助器代码是 F# 3.0 发行版的一部分，仅提供有
 
 ### <a name="limitations-of-the-type-provider-mechanism"></a>类型提供程序机制的限制
 
-F# 中的类型提供程序机制具有以下限制：
+F # 中的类型提供程序机制具有以下限制：
 
-- 在 F# 类型提供程序的底层基础结构不支持提供的泛型类型或提供泛型方法。
+- 在 F # 类型提供程序的底层基础结构不支持提供的泛型类型或提供泛型方法。
 
 - 该机制不支持嵌套的类型的静态参数。
 
@@ -1120,9 +1120,9 @@ F# 中的类型提供程序机制具有以下限制：
 
 可以使用以下工具来调用类型提供程序：
 
-- fsc.exe （命令行编译器的 F#）
+- fsc.exe （命令行编译器的 F #）
 
-- fsi.exe （F# 交互式编译器）
+- fsi.exe （F # 交互式编译器）
 
 - devenv.exe (Visual Studio)
 

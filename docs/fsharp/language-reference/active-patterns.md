@@ -1,6 +1,6 @@
 ---
 title: 活动模式 (F#)
-description: 了解如何使用活动模式以定义细分输入的数据在 F# 编程语言中的命名的分区。
+description: '了解如何使用活动模式以定义细分输入的数据在 F # 编程语言中的命名的分区。'
 ms.date: 05/16/2016
 ms.openlocfilehash: 4fb7d3e2b9c7e6f1c1ed9d64a47728c7f40017c8
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2

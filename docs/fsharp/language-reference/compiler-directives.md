@@ -1,6 +1,6 @@
 ---
 title: 编译器指令 (F#)
-description: 了解有关 F# 语言预处理器指令、 条件编译指令、 行指令和编译器指令。
+description: '了解有关 F # 语言预处理器指令、 条件编译指令、 行指令和编译器指令。'
 ms.date: 05/16/2016
 ms.openlocfilehash: 5ac375ac5acd0609a6556f9e0481d169df827c98
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
@@ -65,7 +65,7 @@ F# 中没有 `#define` 预处理器指令。 必须使用编译器选项或项�
 |指令|描述|
 |---------|-----------|
 |`#light` ["on"&#124;"off"]|启用或禁用轻量语法，以便与其他版本的 ML 兼容。 默认情况下，轻量语法处于启用状态。 详细语法始终处于启用状态。 因此，可以同时使用轻量语法和详细语法。 指令 `#light` 本身等效于 `#light "on"`。 如果指定 `#light "off"`，则必须对所有语言构造使用详细语法。 F# 文档中展示的语法基于使用轻量语法这一假设。 有关详细信息，请参阅[详细语法](verbose-syntax.md)。|
-解释器 (fsi.exe) 指令，请参阅[使用 F# 进行交互式编程](../tutorials/fsharp-interactive/index.md)。
+解释器 (fsi.exe) 指令，请参阅[使用 F # 进行交互式编程](../tutorials/fsharp-interactive/index.md)。
 
 ## <a name="see-also"></a>请参阅
 

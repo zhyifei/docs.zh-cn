@@ -1,6 +1,6 @@
 ---
-title: F# 代码格式设置准则
-description: 了解有关格式设置 F# 代码的指导原则。
+title: 'F # 代码格式设置准则'
+description: '了解有关格式设置 F # 代码的指导原则。'
 ms.date: 05/14/2018
 ms.openlocfilehash: 0d7d2d1771710db55bf990f3a06079b2aec48fd7
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
@@ -9,19 +9,19 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 11/02/2018
 ms.locfileid: "43858000"
 ---
-# <a name="f-code-formatting-guidelines"></a>F# 代码格式设置准则
+# <a name="f-code-formatting-guidelines"></a>F # 代码格式设置准则
 
-本文提供有关如何设置代码格式，使 F# 代码的指导原则：
+本文提供有关如何设置代码格式，使 F # 代码的指导原则：
 
 * 通常以更清晰的形式查看
 * 符合应用的 Visual Studio 中的工具和其他编辑器格式设置约定
 * 类似于其他代码联机
 
-这些指导基于[F# 格式设置约定的全面指南](https://github.com/dungpa/fantomas/blob/master/docs/FormattingConventions.md)通过[Anh Dung Phan](https://github.com/dungpa)。
+这些指导基于[F # 格式设置约定的全面指南](https://github.com/dungpa/fantomas/blob/master/docs/FormattingConventions.md)通过[Anh Dung Phan](https://github.com/dungpa)。
 
 ## <a name="general-rules-for-indentation"></a>缩进的一般规则
 
-F# 默认情况下使用有意义的空白。 以下指南旨在提供指导如何能够同时处理这可以施加一些挑战。
+F # 默认情况下使用有意义的空白。 以下指南旨在提供指导如何能够同时处理这可以施加一些挑战。
 
 ### <a name="using-spaces"></a>使用的空间
 
@@ -62,7 +62,7 @@ let f x = x + 1 // Increment by one.
 
 ### <a name="use-camelcase-for-class-bound-expression-bound-and-pattern-bound-values-and-functions"></a>使用驼峰式大小写的类绑定、 表达式绑定和绑定模式的值和函数
 
-通常，并接受的 F# 样式的所有名称使用驼峰式大小写绑定为本地变量或在模式匹配和函数定义。
+通常，并接受的 F # 样式的所有名称使用驼峰式大小写绑定为本地变量或在模式匹配和函数定义。
 
 ```fsharp
 // OK
@@ -165,13 +165,13 @@ type SchoolPerson =
 
 ### <a name="avoid-underscores-in-names"></a>避免在名称中的下划线
 
-从历史上看，一些 F# 库具有名称中使用下划线。 但是，这是不能再广受认可，部分原因是因为它与.NET 命名约定冲突。 不过，某些 F# 程序员出于历史原因，很大程度、 一定程度上使用下划线和容差和方面非常重要。 但是，请注意样式通常会不喜欢的其他用户可以选择要使用它。
+从历史上看，一些 F # 库具有名称中使用下划线。 但是，这是不能再广受认可，部分原因是因为它与.NET 命名约定冲突。 不过，某些 F # 程序员出于历史原因，很大程度、 一定程度上使用下划线和容差和方面非常重要。 但是，请注意样式通常会不喜欢的其他用户可以选择要使用它。
 
 一些例外情况包括与本机组件交互下划线很常见。
 
-### <a name="use-standard-f-operators"></a>使用标准 F# 运算符
+### <a name="use-standard-f-operators"></a>使用标准 F # 运算符
 
-以下运算符在 F# 标准库中定义，应使用而不是定义等效项。 建议使用这些运算符，因为它往往会使代码更具可读性且惯用。 具有背景的 OCaml 或其他功能的编程语言的开发人员可能习惯于不同编程惯例。 以下列表总结了建议的 F# 运算符。
+以下运算符在 F # 标准库中定义，应使用而不是定义等效项。 建议使用这些运算符，因为它往往会使代码更具可读性且惯用。 具有背景的 OCaml 或其他功能的编程语言的开发人员可能习惯于不同编程惯例。 以下列表总结了建议的 F # 运算符。
 
 ```fsharp
 x |> f // Forward pipeline
@@ -193,11 +193,11 @@ x ^^^ y // Bitwise xor, also for working with “flags” enumeration
 
 ### <a name="use-prefix-syntax-for-generics-foot-in-preference-to-postfix-syntax-t-foo"></a>前缀语法用于泛型 (`Foo<T>`) 优先于后缀语法 (`T Foo`)
 
-F# 继承这两个后缀机器学习的样式命名泛型类型 (例如， `int list`) 以及.NET 样式的前缀 (例如， `list<int>`)。 .NET 样式，除了四种特定类型为首选项：
+F # 继承这两个后缀机器学习的样式命名泛型类型 (例如， `int list`) 以及.NET 样式的前缀 (例如， `list<int>`)。 .NET 样式，除了四种特定类型为首选项：
 
-1. 对于 F# 列表，请使用后缀形式：`int list`而非`list<int>`。
-2. 对于 F# 选项，请使用后缀形式：`int option`而非`option<int>`。
-3. 对于 F# 数组，使用语法名称`int[]`而非`int array`或`array<int>`。
+1. 对于 F # 列表，请使用后缀形式：`int list`而非`list<int>`。
+2. 对于 F # 选项，请使用后缀形式：`int option`而非`option<int>`。
+3. 对于 F # 数组，使用语法名称`int[]`而非`int array`或`array<int>`。
 4. 对于引用单元格，请使用`int ref`而非`ref<int>`或`Ref<int>`。
 
 对于所有其他类型，请使用前缀形式。
@@ -591,7 +591,7 @@ let comparer =
 
 ### <a name="formatting-white-space-in-expressions"></a>格式表达式中的空白区域
 
-避免在 F# 表达式中的多余空白。
+避免在 F # 表达式中的多余空白。
 
 ```fsharp
 // OK

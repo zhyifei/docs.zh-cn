@@ -1,6 +1,6 @@
 ---
 title: 符号和运算符参考 (F#)
-description: 了解符号和 F# 编程语言中使用的运算符。
+description: '了解符号和 F # 编程语言中使用的运算符。'
 ms.date: 04/04/2018
 ms.openlocfilehash: 0e36f6cfc75b7d2e79bcf7acb89d260fd4e9b1ad
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2

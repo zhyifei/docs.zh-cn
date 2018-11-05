@@ -1,6 +1,6 @@
 ---
 title: 命名空间 (F#)
-description: 了解如何使用 F# 命名空间，可将代码组织到相关的功能区域，通过它可以将名称附加到的程序元素的分组。
+description: '了解如何使用 F # 命名空间，可将代码组织到相关的功能区域，通过它可以将名称附加到的程序元素的分组。'
 ms.date: 04/24/2017
 ms.openlocfilehash: 769a1241f76ac32d3a6a80bd637078493119bb3c
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
@@ -74,7 +74,7 @@ Module2 5 6
 
 ## <a name="recursive-namespaces"></a>递归命名空间
 
-F# 4.1 中引入了允许的所有包含的代码要相互递归的命名空间的概念。  这是通过`namespace rec`。  使用`namespace rec`可以缓解一些烦恼无法编写类型和模块之间相互引用代码中的。  以下是此示例：
+F # 4.1 中引入了允许的所有包含的代码要相互递归的命名空间的概念。  这是通过`namespace rec`。  使用`namespace rec`可以缓解一些烦恼无法编写类型和模块之间相互引用代码中的。  以下是此示例：
 
 ```fsharp
 namespace rec MutualReferences
@@ -115,12 +115,12 @@ module BananaHelpers =
         | Down -> b |> peelSides
 ```
 
-请注意，异常`DontSqueezeTheBananaException`和类`Banana`两者相互引用。  此外，模块`BananaHelpers`和类`Banana`也相互引用。  这就不可能 express 在 F# 中，如果你删除`rec`关键字从`MutualReferences`命名空间。
+请注意，异常`DontSqueezeTheBananaException`和类`Banana`两者相互引用。  此外，模块`BananaHelpers`和类`Banana`也相互引用。  这就不可能 express 在 F # 中，如果你删除`rec`关键字从`MutualReferences`命名空间。
 
-此功能也仅适用于顶级[模块](modules.md)中 F# 4.1 或更高版本。
+此功能也仅适用于顶级[模块](modules.md)中 F # 4.1 或更高版本。
 
 ## <a name="see-also"></a>请参阅
 
 - [F# 语言参考](index.md)
 - [模块](modules.md)
-- [F# RFC FS-1009-允许通过在文件中的较大范围的相互引用类型和模块](https://github.com/fsharp/fslang-design/blob/master/FSharp-4.1/FS-1009-mutually-referential-types-and-modules-single-scope.md)
+- [F # RFC FS-1009-允许通过在文件中的较大范围的相互引用类型和模块](https://github.com/fsharp/fslang-design/blob/master/FSharp-4.1/FS-1009-mutually-referential-types-and-modules-single-scope.md)

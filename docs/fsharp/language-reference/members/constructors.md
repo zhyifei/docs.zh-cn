@@ -1,6 +1,6 @@
 ---
 title: 构造函数 (F#)
-description: 了解如何定义和使用在 F# 中的构造函数来创建和初始化类和结构对象。
+description: '了解如何定义和使用在 F # 中的构造函数来创建和初始化类和结构对象。'
 ms.date: 05/16/2016
 ms.openlocfilehash: ff2463f890034cce0bbaa85d9a5c93e50427cd03
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
