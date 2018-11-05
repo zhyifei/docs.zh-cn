@@ -7,71 +7,73 @@ helpviewer_keywords:
 ms.assetid: bdf89bea-1623-45ee-a57b-cf7c90395efa
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e30b1a5a4d3b50c80edaac29cbd6b90f3ddd103b
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 14bf011c3711a267b8cf5a1fc0497a347468387d
+ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43400498"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49121745"
 ---
-# <a name="how-to-create-com-wrappers"></a><span data-ttu-id="cb929-102">如何：创建 COM 包装</span><span class="sxs-lookup"><span data-stu-id="cb929-102">How to: Create COM Wrappers</span></span>
-<span data-ttu-id="cb929-103">可以通过使用 [!INCLUDE[vsprvsext](../../../includes/vsprvsext-md.md)] 功能或 .NET Framework 工具 Tlbimp.exe 和 Regasm.exe 创建组件对象模型 (COM) 包装器。</span><span class="sxs-lookup"><span data-stu-id="cb929-103">You can create Component Object Model (COM) wrappers by using [!INCLUDE[vsprvsext](../../../includes/vsprvsext-md.md)] features or the .NET Framework tools Tlbimp.exe and Regasm.exe.</span></span> <span data-ttu-id="cb929-104">这两种方法都会生成两种类型的 COM 包装器：</span><span class="sxs-lookup"><span data-stu-id="cb929-104">Both methods generate two types of COM wrappers:</span></span>  
-  
--   <span data-ttu-id="cb929-105">从类型库中生成一个[运行时可调用包装器](../../../docs/framework/interop/runtime-callable-wrapper.md)以在托管代码中运行 COM 对象。</span><span class="sxs-lookup"><span data-stu-id="cb929-105">A [Runtime Callable Wrapper](../../../docs/framework/interop/runtime-callable-wrapper.md) from a type library to run a COM object in managed code.</span></span>  
-  
--   <span data-ttu-id="cb929-106">生成具有所需注册表设置的一个 [COM 可调用包装器](../../../docs/framework/interop/com-callable-wrapper.md)以在本机应用程序中运行托管对象。</span><span class="sxs-lookup"><span data-stu-id="cb929-106">A [COM Callable Wrapper](../../../docs/framework/interop/com-callable-wrapper.md) with the required registry settings to run a managed object in a native application.</span></span>  
-  
- <span data-ttu-id="cb929-107">在 [!INCLUDE[vsprvslong](../../../includes/vsprvslong-md.md)] 中，可以将 COM 包装器作为引用添加到项目中。</span><span class="sxs-lookup"><span data-stu-id="cb929-107">In [!INCLUDE[vsprvslong](../../../includes/vsprvslong-md.md)], you can add the COM wrapper as a reference to your project.</span></span>  
-  
-## <a name="wrapping-com-objects-in-a-managed-application"></a><span data-ttu-id="cb929-108">在托管应用程序中包装 COM 对象</span><span class="sxs-lookup"><span data-stu-id="cb929-108">Wrapping COM Objects in a Managed Application</span></span>  
-  
-#### <a name="to-create-a-runtime-callable-wrapper-using-visual-studio"></a><span data-ttu-id="cb929-109">使用 Visual Studio 创建运行时可调用包装器</span><span class="sxs-lookup"><span data-stu-id="cb929-109">To create a runtime callable wrapper using Visual Studio</span></span>  
-  
-1.  <span data-ttu-id="cb929-110">打开托管应用程序的项目。</span><span class="sxs-lookup"><span data-stu-id="cb929-110">Open the project for your managed application.</span></span>  
-  
-2.  <span data-ttu-id="cb929-111">在“项目”菜单上，单击“显示所有文件”。</span><span class="sxs-lookup"><span data-stu-id="cb929-111">On the **Project** menu, click **Show All Files**.</span></span>  
-  
-3.  <span data-ttu-id="cb929-112">在“项目”菜单上，单击“添加引用”。</span><span class="sxs-lookup"><span data-stu-id="cb929-112">On the **Project** menu, click **Add Reference**.</span></span>  
-  
-4.  <span data-ttu-id="cb929-113">在“添加引用”对话框中，单击“COM”选项卡，选择要使用的组件，然后单击“确定”。</span><span class="sxs-lookup"><span data-stu-id="cb929-113">In the Add Reference dialog box, click the **COM** tab, select the component you want to use, and click **OK**.</span></span>  
-  
-     <span data-ttu-id="cb929-114">在“解决方案资源管理器”中检查 COM 组件是否已添加到项目的“引用”文件夹中。</span><span class="sxs-lookup"><span data-stu-id="cb929-114">In **Solution Explorer**, note that the COM component is added to the References folder in your project.</span></span>  
-  
- <span data-ttu-id="cb929-115">现在可以编写代码以访问 COM 对象。</span><span class="sxs-lookup"><span data-stu-id="cb929-115">You can now write code to access the COM object.</span></span> <span data-ttu-id="cb929-116">可以从通过声明对象开始，如使用适用于 [!INCLUDE[vbprvblong](../../../includes/vbprvblong-md.md)] 的 `Imports` 语句或适用于 [!INCLUDE[csprcslong](../../../includes/csprcslong-md.md)] 的 `Using` 语句。</span><span class="sxs-lookup"><span data-stu-id="cb929-116">You can begin by declaring the object, such as with an `Imports` statement for [!INCLUDE[vbprvblong](../../../includes/vbprvblong-md.md)] or a `Using` statement for [!INCLUDE[csprcslong](../../../includes/csprcslong-md.md)].</span></span>  
-  
+# <a name="how-to-create-com-wrappers"></a><span data-ttu-id="60f77-102">如何：创建 COM 包装</span><span class="sxs-lookup"><span data-stu-id="60f77-102">How to: Create COM Wrappers</span></span>
+
+<span data-ttu-id="60f77-103">可以通过使用 Visual Studio 2005 功能或 .NET Framework 工具 Tlbimp.exe 和 Regasm.exe 创建组件对象模型 (COM) 包装器。</span><span class="sxs-lookup"><span data-stu-id="60f77-103">You can create Component Object Model (COM) wrappers by using Visual Studio 2005 features or the .NET Framework tools Tlbimp.exe and Regasm.exe.</span></span> <span data-ttu-id="60f77-104">这两种方法都会生成两种类型的 COM 包装器：</span><span class="sxs-lookup"><span data-stu-id="60f77-104">Both methods generate two types of COM wrappers:</span></span>
+
+-   <span data-ttu-id="60f77-105">从类型库中生成一个[运行时可调用包装器](../../../docs/framework/interop/runtime-callable-wrapper.md)以在托管代码中运行 COM 对象。</span><span class="sxs-lookup"><span data-stu-id="60f77-105">A [Runtime Callable Wrapper](../../../docs/framework/interop/runtime-callable-wrapper.md) from a type library to run a COM object in managed code.</span></span>
+
+-   <span data-ttu-id="60f77-106">生成具有所需注册表设置的一个 [COM 可调用包装器](../../../docs/framework/interop/com-callable-wrapper.md)以在本机应用程序中运行托管对象。</span><span class="sxs-lookup"><span data-stu-id="60f77-106">A [COM Callable Wrapper](../../../docs/framework/interop/com-callable-wrapper.md) with the required registry settings to run a managed object in a native application.</span></span>
+
+<span data-ttu-id="60f77-107">在 Visual Studio 2005 中，可以将 COM 包装器作为引用添加到项目中。</span><span class="sxs-lookup"><span data-stu-id="60f77-107">In Visual Studio 2005, you can add the COM wrapper as a reference to your project.</span></span>
+
+## <a name="wrap-com-objects-in-a-managed-application"></a><span data-ttu-id="60f77-108">在托管应用程序中包装 COM 对象</span><span class="sxs-lookup"><span data-stu-id="60f77-108">Wrap COM Objects in a Managed Application</span></span>
+
+### <a name="to-create-a-runtime-callable-wrapper-using-visual-studio"></a><span data-ttu-id="60f77-109">使用 Visual Studio 创建运行时可调用包装器</span><span class="sxs-lookup"><span data-stu-id="60f77-109">To create a runtime callable wrapper using Visual Studio</span></span>
+
+1.  <span data-ttu-id="60f77-110">打开托管应用程序的项目。</span><span class="sxs-lookup"><span data-stu-id="60f77-110">Open the project for your managed application.</span></span>
+
+2.  <span data-ttu-id="60f77-111">在“项目”菜单上，单击“显示所有文件”。</span><span class="sxs-lookup"><span data-stu-id="60f77-111">On the **Project** menu, click **Show All Files**.</span></span>
+
+3.  <span data-ttu-id="60f77-112">在“项目”菜单上，单击“添加引用”。</span><span class="sxs-lookup"><span data-stu-id="60f77-112">On the **Project** menu, click **Add Reference**.</span></span>
+
+4.  <span data-ttu-id="60f77-113">在“添加引用”对话框中，单击“COM”选项卡，选择要使用的组件，然后单击“确定”。</span><span class="sxs-lookup"><span data-stu-id="60f77-113">In the Add Reference dialog box, click the **COM** tab, select the component you want to use, and click **OK**.</span></span>
+
+     <span data-ttu-id="60f77-114">在“解决方案资源管理器”中检查 COM 组件是否已添加到项目的“引用”文件夹中。</span><span class="sxs-lookup"><span data-stu-id="60f77-114">In **Solution Explorer**, note that the COM component is added to the References folder in your project.</span></span>
+
+<span data-ttu-id="60f77-115">现在可以编写代码以访问 COM 对象。</span><span class="sxs-lookup"><span data-stu-id="60f77-115">You can now write code to access the COM object.</span></span> <span data-ttu-id="60f77-116">可以从通过声明对象开始，如使用适用于 [!INCLUDE[vbprvblong](../../../includes/vbprvblong-md.md)] 的 `Imports` 语句或适用于 [!INCLUDE[csprcslong](../../../includes/csprcslong-md.md)] 的 `Using` 语句。</span><span class="sxs-lookup"><span data-stu-id="60f77-116">You can begin by declaring the object, such as with an `Imports` statement for [!INCLUDE[vbprvblong](../../../includes/vbprvblong-md.md)] or a `Using` statement for [!INCLUDE[csprcslong](../../../includes/csprcslong-md.md)].</span></span>
+
 > [!NOTE]
->  <span data-ttu-id="cb929-117">如果要编写 Microsoft Office 组件的程序，请首先从 Microsoft 下载中心安装 [Microsoft Office 主互操作程序集](https://go.microsoft.com/fwlink/?LinkId=50479) (PIA)。</span><span class="sxs-lookup"><span data-stu-id="cb929-117">If you want to program Microsoft Office components, first install the [Microsoft Office Primary Interop Assemblies](https://go.microsoft.com/fwlink/?LinkId=50479) (PIAs) from the Microsoft Download Center.</span></span> <span data-ttu-id="cb929-118">在步骤 4 中，为所需的 Office 产品选择可用的最新版本的对象库，如 Microsoft Word 11.0 对象库。</span><span class="sxs-lookup"><span data-stu-id="cb929-118">In step 4, select the latest version of the object library available for the Office product you want, such as the **Microsoft Word 11.0 Object Library**.</span></span>  
+> <span data-ttu-id="60f77-117">如果要编写 Microsoft Office 组件的程序，请首先从 Microsoft 下载中心安装 [Microsoft Office 主互操作程序集](https://go.microsoft.com/fwlink/?LinkId=50479) (PIA)。</span><span class="sxs-lookup"><span data-stu-id="60f77-117">If you want to program Microsoft Office components, first install the [Microsoft Office Primary Interop Assemblies](https://go.microsoft.com/fwlink/?LinkId=50479) (PIAs) from the Microsoft Download Center.</span></span> <span data-ttu-id="60f77-118">在步骤 4 中，为所需的 Office 产品选择可用的最新版本的对象库，如 Microsoft Word 11.0 对象库。</span><span class="sxs-lookup"><span data-stu-id="60f77-118">In step 4, select the latest version of the object library available for the Office product you want, such as the **Microsoft Word 11.0 Object Library**.</span></span>  
   
-#### <a name="to-create-a-runtime-callable-wrapper-using-net-framework-tools"></a><span data-ttu-id="cb929-119">使用 .NET Framework 工具创建运行时可调用包装器</span><span class="sxs-lookup"><span data-stu-id="cb929-119">To create a runtime callable wrapper using .NET Framework tools</span></span>  
+### <a name="to-create-a-runtime-callable-wrapper-using-net-framework-tools"></a><span data-ttu-id="60f77-119">使用 .NET Framework 工具创建运行时可调用包装器</span><span class="sxs-lookup"><span data-stu-id="60f77-119">To create a runtime callable wrapper using .NET Framework tools</span></span>  
   
--   <span data-ttu-id="cb929-120">运行 [Tlbimp.exe（类型库导入程序）](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md)工具。</span><span class="sxs-lookup"><span data-stu-id="cb929-120">Run the [Tlbimp.exe (Type Library Importer)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md) tool.</span></span>  
+-   <span data-ttu-id="60f77-120">运行 [Tlbimp.exe（类型库导入程序）](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md)工具。</span><span class="sxs-lookup"><span data-stu-id="60f77-120">Run the [Tlbimp.exe (Type Library Importer)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md) tool.</span></span>  
   
- <span data-ttu-id="cb929-121">此工具为在原始类型库中定义的类型创建包含运行时元数据的程序集。</span><span class="sxs-lookup"><span data-stu-id="cb929-121">This tool creates an assembly that contains run-time metadata for the types defined in the original type library.</span></span>  
+ <span data-ttu-id="60f77-121">此工具为在原始类型库中定义的类型创建包含运行时元数据的程序集。</span><span class="sxs-lookup"><span data-stu-id="60f77-121">This tool creates an assembly that contains run-time metadata for the types defined in the original type library.</span></span>  
   
-## <a name="wrapping-managed-objects-in-a-native-application"></a><span data-ttu-id="cb929-122">在本机应用程序中包装托管对象</span><span class="sxs-lookup"><span data-stu-id="cb929-122">Wrapping Managed Objects in a Native Application</span></span>  
+## <a name="wrap-managed-objects-in-a-native-application"></a><span data-ttu-id="60f77-122">在本机应用程序中包装托管对象</span><span class="sxs-lookup"><span data-stu-id="60f77-122">Wrap Managed Objects in a Native Application</span></span>  
   
-#### <a name="to-create-a-com-callable-wrapper-using-visual-studio"></a><span data-ttu-id="cb929-123">使用 Visual Studio 创建 COM 可调用包装器</span><span class="sxs-lookup"><span data-stu-id="cb929-123">To create a COM callable wrapper using Visual Studio</span></span>  
+### <a name="to-create-a-com-callable-wrapper-using-visual-studio"></a><span data-ttu-id="60f77-123">使用 Visual Studio 创建 COM 可调用包装器</span><span class="sxs-lookup"><span data-stu-id="60f77-123">To create a COM callable wrapper using Visual Studio</span></span>  
   
-1.  <span data-ttu-id="cb929-124">为要在本机代码中运行的托管类创建类库项目。</span><span class="sxs-lookup"><span data-stu-id="cb929-124">Create a Class Library project for the managed class that you want to run in native code.</span></span> <span data-ttu-id="cb929-125">此类必须具有默认的构造函数。</span><span class="sxs-lookup"><span data-stu-id="cb929-125">The class must have a default constructor.</span></span>  
+1.  <span data-ttu-id="60f77-124">为要在本机代码中运行的托管类创建类库项目。</span><span class="sxs-lookup"><span data-stu-id="60f77-124">Create a Class Library project for the managed class that you want to run in native code.</span></span> <span data-ttu-id="60f77-125">此类必须具有默认的构造函数。</span><span class="sxs-lookup"><span data-stu-id="60f77-125">The class must have a default constructor.</span></span>  
   
-     <span data-ttu-id="cb929-126">在 AssemblyInfo 文件中验证程序集是否具有由四部分构成的完整版本号。</span><span class="sxs-lookup"><span data-stu-id="cb929-126">Verify that you have a complete four-part version number for your assembly in the AssemblyInfo file.</span></span> <span data-ttu-id="cb929-127">在 Windows 注册表中维护版本控制需要此版本号。</span><span class="sxs-lookup"><span data-stu-id="cb929-127">This number is required for maintaining versioning in the Windows registry.</span></span> <span data-ttu-id="cb929-128">有关版本号的详细信息，请参阅[程序集版本控制](../../../docs/framework/app-domains/assembly-versioning.md)。</span><span class="sxs-lookup"><span data-stu-id="cb929-128">For more information about version numbers, see [Assembly Versioning](../../../docs/framework/app-domains/assembly-versioning.md).</span></span>  
+     <span data-ttu-id="60f77-126">在 AssemblyInfo 文件中验证程序集是否具有由四部分构成的完整版本号。</span><span class="sxs-lookup"><span data-stu-id="60f77-126">Verify that you have a complete four-part version number for your assembly in the AssemblyInfo file.</span></span> <span data-ttu-id="60f77-127">在 Windows 注册表中维护版本控制需要此版本号。</span><span class="sxs-lookup"><span data-stu-id="60f77-127">This number is required for maintaining versioning in the Windows registry.</span></span> <span data-ttu-id="60f77-128">有关版本号的详细信息，请参阅[程序集版本控制](../../../docs/framework/app-domains/assembly-versioning.md)。</span><span class="sxs-lookup"><span data-stu-id="60f77-128">For more information about version numbers, see [Assembly Versioning](../../../docs/framework/app-domains/assembly-versioning.md).</span></span>  
   
-2.  <span data-ttu-id="cb929-129">在“项目”菜单上，单击“属性”。</span><span class="sxs-lookup"><span data-stu-id="cb929-129">On the **Project** menu, click **Properties**.</span></span>  
+2.  <span data-ttu-id="60f77-129">在“项目”菜单上，单击“属性”。</span><span class="sxs-lookup"><span data-stu-id="60f77-129">On the **Project** menu, click **Properties**.</span></span>  
   
-3.  <span data-ttu-id="cb929-130">单击“编译”选项卡。</span><span class="sxs-lookup"><span data-stu-id="cb929-130">Click the **Compile** tab.</span></span>  
+3.  <span data-ttu-id="60f77-130">单击“编译”选项卡。</span><span class="sxs-lookup"><span data-stu-id="60f77-130">Click the **Compile** tab.</span></span>  
   
-4.  <span data-ttu-id="cb929-131">选择“为 COM 互操作注册”复选框。</span><span class="sxs-lookup"><span data-stu-id="cb929-131">Select the **Register for COM interop** check box.</span></span>  
+4.  <span data-ttu-id="60f77-131">选择“为 COM 互操作注册”复选框。</span><span class="sxs-lookup"><span data-stu-id="60f77-131">Select the **Register for COM interop** check box.</span></span>  
   
- <span data-ttu-id="cb929-132">生成项目时，将自动为 COM 互操作注册程序集。</span><span class="sxs-lookup"><span data-stu-id="cb929-132">When you build the project, the assembly is automatically registered for COM interop.</span></span> <span data-ttu-id="cb929-133">如果要在 [!INCLUDE[vsprvslong](../../../includes/vsprvslong-md.md)] 中生成本机应用程序，可以通过单击“项目”菜单上的“添加引用”来使用此程序集。</span><span class="sxs-lookup"><span data-stu-id="cb929-133">If you are building a native application in [!INCLUDE[vsprvslong](../../../includes/vsprvslong-md.md)], you can use the assembly by clicking **Add Reference** on the **Project** menu.</span></span>  
+ <span data-ttu-id="60f77-132">生成项目时，将自动为 COM 互操作注册程序集。</span><span class="sxs-lookup"><span data-stu-id="60f77-132">When you build the project, the assembly is automatically registered for COM interop.</span></span> <span data-ttu-id="60f77-133">如果要在 Visual Studio 2005 中生成本机应用程序，可以通过单击“项目”菜单上的“添加引用”来使用此程序集。</span><span class="sxs-lookup"><span data-stu-id="60f77-133">If you are building a native application in Visual Studio 2005, you can use the assembly by clicking **Add Reference** on the **Project** menu.</span></span>  
   
-#### <a name="to-create-a-com-callable-wrapper-using-net-framework-tools"></a><span data-ttu-id="cb929-134">使用 .NET Framework 工具创建 COM 可调用包装器</span><span class="sxs-lookup"><span data-stu-id="cb929-134">To create a COM callable wrapper using .NET Framework tools</span></span>  
+### <a name="to-create-a-com-callable-wrapper-using-net-framework-tools"></a><span data-ttu-id="60f77-134">使用 .NET Framework 工具创建 COM 可调用包装器</span><span class="sxs-lookup"><span data-stu-id="60f77-134">To create a COM callable wrapper using .NET Framework tools</span></span>  
   
--   <span data-ttu-id="cb929-135">运行 [Regasm.exe（程序集注册工具）](../../../docs/framework/tools/regasm-exe-assembly-registration-tool.md)工具。</span><span class="sxs-lookup"><span data-stu-id="cb929-135">Run the [Regasm.exe (Assembly Registration Tool)](../../../docs/framework/tools/regasm-exe-assembly-registration-tool.md) tool.</span></span>  
+<span data-ttu-id="60f77-135">运行 [Regasm.exe（程序集注册工具）](../../../docs/framework/tools/regasm-exe-assembly-registration-tool.md)工具。</span><span class="sxs-lookup"><span data-stu-id="60f77-135">Run the [Regasm.exe (Assembly Registration Tool)](../../../docs/framework/tools/regasm-exe-assembly-registration-tool.md) tool.</span></span>  
   
- <span data-ttu-id="cb929-136">此工具读取程序集元数据，并向注册表添加所需的项。</span><span class="sxs-lookup"><span data-stu-id="cb929-136">This tool reads the assembly metadata and adds the necessary entries to the registry.</span></span> <span data-ttu-id="cb929-137">这样，使 COM 客户端可以透明方式创建 .NET Framework 类。</span><span class="sxs-lookup"><span data-stu-id="cb929-137">As a result, COM clients can create .NET Framework classes transparently.</span></span> <span data-ttu-id="cb929-138">可以像使用本机 COM 类一样可以使用此程序集。</span><span class="sxs-lookup"><span data-stu-id="cb929-138">You can use the assembly as if it were a native COM class.</span></span>  
+<span data-ttu-id="60f77-136">此工具读取程序集元数据，并向注册表添加所需的项。</span><span class="sxs-lookup"><span data-stu-id="60f77-136">This tool reads the assembly metadata and adds the necessary entries to the registry.</span></span> <span data-ttu-id="60f77-137">这样，使 COM 客户端可以透明方式创建 .NET Framework 类。</span><span class="sxs-lookup"><span data-stu-id="60f77-137">As a result, COM clients can create .NET Framework classes transparently.</span></span> <span data-ttu-id="60f77-138">可以像使用本机 COM 类一样可以使用此程序集。</span><span class="sxs-lookup"><span data-stu-id="60f77-138">You can use the assembly as if it were a native COM class.</span></span>  
   
- <span data-ttu-id="cb929-139">可以在任何目录中的程序集上运行 Regasm.exe，然后运行 [Gacutil.exe（全局程序集缓存工具）](../../../docs/framework/tools/gacutil-exe-gac-tool.md)以将其移动到全局程序集缓存中。</span><span class="sxs-lookup"><span data-stu-id="cb929-139">You can run Regasm.exe on an assembly located in any directory, and then run the [Gacutil.exe (Global Assembly Cache Tool)](../../../docs/framework/tools/gacutil-exe-gac-tool.md) to move it to the global assembly cache.</span></span> <span data-ttu-id="cb929-140">移动此程序集不会使位置注册表项失效，因为如果未在其他位置找到此程序集，则会始终对全局程序集缓存进行检查。</span><span class="sxs-lookup"><span data-stu-id="cb929-140">Moving the assembly does not invalidate location registry entries, because the global assembly cache is always examined if the assembly is not found elsewhere.</span></span>  
+<span data-ttu-id="60f77-139">可以在任何目录中的程序集上运行 Regasm.exe，然后运行 [Gacutil.exe（全局程序集缓存工具）](../../../docs/framework/tools/gacutil-exe-gac-tool.md)以将其移动到全局程序集缓存中。</span><span class="sxs-lookup"><span data-stu-id="60f77-139">You can run Regasm.exe on an assembly located in any directory, and then run the [Gacutil.exe (Global Assembly Cache Tool)](../../../docs/framework/tools/gacutil-exe-gac-tool.md) to move it to the global assembly cache.</span></span> <span data-ttu-id="60f77-140">移动此程序集不会使位置注册表项失效，因为如果未在其他位置找到此程序集，则会始终对全局程序集缓存进行检查。</span><span class="sxs-lookup"><span data-stu-id="60f77-140">Moving the assembly does not invalidate location registry entries, because the global assembly cache is always examined if the assembly is not found elsewhere.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="cb929-141">请参阅</span><span class="sxs-lookup"><span data-stu-id="cb929-141">See Also</span></span>  
- [<span data-ttu-id="cb929-142">运行时可调用包装器</span><span class="sxs-lookup"><span data-stu-id="cb929-142">Runtime Callable Wrapper</span></span>](../../../docs/framework/interop/runtime-callable-wrapper.md)  
- [<span data-ttu-id="cb929-143">COM 可调用包装器</span><span class="sxs-lookup"><span data-stu-id="cb929-143">COM Callable Wrapper</span></span>](../../../docs/framework/interop/com-callable-wrapper.md)
+## <a name="see-also"></a><span data-ttu-id="60f77-141">请参阅</span><span class="sxs-lookup"><span data-stu-id="60f77-141">See also</span></span>  
+
+- [<span data-ttu-id="60f77-142">运行时可调用包装器</span><span class="sxs-lookup"><span data-stu-id="60f77-142">Runtime Callable Wrapper</span></span>](../../../docs/framework/interop/runtime-callable-wrapper.md)  
+- [<span data-ttu-id="60f77-143">COM 可调用包装器</span><span class="sxs-lookup"><span data-stu-id="60f77-143">COM Callable Wrapper</span></span>](../../../docs/framework/interop/com-callable-wrapper.md)

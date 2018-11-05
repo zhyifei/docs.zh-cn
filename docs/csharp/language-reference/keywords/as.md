@@ -1,6 +1,6 @@
 ---
 title: as（C# 参考）
-ms.date: 07/20/2015
+ms.date: 10/11/2018
 f1_keywords:
 - as_CSharpKeyword
 - as
@@ -8,44 +8,46 @@ helpviewer_keywords:
 - type conversion [C#], as keyword
 - as keyword [C#]
 ms.assetid: a9be126b-cbf4-4990-a70d-d0e1983cad0e
-ms.openlocfilehash: aee80b3262ccd9432d7c311dddec47185b66d05f
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: ce3163f7d957df96a5c0304adc0b3083d8e20104
+ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47216171"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49122600"
 ---
-# <a name="as-c-reference"></a><span data-ttu-id="18c4f-102">as（C# 参考）</span><span class="sxs-lookup"><span data-stu-id="18c4f-102">as (C# Reference)</span></span>
-<span data-ttu-id="18c4f-103">可以使用 `as` 运算符在符合的引用类型或[可以为 null 的类型](../../../csharp/programming-guide/nullable-types/index.md)之间执行某些类型的转换。</span><span class="sxs-lookup"><span data-stu-id="18c4f-103">You can use the `as` operator to perform certain types of conversions between compatible reference types or [nullable types](../../../csharp/programming-guide/nullable-types/index.md).</span></span> <span data-ttu-id="18c4f-104">以下代码显示一个示例。</span><span class="sxs-lookup"><span data-stu-id="18c4f-104">The following code shows an example.</span></span>  
+# <a name="as-c-reference"></a><span data-ttu-id="00a1c-102">as（C# 参考）</span><span class="sxs-lookup"><span data-stu-id="00a1c-102">as (C# Reference)</span></span>
+<span data-ttu-id="00a1c-103">可以使用 `as` 运算符在符合的引用类型或[可以为 null 的类型](../../../csharp/programming-guide/nullable-types/index.md)之间执行某些类型的转换。</span><span class="sxs-lookup"><span data-stu-id="00a1c-103">You can use the `as` operator to perform certain types of conversions between compatible reference types or [nullable types](../../../csharp/programming-guide/nullable-types/index.md).</span></span> <span data-ttu-id="00a1c-104">以下代码显示一个示例。</span><span class="sxs-lookup"><span data-stu-id="00a1c-104">The following code shows an example.</span></span>  
   
 [!code-csharp[csrefKeywordsOperator#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsOperator/CS/csrefKeywordsOperators.cs#1)]
+
+<span data-ttu-id="00a1c-105">如示例所示，需要比较 `as` 表达式和 `null` 的结果以检查转换是否成功。</span><span class="sxs-lookup"><span data-stu-id="00a1c-105">As the example shows, you need to compare the result of the `as` expression with `null` to check if a conversion is successful.</span></span> <span data-ttu-id="00a1c-106">从 C# 7.0 开始，可以使用 [is](is.md) 表达式来测试转换是否成功，并在转换成功时有条件地分配变量。</span><span class="sxs-lookup"><span data-stu-id="00a1c-106">Beginning with C# 7.0, you can use the [is](is.md) expression both to test that a conversion succeeds and conditionally assign a variable when the conversion succeeds.</span></span> <span data-ttu-id="00a1c-107">在许多情况下，它比使用 `as` 运算符更简洁。</span><span class="sxs-lookup"><span data-stu-id="00a1c-107">In many scenarios, it's more concise than using the `as` operator.</span></span> <span data-ttu-id="00a1c-108">有关详细信息，请参阅 [`is` 运算符](is.md)一文中的[类型模式](is.md#type)部分。</span><span class="sxs-lookup"><span data-stu-id="00a1c-108">For more information, see the [Type pattern](is.md#type) section of the [`is` operator](is.md) article.</span></span>
   
-## <a name="remarks"></a><span data-ttu-id="18c4f-105">备注</span><span class="sxs-lookup"><span data-stu-id="18c4f-105">Remarks</span></span>  
- <span data-ttu-id="18c4f-106">`as` 运算符类似于转换运算。</span><span class="sxs-lookup"><span data-stu-id="18c4f-106">The `as` operator is like a cast operation.</span></span> <span data-ttu-id="18c4f-107">但是，如果无法进行转换，则 `as` 会返回 `null`，而不是引发异常。</span><span class="sxs-lookup"><span data-stu-id="18c4f-107">However, if the conversion isn't possible, `as` returns `null` instead of raising an exception.</span></span> <span data-ttu-id="18c4f-108">请看下面的示例：</span><span class="sxs-lookup"><span data-stu-id="18c4f-108">Consider the following example:</span></span>  
+## <a name="remarks"></a><span data-ttu-id="00a1c-109">备注</span><span class="sxs-lookup"><span data-stu-id="00a1c-109">Remarks</span></span>  
+ <span data-ttu-id="00a1c-110">`as` 运算符类似于转换运算。</span><span class="sxs-lookup"><span data-stu-id="00a1c-110">The `as` operator is like a cast operation.</span></span> <span data-ttu-id="00a1c-111">但是，如果无法进行转换，则 `as` 会返回 `null`，而不是引发异常。</span><span class="sxs-lookup"><span data-stu-id="00a1c-111">However, if the conversion isn't possible, `as` returns `null` instead of raising an exception.</span></span> <span data-ttu-id="00a1c-112">请看下面的示例：</span><span class="sxs-lookup"><span data-stu-id="00a1c-112">Consider the following example:</span></span>  
   
 ```csharp  
 expression as type  
 ```  
   
- <span data-ttu-id="18c4f-109">该代码等效于以下表达式，但 `expression` 变量仅进行一次计算。</span><span class="sxs-lookup"><span data-stu-id="18c4f-109">The code is equivalent to the following expression except that the `expression` variable is evaluated only one time.</span></span>  
+ <span data-ttu-id="00a1c-113">该代码等效于以下表达式，但 `expression` 变量仅进行一次计算。</span><span class="sxs-lookup"><span data-stu-id="00a1c-113">The code is equivalent to the following expression except that the `expression` variable is evaluated only one time.</span></span>  
   
 ```csharp  
 expression is type ? (type)expression : (type)null  
 ```  
   
- <span data-ttu-id="18c4f-110">请注意，`as` 运算符仅执行引用转换、可以为 null 的转换和装箱转换。</span><span class="sxs-lookup"><span data-stu-id="18c4f-110">Note that the `as` operator performs only reference conversions, nullable conversions, and boxing conversions.</span></span> <span data-ttu-id="18c4f-111">`as` 运算符无法执行其他转换，例如用户定义的转换，应使用转换表达式执行此转换。</span><span class="sxs-lookup"><span data-stu-id="18c4f-111">The `as` operator can't perform other conversions, such as user-defined conversions, which should instead be performed by using cast expressions.</span></span>  
+ <span data-ttu-id="00a1c-114">请注意，`as` 运算符仅执行引用转换、可以为 null 的转换和装箱转换。</span><span class="sxs-lookup"><span data-stu-id="00a1c-114">Note that the `as` operator performs only reference conversions, nullable conversions, and boxing conversions.</span></span> <span data-ttu-id="00a1c-115">`as` 运算符无法执行其他转换，例如用户定义的转换，应使用转换表达式执行此转换。</span><span class="sxs-lookup"><span data-stu-id="00a1c-115">The `as` operator can't perform other conversions, such as user-defined conversions, which should instead be performed by using cast expressions.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="18c4f-112">示例</span><span class="sxs-lookup"><span data-stu-id="18c4f-112">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="00a1c-116">示例</span><span class="sxs-lookup"><span data-stu-id="00a1c-116">Example</span></span>  
 
 [!code-csharp[csrefKeywordsOperator#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsOperator/CS/csrefKeywordsOperators.cs#2)]
   
-## <a name="c-language-specification"></a><span data-ttu-id="18c4f-113">C# 语言规范</span><span class="sxs-lookup"><span data-stu-id="18c4f-113">C# Language Specification</span></span>  
+## <a name="c-language-specification"></a><span data-ttu-id="00a1c-117">C# 语言规范</span><span class="sxs-lookup"><span data-stu-id="00a1c-117">C# Language Specification</span></span>  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="18c4f-114">请参阅</span><span class="sxs-lookup"><span data-stu-id="18c4f-114">See Also</span></span>  
-- [<span data-ttu-id="18c4f-115">C# 参考</span><span class="sxs-lookup"><span data-stu-id="18c4f-115">C# Reference</span></span>](../../../csharp/language-reference/index.md)  
-- [<span data-ttu-id="18c4f-116">C# 编程指南</span><span class="sxs-lookup"><span data-stu-id="18c4f-116">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
-- [<span data-ttu-id="18c4f-117">C# 关键字</span><span class="sxs-lookup"><span data-stu-id="18c4f-117">C# Keywords</span></span>](../../../csharp/language-reference/keywords/index.md)  
-- [<span data-ttu-id="18c4f-118">is</span><span class="sxs-lookup"><span data-stu-id="18c4f-118">is</span></span>](../../../csharp/language-reference/keywords/is.md)  
-- [<span data-ttu-id="18c4f-119">?: 运算符</span><span class="sxs-lookup"><span data-stu-id="18c4f-119">?: Operator</span></span>](../../../csharp/language-reference/operators/conditional-operator.md)  
-- [<span data-ttu-id="18c4f-120">运算符关键字</span><span class="sxs-lookup"><span data-stu-id="18c4f-120">Operator Keywords</span></span>](../../../csharp/language-reference/keywords/operator-keywords.md)
+## <a name="see-also"></a><span data-ttu-id="00a1c-118">请参阅</span><span class="sxs-lookup"><span data-stu-id="00a1c-118">See Also</span></span>  
+- [<span data-ttu-id="00a1c-119">C# 参考</span><span class="sxs-lookup"><span data-stu-id="00a1c-119">C# Reference</span></span>](../../../csharp/language-reference/index.md)  
+- [<span data-ttu-id="00a1c-120">C# 编程指南</span><span class="sxs-lookup"><span data-stu-id="00a1c-120">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
+- [<span data-ttu-id="00a1c-121">C# 关键字</span><span class="sxs-lookup"><span data-stu-id="00a1c-121">C# Keywords</span></span>](../../../csharp/language-reference/keywords/index.md)  
+- [<span data-ttu-id="00a1c-122">is</span><span class="sxs-lookup"><span data-stu-id="00a1c-122">is</span></span>](../../../csharp/language-reference/keywords/is.md)  
+- [<span data-ttu-id="00a1c-123">?: 运算符</span><span class="sxs-lookup"><span data-stu-id="00a1c-123">?: Operator</span></span>](../../../csharp/language-reference/operators/conditional-operator.md)  
+- [<span data-ttu-id="00a1c-124">运算符关键字</span><span class="sxs-lookup"><span data-stu-id="00a1c-124">Operator Keywords</span></span>](../../../csharp/language-reference/keywords/operator-keywords.md)
