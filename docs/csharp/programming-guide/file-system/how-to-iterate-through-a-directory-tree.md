@@ -5,12 +5,12 @@ helpviewer_keywords:
 - iterating through folders [C#]
 - file iteration [C#]
 ms.assetid: c4be4a75-6b1b-46a7-9d38-bab353091ed7
-ms.openlocfilehash: 1aac40793fabe152e18a1bf1b634058e85b31481
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: a6725463b042d51e20e5b293d7177903d2d35956
+ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43515756"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49123626"
 ---
 # <a name="how-to-iterate-through-a-directory-tree-c-programming-guide"></a>如何：循环访问目录树（C# 编程指南）
 短语“循环访问目录树”的意思是访问特定根文件夹下的每个嵌套子目录中的每个文件，可以是任意深度。 不需要打开每个文件。 可以以 `string` 的形式只检索文件或子目录的名称，也可以以 <xref:System.IO.FileInfo?displayProperty=nameWithType> 或 <xref:System.IO.DirectoryInfo?displayProperty=nameWithType> 对象的形式检索其他信息。  
@@ -54,7 +54,7 @@ root.GetDirectories("*.*", System.IO.SearchOption.AllDirectories);
  如果必须在内存或磁盘上存储目录树的内容，那么最佳选择是仅存储每个文件的 <xref:System.IO.FileSystemInfo.FullName%2A> 属性（类型为 `string`）。 然后可以根据需要使用此字符串创建新的 <xref:System.IO.FileInfo> 或 <xref:System.IO.DirectoryInfo> 对象，或打开需要进行其他处理的任何文件。  
   
 ## <a name="robust-programming"></a>可靠编程  
- 可靠的文件迭代代码必须考虑文件系统的诸多复杂性。 有关 Windows 文件系统的详细信息，请参阅 [NTFS Technical Reference](https://technet.microsoft.com/library/81cc8a8a-bd32-4786-a849-03245d68d8e4)（NTFS 技术参考）。  
+ 可靠的文件迭代代码必须考虑文件系统的诸多复杂性。 有关 Windows 文件系统的详细信息，请参阅 [NTFS 概述](/windows-server/storage/file-server/ntfs-overview)。  
   
 ## <a name="see-also"></a>请参阅
 

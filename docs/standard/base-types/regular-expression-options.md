@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: c82dc689-7e82-4767-a18d-cd24ce5f05e9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: dbc5909a3d4ea1ba2747fcc694bf1f34e20e7d2b
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 612550dd2e3cda4e3549bfc14c9ada712c6653bf
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47235882"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50197553"
 ---
 # <a name="regular-expression-options"></a>正则表达式选项
 <a name="Top"></a>默认情况下，正则表达式模式中带有任意文本字符的输入字符串比较区分大小写，正则表达式模式中的空白将被解释为文本空白字符且正则表达式中的捕获组通过隐式和显式命名。 可通过指定正则表达式选项修改默认正则表达式行为的这些和其他数个方面。 列于下表的这些选项，可将内联作为正则表达式的一部分包含，或者可将它们作为 <xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType> 枚举值提供给 <xref:System.Text.RegularExpressions.RegexOptions?displayProperty=nameWithType> 类构造函数或静态模式匹配方法。  

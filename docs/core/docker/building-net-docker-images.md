@@ -6,24 +6,21 @@ ms.author: johalex
 ms.date: 11/06/2017
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: e48a263334ebb93a5d281032336aeb4073d8467c
-ms.sourcegitcommit: e8dc507cfdaad504fc9d4c83d28d24569dcef91c
+ms.openlocfilehash: 675b6821588f8d0dd9495346a13665a32986f060
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/03/2018
-ms.locfileid: "34827334"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48841159"
 ---
 # <a name="building-docker-images-for-net-core-applications"></a>为 .NET Core 应用程序生成 Docker 映像
 
  本教程重点介绍了如何在 Docker 上使用 .NET Core。 首先，我们探讨 Microsoft 维护和提供的各种不同的 Docker 映像，及其使用情况。 然后讲解了如何生成和 Docker 化 ASP.NET Core 应用。
 
 在本教程中可学习：
-
 > [!div class="checklist"]
-> * 了解 Microsoft.NET Core Docker 映像
- 
+> * 了解 Microsoft.NET 核心 Docker 映像 
 > * 获取用于 dockerize 的 ASP.NET Core 示例应用程序
-
 > * 在本地运行 ASP.NET 示例应用
 > * 使用 Docker for Linux 容器生成和运行示例
 > * 使用 Docker for Windows 容器生成和运行示例
@@ -133,17 +130,17 @@ ms.locfileid: "34827334"
 
 * Linux 分布
 
-   * [CentOS](https://www.docker.com/docker-centos-distribution)
+   * [CentOS](https://docs.docker.com/install/linux/docker-ce/centos/)
 
-   * [Debian](https://www.docker.com/docker-debian)
+   * [Debian](https://docs.docker.com/install/linux/docker-ce/debian/)
 
-   * [Fedora](https://www.docker.com/docker-fedora)
+   * [Fedora](https://docs.docker.com/install/linux/docker-ce/fedora/)
 
-   * [Ubuntu](https://www.docker.com/docker-ubuntu)
+   * [Ubuntu](https://docs.docker.com/install/linux/docker-ce/ubuntu/)
 
-* [macOS](https://docs.docker.com/docker-for-mac/)
+* [macOS](https://docs.docker.com/docker-for-mac/install/)
 
-* [Windows](https://docs.docker.com/docker-for-windows/)。
+* [Windows](https://docs.docker.com/docker-for-windows/install/)。
 
 #### <a name="installing-git-for-sample-repository"></a>为示例存储库安装 Git
 
@@ -208,7 +205,7 @@ docker run -it --rm --name aspnetcore_sample aspnetapp
 ```
 
 > [!IMPORTANT]
-> 使用 Windows 容器时，必须直接在浏览器中转到容器 IP 地址（而不是 http://localhost)）。 可通过以下步骤获取容器的 IP 地址：
+> 使用 Windows 容器时，必须直接在浏览器中转到容器 IP 地址（而不是 `http://localhost`）。 可通过以下步骤获取容器的 IP 地址：
 
 * 打开另一个命令提示符。
 * 运行 `docker ps`，查看正在运行的容器。 其中应包含“Aspnetcore_sample”。

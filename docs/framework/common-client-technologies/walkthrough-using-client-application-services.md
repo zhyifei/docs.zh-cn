@@ -8,12 +8,12 @@ helpviewer_keywords:
 - application services host [client application services]
 - client application services, walkthroughs
 ms.assetid: bb7c8950-4517-4dae-b705-b74a14059b26
-ms.openlocfilehash: b800848fc3cefb1f82fb5822007bc670c1684363
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: d09ad4b1f518ac6f4c42dffd4b3ca17249b95700
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43788923"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50194314"
 ---
 # <a name="walkthrough-using-client-application-services"></a>演练：使用客户端应用程序服务
 本主题介绍如何创建使用客户端应用程序服务对用户进行身份验证并检索用户角色和设置的 Windows 应用程序。  
@@ -35,9 +35,8 @@ ms.locfileid: "43788923"
 -   启用脱机模式。 提供一个复选框，以便用户可以指定其连接状态。 随后使用此值指定客户端应用程序服务提供程序是否使用本地缓存的数据而不是访问其 Web 服务。 最后，在应用程序返回联机模式时对当前用户重新进行身份验证。  
   
 ## <a name="prerequisites"></a>系统必备  
- 你需要以下组件来完成本演练：  
-  
--   [!INCLUDE[vs_orcas_long](../../../includes/vs-orcas-long-md.md)]。  
+
+若要完成本演练，必须具有 Visual Studio。
   
 ## <a name="creating-the-client-application"></a>创建客户端应用程序  
  将执行的第一个操作是创建一个 Windows 窗体项目。 本演练使用 Windows 窗体，因为更多的人熟悉它，不过过程类似于 Windows Presentation Foundation (WPF) 项目。  
@@ -328,7 +327,7 @@ ms.locfileid: "43788923"
   
      [!code-vb[ClientApplicationServices#110](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/ClientApplicationServices/VB/Class1.vb#110)]  
   
-9. 确保光标位于 `IClientformsAuthenticationCredentialsProvider`之后，然后按 Enter 以生成 `GetCredentials` 方法。  
+9. 确保光标位于 `IClientformsAuthenticationCredentialsProvider` 之后，然后按 Enter 以生成 `GetCredentials` 方法。  
   
 10. 找到 <xref:System.Web.ClientServices.Providers.IClientFormsAuthenticationCredentialsProvider.GetCredentials%2A> 实现，然后将它替换为以下代码。  
   

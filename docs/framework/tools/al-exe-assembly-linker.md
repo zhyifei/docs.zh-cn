@@ -9,19 +9,19 @@ helpviewer_keywords:
 ms.assetid: b5382965-0053-47cf-b92f-862860275a01
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5a9789669f6d896bfbaf4ccf5cbd0eccdd710980
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b4fe4c4f89056ae57c3516149a41a5a3bea4fcd2
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33399712"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48848006"
 ---
 # <a name="alexe-assembly-linker"></a>Al.exe（程序集链接器）
 
 程序集链接器从一个或多个文件（这些文件可以是模块或资源文件）生成一个具有程序集清单的文件。 模块是不含程序集清单的中间语言 (IL) 文件。
 
 > [!NOTE]
-> 从 [!INCLUDE[vs_orcas_long](../../../includes/vs-orcas-long-md.md)] 开始，C# 和 Visual Basic 编译器都自动将 Win32 清单嵌入到程序集中。 有关详细信息，请参阅 [/win32manifest（C# 编译器选项）](~/docs/csharp/language-reference/compiler-options/win32manifest-compiler-option.md)。
+> 从 Visual Studio 2008 开始，C# 和 Visual Basic 编译器都自动将 Win32 清单嵌入到程序集中。 有关详细信息，请参阅 [/win32manifest（C# 编译器选项）](~/docs/csharp/language-reference/compiler-options/win32manifest-compiler-option.md)。
 
 此工具会自动随 Visual Studio 一起安装。 若要运行此工具，请使用开发人员命令提示（或 Windows 7 中的 Visual Studio 命令提示）。 有关详细信息，请参阅[命令提示](../../../docs/framework/tools/developer-command-prompt-for-vs.md)。
 
@@ -174,9 +174,9 @@ al t2.netmodule /target:exe /out:t2a.exe /main:MyClass.Main
 ```
 
 ## <a name="see-also"></a>请参阅
- 
-[工具](../../../docs/framework/tools/index.md)  
-[Sn.exe（强名称工具）](../../../docs/framework/tools/sn-exe-strong-name-tool.md)  
-[Gacutil.exe（全局程序集缓存工具）](../../../docs/framework/tools/gacutil-exe-gac-tool.md)  
-[使用程序集编程](../../../docs/framework/app-domains/programming-with-assemblies.md)  
-[命令提示](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
+
+- [工具](../../../docs/framework/tools/index.md)
+- [Sn.exe（强名称工具）](../../../docs/framework/tools/sn-exe-strong-name-tool.md)
+- [Gacutil.exe（全局程序集缓存工具）](../../../docs/framework/tools/gacutil-exe-gac-tool.md)
+- [使用程序集编程](../../../docs/framework/app-domains/programming-with-assemblies.md)
+- [命令提示](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

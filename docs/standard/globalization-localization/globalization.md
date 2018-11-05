@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4e919934-6b19-42f2-b770-275a4fae87c9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5b59e0bda45b0b45b49c22d49ec2556fbcfef75d
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 2f3bf29b9b4d216483ea0c81cc787c80fc8b9e6f
+ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44221904"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49453354"
 ---
 # <a name="globalization"></a>全球化
 全球化涉及到设计和开发世界通用的应用，这些应用支持本地化界面和区域数据，供位于多个区域性的用户使用。 在设计阶段开始之前，应确定应用将支持哪些区域性。 虽然应用以单一区域性或区域作为默认目标，但可设计和编写应用，使其能够轻松地供其他区域性或区域的用户使用。  

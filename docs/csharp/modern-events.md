@@ -3,12 +3,12 @@ title: 更新的 .NET Core 事件模式
 description: 了解 .NET Core 事件模式如何通过向后兼容性实现灵活性，以及如何通过异步订阅服务器实现安全事件处理。
 ms.date: 06/20/2016
 ms.assetid: 9aa627c3-3222-4094-9ca8-7e88e1071e06
-ms.openlocfilehash: 8f28c3ea9d8cf3e8fc68953c79def5744eb5abe4
-ms.sourcegitcommit: d955cb4c681d68cf301d410925d83f25172ece86
+ms.openlocfilehash: 3cab80a0f4fcd3343fdeff265135f1503c036514
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34827175"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50188477"
 ---
 # <a name="the-updated-net-core-event-pattern"></a>更新的 .NET Core 事件模式
 
@@ -18,7 +18,7 @@ ms.locfileid: "34827175"
 
 这就提高了灵活性，并且还具有后向兼容性。 首先讨论灵活性。 类 System.EventArgs 引入了一个方法 `MemberwiseClone()`，该方法可创建对象的浅表副本。
 对于任何派生自 `EventArgs` 的类，该方法必须使用反射才能实现其功能。 该功能在特定的派生类中更容易创建。 实际上，这意味着派生自 System.EventArgs 的类会限制你的设计，且不会为你提供任何附加好处。
-其实，你可以更改 `FileFoundArgs` 和 `SearchDirectoryArgs` 的定义，使它们不从 `EventArgs` 派生。
+其实，可以更改 `FileFoundArgs` 和 `SearchDirectoryArgs` 的定义，使它们不从 `EventArgs` 派生。
 该程序的工作原理相同。
 
 如果还要进行一处更改，还可将 `SearchDirectoryArgs` 更改为结构：

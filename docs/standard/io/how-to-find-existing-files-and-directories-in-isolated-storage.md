@@ -19,15 +19,16 @@ helpviewer_keywords:
 ms.assetid: eb28458a-6161-4e7a-9ada-30ef93761b5c
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 09c112374458b70a464291e898e9a880c8679773
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 9fd5bc2a8db8d98791cdd1a75b007555226c050b
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/29/2018
-ms.locfileid: "47398951"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50202089"
 ---
 # <a name="how-to-find-existing-files-and-directories-in-isolated-storage"></a>如何：在独立存储中查找现有文件和目录
-为了搜索独立存储中的目录，请使用 <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetDirectoryNames%2A?displayProperty=nameWithType> 方法。 此方法接受表示搜索模式的字符串。 您可以在搜索模式中使用单字符 (?) 和多字符 (*) 通配符，但是通配符必须出现在名称的最后一部分。 例如，`directory1/*ect*` 是有效的搜索字符串，但 `*ect*/directory2` 不是。  
+
+为了搜索独立存储中的目录，请使用 <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetDirectoryNames%2A?displayProperty=nameWithType> 方法。 此方法接受表示搜索模式的字符串。 你可以在搜索模式中使用单字符 (?) 和多字符 (\*) 通配符，但是通配符必须出现在名称的最后一部分。 例如，`directory1/*ect*` 是有效的搜索字符串，但 `*ect*/directory2` 不是。  
   
  若要搜索文件，请使用 <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetFileNames%2A?displayProperty=nameWithType> 方法。 对适用于 <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetDirectoryNames%2A> 的搜索字符串中通配符的限制也适用于 <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetFileNames%2A>。  
   

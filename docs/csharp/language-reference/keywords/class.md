@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - class keyword [C#]
 ms.assetid: b95d8815-de18-4c3f-a8cc-a0a53bdf8690
-ms.openlocfilehash: 52ca30fe29025e637005b95ebc14fce8f320e8f4
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 3f30fb473b486efc8381faa9076b98763935b0ae
+ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44084749"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49086059"
 ---
 # <a name="class-c-reference"></a>class（C# 参考）
 
@@ -39,7 +39,7 @@ class TestClass
 
 直接在命名空间中声明的、未嵌套在其它类中的类，可以是[公共](../../../csharp/language-reference/keywords/public.md)或[内部](../../../csharp/language-reference/keywords/internal.md)。 默认情况下类为 `internal`。
 
-类成员（包括嵌套的类）可以为[公共](../../../csharp/language-reference/keywords/public.md)、`protected internal`、[受保护](../../../csharp/language-reference/keywords/protected.md)、[内部](../../../csharp/language-reference/keywords/internal.md)、[私有](../../../csharp/language-reference/keywords/private.md)或 `private protected`。 默认情况下，成员为[私有](../../../csharp/language-reference/keywords/private.md)。
+类成员（包括嵌套的类）可以是 [public](public.md)、[protected internal](protected-internal.md)、[protected](protected.md)、[internal](internal.md)、[private](private.md) 或 [private protected](private-protected.md)。 默认情况下成员为 `private`。
 
 有关详细信息，请参阅[访问修饰符](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md)。
 

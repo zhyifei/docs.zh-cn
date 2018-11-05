@@ -5,12 +5,12 @@ author: cartermp
 ms.author: mairaw
 ms.date: 06/20/2016
 ms.technology: dotnet-cli
-ms.openlocfilehash: 6be94c2e2cef443f69b2d6df7c2d490cb1fb629d
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 0be8d302568bc08d2c3dacfdf5738eff4b97d4b2
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44205053"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48848096"
 ---
 # <a name="how-to-create-a-nuget-package-with-cross-platform-tools"></a>如何使用跨平台工具创建 NuGet 包
 
@@ -21,7 +21,7 @@ ms.locfileid: "44205053"
 
 假设你刚编写了一个很棒的新库，并想通过 NuGet 发布。  你就可以使用跨平台工具创建一个 NuGet 包，完全照做就行！  下例假定使用一个名为 **SuperAwesomeLibrary** 的库，该库以 `netstandard1.0` 为目标。
 
-如果存在可传递的依赖项，也就是说，如果一个项目依赖于另一个项目，在创建 NuGet 包前，则需要确保使用 `dotnet restore` 还原整个解决方案的包。  否则将导致 `dotnet pack` 命令不能正常运行。
+如果存在可传递的依赖项，也就是说，如果一个项目依赖于另一个包，在创建 NuGet 包前，则需要确保使用 `dotnet restore` 还原整个解决方案的包。  否则将导致 `dotnet pack` 命令不能正常运行。
 
 [!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
 

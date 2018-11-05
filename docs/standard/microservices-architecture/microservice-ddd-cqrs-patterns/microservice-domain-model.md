@@ -4,12 +4,12 @@ description: 适用于容器化 .NET 应用程序的 .NET 微服务体系结构 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 11/09/2017
-ms.openlocfilehash: e672685666c846ea63bcd9cdb713af58f5e6fb1b
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.openlocfilehash: 9a54679fc28bb2adf803a38fe5e43f67048a4cfd
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37106247"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50048471"
 ---
 # <a name="designing-a-microservice-domain-model"></a>设计微服务域模型
 
@@ -58,7 +58,7 @@ Martin Fowler 在他的博客文章 [AnemicDomainModel](https://martinfowler.com
 #### <a name="additional-resources"></a>其他资源
 
 -   **DevIQ.域实体**
-    [*http://deviq.com/entity/*](http://deviq.com/entity/)
+    [*https://deviq.com/entity/*](https://deviq.com/entity/)
 
 -   **Martin Fowler。域模型**
     [*https://martinfowler.com/eaaCatalog/domainModel.html*](https://martinfowler.com/eaaCatalog/domainModel.html)
@@ -85,7 +85,7 @@ Martin Fowler 在他的博客文章 [AnemicDomainModel](https://martinfowler.com
     [*https://martinfowler.com/bliki/ValueObject.html*](https://martinfowler.com/bliki/ValueObject.html)
 
 -   **值对象**
-    [*http://deviq.com/value-object/*](http://deviq.com/value-object/)
+    [*https://deviq.com/value-object/*](https://deviq.com/value-object/)
 
 -   **测试驱动开发中的值对象**
     [*https://leanpub.com/tdd-ebook/read\#leanpub-auto-value-objects*](https://leanpub.com/tdd-ebook/read#leanpub-auto-value-objects)
@@ -137,10 +137,10 @@ public class Order : Entity, IAggregateRoot
     [*https://vaughnvernon.co/wordpress/wp-content/uploads/2014/10/DDD\_COMMUNITY\_ESSAY\_AGGREGATES\_PART\_1.pdf*](https://vaughnvernon.co/wordpress/wp-content/uploads/2014/10/DDD_COMMUNITY_ESSAY_AGGREGATES_PART_1.pdf)
 
 -   **Vaughn Vernon。高效聚合设计 - 第 II 部分：协同聚合**
-    *<https://vaughnvernon.co/wordpress/wp-content/uploads/2014/10/DDD_COMMUNITY_ESSAY_AGGREGATES_PART_2.pdf>*
+    [*https://vaughnvernon.co/wordpress/wp-content/uploads/2014/10/DDD_COMMUNITY_ESSAY_AGGREGATES_PART_2.pdf*](https://vaughnvernon.co/wordpress/wp-content/uploads/2014/10/DDD_COMMUNITY_ESSAY_AGGREGATES_PART_2.pdf)
 
 -   **Vaughn Vernon。高效聚合设计 - 第 III 部分：通过发现获得见解**
-    *<https://vaughnvernon.co/wordpress/wp-content/uploads/2014/10/DDD_COMMUNITY_ESSAY_AGGREGATES_PART_3.pdf>*
+    [*https://vaughnvernon.co/wordpress/wp-content/uploads/2014/10/DDD_COMMUNITY_ESSAY_AGGREGATES_PART_3.pdf*](https://vaughnvernon.co/wordpress/wp-content/uploads/2014/10/DDD_COMMUNITY_ESSAY_AGGREGATES_PART_3.pdf)
 
 -   **Sergey Grybniak。DDD 战术设计模式**
     [*https://www.codeproject.com/Articles/1164363/Domain-Driven-Design-Tactical-Design-Patterns-Part*](https://www.codeproject.com/Articles/1164363/Domain-Driven-Design-Tactical-Design-Patterns-Part)
@@ -149,8 +149,7 @@ public class Order : Entity, IAggregateRoot
     [*https://www.infoq.com/articles/microservices-aggregates-events-cqrs-part-1-richardson*](https://www.infoq.com/articles/microservices-aggregates-events-cqrs-part-1-richardson)
 
 -   **DevIQ.聚合模式**
-    [*http://deviq.com/aggregate-pattern/*](http://deviq.com/aggregate-pattern/)
-
+    [*https://deviq.com/aggregate-pattern/*](https://deviq.com/aggregate-pattern/)
 
 >[!div class="step-by-step"]
 [上一页](ddd-oriented-microservice.md)

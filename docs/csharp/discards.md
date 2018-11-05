@@ -4,12 +4,12 @@ description: 介绍 C# 对弃元的支持（弃元是未赋值的可丢弃变量
 author: rpetrusha
 ms.author: ronpet
 ms.date: 07/21/2017
-ms.openlocfilehash: d70067194ea9921f8af31fe436d04e2b780e1a73
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 761fb69d3bc774975caf63b8aa665f8c19c0430a
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43524198"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50045647"
 ---
 # <a name="discards---c-guide"></a>弃元 - C# 指南
 
@@ -38,11 +38,11 @@ ms.locfileid: "43524198"
 
 有关使用占位符析构元组的详细信息，请参阅 [析构元组和其他类型](deconstruct.md#deconstructing-tuple-elements-with-discards)。
 
-类、结构或接口的 `Deconstruct` 方法还允许从对象中检索和析构一组特定的数据。 如果想只使用析构值的一个子集时，可使用占位符。 以下示例将 `Person` 对象析构为四个字符串（名字、姓氏、城市和省/市/自治区），但舍弃姓氏和省/市/自治区。
+类、结构或接口的 `Deconstruct` 方法还允许从对象中检索和析构一组特定的数据。 如果想只使用析构值的一个子集时，可使用弃元。 以下示例将 `Person` 对象析构为四个字符串（名字、姓氏、城市和省/市/自治区），但舍弃姓氏和省/市/自治区。
 
 [!code-csharp[Class-discard](../../samples/snippets/csharp/programming-guide/deconstructing-tuples/class-discard1.cs)]
 
-有关使用占位符析构用户定义的类型的详细信息，请参阅 [析构元组和其他类型](deconstruct.md#deconstructing-a-user-defined-type-with-discards)。
+有关使用弃元析构用户定义的类型的详细信息，请参阅 [析构元组和其他类型](deconstruct.md#deconstructing-a-user-defined-type-with-discards)。
 
 ## <a name="pattern-matching-with-switch-and-is"></a>使用 `switch` 和 `is` 的模式匹配
 

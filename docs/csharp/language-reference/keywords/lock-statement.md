@@ -1,23 +1,23 @@
 ---
 title: lock 语句（C# 参考）
 description: 使用 C# lock 语句同步对共享资源的线程访问
-ms.date: 08/28/2018
+ms.date: 10/01/2018
 f1_keywords:
 - lock_CSharpKeyword
 - lock
 helpviewer_keywords:
 - lock keyword [C#]
 ms.assetid: 656da1a4-707e-4ef6-9c6e-6d13b646af42
-ms.openlocfilehash: 2b6fbfb2f81d7745c4effb9ea0087f34cc872a6c
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 802f447e1ae01020fa80fa3048e3783ea24db3d3
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43858351"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48850096"
 ---
 # <a name="lock-statement-c-reference"></a>lock 语句（C# 参考）
 
-`lock` 语句获取给定对象的互斥 lock，执行语句 lock，然后释放 lock。 持有 lock 时，持有 lock 的线程可以再次获取并释放 lock。 阻止任何其他线程获取 lock 并等待释放 lock。
+`lock` 语句获取给定对象的互斥 lock，执行语句块，然后释放 lock。 持有 lock 时，持有 lock 的线程可以再次获取并释放 lock。 阻止任何其他线程获取 lock 并等待释放 lock。
 
 `lock` 语句具有以下格式
 
@@ -50,13 +50,11 @@ finally
 
 ## <a name="remarks"></a>备注
 
-当同步对共享资源的线程访问时，请锁定专用对象实例（例如，`private readonly object balanceLock = new object();`）或另一个不太可能被代码无关部分用作 lock 对象的实例。 避免对不同的共享资源使用相同的 lock 对象实例，因为这可能导致死锁或锁争用。 具体而言，应避免使用
+当同步对共享资源的线程访问时，请锁定专用对象实例（例如，`private readonly object balanceLock = new object();`）或另一个不太可能被代码无关部分用作 lock 对象的实例。 避免对不同的共享资源使用相同的 lock 对象实例，因为这可能导致死锁或锁争用。 具体而言，避免将以下对象用作 lock 对象：
 
-- `this`（调用方可能将其用作 lock），
-- <xref:System.Type> 实例（可以通过 [typeof](typeof.md) 运算符或反射获取），
-- 字符串实例，包括字符串文本，
-
-用作 lock 对象。
+- `this`（调用方可能将其用作 lock）。
+- <xref:System.Type> 实例（可以通过 [typeof](typeof.md) 运算符或反射获取）。
+- 字符串实例，包括字符串文本，（这些可能是[暂存的](/dotnet/api/system.string.intern#remarks)）。
 
 ## <a name="example"></a>示例
 

@@ -6,12 +6,12 @@ ms.author: mairaw
 ms.date: 07/19/2018
 ms.technology: dotnet-standard
 ms.assetid: c044882c-af15-45f2-96d1-534557a5ee9b
-ms.openlocfilehash: 91dbbefd247b5e175da7dc3560b6323cbec1972b
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: bdaaa22f20f21e823459914a900997050a6624a6
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45595546"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50186065"
 ---
 # <a name="net-standard"></a>.NET Standard
 
@@ -49,6 +49,8 @@ ms.locfileid: "45595546"
 
 1. 定位前一更低版本的 .NET Standard，然后生成项目。
 2. 如果成功生成项目，请重复执行第 1 步。 否则，重新定位到后一较高版本，这就是应该使用的版本。
+
+但是，定位更低版本的 .NET Standard 会引入许多支持依赖项。 如果项目定位 .NET Standard 1.x，我们建议还定位 .NET Standard 2.0。 这简化了在 .NET Standard 2.0 兼容框架上运行的库的用户的依赖项关系图，并减少了下载所需的包数。
 
 ### <a name="net-standard-versioning-rules"></a>.NET Standard 版本控制规则
 

@@ -2,23 +2,21 @@
 title: 对等协作
 ms.date: 03/30/2017
 ms.assetid: b6216d88-bccb-4a59-9f1c-9f751708e811
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: c81300d160e2ec175f61f286047fa92015345942
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: a7d382006921487ea91f82ee830c75b6355a01f3
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47198138"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50180782"
 ---
 # <a name="peer-to-peer-collaboration"></a>对等协作
+
 对等网络服务利用存在于 Internet 边缘的相对强大的计算机（个人计算机）完成各项任务，不仅仅是基于客户端的计算任务。 现代个人电脑 (PC) 具有超快处理器、大量存储和大型硬盘，在执行电子邮件和 Web 浏览等常见计算任务时，并未充分利用这些优势。 现代 PC 可以轻松地充当许多类型的应用程序的客户端和服务器（对等机）。  
   
--   对等协作基础架构是 Microsoft Windows 对等基础架构的简化实现，它利用了 Windows Vista 及更高版本平台中的网络邻居服务。 它最适用于网络邻居服务运行的子网内启用了对等的应用程序，尽管它也可为 Internet 终结点或联系人提供服务。 它集成了 Live Messenger 和其他 Live 感知应用程序使用的常见联系人管理器，以确定联系人终结点、可用性和状态。  
+对等协作基础架构是 Microsoft Windows 对等基础架构的简化实现，它利用了 Windows Vista 及更高版本平台中的网络邻居服务。 它最适用于网络邻居服务运行的子网内启用了对等的应用程序，尽管它也可为 Internet 终结点或联系人提供服务。 它集成了 Live Messenger 和其他 Live 感知应用程序使用的常见联系人管理器，以确定联系人终结点、可用性和状态。  
   
--  
-  
-## <a name="collaboration-applications"></a>协作应用程序  
+## <a name="collaboration-applications"></a>协作应用程序
+
  典型的对等协作应用程序包含以下步骤：  
   
 -   对等机确定有兴趣托管协作会话的对等机身份  
@@ -37,11 +35,10 @@ ms.locfileid: "47198138"
   
 -   此时，主机对等机可与所有受邀对等机开始协作会话，或向协作基础架构注册应用程序。  P2P 应用程序使用对等协作基础架构和 <xref:System.Net.PeerToPeer.Collaboration> 命名空间来协调游戏、公告牌、会议和其他无服务器状态应用程序的通信。  
   
--  
-  
 ## <a name="peer-to-peer-networking-security"></a>对等网络安全  
+
  在 Active Directory 域中，域控制器使用 Kerberos 提供身份验证服务。 在无服务器对等环境中，对等机必须提供其自身的身份验证。 对于对等网络，任何节点都可充当 CA，无需要求每个对等机受信任根存储中存在根证书。 使用自签名证书提供身份验证，格式为 X.509 证书。 这些是由每个对等机创建的证书，其生成公钥/私钥对以及使用私钥签名的证书。 自签名证书用于身份验证，并提供有关对等机实体的信息。 如 X.509 身份验证一样，对等机网络身份验证依赖于一系列追溯受信任公钥的证书。  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Net.PeerToPeer.Collaboration>  
- [关于 System.Net.PeerToPeer.Collaboration 命名空间](../../../docs/framework/network-programming/about-the-system-net-peertopeer-collaboration-namespace.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.Net.PeerToPeer.Collaboration>  
+- [关于 System.Net.PeerToPeer.Collaboration 命名空间](../../../docs/framework/network-programming/about-the-system-net-peertopeer-collaboration-namespace.md)

@@ -12,12 +12,12 @@ helpviewer_keywords:
 - interpolated string [C#]
 author: pkulikov
 ms.author: ronpet
-ms.openlocfilehash: 2009b3620bc4874520221a4ea847222feafca01b
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 2758a724b7e1e410fd1e1ba262db451b7f994164
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44251727"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50196977"
 ---
 # <a name="---string-interpolation-c-reference"></a>$ - 字符串内插（C# 参考）
 
@@ -86,7 +86,7 @@ ms.locfileid: "44251727"
 
 ## <a name="additional-resources"></a>其他资源
 
-如果不熟悉字符串内插，请参阅 [C# 中的字符串内插](../../quick-starts/interpolated-strings.yml)快速入门。 请参阅 [C# 中的字符串内插](../../tutorials/string-interpolation.md)教程查看更多相关示例。
+如果你不熟悉字符串内插，请参阅 [C# 中的字符串内插](../../tutorials/intro-to-csharp/interpolated-strings.yml)交互式教程。 或者，也可以在计算机上以本地方式尝试学习 [C# 中的字符串内插](../../tutorials/string-interpolation.md)教程。
 
 ## <a name="see-also"></a>请参阅
 

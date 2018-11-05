@@ -5,12 +5,12 @@ author: tdykstra
 ms.author: tdykstra
 ms.date: 07/08/2017
 ms.technology: dotnet-standard
-ms.openlocfilehash: 11fad691021ec897348177c67134750e72b4ff7c
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 4ffcf56ba171192048a736b58ddcfa591fd3af58
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45698479"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48840266"
 ---
 # <a name="net-glossary"></a>.NET 术语表
 
@@ -38,7 +38,7 @@ ms.locfileid: "45698479"
 
 ## <a name="assembly"></a>程序集
 
-.dll/.exe 文件，其中包含一组可由应用或其他程序集调用的 API。
+.dll/.exe 文件，其中包含一组可由应用程序或其他程序集调用的 API。
 
 程序集可以包括接口、类、结构、枚举和委托等类型。 有时，项目的 bin 文件夹中的程序集被称为二进制文件。 另请参阅[库](#library)。
 
@@ -46,13 +46,13 @@ ms.locfileid: "45698479"
 
 公共语言运行时。
 
-确切含义取决于上下文，但它通常指 .NET Framework 的运行时。 CLR 处理内存分配和管理。 CLR 也是一个虚拟机，不仅可执行应用，还可使用 JIT 编译器快速生成和编译代码。 当前的 Microsoft CLR 实现仅限 Windows。
+确切含义取决于上下文，但它通常指 .NET Framework 的运行时。 CLR 处理内存分配和管理。 CLR 也是一个虚拟机，不仅可执行应用，还可使用 [JIT](#jit) 编译器快速生成和编译代码。 当前的 Microsoft CLR 实现仅限 Windows。
 
 ## <a name="coreclr"></a>CoreCLR
 
 .NET Core 公共语言运行时。
 
-此 CLR 是采用与 CLR 相同的基本代码生成的。 最初，CoreCLR 是 Silverlight 的运行时，专为在多个平台（特别是 Windows 和 OS X）上运行而开发。CoreCLR 现属于 .NET Core 并表示 CLR 的简化版本。 它仍是跨平台运行时，现包括针对许多 Linux 分发的支持。 CoreCLR 也是具有 JIT 和代码执行功能的虚拟机。
+此 CLR 是采用与 CLR 相同的基本代码生成的。 最初，CoreCLR 是 Silverlight 的运行时，专为在多个平台（特别是 Windows 和 OS X）上运行而开发。CoreCLR 现属于 .NET Core 并表示 CLR 的简化版本。 它仍是[跨平台](#cross-platform)运行时，现包括针对许多 Linux 分发的支持。 CoreCLR 也是具有 JIT 和代码执行功能的虚拟机。
 
 ## <a name="corefx"></a>CoreFX
 
@@ -67,6 +67,10 @@ ms.locfileid: "45698479"
 与 CLR/CoreCLR 相比，CoreRT 不是虚拟机，这意味着它不包含用于快速生成并运行代码的功能，因为它不包括 [JIT](#jit)。 但它包含 [GC](#gc) 以及运行时类型标识 (RTTI) 和反射功能。 只是由于设计有类型系统，因此并不需要元数据反射功能。 包含这些功能使它具有 [AOT](#aot) 工具链，该工具链可去除多余的元数据，更重要的是可识别应用不使用的代码。 CoreRT 正在开发中。
 
 请参阅 [.NET Native 和 CoreRT 简介](https://github.com/dotnet/corert/blob/master/Documentation/intro-to-corert.md)
+
+## <a name="cross-platform"></a>跨平台
+
+能够开发并执行可在多个不同操作系统（如 Linux、Windows 和 iOS）上使用的应用程序，而无需专门针对每个操作系统进行重新编写。 这样，可以在不同平台上的应用程序之间重复使用代码并保持一致性。
 
 ## <a name="ecosystem"></a>生态系统
 
@@ -136,7 +140,7 @@ C# 等较高级的 .NET 语言编译为称为中间语言 (IL) 的硬件无关�
 
 ## <a name="mono"></a>Mono
 
-Mono 是主要在需要小型运行时使用的 .NET 实现。 它是运行时，在 Android、Mac、iOS、tvOS 和 watchOS 上为 Xamarin 应用程序提供技术支持，主要针对内存占用少的应用程序。
+Mono 是主要在需要小型运行时使用的开放源、[跨平台](#cross-platform) .NET 实现。 它是运行时，在 Android、Mac、iOS、tvOS 和 watchOS 上为 Xamarin 应用程序提供技术支持，主要针对内存占用少的应用程序。
 
 它支持所有当前已发布的 .NET Standard 版本。
 

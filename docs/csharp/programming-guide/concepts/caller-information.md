@@ -2,12 +2,12 @@
 title: 调用方信息 (C#)
 ms.date: 07/20/2015
 ms.assetid: ffad3d24-2fb7-4641-9124-53b5bc91d339
-ms.openlocfilehash: 27f2e7624369061ff3089357c455ae51237e6dfa
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.openlocfilehash: 4a0e4d6ecad1863832a33ba91485d0c12675cd57
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/23/2018
-ms.locfileid: "46586445"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50185269"
 ---
 # <a name="caller-information-c"></a>调用方信息 (C#)
 
@@ -76,7 +76,7 @@ public void TraceMessage(string message,
 |静态构造函数|字符串“.cctor”|
 |析构函数|字符串“Finalize”|
 |用户定义的运算符或转换|为成员生成的名称，例如，“op_Addition”。|
-|特性构造函数|要应用特性的成员的名称。 如果该特性是成员中的任何元素（如参数、返回值或泛型参数），则此结果是与该元素关联的成员的名称。|
+|特性构造函数|要应用特性的方法或属性的名称。 如果该特性是成员中的任何元素（如参数、返回值或泛型参数），则此结果是与该元素关联的成员的名称。|
 |无包含的成员（例如，程序集级别或应用于类型的特性）|可选参数的默认值。|
 
 ## <a name="see-also"></a>请参阅

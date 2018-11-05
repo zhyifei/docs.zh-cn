@@ -4,12 +4,12 @@ description: 本主题将指导你使用 Visual Studio for Mac 和 .NET Core 来
 author: guardrex
 ms.author: mairaw
 ms.date: 06/12/2017
-ms.openlocfilehash: dd8262a7d2fa03ab06f9f85e91c298f52e3c0849
-ms.sourcegitcommit: c217b067985905cb21eafc5dd9a83568d7ff4e45
+ms.openlocfilehash: f751e7532e9627de3d3733476f7214654089e468
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/22/2018
-ms.locfileid: "36315142"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50170726"
 ---
 # <a name="getting-started-with-net-core-on-macos-using-visual-studio-for-mac"></a>借助 Visual Studio for Mac 在 macOS 上开始使用.NET Core
 
@@ -18,7 +18,7 @@ Visual Studio for Mac 提供用于开发 .NET Core 应用程序的功能全面�
 > [!NOTE]
 > 你的反馈非常有价值。 有两种方法可以向开发团队提供有关 Visual Studio for Mac 的反馈：
 > * 在 Visual Studio for Mac 中，从菜单中选择“帮助” > “报告问题”，或从欢迎屏幕中选择“报告问题”，将打开一个窗口，以供填写 bug 报告。 可在[开发人员社区](https://developercommunity.visualstudio.com/spaces/8/index.html)门户中跟踪自己的反馈。
-> * 若要提出建议，从菜单中选择“帮助” > “提供建议”，或从欢迎屏幕中选择“提供建议”，转到 [Visual Studio for Mac UserVoice 网页](https://visualstudio.uservoice.com/forums/563332-visual-studio-for-mac)。
+> * 若要提出建议，从菜单中选择“帮助” > “提供建议”，或从欢迎屏幕中选择“提供建议”，转到 [Visual Studio for Mac 开发人员社区网页](https://developercommunity.visualstudio.com/content/idea/post.html?space=41)。
 
 ## <a name="prerequisites"></a>系统必备
 

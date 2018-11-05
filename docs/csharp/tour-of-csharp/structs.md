@@ -3,12 +3,12 @@ title: C# 结构 - C# 语言介绍
 description: 了解 C# 值类型（称为“结构”）的基础知识
 ms.date: 08/10/2016
 ms.assetid: 88a74571-f741-4a31-a2b5-1ccf165535b8
-ms.openlocfilehash: dac0952e6a55a16ecefec79f9789f9e2d44aada1
-ms.sourcegitcommit: ff1d40507b3eb6e2185478e37c66c66be6de46f1
+ms.openlocfilehash: 2b1870713b488f706f5f3a54413461052173bab6
+ms.sourcegitcommit: d88024e6d6d8b242feae5f4007a709379355aa24
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/11/2018
-ms.locfileid: "34058953"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49323092"
 ---
 # <a name="structs"></a>结构
 
@@ -24,7 +24,7 @@ ms.locfileid: "34058953"
 
 现在，仅实例化一个对象（即用于数组的对象），`Point` 实例存储内嵌在数组中。
 
-结构构造函数使用 `new` 运算符进行调用，但这不并表示要分配内存。 结构构造函数只返回结构值本身（通常在堆栈的临时位置中），并在必要时复制此值，而非动态分配对象并返回对此对象的引用。
+使用 `new` 运算符调用结构构造函数，类似于类构造函数。 然而，结构构造函数只返回结构值本身（通常在堆栈的临时位置中），并在必要时复制此值，而非在托管堆上动态分配对象并返回对此对象的引用。
 
 借助类，两个变量可以引用同一对象；因此，对一个变量执行的运算可能会影响另一个变量引用的对象。 借助结构，每个变量都有自己的数据副本；因此，对一个变量执行的运算不会影响另一个变量。 例如，以下代码片段生成的输出取决于 Point 是类还是结构。
 

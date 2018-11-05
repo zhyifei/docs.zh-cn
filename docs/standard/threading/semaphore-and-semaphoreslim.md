@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 7722a333-b974-47a2-a7c0-f09097fb644e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8e98862aba937724c799adef597260a06ed495f6
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: e7d7f791fbc68a526f428f4f79d9b379a23ca771
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44199760"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50199482"
 ---
 # <a name="semaphore-and-semaphoreslim"></a>Semaphore 和 SemaphoreSlim
 <xref:System.Threading.Semaphore?displayProperty=nameWithType> 类表示一个命名（系统范围内）或本地信号量。 它是环绕 Win32 信号量对象的精简包装器。 Win32 信号量是计数信号量，该可用于控制对资源池的访问。  
@@ -25,7 +25,7 @@ ms.locfileid: "44199760"
  <xref:System.Threading.SemaphoreSlim> 类表示一个轻量、快速的信号量，可在等待时间预计很短的情况下用于在单个进程内等待。 <xref:System.Threading.SemaphoreSlim> 尽可能多地依赖公共语言运行时 (CLR) 提供的同步基元。 但是，它还提供延迟初始化、基于内核的等待句柄，作为在多个信号量上进行等待的必要支持。 <xref:System.Threading.SemaphoreSlim> 也支持使用取消标记，但不支持命名信号量或使用用于同步的等待句柄。  
   
 ## <a name="managing-a-limited-resource"></a>管理有限资源  
- 线程通过调用从 <xref:System.Threading.WaitHandle.WaitOne%2A> 类中继承的 <xref:System.Threading.WaitHandle> 方法进入信号量，无论对于 <xref:System.Threading.Semaphore?displayProperty=nameWithType> 对象、<xref:System.Threading.SemaphoreSlim.Wait%2A?displayProperty=nameWithType> 或 <xref:System.Threading.SemaphoreSlim.WaitAsync%2A?displayProperty=nameWithType> 方法还是 <xref:System.Threading.SemaphoreSlim> 对象都适用。 当调用返回时，信号量计数会减少。 当线程请求进入且计数为零时，此线程受到阻止。 线程通过调用 <xref:System.Threading.Semaphore.Release%2A?displayProperty=nameWithType> 或 <xref:System.Threading.SemaphoreSlim.Release%2A?displayProperty=nameWithType> 方法释放信号量时，允许受阻线程进入。 受阻线程进入信号量无保证的顺序，比如先进先出 (FIFO) 或按后进先出 (LIFO)。  
+ 线程通过调用从 <xref:System.Threading.WaitHandle> 类中继承的 <xref:System.Threading.WaitHandle.WaitOne%2A> 方法进入信号量，无论对于 <xref:System.Threading.Semaphore?displayProperty=nameWithType> 对象、<xref:System.Threading.SemaphoreSlim.Wait%2A?displayProperty=nameWithType> 或 <xref:System.Threading.SemaphoreSlim.WaitAsync%2A?displayProperty=nameWithType> 方法还是 <xref:System.Threading.SemaphoreSlim> 对象都适用。 当调用返回时，信号量计数会减少。 当线程请求进入且计数为零时，此线程受到阻止。 线程通过调用 <xref:System.Threading.Semaphore.Release%2A?displayProperty=nameWithType> 或 <xref:System.Threading.SemaphoreSlim.Release%2A?displayProperty=nameWithType> 方法释放信号量时，允许受阻线程进入。 受阻线程进入信号量无保证的顺序，比如先进先出 (FIFO) 或按后进先出 (LIFO)。  
   
  一个线程可通过反复调用 <xref:System.Threading.Semaphore?displayProperty=nameWithType> 对象的 <xref:System.Threading.WaitHandle.WaitOne%2A> 方法或 <xref:System.Threading.SemaphoreSlim> 对象的 <xref:System.Threading.SemaphoreSlim.Wait%2A> 方法进入信号量。 为了释放信号量，线程可以调用 <xref:System.Threading.Semaphore.Release?displayProperty=nameWithType> 或 <xref:System.Threading.SemaphoreSlim.Release?displayProperty=nameWithType> 方法重载相同次数，或调用 <xref:System.Threading.Semaphore.Release%28System.Int32%29?displayProperty=nameWithType> 或 <xref:System.Threading.SemaphoreSlim.Release%28System.Int32%29?displayProperty=nameWithType> 方法重载并指定要释放的项的数量。  
   

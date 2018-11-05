@@ -159,15 +159,15 @@ helpviewer_keywords:
 ms.assetid: 8271973c-deba-47a6-8e5e-04ce63f146ad
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f051af9284ddbf583e5454f7bdc106a061489d3c
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 95d971003a28ec411b3734009bcb978c630cb811
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44075446"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48873782"
 ---
 # <a name="winmdexpexe-error-messages"></a>Winmdexp.exe 错误消息
-当使用 [!INCLUDE[vs_dev11_long](../../../includes/vs-dev11-long-md.md)] 中的 [!INCLUDE[wrt](../../../includes/wrt-md.md)] 组件模板时，生成进程调用 [Winmdexp.exe（Windows 运行时元数据导出工具）](../../../docs/framework/tools/winmdexp-exe-windows-runtime-metadata-export-tool.md)，因此“错误列表”中会显示 Winmdexp.exe 错误消息。 Winmdexp.exe 在用 `/target:winmdobj` 选项编译的模块上运行。 由于它需要将编译的模块作为输入，因此不会显示错误消息，除非编译成功。  
+在 Visual Studio 2012 中使用 [!INCLUDE[wrt](../../../includes/wrt-md.md)] 组件模板时，生成进程调用 [Winmdexp.exe（Windows 运行时元数据导出工具）](../../../docs/framework/tools/winmdexp-exe-windows-runtime-metadata-export-tool.md)，因此“错误列表”中会显示 Winmdexp.exe 错误消息。 Winmdexp.exe 在用 `/target:winmdobj` 选项编译的模块上运行。 由于它需要将编译的模块作为输入，因此不会显示错误消息，除非编译成功。  
   
  错误消息设计包含解决其报告的错误条件所需的所有信息。但是，有些问题需要消息以外的更多信息。 Windows 开发人员中心的[诊断 Windows 运行时组件错误条件](https://go.microsoft.com/fwlink/p/?LinkId=251127)中提供更多信息。  
   

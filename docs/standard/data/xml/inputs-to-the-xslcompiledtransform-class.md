@@ -8,18 +8,18 @@ dev_langs:
 ms.assetid: 834049f1-ab41-449e-9f10-4a1d0701bc48
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e09828b827b12645ebbf37d62a346c8877bfba05
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: beb351ac365694ac909b793bf19adb9fbb8c0274
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43865730"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48835969"
 ---
 # <a name="inputs-to-the-xslcompiledtransform-class"></a>XslCompiledTransform 类的输入
 <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A> 方法接受三种输入类型的源文档：实现 <xref:System.Xml.XPath.IXPathNavigable> 接口的对象、读取源文档的 <xref:System.Xml.XmlReader> 对象或字符串 URI。  
   
 > [!NOTE]
->  默认情况下，<xref:System.Xml.Xsl.XslCompiledTransform> 类保留空白。 这符合 W3C XSLT 1.0 建议的第 3.4 节（第 3.4 节， http://www.w3.org/TR/xslt.html#strip)）。  
+>  默认情况下，<xref:System.Xml.Xsl.XslCompiledTransform> 类保留空白。 这符合 [W3C XSLT 1.0 第 3.4 节的建议](https://www.w3.org/TR/xslt.html#strip)。  
   
 ## <a name="ixpathnavigable-interface"></a>IXPathNavigable 接口  
  <xref:System.Xml.XPath.IXPathNavigable> 接口在 <xref:System.Xml.XmlNode> 和 <xref:System.Xml.XPath.XPathDocument> 类中实现。 这两个类表示 XML 数据的内存中缓存。  

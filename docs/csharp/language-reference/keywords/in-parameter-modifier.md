@@ -4,16 +4,16 @@ ms.date: 03/06/2018
 helpviewer_keywords:
 - parameters [C#], in
 - in parameters [C#]
-ms.openlocfilehash: 54abd5192d0d9bb49be0a9feb8e5e4eaeb691a0c
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 199d2d54a1937b9982131b8cc7f1c777f656d7a9
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43512010"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50199404"
 ---
 # <a name="in-parameter-modifier-c-reference"></a>in 参数修饰符（C# 参考）
 
-`in` 关键字通过引用传递参数。 它类似于 [ref](ref.md) 或 [out](out-parameter-modifier.md) 关键字，不同之处在于 `in` 参数无法通过调用的方法进行修改。 而 `ref` 参数是可以修改的，`out` 参数必须由调用方修改，且这些修改可以在调用上下文中观测到。
+`in` 关键字通过引用传递参数。 它类似于 [ref](ref.md) 或 [out](out-parameter-modifier.md) 关键字，不同之处在于 `in` 参数无法通过调用的方法进行修改。 而 `ref` 参数是可以修改的，`out` 参数必须由调用方方法修改，且这些修改可以在调用上下文中看到。
 
 [!code-csharp-interactive[cs-in-keyword](../../../../samples/snippets/csharp/language-reference/keywords/in-ref-out-modifier/InParameterModifier.cs#1)]  
 
@@ -124,4 +124,4 @@ Method(in i); // passed by readonly reference, explicitly using `in`
 - [C# 编程指南](../../programming-guide/index.md)  
 - [C# 关键字](index.md)  
 - [方法参数](method-parameters.md)  
-- [具有值类型的引用语义](../../reference-semantics-with-value-types.md)  
+- [编写安全高效的代码](../../write-safe-efficient-code.md)  

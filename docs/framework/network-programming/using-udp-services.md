@@ -17,21 +17,19 @@ helpviewer_keywords:
 - sending data, UDP
 - application protocols, UDP
 ms.assetid: d5c3477a-e798-454c-a890-738ba14c5707
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: 8aabd71a841af2b01c644d52806f213ca9c92ec2
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 8f0c34b2226863bc04800ac4558c07e969f02154
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/29/2018
-ms.locfileid: "47209354"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50191124"
 ---
 # <a name="using-udp-services"></a>使用 UDP 服务
 <xref:System.Net.Sockets.UdpClient> 类使用 UDP与网络服务通信。 <xref:System.Net.Sockets.UdpClient> 类的属性和方法概要说明了使用 UDP 创建 <xref:System.Net.Sockets.Socket> 以请求和接收数据的详情。  
   
  用户数据报协议 (UDP) 是一种简单协议，非常适合用于将数据传递到远程主机。 但由于 UDP 协议是一种无连接协议，因此发送到远程终结点的 UDP 数据报不一定可到达，也无法保证其能以发送的相同顺序到达。 使用 UDP 的应用程序必须准备好处理丢失的、重复的和乱序的数据报。  
   
- 要使用 UDP 发送数据报，必须知道承载所需服务的网络设备的网络地址以及该服务用来通信的 UDP 端口号。 Internet 编号分配机构 (IANA) 定义公共服务的端口号（请参阅 www.iana.org/assignments/port-numbers）。 不在 IANA 列表上的服务可使用 1,024 到 65,535 范围内的端口号。  
+ 要使用 UDP 发送数据报，必须知道承载所需服务的网络设备的网络地址以及该服务用来通信的 UDP 端口号。 Internet 编号分配机构 (IANA) 定义公共服务的端口号（请参阅[服务名称和传输协议端口号注册表](https://www.iana.org/assignments/service-names-port-numbers/service-names-port-numbers.xhtml)）。 不在 IANA 列表上的服务可使用 1,024 到 65,535 范围内的端口号。  
   
  特殊网络地址用于支持基于 IP 的网络上的 UDP 广播消息。 下面的讨论以 Internet 上使用的 IP 版本 4 地址系列作为示例。  
   

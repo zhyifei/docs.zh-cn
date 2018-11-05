@@ -4,12 +4,12 @@ description: 了解如何为 .NET Core 打包、命名并进行版本控制以�
 author: bleroy
 ms.author: mairaw
 ms.date: 06/28/2017
-ms.openlocfilehash: 084de6bbb3ce280beb0846431aeceacbb57d9a32
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: df1ba6a93106cd6b3ceafa93b7c548287878c3fe
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33217397"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48840480"
 ---
 # <a name="net-core-distribution-packaging"></a>.NET Core 分发打包
 
@@ -120,4 +120,4 @@ SDK 版本采用同样的 `[major].[minor]`，并有一个独立的 `[patch]`，
 
 ## <a name="building-packages"></a>生成包
 
-https://github.com/dotnet/source-build 存储库介绍了如何生成 .NET Core SDK 的源 tarball 及其所有组件。 源版本存储库中的输出内容符合本文第一部分中所描述的布局。
+[dotnet/source-build](https://github.com/dotnet/source-build) 存储库中说明了如何生成 .NET Core SDK 的源 tarball 及其所有组件。 源版本存储库中的输出内容符合本文第一部分中所描述的布局。

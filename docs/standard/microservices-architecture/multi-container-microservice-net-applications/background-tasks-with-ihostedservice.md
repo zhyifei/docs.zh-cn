@@ -4,12 +4,12 @@ description: 用于容器化 .NET 应用程序的 .NET 微服务体系结构 | �
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 12/11/2017
-ms.openlocfilehash: 6ce9e40334e80e8bd17ce2f3d2569a1e3c39d09e
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 981a20ca80f0652a9c3597d36b960d6b44d97912
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46003745"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50195822"
 ---
 # <a name="implement-background-tasks-in-microservices-with-ihostedservice-and-the-backgroundservice-class"></a>使用 IHostedService 和 BackgroundService 类在微服务中实现后台任务
 
@@ -236,7 +236,7 @@ WebHost.CreateDefaultBuilder(args)
 
 ### <a name="deployment-considerations-and-takeaways"></a>部署注意事项和要点
 
-请务必注意，部署 ASP.NET Core `WebHost` 或 .NET Core `Host` 的方式可能会影响最终解决方案。 例如，如果在 IIS 或常规 Azure 应用服务上部署 `WebHost`，由于应用池回收，主机可能会被关闭。 但是，如果将主机作为容器部署到 Kubernetes 或 Service Fabric 等业务流程协调程序中，则可以控制主机的实时实例数量。 此外，还可以考虑云中专门针对这些方案的其他方法，例如 Azure Functions。 
+请务必注意，部署 ASP.NET Core `WebHost` 或 .NET Core `Host` 的方式可能会影响最终解决方案。 例如，如果在 IIS 或常规 Azure 应用服务上部署 `WebHost`，由于应用池回收，主机可能会被关闭。 但是，如果将主机作为容器部署到 Kubernetes 或 Service Fabric 等业务流程协调程序中，则可以控制主机的实时实例数量。 此外，还可以考虑云中专门针对这些方案的其他方法，例如 Azure Functions。 最后，如果需要服务一直处于运行状态并在 Windows Server 上部署，可以使用 Windows 服务。
 
 但即使对于部署到应用池中的 `WebHost`，也存在如重新填充或刷新应用程序内存中的缓存这样的方案，这仍然适用。
 

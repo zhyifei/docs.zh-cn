@@ -1,6 +1,6 @@
 ---
 title: + 运算符（C# 参考）
-ms.date: 07/20/2015
+ms.date: 10/22/2018
 f1_keywords:
 - +_CSharpKeyword
 helpviewer_keywords:
@@ -8,34 +8,57 @@ helpviewer_keywords:
 - concatenation operator [C#]
 - addition operator [C#]
 ms.assetid: 93e56486-bb42-43c1-bd43-60af11e64e67
-ms.openlocfilehash: b49694bc8937c58bd295f0f8e57c378802d0dfb9
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: ae2774d96bc50afa271fffdea445e640e68c3647
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47232379"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50192291"
 ---
 # <a name="-operator-c-reference"></a>+ 运算符（C# 参考）
-`+` 运算符既可作为一元运算符也可作为二元运算符。  
-  
-## <a name="remarks"></a>备注  
- 为所有数值类型预定义了一元 `+` 运算符。 对数值类型进行一元 `+` 运算的结果就是操作数的值。  
-  
- 为数值类型和字符串类型预定义了二元 `+` 运算符。 对于数值类型，+ 计算两个操作数之和。 当其中的一个操作数是字符串类型或两个操作数都是字符串类型时，+ 将操作数的字符串表示形式串联在一起。  
-  
- 委托类型也提供二元 `+` 运算符，该运算符执行委托串联。  
-  
- 用户定义的类型可重载一元 `+` 运算符和二元 `+` 运算符。 对整数类型的操作通常可用于枚举。 有关详细信息，请参阅[运算符（C# 参考）](../../../csharp/language-reference/keywords/operator.md)。  
-  
-## <a name="example"></a>示例  
- [!code-csharp[csRefOperators#28](../../../csharp/language-reference/operators/codesnippet/CSharp/addition-operator_1.cs)]  
-  
-## <a name="c-language-specification"></a>C# 语言规范  
- [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
-  
+
+以下两种形式支持 `+` 运算符：一元加运算符或二元加运算符。
+
+用户定义的类型可以[重载](../keywords/operator.md)一元和二元 `+` 运算符。 重载二元 `+` 运算符后，也会隐式重载[加法赋值运算符](addition-assignment-operator.md) `+=`。
+
+## <a name="unary-plus-operator"></a>一元加运算符
+
+一元 `+` 运算符返回其操作数的值。 它受所有数值类型支持。
+
+## <a name="numeric-addition"></a>数值加
+
+对于数字类型，`+` 运算符计算其操作数的和：
+
+[!code-csharp-interactive[numeric addition](~/samples/snippets/csharp/language-reference/operators/AdditionExamples.cs#AddNumerics)]
+
+## <a name="string-concatenation"></a>字符串串联
+
+当其中的一个操作数是[字符串](../keywords/string.md)类型或两个操作数都是字符串类型时，`+` 运算符将其操作数的字符串表示形式串联在一起：
+
+[!code-csharp-interactive[string concatenation](~/samples/snippets/csharp/language-reference/operators/AdditionExamples.cs#AddStrings)]
+
+从 C# 6 开始，[字符串内插](../tokens/interpolated.md)提供了格式化字符串的更便捷方式：
+
+[!code-csharp-interactive[string interpolation](~/samples/snippets/csharp/language-reference/operators/AdditionExamples.cs#UseStringInterpolation)]
+
+## <a name="delegate-combination"></a>委托组合
+
+对于[委托](../keywords/delegate.md)类型，`+` 运算符在调用时返回新的委托实例，调用第一个操作数，然后调用第二个操作数。 如果任何操作数均为 `null`，则 `+` 运算符将返回另一个操作数（也可能是 `null`）的值。 下面的示例演示如何组合使用委托和 `+` 运算符：
+
+[!code-csharp-interactive[delegate combination](~/samples/snippets/csharp/language-reference/operators/AdditionExamples.cs#AddDelegates)]
+
+有关委托类型的详细信息，请参阅[委托](../../programming-guide/delegates/index.md)。
+
+## <a name="c-language-specification"></a>C# 语言规范
+
+有关详细信息，请参阅[C# 语言规范](../language-specification/index.md)的[一元加运算符](~/_csharplang/spec/expressions.md#unary-plus-operator)和[加法运算符](~/_csharplang/spec/expressions.md#addition-operator)部分。
+
 ## <a name="see-also"></a>请参阅
 
-- [C# 参考](../../../csharp/language-reference/index.md)  
-- [C# 编程指南](../../../csharp/programming-guide/index.md)  
-- [C# 运算符](../../../csharp/language-reference/operators/index.md)  
-- [运算符（C# 参考）](../../../csharp/language-reference/keywords/operator.md)
+- [C# 参考](../index.md)
+- [C# 编程指南](../../programming-guide/index.md)
+- [C# 运算符](index.md)
+- [字符串内插](../tokens/interpolated.md)
+- [如何：串联多个字符串](../../how-to/concatenate-multiple-strings.md)
+- [委托](../../programming-guide/delegates/index.md)
+- [Checked 和 unchecked](../keywords/checked-and-unchecked.md)

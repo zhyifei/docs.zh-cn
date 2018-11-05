@@ -1,7 +1,7 @@
 ---
 title: .NET Framework 中的传输层安全性 (TLS) 最佳做法
 description: 介绍在 .NET Framework 中使用传输层安全性 (TLS) 的最佳做法
-ms.date: 03/15/2018
+ms.date: 10/22/2018
 helpviewer_keywords:
 - sending data, Internet security
 - protocols, Internet security
@@ -12,17 +12,16 @@ helpviewer_keywords:
 - Internet, security
 - security [.NET Framework], Internet
 - permissions [.NET Framework], Internet
-author: blowdart
-ms.openlocfilehash: 96d37934b5e852b69c692bb1606d2998dac6f63a
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 9cb7dbdfb1ad221e00823d8d55e7fd3c52cabe8b
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47424475"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50194132"
 ---
 # <a name="transport-layer-security-tls-best-practices-with-the-net-framework"></a>.NET Framework 中的传输层安全性 (TLS) 最佳做法
 
-传输层安全性 (TLS) 协议是一个行业标准，旨在帮助保护通过 Internet 所传输信息的私密性。 [TLS 1.2](https://tools.ietf.org/html/rfc5246) 是最新发布的标准，与以前版本相比在安全性方面有了很多提升。 TLS 1.2 最终会由 [TLS 1.3](https://tools.ietf.org/html/draft-ietf-tls-tls13-22) 替代。 文本介绍了如何保护使用 TLS 协议的 .NET Framework 应用程序安全的建议。
+传输层安全性 (TLS) 协议是一个行业标准，旨在帮助保护通过 Internet 所传输信息的私密性。 [TLS 1.2](https://tools.ietf.org/html/rfc5246) 标准与以前版本相比在安全性方面有了很多提升。 TLS 1.2 最终将被最新发布的标准 [TLS 1.3](https://tools.ietf.org/html/rfc8446) 取代，后者速度更快，安全性更高。 文本介绍了如何保护使用 TLS 协议的 .NET Framework 应用程序安全的建议。
 
 为确保 .NET Framework 应用程序的安全性，TLS 版本不应被硬编码。 .NET Framework 应用程序应使用操作系统 (OS) 支持的 TLS 版本。
 
@@ -278,7 +277,7 @@ Windows Registry Editor Version 5.00
 | Windows Server 2008 | 支持 TLS 1.2 和 TLS 1.1 需要更新。 请参阅[更新以在 Windows Server 2008 SP2 中添加对 TLS 1.1 和 TLS 1.2 的支持](https://support.microsoft.com/help/4019276/update-to-add-support-for-tls-1-1-and-tls-1-2-in-windows-server-2008-s)。 |
 | Windows Vista | 不支持。 |
 
-若要详细了解在每个版本的 Windows 上默认启用的 TLS/SSL 协议，请参阅 [TLS/SSL 中的协议 (Schannel SSP)](https://msdn.microsoft.com/library/windows/desktop/mt808159)。
+若要详细了解在每个版本的 Windows 上默认启用的 TLS/SSL 协议，请参阅 [TLS/SSL 中的协议 (Schannel SSP)](/windows/desktop/SecAuthN/protocols-in-tls-ssl--schannel-ssp-)。
 
 **在 .NET Framework 3.5 中支持 TLS 1.2 的要求**
 
@@ -305,6 +304,6 @@ Windows Registry Editor Version 5.00
 
 ### <a name="azure-guest-os-registry-settings"></a>Azure 来宾操作系统注册表设置
 
-[Azure 云服务](https://azure.microsoft.com/services/cloud-services/)的 Azure 来宾操作系统图像已经具有将值设置为 1 的 `SchUseStrongCrypto` 注册表项。 有关详细信息，请参阅 [SchUseStrongCrypto](#schusestrongcrypto)。
+[Azure 云服务](https://azure.microsoft.com/services/cloud-services/)的 Azure 来宾操作系统系列 5 图像已经具有将值设置为 1 的 `SchUseStrongCrypto` 注册表项。 有关详细信息，请参阅 [SchUseStrongCrypto](#schusestrongcrypto)。
 
 将 [SystemDefaultTlsVersions](#systemdefaulttlsversions) 注册表项设置为 1。 请参阅[通过 Windows 注册表配置安全性](#configuring-security-via-the-windows-registry)。

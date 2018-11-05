@@ -2,28 +2,27 @@
 title: 对等名称发布和解析
 ms.date: 03/30/2017
 ms.assetid: f0370e08-9fa6-4ee5-ab78-9a58a20a7da2
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: 436c84c948a867acedf69af1bc7b3e78c308ce54
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 98ccfc79a25d547c751d8153d0f290860e5eb743
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47193546"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50184551"
 ---
 # <a name="peer-name-publication-and-resolution"></a>对等名称发布和解析
+
 ## <a name="publishing-a-peer-name"></a>发布对等名称  
+
  若要发布新 PNRP ID，对等机需执行以下操作：  
   
 -   将 PNRP 发布消息发送到缓存邻居（在缓存的最低级别中注册了 PNRP ID 的对等机）来播种缓存。  
   
 -   在云中选择不是其邻居的随机节点，并为其 P2P ID 发送 PNRP 名称解析请求。 生成的终结点确定进程使用发布对等机的 PNRP ID 对云中随机节点的缓存进行种子化。  
   
--  
+若 PNRP 版本 2 节点只解析其他 P2P ID，则不发布 PNRP ID。 HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\PeerNet\PNRP\IPV6-Global\SearchOnly=1 注册表值 （REG_DWORD 类型）指定对等机仅使用 PNRP 进行名称解析，绝不进行名称发布。 也可通过组策略配置此注册表值。  
   
- 若 PNRP 版本 2 节点只解析其他 P2P ID，则不发布 PNRP ID。 HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\PeerNet\PNRP\IPV6-Global\SearchOnly=1 注册表值 （REG_DWORD 类型）指定对等机仅使用 PNRP 进行名称解析，绝不进行名称发布。 也可通过组策略配置此注册表值。  
-  
-## <a name="resolving-a-peer-name"></a>解析对等名称  
+## <a name="resolving-a-peer-name"></a>解析对等名称
+
  在 PNRP 网络或云中查找其他对等是一个包含两个阶段的过程：  
   
 1.  终结点确定  
@@ -44,11 +43,9 @@ ms.locfileid: "47193546"
   
 -   如果未找到该 PNRP ID 且缓存中没有更接近目标 PNRP ID 的 PNRP ID，则所请求的对等机向请求对等机发送表明此情况的响应。 然后请求对等机选择下一个最接近的 PNRP ID。  
   
--  
-  
- 请求对等机通过连续迭代继续此过程，最终查找已注册该 PNRP ID 的节点。  
+请求对等机通过连续迭代继续此过程，最终查找已注册该 PNRP ID 的节点。  
   
  在 <xref:System.Net.PeerToPeer> 命名空间中，<xref:System.Net.PeerToPeer.PeerName> 记录之间存在多对多的关系，这些关系包含终结点和 PNRP 云或用于通信的对等网格。 有重复或过时条目，或具有相同对等名称的多个节点时，PNRP 节点可以使用 <xref:System.Net.PeerToPeer.PeerNameResolver> 类获取当前信息。 <xref:System.Net.PeerToPeer.PeerNameResolver> 方法使用单一对等名称，将透视简化为一对多对等名称记录和相同的一对多对等机和云的名称记录。 这类似于使用关系表联接执行的查询。 成功完成后，解析程序对象返回指定对等名称的 <xref:System.Net.PeerToPeer.PeerNameRecordCollection>。  例如，集合中所有对等名称记录中将会出现由云排序的对等名称。 这些是对等名称实例，基于 PNRP 的应用程序可能请求这些支持数据。  
   
 ## <a name="see-also"></a>请参阅  
- <xref:System.Net.PeerToPeer>
+- <xref:System.Net.PeerToPeer>

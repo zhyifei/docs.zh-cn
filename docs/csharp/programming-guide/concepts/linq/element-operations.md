@@ -1,13 +1,13 @@
 ---
 title: 元素运算 (C#)
-ms.date: 07/20/2015
+ms.date: 10/03/2018
 ms.assetid: 283206c9-3246-4c48-b01a-d9de409a7231
-ms.openlocfilehash: 14fdfbc38e1c25aa00056a42e116be98a489ce0f
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: dbae8c0b3d98fe9674fbbeb432c1e42763e81026
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43856885"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48836768"
 ---
 # <a name="element-operations-c"></a>元素运算 (C#)
 
@@ -25,8 +25,8 @@ ms.locfileid: "43856885"
 |FirstOrDefault|返回集合的第一个元素或满足条件的第一个元素。 如果此类元素不存在，则返回默认值。|不适用。|<xref:System.Linq.Enumerable.FirstOrDefault%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.FirstOrDefault%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.FirstOrDefault%60%601%28System.Linq.IQueryable%7B%60%600%7D%29?displayProperty=nameWithType>|  
 |上一个|返回集合的最后一个元素或满足条件的最后一个元素。|不适用。|<xref:System.Linq.Enumerable.Last%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Last%2A?displayProperty=nameWithType>|  
 |LastOrDefault|返回集合的最后一个元素或满足条件的最后一个元素。 如果此类元素不存在，则返回默认值。|不适用。|<xref:System.Linq.Enumerable.LastOrDefault%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.LastOrDefault%2A?displayProperty=nameWithType>|  
-|Single|返回集合的唯一一个元素或满足条件的唯一一个元素。|不适用。|<xref:System.Linq.Enumerable.Single%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Single%2A?displayProperty=nameWithType>|  
-|SingleOrDefault|返回集合的唯一一个元素或满足条件的唯一一个元素。 如果此类元素不存在，或该集合不是仅包含一个元素，则返回默认值。|不适用。|<xref:System.Linq.Enumerable.SingleOrDefault%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.SingleOrDefault%2A?displayProperty=nameWithType>|  
+|Single|返回集合的唯一一个元素或满足条件的唯一一个元素。 如果没有要返回的元素或要返回多个元素，则引发 <xref:System.InvalidOperationException>。 |不适用。|<xref:System.Linq.Enumerable.Single%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Single%2A?displayProperty=nameWithType>|  
+|SingleOrDefault|返回集合的唯一一个元素或满足条件的唯一一个元素。 如果没有要返回的元素，则返回默认值。 如果要返回多个元素，则引发 <xref:System.InvalidOperationException>。 |不适用。|<xref:System.Linq.Enumerable.SingleOrDefault%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.SingleOrDefault%2A?displayProperty=nameWithType>|  
   
 ## <a name="see-also"></a>请参阅
 

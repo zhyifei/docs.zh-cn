@@ -2,12 +2,12 @@
 title: C# 7.2 中的新增功能
 description: C# 7.2 中的新增功能概述。
 ms.date: 08/16/2017
-ms.openlocfilehash: 87fd67b37a31a02960334a2b2a325724e0cc2c73
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 93b0a5281db841abdb8de0865dfe4b13be6d9ee2
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/29/2018
-ms.locfileid: "47400798"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50181168"
 ---
 # <a name="whats-new-in-c-72"></a>C# 7.2 中的新增功能
 
@@ -20,7 +20,7 @@ C# 7.2 使用[语言版本选择](../language-reference/configure-language-versi
 
 此版本中新增的语言功能包括：
 
-* [引用语义结合值类型](#reference-semantics-with-value-types)
+* [编写安全高效代码的技巧](#safe-efficient-code-enhancements)
   - 结合了多项语法改进，可使用引用语义处理值类型。
 * [非尾随命名参数](#non-trailing-named-arguments)
   - 命名的参数可后接位置参数。
@@ -29,7 +29,7 @@ C# 7.2 使用[语言版本选择](../language-reference/configure-language-versi
 * [`private protected` 访问修饰符](#private-protected-access-modifier)
   - `private protected` 访问修饰符允许访问同一程序集中的派生类。
 
-## <a name="reference-semantics-with-value-types"></a>具有值类型的引用语义
+## <a name="safe-efficient-code-enhancements"></a>安全高效的代码的增强功能
 
 利用 7.2 中引入的语言功能，可在使用引用语义时处理值类型。 它们旨在尽量减少值类型的复制，而不造成与引用类型使用相关的内存分配，进而提升性能。 功能包括：
 
@@ -38,7 +38,7 @@ C# 7.2 使用[语言版本选择](../language-reference/configure-language-versi
  - `readonly struct` 声明，指示结构不可变，且应作为 `in` 参数传递到其成员方法。 将 `readonly` 修饰符添加到现有的结构声明是[二进制兼容的更改](version-update-considerations.md#binary-compatible-changes)。
  - `ref struct` 声明，指示结构类型直接访问托管的内存，且必须始终分配有堆栈。 将 `ref` 修饰符添加到现有 `struct` 声明是[不兼容的更改](version-update-considerations.md#incompatible-changes)。 `ref struct` 不能是类的成员，也不能用于可能在堆上分配的其他位置。
 
-若要详细了解所有这些更改，请参阅[结合使用值类型和引用语义](../reference-semantics-with-value-types.md)。
+可以在[编写安全高效的代码](../write-safe-efficient-code.md)中详细了解所有这些更改。
 
 ## <a name="non-trailing-named-arguments"></a>非尾随命名参数
 

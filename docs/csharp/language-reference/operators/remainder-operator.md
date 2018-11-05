@@ -7,16 +7,18 @@ helpviewer_keywords:
 - remainder operator [C#]
 - '% operator [C#]'
 ms.assetid: 3b74f4f9-fd9c-45e7-84fa-c8d71a0dfad7
-ms.openlocfilehash: 9cd2f7ad3856feb34667686979c942ecb21887c2
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: cd6d49b69d40f3b45aae060d46b58632dc8448f8
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45645913"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50041253"
 ---
 # <a name="-operator-c-reference"></a>% 运算符（C# 参考）
 
-余数运算符 `%` 计算第一个操作数除以第二个操作数后的余数。 用户定义的类型可以[重载](../keywords/operator.md) `%` 运算符。 当 `%` 重载时，[余数赋值运算符](remainder-assignment-operator.md) `%=` 也会隐式重载。
+余数运算符 `%` 计算第一个操作数除以第二个操作数后的余数。
+
+用户定义的类型可以[重载](../keywords/operator.md) `%` 运算符。 当 `%` 重载时，[余数赋值运算符](remainder-assignment-operator.md) `%=` 也会隐式重载。
 
 所有数值类型都支持余数运算符。
 
@@ -33,7 +35,7 @@ ms.locfileid: "45645913"
 - 如果不是零，则 `z` 的符号与 `x` 的符号相同；
 - `z` 的绝对值是 `|x| - n * |y|` 生成的值，其中 `n` 是小于或等于 `|x| / |y|` 的最大可能整数，`|x|` 和 `|y|` 分别是 `x` 和 `y` 的绝对值。
 
-有关非限定操作数的 `%` 运算符行为的信息，请参阅 [C# 语言规范](/dotnet/csharp/language-reference/language-specification/index)的[余数运算符](/dotnet/csharp/language-reference/language-specification/expressions#remainder-operator)章节。
+有关非限定操作数的 `%` 运算符行为的信息，请参阅 [C# 语言规范](../language-specification/index.md)的[余数运算符](~/_csharplang/spec/expressions.md#remainder-operator)章节。
 
 > [!NOTE]
 > 计算余数的此方法类似于用于整数操作数的方法，但与 IEEE 754 不同。 如果需要符合 IEEE 754 的余数运算，使用 <xref:System.Math.IEEERemainder%2A?displayProperty=nameWithType> 方法。

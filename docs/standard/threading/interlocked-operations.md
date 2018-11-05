@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: cbda7114-c752-4f3e-ada1-b1e8dd262f2b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 069a95656e7ceaf454c01c47d61ff391bcbed2fe
-ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
+ms.openlocfilehash: 6f96286da84e41e79fb0b6253d6f20eea89da21a
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46538880"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50201345"
 ---
 # <a name="interlocked-operations"></a>互锁操作
 
@@ -37,7 +37,7 @@ ms.locfileid: "46538880"
   
  在新式处理器中，通常使用一个指令即可实现 <xref:System.Threading.Interlocked> 类的方法。 因此，它们提供性能非常高的同步，并且可用于生成更高级的同步机制，例如自旋锁。  
   
- 有关组合使用 <xref:System.Threading.Monitor> 和 <xref:System.Threading.Interlocked> 类的示例，请参阅[监视器](https://msdn.microsoft.com/library/33fe4aef-b44b-42fd-9e72-c908e39e75db)。  
+ 有关组合使用 <xref:System.Threading.Monitor> 和 <xref:System.Threading.Interlocked> 类的示例，请参阅 <xref:System.Threading.Monitor>。  
   
 ## <a name="compareexchange-example"></a>CompareExchange 示例
 

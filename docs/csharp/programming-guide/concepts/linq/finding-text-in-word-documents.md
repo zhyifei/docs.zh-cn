@@ -2,12 +2,12 @@
 title: 查找 Word 文档中的文本 (C#)
 ms.date: 07/20/2015
 ms.assetid: 82f86677-560b-49dc-a089-610409939b2a
-ms.openlocfilehash: 56a99dd548eb149f6fa85370cef6a114103ce91e
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 3213855716ebcfc581f213a34417e579c133e385
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47235593"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50200491"
 ---
 # <a name="finding-text-in-word-documents-c"></a>查找 Word 文档中的文本 (C#)
 本主题扩展了以前的查询，以执行一些有用的任务：在文档中查找一个字符串的所有匹配项。  

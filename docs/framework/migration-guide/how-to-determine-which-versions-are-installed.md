@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 40a67826-e4df-4f59-a651-d9eb0fdc755d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1874d5512f04f22b9c53bdc9e92d0c96e45d21c8
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 7a8fc72735c5e45fb87c503272871fc687bacd3e
+ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47199703"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49453237"
 ---
 # <a name="how-to-determine-which-net-framework-versions-are-installed"></a>如何：确定安装了哪些 .NET Framework 版本
 
@@ -97,7 +97,7 @@ ms.locfileid: "47199703"
     |在 Windows 10 周年更新和 Windows Server 2016 上：394802<br /><br /> 在所有其他操作系统版本上：394806|[!INCLUDE[net_v462](../../../includes/net-v462-md.md)]| 
     |仅在 Windows 10 创意者更新上：460798<br/><br/> 在所有其他操作系统版本上： 460805 | .NET Framework 4.7 |
     |仅在 Windows 10 秋季创意者更新上：461308<br/><br/> 在所有其他操作系统版本上：461310 | .NET Framework 4.7.1 |
-    |仅 Windows 10 2018 年 4 月更新中：461808<br/><br/> 在所有其他操作系统版本上：461814| .NET Framework 4.7.2 |
+    |仅 Windows 10 2018 年 10 月更新上：461814<br/><br/> 仅 Windows 10 2018 年 4 月更新中：461808<br/><br/> 在所有其他操作系统版本上：461814| .NET Framework 4.7.2 |
     
 <a name="net_c"></a> 
 ## <a name="to-find-net-framework-versions-by-querying-the-registry-in-code-net-framework-1-4"></a>通过在代码中查询注册表来查找 .NET Framework 版本 (.NET Framework 1-4)
@@ -148,8 +148,9 @@ ms.locfileid: "47199703"
     |在所有其他 Windows 操作系统版本上安装的 .NET Framework 4.7|460805|
     |在 Windows 10 Fall Creators Update 上安装的 .NET Framework 4.7.1|461308|
     |在所有其他 Windows 操作系统版本上安装的 .NET Framework 4.7.1|461310|
+    |安装在 Windows 10 2018 年 10 月更新上的 .NET Framework 4.7.2|461814|
     |Windows 10 2018 年 4 月更新上安装的 .NET Framework 4.7.2|461808|
-    |在所有其他 Windows 操作系统版本上安装的 .NET Framework 4.7.2|461814|
+    |在 Windows 10 Fall Creators Update 和更早的操作系统版本上安装的 .NET Framework 4.7.2|461814|
     
      以下示例检查注册表中的 `Release` 值来确定是否已安装 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 或更高版本的 .NET Framework。
 

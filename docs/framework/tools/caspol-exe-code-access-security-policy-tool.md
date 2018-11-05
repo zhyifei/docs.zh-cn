@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: d2bf6123-7b0c-4e60-87ad-a39a1c3eb2e0
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c12444e435fa844095827411ba0e068303163bf4
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: cfb1e29229393b44c193c4e88005ebc350dbcc6f
+ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47201135"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49086851"
 ---
 # <a name="caspolexe-code-access-security-policy-tool"></a>Caspol.exe（代码访问安全策略工具）
 代码访问安全性 (CAS) 策略工具 (Caspol.exe) 使用户和管理员可修改计算机策略级别、用户策略级别和企业策略级别的安全策略。  
@@ -90,7 +90,7 @@ caspol [options]
 |**-pub** { **-cert** *cert_file_name* &#124;<br /><br /> **-file** *signed_file_name* &#124; **-hex**  *hex_string* }|指定具有给定软件发行者的代码，软件发行者由证书文件、文件上的签名或 X509 证书的十六进制表示形式来指示。 有关此成员资格条件的详细信息，请参阅 <xref:System.Security.Policy.PublisherMembershipCondition?displayProperty=nameWithType>。|  
 |**-site** *website*|指定具有给定源站点的代码。 例如:<br /><br /> `-site** www.proseware.com`<br /><br /> 有关此成员资格条件的详细信息，请参阅 <xref:System.Security.Policy.SiteMembershipCondition?displayProperty=nameWithType>。|  
 |**-strong -file** *file_name* {*name* &#124; **-noname**} {*version* &#124; **-noversion**}|指定具有特定强名称的代码，强名称由文件名、字符串形式的程序集名称和 *major*.*minor*.*build*.*revision* 格式的程序集版本指示。 例如:<br /><br /> **-strong -file** myAssembly.exe myAssembly 1.2.3.4<br /><br /> 有关此成员资格条件的详细信息，请参阅 <xref:System.Security.Policy.StrongNameMembershipCondition?displayProperty=nameWithType>。|  
-|**-url** *URL*|指定源自给定 URL 的代码。 URL 必须包含一个协议，如 http:// 或 ftp://。 此外，可以使用通配符 (\*) 指定来自特定 URL 的多个程序集。 **注意：** 由于 URL 可以用多个名称标识，使用 URL 作为成员条件不是确定代码标识的安全方式。 应尽可能使用强名称成员条件、发行者成员条件或哈希成员条件。 <br /><br /> 有关此成员资格条件的详细信息，请参阅 <xref:System.Security.Policy.UrlMembershipCondition?displayProperty=nameWithType>。|  
+|**-url** *URL*|指定源自给定 URL 的代码。 URL 必须包含一个协议，如 `http://` 或 `ftp://`。 此外，可以使用通配符 (\*) 指定来自特定 URL 的多个程序集。 **注意：** 由于 URL 可以用多个名称标识，使用 URL 作为成员条件不是确定代码标识的安全方式。 应尽可能使用强名称成员条件、发行者成员条件或哈希成员条件。 <br /><br /> 有关此成员资格条件的详细信息，请参阅 <xref:System.Security.Policy.UrlMembershipCondition?displayProperty=nameWithType>。|  
 |**-zone** *zonename*|指定具有给定源区域的代码。 *zonename* 参数可以是下列值之一：**MyComputer**、**Intranet**、**Trusted**、**Internet** 或 **Untrusted**。 有关此成员资格条件的更多信息，请参见 <xref:System.Security.Policy.ZoneMembershipCondition> 类。|  
   
  可与 **–addgroup** 和 **–chggroup** 选项一起使用的 *flags* 参数，可使用下列参数之一指定。  

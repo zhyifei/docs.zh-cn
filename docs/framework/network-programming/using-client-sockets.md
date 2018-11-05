@@ -16,14 +16,12 @@ helpviewer_keywords:
 - sockets, client sockets
 - client sockets
 ms.assetid: 81de9f59-8177-4d98-b25d-43fc32a98383
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: ee10681c8beddac06d5c4eae453f4070b2bf1b4e
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: ec789bcc5b675f3cde468f9464531a225e8c33db
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47195545"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50198962"
 ---
 # <a name="using-client-sockets"></a>使用客户端套接字
 在通过 <xref:System.Net.Sockets.Socket> 发起对话之前，必须在应用程序和远程设备之间创建数据管道。 尽管存在其他网络地址系列和协议，但本示例说明如何创建与远程服务的 TCP/IP 连接。  
@@ -42,7 +40,7 @@ IPHostEntry ipHostInfo = Dns.Resolve("host.contoso.com");
 IPAddress ipAddress = ipHostInfo.AddressList[0];  
 ```  
   
- Internet 编号分配机构 (IANA) 定义公共服务的端口号（有关详细信息，请参阅 www.iana.org/assignments/port-numbers）。 其他服务可具有 1,024 到 65,535 范围内的注册端口号。 以下代码将 host.contoso.com 的 IP 地址与端口号组合，为连接创建远程终结点。  
+ Internet 编号分配机构 (IANA) 定义公共服务的端口号；有关详细信息，请参阅[服务名称和传输协议端口号注册表](https://www.iana.org/assignments/service-names-port-numbers/service-names-port-numbers.xhtml)。 其他服务可具有 1,024 到 65,535 范围内的注册端口号。 以下代码将 host.contoso.com 的 IP 地址与端口号组合，为连接创建远程终结点。  
   
 ```vb  
 Dim ipe As New IPEndPoint(ipAddress, 11000)  

@@ -6,12 +6,12 @@ ms.author: johalex
 ms.date: 07/02/2018
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 46db9dc7ff425c483f1a9f61da5e806e598b16d5
-ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
+ms.openlocfilehash: bb41fd317507c14b46aea94e1ce576e390932a65
+ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37937162"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49453185"
 ---
 # <a name="tutorial-use-mlnet-to-cluster-iris-flowers-clustering"></a>教程：使用 ML.NET 生成鸢尾花数据群集（聚类分析）
 
@@ -56,7 +56,7 @@ ms.locfileid: "37937162"
 
 ## <a name="prepare-the-data"></a>准备数据
 
-1. 下载 [](https://github.com/dotnet/machinelearning/blob/master/test/data/iris.data) 数据集并将其保存至在上一步中创建的“数据”文件夹。 若要详细了解鸢尾花数据集，请参阅[鸢尾花数据集](https://en.wikipedia.org/wiki/Iris_flower_data_set)维基百科页面，以及该数据集的源[鸢尾花数据集](http://archive.ics.uci.edu/ml/datasets/Iris)页面。
+1. 下载 [iris.data](https://github.com/dotnet/machinelearning/blob/master/test/data/iris.data) 数据集并将其保存至在上一步中创建的“数据”文件夹。 若要详细了解鸢尾花数据集，请参阅[鸢尾花数据集](https://en.wikipedia.org/wiki/Iris_flower_data_set)维基百科页面，以及该数据集的源[鸢尾花数据集](http://archive.ics.uci.edu/ml/datasets/Iris)页面。
 
 1. 在“解决方案资源管理器”中，右键单击“iris.data”文件并选择“属性”。 在“高级”下，将“复制到输出目录”的值更改为“如果较新则复制”。
 
@@ -138,19 +138,19 @@ private static PredictionModel<IrisData, ClusterPrediction> Train()
 
 [!code-csharp[Add step to load data](../../../samples/machine-learning/tutorials/IrisClustering/Program.cs#6)]
 
-下一步是使用 <xref:Microsoft.ML.Transforms.ColumnConcatenator> 转换类将所有特征列合并到“特征”列。 默认情况下，学习算法仅处理“特征”列的特征。 添加以下代码：
+下一步是使用 <xref:Microsoft.ML.Legacy.Transforms.ColumnConcatenator> 转换类将所有特征列合并到“特征”列。 默认情况下，学习算法仅处理“特征”列的特征。 添加以下代码：
 
 [!code-csharp[Add step to concatenate columns](../../../samples/machine-learning/tutorials/IrisClustering/Program.cs#7)]
 
 ## <a name="choose-a-learning-algorithm"></a>选择学习算法
 
-在将数据添加到管道，并将其转换为正确的输入格式之后，可以选择学习算法（学习器）。 学习器定型模型。 ML.NET 提供一种 <xref:Microsoft.ML.Trainers.KMeansPlusPlusClusterer> 学习器，该学习器通过一种经过改进的、用于选择初始群集形心的方法来实现 [k-means 算法](https://en.wikipedia.org/wiki/K-means_clustering)。
+在将数据添加到管道，并将其转换为正确的输入格式之后，可以选择学习算法（学习器）。 学习器定型模型。 ML.NET 提供一种 <xref:Microsoft.ML.Legacy.Trainers.KMeansPlusPlusClusterer> 学习器，该学习器通过一种经过改进的、用于选择初始群集形心的方法来实现 [k-means 算法](https://en.wikipedia.org/wiki/K-means_clustering)。
 
 将下面的代码添加到在上一步中添加的数据处理代码后面的 `Train` 方法中：
 
 [!code-csharp[Add a learner step](../../../samples/machine-learning/tutorials/IrisClustering/Program.cs#8)]
 
-使用 <xref:Microsoft.ML.Trainers.KMeansPlusPlusClusterer.K?displayProperty=nameWithType> 属性指定群集数。 上述代码指定该数据集应拆分为三个群集。
+使用 <xref:Microsoft.ML.Legacy.Trainers.KMeansPlusPlusClusterer.K?displayProperty=nameWithType> 属性指定群集数。 上述代码指定该数据集应拆分为三个群集。
 
 ## <a name="train-the-model"></a>定型模型
 

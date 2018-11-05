@@ -1,180 +1,149 @@
 ---
 title: 同步基元概述
-ms.date: 03/30/2017
+description: 了解用于同步对共享资源或控制线程交互的访问的 .NET 线程同步基元
+ms.date: 10/01/2018
 ms.technology: dotnet-standard
 helpviewer_keywords:
 - synchronization, threads
-- threading [.NET Framework],synchronizing threads
+- threading [.NET],synchronizing threads
 - managed threading
 ms.assetid: b782bcb8-da6a-4c6a-805f-2eb46d504309
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 37abcb6b3a8fdf4ef91d5e946a97db7ca1428ce8
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: f4d1010069e9d95488a99133f949ca112dc08f0e
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47204594"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50201593"
 ---
 # <a name="overview-of-synchronization-primitives"></a>同步基元概述
-<a name="top"></a> .NET Framework 提供一系列用于控制线程交互和避免争用情况的同步基元。 这大致可分为 3 个类别：锁定、发出信号和联锁操作。  
-  
- 类别不整齐也非明确定义：某些同步机制具有多个类别的特征；一次释放一个线程的事件在功能上类似锁定；任何锁定的释放可均可被视为一个信号；并且联锁操作可用于构造锁定。 但是，类别仍然有用。  
-  
- 请务必记住线程同步是协作的。 即使是某个线程绕过同步机制直接访问了受保护的资源，此同步机制也不能为有效机制。  
-  
- 本概述包含以下几节：  
-  
--   [锁定](#locking)  
-  
--   [发出信号](#signaling)  
-  
--   [轻量同步类型](#lightweight_synchronization_types)  
-  
--   [SpinWait](#spinwait)  
-  
--   [互锁操作](#interlocked_operations)  
-  
-<a name="locking"></a>   
-## <a name="locking"></a>锁定  
- 锁定控制一次针对一个线程的资源，或控制针对指定数目线程的资源。 锁定正在使用时请求排他锁的线程将受阻，直到锁定变为可用。  
-  
-### <a name="exclusive-locks"></a>排他锁  
- 最简单的锁定形式是 C# 中的 `lock` 语句和 Visual Basic 中的 `SyncLock` 语句），它控制对代码块的访问。 此类块经常被称为关键部分。 `lock` 语句是使用 <xref:System.Threading.Monitor.Enter%2A?displayProperty=nameWithType> 和 <xref:System.Threading.Monitor.Exit%2A?displayProperty=nameWithType> 方法进行实现，并使用 `try…finally` 块来确保锁已解除。  
-  
- 一般来说，使用 <xref:System.Threading.Monitor> 类的最佳方式是，使用 `lock` 或 `SyncLock` 语句来保护小代码块，但绝不横跨多个方法。 <xref:System.Threading.Monitor> 类虽然功能强大，但容易形成孤立锁和死锁情况。  
-  
-#### <a name="monitor-class"></a>Monitor 类  
- <xref:System.Threading.Monitor> 类提供了附加功能，可以与 `lock` 语句配合使用：  
-  
--   <xref:System.Threading.Monitor.TryEnter%2A> 方法允许受阻线程等待资源在指定的时间间隔后放弃。 它返回一个指示成功或失败布尔值，该值可用于检测和避免潜在的死锁。  
-  
--   <xref:System.Threading.Monitor.Wait%2A> 方法由关键部分中的线程调用。 它放弃对资源和块的控制，直到资源再次可用。  
-  
--   <xref:System.Threading.Monitor.Pulse%2A> 和 <xref:System.Threading.Monitor.PulseAll%2A> 方法允许将要释放锁或要调用 <xref:System.Threading.Monitor.Wait%2A> 的线程将一个或多个线程放置到准备就绪的队列中，以便它们能够获取此锁。  
-  
- <xref:System.Threading.Monitor.Wait%2A>方法重载上的超时允许正在等待的线程跳转到就绪的队列。  
-  
- 如果用于锁的对象派生自<xref:System.MarshalByRefObject>，则 <xref:System.Threading.Monitor> 类可以在多个应用程序域中提供锁定。  
-  
- <xref:System.Threading.Monitor> 具有线程关联。 即，进入监视器的线程必须通过调用 <xref:System.Threading.Monitor.Exit%2A> 或 <xref:System.Threading.Monitor.Wait%2A> 退出。  
-  
- <xref:System.Threading.Monitor> 类不可实例化。 其方法是静态方法（Visual Basic 中为 `Shared`），并在用于可实例化的锁对象。  
-  
- 有关概念性概述，请参阅 [Monitor](https://msdn.microsoft.com/library/33fe4aef-b44b-42fd-9e72-c908e39e75db)。  
-  
-#### <a name="mutex-class"></a>Mutex 类  
- 线程通过调用其 <xref:System.Threading.WaitHandle.WaitOne%2A> 方法的重载来请求 <xref:System.Threading.Mutex>。 提供了超时的重载，以允许线程放弃等待。 与 <xref:System.Threading.Monitor> 类不同，互斥可以是局部的，也可以是全局的。 全局互斥（也称为已命名互斥）在整个操作系统中均可见，且可用于同步多个应用程序域或进程中的线程。 局部互斥派生自 <xref:System.MarshalByRefObject>，且可跨应用程序域边界使用。  
-  
- 此外，<xref:System.Threading.Mutex> 派生自 <xref:System.Threading.WaitHandle>，这意味着它可以与 <xref:System.Threading.WaitHandle> 提供的信号机制（如 <xref:System.Threading.WaitHandle.WaitAll%2A>、<xref:System.Threading.WaitHandle.WaitAny%2A> 和 <xref:System.Threading.WaitHandle.SignalAndWait%2A> 方法）一起使用。  
-  
- 和 <xref:System.Threading.Monitor> 一样，<xref:System.Threading.Mutex> 也具有线程关联。 与 <xref:System.Threading.Monitor> 不同，<xref:System.Threading.Mutex> 是可实例化的对象。  
-  
- 有关概念性概述，请参阅 [Mutex](../../../docs/standard/threading/mutexes.md)。  
-  
-#### <a name="spinlock-class"></a>SpinLock 类  
- 自 [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] 起，如果 <xref:System.Threading.Monitor> 要求的开销降低了性能，可以使用 <xref:System.Threading.SpinLock> 类。 当 <xref:System.Threading.SpinLock> 遇到锁定关键部分时，它只在循环中旋转，直到锁变为可用。 如果锁被保留的时间很短，旋转可以比阻止提供更好的性能。 不过，如果锁保留了超过数十个周期，虽然 <xref:System.Threading.SpinLock> 与 <xref:System.Threading.Monitor> 的性能相同，但前者使用的 CPU 周期更多，因此会降低其他线程或进程的性能。  
-  
-### <a name="other-locks"></a>其他锁  
- 锁不必为排他锁。 在允许有限数量的线程并发访问资源时，这通常很有用。 信号量和读取器/编写器锁旨在控制此类连入池的资源访问。  
-  
-#### <a name="readerwriterlock-class"></a>ReaderWriterLock 类  
- <xref:System.Threading.ReaderWriterLockSlim> 类解决了更改数据的线程（即编写器）必须具有资源的独占访问权的情况。 编写器处于非活动状态时，任意数量的读取器均可访问资源（例如，通过调用 <xref:System.Threading.ReaderWriterLockSlim.EnterReadLock%2A> 方法）。 当某个线程请求独占访问时，（例如，通过调用 <xref:System.Threading.ReaderWriterLockSlim.EnterWriteLock%2A> 方法），后续读取器请求将被阻止，直到所有现有读取器均已退出锁，并且编写器已进入并退出锁。  
-  
- <xref:System.Threading.ReaderWriterLockSlim> 具有线程关联。  
-  
- 有关概念性概述，请参阅[读取器-编写器锁](../../../docs/standard/threading/reader-writer-locks.md)。  
-  
-#### <a name="semaphore-class"></a>Semaphore 类  
- <xref:System.Threading.Semaphore> 类允许指定数量的线程访问资源。 请求资源的其他线程将受阻，直到一个线程释放信号量。  
-  
- 和 <xref:System.Threading.Mutex> 类一样，<xref:System.Threading.Semaphore> 也派生自 <xref:System.Threading.WaitHandle>。 也和 <xref:System.Threading.Mutex>一样，<xref:System.Threading.Semaphore> 可以是局部的，也可以是全局的。 它也可跨应用程序域边界使用。  
-  
- 与 <xref:System.Threading.Monitor>、<xref:System.Threading.Mutex> 和<xref:System.Threading.ReaderWriterLock> 不同，<xref:System.Threading.Semaphore> 不具有线程关联。 这意味着它可以在一个线程获取信号量而另一个线程释放此信号量的情况下使用。  
-  
- 有关概念性概述，请参阅 [Semaphore 和 SemaphoreSlim](../../../docs/standard/threading/semaphore-and-semaphoreslim.md)。  
-  
- <xref:System.Threading.SemaphoreSlim?displayProperty=nameWithType> 是单个流程边界内用于同步的轻量级信号量。  
-  
- [返回页首](#top)  
-  
-<a name="signaling"></a>   
-## <a name="signaling"></a>Signaling  
- 等待来自另一个线程的信号的最简单方法是调用 <xref:System.Threading.Thread.Join%2A> 方法，此方法在其他线程完成前受阻。 <xref:System.Threading.Thread.Join%2A> 具有两个重载，允许受阻线程在经过指定的时间间隔后跳出等待。  
-  
- 等待句柄提供一组更为丰富的等待和信号功能。  
-  
-### <a name="wait-handles"></a>等待句柄  
- 等待句柄派生自 <xref:System.Threading.WaitHandle> 类，后者转而派生自 <xref:System.MarshalByRefObject>。 因此，等待句柄可用于跨应用程序域边界同步线程的活动。  
-  
- 线程通过调用实例方法 <xref:System.Threading.WaitHandle.WaitOne%2A> 或其中一个静态方法（<xref:System.Threading.WaitHandle.WaitAll%2A>、<xref:System.Threading.WaitHandle.WaitAny%2A> 或 <xref:System.Threading.WaitHandle.SignalAndWait%2A>来阻止等待句柄。 释放方式取决于调用的方法类型和等待句柄的类型。  
-  
- 有关概念性概述，请参阅[等待句柄](https://msdn.microsoft.com/library/48d10b6f-5fd7-407c-86ab-0179aef72489)。  
-  
-#### <a name="event-wait-handles"></a>事件等待句柄  
- 事件等待句柄包括 <xref:System.Threading.EventWaitHandle>类及其派生类（<xref:System.Threading.AutoResetEvent> 和 <xref:System.Threading.ManualResetEvent>）。 当通过调用事件等待句柄的 <xref:System.Threading.EventWaitHandle.Set%2A> 方法或通过使用 <xref:System.Threading.WaitHandle.SignalAndWait%2A> 方法来发出事件等待句柄的信号时，将从事件等待句柄中释放线程。  
-  
- 事件等待句柄可以像旋转栅在每次发出信号时仅允许一个线程通过一样，自动对进行重置，也可以像接收到信号前保持关闭、然后在被关闭前保持打开的大门一样，必须手动进行重置。 顾名思义，<xref:System.Threading.AutoResetEvent> 和 <xref:System.Threading.ManualResetEvent> 分别表示前者和后者。 <xref:System.Threading.ManualResetEventSlim?displayProperty=nameWithType> 是单个流程边界内用于同步的轻量事件。  
-  
- <xref:System.Threading.EventWaitHandle> 可表示其中任一类型的事件，并且可为局部也可为全局。 派生类 <xref:System.Threading.AutoResetEvent> 和 <xref:System.Threading.ManualResetEvent> 始终是局部的。  
-  
- 事件等待句柄不具有线程关联。 任何线程均可以向事件等待句柄发送信号。  
-  
- 有关概念性概述，请参阅 [EventWaitHandle、AutoResetEvent、CountdownEvent、ManualResetEvent](../../../docs/standard/threading/eventwaithandle-autoresetevent-countdownevent-manualresetevent.md)。  
-  
-#### <a name="mutex-and-semaphore-classes"></a>Mutex 和 Semaphore 类  
- 因为 <xref:System.Threading.Mutex> <xref:System.Threading.Semaphore> 类派生自 <xref:System.Threading.WaitHandle>，因此可与 <xref:System.Threading.WaitHandle> 的静态方法一起使用。 例如，线程可以使用 <xref:System.Threading.WaitHandle.WaitAll%2A> 方法来等待直到以下全部 3 个条件均为 True：向<xref:System.Threading.EventWaitHandle> 发出信号，释放了 <xref:System.Threading.Mutex>，且释放了 <xref:System.Threading.Semaphore>。 同样，线程可使用<xref:System.Threading.WaitHandle.WaitAny%2A> 方法等待直到其中任一条件为 true。  
-  
- 对于 <xref:System.Threading.Mutex> 或 <xref:System.Threading.Semaphore>，被发送信号意味着被释放。 如果两者中任一类型被用作 <xref:System.Threading.WaitHandle.SignalAndWait%2A> 方法的第一个参数，则将其释放。 对于具有线程关联的 <xref:System.Threading.Mutex>，如果调用线程不具有互斥，则引发异常。 按前面所述，信号量不具有线程关联。  
-  
-#### <a name="barrier"></a>屏障  
- <xref:System.Threading.Barrier> 类提供了一种以循环方式同步多个线程的方法，以便所有线程在同一个点受阻并等待其他线程完成。 一个或多个线程需要另一个线程的结果时，继续到算法的下一阶段之前，一个屏障很有用。 有关详细信息，请参阅 [Barrier](../../../docs/standard/threading/barrier.md)。  
-  
- [返回页首](#top)  
-  
-<a name="lightweight_synchronization_types"></a>   
-## <a name="lightweight-synchronization-types"></a>轻量同步类型  
- 从 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] 起，可在可能时使用同步基元，该基元通过避免对 Win32 内核对象（如等待句柄）形成高开销的依赖来提供快速性能。 通常，在等待时间较短且仅当已尝试并发现原始同步类型让人不满意时，才应使用这些类型。 在需要跨进程通信的情况下，不能使用轻量类型。  
-  
--   <xref:System.Threading.SemaphoreSlim?displayProperty=nameWithType> 是 <xref:System.Threading.Semaphore?displayProperty=nameWithType> 的轻量版本。  
-  
--   <xref:System.Threading.ManualResetEventSlim?displayProperty=nameWithType> 是 <xref:System.Threading.ManualResetEvent?displayProperty=nameWithType> 的轻量版本。  
-  
--   <xref:System.Threading.CountdownEvent?displayProperty=nameWithType> 表示当其计数为零时将被发送信号的事件。  
-  
--   <xref:System.Threading.Barrier?displayProperty=nameWithType> 使多个线程能够相互同步而无需由主线程控制。 屏障会阻止每个线程继续，直到所有线程均已到达指定点。  
-  
- [返回页首](#top)  
-  
-<a name="spinwait"></a>   
-## <a name="spinwait"></a>SpinWait  
- 自 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]起，如果线程必须等待事件收到信号或必须满足某种条件，但实际等待时间应短于使用等待句柄或以其他方式阻止当前线程所需的等待时间，可以使用 <xref:System.Threading.SpinWait?displayProperty=nameWithType> 结构。 通过使用 <xref:System.Threading.SpinWait>，你可以指定等待期间要旋转的一小段时间，且只在特定时间不满足条件时让行（例如，通过等待或休眠）。  
-  
- [返回页首](#top)  
-  
-<a name="interlocked_operations"></a>   
-## <a name="interlocked-operations"></a>互锁操作  
- 联锁操作是 <xref:System.Threading.Interlocked> 类的静态方法在内存位置执行的简单原子操作。 这些原子操作包括添加、递增和递减、交换、取决于比较的条件交换以及在 32 位平台上读取 64 位值的操作。  
-  
+
+.NET 提供了一系列可用于同步对共享资源或协调线程交互的访问的类型。
+
+> [!IMPORTANT]
+> 使用相同的同步基元实例保护每次对共享资源的访问。 如果使用不同的同步基元实例保护对资源的访问或代码的某些部分直接访问资源，则多个线程可以同时访问资源。
+
+## <a name="waithandle-class-and-lightweight-synchronization-types"></a>WaitHandle 类和轻量同步类型
+
+多个 .NET 同步基元派生自 <xref:System.Threading.WaitHandle?displayProperty=nameWithType> 类，该类会封装本机操作系统同步句柄并将信号机制用于线程交互。 这些类包括：
+
+- <xref:System.Threading.Mutex?displayProperty=nameWithType>，授予对共享资源的独占访问权限。 如果没有任何线程拥有它，则 mutex 将处于已发出信号状态。
+- <xref:System.Threading.Semaphore?displayProperty=nameWithType>，限制可同时访问某一共享资源或资源池的线程数。 当信号量计数大于零时，会将信号量的状态设置为已发出信号；当信号量计数为零时，会将信号量的状态设置为未发出信号。
+- <xref:System.Threading.EventWaitHandle?displayProperty=nameWithType>，表示线程同步事件，可以处于已发出信号状态或未发出信号状态。
+- <xref:System.Threading.AutoResetEvent?displayProperty=nameWithType>，派生自 <xref:System.Threading.EventWaitHandle>，当发出信号时，会在发布单个等待线程后自动重置为未发出信号状态。
+- <xref:System.Threading.ManualResetEvent?displayProperty=nameWithType>，派生自 <xref:System.Threading.EventWaitHandle>，当发出信号时，会保持已发出信号状态，直到调用 <xref:System.Threading.EventWaitHandle.Reset%2A> 方法。
+
+在 .NET Framework 中，由于 <xref:System.Threading.WaitHandle> 派生自 <xref:System.MarshalByRefObject?displayProperty=nameWithType>，因此，这些类型可用于跨应用程序域边界同步线程的活动。
+
+在 .NET Framework 和 .NET Core 中，其中的一些类型可以表示已命名的系统同步句柄，这些句柄在整个操作系统中都可见并可用于进程间同步：
+
+- <xref:System.Threading.Mutex>（.NET Framework 和 .NET Core）、
+- <xref:System.Threading.Semaphore>（.NET Framework 和 Windows 上的 .NET Core）、
+- <xref:System.Threading.EventWaitHandle>（.NET Framework 和 Windows 上的 .NET Core）。
+
+有关详细信息，请参阅 <xref:System.Threading.WaitHandle> API 参考。
+
+轻量同步类型不依赖于基础操作系统句柄，通常会提供更好的性能。 但是，它们不能用于进程间同步。 将这些类型用于一个应用程序中的线程同步。
+
+其中的一些类型是派生自 <xref:System.Threading.WaitHandle> 的类型的替代项。 例如，<xref:System.Threading.SemaphoreSlim> 是 <xref:System.Threading.Semaphore> 的轻量替代项。
+
+## <a name="synchronization-of-access-to-a-shared-resource"></a>同步对共享资源的访问
+
+.NET 提供了一系列用于控制多个线程对共享资源的访问的同步基元。
+
+### <a name="monitor-class"></a>Monitor 类
+
+<xref:System.Threading.Monitor?displayProperty=nameWithType> 类通过获取或释放用于标识资源的对象上的 lock 来授予对共享资源的相互独占访问权限。 持有 lock 时，持有 lock 的线程可以再次获取并释放 lock。 阻止任何其他线程获取 lock，<xref:System.Threading.Monitor.Enter%2A?displayProperty=nameWithType> 方法等待释放 lock。 <xref:System.Threading.Monitor.Enter%2A> 方法可获取释放的 lock。 还可以使用 <xref:System.Threading.Monitor.TryEnter%2A?displayProperty=nameWithType> 方法指定线程尝试获取 lock 的持续时间。 由于 <xref:System.Threading.Monitor> 类具有线程关联，因此获取了 lock 的线程必须通过调用 <xref:System.Threading.Monitor.Exit%2A?displayProperty=nameWithType> 方法来释放 lock。
+
+可以通过使用 <xref:System.Threading.Monitor.Wait%2A?displayProperty=nameWithType>、<xref:System.Threading.Monitor.Pulse%2A?displayProperty=nameWithType> 和 <xref:System.Threading.Monitor.PulseAll%2A?displayProperty=nameWithType> 方法来协调用于获取同一对象上的 lock 的线程的交互。
+
+有关详细信息，请参阅 <xref:System.Threading.Monitor> API 参考。
+
 > [!NOTE]
->  仅保证单个操作的原子性；当多个操作必须作为一个单元执行时，必须使用更粗粒度的同步机制。  
+> 使用 C# 中的 [lock](../../csharp/language-reference/keywords/lock-statement.md) 语句和 Visual Basic 中的 [SyncLock](../../visual-basic/language-reference/statements/synclock-statement.md) 语句同步对共享资源的访问，而不是直接使用 <xref:System.Threading.Monitor> 类。 这些语句是使用 <xref:System.Threading.Monitor.Enter%2A> 和 <xref:System.Threading.Monitor.Exit%2A> 方法进行实现，并使用 `try…finally` 块来确保获取的 lock 已始终释放。
+
+### <a name="mutex-class"></a>Mutex 类
+
+<xref:System.Threading.Mutex?displayProperty=nameWithType> 类（与 <xref:System.Threading.Monitor> 类似），授予对共享资源的独占访问权限。 使用 [Mutex.WaitOne](<xref:System.Threading.WaitHandle.WaitOne%2A?displayProperty=nameWithType>) 方法重载之一请求 mutex 的所有权。 <xref:System.Threading.Mutex>（与 <xref:System.Threading.Monitor> 类似）具有线程关联，并且已获取 mutex 的线程必须通过调用 <xref:System.Threading.Mutex.ReleaseMutex%2A?displayProperty=nameWithType> 方法来释放它。
+
+<xref:System.Threading.Mutex> 类（与 <xref:System.Threading.Monitor> 不同）可用于进程间同步。 为此，请使用命名 mutex，它在整个操作系统中都可见。 若要创建命名 mutex 实例，请使用指定了名称的 [Mutex 构造函数](<xref:System.Threading.Mutex.%23ctor%2A>)。 还可以调用 <xref:System.Threading.Mutex.OpenExisting%2A?displayProperty=nameWithType> 方法来打开现有的命名系统 mutex。
   
- 尽管这些操作均不是锁或信号，但可用于构造锁和信号。 它们源于 Windows 操作系统，因此联锁操作非常快。  
+有关详细信息，请参阅 [Mutex](mutexes.md) 一文和 <xref:System.Threading.Mutex> API 参考。
+
+### <a name="spinlock-structure"></a>SpinLock 结构
+
+<xref:System.Threading.SpinLock?displayProperty=nameWithType> 结构（类似于 <xref:System.Threading.Monitor>），基于 lock 的可用性授予对共享资源的独占访问权限。 当 <xref:System.Threading.SpinLock> 尝试获取不可用的 lock 时，将在反复检查的循环中等待，直到 lock 变为可用。
+
+有关使用 SpinLock 的优缺点的详细信息，请参阅 [SpinLock](spinlock.md) 一文和 <xref:System.Threading.SpinLock> API 参考。
+
+### <a name="readerwriterlockslim-class"></a>ReaderWriterLockSlim 类
+
+<xref:System.Threading.ReaderWriterLockSlim?displayProperty=nameWithType> 类授予对共享资源的独占访问权限以便进行写入，并允许多个线程同时访问资源以便进行读取。 你可能想要使用 <xref:System.Threading.ReaderWriterLockSlim> 同步对支持线程安全读取操作，但需要独占访问权限才能执行写入操作的共享数据结构的访问。 当某个线程请求独占访问时（例如，通过调用 <xref:System.Threading.ReaderWriterLockSlim.EnterWriteLock%2A?displayProperty=nameWithType> 方法），后续读取器请求将被阻止，直到所有现有读取器均已退出 lock，并且编写器已进入并退出 lock。
   
- 联锁操作可以与易失内存保证一起使用，用于编写展示强大的非阻塞并发功能的应用程序。 但是，它们需要复杂的、低级别编程，因此在大多数情况下，简单锁是更好的选择。  
-  
- 有关概念性概述，请参阅[互锁操作](../../../docs/standard/threading/interlocked-operations.md)。  
-  
+有关详细信息，请参阅[读取器-编写器锁](reader-writer-locks.md)一文和 <xref:System.Threading.ReaderWriterLockSlim> API 参考。
+
+### <a name="semaphore-and-semaphoreslim-classes"></a>Semaphore 和 SemaphoreSlim 类
+
+<xref:System.Threading.Semaphore?displayProperty=nameWithType> 和 <xref:System.Threading.SemaphoreSlim?displayProperty=nameWithType> 限制可同时访问某一共享资源或资源池的线程数。 请求资源的其他线程将等待，直到任何线程释放信号量。 由于信号量没有线程关联，因此一个线程可以获取信号量，而另一个线程可以释放它。
+
+<xref:System.Threading.SemaphoreSlim> 是 <xref:System.Threading.Semaphore> 的轻量替代项，并且只能在单个流程边界内用于同步。
+
+在 Windows 上，可以将 <xref:System.Threading.Semaphore> 用于进程间同步。 为此，通过使用指定了名称或 <xref:System.Threading.Semaphore.OpenExisting%2A?displayProperty=nameWithType> 方法的 [Semaphore 构造函数](<xref:System.Threading.Semaphore.%23ctor%2A>)之一来创建表示指定了已命名系统信号量的 <xref:System.Threading.Semaphore> 实例。 <xref:System.Threading.SemaphoreSlim> 不支持已命名系统信号量。
+
+有关详细信息，请参阅 [Semaphore 和 SemaphoreSlim](semaphore-and-semaphoreslim.md) 一文以及 <xref:System.Threading.Semaphore> 或 <xref:System.Threading.SemaphoreSlim> API 参考。
+
+## <a name="thread-interaction-or-signaling"></a>线程交互或信号
+
+线程交互（或线程信号）表示线程必须等待来自一个或多个线程的通知或信号才能继续。 例如，如果线程 A 调用线程 B 的 <xref:System.Threading.Thread.Join%2A?displayProperty=nameWithType> 方法，则线程 A 将被阻止，直到完成线程 B。 前面部分中所述的同步基元提供不同的信号机制：通过释放 lock，一个线程通知另一个线程可以通过获取 lock 来继续。
+
+本部分介绍 .NET 提供的其他信号构造。
+
+### <a name="eventwaithandle-autoresetevent-manualresetevent-and-manualreseteventslim-classes"></a>EventWaitHandle、AutoResetEvent、ManualResetEvent 和 ManualResetEventSlim 类
+
+<xref:System.Threading.EventWaitHandle?displayProperty=nameWithType> 类表示一个线程同步事件。
+
+同步事件可以处于未发出信号状态或已发出信号状态。 当事件的状态为未发出信号时，调用了事件的 <xref:System.Threading.WaitHandle.WaitOne%2A?> 重载的线程会被阻止，直到事件处于已发出信号状态。 <xref:System.Threading.EventWaitHandle.Set%2A?displayProperty=nameWithType> 方法可将事件的状态设置为已发出信号。
+
+已发出信号的 <xref:System.Threading.EventWaitHandle> 的行为取决于其重置模式：
+
+- 使用 <xref:System.Threading.EventResetMode.AutoReset?displayProperty=nameWithType> 标志创建的 <xref:System.Threading.EventWaitHandle> 会在释放单个等待线程后自动进行重置。 就像旋转栅在每次发出信号时仅允许一个线程通过一样。 派生自 <xref:System.Threading.EventWaitHandle> 的 <xref:System.Threading.AutoResetEvent?displayProperty=nameWithType> 类表示该行为。
+- 在 <xref:System.Threading.EventWaitHandle.Reset%2A> 方法获得调用前，一直向使用 <xref:System.Threading.EventResetMode.ManualReset?displayProperty=nameWithType> 标志创建的 <xref:System.Threading.EventWaitHandle> 发出信号。 就像接收到信号前保持关闭、然后在被关闭前保持打开的大门一样。 派生自 <xref:System.Threading.EventWaitHandle> 的 <xref:System.Threading.ManualResetEvent?displayProperty=nameWithType> 类表示该行为。 <xref:System.Threading.ManualResetEventSlim?displayProperty=nameWithType> 类是 <xref:System.Threading.ManualResetEvent> 的轻量替代项。
+
+在 Windows 上，可以将 <xref:System.Threading.EventWaitHandle> 用于进程间同步。 为此，通过使用指定了名称或 <xref:System.Threading.EventWaitHandle.OpenExisting%2A?displayProperty=nameWithType> 方法的 [EventWaitHandle 构造函数](<xref:System.Threading.EventWaitHandle.%23ctor%2A>)之一来创建表示指定了已命名系统信号量的 <xref:System.Threading.EventWaitHandle> 实例。
+
+有关详细信息，请参阅 [EventWaitHandle](eventwaithandle.md)、[AutoResetEvent](autoresetevent.md) 以及 [ManualResetEvent 和 ManualResetEventSlim](manualresetevent-and-manualreseteventslim.md) 文章。 对于 API 参考，请参阅 <xref:System.Threading.EventWaitHandle>、<xref:System.Threading.AutoResetEvent>、<xref:System.Threading.ManualResetEvent> 和 <xref:System.Threading.ManualResetEventSlim>。
+
+### <a name="countdownevent-class"></a>CountdownEvent 类
+
+<xref:System.Threading.CountdownEvent?displayProperty=nameWithType> 类表示当其计数为零时将被设置的事件。 当 <xref:System.Threading.CountdownEvent.CurrentCount?displayProperty=nameWithType> 大于零时，调用了 <xref:System.Threading.CountdownEvent.Wait%2A?displayProperty=nameWithType> 的线程会被阻止。 调用 <xref:System.Threading.CountdownEvent.Signal%2A?displayProperty=nameWithType> 会递减事件的计数。
+
+与可用于通过来自一个线程的信号取消阻止多个线程的 <xref:System.Threading.ManualResetEvent> 或 <xref:System.Threading.ManualResetEventSlim> 相反，你可以使用 <xref:System.Threading.CountdownEvent> 通过来自多个线程的信号取消阻止一个或多个线程。
+
+有关详细信息，请参阅 [CountdownEvent](countdownevent.md) 一文和 <xref:System.Threading.CountdownEvent> API 参考。
+
+### <a name="barrier-class"></a>Barrier 类
+
+<xref:System.Threading.Barrier?displayProperty=nameWithType> 类表示线程执行屏障。 调用了 <xref:System.Threading.Barrier.SignalAndWait%2A?displayProperty=nameWithType> 方法的线程发出信号，它已到达屏障并等待其他参与线程到达屏障。 当所有参与线程到达屏障时，它们将继续前进，屏障将进行重置，使之再次可用。
+
+在继续执行下一个计算阶段之前，当一个或多个线程需要其他线程的结果时，可以使用 <xref:System.Threading.Barrier>。
+
+有关详细信息，请参阅 [Barrier](barrier.md) 一文和 <xref:System.Threading.Barrier> API 参考。
+
+## <a name="interlocked-class"></a>Interlocked 类
+
+<xref:System.Threading.Interlocked?displayProperty=nameWithType> 类提供了可对变量执行简单原子操作的静态方法。 这些原子操作包括添加、递增和递减、交换、取决于比较的条件交换以及读取 64 位整数值的操作。
+
+有关详细信息，请参阅[互锁操作](interlocked-operations.md)一文和 <xref:System.Threading.Interlocked> API 参考。
+
+## <a name="spinwait-structure"></a>SpinWait 结构
+
+<xref:System.Threading.SpinWait?displayProperty=nameWithType> 结构为基于自旋的等待提供支持。 如果线程必须等待事件收到信号或必须满足某种条件，但实际等待时间应短于使用等待句柄或以其他方式阻止线程所需的等待时间，你可能想要使用该结构。 通过使用 <xref:System.Threading.SpinWait>，你可以指定等待期间要旋转的一小段时间，且只在特定时间不满足条件时让行（例如，通过等待或休眠）。
+
+有关详细信息，请参阅 [SpinWait](spinwait.md) 一文和 <xref:System.Threading.SpinWait> API 参考。
+
 ## <a name="see-also"></a>请参阅
 
-- [为多线程处理同步数据](../../../docs/standard/threading/synchronizing-data-for-multithreading.md)  
-- [监视器](https://msdn.microsoft.com/library/33fe4aef-b44b-42fd-9e72-c908e39e75db)  
-- [Mutex](../../../docs/standard/threading/mutexes.md)  
-- [Semaphore 和 SemaphoreSlim](../../../docs/standard/threading/semaphore-and-semaphoreslim.md)  
-- [EventWaitHandle、AutoResetEvent、CountdownEvent、ManualResetEvent](../../../docs/standard/threading/eventwaithandle-autoresetevent-countdownevent-manualresetevent.md)  
-- [等待句柄](https://msdn.microsoft.com/library/48d10b6f-5fd7-407c-86ab-0179aef72489)  
-- [互锁操作](../../../docs/standard/threading/interlocked-operations.md)  
-- [读取器-编写器锁](../../../docs/standard/threading/reader-writer-locks.md)  
-- [Barrier](../../../docs/standard/threading/barrier.md)  
-- [SpinWait](../../../docs/standard/threading/spinwait.md)  
-- [SpinLock](../../../docs/standard/threading/spinlock.md)
+- <xref:System.Collections.Concurrent?displayProperty=nameWithType>
+- [线程安全集合](../collections/thread-safe/index.md)
+- [线程处理对象和功能](threading-objects-and-features.md)

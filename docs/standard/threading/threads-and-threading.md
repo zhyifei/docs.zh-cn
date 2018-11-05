@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 5baac3aa-e603-4fa6-9f89-0f2c1084e6b1
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ef464b0d4c22d04d42f9b6f953abefe7582b4957
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 5049ed1b44155f3c21c53bef24a13006fe97a3fa
+ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44188535"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49452581"
 ---
 # <a name="threads-and-threading"></a>线程与线程处理
 操作系统使用进程隔开正在执行的不同应用。 线程是操作系统向其分配处理器时间的基本单位，在相应进程内多个线程可以同时执行代码。 每个线程负责维护异常处理程序、计划优先级，以及系统用来保存被排入计划前线程上下文的一组结构。 线程上下文包含线程在其主机进程地址空间中顺畅继续执行所需的全部信息，包括线程的一组 CPU 寄存器和堆栈。  
@@ -26,7 +26,7 @@ ms.locfileid: "44188535"
  时间片长度具体视操作系统和处理器而定。 由于每个时间片都很小，因此即使只有一个处理器，多个线程也可能同时执行。 多处理器系统实际上正是如此，可执行线程在可用处理器之间进行分配。  
   
 ## <a name="when-to-use-multiple-threads"></a>何时使用多个线程  
- 如果软件需要用户交互，必须尽可能快地回应用户活动，以便于提供丰富的用户体验。 然而，与此同时，它还必须执行必要的计算，以尽可能快地向用户呈现数据。 如果应用仅使用一个执行线程，可以结合使用[异步编程](../../../docs/standard/asynchronous-programming-patterns/calling-synchronous-methods-asynchronously.md)和 [.NET Framework 远程处理](https://msdn.microsoft.com/library/eccb1d31-0a22-417a-97fd-f4f1f3aa4462)或使用 ASP.NET 创建的 [XML Web 服务](https://msdn.microsoft.com/library/1e64af78-d705-4384-b08d-591a45f4379c)，这样不仅可以使用自己计算机的处理时间，还能使用其他计算机的处理时间，以提高响应用户的速度，并减少应用的数据处理时间。 若要执行大量输入/输出工作，还可以使用 I/O 完成端口，以提高应用的响应速度。  
+ 如果软件需要用户交互，必须尽可能快地回应用户活动，以便于提供丰富的用户体验。 然而，与此同时，它还必须执行必要的计算，以尽可能快地向用户呈现数据。 如果应用仅使用一个执行线程，可以结合使用[异步编程](../../../docs/standard/asynchronous-programming-patterns/calling-synchronous-methods-asynchronously.md)和 [.NET Framework 远程处理](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/kwdt6w2k(v=vs.100))或使用 ASP.NET 创建的 [XML Web 服务](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/7bkzywba(v=vs.100))，这样不仅可以使用自己计算机的处理时间，还能使用其他计算机的处理时间，以提高响应用户的速度，并减少应用的数据处理时间。 若要执行大量输入/输出工作，还可以使用 I/O 完成端口，以提高应用的响应速度。  
   
 ### <a name="advantages-of-multiple-threads"></a>多个线程的优势  
  不过，使用多个线程是目前功能最强大的方法，不仅可以提高响应用户的速度，还能在几乎同时处理必要数据来完成工作。 在具有一个处理器的计算机上，多个线程可以造成这样的效应，具体是通过利用用户事件之间的短时间段在后台处理数据。 例如，用户可以编辑电子表格，同时另一个线程正在重新计算同一应用中此电子表格的其他部分。  

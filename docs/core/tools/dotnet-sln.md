@@ -4,12 +4,12 @@ description: 使用 dotnet-sln 命令，可以便捷地在解决方案文件中�
 author: mairaw
 ms.author: mairaw
 ms.date: 06/13/2018
-ms.openlocfilehash: 65ae402ef5519863886c8cf833598f5314b4bdad
-ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
+ms.openlocfilehash: 2651e8e14ad43f41354b8165179f95f65e732f4c
+ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36207760"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49121215"
 ---
 # <a name="dotnet-sln"></a>dotnet sln
 
@@ -95,3 +95,6 @@ dotnet new sln
 使用通配模式从解决方案中删除多个 C# 项目：
 
 `dotnet sln todo.sln remove **/*.csproj`
+
+> [!NOTE]
+> 通配不是 CLI 功能，而是命令行界面的一个功能。 必须使用支持通配的 shell 才可成功地展开文件。 有关通配的详细信息，请参阅[维基百科](https://en.wikipedia.org/wiki/Glob_(programming))。

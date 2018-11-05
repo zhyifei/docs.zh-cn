@@ -3,12 +3,12 @@ title: C# 6 中的新增功能 - C# 指南
 description: 了解 C# 版本 6 中的新增功能
 ms.date: 09/22/2016
 ms.assetid: 4d879f69-f889-4d3f-a781-75194e143400
-ms.openlocfilehash: f6f953eacc935d38cc7d45173109c96c52a5e2f3
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: ad3515e1fc7d70e1377f007276c369d2884780f0
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/29/2018
-ms.locfileid: "47208180"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50194028"
 ---
 # <a name="whats-new-in-c-6"></a>C# 6 中的新增功能
 
@@ -16,23 +16,23 @@ C# 6.0 版本包含许多可提高开发人员工作效率的功能。 此版本
 
 * [只读自动属性](#read-only-auto-properties)：
     - 可以创建只能在构造函数中设置的只读自动属性。
-* [自动属性初始值设定项](#auto-property-initializers)：
+* [自动属性初始化表达式](#auto-property-initializers)：
     - 可以编写初始化表达式来设置自动属性的初始值。
 * [Expression-bodied 函数成员](#expression-bodied-function-members)：
     - 可以使用 lambda 表达式创建单行方法。
 * [using static](#using-static)：
     - 可以将单个类的所有方法导入当前命名空间。
-* [Null - 条件运算符](#null-conditional-operators)：
+* [NULL 条件运算符](#null-conditional-operators)：
     - 可以简洁、安全地访问对象的成员，同时仍能使用 null 条件运算符检查 null。
 * [字符串内插](#string-interpolation)：
     - 可以使用内联表达式（而不是位置参数）编写字符串格式设置表达式。
 * [异常筛选器](#exception-filters)：
     - 可以基于异常或其他程序状态的属性捕获表达式。 
-* [nameof 表达式](#nameof-expressions)：
+* [`nameof` 表达式](#the-nameof-expression)：
     - 可以让编译器生成符号的字符串表示形式。
 * [Catch 和 Finally 块中的 Await](#await-in-catch-and-finally-blocks)：
     - 可以在先前不允许使用 `await` 表达式的位置使用它们。
-* [索引初始值设定项](#index-initializers)：
+* [索引初始化表达式](#index-initializers)：
     - 可以为关联容器及序列容器创建初始化表达式。
 * [集合初始值设定项的扩展方法](#extension-add-methods-in-collection-initializers)：
     - 除成员方法以外，集合初始值设定项还可以依赖可访问的扩展方法。
@@ -90,7 +90,7 @@ public class Student
 
 如果添加此语法不会删除可访问的方法，则为[二进制兼容的更改](version-update-considerations.md#binary-compatible-changes)。
 
-### <a name="auto-property-initializers"></a>自动属性初始值设定项
+### <a name="auto-property-initializers"></a>自动属性初始化表达式
 
 自动属性初始值设定项可让你在属性声明中声明自动属性的初始值。  在早期版本中，这些属性需要具有资源库，你需要使用该资源库来初始化支持字段使用的数据存储。 对于包含姓名和学生成绩列表的学生，请考虑此类：
 
@@ -211,27 +211,27 @@ this.SomethingHappened?.Invoke(this, eventArgs);
 
 ## <a name="string-interpolation"></a>字符串内插
 
-C# 6 包含新语法，用于从格式字符串和表达式编写字符串，可以通过计算这些字符串来生成其他字符串值。
+C# 6 包含新语法，用于从字符串和嵌入的表达式编写字符串，可以通过计算这些字符串来生成其他字符串值。
 
-传统上，需要在类似 `string.Format` 的方法中使用位置参数：
+传统上，需要在类似 <xref:System.String.Format%2A?displayProperty=nameWithType> 的方法中使用位置参数：
 
 [!code-csharp[stringFormat](../../../samples/snippets/csharp/new-in-6/oldcode.cs#stringFormat)]
 
-使用 C# 6，新的[字符串内插](../language-reference/tokens/interpolated.md)功能可以在格式字符串中嵌入表达式。 只需在字符串前面加上 `$`：
+使用 C# 6，新的[字符串内插](../language-reference/tokens/interpolated.md)功能可以在字符串中嵌入表达式。 只需在字符串前面加上 `$`：
 
 [!code-csharp[stringInterpolation](../../../samples/snippets/csharp/new-in-6/newcode.cs#FullNameExpressionMember)]
 
-此初始示例使用替代表达式的属性表达式。 可以扩展此语法以使用任何表达式。 例如，可以在内插过程中计算学生的成绩平均值：
+本示例使用替代表达式的属性表达式。 可以扩展此语法以使用任何表达式。 例如，可以在内插过程中计算学生的成绩平均值：
 
 [!code-csharp[stringInterpolationExpression](../../../samples/snippets/csharp/new-in-6/newcode.cs#stringInterpolationExpression)]
 
-运行前面的示例，你会发现 `Grades.Average()` 的输出的小数位数可能比你需要的多。 字符串内插语法支持可使用前面的格式设置方法的所有格式字符串。 在大括号内添加格式字符串。 在要设置格式的表达式后面添加 `:`：
+运行前面的示例，你会发现 `Grades.Average()` 的输出的小数位数可能比你需要的多。 字符串内插语法支持可使用前面的格式设置方法的所有格式字符串。 在大括号内指定格式字符串。 在要设置格式的表达式后面添加 `:`：
 
 [!code-csharp[stringInterpolationFormat](../../../samples/snippets/csharp/new-in-6/newcode.cs#stringInterpolationFormat)]
 
 上一行代码将 `Grades.Average()` 的值格式设置为具有两位小数的浮点数。
 
-`:` 始终解释为要设置格式的表达式和格式字符串之间的分隔符。 当表达式以另一种方式（如条件运算符）使用 `:` 时，这可能会产生问题：
+`:` 始终解释为要设置格式的表达式和格式字符串之间的分隔符。 当表达式以另一种方式（如[条件运算符](../language-reference/operators/conditional-operator.md)）使用 `:` 时，这可能会产生问题：
 
 ```csharp
 public string GetGradePointPercentages() =>
@@ -249,19 +249,21 @@ public string GetGradePointPercentages() =>
 可以从此示例中看出，甚至可以将字符串内插表达式嵌套在另一个字符串内插表达式中。 此示例在生产代码中很有可能比你想的更加复杂。
 但它说明了该功能的范围。 任何 C# 表达式都可以放置在内插字符串的大括号之间。
 
+若要开始使用字符串内插，请阅读 [C# 中的字符串内插](../tutorials/intro-to-csharp/interpolated-strings.yml)交互式教程。
+
 ### <a name="string-interpolation-and-specific-cultures"></a>字符串内插和特定区域性
 
-前面部分中显示的所有示例使用执行代码的计算机上的当前区域性和语言设置字符串格式。 通常，可能需要使用特定区域性设置生成的字符串的格式。
-为此，请利用通过字符串内插生成的对象可以隐式转换为 <xref:System.FormattableString> 这一事实。
+前面部分中显示的所有示例使用执行代码的计算机上的当前区域性设置字符串格式。 通常，可能需要使用特定区域性设置生成的字符串的格式。
+为此，请利用通过字符串内插生成的对象可以隐式转换为 <xref:System.FormattableString?displayProperty=nameWithType> 这一事实。
 
-<xref:System.FormattableString> 实例包含格式字符串，以及在将其转换为字符串之前评估表达式的结果。 在设置字符串的格式时，可以使用 <xref:System.FormattableString> 的公共方法指定区域性。 例如，以下示例使用德国区域性生成字符串。 （它使用“,”字符作为小数分隔符，使用“.”字符作为千位分隔符。）
+<xref:System.FormattableString> 实例包含组合格式字符串，以及在将其转换为字符串之前评估表达式的结果。 在设置字符串的格式时，可以使用 <xref:System.FormattableString.ToString(System.IFormatProvider)> 方法指定区域性。 例如，以下示例使用德国区域性生成字符串。 （它使用“,”字符作为小数分隔符，使用“.”字符作为千位分隔符。）
 
 ```csharp
 FormattableString str = $"Average grade is {s.Grades.Average()}";
 var gradeStr = str.ToString(new System.Globalization.CultureInfo("de-DE"));
 ```
 
-有关详细信息，请参阅[字符串内插](../language-reference/tokens/interpolated.md)主题。
+有关详细信息，请参阅[字符串内插](../language-reference/tokens/interpolated.md)一文和 [C# 中的字符串内插](../tutorials/string-interpolation.md)教程。
 
 ## <a name="exception-filters"></a>异常筛选器
 
@@ -311,7 +313,7 @@ C# 6 中的另一个新功能是异常筛选器。 异常筛选器是确定何�
 在代码中添加之后，将调试器设置为在所有未处理的异常处中断。 在调试器下运行程序，每当 `PerformFailingOperation()` 引发 `RecoverableException` 时，调试器就会中断。
 调试器将中断程序，因为不会执行 catch 子句（由于异常筛选器返回 false）。
 
-## <a name="nameof-expressions"></a>`nameof` 表达式
+## <a name="the-nameof-expression"></a>`nameof` 表达式
 
 `nameof` 表达式的计算结果为符号的名称。 每当需要变量、属性或成员字段的名称时，这是让工具正常运行的好办法。
 
@@ -347,7 +349,7 @@ C# 5 对于可放置 `await` 表达式的位置有若干限制。
 > [!NOTE]
 > 鉴于此行为，建议仔细编写 `catch` 和 `finally` 子句，避免引入新的异常。
 
-## <a name="index-initializers"></a>索引初始值设定项
+## <a name="index-initializers"></a>索引初始化表达式
 
 索引初始值设定项是提高集合初始值设定项与索引用途一致性的两个功能之一。 在早期版本的 C# 中，只能将集合初始值设定项用于序列样式集合，包括在键值对周围添加括号而得到 <xref:System.Collections.Generic.Dictionary%602>：
 

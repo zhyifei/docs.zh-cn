@@ -4,12 +4,12 @@ description: 了解现有文件和 .NET Core csproj 文件之间的区别
 author: blackdwarf
 ms.author: mairaw
 ms.date: 09/22/2017
-ms.openlocfilehash: 1fd264da2863fbeb88900be0f6fe000acac08a09
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 3de168b8cebeb435a45861138aea26580663c135
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47216911"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50203951"
 ---
 # <a name="additions-to-the-csproj-format-for-net-core"></a>.NET Core 的 csproj 格式的新增内容
 
@@ -72,7 +72,7 @@ ms.locfileid: "47216911"
 要禁用所有隐式 glob，可将 `<EnableDefaultItems>` 属性设置为 `false`，如以下示例所示：
 ```xml
 <PropertyGroup>
-    <EnableDefaultItems>false</EnableDefaultItems>
+    <EnableDefaultItems>false</EnableDefaultItems>
 </PropertyGroup>
 ```
 
@@ -92,10 +92,11 @@ ms.locfileid: "47216911"
 ## <a name="additions"></a>新增内容
 
 ### <a name="sdk-attribute"></a>Sdk 特性 
-*.csproj* 文件的 `<Project>` 元素具有名为 `Sdk` 的新特性。 `Sdk` 指定项目将使用的 SDK。 如[分层文档](cli-msbuild-architecture.md)中所述，SDK 是一组可生成 .NET Core 代码的 MSBuild [任务](/visualstudio/msbuild/msbuild-tasks)和[目标](/visualstudio/msbuild/msbuild-targets)。 .NET Core 工具随附了两个主要 SDK：
+*.csproj* 文件的 `<Project>` 元素具有名为 `Sdk` 的新特性。 `Sdk` 指定项目将使用的 SDK。 如[分层文档](cli-msbuild-architecture.md)中所述，SDK 是一组可生成 .NET Core 代码的 MSBuild [任务](/visualstudio/msbuild/msbuild-tasks)和[目标](/visualstudio/msbuild/msbuild-targets)。 .NET Core 工具随附了三个主要 SDK：
 
 1. ID 为 `Microsoft.NET.Sdk` 的 .NET Core SDK
 2. ID 为 `Microsoft.NET.Sdk.Web` 的 .NET Core Web SDK
+3. ID 为 `Microsoft.NET.Sdk.Razor` 的 .NET Core Razor 类库 SDK
 
 需要在 `<Project>` 元素上将 `Sdk` 属性设置为这两个 ID 之一，以使用 .NET Core 工具和生成代码。 
 
@@ -112,7 +113,7 @@ ms.locfileid: "47216911"
 #### <a name="includeassets-excludeassets-and-privateassets"></a>IncludeAssets、ExcludeAssets 和 PrivateAssets
 `IncludeAssets` 属性指定应使用 `<PackageReference>` 指定的包中的哪些资产。 
 
-`ExcludeAssets` 属性指定不得使用 `<PackageReference>` 指定的包中的哪些资产。
+`ExcludeAssets` 属性指定不应使用 `<PackageReference>` 指定的包中的哪些资产。
 
 `PrivateAssets` 属性指定应使用 `<PackageReference>` 指定的包中的哪些资产，但不得将这些资产传递到下一个项目。 
 
