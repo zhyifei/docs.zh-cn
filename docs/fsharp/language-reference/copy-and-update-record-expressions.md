@@ -1,5 +1,5 @@
 ---
-title: '复制和更新记录表达式 （F #）'
+title: 复制和更新记录表达式 （F#）
 description: 了解如何编写的复制和更新记录表达式复制现有的记录，更新指定的字段，并返回已更新的记录。
 author: ChrSteinert
 ms.date: 06/04/2016

@@ -1,6 +1,6 @@
 ---
-title: 'Byref （F #）'
-description: '了解有关 byref 和类似 byref 类型在 F # 中，用于低级编程。'
+title: Byref （F#）
+description: 了解有关 byref 和类似 byref 类型在 F# 中，用于低级编程。
 ms.date: 09/02/2018
 ms.openlocfilehash: 6131104e4325f77da84368c337f998c6b2b5309b
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
@@ -11,7 +11,7 @@ ms.locfileid: "48836876"
 ---
 # <a name="byrefs"></a>Byref
 
-F # 有处理低级别编程的空间中的两个主要功能区域：
+F# 有处理低级别编程的空间中的两个主要功能区域：
 
 * `byref` / `inref` / `outref`类型，它们是托管的指针。 必须对使用情况的限制，以便不能编译的程序在运行时无效。
 * 一个`byref`-如结构，即[结构](structures.md)具有类似语义和相同的编译时限制`byref<'T>`。 一个示例是<xref:System.Span%601>。
@@ -97,7 +97,7 @@ let f (x: inref<SomeStruct>) = s.SomeField
 * 没有任何含义的其他线程或别名不具有写访问权限`x`。
 * 没有任何含义，`SomeStruct`是固定不变，凭借`x`正在`inref`。
 
-但是，对于 F # 的值类型**都**不可变的`this`指针被推断为`inref`。
+但是，对于 F# 的值类型**都**不可变的`this`指针被推断为`inref`。
 
 所有这些规则组合在一起表示的持有者`inref`指针不能修改所指向的内存的直接内容。
 
@@ -107,18 +107,18 @@ let f (x: inref<SomeStruct>) = s.SomeField
 
 ### <a name="interop-with-c"></a>使用 C# 的互操作 #
 
-C# 支持`in ref`并`out ref`关键字，除了`ref`返回。 下表显示了如何 F # 解释什么 C# 发出：
+C# 支持`in ref`并`out ref`关键字，除了`ref`返回。 下表显示了如何 F# 解释什么 C# 发出：
 
-|C# 构造|F # 推断|
+|C# 构造|F# 推断|
 |------------|---------|
 |`ref` 返回值|`outref<'T>`|
 |`ref readonly` 返回值|`inref<'T>`|
 |`in ref` 参数|`inref<'T>`|
 |`out ref` 参数|`outref<'T>`|
 
-下表显示了什么 F # 发出：
+下表显示了什么 F# 发出：
 
-|F # 构造|发出的构造|
+|F# 构造|发出的构造|
 |------------|-----------------|
 |`inref<'T>` 自变量|`[In]` 在参数上的属性|
 |`inref<'T>` 返回|`modreq` 属性值|
@@ -127,7 +127,7 @@ C# 支持`in ref`并`out ref`关键字，除了`ref`返回。 下表显示了如
 
 ### <a name="type-inference-and-overloading-rules"></a>类型推理和重载规则
 
-`inref<'T>`在以下情况下 F # 编译器推断类型：
+`inref<'T>`在以下情况下 F# 编译器推断类型：
 
 1. .NET 参数或返回类型具有`IsReadOnly`属性。
 2. `this`没有可变字段的结构类型的指针。
@@ -165,20 +165,20 @@ type S(count1: Span<int>, count2: Span<int>) =
 
 `IsByRefLike` 并不意味着`Struct`。 必须同时出现在类型上。
 
-一个"`byref`-例如"F # 中的结构是绑定堆栈的值类型。 它永远不会分配托管堆上。 一个`byref`-像结构可用于高效的编程中，因为它强制实施强检查有关生存期和非捕获组。 中的规则：
+一个"`byref`-例如"F# 中的结构是绑定堆栈的值类型。 它永远不会分配托管堆上。 一个`byref`-像结构可用于高效的编程中，因为它强制实施强检查有关生存期和非捕获组。 中的规则：
 
 * 它们可用作函数参数、 方法参数、 局部变量、 方法返回。
 * 它们不能是静态或实例的类或常规结构的成员。
 * 不能通过任何闭包构造捕获它们 (`async`方法或 lambda 表达式)。
 * 它们不能用作泛型参数。
 
-最后这一点非常重要的 F # 管道样式编程中，作为`|>`是参数化其输入的类型的泛型函数。 可能的放宽此限制`|>`将来，因为它是内联的不会不调用任何非内联泛型函数在其主体中。
+最后这一点非常重要的 F# 管道样式编程中，作为`|>`是参数化其输入的类型的泛型函数。 可能的放宽此限制`|>`将来，因为它是内联的不会不调用任何非内联泛型函数在其主体中。
 
 尽管这些规则非常强限制使用，但它们这样做是为了满足这一承诺的高性能计算以安全方式。
 
 ## <a name="byref-returns"></a>Byref 返回
 
-Byref 返回从 F # 函数或成员可以产生和使用。 使用时`byref`-返回方法，则这是隐式取消引用。 例如：
+Byref 返回从 F# 函数或成员可以产生和使用。 使用时`byref`-返回方法，则这是隐式取消引用。 例如：
 
 ```fsharp
 let safeSum(bytes: Span<byte>) =

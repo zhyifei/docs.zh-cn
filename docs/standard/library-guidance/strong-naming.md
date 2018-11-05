@@ -1,21 +1,21 @@
 ---
-title: 强命名和.NET 库
-description: 强命名的.NET 库的最佳实践建议。
+title: 强命名和 .NET 库
+description: 强命名 .NET 库的最佳实践建议。
 author: jamesnk
 ms.author: mairaw
 ms.date: 10/16/2018
-ms.openlocfilehash: e3f7d443eb9acc84c800ea2611b803733085391c
-ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
-ms.translationtype: MT
+ms.openlocfilehash: 6f5743c7a8c6fdbdcdcf3aa80d2f92f2e04621f2
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "49372800"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50201447"
 ---
 # <a name="strong-naming"></a>强命名
 
-强命名是指使用一个密钥，并生成程序集签名[强名称程序集](../../framework/app-domains/strong-named-assemblies.md)。 强名称的程序集时，它将创建唯一的标识基于名称和程序集版本号，并有助于防止程序集冲突。
+强命名指使用密钥对程序集进行签名，从而生成[强名称程序集](../../framework/app-domains/strong-named-assemblies.md)。 程序集具有强名称时，将基于名称和程序集版本号创建唯一标识，并有助于防止发生程序集冲突。
 
-强命名的缺点是，Windows 上的.NET Framework 使严格加载的程序集具有强名称程序集后。 一个强名称的程序集引用必须与引用的程序集，强制开发人员的版本完全匹配[配置的绑定重定向](../../framework/configure-apps/redirect-assembly-versions.md)时使用的程序集：
+强命名的缺点是，一旦程序集具有强名称，Windows 上的 .NET Framework 就会严格加载程序集。 强名称程序集引用必须与程序集引用的版本完全匹配，强制开发人员在使用程序集时[配置绑定重定向](../../framework/configure-apps/redirect-assembly-versions.md)：
 
 ```xml
 <configuration>
@@ -30,43 +30,45 @@ ms.locfileid: "49372800"
 </configuration>
 ```
 
-当.NET 开发人员抱怨有关强命名时，什么它们通常抱怨是严格的程序集加载。 幸运的是，此问题是独立于.NET Framework。 .NET core、 Xamarin、 UWP 和大多数其他.NET 实现没有严格的程序集加载并删除强命名的主要缺点。
+当 .NET 开发人员抱怨强命名时，通常抱怨的是严格的程序集加载。 幸运的是，此问题独立于 .NET Framework。 .NET Core、Xamarin、UWP 和大多数其他 .NET 实现没有严格的程序集加载，因此不会存在强命名的主要缺点。
 
-强命名的一个重要方面是它是迅速传播开： 强名称程序集可以唯一引用其他强名称程序集。 如果你的库不是强命名，您已经排除生成的应用程序或需要使用它的强命名的库的开发人员。
+强命名的一个重要方面是它已迅速传播开了：某个强名称程序集只能引用其他强名称程序集。 如果你的库未强命名，则会阻止生成需要强命名的应用程序或库的开发人员使用该库。
 
-强命名的优点有：
+强命名的优点包括：
 
-1. 可以引用并使用其他强名称程序集的程序集。
+1. 程序集可以被引用并由其他强名称程序集使用。
 2. 程序集可以存储在全局程序集缓存 (GAC) 中。
-3. 可以与其他版本的程序集并行加载程序集。 使用插件体系结构的应用程序通常所需的并行程序集加载。
+3. 程序集可以与其他版本的程序集并行加载。 具有插件体系结构的应用程序通常需要并行程序集加载。
 
-## <a name="create-strong-named-net-libraries"></a>创建的强命名的.NET 库
+## <a name="create-strong-named-net-libraries"></a>创建强名称 .NET 库
 
-您应具有强名称开放源.NET 库。 大多数人可以使用它，以及严格的程序集加载仅影响.NET Framework，可确保强命名程序集。
+应强命名开放源代码 .NET 库。 强命名程序集可确保大多数人可以使用它，并且严格的程序集加载仅影响 .NET Framework。
 
 > [!NOTE]
-> 本指南是特定于公开分布式.NET 库，如.NET 库在 NuGet.org 上发布。强命名不要求由大多数.NET 应用程序，而且不应默认情况下完成。
+> 本指南特定于公开分布的 .NET 库，如 NuGet.org 上发布的 .NET 库。强命名不是大多数 .NET 应用程序所必需的，默认情况下不得执行强命名。
 
-**请考虑 ✔️**强命名库的程序集。
+✔️请考虑强命名库的程序集。
 
-**请考虑 ✔️**签入到源代码管理系统使用到强名称的密钥。
+✔️请考虑将强命名密钥添加到源代码管理系统。
 
-> 公开可用的密钥可让开发人员可以修改并使用相同的密钥重新编译库源代码。
+> 公开提供的密钥可让开发人员修改库源代码并使用相同的密钥进行重新编译。
+> 
+> 如果强命名密钥过去用于在[部分信任的方案](/dotnet/framework/misc/using-libraries-from-partially-trusted-code)中授予特殊权限，则不得公开该强命名密钥。 或者，可能会破坏现有环境。
 
 > [!IMPORTANT]
-> 当需要加密的标识，则[Authenticode](/windows-hardware/drivers/install/authenticode)并[NuGet 包签名](/nuget/create-packages/sign-a-package)建议。 有关安全注意事项的信息不应使用强命名。
+> 需要了解代码发布者的身份时，建议使用[验证码](/windows-hardware/drivers/install/authenticode)和 [NuGet 包签名](/nuget/create-packages/sign-a-package)。 代码访问安全性 (CAS) 不得用作安全缓解。
 
-**请考虑 ✔️**递增上仅主版本更改，以帮助用户减少绑定重定向和更新频率的程序集版本。
+✔️请考虑仅在主版本发生更改时递增程序集版本，以帮助用户减少绑定重定向和更新频率。
 
 > 详细了解[版本控制和程序集版本](./versioning.md#assembly-version)。
 
-**不这样做 ❌**添加、 删除或更改的强命名密钥。
+❌请勿添加、删除或更改强命名密钥。
 
-> 修改程序集的强命名密钥更改程序集的标识，并将使用它的已编译的代码。 有关详细信息，请参阅[二进制的重大更改](./breaking-changes.md#binary-breaking-change)。
+> 修改程序集的强命名密钥会更改程序集的标识并破坏使用该标识的已编译代码。 有关详细信息，请参阅[二进制重大更改](./breaking-changes.md#binary-breaking-change)。
 
-**不这样做 ❌**发布你的库的强名称的和非强命名版本。 例如，`Contoso.Api` 和 `Contoso.Api.StrongNamed`。
+❌请勿发布库的强名称或非强名称版本。 例如，`Contoso.Api` 和 `Contoso.Api.StrongNamed`。
 
-> 发布两个包分叉你开发人员生态系统。 此外，如果这两个包根据最终的应用程序开发人员可能会遇到类型名称冲突。 就.NET 而言它们是不同程序集中的不同类型。
+> 发布两个包会为开发人员生态系统创建分支。 此外，如果应用程序依赖于这两个包，则开发人员可能会遇到类型名称冲突。 就 .NET 而言，它们是不同程序集中的不同类型。
 
 >[!div class="step-by-step"]
 [上一页](./cross-platform-targeting.md)

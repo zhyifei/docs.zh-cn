@@ -1,6 +1,6 @@
 ---
-title: '匹配表达式 （F #）'
-description: '了解 F # 匹配表达式如何提供基于的表达式与一组模式的比较结果的分支控制。'
+title: 匹配表达式 （F#）
+description: 了解 F# 匹配表达式如何提供基于的表达式与一组模式的比较结果的分支控制。
 ms.date: 04/19/2018
 ms.openlocfilehash: e4cb82f20fe82bff562736557c2346562c557f59
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2

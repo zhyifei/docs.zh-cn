@@ -1,6 +1,6 @@
 ---
 title: 位运算符 (F#)
-description: '了解有关 F # 编程语言中可用的按位运算符。'
+description: 了解有关 F# 编程语言中可用的按位运算符。
 ms.date: 07/20/2018
 ms.openlocfilehash: ed76fcf5f9c569a2f288cf260e99dc29fd65ef3b
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
@@ -11,11 +11,11 @@ ms.locfileid: "48581503"
 ---
 # <a name="bitwise-operators"></a>位运算符
 
-本主题介绍 F # 语言中提供的按位运算符。
+本主题介绍 F# 语言中提供的按位运算符。
 
 ## <a name="summary-of-bitwise-operators"></a>按位运算符摘要
 
-下表描述 F # 语言中的未装箱整型类型支持的按位运算符。
+下表描述 F# 语言中的未装箱整型类型支持的按位运算符。
 
 |运算符|说明|
 |--------|-----|

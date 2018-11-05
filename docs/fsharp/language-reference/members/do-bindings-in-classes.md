@@ -1,6 +1,6 @@
 ---
 title: 类中的 do 绑定 (F#)
-description: '了解如何使用 F # do 中的类定义，当构造对象或首次使用该类型时将执行操作的绑定。'
+description: 了解如何使用 F# do 中的类定义，当构造对象或首次使用该类型时将执行操作的绑定。
 ms.date: 05/16/2016
 ms.openlocfilehash: e54a5bde52bf6973cc338c929ba99e6fd5b53127
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2

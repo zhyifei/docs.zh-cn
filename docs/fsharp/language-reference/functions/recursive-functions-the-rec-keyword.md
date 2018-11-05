@@ -1,6 +1,6 @@
 ---
 title: 递归函数：rec 关键字 (F#)
-description: '了解如何使用 let 关键字使用 F # rec 关键字定义的递归函数。'
+description: 了解如何使用 let 关键字使用 F# rec 关键字定义的递归函数。
 ms.date: 05/16/2016
 ms.openlocfilehash: 5aab6ed8ab0fc3c0f0bcfc93c3ce6518ec53254f
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
@@ -30,7 +30,7 @@ function2-body
 
 ## <a name="remarks"></a>备注
 
-递归函数，函数调用自身，F # 语言中显式标识。 这使正在定义的标识符可在函数的作用域中。
+递归函数，函数调用自身，F# 语言中显式标识。 这使正在定义的标识符可在函数的作用域中。
 
 以下代码演示了递归函数，用于计算*n*<sup>th</sup>斐波纳契数。
 
