@@ -8,11 +8,11 @@ helpviewer_keywords:
 - configuration [WCF], interoperable services
 ms.assetid: 91b70a21-8f5c-4679-808c-2ed5fa6b2013
 ms.openlocfilehash: f32308a17e2934b6884140307074f97e6b51f5f9
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.sourcegitcommit: 296183dbe35077b5c5e5e74d5fbe7f399bc507ee
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50190536"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "50982849"
 ---
 # <a name="creating-ws-i-basic-profile-11-interoperable-services"></a>创建 WS-I 基本配置文件 1.1 可互操作服务
 若要配置为可与互操作的 WCF 服务端点[!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)]Web 服务客户端：  

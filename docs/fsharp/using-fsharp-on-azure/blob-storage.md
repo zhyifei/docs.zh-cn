@@ -1,5 +1,5 @@
 ---
-title: '开始使用 Azure Blob 存储中使用 F #'
+title: 开始使用 Azure Blob 存储中使用 F#
 description: 使用 Azure Blob 存储在云中存储非结构化的数据。
 author: sylvanc
 ms.date: 09/20/2016
@@ -10,11 +10,11 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 11/02/2018
 ms.locfileid: "44037277"
 ---
-# <a name="get-started-with-azure-blob-storage-using-f"></a>开始使用 Azure Blob 存储中使用 F # #
+# <a name="get-started-with-azure-blob-storage-using-f"></a>开始使用 Azure Blob 存储中使用 F# #
 
 Azure Blob 存储是将非结构化数据作为对象/blob 存储在云中的服务。 Blob 存储可以存储任何类型的文本或二进制数据（如文档、媒体文件或应用程序安装程序）。 Blob 存储也称为对象存储。
 
-本文介绍如何使用 Blob 存储执行常见任务。 相关示例是使用 F # 使用用于.NET 的 Azure 存储客户端库。 涉及的任务包括如何上传、 列出、 下载和删除 blob。
+本文介绍如何使用 Blob 存储执行常见任务。 相关示例是使用 F# 使用用于.NET 的 Azure 存储客户端库。 涉及的任务包括如何上传、 列出、 下载和删除 blob。
 
 有关 blob 存储的概念概述，请参阅[适用于 blob 存储的.NET 指南](/azure/storage/storage-dotnet-how-to-use-blobs)。
 
@@ -22,9 +22,9 @@ Azure Blob 存储是将非结构化数据作为对象/blob 存储在云中的服
 
 若要使用本指南，您必须首先[创建 Azure 存储帐户](/azure/storage/storage-create-storage-account)。 为此帐户还需要存储访问密钥。
 
-## <a name="create-an-f-script-and-start-f-interactive"></a>创建 F # 脚本，并开始将 F # Interactive
+## <a name="create-an-f-script-and-start-f-interactive"></a>创建 F# 脚本，并开始将 F# Interactive
 
-这篇文章中的示例可以在 F # 应用程序或 F # 脚本中使用。 若要创建 F # 脚本，创建的文件`.fsx`扩展，例如`blobs.fsx`，在 F # 开发环境中。
+这篇文章中的示例可以在 F# 应用程序或 F# 脚本中使用。 若要创建 F# 脚本，创建的文件`.fsx`扩展，例如`blobs.fsx`，在 F# 开发环境中。
 
 接下来，使用[程序包管理器](package-management.md)如[paket 依存](https://fsprojects.github.io/Paket/)或[NuGet](https://www.nuget.org/)安装`WindowsAzure.Storage`并`Microsoft.WindowsAzure.ConfigurationManager`包和引用`WindowsAzure.Storage.dll`和`Microsoft.WindowsAzure.Configuration.dll`脚本使用`#r`指令。
 
@@ -230,8 +230,8 @@ Azure 存储支持加密 blob 数据在客户端和服务器上。
 现在，你已了解 Blob 存储的基础知识，单击以下链接了解详细信息。
 
 ### <a name="tools"></a>工具
-- [F # AzureStorageTypeProvider](https://fsprojects.github.io/AzureStorageTypeProvider/) F # 类型提供程序可用于浏览 Blob、 表和队列的 Azure 存储资产并轻松地将应用对它们的 CRUD 操作。
-- [FSharp.Azure.Storage](https://github.com/fsprojects/FSharp.Azure.Storage)的 F # API 使用 Microsoft Azure 表存储服务
+- [F# AzureStorageTypeProvider](https://fsprojects.github.io/AzureStorageTypeProvider/) F# 类型提供程序可用于浏览 Blob、 表和队列的 Azure 存储资产并轻松地将应用对它们的 CRUD 操作。
+- [FSharp.Azure.Storage](https://github.com/fsprojects/FSharp.Azure.Storage)的 F# API 使用 Microsoft Azure 表存储服务
 - [Microsoft Azure 存储资源管理器 (MASE)](/azure/vs-azure-tools-storage-manage-with-storage-explorer)是使您能够以可视方式处理 Azure 存储的数据在 Windows、 OS X 和 Linux 上的 microsoft 免费提供的独立应用。
 
 ### <a name="blob-storage-reference"></a>Blob 存储参考

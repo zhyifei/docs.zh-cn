@@ -1,5 +1,5 @@
 ---
-title: '使用 F # 的 Azure 文件存储入门'
+title: 使用 F# 的 Azure 文件存储入门
 description: 使用 Azure 文件存储在云中存储文件数据和从 Azure 虚拟机 (VM) 装载云文件共享或从本地应用程序运行 Windows。
 author: sylvanc
 ms.date: 09/20/2016
@@ -10,7 +10,7 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 11/02/2018
 ms.locfileid: "33569338"
 ---
-# <a name="get-started-with-azure-file-storage-using-f"></a>使用 F # 的 Azure 文件存储入门 #
+# <a name="get-started-with-azure-file-storage-using-f"></a>使用 F# 的 Azure 文件存储入门 #
 
 Azure 文件存储是一种服务，提供在云中使用标准文件共享[服务器消息块 (SMB) 协议](https://msdn.microsoft.com/library/windows/desktop/aa365233.aspx)。 支持 SMB 2.1 和 SMB 3.0。 使用 Azure 文件存储，你可以迁移依赖文件共享到 Azure，快速且无成本高昂的重写的旧版应用程序。 在 Azure 虚拟机或云服务或从本地客户端运行的应用程序可以装载文件共享在云中，就像桌面应用程序装载典型 SMB 共享一样。 任意数量的应用程序组件可以然后装载并同时访问文件存储共享。
 
@@ -21,9 +21,9 @@ Azure 文件存储是一种服务，提供在云中使用标准文件共享[服�
 若要使用本指南，您必须首先[创建 Azure 存储帐户](/azure/storage/storage-create-storage-account)。
 此外需要为此帐户存储访问密钥。
 
-## <a name="create-an-f-script-and-start-f-interactive"></a>创建 F # 脚本，并开始将 F # Interactive
+## <a name="create-an-f-script-and-start-f-interactive"></a>创建 F# 脚本，并开始将 F# Interactive
 
-这篇文章中的示例可以在 F # 应用程序或 F # 脚本中使用。 若要创建 F # 脚本，创建的文件`.fsx`扩展，例如`files.fsx`，在 F # 开发环境中。
+这篇文章中的示例可以在 F# 应用程序或 F# 脚本中使用。 若要创建 F# 脚本，创建的文件`.fsx`扩展，例如`files.fsx`，在 F# 开发环境中。
 
 接下来，使用[程序包管理器](package-management.md)如[paket 依存](https://fsprojects.github.io/Paket/)或[NuGet](https://www.nuget.org/)安装`WindowsAzure.Storage`程序包和引用`WindowsAzure.Storage.dll`使用在脚本中`#r`指令。
 

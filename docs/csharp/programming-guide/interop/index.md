@@ -7,12 +7,12 @@ helpviewer_keywords:
 - platform invoke, accessing APIs with C#
 - C# language, interoperability
 ms.assetid: 238bb95a-e962-4026-bbd5-197055bdb8ee
-ms.openlocfilehash: f1befaf6fe5b553f8049385b95a9f541cf0d57a7
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: dc68a2a9c21f6fdb9b531bd07428325ac22ebfb6
+ms.sourcegitcommit: 3b1cb8467bd73dee854b604e306c0e7e3882d91a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43506119"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "50980643"
 ---
 # <a name="interoperability-c-programming-guide"></a>互操作性（C# 编程指南）
 借助互操作性，可以保留和利用对非托管代码的现有投资工作。 在公共语言运行时 (CLR) 控制下运行的代码称为*托管代码*，不在 CLR 控制下运行的代码称为*非托管代码*。 例如，COM、COM+、C++ 组件、ActiveX 组件和 Microsoft Win32 API 都是非托管代码。  
@@ -39,7 +39,8 @@ ms.locfileid: "43506119"
  展示了如何将 C# 类公开为 COM 对象。  
   
 ## <a name="c-language-specification"></a>C# 语言规范  
- [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
+
+有关详细信息，请参阅 [C# 语言规范](../../language-reference/language-specification/index.md)中的[基本概念](~/_csharplang/spec/unsafe-code.md)。 该语言规范是 C# 语法和用法的权威资料。
   
 ## <a name="see-also"></a>请参阅
 

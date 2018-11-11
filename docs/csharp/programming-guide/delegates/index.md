@@ -5,11 +5,11 @@ helpviewer_keywords:
 - C# language, delegates
 - delegates [C#]
 ms.assetid: 97de039b-c76b-4b9c-a27d-8c1e1c8d93da
-ms.openlocfilehash: 96de5601c60dd309fe5467414affd20b8bc93d87
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: cbceea24082d091c516c78313ca4c62bce44054d
+ms.sourcegitcommit: 3b1cb8467bd73dee854b604e306c0e7e3882d91a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/04/2018
+ms.lasthandoff: 11/07/2018
 ms.locfileid: "48584181"
 ---
 # <a name="delegates-c-programming-guide"></a>委托（C# 编程指南）
@@ -57,13 +57,15 @@ ms.locfileid: "48584181"
   
 -   [如何：声明、实例化和使用委托](../../../csharp/programming-guide/delegates/how-to-declare-instantiate-and-use-a-delegate.md)  
   
+  
 ## <a name="c-language-specification"></a>C# 语言规范  
- [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
+
+有关详细信息，请参阅 [C# 语言规范](../../language-reference/language-specification/index.md)中的[委托](~/_csharplang/spec/delegates.md)。 该语言规范是 C# 语法和用法的权威资料。
   
 ## <a name="featured-book-chapters"></a>重要章节  
- [C# 3.0 手册，第三版：为 C# 3.0 程序员提供的 250 多个解决方案](https://msdn.microsoft.com/library/orm-9780596516109-03-09.aspx) 中的 [委托、事件和 Lambda 表达式](https://msdn.microsoft.com/library/orm-9780596516109-03.aspx)  
+ [C# 3.0 手册，第三版：为 C# 3.0 程序员提供的 250 多个解决方案](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/ff518994%28v=orm.10%29) 中的 [委托、事件和 Lambda 表达式](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/ff518995%28v=orm.10%29)  
   
- [Learning C# 3.0: Master the Fundamentals of C# 3.0](https://msdn.microsoft.com/library/orm-9780596521066-01-17.aspx) （学习 C# 3.0：掌握 C# 3.0 的基本知识）中的 [委托和事件](https://msdn.microsoft.com/library/orm-9780596521066-01.aspx)  
+ [Learning C# 3.0: Master the Fundamentals of C# 3.0](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/ff652490%28v=orm.10%29) （学习 C# 3.0：掌握 C# 3.0 的基本知识）中的 [委托和事件](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/ff652493%28v=orm.10%29)  
   
 ## <a name="see-also"></a>请参阅
 

@@ -14,11 +14,11 @@ ms.assetid: 694a33c5-a040-450d-aed5-ac49fc88ce61
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 63780583d035d6fab6b3a79424857b82a910ef09
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.sourcegitcommit: 5fd80619c760fa8c25d33a6f5661247cb65da465
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50183888"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "50744608"
 ---
 # <a name="walkthrough-creating-an-extensible-application"></a>演练：创建可扩展的应用程序
 本演练介绍如何创建用于执行简单的计算器功能的外接程序的管道。 它并不演示实际方案中;相反，它演示了一个管道，以及如何外接程序可以提供主机服务的基本功能。  

@@ -5,11 +5,11 @@ ms.assetid: 408f25c4-6d60-475c-92b1-7b52b777c6db
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: f68304b06c502672ae1aac9693a966ea546ee4dd
-ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.sourcegitcommit: 4bca8f7e172fd019ef437a4803bf5895c6bc4781
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50049420"
+ms.lasthandoff: 11/03/2018
+ms.locfileid: "50980854"
 ---
 # <a name="missingmetadataexception-class-net-native"></a>丢失元数据异常类 (.NET Native)
 **适用于 Windows 10 的 .NET for Windows 应用，仅 [!INCLUDE[net_native](../../../includes/net-native-md.md)]**  

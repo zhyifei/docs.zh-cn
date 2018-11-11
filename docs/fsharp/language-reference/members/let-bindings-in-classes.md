@@ -1,6 +1,6 @@
 ---
 title: 类中的 let 绑定 (F#)
-description: '了解如何通过在类定义中使用 let 绑定定义私有字段和 F # 类的私有函数。'
+description: 了解如何通过在类定义中使用 let 绑定定义私有字段和 F# 类的私有函数。
 ms.date: 05/16/2016
 ms.openlocfilehash: 237eb98a57571a21c9187abf31f05160374cf4fc
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
@@ -11,7 +11,7 @@ ms.locfileid: "48033215"
 ---
 # <a name="let-bindings-in-classes"></a>类中的 let 绑定
 
-可以通过使用定义私有字段和 F # 类的私有函数`let`类定义中的绑定。
+可以通过使用定义私有字段和 F# 类的私有函数`let`类定义中的绑定。
 
 ## <a name="syntax"></a>语法
 

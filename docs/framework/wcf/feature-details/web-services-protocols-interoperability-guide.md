@@ -3,11 +3,11 @@ title: Web 服务协议互操作性指南
 ms.date: 03/30/2017
 ms.assetid: f2981678-ebdb-433d-899b-467f7df95fb2
 ms.openlocfilehash: 9aeceff9dc2b714016d2f7c379e538d885489bb9
-ms.sourcegitcommit: 4621e67f69e7a9503ea93313ff60d69683207889
+ms.sourcegitcommit: 5fd80619c760fa8c25d33a6f5661247cb65da465
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "49995394"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "50744543"
 ---
 # <a name="web-services-protocols-interoperability-guide"></a>Web 服务协议互操作性指南
 Windows Communication Foundation (WCF) 实现多个 Web 服务协议。 这些协议中有许多都包含大量留给实施者来决定的选项和扩展点。 本主题提供了一系列 WCF 实现的 Web 服务协议。 本节中的其他主题介绍每个受支持的协议的实现详细信息。  

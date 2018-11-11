@@ -1,6 +1,6 @@
 ---
 title: 异常：raise 函数 (F#)
-description: '了解如何使用 F # raise 函数来指示已发生的错误或异常情况。'
+description: 了解如何使用 F# raise 函数来指示已发生的错误或异常情况。
 ms.date: 05/16/2016
 ms.openlocfilehash: 537d274659d29404380bfdd56310ac267372bb98
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2

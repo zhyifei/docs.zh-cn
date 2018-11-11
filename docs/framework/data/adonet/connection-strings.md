@@ -2,12 +2,12 @@
 title: 在 ADO.NET 中的连接字符串
 ms.date: 10/10/2018
 ms.assetid: 745c5f95-2f02-4674-b378-6d51a7ec2490
-ms.openlocfilehash: 4dab2656ae8f39976b21f949c9548a3f718dfafc
-ms.sourcegitcommit: fd8d4587cc26e53f0e27e230d6e27d828ef4306b
+ms.openlocfilehash: 078fdab257115296f9ff00330265cb14ff8674c8
+ms.sourcegitcommit: 5fd80619c760fa8c25d33a6f5661247cb65da465
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49347937"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50409452"
 ---
 # <a name="connection-strings-in-adonet"></a>在 ADO.NET 中的连接字符串
 
@@ -19,7 +19,7 @@ ms.locfileid: "49347937"
   
     keyword1=value; keyword2=value;
   
-关键字不区分大小写。 但是，值可能区分大小写，具体取决于数据源。 关键字和值可能包含[空白字符](https://en.wikipedia.org/wiki/Whitespace_character#Unicode)。 在关键字中忽略和不带引号的前导空格和尾随空格的值。
+关键字不区分大小写。 但是，值可能区分大小写，具体取决于数据源。 关键字和值可能包含[空白字符](https://en.wikipedia.org/wiki/Whitespace_character#Unicode)。 在关键字中忽略和不带引号的前导和尾随空格的值。
 
 如果值包含分号[Unicode 控制字符](https://en.wikipedia.org/wiki/Unicode_control_characters)，或前导空格或尾随空格，则必须用单引号或双引号括起来。 例如：
 

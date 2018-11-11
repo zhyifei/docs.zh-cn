@@ -8,11 +8,11 @@ helpviewer_keywords:
 - security [WCF], providing credentials
 ms.assetid: db8cb478-aa43-478b-bf97-c6489ad7c7fd
 ms.openlocfilehash: 88200b41346a18732647602fb16774610014330c
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.sourcegitcommit: 5fd80619c760fa8c25d33a6f5661247cb65da465
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50185126"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "50744166"
 ---
 # <a name="how-to-create-a-custom-security-token-provider"></a>如何：创建自定义安全令牌提供程序
 本主题介绍如何使用自定义安全令牌提供程序来创建新令牌类型，以及如何将该提供程序与自定义安全令牌管理器集成。  

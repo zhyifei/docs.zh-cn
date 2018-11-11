@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# language, events
 - events [C#]
 ms.assetid: a8e51b22-d294-44fb-9539-0072f06c4cb3
-ms.openlocfilehash: 4031ff08bee945f019974ad590e9b3df6d9c263c
-ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
+ms.openlocfilehash: 8923bb4263c6857e7c2e194851befdc48f33a89e
+ms.sourcegitcommit: 3b1cb8467bd73dee854b604e306c0e7e3882d91a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49086227"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "50743938"
 ---
 # <a name="events-c-programming-guide"></a>事件（C# 编程指南）
 [类](../../../csharp/language-reference/keywords/class.md) 或对象可以通过事件向其他类或对象通知发生的相关事情。 发送（或 *引发*）事件的类称为“发行者”  ，接收（或 *处理*）事件的类称为“订户” 。  
@@ -49,12 +49,13 @@ ms.locfileid: "49086227"
 -   [如何：实现自定义事件访问器](../../../csharp/programming-guide/events/how-to-implement-custom-event-accessors.md)  
   
 ## <a name="c-language-specification"></a>C# 语言规范  
- [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
+
+有关详细信息，请参阅 [C# 语言规范](../../language-reference/language-specification/index.md)中的[事件](~/_csharplang/spec/classes.md#events)。 该语言规范是 C# 语法和用法的权威资料。
   
 ## <a name="featured-book-chapters"></a>重要章节  
- [C# 3.0 手册，第三版：为 C# 3.0 程序员提供的 250 多个解决方案](https://msdn.microsoft.com/library/orm-9780596516109-03-09.aspx) 中的 [委托、事件和 Lambda 表达式](https://msdn.microsoft.com/library/orm-9780596516109-03.aspx)  
+ [C# 3.0 手册，第三版：为 C# 3.0 程序员提供的 250 多个解决方案](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/ff518994%28v=orm.10%29) 中的 [委托、事件和 Lambda 表达式](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/ff518995%28v=orm.10%29)  
   
- [Learning C# 3.0: Master the Fundamentals of C# 3.0](https://msdn.microsoft.com/library/orm-9780596521066-01-17.aspx) （学习 C# 3.0：掌握 C# 3.0 的基本知识）中的 [委托和事件](https://msdn.microsoft.com/library/orm-9780596521066-01.aspx)  
+ [Learning C# 3.0: Master the Fundamentals of C# 3.0](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/ff652490%28v=orm.10%29) （学习 C# 3.0：掌握 C# 3.0 的基本知识）中的 [委托和事件](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/ff652493%28v=orm.10%29)  
   
 ## <a name="see-also"></a>请参阅
 

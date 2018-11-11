@@ -1,6 +1,6 @@
 ---
 title: 显式字段：val 关键字 (F#)
-description: '了解有关 F # val 关键字用于声明类或结构类型中存储一个值，而不初始化该类型的位置。'
+description: 了解有关 F# val 关键字用于声明类或结构类型中存储一个值，而不初始化该类型的位置。
 ms.date: 05/16/2016
 ms.openlocfilehash: 9cd06f7e90192be79490dd0ff67f118cce4339c3
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
