@@ -8,18 +8,16 @@ helpviewer_keywords:
 - concatenation operator [C#]
 - addition operator [C#]
 ms.assetid: 93e56486-bb42-43c1-bd43-60af11e64e67
-ms.openlocfilehash: ae2774d96bc50afa271fffdea445e640e68c3647
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 27ea47d698b20f112880750ec0bc931f1917f142
+ms.sourcegitcommit: 3b1cb8467bd73dee854b604e306c0e7e3882d91a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2018
+ms.lasthandoff: 11/07/2018
 ms.locfileid: "50192291"
 ---
 # <a name="-operator-c-reference"></a>+ 运算符（C# 参考）
 
 以下两种形式支持 `+` 运算符：一元加运算符或二元加运算符。
-
-用户定义的类型可以[重载](../keywords/operator.md)一元和二元 `+` 运算符。 重载二元 `+` 运算符后，也会隐式重载[加法赋值运算符](addition-assignment-operator.md) `+=`。
 
 ## <a name="unary-plus-operator"></a>一元加运算符
 
@@ -48,6 +46,10 @@ ms.locfileid: "50192291"
 [!code-csharp-interactive[delegate combination](~/samples/snippets/csharp/language-reference/operators/AdditionExamples.cs#AddDelegates)]
 
 有关委托类型的详细信息，请参阅[委托](../../programming-guide/delegates/index.md)。
+
+## <a name="operator-overloadability"></a>运算符可重载性
+
+用户定义的类型可以[重载](../keywords/operator.md)一元和二元 `+` 运算符。 重载二元 `+` 运算符后，也会隐式重载[加法赋值运算符](addition-assignment-operator.md) `+=`。
 
 ## <a name="c-language-specification"></a>C# 语言规范
 

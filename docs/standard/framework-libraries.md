@@ -6,12 +6,12 @@ ms.author: ronpet
 ms.date: 06/20/2016
 ms.technology: dotnet-standard
 ms.assetid: 7b77b6c1-8367-4602-bff3-91e4c05ac643
-ms.openlocfilehash: dd8baa481e51aa44c4c884b4b165bdf319ac1c4d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1b5099c73264f3175aa05094f4460c1c97774533
+ms.sourcegitcommit: 5fd80619c760fa8c25d33a6f5661247cb65da465
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33576277"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "50743958"
 ---
 # <a name="framework-libraries"></a>框架库
 
@@ -59,4 +59,4 @@ BCL 提供最基本的类型和实用工具功能，是其他所有 .NET 类库�
 
 某些公司提供了可与 .NET 配合使用的多个应用模型。
 
-*   [ASP.NET](http://asp.net) - 提供用于构建网站和服务的 Web 框架。 受 Windows、Linux 和 macOS 的支持（取决于 ASP.NET 版本）。
+*   [ASP.NET](https://www.asp.net) - 提供用于构建网站和服务的 Web 框架。 受 Windows、Linux 和 macOS 的支持（取决于 ASP.NET 版本）。

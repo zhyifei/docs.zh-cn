@@ -5,12 +5,12 @@ f1_keywords:
 - nameof_CSharpKeyword
 - nameof
 ms.assetid: 33601bf3-cc2c-4496-846d-f9679bccf2a7
-ms.openlocfilehash: 726abfd903f37826a247e6e98c0d11f230447550
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 01c87f8d63264aa342b04b8d3fcfc7e6f38db44b
+ms.sourcegitcommit: 3b1cb8467bd73dee854b604e306c0e7e3882d91a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48035248"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "50744343"
 ---
 # <a name="nameof-c-reference"></a>nameof（C# 参考）
 
@@ -131,8 +131,9 @@ class C {
  无法获取类似于“`Method1 (str, str)`”的签名信息。  实现该操作的一种方法是使用表达式 `Expression e = () => A.B.Method1("s1", "s2")`，并从生成的表达式树中拉取 MemberInfo。  
   
 ## <a name="language-specifications"></a>语言规范  
- [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
-  
+
+有关详细信息，请参阅 [C# 语言规范](../language-specification/index.md)中的 [Nameof 表达式](~/_csharplang/spec/expressions.md#nameof-expressions)。 该语言规范是 C# 语法和用法的权威资料。
+ 
 ## <a name="see-also"></a>请参阅
 
 - [C# 参考](../../../csharp/language-reference/index.md)  

@@ -7,11 +7,11 @@ helpviewer_keywords:
 - exceptions [C#], creating
 - exceptions [C#], throwing
 ms.assetid: 6bbba495-a115-4c6d-90cc-1f4d7b5f39e2
-ms.openlocfilehash: 2e792a230ccead5d9a73f9b78a83d57738c31085
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.openlocfilehash: 43d566fed4e2963489da0b7a11c78a54740b7ab1
+ms.sourcegitcommit: 3b1cb8467bd73dee854b604e306c0e7e3882d91a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/10/2018
+ms.lasthandoff: 11/07/2018
 ms.locfileid: "44260066"
 ---
 # <a name="creating-and-throwing-exceptions-c-programming-guide"></a>创建和引发异常（C# 编程指南）
@@ -62,11 +62,12 @@ ms.locfileid: "44260066"
  只有当新属性提供的数据有助于解决异常时，才应将其添加到异常类中。 如果将新属性添加到派生异常类中，则应替代 `ToString()` 以返回添加的信息。  
   
 ## <a name="c-language-specification"></a>C# 语言规范  
- [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
+
+有关详细信息，请参阅 [C# 语言规范](../../language-reference/language-specification/index.md)中的[异常](~/_csharplang/spec/exceptions.md)和 [throw 语句](~/_csharplang/spec/statements.md#the-throw-statement)。 该语言规范是 C# 语法和用法的权威资料。
   
 ## <a name="see-also"></a>请参阅
 
 - [C# 编程指南](../../../csharp/programming-guide/index.md)  
 - [异常和异常处理](../../../csharp/programming-guide/exceptions/index.md)  
-- [异常层次结构](https://msdn.microsoft.com/library/f7d68675-be06-40fb-a555-05f0c5a6f66b)  
+- [异常层次结构](../../../standard/exceptions/index.md)  
 - [异常处理](../../../csharp/programming-guide/exceptions/exception-handling.md)
