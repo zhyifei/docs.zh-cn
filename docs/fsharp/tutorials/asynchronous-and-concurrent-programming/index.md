@@ -7,7 +7,7 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 11/02/2018
 ms.locfileid: "25726584"
 ---
-# <a name="asynchronous-and-concurrent-programming-in-f"></a><span data-ttu-id="ec57e-101">中的异步和并发编程F#</span><span class="sxs-lookup"><span data-stu-id="ec57e-101">Asynchronous and Concurrent Programming in F#</span></span> #
+# <a name="asynchronous-and-concurrent-programming-in-f"></a><span data-ttu-id="3b401-101">中的异步和并发编程F#</span><span class="sxs-lookup"><span data-stu-id="3b401-101">Asynchronous and Concurrent Programming in F#</span></span> #
 
 > [!NOTE]
-<span data-ttu-id="ec57e-102">此部分仍在编写中。</span><span class="sxs-lookup"><span data-stu-id="ec57e-102">This is still in-progress.</span></span>
+<span data-ttu-id="3b401-102">此部分仍在编写中。</span><span class="sxs-lookup"><span data-stu-id="3b401-102">This is still in-progress.</span></span>

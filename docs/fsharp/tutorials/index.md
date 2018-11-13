@@ -7,7 +7,7 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 11/02/2018
 ms.locfileid: "25726534"
 ---
-# <a name="f-tutorials"></a><span data-ttu-id="96dce-101">F# 教程</span><span class="sxs-lookup"><span data-stu-id="96dce-101">F# Tutorials</span></span>
+# <a name="f-tutorials"></a><span data-ttu-id="b774c-101">F# 教程</span><span class="sxs-lookup"><span data-stu-id="b774c-101">F# Tutorials</span></span>
 
 > [!NOTE]
-<span data-ttu-id="96dce-102">此部分仍在编写中。</span><span class="sxs-lookup"><span data-stu-id="96dce-102">This is still in-progress.</span></span>
+<span data-ttu-id="b774c-102">此部分仍在编写中。</span><span class="sxs-lookup"><span data-stu-id="b774c-102">This is still in-progress.</span></span>
