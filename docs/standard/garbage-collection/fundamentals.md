@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 67c5a20d-1be1-4ea7-8a9a-92b0b08658d2
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 741ddd0171244daceb4d5e283c0172e71b82f3d2
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: a7fa240ea42fe1bee4011a228595e48eb163e1a9
+ms.sourcegitcommit: 296183dbe35077b5c5e5e74d5fbe7f399bc507ee
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48582744"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "50982862"
 ---
 # <a name="fundamentals-of-garbage-collection"></a>垃圾回收的基础
 <a name="top"></a> 在公共语言运行时 (CLR) 中，垃圾回收器用作自动内存管理器。 它提供如下优点：  
@@ -172,7 +172,7 @@ ms.locfileid: "48582744"
   
  垃圾回收器使用以下信息来确定对象是否为活动对象：  
   
--   **堆栈根**。 由实时 (JIT) 编译器和堆栈查看器提供的堆栈变量。  
+-   **堆栈根**。 由实时 (JIT) 编译器和堆栈查看器提供的堆栈变量。 请注意，JIT 优化可以延长或缩短报告给垃圾回收器的堆栈变量内的代码的区域。
   
 -   **垃圾回收句柄**。 指向托管对象且可由用户代码或公共语言运行时分配的句柄。  
   
