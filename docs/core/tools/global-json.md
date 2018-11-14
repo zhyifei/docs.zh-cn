@@ -5,12 +5,12 @@ author: mairaw
 ms.author: mairaw
 ms.date: 07/30/2018
 ms.custom: updateeachrelease
-ms.openlocfilehash: 8241b3afb518acf237c7b6181085e19576e5ce2f
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 05ec296c4c8210c63c7c1b5ce63ef598ca6ac719
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43778464"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48838073"
 ---
 # <a name="globaljson-overview"></a>global.json 概述
 
@@ -96,12 +96,12 @@ SDK 版本目前由以下部分组成：
 ## <a name="troubleshooting-build-warnings"></a>针对生成警告的疑难解答
 
 > [!WARNING]
-> 使用的是 .NET Core SDK 的预览版本， 可通过当前项目中的 global.json 文件定义 SDK 版本。 有关详细信息，请访问 https://go.microsoft.com/fwlink/?linkid=869452
+> 使用的是 .NET Core SDK 的预览版本， 可通过当前项目中的 global.json 文件定义 SDK 版本。 有关详细信息，请访问 <https://go.microsoft.com/fwlink/?linkid=869452>
 
 此警告指示正在使用 .NET Core SDK 预览版本编译项目，如[匹配规则](#matching-rules)部分所述。 .NET Core SDK 的各种版本均品质优良稳定，在业内口碑良好。 但如果不想使用预览版本，可将 global.json 文件添加到项目层次结构中以指定要使用的 SDK 版本，并使用 `dotnet --list-sdks` 来确认计算机上已安装该版本。 发布新版本时，若要使用新版本，可删除 global.json 文件或将其更新以使用较新版本。
 
 > [!WARNING]
-> 启动项目 '{startupProject}' 面向框架 '.NETCoreApp' 的版本 '{targetFrameworkVersion}'。 此版本的 Entity Framework Core .NET 命令行工具仅支持 2.0 或更高版本。 有关使用旧版工具的信息，请参阅 https://go.microsoft.com/fwlink/?linkid=871254
+> 启动项目 '{startupProject}' 面向框架 '.NETCoreApp' 的版本 '{targetFrameworkVersion}'。 此版本的 Entity Framework Core .NET 命令行工具仅支持 2.0 或更高版本。 有关使用旧版工具的信息，请参阅 <https://go.microsoft.com/fwlink/?linkid=871254>
 
 从.NET Core SDK 2.1 (v. 2.1.300) 开始，SDK 中包含了 `dotnet ef` 命令。 此警告指示项目面向 EF Core 1.0 或 1.1，后者与 .NET Core SDK 2.1 及更高版本不兼容。 若要编译项目，请在计算机上安装 .NET Core SDK 2.0 (v. 2.1.201) 及更早版本，并使用 global.json 文件定义所需 SDK 版本。 有关 `dotnet ef` 命令的详细信息，请参阅 [EF Core .NET 命令行工具](/ef/core/miscellaneous/cli/dotnet)。
 

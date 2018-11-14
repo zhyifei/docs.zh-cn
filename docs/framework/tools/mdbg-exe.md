@@ -7,19 +7,19 @@ helpviewer_keywords:
 ms.assetid: 28a3f509-07e2-4dbe-81df-874c5e969cc4
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: be32659a270cd7c6b7e3551594934926eabf0d31
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2861d2364d2c29d15b25911524ef28aa78130913
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33399764"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50202915"
 ---
 # <a name="mdbgexe-net-framework-command-line-debugger"></a>MDbg.exe（.NET Framework 命令行调试程序）
 .NET Framework 命令行调试器可以帮助工具供应商和应用程序开发人员查找并修复面向 .NET Framework 公共语言运行时的程序中的 Bug。 此工具使用运行时调试 API 提供调试服务。 可以使用 MDbg.exe 来仅调试托管代码；不支持调试非托管代码。  
   
- 通过 NuGet 可以使用此工具。 有关安装信息，请参阅 [MDbg 0.1.0](http://www.nuget.org/packages/MDbg/0.1.0)。 若要运行该工具，请使用程序包管理器控制台。 有关如何使用程序包管理器控制台的详细信息，请参阅[使用程序包管理器控制台](http://docs.nuget.org/docs/start-here/Using-the-Package-Manager-Console)。  
+通过 NuGet 可以使用此工具。 有关安装信息，请参阅 [MDbg 0.1.0](https://www.nuget.org/packages/MDbg/0.1.0)。 若要运行该工具，请使用程序包管理器控制台。 有关如何使用程序包管理器控制台的详细信息，请参阅[程序包管理器控制台](/nuget/tools/package-manager-console)一文。
   
- 在“程序包管理器”提示符处，键入以下内容：  
+在“程序包管理器”提示符处，键入以下内容：  
   
 ## <a name="syntax"></a>语法  
   

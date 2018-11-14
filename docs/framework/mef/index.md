@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 6c61b4ec-c6df-4651-80f1-4854f8b14dde
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8738e8d0f6a74e1b8ba963e487d4c153a0a6a872
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: ae3b72cb5a1281899cdfdb514bbf5a1dc289c949
+ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47196458"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49454494"
 ---
 # <a name="managed-extensibility-framework-mef"></a>Managed Extensibility Framework (MEF)
 
@@ -66,7 +66,7 @@ Managed Extensibility Framework 即 MEF 是用于创建轻量、可扩展应用�
 
 查看 MEF 能做什么最简单的方法就是构建一个简单的 MEF 应用程序。 在此示例中，你构建了一个叫作简单计算器的非常简单的计算器。 简单计算器旨在创建一个接受形式为“5+3”或“6-2”的基础运算命令然后返回正确答案的控制台应用程序。 使用 MEF，能够添加新的操作人员而无须更改应用程序代码。
 
-要下载此示例的完整代码，请参阅 [SimpleCalculator 示例](http://code.msdn.microsoft.com/windowsdesktop/Simple-Calculator-MEF-1152654e)。
+要下载此示例的完整代码，请参阅 [SimpleCalculator 示例](https://code.msdn.microsoft.com/windowsdesktop/Simple-Calculator-MEF-1152654e)。
 
 > [!NOTE]
 > 简单计算器旨在演示 MEF 的概念和语法而非必须为其使用提供现实情况。 许多将从 MEF 的功能受益最大的应用程序比简单计算器更加复杂。 有关更多扩展性示例，请参阅 GitHub 上的 [Managed Extensibility Framework](https://github.com/MicrosoftArchive/mef)。
@@ -485,6 +485,6 @@ public class Mod : SimpleCalculator.IOperation
 
 <a name="where_do_i_go_now"></a>
 ## <a name="where-do-i-go-now"></a>现在我该转到哪儿？
- 要下载此示例的完整代码，请参阅 [SimpleCalculator 示例](http://code.msdn.microsoft.com/windowsdesktop/Simple-Calculator-MEF-1152654e)。
+ 要下载此示例的完整代码，请参阅 [SimpleCalculator 示例](https://code.msdn.microsoft.com/windowsdesktop/Simple-Calculator-MEF-1152654e)。
 
- 有关详细信息和代码示例，请参阅 [Managed Extensibility Framework](http://go.microsoft.com/fwlink/?LinkId=144282)。 有关 MEF 类型的列表，请参阅 <xref:System.ComponentModel.Composition?displayProperty=nameWithType> 命名空间。
+ 有关详细信息和代码示例，请参阅 [Managed Extensibility Framework](https://github.com/MicrosoftArchive/mef)。 有关 MEF 类型的列表，请参阅 <xref:System.ComponentModel.Composition?displayProperty=nameWithType> 命名空间。

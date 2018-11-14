@@ -22,64 +22,63 @@ helpviewer_keywords:
 - argument passing [Visual Basic], by position
 - arguments [Visual Basic], listing by name
 ms.assetid: 1ad7358f-1da9-48da-a95b-f3c7ed41eff3
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 49e313b2d5aa8302ea4b99e643e09f7b43659785
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: bdaa0351e288b85a3e35818c0f53ef4d772932e5
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50183862"
 ---
 # <a name="passing-arguments-by-position-and-by-name-visual-basic"></a>按位置和名称传递自变量 (Visual Basic)
-当调用`Sub`或`Function`过程中，你可以将参数传递*按位置*— 在过程定义中出现的顺序 — 或将它们传递*按名称*，而无需考虑位置。  
+当您调用`Sub`或`Function`过程中，您可以将参数传递*按位置*— 过程的定义中出现的顺序，或将它们传递*按名称*，而无需考虑位置。  
   
- 当你按名称传递自变量时，你指定参数的声明名称后跟冒号和等号 (`:=`) 后, 跟自变量值。 你可以提供命名自变量的任何顺序。  
+ 如果按名称传递参数，指定自变量的声明名称后, 跟一个冒号和等号 (`:=`) 后, 跟参数值。 你可以提供按任意顺序的命名的参数。  
   
  例如，以下`Sub`过程使用三个参数：  
   
  [!code-vb[SampleProcedure](../../../../../samples/snippets/visualbasic/programming-guide/language-features/passing-named-arguments/module1.vb#1)]  
   
- 在调用此过程时，你可以提供的自变量按位置、 按名称，或通过使用这两者的混合。  
+ 在调用此过程时，可以提供的参数按位置、 名称，或通过使用这两者的混合。  
   
-## <a name="passing-arguments-by-position"></a>按位置传递自变量  
- 你可以调用`Display`具有其自变量方法按位置传递，并且用逗号分隔，如下面的示例中所示：  
+## <a name="passing-arguments-by-position"></a>按位置传递参数  
+ 您可以调用`Display`方法及其参数按位置传递，并且用逗号分隔，如下面的示例中所示：  
   
 [!code-vb[ByPosition](../../../../../samples/snippets/visualbasic/programming-guide/language-features/passing-named-arguments/module1.vb#2)] 
   
- 如果省略可选的参数位置自变量列表中，你必须保留它用逗号分隔的位置。 下面的示例调用`Display`方法，而`age`自变量：  
+ 如果省略位置自变量列表中的可选自变量，必须保留它以一个逗号后的位置。 下面的示例调用`Display`方法，而`age`参数：  
   
 [!code-vb[ByPositionWithOptionalArgument](../../../../../samples/snippets/visualbasic/programming-guide/language-features/passing-named-arguments/module1.vb#3)] 
   
 ## <a name="passing-arguments-by-name"></a>按名称传递自变量  
- 或者，可以调用`Display`按名称传递自变量也用逗号分隔，如下面的示例中所示：  
+ 或者，可以调用`Display`使用按名称传递参数，还以逗号分隔，如下面的示例中所示：  
   
 [!code-vb[ByName](../../../../../samples/snippets/visualbasic/programming-guide/language-features/passing-named-arguments/module1.vb#4)] 
 
- 在调用了具有多个可选参数的过程时，通过以这种方式的名称传递自变量是特别有用。 如果按名称提供自变量，你不需要使用连续的逗号来表示缺少位置自变量。 按名称传递自变量还可以更轻松地跟踪的哪些参数将传递和你省略哪些功能。  
+ 按这种方式中的名称传递自变量时，尤其是调用具有多个可选参数的过程。 如果按名称提供实参，你无需使用连续的逗号来表示缺少位置自变量。 按名称传递自变量还可以更轻松地跟踪的传递以及哪些省略的参数。  
   
-## <a name="mixing-arguments-by-position-and-by-name"></a>混合自变量按位置和名称  
+## <a name="mixing-arguments-by-position-and-by-name"></a>混合参数按位置和名称  
 
-你可以提供自变量的位置和名称的单一过程调用中，如下面的示例中所示：  
+下面的示例中所示，可以提供参数按位置和通过在单个过程调用中，名称：  
   
 [!code-vb[ByNameAndPosition](../../../../../samples/snippets/visualbasic/programming-guide/language-features/passing-named-arguments/module1.vb#5)] 
   
- 在前面的示例中，没有多余的逗号是保存的省略的位置所需`age`自变量，因为`birth`按名称传递了。  
+ 在前面的示例中，没有多余的逗号，才可保存的位置的省略`age`自变量，因为`birth`按名称传递了。  
   
-在 Visual Basic 的 15.5 之前的版本，当你的混合位置和名称、 位置自变量形式提供参数时都必须放在第一个。 后按名称提供自变量，剩下的自变量必须所有传递的名称。  例如，以下调用`Display`方法显示编译器错误[BC30241： 名为应自变量](../../../misc/bc30241.md)。
+在 Visual basic 15.5 之前的版本，在你的混合位置和名称、 位置自变量形式提供参数时都必须放在第一个。 按名称提供参数后, 剩下的自变量必须所有传递的名称。  例如，以下调用到`Display`方法会显示编译器错误[BC30241： 需要命名参数](../../../misc/bc30241.md)。
 
 [!code-vb[ByNameAndPosition](../../../../../samples/snippets/visualbasic/programming-guide/language-features/passing-named-arguments/module1.vb#6)] 
 
-从 Visual Basic 15.5 开始，位置自变量可以遵循命名自变量的结束位置自变量是否在正确的位置。 如果在 Visual Basic 15.5，调用下编译`Display`方法编译成功，而且不再生成编译器错误[BC30241](../../../misc/bc30241.md)。  
+从 Visual Basic 15.5 开始，位置自变量可以按照命名的自变量的结束位置自变量是否在正确的位置。 如果在 Visual Basic 15.5 中，以前调用下编译`Display`方法已成功编译并不再生成编译器错误[BC30241](../../../misc/bc30241.md)。  
 
-当你想要使用命名自变量以使代码更具可读性，混合和匹配位置和命名的自变量的任何顺序此能力是特别有用。 例如，以下`Person`类构造函数需要的类型的两个自变量`Person`，这两种可以是`Nothing`。 
+当你想要使用命名的参数以使代码更具可读性时，此能力混合和匹配命名参数和位置参数按任意顺序是特别有用。 例如，以下`Person`类构造函数需要两个参数的类型`Person`，这两种可能`Nothing`。 
 
 [!code-vb[ByNameAndPosition](../../../../../samples/snippets/visualbasic/programming-guide/language-features/passing-named-arguments/module1.vb#7)] 
 
-使用混合命名参数和位置参数有助于明确代码的意图清除时的值`father`和`mother`自变量是`Nothing`:
+使用混合命名参数和位置参数有助于使代码意图清除时的值`father`并`mother`自变量是`Nothing`:
 
 [!code-vb[ByNameAndPosition](../../../../../samples/snippets/visualbasic/programming-guide/language-features/passing-named-arguments/module1.vb#8)] 
 
-若要执行具有命名自变量的位置自变量，必须将下面的元素添加到 Visual Basic 项目 (\*.vbproj) 文件：
+若要执行使用命名参数的位置参数，必须将以下元素添加到 Visual Basic 项目 (\*.vbproj) 文件：
 
 ```xml
 <PropertyGroup>
@@ -87,11 +86,13 @@ ms.lasthandoff: 05/04/2018
 </PropertyGroup>
 ```
 
-## <a name="restrictions-on-supplying-arguments-by-name"></a>提供自变量按名称的限制  
+有关详细信息请参阅[设置的 Visual Basic 语言版本](../../../language-reference/configure-language-version.md)。
 
-你不能按名称来避免输入所需的参数传递自变量。 可以省略仅的可选自变量。  
+## <a name="restrictions-on-supplying-arguments-by-name"></a>通过名称提供参数的限制  
+
+不能按名称来避免输入所需的参数传递参数。 可以省略仅的可选参数。  
   
-你不能按名称传递参数数组。 这是因为在调用过程时，你提供的参数数组中，逗号分隔的参数数量不确定，并且编译器不能将多个自变量与单个名称关联。  
+不能按名称传递参数数组。 这是因为时调用该过程，你会提供以逗号分隔参数数组的参数数量不确定，编译器不能将多个自变量关联与单个名称。  
   
 ## <a name="see-also"></a>请参阅  
  [过程](./index.md)  

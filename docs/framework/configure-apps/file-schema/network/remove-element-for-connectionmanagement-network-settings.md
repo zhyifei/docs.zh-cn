@@ -10,14 +10,12 @@ helpviewer_keywords:
 - <connectionManagement>, remove element
 - remove element, connectionManagement
 ms.assetid: 94b81775-5a22-4975-8c47-8620c40c3f35
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: d249cc412a1638e62b57b4976adc23fdf8f36e80
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 03cac1523c0fce268c2df8d04134c0d5e88830e2
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48024579"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50181548"
 ---
 # <a name="ltremovegt-element-for-connectionmanagement-network-settings"></a>&lt;删除&gt;connectionManagement （网络设置） 的元素
 从连接管理列表中删除 IP 地址或 DNS 名称。  
@@ -62,7 +60,7 @@ ms.locfileid: "48024579"
  此元素可在应用程序配置文件或计算机配置文件 (Machine.config) 中使用。  
   
 ## <a name="example"></a>示例  
- 下面的示例中移除服务器 www.adventure-works.com 所有连接管理列表条目，然后配置应用程序使用与服务器 www.contoso.com 的四个连接和两个连接到所有其他服务器。  
+ 以下示例将删除任何服务器的连接管理列表项`www.adventure-works.com`，然后配置应用程序使用与服务器的四个连接`www.contoso.com`和两个连接到所有其他服务器。  
   
 ```xml  
 <configuration>  
@@ -77,6 +75,6 @@ ms.locfileid: "48024579"
 ```  
   
 ## <a name="see-also"></a>请参阅  
- <xref:System.Net.ServicePoint>  
- <xref:System.Net.ServicePointManager>  
- [网络设置架构](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+- <xref:System.Net.ServicePoint>  
+- <xref:System.Net.ServicePointManager>  
+- [网络设置架构](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

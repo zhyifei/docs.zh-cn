@@ -4,13 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - secure applications [WCF]
 ms.assetid: 79e4e6f7-0c00-4045-b0f0-e6a7c37c7788
-author: BrucePerlerMS
-ms.openlocfilehash: 4dce8615ba28ddd6054145c282192f75e7817623
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 3cf42ec2734801dfffcd0115f8bb42d0353c7014
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47198938"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50202245"
 ---
 # <a name="security-guidance-and-best-practices"></a>安全指导和最佳做法
 在本部分中的主题提供的指南和创建安全的 Windows Communication Foundation (WCF) 应用程序时需要注意的事项。 详细了解 Windows Server AppFabric 和安全性，请参阅[安全模型的 Windows Server App Fabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)  

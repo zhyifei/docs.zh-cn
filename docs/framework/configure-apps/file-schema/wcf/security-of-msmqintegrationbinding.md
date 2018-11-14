@@ -2,13 +2,12 @@
 title: '&lt;msmqIntegrationBinding&gt; 的 &lt;security&gt;'
 ms.date: 03/30/2017
 ms.assetid: ae5c68a8-14a2-4c6e-b9e0-3e94e3e9135e
-author: BrucePerlerMS
-ms.openlocfilehash: 98671f9fe73f60325025f88b94717e8a06afc55c
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: 574c0d7cba88f724143e642da13cace8c329dea6
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48845505"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50199989"
 ---
 # <a name="ltsecuritygt-of-ltmsmqintegrationbindinggt"></a>&lt;msmqIntegrationBinding&gt; 的 &lt;security&gt;
 定义消息队列 (MSMQ) 集成通道的传输安全设置。  

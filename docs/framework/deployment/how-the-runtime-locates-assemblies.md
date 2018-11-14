@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 772ac6f4-64d2-4cfb-92fd-58096dcd6c34
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 3f8ed5cce3e0c9e22679f54b13c84ea422f2100d
-ms.sourcegitcommit: 6c480773ae896f45af4671fb3e26611a50e4dd81
+ms.openlocfilehash: 54ca80e83511d6120669df634ae34ca0bf486bf3
+ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/09/2018
-ms.locfileid: "35251059"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49453445"
 ---
 # <a name="how-the-runtime-locates-assemblies"></a>运行时如何定位程序集
 若要成功部署 .NET Framework 应用程序，必须了解公共语言运行时如何查找和绑定到构成应用程序的程序集。 默认情况下，运行时尝试与生成应用程序的程序集的准确版本绑定。 可通过配置文件设置重写此默认行为。  
@@ -215,7 +215,7 @@ Al.exe /link:asm6.exe.config /out:policy.3.0.asm6.dll /keyfile: compatkey.dat /v
   
 -   引用的程序集名称：myAssembly  
   
--   应用程序根目录：http://www.code.microsoft.com  
+-   应用程序根目录：`http://www.code.microsoft.com`  
   
 -   配置文件中的 [\<probing>](../../../docs/framework/configure-apps/file-schema/runtime/probing-element.md) 元素指定：bin  
   
@@ -223,13 +223,13 @@ Al.exe /link:asm6.exe.config /out:policy.3.0.asm6.dll /keyfile: compatkey.dat /v
   
  运行时探测以下 URL：  
   
- http://www.code.microsoft.com/de/myAssembly.dll  
+ `http://www.code.microsoft.com/de/myAssembly.dll`
   
- http://www.code.microsoft.com/de/myAssembly/myAssembly.dll  
+ `http://www.code.microsoft.com/de/myAssembly/myAssembly.dll`
   
- http://www.code.microsoft.com/bin/de/myAssembly.dll  
+ `http://www.code.microsoft.com/bin/de/myAssembly.dll`
   
- http://www.code.microsoft.com/bin/de/myAssembly/myAssembly.dll  
+ `http://www.code.microsoft.com/bin/de/myAssembly/myAssembly.dll`
   
 ##### <a name="multiple-assemblies-with-the-same-name"></a>具有相同名称的多个程序集  
  以下示例显示了如何配置具有相同名称的多个程序集。  
@@ -245,8 +245,8 @@ Al.exe /link:asm6.exe.config /out:policy.3.0.asm6.dll /keyfile: compatkey.dat /v
 #### <a name="other-locations-probed"></a>探测的其他位置  
  还可使用当前的绑定上下文来确定程序集的位置。 在 COM 互操作方案中使用 <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType> 方法时，最常使用此操作。 如果某个程序集使用 <xref:System.Reflection.Assembly.LoadFrom%2A> 方法引用其他程序集，调用程序集的位置被视为可提示引用的程序集的位置。 如果找到匹配项，则加载此程序集。 如果未找到匹配项，则运行时将继续执行搜索语义，然后查询 Windows Installer 以提供程序集。 如果未提供与绑定请求匹配的程序集，则将引发异常。 如果引用了类型，则此异常为托管代码中的 <xref:System.TypeLoadException> 如果找不到正在加载的程序集，则为 <xref:System.IO.FileNotFoundException> 。  
   
- 例如，如果 Assembly1 引用 Assembly2 且 Assembly1 是从 http://www.code.microsoft.com/utils 下载的，则此位置被视为可提示 Assembly2.dll 的位置。 然后运行时会在 http://www.code.microsoft.com/utils/Assembly2.dll 和 http://www.code.microsoft.com/utils/Assembly2/Assembly2.dll 中探测程序集。 如果在这两个位置中均未找到 Assembly2，则运行时将查询 Windows Installer。  
+ 例如，如果 Assembly1 引用 Assembly2 且 Assembly1 是从 `http://www.code.microsoft.com/utils` 下载的，则此位置被视为可提示 Assembly2.dll 的位置。 然后运行时会在 `http://www.code.microsoft.com/utils/Assembly2.dll` 和 `http://www.code.microsoft.com/utils/Assembly2/Assembly2.dll` 中探测程序集。 如果在这两个位置中均未找到 Assembly2，则运行时将查询 Windows Installer。  
   
 ## <a name="see-also"></a>请参阅  
- [适用于程序集加载的最佳做法](../../../docs/framework/deployment/best-practices-for-assembly-loading.md)  
- [部署](../../../docs/framework/deployment/index.md)
+- [适用于程序集加载的最佳做法](../../../docs/framework/deployment/best-practices-for-assembly-loading.md)  
+- [部署](../../../docs/framework/deployment/index.md)

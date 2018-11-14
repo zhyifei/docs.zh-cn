@@ -7,13 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - WCF, authentication
 ms.assetid: 10e245f7-d31e-42e7-82a2-d5780325d372
-author: BrucePerlerMS
-ms.openlocfilehash: cbedab4064173186251defead8394735de033cf7
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 2a6fc82b21d8530214923bdadcad7f52da947c82
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47196572"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50088814"
 ---
 # <a name="how-to-create-a-custom-security-token-authenticator"></a>如何： 创建自定义安全令牌身份验证器
 本主题演示如何创建自定义安全令牌身份验证器以及如何将其与自定义安全令牌管理器相集成。 安全令牌身份验证器可验证随传入消息一起提供的安全令牌的内容。 如果验证成功，身份验证器将返回 <xref:System.IdentityModel.Policy.IAuthorizationPolicy> 实例的集合，该集合经过计算后可返回一组声明。  
@@ -54,7 +53,7 @@ ms.locfileid: "47196572"
   
 1.  在自定义安全令牌管理器实现中重写 <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenAuthenticator%2A> 方法。  
   
-2.  向该方法添加逻辑，使其能够基于 <xref:System.IdentityModel.Selectors.SecurityTokenRequirement> 参数返回您的自定义安全令牌身份验证器。 如果令牌要求的令牌类型为用户名（由 <xref:System.IdentityModel.Tokens.SecurityTokenTypes.UserName%2A> 属性表示），并且正在为其请求安全令牌身份验证器的消息方向为输入（由 <xref:System.ServiceModel.Description.MessageDirection.Input> 字段表示），则下面的示例将返回自定义安全令牌身份验证器。  
+2.  向该方法添加逻辑，使其能够基于 <xref:System.IdentityModel.Selectors.SecurityTokenRequirement> 参数返回您的自定义安全令牌身份验证器。 如果令牌需求的令牌类型为用户名（由 <xref:System.IdentityModel.Tokens.SecurityTokenTypes.UserName%2A> 属性表示），并且正在为其请求安全令牌身份验证器的消息方向为输入（由 <xref:System.ServiceModel.Description.MessageDirection.Input> 字段表示），则下面的示例将返回自定义安全令牌身份验证器。  
   
      [!code-csharp[c_CustomTokenAuthenticator#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customtokenauthenticator/cs/source.cs#2)]
      [!code-vb[c_CustomTokenAuthenticator#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customtokenauthenticator/vb/source.vb#2)]  

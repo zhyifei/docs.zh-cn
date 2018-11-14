@@ -8,14 +8,12 @@ helpviewer_keywords:
 - <connectionManagement> element
 - connectionManagement element
 ms.assetid: bedccaab-12a2-4511-8f67-e961f249aec6
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: 1736dd8fcb308bceee5f100149919ff9ec45510d
-ms.sourcegitcommit: d88024e6d6d8b242feae5f4007a709379355aa24
+ms.openlocfilehash: 7cc5f2a37c0520ee48a10afeb4b9bc83ffd61033
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49316319"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50201538"
 ---
 # <a name="ltconnectionmanagementgt-element-network-settings"></a>&lt;connectionManagement&gt;元素 （网络设置）
 指定到网络主机的最大连接数。  
@@ -72,6 +70,6 @@ ms.locfileid: "49316319"
 ```  
   
 ## <a name="see-also"></a>请参阅  
- <xref:System.Net.ServicePoint>  
- <xref:System.Net.ServicePointManager>  
- [网络设置架构](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+- <xref:System.Net.ServicePoint>  
+- <xref:System.Net.ServicePointManager>  
+- [网络设置架构](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

@@ -1,24 +1,24 @@
 ---
-title: “集合”教程 - C# 本地快速入门
+title: 使用集合 - C# 教程简介
 description: 在本教程中通过探索列表集合了解 C#。
 ms.date: 10/13/2017
 ms.custom: mvc
-ms.openlocfilehash: 51e8ce47165cd4ce22a72ed78138b36d15a97156
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: eaf921be2bd50b6e346f57f42e17f151ff336821
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33362910"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50205277"
 ---
-# <a name="c-quickstart-collections"></a>C# 快速入门：集合
+# <a name="learn-to-manage-data-collections-using-the-generic-list-type"></a>了解如何使用泛型列表类型管理数据集合
 
-本快速入门教程介绍了 C# 语言和 <xref:System.Collections.Generic.List%601> 类的基础知识。
+本介绍性教程介绍了 C# 语言和 <xref:System.Collections.Generic.List%601> 类的基础知识。
 
-若要学习本快速入门教程，必须有开发计算机。 .NET 主题 [10 分钟入门](https://www.microsoft.com/net/core)介绍了如何在 Mac、PC 或 Linux 上设置本地开发环境。 [本地快速入门教程简介](local-environment.md)不仅简要概述了将用到的命令，还收录了详细信息链接。
+本教程要求你有一台可用于开发的计算机。 .NET 主题 [10 分钟入门](https://www.microsoft.com/net/core)介绍了如何在 Mac、PC 或 Linux 上设置本地开发环境。 [熟悉开发工具](local-environment.md)不仅简要概述了将用到的命令，还收录了详细信息链接。
 
 ## <a name="a-basic-list-example"></a>基本列表示例
 
-创建名为 list-quickstart 的目录。 将新建的目录设为当前目录，并运行 `dotnet new console`。
+创建名为 list-tutorial 的目录。 将新建的目录设为当前目录，并运行 `dotnet new console`。
 
 > [!NOTE]
 > 如果你刚完成 [10 分钟 .NET 入门](https://www.microsoft.com/net)，则可以继续使用刚刚创建的 myApp 应用程序。
@@ -29,7 +29,7 @@ ms.locfileid: "33362910"
 using System;
 using System.Collections.Generic;
 
-namespace list_quickstart
+namespace list_tutorial
 {
     class Program
     {
@@ -47,9 +47,9 @@ namespace list_quickstart
 
 将 `<name>` 替换为自己的名称。 保存 Program.cs。 在控制台窗口中键入 `dotnet run`，试运行看看。
 
-刚刚创建了一个字符串列表，并向其中添加了三个名称，再输出了全部大写的名称。 循环访问整个列表需要用到，在前面的快速入门课程中学到的概念。
+刚刚创建了一个字符串列表，并向其中添加了三个名称，再输出了全部大写的名称。 循环读取整个列表需要用到在前面的教程中学到的概念。
 
-用于显示名称的代码使用[字符串内插](../language-reference/tokens/interpolated.md)功能。  如果 `string` 前面有 `$`符号，可以在字符串声明中嵌入 C# 代码。 实际字符串使用自己生成的值替换该 C# 代码。 在此示例中，`{name.ToUpper()}` 被替换为各个转换为大写字母的名称，因为调用了 <xref:System.String.ToUpper%2A> 方法。
+用于显示名称的代码使用[字符串内插](../../language-reference/tokens/interpolated.md)功能。  如果 `string` 前面有 `$`符号，可以在字符串声明中嵌入 C# 代码。 实际字符串使用自己生成的值替换该 C# 代码。 在此示例中，`{name.ToUpper()}` 被替换为各个转换为大写字母的名称，因为调用了 <xref:System.String.ToUpper%2A> 方法。
 
 接下来将进一步探索。
 
@@ -130,7 +130,7 @@ foreach (var name in names)
 using System;
 using System.Collections.Generic;
 
-namespace list_quickstart
+namespace list_tutorial
 {
     class Program
     {
@@ -214,6 +214,6 @@ foreach(var item in fibonacciNumbers)
 
 在循环的每次迭代中，取此列表中的最后两个整数进行求和，并将计算出的总和值添加到列表中。 循环会一直重复运行到列表中有 20 个项为止。
 
-恭喜！已完成列表快速入门教程。 可以在自己的开发环境中继续学习[类简介](introduction-to-classes.md)快速入门教程。
+恭喜！已完成“列表集合”教程。 可以在自己的开发环境中继续学习[类简介](introduction-to-classes.md)教程。
 
-若要详细了解如何使用 `List` 类型，可以参阅有关[集合](../../standard/collections/index.md)的 [.NET 指南](../../standard/index.md)主题。 还可以了解其他许多集合类型。
+若要详细了解如何使用 `List` 类型，可以参阅有关[集合](../../../standard/collections/index.md)的 [.NET 指南](../../../standard/index.md)主题。 还可以了解其他许多集合类型。

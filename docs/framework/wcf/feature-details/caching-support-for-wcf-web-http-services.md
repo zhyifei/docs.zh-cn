@@ -2,12 +2,12 @@
 title: 对 WCF Web HTTP 服务的缓存支持
 ms.date: 03/30/2017
 ms.assetid: 7f8078e0-00d9-415c-b8ba-c1b6d5c31799
-ms.openlocfilehash: ef7a03a9e4c6e188e3c7a000fc4a6050e678556d
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: 6c601b19a0b3b9b3eddbd686c316ce7e2cdf7778
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/07/2018
-ms.locfileid: "48847629"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50196799"
 ---
 # <a name="caching-support-for-wcf-web-http-services"></a>对 WCF Web HTTP 服务的缓存支持
 [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] 可以使用已在 WCF Web HTTP 服务在 ASP.NET 中提供的声明性缓存机制。 这样，你可以缓存来自 WCF Web HTTP 服务操作的响应。 如果用户向配置为进行缓存的服务发送了 HTTP GET，ASP.NET 将发送回已缓存的响应且不会调用服务方法。 在缓存过期后，下次用户发送 HTTP GET 时，将会调用服务方法且再次缓存响应。 有关 ASP.NET 缓存的详细信息，请参阅[ASP.NET 缓存概述](https://go.microsoft.com/fwlink/?LinkId=152534)  
@@ -15,7 +15,7 @@ ms.locfileid: "48847629"
 ## <a name="basic-web-http-service-caching"></a>基本 Web HTTP 服务缓存  
  若要启用 WEB HTTP 服务缓存，必须首先通过将 <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute> 应用到服务且将 <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute.RequirementsMode%2A> 设置为 <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.Allowed> 或 <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.Required> 来启用 ASP.NET 兼容性。  
   
- [!INCLUDE[netfx40_short](../../../../includes/netfx40-short-md.md)] 中引入了称为 <xref:System.ServiceModel.Web.AspNetCacheProfileAttribute> 的新特性，您可以使用该特性指定缓存配置文件名称。 此特性适用于服务操作。 下面的示例将 <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute> 应用到服务以启用 ASP.NET 兼容性，并配置 `GetCustomer` 操作以进行缓存。 <!--zz<xref:System.ServiceModel.Activation.AspNetCacheProfileAttribute>--> `System.ServiceModel.Activation.AspNetCacheProfileAttribute`属性指定包含要使用的缓存设置的缓存配置文件。  
+ [!INCLUDE[netfx40_short](../../../../includes/netfx40-short-md.md)] 中引入了称为 <xref:System.ServiceModel.Web.AspNetCacheProfileAttribute> 的新特性，您可以使用该特性指定缓存配置文件名称。 此特性适用于服务操作。 下面的示例将 <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute> 应用到服务以启用 ASP.NET 兼容性，并配置 `GetCustomer` 操作以进行缓存。 <xref:System.ServiceModel.Web.AspNetCacheProfileAttribute> 特性指定包含要使用的缓存设置的缓存配置文件。  
   
 ```csharp
 [ServiceContract] 

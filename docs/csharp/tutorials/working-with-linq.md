@@ -3,12 +3,12 @@ title: 使用 LINQ
 description: 此教程将介绍如何使用 LINQ 生成序列、编写用于 LINQ 查询的方法，以及如何区分及早计算和惰性计算。
 ms.date: 03/28/2017
 ms.assetid: 0db12548-82cb-4903-ac88-13103d70aa77
-ms.openlocfilehash: e5f9baab13cddfb9e294de1e1a6ce967ccbe0813
-ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
+ms.openlocfilehash: dc5f6cc4fd38b32f54a576a3947187cbed4e70e8
+ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2018
-ms.locfileid: "34172420"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49086747"
 ---
 # <a name="working-with-linq"></a>使用 LINQ
 
@@ -87,6 +87,14 @@ static IEnumerable<string> Ranks()
 ```
 
 这两种方法都利用 `yield return` 语法在运行时生成序列。 编译器会生成对象来实现 `IEnumerable<T>`，并在有请求时生成字符串序列。
+
+为了让编译能够顺利进行，需要在文件的最上面添加以下两行代码：
+
+```csharp
+using System;
+using System.Collections.Generic;
+using System.Linq;
+```
 
 此时，运行已生成的示例。 将显示一副纸牌中的所有 52 张纸牌。 在调试器模式下运行此示例来观察 `Suits()` 和 `Values()` 方法的执行情况，你可能会觉得非常有用。 可以清楚地看到，每个序列中的所有字符串仅在需要时生成。
 

@@ -27,12 +27,12 @@ helpviewer_keywords:
 ms.assetid: 0d1364da-5b30-4d42-8e6b-03378343343f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2c26f4602623e1eb8979ef08c5d14404cc84e031
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: b0185d79d8663d552378248f0e021a7fee8f0522
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43502210"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50189714"
 ---
 # <a name="formatting-types-in-net"></a>设置 .NET 中类型的格式
 <a name="Introduction"></a> 格式设置是指将类、结构或枚举值的实例转换为其字符串表示形式的过程，通常使得最终的字符串可以显示给用户，或者进行反序列化以还原为原始数据类型。 此转换可能面临一系列挑战：  
@@ -120,7 +120,7 @@ ms.locfileid: "43502210"
  [!code-vb[Conceptual.Formatting.Overview#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.formatting.overview/vb/default1.vb#1)]  
   
 > [!WARNING]
->  从 [!INCLUDE[win81](../../../includes/win81-md.md)]开始，[!INCLUDE[wrt](../../../includes/wrt-md.md)] 包括了具有单个方法 ([IStringable.ToString](https://msdn.microsoft.com/library/windows/apps/windows.foundation.istringable.aspx)) 的 [IStringable](https://msdn.microsoft.com/library/windows/apps/windows.foundation.istringable.tostring.aspx) 接口，用于提供默认格式支持。 但是，我们建议托管类型不实现 `IStringable` 接口。 有关更多信息，请参见 [!INCLUDE[wrt](../../../includes/wrt-md.md)] 参考页上的“`IStringable`和 <xref:System.Object.ToString%2A?displayProperty=nameWithType> 接口”部分。  
+>  从 [!INCLUDE[win81](../../../includes/win81-md.md)] 开始，[!INCLUDE[wrt](../../../includes/wrt-md.md)] 包括了具有单个方法 ([IStringable.ToString](xref:Windows.Foundation.IStringable.ToString%2A)) 的 <xref:Windows.Foundation.IStringable> 接口，用于提供默认格式支持。 但是，我们建议托管类型不实现 `IStringable` 接口。 有关更多信息，请参见 [!INCLUDE[wrt](../../../includes/wrt-md.md)] 参考页上的“`IStringable`和 <xref:System.Object.ToString%2A?displayProperty=nameWithType> 接口”部分。  
   
  由于除接口以外的所有类型都派生自 <xref:System.Object>，因此会向自定义类或结构自动提供此功能。 但是，由默认 `ToString` 方法提供的功能具有以下限制：尽管它标识类型，但无法提供有关该类型的实例的任何信息。 若要提供可提供该对象相关信息的对象的字符串表示形式，必须重写 `ToString` 方法。  
   
@@ -286,7 +286,7 @@ ms.locfileid: "43502210"
 |<xref:System.Text.StringBuilder.AppendFormat%2A?displayProperty=nameWithType>|<xref:System.ICustomFormatter?displayProperty=nameWithType>|  
   
 > [!NOTE]
->  将重载数字类型以及日期和时间类型的 `ToString` 方法，并且只有某些重载包含 <xref:System.IFormatProvider> 参数。 如果方法没有 <xref:System.IFormatProvider> 类型的参数，则改为传递 <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType> 属性所返回的对象。 例如，对默认 <xref:System.Int32.ToString?displayProperty=nameWithType> 方法的调用最终将导致诸如以下的方法调用：`Int32.ToString("G", System.Globalization.CultureInfo.CurrentCulture)`。  
+>  将重载数字类型以及日期和时间类型的 `ToString` 方法，并且只有某些重载包含 <xref:System.IFormatProvider> 参数。 如果方法没有 <xref:System.IFormatProvider> 类型的参数，则改为传递 <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType> 属性所返回的对象。 例如，对默认 <xref:System.Int32.ToString?displayProperty=nameWithType> 方法的调用最终将导致诸如以下的方法调用： `Int32.ToString("G", System.Globalization.CultureInfo.CurrentCulture)`。  
   
  .NET 提供了三个实现 <xref:System.IFormatProvider> 的类：  
   
@@ -320,7 +320,7 @@ ms.locfileid: "43502210"
   
 <a name="dateCulture"></a>   
 ### <a name="culture-sensitive-formatting-of-date-and-time-values"></a>日期和时间值的区分区域性的格式设置  
- 默认情况下，日期和时间值的格式设置是区分区域性的。 如果在调用格式设置方法时不指定区域性，则将使用当前线程区域性的格式设置约定。 下面的示例演示了这一点，其中对当前线程区域性进行了四次更改，随后调用了 <xref:System.DateTime.ToString%28System.String%29?displayProperty=nameWithType> 方法。 每次更改后，结果字符串均反映当前区域性的格式设置约定。 这是因为 <xref:System.DateTime.ToString?displayProperty=nameWithType>、<xref:System.DateTime.ToString%28System.String%29?displayProperty=nameWithType>、<xref:System.DateTimeOffset.ToString?displayProperty=nameWithType> 和 <xref:System.DateTimeOffset.ToString%28System.String%29?displayProperty=nameWithType> 方法会包装对 <xref:System.DateTime.ToString%28System.String%2CSystem.IFormatProvider%29?displayProperty=nameWithType> 及 <xref:System.DateTimeOffset.ToString%28System.String%2CSystem.IFormatProvider%29?displayProperty=nameWithType> 方法的调用。  
+ 默认情况下，日期和时间值的格式设置是区分区域性的。 如果在调用格式设置方法时不指定区域性，则将使用当前线程区域性的格式设置约定。 下面的示例演示了这一点，其中对当前线程区域性进行了四次更改，随后调用了 <xref:System.DateTime.ToString%28System.String%29?displayProperty=nameWithType> 方法。 每次更改后，结果字符串均反映当前区域性的格式设置约定。 这是因为 <xref:System.DateTime.ToString?displayProperty=nameWithType>、 <xref:System.DateTime.ToString%28System.String%29?displayProperty=nameWithType>、 <xref:System.DateTimeOffset.ToString?displayProperty=nameWithType>和 <xref:System.DateTimeOffset.ToString%28System.String%29?displayProperty=nameWithType> 方法会包装对 <xref:System.DateTime.ToString%28System.String%2CSystem.IFormatProvider%29?displayProperty=nameWithType> 及 <xref:System.DateTimeOffset.ToString%28System.String%2CSystem.IFormatProvider%29?displayProperty=nameWithType> 方法的调用。  
   
  [!code-csharp[Conceptual.Formatting.Overview#17](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.formatting.overview/cs/culturespecific1.cs#17)]
  [!code-vb[Conceptual.Formatting.Overview#17](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.formatting.overview/vb/culturespecific1.vb#17)]  
@@ -344,7 +344,7 @@ ms.locfileid: "43502210"
   
 -   支持使用 <xref:System.Convert> 类进行字符串转换。 对 <xref:System.Convert.ToString%28System.Object%29?displayProperty=nameWithType> 和 <xref:System.Convert.ToString%28System.Object%2CSystem.IFormatProvider%29?displayProperty=nameWithType> 方法的调用会自动调用 <xref:System.IFormattable> 实现。  
   
--   支持复合格式设置。 如果使用包含格式字符串的格式项设置自定义类型的格式，则公共语言运行时自动调用 <xref:System.IFormattable> 实现，并向其传递该格式字符串。 有关采用 <xref:System.String.Format%2A?displayProperty=nameWithType> 或 <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> 等方法进行复合格式设置的更多信息，请参见[复合格式设置](#CompositeFormatting)部分。  
+-   支持复合格式设置。 如果使用包含格式字符串的格式项设置自定义类型的格式，则公共语言运行时自动调用 <xref:System.IFormattable> 实现，并向其传递该格式字符串。 有关采用 <xref:System.String.Format%2A?displayProperty=nameWithType> 或 <xref:System.Console.WriteLine%2A?displayProperty=nameWithType>等方法进行复合格式设置的更多信息，请参见 [复合格式设置](#CompositeFormatting) 部分。  
   
  下面的示例定义一个实现 `Temperature` 接口的 <xref:System.IFormattable> 类。 它支持“C”或“G”格式说明符（用于以摄氏度显示温度）、“F”格式说明符（用于以华氏度显示温度）和“K”格式说明符（用于以开氏度显示温度）。  
   
@@ -382,16 +382,16 @@ ms.locfileid: "43502210"
   
 <a name="Custom"></a>   
 ## <a name="custom-formatting-with-icustomformatter"></a>使用 ICustomFormatter 进行自定义格式设置  
- 两种复合格式设置方法（<xref:System.String.Format%28System.IFormatProvider%2CSystem.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> 和 <xref:System.Text.StringBuilder.AppendFormat%28System.IFormatProvider%2CSystem.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType>）包括一个支持自定义格式设置的格式提供程序。 当调用其中一种格式设置方法时，该方法会将表示 <xref:System.Type> 接口的 <xref:System.ICustomFormatter> 对象传递到格式提供程序的 <xref:System.IFormatProvider.GetFormat%2A> 方法。 <xref:System.IFormatProvider.GetFormat%2A> 方法然后负责返回提供自定义格式设置功能的 <xref:System.ICustomFormatter> 实现。  
+ 两种复合格式设置方法（ <xref:System.String.Format%28System.IFormatProvider%2CSystem.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> 和 <xref:System.Text.StringBuilder.AppendFormat%28System.IFormatProvider%2CSystem.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType>）包括一个支持自定义格式设置的格式提供程序。 当调用其中一种格式设置方法时，该方法会将表示 <xref:System.Type> 接口的 <xref:System.ICustomFormatter> 对象传递到格式提供程序的 <xref:System.IFormatProvider.GetFormat%2A> 方法。 <xref:System.IFormatProvider.GetFormat%2A> 方法然后负责返回提供自定义格式设置功能的 <xref:System.ICustomFormatter> 实现。  
   
- <xref:System.ICustomFormatter> 接口具有一个方法 <xref:System.ICustomFormatter.Format%28System.String%2CSystem.Object%2CSystem.IFormatProvider%29>，复合格式设置方法为复合格式字符串中的每一格式项自动调用一次该方法。 <xref:System.ICustomFormatter.Format%28System.String%2CSystem.Object%2CSystem.IFormatProvider%29> 方法具有三个参数：一个格式字符串（表示格式项中的 `formatString` 参数）、一个要设置格式的对象和一个提供格式设置服务的 <xref:System.IFormatProvider> 对象。 通常，实现 <xref:System.ICustomFormatter> 的类还会实现 <xref:System.IFormatProvider>，因此上述最后一个参数是对自定义格式设置类自身的引用。 该方法返回要设置格式的对象的带格式自定义字符串表示形式。 如果该方法无法设置对象的格式，则应返回空引用（在 Visual Basic 中为`Nothing` ）。  
+ <xref:System.ICustomFormatter> 接口具有一个方法 <xref:System.ICustomFormatter.Format%28System.String%2CSystem.Object%2CSystem.IFormatProvider%29>，复合格式设置方法为复合格式字符串中的每一格式项自动调用一次该方法。 <xref:System.ICustomFormatter.Format%28System.String%2CSystem.Object%2CSystem.IFormatProvider%29> 方法具有三个参数：一个格式字符串（表示格式项中的 `formatString` 参数）、一个要设置格式的对象和一个提供格式设置服务的 <xref:System.IFormatProvider> 对象。 通常，实现 <xref:System.ICustomFormatter> 的类还会实现 <xref:System.IFormatProvider>，因此上述最后一个参数是对自定义格式设置类自身的引用。 该方法返回要设置格式的对象的带格式自定义字符串表示形式。 如果该方法无法设置对象的格式，则应返回空引用（在 Visual Basic 中为 `Nothing`）。  
   
  下面的示例提供一个名为 <xref:System.ICustomFormatter> 的 `ByteByByteFormatter` 实现，该实现将整数值显示为两位的十六进制值后跟一个空格的序列。  
   
  [!code-csharp[Conceptual.Formatting.Overview#15](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.formatting.overview/cs/icustomformatter1.cs#15)]
  [!code-vb[Conceptual.Formatting.Overview#15](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.formatting.overview/vb/icustomformatter1.vb#15)]  
   
- 下面的示例使用 `ByteByByteFormatter` 类设置整数值的格式。 请注意，第二个 <xref:System.String.Format%28System.IFormatProvider%2CSystem.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> 方法调用中多次调用了 <xref:System.ICustomFormatter.Format%2A?displayProperty=nameWithType> 方法，第三个方法调用中使用了默认 <xref:System.Globalization.NumberFormatInfo> 提供程序，这是因为 .`ByteByByteFormatter.Format` 方法无法识别“N0”格式字符串并返回空引用（在 Visual Basic 中为`Nothing` ）的格式说明符。  
+ 下面的示例使用 `ByteByByteFormatter` 类设置整数值的格式。 请注意，此示例中未显式调用 <xref:System.ICustomFormatter.Format%2A?displayProperty=nameWithType> 方法调用中多次调用了 <xref:System.String.Format%28System.IFormatProvider%2CSystem.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> 方法，并在第三个方法调用中使用了默认 <xref:System.Globalization.NumberFormatInfo> 提供程序，这是因为 .`ByteByByteFormatter.Format` 方法无法识别“N0”格式字符串并返回空引用（在 Visual Basic 中为`Nothing` ）的格式说明符。  
   
  [!code-csharp[Conceptual.Formatting.Overview#16](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.formatting.overview/cs/icustomformatter1.cs#16)]
  [!code-vb[Conceptual.Formatting.Overview#16](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.formatting.overview/vb/icustomformatter1.vb#16)]  

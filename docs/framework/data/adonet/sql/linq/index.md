@@ -2,12 +2,12 @@
 title: LINQ to SQL
 ms.date: 03/30/2017
 ms.assetid: 73d13345-eece-471a-af40-4cc7a2f11655
-ms.openlocfilehash: 499311f4db9d36f9f95d20c6ef0441ff42f0029b
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 141505eed8e76bb5f9811b5d2bdc166885905cde
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43529377"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50196825"
 ---
 # <a name="linq-to-sql"></a>LINQ to SQL
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 是 [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)] 3.5 版的一个组件，提供了用于将关系数据作为对象管理的运行时基础结构。  
@@ -28,7 +28,7 @@ ms.locfileid: "43529377"
  [编程指南](../../../../../../docs/framework/data/adonet/sql/linq/programming-guide.md)  
  提供映射、查询、更新、调试及类似任务的步骤。  
   
- [参考](../../../../../../docs/framework/data/adonet/sql/linq/reference.md)  
+ [引用](../../../../../../docs/framework/data/adonet/sql/linq/reference.md)  
  提供有关 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 的多个方面的参考信息。 相关主题包括“SQL-CLR 类型映射”、“标准查询运算符转换”等。  
   
  [示例](../../../../../../docs/framework/data/adonet/sql/linq/samples.md)  
@@ -41,7 +41,7 @@ ms.locfileid: "43529377"
  [LINQ](../../../../../visual-basic/programming-guide/language-features/linq/index.md)  
  介绍[!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)]技术，可用于 Visual Basic 用户。  
   
- [LINQ to ADO.NET](https://msdn.microsoft.com/library/be3297b9-1b54-4d4c-82a8-add0d79c2006)  
+ [LINQ 和 ADO.NET](../../../../../../docs/framework/data/adonet/linq-and-ado-net.md)  
  链接到 [!INCLUDE[vstecado](../../../../../../includes/vstecado-md.md)] 门户。  
   
  [LINQ to SQL 演练](https://msdn.microsoft.com/library/308e66ac-f704-4e00-9b4e-7af0045a2374)  

@@ -2,12 +2,12 @@
 title: '&lt;httpsTransport&gt;'
 ms.date: 03/30/2017
 ms.assetid: f6ed4bc0-7e38-4348-9259-30bf61eb9435
-ms.openlocfilehash: 972fc94234d5eeabcdb428bc5f0cff81e69cec9b
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: b31965d5c61969f673dfa5627e40567ea0a189a7
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48850304"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50181574"
 ---
 # <a name="lthttpstransportgt"></a>&lt;httpsTransport&gt;
 为自定义绑定指定用于传输 SOAP 消息的 HTTP 传输。  
@@ -49,7 +49,7 @@ ms.locfileid: "48850304"
 |allowCookies|一个布尔值，指定客户端是否接受 Cookie 并在今后的请求中传播这些 Cookie。 默认值为 `false`。<br /><br /> 在与使用 Cookie 的 ASMX Web 服务进行交互时，可以使用此属性。 通过这种方式，可以确保从服务器返回的 Cookie 自动复制到客户端今后对该服务的所有请求。|  
 |authenticationScheme|指定用来验证 HTTP 侦听器正在处理的客户端请求的协议。 包括以下有效值：<br /><br /> -Digest： 指定摘要式身份验证。<br />-Negotiate： 协商使用客户端，以确定身份验证方案。 如果客户端和服务器均支持 Kerberos，则使用 Kerberos；否则使用 NTLM。<br />-Ntlm： 指定 NTLM 身份验证。<br />-基本： 指定基本身份验证。<br />-Anonymous： 指定匿名身份验证。<br /><br /> 默认值为 Anonymous。 此属性的类型为 <xref:System.Net.AuthenticationSchemes>。 此属性只能设置一次。|  
 |bypassProxyOnLocal|一个布尔值，指示是否对本地地址不使用代理服务器。 默认值为 `false`。<br /><br /> 本地地址是指位于本地 LAN 或 Intranet 上的地址。<br /><br /> Windows Communication Foundation (WCF) 总是忽略代理，如果服务地址以开始 `http://localhost` 。<br /><br /> 如果希望客户端在与同一台计算机上的服务通话时使用代理，则应使用主机名称而非 localhost。|  
-|hostnameComparisonMode|指定用于分析 URI 的 HTTP 主机名比较模式。 有效值为<br /><br /> -StrongWildcard: （"+"） 与指定的方案、 端口和相对 URI 的上下文中的所有可能的主机名相匹配。<br />-精确： 无通配符<br />-WeakWildcard: ("*") 匹配的指定的方案、 端口和相对 UIR 尚未显式匹配或通过强通配符机制的上下文中的所有可能主机名。<br /><br /> 默认值为 StrongWildcard。 此属性的类型为 `System.ServiceModel.HostnameComparison`。|  
+|hostnameComparisonMode|指定用于分析 URI 的 HTTP 主机名比较模式。 有效值为<br /><br /> -StrongWildcard: （"+"） 与指定的方案、 端口和相对 URI 的上下文中的所有可能的主机名相匹配。<br />-精确： 无通配符<br />-WeakWildcard: ("\*") 匹配的指定的方案、 端口和相对 UIR 尚未显式匹配或通过强通配符机制的上下文中的所有可能主机名。<br /><br /> 默认值为 StrongWildcard。 此属性的类型为 `System.ServiceModel.HostnameComparison`。|  
 |manualAddressing|一个使用户能够控制消息寻址的布尔值。 此属性通常用于路由器方案。在该方案中，应用程序确定将消息发送到若干目标中的哪一个。<br /><br /> 如果设置为 `true`，则通道假定已对消息进行寻址，而不再向其添加其他任何信息。 然后，用户可以单独对每个消息进行寻址。<br /><br /> 如果设置为 `false`，则默认的 Windows Communication Foundation (WCF) 寻址机制将为所有消息自动创建地址。<br /><br /> 默认值为 `false`。|  
 |maxBufferPoolSize|一个正整数，指定缓冲池的最大大小。 默认值为 524288。<br /><br /> WCF 的许多组件使用缓冲区。 每次使用缓冲区时，创建和销毁它们都将占用大量资源，而缓冲区的垃圾回收过程也是如此。 利用缓冲池，可以从缓冲池中获得缓冲区，使用缓冲区，然后在完成工作后将其返回给缓冲池。 这样就避免了创建和销毁缓冲区的系统开销。|  
 |maxBufferSize|一个正整数，指定缓冲区的最大大小。 默认值为 524288。|  

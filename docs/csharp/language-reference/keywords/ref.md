@@ -1,27 +1,28 @@
 ---
 title: ref 关键字（C# 参考）
-ms.date: 03/06/2018
+ms.date: 10/24/2018
 f1_keywords:
 - ref_CSharpKeyword
 - ref
 helpviewer_keywords:
 - parameters [C#], ref
 - ref keyword [C#]
-ms.openlocfilehash: e0b82de125246e95d8dce2a7afc20119a8a1fe4f
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 9165a388122eeda5ca0499c6d75c2266780a6004
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/29/2018
-ms.locfileid: "47207945"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50195965"
 ---
 # <a name="ref-c-reference"></a>ref（C# 参考）
 
 `ref` 关键字指示按引用传递的值。 它用在四种不同的上下文中：
 
-- 在方法签名和方法调用中，按引用将参数传递给方法。 有关详细信息，请参阅[引用传递参数](#passing-an-argument-by-reference)。
+- 在方法签名和方法调用中，按引用将参数传递给方法。 有关详细信息，请参阅[按引用传递参数](#passing-an-argument-by-reference)。
 - 在方法签名中，按引用将值返回给调用方。 有关详细信息，请参阅[引用返回值](#reference-return-values)。
-- 在成员正文中，指示引用返回值是否作为调用方欲修改的引用被存储在本地，或在一般情况下，局部变量按引用访问另一个值。 有关详细信息，请参阅 [ref 局部变量](#ref-locals)。
-- 在 `struct` 声明中声明 `ref struct` 或 `ref readonly struct`。 有关更多信息，请参见[具有值类型的引用语义](../../reference-semantics-with-value-types.md)。
+- 在成员正文中，指示引用返回值是否作为调用方欲修改的引用被存储在本地，或在一般情况下，局部变量按引用访问另一个值。 有关详细信息，请参阅 [Ref 局部变量](#ref-locals)。
+- 在 `struct` 声明中声明 `ref struct` 或 `ref readonly struct`。 有关详细信息，请参阅 [ref 结构类型](#ref-struct-types)。
+
 
 ## <a name="passing-an-argument-by-reference"></a>按引用传递参数
 
@@ -89,6 +90,8 @@ return ref DecimalArray[0];
 
 为方便调用方修改对象的状态，引用返回值必须存储在被显式定义为 [ref 局部变量](#ref-locals)的变量中。
 
+所调用方法还可能会将返回值声明为 `ref readonly` 以按引用返回值，并坚持调用代码无法修改返回的值。 调用方法可以通过将返回的值存储在本地 [ref readonly](#ref-readonly-locals) 变量中来避免复制该值。
+
 有关示例，请参阅 [ref 返回值和 ref 局部变量示例](#a-ref-returns-and-ref-locals-example)
 
 ## <a name="ref-locals"></a>ref 局部变量
@@ -111,6 +114,10 @@ ref VeryLargeStruct reflocal = ref veryLargeStruct;
 
 请注意，在这两个示例中，必须在两个位置同时使用 `ref` 关键字，否则编译器将生成错误 CS8172：“无法使用值对按引用变量进行初始化”。
 
+## <a name="ref-readonly-locals"></a>Ref readonly 局部变量
+
+Ref readonly 局部变量用于指代在其签名中具有 `ref readonly` 并使用 `return ref` 的方法或属性返回的值。 `ref readonly` 变量将 `ref` 本地变量的属性与 `readonly` 变量结合使用：它是所分配到的存储的别名，且无法修改。 
+
 ## <a name="a-ref-returns-and-ref-locals-example"></a>ref 返回值和 ref 局部变量示例
 
 下列示例定义一个具有两个 <xref:System.String> 字段（`Title` 和 `Author`）的 `Book` 类。 还定义包含 `Book` 对象的专用数组的 `BookCollection` 类。 通过调用 `GetBookByTitle` 方法，可按引用返回个别 book 对象。
@@ -121,13 +128,30 @@ ref VeryLargeStruct reflocal = ref veryLargeStruct;
 
 [!code-csharp[csrefKeywordsMethodParams#6](~/samples/snippets/csharp/language-reference/keywords/in-ref-out-modifier/RefParameterModifier.cs#5)]
 
+## <a name="ref-struct-types"></a>Ref 结构类型
+
+将 `ref` 修饰符添加到 `struct` 声明定义了该类型的实例必须为堆栈分配。 换言之，永远不能在作为另一类的成员的堆上创建这些类型的实例。 此功能的主要动机是 <xref:System.Span%601> 和相关结构。
+
+保持 `ref struct` 类型作为堆栈分配的变量的目标引入了几条编译器针对所有 `ref struct` 类型强制执行的规则。
+
+- 不能对 `ref struct` 装箱。 无法向属于 `object`、`dynamic` 或任何接口类型的变量分配 `ref struct` 类型。
+- `ref struct` 类型不能实现接口。
+- 不能将 `ref struct` 声明为类或常规结构的成员。
+- 不能声明异步方法中属于 `ref struct` 类型的本地变量。 不能在返回类似 <xref:System.Threading.Tasks.Task>、<xref:System.Threading.Tasks.Task%601> 或 `Task` 类型的同步方法中声明它们。
+- 无法在迭代器中声明 `ref struct` 本地变量。
+- 无法捕获 Lambda 表达式或本地函数中的 `ref struct` 变量。
+
+这些限制可确保不会以可提升至托管堆的方式意外地使用 `ref struct`。
+
+可以组合修饰符以将结构声明为 `readonly ref`。 `readonly ref struct` 兼具 `ref struct` 和 `readonly struct` 声明的优点和限制。
+
 ## <a name="c-language-specification"></a>C# 语言规范
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>请参阅
 
-- [引用语义结合值类型](../../reference-semantics-with-value-types.md)  
+- [编写安全高效的代码](../../write-safe-efficient-code.md)  
 - [传递参数](../../programming-guide/classes-and-structs/passing-parameters.md)  
 - [方法参数](method-parameters.md)  
 - [C# 参考](../index.md)  

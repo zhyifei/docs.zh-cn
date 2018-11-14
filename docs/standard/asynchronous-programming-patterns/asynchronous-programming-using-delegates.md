@@ -15,11 +15,11 @@ ms.assetid: 38a345ca-6963-4436-9608-5c9defef9c64
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: bad5372af1d771dc93a20e61090ef84126f3e1eb
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47205208"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48033319"
 ---
 # <a name="asynchronous-programming-using-delegates"></a>使用委托进行异步编程
 使用委托可通过异步方式调用同步方法。 如果同步调用委托，`Invoke` 方法将在当前线程上直接调用目标方法。 如果调用 `BeginInvoke` 方法，公共语言运行时 (CLR) 将对请求进行排队并立即返回给调用方。 目标方法将在线程池中的某个线程上异步调用。 提交请求的原始线程可以不受限制地继续与目标方法并行执行。 如果已在对 `BeginInvoke` 方法的调用中指定回叫方法，则目标方法结束时，将调用回叫方法。 在回叫方法中，`EndInvoke` 方法将获取返回值和所有输入/输出或仅输出参数。 如果调用 `BeginInvoke` 时未指定回叫方法，则可能从调用 `BeginInvoke` 的线程上调用 `EndInvoke`。  

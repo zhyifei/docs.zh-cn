@@ -2,13 +2,12 @@
 title: 终结点：未授权的安全调用次数
 ms.date: 03/30/2017
 ms.assetid: d25095ff-9ff0-4c69-a674-4e6a9fe3f4dc
-author: BrucePerlerMS
-ms.openlocfilehash: 2d2f114d45675ece23f818d4d56bcc40684f9dbf
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: b37d4cd33c41c6e978dd82ca7ce6332302a843de
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47194070"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50198024"
 ---
 # <a name="endpoint-security-calls-not-authorized"></a>终结点：未授权的安全调用次数
 计数器名称：Security Calls Not Authorized（未授权的安全调用次数）。  

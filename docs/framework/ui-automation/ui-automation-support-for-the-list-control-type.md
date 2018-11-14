@@ -8,22 +8,22 @@ helpviewer_keywords:
 ms.assetid: 0e959fcb-50f2-413b-948d-7167d279bc11
 author: Xansky
 ms.author: mhopkins
-ms.openlocfilehash: 1ca4e0f0e0d88004d6c2059af4c774c916efd5ac
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 1ae62cca72831b0319243acd9c5bf7a2b86138c3
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48035066"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50205264"
 ---
 # <a name="ui-automation-support-for-the-list-control-type"></a>UI 自动化对 List 控件类型的支持
 > [!NOTE]
->  本文档适用于想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空间中定义的托管 <xref:System.Windows.Automation> 类的 .NET Framework 开发人员。 有关最新信息[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]，请参阅[Windows 自动化 API: UI 自动化](https://go.microsoft.com/fwlink/?LinkID=156746)。  
+>  本文档适用于想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空间中定义的托管 <xref:System.Windows.Automation> 类的 .NET Framework 开发人员。 有关 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]的最新信息，请参阅 [Windows 自动化 API：UI 自动化](https://go.microsoft.com/fwlink/?LinkID=156746)。  
   
  本主题介绍 List 控件类型的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 支持。 在 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]中，控件类型是一组条件，控件必须满足这些条件才能使用 <xref:System.Windows.Automation.AutomationElement.ControlTypeProperty> 属性。 这些条件包括针对 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 树结构、 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 属性值和控件模式的特定准则。  
   
  List 控件类型提供一种方法来组织平面组或项组并允许用户选择一个或多个这些项。 List 控件类型对它可能包含哪些类型的子元素具有宽松的限制。 这使 UI 自动化提供程序可以支持选择容器中的已知元素。  
   
- [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]以下各节中的要求适用于所有控件是否实现 List 控件类型， [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)]， [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)]，或[!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)]。 List 容器控件是实现 List 控件类型的控件示例。  
+ 以下各节中的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 要求适用于实现 List 控件类型的所有控件，无论其为 [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)][!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)] 或 [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)]。 List 容器控件是实现 List 控件类型的控件示例。  
   
 <a name="Required_UI_Automation_Tree_Structure"></a>   
 ## <a name="required-ui-automation-tree-structure"></a>必需的 UI 自动化树结构  
@@ -36,21 +36,19 @@ ms.locfileid: "48035066"
   
  实现 List 控件类型（如列表控件）的控件的控件视图组成如下：  
   
--   列表控件中的零个或多个项（项可以基于 List Item 或 Data Item 控件类型）  
+- 列表控件 （项可以基于列表项或数据项控件类型） 中的零个或多个项。
   
--   列表控件中的零个或多个组控件  
+- 零个或多个列表控件中的组控件。
   
--   零个、一个或两个滚动条控件  
+- 零、 一个或两个滚动条控件。
   
--  
+实现 List 控件类型（如列表控件）的控件的内容视图组成如下：  
   
- 实现 List 控件类型（如列表控件）的控件的内容视图组成如下：  
+- 列表控件 （项可以基于列表项或数据项控件类型） 中的零个或多个项。
   
--   列表控件中的零个或多个项（项可以基于 List Item 或 Data Item 控件类型）  
-  
--   列表控件中的零个或多个组  
-  
- 列表控件不得具有除了组合在一起外的层次结构关系。 如果这些项在 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 树中具有子项，则列表容器应基于 Tree 控件类型。  
+- 在列表控件中的零个或多个组。
+
+列表控件不得具有除了组合在一起外的层次结构关系。 如果这些项在 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 树中具有子项，则列表容器应基于 Tree 控件类型。  
   
  在列表控件中可选择的项都可从列表控件的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 树中的子代获取。 列表控件中的所有项都必须都属于同一个选择组。 在列表中的可选择项应作为 ListItem（而不是 DataItem）控件类型公开。  
   

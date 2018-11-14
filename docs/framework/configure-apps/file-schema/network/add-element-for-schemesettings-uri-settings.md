@@ -2,14 +2,12 @@
 title: '&lt;添加&gt;schemeSettings （Uri 设置） 的'
 ms.date: 03/30/2017
 ms.assetid: 594a7b3b-af23-4cfa-b616-0b2dddb1a705
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: 9cca5e35bfc0aef448d2d515f5ac55ed9e2e2258
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: 07bcaf470c68a4d400057b0fe19e96524b2859cb
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48781237"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50205173"
 ---
 # <a name="ltaddgt-element-for-schemesettings-uri-settings"></a>&lt;添加&gt;schemeSettings （Uri 设置） 的
 添加方案设置的方案名称。  
@@ -84,10 +82,10 @@ ms.locfileid: "48781237"
 ```  
   
 ## <a name="see-also"></a>请参阅  
- <xref:System.Configuration.SchemeSettingElement?displayProperty=nameWithType>  
- <xref:System.Configuration.SchemeSettingElementCollection?displayProperty=nameWithType>  
- <xref:System.Configuration.UriSection?displayProperty=nameWithType>  
- <xref:System.Configuration.UriSection.SchemeSettings%2A?displayProperty=nameWithType>  
- <xref:System.GenericUriParserOptions?displayProperty=nameWithType>  
- <xref:System.Uri?displayProperty=nameWithType>  
- [网络设置架构](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+- <xref:System.Configuration.SchemeSettingElement?displayProperty=nameWithType>  
+- <xref:System.Configuration.SchemeSettingElementCollection?displayProperty=nameWithType>  
+- <xref:System.Configuration.UriSection?displayProperty=nameWithType>  
+- <xref:System.Configuration.UriSection.SchemeSettings%2A?displayProperty=nameWithType>  
+- <xref:System.GenericUriParserOptions?displayProperty=nameWithType>  
+- <xref:System.Uri?displayProperty=nameWithType>  
+- [网络设置架构](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

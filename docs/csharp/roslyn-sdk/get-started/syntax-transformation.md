@@ -3,12 +3,12 @@ title: 语法转换 (Roslyn API) 入门
 description: 介绍如何遍历、查询及浏览语法树。
 ms.date: 06/01/2018
 ms.custom: mvc
-ms.openlocfilehash: acba7ac590154ad8458d0d9a8abac55a12e96265
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 3f8d152a2e17bc9e480bd0a76488c563720a63b1
+ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47400785"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49122560"
 ---
 # <a name="get-started-with-syntax-transformation"></a>语法转换入门
 

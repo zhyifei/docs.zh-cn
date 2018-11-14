@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 68d1c539-6a47-4614-ab59-4b071c9d4b4c
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b05ec604f8493ba773d9de9af19acc70c023b8bf
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9c43f75dc17d49fe34094829387673b0f1f1d028
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33394148"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50201577"
 ---
 # <a name="best-practices-for-assembly-loading"></a>适用于程序集加载的最佳做法
 本文讨论避免类型标识问题的方法，从而避免发生 <xref:System.InvalidCastException>、<xref:System.MissingMethodException> 以及其他错误。 本文讨论以下建议：  
@@ -164,9 +164,10 @@ ms.locfileid: "33394148"
   
  请注意，可以使用 <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType> 方法加载这些程序集。 由于这些程序集此时位于探测路径中，因此会将它们加载到默认加载上下文（而非加载位置上下文）中。 不过，建议切换到 <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> 方法并提供完整的程序集显示名称，从而确保始终使用正确的版本。  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType>  
- <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType>  
- <xref:System.Reflection.Assembly.LoadFile%2A?displayProperty=nameWithType>  
- <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType>  
- [外接程序和扩展性](../../../docs/framework/add-ins/index.md)
+## <a name="see-also"></a>请参阅
+
+- <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType>
+- <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType>
+- <xref:System.Reflection.Assembly.LoadFile%2A?displayProperty=nameWithType>
+- <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType>
+- [外接程序和扩展性](../../../docs/framework/add-ins/index.md)

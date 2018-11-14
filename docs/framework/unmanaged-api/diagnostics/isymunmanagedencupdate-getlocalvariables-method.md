@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 82e657e91e586d7fe409646ea4fb8946c026e84c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: a53493d666cb16fcc9b407ca3a46072afa306b97
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33424334"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50182471"
 ---
 # <a name="isymunmanagedencupdategetlocalvariables-method"></a>ISymUnmanagedENCUpdate::GetLocalVariables 方法
 获取本地变量。  
@@ -38,21 +38,21 @@ HRESULT GetLocalVariables(
     [out] ULONG        *pceltFetched);  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
  `mdMethodToken`  
- [in]方法的元数据标记。  
+ [in]该方法的元数据标记。  
   
  `cLocals`  
- [in]A `ULONG` ，该值指示的大小`rgLocals`参数。  
+ [in]一个`ULONG`指示的大小`rgLocals`参数。  
   
  `rgLocals`  
- [out]返回的数组的<!--zz<xref:ISymUnmanagedVariable>-->`ISymUnmanagedVariable`实例。  
+ [out]返回的数组[ISymUnmanagedVariable](isymunmanagedvariable-interface.md)实例。  
   
  `pceltFetched`  
- [out]指向的指针`ULONG`接收的大小`rgLocals`包含局部变量所需的缓冲区。  
+ [out]一个指向`ULONG`，它接收的大小`rgLocals`包含局部变量所需的缓冲区。  
   
 ## <a name="return-value"></a>返回值  
- 如果该方法成功; 则为 S_OK否则为 E_FAIL 或某些其他错误代码。  
+ 如果方法成功，则为 S_OK否则为 E_FAIL 或某些其他错误代码。  
   
 ## <a name="requirements"></a>要求  
  **标头：** CorSym.idl、 CorSym.h  

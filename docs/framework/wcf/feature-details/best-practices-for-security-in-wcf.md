@@ -7,13 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - best practices [WCF], security
 ms.assetid: 3639de41-1fa7-4875-a1d7-f393e4c8bd69
-author: BrucePerlerMS
-ms.openlocfilehash: a45ec6b5cdd241cb92069e8097bc94baa65b2166
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 25cc1a1e4c6e7e7d3f695c06eade8be546ee6c05
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47193695"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50205251"
 ---
 # <a name="best-practices-for-security-in-wcf"></a>WCF 中安全性的最佳做法
 以下各节列出了在使用 Windows Communication Foundation (WCF) 创建安全应用程序时应考虑的最佳做法。 有关安全性的详细信息，请参阅[安全注意事项](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)、[数据的安全注意事项](../../../../docs/framework/wcf/feature-details/security-considerations-for-data.md)和[元数据的安全注意事项](../../../../docs/framework/wcf/feature-details/security-considerations-with-metadata.md)。  

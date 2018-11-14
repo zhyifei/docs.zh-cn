@@ -1,21 +1,21 @@
 ---
 title: 关键字参考 (F#)
-description: '查找指向所有 F # 语言关键字有关的信息。'
+description: 查找指向所有 F# 语言关键字有关的信息。
 ms.date: 05/16/2016
 ms.openlocfilehash: 0016f68b2872183a2b4dd865ce229b6a76250b78
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
+ms.lasthandoff: 11/02/2018
 ms.locfileid: "43856019"
 ---
 # <a name="keyword-reference"></a>关键字参考
 
-本主题包含指向所有 F # 语言关键字的信息。
+本主题包含指向所有 F# 语言关键字的信息。
 
-## <a name="f-keyword-table"></a>F # 关键字表
+## <a name="f-keyword-table"></a>F# 关键字表
 
-下表显示按字母顺序，以及简要说明以及指向包含详细信息的相关主题的所有 F # 关键字。
+下表显示按字母顺序，以及简要说明以及指向包含详细信息的相关主题的所有 F# 关键字。
 
 |关键字|链接|描述|
 |-------|----|-----------|
@@ -90,7 +90,7 @@ ms.locfileid: "43856019"
 |`yield`|[序列](sequences.md)|在序列表达式中用于生成的序列值。|
 |`yield!`|[计算表达式](computation-expressions.md)<br /><br />[异步工作流](asynchronous-workflows.md)|计算表达式中用于将给定的计算表达式的结果追加到包含的计算表达式的结果的集合。|
 
-因为它们是 OCaml 语言中的关键字，F # 中被保留以下标记：
+因为它们是 OCaml 语言中的关键字，F# 中被保留以下标记：
 
 * `asr`
 * `land`
@@ -103,7 +103,7 @@ ms.locfileid: "43856019"
 
 如果使用`--mlcompatibility`编译器选项，上面的关键字是可供使用作为标识符。
 
-作为关键字的 F # 语言的将来扩展保留以下标记：
+作为关键字的 F# 语言的将来扩展保留以下标记：
 
 * `atomic`
 * `break`

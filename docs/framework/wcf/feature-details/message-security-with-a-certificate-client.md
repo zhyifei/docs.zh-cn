@@ -5,13 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 99770573-c815-4428-a38c-e4335c8bd7ce
-author: BrucePerlerMS
-ms.openlocfilehash: 9100d3d16c39ca53e9afe3721c9d6f1027ba2048
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: f435136bb08876b759087b9cdd258f6ae7881be5
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47193861"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50191111"
 ---
 # <a name="message-security-with-a-certificate-client"></a>使用证书客户端的消息安全
 以下方案演示了 Windows Communication Foundation (WCF) 客户端和服务使用消息安全模式保护。 使用证书对客户端和服务进行身份验证。 有关详细信息，请参阅[分布式应用程序安全性](../../../../docs/framework/wcf/feature-details/distributed-application-security.md)。  

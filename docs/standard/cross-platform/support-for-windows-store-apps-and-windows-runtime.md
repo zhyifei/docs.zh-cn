@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 6fa7d044-ae12-4c54-b8ee-50915607a565
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 18bd35495d1cb7cfffe39efa8f7313b75c7f5378
-ms.sourcegitcommit: 700b9003ea6bdd83a53458bbc436c9b5778344f1
+ms.openlocfilehash: 0476fe7ed731dbb2c6b86cff3255673ecee6f98d
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48261558"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50198453"
 ---
 # <a name="net-framework-support-for-windows-store-apps-and-windows-runtime"></a>.NET Framework 对 Windows 应用商店应用程序和 Windows 运行时的支持情况
 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 支持基于 [!INCLUDE[wrt](../../../includes/wrt-md.md)]的许多软件开发方案。 这些方案分为三类：
@@ -25,7 +25,7 @@ ms.locfileid: "48261558"
 
 -   开发类库以用于通过 .NET Framework 开发的 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]应用。
 
--   开发以 .WinMD 文件打包的 [!INCLUDE[wrt](../../../includes/wrt-md.md)]组件，这类文件可由任何支持 [!INCLUDE[wrt](../../../includes/wrt-md.md)]的编程语言使用。 有关示例，请参阅[C# 和 Visual Basic 中创建 Windows 运行时组件](https://msdn.microsoft.com/library/windows/apps/br230301(v=VS.110).aspx)。
+-   开发以 .WinMD 文件打包的 [!INCLUDE[wrt](../../../includes/wrt-md.md)]组件，这类文件可由任何支持 [!INCLUDE[wrt](../../../includes/wrt-md.md)]的编程语言使用。 有关示例，请参阅[C# 和 Visual Basic 中创建 Windows 运行时组件](/windows/uwp/winrt-components/creating-windows-runtime-components-in-csharp-and-visual-basic)。
 
  本主题概述 .NET Framework 为所有这三个类别提供的支持，并描述用于 [!INCLUDE[wrt](../../../includes/wrt-md.md)]组件的方案。 第一部分包括有关 .NET Framework 和 [!INCLUDE[wrt](../../../includes/wrt-md.md)]之间的关系的基本信息，并阐释了在帮助系统和 IDE 时可能遇到的一些问题。 [第二部分](#WindowsRuntimeComponents)讨论了的开发方案[!INCLUDE[wrt](../../../includes/wrt-md.md)]组件。
 
@@ -54,7 +54,7 @@ ms.locfileid: "48261558"
 ### <a name="the-net-framework-and-the-includewrtincludeswrt-mdmd-reference-documentation"></a>.NET Framework 和 [!INCLUDE[wrt](../../../includes/wrt-md.md)]参考文档
  Windows 运行时和.NET Framework 文档集是独立的。 如果按 F1 显示关于类型或成员的帮助，将显示相应集合中的参考文档。 但是，如果你浏览[Windows 运行时引用](/uwp/api/)可能会遇到令人困惑的示例：
 
--   如主题<xref:Windows.Foundation.Collections.IIterable%601>接口不具有 Visual Basic 或 C# 的声明语法。 相反，在语法部分上方将显示一个注释 (在这种情况下，".NET： 此接口显示为 System.Collections.Generic.IEnumerable\<T >")。 这是因为，.NET Framework 和 [!INCLUDE[wrt](../../../includes/wrt-md.md)]以不同的接口提供类似的功能。 此外，它们还有下列行为差异：`IIterable` 有一个 `First` 方法，而没有返回枚举器的 <xref:System.Collections.Generic.IEnumerable%601.GetEnumerator%2A> 方法。 .NET Framework 并不强制您了解执行常规任务的另一种方法，而是通过让托管代码看上去是在使用您熟悉的类型来支持 [!INCLUDE[wrt](../../../includes/wrt-md.md)]。 在 IDE 中，您将看不到 `IIterable` 接口，因此您在 [!INCLUDE[wrt](../../../includes/wrt-md.md)]参考中遇到它的唯一方式是直接浏览该文档。
+-   如主题<xref:Windows.Foundation.Collections.IIterable%601>接口不具有 Visual Basic 或 C# 的声明语法。 相反，在语法部分上方将显示一个注释 (在这种情况下，".NET： 此接口显示为 System.Collections.Generic.IEnumerable\<T >")。 这是因为，.NET Framework 和 [!INCLUDE[wrt](../../../includes/wrt-md.md)]以不同的接口提供类似的功能。 此外，它们还有下列行为差异：`IIterable` 有一个 `First` 方法，而没有返回枚举器的 <xref:System.Collections.Generic.IEnumerable%601.GetEnumerator%2A> 方法。 .NET Framework 并不强制你了解执行常规任务的另一种方法，而是通过让托管代码看上去是在使用你熟悉的类型来支持 [!INCLUDE[wrt](../../../includes/wrt-md.md)]。 在 IDE 中，您将看不到 `IIterable` 接口，因此您在 [!INCLUDE[wrt](../../../includes/wrt-md.md)]参考中遇到它的唯一方式是直接浏览该文档。
 
 -   <xref:Windows.Web.Syndication.SyndicationFeed.%23ctor(System.String,System.String,Windows.Foundation.Uri)>文档阐释了一个紧密相关的问题： 显示为不同的语言不同的参数类型。 对于 C# 和 Visual Basic，参数类型为 <xref:System.String?displayProperty=nameWithType> 和 <xref:System.Uri?displayProperty=nameWithType>。 同样，这是因为 .NET Framework 具有自己的 `String` 和 `Uri` 类型，并且，对于这种常用的类型，不宜强制 .NET Framework 用户了解执行操作的不同方式。 在 IDE 中，.NET Framework 隐藏相应的 [!INCLUDE[wrt](../../../includes/wrt-md.md)]类型。
 
@@ -80,16 +80,16 @@ ms.locfileid: "48261558"
 |`Windows.UI.Xaml.Data.PropertyChangedEventHandler`|`System.ComponentModel.PropertyChangedEventHandler`|
 |`Windows.UI.Xaml.Data.PropertyChangedEventArgs`|`System.ComponentModel.PropertyChangedEventArgs`|
 
- 在 [!INCLUDE[wrt](../../../includes/wrt-md.md)]中，利用 `IMap<K, V>` 来循环访问 `IMapView<K, V>` 和 `IKeyValuePair`。 在将它们传递给托管代码时，它们显示为 `IDictionary<TKey, TValue>` 和 `IReadOnlyDictionary<TKey, TValue>`，因此自然要使用 `System.Collections.Generic.KeyValuePair<TKey, TValue>` 来枚举它们。
+ 在 [!INCLUDE[wrt](../../../includes/wrt-md.md)]中，利用 `IMap<K, V>` 来循环访问 `IMapView<K, V>` 和 `IKeyValuePair`。 在将其传递给托管代码时，它们显示为 `IDictionary<TKey, TValue>` 和 `IReadOnlyDictionary<TKey, TValue>`，因此你会自然地使用 `System.Collections.Generic.KeyValuePair<TKey, TValue>` 来枚举它们。
 
  接口在托管代码中的显示方式将影响实现这些接口的类型的显示方式。 例如， `PropertySet` 类实现 `IMap<K, V>`，后者在托管代码中显示为 `IDictionary<TKey, TValue>`。 `PropertySet` 显示为已实现 `IDictionary<TKey, TValue>` 而不是 `IMap<K, V>`，因此在托管代码中，它显示为具有 `Add` 方法，其行为类似于 .NET Framework 字典中的 `Add` 方法。 它不会显示为具有 `Insert` 方法。
 
- 有关如何使用.NET Framework 创建的详细信息[!INCLUDE[wrt](../../../includes/wrt-md.md)]组件，并演示如何使用 JavaScript 中，此类组件的演练，请参阅[C# 和 Visual Basic 中创建 Windows 运行时组件](https://msdn.microsoft.com/library/windows/apps/br230301%28v=VS.110%29.aspx)。
+ 有关如何使用.NET Framework 创建的详细信息[!INCLUDE[wrt](../../../includes/wrt-md.md)]组件，并演示如何使用 JavaScript 中，此类组件的演练，请参阅[C# 和 Visual Basic 中创建 Windows 运行时组件](/windows/uwp/winrt-components/creating-windows-runtime-components-in-csharp-and-visual-basic)。
 
 ### <a name="primitive-types"></a>基元类型
  为了能够在托管代码中自然使用 [!INCLUDE[wrt](../../../includes/wrt-md.md)]，代码中显示 .NET Framework 基元类型而非 [!INCLUDE[wrt](../../../includes/wrt-md.md)]基元类型。 在 .NET Framework 中，诸如 `Int32` 结构等基元类型具有许多有用的属性和方法，如 `Int32.TryParse` 方法。 相反，[!INCLUDE[wrt](../../../includes/wrt-md.md)]中的基元类型和结构只有字段。 在托管代码中使用基元时，它们将显示为 .NET Framework 类型，你可以如往常一样使用 .NET Framework 类型的属性和方法。 以下列表提供了一个摘要：
 
--   对于 [!INCLUDE[wrt](../../../includes/wrt-md.md)]基元 `Int32`、`Int64`、`Single`、`Double`、`Boolean`、`String`（Unicode 字符的不可变集合）、`Enum`、`UInt32`、`UInt64` 和 `Guid`，请使用 `System` 命名空间中的同名类型。
+-   对于 [!INCLUDE[wrt](../../../includes/wrt-md.md)]基元 `Int32`，`Int64`、`Single`、`Double`、`Boolean`、`String`（Unicode 字符的不可变集合）、`Enum`、`UInt32`、`UInt64` 和 `Guid`，使用 `System` 命名空间中的同名类型。
 
 -   对于 `UInt8`，使用 `System.Byte`。
 
@@ -104,7 +104,7 @@ ms.locfileid: "48261558"
  在托管代码和 .NET Framework 中显示相同的其他基本常用 [!INCLUDE[wrt](../../../includes/wrt-md.md)]类型包括 `Windows.Foundation.DateTime` 结构（在托管代码显示为 <xref:System.DateTimeOffset?displayProperty=nameWithType> 结构）和 `Windows.Foundation.TimeSpan` 结构（在托管代码显示为 <xref:System.TimeSpan?displayProperty=nameWithType> 结构）。
 
 ### <a name="other-differences"></a>其他差异
- 在少数情况下，由于代码中显示 .NET Framework 类型而非 [!INCLUDE[wrt](../../../includes/wrt-md.md)] 类型，某些操作需要由您来执行。 例如，<xref:Windows.Foundation.Uri?displayProperty=nameWithType>类显示为<xref:System.Uri?displayProperty=nameWithType>在.NET Framework 代码中。 <xref:System.Uri?displayProperty=nameWithType> 允许使用相对 URI，但<xref:Windows.Foundation.Uri?displayProperty=nameWithType>要求使用绝对 URI。 因此，在将 URI 传递给 [!INCLUDE[wrt](../../../includes/wrt-md.md)]方法时，必须确保它是绝对 URI。 (请参阅[向 Windows 运行时传递 URI](../../../docs/standard/cross-platform/passing-a-uri-to-the-windows-runtime.md)。)
+ 在少数情况下，由于代码中显示 .NET Framework 类型而非 [!INCLUDE[wrt](../../../includes/wrt-md.md)] 类型，某些操作需要由你来执行。 例如，<xref:Windows.Foundation.Uri?displayProperty=nameWithType>类显示为<xref:System.Uri?displayProperty=nameWithType>在.NET Framework 代码中。 <xref:System.Uri?displayProperty=nameWithType> 允许使用相对 URI，但<xref:Windows.Foundation.Uri?displayProperty=nameWithType>要求使用绝对 URI。 因此，在将 URI 传递给 [!INCLUDE[wrt](../../../includes/wrt-md.md)]方法时，必须确保它是绝对 URI。 (请参阅[向 Windows 运行时传递 URI](../../../docs/standard/cross-platform/passing-a-uri-to-the-windows-runtime.md)。)
 
 <a name="WindowsRuntimeComponents"></a>
 ## <a name="scenarios-for-developing-windows-runtime-components"></a>开发的 Windows 运行时组件的方案
@@ -149,6 +149,6 @@ ms.locfileid: "48261558"
 |[适用于 Microsoft Store 应用的 .NET 概述](https://msdn.microsoft.com/library/windows/apps/br230302(v=VS.110).aspx)|描述可用于创建 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 应用和 [!INCLUDE[wrt](../../../includes/wrt-md.md)] 组件的 .NET Framework 类型和成员。 （位于 Windows 开发中心。）|
 |[使用 C# 或 Visual Basic Windows 应用商店应用的路线图](https://docs.microsoft.com/previous-versions/windows/apps/br229583(v=win.10))|提供关键资源来帮助您开始使用 C# 或 Visual Basic 开发 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]应用，这些资源包括许多快速入门主题、教程和最佳做法。 （位于 Windows 开发中心。）|
 |[如何 tos (XAML)](https://docs.microsoft.com/previous-versions/windows/apps/br229566(v=win.10))|提供关键资源来帮助您开始使用 C# 或 Visual Basic 开发 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]应用，这些资源包括许多快速入门主题、教程和最佳做法。 （位于 Windows 开发中心。）|
-|[用 C# 和 Visual Basic 创建 Windows 运行时组件](https://msdn.microsoft.com/library/windows/apps/br230301%28v=VS.110%29.aspx)|描述如何使用 .NET Framework 创建 [!INCLUDE[wrt](../../../includes/wrt-md.md)]组件，说明如何在使用 JavaScript 为 Windows 生成的 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]应用中使用该组件，并描述如何使用 Visual Studio 调试这一组合。 （位于 Windows 开发中心。）|
+|[用 C# 和 Visual Basic 创建 Windows 运行时组件](/windows/uwp/winrt-components/creating-windows-runtime-components-in-csharp-and-visual-basic)|描述如何使用 .NET Framework 创建 [!INCLUDE[wrt](../../../includes/wrt-md.md)]组件，说明如何在使用 JavaScript 为 Windows 生成的 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]应用中使用该组件，并描述如何使用 Visual Studio 调试这一组合。 （位于 Windows 开发中心。）|
 |[Windows 运行时引用](/uwp/api/)|[!INCLUDE[wrt](../../../includes/wrt-md.md)]的参考文档。 （位于 Windows 开发中心。）|
 |[向 Windows 运行时传递 URI](../../../docs/standard/cross-platform/passing-a-uri-to-the-windows-runtime.md)|描述将托管代码的 URI 传递给 [!INCLUDE[wrt](../../../includes/wrt-md.md)]时可能出现的问题，以及如何避免这一问题。|

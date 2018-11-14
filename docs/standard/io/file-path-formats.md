@@ -9,12 +9,12 @@ helpviewer_keywords:
 - path formats, Windows
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5821d15e71492bd54fa6b5d891f2ff38a2902a06
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 05146467f321a3c83f3637e2eecc4c7c42dc4ba0
+ms.sourcegitcommit: 3b1cb8467bd73dee854b604e306c0e7e3882d91a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47424384"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51214189"
 ---
 # <a name="file-path-formats-on-windows-systems"></a>Windows 系统中的文件路径格式
 
@@ -202,7 +202,7 @@ DOS 设备路径通过定义进行完全限定。 不允许使用相对目录段
 Windows 文件系统有一个让非 Window 用户和开发人员感到困惑的特性，就是路径和目录名称不区分大小写。 也就是说，目录名和文件名反映的是创建它们时所使用的字符串的大小写。 例如，名为
 
 ```csharp
-Directory.Create(TeStDiReCtOrY);
+Directory.Create("TeStDiReCtOrY");
 ```
 的方法创建名为 TeStDiReCtOrY 的目录。 如果重命名目录或文件以改变大小写，则目录名或文件名反映的是重命名它们时所使用的字符串的大小写。 例如，以下代码将文件 test.txt 重命名为 Test.txt：
 

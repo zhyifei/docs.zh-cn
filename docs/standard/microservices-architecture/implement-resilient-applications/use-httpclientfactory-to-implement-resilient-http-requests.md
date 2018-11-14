@@ -4,12 +4,12 @@ description: 自 .NET Core 2.1 起可用的 HttpClientFactory 是一个“固执
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 07/03/2018
-ms.openlocfilehash: 6fd30a9358ca9c07b2a6e2ec591e4c5d7db54ccb
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: f2be3daf1b04613fa8afc1d17cbcbca2d338e062
+ms.sourcegitcommit: fd8d4587cc26e53f0e27e230d6e27d828ef4306b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43513208"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "49347924"
 ---
 # <a name="use-httpclientfactory-to-implement-resilient-http-requests"></a>使用 HttpClientFactory 实现复原 HTTP 请求
 
@@ -21,7 +21,7 @@ ms.locfileid: "43513208"
 
 第一个问题，当此类可释放时，将其用于 `using` 语句并不是最佳选择，因为即使释放 `HttpClient` 对象，基础套接字也不会立即释放，并可能导致严重问题：“套接字耗尽”。 有关此问题的详细信息，请参阅 [You're using HttpClient wrong and it is destabilizing your software](https://aspnetmonsters.com/2016/08/2016-08-27-httpclientwrong/)（你正在以错误方式使用 HttpClient，这将导致软件受损）博客文章。
 
-因此，`HttpClient` 应进行一次实例化并在应用程序的生命周期中重复使用。 在负载较重的情况下，实例化每个请求的 `HttpClient` 类将耗尽可用的套接字数。 该问题会导致 `SocketException` 错误。 要解决此问题，可能的方法是将 `HttpClient` 对象创建为单一对象或静态对象，请参阅[关于 HttpClient 用法的 Microsoft 文章](https://docs.microsoft.com/en-us/dotnet/csharp/tutorials/console-webapiclient)中的说明。 
+因此，`HttpClient` 应进行一次实例化并在应用程序的生命周期中重复使用。 在负载较重的情况下，实例化每个请求的 `HttpClient` 类将耗尽可用的套接字数。 该问题会导致 `SocketException` 错误。 要解决此问题，可能的方法是将 `HttpClient` 对象创建为单一对象或静态对象，请参阅[关于 HttpClient 用法的 Microsoft 文章](https://docs.microsoft.com/dotnet/csharp/tutorials/console-webapiclient)中的说明。 
 
 但将 `HttpClient` 对象用作单一对象或静态对象时还有一个问题。 在这种情况下，单一或静态 `HttpClient` 不考虑 DNS 更改，请参阅 [.NET Core GitHub 存储库的问题](https://github.com/dotnet/corefx/issues/11224)一文的说明。 
 
@@ -71,7 +71,7 @@ services.AddHttpClient<IOrderingService, OrderingService>();
 
 ### <a name="httpclient-lifetimes"></a>HttpClient 生存期
 
-每次从 IHttpClientFactory 获取 `HttpClient` 对象时，都返回 `HttpClient` 的新实例。 每个命名客户端或类型化客户端都有一个 HttpMessageHandler。 `HttpClientFactory` 将汇集工厂创建的 HttpMessageHandler 实例，以减少资源消耗。 如果 HttpMessageHandler 实例的生存期尚未过期，那么在创建新的 `HttpClient` 实例时，可能会从池中重用该实例。
+每次从 IHttpClientFactory 获取 `HttpClient` 对象时，都返回 `HttpClient` 的新实例。 每个命名客户端或类型化客户端都有一个 HttpMessageHandler。 `IHttpClientFactory` 将汇集工厂创建的 HttpMessageHandler 实例，以减少资源消耗。 如果 HttpMessageHandler 实例的生存期尚未过期，那么在创建新的 `HttpClient` 实例时，可能会从池中重用该实例。
 
 由于每个处理程序通常都管理自己的基础 HTTP 连接，所以有必要汇集处理程序；创建的处理程序数量如果多于必需的数量，则可能导致连接延迟。 部分处理程序还保持连接无期限地打开，这样可以防止处理程序对 DNS 更改作出反应。
 
@@ -155,7 +155,7 @@ namespace Microsoft.eShopOnContainers.WebMVC.Controllers
 ## <a name="additional-resources"></a>其他资源
 
 -   **在 .NET Core 2.1 中使用 HttpClientFactory**
-    [*https://docs.microsoft.com/en-us/aspnet/core/fundamentals/http-requests?view=aspnetcore-2.1*](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/http-requests?view=aspnetcore-2.1)
+    [*https://docs.microsoft.com/aspnet/core/fundamentals/http-requests?view=aspnetcore-2.1*](https://docs.microsoft.com/aspnet/core/fundamentals/http-requests?view=aspnetcore-2.1)
 
 
 -   **HttpClientFactory GitHub 存储库**

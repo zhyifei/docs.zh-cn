@@ -9,13 +9,12 @@ helpviewer_keywords:
 - Windows service applications, creating
 ms.assetid: e24d8a3d-edc6-485c-b6e0-5672d91fb607
 author: ghogen
-manager: douge
-ms.openlocfilehash: 27acdac5d34b96dd04fec1bb763edec9077ff928
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.openlocfilehash: 79447ede354de104607117f657182023a2e57127
+ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "46493602"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49123665"
 ---
 # <a name="walkthrough-create-a-windows-service-app"></a>演练：创建 Windows 服务应用程序
 
@@ -87,7 +86,7 @@ ms.locfileid: "46493602"
 [!code-csharp[VbRadconService#3](../../../samples/snippets/csharp/VS_Snippets_VBCSharp/VbRadconService/CS/MyNewService.cs#3)]
 [!code-vb[VbRadconService#3](../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbRadconService/VB/MyNewService.vb#3)]
 
-服务应用程序设计为长时间运行的，所以它通常轮询或监视系统中的情况。 监视是在 <xref:System.ServiceProcess.ServiceBase.OnStart%2A> 方法中设置的。 但是， <xref:System.ServiceProcess.ServiceBase.OnStart%2A> 实际上不进行监视。 服务的操作开始之后， <xref:System.ServiceProcess.ServiceBase.OnStart%2A> 方法必须返回到操作系统。 它不能始终循环或阻止。 若要设置简单的轮询机制，可以使用 <xref:System.Timers.Timer?displayProperty=nameWithType> 组件，如下所示：在 <xref:System.ServiceProcess.ServiceBase.OnStart%2A> 方法中，在组件上设置参数，然后将 <xref:System.Timers.Timer.Enabled%2A> 属性设置为 `true`。 计时器定期在你的代码中引发事件，此时你的服务可以进行监视。 你可以使用以下代码来执行该操作：
+服务应用程序设计为长时间运行的，所以它通常轮询或监视系统中的情况。 监视是在 <xref:System.ServiceProcess.ServiceBase.OnStart%2A> 方法中设置的。 但是， <xref:System.ServiceProcess.ServiceBase.OnStart%2A> 实际上不进行监视。 服务的操作开始之后， <xref:System.ServiceProcess.ServiceBase.OnStart%2A> 方法必须返回到操作系统。 它不能始终循环或阻止。 若要设置简单的轮询机制，你可以使用 <xref:System.Timers.Timer?displayProperty=nameWithType> 组件，如下所示：在 <xref:System.ServiceProcess.ServiceBase.OnStart%2A> 方法中，在组件上设置参数，然后将 <xref:System.Timers.Timer.Enabled%2A> 属性设置为 `true`。 计时器定期在你的代码中引发事件，此时你的服务可以进行监视。 你可以使用以下代码来执行该操作：
 
 ```csharp
 // Set up a timer that triggers every minute.

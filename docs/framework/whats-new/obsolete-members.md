@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 0ee25062-4071-4d3c-a552-87a75d3ecd34
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0a36e08c9b54dd6b47b11b36fd20993bff8c805e
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 8a0679dafda7935034d3a3ab0f4c43656ab5668b
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45678582"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50185243"
 ---
 # <a name="obsolete-members-in-the-net-framework"></a>.NET Framework 中的过时成员
 本文中的表列出了 .NET Framework 4.5 和更高版本中由程序集组织的已过时的类型成员。 使用以下链接可查看每个程序集中过时的成员和建议的备选项的列表。 本主题不会列出已过时类型的成员。 有关过时类型的列表，请参阅 [过时类型](../../../docs/framework/whats-new/obsolete-types.md)。  
@@ -129,8 +129,8 @@ ms.locfileid: "45678582"
 |<xref:System.AppDomain?displayProperty=nameWithType>|<xref:System.AppDomain.SetDynamicBase%2A>|<xref:System.AppDomain.SetDynamicBase%2A> 已弃用。 请改为调查 <xref:System.AppDomainSetup.DynamicBase%2A?displayProperty=nameWithType> 的使用。|  
 |<xref:System.AppDomain?displayProperty=nameWithType>|<xref:System.AppDomain.SetShadowCopyFiles%2A>|<xref:System.AppDomain.SetShadowCopyFiles%2A> 已弃用。 请改为调查 <xref:System.AppDomainSetup.ShadowCopyFiles%2A?displayProperty=nameWithType> 的使用。|  
 |<xref:System.AppDomain?displayProperty=nameWithType>|<xref:System.AppDomain.SetShadowCopyPath%2A>|<xref:System.AppDomain.SetShadowCopyPath%2A> 已弃用。 请改为调查 <xref:System.AppDomainSetup.ShadowCopyDirectories%2A?displayProperty=nameWithType> 的使用。|  
-|<xref:System.Enum?displayProperty=nameWithType>|<xref:System.Enum.ToString(System.IFormatProvider)>|`provider` 参数未使用。 请使用 <xref:System.Enum.ToString?displayProperty=nameWithType>。|  
-|<xref:System.Enum?displayProperty=nameWithType>|<xref:System.Enum.ToString(System.String,System.IFormatProvider)>|`provider` 参数未使用。 请使用 <xref:System.Enum.ToString(System.String)?displayProperty=nameWithType>。|  
+|<xref:System.Enum?displayProperty=nameWithType>|<xref:System.Enum.ToString(System.IFormatProvider)>|`provider` 自变量未使用。 请使用 <xref:System.Enum.ToString?displayProperty=nameWithType>。|  
+|<xref:System.Enum?displayProperty=nameWithType>|<xref:System.Enum.ToString(System.String,System.IFormatProvider)>|`provider` 自变量未使用。 请使用 <xref:System.Enum.ToString(System.String)?displayProperty=nameWithType>。|  
 |<xref:System.LoaderOptimization?displayProperty=nameWithType>|<xref:System.LoaderOptimization.DisallowBindings>|此方法已被否决。 请改用 <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType>。|  
 |<xref:System.LoaderOptimization?displayProperty=nameWithType>|<xref:System.LoaderOptimization.DomainMask>|此方法已被否决。 请改用 <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType>。|  
 |<xref:System.Collections.Hashtable?displayProperty=nameWithType>|<xref:System.Collections.Hashtable.%23ctor%28System.Collections.IDictionary%2CSystem.Collections.IHashCodeProvider%2CSystem.Collections.IComparer%29>|请改用 <xref:System.Collections.Hashtable.%23ctor%28System.Collections.IDictionary%2CSystem.Collections.IEqualityComparer%29?displayProperty=nameWithType>。|  
@@ -343,7 +343,7 @@ ms.locfileid: "45678582"
 |<xref:System.Linq.ParallelEnumerable?displayProperty=nameWithType>|<xref:System.Linq.ParallelEnumerable.Union%60%601%28System.Linq.ParallelQuery%7B%60%600%7D%2CSystem.Collections.Generic.IEnumerable%7B%60%600%7D%29>|二进制运算符的第二个数据源必须为类型 <xref:System.Linq.ParallelQuery%601?displayProperty=nameWithType> 而不是 <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType>。 若要解决此问题，请使用 <xref:System.Linq.ParallelEnumerable.AsParallel%60%601%28System.Collections.Generic.IEnumerable%7B%60%600%7D%29> 扩展方法将正确的数据源转换为 <xref:System.Linq.ParallelQuery%601?displayProperty=nameWithType>。|  
 |<xref:System.Linq.ParallelEnumerable?displayProperty=nameWithType>|<xref:System.Linq.ParallelEnumerable.Union%60%601%28System.Linq.ParallelQuery%7B%60%600%7D%2CSystem.Collections.Generic.IEnumerable%7B%60%600%7D%2CSystem.Collections.Generic.IEqualityComparer%7B%60%600%7D%29>|二进制运算符的第二个数据源必须为类型 <xref:System.Linq.ParallelQuery%601?displayProperty=nameWithType> 而不是 <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType>。 若要解决此问题，请使用 <xref:System.Linq.ParallelEnumerable.AsParallel%60%601%28System.Collections.Generic.IEnumerable%7B%60%600%7D%29> 扩展方法将正确的数据源转换为 <xref:System.Linq.ParallelQuery%601?displayProperty=nameWithType>。|  
 |<xref:System.Linq.ParallelEnumerable?displayProperty=nameWithType>|<xref:System.Linq.ParallelEnumerable.Zip%2A>|二进制运算符的第二个数据源必须为类型 <xref:System.Linq.ParallelQuery%601?displayProperty=nameWithType> 而不是 <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType>。 若要解决此问题，请使用 <xref:System.Linq.ParallelEnumerable.AsParallel%60%601%28System.Collections.Generic.IEnumerable%7B%60%600%7D%29> 扩展方法将正确的数据源转换为 <xref:System.Linq.ParallelQuery%601?displayProperty=nameWithType>。|  
-|<xref:System.Linq.Expressions.Expression?displayProperty=nameWithType>|<xref:System.Linq.Expressions.Expression.%23ctor%28System.Linq.Expressions.ExpressionType%2CSystem.Type%29>|使用不采用 <xref:System.Linq.Expressions.ExpressionType?displayProperty=nameWithType> 参数的不同构造函数。 然后，重写 <xref:System.Linq.Expressions.Expression.NodeType%2A?displayProperty=nameWithType> 和 <xref:System.Linq.Expressions.Expression.Type%2A?displayProperty=nameWithType> 属性以提供可能指定给此构造函数的值。|  
+|<xref:System.Linq.Expressions.Expression?displayProperty=nameWithType>|<xref:System.Linq.Expressions.Expression.%23ctor%28System.Linq.Expressions.ExpressionType%2CSystem.Type%29>|使用不采用 <xref:System.Linq.Expressions.ExpressionType?displayProperty=nameWithType> 自变量的不同构造函数。 然后，重写 <xref:System.Linq.Expressions.Expression.NodeType%2A?displayProperty=nameWithType> 和 <xref:System.Linq.Expressions.Expression.Type%2A?displayProperty=nameWithType> 属性以提供可能指定给此构造函数的值。|  
 |<xref:System.Linq.Expressions.MemberBinding?displayProperty=nameWithType>|<xref:System.Linq.Expressions.MemberBinding.%23ctor%2A>|不要使用此构造函数。 它将从未来版本中移除。|  
 |<xref:System.Runtime.CompilerServices.CallSiteOps?displayProperty=nameWithType>|<xref:System.Runtime.CompilerServices.CallSiteOps.AddRule%2A>|使用此成员会生成编译器错误。<br /><br /> 不要使用此方法。|  
 |<xref:System.Runtime.CompilerServices.CallSiteOps?displayProperty=nameWithType>|<xref:System.Runtime.CompilerServices.CallSiteOps.Bind%2A>|使用此成员会生成编译器错误。<br /><br /> 不要使用此方法。|  
@@ -485,8 +485,8 @@ ms.locfileid: "45678582"
 |<xref:System.CodeDom.Compiler.CodeDomProvider?displayProperty=nameWithType>|<xref:System.CodeDom.Compiler.CodeDomProvider.CreateCompiler%2A>|调用方不应使用 <xref:System.CodeDom.Compiler.ICodeCompiler?displayProperty=nameWithType> 接口，并应改为直接在 <xref:System.CodeDom.Compiler.CodeDomProvider?displayProperty=nameWithType> 类上使用此方法。 从 <xref:System.CodeDom.Compiler.CodeDomProvider> 的继承必须还要实现此接口，并应该排除此警告，或淘汰此方法。|  
 |<xref:System.CodeDom.Compiler.CodeDomProvider?displayProperty=nameWithType>|<xref:System.CodeDom.Compiler.CodeDomProvider.CreateGenerator%2A>|调用方不应使用 <xref:System.CodeDom.Compiler.ICodeGenerator?displayProperty=nameWithType> 接口，并应改为直接在 <xref:System.CodeDom.Compiler.CodeDomProvider?displayProperty=nameWithType> 类上使用此方法。 从 <xref:System.CodeDom.Compiler.CodeDomProvider> 的继承必须还要实现此接口，并应该排除此警告，或淘汰此方法。|  
 |<xref:System.CodeDom.Compiler.CodeDomProvider?displayProperty=nameWithType>|<xref:System.CodeDom.Compiler.CodeDomProvider.CreateParser%2A>|调用方不应使用 <xref:System.CodeDom.Compiler.ICodeParser?displayProperty=nameWithType> 接口，并应改为直接在 <xref:System.CodeDom.Compiler.CodeDomProvider?displayProperty=nameWithType> 类上使用此方法。 从 <xref:System.CodeDom.Compiler.CodeDomProvider> 的继承必须还要实现此接口，并应该排除此警告，或淘汰此方法。|  
-|<xref:System.CodeDom.Compiler.CompilerParameters?displayProperty=nameWithType>|<xref:System.CodeDom.Compiler.CompilerParameters.Evidence%2A>|CAS 策略已过时，并将从 .NET Framework 的未来版本中移除。 有关详细信息，请参阅 [.NET Framework 4 中的安全性更改](http://go2.microsoft.com/fwlink/?LinkId=131738)。|  
-|<xref:System.CodeDom.Compiler.CompilerResults?displayProperty=nameWithType>|<xref:System.CodeDom.Compiler.CompilerResults.Evidence%2A>|CAS 策略已过时，并将从 .NET Framework 的未来版本中移除。 有关详细信息，请参阅 [.NET Framework 4 中的安全性更改](http://go2.microsoft.com/fwlink/?LinkId=131738)。|  
+|<xref:System.CodeDom.Compiler.CompilerParameters?displayProperty=nameWithType>|<xref:System.CodeDom.Compiler.CompilerParameters.Evidence%2A>|CAS 策略已过时，并将从 .NET Framework 的未来版本中移除。 有关详细信息，请参阅 [.NET Framework 4 中的安全性更改](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ee191568%28v=vs.100%29)。|  
+|<xref:System.CodeDom.Compiler.CompilerResults?displayProperty=nameWithType>|<xref:System.CodeDom.Compiler.CompilerResults.Evidence%2A>|CAS 策略已过时，并将从 .NET Framework 的未来版本中移除。 有关详细信息，请参阅 [.NET Framework 4 中的安全性更改](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ee191568%28v=vs.100%29)。|  
 |<xref:System.Collections.Specialized.NameObjectCollectionBase?displayProperty=nameWithType>|<xref:System.Collections.Specialized.NameObjectCollectionBase.%23ctor%28System.Collections.IHashCodeProvider%2CSystem.Collections.IComparer%29>|请改用 <xref:System.Collections.Specialized.NameObjectCollectionBase.%23ctor%28System.Collections.IEqualityComparer%29>。|  
 |<xref:System.Collections.Specialized.NameObjectCollectionBase?displayProperty=nameWithType>|<xref:System.Collections.Specialized.NameObjectCollectionBase.%23ctor%28System.Int32%2CSystem.Collections.IHashCodeProvider%2CSystem.Collections.IComparer%29>|请改用 <xref:System.Collections.Specialized.NameObjectCollectionBase.%23ctor%28System.Int32%2CSystem.Collections.IEqualityComparer%29>。|  
 |<xref:System.Collections.Specialized.NameValueCollection?displayProperty=nameWithType>|<xref:System.Collections.Specialized.NameValueCollection.%23ctor%28System.Collections.IHashCodeProvider%2CSystem.Collections.IComparer%29>|请改用 <xref:System.Collections.Specialized.NameValueCollection.%23ctor%28System.Collections.IEqualityComparer%29>。|  
@@ -702,7 +702,7 @@ ms.locfileid: "45678582"
 |类型|成员|消息|  
 |----------|------------|-------------|  
 |<xref:System.Windows.Markup.MarkupExtensionReturnTypeAttribute?displayProperty=nameWithType>|<xref:System.Windows.Markup.MarkupExtensionReturnTypeAttribute.ExpressionType%2A>|XAML 分析器不使用此类型。 请查看 <xref:System.Windows.Markup.XamlSetMarkupExtensionAttribute?displayProperty=nameWithType>。|  
-|<xref:System.Windows.Markup.MarkupExtensionReturnTypeAttribute?displayProperty=nameWithType>|<xref:System.Windows.Markup.MarkupExtensionReturnTypeAttribute.%23ctor%28System.Type%2CSystem.Type%29>|XAML 分析器不使用 `expressionType` 参数。 若要指定预期的返回类型，请使用 <xref:System.Windows.Markup.MarkupExtensionReturnTypeAttribute.%23ctor%28System.Type%29?displayProperty=nameWithType>。 若要指定表达式类型的自定义处理，请使用 <xref:System.Windows.Markup.XamlSetMarkupExtensionAttribute?displayProperty=nameWithType>。|  
+|<xref:System.Windows.Markup.MarkupExtensionReturnTypeAttribute?displayProperty=nameWithType>|<xref:System.Windows.Markup.MarkupExtensionReturnTypeAttribute.%23ctor%28System.Type%2CSystem.Type%29>|XAML 分析器不使用 `expressionType` 自变量。 若要指定预期的返回类型，请使用 <xref:System.Windows.Markup.MarkupExtensionReturnTypeAttribute.%23ctor%28System.Type%29?displayProperty=nameWithType>。 若要指定表达式类型的自定义处理，请使用 <xref:System.Windows.Markup.XamlSetMarkupExtensionAttribute?displayProperty=nameWithType>。|  
   
 <a name="xml"></a>   
 ### <a name="assembly-systemxmldll"></a>程序集：System.Xml.dll  

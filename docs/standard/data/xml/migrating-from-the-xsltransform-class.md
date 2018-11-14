@@ -8,29 +8,30 @@ dev_langs:
 ms.assetid: 9404d758-679f-4ffb-995d-3d07d817659e
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1d8b8c21af8ca0a21d97e8246ad82c42aaaf4974
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 7f835cfb45848ca2790c3dcb541629564e9cc48a
+ms.sourcegitcommit: 700b9003ea6bdd83a53458bbc436c9b5778344f1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45971963"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48261389"
 ---
 # <a name="migrating-from-the-xsltransform-class"></a>从 XslTransform 类迁移
-[!INCLUDE[vsprvslong](../../../../includes/vsprvslong-md.md)] 版本重新设计了 XSLT 体系结构。 <xref:System.Xml.Xsl.XslTransform> 类已被 <xref:System.Xml.Xsl.XslCompiledTransform> 类所取代。  
-  
- 以下各节说明 <xref:System.Xml.Xsl.XslCompiledTransform> 和 <xref:System.Xml.Xsl.XslTransform> 类之间的一些主要区别。  
-  
-## <a name="performance"></a>性能  
- <xref:System.Xml.Xsl.XslCompiledTransform> 类在性能方面进行了许多改进。 新的 XSLT 处理器将 XSLT 样式表编译为公共中间格式，与公共语言运行库 (CLR) 对其他编程语言的操作类似。 样式表编译后，可以缓存并重复使用。  
-  
- <xref:System.Xml.Xsl.XslCompiledTransform> 类还进行了其他优化，使其比 <xref:System.Xml.Xsl.XslTransform> 类快得多。  
-  
+
+Visual Studio 2005 版本重新设计了 XSLT 体系结构。 <xref:System.Xml.Xsl.XslTransform> 类已由 <xref:System.Xml.Xsl.XslCompiledTransform> 类取代。
+
+ 以下各节说明 <xref:System.Xml.Xsl.XslCompiledTransform> 和 <xref:System.Xml.Xsl.XslTransform> 类之间的一些主要区别。
+
+## <a name="performance"></a>性能
+ <xref:System.Xml.Xsl.XslCompiledTransform> 类在性能方面进行了许多改进。 新的 XSLT 处理器将 XSLT 样式表编译为公共中间格式，与公共语言运行库 (CLR) 对其他编程语言的操作类似。 样式表编译后，可以缓存并重复使用。
+
+ <xref:System.Xml.Xsl.XslCompiledTransform> 类还进行了其他优化，使其比 <xref:System.Xml.Xsl.XslTransform> 类快得多。
+
 > [!NOTE]
->  尽管 <xref:System.Xml.Xsl.XslCompiledTransform> 类的总体性能优于 <xref:System.Xml.Xsl.XslTransform> 类，但在首次对转换调用时，<xref:System.Xml.Xsl.XslCompiledTransform.Load%2A> 类的 <xref:System.Xml.Xsl.XslCompiledTransform> 方法可能比 <xref:System.Xml.Xsl.XslTransform.Load%2A> 类的 <xref:System.Xml.Xsl.XslTransform> 方法慢。 这是因为必须先编译 XSLT 文件，才能加载该文件。 有关详细信息，请参阅以下博客文章：[XslCompiledTransform 比 XslTransform 慢？](https://blogs.msdn.microsoft.com/antosha/2006/07/16/xslcompiledtransform-slower-than-xsltransform/)  
-  
-## <a name="security"></a>安全性  
- 默认情况下，<xref:System.Xml.Xsl.XslCompiledTransform> 类禁用对 XSLT `document()` 函数和嵌入式脚本的支持。 通过创建启用这些功能的 <xref:System.Xml.Xsl.XsltSettings> 对象并将其传递给 <xref:System.Xml.Xsl.XslCompiledTransform.Load%2A> 方法，可以启用这些功能。 下面的示例演示如何启用脚本并执行 XSLT 转换。  
-  
+>  尽管 <xref:System.Xml.Xsl.XslCompiledTransform> 类的总体性能优于 <xref:System.Xml.Xsl.XslTransform> 类，但在首次对转换调用时，<xref:System.Xml.Xsl.XslCompiledTransform.Load%2A> 类的 <xref:System.Xml.Xsl.XslCompiledTransform> 方法可能比 <xref:System.Xml.Xsl.XslTransform.Load%2A> 类的 <xref:System.Xml.Xsl.XslTransform> 方法慢。 这是因为必须先编译 XSLT 文件，才能加载该文件。 有关详细信息，请参阅以下博客文章：[XslCompiledTransform 比 XslTransform 慢？](https://blogs.msdn.microsoft.com/antosha/2006/07/16/xslcompiledtransform-slower-than-xsltransform/)
+
+## <a name="security"></a>安全性
+ 默认情况下，<xref:System.Xml.Xsl.XslCompiledTransform> 类禁用对 XSLT `document()` 函数和嵌入式脚本的支持。 通过创建启用这些功能的 <xref:System.Xml.Xsl.XsltSettings> 对象并将其传递给 <xref:System.Xml.Xsl.XslCompiledTransform.Load%2A> 方法，可以启用这些功能。 下面的示例演示如何启用脚本并执行 XSLT 转换。
+
  [!code-csharp[XML_Migration#16](../../../../samples/snippets/csharp/VS_Snippets_Data/XML_Migration/CS/migration.cs#16)]
  [!code-vb[XML_Migration#16](../../../../samples/snippets/visualbasic/VS_Snippets_Data/XML_Migration/VB/migration.vb#16)]  
   
@@ -80,7 +81,7 @@ XmlDocument doc = new XmlDocument();
 doc.Load(xslt.Transform(input, (XsltArgumentList)null));  
 ```  
   
- <xref:System.Xml.Xsl.XslCompiledTransform> 类不支持转换为 <xref:System.Xml.XmlReader> 对象。 不过，通过使用 <xref:System.Xml.XPath.XPathNavigator.CreateNavigator%2A> 方法直接从 <xref:System.Xml.XmlWriter> 中加载生成的 XML 树，您可以执行类似操作。 下面的 C# 代码演示如何使用 <xref:System.Xml.Xsl.XslCompiledTransform> 完成相同的任务。  
+ <xref:System.Xml.Xsl.XslCompiledTransform> 类不支持转换为 <xref:System.Xml.XmlReader> 对象。 不过，通过使用 <xref:System.Xml.XPath.XPathNavigator.CreateNavigator%2A> 方法直接从 <xref:System.Xml.XmlWriter> 中加载生成的 XML 树，你可以执行类似操作。 下面的 C# 代码演示如何使用 <xref:System.Xml.Xsl.XslCompiledTransform> 完成相同的任务。  
   
 ```  
 // Transform input document to XmlDocument for additional processing  

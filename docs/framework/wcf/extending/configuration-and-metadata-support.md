@@ -2,18 +2,18 @@
 title: 配置和元数据支持
 ms.date: 03/30/2017
 ms.assetid: 27c240cb-8cab-472c-87f8-c864f4978758
-ms.openlocfilehash: d316e373177d86b7ba2b715f29fe3dace9082e8b
-ms.sourcegitcommit: 736ec4d3e2c74895b47a0d36126657b95da383c9
+ms.openlocfilehash: 65c826c909496a9efeb99801142eb49e4f92d3bc
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2018
-ms.locfileid: "37140146"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50183485"
 ---
 # <a name="configuration-and-metadata-support"></a>配置和元数据支持
 本主题说明如何启用配置和元数据对绑定和绑定元素的支持。  
   
 ## <a name="overview-of-configuration-and-metadata"></a>配置和元数据概述  
- 本主题讨论了以下任务，这些是可选的项 1、 2 和 4 任务中[开发通道](../../../../docs/framework/wcf/extending/developing-channels.md)任务列表。  
+ 本主题讨论下列任务，是可选项 1、 2 和 4 中[开发通道](../../../../docs/framework/wcf/extending/developing-channels.md)任务列表。  
   
 -   启用配置文件对绑定元素的支持。  
   
@@ -23,12 +23,12 @@ ms.locfileid: "37140146"
   
 -   标识 WSDL 和策略断言以插入或配置你的绑定或绑定元素。  
   
- 有关创建用户定义的绑定和绑定元素的信息，请参阅[创建用户定义绑定](../../../../docs/framework/wcf/extending/creating-user-defined-bindings.md)和[创建 BindingElement](../../../../docs/framework/wcf/extending/creating-a-bindingelement.md)分别。  
+ 有关创建用户定义的绑定和绑定元素的信息，请参阅[创建用户定义绑定](../../../../docs/framework/wcf/extending/creating-user-defined-bindings.md)并[创建 BindingElement](../../../../docs/framework/wcf/extending/creating-a-bindingelement.md)分别。  
   
 ## <a name="adding-configuration-support"></a>添加配置支持  
  若要启用配置文件对通道的支持，必须实现两个配置节：<xref:System.ServiceModel.Configuration.BindingElementExtensionElement?displayProperty=nameWithType>（启用配置对绑定元素的支持）以及 <xref:System.ServiceModel.Configuration.StandardBindingElement?displayProperty=nameWithType> 和 <xref:System.ServiceModel.Configuration.StandardBindingCollectionElement%602?displayProperty=nameWithType>（启用配置对绑定的支持）。  
   
- 若要这样做更简单的方法是使用[ConfigurationCodeGenerator](../../../../docs/framework/wcf/samples/configurationcodegenerator.md)示例工具生成绑定和绑定元素的配置代码。  
+ 执行此操作的更简单方法是使用[ConfigurationCodeGenerator](../../../../docs/framework/wcf/samples/configurationcodegenerator.md)示例工具，用于生成绑定和绑定元素的配置代码。  
   
 ### <a name="extending-bindingelementextensionelement"></a>扩展 BindingElementExtensionElement  
  下面的代码示例摘自[传输： UDP](../../../../docs/framework/wcf/samples/transport-udp.md)示例。 `UdpTransportElement` 是一个 <xref:System.ServiceModel.Configuration.BindingElementExtensionElement>，它向配置系统公开 `UdpTransportBindingElement`。 通过若干基本重写，此示例定义配置节名称、绑定元素的类型以及如何创建绑定元素。 然后，用户可以按如下方式注册配置文件中的扩展节。  
@@ -62,9 +62,9 @@ ms.locfileid: "37140146"
 ```  
   
 ### <a name="adding-configuration-for-a-binding"></a>为绑定添加配置  
- `SampleProfileUdpBindingCollectionElement` 节是一个 <xref:System.ServiceModel.Configuration.StandardBindingCollectionElement%602>，它向配置系统公开 `SampleProfileUdpBinding`。 批量实现委派给从 `SampleProfileUdpBindingConfigurationElement` 派生的 <xref:System.ServiceModel.Configuration.StandardBindingElement>。 `SampleProfileUdpBindingConfigurationElement`具有在对应于属性的属性`SampleProfileUdpBinding`，和函数，以便从中映射`ConfigurationElement`绑定。 最后，在 `OnApplyConfiguration` 中重写 `SampleProfileUdpBinding` 方法，如下面的代码示例中所示。  
+ `SampleProfileUdpBindingCollectionElement` 节是一个 <xref:System.ServiceModel.Configuration.StandardBindingCollectionElement%602>，它向配置系统公开 `SampleProfileUdpBinding`。 批量实现委派给从 `SampleProfileUdpBindingConfigurationElement` 派生的 <xref:System.ServiceModel.Configuration.StandardBindingElement>。 `SampleProfileUdpBindingConfigurationElement`属性相对应的属性上`SampleProfileUdpBinding`，并从映射的函数`ConfigurationElement`绑定。 最后，在 `OnApplyConfiguration` 中重写 `SampleProfileUdpBinding` 方法，如下面的代码示例中所示。  
   
-```  
+```csharp 
 protected override void OnApplyConfiguration(string configurationName)  
 {  
             if (binding == null)  
@@ -101,7 +101,7 @@ protected override void OnApplyConfiguration(string configurationName)
 </configuration>  
 ```  
   
- 然后可以从引用[ \<system.serviceModel >](../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md)配置节。  
+ 然后从引用[ \<system.serviceModel >](../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md)配置节。  
   
 ```xml  
 <configuration>  
@@ -119,7 +119,7 @@ protected override void OnApplyConfiguration(string configurationName)
 ```  
   
 ## <a name="adding-metadata-support-for-a-binding-element"></a>为绑定元素添加元数据支持  
- 若要将通道集成到元数据系统中，系统必须支持策略的导入和导出。 这允许工具，如[ServiceModel 元数据实用工具 (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)生成客户端的绑定元素。  
+ 若要将通道集成到元数据系统中，系统必须支持策略的导入和导出。 这允许工具，如[ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)生成客户端的绑定元素。  
   
 ### <a name="adding-wsdl-support"></a>添加 WSDL 支持  
  绑定中的传输绑定元素负责导出和导入元数据中的寻址信息。 当使用 SOAP 绑定时，传输绑定元素还应在元数据中导出正确的传输 URI。 下面的代码示例摘自[传输： UDP](../../../../docs/framework/wcf/samples/transport-udp.md)示例。  
@@ -127,7 +127,7 @@ protected override void OnApplyConfiguration(string configurationName)
 #### <a name="wsdl-export"></a>WSDL 导出  
  若要导出寻址信息`UdpTransportBindingElement`实现<xref:System.ServiceModel.Description.IWsdlExportExtension?displayProperty=nameWithType>接口。 <xref:System.ServiceModel.Description.IWsdlExportExtension.ExportEndpoint%2A?displayProperty=nameWithType> 方法将正确的寻址信息添加到 WSDL 端口中。  
   
-```  
+```csharp  
 if (context.WsdlPort != null)  
 {  
     AddAddressToWsdlPort(context.WsdlPort, context.Endpoint.Address, encodingBindingElement.MessageVersion.Addressing);  
@@ -136,7 +136,7 @@ if (context.WsdlPort != null)
   
  当终结点使用 SOAP 绑定时，`UdpTransportBindingElement` 方法的 <xref:System.ServiceModel.Description.IWsdlExportExtension.ExportEndpoint%2A> 实现也会导出传输 URI：  
   
-```  
+```csharp  
 WsdlNS.SoapBinding soapBinding = GetSoapBinding(context, exporter);  
 if (soapBinding != null)  
 {  
@@ -169,7 +169,7 @@ if (soapBinding != null)
   
  `UdpBindingElementImporter` 类型实现 <xref:System.ServiceModel.Description.IWsdlImportExtension?displayProperty=nameWithType> 接口。 `ImportEndpoint` 方法从 WSDL 端口导入地址：  
   
-```  
+```csharp  
 BindingElementCollection bindingElements = context.Endpoint.Binding.CreateBindingElements();  
 TransportBindingElement transportBindingElement = bindingElements.Find<TransportBindingElement>();  
 if (transportBindingElement is UdpTransportBindingElement)  
@@ -182,11 +182,11 @@ if (transportBindingElement is UdpTransportBindingElement)
  自定义绑定元素可以在 WSDL 绑定中为服务终结点导出策略断言以表示该绑定元素的功能。 下面的代码示例摘自[传输： UDP](../../../../docs/framework/wcf/samples/transport-udp.md)示例。  
   
 #### <a name="policy-export"></a>策略导出  
- `UdpTransportBindingElement`类型实现<xref:System.ServiceModel.Description.IPolicyExportExtension?displayProperty=nameWithType>来添加对导出策略支持。 因此，<xref:System.ServiceModel.Description.MetadataExporter?displayProperty=nameWithType> 在为任何包含它的绑定而生成策略时都包含 `UdpTransportBindingElement`。  
+ `UdpTransportBindingElement`类型实现<xref:System.ServiceModel.Description.IPolicyExportExtension?displayProperty=nameWithType>以添加对导出策略的支持。 因此，<xref:System.ServiceModel.Description.MetadataExporter?displayProperty=nameWithType> 在为任何包含它的绑定而生成策略时都包含 `UdpTransportBindingElement`。  
   
  在 <xref:System.ServiceModel.Description.IPolicyExportExtension.ExportPolicy%2A?displayProperty=nameWithType> 中，如果通道处于多路广播模式，添加 UDP 的断言和其他断言。 这是因为，多路广播模式影响通信堆栈的构造方式，因此必须在两端之间进行协调。  
   
-```  
+```csharp  
 ICollection<XmlElement> bindingAssertions = context.GetBindingAssertions();  
 XmlDocument xmlDocument = new XmlDocument();  
 bindingAssertions.Add(xmlDocument.CreateElement(  
@@ -200,7 +200,7 @@ UdpPolicyStrings.Prefix, UdpPolicyStrings.MulticastAssertion,     UdpPolicyStrin
   
  因为自定义传输绑定元素负责处理寻址，所以 <xref:System.ServiceModel.Description.IPolicyExportExtension?displayProperty=nameWithType> 上的 `UdpTransportBindingElement` 实现还必须处理导出相应的 WS-Addressing 策略断言以指示正在使用的 WS-Addressing 的版本。  
   
-```  
+```csharp  
 AddWSAddressingAssertion(context, encodingBindingElement.MessageVersion.Addressing);  
 ```  
   
@@ -230,9 +230,9 @@ AddWSAddressingAssertion(context, encodingBindingElement.MessageVersion.Addressi
 ### <a name="adding-a-custom-standard-binding-importer"></a>添加自定义标准绑定导入程序  
  默认情况下，Svcutil.exe 和 <xref:System.ServiceModel.Description.WsdlImporter?displayProperty=nameWithType> 类型识别并导入系统提供的绑定。 否则，绑定将作为 <xref:System.ServiceModel.Channels.CustomBinding?displayProperty=nameWithType> 实例而导入。 若要启用 Svcutil.exe 和 <xref:System.ServiceModel.Description.WsdlImporter> 以导入 `SampleProfileUdpBinding`，`UdpBindingElementImporter` 还需充当自定义标准绑定导入程序。  
   
- 自定义标准绑定导入程序实现`ImportEndpoint`方法<xref:System.ServiceModel.Description.IWsdlImportExtension?displayProperty=nameWithType>接口来检查<xref:System.ServiceModel.Channels.CustomBinding?displayProperty=nameWithType>从元数据以便了解是否它无法具有由生成特定的标准绑定导入的实例。  
+ 自定义标准绑定导入程序实现`ImportEndpoint`方法<xref:System.ServiceModel.Description.IWsdlImportExtension?displayProperty=nameWithType>接口以检查<xref:System.ServiceModel.Channels.CustomBinding?displayProperty=nameWithType>从元数据以查看它是否可以具有已由生成特定的标准绑定导入的实例。  
   
-```  
+```csharp  
 if (context.Endpoint.Binding is CustomBinding)  
 {  
     Binding binding;  

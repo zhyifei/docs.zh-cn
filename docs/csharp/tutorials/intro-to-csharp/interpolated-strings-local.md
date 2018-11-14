@@ -1,22 +1,21 @@
 ---
-title: 字符串内插教程 - C# 本地快速入门
-description: 本快速入门教程介绍了如何使用 C# 字符串内插功能将格式化表达式结果添加到较大的字符串中。
+title: 字符串内插 - C# 教程
+description: 本教程介绍了如何使用 C# 字符串内插功能将格式化表达式结果添加到较大的字符串中。
 author: rpetrusha
 ms.author: ronpet
-ms.date: 04/14/2018
-ms.custom: mvc
-ms.openlocfilehash: da111790ebbc299df16297650347045b9395a90f
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.date: 10/23/2018
+ms.openlocfilehash: 7308254ec691df6ec2d5b54d3770afb825886e29
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47201044"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50198567"
 ---
-# <a name="string-interpolation"></a>字符串内插
+# <a name="use-string-interpolation-to-construct-formatted-strings"></a>使用字符串内插构造格式化字符串
 
-本快速入门教程介绍了如何使用 C# [字符串内插](../language-reference/tokens/interpolated.md)将值插入单个结果字符串中。 读者可以编写 C# 代码并查看代码编译和运行结果。 本快速入门教程包含一系列课程，介绍了如何将值插入字符串，以及用不同方式设置这些值的格式。
+本教程介绍了如何使用 C# [字符串内插](../../language-reference/tokens/interpolated.md)将值插入单个结果字符串中。 读者可以编写 C# 代码并查看代码编译和运行结果。 本教程包含一系列课程，介绍了如何将值插入字符串，以及用不同方式设置这些值的格式。
 
-若要学习本快速入门教程，必须有开发计算机。 .NET 主题 [10 分钟入门](https://www.microsoft.com/net/core)介绍了如何在 Mac、PC 或 Linux 上设置本地开发环境。 [本地快速入门教程简介](local-environment.md)不仅简要概述了将用到的命令，还收录了详细信息链接。 还可在浏览器中完成本快速入门教程的[交互式版本](interpolated-strings.yml)。
+本教程要求你有一台可用于开发的计算机。 .NET 主题 [10 分钟入门](https://www.microsoft.com/net/core)介绍了如何在 Mac、PC 或 Linux 上设置本地开发环境。 [本地教程简介](local-environment.md)不仅简要概述了将用到的命令，还收录了详细信息链接。 另外，还可在浏览器中完成本教程的[交互式版本](interpolated-strings.yml)。
 
 ## <a name="create-an-interpolated-string"></a>创建内插字符串
 
@@ -49,19 +48,19 @@ Console.WriteLine($"Hello, {name}. It's a pleasure to meet you!");
 
 上一节使用了字符串内插将一个字符串插入到了另一字符串中。 不过，内插字符串表达式的结果可以是任何数据类型。 下面让我们在内插字符串中添加多种数据类型的值。
 
-在以下示例中，首先定义一个具有 `Name` [属性](../properties.md)和 `ToString` [方法](../methods.md)的[类](../programming-guide/classes-and-structs/classes.md)数据类型 `Vegetable`，它可以[替代](../language-reference/keywords/override.md) <xref:System.Object.ToString?displayProperty=nameWithType> 方法的行为。 [`public` 访问修饰符](../language-reference/keywords/public.md)使该方法可用于任何客户端代码以获取 `Vegetable` 实例的字符串表示形式。 在本示例中，`Vegetable.ToString` 方法返回在 `Vegetable` [构造函数](../programming-guide/classes-and-structs/constructors.md)处初始化的 `Name` 属性的值：
+在以下示例中，首先定义一个具有 `Name` [属性](../../properties.md)和 `ToString` [方法](../../methods.md)的[类](../../programming-guide/classes-and-structs/classes.md)数据类型 `Vegetable`，它可以[替代](../../language-reference/keywords/override.md) <xref:System.Object.ToString?displayProperty=nameWithType> 方法的行为。 [`public` 访问修饰符](../../language-reference/keywords/public.md)使该方法可用于任何客户端代码以获取 `Vegetable` 实例的字符串表示形式。 在本示例中，`Vegetable.ToString` 方法返回在 `Vegetable` [构造函数](../../programming-guide/classes-and-structs/constructors.md)处初始化的 `Name` 属性的值：
 
 ```csharp
 public Vegetable(string name) => Name = name;
 ```
 
-然后，通过使用 [`new` 关键字](../language-reference/keywords/new-operator.md)并为构造函数 `Vegetable` 提供一个名称参数来创建 `Vegetable` 类的实例：
+然后，通过使用 [`new` 关键字](../../language-reference/keywords/new-operator.md)并为构造函数 `Vegetable` 提供一个名称来创建名为 `item` 的 `Vegetable` 类的实例：
 
 ```csharp
 var item = new Vegetable("eggplant");
 ```
 
-最后，将 `item` 变量添加到同样包含 <xref:System.DateTime> 值、<xref:System.Decimal> 值和 `Unit` [枚举](../programming-guide/enumeration-types.md)值的内插字符串中。 将编辑器中的所有 C# 代码替换为以下代码，然后使用 `dotnet run` 命令运行：
+最后，将 `item` 变量添加到同样包含 <xref:System.DateTime> 值、<xref:System.Decimal> 值和 `Unit` [枚举](../../programming-guide/enumeration-types.md)值的内插字符串中。 将编辑器中的所有 C# 代码替换为以下代码，然后使用 `dotnet run` 命令运行：
 
 ```csharp
 using System;
@@ -106,9 +105,9 @@ public class Program
 Console.WriteLine($"On {date:d}, the price of {item} was {price:C2} per {unit}.");
 ```
 
-可通过在内插表达式后接冒号（“:”）和格式字符串来指定格式字符串。 “d”是[标准日期和时间格式字符串](../../standard/base-types/standard-date-and-time-format-strings.md#the-short-date-d-format-specifier)，表示短日期格式。 “C2”是[标准数值格式字符串](../../standard/base-types/standard-numeric-format-strings.md#the-currency-c-format-specifier)，用数字表示货币值（精确到小数点后两位）。
+可通过在内插表达式后接冒号（“:”）和格式字符串来指定格式字符串。 “d”是[标准日期和时间格式字符串](../../../standard/base-types/standard-date-and-time-format-strings.md#the-short-date-d-format-specifier)，表示短日期格式。 “C2”是[标准数值格式字符串](../../../standard/base-types/standard-numeric-format-strings.md#the-currency-c-format-specifier)，用数字表示货币值（精确到小数点后两位）。
 
-.NET 库中的许多类型支持一组预定义的格式字符串。 这些格式字符串包括所有数值类型以及日期和时间类型。 有关支持格式字符串的完整类型列表，请参阅 [.NET 中的格式化类型](../../standard/base-types/formatting-types.md)文章中的[格式字符串和. NET 类库类型](../../standard/base-types/formatting-types.md#stringRef)。
+.NET 库中的许多类型支持一组预定义的格式字符串。 这些格式字符串包括所有数值类型以及日期和时间类型。 有关支持格式字符串的完整类型列表，请参阅 [.NET 中的格式化类型](../../../standard/base-types/formatting-types.md)文章中的[格式字符串和. NET 类库类型](../../../standard/base-types/formatting-types.md#stringRef)。
 
 尝试在文本编辑器中修改格式字符串，并在每次更改时重新运行该程序，查看更改如何影响日期和时间以及数值的格式。 将 `{date:d}` 中的“d”更改为“t”（显示短时间格式）、“y”（显示年份和月份）和“yyyy”（显示四位数年份）。 将 `{price:C2}` 中的“C2”更改为“e”（用于指数计数法）和“F3”（使数值在小数点后保持三位数字）。
 
@@ -166,8 +165,8 @@ Console.WriteLine($"[{DateTime.Now,-20:d}] Hour [{DateTime.Now,-10:HH}] [{1063.3
 [04/14/2018          ] Hour [16        ] [       1,063.34] feet
 ```
 
-已完成“字符串内插”快速入门教程。
+你已完成“字符串内插”教程。
 
-你可继续在自己的开发环境中学习[列表集合](arrays-and-collections.md)快速入门教程。
+可继续在自己的开发环境中学习[列表集合](arrays-and-collections.md)教程。
 
-有关详细信息，请参阅[字符串内插](../language-reference/tokens/interpolated.md)主题和 [C# 中的字符串内插](../tutorials/string-interpolation.md)教程。
+有关详细信息，请参阅[字符串内插](../../language-reference/tokens/interpolated.md)主题和 [C# 中的字符串内插](../../tutorials/string-interpolation.md)教程。

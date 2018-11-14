@@ -1,33 +1,32 @@
 ### YamlMime:Tutorial
-title: C# 初探
+title: Hello World - C# 交互式教程简介
 metadata:
-  title: “Hello World”交互教程 - C# 快速入门
-  description: 在本快速入门教程中，读者可以使用浏览器通过交互方式了解 C#。 读者可以直接在浏览器中编写 C# 代码，并查看代码编译和运行结果。
+  title: Hello World - C# 交互式教程简介
+  description: 在本教程中，读者将使用浏览器通过交互方式了解 C#。 读者可以直接在浏览器中编写 C# 代码，并查看代码编译和运行结果。
   audience: Developer
   level: Beginner
-  ms.topic: quickstart
   ms.date: 08/24/2018
   nextTutorialHref: numbers-in-csharp.yml
   nextTutorialTitle: C# 中的数字
   displayType: two-column
   interactive: csharp
   ms.custom: mvc
-  ms.openlocfilehash: 26aeb125a69b210bee96fe32818304cc72e3da17
-  ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+  ms.openlocfilehash: d9992c65b2f5f0f73af9f3234ac389b1c8647337
+  ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
   ms.translationtype: HT
   ms.contentlocale: zh-CN
-  ms.lasthandoff: 10/01/2018
-  ms.locfileid: "47421841"
+  ms.lasthandoff: 10/28/2018
+  ms.locfileid: "50200141"
 items:
 - durationInMinutes: 1
   content: >
-    本快速入门教程通过交互方式介绍了 C#，读者可以使用浏览器编写 C#，并查看代码编译和运行结果。 具体包含一系列课程，最先介绍的就是“Hello World”程序。 这些课程介绍了 C# 语言的基础知识。
+    本教程通过交互方式介绍了 C#，读者可以使用浏览器编写 C#，并查看代码编译和运行结果。 具体包含一系列课程，最先介绍的就是“Hello World”程序。 这些课程介绍了 C# 语言的基础知识。
 - title: 运行首个 C# 程序
   durationInMinutes: 2
   content: "在交互式窗口中，运行以下代码。 为此，请在交互式窗口中键入以下代码块，再单击“运行”按钮：\n\n```csharp\nConsole.WriteLine(\"Hello World!\");\n```\n\n祝贺你！ 已运行首个 C# 程序。 这是一个简单程序，可输出消息“Hello World!”。 它使用 <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> 方法打印此消息。 `Console` 是表示控制台窗口的类型。 `WriteLine` 是 `Console` 类型的方法，负责将文本行打印到文本控制台。\n\n接下来，将继续进一步探索。 本课程的其余部分探索了如何使用在 C# 中表示文本的 `string` 类型。 与 `Console` 类型一样，`string` 类型也包含方法。 `string` 方法处理的是文本。 \n\n> [!NOTE]\n> 此联机编码体验处于预览模式。 如果遇到问题，请[在 dotnet/try 存储库上](https://github.com/dotnet/try/issues)进行报告。\n"
 - title: 声明和使用变量
   durationInMinutes: 3
-  content: "首个程序在屏幕上打印出了 `string`“Hello World!” 。 \n\n> [!TIP]\n> 在探索 C#（或任何编程语言）的过程中，可能会在编写代码时犯错。 编译器会发现并报告这些错误。 如果输出中有错误消息，请仔细比对示例代码和交互式窗口中的代码，看看要纠正哪些代码。\n> 这样做有助于了解 C# 代码结构。 \n\n首个程序只能打印一条消息。 可以使用变量编写更实用的程序。 借助变量符号，可以使用不同的值运行同一代码。 试一试吧！ 将在交互式窗口中已编写的代码替换为以下代码：\n\n```csharp\nstring aFriend = \"Bill\";\nConsole.WriteLine(aFriend);\n```\n\n第一行代码声明变量 `aFriend`，并为它分配值“Bill”。 第二行代码打印出姓名。\n\n可以向声明的任何变量分配不同的值。 可以将姓名更改为自己一个好友的姓名。 在交互式窗口中已添加的代码后面，添加以下两行代码：\n\n```csharp\naFriend = \"Maira\";\nConsole.WriteLine(aFriend);\n```\n\n可以看到，同一行代码根据 `aFriend` 变量中存储的值，打印两条不同的消息。\n\n可能还会注意到，最后两条消息中没有“Hello”一词。 现在就来解决一下这个问题。  将负责打印消息的代码行修改为以下代码：\n\n```csharp\nConsole.WriteLine(\"Hello \" + aFriend);\n```\n\n再次单击“运行”，看看结果如何。\n\n你一直在使用 `+` 从变量和常量字符串构建字符串。 但还有一种更好的方法。\n你可以在 `{` 和 `}` 字符之间放置一个变量，以告诉 C# 将该文本替换为此变量的值。\n\n这称为[字符串内插](../language-reference/tokens/interpolated.md)。\n\n如果在字符串的左引号前添加 `$`，则可以在大括号之间的字符串内包括变量，如 `aFriend`。 试一试：\n\n\n```csharp\nConsole.WriteLine($\"Hello {aFriend}\");\n```\n\n再次单击“运行”，看看结果如何。 消息应该是“Hello Maira”，而不是“Hello {aFriend}”。\n\n> [!NOTE]\n> 此联机编码体验处于预览模式。 如果遇到问题，请[在 dotnet/try 存储库上](https://github.com/dotnet/try/issues)进行报告。\n"
+  content: "首个程序在屏幕上打印出了 `string`“Hello World!” 。 \n\n> [!TIP]\n> 在探索 C#（或任何编程语言）的过程中，可能会在编写代码时犯错。 编译器会发现并报告这些错误。 如果输出中有错误消息，请仔细比对示例代码和交互式窗口中的代码，看看要纠正哪些代码。\n> 这样做有助于了解 C# 代码结构。 \n\n首个程序只能打印一条消息。 可以使用变量编写更实用的程序。 借助变量符号，可以使用不同的值运行同一代码。 试一试吧！ 将在交互式窗口中已编写的代码替换为以下代码：\n\n```csharp\nstring aFriend = \"Bill\";\nConsole.WriteLine(aFriend);\n```\n\n第一行代码声明变量 `aFriend`，并为它分配值“Bill”。 第二行代码打印出姓名。\n\n可以向声明的任何变量分配不同的值。 可以将姓名更改为自己一个好友的姓名。 在交互式窗口中已添加的代码后面，添加以下两行代码：\n\n```csharp\naFriend = \"Maira\";\nConsole.WriteLine(aFriend);\n```\n\n可以看到，同一行代码根据 `aFriend` 变量中存储的值，打印两条不同的消息。\n\n可能还会注意到，最后两条消息中没有“Hello”一词。 现在就来解决一下这个问题。  将负责打印消息的代码行修改为以下代码：\n\n```csharp\nConsole.WriteLine(\"Hello \" + aFriend);\n```\n\n再次单击“运行”，看看结果如何。\n\n你一直在使用 `+` 从变量和常量字符串构建字符串。 但还有一种更好的方法。\n你可以在 `{` 和 `}` 字符之间放置一个变量，以告诉 C# 将该文本替换为此变量的值。\n\n这称为[字符串内插](../../language-reference/tokens/interpolated.md)。\n\n如果在字符串的左引号前添加 `$`，则可以在大括号之间的字符串内包括变量，如 `aFriend`。 试一试：\n\n\n```csharp\nConsole.WriteLine($\"Hello {aFriend}\");\n```\n\n再次单击“运行”，看看结果如何。 消息应该是“Hello Maira”，而不是“Hello {aFriend}”。\n\n> [!NOTE]\n> 此联机编码体验处于预览模式。 如果遇到问题，请[在 dotnet/try 存储库上](https://github.com/dotnet/try/issues)进行报告。\n"
 - title: 使用字符串
   durationInMinutes: 5
   content: >
@@ -100,9 +99,9 @@ items:
 
     > 此联机编码体验处于预览模式。 如果遇到问题，请[在 dotnet/try 存储库上](https://github.com/dotnet/try/issues)进行报告。
 - content: >-
-    已完成“C# 初探”快速入门教程。
+    你已完成“C# 初探”C# 教程简介。
 
 
-    若要详细了解如何使用 `string` 类型，可以参阅有关[字符串](../programming-guide/strings/index.md)的 [C# 编程指南](../programming-guide/index.md)主题。
+    若要详细了解如何使用 `string` 类型，可以参阅有关[字符串](../../programming-guide/strings/index.md)的 [C# 编程指南](../../programming-guide/index.md)主题。
 
-    [有关使用字符串的操作方法提示](../how-to/index.md#working-with-strings)。
+    [有关使用字符串的操作方法提示](../../how-to/index.md#working-with-strings)。

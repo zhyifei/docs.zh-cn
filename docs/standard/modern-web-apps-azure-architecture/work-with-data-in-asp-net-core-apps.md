@@ -4,12 +4,12 @@ description: 使用 ASP.NET Core 和 Azure 构建新式 Web 应用 | 在 ASP.NET
 author: ardalis
 ms.author: wiwagn
 ms.date: 06/28/2018
-ms.openlocfilehash: 7209789eb36dc717823625c0ae67357ee332086b
-ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
+ms.openlocfilehash: 069bfacd1ae08b5c84d6e304b2f12f18e1eecb22
+ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37404653"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "49122846"
 ---
 # <a name="working-with-data-in-aspnet-core-apps"></a>在 ASP.NET Core 应用中使用数据
 
@@ -281,7 +281,7 @@ Cosmos DB 查询语言是简单而强大的接口，用于查询 JSON 文档。 
 
 **参考 - Cosmos DB**
 
-- Cosmos DB 简介\
+- DocumentDB 简介  
   <https://docs.microsoft.com/azure/documentdb/documentdb-introduction>
 
 ## <a name="other-persistence-options"></a>其他持久性选项
@@ -298,7 +298,7 @@ Cosmos DB 查询语言是简单而强大的接口，用于查询 JSON 文档。 
 
 **参考 – Azure 存储**
 
-- Azure 存储简介\
+- Azure 存储简介  
   <https://docs.microsoft.com/azure/storage/storage-introduction>
 
 ## <a name="caching"></a>缓存

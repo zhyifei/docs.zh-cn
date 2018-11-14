@@ -1,19 +1,20 @@
 ---
-title: stackalloc（C# 参考）
+title: stackalloc 关键字（C# 参考）
 ms.date: 04/12/2018
 f1_keywords:
 - stackalloc_CSharpKeyword
 - stackalloc
 helpviewer_keywords:
 - stackalloc keyword [C#]
-ms.openlocfilehash: 5926550eea1f5a2f8fb74645f22ca54c2bed3136
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 16b2933423599e985ce57257595d67026dba93ca
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43508575"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50184514"
 ---
 # <a name="stackalloc-c-reference"></a>stackalloc（C# 参考）
+
 在不安全代码上下文中使用 `stackalloc` 关键字在堆栈上分配内存块。
 
 ```csharp
@@ -41,7 +42,7 @@ int* second = stackalloc int[] { 1, 2, 3 };
 int* third = stackalloc[] { 1, 2, 3 };
 ```
 
-由于涉及指针类型，因此 `stackalloc` 需要 [unsafe](unsafe.md) 上下文。 有关详细信息，请参阅[不安全代码和指针](../../programming-guide/unsafe-code-pointers/index.md) 
+由于涉及指针类型，因此 `stackalloc` 需要 [unsafe](unsafe.md) 上下文。 有关详细信息，请参阅[不安全代码和指针](../../programming-guide/unsafe-code-pointers/index.md)。
 
 `stackalloc` 就像 C 运行时库中的 [_alloca](/cpp/c-runtime-library/reference/alloca)。
 
@@ -49,23 +50,24 @@ int* third = stackalloc[] { 1, 2, 3 };
 
 下面的示例计算并显示 Fibonacci 序列中的前 20 个数字。 每个数字是前两个数字的总和。 在此代码中，在堆栈上分配足够大的可包含 20 个 `int` 类型元素的内存块，而不是在堆上分配。 块的地址存储在指针 `fib` 中。 此内存不受垃圾回收的限制，因此不必对其进行单边锁定（使用 [fixed](fixed-statement.md)）。 内存块的生存期受到定义此内存块的方法的生存期的限制。 在方法返回之前，无法释放内存。
 
-[!code-csharp[csrefKeywordsOperator#15](../../../../samples/snippets/csharp/keywords/StackAllocExamples.cs#1)]
+[!code-csharp[csrefKeywordsOperator#15](~/samples/snippets/csharp/keywords/StackAllocExamples.cs#1)]
 
 下面的示例将 `stackalloc` 整数数组初始化为位掩码，其中每个元素内都有一个位集。 下面展示了自 C# 7.3 起新增的初始值设定项语法：
 
-[!code-csharp[csrefKeywordsOperator#15](../../../../samples/snippets/csharp/keywords/StackAllocExamples.cs#2)]
+[!code-csharp[csrefKeywordsOperator#15](~/samples/snippets/csharp/keywords/StackAllocExamples.cs#2)]
 
 ## <a name="security"></a>安全性
 
 不安全代码的安全性低于安全替代项。 但是，使用 `stackalloc` 会自动启用公共语言运行时 (CLR) 中的缓冲区溢出检测功能。 如果检测到缓冲区溢出，则将尽快终止进程，以便将执行恶意代码的可能性降到最低。
 
 ## <a name="c-language-specification"></a>C# 语言规范
+
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
 ## <a name="see-also"></a>请参阅
 
-- [C# 参考](../../../csharp/language-reference/index.md)  
-- [C# 编程指南](../../../csharp/programming-guide/index.md)  
-- [C# 关键字](../../../csharp/language-reference/keywords/index.md)  
-- [运算符关键字](../../../csharp/language-reference/keywords/operator-keywords.md)  
+- [C# 参考](../../../csharp/language-reference/index.md)
+- [C# 编程指南](../../../csharp/programming-guide/index.md)
+- [C# 关键字](../../../csharp/language-reference/keywords/index.md)
+- [运算符关键字](../../../csharp/language-reference/keywords/operator-keywords.md)
 - [不安全代码和指针](../../../csharp/programming-guide/unsafe-code-pointers/index.md)

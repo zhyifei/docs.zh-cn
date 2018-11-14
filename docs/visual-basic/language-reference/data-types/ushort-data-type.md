@@ -16,14 +16,12 @@ helpviewer_keywords:
 - UShort data type
 - US literal type characters [Visual Basic]
 ms.assetid: 138db892-665d-4ba8-9cae-d8d91c4a8f39
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 038aad2c41f655d0699dab33df276132a70e3ede
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: a3d60747400d570a3e5a930377e9be9c0aca4f35
+ms.sourcegitcommit: 296183dbe35077b5c5e5e74d5fbe7f399bc507ee
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48024553"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "50982706"
 ---
 # <a name="ushort-data-type-visual-basic"></a>UShort 数据类型 (Visual Basic)
 
@@ -58,7 +56,7 @@ Dim number As UShort = &H_FF8C
 
 [!INCLUDE [supporting-underscores](../../../../includes/vb-separator-langversion.md)]
 
-此外可以包含数值`US`或`us`[键入字符](../../programming-guide\language-features\data-types/type-characters.md)来表示`UShort`数据类型，如以下示例所示。
+此外可以包含数值`US`或`us`[键入字符](../../programming-guide/language-features/data-types/type-characters.md)来表示`UShort`数据类型，如以下示例所示。
 
 ```vb
 Dim number = &H_5826us

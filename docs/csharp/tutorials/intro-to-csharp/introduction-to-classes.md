@@ -1,18 +1,18 @@
 ---
-title: “类简介”教程 - C# 本地快速入门
+title: 类和对象 - C# 简介教程
 description: 创建首个 C# 程序，并探索面向对象的概念
 ms.date: 10/11/2017
 ms.custom: mvc
-ms.openlocfilehash: a951c84396e187b5ef1a832705b7722f818c990b
-ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
+ms.openlocfilehash: 8b823e05ea5e51bb3096d6a0611630c996f56b33
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34457328"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50205356"
 ---
-# <a name="introduction-to-classes"></a>类简介
+# <a name="explore-object-oriented-programming-with-classes-and-objects"></a>使用类和对象探索面向对象的编程
 
-若要学习本快速入门教程，必须有开发计算机。 .NET 主题 [10 分钟入门](https://www.microsoft.com/net/core)介绍了如何在 Mac、PC 或 Linux 上设置本地开发环境。 [本地快速入门教程简介](local-environment.md)不仅简要概述了将用到的命令，还收录了详细信息链接。
+本教程要求你有一台可用于开发的计算机。 .NET 主题 [10 分钟入门](https://www.microsoft.com/net/core)介绍了如何在 Mac、PC 或 Linux 上设置本地开发环境。 [熟悉开发工具](local-environment.md)不仅简要概述了将用到的命令，还收录了详细信息链接。
 
 ## <a name="create-your-application"></a>创建应用程序
 
@@ -33,9 +33,9 @@ namespace classes
 }
 ```
 
-在本快速入门教程中，将要新建表示银行帐户的类型。 通常情况下，开发者都会在不同的文本文件中定义每个类。 这样可以更轻松地管理不断增大的程序。  在 classes 目录中，新建名为 BankAccount.cs 的文件。 
+在本教程中，将要新建表示银行帐户的类型。 通常情况下，开发者都会在不同的文本文件中定义每个类。 这样可以更轻松地管理不断增大的程序。  在 classes 目录中，新建名为 BankAccount.cs 的文件。 
 
-此文件包含“银行帐户”定义。 面向对象的编程组织代码的方式为，创建类形式的类型。 这些类包含表示特定实体的代码。 `BankAccount` 类表示银行帐户。 代码通过方法和属性实现特定操作。 在本快速入门教程中，银行帐户支持以下行为：
+此文件包含“银行帐户”定义。 面向对象的编程组织代码的方式为，创建类形式的类型。 这些类包含表示特定实体的代码。 `BankAccount` 类表示银行帐户。 代码通过方法和属性实现特定操作。 在本教程中，银行帐户支持以下行为：
 
 1. 用一个 10 位数唯一标识银行帐户。
 1. 用字符串存储一个或多个所有者名称。
@@ -71,7 +71,7 @@ namespace classes
 }
 ```
 
-继续操作前，先来看看已经生成的内容。  借助 `namespace` 声明，可以按逻辑组织代码。 由于本快速入门教程的篇幅较小，因此所有代码都将被添加到一个命名空间中。 
+继续操作前，先来看看已经生成的内容。  借助 `namespace` 声明，可以按逻辑组织代码。 由于本教程的篇幅较小，因此所有代码都将添加到一个命名空间中。 
 
 `public class BankAccount` 定义要创建的类或类型。 类声明后面 `{` 和 `}` 中的所有内容定义了类行为。 `BankAccount` 类有五个成员。 前三个成员是属性。 属性是数据元素，可以包含强制执行验证或其他规则的代码。 最后两个成员是方法。 方法是执行一个函数的代码块。 读取每个成员的名称应该能够为自己或其他开发者提供了解类用途的足够信息。
 
@@ -89,7 +89,7 @@ public BankAccount(string name, decimal initialBalance)
 }
 ```
 
-构造函数是在使用 [`new`](../language-reference/keywords/new.md) 创建对象时进行调用。 将 program.cs 中的代码行 `Console.WriteLine("Hello World!");` 替换为以下代码行（将 `<name>` 替换为自己的名称）：
+构造函数是在使用 [`new`](../../language-reference/keywords/new.md) 创建对象时进行调用。 将 program.cs 中的代码行 `Console.WriteLine("Hello World!");` 替换为以下代码行（将 `<name>` 替换为自己的名称）：
 
 ```csharp
 var account = new BankAccount("<name>", 1000);
@@ -106,7 +106,7 @@ Console.WriteLine($"Account {account.Number} was created for {account.Owner} wit
 private static int accountNumberSeed = 1234567890;
 ```
 
-此为数据成员。 它是 `private`，这意味着只能通过 `BankAccount` 类中的代码访问它。 这是一种分离公共责任（如拥有帐号）与私有实现（如何生成帐号）的方法。将下面两行代码添加到构造函数，以分配帐号：
+此为数据成员。 它是 `private`，这意味着只能通过 `BankAccount` 类中的代码访问它。 这是一种分离公共责任（如拥有帐号）与私有实现（如何生成帐号）的方法。它也是 `static`，这意味着它由所有 ``BankAccount`` 对象共享。 非静态变量的值对于 ``BankAccount`` 对象的每个实例是唯一的。 将下面两行代码添加到构造函数，以分配帐号：
 
 ```csharp
 this.Number = accountNumberSeed.ToString();
@@ -121,11 +121,11 @@ accountNumberSeed++;
 
 接下来，先新建表示交易的类型。 这是一个没有任何责任的简单类型。 但需要有多个属性。 新建名为 Transaction.cs 的文件。 向新文件添加以下代码：
 
-[!code-csharp[Transaction](../../../samples/csharp/classes-quickstart/Transaction.cs "Transaction declaration")]
+[!code-csharp[Transaction](../../../../samples/csharp/classes-quickstart/Transaction.cs "Transaction declaration")]
 
 现在，将 `Transaction` 对象的 <xref:System.Collections.Generic.List%601> 添加到 `BankAccount` 类中。 添加以下声明：
 
-[!code-csharp[TransactionDecl](../../../samples/csharp/classes-quickstart/BankAccount.cs#TransactionDeclaration "Transaction declaration")]
+[!code-csharp[TransactionDecl](../../../../samples/csharp/classes-quickstart/BankAccount.cs#TransactionDeclaration "Transaction declaration")]
 
 <xref:System.Collections.Generic.List%601> 类要求导入不同的命名空间。 在 BankAccount.cs 的开头，添加以下代码：
 
@@ -135,7 +135,7 @@ using System.Collections.Generic;
 
 现在，更改 `Balance` 的报告方式。  可以通过对所有交易的值进行求和计算余额。 将 `BankAccount` 类中 `Balance` 的声明修改为如下所示：
 
-[!code-csharp[BalanceComputation](../../../samples/csharp/classes-quickstart/BankAccount.cs#BalanceComputation "Computing the balance")]
+[!code-csharp[BalanceComputation](../../../../samples/csharp/classes-quickstart/BankAccount.cs#BalanceComputation "Computing the balance")]
 
 此示例反映了属性的一个重要方面。 现在，可以在其他程序员要求获取余额时计算值。 计算会枚举所有交易，总和即为当前余额。
 
@@ -143,13 +143,13 @@ using System.Collections.Generic;
 
 这就引入了异常的概念。 指明方法无法成功完成工作的标准方法是抛出异常。 异常类型及其关联消息描述了错误。 在此示例中，如果存款金额为负数，`MakeDeposit` 方法会抛出异常。 如果取款金额为负数，或取款后的余额为负数，`MakeWithdrawal` 方法会抛出异常：
 
-[!code-csharp[DepositAndWithdrawal](../../../samples/csharp/classes-quickstart/BankAccount.cs#DepositAndWithdrawal "Make deposits and withdrawals")]
+[!code-csharp[DepositAndWithdrawal](../../../../samples/csharp/classes-quickstart/BankAccount.cs#DepositAndWithdrawal "Make deposits and withdrawals")]
 
-[`throw`](../language-reference/keywords/throw.md) 语句将引发异常。 当前方法执行结束，并将在找到匹配的 `catch` 块时继续执行。 添加 `catch` 块可以稍后再测试一下此代码。
+[`throw`](../../language-reference/keywords/throw.md) 语句将引发异常。 当前块执行结束，将控制权移交给在调用堆栈中发现的第一个匹配的 `catch` 块。 添加 `catch` 块可以稍后再测试一下此代码。
 
 构造函数应进行一处更改，更改为添加初始交易，而不是直接更新余额。 由于已编写 `MakeDeposit` 方法，因此通过构造函数调用它。 完成的构造函数应如下所示：
 
-[!code-csharp[Constructor](../../../samples/csharp/classes-quickstart/BankAccount.cs#Constructor "The final version of the constructor")]
+[!code-csharp[Constructor](../../../../samples/csharp/classes-quickstart/BankAccount.cs#Constructor "The final version of the constructor")]
 
 <xref:System.DateTime.Now?displayProperty=nameWithType> 是返回当前日期和时间的属性。 在 `Main` 方法中添加几个存款和取款，对此进行测试：
 
@@ -175,7 +175,7 @@ catch (ArgumentOutOfRangeException e)
 }
 ```
 
-使用 [`try` 和 `catch` 语句](../language-reference/keywords/try-catch.md)，标记可能会抛出异常的代码块，并捕获预期错误。 可以使用相同的技术，测试代码能否在取款后的余额为负数时抛出异常：
+使用 [`try` 和 `catch` 语句](../../language-reference/keywords/try-catch.md)，标记可能会引发异常的代码块，并捕获预期错误。 可以使用相同的技术，测试代码能否在取款后的余额为负数时引发异常：
 
 ```csharp
 // Test for a negative balance
@@ -194,11 +194,11 @@ catch (InvalidOperationException e)
 
 ## <a name="challenge---log-all-transactions"></a>挑战 - 记录所有交易
 
-为了完成本快速入门教程，可以编写 `GetAccountHistory` 方法，为交易历史记录创建 `string`。 将此方法添加到 `BankAccount` 类型中：
+为了完成本教程，可以编写 `GetAccountHistory` 方法，为交易历史记录创建 `string`。 将此方法添加到 `BankAccount` 类型中：
 
-[!code-csharp[History](../../../samples/csharp/classes-quickstart/BankAccount.cs#History "Display transaction history")]
+[!code-csharp[History](../../../../samples/csharp/classes-quickstart/BankAccount.cs#History "Display transaction history")]
 
-上面的代码使用 <xref:System.Text.StringBuilder> 类，设置包含每个交易行的字符串的格式。 在前面的快速入门教程中，也遇到过字符串格式设置代码。 新增的一个字符为 `\t`。 这用于插入选项卡，从而设置输出格式。
+上面的代码使用 <xref:System.Text.StringBuilder> 类，设置包含每个交易行的字符串的格式。 在前面的教程中，也遇到过字符串格式设置代码。 新增的一个字符为 `\t`。 这用于插入选项卡，从而设置输出格式。
 
 添加以下代码行，在 Program.cs 中对它进行测试：
 
@@ -210,6 +210,6 @@ Console.WriteLine(account.GetAccountHistory());
 
 ## <a name="next-steps"></a>后续步骤
 
-如果遇到问题，可以在 [GitHub 存储库](https://github.com/dotnet/samples/tree/master/csharp/classes-quickstart/)中查看本快速入门教程的源代码
+如果遇到问题，可以在 [GitHub 存储库](https://github.com/dotnet/samples/tree/master/csharp/classes-quickstart/)中查看本教程的源代码
 
-恭喜！已完成所有快速入门课程。 若要了解详细信息，请学习我们的[教程](../tutorials/index.md)
+恭喜，你已完成我们的所有 C# 简介教程。 若要了解详细信息，请继续学习我们的[教程](../index.md)

@@ -2,12 +2,12 @@
 title: 错误处理
 ms.date: 03/30/2017
 ms.assetid: c948841a-7db9-40ae-9b78-587d216cbcaf
-ms.openlocfilehash: 64b1af4b557d7792c7285866edc9aed08a0ef667
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 548d93e63440e256ddb54c3ca792a49817c9b059
+ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43486149"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49452844"
 ---
 # <a name="error-handling"></a>错误处理
 ## <a name="error-handling-in-windows-communication-foundation"></a>Windows Communication Foundation 中的错误处理  
@@ -30,7 +30,7 @@ ms.locfileid: "43486149"
 ### <a name="dealing-with-unexpected-exceptions-using-an-ierrorhandler"></a>使用 IErrorHandler 处理意外的异常  
  若要处理意外的异常，建议过程是操作的"挂钩"IErrorHandler。 在 WCF 运行时级别 （"服务模型"层），但不是在通道层，错误处理程序仅捕获异常。 在通道层挂钩 IErrorHandler 的唯一方法是创建一个自定义通道，但在大多数情况下不建议这样做。  
   
- "意外的异常"通常是不可恢复异常既不是处理异常;它而是意外的用户异常。 不可恢复异常 （如内存不足异常） – 一个通常由处理[服务模型异常处理程序](https://msdn.microsoft.com/library/system.servicemodel.dispatcher.exceptionhandler.aspx)自动 – 不能通常正常处理，并处理此类异常的唯一原因在所有可能会进行额外的日志记录或将标准异常返回到客户端。 在处理消息的过程中（例如，在序列化、编码器或格式化程序级别）发生的处理异常不能在 IErrorHandler 进行处理，因为就发生这些异常的时间而言，错误处理程序介入的时间要么过早，要么过晚。 同样，不能在 IErrorHandler 处理传输异常。  
+ "意外的异常"通常是不可恢复异常既不是处理异常;它而是意外的用户异常。 不可恢复异常 （如内存不足异常） – 一个通常由处理[服务模型异常处理程序](xref:System.ServiceModel.Dispatcher.ExceptionHandler)自动 – 不能通常正常处理，并处理此类异常的唯一原因在所有可能会进行额外的日志记录或将标准异常返回到客户端。 在处理消息的过程中（例如，在序列化、编码器或格式化程序级别）发生的处理异常不能在 IErrorHandler 进行处理，因为就发生这些异常的时间而言，错误处理程序介入的时间要么过早，要么过晚。 同样，不能在 IErrorHandler 处理传输异常。  
   
  使用 IErrorHandler，您可以显式控制某一异常引发时您的应用程序的行为。 您可以：  
   

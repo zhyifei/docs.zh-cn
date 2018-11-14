@@ -4,12 +4,12 @@ description: 本主题演示了构建包含可重用的库和单元测试的 .NE
 author: guardrex
 ms.author: mairaw
 ms.date: 06/12/2017
-ms.openlocfilehash: 17d7cc5b085b4d47ebf1e5ed9a766be9d5d8b01f
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: fbbbbc20b45981a41695eac73dcc251ef74a0cb6
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43530491"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50186013"
 ---
 # <a name="building-a-complete-net-core-solution-on-macos-using-visual-studio-for-mac"></a>使用 Visual Studio for Mac 在 macOS 上构建完整的 .NET Core 解决方案
 
@@ -20,7 +20,7 @@ Visual Studio for Mac 提供用于开发 .NET Core 应用程序的功能全面�
 > [!NOTE]
 > 你的反馈非常有价值。 有两种方法可以向开发团队提供有关 Visual Studio for Mac 的反馈：
 > * 在 Visual Studio for Mac 中，从菜单选择“帮助” > “报告问题”，或从欢迎屏幕中选择“报告问题”，将打开一个窗口，以供填写 bug 报告。 可在[开发人员社区](https://developercommunity.visualstudio.com/spaces/41/index.html)门户中跟踪自己的反馈。
-> * 若要提出建议，从菜单中选择“帮助” > “提供建议”，或从欢迎屏幕中选择“提供建议”，转到 [Visual Studio for Mac UserVoice 网页](https://visualstudio.uservoice.com/forums/563332-visual-studio-for-mac)。
+> * 若要提出建议，从菜单中选择“帮助” > “提供建议”，或从欢迎屏幕中选择“提供建议”，转到 [Visual Studio for Mac 开发人员社区网页](https://developercommunity.visualstudio.com/content/idea/post.html?space=41)。
 
 ## <a name="prerequisites"></a>系统必备
 
@@ -32,7 +32,7 @@ Visual Studio for Mac 提供用于开发 .NET Core 应用程序的功能全面�
 
 ## <a name="building-a-library"></a>生成库
 
-1. 在欢迎屏幕上，选择“新建项目”。 在“多平台”节点下的“新建项目”对话框中，选择“.NET 标准库”模板。 选择“下一步”。
+1. 在欢迎屏幕上，选择“新建项目”。 在“.NET Core”节点下的“新建项目”对话框中，选择“.NET 标准库”模板。 这将创建一个 .NET Standard 库，该库面向 .NET Core 及支持 [.NET Standard](../../standard/net-standard.md) 版本 2.0 的任何其他 .NET 实现。 选择“下一步”。
 
    ![“新建项目”对话框](./media/using-on-mac-vs-full-solution/vsmacfull01.png)
 

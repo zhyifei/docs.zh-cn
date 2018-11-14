@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Web services protocols
 - Windows Communication Foundation, Web service protocols
 ms.assetid: 1f7fc4ff-30fe-4e46-adda-91caad3b06c6
-ms.openlocfilehash: f4967a29b28f1862f5799f6935083ed12cb81ead
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 0539f2144c85fe20a440f8b99425936025a186c0
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43504333"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50192910"
 ---
 # <a name="web-services-protocols-supported-by-system-provided-interoperability-bindings"></a>系统提供的互操作性绑定支持的 Web 服务协议
 Windows Communication Foundation (WCF) 构建与支持的一组称为 Web 服务规范的规范的 Web 服务进行互操作。 为了简化互操作性最佳实践的服务配置，WCF，引入了三个可互操作的系统提供绑定： <xref:System.ServiceModel.BasicHttpBinding?displayProperty=nameWithType>， <xref:System.ServiceModel.WSHttpBinding?displayProperty=nameWithType>，和<xref:System.ServiceModel.WSDualHttpBinding?displayProperty=nameWithType>。 WCF 的互操作性与组织的进步的结构化信息标准 (OASIS) 标准，包括一个可互操作的系统提供绑定： <xref:System.ServiceModel.WS2007HttpBinding?displayProperty=nameWithType>。 对于元数据发布的 WCF 包含两个可互操作的系统提供绑定： [ \<mexHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/mexhttpbinding.md)并[ \<mexHttpsBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/mexhttpsbinding.md)。 本主题列出系统提供的可互操作绑定支持的规范。  
@@ -49,7 +49,7 @@ Windows Communication Foundation (WCF) 构建与支持的一组称为 Web 服务
 |--------------|--------------|-----------------------------|  
 |消息|SOAP 1.2|[入门](https://go.microsoft.com/fwlink/?LinkId=48282)<br /><br /> [消息传递框架](https://go.microsoft.com/fwlink/?LinkId=94664)<br /><br /> [附属 （包括 HTTP 绑定）](https://go.microsoft.com/fwlink/?LinkId=95329)|  
 |消息|的 Ws-addressing 2005/08|[Web 服务寻址 1.0-核心](https://go.microsoft.com/fwlink/?LinkId=90574)<br /><br /> [Web 服务寻址 1.0-SOAP](https://go.microsoft.com/fwlink/?LinkId=95330)<br /><br /> `wsHttpBinding`、`ws2007HttpBinding` 和 `wsDualHttpBinding` 实现万维网联合会 (W3C) WS-Addressing 建议以启用异步消息传送、消息关联和非特定传输寻址机制。<br /><br /> WCF 不支持对 WS-Addressing 标头进行加密，尽管 WS-＊ 规范允许这样做。|  
-|消息传送|WS-Addressing 1.0 - 元数据|[Ws-addressing 1.0 元数据](http://www.w3.org/2007/05/addressing/metadata)policyversion 设置为 1.2 （默认值） 在 ServiceMetadata 行为中设置的策略版本可启用对此协议的支持，wsdl 说明符合 Ws-addressing wsdl，使用policyversion 设置为 1.5，wsdl 说明是符合的 ws-addressing 元数据。<br /><br /> WCF 不支持对 WS-Addressing 标头进行加密，尽管 WS-＊ 规范允许这样做。|  
+|消息传送|WS-Addressing 1.0 - 元数据|[Ws-addressing 1.0 元数据](https://www.w3.org/2007/05/addressing/metadata)policyversion 设置为 1.2 （默认值） 在 ServiceMetadata 行为中设置的策略版本可启用对此协议的支持，wsdl 说明符合 Ws-addressing wsdl，使用policyversion 设置为 1.5，wsdl 说明是符合的 ws-addressing 元数据。<br /><br /> WCF 不支持对 WS-Addressing 标头进行加密，尽管 WS-＊ 规范允许这样做。|  
 |安全性|WSS SOAP Message Security 1.0（WSS SOAP 消息安全 1.0）|[WSS SOAP 消息安全 1.0](https://go.microsoft.com/fwlink/?LinkId=94684)<br /><br /> 当 `securityMode` 属性设置为“wsSecurityOverHttp”（默认值）并使用 `wsSecurity` 子元素配置了参数时使用。<br /><br /> `<wsHttpBinding>   <binding name="myBinding">      <security mode="Message" .../>   </binding> </wsHttpBinding>`|  
 |安全性|WSS SOAP 消息安全用户名令牌配置文件 1.1|[WSS SOAP 消息安全用户名令牌配置文件 1.0](https://go.microsoft.com/fwlink/?LinkId=95331)<br /><br /> 当 `wsSecurity` 元素的 `authenticationMode` 属性设置为“Username”时使用。<br /><br /> `<wsHttpBinding>   <binding name="MyBinding">     <security mode="Message>       <message           clientCredentialType="UserName        negotiateServiceCredential="false"        establishSecurityContext="false"/>     </security> </binding> </wsHttpBinding>`|  
 |安全性|WSS SOAP Message Security X.509 Certificate Token Profile 1.1（WSS SOAP 消息安全 X.509 证书令牌配置文件 1.1）|[WSS SOAP 消息安全 X.509 证书令牌配置文件 1.1](https://go.microsoft.com/fwlink/?LinkId=95332)<br /><br /> 当 `wsSecurity` 元素的 `authenticationMode` 属性设置为“Username”、“Certificate”或“None”时用于消息保护。 另外，当 `wsSecurity` 元素的 `authenticationMode` 属性设置为“Certificate”时用于客户端身份验证。<br /><br /> `<wsHttpBinding>   <binding name="MyBinding">     <security mode="Message>       <message           clientCredentialType="Certificate"        negotiateServiceCredential="false"        establishSecurityContext="false"/>     </security>   </binding> </wsHttpBinding>`|  

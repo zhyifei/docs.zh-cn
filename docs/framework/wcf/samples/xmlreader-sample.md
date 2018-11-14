@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - XML Reader
 ms.assetid: 60e5848d-7d9c-4ea5-bed9-22758c9ac16c
-ms.openlocfilehash: ce5c03d7bd169ee166e9444ee070c32df6e2801c
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 5ac97afd2efc1bb57a81f5cd2d78fed18ca3804d
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43520941"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50039252"
 ---
 # <a name="xmlreader-sample"></a>XmlReader 示例
 XmlReader 示例演示如何使用 <xref:System.Xml.XmlReader> 处理消息正文。 该示例基于[Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md)，它可实现计算器服务。 示例中还添加了一个服务操作 `Sum`，它接受包含要加在一起的值数组的消息。 该服务使用 <xref:System.Xml.XmlReader> 读取消息。  
@@ -19,7 +19,7 @@ XmlReader 示例演示如何使用 <xref:System.Xml.XmlReader> 处理消息正�
   
  计算器接口包括名为 `Sum` 的服务操作，它接受 <xref:System.ServiceModel.Channels.Message> 参数，如下面的示例代码所示。  
   
-```  
+```csharp
 public interface ICalculator  
 {  
     [OperationContract]  
@@ -37,9 +37,10 @@ public interface ICalculator
   
  客户端按如下方式访问 `Sum`，首先创建整数值数组，再创建来自该数组的消息，接着使用创建的消息调用 `Sum` 方法，如下面的示例代码所示。  
   
-```  
+```csharp
 CalculatorClient client = new CalculatorClient();  
-...  
+//...  
+
 // Call the Sum service operation.  
 int[] values = { 1, 2, 3, 4, 5 };  
 using (new OperationContextScope(client.InnerChannel))  
@@ -54,7 +55,7 @@ using (new OperationContextScope(client.InnerChannel))
   
  在服务中，服务操作 `Sum` 的实现使用 <xref:System.Xml.XmlReader> 对象访问消息正文，以便循环访问要求和的值。 调用 <xref:System.ServiceModel.Channels.Message.GetReaderAtBodyContents%2A> 方法可以访问消息正文，如下面的示例代码所示。  
   
-```  
+```csharp  
 public int Sum(Message message)  
 {  
     int sum = 0;  
@@ -81,7 +82,7 @@ public int Sum(Message message)
   
  运行示例时，操作的请求和响应将显示在客户端控制台窗口中。 在客户端窗口中按 Enter 可以关闭客户端。  
   
-```  
+```console  
 Add(100,15.99) = 115.99  
 Subtract(145,76.54) = 68.46  
 Multiply(9,81.25) = 731.25  

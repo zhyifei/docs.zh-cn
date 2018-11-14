@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - LINQ [C#], features supporting LINQ
 ms.assetid: 524b0078-ebfd-45a7-b390-f2ceb9d84797
-ms.openlocfilehash: c617b2d7b56618867fe92cbe1d9ee04aa4c3ab64
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 51cc24fd8054b87b6c92a02450420a9c4abef525
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45653195"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50191085"
 ---
 # <a name="c-features-that-support-linq"></a>支持 LINQ 的 C# 功能
 下一节介绍 C# 3.0 中引入的新语言构造。 虽然这些新功能在一定程度上都用于 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 查询，但并不限于 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]，如果认为有用，在任何情况下都可以使用这些新功能。  
@@ -47,13 +47,26 @@ var query = from str in stringArray
 ```csharp  
 Customer cust = new Customer { Name = "Mike", Phone = "555-1212" };  
 ```  
-  
- 有关详细信息，请参阅[对象和集合初始值设定项](../../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md)。  
-  
+继续我们的 `Customer` 类，假设有一个名为 `IncomingOrders` 的数据源，并且每个订单具有一个较大的 `OrderSize`，我们希望基于该订单创建新的 `Customer`。 可以在此数据源上执行 LINQ 查询，并使用对象初始化来填充集合：
+```csharp
+var newLargeOrderCustomers = from o in IncomingOrders
+                            where o.OrderSize > 5
+                            select new Customer { Name = o.Name, Phone = o.Phone };
+```
+数据源可能具有比 `Customer` 类更多的属性，例如 `OrderSize`，但执行对象初始化后，从查询返回的数据被定型为所需的数据类型；我们选择与我们的类相关的数据。 因此，我们现在有填充了我们想要的多个新 `Customer` 的 `IEnumerable`。 上述代码也可以使用 LINQ 的方法语法编写：
+```csharp
+var newLargeOrderCustomers = IncomingOrders.Where(x => x.OrderSize > 5).Select(y => new Customer { Name = y.Name, Phone = y.Phone });
+```
+ 有关详细信息，请参见:
+ 
+ - [对象和集合初始值设定项](../../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md)
+
+ - [标准查询运算符的查询表达式语法](../../../../csharp/programming-guide/concepts/linq/query-expression-syntax-for-standard-query-operators.md)
+
 ## <a name="anonymous-types"></a>匿名类型  
  匿名类型由编译器构造，且类型名称只可用于编译器。 匿名类型提供一种在查询结果中对一组属性临时分组的简便方法，无需定义单独的命名类型。 使用新的表达式和对象初始值设定项初始化匿名类型，如下所示：  
   
-```  
+```csharp
 select new {name = cust.Name, phone = cust.Phone};  
 ```  
   
@@ -74,16 +87,7 @@ select new {name = cust.Name, phone = cust.Phone};
 -   [Lambda 表达式](../../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)  
   
 -   [表达式树 (C#)](../../../../csharp/programming-guide/concepts/expression-trees/index.md)  
-  
-## <a name="auto-implemented-properties"></a>自动实现的属性  
- 自动实现的属性使属性声明变得更简洁。 当你声明以下示例中所示的属性时，编译器会创建仅可以通过属性 getter 和 setter 访问的私有匿名支持字段。  
-  
-```csharp  
-public string Name {get; set;}  
-```  
-  
- 有关详细信息，请参阅[自动实现的属性](../../../../csharp/programming-guide/classes-and-structs/auto-implemented-properties.md)。  
-  
+   
 ## <a name="see-also"></a>请参阅
 
 - [语言集成查询 (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/index.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: c693fd34-88fe-4d90-b332-19eeadf3b7e7
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: aef77e6f2ec572ec0969166770aaf617cc933d67
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 6d241f0f0c10be4a73c7ac55930e5dd24ef0b1e2
+ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43522325"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49453130"
 ---
 # <a name="get-started-with-the-net-framework"></a>.NET Framework 入门
 
@@ -67,7 +67,7 @@ ms.locfileid: "43522325"
 
 若要开发 .NET Framework 应用或组件，请执行以下操作：
 
-1. 如果未在操作系统上预安装 .NET Framework，请安装应用所面向的 .NET Framework 版本。 最新的生产版本是 .NET Framework 4.7.2，此版本预安装在 Windows 10 2018 年 4 月更新上，并可下载到旧版 Windows 操作系统。 有关 .NET Framework 系统要求，请参阅[系统要求](../../../docs/framework/get-started/system-requirements.md)。 有关安装其他版本的 .NET Framework 的信息，请参阅[安装指南](../../../docs/framework/install/guide-for-developers.md)。 其他 .NET Framework 包为带外发布，这意味着这些包在滚动基础上发布，没有任何定期或计划的发布周期。 有关这些包的信息，请参阅 [.NET Framework 和带外版本](../../../docs/framework/get-started/the-net-framework-and-out-of-band-releases.md)。
+1. 如果未在操作系统上预安装 .NET Framework，请安装应用所面向的 .NET Framework 版本。 最新生产版本是 .NET Framework 4.7.2。 此版本预安装在 Windows 10 2018 年 4 月更新和 Windows 10 2018 年 10 月更新中，并可下载到旧版 Windows 操作系统中。 有关 .NET Framework 系统要求，请参阅[系统要求](../../../docs/framework/get-started/system-requirements.md)。 有关安装其他版本的 .NET Framework 的信息，请参阅[安装指南](../../../docs/framework/install/guide-for-developers.md)。 其他 .NET Framework 包为带外发布，这意味着这些包在滚动基础上发布，没有任何定期或计划的发布周期。 有关这些包的信息，请参阅 [.NET Framework 和带外版本](../../../docs/framework/get-started/the-net-framework-and-out-of-band-releases.md)。
 
 2. 选择要用于开发应用的 .NET Framework 所支持的语言。 大量语言可供选择，包括来自 Microsoft 的 [Visual Basic](../../visual-basic/index.md)、[C#](../../csharp/index.md)、[F#](../../fsharp/index.md) 和 C++/CLI。 （一种用于开发 .NET Framework 应用的编程语言，它遵循[公共语言基础结构 (CLI) 规范](https://go.microsoft.com/fwlink/?LinkId=199862)。）
 
@@ -89,7 +89,7 @@ ms.locfileid: "43522325"
 
 ## <a name="see-also"></a>请参阅
 
-[.NET Framework 指南](../../../docs/framework/index.md)   
-[新增功能](../../../docs/framework/whats-new/index.md)   
-[.NET API 浏览器](/dotnet/api/)   
-[开发指南](../../../docs/framework/development-guide.md)
+- [.NET Framework 指南](../../../docs/framework/index.md)   
+- [新增功能](../../../docs/framework/whats-new/index.md)   
+- [.NET API 浏览器](/dotnet/api/)   
+- [开发指南](../../../docs/framework/development-guide.md)

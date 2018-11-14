@@ -4,19 +4,19 @@ ms.date: 03/30/2017
 ms.assetid: d5b3d13e-689f-4584-8ba6-44f5167a8590
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a7b138aec8a64683ca4b42cbbc8bd3584c06cc90
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c1fa27a713890f2988a2fcd7983630080dc21d05
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33397044"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50202154"
 ---
 # <a name="missingruntimeartifactexception-class-net-native"></a>缺少运行时间项目异常类 (.NET Native)
 **适用于 Windows 10 的 .NET for Windows 应用，仅 [!INCLUDE[net_native](../../../includes/net-native-md.md)]**  
   
  当一个类型或类型成员的元数据可用但其实现已遭到删除时会引发此异常。  
   
- 命名空间：System.Reflection  
+ 命名空间：**** System.Reflection  
   
 > [!IMPORTANT]
 >  `MissingRuntimeArtifactException` 类旨在仅供 [!INCLUDE[net_native](../../../includes/net-native-md.md)] 工具链内部使用。 它不用于在第三方代码中使用，也不应用它处理应用程序代码中的异常。 相反，你可以通过将条目添加到[运行时指令文件](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)来消除异常。 有关详细信息，请参阅“备注”部分。  
@@ -70,13 +70,13 @@ ms.locfileid: "33397044"
 ## <a name="usage-details"></a>使用详情  
  当试图实例化一个类型或调用一个类型成员，并且尽管类型或成员的元数据存在但其实现已遭到删除的情况下，会引发 `MissingRuntimeArtifactException` 异常。  
   
- 不管元数据和实现代码动态地执行一个方法在运行时间对一个应用是否可用，都是由运行时指令（XML 配置）文件即 *.rd.xml 定义的。 为防止应用引发此异常，必须修改 \*.rd.xml，确保一个类型或类型成员需要的元数据在运行时存在。 有关 \*.rd.xml 文件的格式信息，请参阅[运行时指令 (rd.xml) 配置文件参考](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)。  
+ 元数据和实现代码来动态执行的方法是否对可用应用程序在运行时由运行时指令 （XML 配置） 文件，定义\*。 rd.xml。 为防止应用引发此异常，必须修改 \*.rd.xml，确保一个类型或类型成员需要的元数据在运行时存在。 有关 \*.rd.xml 文件的格式信息，请参阅[运行时指令 (rd.xml) 配置文件参考](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)。  
   
 > [!IMPORTANT]
->  由于此异常表示应用程序需要的实现代码在运行时间不可用，你不必在 `try`/`catch` 块中处理此异常。 相反，你应该诊断引起此异常的原因并通过使用运行时指令文件删除它。 通常，你可通过在运行时指令文件（*.rd.xml 文件）中为一个程序元素指定适当的 `Activate` 或 `Dynamic` 策略来删除这个异常。 若要获取可以添加到可消除异常的运行时指令文件的项，有两个疑难解答程序可供使用：  
+>  由于此异常表示应用程序需要的实现代码在运行时间不可用，你不必在 `try`/`catch` 块中处理此异常。 相反，你应该诊断引起此异常的原因并通过使用运行时指令文件删除它。 通常情况下，通过指定相应消除此异常`Activate`或`Dynamic`在运行时指令文件中的程序元素策略 (\*.rd.xml 文件)。 若要获取可以添加到可消除异常的运行时指令文件的项，有两个疑难解答程序可供使用：  
 >   
->  -   类型的 [MissingMetadataException 故障排除程序](http://dotnet.github.io/native/troubleshooter/type.html) 。  
-> -   方法的 [MissingMetadataException 故障排除程序](http://dotnet.github.io/native/troubleshooter/method.html) 。  
+> - 类型的 [MissingMetadataException 故障排除程序](https://dotnet.github.io/native/troubleshooter/type.html) 。  
+> - 方法的 [MissingMetadataException 故障排除程序](https://dotnet.github.io/native/troubleshooter/method.html) 。  
   
  `MissingRuntimeArtifactException` 类不包括独有成员；它的所有成员都是从其基类即 <xref:System.MemberAccessException> 继承的。  
   

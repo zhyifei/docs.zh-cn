@@ -4,12 +4,12 @@ description: 适用于容器化 .NET 应用程序的 .NET 微服务体系结构 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 07/03/2018
-ms.openlocfilehash: 8cd3564e5240ec5a8783edb336957549be27ea6a
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: b961ebd186953e614658915c7246e1c83c40e7e9
+ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47203458"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49453146"
 ---
 # <a name="implement-the-circuit-breaker-pattern"></a>实现断路器模式
 
@@ -56,7 +56,7 @@ static IAsyncPolicy<HttpResponseMessage> GetCircuitBreakerPolicy()
 }
 ```
 
-上述代码示例配置了断路器策略，因此，如果在重试 Http 请求时出现五个连续故障，则会中断或断开线路。 此时，电路将断开 30 秒：在此期间，断路器会立即中止呼叫，而不是拨打电话。  该策略自动将[相关异常和 HTTP 状态代码](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/http-requests?view=aspnetcore-2.1#handle-transient-faults)解释为故障。  
+上述代码示例配置了断路器策略，因此，如果在重试 Http 请求时出现五个连续故障，则会中断或断开线路。 此时，电路将断开 30 秒：在此期间，断路器会立即中止呼叫，而不是拨打电话。  该策略自动将[相关异常和 HTTP 状态代码](https://docs.microsoft.com/aspnet/core/fundamentals/http-requests?view=aspnetcore-2.1#handle-transient-faults)解释为故障。  
 
 如果一个特定资源出现问题，且该资源部署在不同于执行 HTTP 调用的客户端应用程序或服务的环境中，则还应使用断路器将请求重定向到回退基础结构。 这样一来，如果数据中心发生故障，但该故障只影响后端微服务，而不影响客户端应用程序，则客户端应用程序可以重定向到回退服务。 Polly 正在规划新策略，用于自动实现此[故障转移策略](https://github.com/App-vNext/Polly/wiki/Polly-Roadmap#failover-policy)方案。 
 
@@ -96,7 +96,7 @@ static IAsyncPolicy<HttpResponseMessage> GetCircuitBreakerPolicy()
 
 `http://localhost:5103/failing?enable` 
 
-然后可以使用 URI http://localhost:5103/failing 检查状态，如图 10-4 中所示。
+然后可以使用 URI `http://localhost:5103/failing` 检查状态，如图 10-4 中所示。
 
 ![](./media/image4.png)
 

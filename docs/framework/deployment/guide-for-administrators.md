@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: bee14036-0436-44e8-89f5-4bc61317977a
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f56ccbf549ce8f1750ba0bf9cf4a945007694258
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 844e9e53c752be0c993255fc356ade1723109b39
+ms.sourcegitcommit: 5fd80619c760fa8c25d33a6f5661247cb65da465
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43502361"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "50744582"
 ---
 # <a name="net-framework-deployment-guide-for-administrators"></a>.NET Framework 部署指南（针对管理员）
 本文分步说明系统管理员可以如何使用 Microsoft System Center Configuration Manager 在网络中部署 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 及其系统依赖项。 本文假定所有目标客户端计算机都满足 .NET Framework 的最低要求。 有关安装 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 的软件和硬件要求列表，请参阅[系统需求](../../../docs/framework/get-started/system-requirements.md)。  
@@ -37,16 +37,16 @@ ms.locfileid: "43502361"
 ## <a name="the-deployment-process"></a>部署过程  
  在设置好支持基础结构之后，可以使用 System Center 2012 Configuration Manager 将 .NET Framework 可再发行组件包部署到网络上的计算机。 构建基础结构涉及创建并定义 5 个主要区域：集合、软件的包和程序、分发点以及部署。  
   
--   “集合”是将 .NET Framework 部署到的 Configuration Manager 资源（用户、用户组或计算机）组。 有关详细信息，请参阅 Configuration Manager 文档库中的 [Configuration Manager 中的集合](https://technet.microsoft.com/library/gg682169.aspx)。  
+-   “集合”是将 .NET Framework 部署到的 Configuration Manager 资源（用户、用户组或计算机）组。 有关详细信息，请参阅 Configuration Manager 文档库中的 [System Center Configuration Manager 中的集合简介](https://docs.microsoft.com/sccm/core/clients/manage/collections/introduction-to-collections)。  
   
--   “包和程序”通常表示要安装在客户端计算机上的软件应用程序，但它们还可能包含单个文件、更新，甚至是单个命令。 有关详细信息，请参阅 Configuration Manager 文档库中的 [Configuration Manager 中的包和程序](https://technet.microsoft.com/library/gg699369.aspx)。  
+-   “包和程序”通常表示要安装在客户端计算机上的软件应用程序，但它们还可能包含单个文件、更新，甚至是单个命令。 有关详细信息，请参阅 Configuration Manager 文档库中的 [System Center Configuration Manager 中的包和程序](https://docs.microsoft.com/sccm/apps/deploy-use/packages-and-programs)。  
   
--   “分发点”是存储在客户端计算机上运行软件所需的文件的 Configuration Manager 站点系统角色。 在 Configuration Manager 客户端收到并处理软件部署时，该客户端会与分发点联系以下载与相应软件关联的内容并开始安装过程。 有关详细信息，请参阅 Configuration Manager 文档库中的 [Configuration Manager 中的内容管理简介](https://technet.microsoft.com/library/gg682083.aspx)。  
+-   “分发点”是存储在客户端计算机上运行软件所需的文件的 Configuration Manager 站点系统角色。 在 Configuration Manager 客户端收到并处理软件部署时，该客户端会与分发点联系以下载与相应软件关联的内容并开始安装过程。 有关详细信息，请参阅 Configuration Manager 文档库中的 [Configuration Manager 中的内容管理基本概念](https://docs.microsoft.com/sccm/core/plan-design/hierarchy/fundamental-concepts-for-content-management)。  
   
--   “部署”指示指定目标集合的相应成员安装软件包。 有关详细信息，请参阅 Configuration Manager 文档库中的[如何在 Configuration Manager 中部署应用程序](https://technet.microsoft.com/library/gg682082.aspx)。  
+-   “部署”指示指定目标集合的相应成员安装软件包。 
   
 > [!IMPORTANT]
->  本主题中的过程包含用于创建及部署包和程序的典型设置，可能不包含所有可能的设置。 有关其他 Configuration Manager 部署选项，请参阅 [Configuration Manager 文档库](https://technet.microsoft.com/library/gg682041.aspx)。  
+>  本主题中的过程包含用于创建及部署包和程序的典型设置，可能不包含所有可能的设置。 有关其他 Configuration Manager 部署选项，请参阅 [Configuration Manager 文档库](https://docs.microsoft.com/previous-versions/system-center/system-center-2012-R2/gg682041%28v=technet.10%29)。  
   
 <a name="deploying_in_a_test_environment"></a>   
 ## <a name="deploying-the-net-framework"></a>部署 .NET Framework  
@@ -62,7 +62,7 @@ ms.locfileid: "43502361"
   
 <a name="creating_a_collection"></a>   
 ### <a name="create-a-collection"></a>创建集合  
- 在此步骤中，选择包和程序将部署到的计算机，并将这些计算机组合到一个设备集合中。 若要在 Configuration Manager 中创建集合，可使用直接成员身份规则（手动指定集合成员）或查询规则（Configuration Manager 根据你指定的条件确定集合成员）。 有关成员身份规则的更多信息，请参阅 Configuration Manager 文档库中的 [Configuration Manager 中的集合简介](https://technet.microsoft.com/library/gg682177.aspx)。  
+ 在此步骤中，选择包和程序将部署到的计算机，并将这些计算机组合到一个设备集合中。 若要在 Configuration Manager 中创建集合，可使用直接成员身份规则（手动指定集合成员）或查询规则（Configuration Manager 根据你指定的条件确定集合成员）。 有关成员身份规则的更多信息，请参阅 Configuration Manager 文档库中的 [System Center Configuration Manager 中的集合简介](https://docs.microsoft.com/sccm/core/clients/manage/collections/introduction-to-collections)。  
   
  创建集合：  
   
@@ -83,8 +83,6 @@ ms.locfileid: "43502361"
 8.  在“选择资源”页上，选中要将 .NET Framework 部署到的每台计算机所对应的复选框。 选择“下一步”，然后完成向导。  
   
 9. 在“创建设备集合向导”的“成员身份规则”页上，选择“下一步”，然后完成该向导。  
-  
- 有关集合的更多信息，请参阅 Configuration Manager 文档库中的 [Configuration Manager 中的集合](https://technet.microsoft.com/library/bb693730.aspx)。  
   
 <a name="creating_a_package"></a>   
 ### <a name="create-a-package-and-program-for-the-net-framework-redistributable-package"></a>为 .NET Framework 可再发行组件包创建包和程序  
@@ -154,7 +152,7 @@ ms.locfileid: "43502361"
   
 8.  完成向导。  
   
- 包现在包含无提示部署 .NET Framework 4.5 所需的所有信息。 在部署包和程序之前，请确认已将其安装在分发点上；请参阅 Configuration Manager 文档库中的 [Configuration Manager 中的内容管理的操作和维护](https://technet.microsoft.com/library/gg712694.aspx#BKMK_MonitorContent)的“监视内容”一节。  
+ 包现在包含无提示部署 .NET Framework 4.5 所需的所有信息。 在部署包和程序之前，请确认已将其安装在分发点上；请参阅 Configuration Manager 文档库中的 [使用 System Center Configuration Manager 监视分发的内容](https://docs.microsoft.com/sccm/core/servers/deploy/configure/monitor-content-you-have-distributed)的“监视内容”一节。  
   
 <a name="deploying_package"></a>   
 ### <a name="deploy-the-package"></a>部署包  
@@ -178,8 +176,8 @@ ms.locfileid: "43502361"
   
 9. 在该向导的“用户体验”页上，使用默认值并选择“下一步”。  
   
-    > [!WARNING]
-    >  你的生产环境可能具有需要选择不同的部署计划的策略。 有关这些选项的信息，请参阅 TechNet 库中的[播发名称属性：“计划”选项卡](https://technet.microsoft.com/library/bb694016.aspx)。  
+> [!WARNING]
+> 你的生产环境可能具有需要选择不同的部署计划的策略。 有关这些选项的信息，请参阅[播发名称属性：“计划”选项卡](https://docs.microsoft.com/previous-versions/system-center/configuration-manager-2007/bb694016%28v=technet.10%29)。
   
 10. 在该向导的“分发点”页上，使用默认值并选择“下一步”。  
   
@@ -193,27 +191,27 @@ ms.locfileid: "43502361"
   
  **Active Directory、DNS 和 DHCP：**  
   
--   [适用于 Windows Server 2008 的 Active Directory 域服务](https://technet.microsoft.com/library/dd378891.aspx)  
+-   [Active Directory 域服务](/windows/desktop/ad/active-directory-domain-services)  
   
--   [DNS 服务器](https://technet.microsoft.com/library/cc732997.aspx)  
+-   [域名系统 (DNS)](/windows-server/networking/dns/dns-top)  
   
--   [DHCP 服务器](https://technet.microsoft.com/library/cc896553.aspx)  
+-   [动态主机配置协议 (DHCP)](/windows-server/networking/technologies/dhcp/dhcp-top)  
   
  **SQL Server 2008:**  
   
--   [安装 SQL Server 2008（SQL Server 视频）](https://technet.microsoft.com/library/dd299415.aspx)  
+-   [安装 SQL Server 2008（SQL Server 视频）](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/dd299415%28v=sql.100%29)  
   
 -   [面向数据库管理员的 SQL Server 2008 安全概述](https://download.microsoft.com/download/a/c/d/acd8e043-d69b-4f09-bc9e-4168b65aaa71/SQL2008SecurityOverviewforAdmins.docx)  
   
  System Center 2012 Configuration Manager（既充当管理点又充当分发点）：  
   
--   [System Center 2012 Configuration Manager 的站点管理](https://technet.microsoft.com/library/gg681983.aspx)  
+-   [System Center 2012 Configuration Manager 的站点管理](https://docs.microsoft.com/previous-versions/system-center/system-center-2012-R2/gg681983%28v=technet.10%29)  
   
--   [Configuration Manager 单站点计划和部署](https://technet.microsoft.com/library/bb680961.aspx)  
+-   [Configuration Manager 单站点计划和部署](https://docs.microsoft.com/previous-versions/system-center/configuration-manager-2007/bb680961%28v=technet.10%29)  
   
  适用于 Windows 计算机的 System Center 2012 Configuration Manager 客户端：  
   
--   [部署 System Center 2012 Configuration Manager 的客户端](https://technet.microsoft.com/library/gg699391.aspx)  
+-   [部署 System Center 2012 Configuration Manager 的客户端](https://docs.microsoft.com/previous-versions/system-center/system-center-2012-R2/gg699391%28v=technet.10%29)  
   
 <a name="troubleshooting"></a>   
 ## <a name="troubleshooting"></a>疑难解答  
@@ -248,18 +246,18 @@ ms.locfileid: "43502361"
 <a name="additional_error_codes"></a>   
 ### <a name="download-error-codes"></a>下载错误代码  
   
--   [后台智能传输服务 (BITS) 错误代码](https://msdn.microsoft.com/library/aa362823.aspx)  
+-   [后台智能传输服务 (BITS) 错误代码](/windows/desktop/Bits/bits-return-values)  
   
--   [URL 名字对象错误代码](https://msdn.microsoft.com/library/ms775145.aspx)  
+-   [URL 名字对象错误代码](https://docs.microsoft.com/previous-versions/windows/internet-explorer/ie-developer/platform-apis/ms775145%28v=vs.85%29)  
   
 -   [WinHttp 错误代码](/windows/desktop/WinHttp/error-messages)  
   
  其他错误代码：  
   
--   [Windows Installer 错误代码](https://msdn.microsoft.com/library/aa368542.aspx)  
+-   [Windows Installer 错误代码](/windows/desktop/msi/error-codes)  
   
--   [Windows 更新代理结果代码](https://technet.microsoft.com/library/cc720442.aspx)  
+-   [Windows 更新代理结果代码](/security-updates/WindowsUpdateServices/18127055)  
   
 ## <a name="see-also"></a>请参阅  
- [面向开发人员的部署指南](../../../docs/framework/deployment/deployment-guide-for-developers.md)  
- [系统要求](../../../docs/framework/get-started/system-requirements.md)
+- [面向开发人员的部署指南](../../../docs/framework/deployment/deployment-guide-for-developers.md)  
+- [系统要求](../../../docs/framework/get-started/system-requirements.md)

@@ -2,12 +2,12 @@
 title: FILESTREAM 数据
 ms.date: 03/30/2017
 ms.assetid: bd8b845c-0f09-4295-b466-97ef106eefa8
-ms.openlocfilehash: eef03d171d288cb2bc62c3aaa477a95a5ce718c3
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: 843aa890ba80ab2816af0726170eacb77f419d50
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47176794"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50197023"
 ---
 # <a name="filestream-data"></a>FILESTREAM 数据
 FILESTREAM 存储特性用于 varbinary(max) 列中存储的二进制 (BLOB) 数据。 在 FILESTREAM 之前，存储二进制数据需要特殊处理。 非结构化的数据（例如文本文档、图像和视频）通常存储在数据库之外，从而使得难以管理此类数据。  
@@ -167,17 +167,15 @@ namespace FileStreamTest
 }
 ```  
   
- 另一个示例，请参阅[如何存储和二进制数据提取到文件流列](http://www.codeproject.com/Articles/32216/How-to-store-and-fetch-binary-data-into-a-file-str)。  
+ 另一个示例，请参阅[如何存储和二进制数据提取到文件流列](https://www.codeproject.com/Articles/32216/How-to-store-and-fetch-binary-data-into-a-file-str)。  
   
 ## <a name="resources-in-sql-server-books-online"></a>SQL Server 联机丛书中的资源  
  FILESTREAM 的完整文档位于 SQL Server 联机丛书中的下列部分中。  
   
 |主题|描述|  
 |-----------|-----------------|  
-|[设计和实现 FILESTREAM 存储](http://msdn2.microsoft.com/library/bb895234\(SQL.105\).aspx)|提供指向 FILESTREAM 文档和相关主题的链接。|  
-|[FILESTREAM 概述](http://msdn2.microsoft.com/library/bb933993\(SQL.105\).aspx)|介绍何时使用 FILESTREAM 存储以及该存储如何将 SQL Server 数据库引擎与 NTFS 文件系统集成。|  
-|[使用 FILESTREAM 存储入门](https://msdn.microsoft.com/library/bb933995\(SQL.105\).aspx)|介绍如何在 SQL Server 的实例上启用 FILESTREAM，如何创建数据库和表以存储 FILESTREAM 数据以及如何操作包含 FILESTREAM 数据的行。|  
-|[在客户端应用程序中使用 FILESTREAM 存储](https://msdn.microsoft.com/library/bb933877\(SQL.105\).aspx)|介绍用于处理 FILESTREAM 数据的 Win32 API 函数。|  
+|[FILESTREAM (SQL Server)](/sql/relational-databases/blob/filestream-sql-server)|介绍何时使用 FILESTREAM 存储以及该存储如何将 SQL Server 数据库引擎与 NTFS 文件系统集成。|  
+|[创建 FILESTREAM 数据的客户端应用程序](/sql/relational-databases/blob/create-client-applications-for-filestream-data)|介绍用于处理 FILESTREAM 数据的 Win32 API 函数。|  
 |[FILESTREAM 与其他 SQL Server 功能](/sql/relational-databases/blob/filestream-compatibility-with-other-sql-server-features)|提供将 FILESTREAM 数据与 SQL Server 的其他功能一起使用时的注意事项、准则和限制。|  
   
 ## <a name="see-also"></a>请参阅  
@@ -185,4 +183,4 @@ namespace FileStreamTest
  [在 ADO.NET 中检索和修改数据](../../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)  
  [代码访问安全性和 ADO.NET](../../../../../docs/framework/data/adonet/code-access-security.md)  
  [SQL Server 二进制和大值数据](../../../../../docs/framework/data/adonet/sql/sql-server-binary-and-large-value-data.md)  
- [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET 概述](../../../../../docs/framework/data/adonet/ado-net-overview.md)

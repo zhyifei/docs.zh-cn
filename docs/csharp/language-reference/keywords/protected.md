@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - protected keyword [C#]
 ms.assetid: 05ce3794-6675-4025-bddb-eaaa0ec22892
-ms.openlocfilehash: f25e692430f876ec384971079d6d0aa2c97e967b
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 6e3f72226d10910152f7a2139a5a1be35e681ec7
+ms.sourcegitcommit: 3b1cb8467bd73dee854b604e306c0e7e3882d91a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/29/2018
-ms.locfileid: "47204986"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "50183173"
 ---
 # <a name="protected-c-reference"></a>protected（C# 参考）
 
@@ -46,9 +46,9 @@ ms.locfileid: "47204986"
 
 `'Point.x' is inaccessible due to its protection level.`
 
-## <a name="c-language-specification"></a>C# 语言规范
+## <a name="c-language-specification"></a>C# 语言规范  
 
-[!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
+有关详细信息，请参阅 [C# 语言规范](../language-specification/index.md)中的[声明的可访问性](~/_csharplang/spec/basic-concepts.md#declared-accessibility)。 该语言规范是 C# 语法和用法的权威资料。
 
 ## <a name="see-also"></a>请参阅
 
@@ -61,4 +61,4 @@ ms.locfileid: "47204986"
 - [public](public.md)
 - [private](private.md)
 - [internal](internal.md)
-- [Internal Virtual 关键字的安全问题](https://docs.microsoft.com/en-us/previous-versions/dotnet/netframework-4.0/heyd8kky(v=vs.100))
+- [Internal Virtual 关键字的安全问题](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/heyd8kky(v=vs.100))

@@ -2,12 +2,12 @@
 title: 查看消息日志
 ms.date: 03/30/2017
 ms.assetid: 3012fa13-f650-45fb-aaea-c5cca8c7d372
-ms.openlocfilehash: 025d4020002a56deb9d5b8a2fe628f50cabad4d3
-ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
+ms.openlocfilehash: 5d007efc9667ee5380b69349d6a960554ab0d4fe
+ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42912083"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "50757408"
 ---
 # <a name="viewing-message-logs"></a>查看消息日志
 本主题描述如何查看消息日志。  
@@ -33,7 +33,7 @@ ms.locfileid: "42912083"
   
 -   如果您必须查看中的所有三个日志[Service Trace Viewer Tool (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)在同一时间中，您可以修改中继服务通过创建一个新<xref:System.ServiceModel.Channels.Message>实例。 此实例应该是传入消息正文以及除 `ActivityId` 和 `Action` 标头以外所有标头的副本。 下面的示例代码演示如何执行该操作。  
   
-```  
+```csharp
 Message outgoingMessage = Message.CreateMessage(incomingMessage.Version, incomingMessage.Headers.Action, incomingMessage.GetReaderAtBodyContents());  
   
 for (int i = 0; i < incomingMessage.Headers.Count; i++)  

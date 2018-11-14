@@ -2,13 +2,12 @@
 title: System.ServiceModel.Security.ImportSecurityChannelBindingEntry
 ms.date: 03/30/2017
 ms.assetid: 167e4485-3595-43a9-a342-674cd6a35daa
-author: BrucePerlerMS
-ms.openlocfilehash: d17eaae94533db2efeed1a9951312d62a656ac8f
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 9950d91b766368b8283e33539e12468e5cc26f0d
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47198834"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50198154"
 ---
 # <a name="systemservicemodelsecurityimportsecuritychannelbindingentry"></a>System.ServiceModel.Security.ImportSecurityChannelBindingEntry
 System.ServiceModel.Security.ImportSecurityChannelBindingEntry  

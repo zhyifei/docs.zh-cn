@@ -2,12 +2,12 @@
 title: 安全 Overview2
 ms.date: 03/30/2017
 ms.assetid: 33e09965-61d5-48cc-9e8c-3b047cc4f194
-ms.openlocfilehash: 18a7496d39cd08e8b340e23c57fcd10dae5ed281
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: db7b45fef28b0b28e7da550c24d510da73c02aa9
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43861853"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50183524"
 ---
 # <a name="security-overview"></a>安全性概述
 保护应用程序的安全是一个持续的过程。 因为不可能预知将来会出现哪种新的攻击技术，所以开发人员永远都不能保证某一应用程序可以免受所有的攻击。 仅因为还没有人发现（或发布）系统中的安全性缺陷，也不意味着不存在或可能不存在安全性缺陷。 在项目的设计阶段，您需要对安全性进行规划，并规划如何在应用程序生存期内维护其安全。  
@@ -67,7 +67,7 @@ ms.locfileid: "43861853"
 |资源|描述|  
 |--------------|-----------------|  
 |[代码访问安全性和 ADO.NET](../../../../docs/framework/data/adonet/code-access-security.md)|从 ADO.NET 应用程序角度描述代码访问安全性、基于角色安全性以及部分受信任环境之间的交互。|  
-|[代码访问安全性](https://msdn.microsoft.com/library/23a20143-241d-4fe5-9d9f-3933fd594c03)|包含描述 .NET Framework 中 CAS 的主题的链接。|  
+|[代码访问安全性](../../../../docs/framework/misc/code-access-security.md)|包含描述 .NET Framework 中 CAS 的主题的链接。|  
   
 ## <a name="database-security"></a>数据库安全性  
  最小特权原则也适用于数据源。 数据库安全性一般准则包括：  

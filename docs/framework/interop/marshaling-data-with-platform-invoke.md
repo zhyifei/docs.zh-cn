@@ -11,11 +11,11 @@ ms.assetid: dc5c76cf-7b12-406f-b79c-d1a023ec245d
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: ae8fbb47986e5baaecb919ce79ae384a8427737a
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/29/2018
-ms.locfileid: "47231120"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "48850473"
 ---
 # <a name="marshaling-data-with-platform-invoke"></a>用平台调用封送数据
 若要调用从非托管库中导出的函数，.NET Framework 应用程序需要托管代码中表示非托管函数的函数原型。 若要创建使平台调用能正确封送数据的原型，必须执行以下操作：  

@@ -1,12 +1,12 @@
 ---
 title: 序列 (F#)
-description: '了解如何使用 F # 序列，当具有较大，有序数据集合，但不一定希望使用的所有元素。'
+description: 了解如何使用 F# 序列，当具有较大，有序数据集合，但不一定希望使用的所有元素。
 ms.date: 05/16/2016
 ms.openlocfilehash: cfe8d1e350a8ac46b7700c12aa84d250f8b35855
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/06/2018
+ms.lasthandoff: 11/02/2018
 ms.locfileid: "48838894"
 ---
 # <a name="sequences"></a>序列
@@ -22,7 +22,7 @@ ms.locfileid: "48838894"
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet1502.fs)]
 
-序列表达式由 F # 表达式生成的序列的值组成。 可以使用`yield`关键字来生成将成为序列的一部分的值。
+序列表达式由 F# 表达式生成的序列的值组成。 可以使用`yield`关键字来生成将成为序列的一部分的值。
 
 以下是一个示例。
 
@@ -62,7 +62,7 @@ ms.locfileid: "48838894"
 
 序列支持许多相同的功能[列出了](lists.md)。 序列还支持分组，然后通过使用键生成函数计算等操作。 序列还支持更多的不同函数的提取子序列。
 
-多种数据类型，例如列表、 数组、 集和地图隐式是序列，因为它们是可枚举集合。 将序列作为参数适用于任何常见的 F # 数据类型，除了为实现任何.NET Framework 数据类型的函数`System.Collections.Generic.IEnumerable<'T>`。 使用列表作为参数，它只能使用列表的函数相反。 类型`seq<'T>`是类型缩写`IEnumerable<'T>`。 这意味着，任何实现泛型的类型`System.Collections.Generic.IEnumerable<'T>`，其中包括数组、 列表、 设置，并在 F # 中，并还大多数.NET Framework 集合类型，映射是与兼容`seq`类型并可以在一个序列的任何地方。
+多种数据类型，例如列表、 数组、 集和地图隐式是序列，因为它们是可枚举集合。 将序列作为参数适用于任何常见的 F# 数据类型，除了为实现任何.NET Framework 数据类型的函数`System.Collections.Generic.IEnumerable<'T>`。 使用列表作为参数，它只能使用列表的函数相反。 类型`seq<'T>`是类型缩写`IEnumerable<'T>`。 这意味着，任何实现泛型的类型`System.Collections.Generic.IEnumerable<'T>`，其中包括数组、 列表、 设置，并在 F# 中，并还大多数.NET Framework 集合类型，映射是与兼容`seq`类型并可以在一个序列的任何地方。
 
 ## <a name="module-functions"></a>模块函数
 

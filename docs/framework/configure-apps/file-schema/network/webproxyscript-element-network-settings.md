@@ -8,14 +8,12 @@ helpviewer_keywords:
 - <webProxyScript> element
 - webProxyScript element
 ms.assetid: a13c26db-6218-4af3-9696-38f24b23bfac
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: 1e1450d2df424b32aacc5c113b5936001f65915a
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 683c4c5e3f3f62d947ce244c66cc590eabe64f17
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48031768"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50195783"
 ---
 # <a name="ltwebproxyscriptgt-element-network-settings"></a>&lt;webProxyScript&gt;元素 （网络设置）
 配置用于发现 Web 代理脚本的特征。  
@@ -57,4 +55,4 @@ ms.locfileid: "48031768"
  此元素可在应用程序配置文件或计算机配置文件 (Machine.config) 中使用。  
   
 ## <a name="see-also"></a>请参阅  
- [网络设置架构](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+- [网络设置架构](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

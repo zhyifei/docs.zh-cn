@@ -1,16 +1,16 @@
 ---
 title: 表值参数
-ms.date: 03/30/2017
+ms.date: 10/12/2018
 dev_langs:
 - csharp
 - vb
 ms.assetid: 370c16d5-db7b-43e3-945b-ccaab35b739b
-ms.openlocfilehash: 333154f26a575886f19a914ce2f91beebd6be49e
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 8654a415ee0701680064aec2ee45f975086ec2c0
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44042577"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50088580"
 ---
 # <a name="table-valued-parameters"></a>表值参数
 表值参数提供一种将客户端应用程序中的多行数据封送到 SQL Server 的简单方式，不需要多次往返或特殊服务器端逻辑来处理数据。 您可以使用表值参数来包装客户端应用程序中的数据行，并使用单个参数化命令将数据发送到服务器。 传入的数据行存储在一个表变量中，然后您可以通过使用 [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] 对该表变量进行操作。  
@@ -87,7 +87,9 @@ INSERT INTO dbo.Categories (CategoryID, CategoryName)
   
 ## <a name="configuring-a-sqlparameter-example"></a>配置 SqlParameter 示例  
  <xref:System.Data.SqlClient> 支持填充表值参数从<xref:System.Data.DataTable>，<xref:System.Data.Common.DbDataReader>或<xref:System.Collections.Generic.IEnumerable%601>  \  <xref:Microsoft.SqlServer.Server.SqlDataRecord>对象。 必须通过使用 <xref:System.Data.SqlClient.SqlParameter.TypeName%2A> 的 <xref:System.Data.SqlClient.SqlParameter> 属性指定表值参数的类型名称。 `TypeName` 必须与以前在服务器上创建的兼容类型的名称相匹配。 下面的代码段演示如何配置 <xref:System.Data.SqlClient.SqlParameter> 以插入数据。  
-  
+ 
+在以下示例中，`addedCategories`变量包含<xref:System.Data.DataTable>。 若要查看如何填充该变量，请参阅下一节中的示例[将表值参数传递给存储过程](#passing)。
+
 ```csharp  
 // Configure the command and parameter.  
 SqlCommand insertCommand = new SqlCommand(sqlInsert, connection);  
@@ -126,7 +128,7 @@ Dim tvpParam As SqlParameter = _
 tvpParam.SqlDbType = SqlDbType.Structured  
 ```  
   
-## <a name="passing-a-table-valued-parameter-to-a-stored-procedure"></a>将表值参数传递给存储过程  
+## <a name="passing"></a> 将表值参数传递给存储过程  
  此示例演示如何将表值参数数据传递给存储过程。 示例代码通过使用 <xref:System.Data.DataTable> 方法，将已添加的行提取到新的 <xref:System.Data.DataTable.GetChanges%2A> 中。 然后，示例代码定义一个 <xref:System.Data.SqlClient.SqlCommand>，并将 <xref:System.Data.SqlClient.SqlCommand.CommandType%2A> 属性设置为 <xref:System.Data.CommandType.StoredProcedure>。 示例代码通过使用 <xref:System.Data.SqlClient.SqlParameter> 方法对 <xref:System.Data.SqlClient.SqlParameterCollection.AddWithValue%2A> 进行填充，并将 <xref:System.Data.SqlClient.SqlParameter.SqlDbType%2A> 设置为 `Structured`。 然后，通过使用 <xref:System.Data.SqlClient.SqlCommand> 方法执行 <xref:System.Data.SqlClient.SqlCommand.ExecuteNonQuery%2A>。  
   
 ```csharp  

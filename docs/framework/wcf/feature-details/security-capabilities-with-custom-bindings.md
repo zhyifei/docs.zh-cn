@@ -2,16 +2,15 @@
 title: 使用自定义绑定的安全功能
 ms.date: 03/30/2017
 ms.assetid: a2425679-484a-4e6c-9c98-7da7304f1516
-author: BrucePerlerMS
-ms.openlocfilehash: 35d2477af3dc7ce6fdd075055fff9e687bdc2a60
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: c18bec095866c70622c75834e8a4d5fe6a491b08
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47196728"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50190887"
 ---
 # <a name="security-capabilities-with-custom-bindings"></a>使用自定义绑定的安全功能
-使用系统提供的绑定之一，可以执行最常见的安全任务。 但是，如果您需要更多控制权，则可以使用 <xref:System.ServiceModel.Channels.SecurityBindingElement> 创建自定义绑定，如以下这些主题中所介绍。 有关自定义绑定的详细信息，请参阅[自定义绑定](../../../../docs/framework/wcf/extending/custom-bindings.md)。  
+使用系统提供的绑定之一，可以执行最常见的安全任务。 但是，如果你需要更多控制权，则可以使用 <xref:System.ServiceModel.Channels.SecurityBindingElement> 创建自定义绑定，如以下这些主题中所介绍。 有关自定义绑定的详细信息，请参阅[自定义绑定](../../../../docs/framework/wcf/extending/custom-bindings.md)。  
   
 ## <a name="in-this-section"></a>本节内容  
  [SecurityBindingElement 身份验证模式](../../../../docs/framework/wcf/feature-details/securitybindingelement-authentication-modes.md)  

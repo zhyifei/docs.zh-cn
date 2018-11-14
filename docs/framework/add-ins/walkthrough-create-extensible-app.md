@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 694a33c5-a040-450d-aed5-ac49fc88ce61
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5d2aaeaffaf3abbe1e8efcdb57d40e6ae60f89b5
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 63780583d035d6fab6b3a79424857b82a910ef09
+ms.sourcegitcommit: 5fd80619c760fa8c25d33a6f5661247cb65da465
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45591942"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "50744608"
 ---
 # <a name="walkthrough-creating-an-extensible-application"></a>演练：创建可扩展的应用程序
 本演练介绍如何创建用于执行简单的计算器功能的外接程序的管道。 它并不演示实际方案中;相反，它演示了一个管道，以及如何外接程序可以提供主机服务的基本功能。  
@@ -61,7 +61,7 @@ ms.locfileid: "45591942"
   
 1.  在 Visual Studio 中，创建一个名为的新项目`Calc1Contract`。 使该项目基于**类库**模板。  
   
-2.  将解决方案命名`CalculatorV1`。  
+2.  将解决方案命名为 `CalculatorV1`。  
   
 ## <a name="creating-the-pipeline-directory-structure"></a>创建管线目录结构  
  外接程序模型要求要置于指定的目录结构中的管道段程序集。 管道结构的详细信息，请参阅[管线开发要求](https://msdn.microsoft.com/library/ef9fa986-e80b-43e1-868b-247f4c1d9da5)。  
@@ -195,7 +195,7 @@ ms.locfileid: "45591942"
   
  在此管道中外, 接程序提供了一项服务对主机和类型流从外接程序向主机。 由于没有类型流向从宿主向外接程序，您无需包括视图到约定适配器。  
   
- 若要实现生存期管理，请使用<xref:System.AddIn.Pipeline.ContractHandle>要附加到该协定的生存期标记对象。 为了使生命期管理工作，必须保留对此句柄的引用。 应用令牌后，无需任何其他编程需要，因为它们不再使用，并使它们可用于垃圾回收时外, 接程序系统可以释放的对象。 有关详细信息，请参阅[生存期管理](https://msdn.microsoft.com/library/57a9c87e-394c-4fef-89f2-aa4223a2aeb5)。  
+ 若要实现生存期管理，请使用<xref:System.AddIn.Pipeline.ContractHandle>要附加到该协定的生存期标记对象。 为了使生命期管理工作，必须保留对此句柄的引用。 应用令牌后，无需任何其他编程需要，因为它们不再使用，并使它们可用于垃圾回收时外, 接程序系统可以释放的对象。 有关详细信息，请参阅 [生存期管理](https://msdn.microsoft.com/library/57a9c87e-394c-4fef-89f2-aa4223a2aeb5)。  
   
 #### <a name="to-create-the-host-side-adapter"></a>若要创建的主机端适配器  
   
@@ -355,8 +355,8 @@ ms.locfileid: "45591942"
 4.  类型**退出**然后按**Enter**键关闭该应用程序。  
   
 ## <a name="see-also"></a>请参阅  
- [演练： 启用向后的兼容性作为在宿主发生变化](https://msdn.microsoft.com/library/6fa15bb5-8f04-407d-bd7d-675dc043c848)  
- [演练： 在宿主和外接程序之间传递集合](https://msdn.microsoft.com/library/b532c604-548e-4fab-b11c-377257dd0ee5)  
- [管线开发要求](https://msdn.microsoft.com/library/ef9fa986-e80b-43e1-868b-247f4c1d9da5)  
- [协定、 视图和适配器](https://msdn.microsoft.com/library/a6460173-9507-4b87-8c07-d4ee245d715c)  
- [管道开发](../../../docs/framework/add-ins/pipeline-development.md)
+- [演练： 启用向后的兼容性作为在宿主发生变化](https://msdn.microsoft.com/library/6fa15bb5-8f04-407d-bd7d-675dc043c848)  
+-  [演练： 在宿主和外接程序之间传递集合](https://msdn.microsoft.com/library/b532c604-548e-4fab-b11c-377257dd0ee5)  
+-  [管线开发要求](https://msdn.microsoft.com/library/ef9fa986-e80b-43e1-868b-247f4c1d9da5)  
+-  [协定、 视图和适配器](https://msdn.microsoft.com/library/a6460173-9507-4b87-8c07-d4ee245d715c)  
+-  [管道开发](../../../docs/framework/add-ins/pipeline-development.md)

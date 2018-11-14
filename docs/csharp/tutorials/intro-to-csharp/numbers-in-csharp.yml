@@ -1,10 +1,9 @@
 ### YamlMime:Tutorial
-title: C# 中的数字
+title: 处理 C# 中的整数和浮点数
 metadata:
-  title: “C# 中的数字”交互教程 - C# 快速入门
-  description: 在有关数字类型的该快速入门教程中，你将使用浏览器通过交互方式了解 C#。 读者可以直接在浏览器中编写 C# 代码，并查看代码编译和运行结果。
+  title: C# 中的数字 - C# 交互式教程简介
+  description: 本教程介绍了数字类型，读者可以使用浏览器通过交互方式了解 C#。 读者可以直接在浏览器中编写 C# 代码，并查看代码编译和运行结果。
   audience: Developer
-  ms.topic: quickstart
   ms.custom: mvc
   ms.date: 08/24/2018
   level: Beginner
@@ -12,19 +11,19 @@ metadata:
   nextTutorialTitle: C# 中的分支和循环
   displayType: two-column
   interactive: csharp
-  ms.openlocfilehash: 473d0619ad9a68e9d5aea0cf5fa9daf092f623f5
-  ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+  ms.openlocfilehash: 7edc39e6b9d45a0f6707adf48199c9a096b8992d
+  ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
   ms.translationtype: HT
   ms.contentlocale: zh-CN
-  ms.lasthandoff: 09/04/2018
-  ms.locfileid: "43507851"
+  ms.lasthandoff: 10/28/2018
+  ms.locfileid: "50198558"
 items:
 - durationInMinutes: 1
   content: >
-    该快速入门教程以交互方式介绍了 C# 中数字类型，你可使用浏览器来编写 C# 和查看代码的编译及运行结果。 具体包含一系列课程，探索了 C# 中的数字和数学运算。 这些课程介绍了 C# 语言的基础知识。
+    本教程通过交互方式介绍了 C# 中的数字类型，读者可以使用浏览器编写 C#，并查看代码编译和运行结果。 具体包含一系列课程，探索了 C# 中的数字和数学运算。 这些课程介绍了 C# 语言的基础知识。
 - title: 探索整数数学运算
   durationInMinutes: 4
-  content: "在交互式窗口中，运行以下代码。 为此，请在交互式窗口中键入以下代码块，再单击“运行”按钮：\n\n```csharp\nint a = 18;\nint b = 6;\nint c = a + b;\nConsole.WriteLine(c);\n```\n\n刚刚看到的是一种基本的整数数学运算。 `int` 类型表示整数（正整数或负整数）。 使用 `+` 符号执行加法运算。 其他常见的整数数学运算包括：\n\n- `-`：减法运算\n- `*`：乘法运算\n- `/`：除法运算\n\n> [!TIP]\n> 在该快速入门教程中，你可在交互窗口中修改已编写的代码，自行探索相关内容。 该快速入门教程提供可分步尝试的示例。\n\n首先，探索这些不同类型的运算。 修改第三行代码，尝试执行所有这些运算。 每次编辑后，单击“运行”按钮。\n\n减法：\n\n```csharp\nint c = a - b;\n```\n\n乘法：\n\n```csharp\nint c = a * b;\n```\n\n除法： \n\n```csharp\nint c = a / b;\n```\n\n如果愿意，也可以尝试在同一行中执行多个数学运算。\n\n> [!TIP]\n> 在探索 C#（或任何编程语言）的过程中，可能会在编写代码时犯错。 编译器会发现并报告这些错误。 如果输出中有错误消息，请仔细比对示例代码和交互式窗口中的代码，看看要纠正哪些代码。\n> 这样做有助于了解 C# 代码结构。     \n\n> [!NOTE]\n> 此联机编码体验处于预览模式。 如果遇到问题，请[在 dotnet/try 存储库上](https://github.com/dotnet/try/issues)进行报告。\n"
+  content: "在交互式窗口中，运行以下代码。 为此，请在交互式窗口中键入以下代码块，再单击“运行”按钮：\n\n```csharp\nint a = 18;\nint b = 6;\nint c = a + b;\nConsole.WriteLine(c);\n```\n\n刚刚看到的是一种基本的整数数学运算。 `int` 类型表示整数（正整数或负整数）。 使用 `+` 符号执行加法运算。 其他常见的整数数学运算包括：\n\n- `-`：减法运算\n- `*`：乘法运算\n- `/`：除法运算\n\n> [!TIP]\n> 在本交互式教程中，可以修改在交互式窗口中已编写的代码，自行进行探索。 本教程提供了可分步试运行的示例。\n\n首先，探索这些不同类型的运算。 修改第三行代码，尝试执行所有这些运算。 每次编辑后，单击“运行”按钮。\n\n减法：\n\n```csharp\nint c = a - b;\n```\n\n乘法：\n\n```csharp\nint c = a * b;\n```\n\n除法： \n\n```csharp\nint c = a / b;\n```\n\n如果愿意，也可以尝试在同一行中执行多个数学运算。\n\n> [!TIP]\n> 在探索 C#（或任何编程语言）的过程中，可能会在编写代码时犯错。 编译器会发现并报告这些错误。 如果输出中有错误消息，请仔细比对示例代码和交互式窗口中的代码，看看要纠正哪些代码。\n> 这样做有助于了解 C# 代码结构。     \n\n> [!NOTE]\n> 此联机编码体验处于预览模式。 如果遇到问题，请[在 dotnet/try 存储库上](https://github.com/dotnet/try/issues)进行报告。\n"
 - title: 探索运算顺序
   durationInMinutes: 7
   content: >
@@ -201,4 +200,4 @@ items:
     > [!NOTE]
 
     > 此联机编码体验处于预览模式。 如果遇到问题，请[在 dotnet/try 存储库上](https://github.com/dotnet/try/issues)进行报告。
-- content: "已完成“C# 中的数字”快速入门教程。 \n\n可以在自己的开发环境中继续学习这些快速入门教程。 了解[本地开发](local-environment.md)的基础知识并选择一个快速入门教程。 可以再次尝试本练习、直接进入到下一个快速入门教程，或重新开始学习 [C# 中的数字](numbers-in-csharp-local.md)快速入门教程。\n\n可以参阅下面的主题，详细了解 C# 中的数字：\n\n[整型类型表](../language-reference/keywords/integral-types-table.md)   \n[浮点型表](../language-reference/keywords/floating-point-types-table.md)   \n[内置类型表](../language-reference/keywords/built-in-types-table.md)   \n[隐式数值转换表](../language-reference/keywords/implicit-numeric-conversions-table.md)   \n[显式数值转换表](../language-reference/keywords/explicit-numeric-conversions-table.md)"
+- content: "你已完成“C# 中的数字”交互式教程。 \n\n你可以继续在自己的开发环境中学习这些教程。 请先了解[本地开发](local-environment.md)基础知识，再选择一个教程。 可以直接学习下一个教程，也可以重新开始学习 [C# 中的数字](numbers-in-csharp-local.md)教程。\n\n可以参阅下面的主题，详细了解 C# 中的数字：\n\n[整型类型表](../../language-reference/keywords/integral-types-table.md)   \n[浮点型表](../../language-reference/keywords/floating-point-types-table.md)   \n[内置类型表](../../language-reference/keywords/built-in-types-table.md)   \n[隐式数值转换表](../../language-reference/keywords/implicit-numeric-conversions-table.md)   \n[显式数值转换表](../../language-reference/keywords/explicit-numeric-conversions-table.md)"

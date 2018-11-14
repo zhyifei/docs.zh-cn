@@ -2,18 +2,18 @@
 title: 传输
 ms.date: 03/30/2017
 ms.assetid: dfcfa36c-d3bb-44b4-aa15-1c922c6f73e6
-ms.openlocfilehash: aa7535aa393544077a9802b5c3255d6e5f6accda
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: 360367803fc014c83ae377309b9029dafa3040bd
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33802995"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50202889"
 ---
 # <a name="transfer"></a>传输
 本主题介绍 Windows Communication Foundation (WCF) 活动跟踪模型中的传输。  
   
 ## <a name="transfer-definition"></a>传输定义  
- 活动之间的传输表示终结点内相关活动中的事件之间的因果关系。 当两个活动之间存在控制流（例如方法调用跨越活动边界）时，这两个活动将与传输相关。 在 WCF 中，在服务上，传入字节时的侦听活动会传输到接收字节活动创建的消息对象的位置。 有关端到端跟踪方案和其相应的活动和跟踪设计的列表，请参阅[端到端跟踪方案](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing-scenarios.md)。  
+ 活动之间的传输表示终结点内相关活动中的事件之间的因果关系。 当两个活动之间存在控制流（例如方法调用跨越活动边界）时，这两个活动将与传输相关。 在 WCF 中，在服务上，传入字节时侦听在活动传输到接收字节活动其中创建消息对象。 有关端到端跟踪方案及其各自的活动和跟踪设计的列表，请参阅[端到端跟踪方案](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing-scenarios.md)。  
   
  若要发出传输跟踪，请在跟踪源中使用如下配置代码所示的 `ActivityTracing` 设置。  
   
@@ -60,33 +60,44 @@ ms.locfileid: "33802995"
   
  下面的代码示例演示如何执行此操作。 此示例假定，在传输到新活动时将进行阻止调用，该调用包括挂起/继续跟踪。  
   
-```  
+```csharp
 // 0. Create a trace source  
 TraceSource ts = new TraceSource("myTS");  
+
 // 1. remember existing ("ambient") activity for clean up  
 Guid oldGuid = Trace.CorrelationManager.ActivityId;  
 // this will be our new activity  
 Guid newGuid = Guid.NewGuid();   
+
 // 2. call transfer, indicating that we are switching to the new AID  
 ts.TraceTransfer(667, "Transferring.", newGuid);  
+
 // 3. Suspend the current activity.  
 ts.TraceEvent(TraceEventType.Suspend, 667, "Suspend: Activity " + i-1);  
+
 // 4. set the new AID in TLS  
 Trace.CorrelationManager.ActivityId = newGuid;  
+
 // 5. Emit the start trace  
 ts.TraceEvent(TraceEventType.Start, 667, "Boundary: Activity " + i);  
+
 // trace something  
 ts.TraceEvent(TraceEventType.Information, 667, "Hello from activity " + i);  
+
 // Perform Work  
 // some work.  
 // Return  
 ts.TraceEvent(TraceEventType.Information, 667, "Work complete on activity " + i);   
+
 // 6. Emit the transfer returning to the original activity  
 ts.TraceTransfer(667, "Transferring Back.", oldGuid);  
+
 // 7. Emit the End trace  
 ts.TraceEvent(TraceEventType.Stop, 667, "Boundary: Activity " + i);  
+
 // 8. Change the tls variable to the original AID  
 Trace.CorrelationManager.ActivityId = oldGuid;    
+
 // 9. Resume the old activity  
 ts.TraceEvent(TraceEventType.Resume, 667, "Resume: Activity " + i-1);  
 ```  

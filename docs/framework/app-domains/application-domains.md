@@ -14,28 +14,21 @@ helpviewer_keywords:
 ms.assetid: 113a8bbf-6875-4a72-a49d-ca2d92e19cc8
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ddf8f52ab98d0188235d8c9f97293adced4bfe90
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 2e1db5447be5f46873b6648fc6791426b2886a75
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45698310"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50192611"
 ---
 # <a name="application-domains"></a>应用程序域
+
 操作系统和运行时环境通常会在应用程序间提供某种形式的隔离。 例如，Windows 使用进程来隔离应用程序。 为确保在一个应用程序中运行的代码不会对其他不相关的应用程序产生不良影响，这种隔离是必需的。  
   
  应用程序域为安全性、可靠性、版本控制以及卸载程序集提供了隔离边界。 应用程序域通常由运行时宿主创建，运行时宿主负责在运行应用程序之前引导公共语言运行时。  
   
- 文档的这一节中的各主题说明如何使用应用程序域来提供程序集之间的隔离。  
-  
- 本概述包含以下几节：  
-  
--   [隔离应用程序的优点](#benefits)  
-  
--   [引用](#reference)  
-  
-<a name="benefits"></a>   
-## <a name="the-benefits-of-isolating-applications"></a>隔离应用程序的优点  
+## <a name="the-benefits-of-isolating-applications"></a>隔离应用程序的优点
+
  以前使用进程边界来隔离在同一台计算机上运行的应用程序。 每一个应用程序被加载到单独的进程中，这样就将该应用程序与在同一台计算机上运行的其他应用程序相隔离。  
   
  隔离这些应用程序的原因在于内存地址是与进程相关的；在目标进程中，不能通过任何有意义的方式使用从一个进程传递到另一个进程的内存指针。 此外，您不能在两个进程间进行直接调用。 您必须代之以使用代理，它提供一定程度的间接性。  
@@ -61,9 +54,9 @@ ms.locfileid: "45698310"
   
 -   向代码授予的权限可以由代码运行所在的应用程序域来控制。  
   
-  
-## <a name="application-domains-and-assemblies"></a>应用程序域和程序集  
- 本主题描述应用程序域和程序集之间的关系。 在可以执行程序集中所包含的代码之前，必须将程序集加载到应用程序域中。 运行普通的应用程序会导致将几个程序集加载到一个应用程序域中。  
+## <a name="application-domains-and-assemblies"></a>应用程序域和程序集
+
+ 本节描述应用程序域和程序集之间的关系。 在可以执行程序集中所包含的代码之前，必须将程序集加载到应用程序域中。 运行普通的应用程序会导致将几个程序集加载到一个应用程序域中。  
   
  程序集的加载方式决定其实时 (JIT) 编译代码是否可以在进程中由多个应用程序域共享，以及该程序集是否可以从进程中卸载。  
   
@@ -95,21 +88,24 @@ ms.locfileid: "45698310"
   
 -   当以非特定于域的形式加载程序集时，必须找到并加载该程序集的所有依赖项，因为如果一个依赖项不能以非特定于域的形式加载，则会妨碍以非特定于域的形式加载程序集。  
   
-## <a name="application-domains-and-threads"></a>应用程序域和线程  
+## <a name="application-domains-and-threads"></a>应用程序域和线程
+
  应用程序域为安全性、版本控制、可靠性和托管代码的卸载形成隔离边界。 线程是公共语言运行时用来执行代码的操作系统构造。 在运行时，所有托管代码均加载到一个应用程序域中，并由一个或多个托管线程运行。  
   
  应用程序域和线程之间不具有一对一的相关性。 在任意给定时间，可以在单个应用程序域中执行几个线程，而且特定线程并不局限在单个应用程序域内。 也就是说，线程可以自由跨越应用程序域边界；不为每个应用程序域创建新线程。  
   
- 在任意给定时间，每个线程都在一个应用程序域中执行。 在任何给定的应用程序域中，可能正在执行零个、一个或多个线程。 运行时会跟踪在哪些应用程序域中有哪些线程正在运行。 通过调用 <xref:System.Threading.Thread.GetDomain%2A?displayProperty=nameWithType> 方法，您可以随时确定线程执行所在的域。  
-  
-### <a name="application-domains-and-cultures"></a>应用程序域和区域性  
+ 在任意给定时间，每个线程都在一个应用程序域中执行。 在任何给定的应用程序域中，可能正在执行零个、一个或多个线程。 运行时会跟踪在哪些应用程序域中有哪些线程正在运行。 通过调用 <xref:System.Threading.Thread.GetDomain%2A?displayProperty=nameWithType> 方法，您可以随时确定线程执行所在的域。
+
+### <a name="application-domains-and-cultures"></a>应用程序域和区域性
+
  区域性（由 <xref:System.Globalization.CultureInfo> 对象表示）与线程关联。 您可以通过使用 <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType> 属性获取与当前正在执行的线程关联的区域性，并且您可以通过使用 <xref:System.Threading.Thread.CurrentCulture%2A?displayProperty=nameWithType> 属性获取或设置与当前正在执行的线程关联的区域性。 如果已使用 <xref:System.Threading.Thread.CurrentCulture%2A?displayProperty=nameWithType> 属性显式设置与线程关联的区域性，则当线程跨越应用程序域边界时，它将继续与该线程关联。 否则，在任何给定时间内与线程关联的区域性将由线程执行所在的应用程序域中的 <xref:System.Globalization.CultureInfo.DefaultThreadCurrentCulture%2A?displayProperty=nameWithType> 属性的值确定：  
   
 -   如果该属性的值不是 `null`，则由该属性返回的区域性与线程（并因此由 <xref:System.Threading.Thread.CurrentCulture%2A?displayProperty=nameWithType> 和 <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType> 属性返回）关联。  
   
 -   如果该属性的值为 `null`，则当前系统区域性与线程关联。  
   
-## <a name="programming-with-application-domains"></a>对应用程序域进行编程  
+## <a name="programming-with-application-domains"></a>对应用程序域进行编程
+
  应用程序域通常由运行时宿主以编程的方式来创建和操作。 但是，有时应用程序还可能要和应用程序域结合起来使用。 例如，应用程序可能将应用程序组件加载到域中以便能够在不停止整个应用程序的情况下卸载域（以及该组件）。  
   
  <xref:System.AppDomain> 是应用程序域的程序设计界面。 此类包括各种方法，这些方法可以创建和卸载域、创建域中各类型的实例以及注册各种通知（如应用程序域卸载）。 下表列出了常用的 <xref:System.AppDomain> 方法。  
@@ -126,7 +122,8 @@ ms.locfileid: "45698310"
   
  公共语言运行时承载接口规范中介绍的非托管接口也提供对应用程序域的访问。 运行时宿主可以使用非托管代码的接口在进程内创建应用程序域和获取对这些应用程序域的访问。  
   
-## <a name="complusloaderoptimization-environment-variable"></a>COMPLUS_LoaderOptimization 环境变量  
+## <a name="the-complusloaderoptimization-environment-variable"></a>COMPLUS_LoaderOptimization 环境变量
+
  用于设置可执行应用程序的默认加载程序优化策略的环境变量。  
   
 ### <a name="syntax"></a>语法  
@@ -135,7 +132,8 @@ ms.locfileid: "45698310"
 COMPLUS_LoaderOptimization = 1  
 ```  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>备注
+
  典型应用程序必须先将几个程序集加载到一个应用程序域中，然后才能执行其所包含的代码。  
   
  程序集的加载方式决定了其实时 (JIT) 编译的代码是否可由进程中的多个应用程序域共享。  
@@ -149,7 +147,8 @@ COMPLUS_LoaderOptimization = 1
 > [!CAUTION]
 >  COMPLUS_LoaderOptimization 环境标志旨在用于诊断和测试方案。 启用该标志会导致速度严重减慢，并会增加内存使用率。  
   
-### <a name="code-example"></a>代码示例  
+### <a name="code-example"></a>代码示例
+
  可通过将 `COMPLUS_LoaderOptimization=1` 追加到 HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\services\IISADMIN 键中环境的多字符串值中，来强制所有程序集不以 IISADMIN 服务的非特定于域的形式加载。  
   
 ```  
@@ -159,6 +158,9 @@ Type = REG_MULTI_SZ
 Value (to append) = COMPLUS_LoaderOptimization=1  
 ```  
   
-<a name="reference"></a>   
-## <a name="reference"></a>参考  
- <xref:System.MarshalByRefObject?displayProperty=nameWithType>
+## <a name="see-also"></a>请参阅
+
+- <xref:System.AppDomain?displayProperty=nameWithType>
+- <xref:System.MarshalByRefObject?displayProperty=nameWithType>
+- [使用应用程序域和程序集进行编程](index.md)
+- [使用应用程序域](use.md)

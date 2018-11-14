@@ -5,12 +5,12 @@ author: bleroy
 ms.author: mairaw
 ms.date: 11/16/2016
 ms.custom: vs-dotnet
-ms.openlocfilehash: 15537ea8c68b5c873bbf26ab0519a19de0b13230
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: b3e466511fcae447f5bb54b83f13b25bc90c6539
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45969556"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50185074"
 ---
 # <a name="building-a-complete-net-core-solution-on-windows-using-visual-studio-2017"></a>在 Windows 上，使用 Visual Studio 2017 生成完整的 .NET Core 解决方案
 
@@ -24,7 +24,7 @@ Visual Studio 2017 提供用于开发 .NET Core 应用程序的功能全面的�
 
 ### <a name="writing-the-library"></a>编写库
 
-1. 在 Visual Studio 中，依次选择 **“文件”**、 **“新建”**、 **“项目”**。 在“新建项目”对话框中，展开“Visual C#”节点并选择“.NET Standard”节点，然后选择“类库(.NET Standard)”。 
+1. 在 Visual Studio 中，依次选择 **“文件”**、 **“新建”**、 **“项目”**。 在“新建项目”对话框中，展开“Visual C#”节点并选择“.NET Standard”节点，然后选择“类库(.NET Standard)”。 这将创建一个 .NET Standard 库，该库面向 .NET Core 及支持 [.NET Standard](../../standard/net-standard.md) 版本 2.0 的任何其他 .NET 实现。
 
 2. 将项目命名为“Library”，将解决方案命名为“Golden”。 保持选中“为解决方案创建目录”。 单击 **“确定”**。
 

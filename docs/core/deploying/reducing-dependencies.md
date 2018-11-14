@@ -4,12 +4,12 @@ description: 创建基于 project.json 的库时减少包依赖项。
 author: cartermp
 ms.author: mairaw
 ms.date: 06/20/2016
-ms.openlocfilehash: ae314800f789cee363728def8347b5e6990acb0b
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 6da7404415e8d485533fc1c9a619cb0706a26aca
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44193598"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50040876"
 ---
 # <a name="reducing-package-dependencies-with-projectjson"></a>使用 project.json 减少包依赖项
 
@@ -36,7 +36,7 @@ ms.locfileid: "44193598"
 可以通过下面其中一种方式查找不需要的包：
 
 1. 试用和错误。  这包括删除包、还原以及查看库是否仍在编译，并重复此过程。
-2. 使用如 [ILSpy](http://ilspy.net) 或 [.NET Reflector](http://www.red-gate.com/products/dotnet-development/reflector) 等工具快速浏览引用，以查看代码实际使用的内容。  然后，可以删除与正在使用的类型不相对应的包。
+2. 使用如 [ILSpy](https://github.com/icsharpcode/ILSpy#ilspy-------) 或 [.NET Reflector](https://www.red-gate.com/products/dotnet-development/reflector) 等工具快速浏览引用，以查看代码实际使用的内容。  然后，可以删除与正在使用的类型不相对应的包。
 
 ## <a name="example"></a>示例 
 
@@ -127,7 +127,7 @@ ms.locfileid: "44193598"
 }
 ```
 
-这里有相当多的包，其中的许多包对于扩展集合类型来说不是必需的。  可以手动删除包，或者可以使用如 [ILSpy](http://ilspy.net) 或 [.NET Reflector](http://www.red-gate.com/products/dotnet-development/reflector) 等工具来确定代码实际使用的包。
+这里有相当多的包，其中的许多包对于扩展集合类型来说不是必需的。  可以手动删除包，或者可以使用如 [ILSpy](https://github.com/icsharpcode/ILSpy#ilspy-------) 或 [.NET Reflector](https://www.red-gate.com/products/dotnet-development/reflector/) 等工具来确定代码实际使用的包。
 
 修剪后的包可能如下所示：
 

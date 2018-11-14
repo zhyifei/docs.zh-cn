@@ -2,13 +2,12 @@
 title: '&lt;secureConversationBootstrap&gt;'
 ms.date: 03/30/2017
 ms.assetid: 66b46f95-fa2d-4b5b-b6ce-0572ab0cdd50
-author: BrucePerlerMS
-ms.openlocfilehash: 703e89342cbfd4a957c10419d6583e85ec6f6d2a
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: a1b739ac8af87340a693d88bac0a379f0c3a447a
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48837450"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50197764"
 ---
 # <a name="ltsecureconversationbootstrapgt"></a>&lt;secureConversationBootstrap&gt;
 指定用于启动安全对话服务的默认值。  

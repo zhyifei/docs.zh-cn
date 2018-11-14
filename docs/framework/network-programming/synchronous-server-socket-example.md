@@ -9,14 +9,12 @@ helpviewer_keywords:
 - sockets, code examples
 - sockets, synchronous server sockets
 ms.assetid: 5916c764-879f-4716-99fb-1d21c6237f1c
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: 2edfeb85ee21b5d398938bc9500f463cd78a6c07
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 51fe16b3e0859a9ab39dcd34a55e51bd4bcad86d
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47198990"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50201985"
 ---
 # <a name="synchronous-server-socket-example"></a>同步服务器套接字示例
 以下示例程序创建从客户端接收连接请求的服务器。 服务器使用同步套接字构建，因此在等待客户端的连接时，暂停执行服务器应用程序。 应用程序从客户端接收字符串，在控制台上显示此字符串，然后将此字符串回显给客户端。 来自客户端的字符串必须包含字符串“\<EOF>”以在消息结束时发出信号。  

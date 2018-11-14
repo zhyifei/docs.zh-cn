@@ -2,13 +2,12 @@
 title: System.ServiceModel.Security.SecurityIdentityDeterminationSuccess
 ms.date: 03/30/2017
 ms.assetid: cee8df47-b568-44e3-aeff-e74618326093
-author: BrucePerlerMS
-ms.openlocfilehash: e9a7868784314fbc5a8ed892e1b08dbcec2b6300
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 7a5c3b0d01676cd01ca4f890c5bed21c161c98b7
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47198171"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50196708"
 ---
 # <a name="systemservicemodelsecuritysecurityidentitydeterminationsuccess"></a>System.ServiceModel.Security.SecurityIdentityDeterminationSuccess
 System.ServiceModel.Security.SecurityIdentityDeterminationSuccess  

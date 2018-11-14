@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7cdf34ff6ae506ba209300685da3752820b250a2
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 98ef688c1136a81a5b57c3fdfee73c53024186e7
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43516745"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50191031"
 ---
 # <a name="putmethod-function"></a>PutMethod 函数
 创建方法。
@@ -53,7 +53,7 @@ HRESULT PutMethod (
 [in]若要创建的方法的名称。 
 
 `lFlags`  
-[in]保留。 此参数必须为 0。
+[in] 保留。 此参数必须为 0。
 
 `pSignatureIn`  
 [in]指向一份[__Parameters 系统类](/windows/desktop/WmiSdk/--parameters)，其中包含`in`方法的参数。 如果忽略此参数设置为`null`。  
@@ -80,11 +80,11 @@ HRESULT PutMethod (
 
 此函数包装对的调用[IWbemClassObject::PutMethod](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-putmethod)方法。
 
-当此方法调用时才支持`ptr`是 CIM 类定义。 方法操作不能从[IWbemClassObject](https://msdn.microsoft.com/library/aa391433%28v=vs.85%29.aspx?f=255&MSPPError=-2147217396)指向 CIM 实例的指针。
+当此方法调用时才支持`ptr`是 CIM 类定义。 方法操作不能从[IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject)指向 CIM 实例的指针。
 
 用户无法创建方法名称的开头或下划线结尾。 这被保留给系统类和属性。
 
-对于方法，请`in`并`out`参数为中的属性，请参见[IWbemClassObject](https://msdn.microsoft.com/library/aa391433%28v=vs.85%29.aspx?f=255&MSPPError=-2147217396)对象。
+对于方法，请`in`并`out`参数为中的属性，请参见[IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject)对象。
 
 `[in/out]`参数可通过将相同属性添加到指向这两个对象定义`pInSignature`和`pOutSignature`参数。 在这种情况下，属性共用同一个**ID**限定符的值。
 

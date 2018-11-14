@@ -21,14 +21,12 @@ helpviewer_keywords:
 - I literal type character [Visual Basic]
 - Integer data type
 ms.assetid: a8f233b4-4be3-455c-861b-05af2fbb6c60
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: dc780cc845bfa6ef52fc9973ef3617d621167af1
-ms.sourcegitcommit: daa8788af67ac2d1cecd24f9f3409babb2f978c9
+ms.openlocfilehash: 8c349104ed566e9a663afe01da3838f0167dc74e
+ms.sourcegitcommit: 296183dbe35077b5c5e5e74d5fbe7f399bc507ee
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "44177518"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "50982758"
 ---
 # <a name="integer-data-type-visual-basic"></a>整数数据类型 (Visual Basic)
 保存 32 位（4 字节）带符号整数，值的范围为 -2,147,483,648 到 2,147,483,647。  
@@ -61,7 +59,7 @@ Dim number As Integer = &H_C305_F860
 
 [!INCLUDE [supporting-underscores](../../../../includes/vb-separator-langversion.md)]
 
-此外可以包含数值`I`[键入字符](../../programming-guide\language-features\data-types/type-characters.md)来表示`Integer`数据类型，如以下示例所示。
+此外可以包含数值`I`[键入字符](../../programming-guide/language-features/data-types/type-characters.md)来表示`Integer`数据类型，如以下示例所示。
 
 ```vb
 Dim number = &H_035826I
@@ -69,7 +67,7 @@ Dim number = &H_035826I
 
 ## <a name="programming-tips"></a>编程提示
 
--   **互操作注意事项。** 如果你不是为.NET Framework 中，如自动化或 COM 对象编写的组件与交互记住`Integer`在其他环境中具有不同的数据宽度 （16 位）。 如果将一个 16 位参数传递给此类组件，请在新的 Visual Basic 代码中将其声明为 `Short` 而不是 `Integer`。  
+-   **互操作注意事项。** 如果你不是为.NET Framework 中，如自动化或 COM 对象编写的组件与交互记住`Integer`在其他环境中具有不同的数据宽度 （16 位）。 如果将一个 16 位自变量传递给此类组件，请在新的 Visual Basic 代码中将其声明为 `Short` 而不是 `Integer`。  
   
 -   **扩大转换。** `Integer` 数据类型加宽到 `Long`、`Decimal`、`Single` 或 `Double`。 这意味着，你可以将 `Integer` 转换为这些类型中的任意类型，而不会遇到 <xref:System.OverflowException?displayProperty=nameWithType> 错误。  
   

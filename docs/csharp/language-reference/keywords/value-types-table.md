@@ -6,12 +6,12 @@ helpviewer_keywords:
 - types [C#], value types
 - types [C#], suffixes
 ms.assetid: 67d8f631-b6e3-4d83-9910-5ec497f8c5f3
-ms.openlocfilehash: bc7143b9f006af20b0bb91203d3093410d4ac0bf
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: aa37e2237ca0cffe7ff2e64aa53739b6ffafd24a
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45609718"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50182744"
 ---
 # <a name="value-types-table-c-reference"></a>值类型表（C# 参考）
 
@@ -43,9 +43,9 @@ ms.locfileid: "45609718"
 decimal a = 0.1M;
 ```
 
-如果[整数数值型字面量](/dotnet/csharp/language-reference/language-specification/lexical-structure#integer-literals)没有后缀，则它具有以下类型中的第一个类型，其值可以通过这种类型表示：`int`、`uint`、`long`、`ulong`。
+如果[整数数值型字面量](~/_csharplang/spec/lexical-structure.md#integer-literals)没有后缀，则它具有以下类型中的第一个类型，其值可以通过这种类型表示：`int`、`uint`、`long`、`ulong`。
 
-如果[实际数值字面量](/dotnet/csharp/language-reference/language-specification/lexical-structure#real-literals)没有后缀，则其类型为 `double`。
+如果[实际数值字面量](~/_csharplang/spec/lexical-structure.md#real-literals)没有后缀，则其类型为 `double`。
 
 ## <a name="see-also"></a>请参阅
 

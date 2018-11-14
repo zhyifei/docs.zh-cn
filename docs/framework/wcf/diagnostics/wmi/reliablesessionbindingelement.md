@@ -2,19 +2,19 @@
 title: ReliableSessionBindingElement
 ms.date: 03/30/2017
 ms.assetid: effda125-b8d3-4de6-8c0e-f59f5ea8f6eb
-ms.openlocfilehash: 2f04e6794342d7bd0acd51481efcbeceb04fd459
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2e2e36486c3788cd714ffd0ed545fbb14f831476
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33486631"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50197036"
 ---
 # <a name="reliablesessionbindingelement"></a>ReliableSessionBindingElement
 ReliableSessionBindingElement  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```csharp
 class ReliableSessionBindingElement : BindingElement  
 {  
   datetime AcknowledgementInterval;  

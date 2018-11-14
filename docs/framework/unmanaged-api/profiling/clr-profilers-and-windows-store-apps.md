@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 1c8eb2e7-f20a-42f9-a795-71503486a0f5
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 27e1433415bdc6303555ab9ae04a20e097248535
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.openlocfilehash: e4dedc6b527706fc9f22add903feb30ad2884eab
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "46937613"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50188815"
 ---
 # <a name="clr-profilers-and-windows-store-apps"></a>CLR 探查器和 Windows 应用商店应用程序
 
@@ -100,7 +100,7 @@ Profiler UI 可能会导致你 Profiler DLL 被加载到应用程序的进程空
 
 - 请确保您 Profiler 的 DLL 进行签名。
 
-- 告诉您的用户，他们必须安装开发人员许可证在其 Windows 8 计算机上使用所需的工具之前。 这可以从 Visual Studio 或手动从命令提示符处自动完成。 有关详细信息，请参阅[获取开发人员许可证](https://msdn.microsoft.com/library/windows/apps/Hh974578.aspx)。
+- 告诉您的用户，他们必须安装开发人员许可证在其 Windows 8 计算机上使用所需的工具之前。 这可以从 Visual Studio 或手动从命令提示符处自动完成。 有关详细信息，请参阅[获取开发人员许可证](https://docs.microsoft.com/previous-versions/windows/apps/hh974578(v=win.10))。
 
 **文件系统权限**
 
@@ -124,7 +124,7 @@ NET Runtime version 4.0.30319.17929 - Loading profiler failed during CoCreateIns
 
 首先，你将想要让探查器用户启动的 Windows 应用商店应用程序。 对于桌面应用，可能会显示文件浏览对话框中，然后用户会查找并选择.exe 文件。 但 Windows 应用商店应用程序是不同的并使用一个浏览对话框没有任何意义。 相反，它是更好地向用户显示的 Windows 应用商店应用程序已安装了该用户就可以从选择列表。
 
-可以使用[PackageManager 类](https://msdn.microsoft.com/library/windows/apps/windows.management.deployment.packagemanager.aspx)生成此列表。 `PackageManager` 适用于桌面应用的 Windows 运行时类，实际上它是*仅*适用于桌面应用。
+可以使用<xref:Windows.Management.Deployment.PackageManager>类来生成此列表。 `PackageManager` 适用于桌面应用的 Windows 运行时类，实际上它是*仅*适用于桌面应用。
 
 下面的代码示例从编写为桌面应用程序在 C# yses 假设 Profiler UI`PackageManager`生成 Windows 应用的列表：
 
@@ -137,7 +137,7 @@ IEnumerable<Package> packages = packageManager.FindPackagesForUser(currentUserSI
 
 **指定的自定义的环境块**
 
-新的 COM 接口， [IPackageDebugSettings](https://msdn.microsoft.com/library/hh438393\(v=vs.85\).aspx)，可用于自定义为了简化某些形式的诊断的 Windows 应用商店应用的执行行为。 其方法之一[EnableDebugging](https://msdn.microsoft.com/library/hh438395\(v=vs.85\).aspx)，可以将环境块传递给 Windows 应用商店应用程序时它已启动，以及其他有用的效果，例如禁用自动进程挂起。 环境块很重要，因为这是您需要指定环境变量 (`COR_PROFILER`， `COR_ENABLE_PROFILING`，和`COR_PROFILER_PATH)`) 使用 CLR 加载 Profiler DLL。
+新的 COM 接口， [IPackageDebugSettings](/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ipackagedebugsettings)，可用于自定义为了简化某些形式的诊断的 Windows 应用商店应用的执行行为。 其方法之一[EnableDebugging](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-ipackagedebugsettings-enabledebugging)，可以将环境块传递给 Windows 应用商店应用程序时它已启动，以及其他有用的效果，例如禁用自动进程挂起。 环境块很重要，因为这是您需要指定环境变量 (`COR_PROFILER`， `COR_ENABLE_PROFILING`，和`COR_PROFILER_PATH)`) 使用 CLR 加载 Profiler DLL。
 
 请思考以下代码片段：
 
@@ -221,7 +221,7 @@ appActivationMgr.ActivateApplication(appUserModelId, appArgs, ACTIVATEOPTIONS.AO
 
 **请记住要调用 DisableDebugging**
 
-当调用[IPackageDebugSettings::EnableDebugging](https://msdn.microsoft.com/library/hh438395\(v=VS.85\).aspx)，所做的承诺，您将清理后自行通过调用[IPackageDebugSettings::DisableDebugging](https://msdn.microsoft.com/library/hh438394\(v=vs.85\).aspx)方法，因此请确保执行操作分析会话时通过。
+当调用[IPackageDebugSettings::EnableDebugging](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-ipackagedebugsettings-enabledebugging)，所做的承诺，您将清理后自行通过调用[IPackageDebugSettings::DisableDebugging](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-ipackagedebugsettings-disabledebugging)方法，因此请确保执行操作分析会话时通过。
 
 ### <a name="attach-load"></a>附加负载
 
@@ -229,7 +229,7 @@ appActivationMgr.ActivateApplication(appUserModelId, appArgs, ACTIVATEOPTIONS.AO
 
 **EnableDebugging**
 
-通过启动负载，如调用[IPackageDebugSettings::EnableDebugging](https://msdn.microsoft.com/library/hh438395\(v=VS.85\).aspx)方法。 您不需要它传递的环境块，但您需要其他功能之一： 禁用自动进程挂起。 否则为当 Profiler UI 调用[AttachProfiler](iclrprofiling-attachprofiler-method.md)，目标 Windows 应用商店应用程序可能会挂起。 实际上，这可能是如果用户现在使用 Profiler UI，进行交互，并且 Windows 应用商店应用程序未在任何用户的屏幕上处于活动状态。 如果应用已挂起 Windows 应用商店，它也不能以响应任何发出信号，CLR 会向它发送附加 Profiler DLL。
+通过启动负载，如调用[IPackageDebugSettings::EnableDebugging](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-ipackagedebugsettings-enabledebugging)方法。 您不需要它传递的环境块，但您需要其他功能之一： 禁用自动进程挂起。 否则为当 Profiler UI 调用[AttachProfiler](iclrprofiling-attachprofiler-method.md)，目标 Windows 应用商店应用程序可能会挂起。 实际上，这可能是如果用户现在使用 Profiler UI，进行交互，并且 Windows 应用商店应用程序未在任何用户的屏幕上处于活动状态。 如果应用已挂起 Windows 应用商店，它也不能以响应任何发出信号，CLR 会向它发送附加 Profiler DLL。
 
 因此您会希望执行如下操作：
 
@@ -243,7 +243,7 @@ pkgDebugSettings.EnableDebugging(packgeFullName, null /* debuggerCommandLine */,
 
 **DisableDebugging**
 
-与往常一样，不要忘记调用[IPackageDebugSettings::DisableDebugging](https://msdn.microsoft.com/library/hh438394\(v=vs.85\).aspx)完成分析会话的。
+与往常一样，不要忘记调用[IPackageDebugSettings::DisableDebugging](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-ipackagedebugsettings-disabledebugging)完成分析会话的。
 
 ## <a name="running-inside-the-windows-store-app"></a>在 Windows 应用商店应用程序内部运行
 
@@ -273,7 +273,7 @@ pkgDebugSettings.EnableDebugging(packgeFullName, null /* debuggerCommandLine */,
 
 ### <a name="reduced-permissions"></a>降低的权限
 
-它位于本主题列出 Windows 应用商店应用程序权限不同于桌面应用程序的所有方式的范围之外。 但当然行为将每次尝试访问的任何资源 Profiler DLL （时加载到与桌面应用程序相比的 Windows 应用商店应用） 时不同。 文件系统是最常见的例子。 存在但在给定的 Windows 应用商店应用程序有权访问的磁盘上放置几个 (请参阅[文件的访问和权限 (Windows 运行时应用](https://msdn.microsoft.com/library/windows/apps/hh967755.aspx))，并且您 Profiler 的 DLL 将相同的限制。 进行全面测试您的代码。
+它位于本主题列出 Windows 应用商店应用程序权限不同于桌面应用程序的所有方式的范围之外。 但当然行为将每次尝试访问的任何资源 Profiler DLL （时加载到与桌面应用程序相比的 Windows 应用商店应用） 时不同。 文件系统是最常见的例子。 存在但在给定的 Windows 应用商店应用程序有权访问的磁盘上放置几个 (请参阅[文件的访问和权限 (Windows 运行时应用](https://docs.microsoft.com/previous-versions/windows/apps/hh967755(v=win.10)))，并且您 Profiler 的 DLL 将相同的限制。 进行全面测试您的代码。
 
 ### <a name="inter-process-communication"></a>进程间通信
 
@@ -298,7 +298,7 @@ ApplicationData appData =
 tempDir = appData.TemporaryFolder.Path;
 ```
 
-同时，Profiler DLL 可以执行基本上是相同的操作，但它可以更多轻松地访问[ApplicationData](https://msdn.microsoft.com/library/windows/apps/windows.storage.applicationdata.aspx)通过使用类[ApplicationData.Current](https://msdn.microsoft.com/library/windows/apps/windows.storage.applicationdata.current.aspx)属性。
+同时，Profiler DLL 可以执行基本上是相同的操作，但它可以更多轻松地访问<xref:Windows.Storage.ApplicationData>通过使用类[ApplicationData.Current](xref:Windows.Storage.ApplicationData.Current%2A)属性。
 
 **通过事件进行通信**
 
@@ -412,8 +412,8 @@ Profiler DLL 时执行操作的内存分析，通常创建一个单独的线程�
 
 **Windows 应用商店应用**
 
-- [文件访问和权限 （Windows 运行时应用](https://msdn.microsoft.com/library/windows/apps/hh967755.aspx)
+- [文件访问和权限 （Windows 运行时应用](https://docs.microsoft.com/previous-versions/windows/apps/hh967755%28v=win.10%29)
 
-- [获取开发人员许可证](https://msdn.microsoft.com/library/windows/apps/Hh974578.aspx)
+- [获取开发人员许可证](https://docs.microsoft.com/previous-versions/windows/apps/hh974578%28v=win.10%29)
 
-- [IPackageDebugSettings 接口](https://msdn.microsoft.com/library/hh438393\(v=vs.85\).aspx)
+- [IPackageDebugSettings 接口](/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ipackagedebugsettings)

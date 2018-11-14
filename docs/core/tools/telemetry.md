@@ -4,12 +4,12 @@ description: 了解可收集使用情况信息以供分析的 .NET Core SDK 遥�
 author: richlander
 ms.author: mairaw
 ms.date: 06/20/2018
-ms.openlocfilehash: b60fc9d9d619334269343fd858a782cdfeb09ba4
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: a20d79e132726cb342064b681218ee568fab2c13
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43513335"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48841597"
 ---
 # <a name="net-core-sdk-telemetry"></a>.NET Core SDK 遥测
 
@@ -106,7 +106,7 @@ ms.locfileid: "43513335"
 
 [.NET NuGet 包](https://www.nuget.org/profiles/dotnetframework)使用相同许可证，但不启用遥测（见[范围](#scope)）。
 
-> 2. DATA。 此软件可能会收集并向 Microsoft 发送你的信息和软件使用信息。 Microsoft 可能会使用此类信息来改进我们的产品和服务。 可以参阅帮助文档和隐私声明 http://go.microsoft.com/fwlink/?LinkId=528096 ，详细了解数据收集和使用。 使用此软件即表示同意接受这些做法。
+> 2. DATA。 此软件可能会收集并向 Microsoft 发送你的信息和软件使用信息。 Microsoft 可能会使用此类信息来改进我们的产品和服务。 可以参阅帮助文档和隐私声明 <http://go.microsoft.com/fwlink/?LinkId=528096> ，详细了解数据收集和使用。 使用此软件即表示同意接受这些做法。
 
 ## <a name="disclosure"></a>公开
 

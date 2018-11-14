@@ -5,12 +5,12 @@ helpviewer_keywords:
 - fixed size buffers [C#]
 - unsafe buffers [C#]
 - unsafe code [C#], fixed size buffers
-ms.openlocfilehash: 0691c33b551e39b2384950cfcd0be6e8a3a29cee
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 134a219acd02caa2b16c5a6e8716c3245579ecca
+ms.sourcegitcommit: 5fd80619c760fa8c25d33a6f5661247cb65da465
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43506896"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "50743997"
 ---
 # <a name="fixed-size-buffers-c-programming-guide"></a>固定大小的缓冲区（C# 编程指南）
 
@@ -34,7 +34,7 @@ private fixed char name[30];
 
 包含 128 个元素的 `char` 数组的大小为 256 个字节。 固定大小的 [char](../../language-reference/keywords/char.md) 缓冲区每个字符始终占用两个字节，而不考虑编码。 甚至在将 char 缓冲区封送到 API 方法或具有 `CharSet = CharSet.Auto` 或 `CharSet = CharSet.Ansi` 的结构时，这也为 true。 有关更多信息，请参见<xref:System.Runtime.InteropServices.CharSet>。
 
-前面的示例演示访问未固定的 `fixed` 字段，此功能从 C# 7.3 开始提供...
+前面的示例演示访问未固定的 `fixed` 字段，此功能从 C# 7.3 开始提供。
 
 另一常见的固定大小的数组是 [bool](../../language-reference/keywords/bool.md) 数组。 `bool` 数组中的元素大小始终为一个字节。 `bool` 数组不适用于创建位数组或缓冲区。
 

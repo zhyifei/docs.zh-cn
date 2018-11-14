@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 261c5583-8a76-412d-bda7-9b8ee3b131e5
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 916db7ec9bee0c85db1f2fcf4db7a9f8a61f9be3
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 3072be4e870b64edcea32bb7159db8c64c50d840
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32744078"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50183095"
 ---
 # <a name="how-to-build-a-multifile-assembly"></a>如何：生成多文件程序集
 本文章介绍如何创建多文件程序集，并提供用于说明过程中每个步骤的代码。  
@@ -97,7 +97,7 @@ ms.locfileid: "32744078"
      可以使用 [MSIL 反汇编程序 (Ildasm.exe)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md) 来检查程序集的内容，或者确定文件是程序集还是模块。  
   
 ## <a name="see-also"></a>请参阅  
- [创建程序集](../../../docs/framework/app-domains/create-assemblies.md)  
- [如何：查看程序集内容](../../../docs/framework/app-domains/how-to-view-assembly-contents.md)  
- [运行时如何定位程序集](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)  
- [多文件程序集](../../../docs/framework/app-domains/multifile-assemblies.md)
+- [创建程序集](../../../docs/framework/app-domains/create-assemblies.md)  
+- [如何：查看程序集内容](../../../docs/framework/app-domains/how-to-view-assembly-contents.md)  
+- [运行时如何定位程序集](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)  
+- [多文件程序集](../../../docs/framework/app-domains/multifile-assemblies.md)

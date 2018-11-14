@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 49b787ff-2741-4836-ad51-c3017dc592d4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: baa66f11404e2cee83b4d4b32ba02544c9438d7f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7dab1474454f8169d8d0d80413c6fb95677fb4bf
+ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33392502"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49453382"
 ---
 # <a name="attributed-programming-model-overview-mef"></a>特性化编程模型概述 (MEF)
 在 Managed Extensibility Framework (MEF) 中， *编程模型* 是定义 MEF 所操作的概念性对象集的特定方法。 这些概念对象包括部件、导入和导出。 MEF 使用这些对象，但未指定应如何表示这些对象。 因此，将可能有各种各样的编程模型，其中包括自定义编程模型。  
@@ -144,7 +144,7 @@ End Class
 public class MyAddin  
 {  
     //Explicitly specifying a generic type.  
-    [Export(typeof(Func<int, string>)]  
+    [Export(typeof(Func<int, string>))]  
     public string DoSomething(int TheParam);  
 }  
 ```  
@@ -957,5 +957,5 @@ public class PartSeven
  `IPartImportsSatisfiedNotification` 包含一个名为 `OnImportsSatisfied`的方法。 当组合已完成并且部件的导入可供使用时，组合窗口将对实现接口的任何部件调用此方法。 部件是组合引擎创建，用于满足其他部件的导入。 在设置好部件的导入之前，你无法执行任何依赖于部件构造函数中的导入值或对这些值进行操作的初始化，除非已通过使用 `ImportingConstructor` 特性将这些指定为必备。 此方法通常为首选方法，但在某些情况下，构造函数注入可能不可用。 在这些情况下，可以在 `OnImportsSatisfied`中执行初始化，并且部件应实现 `IPartImportsSatisfiedNotification`。  
   
 ## <a name="see-also"></a>请参阅  
- [第 9 频道视频：使用 Managed Extensibility Framework 打开应用程序](http://channel9.msdn.com/events/TechEd/NorthAmerica/2009/DTL328)  
- [第 9 频道视频：Managed Extensibility Framework (MEF) 2.0](http://channel9.msdn.com/posts/NET-45-Oleg-Lvovitch-and-Kevin-Ransom-Managed-Extensibility-Framework-MEF-20)
+ [第 9 频道视频：使用 Managed Extensibility Framework 打开应用程序](https://channel9.msdn.com/events/TechEd/NorthAmerica/2009/DTL328)  
+ [第 9 频道视频：Managed Extensibility Framework (MEF) 2.0](https://channel9.msdn.com/posts/NET-45-Oleg-Lvovitch-and-Kevin-Ransom-Managed-Extensibility-Framework-MEF-20)

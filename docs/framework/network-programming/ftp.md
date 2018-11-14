@@ -4,14 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - FTP
 ms.assetid: 9b43f8b4-89d7-46a7-89fc-71aca916dd32
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: 286ab6ad4742f3e31db8037e10e98d5890c6144d
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 0f35cb5c106d041a771d17a6e528cbbc1d38042b
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47200914"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50187668"
 ---
 # <a name="ftp"></a>FTP
 .NET Framework 通过 <xref:System.Net.FtpWebRequest> 和 <xref:System.Net.FtpWebResponse> 类为 FTP 协议提供全面支持。 这些类派生自 <xref:System.Net.WebRequest> 和 <xref:System.Net.WebResponse>。 大多数情况下，<xref:System.Net.WebRequest> 和 <xref:System.Net.WebResponse> 类提供发出请求所需的所有事项，但如果需要访问作为属性公开的 FTP 特定功能，可以将这两个类转换为 <xref:System.Net.FtpWebRequest> 或 <xref:System.Net.FtpWebResponse>。  

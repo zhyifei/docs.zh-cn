@@ -1,12 +1,12 @@
 ---
 title: 结构 (F#)
-description: '了解有关 F # 结构，紧凑对象类型通常比用于具有少量数据且行为简单类型的类更有效。'
+description: 了解有关 F# 结构，紧凑对象类型通常比用于具有少量数据且行为简单类型的类更有效。
 ms.date: 05/16/2016
 ms.openlocfilehash: 08af88132dda28883e246b94585ff4ed8bd2f16a
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/06/2018
+ms.lasthandoff: 11/02/2018
 ms.locfileid: "48845290"
 ---
 # <a name="structures"></a>结构
@@ -64,7 +64,7 @@ type S(count1: Span<int>, count2: Span<int>) =
 
 `IsByRefLike` 并不意味着`Struct`。 必须同时出现在类型上。
 
-一个"`byref`-例如"F # 中的结构是绑定堆栈的值类型。 它永远不会分配托管堆上。 一个`byref`-像结构可用于高效的编程中，因为它强制实施强检查有关生存期和非捕获组。 中的规则：
+一个"`byref`-例如"F# 中的结构是绑定堆栈的值类型。 它永远不会分配托管堆上。 一个`byref`-像结构可用于高效的编程中，因为它强制实施强检查有关生存期和非捕获组。 中的规则：
 
 * 它们可用作函数参数、 方法参数、 局部变量、 方法返回。
 * 它们不能是静态或实例的类或常规结构的成员。
@@ -86,7 +86,7 @@ type S(count1: int, count2: int) =
 
 `IsReadOnly` 并不意味着`Struct`。 你必须添加具有`IsReadOnly`结构。
 
-此属性的使用发出元数据让 F # 和 C# 知道会将其视为`inref<'T>`和`in ref`分别。
+此属性的使用发出元数据让 F# 和 C# 知道会将其视为`inref<'T>`和`in ref`分别。
 
 定义 readonly 结构内的可变值将产生错误。
 

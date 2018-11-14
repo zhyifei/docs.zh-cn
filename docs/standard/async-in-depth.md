@@ -6,12 +6,12 @@ ms.author: wiwagn
 ms.date: 06/20/2016
 ms.technology: dotnet-standard
 ms.assetid: 1e38f9d9-8f84-46ee-a15f-199aec4f2e34
-ms.openlocfilehash: 0c098d0697dff3e1e772c348597a84ac9d262104
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 393d755276e281e923dfe3e52b5d3e9afdae38dd
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44085311"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50183706"
 ---
 # <a name="async-in-depth"></a>深入了解异步
 
@@ -44,7 +44,7 @@ public Task<string> GetHtmlAsync()
     // Execution is synchronous here
     var client = new HttpClient();
     
-    return client.GetStringAsync("http://www.dotnetfoundation.org");
+    return client.GetStringAsync("https://www.dotnetfoundation.org");
 }
 ```
 
@@ -58,7 +58,7 @@ public async Task<string> GetFirstCharactersCountAsync(string url, int count)
     
     // Execution of GetFirstCharactersCountAsync() is yielded to the caller here
     // GetStringAsync returns a Task<string>, which is *awaited*
-    var page = await client.GetStringAsync("http://www.dotnetfoundation.org");
+    var page = await client.GetStringAsync("https://www.dotnetfoundation.org");
     
     // Execution resumes when the client.GetStringAsync task completes,
     // becoming synchronous again.
@@ -136,7 +136,7 @@ public async Task<int> CalculateResult(InputData data)
 }
 ```
 
-`CalculateResult()` 在调用它的线程上执行。  调用 `Task.Run` 时，它会在线程池上对昂贵的绑定 CPU 的操作 `DoExpensiveCalculation()` 进行排队，并收到一个 `Task<int>` 句柄。  `DoExpensiveCalculation()` 最终在下一个可用线程上并行运行（很可能在另一个 CPU 内核上）。  当 `DoExpensiveCalculation()` 在另一线程处理任务时，由于调用 `CalculateResult()` 的线程仍在执行，这时可能会出现并行工作的情况。
+`CalculateResult()` 在调用它的线程上执行。  调用 `Task.Run` 时，它会在线程池上对昂贵的绑定 CPU 的操作 `DoExpensiveCalculation()` 进行排队，并收到一个 `Task<int>` 句柄。  `DoExpensiveCalculation()` 最终在下一个可用线程上并行运行（很可能在另一个 CPU 内核上）。  当 `DoExpensiveCalculation()` 忙于处理另一线程时它可能进行并行工作，因为调用 `CalculateResult()` 的线程仍在执行。
 
 一旦遇到 `await`，`CalculateResult()` 执行会让步于调用方，在 `DoExpensiveCalculation()` 执行运算的同时，允许其他任务在当前线程执行。  `DoExpensiveCalculation()` 完成后，结果会在主线程上排队等待运行。  最后，主线程将返回执行得到 `DoExpensiveCalculation()` 结果的 `CalculateResult()`，。
 

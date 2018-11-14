@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 1e88d368-a886-4f1e-8eb6-6127979a9fce
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: aaf5103dfee366466ff701ce3669bbabb97233ac
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 9359d196ecdaa83d7f5f14c3570392d54691be73
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48037464"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50195627"
 ---
 # <a name="lttypegt-element-net-native"></a>&lt;Type&gt; 元素 (.NET Native)
 将运行时策略应用到一个特定类型，例如一个类或结构。  
@@ -95,10 +95,10 @@ ms.locfileid: "48037464"
   
  一个泛型类型的 `<Type>` 元素会将其策略应用到所有不具有自身策略的实例化。 构造泛型类型的策略是由 [\<TypeInstantiation>](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) 元素定义的。  
   
- 如果该类型是一个泛型类型，其名称包含一个重读音符 (\`)，后面还跟着其泛型参数的编号。 例如，<xref:System.Collections.Generic.List%601?displayProperty=nameWithType> 类的 `<Type>` 元素的 `Name` 属性显示为 `Name="System.Collections.Generic.List`1"`。  
+ 如果该类型是一个泛型类型，其名称包含一个重读音符 (\`)，后面还跟着其泛型参数的编号。 例如，`Name` 的 `<Type>` 元素 <xref:System.Collections.Generic.List%601?displayProperty=nameWithType> 特性为 ``Name="System.Collections.Generic.List`1"``。
   
 ## <a name="example"></a>示例  
- 以下实例使用反射来展示 <xref:System.Collections.Generic.List%601?displayProperty=nameWithType> 类的字段、属性和方法。 示例中的变量 `b` 是 [TextBlock](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.textblock.aspx) 控件。 因为实例仅仅检索了类型信息，元数据的可用性是由 `Browse` 策略设置控制的。  
+ 以下实例使用反射来展示 <xref:System.Collections.Generic.List%601?displayProperty=nameWithType> 类的字段、属性和方法。 在变量`b`在示例中是<xref:Windows.UI.Xaml.Controls.TextBlock>控件。 因为实例仅仅检索了类型信息，元数据的可用性是由 `Browse` 策略设置控制的。  
   
  [!code-csharp[ProjectN_Reflection#3](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn_reflection/cs/browsegenerictype1.cs#3)]  
   
@@ -116,7 +116,7 @@ ms.locfileid: "48037464"
 ```  
   
 ## <a name="example"></a>示例  
- 以下实例使用了反射来检索一个代表 <xref:System.Reflection.PropertyInfo> 属性的 <xref:System.String.Chars%2A?displayProperty=nameWithType> 对象。 它使用 <xref:System.Reflection.PropertyInfo.GetValue%28System.Object%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> 方法来检索一个字符串中的七个字符的值，并在该字符串中显示所有字符。 示例中的变量 `b` 是 [TextBlock](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.textblock.aspx) 控件。  
+ 以下实例使用了反射来检索一个代表 <xref:System.Reflection.PropertyInfo> 属性的 <xref:System.String.Chars%2A?displayProperty=nameWithType> 对象。 它使用 <xref:System.Reflection.PropertyInfo.GetValue%28System.Object%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> 方法来检索一个字符串中的七个字符的值，并在该字符串中显示所有字符。 在变量`b`在示例中是<xref:Windows.UI.Xaml.Controls.TextBlock>控件。  
   
  [!code-csharp[ProjectN_Reflection#1](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn_reflection/cs/propertyinfo1.cs#1)]  
   

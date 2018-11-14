@@ -3,12 +3,12 @@ title: C# 中的语言集成查询 (LINQ)
 description: 介绍了 C# 中的语言集成查询 (LINQ)。
 ms.date: 11/30/2016
 ms.assetid: 007cc736-f5cf-4919-b99b-0c00ab2814ce
-ms.openlocfilehash: 89630245a33c03851c7607b3b299eb7b9c477177
-ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
+ms.openlocfilehash: 18dafaf590697a3c9d669f346c956fd4df3378f0
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37404575"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50197376"
 ---
 # <a name="language-integrated-query-linq"></a>语言集成查询 (LINQ)
 
@@ -30,7 +30,7 @@ ms.locfileid: "37404575"
 
 - 只有在循环访问查询变量后，才会执行查询（例如，在 `foreach` 语句中）。 有关详细信息，请参阅 [LINQ 查询简介](../programming-guide/concepts/linq/introduction-to-linq-queries.md)。
 
-- 在编译时，查询表达式根据 C# 规范规则转换成标准查询运算符方法调用。 可使用查询语法表示的任何查询都可以使用方法语法进行表示。 不过，在大多数情况下，查询语法的可读性更高，也更为简洁。 有关详细信息，请参阅 [C# 语言规范](../language-reference/language-specification/index.md)和[标准查询运算符概述](../programming-guide/concepts/linq/standard-query-operators-overview.md)。
+- 在编译时，查询表达式根据 C# 规范规则转换成标准查询运算符方法调用。 可使用查询语法表示的任何查询都可以使用方法语法进行表示。 不过，在大多数情况下，查询语法的可读性更高，也更为简洁。 有关详细信息，请参阅 [C# 语言规范](~/_csharplang/spec/expressions.md#query-expressions)和[标准查询运算符概述](../programming-guide/concepts/linq/standard-query-operators-overview.md)。
 
 - 通常，我们建议在编写 LINQ 查询时尽量使用查询语法，并在必要时尽可能使用方法语法。 这两种不同的形式在语义或性能上毫无差异。 查询表达式通常比使用方法语法编写的等同表达式更具可读性。
 

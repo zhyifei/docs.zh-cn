@@ -3,12 +3,12 @@ title: 控制台应用程序
 description: 此教程将介绍 .NET Core 和 C# 语言的许多功能。
 ms.date: 03/06/2017
 ms.assetid: 883cd93d-50ce-4144-b7c9-2df28d9c11a0
-ms.openlocfilehash: da3f8f913d452b5c3c9dcda6079067c879a678dd
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.openlocfilehash: 9255ad9b1fefc828e767fb8e6ccc62b2eaf23fd6
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "46937587"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50183615"
 ---
 # <a name="console-application"></a>控制台应用程序
 
@@ -155,7 +155,7 @@ if (lineLength > 70)
 
 ## <a name="async-tasks"></a>异步任务
 
-最后一步将是添加代码，以便在一个任务中异步编写输出，同时运行另一任务来读取用户输入（如果用户想要加速或减速文本显示的话）。 此过程分为几步操作，最后将完成所需的全部更新。
+最后一步将是添加代码，以便在一个任务中异步编写输出，同时运行另一任务来读取用户输入（如果用户想要加快或减慢文本显示速度，或完全停止文本显示的话）。 此过程分为几步操作，最后将完成所需的全部更新。
 第一步是创建异步 <xref:System.Threading.Tasks.Task> 返回方法，用于表示已创建的用于读取和显示文件的代码。
 
 将以下方法（截取自 `Main` 方法主体）添加到 `Program` 类中：
@@ -190,7 +190,7 @@ ShowTeleprompter().Wait();
 > [!NOTE]
 > 如果使用 C# 7.1 或更高版本，则可以使用 [`async` `Main` 方法](../whats-new/csharp-7-1.md#async-main)创建控制台应用程序。
 
-接下来，需要编写第二个异步方法，从控制台读取键，并监视“<”（小于）和“>”（大于）键。 下面是为此任务添加的方法：
+接下来，需要编写第二个异步方法，从控制台读取键，并监视“<”（小于）、“>”（大于）和“X”或“x”键。 下面是为此任务添加的方法：
 
 ```csharp
 private static async Task GetInput()
@@ -208,13 +208,18 @@ private static async Task GetInput()
             {
                 delay += 10;
             }
+            else if (key.KeyChar == 'X' || key.KeyChar == 'x')
+            {
+                break;
+            }
         } while (true);
     };
     await Task.Run(work);
 }
 ```
 
-这创建了一个表示 <xref:System.Action> 委托的 lambda 表达式，用于在用户按“<”（小于）或“>”（大于）键时，从控制台读取键，并修改表示延迟的局部变量。 此方法使用 <xref:System.Console.ReadKey> 来阻止并等待用户按键。
+这创建了一个表示 <xref:System.Action> 委托的 lambda 表达式，用于在用户按“<”（小于）或“>”（大于）键时，从控制台读取键，并修改表示延迟的局部变量。 当用户按下“X”或“x”键时，委托方法结束，允许用户随时停止文本显示。
+此方法使用 <xref:System.Console.ReadKey> 来阻止并等待用户按键。
 
 若要完成这项功能，需要新建 `async Task` 返回方法，用于启动这两项任务（`GetInput` 和 `ShowTeleprompter`），并管理这两项任务之间共享的数据。
 

@@ -2,19 +2,19 @@
 title: MtomMessageEncodingBindingElement
 ms.date: 03/30/2017
 ms.assetid: 4a9c6c3d-e561-4b2d-a693-7e84bdd3534a
-ms.openlocfilehash: 83fa879fbef94e2dc9c142dfb92a51a54a7b60cb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 49a640a666131491366646d6d486d25a515e35bf
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33486518"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50185701"
 ---
 # <a name="mtommessageencodingbindingelement"></a>MtomMessageEncodingBindingElement
 MtomMessageEncodingBindingElement  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```csharp
 class MtomMessageEncodingBindingElement : MessageEncodingBindingElement  
 {  
   string Encoding;  

@@ -4,12 +4,12 @@ description: 适用于容器化 .NET 应用程序的 .NET 微服务体系结构 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 12/11/2017
-ms.openlocfilehash: 6cc5563f93915d1516e5a5f22a104012c1bb85d6
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.openlocfilehash: 5e53e0a3578c19b09f5327f444d1a5c013ad4cd9
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37106572"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50194067"
 ---
 # <a name="subscribing-to-events"></a>订阅事件
 
@@ -152,7 +152,7 @@ public async Task<IActionResult> UpdateProduct([FromBody]CatalogItem product)
 
 以下代码展示如何创建涉及多个 DbContext 对象的单一事务：一个上下文与要更新的原始数据相关，另一个上下文与 IntegrationEventLog 表相关。
 
-请注意，如果在代码运行时，数据库连接出现任何问题，以下示例代码中的事务将无法复原。 在可能跨服务器移动数据库的基于云的系统（例如 Azure SQL DB）中，可能会出现这种问题。 若要在多个上下文中实现可复原的事务，请参阅本指南后面的[实现可复原的 Entity Framework Core SQL 连接](#implementing_resilient_EFCore_SQL_conns)部分。
+请注意，如果在代码运行时，数据库连接出现任何问题，以下示例代码中的事务将无法复原。 在可能跨服务器移动数据库的基于云的系统（例如 Azure SQL DB）中，可能会出现这种问题。 若要在多个上下文中实现可复原的事务，请参阅本指南后面的[实现可复原的 Entity Framework Core SQL 连接](../implement-resilient-applications/implement-resilient-entity-framework-core-sql-connections.md)部分。
 
 为清楚起见，以下示例用一段单独的代码展示了整个过程。 不过，eShopOnContainers 实现实际上是重构的，并将此逻辑拆分成多个类，因此更容易维护。
 
@@ -183,7 +183,7 @@ public async Task<IActionResult> UpdateProduct([FromBody]CatalogItem productToUp
   catalogItem = productToUpdate; 
 
   // Just save the updated product if the Product's Price hasn't changed.
-  if !(raiseProductPriceChangedEvent) 
+  if (!raiseProductPriceChangedEvent) 
   {
       await _catalogContext.SaveChangesAsync();
   }
@@ -317,7 +317,7 @@ namespace Microsoft.eShopOnContainers.Services.Basket.API.IntegrationEvents.Even
 ### <a name="additional-resources"></a>其他资源
 
 -   **Forked eShopOnContainers using NServiceBus (Particular Software)**（使用 NServiceBus（特定软件）创建 eShopOnContainers 的分支）
-    [http://go.particular.net/eShopOnContainers](http://go.particular.net/eShopOnContainers)
+    [https://go.particular.net/eShopOnContainers](https://go.particular.net/eShopOnContainers)
 
 -   **Event Driven Messaging**（事件驱动的消息传递）
     [*http://soapatterns.org/design\_patterns/event\_driven\_messaging*](http://soapatterns.org/design_patterns/event_driven_messaging)
@@ -326,7 +326,7 @@ namespace Microsoft.eShopOnContainers.Services.Basket.API.IntegrationEvents.Even
     [https://jimmybogard.com/refactoring-towards-resilience-evaluating-coupling/](https://jimmybogard.com/refactoring-towards-resilience-evaluating-coupling/)
 
 -   **Publish-Subscribe channel**（发布-订阅通道）
-    [http://www.enterpriseintegrationpatterns.com/patterns/messaging/PublishSubscribeChannel.html](http://www.enterpriseintegrationpatterns.com/patterns/messaging/PublishSubscribeChannel.html)
+    [https://www.enterpriseintegrationpatterns.com/patterns/messaging/PublishSubscribeChannel.html](https://www.enterpriseintegrationpatterns.com/patterns/messaging/PublishSubscribeChannel.html)
 
 -   **绑定上下文之间的通信**
     [https://msdn.microsoft.com/library/jj591572.aspx](https://msdn.microsoft.com/library/jj591572.aspx)

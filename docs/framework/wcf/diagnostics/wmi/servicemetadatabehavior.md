@@ -2,19 +2,19 @@
 title: ServiceMetadataBehavior
 ms.date: 03/30/2017
 ms.assetid: 0f194476-72f1-467e-bdce-674306316e64
-ms.openlocfilehash: e96a732f8b3b4d78d597429905cc7dd290dcc606
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 19a04b6432f1ecc38a3b906b7e677175863134db
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33485995"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50188828"
 ---
 # <a name="servicemetadatabehavior"></a>ServiceMetadataBehavior
 ServiceMetadataBehavior  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```csharp
 class ServiceMetadataBehavior : Behavior  
 {  
   string ExternalMetadataLocation;  

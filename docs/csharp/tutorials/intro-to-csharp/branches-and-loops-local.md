@@ -1,24 +1,24 @@
 ---
-title: “分支和循环”教程 - C# 本地快速入门
-description: 在“分支和循环”本快速入门教程中，编写 C# 代码，以研究支持条件分支和循环重复执行语句的语言语法。
+title: 分支和循环 - C# 教程简介
+description: 在本教程的“分支和循环”中，将编写 C# 代码以研究支持条件分支和循环重复执行语句的语言语法。
 ms.date: 10/31/2017
 ms.custom: mvc
-ms.openlocfilehash: 4324e8b4704682f128e3122661fb6a0eddfe158b
-ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
+ms.openlocfilehash: 0997c0b4a8f450c0e5eadc9616457a1ab84e7d96
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34566132"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50186131"
 ---
-# <a name="branches-and-loops"></a>分支和循环
+# <a name="learn-conditional-logic-with-branch-and-loop-statements"></a>通过分支和循环语句了解条件逻辑
 
-本快速入门教程介绍了如何编写代码来检查变量，并根据这些变量更改执行路径。 读者可以编写 C# 代码并查看代码编译和运行结果。 本快速入门教程包含一系列课程，介绍了 C# 中的分支和循环构造。 这些课程介绍了 C# 语言的基础知识。
+本教程介绍了如何编写代码，从而检查变量，并根据这些变量更改执行路径。 读者可以编写 C# 代码并查看代码编译和运行结果。 本教程包含一系列课程，介绍了 C# 中的分支和循环构造。 这些课程介绍了 C# 语言的基础知识。
 
-若要学习本快速入门教程，必须有开发计算机。 .NET 主题 [10 分钟入门](https://www.microsoft.com/net/core)介绍了如何在 Mac、PC 或 Linux 上设置本地开发环境。 [本地快速入门教程简介](local-environment.md)不仅简要概述了将用到的命令，还收录了详细信息链接。
+本教程要求你有一台可用于开发的计算机。 .NET 主题 [10 分钟入门](https://www.microsoft.com/net/core)介绍了如何在 Mac、PC 或 Linux 上设置本地开发环境。 [熟悉开发工具](local-environment.md)不仅简要概述了将用到的命令，还收录了详细信息链接。
 
 ## <a name="make-decisions-using-the-if-statement"></a>使用 `if` 语句做出决定
 
-创建名为 branches-quickstart 的目录。 将新建的目录设为当前目录，并运行 `dotnet new console -n BranchesAndLoops -o .`。 此命令会在当前目录中创建一个新的 .NET Core 控制台应用程序。
+创建名为 branches-tutorial 的目录。 将新建的目录设为当前目录，并运行 `dotnet new console -n BranchesAndLoops -o .`。 此命令会在当前目录中创建一个新的 .NET Core 控制台应用程序。
 
 在常用编辑器中，打开 Program.cs，并将行 `Console.Writeline("Hello World!");` 替换为以下代码：
 
@@ -63,7 +63,7 @@ else
 
 > [!IMPORTANT]
 > `if` 和 `else` 语句下的缩进是为了方便读者阅读。
-> C# 语言忽略缩进或空格。 `if` 或 `else` 关键字后面的语句根据条件决定是否执行。 本快速入门教程中的所有示例都遵循了常见做法，根据语句的控制流缩进代码行。
+> C# 语言忽略缩进或空格。 `if` 或 `else` 关键字后面的语句根据条件决定是否执行。 本教程中的所有示例都遵循了常见做法，根据语句的控制流缩进代码行。
 
 由于缩进会被忽略，因此需要使用 `{` 和 `}`，指明要在根据条件决定是否执行的代码块中添加多个语句。 C# 程序员通常会对所有 `if` 和 `else` 子句使用这些大括号。 以下示例与刚刚创建的示例相同。 修改上面的代码以匹配下面的代码：
 
@@ -81,13 +81,13 @@ else
 ```
 
 > [!TIP]
-> 本快速入门教程其余部分的所有代码示例都遵循了公认做法，添加了大括号。
+> 在本教程的其余部分中，代码示例全都遵循公认做法，添加了大括号。
 
 可以测试更复杂的条件。 在 `Main` 方法中，在当前已编写的代码之后添加以下代码：
 
 ```csharp
-    int c = 4;
-    if ((a + b + c > 10) && (a > b))
+int c = 4;
+if ((a + b + c > 10) && (a > b))
 {
     Console.WriteLine("The answer is greater than 10");
     Console.WriteLine("And the first number is greater than the second");
@@ -246,13 +246,13 @@ for(int index = 0; index < 10; index++)
 
 亲自试一试吧。 然后，看看自己是怎么做到的。 你应获取的答案为 63。 通过[在 GitHub 上查看已完成的代码](https://github.com/dotnet/samples/tree/master/csharp/branches-quickstart/Program.cs#L46-L54)，你可以看到一个可能的答案。
 
-已完成“分支和循环”快速入门教程。
+已完成“分支和循环”教程。
 
-你可继续在自己的开发环境中学习[字符串内插](interpolated-strings-local.md)快速入门教程。
+你可继续在自己的开发环境中学习[字符串内插](interpolated-strings-local.md)教程。
 
 若要详细了解这些概念，请参阅下列主题：
 
-[If 和 else 语句](../language-reference/keywords/if-else.md)  
-[While 语句](../language-reference/keywords/while.md)  
-[Do 语句](../language-reference/keywords/do.md)  
-[For 语句](../language-reference/keywords/for.md)  
+[If 和 else 语句](../../language-reference/keywords/if-else.md)  
+[While 语句](../../language-reference/keywords/while.md)  
+[Do 语句](../../language-reference/keywords/do.md)  
+[For 语句](../../language-reference/keywords/for.md)  

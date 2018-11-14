@@ -3,11 +3,11 @@ title: 使用 XML 命名空间 (C#)
 ms.date: 07/20/2015
 ms.assetid: 05cf4dc7-7b25-40f0-abc9-1bc35de4b48a
 ms.openlocfilehash: 4863794408adbfb8b51c4f125ee340eb718a5abe
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47208855"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48841070"
 ---
 # <a name="working-with-xml-namespaces-c"></a>使用 XML 命名空间 (C#)
 本节中的主题描述 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 如何支持命名空间。  

@@ -9,14 +9,12 @@ helpviewer_keywords:
 - /define compiler option [Visual Basic]
 - define compiler option [Visual Basic]
 ms.assetid: f735c57d-1cf9-4f2f-a26f-0de630fd4077
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 4de37c58543aed9ed13be8b0d2bcec9830ca9082
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4cab6bc968275bc12af4365fd3da5e3b5ff417f2
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33656095"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50195172"
 ---
 # <a name="-define-visual-basic"></a>-定义 (Visual Basic)
 定义条件编译器常数。  
@@ -34,10 +32,10 @@ ms.locfileid: "33656095"
 |术语|定义|  
 |---|---|  
 |`symbol`|必需。 要定义的符号。|  
-|`value`|可选。 指派给 `symbol` 的值。 如果`value`是一个字符串，则必须由反斜杠/双引号序列括起来 (\\") 而不是引号引起来。 如果未指定值，则视为 True。|  
+|`value`|可选。 指派给 `symbol` 的值。 如果`value`是一个字符串，它必须用反斜杠/双引号序列 (\\") 而不是引号引起来。 如果未指定值，则视为 True。|  
   
 ## <a name="remarks"></a>备注  
- `-define`选项才起作用类似于使用`#Const`在源代码文件中，除使用定义的常数的预处理器指令`-define`是公共的并将应用到项目中的所有文件。  
+ `-define`选项才起作用类似于使用`#Const`预处理器指令在源代码文件中，除定义的常数`-define`是公共的并将应用到项目中的所有文件。  
   
  可以将由此选项创建的符号同 `#If`...`Then`...`#Else` 指令一起使用，以对源文件进行条件编译。  
   

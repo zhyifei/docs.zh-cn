@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 094d043e-33c4-40ba-a503-e0b20b55f4cf
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 47643dfa6eda67c93c54d19da41d705a78c27d8c
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 3f6ad77f93236b524e1cd22bf895312920ca4eec
+ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43484748"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49453471"
 ---
 # <a name="net-framework-deployment-guide-for-developers"></a>.NET Framework 部署指南（针对开发人员）
 本主题为想要随自己的应用一起安装任何 .NET Framework 版本（从 .NET Framework 4.5 到 [!INCLUDE[net_current](../../../includes/net-current-version.md)] ）的开发人员提供了相关信息。
@@ -51,13 +51,13 @@ ms.locfileid: "43484748"
 
 - 你必须拥有管理员特权才能安装 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 及其单点版本。
 
-- [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 和 [!INCLUDE[win8](../../../includes/win8-md.md)] 中已经包括 [!INCLUDE[winserver8](../../../includes/winserver8-md.md)]，因此你不必在这些操作系统上随你的应用一起部署此组件。 同样， [!INCLUDE[net_v451](../../../includes/net-v451-md.md)] 和 Windows Server 2012 R2 中也已包括 [!INCLUDE[win81](../../../includes/win81-md.md)] 。 .NET Framework 4.5.2 不包含在任何操作系统中。 [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] 包括在 Windows 10 中， [!INCLUDE[net_v461](../../../includes/net-v461-md.md)] 包括在 Windows 10 十一月更新中，而 [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] 包括在 Windows 10 周年更新中。  .NET Framework 4.7 包含在 Windows 10 创意者更新中，.NET Framework 4.7.1 包含在 Windows 10 秋季创意者更新中，.NET Framework 4.7.2 包含在 Windows 10 2018 年 4 月更新中。 有关硬件和软件要求的完整列表，请参阅[系统要求](../../../docs/framework/get-started/system-requirements.md)。
+- [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 和 [!INCLUDE[win8](../../../includes/win8-md.md)] 中已经包括 [!INCLUDE[winserver8](../../../includes/winserver8-md.md)]，因此你不必在这些操作系统上随你的应用一起部署此组件。 同样， [!INCLUDE[net_v451](../../../includes/net-v451-md.md)] 和 Windows Server 2012 R2 中也已包括 [!INCLUDE[win81](../../../includes/win81-md.md)] 。 .NET Framework 4.5.2 不包含在任何操作系统中。 [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] 包括在 Windows 10 中， [!INCLUDE[net_v461](../../../includes/net-v461-md.md)] 包括在 Windows 10 十一月更新中，而 [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] 包括在 Windows 10 周年更新中。  .NET Framework 4.7 包含在 Windows 10 创意者更新中，.NET Framework 4.7.1 包含在 Windows 10 Fall Creators Update 中，.NET Framework 4.7.2 包含在 Windows 10 2018 年 10 月更新和 Windows 10 2018 年 4 月更新中。 有关硬件和软件要求的完整列表，请参阅[系统要求](../../../docs/framework/get-started/system-requirements.md)。
 
 - 从 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]开始，你的用户可以在安装过程中查看运行中 .NET Framework 应用的列表并轻松关闭这些应用。 这可能有助于避免系统因安装 .NET Framework 而重新启动。 参见 [减少系统重新启动](../../../docs/framework/deployment/reducing-system-restarts.md)。
 
 - 卸载 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 或其单点版本之一也会删除预先存在的 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] 文件。 若要返回到 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]，你必须重新安装它以及它的任何更新。 （请参阅 [安装 .NET Framework 4](https://msdn.microsoft.com/library/5a4x27ek\(v=vs.100\).aspx)。）
 
-- .NET Framework 4.5 可再发行组件于 2012 年 10 月 9 日进行了更新，纠正了一个与数字证书中的错误时间戳相关的问题，此问题会导致 Microsoft 生成并签名的文件中的数字签名提前过期。 如果之前安装了日期为 2012 年 8 月 16 日的 .NET framework 4.5 可再发行组件包，则建议使用 [Microsoft 下载中心](https://go.microsoft.com/fwlink/p/?LinkId=245484)中的最新的可再发行组件来更新副本。 有关此问题的更多信息，请参阅 [Microsoft 安全公告 2749655](https://technet.microsoft.com/security/advisory/2749655)。
+- .NET Framework 4.5 可再发行组件于 2012 年 10 月 9 日进行了更新，纠正了一个与数字证书中的错误时间戳相关的问题，此问题会导致 Microsoft 生成并签名的文件中的数字签名提前过期。 如果之前安装了日期为 2012 年 8 月 16 日的 .NET framework 4.5 可再发行组件包，则建议使用 [Microsoft 下载中心](https://go.microsoft.com/fwlink/p/?LinkId=245484)中的最新的可再发行组件来更新副本。 有关此问题的更多信息，请参阅 [Microsoft 安全公告 2749655](https://docs.microsoft.com/security-updates/SecurityAdvisories/2012/2749655)。
 
  有关系统管理员可如何在网络中部署 .NET Framework 及其系统依赖项的信息，请参见阅[适用于管理员的部署指南](../../../docs/framework/deployment/guide-for-administrators.md)。
 
@@ -247,8 +247,9 @@ dotNetFx45_Full_x86_x64.exe /q /norestart /ChainingPackage Contoso
 
 |版本|Release DWORD 的值|
 |-------------|--------------------------------|
+|安装在 Windows 10 2018 年 10 月更新上的 .NET Framework 4.7.2|461814|
 |安装在 Windows 10 2018 年 4 月更新和 Windows Server 版本 1803 上的 .NET Framework 4.7.2|461808|
-|安装在除 Windows 10 2018 年 4 月更新和 Windows Server 版本 1803 之外的所有 OS 版本上的 .NET Framework 4.7.2|461814|
+|安装在除 Windows 10 2018 年 10 月更新、Windows 10 2018 年 4 月更新和 Windows Server 版本 1803 之外的所有操作系统版本上的 .NET Framework 4.7.2|461814|
 |安装在 Windows 10 秋季创意者更新和 Windows Server 版本 1709 上的 .NET Framework 4.7.1|461308|
 |安装在除 Windows 10 秋季创意者更新和 Windows Server 版本 1709 之外的所有 OS 版本上的 .NET Framework 4.7.1|461310|
 |在 Windows 10 创意者更新上安装的 .NET Framework 4.7|460798|
@@ -403,9 +404,9 @@ NDP451-KB2858728-x86-x64-AllOS-JPN.exe/q /norestart /ChainingPackage <ProductNam
 |3082|西班牙语 - 西班牙（现代排序）|es|
 
 ## <a name="see-also"></a>请参阅
- [面向管理员的部署指南](../../../docs/framework/deployment/guide-for-administrators.md)  
- [系统要求](../../../docs/framework/get-started/system-requirements.md)  
- [安装面向开发者的 .NET Framework](../../../docs/framework/install/guide-for-developers.md)  
- [安装和卸载 .NET Framework 受阻疑难解答](../../../docs/framework/install/troubleshoot-blocked-installations-and-uninstallations.md)  
- [在 .NET Framework 4.5 安装期间减少系统重新启动次数](../../../docs/framework/deployment/reducing-system-restarts.md)  
- [如何：获取 .NET Framework 4.5 安装程序的进度](../../../docs/framework/deployment/how-to-get-progress-from-the-dotnet-installer.md)
+- [面向管理员的部署指南](../../../docs/framework/deployment/guide-for-administrators.md)  
+- [系统要求](../../../docs/framework/get-started/system-requirements.md)  
+- [安装面向开发者的 .NET Framework](../../../docs/framework/install/guide-for-developers.md)  
+- [安装和卸载 .NET Framework 受阻疑难解答](../../../docs/framework/install/troubleshoot-blocked-installations-and-uninstallations.md)  
+- [在 .NET Framework 4.5 安装期间减少系统重新启动次数](../../../docs/framework/deployment/reducing-system-restarts.md)  
+- [如何：获取 .NET Framework 4.5 安装程序的进度](../../../docs/framework/deployment/how-to-get-progress-from-the-dotnet-installer.md)

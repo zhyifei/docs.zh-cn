@@ -4,12 +4,12 @@ description: 适用于容器化 .NET 应用程序的 .NET 微服务体系结构 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 12/11/2017
-ms.openlocfilehash: b443f1b066d3c8ef0e798206510616aace32b377
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: bba0b93ee7e68ae0320460c6a45ab252ac34c326
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45617138"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48873489"
 ---
 # <a name="creating-a-simple-data-driven-crud-microservice"></a>创建简单的数据驱动 CRUD 微服务
 
@@ -393,7 +393,7 @@ public class Startup
   http://<your-root-url>/swagger/
 ```
 
-之前已展示由 Swashbuckle 为类似于 http://&lt;your-root-url&gt;/swagger/ui 的 URL 生成的 UI。 图 8-9 中还展示了如何测试 API 方法。
+之前已展示由 Swashbuckle 为类似于 `http://<your-root-url>/swagger/ui` 的 URL 生成的 UI。 图 8-9 中还展示了如何测试 API 方法。
 
 ![](./media/image10.png)
 

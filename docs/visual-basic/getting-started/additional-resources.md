@@ -8,14 +8,12 @@ helpviewer_keywords:
 - Help, Visual Basic Web sites
 - Visual Basic, videos
 ms.assetid: 9bfb42e9-327f-439b-935e-8884f6aca80c
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: f82ed592a78bb2d13000216cda8ce8334d1f3c83
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a0ff04bf67faea4c834570e8faa4197369289fb7
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33591659"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50195666"
 ---
 # <a name="additional-resources"></a>其他资源
 
@@ -62,7 +60,7 @@ ms.locfileid: "33591659"
 |----------|----------------|
 |[VBForums](http://www.vbforums.com/)|提供讨论 Visual Basic、.NET 等内容的论坛。|
 |[vbCity](http://vbcity.com/)|供人们学习和询问有关 Visual Basic 和 .NET 问题的社区网站。|
-|[Stack Overflow](https://stackoverflow.com/questions/tagged/vb.net)|Stack Overflow 是面向开发人员的问答网站。|
+|[堆栈溢出](https://stackoverflow.com/questions/tagged/vb.net)|Stack Overflow 是面向开发人员的问答网站。|
 
 ## <a name="see-also"></a>请参阅
 

@@ -2,17 +2,17 @@
 title: Behavior 类
 ms.date: 03/30/2017
 ms.assetid: 75d117f5-87f9-40fb-84c6-9e2fef6da6af
-ms.openlocfilehash: 6fbe6bae02d580dc0b44c2a1922187dd2b166e5d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: bf7d7f4ae4340cd8aee9a200015255820ac140f4
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33485689"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50197127"
 ---
 # <a name="behavior-class"></a>Behavior 类
 ## <a name="syntax"></a>语法  
   
-```  
+```csharp
 class Behavior  
 {  
   string Type;  

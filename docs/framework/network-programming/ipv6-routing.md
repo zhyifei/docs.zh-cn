@@ -2,14 +2,12 @@
 title: IPv6 路由
 ms.date: 03/30/2017
 ms.assetid: c98731b4-b542-46a2-9947-1cea63c186b2
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: 4ff5f131cfd9fac48e653b98e05d5e46dcfb0bec
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 19277f05d2feffd52f81cb5f0b70cb401579eb1a
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/29/2018
-ms.locfileid: "47399016"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50195341"
 ---
 # <a name="ipv6-routing"></a>IPv6 路由
 灵活的路由机制是 IPv6 的优势之一。 由于 IPv4 网络 ID 以前和现在的分配方式，需要由 Internet 主干网上的路由器来维护大型路由表。 这些路由器必须了解所有路由，才能转发可能定向到 Internet 任何节点的数据包。 借助聚合地址的功能，IPv6 可以灵活寻址，并且大大减小路由表的大小。 在这种新型寻址体系结构中，中间路由器必须仅跟踪网络中的本地部分，才能恰当地转发消息。  

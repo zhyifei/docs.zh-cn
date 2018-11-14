@@ -2,25 +2,34 @@
 title: 使用 dotnet test 和 NUnit 在 .NET Core 中进行 F# 库的单元测试
 description: 使用 dotnet test 和 NUnit 分步构建一个示例解决方案，在此交互式体验中学习 .NET Core 中的 F# 单元测试概念。
 author: rprouse
-ms.date: 12/01/2017
+ms.date: 10/04/2018
 dev_langs:
 - fsharp
-ms.openlocfilehash: c5653463ce43ab8660753aa03ef79ba10f339fac
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: adadfc0358814f4600255aac7076f9ba6fbb4feb
+ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33215742"
+ms.lasthandoff: 10/13/2018
+ms.locfileid: "49308373"
 ---
 # <a name="unit-testing-f-libraries-in-net-core-using-dotnet-test-and-nunit"></a>使用 dotnet test 和 NUnit 在 .NET Core 中进行 F# 库的单元测试
 
 本教程介绍分步构建示例解决方案的交互式体验，以了解单元测试概念。 如果希望使用预构建解决方案学习本教程，请在开始前[查看或下载示例代码](https://github.com/dotnet/samples/tree/master/core/getting-started/unit-testing-with-fsharp-nunit/)。 有关下载说明，请参阅[示例和教程](../../samples-and-tutorials/index.md#viewing-and-downloading-samples)。
 
+## <a name="prerequisites"></a>系统必备 
+- [.NET Core SDK 2.1（版本2.1.400）](https://www.microsoft.com/net/download)或更高版本。 
+- 按需选择的文本编辑器或代码编辑器。
+
 ## <a name="creating-the-source-project"></a>创建源项目
 
 打开 shell 窗口。 创建一个名为 unit-testing-with-fsharp 的目录，以保留该解决方案。
-在此新目录中，运行 [`dotnet new sln`](../tools/dotnet-new.md) 创建新的解决方案。 这样便于管理类库和单元测试项目。
-在解决方案库中，创建 MathService 目录。 目录和文件结构目前如下所示：
+在此新目录中，运行以下命令，为类库和测试项目创建新的解决方案文件：
+
+```console
+dotnet new sln
+```
+
+接下来，创建 MathService 目录。 下图显示了当前的目录和文件结构：
 
 ```
 /unit-testing-with-fsharp
@@ -28,22 +37,24 @@ ms.locfileid: "33215742"
     /MathService
 ```
 
-将 MathService 作为当前目录，然后运行 [`dotnet new classlib -lang F#`](../tools/dotnet-new.md) 以创建源项目。  为了使用由测试驱动的开发 (TDD)，需对数学服务创建故障实现：
+将 MathService 作为当前目录，并运行以下命令以创建源项目：
+
+```console
+dotnet new classlib -lang F#
+```
+
+为了使用由测试驱动的开发 (TDD)，需对数学服务创建故障实现：
 
 ```fsharp
 module MyMath =
     let squaresOfOdds xs = raise (System.NotImplementedException("You haven't written a test yet!"))
 ```
 
-将目录更改回 unit-testing-with-fsharp 目录。 运行 [`dotnet sln add .\MathService\MathService.fsproj`](../tools/dotnet-sln.md) 向解决方案添加类库项目。
+将目录更改回 unit-testing-with-fsharp 目录。 运行以下命令，向解决方案添加类库项目：
 
-## <a name="install-the-nunit-project-template"></a>安装 NUnit 项目模板
-
-创建测试项目之前，需安装 NUnit 测试项目模板。 仅需在新建 NUnit 项目的开发人员计算机上安装一次。 运行 [`dotnet new -i NUnit3.DotNetNew.Template`](../tools/dotnet-new.md) 以安装 NUnit 模板.
-
- ```
- dotnet new -i NUnit3.DotNetNew.Template
- ```
+```console
+dotnet sln add .\MathService\MathService.fsproj
+```
 
 ## <a name="creating-the-test-project"></a>创建测试项目
 
@@ -58,7 +69,13 @@ module MyMath =
     /MathService.Tests
 ```
 
-将 MathService.Tests 目录作为当前目录，并使用 [`dotnet new nunit -lang F#`](../tools/dotnet-new.md) 创建一个新项目。 这会创建一个将 NUnit 用作测试框架的测试项目。 生成的模板在 MathServiceTests.fsproj 中配置测试运行程序：
+将 MathService.Tests 目录作为当前目录，并使用以下命令创建一个新项目：
+
+```console
+dotnet new nunit -lang F#
+```
+
+这会创建一个将 NUnit 用作测试框架的测试项目。 生成的模板在 MathServiceTests.fsproj 中配置测试运行程序：
 
 ```xml
 <ItemGroup>
@@ -70,7 +87,7 @@ module MyMath =
 
 测试项目需要其他包创建和运行单元测试。 在上一步中，`dotnet new` 已添加 NUnit 和 NUnit 测试适配器。 现在，将 `MathService` 类库作为另一个依赖项添加到项目中。 使用 [`dotnet add reference`](../tools/dotnet-add-reference.md) 命令：
 
-```
+```console
 dotnet add reference ../MathService/MathService.fsproj
 ```
 
@@ -86,14 +103,18 @@ dotnet add reference ../MathService/MathService.fsproj
         MathService.fsproj
     /MathService.Tests
         Test Source Files
-        MathServiceTests.fsproj
+        MathService.Tests.fsproj
 ```
 
-在 unit-testing-with-fsharp 目录中执行 [`dotnet sln add .\MathService.Tests\MathService.Tests.fsproj`](../tools/dotnet-sln.md)。
+在 unit-testing-with-fsharp 目录中执行以下命令：
+
+```console
+dotnet sln add .\MathService.Tests\MathService.Tests.fsproj
+```
 
 ## <a name="creating-the-first-test"></a>创建第一个测试
 
-TDD 方法要求编写一个失败的测试，使其通过测试，然后重复该过程。 打开 Tests.fs 并添加以下代码：
+TDD 方法要求编写一个失败的测试，使其通过测试，然后重复该过程。 打开 UnitTest1.fs 并添加以下代码：
 
 ```fsharp
 namespace MathService.Tests
@@ -129,14 +150,14 @@ member this.TestEvenSequence() =
 
 请注意已将 `expected` 序列转换为列表。 NUnit 框架依赖于许多标准 .NET 类型。 此依赖关系表示公共接口和预期结果支持 <xref:System.Collections.ICollection>，而非 <xref:System.Collections.IEnumerable>。
 
-运行此测试时，会看到测试失败。 尚未创建实现。 在起作用的 `Mathservice` 类中编写最简单的代码，以生成此测试：
+运行此测试时，会看到测试失败。 尚未创建实现。 在起作用的 MathService 项目的 Library.fs 类中编写最简单的代码，使此测试通过：
 
 ```csharp
 let squaresOfOdds xs =
     Seq.empty<int>
 ```
 
-在 unit-testing-with-fsharp 目录中，再次运行 `dotnet test`。 `dotnet test` 命令构建 `MathService` 项目，然后构建 `MathService.Tests` 项目。 构建这两个项目后，该命令将运行此单项测试。 测试通过。
+在 unit-testing-with-fsharp 目录中，再次运行 `dotnet test`。 `dotnet test` 命令构建 `MathService` 项目，然后构建 `MathService.Tests` 项目。 构建这两个项目后，该命令将运行测试。 现在两个测试通过。
 
 ## <a name="completing-the-requirements"></a>完成要求
 

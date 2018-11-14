@@ -2,12 +2,12 @@
 title: 启用数据源以进行 LINQ 查询 1
 ms.date: 07/20/2015
 ms.assetid: d2ef04a5-31a6-45cb-af9a-a5ce7732662c
-ms.openlocfilehash: 204d2d6104a065f1d1cf9e731dc01f400218f91b
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 1aa3a22028b0b3d7c705076a3e16379e09323271
+ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44253177"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49122688"
 ---
 # <a name="enabling-a-data-source-for-linq-querying"></a>启用数据源以进行 LINQ 查询
 可通过多种方式来扩展 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]，以便能够在 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 模式中查询任何数据源。 数据源可以是数据结构、Web 服务、文件系统或数据库等。 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 模式使客户端可以轻松地查询能够进行 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 查询的数据源，因为查询的语法和模式没有更改。 可通过以下方式将 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 扩展到这些数据源：  
@@ -28,7 +28,7 @@ ms.locfileid: "44253177"
  通过两种方式，可以使 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 能够查询内存中数据。 如果数据的类型实现了 <xref:System.Collections.Generic.IEnumerable%601>，您可以使用 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] to Objects 来查询数据。 如果无法通过实现 <xref:System.Collections.Generic.IEnumerable%601> 接口启用类型枚举，可以在该类型中定义 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 标准查询运算符方法，或创建扩展该类型的 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 标准查询运算符方法。 标准查询运算符的自定义实现应使用延迟执行来返回结果。  
   
 ### <a name="remote-data"></a>远程数据  
- 使 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 能够查询远程数据源的最佳选择是实现 <xref:System.Linq.IQueryable%601> 接口。 但是，这与为数据源扩展提供程序（比如 [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)]）有所不同。 [!INCLUDE[vs_orcas_long](~/includes/vs-orcas-long-md.md)] 中没有用于将现有 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 技术（比如 [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)]）扩展为其他数据源类型的提供程序模型。  
+ 使 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 能够查询远程数据源的最佳选择是实现 <xref:System.Linq.IQueryable%601> 接口。 但是，这与为数据源扩展提供程序（比如 [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)]）有所不同。 Visual Studio 2008 中没有用于将现有 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 技术（比如 [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)]）扩展为其他数据源类型的提供程序模型。
   
 ## <a name="iqueryable-linq-providers"></a>IQueryable LINQ 提供程序  
  实现 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 的 <xref:System.Linq.IQueryable%601> 提供程序之间的复杂性可能差别很大。 本节讨论这些不同程度的复杂性。  

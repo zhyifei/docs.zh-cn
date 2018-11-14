@@ -7,12 +7,12 @@ dev_langs:
 - vb
 ms.technology: dotnet-standard
 ms.assetid: 2dbed1bc-86f5-43cd-9a57-adbb1c5efba4
-ms.openlocfilehash: 2e54f49f111c545a329a64ede400dc1354020f43
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9ee6e9a06d590d9d8452dcdaea11219070e613c4
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33579504"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50188178"
 ---
 # <a name="language-independence-and-language-independent-components"></a>语言独立性和与语言无关的组件
 
@@ -184,7 +184,7 @@ End Class
 成员 | [类型成员概述](#type-members-in-general) | 全局静态字段和方法不符合 CLS。 | 36
 成员 | -- | 通过使用字段初始化元数据指定文本静态值。 符合 CLS 的文本必须在类型与文本（或基本类型，如果文本为 `enum`）完全相同的字段初始化元数据中指定值。 | 13
 成员 | [类型成员概述](#type-members-in-general) | vararg 约束不属于 CLS，并且 CLS 支持的唯一调用约定是标准托管调用约定。 | 15
-命名约定 | [命名约定](#naming-conventions) | 程序集应遵守用于管理允许启用且包含在标识符中的字符集的 Unicode 标准 3.0 的技术报告 15 的附件 7（可通过 [Unicode 范式](http://www.unicode.org/unicode/reports/tr15/tr15-18.html)在线获得）。 标识符应是由 Unicode 范式 C 定义的规范格式。对于 CLS，如果两个标识符的小写映射（由不区分区域设置的 Unicode、一对一小写映射指定）相同，则它们也相同。 也就是说，对于要在 CLS 下视为不同的两个标识符，它们应以大小写之外的差别进行区分。 但是，若要重写继承的定义，CLI 需要对使用的原始声明进行准确编码。 | 4
+命名约定 | [命名约定](#naming-conventions) | 程序集应遵守用于管理允许启用且包含在标识符中的字符集的 Unicode 标准 3.0 的技术报告 15 的附件 7（可通过 [Unicode 范式](https://www.unicode.org/unicode/reports/tr15/tr15-18.html)在线获得）。 标识符应是由 Unicode 范式 C 定义的规范格式。对于 CLS，如果两个标识符的小写映射（由不区分区域设置的 Unicode、一对一小写映射指定）相同，则它们也相同。 也就是说，对于要在 CLS 下视为不同的两个标识符，它们应以大小写之外的差别进行区分。 但是，若要重写继承的定义，CLI 需要对使用的原始声明进行准确编码。 | 4
 重载 | [命名约定](#naming-conventions) | 在符合 CLS 的范围中引入的所有名称都应是明显独立的类型，除非名称完全相同且通过重载解析。 也就是说，CTS 允许单个类型对方法和字段使用相同的名称，但 CLS 不允许。 | 5
 重载 | [命名约定](#naming-conventions) | 即使 CTS 允许区分不同的签名，但字段和嵌套类型只能由标识符比较区分。 （标识符比较后）具有相同名称的方法、属性和事件应在除返回类型不同之外还具有其他差异，CLS 规则 39 中指定的差异除外。 | 6
 重载 | [重载](#overloads) | 只可重载属性和方法。 | 37
@@ -2588,7 +2588,7 @@ End Structure
 
 * [字符串](xref:System.String)
 
-* [类型](xref:System.Type)
+* [Type](xref:System.Type)
 
 * 基础类型为 `Byte`、`Int16`、`Int32` 或 `Int64` 的任意枚举类型。 
 

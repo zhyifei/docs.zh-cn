@@ -1,12 +1,12 @@
 ---
 title: 演练：使用 C# 保留对象
 ms.date: 04/26/2018
-ms.openlocfilehash: c3cff57f008eb524c2d2bec406431e4c41dca617
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 85c447ae43086cc789338e77555b7400a523662a
+ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47231484"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49086072"
 ---
 # <a name="walkthrough-persisting-an-object-using-c"></a>演练：使用 C# 保留对象 #
 
@@ -28,6 +28,8 @@ ms.locfileid: "47231484"
 
 > [!TIP]
 > 需要安装代码编辑器？ 试用 [Visual Studio](https://visualstudio.com/downloads)！
+
+* 该示例需要 C# 7.3。 请参阅[选择 C# 语言版本](../../../language-reference/configure-language-version.md) 
 
 可在 [.NET 示例 GitHub 存储库](https://github.com/dotnet/samples/tree/master/csharp/serialization)在线检查示例代码。
 

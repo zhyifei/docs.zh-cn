@@ -2,19 +2,19 @@
 title: Binding2
 ms.date: 03/30/2017
 ms.assetid: 09511c6c-5749-4bb0-874e-0f0be36bfe04
-ms.openlocfilehash: 0260b75a0f49e0f6f72d7d1eda642d0a494d2892
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 84e304f3dedcbd785d6238e6cb5eb142c288b995
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33487002"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50198884"
 ---
 # <a name="binding"></a>绑定
 wmi Binding  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```csharp
 class Binding  
 {  
   BindingElement BindingElements[];  
@@ -48,7 +48,7 @@ class Binding
   
  为完成关闭操作提供的时间间隔。  
   
-### <a name="name"></a>名称  
+### <a name="name"></a>name  
  数据类型：String  
   
  访问类型：只读  

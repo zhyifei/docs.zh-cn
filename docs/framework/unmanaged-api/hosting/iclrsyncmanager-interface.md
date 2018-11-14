@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1b87ccc3d6c3e957d0384499048032e35247093a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: ede896cdb93217fcfba9d66ed7102bcc1ba762e9
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33436476"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50041825"
 ---
 # <a name="iclrsyncmanager-interface"></a>ICLRSyncManager 接口
 定义允许主机以获取有关请求的任务的信息并在其同步实现检测死锁的方法。  
@@ -30,8 +30,8 @@ ms.locfileid: "33436476"
   
 |方法|描述|  
 |------------|-----------------|  
-|[CreateRWLockOwnerIterator 方法](iclrsyncmanager-createrwlockowneriterator-method.md)|公共语言运行时 (CLR) 创建主机可用于确定的读取器 / 编写器锁等待的任务集的迭代器的请求。|  
-|[DeleteRWLockOwnerIterator 方法](iclrsyncmanager-deleterwlockowneriterator-method.md)|请求 CLR 销毁由调用的迭代器`CreateRWLockOwnerIterator`。|  
+|[CreateRWLockOwnerIterator 方法](iclrsyncmanager-createrwlockowneriterator-method.md)|公共语言运行时 (CLR) 创建主机，用于确定读取器 / 编写器锁等待的任务集的迭代器的请求。|  
+|[DeleteRWLockOwnerIterator 方法](iclrsyncmanager-deleterwlockowneriterator-method.md)|请求 CLR 销毁一个迭代器，通过调用创建`CreateRWLockOwnerIterator`。|  
 |[GetMonitorOwner 方法](iclrsyncmanager-getmonitorowner-method.md)|获取拥有指定的监视器的任务。|  
 |[GetRWLockOwnerNext 方法](iclrsyncmanager-getrwlockownernext-method.md)|获取在当前的读取器 / 编写器锁等待下一个任务。|  
   
@@ -42,10 +42,10 @@ ms.locfileid: "33436476"
   
  **库：** 作为 MSCorEE.dll 中的资源  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅  
  <xref:System.Threading.Thread>  
  [IHostSyncManager 接口](ihostsyncmanager-interface.md)  
- [托管和非托管线程处理](https://msdn.microsoft.com/library/db425c20-4b2f-4433-bf96-76071c7881e5(v=vs.100))  
+ [托管和非托管线程处理](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/5s8ee185(v=vs.100))  
  [承载接口](hosting-interfaces.md)

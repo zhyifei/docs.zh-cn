@@ -4,12 +4,12 @@ description: 关于在 .NET 中生成服务器应用时应考虑使用哪种 .NE
 author: cartermp
 ms.author: mairaw
 ms.date: 06/19/2018
-ms.openlocfilehash: dbb5bd21d2fa43167a9624be2baec3f591d10920
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 01e7222ccd4a764f75481e58d4ac305daadfe1a8
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43864957"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50202232"
 ---
 # <a name="choosing-between-net-core-and-net-framework-for-server-apps"></a>为服务器应用选择 .NET Core 或 .NET Framework
 
@@ -87,7 +87,7 @@ Docker 容器可托管在自己的 Linux 或 Windows 基础结构中，或托管
 
 * ASP.NET Web 窗体应用程序：ASP.NET Web 窗体仅在.NET Framework 中可用。 ASP.NET Core 不能用于 ASP.NET Web 窗体。 目前没有将 ASP.NET Web 窗体引入 .NET Core 的计划。
 
-* ASP.NET 网页应用程序：ASP.NET 网页未包含在 ASP.NET Core 中。 ASP.NET Core [Razor 页](/aspnet/core/mvc/razor-pages/)与网页有许多相似之处。
+* ASP.NET 网页应用程序：ASP.NET 网页未包含在 ASP.NET Core 中。 
 
 * WCF 服务的实现。 虽然 [WCF 客户端库](https://github.com/dotnet/wcf)可从 .NET Core 使用 WCF 服务，WCF 服务器实现目前只在 .NET Framework 上可用。 这种情况虽然不属于 .NET Core 当前计划，但将来会考虑这点。
 
@@ -104,6 +104,7 @@ Docker 容器可托管在自己的 Linux 或 Windows 基础结构中，或托管
 ## <a name="see-also"></a>请参阅
 
 * [在 ASP.NET 和 ASP.NET Core 之间进行选择](/aspnet/core/choose-aspnet-framework)
+* [面向 .NET Framework 的 ASP.NET Core](/aspnet/core#aspnet-core-targeting-net-framework)
 * [目标框架](frameworks.md)
 * [.NET Core 指南](../core/index.md)  
 * [从 .NET Framework 移植到 .NET Core](../core/porting/index.md)  

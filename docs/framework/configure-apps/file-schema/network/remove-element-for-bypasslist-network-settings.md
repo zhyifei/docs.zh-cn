@@ -10,14 +10,12 @@ helpviewer_keywords:
 - bypasslist, remove element
 - remove element, bypasslist
 ms.assetid: 61dcfb4a-e3d9-4abf-a2cd-7d685fe2f64b
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: b6c72d9780088fddcaa59e644ff8069afbb4e43d
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 83449aa2df2b0442f5ba5e1f152232b007bcdc15
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47397093"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50193703"
 ---
 # <a name="ltremovegt-element-for-bypasslist-network-settings"></a>&lt;删除&gt;bypasslist （网络设置） 的元素
 从代理跳过列表中删除 IP 地址或 DNS 名称。  
@@ -81,5 +79,5 @@ ms.locfileid: "47397093"
 ```  
   
 ## <a name="see-also"></a>请参阅  
- <xref:System.Net.WebProxy?displayProperty=nameWithType>  
- [网络设置架构](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+- <xref:System.Net.WebProxy?displayProperty=nameWithType>  
+- [网络设置架构](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

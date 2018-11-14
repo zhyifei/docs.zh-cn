@@ -22,14 +22,12 @@ helpviewer_keywords:
 - server identifiers
 - scheme identifiers
 ms.assetid: 4b48e22d-e4e5-48f0-be80-d549bda97415
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: 7fcc3c78192866ecbcefe03573d3e253ac6b6138
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: a0a50af2d773a9489d9e908b751ba2035b9ba626
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47198418"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50194015"
 ---
 # <a name="introducing-pluggable-protocols"></a>可插入协议简介
 Microsoft .NET Framework 为 Internet 服务提供了一种分层、可扩展且托管的实现，可以快速、轻松地将其集成到应用程序中。 <xref:System.Net> 和 <xref:System.Net.Sockets> 命名空间的 Internet 访问类可用于实现基于 Web 和基于 Internet 的应用程序。  

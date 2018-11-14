@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - unsafe keyword [C#]
 ms.assetid: 7e818009-1c6e-4b9e-b769-3728a01586a0
-ms.openlocfilehash: b4615021a4fc3391ac0ae703b6c97301b44aa60e
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: f4fcff02166091ae5dbd83e7ddf7762373fd9836
+ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45596518"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49086448"
 ---
 # <a name="unsafe-c-reference"></a>unsafe（C# 参考）
 `unsafe` 关键字表示不安全上下文，该上下文是任何涉及指针的操作所必需的。 有关详细信息，请参阅[不安全代码和指针](../../../csharp/programming-guide/unsafe-code-pointers/index.md)。  
@@ -20,7 +20,7 @@ ms.locfileid: "45596518"
  可在类型或成员的声明中使用 `unsafe` 修饰符。 因此，类型或成员的整个正文范围均被视为不安全上下文。 以下面使用 `unsafe` 修饰符声明的方法为例：  
   
 ```csharp  
-      unsafe static void FastCopy(byte[] src, byte[] dst, int count)  
+unsafe static void FastCopy(byte[] src, byte[] dst, int count)  
 {  
     // Unsafe context: can use pointers here.  
 }  
@@ -35,7 +35,7 @@ unsafe static void FastCopy ( byte* ps, byte* pd, int count ) {...}
  还可以使用不安全块从而能够使用该块内的不安全代码。 例如:  
   
 ```csharp  
-      unsafe  
+unsafe  
 {  
     // Unsafe context: can use pointers here.  
 }  

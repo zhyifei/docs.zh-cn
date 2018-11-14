@@ -4,12 +4,12 @@ description: 了解如何利用现有 .NET Framework 控制台应用程序并在
 author: spboyer
 ms.date: 09/28/2016
 ms.assetid: 85cca1d5-c9a4-4eb2-93e6-4f878de07fd7
-ms.openlocfilehash: f5a38ac63db969a58e920ea79bf4bf10bcfcf64f
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: bf21357efc234ea99836b190ce34c70f2644ea6a
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47193325"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50200569"
 ---
 # <a name="running-console-applications-in-windows-containers"></a>在 Windows 容器中运行控制台应用程序
 
@@ -46,7 +46,7 @@ Docker 映像的一个重要特性是映像由基本映像组合而成。 每个
 [Windows 10 周年更新](https://www.microsoft.com/en-us/software-download/windows10/) 或 [Windows Server 2016](https://www.microsoft.com/en-us/cloud-platform/windows-server) 支持 Windows 容器。
 
 > [!NOTE]
->如果使用 Windows Server 2016，则需手动启用容器，因为 Docker for Windows 安装程序不会启用该功能。 请确保已为操作系统运行所有更新，然后按照[容器主机部署](https://msdn.microsoft.com/virtualization/windowscontainers/deployment/deployment)文章中的说明来安装容器和 Docker 功能。
+>如果使用 Windows Server 2016，则需手动启用容器，因为 Docker for Windows 安装程序不会启用该功能。 请确保已为操作系统运行所有更新，然后按照[容器主机部署](/virtualization/windowscontainers/deploy-containers/deploy-containers-on-server)文章中的说明来安装容器和 Docker 功能。
 
 需要安装 Docker for Windows 1.12 Beta 26 版或更高版本才能支持 Windows 容器。 默认情况下，Docker 支持将基于 Linux 的容器切换到 Windows 容器，通过右键单击系统托盘中的 Docker 图标，然后选择“切换到 Windows 容器”。 Docker 将运行该过程进行更改，且可能需要重启。
 

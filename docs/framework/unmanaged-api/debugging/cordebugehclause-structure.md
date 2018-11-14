@@ -14,12 +14,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 40820a805310786eeb0effd7c5284c1a70a6e70b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 83928696fc7fdfaf2eb944f4cdb9eebecdece0b3
+ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33407595"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49452909"
 ---
 # <a name="cordebugehclause-structure"></a>CorDebugEHClause 结构
 [仅在 .NET Framework 4.5.2 及更高版本中受支持]  
@@ -53,9 +53,9 @@ typedef struct _CorDebugEHClause {
 |`FilterOffset`|基于筛选器的异常处理程序的方法主体开头的偏移量（以字节为单位）。|  
   
 ## <a name="remarks"></a>备注  
- 数组`CoreDebugEHClause`返回值[GetEHClauses](../../../../docs/framework/unmanaged-api/debugging/icordebugilcode-getehclauses-method.md)方法。  
+ 一个数组`CoreDebugEHClause`返回的值[GetEHClauses](../../../../docs/framework/unmanaged-api/debugging/icordebugilcode-getehclauses-method.md)方法。  
   
- EH 子句信息由 CLI 规范定义。 有关详细信息，请参阅[标准 ecma-355： 公共语言基础结构 (CLI)，第 6 版](http://www.ecma-international.org/publications/standards/Ecma-335.htm)。  
+ EH 子句信息由 CLI 规范定义。 有关详细信息，请参阅[标准 ECMA-355： 公共语言基础结构 (CLI)，第 6 版](https://www.ecma-international.org/publications/standards/Ecma-335.htm)。  
   
  `flags` 字段可以包含以下标志。 请注意，它们不会在 CorDebug.idl 或 CorDebug.h 中定义。  
   
@@ -69,11 +69,11 @@ typedef struct _CorDebugEHClause {
 ## <a name="requirements"></a>要求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** CorDebug.idl、 CorDebug.h  
+ **标头**：CorDebug.idl、CorDebug.h  
   
  **库：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅  
  [GetEHClauses 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugilcode-getehclauses-method.md)  

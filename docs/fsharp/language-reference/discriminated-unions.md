@@ -1,12 +1,12 @@
 ---
 title: 可区分联合 (F#)
-description: '了解如何使用 F # 可区分联合。'
+description: 了解如何使用 F# 可区分联合。
 ms.date: 05/16/2016
 ms.openlocfilehash: 06d6c154790f659c0c7ff73290357ab50a134362
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2018
+ms.lasthandoff: 11/02/2018
 ms.locfileid: "43788118"
 ---
 # <a name="discriminated-unions"></a>可区分联合
@@ -51,7 +51,7 @@ let prism = Prism(5., 2.0, height = 3.0)
 
 此代码显示了您可以使用命名的字段初始化，也可以依赖于声明中字段的排序方式，只需提供的值对于每个字段又。 有关构造函数调用`rect`前面的代码中使用的命名的字段，但对于构造函数调用`circ`使用了排序。 可以混合有序的字段和已命名字段，如下所示的构造`prism`。
 
-`option`类型是一个简单的可区分的联合中的 F # 核心库。 `option`类型声明，如下所示。
+`option`类型是一个简单的可区分的联合中的 F# 核心库。 `option`类型声明，如下所示。
 
 ```fsharp
 // The option type is a discriminated union.
@@ -84,7 +84,7 @@ let getShapeHeight shape =
 
 ### <a name="unwrapping-discriminated-unions"></a>解包的可区分的联合
 
-在 F # 可区分联合通常用在域模型用于包装单个类型。 它很容易提取通过模式匹配也的基础值。 您不需要对单个事例使用匹配表达式：
+在 F# 可区分联合通常用在域模型用于包装单个类型。 它很容易提取通过模式匹配也的基础值。 您不需要对单个事例使用匹配表达式：
 
 ```fsharp
 let ([UnionCaseName] [values]) = [UnionValue]
@@ -103,7 +103,7 @@ let someMethodUsingShaderProgram shaderProgram =
 
 ## <a name="struct-discriminated-unions"></a>结构可区分联合
 
-从 F # 4.1 开始，可以为结构还表示可区分联合。  这通过`[<Struct>]`属性。
+从 F# 4.1 开始，可以为结构还表示可区分联合。  这通过`[<Struct>]`属性。
 
 ```fsharp
 [<Struct>]

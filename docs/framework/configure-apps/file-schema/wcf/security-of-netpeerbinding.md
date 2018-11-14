@@ -2,13 +2,12 @@
 title: '&lt;netPeerBinding&gt; 的 &lt;security&gt;'
 ms.date: 03/30/2017
 ms.assetid: 1ef40d8c-f903-4426-9b08-da81462766d8
-author: BrucePerlerMS
-ms.openlocfilehash: 1d7ffaf72e34b700f4702b2e531afbf7e842de09
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: d32b6426009c403d74ca3a05d3c3ba7be9163cae
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48844561"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50197322"
 ---
 # <a name="ltsecuritygt-of-ltnetpeerbindinggt"></a>&lt;netPeerBinding&gt; 的 &lt;security&gt;
 定义的安全设置[ \<netPeerTcpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/netpeertcpbinding.md)，包括身份验证的类型使用，安全使用消息传输。  

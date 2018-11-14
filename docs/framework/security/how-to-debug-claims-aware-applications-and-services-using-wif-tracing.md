@@ -3,12 +3,12 @@ title: 如何：使用 WIF 跟踪调试声明感知应用程序和服务
 ms.date: 03/30/2017
 ms.assetid: 3d51ba59-3adb-4ca4-bd33-5027531af687
 author: BrucePerlerMS
-ms.openlocfilehash: e10d8d2ea869b03586b4680ad8320aeb2de90620
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: 38e168fff9bc351b6239c41197348d24129a4747
+ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48584268"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49453381"
 ---
 # <a name="how-to-debug-claims-aware-applications-and-services-using-wif-tracing"></a>如何：使用 WIF 跟踪调试声明感知应用程序和服务
 ## <a name="applies-to"></a>适用于  
@@ -104,7 +104,7 @@ ms.locfileid: "48584268"
   
 |**错误 ID**|**错误消息**|**修复错误所需操作**|  
 |-|-|-|  
-|ID4175|IssuerNameRegistry 未识别的安全令牌的颁发者。  若要接受来自此颁发者的安全令牌，请将 IssuerNameRegistry 配置为返回此颁发者的有效名称。|从 MMC 管理单元复制指纹并将其粘贴到 Web.config 文件中可能会导致此错误。 具体而言，从证书属性窗口中复制时，可以获得文本字符串中额外的非打印字符。 此额外的字符将导致指纹匹配失败。可在此处找到正确复制指纹的过程： [http://msdn.microsoft.com/library/ff359102.aspx](https://msdn.microsoft.com/library/ff359102.aspx)|  
+|ID4175|IssuerNameRegistry 未识别的安全令牌的颁发者。  若要接受来自此颁发者的安全令牌，请将 IssuerNameRegistry 配置为返回此颁发者的有效名称。|从 MMC 管理单元复制指纹并将其粘贴到 Web.config 文件中可能会导致此错误。 具体而言，从证书属性窗口中复制时，可以获得文本字符串中额外的非打印字符。 此额外的字符将导致指纹匹配失败。正确复制指纹的过程，请参阅[基于声明的单一登录-上面向 Web 和 Microsoft Azure](https://docs.microsoft.com/previous-versions/msp-n-p/ff359102%28v=pandp.10%29)。|  
   
 ## <a name="related-items"></a>相关项  
   

@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - message contracts [WCF]
 ms.assetid: 1e19c64a-ae84-4c2f-9155-91c54a77c249
-ms.openlocfilehash: 84640387e6d77e02d3b0d19b73c0d2b20d8d8831
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: c3f979d26c7e9c36fc242476ae5b3420b2e7d3ac
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/07/2018
-ms.locfileid: "48848304"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50194080"
 ---
 # <a name="using-message-contracts"></a>使用消息约定
 通常在生成 Windows Communication Foundation (WCF) 应用程序时，开发人员密切关注数据结构和序列化问题而无需自己考虑在其中执行数据的消息的结构。 对于这些应用程序，为参数或返回值创建数据协定的过程很简单。 (有关详细信息，请参阅[Specifying Data Transfer in Service Contracts](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md)。)  
@@ -145,8 +145,8 @@ public class BankingTransaction
 ## <a name="controlling-whether-the-soap-body-parts-are-wrapped"></a>控制是否包装 SOAP 正文部分  
  默认情况下，SOAP 正文部分会在包装元素内部进行序列化。 例如，下面的代码演示从 `HelloGreetingMessage` 消息的消息协定中的 <xref:System.ServiceModel.MessageContractAttribute> 类型的名称生成的 `HelloGreetingMessage` 包装元素。  
   
- [!code-csharp[MessageHeaderAttribute#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/messageheaderattribute/cs/services.cs#3)]
- [!code-vb[MessageHeaderAttribute#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/messageheaderattribute/vb/services.vb#3)]  
+[!code-csharp[MessageHeaderAttribute#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/messageheaderattribute/cs/services.cs#3)]
+[!code-vb[MessageHeaderAttribute#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/messageheaderattribute/vb/services.vb#3)]  
   
  若要取消包装元素，请将 <xref:System.ServiceModel.MessageContractAttribute.IsWrapped%2A> 属性设置为 `false`。 若要控制包装元素的名称和命名空间，请使用 <xref:System.ServiceModel.MessageContractAttribute.WrapperName%2A> 和 <xref:System.ServiceModel.MessageContractAttribute.WrapperNamespace%2A> 属性。  
   

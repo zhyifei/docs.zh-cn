@@ -2,12 +2,12 @@
 title: 使用 HTTP POST 的 AJAX 服务
 ms.date: 03/30/2017
 ms.assetid: 1ac80f20-ac1c-4ed1-9850-7e49569ff44e
-ms.openlocfilehash: c102d9d403cefb1bf3d4ab75859a81172895c2e0
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: df199b40a4a9ebb9a36cea7234b484273348cd9e
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44041104"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50192793"
 ---
 # <a name="ajax-service-using-http-post"></a>使用 HTTP POST 的 AJAX 服务
 此示例演示如何使用 Windows Communication Foundation (WCF) 创建[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]异步 JavaScript 和 XML (AJAX) 服务使用 HTTP POST。 AJAX 服务是指可以从 Web 浏览器客户端使用基本 JavaScript 代码访问的服务。 此示例是基于[基本 AJAX 服务](../../../../docs/framework/wcf/samples/basic-ajax-service.md)示例; 两个示例之间的唯一区别是使用 HTTP POST 而不是 HTTP GET。  
@@ -33,7 +33,7 @@ public interface ICalculator
 
  通过使用 <xref:System.ServiceModel.Activation.WebScriptServiceHostFactory> 在服务上创建 AJAX 终结点，就像在基本 AJAX 服务示例中一样。  
   
- 与 GET 请求不同的是，不能从浏览器中调用 POST 服务。 例如，导航到 http://localhost/ServiceModelSamples/service.svc/Add?n1=100&n2=200 产生错误，因为 POST 服务要求`n1`和`n2`要在消息正文中发送的参数-采用 JSON 格式-，不能在 URL。  
+ 与 GET 请求不同的是，不能从浏览器中调用 POST 服务。 例如，导航到`http://localhost/ServiceModelSamples/service.svc/Add?n1=100&n2=200`产生错误，因为 POST 服务要求`n1`和`n2`将消息正文以 JSON 格式，而不是在 URL 中发送的参数。  
   
  客户端网页 PostAjaxClientPage.aspx 包含 ASP.NET 代码以便在用户单击页面上的操作按钮之一时调用服务。 在服务响应中相同的方式[基本 AJAX 服务](../../../../docs/framework/wcf/samples/basic-ajax-service.md)示例，使用 GET 请求。  
   
@@ -52,6 +52,4 @@ public interface ICalculator
   
 2.  如中所述生成解决方案 PostAjaxService.sln[生成 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/building-the-samples.md)。  
   
-3.  导航到 http://localhost/ServiceModelSamples/PostAjaxClientPage.aspx （不要打开 PostAjaxClientPage.aspx 浏览器中从项目目录中）。  
-  
-## <a name="see-also"></a>请参阅
+3.  导航到 `http://localhost/ServiceModelSamples/PostAjaxClientPage.aspx` （不要打开 PostAjaxClientPage.aspx 浏览器中从项目目录中）。

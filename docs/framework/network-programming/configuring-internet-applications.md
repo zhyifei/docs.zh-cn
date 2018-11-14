@@ -21,14 +21,12 @@ helpviewer_keywords:
 - network resources, configuring Internet applications
 - Internet, default proxy
 ms.assetid: bb707c72-eed2-4a82-8800-c9e68df2fd4f
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: d2f3f015689510237142572f230b53ba7bd393ca
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: bdc63064d3f0d809c196e77a890ba697f9d4deea
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47237041"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50197231"
 ---
 # <a name="configuring-internet-applications"></a>配置 Internet 应用程序
 [\<System.Net > 元素（网络设置）](../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md)配置元素包含应用程序的网络配置信息。 使用 [\<system.Net> 元素（网络设置）](../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md)元素，可以设置代理服务器，设置连接管理参数，包括自定义应用程序内的身份验证和请求模块。  
@@ -37,7 +35,7 @@ ms.locfileid: "47237041"
   
  请注意，Microsoft Internet Explorer 设置与配置设置相结合，并且后者具有优先级。  
   
- 以下示例将默认代理服务器地址设置为 http://proxyserver，指示不应将代理用于本地地址，并指定对位于 contoso.com 域中服务器的所有请求均应绕过该代理。  
+ 以下示例将默认代理服务器地址设置为 `http://proxyserver`，指示不应将代理用于本地地址，并指定对位于 contoso.com 域中服务器的所有请求均应绕过该代理。  
   
 ```xml  
 <configuration>  
@@ -56,7 +54,7 @@ ms.locfileid: "47237041"
 </configuration>  
 ```  
   
- 使用 [\<connectionManagement>元素（网络设置）](../../../docs/framework/configure-apps/file-schema/network/connectionmanagement-element-network-settings.md)元素来配置可与特定服务器或其他所有服务器进行的持久连接数。 下面的示例将应用程序配置为使用 2 个与服务器 www.contoso.com 的持久连接，4 个与 IP 地址为 192.168.1.2 的服务器的持久连接，以及 1 个与其他所有服务器的持久连接。  
+ 使用 [\<connectionManagement>元素（网络设置）](../../../docs/framework/configure-apps/file-schema/network/connectionmanagement-element-network-settings.md)元素来配置可与特定服务器或其他所有服务器进行的持久连接数。 下面的示例将应用程序配置为使用 2 个与服务器 `www.contoso.com` 的持久连接，4 个与 IP 地址为 192.168.1.2 的服务器的持久连接，以及 1 个与其他所有服务器的持久连接。  
   
 ```xml  
 <configuration>  

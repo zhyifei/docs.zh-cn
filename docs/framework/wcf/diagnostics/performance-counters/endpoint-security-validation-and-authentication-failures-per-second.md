@@ -2,13 +2,12 @@
 title: 终结点：Security Validation and Authentication Failures Per Second（每秒安全验证和身份验证失败次数）
 ms.date: 03/30/2017
 ms.assetid: 89a70b90-d7e4-4b03-9b84-4dc88ce3d605
-author: BrucePerlerMS
-ms.openlocfilehash: 43f5f7ef37be22124288529160cf18ce02396aa4
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 43886f79585fb9a63eeb51360cc869365c100a1d
+ms.sourcegitcommit: 5fd80619c760fa8c25d33a6f5661247cb65da465
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47200511"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "50744231"
 ---
 # <a name="endpoint-security-validation-and-authentication-failures-per-second"></a>终结点：Security Validation and Authentication Failures Per Second（每秒安全验证和身份验证失败次数）
 计数器名称：Security Validation and Authentication Failures Per Second（每秒安全验证和身份验证失败次数）  

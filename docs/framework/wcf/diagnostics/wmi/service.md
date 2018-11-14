@@ -2,19 +2,19 @@
 title: 服务
 ms.date: 03/30/2017
 ms.assetid: 999806e1-6376-409e-b998-b0af391adfe7
-ms.openlocfilehash: 0cfeb178e26f6c93e29210accf5d7866cc1fca02
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c59672b3b7617d9c28d99f7d534b6e7f2f2e9fbb
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33487142"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50196903"
 ---
 # <a name="service"></a>服务
 服务  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```csharp
 class Service  
 {  
   string BaseAddresses[];  
@@ -87,7 +87,7 @@ class Service
   
  服务元数据设置。  
   
-### <a name="name"></a>名称  
+### <a name="name"></a>name  
  数据类型：String  
   
  访问类型：只读  

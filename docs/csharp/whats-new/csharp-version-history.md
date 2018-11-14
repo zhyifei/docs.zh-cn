@@ -3,12 +3,12 @@ title: C# 发展历史 - C# 指南
 description: 这些语言在最早版本中是什么样的，它又是如何演化的？
 author: erikdietrich
 ms.date: 09/20/2017
-ms.openlocfilehash: 7a7030eb9479ebae553f3bb4d569c9a9f931db9a
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 5e8ecdd971a043dc47c50b10c974d86f836818dc
+ms.sourcegitcommit: d88024e6d6d8b242feae5f4007a709379355aa24
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43504408"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49316254"
 ---
 # <a name="the-history-of-c"></a>C# 发展历史 #
 
@@ -145,10 +145,10 @@ C# 在 3.0 版和 5.0 版对面向对象的语言添加了主要的新功能。 
 
 C# 7.0 版是最新的主版本。 虽然该版本继承和发展了 C# 6.0，但不包含编译器即服务。 以下介绍了部分新增功能：
 
-- [Out 变量](http://www.c-sharpcorner.com/article/out-variables-in-c-sharp-7-0/)
+- [Out 变量](https://www.c-sharpcorner.com/article/out-variables-in-c-sharp-7-0/)
 - [元组和析构函数](https://www.thomaslevesque.com/2016/08/23/tuple-deconstruction-in-c-7/)
 - [模式匹配](./csharp-7.md#pattern-matching)
-- [本地函数](http://www.infoworld.com/article/3182416/application-development/c-7-in-depth-exploring-local-functions.html)
+- [本地函数](https://www.infoworld.com/article/3182416/application-development/c-7-in-depth-exploring-local-functions.html)
 - [已扩展 expression bodied 成员](./csharp-7.md#more-expression-bodied-members)
 - [Ref 局部变量和返回结果](./csharp-7.md#ref-locals-and-returns)
 

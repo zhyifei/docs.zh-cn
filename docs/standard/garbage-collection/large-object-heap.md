@@ -8,12 +8,12 @@ helpviewer_keywords:
 - GC [.NET ], large object heap
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8dfe3fdbf71918a7ed2b6dccca24f58688bc14f2
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: cdbbf3138cad0a2fae311bf03476eebba23b7320
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46003082"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50202902"
 ---
 # <a name="the-large-object-heap-on-windows-systems"></a>Windows 系统上的大型对象堆
 
@@ -164,7 +164,7 @@ ms.locfileid: "46003082"
 > [!NOTE]
 > 建议使用 ETW 事件代替性能计数，因为 ETW 提供更丰富的信息。
 
-### <a name="etw"></a>ETW
+### <a name="etw-events"></a>ETW 事件
 
 垃圾回收器提供丰富的 ETW 事件集，帮助了解堆的工作内容和工作原理。 以下博客文章演示了如何使用 ETW 收集和了解 GC 事件：
 
@@ -204,7 +204,7 @@ perfview /GCOnly /AcceptEULA /nogui collect
 
 ### <a name="a-debugger"></a>调试器
 
-如果只有内存转储，则需要查看 LOH 上实际有哪些对象，你可使用 .NET 提供的 [SoS 调试器扩展](http://msdn2.microsoft.com/ms404370.aspx)来查看。
+如果只有内存转储，则需要查看 LOH 上实际有哪些对象，你可使用 .NET 提供的 [SoS 调试器扩展](../../../docs/framework/tools/sos-dll-sos-debugging-extension.md)来查看。
 
 > [!NOTE]
 > 此部分提到的调试命令适用于 [Windows 调试器](https://www.microsoft.com/whdc/devtools/debugging/default.mspx)。

@@ -1,23 +1,23 @@
 ---
-title: '使用命令行工具实现 F # 入门'
-description: '了解如何在 F # 在任何操作系统 （Windows、 macOs 或 Linux） 上使用.NET Core CLI 构建简单的多项目解决方案。'
+title: 使用命令行工具实现 F# 入门
+description: 了解如何在 F# 在任何操作系统 （Windows、 macOs 或 Linux） 上使用.NET Core CLI 构建简单的多项目解决方案。
 ms.date: 03/26/2018
 ms.openlocfilehash: 8a82970f33c8bbe1b8cdd8fb6499b59b16d3cbf3
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/16/2018
+ms.lasthandoff: 11/02/2018
 ms.locfileid: "45673904"
 ---
-# <a name="get-started-with-f-with-the-net-core-cli"></a>要开始使用 F # 使用.NET Core CLI
+# <a name="get-started-with-f-with-the-net-core-cli"></a>要开始使用 F# 使用.NET Core CLI
 
-本文介绍如何你可以开始使用 F # 在任何操作系统上 （Windows、 macOS 或 Linux） 使用.NET Core  CLI。 它将经历构建使用由一个控制台应用程序调用的类库的多项目解决方案。
+本文介绍如何你可以开始使用 F# 在任何操作系统上 （Windows、 macOS 或 Linux） 使用.NET Core  CLI。 它将经历构建使用由一个控制台应用程序调用的类库的多项目解决方案。
 
 ## <a name="prerequisites"></a>系统必备
 
 若要开始，你必须安装最新[.NET Core SDK](https://www.microsoft.com/net/download/)。
 
-本文假定，您知道如何使用命令行，并且包含首选的文本编辑器。 如果还没有使用它， [Visual Studio Code](get-started-vscode.md)是作为文本编辑器中进行 F # 很好的选择。
+本文假定，您知道如何使用命令行，并且包含首选的文本编辑器。 如果还没有使用它， [Visual Studio Code](get-started-vscode.md)是作为文本编辑器中进行 F# 很好的选择。
 
 ## <a name="build-a-simple-multi-project-solution"></a>构建简单的多项目解决方案
 
@@ -151,4 +151,4 @@ I used to be World but now I'm ""World"" thanks to JSON.NET!
 
 ## <a name="next-steps"></a>后续步骤
 
-接下来，请查看[F # 教程](../tour.md)若要了解有关不同的 F # 功能的详细信息。
+接下来，请查看[F# 教程](../tour.md)若要了解有关不同的 F# 功能的详细信息。

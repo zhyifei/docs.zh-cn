@@ -4,12 +4,12 @@ description: 使用 ASP.NET Core 和 Azure 构建新式 Web 应用程序 | 了�
 author: ardalis
 ms.author: wiwagn
 ms.date: 06/28/2018
-ms.openlocfilehash: ff483c9b555fdf394d11626536c28e7e07516d05
-ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
+ms.openlocfilehash: ae141b3d60a9968ee3fe59474e32a174bdb77e3b
+ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37404627"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "50757447"
 ---
 # <a name="common-web-application-architectures"></a>常用 Web 应用程序体系结构
 
@@ -97,7 +97,7 @@ ms.locfileid: "37404627"
 
 ## <a name="clean-architecture"></a>干净体系结构
 
-遵循依赖倒置原则以及域驱动设计原则 (DDD) 的应用程序倾向于达到类似的体系结构。 多年来，这种体系结构有多种名称。 最初的名称之一是六边形体系结构，然后是端口 - 适配器。 最近，它被称为[洋葱体系结构](http://jeffreypalermo.com/blog/the-onion-architecture-part-1/)或[干净体系结构](https://8thlight.com/blog/uncle-bob/2012/08/13/the-clean-architecture.html)。 此电子书中将后一种名称“干净体系结构”用作此体系结构的名称。
+遵循依赖倒置原则以及域驱动设计原则 (DDD) 的应用程序倾向于达到类似的体系结构。 多年来，这种体系结构有多种名称。 最初的名称之一是六边形体系结构，然后是端口 - 适配器。 最近，它被称为[洋葱体系结构](https://jeffreypalermo.com/blog/the-onion-architecture-part-1/)或[干净体系结构](https://8thlight.com/blog/uncle-bob/2012/08/13/the-clean-architecture.html)。 此电子书中将后一种名称“干净体系结构”用作此体系结构的名称。
 
 > [!NOTE]
 > 术语“干净体系结构”可应用于使用 DDD 原则生成以及未使用 DDD 原则生成的应用程序。 对于前者，这种组合可称为“干净 DDD 体系结构”。
@@ -307,7 +307,7 @@ ENTRYPOINT ["dotnet", "Microsoft.eShopWeb.RazorPages.dll"]
 > - **干净体系结构**  
 >   <https://8thlight.com/blog/uncle-bob/2012/08/13/the-clean-architecture.html>
 > - **洋葱体系结构**  
->   <http://jeffreypalermo.com/blog/the-onion-architecture-part-1/>
+>   <https://jeffreypalermo.com/blog/the-onion-architecture-part-1/>
 > - **存储库模式**  
 >   <https://deviq.com/repository-pattern/>
 > - **干净体系结构解决方案示例**  

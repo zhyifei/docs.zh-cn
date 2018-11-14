@@ -1,12 +1,12 @@
 ---
 title: 文本 (F#)
-description: '了解有关 F # 编程语言中的文本类型。'
+description: 了解有关 F# 编程语言中的文本类型。
 ms.date: 05/16/2016
 ms.openlocfilehash: e6d34acd928edce8447c793105b08085ab0757b9
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2018
+ms.lasthandoff: 11/02/2018
 ms.locfileid: "44087620"
 ---
 # <a name="literals"></a>文本
@@ -14,11 +14,11 @@ ms.locfileid: "44087620"
 > [!NOTE]
 在本文中的 API 参考链接将转至 MSDN （适用于暂时）。
 
-本主题提供了演示如何指定 F # 中的文本类型的表。
+本主题提供了演示如何指定 F# 中的文本类型的表。
 
 ## <a name="literal-types"></a>文本类型
 
-下表显示 F # 中的文本的类型。 表示以十六进制表示法表示的数字的字符不区分大小写;标识类型的字符是区分大小写。
+下表显示 F# 中的文本的类型。 表示以十六进制表示法表示的数字的字符不区分大小写;标识类型的字符是区分大小写。
 
 |类型|描述|后缀或前缀|示例|
 |----|-----------|----------------|--------|
@@ -47,7 +47,7 @@ ms.locfileid: "44087620"
 
 Unicode 字符串可包含可以通过使用指定的显式编码`\u`跟 16 位十六进制代码或可以通过使用指定的 UTF-32 编码`\U`跟表示 Unicode 的 32 位十六进制代码代理项对。
 
-自 F # 3.1，您可以使用`+`符号合并字符串文本。 你还可以使用按位或 (`|||`) 运算符来组合枚举标志。 例如，下面的代码是在 F # 3.1 中合法的：
+自 F# 3.1，您可以使用`+`符号合并字符串文本。 你还可以使用按位或 (`|||`) 运算符来组合枚举标志。 例如，下面的代码是在 F# 3.1 中合法的：
 
 ```fsharp
 [<Literal>]
@@ -82,7 +82,7 @@ let Numbers = (0x9F, 0o77, 0b1010)
 
 ## <a name="underscores-in-numeric-literals"></a>数值文字中的下划线
 
-从 F # 4.1 开始，你可以分隔数字使用下划线字符 (`_`)。
+从 F# 4.1 开始，你可以分隔数字使用下划线字符 (`_`)。
 
 ```fsharp
 let DeadBeef = 0xDEAD_BEEF

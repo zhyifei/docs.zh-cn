@@ -14,20 +14,20 @@ helpviewer_keywords:
 - arguments [Visual Basic], ByRef
 - arguments [Visual Basic], changing value
 ms.assetid: d2b7c766-ce16-4d2c-8d79-3fc0e7ba2227
-ms.openlocfilehash: d2e131b770d8498a634d946a5900f9b373ca7e56
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 393127353a020c1db5df3011b2a97b1c53097f27
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33651513"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "50225329"
 ---
 # <a name="how-to-protect-a-procedure-argument-against-value-changes-visual-basic"></a>如何：防止过程自变量的值被更改 (Visual Basic)
-如果过程声明将参数作为[ByRef](../../../../visual-basic/language-reference/modifiers/byref.md)，Visual Basic 使该过程代码中调用代码的实参的编程元素直接引用。 这允许更改基础中调用代码的自变量的值的过程。 在某些情况下调用的代码可能想要防止此类更改。  
+如果一个过程声明为参数[ByRef](../../../../visual-basic/language-reference/modifiers/byref.md)，Visual Basic 使过程代码中调用代码参数的基础的编程元素直接引用。 这将允许更改调用代码中的实参的值的过程。 在某些情况下调用的代码可能想要防止此类更改。  
   
- 你可以始终保护自变量不被更改通过声明的相应参数[ByVal](../../../../visual-basic/language-reference/modifiers/byval.md)过程中。 如果你想要能够更改在某些情况下，而不是其他给定的自变量，可以将其声明`ByRef`并让调用代码确定在每次调用的传递机制。 此，它会将相应实参括在括号中以将其传递的值，或不将其括起来在括号中以通过引用传递。 有关详细信息，请参阅[如何： 强制通过值传递到自变量](./how-to-force-an-argument-to-be-passed-by-value.md)。  
+ 你可以始终防止自变量的更改中通过声明的相应参数[ByVal](../../../../visual-basic/language-reference/modifiers/byval.md)过程中。 如果你想要将无法更改在某些情况下，而不是其他中给定的参数，可以将其声明`ByRef`并让调用代码确定每个调用中的传递机制。 之所以如此是因为相应的参数中括号括起来，将它传递的值，或不将其括起来在括号中以通过引用进行传递。 有关详细信息，请参阅[如何： 强制通过值传递到自变量](./how-to-force-an-argument-to-be-passed-by-value.md)。  
   
 ## <a name="example"></a>示例  
- 下面的示例演示对其元素的两个过程可采用一个数组变量并运行。 `increase`过程只需添加一个对每个元素。 `replace`过程将一个新数组分配给参数`a()`，然后添加一个用于每个元素。 但是，重新分配不会影响调用代码中的基础数组变量。  
+ 下面的示例演示两个过程采用一个数组变量并运行它的元素。 `increase`过程只需添加一个到每个元素。 `replace`过程将一个新数组分配给该参数`a()`，然后添加一个到每个元素。 但是，重新分配不影响调用代码中的基础数组变量。  
   
  [!code-vb[VbVbcnProcedures#35](./codesnippet/VisualBasic/how-to-protect-a-procedure-argument-against-value-changes_1.vb)]  
   
@@ -35,12 +35,12 @@ ms.locfileid: "33651513"
   
  [!code-vb[VbVbcnProcedures#37](./codesnippet/VisualBasic/how-to-protect-a-procedure-argument-against-value-changes_3.vb)]  
   
- 第一个`MsgBox`调用显示"后 increase(n): 11、 21、 31、 41"。 因为数组`n`是引用类型，`replace`可以更改的成员，即使的传递机制`ByVal`。  
+ 第一个`MsgBox`调用显示"后 increase(n): 11、 21、 31、 41"。 因为数组`n`是引用类型，`increase`可以更改其中一个成员，即使传递机制是`ByVal`。  
   
- 第二个`MsgBox`调用显示"后 replace(n): 11、 21、 31、 41"。 因为`n`传递`ByVal`，`replace`不能修改变量`n`通过向它分配一个新数组，调用代码中。 当`replace`创建新的数组实例`k`并将其分配到本地变量`a`，它将失去对引用`n`传递中调用代码。 当其更改的成员`a`，只有本地数组`k`受到影响。 因此，`replace`不会增加的数组值`n`调用代码中。  
+ 第二个`MsgBox`调用显示"后 replace(n): 11、 21、 31、 41"。 因为`n`传递`ByVal`，`replace`不能修改变量`n`通过向它分配一个新数组，调用代码中。 当`replace`创建新的数组实例`k`并将其分配给本地变量`a`，它将失去对引用`n`由调用代码传入。 当其更改的成员`a`，只有本地数组`k`受到影响。 因此，`replace`不会增加数组的值`n`调用代码中。  
   
 ## <a name="compiling-the-code"></a>编译代码  
- Visual Basic 中的默认值是通过值传递自变量。 但是，很好的编程做法包括[ByVal](../../../../visual-basic/language-reference/modifiers/byval.md)或[ByRef](../../../../visual-basic/language-reference/modifiers/byref.md)关键字后跟每个声明的参数。 这使得你的代码易于阅读。  
+ Visual Basic 中的默认值是按值传递参数。 但是，它是一个良好的编程做法包括[ByVal](../../../../visual-basic/language-reference/modifiers/byval.md)或[ByRef](../../../../visual-basic/language-reference/modifiers/byref.md)关键字与每个声明的参数。 这使您的代码易于阅读。  
   
 ## <a name="see-also"></a>请参阅  
  [过程](./index.md)  
@@ -52,4 +52,4 @@ ms.locfileid: "33651513"
  [如何：更改过程自变量的值](./how-to-change-the-value-of-a-procedure-argument.md)  
  [如何：强制通过值传递自变量](./how-to-force-an-argument-to-be-passed-by-value.md)  
  [按位置和按名称传递自变量](./passing-arguments-by-position-and-by-name.md)  
- [值类型和引用类型](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)
+ [Value Types and Reference Types](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)

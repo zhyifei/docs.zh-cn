@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 932788f2-b87d-44cf-82f9-04492a8b2722
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 047cd7a2b8a6d315c6cadb9b535b84f744fd2d09
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: f981d667f3cbf35ab010ac5bd26a9ecd5c2aae11
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43504880"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50135425"
 ---
 # <a name="pipeline-development"></a>管线开发
 外接程序管道是主机应用程序和其外接程序必须使用与彼此进行通信的管线段的路径。  
@@ -89,5 +89,5 @@ ms.locfileid: "43504880"
      介绍如何通过使用书店方案管道传递的数据集合。  
   
 ## <a name="see-also"></a>请参阅  
- [外接程序管线方案](https://msdn.microsoft.com/library/feb70e0b-8734-494c-aeaf-b567f014043e)  
- [外接程序和扩展性](../../../docs/framework/add-ins/index.md)
+- [外接程序管线方案](https://msdn.microsoft.com/library/feb70e0b-8734-494c-aeaf-b567f014043e)  
+- [外接程序和扩展性](../../../docs/framework/add-ins/index.md)

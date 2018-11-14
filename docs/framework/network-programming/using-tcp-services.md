@@ -16,21 +16,19 @@ helpviewer_keywords:
 - protocols, TCP
 - Internet, TCP
 ms.assetid: d2811830-3bcb-495c-b82d-cda9cf919aad
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: e6ab51da72a7cecac02a2bbd5664dee164239401
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 11b0082630fb41823173a87160344d2dfff5482e
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47195447"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50193391"
 ---
 # <a name="using-tcp-services"></a>使用 TCP 服务
 <xref:System.Net.Sockets.TcpClient> 类使用 TCP 从 Internet 资源请求数据。 TcpClient 的方法和属性会摘录为了通过 TCP 请求和接收数据而创建的 <xref:System.Net.Sockets.Socket> 的详细信息。 与远程设备的连接表示为流，因此可以使用 .NET Framework 流处理技术读取和写入数据。  
   
  TCP 协议与远程终结点建立连接，然后使用此连接发送和接收数据包。 TCP 负责确保将数据包发送到终结点，并在数据包到达时以正确的顺序对其进行汇编。  
   
- 若要建立 TCP 连接，必须知道承载所需服务的网络设备地址以及该服务用于通信的 TCP 端口。 Internet 编号分配机构 (IANA) 定义公共服务的端口号（请参阅 www.iana.org/assignments/port-numbers）。 不在 IANA 列表上的服务可使用 1,024 到 65,535 范围内的端口号。  
+ 若要建立 TCP 连接，必须知道承载所需服务的网络设备地址以及该服务用于通信的 TCP 端口。 Internet 编号分配机构 (IANA) 定义公共服务的端口号（请参阅[服务名称和传输协议端口号注册表](https://www.iana.org/assignments/service-names-port-numbers/service-names-port-numbers.xhtml)）。 不在 IANA 列表上的服务可使用 1,024 到 65,535 范围内的端口号。  
   
  以下示例演示如何设置 TcpClient 以连接到 TCP 端口 13 上的时间服务器。  
   

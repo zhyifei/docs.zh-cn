@@ -2,7 +2,7 @@
 title: .NET Framework 系统要求
 description: 了解安装 .NET Framework 4.5 及更高版本对硬件、操作系统和软件的要求。
 ms.custom: updateeachrelease
-ms.date: 04/10/2018
+ms.date: 10/01/2018
 helpviewer_keywords:
 - software requirements
 - .NET Framework, system requirements
@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 298275e2-da1d-4618-9f74-6a3567832350
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 909b9369aba6b22899ae3fe7ac15eb470c5c2697
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: e9d1c6dff4a1a8722a2ca196763756336d512631
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43509173"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50203938"
 ---
 # <a name="net-framework-system-requirements"></a>.NET Framework 系统要求
 
@@ -26,6 +26,8 @@ ms.locfileid: "43509173"
 * .NET Framework 4.5 及其次要版本（4.5.1 和 4.5.2）。
 * .NET Framework 4.6 及其次要版本（4.6.1 和 4.6.2）。
 * .NET Framework 4.7 及其单点版本（4.7.1 和 4.7.2）。
+
+有关早于 .NET Framework 4.5 的 .NET Framework 版本，请参阅 [.NET Framework 版本和依赖项](../migration-guide/versions-and-dependencies.md)。
 
 允许你开发 .NET Framework 的应用的开发环境具有单独的一套需求。
 
@@ -53,6 +55,7 @@ ms.locfileid: "43509173"
 
 | 操作系统 | 支持的版本 | 随 OS 预安装 | 可安装单独 |
 | ---------------- | ------------------ | ------------------------ | ---------------------- |
+| Windows 10 2018 年 10 月更新 | 32 位和 64 位 | .NET Framework 4.7.2 |--|
 | Windows 10 2018 年 4 月更新 | 32 位和 64 位 | .NET Framework 4.7.2 |--|
 | Windows 10 Fall Creators Update | 32 位和 64 位 | .NET Framework 4.7.1 | .NET Framework 4.7.2 |
 | Windows 10 创意者更新 | 32 位和 64 位 | .NET Framework 4.7 | .NET Framework 4.7.1<br/><br/>.NET Framework 4.7.2 | 
@@ -105,6 +108,6 @@ ms.locfileid: "43509173"
 
 ## <a name="see-also"></a>请参阅
 
-[安装指南](../../../docs/framework/install/index.md)   
-[入门](../../../docs/framework/get-started/index.md)   
-[安装和卸载 .NET Framework 受阻疑难解答](../../../docs/framework/install/troubleshoot-blocked-installations-and-uninstallations.md)
+- [安装指南](../../../docs/framework/install/index.md)   
+- [入门](../../../docs/framework/get-started/index.md)   
+- [安装和卸载 .NET Framework 受阻疑难解答](../../../docs/framework/install/troubleshoot-blocked-installations-and-uninstallations.md)

@@ -1,14 +1,12 @@
 ---
 title: 内插的字符串 (Visual Basic)
 ms.date: 10/31/2017
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 313e74d5ce252884f1df2479ef1db8b4b24b5cce
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 68194d4251f7057a070535531e0d4c1ad9154530
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44040926"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50200883"
 ---
 # <a name="interpolated-strings-visual-basic-reference"></a>内插的字符串 （Visual Basic 参考）
 

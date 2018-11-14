@@ -2,19 +2,19 @@
 title: 可重入的 ConcurrencyMode
 ms.date: 03/30/2017
 ms.assetid: b2046c38-53d8-4a6c-a084-d6c7091d92b1
-ms.openlocfilehash: c5fa690ca3b8ffe14eb9f19f0bb096b867ab992f
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 94ea62d18fec202a099c2797602224eab43299b4
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43740524"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50202011"
 ---
 # <a name="concurrencymode-reentrant"></a>可重入的 ConcurrencyMode
 本示例演示对服务实现使用 ConcurrencyMode.Reentrant 的必要性和含义。 ConcurrencyMode.Reentrant 暗示服务（或回调）只在给定时间处理一个消息（类似于 `ConcurencyMode.Single`）。 若要确保线程安全，Windows Communication Foundation (WCF) 锁定`InstanceContext`处理一条消息，以便可以处理任何其他消息。 在处于可重入模式的情况下，`InstanceContext` 将仅在服务进行传出调用之前解除锁定，从而允许后续调用（可按示例中的演示重入），并在下次进入服务时被锁定。 为了演示此行为，示例演示了客户端和服务如何使用双工协定相互发送消息。  
   
  定义的协定是双工协定，其 `Ping` 方法由服务实现，其回调方法 `Pong` 由客户端实现。 客户端用滴答计数调用服务的 `Ping` 方法，从而启动调用。 服务检查滴答计数是否等于 0，然后调用回调 `Pong` 方法，同时递减滴答计数。 以上过程通过示例中的以下代码完成。  
   
-```  
+```csharp
 public void Ping(int ticks)  
 {  
      Console.WriteLine("Ping: Ticks = " + ticks);  
@@ -28,7 +28,7 @@ public void Ping(int ticks)
   
  回调的 `Pong` 实现与 `Ping` 实现具有相同的逻辑。 也就是说，该实现检查滴答计数是否不为零，然后对回调通道（在本例中为用于发送原始 `Ping` 消息的通道）调用 `Ping` 方法，并使滴答计数减 1。 当滴答计数达到 0 时，该方法返回，从而将所有回复解包回启动该调用的客户端进行的第一个调用。 回调实现中显示了此过程。  
   
-```  
+```csharp
 public void Pong(int ticks)  
 {  
     Console.WriteLine("Pong: Ticks = " + ticks);  
@@ -55,7 +55,7 @@ public void Pong(int ticks)
 ## <a name="demonstrates"></a>演示  
  若要运行示例，请生成客户端和服务器项目。 然后打开两个命令窗口，并将目录更改为\<示例 > \CS\Service\bin\debug 和\<示例 > \CS\Client\bin\debug 目录。 然后启动该服务通过键入`service.exe`和调用的计时周期数作为输入参数传递的初始值 Client.exe。 显示了 10 次滴答的示例输出。  
   
-```  
+```console  
 Prompt>Service.exe  
 ServiceHost Started. Press Enter to terminate service.  
 Ping: Ticks = 10  

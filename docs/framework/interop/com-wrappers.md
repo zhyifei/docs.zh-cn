@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: e56c485b-6b67-4345-8e66-fd21835a6092
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 57483f099bb71a1ab685cedf148d4343c12983dd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d86743f59c12cf59376ad542c2cd58f6e8c4ad65
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33390518"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50187239"
 ---
 # <a name="com-wrappers"></a>COM 包装
 COM 在以下几个重要方面与 .NET Framework 对象模型存在差别：  
@@ -35,7 +35,7 @@ COM 包装器概述
  大多数情况下，运行时生成的标准 RCW 或 CCW 都可为跨 COM 和.NET Framework 之间边界的调用提供充分的封送处理。 使用自定义属性，可以选择性地调整运行时表示托管和非托管代码的方式。  
   
 ## <a name="see-also"></a>请参阅  
- [高级 COM 互操作性](https://msdn.microsoft.com/library/3ada36e5-2390-4d70-b490-6ad8de92f2fb(v=vs.100))  
+ [高级 COM 互操作性](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bd9cdfyx(v=vs.100))  
  [运行时可调用包装器](runtime-callable-wrapper.md)  
  [COM 可调用包装器](com-callable-wrapper.md)  
  [自定义标准包装器](https://msdn.microsoft.com/library/c40d089b-6a3c-41b5-a20d-d760c215e49d(v=vs.100))  

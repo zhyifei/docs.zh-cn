@@ -4,11 +4,11 @@ description: dotnet publish 命令可将 .NET Core 项目发布到目录。
 author: mairaw
 ms.author: mairaw
 ms.date: 05/29/2018
-ms.openlocfilehash: a60777d613573076f41fba3e5ed610b236884063
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 17bacc92eea90072b95b2d42a87cb57e9fa0be67
+ms.sourcegitcommit: 3b1cb8467bd73dee854b604e306c0e7e3882d91a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
+ms.lasthandoff: 11/07/2018
 ms.locfileid: "43511419"
 ---
 # <a name="dotnet-publish"></a>dotnet 发布
@@ -58,7 +58,7 @@ dotnet publish [-h|--help]
 
 `PROJECT`
 
-要发布的项目。 如果未指定，则默认为当前目录。
+要发布的项目。 它是 [C#](csproj.md)、F# 或 Visual Basic 项目文件的路径和文件名，或包含 C#、F# 或 Visual Basic 项目文件的目录的路径。 如果未指定，则默认为当前目录。
 
 ## <a name="options"></a>选项
 

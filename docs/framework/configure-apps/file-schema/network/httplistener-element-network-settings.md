@@ -2,14 +2,12 @@
 title: '&lt;httpListener&gt;元素 （网络设置）'
 ms.date: 03/30/2017
 ms.assetid: 62f121fd-3f2e-4033-bb39-48ae996bfbd9
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: 7a8fbf172548ea68874f3e6c6c6c7a04bf17be19
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: 58228eed71dd6a5f5af8e26c02db9633da6ceef6
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47078599"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50197777"
 ---
 # <a name="lthttplistenergt-element-network-settings"></a>&lt;httpListener&gt;元素 （网络设置）
 自定义使用参数<xref:System.Net.HttpListener>类。  
@@ -140,7 +138,7 @@ ms.locfileid: "47078599"
 |可以为空||  
   
 ## <a name="see-also"></a>请参阅  
- <xref:System.Net.Configuration.HttpListenerElement>  
- <xref:System.Net.HttpListener>  
- <xref:System.Net.HttpListenerRequest.Url%2A>  
- [网络设置架构](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+- <xref:System.Net.Configuration.HttpListenerElement>  
+- <xref:System.Net.HttpListener>  
+- <xref:System.Net.HttpListenerRequest.Url%2A>  
+- [网络设置架构](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

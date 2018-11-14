@@ -2,12 +2,12 @@
 title: 创建 LINQ to DataSet 项目在 Visual Studio 中
 ms.date: 08/15/2018
 ms.assetid: 49ba6cb0-cdd2-4571-aeaa-25bf0f40e9b3
-ms.openlocfilehash: 12544c6b5153a5f6300072d1646f2c119fb255a1
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 22763d3b9581d09d7bdda0c09480f8d36bb8e2ec
+ms.sourcegitcommit: 4bca8f7e172fd019ef437a4803bf5895c6bc4781
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43515741"
+ms.lasthandoff: 11/03/2018
+ms.locfileid: "50980724"
 ---
 # <a name="how-to-create-a-linq-to-dataset-project-in-visual-studio"></a>如何： 创建 LINQ to DataSet 项目在 Visual Studio 中
 
@@ -22,7 +22,7 @@ LINQ 到数据集需要两个其他引用*System.Data.dll*并*System.Data.DataSe
 
 ## <a name="to-enable-linq-to-dataset-functionality"></a>启用 LINQ to DataSet 功能
 
-按照以下步骤来启用 LINQ to DataSet 中的现有项目的功能。
+请按照下列步骤以启用 LINQ to DataSet 中的现有项目的功能。
 
 1. 将引用添加到**System.Core**， **System.Data**，并**System.Data.DataSetExtensions**。
 

@@ -6,12 +6,12 @@ ms.date: 04/12/2018
 ms.technology: dotnet-standard
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1c99f59478b61bd382d6bf9529d2921407cc70bc
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 19353bd068e3b04bc3d852c1e22db9c97ebef628
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44253151"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48583160"
 ---
 # <a name="whats-new-in-the-net-standard"></a>.NET Standard 中的新增功能
 
@@ -55,7 +55,7 @@ ms.locfileid: "44253151"
 
 ### <a name="support-for-net-framework-libraries"></a>支持 .NET Framework 库
 
-绝大多数库定目标到 .NET Framework，而不是 .NET Standard。 不过，这些库大多调用的是 .NET Standard 2.0 中的 API。 自 .NET Standard 2.0 起，可以使用[兼容性垫片](https://github.com/dotnet/standard/blob/master/docs/planning/netstandard-20/README.md#assembly-unification)从 .NET Standard 库访问 .NET Framework 库。 此兼容性层对开发人员透明；无需执行任何操作，即可使用 .NET Framework 库。
+绝大多数库定目标到 .NET Framework，而不是 .NET Standard。 不过，这些库大多调用的是 .NET Standard 2.0 中的 API。 自 .NET Standard 2.0 起，可以使用[兼容性垫片](https://github.com/dotnet/standard/blob/master/docs/planning/netstandard-2.0/README.md#assembly-unification)从 .NET Standard 库访问 .NET Framework 库。 此兼容性层对开发人员透明；无需执行任何操作，即可使用 .NET Framework 库。
 
 只有一项要求就是，.NET Framework 类库调用的 API 必须是 .NET Standard 2.0 中的 API。
 

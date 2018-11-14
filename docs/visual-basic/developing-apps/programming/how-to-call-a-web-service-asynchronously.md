@@ -5,15 +5,15 @@ helpviewer_keywords:
 - asynchronous calls [Visual Basic]
 - Web services [Visual Basic], accessing
 ms.assetid: ff8046f4-f1f2-4d8b-90b7-95e3f7415418
-ms.openlocfilehash: 8968eaa8edd8dee177906a6c801f2f46c2a740d7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: bf109780f26ce2fa4d5dbaa63832e765970b5cb4
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33589028"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48842685"
 ---
 # <a name="how-to-call-a-web-service-asynchronously-visual-basic"></a>如何：异步调用 Web 服务 (Visual Basic)
-此示例在 Web 服务的异步处理程序事件中附加了一个处理程序，以便它能检索异步方法调用的结果。 此示例使用了 DemoTemperatureService Web 服务（位于 http://www.xmethods.net）。  
+此示例在 Web 服务的异步处理程序事件中附加了一个处理程序，以便它能检索异步方法调用的结果。 此示例使用了 DemoTemperatureService Web 服务（位于 `http://www.xmethods.net`）。  
   
  在 Visual Studio 集成开发环境 (IDE) 中引用项目中的 Web 服务时，该服务将添加到 `My.WebServices` 对象中，且 IDE 将生成一个客户端代理类来访问指定的 Web 服务  
   
@@ -24,7 +24,7 @@ ms.locfileid: "33589028"
   
 ### <a name="to-call-a-web-service-asynchronously"></a>以异步方式调用 Web 服务  
   
-1.  引用 DemoTemperatureService Web 服务（位于 http://www.xmethods.net）。 网址为  
+1.  引用 DemoTemperatureService Web 服务（位于 `http://www.xmethods.net`）。 网址为  
   
     ```  
     http://www.xmethods.net/sd/2001/DemoTemperatureService.wsdl  

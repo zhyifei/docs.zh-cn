@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 7d7535e9-4b4a-4b8c-82e2-e40dff5a7821
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: 9f8176ca3ee2340100978aef044140dafdeb179b
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: f5d53debd746ba031e39215354c391d288016b6b
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48028428"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50201344"
 ---
 # <a name="ltnameentrygt-element"></a>&lt;nameEntry&gt;元素
 将类名称映射到友好算法名称，允许一个类具有多个友好名称。  
@@ -78,7 +78,7 @@ ms.locfileid: "48028428"
 ```  
   
 ## <a name="see-also"></a>请参阅  
- [配置文件架构](../../../../../docs/framework/configure-apps/file-schema/index.md)  
- [加密设置架构](../../../../../docs/framework/configure-apps/file-schema/cryptography/index.md)  
- [加密服务](../../../../../docs/standard/security/cryptographic-services.md)  
- [配置加密类](../../../../../docs/framework/configure-apps/configure-cryptography-classes.md)
+- [配置文件架构](../../../../../docs/framework/configure-apps/file-schema/index.md)  
+- [加密设置架构](../../../../../docs/framework/configure-apps/file-schema/cryptography/index.md)  
+- [Cryptographic Services](../../../../../docs/standard/security/cryptographic-services.md)  
+- [配置加密类](../../../../../docs/framework/configure-apps/configure-cryptography-classes.md)

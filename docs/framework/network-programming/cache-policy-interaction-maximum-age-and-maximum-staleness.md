@@ -9,14 +9,12 @@ helpviewer_keywords:
 - staleness of cached resources
 - age of cached resources
 ms.assetid: 7f775925-89a1-4956-ba90-c869c1749a94
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: c512f03cd3c0cfc4463e54538f12898fbbf45f7e
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 7a066f403e526c50054b58a099bb7978ef57e74d
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47235771"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50181142"
 ---
 # <a name="cache-policy-interactionmaximum-age-and-maximum-staleness"></a>缓存策略交互 — 最长使用期限和最长过期时间
 为了帮助确保将最新鲜的内容返回给客户端应用程序，客户端缓存策略和服务器重新验证要求的交互始终会造成最保守的缓存策略。 本主题中的所有示例阐明针对在 1 月 1 日缓存、1 月 4 日过期的资源的缓存策略。  

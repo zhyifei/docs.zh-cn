@@ -1,12 +1,12 @@
 ---
 title: let 绑定 (F#)
-description: '了解如何使用 F # let 绑定，标识符相关联的值或函数。'
+description: 了解如何使用 F# let 绑定，标识符相关联的值或函数。
 ms.date: 05/16/2016
 ms.openlocfilehash: 1a35b5a39f2768a18665b5c7fe768af0e7714577
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2018
+ms.lasthandoff: 11/02/2018
 ms.locfileid: "43777465"
 ---
 # <a name="let-bindings"></a>let 绑定
@@ -110,7 +110,7 @@ let function3 x =
     function1 x
 ```
 
-某些模块具有属性[RequireQualifiedAccess](https://msdn.microsoft.com/library/8b9b6ade-0471-4413-ac5d-638cd0de5f15)，这意味着，必须使用的模块的名称限定它们公开的函数。 例如，F # 列表模块具有此属性。
+某些模块具有属性[RequireQualifiedAccess](https://msdn.microsoft.com/library/8b9b6ade-0471-4413-ac5d-638cd0de5f15)，这意味着，必须使用的模块的名称限定它们公开的函数。 例如，F# 列表模块具有此属性。
 
 模块和访问控制的详细信息，请参阅[模块](../modules.md)并[访问控制](../access-control.md)。
 

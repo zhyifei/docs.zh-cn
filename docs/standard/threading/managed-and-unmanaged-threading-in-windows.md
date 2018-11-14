@@ -1,22 +1,25 @@
 ---
 title: Windows 中的托管和非托管线程处理
-ms.date: 03/30/2017
+ms.date: 10/24/2018
 ms.technology: dotnet-standard
 helpviewer_keywords:
 - threading [.NET Framework], unmanaged
 - threading [.NET Framework], managed
+- threading [.NET], managed
+- threads and fibers [.NET]
 - managed threading
 ms.assetid: 4fb6452f-c071-420d-9e71-da16dee7a1eb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7834df6c987e94e59357c7c60db2627d107bffc3
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 34bd959890717a16df80d3870099757dd7400943
+ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43864545"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "50757356"
 ---
 # <a name="managed-and-unmanaged-threading-in-windows"></a>Windows 中的托管和非托管线程处理
+
 所有线程的管理都是通过 <xref:System.Threading.Thread> 类完成的，包括由公共语言运行时创建的线程以及在运行时以外创建并进入托管环境以执行代码的线程。 运行时监视其进程中曾经在托管执行环境中执行过代码的所有线程。 它不跟踪任何其他线程。 线程可以通过 COM 互操作（原因是运行时将托管对象作为 COM 对象向非托管领域公开）、COM [DllGetClassObject](/windows/desktop/api/combaseapi/nf-combaseapi-dllgetclassobject) 函数和平台调用进入托管执行环境。  
   
  当非托管线程进入运行时（如通过 COM 可调用包装）时，系统将检查该线程的线程本地存储区以查找内部托管 <xref:System.Threading.Thread> 对象。 若找到一个对象，运行时就会注意到该线程。 但如果一个也找不到，则运行时将生成新的 <xref:System.Threading.Thread> 对象并将其安装在该线程的线程本地存储区中。  
@@ -26,8 +29,9 @@ ms.locfileid: "43864545"
 > [!NOTE]
 >  因为非托管宿主可以控制托管线程和非托管线程之间的关系，所以操作系统 **ThreadId** 与托管线程之间没有固定的关系。 具体而言，一个复杂的主机可以使用 Fiber API 针对同一操作系统线程调度多个托管线程，或在不同的操作系统线程之间移动托管线程。  
   
-## <a name="mapping-from-win32-threading-to-managed-threading"></a>从 Win32 线程处理到托管线程处理的映射  
- 下表将 Win32 线程处理元素映射为其近似的运行时等效元素。 注意，此映射不表示具有相同的功能。 例如， **TerminateThread** 不执行 **finally** 子句或释放资源，并且不能被禁止。 但 <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> 可以执行所有回滚代码，回收所有资源，并可以使用 <xref:System.Threading.Thread.ResetAbort%2A> 来拒绝。 请确保在对功能进行假设之前仔细阅读该文档。  
+## <a name="mapping-from-win32-threading-to-managed-threading"></a>从 Win32 线程处理到托管线程处理的映射
+
+ 下表将 Win32 线程处理元素映射为其近似的运行时等效元素。 注意，此映射不表示具有相同的功能。 例如， **TerminateThread** 不执行 **finally** 子句或释放资源，并且不能被禁止。 但 <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> 可以执行所有回滚代码，回收所有资源，并可以使用 <xref:System.Threading.Thread.ResetAbort%2A>来拒绝。 请确保在对功能进行假设之前仔细阅读该文档。  
   
 |在 Win32 中|在公共语言运行时中|  
 |--------------|------------------------------------|  
@@ -44,8 +48,9 @@ ms.locfileid: "43864545"
 |无等效项|<xref:System.Threading.Thread.IsBackground%2A?displayProperty=nameWithType>|  
 |接近 **CoInitializeEx** (OLE32.DLL)|<xref:System.Threading.Thread.ApartmentState%2A?displayProperty=nameWithType>|  
   
-## <a name="managed-threads-and-com-apartments"></a>托管线程和 COM 单元  
- 可标记一个托管线程以指示其将托管一个[单线程](/windows/desktop/com/single-threaded-apartments)或[多线程](/windows/desktop/com/multithreaded-apartments)单元。 （有关 COM 线程处理体系结构的详细信息，请参阅 [Processes, threads, and Apartments](https://msdn.microsoft.com/library/windows/desktop/ms693344.aspx)（进程、线程和单元）。）<xref:System.Threading.Thread.GetApartmentState%2A> 类的 <xref:System.Threading.Thread.SetApartmentState%2A>、<xref:System.Threading.Thread.TrySetApartmentState%2A> 和 <xref:System.Threading.Thread> 方法返回并分配线程的单元状态。 如果未设置该状态，则 <xref:System.Threading.Thread.GetApartmentState%2A> 返回 <xref:System.Threading.ApartmentState.Unknown?displayProperty=nameWithType>。  
+## <a name="managed-threads-and-com-apartments"></a>托管线程和 COM 单元
+
+可以标记一个托管线程以指示它将承载一个 [单线程](/windows/desktop/com/single-threaded-apartments) 或 [多线程](/windows/desktop/com/multithreaded-apartments) 单元。 （有关 COM 线程处理体系结构的详细信息，请参阅 [进程、线程和单元](/windows/desktop/com/processes--threads--and-apartments)。）<xref:System.Threading.Thread.GetApartmentState%2A> 类的 <xref:System.Threading.Thread.SetApartmentState%2A>、<xref:System.Threading.Thread.TrySetApartmentState%2A> 和 <xref:System.Threading.Thread> 方法返回并分配线程的单元状态。 如果未设置该状态，则 <xref:System.Threading.Thread.GetApartmentState%2A> 返回 <xref:System.Threading.ApartmentState.Unknown?displayProperty=nameWithType>。  
   
  只有当线程处于 <xref:System.Threading.ThreadState.Unstarted?displayProperty=nameWithType> 状态时才可以设置该属性；但一个线程只能设置一次。  
   
@@ -61,8 +66,13 @@ ms.locfileid: "43864545"
  当托管代码调用至 COM 对象时，它始终遵循 COM 规则。 换言之，它遵循 OLE32 的规定，通过 COM 单元代理和 COM+ 1.0 上下文包装来调用。  
   
 ## <a name="blocking-issues"></a>阻止问题  
- 在阻止了非托管代码中的线程的操作系统中，如果线程进行非托管调用，则运行时将不会为 <xref:System.Threading.Thread.Interrupt%2A?displayProperty=nameWithType> 或 <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> 控制该线程。 若为 <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType>，运行时会为 Abort 标记线程，并在重入托管代码时控制此线程。 使用托管阻止而不使用非托管阻止更为可取。 <xref:System.Threading.WaitHandle.WaitOne%2A?displayProperty=nameWithType>、<xref:System.Threading.WaitHandle.WaitAny%2A?displayProperty=nameWithType>、<xref:System.Threading.WaitHandle.WaitAll%2A?displayProperty=nameWithType>、<xref:System.Threading.Monitor.Enter%2A?displayProperty=nameWithType>、<xref:System.Threading.Monitor.TryEnter%2A?displayProperty=nameWithType>、<xref:System.Threading.Thread.Join%2A?displayProperty=nameWithType>、<xref:System.GC.WaitForPendingFinalizers%2A?displayProperty=nameWithType> 等全都会响应 <xref:System.Threading.Thread.Interrupt%2A?displayProperty=nameWithType> 和 <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType>。 而且，如果你的线程处于单线程单元，则当你的线程被阻止时，单元中的所有托管阻止操作都将正确发送消息。  
-  
+
+在阻止了非托管代码中的线程的操作系统中，如果线程进行非托管调用，则运行时将不会为 <xref:System.Threading.Thread.Interrupt%2A?displayProperty=nameWithType> 或 <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType>控制该线程。 对于 <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType>，运行时将该线程标记为 **Abort** ，并在重新进入托管代码时控制该线程。 使用托管阻止而不使用非托管阻止更为可取。 <xref:System.Threading.WaitHandle.WaitOne%2A?displayProperty=nameWithType>、<xref:System.Threading.WaitHandle.WaitAny%2A?displayProperty=nameWithType>, <xref:System.Threading.WaitHandle.WaitAll%2A?displayProperty=nameWithType>, <xref:System.Threading.Monitor.Enter%2A?displayProperty=nameWithType>, <xref:System.Threading.Monitor.TryEnter%2A?displayProperty=nameWithType>, <xref:System.Threading.Thread.Join%2A?displayProperty=nameWithType>, <xref:System.GC.WaitForPendingFinalizers%2A?displayProperty=nameWithType>等都对 <xref:System.Threading.Thread.Interrupt%2A?displayProperty=nameWithType> 和 <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType>做出响应。 而且，如果你的线程处于单线程单元，则当你的线程被阻止时，单元中的所有托管阻止操作都将正确发送消息。  
+
+## <a name="threads-and-fibers"></a>线程和纤程
+
+.NET 线程处理模型不支持[纤程](/windows/desktop/procthread/fibers)。 不得调用通过使用纤程实现的任何非托管函数。 此类调用可能会导致 .NET 运行时崩溃。
+
 ## <a name="see-also"></a>请参阅
 
 - <xref:System.Threading.Thread.ApartmentState%2A?displayProperty=nameWithType>  

@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 44bf97aa-a9a4-4eba-9a0d-cfaa6fc53a66
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3875b4f44a2c2aad5cc5021d55e22e99bb00a91e
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 463e31ff286b0022ac55f4f9f8e2a4478cceadc9
+ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43739823"
+ms.lasthandoff: 10/18/2018
+ms.locfileid: "49400471"
 ---
 # <a name="ngenexe-native-image-generator"></a>Ngen.exe（本机映像生成器）
 本机映像生成器 (Ngen.exe) 是一种提高托管应用程序性能的工具。 Ngen.exe 创建本机映像（包含经编译的特定于处理器的机器代码的文件），并将它们安装到本地计算机上的本机映像缓存中。 运行时可从缓存中使用本机映像，而不必使用实时 (JIT) 编译器编译原始程序集。  
@@ -123,7 +123,7 @@ ngen /? | /help
 |`/nologo`|禁止显示 Microsoft 启动版权标志。|  
 |`/silent`|禁止显示成功消息。|  
 |`/verbose`|显示详细的调试信息。 **注意：** 由于操作系统限制，此选项显示的附加信息比在 Windows 98 和 Windows Millennium Edition 上显示的少。|  
-|`/help`, `/?`|显示当前版本的命令语法和选项。|  
+|`/help`， `/?`|显示当前版本的命令语法和选项。|  
   
 ## <a name="remarks"></a>备注  
  若要运行 Ngen.exe，你必须具有管理特权。  

@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 9dd06e25-12c0-4a9e-855a-452dc83803e2
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 80379e46c6482a3e052c1283fb4aaba2c7df282e
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 31c99d38cd608e93e9ee3467e0ce425835a3d572
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47207093"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50201473"
 ---
 # <a name="mutexes"></a>Mutexes
 <xref:System.Threading.Mutex> 对象可用于提供对资源的独占访问权限。 虽然 <xref:System.Threading.Mutex> 类使用的系统资源比 <xref:System.Threading.Monitor> 类更多，但它可以跨应用域边界进行封送，可用于多个等待操作以及同步不同进程中的线程。 有关托管同步机制的比较，请参阅[同步基元概述](../../../docs/standard/threading/overview-of-synchronization-primitives.md)。  
@@ -51,11 +51,11 @@ ms.locfileid: "47207093"
   
 ## <a name="see-also"></a>请参阅
 
-- <xref:System.Threading.Mutex>  
-- <xref:System.Threading.Mutex.%23ctor%2A>  
-- <xref:System.Security.AccessControl.MutexSecurity>  
-- <xref:System.Security.AccessControl.MutexAccessRule>  
-- [线程处理](../../../docs/standard/threading/index.md)  
-- [线程处理对象和功能](../../../docs/standard/threading/threading-objects-and-features.md)  
-- [监视器](https://msdn.microsoft.com/library/33fe4aef-b44b-42fd-9e72-c908e39e75db)  
-- [线程与线程处理](../../../docs/standard/threading/threads-and-threading.md)
+- <xref:System.Threading.Mutex?displayProperty=nameWithType>  
+- <xref:System.Threading.Mutex.%23ctor%2A?displayProperty=nameWithType>  
+- <xref:System.Security.AccessControl.MutexSecurity?displayProperty=nameWithType>  
+- <xref:System.Security.AccessControl.MutexAccessRule?displayProperty=nameWithType>
+- <xref:System.Threading.Monitor?displayProperty=nameWithType>  
+- [线程处理对象和功能](threading-objects-and-features.md)  
+- [线程与线程处理](threads-and-threading.md)
+- [线程处理](index.md)  

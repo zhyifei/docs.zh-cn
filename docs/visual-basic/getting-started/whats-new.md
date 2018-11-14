@@ -1,6 +1,6 @@
 ---
 title: Visual Basic 的新增功能
-ms.date: 02/15/2018
+ms.date: 10/04/2018
 f1_keywords:
 - VB.StartPage.WhatsNew
 helpviewer_keywords:
@@ -8,14 +8,12 @@ helpviewer_keywords:
 - what's new [Visual Basic]
 - Visual Basic, what's new
 ms.assetid: d7e97396-7f42-4873-a81c-4ebcc4b6ca02
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: ae29553b6a431c3f20f0e5e34614842946532a9b
-ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
+ms.openlocfilehash: 5c7786bd0dc8789d156959dcf94ac6bf8f4fb906
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2018
-ms.locfileid: "42925606"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50194054"
 ---
 # <a name="whats-new-for-visual-basic"></a>Visual Basic 的新增功能
 
@@ -69,6 +67,10 @@ Visual Basic.NET 的首次发布
 ```vb
 StudentInfo.Display("Mary", age:=19, #9/21/1998#)
 ```
+
+[`Private Protected` 成员访问修饰符](../language-reference/modifiers/private-protected.md)
+
+这个新的关键字组合定义了一个成员，该成员可以由其包含的类中的所有成员访问，也可以由从包含的类派生的类型访问，但前提是它们也可以在包含的程序集中找到。 由于无法继承结构，因此 `Private Protected` 仅适用于类的成员。
 
 **前导十六进制/二进制/八进制分隔符**
 
@@ -153,7 +155,7 @@ Visual Basic 命令行编译器现在支持 [-refout](../reference/command-line-
 [字符串内插](../../visual-basic/programming-guide/language-features/strings/interpolated-strings.md)  
  可以使用字符串内插表达式构造字符串。  内插字符串表达式类似于包含表达式的模板字符串。  与[复合格式设置](../../standard/base-types/composite-format.md)相比，内插字符串在自变量方面更易于理解。  
   
-[NULL 条件成员访问和索引](../../csharp/language-reference/operators/null-conditional-operators.md)  
+[NULL 条件成员访问和索引](../language-reference/operators/null-conditional-operators.md)  
 可以在执行成员访问 (`?.`) 或索引 (`?[]`) 操作之前以非常轻量的语法方式测试是否存在 null。  这些运算符可帮助编写更少的代码来处理 null 检查，尤其是对于下降到数据结构。  如果左操作数或对象引用为 null，则操作会返回 null。  
   
 [多行字符串文本](../../visual-basic/programming-guide/language-features/strings/string-basics.md)  

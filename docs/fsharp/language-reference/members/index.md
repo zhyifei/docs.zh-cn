@@ -1,12 +1,12 @@
 ---
 title: 成员 (F#)
-description: '了解在 F # 编程语言的对象成员。'
+description: 了解有关对象成员的信息F#编程语言。
 ms.date: 05/16/2016
 ms.openlocfilehash: 6dcdb1d7fa061fb838d4aa8f7a2912fd168c3781
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 11/02/2018
 ms.locfileid: "33562201"
 ---
 # <a name="members"></a>成员

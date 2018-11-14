@@ -176,7 +176,7 @@ dotnet [command] [arguments] [--additionalprobingpath] [-d|--diagnostics] [--fx-
 | [dotnet help](dotnet-help.md)                 | 显示命令更详细的在线文档。           |
 | [dotnet migrate](dotnet-migrate.md)           | 将有效的预览版 2 项目迁移到 .NET Core SDK 1.0 项目。  |
 | [dotnet msbuild](dotnet-msbuild.md)           | 提供对 MSBuild 命令行的访问权限。                        |
-| [dotnet new](dotnet-new.md)                   | 为给定的模板初始化 C# 或 F # 项目。                |
+| [dotnet new](dotnet-new.md)                   | 为给定的模板初始化 C# 或 F# 项目。                |
 | [dotnet pack](dotnet-pack.md)                 | 创建代码的 NuGet 包。                               |
 | [dotnet publish](dotnet-publish.md)           | 发布 .NET 依赖于框架或独立应用程序。 |
 | [dotnet restore](dotnet-restore.md)           | 还原给定应用程序的依赖项。                  |
@@ -194,7 +194,7 @@ dotnet [command] [arguments] [--additionalprobingpath] [-d|--diagnostics] [--fx-
 | [dotnet help](dotnet-help.md)       | 显示命令更详细的在线文档。           |
 | [dotnet migrate](dotnet-migrate.md) | 将有效的预览版 2 项目迁移到 .NET Core SDK 1.0 项目。  |
 | [dotnet msbuild](dotnet-msbuild.md) | 提供对 MSBuild 命令行的访问权限。                        |
-| [dotnet new](dotnet-new.md)         | 为给定的模板初始化 C# 或 F # 项目。                |
+| [dotnet new](dotnet-new.md)         | 为给定的模板初始化 C# 或 F# 项目。                |
 | [dotnet pack](dotnet-pack.md)       | 创建代码的 NuGet 包。                               |
 | [dotnet publish](dotnet-publish.md) | 发布 .NET 依赖于框架或独立应用程序。 |
 | [dotnet restore](dotnet-restore.md) | 还原给定应用程序的依赖项。                  |
@@ -211,7 +211,7 @@ dotnet [command] [arguments] [--additionalprobingpath] [-d|--diagnostics] [--fx-
 | [dotnet clean](dotnet-clean.md)     | 清除生成输出。                                              |
 | [dotnet migrate](dotnet-migrate.md) | 将有效的预览版 2 项目迁移到 .NET Core SDK 1.0 项目。  |
 | [dotnet msbuild](dotnet-msbuild.md) | 提供对 MSBuild 命令行的访问权限。                        |
-| [dotnet new](dotnet-new.md)         | 为给定的模板初始化 C# 或 F # 项目。                |
+| [dotnet new](dotnet-new.md)         | 为给定的模板初始化 C# 或 F# 项目。                |
 | [dotnet pack](dotnet-pack.md)       | 创建代码的 NuGet 包。                               |
 | [dotnet publish](dotnet-publish.md) | 发布 .NET 依赖于框架或独立应用程序。 |
 | [dotnet restore](dotnet-restore.md) | 还原给定应用程序的依赖项。                  |

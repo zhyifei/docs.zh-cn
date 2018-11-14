@@ -1,20 +1,20 @@
 ---
-title: “C# 中的数字”教程 - C# 本地快速入门
+title: C# 中的数字 - C# 教程简介
 description: 通过浏览数字类型、其属性和方法了解 C#。
 ms.date: 10/31/2017
 ms.custom: mvc
-ms.openlocfilehash: cf8f00193b4fa66ff444fe8e40942c39e99d10b1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 52feb91fc011902f1e30f6b747512a7e0908bfbf
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33355468"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50197452"
 ---
-# <a name="numbers-in-c-quickstart"></a>“C# 中的数字”快速入门
+# <a name="manipulate-integral-and-floating-point-numbers-in-c"></a>处理 C# 中的整数和浮点数 #
 
-本快速入门教程以交互方式介绍了 C# 中的数字类型。 你将编写少量的代码，然后编译并运行这些代码。 本快速入门教程包含一系列课程，介绍了 C# 中的数字和数学操作。 这些课程介绍了 C# 语言的基础知识。
+本教程以交互方式介绍了 C# 中的数字类型。 你将编写少量的代码，然后编译并运行这些代码。 本教程包含一系列课程，介绍了 C# 中的数字和数学运算。 这些课程介绍了 C# 语言的基础知识。
 
-若要学习本快速入门教程，必须有开发计算机。 .NET 主题 [10 分钟入门](https://www.microsoft.com/net/core)介绍了如何在 Mac、PC 或 Linux 上设置本地开发环境。 [本地快速入门教程简介](local-environment.md)不仅简要概述了将用到的命令，还收录了详细信息链接。
+本教程要求你有一台可用于开发的计算机。 .NET 主题 [10 分钟入门](https://www.microsoft.com/net/core)介绍了如何在 Mac、PC 或 Linux 上设置本地开发环境。 [熟悉开发工具](local-environment.md)不仅简要概述了将用到的命令，还收录了详细信息链接。
 
 ## <a name="explore-integer-math"></a>探索整数数学运算
 
@@ -318,9 +318,8 @@ Console.WriteLine(c / d);
 
 可以参阅下面的主题，详细了解 C# 中的数字：
 
-[整型类型表](../language-reference/keywords/integral-types-table.md)   
-[浮点型表](../language-reference/keywords/floating-point-types-table.md)   
-[内置类型表](../language-reference/keywords/built-in-types-table.md)   
-[隐式数值转换表](../language-reference/keywords/implicit-numeric-conversions-table.md)   
-[显式数值转换表](../language-reference/keywords/explicit-numeric-conversions-table.md)
-
+[整型类型表](../../language-reference/keywords/integral-types-table.md)   
+[浮点型表](../../language-reference/keywords/floating-point-types-table.md)   
+[内置类型表](../../language-reference/keywords/built-in-types-table.md)   
+[隐式数值转换表](../../language-reference/keywords/implicit-numeric-conversions-table.md)   
+[显式数值转换表](../../language-reference/keywords/explicit-numeric-conversions-table.md)

@@ -2,14 +2,12 @@
 title: 对等名称解析协议
 ms.date: 03/30/2017
 ms.assetid: 11940511-c124-4d91-ae31-d4ed6e81ee58
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: f17c5e7e2fa7a5eba66f0b9dd8c950a7464eea8e
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: f04b0b2e27c03ed477c6ceb10a5cbe41e1c7ce7c
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47196742"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50185152"
 ---
 # <a name="peer-name-resolution-protocol"></a>对等名称解析协议
 在对等环境中，对等机使用特定的名称解析系统从名称或其他类型的标识符解析彼此的网络位置（地址、协议和端口）。 过去，由于本质上的短暂性连接以及域名系统 (DNS) 内的其他缺陷，造成对等名称解析十分复杂。  
@@ -20,7 +18,7 @@ ms.locfileid: "47196742"
   
  在安全性方面，对等名称可以发布为安全的（受保护的）或不安全的（不受保护的）。 PNRP 使用公钥加密保护安全对等名称免遭欺骗；计算机和服务都可使用 PNRP 命名。  
   
--   对等名称解析协议具备以下属性：  
+对等名称解析协议具备以下属性：  
   
 -   分布式的，且几乎完全无服务器的。 只有在启动进程时才需要服务器。  
   
@@ -30,21 +28,13 @@ ms.locfileid: "47196742"
   
 -   通过 PNRP 解析名称远不止适用于计算机，它还允许对服务进行名称解析。  
   
--  
-  
 ## <a name="the-systemnetpeertopeer-namespace"></a>System.Net.PeerToPeer 命名空间  
   
 -   PNRP 功能由 .NET Framework 版本 3.5 内的 <xref:System.Net.PeerToPeer> 命名空间定义。 它提供的类型集可以用于注册可用的 PNRP 服务并解析其对等名称。  
   
--  
-  
 -   （可以使用 <xref:System.ServiceModel.PeerResolvers> 命名空间中提供的类型创建并实例化 PNRP 和自定义对等解析程序。）  
   
--  
-  
 -   有如下基本类型可用于注册可用的 PNRP 服务并解析其名称：  
-  
--  
   
 -   <xref:System.Net.PeerToPeer.Cloud>：定义描述可用 PNRP 云的信息，包括其范围。  
   
@@ -56,12 +46,8 @@ ms.locfileid: "47196742"
   
 -   <xref:System.Net.PeerToPeer.PeerNameResolver>：定义将对等名称解析到其网络终结点的进程，包括解析的同步和异步方法。  
   
--  
-  
--  
-  
 ## <a name="see-also"></a>请参阅  
- <xref:System.ServiceModel.PeerResolvers>  
- <xref:System.Net.PeerToPeer>  
- [网络编程示例](../../../docs/framework/network-programming/network-programming-samples.md)  
- [PeerToPeer 技术示例](https://go.microsoft.com/fwlink/?LinkID=179571)
+- <xref:System.ServiceModel.PeerResolvers>  
+- <xref:System.Net.PeerToPeer>  
+- [网络编程示例](../../../docs/framework/network-programming/network-programming-samples.md)
+- [PeerToPeer 技术示例](https://go.microsoft.com/fwlink/?LinkID=179571)

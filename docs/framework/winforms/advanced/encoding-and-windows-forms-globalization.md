@@ -19,18 +19,18 @@ helpviewer_keywords:
 - localization [Windows Forms], character sets
 - globalization [Windows Forms], character sets
 ms.assetid: 22e8965d-a712-42b3-8167-3ee346bd70f9
-ms.openlocfilehash: 9257a6b725839d8f433988ab76c4ce9ae349d950
-ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
+ms.openlocfilehash: 1b1ac50bde87b22c3ce9ff7524edbf8750976788
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36208546"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50183108"
 ---
 # <a name="encoding-and-windows-forms-globalization"></a>编码和 Windows 窗体全球化
-Windows 窗体应用程序完全支持 Unicode，这意味着每个字符都用唯一编号表示，无论何种平台、程序或语音都是如此。 有关 Unicode 的详细信息，请参阅[Unicode 联盟网站](http://www.unicode.org)。  
+Windows 窗体应用程序完全支持 Unicode，这意味着每个字符都用唯一编号表示，无论何种平台、程序或语音都是如此。 有关 Unicode 的详细信息，请参阅[Unicode 联盟网站](https://www.unicode.org)。  
   
 ## <a name="benefits-of-unicode"></a>Unicode 的优点  
- 启用 Unicode 的窗体的优点包括，能够处理仅限 Unicode（例如印地语）的脚本。 此外，还可以在单个窗体上使用多种语言。 以 Unicode 格式，所有字符都是两个字节长，所以不需要执行任何特殊操作来表示双字节字符。 还可以编写可在所有平台上工作的单个代码集。 这是从以前版本的 Visual Basic 中，你需要编写针对不同的平台，例如 Windows NT 不同的代码更改和[!INCLUDE[win98](../../../../includes/win98-md.md)]。  
+ 启用 Unicode 的窗体的优点包括，能够处理仅限 Unicode（例如印地语）的脚本。 此外，还可以在单个窗体上使用多种语言。 以 Unicode 格式，所有字符都是两个字节长，所以不需要执行任何特殊操作来表示双字节字符。 还可以编写可在所有平台上工作的单个代码集。 这是从早期版本的 Visual Basic 中，您不得不编写针对不同平台，例如 Windows NT 不同的代码更改和[!INCLUDE[win98](../../../../includes/win98-md.md)]。  
   
  但是，某些控件不支持在 [!INCLUDE[win98](../../../../includes/win98-md.md)] 和 Windows Millennium Edition 中启用 Unicode。 全部继承自公共控件的这些控件将使用 Windows 代码页（例如 [!INCLUDE[vcpransi](../../../../includes/vcpransi-md.md)]）处理数据。 这些控件包括：<xref:System.Windows.Forms.TabControl>、<xref:System.Windows.Forms.ListView>、<xref:System.Windows.Forms.TreeView>、<xref:System.Windows.Forms.DateTimePicker>、<xref:System.Windows.Forms.MonthCalendar>、<xref:System.Windows.Forms.TrackBar>、<xref:System.Windows.Forms.ProgressBar>、<xref:System.Windows.Forms.ImageList>、<xref:System.Windows.Forms.ToolBar> 和 <xref:System.Windows.Forms.StatusBar>。 因此，不能在列出的平台上的这些控件中显示 Unicode 数据。 例如，不能在英语版 [!INCLUDE[win98](../../../../includes/win98-md.md)] 操作系统上显示日语字符。  
   

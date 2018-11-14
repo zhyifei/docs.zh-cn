@@ -4,12 +4,12 @@ description: 了解如何通过 Ocelot 实现 API 网关以及如何在基于容
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 07/03/2018
-ms.openlocfilehash: dbb3fdb27175a86291d3a942ff168a5aae787c0c
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 26b3c3510aa06fb1c7aa4c3a44f23c8e526fe60c
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43522195"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50200017"
 ---
 # <a name="implementing-api-gateways-with-ocelot"></a>通过 Ocelot 实现 API 网关
 
@@ -271,7 +271,7 @@ DownstreamHostAndPorts 是一个数组，包含要将请求转发到的任何下
 
 UpstreamPathTemplate 是一个 URL，Ocelot 将其用来识别用于客户端中给定请求的 DownstreamPathTemplate。 最后，使用了 UpstreamHttpMethod，因此 Ocelot 可区分对相同 URL 的不同的请求（GET、POST、PUT）。
 
-此时，即可拥有使用一个或[多个合并 configuration.json 文件](http://ocelot.readthedocs.io/en/latest/features/configuration.html#merging-configuration-files)的单个 Ocelot API 网关，也可将[配置存储在 Consul KV 存储中](http://ocelot.readthedocs.io/en/latest/features/configuration.html#store-configuration-in-consul)。 
+此时，即可拥有使用一个或[多个合并 configuration.json 文件](https://ocelot.readthedocs.io/en/latest/features/configuration.html#merging-configuration-files)的单个 Ocelot API 网关，也可将[配置存储在 Consul KV 存储中](https://ocelot.readthedocs.io/en/latest/features/configuration.html#store-configuration-in-consul)。
 
 但正如体系结构和设计部分中所介绍的那样，如果真的想拥有自主微服务，那么最好将单一 API 网关拆分成多个 API 网关和/或 BFF（用于前端的后端）。 为此，我们来看看如何通过 Docker 容器实现该方法。
 
@@ -346,9 +346,9 @@ webshoppingapigw:
 webmarketingapigw:
   environment:
     - ASPNETCORE_ENVIRONMENT=Development
-    - IdentityUrl=http://identity.api              
+    - IdentityUrl=http://identity.api
   ports:
-    - "5203:80"   
+    - "5203:80"
   volumes:
     - ./src/ApiGateways/Web.Bff.Marketing/apigw:/app/configuration
 ```
@@ -363,25 +363,25 @@ webmarketingapigw:
 
 现在，如果通过 API 网关运行 eShopOnContainers（在打开 eShopOnContainers-ServicesAndWebApps.sln 解决方案或运行“docker-compose up”时，默认包含在 VS 中），将执行以下示例路由。 
 
-例如，访问 webshoppingapigw API 网关提供的上游 URL http://localhost:5202/api/v1/c/catalog/items/2/ 时，将从 Docker 主机中的内部下游 URL http://catalog.api/api/v1/2 获取结果，如以下浏览器所示。
+例如，访问 webshoppingapigw API 网关提供的上游 URL `http://localhost:5202/api/v1/c/catalog/items/2/` 时，将从 Docker 主机中的内部下游 URL `http://catalog.api/api/v1/2` 获取结果，如以下浏览器所示。
 
 ![](./media/image35.png)
 
-**图 8-34.** 通过 API 网关提供的 URL 访问微服务 
+**图 8-34.** 通过 API 网关提供的 URL 访问微服务
 
-由于测试或调试原因，如果想不通过 API 网关直接访问目录 Docker 容器（仅在开发环境中），考虑到“catalog.api”是 Docker 主机内部的 DNS 解析（由 docker-compose 服务名称处理服务发现），直接访问容器的唯一方法是通过 docker-compose.override.yml 中发布的外部端口，该端口仅用于开发测试，例如以下浏览器中的 http://localhost:5101/api/v1/Catalog/items/1。
+由于测试或调试原因，如果想不通过 API 网关直接访问目录 Docker 容器（仅在开发环境中），考虑到“catalog.api”是 Docker 主机内部的 DNS 解析（由 docker-compose 服务名称处理服务发现），直接访问容器的唯一方法是通过 docker-compose.override.yml 中发布的外部端口，该端口仅用于开发测试，例如以下浏览器中的 `http://localhost:5101/api/v1/Catalog/items/1`。
 
 ![](./media/image36.png)
 
 **图 8-35.** 出于测试目的直接访问微服务 
 
-但由于已配置应用程序，因此它会通过 API 网关访问所有微服务，而非通过直接端口“快捷方式”。 
+但由于已配置应用程序，因此它会通过 API 网关访问所有微服务，而非通过直接端口“快捷方式”。
 
 ### <a name="the-gateway-aggregation-pattern-in-eshoponcontainers"></a>eShopOnContainers 中的网关聚合模式
 
-如上所述，可通过代码使用自定义服务灵活实现请求聚合。 还可使用 Ocelot 中的“请求聚合”功能实现请求聚合，但可能无法满足你对灵活性的要求。 因此，在 eShopOnContainers 中实现聚合的首选方法是为每个聚合器提供显式 ASP.NET Core Web API 服务。 
+如上所述，可通过代码使用自定义服务灵活实现请求聚合。 还可使用 Ocelot 中的“请求聚合”功能实现请求聚合，但可能无法满足你对灵活性的要求。 因此，在 eShopOnContainers 中实现聚合的首选方法是为每个聚合器提供显式 ASP.NET Core Web API 服务。
 
-根据该方法，在考虑到早前所示的简化全局体系结构关系图中未显示的聚合器服务时，API 网关复合关系图实际上得到了更多扩展。 
+根据该方法，在考虑到早前所示的简化全局体系结构关系图中未显示的聚合器服务时，API 网关复合关系图实际上得到了更多扩展。
 
 在下图中，还可了解聚合器服务如何与其相关 API 网关协同工作。
 
@@ -389,13 +389,13 @@ webmarketingapigw:
 
 **图 8-36.** 使用聚合器服务的 eShopOnContainers 体系结构
 
-下方为进一步放大的图片，可以注意到对于“购物”业务范围，在 API 网关领域下使用这些聚合器服务时，如何通过微服务减少干扰，从而改善客户端应用。 
+下方为进一步放大的图片，可以注意到对于“购物”业务范围，在 API 网关领域下使用这些聚合器服务时，如何通过微服务减少干扰，从而改善客户端应用。
 
  ![](./media/image38.png)
 
 **图 8-37.** 聚合器服务的放大影像
 
-可以看到，当关系图显示可能来自 API 网关的请求时，它会变得非常复杂。 虽然可以看到如何简化蓝色箭头，但从客户端应用角度来看，通过减少通信中的干扰和延迟来使用聚合器模式时，尤其是远程应用（移动和 SPA 应用）的用户体验最终可获得显著改善。 
+可以看到，当关系图显示可能来自 API 网关的请求时，它会变得非常复杂。 虽然可以看到如何简化蓝色箭头，但从客户端应用角度来看，通过减少通信中的干扰和延迟来使用聚合器模式时，尤其是远程应用（移动和 SPA 应用）的用户体验最终可获得显著改善。
 
 对于“营销”业务范围和微服务，它是一个非常简单的用例，因此不需要使用聚合器，但如果需要，也可使用。
 
@@ -466,9 +466,12 @@ namespace OcelotApiGw
                     x.TokenValidationParameters = new Microsoft.IdentityModel.Tokens.TokenValidationParameters()
                     {
                         ValidAudiences = new[] { "orders", "basket", "locations", "marketing", "mobileshoppingagg", "webshoppingagg" }
-                    };                   
+                    };
                 });
             //...
+        }
+    }
+}
 ```
 
 然后，还需要在微服务等任何要访问的资源（如以下“购物篮”微服务控制器）上通过 [Authorize] 属性设置授权。
@@ -479,7 +482,7 @@ namespace Microsoft.eShopOnContainers.Services.Basket.API.Controllers
     [Route("api/v1/[controller]")]
     [Authorize]
     public class BasketController : Controller
-    {   
+    {
       //...
     }
 }
@@ -506,9 +509,9 @@ services.AddAuthentication(options =>
 });
 ```
 
-下一步，如果尝试使用基于 API 网关的 Re-Route URL（例如 http://localhost:5202/api/v1/b/basket/1）访问任何安全的微服务（如“购物篮”微服务），除非提供有效令牌，否则会出现“401 未授权”。 另一方面，如果 Re-Route URL 未经身份验证，Ocelot 将调用与其关联的任何下游方案（内部微服务 URL）。
+下一步，如果尝试使用基于 API 网关的 Re-Route URL（例如 `http://localhost:5202/api/v1/b/basket/1`）访问任何安全的微服务（如“购物篮”微服务），除非提供有效令牌，否则会出现“401 未授权”。 另一方面，如果 Re-Route URL 未经身份验证，Ocelot 将调用与其关联的任何下游方案（内部微服务 URL）。
 
-**Ocelot Re-Route 层中的授权。**  Ocelot 支持在进行身份验证后评估的基于声明的授权。 可将以下代码添加到 Re-Route 配置中，在路由级别设置授权。 
+**Ocelot Re-Route 层中的授权。**  Ocelot 支持在进行身份验证后评估的基于声明的授权。 可将以下代码添加到 Re-Route 配置中，在路由级别设置授权。
 
 ```
 "RouteClaimsRequirement": {
@@ -516,13 +519,13 @@ services.AddAuthentication(options =>
 }
 ```
 
-在该示例中，调用授权中间件时，Ocelot 将查找用户在令牌中是否具有声明类型“UserType”并且该声明的值是否为“employee”。 如果不是，则不向用户授权，并且响应为 403 禁止访问。 
+在该示例中，调用授权中间件时，Ocelot 将查找用户在令牌中是否具有声明类型“UserType”并且该声明的值是否为“employee”。 如果不是，则不向用户授权，并且响应为 403 禁止访问。
 
 ## <a name="using-kubernetes-ingress-plus-ocelot-api-gateways"></a>使用 Kubernetes 入口和 Ocelot API 网关
 
-使用 Kubernetes 时（如在 Azure Kubernetes 服务群集中），通常会根据 Nginx 通过 [Kuberentes 入口层](https://kubernetes.io/docs/concepts/services-networking/ingress/)统一所有 HTTP 请求。 
+使用 Kubernetes 时（如在 Azure Kubernetes 服务群集中），通常会根据 Nginx 通过 [Kubernetes 入口层](https://kubernetes.io/docs/concepts/services-networking/ingress/)统一所有 HTTP 请求。 
 
-在 Kuberentes 中，如果不使用任何入口方法，那么服务和 pod 的 IP 只能由群集网络路由。 
+在 Kubernetes 中，如果不使用任何入口方法，那么服务和 Pod 的 IP 只能由群集网络路由。 
 
 但是，如果使用入口方法，则 Internet 和服务（包括 API 网关）间会有一个中间层，充当反向代理。
 
@@ -530,19 +533,19 @@ services.AddAuthentication(options =>
 
 在 eShopOnContainers 中，在本地进行开发并仅使用开发计算机作为 Docker 主机时，不会使用任何入口，只使用多个 API 网关。 
 
-但是，当面向基于 Kuberentes 的“生产”环境时，eShopOnCOntainers 会在 API 网关前使用入口。 这样一来，客户端仍可调用相同基 URL，但请求会路由到多个 API 网关或 BFF。 
+但是，当面向基于 Kubernetes 的“生产”环境时，eShopOnContainers 会在 API 网关前使用入口。 这样一来，客户端仍可调用相同基 URL，但请求会路由到多个 API 网关或 BFF。 
 
-请注意，API 网关只是呈现服务的前端或外观，Web 应用通常不在其呈现范围内。 此外，API 网关可能会隐藏某些内部微服务。 
+请注意，API 网关只是呈现服务的前端或外观，Web 应用通常不在其呈现范围内。 此外，API 网关可能会隐藏某些内部微服务。
 
 然而，入口只重定向 HTTP 请求，而不会试图隐藏任何微服务或 Web 应用。
 
-在 Web 应用程序前的 Kuberentes 中加入入口 Nginx 层和几个 Ocelot API 网关/BFF 是理想的体系结构，如下图所示。
+在 Web 应用程序前的 Kubernetes 中加入入口 Nginx 层和几个 Ocelot API 网关/BFF 是理想的体系结构，如下图所示。
 
  ![](./media/image41.png)
 
 **图 8-40.** 部署到 Kubernetes 时 eShopOnContainers 中的入口层
 
-将 eShopOnContainers 部署到 Kuberentes 时，它只通过入口公开一些服务或终结点，基本上是以下列出的 URL 上的后缀：
+将 eShopOnContainers 部署到 Kubernetes 时，它只通过入口公开一些服务或终结点，基本上是以下列出的 URL 上的后缀：
 
 -   `/` 用于客户端 SPA Web 应用程序
 -   `/webmvc` 用于客户端 MVC Web 应用程序
@@ -552,32 +555,28 @@ services.AddAuthentication(options =>
 -   `/mobileshoppingapigw` 用于移动 BFF 和购物业务流程
 -   `/mobilemarketingapigw` 用于移动 BFF 和营销业务流程
 
-部署到 Kubernetes 时，每个 Ocelot API 网关为运行 API 网关的每个 pod 使用不同的“configuration.json”文件。 这些“configuration.json”文件是通过装载（最初使用 deploy.ps1 脚本）卷提供的，该卷是基于名为“ocelot”的 Kuberentes 配置映射创建的。 每个容器将其相关配置文件装载到名为 `/app/configuration` 的容器文件夹中。
+部署到 Kubernetes 时，每个 Ocelot API 网关为运行 API 网关的每个 pod 使用不同的“configuration.json”文件。 这些“configuration.json”文件是通过装载（最初使用 deploy.ps1 脚本）卷提供的，该卷是基于名为“ocelot”的 Kubernetes 配置映射创建的。 每个容器将其相关配置文件装载到名为 `/app/configuration` 的容器文件夹中。
 
 在 eShopOnContainers 的源代码文件中，可在 `k8s/ocelot/` 文件夹中找到原始的“configuration.json”文件。 每个 BFF/APIGateway 都有一个文件。
-
 
 ## <a name="additional-cross-cutting-features-in-an-ocelot-api-gateway"></a>Ocelot API 网关中的其他横切功能
 
 使用 Ocelot API 网关时，还有其他重要的功能等待你来研究和使用，如以下链接所述。
 
 -   客户端中集成 Ocelot 与 Consul 或 Eureka 的服务发现 
-    [*http://ocelot.readthedocs.io/en/latest/features/servicediscovery.html*](http://ocelot.readthedocs.io/en/latest/features/servicediscovery.html)****
+    [*https://ocelot.readthedocs.io/en/latest/features/servicediscovery.html*](https://ocelot.readthedocs.io/en/latest/features/servicediscovery.html)****
 
 -   API 网关层中的缓存 
-    [*http://ocelot.readthedocs.io/en/latest/features/caching.html*](http://ocelot.readthedocs.io/en/latest/features/caching.html)****
+    [*https://ocelot.readthedocs.io/en/latest/features/caching.html*](https://ocelot.readthedocs.io/en/latest/features/caching.html)****
 
 -   API 网关层中的日志记录 
-    [*http://ocelot.readthedocs.io/en/latest/features/logging.html*](http://ocelot.readthedocs.io/en/latest/features/logging.html)****
+    [*https://ocelot.readthedocs.io/en/latest/features/logging.html*](https://ocelot.readthedocs.io/en/latest/features/logging.html)****
 
 -   API 网关层中的服务质量（重试次数和断路器） 
-    [*http://ocelot.readthedocs.io/en/latest/features/qualityofservice.html*](http://ocelot.readthedocs.io/en/latest/features/qualityofservice.html)****
+    [*https://ocelot.readthedocs.io/en/latest/features/qualityofservice.html*](https://ocelot.readthedocs.io/en/latest/features/qualityofservice.html)****
 
 -   速率限制 
-    [*http://ocelot.readthedocs.io/en/latest/features/ratelimiting.html*](http://ocelot.readthedocs.io/en/latest/features/ratelimiting.html )****
-
-
-
+    [*https://ocelot.readthedocs.io/en/latest/features/ratelimiting.html*](https://ocelot.readthedocs.io/en/latest/features/ratelimiting.html )****
 
 >[!div class="step-by-step"]
 [上一篇] (background-tasks-with-ihostedservice.md) [下一篇] (../microservice-ddd-cqrs-patterns/index.md)

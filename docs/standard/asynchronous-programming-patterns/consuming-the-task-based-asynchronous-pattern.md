@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 033cf871-ae24-433d-8939-7a3793e547bf
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 22e4c6dd1feb83ad0012b031238d0fafa7104d10
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: eac5f9f6c8b47a6f14898eac2505ecc890015010
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47193991"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50188115"
 ---
 # <a name="consuming-the-task-based-asynchronous-pattern"></a>使用基于任务的异步模式
 
@@ -253,7 +253,7 @@ catch(Exception exc)
 
 -   限制：允许其他操作完成时开始附加操作。  这是交错方案的扩展。
 
--   早期释放：例如，用任务 t1 表示的操作可以与任务 t2 组成 <xref:System.Threading.Tasks.Task.WhenAny%2A> 任务，您可以等待 <xref:System.Threading.Tasks.Task.WhenAny%2A> 任务。 任务 t2 可以表示超时、取消或其他一些导致 <xref:System.Threading.Tasks.Task.WhenAny%2A> 任务先于 t1 完成的信号。
+-   早期释放：例如，用任务 t1 表示的操作可以与任务 t2 组成 <xref:System.Threading.Tasks.Task.WhenAny%2A> 任务，你可以等待 <xref:System.Threading.Tasks.Task.WhenAny%2A> 任务。 任务 t2 可以表示超时、取消或其他一些导致 <xref:System.Threading.Tasks.Task.WhenAny%2A> 任务先于 t1 完成的信号。
 
 #### <a name="redundancy"></a>冗余
  假设你想要决定是否购买股票。  你信任一些股票建议 Web 服务，但每个服务最终会在不同的时间段变得很慢，具体取决于每日负载。  <xref:System.Threading.Tasks.Task.WhenAny%2A> 方法可用于在任何操作完成时接收通知：
@@ -744,7 +744,7 @@ private async void btnDownload_Click(object sender, RoutedEventArgs e)
     btnDownload.IsEnabled = false;
     try
     {
-        txtContents.Text = await m_webPages["http://www.microsoft.com"];
+        txtContents.Text = await m_webPages["https://www.microsoft.com"];
     }
     finally { btnDownload.IsEnabled = true; }
 }

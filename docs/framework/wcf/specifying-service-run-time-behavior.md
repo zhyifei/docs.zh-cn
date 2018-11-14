@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 5c5450ea-6af1-4b75-a267-613d0ac54707
-ms.openlocfilehash: 61a81e342a16bd298cbebef2dc733b5ec631839c
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: 0dbf0a61e1d1183b3f4491002b04156ccf6da0ce
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33807533"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50183721"
 ---
 # <a name="specifying-service-run-time-behavior"></a>指定服务运行时行为
 在已经设计（[Designing Service Contracts](../../../docs/framework/wcf/designing-service-contracts.md)）并实现服务协定（[Implementing Service Contracts](../../../docs/framework/wcf/implementing-service-contracts.md)）之后，就可以配置服务运行时的操作行为。 本主题讨论系统提供的服务和操作行为，并说明在何处查找更多信息来创建新行为。 尽管有些行为是作为属性应用的，但很多行为是使用应用程序配置文件或以编程方式应用的。 有关配置服务应用程序的详细信息，请参阅[配置服务](../../../docs/framework/wcf/configuring-services.md)。  
@@ -18,11 +18,11 @@ ms.locfileid: "33807533"
 ## <a name="overview"></a>概述  
  协定定义相应类型的服务的输入、输出、数据类型和功能。 实现一个服务协定将会创建一个类，当使用某个地址的绑定对该类进行配置时，该类会满足其实现的协定。 客户端了解协定、绑定和地址信息等所有信息，如果没有它们，客户端将不能使用相应服务。  
   
- 但是，操作详细信息（例如，线程处理问题或实例管理）对客户端是不透明的。 在已实现服务协定之后，就可以使用行为 配置大量操作特征。 行为是修改的 Windows Communication Foundation (WCF) 运行时，通过设置运行时属性或通过运行时中插入自定义类型的对象。 有关通过创建用户定义的行为修改运行时的详细信息，请参阅[扩展 ServiceHost 和服务模型层](../../../docs/framework/wcf/extending/extending-servicehost-and-the-service-model-layer.md)。  
+ 但是，操作详细信息（例如，线程处理问题或实例管理）对客户端是不透明的。 在已实现服务协定之后，就可以使用行为 配置大量操作特征。 行为是通过设置运行时属性或通过将自定义类型插入到运行时修改的 Windows Communication Foundation (WCF) 运行时的对象。 有关通过创建用户定义的行为来修改运行时的详细信息，请参阅[扩展 ServiceHost 和服务模型层](../../../docs/framework/wcf/extending/extending-servicehost-and-the-service-model-layer.md)。  
   
- <xref:System.ServiceModel.ServiceBehaviorAttribute?displayProperty=nameWithType> 和 <xref:System.ServiceModel.OperationBehaviorAttribute?displayProperty=nameWithType> 属性是用途最广泛的行为，公开了最常请求的操作功能。 因为它们是属性，所以应将其应用于服务或操作实现。 其他行为（例如，<xref:System.ServiceModel.Description.ServiceMetadataBehavior?displayProperty=nameWithType> 或 <xref:System.ServiceModel.Description.ServiceDebugBehavior?displayProperty=nameWithType>）通常是使用应用程序配置文件进行应用的，但可以以编程方式使用它们。  
+ <xref:System.ServiceModel.ServiceBehaviorAttribute?displayProperty=nameWithType> 和 <xref:System.ServiceModel.OperationBehaviorAttribute?displayProperty=nameWithType> 属性是用途最广泛的行为，公开了最常请求的操作功能。 因为它们是属性，所以应将其应用于服务或操作实现。 其他行为（例如， <xref:System.ServiceModel.Description.ServiceMetadataBehavior?displayProperty=nameWithType> 或 <xref:System.ServiceModel.Description.ServiceDebugBehavior?displayProperty=nameWithType>）通常是使用应用程序配置文件进行应用的，但可以以编程方式使用它们。  
   
- 本主题提供的概述<xref:System.ServiceModel.ServiceBehaviorAttribute>和<xref:System.ServiceModel.OperationBehaviorAttribute>属性，介绍不同的范围的行为可以操作，并提供的许多系统提供的不同范围，可能有行为的快速说明WCF 开发人员感兴趣。  
+ 本主题提供的概述<xref:System.ServiceModel.ServiceBehaviorAttribute>和<xref:System.ServiceModel.OperationBehaviorAttribute>属性，介绍了不同范围的行为可以操作，并提供了很多可能需要的不同范围的系统提供的行为的快速说明WCF 开发人员感兴趣。  
   
 ## <a name="servicebehaviorattribute-and-operationbehaviorattribute"></a>ServiceBehaviorAttribute 和 OperationBehaviorAttribute  
  最重要的行为是 <xref:System.ServiceModel.ServiceBehaviorAttribute> 和 <xref:System.ServiceModel.OperationBehaviorAttribute> 属性，可以使用这两个属性来控制以下各项：  
@@ -55,13 +55,13 @@ ms.locfileid: "33807533"
 ### <a name="well-known-singleton-services"></a>已知的单一实例服务  
  可以使用 <xref:System.ServiceModel.ServiceBehaviorAttribute> 和 <xref:System.ServiceModel.OperationBehaviorAttribute> 属性来控制某些生存期，包括 <xref:System.ServiceModel.InstanceContext> 的生存期和实现操作的服务对象的生存期。  
   
- 例如，<xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A?displayProperty=nameWithType> 属性控制释放 <xref:System.ServiceModel.InstanceContext> 的频率，而 <xref:System.ServiceModel.OperationBehaviorAttribute.ReleaseInstanceMode%2A?displayProperty=nameWithType> 和 <xref:System.ServiceModel.ServiceBehaviorAttribute.ReleaseServiceInstanceOnTransactionComplete%2A?displayProperty=nameWithType> 属性控制释放服务对象的时间。  
+ 例如， <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A?displayProperty=nameWithType> 属性控制释放 <xref:System.ServiceModel.InstanceContext> 的频率，而 <xref:System.ServiceModel.OperationBehaviorAttribute.ReleaseInstanceMode%2A?displayProperty=nameWithType> 和 <xref:System.ServiceModel.ServiceBehaviorAttribute.ReleaseServiceInstanceOnTransactionComplete%2A?displayProperty=nameWithType> 属性控制释放服务对象的时间。  
   
- 但是，也可以自己创建服务对象以及创建使用该对象的服务主机。 为此，您还必须将 <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A?displayProperty=nameWithType> 属性设置为 <xref:System.ServiceModel.InstanceContextMode.Single>，否则在打开该服务主机时将引发异常。  
+ 但是，也可以自己创建服务对象以及创建使用该对象的服务主机。 为此，您还必须将 <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A?displayProperty=nameWithType> 属性设置为 <xref:System.ServiceModel.InstanceContextMode.Single> ，否则在打开该服务主机时将引发异常。  
   
  可使用 <xref:System.ServiceModel.ServiceHost.%23ctor%28System.Object%2CSystem.Uri%5B%5D%29?displayProperty=nameWithType> 构造函数创建此类服务。 当您希望提供一个特定的对象实例供单一实例服务使用时，可以使用它作为实现自定义 <xref:System.ServiceModel.Dispatcher.IInstanceContextInitializer?displayProperty=nameWithType> 的替代方法。 当服务实现类型难以构造时（例如，它没有实现默认的无参数的公共构造函数），可以使用此重载。  
   
- 请注意，为此构造函数提供对象之后，相关到 Windows Communication Foundation (WCF) 实例化行为的某些功能的工作方式不同。 例如，在提供已知对象实例时，调用 <xref:System.ServiceModel.InstanceContext.ReleaseServiceInstance%2A?displayProperty=nameWithType> 没有任何效果。 同样，也将忽略所有其他实例释放机制。 <xref:System.ServiceModel.ServiceHost> 类的行为总是像对于所有操作都将 <xref:System.ServiceModel.OperationBehaviorAttribute.ReleaseInstanceMode%2A?displayProperty=nameWithType> 属性设置为 <xref:System.ServiceModel.ReleaseInstanceMode.None?displayProperty=nameWithType> 一样。  
+ 请注意，当向此构造函数提供了一个对象，相关到 Windows Communication Foundation (WCF) 实例化行为的某些功能工作以不同的方式。 例如，在提供已知对象实例时，调用 <xref:System.ServiceModel.InstanceContext.ReleaseServiceInstance%2A?displayProperty=nameWithType> 没有任何效果。 同样，也将忽略所有其他实例释放机制。 <xref:System.ServiceModel.ServiceHost> 类的行为总是像对于所有操作都将 <xref:System.ServiceModel.OperationBehaviorAttribute.ReleaseInstanceMode%2A?displayProperty=nameWithType> 属性设置为 <xref:System.ServiceModel.ReleaseInstanceMode.None?displayProperty=nameWithType> 一样。  
   
 ## <a name="other-service-endpoint-contract-and-operation-behaviors"></a>其他服务、终结点、协定和操作行为  
  服务行为（如 <xref:System.ServiceModel.ServiceBehaviorAttribute> 属性）在整个服务中运行。 例如，如果将 <xref:System.ServiceModel.ServiceBehaviorAttribute.ConcurrencyMode%2A?displayProperty=nameWithType> 属性设置为 <xref:System.ServiceModel.ConcurrencyMode.Multiple?displayProperty=nameWithType>，则必须自己在服务中的每个操作内处理线程同步问题。 终结点行为在终结点上运行，许多系统提供的终结点行为是针对客户端功能的。 协定行为在协定级别上运行，并且操作行为修改操作传递。  
@@ -70,14 +70,14 @@ ms.locfileid: "33807533"
   
  例如，可以通过使用 <xref:System.ServiceModel.Description.ServiceMetadataBehavior> 对象来配置元数据的发布。 下面的应用程序配置文件演示了最常见的用法。  
   
- [!code-csharp[ServiceMetadataBehavior#1](../../../samples/snippets/csharp/VS_Snippets_CFX/servicemetadatabehavior/cs/hostapplication.cs#1)]  
+ [!code-xml[ServiceMetadataBehavior#1](../../../samples/snippets/csharp/VS_Snippets_CFX/servicemetadatabehavior/cs/hostapplication.exe.config#1)]  
   
  下面的章节描述了许多最有用的系统提供的行为，您可以使用这些行为修改服务或客户端的运行时传递。 请参见相应的参考主题以确定如何使用每种行为。  
   
 ### <a name="service-behaviors"></a>服务行为  
  下面的行为在服务上运行。  
   
--   <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute>。 应用到 WCF 服务以指示是否可以在中运行该服务[!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)]兼容性模式。  
+-   <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute>。 应用到 WCF 服务，以指示是否可在运行该服务[!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)]兼容性模式。  
   
 -   <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior>。 控制服务如何向客户端声明授权。  
   
@@ -96,13 +96,13 @@ ms.locfileid: "33807533"
   
 -   <xref:System.ServiceModel.CallbackBehaviorAttribute>。 在双工客户端应用程序中配置回调服务实现。  
   
--   <xref:System.ServiceModel.Description.CallbackDebugBehavior>。 使服务调试 WCF 回调对象。  
+-   <xref:System.ServiceModel.Description.CallbackDebugBehavior>。 启用服务调试 WCF 回调对象。  
   
 -   <xref:System.ServiceModel.Description.ClientCredentials>。 允许用户配置客户端和服务凭据以及服务凭据身份验证设置以便在客户端上使用。  
   
 -   <xref:System.ServiceModel.Description.ClientViaBehavior>。 由客户端使用以指定应为其创建传输通道的统一资源标识符 (URI)。  
   
--   <xref:System.ServiceModel.Description.MustUnderstandBehavior>。 指示 WCF 禁用`MustUnderstand`处理。  
+-   <xref:System.ServiceModel.Description.MustUnderstandBehavior>。 指示 WCF 在禁用`MustUnderstand`处理。  
   
 -   <xref:System.ServiceModel.Description.SynchronousReceiveBehavior>。 指示运行库对通道使用同步接收进程。  
   

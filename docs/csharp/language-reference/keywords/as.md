@@ -1,6 +1,6 @@
 ---
 title: as（C# 参考）
-ms.date: 07/20/2015
+ms.date: 10/11/2018
 f1_keywords:
 - as_CSharpKeyword
 - as
@@ -8,17 +8,19 @@ helpviewer_keywords:
 - type conversion [C#], as keyword
 - as keyword [C#]
 ms.assetid: a9be126b-cbf4-4990-a70d-d0e1983cad0e
-ms.openlocfilehash: aee80b3262ccd9432d7c311dddec47185b66d05f
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: d6c9d44ff22881e6e5e7a542e1df41bbf77b23d8
+ms.sourcegitcommit: 3b1cb8467bd73dee854b604e306c0e7e3882d91a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47216171"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "49122600"
 ---
 # <a name="as-c-reference"></a>as（C# 参考）
 可以使用 `as` 运算符在符合的引用类型或[可以为 null 的类型](../../../csharp/programming-guide/nullable-types/index.md)之间执行某些类型的转换。 以下代码显示一个示例。  
   
 [!code-csharp[csrefKeywordsOperator#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsOperator/CS/csrefKeywordsOperators.cs#1)]
+
+如示例所示，需要比较 `as` 表达式和 `null` 的结果以检查转换是否成功。 从 C# 7.0 开始，可以使用 [is](is.md) 表达式来测试转换是否成功，并在转换成功时有条件地分配变量。 在许多情况下，它比使用 `as` 运算符更简洁。 有关详细信息，请参阅 [`is` 运算符](is.md)一文中的[类型模式](is.md#type)部分。
   
 ## <a name="remarks"></a>备注  
  `as` 运算符类似于转换运算。 但是，如果无法进行转换，则 `as` 会返回 `null`，而不是引发异常。 请看下面的示例：  
@@ -40,8 +42,9 @@ expression is type ? (type)expression : (type)null
 [!code-csharp[csrefKeywordsOperator#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsOperator/CS/csrefKeywordsOperators.cs#2)]
   
 ## <a name="c-language-specification"></a>C# 语言规范  
- [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
-  
+
+有关详细信息，请参阅 [C# 语言规范](../language-specification/index.md)中的 [As 运算符](~/_csharplang/spec/expressions.md#the-as-operator)。 该语言规范是 C# 语法和用法的权威资料。
+ 
 ## <a name="see-also"></a>请参阅  
 - [C# 参考](../../../csharp/language-reference/index.md)  
 - [C# 编程指南](../../../csharp/programming-guide/index.md)  

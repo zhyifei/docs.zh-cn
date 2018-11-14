@@ -9,14 +9,12 @@ helpviewer_keywords:
 - -res compiler option [Visual Basic]
 - resource compiler option [Visual Basic]
 ms.assetid: eee2f227-91f2-4f2b-a9d6-1c51c5320858
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 2a69d0e15f9094860c4c66f3fe0a195a0a609db9
-ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
+ms.openlocfilehash: ca9aea526d1039c09883696ed2a35ed930c92872
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46321322"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50199014"
 ---
 # <a name="-resource-visual-basic"></a>-资源 (Visual Basic)
 将托管资源嵌入程序集。  

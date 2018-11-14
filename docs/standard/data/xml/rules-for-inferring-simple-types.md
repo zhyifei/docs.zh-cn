@@ -5,17 +5,17 @@ ms.technology: dotnet-standard
 ms.assetid: 394624d6-4da0-430a-8a88-46efe40f14de
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: dd5426de388ba2c7a22d66ce01d56a3139e36e38
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 2477b55f38167cc3497979d073f74d441a06f96d
+ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45615308"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49123574"
 ---
 # <a name="rules-for-inferring-simple-types"></a>推断简单类型的规则
 描述 <xref:System.Xml.Schema.XmlSchemaInference> 类如何推断属性和元素的数据类型。  
   
- <xref:System.Xml.Schema.XmlSchemaInference> 类将属性和元素的数据类型推断为简单类型。 本节描述可能的推断类型、如何将多个不同的值协调为单个类型以及如何处理架构定义 `xsi` 属性。  
+ <xref:System.Xml.Schema.XmlSchemaInference> 类将属性和元素的数据类型推断为简单类型。 本节描述可能的推断类型、如何将多个不同的值对帐为单个类型以及如何处理架构定义 `xsi` 属性。  
   
 ## <a name="inferred-types"></a>推断类型  
  <xref:System.Xml.Schema.XmlSchemaInference> 类将元素和属性值推断为简单类型，并在生成的架构中包含类型属性。 所有推断类型都是简单类型。 生成的架构中不包括任何基类型或方面。  
@@ -65,8 +65,9 @@ ms.locfileid: "45615308"
   
  在遇到第一个 `attr2` 值时，根据值 `attr2`，`unsignedByte` 的类型推断为 `0`。 在遇到第二个 `attr2` 时，根据当前推断类型 `string` 和当前值 `unsignedByte`，类型提升为 `true`，因为 <xref:System.Xml.Schema.XmlSchemaInference> 类在提升推断类型时会考虑以前的值。 但是，如果在同一个 XML 文档中遇到 `attr2` 的两个实例，而不是如上所述在两个不同的 XML 文档中，`attr2` 将推断为 `boolean`。  
   
-### <a name="ignored-attributes-from-the-httpwwww3org2001xmlschema-instance-namespace"></a>从 http://www.w3.org/2001/XMLSchema-instance 命名空间忽略的属性  
- 在架构引用过程中忽略下列架构定义属性。  
+### <a name="ignored-attributes-from-the-httpswwww3org2001xmlschema-instance-namespace"></a>从 <https://www.w3.org/2001/XMLSchema-instance> 命名空间忽略的属性
+
+在架构引用过程中忽略下列架构定义属性。  
   
 |特性|描述|  
 |---------------|-----------------|  

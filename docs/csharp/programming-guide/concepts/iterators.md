@@ -2,12 +2,12 @@
 title: 循环访问 C# 中的集合
 ms.date: 08/14/2018
 ms.assetid: c93f6dd4-e72a-4a06-be1c-a98b3255b734
-ms.openlocfilehash: d8a39569df517dffa8ff4b2f638f089f420e44c7
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 2b358e8272820bf6fb5bcb45763bae980b91962f
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47436259"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50191189"
 ---
 # <a name="iterators-c"></a>迭代器 (C#)
 
@@ -342,7 +342,7 @@ public class Stack<T> : IEnumerable<T>
 
 迭代器不支持 <xref:System.Collections.IEnumerator.Reset%2A?displayProperty=nameWithType> 方法。 若要从头开始重新迭代，必须获取新的迭代器。 在迭代器方法返回的迭代器上调用 <xref:System.Collections.IEnumerator.Reset%2A> 会引发 <xref:System.NotSupportedException>。
 
-有关其他信息，请参阅 [C# 语言规范](../../../csharp/language-reference/language-specification/index.md)。
+有关其他信息，请参阅 [C# 语言规范](~/_csharplang/spec/classes.md#iterators)。
 
 ## <a name="use-of-iterators"></a>迭代器的使用
 

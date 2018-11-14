@@ -10,14 +10,12 @@ helpviewer_keywords:
 - add element, connectionManagement
 - connectionManagement, add element
 ms.assetid: 856bf57d-1c63-46c7-a178-03d97b0a4149
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: 9f9b1b13c0a45d7a2e34a04b44f13be12947993f
-ms.sourcegitcommit: fd8d4587cc26e53f0e27e230d6e27d828ef4306b
+ms.openlocfilehash: a3b8de254c28aedc21df5baf54bd67527e35b7f9
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49349025"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50201288"
 ---
 # <a name="ltaddgt-element-for-connectionmanagement-network-settings"></a>&lt;添加&gt;connectionManagement （网络设置） 的元素
 将 IP 地址或 DNS 名称添加到连接管理列表。  
@@ -78,6 +76,6 @@ ms.locfileid: "49349025"
 ```  
   
 ## <a name="see-also"></a>请参阅  
- <xref:System.Net.ServicePoint>  
- <xref:System.Net.ServicePointManager>  
- [网络设置架构](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+- <xref:System.Net.ServicePoint>  
+- <xref:System.Net.ServicePointManager>  
+- [网络设置架构](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

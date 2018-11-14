@@ -3,12 +3,12 @@ title: C# 版本控制 - C# 指南
 description: 了解 C# 和 .NET 中的版本控制工作原理
 ms.date: 01/08/2017
 ms.assetid: aa8732d7-5cd0-46e1-994a-78017f20d861
-ms.openlocfilehash: 949b7414116169cada62b48392f37809f26d7ff9
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.openlocfilehash: af81e5a8ad3165ce99a823f8b263cc798d5b6d2c
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/23/2018
-ms.locfileid: "46585928"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50183225"
 ---
 # <a name="versioning-in-c"></a>C# 中的版本控制 #
 
@@ -20,7 +20,7 @@ ms.locfileid: "46585928"
 
 ### <a name="semantic-versioning"></a>语义版本控制
 
-[语义版本控制](http://semver.org/)（简称 SemVer）是应用于库版本的命名约定，用于表示特定里程碑事件。
+[语义版本控制](https://semver.org/)（简称 SemVer）是应用于库版本的命名约定，用于表示特定里程碑事件。
 理想情况下，提供给库的版本信息应帮助开发人员确定版本是否与使用相同库的早期版本的项目兼容。
 
 SemVer 的最基本方法是 3 组件格式 `MAJOR.MINOR.PATCH`，其中：

@@ -4,14 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Deriving from WebResponse
 ms.assetid: f11d4866-a199-4087-9306-a5a4c18b13db
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: 84f29d1ec44383a42446316b8e53b2886314960b
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: a065e04e6683279b4541d9a723ed9c7442dec9dc
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47208849"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50088593"
 ---
 # <a name="deriving-from-webresponse"></a>从 WebResponse 派生
 <xref:System.Net.WebResponse> 类是一个抽象基类，可为创建适合 .NET Framework 可插入协议模型的协议特定的响应提供基本方法和属性。 使用 <xref:System.Net.WebRequest> 类从资源请求数据的应用程序会在 WebResponse 中接收响应。 协议特定的 WebResponse 后代必须实现 WebResponse 类的抽象成员。  

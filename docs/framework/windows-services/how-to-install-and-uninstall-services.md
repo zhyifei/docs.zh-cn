@@ -12,12 +12,12 @@ helpviewer_keywords:
 - installutil.exe tool
 ms.assetid: c89c5169-f567-4305-9d62-db31a1de5481
 author: ghogen
-ms.openlocfilehash: eb68809909c0550ea5fa5eab1f9d5ca6a069e314
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 265ee152bf106d0f97cca83552fe9a3e75fb4165
+ms.sourcegitcommit: fd8d4587cc26e53f0e27e230d6e27d828ef4306b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47232724"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "49348999"
 ---
 # <a name="how-to-install-and-uninstall-services"></a>如何：安装和卸载服务
 如果你正使用 .NET Framework 开发 Windows 服务，你可以使用名为 InstallUtil.exe 的命令行实用工具快速安装服务应用程序。 如果你是一个想要发布用户可以安装和卸载的 Windows 服务的开发人员，应使用 InstallShield。 请参阅 [Windows Installer 部署](https://msdn.microsoft.com/library/121be21b-b916-43e2-8f10-8b080516d2a0)。  
@@ -60,7 +60,7 @@ ms.locfileid: "47232724"
     installutil /u <yourproject>.exe  
     ```  
   
-3.  有时，服务的可执行文件被删除后，该服务可能仍然会出现在注册表中。 这种情况下，请使用命令 [sc delete](https://technet.microsoft.com/library/cc742045.aspx) 从注册表中删除服务的条目。  
+3.  有时，服务的可执行文件被删除后，该服务可能仍然会出现在注册表中。 这种情况下，请使用命令 [sc delete](/windows-server/administration/windows-commands/sc-delete) 从注册表中删除服务的条目。  
   
 ## <a name="see-also"></a>请参阅  
  [Windows 服务应用程序介绍](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)  

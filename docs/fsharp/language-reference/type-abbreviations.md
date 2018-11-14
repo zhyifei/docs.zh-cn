@@ -1,12 +1,12 @@
 ---
 title: 类型缩写 (F#)
-description: '了解有关 F # 类型缩写，以使代码更易于读取为指定类型的更有意义的名称。'
+description: 了解有关 F# 类型缩写，以使代码更易于读取为指定类型的更有意义的名称。
 ms.date: 05/16/2016
 ms.openlocfilehash: 259cd6c84e22fc7c98e08255d3e0ded5b87af352
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/06/2018
+ms.lasthandoff: 11/02/2018
 ms.locfileid: "48842419"
 ---
 # <a name="type-abbreviations"></a>类型缩写
@@ -33,7 +33,7 @@ type [accessibility-modifier] type-abbreviation = type-name
 
 在前面的代码，`Transform`是表示任何类型的一个自变量的函数的类型缩写，将返回相同类型的单个值。
 
-类型缩写不会保留在.NET Framework MSIL 代码。 因此，当你使用另一种.NET Framework 语言中的 F # 程序集时，必须使用类型缩写的基础类型名称。
+类型缩写不会保留在.NET Framework MSIL 代码。 因此，当你使用另一种.NET Framework 语言中的 F# 程序集时，必须使用类型缩写的基础类型名称。
 
 此外可以上度量单位的使用类型缩写。 有关详细信息，请参阅[度量单位](units-of-measure.md)。
 

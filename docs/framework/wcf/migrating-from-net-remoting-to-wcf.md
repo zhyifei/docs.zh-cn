@@ -2,12 +2,12 @@
 title: 从 .NET 远程处理迁移到 WCF
 ms.date: 03/30/2017
 ms.assetid: 16902a42-ef80-40e9-8c4c-90e61ddfdfe5
-ms.openlocfilehash: e260ecaf422b5654364143b1fc529112b5ea0656
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 91cbfa33c6645fbc0a8d9b513e3a59799114a710
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43857383"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50200093"
 ---
 # <a name="migrating-from-net-remoting-to-wcf"></a>从 .NET 远程处理迁移到 WCF
 本文介绍如何迁移借助 .NET 远程处理来使用 Windows Communication Foundation (WCF) 的应用程序。 本文对这些产品之间的相似概念进行比较，并介绍如何在 WCF 中完成若干常见的远程处理方案。  
@@ -292,7 +292,7 @@ catch (FaultException<CustomerServiceFault> fault)
   
 ### <a name="why-migrate-from-remoting-to-wcf"></a>为什么从远程处理迁移到 WCF？  
   
--   **.NET 远程处理是一项传统技术。** 如中所述[.NET 远程处理](https://msdn.microsoft.com/library/vstudio/72x4h507\(v=vs.100\).aspx)，被视为一项传统技术，不建议用于新开发。 对于新的和现有的应用程序建议使用 WCF 或 ASP.NET Web API。  
+-   **.NET 远程处理是一项传统技术。** 如中所述[.NET 远程处理](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/72x4h507%28v=vs.100%29)，被视为一项传统技术，不建议用于新开发。 对于新的和现有的应用程序建议使用 WCF 或 ASP.NET Web API。  
   
 -   **WCF 使用跨平台标准。** WCF 设计的跨平台互操作性支持许多行业标准（SOAP、Ws-security、Ws-trust 等。）。 除了运行 Windows 操作系统的客户端之外，WCF 服务还可以与运行其他操作系统的客户端进行互操作。 远程处理是主要为其中的服务器和客户端应用程序使用 .NET framework 在 Windows 操作系统中运行的环境而设计的。  
   

@@ -5,24 +5,27 @@ helpviewer_keywords:
 - globalization [WPF], about globalization
 - localization [WPF], about localization
 ms.assetid: 56e5a5c8-6c96-4d19-b8e1-a5be1dc564af
-ms.openlocfilehash: fcf5b8f872e2f97497ff5387adb755da1832bf8c
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: e9a9e9295425efaadff4ac1f0b796b2c9a889543
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47424462"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50200948"
 ---
 # <a name="wpf-globalization-and-localization-overview"></a>WPF 全球化和本地化概述
+
 当你将自己的产品限制为只能通过一种语言使用时，便将潜在的客户群限制为全球 65 亿人口中的一小部分。 如果想让自己的应用程序被全球用户所接受，那么对产品进行经济而有效的本地化将是赢得更多客户的最好、最经济的方法。  
   
  本文概述了全球化和本地化[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]。 全球化是指设计和开发在多个地点执行的应用程序。 例如，全球化支持适用于不同区域性用户的本地化用户界面和区域数据。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 提供了全球化的设计功能，包括自动布局、 附属程序集和本地化的特性和注释。
   
- 本地化是针对应用程序所支持的特定区域性将应用程序资源转换为本地化版本的过程。 当中进行本地化[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]，使用中的 Api<xref:System.Windows.Markup.Localizer>命名空间。 这些 Api 支持[LocBaml 工具示例](https://go.microsoft.com/fwlink/?LinkID=160016)命令行工具。 有关如何生成和使用 LocBaml 的信息，请参阅[本地化应用程序](../../../../docs/framework/wpf/advanced/how-to-localize-an-application.md)。    
+ 本地化是针对应用程序所支持的特定区域性将应用程序资源转换为本地化版本的过程。 当中进行本地化[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]，使用中的 Api<xref:System.Windows.Markup.Localizer>命名空间。 这些 Api 支持[LocBaml 工具示例](https://go.microsoft.com/fwlink/?LinkID=160016)命令行工具。 有关如何生成和使用 LocBaml 的信息，请参阅[本地化应用程序](../../../../docs/framework/wpf/advanced/how-to-localize-an-application.md)。
   
-## <a name="best-practices-for-globalization-and-localization-in-wpf"></a>在 WPF 中进行全球化和本地化的最佳做法  
+## <a name="best-practices-for-globalization-and-localization-in-wpf"></a>在 WPF 中进行全球化和本地化的最佳做法
+
  充分利用内置于的全球化和本地化功能[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]按照 UI 设计和本部分提供的本地化相关的技巧。  
   
-### <a name="best-practices-for-wpf-ui-design"></a>WPF UI 设计的最佳做法  
+### <a name="best-practices-for-wpf-ui-design"></a>WPF UI 设计的最佳做法
+
  设计时[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]– 基于[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]，请考虑实施这些最佳做法：  
   
 -   编写你[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]中[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]; 避免创建[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]在代码中。 在创建时你[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]通过使用[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]，通过内置的本地化 Api 公开。  
@@ -39,7 +42,7 @@ ms.locfileid: "47424462"
   
 -   启用<xref:System.Windows.Controls.TextBlock.TextWrapping%2A>上<xref:System.Windows.Controls.TextBlock>以避免剪裁。
   
--   设置`xml:lang`属性。 此属性描述特定元素及其子元素的区域性。 此属性的值更改中的许多功能的行为[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]。 例如，它可以更改断字、拼写检查、数字替换、复杂脚本成型和字体回退的行为。 请参阅[WPF 的全球化](../../../../docs/framework/wpf/advanced/globalization-for-wpf.md)有关设置的详细信息[xml: lang 处理在 XAML 中](../../../../docs/framework/xaml-services/xml-lang-handling-in-xaml.md)。  
+-   设置 `xml:lang` 特性。 此属性描述特定元素及其子元素的区域性。 此属性的值更改中的许多功能的行为[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]。 例如，它可以更改断字、拼写检查、数字替换、复杂脚本成型和字体回退的行为。 请参阅[WPF 的全球化](../../../../docs/framework/wpf/advanced/globalization-for-wpf.md)有关设置的详细信息[xml: lang 处理在 XAML 中](../../../../docs/framework/xaml-services/xml-lang-handling-in-xaml.md)。  
   
 -   创建自定义复合字体，以获取更好地控制用于不同语言的字体。 默认情况下，[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]使用 windows\fonts 目录中的 GlobalUserInterface.composite 字体。  
   
@@ -47,7 +50,8 @@ ms.locfileid: "47424462"
   
 -   创建托管浏览器之外的独立导航应用程序时，设置<xref:System.Windows.Application.StartupUri%2A>将初始应用程序<xref:System.Windows.Navigation.NavigationWindow>而不是到页面 (例如， `<Application StartupUri="NavigationWindow.xaml">`)。 此设计使您可以更改<xref:System.Windows.FlowDirection>窗口和导航栏。 有关详细信息和示例，请参阅[全球化主页示例](https://go.microsoft.com/fwlink/?LinkID=159990)。  
   
-### <a name="best-practices-for-wpf-localization"></a>WPF 本地化的最佳做法  
+### <a name="best-practices-for-wpf-localization"></a>WPF 本地化的最佳做法
+
  进行本地化时[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]– 基于应用程序，请考虑实施下列最佳做法：  
   
 -   使用本地化注释为本地化人员提供额外的上下文。  
@@ -64,25 +68,27 @@ ms.locfileid: "47424462"
   
          如果您决定通过省略主程序集中添加源语言`<UICulture>`在项目文件中标记中，设置`UltimateResourceFallback`与主程序集而不是附属项的位置 (例如， `[assembly: NeutralResourcesLanguage("en-US", UltimateResourceFallbackLocation.MainAssembly)]`)。  
   
-<a name="workflow_to_localize" />   
-## <a name="localize-a-wpf-application"></a>对 WPF 应用程序进行本地化  
- 进行本地化时[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]应用程序中，有几个选项。 例如，将可本地化资源绑定到应用程序中[!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)]文件，在 resx 表中存储可本地化的文本，或者让本地化人员使用[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]文件。 本部分介绍使用 XAML，可提供的好处的 BAML 形式的本地化工作流：  
+## <a name="localize-a-wpf-application"></a>对 WPF 应用程序进行本地化
+
+进行本地化时[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]应用程序中，有几个选项。 例如，将可本地化资源绑定到应用程序中[!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)]文件，在 resx 表中存储可本地化的文本，或者让本地化人员使用[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]文件。 本部分介绍使用 XAML，可提供的好处的 BAML 形式的本地化工作流：  
   
--   可以在生成之后进行本地化。  
+-   可以本地化您的生成后。  
   
 -   可以从较旧版本 XAML 的 BAML 形式更新到本地化的较新版本 XAML 的 BAML 形式，以便在开发的同时进行本地化。  
   
 -   你可以验证原始源元素和语义在编译时由于 XAML 的 BAML 形式的已编译的形式[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]。  
   
 ### <a name="localization-build-process"></a>本地化生成过程  
- 开发时[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]应用程序中，本地化的生成过程如下所示：  
+
+开发时[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]应用程序中，本地化的生成过程如下所示：  
   
 -   开发人员创建，并将其全球化[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]应用程序。 在项目文件中，开发人员设置`<UICulture>en-US</UICulture>`，以便编译应用程序时，会生成非特定于语言的主程序集。 此程序集具有一个附属 .resources.dll 文件，其中包含所有可本地化的资源。 （可选） 在主程序集中保留源语言，因为我们本地化[!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)]支持从主程序集进行提取。  
   
 -   该文件编译为在生成时[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]转换为 XAML 的 BAML 形式。 区域性非特定`MyDialog.exe`和区域性相关 （英语）`MyDialog.resources.dll`向说英语的客户发布文件。  
   
-### <a name="localization-workflow"></a>本地化工作流  
- 本地化过程开始后未本地化`MyDialog.resources.dll`生成文件。 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]元素和属性在原始[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]通过使用从键-值对 XAML 的 BAML 形式提取[!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)]下<xref:System.Windows.Markup.Localizer>。 本地化人员使用键/值对来对应用程序进行本地化。 在本地化完成之后，可以从新值生成一个新的 .resource.dll。  
+### <a name="localization-workflow"></a>本地化工作流
+
+本地化过程开始后未本地化`MyDialog.resources.dll`生成文件。 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]元素和属性在原始[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]通过使用从键-值对 XAML 的 BAML 形式提取[!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)]下<xref:System.Windows.Markup.Localizer>。 本地化人员使用键/值对来对应用程序进行本地化。 在本地化完成之后，可以从新值生成一个新的 .resource.dll。
   
  键 / 值对的键是`x:Uid`位于由开发人员在原始值[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]。 这些`x:Uid`值启用[!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)]来跟踪和合并在本地化过程发生在开发人员和本地化人员之间的更改。 例如，如果开发人员更改[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]本地化人员开始进行本地化之后，可以合并将开发更改与已完成的本地化工作，以便使最小的翻译工作将丢失。  
   
@@ -92,11 +98,12 @@ ms.locfileid: "47424462"
   
  ![未本地化的工作流](../../../../docs/framework/wpf/advanced/media/localizationworkflow2.png "LocalizationWorkflow2")  
   
-<a name="examples_of_localization" />   
-## <a name="examples-of-wpf-localization"></a>WPF 本地化示例  
+## <a name="examples-of-wpf-localization"></a>WPF 本地化示例
+
  本部分包含本地化的应用程序，以帮助你了解如何生成和本地化示例[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]应用程序。  
   
-#### <a name="run-dialog-box-example"></a>“运行”对话框示例  
+#### <a name="run-dialog-box-example"></a>“运行”对话框示例
+
  下图显示的输出**运行**对话框示例。  
   
  **英语：**  
@@ -268,7 +275,7 @@ ms.locfileid: "47424462"
   
  **本地化特性**  
   
- 通常，开发人员或本地化经理需要控制本地化人员能够阅读和修改的内容。 例如，可能不希望本地化人员翻译你公司的名称或法律用语。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 提供了一些特性，使用这些特性可以设置元素的内容或属性（本地化工具可以使用这些内容或属性锁定、隐藏元素或对元素进行排序）的可读性、可修改性和类别。 有关详细信息，请参阅<xref:System.Windows.Localization.Attributes%2A>。 此示例中 LocBaml 工具仅输出这些特性的值。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 控件对这些特性都使用默认值，但可以替代这些默认值。 例如，下面的示例重写的默认本地化特性`TextBlock_1`和为本地化人员设置的内容可读，但不可修改。  
+ 通常，开发人员或本地化经理需要控制本地化人员能够阅读和修改的内容。 例如，可能不希望本地化人员翻译你公司的名称或法律用语。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 提供了一些特性，使用这些特性可以设置元素的内容或属性（本地化工具可以使用这些内容或属性锁定、隐藏元素或对元素进行排序）的可读性、可修改性和类别。 有关详细信息，请参阅 <xref:System.Windows.Localization.Attributes%2A> 。 此示例中 LocBaml 工具仅输出这些特性的值。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 控件对这些特性都使用默认值，但可以替代这些默认值。 例如，下面的示例重写的默认本地化特性`TextBlock_1`和为本地化人员设置的内容可读，但不可修改。  
   
  [!code-xaml[LocalizationComAtt#LocalizationAttributes](../../../../samples/snippets/csharp/VS_Snippets_Wpf/LocalizationComAtt/CSharp/Attributes.xaml#localizationattributes)]  
   

@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: daf9d9d5-84ac-4bd9-a864-27665ffd0f5c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: edc34eaa7704d788ff4b63328a2b6c0622d17e13
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 8d78549d2822ad6c660fae39d458a98f23eca390
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43502917"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50199885"
 ---
 # <a name="install-the-net-framework-for-developers"></a>安装面向开发人员的 .NET Framework
 
@@ -37,7 +37,7 @@ ms.locfileid: "43502917"
 
 |.NET Framework 版本|开发人员安装|可再发行组件安装|平台支持|
 |----------------------------|----------------------------|----------------------------------|----------------------|
-|**4.7.2**|[.NET Framework 4.7.2 开发人员工具包](https://go.microsoft.com/fwlink/?LinkId=874338)|[下载中心 4.7.2 Web 安装程序](https://go.microsoft.com/fwlink/?LinkId=863262)<br/><br/>[下载中心 4.7.2 脱机安装程序](https://go.microsoft.com/fwlink/?LinkId=863265)|包含于： <br/>Windows 10 2018 年 4 月更新<br /><br /> 可以安装于：<br/> <br/>Windows 10 Fall Creators Update<br/>Windows 10 创意者更新 <br /> Windows 10 周年更新<br /> Windows 8.1 和更早版本<br /> Windows Server 1709 和更低版本<br /> （有关完整列表，请参阅[系统要求](~/docs/framework/get-started/system-requirements.md)）||
+|**4.7.2**|[.NET Framework 4.7.2 开发人员工具包](https://go.microsoft.com/fwlink/?LinkId=874338)|[下载中心 4.7.2 Web 安装程序](https://go.microsoft.com/fwlink/?LinkId=863262)<br/><br/>[下载中心 4.7.2 脱机安装程序](https://go.microsoft.com/fwlink/?LinkId=863265)|包含于： <br/>Windows 10 2018 年 10 月更新<br/>Windows 10 2018 年 4 月更新<br /><br /> 可以安装于：<br/> <br/>Windows 10 Fall Creators Update<br/>Windows 10 创意者更新 <br /> Windows 10 周年更新<br /> Windows 8.1 和更早版本<br /> Windows Server 1709 和更低版本<br /> （有关完整列表，请参阅[系统要求](~/docs/framework/get-started/system-requirements.md)）||
 |**4.7.1**|[.NET Framework 4.7.1 开发人员工具包](https://go.microsoft.com/fwlink/?LinkId=852105)|[4.7.1 Web 安装程序下载页](https://go.microsoft.com/fwlink/?LinkId=852095)<br /><br /> [4.7.1 脱机安装程序下载页](https://go.microsoft.com/fwlink/?LinkId=852107)|包含于： <br/>Windows 10 Fall Creators Update<br/>Windows Server 版本 1709<br /><br /> 可以安装于：<br/> Windows 10 创意者更新 <br /> Windows 10 周年更新<br /> Windows 8.1 和更早版本<br /> Windows Server 2016 和更低版本<br /> （有关完整列表，请参阅[系统要求](~/docs/framework/get-started/system-requirements.md)）||
 |**4.7**|[.NET Framework 4.7 开发人员工具包](https://go.microsoft.com/fwlink/?LinkId=825319)|[4.7 Web 安装程序下载页](https://go.microsoft.com/fwlink/?LinkId=825299)<br /><br /> [4.7 脱机安装程序下载页](https://go.microsoft.com/fwlink/?LinkId=825303)|包含于： <br/>Windows 10 创意者更新<br /><br /> 可以安装于：<br /> Windows 10 周年更新<br /> Windows 8.1 和更早版本<br /> Windows Server 2016 和更低版本<br /> （有关完整列表，请参阅[系统要求](~/docs/framework/get-started/system-requirements.md)）||
 |**4.6.2**|[.NET Framework 4.6.2 开发人员工具包](https://go.microsoft.com/fwlink/?LinkId=780617)|[4.6.2 Web 安装程序下载页](https://go.microsoft.com/fwlink/?LinkId=780597)<br /><br /> [4.6.2 脱机安装程序下载页](https://go.microsoft.com/fwlink/?LinkId=780601)|包含于： <br /> Windows 10 周年更新<br /><br /> 可以安装于：<br /> Windows 10 November Update <br/> Windows 10 <br /> Windows 8.1 和更早版本<br /> Windows Server 2012 R2 和更早版本<br /> （有关完整列表，请参阅[系统要求](~/docs/framework/get-started/system-requirements.md)）|
@@ -154,7 +154,7 @@ Web 和脱机安装程序均针对基于 x86 和 x64 的计算机而设计（请
 
 - 必须拥有管理员凭据，才能安装 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 及其单点版本、.NET Framework 4.6 及其单点版本和 .NET Framework 4.7 及其单点版本。
 
-- .NET Framework 4.5 可再发行组件于 2012 年 10 月 9 日进行了更新，纠正了一个与数字证书中的错误时间戳相关的问题，此问题会导致 Microsoft 生成并签名的文件中的数字签名提前过期。 如果之前安装了日期为 2012 年 8 月 16 日的 .NET Framework 4.5 可再发行组件包，建议使用 [Microsoft 下载中心](https://go.microsoft.com/fwlink/p/?LinkId=245484)内的最新可再发行组件来更新副本。 有关此问题的详细信息，请参阅 [Microsoft 安全公告 2749655](https://technet.microsoft.com/security/advisory/2749655) 和[知识库文章 2770445](https://support.microsoft.com/kb/2770445)。
+- .NET Framework 4.5 可再发行组件于 2012 年 10 月 9 日进行了更新，纠正了一个与数字证书中的错误时间戳相关的问题，此问题会导致 Microsoft 生成并签名的文件中的数字签名提前过期。 如果之前安装了日期为 2012 年 8 月 16 日的 .NET Framework 4.5 可再发行组件包，建议使用 [Microsoft 下载中心](https://go.microsoft.com/fwlink/p/?LinkId=245484)内的最新可再发行组件来更新副本。 有关此问题的详细信息，请参阅 [Microsoft 安全公告 2749655](https://docs.microsoft.com/security-updates/SecurityAdvisories/2012/2749655) 和[知识库文章 2770445](https://support.microsoft.com/kb/2770445)。
 
 ## <a name="to-install-language-packs"></a>安装语言包
 

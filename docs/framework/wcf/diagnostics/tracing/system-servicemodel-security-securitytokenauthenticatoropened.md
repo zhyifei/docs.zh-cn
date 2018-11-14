@@ -2,13 +2,12 @@
 title: System.ServiceModel.Security.SecurityTokenAuthenticatorOpened
 ms.date: 03/30/2017
 ms.assetid: c6cb0065-b4f6-40eb-89ac-5e8f0e05e0de
-author: BrucePerlerMS
-ms.openlocfilehash: 3ac8a5f439a52e922e86ece31fd75bfadfec07d6
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 9dd900bddabfc5ecde4b8129182ae84838cef565
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47203246"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50196838"
 ---
 # <a name="systemservicemodelsecuritysecuritytokenauthenticatoropened"></a>System.ServiceModel.Security.SecurityTokenAuthenticatorOpened
 System.ServiceModel.Security.SecurityTokenAuthenticatorOpened  

@@ -8,14 +8,12 @@ helpviewer_keywords:
 - compiler options, Visual Basic
 - Visual Basic compiler, options
 ms.assetid: 6b57c444-50c7-4b88-8f59-ed65cff5e05c
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 1dd00fca2f2b24386773ac4868763cfb868e6b37
-ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
+ms.openlocfilehash: d5bccab71d790a7a70d012375d3f47676cf83c6d
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "39244759"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50199417"
 ---
 # <a name="visual-basic-command-line-compiler"></a>Visual Basic 命令行编译器
 

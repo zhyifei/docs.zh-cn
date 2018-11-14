@@ -4,19 +4,19 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - configuring services [WCF]
 ms.assetid: c9c8cd32-2c9d-4541-ad0d-16dff6bd2a00
-ms.openlocfilehash: 904abff4f3cae5873fe3cc9705dee84f73e2a523
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 11d24bec46cfb190fe1a7c2a7b9ac78ac4d5e799
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46004505"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50200857"
 ---
 # <a name="configuring-services-using-configuration-files"></a>使用配置文件配置服务
 使用配置文件配置 Windows Communication Foundation (WCF) 服务使你能够灵活提供终结点，并设计时在部署时而非在服务行为数据。 本主题概述了当前可用的主要技术。  
   
  WCF 服务是可配置使用[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]技术的配置。 大多数情况下，XML 元素添加到托管 WCF 服务的 Internet 信息服务 (IIS) 网站的 Web.config 文件中。 通过这些元素，可以逐台计算机更改详细信息，例如终结点地址（用于与服务进行通信的实际地址）。 此外，WCF 包含多个系统提供的元素，允许您快速选择服务的最基本功能。 从开始[!INCLUDE[netfx40_long](../../../includes/netfx40-long-md.md)]，WCF 附带了一个新的默认配置模型，简化了 WCF 配置要求。 如果未提供针对特定服务的任何 WCF 配置，运行时自动使用一些标准终结点和默认绑定/行为配置你的服务。 在实践中，编写配置是一个较大编程 WCF 应用程序的一部分。  
   
- 有关详细信息，请参阅[的服务配置绑定](../../../docs/framework/wcf/configuring-bindings-for-wcf-services.md)。 对于一系列最常用元素，请参阅[System-Provided Bindings](../../../docs/framework/wcf/system-provided-bindings.md)。 有关默认终结点、绑定和行为的详细信息，请参阅[简化配置](../../../docs/framework/wcf/simplified-configuration.md)和 [WCF 服务的简化配置](../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md)。  
+ 有关详细信息，请参阅[的服务配置绑定](../../../docs/framework/wcf/configuring-bindings-for-wcf-services.md)。 对于一组最常用元素，请参阅[System-Provided Bindings](../../../docs/framework/wcf/system-provided-bindings.md)。 有关默认终结点、绑定和行为的详细信息，请参阅[简化配置](../../../docs/framework/wcf/simplified-configuration.md)和 [WCF 服务的简化配置](../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md)。  
   
 > [!IMPORTANT]
 >  在部署并行方案（其中部署了服务的两个不同版本）时，必须指定配置文件中引用的程序集的部分名称。 这是因为配置文件将在服务的所有版本间共享，并可在不同版本的 .NET Framework 下运行。  
@@ -186,9 +186,9 @@ ms.locfileid: "46004505"
 ## <a name="behavior-merge"></a>行为合并  
  当您需要统一使用一组公共行为时，利用行为合并功能，可更加轻松地管理行为。 此功能允许您在配置层次结构的各个层上指定行为，并使服务能够从配置层次结构的多个层继承行为。 为了演示此功能的工作方式，假定您的 IIS 中包含以下虚拟目录布局：  
   
- ~\Web.config~\Service.svc~\Child\Web.config~\Child\Service.svc  
+ `~\Web.config~\Service.svc~\Child\Web.config~\Child\Service.svc`
   
- ~\Web.config 文件包含以下内容：  
+ 和您`~\Web.config`文件包含以下内容：  
   
 ```xml  
 <configuration>  

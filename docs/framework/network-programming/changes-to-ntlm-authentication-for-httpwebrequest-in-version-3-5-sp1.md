@@ -2,14 +2,12 @@
 title: 3.5 SP1 版本中对 HttpWebRequest 的 NTLM 身份验证的更改
 ms.date: 03/30/2017
 ms.assetid: 8bf0b428-5a21-4299-8d6e-bf8251fd978a
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: b679c137d31c1212e1e6c82fd41f89b9de7a18d4
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: d20707bbecb7521408d2ea1a3d6a6e3d6e892504
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47231147"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50202863"
 ---
 # <a name="changes-to-ntlm-authentication-for-httpwebrequest-in-version-35-sp1"></a>3.5 SP1 版本中对 HttpWebRequest 的 NTLM 身份验证的更改
 在 .NET Framework 版本 3.5 SP1 及以上版本中做出了安全性更改，这些更改影响以下类处理集成式 Windows 身份验证的方式：<xref:System.Net.HttpWebRequest>、 <xref:System.Net.HttpListener>、 <xref:System.Net.Security.NegotiateStream>以及 System.Net 命名空间中的相关类。 这些更改会影响使用这些类来发出 Web 请求和接收响应的应用程序，这些应用程序使用基于 NTLM 的集成式 Windows 身份验证。 此更改会影响配置为使用集成式 Windows 身份验证的 Web 服务器和客户端应用程序。  
@@ -22,9 +20,9 @@ ms.locfileid: "47231147"
 ## <a name="changes"></a>更改  
  与集成式 Windows 身份验证搭配使用的 NTLM 身份验证过程包括由目标计算机发出并发送回客户端计算机的质询。 计算机接收到它自己产生的质询时，身份验证将失败，除非连接为环回连接（例如 IPv4 地址 127.0.0.1）。  
   
- 访问在内部 Web 服务器上运行的服务时，通常使用类似于 http://contoso/service 或 https://contoso/service 的 URL 访问服务。 名称“contoso”通常不是部署了该服务的计算机的计算机名。 <xref:System.Net> 和相关命名空间支持使用 Active Directory、 DNS、 NetBIOS、本地计算机的主机文件（例如，通常为 WINDOWS\system32\drivers\etc\hosts），或本地计算机的 lmhosts 文件（例如，通常为 WINDOWS\system32\drivers\etc\lmhosts）将名称解析为地址。 已解析名称“contoso”，所以发送到“contoso”的请求将发送到相应的服务器计算机。  
+ 访问在内部 Web 服务器上运行的服务时，通常使用类似于 `http://contoso/service` 或 `https://contoso/service` 的 URL 访问服务。 名称“contoso”通常不是部署了该服务的计算机的计算机名。 <xref:System.Net> 和相关命名空间支持使用 Active Directory、 DNS、 NetBIOS、本地计算机的主机文件（例如，通常为 WINDOWS\system32\drivers\etc\hosts），或本地计算机的 lmhosts 文件（例如，通常为 WINDOWS\system32\drivers\etc\lmhosts）将名称解析为地址。 已解析名称“contoso”，所以发送到“contoso”的请求将发送到相应的服务器计算机。  
   
- 为大型部署配置时，常见的情况是，将单个虚拟服务器名提供给部署，而客户端应用程序和最终用户从未使用过基础计算机名。 例如，可能会调用服务器 www.contoso.com，但在内部网络只需使用“contoso”。 在客户端 Web 请求中，此名称被称为主机标头。 根据 HTTP 协议所指定，主机请求标头字段指定所请求的资源的 Internet 主机和端口号。 从用户或引用资源提供的原始 URI（通常是 HTTP URL）中获取此信息。 在 .NET Framework 版本 4 中，此信息也可由使用新 <xref:System.Net.HttpWebRequest.Host%2A> 属性的客户端设置。  
+ 为大型部署配置时，常见的情况是，将单个虚拟服务器名提供给部署，而客户端应用程序和最终用户从未使用过基础计算机名。 例如，可能会调用服务器 `www.contoso.com`，但在内部网络中只需使用“contoso”。 在客户端 Web 请求中，此名称被称为主机标头。 根据 HTTP 协议所指定，主机请求标头字段指定所请求的资源的 Internet 主机和端口号。 从用户或引用资源提供的原始 URI（通常是 HTTP URL）中获取此信息。 在 .NET Framework 版本 4 中，此信息也可由使用新 <xref:System.Net.HttpWebRequest.Host%2A> 属性的客户端设置。  
   
  <xref:System.Net.AuthenticationManager> 类控制由 <xref:System.Net.WebRequest> 衍生类和 <xref:System.Net.WebClient> 类使用的托管身份验证组件（“模块”）。 <xref:System.Net.AuthenticationManager> 类提供一个属性，该属性公开由 URI 字符串变址的 <xref:System.Net.AuthenticationManager.CustomTargetNameDictionary%2A?displayProperty=nameWithType> 对象，以便应用程序提供要在身份验证期间使用的自定义 SPN 字符串。  
   
@@ -50,7 +48,7 @@ ms.locfileid: "47231147"
   
  7. 退出注册表编辑器，然后重新启动 IISAdmin 服务并运行 IISReset。  
   
- 如 [http://support.microsoft.com/kb/896861](https://go.microsoft.com/fwlink/?LinkID=179657) 中所述，安全级别较低的变通方法是禁用环回检查。 这将禁用反射攻击保护。 因此，最好将一组备用名称限制为仅希望计算机实际使用的那些名称。  
+ 如 <https://support.microsoft.com/kb/896861> 中所述，安全级别较低的变通方法是禁用环回检查。 这将禁用反射攻击保护。 因此，最好将一组备用名称限制为仅希望计算机实际使用的那些名称。  
   
 ## <a name="see-also"></a>请参阅  
  <xref:System.Net.AuthenticationManager.CustomTargetNameDictionary%2A?displayProperty=nameWithType>  

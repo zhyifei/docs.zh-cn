@@ -7,11 +7,11 @@ f1_keywords:
 helpviewer_keywords:
 - char data type [C#]
 ms.assetid: b51cf4fb-124c-4067-af48-afbac122b228
-ms.openlocfilehash: 95ecfaaf1397f7a4598faba6528b38170062145a
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 4d4e4719eabf7dbe31a59cc2e1e3d3d9019f080d
+ms.sourcegitcommit: 3b1cb8467bd73dee854b604e306c0e7e3882d91a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
+ms.lasthandoff: 11/07/2018
 ms.locfileid: "43742021"
 ---
 # <a name="char-c-reference"></a>char（C# 参考）
@@ -36,9 +36,9 @@ ms.locfileid: "43742021"
 
 <xref:System.Char?displayProperty=nameWithType> 类型提供多种适用于 `char` 值的静态方法。
 
-## <a name="c-language-specification"></a>C# 语言规范
+## <a name="c-language-specification"></a>C# 语言规范  
 
-[!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
+有关详细信息，请参阅 [C# 语言规范](../language-specification/index.md)中的[整型类型](~/_csharplang/spec/types.md#integral-types)。 该语言规范是 C# 语法和用法的权威资料。
 
 ## <a name="see-also"></a>请参阅
 

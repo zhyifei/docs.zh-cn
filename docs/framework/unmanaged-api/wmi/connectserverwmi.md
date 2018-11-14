@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 244df48606f6d971d6b6e246c4f9b73f916cbdcd
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: fa4b789641034b6563b15c52e96cbfdfa13d989a
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47193801"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50197375"
 ---
 # <a name="connectserverwmi-function"></a>ConnectServerWmi 函数
 通过 DCOM 创建到指定计算机上的 WMI 命名空间的连接。  
@@ -70,7 +70,7 @@ HRESULT ConnectServerWmi (
 | NTLMDOMAIN:*域名* | 使用 NT LAN Manager 身份验证，并且此参数包含的 NTLM 域名。 |
 
 `pCtx`   
-[in]通常情况下，此参数才是`null`。 否则，它是一个指向[IWbemContext](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemcontext)对象所需的一个或多个动态类提供程序。 
+[in]通常情况下，此参数是`null`。 否则，它是一个指向[IWbemContext](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemcontext)对象所需的一个或多个动态类提供程序。 
 
 `ppNamespace`  
 [out]当函数返回时，接收一个指向[IWbemServices](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemservices)对象绑定到指定的命名空间。 它设置为指向`null`时出现错误。
@@ -94,7 +94,7 @@ HRESULT ConnectServerWmi (
   
 ## <a name="remarks"></a>备注
 
-此函数包装对的调用[IWbemLocator::ConnectServer](https://msdn.microsoft.com/libraryaa391769%28v=vs.85%29.aspx)方法。
+此函数包装对的调用[IWbemLocator::ConnectServer](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemlocator-connectserver)方法。
 
  为本地访问默认命名空间`strNetworkResource`可以是简单的对象路径:"root\default"或"\\.\root\default"。 用于访问远程计算机上的默认命名空间使用 COM 或 Microsoft 兼容的网络，包含计算机名称:"\\myserver\root\default"。 计算机名称也可以是 DNS 名称或 IP 地址。 `ConnectServerWmi`函数还可以连接运行 IPv6 的计算机使用 IPv6 地址。
 

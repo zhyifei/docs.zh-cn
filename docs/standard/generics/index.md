@@ -81,7 +81,7 @@ ms.locfileid: "48584138"
   
 -   一般术语 *泛型类型* 包括构造类型和泛型类型定义。  
   
--   泛型类型形参的*协变* 和 *逆变* of generic type parameters enable you to use constructed generic types whose type arguments are more derived (covariance) or less derived (逆变) than a target constructed type. 协变和逆变统称为“变体” 。 有关详细信息，请参阅[协变和逆变](../../../docs/standard/generics/covariance-and-contravariance.md)。  
+-   借助泛型类型参数的*协变*和*逆变*，可以使用类型自变量的派生程度比目标构造类型更高（协变）或更低（逆变）的构造泛型类型。 协变和逆变统称为“变体” 。 有关详细信息，请参阅[协变和逆变](../../../docs/standard/generics/covariance-and-contravariance.md)。  
   
 -   *约束*是对泛型类型参数的限制。 例如，你可能会将一个类型形参限制为实现 <xref:System.Collections.Generic.IComparer%601?displayProperty=nameWithType> 泛型接口的类型，以确保可对该类型的实例进行排序。 此外，你还可以将类型形参限制为具有特定基类、具有默认构造函数或作为引用类型或值类型的类型。 泛型类型的用户不能替换不满足约束条件的类型实参。  
   

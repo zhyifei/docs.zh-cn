@@ -4,12 +4,12 @@ description: 适用于容器化 .NET 应用程序的 .NET 微服务体系结构 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 06/07/2018
-ms.openlocfilehash: 1aaddc96ee509815da9fc4e6519e1fb454f74b13
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 00763a806c18b45b366068f865f4ecb4c5cd743b
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47198678"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50183600"
 ---
 # <a name="the-api-gateway-pattern-versus-the-direct-client-to-microservice-communication"></a>API 网关模式与客户端到微服务直接通信
 
@@ -84,13 +84,13 @@ ms.locfileid: "47198678"
 
 因此，应根据业务边界和客户端应用分隔 API 网关，并且不将其用作所有内部微服务的单个聚合器。
 
-当将 API 网关层拆分为多个 API 网关时，如果应用程序有多个客户端应用，那么在识别多个 API 网关类型时，这可能是一个主枢轴，这样你就可以为每个客户端应用提供所需的不同外观。 本例是一个名为“用于前端的后端”([BFF](http://samnewman.io/patterns/architectural/bff/)) 模式，其中每个 API 网关可以专为每个客户端应用类型提供不同的 API，甚至可以通过实现特定的适配器代码（该代码在下方调用多个内部微服务），根据客户端外形规格提供不同 API，如下图所示：
+当将 API 网关层拆分为多个 API 网关时，如果应用程序有多个客户端应用，那么在识别多个 API 网关类型时，这可能是一个主枢轴，这样你就可以为每个客户端应用提供所需的不同外观。 本例是一个名为“用于前端的后端”([BFF](https://samnewman.io/patterns/architectural/bff/)) 模式，其中每个 API 网关可以专为每个客户端应用类型提供不同的 API，甚至可以通过实现特定的适配器代码（该代码在下方调用多个内部微服务），根据客户端外形规格提供不同 API，如下图所示：
 
 ![图表显示多个自定义 API 网关](./media/image13.1.png)
 
 图 4-13.1。 使用多个自定义 API 网关
 
-以前的映像显示一个使用多个细化 API 网关的简化体系结构。 在本例中，为每个 API 网关识别的边界纯粹基于“用于前端的后端”([BFF](http://samnewman.io/patterns/architectural/bff/)) 模式，因此仅基于每个客户端应用所需的 API。 但是在更大的应用程序中，还应该更进一步，并创建基于业务边界的附加 API 网关作为第二个设计枢轴。
+以前的映像显示一个使用多个细化 API 网关的简化体系结构。 在本例中，为每个 API 网关识别的边界纯粹基于“用于前端的后端”([BFF](https://samnewman.io/patterns/architectural/bff/)) 模式，因此仅基于每个客户端应用所需的 API。 但是在更大的应用程序中，还应该更进一步，并创建基于业务边界的附加 API 网关作为第二个设计枢轴。
 
 ## <a name="main-features-in-the-api-gateway-pattern"></a>API 网关模式中的主要功能
 
@@ -168,7 +168,7 @@ Ocelot。 要获得更简单的方法，建议使用一种轻型 API 网关，�
 
 - API 网关模式 [https://docs.microsoft.com/azure/architecture/microservices/gateway](https://docs.microsoft.com/azure/architecture/microservices/gateway)
 
-- 聚合和组合模式 [http://microservices.io/patterns/data/api-composition.html](http://microservices.io/patterns/data/api-composition.html)
+- 聚合和组合模式 [https://microservices.io/patterns/data/api-composition.html](https://microservices.io/patterns/data/api-composition.html)
 
 - Azure API 管理 [https://azure.microsoft.com/services/api-management/](https://azure.microsoft.com/services/api-management/)
 

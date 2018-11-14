@@ -2,11 +2,11 @@
 title: 选择消息编码器
 ms.date: 03/30/2017
 ms.assetid: 2204d82d-d962-4922-a79e-c9a231604f19
-ms.openlocfilehash: 5d2b55f04954cdd855ff9e224d2bc0405919f7a3
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 061869704674206739d81be24e105fc87ce0f129
+ms.sourcegitcommit: b5cd9d5d3b75a5537fc9ad8a3f085f0bb1845ee0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/09/2018
+ms.lasthandoff: 11/07/2018
 ms.locfileid: "44248925"
 ---
 # <a name="choosing-a-message-encoder"></a>选择消息编码器
@@ -25,14 +25,14 @@ ms.locfileid: "44248925"
   
 -   <xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement>二进制消息编码器使用精简的二进制格式和适用于 WCF 到 WCF 的通信，并因此不可互操作。 这也是 WCF 提供的所有编码器的大多数的高性能编码器。  
   
--   <<!--zz xref:System.ServiceModel.Channels.MTOMMessageEncodingBindingElement --> `System.ServiceModel.Channels.MTOMMessageEncodingBindingElement`>、 绑定元素，指定的字符编码和消息版本控制的消息使用 MTOM 编码。 MTOM 是一种用于在 WCF 消息中传输二进制数据的有效技术。 MTOM 编码器会尝试在效率和互操作性之间建立平衡。 MTOM 编码以文本形式传输大多数 XML，但是会通过按原样（即不转换为文本）的方式传输来优化大型二进制数据块。 就效率而言，WCF 提供了的编码器之间 MTOM 是介于在文本 （最慢） 和二进制文件 （最快）。  
+-   <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement>，绑定元素，指定使用 MTOM 编码的消息的字符编码和消息版本。 MTOM 是一种用于在 WCF 消息中传输二进制数据的有效技术。 MTOM 编码器会尝试在效率和互操作性之间建立平衡。 MTOM 编码以文本形式传输大多数 XML，但是会通过按原样（即不转换为文本）的方式传输来优化大型二进制数据块。 就效率而言，WCF 提供了的编码器之间 MTOM 是介于在文本 （最慢） 和二进制文件 （最快）。  
   
 ## <a name="how-to-choose-a-message-encoder"></a>如何选择消息编码器  
  下表说明了用于选择消息编码器的常用因素。 确定因素对于您的应用程序重要性顺序，然后选择最适用于这些因素的消息编码器。 请确保考虑此表中未列出的其他因素和在您的应用程序中可能需要的任何自定义消息编码器。  
   
 |因素|描述|支持此因素的编码器|  
 |------------|-----------------|---------------------------------------|  
-|支持的字符集|<xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement> 和 <<!--zz xref:System.ServiceModel.Channels.MTOMMessageEncodingBindingElement --> `System.ServiceModel.Channels.MTOMMessageEncodingBindingElement`> 支持 UTF8 和 UTF16 Unicode (*big endian*并*小字节序*) 编码。 如果需要其他编码（如 UTF7 或 ASCII），则必须使用自定义编码器。 自定义编码器示例，请参阅[自定义消息编码器](https://go.microsoft.com/fwlink/?LinkId=119857)。|Text|  
+|支持的字符集|<xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement> 并<xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement>仅支持 UTF8 和 UTF16 Unicode (*big endian*并*小字节序*) 编码。 如果需要其他编码（如 UTF7 或 ASCII），则必须使用自定义编码器。 自定义编码器示例，请参阅[自定义消息编码器](https://go.microsoft.com/fwlink/?LinkId=119857)。|Text|  
 |检查|检查是在传送期间检查消息的功能。 使用或不使用 SOAP 的文本编码使很多程序不用专用工具就可以检查和分析消息。 请注意，使用传输安全（在消息或传输级别）影响检查消息的能力。 保密性会保护消息免于检查，完整性会保护消息免于修改。|Text|  
 |可靠性|可靠性是编码器传输错误的复原能力。 也可以在消息层、传输层和应用程序层提供可靠性。 所有标准的 WCF 编码器假定其他层提供可靠性。 编码器几乎没有从传输错误恢复的能力。|无|  
 |简单性|简单性表示为编码规范创建编码器和解码器的简便性。 文本编码在简单性方面具有明显的优势，POX 文本编码的另一个优点在于不需要支持处理 SOAP。|文本 (POX)|  

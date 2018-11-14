@@ -8,14 +8,12 @@ helpviewer_keywords:
 - <httpWebRequest> element
 - httpWebRequest element
 ms.assetid: 52acd9d2-5bdc-4dc4-9c2a-f0a476ccbb31
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: e83f12d849f6f6a587bccc85fbf6fe8fe24026f0
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 0d3feb168acbd623270a2038bf06a3c97126bd05
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47397223"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50205147"
 ---
 # <a name="lthttpwebrequestgt-element-network-settings"></a>&lt;httpWebRequest&gt;元素 （网络设置）
 自定义 Web 请求参数。  
@@ -79,5 +77,5 @@ ms.locfileid: "47397223"
 ```  
   
 ## <a name="see-also"></a>请参阅  
- <xref:System.Net.HttpWebRequest.MaximumResponseHeadersLength%2A>  
- [网络设置架构](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+- <xref:System.Net.HttpWebRequest.MaximumResponseHeadersLength%2A>  
+- [网络设置架构](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

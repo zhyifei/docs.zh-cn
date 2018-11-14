@@ -4,12 +4,12 @@ description: 适用于容器化 .NET 应用程序的 .NET 微服务体系结构 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.openlocfilehash: 79b63c376d25725b2bcb6c16cdb4d06e107d5c07
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 3c5f4c5a1dd1c1065be63ad916af078050c069c1
+ms.sourcegitcommit: 5fd80619c760fa8c25d33a6f5661247cb65da465
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47199003"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "50744491"
 ---
 # <a name="creating-composite-ui-based-on-microservices-including-visual-ui-shape-and-layout-generated-by-multiple-microservices"></a>根据微服务创建复合 UI，包括多个微服务生成的可视 UI 形状和布局
 
@@ -42,10 +42,10 @@ ms.locfileid: "47199003"
 ## <a name="additional-resources"></a>其他资源
 
 -   **Composite UI using ASP.NET (Particular’s Workshop)**（使用 ASP.NET（Particular 的 Workshop）的复合 UI）
-    [http://go.particular.net/workshop-composite-ui-demo](http://go.particular.net/workshop-composite-ui-demo)
+    [https://go.particular.net/workshop-composite-ui-demo](https://go.particular.net/workshop-composite-ui-demo)
 
 -   **Ruben Oostinga。The Monolithic Frontend in the Microservices Architecture**（微服务体系结构中的整体式前端）
-    [http://blog.xebia.com/the-monolithic-frontend-in-the-microservices-architecture/](http://blog.xebia.com/the-monolithic-frontend-in-the-microservices-architecture/)
+    [https://xebia.com/blog/the-monolithic-frontend-in-the-microservices-architecture/](https://xebia.com/blog/the-monolithic-frontend-in-the-microservices-architecture/)
 
 -   **Mauro Servienti。The secret of better UI composition**（实现更好的 UI 组合的秘诀）
     [https://particular.net/blog/secret-of-better-ui-composition](https://particular.net/blog/secret-of-better-ui-composition)

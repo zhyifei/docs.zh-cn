@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: ee13c0a8-ab02-49f7-b8fb-9eab16c6c4f0
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3c6f58ef5bd96d8a74ce27bb53acd36af005c335
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8a40d77f58d6a614f874e12f118f89f25f149e55
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33356778"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50180636"
 ---
 # <a name="running-intranet-applications-in-full-trust"></a>在完全信任环境中运行 Intranet 应用程序
 从 .NET Framework 3.5 版 Service Pack 1 (SP1) 开始，应用程序及其库程序集可在网络共享中作为完全信任的程序集运行。 <xref:System.Security.SecurityZone.MyComputer> 区域证据自动添加到从 Intranet 上的共享加载的程序集。 此证据为这些程序集提供与计算机上程序集所具有的相同授予集（通常为完全信任）。 此功能不适用于 ClickOnce 应用程序或用于在主机上运行的应用程序。  
@@ -35,4 +35,4 @@ ms.locfileid: "33356778"
 -   对于 64 位计算机，在系统注册表中的 HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\\.NETFramework 项下创建子项。 使用项名称 LegacyMyComputerZone，DWORD 值为 1。 在 HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\\.NETFramework 项下创建相同的子项。  
   
 ## <a name="see-also"></a>请参阅  
- [使用程序集编程](../../../docs/framework/app-domains/programming-with-assemblies.md)
+- [使用程序集编程](../../../docs/framework/app-domains/programming-with-assemblies.md)

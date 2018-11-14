@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7e953b43-1374-4bbc-814f-53ca1b6b52bb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0a4cb3f126a51d6bf7027edb88b8fec74c6785d2
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 9ad1cbd9da3a6b55dbb23eaf97c10e6090077fd8
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/29/2018
-ms.locfileid: "47231552"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50198479"
 ---
 # <a name="certmgrexe-certificate-manager-tool"></a>Certmgr.exe（证书管理器工具）
 证书管理器工具 (Certmgr.exe) 管理证书、证书信任列表 (CTL) 和证书吊销列表 (CRL)。  
@@ -54,7 +54,7 @@ ms.locfileid: "47231552"
 |选项|描述|  
 |------------|-----------------|  
 |**/add**|将证书、CTL 和 CRL 添加到证书存储中。|  
-|**/all**|当与 **/add** 一起使用时添加所有项。 当与 **/del** 一起使用时删除所有项。当不与 **/add** 或 **/del** 选项一起使用时显示所有项。 **/all** 选项不能与 **/put** 一起使用。|  
+|**/all**|当与 **/add** 一起使用时添加所有项。 当与 **/del** 一起使用时删除所有项。当不与 /add 或 **/del** 选项一起使用时显示所有项。 **/all** 选项不能与 **/put** 一起使用。|  
 |**/c**|当与 **/add** 一起使用时添加证书。 当与 **/del** 一起使用时删除证书。当与 **/put** 一起使用时保存证书。 当不与 **/add**、**/del** 或 **/put** 选项一起使用时显示证书。|  
 |**/CRL**|当与 **/add** 一起使用时添加 CRL。 当与 **/del** 一起使用时删除 CRL。当与 **/put** 一起使用时保存 CRL。 当不与 **/add**、**/del** 或 **/put** 选项一起使用时显示 CRL。|  
 |**/CTL**|当与 **/add** 一起使用时添加 CTL。 当与 **/del** 一起使用时删除 CTL。当与 **/put** 一起使用时保存 CTL。 当不与 **/add**、**/del** 或 **/put** 选项一起使用时显示 CTL。|  
@@ -139,5 +139,5 @@ certmgr /put /c /s my newFile
   
 ## <a name="see-also"></a>请参阅  
  [工具](../../../docs/framework/tools/index.md)  
- [Makecert.exe（证书创建工具）](https://msdn.microsoft.com/library/b0343f8e-9c41-4852-a85c-f8a0c408cf0d)  
+ [Makecert.exe（证书创建工具）](/windows/desktop/SecCrypto/makecert)  
  [命令提示](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

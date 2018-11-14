@@ -3,12 +3,12 @@ title: 元组类型 - C# 指南
 description: 了解 C# 中的未命名元组类型和命名元组类型
 ms.date: 05/15/2018
 ms.assetid: ee8bf7c3-aa3e-4c9e-a5c6-e05cc6138baa
-ms.openlocfilehash: b0c838791e640c9813005b8a32d009153a794c14
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 572e926b6345fc27278f78d1faf2e3b27f017f2e
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43509441"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50186026"
 ---
 # <a name="c-tuple-types"></a>C# 元组类型 #
 
@@ -92,7 +92,7 @@ C# 元组是使用轻量语法定义的类型。 其优点包括：更简单的�
 
 [!code-csharp[TupleEquality](../../samples/snippets/csharp/tuples/tuples/program.cs#Equality "Testing tuples for equality")]
 
-有几条规则，可使元组相等测试更方便。 如果其中一个元组是可以为空值的元组，则元组相等将执行[提升转换](language-reference/language-specification/index.md)，如以下代码中所示：
+有几条规则，可使元组相等测试更方便。 如果其中一个元组是可以为空值的元组，则元组相等将执行[提升转换](~/_csharplang/spec/conversions.md#lifted-conversion-operators)，如以下代码中所示：
 
 
 [!code-csharp[NullableTupleEquality](../../samples/snippets/csharp/tuples/tuples/program.cs#NullableEquality "Comparing Tuples and nullable tuples")]

@@ -5,13 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: a7eb98da-4a93-4692-8b59-9d670c79ffb2
-author: BrucePerlerMS
-ms.openlocfilehash: bf3276353473f07f58740a5819226994123efdcd
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 6471a8a8e257ea3bb6f26a8041694ef25151ad1a
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47201148"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50195939"
 ---
 # <a name="security-considerations-for-data"></a>数据的安全考虑事项
 在处理时 Windows Communication Foundation (WCF) 中的数据，必须考虑许多种类的威胁。 下表列出了与数据处理相关的最重要的威胁类。 WCF 提供了缓解这些威胁的工具。  
@@ -202,7 +201,7 @@ ms.locfileid: "47201148"
   
  始终允许 <xref:System.Runtime.Serialization.DataContractSerializer> 加载按照协定当前预计加载的类型。 例如，如果数据协定具有一个 `Customer`类型的数据成员，则允许 <xref:System.Runtime.Serialization.DataContractSerializer> 在反序列化该数据成员时加载 `Customer` 类型。  
   
- 此外， <xref:System.Runtime.Serialization.DataContractSerializer> 还支持多态性。 一个数据成员可能声明为 <xref:System.Object>，但传入的数据可能包含一个 `Customer` 实例。 只有当已通过下面某种机制使反序列化程序“知晓” `Customer` 类型时，这种情况才是可能的。  
+ 此外， <xref:System.Runtime.Serialization.DataContractSerializer> 还支持多态性。 一个数据成员可能声明为 <xref:System.Object>，但传入的数据可能包含一个 `Customer` 实例。 只有当已通过下面某种机制使反序列化程序“知晓”`Customer` 类型时，这种情况才是可能的。  
   
 -   应用于类型的<xref:System.Runtime.Serialization.KnownTypeAttribute> 属性。  
   

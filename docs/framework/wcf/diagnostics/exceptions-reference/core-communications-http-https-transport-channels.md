@@ -3,11 +3,11 @@ title: 核心通信： HTTP HTTPS 传输通道
 ms.date: 03/30/2017
 ms.assetid: 6c0a23c9-a663-461c-bdab-58b4d3e23642
 ms.openlocfilehash: 4c4a2537ae615943ffac299a8c8cd00c67094360
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48844184"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50198219"
 ---
 # <a name="core-communications-httphttps-transport-channels"></a>核心通信：HTTP/HTTPS 传输通道
 本主题列出了由 Windows Communication Foundation (WCF) 传输 HTTP/HTTPS 通道生成的所有异常。  

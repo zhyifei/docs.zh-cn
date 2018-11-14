@@ -3,12 +3,12 @@ title: 使用 XML 注释来记录代码
 description: 了解如何使用 XML 文档注释来记录代码和在编译时生成 XML 文档文件。
 ms.date: 02/14/2017
 ms.assetid: 8e75e317-4a55-45f2-a866-e76124171838
-ms.openlocfilehash: e211543a6a5cc5f6f29d8c195492b474eb24a38d
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 09e6b4aa75aababcebba96693d6e73b29a30fc6a
+ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47397054"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49453263"
 ---
 # <a name="documenting-your-code-with-xml-comments"></a>使用 XML 注释来记录代码
 
@@ -51,7 +51,7 @@ XML 文档注释使用三个正斜杠 (`///`) 和 XML 格式的注释正文。 �
 示例库支持 `int` 和 `double` 数据类型的四种主要算术运算：`add`、`subtract`、`multiply` 和 `divide`。
 
 现在，希望能够从代码中为使用库但无源代码访问权限的第三方开发人员创建 API 引用文档。
-如之前提到的，可使用 XML 文档标记实现此目的，现在介绍 C# 编译器支持的标准 XML 标记。
+如前面所述，XML 文档标记可用于实现此目的。 现在介绍 C# 编译器支持的标准 XML 标记。
 
 ### <a name="ltsummarygt"></a>&lt;summary&gt;
 

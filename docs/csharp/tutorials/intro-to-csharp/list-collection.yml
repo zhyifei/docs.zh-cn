@@ -1,25 +1,24 @@
 ### YamlMime:Tutorial
-title: C# 中的集合
+title: 了解如何使用泛型列表类型管理数据集合
 metadata:
-  title: “集合”交互教程 - C# 快速入门
+  title: 数据集合 - C# 交互教程简介
   description: 在本教程中，读者将使用浏览器通过交互方式了解 C#。 读者可以直接在浏览器中编写 C# 代码，并查看代码编译和运行结果。
   audience: Developer
-  ms.topic: quickstart
   ms.custom: mvc
-  ms.date: 08/24/2018
+  ms.date: 10/23/2018
   level: Beginner
   displayType: two-column
   interactive: csharp
-  ms.openlocfilehash: 778694770cd5321be2f13183737bae8aa51005d2
-  ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+  ms.openlocfilehash: 6b7a00a0d7ea17ab48e673b735bdd1a77328c099
+  ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
   ms.translationtype: HT
   ms.contentlocale: zh-CN
-  ms.lasthandoff: 09/04/2018
-  ms.locfileid: "43513936"
+  ms.lasthandoff: 10/28/2018
+  ms.locfileid: "50200138"
 items:
 - durationInMinutes: 1
   content: >
-    本快速入门教程通过交互方式介绍了 C#，读者可以使用浏览器编写 C# 代码，并查看代码编译和运行结果。 具体包含一系列课程，介绍了如何创建、修改和浏览集合和数组。
+    本教程通过交互方式介绍了 C#，读者可以使用浏览器编写 C# 代码，并查看代码编译和运行结果。 具体包含一系列课程，介绍了如何创建、修改和浏览集合和数组。
 - title: 创建列表
   durationInMinutes: 2
   content: >
@@ -39,10 +38,10 @@ items:
     ```
 
 
-    刚刚创建了一个字符串列表，并向其中添加了三个名称，再输出了全部大写的名称。 循环访问整个列表需要用到，在前面的快速入门课程中学到的概念。
+    刚刚创建了一个字符串列表，并向其中添加了三个名称，再输出了全部大写的名称。 循环读取整个列表需要用到在前面的教程中学到的概念。
 
 
-    用于显示名称的代码使用[字符串内插](../language-reference/tokens/interpolated.md)功能。 如果 `string` 前面有 `$`符号，可以在字符串声明中嵌入 C# 代码。 实际字符串使用自己生成的值替换该 C# 代码。 在此示例中，`{name.ToUpper()}` 被替换为各个转换为大写字母的名称，因为调用了 <xref:System.String.ToUpper%2A> 方法。
+    用于显示名称的代码使用[字符串内插](../../language-reference/tokens/interpolated.md)功能。 如果 `string` 前面有 `$`符号，可以在字符串声明中嵌入 C# 代码。 实际字符串使用自己生成的值替换该 C# 代码。 在此示例中，`{name.ToUpper()}` 被替换为各个转换为大写字母的名称，因为调用了 <xref:System.String.ToUpper%2A?displayProperty=nameWithType> 方法。
 
 
     接下来将进一步探索。
@@ -200,7 +199,7 @@ items:
   durationInMinutes: 3
   content: "最后是否生成如下代码？\n\n```csharp\nvar fibonacciNumbers = new List<int> {1, 1};\n\nwhile (fibonacciNumbers.Count < 20)\n{\n    var previous = fibonacciNumbers[fibonacciNumbers.Count - 1];\n    var previous2 = fibonacciNumbers[fibonacciNumbers.Count - 2];\n    \n    fibonacciNumbers.Add(previous + previous2);\n}\nforeach(var item in fibonacciNumbers)\n    Console.WriteLine(item);\n```\n\n在循环的每次迭代中，取此列表中的最后两个整数进行求和，并将计算出的总和值添加到列表中。 循环会一直重复运行到列表中有 20 个项为止。\n\n> [!NOTE]\n> 此联机编码体验处于预览模式。 如果遇到问题，请[在 dotnet/try 存储库上](https://github.com/dotnet/try/issues)进行报告。\n"
 - content: >-
-    已完成“列表”快速入门教程。 这是快速入门交互教程系列中的最后一个教程。 你可继续在自己的开发环境中学习这些教程。 请先了解[本地开发](local-environment.md)基础知识，再选择一个快速入门教程。 可以再次尝试本练习，也可以直接学习下一个快速入门教程，亦可以重新开始学习 [C# 中的数字](numbers-in-csharp-local.md)快速入门教程。
+    已完成“列表集合”教程。 本教程是最后一个交互式教程。 你可以继续在自己的开发环境中学习这些教程。 请先了解[本地开发](local-environment.md)基础知识，再选择一个教程。 可以再次尝试本练习，也可以直接学习下一个教程，亦可以重新开始学习 [C# 中的数字](numbers-in-csharp-local.md)教程。
 
 
-    若要详细了解如何使用 `List` 类型，可以参阅有关[集合](../../standard/collections/index.md)的 [.NET 指南](../../standard/index.md)主题。 还可以了解其他许多集合类型。
+    若要详细了解如何使用 `List` 类型，可以参阅有关[集合](../../../standard/collections/index.md)的 [.NET 指南](../../../standard/index.md)主题。 还可以了解其他许多集合类型。

@@ -5,12 +5,12 @@ author: cartermp
 ms.author: mairaw
 ms.date: 08/23/2017
 ms.technology: dotnet-standard
-ms.openlocfilehash: e131ab48b666f2d22d8bd02e41ed76e415a2597d
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: b98095cd6afd408331ab8c8f6bb15e7741d3073a
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/29/2018
-ms.locfileid: "47456020"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50189688"
 ---
 # <a name="net-architectural-components"></a>.NET 体系结构组件
 
@@ -63,7 +63,7 @@ Mono 通常与实时编译器一起使用，但它也提供在 iOS 之类的平�
 
 UWP 是用于为物联网 (IoT) 生成新式触控 Windows 应用程序和软件的 .NET 实现。 它旨在统一可能想要以其为目标的不同类型的设备，包括电脑、平板电脑、平板手机、电话，甚至 Xbox。 UWP 提供许多服务，如集中式应用商店、执行环境 (AppContainer) 和一组 Windows API（用于代替 Win32 (WinRT)）。 应用可采用 C++、C#、VB.NET 和 JavaScript 编写。 使用 C# 和 VB.NET 时，.NET API 由 .NET Core 提供。
 
-若要详细了解 UWP，请参阅[通用 Windows 平台简介](https://docs.microsoft.com/windows/uwp/get-started/universal-application-platform-guide)。
+若要详细了解 UWP，请参阅[通用 Windows 平台简介](/windows/uwp/get-started/universal-application-platform-guide)。
 
 ## <a name="net-runtimes"></a>.NET 运行时
 

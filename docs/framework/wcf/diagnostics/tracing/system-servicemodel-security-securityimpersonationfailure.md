@@ -2,13 +2,12 @@
 title: System.ServiceModel.Security.SecurityImpersonationFailure
 ms.date: 03/30/2017
 ms.assetid: e0e61834-72ac-4a58-af32-94e3206a9369
-author: BrucePerlerMS
-ms.openlocfilehash: f783272ec06454aeafc81b2946d515a645d075ba
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 2ba2dccb41b66f40cf1aba640cfed0a3e33e947e
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47195662"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50198511"
 ---
 # <a name="systemservicemodelsecuritysecurityimpersonationfailure"></a>System.ServiceModel.Security.SecurityImpersonationFailure
 System.ServiceModel.Security.SecurityImpersonationFailure  

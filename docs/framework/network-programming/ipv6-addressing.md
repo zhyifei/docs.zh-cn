@@ -26,14 +26,12 @@ helpviewer_keywords:
 - IPv6, addresses in
 - IPv6, disabling
 ms.assetid: 20a104ae-1649-4649-a005-531a5cf74c93
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: 8c992a96f2fa8d55d1fe16c03922cc8dbb39451c
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: ac8b8bae69ba20f34bb74fbff533ba53f915a150
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47194004"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50183407"
 ---
 # <a name="ipv6-addressing"></a>IPv6 寻址
 在 Internet 协议版本 6（IPv6）中，地址长度为 128 位。 地址空间如此之大的一个原因是将可用地址细分为可以反映 Internet 拓扑的路由域的层次结构。 另一个原因是映射将设备连接到网络的网络适配器（或接口）的地址。 IPv6 有可以解析最低级别的地址（即网络接口级别的地址）的固有功能以及自动配置功能。  

@@ -2,12 +2,12 @@
 title: 单向
 ms.date: 03/30/2017
 ms.assetid: 74e3e03d-cd15-4191-a6a5-1efa2dcb9e73
-ms.openlocfilehash: 25720285e29641c3c040444cb643af2790f10d3b
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 9a8af4bcdc76afd96ada595a7234cbc5e0250dfc
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43740722"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50180856"
 ---
 # <a name="one-way"></a>单向
 此示例演示具有单向服务操作的服务协定。 客户端不会像在双向服务操作中那样等待服务操作完成。 此示例基于[Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md) ，并使用`wsHttpBinding`绑定。 此示例中的服务是自承载控制台应用程序，通过它可以观察接收和处理请求的服务。 客户端也是一个控制台应用程序。  
@@ -17,7 +17,7 @@ ms.locfileid: "43740722"
   
  若要创建单向服务协定，请定义服务协定，将 <xref:System.ServiceModel.OperationContractAttribute> 类应用于每个操作，并将 <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A> 设置为 `true`，如下面的示例代码所示：  
   
-```  
+```csharp
 [ServiceContract(Namespace="http://Microsoft.ServiceModel.Samples")]  
 public interface IOneWayCalculator  
 {  
@@ -34,8 +34,8 @@ public interface IOneWayCalculator
   
  为了演示客户端不会等待服务操作完成，此示例中的服务代码实现了五秒钟的延迟，如下面的示例代码所示：  
   
-```  
-/ This service class implements the service contract.  
+```csharp
+// This service class implements the service contract.  
 // This code writes output to the console window.  
  [ServiceBehavior(ConcurrencyMode = ConcurrencyMode.Multiple,  
     InstanceContextMode = InstanceContextMode.PerCall)]  
@@ -58,7 +58,7 @@ public class CalculatorService : IOneWayCalculator
   
  客户端在服务之前完成，说明了客户端没有等待单向服务操作完成。 客户端输出如下所示：  
   
-```  
+```console  
 Add(100,15.99)  
 Subtract(145,76.54)  
 Multiply(9,81.25)  
@@ -69,7 +69,7 @@ Press <ENTER> to terminate client.
   
  服务输出如下所示：  
   
-```  
+```console  
 The service is ready.  
 Press <ENTER> to terminate service.  
   

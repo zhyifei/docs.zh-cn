@@ -14,14 +14,12 @@ helpviewer_keywords:
 - data types [Visual Basic], integral
 - SByte data type
 ms.assetid: 5c38374a-18a1-4cc2-b493-299e3dcaa60f
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 94ab72b2ac2678640697e3cfab426e5a7d6d889a
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: c353aa8c5ac1d1912bc303f8f741ff0911cdf021
+ms.sourcegitcommit: 4bca8f7e172fd019ef437a4803bf5895c6bc4781
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43518580"
+ms.lasthandoff: 11/03/2018
+ms.locfileid: "50980815"
 ---
 # <a name="sbyte-data-type-visual-basic"></a>SByte 数据类型 (Visual Basic)
 
@@ -60,7 +58,7 @@ Dim number As SByte = &H_F9
 
 - 通过编译与禁用整数边界检查`/removeintchecks`编译器开关。
 
-- 使用[类型字符](../../programming-guide\language-features\data-types/type-characters.md)显式定义你想要分配到的文本值`SByte`。 下面的示例将负文字`Short`值设为`SByte`。 请注意，对于负数，数字文本的高序位字的高顺序位必须进行设置。 对于本示例中，这位文字的 15`Short`值。
+- 使用[类型字符](../../programming-guide/language-features/data-types/type-characters.md)显式定义你想要分配到的文本值`SByte`。 下面的示例将负文字`Short`值设为`SByte`。 请注意，对于负数，数字文本的高序位字的高顺序位必须进行设置。 对于本示例中，这位文字的 15`Short`值。
 
    [!code-vb[SByteTypeChars](../../../../samples/snippets/visualbasic/language-reference/data-types/sbyte-assignment.vb#1)]
 

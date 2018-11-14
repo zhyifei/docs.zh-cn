@@ -2,20 +2,19 @@
 title: AsymmetricSecurityBindingElement
 ms.date: 03/30/2017
 ms.assetid: 7bd3b6be-8f77-4927-93ae-6fa371893cca
-author: BrucePerlerMS
-ms.openlocfilehash: 63af1c9a607cb9f81e2c0abf795ee2b3432cbf9c
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 076313548828f1fbce9c68b48c0fa7db9cca095f
+ms.sourcegitcommit: 296183dbe35077b5c5e5e74d5fbe7f399bc507ee
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47397353"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "50982785"
 ---
 # <a name="asymmetricsecuritybindingelement"></a>AsymmetricSecurityBindingElement
 AsymmetricSecurityBindingElement  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```csharp
 class AsymmetricSecurityBindingElement : SecurityBindingElement  
 {  
   string MessageProtectionOrder;  

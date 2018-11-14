@@ -6,17 +6,15 @@ helpviewer_keywords:
 - /warnaserror compiler option [Visual Basic]
 - -warnaserror compiler option [Visual Basic]
 ms.assetid: 49819f1d-a1bd-4201-affe-5afe6d9712e1
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 6c04bff4070b0f1c288c8853e5045fbf670d8e9e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 89f6566bd733ff92d464c026102429d3fc5cf0c1
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33655664"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50192221"
 ---
 # <a name="-warnaserror-visual-basic"></a>-warnaserror (Visual Basic)
-使编译器将视为错误的警告的第一个匹配项。  
+使编译器将第一次出现的警告视为错误。  
   
 ## <a name="syntax"></a>语法  
   
@@ -28,36 +26,36 @@ ms.locfileid: "33655664"
   
 |术语|定义|  
 |---|---|  
-|+ &#124; -|可选。 默认情况下，`-warnaserror-`是有效，则警告不会阻止编译器生成的输出文件。 `-warnaserror`选项，这是相同作为`-warnaserror+`，会导致将警告视为错误。|  
-|`numberList`|可选。 以逗号分隔列表的警告 ID 号到`-warnaserror`选项适用。 如果不指定任何警告 ID，则`-warnaserror`选项适用于所有警告。|  
+|+ &#124; -|可选。 默认情况下，`-warnaserror-` 生效；警告不会阻止编译器生成输出文件。 `-warnaserror` 选项与 `-warnaserror+` 相同，会导致将警告视为错误。|  
+|`numberList`|可选。 `-warnaserror` 选项适用的警告 ID 编号列表，以逗号分隔。 如果未指定警告 ID，则 `-warnaserror` 选项适用于所有警告。|  
   
 ## <a name="remarks"></a>备注  
- `-warnaserror`选项将所有警告视为错误。 任何将通常报告为警告而是会报告为错误的消息。 编译器将报告为警告相同的警告的后续匹配项。  
+ `-warnaserror` 选项将所有警告视为错误。 通常将报告为警告的任何消息都报告为错误。 编译器将随后出现的相同警告报告为警告。  
   
- 默认情况下，`-warnaserror-`是起作用，这会导致仅为信息性的警告。 `-warnaserror`选项，这是相同作为`-warnaserror+`，会导致将警告视为错误。  
+ 默认情况下，`-warnaserror-` 生效，导致警告仅提供信息。 `-warnaserror` 选项与 `-warnaserror+` 相同，会导致将警告视为错误。  
   
- 如果你想仅几个特定警告视为错误，则可以指定逗号分隔警告编号，以将视为错误的列表。  
+ 如果希望仅将一些特定警告视为错误，则可以指定视为错误的警告编号的逗号分隔列表。  
   
 > [!NOTE]
->  `-warnaserror`选项不控制如何显示警告。 使用[-nowarn](../../../visual-basic/reference/command-line-compiler/nowarn.md)选项来禁用的警告。  
+>  `-warnaserror` 选项不控制警告的显示方式。 使用 [-nowarn](../../../visual-basic/reference/command-line-compiler/nowarn.md) 选项来禁用警告。  
   
-|若要设置-warnaserror 将所有警告视为 Visual Studio IDE 中的错误|  
+|设置 -warnaserror 以将所有警告视为 Visual Studio IDE 中的错误|  
 |---|  
-|1.在 **“解决方案资源管理器”** 中选择一个项目。 在“项目”菜单上，单击“属性”。 <br />2.单击“编译”选项卡。<br />3.请确保**禁用所有警告**复选框处于未选中状态。<br />4.检查**将所有警告视为错误**复选框。|  
+|1.在 **“解决方案资源管理器”** 中选择一个项目。 在“项目”菜单上，单击“属性”。 <br />2.单击“编译”选项卡。<br />3.确保“禁用所有警告”复选框处于未选中状态。<br />4.选中“将所有警告视为错误”复选框。|  
   
-|若要设置-warnaserror 特定警告视为在 Visual Studio IDE 中的错误|  
+|设置 -warnaserror 以将特定警告视为 Visual Studio IDE 中的错误|  
 |---|  
-|1.在 **“解决方案资源管理器”** 中选择一个项目。 在“项目”菜单上，单击“属性”。<br />2.单击“编译”选项卡。<br />3.请确保**禁用所有警告**复选框处于未选中状态。<br />4.请确保**将所有警告视为错误**复选框处于未选中状态。<br />5.选择**错误**从**通知**应被视为错误的警告旁边的列。|  
+|1.在 **“解决方案资源管理器”** 中选择一个项目。 在“项目”菜单上，单击“属性”。<br />2.单击“编译”选项卡。<br />3.确保“禁用所有警告”复选框处于未选中状态。<br />4.确保“将所有警告视为错误”复选框处于未选中状态。<br />5.从应将其视为错误的警告旁的“通知”列中选择“错误”。|  
   
 ## <a name="example"></a>示例  
- 下面的代码编译`In.vb`并指示编译器显示找到的每个警告的第一个匹配项错误。  
+ 以下代码编译 `In.vb` 并指示编译器在第一次发现每个警告时显示错误。  
   
 ```console
 vbc -warnaserror in.vb  
 ```  
   
 ## <a name="example"></a>示例  
- 下面的代码编译`T2.vb`，并将仅对未使用的局部变量 (42024) 警告视为错误。  
+ 以下代码编译 `T2.vb` 并仅将未使用的本地变量 (42024) 的警告视为错误。  
   
 ```console
 vbc -warnaserror:42024 t2.vb  
@@ -66,4 +64,4 @@ vbc -warnaserror:42024 t2.vb
 ## <a name="see-also"></a>请参阅  
  [Visual Basic 命令行编译器](../../../visual-basic/reference/command-line-compiler/index.md)  
  [示例编译命令行](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)  
- [在 Visual Basic 中配置警告](/visualstudio/ide/configuring-warnings-in-visual-basic)
+ [Configuring Warnings in Visual Basic](/visualstudio/ide/configuring-warnings-in-visual-basic)

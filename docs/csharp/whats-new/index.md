@@ -3,16 +3,16 @@ title: C# 中的新增功能 - C# 指南
 description: C# 语言是如何不断发展的
 ms.date: 11/13/2017
 ms.assetid: 77deec51-a14d-46d4-9bb3-faf449477149
-ms.openlocfilehash: 399550178a12ff520dff033f0f1dc4a7cdfb9591
-ms.sourcegitcommit: c217b067985905cb21eafc5dd9a83568d7ff4e45
+ms.openlocfilehash: b079c21ee90a797b038b96ae68123a538464c382
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/22/2018
-ms.locfileid: "36314667"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50201434"
 ---
 # <a name="whats-new-in-c"></a>C# 中的新增功能 #
 
-本页介绍了 C# 语言每个主要版本中新增功能的路线图。 若要详细了解每个版本中增加的主要功能，请单击下面的链接。
+本页介绍了 C# 语言每个主要版本中新增功能的路线图。 链接的文章详细介绍了每个版本中增加的主要功能。 可以在常规版本或公共预览版中找到有关已发布新功能的信息。 可以在 GitHub 上的 [dotnet/roslyn 存储库](https://github.com/dotnet/roslyn/blob/master/docs/Language%20Feature%20Status.md)上找到详细的语言功能状态，包括考虑在即将发布的版本中添加的功能。
 
 > [!IMPORTANT]
 > 为了提供一些功能，C# 语言依赖标准库中的类型和方法。 例如，异常处理。 为了确保引发的对象派生自 <xref:System.Exception>，将会检查每个 `throw` 语句或表达式。 同样，还会检查每个 `catch`，以确保捕获的类型派生自 <xref:System.Exception>。 每个版本都可能会新增要求。 若要在旧版环境中使用最新语言功能，可能需要安装特定库。 每个特定版本的页面中记录了这些依赖项。 若要了解此依赖项的背景信息，可以详细了解[语言与库的关系](relationships-between-language-and-library.md)。 

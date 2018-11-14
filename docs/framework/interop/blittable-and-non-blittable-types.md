@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: d03b050e-2916-49a0-99ba-f19316e5c1b3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: acef752cf54d28dd1f07431b5dbbadbac0b7849e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8b4c1d213c2ed87126fc5eb9995050e14f9214bd
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33392286"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50199833"
 ---
 # <a name="blittable-and-non-blittable-types"></a>可直接复制到本机结构中的类型和非直接复制到本机结构中的类型
 大多数数据类型在托管和非托管内存中具有共同的表示形式，而且不需要互操作封送处理程序进行特殊处理。 这些类型称为 blittable 类型，因为它们在托管和非托管代码之间传递时不需要进行转换。  
@@ -62,13 +62,13 @@ ms.locfileid: "33392286"
 |Non-blittable 类型|描述|  
 |-------------------------|-----------------|  
 |[System.Array](../../../docs/framework/interop/default-marshaling-for-arrays.md)|转换为 C 样式数组或 `SAFEARRAY`。|  
-|[System.Boolean](https://msdn.microsoft.com/library/d4c00537-70f7-4ca6-8197-bfc1ec037ff9(v=vs.100))|转换为 1、2 或 4 字节的值，`true` 表示 1 或 -1。|  
-|[System.Char](https://msdn.microsoft.com/library/cecc87c1-075e-4cde-aa56-33d189f66feb(v=vs.100))|转换为 Unicode 或 ANSI 字符。|  
-|[System.Class](https://msdn.microsoft.com/library/fe334af5-0123-43d8-be84-26f6f023ddb6(v=vs.100))|转换为类接口。|  
+|[System.Boolean](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/t2t3725f(v=vs.100))|转换为 1、2 或 4 字节的值，`true` 表示 1 或 -1。|  
+|[System.Char](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/6tyybbf2(v=vs.100))|转换为 Unicode 或 ANSI 字符。|  
+|[System.Class](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/s0968xy8(v=vs.100))|转换为类接口。|  
 |[System.Object](../../../docs/framework/interop/default-marshaling-for-objects.md)|转换为变量或接口。|  
 |[System.Mdarray](../../../docs/framework/interop/default-marshaling-for-arrays.md)|转换为 C 样式数组或 `SAFEARRAY`。|  
 |[System.String](../../../docs/framework/interop/default-marshaling-for-strings.md)|转换为空引用中的终止字符串或转换为 BSTR。|  
-|[System.Valuetype](https://msdn.microsoft.com/library/4d9a876c-e05a-40ba-bd85-bd22877f984a(v=vs.100))|转换为具有固定内存布局的结构。|  
+|[System.Valuetype](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/0t2cwe11(v=vs.100))|转换为具有固定内存布局的结构。|  
 |[System.Szarray](../../../docs/framework/interop/default-marshaling-for-arrays.md)|转换为 C 样式数组或 `SAFEARRAY`。|  
   
  类和对象类型仅受 COM 互操作支持。 有关 [!INCLUDE[vbprvblong](../../../includes/vbprvblong-md.md)]、C# 和 C++ 中的相应类型的信息，请参阅[类库概述](../../../docs/standard/class-library-overview.md)。  

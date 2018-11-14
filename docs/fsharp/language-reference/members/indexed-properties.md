@@ -1,58 +1,48 @@
 ---
 title: 索引属性 (F#)
-description: '了解有关 F # 编制索引的属性提供对有序数据的类似数组的访问权限的属性。'
-ms.date: 05/16/2016
-ms.openlocfilehash: e56e4e2ea3f35df4c8ec46012357242cb6ce69f3
-ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
+description: 了解如何在中的索引属性F#，这允许对有序数据的类似数组的访问。
+ms.date: 10/17/2018
+ms.openlocfilehash: 3dac60eba3d9e7a9c3e76ad7ee051e6b30b88636
+ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46321361"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "49452243"
 ---
 # <a name="indexed-properties"></a>索引属性
 
-*索引属性*提供类似数组的访问权限的属性排序数据。 它们分为三种形式：
-
-* `Item`
-* `Ordinal`
-* `Cardinal`
-
-F # 成员必须具有名称以提供类似数组的访问这三个名称之一。 `IndexerName` 用于表示任何以下三个选项：
+在定义类，用于对有序数据提取时，有时可能很有帮助，而无需公开基础的实现提供对该数据的索引的访问。 这通过`Index`成员。
 
 ## <a name="syntax"></a>语法
 
 ```fsharp
 // Indexed property that has both get and set defined.
-member self-identifier.IndexerName
-    with get(index-variable) =
-        get-function-body
-    and set index-variablesvalue-variables =
-        set-function-body
+member self-identifier.Index
+    with get(index-values) =
+        get-member-body
+    and set index-values values-to-set =
+        set-member-body
 
-// Indexed property that has get only.
-member self-identifier.IndexerName(index-variable) =
-    get-function-body
-
-// Alternative syntax for indexed property with get only
-member self-identifier.IndexerName
-    with get(index-variables) =
-        get-function-body
+// Indexed property with get only
+member self-identifier.Index
+    with get(index-values) =
+        get-member-body
 
 // Indexed property that has set only.
-member self-identifier.IndexerName
-    with set index-variablesvalue-variables = 
-        set-function-body
+member self-identifier.Index
+    with set index-values values-to-set =
+        set-member-body
 ```
 
 ## <a name="remarks"></a>备注
 
 上述语法中的窗体演示如何定义具有这两者的索引的属性`get`和一个`set`方法中，有`get`方法，或具有`set`方法仅。 此外可以将两者合并为仅限获取和组，所示的语法所示的语法，并生成具有 get 和 set 的属性。 这后一种形式，可将不同的可访问性修饰符和属性放在 get 和 set 方法。
 
-当*IndexerName*是`Item`，编译器会将属性视为默认索引属性。 一个*的默认索引属性*是一个属性，可以访问的对象实例上使用的类似数组的语法。 例如，如果`obj`是用于定义此属性，该语法的类型的对象`obj.[index]`用于访问属性。
+使用名称`Item`，编译器会将属性视为默认索引属性。 一个*的默认索引属性*是一个属性，可以访问的对象实例上使用的类似数组的语法。 例如，如果`o`是用于定义此属性，该语法的类型的对象`o.[index]`用于访问属性。
 
-用于访问非默认索引属性的语法是提供属性和在括号中的索引的名称。 例如，如果该属性是`Ordinal`，您编写`obj.Ordinal(index)`来访问它。
+用于访问非默认索引的属性的语法是提供属性和中括号内，就像常规成员的索引的名称。 例如，如果上的属性`o`称为`Ordinal`，您编写`o.Ordinal(index)`来访问它。
 
-无论使用哪种形式，您应始终使用为扩充的形式`set`索引属性的方法。 扩充函数有关的信息，请参阅[函数](../functions/index.md)。
+无论使用哪种形式，应始终使用扩充窗体上的索引属性的集方法。 扩充函数有关的信息，请参阅[函数](../functions/index.md)。
 
 ## <a name="example"></a>示例
 
@@ -62,7 +52,7 @@ member self-identifier.IndexerName
 
 ## <a name="output"></a>输出
 
-```
+```console
 ONE two three four five six seven eight nine ten
 ONE first two second three third four fourth five fifth six 6th
 seven seventh eight eighth nine ninth ten tenth

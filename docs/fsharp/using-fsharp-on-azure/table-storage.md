@@ -1,16 +1,16 @@
 ---
-title: '使用 F # Azure 表存储入门'
+title: 使用 F# Azure 表存储入门
 description: 使用 Azure 表存储或 Azure Cosmos DB 在云中存储结构化的数据。
 author: sylvanc
 ms.date: 03/26/2018
 ms.openlocfilehash: 2d793ba8653833ff384f1824e303b08e05aba69b
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
+ms.lasthandoff: 11/02/2018
 ms.locfileid: "43519530"
 ---
-# <a name="get-started-with-azure-table-storage-and-the-azure-cosmos-db-table-api-using-f"></a>开始使用 Azure 表存储和使用 F # 在 Azure Cosmos DB 表 API # 
+# <a name="get-started-with-azure-table-storage-and-the-azure-cosmos-db-table-api-using-f"></a>开始使用 Azure 表存储和使用 F# 在 Azure Cosmos DB 表 API # 
 
 Azure 表存储是一种服务，将结构化的 NoSQL 数据存储在云中。 表存储是采用无架构设计的键/属性存储。 表存储是无架构，因为它很容易使数据适应需求的应用程序发展。 对数据的访问是快速且经济高效的所有类型的应用程序。 表存储是通常显著较低的成本比传统 SQL 要类似的数据卷。
 
@@ -30,16 +30,16 @@ Azure Cosmos DB 提供的表 API 的应用程序，针对 Azure 表存储编写�
 
 ## <a name="about-this-tutorial"></a>有关本教程
 
-本教程演示如何编写 F # 代码来执行某些常见任务，使用 Azure 表存储或 Azure Cosmos DB 表 API，包括创建和删除表和插入、 更新、 删除和查询表数据。
+本教程演示如何编写 F# 代码来执行某些常见任务，使用 Azure 表存储或 Azure Cosmos DB 表 API，包括创建和删除表和插入、 更新、 删除和查询表数据。
 
 ## <a name="prerequisites"></a>系统必备
 
 若要使用本指南，您必须首先[创建 Azure 存储帐户](/azure/storage/storage-create-storage-account)或[Azure Cosmos DB 帐户](https://azure.microsoft.com/try/cosmosdb/)。
 
 
-## <a name="create-an-f-script-and-start-f-interactive"></a>创建 F # 脚本，并开始将 F # Interactive
+## <a name="create-an-f-script-and-start-f-interactive"></a>创建 F# 脚本，并开始将 F# Interactive
 
-这篇文章中的示例可以在 F # 应用程序或 F # 脚本中使用。 若要创建 F # 脚本，创建的文件`.fsx`扩展，例如`tables.fsx`，在 F # 开发环境中。
+这篇文章中的示例可以在 F# 应用程序或 F# 脚本中使用。 若要创建 F# 脚本，创建的文件`.fsx`扩展，例如`tables.fsx`，在 F# 开发环境中。
 
 接下来，使用[程序包管理器](package-management.md)如[paket 依存](https://fsprojects.github.io/Paket/)或[NuGet](https://www.nuget.org/)安装`WindowsAzure.Storage`程序包和引用`WindowsAzure.Storage.dll`使用在脚本中`#r`指令。 再次执行此操作`Microsoft.WindowsAzure.ConfigurationManager`以获取 Microsoft.Azure 命名空间。
 

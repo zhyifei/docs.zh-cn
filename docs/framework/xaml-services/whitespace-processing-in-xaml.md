@@ -7,12 +7,12 @@ helpviewer_keywords:
 - white-space processing in XAML [XAML Services]
 - characters [XAML Services], East Asian
 ms.assetid: cc9cc377-7544-4fd0-b65b-117b90bb0b23
-ms.openlocfilehash: 89f8a4675b3edc23913549bc24f0d9ae16917519
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: 3eea3d6c8a28ace0cc79cbfeb7eb3a7a52c9b8ab
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48873435"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50205160"
 ---
 # <a name="white-space-processing-in-xaml"></a>在 XAML 中处理空白
 XAML 的语言规则状态必须由处理该有意义的空白[!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)]处理器实现。 本主题介绍这些 XAML 语言规则。 它还介绍了由定义的其他空格处理[!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)]XAML 处理器和序列化的 XAML 编写器的实现。  
@@ -59,7 +59,7 @@ XAML 的语言规则状态必须由处理该有意义的空白[!INCLUDE[TLA2#tla
   
 <a name="east_asian_characters"></a>   
 ## <a name="east-asian-characters"></a>东亚字符  
- “中文字符”定义为一组 [!INCLUDE[TLA2#tla_unicode](../../../includes/tla2sharptla-unicode-md.md)] 字符，范围是 U+20000 到 U+2FFFD 与 U+30000 到 U+3FFFD。 此子集有时也称为“CJK 表意文字”。 有关详细信息，请参阅 [http://www.unicode.org](http://www.unicode.org/)。  
+ “中文字符”定义为一组 [!INCLUDE[TLA2#tla_unicode](../../../includes/tla2sharptla-unicode-md.md)] 字符，范围是 U+20000 到 U+2FFFD 与 U+30000 到 U+3FFFD。 此子集有时也称为“CJK 表意文字”。 有关详细信息，请参阅 <https://www.unicode.org> 。  
   
 <a name="whitespace_and_text_content_models"></a>   
 ## <a name="white-space-and-text-content-models"></a>空格和文本内容模型  

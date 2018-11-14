@@ -6,12 +6,12 @@ helpviewer_keywords:
 - walkthroughs [Visual Studio], Visual C#
 - Visual C#, walkthroughs
 ms.assetid: 2d07b972-ef69-4676-9aef-e1784728e1ff
-ms.openlocfilehash: a2efaae7cd861842f92ba3cdedc5ae77beec9f6f
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: ae29c8fbe8d5d87ccee4d6a43a3c9285f0c41ee1
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/29/2018
-ms.locfileid: "47202230"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50192559"
 ---
 # <a name="c-walkthroughs"></a>C# 演练
 演练提供有关常见方案的分步说明，这使它们成为了解产品或特定功能部分的良好开端。  
@@ -23,7 +23,7 @@ ms.locfileid: "47202230"
  [使用 Async 和 Await 访问 Web](./programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)  
  演示如何使用 [async](../csharp/language-reference/keywords/async.md) 和 [await](../csharp/language-reference/keywords/await.md) 创建异步解决方案。  
   
- [用 C# 或 Visual Basic 创建一个 Windows 运行时组件，然后从 JavaScript 中调用该组件](https://msdn.microsoft.com/library/windows/apps/hh779077.aspx)  
+ [用 C# 或 Visual Basic 创建一个 Windows 运行时组件，然后从 JavaScript 中调用该组件](/windows/uwp/winrt-components/walkthrough-creating-a-simple-windows-runtime-component-and-calling-it-from-javascript)  
  演示如何创建 [!INCLUDE[wrt](~/includes/wrt-md.md)] 类型，将其打包到 [!INCLUDE[wrt](~/includes/wrt-md.md)] 组件中，然后从使用 JavaScript 为 Windows 生成的 [!INCLUDE[win8_appname_long](~/includes/win8-appname-long-md.md)] 应用调用该组件。  
   
  [Office 编程（C# 和 Visual Basic）](../csharp/programming-guide/interop/walkthrough-office-programming.md)  

@@ -2,13 +2,12 @@
 title: System.ServiceModel.Security.ExportSecurityChannelBindingExit
 ms.date: 03/30/2017
 ms.assetid: 714a8f4d-a297-4f1c-b9df-d97115a1d82a
-author: BrucePerlerMS
-ms.openlocfilehash: cbda9956d0e0eb8576c01affd76980810013a618
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 188b73715b515c88bd07b0819171a384841897ef
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47235606"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50197335"
 ---
 # <a name="systemservicemodelsecurityexportsecuritychannelbindingexit"></a>System.ServiceModel.Security.ExportSecurityChannelBindingExit
 System.ServiceModel.Security.ExportSecurityChannelBindingExit  

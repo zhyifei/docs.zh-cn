@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: cf5eacd0-d3ec-4879-b6da-5fd5e4372202
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3667a644253ab52d8421a1d4222e0bf8c03624c1
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 0508e9291b089ec7af6a0b41bbc231fdb0701ad6
+ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32751969"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49452974"
 ---
 # <a name="global-assembly-cache"></a>全局程序集缓存
 安装了公共语言运行时的每台计算机均具有计算机范围的代码缓存，称为全局程序集缓存。 全局程序集缓存中存储专门指定给由计算机中若干应用程序共享的程序集。  
@@ -43,6 +43,6 @@ ms.locfileid: "32751969"
  部署在全局程序集缓存中的程序集必须使用强名称。 将程序集添加到全局程序集缓存时，可对组成该程序集的所有文件执行完整性检查。 缓存通过执行这些完整性检查来确保该程序集未被篡改，例如，文件已更改，但清单没有反映出此更改。  
   
 ## <a name="see-also"></a>请参阅  
- [Assemblies in the Common Language Runtime](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)（公共语言运行时中的程序集）  
- [使用程序集和全局程序集缓存](../../../docs/framework/app-domains/working-with-assemblies-and-the-gac.md)  
- [具有强名称的程序集](../../../docs/framework/app-domains/strong-named-assemblies.md)
+- [Assemblies in the Common Language Runtime](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)（公共语言运行时中的程序集）  
+- [使用程序集和全局程序集缓存](../../../docs/framework/app-domains/working-with-assemblies-and-the-gac.md)  
+- [具有强名称的程序集](../../../docs/framework/app-domains/strong-named-assemblies.md)

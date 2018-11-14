@@ -2,18 +2,18 @@
 title: 承载工作流服务
 ms.date: 03/30/2017
 ms.assetid: 2d55217e-8697-4113-94ce-10b60863342e
-ms.openlocfilehash: f75b8cc4cde0372b995c39a5da3ae4b71590743e
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: d51157863984314583c5d225bc9d8d0b6cf74874
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43505541"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50186091"
 ---
 # <a name="hosting-workflow-services"></a>承载工作流服务
 工作流服务在承载后才能对传入消息做出响应。 工作流服务使用的是 WCF 消息传递基础结构，因此承载的方式也类似。 类似于 WCF 服务，工作流服务可以托管在任何托管应用程序在 Internet 信息服务 (IIS) 或 Windows 进程激活服务 (WAS) 下。 此外，可以在 Windows Server App Fabric 下承载工作流服务。 有关 Windows Server App Fabric 的详细信息请参阅[Windows Server App Fabric 文档](https://go.microsoft.com/fwlink/?LinkId=193037)， [AppFabric 承载功能](https://go.microsoft.com/fwlink/?LinkId=196494)，并[AppFabric 承载概念](https://go.microsoft.com/fwlink/?LinkId=196495)。 服务承载 WCF 的各种不同方法的详细信息，请参阅[托管服务](../../../../docs/framework/wcf/hosting-services.md)。
 
 ## <a name="hosting-in-a-managed-application"></a>在托管应用程序中承载
- 若要在托管应用程序中承载工作流服务，请使用 <xref:System.ServiceModel.Activities.WorkflowServiceHost> 类。 <xref:System.ServiceModel.Activities.WorkflowServiceHost> 构造函数可用于指定单一工作流服务实例、工作流服务定义或使用工作流消息传递活动的活动。 调用 <<!--zz xref:System.ServiceModel.Activities.WorkflowServiceHost.Open%2A--> `System.ServiceModel.Activities.WorkflowServiceHost.Open`> 会导致服务开始侦听传入消息。
+ 若要在托管应用程序中承载工作流服务，请使用 <xref:System.ServiceModel.Activities.WorkflowServiceHost> 类。 <xref:System.ServiceModel.Activities.WorkflowServiceHost> 构造函数可用于指定单一工作流服务实例、工作流服务定义或使用工作流消息传递活动的活动。 调用 <xref:System.ServiceModel.Channels.CommunicationObject.Open%2A> 将导致服务开始侦听传入消息。
 
 ## <a name="hosting-under-iis-or-was"></a>在 IIS 或 WAS 下承载
  在 IIS 或 WAS 下承载工作流服务时，涉及到创建虚拟目录以及将定义服务及其行为的文件放在该虚拟目录中。 此时可能出现以下几种情况：

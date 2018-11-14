@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 0d07090c-9b47-4ecc-81d1-29d539603c9b
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 192ac28610f596bc6b6f4ebf1c80962ab2d71cbf
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 8d533ac4d4287af551e4fc0c3131c761dbbc135a
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47233135"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50197049"
 ---
 # <a name="reflection-in-the-net-framework-for-windows-store-apps"></a>.NET Framework 中用于 Windows 应用商店应用程序的反射
 从 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 开始，.NET Framework 包含一系列用于 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]应用的反射类型和成员。 这些类型和成员可从完整的 .NET Framework 以及[适用于 Windows 应用商店应用的 .NET](https://go.microsoft.com/fwlink/?LinkID=225700) 中获取。 本文档介绍 .NET Framework 4 及更早版本中这些类型和成员与其对应项之间的主要差异。  
@@ -36,7 +36,7 @@ ms.locfileid: "47233135"
  在 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]应用中，对某些 .NET Framework 类型和成员的访问是受限的。 例如，通过使用 [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)] 对象，不能调用 <xref:System.Reflection.MethodInfo>中未包含的 .NET Framework 方法。 除此之外，在 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]应用的上下文中，被认为不安全的特定类型和成员是受阻的，就像  <xref:System.Runtime.InteropServices.Marshal> 和 <xref:System.Runtime.InteropServices.WindowsRuntime.WindowsRuntimeMarshal> 成员一样。 此限制仅影响 .NET Framework 类型和成员；您可以像往常一样调用您的代码或第三方代码。  
   
 ## <a name="example"></a>示例  
- 此示例使用 [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)] 中的反射类型和成员来检索 <xref:System.Globalization.Calendar> 类型的方法和属性，包括继承的方法和属性。 若要运行此代码，请在名为“反射”的项目中，将代码粘贴到包含名为 `textblock1` 的 [Windows.UI.Xaml.Controls.Textblock](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.textblock.aspx) 控件的 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 页的代码文件中。 如果将此代码粘贴到具有不同名称的项目中，只需确保将命名空间的名称更改为与你的项目匹配。  
+ 此示例使用 [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)] 中的反射类型和成员来检索 <xref:System.Globalization.Calendar> 类型的方法和属性，包括继承的方法和属性。 若要运行此代码，请在名为“反射”的项目中，将代码粘贴到包含名为 `textblock1` 的 <xref:Windows.UI.Xaml.Controls.TextBlock?displayProperty=nameWithType> 控件的 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 页的代码文件中。 如果将此代码粘贴到具有不同名称的项目中，只需确保将命名空间的名称更改为与你的项目匹配。  
   
  [!code-csharp[System.ReflectionWinStoreApp#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.reflectionwinstoreapp/cs/mainpage.xaml.cs#1)]
  [!code-vb[System.ReflectionWinStoreApp#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.reflectionwinstoreapp/vb/mainpage.xaml.vb#1)]  
