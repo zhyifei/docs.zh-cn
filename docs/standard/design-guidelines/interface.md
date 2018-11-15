@@ -47,7 +47,7 @@ CLR 不支持多重继承（即，CLR 类不能从多个基类继承），但它
 除了这些指南中描述的情况之外，一般情况下，您应该在设计托管代码的可重用库时选择类而不是接口。
   
 *部分版权 © 2005, 2009 Microsoft Corporation。保留所有权利。*
-*经 Pearson Education, Inc 授权，转载自《框架设计准则：可重用的 .NET 库的约定、习惯用语和模式，第2版》(https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) 作者：Krzysztof Cwalina 和 Brad Abrams，由 Addison Wesley Professional 于 2008 年 10 月 22 日印发，作为 Microsoft Windows 开发系列的一部分。*
+*经 Pearson Education, Inc 授权，转载自[框架设计准则：可重用的 .NET 库的约定、习惯用语和模式，第2版](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) 作者：Krzysztof Cwalina 和 Brad Abrams，由 Addison Wesley Professional 于 2008 年 10 月 22 日印发，作为 Microsoft Windows 开发系列的一部分。*
   
 ## <a name="see-also"></a>请参阅
 
