@@ -58,7 +58,7 @@ ms.locfileid: "43857660"
   
  这可能会很麻烦，尤其是客户端必须处理多种 JSON 对象时。  
   
- 此示例提供的 `JsonObject` 类型引入了以弱类型表示的反序列化的 JSON 对象。 `JsonObject` 依赖于 JSON 对象与 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 字典之间的自然映射和 JSON 阵列与 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 阵列之间的映射。 下面的代码演示 `JsonObject` 类型。  
+ 此示例提供的 `JsonObject` 类型引入了以弱类型表示的反序列化的 JSON 对象。 `JsonObject` 依赖于 JSON 对象与 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 字典之间的自然映射和 JSON 数组与 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 数组之间的映射。 下面的代码演示 `JsonObject` 类型。  
   
 ```  
 // Instantiation of JsonObject json omitted  

@@ -76,7 +76,7 @@ App1.AppClass`1<System.Int32>.
   
  [!code-csharp[ProjectN#3](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn/cs/array1.cs#3)]  
   
- 如果不存在阵列元数据，以下错误会导致：  
+ 如果不存在数组元数据，以下错误会导致：  
   
 ```  
 This operation cannot be carried out as metadata for the following type was removed for performance reasons:  
@@ -86,7 +86,7 @@ App1.Class1[]
 Unfortunately, no further information is available.  
 ```  
   
- 需要阵列类型的 `Browse` 元数据才能将其动态实例化。  以下运行时指令允许对 `Class1[]` 的进行动态实例化。  
+ 需要数组类型的 `Browse` 元数据才能将其动态实例化。  以下运行时指令允许对 `Class1[]` 的进行动态实例化。  
   
 ```xml  
 <Type Name="App1.Class1[]" Browse="Required Public" />  
