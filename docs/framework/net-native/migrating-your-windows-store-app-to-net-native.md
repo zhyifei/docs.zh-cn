@@ -77,11 +77,11 @@ ms.locfileid: "50183927"
   
 -   <xref:System.Reflection.ParameterInfo.HasDefaultValue%2A?displayProperty=nameWithType> 属性为表示返回值的 `false` 对象正确返回 <xref:System.Reflection.ParameterInfo>。 在 Windows 应用商店应用的 .NET 中，它返回 `true`。 中间语言 (IL) 不直接支持此操作，且解释需要由语言来进行。  
   
--   位于 <xref:System.RuntimeFieldHandle> 和 <xref:System.RuntimeMethodHandle> 结构上的公共成员不受支持。 这些受到支持的类型仅用于 LINQ、表达式树和静态阵列初始化。  
+-   位于 <xref:System.RuntimeFieldHandle> 和 <xref:System.RuntimeMethodHandle> 结构上的公共成员不受支持。 这些受到支持的类型仅用于 LINQ、表达式树和静态数组初始化。  
   
 -   <xref:System.Reflection.RuntimeReflectionExtensions.GetRuntimeProperties%2A?displayProperty=nameWithType> 和 <xref:System.Reflection.RuntimeReflectionExtensions.GetRuntimeEvents%2A?displayProperty=nameWithType> 在基类中包含隐藏成员，因此可能会在没有显示重写的情况下遭到重写。 这也适用于其他 [RuntimeReflectionExtensions.GetRuntime*](xref:System.Reflection.RuntimeReflectionExtensions) 方法。  
   
--   <xref:System.Type.MakeArrayType%2A?displayProperty=nameWithType> 和 <xref:System.Type.MakeByRefType%2A?displayProperty=nameWithType> 在你试图创建特定组合（例如，ByRef 阵列）时不会发生故障。  
+-   <xref:System.Type.MakeArrayType%2A?displayProperty=nameWithType> 和 <xref:System.Type.MakeByRefType%2A?displayProperty=nameWithType> 在你试图创建特定组合（例如，ByRef 数组）时不会发生故障。  
   
 -   你无法使用反射来调用具有指针参数的成员。  
   
@@ -115,13 +115,13 @@ ms.locfileid: "50183927"
   
  **数组**  
   
--   界限低于零的阵列不受支持。 通常，这些阵列是通过调用 <xref:System.Array.CreateInstance%28System.Type%2CSystem.Int32%5B%5D%2CSystem.Int32%5B%5D%29?displayProperty=nameWithType> 重载来创建的。  
+-   界限低于零的数组不受支持。 通常，这些数组是通过调用 <xref:System.Array.CreateInstance%28System.Type%2CSystem.Int32%5B%5D%2CSystem.Int32%5B%5D%29?displayProperty=nameWithType> 重载来创建的。  
   
--   不支持动态创建多维阵列。 此类阵列一般是通过调用包括 <xref:System.Array.CreateInstance%2A?displayProperty=nameWithType> 参数的 `lengths` 方法重载来创建，或通过调用 <xref:System.Type.MakeArrayType%28System.Int32%29?displayProperty=nameWithType> 方法来创建。  
+-   不支持动态创建多维数组。 此类数组一般是通过调用包括 <xref:System.Array.CreateInstance%2A?displayProperty=nameWithType> 参数的 `lengths` 方法重载来创建，或通过调用 <xref:System.Type.MakeArrayType%28System.Int32%29?displayProperty=nameWithType> 方法来创建。  
   
--   四维或更多维的多维阵列不受支持；因为它们的 <xref:System.Array.Rank%2A?displayProperty=nameWithType> 属性值是四或者更大。 可使用 [交错阵列](~/docs/csharp/programming-guide/arrays/jagged-arrays.md) （阵列的阵列）。 例如， `array[x,y,z]` 无效，但 `array[x][y][z]` 有效。  
+-   四维或更多维的多维数组不受支持；因为它们的 <xref:System.Array.Rank%2A?displayProperty=nameWithType> 属性值是四或者更大。 可使用 [交错数组](~/docs/csharp/programming-guide/arrays/jagged-arrays.md) （数组的数组）。 例如， `array[x,y,z]` 无效，但 `array[x][y][z]` 有效。  
   
--   多维阵列的差异不受支持且会在运行时导致 <xref:System.InvalidCastException> 异常。  
+-   多维数组的差异不受支持且会在运行时导致 <xref:System.InvalidCastException> 异常。  
   
  **泛型**  
   
@@ -131,7 +131,7 @@ ms.locfileid: "50183927"
   
  **指针**  
   
--   指针阵列不受支持。  
+-   指针数组不受支持。  
   
 -   你无法使用反射来获取或设置一个指针字段。  
   
@@ -262,7 +262,7 @@ ms.locfileid: "50183927"
   
  大多数平台调用和 COM 互操作方案中.NET Native 仍受支持。 特别地，Windows Runtime (WinRT) API 的所有互操作和 Windows Runtime 所需的所有封送都受支持。 这包括针对以下内容的封送支持：  
   
--   阵列（包括 <xref:System.Runtime.InteropServices.UnmanagedType.ByValArray?displayProperty=nameWithType>）  
+-   数组（包括 <xref:System.Runtime.InteropServices.UnmanagedType.ByValArray?displayProperty=nameWithType>）  
   
 -   `BStr`  
   

@@ -54,7 +54,7 @@ Dim arrayE( , ) As Short = New Short(4, 10) {}
   
  在前面的示例中，数组变量`arrayA`和`arrayB`被视为相同的数据类型- `Byte()` — 即使它们将初始化为不同长度也是如此。 变量`arrayB`和`arrayC`不属于同一类型，因为它们的元素类型不同。 变量`arrayC`和`arrayD`不属于同一类型，因为它们的秩不同。 变量`arrayD`和`arrayE`具有相同的类型- `Short(,)` -因为它们的秩和元素类型是相同的即使`arrayD`尚未初始化。  
   
- 在阵列上的详细信息，请参阅[数组](../../../../visual-basic/programming-guide/language-features/arrays/index.md)。  
+ 在数组上的详细信息，请参阅[数组](../../../../visual-basic/programming-guide/language-features/arrays/index.md)。  
   
 ## <a name="class-types"></a>类类型  
  不存在包含所有类的单个数据类型。 尽管一个类可以从另一个类继承的每个是单独的数据类型。 同一个类的多个实例均为相同的数据类型。 如果将一个类实例变量分配到另一个，不仅它们具有相同的数据类型，它们指向内存中的同一个类实例。  

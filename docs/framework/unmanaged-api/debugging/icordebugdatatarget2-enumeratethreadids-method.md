@@ -29,7 +29,7 @@ HRESULT EnumerateThreadIDs(
  [输入] 线程 ID 可返回的上限数。  
   
  pcThreadID  
- [输出] `ULONG32` 指针显示写入 `pThreadIds` 阵列的线程 ID 的实际数目。  
+ [输出] `ULONG32` 指针显示写入 `pThreadIds` 数组的线程 ID 的实际数目。  
   
  pThreadID  
  一组线程标识符。  

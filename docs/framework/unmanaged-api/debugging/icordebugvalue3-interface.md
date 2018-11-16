@@ -33,7 +33,7 @@ ms.locfileid: "33420655"
 |[GetSize64 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue3-getsize64-method.md)|获取以字节为单位，此大小，`ICorDebugValue3`对象。|  
   
 ## <a name="remarks"></a>备注  
- [Icordebugvalue:: Getsize](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue3-getsize64-method.md)方法返回介于 0 到 2,147,483,647 个字节的范围的对象大小。 在[!INCLUDE[net_v45](../../../../includes/net-v45-md.md)]，数组的大小可以超过 2 GB。 `ICorDebugValue3`接口使您能够确定这些阵列的大小。  
+ [Icordebugvalue:: Getsize](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue3-getsize64-method.md)方法返回介于 0 到 2,147,483,647 个字节的范围的对象大小。 在[!INCLUDE[net_v45](../../../../includes/net-v45-md.md)]，数组的大小可以超过 2 GB。 `ICorDebugValue3`接口使您能够确定这些数组的大小。  
   
 ## <a name="requirements"></a>要求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  

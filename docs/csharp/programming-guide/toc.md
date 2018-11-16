@@ -1,6 +1,6 @@
 # [C# 编程指南](index.md)
 ## [在 C# 程序内部](inside-a-program/)
-## [阵列](arrays/)
+## [数组](arrays/)
 ## [类和结构](classes-and-structs/)
 ## [委托](delegates/index.md)
 ## [枚举类型](enumeration-types.md)
