@@ -35,7 +35,7 @@ ms.locfileid: "44207689"
 |文件系统信息|文件系统项|<xref:System.IO.Directory.EnumerateFileSystemEntries%2A?displayProperty=nameWithType>|  
 ||文件系统信息 (<xref:System.IO.FileSystemInfo>)|<xref:System.IO.DirectoryInfo.EnumerateFileSystemInfos%2A?displayProperty=nameWithType>|  
   
- 虽然可以使用 <xref:System.IO.SearchOption.AllDirectories> 枚举提供的 <xref:System.IO.SearchOption> 搜索选项迅速枚举父目录的子目录中的所有文件，但未经授权的访问异常 (<xref:System.UnauthorizedAccessException>) 可能会导致枚举不完整。 如果这些异常可能会抛出，可以捕获它们并继续执行，通过先枚举目录，再枚举文件。  
+ 虽然可以使用 <xref:System.IO.SearchOption> 枚举提供的 <xref:System.IO.SearchOption.AllDirectories> 搜索选项迅速枚举父目录的子目录中的所有文件，但未经授权的访问异常 (<xref:System.UnauthorizedAccessException>) 可能会导致枚举不完整。 如果这些异常可能会抛出，可以捕获它们并继续执行，通过先枚举目录，再枚举文件。  
   
 ### <a name="to-enumerate-directory-names"></a>枚举目录名称的具体步骤  
   
