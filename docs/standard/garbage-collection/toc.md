@@ -1,5 +1,5 @@
 # [内存管理和垃圾回收](memory-management-and-gc.md)
-## [Cleaning Up Unmanaged Resources](unmanaged.md)（清理未托管资源）
+## [清理未托管资源](unmanaged.md)
 ### [实现 Dispose 方法](implementing-dispose.md)
 ### [使用实现 IDisposable 的对象](using-objects.md)
 ## [垃圾回收](index.md)
