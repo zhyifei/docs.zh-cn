@@ -136,7 +136,7 @@ API 管理系统中提供的见解有助于理解 API 的使用方式与性能�
 
 借助 Azure API 管理，可以使用密钥、令牌和 IP 筛选器来保护 API。 通过这些功能，可以执行灵活且细化的配额和速率限制，使用策略修改 API 的形状和行为，并通过响应缓存提高性能。
 
-在本指南和参考示例应用程序 (eShopOnContainers) 中，我们仅讨论较简单的自定义容器化体系结构，以便将重点放在未使用 PaaS 产品（如 Azure API 管理）的普通容器上。 但是对于部署到 Microsoft Azure 的基于微服务的大型应用程序，我们建议在生产中评估 Azure API 管理作为 API 网关的基础。
+在本指南和参考示例应用程序 (eShopOnContainers) 中，我们仅讨论较简单的自定义容器化体系结构，以便将重点放在未使用 PaaS 产品（如 Azure API 管理）的普通容器上。 但是对于部署到 Microsoft Azure 的基于微服务的大型应用程序，我们建议在生产中评估以 Azure API 为基础管理 API 网关。
 
 Ocelot。 要获得更简单的方法，建议使用一种轻型 API 网关，如 Ocelot。 [Ocelot](https://github.com/ThreeMammals/Ocelot) 是一个基于 .NET Core 的开放源代码 API 网关，专为在其系统中需要统一入口点的微服务体系结构打造。 它轻型、快速且可缩放，并在许多其他功能中提供路由和身份验证。
 
