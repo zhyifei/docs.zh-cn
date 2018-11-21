@@ -18,7 +18,7 @@ ms.lasthandoff: 09/20/2018
 ms.locfileid: "46480677"
 ---
 # <a name="abstractions-abstract-types-and-interfaces"></a>抽象（抽象类型和接口）
-抽象是一种描述协定但不提供协定的完整实现的类型。抽象通常作为抽象类或接口实现，并且它们带有一组明确定义的参考文档，描述了实现契约的类型所需的语义。 .NET Framework中一些最重要的抽象包括 <xref:System.IO.Stream> ， <xref:System.Collections.Generic.IEnumerable%601> 和 <xref:System.Object>。
+抽象是一种描述协定但不提供协定的完整实现的类型。抽象通常作为抽象类或接口实现，并且它们带有一组明确定义的参考文档，描述了实现协定的类型所需的语义。 .NET Framework中一些最重要的抽象包括 <xref:System.IO.Stream> ， <xref:System.Collections.Generic.IEnumerable%601> 和 <xref:System.Object>。
   
 您可以通过实现支持抽象协定的具体类型来扩展框架，并将该具体类型与消费（操作）抽象的框架 API 一起使用。
   
@@ -30,7 +30,7 @@ ms.locfileid: "46480677"
   
 **X 切忌** 提供抽象，除非通过开发几个具体实现和消费抽象的API来测试它们。
 
-**✓ 务必** 在设计抽象时，请仔细选择使用抽象类还是接口。
+**✓ 务必** 在设计抽象时，仔细选择使用抽象类还是接口。
 
 **✓ 考虑** 为抽象的具体实现提供参考测试。此类测试应允许用户测试其实现是否正确实现了协定。
   
