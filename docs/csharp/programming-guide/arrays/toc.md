@@ -1,4 +1,4 @@
-# [阵列](index.md)
+# [数组](index.md)
 ## [作为对象的数组](arrays-as-objects.md)
 ## [一维数组](single-dimensional-arrays.md)
 ## [多维数组](multidimensional-arrays.md)
