@@ -67,7 +67,7 @@ UWP 是用于为物联网 (IoT) 生成新式触控 Windows 应用程序和软件
 
 ## <a name="net-runtimes"></a>.NET 运行时
 
-运行时是用于托管程序的执行环境。 OS 属于运行时环境，但不属于 .NET 运行时。 下面是 .NET 运行时的一些示例：
+运行时是用于托管程序的执行环境。 操作系统属于运行时环境，但不属于 .NET 运行时。 下面是 .NET 运行时的一些示例：
 
 - .NET Framework 公共语言运行时 (CLR)
 - .NET Core 核心公共语言运行时 (CoreCLR)
