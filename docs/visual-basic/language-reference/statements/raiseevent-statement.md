@@ -10,12 +10,12 @@ helpviewer_keywords:
 - RaiseEvent statement [Visual Basic]
 - event handlers, connecting events to
 ms.assetid: f82e380a-1e6b-4047-bea8-c853f4d2c742
-ms.openlocfilehash: ef4dce290a7a7f6340b15aa4083cd40518e37d0d
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: ba4c05b3ef69d180f43ac3b90aa8fd6dee9c80fb
+ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43507387"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "52296862"
 ---
 # <a name="raiseevent-statement"></a>RaiseEvent 语句
 触发器在类、 窗体或文档中的模块级声明的事件。  
@@ -73,7 +73,7 @@ RaiseEvent eventname[( argumentlist )]
  按 F5 以运行上述示例中，并单击标记的按钮**启动**。 第一个文本框中开始倒计时秒数。 经过了全部时间（10 秒）之后，第一个文本框会显示“Done”。  
   
 > [!NOTE]
->  `My.Application.DoEvents`窗体一样方法不会完全相同的方式处理事件。 若要使表单能够直接处理事件，可以使用多线程处理。 有关详细信息，请参阅[线程处理](../../programming-guide/concepts/threading/index.md)。  
+>  `My.Application.DoEvents`窗体一样方法不会完全相同的方式处理事件。 若要使表单能够直接处理事件，可以使用多线程处理。 有关详细信息，请参阅[托管线程处理](../../../standard/threading/index.md)。  
   
 ## <a name="see-also"></a>请参阅  
  [事件](../../../visual-basic/programming-guide/language-features/events/index.md)  

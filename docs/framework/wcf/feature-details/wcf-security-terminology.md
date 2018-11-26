@@ -7,11 +7,11 @@ helpviewer_keywords:
 - security terms [WCF]
 ms.assetid: 68dde024-8e51-40ba-804f-ec52d85e9ca9
 ms.openlocfilehash: 8b8f92697181c76710e75d6e5a07296b1fcf9188
-ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50046521"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "52297057"
 ---
 # <a name="wcf-security-terminology"></a>WCF 安全术语
 在讨论安全时使用的某些术语可能是您所不熟悉的。 本主题提供了一些安全术语的扼要解释，但并不试图提供每个术语的全面文档。  

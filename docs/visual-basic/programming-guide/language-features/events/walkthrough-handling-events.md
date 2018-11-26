@@ -9,12 +9,12 @@ helpviewer_keywords:
 - WithEvents keyword [Visual Basic], walkthroughs
 - event handlers [Visual Basic], walkthroughs
 ms.assetid: f145b3fc-5ae0-4509-a2aa-1ff6934706bd
-ms.openlocfilehash: 35680c7476f48ca11ac4ddeda208c46c6b36c724
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: fe797885a9063a19efc3f35da9cdf62d7f271693
+ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44191985"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "52297161"
 ---
 # <a name="walkthrough-handling-events-visual-basic"></a>演练：处理事件 (Visual Basic)
 这是演示如何使用事件的两个主题的第二个。 第一个主题[演练： 声明和引发事件](../../../../visual-basic/programming-guide/language-features/events/walkthrough-declaring-and-raising-events.md)，演示如何声明和引发事件。 本部分使用窗体和该演练中的类来显示如何处理时其发生的事件。  
@@ -95,7 +95,7 @@ ms.locfileid: "44191985"
 3.  单击**取消**按钮以停止任务。 请注意的外观**取消**按钮并不立即单击时更改。 `Click`事件不会发生直到`My.Application.DoEvents`语句可用于事件处理。  
   
     > [!NOTE]
-    >  `My.Application.DoEvents`窗体一样方法不会完全相同的方式处理事件。 例如，在本演练中，您必须单击**取消**按钮两次。 若要使表单能够直接处理事件，可以使用多线程处理。 有关详细信息，请参阅[线程处理](../../../../visual-basic/programming-guide/concepts/threading/index.md)。
+    >  `My.Application.DoEvents`窗体一样方法不会完全相同的方式处理事件。 例如，在本演练中，您必须单击**取消**按钮两次。 若要使表单能够直接处理事件，可以使用多线程处理。 有关详细信息，请参阅[托管线程处理](../../../../standard/threading/index.md)。
   
  您可能会发现有意义，按 f11 键运行该程序并单步执行代码行一次。 您可以清楚地看到如何执行进入`LongTask`，，然后简要重新进入`Form1`每次`PercentDone`引发事件。  
   
