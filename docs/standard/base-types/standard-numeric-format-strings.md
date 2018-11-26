@@ -305,7 +305,7 @@ ms.locfileid: "47397171"
  [!code-vb[R format specifier with a BigInteger](../../../samples/snippets/standard/base-types/format-strings/biginteger-r.vb)]  
   
 > [!IMPORTANT]
->  在某些情况下，如果使用“R”标准数字格式字符串格式化的 <xref:System.Double> 值使用 `/platform:x64` 或 `/platform:anycpu` 交换机编译并在 64 位系统上运行，则该值将无法成功往返。 有关详细信息，请参阅以下段落。  
+>  在某些情况下，如果使用“R”标准数字格式字符串格式化的 <xref:System.Double> 值使用 `/platform:x64` 或 `/platform:anycpu` 开关编译并在 64 位系统上运行，则该值将无法成功往返。 有关详细信息，请参阅以下段落。  
   
  若要解决使用“R”标准数字格式字符串格式化的 <xref:System.Double> 值在使用 `/platform:x64` 或 `/platform:anycpu` 交换机进行编译并在 64 位系统上运行时所出现的往返不成功的问题，可以使用“G17”标准数字格式字符格式化 <xref:System.Double> 值。 以下示例将“R”格式字符串与无法成功往返的 <xref:System.Double> 值配合使用，并使用“G17”格式字符串以成功往返原始值。  
   
