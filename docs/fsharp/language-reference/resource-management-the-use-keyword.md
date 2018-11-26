@@ -1,13 +1,13 @@
 ---
 title: 资源管理：use 关键字 (F#)
-description: 了解有关 F# 关键字 use 和 using 函数，可以控制的初始化和释放资源。
+description: 了解如何F#关键字 use 和 using 函数，可以控制的初始化和释放资源。
 ms.date: 05/16/2016
-ms.openlocfilehash: ffa1cb515139a3705920d9d9f79be1a69602f7d8
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 300fb4113019f676625f75541d117458eab3f6ab
+ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "45616053"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "52296875"
 ---
 # <a name="resource-management-the-use-keyword"></a>资源管理：use 关键字
 
@@ -19,7 +19,7 @@ ms.locfileid: "45616053"
 
 ## <a name="managing-resources"></a>管理资源
 
-若要有效地和负责任地管理应用程序中的资源，你必须立即和可预测的方式释放资源。 .NET Framework 可帮助你执行此操作，从而`System.IDisposable`接口。 实现的类型`System.IDisposable`具有`System.IDisposable.Dispose`方法，可正确地释放资源。 编写良好的应用程序保证`System.IDisposable.Dispose`时不再需要保留有限的资源的任何对象，立即调用。 幸运的是，大多数.NET 语言提供支持，以简化此过程，和 F# 也不例外。 有两个有用的语言结构支持的释放模式：`use`绑定和`using`函数。
+若要有效地和负责任地管理应用程序中的资源，你必须立即和可预测的方式释放资源。 .NET Framework 可帮助你执行此操作，从而`System.IDisposable`接口。 实现的类型`System.IDisposable`具有`System.IDisposable.Dispose`方法，可正确地释放资源。 编写良好的应用程序保证`System.IDisposable.Dispose`时不再需要保留有限的资源的任何对象，立即调用。 幸运的是，大多数.NET 语言提供支持，以简化此过程，并F#也不例外。 有两个有用的语言结构支持的释放模式：`use`绑定和`using`函数。
 
 ## <a name="use-binding"></a>使用绑定
 
@@ -33,8 +33,8 @@ ms.locfileid: "45616053"
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet6301.fs)]
 
->[!NOTE]
-可以使用`use`在计算表达式中，在这种情况下的自定义的版本`use`使用表达式。 有关详细信息，请参阅[序列](sequences.md)，[异步工作流](asynchronous-workflows.md)，并[计算表达式](computation-expressions.md)。
+> [!NOTE]
+> 可以使用`use`在计算表达式中，在这种情况下的自定义的版本`use`使用表达式。 有关详细信息，请参阅[序列](sequences.md)，[异步工作流](asynchronous-workflows.md)，并[计算表达式](computation-expressions.md)。
 
 ## <a name="using-function"></a>使用函数
 

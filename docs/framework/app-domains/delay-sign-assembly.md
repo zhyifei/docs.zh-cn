@@ -15,11 +15,11 @@ ms.assetid: 9d300e17-5bf1-4360-97da-2aa55efd9070
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 87346b28ff98c453949fe31aea4d0ef1880b0095
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50192624"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "52296333"
 ---
 # <a name="delay-signing-an-assembly"></a>延迟为程序集签名
 组织可以使用严密保护的密钥对，开发人员无法每天对其进行访问。 通常情况下公钥可用，但私钥的访问权限仅限于少数几个人。 开发使用强名称的程序集时，每个引用强名称目标程序集的程序集都包含用于向目标程序集赋予强名称的公钥的标记。 这要求公钥在开发过程中可用。  

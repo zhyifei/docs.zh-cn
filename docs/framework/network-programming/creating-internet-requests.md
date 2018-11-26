@@ -11,11 +11,11 @@ helpviewer_keywords:
 - data requests, creating requests
 ms.assetid: faab683e-3f1e-4eee-b5e9-59f7245033d5
 ms.openlocfilehash: ff346c5b4241f7ac037088adbe068bab2232d12f
-ms.sourcegitcommit: 5fd80619c760fa8c25d33a6f5661247cb65da465
+ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "50744192"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "52295995"
 ---
 # <a name="creating-internet-requests"></a>创建 Internet 请求
 应用程序通过 <xref:System.Net.WebRequest.Create%2A?displayProperty=nameWithType> 方法创建 <xref:System.Net.WebRequest> 实例。 这是一种基于传递给它的 URI 方案创建从 WebRequest 派生的类的静态方法。  
