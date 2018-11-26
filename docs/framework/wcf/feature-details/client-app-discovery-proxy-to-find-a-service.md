@@ -2,111 +2,111 @@
 title: 如何：实现使用发现代理查找服务的客户端应用程序
 ms.date: 03/30/2017
 ms.assetid: 62b41a75-cf40-4c52-a842-a5f1c70e247f
-ms.openlocfilehash: 82b38d684d6a8de66d569c6fe09813f8ee1bea6a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4b1a71f60d64e77d735a18afede7101b7a184859
+ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33489692"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "52296459"
 ---
-# <a name="how-to-implement-a-client-application-that-uses-the-discovery-proxy-to-find-a-service"></a><span data-ttu-id="30b12-102">如何：实现使用发现代理查找服务的客户端应用程序</span><span class="sxs-lookup"><span data-stu-id="30b12-102">How to: Implement a Client Application that Uses the Discovery Proxy to Find a Service</span></span>
-<span data-ttu-id="30b12-103">本主题是讨论如何实现发现代理的三个主题中的第三个。</span><span class="sxs-lookup"><span data-stu-id="30b12-103">This topic is the third of three topics that discusses how to implement a discovery proxy.</span></span> <span data-ttu-id="30b12-104">在前面的主题中，[如何： 实现向发现代理注册的可发现服务](../../../../docs/framework/wcf/feature-details/discoverable-service-that-registers-with-the-discovery-proxy.md)，实现向发现代理注册自身的 WCF 服务。</span><span class="sxs-lookup"><span data-stu-id="30b12-104">In the previous topic, [How to: Implement a Discoverable Service that Registers with the Discovery Proxy](../../../../docs/framework/wcf/feature-details/discoverable-service-that-registers-with-the-discovery-proxy.md), you implemented a WCF service that registers itself with the discovery proxy.</span></span> <span data-ttu-id="30b12-105">在本主题中，你将创建使用发现代理查找 WCF 服务的 WCF 客户端。</span><span class="sxs-lookup"><span data-stu-id="30b12-105">In this topic you create a WCF client that uses the discovery proxy to find the WCF service.</span></span>  
+# <a name="how-to-implement-a-client-application-that-uses-the-discovery-proxy-to-find-a-service"></a><span data-ttu-id="e3386-102">如何：实现使用发现代理查找服务的客户端应用程序</span><span class="sxs-lookup"><span data-stu-id="e3386-102">How to: Implement a Client Application that Uses the Discovery Proxy to Find a Service</span></span>
+<span data-ttu-id="e3386-103">本主题是讨论如何实现发现代理的三个主题中的第三个。</span><span class="sxs-lookup"><span data-stu-id="e3386-103">This topic is the third of three topics that discusses how to implement a discovery proxy.</span></span> <span data-ttu-id="e3386-104">在上一个主题[如何： 实现向发现代理注册的可发现服务](../../../../docs/framework/wcf/feature-details/discoverable-service-that-registers-with-the-discovery-proxy.md)，实现向发现代理注册自身的 WCF 服务。</span><span class="sxs-lookup"><span data-stu-id="e3386-104">In the previous topic, [How to: Implement a Discoverable Service that Registers with the Discovery Proxy](../../../../docs/framework/wcf/feature-details/discoverable-service-that-registers-with-the-discovery-proxy.md), you implemented a WCF service that registers itself with the discovery proxy.</span></span> <span data-ttu-id="e3386-105">本主题中创建使用发现代理查找 WCF 服务的 WCF 客户端。</span><span class="sxs-lookup"><span data-stu-id="e3386-105">In this topic you create a WCF client that uses the discovery proxy to find the WCF service.</span></span>  
   
-### <a name="implement-the-client"></a><span data-ttu-id="30b12-106">实现客户端</span><span class="sxs-lookup"><span data-stu-id="30b12-106">Implement the client</span></span>  
+### <a name="implement-the-client"></a><span data-ttu-id="e3386-106">实现客户端</span><span class="sxs-lookup"><span data-stu-id="e3386-106">Implement the client</span></span>  
   
-1.  <span data-ttu-id="30b12-107">将一个新控制台应用程序项目添加到名为 `DiscoveryProxyExample` 的 `Client` 解决方案。</span><span class="sxs-lookup"><span data-stu-id="30b12-107">Add a new console application project to the `DiscoveryProxyExample` solution called `Client`.</span></span>  
+1.  <span data-ttu-id="e3386-107">将一个新控制台应用程序项目添加到名为 `DiscoveryProxyExample` 的 `Client` 解决方案。</span><span class="sxs-lookup"><span data-stu-id="e3386-107">Add a new console application project to the `DiscoveryProxyExample` solution called `Client`.</span></span>  
   
-2.  <span data-ttu-id="30b12-108">添加对下列程序集的引用：</span><span class="sxs-lookup"><span data-stu-id="30b12-108">Add references to the following assemblies:</span></span>  
+2.  <span data-ttu-id="e3386-108">添加对下列程序集的引用：</span><span class="sxs-lookup"><span data-stu-id="e3386-108">Add references to the following assemblies:</span></span>  
   
-    1.  <span data-ttu-id="30b12-109">System.ServiceModel</span><span class="sxs-lookup"><span data-stu-id="30b12-109">System.ServiceModel</span></span>  
+    1.  <span data-ttu-id="e3386-109">System.ServiceModel</span><span class="sxs-lookup"><span data-stu-id="e3386-109">System.ServiceModel</span></span>  
   
-    2.  <span data-ttu-id="30b12-110">System.ServiceModel.Discovery</span><span class="sxs-lookup"><span data-stu-id="30b12-110">System.ServiceModel.Discovery</span></span>  
+    2.  <span data-ttu-id="e3386-110">System.ServiceModel.Discovery</span><span class="sxs-lookup"><span data-stu-id="e3386-110">System.ServiceModel.Discovery</span></span>  
   
-3.  <span data-ttu-id="30b12-111">将位于此主题底部的 GeneratedClient.cs 添加到该项目。</span><span class="sxs-lookup"><span data-stu-id="30b12-111">Add the GeneratedClient.cs found at the bottom of this topic to the project.</span></span>  
+3.  <span data-ttu-id="e3386-111">将位于此主题底部的 GeneratedClient.cs 添加到该项目。</span><span class="sxs-lookup"><span data-stu-id="e3386-111">Add the GeneratedClient.cs found at the bottom of this topic to the project.</span></span>  
   
     > [!NOTE]
-    >  <span data-ttu-id="30b12-112">此文件通常是使用 Svcutil.exe 等工具生成的。</span><span class="sxs-lookup"><span data-stu-id="30b12-112">This file is usually generated using a tool such as Svcutil.exe.</span></span> <span data-ttu-id="30b12-113">此主题中提供的该文件是为了将任务简化。</span><span class="sxs-lookup"><span data-stu-id="30b12-113">It is provided in this topic to simplify the task.</span></span>  
+    >  <span data-ttu-id="e3386-112">此文件通常是使用 Svcutil.exe 等工具生成的。</span><span class="sxs-lookup"><span data-stu-id="e3386-112">This file is usually generated using a tool such as Svcutil.exe.</span></span> <span data-ttu-id="e3386-113">此主题中提供的该文件是为了将任务简化。</span><span class="sxs-lookup"><span data-stu-id="e3386-113">It is provided in this topic to simplify the task.</span></span>  
   
-4.  <span data-ttu-id="30b12-114">打开 Program.cs 文件并添加以下方法。</span><span class="sxs-lookup"><span data-stu-id="30b12-114">Open the Program.cs file and add the following method.</span></span> <span data-ttu-id="30b12-115">此方法使用一个终结点地址，并使用该地址来初始化服务客户端（代理）。</span><span class="sxs-lookup"><span data-stu-id="30b12-115">This method takes an endpoint address and uses it to initialize the service client (proxy).</span></span>  
+4.  <span data-ttu-id="e3386-114">打开 Program.cs 文件并添加以下方法。</span><span class="sxs-lookup"><span data-stu-id="e3386-114">Open the Program.cs file and add the following method.</span></span> <span data-ttu-id="e3386-115">此方法使用一个终结点地址，并使用该地址来初始化服务客户端（代理）。</span><span class="sxs-lookup"><span data-stu-id="e3386-115">This method takes an endpoint address and uses it to initialize the service client (proxy).</span></span>  
   
-    ```  
+    ```csharp  
     static void InvokeCalculatorService(EndpointAddress endpointAddress)  
-            {  
-                // Create a client  
-                CalculatorServiceClient client = new CalculatorServiceClient(new NetTcpBinding(), endpointAddress);  
-                Console.WriteLine("Invoking CalculatorService at {0}", endpointAddress.Uri);  
-                Console.WriteLine();  
-  
-                double value1 = 100.00D;  
-                double value2 = 15.99D;  
-  
-                // Call the Add service operation.  
-                double result = client.Add(value1, value2);  
-                Console.WriteLine("Add({0},{1}) = {2}", value1, value2, result);  
-  
-                // Call the Subtract service operation.  
-                result = client.Subtract(value1, value2);  
-                Console.WriteLine("Subtract({0},{1}) = {2}", value1, value2, result);  
-  
-                // Call the Multiply service operation.  
-                result = client.Multiply(value1, value2);  
-                Console.WriteLine("Multiply({0},{1}) = {2}", value1, value2, result);  
-  
-                // Call the Divide service operation.  
-                result = client.Divide(value1, value2);  
-                Console.WriteLine("Divide({0},{1}) = {2}", value1, value2, result);  
-                Console.WriteLine();  
-  
-                // Closing the client gracefully closes the connection and cleans up resources  
-                client.Close();  
-            }  
+    {  
+        // Create a client  
+        CalculatorServiceClient client = new CalculatorServiceClient(new NetTcpBinding(), endpointAddress);  
+        Console.WriteLine("Invoking CalculatorService at {0}", endpointAddress.Uri);  
+        Console.WriteLine();  
+
+        double value1 = 100.00D;  
+        double value2 = 15.99D;  
+
+        // Call the Add service operation.  
+        double result = client.Add(value1, value2);  
+        Console.WriteLine("Add({0},{1}) = {2}", value1, value2, result);  
+
+        // Call the Subtract service operation.  
+        result = client.Subtract(value1, value2);  
+        Console.WriteLine("Subtract({0},{1}) = {2}", value1, value2, result);  
+
+        // Call the Multiply service operation.  
+        result = client.Multiply(value1, value2);  
+        Console.WriteLine("Multiply({0},{1}) = {2}", value1, value2, result);  
+
+        // Call the Divide service operation.  
+        result = client.Divide(value1, value2);  
+        Console.WriteLine("Divide({0},{1}) = {2}", value1, value2, result);  
+        Console.WriteLine();  
+
+        // Closing the client gracefully closes the connection and cleans up resources  
+        client.Close();  
+    }  
     ```  
   
-5.  <span data-ttu-id="30b12-116">将以下代码添加到 `Main` 方法中。</span><span class="sxs-lookup"><span data-stu-id="30b12-116">Add the following code to the `Main` method.</span></span>  
+5.  <span data-ttu-id="e3386-116">将以下代码添加到 `Main` 方法中。</span><span class="sxs-lookup"><span data-stu-id="e3386-116">Add the following code to the `Main` method.</span></span>  
   
-    ```  
+    ```csharp  
     public static void Main()  
+    {  
+        // Create a DiscoveryEndpoint that points to the DiscoveryProxy  
+        Uri probeEndpointAddress = new Uri("net.tcp://localhost:8001/Probe");  
+        DiscoveryEndpoint discoveryEndpoint = new DiscoveryEndpoint(new NetTcpBinding(), new EndpointAddress(probeEndpointAddress));  
+
+        // Create a DiscoveryClient passing in the discovery endpoint  
+        DiscoveryClient discoveryClient = new DiscoveryClient(discoveryEndpoint);  
+
+        Console.WriteLine("Finding ICalculatorService endpoints using the proxy at {0}", probeEndpointAddress);  
+        Console.WriteLine();  
+
+        try  
+        {  
+            // Search for services that implement ICalculatorService              
+            FindResponse findResponse = discoveryClient.Find(new FindCriteria(typeof(ICalculatorService)));  
+
+            Console.WriteLine("Found {0} ICalculatorService endpoint(s).", findResponse.Endpoints.Count);  
+            Console.WriteLine();  
+
+            // Check to see if endpoints were found, if so then invoke the service.  
+            if (findResponse.Endpoints.Count > 0)  
             {  
-                // Create a DiscoveryEndpoint that points to the DiscoveryProxy  
-                Uri probeEndpointAddress = new Uri("net.tcp://localhost:8001/Probe");  
-                DiscoveryEndpoint discoveryEndpoint = new DiscoveryEndpoint(new NetTcpBinding(), new EndpointAddress(probeEndpointAddress));  
-  
-                // Create a DiscoveryClient passing in the discovery endpoint  
-                DiscoveryClient discoveryClient = new DiscoveryClient(discoveryEndpoint);  
-  
-                Console.WriteLine("Finding ICalculatorService endpoints using the proxy at {0}", probeEndpointAddress);  
-                Console.WriteLine();  
-  
-                try  
-                {  
-                    // Search for services that implement ICalculatorService              
-                    FindResponse findResponse = discoveryClient.Find(new FindCriteria(typeof(ICalculatorService)));  
-  
-                    Console.WriteLine("Found {0} ICalculatorService endpoint(s).", findResponse.Endpoints.Count);  
-                    Console.WriteLine();  
-  
-                    // Check to see if endpoints were found, if so then invoke the service.  
-                    if (findResponse.Endpoints.Count > 0)  
-                    {  
-                        InvokeCalculatorService(findResponse.Endpoints[0].Address);  
-                    }  
-                }  
-                catch (TargetInvocationException)  
-                {  
-                    Console.WriteLine("This client was unable to connect to and query the proxy. Ensure that the proxy is up and running.");  
-                }  
-  
-                Console.WriteLine("Press <ENTER> to exit.");  
-                Console.ReadLine();  
+                InvokeCalculatorService(findResponse.Endpoints[0].Address);  
             }  
+        }  
+        catch (TargetInvocationException)  
+        {  
+            Console.WriteLine("This client was unable to connect to and query the proxy. Ensure that the proxy is up and running.");  
+        }  
+
+        Console.WriteLine("Press <ENTER> to exit.");  
+        Console.ReadLine();  
+    }  
     ```  
   
- <span data-ttu-id="30b12-117">您已完成客户端应用程序的实现。</span><span class="sxs-lookup"><span data-stu-id="30b12-117">You have completed implementing the client application.</span></span> <span data-ttu-id="30b12-118">继续[如何： 测试发现代理](../../../../docs/framework/wcf/feature-details/how-to-test-the-discovery-proxy.md)。</span><span class="sxs-lookup"><span data-stu-id="30b12-118">Continue on to [How to: Test the Discovery Proxy](../../../../docs/framework/wcf/feature-details/how-to-test-the-discovery-proxy.md).</span></span>  
+ <span data-ttu-id="e3386-117">您已完成客户端应用程序的实现。</span><span class="sxs-lookup"><span data-stu-id="e3386-117">You have completed implementing the client application.</span></span> <span data-ttu-id="e3386-118">继续阅读[如何： 测试发现代理](../../../../docs/framework/wcf/feature-details/how-to-test-the-discovery-proxy.md)。</span><span class="sxs-lookup"><span data-stu-id="e3386-118">Continue on to [How to: Test the Discovery Proxy](../../../../docs/framework/wcf/feature-details/how-to-test-the-discovery-proxy.md).</span></span>  
   
-## <a name="example"></a><span data-ttu-id="30b12-119">示例</span><span class="sxs-lookup"><span data-stu-id="30b12-119">Example</span></span>  
- <span data-ttu-id="30b12-120">下面是此主题的完整代码清单。</span><span class="sxs-lookup"><span data-stu-id="30b12-120">This is the full code listing for this topic.</span></span>  
+## <a name="example"></a><span data-ttu-id="e3386-119">示例</span><span class="sxs-lookup"><span data-stu-id="e3386-119">Example</span></span>  
+ <span data-ttu-id="e3386-120">下面是此主题的完整代码清单。</span><span class="sxs-lookup"><span data-stu-id="e3386-120">This is the full code listing for this topic.</span></span>  
   
-```  
+```csharp  
 // GeneratedClient.cs  
 //----------------------------------------------------------------  
 // Copyright (c) Microsoft Corporation.  All rights reserved.  
@@ -198,7 +198,7 @@ namespace Microsoft.Samples.Discovery
 }  
 ```  
   
-```  
+```csharp  
 // Program.cs  
 //----------------------------------------------------------------  
 // Copyright (c) Microsoft Corporation.  All rights reserved.  
@@ -281,7 +281,7 @@ namespace Microsoft.Samples.Discovery
 }  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="30b12-121">请参阅</span><span class="sxs-lookup"><span data-stu-id="30b12-121">See Also</span></span>  
- [<span data-ttu-id="30b12-122">WCF 发现概述</span><span class="sxs-lookup"><span data-stu-id="30b12-122">WCF Discovery Overview</span></span>](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)  
- [<span data-ttu-id="30b12-123">如何：实现发现代理</span><span class="sxs-lookup"><span data-stu-id="30b12-123">How to: Implement a Discovery Proxy</span></span>](../../../../docs/framework/wcf/feature-details/how-to-implement-a-discovery-proxy.md)  
- [<span data-ttu-id="30b12-124">如何：实现向发现代理注册的可检测服务</span><span class="sxs-lookup"><span data-stu-id="30b12-124">How to: Implement a Discoverable Service that Registers with the Discovery Proxy</span></span>](../../../../docs/framework/wcf/feature-details/discoverable-service-that-registers-with-the-discovery-proxy.md)
+## <a name="see-also"></a><span data-ttu-id="e3386-121">请参阅</span><span class="sxs-lookup"><span data-stu-id="e3386-121">See Also</span></span>  
+ [<span data-ttu-id="e3386-122">WCF 发现概述</span><span class="sxs-lookup"><span data-stu-id="e3386-122">WCF Discovery Overview</span></span>](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)  
+ [<span data-ttu-id="e3386-123">如何：实现发现代理</span><span class="sxs-lookup"><span data-stu-id="e3386-123">How to: Implement a Discovery Proxy</span></span>](../../../../docs/framework/wcf/feature-details/how-to-implement-a-discovery-proxy.md)  
+ [<span data-ttu-id="e3386-124">如何：实现向发现代理注册的可检测服务</span><span class="sxs-lookup"><span data-stu-id="e3386-124">How to: Implement a Discoverable Service that Registers with the Discovery Proxy</span></span>](../../../../docs/framework/wcf/feature-details/discoverable-service-that-registers-with-the-discovery-proxy.md)
