@@ -51,7 +51,7 @@ ms.locfileid: "48583160"
 - 增强了 <xref:System.String> 类中的字符串比较、枚举和规范化支持。
 - <xref:System.TimeZoneInfo.AdjustmentRule> 和 <xref:System.TimeZoneInfo.TransitionTime> 类支持夏令时调整和时间转换。
 - 显著改进了 <xref:System.Type> 类中的功能。
-- 通过添加包含 <xref:System.Runtime.Serialization.SerializationInfo> 和 <xref:System.Runtime.Serialization.StreamingContext> 参数的异常构造函数，改进了对异常对象反串行化的支持。
+- 通过添加包含 <xref:System.Runtime.Serialization.SerializationInfo> 和 <xref:System.Runtime.Serialization.StreamingContext> 参数的异常构造函数，改进了对异常对象反序列化的支持。
 
 ### <a name="support-for-net-framework-libraries"></a>支持 .NET Framework 库
 
