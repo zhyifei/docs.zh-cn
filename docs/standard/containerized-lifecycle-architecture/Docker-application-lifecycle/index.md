@@ -13,7 +13,8 @@ ms.locfileid: "37106653"
 ---
 # <a name="introduction-to-the-docker-application-life-cycle"></a>Docker 应用程序生命周期的介绍
  
-容器化应用程序的生命周期从开发人员开始。 开发者选择实施容器和 Docker，因为这可以消除部署和 IT 操作的摩擦，从而最终帮助每个用户提高敏捷性、端到端工作效率和速度。
+容器化应用程序的生命周期是一个从开发人员开始的旅程。 开发人员选择实现容器和 Docker ，因为它消除了部署和 IT 操作中的摩擦，最终帮助每个用户提高敏捷性、端到端工作效率和速度。
+
 
 >[!div class="step-by-step"]
 [上一页](../docker-containers-images-and-registries.md)
