@@ -14,14 +14,14 @@ ms.lasthandoff: 11/07/2018
 ms.locfileid: "43521164"
 ---
 # <a name="partial-classes-and-methods-c-programming-guide"></a>分部类和方法（C# 编程指南）
-拆分[类](../../../csharp/language-reference/keywords/class.md)、[结构](../../../csharp/language-reference/keywords/struct.md)、[接口](../../../csharp/language-reference/keywords/interface.md)或超过两种源文件的方法的定义是可能的。 每个源文件包含类型或方法定义的一部分，编译应用程序时将把所有部分组合起来。  
+拆分一个[类](../../../csharp/language-reference/keywords/class.md)、一个[结构](../../../csharp/language-reference/keywords/struct.md)、一个[接口](../../../csharp/language-reference/keywords/interface.md)或一个方法的定义到两个或更多的文件中是可能的。 每个源文件包含类型或方法定义的一部分，编译应用程序时将把所有部分组合起来。  
   
 ## <a name="partial-classes"></a>分部类  
  在以下几种情况下需要拆分类定义：  
   
 -   处理大型项目时，使一个类分布于多个独立文件中可以让多位程序员同时对该类进行处理。  
   
--   使用自动生成的源时，无需重新创建源文件便可将代码添加到类中。 Visual Studio 在创建 Windows 窗体、Web 服务包装器代码等时都使用此方法。 无需修改 Visual Studio 创建的文件，就可创建使用这些类的代码。  
+-   当使用自动生成的源文件时，你可以添加代码而不需要重新创建源文件。 Visual Studio 在创建Windows 窗体、Web 服务包装器代码等时会使用这种方法。 你可以创建使用这些类的代码，这样就不需要修改由Visual Studio生成的文件。  
   
 -   若要拆分类定义，请使用 [partial](../../../csharp/language-reference/keywords/partial-type.md) 关键字修饰符，如下所示：  
   

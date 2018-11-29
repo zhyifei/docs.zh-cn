@@ -1,5 +1,5 @@
 ---
-title: Expression Trees
+title: 表达式树
 description: 介绍 .NET Core 中的表达式树，以及如何用它们将代码表示为可以检查、修改和执行的结构。
 ms.date: 06/20/2016
 ms.assetid: aceb4719-0d5a-4b19-b01f-b51063bcc54f
@@ -10,7 +10,7 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 10/28/2018
 ms.locfileid: "50190731"
 ---
-# <a name="expression-trees"></a>Expression Trees
+# <a name="expression-trees"></a>表达式树
 
 如果你使用过 LINQ，则会有丰富库（其中 `Func` 类型是 API 集的一部分）的经验。 （如果尚不熟悉 LINQ，则可能需要阅读 [LINQ 教程](linq/index.md)以及在此之前的有关 [lambda 表达式](lambda-expressions.md)的教程。）表达式树提供与作为函数的参数的更丰富的交互。
 
