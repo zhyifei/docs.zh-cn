@@ -11,11 +11,11 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 06/29/2018
 ms.locfileid: "37106653"
 ---
-# <a name="introduction-to-the-docker-application-life-cycle"></a><span data-ttu-id="4030f-103">Docker 应用程序生命周期的介绍</span><span class="sxs-lookup"><span data-stu-id="4030f-103">Introduction to the Docker application life cycle</span></span>
+# <a name="introduction-to-the-docker-application-life-cycle"></a><span data-ttu-id="79464-103">Docker 应用程序生命周期的介绍</span><span class="sxs-lookup"><span data-stu-id="79464-103">Introduction to the Docker application life cycle</span></span>
  
-<span data-ttu-id="4030f-104">容器化应用程序的生命周期从开发人员开始。</span><span class="sxs-lookup"><span data-stu-id="4030f-104">The life cycle of containerized applications is a journey that begins with the developer.</span></span> <span data-ttu-id="4030f-105">开发者选择实施容器和 Docker，因为这可以消除部署和 IT 操作的摩擦，从而最终帮助每个用户提高敏捷性、端到端工作效率和速度。</span><span class="sxs-lookup"><span data-stu-id="4030f-105">The developer chooses to implement containers and Docker because it eliminates frictions in deployments and IT operations, which ultimately helps everyone to be more agile, more productive end-to-end, and faster.</span></span>
+<span data-ttu-id="79464-104">容器化应用程序的生命周期是一个从开发人员开始的旅程。</span><span class="sxs-lookup"><span data-stu-id="79464-104">The life cycle of containerized applications is a journey that begins with the developer.</span></span> <span data-ttu-id="79464-105">开发人员选择实现容器和 Docker ，因为它消除了部署和 IT 操作中的摩擦，最终帮助每个用户提高敏捷性、端到端工作效率和速度。</span><span class="sxs-lookup"><span data-stu-id="79464-105">The developer chooses to implement containers and Docker because it eliminates frictions in deployments and IT operations, which ultimately helps everyone to be more agile, more productive end-to-end, and faster.</span></span>
 
 >[!div class="step-by-step"]
-<span data-ttu-id="4030f-106">[上一页](../docker-containers-images-and-registries.md)
-[下一页](containers-foundation-for-devops-collaboration.md)</span><span class="sxs-lookup"><span data-stu-id="4030f-106">[Previous](../docker-containers-images-and-registries.md)
+<span data-ttu-id="79464-106">[上一页](../docker-containers-images-and-registries.md)
+[下一页](containers-foundation-for-devops-collaboration.md)</span><span class="sxs-lookup"><span data-stu-id="79464-106">[Previous](../docker-containers-images-and-registries.md)
 [Next](containers-foundation-for-devops-collaboration.md)</span></span>
