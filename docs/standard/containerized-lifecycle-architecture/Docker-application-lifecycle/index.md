@@ -15,7 +15,6 @@ ms.locfileid: "37106653"
  
 容器化应用程序的生命周期是一个从开发人员开始的旅程。 开发人员选择实现容器和 Docker ，因为它消除了部署和 IT 操作中的摩擦，最终帮助每个用户提高敏捷性、端到端工作效率和速度。
 
-
 >[!div class="step-by-step"]
 [上一页](../docker-containers-images-and-registries.md)
 [下一页](containers-foundation-for-devops-collaboration.md)

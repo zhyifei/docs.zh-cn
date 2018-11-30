@@ -289,7 +289,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
 </Project>
 ```
 
-# <a name="visual-studio-157-and-latertabvs157"></a>[Visual Studio 15.7 及更早版本](#tab/vs157)
+# <a name="visual-studio-157-and-latertabvs157"></a>[Visual Studio 15.7 及更高版本](#tab/vs157)
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">
