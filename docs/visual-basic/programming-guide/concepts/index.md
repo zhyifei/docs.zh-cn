@@ -2,12 +2,12 @@
 title: 编程概念 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: cc9cac84-61f6-476e-b8c7-9bae7749bd90
-ms.openlocfilehash: 85e23fcca0607e9f42daa94334c983462f6cf881
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: fbdf2d6de7abf1d8d80ca3e88621fa569248996c
+ms.sourcegitcommit: 7f7664837d35320a0bad3f7e4ecd68d6624633b2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33643341"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52672051"
 ---
 # <a name="programming-concepts-visual-basic"></a>编程概念 (Visual Basic)
 此部分介绍了 Visual Basic 语言中的编程概念。  
@@ -28,7 +28,6 @@ ms.locfileid: "33643341"
 |[面向对象的编程 (Visual Basic)](../../../visual-basic/programming-guide/concepts/object-oriented-programming.md)|介绍了面向对象的常见概念，包括封装、继承和多态性。|  
 |[反射 (Visual Basic)](../../../visual-basic/programming-guide/concepts/reflection.md)|介绍了如何使用反射来动态创建类型实例、将类型绑定到现有对象，或从现有对象获取类型并调用其方法或访问其字段和属性。|
 |[序列化 (Visual Basic)](../../../visual-basic/programming-guide/concepts/serialization/index.md)|还介绍了有关二进制、XML 和 SOAP 序列化的关键概念。|  
-|[线程 (Visual Basic)](../../../visual-basic/programming-guide/concepts/threading/index.md)|概述了 .NET 线程模型，并介绍了如何编写代码来同时执行多个任务，从而提升应用程序的性能和响应能力。|  
   
 ## <a name="related-sections"></a>相关章节  
   

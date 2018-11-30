@@ -8,11 +8,11 @@ ms.assetid: 3e3e04de-99d1-4658-b716-44cb669d9589
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 5cb0d058cd1ade65bfdc966819c0c41d9c1a9750
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.sourcegitcommit: 7f7664837d35320a0bad3f7e4ecd68d6624633b2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50185987"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52672116"
 ---
 # <a name="windows-forms-add-configuration-element"></a>Windows 窗体添加配置元素
 
@@ -71,13 +71,13 @@ Windows 窗体高 DPI 支持的概述，请参阅[在 Windows 窗体中的高 DP
 
 ### <a name="dpiawareness"></a>DpiAwareness
 
-从.NET Framework 4.7 开始使用 Windows 10 创意者版本和.NET Framework 版本的 Windows 版本下运行的 Windows 窗体应用程序可以配置为充分利用.NET Framework 中引入的高 DPI 改进4.7。 这些方法包括：
+从.NET Framework 4.7 开始使用 Windows 10 创意者版本和.NET Framework 版本的 Windows 版本下运行的 Windows 窗体应用程序可以配置为充分利用.NET Framework 中引入的高 DPI 改进4.7。 这些问题包括：
 
 - 对 Windows 窗体应用程序已启动后在用户更改 DPI 或缩放系数的动态 DPI 方案的支持。
 
 - 改进的缩放和多个 Windows 窗体的布局控件，如<xref:System.Windows.Forms.MonthCalendar>控件和<xref:System.Windows.Forms.CheckedListBox>控件。 
 
-高 DPI 识别是一项选择加入的功能;默认情况下的值`DpiAwareness`是`false`。 你可以选择加入 Windows 窗体支持的 DPI 识别到此密钥的值设置`PerMonitorV2`应用程序配置文件中。 如果启用 DPI 识别，则还会启用所有单独的 DPI 功能。 这些方法包括：
+高 DPI 识别是一项选择加入的功能;默认情况下的值`DpiAwareness`是`false`。 你可以选择加入 Windows 窗体支持的 DPI 识别到此密钥的值设置`PerMonitorV2`应用程序配置文件中。 如果启用 DPI 识别，则还会启用所有单独的 DPI 功能。 这些问题包括：
 
 - DPI 更改受控制的消息`DisableDpiChangedMessageHandling`密钥。
 
