@@ -11,57 +11,57 @@ ms.assetid: ef4c3229-b151-4d85-8091-e6456af9b935
 author: mcleblanc
 ms.author: markl
 ms.openlocfilehash: b15e569ff6e42298c0a1de02f77ab7c302c70d86
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.sourcegitcommit: 7f7664837d35320a0bad3f7e4ecd68d6624633b2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50192676"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52672314"
 ---
-# <a name="ltassertgt-element"></a><span data-ttu-id="8a1d2-102">&lt;断言&gt;元素</span><span class="sxs-lookup"><span data-stu-id="8a1d2-102">&lt;assert&gt; Element</span></span>
-<span data-ttu-id="8a1d2-103">指定调用 <xref:System.Diagnostics.Debug.Assert%2A?displayProperty=nameWithType> 方法时是否显示消息框；另外指定要写入消息的文件的名称。</span><span class="sxs-lookup"><span data-stu-id="8a1d2-103">Specifies whether to display a message box when you call the <xref:System.Diagnostics.Debug.Assert%2A?displayProperty=nameWithType> method; also specifies the name of the file to write messages to.</span></span>  
+# <a name="ltassertgt-element"></a><span data-ttu-id="eea67-102">&lt;断言&gt;元素</span><span class="sxs-lookup"><span data-stu-id="eea67-102">&lt;assert&gt; Element</span></span>
+<span data-ttu-id="eea67-103">指定调用 <xref:System.Diagnostics.Debug.Assert%2A?displayProperty=nameWithType> 方法时是否显示消息框；另外指定要写入消息的文件的名称。</span><span class="sxs-lookup"><span data-stu-id="eea67-103">Specifies whether to display a message box when you call the <xref:System.Diagnostics.Debug.Assert%2A?displayProperty=nameWithType> method; also specifies the name of the file to write messages to.</span></span>  
   
- <span data-ttu-id="8a1d2-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="8a1d2-104">\<configuration></span></span>  
-<span data-ttu-id="8a1d2-105">\<system.diagnostics ></span><span class="sxs-lookup"><span data-stu-id="8a1d2-105">\<system.diagnostics></span></span>  
-<span data-ttu-id="8a1d2-106">\<断言 ></span><span class="sxs-lookup"><span data-stu-id="8a1d2-106">\<assert></span></span>  
+ <span data-ttu-id="eea67-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="eea67-104">\<configuration></span></span>  
+<span data-ttu-id="eea67-105">\<system.diagnostics ></span><span class="sxs-lookup"><span data-stu-id="eea67-105">\<system.diagnostics></span></span>  
+<span data-ttu-id="eea67-106">\<断言 ></span><span class="sxs-lookup"><span data-stu-id="eea67-106">\<assert></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="8a1d2-107">语法</span><span class="sxs-lookup"><span data-stu-id="8a1d2-107">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="eea67-107">语法</span><span class="sxs-lookup"><span data-stu-id="eea67-107">Syntax</span></span>  
   
 ```xml  
 <assert assertuienabled="true|false" logfilename="file name"/>  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="8a1d2-108">特性和元素</span><span class="sxs-lookup"><span data-stu-id="8a1d2-108">Attributes and Elements</span></span>  
- <span data-ttu-id="8a1d2-109">下列各节描述了特性、子元素和父元素。</span><span class="sxs-lookup"><span data-stu-id="8a1d2-109">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="eea67-108">特性和元素</span><span class="sxs-lookup"><span data-stu-id="eea67-108">Attributes and Elements</span></span>  
+ <span data-ttu-id="eea67-109">下列各节描述了特性、子元素和父元素。</span><span class="sxs-lookup"><span data-stu-id="eea67-109">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="8a1d2-110">特性</span><span class="sxs-lookup"><span data-stu-id="8a1d2-110">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="eea67-110">特性</span><span class="sxs-lookup"><span data-stu-id="eea67-110">Attributes</span></span>  
   
-|<span data-ttu-id="8a1d2-111">特性</span><span class="sxs-lookup"><span data-stu-id="8a1d2-111">Attribute</span></span>|<span data-ttu-id="8a1d2-112">描述</span><span class="sxs-lookup"><span data-stu-id="8a1d2-112">Description</span></span>|  
+|<span data-ttu-id="eea67-111">特性</span><span class="sxs-lookup"><span data-stu-id="eea67-111">Attribute</span></span>|<span data-ttu-id="eea67-112">描述</span><span class="sxs-lookup"><span data-stu-id="eea67-112">Description</span></span>|  
 |---------------|-----------------|  
-|`assertuienabled`|<span data-ttu-id="8a1d2-113">可选特性。</span><span class="sxs-lookup"><span data-stu-id="8a1d2-113">Optional attribute.</span></span><br /><br /> <span data-ttu-id="8a1d2-114">指定是否显示消息框何时**Debug.Assert**方法的计算结果为**false**。</span><span class="sxs-lookup"><span data-stu-id="8a1d2-114">Specifies whether to display a message box when the **Debug.Assert** method evaluates to **false**.</span></span>|  
-|`logfilename`|<span data-ttu-id="8a1d2-115">可选特性。</span><span class="sxs-lookup"><span data-stu-id="8a1d2-115">Optional attribute.</span></span><br /><br /> <span data-ttu-id="8a1d2-116">指定要将消息写到如果的文件的名称**Debug.Assert**的计算结果为**false**。</span><span class="sxs-lookup"><span data-stu-id="8a1d2-116">Specifies the name of the file to write the message to if **Debug.Assert** evaluates to **false**.</span></span>|  
+|`assertuienabled`|<span data-ttu-id="eea67-113">可选特性。</span><span class="sxs-lookup"><span data-stu-id="eea67-113">Optional attribute.</span></span><br /><br /> <span data-ttu-id="eea67-114">指定是否显示消息框何时**Debug.Assert**方法的计算结果为**false**。</span><span class="sxs-lookup"><span data-stu-id="eea67-114">Specifies whether to display a message box when the **Debug.Assert** method evaluates to **false**.</span></span>|  
+|`logfilename`|<span data-ttu-id="eea67-115">可选特性。</span><span class="sxs-lookup"><span data-stu-id="eea67-115">Optional attribute.</span></span><br /><br /> <span data-ttu-id="eea67-116">指定要将消息写到如果的文件的名称**Debug.Assert**的计算结果为**false**。</span><span class="sxs-lookup"><span data-stu-id="eea67-116">Specifies the name of the file to write the message to if **Debug.Assert** evaluates to **false**.</span></span>|  
   
-## <a name="assertuienabled-attribute"></a><span data-ttu-id="8a1d2-117">assertuienabled 属性</span><span class="sxs-lookup"><span data-stu-id="8a1d2-117">assertuienabled Attribute</span></span>  
+## <a name="assertuienabled-attribute"></a><span data-ttu-id="eea67-117">assertuienabled 属性</span><span class="sxs-lookup"><span data-stu-id="eea67-117">assertuienabled Attribute</span></span>  
   
-|<span data-ttu-id="8a1d2-118">“值”</span><span class="sxs-lookup"><span data-stu-id="8a1d2-118">Value</span></span>|<span data-ttu-id="8a1d2-119">描述</span><span class="sxs-lookup"><span data-stu-id="8a1d2-119">Description</span></span>|  
+|<span data-ttu-id="eea67-118">“值”</span><span class="sxs-lookup"><span data-stu-id="eea67-118">Value</span></span>|<span data-ttu-id="eea67-119">描述</span><span class="sxs-lookup"><span data-stu-id="eea67-119">Description</span></span>|  
 |-----------|-----------------|  
-|`true`|<span data-ttu-id="8a1d2-120">显示消息框。</span><span class="sxs-lookup"><span data-stu-id="8a1d2-120">Displays the message box.</span></span> <span data-ttu-id="8a1d2-121">这是默认设置。</span><span class="sxs-lookup"><span data-stu-id="8a1d2-121">This is the default.</span></span>|  
-|`false`|<span data-ttu-id="8a1d2-122">不显示消息框。</span><span class="sxs-lookup"><span data-stu-id="8a1d2-122">Does not display the message box.</span></span>|  
+|`true`|<span data-ttu-id="eea67-120">显示消息框。</span><span class="sxs-lookup"><span data-stu-id="eea67-120">Displays the message box.</span></span> <span data-ttu-id="eea67-121">这是默认设置。</span><span class="sxs-lookup"><span data-stu-id="eea67-121">This is the default.</span></span>|  
+|`false`|<span data-ttu-id="eea67-122">不显示消息框。</span><span class="sxs-lookup"><span data-stu-id="eea67-122">Does not display the message box.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="8a1d2-123">子元素</span><span class="sxs-lookup"><span data-stu-id="8a1d2-123">Child Elements</span></span>  
- <span data-ttu-id="8a1d2-124">无。</span><span class="sxs-lookup"><span data-stu-id="8a1d2-124">None.</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="eea67-123">子元素</span><span class="sxs-lookup"><span data-stu-id="eea67-123">Child Elements</span></span>  
+ <span data-ttu-id="eea67-124">无。</span><span class="sxs-lookup"><span data-stu-id="eea67-124">None.</span></span>  
   
-### <a name="parent-elements"></a><span data-ttu-id="8a1d2-125">父元素</span><span class="sxs-lookup"><span data-stu-id="8a1d2-125">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="eea67-125">父元素</span><span class="sxs-lookup"><span data-stu-id="eea67-125">Parent Elements</span></span>  
   
-|<span data-ttu-id="8a1d2-126">元素</span><span class="sxs-lookup"><span data-stu-id="8a1d2-126">Element</span></span>|<span data-ttu-id="8a1d2-127">描述</span><span class="sxs-lookup"><span data-stu-id="8a1d2-127">Description</span></span>|  
+|<span data-ttu-id="eea67-126">元素</span><span class="sxs-lookup"><span data-stu-id="eea67-126">Element</span></span>|<span data-ttu-id="eea67-127">描述</span><span class="sxs-lookup"><span data-stu-id="eea67-127">Description</span></span>|  
 |-------------|-----------------|  
-|`configuration`|<span data-ttu-id="8a1d2-128">公共语言运行时和 .NET Framework 应用程序所使用的每个配置文件中的根元素。</span><span class="sxs-lookup"><span data-stu-id="8a1d2-128">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
-|`system.diagnostics`|<span data-ttu-id="8a1d2-129">指定用于收集、存储和路由消息的跟踪侦听器以及对跟踪开关设置的级别。</span><span class="sxs-lookup"><span data-stu-id="8a1d2-129">Specifies trace listeners that collect, store, and route messages and the level where a trace switch is set.</span></span>|  
+|`configuration`|<span data-ttu-id="eea67-128">公共语言运行时和 .NET Framework 应用程序所使用的每个配置文件中的根元素。</span><span class="sxs-lookup"><span data-stu-id="eea67-128">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
+|`system.diagnostics`|<span data-ttu-id="eea67-129">指定用于收集、存储和路由消息的跟踪侦听器以及对跟踪开关设置的级别。</span><span class="sxs-lookup"><span data-stu-id="eea67-129">Specifies trace listeners that collect, store, and route messages and the level where a trace switch is set.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="8a1d2-130">备注</span><span class="sxs-lookup"><span data-stu-id="8a1d2-130">Remarks</span></span>  
- <span data-ttu-id="8a1d2-131">在这两个属性 **\<assert >** 元素是可选的。</span><span class="sxs-lookup"><span data-stu-id="8a1d2-131">Both attributes in the **\<assert>** element are optional.</span></span> <span data-ttu-id="8a1d2-132">您可以禁用消息框，而无需指定要将消息写入的文件，也可以指定要写入消息时保留启用的消息框的文件。</span><span class="sxs-lookup"><span data-stu-id="8a1d2-132">You can disable message boxes without specifying a file to write the messages to, or you can specify a file to write messages to while leaving message boxes enabled.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="eea67-130">备注</span><span class="sxs-lookup"><span data-stu-id="eea67-130">Remarks</span></span>  
+ <span data-ttu-id="eea67-131">在这两个属性 **\<assert >** 元素是可选的。</span><span class="sxs-lookup"><span data-stu-id="eea67-131">Both attributes in the **\<assert>** element are optional.</span></span> <span data-ttu-id="eea67-132">您可以禁用消息框，而无需指定要将消息写入的文件，也可以指定要写入消息时保留启用的消息框的文件。</span><span class="sxs-lookup"><span data-stu-id="eea67-132">You can disable message boxes without specifying a file to write the messages to, or you can specify a file to write messages to while leaving message boxes enabled.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="8a1d2-133">示例</span><span class="sxs-lookup"><span data-stu-id="8a1d2-133">Example</span></span>  
- <span data-ttu-id="8a1d2-134">下面的示例演示如何在调用时禁用显示消息框**Debug.Assert**并将消息写入`c:\log.txt`。</span><span class="sxs-lookup"><span data-stu-id="8a1d2-134">The following example shows how to disable displaying message boxes when you call **Debug.Assert** and write the messages to `c:\log.txt`.</span></span>  
+## <a name="example"></a><span data-ttu-id="eea67-133">示例</span><span class="sxs-lookup"><span data-stu-id="eea67-133">Example</span></span>  
+ <span data-ttu-id="eea67-134">下面的示例演示如何在调用时禁用显示消息框**Debug.Assert**并将消息写入`c:\log.txt`。</span><span class="sxs-lookup"><span data-stu-id="eea67-134">The following example shows how to disable displaying message boxes when you call **Debug.Assert** and write the messages to `c:\log.txt`.</span></span>  
   
 ```xml  
 <configuration>  
@@ -71,6 +71,6 @@ ms.locfileid: "50192676"
 </configuration>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="8a1d2-135">请参阅</span><span class="sxs-lookup"><span data-stu-id="8a1d2-135">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="eea67-135">请参阅</span><span class="sxs-lookup"><span data-stu-id="eea67-135">See Also</span></span>  
  <xref:System.Diagnostics.Debug>  
- [<span data-ttu-id="8a1d2-136">跟踪和调试设置架构</span><span class="sxs-lookup"><span data-stu-id="8a1d2-136">Trace and Debug Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)
+ [<span data-ttu-id="eea67-136">跟踪和调试设置架构</span><span class="sxs-lookup"><span data-stu-id="eea67-136">Trace and Debug Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)
