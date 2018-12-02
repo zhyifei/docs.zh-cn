@@ -128,7 +128,7 @@ ms.locfileid: "49453198"
 
 机器学习的一个子类，其中所需的模型预测尚不可见的数据标签。 示例包括分类、回归以及结构化预测。 有关详细信息，请参阅 Wikipedia 上的[监管式学习](https://en.wikipedia.org/wiki/Supervised_learning)一文。
 
-## <a name="training"></a>培训
+## <a name="training"></a>训练
 
 识别给定定型数据集[模型](#model)的过程。 对于线性模型，这意味着查找权重。 有关树信息，这涉及到标识拆分点。
 
