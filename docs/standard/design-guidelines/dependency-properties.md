@@ -20,7 +20,7 @@ ms.locfileid: "44079082"
 **✓ 务必** 提供依赖项属性，如果你需要以支持诸如样式、 触发器、 数据绑定、 动画、 动态资源和继承的 WPF 功能的属性。
   
 ## <a name="dependency-property-design"></a>依赖项属性设计 
-**✓ 务必** 继承<xref:System.Windows.DependencyObject>，或子类型，在实现依赖项属性之一。 类型提供了一个非常有效的属性存储实现，并且自动支持 WPF 数据绑定。
+**✓ 务必** 继承 <xref:System.Windows.DependencyObject>，或子类型，在实现依赖项属性之一。 类型提供了一个非常有效的属性存储实现，并且自动支持 WPF 数据绑定。
   
 **✓ 务必** 提供常规 CLR 属性和公共的静态只读字段，为每个依赖项属性存储 <xref:System.Windows.DependencyProperty?displayProperty=nameWithType> 的实例。
   
