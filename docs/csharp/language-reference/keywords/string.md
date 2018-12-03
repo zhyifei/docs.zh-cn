@@ -10,12 +10,12 @@ helpviewer_keywords:
 - string literals [C#]
 - string keyword [C#]
 ms.assetid: 3037e558-fb22-494d-bca1-a15ade11b11a
-ms.openlocfilehash: ab2e69c60872aed19d46450f17becc918ffe2a38
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 66b1729363878f69f868b8b8fd6e9e7011426f27
+ms.sourcegitcommit: 7f7664837d35320a0bad3f7e4ecd68d6624633b2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50181454"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52671999"
 ---
 # <a name="string-c-reference"></a>string（C# 参考）
 
@@ -108,7 +108,6 @@ Console.WriteLine(a);
 - [C# 编程指南](../../programming-guide/index.md)
 - [有关使用字符串的最佳做法](../../../standard/base-types/best-practices-strings.md)
 - [C# 关键字](index.md)
-- [C# 编程指南](../../programming-guide/index.md)
 - [引用类型](reference-types.md)
 - [值类型](value-types.md)
 - [基本字符串操作](../../../standard/base-types/basic-string-operations.md)
