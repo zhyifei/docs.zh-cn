@@ -33,29 +33,29 @@ CLR 在释放非托管资源方面提供了一些帮助。 <xref:System.Object?d
   
 -   当 CLR 需要调用终结器时，它必须推迟对象内存的回收，直到开始下一轮垃圾回收（终结器在两次回收的间隔期间运行）。 这意味着对象的内存（及其引用的所有对象）不会释放很长时间。  
 
- 因此，在处理稀缺资源时，或者在高性能情况下，终结操作的 GC 开销是不可接受的，在很多情况下，尽可能快地回收非托管资源非常重要，完全依赖终结器可能并不合适。  
+因此，在处理稀缺资源时，或者在高性能情况下，终结操作的 GC 开销是不可接受的，在很多情况下，尽可能快地回收非托管资源非常重要，完全依赖终结器可能并不合适。  
 
- Framework 提供了 <xref:System.IDisposable?displayProperty=nameWithType> 接口，应实现该接口，以便为开发人员提供一种手动方式，在不再需要非托管资源时立即释放它们。 它还提供了 <xref:System.GC.SuppressFinalize%2A?displayProperty=nameWithType> 方法，该方法可以告诉 GC 已手动释放了一个对象，无需再对其执行终结操作，在这种情况下，可以更早地回收对象的内存。 实现 `IDisposable` 接口的类型称为可释放类型。  
+Framework 提供了 <xref:System.IDisposable?displayProperty=nameWithType> 接口，应实现该接口，以便为开发人员提供一种手动方式，在不再需要非托管资源时立即释放它们。 它还提供了 <xref:System.GC.SuppressFinalize%2A?displayProperty=nameWithType> 方法，该方法可以告诉 GC 已手动释放了一个对象，无需再对其执行终结操作，在这种情况下，可以更早地回收对象的内存。 实现 `IDisposable` 接口的类型称为可释放类型。  
   
- Dispose 模式旨在标准化终结器和 `IDisposable` 接口的使用和实现。  
+Dispose 模式旨在标准化终结器和 `IDisposable` 接口的使用和实现。  
   
- 该模式的主要目的是降低 <xref:System.Object.Finalize%2A> 和 <xref:System.IDisposable.Dispose%2A> 方法实现的复杂性。 这种复杂性源于这样一个事实：这些方法共享一些但不是所有的代码路径（这些差异将在本章后面介绍）。 此外，还有一些历史原因，模式中的一些元素与确定性资源管理的语言支持的演变有关。  
+该模式的主要目的是降低 <xref:System.Object.Finalize%2A> 和 <xref:System.IDisposable.Dispose%2A> 方法实现的复杂性。 这种复杂性源于这样一个事实：这些方法共享一些但不是所有的代码路径（这些差异将在本章后面介绍）。 此外，还有一些历史原因，模式中的一些元素与确定性资源管理的语言支持的演变有关。  
   
-**✓ 务必** 在包含可释放类型的实例的类型上实现基本的 Dispose 模式。 请参阅[基本 Dispose 模式](#basic_pattern)部分有关的基本模式的详细信息。
+**✓ 务必** 在包含可释放类型的实例的类型上实现基本的 Dispose 模式。请参阅[基本 Dispose 模式](#basic_pattern)部分有关的基本模式的详细信息。
   
- 如果某个类型负责其他可释放对象的生命周期，开发人员也需要一种方法来释放它们。 使用容器的 `Dispose` 方法就是一种实现此操作的便捷方法。  
-  
+如果某个类型负责其他可释放对象的生命周期，开发人员也需要一种方法来释放它们。 使用容器的 `Dispose` 方法就是一种实现此操作的便捷方法。  
+
 **✓ 务必** 实现基本 Dispose 模式，并为需要显式释放且没有终结器的占用资源的类型提供终结器。
-  
- 例如，应该在存储非托管内存缓冲区的类型上实现该模式。 [可终结的类型](#finalizable_types) 部分讨论了与实现终结器相关的准则。  
+
+例如，应该在存储非托管内存缓冲区的类型上实现该模式。 [可终结的类型](#finalizable_types) 部分讨论了与实现终结器相关的准则。  
 
 **✓ 考虑** 在类上实现基本 Dispose 模式，这些类本身并不包含非托管资源或可释放对象，但可能有子类型。
 
- 一个很好的例子是 <xref:System.IO.Stream?displayProperty=nameWithType> 类。 尽管它是一个不包含任何资源的抽象基类，但它的大多数子类却包含，因此它可以实现这种模式。  
+一个很好的例子是 <xref:System.IO.Stream?displayProperty=nameWithType> 类。 尽管它是一个不包含任何资源的抽象基类，但它的大多数子类却包含，因此它可以实现这种模式。  
   
 <a name="basic_pattern"></a>
 ## <a name="basic-dispose-pattern"></a>基本 Dispose 模式
- 该模式的基本实现涉及实现 `System.IDisposable` 接口并声明 `Dispose(bool)` 方法，该方法实现在 `Dispose` 方法和可选的终结器之间共享的所有资源清理逻辑。  
+该模式的基本实现涉及实现 `System.IDisposable` 接口并声明 `Dispose(bool)` 方法，该方法实现在 `Dispose` 方法和可选的终结器之间共享的所有资源清理逻辑。  
   
 下面的示例演示基本模式的简单实现：  
   
@@ -128,7 +128,7 @@ public class DisposableResourceHolder : IDisposable {
   
 **X 切忌** 声明的任何重载`Dispose`以外的其他方法`Dispose()`和`Dispose(bool)`。
   
- `Dispose` 应视为一个保留词，以便编写此模式并防止在实现者、用户和编译者之间产生混淆。 某些语言可能会选择在某些类型上自动实现此模式。  
+`Dispose` 应视为一个保留词，以便编写此模式并防止在实现者、用户和编译者之间产生混淆。某些语言可能会选择在某些类型上自动实现此模式。  
   
 **✓ 务必** 允许多次调用 `Dispose(bool)` 方法。第一次调用后，该方法可能不执行任何操作。
   
@@ -271,7 +271,7 @@ C# 、C++ 和 VB.NET 的开发人员不需要担心这一点，因为编译器�
   
 **X 切忌** 不要让异常从终结器逻辑中逃脱，除系统关键故障外。
   
- 如果异常是从终结器引发的，CLR 将关闭整个进程（从 .NET Framework 2.0 版开始），从而阻止执行其他终结器和以受控方式释放资源。  
+如果异常是从终结器引发的，CLR 将关闭整个进程（从 .NET Framework 2.0 版开始），从而阻止执行其他终结器和以受控方式释放资源。  
   
 **✓ 考虑** 考虑在终结器绝对必须执行的情况下，或甚至面对强制应用程序域卸载和线程中止的情况下，创建和使用关键的可终结对象（具有包含 <xref:System.Runtime.ConstrainedExecution.CriticalFinalizerObject> 的类型层次结构的类型）。
   
