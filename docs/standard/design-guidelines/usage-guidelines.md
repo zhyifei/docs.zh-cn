@@ -18,10 +18,10 @@ ms.locfileid: "50197933"
 
 本节包含在可公开访问的API中使用常见类型的准则。它涉及直接使用内置框架类型（例如，序列化属性）和重载常见运算符。
   
-本部分未涵盖 <xref:System.IDisposable?displayProperty=nameWithType>接口，但在[Dispose 模式](../../../docs/standard/design-guidelines/dispose-pattern.md)部分对此进行了讨论。
+本部分未涵盖 <xref:System.IDisposable?displayProperty=nameWithType> 接口，但在[Dispose 模式](../../../docs/standard/design-guidelines/dispose-pattern.md)部分对此进行了讨论。
 
 > [!NOTE]
-> 有关其他常见内置.NET Framework类型的指南和其他信息，请参阅以下参考主题： <xref:System.DateTime?displayProperty=nameWithType>， <xref:System.DateTimeOffset?displayProperty=nameWithType>， <xref:System.ICloneable?displayProperty=nameWithType>， <xref:System.IComparable%601?displayProperty=nameWithType>， <xref:System.IEquatable%601?displayProperty=nameWithType>， <xref:System.Nullable%601?displayProperty=nameWithType>， <xref:System.Object?displayProperty=nameWithType>, <xref:System.Uri?displayProperty=nameWithType>.
+> 有关其他常见内置 .NET Framework 类型的指南和其他信息，请参阅以下参考主题： <xref:System.DateTime?displayProperty=nameWithType>， <xref:System.DateTimeOffset?displayProperty=nameWithType>， <xref:System.ICloneable?displayProperty=nameWithType>， <xref:System.IComparable%601?displayProperty=nameWithType>， <xref:System.IEquatable%601?displayProperty=nameWithType>， <xref:System.Nullable%601?displayProperty=nameWithType>， <xref:System.Object?displayProperty=nameWithType>, <xref:System.Uri?displayProperty=nameWithType>.
 
 ## <a name="in-this-section"></a>本节内容
 
@@ -29,7 +29,7 @@ ms.locfileid: "50197933"
 [属性](attributes.md)
 [集合](guidelines-for-collections.md)
 [序列化](serialization.md)
-[System.Xml 使用](system-xml-usage.md)
+[System.Xml 用法](system-xml-usage.md)
 [相等运算符](equality-operators.md)
 
 *部分版权 © 2005, 2009 Microsoft Corporation。保留所有权利。*
