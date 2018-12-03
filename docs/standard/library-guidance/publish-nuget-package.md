@@ -4,12 +4,12 @@ description: 将 .NET 库发布到 NuGet 的最佳做法建议。
 author: jamesnk
 ms.author: mairaw
 ms.date: 10/02/2018
-ms.openlocfilehash: e0244d2a9d09382c289c74a45969bca0a1311445
-ms.sourcegitcommit: b5cd9d5d3b75a5537fc9ad8a3f085f0bb1845ee0
+ms.openlocfilehash: 036aa99c89790274628c40824be7e230d81850fe
+ms.sourcegitcommit: 7f7664837d35320a0bad3f7e4ecd68d6624633b2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "50757304"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52672064"
 ---
 # <a name="publishing-a-nuget-package"></a>发布 NuGet 包
 
@@ -43,5 +43,5 @@ ms.locfileid: "50757304"
 ✔️ 务必在发布包时启用电子邮件通知。
 
 >[!div class="step-by-step"]
-[上一页](./sourcelink.md)
-[下一页](./versioning.md)
+>[上一页](sourcelink.md)
+>[下一页](versioning.md)

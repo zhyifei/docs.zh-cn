@@ -4,12 +4,12 @@ description: 了解在生成 Web 应用时，如何在传统 Web 应用和单页
 author: ardalis
 ms.author: wiwagn
 ms.date: 6/28/2018
-ms.openlocfilehash: 40b17d07b008c2a3a9457bffc26b612e6b5c9fe5
-ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
+ms.openlocfilehash: abeee719c15263fea04a3bcf80a6e41c43b640d2
+ms.sourcegitcommit: 82a3f7882bc03ed733af91fc2a0b113195bf5dc7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37404140"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52745298"
 ---
 # <a name="choose-between-traditional-web-apps-and-single-page-apps-spas"></a>在传统 Web 应用和单页应用 (SPA) 之间选择
 
@@ -73,7 +73,7 @@ SPA 可支持丰富客户端功能，当用户执行操作或在应用的各区�
 > - **Angular**  
 >   <https://angular.io>
 > - **JavaScript 框架的比较**  
->   <https://javascriptreport.com/the-ultimate-guide-to-javascript-frameworks/>
+>   <https://jsreport.io/the-ultimate-guide-to-javascript-frameworks/>
 
 **应用程序已为其他（内部或公共）客户端公开 API**
 
@@ -91,5 +91,5 @@ SPA 可支持丰富客户端功能，当用户执行操作或在应用的各区�
 | 丰富而复杂的用户界面要求            | **受限**             | **适合**             |
 
 >[!div class="step-by-step"]
-[上一页](modern-web-applications-characteristics.md)
-[下一页](architectural-principles.md)
+>[上一页](modern-web-applications-characteristics.md)
+>[下一页](architectural-principles.md)
