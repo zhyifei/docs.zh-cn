@@ -27,8 +27,8 @@ ms.locfileid: "48839350"
 
 这通常意味着重载相等运算符时 `Object.Equals` 也需要被重写。  
 
-**X 避免** 相等运算符引发异常。
-  
+**X 避免** 从相等运算符引发异常。
+
 例如，如果其中一个参数为 null ，则返回 false ，而不是引发 `NullReferenceException`。  
   
 ## <a name="equality-operators-on-value-types"></a>值类型的相等运算符

@@ -13,11 +13,11 @@ ms.lasthandoff: 09/17/2018
 ms.locfileid: "45964825"
 ---
 # <a name="guidelines-for-collections"></a>集合准则
-任何专门设计用于操作具有一些共同特征的一组对象的类型都可以被认为是集合。这些类型几乎总是适合实现<xref:System.Collections.IEnumerable> 或 <xref:System.Collections.Generic.IEnumerable%601>，因此在本部分中，我们只将实现了这些接口中的一个或两个的类型认为是集合。
+任何专门设计用于操作具有一些共同特征的一组对象的类型都可以被认为是集合。这些类型几乎总是适合实现 <xref:System.Collections.IEnumerable> 或 <xref:System.Collections.Generic.IEnumerable%601>，因此在本部分中，我们只将实现了这些接口中的一个或两个的类型认为是集合。
   
 **X 切忌** 在公共 API 中使用弱类型的集合。  
 
-表示集合项的所有返回值和参数的类型应该是确切的项类型，而不是其任何基类型（这仅适用于集合的公共成员）。
+表示集合项的所有返回值和参数的类型应该是明确的项类型，而不是其任何基类型（这仅适用于集合的公共成员）。
   
 **X 切忌** 在公共 API 中使用 <xref:System.Collections.ArrayList> 或 <xref:System.Collections.Generic.List%601>。
 
@@ -27,18 +27,18 @@ ms.locfileid: "45964825"
 
 这些类型是设计用于内部实现的数据结构。公共 API 应该使用 <xref:System.Collections.IDictionary>，`IDictionary<TKey, TValue>`，或实现这些一个或两个接口的自定义类型。
   
-**X 切忌** 使用 <xref:System.Collections.Generic.IEnumerator%601>， <xref:System.Collections.IEnumerator>，或实现这些接口之一的任何其他类型，除了作为 `GetEnumerator` 方法的返回类型。
+**X 切忌** 使用 <xref:System.Collections.Generic.IEnumerator%601>、<xref:System.Collections.IEnumerator> 或实现这些接口之一的任何其他类型，除了作为 `GetEnumerator` 方法的返回类型。
 
 从 `GetEnumerator` 以外的方法返回枚举器的类型不能用于 `foreach` 语句。
   
-**X 切忌** 在同一类型上实现 `IEnumerator<T>` 和 `IEnumerable<T>`。 这同样适用于非泛型接口 `IEnumerator` 和 `IEnumerable`。  
+**X 切忌** 在同一类型上实现 `IEnumerator<T>` 和 `IEnumerable<T>`。这同样适用于非泛型接口 `IEnumerator` 和 `IEnumerable`。  
   
 ## <a name="collection-parameters"></a>集合参数
 **✓ 务必** 尽可能不将特定类型作为参数类型。将集合作为参数的大多数成员使用 `IEnumerable<T>` 接口。
   
-**X 避免** 仅为了访问 `Count` 属性而使用 <xref:System.Collections.Generic.ICollection%601> 或<xref:System.Collections.ICollection> 作为参数。  
+**X 避免** 仅为了访问 `Count` 属性而使用 <xref:System.Collections.Generic.ICollection%601> 或 <xref:System.Collections.ICollection> 作为参数。  
   
-相反，请考虑使用 `IEnumerable<T>` 或 `IEnumerable` 并动态检查对象是否实现了 `ICollection<T>`或 `ICollection`。
+相反，请考虑使用 `IEnumerable<T>` 或 `IEnumerable` 并动态检查对象是否实现了 `ICollection<T>` 或 `ICollection`。
   
 ## <a name="collection-properties-and-return-values"></a>集合属性和返回值
 **X 切忌** 提供可设置的集合属性。  
@@ -47,7 +47,7 @@ ms.locfileid: "45964825"
 
 **✓ 务必** 为表示读/写集合的属性或返回值使用 `Collection<T>` 或 `Collection<T>` 的子类。
 
-如果 `Collection<T>` 不符合某些要求 (例如，集合不能实现 <xref:System.Collections.IList>)，请通过实现 `IEnumerable<T>`、`ICollection<T>` 或 <xref:System.Collections.Generic.IList%601> 使用自定义集合。
+如果 `Collection<T>` 不符合某些要求 (例如，集合不能实现 <xref:System.Collections.IList>)，请通过实现  `IEnumerable<T>`、`ICollection<T>` 或 <xref:System.Collections.Generic.IList%601> 使用自定义集合。
 
 **✓ 务必** 为表示只读集合的​​属性或返回值使用 <xref:System.Collections.ObjectModel.ReadOnlyCollection%601>、`ReadOnlyCollection<T>` 的子类，或在极少数情况下使用 `IEnumerable<T>`。  
 
@@ -85,11 +85,11 @@ ms.locfileid: "45964825"
 ## <a name="choosing-between-arrays-and-collections"></a>在数组和集合之间进行选择
 **✓ 务必** 更倾向使用集合，而不是数组。
 
-集合提供了对内容的更多控制，可以随着时间的推移而发展，并且更加可用。此外，不鼓励将数组用于只读方案，因为克隆数组的成本过高。可用性研究表明，一些开发人员更习惯使用基于集合的API。
+集合提供了对内容的更多控制，可以随着时间的推移而发展，并且可用性更好。此外，不鼓励将数组用于只读场景，因为克隆数组的成本过高。可用性研究表明，一些开发人员更习惯使用基于集合的 API。
 
-但是，如果您正在开发低级 API，那么将数组用于读写方案可能会更好。数组的内存占用量较小，这有助于减少工作集，并且对数组中元素的访问速度更快，因为它是由运行时优化的。
+但是，如果您正在开发低级 API，那么将数组用于读写场景可能会更好。数组的内存占用量较小，这有助于减少工作集，并且对数组中元素的访问速度更快，因为它是由运行时优化的。
   
-**✓ 考虑** 在低级别 API 中使用数组，以最大程度地减少内存消耗并最大程度地提高性能。
+**✓ 考虑** 在低级别 API 中使用数组，以最大程度地减少内存开销并最大程度地提高性能。
 
 **✓ 务必** 使用字节数组而不是字节集合。  
  

@@ -26,7 +26,7 @@ ms.locfileid: "44259479"
   
 应用该属性（attribute）时不一定必须指定的属性（properties）称为可选属性（或可选参数）。它们由可设置的属性（properties）表示。编译器提供特殊语法，以在应用属性（attribute）时设置这些属性（properties）。例如， <xref:System.AttributeUsageAttribute.Inherited%2A?displayProperty=nameWithType> 属性表示了一个可选参数。
   
-**✓ 务必** 使用后缀“Attribute”命名自定义属性类。
+**✓ 务必** 使用后缀 “Attribute” 命名自定义属性类。
 
 **✓ 务必** 为自定义属性应用 <xref:System.AttributeUsageAttribute>。  
 
@@ -38,7 +38,7 @@ ms.locfileid: "44259479"
 
 **X 避免** 提供构造函数参数来初始化与可选参数对应的属性。
 
-换句话说，不要使用可同时用构造函数和 setter 设置的属性。此原则使非常明确，哪参数是可选的，哪些是是必需的，并可避免使用两种方法执行相同的操作。  
+换句话说，不要使用可同时用构造函数和 setter 设置的属性。此原则使哪些参数是可选的、哪些参数是必需的变得非常明确，并可避免使用两种方法执行相同的操作。  
 
 **X 避免** 重载自定义属性的构造函数。
 
