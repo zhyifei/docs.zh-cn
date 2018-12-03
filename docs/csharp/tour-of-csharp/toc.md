@@ -5,7 +5,7 @@
 ## [语句](statements.md)
 ## [类和对象](classes-and-objects.md)
 ## [结构](structs.md)
-## [阵列](arrays.md)
+## [数组](arrays.md)
 ## [接口](interfaces.md)
 ## [枚举](enums.md)
 ## [委托](delegates.md)

@@ -3,11 +3,11 @@ title: 安全性概念
 ms.date: 03/30/2017
 ms.assetid: 944fa5ca-2c34-4268-8897-e005a61b470d
 ms.openlocfilehash: cdac8ab2ee257924327cc082a55839903c32f80c
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50185584"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "52296511"
 ---
 # <a name="security-concepts"></a>安全性概念
 本部分简要介绍 Windows Communication Foundation (WCF) 安全相关的概念。  

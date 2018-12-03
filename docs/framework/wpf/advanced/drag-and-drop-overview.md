@@ -31,8 +31,7 @@ ms.locfileid: "33549459"
   
  拖放操作期间执行的特定操作特定于应用程序，并且通常由上下文而定。  例如，将选择的文件从一个文件夹一拖动至相同存储设备上的另一个文件夹将默认移动文件；而将文件从 [!INCLUDE[TLA#tla_unc](../../../../includes/tlasharptla-unc-md.md)] 共享拖动至本地文件夹将默认复制文件。  
   
- 
-          [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 提供的拖放设施拥有高度的灵活性并可自定义，以便支持各种拖放方案。  拖放支持在单个应用程序内或不同应用程序之间操作对象。 拖放之间[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]还完全支持应用程序和其他 Windows 应用程序。  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 提供的拖放设施拥有高度的灵活性并可自定义，以便支持各种拖放方案。  拖放支持在单个应用程序内或不同应用程序之间操作对象。 拖放之间[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]还完全支持应用程序和其他 Windows 应用程序。  
   
  在 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 中，任何 <xref:System.Windows.UIElement> 或 <xref:System.Windows.ContentElement> 都可以参与拖放。 拖放操作所需的事件和方法是在 <xref:System.Windows.DragDrop> 类中定义的。 <xref:System.Windows.UIElement> 和 <xref:System.Windows.ContentElement> 类包含 <xref:System.Windows.DragDrop> 附加事件的别名，从而在 <xref:System.Windows.UIElement> 或 <xref:System.Windows.ContentElement> 作为基元素继承时，这些事件出现在类成员列表中。 附加到这些事件的事件处理程序会附加到基础 <xref:System.Windows.DragDrop> 附加事件，并接收相同的事件数据实例。 有关详细信息，请参阅 <xref:System.Windows.UIElement.Drop?displayProperty=nameWithType> 事件。  
   
@@ -156,8 +155,7 @@ ms.locfileid: "33549459"
   
  任何可序列化对象都可以在 `data` 参数中传递。 如果数据尚未包装在 <xref:System.Windows.DataObject> 中，则它将自动包装在一个新的 <xref:System.Windows.DataObject> 中。 若要传递多个数据项，必须自行创建 <xref:System.Windows.DataObject>，并将其传递到 <xref:System.Windows.DragDrop.DoDragDrop%2A> 方法。 有关详细信息，请参阅[数据和数据对象](../../../../docs/framework/wpf/advanced/data-and-data-objects.md)。  
   
- 
-          `allowedEffects` 参数用于指定拖动源允许拖放目标对传输的数据进行什么操作。 拖动源公共值为 <xref:System.Windows.DragDropEffects.Copy><xref:System.Windows.DragDropEffects.Move> 和<xref:System.Windows.DragDropEffects.All>。  
+ `allowedEffects` 参数用于指定拖动源允许拖放目标对传输的数据进行什么操作。 拖动源公共值为 <xref:System.Windows.DragDropEffects.Copy><xref:System.Windows.DragDropEffects.Move> 和<xref:System.Windows.DragDropEffects.All>。  
   
 > [!NOTE]
 >  拖放目标也能够指定其对放置的数据的预期效果。 例如，如果拖放目标不能识别要放置的数据类型，则可以通过将其允许的效果设置为 <xref:System.Windows.DragDropEffects.None> 来拒绝数据。 通常在其 <xref:System.Windows.DragDrop.DragOver> 事件处理程序中进行此操作。  

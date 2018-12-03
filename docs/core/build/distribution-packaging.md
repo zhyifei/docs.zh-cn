@@ -4,12 +4,12 @@ description: 了解如何为 .NET Core 打包、命名并进行版本控制以�
 author: bleroy
 ms.author: mairaw
 ms.date: 06/28/2017
-ms.openlocfilehash: df1ba6a93106cd6b3ceafa93b7c548287878c3fe
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 41e8729d3058c2e3e1ea1cab9a8f28b3062bb93c
+ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48840480"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "52297213"
 ---
 # <a name="net-core-distribution-packaging"></a>.NET Core 分发打包
 
@@ -46,7 +46,7 @@ ms.locfileid: "48840480"
 
 - (1) **dotnet** 主机（也称为“muxer”）有两个不同角色：激活运行时以启动应用程序，及激活 SDK 以向其分派命令。 主机是本机可执行文件 (`dotnet.exe`)。
 
-主机只有一个，不过大部分的其他组件都在带有版本的目录中（2、3、5 和 6）。 也就是说，因为它们是并行安装的，所以系统上可以出现多个版本。
+主机只有一个，不过大部分的其他组件都在带有版本的目录中（2、3、5 和 6）。 这意味着系统上可存在多个版本，因为它们是并排安装的。
 
 - (2) **host/fxr/\<fxr version>** 包含了主机所使用的框架解析逻辑。 主机采用已安装的最新 hostfxr。 在执行 .NET Core 应用程序时，hostfxr 负责选择合适的运行时。 例如，.NET Core 2.0.0 的应用程序会使用 2.0.5 运行时（如果可用）。 同样，hostfxr 在开发期间也会选择适当的 SDK。
 

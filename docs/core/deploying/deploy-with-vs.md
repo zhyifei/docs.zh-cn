@@ -176,7 +176,7 @@ ms.locfileid: "48584374"
 </Project>
 ```
 
-# <a name="visual-studio-157-and-latertabvs157"></a>[Visual Studio 15.7 及更早版本](#tab/vs157)
+# <a name="visual-studio-157-and-latertabvs157"></a>[Visual Studio 15.7 及更高版本](#tab/vs157)
 
 调试并测试程序后，为应用的每个目标平台创建要与应用一起部署的文件。 这包括为每个目标平台创建单独的配置文件。
 
@@ -289,7 +289,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
 </Project>
 ```
 
-# <a name="visual-studio-157-and-latertabvs157"></a>[Visual Studio 15.7 及更早版本](#tab/vs157)
+# <a name="visual-studio-157-and-latertabvs157"></a>[Visual Studio 15.7 及更高版本](#tab/vs157)
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">

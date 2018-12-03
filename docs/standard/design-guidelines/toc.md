@@ -38,7 +38,7 @@
 ### [使用标准异常类型](using-standard-exception-types.md)
 ### [异常和性能](exceptions-and-performance.md)
 ## [使用准则](usage-guidelines.md)
-### [阵列](arrays.md)
+### [数组](arrays.md)
 ### [特性](attributes.md)
 ### [集合](guidelines-for-collections.md)
 ### [序列化](serialization.md)

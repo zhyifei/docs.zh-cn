@@ -6,7 +6,7 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: d915c7d5521e630602f4dac6c905920fd2fab9d9
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
 ms.locfileid: "33411442"
@@ -29,7 +29,7 @@ HRESULT EnumerateThreadIDs(
  [输入] 线程 ID 可返回的上限数。  
   
  pcThreadID  
- [输出] `ULONG32` 指针显示写入 `pThreadIds` 阵列的线程 ID 的实际数目。  
+ [输出] `ULONG32` 指针显示写入 `pThreadIds` 数组的线程 ID 的实际数目。  
   
  pThreadID  
  一组线程标识符。  

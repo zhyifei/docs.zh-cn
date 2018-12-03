@@ -4,12 +4,12 @@ description: 使用 Microsoft 平台和工具的容器化 Docker 应用程序的
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
-ms.openlocfilehash: a2fe2c325377ec49f89199ad2e36c950ebab6a24
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 17dabb143a1948cbcfa748b4c3bbcff5a57d2c24
+ms.sourcegitcommit: 82a3f7882bc03ed733af91fc2a0b113195bf5dc7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "50757343"
+ms.lasthandoff: 12/02/2018
+ms.locfileid: "52743264"
 ---
 # <a name="monolithic-applications"></a>单一式应用程序
 
@@ -69,7 +69,6 @@ ms.locfileid: "50757343"
 
 图 4-4 还显示了发布流推送到容器注册表，可以是 Azure 容器注册表 （注册表附近你在 Azure 中的部署和保护的 Azure Active Directory 组和帐户） 或任何其他 Docker 注册表的映像如 Docker 中心或在本地注册表。
 
-
 >[!div class="step-by-step"]
-[上一页](common-container-design-principles.md)
-[下一页](state-and-data-in-docker-applications.md)
+>[上一页](common-container-design-principles.md)
+>[下一页](state-and-data-in-docker-applications.md)

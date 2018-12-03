@@ -24,7 +24,7 @@ ms.locfileid: "30957641"
 
 ### <a name="samples"></a>示例
 
-**[在 .NET Core 中使用 dotnet 测试的单元测试](../core/testing/unit-testing-with-dotnet-test.md)**
+**[在 .NET Core 中使用 dotnet test的单元测试](../core/testing/unit-testing-with-dotnet-test.md)**
 
 本指南演示如何创建 ASP.NET Core Web 应用和关联的单元测试。 首先创建一个简单的 Web 服务应用，然后添加测试。 然后继续创建更多测试来指导新功能的实现。 可在 GitHub 上的 dotnet/samples 存储库中找到[完整示例](https://github.com/dotnet/samples/tree/master/core/getting-started/unit-testing-using-dotnet-test)。
 

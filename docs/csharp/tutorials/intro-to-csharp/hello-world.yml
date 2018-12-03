@@ -11,12 +11,12 @@ metadata:
   displayType: two-column
   interactive: csharp
   ms.custom: mvc
-  ms.openlocfilehash: d9992c65b2f5f0f73af9f3234ac389b1c8647337
-  ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+  ms.openlocfilehash: 7d6029e48c67259dc2fb28151196223f2490962f
+  ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
   ms.translationtype: HT
   ms.contentlocale: zh-CN
-  ms.lasthandoff: 10/28/2018
-  ms.locfileid: "50200141"
+  ms.lasthandoff: 11/26/2018
+  ms.locfileid: "52297044"
 items:
 - durationInMinutes: 1
   content: >
@@ -98,10 +98,4 @@ items:
     > [!NOTE]
 
     > 此联机编码体验处于预览模式。 如果遇到问题，请[在 dotnet/try 存储库上](https://github.com/dotnet/try/issues)进行报告。
-- content: >-
-    你已完成“C# 初探”C# 教程简介。
-
-
-    若要详细了解如何使用 `string` 类型，可以参阅有关[字符串](../../programming-guide/strings/index.md)的 [C# 编程指南](../../programming-guide/index.md)主题。
-
-    [有关使用字符串的操作方法提示](../../how-to/index.md#working-with-strings)。
+- content: "你已完成“C# 初探”C# 教程简介。 可单击下方的“C# 中的数字”链接开始下一个交互式教程，或者可访问 [.NET 站点](https://www.microsoft.com/net/learn/dotnet/hello-world-tutorial)下载 .NET Core SDK，在计算机上创建项目，并继续编码。 “继续学习”步骤将带你回到教程中。\n\n有关 `string` 类型的其他阅读材料：\n- [字符串](../../programming-guide/strings/index.md)中的 [C# 编程指南](../../programming-guide/index.md)主题。 \n- [有关使用字符串的操作方法提示](../../how-to/index.md#working-with-strings)。"

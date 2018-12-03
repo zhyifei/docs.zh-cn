@@ -2,11 +2,11 @@
 title: 自定义编码器
 ms.date: 03/30/2017
 ms.assetid: fa0e1d7f-af36-4bf4-aac9-cd4eab95bc4f
-ms.openlocfilehash: cd8b9172278ce5bcca2965872d697b03698bd850
-ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.openlocfilehash: 036cbff9046df2d1179c5cc0921dd8d89757558b
+ms.sourcegitcommit: 8145ad08288bf141d68e3256cb1f7a3ad842ca33
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2018
+ms.lasthandoff: 11/22/2018
 ms.locfileid: "50034319"
 ---
 # <a name="custom-encoders"></a>自定义编码器
@@ -60,7 +60,7 @@ ms.locfileid: "50034319"
  除了处理动态字典关键字之外，缓冲的会话消息将采用独有的方式接收。 二进制编码器不是对文档创建一个编码器并处理该文档，而是使用内部 `MessagePatterns` 类解构二进制流。 其理念是，大多数消息都具有某组显示在特定的顺序时生成的 WCF 的标头。 模式系统将基于它所期待的方式拆分消息。 如果成功了，它将初始化 <xref:System.ServiceModel.Channels.MessageHeaders> 对象而无需分析 XML。 如果不成功，将转而使用标准方法。  
   
 ### <a name="mtom-encoding"></a>MTOM 编码  
- <<!--zz xref:System.ServiceModel.Channels.MTOMMessageEncodingBindingElement --> `System.ServiceModel.Channels.MTOMMessageEncodingBindingElement`> 类具有名为额外的配置属性 <<!--zz xref:System.ServiceModel.Channels.MTOMMessageEncodingBindingElement --> `System.ServiceModel.Channels.MTOMMessageEncodingBindingElement`.MaxBufferSize%2a>。 此属性用于设置在读取消息的过程中允许缓冲的数据量上限。 XML 信息集 (Infoset)，或其他 MIME 部分，可能需要进行缓冲以便将所有 MIME 部分集合到一条消息中。  
+ <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement> 类具有一个称为 <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement.MaxBufferSize%2A> 的附加配置属性。 此属性用于设置在读取消息的过程中允许缓冲的数据量上限。 XML 信息集 (Infoset)，或其他 MIME 部分，可能需要进行缓冲以便将所有 MIME 部分集合到一条消息中。  
   
  为了可以正确使用 HTTP，内部 MTOM 消息编码器类为 `GetContentType`（内部）和 `WriteMessage` 提供了一些内部 API，这些 API 是公用的，可以重写。 必须进行更多的通信以确保 HTTP 标头中的值与 MIME 标头中的值一致。  
   

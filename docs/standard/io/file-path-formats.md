@@ -2,19 +2,18 @@
 title: Windows 系统中的文件路径格式
 ms.date: 06/28/2018
 ms.technology: dotnet-standard
-ms.topic: article
 helpviewer_keywords:
 - I/O, long paths
 - long paths
 - path formats, Windows
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 05146467f321a3c83f3637e2eecc4c7c42dc4ba0
-ms.sourcegitcommit: 3b1cb8467bd73dee854b604e306c0e7e3882d91a
+ms.openlocfilehash: 1b79ff1991f1d9b803b0c35b4ae9565f70de0b56
+ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51214189"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "52296823"
 ---
 # <a name="file-path-formats-on-windows-systems"></a>Windows 系统中的文件路径格式
 
@@ -90,8 +89,8 @@ DOS 设备路径由以下部分组成：
 
    UNC 有个特定的链接，很自然地名为 `UNC`。 例如:
 
-      `\\.\UNC\Server\Share\Test\Foo.txt`
-      `\\?\UNC\Server\Share\Test\Foo.txt`
+  `\\.\UNC\Server\Share\Test\Foo.txt`  
+  `\\?\UNC\Server\Share\Test\Foo.txt`
 
     对于设备 UNC，服务器/共享部分构成了卷。 例如，在 `\\?\server1\e:\utilities\\filecomparer\` 中，服务器/共享部分是 server1\utilities。 使用相对目录段调用 <xref:System.IO.Path.GetFullPath(System.String,System.String)?displayProperty=nameWithType> 等方法时，这一点非常重要；决不可能越过卷。 
 
@@ -114,7 +113,7 @@ DOS 设备路径通过定义进行完全限定。 不允许使用相对目录段
 - 评估相对目录组件（当前目录是 `.`，父目录是 `..`）。
 - 剪裁特定字符。
 
-这种规范化隐式进行，若想显式进行规范化，可以调用 <xref:System.IO.Path.GetFullPath%2A?displayProperty=nameWithType> 方法，这会包装对 [GetFullPathName() 函数](/windows/desktop/api/fileapi/nf-fileapi-getfullpathnamea).aspx) 的调用。 还可以使用 P/Invoke 直接调用 Windows [GetFullPathName() 函数](/windows/desktop/api/fileapi/nf-fileapi-getfullpathnamea).aspx)。 还可以调用 
+这种规范化隐式进行，若想显式进行规范化，可以调用 <xref:System.IO.Path.GetFullPath%2A?displayProperty=nameWithType> 方法，这会包装对 [GetFullPathName() 函数](/windows/desktop/api/fileapi/nf-fileapi-getfullpathnamea)的调用。 还可以使用 P/Invoke 直接调用 Windows [GetFullPathName() 函数](/windows/desktop/api/fileapi/nf-fileapi-getfullpathnamea)。
 
 ### <a name="identifying-the-path"></a>识别路径
 

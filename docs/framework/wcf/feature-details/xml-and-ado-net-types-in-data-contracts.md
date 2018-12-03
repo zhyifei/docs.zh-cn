@@ -87,7 +87,7 @@ Windows Communication Foundation (WCF) 数据协定模型支持某些直接表�
   
  使用 <xref:System.Array> 实例填充 `Object` 的 `Array` 类型的数据成员（或 `IEnumerable` 的 `XmlNode` 类型的数据成员）时，将不会导致数据成员被视为 `Array` 实例的 `XmlNode`。 将分别序列化每个数组成员。  
   
- 当与 `DataContractSerializer` 一起使用时，能够以多元方式分配 `XmlNode` 的数组，但只能分配到 `Object` 类型的数据成员。 即使 `IEnumerable` 数组实现 `XmlNode`，它也无法用作集合类型，并且无法分配给 `IEnumerable` 数据成员。 与所有多态分配一样，`DataContractSerializer`发出数据协定名称在生成的 XML 在这种情况下，它位于"ArrayOfXmlNode""http://schemas.datacontract.org/2004/07/System.Xml"命名空间。 如果用于`NetDataContractSerializer`的任何有效分配`XmlNode`阵列是否受支持。  
+ 当与 `DataContractSerializer` 一起使用时，能够以多元方式分配 `XmlNode` 的数组，但只能分配到 `Object` 类型的数据成员。 即使 `IEnumerable` 数组实现 `XmlNode`，它也无法用作集合类型，并且无法分配给 `IEnumerable` 数据成员。 与所有多态分配一样，`DataContractSerializer`发出数据协定名称在生成的 XML 在这种情况下，它位于"ArrayOfXmlNode""http://schemas.datacontract.org/2004/07/System.Xml"命名空间。 如果用于`NetDataContractSerializer`的任何有效分配`XmlNode`数组是否受支持。  
   
 ### <a name="schema-considerations"></a>架构注意事项  
  有关 XML 类型的架构映射的详细信息，请参阅[数据协定架构参考](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md)。 本节介绍重点摘要。  

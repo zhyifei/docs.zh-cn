@@ -1,13 +1,13 @@
 ---
 title: 断言 (F#)
-description: 了解如何在 F# 编程语言中测试表达式 assert 表达式用作一种调试功能。
+description: 了解如何使用 assert 表达式作为一种调试功能测试中的表达式F#编程语言。
 ms.date: 05/16/2016
-ms.openlocfilehash: 85b1e839bfd19bada48b7f1821d15ddd8fa77754
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: fbaf038f08cfc74e6cb262c110322dc586813c0c
+ms.sourcegitcommit: 7f7664837d35320a0bad3f7e4ecd68d6624633b2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "48842471"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52671897"
 ---
 # <a name="assertions"></a>断言
 
@@ -27,10 +27,10 @@ assert condition
 
 在调试模式下; 编译时，才会启用断言检查也就是说，如果常量`DEBUG`定义。 在项目系统中，默认情况下，`DEBUG`常量在调试配置中而不是在发布配置定义。
 
-不能通过使用 F# 异常处理捕获断言失败错误。
+不能通过使用捕获断言失败错误F#异常处理。
 
->[!NOTE]
-`assert`函数将解析为<xref:System.Diagnostics.Debug.Assert*?displayProperty=nameWithType>。
+> [!NOTE]
+> `assert`函数将解析为<xref:System.Diagnostics.Debug.Assert*?displayProperty=nameWithType>。
 
 ## <a name="example"></a>示例
 

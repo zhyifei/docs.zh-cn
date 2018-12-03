@@ -46,9 +46,9 @@ dotnet add package Microsoft.ML.Probabilistic.Compiler
 
 ## <a name="design-your-model"></a>设计模型
 
-示例使用在 Office 中进行的乒乓球或桌上足球比赛。 我们具有参赛者的信息和每场比赛的结果。  我们想要通过此数据推断玩家的实力。 假设每位玩家的潜在实力呈正态分布，且他们在给定比赛中的表现是此实力受干扰后的状态。 此数据会将胜者的表现约束在优于败者的表现。 这是热门的 [TrueSkill](https://www.microsoft.com/en-us/research/project/trueskill-ranking-system/) 模型的简化版，此模型也支持团队、平局及其他扩展项。 热销的 Halo 和 Gears of War 游戏中的比赛安排使用了此模型的[高级版](https://www.microsoft.com/en-us/research/publication/trueskill-2-improved-bayesian-skill-rating-system/)。
+示例使用在室内进行的乒乓球或桌上足球比赛。 我们具有参赛者的信息和每场比赛的结果。  我们想要通过此数据推断玩家的实力。 假设每位玩家的潜在实力呈正态分布，且他们在给定比赛中的表现是此实力受干扰后的状态。 数据被设定的约束条件是赢家的表现大于输家的表现。 这是热门的 [TrueSkill](https://www.microsoft.com/en-us/research/project/trueskill-ranking-system/) 模型的简化版，此模型也支持团队、平局及其他扩展项。 热销的 Halo 和 Gears of War 游戏中的比赛安排使用了此模型的[高级版](https://www.microsoft.com/en-us/research/publication/trueskill-2-improved-bayesian-skill-rating-system/)。
 
-我们需要列出所推断玩家的实力及其方差（实力不确定性的度量值）。
+我们需要列出所推断玩家的实力以及他们的实力差异（衡量实力不确定性的度量值）。
 
 *游戏结果示例数据*
 
@@ -61,7 +61,7 @@ dotnet add package Microsoft.ML.Probabilistic.Compiler
  5 | 玩家 3 | 玩家 1
  6 | 玩家 4 | 玩家 2
 
-仔细观察示例数据会发现玩家 3 和玩家 4 分别输赢过一次。 我们来看下使用概率性编程时的排名。 还会注意到有一位玩家 0，因为对于开发人员而言，甚至 Office 匹配列表都是从零开始的。
+仔细观察示例数据会发现玩家3和玩家4都有1次胜利和1次失败。 我们来看下使用概率性编程时的排名。 另请注意基于我们开发的编码习惯，玩家编号是从零开始的，即使是室内游戏匹配列表也是从零开始的。
 
 ## <a name="write-some-code"></a>编写代码
 

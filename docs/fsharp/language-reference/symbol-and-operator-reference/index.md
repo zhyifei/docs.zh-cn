@@ -1,18 +1,18 @@
 ---
 title: 符号和运算符参考 (F#)
-description: 了解符号和 F# 编程语言中使用的运算符。
+description: 了解符号和运算符中使用F#编程语言。
 ms.date: 04/04/2018
-ms.openlocfilehash: 0e36f6cfc75b7d2e79bcf7acb89d260fd4e9b1ad
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: f6f99f8fa563b71c935122c6f8597599c59b5c7f
+ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "47216815"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "52297297"
 ---
 # <a name="symbol-and-operator-reference"></a>符号和运算符参考
 
 > [!NOTE]
-本文中的 API 参考链接将转至 MSDN。  Docs.microsoft.com API 参考尚未完成。
+> 本文中的 API 参考链接将转至 MSDN。  Docs.microsoft.com API 参考尚未完成。
 
 本主题包括 F# 语言中使用的符号和运算符表。
 

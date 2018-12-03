@@ -25,5 +25,5 @@
 ## [可靠性](reliability.md)
 ### [SQL Server 编程和主机保护特性](sql-server-programming-and-host-protection-attributes.md)
 ### [可靠性最佳做法](reliability-best-practices.md)
-### [Constrained Execution Regions](constrained-execution-regions.md)（受约束的执行区域）
+### [受约束的执行区域](constrained-execution-regions.md)
 ## [性能提示](performance-tips.md)

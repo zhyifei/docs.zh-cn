@@ -13,7 +13,7 @@ ms.locfileid: "50202811"
 ---
 # <a name="cross-platform-targeting"></a>跨平台定位
 
-新式 .NET 支持多个操作系统和设备。 .NETNET 开源库支持尽可能多的开发人员（无论是构建 Azure 中托管的 ASP.NET 网站的开发人员，还是在 Unity 中开发 .NET 游戏的开发人员），这一点非常重要。
+新式 .NET 支持多个操作系统和设备。 .NET 开源库支持尽可能多的开发人员（无论是构建 Azure 中托管的 ASP.NET 网站的开发人员，还是在 Unity 中开发 .NET 游戏的开发人员），这一点非常重要。
 
 ## <a name="net-standard"></a>.NET Standard
 

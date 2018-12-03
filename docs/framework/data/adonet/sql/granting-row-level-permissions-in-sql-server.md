@@ -2,12 +2,12 @@
 title: 在 SQL Server 中授予行级权限
 ms.date: 03/30/2017
 ms.assetid: a55aaa12-34ab-41cd-9dec-fd255b29258c
-ms.openlocfilehash: 4a4b45e13a16b357be28a1383648e98890567ea9
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 0ec68f013d08e3939d48a820b9fd52ce27a4f12d
+ms.sourcegitcommit: 7f7664837d35320a0bad3f7e4ecd68d6624633b2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43873700"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52671958"
 ---
 # <a name="granting-row-level-permissions-in-sql-server"></a>在 SQL Server 中授予行级权限
 在某些情况下，会要求更为细致地控制数据访问，而不仅仅是授予、撤消或拒绝提供的权限。 例如，医院数据库应用程序可能需要限制各个医生只访问与自己的患者相关的信息。 在很多环境（包括财务、法律、政府和军事应用程序）中都存在类似的要求。 为了满足这些情况，SQL Server 2016 提供了 [行级安全](https://msdn.microsoft.com/library/dn765131.aspx) 功能，可以用于简化并集中化安全策略中的行级访问逻辑。 对于 SQL Server 的早期版本，可以通过使用视图制定行级筛选来实现类似功能。  
@@ -21,7 +21,7 @@ ms.locfileid: "43873700"
   
 -   启用行级筛选：  
   
-    -   如果使用 SQL Server 2016 或更高版本，或[Azure SQL 数据库](https://docs.microsoft.com/azure/sql-database/)，创建一个安全策略，将添加的谓词的表的行限制返回给那些匹配当前的数据库用户 （使用 CURRENT_USER内置函数） 或当前登录名 （使用 suser_sname （） 内置函数）：  
+    -   如果你使用的是 SQL Server 2016 或更高版本，或使用的是 [Azure SQL 数据库](https://docs.microsoft.com/azure/sql-database/)，则创建在表格中添加谓词的安全策略，该表格将返回的行限制为符合当前数据库用户（使用 CURRENT_USER() 内置函数）或当前登录名（使用 SUSER_SNAME() 内置函数）的行：  
   
         ```tsql  
         CREATE SCHEMA Security  
@@ -58,13 +58,6 @@ ms.locfileid: "43873700"
 -   拒绝 `public` 角色在表格（和视图，如果适用）上的所有权限。 用户将不能从其他数据库角色继承权限，因为筛选器谓词基于用户或登录名，而不基于角色。  
   
 -   为数据库角色授予对存储过程的 EXECUTE 权限。 用户只能通过提供的存储过程访问数据。  
-  
-## <a name="external-resources"></a>外部资源  
- 有关更多信息，请参见以下资源。  
-  
-|||  
-|-|-|  
-|[在已分类的数据库使用 SQL Server 2005 中实现行级和单元格级安全性](https://go.microsoft.com/fwlink/?LinkId=98227)SQL Server TechCenter 站点上。|说明如何使用行级和单元格级安全性来满足分类数据库的安全要求。|  
   
 ## <a name="see-also"></a>请参阅  
  [行级别安全性](https://msdn.microsoft.com/library/dn765131.aspx)  
