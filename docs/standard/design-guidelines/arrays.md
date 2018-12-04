@@ -26,6 +26,7 @@ ms.locfileid: "48024527"
 交错数组是一个数组，其元素也是数组。构成元素的数组可以具有不同的大小，与多维数组相比，导致一些数据集（例如，稀疏矩阵）的浪费空间更少。此外，CLR 优化了交错数组的索引操作，因此在某些情况下它们可能表现出更好的运行时性能。
   
 *部分版权 © 2005, 2009 Microsoft Corporation。保留所有权利。*  
+
 *经 Pearson Education, Inc 授权，转载自[框架设计准则：可重用的 .NET 库的约定、习惯用语和模式，第2版](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) 作者：Krzysztof Cwalina 和 Brad Abrams，由 Addison Wesley Professional 于 2008 年 10 月 22 日印发，作为 Microsoft Windows 开发系列的一部分。*  
   
 ## <a name="see-also"></a>请参阅
