@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 567a4b8d-0e79-49dc-8df9-f4b1aa376a2a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7953e34f76e23e3f9f4913726adc4b2176b172c9
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 1f86ed838e1333a5475d72eabc4d4248fc256211
+ms.sourcegitcommit: 7f7664837d35320a0bad3f7e4ecd68d6624633b2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45615321"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52672026"
 ---
 # <a name="backreference-constructs-in-regular-expressions"></a>正则表达式中的反向引用构造
 反向引用提供了标识字符串中的重复字符或子字符串的方便途径。 例如，如果输入字符串包含某任意子字符串的多个匹配项，可以使用捕获组匹配第一个出现的子字符串，然后使用反向引用匹配后面出现的子字符串。  
@@ -64,7 +64,7 @@ ms.locfileid: "45615321"
   
  或：  
   
- `\k'`name`'`  
+ `\k'` *name* `'`  
   
  其中，*name* 是正则表达式模式中定义的捕获组的名称。 如果正则表达式模式中未定义 name，将会发生分析错误，并且正则表达式引擎会抛出 <xref:System.ArgumentException>。  
   
@@ -103,7 +103,7 @@ ms.locfileid: "45615321"
 |模式|描述|  
 |-------------|-----------------|  
 |`(?<1>a)`|匹配字符“a”，并将结果分配到 `1` 捕获组。|  
-|`(?<1>\1b)*`|匹配 `1` 组的 0 或 1 个值以及“b”，并将结果分配到 `1` 捕获组。|  
+|`(?<1>\1b)*`|匹配 `1` 组的 0 更大发生次数以及“b”，并将结果分配到 `1` 捕获组。|  
   
  [!code-csharp[RegularExpressions.Language.Backreferences#4](../../../samples/snippets/csharp/VS_Snippets_CLR/regularexpressions.language.backreferences/cs/backreference4.cs#4)]
  [!code-vb[RegularExpressions.Language.Backreferences#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.language.backreferences/vb/backreference4.vb#4)]  
@@ -114,7 +114,7 @@ ms.locfileid: "45615321"
   
 2.  继续匹配第二个字符，成功将字符串“ab”与表达式 `\1b` 或“ab”匹配。 然后，将结果“ab”分配到 `\1`。  
   
-3.  继续匹配第四个字符。 表达式 `(?<1>\1b)` 要匹配零次或多次，因此会成功将字符串“abb”与表达式 `\1b` 匹配。 然后，将结果“abb”分配回到 `\1`。  
+3.  继续匹配第四个字符。 表达式 `(?<1>\1b)*` 要匹配零次或多次，因此会成功将字符串“abb”与表达式 `\1b` 匹配。 然后，将结果“abb”分配回到 `\1`。  
   
  在本示例中，`*` 是循环限定符 -- 它将被重复计算，直到正则表达式引擎不能与它定义的模式匹配为止。 循环限定符不会清除组定义。  
   
