@@ -115,7 +115,7 @@ API 网关可以提供多个功能。 然而，根据产品，它可能提供更
 - 负载均衡
 - 日志记录、跟踪、相关性
 - 标头、查询字符串和声明转换
-- IP 白名单
+- IP 允许列表
 
 有关详细信息，请参阅[网关卸载模式](https://docs.microsoft.com/azure/architecture/patterns/gateway-offloading)。
 
