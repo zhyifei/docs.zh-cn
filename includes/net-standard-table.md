@@ -10,7 +10,6 @@
 | Windows                    | 8.0   | 8.0    | 8.1   |       |       |            |            |            |
 | Windows Phone              | 8.1   | 8.1    | 8.1   |       |       |            |            |            |
 | Windows Phone Silverlight  | 8.0   |        |       |       |       |            |            |            |
-| Unity                      | 2018.1| 2018.1 | 2018.1| 2018.1| 2018.1| 2018.1     | 2018.1     | 2018.1     |
 
 <sup>1 针对 .NET framework 列出的版本适用于 .NET Core SDK 2.0 和更高版本的工具。旧版本对 .NET Standard 1.5 及更高版本使用了不同映射。如果无法升级到 Visual Studio 2017，可[下载适用于 Visual Studio 2015 的 .NET Core 工具](https://github.com/dotnet/core/blob/master/release-notes/download-archive.md)。</sup>
 

@@ -55,7 +55,7 @@ ms.locfileid: "48261363"
  使用 <xref:System.ComponentModel.CancelEventArgs?displayProperty=nameWithType> 或其子类作为事件参数，以允许最终用户取消事件。  
   
 ### <a name="custom-event-handler-design"></a>自定义事件处理程序设计  
- 某些情况下，在其中`EventHandler<T>`不能使用，如框架需要与早期版本的 CLR 不支持泛型。 在这种情况下，可能需要设计和开发自定义事件处理程序委托。  
+ 某些情况下不能使用 `EventHandler<T>`，例如当框架需要使用早期版本的 CLR（不支持泛型）时。 在这种情况下，可能需要设计和开发自定义事件处理程序委托。  
   
  **✓ DO** 对于事件处理程序使用返回类型为 void。  
   
