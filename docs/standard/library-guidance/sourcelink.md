@@ -21,7 +21,7 @@ SourceLink 是一种允许从 NuGet 由开发人员的.NET 程序集的源代码
 
 ## <a name="using-sourcelink"></a>使用 SourceLink
 
-可以上找到用于使用 SourceLink 说明[dotnet/sourceLink](https://github.com/dotnet/sourcelink/blob/master/README.md) GitHub 存储库。
+可以在 [dotnet/sourceLink](https://github.com/dotnet/sourcelink/blob/master/README.md) GitHub 存储库中找到使用 SourceLink 的说明。
 
 可以使用[NuGet 包资源管理器](https://github.com/NuGetPackageExplorer/NuGetPackageExplorer)确认 SourceLink 元数据已成功嵌入包中。 检查`Repository`元数据是否存在具有注释标识符和.pdb 文件位于与每个目标的.dll。
 
