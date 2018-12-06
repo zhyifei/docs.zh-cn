@@ -20,19 +20,19 @@ ms.lasthandoff: 10/03/2018
 ms.locfileid: "48261571"
 ---
 # <a name="static-class-design"></a>静态类设计
-静态类被定义为仅包含静态成员的类 (当然除了继承自的实例成员<xref:System.Object?displayProperty=nameWithType>和可能是私有构造函数)。 某些语言用于静态类提供内置支持。 在 C# 2.0 及更高版本，当一个类声明为静态，密封的抽象，并且可以重写任何实例成员，或将其声明。  
+静态类的定义为：仅包含静态成员的类 (当然除了继承自<xref:System.Object?displayProperty=nameWithType> 的实例成员和可能是私有的构造函数)。 某些语言提供对静态类的内置支持。 在 C# 2.0 及更高版本中，当类声明为静态时，它是密封、抽象的，并且不能覆盖或声明实例成员。  
   
- 静态类是纯粹的面向对象的设计和简单性之间泄漏。 它们通常用于提供其他操作的快捷方式 (如<xref:System.IO.File?displayProperty=nameWithType>)，持有者的扩展方法或为其完整的面向对象的包装器是不能确保的功能 (如<xref:System.Environment?displayProperty=nameWithType>)。  
+ 静态类是纯面向对象设计和简单性之间的妥协。 它们通常用于提供其他操作的快捷方式（例如<xref:System.IO.File?displayProperty=nameWithType> ），扩展方法的持有者，或完全面向对象的包装器不合适的功能（例如<xref:System.Environment?displayProperty=nameWithType> ）。  
   
- **✓ DO** 静态类应谨慎使用。  
+ **✓ 务必** 谨慎使用静态类。  
   
- 应仅作为 framework 的面向对象的核心的支持类使用静态的类。  
+ 静态类应仅用作框架的面向对象核心的支持类。  
   
- **X DO NOT** 静态类视为杂项存储桶。  
+ **X 切忌** 将静态类视为杂项存储桶。  
   
- **X DO NOT** 声明或重写中的静态类的实例成员。  
+ **X 切忌** 在静态类中声明或覆盖实例成员。  
   
- **✓ DO** 静态类声明为密封的抽象，并添加一个私有实例构造函数，如果您的编程语言不具有对静态类的内置支持。  
+ **✓ 务必** 将静态类声明为密封，抽象，并添加一个私有实例构造函数，如果您的编程语言没有内置静态类支持的话。  
   
  *部分版权 © 2005, 2009 Microsoft Corporation。保留所有权利。*  
   
