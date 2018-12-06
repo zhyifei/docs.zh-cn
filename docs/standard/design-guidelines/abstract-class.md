@@ -26,13 +26,13 @@ ms.locfileid: "46493485"
   
  **✓ DO** 在抽象类中定义为受保护或内部构造函数。  
   
- 受保护的构造函数，则更容易，并只是允许基类以创建子类型时进行其自己的初始化。  
+ 受保护的构造函数更常见，并且只允许基类在创建子类型时自行初始化。  
   
- 内部构造函数可以用于限制对程序集定义的类的抽象类的具体实现。  
+ 内部构造函数可用于将抽象类的具体实现限制为定义该类的程序集。  
   
  **✓ DO** 提供至少一个继承自每个抽象类，要交付的具体类型。  
   
- 这些措施可帮助验证抽象类的设计。 例如，<xref:System.IO.FileStream?displayProperty=nameWithType>是一种实现的<xref:System.IO.Stream?displayProperty=nameWithType>抽象类。  
+ 这些措施有助于验证抽象类的设计。 例如，<xref:System.IO.FileStream?displayProperty=nameWithType> 是 <xref:System.IO.Stream?displayProperty=nameWithType> 抽象类的实现。  
   
  *部分版权 © 2005, 2009 Microsoft Corporation。保留所有权利。*  
   
