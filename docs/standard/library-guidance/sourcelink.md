@@ -6,7 +6,7 @@ ms.author: mairaw
 ms.date: 10/02/2018
 ms.openlocfilehash: fa4af47eaa5dd1510640c2bf0ebb2187b56efae0
 ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 10/12/2018
 ms.locfileid: "49369796"

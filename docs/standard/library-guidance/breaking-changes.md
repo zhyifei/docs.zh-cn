@@ -6,14 +6,14 @@ ms.author: mairaw
 ms.date: 10/02/2018
 ms.openlocfilehash: 83c01fdad7d836877bf692b87eeb0230219ded36
 ms.sourcegitcommit: fd8d4587cc26e53f0e27e230d6e27d828ef4306b
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 10/16/2018
 ms.locfileid: "49369808"
 ---
 # <a name="breaking-changes"></a>重大更改
 
-对于 .NET 库，在现有用户的稳定性和未来创新之间找到平衡具有重要意义。库创作者倾向于重新构建和重新构思代码以使其达成完美程度，但中断对现有客户提供服务将产生消极影响，对低级库尤其如此。
+对于 .NET 库，在现有用户的稳定性和未来创新之间找到平衡具有重要意义。 库创作者倾向于重新构建和重新构思代码以使其达成完美程度，但中断对现有客户提供服务将产生消极影响，对低级库尤其如此。
 
 ## <a name="project-types-and-breaking-changes"></a>项目类型和重大更改
 
