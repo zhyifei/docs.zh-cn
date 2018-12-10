@@ -17,7 +17,6 @@ ms.lasthandoff: 09/06/2018
 ms.locfileid: "43863715"
 ---
 # <a name="interface-design"></a>接口设计
-
 虽然大多数 API 最好使用类和结构进行建模，但有些情况下接口更合适或是唯一的选择。
 
 CLR 不支持多重继承（即，CLR 类不能从多个基类继承），但它允许类型除了继承基类之外还实现一个或多个接口。因此，通常使用接口来实现多重继承的效果。例如，<xref:System.IDisposable>是一个接口，允许类型支持可释放性，而不依赖于他们想要参与的任何其他继承层次结构。
@@ -47,6 +46,7 @@ CLR 不支持多重继承（即，CLR 类不能从多个基类继承），但它
 除了这些指南中描述的情况之外，一般情况下，您应该在设计托管代码的可重用库时选择类而不是接口。
   
 *部分版权 © 2005, 2009 Microsoft Corporation。保留所有权利。*
+
 *经 Pearson Education, Inc 授权，转载自[框架设计准则：可重用的 .NET 库的约定、习惯用语和模式，第2版](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) 作者：Krzysztof Cwalina 和 Brad Abrams，由 Addison Wesley Professional 于 2008 年 10 月 22 日印发，作为 Microsoft Windows 开发系列的一部分。*
   
 ## <a name="see-also"></a>请参阅
