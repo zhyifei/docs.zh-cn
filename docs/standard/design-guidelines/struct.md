@@ -22,7 +22,6 @@ ms.locfileid: "48849966"
 ---
 # <a name="struct-design"></a>结构设计
 常规用途的值类型通常称为结构，其 C# 关键字。 本部分提供有关常规结构设计指导原则。  
-通用的值类型通常称为结构，即 C# 的关键字 struct。本部分提供有关常规结构设计的指南。
   
 **X 切忌** 为结构提供默认构造函数。  
   
@@ -45,6 +44,7 @@ ms.locfileid: "48849966"
 一般情况下，结构可能非常有用，但应仅用于不经常装箱的小的、单个的、不可变的值。
   
 *部分版权 © 2005, 2009 Microsoft Corporation。保留所有权利。*
+
 *经 Pearson Education, Inc 授权，转载自[框架设计准则：可重用的 .NET 库的约定、习惯用语和模式，第2版](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) 作者：Krzysztof Cwalina 和 Brad Abrams，由 Addison Wesley Professional 于 2008 年 10 月 22 日印发，作为 Microsoft Windows 开发系列的一部分。*
   
 ## <a name="see-also"></a>请参阅
