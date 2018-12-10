@@ -4,12 +4,12 @@ description: 使用 ASP.NET Core 和 Azure 构建新式 Web 应用程序 | 关�
 author: ardalis
 ms.author: wiwagn
 ms.date: 06/27/2018
-ms.openlocfilehash: a70cb822c789638ca107b090d1aed2b88ccc6a5d
-ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
+ms.openlocfilehash: 221ea2a9fc154468f16ce09195a0415883ada9df
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37404523"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53125927"
 ---
 # <a name="azure-hosting-recommendations-for-aspnet-core-web-apps"></a>关于 ASP.NET Core Web 应用的 Azure 托管建议
 
@@ -67,7 +67,7 @@ Azure Kubernetes 服务 (AKS) 管理托管的 Kubernetes 环境，即使没有�
 
 ### <a name="azure-virtual-machines"></a>Azure 虚拟机
 
-如果现有应用需要经过大量修改才可在应用服务或 Service Fabric 中运行，为简化迁移到云，可选择虚拟机。 然而，与 Azure 应用服务和 Service Fabric 相比，正确配置、保护和维护 VM 需要更多时间和 IT 专业知识。 如要使用 Azure 虚拟机，请务必考虑到 VM 环境的修补、更新和管理所需的持续性维护工作。 Azure 虚拟机属于基础设施即服务 (IaaS)，而应用服务和 Service Fabric 属于 PaaS。
+如果现有应用需要经过大量修改才可在应用服务或 Service Fabric 中运行，为简化迁移到云，可选择虚拟机。 然而，与 Azure 应用服务和 Service Fabric 相比，正确配置、保护和维护 VM 需要更多时间和 IT 专业知识。 如要使用 Azure 虚拟机，请务必考虑到 VM 环境的修补、更新和管理所需的持续性维护工作。 Azure 虚拟机属于基础结构即服务 (IaaS)，而应用服务和 Service Fabric 属于 PaaS。
 
 #### <a name="feature-comparison"></a>功能比较
 
@@ -128,4 +128,4 @@ Azure 提供多种数据存储选择，以便应用程序可使用恰当的数�
   <https://docs.microsoft.com/azure/aks/intro-kubernetes>
 
 >[!div class="step-by-step"]
-[上一篇](development-process-for-azure.md)
+>[上一篇](development-process-for-azure.md)

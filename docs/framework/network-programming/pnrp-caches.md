@@ -3,11 +3,11 @@ title: PNRP 缓存
 ms.date: 03/30/2017
 ms.assetid: 270068d9-1b6b-4eb9-9e14-e02326bb88df
 ms.openlocfilehash: 53df90a9bb3da90145ebe30bb274b4ff4950c00f
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50180960"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53147182"
 ---
 # <a name="pnrp-caches"></a>PNRP 缓存
 对等名称解析协议 (PNRP) 缓存是对等机上维护的算法选择的对等终结点的本地集合。  

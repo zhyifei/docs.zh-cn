@@ -4,12 +4,12 @@ description: 开始构建 .NET 库。
 author: jamesnk
 ms.author: mairaw
 ms.date: 10/02/2018
-ms.openlocfilehash: 6377e3fe606bf7603b418decdd0e3f9d2de6a510
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 05466de1469fc765570b8250301e8404cd5df173
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50201238"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53145720"
 ---
 # <a name="get-started"></a>入门
 
@@ -46,5 +46,5 @@ SourceLink 是一个很棒的工具，.NET 库的用户在调试时可以使用�
 对于 .NET 库而言，在现有用户的稳定性与未来的创新之间找到平衡点非常重要。 了解不同类型的重大更改和添加新功能的策略，同时保持向后兼容性。
 
 >[!div class="step-by-step"]
-[上一页](./index.md)
-[下一页](./cross-platform-targeting.md)
+>[上一页](index.md)
+>[下一页](cross-platform-targeting.md)

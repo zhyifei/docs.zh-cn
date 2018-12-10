@@ -8,11 +8,11 @@ ms.assetid: bee14036-0436-44e8-89f5-4bc61317977a
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 844e9e53c752be0c993255fc356ade1723109b39
-ms.sourcegitcommit: 5fd80619c760fa8c25d33a6f5661247cb65da465
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "50744582"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53129813"
 ---
 # <a name="net-framework-deployment-guide-for-administrators"></a>.NET Framework 部署指南（针对管理员）
 本文分步说明系统管理员可以如何使用 Microsoft System Center Configuration Manager 在网络中部署 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 及其系统依赖项。 本文假定所有目标客户端计算机都满足 .NET Framework 的最低要求。 有关安装 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 的软件和硬件要求列表，请参阅[系统需求](../../../docs/framework/get-started/system-requirements.md)。  
@@ -122,7 +122,7 @@ ms.locfileid: "50744582"
   
  下表描述了步骤 7 中指定的命令行选项。  
   
-|选项|描述|  
+|选项|说明|  
 |------------|-----------------|  
 |**/q**|设置安静模式。 不需要用户输入，也不显示输出。|  
 |**/norestart**|防止安装程序自动重新启动。 如果你使用此选项，则 Configuration Manager 必须处理计算机重新启动。|  
@@ -234,7 +234,7 @@ ms.locfileid: "50744582"
   
  有关指向详细信息的链接，请参阅下一节[下载错误代码](#additional_error_codes)。  
   
-|返回代码|描述|  
+|返回代码|说明|  
 |-----------------|-----------------|  
 |0|已成功完成安装。|  
 |1602|用户已取消安装。|  

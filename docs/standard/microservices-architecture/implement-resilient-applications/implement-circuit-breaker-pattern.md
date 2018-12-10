@@ -4,12 +4,12 @@ description: 适用于容器化 .NET 应用程序的 .NET 微服务体系结构 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 07/03/2018
-ms.openlocfilehash: b961ebd186953e614658915c7246e1c83c40e7e9
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.openlocfilehash: 08467184f40611888a05c3aa1fa4783b73c6b8ee
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49453146"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53147254"
 ---
 # <a name="implement-the-circuit-breaker-pattern"></a>实现断路器模式
 
@@ -146,14 +146,11 @@ public class CartController : Controller
 
 最后，针对 `CircuitBreakerPolicy` 的另一种可能操作是使用 `Isolate`（强制打开线路并保持为打开状态）和 `Reset`（再次关闭路线）。 可使用这些操作构建一个实用程序 HTTP 终结点，用于在策略上直接调用隔离和重置。  还可以在生产中以合适的安全程度使用这种 HTTP 终结点，用于临时隔离下游系统，比如在想要升级系统的时候。 或可手动打开线路，以保护疑似发生故障的下游系统。
 
-
 ## <a name="additional-resources"></a>其他资源
-
 
 -   **断路器模式**
     [*https://docs.microsoft.com/azure/architecture/patterns/circuit-breaker*](https://docs.microsoft.com/azure/architecture/patterns/circuit-breaker)
 
-
 >[!div class="step-by-step"]
-[上一页](implement-http-call-retries-exponential-backoff-polly.md)
-[下一页](monitor-app-health.md)
+>[上一页](implement-http-call-retries-exponential-backoff-polly.md)
+>[下一页](monitor-app-health.md)

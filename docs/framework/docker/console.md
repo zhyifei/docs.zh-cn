@@ -4,12 +4,12 @@ description: 了解如何利用现有 .NET Framework 控制台应用程序并在
 author: spboyer
 ms.date: 09/28/2016
 ms.assetid: 85cca1d5-c9a4-4eb2-93e6-4f878de07fd7
-ms.openlocfilehash: bf21357efc234ea99836b190ce34c70f2644ea6a
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 379e0814d7d254935ef23a483d5e0f9163babcd1
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50200569"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53145275"
 ---
 # <a name="running-console-applications-in-windows-containers"></a>在 Windows 容器中运行控制台应用程序
 
@@ -59,7 +59,7 @@ Docker 映像的一个重要特性是映像由基本映像组合而成。 每个
 
 在对 `Invoke-MSBuild` 的调用中，将 `OutputPath` 设置为 **Publish**，`Configuration` 设置为 **Release**。 
 
-```
+```powershell
 function Invoke-MSBuild ([string]$MSBuildPath, [string]$MSBuildParameters) {
     Invoke-Expression "$MSBuildPath $MSBuildParameters"
 }
@@ -133,7 +133,7 @@ docker run --rm console-random-answer-generator "Are you a square container?"
 
 若要运行，请打开 PowerShell，然后使用以下命令：
 
-```
+```powershell
 .\run.ps1 "Is this easy or what?"
 ```
 

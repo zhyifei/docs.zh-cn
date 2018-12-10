@@ -4,12 +4,12 @@ description: 适用于容器化 .NET 应用程序的 .NET 微服务体系结构 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/08/2018
-ms.openlocfilehash: 03e08d757917b5ff658e9d4dd282a096c8dd23d5
-ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
+ms.openlocfilehash: f31c712143a448e12350db1ed242da7561a7a286
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "52296759"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53147484"
 ---
 # <a name="design-the-microservice-application-layer-and-web-api"></a>设计微服务应用层和 Web API
 
@@ -47,5 +47,5 @@ SOLID 不仅仅是关于如何设计应用程序或微服务内部层以及如�
   [*https://ardalis.com/new-is-glue*](https://ardalis.com/new-is-glue)
 
 >[!div class="step-by-step"]
-[上一页](nosql-database-persistence-infrastructure.md)
-[下一页](microservice-application-layer-implementation-web-api.md)
+>[上一页](nosql-database-persistence-infrastructure.md)
+>[下一页](microservice-application-layer-implementation-web-api.md)

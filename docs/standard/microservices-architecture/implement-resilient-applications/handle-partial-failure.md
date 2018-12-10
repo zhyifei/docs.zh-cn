@@ -4,12 +4,12 @@ description: 适用于容器化 .NET 应用程序的 .NET 微服务体系结构 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 06/08/2018
-ms.openlocfilehash: 723719b22c1c7de63f19f68acf91e6499c1a4e43
-ms.sourcegitcommit: 59b51cd7c95c75be85bd6ef715e9ef8c85720bac
+ms.openlocfilehash: 94239fc30292760b2bb28849f8c6ab72c7ceb33d
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37875178"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53144723"
 ---
 # <a name="handling-partial-failure"></a>处理部分失败错误
 
@@ -39,7 +39,6 @@ ms.locfileid: "37875178"
 
 此外，必须要设计可处理部分失败错误的微服务和客户端应用程序 - 即构建弹性微服务和客户端应用程序。
 
-
 >[!div class="step-by-step"]
-[上一页](index.md)
-[下一页](partial-failure-strategies.md)
+>[上一页](index.md)
+>[下一页](partial-failure-strategies.md)

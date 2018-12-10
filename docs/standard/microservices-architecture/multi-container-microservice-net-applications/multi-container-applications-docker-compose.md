@@ -4,12 +4,12 @@ description: 适用于容器化 .NET 应用程序的 .NET 微服务体系结构 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/02/2018
-ms.openlocfilehash: 9ce8d64dbd481d30c6687b8747b2091733ea76db
-ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
+ms.openlocfilehash: dc9149cb1a17e3af66abd995fd2a2196109e0e05
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "52297174"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53145249"
 ---
 # <a name="defining-your-multi-container-application-with-docker-composeyml"></a>使用 docker-compose.yml 定义多容器应用程序 
 
@@ -86,7 +86,7 @@ services:
 
 此文件中的根密钥是服务。 在该密钥下，可在执行 `docker-compose up` 命令或使用此 docker-compose.yml 文件从 Visual Studio 进行部署时，定义要部署和运行的服务。 在这种情况下，docker-compose.yml 文件定义了多个服务，如以下表所述。
 
-| 服务名称 | 描述 |
+| 服务名称 | 说明 |
 |--------------|-------------|
 | webmvc       | 容器，包括从服务器端 C\# 使用微服务的 ASP.NET Core MVC 应用程序|
 | catalog.api  | 容器，包括 Catalog ASP.NET Core Web API 微服务 |
@@ -471,5 +471,5 @@ Runtime 映像还提供了端口 80 的 aspnetcore\_urls 自动设置和程序�
     [*https://docs.microsoft.com/en-us/dotnet/core/docker/building-net-docker-images*](https://docs.microsoft.com/en-us/dotnet/core/docker/building-net-docker-images)
 
 >[!div class="step-by-step"]
-[上一页](data-driven-crud-microservice.md)
-[下一页](database-server-container.md)
+>[上一页](data-driven-crud-microservice.md)
+>[下一页](database-server-container.md)

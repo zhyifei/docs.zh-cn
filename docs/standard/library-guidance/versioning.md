@@ -4,12 +4,12 @@ description: 版本控制 .NET 库的最佳实践建议。
 author: jamesnk
 ms.author: mairaw
 ms.date: 10/02/2018
-ms.openlocfilehash: f95c8ade1f91af5c13184b839b327c9397c6fe5a
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: bacd3891c2fc15a1084f952ca913cf99b6d087dc
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50187853"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53144554"
 ---
 # <a name="versioning"></a>版本管理
 
@@ -97,5 +97,5 @@ Windows .NET Framework CLR 要求完全匹配以便加载具有强名称的程�
 > 允许 SourceLink 自动生成包含 NuGet 和源代码管理元数据的版本。
 
 >[!div class="step-by-step"]
-[上一页](./publish-nuget-package.md)
-[下一页](./breaking-changes.md)
+>[上一页](publish-nuget-package.md)
+>[下一页](breaking-changes.md)

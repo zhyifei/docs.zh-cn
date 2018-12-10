@@ -4,12 +4,12 @@ description: 适用于容器化 .NET 应用程序的 .NET 微服务体系结构 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/11/2018
-ms.openlocfilehash: fa5efd3c2478965ef01efc39b57918ec2d35962a
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: b283916d6ae4d19fdc6a4f7976a3adbb66d26b2c
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48873370"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53143398"
 ---
 # <a name="when-to-choose-net-core-for-docker-containers"></a>何时为 Docker 容器选择 .NET Core
 
@@ -53,7 +53,6 @@ ms.locfileid: "48873370"
 
 这一点对微服务体系结构尤为重要，可以运行数百个微服务（容器）。 在 Linux 或 Windows Nano 上使用 ASP.NET Core 映像（基于 .NET Core 运行时），运行系统时所需的服务器或 VM 数量要少得多，最终可以节省基础结构和托管的费用。
 
-
 >[!div class="step-by-step"]
-[上一页](general-guidance.md)
-[下一页](net-framework-container-scenarios.md)
+>[上一页](general-guidance.md)
+>[下一页](net-framework-container-scenarios.md)

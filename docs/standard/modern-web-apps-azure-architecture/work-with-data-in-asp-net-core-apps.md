@@ -4,12 +4,12 @@ description: 使用 ASP.NET Core 和 Azure 构建新式 Web 应用 | 在 ASP.NET
 author: ardalis
 ms.author: wiwagn
 ms.date: 06/28/2018
-ms.openlocfilehash: 069bfacd1ae08b5c84d6e304b2f12f18e1eecb22
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.openlocfilehash: efadf3a0d216197b05d6cd4cfe94ee3eb24bb18e
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "49122846"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53147169"
 ---
 # <a name="working-with-data-in-aspnet-core-apps"></a>在 ASP.NET Core 应用中使用数据
 
@@ -21,7 +21,7 @@ ms.locfileid: "49122846"
 
 ## <a name="entity-framework-core-for-relational-databases"></a>Entity Framework Core（适用于关系数据库）
 
-如果要编写需要使用关系数据的新的 ASP.NET Core 应用程序，则 Entity Framework Core (EF Core) 是应用程序访问数据的建议方式。 EF Core 是一种支持 .NET 开发人员将对象保存到数据源或从数据源中保存的对象关系映射程序 (O/RM)。 它不要求提供开发人员通常需要编写的大部分数据访问代码。 与 ASP.NET Core 一样，EF Core 经过完全重新编写以支持模块化跨平台应用程序。 将其作为 NuGet 包添加到应用程序中，在启动中配置它，并在需要的任何位置通过依赖关系注入请求它。
+如果要编写需要使用关系数据的新的 ASP.NET Core 应用程序，则 Entity Framework Core (EF Core) 是应用程序访问数据的建议方式。 EF Core 是一种支持 .NET 开发人员将对象保存到数据源或从数据源中保存的对象关系映射程序 (O/RM)。 它不要求提供开发人员通常需要编写的大部分数据访问代码。 与 ASP.NET Core 一样，EF Core 经过完全重新编写以支持模块化跨平台应用程序。 将其添加到应用程序作为 NuGet 包，在启动中配置它，并在需要的任何位置通过依赖关系注入请求它。
 
 若要将 EF Core 用于 SQL Server，请运行以下 dotnet CLI 命令：
 
@@ -440,5 +440,5 @@ _cache.Get<CancellationTokenSource>("cts").Cancel();
 缓存可以显著提高从数据库重复请求相同值的网页的性能。 请确保在应用缓存前测量数据访问和页面性能，并且仅在发现需要改进性能时才应用缓存。 缓存使用 Web 服务器内存资源并增加应用程序的复杂性，因此，不要过早使用此技术进行优化。
 
 >[!div class="step-by-step"]
-[上一页](develop-asp-net-core-mvc-apps.md)
-[下一页](test-asp-net-core-mvc-apps.md)
+>[上一页](develop-asp-net-core-mvc-apps.md)
+>[下一页](test-asp-net-core-mvc-apps.md)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - <typeparam> C# XML tag
 - typeparam C# XML tag
 ms.assetid: 9b99d400-e911-4e55-99c6-64367c96aa4f
-ms.openlocfilehash: ec19060008c1c06c54c89dbddee7d24001bcdebc
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 5db257cc655b7d9112fc4efc917f5d2175fcf665
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50187109"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53143111"
 ---
 # <a name="lttypeparamgt-c-programming-guide"></a>&lt;typeparam&gt;（C# 编程指南）
 ## <a name="syntax"></a>语法  
@@ -33,7 +33,7 @@ ms.locfileid: "50187109"
   
  有关详细信息，请参阅[泛型](../../../csharp/programming-guide/generics/index.md)。  
   
- `<typeparam>` 标记的文本将显示在 IntelliSense、[对象浏览器窗口](https://msdn.microsoft.com/library/3c7f1673-1f0d-41b1-94ca-a3dcfcb82cda)代码注释 Web 报表。  
+ `<typeparam>` 标记的文本将显示在 IntelliSense、[对象浏览器窗口](/visualstudio/ide/viewing-the-structure-of-code#BKMK_ObjectBrowser)代码注释 Web 报表。  
   
  使用 [/doc](../../../csharp/language-reference/compiler-options/doc-compiler-option.md) 进行编译可以将文档注释处理到文件中。  
   

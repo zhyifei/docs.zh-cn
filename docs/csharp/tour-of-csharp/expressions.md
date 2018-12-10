@@ -3,12 +3,12 @@ title: C# 表达式 - C# 语言介绍
 description: 表达式、操作数和运算符是 C# 语言的构建基块
 ms.date: 11/06/2016
 ms.assetid: 20d5eb10-7381-47b9-ad90-f1cc895aa27e
-ms.openlocfilehash: 8fa1c5d0464644b26eb457bca8ecaf007c288f42
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 28e1d6952975c6932dc9ae40af28c7201d61d778
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33352293"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53154929"
 ---
 # <a name="expressions"></a>表达式
 
@@ -61,11 +61,11 @@ ms.locfileid: "33352293"
 * 移位
     - `x << y`：左移位
     - `x >> y`：右移位
-* 关系和类型
+* 关系和类型测试
     - `x < y`：小于
     - `x > y`：大于
-    - `x <= y`：小于等于
-    - `x >= y`：大于等于
+    - `x <= y`：小于或等于
+    - `x >= y`：大于或等于
     - `x is T`：如果 `x` 是 `T`，返回 `true`；否则，返回 `false`
     - `x as T`：返回类型为 `T` 的 `x`；如果 `x` 的类型不是 `T`，返回 `null`
 * 相等
@@ -73,7 +73,7 @@ ms.locfileid: "33352293"
     - `x != y`：不等于
 * 逻辑“与”
     - `x & y`：整数型位AND，布尔型逻辑 AND
-* 逻辑“异或”
+* 逻辑 XOR
     - `x ^ y`：整数型位 XOR，布尔型逻辑 XOR
 * 逻辑“或”
     - `x | y`：整数型位 OR，布尔型逻辑 OR
@@ -92,5 +92,5 @@ ms.locfileid: "33352293"
     - `(T x) => y`：匿名函数（lambda 表达式）
 
 >[!div class="step-by-step"]
-[上一页](types-and-variables.md)
-[下一页](statements.md)
+>[上一页](types-and-variables.md)
+>[下一页](statements.md)

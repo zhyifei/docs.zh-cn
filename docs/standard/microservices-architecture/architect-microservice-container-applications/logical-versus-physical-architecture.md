@@ -4,12 +4,12 @@ description: 了解逻辑和物理体系结构之间的差异。
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/20/2018
-ms.openlocfilehash: fe3833a4b65317e2ebbeb562e19b473ff0374ddd
-ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
+ms.openlocfilehash: e8ed375899637d06db8eb9b12a0e1cb0c05591f9
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "52296121"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53129917"
 ---
 # <a name="logical-architecture-versus-physical-architecture"></a>逻辑体系结构与物理体系结构
 
@@ -23,18 +23,18 @@ ms.locfileid: "52296121"
 
 尽管已确定某些业务的微服务或界定上下文，但这并不意味着实现它们的最佳方式总是为每个业务微服务创建单一服务（如 ASP.NET Web API）或者单一 Docker 容器。 必须使用单一服务或容器实现每个业务微服务的这一规则过于严苛。
 
-因此，业务微服务或界定上下文是一种不一定与物理体系结构一致的逻辑体系结构。 重要的是让代码和状态可以独立地进行版本控制、部署和缩放，让业务微服务或界定上下文能够自治。
+因此，业务微服务或界定上下文是一种不一定与物理体系结构一致的逻辑体系结构。 必须通过使代码和状态可独立、可进行版本控制、部署和缩放，让商业微服务或界定上下文能够自治，这一点很重要。
 
 如图 4-8 所示，目录商业微服务可由几个服务或进程组成。 这些服务可以是多个 ASP.NET Web API 服务，也可以是使用 HTTP 或其他任何协议的其他任何服务。 更重要的是，这些服务只要对于相同业务领域具有内聚性，便能共享相同数据。
 
 ![Catalog 商业微服务关系图，其中包含 API 服务、搜索服务和 SQL Server 数据库。](./media/image8.png)
 
-**图 4-8**。 使用多个物理服务的业务微服务
+**图 4-8**。 使用多个物理服务的商业微服务
 
 示例中的服务共享相同的数据模型，因为 Web API 服务针对的是与搜索服务相同的数据。 因此，在商业微服务的物理实现中，拆分该功能便可根据需要扩展或缩减每个内部服务。 Web API 服务通常比搜索服务需要更多的实例，反之亦然。
 
 简而言之，微服务的逻辑体系结构并不总是与物理部署体系结构一致。 本指南中所涉及的微服务是指可以映射到一个或多个（物理）服务的商业微服务或逻辑微服务。 大多数情况下，可以映射到单个服务，但也有可能映射到多个服务。
 
 >[!div class="step-by-step"]
-[上一页](data-sovereignty-per-microservice.md)
-[下一页](distributed-data-management.md)
+>[上一页](data-sovereignty-per-microservice.md)
+>[下一页](distributed-data-management.md)

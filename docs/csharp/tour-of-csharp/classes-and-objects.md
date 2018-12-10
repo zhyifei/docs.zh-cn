@@ -3,16 +3,16 @@ title: C# 类和对象 - C# 语言介绍
 description: 刚开始接触 C#？ 请阅读这篇概述类、对象和继承的文章
 ms.date: 08/10/2016
 ms.assetid: 63a89bde-0f05-4bc4-b0cd-4f693854f0cd
-ms.openlocfilehash: 8e6b327c8391c3a3c97f7806f87dbb9656f0d00d
-ms.sourcegitcommit: 736ec4d3e2c74895b47a0d36126657b95da383c9
+ms.openlocfilehash: 51661a0728e9a68c0c646f493b648120897f95fd
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2018
-ms.locfileid: "37140276"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53147542"
 ---
 # <a name="classes-and-objects"></a>类和对象
 
-*类*是最基本的 C# 类型。 类是一种数据结构，可在一个单元中就将状态（字段）和操作（方法和其他函数成员）结合起来。 类为动态创建的类*实例*（亦称为“*对象*”）提供了定义。 类支持*继承*和*多态性*，即*派生类*可以扩展和专门针对*基类*的机制。
+*类*是最基本的 C# 类型。 类是一种数据结构，可在一个单元中就将状态（字段）和操作（方法和其他函数成员）结合起来。 类为动态创建的类*实例*（亦称为“*对象*”）提供了定义。 类支持*继承*和*多形性*，即*派生类*可以扩展和专门针对*基类*的机制。
 
 新类使用类声明进行创建。 类声明的开头是标头，指定了类的特性和修饰符、类名、基类（若指定）以及类实现的接口。 标头后面是类主体，由在分隔符 `{` 和 `}` 内编写的成员声明列表组成。
 
@@ -294,5 +294,5 @@ set 访问器对应于包含一个名为 value 的参数但不含返回类型的
 处理对象析构的更好方法是使用 `using` 语句。
 
 >[!div class="step-by-step"]
-[上一页](statements.md)
-[下一页](structs.md)
+>[上一页](statements.md)
+>[下一页](structs.md)

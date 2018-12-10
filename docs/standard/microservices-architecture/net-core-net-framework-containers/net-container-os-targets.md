@@ -4,12 +4,12 @@ description: 适用于容器化 .NET 应用程序的 .NET 微服务体系结构 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/11/2018
-ms.openlocfilehash: b2ae1d2e732f152133dd8a8757b955e05cdd88eb
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: f6a5cf8d5e32e527977b7c142f5686310e88a068
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45970820"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53147195"
 ---
 # <a name="what-os-to-target-with-net-containers"></a>使用 .NET 容器时定位的操作系统
 
@@ -58,5 +58,5 @@ ms.locfileid: "45970820"
 </table>
 
 >[!div class="step-by-step"]
-[上一页](container-framework-choice-factors.md)
-[下一页](official-net-docker-images.md)
+>[上一页](container-framework-choice-factors.md)
+>[下一页](official-net-docker-images.md)

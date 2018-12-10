@@ -4,12 +4,12 @@ description: 了解如何定义和使用 ref 返回值和 ref 局部变量
 author: rpetrusha
 ms.author: ronpet
 ms.date: 04/04/2018
-ms.openlocfilehash: ca518b124bc95a5bc3a2910d9c3d9e5338e1b464
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 6399079e17a53ac5bf283eaa5c799964360350f4
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50193755"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53146061"
 ---
 # <a name="ref-returns-and-ref-locals"></a>ref 返回值和局部变量
 
@@ -125,4 +125,4 @@ refLocal = ref anotherVeryLargeStruct; // reassigned, refLocal refers to differe
 ## <a name="see-also"></a>请参阅
 
 - [ref 关键字](../../language-reference/keywords/ref.md)  
-- [编写安全高效的代码](../../../csharp/write-safe-efficient-code.md)
+- [编写安全高效的代码](../../write-safe-efficient-code.md)

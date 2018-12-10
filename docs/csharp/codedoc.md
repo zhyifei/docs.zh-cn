@@ -3,12 +3,12 @@ title: 使用 XML 注释来记录代码
 description: 了解如何使用 XML 文档注释来记录代码和在编译时生成 XML 文档文件。
 ms.date: 02/14/2017
 ms.assetid: 8e75e317-4a55-45f2-a866-e76124171838
-ms.openlocfilehash: 09e6b4aa75aababcebba96693d6e73b29a30fc6a
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.openlocfilehash: 4b01d7989b97cbae56fc04212e6c6753fd1252a9
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49453263"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53129658"
 ---
 # <a name="documenting-your-code-with-xml-comments"></a>使用 XML 注释来记录代码
 
@@ -20,7 +20,7 @@ XML 文档注释是一种特殊注释，添加在任何用户定义的类型或�
 
 可通过执行下列操作之一在编译时生成 XML 文件：
 
-- 如果要使用 .NET Core 从命令行开发应用程序，可以将 [DocumentationFile 元素](https://docs.microsoft.com/visualstudio/msbuild/common-msbuild-project-properties)添加到 .csproj 项目文件的 `<PropertyGroup>` 部分。 下面的示例使用与程序集相同的根文件夹名在项目目录中生成 XML 文件：
+- 如果要使用 .NET Core 从命令行开发应用程序，可以将 [DocumentationFile 元素](/visualstudio/msbuild/common-msbuild-project-properties)添加到 .csproj 项目文件的 `<PropertyGroup>` 部分。 下面的示例使用与程序集相同的根文件夹名在项目目录中生成 XML 文件：
 
    ```xml
    <DocumentationFile>bin\$(Configuration)\$(TargetFramework)\$(AssemblyName).xml</DocumentationFile>
@@ -196,7 +196,7 @@ XML 文档注释使用三个正斜杠 (`///`) 和 XML 格式的注释正文。 �
 
 `filename` 属性表示包含文档的 XML 文件的名称。
 
-`path` 属性表示一个 [XPath](https://msdn.microsoft.com/library/ms256115.aspx) 查询，该查询的对象为指定的 `filename` 中的 `tag name`。
+`path` 属性表示一个 [XPath](../standard/data/xml/xpath-queries-and-namespaces.md) 查询，该查询的对象为指定的 `filename` 中的 `tag name`。
 
 `name` 属性表示位于注释前的标记中的名称说明符。
 

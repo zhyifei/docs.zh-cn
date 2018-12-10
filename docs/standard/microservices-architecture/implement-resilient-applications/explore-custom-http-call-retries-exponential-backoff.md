@@ -4,12 +4,12 @@ description: 了解如何使用指数退避算法从头实现 HTTP 调用重试�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 06/08/2018
-ms.openlocfilehash: c323b8c4e783ed18c601562cfb25e1ca4986d499
-ms.sourcegitcommit: 59b51cd7c95c75be85bd6ef715e9ef8c85720bac
+ms.openlocfilehash: b7aaad9199bb275f45fd088a6207d707e8e5751c
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37878612"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53145093"
 ---
 # <a name="explore-custom-http-call-retries-with-exponential-backoff"></a>了解如何使用指数退避算法实现自定义 HTTP 调用重试
 
@@ -116,7 +116,6 @@ public async Task<Catalog> GetCatalogItems(int page,int take, int? brand, int? t
 请记住，此代码仅适合用作概念证明。 以下部分介绍如何通过使用 HttpClientFactory 来应用更高级但却更简单的方法。
 自 .NET Core 2.1 起可使用 HttpClientFactory，并提供 Polly 等经验证的复原库。 
 
-
 >[!div class="step-by-step"]
-[上一页](implement-resilient-entity-framework-core-sql-connections.md)
-[下一页](use-httpclientfactory-to-implement-resilient-http-requests.md)
+>[上一页](implement-resilient-entity-framework-core-sql-connections.md)
+>[下一页](use-httpclientfactory-to-implement-resilient-http-requests.md)

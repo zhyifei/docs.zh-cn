@@ -2,18 +2,21 @@
 title: Windows 系统中的文件路径格式
 ms.date: 06/28/2018
 ms.technology: dotnet-standard
+dev_langs:
+- csharp
+- vb
 helpviewer_keywords:
 - I/O, long paths
 - long paths
 - path formats, Windows
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1b79ff1991f1d9b803b0c35b4ae9565f70de0b56
-ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
+ms.openlocfilehash: 1ac96ac86fb3ebf35af9176a025f0a5f71451f88
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "52296823"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53144853"
 ---
 # <a name="file-path-formats-on-windows-systems"></a>Windows 系统中的文件路径格式
 
@@ -29,7 +32,7 @@ ms.locfileid: "52296823"
 
 如果以上三项都存在，则为绝对路径。 如未指定卷号或驱动器号，且目录名称的开头是[目录分隔符](<xref:System.IO.Path.DirectorySeparatorChar>)，则路径属于当前驱动器根路径上的相对路径。 否则路径相对于当前目录。 下表显示了一些可能出现的目录和文件路径。
 
-|路径  |描述  |
+|路径  |说明  |
 | -- | -- |
 | `C:\Documents\Newsletters\Summer2018.pdf` | C: 盘根路径上的绝对文件路径。 |
 | `\Program Files\Custom Utilities\StringFinder.exe` | 当前驱动器根路径上的绝对路径。 |
@@ -59,7 +62,7 @@ ms.locfileid: "52296823"
 
 以下是一些 UNC 路径的示例：
 
-|路径  |描述  |
+|路径  |说明  |
 | -- | -- |
 | `\\system07\C$\` | `system07` 上 C: 盘的根目录。 |
 | `\\Server2\Share\Test\Foo.txt` | \\\\Server2\\Share 卷的测试目录中的 Foo.txt 文件。|
@@ -203,30 +206,14 @@ Windows 文件系统有一个让非 Window 用户和开发人员感到困惑的�
 ```csharp
 Directory.Create("TeStDiReCtOrY");
 ```
+
+```vb
+Directory.Create("TeStDiReCtOrY")
+```
+
 的方法创建名为 TeStDiReCtOrY 的目录。 如果重命名目录或文件以改变大小写，则目录名或文件名反映的是重命名它们时所使用的字符串的大小写。 例如，以下代码将文件 test.txt 重命名为 Test.txt：
 
-```csharp
-using System;
-using System.IO;
-
-class Example
-{
-   public static void Main()
-   {
-      var fi = new FileInfo(@".\test.txt");
-      fi.MoveTo(@".\Test.txt");
-   }
-}
-``` 
-```vb
-Imports System.IO
-
-Module Example
-   Public Sub Main()
-      Dim fi As New FileInfo(".\test.txt")
-      fi.MoveTo(".\Test.txt")
-   End Sub
-End Module
-```
+[!code-csharp[case-and-renaming](~/samples/snippets/standard/io/file-names/cs/rename.cs)]
+[!code-vb[case-and-renaming](~/samples/snippets/standard/io/file-names/vb/rename.vb)]
 
 但是比较目录名和文件名时不区分大小写。 如果搜索名为“test.txt”的文件，.NET 文件系统 API 会在比较时忽略大小写问题。 Test.txt、TEST.TXT、test.TXT 和其他任何大写和小写的字母组合都会成为“test.txt”的匹配项。

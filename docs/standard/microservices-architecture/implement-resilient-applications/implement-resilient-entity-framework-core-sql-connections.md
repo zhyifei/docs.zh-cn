@@ -4,12 +4,12 @@ description: 适用于容器化 .NET 应用程序的 .NET 微服务体系结构 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 06/08/2018
-ms.openlocfilehash: 59db9cdb894f76f54e77732be47dc6140a594121
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 0df375737c0e079baba426f3c97b95edcb9aca75
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47231409"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53127181"
 ---
 # <a name="implement-resilient-entity-framework-core-sql-connections"></a>实现复原 Entity Framework Core SQL 连接
 
@@ -94,5 +94,5 @@ public async Task<IActionResult> UpdateProduct([FromBody]CatalogItem
     <https://blogs.msdn.microsoft.com/cesardelatorre/2017/03/26/using-resilient-entity-framework-core-sql-connections-and-transactions-retries-with-exponential-backoff/>
 
 >[!div class="step-by-step"]
-[上一页](implement-retries-exponential-backoff.md)
-[下一页](explore-custom-http-call-retries-exponential-backoff.md)
+>[上一页](implement-retries-exponential-backoff.md)
+>[下一页](explore-custom-http-call-retries-exponential-backoff.md)

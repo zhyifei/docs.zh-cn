@@ -4,11 +4,11 @@ description: 介绍 .NET 事件模式，如何创建标准事件源以及订阅�
 ms.date: 06/20/2016
 ms.assetid: 8a3133d6-4ef2-46f9-9c8d-a8ea8898e4c9
 ms.openlocfilehash: 16a091dabe34a064ab3ee65a6d9f3e0ab36f1db4
-ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "52297031"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53129397"
 ---
 # <a name="standard-net-event-patterns"></a>标准 .NET 事件模式
 
@@ -148,4 +148,4 @@ EventHandler<FileFoundArgs> onFileFound = (sender, eventArgs) =>
 
 接下来，将了解在 .NET 的最新版本中关于这些模式的一些更改。
 
-[下一篇](modern-events.md)
+[下一页](modern-events.md)
