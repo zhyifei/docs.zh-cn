@@ -5,12 +5,12 @@ helpviewer_keywords:
 - C# language, namespaces
 - namespaces [C#]
 ms.assetid: b1c4ab46-3fad-4ffa-9deb-dd50a2d8c65a
-ms.openlocfilehash: c4011092a6c605137053b544d4b9f14cce2fdb4c
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: c5431e5141b1b4b1981f4a1399ca11939fe7dc45
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46002809"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53151104"
 ---
 # <a name="namespaces-c-programming-guide"></a>命名空间（C# 编程指南）
 
@@ -38,8 +38,8 @@ ms.locfileid: "46002809"
   
 - 它们组织大型代码项目。  
 - 通过使用 `.` 运算符分隔它们。  
-- 使用 `using directive` 可免去为每个类指定名称空间的名称。  
-- `global` 命名空间是“根”命名空间：`global::System` 始终引用 .NET Framework 命名空间 `System`。  
+- `using` 指令可免去为每个类指定命名空间的名称。  
+- `global` 命名空间是“根”命名空间：`global::System` 始终引用 .NET <xref:System> 命名空间。  
 
 ## <a name="c-language-specification"></a>C# 语言规范
 
@@ -56,4 +56,3 @@ ms.locfileid: "46002809"
 - [using 指令](../../language-reference/keywords/using-directive.md)  
 - [:: 运算符](../../language-reference/operators/namespace-alias-qualifer.md)  
 - [。运算符](../../language-reference/operators/member-access-operator.md)
->>>>>>> 添加标识符命名规则

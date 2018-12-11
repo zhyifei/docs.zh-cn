@@ -5,12 +5,12 @@ helpviewer_keywords:
 - C# language, strings
 - strings [C#]
 ms.assetid: 21580405-cb25-4541-89d5-037846a38b07
-ms.openlocfilehash: a06a5144e91901417906f071efd8e19c10cf2cba
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: 7034d37c141d79301bf108b9e7b41ab3e27e2572
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47170647"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53143917"
 ---
 # <a name="strings-c-programming-guide"></a>字符串（C# 编程指南）
 字符串是值为文本的 <xref:System.String> 类型对象。 文本在内部存储为 <xref:System.Char> 对象的依序只读集合。 在 C# 字符串末尾没有 null 终止字符；因此，一个 C# 字符串可以包含任何数量的嵌入的 null 字符 ('\0')。 字符串的 <xref:System.String.Length%2A> 属性表示其包含的 `Char` 对象数量，而非 Unicode 字符数。 若要访问字符串中的各个 Unicode 码位，请使用 <xref:System.Globalization.StringInfo> 对象。  
@@ -70,11 +70,21 @@ ms.locfileid: "47170647"
 >  在编译时，逐字字符串被转换为普通字符串，并具有所有相同的转义序列。 因此，如果在调试器监视窗口中查看逐字字符串，将看到由编译器添加的转义字符，而不是来自你的源代码的逐字字符串版本。 例如，原义字符串 @"C:\files.txt" 在监视窗口中显示为“C:\\\files.txt”。  
   
 ## <a name="format-strings"></a>格式字符串  
- 格式字符串是可以在运行时以动态方式确定其内容的字符串。 使用静态 <xref:System.String.Format%2A> 方法，并在大括号中嵌入将在运行时被其他值替换的占位符，从而创建格式字符串。 下面的示例使用格式字符串来输出每个循环迭代的结果：  
+ 格式字符串是在运行时以动态方式确定其内容的字符串。 格式字符串是通过将内插表达式或占位符嵌入字符串大括号内创建的。 大括号 (`{...}`) 中的所有内容都将解析为一个值，并在运行时以格式化字符串的形式输出。 有两种方法创建格式字符串：字符串内插和复合格式。
+
+### <a name="string-interpolation"></a>字符串内插
+在 C# 6.0 及更高版本中提供，[内插字符串](../../language-reference/tokens/interpolated.md)由 `$` 特殊字符标识，并在大括号中包含内插表达式。 如果不熟悉字符串内插，请参阅[字符串内插 - C# 交互式教程](../../tutorials/intro-to-csharp/interpolated-strings.yml)快速概览。
+
+使用字符串内插来改善代码的可读性和可维护性。 字符串内插可实现与 `String.Format` 方法相同的结果，但提高了易用性和内联清晰度。
+
+[!code-csharp[csProgGuideFormatStrings](~/samples/snippets/csharp/programming-guide/strings/Strings_1.cs#StringInterpolation)]
+
+### <a name="composite-formatting"></a>复合格式设置
+<xref:System.String.Format%2A?displayProperty=nameWithType> 利用大括号中的占位符创建格式字符串。 此示例生成与上面使用的字符串内插方法类似的输出。
   
- [!code-csharp[csProgGuideStrings#26](../../../csharp/programming-guide/strings/codesnippet/CSharp/index_6.cs)]  
-  
- <xref:System.Console.WriteLine%2A> 方法的一个重载将格式字符串用作参数。 因此，可以仅嵌入格式字符串文本，而无需显式调用该方法。 不过，如果使用 <xref:System.Diagnostics.Trace.WriteLine%2A> 方法在 Visual Studio“输出”窗口中显示调试输出，必须显式调用 <xref:System.String.Format%2A> 方法，因为 <xref:System.Diagnostics.Trace.WriteLine%2A> 仅接受字符串，而不接受格式字符串。 有关格式字符串的详细信息，请参阅[格式设置类型](../../../standard/base-types/formatting-types.md)。  
+[!code-csharp[csProgGuideFormatStrings](~/samples/snippets/csharp/programming-guide/strings/Strings_1.cs#StringFormat)]
+
+有关设置 .NET 类型格式的详细信息，请参阅 [.NET 中的格式设置类型](../../../standard/base-types/formatting-types.md)。
   
 ## <a name="substrings"></a>子字符串  
  子字符串是包含在字符串中的任何字符序列。 使用 <xref:System.String.Substring%2A> 方法可以通过原始字符串的一部分新建字符串。 可以使用 <xref:System.String.IndexOf%2A> 方法搜索一次或多次出现的子字符串。 使用 <xref:System.String.Replace%2A> 方法可以将出现的所有指定子字符串替换为新字符串。 与 <xref:System.String.Substring%2A> 方法一样，<xref:System.String.Replace%2A> 实际返回的是新字符串，且不修改原始字符串。 有关详细信息，请参阅[如何：搜索字符串](../../how-to/search-strings.md)和[如何：修改字符串内容](../../how-to/modify-string-contents.md)。  

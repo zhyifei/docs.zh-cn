@@ -1,15 +1,15 @@
 ---
-title: 开放源代码库指南
+title: 开放源代码 .NET 库指南
 description: 有关创建高质量的 .NET 库的开发人员最佳做法建议。
 author: jamesnk
 ms.author: mairaw
 ms.date: 10/17/2018
-ms.openlocfilehash: ca95cb5ba1ebf27464397b7850ac02aabded1a5b
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: a656094066eb43ffe64ab405784f4577621b5c46
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50188620"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53128065"
 ---
 # <a name="open-source-library-guidance"></a>开放源代码库指南
 
@@ -48,4 +48,4 @@ ms.locfileid: "50188620"
 ❌请勿发布库的强名称或非强名称版本。 例如，`Contoso.Api` 和 `Contoso.Api.StrongNamed`。
 
 >[!div class="step-by-step"]
-[下一篇](./get-started.md)
+>[下一篇](get-started.md)
