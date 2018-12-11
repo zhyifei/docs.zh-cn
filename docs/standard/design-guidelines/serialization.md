@@ -1,57 +1,56 @@
 ---
 title: Serialization1
-ms.date: 03/30/2017
+ms.date: 10/22/2008
 ms.technology: dotnet-standard
 ms.assetid: bebb27ac-9712-4196-9931-de19fc04dbac
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: fd66f8d8589baaa6fc5e22ce0b68beafac916fdf
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+author: KrzysztofCwalina
+ms.openlocfilehash: 3e21251710a44764bd06fbce83f97288b6925bc2
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44087113"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53155101"
 ---
 # <a name="serialization"></a>序列化
-序列化是将对象转换为可以轻松地保持或传输的格式的过程。 例如，可以将对象序列化，通过 Internet 使用 HTTP，并在目标计算机反其序列化传输。  
+序列化是将对象转换为可以轻松地保持或传输的格式的过程。 例如，可以将对象序列化，使用 HTTP 在 Internet 上传输它，并在目标计算机上对其进行反序列化。  
   
- .NET Framework 提供了针对各种序列化方案进行了优化的三种主要序列化技术。 下表列出了这些技术以及与这些技术相关的主要 Framework 类型。  
+ .NET Framework 提供了针对各种序列化方案进行了优化的三种主要序列化技术。 下表列出了这些技术以及与这些技术相关的主要框架类型。  
   
 |**技术名称**|**主要类型**|**方案**|  
 |-------------------------|--------------------|-------------------|  
 |**数据协定序列化**|<xref:System.Runtime.Serialization.DataContractAttribute> <br /> <xref:System.Runtime.Serialization.DataMemberAttribute> <br /> <xref:System.Runtime.Serialization.DataContractSerializer> <br /> <xref:System.Runtime.Serialization.NetDataContractSerializer> <br /> <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> <br /> <xref:System.Runtime.Serialization.ISerializable>|常规持久性<br />Web 服务<br />JSON|  
-|**XML 序列化**|<xref:System.Xml.Serialization.XmlSerializer>|XML 格式的 XML 的形状对具有完全控制|  
-|**运行时序列化 （二进制和 SOAP）**|<xref:System.SerializableAttribute> <br /> <xref:System.Runtime.Serialization.ISerializable> <br /> <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> <br /> <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter>|.NET 远程处理|  
+|**XML 序列化**|<xref:System.Xml.Serialization.XmlSerializer>|对 XML 的结构具有完全控制的 XML 格式|  
+|**运行时序列化 （二进制和 SOAP）**|<xref:System.SerializableAttribute> <br /> <xref:System.Runtime.Serialization.ISerializable> <br /> <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> <br /> <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter>|.NET Remoting|  
   
- **✓ DO** 思考设计新类型时序列化。  
+ **✓ 务必**在设计新类型时考虑序列化。  
   
 ## <a name="choosing-the-right-serialization-technology-to-support"></a>选择要支持的合适的序列化技术  
- **✓ CONSIDER** 支持数据协定序列化，如果类型的实例可能需要保留或在 Web 服务中使用。  
+ **✓ 考虑**支持数据协定序列化，如果类型的实例可能需要持久化或在 Web 服务中使用。  
   
- **✓ CONSIDER** 支持 XML 序列化而非或除了数据协定序列化，如果你需要更好地控制类型序列化时，会产生的 XML 格式。  
+ **✓ 考虑**如果需要对序列化类型时生成的 XML 格式进行更多控制，则支持 XML 序列化，而不是数据协定序列化，或者支持数据协定序列化之外的序列化。  
   
- 这可能是有必要在某些情况下需要使用 XML 构造的互操作，不支持数据协定序列化，例如，用于生成 XML 特性。  
+ 在某些互操作性场景中，这可能是必要的，在这些场景中，需要使用数据协定序列化不支持的 XML 构造，例如，生成 XML 属性。  
   
- **✓ CONSIDER** 支持运行时序列化，如果需要穿越.NET 远程处理边界类型的实例。  
+ **✓ 考虑**支持运行时序列化，如果类型的实例需要跨 .NET Remoting 边界传输。  
   
- **X AVOID** 只是为了常规持久性原因支持运行时序列化或 XML 序列化。 更喜欢数据协定序列化。  
+ **X 避免**只是为了一般持久性原因而支持运行时序列化或 XML 序列化。 建议使用数据协定序列化。  
   
 ## <a name="supporting-data-contract-serialization"></a>支持数据协定序列化  
- 类型可通过应用支持数据协定序列化<xref:System.Runtime.Serialization.DataContractAttribute>的类型和<xref:System.Runtime.Serialization.DataMemberAttribute>类型的成员 （字段和属性）。  
+ 类型可以通过对类型应用 <xref:System.Runtime.Serialization.DataContractAttribute> 和对类型的成员（字段和属性）应用 <xref:System.Runtime.Serialization.DataMemberAttribute> 来支持数据协定序列化。  
   
- **✓ CONSIDER** 标记的类型公共数据成员，如果可以在部分信任环境中使用该类型。  
+ **✓ 考虑**将类型的数据成员标记为公共，如果可以在部分信任环境中使用该类型。  
   
- 在完全信任环境中，数据协定序列化程序可以序列化和反序列化非公共类型和成员，但仅限公共成员可以序列化并在部分信任中反序列化。  
+ 在完全信任的环境中，数据协定序列化程序可以序列化和反序列化非公共类型和成员，但在部分信任的环境中，只能序列化和反序列化公共成员。  
   
  **✓ DO** 实现具有的所有属性的 getter 和 setter <xref:System.Runtime.Serialization.DataMemberAttribute>。 数据协定序列化程序需要 getter 和 setter 要被视为可序列化的类型。 （在.NET Framework 3.5 SP1 中，某些集合属性可以是只读。）如果不会在部分信任模式下使用类型，则这两个属性访问器中的一个或两个都可以是非公共的。  
   
- **✓ CONSIDER** 的反序列化的实例初始化使用序列化回调。  
+ **✓ 考虑**使用序列化回调来初始化反序列化的实例。  
   
  反序列化对象时，不调用任何构造函数。 （有规则的例外情况。 集合的构造函数标有<xref:System.Runtime.Serialization.CollectionDataContractAttribute>反序列化期间调用。)因此，在正常构造期间执行的任何逻辑需要作为一个序列化回调实现。  
   
- `OnDeserializedAttribute` 是最常使用的回调属性。 此系列中的其他属性还有 <xref:System.Runtime.Serialization.OnDeserializingAttribute>、<xref:System.Runtime.Serialization.OnSerializingAttribute> 和 <xref:System.Runtime.Serialization.OnSerializedAttribute>。 这些属性可分别用来标记在反序列化之前、序列化之前以及序列化之后执行的回调。  
+ `OnDeserializedAttribute` 是最常使用的回调特性。 此系列中的其他特性还有 <xref:System.Runtime.Serialization.OnDeserializingAttribute>、<xref:System.Runtime.Serialization.OnSerializingAttribute> 和 <xref:System.Runtime.Serialization.OnSerializedAttribute>。 这些特性可分别用来标记在反序列化之前、序列化之前以及序列化之后执行的回调。  
   
- **✓ CONSIDER** 使用<xref:System.Runtime.Serialization.KnownTypeAttribute>以指示反序列化复杂对象图时，应使用的具体类型。  
+ **✓ 考虑**使用 <xref:System.Runtime.Serialization.KnownTypeAttribute> 以指示反序列化复杂对象图形时应使用的具体类型。  
   
  **✓ DO** 考虑向后和向前兼容性，当创建或更改可序列化类型。  
   
@@ -85,14 +84,14 @@ ms.locfileid: "44087113"
   
  **✓ DO** 做出受保护的序列化构造函数并提供两个参数类型和名为在以下部分的示例所示完全一样。  
   
-```  
+```csharp
 [Serializable]  
 public class Person : ISerializable {  
     protected Person(SerializationInfo info, StreamingContext context) {  
         ...  
     }  
 }  
-```  
+```
   
  **✓ DO** 实现`ISerializable`成员显式。  
   
@@ -100,7 +99,7 @@ public class Person : ISerializable {
   
  *部分版权 © 2005, 2009 Microsoft Corporation。保留所有权利。*  
   
- *经 Pearson Education, Inc 授权，转载自[框架设计准则：可重用的 .NET 库的约定、习惯用语和模式，第2版](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) 作者：Krzysztof Cwalina 和 Brad Abrams，由 Addison Wesley Professional 于 2008 年 10 月 22 日印发，作为 Microsoft Windows 开发系列的一部分。*  
+ *通过从 Pearson Education，Inc.的权限重新打印[Framework 设计准则：约定、 语法和模式的可重用.NET 库，第 2 版](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619)Krzysztof Cwalina 和 Brad Abrams，作为 Microsoft Windows 开发系列的一部分发布 2008 年 10 月 22 日由 Addison-wesley 专业人员。*  
   
 ## <a name="see-also"></a>请参阅
 
