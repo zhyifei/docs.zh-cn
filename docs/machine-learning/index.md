@@ -1,39 +1,51 @@
 ---
-title: ML.NET 指南
+title: ML.NET 内容指南
 description: 了解如何使用 ML.NET 生成自定义 AI 解决方案并将其集成到 .NET 应用程序。
-author: aditidugar
-ms.date: 05/07/2018
-ms.openlocfilehash: a5be91283d8b8d00b727ec43d1137a0a245175d3
-ms.sourcegitcommit: 2ad7d06f4f469b5d8a5280ac0e0289a81867fc8e
+ms.date: 11/06/2018
+ms.custom: seodec18
+ms.openlocfilehash: 0ba32490e30051616ae5270a050d8666490c9eef
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "34862307"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53126245"
 ---
-# <a name="mlnet-guide"></a><span data-ttu-id="7cedf-103">ML.NET 指南</span><span class="sxs-lookup"><span data-stu-id="7cedf-103">ML.NET Guide</span></span>
+# <a name="mlnet-content-guide"></a><span data-ttu-id="ec3e4-103">ML.NET 内容指南</span><span class="sxs-lookup"><span data-stu-id="ec3e4-103">ML.NET Content Guide</span></span>
 
-<span data-ttu-id="7cedf-104">ML.NET 是一个免费的开源跨平台机器学习框架，可用于生成自定义机器学习解决方案并将其集成到 .NET 应用程序。</span><span class="sxs-lookup"><span data-stu-id="7cedf-104">ML.NET is a free, open-source, and cross-platform machine learning framework that enables you to build custom machine learning solutions and integrate them into your .NET applications.</span></span> <span data-ttu-id="7cedf-105">本指南提供了许多有关使用 ML.NET 的资源。</span><span class="sxs-lookup"><span data-stu-id="7cedf-105">This guide provides many resources about working with ML.NET.</span></span>
+<span data-ttu-id="ec3e4-104">此指南介绍基本概念，并提供有关使用 ML.NET 的教程和 API 参考。</span><span class="sxs-lookup"><span data-stu-id="ec3e4-104">This guide explains basic concepts and provides tutorials and an API reference for working with ML.NET.</span></span>
 
-<span data-ttu-id="7cedf-106">有关 ML.NET 的详细信息，请参阅 [ML.NET 简介：经验证的跨平台开源机器学习框架](https://blogs.msdn.microsoft.com/dotnet/2018/05/07/introducing-ml-net-cross-platform-proven-and-open-source-machine-learning-framework/) .NET 博客文章。</span><span class="sxs-lookup"><span data-stu-id="7cedf-106">For more information about ML.NET, see [Introducing ML.NET: Cross-platform, Proven and Open Source Machine Learning Framework](https://blogs.msdn.microsoft.com/dotnet/2018/05/07/introducing-ml-net-cross-platform-proven-and-open-source-machine-learning-framework/) post on the .NET blog.</span></span>
+> [!NOTE]
+> <span data-ttu-id="ec3e4-105">本文档引用 ML.NET（目前为预览版）。</span><span class="sxs-lookup"><span data-stu-id="ec3e4-105">This documentation refers to ML.NET, which is currently in Preview.</span></span> <span data-ttu-id="ec3e4-106">材料可能会有所变化。</span><span class="sxs-lookup"><span data-stu-id="ec3e4-106">Material may be subject to change.</span></span> <span data-ttu-id="ec3e4-107">有关详细信息，请参阅 [ML.NET 简介](https://www.microsoft.com/net/learn/apps/machine-learning-and-ai/ml-dotnet)。</span><span class="sxs-lookup"><span data-stu-id="ec3e4-107">For more information, see the [ML.NET introduction](https://www.microsoft.com/net/learn/apps/machine-learning-and-ai/ml-dotnet).</span></span>
 
-## <a name="get-started"></a><span data-ttu-id="7cedf-107">入门</span><span class="sxs-lookup"><span data-stu-id="7cedf-107">Get started</span></span>
+## <a name="get-started"></a><span data-ttu-id="ec3e4-108">入门</span><span class="sxs-lookup"><span data-stu-id="ec3e4-108">Get started</span></span>
 
-<span data-ttu-id="7cedf-108">若要开始使用 ML.NET，请参阅[鸢尾花瓣预测快速入门](https://www.microsoft.com/net/learn/apps/machine-learning-and-ai/ml-dotnet/get-started)或更多深入[教程](tutorials/index.md)。</span><span class="sxs-lookup"><span data-stu-id="7cedf-108">To get started with ML.NET, check out the [Iris Petal Prediction quickstart](https://www.microsoft.com/net/learn/apps/machine-learning-and-ai/ml-dotnet/get-started) or the more in-depth [tutorials](tutorials/index.md).</span></span>
+<span data-ttu-id="ec3e4-109">若要在 ML.NET 中安装并开始构建，请按照[入门教程](https://www.microsoft.com/net/learn/machinelearning-ai/ml-dotnet-get-started-tutorial)操作。</span><span class="sxs-lookup"><span data-stu-id="ec3e4-109">To install and start building in ML.NET, follow the [Get started tutorial](https://www.microsoft.com/net/learn/machinelearning-ai/ml-dotnet-get-started-tutorial).</span></span>
 
-<span data-ttu-id="7cedf-109">如果不熟悉机器学习，还可以查看[机器学习基础知识](resources/basics.md)，可在其中找到有用的机器学习资源。</span><span class="sxs-lookup"><span data-stu-id="7cedf-109">If you are new to machine learning, you can also review the [Machine Learning Basics](resources/basics.md), where you'll find machine learning resources to assist you.</span></span>
+<span data-ttu-id="ec3e4-110">若要了解有关 ML.NET 的信息，请参阅[什么是 ML.NET？](what-is-mldotnet.md)</span><span class="sxs-lookup"><span data-stu-id="ec3e4-110">To learn about ML.NET, see [What is ML.NET?](what-is-mldotnet.md)</span></span>
 
-## <a name="how-the-mlnet-guide-is-organized"></a><span data-ttu-id="7cedf-110">ML.NET 指南的结构</span><span class="sxs-lookup"><span data-stu-id="7cedf-110">How the ML.NET guide is organized</span></span>
+<span data-ttu-id="ec3e4-111">要了解基本知识，请参阅 [ML.NET 中模型定型的基本概念](basic-concepts-model-training-in-mldotnet.md)。</span><span class="sxs-lookup"><span data-stu-id="ec3e4-111">To understand basics, see [Basic concepts for model training in ML.NET](basic-concepts-model-training-in-mldotnet.md).</span></span>
 
-<span data-ttu-id="7cedf-111">ML.NET 指南分为多个部分。</span><span class="sxs-lookup"><span data-stu-id="7cedf-111">There are several sections in the ML.NET Guide.</span></span> <span data-ttu-id="7cedf-112">可以按顺序阅读，也可以直接跳到最感兴趣的部分。</span><span class="sxs-lookup"><span data-stu-id="7cedf-112">You can read them in order, or jump directly to what interests you the most.</span></span>
+## <a name="tutorials"></a><span data-ttu-id="ec3e4-112">教程</span><span class="sxs-lookup"><span data-stu-id="ec3e4-112">Tutorials</span></span>
 
-<span data-ttu-id="7cedf-113">**[教程](tutorials/index.md)**</span><span class="sxs-lookup"><span data-stu-id="7cedf-113">**[Tutorials](tutorials/index.md)**</span></span>
+<span data-ttu-id="ec3e4-113">[使用二元分类模型分析情绪](tutorials/sentiment-analysis.md)演示如何构建确定情绪是积极还是消极的应用程序。</span><span class="sxs-lookup"><span data-stu-id="ec3e4-113">[Analyze sentiment using a binary classification model](tutorials/sentiment-analysis.md) shows you how to build an app that determines whether sentiment is positive or negative.</span></span>
 
-<span data-ttu-id="7cedf-114">在此部分可找到分步教程，指导你生成适用于常见开发人员方案的自定义机器学习模型。</span><span class="sxs-lookup"><span data-stu-id="7cedf-114">In this section, you find step-by-step tutorials that guide you through building custom machine learning models for common developer scenarios.</span></span>
+<span data-ttu-id="ec3e4-114">[使用回归模型预测出租车费用](tutorials/taxi-fare.md)演示如何构建一个使用历史数据中的许多因素来确定答案的预测性应用程序。</span><span class="sxs-lookup"><span data-stu-id="ec3e4-114">[Predict taxi fare using a regression model](tutorials/taxi-fare.md) shows you how to build a predictive app that uses many factors from historical data to determine the answer.</span></span>
 
-<span data-ttu-id="7cedf-115">**[术语表](resources/glossary.md)**</span><span class="sxs-lookup"><span data-stu-id="7cedf-115">**[Glossary](resources/glossary.md)**</span></span>
+<span data-ttu-id="ec3e4-115">[根据特征对鸢尾花进行分类](tutorials/iris-clustering.md)演示如何使用聚类分析模型来分析鸢尾花数据集。</span><span class="sxs-lookup"><span data-stu-id="ec3e4-115">[Classify iris flowers by features](tutorials/iris-clustering.md) shows you how to use a clustering model to analyze the iris data set.</span></span> 
 
-<span data-ttu-id="7cedf-116">可找到机器学习术语及其定义的列表。</span><span class="sxs-lookup"><span data-stu-id="7cedf-116">Find a list of machine learning terminology and their definitions.</span></span>
+## <a name="how-to-guide"></a><span data-ttu-id="ec3e4-116">操作指南</span><span class="sxs-lookup"><span data-stu-id="ec3e4-116">How to guide</span></span>
 
-## <a name="api-reference"></a><span data-ttu-id="7cedf-117">API 参考</span><span class="sxs-lookup"><span data-stu-id="7cedf-117">API reference</span></span>
+<span data-ttu-id="ec3e4-117">[使用 Infer.NET 和概率性编程建立一个游戏配对列表应用](how-to-guides/matchup-app-infer-net.md)演示如何构建一个简化版的配对应用，就像在 Xbox 游戏中看到的那样。</span><span class="sxs-lookup"><span data-stu-id="ec3e4-117">[Build a game match-up list app with Infer.NET and probabilistic programming](how-to-guides/matchup-app-infer-net.md) shows you how to build a simplified version of a match-up app like you'd see in an Xbox game.</span></span>
 
-<span data-ttu-id="7cedf-118">请查看 [ML.NET API 参考](https://docs.microsoft.com/dotnet/api/?view=ml-dotnet)，了解各种可用的 API。</span><span class="sxs-lookup"><span data-stu-id="7cedf-118">Check out the [ML.NET API Reference](https://docs.microsoft.com/dotnet/api/?view=ml-dotnet) to see the breadth of APIs available.</span></span>
+## <a name="resources"></a><span data-ttu-id="ec3e4-118">资源</span><span class="sxs-lookup"><span data-stu-id="ec3e4-118">Resources</span></span>
+
+<span data-ttu-id="ec3e4-119">[机器学习术语表](resources/glossary.md)定义关键术语。</span><span class="sxs-lookup"><span data-stu-id="ec3e4-119">[Machine learning glossary](resources/glossary.md) defines key terminology.</span></span>
+
+<span data-ttu-id="ec3e4-120">[机器学习任务](resources/tasks.md)描述任务，例如分类和异常情况检测。</span><span class="sxs-lookup"><span data-stu-id="ec3e4-120">[Machine learning tasks](resources/tasks.md) describes tasks, such as classification and anomaly detection.</span></span> 
+
+<span data-ttu-id="ec3e4-121">[数据转换](resources/transforms.md)介绍 ML.NET 中的数据准备功能。</span><span class="sxs-lookup"><span data-stu-id="ec3e4-121">[Data transforms](resources/transforms.md) describes data preparation capabilities in ML.NET.</span></span>
+
+
+## <a name="api-reference"></a><span data-ttu-id="ec3e4-122">API 参考</span><span class="sxs-lookup"><span data-stu-id="ec3e4-122">API reference</span></span>
+
+<span data-ttu-id="ec3e4-123">[ML.NET API 参考](https://docs.microsoft.com/dotnet/api/?view=ml-dotnet)介绍了各种可用的 API。</span><span class="sxs-lookup"><span data-stu-id="ec3e4-123">[ML.NET API Reference](https://docs.microsoft.com/dotnet/api/?view=ml-dotnet) describes the breadth of APIs available.</span></span>
