@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 93e099eb-daa1-4f1e-b031-c1e10a996f88
-ms.openlocfilehash: a608b91c78808af70bd5e9188926a12b945c5604
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.openlocfilehash: a5e5826dddbf60e92a50fd4f83322e7c1062f636
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49453172"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53144866"
 ---
 # <a name="code-access-security-and-adonet"></a>代码访问安全性和 ADO.NET
 .NET Framework 提供基于角色的安全性和代码访问安全性 (CAS)，这两种安全性都可以通过公共语言运行库 (CLR) 提供的公共基础结构实现。 对于非托管代码，大多数应用程序都可以使用用户或主体权限执行。 因此，当拥有提升权限的用户运行恶意软件或包含错误的软件时，计算机系统可能会受到损坏并危及私有数据。  
@@ -23,7 +23,7 @@ ms.locfileid: "49453172"
  CLR 仅允许代码执行代码具有执行权限的那些操作。 代码可以请求权限，而这些请求需要基于管理员设置的安全策略。  
   
 > [!NOTE]
->  在 CLR 中指定的代码不能为自身授予权限。 例如，代码可以请求并获得比安全策略允许的权限少的权限，但决不会获得比安全策略允许的权限多的权限。 在授予权限时，应该从无权限开始，然后为要执行的特定任务添加最少的权限。 一开始就使用所有权限，然后拒绝各个权限会导致应用程序不安全，应用程序可能会授予不必要的权限，从而使应用程序无意中包含安全漏洞。 有关详细信息，请参阅[NIB： 配置安全策略](https://msdn.microsoft.com/library/0f130bcd-1bba-4346-b231-0bcca7dab1a4)并[NIB： 安全策略管理](https://msdn.microsoft.com/library/d754e05d-29dc-4d3a-a2c2-95eaaf1b82b9)。  
+>  在 CLR 中指定的代码不能为自身授予权限。 例如，代码可以请求并获得比安全策略允许的权限少的权限，但决不会获得比安全策略允许的权限多的权限。 在授予权限时，应该从无权限开始，然后为要执行的特定任务添加最少的权限。 一开始就使用所有权限，然后拒绝各个权限会导致应用程序不安全，应用程序可能会授予不必要的权限，从而使应用程序无意中包含安全漏洞。 有关详细信息，请参阅[NIB:配置安全策略](https://msdn.microsoft.com/library/0f130bcd-1bba-4346-b231-0bcca7dab1a4)和[NIB:安全策略管理](https://msdn.microsoft.com/library/d754e05d-29dc-4d3a-a2c2-95eaaf1b82b9)。  
   
  代码访问权限有三种类型：  
   
@@ -38,7 +38,7 @@ ms.locfileid: "49453172"
 ### <a name="requesting-permissions"></a>请求权限  
  请求权限的目的是通知运行库您的应用程序要求哪些权限才能运行，并确保应用程序只接收到实际需要的权限。 例如，如果您的应用程序需要将数据写入本地磁盘，则需要 <xref:System.Security.Permissions.FileIOPermission>。 如果尚未授予该权限，则在应用程序尝试写入磁盘时将失败。 不过，如果应用程序请求 `FileIOPermission` 并且尚未授予该权限，则应用程序一开始即会生成异常，因此将不会加载。  
   
- 在应用程序只需从磁盘读取数据的情况下，您可以请求永远不为应用程序授予任何写入权限。 在出现 Bug 或受到恶意攻击时，你的代码将不会损坏它所操作的数据。 有关详细信息，请参阅[NIB： 请求权限](https://msdn.microsoft.com/library/0447c49d-8cba-45e4-862c-ff0b59bebdc2)。  
+ 在应用程序只需从磁盘读取数据的情况下，您可以请求永远不为应用程序授予任何写入权限。 在出现 Bug 或受到恶意攻击时，你的代码将不会损坏它所操作的数据。 有关详细信息，请参阅[NIB:请求权限](https://msdn.microsoft.com/library/0447c49d-8cba-45e4-862c-ff0b59bebdc2)。  
   
 ## <a name="role-based-security-and-cas"></a>基于角色的安全性和 CAS  
  同时实现基于角色的安全性和代码访问安全性 (CAS) 可增强应用程序的整体安全性。 基于角色的安全性可以基于 Windows 帐户或自定义标识，使有关安全主体的信息可用于当前线程。 此外，通常还要求应用程序基于用户提供的凭据提供对数据或资源的访问。 通常情况下，这种应用程序会检查用户的角色，并根据这些角色提供对资源的访问。  
@@ -71,8 +71,8 @@ ms.locfileid: "49453172"
 |-----------------------------------|-----------------|  
 |`Action`|获取或设置安全性操作。 从 <xref:System.Security.Permissions.SecurityAttribute> 继承。|  
 |`AllowBlankPassword`|启用或禁用连接字符串中空白密码。 有效值为 `true`（启用空白密码的使用）和 `false`（禁用空白密码的使用）。 从 <xref:System.Data.Common.DBDataPermissionAttribute> 继承。|  
-|`ConnectionString`|标识允许的连接字符串。 可标识多个连接字符串。 **注意：** 在连接字符串中不包括用户 ID 或密码。 此版本中，不能使用 .NET Framework 配置工具更改连接字符串限制。 <br /><br /> 从 <xref:System.Data.Common.DBDataPermissionAttribute> 继承。|  
-|`KeyRestrictions`|标识允许或不允许的连接字符串参数。 在窗体中标识的连接字符串参数*\<参数名称 > =*。 可指定多个参数，并用分号 (;) 进行分隔。 **注意：** 如果未指定`KeyRestrictions`，但设置`KeyRestrictionBehavior`属性设置为`AllowOnly`或`PreventUsage`，允许使用任何其他连接字符串参数。 从 <xref:System.Data.Common.DBDataPermissionAttribute> 继承。|  
+|`ConnectionString`|标识允许的连接字符串。 可标识多个连接字符串。 **注意：** 连接字符串中不要包含用户 ID 或密码。 此版本中，不能使用 .NET Framework 配置工具更改连接字符串限制。 <br /><br /> 从 <xref:System.Data.Common.DBDataPermissionAttribute> 继承。|  
+|`KeyRestrictions`|标识允许或不允许的连接字符串参数。 在窗体中标识的连接字符串参数*\<参数名称 > =*。 可指定多个参数，并用分号 (;) 进行分隔。 **注意：** 如果不指定 `KeyRestrictions` 而是将 `KeyRestrictionBehavior` 属性设置为 `AllowOnly` 或 `PreventUsage`，则不允许使用任何其他连接字符串参数。 从 <xref:System.Data.Common.DBDataPermissionAttribute> 继承。|  
 |`KeyRestrictionBehavior`|将连接字符串参数标识为唯一允许的附加参数 (`AllowOnly`)，或标识不允许的附加参数 (`PreventUsage`)。 默认为 `AllowOnly`。 从 <xref:System.Data.Common.DBDataPermissionAttribute> 继承。|  
 |`TypeID`|在派生类中实现此属性时获取唯一标识符。 从 <xref:System.Attribute> 继承。|  
 |`Unrestricted`|表明是否声明对该资源的无限制权限。 从 <xref:System.Security.Permissions.SecurityAttribute> 继承。|  
@@ -160,7 +160,7 @@ AllowBlankPassword="False">
 ```  
   
 ## <a name="verifying-adonet-code-access-using-security-permissions"></a>使用安全权限验证 ADO.NET 代码访问  
- 对于部分信任方案，可以通过指定 <xref:System.Data.SqlClient.SqlClientPermissionAttribute> 来要求代码中的特定方法具有 CAS 特权。 如果当前受限制的安全策略不允许该权限，在运行代码之前将引发异常。 安全策略的详细信息，请参阅[NIB： 安全策略管理](https://msdn.microsoft.com/library/d754e05d-29dc-4d3a-a2c2-95eaaf1b82b9)并[NIB： 安全策略最佳实践](https://msdn.microsoft.com/library/d49bc4d5-efb7-4caa-a2fe-e4d3cec63c05)。  
+ 对于部分信任方案，可以通过指定 <xref:System.Data.SqlClient.SqlClientPermissionAttribute> 来要求代码中的特定方法具有 CAS 特权。 如果当前受限制的安全策略不允许该权限，在运行代码之前将引发异常。 安全策略的详细信息，请参阅[NIB:安全策略管理](https://msdn.microsoft.com/library/d754e05d-29dc-4d3a-a2c2-95eaaf1b82b9)和[NIB:安全策略最佳实践](https://msdn.microsoft.com/library/d49bc4d5-efb7-4caa-a2fe-e4d3cec63c05)。  
   
 ### <a name="example"></a>示例  
  以下示例演示如何编写要求特定连接字符串的代码。 该示例模拟拒绝为 <xref:System.Data.SqlClient> 授予无限制权限的过程，系统管理员在实际工作中将会使用 CAS 策略实现该过程。  
@@ -197,6 +197,5 @@ Failed, as expected: Request failed.
 ## <a name="see-also"></a>请参阅  
  [保证 ADO.NET 应用程序的安全](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
  [本机代码和 .NET Framework 代码的安全性](https://msdn.microsoft.com/library/bd61be84-c143-409a-a75a-44253724f784)  
- [代码访问安全性](../../../../docs/framework/misc/code-access-security.md)  
  [基于角色的安全性](../../../../docs/standard/security/role-based-security.md)  
  [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)
