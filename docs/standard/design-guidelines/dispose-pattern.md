@@ -1,4 +1,4 @@
-﻿---
+---
 title: Dispose 模式
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
@@ -41,15 +41,15 @@ Dispose 模式旨在标准化终结器和 `IDisposable` 接口的使用和实现
   
 该模式的主要目的是降低 <xref:System.Object.Finalize%2A> 和 <xref:System.IDisposable.Dispose%2A> 方法实现的复杂性。 这种复杂性源于这样一个事实：这些方法共享一些但不是所有的代码路径（这些差异将在本章后面介绍）。 此外，还有一些历史原因，模式中的一些元素与确定性资源管理的语言支持的演变有关。  
   
-**✓ 务必** 在包含可释放类型的实例的类型上实现基本的 Dispose 模式。请参阅[基本 Dispose 模式](#basic_pattern)部分有关的基本模式的详细信息。
+**✓ 务必**在包含可释放类型的实例的类型上实现基本的 Dispose 模式。请参阅[基本 Dispose 模式](#basic_pattern)部分，了解有关基本模式的详细信息。
   
-如果某个类型负责其他可释放对象的生命周期，开发人员也需要一种方法来释放它们。 使用容器的 `Dispose` 方法就是一种实现此操作的便捷方法。  
+如果某个类型负责其他可释放对象的生命周期，则开发人员也需要一种用于释放它们方法。使用容器的 `Dispose` 方法就是一种实现此操作的便捷方法。
 
-**✓ 务必** 实现基本 Dispose 模式，并为需要显式释放且没有终结器的占用资源的类型提供终结器。
+**✓ 务必**实现基本的 Dispose 模式，并为需要显式释放且没有终结器的占用资源的类型提供终结器。
 
 例如，应该在存储非托管内存缓冲区的类型上实现该模式。 [可终结的类型](#finalizable_types) 部分讨论了与实现终结器相关的准则。  
 
-**✓ 考虑** 在类上实现基本 Dispose 模式，这些类本身并不包含非托管资源或可释放对象，但可能有子类型。
+**✓ 考虑**在类上实现基本 Dispose 模式，这些类本身并不包含非托管资源或可释放对象，但可能具有包含这些内容的子类型。
 
 一个很好的例子是 <xref:System.IO.Stream?displayProperty=nameWithType> 类。 尽管它是一个不包含任何资源的抽象基类，但它的大多数子类却包含，因此它可以实现这种模式。  
   
@@ -85,7 +85,7 @@ public class DisposableResourceHolder : IDisposable {
   
 此外，本部分适用于其基尚未实现 Dispose 模式的类。 如果从已经实现该模式的类继承，只需重写 `Dispose(bool)` 方法来提供其他资源清理逻辑即可。  
   
-**✓ 务必** 声明 `protected virtual void Dispose(bool disposing)` 方法来集中所有逻辑与释放非托管的资源。
+**✓ 务必**声明 `protected virtual void Dispose(bool disposing)` 方法来集中与释放非托管资源相关的所有逻辑。
   
 所有资源清理都应该在此方法中进行。 终结器和 `IDisposable.Dispose` 方法都会调用该方法。 如果从终结器内部调用，该参数将为false。 它应该用于确保在清理期间运行的任何代码都不访问其他可终结对象。 实现终结器的细节将在下一节中介绍。  
   
@@ -97,7 +97,7 @@ protected virtual void Dispose(bool disposing) {
 }  
 ```
   
-**✓ 务必** 实现`IDisposable`接口通过只需调用`Dispose(true)`跟`GC.SuppressFinalize(this)`。 
+**✓ 务必**实现 `IDisposable`接口，只需调用 `GC.SuppressFinalize(this)` 前的 `Dispose(true)`。
   
  应只在 `Dispose(true)` 成功执行时才调用 `SuppressFinalize`。  
   
@@ -108,7 +108,7 @@ public void Dispose(){
 }  
 ```
 
-**X 切忌** 将无参数的 `Dispose` 方法设为 virtual。
+**X 切忌**将无参数的 `Dispose` 方法设为 virtual。
   
 `Dispose(bool)` 方法应由子类重写。  
   
@@ -126,11 +126,11 @@ public class DisposableResourceHolder : IDisposable {
 }  
 ```
   
-**X 切忌** 声明的任何重载`Dispose`以外的其他方法`Dispose()`和`Dispose(bool)`。
+**X 切忌**声明 `Dispose()` 和 `Dispose(bool)` 以外的 `Dispose` 方法的任何重载。
   
 `Dispose` 应视为一个保留词，以便编写此模式并防止在实现者、用户和编译者之间产生混淆。某些语言可能会选择在某些类型上自动实现此模式。  
   
-**✓ 务必** 允许多次调用 `Dispose(bool)` 方法。第一次调用后，该方法可能不执行任何操作。
+**✓ 务必**允许多次调用 `Dispose(bool)` 方法。第一次调用后，该方法可能不执行任何操作。
   
 ```csharp
 public class DisposableResourceHolder : IDisposable {  
@@ -146,13 +146,13 @@ public class DisposableResourceHolder : IDisposable {
 }  
 ```
   
-**X 避免** 在 `Dispose(bool)` 中引发异常，除非在内部进程已被破坏的临界情况下（泄漏，不一致的共享状态等）。
+**X 避免**在 `Dispose(bool)` 中引发异常，除非在内部进程已被破坏的严重情况下（泄漏、不一致的共享状态等）。
   
 用户会预期对 `Dispose` 的调用不会引发异常。
   
 如果 `Dispose` 可能引发异常，则 finally 代码块的清理逻辑将不会执行。 要解决这个问题，用户需要在 try 代码块中包含每个对 `Dispose` 的调用（在 finally 代码块中！），这会导致清理处理程序非常复杂。 如果执行 `Dispose(bool disposing)` 方法的时候 disposing 为 false，则永远不要引发异常。 如果在终结器上下文中执行的话，这样做将终止进程。  
   
-**✓ 务必** 从对象被清理后无法使用的任何成员引发 <xref:System.ObjectDisposedException>。
+**✓ 务必**从释放对象后无法使用的任何成员引发 <xref:System.ObjectDisposedException>。
   
 ```csharp
 public class DisposableResourceHolder : IDisposable {  
@@ -173,7 +173,7 @@ public class DisposableResourceHolder : IDisposable {
 }  
 ```
 
-**✓ 考虑** 如果 close 是该区域中标准术语的话，除了 `Dispose()` 之外，提供 `Close()` 方法。
+**✓ 考虑**除了 `Dispose()` 之外再提供 `Close()` 方法，如果 close 是该区域中的标准术语。
   
 这样做时，务必确保 `Close` 与 `Dispose` 具有相同的实现并考虑显式实现 `IDisposable.Dispose` 方法。  
   
@@ -230,15 +230,15 @@ public class ComplexResourceHolder : IDisposable {
 }  
 ```
   
-**X 避免** 将类型设置为可终结的。
+**X 避免**将类型设置为可终结。
   
 请仔细考虑任何需要终结器的情况。 从性能和代码复杂性的角度来看，使用终结器的实例会产生实际的成本。 在可能的情况下，首选 <xref:System.Runtime.InteropServices.SafeHandle> 等资源包装器来封装非托管资源，在这种情况下，不再需要终结器，因为包装器负责自己的资源清理。  
   
-**X 切忌** 将值类型设置为可终结的。
+**X 切忌**将值类型设置为可终结。
   
 实际上只有引用类型才会被 CLR 终结，因此对值类型应用终结器的任何尝试都将被忽略。 C# 和 C++ 编译器强制执行此规则。  
   
-**✓ 务必** 将类型设置为可终结的，如果类型负责释放没有自己终结器的非托管资源。  
+**✓ 务必**将类型设置为可终结，如果类型负责释放自身没有终结器的非托管资源。
   
 实现终结器时，只需调用 `Dispose(false)` 方法并将所有资源清理逻辑放在 `Dispose(bool disposing)` 方法中。  
   
@@ -255,25 +255,25 @@ public class ComplexResourceHolder : IDisposable {
 }  
 ```
   
-**✓ 务必** 在每个可终止类型上实现基本的 Dispose 模式。
+**✓ 务必**在每个可终止类型上实现基本的 Dispose 模式。
   
 这为该类型的用户提供了一种方法，可以显式执行终结器所负责的同一资源的确定性清理。  
   
-**X 切忌** 在终结器代码路径中访问任何可终结对象，因为它们很可能已经被终结了。
+**X 切忌**访问终结器代码路径中的任何可终结对象，因为它们很可能已终结。
   
-例如，如果一个可终结对象 A 具有对另一个可终结对象 B 的引用，那 A 不能在 A 的终结器中可靠地使用 B ，反之亦然。 终结器以随机顺序被调用（缺少对关键终结的弱排序保证）。  
+例如，如果一个可终结对象 A 具有对另一个可终结对象 B 的引用，则 A 不能在 A 的终结器中可靠地使用 B ，反之亦然。终结器的调用顺序是随机的（缺少对关键终结的弱排序保证）。
   
 此外，请注意，在应用程序域卸载期间或退出进程时，将在某些时刻收集存储在静态变量中的对象。 如果 <xref:System.Environment.HasShutdownStarted%2A?displayProperty=nameWithType> 返回true，则访问用于引用可终结对象的静态变量（或调用可能使用存储在静态变量中的值的静态方法）可能不安全。  
   
-**✓ 务必** 使 `Finalize` 方法为 protected。
+**✓ 务必**使 `Finalize` 方法处于受保护状态。
   
-C# 、C++ 和 VB.NET 的开发人员不需要担心这一点，因为编译器有助于强制执行此指南。  
+C#、C++ 和 VB.NET 开发人员不需要担心这一点，因为编译器有助于强制执行此准则。
   
-**X 切忌** 不要让异常从终结器逻辑中逃脱，除系统关键故障外。
+**X 切忌**让异常从终结器逻辑中逃脱，系统关键故障外。
   
 如果异常是从终结器引发的，CLR 将关闭整个进程（从 .NET Framework 2.0 版开始），从而阻止执行其他终结器和以受控方式释放资源。  
   
-**✓ 考虑** 考虑在终结器绝对必须执行的情况下，或甚至面对强制应用程序域卸载和线程中止的情况下，创建和使用关键的可终结对象（具有包含 <xref:System.Runtime.ConstrainedExecution.CriticalFinalizerObject> 的类型层次结构的类型）。
+**✓ 考虑**在终结器绝对必须执行的情况下，或甚至面对强制应用程序域卸载和线程中止的情况下，创建和使用关键的可终结对象（具有包含 <xref:System.Runtime.ConstrainedExecution.CriticalFinalizerObject> 的类型层次结构的类型）。
   
 *部分版权 © 2005, 2009 Microsoft Corporation。保留所有权利。*
 
