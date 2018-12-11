@@ -1,27 +1,30 @@
 ---
 title: .NET Core 应用程序部署
-description: 部署 .NET Core 应用程序。
+description: 了解有关部署 .NET Core 应用程序的方式。
 author: rpetrusha
 ms.author: ronpet
-ms.date: 09/03/2018
-ms.openlocfilehash: 390af06e81788c3f64f255e5c85efdaa167274f4
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.date: 12/03/2018
+ms.custom: seodec18
+ms.openlocfilehash: bba4a76364f2951cabc3dde9866019459e9b3f06
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48836623"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53144710"
 ---
 # <a name="net-core-application-deployment"></a>.NET Core 应用程序部署
 
-可以为 .NET Core 应用程序创建两种部署：
+可以为 .NET Core 应用程序创建三种部署：
 
 - 依赖框架的部署。 顾名思义，依赖框架的部署 (FDD) 依赖目标系统上存在共享系统级版本的 .NET Core。 由于已存在 .NET Core，因此应用在 .NET Core 安装程序间也是可移植的。 应用仅包含其自己的代码和任何位于 .NET Core 库外的第三方依赖项。 FDD 包含可通过在命令行中使用 [dotnet 实用程序](../tools/dotnet.md)启动的 *.dll* 文件。 例如，`dotnet app.dll` 就可以运行一个名为 `app` 的应用程序。
 
-- 独立部署。 与 FDD 不同，独立部署 (SCD) 不依赖目标系统上存在的共享组件。 所有组件（包括 .NET Core 库和 .NET Core 运行时）都包含在应用程序中，并且独立于其他 .NET Core 应用程序。 SCD 包括一个可执行文件（如 Windows 平台上名为 `app` 的应用程序的 *app.exe*），它是特定于平台的 .NET Core 主机的重命名版本，还包括一个 .*.dll* 文件（如 *app.dll*），而它是实际的应用程序。
+- 独立部署。 与 FDD 不同，独立部署 (SCD) 不依赖目标系统上存在的共享组件。 所有组件（包括 .NET Core 库和 .NET Core 运行时）都包含在应用程序中，并且独立于其他 .NET Core 应用程序。 SCD 包括一个可执行文件（如 Windows 平台上名为 `app` 的应用程序的 app.exe），它是特定于平台的 .NET Core 主机的重命名版本，还包括一个 .dll 文件（如 app.dll），而它是实际的应用程序。
+
+- 依赖框架的可执行文件。 生成在目标平台上运行的可执行文件。 类似于 FDD，依赖框架的可执行文件 (FDE) 是特定于平台的，而不是自包含的。 这些部署的运行仍依赖于现有的 .NET Core 共享系统级版本。 与 SCD 不同，应用仅包含代码和任何位于 .NET Core 库外的第三方依赖项。 FDE 生成在目标平台上运行的可执行文件。
 
 ## <a name="framework-dependent-deployments-fdd"></a>依赖框架的部署 (FDD)
 
-对于 FDD，仅部署应用程序和第三方依赖项。 不需要部署 .NET Core，因为应用将使用目标系统上存在的 .NET Core 版本。 这是定目标到 .NET Core 的 .NET Core 和 ASP.NET Core 应用程序的默认部署模型。
+对于 FDD，仅部署应用程序和第三方依赖项。 应用将使用目标系统上存在的 .NET Core 版本。 这是定目标到 .NET Core 的 .NET Core 和 ASP.NET Core 应用程序的默认部署模型。
 
 ### <a name="why-create-a-framework-dependent-deployment"></a>为什么创建依赖框架的部署？
 
@@ -31,11 +34,13 @@ ms.locfileid: "48836623"
 
 - 部署包很小。 只需部署应用及其依赖项，而无需部署 .NET Core 本身。
 
+- 除非重写，否则 FDD 将使用目标系统上安装的最新服务运行时。 这允许应用程序使用 .NET Core 运行时的最新修补版本。 
+
 - 许多应用都可使用相同的 .NET Core 安装，从而降低了主机系统上磁盘空间和内存使用量。
 
 也有几个缺点：
 
-- 仅当主机系统上已安装你设为目标的 .NET Core 版本或更高版本时，应用才能运行。
+- 仅当主机系统上已安装应用设为目标的 .NET Core 版本[或更高版本](../versions/selection.md#framework-dependent-apps-roll-forward)时，应用才能运行。
 
 - 如果不了解将来版本，.NET Core 运行时和库可能发生更改。 在极少数情况下，这可能会更改应用的行为。
 
@@ -65,9 +70,31 @@ FDD 和 SCD 部署使用单独的主机可执行文件，使你可以使用发�
 
 - 向系统部署大量独立的 .NET Core 应用可能会使用大量磁盘空间，因为每个应用都会复制 .NET Core 文件。
 
+## <a name="framework-dependent-executables-fde"></a>依赖框架的可执行文件 (FDE)
+
+从 .NET Core 2.2 开始，可以将应用程序部署为 FDE，以及所需的第三方依赖项。 应用将使用目标系统上安装的 .NET Core 版本。
+
+### <a name="why-deploy-a-framework-dependent-executable"></a>为什么要部署依赖框架的可执行文件？
+
+部署 FDE 具有很多优点：
+
+- 部署包很小。 只需部署应用及其依赖项，而无需部署 .NET Core 本身。
+
+- 许多应用都可使用相同的 .NET Core 安装，从而降低了主机系统上磁盘空间和内存使用量。
+
+- 应用程序无需调用 `dotnet` 实用程序，可以通过调用已发布的可执行文件直接运行。
+
+也有几个缺点：
+
+- 仅当主机系统上已安装应用设为目标的 .NET Core 版本[或更高版本](../versions/selection.md#framework-dependent-apps-roll-forward)时，应用才能运行。
+
+- 如果不了解将来版本，.NET Core 运行时和库可能发生更改。 在极少数情况下，这可能会更改应用的行为。
+
+- 必须为每个目标平台发布应用。
+
 ## <a name="step-by-step-examples"></a>分步示例
 
-有关使用 CLI 工具部署 .NET Core 应用的分步示例，请参阅[使用 CLI 工具部署 .NET Core 应用](deploy-with-cli.md)。 有关使用 Visual Studio 部署 .NET Core 应用的分步示例，请参阅 [使用 Visual Studio 部署 .NET Core 应用](deploy-with-vs.md)。 每个主题都包括以下部署的示例：
+有关使用 CLI 工具部署 .NET Core 应用的分步示例，请参阅[使用 CLI 工具部署 .NET Core 应用](deploy-with-cli.md)。 有关使用 Visual Studio 部署 .NET Core 应用的分步示例，请参阅 [使用 Visual Studio 部署 .NET Core 应用](deploy-with-vs.md)。 每篇文章都包括以下部署示例：
 
 - 依赖框架的部署
 - 包含第三方依赖项的依赖框架的部署
