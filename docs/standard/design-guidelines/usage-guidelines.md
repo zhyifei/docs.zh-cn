@@ -1,4 +1,4 @@
----
+﻿---
 title: 使用准则
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
@@ -25,12 +25,12 @@ ms.locfileid: "50197933"
 
 ## <a name="in-this-section"></a>本节内容
 
-[数组](arrays.md)  
+[数组](arrays.md)
 [属性](attributes.md)  
-[集合](guidelines-for-collections.md)  
-[序列化](serialization.md)  
+[集合](guidelines-for-collections.md)
+[序列化](serialization.md)
 [System.Xml 用法](system-xml-usage.md)  
-[相等运算符](equality-operators.md)  
+[相等运算符](equality-operators.md)
 
 *部分版权 © 2005, 2009 Microsoft Corporation。保留所有权利。*
 
