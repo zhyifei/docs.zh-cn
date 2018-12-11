@@ -58,7 +58,7 @@ ms.locfileid: "48840266"
 
 .NET Core 基类库 (BCL)
 
-一组构成 System.*（在一定的程度上构成 Microsoft.*）命名空间的库。 BCL 是用于生成 ASP.NET Core 等较高级应用程序框架的较低级通用框架。 .NET Core BCL 的源代码包含在 [CoreFX 存储库](https://github.com/dotnet/corefx)中。 但大部分 .NET Core API 也可在 .NET Framework 中使用，因此可将 CoreFX 视为 .NET Framework BCL 的一个分支。
+一组构成 System.\*（在一定的程度上构成 Microsoft.\*）命名空间的库。 BCL 是用于生成 ASP.NET Core 等较高级应用程序框架的较低级通用框架。 .NET Core BCL 的源代码包含在 [CoreFX 存储库](https://github.com/dotnet/corefx)中。 但大部分 .NET Core API 也可在 .NET Framework 中使用，因此可将 CoreFX 视为 .NET Framework BCL 的一个分支。
 
 ## <a name="corert"></a>CoreRT
 

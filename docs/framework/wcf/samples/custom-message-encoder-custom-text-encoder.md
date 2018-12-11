@@ -2,12 +2,12 @@
 title: 自定义消息编码器：自定义文本编码器
 ms.date: 03/30/2017
 ms.assetid: 68ff5c74-3d33-4b44-bcae-e1d2f5dea0de
-ms.openlocfilehash: aeb1690d7ead9116bd9c4afe3c64d65d8f51ad50
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 39f09fd2ca58bfe7eb38afe536194ecad104d394
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44192674"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53236539"
 ---
 # <a name="custom-message-encoder-custom-text-encoder"></a>自定义消息编码器：自定义文本编码器
 此示例演示如何实现自定义文本消息编码器使用 Windows Communication Foundation (WCF)。  
@@ -65,8 +65,7 @@ public class CustomTextMessageEncoder : MessageEncoder
   
         this.writerSettings = new XmlWriterSettings();  
         this.writerSettings.Encoding = Encoding.GetEncoding(factory.CharSet);  
-        this.contentType = string.Format("{0}; charset={1}",   
-            this.factory.MediaType, this.writerSettings.Encoding.HeaderName);  
+        this.contentType = $"{this.factory.MediaType}; charset={this.writerSettings.Encoding.HeaderName}";
     }  
   
     public override string ContentType  
@@ -211,7 +210,7 @@ CustomBinding binding = new CustomBinding(bindingElements);
 ## <a name="adding-metadata-support-to-the-message-encoding-binding-element"></a>将元数据支持添加到消息编码绑定元素  
  从 <xref:System.ServiceModel.Channels.MessageEncodingBindingElement> 派生的任何类型负责更新为服务生成的 WSDL 文档中 SOAP 绑定的版本。 这是通过实现 `ExportEndpoint` 接口上的 <xref:System.ServiceModel.Description.IWsdlExportExtension> 方法，然后修改生成的 WSDL 来实现的。 在本示例中，`CustomTextMessageBindingElement` 使用来自 `TextMessageEncodingBinidngElement` 的 WSDL 导出逻辑。  
   
- 对于本示例，客户端配置是手动配置的。 无法使用 Svcutil.exe 生成客户端配置，因为 `CustomTextMessageBindingElement` 未导出策略断言来描述其行为。 通常应该实现自定义绑定元素上的 <xref:System.ServiceModel.Description.IPolicyExportExtension> 接口，以导出描述绑定元素实现的行为或功能的自定义策略断言。 有关如何导出自定义绑定元素的策略断言的示例，请参阅[传输： UDP](../../../../docs/framework/wcf/samples/transport-udp.md)示例。  
+ 对于本示例，客户端配置是手动配置的。 无法使用 Svcutil.exe 生成客户端配置，因为 `CustomTextMessageBindingElement` 未导出策略断言来描述其行为。 通常应该实现自定义绑定元素上的 <xref:System.ServiceModel.Description.IPolicyExportExtension> 接口，以导出描述绑定元素实现的行为或功能的自定义策略断言。 有关如何导出自定义绑定元素的策略断言的示例，请参阅[传输：UDP](../../../../docs/framework/wcf/samples/transport-udp.md)示例。  
   
 ## <a name="message-encoding-binding-configuration-handler"></a>消息编码绑定配置处理程序  
  上一节演示如何以编程方式使用自定义文本消息编码器。 `CustomTextMessageEncodingBindingSection` 实现配置处理程序，使用该程序可以在配置文件中指定自定义文本消息编码器的用法。 `CustomTextMessageEncodingBindingSection` 类是从 <xref:System.ServiceModel.Configuration.BindingElementExtensionElement> 类派生的。 `BindingElementType` 属性通知配置系统要为此节创建的绑定元素的类型。  
