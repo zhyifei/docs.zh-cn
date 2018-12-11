@@ -64,5 +64,5 @@ ms.locfileid: "36207713"
 
 ## <a name="ranking-coming-soon"></a>排名（即将推出）
 
-## <a name="recommendation-coming-soon"></a>建议（即将推出）
+## <a name="recommendation-coming-soon"></a>推荐（即将推出）
 
