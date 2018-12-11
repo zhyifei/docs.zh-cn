@@ -31,6 +31,7 @@ ms.locfileid: "44084929"
 **✓ 务必** 为所有属性提供合理的默认值，确保默认值不会导致安全漏洞或糟糕的低效代码。
 
 **✓ 务必** 允许将属性按任何顺序设置，即使这会导致对象的临时无效状态。
+
 在给定同一对象上的其他属性的值的情况下，一个属性的某些值可能是无效的，这是导致两个或多个属性相关联的一种常见况。在这种情况下，应该推迟由无效状态导致的异常，直到对象实际将这些相关属性一起使用。
 
 **✓ 务必** 在属性 setter 引发异常时保留以前的值。  
@@ -71,10 +72,10 @@ ms.locfileid: "44084929"
 这是由 C# 编译器强制执行的。
   
 ### <a name="property-change-notification-events"></a>属性更改通知事件  
-
 有时，提供通知用户属性值更改的事件是很有用的。例如，`System.Windows.Forms.Control` 在其 `Text` 属性的值发生变化后引发 `TextChanged` 事件。
   
 **✓ 考虑** 在修改高级API（通常是设计器组件）中的属性值时引发更改知事件。
+
 如果有一个好的方案让用户知道对象的属性何时发生变化，则该对象应该该属性引发更改通知事件。
 
 但是，可能并不值得为基础类型或集合等低级 API 引发此类事件。例如，<xref:System.Collections.Generic.List%601> 将新项添加到列表且 `Count` 属性更改时，不会引发此类事件。
@@ -84,6 +85,7 @@ ms.locfileid: "44084929"
 如果属性值通过某种外力（通过调用对象上的方法以外的方式）发生更改则引发事件向开发人员指示值正在更改并已更改。一个典型示例是文本框件的 `Text` 属性。当用户在 `TextBox` 中键入文本时，属性值会自动更改。
 
 *部分版权 © 2005, 2009 Microsoft Corporation。保留所有权利。*
+
 *经 Pearson Education, Inc 授权，转载自[框架设计准则：可重用的 .NET 库的约定、习惯用语和模式，第2版](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) 作者：Krzysztof Cwalina 和 Brad Abrams，由 Addison Wesley Professional 于 2008 年 10 月 22 日印发，作为 Microsoft Windows 开发系列的一部分。*
   
 ## <a name="see-also"></a>请参阅
