@@ -21,7 +21,7 @@ ms.locfileid: "53147169"
 
 ## <a name="entity-framework-core-for-relational-databases"></a>Entity Framework Core（适用于关系数据库）
 
-如果要编写需要使用关系数据的新的 ASP.NET Core 应用程序，则 Entity Framework Core (EF Core) 是应用程序访问数据的建议方式。 EF Core 是一种支持 .NET 开发人员将对象保存到数据源或从数据源中保存的对象关系映射程序 (O/RM)。 它不要求提供开发人员通常需要编写的大部分数据访问代码。 与 ASP.NET Core 一样，EF Core 经过完全重新编写以支持模块化跨平台应用程序。 将其添加到应用程序作为 NuGet 包，在启动中配置它，并在需要的任何位置通过依赖关系注入请求它。
+如果要编写需要使用关系数据的新的 ASP.NET Core 应用程序，则 Entity Framework Core (EF Core) 是应用程序访问数据的建议方式。 EF Core 是一种支持 .NET 开发人员将对象保存到数据源或从数据源中保存的对象关系映射程序 (O/RM)。 它不要求提供开发人员通常需要编写的大部分数据访问代码。 与 ASP.NET Core 一样，EF Core 经过完全重新编写以支持模块化跨平台应用程序。 将其作为 NuGet 包添加到应用程序中，在启动中配置它，并在需要的任何位置通过依赖关系注入请求它。
 
 若要将 EF Core 用于 SQL Server，请运行以下 dotnet CLI 命令：
 
