@@ -145,7 +145,7 @@ public class DisposableResourceHolder : IDisposable {
 }  
 ```  
   
- **X AVOID** 内引发异常`Dispose(bool)`除非包含进程已损坏，重要的情况下 （泄漏，不一致的共享的状态，等等。）。  
+ **X 避免**在 `Dispose(bool)` 中引发异常，除非在内部进程已被破坏的严重情况下（泄漏、不一致的共享状态等）。  
   
  用户会预期对 `Dispose` 的调用不会引发异常。  
   
@@ -272,7 +272,7 @@ public class ComplexResourceHolder : IDisposable {
   
  如果异常是从终结器引发的，CLR 将关闭整个进程（从 .NET Framework 2.0 版开始），从而阻止执行其他终结器和以受控方式释放资源。  
   
- **✓ CONSIDER** 创建和使用关键可终结对象 (包含对类型层次结构的类型<xref:System.Runtime.ConstrainedExecution.CriticalFinalizerObject>) 的情况下在其中一个终结器绝对必须执行即使在遇到时强制应用程序域卸载和线程中止。  
+ **✓ 考虑**在终结器绝对必须执行的情况下，或甚至面对强制应用程序域卸载和线程中止的情况下，创建和使用关键的可终结对象（具有包含 <xref:System.Runtime.ConstrainedExecution.CriticalFinalizerObject> 的类型层次结构的类型）。  
   
  *部分版权 © 2005, 2009 Microsoft Corporation。保留所有权利。*  
   

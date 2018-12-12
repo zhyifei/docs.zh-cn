@@ -25,7 +25,7 @@ ms.locfileid: "53145236"
   
  **✓ 务必**通过调用实例方法 <xref:System.Windows.DependencyObject.GetValue%2A?displayProperty=nameWithType> 和 <xref:System.Windows.DependencyObject.SetValue%2A?displayProperty=nameWithType> 来实现依赖属性。  
   
- **✓ DO** 通过在"属性"。 使用属性的名称来命名依赖项属性的静态字段  
+ **✓ 务必** 在为依赖属性静态字段命名时以 “Property” 作为属性名称的后缀。  
   
  **X 切忌**在代码中显式设置依赖项属性的默认值; 而是在元数据中设置它们。  
   
