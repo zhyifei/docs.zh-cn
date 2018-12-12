@@ -1,16 +1,16 @@
 ---
 title: .NET Core 和 .NET Standard 中的单元测试
-description: .NET Core 和 .NET Standard 项目中的单元测试。
+description: 本文简要概述了 .NET Core 和.NET Standard 项目的单元测试。
 author: ardalis
 ms.author: wiwagn
 ms.date: 08/30/2017
 ms.custom: seodec18
-ms.openlocfilehash: b63b2706a9a97413a7166c87ae25cbe964e4610b
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: 3fdacd5beb2c6cbfc631d58e99a8741f7a6b233c
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53170010"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53243969"
 ---
 # <a name="unit-testing-in-net-core-and-net-standard"></a>.NET Core 和 .NET Standard 中的单元测试
 
@@ -30,6 +30,8 @@ ms.locfileid: "53170010"
 > ASP.NET 团队遵循[这些约定](https://github.com/aspnet/Home/wiki/Engineering-guidelines#unit-tests-and-functional-tests)帮助开发人员为测试类和方法提供合适的名称。
 
 编写单元测试时，尽量不要引入基础结构依赖项。 这些依赖项会降低测试速度，使测试更加脆弱，应将其保留供集成测试使用。 可以通过遵循 [Explicit Dependencies Principle](https://deviq.com/explicit-dependencies-principle/)（显式依赖项原则）和使用 [Dependency Injection](/aspnet/core/fundamentals/dependency-injection)（依赖项注入）避免应用程序中的这些依赖项。 还可以将单元测试保留在单独的项目中，与集成测试相分隔。 这可确保单元测试项目没有引用或依赖于基础结构包。
+
+## <a name="next-steps"></a>后续步骤
 
 有关 .NET Core 项目中的单元测试的详细信息：
 

@@ -1,16 +1,17 @@
 ---
-title: 数组（C# 编程指南）
+title: 数组 - C# 编程指南
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - arrays [C#]
 - C# language, arrays
 ms.assetid: bb79bdde-e570-4c30-adb0-1dd5759ae041
-ms.openlocfilehash: 2c3f22cb2a011aea9f0fff9ef49d1fd780d6d832
-ms.sourcegitcommit: 7f7664837d35320a0bad3f7e4ecd68d6624633b2
+ms.openlocfilehash: cf684d2ec7ae7282b1ab68817357773f0f96c9ae
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52671953"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53245647"
 ---
 # <a name="arrays-c-programming-guide"></a>数组（C# 编程指南）
 

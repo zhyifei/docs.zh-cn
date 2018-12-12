@@ -6,12 +6,12 @@ title: .NET 文档
 description: 了解如何通过 C#、Visual Basic 和 F# 在任意平台上使用 .NET 创建各种应用程序。 浏览 API 引用、代码示例、教程以及其他内容。
 ms.custom: updateeachrelease
 ms.date: 12/04/2018
-ms.openlocfilehash: c79e7cd77c637ad06854be6a1372fec351a0c45d
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: b53abcb46589a012c5bcf2eff901846074004d09
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53127337"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53240250"
 ---
 <div id="main" class="v2">
     <div class="container">
@@ -27,7 +27,7 @@ ms.locfileid: "53127337"
                                     </div>
                                 </div>
                                 <div class="cardText">
-                                    <h3>C# 入门</h3>
+                                    <h3>学习 C#</h3>
                                 </div>
                             </div>
                         </div>
@@ -172,9 +172,9 @@ ms.locfileid: "53127337"
                                             </div>
                                             <div class="cardText">
                                                 <h3><a href="/dotnet/csharp">C# 指南</a></h3>
-                                                <p><a href="/dotnet/csharp/tutorials/intro-to-csharp">学习 C#</a></p>
                                                 <p><a href="/dotnet/csharp/getting-started">入门</a></p>
                                                 <p><a href="/dotnet/csharp/tour-of-csharp">C# 教程</a></p>
+                                                <p><a href="/dotnet/csharp/whats-new">C# 中的新增功能</a></p>
                                                 <p><a href="/dotnet/csharp/language-reference">C# 语言参考</a></p>
                                             </div>
                                         </div>

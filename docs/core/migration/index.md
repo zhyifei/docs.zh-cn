@@ -2,14 +2,14 @@
 title: 从 project.json 迁移 .NET Core
 description: 了解如何使用 project.json 迁移较旧的 .NET Core 项目
 author: blackdwarf
-ms.author: mairaw
 ms.date: 07/19/2017
-ms.openlocfilehash: 47d9cab48d83581afb9deb2fd91c4c9a6dc85201
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.custom: seodec18
+ms.openlocfilehash: 40a0aaf9d687a580b83e11811effad458f708a85
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 12/10/2018
-ms.locfileid: "53143280"
+ms.locfileid: "53170686"
 ---
 # <a name="migrating-net-core-projects-from-projectjson"></a>从 project.json 迁移 .NET Core 项目
 
@@ -60,7 +60,7 @@ Visual Studio 将迁移自动选择的项目。 迁移解决方案时，如果�
 
 ### <a name="common-issues"></a>常见问题
 
-- 如果收到错误：“未找到任何匹配命令 dotnet-migrate 的可执行文件”：
+- 如果看到错误消息：“找不到匹配命令 dotnet-migrate 的可执行文件”：
 
 请运行 `dotnet --version` 查看所使用的版本。 [`dotnet migrate`](../tools/dotnet-migrate.md) 需要 .NET Core CLI RC3 或更高版本。
 如果当前目录或父级目录中有 global.json 文件，且 `sdk` 版本设置为较低版本，则会收到此错误。

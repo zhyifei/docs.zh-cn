@@ -1,16 +1,17 @@
 ---
-title: 字符串（C# 编程指南）
+title: 字符串 - C# 编程指南
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - C# language, strings
 - strings [C#]
 ms.assetid: 21580405-cb25-4541-89d5-037846a38b07
-ms.openlocfilehash: 7034d37c141d79301bf108b9e7b41ab3e27e2572
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: ba0c9abe9a38962ab19a204019abd3ac89ae6915
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53143917"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53236357"
 ---
 # <a name="strings-c-programming-guide"></a>字符串（C# 编程指南）
 字符串是值为文本的 <xref:System.String> 类型对象。 文本在内部存储为 <xref:System.Char> 对象的依序只读集合。 在 C# 字符串末尾没有 null 终止字符；因此，一个 C# 字符串可以包含任何数量的嵌入的 null 字符 ('\0')。 字符串的 <xref:System.String.Length%2A> 属性表示其包含的 `Char` 对象数量，而非 Unicode 字符数。 若要访问字符串中的各个 Unicode 码位，请使用 <xref:System.Globalization.StringInfo> 对象。  
@@ -36,7 +37,7 @@ ms.locfileid: "53143917"
   
  [!code-csharp[csProgGuideStrings#25](../../../csharp/programming-guide/strings/codesnippet/CSharp/index_3.cs)]  
   
- 有关如何创建基于修改的新字符串的详细信息，例如原始字符串上的搜索和替换操作，请参阅[如何：修改字符串内容](../../how-to/modify-string-contents.md)。  
+ 若要详细了解如何新建基于修改（如对原始字符串执行的搜索和替换操作）的字符串，请参阅[如何：修改字符串内容](../../how-to/modify-string-contents.md)。  
   
 ## <a name="regular-and-verbatim-string-literals"></a>常规和逐字字符串文本  
  在必须嵌入 C# 提供的转义字符时，使用常规字符串文本，如以下示例所示：  
@@ -125,11 +126,11 @@ string s = String.Empty;
   
 ## <a name="related-topics"></a>相关主题  
   
-|主题|描述|  
+|主题|说明|  
 |-----------|-----------------|  
 |[如何：修改字符串内容](../../how-to/modify-string-contents.md)|阐明转换字符串并修改字符串内容的方法。|  
 |[如何：比较字符串](../../how-to/compare-strings.md)|演示如何对字符串执行序号和特定于区域性的比较。|  
-|[如何：串联多个字符串](../../how-to/concatenate-multiple-strings.md)|演示将多个字符串联接成一个字符串的多种方式。|
+|[如何：连接多个字符串](../../how-to/concatenate-multiple-strings.md)|演示将多个字符串联接成一个字符串的多种方式。|
 |[如何：使用 String.Split 分析字符串](../../how-to/parse-strings-using-split.md)|包含代码示例，演示了如何使用 `String.Split` 方法来分析字符串。|  
 |[如何：搜索字符串](../../how-to/search-strings.md)|说明如何在字符串中使用搜索来搜索特定的文本或模式。|  
 |[如何：确定字符串是否表示数值](../../../csharp/programming-guide/strings/how-to-determine-whether-a-string-represents-a-numeric-value.md)|演示如何安全地分析一个字符串，以查看其是否具有有效的数值。|  
