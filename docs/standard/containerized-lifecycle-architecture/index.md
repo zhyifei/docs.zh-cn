@@ -4,12 +4,12 @@ description: 使用 Microsoft 平台和工具的容器化 Docker 应用程序的
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
-ms.openlocfilehash: e9f81c5fecc06b19ebd84cc4b2cc232686768a90
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.openlocfilehash: c2a6b9802bbb995939d33c5c40ef9c1afa1620e5
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37106627"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53148816"
 ---
 # <a name="introduction-to-containers-and-docker"></a>容器和 Docker 简介
 
@@ -23,14 +23,13 @@ ms.locfileid: "37106627"
 
 ![](./media/image1.png)
 
-图 1-1：多个容器在一个容器主机上运行
+图 1-1:在一个容器主机上运行多个容器
 
 在此示例中，Docker 主机是容器主机，而 App 1、App 2、Svc 1 和 Svc 2 是容器化应用程序或服务。
 
-可从容器化获得的另一个优势是可伸缩性。 通过为短期任务创建新容器，可以快速横向扩展。 从应用程序的角度来看，实例化映像（创建容器）类似于实例化服务或 Web 应用等进程。 但出于可靠性考虑，在多个主机服务器上运行同一映像的多个实例时，通常要使每个容器（映像实例）在不同容错域中的不同主机服务器或 VM 中运行。
+可从容器化获得的另一个优势是可伸缩性。 通过为短期任务创建新容器，可以快速横向扩展。 从应用程序的角度来看，实例化映像（创建容器）类似于实例化服务或 Web 应用等进程。 出于可靠性考虑，但是，跨多个主机服务器，运行同一映像的多个实例时您通常希望每个容器 （映像实例） 在不同主机服务器中运行或在不同的容错域中的 VM。
 
 总而言之，容器在整个应用程序生命周期工作流中提供以下优点：隔离性、可移植性、灵活性、可伸缩性和可控性。 最重要的优点是可在开发和操作之间提供隔离。
 
-
 >[!div class="step-by-step"]
-[下一篇](what-is-docker.md)
+>[下一页](what-is-docker.md)

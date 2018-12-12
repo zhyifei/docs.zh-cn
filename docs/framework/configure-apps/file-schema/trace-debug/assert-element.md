@@ -11,11 +11,11 @@ ms.assetid: ef4c3229-b151-4d85-8091-e6456af9b935
 author: mcleblanc
 ms.author: markl
 ms.openlocfilehash: b15e569ff6e42298c0a1de02f77ab7c302c70d86
-ms.sourcegitcommit: 7f7664837d35320a0bad3f7e4ecd68d6624633b2
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52672314"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53154237"
 ---
 # <a name="ltassertgt-element"></a>&lt;断言&gt;元素
 指定调用 <xref:System.Diagnostics.Debug.Assert%2A?displayProperty=nameWithType> 方法时是否显示消息框；另外指定要写入消息的文件的名称。  
@@ -42,7 +42,7 @@ ms.locfileid: "52672314"
   
 ## <a name="assertuienabled-attribute"></a>assertuienabled 属性  
   
-|“值”|描述|  
+|值|描述|  
 |-----------|-----------------|  
 |`true`|显示消息框。 这是默认设置。|  
 |`false`|不显示消息框。|  

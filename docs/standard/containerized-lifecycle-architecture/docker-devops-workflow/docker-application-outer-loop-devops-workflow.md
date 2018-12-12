@@ -4,12 +4,12 @@ description: 使用 Microsoft 平台和工具的容器化 Docker 应用程序的
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/10/2018
-ms.openlocfilehash: a03853a508cfb3d5dd5fbfe66e4ef484b685faaa
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 37dd5481da571be56f134a5e142b7ba46427d7d8
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/15/2018
-ms.locfileid: "45653234"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53143644"
 ---
 # <a name="steps-in-the-outer-loop-devops-workflow-for-a-docker-application"></a>Docker 应用程序的外部循环 DevOps 工作流中的步骤
 
@@ -17,15 +17,15 @@ ms.locfileid: "45653234"
 
 ![](./media/image1.png)
 
-图 5-1： 使用 Microsoft 工具的 Docker 应用程序的 DevOps 外部循环工作流
+图 5-1:使用 Microsoft 工具的 Docker 应用程序的 DevOps 外部循环工作流
 
 现在，让我们检查每个中更详细地介绍这些步骤。
 
-## <a name="step-1-inner-loop-development-workflow"></a>步骤 1： 内部循环开发工作流
+## <a name="step-1-inner-loop-development-workflow"></a>步骤 1：内部循环开发工作流
 
 第 4 章中详细介绍了此步骤，但概括来说，下面是其中外部循环开始时，开发人员将推送到源控件管理系统 （如 Git) 的代码启动 CI 管道操作的时刻。
 
-## <a name="step-2-source-code-control-integration-and-management-with-azure-devops-services-and-git"></a>步骤 2： 源代码管理集成和使用 Azure DevOps 服务和 Git 管理
+## <a name="step-2-source-code-control-integration-and-management-with-azure-devops-services-and-git"></a>步骤 2：源代码管理集成和使用 Azure DevOps 服务和 Git 管理
 
 在此步骤中，您需要有了要收集来自不同的开发人员团队中的所有代码的合并的版本的版本控制系统。
 
@@ -35,7 +35,7 @@ ms.locfileid: "45653234"
 
 Azure DevOps 服务和 Team Foundation Server 支持 Git 和 Team Foundation 版本控制。 可以选择它们，并将其用于端到端 Microsoft 体验。 但是，还可以管理外部存储库 （如 GitHub、 本地 Git 存储库或 Subversion） 中的代码和仍将能够连接到它并获取你的 DevOps CI 管道作为起始点的代码。
 
-## <a name="step-3-build-ci-integrate-and-test-with-azure-devops-services-and-docker"></a>步骤 3： 生成、 CI、 集成和测试 Azure DevOps 服务和 Docker
+## <a name="step-3-build-ci-integrate-and-test-with-azure-devops-services-and-docker"></a>步骤 3：构建 CI，集成和测试 Azure DevOps 服务和 Docker
 
 CI 已成为新式软件测试和交付的标准。 Docker 解决方案维护开发和运营团队之间明确地分离。 Docker 映像的不变性可确保内容已开发、 CI 使用，请通过测试和生产环境中运行之间的可重复部署。 在开发人员的便携式计算机中部署 docker 引擎，测试基础结构，使容器可移植跨环境。
 
@@ -47,11 +47,11 @@ CI 已成为新式软件测试和交付的标准。 Docker 解决方案维护开
 
 使用 Docker 进行部署，"最后一个项目"时要部署应用程序或服务的 Docker 映像中嵌入它们。 这些映像都推送或发布到*Docker 注册表*（私有等存储库可在 Azure 容器注册表中拥有的或公共 Docker 中心注册表，通常用于官方基础映像类似）。
 
-此处是一个基本概念： CI 管道将启动的情况下关闭状态提交到 Git 等源代码管理存储库。 提交会导致 Azure DevOps 服务运行 Docker 容器中的生成作业，并该作业的成功完成后，将 Docker 映像推送到 Docker 注册表中，在图 5-2 所示。
+下面是一个基本概念：CI 管道将启动的情况下关闭状态提交到 Git 等源代码管理存储库。 提交会导致 Azure DevOps 服务运行 Docker 容器中的生成作业，并该作业的成功完成后，将 Docker 映像推送到 Docker 注册表中，在图 5-2 所示。
 
 ![](./media/image2.png)
 
-图 5-2： 所涉及的步骤在 CI 中
+图 5-2:在 CI 中所涉及的步骤
 
 下面是使用 Docker 和 Azure DevOps 服务的基本 CI 工作流步骤：
 
@@ -73,7 +73,7 @@ CI 已成为新式软件测试和交付的标准。 Docker 解决方案维护开
 
 ![](./media/image3.png)
 
-图 5-3: Azure DevOps 服务中的 Docker CI 管道
+图 5-3:Azure DevOps 服务中的 Docker CI 管道
 
 Docker 扩展可以使用服务终结点，为 Docker 主机和容器或映像注册表。 任务默认为使用本地 Docker 主机如果可用 （这当前需要自定义的 Azure DevOps 服务代理）;否则，它们需要你提供 Docker 主机连接。 操作依赖于进行身份验证与 Docker 注册表，例如将推送一个映像，需要提供 Docker 注册表连接。
 
@@ -145,7 +145,7 @@ Docker 映像已测试并验证后，你将想要标记并将其发布到 Docker
 
 ![](./media/image4.png)
 
-图 5-4： 将自定义映像发布到 Docker 注册表
+图 5-4:正在自定义映像发布到 Docker 注册表
 
 有多个产品/服务的 Azure 容器注册表、 Amazon Web 服务容器注册表、 Google 容器注册表、 Quay 注册表等云供应商提供 Docker 注册表。
 
@@ -153,11 +153,11 @@ Docker 映像已测试并验证后，你将想要标记并将其发布到 Docker
 
 ![](./media/image5.png)
 
-图 5-5： 使用 Azure DevOps 服务为发布到 Docker 注册表的自定义映像
+图 5-5:使用 Azure DevOps 服务为发布到 Docker 注册表的自定义映像
 
 **详细信息** 若要了解有关 Azure DevOps 服务的 Docker 扩展，请转到<https://aka.ms/vstsdockerextension>。 若要了解有关 Azure 容器注册表的详细信息，请转到<https://aka.ms/azurecontainerregistry>。
 
-## <a name="step-4-cd-deploy"></a>步骤 4: CD 部署
+## <a name="step-4-cd-deploy"></a>步骤 4：CD，部署
 
 Docker 映像的不可变性可以确保具有什么开发、 CI 使用，请通过测试并在生产环境中运行的可重复部署。 在 Docker 注册表 （专用或公用） 中发布的应用程序 Docker 映像后，您可以将其部署到你可能有多个环境 (生产、 QA、 暂存、 等) 从 CD 管道通过使用 Azure DevOps 服务管道任务或 Azure DevOps 服务版本管理。
 
@@ -169,13 +169,13 @@ Docker 映像的不可变性可以确保具有什么开发、 CI 使用，请通
 
 ![](./media/image6.png)
 
-图 5-6： 将应用程序的容器部署到简单的 Docker 主机环境注册表
+图 5-6:将应用程序的容器部署到简单的 Docker 主机环境注册表
 
 图 5-7 突出显示了如何连接生成 CI QA/测试环境，通过 Azure DevOps 服务通过单击添加任务对话框中的 Docker Compose。 但是，部署到过渡或生产环境时，你通常将处理多个环境的发布管理功能 (如 QA、 过渡和生产)。 如果你正在部署到单个 Docker 主机，它使用 Azure DevOps 服务"Docker Compose"任务 (这调用 docker-compose up 实质上的命令)。 如果你正在部署到 Azure 容器服务，它使用 Docker 部署任务，如后面的部分中所述。
 
 ![](./media/image7.png)
 
-图 5-7： 添加 Azure DevOps 服务管道中的 Docker Compose 任务
+图 5-7:Azure DevOps 服务管道中添加 Docker Compose 任务
 
 当在 Azure DevOps 服务中创建发布时，花了一套输入项目。 用于在多个环境是不可变的整个生存期内发布。 在引入容器时，输入的项目标识注册表部署中的映像。 具体取决于如何标识这些，不保证保持不变，则整个发布，最明显的情况下，docker-compose 文件中引用"myimage:latest"时的持续时间。
 
@@ -187,7 +187,7 @@ Docker 映像的不可变性可以确保具有什么开发、 CI 使用，请通
 
 ![](./media/image8.png)
 
-图 5-8： 配置 Azure DevOps 服务 Docker Compose 通过 Azure DevOps 服务版本管理的任务
+图 5-8:Azure DevOps 服务 Docker Compose 通过 Azure DevOps 服务版本管理的任务的配置
 
 但是，请记住在图 5-6 所示和实现图 5-8 中的方案是相当基本的 （它部署简单的 Docker 主机和 Vm，并且将单个容器或每个映像的实例），并且可能仅应该用于开发或测试 scenarios。 在大多数企业生产方案中，你会想要具有高可用性 (HA) 和易于管理可伸缩性的负载平衡跨多个节点、 服务器和 Vm，以及"智能故障转移"因此，如果服务器或节点发生故障，其服务和容器将移到另一个主机服务器或 VM。 在这种情况下，您需要更高级的技术，如容器群集、 业务流程协调程序和计划程序。 因此，将部署到这些群集的方法是精确地通过下一节中所述的高级方案。
 
@@ -201,19 +201,19 @@ Docker 映像的不可变性可以确保具有什么开发、 CI 使用，请通
 
 ![](./media/image9.png)
 
-图 5-9： 分布式应用程序部署到容器服务
+图 5-9:分布式应用程序部署到容器服务
 
 最初，部署到特定群集或业务流程协调程序时，您将传统上使用特定的部署脚本和机制按每个业务流程协调程序 （即，Mesosphere DC/OS 或 Kubernetes 具有不同的部署机制比 Docker 和 DockerSwarm) 而不是更简单、 易于使用 docker compose 根据的 docker-compose.yml 定义文件的工具。 但是，得益于 Microsoft Azure DevOps 服务 Docker 部署任务中，显示在图 5-10，你现在还可以部署到 DC/OS 通过只使用熟悉的 docker-compose.yml 文件，因为 Microsoft 会为您执行该"转换"(从你docker-compose.yml 文件为其他格式所需的 DC/OS）。
 
 ![](./media/image10.png)
 
-图 5-10： 将 Docker 部署任务添加到环境 RM
+图 5-10:将 Docker 部署任务添加到环境 RM
 
 图 5-11 演示了如何编辑 Docker 部署任务和指定目标类型 (Azure 容器服务 DC/OS，在此情况下)、 在 Docker Compose 文件，以及 （如 Azure 容器注册表或 Docker 中心） 的 Docker 注册表连接。 这是该任务将在其中检索随时可用自定义 Docker 映像部署为 DC/OS 群集中的容器。
 
 ![](./media/image11.png)
 
-图 5-11: Docker 部署任务定义部署到 Azure 容器服务 DC/OS
+图 5-11:Docker 部署任务定义部署到 Azure 容器服务 DC/OS
 
 **详细信息** 若要了解更多有关使用 Azure DevOps 服务和 Docker 在 CD 管道，请访问以下站点：
 
@@ -223,16 +223,16 @@ Azure 容器服务： <https://aka.ms/azurecontainerservice>
 
 Mesosphere DC/OS: <https://mesosphere.com/product/>
 
-## <a name="step-5-run-and-manage"></a>步骤 5： 运行和管理
+## <a name="step-5-run-and-manage"></a>步骤 5：运行和管理
 
 因为运行和管理应用程序在企业生产级别为主要使用者在和的本身，并由于操作的类型，并且在该级别 （IT 操作） 以及此区域的大范围的人员，我们另辟整个接下来为解释它的一章。
 
-## <a name="step-6-monitor-and-diagnose"></a>步骤 6： 监视和诊断
+## <a name="step-6-monitor-and-diagnose"></a>步骤 6:监视和诊断
 
 本主题还介绍了下一步一章中的 IT 操作在生产系统; 执行的任务的一部分但是，务必要突出显示在此步骤中获得的见解必须馈送回到开发团队，以便应用程序不断得到改进。 从该角度来看，它也是一部分的 DevOps，尽管任务和操作通常由执行 IT。
 
 仅监视和诊断在 DevOps 领域中的 100%时，监视进程和由开发团队针对测试或 beta 环境执行的分析。 这是通过执行负载测试或只需通过监视 beta 或 QA 环境，beta 版测试人员正在新版本。
 
 >[!div class="step-by-step"]
-[上一页](index.md)
-[下一页](../run-manage-monitor-docker-environments/index.md)
+>[上一页](index.md)
+>[下一页](../run-manage-monitor-docker-environments/index.md)

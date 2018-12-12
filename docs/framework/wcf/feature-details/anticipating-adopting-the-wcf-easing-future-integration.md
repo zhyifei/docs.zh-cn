@@ -1,15 +1,15 @@
 ---
-title: 预期采用 Windows Communication Foundation：便于以后集成
+title: 预期采用 Windows Communication Foundation:便于以后集成
 ms.date: 03/30/2017
 ms.assetid: 3028bba8-6355-4ee0-9ecd-c56e614cb474
 ms.openlocfilehash: f4cc450b04fd05d390a1f41f3d14c19f4b23be29
-ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "52296486"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53155140"
 ---
-# <a name="anticipating-adopting-the-windows-communication-foundation-easing-future-integration"></a>预期采用 Windows Communication Foundation：便于以后集成
+# <a name="anticipating-adopting-the-windows-communication-foundation-easing-future-integration"></a>预期采用 Windows Communication Foundation:便于以后集成
 如果现在使用 ASP.NET，并希望在将来使用 WCF，本主题将提供指南以确保新的 ASP.NET Web 服务，将也与 WCF 应用程序一起正常工作。  
   
 ## <a name="general-recommendations"></a>一般性建议  
@@ -44,4 +44,4 @@ public interface IEcho
  避免使用 Internet Information Services (IIS) 提供的身份验证选项。 WCF 客户端不支持它们。 如果服务需要提供保护，使用 WCF 提供的因为这些选项更丰富和基于标准协议的选项。  
   
 ## <a name="see-also"></a>请参阅  
- [预期采用 Windows Communication Foundation：便于以后迁移](../../../../docs/framework/wcf/feature-details/anticipating-adopting-wcf-migration.md)
+ [预期采用 Windows Communication Foundation:使未来迁移轻而易举](../../../../docs/framework/wcf/feature-details/anticipating-adopting-wcf-migration.md)

@@ -4,12 +4,12 @@ description: 使用 Microsoft 平台和工具的容器化 Docker 应用程序的
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/21/2017
-ms.openlocfilehash: 056fb613c078cc407380060dc11890406ac8cffd
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 360a404e38651b78acc3a52d8102a4dae71f3e30
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50197673"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53152703"
 ---
 # <a name="what-is-docker"></a>什么是 Docker？
 
@@ -17,7 +17,7 @@ ms.locfileid: "50197673"
 
 ![](./media/image2.png)
 
-图 1-2: Docker 部署混合云的所有层的容器
+图 1-2:Docker 在混合云的所有层部署容器
 
 Docker 映像容器可以在 Linux 和 Windows 上本机运行。 但是，仅在 Windows 主机上可以运行 Windows 映像和 Linux 映像可以仅在 Linux 主机，这意味着主机服务器或 VM 上运行。
 
@@ -49,9 +49,8 @@ Docker 映像容器可以在 Linux 和 Windows 上本机运行。 但是，仅�
 
 ![](./media/image3.png)
 
-图 1-3： 比较的传统 Vm 到 Docker 容器
-
+图 1-3:传统 Vm 到 Docker 容器的比较
 
 >[!div class="step-by-step"]
-[上一页](index.md)
-[下一页](docker-terminology.md)
+>[上一页](index.md)
+>[下一页](docker-terminology.md)

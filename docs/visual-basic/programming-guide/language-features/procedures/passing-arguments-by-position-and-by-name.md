@@ -23,11 +23,11 @@ helpviewer_keywords:
 - arguments [Visual Basic], listing by name
 ms.assetid: 1ad7358f-1da9-48da-a95b-f3c7ed41eff3
 ms.openlocfilehash: bdaa0351e288b85a3e35818c0f53ef4d772932e5
-ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "52296446"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53151301"
 ---
 # <a name="passing-arguments-by-position-and-by-name-visual-basic"></a>按位置和名称传递自变量 (Visual Basic)
 当您调用`Sub`或`Function`过程中，您可以将参数传递*按位置*— 过程的定义中出现的顺序，或将它们传递*按名称*，而无需考虑位置。  
@@ -64,7 +64,7 @@ ms.locfileid: "52296446"
   
  在前面的示例中，没有多余的逗号，才可保存的位置的省略`age`自变量，因为`birth`按名称传递了。  
   
-在 Visual basic 15.5 之前的版本，在你的混合位置和名称、 位置自变量形式提供参数时都必须放在第一个。 按名称提供参数后, 剩下的自变量必须所有传递的名称。  例如，以下调用到`Display`方法会显示编译器错误[BC30241： 需要命名参数](../../../misc/bc30241.md)。
+在 Visual basic 15.5 之前的版本，在你的混合位置和名称、 位置自变量形式提供参数时都必须放在第一个。 按名称提供参数后, 剩下的自变量必须所有传递的名称。  例如，以下调用到`Display`方法会显示编译器错误[BC30241:需要命名参数](../../../misc/bc30241.md)。
 
 [!code-vb[ByNameAndPosition](../../../../../samples/snippets/visualbasic/programming-guide/language-features/passing-named-arguments/module1.vb#6)] 
 
@@ -97,7 +97,7 @@ ms.locfileid: "52296446"
 ## <a name="see-also"></a>请参阅  
  [过程](./index.md)  
  [过程参数和自变量](./procedure-parameters-and-arguments.md)  
- [如何：将自变量传递给过程](./how-to-pass-arguments-to-a-procedure.md)  
+ [如何：将参数传递给过程](./how-to-pass-arguments-to-a-procedure.md)  
  [按值和按引用传递自变量](./passing-arguments-by-value-and-by-reference.md)  
  [可选参数](./optional-parameters.md)  
  [参数数组](./parameter-arrays.md)  

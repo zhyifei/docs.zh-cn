@@ -7,12 +7,12 @@ helpviewer_keywords:
 - queries [LINQ in C#], writing
 - writing LINQ queries
 ms.assetid: 2962a610-419a-4276-9ec8-4b7f2af0c081
-ms.openlocfilehash: 2cac07c8eb02465334af47fd46702b60f1371c68
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: ffff8317e6524acc877b7d0851e5a1b37967b1f0
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43745318"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53154069"
 ---
 # <a name="walkthrough-writing-queries-in-c-linq"></a>演练：用 C# 编写查询 (LINQ)
 此演练演示用于编写 LINQ 查询表达式的 C# 语言功能。  
@@ -87,7 +87,7 @@ ms.locfileid: "43745318"
   
 1.  在 `where` 子句中，可以组合多个布尔条件，以便进一步细化查询。 以下代码添加了一个条件，以便该查询返回第一个分数高于 90 分，并且最后一个分数低于 80 分的那些学生。 `where` 子句应与以下代码类似。  
   
-    ```  
+    ```csharp
     where student.Scores[0] > 90 && student.Scores[3] < 80  
     ```  
   
@@ -99,19 +99,19 @@ ms.locfileid: "43745318"
   
 1.  如果结果按某种顺序排列，则浏览结果会更容易。 你可以根据源元素中的任何可访问字段对返回的序列进行排序。 例如，以下 `orderby` 子句将结果按照每个学生的姓氏以字母从 A 到 Z 的顺序排列。 将以下 `orderby` 子句添加到查询中，紧跟 `where` 语句之后、`select` 语句之前：  
   
-    ```  
+    ```csharp
     orderby student.Last ascending  
     ```  
   
 2.  现在，更改 `orderby` 子句，以便将结果根据第一次测试的分数以倒序（从最高分到最低分）的顺序排列。  
   
-    ```  
+    ```csharp
     orderby student.Scores[0] descending  
     ```  
   
 3.  更改 `WriteLine` 格式字符串，以便查看分数：  
   
-    ```  
+    ```csharp
     Console.WriteLine("{0}, {1} {2}", student.Last, student.First, student.Scores[0]);  
     ```  
   
@@ -157,7 +157,7 @@ ms.locfileid: "43745318"
   
 #### <a name="to-use-method-syntax-in-a-query-expression"></a>在查询表达式中使用方法语法  
   
-1.  如 [LINQ 中的查询语法和方法语法](../../../../csharp/programming-guide/concepts/linq/query-syntax-and-method-syntax-in-linq.md) 中所述，某些查询操作只能使用方法语法来表示。 以下代码为源序列中的每个 `Student` 计算总分，然后对该查询的结果调用 `Average()` 方法来计算班级平均分。 请注意，查询表达式的两边使用了括号。  
+1.  如 [LINQ 中的查询语法和方法语法](../../../../csharp/programming-guide/concepts/linq/query-syntax-and-method-syntax-in-linq.md) 中所述，某些查询操作只能使用方法语法来表示。 以下代码为源序列中的每个 `Student` 计算总分，然后对该查询的结果调用 `Average()` 方法来计算班级平均分。
   
      [!code-csharp[csLINQGettingStarted#19](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/walkthrough-writing-queries-linq_9.cs)]  
   

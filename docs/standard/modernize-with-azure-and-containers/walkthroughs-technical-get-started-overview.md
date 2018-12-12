@@ -4,12 +4,12 @@ description: 更新现有.NET 应用程序使用 Azure 云和 Windows 容器 |�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 04/28/2018
-ms.openlocfilehash: 1c23acc16698446bc07c0047b68186e21c2ceb2d
-ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
+ms.openlocfilehash: f5a9d0c7c1c45a6afca390e93384af4c8386fe09
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "49372846"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53150584"
 ---
 # <a name="walkthroughs-and-technical-get-started-overview"></a>演练和技术可帮助入门的概述
 
@@ -36,7 +36,7 @@ ms.locfileid: "49372846"
 - **部署到 Azure Service Fabric Windows 基于容器的应用程序**
 
 
-## <a name="walkthrough-1-tour-of-eshop-legacy-apps"></a>演练 1： 之旅的 eShop 传统应用程序
+## <a name="walkthrough-1-tour-of-eshop-legacy-apps"></a>演练 1:EShop 旧版应用的教程
 
 ### <a name="technical-walkthrough-availability"></a>技术演练可用性
 
@@ -55,7 +55,7 @@ ms.locfileid: "49372846"
 
 本演练中的主要目标是只需熟悉这些应用程序，以及其代码和配置。 可以配置应用程序，使它们生成和使用模拟数据，而无需使用 SQL 数据库中，出于测试目的。 此可选配置基于依赖关系注入，方法中。
 
-### <a name="scenario-1-aspnet-web-apps"></a>方案 1: ASP.NET Web 应用程序
+### <a name="scenario-1-aspnet-web-apps"></a>方案 1:ASP.NET Web 应用程序
 
 下图显示了原始的旧版 ASP.NET web 应用程序的简单方案。
 
@@ -70,7 +70,7 @@ ms.locfileid: "49372846"
 
 依赖关系在 ASP.NET 4.x 或更早版本 （不管是 MVC 或 Web 窗体） 意味着除非通过使用 ASP.NET Core MVC 完全重写代码，这些应用程序不会运行.NET Core 上。 
 
-### <a name="scenario-2-wcf-service-and-winforms-client-app-3-tier-app"></a>方案 2: WCF 服务和 WinForms 客户端应用程序 （第 3 层应用程序）
+### <a name="scenario-2-wcf-service-and-winforms-client-app-3-tier-app"></a>方案 2:WCF 服务和 WinForms 客户端应用程序 （第 3 层应用程序）
 
 下图显示了原始的第 3 层旧应用程序的简单方案。
 
@@ -79,7 +79,7 @@ ms.locfileid: "49372846"
 
 ### <a name="benefits"></a>优点
 
-本演练的好处很简单： 只需熟悉的代码和初始应用程序。
+本演练的好处很简单：只需熟悉的代码和初始应用程序。
 
 ### <a name="next-steps"></a>后续步骤
 
@@ -89,7 +89,7 @@ ms.locfileid: "49372846"
   - [基线 WCF 服务和 WinForms （3 层）"传统"应用程序的教程](https://github.com/dotnet-architecture/eShopModernizing/wiki/21.-Tour-on-the-WCF-service-and-WinForms-apps)
 
 
-## <a name="walkthrough-2-containerize-your-existing-net-applications-with-windows-containers"></a>演练 2： 容器化现有.NET 应用程序与 Windows 容器
+## <a name="walkthrough-2-containerize-your-existing-net-applications-with-windows-containers"></a>演练 2:容器化现有.NET 应用程序与 Windows 容器
 
 ### <a name="overview"></a>概述
 
@@ -107,7 +107,7 @@ ms.locfileid: "49372846"
 
 本演练重点介绍 Visual Studio 2017 Tools for Docker 方法，但其他两种方法是从使用 Dockerfile 非常相似。
 
-### <a name="scenario-1-containerized-aspnet-web-apps"></a>方案 1： 容器化的 ASP.NET web 应用
+### <a name="scenario-1-containerized-aspnet-web-apps"></a>方案 1:容器化的 ASP.NET web 应用
 
 下图显示了容器化的 eShop 旧版 web 应用应用程序的方案。
 
@@ -115,7 +115,7 @@ ms.locfileid: "49372846"
 >
 
 
-### <a name="scenario-2-containerized-wcf-service"></a>方案 2： 容器化的 WCF 服务
+### <a name="scenario-2-containerized-wcf-service"></a>方案 2:容器化的 WCF 服务
 
 下图显示了包含容器化的 WCF 服务的第 3 层应用程序的方案。 
 
@@ -141,7 +141,7 @@ ms.locfileid: "49372846"
 
 
 
-## <a name="walkthrough-3-deploy-your-windows-containers-based-app-to-azure-vms"></a>演练 3： 将 Windows 基于容器的应用部署到 Azure Vm
+## <a name="walkthrough-3-deploy-your-windows-containers-based-app-to-azure-vms"></a>演练 3:将 Windows 基于容器的应用部署到 Azure Vm
 
 ### <a name="technical-walkthrough-availability"></a>技术演练可用性
 
@@ -159,19 +159,19 @@ ms.locfileid: "49372846"
 
 在本演练涵盖了几个方案。
 
-#### <a name="scenario-a-deploy-to-an-azure-vm-from-a-dev-pc-through-docker-engine-connection"></a>情况 a： 部署到 Azure VM 从开发人员电脑通过 Docker 引擎连接
+#### <a name="scenario-a-deploy-to-an-azure-vm-from-a-dev-pc-through-docker-engine-connection"></a>情况 a:从开发人员电脑通过 Docker 引擎连接部署到 Azure VM
 
 ![从开发人员电脑通过 Docker 引擎连接部署到 Azure VM](./media/image5-4.png)
 
 > **图 5-4**。 从开发人员电脑通过 Docker 引擎连接部署到 Azure VM
 
-#### <a name="scenario-b-deploy-to-an-azure-vm-through-a-docker-registry"></a>方案 b： 部署到 Azure VM 通过 Docker 注册表
+#### <a name="scenario-b-deploy-to-an-azure-vm-through-a-docker-registry"></a>方案 b:部署到 Azure VM 通过 Docker 注册表
 
 ![部署到 Azure VM 通过 Docker 注册表](./media/image5-5.png)
 
 > **图 5-5**。 部署到 Azure VM 通过 Docker 注册表
 
-#### <a name="scenario-c-deploy-to-an-azure-vm-from-cicd-pipelines-in-azure-devops-services"></a>方案 c： 部署到 Azure VM 从 Azure DevOps 服务中的 CI/CD 管道
+#### <a name="scenario-c-deploy-to-an-azure-vm-from-cicd-pipelines-in-azure-devops-services"></a>方案 c:从 Azure DevOps 服务中的 CI/CD 管道部署到 Azure VM
 
 ![从 Azure DevOps 服务中的 CI/CD 管道部署到 Azure VM](./media/image5-6.png)
 
@@ -193,7 +193,7 @@ Azure 当前提供了一个名为的虚拟机**Windows Server 2016 with Containe
 
 [https://github.com/dotnet-architecture/eShopModernizing/wiki/03.-How-to-deploy-your-Windows-Containers-based-app-into-Azure-VMs-(Including-CI-CD)](https://github.com/dotnet-architecture/eShopModernizing/wiki/03.-How-to-deploy-your-Windows-Containers-based-app-into-Azure-VMs-(Including-CI-CD))
 
-## <a name="walkthrough-4-deploy-your-windows-containers-based-apps-to-azure-container-instances-aci"></a>演练 4： 将 Windows 基于容器的应用部署到 Azure 容器实例 (ACI)
+## <a name="walkthrough-4-deploy-your-windows-containers-based-apps-to-azure-container-instances-aci"></a>演练 4:将 Windows 基于容器的应用部署到 Azure 容器实例 (ACI)
 
 ### <a name="technical-walkthrough-availability"></a>技术演练可用性
 
@@ -232,7 +232,7 @@ Azure 容器实例轻松创建和管理 Docker 容器在 Azure 中，而无需�
 [https://github.com/dotnet-architecture/eShopModernizing/wiki/05.-Deploying-the-Apps-to-ACI-(Azure-Container-Instances)](https://github.com/dotnet-architecture/eShopModernizing/wiki/05.-Deploying-the-Apps-to-ACI-(Azure-Container-Instances)TBD)
 
 
-## <a name="walkthrough-5-deploy-your-windows-containers-based-apps-to-kubernetes-in-azure-container-service"></a>演练 5： 将 Windows 基于容器的应用部署到 Azure 容器服务中 Kubernetes
+## <a name="walkthrough-5-deploy-your-windows-containers-based-apps-to-kubernetes-in-azure-container-service"></a>演练 5:将 Windows 基于容器的应用部署到 Azure 容器服务中 Kubernetes
 
 ### <a name="technical-walkthrough-availability"></a>技术演练可用性
 
@@ -254,13 +254,13 @@ Azure 容器实例轻松创建和管理 Docker 容器在 Azure 中，而无需�
 
 ### <a name="scenarios"></a>方案
 
-#### <a name="scenario-a-deploy-directly-to-a-kubernetes-cluster-from-a-dev-environment"></a>情况 a： 部署到 Kubernetes 群集直接从开发环境
+#### <a name="scenario-a-deploy-directly-to-a-kubernetes-cluster-from-a-dev-environment"></a>情况 a:将直接部署到 Kubernetes 群集从开发环境
 
 ![将直接部署到 Kubernetes 群集从开发环境](./media/image5-7.png)
 
 > **图 5-7**。 将直接部署到 Kubernetes 群集从开发环境
 
-#### <a name="scenario-b-deploy-to-a-kubernetes-cluster-from-cicd-pipelines-in-azure-devops-services"></a>方案 b： 部署到 Kubernetes 群集中的 CI/CD 管道中 Azure DevOps 服务
+#### <a name="scenario-b-deploy-to-a-kubernetes-cluster-from-cicd-pipelines-in-azure-devops-services"></a>方案 b:从 Azure DevOps 服务中的 CI/CD 管道部署到 Kubernetes 群集
 
 ![从 Azure DevOps 服务中的 CI/CD 管道部署到 Kubernetes 群集](./media/image5-8.png)
 
@@ -292,7 +292,7 @@ Azure 容器服务特别为 Azure 优化了常用的开源工具和技术。 获
 
 浏览 GitHub wiki 上的更深入此内容： [https://github.com/dotnet-architecture/eShopModernizing/wiki/04.-How-to-deploy-your-Windows-Containers-based-apps-into-Kubernetes-in-Azure-Container-Service-(Including-C-CD)](https://github.com/dotnet-architecture/eShopModernizing/wiki/04.-How-to-deploy-your-Windows-Containers-based-apps-into-Kubernetes-in-Azure-Container-Service-(Including-C-CD))
 
-## <a name="walkthrough-6-deploy-your-windows-containers-based-apps-to-azure-service-fabric"></a>演练 6： 部署到 Azure Service Fabric Windows 基于容器的应用程序
+## <a name="walkthrough-6-deploy-your-windows-containers-based-apps-to-azure-service-fabric"></a>演练 6:部署到 Azure Service Fabric Windows 基于容器的应用程序
 
 ### <a name="technical-walkthrough-availability"></a>技术演练可用性
 
@@ -314,13 +314,13 @@ Azure 容器服务特别为 Azure 优化了常用的开源工具和技术。 获
 
 ### <a name="scenarios"></a>方案
 
-#### <a name="scenario-a-deploy-directly-to-a-service-fabric-cluster-from-a-dev-environment"></a>情况 a： 部署到 Service Fabric 群集的直接从开发环境
+#### <a name="scenario-a-deploy-directly-to-a-service-fabric-cluster-from-a-dev-environment"></a>情况 a:将直接部署到 Service Fabric 群集从开发环境
 
 ![将直接部署到 Service Fabric 群集从开发环境](./media/image5-9.png)
 
 > **图 5-9**。 将直接部署到 Service Fabric 群集从开发环境
 
-### <a name="scenario-b-deploy-to-a-service-fabric-cluster-from-cicd-pipelines-in-azure-devops-services"></a>方案 b： 部署到 Service Fabric 群集中的 CI/CD 管道中 Azure DevOps 服务
+### <a name="scenario-b-deploy-to-a-service-fabric-cluster-from-cicd-pipelines-in-azure-devops-services"></a>方案 b:从 Azure DevOps 服务中的 CI/CD 管道部署到 Service Fabric 群集
 
 ![从 Azure DevOps 服务中的 CI/CD 管道部署到 Service Fabric 群集](./media/image5-10.png)
 
@@ -367,5 +367,5 @@ Azure Service Fabric 提供了容器和应用程序配置为可移植性。 您�
 [https://github.com/dotnet-architecture/eShopModernizing/wiki/05.-How-to-deploy-your-Windows-Containers-based-apps-into-Azure-Service-Fabric-(Including-CI-CD)](https://github.com/dotnet-architecture/eShopModernizing/wiki/05.-How-to-deploy-your-Windows-Containers-based-apps-into-Azure-Service-Fabric-(Including-CI-CD))
 
 >[!div class="step-by-step"]
-[上一页](lift-and-shift-existing-apps-devops/migrate-to-hybrid-cloud-scenarios.md)
-[下一页](conclusions.md)
+>[上一页](lift-and-shift-existing-apps-devops/migrate-to-hybrid-cloud-scenarios.md)
+>[下一页](conclusions.md)

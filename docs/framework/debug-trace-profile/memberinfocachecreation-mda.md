@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 5abdad23-1335-4744-8acb-934002c0b6fe
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e20a04e76fb26409396a4f0b9fbfc7d86f253e46
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5ebc449985a8e2617b278f04c91d243ca11b637e
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33392081"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53145197"
 ---
 # <a name="memberinfocachecreation-mda"></a>memberInfoCacheCreation MDA
 创建 <xref:System.Reflection.MemberInfo> 缓存时，将激活 `memberInfoCacheCreation` 托管调试助手 (MDA)。 这一点强烈表明程序正在使用资源昂贵的反射功能。  
@@ -52,7 +52,7 @@ ms.locfileid: "33392081"
 ## <a name="example"></a>示例  
  此示例代码将激活 `memberInfoCacheCreation` MDA。  
   
-```  
+```csharp
 using System;  
   
 public class Exe  

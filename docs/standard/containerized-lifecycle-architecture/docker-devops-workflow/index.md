@@ -4,12 +4,12 @@ description: 使用 Microsoft 平台的容器化 Docker 应用程序生命周期
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
-ms.openlocfilehash: d313cb8ff6762eba6534ca20b214063315a456f0
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: a78b6cbae88dcc39d7452a67a2bc5239135dedf9
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47086588"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53128435"
 ---
 # <a name="docker-application-devops-workflow-with-microsoft-tools"></a>使用 Microsoft 工具的 Docker 应用程序 DevOps 工作流
 
@@ -21,7 +21,7 @@ Microsoft 工具可以自动完成的容器化应用程序的具体实现管道-
 
 开发者和测试者可以使用 Microsoft Azure 中的模板快速轻松地配置生产环境，如基于 Docker 的开发和测试环境。
 
-容器化应用程序开发的复杂度根据业务复杂度和可伸缩性需要逐步增加。 一个很好的示例就是基于微服务体系结构的应用程序。 要在此类环境中取得成功，你的项目必须在整个生命周期（而不仅是在生成和部署阶段）实现自动化，同时还必须管理版本并收集遥测数据。 Azure DevOps 服务和 Azure 提供了以下功能：
+容器化应用程序开发的复杂度根据业务复杂度和可伸缩性需要逐步增加。 一个很好的示例就是基于微服务体系结构的应用程序。 若要成功执行在此类环境中，你的项目必须自动执行整个生命周期 — 不仅生成和部署，但它还必须管理版本并收集遥测数据。 Azure DevOps 服务和 Azure 提供了以下功能：
 
 -   Azure DevOps Services/Team Foundation Server 源代码管理 （基于 Git 或 Team Foundation 版本控制），敏捷规划 （Agile、 Scrum 和 CMMI 支持），CI、 发布管理和敏捷团队的其他工具。
 
@@ -33,7 +33,6 @@ Microsoft 工具可以自动完成的容器化应用程序的具体实现管道-
 
 -   组织可以使用 Azure 资源管理器和熟悉的工具，轻松从 Azure 容器注册表中存储的专用映像配置 Docker 容器以及 Azure 组件（数据、PaaS 等）的任何依赖项。
 
-
 >[!div class="step-by-step"]
-[上一页](../design-develop-containerized-apps/set-up-windows-containers-with-powershell.md)
-[下一页](docker-application-outer-loop-devops-workflow.md)
+>[上一页](../design-develop-containerized-apps/set-up-windows-containers-with-powershell.md)
+>[下一页](docker-application-outer-loop-devops-workflow.md)

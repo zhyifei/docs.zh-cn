@@ -2,12 +2,12 @@
 title: SqlClient 流支持
 ms.date: 03/30/2017
 ms.assetid: c449365b-470b-4edb-9d61-8353149f5531
-ms.openlocfilehash: 7c9c7300678b9e285965a3c1b673a92b6f26973e
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: a393274a7cf40b01399c5909c2d5ec4097ec9310
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50191032"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53152885"
 ---
 # <a name="sqlclient-streaming-support"></a>SqlClient 流支持
 SQL Server 和应用程序之间的流支持 (中的新增功能[!INCLUDE[net_v45](../../../../includes/net-v45-md.md)]) 支持在服务器 （文档、 图像和媒体文件） 上的非结构化的数据。 SQL Server 数据库可以存储二进制大型对象 (Blob)，但检索 BLOB 会使用大量内存。  
@@ -76,7 +76,7 @@ SQL Server 和应用程序之间的流支持 (中的新增功能[!INCLUDE[net_v4
 ## <a name="sample----streaming-from-sql-server"></a>从 SQL Server 流式处理示例-  
  请使用以下 [!INCLUDE[tsql](../../../../includes/tsql-md.md)] 来创建示例数据库：  
   
-```  
+```sql
 CREATE DATABASE [Demo]  
 GO  
 USE [Demo]  
@@ -105,7 +105,7 @@ GO
   
 -   将大型文件 (Blob) 从一个 SQL Server 数据库传输到另一个没有内存不足。  
   
-```  
+```csharp
 using System;  
 using System.Data;  
 using System.Data.SqlClient;  
@@ -297,7 +297,7 @@ namespace StreamingFromServer {
 ## <a name="sample----streaming-to-sql-server"></a>示例--流式传输到 SQL Server  
  请使用以下 [!INCLUDE[tsql](../../../../includes/tsql-md.md)] 来创建示例数据库：  
   
-```  
+```sql
 CREATE DATABASE [Demo2]  
 GO  
 USE [Demo2]  
@@ -330,7 +330,7 @@ GO
   
 -   从一台 SQL 服务器流到另一个使用新的异步功能。  
   
-```  
+```csharp
 using System;  
 using System.Data;  
 using System.Data.SqlClient;  
@@ -453,7 +453,7 @@ namespace StreamingToServer {
 ## <a name="sample----streaming-from-one-sql-server-to-another-sql-server"></a>示例--流从一台 SQL 服务器到另一个 SQL Server  
  此示例演示如何以异步方式流式传输到另一个，支持取消将大型 BLOB 从一个 SQL Server。  
   
-```  
+```csharp
 using System;  
 using System.Data;  
 using System.Data.SqlClient;  

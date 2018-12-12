@@ -1,5 +1,5 @@
 ---
-title: 如何：承载和运行基本的 Windows Communication Foundation 服务
+title: 如何：托管和运行基本 Windows Communication Foundation 服务
 ms.date: 09/14/2018
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - WCF services [WCF]
 - WCF services [WCF], running
 ms.assetid: 31774d36-923b-4e2d-812e-aa190127266f
-ms.openlocfilehash: b79c3246b7c12a3a99a5c68586387fc30573dcb6
-ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
+ms.openlocfilehash: 710ccd69d7b0f8cd8cd3e04729fd952308a3fb4a
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46562289"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53129371"
 ---
-# <a name="how-to-host-and-run-a-basic-windows-communication-foundation-service"></a>如何：承载和运行基本的 Windows Communication Foundation 服务
+# <a name="how-to-host-and-run-a-basic-windows-communication-foundation-service"></a>如何：托管和运行基本 Windows Communication Foundation 服务
 
 这是创建 Windows Communication Foundation (WCF) 应用程序所需六项任务中的第三项。 有关全部六项任务的概述，请参阅[入门教程](../../../docs/framework/wcf/getting-started-tutorial.md)主题。
 
@@ -149,7 +149,7 @@ End Module
 
 **步骤 4** -启用元数据交换。 客户端将使用元数据交换来生成将用于调用服务操作的代理。 要启用元数据交换，请创建 <xref:System.ServiceModel.Description.ServiceMetadataBehavior> 实例，将其 <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpGetEnabled%2A> 属性设置为 `true`，并将行为添加到 <xref:System.ServiceModel.ServiceHost> 实例的 <!--zz <xref:System.ServiceModel.ServiceHost.Behaviors%2A>  -->`System.ServiceModel.ServiceHost.Behaviors%2A` 集合。
 
-**步骤 5** – 打开<xref:System.ServiceModel.ServiceHost>侦听传入消息。 注意，代码会等待用户按 Enter。 如果不这样做，应用程序将立即关闭，并且服务将关闭。另请注意，使用了 try/catch 块。 在实例化 <xref:System.ServiceModel.ServiceHost> 后，所有其他代码放置在 try/catch 块中。 有关 <xref:System.ServiceModel.ServiceHost> 引发的安全捕获异常的详细信息，请参阅[避免出现与 Using 语句有关的问题](../../../docs/framework/wcf/samples/avoiding-problems-with-the-using-statement.md)
+**步骤 5** – 打开<xref:System.ServiceModel.ServiceHost>侦听传入消息。 注意，代码会等待用户按 Enter。 如果不这样做，应用程序将立即关闭，并且服务将关闭。另请注意，使用了 try/catch 块。 在实例化 <xref:System.ServiceModel.ServiceHost> 后，所有其他代码放置在 try/catch 块中。 有关安全捕获引发的异常详细信息<xref:System.ServiceModel.ServiceHost>，请参阅[使用关闭和中止发布 WCF 客户端资源](../../../docs/framework/wcf/samples/use-close-abort-release-wcf-client-resources.md)
 
 > [!IMPORTANT]
 > 编辑 App.config 中 GettingStartedLib 以反映在代码中所做的更改：
@@ -403,7 +403,7 @@ End Module
 此时服务正在运行。 在下一个任务中，将创建 WCF 客户端。
 
 > [!div class="nextstepaction"]
-> [如何： 创建 WCF 客户端](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)
+> [如何：创建 WCF 客户端](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)
 
 有关疑难解答的信息，请参阅[疑难解答入门教程](../../../docs/framework/wcf/troubleshooting-the-getting-started-tutorial.md)。
 

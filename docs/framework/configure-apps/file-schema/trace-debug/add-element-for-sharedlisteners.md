@@ -10,28 +10,30 @@ helpviewer_keywords:
 ms.assetid: 1595e1bc-2492-421f-8384-7f382eb8eb57
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: 93fdb548882422634e1d2456b4d37f434b278f8d
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: 9e0a23411f4bc37a1e09460113d15f4861e0a190
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48845367"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53151156"
 ---
 # <a name="ltaddgt-element-for-ltsharedlistenersgt"></a>&lt;添加&gt;元素&lt;sharedListeners&gt;
 将侦听器添加到 `sharedListeners` 集合中。 `sharedListeners` 是侦听器的集合的任何[\<源 >](../../../../../docs/framework/configure-apps/file-schema/trace-debug/source-element.md)或[\<跟踪 >](../../../../../docs/framework/configure-apps/file-schema/trace-debug/trace-element.md)可以引用。  默认情况下，在侦听器`sharedListeners`集合未按放置`Listeners`集合。 它们肯定会添加到名称[\<源 >](../../../../../docs/framework/configure-apps/file-schema/trace-debug/source-element.md)或[\<跟踪 >](../../../../../docs/framework/configure-apps/file-schema/trace-debug/trace-element.md)。 不能获取侦听器`sharedListeners`在运行时在代码中的集合。  
   
  \<configuration>  
-\<system.diagnostics >  
-\<sharedListeners > 元素  
-\<add>  
+&nbsp;&nbsp;\<system.diagnostics >  
+&nbsp;&nbsp;&nbsp;&nbsp;\<sharedListeners > 元素  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<添加 >  
   
 ## <a name="syntax"></a>语法  
   
 ```xml  
 <add name="name"   
   type="TraceListenerClassName, Version, Culture, PublicKeyToken"  
-  initializeData="data"/>  
-```  
+  initializeData="data"
+  traceOutputOptions = "None"
+/>  
+```
   
 ## <a name="attributes-and-elements"></a>特性和元素  
  下列各节描述了特性、子元素和父元素。  
@@ -43,7 +45,8 @@ ms.locfileid: "48845367"
 |`name`|必需的特性。<br /><br /> 指定用于将添加到的共享的侦听器的侦听器名称`Listeners`集合。|  
 |`type`|必需的特性。<br /><br /> 指定的侦听器的类型。 必须使用满足要求中指定的字符串[指定完全限定的类型名称](../../../../../docs/framework/reflection-and-codedom/specifying-fully-qualified-type-names.md)。|  
 |`initializeData`|可选特性。<br /><br /> 传递给构造函数为指定类的字符串。|  
-  
+|`traceOutputOptions`|可选特性。<br/><br/>字符串表示形式的一个或多个<xref:System.Diagnostics.TraceOptions>枚举成员，指示要写入跟踪输出的数据。 由逗号分隔多个项。 默认值为"None"。|
+
 ### <a name="child-elements"></a>子元素  
   
 |元素|描述|  

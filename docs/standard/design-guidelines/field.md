@@ -11,7 +11,7 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 65c54fe9a076a219c61280a98c390b16f56b5015
 ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 09/18/2018
 ms.locfileid: "45970651"
@@ -23,7 +23,7 @@ ms.locfileid: "45970651"
   
  我们将常量和静态只读字段排除在了这一严格限制之外，因为根据定义，此类字段几乎从不需要更改。  
   
- **X DO NOT** 提供公共或受保护的实例字段。  
+ X 请勿提供公共或受保护的实例字段。  
   
  应提供用于访问字段而非使其成为公共或受保护字段的属性。  
   

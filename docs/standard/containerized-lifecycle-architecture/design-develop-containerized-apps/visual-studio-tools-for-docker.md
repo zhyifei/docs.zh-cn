@@ -5,12 +5,12 @@ author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/12/2018
 ms.custom: vs-dotnet
-ms.openlocfilehash: c58c680c6500bc3b9adec50e18c26af3329122c9
-ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
+ms.openlocfilehash: 79e9b5cc9bac317a368583013abbc5124ef2c9ac
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49086383"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53151208"
 ---
 # <a name="using-visual-studio-tools-for-docker-visual-studio-on-windows"></a>使用 Visual Studio Tools for Docker (Windows 上的 Visual Studio)
 
@@ -33,7 +33,7 @@ Visual Studio 2017 中包括 docker 支持。 在此处下载 Visual Studio 2017
 
 ![在 Visual Studio 中添加 Docker 支持菜单选项](media/add-docker-support-menu.png)
 
-图 4-26： 向 Visual Studio 2017 项目添加 Docker 支持
+图 4-26:向 Visual Studio 2017 项目添加 Docker 支持
 
 ### <a name="add-docker-support"></a>添加 Docker 支持
 
@@ -41,7 +41,7 @@ Visual Studio 2017 中包括 docker 支持。 在此处下载 Visual Studio 2017
 
 ![在 Visual Studio 中的新 ASP.NET Core web 应用的启用 Docker 支持](./media/enable-docker-support-visual-studio.png)
 
-图 4-27: Visual Studio 2017 中的项目创建过程中启用 Docker 支持
+图 4-27:Visual Studio 2017 中的项目创建过程中启用 Docker 支持
 
 在添加或启用 Docker 支持，Visual Studio 添加*Dockerfile*到项目文件。
 
@@ -50,7 +50,7 @@ Visual Studio 2017 中包括 docker 支持。 在此处下载 Visual Studio 2017
 >
 > ![启用 Docker compose 支持.NET Framework web 应用程序项目](media/enable-docker-compose-support.png)
 
-> 图 4-28： 启用 Visual Studio 2017 中的.NET Framework web 应用项目上的 Docker Compose 支持
+> 图 4 日至 28 日：启用 Visual Studio 2017 中的.NET Framework web 应用项目上的 Docker Compose 支持
 
 ### <a name="add-container-orchestration-support"></a>添加容器业务流程的支持
 
@@ -62,7 +62,7 @@ Visual Studio 2017 中包括 docker 支持。 在此处下载 Visual Studio 2017
 
 ![在解决方案资源管理器在 Visual Studio 中的 docker 文件](media/docker-support-solution-explorer.png)
 
-图 4-29： 在 Visual Studio 2017 中的解决方案资源管理器中的 Docker 文件
+图 4-29:在 Visual Studio 2017 中的解决方案资源管理器中的 docker 文件
 
 如果*docker compose.yml*已存在，Visual Studio 只需向其添加的配置代码所需的行。
 
@@ -72,11 +72,11 @@ Visual Studio 2017 中包括 docker 支持。 在此处下载 Visual Studio 2017
 
 ![](./media/visual-studio-docker-tools-options.png)
 
-图 4-30: Docker 工具选项
+图 4-30:Docker 工具选项
 
 下表可能会帮助你决定如何设置这些选项。
 
-| 名称 | 默认设置 | 适用于 | 描述 |
+| name | 默认设置 | 适用于 | 描述 |
 | -----|:---------------:|:----------:| ----------- |
 | 自动在项目负载上拉取所需的 Docker 图像 | On | Docker Compose | 为了提高性能，加载项目时，Visual Studio 会启动 Docker pull 操作在后台，以便当准备好运行你的代码，该图像已下载或下载过程中。 如果只是加载项目，并浏览代码，您可以关闭此以避免下载不需要的容器映像。 |
 | 在后台自动启动容器 | On | Docker Compose | 再次以提高性能，Visual Studio 创建一个容器使用卷装载供当生成并运行你的容器。 如果你想要控制创建容器时，关闭此功能。 |
@@ -93,5 +93,5 @@ Visual Studio 2017 中包括 docker 支持。 在此处下载 Visual Studio 2017
 将 ASP.NET Core Docker 容器部署到容器注册表： [https://docs.microsoft.com/azure/vs-azure-tools-docker-hosting-web-apps-in-docker/](https://docs.microsoft.com/azure/vs-azure-tools-docker-hosting-web-apps-in-docker)
 
 >[!div class="step-by-step"]
-[上一页](docker-apps-inner-loop-workflow.md)
-[下一页](set-up-windows-containers-with-powershell.md)
+>[上一页](docker-apps-inner-loop-workflow.md)
+>[下一页](set-up-windows-containers-with-powershell.md)

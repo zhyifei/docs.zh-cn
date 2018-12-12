@@ -7,11 +7,11 @@ ms.technology: vs-ide-designers
 author: gewarren
 ms.author: gewarren
 ms.openlocfilehash: 2d3466476c33a3e5faa8be96d63f1d11442c5d70
-ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "52296732"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53151260"
 ---
 # <a name="disable-dpi-awareness-in-visual-studio"></a>禁用 Visual Studio 中的 DPI 识别功能
 
@@ -51,14 +51,14 @@ Visual Studio 运行时作为不识别 DPI 的进程，设计器布局问题已�
 
 通过修改注册表，你可以将 Visual Studio 标记为 DPI 感知。 打开**注册表编辑器**并添加到一个条目**通过 NT\CurrentVersion\AppCompatFlags\Layers**子项：
 
-**条目**: C:\Program 文件 (x86) \Microsoft Visual Studio\2017\Community\Common7\IDE\devenv.exe
+**条目**:C:\Program 文件 (x86) \Microsoft Visual Studio\2017\Community\Common7\IDE\devenv.exe
 
    > [!NOTE]
    > 如果您使用的 Professional 或 Enterprise 版的 Visual Studio 2017，替换**社区**与**Professional**或**企业**条目中。 此外将根据需要驱动器号。
 
-**类型**: REG_SZ
+**类型**:REG_SZ
 
-**值**: DPIUNAWARE
+**值**:DPIUNAWARE
 
 > [!NOTE]
 > Visual Studio 仍保持不识别 DPI 的模式，直到删除注册表项。

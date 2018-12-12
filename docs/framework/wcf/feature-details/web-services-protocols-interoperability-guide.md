@@ -3,11 +3,11 @@ title: Web 服务协议互操作性指南
 ms.date: 03/30/2017
 ms.assetid: f2981678-ebdb-433d-899b-467f7df95fb2
 ms.openlocfilehash: 9aeceff9dc2b714016d2f7c379e538d885489bb9
-ms.sourcegitcommit: 5fd80619c760fa8c25d33a6f5661247cb65da465
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "50744543"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53154341"
 ---
 # <a name="web-services-protocols-interoperability-guide"></a>Web 服务协议互操作性指南
 Windows Communication Foundation (WCF) 实现多个 Web 服务协议。 这些协议中有许多都包含大量留给实施者来决定的选项和扩展点。 本主题提供了一系列 WCF 实现的 Web 服务协议。 本节中的其他主题介绍每个受支持的协议的实现详细信息。  
@@ -23,7 +23,7 @@ Windows Communication Foundation (WCF) 实现多个 Web 服务协议。 这些�
 |-----------------------------|----------|  
 |HTTP 1.1|[RFC 2616](https://go.microsoft.com/fwlink/?LinkId=90372)|  
 |SOAP 1.1 HTTP 绑定|[简单对象访问协议 (SOAP) 1.1](https://go.microsoft.com/fwlink/?LinkId=90520)，第 7 节|  
-|SOAP 1.2 HTTP 绑定|[SOAP 版本 1.2 第 2 部分： 附属内容 （第二版）](https://go.microsoft.com/fwlink/?LinkId=95329)，第 7 节|  
+|SOAP 1.2 HTTP 绑定|[SOAP 版本 1.2 第 2 部分：附属内容 （第二版）](https://go.microsoft.com/fwlink/?LinkId=95329)，第 7 节|  
   
  <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement> 和 <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement> 支持下表中的规范。  
   
@@ -31,7 +31,7 @@ Windows Communication Foundation (WCF) 实现多个 Web 服务协议。 这些�
 |-----------------------------|----------|  
 |XML|[可扩展标记语言 (XML) 1.0 （第四版）](https://go.microsoft.com/fwlink/?LinkId=15139)|  
 |SOAP 1.1|[简单对象访问协议 (SOAP) 1.1)](https://go.microsoft.com/fwlink/?LinkId=96687)|  
-|SOAP 1.2 核心|[SOAP 版本 1.2 第 1 部分： 消息传递框架 （第二版）](https://go.microsoft.com/fwlink/?LinkId=94664)|  
+|SOAP 1.2 核心|[SOAP 版本 1.2 第 1 部分：消息传递框架 （第二版）](https://go.microsoft.com/fwlink/?LinkId=94664)|  
 |WS-Addressing 2004/08|[Web 服务寻址 (Ws-addressing)](https://go.microsoft.com/fwlink/?LinkId=81239)|  
 |W3C Web 服务寻址 1.0 - 核心|[Web 服务寻址 1.0-核心](https://go.microsoft.com/fwlink/?LinkId=96688)|  
 |W3C Web 服务寻址 1.0 - SOAP 绑定|[Web 服务寻址 1.0-SOAP 绑定](https://go.microsoft.com/fwlink/?LinkId=96689)|  
@@ -51,17 +51,17 @@ Windows Communication Foundation (WCF) 实现多个 Web 服务协议。 这些�
   
  <xref:System.ServiceModel.Channels.SecurityBindingElement> 支持下表中的规范。  
   
-|规范/文档|Link|  
+|规范/文档|链接|  
 |-----------------------------|----------|  
-|WSS：SOAP 消息安全 1.0|[Web 服务安全： SOAP 消息安全 1.0](https://go.microsoft.com/fwlink/?LinkId=94684)|  
-|WSS：用户名令牌配置文件 1.0|[Web 服务安全用户名令牌配置文件 1.0](https://go.microsoft.com/fwlink/?LinkId=95334)<br /><br /> 需要Password/@Type= PasswordText （默认值）|  
-|WSS：X.509 令牌配置文件 1.0|[Web 服务安全 X.509 证书令牌配置文件](https://go.microsoft.com/fwlink/?LinkId=95335)|  
-|WSS：SAML 1.1 令牌配置文件 1.0|[Web 服务安全： SAML 令牌配置文件](https://go.microsoft.com/fwlink/?LinkId=96693)|  
-|WSS：SOAP 消息安全 1.1|[Web 服务安全： SOAP 消息安全 1.1](https://go.microsoft.com/fwlink/?LinkId=91240)|  
+|WSS:SOAP 消息安全 1.0|[Web 服务安全：SOAP 消息安全 1.0](https://go.microsoft.com/fwlink/?LinkId=94684)|  
+|WSS:用户名令牌配置文件 1.0|[Web 服务安全用户名令牌配置文件 1.0](https://go.microsoft.com/fwlink/?LinkId=95334)<br /><br /> 需要Password/@Type= PasswordText （默认值）|  
+|WSS:X.509 令牌配置文件 1.0|[Web 服务安全 X.509 证书令牌配置文件](https://go.microsoft.com/fwlink/?LinkId=95335)|  
+|WSS:SAML 1.1 令牌配置文件 1.0|[Web 服务安全：SAML 令牌配置文件](https://go.microsoft.com/fwlink/?LinkId=96693)|  
+|WSS:SOAP 消息安全 1.1|[Web 服务安全：SOAP 消息安全 1.1](https://go.microsoft.com/fwlink/?LinkId=91240)|  
 |WSS 用户名令牌配置文件 1.1|[Web 服务安全用户名令牌配置文件 1.1](https://go.microsoft.com/fwlink/?LinkId=95331)<br /><br /> 不实现基于密码的密钥派生；<br /><br /> 需要Password/@Type= PasswordText （默认值）|  
-|WSS：X509 令牌配置文件 1.1|[Web 服务安全 X.509 证书令牌配置文件 1.1](https://go.microsoft.com/fwlink/?LinkId=95332)|  
-|WSS：Kerberos 令牌配置文件 1.1|[Web 服务安全 Kerberos 令牌配置文件 1.1](https://go.microsoft.com/fwlink/?LinkId=95333)|  
-|WSS：SAML 1.1 令牌配置文件 1.1|[Web 服务安全 SAML 令牌配置文件 1.1](https://go.microsoft.com/fwlink/?LinkId=96694)|  
+|WSS:X509 令牌配置文件 1.1|[Web 服务安全 X.509 证书令牌配置文件 1.1](https://go.microsoft.com/fwlink/?LinkId=95332)|  
+|WSS:Kerberos 令牌配置文件 1.1|[Web 服务安全 Kerberos 令牌配置文件 1.1](https://go.microsoft.com/fwlink/?LinkId=95333)|  
+|WSS:SAML 1.1 令牌配置文件 1.1|[Web 服务安全 SAML 令牌配置文件 1.1](https://go.microsoft.com/fwlink/?LinkId=96694)|  
 |WS-Secure 对话|[Web 服务安全对话语言](https://go.microsoft.com/fwlink/?LinkId=95317)|  
 |WS-Trust 1.4|[Web 服务信任语言](https://go.microsoft.com/fwlink/?LinkId=169514)|  
 |WS-SecurityPolicy 2005/07|[Web 服务安全对话语言](https://go.microsoft.com/fwlink/?LinkId=95317)<br /><br /> 已根据提交到 OASIS WS-SX 技术委员会的勘误表进行了修正。<br /><br /> [ws-sx 消息](https://go.microsoft.com/fwlink/?LinkId=96700)|  
@@ -76,9 +76,9 @@ Windows Communication Foundation (WCF) 实现多个 Web 服务协议。 这些�
   
  <xref:System.ServiceModel.Description.MetadataExporter>、<xref:System.ServiceModel.Description.MetadataImporter>、<xref:System.ServiceModel.Description.WsdlExporter>、<xref:System.ServiceModel.Description.WsdlImporter> 和 <xref:System.ServiceModel.Description.MetadataResolver> 类支持以下元数据规范：  
   
--   [XML 架构第 1 部分： 结构第二版](https://go.microsoft.com/fwlink/?LinkId=3536)  
+-   [XML 架构第 1 部分：结构第二版](https://go.microsoft.com/fwlink/?LinkId=3536)  
   
--   [XML 架构第 2 部分： 数据类型第二版](https://go.microsoft.com/fwlink/?LinkId=40138)  
+-   [XML 架构第 2 部分：数据类型第二版](https://go.microsoft.com/fwlink/?LinkId=40138)  
   
 -   [WSDL 1.1](https://go.microsoft.com/fwlink/?LinkId=96160)  
   

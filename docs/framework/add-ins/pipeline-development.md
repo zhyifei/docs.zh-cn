@@ -12,11 +12,11 @@ ms.assetid: 932788f2-b87d-44cf-82f9-04492a8b2722
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: f981d667f3cbf35ab010ac5bd26a9ecd5c2aae11
-ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50135425"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53151338"
 ---
 # <a name="pipeline-development"></a>管线开发
 外接程序管道是主机应用程序和其外接程序必须使用与彼此进行通信的管线段的路径。  
@@ -80,11 +80,11 @@ ms.locfileid: "50135425"
   
      描述一个计算器外接程序，针对主机执行加法、 减法、 乘法和除法的计算的。  
   
--   [演练： 启用向后的兼容性作为在宿主发生变化](https://msdn.microsoft.com/library/6fa15bb5-8f04-407d-bd7d-675dc043c848)  
+-   [演练：启用主机更改为向后的兼容性](https://msdn.microsoft.com/library/6fa15bb5-8f04-407d-bd7d-675dc043c848)  
   
      描述一个计算器外接程序增强的计算功能，以及如何保持与第一个计算器外接程序兼容性。  
   
--   [演练： 在宿主和外接程序之间传递集合](https://msdn.microsoft.com/library/b532c604-548e-4fab-b11c-377257dd0ee5)  
+-   [演练：主机和外接程序之间传递集合](https://msdn.microsoft.com/library/b532c604-548e-4fab-b11c-377257dd0ee5)  
   
      介绍如何通过使用书店方案管道传递的数据集合。  
   

@@ -2,17 +2,17 @@
 title: DataView
 ms.date: 03/30/2017
 ms.assetid: 0fe5dfa2-c1cd-435f-90b6-b4dd2e3ef34b
-ms.openlocfilehash: 75719e91daba189c1d93491a1db26acc80100bea
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 93789cf64653af863cbedbf1caeea886afb713f5
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43514747"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53129384"
 ---
 # <a name="dataviews"></a>DataView
-您可以利用 <xref:System.Data.DataView> 创建存储在 <xref:System.Data.DataTable>（一种通常在数据绑定应用程序中使用的功能）中的数据的不同视图。 使用**DataView**，您可以公开具有不同的排序顺序的表中的数据，并且可以按行状态或基于筛选器表达式来筛选数据。  
+你可以利用 <xref:System.Data.DataView> 创建存储在 <xref:System.Data.DataTable>（一种通常在数据绑定应用程序中使用的功能）中的数据的不同视图。 使用**DataView**，您可以公开具有不同的排序顺序的表中的数据，并且可以按行状态或基于筛选器表达式来筛选数据。  
   
- 一个**DataView**提供了在基础数据的动态视图**DataTable**： 内容、 排序和成员资格会实时反映更改它们。 此行为不同于**选择**方法**DataTable**，它将返回<xref:System.Data.DataRow>基于特定筛选器和/或排序顺序从表的数组： thiscontent 反映了更改基础表，但其成员资格和顺序却保持不变。 动态功能**DataView**使其适用于数据绑定应用程序。  
+ 一个**DataView**提供了在基础数据的动态视图**DataTable**： 内容、 排序和成员资格会实时反映更改它们。 此行为不同于**选择**方法**DataTable**，它将返回<xref:System.Data.DataRow>基于特定筛选器和/或排序顺序从表的数组： 此内容可反映对更改基础表，但其成员资格和顺序却保持不变。 动态功能**DataView**使其适用于数据绑定应用程序。  
   
  一个**DataView**提供了一组数据，类似于数据库视图，可以应用不同的排序和筛选条件的动态视图。 与数据库视图，但是，不同**DataView**不能作为表处理，并且无法提供联接的表的视图。 另外，还不能排除存在于源表中的列，也不能追加不存在于源表中的列（如计算列）。  
   

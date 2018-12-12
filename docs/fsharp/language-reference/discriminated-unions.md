@@ -3,11 +3,11 @@ title: 可区分联合 (F#)
 description: 了解如何使用F#可区分联合。
 ms.date: 05/16/2016
 ms.openlocfilehash: f833539f2e31ffc6db4182bdbd2088e6dc2bb2cc
-ms.sourcegitcommit: 7f7664837d35320a0bad3f7e4ecd68d6624633b2
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52672239"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53154406"
 ---
 # <a name="discriminated-unions"></a>可区分联合
 
@@ -39,7 +39,7 @@ type Shape =
     | Prism of width : float * float * height : float
 ```
 
-前面的代码声明的可区分的联合形状，它可以具有任意三个用例的值： 矩形、 圆形和棱镜。 每种情况下具有一组不同的字段。 矩形用例有两个命名字段，这两个类型`float`，具有名称宽度和长度。 圆形用例都只是一个命名的字段，radius。 棱镜用例有三个字段，哪个 （宽度和高度） 的两个命名字段。 未命名的字段称为匿名字段。
+前面的代码声明的可区分的联合形状，它可以具有任意三个用例的值：矩形、 圆形和棱镜。 每种情况下具有一组不同的字段。 矩形用例有两个命名字段，这两个类型`float`，具有名称宽度和长度。 圆形用例都只是一个命名的字段，radius。 棱镜用例有三个字段，哪个 （宽度和高度） 的两个命名字段。 未命名的字段称为匿名字段。
 
 通过根据以下示例的命名和匿名字段提供值来构造对象。
 

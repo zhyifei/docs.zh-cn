@@ -3,11 +3,11 @@ title: WCF 测试客户端 (WcfTestClient.exe)
 ms.date: 03/30/2017
 ms.assetid: d4302855-677f-4640-aa90-c5d785d72fb7
 ms.openlocfilehash: 4e3531b91382c4d47aed73198bd8dd954ae4ca1f
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50181587"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53148998"
 ---
 # <a name="wcf-test-client-wcftestclientexe"></a>WCF 测试客户端 (WcfTestClient.exe)
 Windows Communication Foundation (WCF) 测试客户端 (WcfTestClient.exe) 是一个 GUI 工具，使用户能够输入测试参数、 将该输入到服务，提交并查看服务发回的响应。 它提供了完美的服务测试体验与 WCF 服务主机结合使用时。  
@@ -156,7 +156,7 @@ Windows Communication Foundation (WCF) 测试客户端 (WcfTestClient.exe) 是�
   
 -   安全性：[!INCLUDE[infocard](../../../includes/infocard-md.md)]、证书和用户名/密码。  
   
--   绑定：WSFederationbinding、任何上下文绑定和 Https 绑定、WebHttpbinding（Json 响应消息支持）。  
+-   绑定：WSFederationbinding、 任何上下文绑定和 Https 绑定、 WebHttpbinding （Json 响应消息支持）。  
   
 ## <a name="closing-wcf-test-client"></a>关闭 WCF 测试客户端  
  你可以按以下方式关闭 WCF 测试客户端：  

@@ -3,11 +3,11 @@ title: XmlDictionaryReaderQuotas
 ms.date: 03/30/2017
 ms.assetid: 9b4ca8b4-0a89-4758-97ab-528a8ce18f07
 ms.openlocfilehash: 9bc519509b00383be333ac605688950d2709117c
-ms.sourcegitcommit: 4bca8f7e172fd019ef437a4803bf5895c6bc4781
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/03/2018
-ms.locfileid: "50980526"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53153132"
 ---
 # <a name="xmldictionaryreaderquotas"></a>XmlDictionaryReaderQuotas
 XmlDictionaryReaderQuotas  
@@ -28,7 +28,7 @@ class XmlDictionaryReaderQuotas
 ## <a name="methods"></a>方法  
  XmlDictionaryReaderQuotas 类不定义任何方法。  
   
-## <a name="properties"></a>属性  
+## <a name="properties"></a>Properties  
  XmlDictionaryReaderQuotas 类具有以下属性：  
   
 ### <a name="maxarraylength"></a>MaxArrayLength  

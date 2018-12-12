@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 7e51d44e-7c4e-4040-9332-f0190fe36f07
-ms.openlocfilehash: f416ae8252d9991905da7eeaf4ce6398ff0e7461
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 7086bdfbbd2ebace25f2999a0787bcee48494ab8
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43514958"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53147667"
 ---
 # <a name="sql-server-connection-pooling-adonet"></a>SQL Server 连接池 (ADO.NET)
 连接到数据库服务器通常由几个需要很长时间的步骤组成。 必须建立物理通道（例如套接字或命名管道），必须与服务器进行初次握手，必须分析连接字符串信息，必须由服务器对连接进行身份验证，必须运行检查以便在当前事务中登记，等等。  
@@ -31,7 +31,7 @@ ms.locfileid: "43514958"
   
  在以下 C# 示例中创建了三个新的 <xref:System.Data.SqlClient.SqlConnection> 对象，但是管理时只需要两个连接池。 注意，根据为 `Initial Catalog` 分配的值，第一个和第二个连接字符串有所不同。  
   
-```  
+```csharp
 using (SqlConnection connection = new SqlConnection(  
   "Integrated Security=SSPI;Initial Catalog=Northwind"))  
     {  
@@ -67,7 +67,7 @@ using (SqlConnection connection = new SqlConnection(
  连接池进程通过在连接释放回池中时重新分配连接，来满足这些连接请求。 如果已达到最大池大小且不存在可用的连接，则该请求将会排队。 然后，池进程尝试重新建立任何连接，直至到达超时时间（默认值为 15 秒）。 如果池进程在连接超时之前无法满足请求，将引发异常。  
   
 > [!CAUTION]
->  我们强烈建议您在使用完连接时一定要关闭连接，以便连接可以返回池。 你可以使用任一`Close`或`Dispose`方法的`Connection`对象，或通过打开内的所有连接`using`语句在 C# 中，或`Using`在 Visual Basic 中的语句。 不是显式关闭的连接可能不会添加或返回到池中。 有关详细信息，请参阅[using 语句](~/docs/csharp/language-reference/keywords/using-statement.md)或[如何： 释放系统资源](~/docs/visual-basic/programming-guide/language-features/control-flow/how-to-dispose-of-a-system-resource.md)适用于 Visual Basic。  
+>  我们强烈建议您在使用完连接时一定要关闭连接，以便连接可以返回池。 你可以使用任一`Close`或`Dispose`方法的`Connection`对象，或通过打开内的所有连接`using`语句在 C# 中，或`Using`在 Visual Basic 中的语句。 不是显式关闭的连接可能不会添加或返回到池中。 有关详细信息，请参阅[using 语句](~/docs/csharp/language-reference/keywords/using-statement.md)或[如何：释放系统资源](~/docs/visual-basic/programming-guide/language-features/control-flow/how-to-dispose-of-a-system-resource.md)适用于 Visual Basic。  
   
 > [!NOTE]
 >  不要在类的 `Close` 方法中对 `Dispose`、`Connection` 或任何其他托管对象调用 `DataReader` 或 `Finalize`。 在终结器中，仅释放类直接拥有的非托管资源。 如果类不拥有任何非托管资源，则不要在类定义中包含 `Finalize` 方法。 有关详细信息，请参阅[垃圾回收](../../../../docs/standard/garbage-collection/index.md)。  

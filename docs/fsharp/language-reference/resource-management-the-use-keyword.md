@@ -1,15 +1,15 @@
 ---
-title: 资源管理：use 关键字 (F#)
+title: 资源管理：Use 关键字 (F#)
 description: 了解如何F#关键字 use 和 using 函数，可以控制的初始化和释放资源。
 ms.date: 05/16/2016
 ms.openlocfilehash: 300fb4113019f676625f75541d117458eab3f6ab
-ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "52296875"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53147627"
 ---
-# <a name="resource-management-the-use-keyword"></a>资源管理：use 关键字
+# <a name="resource-management-the-use-keyword"></a>资源管理：Use 关键字
 
 本主题介绍了关键字`use`和`using`函数，可以控制的初始化和释放资源。
 

@@ -4,12 +4,12 @@ description: 使用 Microsoft 平台和工具的容器化 Docker 应用程序的
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
-ms.openlocfilehash: 4bdc4470624ce6e905ab858a2bd8b607c8d3d646
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 5630bfcc3173def670e2fa780d28024799b7c2a1
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47232919"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53153913"
 ---
 # <a name="monitor-containerized-application-services"></a>监视容器化应用程序服务
 
@@ -25,13 +25,13 @@ ms.locfileid: "47232919"
 
 ![示例](./media/image1.png)
 
-图 6-1: Application Insights 监视 Docker 主机和容器
+图 6-1:Application Insights 监视 Docker 主机和容器
 
 在运行时[应用程序见解 Docker 映像](https://hub.docker.com/r/microsoft/applicationinsights/)Docker 主机上你利用以下：
 
 -   有关在主机上运行的所有容器的遥测数据的生命周期-启动、 停止和其他操作。
 
--   所有容器的性能计数器： CPU、 内存、 网络使用情况和的详细信息。
+-   所有容器的性能计数器：CPU、 内存、 网络使用情况和的详细信息。
 
 -   如果还安装了[Application Insights SDK](https://docs.microsoft.com/azure/application-insights/app-insights-asp-net)在容器中运行的应用，这些应用程序的所有遥测数据将具有识别容器和主机计算机的其他属性。 因此，例如，如果有多个主机中运行的应用的实例，您将轻松能够筛选由主机应用程序遥测数据。
 
@@ -60,7 +60,7 @@ ms.locfileid: "47232919"
 
 ![](./media/image2.png)
 
-有关通过 Operations Management Suite 所示的 Docker 容器的图 6-2： 信息
+图 6-2:有关通过 Operations Management Suite 所示的 Docker 容器的信息
 
 Application Insights 和 Operations Management Suite 监视活动; 重点但是，Application Insights 更侧重监视应用本身得益于其在应用中运行的 SDK。 但是，Operations Management Suite 更侧重于围绕这些主机，基础结构以及它提供一个非常灵活数据驱动搜索/查询系统时提供深度分析在规模较大的日志。
 
@@ -90,12 +90,12 @@ Operations Management Suite 作为基于云的服务实现，因为你可以使�
 
 ![DockerPerfMetricsView](./media/image3.png){width="5.78625in" height="3.25in"}
 
-图 6-3： 通过 Operations Management Suite 所示的 Docker 主机的性能指标
+图 6-3:通过 Operations Management Suite 所示的 Docker 主机的性能指标
 
 保存查询也是 Operations Management Suite 中的标准功能，可帮助你记录发现的有用和发现趋势在系统中的查询。
 
 **详细信息** 若要查找有关安装和配置 Docker 容器中的解决方案[Operations Management Suite](https://microsoft.com/oms)，转到<https://docs.microsoft.com/azure/log-analytics/log-analytics-containers>。
 
 >[!div class="step-by-step"]
-[上一页](manage-production-docker-environments.md)
-[下一页](../key-takeaways/index.md)
+>[上一页](manage-production-docker-environments.md)
+>[下一页](../key-takeaways/index.md)

@@ -1,15 +1,15 @@
 ---
-title: '&lt;udpDiscoveryEndpoint&gt;'
+title: '&lt;为 UdpDiscoveryEndpoint&gt;'
 ms.date: 03/30/2017
 ms.assetid: 1f485329-2771-43bc-88de-df8f2faa3bb7
-ms.openlocfilehash: 95c6550352d8f100c8674c2e7f630fcf55da01e2
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 01808594d54d5c79a6530bc7f6a03b66dde7ee99
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32767617"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53144749"
 ---
-# <a name="ltudpdiscoveryendpointgt"></a>&lt;udpDiscoveryEndpoint&gt;
+# <a name="ltudpdiscoveryendpointgt"></a>&lt;为 UdpDiscoveryEndpoint&gt;
 此配置元素定义一个通过 UDP 多播绑定为发现操作预先配置的标准终结点。 此终结点具有固定协定并支持两个 WS-Discovery 协议版本。 此外，根据 WS-Discovery 规范（WS-Discovery 2005 年 4 月版或 WS-Discovery 1.1 版）中的规定，它还具有固定 UDP 绑定和默认地址。  
   
  \<system.ServiceModel>  
@@ -30,7 +30,7 @@ ms.locfileid: "32767617"
   
 |特性|描述|  
 |---------------|-----------------|  
-|discoveryMode|一个字符串，指定发现协议的模式。 有效值为"Adhoc"和"Managed"。 在托管模式下，协议依靠发现代理，此代理用作可检测服务的存储库。 即席模式要求协议使用 UDP 多播机制查找可用的服务。 此值的类型为 <xref:System.ServiceModel.Discovery.ServiceDiscoveryMode>。|  
+|discoveryMode|一个字符串，指定发现协议的模式。 有效值为"Adhoc"和"已托管"。 在托管模式下，协议依靠发现代理，此代理用作可检测服务的存储库。 即席模式要求协议使用 UDP 多播机制查找可用的服务。 此值的类型为 <xref:System.ServiceModel.Discovery.ServiceDiscoveryMode>。|  
 |discoveryVersion|一个字符串，指定两个 WS-Discovery 协议版本中的其中一个版本。 有效值为 WSDiscovery11 和 WSDiscoveryApril2005。 此值的类型为 <xref:System.ServiceModel.Discovery.DiscoveryVersion>。|  
 |maxResponseDelay|一个 Timespan 值，指定 Discovery 协议在发送 Probe Match、Resolve Match 这类消息之前等待的最大延迟值。<br /><br /> 如果同时发送所有 ProbeMatch，则可能发生网络风暴。 若要防止发生这种情况，可在发送 ProbeMatch 时在各 ProbeMatch 之间应用随机延迟。 随机延迟的范围是从 0 到此特性所设置的值之间。 如果将此特性设置为 0，则在不使用任何延迟的紧凑循环中发送 ProbeMatch 消息。 否则，在发送 ProbeMatch 消息时将应用一定的随机延迟，以使发送所有 ProbeMatch 消息所用的总时间不会超过 maxResponseDelay。 此值只与服务相关，不可用于客户端。|  
 |multicastAddress|一个 URI，指定用于发送和接收发现消息的多播地址。 默认值是符合协议规范的多播地址。|  
@@ -40,7 +40,7 @@ ms.locfileid: "32767617"
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<n t >](../../../../../docs/framework/configure-apps/file-schema/wcf/udptransportsettings.md)|一个设置集合，用于为 UDP 终结点配置 UDP 传输。|  
+|[\<u d >](../../../../../docs/framework/configure-apps/file-schema/wcf/udptransportsettings.md)|一个设置集合，用于为 UDP 终结点配置 UDP 传输。|  
   
 ### <a name="parent-elements"></a>父元素  
   

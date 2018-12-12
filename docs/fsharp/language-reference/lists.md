@@ -3,11 +3,11 @@ title: 列表 (F#)
 description: 了解如何F#列出了相同类型的元素的有序的、 不可变序列。
 ms.date: 05/16/2016
 ms.openlocfilehash: f7b9054226a1dd004ac78673a059bd1c35e325a5
-ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "52297499"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53152742"
 ---
 # <a name="lists"></a>列表
 
@@ -58,7 +58,7 @@ F# 中的列表是一个有序的、不可变的同类型元素系列。 若要�
 
 中列出了F#将作为单独链接的列表，这意味着，访问列表头的操作是 o （1），并且元素访问复杂度为 O (*n*)。
 
-## <a name="properties"></a>属性
+## <a name="properties"></a>Properties
 
 列表类型支持以下属性：
 

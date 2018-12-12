@@ -7,12 +7,12 @@ helpviewer_keywords:
 - reusing commonly defined objects [WPF]
 - XAML [WPF], reusing resources
 ms.assetid: 91580b89-a0a8-4889-aecb-fddf8e63175f
-ms.openlocfilehash: c43505497b947004ffb282346459967579d52375
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: e02c80f4c1fdacbfdcb50ed57d89cc9df1f277f9
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44199539"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53126392"
 ---
 # <a name="xaml-resources"></a>XAML 资源
 资源是可以在应用程序中的不同位置重复使用的对象。 资源的示例包括画笔和样式。 本概述介绍如何使用中的资源[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]。 此外可以创建并使用代码，或者通过互换使用代码访问资源和[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]。 有关详细信息，请参阅[资源和代码](../../../../docs/framework/wpf/advanced/resources-and-code.md)。  
@@ -147,7 +147,7 @@ ms.locfileid: "44199539"
   
  该样式实际上有一个键： 隐式键`typeof(` <xref:System.Windows.Controls.Button> `)`。 在标记中，可以指定<xref:System.Windows.Style.TargetType%2A>直接作为类型名称 (或者可以根据需要使用[{x: Type...}](../../../../docs/framework/xaml-services/x-type-markup-extension.md) 若要返回<xref:System.Type>。  
   
- 通过使用的默认主题样式机制[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]，为运行时样式的应用样式<xref:System.Windows.Controls.Button>页上，即使<xref:System.Windows.Controls.Button>本身不会尝试指定其<xref:System.Windows.FrameworkElement.Style%2A>属性或特定资源引用的样式。 在页面中定义的样式位于查找序列中的靠前位置（在主题字典样式之前），其所用的键与主题字典样式的键相同。 您可能只需指定`<Button>Hello</Button>`页上，使用定义的样式中的任意位置<xref:System.Windows.Style.TargetType%2A>的`Button`会应用于该按钮。 如果需要，可以仍显式键使用类型值与相同的样式<xref:System.Windows.Style.TargetType%2A>、 清楚起见，在您的标记，但这是可选的。  
+ 通过使用的默认主题样式机制[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]，为运行时样式的应用样式<xref:System.Windows.Controls.Button>页上，即使<xref:System.Windows.Controls.Button>本身不会尝试指定其<xref:System.Windows.FrameworkElement.Style%2A>属性或特定资源引用的样式。 比主题字典样式，使用相同键的主题字典样式位于查找序列中先前找到的页中定义的样式。 您可能只需指定`<Button>Hello</Button>`页上，使用定义的样式中的任意位置<xref:System.Windows.Style.TargetType%2A>的`Button`会应用于该按钮。 如果需要，可以仍显式键使用类型值与相同的样式<xref:System.Windows.Style.TargetType%2A>、 清楚起见，在您的标记，但这是可选的。  
   
  如果不在控件上适用样式的隐式键<xref:System.Windows.FrameworkElement.OverridesDefaultStyle%2A>是`true`(另请注意，<xref:System.Windows.FrameworkElement.OverridesDefaultStyle%2A>可能设置为本机行为对于控件类中，而不是显式的控件实例的一部分)。 此外，为了支持派生的类应用场景的隐式键，控件必须重写<xref:System.Windows.FrameworkElement.DefaultStyleKey%2A>(作为的一部分提供的所有现有控件[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]执行此操作)。 有关样式、 主题和控件设计的详细信息，请参阅[控件的设计准则的指导原则](../../../../docs/framework/wpf/controls/guidelines-for-designing-stylable-controls.md)。  
   

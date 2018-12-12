@@ -2,12 +2,12 @@
 title: '&lt;idn&gt;元素 （Uri 设置）'
 ms.date: 03/30/2017
 ms.assetid: 16c8e869-1791-4cf5-9244-3d3c738f60ec
-ms.openlocfilehash: 96d70f76f8d29368505dd5054edf3db253b89016
-ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.openlocfilehash: e68fa040123180ee31af40e82f45d6efd076d8aa
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50037004"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53153353"
 ---
 # <a name="ltidngt-element-uri-settings"></a>&lt;idn&gt;元素 （Uri 设置）
 指定是否对域名应用国际化域名 (IDN) 分析。  
@@ -94,6 +94,6 @@ ms.locfileid: "50037004"
 ```  
   
 ## <a name="see-also"></a>请参阅  
- <xref:System.Configuration.IdnElement?displayProperty=nameWithType>  
- <xref:System.Configuration.UriSection?displayProperty=nameWithType>  
- [网络设置架构](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+- <xref:System.Configuration.IdnElement?displayProperty=nameWithType>  
+- <xref:System.Configuration.UriSection?displayProperty=nameWithType>  
+- [网络设置架构](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

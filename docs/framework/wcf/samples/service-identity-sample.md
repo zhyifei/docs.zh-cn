@@ -3,11 +3,11 @@ title: 服务标识示例
 ms.date: 03/30/2017
 ms.assetid: 79fa8c1c-85bb-4b67-bc67-bfaf721303f8
 ms.openlocfilehash: 341e4922089634c3e46929d6cdb474b2dfbd0666
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2018
-ms.locfileid: "49633906"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53152712"
 ---
 # <a name="service-identity-sample"></a>服务标识示例
 此服务标识示例演示如何为服务设置标识。 客户端可以在设计时使用服务的元数据来检索标识，然后在运行时对服务的标识进行身份验证。 服务标识的概念是允许客户端在调用服务的任何操作之前对服务进行身份验证，从而保护客户端，防止进行未经身份验证的调用。 在安全连接中，服务还在允许客户端访问其之前对客户端的凭据进行身份验证，但这不是此示例要介绍的重点。 请参阅中的示例[客户端](../../../../docs/framework/wcf/samples/client.md)演示服务器身份验证。
@@ -115,7 +115,7 @@ class CustomIdentityVerifier : IdentityVerifier
 
 ### <a name="to-run-the-sample-on-the-same-computer"></a>在同一计算机上运行示例
 
-1.  在 [!INCLUDE[wxp](../../../../includes/wxp-md.md)] 或 [!INCLUDE[wv](../../../../includes/wv-md.md)] 上，使用 MMC 管理单元工具将 Identity 解决方案文件夹中的 Identity.pfx 证书文件导入 LocalMachine/My（个人）证书存储区中。 此文件受密码保护。 在导入过程中，将提示您输入密码。 类型`xyz`到密码框。 有关详细信息，请参阅[如何： 使用 MMC 管理单元查看证书](../../../../docs/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in.md)主题。 完成此操作后，使用管理员特权在 Visual Studio 命令提示中运行 Setup.bat，将此证书复制到 CurrentUser/Trusted People 存储中以便在客户端上使用。
+1.  在 [!INCLUDE[wxp](../../../../includes/wxp-md.md)] 或 [!INCLUDE[wv](../../../../includes/wv-md.md)] 上，使用 MMC 管理单元工具将 Identity 解决方案文件夹中的 Identity.pfx 证书文件导入 LocalMachine/My（个人）证书存储区中。 此文件受密码保护。 在导入过程中，将提示您输入密码。 类型`xyz`到密码框。 有关详细信息，请参阅[如何：使用 MMC 管理单元查看证书](../../../../docs/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in.md)主题。 完成此操作后，使用管理员特权在 Visual Studio 命令提示中运行 Setup.bat，将此证书复制到 CurrentUser/Trusted People 存储中以便在客户端上使用。
 
 2.  在[!INCLUDE[ws2003](../../../../includes/ws2003-md.md)]，从示例安装文件夹中具有管理员权限的 Visual Studio 2012 命令提示符中运行 Setup.bat。 这将安装运行示例所需的所有证书。
 
@@ -157,6 +157,6 @@ class CustomIdentityVerifier : IdentityVerifier
 -   运行完示例后运行示例文件夹中的 Cleanup.bat。  
   
     > [!NOTE]
-    >  此脚本不会在跨计算机运行此示例时移除客户端上的服务证书。 如果有运行在计算机之间使用证书的 Windows Communication Foundation (WCF) 示例，请确保清除已安装在 CurrentUser-TrustedPeople 存储区中的服务证书。 为此，请使用以下命令：`certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>`，例如：`certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`。
+    >  此脚本不会在跨计算机运行此示例时移除客户端上的服务证书。 如果有运行在计算机之间使用证书的 Windows Communication Foundation (WCF) 示例，请确保清除已安装在 CurrentUser-TrustedPeople 存储区中的服务证书。 若要执行此操作，请使用以下命令：`certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>` 例如： `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`。
 
 ## <a name="see-also"></a>请参阅

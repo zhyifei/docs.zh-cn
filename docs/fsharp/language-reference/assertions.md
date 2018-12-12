@@ -3,11 +3,11 @@ title: 断言 (F#)
 description: 了解如何使用 assert 表达式作为一种调试功能测试中的表达式F#编程语言。
 ms.date: 05/16/2016
 ms.openlocfilehash: fbaf038f08cfc74e6cb262c110322dc586813c0c
-ms.sourcegitcommit: 7f7664837d35320a0bad3f7e4ecd68d6624633b2
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52671897"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53127246"
 ---
 # <a name="assertions"></a>断言
 

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - fundamentals [WCF]
 - Windows Communication Foundation [WCF], concepts
 ms.assetid: 3e7e0afd-7913-499d-bafb-eac7caacbc7a
-ms.openlocfilehash: c19169d61a96314e9fcfad94b013af18440e1ff5
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 9957b937dd59f82a5d1962fee33593d7a0c1b7c1
+ms.sourcegitcommit: d6e419f9d9cd7e8f21ebf5acde6d016c16332579
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43503609"
+ms.lasthandoff: 12/12/2018
+ms.locfileid: "53286554"
 ---
 # <a name="fundamental-windows-communication-foundation-concepts"></a>Windows Communication Foundation 基础概念
 本文档提供 Windows Communication Foundation (WCF) 体系结构的高级视图。 本文档旨在解释关键概念以及这些概念之间的关系。 有关创建 WCF 服务和客户端的最简单版本的教程，请参阅[入门教程](../../../docs/framework/wcf/getting-started-tutorial.md)。 若要了解 WCF 编程，请参阅[基本 WCF 编程](../../../docs/framework/wcf/basic-wcf-programming.md)。  
@@ -55,7 +55,7 @@ ms.locfileid: "43503609"
  服务是一个构造，它公开一个或多个终结点，其中每个终结点都公开一个或多个服务操作。  
   
  endpoint（终结点）  
- 终结点是用来发送或接收消息（或同时执行这两种操作）的构造。 终结点包括一个定义消息可以发送到的目的地的位置（地址）、一个描述消息应如何发送的通信机制规范（绑定），以及对可以在该位置发送或接收（或同时执行这两种操作）的一组消息的定义（服务协定，用于描述可以发送哪些消息）。  
+ 终结点是用来发送或接收消息（或同时执行这两种操作）的构造。 包含该定义，可以将消息发送，介绍如何应发送消息，通信机制 （绑定） 的规范的位置 （地址） 和一组可以发送或接收的消息的定义 （或两者）描述可以发送哪些消息的位置 （服务协定）。  
   
  WCF 服务作为终结点集合向外界公开。  
   
@@ -144,7 +144,7 @@ HTTPS://cohowinery:8005/ServiceModelSamples/CalculatorService
  传输安全模式指定由传输层机制（如 HTTPS）提供保密性、完整性和身份验证。 在使用像 HTTPS 这样的传输协议时，此模式的优点在于性能出色，而且由于它在 Internet 上非常流行，因此很容易理解。 其缺点在于，这种安全分别应用于通信路径中的每个跃点，这使得通信容易遭受“中间人”攻击。  
   
  消息安全模式  
- 指定安全提供通过实现一个或多个安全规范，如名为规范[Web 服务安全： SOAP 消息安全](https://go.microsoft.com/fwlink/?LinkId=94684)。 每个消息都包含必要的安全机制，用于在消息传输过程中保证安全，并使接收方能够检测到篡改和对消息进行解密。 从这种意义上说，安全信息包装在每个消息中，从而提供了跨多个跃点的端到端安全。 由于安全信息成为消息的一部分，还有可能包含多种凭据并显示消息 (这些称为*声明*)。 这种方法还具有这样一个优点，即消息可以通过任意传输协议（包括在其起点和目标之间的多个传输协议）安全地传送。 这种方法的缺点在于所使用的加密机制较为复杂，使性能受到影响。  
+ 指定安全提供通过实现一个或多个安全规范，如规范名为[Web 服务安全：SOAP 消息安全](https://go.microsoft.com/fwlink/?LinkId=94684)。 每个消息都包含必要的安全机制，用于在消息传输过程中保证安全，并使接收方能够检测到篡改和对消息进行解密。 从这种意义上说，安全信息包装在每个消息中，从而提供了跨多个跃点的端到端安全。 由于安全信息成为消息的一部分，还有可能包含多种凭据并显示消息 (这些称为*声明*)。 这种方法还具有这样一个优点，即消息可以通过任意传输协议（包括在其起点和目标之间的多个传输协议）安全地传送。 这种方法的缺点在于所使用的加密机制较为复杂，使性能受到影响。  
   
  使用消息凭据的传输安全模式  
  此模式指定使用传输层来提供消息的保密性、身份验证和完整性，并且每个消息都可以包含消息接收方所要求的多个凭据（声明）。  

@@ -4,27 +4,27 @@ description: 使用 Microsoft 平台和工具的容器化 Docker 应用程序的
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/21/2017
-ms.openlocfilehash: bc13a0c8d6f14b8ea7ea2017009ba074f9a96ab3
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: fe65e9036c1e0bdf2afe05426c01e75d48f93439
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48580188"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53152328"
 ---
-# <a name="introduction-to-the-microsoft-platform-and-tools-for-containerized-apps"></a>有关适用于容器化应用的 Microsoft 平台和工具的简介
+# <a name="introduction-to-the-microsoft-platform-andtools-for-containerized-apps"></a>Microsoft 平台和工具容器化应用简介
 
 
 图 3-1 显示 Docker 应用的生命周期的主要支柱，这些应用根据多个团队（应用开发、DevOps 基础结构流程和 IT 管理和运营）交付的工作类型分类。 通常，在企业中，负责每个方面的“角色”的个人资料是不同的。 其技能也是如此。
 
 ![](./media/image1.png)
 
-图 3-1：使用 Microsoft 平台和工具的容器化 Docker 应用程序的生命周期中的主要支柱
+图 3-1:使用 Microsoft 平台和工具容器化 Docker 应用程序生命周期中的主要支柱
 
 容器化 Docker 生命周期工作流最初可基于“默认产品选择”具有规定性，以便开发人员快速入门，但从根本上说，必须具有一个开放框架，使其成为可适应每个组织或企业中不同上下文的灵活工作流。 工作流基础结构（组件和产品）必须足够灵活，覆盖每个公司未来会拥有的环境，甚至能够与其他人交换开发或 DevOps 产品。 正如以下章节所述，平台和基础结构的灵活性、开放性和广泛的技术选择正是 Microsoft 对于容器化 Docker 应用程序最重视的几个方面。
 
 表 3-1 显示了适用于容器化 Docker 应用程序的 Microsoft DevOps 的目的，即提供开放式 DevOps 工作流，使用户可选择要用于每个阶段（Microsoft 或第三方）的产品，同时提供具有已互联的“默认产品”的简化工作流，从而使用户可快速使用适用于 Docker 应用的企业级 DevOps 工作流。
 
-表 3-1：面向任何技术的开放式 DevOps 工作流
+表 3-1:任何技术的开放式 DevOps 工作流
 
 | Host | Microsoft 技术 | 第三方 - Azure 可插入 |
 | ---------------------------| ----------------------------------------------------| --------------------------------------------------------------------------------|
@@ -34,7 +34,7 @@ ms.locfileid: "48580188"
 
 如表 3-1 所定义，适用于容器化 Docker 应用的 Microsoft 平台和工具包含以下组件：
 
--   **适用于 Docker 应用开发的平台** 构建“应用”的一个服务或服务集合的开发。 开发平台提供将代码推送到共享代码存储库前，开发人员所需的所有工作。 开发部署为容器的服务与开发不具有 Docker 的相同应用或服务非常相似。 你可继续使用首选语言（.NET、Node.js、Go 等）和首选编辑器或 IDE（如 Visual Studio 或 Visual Studio Code）。 但是，请不要将 Docker 视为部署目标，你是在 Docker 环境中开发服务。 可以在本地生成、运行、测试和调试容器中的代码，以在开发时提供目标环境。 通过本地提供目标环境，Docker 容器可通过设置大幅度改善 DevOps 生命周期。 Visual Studio 和 Visual Studio Code 具有可在开发过程中集成 Docker 容器的扩展。
+-   **适用于 Docker 应用开发的平台** 构建“应用”的一个服务或服务集合的开发。 开发平台提供将代码推送到共享代码存储库前，开发人员所需的所有工作。 开发部署为容器的服务与开发不具有 Docker 的相同应用或服务非常相似。 继续使用你的首选的语言 （.NET、 Node.js、 Go 等） 和偏好的编辑器或 Visual Studio 或 Visual Studio Code 等 IDE。 但是，请不要将 Docker 视为部署目标，你是在 Docker 环境中开发服务。 可以在本地生成、运行、测试和调试容器中的代码，以在开发时提供目标环境。 通过本地提供目标环境，Docker 容器可通过设置大幅度改善 DevOps 生命周期。 Visual Studio 和 Visual Studio Code 具有可在开发过程中集成 Docker 容器的扩展。
 
 -   **Docker 应用的 DevOps**创建 Docker 应用程序的开发人员可以使用 Azure DevOps 服务或任何其他第三方产品，如 Jenkins，若要构建综合自动应用程序生命周期管理 (ALM)。
 
@@ -59,5 +59,5 @@ ms.locfileid: "48580188"
 因此，Microsoft 为端到端容器化 Docker 应用程序生命周期提供了完整的基础。 但是，它是产品和技术的集合，使用户可选择并集成现有工具和流程。 凭借大量方法的灵活性和功能深度优势，Microsoft 在容器化 Docker 应用程序开发领域占据有力地位。
 
 >[!div class="step-by-step"]
-[上一页](../Docker-application-lifecycle/containers-foundation-for-devops-collaboration.md)
-[下一页](../design-develop-containerized-apps/index.md)
+>[上一页](../Docker-application-lifecycle/containers-foundation-for-devops-collaboration.md)
+>[下一页](../design-develop-containerized-apps/index.md)

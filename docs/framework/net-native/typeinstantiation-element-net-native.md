@@ -5,11 +5,11 @@ ms.assetid: a5eada64-075b-4162-9655-ded84e4681f2
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 5277b056c11de4c3e32d33c72bafc8f64ee17d05
-ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50033859"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53154819"
 ---
 # <a name="lttypeinstantiationgt-element-net-native"></a>&lt;类型实例化&gt;元素 (.NET Native)
 将运行时反射策略应用到一个构造泛型类型。  

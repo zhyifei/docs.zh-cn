@@ -3,18 +3,18 @@ title: 编程概念 (C#)
 ms.date: 07/20/2015
 ms.assetid: 3227afd5-4794-484b-b83b-0f1f94a0476b
 ms.openlocfilehash: 216b23a30e8b1d58777fbccbf2956ae91534951b
-ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "52296563"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53143183"
 ---
 # <a name="programming-concepts-c"></a>编程概念 (C#)
 此部分介绍了 C# 语言中的编程概念。  
   
 ## <a name="in-this-section"></a>本节内容  
   
-|标题|描述|  
+|标题|说明|  
 |-----------|-----------------|  
 |[程序集和全局程序集缓存 (C#)](../../../csharp/programming-guide/concepts/assemblies-gac/index.md)|介绍了如何创建和使用程序集。|  
 |[使用 Async 和 Await 的异步编程 (C#)](../../../csharp/programming-guide/concepts/async/index.md)|介绍了如何在 C# 中使用 [async](../../../csharp/language-reference/keywords/async.md) 和 [await](../../../csharp/language-reference/keywords/await.md) 关键字编写异步解决方案。 其中包括演练。|  

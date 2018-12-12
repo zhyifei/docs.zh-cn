@@ -2,12 +2,12 @@
 title: 符号和运算符参考 (F#)
 description: 了解符号和运算符中使用F#编程语言。
 ms.date: 04/04/2018
-ms.openlocfilehash: f6f99f8fa563b71c935122c6f8597599c59b5c7f
-ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
+ms.openlocfilehash: a382400213aa288bb134faefd8ce747a7319a76f
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "52297297"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53169867"
 ---
 # <a name="symbol-and-operator-reference"></a>符号和运算符参考
 
@@ -61,7 +61,7 @@ ms.locfileid: "52297297"
 |`::`|[列表](../lists.md)<br /><br />[match 表达式](../match-expressions.md)|<ul><li>创建列表。 将左侧的元素追加到右侧的列表。<br /></li><li>在模式匹配中用于分隔列表的各个部分。<br /></li></ul>|
 |`:=`|[引用单元格](../reference-cells.md)|<ul><li>对引用单元格赋值。<br /></li></ul>|
 |`:>`|[强制转换和转换](../casting-and-conversions.md)|<ul><li>将类型转换为层次结构中级别更高的类型。<br /></li></ul>|
-|`:?`|[match 表达式](../match-expressions.md)|<ul><li>如果值与指定类型匹配，则返回 `true`；否则，返回 `false`（类型测试运算符）。<br /></li></ul>|
+|`:?`|[match 表达式](../match-expressions.md)|<ul><li>返回`true`如果的值与匹配指定的类型 （包括它是否子类型）; 否则，返回`false`（类型测试运算符）。<br /></li></ul>|
 |`:?>`|[强制转换和转换](../casting-and-conversions.md)|<ul><li>将类型转换为层次结构中级别更低的类型。<br /></li></ul>|
 |`;`|[详细语法](../verbose-syntax.md)<br /><br />[列表](../lists.md)<br /><br />[记录](../records.md)|<ul><li>分隔表达式（主要用于详细语法）。<br /></li><li>分隔列表中的元素。<br /></li><li>分隔记录的字段。<br /></li></ul>|
 |`<`|[算术运算符](arithmetic-operators.md)|<ul><li>计算“小于”运算。<br /></li></ul>|
@@ -96,7 +96,7 @@ ms.locfileid: "52297297"
 |`@`|[列表](../lists.md)<br /><br />[字符串](../strings.md)|<ul><li>连接两个列表。<br /></li><li>当放置在字符串文本之前时，指示将逐字解释字符串，而不会解释转义符。<br /></li></ul>|
 |`[...]`|[列表](../lists.md)|<ul><li>分隔列表中的元素。<br /></li></ul>|
 |<code>[&#124;...&#124;]</code>|[数组](../arrays.md)|<ul><li>分隔数组中的元素。<br /></li></ul>|
-|`[<...>]`|[特性](../attributes.md)|<ul><li>分隔特性。<br /></li></ul>|
+|`[<...>]`|[属性](../attributes.md)|<ul><li>分隔特性。<br /></li></ul>|
 |`\`|[字符串](../strings.md)|<ul><li>对下一个字符转义，在字符和字符串文本中使用。<br /></li></ul>|
 |`^`|[静态解析的类型参数](../generics/statically-resolved-type-parameters.md)<br /><br />[字符串](../strings.md)|<ul><li>指定在编译时（而非运行时）必须解析的类型参数。<br /></li><li>连接字符串。<br /></li></ul>|
 |`^^^`|[位运算符](bitwise-operators.md)|<ul><li>计算“位异或”运算。<br /></li></ul>|
@@ -146,6 +146,7 @@ ms.locfileid: "52297297"
 |`.`|左|
 |`f(x)`|左侧|
 |`f<`*types*`>`|左侧|
+
 F# 支持自定义运算符重载。 这意味着你可以自定义自己的运算符。 在上表中，*op* 可以是任何有效的运算符字符序列（可能为空），它既可以内嵌，也可以由用户定义。 因此，你可以使用此表来确定用于自定义运算符以实现所需优先级级别的字符顺序。 当编译器确定优先级时，会忽略前面的 `.` 字符。
 
 ## <a name="see-also"></a>请参阅

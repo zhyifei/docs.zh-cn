@@ -1,16 +1,16 @@
 ---
-title: '&lt;findCriteria&gt;'
+title: '&lt;FindCriteria&gt;'
 ms.date: 03/30/2017
 ms.assetid: 5454cd19-6bf5-4ba8-94d1-f58d10dc1917
-ms.openlocfilehash: fc9cd3b87d0f47ae0f16b5c5bfcaa4a1167bae9f
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 38941e4afb0cfa4fea8657c90c1105a5ab771d49
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32748641"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53144192"
 ---
-# <a name="ltfindcriteriagt"></a>&lt;findCriteria&gt;
-一个配置元素，提供客户端应用程序用于搜索发现服务的一组条件。 条件可以划分为搜索条件 （指定要查找的服务） 和查找终止条件 （搜索应持续的时长）。  
+# <a name="ltfindcriteriagt"></a>&lt;FindCriteria&gt;
+一个配置元素，提供客户端应用程序用于搜索发现服务的一组条件。 条件可以划分为搜索条件 （指定要查找的服务） 和查找终止条件 （搜索应持续多久）。  
   
  \<system.ServiceModel>  
 \<standardEndpoints >  
@@ -54,7 +54,7 @@ ms.locfileid: "32748641"
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<contractTypeNames >](../../../../../docs/framework/configure-apps/file-schema/wcf/contracttypenames.md)|一个配置元素集合，这些元素包含工作流服务协定类型的名称。|  
+|[\<contractTypeNames >](../../../../../docs/framework/configure-apps/file-schema/wcf/contracttypenames.md)|包含工作流服务协定类型的名称的配置元素的集合。|  
 |\<扩展 > 的\<findCriteria >|一个 XML 元素对象集合，这些对象提供扩展。|  
 |[\<作用域 >](../../../../../docs/framework/configure-apps/file-schema/wcf/scopes.md)|一个对象集合，这些对象包含在查找操作过程中用于查找一个或多个特定服务的绝对 URI。<br /><br /> 如果找到特定服务，则表示已在服务 URI 和范围 URI 之间进行了成功的匹配，此匹配操作有时是借助处理匹配复杂性的范围规则完成的。|  
   

@@ -4,12 +4,12 @@ description: 适用于容器化 .NET 应用程序的 .NET 微服务体系结构 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 06/08/2018
-ms.openlocfilehash: dc0db8f0cdfa77bcca467c3c632b3d93de8851d8
-ms.sourcegitcommit: 59b51cd7c95c75be85bd6ef715e9ef8c85720bac
+ms.openlocfilehash: ec79221f0238d61f1ca1b2b7c58b1e16be7f4df4
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37875114"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53130789"
 ---
 # <a name="implementing-resilient-applications"></a>实现具有恢复能力的应用程序
 
@@ -21,7 +21,6 @@ ms.locfileid: "37875114"
 
 应用程序的各个组件还应涵盖运行状况监视功能。 遵循本章节中的准则，可创建这样的应用程序：即使在基于云的复杂部署中出现短暂停机或暂时中断，它也能平稳运行。
 
-
 >[!div class="step-by-step"]
-[上一页](../microservice-ddd-cqrs-patterns/microservice-application-layer-implementation-web-api.md)
-[下一页](handle-partial-failure.md)
+>[上一页](../microservice-ddd-cqrs-patterns/microservice-application-layer-implementation-web-api.md)
+>[下一页](handle-partial-failure.md)

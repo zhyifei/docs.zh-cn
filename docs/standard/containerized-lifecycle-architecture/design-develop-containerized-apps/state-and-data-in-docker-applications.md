@@ -4,12 +4,12 @@ description: 使用 Microsoft 平台和工具的容器化 Docker 应用程序的
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
-ms.openlocfilehash: 9b048beb0eb913fc6587dcc639a16df8153c550b
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: 7454b25cdb1bede87c6f0bd179fcabd489922263
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49123223"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53154172"
 ---
 # <a name="state-and-data-in-docker-applications"></a>Docker 应用程序中的状态和数据
 
@@ -39,7 +39,7 @@ Docker 使用一项功能称为*覆盖文件系统*实现写入时复制过程�
 
 ![](./media/image5.png)
 
-图 4-5： 数据卷和用于容器的应用/容器的外部数据源
+图 4-5:数据卷和用于容器的应用/容器的外部数据源
 
 因为无法管理在单独的物理主机运行的容器之间共享的数据，建议不使用卷用于业务数据除非 Docker 主机是固定的主机/VM，因为在业务流程协调程序中使用 Docker 容器时容器应介于 1 到另一台主机，具体取决于要由群集执行的优化移动。
 
@@ -49,7 +49,6 @@ Docker 使用一项功能称为*覆盖文件系统*实现写入时复制过程�
 
 远程数据源和 SQL 数据库、 DocumentDB、 或的远程如 Redis 缓存等缓存应该是与开发不带容器相同。 这是一种首选方法，且经实践证明的业务应用程序数据存储。
 
-
 >[!div class="step-by-step"]
-[上一页](monolithic-applications.md)
-[下一页](soa-applications.md)
+>[上一页](monolithic-applications.md)
+>[下一页](soa-applications.md)

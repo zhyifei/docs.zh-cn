@@ -4,12 +4,12 @@ description: 使用 Microsoft 平台和工具的容器化 Docker 应用程序的
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
-ms.openlocfilehash: 3af174279e8b6f56a10413817b05ef68cfcabea5
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 8aa388c7c19f532829d64208a48b6e556e43d802
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50202168"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53152872"
 ---
 # <a name="common-container-design-principles"></a>常见容器设计原则
 
@@ -21,7 +21,6 @@ ms.locfileid: "50202168"
 
 你可能会发现你希望在单个容器中运行的多个进程的方案。 在任何体系结构文档中，永远不会"从来没有，"也不是始终将"always"。 对于需要多个进程的情况下，一种常见模式是使用[监督程序](http://supervisord.org/)。
 
-
 >[!div class="step-by-step"]
-[上一页](design-docker-applications.md)
-[下一页](monolithic-applications.md)
+>[上一页](design-docker-applications.md)
+>[下一页](monolithic-applications.md)

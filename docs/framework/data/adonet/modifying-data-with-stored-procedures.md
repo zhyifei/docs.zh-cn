@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 7d8e9a46-1af6-4a02-bf61-969d77ae07e0
-ms.openlocfilehash: c975913ab5df9c2e7f792ed73f8c5d20bdca1c5a
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: c868528edbccfeb32e6aca02c92b87d51bb0b829
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43526880"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53144762"
 ---
 # <a name="modifying-data-with-stored-procedures"></a>使用存储过程修改数据
 存储过程可以接受数据作为输入参数并可以返回数据作为输出参数、结果集或返回值。 下面的示例演示 ADO.NET 如何发送和接收输入参数、输出参数及返回值。 该示例将一条新记录插入到一个表中，该表中的主键列为 SQL Server 数据库中的标识列。  
@@ -21,7 +21,7 @@ ms.locfileid: "43526880"
 ## <a name="example"></a>示例  
  该示例使用以下存储的过程插入到新的类别**Northwind** **类别**表。 存储的过程将值**CategoryName**列作为输入的参数，并使用 scope_identity （） 函数来检索标识字段的新值**CategoryID**，并将其返回output 参数。 RETURN 语句使用 @@ROWCOUNT函数返回插入的行数。  
   
-```  
+```sql
 CREATE PROCEDURE dbo.InsertCategory  
   @CategoryName nvarchar(15),  
   @Identity int OUT  

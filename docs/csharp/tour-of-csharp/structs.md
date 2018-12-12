@@ -3,12 +3,12 @@ title: C# 结构 - C# 语言介绍
 description: 了解 C# 值类型（称为“结构”）的基础知识
 ms.date: 08/10/2016
 ms.assetid: 88a74571-f741-4a31-a2b5-1ccf165535b8
-ms.openlocfilehash: 2b1870713b488f706f5f3a54413461052173bab6
-ms.sourcegitcommit: d88024e6d6d8b242feae5f4007a709379355aa24
+ms.openlocfilehash: 6b165dd040213b33f91d1baf1b0fb4909101666d
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49323092"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53142731"
 ---
 # <a name="structs"></a>结构
 
@@ -35,5 +35,5 @@ ms.locfileid: "49323092"
 以上示例突出显示了结构的两个限制。 首先，复制整个结构通常比复制对象引用效率更低，因此通过结构进行的赋值和值参数传递可能比通过引用类型成本更高。 其次，除 `in`、`ref` 和 `out` 参数以外，无法创建对结构的引用，这就表示在很多应用场景中都不能使用结构。
 
 >[!div class="step-by-step"]
-[上一页](classes-and-objects.md)
-[下一页](arrays.md)
+>[上一页](classes-and-objects.md)
+>[下一页](arrays.md)

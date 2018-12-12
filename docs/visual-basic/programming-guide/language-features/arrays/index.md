@@ -8,11 +8,11 @@ helpviewer_keywords:
 - Visual Basic, arrays
 ms.assetid: dbf29737-b589-4443-bee6-a27588d9c67e
 ms.openlocfilehash: f8bd0f3eed8599f7f9e316df8274e8204a69c48f
-ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "52297447"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53149895"
 ---
 # <a name="arrays-in-visual-basic"></a>Visual Basic 中的数组
 
@@ -126,7 +126,7 @@ Dim sales()() As Double = New Double(11)() {}
 
 [!code-vb[nested-type-inference](~/samples/snippets/visualbasic/programming-guide/language-features/arrays/create-array.vb#6)]
 
-有关其他示例，请参阅[如何：在 Visual Basic 中初始化数组变量](../../language-features/arrays/how-to-initialize-an-array-variable.md)。
+有关其他示例，请参阅[如何：初始化数组变量在 Visual Basic 中的](../../language-features/arrays/how-to-initialize-an-array-variable.md)。
 
 ## <a name="iterating-through-an-array"></a>循环访问数组
 
@@ -299,8 +299,8 @@ Dim arrZ(-1) As String
 |术语|定义|
 |----------|----------------|
 |[Array Dimensions in Visual Basic](../../language-features/arrays/array-dimensions.md)|在数组中解释级别和维度。|
-|[如何：在 Visual Basic 中初始化数组变量](../../language-features/arrays/how-to-initialize-an-array-variable.md)|说明如何用初始值填充数组。|
-|[如何：在 Visual Basic 中对数组进行排序](../../language-features/arrays/how-to-sort-an-array.md)|显示如何按字母先后顺序对数组元素进行排序。|
+|[如何：初始化数组变量在 Visual Basic 中](../../language-features/arrays/how-to-initialize-an-array-variable.md)|说明如何用初始值填充数组。|
+|[如何：在 Visual Basic 中的对数组进行排序](../../language-features/arrays/how-to-sort-an-array.md)|显示如何按字母先后顺序对数组元素进行排序。|
 |[如何：将一个数组赋给另一个数组](../../language-features/arrays/how-to-assign-one-array-to-another-array.md)|说明将数组分配到另一个数组变量的规则和步骤。|
 |[数组疑难解答](../../language-features/arrays/troubleshooting-arrays.md)|讨论在使用数组时出现的一些常见问题。|
 

@@ -2,12 +2,12 @@
 title: 安全数据访问
 ms.date: 03/30/2017
 ms.assetid: 473ebd69-21a3-4627-b95e-4e04d035c56f
-ms.openlocfilehash: e5bb96a091dcd64f12d086d864643d00c34d8f17
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: d7964a084c1d5936b034d76b8c6e46053e8dcb0a
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50185935"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53129189"
 ---
 # <a name="secure-data-access"></a>安全数据访问
 要编写安全的 ADO.NET 代码，必须了解基础数据存储（即数据库）中提供的安全机制。 您还需要考虑应用程序可能包含的其他功能或组件对安全性的影响。  
@@ -66,11 +66,8 @@ ms.locfileid: "50185935"
 |资源|描述|  
 |--------------|-----------------|  
 |[安全注意事项和 Access 2007 中的指南](https://go.microsoft.com/fwlink/?LinkId=98354)|描述 Access 2007 的安全技术，如加密文件、管理密码、将数据库转换为新的 ACCDB 和 ACCDE 格式以及使用其他安全选项。|  
-|[帮助保护 Access 数据库与用户级安全 (MDB)](https://go.microsoft.com/fwlink/?LinkId=47697)|适用于 Access 2003。 提供用于实施用户级安全以保护 Access 2003 数据的说明。|  
 |[访问安全性理解工作组信息文件的角色](https://support.microsoft.com/kb/305542)|说明工作组信息文件在 Access 2003 安全性中的作用和关系。|  
 |[经常询问的问题的 Microsoft Access 安全性的 Microsoft Access 2.0 至 2000年版](https://go.microsoft.com/fwlink/?LinkId=47698)|Microsoft Access 可下载版本的安全性常见问题。|  
-|[安全和防护疑难解答](https://go.microsoft.com/fwlink/?LinkId=47703)|演示与 Excel 2003 安全性有关的常见问题的解决方案。|  
-  
 ## <a name="enterprise-services"></a>企业服务  
  COM+ 包含其自己的安全模型，该模型依赖于 Windows NT 帐户和进程/线程模拟。 <xref:System.EnterpriseServices> 命名空间提供的包装允许 .NET 应用程序通过 <xref:System.EnterpriseServices.ServicedComponent> 类来集成托管代码与 COM+ 安全服务。  
   
@@ -87,9 +84,9 @@ ms.locfileid: "50185935"
   
 |资源|描述|  
 |--------------|-----------------|  
-|[与非托管代码交互操作](../../../../docs/framework/interop/index.md)|包含描述如何向 .NET Framework 公开 COM 组件以及如何向 COM 公开 .NET Framework 组件的主题。|  
-|[高级 COM 互操作性](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bd9cdfyx)|包含高级主题，如主互操作程序集、线程和自定义封送处理。|  
-  
+|[与非托管代码交互操作](../../../../docs/framework/interop/index.md)|包含描述如何向 .NET Framework 公开 COM 组件以及如何向 COM 公开 .NET Framework 组件的主题。|
+|[高级 COM 互操作性](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bd9cdfyx(v=vs.100))|包含高级主题，如主互操作程序集、线程和自定义封送处理。|
+
 ## <a name="see-also"></a>请参阅  
  [保证 ADO.NET 应用程序的安全](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
  [SQL Server 安全性](../../../../docs/framework/data/adonet/sql/sql-server-security.md)  

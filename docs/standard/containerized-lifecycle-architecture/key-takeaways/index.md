@@ -4,16 +4,16 @@ description: 使用 Microsoft 平台和工具 (e-book)_v1.1 的容器化 Docker 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
-ms.openlocfilehash: 24a4e826ece691a6a1221b39c164bba2eef8a059
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 3783bdde100aa83bd7fbbc2a0f2ee616ef9a729d
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/15/2018
-ms.locfileid: "45646241"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53148622"
 ---
 # <a name="key-takeaways"></a>关键结论
 
--   基于容器的解决方案对于节约成本大有裨益，因为容器可以解决由于在生产环境中缺乏依赖项而导致的部署问题，可显著改进 DevOps 和生产操作。
+-   基于容器的解决方案提供节省成本的重要优势，因为容器是解决部署问题引起的缺乏依赖项在生产环境中，因此，显著改进 DevOps 和生产操作解决方案.
 
 -   Docker 正逐渐成为容器行业的事实标准，受到包括 Microsoft 在内的 Linux and Windows 生态系统领域最重要供应商的支持。 将来，Docker 将会在云端或本地的任何数据中心普及。
 
@@ -26,4 +26,4 @@ ms.locfileid: "45646241"
 Azure DevOps 服务极大地简化了从持续部署管道，包括简单 Docker 环境或更高级的微服务和容器协调程序在 Azure 上基于指定为 Docker 环境的 DevOps 环境。
 
 >[!div class="step-by-step"]
-[上一篇](../run-manage-monitor-docker-environments/monitor-containerized-application-services.md)
+>[上一篇](../run-manage-monitor-docker-environments/monitor-containerized-application-services.md)

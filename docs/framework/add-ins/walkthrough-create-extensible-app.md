@@ -14,11 +14,11 @@ ms.assetid: 694a33c5-a040-450d-aed5-ac49fc88ce61
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 63780583d035d6fab6b3a79424857b82a910ef09
-ms.sourcegitcommit: 5fd80619c760fa8c25d33a6f5661247cb65da465
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "50744608"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53155072"
 ---
 # <a name="walkthrough-creating-an-extensible-application"></a>演练：创建可扩展的应用程序
 本演练介绍如何创建用于执行简单的计算器功能的外接程序的管道。 它并不演示实际方案中;相反，它演示了一个管道，以及如何外接程序可以提供主机服务的基本功能。  
@@ -43,11 +43,11 @@ ms.locfileid: "50744608"
   
 -   运行主机应用程序。  
   
- 此管道传递仅可序列化类型 (<xref:System.Double>和<xref:System.String>)、 主机和外接程序之间。 有关演示如何将传递复杂数据类型的集合的示例，请参阅[演练： 将集合传递之间主机和外接程序](https://msdn.microsoft.com/library/b532c604-548e-4fab-b11c-377257dd0ee5)。  
+ 此管道传递仅可序列化类型 (<xref:System.Double>和<xref:System.String>)、 主机和外接程序之间。 有关演示如何将传递复杂数据类型的集合的示例，请参阅[演练：主机和外接程序之间传递集合](https://msdn.microsoft.com/library/b532c604-548e-4fab-b11c-377257dd0ee5)。  
   
  此管道的协定定义四个算术操作的对象模型： 添加、 减、 乘和除。 主机外接程序提供的公式来计算 2 + 2，如和外接程序将结果返回到主机。  
   
- 第 2 版的计算器外接程序提供更多的计算的可能性，并演示了版本控制。 中所述[演练： 为主机所做的更改启用向后兼容性](https://msdn.microsoft.com/library/6fa15bb5-8f04-407d-bd7d-675dc043c848)。  
+ 第 2 版的计算器外接程序提供更多的计算的可能性，并演示了版本控制。 中介绍了[演练：启用主机更改为向后的兼容性](https://msdn.microsoft.com/library/6fa15bb5-8f04-407d-bd7d-675dc043c848)。  
   
 ## <a name="prerequisites"></a>系统必备  
  若要完成本演练，你需要具备以下条件：  
@@ -86,7 +86,7 @@ ms.locfileid: "50744608"
      不需要将管道文件夹结构放在你的应用程序文件夹;此处这样做是仅为方便起见。 在相应的步骤，本演练介绍如何更改代码，如果管道文件夹结构是在不同的位置。 请参阅中的管道目录要求的讨论[管线开发要求](https://msdn.microsoft.com/library/ef9fa986-e80b-43e1-868b-247f4c1d9da5)。  
   
     > [!NOTE]
-    >  `CalcV2`不在本演练中使用文件夹; 它是占位符[演练： 为主机所做的更改启用向后兼容性](https://msdn.microsoft.com/library/6fa15bb5-8f04-407d-bd7d-675dc043c848)。  
+    >  `CalcV2`不在本演练中使用文件夹; 它是占位符[演练：启用主机更改为向后的兼容性](https://msdn.microsoft.com/library/6fa15bb5-8f04-407d-bd7d-675dc043c848)。  
   
 ## <a name="creating-the-contract-and-views"></a>创建的协定和视图  
  此管道的协定段定义`ICalc1Contract`接口，它定义了四个方法： `add`， `subtract`， `multiply`，和`divide`。  
@@ -355,8 +355,8 @@ ms.locfileid: "50744608"
 4.  类型**退出**然后按**Enter**键关闭该应用程序。  
   
 ## <a name="see-also"></a>请参阅  
-- [演练： 启用向后的兼容性作为在宿主发生变化](https://msdn.microsoft.com/library/6fa15bb5-8f04-407d-bd7d-675dc043c848)  
--  [演练： 在宿主和外接程序之间传递集合](https://msdn.microsoft.com/library/b532c604-548e-4fab-b11c-377257dd0ee5)  
+- [演练：启用主机更改为向后的兼容性](https://msdn.microsoft.com/library/6fa15bb5-8f04-407d-bd7d-675dc043c848)  
+-  [演练：主机和外接程序之间传递集合](https://msdn.microsoft.com/library/b532c604-548e-4fab-b11c-377257dd0ee5)  
 -  [管线开发要求](https://msdn.microsoft.com/library/ef9fa986-e80b-43e1-868b-247f4c1d9da5)  
 -  [协定、 视图和适配器](https://msdn.microsoft.com/library/a6460173-9507-4b87-8c07-d4ee245d715c)  
 -  [管道开发](../../../docs/framework/add-ins/pipeline-development.md)

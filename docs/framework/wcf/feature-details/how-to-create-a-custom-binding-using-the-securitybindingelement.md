@@ -1,5 +1,5 @@
 ---
-title: 如何：使用 SecurityBindingElement 创建自定义绑定
+title: 如何：创建自定义绑定使用 SecurityBindingElement
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,13 +8,13 @@ helpviewer_keywords:
 - security [WCF], creating custom bindings
 ms.assetid: 203a9f9e-3a73-427c-87aa-721c56265b29
 ms.openlocfilehash: df40d8dbd5af9acf9e9484ee7694df2bba7ad9f1
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50181129"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53155244"
 ---
-# <a name="how-to-create-a-custom-binding-using-the-securitybindingelement"></a>如何：使用 SecurityBindingElement 创建自定义绑定
+# <a name="how-to-create-a-custom-binding-using-the-securitybindingelement"></a>如何：创建自定义绑定使用 SecurityBindingElement
 Windows Communication Foundation (WCF) 包括多个系统提供的绑定可以配置，但配置 WCF 支持的所有安全选项时未提供最大的灵活性。 本主题演示如何直接从各个绑定元素创建自定义绑定，并着重说明创建这样的绑定时可以指定的一些安全设置。 有关创建自定义绑定的详细信息，请参阅[扩展绑定](../../../../docs/framework/wcf/extending/extending-bindings.md)。  
   
 > [!WARNING]
@@ -25,7 +25,7 @@ Windows Communication Foundation (WCF) 包括多个系统提供的绑定可以�
   
  相比之下，若要创建自定义绑定，应创建并配置绑定元素，然后从绑定元素创建 <xref:System.ServiceModel.Channels.CustomBinding>。  
   
- 为此，将各个绑定元素添加到由 <xref:System.ServiceModel.Channels.BindingElementCollection> 类的实例表示的集合，然后将 `Elements` 的 `CustomBinding` 属性设置为等于该对象。 必须按以下顺序添加绑定元素：事务流、可靠会话、安全、复合双工、单向、流安全、消息编码和传输。 请注意，并不是每个绑定中都需要所列的所有绑定元素。  
+ 为此，将各个绑定元素添加到由 <xref:System.ServiceModel.Channels.BindingElementCollection> 类的实例表示的集合，然后将 `Elements` 的 `CustomBinding` 属性设置为等于该对象。 必须按以下顺序添加绑定元素：事务流、 可靠会话、 安全、 复合双工、 单向、 Stream 安全、 消息编码和传输。 请注意，并不是每个绑定中都需要所列的所有绑定元素。  
   
 ## <a name="securitybindingelement"></a>SecurityBindingElement  
  有三个绑定元素与消息级安全性有关，它们都派生自 <xref:System.ServiceModel.Channels.SecurityBindingElement> 类。 这三个绑定元素是 <xref:System.ServiceModel.Channels.TransportSecurityBindingElement>、<xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> 和 <xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement>。 <xref:System.ServiceModel.Channels.TransportSecurityBindingElement> 用于提供混合模式安全。 当消息层提供安全时，使用其他两个元素。  

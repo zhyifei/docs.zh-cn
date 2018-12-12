@@ -4,12 +4,12 @@ description: 本指南提供了使用 ASP.NET Core 和 Azure 生成单片式 Web
 author: ardalis
 ms.author: wiwagn
 ms.date: 06/28/2018
-ms.openlocfilehash: e2d2545108b55043c322baffbd609b2422d2743b
-ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
+ms.openlocfilehash: 0d59a07e01897400a53f48799383d1670a468d73
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37936979"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53148101"
 ---
 # <a name="architect-modern-web-applications-with-aspnet-core-and-azure"></a>使用 ASP.NET Core 和 Azure 构建新式 Web 应用程序
 
@@ -79,7 +79,7 @@ Docker 的鲸鱼徽标是 Docker Inc. 的注册商标经许可方可使用。
 
 使用 Azure 中托管的 ASP.NET Core 生成 Web 应用，与传统替代方法相比，这能提供许多竞争优势。 ASP.NET Core 针对新式 web 应用程序开发做法和云托管方案进行了优化。 本指南介绍如何构建 ASP.NET Core 应用程序以充分利用这些功能。
 
-## <a name="purpose"></a>目的
+## <a name="purpose"></a>目标
 
 本指南提供了使用 ASP.NET Core 和 Azure 构建单片 web 应用程序的端到端指导。
 
@@ -110,4 +110,4 @@ Docker 的鲸鱼徽标是 Docker Inc. 的注册商标经许可方可使用。
   <https://docs.microsoft.com/dotnet/standard/choosing-core-framework-server>
 
 >[!div class="step-by-step"]
-[下一篇](modern-web-applications-characteristics.md)
+>[下一篇](modern-web-applications-characteristics.md)

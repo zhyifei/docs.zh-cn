@@ -4,12 +4,12 @@ description: 了解各种支持的无服务器体系结构，从计划和基于�
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
-ms.openlocfilehash: 0261b9f17f133942d635cf331d8cef414378bd90
-ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
+ms.openlocfilehash: cf46c601ac6aa401c7c37bd64c1f8981589ebd2e
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "49369748"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53146701"
 ---
 # <a name="serverless-design-examples"></a>无服务器设计示例
 
@@ -89,5 +89,5 @@ API 网关为客户端提供单一入口点，然后以智能方式将请求路�
 * [使用 Azure Cosmos DB 中源支持的更改](https://docs.microsoft.com/azure/cosmos-db/change-feed)
 
 >[!div class="step-by-step"]
-[上一页](serverless-architecture-considerations.md)
-[下一页](azure-serverless-platform.md)
+>[上一页](serverless-architecture-considerations.md)
+>[下一页](azure-serverless-platform.md)

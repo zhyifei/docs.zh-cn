@@ -3,11 +3,11 @@ title: '&lt;customBinding&gt; 的 &lt;security&gt;'
 ms.date: 03/30/2017
 ms.assetid: 243a5148-bbd1-447f-a8a5-6e7792c0a3f1
 ms.openlocfilehash: eb8cd4172a83d618f3fd83519a8d9d2f4c864067
-ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50042124"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53128943"
 ---
 # <a name="ltsecuritygt-of-ltcustombindinggt"></a>&lt;customBinding&gt; 的 &lt;security&gt;
 指定自定义绑定的安全选项。  
@@ -53,13 +53,13 @@ messageProtectionOrder="SignBeforeEncrypt/SignBeforeEncryptAndEncryptSignature/E
 |authenticationMode|可选。 指定在发起方和响应方之间使用的身份验证模式。 请参见下面所有的值。<br /><br /> 默认值为 `sspiNegotiated`。|  
 |defaultAlgorithmSuite|可选。 设置消息加密和密钥包装算法。 算法和密钥大小由 <xref:System.ServiceModel.Security.SecurityAlgorithmSuite> 类确定。 这些算法映射到安全策略语言 (WS-SecurityPolicy) 规范中指定的算法。<br /><br /> 以下显示了可能的值。 默认值为 `Basic256`。<br /><br /> 此属性与选取不同于默认算法的算法集的其他平台一起使用。 在对此设置进行修改时，应该注意相关算法的优缺点。 此属性的类型为 <xref:System.ServiceModel.Security.SecurityAlgorithmSuite>。|  
 |includeTimestamp|一个布尔值，指定是否每个消息都包含时间戳。 默认值为 `true`。|  
-|keyEntropyMode|指定用于保护消息的密钥的计算方法。 密钥只能基于客户端密钥材料、服务密钥材料或两者的组合。 有效值为<br /><br /> -   `ClientEntropy`： 此会话密钥基于客户端提供的密钥数据。<br />-   `ServerEntropy`： 此会话密钥基于由服务器提供的密钥数据。<br />-   `CombinedEntropy`： 此会话密钥基于由客户端和服务提供的键数据。<br /><br /> 默认值为 `CombinedEntropy`。<br /><br /> 此属性的类型为 <xref:System.ServiceModel.Security.SecurityKeyEntropyMode>。|  
-|messageProtectionOrder|设置对消息应用消息级安全算法的顺序。 包括以下有效值：<br /><br /> -   `SignBeforeEncrypt`： 先签名，然后加密。<br />-   `SignBeforeEncryptAndEncryptSignature`： 先签名，加密，然后加密签名。<br />-   `EncryptBeforeSign`： 先加密，然后登录。<br /><br /> 默认值取决于所使用的 WS-Security 版本。 使用 WS-Security 1.1 时，默认值为 `SignBeforeEncryptAndEncryptSignature`。 使用 WS-Security 1.0 时，默认值为 `SignBeforeEncrypt`。<br /><br /> 此属性的类型为 <xref:System.ServiceModel.Security.MessageProtectionOrder>。|  
+|keyEntropyMode|指定用于保护消息的密钥的计算方法。 密钥只能基于客户端密钥材料、服务密钥材料或两者的组合。 有效值为<br /><br /> -   `ClientEntropy`:会话密钥基于客户端提供的密钥数据。<br />-   `ServerEntropy`:会话密钥基于由服务器提供的密钥数据。<br />-   `CombinedEntropy`:会话密钥基于由客户端和服务提供的键数据。<br /><br /> 默认值为 `CombinedEntropy`。<br /><br /> 此属性的类型为 <xref:System.ServiceModel.Security.SecurityKeyEntropyMode>。|  
+|messageProtectionOrder|设置对消息应用消息级安全算法的顺序。 包括以下有效值：<br /><br /> -   `SignBeforeEncrypt`:先签名，然后加密。<br />-   `SignBeforeEncryptAndEncryptSignature`:首次登录，加密，然后加密签名。<br />-   `EncryptBeforeSign`:先加密，然后登录。<br /><br /> 默认值取决于所使用的 WS-Security 版本。 使用 WS-Security 1.1 时，默认值为 `SignBeforeEncryptAndEncryptSignature`。 使用 WS-Security 1.0 时，默认值为 `SignBeforeEncrypt`。<br /><br /> 此属性的类型为 <xref:System.ServiceModel.Security.MessageProtectionOrder>。|  
 |messageSecurityVersion|可选。 设置所使用的 WS-Security 的版本。 包括以下有效值：<br /><br /> -WSSecurity11WSTrustFebruary2005WSSecureConversationFebruary2005WSSecurityPolicy11<br />-WSSecurity10WSTrustFebruary2005WSSecureConversationFebruary2005WSSecurityPolicy11BasicSecurityProfile10<br />-WSSecurity11WSTrustFebruary2005WSSecureConversationFebruary2005WSSecurityPolicy11BasicSecurityProfile10<br /><br /> 默认值是 WSSecurity11WSTrustFebruary2005WSSecureConversationFebruary2005WSSecurityPolicy11，且该默认值在 XML 中可以简单地表示为 `Default`。 此属性的类型为 <xref:System.ServiceModel.MessageSecurityVersion>。|  
 |requireDerivedKeys|一个布尔值，指定是否可以从原始校验密钥中派生密钥。 默认值为 `true`。|  
 |requireSecurityContextCancellation|可选。 一个布尔值，指定当不再需要安全上下文时是否应将其取消和终止。 默认值为 `true`。|  
 |requireSignatureConfirmation|可选。 一个布尔值，指定是否启用 WS-Security 签名确认。 当设置为 `true` 时，消息签名由响应方进行确认。  为相互证书配置自定义绑定时或将自定义绑定配置为使用所颁发的令牌（WSS 1.1 绑定）时，此特性默认为 `true`。 否则，默认为 `false`。<br /><br /> 签名确认用于确认服务正在完全知晓请求的情况下做出响应。|  
-|securityHeaderLayout|可选。 指定安全头中元素的排序。 有效值为<br /><br /> -   `Strict`： 项添加到安全标头按照"先使用声明"的一般原则。<br />-   `Lax`： 项添加到安全头中任何符合 WSS 的顺序： SOAP 消息安全。<br />-   `LaxWithTimestampFirst`： 项添加到安全头中任何符合 WSS 的顺序： SOAP 消息安全，但安全头中的第一个元素必须 wsse: timestamp 元素。<br />-   `LaxWithTimestampLast`： 项添加到安全头中任何符合 WSS 的顺序： SOAP 消息安全，但安全头中的最后一个元素必须 wsse: timestamp 元素。<br /><br /> 默认值为 `Strict`。<br /><br /> 此元素的类型为 <xref:System.ServiceModel.Channels.SecurityHeaderLayout>。|  
+|securityHeaderLayout|可选。 指定安全头中元素的排序。 有效值为<br /><br /> -   `Strict`:项按照“先声明后使用”的一般原则添加到安全性标头中。<br />-   `Lax`:项添加到安全头中任何符合 WSS 的顺序：SOAP 消息安全。<br />-   `LaxWithTimestampFirst`:项添加到安全头中任何符合 WSS 的顺序：SOAP 消息安全的安全标头中的第一个元素必须是 wsse: timestamp 元素。<br />-   `LaxWithTimestampLast`:项添加到安全头中任何符合 WSS 的顺序：SOAP 消息安全的安全标头中的最后一个元素必须是 wsse: timestamp 元素。<br /><br /> 默认值为 `Strict`。<br /><br /> 此元素的类型为 <xref:System.ServiceModel.Channels.SecurityHeaderLayout>。|  
   
 ## <a name="authenticationmode-attribute"></a>authenticationMode 特性  
   
@@ -104,7 +104,7 @@ messageProtectionOrder="SignBeforeEncrypt/SignBeforeEncryptAndEncryptSignature/E
 |[\<绑定 >](../../../../../docs/framework/misc/binding.md)|定义自定义绑定的所有绑定功能。|  
   
 ## <a name="remarks"></a>备注  
- 有关使用此元素的详细信息，请参阅[SecurityBindingElement 身份验证模式](../../../../../docs/framework/wcf/feature-details/securitybindingelement-authentication-modes.md)并[如何： 创建自定义绑定使用 SecurityBindingElement](../../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)。  
+ 有关使用此元素的详细信息，请参阅[SecurityBindingElement 身份验证模式](../../../../../docs/framework/wcf/feature-details/securitybindingelement-authentication-modes.md)和[如何：创建自定义绑定使用 SecurityBindingElement](../../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)。  
   
 ## <a name="example"></a>示例  
  下面的示例演示如何使用自定义绑定配置安全性。 并演示如何使用自定义绑定实现消息级安全性和安全传输。 如果在客户端和服务之间传输消息时需要进行安全的传输，同时消息必须在消息级别上保持安全，这非常有用。 系统提供的绑定不支持此配置。  
@@ -175,5 +175,5 @@ messageProtectionOrder="SignBeforeEncrypt/SignBeforeEncryptAndEncryptSignature/E
  [扩展绑定](../../../../../docs/framework/wcf/extending/extending-bindings.md)  
  [自定义绑定](../../../../../docs/framework/wcf/extending/custom-bindings.md)  
  [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)  
- [如何：使用 SecurityBindingElement 创建自定义绑定](../../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)  
+ [如何：创建自定义绑定使用 SecurityBindingElement](../../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)  
  [自定义绑定安全性](../../../../../docs/framework/wcf/samples/custom-binding-security.md)

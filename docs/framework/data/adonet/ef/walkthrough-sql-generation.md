@@ -3,11 +3,11 @@ title: 演练：SQL 生成
 ms.date: 03/30/2017
 ms.assetid: 16c38aaa-9927-4f3c-ab0f-81636cce57a3
 ms.openlocfilehash: cbc400671e5194494772580e77316af07b5669ff
-ms.sourcegitcommit: 7f7664837d35320a0bad3f7e4ecd68d6624633b2
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52672012"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53149037"
 ---
 # <a name="walkthrough-sql-generation"></a>演练：SQL 生成
 本主题说明了如何中进行 SQL 生成[示例提供程序](https://code.msdn.microsoft.com/windowsdesktop/Entity-Framework-Sample-6a9801d0)。 下面的 Entity SQL 查询使用随示例提供程序提供的模型：  
@@ -136,7 +136,7 @@ LEFT OUTER JOIN [dbo].[InternationalOrders] AS [Extent5] ON [Extent4].[OrderID] 
   
  ![Diagram](../../../../../docs/framework/data/adonet/ef/media/1ec61ed3-fcdd-4649-9089-24385be7e423.gif "1ec61ed3-fcdd-4649-9089-24385be7e423")  
   
- 对于 Join3，IsParentAJoin 返回 false，并需要启动一个新的 SqlSelectStatement (SelectStatement1)，将其推送到堆栈上。 按照处理前面的联接的方式继续处理，将一个新范围推送到堆栈上，并处理子级。 左侧子级是一个 Extent (Extent3)，右侧子级是一个还需要启动新的 SqlSelectStatement (SelectStatement2) 的联接 (Join2)。 Join2 上的子级也是 Extent，并聚合成 SelectStatement2。  
+ 对于 Join3，IsParentAJoin 返回 false，并需要启动一个新的 SqlSelectStatement (SelectStatement1)，将其推送到堆栈上。 按照处理前面的联接的方式继续处理，将一个新范围推送到堆栈上，并处理子级。 左侧的子级是一个 Extent (Extent3)，右侧子级是还需要启动一个新的 SqlSelectStatement 的联接 (Join2):SelectStatement2。 Join2 上的子级也是 Extent，并聚合成 SelectStatement2。  
   
  下图显示了刚好在访问 Join2 之后但在完成其后续处理 (ProcessJoinInputResult) 之前的那一刻访问者的状态：  
   
@@ -192,7 +192,7 @@ FROM: "[dbo].[Orders]", " AS ", <symbol_Extent4>,
 " )", " AS ", <joinSymbol_Join3>, " ON ", , , <symbol_Extent1>, ".", "[ProductID]", " = ", , <joinSymbol_Join3>, ".", <symbol_ProductID>  
 ```  
   
-### <a name="second-phase-of-sql-generation-generating-the-string-command"></a>SQL 生成的第二阶段：生成字符串命令  
+### <a name="second-phase-of-sql-generation-generating-the-string-command"></a>SQL 生成的第二个阶段：生成字符串命令  
  第二阶段生成符号的实际名称，我们只关注表示名为“OrderID”的列的符号，因为在本例中需要解决冲突。 SqlSelectStatement 中突出显示了这些符号。 请注意，图中使用的后缀仅强调这些符号是不同的实例，而不表示任何新的名称，因为在此阶段还未指派它们的最终名称，这些最终名称很可能与原始名称不同。  
   
  查找到的需要重命名的第一个符号是 <symbol_OrderID>。 为它指派的新名称为“OrderID1”，标记 1 表示为“OrderID”使用的最后一个后缀，该符号标记为不需要重命名。 接下来，找到第一个 <symbol_OrderID_2>。 将它重命名为使用下一个可用的后缀“OrderID2”，同样将其标记为不需要重命名，以便在下一次使用它时不需要再进行重命名。 对于 <symbol_OrderID_3> 也执行相同的操作。  

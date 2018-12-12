@@ -2,12 +2,12 @@
 title: 从开发的角度比较 ASP.NET Web 服务与 WCF
 ms.date: 03/30/2017
 ms.assetid: f362d00e-ce82-484f-9d4f-27e579d5c320
-ms.openlocfilehash: 6292c863e4e72187b78d28e32044633fe938abc8
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: c4c07d24ba322c957aac5ba9fa6ed3a5f337fb9a
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48580689"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53127363"
 ---
 # <a name="comparing-aspnet-web-services-to-wcf-based-on-development"></a>从开发的角度比较 ASP.NET Web 服务与 WCF
 Windows Communication Foundation (WCF) 提供用于启用 WCF 应用程序进行编程和配置类似于 ASP.NET Web 服务，并模拟其行为的 ASP.NET 兼容模式选项。 以下部分进行了比较 ASP.NET Web 服务和 WCF 基于使用这两种技术开发应用程序的要求。  
@@ -29,7 +29,7 @@ Windows Communication Foundation (WCF) 提供用于启用 WCF 应用程序进行
   
  WCF<xref:System.Runtime.Serialization.DataContractAttribute>和<xref:System.Runtime.Serialization.DataMemberAttribute>将添加到.NET Framework 类型，以指示该类型的实例将要序列化为 XML，以及哪些特定字段或属性的类型进行序列化，如下面的示例代码中所示。  
   
-```  
+```csharp  
 //Example One:   
 [DataContract]  
 public class LineItem  
@@ -149,7 +149,7 @@ public class LineItem
   
 -   <xref:System.Xml.Serialization.XmlSerializer> 和 <xref:System.Xml.Serialization> 命名空间的属性旨在让您可以将 .NET Framework 类型映射为在 XML 架构中定义的任意有效类型，因此它们对类型如何以 XML 方式表示提供了十分精确的控制。 <xref:System.Runtime.Serialization.DataContractSerializer>、<xref:System.Runtime.Serialization.DataContractAttribute> 和 <xref:System.Runtime.Serialization.DataMemberAttribute> 则几乎不对类型如何以 XML 方式表示提供控制。 您只能指定用于在 XML 中表示类型及其字段或属性的命名空间和名称，以及字段和属性在 XML 中的显示顺序：  
   
-    ```  
+    ```csharp  
     [DataContract(  
     Namespace="urn:Contoso:2006:January:29",  
     Name="LineItem")]  
@@ -184,7 +184,7 @@ public class LineItem
   
  不管存在何种差异，只要 XML 具有显式定义的命名空间，默认情况下，<xref:System.Xml.Serialization.XmlSerializer> 将类型序列化为的 XML 与 <xref:System.Runtime.Serialization.DataContractSerializer> 将类型序列化为的 XML 语义相同。 下面的类具有用于这两种序列化程序的属性，将转换为的语义相同的 XML<xref:System.Xml.Serialization.XmlSerializer>和<xref:System.Runtime.Serialization.DataContractAttribute>:  
   
-```  
+```csharp  
 [Serializable]  
 [XmlRoot(Namespace="urn:Contoso:2006:January:29")]  
 [DataContract(Namespace="urn:Contoso:2006:January:29")]  
@@ -207,7 +207,7 @@ public class LineItem
 ## <a name="service-development"></a>服务开发  
  要使用 ASP.NET 开发服务，通常会将 <xref:System.Web.Services.WebService> 属性添加到类中，并将 <xref:System.Web.Services.WebMethodAttribute> 添加到该类中将作为服务操作使用的任意方法上：  
   
-```  
+```csharp  
 [WebService]  
 public class Service : T:System.Web.Services.WebService  
 {  
@@ -221,7 +221,7 @@ public class Service : T:System.Web.Services.WebService
   
  ASP.NET 2.0 中引入了将属性 <xref:System.Web.Services.WebService> 和 <xref:System.Web.Services.WebMethodAttribute> 添加到接口（而不是类）的选项，并编写了一个类实现此接口：  
   
-```  
+```csharp  
 [WebService]  
 public interface IEcho  
 {  
@@ -245,7 +245,7 @@ public class Service : IEcho
   
  通常最先定义服务协定，通过将 <xref:System.ServiceModel.ServiceContractAttribute> 和 <xref:System.ServiceModel.OperationContractAttribute> 添加到接口中实现：  
   
-```  
+```csharp  
 [ServiceContract]  
 public interface IEcho  
 {  
@@ -258,7 +258,7 @@ public interface IEcho
   
  定义服务协定后，它将在类中实现，方法是使类实现服务协定定义的接口：  
   
-```  
+```csharp  
 public class Service : IEcho  
 {  
     public string Echo(string input)  
@@ -308,7 +308,7 @@ public class Service : IEcho
   
  服务类型的内部行为可以使用一系列称为行为的类的属性对其进行调整。 其中，<xref:System.ServiceModel.ServiceBehaviorAttribute> 类用于指定服务类型为多线程。  
   
-```  
+```csharp  
 [ServiceBehavior(ConcurrencyMode=ConcurrencyMode.Multiple]  
 public class DerivativesCalculatorServiceType: IDerivativesCalculator  
 ```  
@@ -346,7 +346,7 @@ public class DerivativesCalculatorServiceType: IDerivativesCalculator
   
  若要托管.NET 应用程序中的 WCF 服务，编译类库程序集引用的应用程序，此服务类型和服务使用向主机应用程序进行编程<xref:System.ServiceModel.ServiceHost>类。 下面是所需基本编程的示例：  
   
-```  
+```csharp  
 string httpBaseAddress = "http://www.contoso.com:8000/";  
 string tcpBaseAddress = "net.tcp://www.contoso.com:8080/";  
   
@@ -369,13 +369,13 @@ typeof(Service), //"Service" is the name of the service type baseAdresses))
   
  此示例演示如何在构造 <xref:System.ServiceModel.ServiceHost> 时指定一个或多个传输协议的地址。 这些地址称为基址。  
   
- 提供的 WCF 服务的任何终结点的地址是主机的相对于终结点的基址的地址。 对于每个通信传输协议，宿主都可以有一个基址。 在上面的配置文件配置示例中，为终结点选定的 <xref:System.ServiceModel.BasicHttpBinding> 将 HTTP 用作传输协议，因此终结点的地址 `EchoService` 与宿主的 HTTP 基址相关。 在前面的示例中的主机，对于 HTTP 基址是`http://www.contoso.com:8000/`。 对于在 IIS 或 WAS 中承载的服务，其基址为服务的服务文件的 URL。  
+ 提供的 WCF 服务的任何终结点的地址是主机的相对于终结点的基址的地址。 对于每个通信传输协议，宿主都可以有一个基址。 在上面的配置文件配置示例中，为终结点选定的 <xref:System.ServiceModel.BasicHttpBinding> 将 HTTP 用作传输协议，因此终结点的地址 `EchoService` 与主机的 HTTP 基址相关。 在前面的示例中的主机，对于 HTTP 基址是`http://www.contoso.com:8000/`。 对于在 IIS 或 WAS 中承载的服务，其基址为服务的服务文件的 URL。  
   
  仅服务承载于 IIS 或 WAS，并且其配置为包含 HTTP 作为传输协议以独占方式，可使用 WCF ASP.NET 兼容模式选项。 启用此选项需要执行下列步骤。  
   
 1.  程序员必须将 <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute> 属性添加到服务类型中，并指定是允许还是需要 ASP.NET 兼容模式。  
   
-    ```  
+    ```csharp  
     [System.ServiceModel.Activation.AspNetCompatibilityRequirements(  
           RequirementsMode=AspNetCompatbilityRequirementsMode.Require)]  
     public class DerivativesCalculatorServiceType: IDerivativesCalculator  
@@ -426,7 +426,7 @@ typeof(Service), //"Service" is the name of the service type baseAdresses))
 ## <a name="message-representation"></a>消息表示形式  
  可以对由 ASP.NET Web 服务发送和接收的 SOAP 消息头执行自定义操作。 将从 <xref:System.Web.Services.Protocols.SoapHeader> 派生一个类，用于定义消息头的结构，然后 <xref:System.Web.Services.Protocols.SoapHeaderAttribute> 用于指示存在消息头。  
   
-```  
+```csharp  
 public class SomeProtocol : SoapHeader  
 {  
      public long CurrentValue;  
@@ -473,7 +473,7 @@ public class Service: WebService, IEcho
   
  WCF 提供的特性， <xref:System.ServiceModel.MessageContractAttribute>， <xref:System.ServiceModel.MessageHeaderAttribute>，和<xref:System.ServiceModel.MessageBodyMemberAttribute>描述由服务发送和接收的 SOAP 消息的结构。  
   
-```  
+```csharp  
 [DataContract]  
 public class SomeProtocol  
 {  
@@ -536,7 +536,7 @@ public interface IItemService
   
  通过 ASP.NET 2.0，用户可以验证服务是否与 Web 服务互操作性组织 (WS-I) 的基本配置文件 1.1 兼容，还可以插入一个声明表明服务与其 WSDL 兼容。 这可以通过使用 `ConformsTo` 属性的 `EmitConformanceClaims` 和 <xref:System.Web.Services.WebServiceBindingAttribute> 参数实现。  
   
-```  
+```csharp  
 [WebService(Namespace = "http://tempuri.org/")]  
 [WebServiceBinding(  
      ConformsTo = WsiProfiles.BasicProfile1_1,  
@@ -572,7 +572,7 @@ public interface IEcho
   
  若要将 SOAP 错误返回客户端，您可以使用数据协定类型作为泛型类型抛出泛型类型的实例 <xref:System.ServiceModel.FaultException%601>。 您还可以将 <xref:System.ServiceModel.FaultContractAttribute> 属性添加到操作中以指定操作可能会生成的错误。  
   
-```  
+```csharp  
 [DataContract]  
 public class MathFault  
 {   
@@ -593,7 +593,7 @@ public interface ICalculator
   
  这样做会导致在服务的 WSDL 中显示对可能错误的建议，从而使客户端程序员可以预计操作可能会导致哪些错误，并编写相应的 Catch 语句。  
   
-```  
+```csharp  
 try  
 {  
      result = client.Divide(value1, value2);  
@@ -610,7 +610,7 @@ catch (FaultException<MathFault> e)
 ## <a name="state-management"></a>状态管理  
  用于实现 ASP.NET Web 服务的类可以从 <xref:System.Web.Services.WebService> 派生。  
   
-```  
+```csharp  
 public class Service : WebService, IEcho  
 {  
   
@@ -629,14 +629,14 @@ public class Service : WebService, IEcho
   
  此处，服务类型， `TradingSystem`，具有<xref:System.ServiceModel.ServiceBehaviorAttribute>，它指定从同一个 WCF 客户端实例的所有呼叫都会都路由到同一服务类型的实例。  
   
-```  
+```csharp  
 [ServiceBehavior(InstanceContextMode = InstanceContextMode.PerSession)]  
 public class TradingSystem: ITradingService  
 ```  
   
  `DealData` 类用于定义可以由某个服务类型的相同实例中运行的任意代码访问的状态。  
   
-```  
+```csharp  
 internal class DealData: IExtension<InstanceContext>  
 {  
  public string DealIdentifier = null;  
@@ -646,7 +646,7 @@ internal class DealData: IExtension<InstanceContext>
   
  在实现服务协定中任一操作的服务类型的代码中，将 `DealData` 状态对象添加到当前服务类型实例的状态中。  
   
-```  
+```csharp  
 string ITradingService.BeginDeal()  
 {  
  string dealIdentifier = Guid.NewGuid().ToString();  
@@ -658,7 +658,7 @@ string ITradingService.BeginDeal()
   
  随后，可以使用实现另一个服务协定操作的代码检索和修改此状态对象。  
   
-```  
+```csharp  
 void ITradingService.AddTrade(Trade trade)  
 {  
  DealData dealData =  OperationContext.Current.InstanceContext.Extensions.Find<DealData>();  
@@ -672,9 +672,9 @@ void ITradingService.AddTrade(Trade trade)
  用于保证 ASP.NET Web 服务安全的选项就是那些用于保证任意 IIS 应用程序安全的选项。 由于可以托管 WCF 应用程序，不仅在 IIS 中，还在任何.NET 可执行文件，因此必须进行选项用于保护 WCF 应用程序独立于 IIS 的功能。 但是，为 ASP.NET Web 服务提供的功能也已可供在 ASP.NET 兼容模式下运行的 WCF 服务。  
   
 ### <a name="security-authentication"></a>安全性：身份验证  
- IIS 可提供对应用程序的访问进行控制的功能，您可以使用此功能选择匿名访问或各种身份验证模式：Windows 身份验证、摘要式身份验证、基本身份验证和 .NET Passport 身份验证。 Windows 身份验证选项可以用于控制对 ASP.NET Web 服务的访问。 但是，当在 IIS 中托管 WCF 应用程序，必须配置 IIS 以允许匿名访问应用程序，以便可以按 WCF 本身，支持 Windows 身份验证以及各种其他选项管理身份验证。 其他内置选项包括用户名令牌、X.509 证书、SAML 令牌和 CardSpace 卡，但是也可以定义自定义身份验证机制。  
+ IIS 提供的功能来控制访问应用程序可以依据选择匿名访问或各种身份验证模式：Windows 身份验证、 摘要式身份验证、 基本身份验证和.NET Passport 身份验证。 Windows 身份验证选项可以用于控制对 ASP.NET Web 服务的访问。 但是，当在 IIS 中托管 WCF 应用程序，必须配置 IIS 以允许匿名访问应用程序，以便可以按 WCF 本身，支持 Windows 身份验证以及各种其他选项管理身份验证。 其他内置选项包括用户名令牌、X.509 证书、SAML 令牌和 CardSpace 卡，但是也可以定义自定义身份验证机制。  
   
-### <a name="security-impersonation"></a>安全性：模拟  
+### <a name="security-impersonation"></a>安全性：Impersonation  
  ASP.NET 提供一个标识元素，ASP.NET Web 服务可通过使用该元素模拟当前请求提供了某个特定用户或任何用户的凭据。 该元素可以用于在 ASP.NET 兼容模式下运行的 WCF 应用程序中对模拟进行配置。  
   
  WCF 配置系统提供用于指定要模拟特定的用户将自己标识的元素。 此外，WCF 客户端和服务可以独立配置进行模拟。 当客户端发送请求时，可将它们配置为模拟当前用户。  
@@ -691,7 +691,7 @@ void ITradingService.AddTrade(Trade trade)
   
  可将服务操作配置为模拟当前请求提供了任意用户的凭据。  
   
-```  
+```csharp  
 [OperationBehavior(Impersonation = ImpersonationOption.Required)]  
 public void Receive(Message input)  
 ```  
@@ -744,7 +744,7 @@ public void Receive(Message input)
   
  WCF 自动汇集从任何类型声明标记是安全的非常重要的创新，因为它使基于声明的身份验证机制完全独立的授权代码。 与此相反，使用 ACL 或 ASP.NET 中的角色进行授权则与 Windows 身份验证息息相关。  
   
-### <a name="security-confidentiality"></a>安全性：机密性  
+### <a name="security-confidentiality"></a>安全性：保密性  
  通过将 IIS 中的应用程序配置为使用安全超文本传输协议 (HTTPS)，可以在传输级别确保与 ASP.NET Web 服务交换的消息的机密性。 对于在 IIS 内承载的 WCF 应用程序可以实现相同目的。 但是，WCF 应用程序承载于 IIS 之外，还可以配置为使用安全传输协议。 更重要的是，WCF 应用程序还可以配置为之前它们传输，使用 Ws-security 协议保护消息的安全。 如果使用 WS-Security 协议保护消息正文的安全，则消息正文到达最终目的地之前在中介中加密传输。  
   
 ## <a name="globalization"></a>全球化  

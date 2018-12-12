@@ -1,18 +1,17 @@
-﻿---
+---
 title: 使用准则
-ms.date: 03/30/2017
+ms.date: 10/22/2008
 ms.technology: dotnet-standard
 helpviewer_keywords:
 - class library design guidelines [.NET Framework], usage guidelines
 ms.assetid: 42215ffa-a099-4a26-b14e-fb2bdb6f95b7
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 8e583bf7768c60477effb6c1cf9b838ae4c8c182
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+author: KrzysztofCwalina
+ms.openlocfilehash: 761570b899a2a36391eb81dc7f42e13fff1f14ef
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50197933"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53155400"
 ---
 # <a name="usage-guidelines"></a>使用准则
 
@@ -25,16 +24,16 @@ ms.locfileid: "50197933"
 
 ## <a name="in-this-section"></a>本节内容
 
-[数组](arrays.md)
+[数组](arrays.md)  
 [属性](attributes.md)  
-[集合](guidelines-for-collections.md)
-[序列化](serialization.md)
+[集合](guidelines-for-collections.md)  
+[序列化](serialization.md)  
 [System.Xml 用法](system-xml-usage.md)  
-[相等运算符](equality-operators.md)
+[相等运算符](equality-operators.md)  
 
 *部分版权 © 2005, 2009 Microsoft Corporation。保留所有权利。*
 
-*经 Pearson Education, Inc 授权，转载自[框架设计准则：可重用的 .NET 库的约定、习惯用语和模式，第2版](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) 作者：Krzysztof Cwalina 和 Brad Abrams，由 Addison Wesley Professional 于 2008 年 10 月 22 日印发，作为 Microsoft Windows 开发系列的一部分。*
+*通过从 Pearson Education，Inc.的权限重新打印[Framework 设计准则：约定、 语法和模式的可重用.NET 库，第 2 版](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619)Krzysztof Cwalina 和 Brad Abrams，作为 Microsoft Windows 开发系列的一部分发布 2008 年 10 月 22 日由 Addison-wesley 专业人员。*
   
 ## <a name="see-also"></a>请参阅
 

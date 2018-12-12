@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: cea4d187-6398-4da4-af09-c1abc6a349c1
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: 2b0d7968ce2cf8f326004c9e564cb2e7912c1a0a
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 2d82aed13e185b2957a22f097b60e12265a5f190
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48025605"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53128201"
 ---
 # <a name="ltassemblyidentitygt-element-for-ltruntimegt"></a>&lt;assemblyIdentity&gt;元素&lt;运行时&gt;
 包含有关程序集的标识信息。  
@@ -50,12 +50,12 @@ culture="assembly culture"/>
   
 ## <a name="processorarchitecture-attribute"></a>processorArchitecture 属性  
   
-|“值”|描述|  
+|值|描述|  
 |-----------|-----------------|  
-|`amd64`|仅 64 位 AMD 处理器。|  
-|`ia64`|仅 64 位 Intel 处理器。|  
-|`msil`|特定于处理器和每字位数|  
-|`x86`|32 位 Intel 处理器，位于本机或在 Windows 上的 64 位平台上的 Windows (WOW) 环境中。|  
+|`amd64`|AMD x86-64 体系结构仅。|  
+|`ia64`|Intel Itanium 体系结构仅。|  
+|`msil`|不特定于处理器和每字位数。|  
+|`x86`|32 位 x86 处理器，位于本机或在 Windows 上的 64 位平台上的 Windows (WOW) 环境中。|  
   
 ### <a name="child-elements"></a>子元素  
  无。  

@@ -4,12 +4,12 @@ description: 使用 Microsoft 平台和工具的容器化 Docker 应用程序的
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
-ms.openlocfilehash: 18e6cb1fb5f496b66c89cb8e009a67894b8a76ad
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: 003bf794f5427e7b2f10d1e04fd27605b980cdfe
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49123145"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53126297"
 ---
 # <a name="run-composed-and-microservices-based-applications-in-production-environments"></a>在生产环境中运行组合和基于微服务的应用程序
 
@@ -33,7 +33,6 @@ ms.locfileid: "49123145"
 
 提供的业务流程协调程序和计划程序的功能是非常复杂，若要开发和从零开始，创建，因此你通常会想要使用的业务流程解决方案提供的供应商。
 
-
 >[!div class="step-by-step"]
-[上一页](index.md)
-[下一页](manage-production-docker-environments.md)
+>[上一页](index.md)
+>[下一页](manage-production-docker-environments.md)

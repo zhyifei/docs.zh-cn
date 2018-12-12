@@ -4,11 +4,11 @@ description: 了解如何在 ML.NET 机器学习管道处理期间检查实际�
 ms.date: 11/07/2018
 ms.custom: mvc,how-to
 ms.openlocfilehash: cd229c120f7599c9a304a84a1669947e613fc917
-ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "52297584"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53151533"
 ---
 # <a name="inspect-intermediate-data-values-during-mlnet-pipeline-processing"></a>在 ML.NET 管道处理期间检查中间数据值
 

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - controls [WPF], ListView
 - ListView controls [WPF], about ListView control
 ms.assetid: 989e12b0-260e-4570-95c6-489284003ce2
-ms.openlocfilehash: a3b5805808ce2e84e7713f07694464b75d83a391
-ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
+ms.openlocfilehash: 7b237d43cce9f17ea7e893188dac943bb996c752
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46562276"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53148907"
 ---
 # <a name="listview-overview"></a>ListView 概述
 <xref:System.Windows.Controls.ListView>控件提供了用于显示数据项的一组不同的布局或视图中的基础结构。 例如，用户可能需要在表格中显示数据项，并同时对表格的列进行排序。  
@@ -75,13 +75,11 @@ ms.locfileid: "46562276"
 ## <a name="sharing-the-same-view-mode"></a>共享同一视图模式  
  两个<xref:System.Windows.Controls.ListView>控件不能在同一时间共享同一视图模式。 如果你尝试与多个使用同一视图模式<xref:System.Windows.Controls.ListView>控件，则会发生异常。  
   
- 若要指定可同时由多个视图模式<xref:System.Windows.Controls.ListView>，使用模板或样式。 有关如何定义为视图的示例<xref:System.Windows.FrameworkElement.Resources%2A>，请参阅[ListView 与多个视图示例](https://go.microsoft.com/fwlink/?LinkID=160013)。  
+ 若要指定可同时由多个视图模式<xref:System.Windows.Controls.ListView>，使用模板或样式。
   
 <a name="CreatingaCustomView"></a>   
 ## <a name="creating-a-custom-view-mode"></a>创建自定义视图模式  
- 自定义视图，如<xref:System.Windows.Controls.GridView>派生自<xref:System.Windows.Controls.ViewBase>抽象类，该类提供工具，用于显示数据项表示为<xref:System.Windows.Controls.ListViewItem>对象。  
-  
- 有关自定义视图模式的示例，请参阅[具有多个视图的 ListView 示例](https://go.microsoft.com/fwlink/?LinkID=160013)。  
+ 自定义视图，如<xref:System.Windows.Controls.GridView>派生自<xref:System.Windows.Controls.ViewBase>抽象类，该类提供工具，用于显示数据项表示为<xref:System.Windows.Controls.ListViewItem>对象。    
   
 ## <a name="see-also"></a>请参阅  
  <xref:System.Windows.Controls.GridView>  

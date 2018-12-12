@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0c1534e5-979b-4c8a-a588-1c24301aefb3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 055c7db652426651dd3c2a74825a11e305d939f1
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: b6f759523acab1a248b92c69b95227b878696bbf
+ms.sourcegitcommit: d6e419f9d9cd7e8f21ebf5acde6d016c16332579
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50183901"
+ms.lasthandoff: 12/12/2018
+ms.locfileid: "53286580"
 ---
 # <a name="working-with-calendars"></a>使用日历
 
@@ -137,6 +137,9 @@ ms.locfileid: "50183901"
 
 日历通常将日期划分为纪元。 但是，<xref:System.Globalization.Calendar>类在.NET 中的不支持由大部分以及日历，定义每个纪元<xref:System.Globalization.Calendar>类支持单个纪元。 只有 <xref:System.Globalization.JapaneseCalendar> 和 <xref:System.Globalization.JapaneseLunisolarCalendar> 类支持多个纪元。
 
+> [!IMPORTANT]
+>  中的新时代<xref:System.Globlalization.JapaneseCalendar>和<xref:System.Globalization.JapaneseLunisolarCalendar>2019 年 5 月 1 日，将从开始。 此更改会影响使用这些日历的所有应用程序。 请参阅[处理在.NET 中的日语日历中的新时代](https://blogs.msdn.microsoft.com/dotnet/2018/11/14/handling-a-new-era-in-the-japanese-calendar-in-net/)有关详细信息，并确定是否会影响你的应用程序。 请参阅[准备用于日语纪元更改应用程序](~/windows/uwp/design/globalizing/japanese-era-change)有关测试 Windows 上的应用程序，以确保其变更就绪的纪元的信息。
+
 ### <a name="eras-and-era-names"></a>纪元和纪元名称
 
 在.NET 中，表示特定日历实现支持的纪元的整数存储按相反的顺序在<xref:System.Globalization.Calendar.Eras%2A?displayProperty=nameWithType>数组。 当前纪元的索引为零，对于支持多个纪元的 <xref:System.Globalization.Calendar> 类，每个后续索引反映前一个纪元。 静态的 <xref:System.Globalization.Calendar.CurrentEra?displayProperty=nameWithType> 属性定义当前纪元在 <xref:System.Globalization.Calendar.Eras%2A?displayProperty=nameWithType> 数组中的索引；它是一个值始终为零的常数。 各个 <xref:System.Globalization.Calendar> 类还包括可返回当前纪元值的静态字段。 下表中列出了这些字段。
@@ -193,5 +196,5 @@ ms.locfileid: "50183901"
 
 ## <a name="see-also"></a>请参阅
 
-* [如何： 用非公历日历显示日期](../../../docs/standard/base-types/how-to-display-dates-in-non-gregorian-calendars.md)
-* [示例： 日历周范围实用工具](https://code.msdn.microsoft.com/NET-Framework-4-Calendar-3360a84a)
+* [如何：用非公历日历显示日期](../../../docs/standard/base-types/how-to-display-dates-in-non-gregorian-calendars.md)
+* [示例：日历周范围实用工具](https://code.msdn.microsoft.com/NET-Framework-4-Calendar-3360a84a)

@@ -4,12 +4,12 @@ description: 通过访问范围的示例从映像处理到移动后端和 ETL �
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
-ms.openlocfilehash: c38d1c6c4e04f3fa38946c97af5d94758b3ed6f7
-ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
+ms.openlocfilehash: 4299768b701336e427b22b295bc459424bfc5927
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "49369662"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53153782"
 ---
 # <a name="serverless-business-scenarios-and-use-cases"></a>无服务器业务方案和用例
 
@@ -27,7 +27,7 @@ ms.locfileid: "49369662"
 
 ![自动化的图像库](./media/automated-image-gallery.png)
 
-此处提供的完整存储库和生成逻辑应用的说明：[事件网格粘附](https://github.com/JeremyLikness/Event-Grid-Glue)。
+完整的存储库并说明如何构建逻辑应用位于以下位置：[事件网格粘附](https://github.com/JeremyLikness/Event-Grid-Glue)。
 
 ## <a name="cross-platform-mobile-client-using-xamarinforms-and-functions"></a>跨平台移动客户端使用 Xamarin.Forms 和函数
 
@@ -55,7 +55,7 @@ ms.locfileid: "49369662"
 
 代理提供了更新以将单个请求重新路由，因为它们将被移动到无服务器函数的单个 API 终结点。
 
-您可以查看视频，介绍了如何通过在整个迁移：[提升和使用无服务器 Azure functions 的 shift](https://channel9.msdn.com/Events/Connect/2017/E102)。 访问示例代码：[使你自己的应用](https://github.com/JeremyLikness/bring-own-app-connect-17)。
+您可以查看视频，介绍了如何通过在整个迁移：[提升和转移无服务器 Azure functions](https://channel9.msdn.com/Events/Connect/2017/E102)。 访问示例代码：[将你自己的应用](https://github.com/JeremyLikness/bring-own-app-connect-17)。
 
 ## <a name="parse-a-csv-file-and-insert-into-a-database"></a>分析 CSV 文件并将插入到数据库
 
@@ -77,7 +77,7 @@ Azure 函数用于为单页应用程序 (SPA)，您可以将长 URL 粘贴并生
 
 ![Power BI 示例](./media/power-bi-example.png)
 
-此处提供了说明的完整链接 shortener 示例存储库：[的无服务器的 URL shortener 示例](https://github.com/jeremylikness/serverless-url-shortener)。 你可以阅读此处的简化版本：[无服务器的.NET 应用程序，以分钟为单位的 Azure 存储](https://blogs.msdn.microsoft.com/webdev/2018/01/25/azure-storage-for-serverless-net-apps-in-minutes/)。
+此处提供了说明的完整链接 shortener 示例存储库：[无服务器的 URL shortener 示例](https://github.com/jeremylikness/serverless-url-shortener)。 你可以阅读此处的简化版本：[以分钟为单位的无服务器.NET 应用程序的 azure 存储](https://blogs.msdn.microsoft.com/webdev/2018/01/25/azure-storage-for-serverless-net-apps-in-minutes/)。
 
 ## <a name="verify-device-connectivity-using-a-ping"></a>验证使用 ping 的设备连接
 
@@ -98,5 +98,5 @@ Azure 函数用于为单页应用程序 (SPA)，您可以将长 URL 粘贴并生
 * [无服务器的 URL shortener 示例](https://github.com/jeremylikness/serverless-url-shortener)
 
 >[!div class="step-by-step"]
-[上一页](orchestration-patterns.md)
-[下一页](serverless-conclusion.md)
+>[上一页](orchestration-patterns.md)
+>[下一页](serverless-conclusion.md)

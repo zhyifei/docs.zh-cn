@@ -5,14 +5,14 @@ ms.assetid: e38ae4f3-3e3d-42c3-a4b8-db1aa9d84f85
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 0a89474ddfe3bcde1c44271818b7e3c730469f48
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50199703"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53152521"
 ---
 # <a name="net-native-and-compilation"></a>.NET Native 和编译
-面向 .Net Framework 的 Windows 8.1 应用程序和 Windows 桌面应用程序由特定的编程语言进行编写并编译为中间语言 (IL)。 在运行时，实时 (JIT) 编译器负责恰好在首次执行方法前为本地计算机将 IL 编译到本机代码中。 与此相反，.NET 本机工具链在编译时将源代码转换为本机代码。 本主题将 .NET 本机与其他可用于 .NET Framework 应用程序的编译技术进行比较，还提供了 .NET 本机如何生成本机代码的实用概述，可帮助用户了解使用 .NET 本机编译的代码中发生的异常为什么不会出现在 JIT 编译的代码中。  
+面向 .Net Framework 的 Windows 8.1 应用程序和 Windows 桌面应用程序由特定的编程语言进行编写并编译为中间语言 (IL)。 在运行时，实时 (JIT) 编译器负责恰好在首次执行方法前为本地计算机将 IL 编译到本机代码中。 与此相反，.NET 本机工具链在编译时将源代码转换为本机代码。 本主题将 .NET Native 与其他可用于 .NET Framework 应用程序的编译技术进行比较，还提供了 .NET Native 如何生成本机代码的实用概述，可帮助用户了解使用 .NET Native 编译的代码中发生的异常为什么不会出现在 JIT 编译的代码中。  
   
 ## <a name="net-native-generating-native-binaries"></a>.NET 本机：生成本机二进制文件  
  面向 .NET Framework 且未使用 .NET 本机工具链编译的应用程序包含应用程序的程序集，其中包括以下内容：  

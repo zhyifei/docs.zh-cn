@@ -4,12 +4,12 @@ description: 各种体系结构和应用程序所支持的无服务器体系结�
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
-ms.openlocfilehash: ea944a172154a1cff2b8f830cb8fc3fa24a15028
-ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
+ms.openlocfilehash: 5f22f8b9894a23e5920adb2af3fdf02bce2877d7
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "49369661"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53150298"
 ---
 # <a name="serverless-architecture"></a>无服务器体系结构
 
@@ -74,5 +74,5 @@ IoT 是指它们联网在一起的物理对象。 它们有时简称为"已连�
 IoT 普适性相结合为它带来了多个无服务器产品，重点介绍专门 IoT 问题，如[Azure IoT 中心](https://docs.microsoft.com/azure/iot-hub)。 无服务器自动执行任务，例如设备注册、 策略实施、 跟踪和甚至部署到设备的代码*边缘*。 边缘是指类似于传感器和传动装置连接到，但不是活动部分 Internet 的设备。
 
 >[!div class="step-by-step"]
-[上一页](architecture-approaches.md)
-[下一页](serverless-architecture-considerations.md)
+>[上一页](architecture-approaches.md)
+>[下一页](serverless-architecture-considerations.md)

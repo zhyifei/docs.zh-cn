@@ -9,12 +9,12 @@ helpviewer_keywords:
 - data contracts [WCF], collection types
 - collection types [WCF]
 ms.assetid: 9b45b28e-0a82-4ea3-8c33-ec0094aff9d5
-ms.openlocfilehash: a2528699387a86ca276cb3ba63eab39544552a4f
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: 0399c89e926611b076072e6475c52bf31ae83637
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48850871"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53155179"
 ---
 # <a name="collection-types-in-data-contracts"></a>数据协定中的集合类型
  “集合”指特定类型的项的列表。 在 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]中，可以使用数组或者其他各种类型（泛型列表、泛型 <xref:System.ComponentModel.BindingList%601>、 <xref:System.Collections.Specialized.StringCollection>或 <xref:System.Collections.ArrayList>）来表示此类列表。 例如，集合可以容纳给定客户的地址列表。 无论这些集合的实际类型是什么，这些集合都称为“列表集合” 。  
@@ -87,7 +87,7 @@ ms.locfileid: "48850871"
   
 -   当未应用 <xref:System.Runtime.Serialization.CollectionDataContractAttribute> 属性时，集合类型的默认名称和命名空间依赖于集合内包含的类型的名称和命名空间。 它们不受集合类型本身的名称和命名空间的影响。 有关示例，请参见以下类型。  
   
-    ```  
+    ```csharp  
     public CustomerList1 : Collection<string> {}  
     public StringList1 : Collection<string> {}  
     ```  
@@ -249,7 +249,7 @@ ms.locfileid: "48850871"
   
  例如，使所有列表作为泛型 <xref:System.Collections.Generic.List%601>导入。  
   
-```  
+```console  
 svcutil.exe MyService.wsdl MyServiceSchema.xsd /r:C:\full_path_to_system_dll\System.dll /ct:System.Collections.Generic.List`1  
 ```  
   
@@ -262,7 +262,7 @@ svcutil.exe MyService.wsdl MyServiceSchema.xsd /r:C:\full_path_to_system_dll\Sys
   
  您可以将集合接口类型指定为引用的集合类型的一部分，但不能指定无效的集合类型（例如，没有 `Add` 方法或公共构造函数的类型）。  
   
- 封闭式泛型被视为最佳匹配 （非泛型类型被视为与 `Object`的封闭式泛型等效）。 例如，如果 <xref:System.Collections.Generic.List%601> 的泛型 <xref:System.DateTime>、泛型 <xref:System.ComponentModel.BindingList%601> （开放式泛型）和 <xref:System.Collections.ArrayList> 类型是引用的集合类型，则会生成以下代码：  
+ 封闭式泛型被视为最佳匹配 （非泛型类型被视为与 `Object` 的封闭式泛型等效）。 例如，如果 <xref:System.Collections.Generic.List%601> 的泛型 <xref:System.DateTime>、泛型 <xref:System.ComponentModel.BindingList%601> （开放式泛型）和 <xref:System.Collections.ArrayList> 类型是引用的集合类型，则会生成以下代码：  
   
  [!code-csharp[c_collection_types_in_data_contracts#10](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_collection_types_in_data_contracts/cs/program.cs#10)]
  [!code-vb[c_collection_types_in_data_contracts#10](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_collection_types_in_data_contracts/vb/program.vb#10)]  
@@ -287,8 +287,8 @@ svcutil.exe MyService.wsdl MyServiceSchema.xsd /r:C:\full_path_to_system_dll\Sys
 |引用类型|引用类型所实现的接口|示例|类型被视为|  
 |---------------------|----------------------------------------------|-------------|---------------------|  
 |非泛型或封闭式泛型（任意多个参数）|<xref:System.Collections.IDictionary>|`MyType : IDictionary`<br /><br /> 或<br /><br /> `MyType<T> : IDictionary` 其中 T=`int`|封闭式泛型 `IDictionary<object,object>`|  
-|封闭式泛型（任意多个参数）|<xref:System.Collections.Generic.IDictionary%602>，封闭式|`MyType<T> : IDictionary<string, bool>` 其中 T =`int`|封闭式泛型（例如 `IDIctionary<string,bool>`）|  
-|封闭式泛型（任意多个参数）|泛型 <xref:System.Collections.Generic.IDictionary%602>，键或值中的一个是封闭式的，另一个是开放式的，并使用类型的某个参数|`MyType<T,U,V> : IDictionary<string,V>` 其中 T =`int`，U =`float`，V =`bool`<br /><br /> 或<br /><br /> `MyType<Z> : IDictionary<Z,bool>` 其中 Z =`string`|封闭式泛型（例如 `IDictionary<string,bool>`）|  
+|封闭式泛型（任意多个参数）|<xref:System.Collections.Generic.IDictionary%602>，封闭式|`MyType<T> : IDictionary<string, bool>` 其中 T=`int`|封闭式泛型（例如 `IDIctionary<string,bool>`）|  
+|封闭式泛型（任意多个参数）|泛型 <xref:System.Collections.Generic.IDictionary%602>，键或值中的一个是封闭式的，另一个是开放式的，并使用类型的某个参数|`MyType<T,U,V> : IDictionary<string,V>` ，其中 T=`int`，U=`float`，V=`bool`<br /><br /> 或<br /><br /> `MyType<Z> : IDictionary<Z,bool>` ，其中 Z=`string`|封闭式泛型（例如 `IDictionary<string,bool>`）|  
 |封闭式泛型（任意多个参数）|泛型 <xref:System.Collections.Generic.IDictionary%602>，键和值均是开放式的，且每个都使用类型的一个参数|`MyType<T,U,V> : IDictionary<V,U>` 其中 T=`int`，U=`bool`，V=`string`|封闭式泛型（例如 `IDictionary<string,bool>`）|  
 |开放式泛型（两个参数）|开放式泛型 <xref:System.Collections.Generic.IDictionary%602>，按显示顺序使用类型的两个泛型参数|`MyType<K,V> : IDictionary<K,V>`，K 和 V 均是开放式的|开放式泛型（例如 `IDictionary<K,V>`）|  
   
@@ -321,8 +321,8 @@ svcutil.exe MyService.wsdl MyServiceSchema.xsd /r:C:\full_path_to_system_dll\Sys
   
 |集合类型实现|序列化时调用的方法|反序列化时调用的方法|  
 |--------------------------------|-----------------------------------------|-------------------------------------------|  
-|泛型 <xref:System.Collections.Generic.IDictionary%602>|`get_Keys`, `get_Values`|泛型 Add|  
-|<xref:System.Collections.IDictionary>|`get_Keys`, `get_Values`|`Add`|  
+|泛型 <xref:System.Collections.Generic.IDictionary%602>|`get_Keys`， `get_Values`|泛型 Add|  
+|<xref:System.Collections.IDictionary>|`get_Keys`， `get_Values`|`Add`|  
 |泛型 <xref:System.Collections.Generic.IList%601>|泛型 <xref:System.Collections.Generic.IList%601> 索引器|泛型 Add|  
 |泛型 <xref:System.Collections.Generic.ICollection%601>|枚举器|泛型 Add|  
 |<xref:System.Collections.IList>|<xref:System.Collections.IList> 索引器|`Add`|  
