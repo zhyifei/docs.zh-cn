@@ -13,7 +13,7 @@
 ### [使用 ASP.NET Core 和 Microsoft Azure 构建新式 Web 应用](standard/modern-web-apps-azure-architecture/)
 ### [使用 Azure 云和 Windows 容器更新现有 .NET 应用程序](standard/modernize-with-azure-and-containers/)
 ### [使用 Microsoft 平台和工具容器化 Docker 应用程序生命周期](standard/containerized-lifecycle-architecture/)
-### [.NET 微服务：适用于容器化 .NET 应用的体系结构](standard/microservices-architecture/)
+### [.NET 微服务：适用于容器化 .NET 应用程序的体系结构](standard/microservices-architecture/)
 ### [无服务器应用：体系结构、模式和 Azure 实现](standard/serverless-architecture/)
 ## [开放源代码库指南](standard/library-guidance/)
 ## [为服务器应用选择 .NET Core 或 .NET Framework](standard/choosing-core-framework-server.md)
@@ -256,7 +256,7 @@
 ## [C# 教程](csharp/tour-of-csharp/)
 <!-- The "What's New" section is short, and one level
     deep, so leave it in the main TOC -->
-## [C# 中的新增功能](csharp/whats-new/index.md)
+## C# 中的新增功能
 ### [C# 7.3](csharp/whats-new/csharp-7-3.md)
 ### [C# 7.2](csharp/whats-new/csharp-7-2.md)
 ### [C# 7.1](csharp/whats-new/csharp-7-1.md)
@@ -474,7 +474,7 @@
 #### [访问用户数据](visual-basic/developing-apps/programming/accessing-user-data.md)
 #### [访问应用程序窗体](visual-basic/developing-apps/programming/accessing-application-forms.md)
 #### [访问应用程序 Web 服务](visual-basic/developing-apps/programming/accessing-application-web-services.md)
-##### [如何：异步调用 Web 服务](visual-basic/developing-apps/programming/how-to-call-a-web-service-asynchronously.md)
+##### [如何：以异步方式调用 Web 服务](visual-basic/developing-apps/programming/how-to-call-a-web-service-asynchronously.md)
 #### [访问应用程序设置](visual-basic/developing-apps/programming/app-settings/index.md)
 #### [处理驱动器、目录和文件](visual-basic/developing-apps/programming/drives-directories-files/processing.md)
 
@@ -545,7 +545,7 @@
 ##### [字符数据类型](visual-basic/programming-guide/language-features/data-types/character-data-types.md)
 ##### [杂项数据类型](visual-basic/programming-guide/language-features/data-types/miscellaneous-data-types.md)
 #### [复合数据类型](visual-basic/programming-guide/language-features/data-types/composite-data-types.md)
-##### [如何：在一个变量中保存多个值](visual-basic/programming-guide/language-features/data-types/how-to-hold-more-than-one-value-in-a-variable.md)
+##### [如何：在一个变量中保留多个值](visual-basic/programming-guide/language-features/data-types/how-to-hold-more-than-one-value-in-a-variable.md)
 #### [泛型类型](visual-basic/programming-guide/language-features/data-types/generic-types.md)
 ##### [如何：定义可对不同数据类型提供相同功能的类](visual-basic/programming-guide/language-features/data-types/how-to-define-a-class-that-can-provide-identical-functionality.md)
 ##### [如何：使用泛型类](visual-basic/programming-guide/language-features/data-types/how-to-use-a-generic-class.md)
@@ -588,7 +588,7 @@
 ### [如何：使用 ActiveX 控件](visual-basic/programming-guide/com-interop/how-to-work-with-activex-controls.md)
 ### [演练：调用 Windows API](visual-basic/programming-guide/com-interop/walkthrough-calling-windows-apis.md)
 ### [如何：调用 Windows API](visual-basic/programming-guide/com-interop/how-to-call-windows-apis.md)
-### [如何：调用采用无符号类型的 Windows 函数](visual-basic/programming-guide/com-interop/how-to-call-a-windows-function-that-takes-unsigned-types.md)
+### [如何：调用需要使用无符号类型的 Windows 函数](visual-basic/programming-guide/com-interop/how-to-call-a-windows-function-that-takes-unsigned-types.md)
 ### [演练：创建 COM 对象](visual-basic/programming-guide/com-interop/walkthrough-creating-com-objects.md)
 ### [互操作性疑难解答](visual-basic/programming-guide/com-interop/troubleshooting-interoperability.md)
 ### [.NET Framework 应用程序中的 COM 互操作性](visual-basic/programming-guide/com-interop/com-interoperability-in-net-framework-applications.md)
