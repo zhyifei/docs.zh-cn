@@ -1,6 +1,6 @@
 ---
 title: 相等运算符
-ms.date: 03/30/2017
+ms.date: 10/22/2008
 ms.technology: dotnet-standard
 helpviewer_keywords:
 - class library design guidelines [.NET Framework], Equals method
@@ -9,14 +9,13 @@ helpviewer_keywords:
 - Equals method
 - == operator (equality) [.NET Framework]
 ms.assetid: bc496a91-fefb-4ce0-ab4c-61f09964119a
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 27550a8fd8292029cad9c2e699374a190b1a532e
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
-ms.translationtype: HT
+author: KrzysztofCwalina
+ms.openlocfilehash: ae188fc7cd55dd843e93afccbe1ea05575a9c36d
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48839350"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53129072"
 ---
 # <a name="equality-operators"></a>相等运算符
 本部分讨论了重载相等运算符并将 `operator==` 和 `operator!=` 引用为相等运算符。  
@@ -47,7 +46,7 @@ ms.locfileid: "48839350"
   
  *部分版权 © 2005, 2009 Microsoft Corporation。保留所有权利。*  
   
- *经 Pearson Education, Inc 授权，转载自[框架设计准则：可重用的 .NET 库的约定、习惯用语和模式，第2版](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) 作者：Krzysztof Cwalina 和 Brad Abrams，由 Addison Wesley Professional 于 2008 年 10 月 22 日印发，作为 Microsoft Windows 开发系列的一部分。*  
+ *通过从 Pearson Education，Inc.的权限重新打印[Framework 设计准则：约定、 语法和模式的可重用.NET 库，第 2 版](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619)Krzysztof Cwalina 和 Brad Abrams，作为 Microsoft Windows 开发系列的一部分发布 2008 年 10 月 22 日由 Addison-wesley 专业人员。*  
   
 ## <a name="see-also"></a>请参阅
 
