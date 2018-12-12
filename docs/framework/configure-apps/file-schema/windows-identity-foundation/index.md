@@ -3,15 +3,15 @@ title: Windows Identity Foundation 配置架构
 ms.date: 03/30/2017
 ms.assetid: 4d4f6d76-49a5-4bad-b345-097b2e2844e9
 author: BrucePerlerMS
-ms.openlocfilehash: c081e582f4c509843c04c292ecf13b2bff2fef06
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 7d6a3b1d0a67eb349fc6c9828e74a50ed621294e
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47397837"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53146584"
 ---
-# <a name="windows-identity-foundation-configuration-schema"></a><span data-ttu-id="de030-102">Windows Identity Foundation 配置架构</span><span class="sxs-lookup"><span data-stu-id="de030-102">Windows Identity Foundation Configuration Schema</span></span>
-<span data-ttu-id="de030-103">本节中的主题介绍了 Windows Identity Foundation (WIF) 配置架构。</span><span class="sxs-lookup"><span data-stu-id="de030-103">The topics in this section provide information about the Windows Identity Foundation (WIF) configuration schema.</span></span> <span data-ttu-id="de030-104">还可以将应用程序配置为通过由框架公开的类使用 WIF。</span><span class="sxs-lookup"><span data-stu-id="de030-104">You can also configure an application to use WIF through classes exposed by the framework,.</span></span> <span data-ttu-id="de030-105">在处理架构中相关元素的几节中提到了这些类。</span><span class="sxs-lookup"><span data-stu-id="de030-105">These classes are noted in the sections that treat relevant elements in the schema.</span></span> <span data-ttu-id="de030-106">以下显示由 WIF 配置架构公开的基本 XML 标记结构。</span><span class="sxs-lookup"><span data-stu-id="de030-106">The following shows the basic XML tag structure exposed by the WIF configuration schema.</span></span> <span data-ttu-id="de030-107">系统会省略属性。</span><span class="sxs-lookup"><span data-stu-id="de030-107">Attributes are omitted.</span></span> <span data-ttu-id="de030-108">突出显示的注释描述架构的主要组件。</span><span class="sxs-lookup"><span data-stu-id="de030-108">Highlighted comments indicate major components of the schema.</span></span>  
+# <a name="windows-identity-foundation-configuration-schema"></a><span data-ttu-id="86fab-102">Windows Identity Foundation 配置架构</span><span class="sxs-lookup"><span data-stu-id="86fab-102">Windows Identity Foundation Configuration Schema</span></span>
+<span data-ttu-id="86fab-103">本节中的主题介绍了 Windows Identity Foundation (WIF) 配置架构。</span><span class="sxs-lookup"><span data-stu-id="86fab-103">The topics in this section provide information about the Windows Identity Foundation (WIF) configuration schema.</span></span> <span data-ttu-id="86fab-104">此外可以配置为通过由框架公开的类使用 WIF 的应用程序。</span><span class="sxs-lookup"><span data-stu-id="86fab-104">You can also configure an application to use WIF through classes exposed by the framework.</span></span> <span data-ttu-id="86fab-105">在处理架构中相关元素的几节中提到了这些类。</span><span class="sxs-lookup"><span data-stu-id="86fab-105">These classes are noted in the sections that treat relevant elements in the schema.</span></span> <span data-ttu-id="86fab-106">以下显示由 WIF 配置架构公开的基本 XML 标记结构。</span><span class="sxs-lookup"><span data-stu-id="86fab-106">The following shows the basic XML tag structure exposed by the WIF configuration schema.</span></span> <span data-ttu-id="86fab-107">系统会省略属性。</span><span class="sxs-lookup"><span data-stu-id="86fab-107">Attributes are omitted.</span></span> <span data-ttu-id="86fab-108">突出显示的注释描述架构的主要组件。</span><span class="sxs-lookup"><span data-stu-id="86fab-108">Highlighted comments indicate major components of the schema.</span></span>  
   
 ```xml  
 <system.identityModel>  
@@ -106,10 +106,10 @@ ms.locfileid: "47397837"
 </system.identityModel.services>  
 ```  
   
-## <a name="in-this-section"></a><span data-ttu-id="de030-109">本节内容</span><span class="sxs-lookup"><span data-stu-id="de030-109">In This Section</span></span>  
- <span data-ttu-id="de030-110">[\<system.identityModel>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/system-identitymodel.md) 提供用于在应用程序中启用 WIF 选项的配置。</span><span class="sxs-lookup"><span data-stu-id="de030-110">[\<system.identityModel>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/system-identitymodel.md) Provides configuration for enabling WIF options in applications.</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="86fab-109">本节内容</span><span class="sxs-lookup"><span data-stu-id="86fab-109">In This Section</span></span>  
+ <span data-ttu-id="86fab-110">[\<system.identityModel>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/system-identitymodel.md) 提供用于在应用程序中启用 WIF 选项的配置。</span><span class="sxs-lookup"><span data-stu-id="86fab-110">[\<system.identityModel>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/system-identitymodel.md) Provides configuration for enabling WIF options in applications.</span></span>  
   
- <span data-ttu-id="de030-111">[\<system.identityModel.services>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/system-identitymodel-services.md) 提供使用 WIF 的被动联合的配置。</span><span class="sxs-lookup"><span data-stu-id="de030-111">[\<system.identityModel.services>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/system-identitymodel-services.md) Provides configuration for passive federation using WIF.</span></span> <span data-ttu-id="de030-112">配置会话身份验证模块 (SAM) 和联合身份验证模块 (WSFAM)。</span><span class="sxs-lookup"><span data-stu-id="de030-112">Configures the Session Authentication Module (SAM) and the Federated Authentication Module (WSFAM).</span></span>  
+ <span data-ttu-id="86fab-111">[\<system.identityModel.services>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/system-identitymodel-services.md) 提供使用 WIF 的被动联合的配置。</span><span class="sxs-lookup"><span data-stu-id="86fab-111">[\<system.identityModel.services>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/system-identitymodel-services.md) Provides configuration for passive federation using WIF.</span></span> <span data-ttu-id="86fab-112">配置会话身份验证模块 (SAM) 和联合身份验证模块 (WSFAM)。</span><span class="sxs-lookup"><span data-stu-id="86fab-112">Configures the Session Authentication Module (SAM) and the Federated Authentication Module (WSFAM).</span></span>  
   
-## <a name="related-sections"></a><span data-ttu-id="de030-113">相关章节</span><span class="sxs-lookup"><span data-stu-id="de030-113">Related Sections</span></span>  
- <span data-ttu-id="de030-114">[配置和管理](https://msdn.microsoft.com/library/1e03c389-de2c-4096-aaff-86b087e1bea0)描述如何配置和管理 WIF 应用程序与服务。</span><span class="sxs-lookup"><span data-stu-id="de030-114">[Configuration, Administration, And Management](https://msdn.microsoft.com/library/1e03c389-de2c-4096-aaff-86b087e1bea0) Describes how to configure and manage WIF applications and services.</span></span>
+## <a name="related-sections"></a><span data-ttu-id="86fab-113">相关章节</span><span class="sxs-lookup"><span data-stu-id="86fab-113">Related Sections</span></span>  
+ <span data-ttu-id="86fab-114">[配置和管理](https://msdn.microsoft.com/library/1e03c389-de2c-4096-aaff-86b087e1bea0)描述如何配置和管理 WIF 应用程序与服务。</span><span class="sxs-lookup"><span data-stu-id="86fab-114">[Configuration, Administration, And Management](https://msdn.microsoft.com/library/1e03c389-de2c-4096-aaff-86b087e1bea0) Describes how to configure and manage WIF applications and services.</span></span>

@@ -2,76 +2,76 @@
 title: 下载示例数据库 (LINQ to DataSet)
 ms.date: 03/30/2017
 ms.assetid: eb42a7af-d410-4b7f-b4a8-13c72ce6fd09
-ms.openlocfilehash: 7830095b7c98c0926783324ee7dc2bc1eb345aca
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: a98dd4e3d2ff113d3a5374d97fe30cec9524c095
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43502810"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53125556"
 ---
-# <a name="downloading-sample-databases-linq-to-dataset"></a><span data-ttu-id="e2e0e-102">下载示例数据库 (LINQ to DataSet)</span><span class="sxs-lookup"><span data-stu-id="e2e0e-102">Downloading Sample Databases (LINQ to DataSet)</span></span>
-<span data-ttu-id="e2e0e-103">示例和演练中的[!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]文档使用 AdventureWorks 示例数据库。</span><span class="sxs-lookup"><span data-stu-id="e2e0e-103">The samples and walkthroughs in the [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] documentation use the AdventureWorks sample database.</span></span> <span data-ttu-id="e2e0e-104">您可以从 Microsoft 下载站点免费下载此产品。</span><span class="sxs-lookup"><span data-stu-id="e2e0e-104">You can download this product free of charge from the Microsoft download site.</span></span> <span data-ttu-id="e2e0e-105">[!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] 文档中的示例和演练使用 SQL Server 作为数据存储区。</span><span class="sxs-lookup"><span data-stu-id="e2e0e-105">The samples and walkthroughs in the [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] documentation use SQL Server as the data store.</span></span> <span data-ttu-id="e2e0e-106">免费提供的 SQL Server Express Edition 也可代替 SQL Server 用作数据存储区。</span><span class="sxs-lookup"><span data-stu-id="e2e0e-106">SQL Server Express Edition, which is available without charge, can also be used as the data store instead of SQL Server.</span></span>  
+# <a name="downloading-sample-databases-linq-to-dataset"></a><span data-ttu-id="5bdee-102">下载示例数据库 (LINQ to DataSet)</span><span class="sxs-lookup"><span data-stu-id="5bdee-102">Downloading Sample Databases (LINQ to DataSet)</span></span>
+<span data-ttu-id="5bdee-103">示例和演练中的[!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]文档使用 AdventureWorks 示例数据库。</span><span class="sxs-lookup"><span data-stu-id="5bdee-103">The samples and walkthroughs in the [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] documentation use the AdventureWorks sample database.</span></span> <span data-ttu-id="5bdee-104">您可以从 Microsoft 下载站点免费下载此产品。</span><span class="sxs-lookup"><span data-stu-id="5bdee-104">You can download this product free of charge from the Microsoft download site.</span></span> <span data-ttu-id="5bdee-105">[!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] 文档中的示例和演练使用 SQL Server 作为数据存储区。</span><span class="sxs-lookup"><span data-stu-id="5bdee-105">The samples and walkthroughs in the [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] documentation use SQL Server as the data store.</span></span> <span data-ttu-id="5bdee-106">免费提供的 SQL Server Express Edition 也可代替 SQL Server 用作数据存储区。</span><span class="sxs-lookup"><span data-stu-id="5bdee-106">SQL Server Express Edition, which is available without charge, can also be used as the data store instead of SQL Server.</span></span>  
   
-## <a name="downloading-and-installing-the-adventureworks-database"></a><span data-ttu-id="e2e0e-107">下载并安装 AdventureWorks 数据库</span><span class="sxs-lookup"><span data-stu-id="e2e0e-107">Downloading and Installing the AdventureWorks Database</span></span>  
+## <a name="downloading-and-installing-the-adventureworks-database"></a><span data-ttu-id="5bdee-107">下载并安装 AdventureWorks 数据库</span><span class="sxs-lookup"><span data-stu-id="5bdee-107">Downloading and Installing the AdventureWorks Database</span></span>  
   
-#### <a name="to-download-and-install-the-adventureworks-sample-database-for-sql-server"></a><span data-ttu-id="e2e0e-108">下载和安装适用于 SQL Server 的 AdventureWorks 示例数据库</span><span class="sxs-lookup"><span data-stu-id="e2e0e-108">To download and install the AdventureWorks sample database for SQL Server</span></span>  
+#### <a name="to-download-and-install-the-adventureworks-sample-database-for-sql-server"></a><span data-ttu-id="5bdee-108">下载和安装适用于 SQL Server 的 AdventureWorks 示例数据库</span><span class="sxs-lookup"><span data-stu-id="5bdee-108">To download and install the AdventureWorks sample database for SQL Server</span></span>  
   
-1.  <span data-ttu-id="e2e0e-109">打开 Internet Explorer。</span><span class="sxs-lookup"><span data-stu-id="e2e0e-109">Open Internet Explorer.</span></span>  
+1.  <span data-ttu-id="5bdee-109">打开 Internet Explorer。</span><span class="sxs-lookup"><span data-stu-id="5bdee-109">Open Internet Explorer.</span></span>  
   
-2.  <span data-ttu-id="e2e0e-110">转到[SQL Server 2005 示例和示例数据库](https://go.microsoft.com/fwlink/?linkid=31046)Web 站点。</span><span class="sxs-lookup"><span data-stu-id="e2e0e-110">Go to the [SQL Server 2005 Samples and Sample Databases](https://go.microsoft.com/fwlink/?linkid=31046) Web site.</span></span>  
+2.  <span data-ttu-id="5bdee-110">转到[SQL Server 2005 示例和示例数据库](https://go.microsoft.com/fwlink/?linkid=31046)Web 站点。</span><span class="sxs-lookup"><span data-stu-id="5bdee-110">Go to the [SQL Server 2005 Samples and Sample Databases](https://go.microsoft.com/fwlink/?linkid=31046) Web site.</span></span>  
   
-3.  <span data-ttu-id="e2e0e-111">按照说明下载适用于您的处理器类型的 AdventureWorks 示例数据库（如 AdventureWorksDB.msi）并将该 .MSI 文件保存到您的本地计算机。</span><span class="sxs-lookup"><span data-stu-id="e2e0e-111">Follow the instructions for downloading the AdventureWorks sample database for your processor type (such as AdventureWorksDB.msi), and save the .MSI file to your local computer.</span></span>  
+3.  <span data-ttu-id="5bdee-111">按照说明下载适用于您的处理器类型的 AdventureWorks 示例数据库（如 AdventureWorksDB.msi）并将该 .MSI 文件保存到您的本地计算机。</span><span class="sxs-lookup"><span data-stu-id="5bdee-111">Follow the instructions for downloading the AdventureWorks sample database for your processor type (such as AdventureWorksDB.msi), and save the .MSI file to your local computer.</span></span>  
   
-4.  <span data-ttu-id="e2e0e-112">如果您通过下载或在 SQL Server 安装过程中安装了先前版本的 AdventureWorks，则在运行 AdventureWorks.msi 之前必须删除该版本。</span><span class="sxs-lookup"><span data-stu-id="e2e0e-112">If you have a previous version of AdventureWorks installed from the download or during the SQL Server setup, you must remove it before running AdventureWorks.msi.</span></span>  
+4.  <span data-ttu-id="5bdee-112">如果您通过下载或在 SQL Server 安装过程中安装了先前版本的 AdventureWorks，则在运行 AdventureWorks.msi 之前必须删除该版本。</span><span class="sxs-lookup"><span data-stu-id="5bdee-112">If you have a previous version of AdventureWorks installed from the download or during the SQL Server setup, you must remove it before running AdventureWorks.msi.</span></span>  
   
-#### <a name="to-remove-a-previous-download-of-an-adventureworks-sample-database"></a><span data-ttu-id="e2e0e-113">删除先前下载的 AdventureWorks 示例数据库</span><span class="sxs-lookup"><span data-stu-id="e2e0e-113">To remove a previous download of an AdventureWorks sample database</span></span>  
+#### <a name="to-remove-a-previous-download-of-an-adventureworks-sample-database"></a><span data-ttu-id="5bdee-113">删除先前下载的 AdventureWorks 示例数据库</span><span class="sxs-lookup"><span data-stu-id="5bdee-113">To remove a previous download of an AdventureWorks sample database</span></span>  
   
-1.  <span data-ttu-id="e2e0e-114">放置 AdventureWorks 或 AdventureWorksDW 数据库。</span><span class="sxs-lookup"><span data-stu-id="e2e0e-114">Drop the AdventureWorks or AdventureWorksDW database.</span></span>  
+1.  <span data-ttu-id="5bdee-114">放置 AdventureWorks 或 AdventureWorksDW 数据库。</span><span class="sxs-lookup"><span data-stu-id="5bdee-114">Drop the AdventureWorks or AdventureWorksDW database.</span></span>  
   
-2.  <span data-ttu-id="e2e0e-115">从**添加或删除程序**，选择**AdventureWorksDB**或**AdventureWorksBI**然后单击**删除**。</span><span class="sxs-lookup"><span data-stu-id="e2e0e-115">From **Add or Remove Programs**, select **AdventureWorksDB** or **AdventureWorksBI** and click **Remove**.</span></span>  
+2.  <span data-ttu-id="5bdee-115">从**添加或删除程序**，选择**AdventureWorksDB**或**AdventureWorksBI**然后单击**删除**。</span><span class="sxs-lookup"><span data-stu-id="5bdee-115">From **Add or Remove Programs**, select **AdventureWorksDB** or **AdventureWorksBI** and click **Remove**.</span></span>  
   
-#### <a name="to-remove-an-adventureworks-sample-database-previously-installed-using-setup"></a><span data-ttu-id="e2e0e-116">删除先前使用安装程序安装的 AdventureWorks 示例数据库</span><span class="sxs-lookup"><span data-stu-id="e2e0e-116">To remove an AdventureWorks sample database previously installed using Setup</span></span>  
+#### <a name="to-remove-an-adventureworks-sample-database-previously-installed-using-setup"></a><span data-ttu-id="5bdee-116">删除先前使用安装程序安装的 AdventureWorks 示例数据库</span><span class="sxs-lookup"><span data-stu-id="5bdee-116">To remove an AdventureWorks sample database previously installed using Setup</span></span>  
   
-1.  <span data-ttu-id="e2e0e-117">放置 AdventureWorks 或 AdventureWorksDW 数据库。</span><span class="sxs-lookup"><span data-stu-id="e2e0e-117">Drop the AdventureWorks or AdventureWorksDW database.</span></span>  
+1.  <span data-ttu-id="5bdee-117">放置 AdventureWorks 或 AdventureWorksDW 数据库。</span><span class="sxs-lookup"><span data-stu-id="5bdee-117">Drop the AdventureWorks or AdventureWorksDW database.</span></span>  
   
-2.  <span data-ttu-id="e2e0e-118">从**添加或删除程序**，选择**Microsoft SQL Server 2005**然后单击**更改**。</span><span class="sxs-lookup"><span data-stu-id="e2e0e-118">From **Add or Remove Programs**, select **Microsoft SQL Server 2005** and click **Change**.</span></span>  
+2.  <span data-ttu-id="5bdee-118">从**添加或删除程序**，选择**Microsoft SQL Server 2005**然后单击**更改**。</span><span class="sxs-lookup"><span data-stu-id="5bdee-118">From **Add or Remove Programs**, select **Microsoft SQL Server 2005** and click **Change**.</span></span>  
   
-3.  <span data-ttu-id="e2e0e-119">从**选择组件**，选择**工作站组件**，然后单击**下一步**。</span><span class="sxs-lookup"><span data-stu-id="e2e0e-119">From **Component Selection**, select **Workstation Components** and then click **Next**.</span></span>  
+3.  <span data-ttu-id="5bdee-119">从**选择组件**，选择**工作站组件**，然后单击**下一步**。</span><span class="sxs-lookup"><span data-stu-id="5bdee-119">From **Component Selection**, select **Workstation Components** and then click **Next**.</span></span>  
   
-4.  <span data-ttu-id="e2e0e-120">从**欢迎使用 SQL Server 安装向导**，单击**下一步**。</span><span class="sxs-lookup"><span data-stu-id="e2e0e-120">From **Welcome to the SQL Server Installation Wizard**, click **Next**.</span></span>  
+4.  <span data-ttu-id="5bdee-120">从**欢迎使用 SQL Server 安装向导**，单击**下一步**。</span><span class="sxs-lookup"><span data-stu-id="5bdee-120">From **Welcome to the SQL Server Installation Wizard**, click **Next**.</span></span>  
   
-5.  <span data-ttu-id="e2e0e-121">从**系统配置检查**，单击**下一步**。</span><span class="sxs-lookup"><span data-stu-id="e2e0e-121">From **System Configuration Check**, click **Next**.</span></span>  
+5.  <span data-ttu-id="5bdee-121">从**系统配置检查**，单击**下一步**。</span><span class="sxs-lookup"><span data-stu-id="5bdee-121">From **System Configuration Check**, click **Next**.</span></span>  
   
-6.  <span data-ttu-id="e2e0e-122">从**更改或删除实例**，单击**更改已安装的组件**。</span><span class="sxs-lookup"><span data-stu-id="e2e0e-122">From **Change or Remove Instance**, click **Change Installed Components**.</span></span>  
+6.  <span data-ttu-id="5bdee-122">从**更改或删除实例**，单击**更改已安装的组件**。</span><span class="sxs-lookup"><span data-stu-id="5bdee-122">From **Change or Remove Instance**, click **Change Installed Components**.</span></span>  
   
-7.  <span data-ttu-id="e2e0e-123">从**功能选择**，展开**文档、 示例和示例数据库**节点。</span><span class="sxs-lookup"><span data-stu-id="e2e0e-123">From **Feature Selection**, expand the **Documentation, Samples, and Sample Databases** node.</span></span>  
+7.  <span data-ttu-id="5bdee-123">从**功能选择**，展开**文档、 示例和示例数据库**节点。</span><span class="sxs-lookup"><span data-stu-id="5bdee-123">From **Feature Selection**, expand the **Documentation, Samples, and Sample Databases** node.</span></span>  
   
-8.  <span data-ttu-id="e2e0e-124">选择**示例代码和应用程序**。</span><span class="sxs-lookup"><span data-stu-id="e2e0e-124">Select **Sample Code and Applications**.</span></span> <span data-ttu-id="e2e0e-125">展开**示例数据库**，选择示例数据库中删除，然后选择**整个功能将不可**。</span><span class="sxs-lookup"><span data-stu-id="e2e0e-125">Expand **Sample Databases**, select the sample database to be removed, and select **Entire feature will be unavailable**.</span></span> <span data-ttu-id="e2e0e-126">单击 **“下一步”**。</span><span class="sxs-lookup"><span data-stu-id="e2e0e-126">Click **Next**.</span></span>  
+8.  <span data-ttu-id="5bdee-124">选择**示例代码和应用程序**。</span><span class="sxs-lookup"><span data-stu-id="5bdee-124">Select **Sample Code and Applications**.</span></span> <span data-ttu-id="5bdee-125">展开**示例数据库**，选择示例数据库中删除，然后选择**整个功能将不可**。</span><span class="sxs-lookup"><span data-stu-id="5bdee-125">Expand **Sample Databases**, select the sample database to be removed, and select **Entire feature will be unavailable**.</span></span> <span data-ttu-id="5bdee-126">单击 **“下一步”**。</span><span class="sxs-lookup"><span data-stu-id="5bdee-126">Click **Next**.</span></span>  
   
-9. <span data-ttu-id="e2e0e-127">单击**安装**并完成安装向导。</span><span class="sxs-lookup"><span data-stu-id="e2e0e-127">Click **Install** and finish the installation wizard.</span></span>  
+9. <span data-ttu-id="5bdee-127">单击**安装**并完成安装向导。</span><span class="sxs-lookup"><span data-stu-id="5bdee-127">Click **Install** and finish the installation wizard.</span></span>  
   
-#### <a name="to-attach-the-adventureworks-sample-database-files-to-an-instance-of-sql-server"></a><span data-ttu-id="e2e0e-128">将 AdventureWorks 示例数据库文件附加到 SQL Server 的实例</span><span class="sxs-lookup"><span data-stu-id="e2e0e-128">To attach the AdventureWorks sample database files to an instance of SQL Server</span></span>  
+#### <a name="to-attach-the-adventureworks-sample-database-files-to-an-instance-of-sql-server"></a><span data-ttu-id="5bdee-128">将 AdventureWorks 示例数据库文件附加到 SQL Server 的实例</span><span class="sxs-lookup"><span data-stu-id="5bdee-128">To attach the AdventureWorks sample database files to an instance of SQL Server</span></span>  
   
-1.  <span data-ttu-id="e2e0e-129">已下载了文件示例数据库安装程序文件后，双击**AdventureWorksDB.msi**文件 （或下载的文件） 来安装数据库。</span><span class="sxs-lookup"><span data-stu-id="e2e0e-129">After the file sample database installer file has downloaded, double-click the **AdventureWorksDB.msi** file (or the file you downloaded) to install the database.</span></span> <span data-ttu-id="e2e0e-130">默认情况下，该数据库安装在 c:\Program Files\Microsoft SQL Server\MSSQL.1\MSSQL\Data 位置。</span><span class="sxs-lookup"><span data-stu-id="e2e0e-130">By default, the database is installed at c:\Program Files\Microsoft SQL Server\MSSQL.1\MSSQL\Data.</span></span>  
+1.  <span data-ttu-id="5bdee-129">已下载了文件示例数据库安装程序文件后，双击**AdventureWorksDB.msi**文件 （或下载的文件） 来安装数据库。</span><span class="sxs-lookup"><span data-stu-id="5bdee-129">After the file sample database installer file has downloaded, double-click the **AdventureWorksDB.msi** file (or the file you downloaded) to install the database.</span></span> <span data-ttu-id="5bdee-130">默认情况下，该数据库安装在 c:\Program Files\Microsoft SQL Server\MSSQL.1\MSSQL\Data 位置。</span><span class="sxs-lookup"><span data-stu-id="5bdee-130">By default, the database is installed at c:\Program Files\Microsoft SQL Server\MSSQL.1\MSSQL\Data.</span></span>  
   
-2.  <span data-ttu-id="e2e0e-131">通过执行下面的脚本 SQLCMD 或 SQL Server Management Studio，将 AdventureWorks 数据库文件附加到 SQL Server 的实例：</span><span class="sxs-lookup"><span data-stu-id="e2e0e-131">Attach the AdventureWorks database files to an instance of SQL Server by executing the following script SQLCMD or SQL Server Management Studio:</span></span>  
+2.  <span data-ttu-id="5bdee-131">通过执行下面的脚本 SQLCMD 或 SQL Server Management Studio，将 AdventureWorks 数据库文件附加到 SQL Server 的实例：</span><span class="sxs-lookup"><span data-stu-id="5bdee-131">Attach the AdventureWorks database files to an instance of SQL Server by executing the following script SQLCMD or SQL Server Management Studio:</span></span>  
   
-    ```  
+    ```sql
     exec sp_attach_db @dbname=N'AdventureWorks', @filename1=N'C:\Program Files\Microsoft SQL Server\MSSQL.1\MSSQL\Data\AdventureWorks_Data.mdf', @filename2=N'C:\Program Files\Microsoft SQL Server\MSSQL.1\MSSQL\Data\AdventureWorks_log.ldf'  
     ```  
   
-     <span data-ttu-id="e2e0e-132">如果您已将这些文件安装到其他驱动器或目录，则必须在执行 `sp_attach_db` 存储过程之前适当修改路径。</span><span class="sxs-lookup"><span data-stu-id="e2e0e-132">If you have installed these files to a different drive or directory, you must revise the paths appropriately before you execute the `sp_attach_db` stored procedure.</span></span>  
+     <span data-ttu-id="5bdee-132">如果您已将这些文件安装到其他驱动器或目录，则必须在执行 `sp_attach_db` 存储过程之前适当修改路径。</span><span class="sxs-lookup"><span data-stu-id="5bdee-132">If you have installed these files to a different drive or directory, you must revise the paths appropriately before you execute the `sp_attach_db` stored procedure.</span></span>  
   
-## <a name="downloading-sql-server-express-edition"></a><span data-ttu-id="e2e0e-133">下载 SQL Server Express Edition</span><span class="sxs-lookup"><span data-stu-id="e2e0e-133">Downloading SQL Server Express Edition</span></span>  
- <span data-ttu-id="e2e0e-134">[!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] 一节中的示例和演练使用 SQL Server 2005 作为数据存储区，但也可以修改为使用 SQL Server Express Edition。</span><span class="sxs-lookup"><span data-stu-id="e2e0e-134">The samples and walkthroughs in the [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] section use SQL Server 2005 as the data store but can be modified to use SQL Server Express Edition, instead.</span></span> <span data-ttu-id="e2e0e-135">SQL Server Express Edition 免费提供，您可以利用应用程序重新发布它。</span><span class="sxs-lookup"><span data-stu-id="e2e0e-135">SQL Server Express Edition is available without charge, and you can redistribute it with applications.</span></span> <span data-ttu-id="e2e0e-136">如果使用的 Visual Studio，专业版和更高版本都包含 SQL Server Express Edition。</span><span class="sxs-lookup"><span data-stu-id="e2e0e-136">If you are using Visual Studio, SQL Server Express Edition is included in the Pro and higher editions.</span></span>  
+## <a name="downloading-sql-server-express-edition"></a><span data-ttu-id="5bdee-133">下载 SQL Server Express Edition</span><span class="sxs-lookup"><span data-stu-id="5bdee-133">Downloading SQL Server Express Edition</span></span>  
+ <span data-ttu-id="5bdee-134">[!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] 一节中的示例和演练使用 SQL Server 2005 作为数据存储区，但也可以修改为使用 SQL Server Express Edition。</span><span class="sxs-lookup"><span data-stu-id="5bdee-134">The samples and walkthroughs in the [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] section use SQL Server 2005 as the data store but can be modified to use SQL Server Express Edition, instead.</span></span> <span data-ttu-id="5bdee-135">SQL Server Express Edition 免费提供，您可以利用应用程序重新发布它。</span><span class="sxs-lookup"><span data-stu-id="5bdee-135">SQL Server Express Edition is available without charge, and you can redistribute it with applications.</span></span> <span data-ttu-id="5bdee-136">如果使用的 Visual Studio，专业版和更高版本都包含 SQL Server Express Edition。</span><span class="sxs-lookup"><span data-stu-id="5bdee-136">If you are using Visual Studio, SQL Server Express Edition is included in the Pro and higher editions.</span></span>  
   
-#### <a name="to-download-and-install-sql-server-express-edition"></a><span data-ttu-id="e2e0e-137">下载并安装 SQL Server Express Edition</span><span class="sxs-lookup"><span data-stu-id="e2e0e-137">To download and install SQL Server Express Edition</span></span>  
+#### <a name="to-download-and-install-sql-server-express-edition"></a><span data-ttu-id="5bdee-137">下载并安装 SQL Server Express Edition</span><span class="sxs-lookup"><span data-stu-id="5bdee-137">To download and install SQL Server Express Edition</span></span>  
   
-1.  <span data-ttu-id="e2e0e-138">启动 Internet Explorer。</span><span class="sxs-lookup"><span data-stu-id="e2e0e-138">Start Internet Explorer.</span></span>  
+1.  <span data-ttu-id="5bdee-138">启动 Internet Explorer。</span><span class="sxs-lookup"><span data-stu-id="5bdee-138">Start Internet Explorer.</span></span>  
   
-2.  <span data-ttu-id="e2e0e-139">转到[Microsoft SQL Server 2005 Express Edition](https://go.microsoft.com/fwlink/?LinkID=31070)下载页。</span><span class="sxs-lookup"><span data-stu-id="e2e0e-139">Go to the  [Microsoft SQL Server 2005 Express Edition](https://go.microsoft.com/fwlink/?LinkID=31070) download page.</span></span>  
+2.  <span data-ttu-id="5bdee-139">转到[Microsoft SQL Server 2005 Express Edition](https://go.microsoft.com/fwlink/?LinkID=31070)下载页。</span><span class="sxs-lookup"><span data-stu-id="5bdee-139">Go to the  [Microsoft SQL Server 2005 Express Edition](https://go.microsoft.com/fwlink/?LinkID=31070) download page.</span></span>  
   
-3.  <span data-ttu-id="e2e0e-140">按照网站上的安装说明操作。</span><span class="sxs-lookup"><span data-stu-id="e2e0e-140">Follow the installation instructions on the Web site.</span></span>  
+3.  <span data-ttu-id="5bdee-140">按照网站上的安装说明操作。</span><span class="sxs-lookup"><span data-stu-id="5bdee-140">Follow the installation instructions on the Web site.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="e2e0e-141">请参阅</span><span class="sxs-lookup"><span data-stu-id="e2e0e-141">See Also</span></span>  
- [<span data-ttu-id="e2e0e-142">入门</span><span class="sxs-lookup"><span data-stu-id="e2e0e-142">Getting Started</span></span>](../../../../docs/framework/data/adonet/getting-started-linq-to-dataset.md)
+## <a name="see-also"></a><span data-ttu-id="5bdee-141">请参阅</span><span class="sxs-lookup"><span data-stu-id="5bdee-141">See Also</span></span>  
+ [<span data-ttu-id="5bdee-142">入门</span><span class="sxs-lookup"><span data-stu-id="5bdee-142">Getting Started</span></span>](../../../../docs/framework/data/adonet/getting-started-linq-to-dataset.md)

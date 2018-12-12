@@ -30,8 +30,6 @@
 ### [使用 Azure Service Fabric](architect-microservice-container-applications/using-azure-service-fabric.md)
 ## [Docker 应用开发流程](docker-application-development-process/index.md)
 ### [Docker 应用开发工作流](docker-application-development-process/docker-app-development-workflow.md)
-## [在 Linux 或 Windows Nano Server 主机上部署单容器 .NET Core Web 应用](net-core-single-containers-linux-windows-server-hosts/index.md)
-## [将旧版整体式 .NET Framework 应用迁移到 Windows 容器](containerize-net-framework-applications/index.md)
 ## [设计和开发多容器化微服务 .NET 应用](multi-container-microservice-net-applications/index.md)
 ### [设计面向微服务的应用](multi-container-microservice-net-applications/microservice-application-design.md)
 ### [创建简单的数据驱动 CRUD 微服务](multi-container-microservice-net-applications/data-driven-crud-microservice.md)

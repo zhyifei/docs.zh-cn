@@ -4,21 +4,21 @@ description: 了解如何在 ML.NET 机器学习管道处理期间检查实际�
 ms.date: 11/07/2018
 ms.custom: mvc,how-to
 ms.openlocfilehash: cd229c120f7599c9a304a84a1669947e613fc917
-ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "52297584"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53151533"
 ---
-# <a name="inspect-intermediate-data-values-during-mlnet-pipeline-processing"></a><span data-ttu-id="c57ae-103">在 ML.NET 管道处理期间检查中间数据值</span><span class="sxs-lookup"><span data-stu-id="c57ae-103">Inspect intermediate data values during ML.NET pipeline processing</span></span>
+# <a name="inspect-intermediate-data-values-during-mlnet-pipeline-processing"></a><span data-ttu-id="3c321-103">在 ML.NET 管道处理期间检查中间数据值</span><span class="sxs-lookup"><span data-stu-id="3c321-103">Inspect intermediate data values during ML.NET pipeline processing</span></span>
 
-<span data-ttu-id="c57ae-104">在实验过程中，可能需要观察和验证给定时间点的数据处理结果。</span><span class="sxs-lookup"><span data-stu-id="c57ae-104">During the experiment, you may want to observe and validate the data processing results at a given point.</span></span> <span data-ttu-id="c57ae-105">由于 ML.NET 操作具有延迟性，生成的对象都是“预示”的数据，这并非易事。</span><span class="sxs-lookup"><span data-stu-id="c57ae-105">This isn't easy since ML.NET operations are lazy, constructing objects that are 'promises' of data.</span></span>
+<span data-ttu-id="3c321-104">在实验过程中，可能需要观察和验证给定时间点的数据处理结果。</span><span class="sxs-lookup"><span data-stu-id="3c321-104">During the experiment, you may want to observe and validate the data processing results at a given point.</span></span> <span data-ttu-id="3c321-105">由于 ML.NET 操作具有延迟性，生成的对象都是“预示”的数据，这并非易事。</span><span class="sxs-lookup"><span data-stu-id="3c321-105">This isn't easy since ML.NET operations are lazy, constructing objects that are 'promises' of data.</span></span>
 
-<span data-ttu-id="c57ae-106">可使用 `GetColumn<T>` 扩展方法检查中间数据。</span><span class="sxs-lookup"><span data-stu-id="c57ae-106">The `GetColumn<T>` extension method lets you inspect the intermediate data.</span></span> <span data-ttu-id="c57ae-107">它以 `IEnumerable` 的形式返回数据列的内容。</span><span class="sxs-lookup"><span data-stu-id="c57ae-107">It returns the contents of one data column as an `IEnumerable`.</span></span>
+<span data-ttu-id="3c321-106">可使用 `GetColumn<T>` 扩展方法检查中间数据。</span><span class="sxs-lookup"><span data-stu-id="3c321-106">The `GetColumn<T>` extension method lets you inspect the intermediate data.</span></span> <span data-ttu-id="3c321-107">它以 `IEnumerable` 的形式返回数据列的内容。</span><span class="sxs-lookup"><span data-stu-id="3c321-107">It returns the contents of one data column as an `IEnumerable`.</span></span>
 
-<span data-ttu-id="c57ae-108">以下示例演示如何使用 `GetColumn<T>` 扩展方法：</span><span class="sxs-lookup"><span data-stu-id="c57ae-108">The following example shows how to use the `GetColumn<T>` extension method:</span></span>
+<span data-ttu-id="3c321-108">以下示例演示如何使用 `GetColumn<T>` 扩展方法：</span><span class="sxs-lookup"><span data-stu-id="3c321-108">The following example shows how to use the `GetColumn<T>` extension method:</span></span>
 
-<span data-ttu-id="c57ae-109">[示例文件](https://github.com/dotnet/machinelearning/tree/master/test/data/adult.tiny.with-schema.txt)：</span><span class="sxs-lookup"><span data-stu-id="c57ae-109">[Example file](https://github.com/dotnet/machinelearning/tree/master/test/data/adult.tiny.with-schema.txt):</span></span>
+<span data-ttu-id="3c321-109">[示例文件](https://github.com/dotnet/machinelearning/tree/master/test/data/adult.tiny.with-schema.txt)：</span><span class="sxs-lookup"><span data-stu-id="3c321-109">[Example file](https://github.com/dotnet/machinelearning/tree/master/test/data/adult.tiny.with-schema.txt):</span></span>
 ```
 Label   Workclass   education   marital-status
 0   Private 11th    Never-married
@@ -28,7 +28,7 @@ Label   Workclass   education   marital-status
 
 ```
 
-<span data-ttu-id="c57ae-110">类定义如下：</span><span class="sxs-lookup"><span data-stu-id="c57ae-110">Our class is defined as follows:</span></span>
+<span data-ttu-id="3c321-110">类定义如下：</span><span class="sxs-lookup"><span data-stu-id="3c321-110">Our class is defined as follows:</span></span>
 
 ```csharp
 private class InspectedRow

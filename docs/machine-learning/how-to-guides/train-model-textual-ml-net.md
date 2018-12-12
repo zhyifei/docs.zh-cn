@@ -4,26 +4,26 @@ description: 了解如何使用 ML.NET 将特征工程学应用于文本数据�
 ms.date: 11/07/2018
 ms.custom: mvc,how-to
 ms.openlocfilehash: ed24561c8cc821ece8a21ca61e22a11bda2516d1
-ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "52297634"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53152157"
 ---
-# <a name="apply-feature-engineering-for-machine-learning-model-training-on-textual-data-with-mlnet"></a><span data-ttu-id="f4172-103">使用 ML.NET 将特征工程学应用于文本数据的机器学习模型定型</span><span class="sxs-lookup"><span data-stu-id="f4172-103">Apply feature engineering for machine learning model training on textual data with ML.NET</span></span>
+# <a name="apply-feature-engineering-for-machine-learning-model-training-on-textual-data-with-mlnet"></a><span data-ttu-id="80451-103">使用 ML.NET 将特征工程学应用于文本数据的机器学习模型定型</span><span class="sxs-lookup"><span data-stu-id="80451-103">Apply feature engineering for machine learning model training on textual data with ML.NET</span></span>
 
-<span data-ttu-id="f4172-104">需要将任何非浮点型数据转换为 `float` 数据类型，因为所有 ML.NET `learners` 都预期特征是 `float vector`。</span><span class="sxs-lookup"><span data-stu-id="f4172-104">You need to convert any non float data to `float` data types since all ML.NET `learners` expect features as a `float vector`.</span></span>
+<span data-ttu-id="80451-104">需要将任何非浮点型数据转换为 `float` 数据类型，因为所有 ML.NET `learners` 都预期特征是 `float vector`。</span><span class="sxs-lookup"><span data-stu-id="80451-104">You need to convert any non float data to `float` data types since all ML.NET `learners` expect features as a `float vector`.</span></span>
 
-<span data-ttu-id="f4172-105">要了解文本数据，需要提取文本特征。</span><span class="sxs-lookup"><span data-stu-id="f4172-105">To learn on textual data, you need to extract text features.</span></span> <span data-ttu-id="f4172-106">ML.NET 具有一些基本的文本特征提取机制：</span><span class="sxs-lookup"><span data-stu-id="f4172-106">ML.NET has some basic text feature extraction mechanisms:</span></span>
+<span data-ttu-id="80451-105">要了解文本数据，需要提取文本特征。</span><span class="sxs-lookup"><span data-stu-id="80451-105">To learn on textual data, you need to extract text features.</span></span> <span data-ttu-id="80451-106">ML.NET 具有一些基本的文本特征提取机制：</span><span class="sxs-lookup"><span data-stu-id="80451-106">ML.NET has some basic text feature extraction mechanisms:</span></span>
 
-- <span data-ttu-id="f4172-107">`Text normalization`（删除标点、音调符号、切换到小写等）。</span><span class="sxs-lookup"><span data-stu-id="f4172-107">`Text normalization` (removing punctuation, diacritics, switching to lowercase etc.)</span></span>
-- <span data-ttu-id="f4172-108">`Separator-based tokenization`。</span><span class="sxs-lookup"><span data-stu-id="f4172-108">`Separator-based tokenization`.</span></span>
-- <span data-ttu-id="f4172-109">`Stopword` 删除。</span><span class="sxs-lookup"><span data-stu-id="f4172-109">`Stopword` removal.</span></span>
-- <span data-ttu-id="f4172-110">`Ngram` 和 `skip-gram` 提取。</span><span class="sxs-lookup"><span data-stu-id="f4172-110">`Ngram` and `skip-gram` extraction.</span></span>
-- <span data-ttu-id="f4172-111">`TF-IDF` 重新缩放。</span><span class="sxs-lookup"><span data-stu-id="f4172-111">`TF-IDF` rescaling.</span></span>
-- <span data-ttu-id="f4172-112">`Bag of words` 转换。</span><span class="sxs-lookup"><span data-stu-id="f4172-112">`Bag of words` conversion.</span></span>
+- <span data-ttu-id="80451-107">`Text normalization`（删除标点、音调符号、切换到小写等）。</span><span class="sxs-lookup"><span data-stu-id="80451-107">`Text normalization` (removing punctuation, diacritics, switching to lowercase etc.)</span></span>
+- <span data-ttu-id="80451-108">`Separator-based tokenization`。</span><span class="sxs-lookup"><span data-stu-id="80451-108">`Separator-based tokenization`.</span></span>
+- <span data-ttu-id="80451-109">`Stopword` 删除。</span><span class="sxs-lookup"><span data-stu-id="80451-109">`Stopword` removal.</span></span>
+- <span data-ttu-id="80451-110">`Ngram` 和 `skip-gram` 提取。</span><span class="sxs-lookup"><span data-stu-id="80451-110">`Ngram` and `skip-gram` extraction.</span></span>
+- <span data-ttu-id="80451-111">`TF-IDF` 重新缩放。</span><span class="sxs-lookup"><span data-stu-id="80451-111">`TF-IDF` rescaling.</span></span>
+- <span data-ttu-id="80451-112">`Bag of words` 转换。</span><span class="sxs-lookup"><span data-stu-id="80451-112">`Bag of words` conversion.</span></span>
 
-<span data-ttu-id="f4172-113">以下示例使用[维基百科 detox 数据集](https://github.com/dotnet/machinelearning/blob/master/test/data/wikipedia-detox-250-line-data.tsv)演示 ML.NET 文本特征提取机制：</span><span class="sxs-lookup"><span data-stu-id="f4172-113">The following example demonstrates ML.NET text feature extraction mechanisms using the [Wikipedia detox dataset](https://github.com/dotnet/machinelearning/blob/master/test/data/wikipedia-detox-250-line-data.tsv):</span></span>
+<span data-ttu-id="80451-113">以下示例使用[维基百科 detox 数据集](https://github.com/dotnet/machinelearning/blob/master/test/data/wikipedia-detox-250-line-data.tsv)演示 ML.NET 文本特征提取机制：</span><span class="sxs-lookup"><span data-stu-id="80451-113">The following example demonstrates ML.NET text feature extraction mechanisms using the [Wikipedia detox dataset](https://github.com/dotnet/machinelearning/blob/master/test/data/wikipedia-detox-250-line-data.tsv):</span></span>
 
 ```console
 Sentiment   SentimentText

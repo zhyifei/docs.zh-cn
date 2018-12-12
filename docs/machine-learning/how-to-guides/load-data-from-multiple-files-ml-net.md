@@ -4,18 +4,18 @@ description: 通过 ML.NET，了解如何从多个文件加载数据用于机器
 ms.date: 11/07/2018
 ms.custom: mvc,how-to
 ms.openlocfilehash: c9b34bd6bcbac62e9f9c33226f5d0feb41168392
-ms.sourcegitcommit: 7f7664837d35320a0bad3f7e4ecd68d6624633b2
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52672399"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53150727"
 ---
-# <a name="load-data-from-multiple-files-for-machine-learning-processing---mlnet"></a><span data-ttu-id="c9a2e-103">从多个文件加载数据用于机器学习处理 - ML.NET</span><span class="sxs-lookup"><span data-stu-id="c9a2e-103">Load data from multiple files for machine learning processing - ML.NET</span></span>
+# <a name="load-data-from-multiple-files-for-machine-learning-processing---mlnet"></a><span data-ttu-id="5d130-103">从多个文件加载数据用于机器学习处理 - ML.NET</span><span class="sxs-lookup"><span data-stu-id="5d130-103">Load data from multiple files for machine learning processing - ML.NET</span></span>
 
-<span data-ttu-id="c9a2e-104">使用 `TextLoader`，将一组文件指定到 `Read` 方法。</span><span class="sxs-lookup"><span data-stu-id="c9a2e-104">Use the `TextLoader`, and specify an array of files to the `Read` method.</span></span> <span data-ttu-id="c9a2e-105">文件必须具有相同的架构（相同的列数量和类型）：</span><span class="sxs-lookup"><span data-stu-id="c9a2e-105">The files must have the same schema (same number and type of columns):</span></span>
+<span data-ttu-id="5d130-104">使用 `TextLoader`，将一组文件指定到 `Read` 方法。</span><span class="sxs-lookup"><span data-stu-id="5d130-104">Use the `TextLoader`, and specify an array of files to the `Read` method.</span></span> <span data-ttu-id="5d130-105">文件必须具有相同的架构（相同的列数量和类型）：</span><span class="sxs-lookup"><span data-stu-id="5d130-105">The files must have the same schema (same number and type of columns):</span></span>
 
-* [<span data-ttu-id="c9a2e-106">示例文件1</span><span class="sxs-lookup"><span data-stu-id="c9a2e-106">Example file1</span></span>](https://github.com/dotnet/machinelearning/blob/e3a34ae6ae1b25ac96faa0317308703ce943ff95/test/data/adult.train)
-* [<span data-ttu-id="c9a2e-107">示例文件2</span><span class="sxs-lookup"><span data-stu-id="c9a2e-107">Example file2</span></span>](https://github.com/dotnet/machinelearning/blob/e3a34ae6ae1b25ac96faa0317308703ce943ff95/test/data/adult.test)
+* [<span data-ttu-id="5d130-106">示例文件1</span><span class="sxs-lookup"><span data-stu-id="5d130-106">Example file1</span></span>](https://github.com/dotnet/machinelearning/blob/e3a34ae6ae1b25ac96faa0317308703ce943ff95/test/data/adult.train)
+* [<span data-ttu-id="5d130-107">示例文件2</span><span class="sxs-lookup"><span data-stu-id="5d130-107">Example file2</span></span>](https://github.com/dotnet/machinelearning/blob/e3a34ae6ae1b25ac96faa0317308703ce943ff95/test/data/adult.test)
 
 ```csharp
 // Create a new context for ML.NET operations. It can be used for exception tracking and logging, 
