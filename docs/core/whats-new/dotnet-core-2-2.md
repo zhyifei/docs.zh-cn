@@ -92,5 +92,5 @@ internal sealed class SimpleEventListener : EventListener
 ## 请参阅
 
 * [.NET Core 的新增功能](index.md)
-* [.NET Core 2.2 的新增功能](/aspnet/core/release-notes/aspnetcore-2.2)  
+* [ASP.NET Core 2.2 的新增功能](/aspnet/core/release-notes/aspnetcore-2.2)  
 * [EF Core 2.2 的新增功能](/ef/core/what-is-new/ef-core-2.2)  
