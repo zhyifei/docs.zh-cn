@@ -128,7 +128,6 @@
 ### [对已发布的输出进行单元测试](core/testing/unit-testing-published-output.md)
 ### [使用 Visual Studio 对 .NET Core 项目进行 Live Unit Testing](/visualstudio/test/live-unit-testing-start)
 ## [版本控制](core/versions/index.md)
-### [.NET Core 版本历史记录](core/versions/version-history.md)
 ### [.NET Core 版本选择](core/versions/selection.md)
 ### [删除过时的运行时和 SDK](core/versions/remove-runtime-sdk-versions.md)
 ## [运行时 IDentifier 目录](core/rid-catalog.md)
