@@ -1,6 +1,6 @@
 ---
 title: F# 集合类型
-description: 了解有关 F# 集合类型以及从.NET Framework 中的集合类型之间的区别。
+description: '了解有关 F # 集合类型以及从.NET Framework 中的集合类型之间的区别。'
 ms.date: 05/16/2016
 ms.openlocfilehash: a3cfc3f06582c31a79dce43b583eca39f69ddf1e
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
@@ -11,13 +11,13 @@ ms.locfileid: "43864756"
 ---
 # <a name="f-collection-types"></a>F# 集合类型
 
-通过查看本主题，您可以确定哪些 F# 集合类型最适合特定需求。 这些集合类型不同于在.NET Framework 中，如中的集合类型`System.Collections.Generic`命名空间，因为 F# 集合类型旨在从功能编程的角度来看，而不是一个面向对象的透视。 具体而言，仅数组集合具有可变的元素。 因此，当修改集合时，您创建修改后的集合，而不是更改原始集合的实例。
+通过查看本主题，您可以确定哪些 F # 集合类型最适合特定需求。 这些集合类型不同于在.NET Framework 中，如中的集合类型`System.Collections.Generic`命名空间，因为 F # 集合类型旨在从功能编程的角度来看，而不是一个面向对象的透视。 具体而言，仅数组集合具有可变的元素。 因此，当修改集合时，您创建修改后的集合，而不是更改原始集合的实例。
 
 在对象存储的数据结构的类型也存在差异的集合类型。 如哈希表、 链接的列表和数组的数据结构具有不同的性能特征和一组不同的可用操作。
 
 ## <a name="f-collection-types"></a>F# 集合类型
 
-下表显示了 F# 集合类型。
+下表显示了 F # 集合类型。
 
 |类型|描述|相关链接|
 |----|-----------|-------------|
@@ -25,11 +25,11 @@ ms.locfileid: "43864756"
 |[数组](https://msdn.microsoft.com/library/0cda8040-9396-40dd-8dcd-cf48542165a1)|连续数据元素的都是相同类型的固定大小、 从零开始的可变集合。|[数组](arrays.md)<br /><br />[Array 模块](https://msdn.microsoft.com/library/0cda8040-9396-40dd-8dcd-cf48542165a1)<br /><br />[Array2D 模块](https://msdn.microsoft.com/library/ae1a9746-7817-4430-bcdb-a79c2411bbd3)<br /><br />[Array3D 模块](https://msdn.microsoft.com/library/c8355e2d-add8-48a4-8aa6-1c57ae74c560)|
 |[seq](https://msdn.microsoft.com/library/2f0c87c6-8a0d-4d33-92a6-10d1d037ce75)|是一种类型的所有元素的逻辑系列。 具有较大，有序数据集合，但不一定希望使用的所有元素时，序列是特别有用。 各序列元素计算仅为所需，因此可以比列表更好地执行序列，如果未使用的所有元素。 序列由`seq<'T>`类型，即别名为`IEnumerable<T>`。 因此，任何.NET Framework 类型实现`System.Collections.Generic.IEnumerable<'T>`可作为一个序列。|[序列](sequences.md)<br /><br />[Seq 模块](https://msdn.microsoft.com/library/54e8f059-ca52-4632-9ae9-49685ee9b684)|
 |[映射](https://msdn.microsoft.com/library/975316ea-55e3-4987-9994-90897ad45664)|元素的一个不可变字典。 密钥访问元素。|[映射模块](https://msdn.microsoft.com/library/bfe61ead-f16c-416f-af98-56dbcbe23e4f)|
-|[Set](https://msdn.microsoft.com/library/50cebdce-0cd7-4c5c-8ebc-f3a9e90b38d8)|基于二进制树，其中的 comparison 是 F# 结构比较函数，它可能使用的实现的不可变集`System.IComparable`键值上的接口。|[设置模块](https://msdn.microsoft.com/library/61efa732-d55d-4c32-993f-628e2f98e6a0)|
+|[Set](https://msdn.microsoft.com/library/50cebdce-0cd7-4c5c-8ebc-f3a9e90b38d8)|基于二进制树，其中的 comparison 是 F # 结构比较函数，它可能使用的实现的不可变集`System.IComparable`键值上的接口。|[设置模块](https://msdn.microsoft.com/library/61efa732-d55d-4c32-993f-628e2f98e6a0)|
 
 ### <a name="table-of-functions"></a>函数表
 
-本部分比较适用于 F# 集合类型的函数。 给定的函数的计算的复杂程度，其中 N 是第一个集合的大小，如果有，M 是第二个集合的大小。 短划线 （-） 指示此函数不在集合上可用。 由于延迟评估序列，如 Seq.distinct 函数可能会 o （1） 它会立即返回，因为虽然它仍会影响序列枚举时的性能。
+本部分比较适用于 F # 集合类型的函数。 给定的函数的计算的复杂程度，其中 N 是第一个集合的大小，如果有，M 是第二个集合的大小。 短划线 （-） 指示此函数不在集合上可用。 由于延迟评估序列，如 Seq.distinct 函数可能会 o （1） 它会立即返回，因为虽然它仍会影响序列枚举时的性能。
 
 |函数|数组|列表|序列|映射|Set|描述|
 |--------|-----|----|--------|---|---|-----------|
@@ -72,7 +72,7 @@ ms.locfileid: "43864756"
 |head|-|O （1)|O （1)|-|-|返回集合的第一个元素。|
 |init|O （N)|O （N)|O （1)|-|-|创建给定维度和一个生成器函数以便计算元素的集合。|
 |initInfinite|-|-|O （1)|-|-|生成的序列，进行迭代时，通过调用给定的函数返回连续的元素。|
-|Intersect|-|-|-|-|O (log N&#42;日志 M)|计算两个集的交集。|
+|Intersect|-|-|-|-|O (log N &#42;日志 M)|计算两个集的交集。|
 |intersectMany|-|-|-|-|O (N1 &AMP;#42; N2...)|计算集合序列的交集。 序列不能为空。|
 |IsEmpty|O （1)|O （1)|O （1)|O （1)|-|返回`true`集合是否为空。|
 |isProperSubset|-|-|-|-|O (M &#42; log N)|返回`true`如果第一个集的所有元素都是第二个集中，并且至少一个元素的第二个集不在第一组。|
