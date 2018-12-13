@@ -86,7 +86,7 @@ ms.locfileid: "53152131"
 |`+ (unary)`|`op_UnaryPlus`|`Plus`|  
 |`~`|`op_OnesComplement`|`OnesComplement`|  
   
-### <a name="overloading-operator-"></a>重载运算符 = =  
+### <a name="overloading-operator-"></a>重载运算符 ==  
  重载`operator ==`非常复杂。 运算符的语义需要符合几个其他成员，如<xref:System.Object.Equals%2A?displayProperty=nameWithType>。  
   
 ### <a name="conversion-operators"></a>转换运算符  
