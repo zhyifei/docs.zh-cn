@@ -3,12 +3,12 @@ title: C# 6 中的新增功能 - C# 指南
 description: 了解 C# 版本 6 中的新增功能
 ms.date: 09/22/2016
 ms.assetid: 4d879f69-f889-4d3f-a781-75194e143400
-ms.openlocfilehash: ad3515e1fc7d70e1377f007276c369d2884780f0
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 6aa070d54bb1b571d4fa51538b0521a554073cbc
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50194028"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53146734"
 ---
 # <a name="whats-new-in-c-6"></a>C# 6 中的新增功能
 
@@ -94,9 +94,9 @@ public class Student
 
 自动属性初始值设定项可让你在属性声明中声明自动属性的初始值。  在早期版本中，这些属性需要具有资源库，你需要使用该资源库来初始化支持字段使用的数据存储。 对于包含姓名和学生成绩列表的学生，请考虑此类：
 
-[!code-csharp[Construction](../../../samples/snippets/csharp/new-in-6/oldcode.cs#Construction)]
+[!code-csharp[Student](../../../samples/snippets/csharp/new-in-6/oldcode.cs#Student)]
  
-随着此类的增长，你可以包含其他构造函数。 每个构造函数都需要初始化此字段，否则将引入错误。
+随着此类的增长，你可以包含其他构造函数。 每个构造函数都需要初始化 Grades 属性，否则将引入错误。
 
 通过 C# 6，可为自动属性声明中的自动属性所使用的存储分配初始值：
 
@@ -104,7 +104,7 @@ public class Student
 
 `Grades` 成员在声明它的位置处被初始化。 这样，就能更容易地仅执行一次初始化。 初始化是属性声明的一部分，可更轻松地将存储分配等同于 `Student` 对象的公用接口。
 
-属性初始化表达式可与读/写属性以及只读属性一起使用，如下所示。
+属性初始化表达式可与只读属性（如上所示）以及读/写属性（如下所示）一起使用。
 
 [!code-csharp[ReadWriteInitialization](../../../samples/snippets/csharp/new-in-6/newcode.cs#ReadWriteInitialization)]
 

@@ -11,12 +11,12 @@ metadata:
   interactive: csharp
   nextTutorialHref: list-collection.yml
   nextTutorialTitle: C# 中的集合
-  ms.openlocfilehash: f1262beab39b78966d2be10fc983dfe1d4be998b
-  ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+  ms.openlocfilehash: c8f93bd922b1003aafd50d5e95d92bcb492106c1
+  ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
   ms.translationtype: HT
   ms.contentlocale: zh-CN
-  ms.lasthandoff: 10/28/2018
-  ms.locfileid: "50200142"
+  ms.lasthandoff: 12/10/2018
+  ms.locfileid: "53149206"
 items:
 - durationInMinutes: 2
   content: >
@@ -96,4 +96,8 @@ items:
     > [!NOTE]
 
     > 此联机编码体验处于预览模式。 如果遇到问题，请[在 dotnet/try 存储库上](https://github.com/dotnet/try/issues)进行报告。
-- content: "已完成“字符串内插”快速入门教程。 \n\n你可继续在自己的本地开发环境中学习这些教程。 请先了解[本地开发](local-environment.md)基础知识，再选择一个快速入门教程。 可以再次尝试本快速入门，也可以直接学习下一个快速入门教程，亦可以重新开始学习 [C# 中的数字](numbers-in-csharp-local.md)快速入门教程。\n\n有关详细信息，请参阅[字符串内插](../../language-reference/tokens/interpolated.md)主题和 [C# 中的字符串内插](../../tutorials/string-interpolation.md)教程。"
+- content: >-
+    你已完成“字符串内插”交互式教程。 可单击下方的“C# 中的集合”链接开始下一个交互式教程，或者可访问 [.NET 站点](https://www.microsoft.com/net/learn/dotnet/hello-world-tutorial)下载 .NET Core SDK，在计算机上创建项目，并继续编码。 “继续学习”步骤将带你回到教程中。
+
+
+    有关详细信息，请参阅[字符串内插](../../language-reference/tokens/interpolated.md)。

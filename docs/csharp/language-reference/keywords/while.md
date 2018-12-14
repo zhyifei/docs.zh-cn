@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - while keyword [C#]
 ms.assetid: 72a0765c-6852-4aca-b327-4a11cb7f5c59
-ms.openlocfilehash: e3e9493b5371fbd6f53a779ba73743efc6d6e05b
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: f465bc98c0348c3b3522c062cf3be5ed90ee414a
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43514055"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53143501"
 ---
 # <a name="while-c-reference"></a>while（C# 参考）
 
@@ -32,13 +32,12 @@ ms.locfileid: "43514055"
 
 ## <a name="c-language-specification"></a>C# 语言规范
 
- [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
+有关详细信息，请参阅 [C# 语言规范](../language-specification/index.md)中的 [while 语句](~/_csharplang/spec/statements.md#the-while-statement)部分。
 
 ## <a name="see-also"></a>请参阅
 
 - [C# 参考](../index.md)  
 - [C# 编程指南](../../programming-guide/index.md)  
 - [C# 关键字](index.md)  
-- [While 语句 (C++)](/cpp/cpp/while-statement-cpp)  
 - [迭代语句](iteration-statements.md)  
 - [do 语句](do.md)  

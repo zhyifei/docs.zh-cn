@@ -1,6 +1,6 @@
 ---
 title: '?: 运算符（C# 参考）'
-ms.date: 07/20/2015
+ms.date: 11/20/2018
 f1_keywords:
 - ?:_CSharpKeyword
 - ?_CSharpKeyword
@@ -9,76 +9,83 @@ helpviewer_keywords:
 - '?: operator [C#]'
 - conditional operator (?:) [C#]
 ms.assetid: e83a17f1-7500-48ba-8bee-2fbc4c847af4
-ms.openlocfilehash: 3e45ff6eaaefa5829c3ed9415abe1a12b7a1d069
-ms.sourcegitcommit: 4bca8f7e172fd019ef437a4803bf5895c6bc4781
+ms.openlocfilehash: cc9bde1d60a3272e2f24cfc05761171a31029c75
+ms.sourcegitcommit: 6ae7cdd0437a32884556dd4826ca90e957b7a4e3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/03/2018
+ms.lasthandoff: 12/06/2018
 ms.locfileid: "50980617"
 ---
 # <a name="-operator-c-reference"></a>?: 运算符（C# 参考）
 
-条件运算符 (`?:`) 通常被称为三元条件运算符，根据 Boolean 表达式的值返回两个值之一。 下面是条件运算符的语法。  
+条件运算符 (`?:`) 通常被称为三元条件运算符，用于计算 Boolean 表达式，并根据 Boolean 表达式的计算结果为 `true` 还是 `false` 来返回计算两个表达式其中之一的结果。 从 C# 7.2 开始，[ref 条件表达式](#conditional-ref-expression)将返回对两个表示式之一的结果的引用。
+
+条件运算符的语法如下所示：
 
 ```csharp
-condition ? first_expression : second_expression;  
+condition ? consequence : alternative
 ```
 
-自 C# 7.2 起，`first_expression` 和 `second_expression` 可以是 [`ref` 表达式](https://github.com/dotnet/csharplang/blob/master/proposals/csharp-7.2/conditional-ref.md)：
+`condition` 表达式的计算结果必须为 `true` 或 `false`。 若 `condition` 的计算结果为 `true`，将计算 `consequence`，其结果成为运算结果。 若 `condition` 的计算结果为 `false`，将计算 `alternative`，其结果成为运算结果。 只会计算 `consequence` 或 `alternative`。
+
+`consequence` 和 `alternative` 的类型必须相同，或者必须存在从一种类型到另一种类型的隐式转换。
+
+条件运算符为右联运算符，即形式的表达式
 
 ```csharp
-ref condition ? ref first_expression : ref second_expression;  
+a ? b : c ? d : e
 ```
 
-可将结果赋给 `ref` 或 `ref readonly` 变量，也可以赋给不带任一修饰符的变量。
-
-## <a name="remarks"></a>备注
-
-`condition` 的计算结果必须为 `true` 或 `false`。 如果 `condition` 为 `true`，则将计算 `first_expression` 并使其成为结果。 如果 `condition` 为 `false`，则将计算 `second_expression` 并使其成为结果。 只计算两个表达式之一。 这对于结果为 `ref` 的表达式特别重要，因为以下内容有效：
+计算结果为
 
 ```csharp
-ref (storage != null) ? ref storage[3] : ref defaultValue;
+a ? b : (c ? d : e)
 ```
 
-`storage` 为空时，不会计算对 `storage` 的引用。
+下面的示例演示条件运算符的用法：
 
-若结果为值，`first_expression` 和 `second_expression` 的类型必须相同，或者必须存在从一种类型到另一种类型的隐式转换。 若结果为 `ref`，`first_expression` 和 `second_expression` 的类型必须相同。
+[!code-csharp[non ref condtional](~/samples/snippets/csharp/language-reference/operators/ConditionalExamples.cs#ConditionalValue)]
 
-你可通过使用条件运算符表达可能更确切地要求 `if-else` 构造的计算。 例如，以下代码首先使用 `if` 语句，然后使用条件运算符将整数分类为正整数或负整数。
+## <a name="conditional-ref-expression"></a>ref 条件表达式
+
+从 C# 7.2 开始，可以使用 ref 条件表达式返回对两个表示式之一的结果的引用。 可以将该引用分配到 [ref local](../keywords/ref.md#ref-locals) 或 [ref readonly local](../keywords/ref.md#ref-readonly-locals) 变量，或将它用作[引用返回值](../keywords/ref.md#reference-return-values)或 [`ref` 方法参数](../keywords/ref.md#passing-an-argument-by-reference)。
+
+ref 条件表达式的语法如下所示：
 
 ```csharp
-int input = Convert.ToInt32(Console.ReadLine());  
-string classify;  
-  
-// if-else construction.  
-if (input > 0)  
-    classify = "positive";  
-else  
-    classify = "negative";  
-  
-// ?: conditional operator.  
-classify = (input > 0) ? "positive" : "negative";  
+condition ? ref consequence : ref alternative
 ```
 
-条件运算符为右联运算符。 表达式 `a ? b : c ? d : e` 作为 `a ? b : (c ? d : e)` 而非 `(a ? b : c) ? d : e` 进行计算。  
-  
+ref 条件表达式与原始的条件运算符相似，仅计算两个表达式其中之一：`consequence` 或 `alternative`。
+
+在 ref 条件表达式中，`consequence` 和 `alternative` 的类型必须相同。
+
+下面的示例演示 ref 条件表达式的用法：
+
+[!code-csharp[conditional ref](~/samples/snippets/csharp/language-reference/operators/ConditionalExamples.cs#ConditionalRef)]
+
+有关详细信息，请参阅[功能建议说明](https://github.com/dotnet/csharplang/blob/master/proposals/csharp-7.2/conditional-ref.md)。
+
+## <a name="conditional-operator-and-an-ifelse-statement"></a>条件运算符和 `if..else` 语句
+
+需要根据条件计算值时，在 [if-else](../keywords/if-else.md) 语句中使用条件运算符可以使代码更简洁。 下面的示例演示了将整数归类为负数或非负数的两种方法：
+
+[!code-csharp[conditional and if-else](~/samples/snippets/csharp/language-reference/operators/ConditionalExamples.cs#CompareWithIf)]
+
+## <a name="operator-overloadability"></a>运算符可重载性
+
 无法重载条件运算符。
-  
-## <a name="example"></a>示例
 
-以下示例显示结果为值的条件运算符：
+## <a name="c-language-specification"></a>C# 语言规范
 
-[!code-csharp[csRefOperators?:](~/samples/snippets/csharp/language-reference/operators/ConditionalExamples.cs#ConditionalValue)]
-
-以下备选示例显示结果为 ref 的条件运算符：
-
-[!code-csharp[csRefOperatorsRef?:](~/samples/snippets/csharp/language-reference/operators/ConditionalExamples.cs#ConditionalRef)]
+有关详细信息，请参阅 [C# 语言规范](../language-specification/index.md)的[条件运算符](~/_csharplang/spec/expressions.md#conditional-operator)部分。
 
 ## <a name="see-also"></a>请参阅
 
-- [C# 参考](../../../csharp/language-reference/index.md)  
-- [C# 编程指南](../../../csharp/programming-guide/index.md)  
-- [C# 运算符](../../../csharp/language-reference/operators/index.md)  
-- [if-else](../../../csharp/language-reference/keywords/if-else.md)  
-- [?. 和 ?[] 运算符](../../../csharp/language-reference/operators/null-conditional-operators.md)  
-- [??运算符](../../../csharp/language-reference/operators/null-coalescing-operator.md)
+- [C# 参考](../index.md)
+- [C# 编程指南](../../programming-guide/index.md)
+- [C# 运算符](index.md)
+- [if-else 语句](../keywords/if-else.md)
+- [?. 和 ?[] 运算符](null-conditional-operators.md)
+- [??运算符](null-coalescing-operator.md)
+- [ref 关键字](../keywords/ref.md)

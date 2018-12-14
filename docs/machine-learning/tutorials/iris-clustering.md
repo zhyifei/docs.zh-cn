@@ -1,19 +1,19 @@
 ---
-title: 使用 ML.NET 生成鸢尾花数据群集（聚类分析）
+title: 使用聚类分析学习器对鸢尾花分类 - ML.NET
 description: 了解如何在聚类分析方案中使用 ML.NET
 author: pkulikov
 ms.author: johalex
 ms.date: 07/02/2018
 ms.topic: tutorial
-ms.custom: mvc
-ms.openlocfilehash: bb41fd317507c14b46aea94e1ce576e390932a65
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.custom: mvc, seodec18
+ms.openlocfilehash: 5bd73c774f60466daaf52215c34e7e17b5f5cc9c
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49453185"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53145618"
 ---
-# <a name="tutorial-use-mlnet-to-cluster-iris-flowers-clustering"></a>教程：使用 ML.NET 生成鸢尾花数据群集（聚类分析）
+# <a name="tutorial-cluster-iris-flowers-using-a-clustering-learner-with-mlnet"></a>教程：借助 ML.NET 使用聚类分析学习器对鸢尾花分类
 
 > [!NOTE]
 > 本主题引用 ML.NET（目前处于预览状态），且材料可能会更改。 有关详细信息，请参阅 [ML.NET 简介](https://www.microsoft.com/net/learn/apps/machine-learning-and-ai/ml-dotnet)。

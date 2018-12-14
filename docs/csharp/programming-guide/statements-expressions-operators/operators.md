@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# language, operators
 - operators [C#], about operators
 ms.assetid: 214e7b83-1a41-4f7c-9867-64e9c0bab39f
-ms.openlocfilehash: 025510782551c058c3b80eff3045138476e031b9
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: bf453d5770967f26999b8537339f1b690646b97d
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43514180"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53150962"
 ---
 # <a name="operators-c-programming-guide"></a>运算符（C# 编程指南）
 在 C# 中，运算符  是应用于表达式或语句中的一个或多个操作数  的程序元素。 接受一个操作数的运算符称为`++`一元 `new`运算符，例如递增运算符 ( *) 或* 。 接受两个操作数的运算符称为`+`二元`-`运算符，例如算术运算符（`*`、`/`、 *、* ）。 条件运算符`?:`接受三个操作数，是 C# 中唯一的三元运算符。  
@@ -37,7 +37,7 @@ ms.locfileid: "43514180"
   
  **主要运算符**  
   
-|表达式|描述|  
+|表达式|说明|  
 |----------------|-----------------|  
 |x[.](../../../csharp/language-reference/operators/member-access-operator.md)y<br /><br /> x?.y|成员访问<br /><br /> 条件成员访问|  
 |f[(x)](../../../csharp/language-reference/operators/invocation-operator.md)|方法和委托调用|  
@@ -56,7 +56,7 @@ ms.locfileid: "43514180"
   
  **一元运算符**  
   
-|表达式|描述|  
+|表达式|说明|  
 |----------------|-----------------|  
 |[+](../../../csharp/language-reference/operators/addition-operator.md)x|标识|  
 |[-](../../../csharp/language-reference/operators/subtraction-operator.md)x|求反|  
@@ -68,7 +68,7 @@ ms.locfileid: "43514180"
   
  **乘法运算符**  
   
-|表达式|描述|  
+|表达式|说明|  
 |----------------|-----------------|  
 |[*](../../../csharp/language-reference/operators/multiplication-operator.md)|乘法|  
 |[/](../../../csharp/language-reference/operators/division-operator.md)|除号|  
@@ -76,21 +76,21 @@ ms.locfileid: "43514180"
   
  **相加运算符**  
   
-|表达式|描述|  
+|表达式|说明|  
 |----------------|-----------------|  
 |x [+](../../../csharp/language-reference/operators/addition-operator.md) y|相加、字符串串联、委托组合|  
 |x [-](../../../csharp/language-reference/operators/subtraction-operator.md) y|相减、委托移除|  
   
  **移位运算符**  
   
-|表达式|描述|  
+|表达式|说明|  
 |----------------|-----------------|  
 |x [<\<](../../../csharp/language-reference/operators/left-shift-operator.md) y|左移|  
 |x [>>](../../../csharp/language-reference/operators/right-shift-operator.md) y|右移|  
   
  **关系和类型运算符**  
   
-|表达式|描述|  
+|表达式|说明|  
 |----------------|-----------------|  
 |x [\<](../../../csharp/language-reference/operators/less-than-operator.md) y|小于|  
 |x [>](../../../csharp/language-reference/operators/greater-than-operator.md) y|大于|  
@@ -101,18 +101,18 @@ ms.locfileid: "43514180"
   
  **相等运算符**  
   
-|表达式|描述|  
+|表达式|说明|  
 |----------------|-----------------|  
 |x [==](../../../csharp/language-reference/operators/equality-comparison-operator.md) y|等于|  
 |x [!=](../../../csharp/language-reference/operators/not-equal-operator.md) y|不等于|  
   
  **逻辑、条件和 Null 运算符**  
   
-|类别|表达式|描述|  
+|类别|表达式|说明|  
 |--------------|----------------|-----------------|  
 |逻辑“与”|x [&](../../../csharp/language-reference/operators/and-operator.md) y|整型按位“与”，布尔型逻辑“与”|  
-|逻辑“异或”|x [^](../../../csharp/language-reference/operators/xor-operator.md) y|整型按位 XOR，布尔型逻辑 XOR|  
-|逻辑“或”|x [&#124;](../../../csharp/language-reference/operators/or-operator.md) y|整型按位“或”，布尔型逻辑“或”|  
+|逻辑“异或”|x [^](../../../csharp/language-reference/operators/xor-operator.md) y|整数型位 XOR，布尔型逻辑 XOR|  
+|逻辑“或”|x [&#124;](../../../csharp/language-reference/operators/or-operator.md) y|整数型位 OR，布尔型逻辑 OR|  
 |条件“与”|x [&&](../../../csharp/language-reference/operators/conditional-and-operator.md) y|仅当 x 为 True 时计算 y|  
 |条件“或”|x [&#124;&#124;](../../../csharp/language-reference/operators/conditional-or-operator.md) y|仅当 x 为 False 时计算 y|  
 |null 合并|x [??](../../../csharp/language-reference/operators/null-coalescing-operator.md) y|如果 x 为 Null，则计算结果为 y，否则计算结果为 x|  
@@ -120,7 +120,7 @@ ms.locfileid: "43514180"
   
  **赋值和匿名运算符**  
   
-|表达式|描述|  
+|表达式|说明|  
 |----------------|-----------------|  
 |[=](../../../csharp/language-reference/operators/assignment-operator.md)|赋值|  
 |x op= y|复合赋值。 支持以下运算符：[+=](../../../csharp/language-reference/operators/addition-assignment-operator.md)、[-=](../../../csharp/language-reference/operators/subtraction-assignment-operator.md)、[*=](../../../csharp/language-reference/operators/multiplication-assignment-operator.md)、[/=](../../../csharp/language-reference/operators/division-assignment-operator.md)、[%=](../../../csharp/language-reference/operators/modulus-assignment-operator.md)、[&=](../../../csharp/language-reference/operators/and-assignment-operator.md)、[&#124;=](../../../csharp/language-reference/operators/or-assignment-operator.md)、[^=](../../../csharp/language-reference/operators/xor-assignment-operator.md)、[<\<=](../../../csharp/language-reference/operators/left-shift-assignment-operator.md)、[>>=](../../../csharp/language-reference/operators/right-shift-assignment-operator.md)|  

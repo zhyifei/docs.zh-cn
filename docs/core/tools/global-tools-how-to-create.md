@@ -4,12 +4,12 @@ description: 介绍如何创建全局工具。 全局工具是一个通过 .NET 
 author: Thraka
 ms.author: adegeo
 ms.date: 08/22/2018
-ms.openlocfilehash: 3860aad5e2c13714298d50bb9ac10daec3aadf01
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: e544ab51920015e0f1ea48ad83ba9b637d98aa0c
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47231195"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53144571"
 ---
 # <a name="create-a-net-core-global-tool-using-the-net-core-cli"></a>使用 .NET Core CLI 创建 .NET Core 全局工具
 
@@ -162,7 +162,7 @@ dotnet run -- hello from the bot
 dotnet pack
 ```
 
-`botsay.1.0.0.nupkg` 文件在由 `botsay.csproj` 文件的 `<PackageOutputPath>` XML 值标识的文件夹中创建，在本示例中为 `./nupkg` 文件夹。 这样，就可以轻松地安装和测试了。 如果想要公开发布一个工具，请将其上传到 [https://www.nuget.org](https://www.nuget.org)。
+`botsay.1.0.0.nupkg` 文件在由 `botsay.csproj` 文件的 `<PackageOutputPath>` XML 值标识的文件夹中创建，在本示例中为 `./nupkg` 文件夹。 这样，就可以轻松地安装和测试了。 如果想要公开发布一个工具，请将其上传到 [https://www.nuget.org](https://www.nuget.org)。该工具在 NuGet 上可用后，开发人员就可以使用 [dotnet tool install](dotnet-tool-install.md) 命令的 `--global` 选项在用户范围内安装该工具。
 
 现在你已有一个包，请通过该包安装工具： 
 

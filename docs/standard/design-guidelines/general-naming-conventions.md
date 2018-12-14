@@ -68,12 +68,12 @@ ms.locfileid: "53147276"
 |**uint**|**UInt32**|**unsigned int**|**UInt32**|  
 |**long**|**Long**|**__int64**|**Int64**|  
 |**ulong**|**UInt64**|unsigned __int64|**UInt64**|  
-|**float**|**单精度**|**float**|**单精度**|  
-|**double**|**双精度**|**double**|**双精度**|  
-|**bool**|**布尔值**|**bool**|**布尔值**|  
+|**float**|**Single**|**float**|**Single**|  
+|**double**|**Double**|**double**|**Double**|  
+|**bool**|**Boolean**|**bool**|**Boolean**|  
 |**char**|**Char**|**wchar_t**|**Char**|  
-|**string**|**字符串**|**字符串**|**字符串**|  
-|**object**|**对象**|**对象**|**对象**|  
+|**string**|**String**|**String**|**String**|  
+|**object**|**Object**|**Object**|**Object**|  
   
  **✓ 务必**在标识符不具有语义含义且参数类型不重要时（这是极少见的情况），使用常用名称，例如 `value` 或 `item`，而不是重复使用类型名称。  
   

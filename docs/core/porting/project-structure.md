@@ -1,19 +1,20 @@
 ---
-title: 组织项目以支持 .NET Framework 和 .NET Core
+title: 组织适用于 .NET Framework 和 .NET Core 的项目
 description: 帮助希望针对 .NET Framework 和 .NET Core 并行编译解决方案的项目所有者。
 author: conniey
 ms.author: mairaw
 ms.date: 04/06/2017
-ms.openlocfilehash: f8ca0d08c9e3802c71d53c831592ee4388ab5512
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.custom: seodec18
+ms.openlocfilehash: cfb3670bda887792389c7cee3f65397e649304d5
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43512261"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53146922"
 ---
-# <a name="organizing-your-project-to-support-net-framework-and-net-core"></a>组织项目以支持 .NET Framework 和 .NET Core
+# <a name="organize-your-project-to-support-both-net-framework-and-net-core"></a>组织项目以支持 .NET Framework 和 .NET Core
 
-本文旨在帮助希望针对 .NET Framework 和 .NET Core 并行编译解决方案的项目所有者。 它提供了多个可组织项目的选项以帮助开发人员实现此目标。 下列列表提供了一些在决定如何使用 .NET Core 设置项目时需考虑的典型方案。 此列表可能无法涵盖所有要求；这些方案的优先级具体取决于项目需求。
+了解如何创建一个并行编译 .NET Framework 和 .NET Core 的解决方案。 查看几个选项来组织项目以帮助你实现此目标。 以下是决定如何使用 .NET Core 设置项目布局时要考虑的一些典型方案。 此列表可能无法涵盖所有要求；这些方案的优先级具体取决于项目需求。
 
 * [**将现有项目和 .NET Core 项目合并为单个项目**][option-csproj]
 

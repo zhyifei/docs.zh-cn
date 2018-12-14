@@ -1,19 +1,19 @@
 ---
-title: 使用 ML.NET 预测纽约出租车费（回归）
-description: 了解如何在回归方案中使用 ML.NET。
+title: 在 ML.NET 中使用回归学习器预测纽约出租车费用
+description: 在 ML.NET 中使用回归学习器预测费用。
 author: aditidugar
 ms.author: johalex
-ms.date: 07/02/2018
+ms.date: 11/06/2018
 ms.topic: tutorial
-ms.custom: mvc
-ms.openlocfilehash: bfae97d65ec192e9289841c82d84807b4937b09a
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.custom: mvc, seodec18
+ms.openlocfilehash: a142ab98174182adf6f50cf6eedff27c82993f5e
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50183810"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53130502"
 ---
-# <a name="tutorial-use-mlnet-to-predict-new-york-taxi-fares-regression"></a>教程：使用 ML.NET 预测纽约出租车费（回归）
+# <a name="tutorial-predict-new-york-taxi-fares-using-a-regression-learner-with-mlnet"></a>教程：在 ML.NET 中使用回归学习器预测纽约出租车费用
 
 > [!NOTE]
 > 本主题引用 ML.NET（目前处于预览状态），且材料可能会更改。 有关详细信息，请参阅 [ML.NET 简介](https://www.microsoft.com/net/learn/apps/machine-learning-and-ai/ml-dotnet)。
@@ -90,196 +90,236 @@ ms.locfileid: "50183810"
 
 [!code-csharp[DefineTaxiTrip](../../../samples/machine-learning/tutorials/TaxiFarePrediction/TaxiTrip.cs#2 "Define the taxi trip and fare predictions classes")]
 
-`TaxiTrip` 是输入数据类且具有针对每个数据集列的定义。 使用[列](xref:Microsoft.ML.Runtime.Api.ColumnAttribute)属性在数据集中指定源列的索引。
+`TaxiTrip` 是输入数据类且具有针对每个数据集列的定义。 使用 <xref:Microsoft.ML.Runtime.Api.ColumnAttribute> 属性在数据集中指定源列的索引。
 
-`TaxiTripFarePrediction` 类表示预测的结果。 它应用了单个浮动 `FareAmount` 字段，附带 `Score` [ColumnName](xref:Microsoft.ML.Runtime.Api.ColumnNameAttribute) 属性。 对于回归任务，“分数”列包含预测的标签值。
+`TaxiTripFarePrediction` 类表示预测的结果。 它应用了单个浮动 `FareAmount` 字段，附带 `Score` <xref:Microsoft.ML.Runtime.Api.ColumnNameAttribute> 属性。 对于回归任务，“分数”列包含预测的标签值。
 
 > [!NOTE]
 > 使用 `float` 类型来表示输入和预测数据类中的浮点值。
 
 ## <a name="define-data-and-model-paths"></a>定义数据和模型路径
 
-返回到 Program.cs 文件并添加三个字段，以保存具有数据集的文件的路径以及用于保存模型的文件的路径：
+将以下附加的 `using` 语句添加到“Program.cs”文件顶部：[!code-csharp[AddUsings](../../../samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#1 "Add necessary usings")]
 
-* `_datapath` 包含具有用于定型模型的数据集的文件的路径。
-* `_testdatapath` 包含具有用于评估模型的数据集的文件的路径。
-* `_modelpath` 包含用于存储定型模型的文件的路径。
+需要创建三个字段，以保存具有数据集的文件的路径以及用于保存模型的文件的路径，以及一个 `TextLoader` 全局变量：
 
-将以下代码添加到 `Main` 方法上方，以指定这些路径：
+* `_trainDataPath` 包含具有用于定型模型的数据集的文件的路径。
+* `_testDataPath` 包含具有用于评估模型的数据集的文件的路径。
+* `_modelPath` 包含用于存储定型模型的文件的路径。
+* `_textLoader` 是用于加载和转换数据集的 <xref:Microsoft.ML.Runtime.Data.TextLoader>。
+
+将以下代码添加到 `Main` 方法正上方，以指定这些路径和 `_textLoader` 变量：
 
 [!code-csharp[InitializePaths](../../../samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#2 "Define variables to store the data file paths")]
 
-要编译前面的代码，请将以下 `using` 指令添加到 Program.cs 文件顶部：
+使用 ML .NET 构建模型时，首先要创建一个 ML 上下文。 这在概念上相当于在实体框架中使用 `DbContext`。 该环境为机器学习作业提供一个上下文，可以用于异常情况跟踪和日志记录。
 
-[!code-csharp[AddUsingsForPaths](../../../samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#17 "Using statements for path definitions")]
+### <a name="initialize-variables-in-main"></a>在 Main 中初始化变量
 
-## <a name="create-a-learning-pipeline"></a>创建学习管道
+创建一个名为 `mlContext` 的变量并将其初始化为 `MLContext` 的新实例。  用下面 `Main` 方法中的代码替换 `Console.WriteLine("Hello World!")` 行：
 
-将以下附加 `using` 指令添加到 Program.cs 文件顶部：
+[!code-csharp[CreateMLContext](../../../samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#3 "Create the ML Context")]
 
-[!code-csharp[AddUsings](../../../samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#1 "Add necessary usings")]
+下一步，为设置数据加载，请初始化 `_textLoader` 全局变量以便重用它。  请注意，我们将使用 `TextReader`。 当使用 `TextReader` 创建 `TextLoader` 时，请传入需要的上下文和启用自定义的 <xref:Microsoft.ML.Runtime.Data.TextLoader.Arguments> 类。 通过将包含所有列名及其类型的 <xref:Microsoft.ML.Runtime.Data.TextLoader.Column> 对象数组传递给 `TextReader` 来指定数据模式。 我们以前在创建 `TaxiTrip` 类时定义了数据模式。
 
-将 `Main` 方法中的 `Console.WriteLine("Hello World!")` 替换为以下代码：
+`TextReader` 类返回完全初始化的 <xref:Microsoft.ML.Runtime.Data.TextLoader>  
 
-```csharp
-PredictionModel<TaxiTrip, TaxiTripFarePrediction> model = Train();
-```
+若要初始化 `_textLoader` 全局变量以将其重复用于所需的数据集，请在 `mlContext` 初始化后添加以下代码：
+
+[!code-csharp[initTextLoader](../../../samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#4 "Initialize the TextLoader")]
+
+在 `Main` 方法中添加以下代码作为调用 `Train` 方法的下一行代码：
+
+[!code-csharp[Train](../../../samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#5 "Train your model")]
+
+`Train` 方法执行以下任务：
+
+* 加载数据。
+* 提取并转换数据。
+* 定型模型。
+* 将模型保存为 .zip 文件。
+* 返回模型。
 
 `Train` 方法定型模型。 使用以下代码在 `Main` 下创建该方法：
 
 ```csharp
-public static PredictionModel<TaxiTrip, TaxiTripFarePrediction> Train()
+public static ITransformer Train(MLContext mlContext, string dataPath)
 {
 
 }
 ```
 
-学习管道加载所有数据和所需的算法来定型模型。 将以下代码添加到 `Train` 方法：
-
-```csharp
-var pipeline = new LearningPipeline();
-```
+我们会将两个参数传递到 `Train` 方法；`MLContext` 用于上下文 (`mlContext`)，字符串用于数据集路径 (`dataPath`)。 我们将重用此方法来加载数据集。
 
 ## <a name="load-and-transform-data"></a>加载和转换数据
 
-第一个步骤是从定型数据集加载数据。 在本例中，定型数据集存储在具有 `_datapath` 字段所定义路径的文本文件中。 该文件带有列名的标头，所以加载数据时应忽略第一行。 文件中的列用逗号 (",") 分割。 将以下代码添加到 `Train` 方法：
+我们将使用带有 `dataPath` 参数的 `_textLoader` 全局变量加载数据。 它将返回 <xref:Microsoft.ML.Runtime.Data.IDataView>。 作为转换的输入和输出，`DataView` 是基本的数据管道类型，与 `LINQ` 中的 `IEnumerable` 类似。
 
-```csharp
-pipeline.Add(new TextLoader(_datapath).CreateFrom<TaxiTrip>(useHeader: true, separator: ','));
-```
+在 ML.NET 中，数据类似于 SQL 视图。 它是异源数据，会延迟计算并进行架构化。 该对象是管道的第一部分，并加载数据。 在本教程中，它会加载一个包含出租车行程信息的数据集，这些信息有助于预测费用。 这用于创建模型并对其进行定型。
+
+ 将以下代码添加为 `Train` 方法的首行：
+
+[!code-csharp[LoadTrainData](../../../samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#6 "loading training dataset")]
 
 在后续步骤中，我们按 `TaxiTrip` 类中定义的名称引用列。
 
-定型和评估模型时，默认情况下，将“标签”列中的值视为要预测的正确值。 希望预测出租车费时，将 `FareAmount` 列复制到“标签”列。 为此，请使用 <xref:Microsoft.ML.Legacy.Transforms.ColumnCopier> 并添加以下代码：
+定型和评估模型时，默认情况下，将“标签”列中的值视为要预测的正确值。 希望预测出租车费时，将 `FareAmount` 列复制到“标签”列。 若要执行此操作，请使用 `CopyColumnsEstimator` 转换类，并添加以下代码：
 
-```csharp
-pipeline.Add(new ColumnCopier(("FareAmount", "Label")));
-```
+[!code-csharp[CopyColumnsEstimator](../../../samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#7 "Use the CopyColumnsEstimator")]
 
-定型模型的算法需要数值特征，所以必须将分类数据（`VendorId`、`RateCode` 和 `PaymentType`）值转换为数字。 为此，请使用 <xref:Microsoft.ML.Legacy.Transforms.CategoricalOneHotVectorizer>，它将不同的数字键值分配到每行的不同值，并添加以下代码：
+定型模型的算法需要数值特征，所以必须将分类数据（`VendorId`、`RateCode` 和 `PaymentType`）值转换为数字。 为此，请使用 `OneHotEncodingEstimator` 转换类，它将不同的数字键值分配到每列的不同值，并添加以下代码：
 
-```csharp
-pipeline.Add(new CategoricalOneHotVectorizer("VendorId",
-                                             "RateCode",
-                                             "PaymentType"));
-```
+[!code-csharp[OneHotEncodingEstimator](../../../samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#8 "Use the OneHotEncodingEstimator")]
 
-数据准备最后一步使用 <xref:Microsoft.ML.Legacy.Transforms.ColumnConcatenator> 转换类将所有功能列合并到“功能”列。 默认情况下，学习算法仅处理“特征”列的特征。 添加以下代码：
+数据准备最后一步使用 `ColumnConcatenatingEstimator` 转换类将所有功能列合并到“功能”列。 默认情况下，学习算法仅处理“特征”列的特征。 添加以下代码：
 
-```csharp
-pipeline.Add(new ColumnConcatenator("Features",
-                                    "VendorId",
-                                    "RateCode",
-                                    "PassengerCount",
-                                    "TripDistance",
-                                    "PaymentType"));
-```
-
-请注意，不包括 `TripTime` 列（对应数据集文件中的 `trip_time_in_secs` 列）。 你已确定它不是一项有用的预测特征。
-
-> [!NOTE]
-> 必须按照上面指定的顺序将这些步骤添加到管道才能成功执行。
+[!code-csharp[ColumnConcatenatingEstimator](../../../samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#9 "Use the ColumnConcatenatingEstimator")]
 
 ## <a name="choose-a-learning-algorithm"></a>选择学习算法
 
-在将数据添加到管道，并将其转换为正确的输入格式之后，可以选择学习算法（学习器）。 学习器定型模型。 为此问题选择了“回归任务”，所以使用 <xref:Microsoft.ML.Legacy.Trainers.FastTreeRegressor> 学习器（ML.NET 提供的一种回归学习器）。
+在将数据添加到管道，并将其转换为正确的输入格式之后，可以选择学习算法（学习器）。 学习器定型模型。 为此问题选择了“回归任务”，所以使用 `FastTreeRegressionTrainer` 学习器（ML.NET 提供的一种回归学习器）。
 
-<xref:Microsoft.ML.Legacy.Trainers.FastTreeRegressor> 学习器利用梯度提升。 梯度提升是针对回归问题的一项机器学习技术。 它将以步进方式生成每个回归树。 它使用预定义的损失函数测量每个步骤中的错误，并在下一步中对其进行校正。 其结果是一种预测模型，实际上是一组较弱的预测模型。 有关梯度提升的详细信息，请参阅[提升的决策树回归](/azure/machine-learning/studio-module-reference/boosted-decision-tree-regression)。
+`FastTreeRegressionTrainer` 学习器利用梯度提升。 梯度提升是针对回归问题的一项机器学习技术。 它将以步进方式生成每个回归树。 它使用预定义的损失函数测量每个步骤中的错误，并在下一步中对其进行校正。 其结果是一种预测模型，实际上是一组较弱的预测模型。 有关梯度提升的详细信息，请参阅[提升的决策树回归](/azure/machine-learning/studio-module-reference/boosted-decision-tree-regression)。
 
-将下面的代码添加到在上一步中添加的数据处理代码后面的 `Train` 方法中：
+将下面的代码添加到 `Train` 方法以将 `FastTreeRegressionTrainer` 添加到在上一步中添加的数据处理代码：
 
-```csharp
-pipeline.Add(new FastTreeRegressor());
-```
-
-你已将前面所有步骤作为单个语句添加到管道，但 C# 包含可以更轻松地创建和初始化管道的方便集合初始化语法。 将目前添加到 `Train` 方法的代码替换为以下代码：
-
-[!code-csharp[CreatePipeline](../../../samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#3 "Create and initialize the learning pipeline")]
+[!code-csharp[FastTreeRegressionTrainer](../../../samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#10 "Add the FastTreeRegressionTrainer")]
 
 ## <a name="train-the-model"></a>定型模型
 
-最后一步是定型模型。 在此之前，管道中未执行任何操作。 `pipeline.Train<TInput, TOutput>` 方法生成的模型接收 `TInput` 类型实例并输出 `TOutput` 类型实例。 将以下代码添加到 `Train` 方法：
+最后一步是定型模型。 根据已加载和转换的数据集定型模型 <xref:Microsoft.ML.Data.TransformerChain>。 一旦定义了估算器，我们将使用 <xref:Microsoft.ML.Runtime.Data.EstimatorChain%601.Fit%2A> 定型模型，同时提供已经加载的定型数据。 这将返回要用于预测的模型。 `pipeline.Fit()` 定型管道，并返回基于传入的 `DataView` 的 `Transformer`。 在发生这种情况之前不会执行此试验。
 
-[!code-csharp[TrainMOdel](../../../samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#4 "Train your model")]
+[!code-csharp[TrainModel](../../../samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#11 "Train the model")]
 
 就是这么简单！ 已成功定型机器学习模型，可以用来预测 NYC 的出租车费。 现在，我们看一下模型的精确性并了解如何用它来预测出租车费的值。
 
 ### <a name="save-the-model"></a>保存模型
 
-此时，你具有可以集成到任何现有或新 .NET 应用程序的模型。 要将模型保存到 .zip 文件中，请在 `Train` 方法的末尾添加以下代码：
+此时，你具有可以集成到任何现有或新 .NET 应用程序的 <xref:Microsoft.ML.Data.TransformerChain> 类型模型。 要将模型保存到 .zip 文件中，请在 `Train` 方法的末尾添加以下代码：
 
-[!code-csharp[SaveModel](../../../samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#5 "Save the model asynchronously and return the model")]
+[!code-csharp[SaveModel](../../../samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#12 "Save the model as a .zip file and return the model")]
 
-将 `await` 语句添加到 `model.WriteAsync` 调用中意味着 `Train` 方法必须更改为返回任务的异步方法。 修改 `Train` 的签名，如下面的代码所示：
+## <a name="save-the-model-as-a-zip-file"></a>将模型保存为 .zip 文件
 
-[!code-csharp[AsyncTraining](../../../samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#6 "Make the Train method async and return a task.")]
-
-更改 `Train` 方法的返回类型意味着你需要将 `await` 添加到调用 `Main` 方法中的 `Train` 的代码，如下面的代码所示：
-
-[!code-csharp[AwaitTraining](../../../samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#7 "Await the Train method")]
-
-在 `Main` 方法中使用 `await` 意味着 `Main` 方法必须具有 `async` 修饰符并返回 `Task`：
-
-[!code-csharp[AsyncMain](../../../samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#8 "Make the Main method async and return a task.")]
-
-还需要将以下 `using` 指令添加到文件顶部：
-
-[!code-csharp[UsingTasks](../../../samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#9 "Add System.Threading.Tasks. to your usings.")]
-
-由于 `async Main` 方法是 C# 7.1 中的新增功能，且项目的默认语言版本为 C# 7.0，因此需要将语言版本更改为 C# 7.1 或更高版本。 要完成此操作，右键单击“解决方案资源管理器”中的项目节点，然后选择“属性”。 选择**生成**选项卡并选择**高级**按钮。 在下拉列表中，选择“C# 7.1”（或更高版本）。 选择“确定”按钮。
-
-## <a name="evaluate-the-model"></a>评估模型
-
-评估是检查模型预测标签值情况的过程。 模型对定型模型中未使用的数据做出好的预测非常重要。 执行此操作的一种方法是将数据拆分到定型和测试数据集，如此教程中所示。 你已在定型数据上定型模型，现在可以看到它在测试数据上的表现。
-
-返回到 `Main` 方法，并在调用 `Train` 方法下添加以下代码：
-
-[!code-csharp[Evaluate](../../../samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#10 "Evaluate the model.")]
-
-`Evaluate` 方法评估模型。 若要创建该方法，请将以下代码添加到 `Train` 方法下：
+使用下面的代码紧随 `Train` 方法后创建 `SaveModelAsFile` 方法：
 
 ```csharp
-private static void Evaluate(PredictionModel<TaxiTrip, TaxiTripFarePrediction> model)
+private static void SaveModelAsFile(MLContext mlContext, ITransformer model)
 {
 
 }
 ```
 
-将以下代码添加到 `Evaluate` 方法，设置测试数据的加载：
+`SaveModelAsFile` 方法执行以下任务：
 
-[!code-csharp[LoadTestData](../../../samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#12 "Load the test data.")]
+* 将模型保存为 .zip 文件。
+
+我们需要创建一个方法来保存模型，以便它可以在其他应用程序中重用和使用。 `ITransformer` 有一个在 `_modelPath` 全局字段中采用的 <xref:Microsoft.ML.Data.TransformerChain%601.SaveTo(Microsoft.ML.Runtime.IHostEnvironment,System.IO.Stream)> 方法和一个 <xref:System.IO.Stream> 方法。 由于我们想将其保存为 zip 文件，我们将在调用 `SaveTo` 方法之前立即创建 `FileStream`。 将以下代码作为下一行添加到 `SaveModelAsFile` 方法中：
+
+[!code-csharp[SaveToMethod](../../../samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#13 "Add the SaveTo Method")]
+
+我们还可以使用以下代码通过使用 `_modelPath` 编写控制台消息来显示文件的写入位置：
+
+```csharp
+Console.WriteLine("The model is saved to {0}", _modelPath);
+```
+
+## <a name="evaluate-the-model"></a>评估模型
+
+评估是检查模型预测标签值情况的过程。 模型对定型模型中未使用的数据做出好的预测非常重要。 执行此操作的一种方法是将数据拆分到定型和测试数据集，如此教程中所示。 你已在定型数据上定型模型，现在可以看到它在测试数据上的表现。
+
+`Evaluate` 方法评估模型。 若要创建该方法，请将以下代码添加到 `Train` 方法下：
+
+```csharp
+private static void Evaluate(MLContext mlContext, ITransformer model)
+{
+
+}
+```
+`Evaluate` 方法执行以下任务：
+
+* 加载测试数据集。
+* 创建回归计算器。
+* 评估模型并创建指标。
+* 显示指标。
+
+使用下面的代码，在 `Train` 方法调用的正下方，从 `Main` 方法中添加对新方法的调用：
+
+[!code-csharp[CallEvaluate](../../../samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#14 "Call the Evaluate method")]
+
+我们将使用前面初始化的带有 `_testDataPath` 全局字段的 `_textLoader` 全局变量来加载测试数据集。 可以将此数据集作为质量检查来评估模型。 将以下代码添加到 `Evaluate` 方法中：
+
+[!code-csharp[LoadTestDataset](../../../samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#15 "Load the test dataset")]
+
+接下来，我们将使用机器学习 `model` 参数（转换器）来输入特性，并返回预测。 将以下代码作为下一行添加到 `Evaluate` 方法中：
+
+[!code-csharp[PredictWithTransformer](../../../samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#16 "Predict using the Transformer")]
+
+`RegressionContext.Evaluate` 方法使用指定数据集计算 `PredictionModel` 的质量指标。 它返回一个 <xref:Microsoft.ML.Runtime.Data.RegressionEvaluator.Result> 对象，其中包含由回归计算器计算出的总体指标。 若要显示这些指标来确定模型质量，需要先获取指标。 将以下代码作为下一行添加到 `Evaluate` 方法中：
+
+[!code-csharp[ComputeMetrics](../../../samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#17 "Compute Metrics")]
 
 添加以下代码以评估模型并生成评估模型：
 
-[!code-csharp[EvaluateAndMeasure](../../../samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#13 "Evaluate the model and its predictions.")]
-
-[RMS](../resources/glossary.md##root-of-mean-squared-error-rmse) 是回归模型的一种评估指标。 指标越低，模型就越好。 将以下代码添加到 `Evaluate` 方法以显示 RMS 值：
-
-[!code-csharp[DisplayRMS](../../../samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#14 "Display the RMS metric.")]
+```csharp
+Console.WriteLine();
+Console.WriteLine($"*************************************************");
+Console.WriteLine($"*       Model quality metrics evaluation         ");
+Console.WriteLine($"*------------------------------------------------");
+```
 
 [RSquared](../resources/glossary.md#coefficient-of-determination) 是回归模型的另一种评估指标。 RSquared 在 0 和 1 之间取值。 值越接近 1，模型就越好。 将以下代码添加到 `Evaluate` 方法以显示 RSquared 值：
 
-[!code-csharp[DisplayRSquared](../../../samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#15 "Display the RSquared metric.")]
+[!code-csharp[DisplayRSquared](../../../samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#18 "Display the RSquared metric.")]
+
+[RMS](../resources/glossary.md##root-of-mean-squared-error-rmse) 是回归模型的一种评估指标。 指标越低，模型就越好。 将以下代码添加到 `Evaluate` 方法以显示 RMS 值：
+
+[!code-csharp[DisplayRMS](../../../samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#19 "Display the RMS metric.")]
 
 ## <a name="use-the-model-for-predictions"></a>使用预测模型
 
-将类创建到房屋测试数据实例：
 
-1. 在“解决方案资源管理器”中，右键单击项目，然后选择“添加” > “新项”。
-1. 在“添加新项”对话框中，选择“类”并将“名称”字段更改为“TestTrips.cs”。 然后，选择“添加”按钮。
-1. 将类修改为静态，如下面的示例所示：
+## <a name="predict-the-test-data-outcome-with-the-model-and-a-single-comment"></a>使用模型和单个注释预测测试数据结果
 
-   [!code-csharp[StaticClass](../../../samples/machine-learning/tutorials/TaxiFarePrediction/TestTrips.cs#1 "Change class to be a static class.")]
+使用下面的代码紧随 `Evaluate` 方法后创建 `TestSinglePrediction` 方法：
 
-本教程使用此类中的一个测试行程。 稍后可以添加其他方案，以尝试使用此模型。 将下面的代码添加到 `TestTrips` 类中：
+```csharp
+private static void TestSinglePrediction(MLContext mlContext)
+{
 
-[!code-csharp[TestData](../../../samples/machine-learning/tutorials/TaxiFarePrediction/TestTrips.cs#2 "Create aq trip to predict its cost.")]
+}
+```
 
-行程实际费用为 29.5。 使用 0 作为占位符，模型将预测费用。
+`TestSinglePrediction` 方法执行以下任务：
 
-若要预测指定行程的费用，请返回到 Program.cs 文件并将以下代码添加到 `Main` 方法：
+* 创建测试数据的单个注释。
+* 根据测试数据预测费用。
+* 结合测试数据和预测进行报告。
+* 显示预测结果。
 
-[!code-csharp[Predict](../../../samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#16 "Try a prediction.")]
+使用下面的代码，在 `Evaluate` 方法调用的正下方，从 `Main` 方法中添加对新方法的调用：
+
+[!code-csharp[CallTestSinglePrediction](../../../samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#20 "Call the TestSinglePrediction method")]
+
+由于我们想从保存的 zip 文件加载模型，我们将在创建 `FileStream` 之后立即调用 `Load` 方法。 将以下代码作为下一行添加到 `TestSinglePrediction` 方法中：
+
+[!code-csharp[LoadTheModel](../../../samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#21 "Load the model")]
+
+虽然 `model` 是对多行数据进行操作的 `transformer`，但是一个非常常见的生产场景是，需要对单个示例进行预测。 <xref:Microsoft.ML.Runtime.Data.PredictionFunction%602> 是从 `MakePredictionFunction` 方法返回的包装器。 让我们添加以下代码来创建 `PredictionFunction`，作为 `Predict` 方法中的第一行：
+
+[!code-csharp[MakePredictionFunction](../../../samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#22 "Create the PredictionFunction")]
+  
+本教程使用此类中的一个测试行程。 稍后可以添加其他方案，以尝试使用此模型。 通过创建一个 `TaxiTrip` 实例，在 `Predict` 方法中添加一个行程来测试定型模型的成本预测：
+
+[!code-csharp[PredictionData](../../../samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#23 "Create test data for single prediction")]
+
+ 我们可以使用它根据出租车行程数据的单个实例来预测费用。 要获得预测，请对数据使用 <xref:Microsoft.ML.Runtime.Data.PredictionFunction%602.Predict(%600)>。 请注意，输入数据是一个字符串，且模型包含特征化。 管道在定型和预测期间同步。 不必专门为预测编写预处理/特征化代码，并且相同 API 负责批处理和一次性预测。
+
+[!code-csharp[Predict](../../../samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#24 "Create a prediction of taxi fare")]
+
+若要显示指定行程的预测费用，请将下面的代码添加到 `Main` 方法中：
+
+[!code-csharp[Predict](../../../samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#25 "Display the prediction.")]
 
 运行此程序，查看测试用例的预测出租车费。
 

@@ -3,13 +3,13 @@ title: C# 和 Visual Studio Code 入门 - C# 指南
 description: 了解如何使用 Visual Studio Code 创建和调试首个 C# .NET Core 应用。
 author: kendrahavens
 ms.author: mairaw
-ms.date: 09/27/2017
-ms.openlocfilehash: 74fdd9ce122482a027931405cc9a94011a9c13bb
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.date: 12/05/2018
+ms.openlocfilehash: fde2d8a324f3435438a4a92843a9d5b7b0def443
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50192572"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53129592"
 ---
 # <a name="get-started-with-c-and-visual-studio-code"></a>C# 和 Visual Studio Code 入门
 
@@ -81,12 +81,56 @@ ms.locfileid: "50192572"
 6. 要开始调试，请选择 <kbd>F5</kbd> 或绿色箭头。 在到达你在上一步中设置的断点时，调试器会停止执行程序。
     * 调试时，可以在左上角的窗格中查看局部变量，也可以使用调试控制台进行查看。
 
-    ![运行和调试](media/with-visual-studio-code/rundebug.png)
+7. 选择最上面的蓝色箭头以继续调试，或选择最上面的红色方块以停止调试。
 
-7. 选择最上面的绿色箭头以继续调试，或选择最上面的红色方块以停止调试。
+    ![运行和调试](media/with-visual-studio-code/rundebug.png)
 
 > [!TIP]
 > 若要详细了解如何使用 OmniSharp 在 Visual Studio Code 中进行 .NET Core 调试，以及相关的疑难解答提示，请参阅[有关设置 .NET Core 调试器的说明](https://github.com/OmniSharp/omnisharp-vscode/blob/master/debugger.md)。
+
+## <a name="add-a-class"></a>添加类
+
+1. 若要添加一个新类，请右键单击 VSCode Explorer 并选择“新文件”。 此操作会将新文件添加到在 VSCode 中打开的文件夹中。
+2. 将文件命名为 `Class1.cs`。 必须在末尾使用 `.cs` 扩展名保存它，以便将其识别为 csharp 文件。
+3. 添加下面的代码，以创建第一个类。 确保包括正确的命名空间，以便可以从 `Program.cs` 文件引用它。
+``` csharp
+using System;
+
+namespace HelloWorld
+{
+    public class Class1
+    {
+        public string ReturnMessage()
+        {
+            return "Happy coding!";
+        }
+    }
+}
+```
+
+4. 通过添加下面的代码，从 `Program.cs` 中的主要方法调用新类。
+
+```csharp
+using System;
+
+namespace HelloWorld
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Class1 c1 = new Class1();
+            Console.WriteLine($"Hello World! {c1.ReturnMessage()}");
+        }
+    }
+}
+```
+
+5. 保存更改并再次运行程序。 新消息应显示追加的字符串。
+```console
+> dotnet run
+Hello World! Happy coding!
+```
 
 ## <a name="faq"></a>FAQ
 

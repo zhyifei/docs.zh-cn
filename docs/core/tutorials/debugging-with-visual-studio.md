@@ -1,20 +1,18 @@
 ---
-title: 使用 Visual Studio 2017 调试 C# 或 Visual Basic Hello World .NET Core 应用程序
+title: 使用 Visual Studio 2017 调试 Hello World .NET Core 应用程序
 description: 了解如何使用 Visual Studio 2017 调试用 C# 或 Visual Basic 编写的 Hello World 应用程序。
-author: BillWagner
-ms.author: wiwagn
 ms.date: 12/15/2017
-ms.custom: vs-dotnet
-ms.openlocfilehash: 53e4549f4790bc0756cd0ad0b903b3dc25d2f66a
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.custom: vs-dotnet, seodec18
+ms.openlocfilehash: df153740e492b33c91b4cfc2f148a4113f1ab5d0
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50200119"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53147523"
 ---
-# <a name="debug-your-hello-world-application-with-visual-studio-2017"></a>使用 Visual Studio 2017 调试 Hello World 应用程序
+# <a name="debug-your-c-or-visual-basic-net-core-hello-world-application-using-visual-studio-2017"></a>使用 Visual Studio 2017 调试 C# 或Visual Basic .NET Core Hello World 应用程序
 
-至此，已按照[使用 Visual Studio 2017 生成 C# .NET Core Hello World 应用程序](.\with-visual-studio.md)或[使用 Visual Studio 2017 生成 Visual Basic .NET Core Hello World 用用程序](vb-with-visual-studio.md)中的步骤操作，创建和运行简单的控制台应用程序。 编写和编译应用程序后，可以开始进行测试。 Visual Studio 提供一整套调试工具，方便你在测试和排除应用程序故障时使用。
+至此，已按照[使用 Visual Studio 2017 生成 C# .NET Core Hello World 应用程序](with-visual-studio.md)或[使用 Visual Studio 2017 生成 Visual Basic .NET Core Hello World 用用程序](vb-with-visual-studio.md)中的步骤操作，创建和运行简单的控制台应用程序。 编写和编译应用程序后，可以开始进行测试。 Visual Studio 提供一整套调试工具，方便你在测试和排除应用程序故障时使用。
 
 ## <a name="debugging-in-debug-mode"></a>在调试模式下调试
 
@@ -228,4 +226,4 @@ ms.locfileid: "50200119"
 
 按 F5 或选择“生成”菜单中的“生成解决方案”后，Visual Studio 会编译控制台应用程序的发布版本。 可像测试应用程序的调试版本一样测试发布版本。
 
-调试完应用程序后，下一步是发布应用程序的可部署版本。 若要了解如何执行此操作，请参阅[使用 Visual Studio 2017 发布 Hello World 应用程序](./publishing-with-visual-studio.md)。
+调试完应用程序后，下一步是发布应用程序的可部署版本。 若要了解如何执行此操作，请参阅[使用 Visual Studio 2017 发布 Hello World 应用程序](publishing-with-visual-studio.md)。

@@ -4,12 +4,12 @@ description: 了解现有文件和 .NET Core csproj 文件之间的区别
 author: blackdwarf
 ms.author: mairaw
 ms.date: 09/22/2017
-ms.openlocfilehash: 3de168b8cebeb435a45861138aea26580663c135
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: f2ab476ee20ae90a84de7a6ccc76ce72738c1343
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "50203951"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53143696"
 ---
 # <a name="additions-to-the-csproj-format-for-net-core"></a>.NET Core 的 csproj 格式的新增内容
 
@@ -75,9 +75,6 @@ ms.locfileid: "50203951"
     <EnableDefaultItems>false</EnableDefaultItems>
 </PropertyGroup>
 ```
-
-### <a name="recommendation"></a>建议
-使用 csproj 时，建议从项目中删除默认 glob，且仅为应用/库需要用于各种方案（例如，运行时和 NuGet 封装）的项目添加 glob 文件路径。
 
 ## <a name="how-to-see-the-whole-project-as-msbuild-sees-it"></a>如何像 MSBuild 一样查看整个项目
 
@@ -195,8 +192,12 @@ ms.locfileid: "50203951"
 ### <a name="authors"></a>作者
 其中名称以分号分隔的包作者列表，其中名称与 nuget.org 上的配置文件名称匹配。这些信息显示在 nuget.org 上的 NuGet 库中，并用于交叉引用同一作者的包。
 
-### <a name="description"></a>描述
+### <a name="packagedescription"></a>PackageDescription
+
 用于 UI 显示的包的详细说明。
+
+### <a name="description"></a>说明
+程序集的详细说明。 如果未指定 `PackageDescription`，则此属性还可用作程序包的说明。
 
 ### <a name="copyright"></a>Copyright
 包的版权详细信息。

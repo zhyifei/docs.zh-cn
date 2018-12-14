@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - do keyword [C#]
 ms.assetid: 50725f79-9ba6-4898-aa78-6e331568a1bb
-ms.openlocfilehash: 89c13f5b547c13052e229ff6eb3a39ae5babce41
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 4dd5f4034bcd60b714071eb7eb9518e66ac0c848
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45994463"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53129020"
 ---
 # <a name="do-c-reference"></a>do（C# 参考）
 
@@ -32,13 +32,12 @@ ms.locfileid: "45994463"
 
 ## <a name="c-language-specification"></a>C# 语言规范
 
- [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
+有关详细信息，请参阅 [C# 语言规范](../language-specification/index.md)中的 [do 语句](~/_csharplang/spec/statements.md#the-do-statement)部分。
 
 ## <a name="see-also"></a>请参阅
 
-- [C# 参考](../index.md)  
-- [C# 编程指南](../../programming-guide/index.md)  
-- [C# 关键字](index.md)  
-- [do-while 语句 (C++)](/cpp/cpp/do-while-statement-cpp)  
-- [迭代语句](iteration-statements.md)  
-- [while 语句](while.md)  
+- [C# 参考](../index.md)
+- [C# 编程指南](../../programming-guide/index.md)
+- [C# 关键字](index.md)
+- [迭代语句](iteration-statements.md)
+- [while 语句](while.md)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - exceptions [C#], creating
 - exceptions [C#], throwing
 ms.assetid: 6bbba495-a115-4c6d-90cc-1f4d7b5f39e2
-ms.openlocfilehash: 43d566fed4e2963489da0b7a11c78a54740b7ab1
-ms.sourcegitcommit: 3b1cb8467bd73dee854b604e306c0e7e3882d91a
+ms.openlocfilehash: c81332307542608e2c7a3f3a5fa89900862f1e84
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "44260066"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53145590"
 ---
 # <a name="creating-and-throwing-exceptions-c-programming-guide"></a>创建和引发异常（C# 编程指南）
 异常用于指示在运行程序时发生了错误。 此时将创建一个描述错误的异常对象，然后使用 [throw](../../../csharp/language-reference/keywords/throw.md) 关键字引发。 然后，运行时搜索最兼容的异常处理程序。  
@@ -41,7 +41,7 @@ ms.locfileid: "44260066"
   
  所有异常都包含一个名为 <xref:System.Exception.Message%2A> 的属性。 应设置此字符串来解释发生异常的原因。 请注意，不应将安全敏感的信息放在消息文本中。 除 <xref:System.Exception.Message%2A> 以外，<xref:System.ArgumentException> 也包含一个名为 <xref:System.ArgumentException.ParamName%2A> 的属性，应将该属性设置为导致引发异常的参数的名称。 对于属性资源库，<xref:System.ArgumentException.ParamName%2A> 应设置为 `value`。  
   
- 公共的受保护方法成员在无法完成其预期功能时应引发异常。 引发的异常类应是符合错误条件的最具体的可用异常。 这些异常应编写为类功能的一部分，并且原始类的派生类或更新应保留相同的行为以实现后向兼容性。  
+ 公共的受保护方法在无法完成其预期功能时应引发异常。 引发的异常类应是符合错误条件的最具体的可用异常。 这些异常应编写为类功能的一部分，并且原始类的派生类或更新应保留相同的行为以实现后向兼容性。  
   
 ## <a name="things-to-avoid-when-throwing-exceptions"></a>引发异常时应避免的情况  
  以下列表标识了引发异常时要避免的做法：  

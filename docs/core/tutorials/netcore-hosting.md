@@ -1,17 +1,18 @@
 ---
-title: 托管 .NET Core
-description: 从本机代码托管 .NET Core 运行时
+title: 编写自定义 .NET Core 运行时主机
+description: 了解从本机代码托管 .NET Core 运行时，以支持需要控制 .NET Core 运行时工作方式的高级方案。
 author: mjrousos
 ms.author: mairaw
-ms.date: 2/3/2017
-ms.openlocfilehash: 96f51c8480bf75b1d7f824a8c87d2cdd6c7f9dd6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.date: 02/03/2017
+ms.custom: seodec18
+ms.openlocfilehash: 7e30536a27408c529743ef623aa1bb837c327f96
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33218601"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53146939"
 ---
-# <a name="hosting-net-core"></a>托管 .NET Core
+# <a name="write-a-custom-net-core-host-to-control-the-net-runtime-from-your-native-code"></a>编写自定义 .NET Core 主机以从本机代码控制 .NET 运行时
 
 像所有的托管代码一样，.NET Core 应用程序也由主机执行。 主机负责启动运行时（包括 JIT 和垃圾回收器等组件）、创建 AppDomain 并调用托管的入口点。
 
@@ -82,7 +83,6 @@ AppDomain 标志指定与安全性和互操作性相关的 AppDomain 行为。 �
 *  `APP_NI_PATHS` 此列表与 APP_PATHS 非常相似，不同之处在于其中的路径用于探测本机映像。
 *  `NATIVE_DLL_SEARCH_DIRECTORIES` 此属性是一个路径列表，加载程序在查找通过 p/invoke 调用的本机 DLL 时应使用这些路径进行探测。
 *  `PLATFORM_RESOURCE_ROOTS` 此列表包含的路径用于探测资源附属程序集（在区域性特定的子目录中）。
-*  `AppDomainCompatSwitch` 此字符串指定当不具有显式目标框架名字对象（一种程序集级别的属性，指示程序集应针对哪个框架运行）时应用于程序集的兼容性事项。 通常情况下，应将其设置为 `"UseLatestBehaviorWhenTFMNotSpecified"`，但某些主机可能更想要获取较旧的 Silverlight 或 Windows Phone 兼容性特事项。
 
 在[简单示例主机](https://github.com/dotnet/samples/tree/master/core/hosting)中，这些属性将进行如下设置：
 

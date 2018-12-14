@@ -1,19 +1,21 @@
 ---
 title: 使用 Visual Studio 2017 测试 .NET Core 类库
-description: 了解如何使用 Visual Studio 2017 测试用 C# 编写的类库
+description: 为 .NET Core 类库创建单元测试项目。 验证 .NET Core 类库能否正确地进行单元测试。
 author: BillWagner
 ms.author: wiwagn
 ms.date: 08/07/2017
 dev_langs:
 - csharp
 - vb
-ms.custom: vs-dotnet
-ms.openlocfilehash: 04fef4f84658b3a8b82e4e71b62c3bab8537424d
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.custom:
+- vs-dotnet
+- seodoc18
+ms.openlocfilehash: e3b13126833e49681661e8834ce9f3d8a6c1133e
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45990968"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53144892"
 ---
 # <a name="testing-a-class-library-with-net-core-in-visual-studio-2017"></a>使用 Visual Studio 2017 测试 .NET Core 类库
 
@@ -52,7 +54,7 @@ ms.locfileid: "45990968"
 1. 在“引用管理器”对话框中，展开“项目”节点，并选中“StringLibrary”旁边的框。 添加对 `StringLibrary` 程序集的引用后，编译器可以查找 StringLibrary 方法。 选择“确定”按钮。 这会添加对类库项目 `StringLibrary` 的引用。
 
    ![引用管理器](./media/testing-library-with-visual-studio/referencemanager.png)
-# <a name="visual-basictabvisual-basic"></a>[Visual Basic](#tab/visual-basic) 
+# <a name="visual-basictabvb"></a>[Visual Basic](#tab/vb) 
 1. 在“解决方案资源管理器”中，打开“ClassLibraryProjects”解决方案节点的上下文菜单，再依次选择“添加” > “新项目”。
 
 1. 在“添加新项目”对话框中，选择“Visual Basic”节点。 然后，依次选择“.NET Core”节点和“MSTest 测试项目(.NET Core)”项目模板。 在“名称”文本框中，输入项目名称“StringLibraryTest”。 选择“确定”，创建单元测试项目。
@@ -116,7 +118,7 @@ ms.locfileid: "45990968"
 1. 在菜单栏上，选择“文件” > “将 UnitTest1.cs 另存为”。 在“文件另存为”对话框中，选择“保存”按钮旁边的箭头，然后选择“保存时使用编码”。
 
    ![“文件另存为”对话框](./media/testing-library-with-visual-studio/savefileas.png)
-# <a name="visual-basictabvisual-basic"></a>[Visual Basic](#tab/visual-basic) 
+# <a name="visual-basictabvb"></a>[Visual Basic](#tab/vb) 
 1. 将 UnitTest1.vb 代码窗口中的代码替换为以下代码：
 
     [!CODE-vb[Test#1](../../../samples/snippets/core/tutorials/vb-library-with-visual-studio/testlib.vb)]

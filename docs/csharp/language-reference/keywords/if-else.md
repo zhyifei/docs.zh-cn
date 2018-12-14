@@ -10,16 +10,16 @@ helpviewer_keywords:
 - else keyword [C#]
 - if keyword [C#]
 ms.assetid: d9a1d562-8cf5-4bd4-9ba7-8ad970cd25b2
-ms.openlocfilehash: 77ee6e86017eb24d565842b3401533ebda1add35
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 2cbfab57ffaf294109f9f01f228f2826097fc299
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43525584"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53151390"
 ---
 # <a name="if-else-c-reference"></a>if-else（C# 参考）
 
-`if` 语句基于 `Boolean` 表达式的值来识别运行哪个语句。 在下面的示例中， `Boolean` 变量 `result` 已被设置为 `true` ，然后被签入到了 `if` 语句。 输出为 `The variable is set to true.`。
+`if` 语句基于布尔表达式的值来识别运行哪个语句。 在下面的示例中， `bool` 变量 `result` 已被设置为 `true` ，然后被签入到了 `if` 语句。 输出为 `The variable is set to true.`。
 
 [!code-csharp[csrefKeywordsSelection#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsSelection/CS/csrefKeywordsSelection.cs#1)]
 
@@ -57,7 +57,7 @@ if (condition)
 
 [!code-csharp[csrefKeywordsSelection#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsSelection/CS/csrefKeywordsSelection.cs#2)]
 
-相反，如果你希望在 `Result2` 为 false 的时候显示 `(m > 10)` ，则可以通过使用括号来指定此关联，以建立嵌套的 `if` 语句的开头和结尾，如以下示例所示。
+相反，如果你希望在 `(m > 10)` 为 false 的时候显示 `Result2`，则可以通过使用括号来指定此关联，以建立嵌套的 `if` 语句的开头和结尾，如以下示例所示。
 
 [!code-csharp[csrefKeywordsSelection#3](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsSelection/CS/csrefKeywordsSelection.cs#3)]
 

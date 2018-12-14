@@ -4,12 +4,12 @@ ms.date: 04/20/2018
 helpviewer_keywords:
 - unsafe code [C#], pointers
 - pointers [C#]
-ms.openlocfilehash: 2950d92f877a7e99734267a3071b2bcb25ce1023
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 124cc98b6f73b6014ab845ce5b9331e9f5292757
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43509273"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53146831"
 ---
 # <a name="pointer-types-c-programming-guide"></a>指针类型（C# 编程指南）
 
@@ -20,7 +20,7 @@ type* identifier;
 void* identifier; //allowed but not recommended
 ```
 
-在指针类型中的 `*` 之前指定的类型被称为“referrent 类型”。 以下任一类型均可为 referrent 类型：
+在指针类型中的 `*` 之前指定的类型被称为“referent 类型”。 以下任一类型均可为 referent 类型：
 
 - 任何整型类型：[sbyte](../../language-reference/keywords/sbyte.md)、[byte](../../language-reference/keywords/byte.md)、[short](../../language-reference/keywords/short.md)、[ushort](../../language-reference/keywords/ushort.md)、[int](../../language-reference/keywords/int.md)、[uint](../../language-reference/keywords/uint.md)、[long](../../language-reference/keywords/long.md)、[ulong](../../language-reference/keywords/ulong.md)。
 - 任何浮点类型：[浮点](../../language-reference/keywords/float.md)、[双精度](../../language-reference/keywords/double.md)。
@@ -44,7 +44,7 @@ int *p1, *p2, *p3;   // Invalid in C#
 
 `myType*` 类型的指针变量的值为 `myType` 类型的变量的地址。 下面是指针类型声明的示例：
 
-|示例|描述|
+|示例|说明|
 |-------------|-----------------|
 |`int* p`|`p` 是指向整数的指针。|
 |`int** p`|`p` 是指向整数的指针的指针。|

@@ -4,12 +4,12 @@ description: 了解可收集使用情况信息以供分析的 .NET Core SDK 遥�
 author: richlander
 ms.author: mairaw
 ms.date: 06/20/2018
-ms.openlocfilehash: a20d79e132726cb342064b681218ee568fab2c13
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: c8c6688b7b29c7e65c723e1f1ff31b3bd4c8c1ff
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48841597"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53129137"
 ---
 # <a name="net-core-sdk-telemetry"></a>.NET Core SDK 遥测
 
@@ -52,7 +52,7 @@ ms.locfileid: "48841597"
 
 &#8224;此指标已发布。
 
-自 .NET Core SDK 2.0 起，收集以下新数据点：
+自 .NET Core SDK 2.0 SDK 起，收集以下新数据点：
 
 - `dotnet` 命令参数和选项：仅收集已知参数和选项（非任意字符串）。
 - SDK 是否在容器中运行。

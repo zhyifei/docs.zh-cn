@@ -1,19 +1,20 @@
 ---
-title: 移植到 .NET Core - 库
+title: 将库移植到 .NET Core
 description: 了解如何将 .NET Framework 中的库项目移植到 .NET Core。
 author: cartermp
 ms.author: mairaw
 ms.date: 07/14/2017
-ms.openlocfilehash: eb6b8506d8df218a053242cd0b8d3097fa6d9fd3
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.custom: seodec18
+ms.openlocfilehash: 2701027ce606c215ca9c2bd4bc665bc0600342dc
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50199846"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53143579"
 ---
-# <a name="porting-to-net-core---libraries"></a>移植到 .NET Core - 库
+# <a name="port-net-framework-libraries-to-net-core"></a>将 .NET Framework 库移植到 .NET Core
 
-本文介绍了将库代码移植到 .NET Core 以使其跨平台运行的信息。
+了解如何将 .NET Framework 库代码移植到 .NET Core，以跨平台运行并扩展使用该代码的应用的范围。
 
 ## <a name="prerequisites"></a>系统必备
 
@@ -73,34 +74,17 @@ AppDomain 可将应用相互隔离。 AppDomain 需要运行时支持并且通�
 
 可使用操作系统提供的安全边界，例如虚拟化、容器或用于运行进程的用户帐户具有最少的一组特权。
 
-## <a name="converting-a-pcl-project"></a>转换 PCL 项目
+## <a name="retargeting-your-net-framework-code-to-net-framework-472"></a>将 .NET Framework 代码重定向到 .NET Framework 4.7.2
 
-可以通过在 Visual Studio 2017 中加载库并执行以下操作来将 PCL 项目的目标转换为面向 .NET Standard：
-
-1. 右键单击该项目文件，然后选择“属性”。
-1. 在“库”下选择“目标 .NET 平台标准”。
-
-如果包支持 NuGet 3.0，则此项目将重定向到 .NET Standard。
-
-如果包不支持 NuGet 3.0，则将从 Visual Studio 收到一个对话框，告诉用户要卸载当前的包。 如果收到此通知，则执行以下步骤：
-
-1. 右键单击项目，选择“管理 NuGet 包”。
-1. 记录项目的包。
-1. 将包逐一卸载。
-1. 可能需要重启 Visual Studio 才能完成卸载过程。 如果需要重启，“NuGet 包管理器”窗口中将显示“重启”按钮。
-1. 重载后，项目将面向 .NET Standard。 添加需要卸载的包。
-
-## <a name="retargeting-your-net-framework-code-to-net-framework-462"></a>将 .NET Framework 代码重定向到 .NET Framework 4.6.2
-
-如果代码不面向 .NET Framework 4.6.2，建议重定向到 .NET Framework 4.6.2。 在 .NET Standard 不支持现有 API 情况下，这可确保最新备用 API 的可用性。
+如果代码不面向 .NET Framework 4.7.2，建议重定向到 .NET Framework 4.7.2。 在 .NET Standard 不支持现有 API 情况下，这可确保最新备用 API 的可用性。
 
 对于 Visual Studio 中每个想要移植的项目，请执行以下操作：
 
 1. 右键单击该项目，然后选择“属性”。
-1. 在“目标框架”下拉列表中，选择“.NET Framework 4.6.2”。
+1. 在“目标框架”下拉列表中，选择“.NET Framework 4.7.2”。
 1. 重新编译项目。
 
-因为项目现在面向 .NET Framework 4.6.2，因此可使用该版本的 .NET Framework 作为移植代码的基准。
+因为项目现在面向 .NET Framework 4.7.2，因此可使用该版本的 .NET Framework 作为移植代码的基准。
 
 ## <a name="determining-the-portability-of-your-code"></a>确定代码的可移植性
 
@@ -151,7 +135,7 @@ AppDomain 可将应用相互隔离。 AppDomain 需要运行时支持并且通�
  
 分析阶段可能需要一些时间，具体取决于代码库的大小。 在此阶段花费时间（尤其是在具有复杂的代码库时），全面了解所需的更改范围并制定计划，从长远看通常可节省时间。
 
-计划可能包括对代码库做重大更改，同时面向 .NET Framework 4.6.2，使它成为前一种方法更有条理的版本。 着手执行计划的方式具体取决于代码库。
+计划可能包括对代码库做重大更改，同时面向 .NET Framework 4.7.2，使它成为前一种方法更有条理的版本。 着手执行计划的方式具体取决于代码库。
 
 ### <a name="mixing-approaches"></a>混合方法
 

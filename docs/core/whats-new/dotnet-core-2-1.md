@@ -7,12 +7,12 @@ dev_langs:
 author: rpetrusha
 ms.author: ronpet
 ms.date: 10/10/2018
-ms.openlocfilehash: bf14e21ec4d390d8ab753bfa45533442ff4f6e68
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: 7d8c89793f26ab07917e71832d5f3511d9b1aa5a
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49120942"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53127545"
 ---
 # <a name="whats-new-in-net-core-21"></a>.NET Core 2.1 的新增功能
 
@@ -79,7 +79,7 @@ dotnet tool install -g dotnetsay
 
 ### <a name="tool-management-with-the-dotnet-tool-command"></a>使用 `dotnet tool` 命令管理工具
 
-在.NET Core SDK 2.1 (v 2.1.300)，所有工具操作都使用 `dotnet tool` 命令。 可用选项如下：
+在 .NET Core 2.1 SDK 中，所有工具操作都使用 `dotnet tool` 命令。 可用选项如下：
 
 - [`dotnet tool install`](../tools/dotnet-tool-install.md) 安装工具。
 

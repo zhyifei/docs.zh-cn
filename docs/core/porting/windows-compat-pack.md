@@ -1,19 +1,20 @@
 ---
-title: 移植到 .NET Core - 使用 Windows 兼容性包
+title: 使用 Windows 兼容性包将代码移植到 .NET Core
 description: 了解有关 Windows 兼容性包以及如何使用它将现有 .NET Framework 代码移植到 .NET Core 的信息
 author: terrajobst
 ms.author: mairaw
 ms.date: 11/13/2017
-ms.openlocfilehash: 51b96d7828285964c1b0cbb835b8eb5ed92c47d6
-ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
+ms.custom: seodec18
+ms.openlocfilehash: 42c2c2a0b9b00436fa5c17d3825c720561b3f122
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34566168"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53144606"
 ---
-# <a name="using-the-windows-compatibility-pack"></a>使用 Windows 兼容性包
+# <a name="use-the-windows-compatibility-pack-to-port-code-to-net-core"></a>使用 Windows 兼容性包将代码移植到 .NET Core
 
-开发人员在将其现有代码移植到 .NET Core 时遇到的最常见问题之一是他们依赖于仅存在于 .NET Framework 中的 API 和技术。 Windows 兼容性包将提供其中许多技术，使针对现有代码生成 .NET Core 应用程序以及 .NET Standard 库变得更为可行。
+将现有代码移植到 .NET Core 时发现的一些最常见问题依赖于仅在 .NET Framework 中找到的 API 和技术。 Windows 兼容性包提供许多这些技术，因此可以更轻松地生成 .NET Core 应用程序和 .NET Standard 库。
 
 此包是 [.NET Standard 2.0 的逻辑扩展](../whats-new/dotnet-core-2-0.md#api-changes-and-library-support)，显著增加了 API 集和现有代码编译，而几乎无需进行任何修改。 但为了信守 .NET Standard 的承诺（“它是一组所有 .NET 实现都提供的 API”），这不包括无法跨所有平台工作的技术，如注册表、Windows Management Instrumentation (WMI) 或反射发出 API。
 

@@ -1,20 +1,20 @@
 ---
 title: 终结器（C# 编程指南）
-ms.date: 05/10/2017
+ms.date: 10/08/2018
 helpviewer_keywords:
 - ~ [C#], in finalizers
 - C# language, finalizers
 - finalizers [C#]
 ms.assetid: 1ae6e46d-a4b1-4a49-abe5-b97f53d9e049
-ms.openlocfilehash: b98d5eac29f498672000a7b0354734c15fd7400c
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 2b24884d2650a5e799eda630bc65f3c5a5c2508a
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43526030"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53127259"
 ---
 # <a name="finalizers-c-programming-guide"></a>终结器（C# 编程指南）
-终结器用于析构类的实例。  
+终结器（也称为析构函数）用于在垃圾回收器收集类实例时执行任何必要的最终清理操作。  
   
 ## <a name="remarks"></a>备注  
   
@@ -71,7 +71,7 @@ protected override void Finalize()
   
  有关清除资源的详细信息，请参阅下列主题：  
   
--   [Cleaning Up Unmanaged Resources](../../../standard/garbage-collection/unmanaged.md)（清理未托管资源）  
+-   [清理未托管资源](../../../standard/garbage-collection/unmanaged.md)（清理未托管资源）  
   
 -   [实现 Dispose 方法](../../../standard/garbage-collection/implementing-dispose.md)  
   
@@ -83,7 +83,8 @@ protected override void Finalize()
  [!code-csharp[csProgGuideObjects#85](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/destructors_2.cs)]  
   
 ## <a name="c-language-specification"></a>C# 语言规范  
- [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
+
+有关详细信息，请参阅 [C# 语言规范](../../language-reference/language-specification/index.md)中的[析构函数](~/_csharplang/spec/classes.md#destructors)部分。
   
 ## <a name="see-also"></a>请参阅
 

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# language, about C# language
 - Visual C#, about
 ms.assetid: 0a2dff4e-cd84-42ff-8141-e89889b24081
-ms.openlocfilehash: 75ef14032ee2211d3b8d355f050ced67b4a04930
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.openlocfilehash: ff0845f7d15a7b65cee755110d26a1e56a9b94af
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/23/2018
-ms.locfileid: "46579841"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53153938"
 ---
 # <a name="introduction-to-the-c-language-and-the-net-framework"></a>C# 语言和 .NET Framework 介绍
 
@@ -24,7 +24,7 @@ C# 是类型安全的面向对象的精妙语言，可帮助开发者生成在 [
 
  C# 语法高度重视表达，但学习起来也很简单轻松。 任何熟悉 C、C++ 或 Java 的人都可以立即认出 C# 的大括号语法。 通常情况下，了解上述任何一种语言的开发者可以在很短的时间内就开始使用 C# 高效工作。 C# 语法简化了 C++ 的许多复杂操作，并提供强大功能，如可以为 null 的值类型、枚举、委托、lambda 表达式和直接内存访问，而 Java 并不提供这些功能。 C# 不仅支持泛型方法和类型，提升了类型安全性和性能，还支持迭代器，以便集合类的实现者可以定义方便客户端代码使用的自定义迭代行为。 [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] 表达式让强类型查询成为最高级的语言构造。  
   
- 作为面向对象的语言，C# 支持封装、继承和多态性这些概念。 所有变量和方法（包括作为应用程序入口点的 `Main` 方法）都封装在类定义中。 虽然类可能会直接继承一个父类，但可以实现任意数量的接口。 若要用方法重写父类中的虚方法，必须使用 `override` 关键字，以免发生意外重定义。 在 C# 中，结构就像是轻量级类，是可以实现接口但不支持继承的堆栈分配类型。  
+ 作为面向对象的语言，C# 支持封装、继承和多形性这些概念。 所有变量和方法（包括作为应用程序入口点的 `Main` 方法）都封装在类定义中。 虽然类可能会直接继承一个父类，但可以实现任意数量的接口。 若要用方法重写父类中的虚方法，必须使用 `override` 关键字，以免发生意外重定义。 在 C# 中，结构就像是轻量级类，是可以实现接口但不支持继承的堆栈分配类型。  
   
  除了这些面向对象的基本原则，使用 C# 还可以通过以下多个创新语言构造更加轻松地开发软件组件：  
   

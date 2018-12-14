@@ -1,15 +1,16 @@
 ---
-title: 数据转换
+title: ML.NET 中的数据转换
 description: 了解在 ML.NET 中受支持的不同数据转换。
+author: JRAlexander
 ms.date: 10/16/2018
-ms.openlocfilehash: 5df4598de6fcd08689d72c378f51d792860ef49c
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: c169319937dac13747935e451952bd75d4cc174d
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50187736"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53143943"
 ---
-# <a name="data-transforms"></a>数据转换
+# <a name="data-transforms-in-mlnet"></a>ML.NET 中的数据转换
 
 下表包含有关 ML.NET 中受支持的所有数据转换的信息（选择数据转换类型以导航到相应的表）：
 

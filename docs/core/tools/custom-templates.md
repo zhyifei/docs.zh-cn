@@ -4,12 +4,12 @@ description: 了解任意类型 .NET 项目或文件的自定义模板。
 author: guardrex
 ms.author: mairaw
 ms.date: 08/11/2017
-ms.openlocfilehash: 5cb160683ad373f1192945163495bf3e7957567b
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 4e5dd11df8204d86009b0ece108ef877dc54f23e
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43525962"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53126258"
 ---
 # <a name="custom-templates-for-dotnet-new"></a>dotnet new 自定义模板
 
@@ -43,7 +43,7 @@ ms.locfileid: "43525962"
 
 template.json 文件位于模板根目录中的 .template.config 文件夹。 此文件向模板引擎提供配置信息。 最低配置必须包含下表中列出的成员，这足以创建功能模板。
 
-| 成员            | 类型          | 描述 |
+| 成员            | 类型          | 说明 |
 | ----------------- | ------------- | ----------- |
 | `$schema`         | URI           | template.json 文件的 JSON 架构。 如果指定架构，支持 JSON 架构的编辑器启用 JSON 编辑功能。 例如，[Visual Studio Code](https://code.visualstudio.com/) 要求此成员启用 IntelliSense。 使用值 `http://json.schemastore.org/template`。 |
 | `author`          | 字符串        | 模板创建者。 |
@@ -81,7 +81,7 @@ dotnet new -l
 
 将项目文件夹的内容连同 .template.config/template.json 文件一起放入 content 文件夹中。 在 content 文件夹旁边，添加 [nuspec 文件](/nuget/create-packages/creating-a-package)。这是一个 XML 清单文件，用于描述包内容，并促进创建 NuGet 包。 在 nuspec文件的 \<packageTypes> 元素中，添加 `name` 属性值为 `Template` 的 \<packageType> 元素。 content 文件夹和 nuspec 文件应位于同一目录。 下表列出了将模板生成为 NuGet 包至少所需的 nuspec 文件元素。
 
-| 元素            | 类型   | 描述 |
+| 元素            | 类型   | 说明 |
 | ------------------ | ------ | ----------- |
 | **\<authors>**     | 字符串 | 包创建者的逗号分隔列表，与 nuget.org 上的配置文件名称一致。创建者显示在 nuget.org 上的 NuGet 库中，用于交叉引用同一创建者的包。 |
 | **\<description>** | 字符串 | 用于 UI 显示的包的详细说明。 |
@@ -137,7 +137,7 @@ dotnet new -u <NUGET_PACKAGE_ID>
 
 ### <a name="to-uninstall-a-template-from-a-file-system-directory"></a>从文件系统目录卸载模板的具体步骤
 
-`FILE_SYSTEM_DIRECTORY` 是包含项目和 .template.config 文件夹的项目文件夹：
+`FILE_SYSTEM_DIRECTORY` 是包含项目和 .template.config 文件夹的项目文件夹。 提供的路径必须是绝对路径。 无法尝试使用相对路径卸载模板。 有关详细信息，请查看 [dotnet new](dotnet-new.md) 一文。
 
 ```console
 dotnet new -u <FILE_SYSTEM_DIRECTORY>
@@ -153,8 +153,8 @@ dotnet new <TEMPLATE>
 
 ## <a name="see-also"></a>请参阅
 
-* [创建 dotnet new 自定义模板（教程）](../tutorials/create-custom-template.md)  
-* [dotnet/templating GitHub 存储库 Wiki](https://github.com/dotnet/templating/wiki)  
-* [dotnet/dotnet-template-samples GitHub 存储库](https://github.com/dotnet/dotnet-template-samples)  
-* [如何创建自己的 dotnet new 模板](https://blogs.msdn.microsoft.com/dotnet/2017/04/02/how-to-create-your-own-templates-for-dotnet-new/)  
-* [JSON 架构存储中的 template.json 架构](http://json.schemastore.org/template)  
+* [创建 dotnet new 自定义模板（教程）](../tutorials/create-custom-template.md)
+* [dotnet/templating GitHub 存储库 Wiki](https://github.com/dotnet/templating/wiki)
+* [dotnet/dotnet-template-samples GitHub 存储库](https://github.com/dotnet/dotnet-template-samples)
+* [如何创建自己的 dotnet new 模板](https://blogs.msdn.microsoft.com/dotnet/2017/04/02/how-to-create-your-own-templates-for-dotnet-new/)
+* [JSON 架构存储中的 template.json 架构](http://json.schemastore.org/template)

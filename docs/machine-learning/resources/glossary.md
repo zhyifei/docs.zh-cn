@@ -1,18 +1,18 @@
 ---
-title: 机器学习库
-description: 机器学习术语库。
-ms.date: 05/31/2018
-ms.topic: conceptual
-ms.openlocfilehash: 22fcd4d2bdf53efd046cd594af42afe50a853f61
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+title: 机器学习术语表 - ML.NET
+description: 一个重要的机器学习术语表，可在 ML.NET 中生成自定义模型时使用。
+ms.custom: seodec18
+ms.date: 12/06/2018
+ms.openlocfilehash: 4db28a62fccca2e8bedc9f48485a61b6f4ab1801
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49453198"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53150571"
 ---
-# <a name="machine-learning-glossary"></a>机器学习库
+# <a name="machine-learning-glossary-of-important-terms"></a>机器学习重要术语词汇表
 
-以下列表是重要的机器学习术语编译，可在你生成自定义模型时使用。
+以下列表是重要的机器学习术语编译，可在 ML.NET 中生成自定义模型时使用。
 
 ## <a name="accuracy"></a>准确性
 

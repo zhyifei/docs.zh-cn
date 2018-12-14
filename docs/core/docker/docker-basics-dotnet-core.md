@@ -1,19 +1,17 @@
 ---
-title: 了解使用 .NET Core 的 Docker 的基本信息
-description: Docker 和 .NET Core 基本教程
-author: jralexander
-ms.author: johalex
-ms.date: 11/06/2017
+title: 通过 Docker 使应用容器化 - .NET Core
+description: 本教程介绍如何通过 Docker 创建基本 .NET Core 应用程序并使其容器化。
+ms.date: 10/11/2018
 ms.topic: tutorial
-ms.custom: mvc
-ms.openlocfilehash: 543b9454e826022a72752d9a24bc43b77d2501f5
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.custom: mvc, seodec18
+ms.openlocfilehash: 8f08936142b0cc44baf268f100e228f68920b69d
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45615295"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53126363"
 ---
-# <a name="learn-docker-basics-with-net-core"></a>了解使用 .NET Core 的 Docker 的基本信息
+# <a name="how-to-containerize-a-net-core-application"></a>如何使 .NET Core 应用程序容器化
 
 本教程介绍了 .NET Core 应用程序的 Docker 容器生成和部署任务。 [Docker 平台](https://docs.docker.com/engine/docker-overview/#the-docker-platform)使用 [Docker 引擎](https://docs.docker.com/engine/docker-overview/#docker-engine)快速生成应用，并将其打包为 [Docker 映像](https://docs.docker.com/glossary/?term=image)。 这些映像以 [Dockerfile](https://docs.docker.com/glossary/?term=Dockerfile) 格式编写，可在[分层容器](https://docs.docker.com/engine/userguide/storagedriver/imagesandcontainers/#container-and-layers)中部署和运行。
 
@@ -38,38 +36,38 @@ ms.locfileid: "45615295"
 
 完成本教程：
 
-#### <a name="net-core-20-sdk"></a>.NET Core 2.0 SDK
+#### <a name="net-core-sdk"></a>.NET Core SDK
 
-* 安装 [.NET Core SDK 2.0](https://www.microsoft.com/net/core)。
+* 安装 [.NET Core 2.1 SDK](https://www.microsoft.com/net/download) 或更高版本。
 
-有关支持 .NET Core 2.x 的操作系统、不支持的 OS 版本和生命周期策略链接的完整列表，请参阅 [.NET Core 2.x - 支持的 OS 版本](https://github.com/dotnet/core/blob/master/release-notes/2.0/2.0-supported-os.md)。
+有关支持 .NET Core 2.1 的操作系统、不支持的 OS 版本和生命周期策略链接的完整列表，请参阅 [.NET Core 2.1 支持的 OS 版本](https://github.com/dotnet/core/blob/master/release-notes/2.1/2.1-supported-os.md)。
 
 * 安装常用的代码编辑器（如果尚未安装）。
 
 > [!TIP]
-> 需要安装代码编辑器？ 试用 [Visual Studio](https://visualstudio.com/downloads)！
+> 需要安装代码编辑器？ 试用 [Visual Studio Code](https://code.visualstudio.com/download)！
 
 #### <a name="installing-docker-client"></a>安装 Docker 客户端
 
-安装 [Docker 17.06](https://docs.docker.com/release-notes/docker-ce/) 或更高版本的 Docker 客户端。
+安装 [Docker 18.06](https://docs.docker.com/release-notes/docker-ce/) 或更高版本的 Docker 客户端。
 
 可在以下位置安装 Docker 客户端：
 
 * Linux 分布
 
-   * [CentOS](https://www.docker.com/docker-centos-distribution)
+   * [CentOS](https://docs.docker.com/install/linux/docker-ce/centos/)
 
-   * [Debian](https://www.docker.com/docker-debian)
+   * [Debian](https://docs.docker.com/install/linux/docker-ce/debian/)
 
-   * [Fedora](https://www.docker.com/docker-fedora)
+   * [Fedora](https://docs.docker.com/install/linux/docker-ce/fedora/)
 
-   * [Ubuntu](https://www.docker.com/docker-ubuntu)
+   * [Ubuntu](https://docs.docker.com/install/linux/docker-ce/ubuntu/)
 
-* [macOS](https://docs.docker.com/docker-for-mac/)
+* [macOS](https://docs.docker.com/docker-for-mac/install/)
 
-* [Windows](https://docs.docker.com/docker-for-windows/)。
+* [Windows](https://docs.docker.com/docker-for-windows/install/)。
 
-### <a name="create-a-net-core-20-console-app-for-dockerization"></a>创建 .NET Core 2.0 控制台应用进行 Docker 化
+### <a name="create-a-net-core-21-console-app-for-dockerization"></a>创建 .NET Core 2.1 控制台应用进行 Docker 化
 
 打开命令提示符，创建一个名为“Hello”的文件夹。 导航到创建的文件夹，并键入以下内容：
 
@@ -83,13 +81,13 @@ dotnet run
 1. `$ dotnet new console`
 
    [`dotnet new`](../tools/dotnet-new.md) 会创建一个最新的 `Hello.csproj` 项目文件，其中包含生成控制台应用所必需的依赖项。  它还将创建 `Program.cs`，这是包含应用程序的入口点的基本文件。
-   
+
    `Hello.csproj`：
 
    项目文件指定还原依赖项和生成程序所需的一切。
 
    * `OutputType` 标记指定我们要生成的可执行文件，即控制台应用程序。
-   * `TargetFramework` 标记指定要定位的 .NET 实现代码。 在高级方案中，可以指定多个目标框架，并在单个操作中生成到指定框架。 在本教程中，针对 .NET Core 2.0 进行生成。
+   * `TargetFramework` 标记指定要定位的 .NET 实现代码。 在高级方案中，可以指定多个目标框架，并在单个操作中生成到指定框架。 在本教程中，针对 .NET Core 2.1 进行生成。
 
    `Program.cs`：
 
@@ -97,26 +95,21 @@ dotnet run
 
    接着定义一个名为 `Hello` 的命名空间。 可以将命名空间更改为任何喜欢的名称。 在该命名空间中定义了一个名为 `Program` 的类，其中 `Main` 方法将字符串数组作为其参数。 此数组包含在调用编译的程序时所传递的参数列表。 在我们的示例中，该程序只会在控制台中写入 “Hello World!”。
 
-2. `$ dotnet restore`
-
-   在 .NET Core 2.x 中，dotnet new 运行 [`dotnet restore`](../tools/dotnet-restore.md) 命令。 Dotnet restore 通过 [NuGet](https://www.nuget.org/)（.NET 包管理器）调用还原依赖项树。
+   dotnet new 运行 [`dotnet restore`](../tools/dotnet-restore.md) 命令。 Dotnet restore 通过 [NuGet](https://www.nuget.org/)（.NET 包管理器）调用还原依赖项树。
    NuGet 执行下列任务：
-   * 分析 Hello.csproj 文件 
-   * 下载文件依赖项（或从计算机缓存中获取）
-   * 写入 obj/project.assets.json 文件
+   * 分析 Hello.csproj 文件。
+   * 下载文件依赖项（或从计算机缓存中获取）。
+   * 写入 obj/project.assets.json 文件。
 
-<a name="dotnet-restore-note"></a>
-[!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
-   
    project.assets.json 文件是一组完整的 NuGet 依赖项关系图、绑定解决方法及其他应用元数据。 此必需文件由其他工具（如 [`dotnet build`](../tools/dotnet-build.md) 和 [`dotnet run`](../tools/dotnet-run.md)）用于正确处理源代码。
-   
-3. `$ dotnet run`
+
+2. `$ dotnet run`
 
    [`dotnet run`](../tools/dotnet-run.md) 调用 [`dotnet build`](../tools/dotnet-build.md) 来确认生成成功，然后调用 `dotnet <assembly.dll>` 来运行应用程序。
-   
+
     ```console
     $ dotnet run
-    
+
     Hello World!
     ```
 
@@ -133,7 +126,7 @@ Hello .NET Core 控制台应用已成功在本地运行。 现在，可进一步
 为 Linux 或 [Windows 容器](https://docs.microsoft.com/virtualization/windowscontainers/about/) 向新文件添加以下 Docker 指令。 完成后，将其保存在 Hello 目录的根目录中作为 Dockerfile，并且不使用扩展名（可能需要将文件类型设置为 `All types (*.*)` 或类似的类型）。
 
 ```Dockerfile
-FROM microsoft/dotnet:2.0-sdk
+FROM microsoft/dotnet:2.1-sdk
 WORKDIR /app
 
 # copy csproj and restore as distinct layers
@@ -148,10 +141,10 @@ ENTRYPOINT ["dotnet", "out/Hello.dll"]
 
 Dockerfile 包含按顺序运行的 Docker build 指令。
 
-第一个指令必须为 [FROM](https://docs.docker.com/engine/reference/builder/#from)。 此指令用于初始化新的生成阶段，并为剩余指令设置基础映像。 多拱形标记跟根据 Docker for Windows [容器模式](https://docs.docker.com/docker-for-windows/#switch-between-windows-and-linux-containers) 请求 Windows 或 Linux 容器。 本示例的基础映像是 microsoft/dotnet 存储库中的 2.0-sdk 映像，
+第一个指令必须为 [FROM](https://docs.docker.com/engine/reference/builder/#from)。 此指令用于初始化新的生成阶段，并为剩余指令设置基础映像。 多拱形标记跟根据 Docker for Windows [容器模式](https://docs.docker.com/docker-for-windows/#switch-between-windows-and-linux-containers) 请求 Windows 或 Linux 容器。 本示例的基础映像是 microsoft/dotnet 存储库中的 2.1-sdk 映像，
 
 ```Dockerfile
-FROM microsoft/dotnet:2.0-sdk
+FROM microsoft/dotnet:2.1-sdk
 ```
 
 [WORKDIR](https://docs.docker.com/engine/reference/builder/#workdir) 指令为剩余的任意 RUN、CMD、ENTRYPOINT、COPY 和 ADD Dockerfile 指令设置工作目录。 如果不存在，则会创建该目录。 在本例中，WORKDIR 设置为应用目录。
@@ -196,7 +189,7 @@ ENTRYPOINT ["dotnet", "out/Hello.dll"]
 * 作为应用对映像的依赖项
 * 生成作为可执行文件运行的应用
 
-### <a name="build-and-run-the-hello-net-core-20-app"></a>生成并运行 Hello .NET Core 2.0 应用
+### <a name="build-and-run-the-hello-net-core-app"></a>生成并运行 Hello .NET Core 应用
 
 #### <a name="essential-docker-commands"></a>重要的 Docker 命令
 
@@ -222,9 +215,9 @@ docker run --rm dotnetapp-dev Hello from Docker
 `docker build` 命令的输出应类似于以下控制台输出：
 
 ```console
-Sending build context to Docker daemon   72.7kB
-Step 1/7 : FROM microsoft/dotnet:2.0-sdk
- ---> d84f64b126a6
+Sending build context to Docker daemon   173.1kB
+Step 1/7 : FROM microsoft/dotnet:2.1-sdk
+ ---> 288f8c45f7c2
 Step 2/7 : WORKDIR /app
  ---> Using cache
  ---> 9af1fbdc7972
@@ -243,7 +236,7 @@ Step 6/7 : RUN dotnet publish -c Release -o out
 Step 7/7 : ENTRYPOINT dotnet out/Hello.dll
  ---> Using cache
  ---> 53c337887e18
-Successfully built 53c337887e18
+Successfully built 46db075bd98d
 Successfully tagged dotnetapp-dev:latest
 ```
 
@@ -255,20 +248,18 @@ Successfully tagged dotnetapp-dev:latest
 Hello World!
 ```
 
-祝贺你！ 你刚才已：
+祝贺你！ 你刚才已完成：
 > [!div class="checklist"]
 > * 创建本地 .NET Core 应用
 > * 创建 Dockerfile 以生成第一个容器
 > * 生成并运行已 Docker 化的应用
-
-
 
 ## <a name="next-steps"></a>后续步骤
 
 下面是一些可以采取的后续步骤：
 
 * [.NET Docker 映像视频简介](https://channel9.msdn.com/Shows/Code-Conversations/Introduction-to-NET-Docker-Images-with-Kendra-Havens?term=docker)
-* [Visual Studio、Docker 和 Azure 容器实例结合使用效果更佳！](https://blogs.msdn.microsoft.com/alimaz/2017/08/17/visual-studio-docker-azure-container-instances-better-together/)
+* [Visual Studio、Docker 和 Azure 容器实例结合使用效果更佳！](https://medium.com/@AliMazaheri/visual-studio-docker-azure-container-instances-better-together-bf8c2f0419ae)
 * [Docker for Azure 快速入门](https://docs.docker.com/docker-for-azure/#docker-community-edition-ce-for-azure)
 * [在 Docker for Azure 上部署应用](https://docs.docker.com/docker-for-azure/deploy/)
 
@@ -279,7 +270,7 @@ Hello World!
 
 此示例中使用了以下 Docker 映像
 
-* [`microsoft/dotnet:2.0-sdk`](https://hub.docker.com/r/microsoft/dotnet)
+* [`microsoft/dotnet:2.1-sdk`](https://hub.docker.com/r/microsoft/dotnet)
 
 ## <a name="related-resources"></a>相关资源
 

@@ -22,12 +22,12 @@ helpviewer_keywords:
 - server identifiers
 - scheme identifiers
 ms.assetid: 4b48e22d-e4e5-48f0-be80-d549bda97415
-ms.openlocfilehash: a0a50af2d773a9489d9e908b751ba2035b9ba626
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 213a714a04c31954b0091071b0625449916d154d
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50194015"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53146909"
 ---
 # <a name="introducing-pluggable-protocols"></a>可插入协议简介
 Microsoft .NET Framework 为 Internet 服务提供了一种分层、可扩展且托管的实现，可以快速、轻松地将其集成到应用程序中。 <xref:System.Net> 和 <xref:System.Net.Sockets> 命名空间的 Internet 访问类可用于实现基于 Web 和基于 Internet 的应用程序。  
@@ -40,7 +40,7 @@ Microsoft .NET Framework 为 Internet 服务提供了一种分层、可扩展且
  客户端应用程序通过标识请求的 Internet 资源和用于请求和响应的通信协议发出请求。 如有必要，客户端还提供完成请求所需的任何其他数据，例如代理位置或身份验证信息（用户名、密码等）。 形成请求后，可将请求发送到服务器。  
   
 ## <a name="identifying-resources"></a>标识资源  
- .NET Framework 使用统一资源标识符 (URI) 标识请求的 Internet 资源和通信协议。 URI 由至少三个或者四个片段组成：方案标识符，用于标识请求和响应的通信协议；服务器标识符，其由唯一标识 Internet 上服务器的域名系统 (DNS) 主机名或 TCP 地址组成；路径标识符，其在服务器上查找请求的信息；可选的查询字符串，其将信息从客户端传递到服务器。 例如，URI `http://www.contoso.com/whatsnew.aspx?date=today` 由方案标识符“http”、服务器标识符“www.contoso.com”、路径“/whatsnew.aspx”和查询字符串“?date=today”组成。  
+ .NET Framework 使用统一资源标识符 (URI) 标识请求的 Internet 资源和通信协议。 URI 由至少三个或者四个片段组成：方案标识符，用于标识请求和响应的通信协议；服务器标识符，其由唯一标识 Internet 上服务器的域名系统 (DNS) 主机名或 TCP 地址组成；路径标识符，其在服务器上查找请求的信息；可选的查询字符串，其将信息从客户端传递到服务器。 例如，URI `http://www.contoso.com/whatsnew.aspx?date=today` 由方案标识符 `http`、服务器标识符 `www.contoso.com`、路径 `/whatsnew.aspx` 和查询字符串 `?date=today` 组成。  
   
  服务器收到请求并处理响应后，会将这些响应返回到客户端应用程序。 响应包括补充信息，如内容的类型（例如，原始文本或 XML 数据）。  
   

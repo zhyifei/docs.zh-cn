@@ -1,6 +1,6 @@
 ---
 title: COM 可调用包装
-ms.date: 03/30/2017
+ms.date: 10/23/2018
 dev_langs:
 - csharp
 - vb
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: d04be3b5-27b9-4f5b-8469-a44149fabf78
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 21f7b0d56a788b4161fb7e99899b4dd15a434152
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 75a8fb01fd22a7f84fadaf355a269b3ad3de63ab
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33394961"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53145171"
 ---
 # <a name="com-callable-wrapper"></a>COM 可调用包装
 COM 客户端调用 .NET 对象时，公共语言运行时将创建托管对象和该对象的 COM 可调用包装器 (CCW)。 无法直接引用 .NET 对象，COM 客户端使用 CCW 作为托管对象的代理。  
@@ -48,7 +48,7 @@ COM 接口和 COM 可调用包装器
   
  除公开由托管环境中的类显式实现的接口外，.NET Framework 代表对象提供对下表中列出的 COM 接口的实现。 .NET 类可以通过提供其自身对这些接口的实现而替代默认行为。 但是，运行时始终提供 IUnknown 和 IDispatch 接口的实现。  
   
-|接口|描述|  
+|接口|说明|  
 |---------------|-----------------|  
 |**Idispatch**|为晚期绑定到类型提供一个机制。|  
 |**IerrorInfo**|提供以下内容的文字描述：错误、错误源、帮助文件，帮助上下文以及定义错误的接口的 GUID（.NET 类始终为 GUID_NULL）。|  
@@ -59,10 +59,10 @@ COM 接口和 COM 可调用包装器
   
  托管类还可以提供下表中介绍的 COM 接口。  
   
-|接口|描述|  
+|接口|说明|  
 |---------------|-----------------|  
 |(\_classname) 类接口|该接口由运行时公开但未显式定义，它公开托管对象上显式公开的所有公共接口、方法、属性和字段。|  
-|**IConnectionPoint** 和 **IconnectionPointContainer**|以基于委托的事件（用于注册事件订阅服务器的接口）为源的对象的接口。|  
+|**IConnectionPoint** 和 **IConnectionPointContainer**|以基于委托的事件（用于注册事件订阅服务器的接口）为源的对象的接口。|  
 |**IdispatchEx**|如果类实现 IExpando，则为由运行时提供的接口。 IDispatchEx 接口是 IDispatch 接口的扩展，与 IDispatch 不同，它可枚举、添加、删除和以区分大小的方式调用成员。|  
 |**IEnumVARIANT**|集合类型类的接口，如果类实现 IEnumerable，则该接口将枚举集合中的对象。|  
   
@@ -84,17 +84,17 @@ Public Class Mammal
 End Class  
 ```  
   
-```csharp  
-// Applies the ClassInterfaceAttribute to set the interface to dual.  
-[ClassInterface(ClassInterfaceType.AutoDual)]  
-// Implicitly extends System.Object.  
-public class Mammal  
-{  
-    void  Eat();  
-    void  Breathe():  
-    void  Sleep();  
-}  
-```  
+```csharp
+// Applies the ClassInterfaceAttribute to set the interface to dual.
+[ClassInterface(ClassInterfaceType.AutoDual)]
+// Implicitly extends System.Object.
+public class Mammal
+{
+    public void Eat() {}
+    public void Breathe() {}
+    public void Sleep() {}
+}
+```
   
  COM 客户端可以获取指向名为`_Mammal` 的类接口（如由[类型库导出程序 (Tlbexp.exe)](../tools/tlbexp-exe-type-library-exporter.md) 工具生成的类型库中所述）的指针。 如果 `Mammal` 类实现了一个或多个接口，则这些接口将出现在组件类下。  
   
@@ -139,12 +139,13 @@ coclass Mammal
 End Class  
 ```  
   
-```csharp  
-[ClassInterface(ClassInterfaceType.None)]  
-public class LoanApp : IExplicit {  
-    void M();  
-}  
-```  
+```csharp
+[ClassInterface(ClassInterfaceType.None)]
+public class LoanApp : IExplicit
+{
+    int IExplicit.M() { return 0; }
+}
+```
   
  ClassInterfaceType.None 值防止类元数据导出到类型库时生成类接口。 在前面的示例中，COM 客户端只能通过 `IExplicit` 接口访问 `LoanApp` 类。  
   
@@ -163,20 +164,31 @@ public class LoanApp : IExplicit {
 End Class  
 ```  
   
-```csharp  
-[ClassInterface(ClassInterfaceType.AutoDispatch]  
-public class LoanApp : IAnother {  
-    void M();  
-}  
-```  
+```csharp
+[ClassInterface(ClassInterfaceType.AutoDispatch)]
+public class LoanApp
+{
+    public int M() { return 0; }
+}
+```
   
  若要在运行时获取接口成员的 DispId，COM 客户端可以调用 IDispatch.GetIdsOfNames。 若要调用接口上的方法，请将返回的 DispId 作为参数传递给 IDispatch.Invoke。  
   
 ### <a name="restrict-using-the-dual-interface-option-for-the-class-interface"></a>限制使用类接口的双重接口选项。  
  双重接口通过 COM 客户端启用对接口成员的早期绑定和后期绑定。 在设计时和测试期间，将类接口设置为双重可能会非常有用。 对于永远不会被修改的托管类（及其基类），此选项也是可接受的。 在所有其它情况下，请避免将类接口设置为双重。  
   
- 自动生成的双重接口可能适合少数情况；但是，更多情况下，它将造成与版本相关的复杂性。 例如，使用派生类的类接口的 COM 客户端可以通过对基类的更改轻松中断。 当第三方提供基类时，类接口的布局将不受你的控制。 进一步来说，与仅支持调度的接口不同，双重接口 (ClassInterface.AutoDual)提供对导出的类型库中的类接口的说明。 此类说明会促使后期绑定的客户端在运行时缓存 DispId。  
+ 自动生成的双重接口可能适合少数情况；但是，更多情况下，它将造成与版本相关的复杂性。 例如，使用派生类的类接口的 COM 客户端可以通过对基类的更改轻松中断。 当第三方提供基类时，类接口的布局将不受你的控制。 进一步来说，与仅支持调度的接口不同，双重接口 (ClassInterfaceType.AutoDual)提供对导出的类型库中的类接口的说明。 此类说明会促使后期绑定的客户端在运行时缓存 DispId。  
   
+### <a name="ensure-that-all-com-event-notifications-are-late-bound"></a>确保所有 COM 事件通知都是后期绑定的。
+
+默认情况下，COM 类型信息直接嵌入到托管程序集中，这会消除对主互操作程序集 (PIA) 的需要。 但是，嵌入式类型信息的一个限制是它不支持通过早期绑定的 vtable 调用传递 COM 事件通知，但仅支持后期绑定的 `IDispatch::Invoke` 调用。
+
+如果应用程序需要对 COM 事件接口方法进行早期绑定调用，则可以将 Visual Studio 中的”嵌入互操作类型”属性设置为 `true`，或在项目文件中包含以下元素：
+
+```xml
+<EmbedInteropTypes>True</EmbedInteropTypes>
+```
+
 ## <a name="see-also"></a>请参阅  
  <xref:System.Runtime.InteropServices.ClassInterfaceAttribute>  
  [COM 包装](com-wrappers.md)  

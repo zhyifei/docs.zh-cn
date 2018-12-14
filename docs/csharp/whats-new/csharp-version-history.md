@@ -3,12 +3,12 @@ title: C# 发展历史 - C# 指南
 description: 这些语言在最早版本中是什么样的，它又是如何演化的？
 author: erikdietrich
 ms.date: 09/20/2017
-ms.openlocfilehash: 5e8ecdd971a043dc47c50b10c974d86f836818dc
-ms.sourcegitcommit: d88024e6d6d8b242feae5f4007a709379355aa24
+ms.openlocfilehash: e58f719031cc614f728226232c09f54f6b874475
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49316254"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53145327"
 ---
 # <a name="the-history-of-c"></a>C# 发展历史 #
 
@@ -33,7 +33,7 @@ C# 1.0 的主要功能包括：
 - [表达式](../programming-guide/statements-expressions-operators/expressions.md)
 - [语句](../programming-guide/statements-expressions-operators/statements.md)
 - [特性](../programming-guide/concepts/attributes/index.md)
-- 文本
+- [文本](../language-reference/keywords/literal-keywords.md)
 
 ## <a name="c-version-12"></a>C# 版本 1.2
 
@@ -72,9 +72,9 @@ C# 3.0 版和 Visual Studio 2008 一起发布于 2007 年下半年，但完整�
 - [自动实现的属性](../programming-guide/classes-and-structs/auto-implemented-properties.md)
 - [匿名类型](../programming-guide/classes-and-structs/anonymous-types.md)
 - [查询表达式](../linq/query-expression-basics.md)
-- [Lambda 表达式](https://www.daedtech.com/introduction-to-c-lambda-expressions/)
-- [表达式树](https://blogs.msdn.microsoft.com/charlie/2008/01/31/expression-tree-basics/)
-- [扩展方法](https://www.codeproject.com/Tips/709310/Extension-Method-In-Csharp)
+- [Lambda 表达式](../lambda-expressions.md)
+- [表达式树](../expression-trees.md)
+- [扩展方法](../programming-guide/classes-and-structs/extension-methods.md)
 - [隐式类型本地变量](../language-reference/keywords/var.md)
 - [分部方法](../language-reference/keywords/partial-method.md)
 - [对象和集合初始值设定项](../programming-guide/classes-and-structs/object-and-collection-initializers.md)
@@ -96,7 +96,7 @@ C# 4.0 版很难达到 3.0 版的创新水平。 在 3.0 版中，C# 已经完�
 - [动态绑定](../language-reference/keywords/dynamic.md)
 - [命名参数/可选参数](../programming-guide/classes-and-structs/named-and-optional-arguments.md)
 - [泛型协变和逆变](../../standard/generics/covariance-and-contravariance.md)
-- [嵌入的互操作类型](https://stackoverflow.com/questions/20514240/whats-the-difference-setting-embed-interop-types-true-and-false-in-visual-studi)
+- [嵌入的互操作类型](../../framework/interop/type-equivalence-and-embedded-interop-types.md)
 
 嵌入的互操作类型缓和了部署难点。 泛型协变和逆变提供了更强的功能来使用泛型，但风格比较偏学术，应该最受框架和库创建者的喜爱。 命名参数和可选参数帮助消除了很多方法重载，让使用更方便。 但是这些功能都没有完全改变模式。
 
@@ -123,13 +123,13 @@ C# 5.0 版是该语言有针对性的一个版本。 在此版本中所做的所
 
 C# 在 3.0 版和 5.0 版对面向对象的语言添加了主要的新功能。 在 6.0 版中，它不再推出主导性的杀手锏，而是发布了很多使得 C# 编程更有效率的小功能。 以下介绍了部分功能：
 
-- [静态导入](../language-reference/keywords/using-static.md)
-- [异常筛选器](https://www.thomaslevesque.com/2015/06/21/exception-filters-in-c-6/)
-- [属性初始值设定项](http://geekswithblogs.net/WinAZ/archive/2015/06/30/whatrsquos-new-in-c-6.0-auto-property-initializers.aspx)
-- [Expression bodied 成员](https://lostechies.com/jimmybogard/2015/12/17/c-6-feature-review-expression-bodied-function-members/)
-- [Null 传播器](https://davefancher.com/2014/08/14/c-6-0-null-propagation-operator/)
-- [字符串内插](../language-reference/tokens/interpolated.md)
-- [nameof 运算符](https://stackoverflow.com/questions/31695900/what-is-the-purpose-of-nameof)
+- [静态导入](./csharp-6.md#using-static)
+- [异常筛选器](./csharp-6.md#exception-filters)
+- [自动属性初始化表达式](./csharp-6.md#auto-property-initializers)
+- [Expression bodied 成员](./csharp-6.md#expression-bodied-function-members)
+- [Null 传播器](./csharp-6.md#null-conditional-operators)
+- [字符串内插](./csharp-6.md#string-interpolation)
+- [nameof 运算符](./csharp-6.md#the-nameof-expression)
 - [索引初始值设定项](csharp-6.md#index-initializers)
 
 其他新功能包括：
@@ -145,20 +145,19 @@ C# 在 3.0 版和 5.0 版对面向对象的语言添加了主要的新功能。 
 
 C# 7.0 版是最新的主版本。 虽然该版本继承和发展了 C# 6.0，但不包含编译器即服务。 以下介绍了部分新增功能：
 
-- [Out 变量](https://www.c-sharpcorner.com/article/out-variables-in-c-sharp-7-0/)
-- [元组和析构函数](https://www.thomaslevesque.com/2016/08/23/tuple-deconstruction-in-c-7/)
+- [Out 变量](./csharp-7.md#out-variables)
+- [元组和析构函数](./csharp-7.md#tuples)
 - [模式匹配](./csharp-7.md#pattern-matching)
-- [本地函数](https://www.infoworld.com/article/3182416/application-development/c-7-in-depth-exploring-local-functions.html)
+- [本地函数](./csharp-7.md#local-functions)
 - [已扩展 expression bodied 成员](./csharp-7.md#more-expression-bodied-members)
 - [Ref 局部变量和返回结果](./csharp-7.md#ref-locals-and-returns)
 
 其他功能包括：
 
-- [弃元](../discards.md)
-- [二进制文本](https://github.com/dotnet/csharplang/blob/master/proposals/csharp-7.0/binary-literals.md)
-- [数字分隔符](https://github.com/dotnet/csharplang/blob/master/proposals/csharp-7.0/digit-separators.md)
-- ref 返回值和局部变量
-- [引发表达式](https://github.com/dotnet/csharplang/blob/master/proposals/csharp-7.0/throw-expression.md)
+- [弃元](./csharp-7.md#discards)
+- [二进制文本和数字分隔符](./csharp-7.md#numeric-literal-syntax-improvements)
+- [ref 返回值和局部变量](./csharp-7.md#ref-locals-and-returns)
+- [引发表达式](./csharp-7.md#throw-expressions)
 
 这些都为开发者提供了很棒的新功能，帮助编写比以往任何时候都简洁的代码。 重点是缩减了使用 `out` 关键字的变量声明，并通过元组实现了多个返回值。
 

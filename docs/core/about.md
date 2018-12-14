@@ -4,12 +4,12 @@ description: 了解 .NET Core。
 author: richlander
 ms.author: mairaw
 ms.date: 08/01/2018
-ms.openlocfilehash: fc4b76df8b71865b14caf27c7e21906cccc88d07
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 93619fce58a3b3aa94e6c14fc7cfeb1b0bf48272
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50197647"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53126973"
 ---
 # <a name="about-net-core"></a>关于 .NET Core
 
@@ -17,7 +17,7 @@ ms.locfileid: "50197647"
 
 - **跨平台：** 可以在 Windows、macOS 和 Linux [操作系统](https://github.com/dotnet/core/blob/master/os-lifecycle-policy.md)上运行。
 - **跨体系结构保持一致：** 在多个体系结构（包括 x64、x86 和 ARM）上以相同的行为运行代码。
-- **命令行工具：** 包括用于本地开发和持续集成方案中的易于使用的命令行工具。
+- **命令行工具：** 包括可用于本地开发和持续集成方案中的易于使用的命令行工具。
 - **部署灵活：** 可以包含在应用或已安装的并行用户或计算机范围中。 可搭配 [Docker 容器](docker/index.md)使用。
 - **兼容性：**.NET Core 通过 [.NET Standard](../standard/net-standard.md)与 .NET Framework、Xamarin 和 Mono 兼容。
 - **开放源：**.NET Core 是一个开放源平台，使用 MIT 和 Apache 2 许可证。 .NET Core 是一个 [.NET Foundation](https://dotnetfoundation.org/) 项目。

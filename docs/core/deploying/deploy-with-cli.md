@@ -1,5 +1,5 @@
 ---
-title: 使用 CLI 工具部署 .NET Core 应用
+title: 使用命令行接口 (CLI) 工具部署 .NET Core 应用
 description: 了解如何使用命令行接口 (CLI) 工具部署 .NET Core 应用
 author: rpetrusha
 ms.author: ronpet
@@ -7,14 +7,15 @@ ms.date: 09/05/2018
 dev_langs:
 - csharp
 - vb
-ms.openlocfilehash: 6c0eb82b6be5d65c70287dd601bb97868af1c943
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.custom: seodec18
+ms.openlocfilehash: 05460174e9b8472a2862c829cd58b72aec26b549
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49454442"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53151091"
 ---
-# <a name="deploying-net-core-apps-with-command-line-interface-cli-tools"></a>使用命令行接口 (CLI) 工具部署 .NET Core 应用
+# <a name="deploy-net-core-apps-with-command-line-interface-cli-tools"></a>使用命令行接口 (CLI) 工具部署 .NET Core 应用
 
 可将 .NET Core 应用程序部署为依赖框架的部署或独立部署，前者包含应用程序二进制文件，但依赖目标系统上存在的 .NET Core，而后者同时包含应用程序和 .NET Core 二进制文件。 请参阅 [.NET Core 应用程序部署](index.md)了解相关概述。
 

@@ -1,22 +1,21 @@
 ---
-title: 在 .NET Core 上使用 Microsoft XML 序列化程序生成器
-description: Microsoft XML 序列化程序生成器概述。
+title: Microsoft XML 序列化程序生成器 - .NET Core
+description: Microsoft XML 序列化程序生成器概述。 使用 XML 序列化程序生成器为项目中包含的类型生成 XML 序列化程序集。
 author: mlacouture
 ms.author: johalex
 ms.date: 01/19/2017
 ms.topic: tutorial
-ms.custom: mvc
-ms.openlocfilehash: 98d85821784757db903c97e240c55a3d7bb656d5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.custom: mvc, seodec18
+ms.openlocfilehash: 3712ac35a9e08b04a0f555642f43055e9e6232e2
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33214551"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53151754"
 ---
 # <a name="using-microsoft-xml-serializer-generator-on-net-core"></a>在 .NET Core 上使用 Microsoft XML 序列化程序生成器
 
 本教程介绍如何在 C# .NET Core 应用程序中使用 Microsoft XML 序列化程序生成器。 在本教程中可学习：
-
 
 > [!div class="checklist"]
 > * 如何创建 .NET Core 应用
@@ -25,13 +24,13 @@ ms.locfileid: "33214551"
 > * 如何添加类和 XmlSerializer
 > * 如何生成并运行应用程序 
 
-正如适用于 .NET Framework 的 [Xml Serializer Generator (sgen.exe)](../../standard/serialization/xml-serializer-generator-tool-sgen-exe.md)，[Microsoft.XmlSerializer.Generator NuGet 包](https://www.nuget.org/packages/Microsoft.XmlSerializer.Generator) 是适用于 .NET Core 和 .NET Standard 项目的等效项。 它为程序集中包含的类型创建 XML 序列化程序集，从而提高使用 <xref:System.Xml.Serialization.XmlSerializer> 序列化或反序列化这些类型对象时，XML 序列化的启动性能。
+正如适用于 .NET Framework 的 [Xml Serializer Generator (sgen.exe)](../../standard/serialization/xml-serializer-generator-tool-sgen-exe.md)，[Microsoft.XmlSerializer.Generator NuGet 包](https://www.nuget.org/packages/Microsoft.XmlSerializer.Generator) 是适用于 .NET Core 和 .NET 标准项目的等效项。 它为程序集中包含的类型创建 XML 序列化程序集，从而提高使用 <xref:System.Xml.Serialization.XmlSerializer> 序列化或反序列化这些类型对象时，XML 序列化的启动性能。
 
 ## <a name="prerequisites"></a>系统必备
 
 完成本教程：
 
-* 安装 [.NET Core SDK 2.1.3 或更高版本](https://www.microsoft.com/net/download)
+* 安装 [.NET Core 2.1 SDK 或更高版本](https://www.microsoft.com/net/download)。
 * 安装常用的代码编辑器（如果尚未安装）。
 
 > [!TIP]

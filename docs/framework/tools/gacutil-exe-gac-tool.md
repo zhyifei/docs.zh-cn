@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 4c7be9c8-72ae-481f-a01c-1a4716806e99
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 98423e6c103f7eb93b4bfa35ef19b6551c0df0e0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 806ccb1d33d9a7b66c740099864decd651c9213f
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33399589"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53144879"
 ---
 # <a name="gacutilexe-global-assembly-cache-tool"></a>Gacutil.exe（全局程序集缓存工具）
 全局程序集缓存工具使你可以查看和操作全局程序集缓存和下载缓存的内容。  
@@ -41,13 +41,13 @@ gacutil [options] [assemblyName | assemblyPath | assemblyListFile]
   
 #### <a name="parameters"></a>参数  
   
-|参数|描述|  
+|参数|说明|  
 |--------------|-----------------|  
 |*assemblyName*|程序集的名称。 可以提供部分指定的程序集名称（如 `myAssembly`）或完全指定的程序集名称（如 `myAssembly, Version=2.0.0.0, Culture=neutral, PublicKeyToken=0038abc9deabfle5`）。|  
 |assemblyPath|包含程序集清单的文件的名称。|  
 |assemblyListFile|列出要安装或卸载的程序集的 ANSI 文本文件的路径。 若要使用文本文件安装程序集，请在文件中使用单独的行分别指定每个程序集的路径。 该工具可解释相对于 assemblyListFile 位置的相对路径。 若要使用文本文件卸载程序集，请在文件中使用单独的行分别为每个程序集指定完全限定的程序集名称。 请参见本主题后面的 assemblyListFile 内容示例。|  
   
-|选项|描述|  
+|选项|说明|  
 |------------|-----------------|  
 |/cdl|删除下载缓存的内容。|  
 |/f|使用 /i 或 /il 选项来指定此选项将强制重新安装程序集。 如果全局程序集缓存中已经存在同名的程序集，全局程序集缓存工具将覆盖它。|  
@@ -93,7 +93,23 @@ myAssembly1,Version=1.1.0.0,Culture=en,PublicKeyToken=874e23ab874e23ab
 myAssembly2,Version=1.1.0.0,Culture=en,PublicKeyToken=874e23ab874e23ab  
 myAssembly3,Version=1.1.0.0,Culture=en,PublicKeyToken=874e23ab874e23ab  
 ```  
-  
+
+> [!NOTE]
+>  尝试安装文件名长度超过 79 到 91 个字符（不包括文件扩展名）的程序集可能会导致以下错误：
+> ```
+> Failure adding assembly to the cache:   The file name is too long.
+> ```
+> 这是因为 Gacutil.exe 在内部构造了一个最多 MAX_PATH 个字符的路径，该路径由以下元素组成：
+> - GAC Root - 34 个字符（即 `C:\Windows\Microsoft.NET\assembly\`）
+> - Architecture - 7 或 9 个字符（即 `GAC_32\`、`GAC_64\`、`GAC_MSIL`）
+> - AssemblyName - 最多 91 个字符，具体取决于其他元素的大小（例如 `System.Xml.Linq\`)
+> - AssemblyInfo - 31 到 48 个字符或由以下内容组成的更多字符：
+>   - Framework - 5 个字符（例如 `v4.0_`)
+>   - AssemblyVersion - 8 到 24 个字符（例如 `9.0.1000.0_`)
+>   - AssemblyLanguage - 1 到 8 个字符（例如 `de_`、`sr-Cyrl_`）
+>   - PublicKey - 17 个字符（例如 `31bf3856ad364e35\`)
+> - DllFileName - 最多 91 + 4 个字符（即 `<AssemblyName>.dll`）
+
 ## <a name="examples"></a>示例  
  以下命令将程序集 `mydll.dll` 安装到全局程序集缓存中。  
   

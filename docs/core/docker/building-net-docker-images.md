@@ -1,21 +1,21 @@
 ---
-title: 生成 .NET Core Docker 映像
-description: 了解 Docker 映像和 .NET Core
+title: Docker 映像概述 - .NET Core
+description: 了解如何使用 Docker 注册表中发布的 .NET Core Docker 映像。 你还将了解如何拉取映像和生成自己的映像。
 author: jralexander
 ms.author: johalex
 ms.date: 11/06/2017
 ms.topic: tutorial
-ms.custom: mvc
-ms.openlocfilehash: 675b6821588f8d0dd9495346a13665a32986f060
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.custom: mvc, seodec18
+ms.openlocfilehash: 34ff6ce7d990412fa0ac4896d1e2e39b307681f0
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48841159"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53145827"
 ---
-# <a name="building-docker-images-for-net-core-applications"></a>为 .NET Core 应用程序生成 Docker 映像
+# <a name="learn-about-docker-images-for-net-core"></a>了解适用于 .NET Core 的 Docker 映像
 
- 本教程重点介绍了如何在 Docker 上使用 .NET Core。 首先，我们探讨 Microsoft 维护和提供的各种不同的 Docker 映像，及其使用情况。 然后讲解了如何生成和 Docker 化 ASP.NET Core 应用。
+本教程重点介绍了如何在 Docker 上使用 .NET Core。 首先，我们探讨 Microsoft 维护和提供的各种不同的 Docker 映像，及其使用情况。 然后讲解了如何生成和 Docker 化 ASP.NET Core 应用。
 
 在本教程中可学习：
 > [!div class="checklist"]
@@ -115,7 +115,7 @@ ms.locfileid: "48841159"
 
 #### <a name="net-core-21-sdk"></a>.NET Core 2.1 SDK
 
-* 安装 [.NET Core SDK 2.1](https://www.microsoft.com/net/core)。
+* 安装 [.NET Core 2.1 SDK](https://www.microsoft.com/net/core)。
 
 * 安装常用的代码编辑器（如果尚未安装）。
 

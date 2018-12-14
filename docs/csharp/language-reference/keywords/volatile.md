@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - volatile keyword [C#]
 ms.assetid: 78089bc7-7b38-4cfd-9e49-87ac036af009
-ms.openlocfilehash: 9950bb0e32787306dc34e2c006099332c06bda2b
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: fd81c0c36cb88b971539e843e3e1f2096a73d40e
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50199963"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53152770"
 ---
 # <a name="volatile-c-reference"></a>volatile（C# 参考）
 
@@ -29,7 +29,7 @@ ms.locfileid: "50199963"
 
 其他类型（包括 `double` 和 `long`）无法标记为 `volatile`，因为对这些类型的字段的读取和写入不能保证是原子的。 若要保护对这些类型字段的多线程访问，请使用 <xref:System.Threading.Interlocked> 类成员或使用 [`lock`](lock-statement.md) 语句保护访问权限。
 
-可变关键字只能应用于 `class` 或 `struct` 的字段。 不能将局部变量声明为 `volatile`。
+`volatile` 关键字只能应用于 `class` 或 `struct` 的字段。 不能将局部变量声明为 `volatile`。
   
 ## <a name="example"></a>示例
 
@@ -37,7 +37,7 @@ ms.locfileid: "50199963"
   
 [!code-csharp[declareVolatile](~/samples/snippets/csharp/language-reference/keywords/volatile/Program.cs#Declaration)]
 
-下面的示例演示如何创建辅助线程，并用它与主线程并行执行处理。 有关多线程处理的背景信息，请参阅[托管线程](../../../standard/threading/index.md)和[线程 (C#)](../../programming-guide/concepts/threading/index.md)。  
+下面的示例演示如何创建辅助线程，并用它与主线程并行执行处理。 有关多线程处理的详细信息，请参阅[托管线程处理](../../../standard/threading/index.md)。
   
 [!code-csharp[declareVolatile](~/samples/snippets/csharp/language-reference/keywords/volatile/Program.cs#Volatile)]
 

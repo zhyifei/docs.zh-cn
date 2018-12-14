@@ -4,12 +4,12 @@ description: dotnet new 命令可根据指定模板新建 .NET Core 项目。
 author: mairaw
 ms.author: mairaw
 ms.date: 10/24/2018
-ms.openlocfilehash: 56d76f1dd54097f9cf20129d74057235290c273c
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: a8d486f569f31d68d5659ac6a80d615474ef2506
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50188192"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53131477"
 ---
 # <a name="dotnet-new"></a>dotnet new
 
@@ -49,7 +49,7 @@ dotnet new [-h|--help]
 
 ---
 
-## <a name="description"></a>描述
+## <a name="description"></a>说明
 
 `dotnet new` 命令为初始化有效的 .NET Core 项目提供了便捷方法。
 
@@ -71,6 +71,7 @@ dotnet new [-h|--help]
 | 类库                                | `classlib`       | [C#]、F#、VB  |
 | 单元测试项目                            | `mstest`         | [C#]、F#、VB  |
 | xUnit 测试项目                           | `xunit`          | [C#]、F#、VB  |
+| NUnit 试项目                           | `nunit`          | [C#]、F#、VB  |
 | Razor 页                                   | `page`           | [C#]          |
 | MVC ViewImports                              | `viewimports`    | [C#]          |
 | MVC ViewStart                                | `viewstart`      | [C#]          |

@@ -2,12 +2,12 @@
 title: C# 7.2 中的新增功能
 description: C# 7.2 中的新增功能概述。
 ms.date: 08/16/2017
-ms.openlocfilehash: 93b0a5281db841abdb8de0865dfe4b13be6d9ee2
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 7ee6d06750f82c9529beaed3cc665f876af08888
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50181168"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53148170"
 ---
 # <a name="whats-new-in-c-72"></a>C# 7.2 中的新增功能
 
@@ -28,6 +28,8 @@ C# 7.2 使用[语言版本选择](../language-reference/configure-language-versi
   - 数值文字现可在任何打印数字前放置前导下划线。
 * [`private protected` 访问修饰符](#private-protected-access-modifier)
   - `private protected` 访问修饰符允许访问同一程序集中的派生类。
+* [条件 `ref` 表达式](#conditional-ref-expressions)
+  - 现在可以引用条件表达式 (`?:`) 的结果。
 
 ## <a name="safe-efficient-code-enhancements"></a>安全高效的代码的增强功能
 
@@ -56,6 +58,18 @@ int binaryValue = 0b_0101_0101;
 
 ## <a name="private-protected-access-modifier"></a>_private protected_ 访问修饰符
 
-最后，新的复合访问修饰符 `private protected` 指示可通过包含同一程序集中声明的类或派生类来访问成员。 虽然 `protected internal` 允许通过同一程序集中的类或派生类进行访问，但 `private protected` 限制对同一程序集中声明的派生类的访问。
+新的复合访问修饰符：`private protected` 指示可通过包含同一程序集中声明的类或派生类来访问成员。 虽然 `protected internal` 允许通过同一程序集中的类或派生类进行访问，但 `private protected` 限制对同一程序集中声明的派生类的访问。
 
 有关详细信息，请参阅语言参考中的[访问修饰符](../language-reference/keywords/access-modifiers.md)。
+
+## <a name="conditional-ref-expressions"></a>条件 `ref` 表达式
+
+最后，条件表达式可能生成 ref 结果而不是值。 例如，你将编写以下内容以检索对两个数组之一中第一个元素的引用：
+
+```csharp
+ref var r = ref (arr != null ? ref arr[0] : ref otherArr[0]);
+```
+
+变量 `r` 是对 `arr` 或 `otherArr` 中第一个值的引用。
+
+有关详细信息，请参阅语言参考中的[条件运算符 (?:)](../language-reference/operators/conditional-operator.md)。
