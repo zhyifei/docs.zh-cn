@@ -1,44 +1,50 @@
 ---
 title: -&gt; 运算符（C# 参考）
-ms.date: 07/20/2015
+ms.date: 11/26/2018
 f1_keywords:
 - ->_CSharpKeyword
 helpviewer_keywords:
 - member access operator (->) [C#]
 - -> operator [C#]
 ms.assetid: e39ccdc1-f1ff-4a92-bf1d-ac2c8c11316a
-ms.openlocfilehash: fb95e508ce1339868723bcc3178851e8c1355c1f
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 178724ede105d809bd812461121a38d5a0e90517
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45609512"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53144125"
 ---
-# <a name="-gt-operator-c-reference"></a><span data-ttu-id="a5b43-102">-&gt; 运算符（C# 参考）</span><span class="sxs-lookup"><span data-stu-id="a5b43-102">-&gt; Operator (C# Reference)</span></span>
-<span data-ttu-id="a5b43-103">`->` 运算符将取消指针引用与成员访问结合起来。</span><span class="sxs-lookup"><span data-stu-id="a5b43-103">The `->` operator combines pointer dereferencing and member access.</span></span>  
-  
-## <a name="remarks"></a><span data-ttu-id="a5b43-104">备注</span><span class="sxs-lookup"><span data-stu-id="a5b43-104">Remarks</span></span>  
- <span data-ttu-id="a5b43-105">形式如下的表达式，</span><span class="sxs-lookup"><span data-stu-id="a5b43-105">An expression of the form,</span></span>  
-  
-```csharp  
-x->y  
-```  
-  
- <span data-ttu-id="a5b43-106">（其中 `x` 是 `T*` 类型的指针，`y` 属于 `T`）等效于</span><span class="sxs-lookup"><span data-stu-id="a5b43-106">(where `x` is a pointer of type `T*` and `y` is a member of `T`) is equivalent to,</span></span>  
-  
-```csharp  
-(*x).y  
-```  
-  
- <span data-ttu-id="a5b43-107">`->` 运算符仅可用于标记为[不安全](../../../csharp/language-reference/keywords/unsafe.md)的代码中。</span><span class="sxs-lookup"><span data-stu-id="a5b43-107">The `->` operator can be used only in code that is marked as [unsafe](../../../csharp/language-reference/keywords/unsafe.md).</span></span>  
-  
- <span data-ttu-id="a5b43-108">不能重载 `->` 运算符。</span><span class="sxs-lookup"><span data-stu-id="a5b43-108">The `->` operator cannot be overloaded.</span></span>  
-  
-## <a name="example"></a><span data-ttu-id="a5b43-109">示例</span><span class="sxs-lookup"><span data-stu-id="a5b43-109">Example</span></span>  
- [!code-csharp[csRefOperators#15](../../../csharp/language-reference/operators/codesnippet/CSharp/dereference-operator_1.cs)]  
-  
-## <a name="see-also"></a><span data-ttu-id="a5b43-110">请参阅</span><span class="sxs-lookup"><span data-stu-id="a5b43-110">See Also</span></span>
+# <a name="-gt-operator-c-reference"></a><span data-ttu-id="6470c-102">-&gt; 运算符（C# 参考）</span><span class="sxs-lookup"><span data-stu-id="6470c-102">-&gt; Operator (C# Reference)</span></span>
 
-- [<span data-ttu-id="a5b43-111">C# 参考</span><span class="sxs-lookup"><span data-stu-id="a5b43-111">C# Reference</span></span>](../../../csharp/language-reference/index.md)  
-- [<span data-ttu-id="a5b43-112">C# 编程指南</span><span class="sxs-lookup"><span data-stu-id="a5b43-112">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
-- [<span data-ttu-id="a5b43-113">C# 运算符</span><span class="sxs-lookup"><span data-stu-id="a5b43-113">C# Operators</span></span>](../../../csharp/language-reference/operators/index.md)
+<span data-ttu-id="6470c-103">指针成员访问运算符 `->` 结合了指针间接和成员访问。</span><span class="sxs-lookup"><span data-stu-id="6470c-103">The pointer member access operator `->` combines pointer indirection and member access.</span></span>
+
+<span data-ttu-id="6470c-104">如果 `x` 是类型为 `T*` 的指针而 `y` 是 `T` 的可访问成员，则这种形式的表达式</span><span class="sxs-lookup"><span data-stu-id="6470c-104">If `x` is a pointer of the type `T*` and `y` is an accessible member of `T`, an expression of the form</span></span>
+
+```csharp
+x->y
+```
+
+<span data-ttu-id="6470c-105">等效于</span><span class="sxs-lookup"><span data-stu-id="6470c-105">is equivalent to</span></span>
+
+```csharp
+(*x).y
+```
+
+<span data-ttu-id="6470c-106">`->` 运算符需要[不安全](../keywords/unsafe.md)上下文。</span><span class="sxs-lookup"><span data-stu-id="6470c-106">The `->` operator requires [unsafe](../keywords/unsafe.md) context.</span></span>
+
+<span data-ttu-id="6470c-107">有关详细信息，请参阅[如何：使用指针访问成员](../../programming-guide/unsafe-code-pointers/how-to-access-a-member-with-a-pointer.md)。</span><span class="sxs-lookup"><span data-stu-id="6470c-107">For more information, see [How to: access a member with a pointer](../../programming-guide/unsafe-code-pointers/how-to-access-a-member-with-a-pointer.md).</span></span>
+
+## <a name="operator-overloadability"></a><span data-ttu-id="6470c-108">运算符可重载性</span><span class="sxs-lookup"><span data-stu-id="6470c-108">Operator overloadability</span></span>
+
+<span data-ttu-id="6470c-109">不能重载 `->` 运算符。</span><span class="sxs-lookup"><span data-stu-id="6470c-109">The `->` operator cannot be overloaded.</span></span>
+
+## <a name="c-language-specification"></a><span data-ttu-id="6470c-110">C# 语言规范</span><span class="sxs-lookup"><span data-stu-id="6470c-110">C# language specification</span></span>
+
+<span data-ttu-id="6470c-111">有关详细信息，请参阅 [C# 语言规范](../language-specification/index.md)中的[指针成员访问](~/_csharplang/spec/unsafe-code.md#pointer-member-access)部分。</span><span class="sxs-lookup"><span data-stu-id="6470c-111">For more information, see the [Pointer member access](~/_csharplang/spec/unsafe-code.md#pointer-member-access) section of the [C# language specification](../language-specification/index.md).</span></span>
+
+## <a name="see-also"></a><span data-ttu-id="6470c-112">请参阅</span><span class="sxs-lookup"><span data-stu-id="6470c-112">See also</span></span>
+
+- [<span data-ttu-id="6470c-113">C# 参考</span><span class="sxs-lookup"><span data-stu-id="6470c-113">C# Reference</span></span>](../index.md)
+- [<span data-ttu-id="6470c-114">C# 编程指南</span><span class="sxs-lookup"><span data-stu-id="6470c-114">C# Programming Guide</span></span>](../../programming-guide/index.md)
+- [<span data-ttu-id="6470c-115">C# 运算符</span><span class="sxs-lookup"><span data-stu-id="6470c-115">C# Operators</span></span>](index.md)
+- [<span data-ttu-id="6470c-116">指针类型</span><span class="sxs-lookup"><span data-stu-id="6470c-116">Pointer types</span></span>](../../programming-guide/unsafe-code-pointers/pointer-types.md)

@@ -2,38 +2,31 @@
 title: dotnet nuget push 命令 - .NET Core CLI
 description: dotnet nuget push 命令可将包推送到服务器并发布。
 author: karann-msft
-ms.author: mairaw
-ms.date: 09/04/2018
-ms.openlocfilehash: b9c0fad886cd1234325c58bf61b1a010bce421d9
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.date: 12/04/2018
+ms.openlocfilehash: 090dbfbe3db83b2bb234867aed295ac416b27865
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "50200015"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53143056"
 ---
-# <a name="dotnet-nuget-push"></a><span data-ttu-id="d6a35-103">dotnet nuget push</span><span class="sxs-lookup"><span data-stu-id="d6a35-103">dotnet nuget push</span></span>
+# <a name="dotnet-nuget-push"></a><span data-ttu-id="abe5f-103">dotnet nuget push</span><span class="sxs-lookup"><span data-stu-id="abe5f-103">dotnet nuget push</span></span>
 
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 
-## <a name="name"></a><span data-ttu-id="d6a35-104">name</span><span class="sxs-lookup"><span data-stu-id="d6a35-104">Name</span></span>
+## <a name="name"></a><span data-ttu-id="abe5f-104">name</span><span class="sxs-lookup"><span data-stu-id="abe5f-104">Name</span></span>
 
-<span data-ttu-id="d6a35-105">`dotnet nuget push` - 将包推送到服务器，并将其发布。</span><span class="sxs-lookup"><span data-stu-id="d6a35-105">`dotnet nuget push` - Pushes a package to the server and publishes it.</span></span>
+<span data-ttu-id="abe5f-105">`dotnet nuget push` - 将包推送到服务器，并将其发布。</span><span class="sxs-lookup"><span data-stu-id="abe5f-105">`dotnet nuget push` - Pushes a package to the server and publishes it.</span></span>
 
-## <a name="synopsis"></a><span data-ttu-id="d6a35-106">摘要</span><span class="sxs-lookup"><span data-stu-id="d6a35-106">Synopsis</span></span>
+## <a name="synopsis"></a><span data-ttu-id="abe5f-106">摘要</span><span class="sxs-lookup"><span data-stu-id="abe5f-106">Synopsis</span></span>
 
-# <a name="net-core-21tabnetcore21"></a>[<span data-ttu-id="d6a35-107">.NET Core 2.1</span><span class="sxs-lookup"><span data-stu-id="d6a35-107">.NET Core 2.1</span></span>](#tab/netcore21)
+# <a name="net-core-2xtabnetcore2x"></a>[<span data-ttu-id="abe5f-107">.NET Core 2.x</span><span class="sxs-lookup"><span data-stu-id="abe5f-107">.NET Core 2.x</span></span>](#tab/netcore2x)
 ```
-dotnet nuget push [<ROOT>] [-d|--disable-buffering] [--force-english-output] [-k|--api-key] [-n|--no-symbols]
+dotnet nuget push [<ROOT>] [-d|--disable-buffering] [--force-english-output] [--interactive] [-k|--api-key] [-n|--no-symbols]
     [--no-service-endpoint] [-s|--source] [-sk|--symbol-api-key] [-ss|--symbol-source] [-t|--timeout]
 dotnet nuget push [-h|--help]
 ```
-# <a name="net-core-20tabnetcore20"></a>[<span data-ttu-id="d6a35-108">.NET Core 2.0</span><span class="sxs-lookup"><span data-stu-id="d6a35-108">.NET Core 2.0</span></span>](#tab/netcore20)
-```
-dotnet nuget push [<ROOT>] [-d|--disable-buffering] [--force-english-output] [-k|--api-key] [-n|--no-symbols]
-    [-s|--source] [-sk|--symbol-api-key] [-ss|--symbol-source] [-t|--timeout]
-dotnet nuget push [-h|--help]
-```
-# <a name="net-core-1xtabnetcore1x"></a>[<span data-ttu-id="d6a35-109">.NET Core 1.x</span><span class="sxs-lookup"><span data-stu-id="d6a35-109">.NET Core 1.x</span></span>](#tab/netcore1x)
+# <a name="net-core-1xtabnetcore1x"></a>[<span data-ttu-id="abe5f-108">.NET Core 1.x</span><span class="sxs-lookup"><span data-stu-id="abe5f-108">.NET Core 1.x</span></span>](#tab/netcore1x)
 ```
 dotnet nuget push [<ROOT>] [-d|--disable-buffering] [--force-english-output] [-k|--api-key] [-n|--no-symbols]
     [-s|--source] [-sk|--symbol-api-key] [-ss|--symbol-source] [-t|--timeout]
@@ -41,160 +34,138 @@ dotnet nuget push [-h|--help]
 ```
 ---
 
-## <a name="description"></a><span data-ttu-id="d6a35-110">描述</span><span class="sxs-lookup"><span data-stu-id="d6a35-110">Description</span></span>
+## <a name="description"></a><span data-ttu-id="abe5f-109">说明</span><span class="sxs-lookup"><span data-stu-id="abe5f-109">Description</span></span>
 
-<span data-ttu-id="d6a35-111">`dotnet nuget push` 将包推送到服务器，并将其发布。</span><span class="sxs-lookup"><span data-stu-id="d6a35-111">The `dotnet nuget push` command pushes a package to the server and publishes it.</span></span> <span data-ttu-id="d6a35-112">push 命令使用在系统的 NuGet 配置文件或配置文件链中找到的服务器和凭据详细信息。</span><span class="sxs-lookup"><span data-stu-id="d6a35-112">The push command uses server and credential details found in the system's NuGet config file or chain of config files.</span></span> <span data-ttu-id="d6a35-113">有关配置文件的详细信息，请参阅 [Configuring NuGet Behavior](/nuget/consume-packages/configuring-nuget-behavior)（配置 NuGet 行为）。</span><span class="sxs-lookup"><span data-stu-id="d6a35-113">For more information on config files, see [Configuring NuGet Behavior](/nuget/consume-packages/configuring-nuget-behavior).</span></span> <span data-ttu-id="d6a35-114">通过加载 *%AppData%\NuGet\NuGet.config* (Windows) 或 *$HOME/.local/share* (Linux/macOS) 获得 NuGet 的默认配置，然后加载任意 *nuget.config* 或 *.nuget\nuget.config*，从驱动器的根目录开始，并在当前目录中结束。</span><span class="sxs-lookup"><span data-stu-id="d6a35-114">NuGet's default configuration is obtained by loading *%AppData%\NuGet\NuGet.config* (Windows) or *$HOME/.local/share* (Linux/macOS), then loading any *nuget.config* or *.nuget\nuget.config* starting from the root of drive and ending in the current directory.</span></span>
+<span data-ttu-id="abe5f-110">`dotnet nuget push` 将包推送到服务器，并将其发布。</span><span class="sxs-lookup"><span data-stu-id="abe5f-110">The `dotnet nuget push` command pushes a package to the server and publishes it.</span></span> <span data-ttu-id="abe5f-111">push 命令使用在系统的 NuGet 配置文件或配置文件链中找到的服务器和凭据详细信息。</span><span class="sxs-lookup"><span data-stu-id="abe5f-111">The push command uses server and credential details found in the system's NuGet config file or chain of config files.</span></span> <span data-ttu-id="abe5f-112">有关配置文件的详细信息，请参阅 [Configuring NuGet Behavior](/nuget/consume-packages/configuring-nuget-behavior)（配置 NuGet 行为）。</span><span class="sxs-lookup"><span data-stu-id="abe5f-112">For more information on config files, see [Configuring NuGet Behavior](/nuget/consume-packages/configuring-nuget-behavior).</span></span> <span data-ttu-id="abe5f-113">通过加载 *%AppData%\NuGet\NuGet.config* (Windows) 或 *$HOME/.local/share* (Linux/macOS) 获得 NuGet 的默认配置，然后加载任意 *nuget.config* 或 *.nuget\nuget.config*，从驱动器的根目录开始，并在当前目录中结束。</span><span class="sxs-lookup"><span data-stu-id="abe5f-113">NuGet's default configuration is obtained by loading *%AppData%\NuGet\NuGet.config* (Windows) or *$HOME/.local/share* (Linux/macOS), then loading any *nuget.config* or *.nuget\nuget.config* starting from the root of drive and ending in the current directory.</span></span>
 
-## <a name="arguments"></a><span data-ttu-id="d6a35-115">自变量</span><span class="sxs-lookup"><span data-stu-id="d6a35-115">Arguments</span></span>
+## <a name="arguments"></a><span data-ttu-id="abe5f-114">自变量</span><span class="sxs-lookup"><span data-stu-id="abe5f-114">Arguments</span></span>
 
-`ROOT`
+* **`ROOT`**
 
-<span data-ttu-id="d6a35-116">指定要推送的包的文件路径。</span><span class="sxs-lookup"><span data-stu-id="d6a35-116">Specifies the file path to the package to be pushed.</span></span>
+  <span data-ttu-id="abe5f-115">指定要推送的包的文件路径。</span><span class="sxs-lookup"><span data-stu-id="abe5f-115">Specifies the file path to the package to be pushed.</span></span>
 
-## <a name="options"></a><span data-ttu-id="d6a35-117">选项</span><span class="sxs-lookup"><span data-stu-id="d6a35-117">Options</span></span>
+## <a name="options"></a><span data-ttu-id="abe5f-116">选项</span><span class="sxs-lookup"><span data-stu-id="abe5f-116">Options</span></span>
 
-# <a name="net-core-21tabnetcore21"></a>[<span data-ttu-id="d6a35-118">.NET Core 2.1</span><span class="sxs-lookup"><span data-stu-id="d6a35-118">.NET Core 2.1</span></span>](#tab/netcore21)
+# <a name="net-core-2xtabnetcore2x"></a>[<span data-ttu-id="abe5f-117">.NET Core 2.x</span><span class="sxs-lookup"><span data-stu-id="abe5f-117">.NET Core 2.x</span></span>](#tab/netcore2x)
 
-`-d|--disable-buffering`
+* **`-d|--disable-buffering`**
 
-<span data-ttu-id="d6a35-119">当推送到 HTTP(S) 服务器以减少内存使用率时，禁用缓冲。</span><span class="sxs-lookup"><span data-stu-id="d6a35-119">Disables buffering when pushing to an HTTP(S) server to reduce memory usage.</span></span>
+  <span data-ttu-id="abe5f-118">当推送到 HTTP(S) 服务器以减少内存使用率时，禁用缓冲。</span><span class="sxs-lookup"><span data-stu-id="abe5f-118">Disables buffering when pushing to an HTTP(S) server to reduce memory usage.</span></span>
 
-`--force-english-output`
+* **`--force-english-output`**
 
-<span data-ttu-id="d6a35-120">使用固定的、基于英语的区域性强制运行应用程序。</span><span class="sxs-lookup"><span data-stu-id="d6a35-120">Forces the application to run using an invariant, English-based culture.</span></span>
+  <span data-ttu-id="abe5f-119">使用固定的、基于英语的区域性强制运行应用程序。</span><span class="sxs-lookup"><span data-stu-id="abe5f-119">Forces the application to run using an invariant, English-based culture.</span></span>
 
-`-h|--help`
+* **`-h|--help`**
 
-<span data-ttu-id="d6a35-121">打印出有关命令的简短帮助。</span><span class="sxs-lookup"><span data-stu-id="d6a35-121">Prints out a short help for the command.</span></span>
+<span data-ttu-id="abe5f-120">打印出有关命令的简短帮助。</span><span class="sxs-lookup"><span data-stu-id="abe5f-120">Prints out a short help for the command.</span></span>
 
-`-k|--api-key <API_KEY>`
+* **`--interactive`**
 
-<span data-ttu-id="d6a35-122">服务器的 API 密钥。</span><span class="sxs-lookup"><span data-stu-id="d6a35-122">The API key for the server.</span></span>
+  <span data-ttu-id="abe5f-121">对于身份验证等操作，允许命令阻止并要求手动操作。</span><span class="sxs-lookup"><span data-stu-id="abe5f-121">Allows the command to block and requires manual action for operations like authentication.</span></span> <span data-ttu-id="abe5f-122">自 .NET Core 2.2 SDK 起可用的选项。</span><span class="sxs-lookup"><span data-stu-id="abe5f-122">Option available since .NET Core 2.2 SDK.</span></span>
 
-`-n|--no-symbols`
+* **`-k|--api-key <API_KEY>`**
 
-<span data-ttu-id="d6a35-123">不推送符号（即使存在）。</span><span class="sxs-lookup"><span data-stu-id="d6a35-123">Doesn't push symbols (even if present).</span></span>
+  <span data-ttu-id="abe5f-123">服务器的 API 密钥。</span><span class="sxs-lookup"><span data-stu-id="abe5f-123">The API key for the server.</span></span>
 
-`--no-service-endpoint`
+* **`-n|--no-symbols`**
 
-<span data-ttu-id="d6a35-124">不将“api/v2/package”追加至源 URL。</span><span class="sxs-lookup"><span data-stu-id="d6a35-124">Doesn't append "api/v2/package" to the source URL.</span></span>
+  <span data-ttu-id="abe5f-124">不推送符号（即使存在）。</span><span class="sxs-lookup"><span data-stu-id="abe5f-124">Doesn't push symbols (even if present).</span></span>
 
-`-s|--source <SOURCE>`
+* **`--no-service-endpoint`**
 
-<span data-ttu-id="d6a35-125">指定服务器 URL。</span><span class="sxs-lookup"><span data-stu-id="d6a35-125">Specifies the server URL.</span></span> <span data-ttu-id="d6a35-126">除非在 NuGet 配置文件中设置了 `DefaultPushSource` 配置值，否则此选项是必需的。</span><span class="sxs-lookup"><span data-stu-id="d6a35-126">This option is required unless `DefaultPushSource` config value is set in the NuGet config file.</span></span>
+  <span data-ttu-id="abe5f-125">不将“api/v2/package”追加至源 URL。</span><span class="sxs-lookup"><span data-stu-id="abe5f-125">Doesn't append "api/v2/package" to the source URL.</span></span> <span data-ttu-id="abe5f-126">自 .NET Core 2.1 SDK 起可用的选项。</span><span class="sxs-lookup"><span data-stu-id="abe5f-126">Option available since .NET Core 2.1 SDK.</span></span>
 
-`-sk|--symbol-api-key <API_KEY>`
+* **`-s|--source <SOURCE>`**
 
-<span data-ttu-id="d6a35-127">符号服务器的 API 密钥。</span><span class="sxs-lookup"><span data-stu-id="d6a35-127">The API key for the symbol server.</span></span>
+  <span data-ttu-id="abe5f-127">指定服务器 URL。</span><span class="sxs-lookup"><span data-stu-id="abe5f-127">Specifies the server URL.</span></span> <span data-ttu-id="abe5f-128">除非在 NuGet 配置文件中设置了 `DefaultPushSource` 配置值，否则此选项是必需的。</span><span class="sxs-lookup"><span data-stu-id="abe5f-128">This option is required unless `DefaultPushSource` config value is set in the NuGet config file.</span></span>
 
-`-ss|--symbol-source <SOURCE>`
+* **`-sk|--symbol-api-key <API_KEY>`**
 
-<span data-ttu-id="d6a35-128">指定符号服务器 URL。</span><span class="sxs-lookup"><span data-stu-id="d6a35-128">Specifies the symbol server URL.</span></span>
+  <span data-ttu-id="abe5f-129">符号服务器的 API 密钥。</span><span class="sxs-lookup"><span data-stu-id="abe5f-129">The API key for the symbol server.</span></span>
 
-`-t|--timeout <TIMEOUT>`
+* **`-ss|--symbol-source <SOURCE>`**
 
-<span data-ttu-id="d6a35-129">指定推送到服务器的超时（秒）。</span><span class="sxs-lookup"><span data-stu-id="d6a35-129">Specifies the timeout for pushing to a server in seconds.</span></span> <span data-ttu-id="d6a35-130">默认值为 300 秒（5 分钟）。</span><span class="sxs-lookup"><span data-stu-id="d6a35-130">Defaults to 300 seconds (5 minutes).</span></span> <span data-ttu-id="d6a35-131">指定为 0（零秒）将应用默认值。</span><span class="sxs-lookup"><span data-stu-id="d6a35-131">Specifying 0 (zero seconds) applies the default value.</span></span>
+  <span data-ttu-id="abe5f-130">指定符号服务器 URL。</span><span class="sxs-lookup"><span data-stu-id="abe5f-130">Specifies the symbol server URL.</span></span>
 
-# <a name="net-core-20tabnetcore20"></a>[<span data-ttu-id="d6a35-132">.NET Core 2.0</span><span class="sxs-lookup"><span data-stu-id="d6a35-132">.NET Core 2.0</span></span>](#tab/netcore20)
+* **`-t|--timeout <TIMEOUT>`**
 
-`-d|--disable-buffering`
+  <span data-ttu-id="abe5f-131">指定推送到服务器的超时（秒）。</span><span class="sxs-lookup"><span data-stu-id="abe5f-131">Specifies the timeout for pushing to a server in seconds.</span></span> <span data-ttu-id="abe5f-132">默认值为 300 秒（5 分钟）。</span><span class="sxs-lookup"><span data-stu-id="abe5f-132">Defaults to 300 seconds (5 minutes).</span></span> <span data-ttu-id="abe5f-133">指定为 0（零秒）将应用默认值。</span><span class="sxs-lookup"><span data-stu-id="abe5f-133">Specifying 0 (zero seconds) applies the default value.</span></span>
 
-<span data-ttu-id="d6a35-133">当推送到 HTTP(S) 服务器以减少内存使用率时，禁用缓冲。</span><span class="sxs-lookup"><span data-stu-id="d6a35-133">Disables buffering when pushing to an HTTP(S) server to reduce memory usage.</span></span>
+# <a name="net-core-1xtabnetcore1x"></a>[<span data-ttu-id="abe5f-134">.NET Core 1.x</span><span class="sxs-lookup"><span data-stu-id="abe5f-134">.NET Core 1.x</span></span>](#tab/netcore1x)
 
-`--force-english-output`
+* **`-d|--disable-buffering`**
 
-<span data-ttu-id="d6a35-134">使用固定的、基于英语的区域性强制运行应用程序。</span><span class="sxs-lookup"><span data-stu-id="d6a35-134">Forces the application to run using an invariant, English-based culture.</span></span>
+  <span data-ttu-id="abe5f-135">当推送到 HTTP(S) 服务器以减少内存使用率时，禁用缓冲。</span><span class="sxs-lookup"><span data-stu-id="abe5f-135">Disables buffering when pushing to an HTTP(S) server to reduce memory usage.</span></span>
 
-`-h|--help`
+* **`--force-english-output`**
 
-<span data-ttu-id="d6a35-135">打印出有关命令的简短帮助。</span><span class="sxs-lookup"><span data-stu-id="d6a35-135">Prints out a short help for the command.</span></span>
+  <span data-ttu-id="abe5f-136">使用固定的、基于英语的区域性强制运行应用程序。</span><span class="sxs-lookup"><span data-stu-id="abe5f-136">Forces the application to run using an invariant, English-based culture.</span></span>
 
-`-k|--api-key <API_KEY>`
+* **`-h|--help`**
 
-<span data-ttu-id="d6a35-136">服务器的 API 密钥。</span><span class="sxs-lookup"><span data-stu-id="d6a35-136">The API key for the server.</span></span>
+  <span data-ttu-id="abe5f-137">打印出有关命令的简短帮助。</span><span class="sxs-lookup"><span data-stu-id="abe5f-137">Prints out a short help for the command.</span></span>
 
-`-n|--no-symbols`
+* **`-k|--api-key <API_KEY>`**
 
-<span data-ttu-id="d6a35-137">不推送符号（即使存在）。</span><span class="sxs-lookup"><span data-stu-id="d6a35-137">Doesn't push symbols (even if present).</span></span>
+  <span data-ttu-id="abe5f-138">服务器的 API 密钥。</span><span class="sxs-lookup"><span data-stu-id="abe5f-138">The API key for the server.</span></span>
 
-`-s|--source <SOURCE>`
+* **`-n|--no-symbols`**
 
-<span data-ttu-id="d6a35-138">指定服务器 URL。</span><span class="sxs-lookup"><span data-stu-id="d6a35-138">Specifies the server URL.</span></span> <span data-ttu-id="d6a35-139">除非在 NuGet 配置文件中设置了 `DefaultPushSource` 配置值，否则此选项是必需的。</span><span class="sxs-lookup"><span data-stu-id="d6a35-139">This option is required unless `DefaultPushSource` config value is set in the NuGet config file.</span></span>
+  <span data-ttu-id="abe5f-139">不推送符号（即使存在）。</span><span class="sxs-lookup"><span data-stu-id="abe5f-139">Doesn't push symbols (even if present).</span></span>
 
-`-sk|--symbol-api-key <API_KEY>`
+* **`-s|--source <SOURCE>`**
 
-<span data-ttu-id="d6a35-140">符号服务器的 API 密钥。</span><span class="sxs-lookup"><span data-stu-id="d6a35-140">The API key for the symbol server.</span></span>
+  <span data-ttu-id="abe5f-140">指定服务器 URL。</span><span class="sxs-lookup"><span data-stu-id="abe5f-140">Specifies the server URL.</span></span> <span data-ttu-id="abe5f-141">除非在 NuGet 配置文件中设置了 `DefaultPushSource` 配置值，否则此选项是必需的。</span><span class="sxs-lookup"><span data-stu-id="abe5f-141">This option is required unless `DefaultPushSource` config value is set in the NuGet config file.</span></span>
 
-`-ss|--symbol-source <SOURCE>`
+* **`-sk|--symbol-api-key <API_KEY>`**
 
-<span data-ttu-id="d6a35-141">指定符号服务器 URL。</span><span class="sxs-lookup"><span data-stu-id="d6a35-141">Specifies the symbol server URL.</span></span>
+  <span data-ttu-id="abe5f-142">符号服务器的 API 密钥。</span><span class="sxs-lookup"><span data-stu-id="abe5f-142">The API key for the symbol server.</span></span>
 
-`-t|--timeout <TIMEOUT>`
+* **`-ss|--symbol-source <SOURCE>`**
 
-<span data-ttu-id="d6a35-142">指定推送到服务器的超时（秒）。</span><span class="sxs-lookup"><span data-stu-id="d6a35-142">Specifies the timeout for pushing to a server in seconds.</span></span> <span data-ttu-id="d6a35-143">默认值为 300 秒（5 分钟）。</span><span class="sxs-lookup"><span data-stu-id="d6a35-143">Defaults to 300 seconds (5 minutes).</span></span> <span data-ttu-id="d6a35-144">指定为 0（零秒）将应用默认值。</span><span class="sxs-lookup"><span data-stu-id="d6a35-144">Specifying 0 (zero seconds) applies the default value.</span></span>
+  <span data-ttu-id="abe5f-143">指定符号服务器 URL。</span><span class="sxs-lookup"><span data-stu-id="abe5f-143">Specifies the symbol server URL.</span></span>
 
-# <a name="net-core-1xtabnetcore1x"></a>[<span data-ttu-id="d6a35-145">.NET Core 1.x</span><span class="sxs-lookup"><span data-stu-id="d6a35-145">.NET Core 1.x</span></span>](#tab/netcore1x)
+* **`-t|--timeout <TIMEOUT>`**
 
-`-d|--disable-buffering`
-
-<span data-ttu-id="d6a35-146">当推送到 HTTP(S) 服务器以减少内存使用率时，禁用缓冲。</span><span class="sxs-lookup"><span data-stu-id="d6a35-146">Disables buffering when pushing to an HTTP(S) server to reduce memory usage.</span></span>
-
-`--force-english-output`
-
-<span data-ttu-id="d6a35-147">使用固定的、基于英语的区域性强制运行应用程序。</span><span class="sxs-lookup"><span data-stu-id="d6a35-147">Forces the application to run using an invariant, English-based culture.</span></span>
-
-`-h|--help`
-
-<span data-ttu-id="d6a35-148">打印出有关命令的简短帮助。</span><span class="sxs-lookup"><span data-stu-id="d6a35-148">Prints out a short help for the command.</span></span>
-
-`-k|--api-key <API_KEY>`
-
-<span data-ttu-id="d6a35-149">服务器的 API 密钥。</span><span class="sxs-lookup"><span data-stu-id="d6a35-149">The API key for the server.</span></span>
-
-`-n|--no-symbols`
-
-<span data-ttu-id="d6a35-150">不推送符号（即使存在）。</span><span class="sxs-lookup"><span data-stu-id="d6a35-150">Doesn't push symbols (even if present).</span></span>
-
-`-s|--source <SOURCE>`
-
-<span data-ttu-id="d6a35-151">指定服务器 URL。</span><span class="sxs-lookup"><span data-stu-id="d6a35-151">Specifies the server URL.</span></span> <span data-ttu-id="d6a35-152">除非在 NuGet 配置文件中设置了 `DefaultPushSource` 配置值，否则此选项是必需的。</span><span class="sxs-lookup"><span data-stu-id="d6a35-152">This option is required unless `DefaultPushSource` config value is set in the NuGet config file.</span></span>
-
-`-sk|--symbol-api-key <API_KEY>`
-
-<span data-ttu-id="d6a35-153">符号服务器的 API 密钥。</span><span class="sxs-lookup"><span data-stu-id="d6a35-153">The API key for the symbol server.</span></span>
-
-`-ss|--symbol-source <SOURCE>`
-
-<span data-ttu-id="d6a35-154">指定符号服务器 URL。</span><span class="sxs-lookup"><span data-stu-id="d6a35-154">Specifies the symbol server URL.</span></span>
-
-`-t|--timeout <TIMEOUT>`
-
-<span data-ttu-id="d6a35-155">指定推送到服务器的超时（秒）。</span><span class="sxs-lookup"><span data-stu-id="d6a35-155">Specifies the timeout for pushing to a server in seconds.</span></span> <span data-ttu-id="d6a35-156">默认值为 300 秒（5 分钟）。</span><span class="sxs-lookup"><span data-stu-id="d6a35-156">Defaults to 300 seconds (5 minutes).</span></span> <span data-ttu-id="d6a35-157">指定为 0（零秒）将应用默认值。</span><span class="sxs-lookup"><span data-stu-id="d6a35-157">Specifying 0 (zero seconds) applies the default value.</span></span>
+  <span data-ttu-id="abe5f-144">指定推送到服务器的超时（秒）。</span><span class="sxs-lookup"><span data-stu-id="abe5f-144">Specifies the timeout for pushing to a server in seconds.</span></span> <span data-ttu-id="abe5f-145">默认值为 300 秒（5 分钟）。</span><span class="sxs-lookup"><span data-stu-id="abe5f-145">Defaults to 300 seconds (5 minutes).</span></span> <span data-ttu-id="abe5f-146">指定为 0（零秒）将应用默认值。</span><span class="sxs-lookup"><span data-stu-id="abe5f-146">Specifying 0 (zero seconds) applies the default value.</span></span>
 
 ---
 
-## <a name="examples"></a><span data-ttu-id="d6a35-158">示例</span><span class="sxs-lookup"><span data-stu-id="d6a35-158">Examples</span></span>
+## <a name="examples"></a><span data-ttu-id="abe5f-147">示例</span><span class="sxs-lookup"><span data-stu-id="abe5f-147">Examples</span></span>
 
-<span data-ttu-id="d6a35-159">将 foo.nupkg 推送到默认推送源（指定 API 密钥）：</span><span class="sxs-lookup"><span data-stu-id="d6a35-159">Pushes *foo.nupkg* to the default push source, specifying an API key:</span></span>
+* <span data-ttu-id="abe5f-148">将 foo.nupkg 推送到默认推送源（指定 API 密钥）：</span><span class="sxs-lookup"><span data-stu-id="abe5f-148">Pushes *foo.nupkg* to the default push source, specifying an API key:</span></span>
 
-`dotnet nuget push foo.nupkg -k 4003d786-cc37-4004-bfdf-c4f3e8ef9b3a`
+  ```console
+  dotnet nuget push foo.nupkg -k 4003d786-cc37-4004-bfdf-c4f3e8ef9b3a
+  ```
 
-<span data-ttu-id="d6a35-160">将 foo.nupkg 推送到自定义推送源 `https://customsource`（指定 API 密钥）：</span><span class="sxs-lookup"><span data-stu-id="d6a35-160">Push *foo.nupkg* to the custom push source `https://customsource`, specifying an API key:</span></span>
+* <span data-ttu-id="abe5f-149">将 foo.nupkg 推送到自定义推送源 `https://customsource`（指定 API 密钥）：</span><span class="sxs-lookup"><span data-stu-id="abe5f-149">Push *foo.nupkg* to the custom push source `https://customsource`, specifying an API key:</span></span>
 
-`dotnet nuget push foo.nupkg -k 4003d786-cc37-4004-bfdf-c4f3e8ef9b3a -s https://customsource/`
+  ```console
+  dotnet nuget push foo.nupkg -k 4003d786-cc37-4004-bfdf-c4f3e8ef9b3a -s https://customsource/
+  ```
 
-<span data-ttu-id="d6a35-161">将 *foo.nupkg* 推送到默认推送源：</span><span class="sxs-lookup"><span data-stu-id="d6a35-161">Pushes *foo.nupkg* to the default push source:</span></span>
+* <span data-ttu-id="abe5f-150">将 *foo.nupkg* 推送到默认推送源：</span><span class="sxs-lookup"><span data-stu-id="abe5f-150">Pushes *foo.nupkg* to the default push source:</span></span>
 
-`dotnet nuget push foo.nupkg`
+  ```console
+  dotnet nuget push foo.nupkg
+  ```
 
-<span data-ttu-id="d6a35-162">将 *foo.symbols.nupkg* 推送到默认符号源：</span><span class="sxs-lookup"><span data-stu-id="d6a35-162">Pushes *foo.symbols.nupkg* to the default symbols source:</span></span>
+* <span data-ttu-id="abe5f-151">将 *foo.symbols.nupkg* 推送到默认符号源：</span><span class="sxs-lookup"><span data-stu-id="abe5f-151">Pushes *foo.symbols.nupkg* to the default symbols source:</span></span>
 
-`dotnet nuget push foo.symbols.nupkg`
+  ```console
+  dotnet nuget push foo.symbols.nupkg
+  ```
 
-<span data-ttu-id="d6a35-163">将 foo.nupkg 推送到默认推送源（指定 360 秒超时时间）：</span><span class="sxs-lookup"><span data-stu-id="d6a35-163">Pushes *foo.nupkg* to the default push source, specifying a 360-second timeout:</span></span>
+* <span data-ttu-id="abe5f-152">将 foo.nupkg 推送到默认推送源（指定 360 秒超时时间）：</span><span class="sxs-lookup"><span data-stu-id="abe5f-152">Pushes *foo.nupkg* to the default push source, specifying a 360-second timeout:</span></span>
 
-`dotnet nuget push foo.nupkg --timeout 360`
+  ```console
+  dotnet nuget push foo.nupkg --timeout 360
+  ```
 
-<span data-ttu-id="d6a35-164">将当前目录中的所有 *.nupkg* 文件推送到默认推送源：</span><span class="sxs-lookup"><span data-stu-id="d6a35-164">Pushes all *.nupkg* files in the current directory to the default push source:</span></span>
+* <span data-ttu-id="abe5f-153">将当前目录中的所有 *.nupkg* 文件推送到默认推送源：</span><span class="sxs-lookup"><span data-stu-id="abe5f-153">Pushes all *.nupkg* files in the current directory to the default push source:</span></span>
 
-`dotnet nuget push *.nupkg`
+  ```console
+  dotnet nuget push *.nupkg
+  ```

@@ -9,48 +9,49 @@ helpviewer_keywords:
 - foreach statement [C#]
 - in keyword [C#]
 ms.assetid: 5a9c5ddc-5fd3-457a-9bb6-9abffcd874ec
-ms.openlocfilehash: 675e6b7fa925fe1822c2fc321d79afd13b5e4c51
-ms.sourcegitcommit: fd8d4587cc26e53f0e27e230d6e27d828ef4306b
+ms.openlocfilehash: 417a8cefbc9bc7544ae1156992e6e6c549fb828f
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49347678"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53128617"
 ---
-# <a name="foreach-in-c-reference"></a><span data-ttu-id="da880-102">foreach，in（C# 参考）</span><span class="sxs-lookup"><span data-stu-id="da880-102">foreach, in (C# reference)</span></span>
+# <a name="foreach-in-c-reference"></a><span data-ttu-id="5da3f-102">foreach，in（C# 参考）</span><span class="sxs-lookup"><span data-stu-id="5da3f-102">foreach, in (C# reference)</span></span>
 
-<span data-ttu-id="da880-103">`foreach` 语句为类型实例中实现 <xref:System.Collections.IEnumerable?displayProperty=nameWithType> 或 <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType> 接口的每个元素执行语句或语句块。</span><span class="sxs-lookup"><span data-stu-id="da880-103">The `foreach` statement executes a statement or a block of statements for each element in an instance of the type that implements the <xref:System.Collections.IEnumerable?displayProperty=nameWithType> or <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType> interface.</span></span> <span data-ttu-id="da880-104">`foreach` 语句不局限于这些类型，它可应用于满足以下条件的任何类型的实例：</span><span class="sxs-lookup"><span data-stu-id="da880-104">The `foreach` statement is not limited to those types and can be applied to an instance of any type that satisfies the following conditions:</span></span>
+<span data-ttu-id="5da3f-103">`foreach` 语句为类型实例中实现 <xref:System.Collections.IEnumerable?displayProperty=nameWithType> 或 <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType> 接口的每个元素执行语句或语句块。</span><span class="sxs-lookup"><span data-stu-id="5da3f-103">The `foreach` statement executes a statement or a block of statements for each element in an instance of the type that implements the <xref:System.Collections.IEnumerable?displayProperty=nameWithType> or <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType> interface.</span></span> <span data-ttu-id="5da3f-104">`foreach` 语句不局限于这些类型，它可应用于满足以下条件的任何类型的实例：</span><span class="sxs-lookup"><span data-stu-id="5da3f-104">The `foreach` statement is not limited to those types and can be applied to an instance of any type that satisfies the following conditions:</span></span>
 
-- <span data-ttu-id="da880-105">具有公共无参数 `GetEnumerator` 方法，其返回类型为类、结构或接口类型。</span><span class="sxs-lookup"><span data-stu-id="da880-105">has the public parameterless `GetEnumerator` method whose return type is either class, struct, or interface type,</span></span>
-- <span data-ttu-id="da880-106">`GetEnumerator` 方法的返回类型具有公共 `Current` 属性和公共无参数 `MoveNext` 方法（其返回类型为 <xref:System.Boolean>）。</span><span class="sxs-lookup"><span data-stu-id="da880-106">the return type of the `GetEnumerator` method has the public `Current` property and the public parameterless `MoveNext` method whose return type is <xref:System.Boolean>.</span></span>
+- <span data-ttu-id="5da3f-105">具有公共无参数 `GetEnumerator` 方法，其返回类型为类、结构或接口类型。</span><span class="sxs-lookup"><span data-stu-id="5da3f-105">has the public parameterless `GetEnumerator` method whose return type is either class, struct, or interface type,</span></span>
+- <span data-ttu-id="5da3f-106">`GetEnumerator` 方法的返回类型具有公共 `Current` 属性和公共无参数 `MoveNext` 方法（其返回类型为 <xref:System.Boolean>）。</span><span class="sxs-lookup"><span data-stu-id="5da3f-106">the return type of the `GetEnumerator` method has the public `Current` property and the public parameterless `MoveNext` method whose return type is <xref:System.Boolean>.</span></span>
 
-<span data-ttu-id="da880-107">在 `foreach` 语句块中的任何点上，可以使用 [break](break.md) 语句中断循环，或者可以使用 [continue](continue.md) 语句继续执行到循环中的下一次迭代。</span><span class="sxs-lookup"><span data-stu-id="da880-107">At any point within the `foreach` statement block, you can break out of the loop by using the [break](break.md) statement, or step to the next iteration in the loop by using the [continue](continue.md) statement.</span></span> <span data-ttu-id="da880-108">还可以使用 [goto](goto.md)、[return](return.md) 或 [throw](throw.md) 语句退出 `foreach` 循环。</span><span class="sxs-lookup"><span data-stu-id="da880-108">You also can exit a `foreach` loop by the [goto](goto.md), [return](return.md), or [throw](throw.md) statements.</span></span>
+<span data-ttu-id="5da3f-107">从 C# 7.3 开始，如果枚举器的 `Current` 属性返回 [引用返回值](ref.md#reference-return-values)（`ref T`，其中 `T` 为集合元素类型），就可以使用 `ref` 或 `ref readonly` 修饰符来声明迭代变量。</span><span class="sxs-lookup"><span data-stu-id="5da3f-107">Beginning with C# 7.3, if the enumerator's `Current` property returns a [reference return value](ref.md#reference-return-values) (`ref T` where `T` is the type of the collection element), you can declare the iteration variable with the `ref` or `ref readonly` modifier.</span></span>
 
-## <a name="examples"></a><span data-ttu-id="da880-109">示例</span><span class="sxs-lookup"><span data-stu-id="da880-109">Examples</span></span>
+<span data-ttu-id="5da3f-108">在 `foreach` 语句块中的任何点上，可以使用 [break](break.md) 语句中断循环，或者可以使用 [continue](continue.md) 语句继续执行到循环中的下一次迭代。</span><span class="sxs-lookup"><span data-stu-id="5da3f-108">At any point within the `foreach` statement block, you can break out of the loop by using the [break](break.md) statement, or step to the next iteration in the loop by using the [continue](continue.md) statement.</span></span> <span data-ttu-id="5da3f-109">还可以使用 [goto](goto.md)、[return](return.md) 或 [throw](throw.md) 语句退出 `foreach` 循环。</span><span class="sxs-lookup"><span data-stu-id="5da3f-109">You also can exit a `foreach` loop by the [goto](goto.md), [return](return.md), or [throw](throw.md) statements.</span></span>
+
+## <a name="examples"></a><span data-ttu-id="5da3f-110">示例</span><span class="sxs-lookup"><span data-stu-id="5da3f-110">Examples</span></span>
 
 [!INCLUDE[interactive-note](~/includes/csharp-interactive-note.md)]
 
-<span data-ttu-id="da880-110">以下示例介绍 `foreach` 语句的使用，其中包含实现 <xref:System.Collections.Generic.IEnumerable%601> 接口的 <xref:System.Collections.Generic.List%601> 类型的实例：</span><span class="sxs-lookup"><span data-stu-id="da880-110">The following example shows usage of the `foreach` statement with an instance of the <xref:System.Collections.Generic.List%601> type that implements the <xref:System.Collections.Generic.IEnumerable%601> interface:</span></span>
+<span data-ttu-id="5da3f-111">以下示例介绍 `foreach` 语句的使用，其中包含实现 <xref:System.Collections.Generic.IEnumerable%601> 接口的 <xref:System.Collections.Generic.List%601> 类型的实例：</span><span class="sxs-lookup"><span data-stu-id="5da3f-111">The following example shows usage of the `foreach` statement with an instance of the <xref:System.Collections.Generic.List%601> type that implements the <xref:System.Collections.Generic.IEnumerable%601> interface:</span></span>
 
 [!code-csharp-interactive[list example](~/samples/snippets/csharp/keywords/IterationKeywordsExamples.cs#1)]
 
-<span data-ttu-id="da880-111">下一个示例使用 `foreach` 语句，其中包含 <xref:System.Span%601?displayProperty=nameWithType> 类型的实例，该实例不实现任何接口：</span><span class="sxs-lookup"><span data-stu-id="da880-111">The next example uses the `foreach` statement with an instance of the <xref:System.Span%601?displayProperty=nameWithType> type, which doesn't implement any interfaces:</span></span>
+<span data-ttu-id="5da3f-112">下一个示例使用 `foreach` 语句，其中包含 <xref:System.Span%601?displayProperty=nameWithType> 类型的实例，该实例不实现任何接口：</span><span class="sxs-lookup"><span data-stu-id="5da3f-112">The next example uses the `foreach` statement with an instance of the <xref:System.Span%601?displayProperty=nameWithType> type, which doesn't implement any interfaces:</span></span>
 
 [!code-csharp-interactive[span example](~/samples/snippets/csharp/keywords/IterationKeywordsExamples.cs#2)]
 
-<span data-ttu-id="da880-112">从 C# 7.3 开始，如果枚举器的 `Current` 属性返回 [引用返回值](../../programming-guide/classes-and-structs/ref-returns.md)（`ref T`，其中 `T` 为集合元素类型），就可以使用 `ref` 或 `ref readonly` 修饰符来声明迭代变量。</span><span class="sxs-lookup"><span data-stu-id="da880-112">Beginning with C# 7.3, if the enumerator's `Current` property returns a [reference return value](../../programming-guide/classes-and-structs/ref-returns.md) (`ref T` where `T` is the type of the collection element), you can declare the iteration variable with the `ref` or `ref readonly` modifier.</span></span> <span data-ttu-id="da880-113">下面的示例使用 `ref` 迭代变量来设置 stackalloc 数组中每个项的值。</span><span class="sxs-lookup"><span data-stu-id="da880-113">The following example uses a `ref` iteration variable to set the value of each item in a stackalloc array.</span></span> <span data-ttu-id="da880-114">`ref readonly` 版本循环访问该集合以打印所有值。</span><span class="sxs-lookup"><span data-stu-id="da880-114">The `ref readonly` version iterates the collection to print all the values.</span></span> <span data-ttu-id="da880-115">`readonly` 声明使用隐式局部变量声明。</span><span class="sxs-lookup"><span data-stu-id="da880-115">The `readonly` declaration uses an implicit local variable declaration.</span></span> <span data-ttu-id="da880-116">隐式变量声明可与 `ref` 或 `ref readonly` 声明配合使用，显式类型化变量声明也一样。</span><span class="sxs-lookup"><span data-stu-id="da880-116">Implicit variable declarations can be used with either `ref` or `ref readonly` declarations, as can explicitly typed variable declarations.</span></span>
+<span data-ttu-id="5da3f-113">下面的示例使用 `ref` 迭代变量来设置 stackalloc 数组中每个项的值。</span><span class="sxs-lookup"><span data-stu-id="5da3f-113">The following example uses a `ref` iteration variable to set the value of each item in a stackalloc array.</span></span> <span data-ttu-id="5da3f-114">`ref readonly` 版本循环访问该集合以打印所有值。</span><span class="sxs-lookup"><span data-stu-id="5da3f-114">The `ref readonly` version iterates the collection to print all the values.</span></span> <span data-ttu-id="5da3f-115">`readonly` 声明使用隐式局部变量声明。</span><span class="sxs-lookup"><span data-stu-id="5da3f-115">The `readonly` declaration uses an implicit local variable declaration.</span></span> <span data-ttu-id="5da3f-116">隐式变量声明可与 `ref` 或 `ref readonly` 声明配合使用，显式类型化变量声明也一样。</span><span class="sxs-lookup"><span data-stu-id="5da3f-116">Implicit variable declarations can be used with either `ref` or `ref readonly` declarations, as can explicitly typed variable declarations.</span></span>
 
 [!code-csharp-interactive[ref span example](~/samples/snippets/csharp/keywords/IterationKeywordsExamples.cs#RefSpan)]
 
-## <a name="c-language-specification"></a><span data-ttu-id="da880-117">C# 语言规范</span><span class="sxs-lookup"><span data-stu-id="da880-117">C# language specification</span></span>
+## <a name="c-language-specification"></a><span data-ttu-id="5da3f-117">C# 语言规范</span><span class="sxs-lookup"><span data-stu-id="5da3f-117">C# language specification</span></span>
 
-[!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
+<span data-ttu-id="5da3f-118">有关详细信息，请参阅 [C# 语言规范](../language-specification/index.md)中的 [foreach 语句](~/_csharplang/spec/statements.md#the-foreach-statement)部分。</span><span class="sxs-lookup"><span data-stu-id="5da3f-118">For more information, see [The foreach statement](~/_csharplang/spec/statements.md#the-foreach-statement) section of the [C# language specification](../language-specification/index.md).</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="da880-118">请参阅</span><span class="sxs-lookup"><span data-stu-id="da880-118">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="5da3f-119">请参阅</span><span class="sxs-lookup"><span data-stu-id="5da3f-119">See also</span></span>
 
-- [<span data-ttu-id="da880-119">foreach 语句（C# 语言规范）</span><span class="sxs-lookup"><span data-stu-id="da880-119">The foreach statement (C# language specification)</span></span>](~/_csharplang/spec/statements.md#the-foreach-statement)
-- [<span data-ttu-id="da880-120">对数组使用 foreach</span><span class="sxs-lookup"><span data-stu-id="da880-120">Using foreach with Arrays</span></span>](../../programming-guide/arrays/using-foreach-with-arrays.md)
-- [<span data-ttu-id="da880-121">for</span><span class="sxs-lookup"><span data-stu-id="da880-121">for</span></span>](for.md)
-- [<span data-ttu-id="da880-122">迭代语句</span><span class="sxs-lookup"><span data-stu-id="da880-122">Iteration Statements</span></span>](iteration-statements.md)
-- [<span data-ttu-id="da880-123">C# 关键字</span><span class="sxs-lookup"><span data-stu-id="da880-123">C# Keywords</span></span>](index.md)
-- [<span data-ttu-id="da880-124">C# 参考</span><span class="sxs-lookup"><span data-stu-id="da880-124">C# Reference</span></span>](../index.md)
-- [<span data-ttu-id="da880-125">C# 编程指南</span><span class="sxs-lookup"><span data-stu-id="da880-125">C# Programming Guide</span></span>](../../programming-guide/index.md)
+- [<span data-ttu-id="5da3f-120">C# 参考</span><span class="sxs-lookup"><span data-stu-id="5da3f-120">C# Reference</span></span>](../index.md)
+- [<span data-ttu-id="5da3f-121">C# 编程指南</span><span class="sxs-lookup"><span data-stu-id="5da3f-121">C# Programming Guide</span></span>](../../programming-guide/index.md)
+- [<span data-ttu-id="5da3f-122">C# 关键字</span><span class="sxs-lookup"><span data-stu-id="5da3f-122">C# Keywords</span></span>](index.md)
+- [<span data-ttu-id="5da3f-123">迭代语句</span><span class="sxs-lookup"><span data-stu-id="5da3f-123">Iteration Statements</span></span>](iteration-statements.md)
+- [<span data-ttu-id="5da3f-124">对数组使用 foreach</span><span class="sxs-lookup"><span data-stu-id="5da3f-124">Using foreach with arrays</span></span>](../../programming-guide/arrays/using-foreach-with-arrays.md)
+- [<span data-ttu-id="5da3f-125">for 语句</span><span class="sxs-lookup"><span data-stu-id="5da3f-125">for statement</span></span>](for.md)

@@ -1,1 +1,1 @@
-<span data-ttu-id="a12ec-101">本主题适用于：✓ .NET Core SDK 2.1.300 及更高版本</span><span class="sxs-lookup"><span data-stu-id="a12ec-101">**This topic applies to: ✓** .NET Core SDK 2.1.300 and later versions</span></span>
+<span data-ttu-id="74439-101">**本主题适用于：✓** .NET Core SDK 2.1 及更高版本</span><span class="sxs-lookup"><span data-stu-id="74439-101">**This topic applies to: ✓** .NET Core 2.1 SDK and later versions</span></span>

@@ -1,31 +1,27 @@
 ---
 title: false 文本（C# 参考）
-ms.date: 07/20/2015
+ms.date: 12/03/2018
 helpviewer_keywords:
 - false literal keyword [C#]
 ms.assetid: fcc1c1a5-0e42-4226-a128-81492a9bf719
-ms.openlocfilehash: f0743ead2836a4570d1b2dc0fc4cf20d2343a9a1
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 62329e40abb709b047d60fc2be27ef0d2c92d8ff
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43507973"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53147893"
 ---
-# <a name="false-literal-c-reference"></a><span data-ttu-id="bafcf-102">false 文本（C# 参考）</span><span class="sxs-lookup"><span data-stu-id="bafcf-102">false literal (C# Reference)</span></span>
+# <a name="false-literal-c-reference"></a><span data-ttu-id="16641-102">false 文本（C# 参考）</span><span class="sxs-lookup"><span data-stu-id="16641-102">false literal (C# Reference)</span></span>
 
-<span data-ttu-id="bafcf-103">表示布尔值 false。</span><span class="sxs-lookup"><span data-stu-id="bafcf-103">Represents the boolean value false.</span></span>
+<span data-ttu-id="16641-103">表示[布尔](bool.md)值 `false`：</span><span class="sxs-lookup"><span data-stu-id="16641-103">Represents the [bool](bool.md) value `false`:</span></span>
 
-## <a name="example"></a><span data-ttu-id="bafcf-104">示例</span><span class="sxs-lookup"><span data-stu-id="bafcf-104">Example</span></span>
+[!code-csharp-interactive[false literal example](~/samples/snippets/csharp/keywords/TrueFalseLiteralsExamples.cs#FalseLiteral)]
 
-[!code-csharp[csrefKeywordsOperator#3](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsOperator/CS/csrefKeywordsOperators.cs#3)]
+## <a name="see-also"></a><span data-ttu-id="16641-104">请参阅</span><span class="sxs-lookup"><span data-stu-id="16641-104">See also</span></span>
 
-## <a name="c-language-specification"></a><span data-ttu-id="bafcf-105">C# 语言规范</span><span class="sxs-lookup"><span data-stu-id="bafcf-105">C# language specification</span></span>
-
-[!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
-
-## <a name="see-also"></a><span data-ttu-id="bafcf-106">请参阅</span><span class="sxs-lookup"><span data-stu-id="bafcf-106">See also</span></span>
-
-- [<span data-ttu-id="bafcf-107">C# 参考</span><span class="sxs-lookup"><span data-stu-id="bafcf-107">C# Reference</span></span>](../index.md)  
-- [<span data-ttu-id="bafcf-108">C# 编程指南</span><span class="sxs-lookup"><span data-stu-id="bafcf-108">C# Programming Guide</span></span>](../../programming-guide/index.md)  
-- [<span data-ttu-id="bafcf-109">C# 关键字</span><span class="sxs-lookup"><span data-stu-id="bafcf-109">C# Keywords</span></span>](index.md)  
-- [<span data-ttu-id="bafcf-110">true</span><span class="sxs-lookup"><span data-stu-id="bafcf-110">true</span></span>](true.md)  
+- [<span data-ttu-id="16641-105">C# 参考</span><span class="sxs-lookup"><span data-stu-id="16641-105">C# Reference</span></span>](../index.md)
+- [<span data-ttu-id="16641-106">C# 编程指南</span><span class="sxs-lookup"><span data-stu-id="16641-106">C# Programming Guide</span></span>](../../programming-guide/index.md)
+- [<span data-ttu-id="16641-107">C# 关键字</span><span class="sxs-lookup"><span data-stu-id="16641-107">C# Keywords</span></span>](index.md)
+- [<span data-ttu-id="16641-108">false 运算符</span><span class="sxs-lookup"><span data-stu-id="16641-108">false operator</span></span>](false-operator.md)
+- [<span data-ttu-id="16641-109">true</span><span class="sxs-lookup"><span data-stu-id="16641-109">true</span></span>](true.md)
+- [<span data-ttu-id="16641-110">?: 运算符</span><span class="sxs-lookup"><span data-stu-id="16641-110">?: Operator</span></span>](../operators/conditional-operator.md)

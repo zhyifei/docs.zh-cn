@@ -1,6 +1,6 @@
 ---
 title: ~ 运算符（C# 参考）
-ms.date: 07/20/2015
+ms.date: 11/05/2018
 f1_keywords:
 - ~_CSharpKeyword
 helpviewer_keywords:
@@ -9,28 +9,41 @@ helpviewer_keywords:
 - ~ [C#], bitwise complement operator
 - bitwise complement operator [C#]
 ms.assetid: 11bc078a-50e2-4d7e-9896-67ef669dc602
-ms.openlocfilehash: 8af25217f9e7e66796192783a0b8e3415604dc90
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 1bcb07c5639a098e3a8c566e92083ca0d48efb81
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43510106"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53153210"
 ---
-# <a name="-operator-c-reference"></a><span data-ttu-id="c438e-102">~ 运算符（C# 参考）</span><span class="sxs-lookup"><span data-stu-id="c438e-102">~ Operator (C# Reference)</span></span>
-<span data-ttu-id="c438e-103">`~` 运算符对其操作数执行按位求补运算，这对反转每一个位都有影响。</span><span class="sxs-lookup"><span data-stu-id="c438e-103">The `~` operator performs a bitwise complement operation on its operand, which has the effect of reversing each bit.</span></span> <span data-ttu-id="c438e-104">按位求补运算符针对 [int](../../../csharp/language-reference/keywords/int.md)、[uint](../../../csharp/language-reference/keywords/uint.md)、[long](../../../csharp/language-reference/keywords/long.md) 和 [ulong](../../../csharp/language-reference/keywords/ulong.md) 进行了预定义。</span><span class="sxs-lookup"><span data-stu-id="c438e-104">Bitwise complement operators are predefined for [int](../../../csharp/language-reference/keywords/int.md), [uint](../../../csharp/language-reference/keywords/uint.md), [long](../../../csharp/language-reference/keywords/long.md), and [ulong](../../../csharp/language-reference/keywords/ulong.md).</span></span>  
-  
-> [!NOTE]
->  <span data-ttu-id="c438e-105">`~` 符号还用于声明终结器。</span><span class="sxs-lookup"><span data-stu-id="c438e-105">The `~` symbol also is used to declare finalizers.</span></span> <span data-ttu-id="c438e-106">有关详细信息，请参阅[终结器](../../../csharp/programming-guide/classes-and-structs/destructors.md)。</span><span class="sxs-lookup"><span data-stu-id="c438e-106">For more information, see [Finalizers](../../../csharp/programming-guide/classes-and-structs/destructors.md).</span></span>  
-  
-## <a name="remarks"></a><span data-ttu-id="c438e-107">备注</span><span class="sxs-lookup"><span data-stu-id="c438e-107">Remarks</span></span>  
- <span data-ttu-id="c438e-108">用户定义的类型可以重载 `~` 运算符。</span><span class="sxs-lookup"><span data-stu-id="c438e-108">User-defined types can overload the `~` operator.</span></span> <span data-ttu-id="c438e-109">有关详细信息，请参阅[运算符](../../../csharp/language-reference/keywords/operator.md)。</span><span class="sxs-lookup"><span data-stu-id="c438e-109">For more information, see [operator](../../../csharp/language-reference/keywords/operator.md).</span></span> <span data-ttu-id="c438e-110">对整数类型的操作通常可用于枚举。</span><span class="sxs-lookup"><span data-stu-id="c438e-110">Operations on integral types are generally allowed on enumeration.</span></span>  
-  
-## <a name="example"></a><span data-ttu-id="c438e-111">示例</span><span class="sxs-lookup"><span data-stu-id="c438e-111">Example</span></span>  
- [!code-csharp[csRefOperators#25](../../../csharp/language-reference/operators/codesnippet/CSharp/bitwise-complement-operator_1.cs)]  
-  
-## <a name="see-also"></a><span data-ttu-id="c438e-112">请参阅</span><span class="sxs-lookup"><span data-stu-id="c438e-112">See Also</span></span>
+# <a name="-operator-c-reference"></a><span data-ttu-id="64ed8-102">~ 运算符（C# 参考）</span><span class="sxs-lookup"><span data-stu-id="64ed8-102">~ Operator (C# Reference)</span></span>
 
-- [<span data-ttu-id="c438e-113">C# 参考</span><span class="sxs-lookup"><span data-stu-id="c438e-113">C# Reference</span></span>](../../../csharp/language-reference/index.md)  
-- [<span data-ttu-id="c438e-114">C# 编程指南</span><span class="sxs-lookup"><span data-stu-id="c438e-114">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
-- [<span data-ttu-id="c438e-115">C# 运算符</span><span class="sxs-lookup"><span data-stu-id="c438e-115">C# Operators</span></span>](../../../csharp/language-reference/operators/index.md)  
-- [<span data-ttu-id="c438e-116">终结器</span><span class="sxs-lookup"><span data-stu-id="c438e-116">Finalizers</span></span>](../../../csharp/programming-guide/classes-and-structs/destructors.md)
+<span data-ttu-id="64ed8-103">按位求补运算符 `~` 是一元运算符，通过反转每个位生成其操作数的按位求补。</span><span class="sxs-lookup"><span data-stu-id="64ed8-103">The bitwise complement operator `~` is a unary operator that produces a bitwise complement of its operand by reversing each bit.</span></span> <span data-ttu-id="64ed8-104">所有整数类型都支持 `~` 运算符。</span><span class="sxs-lookup"><span data-stu-id="64ed8-104">All integer types support the `~` operator.</span></span>
+
+> [!NOTE]
+> <span data-ttu-id="64ed8-105">`~` 符号还用于声明终结器。</span><span class="sxs-lookup"><span data-stu-id="64ed8-105">The `~` symbol is also used to declare finalizers.</span></span> <span data-ttu-id="64ed8-106">有关详细信息，请参阅[终结器](../../programming-guide/classes-and-structs/destructors.md)。</span><span class="sxs-lookup"><span data-stu-id="64ed8-106">For more information, see [Finalizers](../../programming-guide/classes-and-structs/destructors.md).</span></span>
+
+<span data-ttu-id="64ed8-107">下面的示例演示 `~` 运算符的用法：</span><span class="sxs-lookup"><span data-stu-id="64ed8-107">The following example demonstrates the usage of the `~` operator:</span></span>
+
+[!code-csharp-interactive[bitwise NOT](~/samples/snippets/csharp/language-reference/operators/BitwiseComplementExamples.cs#Example)]
+
+> [!NOTE]
+> <span data-ttu-id="64ed8-108">之前的示例使用[在 C# 7.0 中引入](../../whats-new/csharp-7.md#numeric-literal-syntax-improvements)并[在 C# 7.2 中增强](../../whats-new/csharp-7-2.md#leading-underscores-in-numeric-literals)的二进制文本。</span><span class="sxs-lookup"><span data-stu-id="64ed8-108">The preceding example uses the binary literals [introduced in C# 7.0](../../whats-new/csharp-7.md#numeric-literal-syntax-improvements) and [enhanced  in C# 7.2](../../whats-new/csharp-7-2.md#leading-underscores-in-numeric-literals).</span></span>
+
+## <a name="operator-overloadability"></a><span data-ttu-id="64ed8-109">运算符可重载性</span><span class="sxs-lookup"><span data-stu-id="64ed8-109">Operator overloadability</span></span>
+
+<span data-ttu-id="64ed8-110">用户定义的类型可以[重载](../keywords/operator.md) `~` 运算符。</span><span class="sxs-lookup"><span data-stu-id="64ed8-110">User-defined types can [overload](../keywords/operator.md) the `~` operator.</span></span>
+
+## <a name="c-language-specification"></a><span data-ttu-id="64ed8-111">C# 语言规范</span><span class="sxs-lookup"><span data-stu-id="64ed8-111">C# language specification</span></span>
+
+<span data-ttu-id="64ed8-112">有关详细信息，请参阅 [C# 语言规范](../language-specification/index.md)的[按位求补运算符](~/_csharplang/spec/expressions.md#bitwise-complement-operator)部分。</span><span class="sxs-lookup"><span data-stu-id="64ed8-112">For more information, see the [Bitwise complement operator](~/_csharplang/spec/expressions.md#bitwise-complement-operator) section of the [C# language specification](../language-specification/index.md).</span></span>
+
+## <a name="see-also"></a><span data-ttu-id="64ed8-113">请参阅</span><span class="sxs-lookup"><span data-stu-id="64ed8-113">See also</span></span>
+
+- [<span data-ttu-id="64ed8-114">C# 参考</span><span class="sxs-lookup"><span data-stu-id="64ed8-114">C# Reference</span></span>](../index.md)
+- [<span data-ttu-id="64ed8-115">C# 编程指南</span><span class="sxs-lookup"><span data-stu-id="64ed8-115">C# Programming Guide</span></span>](../../programming-guide/index.md)
+- [<span data-ttu-id="64ed8-116">C# 运算符</span><span class="sxs-lookup"><span data-stu-id="64ed8-116">C# Operators</span></span>](index.md)
+- [<span data-ttu-id="64ed8-117">终结器</span><span class="sxs-lookup"><span data-stu-id="64ed8-117">Finalizers</span></span>](../../programming-guide/classes-and-structs/destructors.md)
+- [<span data-ttu-id="64ed8-118">& 运算符</span><span class="sxs-lookup"><span data-stu-id="64ed8-118">& operator</span></span>](and-operator.md)
+- [<span data-ttu-id="64ed8-119">| 运算符</span><span class="sxs-lookup"><span data-stu-id="64ed8-119">| operator</span></span>](or-operator.md)
+- [<span data-ttu-id="64ed8-120">^ 运算符</span><span class="sxs-lookup"><span data-stu-id="64ed8-120">^ operator</span></span>](xor-operator.md)
