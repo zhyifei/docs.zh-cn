@@ -74,9 +74,9 @@ public class Control {
   
  例如，窗口关闭之前引发的事件称为 `Closing`，窗口关闭之后引发的事件称为 `Closed`。  
   
- **X DO NOT** 使用 “Before” 或 “After” 前缀和后缀来指示事件之前或之后。 应按前述使用现在时态和过去时态。  
+ **X 不要** 使用 “Before” 或 “After” 前缀和后缀来指示事件之前或之后。 应按前述使用现在时态和过去时态。  
   
- **✓ DO** 使用 “EventHandler” 后缀来命名事件处理程序（委托，用作事件类型），如以下示例所示：  
+ **✓ 务必** 使用 “EventHandler” 后缀来命名事件处理程序（委托，用作事件类型），如以下示例所示：  
   
  `public delegate void ClickedEventHandler(object sender, ClickedEventArgs e);`  
   
@@ -89,11 +89,11 @@ public class Control {
 ## <a name="names-of-fields"></a>字段的名称  
  字段命名准则适用于静态公共字段和受保护字段。 准则不适用于内部字段和专用字段，[成员设计准则](../../../docs/standard/design-guidelines/member.md)不允许使用公共或受保护的实例字段。  
   
- **✓ DO** 在字段名称中使用 PascalCasing。  
+ **✓ 务必** 在字段名称中使用 PascalCasing。  
   
- **✓ DO** 使用名词、名词短语或形容词来命名字段。  
+ **✓ 务必** 使用名词、名词短语或形容词来命名字段。  
   
- **X DO NOT** 在字段名称中使用前缀。  
+ **X 不要** 在字段名称中使用前缀。  
   
  例如，不要使用 "g_" 或 "s_" 来指示静态字段。  
   
