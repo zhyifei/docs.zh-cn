@@ -1,5 +1,6 @@
 ---
-title: 正则表达式中的反向引用构造
+title: .NET 正则表达式中的反向引用构造
+desription: Learn how to identify repeated text elements by using backreference constructs in a regular expression.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -13,12 +14,13 @@ helpviewer_keywords:
 ms.assetid: 567a4b8d-0e79-49dc-8df9-f4b1aa376a2a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1f86ed838e1333a5475d72eabc4d4248fc256211
-ms.sourcegitcommit: 7f7664837d35320a0bad3f7e4ecd68d6624633b2
+ms.custom: seodec18
+ms.openlocfilehash: 0b3de774159e528ea782d8b450f9e596aeb0daca
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52672026"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53144775"
 ---
 # <a name="backreference-constructs-in-regular-expressions"></a>正则表达式中的反向引用构造
 反向引用提供了标识字符串中的重复字符或子字符串的方便途径。 例如，如果输入字符串包含某任意子字符串的多个匹配项，可以使用捕获组匹配第一个出现的子字符串，然后使用反向引用匹配后面出现的子字符串。  
@@ -49,7 +51,7 @@ ms.locfileid: "52672026"
   
  下面的示例查找字符串中双写的单词字符。 它定义一个由下列元素组成的正则表达式 `(\w)\1`。  
   
-|元素|描述|  
+|元素|说明|  
 |-------------|-----------------|  
 |`(\w)`|匹配单词字符，并将其分配给第一个捕获组。|  
 |`\1`|匹配值与第一捕获组相同的下一个字符。|  
@@ -70,7 +72,7 @@ ms.locfileid: "52672026"
   
  下面的示例查找字符串中双写的单词字符。 它定义一个由下列元素组成的正则表达式 `(?<char>\w)\k<char>`。  
   
-|元素|描述|  
+|元素|说明|  
 |-------------|-----------------|  
 |`(?<char>\w)`|匹配字词字符，并将结果分配到 `char` 捕获组。|  
 |`\k<char>`|匹配下一个与 `char` 捕获组的值相同的字符。|  
@@ -100,7 +102,7 @@ ms.locfileid: "52672026"
   
  下面的示例包含正则表达式模式 `(?<1>a)(?<1>\1b)*`，该模式重新定义 \1 命名组。 下表描述了正则表达式中的每个模式。  
   
-|模式|描述|  
+|模式|说明|  
 |-------------|-----------------|  
 |`(?<1>a)`|匹配字符“a”，并将结果分配到 `1` 捕获组。|  
 |`(?<1>\1b)*`|匹配 `1` 组的 0 更大发生次数以及“b”，并将结果分配到 `1` 捕获组。|  
@@ -120,7 +122,7 @@ ms.locfileid: "52672026"
   
  如果某个组尚未捕获任何子字符串，则对该组的反向引用是不确定的，永远不会匹配。 下面展示了正则表达式模式 `\b(\p{Lu}{2})(\d{2})?(\p{Lu}{2})\b` 的定义：  
   
-|模式|描述|  
+|模式|说明|  
 |-------------|-----------------|  
 |`\b`|在单词边界处开始匹配。|  
 |`(\p{Lu}{2})`|匹配两个大写字母。 这是第一个捕获组。|  

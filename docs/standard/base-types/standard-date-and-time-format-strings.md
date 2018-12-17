@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: bb79761a-ca08-44ee-b142-b06b3e2fc22b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4ca6109a61fb32cd148e69081da0772277743b6e
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: f4c6d10fad075a70d80bf6e5aa32edf0f89c42dc
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48873727"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53151286"
 ---
 # <a name="standard-date-and-time-format-strings"></a>标准日期和时间格式字符串
 标准日期和时间格式字符串使用单个格式说明符来定义日期和时间值的文本表示形式。 包含一个以上字符（包括空白）的任何日期和时间格式字符串都会被解释为自定义日期和时间格式字符串；有关更多信息，请参见[自定义日期和时间格式字符串](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)。 可通过两种方式使用标准或自定义格式字符串：  
@@ -39,7 +39,7 @@ ms.locfileid: "48873727"
 
 <a name="table"></a>下表描述了标准日期和时间格式说明符。 除非另行说明，否则，特定的标准日期和时间格式说明符将产生相同的字符串表示形式，这与它是与 <xref:System.DateTime> 值还是 <xref:System.DateTimeOffset> 值一起使用无关。 有关使用标准日期和时间格式字符串的其他信息，请参见[注释](#Notes)部分。  
   
-|格式说明符|描述|示例|  
+|格式说明符|说明|示例|  
 |----------------------|-----------------|--------------|  
 |"d"|短日期模式。<br /><br /> 有关详细信息，请参阅[短日期（“d”）格式说明符](#ShortDate)。|2009-06-15T13:45:30 -> 6/15/2009 (en-US)<br /><br /> 2009-06-15T13:45:30 -> 15/06/2009 (fr-FR)<br /><br /> 2009-06-15T13:45:30 -> 2009/06/15 (ja-JP)|  
 |“D”|长日期模式。<br /><br /> 有关详细信息，请参阅[长日期（“D”）格式说明符](#LongDate)。|2009-06-15T13:45:30 -> Monday, June 15, 2009 (en-US)<br /><br /> 2009-06-15T13:45:30 -> 15 июня 2009 г. (ru-RU)<br /><br /> 2009-06-15T13:45:30 -> Montag, 15. Juni 2009 (de-DE)|  
@@ -103,7 +103,7 @@ ms.locfileid: "48873727"
   
  下表列出用于控制返回字符串格式的 <xref:System.Globalization.DateTimeFormatInfo> 对象属性。  
   
-|属性|描述|  
+|属性|说明|  
 |--------------|-----------------|  
 |<xref:System.Globalization.DateTimeFormatInfo.ShortDatePattern%2A>|定义结果字符串的总体格式。|  
 |<xref:System.Globalization.DateTimeFormatInfo.DateSeparator%2A>|定义用于分隔日期中年、月、日部分的字符串。|  
@@ -121,7 +121,7 @@ ms.locfileid: "48873727"
   
  下表列出了用于控制返回字符串格式的 <xref:System.Globalization.DateTimeFormatInfo> 对象的属性。  
   
-|属性|描述|  
+|属性|说明|  
 |--------------|-----------------|  
 |<xref:System.Globalization.DateTimeFormatInfo.LongDatePattern%2A>|定义结果字符串的总体格式。|  
 |<xref:System.Globalization.DateTimeFormatInfo.DayNames%2A>|定义可在结果字符串中出现的本地化日名称。|  
@@ -140,7 +140,7 @@ ms.locfileid: "48873727"
   
  结果字符串受特定 <xref:System.Globalization.DateTimeFormatInfo> 对象的格式信息的影响。 下表列出了 <xref:System.Globalization.DateTimeFormatInfo> 对象属性，这些属性可控制返回字符串的格式。 由某些区域性的 <xref:System.Globalization.DateTimeFormatInfo.LongDatePattern%2A?displayProperty=nameWithType> 和 <xref:System.Globalization.DateTimeFormatInfo.ShortTimePattern%2A?displayProperty=nameWithType> 属性返回的自定义格式说明符可能未利用所有属性。  
   
-|属性|描述|  
+|属性|说明|  
 |--------------|-----------------|  
 |<xref:System.Globalization.DateTimeFormatInfo.LongDatePattern%2A>|定义结果字符串中日期部分的格式。|  
 |<xref:System.Globalization.DateTimeFormatInfo.ShortTimePattern%2A>|定义结果字符串中时间部分的格式。|  
@@ -163,7 +163,7 @@ ms.locfileid: "48873727"
   
  下表列出了 <xref:System.Globalization.DateTimeFormatInfo> 对象属性，这些属性可控制返回字符串的格式。 由某些区域性的 <xref:System.Globalization.DateTimeFormatInfo.FullDateTimePattern%2A> 属性返回的自定义格式说明符可能未利用所有属性。  
   
-|属性|描述|  
+|属性|说明|  
 |--------------|-----------------|  
 |<xref:System.Globalization.DateTimeFormatInfo.FullDateTimePattern%2A>|定义结果字符串的总体格式。|  
 |<xref:System.Globalization.DateTimeFormatInfo.DayNames%2A>|定义可在结果字符串中出现的本地化日名称。|  
@@ -185,7 +185,7 @@ ms.locfileid: "48873727"
   
  结果字符串受特定 <xref:System.Globalization.DateTimeFormatInfo> 对象的格式信息的影响。 下表列出了 <xref:System.Globalization.DateTimeFormatInfo> 对象属性，这些属性可控制返回字符串的格式。 由某些区域性的 <xref:System.Globalization.DateTimeFormatInfo.ShortDatePattern%2A?displayProperty=nameWithType> 和 <xref:System.Globalization.DateTimeFormatInfo.ShortTimePattern%2A?displayProperty=nameWithType> 属性返回的自定义格式说明符可能未利用所有属性。  
   
-|属性|描述|  
+|属性|说明|  
 |--------------|-----------------|  
 |<xref:System.Globalization.DateTimeFormatInfo.ShortDatePattern%2A>|定义结果字符串中日期部分的格式。|  
 |<xref:System.Globalization.DateTimeFormatInfo.ShortTimePattern%2A>|定义结果字符串中时间部分的格式。|  
@@ -207,7 +207,7 @@ ms.locfileid: "48873727"
   
  结果字符串受特定 <xref:System.Globalization.DateTimeFormatInfo> 对象的格式信息的影响。 下表列出了 <xref:System.Globalization.DateTimeFormatInfo> 对象属性，这些属性可控制返回字符串的格式。 由某些区域性的 <xref:System.Globalization.DateTimeFormatInfo.ShortDatePattern%2A?displayProperty=nameWithType> 和 <xref:System.Globalization.DateTimeFormatInfo.LongTimePattern%2A?displayProperty=nameWithType> 属性返回的自定义格式说明符可能未利用所有属性。  
   
-|属性|描述|  
+|属性|说明|  
 |--------------|-----------------|  
 |<xref:System.Globalization.DateTimeFormatInfo.ShortDatePattern%2A>|定义结果字符串中日期部分的格式。|  
 |<xref:System.Globalization.DateTimeFormatInfo.LongTimePattern%2A>|定义结果字符串中时间部分的格式。|  
@@ -229,7 +229,7 @@ ms.locfileid: "48873727"
   
  下表列出用于控制返回字符串格式的 <xref:System.Globalization.DateTimeFormatInfo> 对象属性。  
   
-|属性|描述|  
+|属性|说明|  
 |--------------|-----------------|  
 |<xref:System.Globalization.DateTimeFormatInfo.MonthDayPattern%2A>|定义结果字符串的总体格式。|  
 |<xref:System.Globalization.DateTimeFormatInfo.MonthNames%2A>|定义可在结果字符串中出现的本地化月份名称。|  
@@ -255,7 +255,7 @@ ms.locfileid: "48873727"
   
 -   <xref:System.DateTimeKind.Unspecified?displayProperty=nameWithType> 日期和时间值没有时区信息。  
   
- 由于“O”或“o”标准格式说明符遵循国际标准，因此使用说明符的格式设置或分析操作始终使用固定区域性和公历。  
+ 由于“O”或“o”标准格式说明符遵循国际标准，使用说明符的格式设置或分析操作始终使用固定区域性和公历。  
   
  如果字符串采用了这些格式中的某个格式,则可以通过使用“O”或“o”格式说明符分析传递到 `Parse` 和 `TryParse` 的 `ParseExact`、`TryParseExact`、<xref:System.DateTime> 和 <xref:System.DateTimeOffset> 方法的这些字符串。 对于 <xref:System.DateTime> 对象，你调用的分析重载还应当包含带有 `styles` 值的 <xref:System.Globalization.DateTimeStyles.RoundtripKind?displayProperty=nameWithType> 参数。 请注意，如果你使用对应于“O”或“o”格式说明符的自定义格式字符串调用分析方法，则你不会获得与“O”或“o”相同的结果。 这是因为使用自定义格式字符串的分析方法不能分析缺少时区组件的日期和时间值的字符串表示形式，或使用“Z”指示 UTC。  
   
@@ -277,7 +277,7 @@ ms.locfileid: "48873727"
   
  结果字符串受由 <xref:System.Globalization.DateTimeFormatInfo> 属性（该属性表示固定区域性）返回的 <xref:System.Globalization.DateTimeFormatInfo.InvariantInfo%2A?displayProperty=nameWithType> 对象的下列属性的影响。  
   
-|属性|描述|  
+|属性|说明|  
 |--------------|-----------------|  
 |<xref:System.Globalization.DateTimeFormatInfo.RFC1123Pattern%2A>|定义结果字符串的格式。|  
 |<xref:System.Globalization.DateTimeFormatInfo.AbbreviatedDayNames%2A>|定义可在结果字符串中出现的缩写的日期名称。|  
@@ -313,7 +313,7 @@ ms.locfileid: "48873727"
   
  结果字符串受特定 <xref:System.Globalization.DateTimeFormatInfo> 对象的格式信息的影响。 下表列出了 <xref:System.Globalization.DateTimeFormatInfo> 对象属性，这些属性可控制返回字符串的格式。 由某些区域性的 <xref:System.Globalization.DateTimeFormatInfo.ShortTimePattern%2A?displayProperty=nameWithType> 属性返回的自定义格式说明符可能未利用所有属性。  
   
-|属性|描述|  
+|属性|说明|  
 |--------------|-----------------|  
 |<xref:System.Globalization.DateTimeFormatInfo.ShortTimePattern%2A>|定义结果字符串中时间部分的格式。|  
 |<xref:System.Globalization.DateTimeFormatInfo.TimeSeparator%2A>|定义分隔时间中小时、分钟和秒钟几个组成部分的字符串。|  
@@ -333,7 +333,7 @@ ms.locfileid: "48873727"
   
  下表列出了 <xref:System.Globalization.DateTimeFormatInfo> 对象属性，这些属性可控制返回字符串的格式。 由某些区域性的 <xref:System.Globalization.DateTimeFormatInfo.LongTimePattern%2A?displayProperty=nameWithType> 属性返回的自定义格式说明符可能未利用所有属性。  
   
-|属性|描述|  
+|属性|说明|  
 |--------------|-----------------|  
 |<xref:System.Globalization.DateTimeFormatInfo.LongTimePattern%2A>|定义结果字符串中时间部分的格式。|  
 |<xref:System.Globalization.DateTimeFormatInfo.TimeSeparator%2A>|定义分隔时间中小时、分钟和秒钟几个组成部分的字符串。|  
@@ -366,7 +366,7 @@ ms.locfileid: "48873727"
   
  下表列出了 <xref:System.Globalization.DateTimeFormatInfo> 对象属性，这些属性可控制返回字符串的格式。 由某些区域性的 <xref:System.Globalization.DateTimeFormatInfo.FullDateTimePattern%2A> 属性返回的自定义格式说明符可能未利用所有属性。  
   
-|属性|描述|  
+|属性|说明|  
 |--------------|-----------------|  
 |<xref:System.Globalization.DateTimeFormatInfo.FullDateTimePattern%2A>|定义结果字符串的总体格式。|  
 |<xref:System.Globalization.DateTimeFormatInfo.DayNames%2A>|定义可在结果字符串中出现的本地化日名称。|  
@@ -390,7 +390,7 @@ ms.locfileid: "48873727"
   
  下表列出用于控制返回字符串格式的 <xref:System.Globalization.DateTimeFormatInfo> 对象属性。  
   
-|属性|描述|  
+|属性|说明|  
 |--------------|-----------------|  
 |<xref:System.Globalization.DateTimeFormatInfo.YearMonthPattern%2A>|定义结果字符串的总体格式。|  
 |<xref:System.Globalization.DateTimeFormatInfo.MonthNames%2A>|定义可在结果字符串中出现的本地化月份名称。|  

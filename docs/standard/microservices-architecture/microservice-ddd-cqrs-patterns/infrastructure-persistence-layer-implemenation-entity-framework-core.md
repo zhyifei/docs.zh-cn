@@ -1,17 +1,17 @@
 ---
 title: 使用 Entity Framework Core 实现基础结构持久性层
-description: 适用于容器化 .NET 应用程序的 .NET 微服务体系结构 | 使用 Entity Framework Core 实现基础结构持久性层
+description: 适用于容器化 .NET 应用程序的 .NET 微服务体系结构 | 探索使用 Entity Framework Core 实现基础结构持久性层的细节。
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 12/12/2017
-ms.openlocfilehash: 663515e0a863ef703006df0f96b4bc8a2976ca78
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.date: 10/08/2018
+ms.openlocfilehash: 5e0e7adad7ad2d679ccff2f1c6a421922ce2523d
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "50205290"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53151013"
 ---
-# <a name="implementing-the-infrastructure-persistence-layer-with-entity-framework-core"></a>使用 Entity Framework Core 实现基础结构持久性层
+# <a name="implement-the-infrastructure-persistence-layer-with-entity-framework-core"></a>使用 Entity Framework Core 实现基础结构持久性层
 
 当使用 SQL Server、Oracle 或 PostgreSQL 等关系数据库时，推荐的方法是基于 Entity Framework (EF) 实现持久性层。 EF 支持 LINQ，并为模型提供强类型化的对象，且为数据库提供简化的持久性。
 
@@ -25,17 +25,17 @@ EF 简介已提供于 Microsoft 文档中，因此这里我们只提供指向该
 
 #### <a name="additional-resources"></a>其他资源
 
--   **Entity Framework Core**
-    [https://docs.microsoft.com/ef/core/](https://docs.microsoft.com/ef/core/)
+- **Entity Framework Core** \
+  [*https://docs.microsoft.com/ef/core/*](https://docs.microsoft.com/ef/core/)
 
--   **借助 Visual Studio 使用 ASP.NET Core 和 Entity Framework Core 入门**
-    [https://docs.microsoft.com/aspnet/core/data/ef-mvc/](https://docs.microsoft.com/aspnet/core/data/ef-mvc/)
+- **Getting started with ASP.NET Core and Entity Framework Core using Visual Studio** \（借助 Visual Studio 使用 ASP.NET Core 和 Entity Framework Core 入门）
+  [*https://docs.microsoft.com/aspnet/core/data/ef-mvc/*](https://docs.microsoft.com/aspnet/core/data/ef-mvc/)
 
--   **DbContext 类**
-    [https://docs.microsoft.com/ef/core/api/microsoft.entityframeworkcore.dbcontext](https://docs.microsoft.com/ef/core/api/microsoft.entityframeworkcore.dbcontext)
+- **DbContext Class** \（DbContext 类）
+  [*https://docs.microsoft.com/ef/core/api/microsoft.entityframeworkcore.dbcontext*](https://docs.microsoft.com/ef/core/api/microsoft.entityframeworkcore.dbcontext)
 
--   **比较 EF Core 和 EF6.x**
-    [https://docs.microsoft.com/ef/efcore-and-ef6/index](https://docs.microsoft.com/ef/efcore-and-ef6/index)
+- **Compare EF Core & EF6.x** \（比较 EF Core 和 EF6.x）
+  [*https://docs.microsoft.com/ef/efcore-and-ef6/index*](https://docs.microsoft.com/ef/efcore-and-ef6/index)
 
 ## <a name="infrastructure-in-entity-framework-core-from-a-ddd-perspective"></a>Entity Framework Core 中的基础结构（DDD 角度）
 
@@ -82,7 +82,7 @@ public class Order : Entity
 
 请注意，`OrderItems` 属性仅可通过 `IReadOnlyCollection<OrderItem>` 以只读形式进行访问。 此类型是只读的，因此它免受定期外部更新。 
 
-EF Core 提供一种方法，可将域模型映射到物理数据库，而不会“污染”域模型。 这是纯 .NET POCO 代码，因为映射操作在持久性层中实现。 在该映射操作中，需要配置“字段到数据库”映射。 在以下 OnModelCreating 方法示例中，突出显示的代码告知 EF Core 通过其字段访问 OrderItems 属性。
+EF Core 提供一种方法，可将域模型映射到物理数据库，而不会“污染”域模型。 这是纯 .NET POCO 代码，因为映射操作在持久性层中实现。 在该映射操作中，需要配置“字段到数据库”映射。 在来自 `OrderingContext` 和 `OrderEntityTypeConfiguration` 类的 `OnModelCreating` 方法的以下示例中，调用 `SetPropertyAccessMode` 来告诉 EF Core 通过其字段访问 `OrderItems` 属性。
 
 ```csharp
 // At OrderingContext.cs from eShopOnContainers
@@ -112,9 +112,9 @@ class OrderEntityTypeConfiguration : IEntityTypeConfiguration<Order>
 }
 ```
 
-使用字段而非属性时，OrderItem 实体得以持久保存，好似它有一个 List&lt;OrderItem&gt; 属性。 但是，它公开单个访问器 - 用于将新项添加到订单的 `AddOrderItem` 方法。 因此，行为和数据绑定在一起，将在使用域模型的任何应用程序代码间保持一致。
+使用字段而不使用属性时，`OrderItem` 实体得以持久保存，好似它拥有 `List<OrderItem>` 属性。 但是，它公开单个访问器（`AddOrderItem` 方法），用于将新项添加到订单。 因此，行为和数据绑定在一起，将在使用域模型的任何应用程序代码间保持一致。
 
-## <a name="implementing-custom-repositories-with-entity-framework-core"></a>使用 Entity Framework Core 实现自定义存储库
+## <a name="implement-custom-repositories-with-entity-framework-core"></a>使用 Entity Framework Core 实现自定义存储库
 
 在实现级别上，当执行更新时，存储库就是一个具有数据持久性代码的类，由工作单元（EF Core 中的 DBContext）进行协调，如下面的类所示：
 
@@ -158,11 +158,11 @@ namespace Microsoft.eShopOnContainers.Services.Ordering.Infrastructure.Repositor
 
 请注意，IBuyerRepository 接口来自于域模型层（采用协定的形式）。 但是，存储库在持久性和基础结构层上实现。
 
-EF DbContext 经由依赖关系注入而通过构造函数。 它在同一 HTTP 请求范围内的多个存储库之间进行共享，这要感谢它在 IoC 容器（也可使用 services.AddDbContext&lt;&gt; 进行显式设置）中的默认生存期 (ServiceLifetime.Scoped)。
+EF DbContext 经由依赖关系注入而通过构造函数。 它在同一 HTTP 请求范围内的多个存储库之间进行共享，这得益于其在 IoC 容器（也可使用 `services.AddDbContext<>` 进行显式设置）中的默认生存期 (`ServiceLifetime.Scoped`)。
 
 ### <a name="methods-to-implement-in-a-repository-updates-or-transactions-versus-queries"></a>存储库中的实现方法（更新或事务与查询）
 
-每个存储库类中，都应放置持久性方法来更新受其相关聚合约束的实体状态。 请记住，聚合与其相关存储库之间存在一对一关系。 并考虑到，聚合根实体对象时可能已将其子实体嵌入 EF 图中。 例如，购买者可能有作为相关子实体的多个支付方法。
+每个存储库类中，都应放置持久性方法来更新受其相关聚合约束的实体状态。 请记住，聚合与其相关存储库之间存在一对一关系。 同时请考虑到，聚合根实体对象可能已将子实体嵌入其 EF 图内。 例如，购买者可能有作为相关子实体的多个支付方法。
 
 由于 eShopOnContainers 中订购微服务的方式也基于 CQS/CQRS，大多数查询不在自定义存储库中实现。 一般而言，开发人员可以自由地为表示层创建所需查询和联接，而不受聚合、每个聚合的自定义存储库和 DDD 的限制。 本指南建议的大多数自定义存储库具有多个更新或事务性方法，但只有查询方法需要更新数据。 例如，BuyerRepository 存储库实现 FindAsync 方法，因为应用程序需要知道创建订单相关的新买家之前是否存在特定买家。
 
@@ -174,11 +174,11 @@ Entity Framework DbContext 类基于工作单元和存储库模式，且可直�
 
 但是，实现更复杂的微服务或应用程序时，实现自定义存储库将提供以下几个优势。 工作单元和存储库模式旨在封装基础结构持久性层，以便从应用程序和域模型层脱耦。 实现这些模式将促进用于模拟数据库访问的模拟数据库的使用。
 
-图 9-18 中可以看到不使用存储库（直接使用 EF DbContext）与使用存储库（便于模拟那些存储库）之间的差异。
+图 7-18 中可以看到不使用存储库（直接使用 EF DbContext）与使用存储库（更易于模拟这些存储库）之间的差异。
 
-![](./media/image19.png)
+![使用自定义存储库和普通 DbContext 之间的对比：自定义存储库添加了抽象层，可用于通过模拟存储库来简化测试。](./media/image19.png)
 
-图 9-18。 使用自定义存储库与纯 DbContext
+**图 7-18**。 使用自定义存储库与纯 DbContext
 
 模拟时有多个备选项。 只模拟存储库或模拟整个工作单元。 通常情况下，只模拟存储库就足够了，不需要提取并模拟整个工作单元那般的复杂。
 
@@ -186,13 +186,13 @@ Entity Framework DbContext 类基于工作单元和存储库模式，且可直�
 
 简而言之，自定义存储库允许使用不受数据层状态影响的单元测试来更轻松地测试代码。 如果运行的测试还通过 Entity Framework 访问实际的数据库，它们不是单元测试而是更为缓慢的集成测试。
 
-如果直接使用 DbContext，则你的唯一选择是通过单元测试的可预测数据使用内存中 SQL Server 来运行单元测试。 将不能在存储库级别以相同的方式控制 mock 对象和模拟数据。 当然，可以始终测试 MVC 控制器。
+如果直接使用 DbContext，则必须模拟它，或通过使用包含单元测试的可预测数据的内存中 SQL Server 来运行单元测试。 但模拟 DbContext 或控制假数据所需完成的工作比在存储库级别进行模拟所需完成的工作多。 当然，可以始终测试 MVC 控制器。
 
 ## <a name="ef-dbcontext-and-iunitofwork-instance-lifetime-in-your-ioc-container"></a>IoC 容器中的 EF DbContext 和 IUnitOfWork 实例生存期
 
-DbContext 对象（公开为 IUnitOfWork 对象）可能需要在相同的 HTTP 请求范围内的多个存储库之间共享。 例如，当正在执行的操作必须处理多个聚合时，或只是因为正在使用多个存储库实例时，就是这种情况。 务必提到，IUnitOfWork 接口属于域层，而不是 EF Core 类型。
+`DbContext` 对象（作为 `IUnitOfWork` 对象公开）应在相同 HTTP 请求范围内的多个存储库之间进行共享。 例如，当正在执行的操作必须处理多个聚合时，或只是因为正在使用多个存储库实例时，就是这种情况。 还需要提到的是，`IUnitOfWork` 接口属于域层，而不是 EF Core 类型。
 
-为此，DbContext 对象的示例须将其服务生存期设置为 ServiceLifetime.Scoped。 这是在 IoC 容器中通过 ASP.NET Core Web API 项目中 Startup.cs 文件的 ConfigureServices 方法向 services.AddDbContext 注册 DbContext 时的默认生存期。 下面的代码阐释这一点。
+为此，`DbContext` 对象的实例必须将其服务生存期设置为 ServiceLifetime.Scoped。 这是在 IoC 容器中通过 ASP.NET Core Web API 项目中 `Startup.cs` 文件的 ConfigureServices 方法向 `services.AddDbContext` 注册 `DbContext` 时的默认生存期。 下面的代码阐释这一点。
 
 ```csharp
 public IServiceProvider ConfigureServices(IServiceCollection services)
@@ -234,20 +234,20 @@ builder.RegisterType<OrderRepository>()
 
 #### <a name="additional-resources"></a>其他资源
 
--   **在 ASP.NET MVC 应用程序中实现存储库和工作单元模式**
-    [https://www.asp.net/mvc/overview/older-versions/getting-started-with-ef-5-using-mvc-4/implementing-the-repository-and-unit-of-work-patterns-in-an-asp-net-mvc-application](https://www.asp.net/mvc/overview/older-versions/getting-started-with-ef-5-using-mvc-4/implementing-the-repository-and-unit-of-work-patterns-in-an-asp-net-mvc-application)
+- **Implementing the Repository and Unit of Work Patterns in an ASP.NET MVC Application** \（在 ASP.NET MVC 应用程序中实现存储库模式和工作单元模式）
+  [*https://www.asp.net/mvc/overview/older-versions/getting-started-with-ef-5-using-mvc-4/implementing-the-repository-and-unit-of-work-patterns-in-an-asp-net-mvc-application*](https://www.asp.net/mvc/overview/older-versions/getting-started-with-ef-5-using-mvc-4/implementing-the-repository-and-unit-of-work-patterns-in-an-asp-net-mvc-application)
 
--   **Jonathan Allen。Entity Framework、Dapper 和 Chain 中存储库模式的实现策略**
-    [*https://www.infoq.com/articles/repository-implementation-strategies*](https://www.infoq.com/articles/repository-implementation-strategies)
+- **Jonathan Allen。Implementation Strategies for the Repository Pattern with Entity Framework, Dapper, and Chain** \（Entity Framework、Dapper 和 Chain 中存储库模式的实现策略）
+  [*https://www.infoq.com/articles/repository-implementation-strategies*](https://www.infoq.com/articles/repository-implementation-strategies)
 
--   **Cesar de la Torre。比较 ASP.NET Core IoC 容器服务生存期和 Autofac IoC 容器实例范围**
-    [https://blogs.msdn.microsoft.com/cesardelatorre/2017/01/26/comparing-asp-net-core-ioc-service-life-times-and-autofac-ioc-instance-scopes/](https://blogs.msdn.microsoft.com/cesardelatorre/2017/01/26/comparing-asp-net-core-ioc-service-life-times-and-autofac-ioc-instance-scopes/)
+- **Cesar de la Torre。Comparing ASP.NET Core IoC container service lifetimes with Autofac IoC container instance scopes** \（比较 ASP.NET Core IoC 容器服务生存期和 Autofac IoC 容器实例范围）
+  [*https://blogs.msdn.microsoft.com/cesardelatorre/2017/01/26/comparing-asp-net-core-ioc-service-life-times-and-autofac-ioc-instance-scopes/*](https://blogs.msdn.microsoft.com/cesardelatorre/2017/01/26/comparing-asp-net-core-ioc-service-life-times-and-autofac-ioc-instance-scopes/)
 
 ## <a name="table-mapping"></a>表映射
 
 表映射标识要从数据库查询并保存到数据库的表数据。 前面你已了解如何使用域实体（例如，产品或订单域）来生成相关的数据库架构。 EF 特别围绕着约定的概念进行设计。 约定处理“表的名称是什么？” 或者“什么属性是主键？”这类问题。 约定通常基于约定俗成的名称，例如主键通常是一个以 Id 结尾的属性。
 
-按照约定，每个实体将设置为映射到具有与公开所派生上下文中实体的 DbSet&lt;TEntity&gt; 属性相同的名称的表中。 如果给定实体未提供任何 DbSet&lt;TEntity&gt; 值，则使用类名称。
+按照约定，每个实体将设置为映射到名称与 `DbSet<TEntity>` 属性（公开派生上下文中的实体）相同的表中。 如果给定实体未提供任何 `DbSet<TEntity>` 值，则使用类名。
 
 ### <a name="data-annotations-versus-fluent-api"></a>数据注释与 Fluent API
 
@@ -257,7 +257,7 @@ builder.RegisterType<OrderRepository>()
 
 ### <a name="fluent-api-and-the-onmodelcreating-method"></a>Fluent API 和 OnModelCreating 方法
 
-如前文所述，为了更改约定和映射，可以使用 DbContext 类中的 OnModelCreating 方法。 
+如前文所述，为了更改约定和映射，可以使用 DbContext 类中的 OnModelCreating 方法。
 
 eShopOnContainers 中的订购微服务根据需要实现显式映射和配置，如以下代码所示。
 
@@ -294,7 +294,7 @@ class OrderEntityTypeConfiguration : IEntityTypeConfiguration<Order>
             orderConfiguration.Property<string>("Description").IsRequired(false);
 
             var navigation = orderConfiguration.Metadata.FindNavigation(nameof(Order.OrderItems));
-            
+
             // DDD Patterns comment:
             //Set as field (New since EF 1.1) to access the OrderItem collection property through its field
             navigation.SetPropertyAccessMode(PropertyAccessMode.Field);
@@ -321,39 +321,39 @@ class OrderEntityTypeConfiguration : IEntityTypeConfiguration<Order>
 
 示例中的代码演示了几个显式声明和映射。 但是，EF Core 约定自动执行这里的许多映射，因此示例中需要的实际代码可能较小。
 
-
 ### <a name="the-hilo-algorithm-in-ef-core"></a>EF Core 中的 Hi/Lo 算法
 
 前面示例中代码的一个有趣方面是，它使用 [Hi/Lo 算法](https://vladmihalcea.com/the-hilo-algorithm/)作为键生成策略。
 
-当需要唯一键时，Hi/Lo 算法很有用。 总之，Hi-Lo 算法将唯一标识符分配给表行，同时不依赖于立即将行存储于数据库中。 这使你立即开始使用标识符，就像常规顺序数据库 ID 中的那般。
+在提交更改前需要唯一键时，Hi/Lo 算法很有用。 总之，Hi-Lo 算法将唯一标识符分配给表行，同时不依赖于立即将行存储于数据库中。 这使你立即开始使用标识符，就像常规顺序数据库 ID 中的那般。
 
-Hi/Lo 算法描述一种机制，用于生成客户端上而不是数据库中的安全 ID。 这里所说的“安全”是指没有冲突。 出于这些原因，此算法很有趣：
+Hi/Lo 算法描述用于从相关数据库序列获取一批唯一 ID 的机制。 因为该数据库可保证唯一性，所以这些 ID 可以安全地使用，用户之间因此不会有冲突。 出于这些原因，此算法很有趣：
 
--   它不中断工作单元模式。
+- 它不中断工作单元模式。
 
--   它不需要序列生成器在其他 DBMS 中执行操作的那种往返方式。
+- 它批量获取序列 ID，以最大限度地减少往返数据库的行程。
 
--   它生成一个人工可读标识符，不同于使用 GUID 的技术。
+- 它生成一个人工可读标识符，不同于使用 GUID 的技术。
 
 EF Core 支持使用 ForSqlServerUseSequenceHiLo 方法的 [HiLo](https://stackoverflow.com/questions/282099/whats-the-hi-lo-algorithm)，如前面的示例中所示。
 
-### <a name="mapping-fields-instead-of-properties"></a>映射字段（而非属性）
+### <a name="map-fields-instead-of-properties"></a>映射字段（而非属性）
 
-使用此功能（自 EF Core 1.1 之后可用），可以直接将列映射到字段。 可以不在实体类中使用属性，而只是将列从表格映射到字段。 它的常见用法是那些无需从实体外进行访问的任意内部状态的专用字段。 
+使用此功能（自 EF Core 1.1 之后可用），可以直接将列映射到字段。 可以不在实体类中使用属性，而只是将列从表格映射到字段。 它的常见用法是那些无需从实体外进行访问的任意内部状态的专用字段。
 
 可以使用单个字段或集合来执行此操作，如 `List<>` 字段。 我们前面讨论对域模型类进行建模时已提过这点，但此处你可以了解如何通过前述代码中强调的 `PropertyAccessMode.Field` 配置来执行该映射。
 
-### <a name="using-shadow-properties-in-ef-core-hidden-at-the-infrastructure-level"></a>在 EF Core 中使用隐藏在基础结构级别的阴影属性
+### <a name="use-shadow-properties-in-ef-core-hidden-at-the-infrastructure-level"></a>在 EF Core 中使用隐藏在基础结构级别的阴影属性
 
 EF Core 中的阴影属性是不存于实体类模型中的属性。 这些属性的值和状态完全在基础结构级别于 [ChangeTracker](https://docs.microsoft.com/ef/core/api/microsoft.entityframeworkcore.changetracking.changetracker) 类中进行维护。
 
+## <a name="implement-the-query-specification-pattern"></a>实现查询规范模式
 
-## <a name="implementing-the-specification-pattern"></a>实现规范模式
+如之前设计部分所述，查询规范模式是域驱动设计模式，设计用作可放置含可选排序及分页逻辑的查询定义的位置。
 
-如设计部分前面所介绍的，规范模式（其全名是查询规范模式）是域驱动设计模式，用作可放置含可选排序和分页逻辑的查询定义的位置。 规范模式定义对象中的查询。 例如，为了封装搜索某些产品的分页查询，可以创建采用必要输入参数（pageNumber、pageSize、filter 等）的 PagedProduct 规范。 继而，任何存储库的方法（通常为 List() 重载）将接受 ISpecification 并基于该规范运行预期的查询。
+查询规范模式定义对象中的查询。 例如，为了封装搜索某些产品的分页查询，可以创建采用必要输入参数（pageNumber、pageSize、filter 等）的 PagedProduct 规范。 然后，在任何存储库方法（通常为 List() 重载）内，它会接受 IQuerySpecification 并基于该规范运行预期的查询。
 
-常规规范接口示例如下面的 [eShopOnweb](https://github.com/dotnet-architecture/eShopOnWeb) 的代码。 
+常规规范接口示例如下面的 [eShopOnweb](https://github.com/dotnet-architecture/eShopOnWeb) 的代码。
 
 ```csharp
 // GENERIC SPECIFICATION INTERFACE
@@ -400,7 +400,7 @@ public abstract class BaseSpecification<T> : ISpecification<T>
 }
 ```
 
-以下规范在给定购物篮 ID 或购物篮所属买家的 ID 情况下来加载单个购物篮实体。 它将[立即加载](https://docs.microsoft.com/ef/core/querying/related-data)购物篮的项集合。
+以下规范在给定购物篮 ID 或购物篮所属买家的 ID 情况下来加载单个购物篮实体。 它将[立即加载](https://docs.microsoft.com/ef/core/querying/related-data)购物篮的项目集合。
 
 ```csharp
 // SAMPLE QUERY SPECIFICATION IMPLEMENTATION
@@ -444,32 +444,30 @@ public IEnumerable<T> List(ISpecification<T> spec)
                     .AsEnumerable();
 }
 ```
-除了封装筛选逻辑，该规范还可指定要返回的数据的形状，包括要填充的属性。 
+除了封装筛选逻辑，该规范还可指定要返回的数据的形状，包括要填充的属性。
 
-尽管我们不建议从存储库返回 IQueryable，但可以在存储库中使用它们来建立一系列结果。 可以看到此方法在以上 List 方法中使用，List 方法使用中间 IQueryable 表达式来生成查询的包含内容列表，然后再使用最后一行上的规范条件来执行查询。
-
+尽管我们不建议从存储库返回 IQueryable，但可以在存储库中使用它们来生成一系列结果。 可以看到此方法在以上 List 方法中使用，List 方法使用中间 IQueryable 表达式来生成查询的包含内容列表，然后再使用最后一行上的规范条件来执行查询。
 
 #### <a name="additional-resources"></a>其他资源
 
--   **表映射**
-    [https://docs.microsoft.com/ef/core/modeling/relational/tables](https://docs.microsoft.com/ef/core/modeling/relational/tables)
+- **Table Mapping** \（表映射）
+  [*https://docs.microsoft.com/ef/core/modeling/relational/tables*](https://docs.microsoft.com/ef/core/modeling/relational/tables)
 
--   **使用 HiLo 通过 Entity Framework Core 生成关键值**
-    [http://www.talkingdotnet.com/use-hilo-to-generate-keys-with-entity-framework-core/](http://www.talkingdotnet.com/use-hilo-to-generate-keys-with-entity-framework-core/)
+- **Use HiLo to generate keys with Entity Framework Core** \（使用 HiLo 通过 Entity Framework Core 生成键）
+  [*http://www.talkingdotnet.com/use-hilo-to-generate-keys-with-entity-framework-core/*](http://www.talkingdotnet.com/use-hilo-to-generate-keys-with-entity-framework-core/)
 
--   **支持字段**
-    [https://docs.microsoft.com/ef/core/modeling/backing-field](https://docs.microsoft.com/ef/core/modeling/backing-field)
+- **Backing Fields** \（支持字段）
+  [*https://docs.microsoft.com/ef/core/modeling/backing-field*](https://docs.microsoft.com/ef/core/modeling/backing-field)
 
--   **Steve Smith.Entity Framework Core 中已封装的集合**
-    [https://ardalis.com/encapsulated-collections-in-entity-framework-core](https://ardalis.com/encapsulated-collections-in-entity-framework-core)
+- **Steve Smith.Encapsulated Collections in Entity Framework Core** \（Entity Framework Core 中的封装集合）
+  [*https://ardalis.com/encapsulated-collections-in-entity-framework-core*](https://ardalis.com/encapsulated-collections-in-entity-framework-core)
 
--   **阴影属性**
-    [https://docs.microsoft.com/ef/core/modeling/shadow-properties](https://docs.microsoft.com/ef/core/modeling/shadow-properties)
+- 阴影属性 \
+  [*https://docs.microsoft.com/ef/core/modeling/shadow-properties*](https://docs.microsoft.com/ef/core/modeling/shadow-properties)
 
--   **规范模式**
-    [https://deviq.com/specification-pattern/](https://deviq.com/specification-pattern/)
-    
+- **The Specification pattern** \（规范模式）
+  [*https://deviq.com/specification-pattern/*](https://deviq.com/specification-pattern/)
 
 >[!div class="step-by-step"]
-[上一页](infrastructure-persistence-layer-design.md)
-[下一页](nosql-database-persistence-infrastructure.md)
+>[上一页](infrastructure-persistence-layer-design.md)
+>[下一页](nosql-database-persistence-infrastructure.md)

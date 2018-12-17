@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: b782bcb8-da6a-4c6a-805f-2eb46d504309
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f4d1010069e9d95488a99133f949ca112dc08f0e
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 37ab502277cb413a116aa1301d1127f700097a45
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50201593"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53146571"
 ---
 # <a name="overview-of-synchronization-primitives"></a>同步基元概述
 
@@ -79,9 +79,9 @@ ms.locfileid: "50201593"
 
 ### <a name="readerwriterlockslim-class"></a>ReaderWriterLockSlim 类
 
-<xref:System.Threading.ReaderWriterLockSlim?displayProperty=nameWithType> 类授予对共享资源的独占访问权限以便进行写入，并允许多个线程同时访问资源以便进行读取。 你可能想要使用 <xref:System.Threading.ReaderWriterLockSlim> 同步对支持线程安全读取操作，但需要独占访问权限才能执行写入操作的共享数据结构的访问。 当某个线程请求独占访问时（例如，通过调用 <xref:System.Threading.ReaderWriterLockSlim.EnterWriteLock%2A?displayProperty=nameWithType> 方法），后续读取器请求将被阻止，直到所有现有读取器均已退出 lock，并且编写器已进入并退出 lock。
+<xref:System.Threading.ReaderWriterLockSlim?displayProperty=nameWithType> 类授予对共享资源的独占访问权限以便进行写入，并允许多个线程同时访问资源以便进行读取。 你可能想要使用 <xref:System.Threading.ReaderWriterLockSlim> 同步对支持线程安全读取操作，但需要独占访问权限才能执行写入操作的共享数据结构的访问。 当某个线程请求独占访问时（例如，通过调用 <xref:System.Threading.ReaderWriterLockSlim.EnterWriteLock%2A?displayProperty=nameWithType> 方法），后续读取器和编写器请求将被阻止，直到所有现有读取器均已退出 lock，并且编写器已进入并退出 lock。
   
-有关详细信息，请参阅[读取器-编写器锁](reader-writer-locks.md)一文和 <xref:System.Threading.ReaderWriterLockSlim> API 参考。
+有关详细信息，请参阅 <xref:System.Threading.ReaderWriterLockSlim> API 参考。
 
 ### <a name="semaphore-and-semaphoreslim-classes"></a>Semaphore 和 SemaphoreSlim 类
 
@@ -134,7 +134,7 @@ ms.locfileid: "50201593"
 
 <xref:System.Threading.Interlocked?displayProperty=nameWithType> 类提供了可对变量执行简单原子操作的静态方法。 这些原子操作包括添加、递增和递减、交换、取决于比较的条件交换以及读取 64 位整数值的操作。
 
-有关详细信息，请参阅[互锁操作](interlocked-operations.md)一文和 <xref:System.Threading.Interlocked> API 参考。
+有关详细信息，请参阅 <xref:System.Threading.Interlocked> API 参考。
 
 ## <a name="spinwait-structure"></a>SpinWait 结构
 

@@ -1,15 +1,15 @@
 ---
 title: 测试 ASP.NET Core 服务和 Web 应用
-description: 适用于容器化 .NET 应用程序的 .NET 微服务体系结构 | 测试 ASP.NET Core 服务和 web 应用
+description: 适用于容器化 .NET 应用程序的 .NET 微服务体系结构 | 探索用于在容器中测试 ASP.NET Core 服务和 Web 应用的体系结构。
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 12/11/2017
-ms.openlocfilehash: 2702a273ade0e58ba93d556cfd1ecc5531027f93
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.date: 10/02/2018
+ms.openlocfilehash: 67989dc9651745ce0bd9ee9bbcbde1af0b7bc452
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47232854"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53148023"
 ---
 # <a name="testing-aspnet-core-services-and-web-apps"></a>测试 ASP.NET Core 服务和 Web 应用
 
@@ -29,7 +29,7 @@ ms.locfileid: "47232854"
 
 单元测试涉及在测试应用程序部分时，使之与它的基础结构和依赖关系相隔离。 单元测试控制器逻辑时，仅测试单个操作或方法的内容，不测试其依赖项或框架自身的行为。 单位测试不检测部件间交互的问题，这是集成测试的用途。
 
-单元测试控制器操作时，请确保仅关注其行为。 控制器单元测试将避开筛选器、路由或模型绑定等。 由于仅专注测试一项内容，单位测试通常编写简单、运行迅速。 正确编写的单位测试集无需过多开销即可经常运行。
+单元测试控制器操作时，请确保仅关注其行为。 控制器单元测试可避免筛选器、路由或模型绑定（请求数据到 ViewModel 或 DTO 的映射）等情况。 由于仅专注测试一项内容，单位测试通常编写简单、运行迅速。 正确编写的单位测试集无需过多开销即可经常运行。
 
 单元测试基于 xUnit.net、MSTest、Moq 或 NUnit 等测试框架实现。 对于 eShopOnContainers 示例应用程序，我们使用 xUnit。
 
@@ -37,19 +37,26 @@ ms.locfileid: "47232854"
 
 ```csharp
 [Fact]
-public void Add_new_Order_raises_new_event()
+public async Task Get_order_detail_success()
 {
-    // Arrange
-    var street = " FakeStreet ";
-    var city = "FakeCity";
-    // Other variables omitted for brevity ...
-    // Act
-    var fakeOrder = new Order(new Address(street, city, state, country, zipcode),
-        cardTypeId, cardNumber,
-        cardSecurityNumber, cardHolderName,
-        cardExpiration);
-    // Assert
-    Assert.Equal(fakeOrder.DomainEvents.Count, expectedResult);
+    //Arrange
+    var fakeOrderId = "12";
+    var fakeOrder = GetFakeOrder();
+ 
+    //...
+
+    //Act
+    var orderController = new OrderController(
+        _orderServiceMock.Object, 
+        _basketServiceMock.Object, 
+        _identityParserMock.Object);
+
+    orderController.ControllerContext.HttpContext = _contextMock.Object;
+    var actionResult = await orderController.Detail(fakeOrderId);
+ 
+    //Assert
+    var viewResult = Assert.IsType<ViewResult>(actionResult);
+    Assert.IsAssignableFrom<Order>(viewResult.ViewData.Model);
 }
 ```
 
@@ -63,7 +70,7 @@ public void Add_new_Order_raises_new_event()
 
 与单元测试相比，集成测试执行较多的代码片段，且集成测试依赖基础结构元素，因此它的速度比单元测试慢几个数量级。 因此，最好限制编写和运行的集成测试数量。
 
-ASP.NET Core 包括可用于处理 HTTP 请求且无网络费用的内置测试 web 主机，这意味着可在使用真正的 web 主机时更快地运行这些测试。 NuGet 组件中，测试 web 主机作为 Microsoft.AspNetCore.TestHost 提供。 可将其添加到集成测试项目，并用于托管 ASP.NET Core 应用程序。
+ASP.NET Core 包括可用于处理 HTTP 请求且无网络费用的内置测试 web 主机，这意味着可在使用真正的 web 主机时更快地运行这些测试。 NuGet 组件中，测试 web 主机 (TestServer) 作为 Microsoft.AspNetCore.TestHost 提供。 可将其添加到集成测试项目，并用于托管 ASP.NET Core 应用程序。
 
 如以下代码所示，创建 ASP.NET Core 控制器的集成测试时，通过测试主机实例化控制器。 这相当于 HTTP 请求，但它的运行速度更快。
 
@@ -96,33 +103,111 @@ public class PrimeWebDefaultRequestShould
 
 #### <a name="additional-resources"></a>其他资源
 
--   **Steve Smith.测试控制器** (ASP.NET Core)[*https://docs.microsoft.com/aspnet/core/mvc/controllers/testing*](/aspnet/core/mvc/controllers/testing)
+-   **Steve Smith.测试控制器** (ASP.NET Core) <br/>
+    [*https://docs.microsoft.com/aspnet/core/mvc/controllers/testing*](https://docs.microsoft.com/aspnet/core/mvc/controllers/testing)
 
--   **Steve Smith.集成测试** (ASP.NET Core)[*https://docs.microsoft.com/aspnet/core/test/integration-tests*](/aspnet/core/test/integration-tests)
+-   **Steve Smith.集成测试** (ASP.NET Core) <br/>
+    [*https://docs.microsoft.com/aspnet/core/test/integration-tests*](https://docs.microsoft.com/aspnet/core/test/integration-tests)
 
--   **使用 dotnet 测试在 .NET Core 中进行单元测试**
-    [*https://docs.microsoft.com/dotnet/core/testing/unit-testing-with-dotnet-test*](../../../core/testing/unit-testing-with-dotnet-test.md)
+-   **使用 dotnet 测试在 .NET Core 中进行单元测试** <br/>
+    [*https://docs.microsoft.com/dotnet/core/testing/unit-testing-with-dotnet-test*](https://docs.microsoft.com/dotnet/core/testing/unit-testing-with-dotnet-test)
 
--   **xUnit.net**。 官方网站。
+-   **xUnit.net**。 官方网站。 <br/>
     [*https://xunit.github.io/*](https://xunit.github.io/)
 
--   **单元测试基本信息**
+-   单元测试基本信息。 <br/>
     [*https://msdn.microsoft.com/library/hh694602.aspx*](https://msdn.microsoft.com/library/hh694602.aspx)
 
--   **Moq**。 GitHub 存储库。
+-   **Moq**。 GitHub 存储库。 <br/>
     [*https://github.com/moq/moq*](https://github.com/moq/moq)
 
--   **NUnit**。 官方网站。
+-   **NUnit**。 官方网站。 <br/>
     [*https://www.nunit.org/*](https://www.nunit.org/)
 
 ### <a name="implementing-service-tests-on-a-multi-container-application"></a>在多容器应用程序上实现服务测试 
 
 如前所述，在测试多容器应用程序时，所有微服务需要在 Docker 主机或容器群集内运行。 包含有关一系列微服务的多个操作的端到端服务测试要求通过运行 docker-compose up（如果使用业务流程协调程序，则运行同等机制），在 Docker 主机中部署和启动整个应用程序。 整个应用程序及其所有服务运行后，可以执行端到端集成和功能测试。
 
-可以使用多种方法。 在用于部署应用程序的 docker-compose.yml 文件（或 docker-compose.ci.build.yml 等类似文件）中，可在解决方案级别扩展入口点，以使用 [dotnet 测试](../../../core/tools/dotnet-test.md)。 还可以使用将在设置为目标的映像中运行测试的其他 compose 文件。 通过使用包括容器上的微服务和数据库的其他集成测试 compose 文件，可确保运行测试前相关数据始终重置为其初始状态。
+可以使用多种方法。 在用于部署应用程序的 docker-compose.yml 文件 中，可在解决方案级别扩展入口点，以使用 [dotnet 测试](https://docs.microsoft.com/dotnet/articles/core/tools/dotnet-test)。 还可以使用将在设置为目标的映像中运行测试的其他 compose 文件。 通过使用包括容器上的微服务和数据库的其他集成测试 compose 文件，可确保运行测试前相关数据始终重置为其初始状态。
 
 compose 应用程序运行后，如果运行 Visual Studio，可利用断点和异常。 或者可在 Azure DevOps Services 或支持 Docker 容器的其他任何 CI/CD 系统中的 CI 管道中自动运行集成测试。
 
+## <a name="testing-in-eshoponcontainers"></a>在 eShopOnContainers 中进行测试
+
+参考应用程序 (eShopOnContainers) 测试最近进行了重构，现在有四种类别：
+
+1.  单元测试，只是普通的旧式常规单元测试，包含在 {MicroserviceName}.UnitTests 项目中
+
+2.  微服务功能/集成测试，具有涉及每个微服务的基础结构但相互独立的测试用例，包含在 {MicroserviceName}.FunctionalTests 项目中。
+
+3.  应用程序功能/集成测试，侧重于微服务集成，具有执行多个微服务的测试用例。 这些测试位于项目 Application.FunctionalTests 中。
+
+4.  负载测试，侧重于每个微服务的响应时间。 这些测试位于项目 LoadTest 中，需要 Visual Studio 2017 Enterprise Edition。
+
+每个微服务的单元和集成测试包含在每个微服务的测试文件夹中，应用程序负责测试包含在解决方案文件夹中的测试文件夹下，如图 6-25 所示。
+
+![eShopOnContainers 中的测试结构：每个服务都具有包含单元和功能测试的“测试”文件夹。 解决方案“测试”文件夹下是应用程序范围功能测试和负载测试。](./media/image42.png)
+
+**图 6-25**。 eShopOnContainers 中的测试文件夹结构
+
+微服务和应用程序功能/集成测试使用常规测试运行程序从 Visual Studio 运行，但首先需要启动所需基础结构服务（通过一组包含在解决方案测试文件夹中的 docker-compose 文件）：
+
+docker-compose-test.yml
+
+```yml
+version: '3.4'
+
+services:
+  redis.data:
+    image: redis:alpine
+  rabbitmq:
+    image: rabbitmq:3-management-alpine
+  sql.data:
+    image: microsoft/mssql-server-linux:2017-latest
+  nosql.data:
+    image: mongo
+```
+
+docker-compose-test.override.yml
+
+```yml
+version: '3.4'
+
+services:
+  redis.data:
+    ports:
+      - "6379:6379"
+  rabbitmq:
+    ports:
+      - "15672:15672"
+      - "5672:5672" 
+  sql.data:
+    environment:
+      - SA_PASSWORD=Pass@word
+      - ACCEPT_EULA=Y
+    ports:
+      - "5433:1433"
+  nosql.data:
+    ports:
+      - "27017:27017"
+```
+
+因此，若要运行功能/集成测试，必须首先从解决方案测试文件夹运行此命令：
+
+``` console
+docker-compose -f docker-compose-test.yml -f docker-compose-test.override.yml up
+```
+
+正如你所见，这些 docker-compose 文件仅启动 Redis、RabitMQ、SQL Server 和 MongoDB 微服务。
+
+### <a name="additionl-resources"></a>其他资源
+
+-   GitHub 上的 eShopOnContainers 存储库中的测试自述文件 <br/>
+    [*https://github.com/dotnet-architecture/eShopOnContainers/tree/dev/test*](https://github.com/dotnet-architecture/eShopOnContainers/tree/dev/test)
+
+-   GitHub 上的 eShopOnContainers 存储库中的负载测试自述文件 <br/>
+    [*https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/test/ServicesTests/LoadTest/*](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/test/ServicesTests/LoadTest/)
+
 >[!div class="step-by-step"]
-[上一页](subscribe-events.md)
-[下一页](../microservice-ddd-cqrs-patterns/index.md)
+>[上一页](subscribe-events.md)
+>[下一页](background-tasks-with-ihostedservice.md)

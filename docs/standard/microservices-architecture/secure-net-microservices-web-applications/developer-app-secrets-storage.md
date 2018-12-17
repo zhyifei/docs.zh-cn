@@ -4,12 +4,12 @@ description: 适用于容器化 .NET 应用程序的 .NET 微服务体系结构 
 author: mjrousos
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.openlocfilehash: 560120db35ae190bdef1f95d72ac1e5de697124e
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.openlocfilehash: 6f5dfbb53b99fec4d7cc66c528fe866c71c2172f
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37105941"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53143865"
 ---
 # <a name="storing-application-secrets-safely-during-development"></a>在开发过程中安全地存储应用程序机密
 
@@ -39,7 +39,7 @@ ms.locfileid: "37105941"
 
 ## <a name="storing-secrets-using-the-aspnet-core-secret-manager"></a>使用 ASP.NET Core 机密管理器存储机密
 
-ASP.NET Core [机密管理器](https://docs.microsoft.com/aspnet/core/security/app-secrets#secret-manager)工具提供了在源代码外部保存机密的另一种方法。 若要使用“机密管理器”工具，请在项目文件中包含 Microsoft.Extensions.SecretManager.Tools 包的工具参考 (DotNetCliToolReference)。 一旦出现并恢复了该依赖关系，就可以使用 dotnet 用户机密命令来设置命令行中的机密值。 这些机密将存储在用户配置文件目录中的 JSON 文件中（详细信息随操作系统而异），与源代码无关。
+ASP.NET Core [机密管理器](https://docs.microsoft.com/aspnet/core/security/app-secrets#secret-manager)工具提供了在源代码外部保存机密的另一种方法。 若要使用“机密管理器”工具，请在项目文件中包含 Microsoft.Extensions.SecretManager.Tools 包的工具参考 (DotNetCliToolReference)。 如果该依赖项存在并且已恢复，则可以使用 dotnet 用户机密命令来通过命令行设置机密的值。 这些机密将存储在用户配置文件目录中的 JSON 文件中（详细信息随操作系统而异），与源代码无关。
 
 机密管理器工具设置的机密是由使用机密的项目的 UserSecretsId 属性组织的。 因此，必须确保在项目文件（如下面的代码片段所示）中设置 UserSecretsId 属性。 用作 ID 的实际字符串并不重要，只要它在项目中是唯一的。
 
@@ -53,5 +53,5 @@ ASP.NET Core [机密管理器](https://docs.microsoft.com/aspnet/core/security/a
 
 
 >[!div class="step-by-step"]
-[上一页](authorization-net-microservices-web-applications.md)
-[下一页](azure-key-vault-protects-secrets.md)
+>[上一页](authorization-net-microservices-web-applications.md)
+>[下一页](azure-key-vault-protects-secrets.md)

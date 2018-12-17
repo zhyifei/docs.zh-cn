@@ -1,5 +1,6 @@
 ---
-title: 正则表达式中的定位点
+title: .NET 正则表达式中的定位点
+description: 了解如何在正则表达式模式中使用定位点。
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -17,17 +18,18 @@ helpviewer_keywords:
 ms.assetid: 336391f6-2614-499b-8b1b-07a6837108a7
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7ae07afa2ad2110591139d395ffd8e8cfa5e2347
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.custom: seodec18
+ms.openlocfilehash: d5d07dd290a857a0c6dbfcd9074d8d16ff47e6cd
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44085181"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53155033"
 ---
 # <a name="anchors-in-regular-expressions"></a>正则表达式中的定位点
 <a name="top"></a> 定位点（原子零宽度断言）指定字符串中必须出现匹配的位置。 在搜索表达式中使用定位点时，正则表达式引擎不在字符串中前进或使用字符，它仅在指定位置查找匹配。 例如， `^` 指定必须从行或字符串的开头开始匹配。 因此，正则表达式 `^http:` 仅当 "http:" 出现在行开头时才与之匹配。 下表列出了 .NET 中正则表达式支持的定位点。  
   
-|定位点|描述|  
+|定位点|说明|  
 |------------|-----------------|  
 |`^`|默认情况下，匹配必须出现在字符串的开头；在多行模式中，必须出现在该行的开头。 有关详细信息，请参阅 [字符串或行的开头](#Start)。|  
 |`$`|默认情况下，匹配必须出现在字符串的末尾，或在字符串末尾的 `\n` 之前；在多行模式中，必须出现在该行的末尾，或在该行末尾的 `\n` 之前。 有关详细信息，请参阅 [字符串或行的末尾](#End)。|  
@@ -53,7 +55,7 @@ ms.locfileid: "44085181"
   
  正则表达式模式 `^((\w+(\s?)){2,}),\s(\w+\s\w+),(\s\d{4}(-(\d{4}|present))?,?)+` 的定义如下表所示。  
   
-|模式|描述|  
+|模式|说明|  
 |-------------|-----------------|  
 |`^`|从输入字符串的开头开始匹配（如果在调用该方法时选择了 <xref:System.Text.RegularExpressions.RegexOptions.Multiline?displayProperty=nameWithType> 选项，则从行的开头开始匹配）。|  
 |`((\w+(\s?)){2,}`|匹配刚好两次后跟零个或一个空格的一个或多个单词字符。 这是第一个捕获组。 此表达式还定义第二个和第三个捕获组：第二组包括捕获的单词，第三组包括捕获的空格。|  
@@ -73,7 +75,7 @@ ms.locfileid: "44085181"
   
  如果结合使用 `$` 与 <xref:System.Text.RegularExpressions.RegexOptions.Multiline?displayProperty=nameWithType> 选项，则匹配也可能出现在行的末尾。 请注意， `$` 与 `\n` 匹配但与 `\r\n` （回车符和换行符的组合，或称 CR/LF）不匹配。 若要匹配 CR/LF 字符组合，请将 `\r?$` 包括到正则表达式模式中。  
   
- 以下示例将 `$` 定位点添加到 [字符串或行的开头](#Start) 部分的示例中所使用的正则表达式模式中。 配合包括五行文本的原始输入字符串使用时，<xref:System.Text.RegularExpressions.Regex.Matches%28System.String%2CSystem.String%29?displayProperty=nameWithType> 方法找不到匹配项，因为第一行的末尾与 `$` 模式不匹配。 当原始输入字符串被拆分为字符串数组时，<xref:System.Text.RegularExpressions.Regex.Matches%28System.String%2CSystem.String%29?displayProperty=nameWithType> 方法会成功匹配五行中的每一行。 如果调用 <xref:System.Text.RegularExpressions.Regex.Matches%28System.String%2CSystem.String%2CSystem.Text.RegularExpressions.RegexOptions%29?displayProperty=nameWithType> 方法时将 `options` 参数设置为 <xref:System.Text.RegularExpressions.RegexOptions.Multiline?displayProperty=nameWithType>，则找不到匹配项，因为正则表达式模式不考虑回车符元素 (\u+000D)。 但是，如果通过用将 `$` 替换成 `\r?$` 修改了正则表达式模式，则调用 <xref:System.Text.RegularExpressions.Regex.Matches%28System.String%2CSystem.String%2CSystem.Text.RegularExpressions.RegexOptions%29?displayProperty=nameWithType> 方法并将 `options` 参数设置为 <xref:System.Text.RegularExpressions.RegexOptions.Multiline?displayProperty=nameWithType> 将再次找到五个匹配项。  
+ 以下示例将 `$` 定位点添加到 [字符串或行的开头](#Start) 部分的示例中所使用的正则表达式模式中。 配合包括五行文本的原始输入字符串使用时， <xref:System.Text.RegularExpressions.Regex.Matches%28System.String%2CSystem.String%29?displayProperty=nameWithType> 方法找不到匹配项，因为第一行的末尾与 `$` 模式不匹配。 当原始输入字符串被拆分为字符串数组时， <xref:System.Text.RegularExpressions.Regex.Matches%28System.String%2CSystem.String%29?displayProperty=nameWithType> 方法会成功匹配五行中的每一行。 如果调用 <xref:System.Text.RegularExpressions.Regex.Matches%28System.String%2CSystem.String%2CSystem.Text.RegularExpressions.RegexOptions%29?displayProperty=nameWithType> 方法时将 `options` 参数设置为 <xref:System.Text.RegularExpressions.RegexOptions.Multiline?displayProperty=nameWithType>，则找不到匹配项，因为正则表达式模式不考虑回车符元素 (\u+000D)。 但是，如果通过用将 `$` 替换成 `\r?$`修改了正则表达式模式，则调用 <xref:System.Text.RegularExpressions.Regex.Matches%28System.String%2CSystem.String%2CSystem.Text.RegularExpressions.RegexOptions%29?displayProperty=nameWithType> 方法并将 `options` 参数设置为 <xref:System.Text.RegularExpressions.RegexOptions.Multiline?displayProperty=nameWithType> 将再次找到五个匹配项。  
   
  [!code-csharp[Conceptual.RegEx.Language.Assertions#2](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.assertions/cs/endofstring1.cs#2)]
  [!code-vb[Conceptual.RegEx.Language.Assertions#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.assertions/vb/endofstring1.vb#2)]  
@@ -126,7 +128,7 @@ ms.locfileid: "44085181"
   
  正则表达式 `\G(\w+\s?\w*),?` 可以解释为下表中所示内容。  
   
-|模式|描述|  
+|模式|说明|  
 |-------------|-----------------|  
 |`\G`|从上次匹配结束的位置开始。|  
 |`\w+`|匹配一个或多个单词字符。|  
@@ -148,7 +150,7 @@ ms.locfileid: "44085181"
   
  正则表达式模式可以解释为下表中所示内容。  
   
-|模式|描述|  
+|模式|说明|  
 |-------------|-----------------|  
 |`\b`|在单词边界处开始匹配。|  
 |`are`|匹配子字符串“are”。|  
@@ -168,7 +170,7 @@ ms.locfileid: "44085181"
   
  正则表达式模式可以解释为下表中所示内容。  
   
-|模式|描述|  
+|模式|说明|  
 |-------------|-----------------|  
 |`\B`|不在单词边界处开始匹配。|  
 |`qu`|匹配子字符串“qu”。|  

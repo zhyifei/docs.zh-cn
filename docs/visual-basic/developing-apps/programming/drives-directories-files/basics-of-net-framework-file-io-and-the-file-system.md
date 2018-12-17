@@ -9,12 +9,12 @@ helpviewer_keywords:
 - streams
 - streams, definition
 ms.assetid: 49d837c0-cf28-416f-8606-4d83d7b479ef
-ms.openlocfilehash: c978f79571494d9b716df4e8a42e7f40d20766f6
-ms.sourcegitcommit: 869b5832b667915ac4a5dd8c86b1109ed26b6c08
+ms.openlocfilehash: 5ce95d84782f02df1a4f9f362629bab776a8060c
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/28/2018
-ms.locfileid: "39332945"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53155020"
 ---
 # <a name="basics-of-net-framework-file-io-and-the-file-system-visual-basic"></a>.NET Framework 文件 I/O 和文件系统基础知识 (Visual Basic)
 使用 <xref:System.IO> 命名空间中的类与驱动器、文件和目录一起工作。  
@@ -32,7 +32,7 @@ ms.locfileid: "39332945"
 ## <a name="stream-operations"></a>流操作  
  流中包含的数据可能来自内存、文件或 TCP/IP 套接字。 流具有可应用于它们的基本操作：  
   
--   读取。 可以从流读取数据，将数据从流传输到数据结构，如字符串或字节数组。  
+-   **读取**。 可以从流读取数据，将数据从流传输到数据结构，如字符串或字节数组。  
   
 -   **编写**。 可以将数据写入流中，将数据从数据源传输到流。  
   
@@ -101,5 +101,5 @@ ms.locfileid: "39332945"
 ## <a name="see-also"></a>请参阅  
  [撰写流](../../../../standard/io/composing-streams.md)  
  [文件和流 I/O](../../../../standard/io/index.md)  
- [异步文件 I/O](../../../../standard/io/asynchronous-file-i-o.md)  
+ [Asynchronous File I/O](../../../../standard/io/asynchronous-file-i-o.md)  
  [在 .NET Framework 文件 I/O 和文件系统中使用的类 (Visual Basic)](../../../../visual-basic/developing-apps/programming/drives-directories-files/classes-used-in-net-framework-file-io-and-the-file-system.md)

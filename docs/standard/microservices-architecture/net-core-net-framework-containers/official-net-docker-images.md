@@ -4,12 +4,12 @@ description: 适用于容器化 .NET 应用程序的 .NET 微服务体系结构 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/11/2018
-ms.openlocfilehash: 5d42ec77958e056b75b0e379f8ab520ac926c72a
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: c1948693edbc197b8527ce8ce82c196206a16876
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47075563"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53131373"
 ---
 # <a name="official-net-docker-images"></a>官方 .NET Docker 映像
 
@@ -50,7 +50,6 @@ ms.locfileid: "47075563"
 | microsoft/dotnet:2.1-aspnetcore-runtime | ASP.NET Core，包含仅运行时和 ASP.NET Core 优化，适用于 Linux 和 Windows（多体系结构） |
 | microsoft/dotnet:2.1-sdk                | .NET Core，包含 SDK，适用于 Linux 和 Windows（多体系结构）                                  |
 
-
 >[!div class="step-by-step"]
-[上一页](net-container-os-targets.md)
-[下一页](../architect-microservice-container-applications/index.md)
+>[上一页](net-container-os-targets.md)
+>[下一页](../architect-microservice-container-applications/index.md)
