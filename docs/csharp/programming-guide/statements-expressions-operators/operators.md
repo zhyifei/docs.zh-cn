@@ -1,17 +1,18 @@
 ---
-title: 运算符（C# 编程指南）
+title: 运算符 - C# 编程指南
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - operators [C#]
 - C# language, operators
 - operators [C#], about operators
 ms.assetid: 214e7b83-1a41-4f7c-9867-64e9c0bab39f
-ms.openlocfilehash: bf453d5770967f26999b8537339f1b690646b97d
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: e9518dcf2a9facfdc46c2f6245184ea2da95b819
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53150962"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53238996"
 ---
 # <a name="operators-c-programming-guide"></a>运算符（C# 编程指南）
 在 C# 中，运算符  是应用于表达式或语句中的一个或多个操作数  的程序元素。 接受一个操作数的运算符称为`++`一元 `new`运算符，例如递增运算符 ( *) 或* 。 接受两个操作数的运算符称为`+`二元`-`运算符，例如算术运算符（`*`、`/`、 *、* ）。 条件运算符`?:`接受三个操作数，是 C# 中唯一的三元运算符。  
@@ -111,7 +112,7 @@ ms.locfileid: "53150962"
 |类别|表达式|说明|  
 |--------------|----------------|-----------------|  
 |逻辑“与”|x [&](../../../csharp/language-reference/operators/and-operator.md) y|整型按位“与”，布尔型逻辑“与”|  
-|逻辑“异或”|x [^](../../../csharp/language-reference/operators/xor-operator.md) y|整数型位 XOR，布尔型逻辑 XOR|  
+|逻辑 XOR|x [^](../../../csharp/language-reference/operators/xor-operator.md) y|整数型位 XOR，布尔型逻辑 XOR|  
 |逻辑“或”|x [&#124;](../../../csharp/language-reference/operators/or-operator.md) y|整数型位 OR，布尔型逻辑 OR|  
 |条件“与”|x [&&](../../../csharp/language-reference/operators/conditional-and-operator.md) y|仅当 x 为 True 时计算 y|  
 |条件“或”|x [&#124;&#124;](../../../csharp/language-reference/operators/conditional-or-operator.md) y|仅当 x 为 False 时计算 y|  

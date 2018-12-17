@@ -1,5 +1,6 @@
 ---
-title: readonly 关键字（C# 参考）
+title: readonly 关键字 - C# 参考
+ms.custom: seodec18
 ms.date: 06/21/2018
 f1_keywords:
 - readonly_CSharpKeyword
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - readonly keyword [C#]
 ms.assetid: 2f8081f6-0de2-4903-898d-99696c48d2f4
-ms.openlocfilehash: b50d3b571afb3128c973baaf7d7178da705382bd
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: e2fdb92ad2f044aa74201676ed8cb89bb51de5f5
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53146165"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53239834"
 ---
 # <a name="readonly-c-reference"></a>readonly（C# 参考）
 
@@ -80,7 +81,7 @@ public readonly struct Point
 }
 ```
 
-添加未标记为 `readonly` 的字段，会产生编译器错误 `CS8340`：“只读结构的实例字段必须为只读。”
+添加未标记 `readonly` 的字段会生成编译器错误 `CS8340`：“只读结构的实例字段必须为只读。”
 
 ## <a name="ref-readonly-return-example"></a>Ref readonly 返回示例
 

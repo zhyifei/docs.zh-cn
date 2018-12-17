@@ -1,15 +1,16 @@
 ---
-title: 指针类型（C# 编程指南）
+title: 指针类型 - C# 编程指南
+ms.custom: seodec18
 ms.date: 04/20/2018
 helpviewer_keywords:
 - unsafe code [C#], pointers
 - pointers [C#]
-ms.openlocfilehash: 124cc98b6f73b6014ab845ce5b9331e9f5292757
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 5474d179005742c610d29ccd9dac7bf1dc94c9d2
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53146831"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53239404"
 ---
 # <a name="pointer-types-c-programming-guide"></a>指针类型（C# 编程指南）
 

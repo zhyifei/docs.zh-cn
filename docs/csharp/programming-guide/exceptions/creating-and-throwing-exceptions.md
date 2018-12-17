@@ -1,5 +1,6 @@
 ---
-title: 创建和引发异常（C# 编程指南）
+title: 创建和抛出异常 - C# 编程指南
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - catching exceptions [C#]
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - exceptions [C#], creating
 - exceptions [C#], throwing
 ms.assetid: 6bbba495-a115-4c6d-90cc-1f4d7b5f39e2
-ms.openlocfilehash: c81332307542608e2c7a3f3a5fa89900862f1e84
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: c7775de75ddbf274f3a1555c9f0daaf63bbee713
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53145590"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53235340"
 ---
 # <a name="creating-and-throwing-exceptions-c-programming-guide"></a>创建和引发异常（C# 编程指南）
 异常用于指示在运行程序时发生了错误。 此时将创建一个描述错误的异常对象，然后使用 [throw](../../../csharp/language-reference/keywords/throw.md) 关键字引发。 然后，运行时搜索最兼容的异常处理程序。  

@@ -3,16 +3,28 @@ title: C# 发展历史 - C# 指南
 description: 这些语言在最早版本中是什么样的，它又是如何演化的？
 author: erikdietrich
 ms.date: 09/20/2017
-ms.openlocfilehash: e58f719031cc614f728226232c09f54f6b874475
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: ad05e803000393800764a4b3aa1bf6288f765fd4
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53145327"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53245595"
 ---
 # <a name="the-history-of-c"></a>C# 发展历史 #
 
-最初版本的语言是什么样的？ 之后又是如何演化的？
+本页介绍了 C# 语言每个主要版本的发展历史。 C# 团队将继续创新，以添加新功能。 可以在 GitHub 上的 [dotnet/roslyn 存储库](https://github.com/dotnet/roslyn/blob/master/docs/Language%20Feature%20Status.md)上找到详细的语言功能状态，包括考虑在即将发布的版本中添加的功能。
+
+> [!IMPORTANT]
+> 为了提供一些功能，C# 语言依赖 C# 规范定义为标准库所用的类型和方法。 .NET 平台通过许多包交付这些类型和方法。 例如，异常处理。 为了确保引发的对象派生自 <xref:System.Exception>，将会检查每个 `throw` 语句或表达式。 同样，还会检查每个 `catch`，以确保捕获的类型派生自 <xref:System.Exception>。 每个版本都可能会新增要求。 若要在旧版环境中使用最新语言功能，可能需要安装特定库。 每个特定版本的页面中记录了这些依赖项。 若要了解此依赖项的背景信息，可以详细了解[语言与库的关系](relationships-between-language-and-library.md)。
+
+C# 生成工具将最新的主要语言版本视为默认语言版本。 主要版本之间可能有单点修正发行版。有关详细信息，请参阅本节中的其他文章。 若要使用单点版本中的最新功能，需要[配置编译器语言版本](../language-reference/configure-language-version.md)并选择版本。 自 C# 7.0 起，已有三个单点修正发行版：
+
+* [C# 7.3](csharp-7-3.md)：
+  - C# 7.3 目前在 [Visual Studio 2017 版本 15.7](https://visualstudio.microsoft.com/vs/whatsnew/) 和 [.NET Core 2.1 SDK 2.1.300 RC1](../../core/whats-new/index.md) 中可用。
+* [C# 7.2](csharp-7-2.md)：
+  - C# 7.2 目前在 [Visual Studio 2017 版本 15.5](https://visualstudio.microsoft.com/vs/whatsnew/), 和 [.NET Core 2.0 SDK](../../core/whats-new/index.md) 中可用。
+* [C# 7.1](csharp-7-1.md)：
+  - [Visual Studio 2017 版本 15.3](https://visualstudio.microsoft.com/vs/whatsnew/), 和 [.NET Core 2.0 SDK](../../core/whats-new/index.md) 中增加了这些功能。
 
 ## <a name="c-version-10"></a>C# 1.0 版
 
@@ -106,14 +118,14 @@ C# 4.0 版很难达到 3.0 版的创新水平。 在 3.0 版中，C# 已经完�
 
 ## <a name="c-version-50"></a>C# 5.0 版
 
-C# 5.0 版是该语言有针对性的一个版本。 在此版本中所做的所有工作几乎都针对另一个突破性的语言概念：适用于异步编程的 `async` 和 `await` 模型。  下面是主要功能列表：
+C# 5.0 版是该语言有针对性的一个版本。 对此版本中所做的几乎所有工作都归入另一个突破性语言概念：适用于异步编程的 `async` 和 `await` 模型。  下面是主要功能列表：
 
 - [异步成员](../async.md)
 - [调用方信息特性](../programming-guide/concepts/caller-information.md)
 
 ### <a name="see-also"></a>请参阅
 
-* [代码项目：C# 5.0 中的调用方信息属性](https://www.codeproject.com/Tips/606379/Caller-Info-Attributes-in-Csharp)
+* [代码工程：C# 5.0 中的调用方信息属性](https://www.codeproject.com/Tips/606379/Caller-Info-Attributes-in-Csharp)
 
 调用方信息特性让你可以轻松检索上下文的信息，不需要采用大量样本反射代码。 这在诊断和日志记录任务中也很有用。
 

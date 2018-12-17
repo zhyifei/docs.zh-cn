@@ -3,20 +3,20 @@ title: 使用 LINQ
 description: 此教程将介绍如何使用 LINQ 生成序列、编写用于 LINQ 查询的方法，以及如何区分及早计算和惰性计算。
 ms.date: 10/29/2018
 ms.assetid: 0db12548-82cb-4903-ac88-13103d70aa77
-ms.openlocfilehash: 02456ed0d545aa0740f70d96c25b24ee9bc5120c
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: b7faa75234dec62be63e96c0f15f97c6d2aa4c99
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 12/10/2018
-ms.locfileid: "53126313"
+ms.locfileid: "53170803"
 ---
 # <a name="working-with-linq"></a>使用 LINQ
 
 ## <a name="introduction"></a>介绍
 
-此教程将介绍 .NET Core 和 C# 语言的许多功能。 你将了解：
+本教程将介绍 .NET Core 和 C# 语言的功能。 你将了解：
 
-*   如何使用 LINQ 生成序列
+*   如何使用 LINQ 生成序列。
 *   如何编写可轻松用于 LINQ 查询的方法。
 *   如何区分及早计算和惰性计算。
 
