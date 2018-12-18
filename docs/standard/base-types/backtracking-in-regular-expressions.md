@@ -1,5 +1,6 @@
 ---
-title: 正则表达式中的回溯
+title: .NET 正则表达式中的回溯
+description: 了解如何在正则表达式模式匹配中控制回溯的使用。
 ms.date: 11/12/2018
 ms.technology: dotnet-standard
 dev_langs:
@@ -18,12 +19,13 @@ helpviewer_keywords:
 ms.assetid: 34df1152-0b22-4a1c-a76c-3c28c47b70d8
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 343249f5411d4e5c2335446e7c892b989c8033f2
-ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
+ms.custom: seodec18
+ms.openlocfilehash: 3a61c65b108cba6bb256949a120afc76b58949f2
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "52297344"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53130086"
 ---
 # <a name="backtracking-in-regular-expressions"></a>正则表达式中的回溯
 <a name="top"></a> 当正则表达式模式包含可选 [限定符](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md) 或 [替换构造](../../../docs/standard/base-types/alternation-constructs-in-regular-expressions.md)时，会发生回溯，并且正则表达式引擎会返回以前保存的状态，以继续搜索匹配项。 回溯是正则表达式的强大功能的中心；它使得表达式强大、灵活，可以匹配非常复杂的模式。 同时，这种强大功能需要付出一定代价。 通常，回溯是影响正则表达式引擎性能的单个最重要的因素。 幸运的是，开发人员可以控制正则表达式引擎的行为及其使用回溯的方式。 本主题说明回溯的工作方式以及如何对其进行控制。  
@@ -162,7 +164,7 @@ ms.locfileid: "52297344"
   
  第一个正则表达式模式 `^[0-9A-Z]([-.\w]*[0-9A-Z])*@`的定义如下表所示。  
   
-|模式|描述|  
+|模式|说明|  
 |-------------|-----------------|  
 |`^`|从字符串开头开始匹配。|  
 |`[0-9A-Z]`|匹配字母数字字符。 因为 <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType> 方法是使用 <xref:System.Text.RegularExpressions.RegexOptions.IgnoreCase?displayProperty=nameWithType> 选项调用的，所以此比较不区分大小写。|  
@@ -173,7 +175,7 @@ ms.locfileid: "52297344"
   
  第二个正则表达式模式 `^[0-9A-Z][-.\w]*(?<=[0-9A-Z])@`使用正回顾断言。 其定义如下表所示。  
   
-|模式|描述|  
+|模式|说明|  
 |-------------|-----------------|  
 |`^`|从字符串开头开始匹配。|  
 |`[0-9A-Z]`|匹配字母数字字符。 因为 <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType> 方法是使用 <xref:System.Text.RegularExpressions.RegexOptions.IgnoreCase?displayProperty=nameWithType> 选项调用的，所以此比较不区分大小写。|  
@@ -194,7 +196,7 @@ ms.locfileid: "52297344"
   
  第一个正则表达式模式 `^(([A-Z]\w*)+\.)*[A-Z]\w*$`的定义如下表所示。  
   
-|模式|描述|  
+|模式|说明|  
 |-------------|-----------------|  
 |`^`|从字符串开头开始匹配。|  
 |`([A-Z]\w*)+\.`|对后跟零个或多个单词字符、句点的字母字符 (A-Z) 匹配一次或多次。 因为 <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType> 方法是使用 <xref:System.Text.RegularExpressions.RegexOptions.IgnoreCase?displayProperty=nameWithType> 选项调用的，所以此比较不区分大小写。|  
@@ -204,7 +206,7 @@ ms.locfileid: "52297344"
   
  第二个正则表达式模式 `^((?=[A-Z])\w+\.)*[A-Z]\w*$`使用正预测先行断言。 其定义如下表所示。  
   
-|模式|描述|  
+|模式|说明|  
 |-------------|-----------------|  
 |`^`|从字符串开头开始匹配。|  
 |`(?=[A-Z])`|预测先行到第一个字符，如果它是字母 (A-Z)，则继续匹配。 因为 <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType> 方法是使用 <xref:System.Text.RegularExpressions.RegexOptions.IgnoreCase?displayProperty=nameWithType> 选项调用的，所以此比较不区分大小写。|  

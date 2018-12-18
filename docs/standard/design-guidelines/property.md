@@ -15,7 +15,7 @@ ms.lasthandoff: 12/10/2018
 ms.locfileid: "53131451"
 ---
 # <a name="property-design"></a>属性设计
-尽管从技术上讲非常类似于方法属性，但它们是在其使用情况方面大不相同。 它们应视为智能字段。 它们具有的字段中，调用语法和方法的灵活性。  
+虽然属性在技术上与方法非常相似，但它们的使用场景却截然不同。 属性应被视为聪明的字段。 它们兼具字段的调用语法和方法的灵活性。  
   
  **✓ DO** 创建仅限 get 的属性，如果调用方应不能更改属性的值。  
   
@@ -44,34 +44,34 @@ ms.locfileid: "53131451"
   
  索引的属性通常被称为索引器。 应仅在提供的逻辑集合中的项的访问权限的 Api 中使用索引器。 例如，字符串是一系列字符，并使用索引器<xref:System.String?displayProperty=nameWithType>添加了以访问其中的字符。  
   
- **✓ CONSIDER** 使用索引器以提供对存储在内部数组中的数据访问。  
+ **✓ 考虑**使用索引器提供对存储在内部数组中的数据的访问权限。  
   
- **✓ CONSIDER** 提供索引器上表示的项的集合的类型。  
+ **✓ 考虑**为表示项目集合的类型提供索引器。  
   
- **X AVOID** 使用索引与多个参数的属性。  
+ **X 避免**使用带有一个以上参数的索引属性。  
   
- 如果设计需要多个参数，请重新考虑是否将属性确实表示对逻辑集合取值函数。 如果未显示，而是使用方法。 请考虑从开始使用的方法名称`Get`或`Set`。  
+ 如果设计需要多个参数，请重新考虑该属性是否真正代表逻辑集合的访问者。 如果不是，请改用方法。 考虑使用 `Get` 或 `Set` 开头的方法名称。  
   
- **X AVOID** 具有以外的其他参数类型的索引器<xref:System.Int32?displayProperty=nameWithType>， <xref:System.Int64?displayProperty=nameWithType>， <xref:System.String?displayProperty=nameWithType>， <xref:System.Object?displayProperty=nameWithType>，或枚举。  
+ **X 避免** 使用具有 <xref:System.Int32?displayProperty=nameWithType>、<xref:System.Int64?displayProperty=nameWithType>、<xref:System.String?displayProperty=nameWithType>、<xref:System.Object?displayProperty=nameWithType> 以外参数类型的索引器，或枚举。  
   
- 如果设计需要其他类型的参数，强重新评估是否 API 确实表示对逻辑集合取值函数。 如果不是，使用一种方法。 请考虑从开始使用的方法名称`Get`或`Set`。  
+ 如果设计需要其他类型的参数，强重新评估是否 API 确实表示对逻辑集合取值函数。 如果不是，使用一种方法。 考虑使用 `Get` 或 `Set` 开头的方法名称。  
   
- **✓ DO** 使用名称`Item`的索引属性，除非有显然更好的名称 (例如，请参阅<xref:System.String.Chars%2A>属性`System.String`)。  
+ **✓ 务必**使用 `Item` 作为索引属性的名称，除非有明显更好的名称（例如，请参阅 `System.String` 上的 <xref:System.String.Chars%2A>属性）。  
   
- 在 C# 中，索引器的默认命名项。 <xref:System.Runtime.CompilerServices.IndexerNameAttribute>可用于自定义此名称。  
+ 在 C# 中，索引器默认名称为 Item。 <xref:System.Runtime.CompilerServices.IndexerNameAttribute> 可用于自定义此名称。  
   
- **X DO NOT** 提供索引器和在语义上等效的方法。  
+ **X 切忌**提供在语义方面等效的索引器和方法。  
   
- **X DO NOT** 提供多个系列中一种类型的重载索引器。  
+ **X 切忌**在一种类型中提供多个重载索引器系列。  
   
- C# 编译器强制这一点。  
+ 此准则由 C# 编译器强制执行。  
   
- **X DO NOT** 使用非默认索引属性。  
+ **X 切忌**使用非默认索引属性。  
   
- C# 编译器强制这一点。  
+ 此准则由 C# 编译器强制执行。  
   
 ### <a name="property-change-notification-events"></a>属性更改通知事件  
- 有时是可用于提供事件通知用户中的属性值的更改。 例如，`System.Windows.Forms.Control`将引发`TextChanged`的值之后的事件及其`Text`属性已更改。  
+ 有时，提供用于通知用户属性值更改的事件是很有用的。 例如，`System.Windows.Forms.Control` 在其 `Text` 属性的值发生变化后引发 `TextChanged` 事件。  
   
  **✓ CONSIDER** 引发更改通知事件修改高级 Api （通常是设计器组件） 中的属性值时。  
   
