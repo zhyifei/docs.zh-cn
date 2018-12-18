@@ -54,7 +54,7 @@ ms.locfileid: "53131451"
   
  **X 避免** 使用具有 <xref:System.Int32?displayProperty=nameWithType>、<xref:System.Int64?displayProperty=nameWithType>、<xref:System.String?displayProperty=nameWithType>、<xref:System.Object?displayProperty=nameWithType> 以外参数类型的索引器，或枚举。  
   
- 如果设计需要其他类型的参数，强重新评估是否 API 确实表示对逻辑集合取值函数。 如果不是，使用一种方法。 考虑使用 `Get` 或 `Set` 开头的方法名称。  
+ 如果设计需要其他类型的参数，请仔细重新评估 API 是否真正代表逻辑集合的访问者。 如果不是，请使用方法。 考虑使用 `Get` 或 `Set` 开头的方法名称  
   
  **✓ 务必**使用 `Item` 作为索引属性的名称，除非有明显更好的名称（例如，请参阅 `System.String` 上的 <xref:System.String.Chars%2A>属性）。  
   

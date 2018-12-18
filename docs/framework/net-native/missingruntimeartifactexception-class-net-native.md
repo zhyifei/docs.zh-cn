@@ -16,7 +16,7 @@ ms.locfileid: "50202154"
   
  当一个类型或类型成员的元数据可用但其实现已遭到删除时会引发此异常。  
   
- 命名空间：**** System.Reflection  
+ 命名空间：System.Reflection   
   
 > [!IMPORTANT]
 >  `MissingRuntimeArtifactException` 类旨在仅供 [!INCLUDE[net_native](../../../includes/net-native-md.md)] 工具链内部使用。 它不用于在第三方代码中使用，也不应用它处理应用程序代码中的异常。 相反，你可以通过将条目添加到[运行时指令文件](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)来消除异常。 有关详细信息，请参阅“备注”部分。  
