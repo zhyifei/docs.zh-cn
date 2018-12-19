@@ -23,17 +23,17 @@ ms.locfileid: "53152131"
   
  **X 避免**定义运算符重载，但对于看似基元（内置）类型的类型除外。  
   
- **✓ CONSIDER** 应感觉类似于基元类型的类型中定义运算符重载。  
+ **✓ 考虑**在一个感觉应该像基元类型的类型中定义运算符重载。  
   
- 例如，<xref:System.String?displayProperty=nameWithType>已`operator==`和`operator!=`定义。  
+ 例如，<xref:System.String?displayProperty=nameWithType> 定义 `operator==` 和 `operator!=`。  
   
- **✓ DO** 中表示的数字的结构定义运算符重载 (如<xref:System.Decimal?displayProperty=nameWithType>)。  
+ **✓ 务必**在表示数字的结构中定义运算符重载（例如 <xref:System.Decimal?displayProperty=nameWithType> ）。  
   
- **X DO NOT** 过于刻意定义运算符重载时。  
+ **X 切忌**在定义运算符重载时过于刻意。  
   
- 运算符重载是会立即明显操作的结果将是的非常有用。 例如，最好能够减去<xref:System.DateTime>从另一个`DateTime`，并获取<xref:System.TimeSpan>。 但是，不适合使用逻辑 union 运算符来联合两个数据库查询，或使用移位运算符要写入到流。  
+ 如果操作结果直观而明显，则运算符重载非常有用。 例如，能够从一个 <xref:System.DateTime> 中减去另一个 `DateTime`，并得到 <xref:System.TimeSpan>，这是有意义的。 但是，使用逻辑 union 运算符来合并两个数据库查询或使用 shift 运算符写入流则是不合适的。  
   
- **X DO NOT** 提供运算符重载，除非至少其中一个操作数是定义重载的类型。  
+ **X 切忌**提供运算符重载，除非至少其中一个运算数是定义重载的类型。  
   
  **X 切忌**在定义运算符重载时过于刻意。  
   
@@ -87,7 +87,7 @@ ms.locfileid: "53152131"
 |`~`|`op_OnesComplement`|`OnesComplement`|  
   
 ### <a name="overloading-operator-"></a>重载运算符 ==  
- 重载`operator ==`非常复杂。 运算符的语义需要符合几个其他成员，如<xref:System.Object.Equals%2A?displayProperty=nameWithType>。  
+ 重载 `operator ==` 非常复杂。 运算符的语义需要与其他几个其他成员兼容，如 <xref:System.Object.Equals%2A?displayProperty=nameWithType>。  
   
 ### <a name="conversion-operators"></a>转换运算符  
  转换运算符是一元运算符，允许从一种类型转换为另一种类型。 必须在操作数或返回类型上将运算符定义为静态成员。 有两种类型的转换运算符：隐式和显式。  
@@ -106,7 +106,7 @@ ms.locfileid: "53152131"
   
  最终用户将难以理解当前出现的情况，因为他们可能不知道转换正在进行。  
   
- **✓ DO** 引发<xref:System.InvalidCastException?displayProperty=nameWithType>如果对强制转换运算符的调用导致有损转换和运算符的协定不允许丢失数据的转换。  
+ **✓ 务必**引发 <xref:System.InvalidCastException?displayProperty=nameWithType>，如果对转换运算符的调用会导致有损转换，并且运算符的协定不允许丢失数据的转换。  
   
  *部分版权 © 2005, 2009 Microsoft Corporation。保留所有权利。*  
   
