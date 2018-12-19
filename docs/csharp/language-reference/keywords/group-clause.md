@@ -1,5 +1,6 @@
 ---
-title: group 子句（C# 参考）
+title: group 子句 - C# 参考
+ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - group
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - group keyword [C#]
 - group clause [C#]
 ms.assetid: c817242e-b12c-4baa-a57e-73ee138f34d1
-ms.openlocfilehash: 8b2516b4e5b418e560d5763d8e551d2ab7646da3
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: 6c28f9f4cdcb2ec2d84f299dddb13dc821c1739a
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48584346"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53238164"
 ---
 # <a name="group-clause-c-reference"></a>group 子句（C# 参考）
 
@@ -53,7 +54,7 @@ ms.locfileid: "48584346"
 
 ### <a name="grouping-by-numeric-range"></a>按数值范围分组
 
-下一示例使用表达式创建表示百分比范围的数值组键。 请注意，该示例使用 [let](let-clause.md) 作为方法调用结果的方便存储位置，因此无需在 `group` 子句中调用该方法两次。 若要详细了解如何在查询表达式中安全使用方法，请参阅[如何：在查询表达式中处理异常](../../programming-guide/linq-query-expressions/how-to-handle-exceptions-in-query-expressions.md)。
+下一示例使用表达式创建表示百分比范围的数值组键。 请注意，该示例使用 [let](let-clause.md) 作为方法调用结果的方便存储位置，因此无需在 `group` 子句中调用该方法两次。 若要详细了解如何在查询表达式中安全地使用方法，请参阅[操作说明：在查询表达式中处理异常](../../programming-guide/linq-query-expressions/how-to-handle-exceptions-in-query-expressions.md)。
 
 [!code-csharp[cscsrefQueryKeywords#15](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsCsrefQueryKeywords/CS/Group.cs#15)]
 
@@ -65,7 +66,7 @@ ms.locfileid: "48584346"
 group person by new {name = person.surname, city = person.city};
 ```
 
-如果必须将查询变量传递给其他方法，请使用命名类型。 使用键的自动实现的属性创建一个特殊类，然后替代 <xref:System.Object.Equals%2A> 和 <xref:System.Object.GetHashCode%2A> 方法。 还可以使用结构，在此情况下，并不严格要求替代这些方法。 有关详细信息，请参阅[如何：使用自动实现的属性实现轻量类](../../programming-guide/classes-and-structs/how-to-implement-a-lightweight-class-with-auto-implemented-properties.md)和[如何：查询目录树中的重复文件 (LINQ)](../../programming-guide/concepts/linq/how-to-query-for-duplicate-files-in-a-directory-tree-linq.md)。 后文包含的代码示例演示了如何将复合键与命名类型结合使用。
+如果必须将查询变量传递给其他方法，请使用命名类型。 使用键的自动实现的属性创建一个特殊类，然后替代 <xref:System.Object.Equals%2A> 和 <xref:System.Object.GetHashCode%2A> 方法。 还可以使用结构，在此情况下，并不严格要求替代这些方法。 有关详细信息，请参阅[操作说明：使用自动实现的属性实现轻量类](../../programming-guide/classes-and-structs/how-to-implement-a-lightweight-class-with-auto-implemented-properties.md)和[操作说明：在目录树中查询重复文件](../../programming-guide/concepts/linq/how-to-query-for-duplicate-files-in-a-directory-tree-linq.md)。 后文包含的代码示例演示了如何将复合键与命名类型结合使用。
 
 ## <a name="example"></a>示例
 

@@ -1,16 +1,17 @@
 ---
-title: 接口属性（C# 编程指南）
+title: 接口属性 - C# 编程指南
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - properties [C#], on interfaces
 - interfaces [C#], properties
 ms.assetid: 6503e9ed-33d7-44ec-b4c1-cc16c084b795
-ms.openlocfilehash: 619b9167b9b96be2908d833403379e4c2fe78ba5
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: c51064f9bb5e834648e0086fd8d28f9c0bd84b61
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43746913"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53241582"
 ---
 # <a name="interface-properties-c-programming-guide"></a>接口属性（C# 编程指南）
 可以在[接口](../../../csharp/language-reference/keywords/interface.md)上声明属性。 下面是接口属性访问器的示例：  

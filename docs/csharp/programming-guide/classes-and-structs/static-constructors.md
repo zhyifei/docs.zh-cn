@@ -1,16 +1,17 @@
 ---
-title: 静态构造函数（C# 编程指南）
+title: 静态构造函数 - C# 编程指南
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - static constructors [C#]
 - constructors [C#], static
 ms.assetid: 151ec95e-3c4d-4ed7-885d-95b7a3be2e7d
-ms.openlocfilehash: 22be72547e96c66df3be115dac30a16559b23659
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: fabcbb084a74334a7a1bcddb9a04cc6705caeb29
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43502763"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53234924"
 ---
 # <a name="static-constructors-c-programming-guide"></a>静态构造函数（C# 编程指南）
 静态构造函数用于初始化任何[静态](../../../csharp/language-reference/keywords/static.md)数据，或执行仅需执行一次的特定操作。 将在创建第一个实例或引用任何静态成员之前自动调用静态构造函数。  

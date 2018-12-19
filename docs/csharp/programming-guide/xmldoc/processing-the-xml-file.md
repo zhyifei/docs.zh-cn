@@ -1,16 +1,17 @@
 ---
-title: 处理 XML 文件（C# 编程指南）
+title: 处理 XML 文件 - C# 编程指南
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - XML processing [C#]
 - XML [C#], processing
 ms.assetid: 60c71193-9dac-4cd3-98c5-100bd0edcc42
-ms.openlocfilehash: 1cc5925f33c2d06054e7a88c6c6f90ef026f4dee
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: b5699535553629fb22e4e5789538fd9d598c9f88
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43506023"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53235080"
 ---
 # <a name="processing-the-xml-file-c-programming-guide"></a>处理 XML 文件（C# 编程指南）
 编译器为代码（已标记以生成文档）中的每个构造生成一个 ID 字符串。 （有关如何标记代码的信息，请参阅[文档注释的建议标记](../../../csharp/programming-guide/xmldoc/recommended-tags-for-documentation-comments.md)。）ID 字符串唯一标识构造。 处理 XML 文件的程序可以使用 ID 字符串来标识文档应用于的相应 .NET Framework 元数据/反射项目。  
@@ -23,7 +24,7 @@ ms.locfileid: "43506023"
   
 -   ID 字符串的第一部分标识被标识的成员类型，单个字符后跟一个冒号。 使用下面的成员类型：  
   
-    |字符|描述|  
+    |字符|说明|  
     |---------------|-----------------|  
     |N|namespace<br /><br /> 无法将文档注释添加到命名空间中，但可以在支持的情况下对它们进行 cref 引用。|  
     |T|类型：类、接口、结构、枚举、委托|  

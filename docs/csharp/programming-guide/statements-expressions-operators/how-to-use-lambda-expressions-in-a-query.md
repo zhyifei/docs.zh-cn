@@ -1,15 +1,16 @@
 ---
-title: 如何：在查询中使用 Lambda 表达式（C# 编程指南）
+title: 如何：在查询中使用 Lambda 表达式 - C# 编程指南
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - lambda expressions [C#], in LINQ
 ms.assetid: 3cac4d25-d11f-4abd-9e7c-0f02e97ae06d
-ms.openlocfilehash: 1632466aaa29cb79f053bd3ac2ca42e8b03ea89c
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 9b8adfde95cd2122136cb75e97b4113ee1d80cf9
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43506479"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53238801"
 ---
 # <a name="how-to-use-lambda-expressions-in-a-query-c-programming-guide"></a>如何：在查询中使用 Lambda 表达式（C# 编程指南）
 不会直接在查询语法中使用 lambda 表达式，而是在方法调用中使用它们，并且查询表达式可以包含方法调用。 事实上，一些查询操作只能采用方法语法进行表示。 有关查询语法与方法语法之间的差异的详细信息，请参阅 [LINQ 中的查询语法和方法语法](../../../csharp/programming-guide/concepts/linq/query-syntax-and-method-syntax-in-linq.md)。  
@@ -27,7 +28,7 @@ ms.locfileid: "43506479"
  [!code-csharp[csProgGuideLINQ#2](../../../csharp/programming-guide/arrays/codesnippet/CSharp/how-to-use-lambda-expressions-in-a-query_2.cs)]  
   
 ## <a name="compiling-the-code"></a>编译代码  
- 若要运行此代码，请将方法复制并粘贴到[如何：查询对象的集合](../../../csharp/programming-guide/linq-query-expressions/how-to-query-a-collection-of-objects.md)中提供的 `StudentClass` 中，然后从 `Main` 方法调用它。  
+ 若要运行此代码，请将方法复制并粘贴到[操作说明：查询对象集合](../../../csharp/programming-guide/linq-query-expressions/how-to-query-a-collection-of-objects.md)中提供的 `StudentClass` 内，并通过 `Main` 方法调用它。  
   
 ## <a name="see-also"></a>请参阅
 
