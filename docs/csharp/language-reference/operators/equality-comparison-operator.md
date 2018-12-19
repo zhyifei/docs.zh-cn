@@ -1,5 +1,6 @@
 ---
-title: == 运算符（C# 参考）
+title: == 运算符 - C# 参考
+ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - ==_CSharpKeyword
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - == operator [C#]
 - equality operator [C#]
 ms.assetid: 34c6b597-caa2-4855-a7cd-38ecdd11bd07
-ms.openlocfilehash: d9d7dcf3b38939e681fb51d6c674151cee78b3d0
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: c6f93be4d422fe42787e36f5b86e2cccbfc645b7
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43779153"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53239009"
 ---
 # <a name="-operator-c-reference"></a>== 运算符（C# 参考）
 对于预定义的值类型，如果其操作数的值相等，则相等运算符 (`==`) 返回 true，否则返回 `false`。 对于 [string](../../../csharp/language-reference/keywords/string.md) 外的引用类型，如果两个操作数引用同一对象，则 `==` 会返回 `true`。 对于 `string` 类型，`==` 会比较字符串的值。  

@@ -1,17 +1,18 @@
 ---
-title: 如何：确定字符串是否表示数值（C# 编程指南）
+title: 如何：确定字符串是否表示数值 - C# 编程指南
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - numeric strings [C#]
 - validating numeric input [C#]
 - strings [C#], numeric
 ms.assetid: a4e84e10-ea0a-489f-a868-503dded9d85f
-ms.openlocfilehash: b3eed35180b38236498f241fed59d71262946c37
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: a20850e6fc34b28975dbb2b6be819bf2e88f1f27
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43509062"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53244552"
 ---
 # <a name="how-to-determine-whether-a-string-represents-a-numeric-value-c-programming-guide"></a>如何：确定字符串是否表示数值（C# 编程指南）
 若要确定字符串是否是指定数值类型的有效表示形式，请使用由所有基元数值类型以及如 <xref:System.DateTime> 和 <xref:System.Net.IPAddress> 等类型实现的静态 `TryParse` 方法。 以下示例演示如何确定“108”是否为有效的 [int](../../../csharp/language-reference/keywords/int.md)。  

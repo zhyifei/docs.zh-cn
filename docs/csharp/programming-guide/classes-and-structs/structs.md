@@ -1,16 +1,17 @@
 ---
-title: 结构（C# 编程指南）
+title: 结构 - C# 编程指南
+ms.custom: seodec18
 ms.date: 08/21/2018
 helpviewer_keywords:
 - C# language, structs
 - structs [C#]
 ms.assetid: b7cf4ff2-0eb7-4e5c-93d5-b2196b4f5d89
-ms.openlocfilehash: 27d4b0d7edf1b5e89e84ac1df5783d68ebb4efe0
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.openlocfilehash: 3f19d0485939e1923c479c1c9fdeb06572a11e14
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44259477"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53240380"
 ---
 # <a name="structs-c-programming-guide"></a>结构（C# 编程指南）
 
@@ -37,7 +38,7 @@ ms.locfileid: "44259477"
 - [使用结构](using-structs.md)
 - [构造函数](constructors.md)
 - [可以为 null 的类型](../nullable-types/index.md)
-- [如何：了解向方法传递结构和向方法传递类引用之间的区别](how-to-know-the-difference-passing-a-struct-and-passing-a-class-to-a-method.md)
+- [如何：了解向方法传递结构与类引用的区别](how-to-know-the-difference-passing-a-struct-and-passing-a-class-to-a-method.md)
 - [如何：在结构之间实现用户定义的转换](../statements-expressions-operators/how-to-implement-user-defined-conversions-between-structs.md)
 
 ## <a name="see-also"></a>请参阅

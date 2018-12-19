@@ -1,16 +1,17 @@
 ---
-title: 接口中的索引器（C# 编程指南）
+title: 接口中的索引器 - C# 编程指南
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - indexers [C#], in interfaces
 - accessors [C#], indexers
 ms.assetid: e16b54bd-4a83-4f52-bd75-65819fca79e8
-ms.openlocfilehash: c3ddb48590087d49402482e8cbf3760027da1a2a
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: ff636691ea2f4dacd13fbd2a336f0023ed65750b
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43799458"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53235653"
 ---
 # <a name="indexers-in-interfaces-c-programming-guide"></a>接口中的索引器（C# 编程指南）
 可以在[接口](../../../csharp/language-reference/keywords/interface.md)上声明索引器。 接口索引器的访问器与[类](../../../csharp/language-reference/keywords/class.md)索引器的访问器有所不同，差异如下：  

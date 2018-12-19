@@ -1,23 +1,24 @@
 ---
-title: 类型参数的约束（C# 编程指南）
+title: 类型参数约束 - C# 编程指南
+ms.custom: seodec18
 ms.date: 04/12/2018
 helpviewer_keywords:
 - generics [C#], type constraints
 - type constraints [C#]
 - type parameters [C#], constraints
 - unbound type parameter [C#]
-ms.openlocfilehash: df5a509296f3fb9e8e77a273a0636c74a6f86da3
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: daad986a1e62fe3b1d28fc25d3ebf6d2960d8b1d
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47232711"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53244260"
 ---
 # <a name="constraints-on-type-parameters-c-programming-guide"></a>类型参数的约束（C# 编程指南）
 
 约束告知编译器类型参数必须具备的功能。 在没有任何约束的情况下，类型参数可以是任何类型。 编译器只能假定 <xref:System.Object?displayPropety=nameWithType> 的成员，它是任何 .NET 类型的最终基类。 有关详细信息，请参阅[使用约束的原因](#why-use-constraints)。 如果客户端代码尝试使用约束所不允许的类型来实例化类，则会产生编译时错误。 通过使用 `where` 上下文关键字指定约束。 下表列出了七种类型的约束：
 
-|约束|描述|
+|约束|说明|
 |----------------|-----------------|
 |`where T : struct`|类型参数必须是值类型。 可以指定除 <xref:System.Nullable%601> 以外的任何值类型。 有关可以为 null 的类型的详细信息，请参阅[可以为 null 的类型](../nullable-types/index.md)。|
 |`where T : class`|类型参数必须是引用类型。 此约束还应用于任何类、接口、委托或数组类型。|

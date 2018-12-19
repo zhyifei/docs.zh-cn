@@ -1,5 +1,6 @@
 ---
-title: '|| 运算符（C# 参考）'
+title: '|| 运算符 - C# 参考'
+ms.custom: seodec18
 ms.date: 11/06/2018
 f1_keywords:
 - '||_CSharpKeyword'
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - conditional-OR operator (||) [C#]
 - '|| operator [C#]'
 ms.assetid: 7d442d8e-400d-421f-b4d2-034bf82bcbdc
-ms.openlocfilehash: a391078372e4ec0a3882bed4515733adedffb547
-ms.sourcegitcommit: b5cd9d5d3b75a5537fc9ad8a3f085f0bb1845ee0
+ms.openlocfilehash: f4bb7ada12fbcebcb90fb7cd22d6e6bccad5fb57
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "42925535"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53244565"
 ---
 # <a name="-operator-c-reference"></a>|| 运算符（C# 参考）
 
@@ -25,7 +26,7 @@ ms.locfileid: "42925535"
 
 ## <a name="operator-overloadability"></a>运算符可重载性
 
-用户定义类型不能重载条件逻辑 OR 运算符。 但是，如果用户定义类型以某种方式重载了 [逻辑 OR](or-operator.md)、[true](../keywords/true-operator.md) 和 [false](../keywords/false-operator.md) 运算符，则可以对该类型的操作数进行 `||` 运算。 有关详细信息，请参阅 [C# 语言规范](../language-specification/index.md)的[用户定义条件逻辑运算符](~/_csharplang/spec/expressions.md#user-defined-conditional-logical-operators)部分。
+用户定义类型不能重载条件逻辑 OR 运算符。 不过，如果用户定义类型以某种方式重载[逻辑 OR](or-operator.md) 以及 [true 和 false 运算符](../keywords/true-false-operators.md)，可以对相应类型的操作数执行 `||` 运算。 有关详细信息，请参阅 [C# 语言规范](../language-specification/index.md)的[用户定义条件逻辑运算符](~/_csharplang/spec/expressions.md#user-defined-conditional-logical-operators)部分。
 
 ## <a name="c-language-specification"></a>C# 语言规范
 

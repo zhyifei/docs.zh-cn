@@ -1,15 +1,16 @@
 ---
-title: 使用结构（C# 编程指南）
+title: 使用 struct - C# 编程指南
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - structs [C#], using
 ms.assetid: cea4a459-9eb9-442b-8d08-490e0797ba38
-ms.openlocfilehash: ed21bf44ebcc84a20bb228f9ba152e7348abc015
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: b1e1405941cf9076e88aee5689ed933724727bb2
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43521432"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53237098"
 ---
 # <a name="using-structs-c-programming-guide"></a>使用结构（C# 编程指南）
 `struct` 类型适用于表示轻量级对象，如 `Point`、 `Rectangle`和 `Color`。 尽管用它来表示一个点就如同具有 [Auto-Implemented Properties（自动实现的属性）](../../../csharp/language-reference/keywords/class.md) 的 [类](../../../csharp/programming-guide/classes-and-structs/auto-implemented-properties.md)那样方便，但在某些情况下，使用 [结构](../../../csharp/language-reference/keywords/struct.md) 可能更高效。 例如，如果你声明具有 1000 个 `Point` 对象的数组，那么你将分配额外的内存用于引用每个对象；在这种情况下，使用结构将更为便宜。 因为 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 包含一个称为 <xref:System.Drawing.Point>的对象，因此在此示例中的结构改名为“CoOrds”。  
@@ -32,7 +33,7 @@ ms.locfileid: "43521432"
   
 ## <a name="example-1"></a>示例 1  
   
-### <a name="description"></a>描述  
+### <a name="description"></a>说明  
  此示例同时使用了默认构造函数和参数化构造函数来演示 `struct` 初始化。  
   
 ### <a name="code"></a>代码  
@@ -42,7 +43,7 @@ ms.locfileid: "43521432"
   
 ## <a name="example-2"></a>示例 2  
   
-### <a name="description"></a>描述  
+### <a name="description"></a>说明  
  此示例演示了一个特定于结构的功能。 此功能可以创建 CoOrds 对象，而无需使用 `new` 运算符。 如果将 `struct` 替换为 `class`，程序将不会进行编译。  
   
 ### <a name="code"></a>代码  

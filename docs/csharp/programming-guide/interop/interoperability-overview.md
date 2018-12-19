@@ -1,5 +1,6 @@
 ---
-title: 互操作性概述（C# 编程指南）
+title: 互操作性概述 - C# 编程指南
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - COM interop
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - interoperability, about interoperability
 - platform invoke
 ms.assetid: c025b2e0-2357-4c27-8461-118f0090aeff
-ms.openlocfilehash: 0bd53d97cec4370adc78fc715b1cea5ee5a3fd6f
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 1be7184a37e98e72118065de262d1484476d1cb8
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44208791"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53238660"
 ---
 # <a name="interoperability-overview-c-programming-guide"></a>互操作性概述（C# 编程指南）
 本主题描述在 C# 托管代码和非托管代码之间实现互操作性的方法。  
@@ -21,7 +22,7 @@ ms.locfileid: "44208791"
 ## <a name="platform-invoke"></a>平台调用  
  平台调用是一项服务，它使托管代码能够调用动态链接库 (DLL) 中实现的非托管函数，例如 Microsoft Win32 API 中的非托管函数。 此服务定位并调用导出的函数，并根据需要跨交互操作边界封送其自变量（整数、字符串、数组、结构等）。  
   
- 有关详细信息，请参阅[使用非托管 DLL 函数](../../../framework/interop/consuming-unmanaged-dll-functions.md)和[如何：使用平台调用播放波形文件](../../../csharp/programming-guide/interop/how-to-use-platform-invoke-to-play-a-wave-file.md)。  
+ 有关详细信息，请参阅[使用非托管 DLL 函数](../../../framework/interop/consuming-unmanaged-dll-functions.md)和[操作说明：使用平台调用播放波形文件](../../../csharp/programming-guide/interop/how-to-use-platform-invoke-to-play-a-wave-file.md)。  
   
 > [!NOTE]
 >  [公共语言运行时](../../../standard/clr.md) (CLR) 管理对系统资源的访问。 调用 CLR 外部的非托管代码将避开这种安全机制，因此会带来安全风险。 例如，非托管代码可能直接调用非托管代码中的资源，从而避开 CLR 安全机制。 有关详细信息，请参阅 [ .NET 中的安全性](../../../standard/security/index.md)。  
@@ -59,8 +60,8 @@ ms.locfileid: "44208791"
   
 ## <a name="see-also"></a>请参阅
 
-- [Improving Interop Performance](https://msdn.microsoft.com/library/ms998551.aspx)（提高互操作性能）  
-- [COM 和 .NET 之间的互操作性简介](https://msdn.microsoft.com/library/office/bb610378.aspx)  
+- [Improving Interop Performance](https://docs.microsoft.com/previous-versions/msp-n-p/ff647812%28v=pandp.10%29)（提高互操作性能）  
+- [COM 和 .NET 之间的互操作性简介](/office/client-developer/outlook/pia/introduction-to-interoperability-between-com-and-net)  
 - [Visual Basic 中的 COM 互操作简介](../../../../docs/visual-basic/programming-guide/com-interop/introduction-to-com-interop.md)  
 - [托管代码与非托管代码之间的封送处理](../../../../docs/framework/interop/interop-marshaling.md)  
 - [与非托管代码交互操作](../../../../docs/framework/interop/index.md)  

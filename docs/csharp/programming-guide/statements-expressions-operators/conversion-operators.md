@@ -1,5 +1,6 @@
 ---
-title: 转换运算符（C# 编程指南）
+title: 转换运算符 - C# 编程指南
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - C# language, conversion operators
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - operators [C#], conversion
 - user-defined conversions [C#]
 ms.assetid: c5ad73a3-d57b-4d2b-b4c9-24e3c2856efc
-ms.openlocfilehash: cbf6a83d43a1b3a69e82a35d5d0875f62422cd3f
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: a55a2148ce161deca79d8ba8e64a217e474f0284
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44183309"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53236812"
 ---
 # <a name="conversion-operators-c-programming-guide"></a>转换运算符（C# 编程指南）
 C# 允许程序员在类或结构上声明转换，以便类或结构能够与其他类或结构或者基本类型进行相互转换。 以类似于运算符的方式定义转换，并根据它们所转换为的类型命名。 要转换的参数类型或转换结果的类型必须是包含类型（但不能两者同时都是）。  

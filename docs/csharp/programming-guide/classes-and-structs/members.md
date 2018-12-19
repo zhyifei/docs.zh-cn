@@ -1,23 +1,24 @@
 ---
-title: 成员（C# 编程指南）
+title: 成员 - C# 编程指南
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - types [C#], nested types
 - C# language, type members
 ms.assetid: 4a30a4ab-d690-4936-9124-92ce9448665a
-ms.openlocfilehash: dbfd0c48dc59b094af49e65d2ed4fcd4e2a70ff0
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: e8429df6ef633f11df50ee5526496f9688f845ea
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44087549"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53245098"
 ---
 # <a name="members-c-programming-guide"></a>成员（C# 编程指南）
 类和结构具有表示其数据和行为的成员。 类的成员包括在类中声明的所有成员，以及在该类的继承层次结构中的所有类中声明的所有成员（构造函数和析构函数除外）。 基类中的私有成员被继承，但不能从派生类访问。  
   
  下表列出类或结构中可包含的成员类型：  
   
-|成员|描述|  
+|成员|说明|  
 |------------|-----------------|  
 |[字段](../../../csharp/programming-guide/classes-and-structs/fields.md)|字段是在类范围声明的变量。 字段可以是内置数值类型或其他类的实例。 例如，日历类可能具有一个包含当前日期的字段。|  
 |[常量](../../../csharp/programming-guide/classes-and-structs/constants.md)|常量是在编译时设置其值并且不能更改其值的字段或属性。|  

@@ -1,15 +1,16 @@
 ---
-title: cref 特性（C# 编程指南）
+title: cref 属性 - C# 编程指南
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - cref [C#]
 ms.assetid: 66a6b0e5-b961-4504-a461-3a4cf481fc8b
-ms.openlocfilehash: e9e14cf4e7051e52df20e899e9070e5b728321e5
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: af83ae8c6c209886649d4eb1543c47e63bd97449
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43514598"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53235576"
 ---
 # <a name="cref-attribute-c-programming-guide"></a>cref 特性（C# 编程指南）
 XML 文档标记中的 `cref` 属性是指“代码引用”。 它指定标记的内部文本是一个代码元素，例如类型、方法或属性。 文档工具（例如 [Sandcastle](https://github.com/EWSoftware/SHFB)）使用 `cref` 属性自动生成指向记录类型或成员的页面的超链接。  

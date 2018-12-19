@@ -1,17 +1,18 @@
 ---
-title: null 条件运算符（C# 参考）
+title: null 条件运算符 - C# 参考
+ms.custom: seodec18
 ms.date: 04/03/2015
 helpviewer_keywords:
 - null-conditional operators [C#]
 - ?. operator [C#]
 - ?[] operator [C#]
 ms.assetid: 9c7b2c8f-a785-44ca-836c-407bfb6d27f5
-ms.openlocfilehash: 823b9dc886bf2448ca9da4ac640bfe56f90d3ff3
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 4189b07fd280192a4cb39400e4e77cef702c9d08
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50194847"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53239548"
 ---
 # <a name="-and--null-conditional-operators-c-and-visual-basic"></a>?. 和 ?[] NULL 条件运算符（C# 和 Visual Basic）
 执行成员访问 (`?.`) 或索引 (`?[]`) 操作之前，测试左侧操作数的值为 null，如果左侧操作数计算结果为 `null`，则返回 `null`。 
@@ -49,7 +50,8 @@ PropertyChanged?.Invoke(…)
  新方法是线程安全的，因为编译器生成的代码仅评估 `PropertyChanged` 一次，从而使结果保持在临时变量中。 你需要显式调用 `Invoke` 方法，因为不存在 NULL 条件委托调用语法 `PropertyChanged?(e)`。  
   
 ## <a name="language-specifications"></a>语言规范  
- [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
+
+有关详细信息，请参阅 [C# 语言规范](../language-specification/index.md)中的 [null 条件运算符](~/_csharplang/spec/expressions.md#null-conditional-operator)。 该语言规范是 C# 语法和用法的权威资料。
   
 ## <a name="see-also"></a>请参阅
 

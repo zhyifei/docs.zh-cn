@@ -1,16 +1,17 @@
 ---
-title: 泛型和数组（C# 编程指南）
+title: 泛型和数组 - C# 编程指南
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - generics [C#], arrays
 - arrays [C#], generics
 ms.assetid: 7d956536-3851-41b5-94ad-3e7c0a5fe485
-ms.openlocfilehash: 6cb205d90d4b6de329a179c5969e2d3b543bfb35
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 50d649c4662114e76fdc0a6161ab0cbbeb04756d
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43528495"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53237449"
 ---
 # <a name="generics-and-arrays-c-programming-guide"></a>泛型和数组（C# 编程指南）
 在 C# 2.0 和更高版本中，下限为零的单维数组自动实现 <xref:System.Collections.Generic.IList%601>。 这可使你创建可使用相同代码循环访问数组和其他集合类型的泛型方法。 此技术的主要用处在于读取集合中的数据。 <xref:System.Collections.Generic.IList%601> 接口无法用于添加元素或从数组删除元素。 如果在此上下文中尝试对数组调用 <xref:System.Collections.Generic.IList%601> 方法（例如 <xref:System.Collections.Generic.IList%601.RemoveAt%2A>），则会引发异常。  

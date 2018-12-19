@@ -1,15 +1,16 @@
 ---
-title: in 参数修饰符（C# 参考）
+title: in 参数修饰符 - C# 参考
+ms.custom: seodec18
 ms.date: 03/06/2018
 helpviewer_keywords:
 - parameters [C#], in
 - in parameters [C#]
-ms.openlocfilehash: 199d2d54a1937b9982131b8cc7f1c777f656d7a9
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: d08b135c92cab176e402fec73999083fe4309362
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50199404"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53236292"
 ---
 # <a name="in-parameter-modifier-c-reference"></a>in 参数修饰符（C# 参考）
 
@@ -54,7 +55,7 @@ class InOverloads
 
 首先，在调用站点指定 `in` 会强制编译器选择使用匹配的 `in` 参数定义的方法。 否则，如果两种方法唯一的区别在于是否存在 `in`，则按值重载的匹配度会更高。
 
-第二点，指定 `in` 会声明你想按引用传递参数。 结合 `in` 使用的参数必须代表一个可以直接引用的位置。 `out` 和 `ref` 参数的相同常规规则适用：不能使用常数、普通属性或其他生成值的表达式。 否则，在调用站点省略 `in` 就会通知编译器你将允许它创建临时变量，并按只读引用传递至方法。 编译器创建临时变量以克服一些 `in` 参数的限制：
+第二点，指定 `in` 会声明你想按引用传递参数。 结合 `in` 使用的参数必须代表一个可以直接引用的位置。 `out` 和 `ref` 参数的相同常规规则适用：不得使用常量、普通属性或其他生成值的表达式。 否则，在调用站点省略 `in` 就会通知编译器你将允许它创建临时变量，并按只读引用传递至方法。 编译器创建临时变量以克服一些 `in` 参数的限制：
 
 - 临时变量允许将编译时常数作为 `in` 参数。
 - 临时变量允许使用属性或 `in` 参数的其他表达式。

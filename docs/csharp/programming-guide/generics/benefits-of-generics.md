@@ -1,15 +1,16 @@
 ---
-title: 泛型的优点（C# 编程指南）
+title: 泛型优势 - C# 编程指南
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - generics [C#], benefits
 ms.assetid: 80f037cd-9ea7-48be-bfc1-219bfb2d4277
-ms.openlocfilehash: 2770f8bc7fc4242beb02bf9e0555b5cbb8db0180
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: f97d3ce7a67638719d02c31879c00679405118bc
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43503789"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53245007"
 ---
 # <a name="benefits-of-generics-c-programming-guide"></a>泛型的优点（C# 编程指南）
 公共语言运行时和 C# 语言早期版本中存在一个局限，其中通过将类型与通用基类型 <xref:System.Object> 相互强制完成泛化，泛型提供了此局限的解决方案。 通过创建泛型类，可在编译时创建类型安全的集合。  

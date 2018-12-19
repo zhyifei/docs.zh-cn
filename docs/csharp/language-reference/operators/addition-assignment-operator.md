@@ -1,5 +1,6 @@
 ---
-title: += 运算符（C# 参考）
+title: += 运算符 - C# 参考
+ms.custom: seodec18
 ms.date: 10/29/2018
 f1_keywords:
 - +=_CSharpKeyword
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - addition assignment operator (+=) [C#]
 - event subscription [C#]
 ms.assetid: 9cdf97e6-331d-492b-85e1-3ec3171484e9
-ms.openlocfilehash: ac9330e283cb58ae4e0ee7b644aa2c22bdf64c46
-ms.sourcegitcommit: 3b1cb8467bd73dee854b604e306c0e7e3882d91a
+ms.openlocfilehash: 5d48f2fe53a9bb6f781f8d35f1e0983bcaa30f88
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "50192026"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53240926"
 ---
 # <a name="-operator-c-reference"></a>+= 运算符（C# 参考）
 
@@ -35,7 +36,7 @@ x = x + y
   
 对于数字类型，[加法运算符](addition-operator.md) `+`计算其操作数的和。 如果其中的一个操作数是 [string](../keywords/string.md) 类型或两个操作数都是该类型，它会将操作数的字符串表示形式串联在一起。 对于委托类型，`+` 运算符返回一个新的委托实例，该实例是其操作数的组合。
 
-在订阅[事件](../keywords/event.md)时，还可以使用 `+=` 运算符来指定事件处理程序方法。 有关详细信息，请参阅[如何：订阅和取消订阅事件](../../programming-guide/events/how-to-subscribe-to-and-unsubscribe-from-events.md)。
+在订阅[事件](../keywords/event.md)时，还可以使用 `+=` 运算符来指定事件处理程序方法。 有关更多信息，请参见[如何：订阅和取消订阅事件](../../programming-guide/events/how-to-subscribe-to-and-unsubscribe-from-events.md)。
 
 下面的示例演示 `+=` 运算符的用法：
 

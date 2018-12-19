@@ -1,5 +1,6 @@
 ---
-title: class 关键字（C# 参考）
+title: class 关键字 - C# 参考
+ms.custom: seodec18
 ms.date: 07/18/2017
 f1_keywords:
 - class_CSharpKeyword
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - class keyword [C#]
 ms.assetid: b95d8815-de18-4c3f-a8cc-a0a53bdf8690
-ms.openlocfilehash: 3f30fb473b486efc8381faa9076b98763935b0ae
-ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
+ms.openlocfilehash: d436dee14280d86062834ac131bbe4775705d748
+ms.sourcegitcommit: d6e419f9d9cd7e8f21ebf5acde6d016c16332579
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49086059"
+ms.lasthandoff: 12/12/2018
+ms.locfileid: "53286489"
 ---
 # <a name="class-c-reference"></a>class（C# 参考）
 
@@ -93,7 +94,7 @@ Console.Write(child1.name);   // Error
 
 类中不具有访问修饰符的已声明类型默认为 `private`，因此如果已删除关键字，则此示例中的数据成员将仍为 `private`。
 
-最后要注意的是，默认情况下，对于使用默认构造函数 (`child3`) 创建的对象，age 字段初始化为零。
+最后要注意的是，默认情况下，对于使用默认构造函数 (`child3`) 创建的对象，`age` 字段初始化为零。
 
 ## <a name="c-language-specification"></a>C# 语言规范
 

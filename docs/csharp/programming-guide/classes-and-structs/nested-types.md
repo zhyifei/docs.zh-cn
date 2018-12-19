@@ -1,15 +1,16 @@
 ---
-title: 嵌套类型（C# 编程指南）
+title: 嵌套类型 - C# 编程指南
+ms.custom: seodec18
 ms.date: 07/10/2017
 helpviewer_keywords:
 - nested types [C#]
 ms.assetid: f2e1b315-e3d1-48ce-977f-7bae0960ba99
-ms.openlocfilehash: f99b84d5b21261fa81c02d028d1f913be7290dbb
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: b08a7e95e3ddf7e2392be30f2e69c4ec8f425107
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43740161"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53244000"
 ---
 # <a name="nested-types-c-programming-guide"></a>嵌套类型（C# 编程指南）
 在[类](../../../csharp/language-reference/keywords/class.md)或[构造](../../../csharp/language-reference/keywords/struct.md)中定义的类型称为嵌套类型。 例如:  

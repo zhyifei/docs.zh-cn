@@ -1,5 +1,6 @@
 ---
-title: '% 运算符（C# 参考）'
+title: '% 运算符 - C# 参考'
+ms.custom: seodec18
 ms.date: 09/04/2018
 f1_keywords:
 - '%_CSharpKeyword'
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - remainder operator [C#]
 - '% operator [C#]'
 ms.assetid: 3b74f4f9-fd9c-45e7-84fa-c8d71a0dfad7
-ms.openlocfilehash: cd6d49b69d40f3b45aae060d46b58632dc8448f8
-ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.openlocfilehash: a5c12b6683e35cc1ec2d40446dd0ed068c3d2552
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50041253"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53236474"
 ---
 # <a name="-operator-c-reference"></a>% 运算符（C# 参考）
 

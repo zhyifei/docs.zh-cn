@@ -1,16 +1,17 @@
 ---
-title: 隐式类型的局部变量（C# 编程指南）
+title: 隐式类型本地变量 - C# 编程指南
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - implicitly-typed local variables [C#]
 - var [C#]
 ms.assetid: b9218fb2-ef5d-4814-8a8e-2bc29b0bbc9b
-ms.openlocfilehash: 2e678886162196c3a0fe4762bf766596cdc02225
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 68c0ff055c91f4f1deca6fcfada0f14577439731
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43501398"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53237007"
 ---
 # <a name="implicitly-typed-local-variables-c-programming-guide"></a>隐式类型的局部变量（C# 编程指南）
 可声明局部变量而无需提供显式类型。 `var` 关键字指示编译器通过初始化语句右侧的表达式推断变量的类型。 推断类型可以是内置类型、匿名类型、用户定义类型或 .NET Framework 类库中定义的类型。 有关如何使用 `var` 初始化数组的详细信息，请参阅[隐式类型化数组](../../../csharp/programming-guide/arrays/implicitly-typed-arrays.md)。  
@@ -43,7 +44,7 @@ ms.locfileid: "43501398"
     using (var file = new StreamReader("C:\\myfile.txt")) {...}  
     ```  
   
- 有关详细信息，请参阅[如何：在查询表达式中使用隐式类型化局部变量和数组](../../../csharp/programming-guide/classes-and-structs/how-to-use-implicitly-typed-local-variables-and-arrays-in-a-query-expression.md)。  
+ 有关更多信息，请参见[如何：在查询表达式中使用隐式类型本地变量和数组](../../../csharp/programming-guide/classes-and-structs/how-to-use-implicitly-typed-local-variables-and-arrays-in-a-query-expression.md)。  
   
 ## <a name="var-and-anonymous-types"></a>var 和匿名类型  
  在许多情况下，使用 `var` 是可选的，只是一种语法便利。 但是，在使用匿名类型初始化变量时，如果需要在以后访问对象的属性，则必须将变量声明为 `var`。 这是 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 查询表达式中的常见方案。 有关详细信息，请参阅[匿名类型](../../../csharp/programming-guide/classes-and-structs/anonymous-types.md)。  
@@ -77,7 +78,7 @@ ms.locfileid: "43501398"
 
 - [C# 参考](../../../csharp/language-reference/index.md)  
 - [隐式类型化数组](../../../csharp/programming-guide/arrays/implicitly-typed-arrays.md)  
-- [如何：在查询表达式中使用隐式类型的局部变量和数组](../../../csharp/programming-guide/classes-and-structs/how-to-use-implicitly-typed-local-variables-and-arrays-in-a-query-expression.md)  
+- [如何：在查询表达式中使用隐式类型本地变量和数组](../../../csharp/programming-guide/classes-and-structs/how-to-use-implicitly-typed-local-variables-and-arrays-in-a-query-expression.md)  
 - [匿名类型](../../../csharp/programming-guide/classes-and-structs/anonymous-types.md)  
 - [对象和集合初始值设定项](../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md)  
 - [var](../../../csharp/language-reference/keywords/var.md)  

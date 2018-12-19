@@ -1,16 +1,17 @@
 ---
-title: 方法（C# 编程指南）
+title: 方法 - C# 编程指南
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - methods [C#]
 - C# language, methods
 ms.assetid: cc738f07-e8cd-4683-9585-9f40c0667c37
-ms.openlocfilehash: f719dd010f2910a12b22fac10ae92f1a6bfe8438
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: df2d7837217f4267f95ed73948a4eb479cc035c1
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43741823"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53244409"
 ---
 # <a name="methods-c-programming-guide"></a>方法（C# 编程指南）
 方法是包含一系列语句的代码块。 程序通过调用该方法并指定任何所需的方法参数使语句得以执行。 在 C# 中，每个执行的指令均在方法的上下文中执行。 Main 方法是每个 C# 应用程序的入口点，并在启动程序时由公共语言运行时 (CLR) 调用。  

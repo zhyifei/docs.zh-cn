@@ -1,16 +1,17 @@
 ---
-title: 如何：实现接口事件（C# 编程指南）
+title: 如何：实现接口事件 - C# 编程指南
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - interfaces [C#], event implementation in classes
 - events [C#], in interfaces
 ms.assetid: 63527447-9535-4880-8e95-35e2075827df
-ms.openlocfilehash: 3620a3e11553bdd6878126388b612113b5722e89
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: d52d4d5140e96f81377733e39d1c36886718b706
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43863656"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53236435"
 ---
 # <a name="how-to-implement-interface-events-c-programming-guide"></a>如何：实现接口事件（C# 编程指南）
 [接口](../../../csharp/language-reference/keywords/interface.md)可以声明[事件](../../../csharp/language-reference/keywords/event.md)。 下面的示例演示如何在类中实现接口事件。 这些规则基本上都与实现任何接口方法或属性时的相同。  
@@ -63,4 +64,4 @@ namespace ImplementInterfaceEvents
 - [事件](../../../csharp/programming-guide/events/index.md)  
 - [委托](../../../csharp/programming-guide/delegates/index.md)  
 - [显式接口实现](../../../csharp/programming-guide/interfaces/explicit-interface-implementation.md)  
-- [如何：在派生类中引发基类事件](../../../csharp/programming-guide/events/how-to-raise-base-class-events-in-derived-classes.md)
+- [如何：在派生类中抛出基类事件](../../../csharp/programming-guide/events/how-to-raise-base-class-events-in-derived-classes.md)

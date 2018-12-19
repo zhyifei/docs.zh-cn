@@ -1,5 +1,6 @@
 ---
-title: 如何：声明和使用读/写属性（C# 编程指南）
+title: 如何：声明和使用读/写属性 - C# 编程指南
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - get accessor [C#], declaring properties
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - read/write properties [C#]
 - accessors [C#], declaring properties with
 ms.assetid: a4962fef-af7e-4c4b-a929-4ae4d646ab8a
-ms.openlocfilehash: 77db2841d6ef9af21d38736f39e6041699ca13d5
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 348fcf6605030396095a2d94970ffe46e8d19357
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44180247"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53241835"
 ---
 # <a name="how-to-declare-and-use-read-write-properties-c-programming-guide"></a>如何：声明和使用读/写属性（C# 编程指南）
 属性提供了公共数据成员的便利性，且不会产生未受保护、不可控制和未经验证地访问对象的数据的风险。 这通过访问器实现：从基础数据成员中赋值和检索值的特殊方法。 [set](../../../csharp/language-reference/keywords/set.md) 访问器可分配数据成员，[get](../../../csharp/language-reference/keywords/get.md) 访问器检索数据成员值。  

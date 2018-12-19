@@ -1,15 +1,16 @@
 ---
-title: 如何使用指针访问数组元素（C# 编程指南）
+title: 如何使用指针访问数组元素 - C# 编程指南
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - pointers [C#], array access
 ms.assetid: 6c46f2af-a730-4855-8638-f136d9abaa12
-ms.openlocfilehash: 0e76ebddd8b703e8d0de4aa6825cbd6d0221079b
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 57b1bebb95c1b3f24e550d554fe369d931d6f6b4
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43861645"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53241796"
 ---
 # <a name="how-to-access-an-array-element-with-a-pointer-c-programming-guide"></a>如何使用指针访问数组元素（C# 编程指南）
 
@@ -35,10 +36,10 @@ for (int i = 65; i < 123; i++)
 
 [!code-csharp[csProgGuidePointers#12](../../../csharp/programming-guide/unsafe-code-pointers/codesnippet/CSharp/how-to-access-an-array-element-with-a-pointer_2.cs)]
 
-**大写字母：**
-**ABCDEFGHIJKLMNOPQRSTUVWXYZ**
-**小写字母：**
-**abcdefghijklmnopqrstuvwxyz**
+大写字母：
+ABCDEFGHIJKLMNOPQRSTUVWXYZ
+小写字母：
+abcdefghijklmnopqrstuvwxyz****************
 
 ## <a name="see-also"></a>请参阅
 

@@ -1,5 +1,6 @@
 ---
-title: '! 运算符（C# 参考）'
+title: '! 运算符 - C# 参考'
+ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - '!_CSharpKeyword'
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - logical negation operator (!) [C#]
 - NOT operator [C#]
 ms.assetid: f5ae133f-8f64-4560-b34f-cd9cd5eed4ad
-ms.openlocfilehash: e7477254070e18cdcd0bf6aba600ae7e31bf24c4
-ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
+ms.openlocfilehash: 41bd568e300598e50c5ae6493cc0503c72543870
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2018
-ms.locfileid: "42924970"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53245163"
 ---
 # <a name="-operator-c-reference"></a>! 运算符（C# 参考）
 逻辑非运算符 (`!`) 是一种否定其操作数的一元运算符。 它针对 `bool` 定义，当且仅当其操作数为 `false` 时返回 `true`。  

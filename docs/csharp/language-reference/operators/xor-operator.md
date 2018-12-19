@@ -1,5 +1,6 @@
 ---
-title: ^ 运算符（C# 参考）
+title: ^ 运算符 - C# 参考
+ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - ^_CSharpKeyword
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - ^ operator [C#]
 - bitwise exclusive OR operator [C#]
 ms.assetid: b09bc815-570f-4db6-a637-5b4ed99d014a
-ms.openlocfilehash: b1333f9d06e2804029550e6364a225558e096431
-ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
+ms.openlocfilehash: f6f09f197502af1bc38bcdef97dd1db0ad9c7c08
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2018
-ms.locfileid: "42925293"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53236942"
 ---
 # <a name="-operator-c-reference"></a>^ 运算符（C# 参考）
 针对整型类型和 `bool` 预定义了二元 `^` 运算符。 对于整型类型，`^` 会计算其操作数的按位异或。 对于 `bool` 操作数，`^` 计算其操作数的逻辑异或；即，当且仅当其一个操作数为 `true` 时，结果才为 `true`。  

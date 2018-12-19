@@ -1,17 +1,18 @@
 ---
-title: 分部类和方法（C# 编程指南）
+title: 分部类和方法 - C# 编程指南
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - partial methods [C#]
 - partial classes [C#]
 - C# language, partial classes and methods
 ms.assetid: 804cecb7-62db-4f97-a99f-60975bd59fa1
-ms.openlocfilehash: 2975b9e79824560c711e96382a9ccc03bdc72810
-ms.sourcegitcommit: 3b1cb8467bd73dee854b604e306c0e7e3882d91a
+ms.openlocfilehash: 222a47989537f09fd78c4a3b17fa8c1a5478d73f
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "43521164"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53243460"
 ---
 # <a name="partial-classes-and-methods-c-programming-guide"></a>分部类和方法（C# 编程指南）
 拆分一个[类](../../../csharp/language-reference/keywords/class.md)、一个[结构](../../../csharp/language-reference/keywords/struct.md)、一个[接口](../../../csharp/language-reference/keywords/interface.md)或一个方法的定义到两个或更多的文件中是可能的。 每个源文件包含类型或方法定义的一部分，编译应用程序时将把所有部分组合起来。  
@@ -91,7 +92,7 @@ ms.locfileid: "43521164"
   
     -   [专用](../../../csharp/language-reference/keywords/private.md)  
   
-    -   [protected](../../../csharp/language-reference/keywords/protected.md)  
+    -   [受保护](../../../csharp/language-reference/keywords/protected.md)  
   
     -   [internal](../../../csharp/language-reference/keywords/internal.md)  
   
@@ -109,7 +110,7 @@ ms.locfileid: "43521164"
   
 ## <a name="example-1"></a>示例 1  
   
-### <a name="description"></a>描述  
+### <a name="description"></a>说明  
  下面的示例在一个分部类定义中声明 `CoOrds` 类的字段和构造函数，在另一个分部类定义中声明成员 `PrintCoOrds`。  
   
 ### <a name="code"></a>代码  
@@ -117,7 +118,7 @@ ms.locfileid: "43521164"
   
 ## <a name="example-2"></a>示例 2  
   
-### <a name="description"></a>描述  
+### <a name="description"></a>说明  
  从下面的示例可以看出，你也可以开发分部结构和接口。  
   
 ### <a name="code"></a>代码  

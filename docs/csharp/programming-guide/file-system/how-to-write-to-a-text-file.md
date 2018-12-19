@@ -1,5 +1,6 @@
 ---
-title: 如何：写入文本文件（C# 编程指南）
+title: 如何：写入到文本文件 - C# 编程指南
+ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - TextWriter.WriteLine
@@ -8,14 +9,14 @@ helpviewer_keywords:
 - files [C#], text files
 - text, writing to files [C#]
 ms.assetid: 2e99f184-d88b-4719-a7f1-d9ec482aa809
-ms.openlocfilehash: ca08651bfce1a92f65a3e6fec7da3411a22bffb2
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: e753f10acd33234d7f5e0c1a4203125ab880e2ae
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43780063"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53237137"
 ---
-# <a name="how-to-write-to-a-text-file-c-programming-guide"></a>如何：写入文本文件（C# 编程指南）
+# <a name="how-to-write-to-a-text-file-c-programming-guide"></a>如何：写入到文本文件（C# 编程指南）
 以下示例给出了将文本写入文件的各种方法。 前两个示例对 <xref:System.IO.File?displayProperty=nameWithType> 类使用静态便捷方法以将任何 `IEnumerable<string>` 的每个元素和字符串写入文本文件。 示例 3 展示了在写入文件时必须分别处理文本的每一行时，如何将文本添加到文件。 示例 1-3 覆盖文件中的所有现有内容，但示例 4 展示如何将文本追加到现有文件。  
   
  这些示例都将字符串文本写入了文件。 如果想设置写入文件的文本的格式，请使用 <xref:System.String.Format%2A> 方法或 C# [字符串内插](../../../csharp/language-reference/tokens/interpolated.md)功能。  

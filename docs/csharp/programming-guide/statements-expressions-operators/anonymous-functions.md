@@ -1,17 +1,18 @@
 ---
-title: 匿名函数（C# 编程指南）
+title: 匿名函数 - C# 编程指南
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - lambda expressions [C#], as anonymus functions
 - anonymous functions [C#]
 - anonymous methods [C#]
 ms.assetid: 6ce3f04d-0c71-4728-9127-634c7e9a8365
-ms.openlocfilehash: 90a5a71f83a7117a7468bab0d9fe9d013685ebbe
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 9e0225960f16756820cdc095668cf7acfd4395cb
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43515234"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53242862"
 ---
 # <a name="anonymous-functions-c-programming-guide"></a>匿名函数（C# 编程指南）
 匿名函数是一个“内联”语句或表达式，可在需要委托类型的任何地方使用。 可以使用匿名函数来初始化命名委托，或传递命名委托（而不是命名委托类型）作为方法参数。  

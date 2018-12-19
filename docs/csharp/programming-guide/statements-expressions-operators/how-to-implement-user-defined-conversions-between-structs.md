@@ -1,15 +1,16 @@
 ---
-title: 如何：在结构间实现用户定义的转换（C# 编程指南）
+title: 如何：在结构间实现用户定义的转换 - C# 编程指南
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - user-defined conversions [C#]
 ms.assetid: 97839aef-8fbc-40d5-9769-6b569bc2710b
-ms.openlocfilehash: cff85d60c1b59f4d1ca028f8fc02fee5728fa3d6
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.openlocfilehash: 85345203982679c0ab8dc9a6ae899312204c3230
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/23/2018
-ms.locfileid: "46696647"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53241569"
 ---
 # <a name="how-to-implement-user-defined-conversions-between-structs-c-programming-guide"></a>如何：在结构间实现用户定义的转换（C# 编程指南）
 本示例定义 `RomanNumeral` 和 `BinaryNumeral` 两个结构，并演示二者之间的转换。  

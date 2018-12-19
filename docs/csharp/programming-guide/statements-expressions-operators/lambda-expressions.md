@@ -1,5 +1,6 @@
 ---
-title: Lambda 表达式（C# 编程指南）
+title: Lambda 表达式 - C# 编程指南
+ms.custom: seodec18
 ms.date: 03/03/2017
 helpviewer_keywords:
 - lambda expressions [C#]
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - expression lambda [C#]
 - expressions [C#], lambda
 ms.assetid: 57e3ba27-9a82-4067-aca7-5ca446b7bf93
-ms.openlocfilehash: 85fdaad86095319ebcb6ac4484a18ee8a517d45b
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 0feff32f3a2264b8e6cbd4746fdeaaaad728b8e5
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53150507"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53241283"
 ---
 # <a name="lambda-expressions-c-programming-guide"></a>Lambda 表达式（C# 编程指南）
 
@@ -272,7 +273,7 @@ class Test
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="featured-book-chapter"></a>重要章节  
- [C# 3.0 手册，第三版：为 C# 3.0 程序员提供的 250 多个解决方案](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/ff518994%28v=orm.10%29) 中的 [委托、事件和 Lambda 表达式](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/ff518995%28v=orm.10%29)  
+ [C# 3.0 手册（第三版）：面向 C# 3.0 程序员的超过 250 个解决方案](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/ff518995%28v=orm.10%29)中的[委托、事件和 Lambda 表达式](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/ff518994%28v=orm.10%29)  
   
 ## <a name="see-also"></a>请参阅
 

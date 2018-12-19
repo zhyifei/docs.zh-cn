@@ -1,5 +1,6 @@
 ---
-title: 如何：通过使用 Visual C# 功能访问 Office 互操作对象（C# 编程指南）
+title: 如何：使用 Visual C# 功能访问 Office 互操作对象 - C# 编程指南
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - optional parameters [C#], Office programming
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - named arguments [C#], Office programming
 - Office programming [C#]
 ms.assetid: 041b25c2-3512-4e0f-a4ea-ceb2999e4d5e
-ms.openlocfilehash: 9d07f8e7b2f4c31af572829256065cf6aa3383bb
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.openlocfilehash: 803c3bd4099b838ddc71fea530565f26bd4142df
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44260212"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53236562"
 ---
 # <a name="how-to-access-office-interop-objects-by-using-visual-c-features-c-programming-guide"></a>如何：通过使用 Visual C# 功能访问 Office 互操作对象（C# 编程指南）
 Visual C# 具有一些功能，可简化对 Office API 对象的访问。 这些新功能包括命名实参和可选实参、名为 `dynamic` 的新类型，以及在 COM 方法中将实参传递为引用形参（就像它们是值形参）的功能。  
@@ -49,7 +50,7 @@ Visual C# 具有一些功能，可简化对 Office API 对象的访问。 这些
   
 1.  在“解决方案资源管理器”中，右键单击你的项目名称，然后单击“添加引用”。 此时会显示“添加引用”对话框。  
   
-2.  在“程序集”页上，在“组件名称”列表中选择“Microsoft.Office.Interop.Word”，然后按住 Ctrl 键并选择“Microsoft.Office.Interop.Excel”。  如果未看到程序集，你可能需要确保安装并显示它们（请参阅[如何：安装 Office 主互操作程序集](/visualstudio/vsto/how-to-install-office-primary-interop-assemblies)）  
+2.  在“程序集”页上，在“组件名称”列表中选择“Microsoft.Office.Interop.Word”，然后按住 Ctrl 键并选择“Microsoft.Office.Interop.Excel”。  如果看不到程序集，可能需要确保它们已安装并显示（请参阅[操作说明：安装 Office 主互操作程序集](/visualstudio/vsto/how-to-install-office-primary-interop-assemblies)）  
   
 3.  单击 **“确定”**。  
   
@@ -137,7 +138,7 @@ Visual C# 具有一些功能，可简化对 Office API 对象的访问。 这些
   
 ## <a name="to-set-the-embed-interop-types-property"></a>设置嵌入互操作类型属性  
   
-1.  当调用运行时不需要主互操作程序集 (PIA) 的 COM 类型时，可能实现其他增强。 删除 PIA 的依赖项可实现版本独立性并且更易于部署。 有关避免使用 PIA 编程的优点的详细信息，请参阅[演练：嵌入托管程序集中的类型](../../../csharp/programming-guide/concepts/assemblies-gac/walkthrough-embedding-types-from-managed-assemblies-in-visual-studio.md)。  
+1.  当调用运行时不需要主互操作程序集 (PIA) 的 COM 类型时，可能实现其他增强。 删除 PIA 的依赖项可实现版本独立性并且更易于部署。 若要详细了解不使用 PIA 编程的优势，请参阅[演练：嵌入托管程序集中的类型](../../../csharp/programming-guide/concepts/assemblies-gac/walkthrough-embedding-types-from-managed-assemblies-in-visual-studio.md)。  
   
      此外，由于可以通过使用类型 `dynamic`（而非 `Object`）表示 COM 方法必需并返回的类型，因此更易于编程。 具有类型 `dynamic` 的变量在运行时以前均不会计算，从而消除了显式强制转换的需要。 有关更多信息，请参见[使用类型 dynamic](../../../csharp/programming-guide/types/using-type-dynamic.md)。  
   

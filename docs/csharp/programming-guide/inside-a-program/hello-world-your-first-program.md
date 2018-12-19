@@ -1,5 +1,6 @@
 ---
-title: Hello World -- 您的第一个程序（C# 编程指南）
+title: Hello World -- 首个程序 - C# 编程指南
+ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - cs.program
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - examples [C#], Hello World
 - Hello World example [C#]
 ms.assetid: 6493182a-b0b6-4539-a719-518a168cb730
-ms.openlocfilehash: 90f0ec6b88a2822cb3429948681c76c70f3d3f18
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 40c869d267dcabf4bd209b2ee86085f899a93231
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45593037"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53236383"
 ---
 # <a name="hello-world----your-first-program-c-programming-guide"></a>Hello World -- 您的第一个程序（C# 编程指南）
 以下过程创建传统“Hello World!”程序的 C# 版本。 该程序显示字符串 `Hello World!`  
@@ -72,13 +73,13 @@ ms.locfileid: "45593037"
   
      [!code-csharp[csProgGuideMain#19](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/hello-world-your-first-program_6.cs)]  
   
-     或  
+     - 或 -  
   
      [!code-csharp[csProgGuideMain#18](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/hello-world-your-first-program_7.cs)]  
   
  `Main` 方法中定义的参数 `args` 是一个 `string` 类型的数组，该数组包含用于调用该程序的命令行自变量。 与 C++ 不同的是该数组不包括可执行 (exe) 文件的名称。  
   
- 若要深入了解如何使用命令行参数，请参阅 [Main() 和命令行参数](../../../csharp/programming-guide/main-and-command-args/index.md)与[如何：使用命令行创建和使用程序集](../../../csharp/programming-guide/concepts/assemblies-gac/how-to-create-and-use-assemblies-using-the-command-line.md)中的示例。  
+ 若要详细了解如何使用命令行参数，请参阅 [Main() 和命令行参数](../../../csharp/programming-guide/main-and-command-args/index.md)和[操作说明：使用命令行创建和使用程序集](../../../csharp/programming-guide/concepts/assemblies-gac/how-to-create-and-use-assemblies-using-the-command-line.md)中的示例。  
   
  在调试模式下运行程序时，对 `Main` 方法末尾处 <xref:System.Console.ReadKey%2A> 的调用可以防止在有可能读取输出内容之前控制台窗口关闭，具体方法是按 F5 键。  
   
@@ -110,7 +111,7 @@ ms.locfileid: "45593037"
   
     -   从标准命令提示符窗口启用命令行生成。  
   
-         请参阅[如何：为 Visual Studio 命令行设置环境变量](../../../csharp/language-reference/compiler-options/how-to-set-environment-variables-for-the-visual-studio-command-line.md)。  
+         请参阅[操作说明：设置 Visual Studio 命令行的环境变量](../../../csharp/language-reference/compiler-options/how-to-set-environment-variables-for-the-visual-studio-command-line.md)。  
   
 3.  在命令提示窗口中，导航到包含 `Hello.cs` 文件的文件夹。  
   

@@ -1,15 +1,16 @@
 ---
-title: 字段（C# 编程指南）
+title: 字段 - C# 编程指南
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - fields [C#]
 ms.assetid: 3cbb2f61-75f8-4cce-b4ef-f5d1b3de0db7
-ms.openlocfilehash: 708bd4e768e795397624bcac6e5bc2594bff93f5
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: af5a342b83608d6a149879de8dec80a1e1746b76
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44210333"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53242695"
 ---
 # <a name="fields-c-programming-guide"></a>字段（C# 编程指南）
 字段是在[类](../../../csharp/language-reference/keywords/class.md)或[结构](../../../csharp/language-reference/keywords/struct.md)中直接声明的任意类型的变量。 字段是其包含类型的成员。  

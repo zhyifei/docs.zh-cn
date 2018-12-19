@@ -1,5 +1,6 @@
 ---
-title: try-finally（C# 参考）
+title: try-finally - C# 参考
+ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - finally
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - finally keyword [C#]
 - try-finally statement [C#]
 ms.assetid: c27623fb-7261-4464-862c-7a369d3c8f0a
-ms.openlocfilehash: 227c880aab89d0ada4431dc50148c36ce00cfda8
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 2bfdc4e94f5c5dc613eac06efcd69407576b0db4
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53155153"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53239259"
 ---
 # <a name="try-finally-c-reference"></a>try-finally（C# 参考）
 
@@ -50,4 +51,4 @@ C# 还包含 [using 语句](using-statement.md)，它以简便语法为 <xref:Sy
 - [异常处理语句](exception-handling-statements.md)
 - [throw](throw.md)
 - [try-catch](try-catch.md)
-- [如何显式引发异常](../../../standard/exceptions/how-to-explicitly-throw-exceptions.md)
+- [如何：显式抛出异常](../../../standard/exceptions/how-to-explicitly-throw-exceptions.md)

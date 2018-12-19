@@ -1,5 +1,6 @@
 ---
-title: $ - 字符串内插（C# 参考）
+title: $ - 字符串内插 - C# 参考
+ms.custom: seodec18
 description: 与传统的字符串复合格式设置相比，字符串内插提供更具可读性且更方便的语法，用于设置字符串输出的格式。
 ms.date: 03/26/2018
 f1_keywords:
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - interpolated string [C#]
 author: pkulikov
 ms.author: ronpet
-ms.openlocfilehash: 2758a724b7e1e410fd1e1ba262db451b7f994164
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: b6cac2b31f9ec1fd4775d4ed2ec2e9382502a0cc
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50196977"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53244799"
 ---
 # <a name="---string-interpolation-c-reference"></a>$ - 字符串内插（C# 参考）
 
@@ -39,7 +40,7 @@ ms.locfileid: "50196977"
 
 括号中的元素是可选的。 下表说明了每个元素：
 
-|元素|描述|
+|元素|说明|
 |-------------|-----------------|
 |`interpolatedExpression`|生成需要设置格式的结果的表达式。 `null` 结果的字符串表示形式为 <xref:System.String.Empty?displayProperty=nameWithType>。|
 |`alignment`|常数表达式，它的值定义内插表达式结果的字符串表示形式中的最小字符数。 如果值为正，则字符串表示形式为右对齐；如果值为负，则为左对齐。 有关详细信息，请参阅[对齐组件](../../../standard/base-types/composite-formatting.md#alignment-component)。|

@@ -1,15 +1,16 @@
 ---
-title: 访问修饰符（C# 参考）
+title: 访问修饰符 - C# 参考
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - access modifiers [C#]
 ms.assetid: 61c3fa51-c00f-48cb-9b49-c805dedd62d7
-ms.openlocfilehash: ff313df9683dbc76bab684ff484b746ad05e065a
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 0fb435a35b928cb78511d8969f1dfce9f94869eb
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45988187"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53242017"
 ---
 # <a name="access-modifiers-c-reference"></a>访问修饰符（C# 参考）
 访问修饰符是关键字，用于指定成员或类型已声明的可访问性。 本部分介绍四个访问修饰符：  
@@ -29,17 +30,17 @@ ms.locfileid: "45988187"
   
 - [`protected internal`](protected-internal.md)：访问限于当前程序集或派生自包含类的类型。  
   
-- [`private`](private.md)：访问限于包含类型。  
+- [`private`](private.md)：访问限于包含类。  
 
-- [`private protected`](private-protected.md)：访问限于包含类或派生自当前程序集中包含类的类型。  
+- [`private protected`](private-protected.md)：访问限于包含类或当前程序集中派生自包含类的类型。  
   
  本部分还介绍以下内容：  
   
--   [可访问性级别](../../../csharp/language-reference/keywords/accessibility-levels.md)：使用四种访问修饰符，声明六个可访问性级别。  
+-   [可访问性级别](../../../csharp/language-reference/keywords/accessibility-levels.md)：使用四个访问修饰符声明六个可访问性级别。  
   
--   [可访问性域](../../../csharp/language-reference/keywords/accessibility-domain.md)：指定可在程序段中的何处引用成员。  
+-   [可访问性域](../../../csharp/language-reference/keywords/accessibility-domain.md)：指定可以在程序段中的何处引用成员。  
   
--   [对使用可访问性级别的限制](../../../csharp/language-reference/keywords/restrictions-on-using-accessibility-levels.md)：概括对使用已声明的可访问性级别的限制。  
+-   [可访问性级别的使用限制](../../../csharp/language-reference/keywords/restrictions-on-using-accessibility-levels.md)：汇总了已声明可访问性级别的使用限制。  
   
 ## <a name="see-also"></a>请参阅  
 - [C# 参考](../../../csharp/language-reference/index.md)  

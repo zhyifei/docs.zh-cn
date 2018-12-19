@@ -1,5 +1,6 @@
 ---
-title: '&lt;= 运算符（C# 参考）'
+title: '&lt;= 运算符 - C# 参考'
+ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - <=_CSharpKeyword
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - less than or equal to operator (<=) [C#]
 - <= operator [C#]
 ms.assetid: bb0caec9-d253-4105-b8bc-5252233251e4
-ms.openlocfilehash: afbb932c1be010790236bec73a36acf0f01b97f4
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 950ba3fc02e015f2574d123d1fd9adc116aae045
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/15/2018
-ms.locfileid: "45595050"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53243447"
 ---
 # <a name="lt-operator-c-reference"></a>&lt;= 运算符（C# 参考）
 所有数值和枚举类型定义“小于或等于”关系运算符 (`<=`)，如果第一个操作数小于或等于第二个操作数，此运算符返回 `true`，否则返回 `false`。  

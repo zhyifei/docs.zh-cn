@@ -1,5 +1,6 @@
 ---
-title: 如何：为类型定义值相等性（C# 编程指南）
+title: 如何：为类型定义值相等性 - C# 编程指南
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - overriding Equals method [C#]
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - value equality [C#]
 - equivalence [C#]
 ms.assetid: 4084581e-b931-498b-9534-cf7ef5b68690
-ms.openlocfilehash: 8abcace9c648ba2132d2b6849ae1c9d347d6fd29
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: a2d71994647e50afc8d343725e639b6e9d24831f
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53126778"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53244422"
 ---
 # <a name="how-to-define-value-equality-for-a-type-c-programming-guide"></a>如何：为类型定义值相等性（C# 编程指南）
 定义类或结构时，需确定为类型创建值相等性（或等效性）的自定义定义是否有意义。 通常，类型的对象预期要添加到某类集合时，或者这些对象主要用于存储一组字段或属性时，需实现值相等性。 可以基于类型中所有字段和属性的比较结果来定义值相等性，也可以基于子集进行定义。 但在任何一种情况下，类和结构中的实现均应遵循 5 个等效性保证条件：  
@@ -34,9 +35,9 @@ ms.locfileid: "53126778"
   
 1.  替代[虚拟](../../../csharp/language-reference/keywords/virtual.md) <xref:System.Object.Equals%28System.Object%29?displayProperty=nameWithType> 方法。 大多数情况下，`bool Equals( object obj )` 实现应只调入作为 <xref:System.IEquatable%601?displayProperty=nameWithType> 接口的实现的类型特定 `Equals` 方法。 （请参阅步骤 2。）  
   
-2.  通过提供类型特定的 `Equals` 方法实现 <xref:System.IEquatable%601?displayProperty=nameWithType> 接口。 实际的等效性比较将在此接口中执行。 例如，可能决定通过仅比较类型中的一两个字段来定义相等性。 不会从 `Equals` 引发异常。 仅适用于类：此方法应仅检查类中声明的字段。 它应调用 `base.Equals` 来检查基类中的字段。 （如果类型直接从 <xref:System.Object> 中继承，则不要这样做，因为 <xref:System.Object.Equals%28System.Object%29?displayProperty=nameWithType> 的 <xref:System.Object> 实现会执行引用相等性检查。）  
+2.  通过提供类型特定的 `Equals` 方法实现 <xref:System.IEquatable%601?displayProperty=nameWithType> 接口。 实际的等效性比较将在此接口中执行。 例如，可能决定通过仅比较类型中的一两个字段来定义相等性。 不会从 `Equals` 引发异常。 仅对于类：此方法应仅检查类中声明的字段。 它应调用 `base.Equals` 来检查基类中的字段。 （如果类型直接从 <xref:System.Object> 中继承，则不要这样做，因为 <xref:System.Object.Equals%28System.Object%29?displayProperty=nameWithType> 的 <xref:System.Object> 实现会执行引用相等性检查。）  
   
-3.  可选，但建议这样做：重载 [==](../../../csharp/language-reference/operators/equality-comparison-operator.md) 和 [!=](../../../csharp/language-reference/operators/not-equal-operator.md) 运算符。  
+3.  可选但建议这样做：重载 [==](../../../csharp/language-reference/operators/equality-comparison-operator.md) 和 [!=](../../../csharp/language-reference/operators/not-equal-operator.md) 运算符。  
   
 4.  替代 <xref:System.Object.GetHashCode%2A?displayProperty=nameWithType>，以便具有值相等性的两个对象生成相同的哈希代码。  
   

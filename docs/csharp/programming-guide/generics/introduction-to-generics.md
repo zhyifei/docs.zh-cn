@@ -1,15 +1,16 @@
 ---
-title: 泛型介绍（C# 编程指南）
+title: 泛型介绍 - C# 编程指南
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - generics [C#], about generics
 ms.assetid: a1ad761e-42f7-41dd-a62f-452a2de26b9d
-ms.openlocfilehash: 17f4c67792732be7a678ec858b6627fa712194c5
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: fd53e0abaab4ff7d242b32d6f26be13e97f20c44
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43861282"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53239022"
 ---
 # <a name="introduction-to-generics-c-programming-guide"></a>泛型介绍（C# 编程指南）
 泛型类和泛型方法兼具可重用性、类型安全性和效率，这是非泛型类和非泛型方法无法实现的。 泛型通常与集合以及作用于集合的方法一起使用。 .NET Framework 2.0 版类库提供新的命名空间 <xref:System.Collections.Generic>，其中包含几个新的基于泛型的集合类。 建议所有定目标到 .NET Framework 2.0 及更高版本的应用程序都使用新增的泛型集合类，而不是旧的非泛型集合类（如 <xref:System.Collections.ArrayList>）。 有关详细信息，请参阅 [.NET 中的泛型](../../../standard/generics/index.md)。  
