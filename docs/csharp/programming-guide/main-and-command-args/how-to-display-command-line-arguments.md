@@ -1,37 +1,38 @@
 ---
-title: 如何：显示命令行自变量（C# 编程指南）
+title: 如何：显示命令行参数 - C# 编程指南
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - command-line arguments [C#], displaying
 ms.assetid: b8479f2d-9e05-4d38-82da-2e61246e5437
-ms.openlocfilehash: a6067482b4a225abc31592affb2cfab38847cd53
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 9b09f5a1991ab5545ab31b1879f30c383a0e9a9f
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43502667"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53236526"
 ---
-# <a name="how-to-display-command-line-arguments-c-programming-guide"></a><span data-ttu-id="50f68-102">如何：显示命令行自变量（C# 编程指南）</span><span class="sxs-lookup"><span data-stu-id="50f68-102">How to: Display Command Line Arguments (C# Programming Guide)</span></span>
-<span data-ttu-id="50f68-103">可通过 `Main` 的可选参数来访问在命令行处提供给可执行文件的参数。</span><span class="sxs-lookup"><span data-stu-id="50f68-103">Arguments provided to an executable on the command-line are accessible through an optional parameter to `Main`.</span></span> <span data-ttu-id="50f68-104">参数以字符串数组的形式提供。</span><span class="sxs-lookup"><span data-stu-id="50f68-104">The arguments are provided in the form of an array of strings.</span></span> <span data-ttu-id="50f68-105">数组的每个元素都包含 1 个参数。</span><span class="sxs-lookup"><span data-stu-id="50f68-105">Each element of the array contains one argument.</span></span> <span data-ttu-id="50f68-106">删除参数之间的空格。</span><span class="sxs-lookup"><span data-stu-id="50f68-106">White-space between arguments is removed.</span></span> <span data-ttu-id="50f68-107">例如，下面是对虚构可执行文件的命令行调用：</span><span class="sxs-lookup"><span data-stu-id="50f68-107">For example, consider these command-line invocations of a fictitious executable:</span></span>  
+# <a name="how-to-display-command-line-arguments-c-programming-guide"></a><span data-ttu-id="a144e-102">如何：显示命令行参数（C# 编程指南）</span><span class="sxs-lookup"><span data-stu-id="a144e-102">How to: Display Command Line Arguments (C# Programming Guide)</span></span>
+<span data-ttu-id="a144e-103">可通过 `Main` 的可选参数来访问在命令行处提供给可执行文件的参数。</span><span class="sxs-lookup"><span data-stu-id="a144e-103">Arguments provided to an executable on the command-line are accessible through an optional parameter to `Main`.</span></span> <span data-ttu-id="a144e-104">参数以字符串数组的形式提供。</span><span class="sxs-lookup"><span data-stu-id="a144e-104">The arguments are provided in the form of an array of strings.</span></span> <span data-ttu-id="a144e-105">数组的每个元素都包含 1 个参数。</span><span class="sxs-lookup"><span data-stu-id="a144e-105">Each element of the array contains one argument.</span></span> <span data-ttu-id="a144e-106">删除参数之间的空格。</span><span class="sxs-lookup"><span data-stu-id="a144e-106">White-space between arguments is removed.</span></span> <span data-ttu-id="a144e-107">例如，下面是对虚构可执行文件的命令行调用：</span><span class="sxs-lookup"><span data-stu-id="a144e-107">For example, consider these command-line invocations of a fictitious executable:</span></span>  
   
-|<span data-ttu-id="50f68-108">命令行输入</span><span class="sxs-lookup"><span data-stu-id="50f68-108">Input on Command-line</span></span>|<span data-ttu-id="50f68-109">传递给 Main 的字符串数组</span><span class="sxs-lookup"><span data-stu-id="50f68-109">Array of strings passed to Main</span></span>|  
+|<span data-ttu-id="a144e-108">命令行输入</span><span class="sxs-lookup"><span data-stu-id="a144e-108">Input on Command-line</span></span>|<span data-ttu-id="a144e-109">传递给 Main 的字符串数组</span><span class="sxs-lookup"><span data-stu-id="a144e-109">Array of strings passed to Main</span></span>|  
 |----------------------------|-------------------------------------|  
-|<span data-ttu-id="50f68-110">**executable.exe a b c**</span><span class="sxs-lookup"><span data-stu-id="50f68-110">**executable.exe a b c**</span></span>|<span data-ttu-id="50f68-111">"a"</span><span class="sxs-lookup"><span data-stu-id="50f68-111">"a"</span></span><br /><br /> <span data-ttu-id="50f68-112">"b"</span><span class="sxs-lookup"><span data-stu-id="50f68-112">"b"</span></span><br /><br /> <span data-ttu-id="50f68-113">“c”</span><span class="sxs-lookup"><span data-stu-id="50f68-113">"c"</span></span>|  
-|<span data-ttu-id="50f68-114">**executable.exe one two**</span><span class="sxs-lookup"><span data-stu-id="50f68-114">**executable.exe one two**</span></span>|<span data-ttu-id="50f68-115">"one"</span><span class="sxs-lookup"><span data-stu-id="50f68-115">"one"</span></span><br /><br /> <span data-ttu-id="50f68-116">"two"</span><span class="sxs-lookup"><span data-stu-id="50f68-116">"two"</span></span>|  
-|<span data-ttu-id="50f68-117">**executable.exe "one two" three**</span><span class="sxs-lookup"><span data-stu-id="50f68-117">**executable.exe "one two" three**</span></span>|<span data-ttu-id="50f68-118">"one two"</span><span class="sxs-lookup"><span data-stu-id="50f68-118">"one two"</span></span><br /><br /> <span data-ttu-id="50f68-119">"three"</span><span class="sxs-lookup"><span data-stu-id="50f68-119">"three"</span></span>|  
+|<span data-ttu-id="a144e-110">**executable.exe a b c**</span><span class="sxs-lookup"><span data-stu-id="a144e-110">**executable.exe a b c**</span></span>|<span data-ttu-id="a144e-111">"a"</span><span class="sxs-lookup"><span data-stu-id="a144e-111">"a"</span></span><br /><br /> <span data-ttu-id="a144e-112">"b"</span><span class="sxs-lookup"><span data-stu-id="a144e-112">"b"</span></span><br /><br /> <span data-ttu-id="a144e-113">“c”</span><span class="sxs-lookup"><span data-stu-id="a144e-113">"c"</span></span>|  
+|<span data-ttu-id="a144e-114">**executable.exe one two**</span><span class="sxs-lookup"><span data-stu-id="a144e-114">**executable.exe one two**</span></span>|<span data-ttu-id="a144e-115">"one"</span><span class="sxs-lookup"><span data-stu-id="a144e-115">"one"</span></span><br /><br /> <span data-ttu-id="a144e-116">"two"</span><span class="sxs-lookup"><span data-stu-id="a144e-116">"two"</span></span>|  
+|<span data-ttu-id="a144e-117">**executable.exe "one two" three**</span><span class="sxs-lookup"><span data-stu-id="a144e-117">**executable.exe "one two" three**</span></span>|<span data-ttu-id="a144e-118">"one two"</span><span class="sxs-lookup"><span data-stu-id="a144e-118">"one two"</span></span><br /><br /> <span data-ttu-id="a144e-119">"three"</span><span class="sxs-lookup"><span data-stu-id="a144e-119">"three"</span></span>|  
   
 > [!NOTE]
->  <span data-ttu-id="50f68-120">在 Visual Studio 中运行应用程序时，可在[“项目设计器”->“调试”页](/visualstudio/ide/reference/debug-page-project-designer)中指定命令行参数。</span><span class="sxs-lookup"><span data-stu-id="50f68-120">When you are running an application in Visual Studio, you can specify command-line arguments in the [Debug Page, Project Designer](/visualstudio/ide/reference/debug-page-project-designer).</span></span>  
+>  <span data-ttu-id="a144e-120">在 Visual Studio 中运行应用程序时，可在[“项目设计器”->“调试”页](/visualstudio/ide/reference/debug-page-project-designer)中指定命令行参数。</span><span class="sxs-lookup"><span data-stu-id="a144e-120">When you are running an application in Visual Studio, you can specify command-line arguments in the [Debug Page, Project Designer](/visualstudio/ide/reference/debug-page-project-designer).</span></span>  
   
-## <a name="example"></a><span data-ttu-id="50f68-121">示例</span><span class="sxs-lookup"><span data-stu-id="50f68-121">Example</span></span>  
- <span data-ttu-id="50f68-122">本示例显示了传递给命令行应用程序的命令行参数。</span><span class="sxs-lookup"><span data-stu-id="50f68-122">This example displays the command line arguments passed to a command-line application.</span></span> <span data-ttu-id="50f68-123">显示的输出对应于上表中的第一项。</span><span class="sxs-lookup"><span data-stu-id="50f68-123">The output shown is for the first entry in the table above.</span></span>  
+## <a name="example"></a><span data-ttu-id="a144e-121">示例</span><span class="sxs-lookup"><span data-stu-id="a144e-121">Example</span></span>  
+ <span data-ttu-id="a144e-122">本示例显示了传递给命令行应用程序的命令行参数。</span><span class="sxs-lookup"><span data-stu-id="a144e-122">This example displays the command line arguments passed to a command-line application.</span></span> <span data-ttu-id="a144e-123">显示的输出对应于上表中的第一项。</span><span class="sxs-lookup"><span data-stu-id="a144e-123">The output shown is for the first entry in the table above.</span></span>  
   
  [!code-csharp[csProgGuideMain#9](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/how-to-display-command-line-arguments_1.cs)]  
   
-## <a name="see-also"></a><span data-ttu-id="50f68-124">请参阅</span><span class="sxs-lookup"><span data-stu-id="50f68-124">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="a144e-124">请参阅</span><span class="sxs-lookup"><span data-stu-id="a144e-124">See Also</span></span>
 
-- [<span data-ttu-id="50f68-125">C# 编程指南</span><span class="sxs-lookup"><span data-stu-id="50f68-125">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
-- [<span data-ttu-id="50f68-126">在命令行上使用 csc.exe 生成</span><span class="sxs-lookup"><span data-stu-id="50f68-126">Command-line Building With csc.exe</span></span>](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)  
-- [<span data-ttu-id="50f68-127">Main() 和命令行参数</span><span class="sxs-lookup"><span data-stu-id="50f68-127">Main() and Command-Line Arguments</span></span>](../../../csharp/programming-guide/main-and-command-args/index.md)  
-- [<span data-ttu-id="50f68-128">如何：使用 foreach 访问命令行参数</span><span class="sxs-lookup"><span data-stu-id="50f68-128">How to: Access Command-Line Arguments Using foreach</span></span>](../../../csharp/programming-guide/main-and-command-args/how-to-access-command-line-arguments-using-foreach.md)  
-- [<span data-ttu-id="50f68-129">Main() 返回值</span><span class="sxs-lookup"><span data-stu-id="50f68-129">Main() Return Values</span></span>](../../../csharp/programming-guide/main-and-command-args/main-return-values.md)
+- [<span data-ttu-id="a144e-125">C# 编程指南</span><span class="sxs-lookup"><span data-stu-id="a144e-125">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
+- [<span data-ttu-id="a144e-126">在命令行上使用 csc.exe 生成</span><span class="sxs-lookup"><span data-stu-id="a144e-126">Command-line Building With csc.exe</span></span>](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)  
+- [<span data-ttu-id="a144e-127">Main() 和命令行参数</span><span class="sxs-lookup"><span data-stu-id="a144e-127">Main() and Command-Line Arguments</span></span>](../../../csharp/programming-guide/main-and-command-args/index.md)  
+- [<span data-ttu-id="a144e-128">如何：使用 foreach 访问命令行参数</span><span class="sxs-lookup"><span data-stu-id="a144e-128">How to: Access Command-Line Arguments Using foreach</span></span>](../../../csharp/programming-guide/main-and-command-args/how-to-access-command-line-arguments-using-foreach.md)  
+- [<span data-ttu-id="a144e-129">Main() 返回值</span><span class="sxs-lookup"><span data-stu-id="a144e-129">Main() Return Values</span></span>](../../../csharp/programming-guide/main-and-command-args/main-return-values.md)
