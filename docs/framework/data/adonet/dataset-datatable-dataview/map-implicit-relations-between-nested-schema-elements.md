@@ -16,7 +16,7 @@ XML 架构定义语言 (XSD) 架构可以具有相互嵌套的复杂类型。 �
   
 -   一个附加主键列每个表定义的父级上不存在任何唯一约束，如果名为*TableName*id （_i) 其中*TableName*是父表的名称。  
   
--   为主键将附加列标识父表上的主键约束 (通过设置**IsPrimaryKey**属性设置为**True**)。 该约束以 Constraint\# 的形式来命名，其中 \# 为 1、2、3...。 例如，第一个约束的默认名称为 Constraint1。  
+-   为主键将附加列标识父表上的主键约束 (通过设置**IsPrimaryKey**属性设置为**True**)。 该约束以 Constraint\# 的形式来命名，其中 \# 为 1、2、3。 例如，第一个约束的默认名称为 Constraint1。  
   
 -   在子表上创建外键约束，该约束将附加列标识为引用父表主键的外键。 命名约束*ParentTable_ChildTable*其中*ParentTable*是父表的名称并*ChildTable*是子表的名称。  
   

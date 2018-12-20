@@ -4,7 +4,7 @@ description: 使用F#编译器命令行选项来控制编译的应用F#应用程
 ms.date: 12/10/2018
 ms.openlocfilehash: dafd872a22bf4ec4b36910f28b7c5bfe9370af8d
 ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 12/10/2018
 ms.locfileid: "53170868"
@@ -25,7 +25,7 @@ ms.locfileid: "53170868"
 |`--baseaddress:address`|指定要加载 DLL 的首选基址。<br /><br />此编译器选项等效于C#具有相同名称的编译器选项。 有关详细信息，请参阅[ &#47;baseaddress &#40;C&#35;编译器选项&#41;](https://msdn.microsoft.com/library/2fdbz5xd.aspx)。|
 |`--codepage:id`|指定要使用在编译期间，如果所需的页面不是系统的当前默认代码页的代码页。<br /><br />此编译器选项等效于C#具有相同名称的编译器选项。 有关详细信息，请参阅[&#47;代码页的&#40;C&#35;编译器选项&#41;](../../csharp/language-reference/compiler-options/codepage-compiler-option.md)。|
 |`--consolecolors`|指定错误和警告的控制台上使用彩色编码的文本。|
-|-crossoptimize [+|-]`|启用或禁用跨模块优化。|
+|`--crossoptimize[+|-]`|启用或禁用跨模块优化。|
 |<code>--delaysign[+&#124;-]</code>|延迟签名程序集使用仅强名称密钥的公共部分。<br /><br />此编译器选项等效于C#具有相同名称的编译器选项。 有关详细信息，请参阅[ &#47;delaysign &#40;C&#35;编译器选项&#41;](https://msdn.microsoft.com/library/ta1sxwy8.aspx)。|
 |<code>--checked[+&#124;-]</code>|启用或禁用溢出检查的生成。<br /><br />此编译器选项等效于C#具有相同名称的编译器选项。 有关详细信息，请参阅[&#47;检查&#40;C&#35;编译器选项&#41;](https://msdn.microsoft.com/library/h25wtyxf.aspx)。|
 |<code>--debug[+&#124;-]</code><br /><br /><code>-g[+&#124;-]</code><br /><br /><code>--debug:[full&#124;pdbonly]</code><br /><br /><code>-g: [full&#124;pdbonly]</code>|启用或禁用生成调试信息或指定要生成的类型。 默认值为 full，允许附加到正在运行的程序。 选择**pdbonly**获取有限的 pdb （程序数据库） 文件中存储的调试信息。<br /><br />等效于C#具有相同名称的编译器选项。 有关详细信息，请参见<br /><br />[&#47;调试&#40;C&#35;编译器选项&#41;](https://msdn.microsoft.com/library/8cw0bt21.aspx)。|
