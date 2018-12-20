@@ -165,9 +165,9 @@ PCA 是机器学习中已建立的一种技术，由于它揭示了数据的内�
 * [FastTreeRankingTrainer](xref:Microsoft.ML.Trainers.FastTree.FastTreeRankingTrainer)
 * [LightGbmRankingTrainer](xref:Microsoft.ML.Runtime.LightGBM.LightGbmRankingTrainer)
 
-## <a name="recommendation"></a>推荐
+## <a name="recommendation"></a>建议
 
-推荐任务支持生成推荐产品或服务的列表。 ML.NET 使用[矩阵因子分解 (MF)](https://en.wikipedia.org/wiki/Matrix_factorization_%28recommender_systems%29)，这是一种[协同过滤](https://en.wikipedia.org/wiki/Collaborative_filtering)算法，当目录中有历史产品评级数据时，推荐使用该算法。 例如，你为用户提供历史电影评级数据，并希望向他们推荐接下来可能观看的其他电影。
+推荐任务支持生成推荐产品或服务的列表。 ML.NET 使用[矩阵因子分解 (MF)](https://en.wikipedia.org/wiki/Matrix_factorization_%28recommender_systems%29)，这是一种[协作筛选](https://en.wikipedia.org/wiki/Collaborative_filtering)算法，当目录中有历史产品评级数据时，推荐使用该算法。 例如，你为用户提供历史电影评级数据，并希望向他们推荐接下来可能观看的其他电影。
 
 ### <a name="recommendation-learners"></a>推荐学习器
 
