@@ -1,4 +1,4 @@
----
+﻿---
 title: .NET Core 2.2 的新增功能
 description: 了解 .NET Core 2.2 的新增功能。
 dev_langs:
