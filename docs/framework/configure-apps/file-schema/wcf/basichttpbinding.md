@@ -72,7 +72,7 @@ ms.locfileid: "53131048"
 |`maxReceivedMessageSize`|一个正整数，定义在采用此绑定配置的通道上可以接收的消息的最大消息大小（字节），包括消息头。 如果消息对于接收方而言太大，则发送方将收到 SOAP 错误。 接收方将删除该消息，并在跟踪日志中创建事件项。 默认值为 65,536 字节。|  
 |`messageEncoding`|定义用于对 SOAP 消息进行编码的编码器。 包括以下有效值：<br /><br /> -文本：使用文本消息编码器。<br />Mtom:使用消息传输组织机制 1.0 (MTOM) 编码器。<br /><br /> 默认值为 Text。 此属性的类型为 <xref:System.ServiceModel.WSMessageEncoding>。|  
 |`name`|一个包含绑定的配置名称的字符串。 因为此值用作绑定的标识，所以它应该是唯一的。 每个绑定都具有 `name` 和 `namespace` 属性，它们共同在服务的元数据中唯一标识每个绑定。 此外，在同一类型的绑定中，此名称是唯一的。 从 [!INCLUDE[netfx40_short](../../../../../includes/netfx40-short-md.md)] 开始，不要求绑定和行为具有名称。 有关默认配置以及无名称绑定和行为的详细信息，请参阅[Simplified Configuration](../../../../../docs/framework/wcf/simplified-configuration.md)并[WCF 服务的简化配置](../../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md)。|  
-|`namespace`|指定绑定的 XML 命名空间。 默认值为 “ http://tempuri.org/Bindings ” 。 每个绑定都具有 `name` 和 `namespace` 属性，它们共同在服务的元数据中唯一标识每个绑定。|  
+|`namespace`|指定绑定的 XML 命名空间。 默认值为 “http://tempuri.org/Bindings” 。 每个绑定都具有 `name` 和 `namespace` 属性，它们共同在服务的元数据中唯一标识每个绑定。|  
 |`openTimeout`|一个 <xref:System.TimeSpan> 值，指定为完成打开操作提供的时间间隔。 此值应大于或等于 <xref:System.TimeSpan.Zero>。 默认值为 00:01:00。|  
 |`proxyAddress`|一个包含 HTTP 代理地址的 URI。 如果 `useSystemWebProxy` 设置为 `true`，则此设置必须为 `null`。 默认值为 `null`。|  
 |`receiveTimeout`|一个 <xref:System.TimeSpan> 值，指定为完成接收操作提供的时间间隔。 此值应大于或等于 <xref:System.TimeSpan.Zero>。 默认值为 00:10:00。|  
