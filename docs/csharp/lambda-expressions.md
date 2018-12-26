@@ -76,7 +76,7 @@ Lambda 表达式使用 [lambda 声明运算符](language-reference/operators/lam
 
 有关如何创建和使用异步方法的详细信息，请参阅[使用 Async 和 Await 的异步编程](programming-guide/concepts/async/index.md)。
 
-## <a name="lambda-expressions-and-tuples"></a>Lambda 表达式和元祖 ##
+## <a name="lambda-expressions-and-tuples"></a>N/A ##
 
 从 C# 7.0 开始，C# 语言为元组提供内置支持。 可以提供一个元组作为 Lambda 表达式的参数，同时 Lambda 表达式也可以返回元组。 在某些情况下，C# 编译器使用类型推理来确定元组组件的类型。
 

@@ -32,9 +32,9 @@ ms.locfileid: "53128917"
   
  **✓ 务必** 对于虚拟成员，更倾向使用受保护的可访问性而非公共可访问性。 公共成员应通过调用受保护的虚拟成员来提供可扩展性（如果需要）。  
   
- 一个类的公共成员应为该类的直接使用者提供一组合适的功能。 旨在子类中, 被重写虚拟成员和受保护的可访问性是作用域为使用其中的所有虚拟扩展点的好办法。  
+ 一个类的公共成员应该为该类的直接使用者提供正确的功能集。 根据设计，虚拟成员在子类中被重写。受保护的可访问性是一种很好的方式，可以将所有虚拟扩展点限定在可以使用它们的地方。  
   
- *部分版权 © 2005, 2009 Microsoft Corporation。保留所有权利。*  
+ *部分版权 © 2005，2009 Microsoft Corporation。保留所有权利。*  
   
  *通过从 Pearson Education，Inc.的权限重新打印[Framework 设计准则：约定、 语法和模式的可重用.NET 库，第 2 版](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619)Krzysztof Cwalina 和 Brad Abrams，作为 Microsoft Windows 开发系列的一部分发布 2008 年 10 月 22 日由 Addison-wesley 专业人员。*  
   
