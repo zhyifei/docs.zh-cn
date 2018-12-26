@@ -23,8 +23,6 @@ Docker 镜像容器可以在 Linux 和 Windows 上原生运行。 但是，Windo
 
 开发人员可以在 Windows、Linux 或 macOS 上使用开发环境。 在开发计算机上，开发人员在运行到哪个 Docker 映像部署，包括应用程序和其依赖项的 Docker 主机。 在 Linux 或 Mac 上进行开发的开发人员使用基于 Linux 的 Docker 主机，并且他们可以仅为 Linux 容器创建映像。 (在 Mac 上工作的开发人员可以编辑代码或运行 Docker 命令行接口\[CLI\]从 macOS，但是，在撰写本文时，容器不直接在 macOS 上运行。)在 Windows 上进行开发的开发人员可以为 Linux 或 Windows 容器创建映像。
 
-开发人员可以在 Windows、Linux 或 macOS 上使用开发环境。 在开发计算机上，开发人员运行部署了 Docker 映像的 Docker 主机，包括应用程序及其依赖项。 在 Linux 或 Mac 上工作的开发人员使用基于 Linux 的 Docker 主机，他们只能为 Linux 容器创建映像。 （在 Mac 上工作的开发人员可以编辑代码或从 macOS 运行Docker命令行界面\[CLI\]，但是，在撰写本文时，容器不能直接在 macOS 上运行。）在 Windows 上工作的开发人员可以为 Linux 或 Windows 容器创建映像。
-
 为了在开发环境中托管容器，并提供其他开发人员工具，Docker 为 Windows 或 macOS 提供了 [Docker 社区版 (CE)](https://www.docker.com/community-edition)。 这些产品安装了托管容器所需的 VM（Docker 主机）。 Docker 还提供 [Docker 企业版 (EE)](https://www.docker.com/enterprise-edition)，该版本专为企业开发而设计，供生成、交付和在生产中运行大型业务关键型应用程序的 IT 团队使用。
 
 若要运行 [Windows 容器](/virtualization/windowscontainers/about/)，有两种类型的运行时可供使用：
@@ -34,7 +32,6 @@ Docker 镜像容器可以在 Linux 和 Windows 上原生运行。 但是，Windo
 -   **HYPER-V 容器** 这会提供由 Windows Server 容器通过在高度优化的 VM 中运行每个容器的隔离上扩展。 在此配置中，容器主机的内核不与 Hyper-V 容器共享，以提供更好地隔离。
 
 这些容器的映像以相同的方式创建并且功能相同。 区别在于如何从映像创建容器-运行 HYPER-V 容器需要一个额外的参数。 有关详细信息，请参阅 [Hyper-V 容器](/virtualization/windowscontainers/about/)。
-
 
 ## <a name="comparing-docker-containers-with-vms"></a>比较 Docker 容器和 Vm
 
