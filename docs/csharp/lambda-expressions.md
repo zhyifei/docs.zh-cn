@@ -1,4 +1,4 @@
----
+﻿---
 title: Lambda 表达式
 description: 了解如何使用 Lambda 表达式，它们是可作为参数传递的可执行代码块。
 ms.author: ronpet
@@ -88,7 +88,7 @@ Lambda 表达式使用 [lambda 声明运算符](language-reference/operators/lam
 
 [!code-csharp[csSnippets.Lambdas](../../samples/snippets/csharp/concepts/lambda-expressions/tuples2.cs#1)]
 
-有关对 C# 中元祖的支持的详细信息，请参阅 [C# 元祖类型](tuples.md)。
+有关对 C# 中元组的支持的详细信息，请参阅 [C# 元组类型](tuples.md)。
 
 ## <a name="lambdas-with-the-standard-query-operators"></a>含标准查询运算符的 lambda ##
 
