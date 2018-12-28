@@ -7,18 +7,18 @@ helpviewer_keywords:
 ms.assetid: 006d1280-2ac3-4db6-a984-a3d4e275046a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7a8858059159edddb4456561719c572fb9268be7
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 3070e293fc335bb24dd1234007307773d152ceee
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43509478"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53611394"
 ---
 # <a name="ltloadfromremotesourcesgt-element"></a>&lt;loadFromRemoteSources&gt;元素
 指定是否应为从远程源加载的程序集授予完全信任在.NET Framework 4 及更高版本。
   
 > [!NOTE]
->  如果由于中的 Visual Studio 项目错误列表或生成错误的错误消息被转到本主题，请参阅[如何： 使用 Visual Studio 中的程序集从 Web](https://msdn.microsoft.com/library/d8635b63-89a0-41aa-90f4-f351b2111070)。  
+>  如果由于中的 Visual Studio 项目错误列表或生成错误的错误消息被转到本主题，请参阅[如何：使用 Visual Studio 中的程序集从 Web](https://msdn.microsoft.com/library/d8635b63-89a0-41aa-90f4-f351b2111070)。  
   
  \<configuration>  
 \<运行时 >  
@@ -42,7 +42,7 @@ ms.locfileid: "43509478"
   
 ## <a name="enabled-attribute"></a>已启用的属性  
   
-|“值”|描述|  
+|值|描述|  
 |-----------|-----------------|  
 |`false`|不要授予完全信任应用程序从远程源。 这是默认设置。|  
 |`true`|从远程源向应用程序授予完全信任。|  
@@ -74,7 +74,7 @@ so this load may be dangerous. If this load is not intended to sandbox the assem
 
 若要加载的程序集和执行其代码，您必须：
 
-- 显式程序集创建一个沙盒 (请参阅[如何： 运行部分受信任的代码在沙盒中](../../../../../docs/framework/misc/how-to-run-partially-trusted-code-in-a-sandbox.md))。
+- 显式程序集创建一个沙盒 (请参阅[如何：运行沙盒中部分受信任的代码](../../../../../docs/framework/misc/how-to-run-partially-trusted-code-in-a-sandbox.md))。
 
 - 在完全信任环境中运行该程序集的代码。 执行此操作通过配置`<loadFromRemoteSources>`元素。 它允许您指定在早期版本的.NET Framework 中的部分信任中运行的程序集现在运行在完全信任环境中的.NET Framework 4 和更高版本。
 
@@ -117,8 +117,8 @@ so this load may be dangerous. If this load is not intended to sandbox the assem
 
 ## <a name="see-also"></a>请参阅
 
-[更多隐式使用 CAS 策略： loadFromRemoteSources](https://go.microsoft.com/fwlink/p/?LinkId=266839)  
-[如何：运行沙盒中部分受信任的代码](../../../../../docs/framework/misc/how-to-run-partially-trusted-code-in-a-sandbox.md)  
-[运行时设置架构](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
-[配置文件架构](../../../../../docs/framework/configure-apps/file-schema/index.md)  
-<xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType>  
+- [更多隐式使用 CAS 策略： loadFromRemoteSources](https://go.microsoft.com/fwlink/p/?LinkId=266839)  
+- [如何：运行沙盒中部分受信任的代码](../../../../../docs/framework/misc/how-to-run-partially-trusted-code-in-a-sandbox.md)  
+- [运行时设置架构](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
+- [配置文件架构](../../../../../docs/framework/configure-apps/file-schema/index.md)  
+- <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType>  

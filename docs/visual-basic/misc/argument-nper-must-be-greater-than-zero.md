@@ -1,18 +1,18 @@
 ---
-title: 自变量&#39;NPer&#39;必须是大于零
+title: 自变量“NPer”必须大于零
 ms.date: 07/20/2015
 f1_keywords:
 - vbrRate_NPerMustBeGTZero
 ms.assetid: d49242df-dbd1-4b26-bd8c-ed56d24fdfcd
-ms.openlocfilehash: 5939262d2a58a17d8af88ebc0ba0c7597983e4aa
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 86bbf892997ee512b6042ef400e2485edabe731d
+ms.sourcegitcommit: 0888d7b24f475c346a3f444de8d83ec1ca7cd234
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33601187"
+ms.lasthandoff: 12/22/2018
+ms.locfileid: "53773479"
 ---
-# <a name="argument-39nper39-must-be-greater-than-zero"></a>自变量&#39;NPer&#39;必须是大于零
-返回一个指定基于定期固定付款和固定利率的年金的期间数的 `NPer` 的 `Double` 函数要求一个大于零的参数。  
+# <a name="argument-nper-must-be-greater-than-zero"></a>自变量“NPer”必须大于零
+返回一个指定基于定期固定付款和固定利率的年金的期间数的 `Double` 的 `NPer` 函数要求一个大于零的参数。  
   
 ## <a name="to-correct-this-error"></a>更正此错误  
   

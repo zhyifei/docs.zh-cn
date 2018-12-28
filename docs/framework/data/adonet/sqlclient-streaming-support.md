@@ -2,12 +2,12 @@
 title: SqlClient 流支持
 ms.date: 03/30/2017
 ms.assetid: c449365b-470b-4edb-9d61-8353149f5531
-ms.openlocfilehash: a393274a7cf40b01399c5909c2d5ec4097ec9310
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: eeec8f2a88894762fd8dab93bf0b3b11941ba17a
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53152885"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53612993"
 ---
 # <a name="sqlclient-streaming-support"></a>SqlClient 流支持
 SQL Server 和应用程序之间的流支持 (中的新增功能[!INCLUDE[net_v45](../../../../includes/net-v45-md.md)]) 支持在服务器 （文档、 图像和媒体文件） 上的非结构化的数据。 SQL Server 数据库可以存储二进制大型对象 (Blob)，但检索 BLOB 会使用大量内存。  
@@ -326,7 +326,7 @@ GO
   
 -   使用新异步功能和 await 关键字来传输大型 BLOB。  
   
--   正在取消大型 BLOB 传输...  
+-   正在取消大型 BLOB 传输。  
   
 -   从一台 SQL 服务器流到另一个使用新的异步功能。  
   
