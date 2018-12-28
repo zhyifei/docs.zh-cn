@@ -1,13 +1,13 @@
 ---
-title: 约束 (F#)
+title: 约束
 description: 了解如何F#应用于泛型类型参数，以在泛型类型或函数中指定的类型参数的要求的约束。
 ms.date: 05/16/2016
-ms.openlocfilehash: 2dfc99e0ef41a224fbd03f325582365b7caab78b
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: b253ce50707512a0d46c41bba2dde34adcc24d0e
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53152482"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53612226"
 ---
 # <a name="constraints"></a>约束
 
