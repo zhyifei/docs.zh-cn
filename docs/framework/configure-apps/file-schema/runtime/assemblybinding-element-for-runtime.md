@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 964cbb35-ab49-4498-8471-209689e5dada
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d84c134b8e2b048f39836bbc10af06039e96719e
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 33900f40aab85fd67540ecd6004a46e13e8eb8c2
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32746171"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53612031"
 ---
 # <a name="ltassemblybindinggt-element-for-ltruntimegt"></a>&lt;assemblyBinding&gt;元素&lt;运行时&gt;
 包含有关程序集版本重定向和程序集位置的信息。  
@@ -40,7 +40,7 @@ ms.locfileid: "32746171"
 |特性|描述|  
 |---------------|-----------------|  
 |**xmlns**|必需的特性。<br /><br /> 指定程序集绑定所需的 XML 命名空间。 使用字符串“urn: 架构-microsoft-com:asm.v1”作为值。|  
-|**appliesTo**|指定 .NET Framework 程序集重定向适用的运行时版本。 此可选特性用 .NET Framework 版本号来指示其适用的版本。 如果没有指定 appliesTo 特性，\<assemblyBinding> 元素将适用于 .NET Framework 的所有版本。 **AppliesTo** .NET Framework 1.1 版中引入了属性; 它由.NET Framework 1.0 版将被忽略。 这意味着，即使指定了 appliesTo 特性，在使用 .NET Framework 1.0 版时所有的 \<assemblyBinding> 元素也都适用。|  
+|**AppliesTo**|指定 .NET Framework 程序集重定向适用的运行时版本。 此可选特性用 .NET Framework 版本号来指示其适用的版本。 如果没有指定 **appliesTo** 特性，**\<assemblyBinding>** 元素将适用于 .NET Framework 的所有版本。 **AppliesTo** .NET Framework 版本 1.1 中引入了属性;.NET Framework 1.0 版将忽略它。 这意味着，即使指定了 appliesTo 特性，在使用 .NET Framework 1.0 版时所有的 \<assemblyBinding> 元素也都适用。|  
   
 ### <a name="child-elements"></a>子元素  
   
@@ -93,6 +93,6 @@ ms.locfileid: "32746171"
 ```  
   
 ## <a name="see-also"></a>请参阅  
- [运行时设置架构](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
- [配置文件架构](../../../../../docs/framework/configure-apps/file-schema/index.md)  
- [重定向程序集版本](../../../../../docs/framework/configure-apps/redirect-assembly-versions.md)
+- [运行时设置架构](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
+- [配置文件架构](../../../../../docs/framework/configure-apps/file-schema/index.md)  
+- [重定向程序集版本](../../../../../docs/framework/configure-apps/redirect-assembly-versions.md)

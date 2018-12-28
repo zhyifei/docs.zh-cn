@@ -1,13 +1,13 @@
 ---
-title: 对象表达式 (F#)
-description: 了解如何使用 F# 对象表达式，如果想要避免额外的代码和所需创建一个新开销命名类型。
+title: 对象表达式
+description: 了解如何使用F#对象表达式时您想要避免额外的代码和开销所需创建一个新命名类型。
 ms.date: 05/16/2016
-ms.openlocfilehash: 1a971044d680d3bf5a6fff38affdaf001d5403b4
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: cb15983543fde2459c589b3de2554575d73db686
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "43865457"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53613916"
 ---
 # <a name="object-expressions"></a>对象表达式
 

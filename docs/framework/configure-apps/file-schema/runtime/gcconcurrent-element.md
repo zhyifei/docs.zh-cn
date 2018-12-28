@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 503f55ba-26ed-45ac-a2ea-caf994da04cd
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ee00c3a307523d2cae831274630ad6828cd9daf6
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 5fa802ab9d1025bd130a6265b50050284aae0150
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32745833"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53612382"
 ---
 # <a name="ltgcconcurrentgt-element"></a>&lt;gcConcurrent&gt;元素
 指定公共语言运行时是否在单独线程上运行垃圾回收。  
@@ -62,7 +62,7 @@ ms.locfileid: "32745833"
  在.NET Framework 4 之前，工作站垃圾回收支持并发垃圾回收，在后台对一个单独线程执行垃圾回收。 在.NET Framework 4 中，并发垃圾回收被后台 GC 取代，它还在单独的线程上在后台中执行垃圾回收。 从 .NET Framework 4.5 开始，服务器垃圾回收可提供后台垃圾回收。 `<gcConcurrent>` 元素控制运行时是执行并发还是后台垃圾回收（如果可行），或者是否在前台执行垃圾回收。  
   
 > [!WARNING]
->  从.NET Framework 4 开始，并发垃圾回收替换为后台垃圾回收。 条款*并发*和*后台*.NET Framework 文档中互换使用。 若要禁用后台垃圾回收，请使用 `<gcConcurrent>` 元素，如本文所述。  
+>  从.NET Framework 4 开始，并发垃圾回收替换为后台垃圾回收。 条款*并发*并*背景*.NET Framework 文档中互换使用。 若要禁用后台垃圾回收，请使用 `<gcConcurrent>` 元素，如本文所述。  
   
  默认情况下，运行时使用并发或后台垃圾回收，回收针对延迟进行了优化。 如果应用程序涉及大量用户交互，则通过让并发垃圾回收保持启用状态，可最大限度缩短应用程序执行垃圾回收时的暂停时间。 如果将 `enabled` 元素的 `<gcConcurrent>` 特性设置为 `false`，运行时将使用针对吞吐量优化的非并发垃圾回收。 下列配置文件会禁用后台垃圾回收。  
   
@@ -90,6 +90,6 @@ ms.locfileid: "32745833"
 ```  
   
 ## <a name="see-also"></a>请参阅  
- [运行时设置架构](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
- [配置文件架构](../../../../../docs/framework/configure-apps/file-schema/index.md)  
- [垃圾回收的基础知识](../../../../../docs/standard/garbage-collection/fundamentals.md)
+- [运行时设置架构](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
+- [配置文件架构](../../../../../docs/framework/configure-apps/file-schema/index.md)  
+- [垃圾回收的基础知识](../../../../../docs/standard/garbage-collection/fundamentals.md)

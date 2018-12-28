@@ -1,13 +1,13 @@
 ---
-title: 查询表达式 (F#)
+title: 查询表达式
 description: 了解有关进行中的 LINQ 查询表达式支持F#编程语言。
 ms.date: 05/16/2016
-ms.openlocfilehash: 00398e7cb8876f9bbe11606b7a1024da9d2c35f3
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: e4a36305b607f573c29744f50a841be078c8061f
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53143755"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53611368"
 ---
 # <a name="query-expressions"></a>查询表达式
 

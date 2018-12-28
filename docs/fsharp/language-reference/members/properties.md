@@ -1,15 +1,15 @@
 ---
-title: 属性 (F#)
-description: 了解 F# 属性，分别表示与对象相关联的值的成员。
+title: Properties
+description: 了解如何F#是表示与对象相关联的值的成员的属性。
 ms.date: 05/16/2016
-ms.openlocfilehash: 75d21415b44ccc1c26ef5f478d5f5de20c3412e8
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 8e74e0bc0850b5f07c4697f624d5393813bec6e0
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "50197920"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53614501"
 ---
-# <a name="properties"></a>属性
+# <a name="properties"></a>Properties
 
 *属性*是表示与对象相关联的值的成员。
 

@@ -1,17 +1,17 @@
 ---
 title: 禁用 Visual Studio 中的 DPI 识别功能
 description: 讨论 HDPI 监视器上的 Windows 窗体设计器以及如何运行 Visual Studio 作为不识别 DPI 的进程的限制。
-ms.date: 08/14/2018
+ms.date: 12/17/2018
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-designers
 author: gewarren
 ms.author: gewarren
-ms.openlocfilehash: 2d3466476c33a3e5faa8be96d63f1d11442c5d70
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 0820450fb9ae257cba87b3055ea1dde91112b19e
+ms.sourcegitcommit: 3d0c29b878f00caec288dfecb3a5c959de5aa629
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53151260"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53655993"
 ---
 # <a name="disable-dpi-awareness-in-visual-studio"></a>禁用 Visual Studio 中的 DPI 识别功能
 
@@ -29,7 +29,7 @@ Visual Studio 是以每英寸点数 (DPI) 识别应用程序，这意味着会�
 
 消息读取**主显示器上的缩放设置为 200%(192 dpi)。这可能导致设计器窗口中的呈现问题。**
 
-如果您不能在设计器中工作并不需要调整窗体布局，可以忽略信息栏，并在代码编辑器中或在其他类型的设计器中继续工作。 仅**Windows 窗体设计器**受到影响。 如果需要在中工作**Windows 窗体设计器**下, 一步部分可帮助您[解决该问题](#to-resolve-the-problem)。
+如果您不能在设计器中工作并不需要调整窗体布局，可以忽略信息栏，并在代码编辑器中或在其他类型的设计器中继续工作。 (还可以[禁用通知](#disable-notifications)，以便不会继续显示信息栏。)仅**Windows 窗体设计器**受到影响。 如果需要在中工作**Windows 窗体设计器**下, 一步部分可帮助您[解决该问题](#to-resolve-the-problem)。
 
 ## <a name="to-resolve-the-problem"></a>若要解决此问题
 
@@ -68,6 +68,16 @@ Visual Studio 运行时作为不识别 DPI 的进程，设计器布局问题已�
 若要设置您的显示设置为 100%缩放 Windows 10 中，键入**显示设置**在搜索框中，然后选择任务栏**更改显示设置**。 在中**设置**窗口中，将**更改的文本、 应用和其他项大小**到**100%**。
 
 缩放到 100%将显示设置可能不希望如此，因为这可以使用户界面太小，才能使用。
+
+## <a name="disable-notifications"></a>禁用通知
+
+您可以选择不通知的 DPI 缩放在 Visual Studio 中的问题。 你可能想要禁用通知，如果您未使用在设计器中，例如。
+
+若要禁用通知，请选择**工具** > **选项**以打开**选项**对话框。 然后，选择**Windows 窗体设计器** > **常规**，并设置**DPI 缩放通知**到**False**。
+
+![DPI 缩放在 Visual Studio 中的通知选项](media/disable-dpi-awareness-visual-studio/notifications-option.png)
+
+如果你想要以后重新启用缩放通知，将属性设置为 **，则返回 True**。
 
 ## <a name="troubleshoot"></a>疑难解答
 

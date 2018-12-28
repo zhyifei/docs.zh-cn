@@ -1,15 +1,15 @@
 ---
-title: 没有方法&#39; &lt;methodname&gt; &#39;可以接受类型的自变量&#39; &lt;typename&gt; &#39;参数&#39; &lt;parametername&gt;&#39;
+title: 没有方法&lt;methodname&gt;可以接受类型的自变量&lt;typename&gt;的参数&lt;parametername&gt;
 ms.date: 07/20/2015
 ms.assetid: 175c01dc-279c-4996-8501-d19a6671fdeb
-ms.openlocfilehash: 60781d5a7fa3dfec95202062231edd3368628a4c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 730970f0760d39e5b03043f1e8ef415abebf2dc5
+ms.sourcegitcommit: 0888d7b24f475c346a3f444de8d83ec1ca7cd234
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33637314"
+ms.lasthandoff: 12/22/2018
+ms.locfileid: "53761532"
 ---
-# <a name="no-method-39ltmethodnamegt39-can-accept-an-argument-of-type-39lttypenamegt39-for-parameter-39ltparameternamegt39"></a>没有方法&#39; &lt;methodname&gt; &#39;可以接受类型的自变量&#39; &lt;typename&gt; &#39;参数&#39; &lt;parametername&gt;&#39;
+# <a name="no-method-ltmethodnamegt-can-accept-an-argument-of-type-lttypenamegt-for-parameter-ltparameternamegt"></a>没有方法&lt;methodname&gt;可以接受类型的自变量&lt;typename&gt;的参数&lt;parametername&gt;
 方法调用包含无效的类型的参数。  
   
 ## <a name="to-correct-this-error"></a>更正此错误  

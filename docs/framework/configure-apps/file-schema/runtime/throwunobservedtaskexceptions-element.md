@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: cea7e588-8b8d-48d2-9ad5-8feaf3642c18
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3f72bedbaaf0b15ade7ff6b7b8c3edcdfd3fda6d
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: edf3fd9a4561677813adbfb970a9d6be43d7c83d
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32749421"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53612570"
 ---
 # <a name="ltthrowunobservedtaskexceptionsgt-element"></a>&lt;ThrowUnobservedTaskExceptions&gt;元素
 指定未经处理的任务异常是否应终止正在运行的进程。  
@@ -44,8 +44,8 @@ ms.locfileid: "32749421"
   
 |值|描述|  
 |-----------|-----------------|  
-|`false`|不会终止正在运行的未经处理的任务异常进程。 这是默认设置。|  
-|`true`|终止正在运行的未经处理的任务异常进程。|  
+|`false`|不会终止正在运行的进程的未经处理的任务异常。 这是默认设置。|  
+|`true`|终止正在运行的进程的未经处理的任务异常。|  
   
 ### <a name="child-elements"></a>子元素  
  无。  
@@ -59,22 +59,22 @@ ms.locfileid: "32749421"
 |||  
   
 ## <a name="remarks"></a>备注  
- 如果与关联的异常<xref:System.Threading.Tasks.Task>具有尚未观察到，没有任何<xref:System.Threading.Tasks.Task.Wait%2A>未附加操作，父级，请与<xref:System.Threading.Tasks.Task.Exception%2A?displayProperty=nameWithType>属性不读取任务异常被视为未观察到。  
+ 如果与关联的异常<xref:System.Threading.Tasks.Task>未观察，没有任何<xref:System.Threading.Tasks.Task.Wait%2A>未附加操作，父级，和<xref:System.Threading.Tasks.Task.Exception%2A?displayProperty=nameWithType>属性未读取任务异常被视为未观察到。  
   
- 在[!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)]，也可由默认情况下，如果<xref:System.Threading.Tasks.Task>，其未观察到异常进行垃圾回收、 终结器引发异常，并终止进程。 垃圾回收和终止的时间取决于进程终止。  
+ 在中[!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)]，也可由默认情况下，如果<xref:System.Threading.Tasks.Task>具有未观察到异常进行垃圾收集，终结器引发异常，并终止进程。 终止进程取决于垃圾回收和终止的时间。  
   
- 为了更加便于开发人员编写基于任务的异步代码[!INCLUDE[net_v45](../../../../../includes/net-v45-md.md)]更改未观察到异常此默认行为。 仍会导致的异常未观察到<xref:System.Threading.Tasks.TaskScheduler.UnobservedTaskException>事件被引发，但默认情况下，不终止进程。 相反，该异常被忽略后引发事件时，无论是否事件处理程序观察到异常。  
+ 为了简化开发人员能够编写基于任务的异步代码[!INCLUDE[net_v45](../../../../../includes/net-v45-md.md)]更改此默认行为为未观察到异常。 未观察到的异常仍会导致<xref:System.Threading.Tasks.TaskScheduler.UnobservedTaskException>事件被引发，但默认情况下，该过程不会终止。 相反，该异常被忽略后引发该事件，而不考虑是否将事件处理程序观察异常。  
   
- 在[!INCLUDE[net_v45](../../../../../includes/net-v45-md.md)]，你可以使用[ \<ThrowUnobservedTaskExceptions > 元素](../../../../../docs/framework/configure-apps/file-schema/runtime/throwunobservedtaskexceptions-element.md)中启用的应用程序配置文件[!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)]引发异常的行为。  
+ 在中[!INCLUDE[net_v45](../../../../../includes/net-v45-md.md)]，可以使用[ \<ThrowUnobservedTaskExceptions > 元素](../../../../../docs/framework/configure-apps/file-schema/runtime/throwunobservedtaskexceptions-element.md)若要启用应用程序配置文件中[!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)]引发异常的行为。  
   
- 你还可以通过以下方式之一指定的异常行为：  
+ 此外可以通过以下方式之一中指定的异常行为：  
   
 -   通过设置环境变量`COMPlus_ThrowUnobservedTaskExceptions`(`set COMPlus_ThrowUnobservedTaskExceptions=1`)。  
   
 -   通过设置注册表 DWORD 值 ThrowUnobservedTaskExceptions = 1 在 HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\\。NETFramework 键。  
   
 ## <a name="example"></a>示例  
- 下面的示例演示如何启用任务中的异常引发通过使用应用程序配置文件。  
+ 下面的示例演示如何启用任务中的异常引发使用应用程序配置文件。  
   
 ```xml  
 <configuration>   
@@ -85,11 +85,11 @@ ms.locfileid: "32749421"
 ```  
   
 ## <a name="example"></a>示例  
- 下面的示例演示如何从任务引发未观察到的异常。 作为发布程序正常工作，必须运行代码。  
+ 下面的示例演示如何从任务引发未观察到的异常。 作为已发布的程序才能正常工作，必须运行代码。  
   
  [!code-csharp[ThrowUnobservedTaskExceptions#1](../../../../../samples/snippets/csharp/VS_Snippets_CLR/throwunobservedtaskexceptions/cs/program.cs#1)]
  [!code-vb[ThrowUnobservedTaskExceptions#1](../../../../../samples/snippets/visualbasic/VS_Snippets_CLR/throwunobservedtaskexceptions/vb/program.vb#1)]  
   
 ## <a name="see-also"></a>请参阅  
- [运行时设置架构](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
- [配置文件架构](../../../../../docs/framework/configure-apps/file-schema/index.md)
+- [运行时设置架构](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
+- [配置文件架构](../../../../../docs/framework/configure-apps/file-schema/index.md)

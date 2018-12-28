@@ -1,13 +1,13 @@
 ---
-title: 循环：while...do 表达式 (F#)
+title: 循环：while...do 表达式
 description: 请参阅如何...执行表达式用于在指定的测试条件为 true 时执行迭代操作 （循环）。
 ms.date: 05/16/2016
-ms.openlocfilehash: 43e2098ad6c7f103babc2471aebe987040feb989
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: d2a77e0bfefe3b6b026012e6b2938ba670326bcf
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53127272"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53613006"
 ---
 # <a name="loops-whiledo-expression"></a>循环：while...do 表达式
 

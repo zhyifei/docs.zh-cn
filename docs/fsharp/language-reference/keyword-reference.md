@@ -1,13 +1,13 @@
 ---
-title: 关键字参考 (F#)
+title: 关键字参考
 description: 找到的所有信息的链接F#语言关键字。
 ms.date: 05/16/2016
-ms.openlocfilehash: 0016f68b2872183a2b4dd865ce229b6a76250b78
-ms.sourcegitcommit: 2151690e10d91545e2c20d6b5ad222c162b6b83d
+ms.openlocfilehash: 75adc609dc6feeda2be9aa76bbb50b47b3d738ea
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "43856019"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53611745"
 ---
 # <a name="keyword-reference"></a>关键字参考
 
@@ -38,11 +38,11 @@ ms.locfileid: "43856019"
 |`exception`|[异常处理](exception-handling/index.md)<br /><br />[异常类型](exception-handling/exception-types.md)|用于声明异常类型。|
 |`extern`|[外部函数](functions/external-functions.md)|指示在另一个二进制文件或程序集中定义的声明的程序元素。|
 |`false`|[基元类型](primitive-types.md)|用作布尔值文字。|
-|`finally`|[异常：`try...finally` 表达式](exception-handling/the-try-finally-expression.md)|综合使用`try`引入的执行时不考虑是否发生了异常的代码块。|
+|`finally`|[异常：`try...finally`表达式](exception-handling/the-try-finally-expression.md)|综合使用`try`引入的执行时不考虑是否发生了异常的代码块。|
 |`fixed`|[已修复](fixed.md)|使用"固定"一个指针，以防止它被垃圾回收的堆栈上。|
 |`for`|[循环：`for...to` 表达式](loops-for-to-expression.md)<br /><br />[循环：for...in 表达式](loops-for-in-expression.md)|在循环构造中使用。|
-|`fun`|[Lambda 表达式：`fun`关键字](functions/lambda-expressions-the-fun-keyword.md)|在 lambda 表达式，也称为匿名函数中使用。|
-|`function`|[match 表达式](match-expressions.md)<br /><br />[Lambda 表达式： fun 关键字](functions/lambda-expressions-the-fun-keyword.md)|用作到更短的替代`fun`关键字和一个`match`有模式匹配上一个自变量的 lambda 表达式中的表达式。|
+|`fun`|[Lambda 表达式：`fun` 关键字](functions/lambda-expressions-the-fun-keyword.md)|在 lambda 表达式，也称为匿名函数中使用。|
+|`function`|[match 表达式](match-expressions.md)<br /><br />[Lambda 表达式：Fun 关键字](functions/lambda-expressions-the-fun-keyword.md)|用作到更短的替代`fun`关键字和一个`match`有模式匹配上一个自变量的 lambda 表达式中的表达式。|
 |`global`|[命名空间](namespaces.md)|用于引用顶级.NET 命名空间。|
 |`if`|[条件表达式：`if...then...else`](conditional-expressions-if-then-else.md)|在条件分支构造中使用。|
 |`in`|[循环：for...in 表达式](loops-for-in-expression.md)<br /><br />[详细语法](verbose-syntax.md)|使用序列表达式，并在详细语法中，将从绑定表达式。|
@@ -77,7 +77,7 @@ ms.locfileid: "43856019"
 |`then`|[条件表达式：`if...then...else`](conditional-expressions-if-then-else.md)<br /><br />[构造函数](members/constructors.md)|在条件表达式中使用。<br /><br />此外用于在对象构造后执行的负面影响。|
 |`to`|[循环：`for...to` 表达式](loops-for-to-expression.md)|在中使用`for`循环，以表示一个范围。|
 |`true`|[基元类型](primitive-types.md)|用作布尔值文字。|
-|`try`|[异常： try...with 表达式](exception-handling/the-try-with-expression.md)<br /><br />[： 异常最后表达式](exception-handling/the-try-finally-expression.md)|用于介绍可能会生成异常的代码块。 使用连同`with`或`finally`。|
+|`try`|[异常：Try...with 表达式](exception-handling/the-try-with-expression.md)<br /><br />[异常：在尝试...最后表达式](exception-handling/the-try-finally-expression.md)|用于介绍可能会生成异常的代码块。 使用连同`with`或`finally`。|
 |`type`|[F# 类型](fsharp-types.md)<br /><br />[类](classes.md)<br /><br />[记录](records.md)<br /><br />[结构](structures.md)<br /><br />[枚举](enumerations.md)<br /><br />[可区分联合](discriminated-unions.md)<br /><br />[类型缩写](type-abbreviations.md)<br /><br />[度量单位](units-of-measure.md)|用于声明类、 记录、 结构、 可区分的联合、 枚举类型、 单元的度量值，或类型缩写。|
 |`upcast`|[强制转换和转换](casting-and-conversions.md)|用于将转换为更高版本的继承链中的类型。|
 |`use`|[资源管理：`use` 关键字](resource-management-the-use-keyword.md)|而不是使用`let`的值需要`Dispose`调用来释放资源。|
@@ -86,7 +86,7 @@ ms.locfileid: "43856019"
 |`void`|[基元类型](primitive-types.md)|指示.NET`void`类型。 与其他.NET 语言进行互操作时使用。|
 |`when`|[约束](generics/constraints.md)|用于布尔条件 (*时可保护*) 模式匹配并引入泛型类型参数的约束子句。|
 |`while`|[循环：`while...do` 表达式](loops-while-do-expression.md)|引入了循环构造。|
-|`with`|[match 表达式](match-expressions.md)<br /><br />[对象表达式](object-expressions.md)<br /><br />[复制和更新记录表达式](copy-and-update-record-expressions.md)<br /><br />[类型扩展](type-extensions.md)<br /><br />[异常：`try...with` 表达式](exception-handling/the-try-with-expression.md)|综合使用`match`在模式匹配表达式的关键字。 此外使用对象表达式中，记录复制表达式，并键入扩展引入的成员定义，并引入异常处理程序。|
+|`with`|[match 表达式](match-expressions.md)<br /><br />[对象表达式](object-expressions.md)<br /><br />[复制和更新记录表达式](copy-and-update-record-expressions.md)<br /><br />[类型扩展](type-extensions.md)<br /><br />[异常：`try...with`表达式](exception-handling/the-try-with-expression.md)|综合使用`match`在模式匹配表达式的关键字。 此外使用对象表达式中，记录复制表达式，并键入扩展引入的成员定义，并引入异常处理程序。|
 |`yield`|[序列](sequences.md)|在序列表达式中用于生成的序列值。|
 |`yield!`|[计算表达式](computation-expressions.md)<br /><br />[异步工作流](asynchronous-workflows.md)|计算表达式中用于将给定的计算表达式的结果追加到包含的计算表达式的结果的集合。|
 

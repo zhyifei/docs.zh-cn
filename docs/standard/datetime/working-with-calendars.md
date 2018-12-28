@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0c1534e5-979b-4c8a-a588-1c24301aefb3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b6f759523acab1a248b92c69b95227b878696bbf
-ms.sourcegitcommit: d6e419f9d9cd7e8f21ebf5acde6d016c16332579
+ms.openlocfilehash: b3cb060d46703e41c4751c92d8a35e0ff7f72976
+ms.sourcegitcommit: 49af435bfdd41faf26d38c20c5b0cc07e87bea60
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/12/2018
-ms.locfileid: "53286580"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53396950"
 ---
 # <a name="working-with-calendars"></a>使用日历
 
@@ -138,7 +138,7 @@ ms.locfileid: "53286580"
 日历通常将日期划分为纪元。 但是，<xref:System.Globalization.Calendar>类在.NET 中的不支持由大部分以及日历，定义每个纪元<xref:System.Globalization.Calendar>类支持单个纪元。 只有 <xref:System.Globalization.JapaneseCalendar> 和 <xref:System.Globalization.JapaneseLunisolarCalendar> 类支持多个纪元。
 
 > [!IMPORTANT]
->  中的新时代<xref:System.Globlalization.JapaneseCalendar>和<xref:System.Globalization.JapaneseLunisolarCalendar>2019 年 5 月 1 日，将从开始。 此更改会影响使用这些日历的所有应用程序。 请参阅[处理在.NET 中的日语日历中的新时代](https://blogs.msdn.microsoft.com/dotnet/2018/11/14/handling-a-new-era-in-the-japanese-calendar-in-net/)有关详细信息，并确定是否会影响你的应用程序。 请参阅[准备用于日语纪元更改应用程序](~/windows/uwp/design/globalizing/japanese-era-change)有关测试 Windows 上的应用程序，以确保其变更就绪的纪元的信息。
+>  2019 年 5 月 1 日将在 <xref:System.Globalization.JapaneseCalendar> 和 <xref:System.Globalization.JapaneseLunisolarCalendar> 中采用一种新元号。 此更改会影响使用这些日历的所有应用程序。 请参阅 [Handling a new era in the Japanese calendar in .NET](https://blogs.msdn.microsoft.com/dotnet/2018/11/14/handling-a-new-era-in-the-japanese-calendar-in-net/)（使用 .NET 处理日语日历中的新元号），了解详细信息并确定是否会影响你的应用程序。 请参阅[准备用于日语纪元更改应用程序](/windows/uwp/design/globalizing/japanese-era-change)有关测试 Windows 上的应用程序，以确保其变更就绪的纪元的信息。
 
 ### <a name="eras-and-era-names"></a>纪元和纪元名称
 

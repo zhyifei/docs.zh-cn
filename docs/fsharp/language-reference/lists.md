@@ -1,13 +1,13 @@
 ---
-title: 列表 (F#)
+title: 列表
 description: 了解如何F#列出了相同类型的元素的有序的、 不可变序列。
 ms.date: 05/16/2016
-ms.openlocfilehash: f7b9054226a1dd004ac78673a059bd1c35e325a5
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: cc4e292280cca0dca37f69cf5a46ec2822d08d5c
+ms.sourcegitcommit: 3d0c29b878f00caec288dfecb3a5c959de5aa629
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53152742"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53656331"
 ---
 # <a name="lists"></a>列表
 
@@ -70,6 +70,7 @@ F# 中的列表是一个有序的、不可变的同类型元素系列。 若要�
 |[Item](https://msdn.microsoft.com/library/bdb2553a-0e54-4ff8-baed-ab1aac8f5dae)|`'T`|位于指定索引处（从零开始）的元素。|
 |[长度](https://msdn.microsoft.com/library/25f715c8-9daa-4c4d-a6c7-26772f9dab4d)|`int`|元素数量。|
 |[结尾](https://msdn.microsoft.com/library/2a6f8eb9-dc32-41aa-8b62-2baffaface91)|`'T list`|不带第一个元素的列表。|
+
 以下是一些使用这些属性的示例。
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet1307.fs)]

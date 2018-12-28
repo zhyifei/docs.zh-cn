@@ -1,13 +1,13 @@
 ---
-title: 数组 (F#)
+title: 数组
 description: 了解如何创建和使用中的数组F#编程语言。
 ms.date: 05/16/2016
-ms.openlocfilehash: 0f72718988ee401631c53b74f02948030e83aac1
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 9670f2a61ed5c254493806501120552be9caecdf
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53129969"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53614553"
 ---
 # <a name="arrays"></a>数组
 
@@ -418,4 +418,4 @@ Found an element 4096 with square root 64 and cube root 16.
 ## <a name="see-also"></a>请参阅
 
 - [F# 语言参考](index.md)
-- [F#;类型](fsharp-types.md)
+- [F# 类型](fsharp-types.md)

@@ -1,13 +1,13 @@
 ---
-title: 算术运算符 (F#)
+title: 算术运算符
 description: 了解有关中可用的算术运算符F#编程语言。
 ms.date: 04/04/2018
-ms.openlocfilehash: 2c0e2e25a4f79d00455d978e235e4bef16b52586
-ms.sourcegitcommit: 6ae7cdd0437a32884556dd4826ca90e957b7a4e3
+ms.openlocfilehash: 826f334125a542855bf2fda43465618403d49d4c
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/06/2018
-ms.locfileid: "45597413"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53614579"
 ---
 # <a name="arithmetic-operators"></a>算术运算符
 

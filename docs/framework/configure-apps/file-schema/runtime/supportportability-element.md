@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 6453ef66-19b4-41f3-b712-52d0c2abc9ca
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4a0332a642f9377eed2769ea5aedb1be85853274
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: 74d6852d14eec234b787ca0e852c333391a7b329
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49122741"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53614280"
 ---
 # <a name="ltsupportportabilitygt-element"></a>&lt;supportPortability&gt;元素
 通过禁用将程序集视为等效于应用程序可移植性用途的默认行为来指定应用程序可以在两种不同的 .NET Framework 实现中引用同一程序集。  
@@ -79,5 +79,5 @@ ms.locfileid: "49122741"
 ```  
   
 ## <a name="see-also"></a>请参阅  
- [/appconfig （C# 编译器选项）](../../../../../docs/csharp/language-reference/compiler-options/appconfig-compiler-option.md)  
- [.NET framework 程序集统一概述](https://msdn.microsoft.com/library/8d8cc65e-031d-463b-bde3-2c6dc2e3bc48)
+- [/appconfig （C# 编译器选项）](../../../../../docs/csharp/language-reference/compiler-options/appconfig-compiler-option.md)  
+- [.NET framework 程序集统一概述](https://msdn.microsoft.com/library/8d8cc65e-031d-463b-bde3-2c6dc2e3bc48)

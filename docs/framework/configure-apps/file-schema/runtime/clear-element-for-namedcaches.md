@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: ea01a858-65da-4348-800f-5e3df59d4d79
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: 17043cdd4bcabf2e5e14c7b9c31b8c1747d2c866
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: dd521e3afa7584cadb28829028a5ecfd1cb55a92
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47171941"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53612292"
 ---
 # <a name="ltcleargt-element-for-ltnamedcachesgt"></a>&lt;清除&gt;元素&lt;namedCaches&gt;
 清除所有`namedCache`中的条目`namedCaches`内存缓存的集合。  
@@ -53,4 +53,4 @@ ms.locfileid: "47171941"
  `clear`元素中清除所有`namedCache`内存缓存的命名的缓存集合中的条目。 可以使用`clear`元素在使用之前`add`要添加新命名的缓存条目，以确保没有其他元素名为集合中的缓存。  
   
 ## <a name="see-also"></a>请参阅  
- [\<namedCaches > 元素 （缓存设置）](../../../../../docs/framework/configure-apps/file-schema/runtime/namedcaches-element-cache-settings.md)
+- [\<namedCaches > 元素 （缓存设置）](../../../../../docs/framework/configure-apps/file-schema/runtime/namedcaches-element-cache-settings.md)

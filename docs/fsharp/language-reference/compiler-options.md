@@ -1,13 +1,13 @@
 ---
-title: 编译器选项 (F#)
+title: 编译器选项
 description: 使用F#编译器命令行选项来控制编译的应用F#应用程序和库。
 ms.date: 12/10/2018
-ms.openlocfilehash: dafd872a22bf4ec4b36910f28b7c5bfe9370af8d
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
-ms.translationtype: HT
+ms.openlocfilehash: d8e4331bcacd7082d7560ddc6fcadb4ce2b61cf8
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53170868"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53614488"
 ---
 # <a name="compiler-options"></a>编译器选项
 
@@ -67,10 +67,9 @@ ms.locfileid: "53170868"
 |`--warnon:warning-number-list`|启用默认情况下可能处于关闭状态，或通过另一个命令行选项禁用特定警告。 在F#3.0 中，只有 1182 （未使用的变量） 警告默认处于关闭状态。|
 |<code>--warnaserror[+&#124;-] [warning-number-list]</code>|启用或禁用警告报告为错误的选项。 你可以提供特定的警告编号，若要禁用或启用。 更高版本中命令行选项重写前面的命令行选项。 例如，若要指定不想报告为错误的警告，请指定`--warnaserror+` `--warnaserror-:warning-number-list`。<br /><br />此编译器选项等效于C#具有相同名称的编译器选项。 有关详细信息，请参阅[ &#47;warnaserror &#40;C&#35;编译器选项&#41;](https://msdn.microsoft.com/library/406xhdz3.aspx)。|
 |`--win32manifest:manifest-filename`|将 Win32 清单文件添加到编译。 此编译器选项等效于C#具有相同名称的编译器选项。 有关详细信息，请参阅[ &#47;win32manifest &#40;C&#35;编译器选项&#41;](https://msdn.microsoft.com/library/bb545961.aspx)。|
-|`--win32res:resource-filename`|将 Win32 资源文件添加到编译。<br /><br />此编译器选项等效于C#具有相同名称的编译器选项。 有关详细信息，请参阅[ &#47;win32res (&#40;c&#35);编译器选项&#41;](https://msdn.microsoft.com/library/8f2f5x2e.aspx)。|
+|`--win32res:resource-filename`|将 Win32 资源文件添加到编译。<br /><br />此编译器选项等效于C#具有相同名称的编译器选项。 有关详细信息，请参阅[ &#47;win32res (&#40;C&#35;) 编译器选项&#41;](https://msdn.microsoft.com/library/8f2f5x2e.aspx)。|
 
 ## <a name="related-articles"></a>相关文章
-
 
 |标题|描述|
 |-----|-----------|
