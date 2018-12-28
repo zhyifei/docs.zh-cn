@@ -1,13 +1,13 @@
 ---
-title: 基本类型 (F#)
+title: 基本类型
 description: 发现的基础的基本类型中使用F#语言。
 ms.date: 07/09/2018
-ms.openlocfilehash: a8a1154a211d8c87571b47cb41cb091096569472
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 74a276792e2566b8f18b87f4bdcfb923b713b9c5
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53145119"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53610406"
 ---
 # <a name="basic-types"></a>基本类型
 

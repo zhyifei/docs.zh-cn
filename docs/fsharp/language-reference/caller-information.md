@@ -1,13 +1,13 @@
 ---
-title: 调用方信息 （F#）
+title: 调用方信息
 description: 介绍如何使用调用方信息参数特性从一种方法获取调用方信息。
 ms.date: 04/25/2017
-ms.openlocfilehash: 0f2f4b16804d9156d234cc29d1f72ebe80a5b556
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 9c6b2a92a15e12d016a153b401f166c8fd1efe93
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "47216365"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53613812"
 ---
 # <a name="caller-information"></a>调用方信息
 
@@ -72,6 +72,6 @@ type Tracer() =
 
 ## <a name="see-also"></a>请参阅
 
-- [特性](attributes.md)  
-- [命名的参数](parameters-and-arguments.md#named-arguments)  
-- [可选参数](parameters-and-arguments.md#optional-parameters)  
+- [属性](attributes.md)
+- [命名的参数](parameters-and-arguments.md#named-arguments)
+- [可选参数](parameters-and-arguments.md#optional-parameters)

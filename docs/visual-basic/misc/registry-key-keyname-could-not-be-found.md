@@ -1,15 +1,15 @@
 ---
-title: 注册表项&#39; &lt;keyname&gt; &#39;未找到
+title: 注册表项&lt;keyname&gt;未找到
 ms.date: 07/20/2015
 ms.assetid: ca4eb74f-8303-48fc-9ea8-d792fa4c810b
-ms.openlocfilehash: 874371dd2d4dc9f7d4b1374ae08359e4ea6afc87
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: aef0d82b00053e2d6845ad26afac3851d15087fc
+ms.sourcegitcommit: 0888d7b24f475c346a3f444de8d83ec1ca7cd234
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48025533"
+ms.lasthandoff: 12/22/2018
+ms.locfileid: "53767954"
 ---
-# <a name="registry-key-39ltkeynamegt39-could-not-be-found"></a>注册表项&#39; &lt;keyname&gt; &#39;未找到
+# <a name="registry-key-ltkeynamegt-could-not-be-found"></a>注册表项&lt;keyname&gt;未找到
 找不到某个注册表项。  
   
 ## <a name="to-correct-this-error"></a>更正此错误  

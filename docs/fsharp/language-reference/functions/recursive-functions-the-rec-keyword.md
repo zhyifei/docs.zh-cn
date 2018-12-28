@@ -1,13 +1,13 @@
 ---
-title: 递归函数：Rec 关键字 (F#)
+title: 递归函数：Rec 关键字
 description: 了解如何F#rec 关键字用于与 let 关键字定义的递归函数。
 ms.date: 05/16/2016
-ms.openlocfilehash: 0db3ed7f85a1380654f2827b4773985b661589c7
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 9f9c7e1a4468de9551b3852d0e7b4381025b2699
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53127727"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53612902"
 ---
 # <a name="recursive-functions-the-rec-keyword"></a>递归函数：Rec 关键字
 

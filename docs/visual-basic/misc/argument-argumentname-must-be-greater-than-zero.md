@@ -1,17 +1,17 @@
 ---
-title: 自变量&#39; &lt;argumentname&gt; &#39;必须是大于零
+title: 参数&lt;argumentname&gt;必须是大于零
 ms.date: 07/20/2015
 f1_keywords:
 - vbrArgument_GTZero1
 ms.assetid: f9939fbd-6c4f-4871-9452-9ea0267e948e
-ms.openlocfilehash: 101ebfbf86805ffc0db362cc433900027e064a72
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0f612734ab0b1df911d7b28428f9feb663521055
+ms.sourcegitcommit: 0888d7b24f475c346a3f444de8d83ec1ca7cd234
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33598080"
+ms.lasthandoff: 12/22/2018
+ms.locfileid: "53762897"
 ---
-# <a name="argument-39ltargumentnamegt39-must-be-greater-than-zero"></a>自变量&#39; &lt;argumentname&gt; &#39;必须是大于零
+# <a name="argument-ltargumentnamegt-must-be-greater-than-zero"></a>参数&lt;argumentname&gt;必须是大于零
 参数无效，因其小于或等于零。  
   
 ## <a name="to-correct-this-error"></a>更正此错误  

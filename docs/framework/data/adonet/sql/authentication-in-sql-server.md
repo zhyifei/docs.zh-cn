@@ -2,12 +2,12 @@
 title: SQL Server 中的身份验证
 ms.date: 05/22/2018
 ms.assetid: 646ddbf5-dd4e-4285-8e4a-f565f666c5cc
-ms.openlocfilehash: 8d7fcb149059c06b7875663e4df5272312121c87
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 0172259446724e0be85bd7ca2d15cf299db04e27
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43521512"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53613097"
 ---
 # <a name="authentication-in-sql-server"></a>SQL Server 中的身份验证
 SQL Server 支持两种身份验证模式，Windows 身份验证模式和混合模式。  
@@ -19,7 +19,7 @@ SQL Server 支持两种身份验证模式，Windows 身份验证模式和混合�
 > [!IMPORTANT]
 >  我们建议尽可能使用 Windows 身份验证。 Windows 身份验证使用一系列加密消息验证 SQL Server 中的用户。 当使用 SQL Server 登录名时，SQL Server 登录名和加密的密码传递通过网络，这使它们不太安全。  
   
- 使用 Windows 身份验证，已经登录到 Windows 的用户不必再单独登录到 SQL Server。 下面的 `SqlConnection.ConnectionString` 可指定 Windows 身份验证，而无需用户名或密码。  
+ 使用 Windows 身份验证，已经登录到 Windows 的用户不必再单独登录到 SQL Server。 以下`SqlConnection.ConnectionString`指定 Windows 身份验证，而无需用户提供用户名或密码。  
   
 ```  
 "Server=MSSQL1;Database=AdventureWorks;Integrated Security=true;  

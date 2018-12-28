@@ -1,17 +1,17 @@
 ---
-title: '&#39;ReDim&#39;无法更改维度数'
+title: “ReDim”无法更改维数
 ms.date: 07/20/2015
 f1_keywords:
 - vbrArray_RankMismatch
 ms.assetid: 52505298-9985-4682-8f6e-ff7d56077f34
-ms.openlocfilehash: bfd4096141833b85a2126340ef549e1e1d1f8e3c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ba3e389e3732d39f16e2c8ae884fae4e935e6ac9
+ms.sourcegitcommit: 0888d7b24f475c346a3f444de8d83ec1ca7cd234
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33640376"
+ms.lasthandoff: 12/22/2018
+ms.locfileid: "53778718"
 ---
-# <a name="39redim39-cannot-change-the-number-of-dimensions"></a>&#39;ReDim&#39;无法更改维度数
+# <a name="redim-cannot-change-the-number-of-dimensions"></a>“ReDim”无法更改维数
 某操作尝试使用 `ReDim` 更改数组的秩（维数）。 `ReDim` 可以更改已形式声明的数组的一个或多个维度的大小，但它不能更改数组的秩。  
   
 ## <a name="to-correct-this-error"></a>更正此错误  
