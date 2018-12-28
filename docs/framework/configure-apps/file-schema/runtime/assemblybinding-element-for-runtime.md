@@ -10,21 +10,21 @@ helpviewer_keywords:
 ms.assetid: 964cbb35-ab49-4498-8471-209689e5dada
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d84c134b8e2b048f39836bbc10af06039e96719e
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 33900f40aab85fd67540ecd6004a46e13e8eb8c2
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32746171"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53612031"
 ---
-# <a name="ltassemblybindinggt-element-for-ltruntimegt"></a><span data-ttu-id="72abb-102">&lt;assemblyBinding&gt;元素&lt;运行时&gt;</span><span class="sxs-lookup"><span data-stu-id="72abb-102">&lt;assemblyBinding&gt; Element for &lt;runtime&gt;</span></span>
-<span data-ttu-id="72abb-103">包含有关程序集版本重定向和程序集位置的信息。</span><span class="sxs-lookup"><span data-stu-id="72abb-103">Contains information about assembly version redirection and the locations of assemblies.</span></span>  
+# <a name="ltassemblybindinggt-element-for-ltruntimegt"></a><span data-ttu-id="cca1e-102">&lt;assemblyBinding&gt;元素&lt;运行时&gt;</span><span class="sxs-lookup"><span data-stu-id="cca1e-102">&lt;assemblyBinding&gt; Element for &lt;runtime&gt;</span></span>
+<span data-ttu-id="cca1e-103">包含有关程序集版本重定向和程序集位置的信息。</span><span class="sxs-lookup"><span data-stu-id="cca1e-103">Contains information about assembly version redirection and the locations of assemblies.</span></span>  
   
- <span data-ttu-id="72abb-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="72abb-104">\<configuration></span></span>  
-<span data-ttu-id="72abb-105">\<运行时 ></span><span class="sxs-lookup"><span data-stu-id="72abb-105">\<runtime></span></span>  
-<span data-ttu-id="72abb-106">\<assemblyBinding ></span><span class="sxs-lookup"><span data-stu-id="72abb-106">\<assemblyBinding></span></span>  
+ <span data-ttu-id="cca1e-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="cca1e-104">\<configuration></span></span>  
+<span data-ttu-id="cca1e-105">\<运行时 ></span><span class="sxs-lookup"><span data-stu-id="cca1e-105">\<runtime></span></span>  
+<span data-ttu-id="cca1e-106">\<assemblyBinding ></span><span class="sxs-lookup"><span data-stu-id="cca1e-106">\<assemblyBinding></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="72abb-107">语法</span><span class="sxs-lookup"><span data-stu-id="72abb-107">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="cca1e-107">语法</span><span class="sxs-lookup"><span data-stu-id="cca1e-107">Syntax</span></span>  
   
 ```xml  
       <assemblyBinding    
@@ -32,34 +32,34 @@ ms.locfileid: "32746171"
 </assemblyBinding>  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="72abb-108">特性和元素</span><span class="sxs-lookup"><span data-stu-id="72abb-108">Attributes and Elements</span></span>  
- <span data-ttu-id="72abb-109">下列各节描述了特性、子元素和父元素。</span><span class="sxs-lookup"><span data-stu-id="72abb-109">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="cca1e-108">特性和元素</span><span class="sxs-lookup"><span data-stu-id="cca1e-108">Attributes and Elements</span></span>  
+ <span data-ttu-id="cca1e-109">下列各节描述了特性、子元素和父元素。</span><span class="sxs-lookup"><span data-stu-id="cca1e-109">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="72abb-110">特性</span><span class="sxs-lookup"><span data-stu-id="72abb-110">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="cca1e-110">特性</span><span class="sxs-lookup"><span data-stu-id="cca1e-110">Attributes</span></span>  
   
-|<span data-ttu-id="72abb-111">特性</span><span class="sxs-lookup"><span data-stu-id="72abb-111">Attribute</span></span>|<span data-ttu-id="72abb-112">描述</span><span class="sxs-lookup"><span data-stu-id="72abb-112">Description</span></span>|  
+|<span data-ttu-id="cca1e-111">特性</span><span class="sxs-lookup"><span data-stu-id="cca1e-111">Attribute</span></span>|<span data-ttu-id="cca1e-112">描述</span><span class="sxs-lookup"><span data-stu-id="cca1e-112">Description</span></span>|  
 |---------------|-----------------|  
-|<span data-ttu-id="72abb-113">**xmlns**</span><span class="sxs-lookup"><span data-stu-id="72abb-113">**xmlns**</span></span>|<span data-ttu-id="72abb-114">必需的特性。</span><span class="sxs-lookup"><span data-stu-id="72abb-114">Required attribute.</span></span><br /><br /> <span data-ttu-id="72abb-115">指定程序集绑定所需的 XML 命名空间。</span><span class="sxs-lookup"><span data-stu-id="72abb-115">Specifies the XML namespace required for assembly binding.</span></span> <span data-ttu-id="72abb-116">使用字符串“urn: 架构-microsoft-com:asm.v1”作为值。</span><span class="sxs-lookup"><span data-stu-id="72abb-116">Use the string "urn:schemas-microsoft-com:asm.v1" as the value.</span></span>|  
-|<span data-ttu-id="72abb-117">**appliesTo**</span><span class="sxs-lookup"><span data-stu-id="72abb-117">**appliesTo**</span></span>|<span data-ttu-id="72abb-118">指定 .NET Framework 程序集重定向适用的运行时版本。</span><span class="sxs-lookup"><span data-stu-id="72abb-118">Specifies the runtime version the .NET Framework assembly redirection applies to.</span></span> <span data-ttu-id="72abb-119">此可选特性用 .NET Framework 版本号来指示其适用的版本。</span><span class="sxs-lookup"><span data-stu-id="72abb-119">This optional attribute uses a .NET Framework version number to indicate what version it applies to.</span></span> <span data-ttu-id="72abb-120">如果没有指定 appliesTo 特性，\<assemblyBinding> 元素将适用于 .NET Framework 的所有版本。</span><span class="sxs-lookup"><span data-stu-id="72abb-120">If no **appliesTo** attribute is specified, the **\<assemblyBinding>** element applies to all versions of the .NET Framework.</span></span> <span data-ttu-id="72abb-121">**AppliesTo** .NET Framework 1.1 版中引入了属性; 它由.NET Framework 1.0 版将被忽略。</span><span class="sxs-lookup"><span data-stu-id="72abb-121">The **appliesTo** attribute was introduced in .NET Framework version 1.1; it is ignored by the .NET Framework version 1.0.</span></span> <span data-ttu-id="72abb-122">这意味着，即使指定了 appliesTo 特性，在使用 .NET Framework 1.0 版时所有的 \<assemblyBinding> 元素也都适用。</span><span class="sxs-lookup"><span data-stu-id="72abb-122">This means that all **\<assemblyBinding>** elements are applied when using the .NET Framework version 1.0, even if an **appliesTo** attribute is specified.</span></span>|  
+|<span data-ttu-id="cca1e-113">**xmlns**</span><span class="sxs-lookup"><span data-stu-id="cca1e-113">**xmlns**</span></span>|<span data-ttu-id="cca1e-114">必需的特性。</span><span class="sxs-lookup"><span data-stu-id="cca1e-114">Required attribute.</span></span><br /><br /> <span data-ttu-id="cca1e-115">指定程序集绑定所需的 XML 命名空间。</span><span class="sxs-lookup"><span data-stu-id="cca1e-115">Specifies the XML namespace required for assembly binding.</span></span> <span data-ttu-id="cca1e-116">使用字符串“urn: 架构-microsoft-com:asm.v1”作为值。</span><span class="sxs-lookup"><span data-stu-id="cca1e-116">Use the string "urn:schemas-microsoft-com:asm.v1" as the value.</span></span>|  
+|<span data-ttu-id="cca1e-117">**AppliesTo**</span><span class="sxs-lookup"><span data-stu-id="cca1e-117">**appliesTo**</span></span>|<span data-ttu-id="cca1e-118">指定 .NET Framework 程序集重定向适用的运行时版本。</span><span class="sxs-lookup"><span data-stu-id="cca1e-118">Specifies the runtime version the .NET Framework assembly redirection applies to.</span></span> <span data-ttu-id="cca1e-119">此可选特性用 .NET Framework 版本号来指示其适用的版本。</span><span class="sxs-lookup"><span data-stu-id="cca1e-119">This optional attribute uses a .NET Framework version number to indicate what version it applies to.</span></span> <span data-ttu-id="cca1e-120">如果没有指定 **appliesTo** 特性，**\<assemblyBinding>** 元素将适用于 .NET Framework 的所有版本。</span><span class="sxs-lookup"><span data-stu-id="cca1e-120">If no **appliesTo** attribute is specified, the **\<assemblyBinding>** element applies to all versions of the .NET Framework.</span></span> <span data-ttu-id="cca1e-121">**AppliesTo** .NET Framework 版本 1.1 中引入了属性;.NET Framework 1.0 版将忽略它。</span><span class="sxs-lookup"><span data-stu-id="cca1e-121">The **appliesTo** attribute was introduced in .NET Framework version 1.1; it is ignored by the .NET Framework version 1.0.</span></span> <span data-ttu-id="cca1e-122">这意味着，即使指定了 appliesTo 特性，在使用 .NET Framework 1.0 版时所有的 \<assemblyBinding> 元素也都适用。</span><span class="sxs-lookup"><span data-stu-id="cca1e-122">This means that all **\<assemblyBinding>** elements are applied when using the .NET Framework version 1.0, even if an **appliesTo** attribute is specified.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="72abb-123">子元素</span><span class="sxs-lookup"><span data-stu-id="72abb-123">Child Elements</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="cca1e-123">子元素</span><span class="sxs-lookup"><span data-stu-id="cca1e-123">Child Elements</span></span>  
   
-|<span data-ttu-id="72abb-124">元素</span><span class="sxs-lookup"><span data-stu-id="72abb-124">Element</span></span>|<span data-ttu-id="72abb-125">描述</span><span class="sxs-lookup"><span data-stu-id="72abb-125">Description</span></span>|  
+|<span data-ttu-id="cca1e-124">元素</span><span class="sxs-lookup"><span data-stu-id="cca1e-124">Element</span></span>|<span data-ttu-id="cca1e-125">描述</span><span class="sxs-lookup"><span data-stu-id="cca1e-125">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="72abb-126">\<dependentAssembly></span><span class="sxs-lookup"><span data-stu-id="72abb-126">\<dependentAssembly></span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/dependentassembly-element.md)|<span data-ttu-id="72abb-127">封装程序集的绑定策略和程序集位置。</span><span class="sxs-lookup"><span data-stu-id="72abb-127">Encapsulates binding policy and assembly location for an assembly.</span></span> <span data-ttu-id="72abb-128">使用一个 **\<dependentAssembly >** 标记每个程序集。</span><span class="sxs-lookup"><span data-stu-id="72abb-128">Use one **\<dependentAssembly>** tag for each assembly.</span></span>|  
-|[<span data-ttu-id="72abb-129">\<probing></span><span class="sxs-lookup"><span data-stu-id="72abb-129">\<probing></span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/probing-element.md)|<span data-ttu-id="72abb-130">指定加载程序集时公共语言运行时搜索的子目录。</span><span class="sxs-lookup"><span data-stu-id="72abb-130">Specifies subdirectories the common language runtime searches when loading assemblies.</span></span>|  
-|[<span data-ttu-id="72abb-131">\<publisherPolicy></span><span class="sxs-lookup"><span data-stu-id="72abb-131">\<publisherPolicy></span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/publisherpolicy-element.md)|<span data-ttu-id="72abb-132">指定运行时是否使用发布者策略。</span><span class="sxs-lookup"><span data-stu-id="72abb-132">Specifies whether the runtime applies publisher policy.</span></span>|  
-|[<span data-ttu-id="72abb-133">\<qualifyAssembly></span><span class="sxs-lookup"><span data-stu-id="72abb-133">\<qualifyAssembly></span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/qualifyassembly-element.md)|<span data-ttu-id="72abb-134">指定使用部分名称时应动态加载的程序集全名。</span><span class="sxs-lookup"><span data-stu-id="72abb-134">Specifies the full name of the assembly that should be dynamically loaded when a partial name is used.</span></span>|  
+|[<span data-ttu-id="cca1e-126">\<dependentAssembly></span><span class="sxs-lookup"><span data-stu-id="cca1e-126">\<dependentAssembly></span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/dependentassembly-element.md)|<span data-ttu-id="cca1e-127">封装程序集的绑定策略和程序集位置。</span><span class="sxs-lookup"><span data-stu-id="cca1e-127">Encapsulates binding policy and assembly location for an assembly.</span></span> <span data-ttu-id="cca1e-128">使用一个 **\<dependentAssembly >** 标记每个程序集。</span><span class="sxs-lookup"><span data-stu-id="cca1e-128">Use one **\<dependentAssembly>** tag for each assembly.</span></span>|  
+|[<span data-ttu-id="cca1e-129">\<probing></span><span class="sxs-lookup"><span data-stu-id="cca1e-129">\<probing></span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/probing-element.md)|<span data-ttu-id="cca1e-130">指定加载程序集时公共语言运行时搜索的子目录。</span><span class="sxs-lookup"><span data-stu-id="cca1e-130">Specifies subdirectories the common language runtime searches when loading assemblies.</span></span>|  
+|[<span data-ttu-id="cca1e-131">\<publisherPolicy></span><span class="sxs-lookup"><span data-stu-id="cca1e-131">\<publisherPolicy></span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/publisherpolicy-element.md)|<span data-ttu-id="cca1e-132">指定运行时是否使用发布者策略。</span><span class="sxs-lookup"><span data-stu-id="cca1e-132">Specifies whether the runtime applies publisher policy.</span></span>|  
+|[<span data-ttu-id="cca1e-133">\<qualifyAssembly></span><span class="sxs-lookup"><span data-stu-id="cca1e-133">\<qualifyAssembly></span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/qualifyassembly-element.md)|<span data-ttu-id="cca1e-134">指定使用部分名称时应动态加载的程序集全名。</span><span class="sxs-lookup"><span data-stu-id="cca1e-134">Specifies the full name of the assembly that should be dynamically loaded when a partial name is used.</span></span>|  
   
-### <a name="parent-elements"></a><span data-ttu-id="72abb-135">父元素</span><span class="sxs-lookup"><span data-stu-id="72abb-135">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="cca1e-135">父元素</span><span class="sxs-lookup"><span data-stu-id="cca1e-135">Parent Elements</span></span>  
   
-|<span data-ttu-id="72abb-136">元素</span><span class="sxs-lookup"><span data-stu-id="72abb-136">Element</span></span>|<span data-ttu-id="72abb-137">描述</span><span class="sxs-lookup"><span data-stu-id="72abb-137">Description</span></span>|  
+|<span data-ttu-id="cca1e-136">元素</span><span class="sxs-lookup"><span data-stu-id="cca1e-136">Element</span></span>|<span data-ttu-id="cca1e-137">描述</span><span class="sxs-lookup"><span data-stu-id="cca1e-137">Description</span></span>|  
 |-------------|-----------------|  
-|`configuration`|<span data-ttu-id="72abb-138">公共语言运行时和 .NET Framework 应用程序所使用的每个配置文件中的根元素。</span><span class="sxs-lookup"><span data-stu-id="72abb-138">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
-|`runtime`|<span data-ttu-id="72abb-139">包含有关程序集绑定和垃圾回收的信息。</span><span class="sxs-lookup"><span data-stu-id="72abb-139">Contains information about assembly binding and garbage collection.</span></span>|  
+|`configuration`|<span data-ttu-id="cca1e-138">公共语言运行时和 .NET Framework 应用程序所使用的每个配置文件中的根元素。</span><span class="sxs-lookup"><span data-stu-id="cca1e-138">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
+|`runtime`|<span data-ttu-id="cca1e-139">包含有关程序集绑定和垃圾回收的信息。</span><span class="sxs-lookup"><span data-stu-id="cca1e-139">Contains information about assembly binding and garbage collection.</span></span>|  
   
-## <a name="example"></a><span data-ttu-id="72abb-140">示例</span><span class="sxs-lookup"><span data-stu-id="72abb-140">Example</span></span>  
- <span data-ttu-id="72abb-141">下面的示例显示如何将一个程序集版本重定向到另一个版本并提供基本代码。</span><span class="sxs-lookup"><span data-stu-id="72abb-141">The following example shows how to redirect one assembly version to another and provide a codebase.</span></span>  
+## <a name="example"></a><span data-ttu-id="cca1e-140">示例</span><span class="sxs-lookup"><span data-stu-id="cca1e-140">Example</span></span>  
+ <span data-ttu-id="cca1e-141">下面的示例显示如何将一个程序集版本重定向到另一个版本并提供基本代码。</span><span class="sxs-lookup"><span data-stu-id="cca1e-141">The following example shows how to redirect one assembly version to another and provide a codebase.</span></span>  
   
 ```xml  
 <configuration>  
@@ -79,7 +79,7 @@ ms.locfileid: "32746171"
 </configuration>  
 ```  
   
- <span data-ttu-id="72abb-142">下面的示例演示如何使用**appliesTo**属性重定向.NET Framework 程序集的绑定。</span><span class="sxs-lookup"><span data-stu-id="72abb-142">The following example shows how to use the **appliesTo** attribute to redirect binding of a .NET Framework assembly.</span></span>  
+ <span data-ttu-id="cca1e-142">下面的示例演示如何使用**appliesTo**属性重定向.NET Framework 程序集的绑定。</span><span class="sxs-lookup"><span data-stu-id="cca1e-142">The following example shows how to use the **appliesTo** attribute to redirect binding of a .NET Framework assembly.</span></span>  
   
 ```xml  
 <runtime>  
@@ -92,7 +92,7 @@ ms.locfileid: "32746171"
 </runtime>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="72abb-143">请参阅</span><span class="sxs-lookup"><span data-stu-id="72abb-143">See Also</span></span>  
- [<span data-ttu-id="72abb-144">运行时设置架构</span><span class="sxs-lookup"><span data-stu-id="72abb-144">Runtime Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
- [<span data-ttu-id="72abb-145">配置文件架构</span><span class="sxs-lookup"><span data-stu-id="72abb-145">Configuration File Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/index.md)  
- [<span data-ttu-id="72abb-146">重定向程序集版本</span><span class="sxs-lookup"><span data-stu-id="72abb-146">Redirecting Assembly Versions</span></span>](../../../../../docs/framework/configure-apps/redirect-assembly-versions.md)
+## <a name="see-also"></a><span data-ttu-id="cca1e-143">请参阅</span><span class="sxs-lookup"><span data-stu-id="cca1e-143">See Also</span></span>  
+- [<span data-ttu-id="cca1e-144">运行时设置架构</span><span class="sxs-lookup"><span data-stu-id="cca1e-144">Runtime Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
+- [<span data-ttu-id="cca1e-145">配置文件架构</span><span class="sxs-lookup"><span data-stu-id="cca1e-145">Configuration File Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/index.md)  
+- [<span data-ttu-id="cca1e-146">重定向程序集版本</span><span class="sxs-lookup"><span data-stu-id="cca1e-146">Redirecting Assembly Versions</span></span>](../../../../../docs/framework/configure-apps/redirect-assembly-versions.md)
