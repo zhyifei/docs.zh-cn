@@ -17,17 +17,17 @@ ms.locfileid: "33556817"
 本示例演示如何指定绑定是仅更新绑定目标（目标）属性或绑定源（源）属性，还是同时更新目标属性和源属性。  
   
 ## <a name="example"></a>示例  
- 你使用<xref:System.Windows.Data.Binding.Mode%2A>属性指定绑定的方向。 以下枚举列表显示了可供绑定更新的选项：  
+ 使用<xref:System.Windows.Data.Binding.Mode%2A>属性指定绑定的方向。 以下枚举列表显示了可供绑定更新的选项：  
   
--   <xref:System.Windows.Data.BindingMode.TwoWay> 当发生更改时的目标属性或源属性更新目标属性。  
+-   <xref:System.Windows.Data.BindingMode.TwoWay> 当目标属性或源属性发生更改时都会发生目标属性或源属性更新。  
   
--   <xref:System.Windows.Data.BindingMode.OneWay> 仅当源属性更改时，请更新目标属性。  
+-   <xref:System.Windows.Data.BindingMode.OneWay> 仅当源属性更改时更新目标属性。  
   
--   <xref:System.Windows.Data.BindingMode.OneTime> 仅当应用程序启动时或时，请更新目标属性<xref:System.Windows.FrameworkElement.DataContext%2A>发生了更改。  
+-   <xref:System.Windows.Data.BindingMode.OneTime> 仅当应用程序启动时或<xref:System.Windows.FrameworkElement.DataContext%2A>发生了更改时更新目标属性。  
   
--   <xref:System.Windows.Data.BindingMode.OneWayToSource> 目标属性更改时，请更新源属性。  
+-   <xref:System.Windows.Data.BindingMode.OneWayToSource> 目标属性更改时更新源属性。  
   
--   <xref:System.Windows.Data.BindingMode.Default> 默认值将导致<xref:System.Windows.Data.Binding.Mode%2A>要使用的目标属性的值。  
+-   <xref:System.Windows.Data.BindingMode.Default> 将使用目标属性的的默认<xref:System.Windows.Data.Binding.Mode%2A>值。  
   
  有关详细信息，请参见 <xref:System.Windows.Data.BindingMode> 枚举。  
   
