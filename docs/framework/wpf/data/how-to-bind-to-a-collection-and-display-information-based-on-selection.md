@@ -21,26 +21,26 @@ ms.locfileid: "33557402"
 在简单的主 / 从方案中，具有数据绑定<xref:System.Windows.Controls.ItemsControl>如<xref:System.Windows.Controls.ListBox>。 基于用户选择，显示有关选定项的详细信息。 此示例演示如何实现这种情况。  
   
 ## <a name="example"></a>示例  
- 在此示例中，`People`是<xref:System.Collections.ObjectModel.ObservableCollection%601>的`Person`类。 这`Person`类包含三个属性： `FirstName`， `LastName`，和`HomeTown`，所有类型`string`。  
+ 在此示例中，`People` 是 `Person` 类的 <xref:System.Collections.ObjectModel.ObservableCollection%601>。 `Person` 类包含三个属性： `FirstName`， `LastName`，和`HomeTown`，类型均为`string`。  
   
  [!code-xaml[CollectionBinding#Source](../../../../samples/snippets/csharp/VS_Snippets_Wpf/CollectionBinding/CSharp/Window1.xaml#source)]  
 [!code-xaml[CollectionBinding#UI](../../../../samples/snippets/csharp/VS_Snippets_Wpf/CollectionBinding/CSharp/Window1.xaml#ui)]  
   
- <xref:System.Windows.Controls.ContentControl>使用以下<xref:System.Windows.DataTemplate>，它定义如何的信息`Person`显示：  
+ <xref:System.Windows.Controls.ContentControl> 使用以下 <xref:System.Windows.DataTemplate>，它定义了如何显示 `Person` 信息：  
   
  [!code-xaml[CollectionBinding#DetailTemplate](../../../../samples/snippets/csharp/VS_Snippets_Wpf/CollectionBinding/CSharp/Window1.xaml#detailtemplate)]  
   
- 以下是该示例生成的屏幕快照。 <xref:System.Windows.Controls.ContentControl>显示选择的人员的其他属性。  
+ 以下是该示例生成的屏幕快照。 <xref:System.Windows.Controls.ContentControl> 显示选中人员的其他属性。  
   
  ![绑定到集合](../../../../docs/framework/wpf/data/media/databinding-collectionbindingsample.png "DataBinding_CollectionBindingSample")  
   
- 需要注意，在此示例中，两个的事项为：  
+ 在此示例中，需要注意的两个事项：  
   
-1.  <xref:System.Windows.Controls.ListBox>和<xref:System.Windows.Controls.ContentControl>将绑定到相同的源。 <xref:System.Windows.Data.Binding.Path%2A>不指定这两种绑定的属性，因为这两个控件绑定到整个集合对象。  
+1.  <xref:System.Windows.Controls.ListBox> 和 <xref:System.Windows.Controls.ContentControl> 将绑定到相同的源。 两个绑定的 <xref:System.Windows.Data.Binding.Path%2A> 属性都没有指定，因为这两个控件都绑定到整个集合对象。  
   
-2.  必须设置<xref:System.Windows.Controls.Primitives.Selector.IsSynchronizedWithCurrentItem%2A>属性`true`为使工作。 将设置此属性可确保所选的项始终设置为<xref:System.Windows.Controls.ItemCollection.CurrentItem%2A>。 或者，如果<xref:System.Windows.Controls.ListBox>获取它从数据<xref:System.Windows.Data.CollectionViewSource>，它自动同步所选内容和货币。  
+2.  必须设置 <xref:System.Windows.Controls.Primitives.Selector.IsSynchronizedWithCurrentItem%2A> 属性为 `true` 使其生效。 设置此属性可确保所选的项始终被设置为<xref:System.Windows.Controls.ItemCollection.CurrentItem%2A>。 或者，如果 <xref:System.Windows.Controls.ListBox> 从 <xref:System.Windows.Data.CollectionViewSource> 获取数据，它自动同步所选内容和货币。  
   
- 请注意，`Person`类重写`ToString`方法按以下方式。 默认情况下，<xref:System.Windows.Controls.ListBox>调用`ToString`并在与绑定集合中显示的字符串表示形式的每个对象。 这就是为什么每个`Person`显示中的第一个名为<xref:System.Windows.Controls.ListBox>。  
+ 需要注意，`Person` 类按以下方式重写了 `ToString` 方法。 默认情况下， <xref:System.Windows.Controls.ListBox> 会调用 `ToString`，以字符串形式显示绑定集合中的每个对象。 这就是为什么每个 `Person` 在 <xref:System.Windows.Controls.ListBox> 中显示为 first name。  
   
  [!code-csharp[CollectionBinding#ToString](../../../../samples/snippets/csharp/VS_Snippets_Wpf/CollectionBinding/CSharp/Data.cs#tostring)]
  [!code-vb[CollectionBinding#ToString](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/CollectionBinding/VisualBasic/Person.vb#tostring)]  
