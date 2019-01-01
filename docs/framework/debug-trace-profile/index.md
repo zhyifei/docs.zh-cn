@@ -23,9 +23,9 @@ ms.lasthandoff: 09/06/2018
 ms.locfileid: "43855278"
 ---
 # <a name="debugging-tracing-and-profiling"></a>调试、跟踪和分析
-若要调试 .NET Framework 应用程序，必须配置编译器和运行时环境，以使调试器能够附加到应用程序，并且如果可能的话，为该应用程序及其相应 Microsoft 中间语言 (MSIL) 同时生成符号和行映射。在对托管应用程序进行调试后，可对其进行分析以增强性能。分析可以计算并描述可生成最常执行的代码的源代码行，以及执行它们所需的时间。  
+若要调试 .NET Framework 应用程序，必须配置编译器和运行时环境，以使调试器能够附加到应用程序，并且如果可能的话，为该应用程序及其相应 Microsoft 中间语言 (MSIL) 同时生成符号和行映射。 在对托管应用程序进行调试后，可对其进行分析以增强性能。 分析可以计算并描述可生成最常执行的代码的源代码行，以及执行它们所需的时间。  
   
- Visual Studio 可处理许多配置详细信息，使用它可以轻松调试 .NET Framework 应用程序。如果未安装 Visual Studio，可通过使用 .NET Framework System.Diagnostics 命名空间中的调试类来检查和改进 .NET Framework 应用程序的性能。此命名空间包括用于跟踪执行流的 <xref:System.Diagnostics.Trace>、<xref:System.Diagnostics.Debug> 和 <xref:System.Diagnostics.TraceSource> 类，以及用于分析代码的 <xref:System.Diagnostics.Process>、<xref:System.Diagnostics.EventLog> 和 <xref:System.Diagnostics.PerformanceCounter> 类。
+ 通过使用 Visual Studio 可轻松地调试.NET framework 应用程序，前者用于处理配置的许多详细信息。 如果未安装 Visual Studio，可以通过使用 .NET Framework <xref:System.Diagnostics> 命名空间中的调试类检查并提升 .NET Framework 应用程序的性能。 此命名空间包括用于跟踪执行流的 <xref:System.Diagnostics.Trace>、<xref:System.Diagnostics.Debug> 和 <xref:System.Diagnostics.TraceSource> 类，以及用于分析代码的 <xref:System.Diagnostics.Process>、<xref:System.Diagnostics.EventLog> 和 <xref:System.Diagnostics.PerformanceCounter> 类。  
   
 ## <a name="in-this-section"></a>本节内容  
  [启用 JIT 附加调试](../../../docs/framework/debug-trace-profile/enabling-jit-attach-debugging.md)  
