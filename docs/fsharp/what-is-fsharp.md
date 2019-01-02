@@ -11,9 +11,9 @@ ms.locfileid: "43863291"
 ---
 # <a name="what-is-f"></a>什么是 F# #
 
-F# 是一个函数式编程语言，能够让您轻松地编写正确、维护方便的代码。
+F# 是一种函数式编程语言，可用于轻松地编写正确和可维护的代码。
 
-设计 F# 语言目的是使得类型和函数的定义能够轻松地被推断与泛化。 这样，你只需关注问题本身和对数据的操作，而不是编程的细节问题。
+F# 编程主要用于定义能够自动对其进行类型推断和泛化的类型和功能。这使你能够集中关注问题本身及操作其数据，而无需关注编程的细节问题。
 
 ```fsharp
 open System // Gets access to functionality in System namespace.
@@ -35,21 +35,21 @@ let main args =
     0
 ```
 
-F# 具有许多特性，比如：
+F# 具有许多特性，包括：
 
 * 轻量语法
 * 默认情况下集合不可变
 * 类型推断和自动泛化
 * 头等函数。
-* 强大多样的数据类型
+* 强大的数据类型
 * 模式匹配
 * 异步编程
 
-这里有F#语言完整的文档[F# 语言参考](language-reference/index.md)。
+[F# 语言参考](language-reference/index.md)中介绍了完整的特性。
 
 ## <a name="rich-data-types"></a>丰富的数据类型
 
-像[Records](language-reference/records.md)和[Discriminated Unions](language-reference/discriminated-unions.md)这样的数据类型可以表示复杂的数据和域。
+[记录](language-reference/records.md)和[可区分联合](language-reference/discriminated-unions.md)等数据类型可以表示复杂的数据和域。
 
 ```fsharp
 // Group data with Records
@@ -72,11 +72,11 @@ type WithdrawalResult =
     | UndisclosedFailure
 ```
 
-F# Records和可Discriminated Unions默认情况下是不能为null，不可变且能够比较的。这使它们非常易于使用。
+F#的“记录”和“可区分联合”默认情况下为非 null、不可变且可比较，因此它们非常易于使用。
 
-## <a name="enforced-correctness-with-functions-and-pattern-matching"></a>对函数正确性的保证与模式的匹配
+## <a name="enforced-correctness-with-functions-and-pattern-matching"></a>利用函数和模式匹配强制实现正确性
 
-F# 函数非常容易声明，也非常强大。有了[模式匹配](language-reference/pattern-matching.md)加持，它使得您定义由编译器强制保证正确的行为的函数。
+F# 函数易于声明且具有强大的实际功能。如果将其与[模式匹配](language-reference/pattern-matching.md)配合使用，你将可以定义行为，该行为的正确性由编译器强制实现。
 
 ```fsharp
 // Returns a WithdrawalResult
@@ -93,11 +93,11 @@ let handleWithdrawal amount =
     | UndisclosedFailure -> printfn "Failed: unknown :("
 ```
 
-F# 函数也是头等函数。也就是说，函数能像参数那样被传递到另一个函数、从另一个函数那像值一样被返回出来、函数可以赋值给变量或者存在数据结构中。
+F# 函数还是头等函数，也就是说，它们可以像参数一样传递以及从其他函数返回。
 
-## <a name="functions-to-define-operations-on-objects"></a>用于定义【对 对象 的操作】的函数
+## <a name="functions-to-define-operations-on-objects"></a>用于定义对对象执行的操作的函数。
 
-F# 完全支持objects的概念。在您需要混合使用函数与数据时这是一个非常好用的数据类型。 F# 函数是用于操作对象的。
+F# 具有对对象的完整支持，即在需要混合数据和功能时非常有用的数据类型。F# 函数用于操作对象。
 
 ```fsharp
 type Set<[<EqualityConditionOn>] ‘T when ‘T: comparison>(elements: seq<'T>) =
@@ -119,7 +119,7 @@ module Set =
     let add value (set: Set<'T>) = set.Add(value)
 ```
 
-与面向对象编程不同的是，在 F# 中，您编写出的代码经常会将对象看作另一种数据类型，以便让函数去处理它们。[泛型接口](language-reference/interfaces.md)，[对象表达式](language-reference/object-expressions.md)，[成员](language-reference/members/index.md)的使用在大型的F#程序中很常见。
+在 F# 中，你将经常编写一类代码，这些代码将对象视为函数要操作的其他数据类型，而不是编写面向对象的代码。[泛型接口](language-reference/interfaces.md)、[对象表达式](language-reference/object-expressions.md)和明智地使用[成员](language-reference/members/index.md)在较大型的 F# 程序中很常见。
 
 ## <a name="next-steps"></a>后续步骤
 
