@@ -11,51 +11,51 @@ ms.locfileid: "53143735"
 ---
 # <a name="tour-of-f"></a>F# 教程 #
 
-若要了解有关 F# 的最佳方法是读取和写入 F# 代码。 本文将充当浏览一些 F# 语言的主要功能，并为您提供您的计算机可以执行一些代码片段。 若要了解如何设置开发环境，请查看[Getting Started](tutorials/getting-started/index.md)。
+学习 F# 语言的最好方式莫过于多加阅读与编写 F# 代码。 本文将带你了解一些 F# 语言的关键特性，并为您提供一些您可以亲自执行的代码片段。您若要了解如何配置开发环境，请移步[Getting Started](tutorials/getting-started/index.md)。
 
-F# 中有两个主要概念： 函数和类型。  本教程将重点介绍语言的功能，这些功能划分为这两个概念。
+F# 中有两个主要概念：函数和类型。本文强调的语言特性都将划归到这两个概念当中。
 
-## <a name="executing-the-code-online"></a>执行联机的代码
+## <a name="executing-the-code-online"></a>在线执行代码
 
-如果你没有F#安装在计算机上，你可以执行所有的示例使用联机[Fable REPL](http://fable.io/repl/)。 Fable 是一种F#用于直接在浏览器中执行。 若要在 REPL 中查看以下示例，请查看**示例 > 了解 > 概览F#**  Fable 复制事务的左侧菜单栏中
+如果您还没有在您的电脑上安装 F# 运行环境，你可以在线执行本文出现的所有示例[Fable REPL](http://fable.io/repl/)。 Fable 能让您直接在浏览器中执行 F# 代码。若要在 REPL 中执行示例代码，请阅读 Fable REPL 左侧菜单栏中的 **Samples > Learn > Tour of F#**
 
 ## <a name="functions-and-modules"></a>函数和模块
 
-任何 F# 程序的最基本的片段都***函数***组织成***模块***。  [函数](language-reference/functions/index.md)输入生成输出，对执行工作和下组织[模块](language-reference/modules.md)，这是组 F# 中的操作的主要方法。  定义使用它们[`let`绑定](language-reference/functions/let-bindings.md)，它为函数提供一个名称并定义其参数。
+任何 F# 程序都由 ***函数*** 组织成的 ***模块*** 构成。在[模块](language-reference/modules.md)的组织下，[函数](language-reference/functions/index.md)用于处理输入，从而产生输出。你可以通过[`let` binding](language-reference/functions/let-bindings.md)定义函数，为函数起一个好听的名子，并且告诉它们该接受哪些参数。
 
 [!code-fsharp[BasicFunctions](../../samples/snippets/fsharp/tour.fs#L101-L133)]
 
-`let` 绑定也是如何将值绑定到的名称，类似于其他语言中的变量。  `let` 绑定是***不可变***默认情况下，这意味着，一旦值或函数绑定到一个名称，它不能更改在原位。  这与在其他语言中，这些变量***可变***，这意味着它们的值可以更改任何位置的时间。  如果你需要一个可变的绑定，则可以使用`let mutable ...`语法。
+`let` 也可以将值绑定到一个标识符上，就像其它语言中的变量一样。  `let` 绑定默认情况是 ***不可变*** (***immutable***)的(类似constant)，这意味着，一旦值或函数绑定到一个标识符，它就不能更改。这与在其他语言中能够随时随地改变的变量(***mutable***)不同。如果您需要一个可变的变量，那可以使用`let mutable ...`。
 
 [!code-fsharp[Immutability](../../samples/snippets/fsharp/tour.fs#L75-L94)]
 
-## <a name="numbers-booleans-and-strings"></a>数字、 布尔值和字符串
+## <a name="numbers-booleans-and-strings"></a>数值、布尔值和字符串
 
-作为一种.NET 语言，F# 支持相同的基础[基元类型](language-reference/primitive-types.md).NET 中存在的。
+作为一个 .NET 系语言，F# 支持 .NET 中的[基元类型](language-reference/primitive-types.md)。
 
-下面是如何各种数值类型都包含在 F#:
+下面是 F# 中如何表示不同的数值类型:
 
 [!code-fsharp[Numbers](../../samples/snippets/fsharp/tour.fs#L49-L68)]
 
-下面是布尔值，并执行基本的条件逻辑如下所示：
+然后是布尔值的使用：
 
 [!code-fsharp[Bools](../../samples/snippets/fsharp/tour.fs#L142-L152)]
 
-下面是哪些 basic[字符串](language-reference/strings.md)操作如下所示：
+接下来是基础的[字符串](language-reference/strings.md)操作：
 
 [!code-fsharp[Strings](../../samples/snippets/fsharp/tour.fs#L158-L180)]
 
 ## <a name="tuples"></a>元组
 
-[元组](language-reference/tuples.md)是 F# 中是什么大问题。  它们是未命名，但有序值，可将其视为值本身的分组。  将它们视为与其他值汇总的值。  它们有许多用途，例如方便地从一个函数，返回多个值或对一些即席便利的值进行分组。
+[元组](language-reference/tuples.md)是 F# 很重要的一部分。它们自身便是变量值，然而它们能够将未命名的数值聚在一起，形成有序的一组数值。将它们视为与其他值汇总的值。元组有许多用途。比如，你可以将元组作为函数的返回值，从而使函数返回多个值；你也可以将一些数值聚在一起，方便你进行特定的操作。
 
 [!code-fsharp[Tuples](../../samples/snippets/fsharp/tour.fs#L186-L203)]
 
-截至 F# 4.1 中，你可以创建`struct`元组。  这些也进行互操作完全使用 C# 7/Visual 基本 15 元组，这两项也`struct`元组：
+在 F# 4.1 中，你还可以创建`struct`元组。它们可以与 C# 7/Visual Basic 15 中的元组交互，因为它们也是`struct`元组：
 
 [!code-fsharp[Tuples](../../samples/snippets/fsharp/tour.fs#L205-L218)]
 
-务必要注意因为`struct`元组是值类型，它们不能隐式转换为引用元组，反之亦然。  必须显式转换之间的引用和结构的元组。
+请务必要注意由于`struct`元组是值类型，它们不能隐式转换为引用元组，反之亦然。您必须进行显式转换。
 
 ## <a name="pipelines-and-composition"></a>管道和组合
 
