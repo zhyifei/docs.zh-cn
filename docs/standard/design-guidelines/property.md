@@ -44,7 +44,7 @@ ms.locfileid: "53131451"
   
  索引属性通常称为索引器。 索引器应仅用于提供对逻辑集合中项目的访问的 API。 例如，字符串是字符的集合，在索引器上添加了 <xref:System.String?displayProperty=nameWithType> 即可访问其字符。  
   
- **✓ 考虑**使用索引器提供对存储在内部数组中的数据的访问权限。  
+ **✓ 考虑**使用索引器以提供对存储在内部数组中的数据访问。  
   
  **✓ 考虑**为表示项目集合的类型提供索引器。  
   
@@ -56,11 +56,11 @@ ms.locfileid: "53131451"
   
  如果设计需要其他类型的参数，请仔细重新评估 API 是否真正代表逻辑集合的访问者。 如果不是，请使用方法。 考虑使用 `Get` 或 `Set` 开头的方法名称  
   
- **✓ 务必**使用 `Item` 作为索引属性的名称，除非有明显更好的名称（例如，请参阅 `System.String` 上的 <xref:System.String.Chars%2A>属性）。  
+ **✓ 务必**使用名称 `Item` 的索引属性，除非有明显更好的名称（例如，请参阅 <xref:System.String.Chars%2A>属性`System.String`）。  
   
  在 C# 中，索引器默认名称为 Item。 <xref:System.Runtime.CompilerServices.IndexerNameAttribute> 可用于自定义此名称。  
   
- **X 切忌**提供在语义方面等效的索引器和方法。  
+ **X 切忌**提供索引器和在语义上等效的方法。    
   
  **X 切忌**在一种类型中提供多个重载索引器系列。  
   
