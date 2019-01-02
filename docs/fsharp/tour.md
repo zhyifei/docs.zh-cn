@@ -59,38 +59,38 @@ F# 中有两个主要概念：函数和类型。本文强调的语言特性都�
 
 ## <a name="pipelines-and-composition"></a>管道和组合
 
-如运算符通过管道传递`|>`处理 F# 中的数据时广泛使用。 这些运算符是函数，可用于以灵活的方式建立的函数的"管道"。 下面的示例将指导完成如何，您可以充分利用这些运算符来构建一个简单的功能管道：
+在用 F# 处理数据时使用像`|>`这样的管道运算符是很常见的事。这些运算符是能让您灵活建立函数间的“管道”的函数。下面的示例将带您利用这些运算符来构建一个简单的管道：
 
 [!code-fsharp[Pipelines](../../samples/snippets/fsharp/tour.fs#L227-L282)]
 
-前面的示例所做的许多功能 F# 中，包括列表处理函数，第一类函数的使用和[部分应用](language-reference/functions/index.md#partial-application-of-arguments)。 尽管每个这些概念的深入了解可以变得有点高级，它应该很清楚如何轻松地使用函数来生成管道时处理数据。
+前面的示例所做的许多功能 F# 中，包括表处理操作，头等函数的使用和[偏函数](language-reference/functions/index.md#partial-application-of-arguments)。尽管深入了解所有这些概念有难度，但是这并不影响你轻松地使用管道来处理数据。
 
 ## <a name="lists-arrays-and-sequences"></a>列表、 数组和序列
 
-列表、 数组和序列是 F# 核心库中的三个主要的集合类型。
+列表、数组和序列是 F# 库中的三个最主要的集合类型。
 
-[列出了](language-reference/lists.md)是相同类型的元素的有序的、 不可变集合。  它们是单向链接列表中，这意味着如果它们大型它们专门为枚举，但针对随机访问和串联的选择不当。  这与其他流行的语言，通常不使用单向链接列表来表示列表中的列表。
+[列表](language-reference/lists.md)是 *相同类型元素* 的 *有序* *不可变* 集合。它是一个单向链接列表，这意味着列表的枚举复杂度较低，而随机访问与串联的复杂度较高。请注意，别的语言一般不会用单向列表表示列表结构。
 
 [!code-fsharp[Lists](../../samples/snippets/fsharp/tour.fs#L309-L359)]
 
-[数组](language-reference/arrays.md)是固定大小*可变*相同类型的元素的集合。  它们支持快速随机访问的元素，并不是 F# 列表，因为它们是只需连续内存块的速度更快。
+[数组](language-reference/arrays.md)是 *定容* *可变* 的 *相同类型的元素* 的集合。由于数组背后是一段连续的内存，它们支持快速随机访问。
 
 [!code-fsharp[Arrays](../../samples/snippets/fsharp/tour.fs#L368-L407)]
 
-[序列](language-reference/sequences.md)是以逻辑序列的所有相同类型的元素。  这些是列表和数组，能够为任何逻辑系列的元素在"视图"比更普通的类型。  它们还脱颖而出，因为它们可以是***延迟***，这意味着仅在需要时可计算元素。
+[序列](language-reference/sequences.md)是逻辑上的一系列同类型的元素。序列是相对数组与列表来说更通用的类型，使您能够访问任何逻辑上的“一系列元素”。它甚至可以 ***延迟更新*** ，也就是说序列仅在需要时计算元素的值。
 
 [!code-fsharp[Sequences](../../samples/snippets/fsharp/tour.fs#L418-L452)]
 
 ## <a name="recursive-functions"></a>递归函数
 
-处理集合或序列的元素通常是与[递归](language-reference/functions/index.md#recursive-functions)F# 中。  尽管 F# 的 for 循环和命令式编程的支持，但递归是首选，因为它是更轻松地保证正确性。
+作为一门函数式编程语言，在 F# 中，对集合与序列的操作往往是通过[递归](language-reference/functions/index.md#recursive-functions)完成的。尽管 F# 支持 for 循环和命令式编程，但递归仍然是首选，因为它更容易保证语句的正确性。
 
 > [!NOTE]
-> 下面的示例使用通过模式匹配的`match`表达式。  更高版本中这篇文章介绍了此基本构造。
+> 下面的示例利用了`match`表达式。之后我们会详细介绍它的使用。
 
 [!code-fsharp[RecursiveFunctions](../../samples/snippets/fsharp/tour.fs#L461-L500)]
 
-F# 也具有完全支持尾调用优化，这是一种方法来优化递归调用，以便这些循环构造一样快。
+F# 支持尾调用优化，这使得递归调用的效率不比循环结构差。
 
 ## <a name="record-and-discriminated-union-types"></a>记录和可区分联合类型
 
