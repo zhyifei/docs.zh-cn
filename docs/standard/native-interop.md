@@ -6,12 +6,12 @@ ms.author: ronpet
 ms.date: 06/20/2016
 ms.technology: dotnet-standard
 ms.assetid: 3c357112-35fb-44ba-a07b-6a1c140370ac
-ms.openlocfilehash: 2f427eb5d8f41f730d4263425e268213db92236d
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 14dfe7639a160af64e925018a4fd9e2bd44d4fe1
+ms.sourcegitcommit: 49af435bfdd41faf26d38c20c5b0cc07e87bea60
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53143176"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53396807"
 ---
 # <a name="native-interoperability"></a>本机互操作性
 
@@ -260,7 +260,7 @@ namespace PInvokeSamples {
 
 **封送**是当类型需要跨越托管边界进入本机代码（或反之）时转换类型的过程。
 
-需要封送的原因是托管代码与非托管代码中的类型并不相同。 例如，在托管代码中，可指定 `String`。但在非托管环境中，字符串类型可以是 Unicode（“宽型”）、非 Unicode、null 结尾、ASCII 等。默认情况下，P/Invoke 子系统会根据[默认行为](../../docs/framework/interop/default-marshaling-behavior.md)尽量采取适当的措施。 但是，如果需要额外的控制，可以使用 [MarshalAs](xref:System.Runtime.InteropServicxes.MarshalAs) 属性指定要在非托管端上使用的预期类型。 例如，如果要将字符串作为以 null 结尾的 ANSI 字符串发送，可以执行类似于下面的操作：
+需要封送的原因是托管代码与非托管代码中的类型并不相同。 例如，在托管代码中，可指定 `String`。但在非托管环境中，字符串类型可以是 Unicode（“宽型”）、非 Unicode、null 结尾、ASCII 等。默认情况下，P/Invoke 子系统会根据[默认行为](../../docs/framework/interop/default-marshaling-behavior.md)尽量采取适当的措施。 但是，如果需要额外的控制，可以使用 [MarshalAs](xref:System.Runtime.InteropServices.MarshalAsAttribute) 属性指定要在非托管端上使用的预期类型。 例如，如果要将字符串作为以 null 结尾的 ANSI 字符串发送，可以执行类似于下面的操作：
 
 ```csharp
 [DllImport("somenativelibrary.dll")]

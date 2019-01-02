@@ -1,15 +1,13 @@
 ---
-title: dotnet 命令 - .NET Core CLI
+title: dotnet 命令
 description: 了解 dotnet 命令（.NET Core CLI 工具的通用驱动程序）及其用法。
-author: mairaw
-ms.author: mairaw
 ms.date: 06/04/2018
-ms.openlocfilehash: 53e8f8bab1cbaabaa7926aa68197c18843b0b637
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 081f295cc71c3cd46de465efb12f131e7b2d36d9
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45615568"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53170832"
 ---
 # <a name="dotnet-command"></a>dotnet 命令
 
@@ -38,7 +36,7 @@ dotnet [command] [arguments] [--additionalprobingpath] [-d|--diagnostics] [--fx-
 ```
 ---
 
-## <a name="description"></a>描述
+## <a name="description"></a>说明
 
 `dotnet` 是一款管理 .NET 源代码和二进制文件的工具。 它公开执行特定任务的命令，例如 [`dotnet build`](dotnet-build.md) 和 [`dotnet run`](dotnet-run.md)。 每个命令都定义自己的参数。 在每个命令后键入 `--help` 以访问简要帮助文档。
 
