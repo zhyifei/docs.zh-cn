@@ -1,6 +1,6 @@
 ---
-title: F# 教程
-description: 检查某些 F# 编程语言中的代码示例本教程的主要功能。
+title: F# 概览
+description: 通过示例来介绍 F# 语言中的一些主要特性。
 ms.date: 11/06/2018
 ms.openlocfilehash: 32bf892e97b29fcaf426791ef9ada15c9c35b5ae
 ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
