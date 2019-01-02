@@ -2,14 +2,14 @@
 title: 如何管理 .NET Core 1.0 的包依赖项版本
 description: 了解 .NET Core 库和应用的包依赖项版本管理。
 author: cartermp
-ms.author: mairaw
 ms.date: 06/20/2016
-ms.openlocfilehash: 96d154f045303e32de606475e77ab2e6b4f7bcda
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.custom: seodec18
+ms.openlocfilehash: 7d7133ddb8717db1b830e531955454925c31a728
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33211333"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53168606"
 ---
 # <a name="how-to-manage-package-dependency-versions-for-net-core-10"></a>如何管理 .NET Core 1.0 的包依赖项版本
 

@@ -2,14 +2,14 @@
 title: 使用 project.json 减少包依赖项
 description: 创建基于 project.json 的库时减少包依赖项。
 author: cartermp
-ms.author: mairaw
 ms.date: 06/20/2016
-ms.openlocfilehash: 6da7404415e8d485533fc1c9a619cb0706a26aca
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.custom: seodec18
+ms.openlocfilehash: 932344ff40dd32793727fbce7bc0d6cd02592f8b
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 12/10/2018
-ms.locfileid: "53152327"
+ms.locfileid: "53168267"
 ---
 # <a name="reducing-package-dependencies-with-projectjson"></a>使用 project.json 减少包依赖项
 
