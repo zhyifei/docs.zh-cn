@@ -378,7 +378,7 @@ namespace Microsoft.eShopOnContainers.Services.Basket.API.IntegrationEvents.Even
 -   **Azure 服务总线。Brokered Messaging: Duplicate Detection**（中转消息传送：重复检测）  <br/>
     [*https://code.msdn.microsoft.com/Brokered-Messaging-c0acea25*](https://code.msdn.microsoft.com/Brokered-Messaging-c0acea25)
 
--   **Reliability Guide**（可靠性指南）（RabbitMQ 文档） <br/>
+-   **Reliability Guide**（可靠性指南）（RabbitMQ 文档）* <br/>
     [*https://www.rabbitmq.com/reliability.html\#consumer*](https://www.rabbitmq.com/reliability.html#consumer)
 
 -   **参与外部 (DTC) 事务** (MSMQ) <br/>

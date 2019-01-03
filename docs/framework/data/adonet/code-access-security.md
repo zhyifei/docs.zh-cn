@@ -72,7 +72,7 @@ ms.locfileid: "53144866"
 |`Action`|获取或设置安全性操作。 从 <xref:System.Security.Permissions.SecurityAttribute> 继承。|  
 |`AllowBlankPassword`|启用或禁用连接字符串中空白密码。 有效值为 `true`（启用空白密码的使用）和 `false`（禁用空白密码的使用）。 从 <xref:System.Data.Common.DBDataPermissionAttribute> 继承。|  
 |`ConnectionString`|标识允许的连接字符串。 可标识多个连接字符串。 **注意：** 连接字符串中不要包含用户 ID 或密码。 此版本中，不能使用 .NET Framework 配置工具更改连接字符串限制。 <br /><br /> 从 <xref:System.Data.Common.DBDataPermissionAttribute> 继承。|  
-|`KeyRestrictions`|标识允许或不允许的连接字符串参数。 在窗体中标识的连接字符串参数*\<参数名称 > =*。 可指定多个参数，并用分号 (;) 进行分隔。 **注意：** 如果不指定 `KeyRestrictions` 而是将 `KeyRestrictionBehavior` 属性设置为 `AllowOnly` 或 `PreventUsage`，则不允许使用任何其他连接字符串参数。 从 <xref:System.Data.Common.DBDataPermissionAttribute> 继承。|  
+|`KeyRestrictions`|标识允许或不允许的连接字符串参数。 在窗体中标识的连接字符串参数 *\<参数名称>=* 。 可指定多个参数，并用分号 (;) 进行分隔。 **注意：** 如果不指定 `KeyRestrictions` 而是将 `KeyRestrictionBehavior` 属性设置为 `AllowOnly` 或 `PreventUsage`，则不允许使用任何其他连接字符串参数。 从 <xref:System.Data.Common.DBDataPermissionAttribute> 继承。|  
 |`KeyRestrictionBehavior`|将连接字符串参数标识为唯一允许的附加参数 (`AllowOnly`)，或标识不允许的附加参数 (`PreventUsage`)。 默认为 `AllowOnly`。 从 <xref:System.Data.Common.DBDataPermissionAttribute> 继承。|  
 |`TypeID`|在派生类中实现此属性时获取唯一标识符。 从 <xref:System.Attribute> 继承。|  
 |`Unrestricted`|表明是否声明对该资源的无限制权限。 从 <xref:System.Security.Permissions.SecurityAttribute> 继承。|  
