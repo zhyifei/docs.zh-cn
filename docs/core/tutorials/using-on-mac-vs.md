@@ -2,14 +2,14 @@
 title: 借助 Visual Studio for Mac 在 macOS 上开始使用.NET Core
 description: 本主题将指导你使用 Visual Studio for Mac 和 .NET Core 来构建简单的控制台应用程序。
 author: guardrex
-ms.author: mairaw
 ms.date: 06/12/2017
-ms.openlocfilehash: f751e7532e9627de3d3733476f7214654089e468
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.custom: seodec18
+ms.openlocfilehash: 471bdfdaa10b2d66c19177ae36b8bd18ce19e468
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 12/10/2018
-ms.locfileid: "53150792"
+ms.locfileid: "53169568"
 ---
 # <a name="getting-started-with-net-core-on-macos-using-visual-studio-for-mac"></a>借助 Visual Studio for Mac 在 macOS 上开始使用.NET Core
 
@@ -34,25 +34,25 @@ Visual Studio for Mac 提供用于开发 .NET Core 应用程序的功能全面�
 
 1. 选择欢迎屏幕上的“新建项目”。
 
-   ![Visual Studio for Mac 欢迎屏幕上的新建项目按钮](./media/using-on-mac-vs/vsmac1.png)
+   ![Visual Studio for Mac 欢迎屏幕上的新建项目按钮](./media/using-on-mac-vs/visual-studio-mac-new-project.png)
 
 1. 在“新建项目”对话框中，选择“.NET Core”节点下的“应用”。 单击“下一步”，然后选择“控制台应用程序”模板。
 
-   ![新项目模板列表](./media/using-on-mac-vs/vsmac2.png)
+   ![新项目模板列表](./media/using-on-mac-vs/visual-studio-mac-new-dialog.png)
 
 1. 为“项目名称”键入“HelloWorld”。 选择“创建”。
 
-   ![配置新的控制台应用程序对话框](./media/using-on-mac-vs/vsmac3.png)
+   ![配置新的控制台应用程序对话框](./media/using-on-mac-vs/visual-studio-mac-new-options.png)
 
 1. 等待还原项目的依赖项。 该项目包含一个 C# 文件 *Program.cs*，其中包含具有 `Main` 方法的 `Program` 类。 运行应用时，`Console.WriteLine` 语句将“Hello World!” 输出至控制台。
 
-   ![打开 Program.cs 文件的主窗口](./media/using-on-mac-vs/vsmac4.png)
+   ![打开 Program.cs 文件的主窗口](./media/using-on-mac-vs/visual-studio-mac-editor.png)
 
 ## <a name="run-the-application"></a>运行此应用程序
 
 使用 <kbd>F5</kbd> 在调试模式下运行此应用，或使用 <kbd>Ctrl</kbd>+<kbd>F5</kbd> 在发布模式下运行此应用。
 
-![应用程序输出窗格显示 Hello World!](./media/using-on-mac-vs/vsmac5.png)
+![应用程序输出窗格显示 Hello World!](./media/using-on-mac-vs/visual-studio-mac-output.png)
 
 ## <a name="next-step"></a>下一步
 

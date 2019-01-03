@@ -2,15 +2,14 @@
 title: 使用 Windows 兼容性包将代码移植到 .NET Core
 description: 了解有关 Windows 兼容性包以及如何使用它将现有 .NET Framework 代码移植到 .NET Core 的信息
 author: terrajobst
-ms.author: mairaw
 ms.date: 11/13/2017
 ms.custom: seodec18
-ms.openlocfilehash: 42c2c2a0b9b00436fa5c17d3825c720561b3f122
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 0a409c953ce38ed4c2959adaf4de9d3730ce37f4
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 12/10/2018
-ms.locfileid: "53144606"
+ms.locfileid: "53169932"
 ---
 # <a name="use-the-windows-compatibility-pack-to-port-code-to-net-core"></a>使用 Windows 兼容性包将代码移植到 .NET Core
 

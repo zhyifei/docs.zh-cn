@@ -2,15 +2,14 @@
 title: 组织适用于 .NET Framework 和 .NET Core 的项目
 description: 帮助希望针对 .NET Framework 和 .NET Core 并行编译解决方案的项目所有者。
 author: conniey
-ms.author: mairaw
 ms.date: 04/06/2017
 ms.custom: seodec18
-ms.openlocfilehash: cfb3670bda887792389c7cee3f65397e649304d5
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 97673e1ccaeb094bf8c7cb835a84ae9389fac502
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 12/10/2018
-ms.locfileid: "53146922"
+ms.locfileid: "53169126"
 ---
 # <a name="organize-your-project-to-support-both-net-framework-and-net-core"></a>组织项目以支持 .NET Framework 和 .NET Core
 

@@ -2,13 +2,13 @@
 title: 机器学习术语表 - ML.NET
 description: 一个重要的机器学习术语表，可在 ML.NET 中生成自定义模型时使用。
 ms.custom: seodec18
-ms.date: 12/06/2018
-ms.openlocfilehash: 4db28a62fccca2e8bedc9f48485a61b6f4ab1801
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.date: 12/20/2018
+ms.openlocfilehash: ac0671bbecda93c411d3be82c789f53beb10fbca
+ms.sourcegitcommit: 0888d7b24f475c346a3f444de8d83ec1ca7cd234
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53150571"
+ms.lasthandoff: 12/22/2018
+ms.locfileid: "53760388"
 ---
 # <a name="machine-learning-glossary-of-important-terms"></a>机器学习重要术语词汇表
 
@@ -24,8 +24,6 @@ ms.locfileid: "53150571"
 
 [二元分类](#binary-classification)中的一项评估指标，即曲线下面积值，它绘制真阳性率（y 轴）与误报率（x 轴）进行对照。 范围从 0.5（最差）到 1（最佳）。 也称为 ROC 曲线下面积，即，接受者操作特征曲线。 有关详细信息，请参阅 Wikipedia 上的[接受者操作特征](https://en.wikipedia.org/wiki/Receiver_operating_characteristic)一文。
 
-相关 ML.NET API：<xref:Microsoft.ML.Legacy.Models.BinaryClassificationMetrics.Auc?displayProperty=nameWithType>。
-
 ## <a name="binary-classification"></a>二元分类
 
 一个[分类](#classification)事例，其中[标签](#label)仅为两个类中的一个。 有关详细信息，请参阅[机器学习任务](tasks.md)主题的[二元分类](tasks.md#binary-classification)部分。
@@ -37,8 +35,6 @@ ms.locfileid: "53150571"
 ## <a name="coefficient-of-determination"></a>决定系数
 
 [回归](#regression)中的一项评估指标，表明数据与模型的匹配程度。 范围从 0 到 1。 值 0 表示数据是随机的，否则就无法与模型相匹配。 值 1 表示模型与数据完全匹配。 这通常称为 <sup>2</sup>、R<sup>2</sup> 或 r 平方值。
-
-相关 ML.NET API：<xref:Microsoft.ML.Legacy.Models.RegressionMetrics.RSquared?displayProperty=nameWithType>。
 
 ## <a name="feature"></a>功能
 
@@ -52,8 +48,6 @@ ms.locfileid: "53150571"
 
 [分类](#classification)中的一项评估指标，它平衡[精度](#precision)和[撤回](#recall)。
 
-相关 ML.NET API：<xref:Microsoft.ML.Legacy.Models.BinaryClassificationMetrics.F1Score?displayProperty=nameWithType>。
-
 ## <a name="hyperparameter"></a>超参数
 
 机器学习算法的参数。 示例包括在决策林中学习的树的数量，或者梯度下降算法中的步长。 在对模型进行定型之前，先设置超参数的值，并控制查找预测函数参数的过程，例如，决策树中的比较点或线性回归模型中的权重。 有关详细信息，请参阅 Wikipedia 上的[超参数](https://en.wikipedia.org/wiki/Hyperparameter_(machine_learning))一文。
@@ -66,13 +60,9 @@ ms.locfileid: "53150571"
 
 在[分类](#classification)中，描述分类器准确性的评估指标。 对数损失越小，分类器越准确。
 
-相关 ML.NET API：<xref:Microsoft.ML.Legacy.Models.BinaryClassificationMetrics.LogLoss?displayProperty=nameWithType>。
-
 ## <a name="mean-absolute-error-mae"></a>平均绝对误差 (MAE)
 
 [回归](#regression)中的一项评估指标，即所有模型误差的平均值，其中模型误差是预测[标签](#label)值和正确标签值之间的差距。
-
-相关 ML.NET API：<xref:Microsoft.ML.Legacy.Models.RegressionMetrics.L1?displayProperty=nameWithType>。
 
 ## <a name="model"></a>模型
 
@@ -104,8 +94,6 @@ ms.locfileid: "53150571"
 
 在[分类](#classification)中，类的撤回是正确预测为属于该类的项目的数量，除以实际属于该类的项目的总数。
 
-相关 ML.NET API：<xref:Microsoft.ML.Legacy.Models.BinaryClassificationMetrics.NegativeRecall?displayProperty=nameWithType>、<xref:Microsoft.ML.Legacy.Models.BinaryClassificationMetrics.PositiveRecall?displayProperty=nameWithType>。
-
 ## <a name="regression"></a>回归
 
 [监管式机器学习](#supervised-machine-learning)任务，其中输出是一个实际值，例如，双精度值。 示例包括预测股票价格。 有关详细信息，请参阅[机器学习任务](tasks.md)主题的[回归](tasks.md#regression)部分。
@@ -121,8 +109,6 @@ ms.locfileid: "53150571"
 ## <a name="root-of-mean-squared-error-rmse"></a>均方误差根 (RMSE)
 
 [回归](#regression)中的一项评估指标，即误差平方平均值的平方根。
-
-相关 ML.NET API：<xref:Microsoft.ML.Legacy.Models.RegressionMetrics.Rms?displayProperty=nameWithType>。
 
 ## <a name="supervised-machine-learning"></a>监管式机器学习
 

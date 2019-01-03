@@ -7,12 +7,12 @@ ms.date: 08/07/2017
 dev_langs:
 - vb
 ms.custom: vs-dotnet, seodec18
-ms.openlocfilehash: 612de47c4d40d1272eb330a0343302109040f434
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: e743cb496aca101b4594435c86e48951870cf8ef
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 12/10/2018
-ms.locfileid: "53149375"
+ms.locfileid: "53170023"
 ---
 # <a name="build-a-net-core-visual-basic-hello-world-application-in-visual-studio-2017"></a>在 Visual Studio 2017 中生成 .NET Core Visual Basic Hello World 应用程序
 
@@ -30,11 +30,11 @@ ms.locfileid: "53149375"
 
 1. 启动 Visual Studio 2017。 从菜单栏中选择“文件” > “新建” > “项目”。 在“新项目”*对话框中，依次选择“Visual Basic”和“.NET Core”节点。 然后，选择“控制台应用程序(.NET Core)”项目模板。 在“名称”文本框中，键入“HelloWorld”。 选择“确定”按钮。
 
-   ![选择了“控制台应用”的“新建项目”对话框](./media/vb-with-visual-studio/new-project.png)
+   ![选择了“控制台应用”的“新建项目”对话框](./media/vb-with-visual-studio/visual-studio-new-project.png)
    
 1. Visual Studio 使用模板创建项目。 Visual Basic .NET Core 控制台应用程序模板自动定义类 `Program`，其中包含一个需要将 <xref:System.String> 数组用作参数的方法 `Main`。 `Main` 是应用程序入口点，同时也是在应用程序启动时由运行时自动调用的方法。 *args* 数组中包含在应用程序启动时提供的所有命令行自变量。
 
-   ![Visual Studio 和新建的 HelloWorld 项目](./media/vb-with-visual-studio/devenv.png)
+   ![Visual Studio 和新建的 HelloWorld 项目](./media/vb-with-visual-studio/visual-studio-main-window.png)
 
    用于创建简单的“Hello World”应用程序的模板。 它通过调用 <xref:System.Console.WriteLine(System.String)?displayProperty=nameWithType> 方法在控制台窗口中 显示文本字符串“Hello World!”。 现在，选择工具栏上含绿色箭头的“HelloWorld”按钮，可以在调试模式下运行程序。 如果这样操作，控制台窗口只在较短的时间内可见，然后就会关闭。 这是因为在执行 `Main` 方法中的单个语句后，`Main` 方法和应用程序将立即终止。
 
@@ -50,7 +50,7 @@ ms.locfileid: "53149375"
 
 1. 选择工具栏上含绿色箭头的“HelloWorld”按钮，从而运行程序。
 
-   ![控制台窗口，其中显示 Hello World Press any key to continue](./media/with-visual-studio/helloworld1.png)
+   ![控制台窗口，其中显示 Hello World Press any key to continue](./media/with-visual-studio/hello-world-console.png)
 
 1. 按任意键关闭控制台窗口。
 
@@ -64,7 +64,7 @@ ms.locfileid: "53149375"
 
    此代码替换现有的 <xref:System.Console.WriteLine%2A?displayProperty=nameWithType>、<xref:System.Console.Write%2A?displayProperty=nameWithType> 和 <xref:System.Console.ReadKey%2A?displayProperty=nameWithType> 语句。
 
-   ![更新了 Main 方法的 Visual Studio Program 文件](./media/vb-with-visual-studio/codewindow.png)
+   ![更新了 Main 方法的 Visual Studio Program 文件](./media/vb-with-visual-studio/visual-basic-code-window.png)
 
    此代码在控制台中显示“What is your name?”， 然后等待用户输入字符串并按 Enter 键。 它将此字符串存储到名为 `name` 的变量中。 它还会检索 <xref:System.DateTime.Now?displayProperty=nameWithType> 属性的值（其中包含当前的本地时间），并将此值赋给 `currentDate` 变量。 最后，使用[内插字符串](../../visual-basic/programming-guide/language-features/strings/interpolated-strings.md)在控制台窗口中显示这些值。
 
@@ -72,7 +72,7 @@ ms.locfileid: "53149375"
 
 1. 选择工具栏上的绿色箭头、按 F5 或选择“调试” > “启动调试”菜单项，在 Visual Studio 的调试模式下运行程序。 出现提示时，输入名称并按 Enter 键。
 
-   ![控制台窗口，含已修改程序的输出](./media/with-visual-studio/helloworld2.png)
+   ![控制台窗口，含已修改程序的输出](./media/with-visual-studio/hello-world-update.png)
 
 1. 按任意键关闭控制台窗口。
 
