@@ -13,7 +13,7 @@ ms.locfileid: "33556112"
 ---
 # <a name="how-to-implement-a-compositecollection"></a>如何：实现 CompositeCollection
 ## <a name="example"></a>示例  
- 下面的示例演示如何使用 <xref:System.Windows.Data.CompositeCollection> 类将多个集合和项显示为一个列表。 在此示例中，`GreekGods` 是 `GreekGod` 自定义对象的一个 <xref:System.Collections.ObjectModel.ObservableCollection%601>。 定义数据模板让 `GreekGod` 对象和 `GreekHero` 对象分别以金色和青色作为前景色显示。  
+ 下面的示例演示如何使用 <xref:System.Windows.Data.CompositeCollection> 类将多个集合和项显示为一个列表。 在此示例中，`GreekGods` 是 `GreekGod` 自定义对象的一个 <xref:System.Collections.ObjectModel.ObservableCollection%601>。定义了数据模板以便 `GreekGod` 对象和 `GreekHero` 对象分别以金色和青色作为前景色显示。 
   
  [!code-xaml[CompositeCollections#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/CompositeCollections/CS/Window1.xaml#1)]  
   
