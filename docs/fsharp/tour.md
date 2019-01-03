@@ -69,7 +69,7 @@ F# 中有两个主要概念：函数和类型。本文强调的语言特性都�
 
 列表、数组和序列是 F# 库中的三个最主要的集合类型。
 
-[列表](language-reference/lists.md)是 *相同类型元素* 的 *有序* *不可变* 集合。它是一个单向链接列表，这意味着列表的枚举复杂度较低，而随机访问与串联的复杂度较高。请注意，别的语言一般不会用单向列表表示列表结构。
+[列表](language-reference/lists.md)是 *相同类型元素* 的 *有序* *不可变* 集合。它是一个单向链表，这意味着列表的枚举复杂度较低，而随机访问与串联(?)的复杂度较高。请注意，别的语言一般不会用单向列表表示列表结构。
 
 [!code-fsharp[Lists](../../samples/snippets/fsharp/tour.fs#L309-L359)]
 
@@ -94,46 +94,46 @@ F# 支持尾调用优化，这使得递归调用的效率不比循环结构差�
 
 ## <a name="record-and-discriminated-union-types"></a>记录和可区分联合类型
 
-记录与联合类型是 F# 代码中使用的两种基本数据类型，它们通常表示 F# 程序中的数据的最佳方式。  尽管这可以使其类似于类用其他语言，其主要区别之一是它们具有结构相等性语义。  这意味着，它们是"本机"可比较和相等性非常简单-只需检查是否等于另一个。
+记录与联合类型是 F# 代码中使用的两种基本数据类型，它们通常是表示 F# 程序中数据的最佳方式。尽管它们很像面向对象语言中的类，但它们具有结构等价的语义，这是它们间的根本性差异。这意味着它们天生就可比较。要检查它们是否相等非常简单——只需检查其中一个是否等于另一个。
 
-[记录](language-reference/records.md)是与可选成员 （如方法） 的命名值的聚合。  如果您熟悉 C# 或 Java，然后这些感觉类似于 Poco 或 Pojo-只需使用结构相等性和更低的方案。
+[记录](language-reference/records.md)是可能包含成员的命名值(named values, with optional members)（如方法）的聚合。如果您熟悉 C# 或 Java，您会发现记录类似于 Poco 或 Pojo - 只是比它们多了结构相等(structual equality)，而且更好使用罢了:)。
 
 [!code-fsharp[Records](../../samples/snippets/fsharp/tour.fs#L507-L559)]
 
-截至 F# 4.1，您还可以表示记录作为`struct`s。  这通过`[<Struct>]`属性：
+在 F# 4.1 中，您还可以通过使用`[<Struct>]`属性将记录当作`struct`来表示。
 
 [!code-fsharp[Records](../../samples/snippets/fsharp/tour.fs#L561-L568)]
 
-[可区分联合 (Du)](language-reference/discriminated-unions.md)是可能的命名窗体或事例数的值。  存储类型中的数据可以是多个非重复值之一。
+在一个[可区分联合 (Discrimitated Unions)](language-reference/discriminated-unions.md)内可以定义多种不同的数据类型。以这种类型存储的数据的类型可以是不同的类型之一。
 
 [!code-fsharp[Unions](../../samples/snippets/fsharp/tour.fs#L575-L631)]
 
-你还可以使用作为 Du*单用例的可区分联合*，以帮助与域建模基元类型。  通常情况下，字符串和其他基元类型用于表示某件事情，并因此提供了特定的含义。  但是，使用仅基元数据的表示形式可能会导致错误地分配不正确的值 ！  表示每种类型的信息作为一个不同的单用例联合可以强制执行在此方案中的正确性。
+你还可以将 DU 当作 *单用例可区分联合* ，方便在基元类型上建模。通常情况下，字符串和其他基元类型用于表示特定的含义。但是，仅使用基元数据的表示形式，你可能会不小心向变量赋了不正确的值！将每种类型的信息表示为不同的单用例联合可以保证在此情景中赋值的正确性。
 
 [!code-fsharp[Unions](../../samples/snippets/fsharp/tour.fs#L633-L654)]
 
-如上面的示例所示，若要获取的基础值中单用例的可区分联合，您必须显式 unwrap。
+如上面的示例所示，若要获取单例 DU 的基值，您必须显式 unwrap。
 
-此外，Du 还支持递归定义，从而可以轻松地表示树和本质上是递归数据。  例如，下面是如何可以表示具有的二进制搜索树`exists`和`insert`函数。
+此外，可区分联合类型还支持递归定义，从而可以轻松地表示树和其它递归定义的数据。比如，下面是二叉搜索树`exists`和`insert`函数的例子。
 
 [!code-fsharp[Unions](../../samples/snippets/fsharp/tour.fs#L656-L683)]
 
-Du 可以表示的树中的数据类型的递归结构，因为运行该递归结构非常简单，保证正确性。  它还支持在模式匹配，如下所示。
+DU 可以表示的树中的数据类型的递归结构，因为该递归结构非常简单直接，还能保证正确性。在模式匹配中我们也能用到它，如下所示。
 
-此外，可以表示为 Du`struct`与`[<Struct>]`属性：
+此外，你可以利用`[<Struct>]`属性将DU表示为 `struct`：
 
 [!code-fsharp[Unions](../../samples/snippets/fsharp/tour.fs#L685-L696)]
 
-但是，有以下两个执行此操作时，需要注意的事项：
+但是，在你这么做的时候，时刻记住：
 
-1. 结构 DU 不能以递归方式定义。
-2. 结构 DU 必须具有其情况下的每个唯一的名称。
+1. struct DU 不能以递归方式定义。
+2. struct DU 必须具有唯一的标识符。
 
-未能遵循上述将导致编译错误。
+否则会编译错误XD。
 
 ## <a name="pattern-matching"></a>模式匹配
 
-[模式匹配](language-reference/pattern-matching.md)是 F# 语言功能，从而使 F# 类型上操作的准确性。  在上述示例中，您可能已经注意到很多`match x with ...`语法。  该构造允许编译器可以理解的数据类型，您不必考虑所有可能的情况下，使用通过通常所说的数据类型作为详尽模式匹配时的"形状"。  这是为了确保准确性，功能非常强大，可巧妙地用于"提升"通常是运行时需考虑到编译时什么。
+[模式匹配](language-reference/pattern-matching.md)是 F# 语言特性，从而使 F# 在类型上的操作更加准确。  在上述示例中，您可能已经碰到了很多像`match x with ...`这样的语句。这样的语句能够让编译器通过穷举模式匹配，强制你考虑所有可能出现的情况。这样，你可以将一般来说要在运行时考虑的问题提前在编译时解决，从而提高代码的鲁棒性。
 
 [!code-fsharp[PatternMatching](../../samples/snippets/fsharp/tour.fs#L705-L742)]
 
