@@ -309,7 +309,7 @@ public class Address
 
 ## <a name="additional-resources"></a>其他资源
 
-- **Martin Fowler。ValueObject 模式 \**
+- **Martin Fowler。ValueObject 模式** \
   [*https://martinfowler.com/bliki/ValueObject.html*](https://martinfowler.com/bliki/ValueObject.html)
 
 - **Eric Evans。Domain-Driven Design: Tackling Complexity in the Heart of Software.**（域驱动设计：软件核心复杂性应对之道。） （书；包括值对象的讨论）\
