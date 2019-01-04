@@ -3,13 +3,13 @@ title: Linux 上 .NET Core 的先决条件
 description: 支持的 Linux 版本和 .NET Core 依赖项，用于在 Linux 计算机上开发、部署和运行 .NET Core 应用程序。
 author: thraka
 ms.author: adegeo
-ms.date: 12/03/2018
-ms.openlocfilehash: e250158d10c6a03535f4e693e74954747f860a3c
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.date: 12/14/2018
+ms.openlocfilehash: 7a2b0b3af97500ab0988e5de7a44713a8c05ccb9
+ms.sourcegitcommit: 3d0c29b878f00caec288dfecb3a5c959de5aa629
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53148315"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53656045"
 ---
 # <a name="prerequisites-for-net-core-on-linux"></a>Linux 上 .NET Core 的先决条件
 
@@ -60,6 +60,34 @@ ms.locfileid: "53148315"
 * openSUSE 42.3 或更高版本 (.NET Core 1.1)
 
 有关支持 .NET Core 1.x 的操作系统、不支持的 OS 版本和生命周期策略链接的完整列表，请参阅 [.NET Core 1.x - 支持的 OS 版本](https://github.com/dotnet/core/blob/master/release-notes/1.0/1.0-supported-os.md)。
+
+# <a name="net-core-30-preview-1tabnetcore30"></a>[.NET Core 3.0 预览版 1](#tab/netcore30)
+
+.NET Core 3.0 预览版 1 将 Linux 视为单一操作系统。 支持的 Linux 分发都对应有一个 Linux 内部版本（根据芯片体系结构）。 
+
+有关下载链接和详细信息，请参阅 [.NET Core 3.0 下载](https://dotnet.microsoft.com/download/dotnet-core/3.0)。
+
+以下 Linux 发行版本/版本支持 .NET Core 3.0 预览版 1。 
+
+(OS)                            | 版本               | 体系结构  
+------------------------------|-----------------------|----------------
+Red Hat Enterprise Linux      | 6                     | X64
+Red Hat Enterprise Linux<br>CentOS<br>Oracle Linux  | 7                     | X64
+Fedora                        | 28                    | X64
+Debian                        | 9                     | x64、ARM32\*ARM64\*
+Ubuntu                        | 16.04+、18.04+        | x64、ARM32\*ARM64\*
+Linux Mint                    | 18                    | X64
+openSUSE                      | 42.3+                 | X64
+SUSE Enterprise Linux (SLES)  | 12 SP2+               | X64
+Alpine Linux                  | 3.8+                  | x64、ARM64
+
+\* ARM32 和 ARM64 支持 Debian 9 和 Ubuntu 16.04 及以上版本。 ARM 芯片不支持这些发行版本的早期版本。
+
+有关 .NET Core 3.0 支持的操作系统、发行版本和版本、不支持的 OS 版本和生命周期策略链接的完整列表，请参阅 [.NET Core 3.0 支持的 OS 版本](https://github.com/dotnet/core/blob/master/release-notes/3.0/3.0-supported-os.md)。
+
+有关如何在 ARM64 上安装 .NET Core 3.0 的详细信息，请参阅[在 Linux ARM64 上安装 .NET Core 3.0](https://gist.github.com/richlander/467813274cea8abc624553ee72b28213)。
+
+
 
 ---
 

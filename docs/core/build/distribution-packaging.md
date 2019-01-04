@@ -2,14 +2,14 @@
 title: .NET Core 分发打包
 description: 了解如何为 .NET Core 打包、命名并进行版本控制以进行分发。
 author: bleroy
-ms.author: mairaw
 ms.date: 06/28/2017
-ms.openlocfilehash: 41e8729d3058c2e3e1ea1cab9a8f28b3062bb93c
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.custom: seodec18
+ms.openlocfilehash: be5767351ad1cdac15c73f718f67a0d120cf65b0
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 12/10/2018
-ms.locfileid: "53145642"
+ms.locfileid: "53170413"
 ---
 # <a name="net-core-distribution-packaging"></a>.NET Core 分发打包
 
@@ -68,14 +68,14 @@ ms.locfileid: "53145642"
 
 .NET Core 版本控制基于运行时组件 `[major].[minor]` 版本号。
 SDK 版本采用同样的 `[major].[minor]`，并有一个独立的 `[patch]`，它为 SDK 合并了功能和修补语义。
-例如：SDK 版本 2.2.302 是支持 2.2 运行时的 SDK 的第 3 个功能版本的第 2 个修补版本。
+例如:SDK 版本 2.2.302 是支持 2.2 运行时的 SDK 的第 3 个功能版本的第 2 个补丁版本。
 
 一些包在自己的名称中就包含一部分版本号。 这能帮助最终用户安装特定版本。
 版本名称中不包含版本的剩余部分。 这允许 OS 包管理器更新这些包（例如，自动安装安全修补程序）。
 
 下表显示推荐的包。
 
-| name                                    | 示例                | 用例：安装...           | 包含           | 依赖项                                   | 版本            |
+| name                                    | 示例                | 用例：安装 ...           | 包含           | 依赖项                                   | 版本            |
 |-----------------------------------------|------------------------|---------------------------------|--------------------|------------------------------------------------|--------------------|
 | dotnet-sdk-[major]                      | dotnet-sdk-2           | 运行时主版本的最新 SDK    |                    | dotnet-sdk-[major].[latestminor]               | \<sdk version>     |
 | dotnet-sdk-[major].[minor]              | dotnet-sdk-2.1         | 特定运行时的最新 SDK |                    | dotnet-sdk-[major].[minor].[latest sdk feat]xx | \<sdk version>     |

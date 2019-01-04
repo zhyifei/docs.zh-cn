@@ -1,16 +1,15 @@
 ---
-title: WCF svcutil 工具概述 - .NET Core
+title: WCF svcutil 工具概述
 description: Microsoft WCF dotnet-svcutil 工具概述，该工具添加了 .NET Core 和 ASP.NET Core 项目的功能，类似于 .NET Framework 项目的 WCF svcutil 工具。
 author: mlacouture
-ms.author: jralexander
 ms.date: 08/20/2018
 ms.custom: seodec18
-ms.openlocfilehash: 7372d88a9c1d77ec0b77e9d82fe5b24ebc357a74
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: e42ec0d4072c56456c824a814f1b383ea70a9307
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53126011"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53237254"
 ---
 # <a name="wcf-dotnet-svcutil-tool-for-net-core"></a>.NET Core 的 WCF dotnet-svcutil 工具
 
@@ -100,7 +99,7 @@ static void Main(string[] args)
 ```console
 dotnet run
 ```
-你将看到以下输出：“Hello dotnet-svcutil!”
+您应看到以下输出：“Hello dotnet-svcutil!”
 
 有关 `dotnet-svcutil` 工具参数的详细说明，请调用传递帮助参数的工具，如下所示：
 

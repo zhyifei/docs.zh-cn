@@ -1,17 +1,18 @@
 ---
-title: 使用 dotnet test 和 xUnit 在 .NET Core 中进行 Visual Basic 单元测试
+title: 使用 dotnet test 和 xUnit 对 .NET Core 中的 Visual Basic 进行单元测试
 description: 通过使用 dotnet test 和 xUnit 分步生成 Visual Basic 示例解决方案的交互体验，了解 .NET Core 中的单元测试概念。
 author: billwagner
 ms.author: wiwagn
 ms.date: 09/01/2017
 dev_langs:
 - vb
-ms.openlocfilehash: 7a9aef47b323c0b3cf8bceac752186a65ab59acc
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.custom: seodec18
+ms.openlocfilehash: 47964fa27ca3b8cbc509467a9b21f942bfc7cc75
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33214021"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53239951"
 ---
 # <a name="unit-testing-visual-basic-net-core-libraries-using-dotnet-test-and-xunit"></a>使用 dotnet test 和 xUnit 进行 Visual Basic .NET Core 库单元测试
 
@@ -128,7 +129,7 @@ End Function
 
 ## <a name="adding-more-features"></a>添加更多功能
 
-你已经通过了一个测试，现在可以编写更多测试。 质数有其他几种简单情况：0，-1。 可以将这些情况添加为具有 `<Fact>` 属性的新测试，但这很快就会变得枯燥乏味。 还有其他 xUnit 属性，可使你编写类似测试套件。  `<Theory>` 属性表示执行相同代码，但具有不同输入参数一系列测试。 可以使用 `<InlineData>` 属性来指定这些输入的值。
+你已经通过了一个测试，现在可以编写更多测试。 质数有其他几种简单情况：0、-1。 可以将这些情况添加为具有 `<Fact>` 属性的新测试，但这很快就会变得枯燥乏味。 还有其他 xUnit 属性，可使你编写类似测试套件。  `<Theory>` 属性表示执行相同代码，但具有不同输入参数一系列测试。 可以使用 `<InlineData>` 属性来指定这些输入的值。
 
 可以不使用这两个属性创建新测试，而用来创建单个索引。 此索引是测试多个小于 2（即最小的质数）的值的方法：
 

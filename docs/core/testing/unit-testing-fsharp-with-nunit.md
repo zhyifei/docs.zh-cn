@@ -1,16 +1,17 @@
 ---
-title: 使用 dotnet test 和 NUnit 在 .NET Core 中进行 F# 库的单元测试
+title: 使用 dotnet test 和 NUnit 对 .NET Core 中的 F# 进行单元测试
 description: 使用 dotnet test 和 NUnit 分步构建一个示例解决方案，在此交互式体验中学习 .NET Core 中的 F# 单元测试概念。
 author: rprouse
 ms.date: 10/04/2018
 dev_langs:
 - fsharp
-ms.openlocfilehash: f8088dadbe92c10e2aad9cd5c3ce289612bd1a28
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.custom: seodec18
+ms.openlocfilehash: e919da8910129be027ff7e2dbed8c4564738e023
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53131503"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53241757"
 ---
 # <a name="unit-testing-f-libraries-in-net-core-using-dotnet-test-and-nunit"></a>使用 dotnet test 和 NUnit 在 .NET Core 中进行 F# 库的单元测试
 

@@ -8,12 +8,12 @@ dev_langs:
 - csharp
 - vb
 ms.custom: vs-dotnet, seodec18
-ms.openlocfilehash: 424933f4d221492b3127d0b847249821fee86b10
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: ccf8d33b1017c3def137de7daec4373bfeec6305
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 12/10/2018
-ms.locfileid: "53147315"
+ms.locfileid: "53168880"
 ---
 # <a name="consuming-a-net-standard-library-in-visual-studio-2017"></a>在 Visual Studio 2017 中使用 .NET Standard 库
 
@@ -32,19 +32,19 @@ ms.locfileid: "53147315"
 
 1. 在“添加新项目”对话框中，展开“Visual C#”节点，再依次选择“.NET Core”节点和“控制台应用程序(.NET Core)”项目模板。 在“名称”文本框中，键入“ShowCase”，然后选择“确定”按钮。
 
-   ![“添加新项目”对话框](./media/consuming-library-with-visual-studio/addnewproject.png)
+   ![Visual Studio“添加新项目”对话框 - C#](./media/consuming-library-with-visual-studio/add-new-project-dialog.png)
 
-1. 在“解决方案资源管理器”****中，右键单击“ShowCase”**** 项目，在上下文菜单中选择“设为启动项目”。 
+1. 在“解决方案资源管理器”****中，右键单击“ShowCase”**** 项目，在上下文菜单中选择“设为启动项目”。
 
-   ![ShowCase 上下文菜单](./media/consuming-library-with-visual-studio/setstartupproject.png)
+   ![Visual Studio 中用于设置启动项目的项目上下文菜单 - C#](./media/consuming-library-with-visual-studio/set-startup-project-context-menu.png)
 
 1. 项目一开始无权访问类库。 若要允许项目调用类库中的方法，可以创建对该类库的引用。 在“解决方案资源管理器”中，右键单击 `ShowCase` 项目的“依赖项”节点，并选择“添加引用”。
 
-   ![ShowCase 依赖项上下文菜单](./media/consuming-library-with-visual-studio/addreference.png)
+   ![Visual Studio 项目添加引用上下文菜单 - C#](./media/consuming-library-with-visual-studio/add-reference-context-menu.png)
 
 1. 在“引用管理器”对话框中，选择类库项目“StringLibrary”，然后选择“确定”按钮。
 
-   ![引用管理器](./media/consuming-library-with-visual-studio/referencemanager.png)
+   ![Visual Studio“管理引用”对话框 - C#](./media/consuming-library-with-visual-studio/manage-project-references.png)
 
 1. 在“Program.cs”文件的代码窗口中，将所有代码替换为以下代码：
 
@@ -56,25 +56,25 @@ ms.locfileid: "53147315"
 
 1. 必要时，将工具栏更改为编译 `ShowCase` 项目的“调试”版本。 选择“ShowCase”按钮上的绿色箭头，编译并运行程序。
 
-   ![图像](./media/consuming-library-with-visual-studio/toolbar.png)
+   ![Visual Studio 中显示“调试”按钮的项目工具栏 - C#](./media/consuming-library-with-visual-studio/visual-studio-project-toolbar.png)
 # <a name="visual-basictabvb"></a>[Visual Basic](#tab/vb)
 1. 打开在[使用 Visual Studio 2017 生成 Visual Basic .NET Core 类库](vb-library-with-visual-studio.md)主题中创建的 `ClassLibraryProjects` 解决方案。 在“解决方案资源管理器”中，右键单击“ClassLibraryProjects”解决方案，然后从上下文菜单依次选择“添加” > “新项目”。
 
 1. 在“添加新项目”对话框中，展开“Visual Basic”节点，再依次选择“.NET Core”节点和“控制台应用程序(.NET Core)”项目模板。 在“名称”文本框中，键入“ShowCase”，然后选择“确定”按钮。
 
-   ![“添加新项目”对话框](./media/consuming-library-with-visual-studio/vb-addnewproject.png)
+   ![Visual Studio“添加新项目”对话框 - Visual Basic](./media/consuming-library-with-visual-studio/add-new-vb-project-dialog.png)
 
 1. 在“解决方案资源管理器”****中，右键单击“ShowCase”**** 项目，在上下文菜单中选择“设为启动项目”。 
 
-   ![ShowCase 上下文菜单](./media/consuming-library-with-visual-studio/setstartupproject.png)
+   ![Visual Studio 中用于设置启动项目的项目上下文菜单 - Visual Basic](./media/consuming-library-with-visual-studio/set-startup-project-context-menu.png)
 
 1. 项目一开始无权访问类库。 若要允许项目调用类库中的方法，可以创建对该类库的引用。 在“解决方案资源管理器”中，右键单击 `ShowCase` 项目的“依赖项”节点，并选择“添加引用”。
 
-   ![ShowCase 依赖项上下文菜单](./media/consuming-library-with-visual-studio/addreference.png)
+   ![Visual Studio 项目添加引用上下文菜单 - Visual Basic](./media/consuming-library-with-visual-studio/add-reference-context-menu.png)
 
 1. 在“引用管理器”对话框中，选择类库项目“StringLibrary”，然后选择“确定”按钮。
 
-   ![引用管理器](./media/consuming-library-with-visual-studio/referencemanager.png)
+   ![Visual Studio“管理引用”对话框 - Visual Basic](./media/consuming-library-with-visual-studio/manage-project-references.png)
 
 1. 在“Program.vb”文件的代码窗口中，将所有代码替换为以下代码：
 
@@ -86,7 +86,7 @@ ms.locfileid: "53147315"
 
 1. 必要时，将工具栏更改为编译 `ShowCase` 项目的“调试”版本。 选择“ShowCase”按钮上的绿色箭头，编译并运行程序。
 
-   ![图像](./media/consuming-library-with-visual-studio/toolbar.png)
+   ![在工具栏上调试 - Visual Basic](./media/consuming-library-with-visual-studio/visual-studio-project-toolbar.png)
 ---
 
 可以按照[使用 Visual Studio 2017 调试 Hello World 应用程序](debugging-with-visual-studio.md)和[使用 Visual Studio 2017 发布 Hello World 应用程序](publishing-with-visual-studio.md)中的步骤操作，调试并发布使用此库的应用程序。

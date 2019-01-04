@@ -1,15 +1,16 @@
 ---
-title: 异步编程
+title: 异步编程 - C#
 description: 了解 .NET Core 提供的 C# 语言级别异步编程模式。
 author: cartermp
 ms.date: 06/20/2016
 ms.assetid: b878c34c-a78f-419e-a594-a2b44fa521a4
-ms.openlocfilehash: 12ecadb3fa3c6760af4884626f68b47ead2754d5
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.custom: seodec18
+ms.openlocfilehash: 231cbbde7c908c3d63d3ff0f59cf3d797e8b9543
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53126492"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53612122"
 ---
 # <a name="asynchronous-programming"></a>异步编程
 
@@ -264,5 +265,5 @@ LINQ 中的 Lambda 表达式使用延迟执行，这意味着代码可能在你�
 ## <a name="other-resources"></a>其他资源
 
 * [深入了解异步](../standard/async-in-depth.md)提供了关于任务如何工作的详细信息。
-* [使用 Async 和 Await 的异步编程 (C#)](../csharp/programming-guide/concepts/async/index.md)
+* [使用 Async 和 Await 的异步编程 (C#)](./programming-guide/concepts/async/index.md)
 * 由 Lucian Wischik 所著的 [Six Essential Tips for Async](https://channel9.msdn.com/Series/Three-Essential-Tips-for-Async)（关于异步的六个要点）是有关异步编程的绝佳资源

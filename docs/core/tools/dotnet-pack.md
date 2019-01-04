@@ -1,13 +1,13 @@
 ---
-title: dotnet pack 命令 - .NET Core CLI
+title: dotnet pack 命令
 description: dotnet pack 命令可为 .NET Core 项目创建 NuGet 包。
 ms.date: 12/04/2018
-ms.openlocfilehash: 77770e715ef11595e8c95bb40be960138cd7ec61
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: ca88dd4c7dfd45c9295043cd2352ba6bdf5464af
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 12/10/2018
-ms.locfileid: "53149596"
+ms.locfileid: "53170088"
 ---
 # <a name="dotnet-pack"></a>dotnet 包
 

@@ -7,12 +7,12 @@ ms.date: 08/07/2017
 dev_langs:
 - vb
 ms.custom: vs-dotnet, seodec18
-ms.openlocfilehash: fa1387eba60b4bf181df254e00bb3fdbe55bdaf6
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 04d866c0615d299fe3df72553bafce2514a1c121
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 12/10/2018
-ms.locfileid: "53144697"
+ms.locfileid: "53168827"
 ---
 # <a name="build-a-class-library-with-visual-basic-and-the-net-core-sdk-in-visual-studio-2017"></a>在 Visual Studio 2017 中使用 Visual Basic 和 .NET Core SDK 生成类库
 
@@ -31,7 +31,7 @@ ms.locfileid: "53144697"
 
 1. 在“新建项目”对话框中，展开“其他项目类型”节点，然后选择“Visual Studio 解决方案”。 将解决方案命名为“ClassLibraryProjects”，然后选择“确定”按钮。
 
-   ![“新建项目”对话框](./media/library-with-visual-studio/newproject.png)
+   ![Visual Studio“新建测试项目”对话框](./media/library-with-visual-studio/new-project-dialog.png)
 
 ## <a name="creating-the-class-library-project"></a>创建类库项目
 
@@ -41,15 +41,15 @@ ms.locfileid: "53144697"
 
 1. 在“添加新项目”对话框中，展开“Visual Basic”节点，并依次选择“.NET Standard”节点和“类库(.NET Standard)”项目模板。 在“名称”文本框中，输入项目名称“StringLibrary”。 选择“确定”，创建类库项目。
 
-   ![“添加新项目”对话框](./media/vb-library-with-visual-studio/libproject.png)
+   ![Visual Studio“添加新的库项目”对话框](./media/vb-library-with-visual-studio/create-new-library-project.png)
 
    然后，代码窗口在 Visual Studio 开发环境中打开。 
  
-   ![显示默认类库模板代码的 Visual Studio 应用程序窗口](./media/vb-library-with-visual-studio/stringlibrary.png)
+   ![显示默认类库模板代码的 Visual Studio 应用程序窗口](./media/vb-library-with-visual-studio/visual-studio-library.png)
 
 1. 请检查以确保库定目标到 .NET Standard 的正确版本。 右键单击“解决方案资源管理器”窗口中的库项目，再选择“属性”。 “目标框架”文本框显示定目标到 .NET Standard 2.0。
 
-   ![类库的项目属性](./media/library-with-visual-studio/properties.png)
+   ![类库的项目属性](./media/library-with-visual-studio/library-project-properties.png)
 
 1. 另外，在“属性”对话框中，清除“根命名空间”文本框中的文本。 对于每个项目，Visual Basic 会自动创建与项目名称对应的命名空间，在源代码文件中定义的任何命名空间都是相应命名空间的父级。 我们要使用 [`namespace`](../../visual-basic/language-reference/statements/namespace-statement.md) 关键字来定义顶级命名空间。
   
@@ -61,7 +61,7 @@ ms.locfileid: "53144697"
 
 1. 在菜单栏中，选择“生成” > “生成解决方案”。 此项目的编译应该没有错误。
 
-   ![显示生成成功的输出窗格](./media/library-with-visual-studio/buildsucceeds.png)
+   ![显示生成成功的输出窗格](./media/library-with-visual-studio/output-pane-successful-build.png)
 
 
 

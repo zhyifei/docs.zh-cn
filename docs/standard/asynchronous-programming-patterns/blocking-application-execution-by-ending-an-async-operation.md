@@ -13,21 +13,21 @@ ms.author: ronpet
 dev_langs:
 - csharp
 - vb
-ms.openlocfilehash: db8255e28818cc4def69e6dcd9da06eb7f9251a0
-ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
+ms.openlocfilehash: 782cb614d74b331cef8ab9f28924104ed15a8a38
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49087136"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53611537"
 ---
 # <a name="blocking-application-execution-by-ending-an-async-operation"></a>通过结束异步操作来阻止应用程序执行
 如果应用无法在等待异步操作结果期间继续执行其他工作，必须阻止应用一直到操作完成。 请使用下列方法之一，在应用等待异步操作完成期间阻止应用的主线程：  
   
--   调用异步操作的 EndOperationName****** 方法。 本主题介绍的就是这种方法。  
+-   调用异步操作的 EndOperationName 方法。 本主题介绍的就是这种方法。  
   
 -   使用异步操作的 BeginOperationName****** 方法返回的 <xref:System.IAsyncResult> 的 <xref:System.IAsyncResult.AsyncWaitHandle%2A> 属性。 有关展示这种方法的示例，请参阅[使用 AsyncWaitHandle 阻止应用执行](../../../docs/standard/asynchronous-programming-patterns/blocking-application-execution-using-an-asyncwaithandle.md)。  
   
- 在异步操作完成前使用 EndOperationName****** 方法阻止的应用，通常会调用 BeginOperationName****** 方法，执行任何不需要等待操作结果也可以执行的工作，并调用 EndOperationName******。  
+ 在异步操作完成前使用 EndOperationName 方法阻止的应用程序，通常会调用 BeginOperationName 方法，执行任何不需要等待操作结果也可以执行的工作，并调用 EndOperationName*。  
   
 ## <a name="example"></a>示例  
  下面的代码示例展示了如何使用 <xref:System.Net.Dns> 类中的异步方法，检索用户指定计算机的域名系统信息。 请注意，对 <xref:System.Net.Dns.BeginGetHostByName%2A>`requestCallback` 和 `stateObject` 参数传递的是 `null`（Visual Basic 中的 `Nothing`），因为使用这种方法时这些是可选参数。  

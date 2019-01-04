@@ -1,5 +1,5 @@
 ---
-title: 如何：确定安装了哪些 .NET Framework 版本
+title: 如何：确定已安装的 .NET Framework 版本
 ms.date: 04/10/2018
 dev_langs:
 - csharp
@@ -11,14 +11,14 @@ helpviewer_keywords:
 ms.assetid: 40a67826-e4df-4f59-a651-d9eb0fdc755d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6b77775fdc7f552e6433e6364f153c5bde32d9e0
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 890ce1e9a23d57121cd714252444e5ff1caa6b19
+ms.sourcegitcommit: 49af435bfdd41faf26d38c20c5b0cc07e87bea60
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53151039"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53396872"
 ---
-# <a name="how-to-determine-which-net-framework-versions-are-installed"></a>如何：确定安装了哪些 .NET Framework 版本
+# <a name="how-to-determine-which-net-framework-versions-are-installed"></a>如何：确定已安装的 .NET Framework 版本
 
 用户可在他们的计算机上安装和运行 .NET Framework 的多个版本。 当你开发或部署应用时，你可能需要知道用户的计算机上安装了哪些 .NET Framework 版本。 请注意，.NET Framework 由两个采用不同版本的主要组件构成：  
   
@@ -39,7 +39,7 @@ ms.locfileid: "53151039"
  [使用 Clrver 工具](#clr_a)  
  [使用代码查询 System.Environment 类](#clr_b)  
   
- 有关检测每个版本 .NET Framework 所安装更新的信息，请参阅[如何：确定安装了哪些 .NET Framework 更新](~/docs/framework/migration-guide/how-to-determine-which-net-framework-updates-are-installed.md)。 若要了解如何安装 .NET Framework，请参阅[安装面向开发人员的 .NET Framework](../../../docs/framework/install/guide-for-developers.md)。  
+ 有关检测安装的每个 .NET Framework 版本的更新的信息，请参阅[如何：确定已安装的 .NET Framework 更新](~/docs/framework/migration-guide/how-to-determine-which-net-framework-updates-are-installed.md)。 若要了解如何安装 .NET Framework，请参阅[安装面向开发人员的 .NET Framework](../../../docs/framework/install/guide-for-developers.md)。  
   
 <a name="net_a"></a>   
 ## <a name="to-find-net-framework-versions-by-viewing-the-registry-net-framework-1-4"></a>通过查看注册表来查找 .NET Framework 版本 (.NET Framework 1-4)  
@@ -95,9 +95,9 @@ ms.locfileid: "53151039"
     |仅在 Windows 10 系统上：393295<br /><br /> 在所有其他操作系统版本上：393297|[!INCLUDE[net_v46](../../../includes/net-v46-md.md)]|
     |仅在 Windows 10 11 月更新系统上：394254<br /><br /> 在所有其他操作系统版本上：394271|[!INCLUDE[net_v461](../../../includes/net-v461-md.md)]|
     |在 Windows 10 周年更新和 Windows Server 2016 上：394802<br /><br /> 在所有其他操作系统版本上：394806|[!INCLUDE[net_v462](../../../includes/net-v462-md.md)]| 
-    |仅在 Windows 10 创意者更新上：460798<br/><br/> 在所有其他操作系统版本上： 460805 | .NET Framework 4.7 |
+    |仅在 Windows 10 创意者更新上：460798<br/><br/> 在所有其他操作系统版本上：460805 | .NET Framework 4.7 |
     |仅在 Windows 10 秋季创意者更新上：461308<br/><br/> 在所有其他操作系统版本上：461310 | .NET Framework 4.7.1 |
-    |仅 Windows 10 2018 年 10 月更新上：461814<br/><br/> 仅 Windows 10 2018 年 4 月更新中：461808<br/><br/> 在所有其他操作系统版本上：461814| .NET Framework 4.7.2 |
+    |仅 Windows 10 2018 年 4 月更新中：461808<br/><br/> 在所有其他操作系统版本（包括 Windows 10 2018 年 10 月更新）上：461814| .NET Framework 4.7.2 |
     
 <a name="net_c"></a> 
 ## <a name="to-find-net-framework-versions-by-querying-the-registry-in-code-net-framework-1-4"></a>通过在代码中查询注册表来查找 .NET Framework 版本 (.NET Framework 1-4)
@@ -230,6 +230,6 @@ ms.locfileid: "53151039"
 
 ## <a name="see-also"></a>请参阅
 
-[如何：确定安装了哪些 .NET Framework 更新](~/docs/framework/migration-guide/how-to-determine-which-net-framework-updates-are-installed.md)  
+[如何：确定已安装的 .NET Framework 更新](~/docs/framework/migration-guide/how-to-determine-which-net-framework-updates-are-installed.md)  
 [安装面向开发者的 .NET Framework](../../../docs/framework/install/guide-for-developers.md)  
 [版本和依赖关系](~/docs/framework/migration-guide/versions-and-dependencies.md)  

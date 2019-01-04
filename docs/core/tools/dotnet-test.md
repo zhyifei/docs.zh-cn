@@ -1,15 +1,13 @@
 ---
-title: dotnet test 命令 - .NET Core CLI
+title: dotnet test 命令
 description: dotnet test 命令可用于在给定项目中执行单元测试。
-author: mairaw
-ms.author: mairaw
 ms.date: 05/29/2018
-ms.openlocfilehash: 73b1d832b855798dd053187bbb24e8fb989fedf1
-ms.sourcegitcommit: 3b1cb8467bd73dee854b604e306c0e7e3882d91a
+ms.openlocfilehash: 2cfe96b24e5f46ae679c970a1df028d38ebf6037
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "46696451"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53170833"
 ---
 # <a name="dotnet-test"></a>dotnet test
 
@@ -50,7 +48,7 @@ dotnet test [-h|--help]
 
 ---
 
-## <a name="description"></a>描述
+## <a name="description"></a>说明
 
 `dotnet test` 命令用于执行给定项目中的单元测试。 `dotnet test` 命令启动为项目指定的测试运行程序控制台应用程序。 测试运行程序执行为单元测试框架（例如 MSTest、NUnit 或 xUnit）定义的测试，并报告每个测试是否成功。 如果所有测试均成功，测试运行程序将返回 0 作为退出代码；否则将返回 1。 测试运行程序和单元测试库打包为 NuGet 包并还原为该项目的普通依赖项。
 
@@ -138,7 +136,7 @@ dotnet test [-h|--help]
 
 示例：`dotnet test -- MSTest.DeploymentEnabled=false MSTest.MapInconclusiveToFailed=True`
 
-有关 RunSettings 的详细信息，请参阅 [vstest.console.exe: Passing RunSettings args](https://github.com/Microsoft/vstest-docs/blob/master/docs/RunSettingsArguments.md)。
+有关 RunSettings 的详细信息，请参阅 [vstest.console.exe：传递 RunSettings 参数](https://github.com/Microsoft/vstest-docs/blob/master/docs/RunSettingsArguments.md)。
 
 # <a name="net-core-20tabnetcore20"></a>[.NET Core 2.0](#tab/netcore20)
 

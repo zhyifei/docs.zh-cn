@@ -1,23 +1,24 @@
 ---
 title: 编写单元测试的最佳做法
-description: 了解有关编写可提高代码质量和弹性的单元测试的最佳做法
+description: 了解有关编写单元测试的最佳做法，以提高 .NET Core 和 .NET Standard 项目的代码质量和弹性。
 author: jpreese
 ms.author: wiwagn
 ms.date: 07/28/2018
-ms.openlocfilehash: 00a0b999c9a08b04cb33bcb3a332513292beb363
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.custom: seodec18
+ms.openlocfilehash: 7db37fd4fcb76d4bfcfb21204a191fd43c9bb6b6
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53143401"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53240718"
 ---
-# <a name="unit-testing-best-practices"></a>单元测试最佳做法
+# <a name="unit-testing-best-practices-with-net-core-and-net-standard"></a>.NET Core 和 .NET Standard 单元测试最佳做法
 
-作者是 [John Reese](http://reesespieces.io) 且特别感谢 [Roy Osherove](http://osherove.com/)
-
-编写单元测试有许多好处；它们有助于回归、提供文档和促进良好的设计。 然而，难懂且脆弱的单元测试会对代码库造成严重破坏。
+编写单元测试有许多好处；它们有助于回归、提供文档和促进良好的设计。 然而，难懂且脆弱的单元测试会对代码库造成严重破坏。 本文介绍一些有关 .NET Core 和 .NET Standard 项目的单元测试设计的最佳做法。
 
 本指南将介绍一些在编写单元测试时的最佳做法，使测试具有弹性且易于理解。
+
+作者是 [John Reese](http://reesespieces.io) 且特别感谢 [Roy Osherove](http://osherove.com/)
 
 ## <a name="why-unit-test"></a>为什么要执行单元测试？
 
@@ -32,7 +33,7 @@ ms.locfileid: "53143401"
 使用单元测试，可在每次生成后，甚至在更改一行代码后重新运行整套测试。 让你确信新代码不会破坏现有功能。
 
 ### <a name="executable-documentation"></a>可执行文档
-在给定某个输入的情况下，特定方法的作用或行为可能并不总是很明显。 你可能会问自己：如果我将空白字符串传递给它，此方法会有怎样的行为？ Null?
+在给定某个输入的情况下，特定方法的作用或行为可能并不总是很明显。 你可能会想知道：如果我将空白字符串传递给它，此方法会有怎样的行为？ Null?
 
 如果你有一套命名正确的单元测试，每个测试应能够清楚地解释给定输入的预期输出。 此外，它应该能够验证其确实有效。
 

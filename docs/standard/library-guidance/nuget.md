@@ -4,12 +4,12 @@ description: 使用 .NET 库的 NuGet 打包的最佳实践建议。
 author: jamesnk
 ms.author: mairaw
 ms.date: 10/02/2018
-ms.openlocfilehash: 8ac01046f25176b781240baeba8bf1efb9376689
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 4f33c9993d8eef4b18823d5c16f9f51c06afae88
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53129605"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53614540"
 ---
 # <a name="nuget"></a>NuGet
 
@@ -44,7 +44,7 @@ NuGet 包 (`*.nupkg`) 是一个 zip 文件，其中包含 .NET 程序集和关�
 
 ## <a name="important-nuget-package-metadata"></a>重要的 NuGet 包元数据
 
-NuGet 包支持多个[元数据属性](/nuget/reference/nuspec)。 下表包含每个开放源代码项目应提供的核心元数据：
+NuGet 包支持多个[元数据属性](/nuget/reference/nuspec)。 下表包含 NuGet.org 上的每个包应提供的核心元数据：
 
 | MSBuild 属性名称              | Nuspec 名称              | 说明  |
 | ---------------------------------- | ------------------------ | ------------ |
@@ -56,14 +56,12 @@ NuGet 包支持多个[元数据属性](/nuget/reference/nuspec)。 下表包含�
 | `PackageTags`                      | `tags`                     | 描述包的标记和关键字的空格分隔列表。 搜索包时使用标记。             |
 | `PackageIconUrl`                   | `iconUrl`                  | 要用作包的图标的图像 URL。 URL 应为 HTTPS，图像应为 64x64 并具有透明背景。             |
 | `PackageProjectUrl`                | `projectUrl`               | 项目主页或源存储库的 URL。             |
-| `PackageLicenseUrl`                | `licenseUrl`               | 指向项目许可证的 URL。 可以是指向源代码管理中的 `LICENSE` 文件的 URL。             |
-
-✔️请考虑选择带有满足 NuGet 前缀保留[条件](/nuget/reference/id-prefix-reservation)的前缀的 NuGet 包名称。
-
-✔️请考虑将源代码管理中的 `LICENSE` 文件用作 `LicenseUrl`。 例如，[LICENSE.md](https://github.com/JamesNK/Newtonsoft.Json/blob/c4af75c8e91ca0d75aa6c335e8c106780c4f7712/LICENSE.md)。
+| `PackageLicenseExpression`         | `license`                  | 项目许可证的 [SPDX 标识符](https://spdx.org/licenses/)。 只有获得 OSI 和 FSF 批准的许可证才能使用标识符。 其他许可证应使用 `PackageLicenseFile`。 详细了解 [`license` 元数据](/nuget/reference/nuspec#license)。 |
 
 > [!IMPORTANT]
 > 无许可证的项目默认为 [exclusive copyright](https://choosealicense.com/no-permission/)（独占版权所有），从而无法供其他人使用。
+
+✔️请考虑选择带有满足 NuGet 前缀保留[条件](/nuget/reference/id-prefix-reservation)的前缀的 NuGet 包名称。
 
 ✔️ 请使用指向包图标的 HTTPS href。
 
@@ -73,9 +71,7 @@ NuGet 包支持多个[元数据属性](/nuget/reference/nuspec)。 下表包含�
 
 **✔️ 请考虑**设置 [SourceLink](./sourcelink.md) 以将源代码管理元数据添加到程序集和 NuGet 包中。
 
-> SourceLink 会自动将 `RepositoryUrl` 和 `RepositoryType` 元数据添加到 NuGet 包中。
-> SourceLink 还会添加用于构建包的确切源代码的相关信息。
-> 例如，从 Git 存储库创建的包将添加提交哈希作为元数据。
+> SourceLink 会自动将 `RepositoryUrl` 和 `RepositoryType` 元数据添加到 NuGet 包中。 SourceLink 还会添加用于构建包的确切源代码的相关信息。 例如，从 Git 存储库创建的包将添加提交哈希作为元数据。
 
 ## <a name="pre-release-packages"></a>预发行包
 

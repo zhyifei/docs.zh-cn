@@ -3,13 +3,13 @@ title: 版本控制和 .NET 库
 description: 版本控制 .NET 库的最佳实践建议。
 author: jamesnk
 ms.author: mairaw
-ms.date: 10/02/2018
-ms.openlocfilehash: bacd3891c2fc15a1084f952ca913cf99b6d087dc
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.date: 12/10/2018
+ms.openlocfilehash: e47b8a5ccad7c57d125e16f6e1d37fb91de31161
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 12/10/2018
-ms.locfileid: "53144554"
+ms.locfileid: "53169594"
 ---
 # <a name="versioning"></a>版本管理
 
@@ -77,12 +77,13 @@ Windows .NET Framework CLR 要求完全匹配以便加载具有强名称的程�
 
 ![Windows 资源管理器](./media/versioning/win-properties.png "Windows 资源管理器")
 
-> [!NOTE]
-> 如果此版本未采用 `Major.Minor.Build.Revision` 格式，则会引发没有威胁的生成警告。 可放心忽略此警告。
-
 ✔️请考虑包括持续集成内部版本号作为 AssemblyFileVersion 修订号。
 
 > 例如，生成的项目版本为 1.0.0 且持续集成内部版本号为 99，则 AssemblyFileVersion 为 1.0.0.99。
+
+✔️请对文件版本使用 `Major.Minor.Build.Revision` 格式。
+
+> 虽然 .NET 从不使用此文件版本，但 [Windows 期望文件版本](/windows/desktop/menurc/versioninfo-resource)采用 `Major.Minor.Build.Revision` 格式。 如果版本不遵循此格式，则会引发警告。
 
 ### <a name="assembly-informational-version"></a>程序集信息性版本
 
@@ -91,6 +92,9 @@ Windows .NET Framework CLR 要求完全匹配以便加载具有强名称的程�
 ```xml
 <AssemblyInformationalVersion>The quick brown fox jumped over the lazy dog.</AssemblyInformationalVersion>
 ```
+
+> [!NOTE]
+> 如果此版本不遵循格式 `Major.Minor.Build.Revision`，则较早版本的 Visual Studio 会引发生成警告。 可放心忽略此警告。
 
 ❌请避免自行设置程序集信息性版本。
 

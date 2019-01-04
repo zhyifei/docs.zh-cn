@@ -27,7 +27,7 @@
 **步骤 1：** 对于小更改，可跳过这一步。 如果有意编写新内容或彻底修改现有内容，请打开[问题](https://github.com/dotnet/docs/issues)，描述要执行的操作。
 “文档”文件夹中的内容划分为在目录 (TOC) 中反应的不同部分。 定义主题在 TOC 中的位置。 获取对建议的反馈。
 
-或
+- 或 -
 
 还可以从现有问题中进行选择，了解哪些是热门的社区发布内容。 [.NET 社区参与者项目](https://github.com/dotnet/docs/projects/35)列出了许多可用于社区参与者的工作项。 根据你的兴趣和承诺水平，可从以下类别的问题中作出选择：
 
@@ -39,7 +39,7 @@
 
 此外可以查看我们的[待解决问题](https://github.com/dotnet/docs/issues)列表，并自愿参与你感兴趣的工作。 我们使用[空缺](https://github.com/dotnet/docs/labels/up-for-grabs)标签来标记公开供参与的问题。 
 
-**步骤 2：** 根据需要派生 `/dotnet/docs`、`dotnet/samples` 或 `dotnet/dotnet-api-docs` 存储库分支，并为更改创建一个分支。
+**步骤 2：** 根据需要对 `/dotnet/docs`、`dotnet/samples` 或 `dotnet/dotnet-api-docs` 存储库进行分支，并为所做更改创建分支。
 
 对于较小的更改，可以使用 GitHub 的 Web 界面。 只需单击要更改的文件上的“编辑此项目分支中的文件”。 在提交所做的更改时，GitHub 会为你创建新分支。
 
@@ -66,7 +66,9 @@
             /porting-overview
                 portability_report.png
 
-**步骤 4：** 将拉取请求 (PR) 从分支提交到 `dotnet/docs/master`。
+**步骤 4：** 从分支中将拉取请求 (PR) 提交到 `dotnet/docs/master`。
+
+PR 应始终面向主分支。 你应从不打开面向活动分支的 PR。
 
 每个 PR 通常应该一次解决一个问题。 PR 可以修改一个或多个文件。 如果要处理不同文件的多个修补程序，最好是使用单独的 PR。
 
