@@ -1,18 +1,33 @@
-# <a name="using-dotnet-svcutilxmlserializer-on-net-core"></a><span data-ttu-id="eb331-101">在 .NET Core 上使用 dotnet-svcutil.xmlserializer</span><span class="sxs-lookup"><span data-stu-id="eb331-101">Using dotnet-svcutil.xmlserializer on .NET Core</span></span>
+---
+title: 在 .NET Core 上使用 dotnet-svcutil.xmlserializer
+description: 了解如何使用 `dotnet-svcutil.xmlserializer` NuGet 包为 .NET Core 项目预生成序列化程序集。
+author: huanwu
+ms.date: 11/27/2018
+ms.openlocfilehash: f5ffed47079a3ee122c7784d0c61c4d40461ba26
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53235535"
+---
+# <a name="using-dotnet-svcutilxmlserializer-on-net-core"></a><span data-ttu-id="dc59f-103">在 .NET Core 上使用 dotnet-svcutil.xmlserializer</span><span class="sxs-lookup"><span data-stu-id="dc59f-103">Using dotnet-svcutil.xmlserializer on .NET Core</span></span>
 
-## <a name="prerequisites"></a><span data-ttu-id="eb331-102">系统必备</span><span class="sxs-lookup"><span data-stu-id="eb331-102">Prerequisites</span></span>
+<span data-ttu-id="dc59f-104">`dotnet-svcutil.xmlserializer` NuGet 包可以为 .NET Core 项目预生成序列化程序集。</span><span class="sxs-lookup"><span data-stu-id="dc59f-104">The `dotnet-svcutil.xmlserializer` NuGet package can pre-generate a serialization assembly for .NET Core projects.</span></span> <span data-ttu-id="dc59f-105">它为客户端应用程序中由 WCF 服务协定使用的且可由 XmlSerializer 序列化的类型预生成 C# 序列化代码。</span><span class="sxs-lookup"><span data-stu-id="dc59f-105">It pre-generates C# serialization code for the types in the client application that are used by the WCF Service Contract and that can be serialized by the XmlSerializer.</span></span> <span data-ttu-id="dc59f-106">当序列化或反序列化这些类型的对象时，这会提高 XML 序列化的启动性能。</span><span class="sxs-lookup"><span data-stu-id="dc59f-106">This improves the startup performance of XML serialization when serializing or deserializing objects of those types.</span></span>
 
-<span data-ttu-id="eb331-103">以下是 dotnet-svcutil.xmlserializer 正常运行的必备条件。</span><span class="sxs-lookup"><span data-stu-id="eb331-103">The following is required for dotnet-svcutil.xmlserializer to work.</span></span> 
+## <a name="prerequisites"></a><span data-ttu-id="dc59f-107">系统必备</span><span class="sxs-lookup"><span data-stu-id="dc59f-107">Prerequisites</span></span>
 
-* [<span data-ttu-id="eb331-104">.NET Core 2.1 SDK 或更高版本</span><span class="sxs-lookup"><span data-stu-id="eb331-104">.NET Core 2.1 SDK or later</span></span>](https://www.microsoft.com/net/download/dotnet-core/sdk-2.1.300)
-* [<span data-ttu-id="eb331-105">.NET Core 运行时 2.1 或更高版本</span><span class="sxs-lookup"><span data-stu-id="eb331-105">.NET Core Runtime 2.1 or later</span></span>](https://www.microsoft.com/net/download/dotnet-core/runtime-2.1.0)
+* <span data-ttu-id="dc59f-108">[.NET Core 2.1 SDK](https://www.microsoft.com/net/download) 或更高版本</span><span class="sxs-lookup"><span data-stu-id="dc59f-108">[.NET Core 2.1 SDK](https://www.microsoft.com/net/download) or later</span></span>
+* <span data-ttu-id="dc59f-109">你最喜欢的代码编辑器</span><span class="sxs-lookup"><span data-stu-id="dc59f-109">Your favorite code editor</span></span>
 
-<span data-ttu-id="eb331-106">可以使用命令 `dotnet --info` 检查已安装哪些版本的 .NET Core SDK 和运行时。</span><span class="sxs-lookup"><span data-stu-id="eb331-106">You can use the command `dotnet --info` to check which versions of .NET Core SDK and runtime you already have installed.</span></span>
+<span data-ttu-id="dc59f-110">可以使用命令 `dotnet --info` 检查已安装哪些版本的 .NET Core SDK 和运行时。</span><span class="sxs-lookup"><span data-stu-id="dc59f-110">You can use the command `dotnet --info` to check which versions of .NET Core SDK and runtime you already have installed.</span></span>
 
-<span data-ttu-id="eb331-107">若要在 .NET Core 控制台应用程序中使用 dotnet-svcutil.xmlserializer：</span><span class="sxs-lookup"><span data-stu-id="eb331-107">To use dotnet-svcutil.xmlserializer in a .NET Core console application:</span></span>
+## <a name="getting-started"></a><span data-ttu-id="dc59f-111">入门</span><span class="sxs-lookup"><span data-stu-id="dc59f-111">Getting started</span></span>
 
-1. <span data-ttu-id="eb331-108">在 .NET Framework 中使用默认模板“WCF 服务应用程序”创建一个名为“MyWCFService”的 WCF 服务。</span><span class="sxs-lookup"><span data-stu-id="eb331-108">Create a WCF Service named 'MyWCFService' using the default template 'WCF Service Application' in .NET Framework.</span></span>  <span data-ttu-id="eb331-109">在服务方法上添加 ```[XmlSerializerFormat]``` 属性，如下所示</span><span class="sxs-lookup"><span data-stu-id="eb331-109">Add ```[XmlSerializerFormat]``` attribute on the service method like the following</span></span>
-    ```c#
+<span data-ttu-id="dc59f-112">在 .NET Core 控制台应用程序中使用 `dotnet-svcutil.xmlserializer`：</span><span class="sxs-lookup"><span data-stu-id="dc59f-112">To use `dotnet-svcutil.xmlserializer` in a .NET Core console application:</span></span>
+
+1. <span data-ttu-id="dc59f-113">在 .NET Framework 中使用默认模板“WCF 服务应用程序”创建一个名为“MyWCFService”的 WCF 服务。</span><span class="sxs-lookup"><span data-stu-id="dc59f-113">Create a WCF Service named 'MyWCFService' using the default template 'WCF Service Application' in .NET Framework.</span></span> <span data-ttu-id="dc59f-114">在服务方法上添加 `[XmlSerializerFormat]` 属性，如下所示：</span><span class="sxs-lookup"><span data-stu-id="dc59f-114">Add `[XmlSerializerFormat]` attribute on the service method like the following:</span></span>
+
+   ```csharp
     [ServiceContract]
     public interface IService1
     {
@@ -21,34 +36,42 @@
         string GetData(int value);
     }
     ```
-2. <span data-ttu-id="eb331-110">创建一个 NET Core 控制台应用程序作为以 netcoreapp 2.1 为目标的 WCF 客户端应用程序，例如，使用以下命令创建一个名为“MyWCFClient”的应用程序，</span><span class="sxs-lookup"><span data-stu-id="eb331-110">Create a .NET Core console application as WCF client application that targets at netcoreapp 2.1, e.g. create an app named 'MyWCFClient' with the command,</span></span>
-    ```
+
+2. <span data-ttu-id="dc59f-115">创建 .NET Core 控制台应用程序作为面向 .NET Core 2.1 或更高版本的 WCF 客户端应用程序。</span><span class="sxs-lookup"><span data-stu-id="dc59f-115">Create a .NET Core console application as WCF client application that targets at .NET Core 2.1 or later versions.</span></span> <span data-ttu-id="dc59f-116">例如，使用以下命令创建名为“MyWCFClient”的应用：</span><span class="sxs-lookup"><span data-stu-id="dc59f-116">For example, create an app named 'MyWCFClient' with the following command:</span></span>
+
+    ```console
     dotnet new console --name MyWCFClient
     ```
-    <span data-ttu-id="eb331-111">请确保 csproj 面向 netcoreapp 2.1。</span><span class="sxs-lookup"><span data-stu-id="eb331-111">Make sure your csproj targets a netcoreapp 2.1.</span></span> <span data-ttu-id="eb331-112">此操作是在 .csproj 文件中使用下面的 XML 元素完成的</span><span class="sxs-lookup"><span data-stu-id="eb331-112">This is done using the following XML element in your .csproj file</span></span>
+
+    <span data-ttu-id="dc59f-117">要确保项目面向 .NET Core 2.1 或更高版本，请检查项目文件中的 `TargetFramework` XML 元素：</span><span class="sxs-lookup"><span data-stu-id="dc59f-117">To ensure your project is targeting .NET Core 2.1 or later, inspect the `TargetFramework` XML element in your project file:</span></span>
+
     ```xml
     <TargetFramework>netcoreapp2.1</TargetFramework>
     ```
-3. <span data-ttu-id="eb331-113">通过运行以下命令向 System.ServiceModel.Http 添加包引用：</span><span class="sxs-lookup"><span data-stu-id="eb331-113">Add a package reference to System.ServiceModel.Http by running the following command:</span></span>
-   
-   ```dotnet add package System.ServiceModel.Http -v 4.5.0```
 
-4. <span data-ttu-id="eb331-114">添加 WCF 客户端代码：</span><span class="sxs-lookup"><span data-stu-id="eb331-114">Add the WCF Client code:</span></span>
+3. <span data-ttu-id="dc59f-118">通过运行以下命令将包引用添加到 `System.ServiceModel.Http`：</span><span class="sxs-lookup"><span data-stu-id="dc59f-118">Add a package reference to `System.ServiceModel.Http` by running the following command:</span></span>
+
+    ```console
+    dotnet add package System.ServiceModel.Http
+    ```
+
+4. <span data-ttu-id="dc59f-119">添加 WCF 客户端代码：</span><span class="sxs-lookup"><span data-stu-id="dc59f-119">Add the WCF Client code:</span></span>
+
     ```csharp
     using System.ServiceModel;
-    
-    class Program
-    {
-        static void Main(string[] args)
+
+        class Program
         {
-            var myBinding = new BasicHttpBinding();
-            var myEndpoint = new EndpointAddress("http://localhost:2561/Service1.svc"); //Fill your service url here
-            var myChannelFactory = new ChannelFactory<IService1>(myBinding, myEndpoint);
-            IService1 client = myChannelFactory.CreateChannel();
-            string s = client.GetData(1);
-            ((ICommunicationObject)client).Close();
+            static void Main(string[] args)
+            {
+                var myBinding = new BasicHttpBinding();
+                var myEndpoint = new EndpointAddress("http://localhost:2561/Service1.svc"); //Fill your service url here
+                var myChannelFactory = new ChannelFactory<IService1>(myBinding, myEndpoint);
+                IService1 client = myChannelFactory.CreateChannel();
+                string s = client.GetData(1);
+                ((ICommunicationObject)client).Close();
+            }
         }
-    }
 
     [ServiceContract]
     public interface IService1
@@ -58,17 +81,21 @@
         string GetData(int value);
     }
     ```
-5. <span data-ttu-id="eb331-115">编辑 .csproj 文件并添加对 dotnet-svcutil.xmlserializer 包的引用。</span><span class="sxs-lookup"><span data-stu-id="eb331-115">Edit the .csproj file and add a reference to the dotnet-svcutil.xmlserializer package.</span></span> <span data-ttu-id="eb331-116">例如:</span><span class="sxs-lookup"><span data-stu-id="eb331-116">For example:</span></span>
 
-    <span data-ttu-id="eb331-117">i.</span><span class="sxs-lookup"><span data-stu-id="eb331-117">i.</span></span> <span data-ttu-id="eb331-118">运行命令：`dotnet add package dotnet-svcutil.xmlserializer -v 1.0.0`</span><span class="sxs-lookup"><span data-stu-id="eb331-118">Run command: `dotnet add package dotnet-svcutil.xmlserializer -v 1.0.0`</span></span>
+5. <span data-ttu-id="dc59f-120">通过运行以下命令将引用添加到 `dotnet-svcutil.xmlserializer` 包：</span><span class="sxs-lookup"><span data-stu-id="dc59f-120">Add a reference to the `dotnet-svcutil.xmlserializer` package by running the following command:</span></span>
+  
+    ```console
+    dotnet add package dotnet-svcutil.xmlserializer
+    ```
 
-    <span data-ttu-id="eb331-119">ii.</span><span class="sxs-lookup"><span data-stu-id="eb331-119">ii.</span></span> <span data-ttu-id="eb331-120">在 MyWCFClient.csproj 中添加以下行，</span><span class="sxs-lookup"><span data-stu-id="eb331-120">Add the following lines in MyWCFClient.csproj,</span></span>
+    <span data-ttu-id="dc59f-121">运行该命令应向项目文件中添加一个类似于以下内容的条目：</span><span class="sxs-lookup"><span data-stu-id="dc59f-121">Running the command should add an entry to your project file similar to this:</span></span>
+  
     ```xml
     <ItemGroup>
       <DotNetCliToolReference Include="dotnet-svcutil.xmlserializer" Version="1.0.0" />
     </ItemGroup>
     ```
 
-6. <span data-ttu-id="eb331-121">通过运行 `dotnet build` 生成应用程序。</span><span class="sxs-lookup"><span data-stu-id="eb331-121">Build the application by running `dotnet build`.</span></span> <span data-ttu-id="eb331-122">如果一切顺利，则会在输出文件夹中生成名为“MyWCFClient.XmlSerializers.dll”的程序集。</span><span class="sxs-lookup"><span data-stu-id="eb331-122">If everything succeeds, an assembly named MyWCFClient.XmlSerializers.dll will be generated in the output folder.</span></span> <span data-ttu-id="eb331-123">如果该工具无法生成程序集，将在生成输出中看到警告。</span><span class="sxs-lookup"><span data-stu-id="eb331-123">You will see warnings in the build output if the tool failed to generate the assembly.</span></span>
+6. <span data-ttu-id="dc59f-122">通过运行 `dotnet build` 生成应用程序。</span><span class="sxs-lookup"><span data-stu-id="dc59f-122">Build the application by running `dotnet build`.</span></span> <span data-ttu-id="dc59f-123">如果一切顺利，则会在输出文件夹中生成名为“MyWCFClient.XmlSerializers.dll”的程序集。</span><span class="sxs-lookup"><span data-stu-id="dc59f-123">If everything succeeds, an assembly named *MyWCFClient.XmlSerializers.dll* is generated in the output folder.</span></span> <span data-ttu-id="dc59f-124">如果该工具无法生成程序集，将在生成输出中看到警告。</span><span class="sxs-lookup"><span data-stu-id="dc59f-124">If the tool failed to generate the assembly, you'll see warnings in the build output.</span></span>
 
-7. <span data-ttu-id="eb331-124">启动 WCF 服务，例如通过在浏览器中运行 http://localhost:2561/Service1.svc。</span><span class="sxs-lookup"><span data-stu-id="eb331-124">Start the WCF service e.g. by running http://localhost:2561/Service1.svc in the browser.</span></span> <span data-ttu-id="eb331-125">然后启动客户端应用程序，它将在运行时自动加载和使用预生成的序列化程序。</span><span class="sxs-lookup"><span data-stu-id="eb331-125">Then start the client application, and it will automatically load and use the pre-generated serializers at runtime.</span></span>
+7. <span data-ttu-id="dc59f-125">例如，通过在浏览器中运行 `http://localhost:2561/Service1.svc` 来启动 WCF 服务。</span><span class="sxs-lookup"><span data-stu-id="dc59f-125">Start the WCF service by, for example, running `http://localhost:2561/Service1.svc` in the browser.</span></span> <span data-ttu-id="dc59f-126">然后启动客户端应用程序，它将在运行时自动加载和使用预生成的序列化程序。</span><span class="sxs-lookup"><span data-stu-id="dc59f-126">Then start the client application, and it will automatically load and use the pre-generated serializers at runtime.</span></span>
