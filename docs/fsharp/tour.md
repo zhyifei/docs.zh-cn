@@ -11,129 +11,129 @@ ms.locfileid: "53143735"
 ---
 # <a name="tour-of-f"></a>F# 概览 #
 
-学习 F# 语言的最好方式莫过于多加阅读与编写 F# 代码。 本文将带你了解一些 F# 语言的关键特性，并为您提供一些您可以亲自执行的代码片段。您若要了解如何配置开发环境，请移步[Getting Started](tutorials/getting-started/index.md)。
+了解 F# 语言的最好方式就是阅读和编写 F# 代码。本文将介绍 F# 语言的一些关键特性，并提供一些可以在计算机上执行的代码片段。若要了解如何设置开发环境，请查看[入门](tutorials/getting-started/index.md)。
 
-F# 中有两个主要概念：函数和类型。本文强调的语言特性都将划归到这两个概念当中。
+F# 中有两个主要概念：函数和类型。本文主要介绍该语言中属于这两个概念范畴的特性。
 
 ## <a name="executing-the-code-online"></a>在线执行代码
 
-如果您还没有在您的电脑上安装 F# 运行环境，你可以在线执行本文出现的所有示例[Fable REPL](http://fable.io/repl/)。 Fable 能让您直接在浏览器中执行 F# 代码。若要在 REPL 中执行示例代码，请阅读 Fable REPL 左侧菜单栏中的 **Samples > Learn > Tour of F#**
+如果电脑上未安装 F#，则可以借助 [Fable REPL](http://fable.io/repl/) 在线执行所有示例。Fable 是 F# 的非正式名称，可直接在浏览器中执行。若要在 REPL 中查看后续示例，请在 Fable REPL 的左侧菜单栏中转到“示例”>“学习”>“F# 概览”。
 
 ## <a name="functions-and-modules"></a>函数和模块
 
-任何 F# 程序都由 ***函数*** 组织成的 ***模块*** 构成。在[模块](language-reference/modules.md)的组织下，[函数](language-reference/functions/index.md)用于处理输入，从而产生输出。你可以通过[`let` binding](language-reference/functions/let-bindings.md)定义函数，为函数起一个好听的名子，并且告诉它们该接受哪些参数。
+任何 F# 程序的最基本组成部分都是由“函数”组织成的“模块”。[函数](language-reference/functions/index.md)组织在[模块](language-reference/modules.md)下，并用于处理输入从而产生输出，这是在 F# 中进行分组的主要方式。可以通过 [`let` 绑定](language-reference/functions/let-bindings.md)定义函数，此操作可以为函数命名和定义其参数。
 
 [!code-fsharp[BasicFunctions](../../samples/snippets/fsharp/tour.fs#L101-L133)]
 
-`let` 也可以将值绑定到一个标识符上，就像其它语言中的变量一样。  `let` 绑定默认情况是 ***不可变*** (***immutable***)的(类似constant)，这意味着，一旦值或函数绑定到一个标识符，它就不能更改。这与在其他语言中能够随时随地改变的变量(***mutable***)不同。如果您需要一个可变的变量，那可以使用`let mutable ...`。
+`let` 绑定还可以用于将值与名称绑定，与在其他语言中绑定到变量的方式相似。`let` 绑定默认情况下不可变，这意味着，一旦将值或函数与名称绑定后，值或函数便无法改变。这与其他语言中的变量相反，变量是可变的，即变量的值可以随时更改。如果需要可变的绑定，可以使用 `let mutable ...` 语法。
 
 [!code-fsharp[Immutability](../../samples/snippets/fsharp/tour.fs#L75-L94)]
 
 ## <a name="numbers-booleans-and-strings"></a>数值、布尔值和字符串
 
-作为一个 .NET 系语言，F# 支持 .NET 中的[基元类型](language-reference/primitive-types.md)。
+F# 是一种 .NET 语言，支持 .NET 中包含的相同的基本[基元类型](language-reference/primitive-types.md)。
 
-下面是 F# 中如何表示不同的数值类型:
+下面是各种数值类型在 F# 中的表示方式：
 
 [!code-fsharp[Numbers](../../samples/snippets/fsharp/tour.fs#L49-L68)]
 
-然后是布尔值的使用：
+下面是布尔值的表示和基本条件逻辑的执行方式：
 
 [!code-fsharp[Bools](../../samples/snippets/fsharp/tour.fs#L142-L152)]
 
-接下来是基础的[字符串](language-reference/strings.md)操作：
+下面是[字符串](language-reference/strings.md)的基本操作方式：
 
 [!code-fsharp[Strings](../../samples/snippets/fsharp/tour.fs#L158-L180)]
 
 ## <a name="tuples"></a>元组
 
-[元组](language-reference/tuples.md)是 F# 很重要的一部分。它们自身便是变量值，然而它们能够将未命名的数值聚在一起，形成有序的一组数值。将它们视为与其他值汇总的值。元组有许多用途。比如，你可以将元组作为函数的返回值，从而使函数返回多个值；你也可以将一些数值聚在一起，方便你进行特定的操作。
+[元组](language-reference/tuples.md)是 F# 中的重要内容。它们是一组未命名但已排序的值，可将其视为值进行处理。将它们视为与其他值汇总的值。元组有许多用途，比如，以便捷方式从函数返回多个值，或对值进行分组以提供暂时的便利。
 
 [!code-fsharp[Tuples](../../samples/snippets/fsharp/tour.fs#L186-L203)]
 
-在 F# 4.1 中，你还可以创建`struct`元组。它们可以与 C# 7/Visual Basic 15 中的元组交互，因为它们也是`struct`元组：
+从 F# 4.1 开始，还可以创建 `struct` 元组。它们可以与 C# 7/Visual Basic 15 元组完全交互，因为后者也是 `struct` 元组：
 
 [!code-fsharp[Tuples](../../samples/snippets/fsharp/tour.fs#L205-L218)]
 
-请务必要注意由于`struct`元组是值类型，它们不能隐式转换为引用元组，反之亦然。您必须进行显式转换。
+请务必注意，由于 `struct` 元组是值类型，它们不能隐式转换为引用元组，反之亦然。必须在引用元组和 struct 元组之间进行显式转换。
 
 ## <a name="pipelines-and-composition"></a>管道和组合
 
-在用 F# 处理数据时使用像`|>`这样的管道运算符是很常见的事。这些运算符是能让您灵活建立函数间的“管道”的函数。下面的示例将带您利用这些运算符来构建一个简单的管道：
+在 F# 中处理数据时，会广泛使用 `|>` 等管道运算符。这些运算符是使你能够灵活建立函数的“管道”的函数。下面的示例将完整演示如利用这些运算符来构建一个简单的功能管道：
 
 [!code-fsharp[Pipelines](../../samples/snippets/fsharp/tour.fs#L227-L282)]
 
-前面的示例所做的许多功能 F# 中，包括表处理操作，头等函数的使用和[偏函数](language-reference/functions/index.md#partial-application-of-arguments)。尽管深入了解所有这些概念有难度，但是这并不影响你轻松地使用管道来处理数据。
+上面的示例使用了 F# 的许多特性，包括列表处理函数、头等函数和[偏函数应用](language-reference/functions/index.md#partial-application-of-arguments)。尽管深入理解所有这些概念有难度，但有一点应该非常明显 - 在构建管道时可以轻松使用函数来处理数据。
 
 ## <a name="lists-arrays-and-sequences"></a>列表、 数组和序列
 
-列表、数组和序列是 F# 库中的三个最主要的集合类型。
+列表、数组和序列是 F# 核心库中的三个主要集合类型。
 
-[列表](language-reference/lists.md)是 *相同类型元素* 的 *有序* *不可变* 集合。它是一个单向链表，这意味着列表的枚举复杂度较低，而随机访问与串联(?)的复杂度较高。请注意，别的语言一般不会用单向列表表示列表结构。
+[列表](language-reference/lists.md)是相同类型元素的有序、不可变集合。“列表”是单向链接列表，即它们旨在用于枚举，较大时则不适合用于随机访问和串联。请注意，这与其他常用语言中的“列表”相反，那些语言通常不使用单向链接列表表示“列表”。
 
 [!code-fsharp[Lists](../../samples/snippets/fsharp/tour.fs#L309-L359)]
 
-[数组](language-reference/arrays.md)是 *定容* *可变* 的 *相同类型的元素* 的集合。由于数组背后是一段连续的内存，它们支持快速随机访问。
+[数组](language-reference/arrays.md)是是相同类型元素的大小固定且可变的集合。它们支持快速随机访问元素，速度快于 F# 列表，因为它们只是连续的内存块。
 
 [!code-fsharp[Arrays](../../samples/snippets/fsharp/tour.fs#L368-L407)]
 
-[序列](language-reference/sequences.md)是逻辑上的一系列同类型的元素。序列是相对数组与列表来说更通用的类型，使您能够访问任何逻辑上的“一系列元素”。它甚至可以 ***延迟更新*** ，也就是说序列仅在需要时计算元素的值。
+[序列](language-reference/sequences.md)是一系列有逻辑的相同类型元素。这是一种比“列表”和“数组”更通用的类型，可以作为查看有逻辑的系列元素的“窗口”。可为“惰性”是它们的一个突出特点，这意味着可以仅在需要元素时才对其进行计算。
 
 [!code-fsharp[Sequences](../../samples/snippets/fsharp/tour.fs#L418-L452)]
 
 ## <a name="recursive-functions"></a>递归函数
 
-作为一门函数式编程语言，在 F# 中，对集合与序列的操作往往是通过[递归](language-reference/functions/index.md#recursive-functions)完成的。尽管 F# 支持 for 循环和命令式编程，但递归仍然是首选，因为它更容易保证语句的正确性。
+在 F# 中，对元素集合与元素序列的操作往往通过[递归](language-reference/functions/index.md#recursive-functions)完成。尽管 F# 支持循环和命令式编程，但递归仍然是首选，因为它更容易保证正确性。
 
 > [!NOTE]
-> 下面的示例利用了`match`表达式。之后我们会详细介绍它的使用。
+> 下面的示例利用了通过 `match` 表达式匹配的模式。本文后面部分将介绍这一构造。
 
 [!code-fsharp[RecursiveFunctions](../../samples/snippets/fsharp/tour.fs#L461-L500)]
 
-F# 支持尾调用优化，这使得递归调用的效率不比循环结构差。
+F# 还完全支持尾调用优化，这是一种优化递归调用并使其与循环构造具有相同速率的方式。
 
 ## <a name="record-and-discriminated-union-types"></a>记录和可区分联合类型
 
-记录与联合类型是 F# 代码中使用的两种基本数据类型，它们通常是表示 F# 程序中数据的最佳方式。尽管它们很像面向对象语言中的类，但它们具有结构等价的语义，这是它们间的根本性差异。这意味着它们天生就可比较。要检查它们是否相等非常简单——只需检查其中一个是否等于另一个。
+“记录”和“联合”是 F# 代码中使用的两种基本数据类型，它们通常是表示 F# 程序中数据的最佳方式。尽管在这一点上它们与其他语言中的类很相似，但它们具有结构相等性语义，这是一个主要差异。这意味着它们“天生”就可比较，相等性则非常简单 - 只需检查一项是否等于另一项。
 
-[记录](language-reference/records.md)是可能包含成员的命名值(named values, with optional members)（如方法）的聚合。如果您熟悉 C# 或 Java，您会发现记录类似于 Poco 或 Pojo - 只是比它们多了结构相等(structual equality)，而且更好使用罢了:)。
+[记录](language-reference/records.md)是包含成员（例如，方法）的命名值的聚合。如果熟悉 C# 或 Java，便会发现“记录”类似于 POCO 或 POCO - 只是比它们多了结构相等性，而且更易于使用。
 
 [!code-fsharp[Records](../../samples/snippets/fsharp/tour.fs#L507-L559)]
 
-在 F# 4.1 中，您还可以通过使用`[<Struct>]`属性将记录当作`struct`来表示。
+从 F# 4.1 开始，还可以将“记录”表示为 `struct`。此操作通过 `[<Struct>]` 属性实现：
 
 [!code-fsharp[Records](../../samples/snippets/fsharp/tour.fs#L561-L568)]
 
-在一个[可区分联合 (Discrimitated Unions)](language-reference/discriminated-unions.md)内可以定义多种不同的数据类型。以这种类型存储的数据的类型可以是不同的类型之一。
+[可区分联合 (DU)](language-reference/discriminated-unions.md) 是一些值，可能是大量的已命名窗体或事例。存储的该类型的值可能是多个非重复值之一。
 
 [!code-fsharp[Unions](../../samples/snippets/fsharp/tour.fs#L575-L631)]
 
-你还可以将 DU 当作 *单用例可区分联合* ，方便在基元类型上建模。通常情况下，字符串和其他基元类型用于表示特定的含义。但是，仅使用基元数据的表示形式，你可能会不小心向变量赋了不正确的值！将每种类型的信息表示为不同的单用例联合可以保证在此情景中赋值的正确性。
+还可以将 DU 用作“单用例可区分联合”，以便帮助对基元类型进行域建模。通常情况下，字符串和其他基元类型用于表示某些内容并被赋予特定含义。但是，仅使用数据的基元表示形式可能会导致错误地分配了不正确的值！将每种类型的信息表示为不同的单用例联合可以保证在此情景中赋值的正确性。
 
 [!code-fsharp[Unions](../../samples/snippets/fsharp/tour.fs#L633-L654)]
 
-如上面的示例所示，若要获取单例 DU 的基值，您必须显式 unwrap。
+如上面的示例所示，若要获取单用例 DU 的基础值，则必须显式将其解包。
 
-此外，可区分联合类型还支持递归定义，从而可以轻松地表示树和其它递归定义的数据。比如，下面是二叉搜索树`exists`和`insert`函数的例子。
+此外，DU 还支持递归定义，使你可以轻松地表示树和本质上的递归数据。例如，下面演示了如何使用 `exists` 和 `insert` 函数表示二进制文件搜索树。
 
 [!code-fsharp[Unions](../../samples/snippets/fsharp/tour.fs#L656-L683)]
 
-DU 可以表示的树中的数据类型的递归结构，因为该递归结构非常简单直接，还能保证正确性。在模式匹配中我们也能用到它，如下所示。
+由于 DU 可以表示该数据类型的树中的递归结构，因此对此类递归结构执行操作非常简单并且能保证正确性。模式匹配中也支持此方法，如下所示。
 
-此外，你可以利用`[<Struct>]`属性将DU表示为 `struct`：
+此外，可以利用 `[<Struct>]` 属性将 DU 表示为 `struct`：
 
 [!code-fsharp[Unions](../../samples/snippets/fsharp/tour.fs#L685-L696)]
 
-但是，在你这么做的时候，时刻记住：
+但是，执行此操作时要牢记以下两个关键事项：
 
 1. struct DU 不能以递归方式定义。
-2. struct DU 必须具有唯一的标识符。
+2. struct DU 的每个事例必须具有唯一的标识符。
 
-否则会编译错误XD。
+未能遵循上述注意事项将导致编译错误。
 
 ## <a name="pattern-matching"></a>模式匹配
 
-[模式匹配](language-reference/pattern-matching.md)是 F# 语言特性，从而使 F# 在类型上的操作更加准确。  在上述示例中，您可能已经碰到了很多像`match x with ...`这样的语句。这样的语句能够让编译器通过穷举模式匹配，强制你考虑所有可能出现的情况。这样，你可以将一般来说要在运行时考虑的问题提前在编译时解决，从而提高代码的鲁棒性。
+[模式匹配](language-reference/pattern-matching.md)是 F# 语言的特性，可确保对 F# 类型执行操作时的正确性。在上述示例中，你可能已经注意到了很多 `match x with ...` 语法。使用某个数据类型时，此构造可允许编译器（可以理解数据类型的“形状”）通过所谓的穷举模式匹配来强制你考虑所有可能出现的情况。此方法能有效确保正确性，可以将通常在运行时考虑的问题引入编译时。
 
 [!code-fsharp[PatternMatching](../../samples/snippets/fsharp/tour.fs#L705-L742)]
 
