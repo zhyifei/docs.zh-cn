@@ -19,15 +19,15 @@ ms.locfileid: "33556817"
 ## <a name="example"></a>示例  
  使用<xref:System.Windows.Data.Binding.Mode%2A>属性指定绑定的方向。 以下枚举列表显示了可供绑定更新的选项：  
   
-- <xref:System.Windows.Data.BindingMode.TwoWay> 会在目标属性或源属性更改时进行目标属性或源属性的更新。
+-   <xref:System.Windows.Data.BindingMode.TwoWay> 会在目标属性或源属性更改时进行目标属性或源属性的更新。  
   
 -   <xref:System.Windows.Data.BindingMode.OneWay> 仅当源属性更改时更新目标属性。  
   
-- <xref:System.Windows.Data.BindingMode.OneTime> 仅当应用程序启动时或<xref:System.Windows.FrameworkElement.DataContext%2A>发生更改时更新目标属性。
+-   <xref:System.Windows.Data.BindingMode.OneTime> 仅当应用程序启动时或<xref:System.Windows.FrameworkElement.DataContext%2A>发生更改时更新目标属性。  
   
-- <xref:System.Windows.Data.BindingMode.OneWayToSource> 在目标属性更改时更新源属性。
+-   <xref:System.Windows.Data.BindingMode.OneWayToSource> 在目标属性更改时更新源属性。  
   
-- <xref:System.Windows.Data.BindingMode.Default> 迫使系统将使用目标属性的默认 <xref:System.Windows.Data.Binding.Mode%2A> 值。
+-   <xref:System.Windows.Data.BindingMode.Default> 迫使系统将使用目标属性的默认 <xref:System.Windows.Data.Binding.Mode%2A> 值。  
   
  有关详细信息，请参见 <xref:System.Windows.Data.BindingMode> 枚举。  
   
