@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Microsoft Annotations Framework [WPF]
 - documents [WPF], annotations
 ms.assetid: a893442b-e220-4603-bf6a-b01fefcb4b37
-ms.openlocfilehash: e463a087516dc45cb4bd879c77aef6fbeba2b546
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d2f3fa70673c7ae5819346ab152b74acf93a164c
+ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33542010"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "54029835"
 ---
 # <a name="annotations-schema"></a>批注架构
 本主题介绍 Microsoft Annotations Framework 用来保存和检索用户批注数据的 XML 架构定义 (XSD)。  
@@ -24,9 +24,9 @@ ms.locfileid: "33542010"
   
 -   批注 XML 基本架构（核心架构）。  
   
- 核心架构定义的主 XML 结构<xref:System.Windows.Annotations.Annotation>。  大部分核心架构中定义的 XML 元素中的类型对应<xref:System.Windows.Annotations>命名空间。  核心架构公开应用程序可在其中添加自己的 XML 数据的三个扩展点。  这些扩展点包括<xref:System.Windows.Annotations.Annotation.Authors%2A>， <xref:System.Windows.Annotations.ContentLocatorPart>，和"内容"。  (内容中的形式提供了元素<xref:System.Xml.XmlElement>列表。)  
+ 核心架构定义的主 XML 结构<xref:System.Windows.Annotations.Annotation>。  大部分核心架构中定义的 XML 元素中的类型对应<xref:System.Windows.Annotations>命名空间。  核心架构公开应用程序可在其中添加自己的 XML 数据的三个扩展点。  这些扩展点包括<xref:System.Windows.Annotations.Annotation.Authors%2A>， <xref:System.Windows.Annotations.ContentLocatorPart>，和"内容"。  (内容元素中的窗体提供了<xref:System.Xml.XmlElement>列表。)  
   
- 本主题中描述的基架构定义的扩展<xref:System.Windows.Annotations.Annotation.Authors%2A>， <xref:System.Windows.Annotations.ContentLocatorPart>，和内容与初始的 Windows Presentation Foundation (WPF) 版本包含的类型。  
+ 本主题中描述的基本架构定义的扩展<xref:System.Windows.Annotations.Annotation.Authors%2A>， <xref:System.Windows.Annotations.ContentLocatorPart>，和内容的初始 Windows Presentation Foundation (WPF) 版本中包含的类型。  
   
 <a name="CoreSchema"></a>   
 ## <a name="annotations-xml-core-schema"></a>批注 XML 核心架构  
@@ -182,7 +182,7 @@ ms.locfileid: "33542010"
   
 <a name="BaseSchema"></a>   
 ## <a name="annotations-xml-base-schema"></a>批注 XML 基本架构  
- 基本架构定义了核心架构 – 中定义的三个抽象元素的 XML 结构<xref:System.Windows.Annotations.Annotation.Authors%2A>， <xref:System.Windows.Annotations.ContentLocatorPart>，和<xref:System.Windows.Annotations.AnnotationResource.Contents%2A>。  
+ 基本架构定义为核心架构中定义的三个抽象元素的 XML 结构<xref:System.Windows.Annotations.Annotation.Authors%2A>， <xref:System.Windows.Annotations.ContentLocatorPart>，和<xref:System.Windows.Annotations.AnnotationResource.Contents%2A>。  
   
 ```xml  
 <xsd:schema elementFormDefault="qualified" attributeFormDefault="unqualified"  
@@ -429,11 +429,11 @@ ms.locfileid: "33542010"
     </xsd:complexContent>  
   </xsd:complexType>  
   
-  <-- PageNumber element substitutes ContentLocatorPart and is used to locate a  
-  *  page in a FixedDocument.  PageNumber ContentLocatorPart is used in  
-  *   conjunction with the FixedTextRange ContentLocatorPart and it shows on with  
-  *   page are the coordinates defined in the FixedTextRange.  
-  *   Example of a PageNumber ContentLocatorPart:  
+  <!-- PageNumber element substitutes ContentLocatorPart and is used to locate a  
+  *    page in a FixedDocument.  PageNumber ContentLocatorPart is used in  
+  *    conjunction with the FixedTextRange ContentLocatorPart and it shows on with  
+  *    page are the coordinates defined in the FixedTextRange.  
+  *    Example of a PageNumber ContentLocatorPart:  
   *     
   *       <anb:PageNumber>  
   *         <anc:Item Name="Value" Value="1" />  
@@ -464,8 +464,8 @@ ms.locfileid: "33542010"
   <xsd:element name="Text" type="anb:TextContentType"  
                substitutionGroup="anc:Content"/>  
   
-  <-- Ink – contains XAML representing Sticky Note ink.  
-  *   Used in annotations of type InkStickyNote. -->  
+  <!-- Ink – contains XAML representing Sticky Note ink.  
+  *    Used in annotations of type InkStickyNote. -->  
   <xsd:complexType name="InkContentType">  
     <!-- See XAML schema for Ink content -->  
   </xsd:complexType>  
@@ -493,7 +493,7 @@ ms.locfileid: "33542010"
   
 <a name="SampleXML"></a>   
 ## <a name="sample-xml-produced-by-annotations-xmlstreamstore"></a>批注 XmlStreamStore 所生成的示例 XML  
- 下面的 XML，显示的批注输出<xref:System.Windows.Annotations.Storage.XmlStreamStore>和组织的一个示例文件，包含三个批注： 突出显示、 文本的附注和墨迹便笺。  
+ 下面的 XML 显示了批注的输出<xref:System.Windows.Annotations.Storage.XmlStreamStore>和组织的一个示例文件，包含三个批注： 突出显示、 文本粘滞便笺以及墨迹便笺。  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  

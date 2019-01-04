@@ -2,12 +2,12 @@
 title: F#风格指南
 description: 了解良好的五个原则F#代码。
 ms.date: 12/10/2018
-ms.openlocfilehash: 7718df596bde9004fb9ba6143146f1f475d25683
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: 9f47257626e04b09b546de2ae315d48d791678be
+ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53168947"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "54030264"
 ---
 # <a name="f-style-guide"></a>F#风格指南
 
@@ -21,7 +21,7 @@ ms.locfileid: "53168947"
 
 1. **好F#代码是简洁、 富有表现力的且可组合**
 
-    F#具有许多功能，使您能够表达更少的代码行中的操作并重用一般功能。 F#核心库还包含许多有用的类型和函数用于处理数据的通用集合。 您自己的函数和中的组合F#核心库 （或其他库） 是惯用的例程的一部分F#编程。 作为一般规则，如果可以快速解决问题更少的代码中，行中其他开发人员 （或将来自助） 将感激。 此外强烈建议你使用如 FSharp.Core，库[vast.NET 库](https://docs.microsoft.com/dotnet/api/)的F#上，运行或上的第三方包[NuGet](https://www.nuget.org/)时需要执行非常重要的任务。
+    F#具有许多功能，使您能够表达更少的代码行中的操作并重用一般功能。 F#核心库还包含许多有用的类型和函数用于处理数据的通用集合。 您自己的函数和中的组合F#核心库 （或其他库） 是惯用的例程的一部分F#编程。 作为一般规则，如果可以快速解决问题更少的代码中，行中其他开发人员 （或将来自助） 将感激。 此外强烈建议你使用如 FSharp.Core，库[vast.NET 库](../../../api/index.md)的F#上，运行或上的第三方包[NuGet](https://www.nuget.org/)时需要执行非常重要的任务。
 
 2. **好F#代码进行互操作**
 

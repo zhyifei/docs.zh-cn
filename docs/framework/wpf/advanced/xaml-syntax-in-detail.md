@@ -29,12 +29,12 @@ helpviewer_keywords:
 - attribute syntax [XAML]
 - XAML [WPF], property element syntax
 ms.assetid: 67cce290-ca26-4c41-a797-b68aabc45479
-ms.openlocfilehash: eabb9c84824a4604319a346612e84563abaf2b76
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 31f9e31d7cd91f9f89e131a7b506cf1a53fce7e4
+ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43485724"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "54030290"
 ---
 # <a name="xaml-syntax-in-detail"></a>XAML 语法详述
 本主题定义的术语，用于描述的 XAML 语法的元素。 这些条款通常使用，本文档中，同时用于 WPF 文档的其余部分专门以及其他使用 XAML 或通过 XAML 语言支持在 System.Xaml 级别启用的基本 XAML 概念的框架。 本主题进一步在本主题中引入的基本术语[XAML 概述 (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)。  
@@ -288,7 +288,7 @@ ms.locfileid: "43485724"
   
 <a name="optional_and_nonrecommended_xaml_usages"></a>   
 ## <a name="optional-and-nonrecommended-xaml-usages"></a>可选的查找 XAML 用法  
- 以下部分介绍了 XAML 用法，从技术上讲支持由 XAML 处理器，但的生成详细级别或剩余的可读的 XAML 文件会干扰其他美观问题您开发的应用程序包含 XAML 源.  
+ 以下各节介绍 XAML 用法，从技术上讲支持由 XAML 处理器，但的生成详细级别或开发包含 XAML 源的应用程序时剩余的可读的 XAML 文件会干扰其他美观问题。  
   
 ### <a name="optional-property-element-usages"></a>可选属性元素用法  
  可选属性元素用法包括显式写出元素内容属性的 XAML 处理器将视为隐式。 例如，当声明的内容<xref:System.Windows.Controls.Menu>，你可以选择显式声明<xref:System.Windows.Controls.ItemsControl.Items%2A>系列<xref:System.Windows.Controls.Menu>作为`<Menu.Items>`属性元素标记和位置<xref:System.Windows.Controls.MenuItem>内`<Menu.Items>`，而不是比使用隐式的 XAML 处理器行为的所有子元素<xref:System.Windows.Controls.Menu>必须是<xref:System.Windows.Controls.MenuItem>并放入<xref:System.Windows.Controls.ItemsControl.Items%2A>集合。 有时可选用法可以帮助直观地阐明对象结构，按标记中的表示形式。 或者，有时显式属性元素用法可以避免从技术上讲功能，但在视觉混乱，例如嵌套的标记扩展的特性值中的标记。  
@@ -317,7 +317,7 @@ ms.locfileid: "43485724"
   
 ## <a name="see-also"></a>请参阅  
  [XAML 概述 (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)  
- [XAML 命名空间 (x:) 语言功能](../../../../docs/framework/xaml-services/xaml-namespace-x-language-features.md)  
+ [XAML Namespace （x:）语言功能](../../../../docs/framework/xaml-services/xaml-namespace-x-language-features.md)  
  [WPF XAML 扩展](../../../../docs/framework/wpf/advanced/wpf-xaml-extensions.md)  
  [依赖项属性概述](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)  
  [TypeConverter 和 XAML](../../../../docs/framework/wpf/advanced/typeconverters-and-xaml.md)  

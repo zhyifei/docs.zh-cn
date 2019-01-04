@@ -9,12 +9,12 @@ helpviewer_keywords:
 - unfreezing Freezable objects [WPF]
 - classes [WPF], Freezable
 ms.assetid: 89c71692-4f43-4057-b611-67c6a8a863a2
-ms.openlocfilehash: a1006816168e405d0d79786b8430b802f1ec0928
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: a4c0a137da74b276b1238d500057ce96756a1ae1
+ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45999437"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "54030368"
 ---
 # <a name="freezable-objects-overview"></a>Freezable 对象概述
 本主题介绍如何有效地使用和创建<xref:System.Windows.Freezable>对象，它们提供特殊功能，可帮助提高应用程序性能。 Freezable 对象的示例包括画笔、 笔、 转换、 几何和动画。  
@@ -126,7 +126,7 @@ mc:Ignorable="PresentationOptions"
   
 -   线程安全： 的冻结<xref:System.Windows.Freezable>可以在线程之间共享。  
   
--   详细的更改通知： 与其他不同<xref:System.Windows.DependencyObject>s，对子属性值更改时 Freezable 对象提供更改通知。  
+-   详细的更改通知：与其他不同<xref:System.Windows.DependencyObject>s，对子属性值更改时 Freezable 对象提供更改通知。  
   
 -   简单克隆： Freezable 类已经实现生成深层克隆的几种方法。  
   
@@ -154,7 +154,7 @@ mc:Ignorable="PresentationOptions"
   
 -   调用<xref:System.Windows.Freezable.WritePostscript%2A>方法，然后再退出写入非依赖项属性数据成员的方法。  
   
- 如果您的类包含的非依赖项属性数据成员<xref:System.Windows.DependencyObject>对象，还必须调用<xref:System.Windows.Freezable.OnFreezablePropertyChanged%2A>方法更改的它们的值，即使将该成员设置为每次`null`。  
+ 如果您的类包含的非依赖项属性数据成员<xref:System.Windows.DependencyObject>对象，还必须调用<xref:System.Windows.Freezable.OnFreezablePropertyChanged%2A>方法每次你更改其中一个其值，即使将该成员设置为`null`。  
   
 > [!NOTE]
 >  务必在开始各个<xref:System.Windows.Freezable>方法通过调用基实现重写。  

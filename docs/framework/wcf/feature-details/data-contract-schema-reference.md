@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - data contracts [WCF], schema reference
 ms.assetid: 9ebb0ebe-8166-4c93-980a-7c8f1f38f7c0
-ms.openlocfilehash: 33661061e1a5db4f7826c1a8eca188f8c782b58f
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: c4e2939c0868bc452496c2b8c4435b5ef316e573
+ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48873714"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "54030524"
 ---
 # <a name="data-contract-schema-reference"></a>数据协定架构参考
 本主题介绍 <xref:System.Runtime.Serialization.DataContractSerializer> 用来描述 XML 序列化的公共语言运行库 (CLR) 类型的 XML 架构 (XSD) 的子集。  
@@ -202,7 +202,7 @@ ms.locfileid: "48873714"
   
  \* 使用时`simpleType`和`complexType,`匿名类型的映射与非匿名类型相同，只不过没有匿名数据协定，因此创建已命名的数据协定后，使用生成的名称派生自元素名称。 下面的列表中是匿名类型的规则：  
   
--   WCF 实现详细信息： 如果`xs:element`名称不能包含句点、 匿名类型映射到外部数据协定类型的内部类型。 如果名称包含句点，则结果数据协定类型是独立的（不是内部类型）。  
+-   WCF 实现详细信息：如果`xs:element`名称不能包含句点、 匿名类型映射到外部数据协定类型的内部类型。 如果名称包含句点，则结果数据协定类型是独立的（不是内部类型）。  
   
 -   内部类型的生成数据协定名称是由外部类型的数据协定名称后跟一个句点、元素名称和字符串“Type”构成。  
   
@@ -290,15 +290,14 @@ ms.locfileid: "48873714"
   
  下面的代码演示 C# 枚举类。  
   
-```  
+```csharp  
 public enum MyEnum  
 {  
-   first = 3,  
-   second = 4,  
-   third =5  
+  first = 3,  
+  second = 4,  
+  third =5  
+}  
 ```  
-  
- }  
   
  此类通过 `DataContractSerializer`映射到下面的架构。 如果枚举值从 1 开始，则不生成 `xs:annotation` 块。  
   
@@ -349,7 +348,7 @@ public enum MyEnum
   
  例如，下面的代码标志一个枚举类型。  
   
-```  
+```csharp  
 [Flags]  
 public enum AuthFlags  
 {    
@@ -402,7 +401,7 @@ rialization/">64</EnumerationValue>
   
  例如，下面的代码是数据协定。  
   
-```  
+```csharp  
 [DataContract]  
 public class Person  
 {  
@@ -619,7 +618,7 @@ public class Employee : Person
 ## <a name="importing-non-datacontract-schemas"></a>导入非 DataContract 架构  
  `DataContractSerializer` 具有 `ImportXmlTypes` 选项，可允许导入不符合 `DataContractSerializer` XSD 配置文件的架构（请参见 <xref:System.Runtime.Serialization.XsdDataContractImporter.Options%2A> 属性）。 将此选项设置为 `true` 可接受不符合要求的架构类型，并将其映射到下面的实现，即包装 <xref:System.Xml.Serialization.IXmlSerializable> 数组的 <xref:System.Xml.XmlNode> （仅类名称不同）。  
   
-```  
+```csharp  
 [GeneratedCodeAttribute("System.Runtime.Serialization", "3.0.0.0")]  
 [System.Xml.Serialization.XmlSchemaProviderAttribute("ExportSchema")]  
 [System.Xml.Serialization.XmlRootAttribute(IsNullable=false)]  
