@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - WS Security
 ms.assetid: c321cbf9-8c05-4cce-b5a5-4bf7b230ee03
-ms.openlocfilehash: 8b31ebc846992f51484ae058ce05d9aa12590372
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: bca5942985ca5a0af8ce504565506cda8c396d16
+ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50195185"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "54029926"
 ---
 # <a name="message-security-anonymous"></a>匿名消息安全
 匿名消息安全的示例演示如何实现 Windows Communication Foundation (WCF) 应用程序使用消息级安全的无客户端身份验证，但需要使用服务器的 X.509 服务器身份验证证书。 客户端与服务器之间的所有应用程序消息均已进行签名和加密。 此示例基于[WSHttpBinding](../../../../docs/framework/wcf/samples/wshttpbinding.md)示例。 此示例由客户端控制台程序 (.exe) 和 Internet 信息服务 (IIS) 所承载的服务库 (.dll) 组成。 该服务实现定义“请求-答复”通信模式的协定。
@@ -42,10 +42,9 @@ public class CalculatorService : ICalculator
 
   <bindings>
     <wsHttpBinding>
-     <!--
-     <!--This configuration defines the security mode as Message and-->
-     <!--the clientCredentialType as None. This mode provides -- >
-     <!--server authentication only using the service certificate.-->
+     <!-- This configuration defines the security mode as Message and -->
+     <!-- the clientCredentialType as None. This mode provides -->
+     <!-- server authentication only using the service certificate. -->
 
      <binding>
        <security mode="Message">
@@ -238,6 +237,6 @@ Press <ENTER> to terminate client.
 -   运行完示例后运行示例文件夹中的 Cleanup.bat。  
   
 > [!NOTE]
->  此脚本不会在跨计算机运行此示例时移除客户端上的服务证书。 如果有运行在计算机之间使用证书的 Windows Communication Foundation (WCF) 示例，请确保清除已安装在 CurrentUser-TrustedPeople 存储区中的服务证书。 为此，请使用以下命令：`certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>`，例如：`certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com.`。
+>  此脚本不会在跨计算机运行此示例时移除客户端上的服务证书。 如果有运行在计算机之间使用证书的 Windows Communication Foundation (WCF) 示例，请确保清除已安装在 CurrentUser-TrustedPeople 存储区中的服务证书。 若要执行此操作，请使用以下命令：`certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>` 例如： `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com.`
 
 ## <a name="see-also"></a>请参阅

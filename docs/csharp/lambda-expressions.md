@@ -1,4 +1,4 @@
-﻿---
+---
 title: Lambda 表达式
 description: 了解如何使用 Lambda 表达式，它们是可作为参数传递的可执行代码块。
 ms.author: ronpet

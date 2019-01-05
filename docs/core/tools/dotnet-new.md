@@ -1,15 +1,13 @@
 ---
-title: dotnet new 命令 - .NET Core CLI
+title: dotnet new 命令
 description: dotnet new 命令可根据指定模板新建 .NET Core 项目。
-author: mairaw
-ms.author: mairaw
 ms.date: 10/24/2018
-ms.openlocfilehash: a8d486f569f31d68d5659ac6a80d615474ef2506
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 3a10aaa93af57e7beb86771e7d3b00b06fca14b2
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 12/10/2018
-ms.locfileid: "53131477"
+ms.locfileid: "53169675"
 ---
 # <a name="dotnet-new"></a>dotnet new
 

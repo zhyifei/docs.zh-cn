@@ -2,14 +2,13 @@
 title: .NET Core 的 csproj 格式的新增内容
 description: 了解现有文件和 .NET Core csproj 文件之间的区别
 author: blackdwarf
-ms.author: mairaw
 ms.date: 09/22/2017
-ms.openlocfilehash: f2ab476ee20ae90a84de7a6ccc76ce72738c1343
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: bc81dc5c201fea6caa752248c2b59636bd7465ec
+ms.sourcegitcommit: d6e419f9d9cd7e8f21ebf5acde6d016c16332579
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53143696"
+ms.lasthandoff: 12/12/2018
+ms.locfileid: "53286567"
 ---
 # <a name="additions-to-the-csproj-format-for-net-core"></a>.NET Core 的 csproj 格式的新增内容
 
@@ -175,7 +174,7 @@ ms.locfileid: "53143696"
 ```
 
 ## <a name="nuget-metadata-properties"></a>NuGet 元数据属性
-迁移到 MSbuild 后，我们已将在打包 NuGet 包时使用的输入元数据从 *project.json* 移到 *.csproj* 文件中。 输入为 MSBuild 属性，因此它们必须转到 `<PropertyGroup>` 组中。 下面列出了在使用 `dotnet pack` 命令或属于 SDK 的 `Pack` MSBuild 目标时，用作打包进程的输入的属性。 
+迁移到 MSBuild 后，我们已将在打包 NuGet 包时使用的输入元数据从 project.json 移到 .csproj 文件中。 输入为 MSBuild 属性，因此它们必须转到 `<PropertyGroup>` 组中。 下面列出了在使用 `dotnet pack` 命令或属于 SDK 的 `Pack` MSBuild 目标时，用作打包进程的输入的属性。 
 
 ### <a name="ispackable"></a>IsPackable
 一个指定能否打包项目的布尔值。 默认值为 `true`。 
@@ -275,7 +274,7 @@ ms.locfileid: "53143696"
 
 每个特性都有一个可控制其内容的属性，还有一个可以禁用其生成的属性，如下表所示：
 
-| 特性                                                      | 属性               | 要禁用的属性                             |
+| 特性                                                      | Property               | 要禁用的属性                             |
 |----------------------------------------------------------------|------------------------|-------------------------------------------------|
 | <xref:System.Reflection.AssemblyCompanyAttribute>              | `Company`              | `GenerateAssemblyCompanyAttribute`              |
 | <xref:System.Reflection.AssemblyConfigurationAttribute>        | `Configuration`        | `GenerateAssemblyConfigurationAttribute`        |

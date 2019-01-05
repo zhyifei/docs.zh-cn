@@ -2,12 +2,12 @@
 title: 通道分块
 ms.date: 03/30/2017
 ms.assetid: e4d53379-b37c-4b19-8726-9cc914d5d39f
-ms.openlocfilehash: 9572ad6f88786af34252cea1f3c62d5067257b8b
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 660a20432b28f7db1c2933bd1a71bc6990a1d52a
+ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44087904"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "54030498"
 ---
 # <a name="chunking-channel"></a>通道分块
 发送使用 Windows Communication Foundation (WCF) 的大型消息时，它是内存的通常需要限制用于缓冲这些消息量。 一种可能的解决方案是流处理消息正文（假定数据主要集中在正文中）。 不过，有些协议要求对整个消息进行缓冲。 可靠消息和消息安全就是两个这样的示例。 另一个可能的解决方案是将大消息分割成称为消息块的小消息，一次发送一个消息块，并在接收端重建大消息。 应用程序本身就能实现这种分块和取消分块，或者使用自定义通道来实现。 块区通道示例演示如何使用自定义协议或分层通道为任意大的消息进行分块和取消分块。  
@@ -74,7 +74,7 @@ interface ITestService
 <s:Envelope xmlns:a="http://www.w3.org/2005/08/addressing"   
             xmlns:s="http://www.w3.org/2003/05/soap-envelope">  
   <s:Header>  
-<!—Original message action is replaced with a chunking-specific action. -->  
+<!--Original message action is replaced with a chunking-specific action. -->  
     <a:Action s:mustUnderstand="1">http://samples.microsoft.com/chunkingAction</a:Action>  
 <!--  
 Original message is assigned a unique id that is transmitted   
@@ -205,7 +205,7 @@ as the ChunkingStart message.
   
  ![块区通道](../../../../docs/framework/wcf/samples/media/chunkingchannel1.gif "ChunkingChannel1")  
   
- 在接收端，`ChunkingChannel` 从内部通道提取消息并将其传递到名为 `XmlDictionaryReader` 的自定义 `ChunkingReader`，后者将从传入的消息块重组原始消息。 `ChunkingChannel` 将此 `ChunkingReader` 包装到一个名为 `Message` 的自定义 `ChunkingMessage` 实现中并将此消息返回到上一层。 通过 `ChunkingReader` 和 `ChunkingMessage` 的这一组合，可以在上一层读取原始消息正文时取消消息的分块，而不必缓冲整个原始消息正文。 `ChunkingReader` 有一个队列可用来将传入的消息块缓冲为缓冲的消息块，缓冲的消息块最多可以达到可配置的最大缓冲消息块数量。 当达到此最大限度时，读取器将等待上一层将消息从队列中排出（即仅从原始消息正文中读取）或等待直到达到最大接收超时值。  
+ 在接收端，`ChunkingChannel` 从内部通道拉取消息并将其传递到名为 `XmlDictionaryReader` 的自定义 `ChunkingReader`，后者将从传入的消息块重组原始消息。 `ChunkingChannel` 将此 `ChunkingReader` 包装到一个名为 `Message` 的自定义 `ChunkingMessage` 实现中并将此消息返回到上一层。 通过 `ChunkingReader` 和 `ChunkingMessage` 的这一组合，可以在上一层读取原始消息正文时取消消息的分块，而不必缓冲整个原始消息正文。 `ChunkingReader` 有一个队列可用来将传入的消息块缓冲为缓冲的消息块，缓冲的消息块最多可以达到可配置的最大缓冲消息块数量。 当达到此最大限度时，读取器将等待上一层将消息从队列中排出（即仅从原始消息正文中读取）或等待直到达到最大接收超时值。  
   
  ![块区通道](../../../../docs/framework/wcf/samples/media/chunkingchannel2.gif "ChunkingChannel2")  
   

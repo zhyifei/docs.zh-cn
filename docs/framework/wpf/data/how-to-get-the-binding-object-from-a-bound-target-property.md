@@ -16,14 +16,14 @@ ms.locfileid: "44259869"
 本示例演示如何从数据绑定的目标属性获取绑定对象。  
   
 ## <a name="example"></a>示例  
- 您可以执行以下操作来获取<xref:System.Windows.Data.Binding>对象：  
+ 可以执行以下操作来获取 <xref:System.Windows.Data.Binding> 对象：  
   
  [!code-csharp[BindValidation#GetBinding](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BindValidation/CSharp/Window1.xaml.cs#getbinding)]  
   
 > [!NOTE]
->  必须为所需的绑定指定依赖属性，因为目标对象的多个属性可能正在使用数据绑定。  
+>  要获取所需的绑定，必须指定依赖属性，因为目标对象中正在使用数据绑定的属性可能不止一个。  
   
- 或者，可以获取<xref:System.Windows.Data.BindingExpression>，然后获取的值<xref:System.Windows.Data.BindingExpression.ParentBinding%2A>属性。  
+ 或者，可以获取 <xref:System.Windows.Data.BindingExpression>，然后获取 <xref:System.Windows.Data.BindingExpression.ParentBinding%2A> 属性的值。  
   
  有关完整示例，请参阅[绑定验证示例](https://go.microsoft.com/fwlink/?LinkID=159972)。  
   

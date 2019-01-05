@@ -1,15 +1,15 @@
 ---
-title: 在持续集成 (CI) 中使用 .NET Core SDK 和工具 - .NET Core CLI
+title: 在持续集成 (CI) 中使用 .NET Core SDK 和工具
 description: 了解如何在生成服务器上使用 .NET Core SDK 及其工具。
 author: guardrex
 ms.date: 05/18/2017
 ms.custom: seodec18
-ms.openlocfilehash: 7891430654b416a2b55fa837f276d991b56370cc
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 4c651983bb900d000de37a0e413ef9ab0f7893c9
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53131386"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53611550"
 ---
 # <a name="using-net-core-sdk-and-tools-in-continuous-integration-ci"></a>在持续集成 (CI) 中使用 .NET Core SDK 和工具
 
@@ -124,7 +124,7 @@ LOCALDOTNET="$INSTALLDIR/dotnet"
 
 可以将 [Travis CI](https://travis-ci.org/) 配置为使用 `csharp` 语言和 `dotnet` 键安装 .NET Core SDK。 有关详细信息，请参阅 Travis CI 官方文档[生成 C#、F# 或 Visual Basic 项目](https://docs.travis-ci.com/user/languages/csharp/)。 请注意，访问 Travis CI 信息时，社区维护的 `language: csharp` 语言标识符适用于所有 .NET 语言，包括 F# 和 Mono。
 
-Travis CI 可同时在生成矩阵中运行 macOS 和 Linux 作业。在生成矩阵中，可以指定运行时、环境和排除项/包含项的组合，从而涵盖应用的生成组合。 有关详细信息，请参阅 Travis CI 文档 [.travis.yml 示例](https://github.com/dotnet/docs/blob/master/.travis.yml)文件和[自定义生成](https://docs.travis-ci.com/user/customizing-the-build)。 基于 MSBuild 的工具在包中添加 LTS (1.0.x) 和最新 (1.1.x) 运行时；因此，通过安装 SDK，可以收到执行生成所需的一切。
+Travis CI 可同时在生成矩阵中运行 macOS 和 Linux 作业。在生成矩阵中，可以指定运行时、环境和排除项/包含项的组合，从而涵盖应用的生成组合。 有关详细信息，请参阅 Travis CI 文档中的[自定义生成](https://docs.travis-ci.com/user/customizing-the-build)一文。 基于 MSBuild 的工具在包中添加 LTS (1.0.x) 和最新 (1.1.x) 运行时；因此，通过安装 SDK，可以收到执行生成所需的一切。
 
 ### <a name="appveyor"></a>AppVeyor
 
@@ -161,7 +161,7 @@ install:
 
    ![添加生成步骤](./media/using-ci-with-cli/add-build-step.png)
 
-1. 此时，系统会显示“任务目录”。 此目录包含在生成中使用的任务。 由于已有脚本，因此选择“PowerShell:运行 PowerShell 脚本”旁边的“添加”按钮。
+1. 此时，系统会显示“任务目录”。 此目录包含在生成中使用的任务。 由于已有脚本，因此请为“PowerShell：运行 PowerShell 脚本”选择“添加”按钮
 
    ![添加 PowerShell 脚本步骤](./media/using-ci-with-cli/add-powershell-script.png)
 

@@ -2,14 +2,13 @@
 title: 关于 .NET Core
 description: 了解 .NET Core。
 author: richlander
-ms.author: mairaw
 ms.date: 08/01/2018
-ms.openlocfilehash: 93619fce58a3b3aa94e6c14fc7cfeb1b0bf48272
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 39381a44332cbd920fdd2cb5f6707be4fcb6bcfd
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 12/10/2018
-ms.locfileid: "53126973"
+ms.locfileid: "53170400"
 ---
 # <a name="about-net-core"></a>关于 .NET Core
 
@@ -20,7 +19,7 @@ ms.locfileid: "53126973"
 - **命令行工具：** 包括可用于本地开发和持续集成方案中的易于使用的命令行工具。
 - **部署灵活：** 可以包含在应用或已安装的并行用户或计算机范围中。 可搭配 [Docker 容器](docker/index.md)使用。
 - **兼容性：**.NET Core 通过 [.NET Standard](../standard/net-standard.md)与 .NET Framework、Xamarin 和 Mono 兼容。
-- **开放源：**.NET Core 是一个开放源平台，使用 MIT 和 Apache 2 许可证。 .NET Core 是一个 [.NET Foundation](https://dotnetfoundation.org/) 项目。
+- **开放源代码：**.NET Core 平台是开放源代码，使用 MIT 和 Apache 2 许可证。 .NET Core 是一个 [.NET Foundation](https://dotnetfoundation.org/) 项目。
 - **由 Microsoft 支持：**.NET Core 由 Microsoft 依据 [.NET Core 支持](https://www.microsoft.com/net/core/support/)提供支持。
 
 ## <a name="languages"></a>语言

@@ -1,22 +1,20 @@
 ---
-title: Docker 简介 - .NET Core
+title: Docker 简介
 description: 本文简要概述 .NET Core 应用程序上下文中的 Docker。
-author: jralexander
-ms.author: johalex
 ms.date: 11/06/2017
 ms.custom: mvc, seodec18
-ms.openlocfilehash: 1655d4652c4e9b48c48a2a22c2a1bf6cdd459088
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 54bad8fcb34e46700fedf508bbc84ad846b05d76
+ms.sourcegitcommit: 3d0c29b878f00caec288dfecb3a5c959de5aa629
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53148862"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53656162"
 ---
 # <a name="introduction-to-net-and-docker"></a>.NET 和 Docker 简介
 
 本文提供了如何在 Docker 上使用 .NET 的简介和概念背景。
 
-## <a name="docker-packaging-your-apps-to-deploy-and-run-anywhere"></a>Docker：打包应用程序以在任何位置部署和运行
+## <a name="docker-packaging-your-apps-to-deploy-and-run-anywhere"></a>Docker：打包应用以在任何位置部署和运行
 
 [Docker](../../standard/microservices-architecture/container-docker-introduction/docker-defined.md) 是一个开放平台，使开发人员和管理员可以在称为[容器](https://www.docker.com/what-container)的松散隔离的环境中构建[映像](https://docs.docker.com/glossary/?term=image)、交付和运行分布式应用程序。 此方法可以在开发、QA 和生产环境之间进行高效的应用程序生命周期管理。
  

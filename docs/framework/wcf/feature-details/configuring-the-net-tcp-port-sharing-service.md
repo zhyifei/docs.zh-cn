@@ -2,12 +2,12 @@
 title: 配置 Net.TCP 端口共享服务
 ms.date: 03/30/2017
 ms.assetid: b6dd81fa-68b7-4e1b-868e-88e5901b7ea0
-ms.openlocfilehash: 7232fc587aa7f63167034f7474d6c5e7476048ed
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 3afc4cf50ac0dda0198ca8986177fd3028f9837e
+ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53153470"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "54029354"
 ---
 # <a name="configuring-the-nettcp-port-sharing-service"></a>配置 Net.TCP 端口共享服务
 使用 Net.TCP 传输协议的自承载服务可以控制某些高级设置，如 `ListenBacklog` 和 `MaxPendingAccepts`，这些设置控制用作网络通信的基础 TCP 套接字的行为。 但是，如果传输绑定已禁用端口共享（默认情况下是启用的），则这些针对每个套接字的设置将仅在绑定级别适用。  
@@ -27,10 +27,10 @@ ms.locfileid: "53153470"
 ```xml  
 <configuration>  
    <system.serviceModel.activation>  
-       <net.tcp listenBacklog="16" <!—16 * # of processors -->  
-          maxPendingAccepts="4"<!— 4 * # of processors -->  
+       <net.tcp listenBacklog="16" <!--16 * # of processors -->  
+          maxPendingAccepts="4"<!-- 4 * # of processors -->  
           maxPendingConnections="100"  
-          receiveTimeout="00:00:30" <!—30 seconds -->  
+          receiveTimeout="00:00:30" <!--30 seconds -->  
           teredoEnabled="false">  
           <allowAccounts>  
              <!-- LocalSystem account -->  

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - configuring services [WCF]
 ms.assetid: c9c8cd32-2c9d-4541-ad0d-16dff6bd2a00
-ms.openlocfilehash: 11d24bec46cfb190fe1a7c2a7b9ac78ac4d5e799
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: a38b4202ba3402c2dff3884c1560752d0353e0ba
+ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50200857"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "54029666"
 ---
 # <a name="configuring-services-using-configuration-files"></a>使用配置文件配置服务
 使用配置文件配置 Windows Communication Foundation (WCF) 服务使你能够灵活提供终结点，并设计时在部署时而非在服务行为数据。 本主题概述了当前可用的主要技术。  
@@ -21,7 +21,7 @@ ms.locfileid: "50200857"
 > [!IMPORTANT]
 >  在部署并行方案（其中部署了服务的两个不同版本）时，必须指定配置文件中引用的程序集的部分名称。 这是因为配置文件将在服务的所有版本间共享，并可在不同版本的 .NET Framework 下运行。  
   
-## <a name="systemconfiguration-webconfig-and-appconfig"></a>System.Configuration：Web.config 和 App.config  
+## <a name="systemconfiguration-webconfig-and-appconfig"></a>System.Configuration:Web.config 和 App.config  
  WCF 使用 System.Configuration 配置系统的[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]。  
   
  配置服务时在 Visual Studio 中，使用 Web.config 文件或 App.config 文件来指定的设置。 配置文件名称的选择由为服务选择的宿主环境确定。 如果正在使用 IIS 来承载服务，则使用 Web.config 文件。 如果正在使用任何其他宿主环境，则使用 App.config 文件。  
@@ -37,7 +37,7 @@ ms.locfileid: "50200857"
 <system.ServiceModel>  
   
    <services>  
-   <!—- Define the service endpoints. This section is optional in the new  
+   <!-- Define the service endpoints. This section is optional in the new  
     default configuration model in .NET Framework 4. -->  
       <service>  
          <endpoint/>  
@@ -126,7 +126,7 @@ ms.locfileid: "50200857"
     <basicHttpBinding>  
      <binding name="myBindingConfiguration1" closeTimeout="00:01:00" />  
      <binding name="myBindingConfiguration2" closeTimeout="00:02:00" />  
-     <binding closeTimeout="00:03:00" />  <!—- Default binding for basicHttpBinding -->  
+     <binding closeTimeout="00:03:00" />  <!-- Default binding for basicHttpBinding -->  
     </basicHttpBinding>  
      </bindings>  
      <services>  

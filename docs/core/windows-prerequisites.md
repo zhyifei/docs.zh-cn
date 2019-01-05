@@ -1,13 +1,13 @@
 ---
 title: Windows 上 .NET Core 的先决条件
 description: 了解在 Windows 计算机上开发和运行 .NET Core 应用程序所需的依赖项。
-ms.date: 12/05/2018
-ms.openlocfilehash: 8f9a823ab3eea15d7e33da6ff00992057c8c4e38
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.date: 12/14/2018
+ms.openlocfilehash: 2209c6e74413204c38ba54ffc538846f27d0bdf6
+ms.sourcegitcommit: 3d0c29b878f00caec288dfecb3a5c959de5aa629
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53130863"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53656110"
 ---
 # <a name="prerequisites-for-net-core-on-windows"></a>Windows 上 .NET Core 的先决条件
 
@@ -35,12 +35,12 @@ ms.locfileid: "53130863"
 
 以下文章提供了 .NET Core 针对每个版本所支持的操作系统的完整列表：
 
+* [.NET Core 3.0（预览版）](https://github.com/dotnet/core/blob/master/release-notes/3.0/3.0-supported-os.md)
 * [.NET Core 2.2](https://github.com/dotnet/core/blob/master/release-notes/2.2/2.2-supported-os.md)
 * [.NET Core 2.1](https://github.com/dotnet/core/blob/master/release-notes/2.1/2.1-supported-os.md)
-* [.NET Core 1.1](https://github.com/dotnet/core/blob/master/release-notes/1.1/1.1-supported-os.md)
 * [.NET Core 1.0](https://github.com/dotnet/core/blob/master/release-notes/1.0/1.0-supported-os.md)
 
-有关下载链接和详细信息，请参阅 [.NET 下载](https://www.microsoft.com/net/download)下载最新版本或 [.NET 下载存档](https://dotnet.microsoft.com/download/archives#dotnet-core)下载较旧版本。
+有关下载链接和详细信息，请参阅 [.NET 下载](https://dotnet.microsoft.com/download)下载最新版本或 [.NET 下载存档](https://dotnet.microsoft.com/download/archives#dotnet-core)下载较旧版本。
 
 ## <a name="net-core-dependencies"></a>.NET Core 依赖项
 
@@ -62,8 +62,12 @@ ms.locfileid: "53130863"
 >
 > 除 KB2999226 以外，请确保还安装了 [KB2533623](https://support.microsoft.com/en-us/help/2533623/microsoft-security-advisory-insecure-library-loading-could-allow-remot)。 如果没有安装此更新，则在启动 .NET Core 应用程序时会看到如下错误：`The library hostfxr.dll was found, but loading it from C:\<path_to_app>\hostfxr.dll failed`。
 
-## <a name="prerequisites-with-visual-studio-2017"></a>Visual Studio 2017 的先决条件
+## <a name="prerequisites-for-net-core-30-preview-1"></a>.NET Core 3.0 预览版 1 的先决条件
 
+.NET core 3.0 预览版 1 与其他版本的 .NET Core 具有相同的先决条件。 但是，如果要使用 Visual Studio 创建 .NET Core 3.0 项目，则必须使用 [Visual Studio 2019 预览版](https://visualstudio.microsoft.com/vs/preview/)。 Visual Studio 2019 预览版可与其他版本的 Visual studio 并行安装，不会发生冲突。
+
+## <a name="prerequisites-with-visual-studio-2017"></a>Visual Studio 2017 的先决条件
+    
 可以使用任何编辑器，通过 .NET Core SDK 开发 .NET Core 应用程序。 Visual Studio 2017 提供了用于在 Windows 上开发 .NET Core 应用程序的集成开发环境。
 
 在[发行说明](/visualstudio/releasenotes/vs2017-relnotes)中可以详细了解 Visual Studio 2017 中的更改。

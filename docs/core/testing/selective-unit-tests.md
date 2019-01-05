@@ -1,20 +1,19 @@
 ---
-title: 运行选择性单元测试 - .NET Core
+title: 运行选择性单元测试
 description: 如何使用筛选表达式通过 .NET Core 中的 dotnet 测试命令运行选择性单元测试。
 author: smadala
-ms.author: mairaw
 ms.date: 03/22/2017
 ms.custom: seodec18
-ms.openlocfilehash: 3c24fb8cc5024399ae523801373b0fd8eff85f45
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 2ec6dc770f33acc4acea79e60cf6f9c33f1077d8
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53151741"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53239938"
 ---
 # <a name="running-selective-unit-tests"></a>运行选择性单元测试
 
-下面的示例使用 `dotnet test`。 如果使用的是 `vstest.console.exe`，请将 `--filter ` 替换成 `--testcasefilter:`。
+借助 .NET Core 中的 `dotnet test` 命令，可以使用筛选表达式来运行选择性测试。 本文演示如何筛选运行哪些测试。 下面的示例使用 `dotnet test`。 如果使用的是 `vstest.console.exe`，请将 `--filter ` 替换成 `--testcasefilter:`。
 
 ## <a name="mstest"></a>MSTest
 

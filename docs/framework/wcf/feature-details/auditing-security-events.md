@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - auditing security events [WCF]
 ms.assetid: 5633f61c-a3c9-40dd-8070-1c373b66a716
-ms.openlocfilehash: 70bd756c9de2cf6ffb43479b0b28a6d51340f905
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: fd6852e5381a5e57bc911203b110d189d23a9e9d
+ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50198077"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "54030563"
 ---
 # <a name="auditing-security-events"></a>审核安全事件
 创建使用 Windows Communication Foundation (WCF) 的应用程序可以利用审核功能记录安全事件 （成功、 失败，或两者）。 这些事件被写入 Windows 系统事件日志，并且可以使用事件查看器进行检查。  
@@ -28,7 +28,7 @@ ms.locfileid: "50198077"
  你可以检查这两个审核级别的成功或失败，这被称为*审核行为*。  
   
 ## <a name="audit-log-location"></a>审核日志位置  
- 一旦确定审核级别和行为，您（或管理员）就可指定审核日志的位置。 有以下三种选择：Default、Application 和 Security。 当指定“默认值”时，实际日志取决于所使用的系统以及该系统是否支持写入安全日志。 有关详细信息，请参阅本主题后面的"操作系统"部分。  
+ 一旦确定审核级别和行为，您（或管理员）就可指定审核日志的位置。 三个选项包括：默认值、 应用程序中，和安全。 当指定“默认值”时，实际日志取决于所使用的系统以及该系统是否支持写入安全日志。 有关详细信息，请参阅本主题后面的"操作系统"部分。  
   
  写入 Security 日志要求具有 `SeAuditPrivilege`。 默认情况下，只有“本地系统”和“网络服务”帐户具有此特权。 管理 Security 日志功能 `read` 和 `delete` 要求具有 `SeSecurityPrivilege`。 默认情况下，只有管理员具有此特权。  
   
@@ -51,7 +51,7 @@ ms.locfileid: "50198077"
 |<xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.ServiceAuthorizationAuditLevel%2A>|指定在服务级别审核哪些类型的服务授权事件。 选择包括 `None`、`Failure`、`Success` 和 `SuccessOrFailure`。|  
 |<xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.SuppressAuditFailure%2A>|指定在审核失败时如何处理客户端请求。 例如，当服务尝试写入 Security 日志但不具有 `SeAuditPrivilege` 时。 默认值 `true` 指示忽略失败，因此将正常处理客户端请求。|  
   
- 设置应用程序日志审核事件的示例，请参阅[如何： 审核安全事件](../../../../docs/framework/wcf/feature-details/how-to-audit-wcf-security-events.md)。  
+ 设置应用程序日志审核事件的示例，请参阅[如何：审核安全事件](../../../../docs/framework/wcf/feature-details/how-to-audit-wcf-security-events.md)。  
   
 ### <a name="configuration"></a>配置  
  此外可以使用配置来指定审核行为，通过添加[ \<serviceSecurityAudit >](../../../../docs/framework/configure-apps/file-schema/wcf/servicesecurityaudit.md)下[\<行为 >](../../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md)。 必须添加下的元素[\<行为 >](../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)如下面的代码中所示。  
@@ -61,7 +61,7 @@ ms.locfileid: "50198077"
   <system.serviceModel>  
     <behaviors>  
       <behavior>  
-        <!— auditLogLocation="Application" or "Security" -—>  
+        <!-- auditLogLocation="Application" or "Security" -->  
         <serviceSecurityAudit  
                   auditLogLocation="Application"  
                   suppressAuditFailure="true"  

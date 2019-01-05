@@ -5,12 +5,12 @@ author: BillWagner
 ms.author: wiwagn
 ms.date: 08/07/2017
 ms.custom: vs-dotnet, seodec18
-ms.openlocfilehash: 2af688057dbb3724ea03818157368ff0b54f0cf2
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 0c98f8c8fc4847570964d8d4ea8deb221164441d
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 12/10/2018
-ms.locfileid: "53144568"
+ms.locfileid: "53168931"
 ---
 # <a name="build-a-net-standard-class-library-with-c-and-the-net-core-sdk-in-visual-studio-2017"></a>在 Visual Studio 2017 中使用 C# 和 .NET Core SDK 生成 .NET Standard 类库
 
@@ -29,7 +29,7 @@ ms.locfileid: "53144568"
 
 1. 在“新建项目”对话框中，展开“其他项目类型”节点，然后选择“Visual Studio 解决方案”。 将解决方案命名为“ClassLibraryProjects”，然后选择“确定”按钮。
 
-   ![“新建项目”对话框](./media/library-with-visual-studio/newproject.png)
+   ![“新建项目”对话框，其中突出显示新的空白解决方案](./media/library-with-visual-studio/new-project-dialog.png)
 
 ## <a name="creating-the-class-library-project"></a>创建类库项目
 
@@ -39,15 +39,15 @@ ms.locfileid: "53144568"
 
 1. 在“添加新项目”对话框中，展开“Visual C#”节点，并依次选择“.NET Standard”节点和“类库(.NET Standard)”项目模板。 在“名称”文本框中，输入项目名称“StringLibrary”。 选择“确定”，创建类库项目。
 
-   ![“添加新项目”对话框](./media/library-with-visual-studio/libproject.png)
+   ![“添加新的库项目”对话框](./media/library-with-visual-studio/add-new-library-project.png)
 
    然后，代码窗口在 Visual Studio 开发环境中打开。
 
-   ![显示默认类库模板代码的 Visual Studio 应用程序窗口](./media/library-with-visual-studio/stringlibrary.png)
+   ![显示默认类库模板代码的 Visual Studio 应用程序窗口](./media/library-with-visual-studio/string-library-project.png)
 
 1. 请检查以确保库定目标到 .NET Standard 的正确版本。 右键单击“解决方案资源管理器”窗口中的库项目，再选择“属性”。 “目标框架”文本框显示定目标到 .NET Standard 2.0。
 
-   ![类库的项目属性](./media/library-with-visual-studio/properties.png)
+   ![类库的项目属性](./media/library-with-visual-studio/library-project-properties.png)
 
 1. 将代码窗口中的代码替换为以下代码，并保存文件：
 
@@ -57,7 +57,7 @@ ms.locfileid: "53144568"
 
 1. 在菜单栏中，选择“生成” > “生成解决方案”。 此项目的编译应该没有错误。
 
-   ![显示生成成功的输出窗格](./media/library-with-visual-studio/buildsucceeds.png)
+   ![显示生成成功的输出窗格](./media/library-with-visual-studio/output-pane-successful-build.png)
 
 ## <a name="next-step"></a>下一步
 

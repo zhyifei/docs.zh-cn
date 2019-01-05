@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 885037f7-1c2b-4d7a-90d9-06b89be172f2
-ms.openlocfilehash: 4dd990975bcaad7c8789065dd1b17aba4bf36852
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1d9a6d0a556613576a14c600aa72d3f4524cdc3e
+ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33499994"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "54029627"
 ---
 # <a name="how-to-specify-a-service-binding-in-configuration"></a>如何：在配置中指定服务绑定
-在本示例中，为基本计算器服务定义 `ICalculator` 协定，在 `CalculatorService` 类中实现该服务，然后在 Web.config 文件中配置其终结点，该文件中指定此服务使用 <xref:System.ServiceModel.BasicHttpBinding>。 有关如何配置使用代码而不一种配置此服务的说明，请参阅[如何： 在代码中指定服务绑定](../../../docs/framework/wcf/how-to-specify-a-service-binding-in-code.md)。  
+在本示例中，为基本计算器服务定义 `ICalculator` 协定，在 `CalculatorService` 类中实现该服务，然后在 Web.config 文件中配置其终结点，该文件中指定此服务使用 <xref:System.ServiceModel.BasicHttpBinding>。 有关如何使用代码而不配置此服务配置的说明，请参阅[如何：在代码中指定服务绑定](../../../docs/framework/wcf/how-to-specify-a-service-binding-in-code.md)。  
   
  通常，最佳做法是以声明方式在配置中指定绑定和地址信息，而不是在代码中强制指定。 在代码中定义终结点通常是不可行的，因为已部署服务的绑定和地址通常与在部署服务时所用的绑定和地址不同。 一般说来，通过将绑定和寻址信息放置在代码之外，无需重新编译或重新部署应用程序即可更改这些信息。  
   
@@ -45,18 +45,18 @@ ms.locfileid: "33499994"
         <services>  
           <service name=" CalculatorService" >  
             <endpoint   
-            <-- Leave the address blank to be populated by default-->  
-            <--from the hosting environment,in this case IIS, so -->  
-            <-- the address will just be that of the IIS Virtual -->  
-            <--Directory.-->  
+            <!-- Leave the address blank to be populated by default -->  
+            <!-- from the hosting environment,in this case IIS, so -->  
+            <!-- the address will just be that of the IIS Virtual -->  
+            <!-- Directory. -->  
                 address=""   
-            <--Specify the binding type -->  
+            <!-- Specify the binding type -->  
                 binding="wsHttpBinding"  
-            <--Specify the binding configuration name for that -->  
-            <--binding type. This is optional but useful if you  -->  
-            <--want to modify the properties of the binding. -->  
-            <--The bindingConfiguration name Binding1 is defined  -->  
-            <--below in the bindings element.  -->  
+            <!-- Specify the binding configuration name for that -->  
+            <!-- binding type. This is optional but useful if you -->  
+            <!-- want to modify the properties of the binding. -->  
+            <!-- The bindingConfiguration name Binding1 is defined -->  
+            <!-- below in the bindings element. -->  
                 bindingConfiguration="Binding1"  
                 contract="ICalculator" />  
           </service>  
@@ -64,8 +64,8 @@ ms.locfileid: "33499994"
         <bindings>  
           <wsHttpBinding>  
             <binding name="Binding1">  
-              <-- Binding property values can be modified here. -->  
-              <--See the next procedure. -->  
+              <!-- Binding property values can be modified here. -->  
+              <!-- See the next procedure. -->  
             </binding>  
           </wsHttpBinding>  
        </bindings>  
@@ -81,7 +81,7 @@ ms.locfileid: "33499994"
   
 ### <a name="to-modify-the-default-values-of-the-binding-properties"></a>修改绑定属性的默认值  
   
-1.  若要修改的默认属性值之一<xref:System.ServiceModel.WSHttpBinding>，创建一个新的绑定配置名称- `<binding name="Binding1">` -内[ \<wsHttpBinding >](../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)元素，并设置新的属性的值此绑定元素中的绑定。 例如，若要将默认打开和关闭超时值从 1 分钟更改为 2 分钟，需要将下列内容添加到配置文件中。  
+1.  若要修改的默认属性值之一<xref:System.ServiceModel.WSHttpBinding>，创建一个新的绑定配置名称- `<binding name="Binding1">` -内[ \<wsHttpBinding >](../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)元素，并设置新值的属性此绑定元素中的绑定。 例如，若要将默认打开和关闭超时值从 1 分钟更改为 2 分钟，需要将下列内容添加到配置文件中。  
   
     ```xml  
     <wsHttpBinding>  

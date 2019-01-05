@@ -1,17 +1,15 @@
 ---
-title: Docker 映像概述 - .NET Core
+title: Docker 映像概述
 description: 了解如何使用 Docker 注册表中发布的 .NET Core Docker 映像。 你还将了解如何拉取映像和生成自己的映像。
-author: jralexander
-ms.author: johalex
 ms.date: 11/06/2017
 ms.topic: tutorial
 ms.custom: mvc, seodec18
-ms.openlocfilehash: 34ff6ce7d990412fa0ac4896d1e2e39b307681f0
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: dd8c6c500dc2177768e6cba0c1e303950e20d4f3
+ms.sourcegitcommit: 3d0c29b878f00caec288dfecb3a5c959de5aa629
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53145827"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53656032"
 ---
 # <a name="learn-about-docker-images-for-net-core"></a>了解适用于 .NET Core 的 Docker 映像
 
@@ -40,7 +38,7 @@ ms.locfileid: "53145827"
 
 * **生成：** 此映像包含编译应用所需的所有内容，其中包括编译器和任何其他用于优化二进制文件的依赖项。  可使用生成映像创建置于生产映像中的资产。 生成映像用于持续集成或用于生成环境中。 此方法允许生成代理在生成映像实例中编译和生成应用程序（包括所有必需的依赖项）。 生成代理只需要了解如何运行此 Docker 映像即可。
 
-* **生产：** 部署和启动映像的速度可以有多快？ 此映像很小，因此从 Docker 注册表到 Docker 主机的网络性能得到了优化。 已准备运行内容，以此实现从 Docker 运行到处理结果的最快时间。 Docker 模型中不需要动态代码编译。 放置在此映像中的内容将限制为运行应用程序所需的二进制文件和内容。
+* **生产：** 如何快速部署和启动映像？ 此映像很小，因此从 Docker 注册表到 Docker 主机的网络性能得到了优化。 已准备运行内容，以此实现从 Docker 运行到处理结果的最快时间。 Docker 模型中不需要动态代码编译。 放置在此映像中的内容将限制为运行应用程序所需的二进制文件和内容。
 
     例如，`dotnet publish` 输出包含：
 
@@ -63,7 +61,7 @@ ms.locfileid: "53145827"
 > [!TIP]
 > 如果不确定自己的需求，需使用 `microsoft/dotnet:<version>-sdk` 映像。 作为“实际”映像，它旨在用作一次性容器（装载源代码并启动容器以启动应用）以及生成其他映像的基础映像。
 
-* `microsoft/dotnet:<version>-runtime`：此映像包含 .NET Core（运行时和库），并且针对在生产环境中运行 .NET Core 应用进行了优化。
+* `microsoft/dotnet:<version>-runtime`：此映像包含 .NET Core（运行时和库），并针对在生产中运行 .NET Core 应用进行了优化。
 
 ## <a name="alternative-images"></a>备用映像
 

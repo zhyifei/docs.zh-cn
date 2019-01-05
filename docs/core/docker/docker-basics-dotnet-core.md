@@ -1,15 +1,15 @@
 ---
-title: 通过 Docker 使应用容器化 - .NET Core
+title: 通过 Docker 使应用容器化
 description: 本教程介绍如何通过 Docker 创建基本 .NET Core 应用程序并使其容器化。
 ms.date: 10/11/2018
 ms.topic: tutorial
 ms.custom: mvc, seodec18
-ms.openlocfilehash: 8f08936142b0cc44baf268f100e228f68920b69d
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: eed72553576f4154fe63b2e5cf035a781afe4b7c
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 12/10/2018
-ms.locfileid: "53126363"
+ms.locfileid: "53169581"
 ---
 # <a name="how-to-containerize-a-net-core-application"></a>如何使 .NET Core 应用程序容器化
 
@@ -22,7 +22,7 @@ ms.locfileid: "53126363"
 > * 如何创建 .NET Core 应用。
 > * 如何将应用部署到 Docker 容器中。
 
-## <a name="net-core-easiest-way-to-get-started"></a>.NET Core：入门的最简单方法
+## <a name="net-core-easiest-way-to-get-started"></a>.NET Core：最简单的入门方式
 
 在创建 Docker 映像之前，需要容器化应用程序。 可在 Linux、MacOS 或 Windows 上创建该映像。 完成该操作最快、最简单的方法是使用 .NET Core。
 

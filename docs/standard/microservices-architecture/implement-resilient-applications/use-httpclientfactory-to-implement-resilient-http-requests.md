@@ -4,12 +4,12 @@ description: 自 .NET Core 2.1 起可用的 HttpClientFactory 是一个“固执
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 07/03/2018
-ms.openlocfilehash: 07ea85509b86eadd2c85dfe59ace674e2faae9a3
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 0ae4dadd6921a71217b50757ede19b8d54910185
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53145106"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53611030"
 ---
 # <a name="use-httpclientfactory-to-implement-resilient-http-requests"></a>使用 HttpClientFactory 实现复原 HTTP 请求
 
@@ -71,7 +71,7 @@ services.AddHttpClient<IOrderingService, OrderingService>();
 
 ### <a name="httpclient-lifetimes"></a>HttpClient 生存期
 
-每次从 IHttpClientFactory 获取 `HttpClient` 对象时，都返回 `HttpClient` 的新实例。 每个命名客户端或类型化客户端都有一个 HttpMessageHandler**。 `IHttpClientFactory` 将汇集工厂创建的 HttpMessageHandler 实例，以减少资源消耗。 如果 HttpMessageHandler 实例的生存期尚未过期，那么在创建新的 `HttpClient` 实例时，可能会从池中重用该实例。
+每次从 IHttpClientFactory 获取 `HttpClient` 对象时，都返回 `HttpClient` 的新实例。 每个命名客户端或类型化客户端都有一个“HttpMessageHandler”。 `IHttpClientFactory` 将汇集工厂创建的 HttpMessageHandler 实例，以减少资源消耗。 如果 HttpMessageHandler 实例的生存期尚未过期，那么在创建新的 `HttpClient` 实例时，可能会从池中重用该实例。
 
 由于每个处理程序通常都管理自己的基础 HTTP 连接，所以有必要汇集处理程序；创建的处理程序数量如果多于必需的数量，则可能导致连接延迟。 部分处理程序还保持连接无期限地打开，这样可以防止处理程序对 DNS 更改作出反应。
 

@@ -2,17 +2,17 @@
 title: X.509 证书验证程序
 ms.date: 03/30/2017
 ms.assetid: 3b042379-02c4-4395-b927-e57c842fd3e0
-ms.openlocfilehash: ece96c04245434853169c458f8f0c0ebe91da724
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: f8bc5c1976e61cbb81d0bc8463a57cfad750a2a7
+ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49123418"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "54030303"
 ---
 # <a name="x509-certificate-validator"></a>X.509 证书验证程序
 此示例演示如何实现自定义 X.509 证书验证程序。 当内置的 X.509 证书验证模式都不能满足应用程序的需求时，实现自定义证书验证程序很有用。 此示例演示了具有自定义验证程序的服务，该验证程序接受自行颁发的证书。 客户端使用此类证书对服务进行身份验证。
 
- 注意：因为任何人都可以构造自行颁发的证书，所以服务使用的自定义验证程序的安全性低于 ChainTrust X509CertificateValidationMode 提供的默认行为。 在成品代码中使用此验证逻辑之前，应慎重考虑这样做的安全隐患。
+ 注意:任何人都可以构造自行颁发的证书服务使用的自定义验证程序是安全性低于 ChainTrust x509certificatevalidationmode 提供的默认行为。 在成品代码中使用此验证逻辑之前，应慎重考虑这样做的安全隐患。
 
  概括而言，此示例演示：
 
@@ -59,16 +59,16 @@ ms.locfileid: "49123418"
         <behavior name="CalculatorServiceBehavior">
           <serviceDebug includeExceptionDetailInFaults ="true"/>
           <serviceCredentials>
-            <!--The serviceCredentials behavior allows one -->
+            <!-- The serviceCredentials behavior allows one -->
             <!-- to specify authentication constraints on -->
             <!-- client certificates. -->
             <clientCertificate>
               <!-- Setting the certificateValidationMode to -->
               <!-- Custom means that if the custom -->
               <!-- X509CertificateValidator does NOT throw -->
-              <!-- an exception, then the provided certificate -- >
+              <!-- an exception, then the provided certificate -->
               <!-- will be trusted without performing any -->
-              <!-- validation beyond that performed by the custom-->
+              <!-- validation beyond that performed by the custom -->
               <!-- validator. The security implications of this -->
               <!-- setting should be carefully considered before -->
               <!-- using Custom in production code. -->
@@ -77,13 +77,13 @@ ms.locfileid: "49123418"
                  customCertificateValidatorType =
 "Microsoft.ServiceModel.Samples.CustomX509CertificateValidator, service" />
             </clientCertificate>
-            <!-- The serviceCredentials behavior allows one to -- >
-            <!--define a service certificate. -->
-            <!--A service certificate is used by a client to  -->
-            <!--authenticate the service and provide message  -->
-            <!--protection. This configuration references the  -->
-            <!--"localhost" certificate installed during the setup  -->
-            <!--instructions. -->
+            <!-- The serviceCredentials behavior allows one to -->
+            <!-- define a service certificate. -->
+            <!-- A service certificate is used by a client to -->
+            <!-- authenticate the service and provide message -->
+            <!-- protection. This configuration references the -->
+            <!-- "localhost" certificate installed during the setup -->
+            <!-- instructions. -->
             <serviceCertificate findValue="localhost"
                  storeLocation="LocalMachine"
                  storeName="My" x509FindType="FindBySubjectName" />
@@ -232,10 +232,10 @@ serviceHost.Credentials.ClientCertificate.Authentication.CustomCertificateValida
     <clientCertificate>
     <!-- Setting the certificateValidationMode to Custom means -->
     <!--that if the custom X509CertificateValidator does NOT -->
-    <!--throw an exception, then the provided certificate will-- >
-    <!-- be trusted without performing any validation beyond that-- >
-    <!-- performed by the custom validator. The security -- >
-    <!--implications of this setting should be carefully -- >
+    <!--throw an exception, then the provided certificate will -->
+    <!--be trusted without performing any validation beyond that -->
+    <!--performed by the custom validator. The security -->
+    <!--implications of this setting should be carefully -->
     <!--considered before using Custom in production code. -->
     <authentication certificateValidationMode="Custom"
        customCertificateValidatorType =
@@ -354,6 +354,6 @@ serviceHost.Credentials.ClientCertificate.Authentication.CustomCertificateValida
 1.  运行完示例后运行示例文件夹中的 Cleanup.bat。 这将从证书存储区中移除服务器和客户端证书。  
   
 > [!NOTE]
->  此脚本不会在跨计算机运行此示例时移除客户端上的服务证书。 如果有运行在计算机之间使用证书的 Windows Communication Foundation (WCF) 示例，请确保清除已安装在 CurrentUser-TrustedPeople 存储区中的服务证书。 为此，请使用以下命令：`certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>`，例如：`certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`。
+>  此脚本不会在跨计算机运行此示例时移除客户端上的服务证书。 如果有运行在计算机之间使用证书的 Windows Communication Foundation (WCF) 示例，请确保清除已安装在 CurrentUser-TrustedPeople 存储区中的服务证书。 若要执行此操作，请使用以下命令：`certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>` 例如： `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`。
 
 ## <a name="see-also"></a>请参阅

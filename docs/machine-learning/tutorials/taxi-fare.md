@@ -6,12 +6,12 @@ ms.author: johalex
 ms.date: 11/06/2018
 ms.topic: tutorial
 ms.custom: mvc, seodec18
-ms.openlocfilehash: a142ab98174182adf6f50cf6eedff27c82993f5e
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 36da24f0cd2d2b9c4884101d97026307174f4130
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53130502"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53236344"
 ---
 # <a name="tutorial-predict-new-york-taxi-fares-using-a-regression-learner-with-mlnet"></a>教程：在 ML.NET 中使用回归学习器预测纽约出租车费用
 
@@ -50,7 +50,7 @@ ms.locfileid: "53130502"
 
 1. 在项目中创建一个名为“数据”的目录来保存数据集和模型文件：
 
-    在“解决方案资源管理器”中，右键单击项目，然后选择“添加” > “新文件夹”。 键入“数据”，然后按 Enter。
+    在“解决方案资源管理器”中，右键单击项目，然后选择“添加” > “新文件夹”。 键入“Data”，然后按 Enter。
 
 1. 安装“Microsoft.ML”NuGet 包：
 
@@ -68,13 +68,13 @@ ms.locfileid: "53130502"
 
 提供的数据集包含以下列：
 
-* vendor_id：出租车供应商的 ID 是一项特征。
-* rate_code：出租车行程的费率类型是一项特征。
-* passenger_count：行程乘客数是一项特征。
-* trip_time_in_secs：行程花费的时间量。 希望在行程完成前预测行程费用。 当时并不知道行程有多长。 因此，行程时间不是一项特征，需要从模型删除此列。
-* trip_distance：行程距离是一项特征。
-* payment_type：付款方式（现金或信用卡）是一项特征。
-* fare_amount：支付的总出租车费是一个标签。
+* **vendor_id：** 出租车供应商的 ID 是一项特征。
+* **rate_code：** 出租车行程的费率类型是一项特征。
+* **passenger_count：** 行程中的乘客人数是一项特征。
+* **trip_time_in_secs：** 这次行程所花的时间。 希望在行程完成前预测行程费用。 当时并不知道行程有多长。 因此，行程时间不是一项特征，需要从模型删除此列。
+* **trip_distance：** 行程距离是一项特征。
+* **payment_type：** 付款方式（现金或信用卡）是一项特征。
+* **fare_amount：** 支付的总出租车费用是一个标签。
 
 ## <a name="create-data-classes"></a>创建数据类
 
@@ -112,7 +112,7 @@ ms.locfileid: "53130502"
 
 [!code-csharp[InitializePaths](../../../samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#2 "Define variables to store the data file paths")]
 
-使用 ML .NET 构建模型时，首先要创建一个 ML 上下文。 这在概念上相当于在实体框架中使用 `DbContext`。 该环境为机器学习作业提供一个上下文，可以用于异常情况跟踪和日志记录。
+使用 ML.NET 生成模型时，首先要创建 ML 上下文。 这在概念上相当于在实体框架中使用 `DbContext`。 该环境为机器学习作业提供一个上下文，可以用于异常情况跟踪和日志记录。
 
 ### <a name="initialize-variables-in-main"></a>在 Main 中初始化变量
 

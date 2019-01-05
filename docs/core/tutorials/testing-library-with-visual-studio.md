@@ -7,15 +7,13 @@ ms.date: 08/07/2017
 dev_langs:
 - csharp
 - vb
-ms.custom:
-- vs-dotnet
-- seodoc18
-ms.openlocfilehash: e3b13126833e49681661e8834ce9f3d8a6c1133e
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.custom: vs-dotnet, seodoc18
+ms.openlocfilehash: 9e680921a882ab1c974a7546a6e91a892288db8d
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 12/10/2018
-ms.locfileid: "53144892"
+ms.locfileid: "53170790"
 ---
 # <a name="testing-a-class-library-with-net-core-in-visual-studio-2017"></a>使用 Visual Studio 2017 测试 .NET Core 类库
 
@@ -30,14 +28,14 @@ ms.locfileid: "53144892"
 
 1. 在“添加新项目”对话框中，选择“Visual C#”节点。 然后，依次选择“.NET Core”节点和“MSTest 测试项目(.NET Core)”项目模板。 在“名称”文本框中，输入项目名称“StringLibraryTest”。 选择“确定”，创建单元测试项目。
 
-   ![“添加新项目”对话框](./media/testing-library-with-visual-studio/testproject.png)
+   ![“添加新项目”对话框，其中显示单元测试项目 - C#](./media/testing-library-with-visual-studio/create-new-test-project.png)
 
    > [!NOTE]  
    > 除了 MSTest 测试项目之外，还可以使用 Visual Studio 为 .NET Core 创建 xUnit 测试项目。
 
 1. 此时，Visual Studio 会创建项目，并在代码窗口中打开 UnitTest1.cs 文件。
 
-   ![Visual Studio 代码窗口显示单元测试项目默认的 UnitTest1 类和 TestMethod1 方法](./media/testing-library-with-visual-studio/unittestwindow.png)
+   ![Visual Studio 代码窗口，用于单元测试项目的类和方法 - C#](./media/testing-library-with-visual-studio/unit-test-editor-window.png)
 
    单元测试模板创建的源代码负责执行以下操作：
 
@@ -49,24 +47,24 @@ ms.locfileid: "53144892"
 
 1. 在“解决方案资源管理器”中，右键单击“StringLibraryTest”项目的“依赖项”节点，并从上下文菜单中选择“添加引用”。
 
-   ![StringLibraryTest 依赖项的上下文菜单](./media/testing-library-with-visual-studio/addreference.png)
+   ![StringLibraryTest 依赖项的上下文菜单 - C#](./media/testing-library-with-visual-studio/add-reference-context-menu.png)
 
 1. 在“引用管理器”对话框中，展开“项目”节点，并选中“StringLibrary”旁边的框。 添加对 `StringLibrary` 程序集的引用后，编译器可以查找 StringLibrary 方法。 选择“确定”按钮。 这会添加对类库项目 `StringLibrary` 的引用。
 
-   ![引用管理器](./media/testing-library-with-visual-studio/referencemanager.png)
+   ![Visual Studio“添加项目引用”对话框](./media/testing-library-with-visual-studio/project-reference-manager.png)
 # <a name="visual-basictabvb"></a>[Visual Basic](#tab/vb) 
 1. 在“解决方案资源管理器”中，打开“ClassLibraryProjects”解决方案节点的上下文菜单，再依次选择“添加” > “新项目”。
 
 1. 在“添加新项目”对话框中，选择“Visual Basic”节点。 然后，依次选择“.NET Core”节点和“MSTest 测试项目(.NET Core)”项目模板。 在“名称”文本框中，输入项目名称“StringLibraryTest”。 选择“确定”，创建单元测试项目。
 
-   ![“添加新项目”对话框](./media/testing-library-with-visual-studio/vb-testproject.png)
+   ![“添加新项目”对话框，其中显示单元测试项目 - Visual Basic](./media/testing-library-with-visual-studio/vb-create-new-test-project.png)
 
    > [!NOTE]  
    > 除了 MSTest 测试项目之外，还可以使用 Visual Studio 为 .NET Core 创建 xUnit 测试项目。
 
 1. 此时，Visual Studio 会创建项目，并在代码窗口中打开 UnitTest1.vb 文件。
 
-   ![Visual Studio 代码窗口显示单元测试项目默认的 UnitTest1 类和 TestMethod1 方法](./media/testing-library-with-visual-studio/vb-unittestwindow.png)
+   ![Visual Studio 代码窗口，用于单元测试项目的类和方法 - Visual Basic](./media/testing-library-with-visual-studio/vb-unit-test-editor-window.png)
 
    单元测试模板创建的源代码负责执行以下操作：
 
@@ -78,11 +76,11 @@ ms.locfileid: "53144892"
 
 1. 在“解决方案资源管理器”中，右键单击“StringLibraryTest”项目的“依赖项”节点，并从上下文菜单中选择“添加引用”。
 
-   ![StringLibraryTest 依赖项的上下文菜单](./media/testing-library-with-visual-studio/addreference.png)
+   ![StringLibraryTest 依赖项的上下文菜单](./media/testing-library-with-visual-studio/add-reference-context-menu.png)
 
 1. 在“引用管理器”对话框中，展开“项目”节点，并选中“StringLibrary”旁边的框。 添加对 `StringLibrary` 程序集的引用后，编译器可以查找 StringLibrary 方法。 选择“确定”按钮。 这会添加对类库项目 `StringLibrary` 的引用。
 
-   ![引用管理器](./media/testing-library-with-visual-studio/referencemanager.png)
+   ![Visual Studio“添加项目引用”对话框 - Visual Basic](./media/testing-library-with-visual-studio/project-reference-manager.png)
 ---
 
 ## <a name="adding-and-running-unit-test-methods"></a>添加并运行单元测试方法
@@ -117,7 +115,7 @@ ms.locfileid: "53144892"
 
 1. 在菜单栏上，选择“文件” > “将 UnitTest1.cs 另存为”。 在“文件另存为”对话框中，选择“保存”按钮旁边的箭头，然后选择“保存时使用编码”。
 
-   ![“文件另存为”对话框](./media/testing-library-with-visual-studio/savefileas.png)
+   ![Visual Studio“文件另存为”对话框 - C#](./media/testing-library-with-visual-studio/save-file-as-dialog.png)
 # <a name="visual-basictabvb"></a>[Visual Basic](#tab/vb) 
 1. 将 UnitTest1.vb 代码窗口中的代码替换为以下代码：
 
@@ -127,20 +125,20 @@ ms.locfileid: "53144892"
 
 1. 在菜单栏上，依次选择“文件” > “将 UnitTest1.vb 另存为”。 在“文件另存为”对话框中，选择“保存”按钮旁边的箭头，然后选择“保存时使用编码”。
 
-   ![“文件另存为”对话框](./media/testing-library-with-visual-studio/savefileas.png)
+   ![Visual Studio“文件另存为”对话框 - Visual Basic](./media/testing-library-with-visual-studio/save-file-as-dialog.png)
 ---
 
 1. 在“确认另存为”对话框中，选择“是”按钮，保存文件。
 
 1. 在“高级保存选项”对话框的“编码”下拉列表中，选择“Unicode (UTF-8 带签名) - 代码页 65001”，然后选择“确定”。
 
-   ![“高级保存选项”对话框](./media/testing-library-with-visual-studio/advancedsaveoptions.png)
+   ![Visual Studio“高级保存选项”对话框](./media/testing-library-with-visual-studio/advanced-save-options.png)
 
    如果无法将源代码保存为 UTF8 编码文件，Visual Studio 可能会将其另存为 ASCII 文件。 在这种情况下，运行时将无法准确解码 ASCII 范围以外的 UTF8 字符，且测试结果也会不准确。
 
 1. 在菜单栏上，选择“测试” > “运行” > “所有测试”。 此时，“测试资源管理器”窗口打开并显示测试已成功运行。 “通过的测试”部分列出了三个测试，“摘要”部分报告了测试运行结果。
 
-   ![测试资源管理器窗口](./media/testing-library-with-visual-studio/firsttest.png)
+   ![通过测试的测试资源管理器窗口](./media/testing-library-with-visual-studio/test-explorer-window.png)
 
 ## <a name="handling-test-failures"></a>处理未通过的测试
 
@@ -159,11 +157,11 @@ ms.locfileid: "53144892"
    ```
 1. 从菜单栏中选择“测试” > “运行” > “所有测试”，运行测试。 “测试资源管理器”窗口指示有两个测试成功，还有一个失败。
 
-   ![测试资源管理器窗口](./media/testing-library-with-visual-studio/failedtest.png)
+   ![未通过测试的测试资源管理器窗口](./media/testing-library-with-visual-studio/failed-test-window.png)
 
-1. 在“未通过的测试”部分中，选择未通过的测试 `TestDoesNotStartWith`。 “测试资源管理器”窗口显示断言生成的消息：“Assert.IsFalse 失败。 ‘Error’ 应返回 false; 实际返回 True”。 由于此次失败，数组中“Error”之后的所有字符串都未进行测试。
+1. 在“未通过的测试”部分中，选择未通过的测试 `TestDoesNotStartWith`。 “测试资源管理器”窗口显示断言生成的消息：“Assert.IsFalse 失败。 “Error”应返回 false；实际返回 True”。 由于此次失败，数组中“Error”之后的所有字符串都未进行测试。
 
-   ![显示 Is False 断言失败的“测试资源管理器”窗口](./media/testing-library-with-visual-studio/failedtestdetail.png)
+   ![显示 Is False 断言失败的“测试资源管理器”窗口](./media/testing-library-with-visual-studio/failed-test-detail.png)
 
 1. 删除添加的代码 (`"Error", `)，然后重新运行测试。 测试将通过。
 
@@ -175,11 +173,11 @@ ms.locfileid: "53144892"
 
 1. 在 Visual Studio 工具栏中，将生成配置从 **“调试”** 更改为 **“发行”**。
 
-   ![Visual Studio 工具栏](./media/testing-library-with-visual-studio/toolbar.png)
+   ![Visual Studio 工具栏，其中突出显示发布版本](./media/testing-library-with-visual-studio/visual-studio-toolbar-release.png)
 
 1. 在“解决方案资源管理器”中，右键单击“StringLibrary”项目，从上下文菜单中选择“生成”，重新编译库。
 
-   ![StringLibrary 上下文菜单](./media/testing-library-with-visual-studio/buildlibrary.png)
+   ![带有生成命令的 StringLibrary 上下文菜单](./media/testing-library-with-visual-studio/build-library-context-menu.png)
 
 1. 从菜单栏中选择“测试” > “运行” > “所有测试”，运行单元测试。 测试通过。
 

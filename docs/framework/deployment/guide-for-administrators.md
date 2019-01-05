@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: bee14036-0436-44e8-89f5-4bc61317977a
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 844e9e53c752be0c993255fc356ade1723109b39
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: a94f9c650927aee0f120ee3c0b1199b6c977ef0e
+ms.sourcegitcommit: 0888d7b24f475c346a3f444de8d83ec1ca7cd234
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53129813"
+ms.lasthandoff: 12/22/2018
+ms.locfileid: "53776727"
 ---
 # <a name="net-framework-deployment-guide-for-administrators"></a>.NET Framework 部署指南（针对管理员）
 本文分步说明系统管理员可以如何使用 Microsoft System Center Configuration Manager 在网络中部署 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 及其系统依赖项。 本文假定所有目标客户端计算机都满足 .NET Framework 的最低要求。 有关安装 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 的软件和硬件要求列表，请参阅[系统需求](../../../docs/framework/get-started/system-requirements.md)。  
@@ -114,9 +114,9 @@ ms.locfileid: "53129813"
   
     2.  命令行：`dotNetFx45_Full_x86_x64.exe /q /norestart /ChainingPackage ADMINDEPLOYMENT`（这些步骤后的表中描述了命令行选项）  
   
-    3.  运行：选择“隐藏”。  
+    3.  **运行：** 选择“隐藏”。  
   
-    4.  程序可以运行：选择指定程序可以运行（不管用户是否登录）的选项。  
+    4.  **程序可以运行：** 选择指定程序可以运行（不管用户是否登录）的选项。  
   
 8.  在“需求”页上，选择“下一步”以接受默认值，然后完成该向导。  
   

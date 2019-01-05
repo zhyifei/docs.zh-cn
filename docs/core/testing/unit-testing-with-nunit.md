@@ -3,12 +3,13 @@ title: 使用 NUnit 和 .NET Core 进行 C# 单元测试
 description: 使用 dotnet test 和 NUnit 分步构建一个示例解决方案，在此交互式体验中学习 C# 和 .NET Core 中的单元测试概念。
 author: rprouse
 ms.date: 08/31/2018
-ms.openlocfilehash: d33a223a5cfc7f40f251175a4e88076976bd63ed
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.custom: seodec18
+ms.openlocfilehash: 80c831a6d8ab9aa35435d0ff8f13334f7d169a3a
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 12/10/2018
-ms.locfileid: "53146937"
+ms.locfileid: "53169020"
 ---
 # <a name="unit-testing-c-with-nunit-and-net-core"></a>使用 NUnit 和 .NET Core 进行 C# 单元测试
 
@@ -166,7 +167,7 @@ public bool IsPrime(int candidate)
 
 ## <a name="adding-more-features"></a>添加更多功能
 
-你已经通过了一个测试，现在可以编写更多测试。 质数有其他几种简单情况：0，-1。 可以添加具有 `[Test]` 属性的新测试，但这很快就会变得枯燥乏味。 还有其他 NUnit 属性可用于编写一套类似的测试。  `[TestCase]` 属性用于创建一套可执行相同代码但具有不同输入参数的测试。 可以使用 `[TestCase]` 属性来指定这些输入的值。
+你已经通过了一个测试，现在可以编写更多测试。 质数有其他几种简单情况：0、-1。 可以添加具有 `[Test]` 属性的新测试，但这很快就会变得枯燥乏味。 还有其他 NUnit 属性可用于编写一套类似的测试。  `[TestCase]` 属性用于创建一套可执行相同代码但具有不同输入参数的测试。 可以使用 `[TestCase]` 属性来指定这些输入的值。
 
 无需创建新的测试，而是应用此属性来创建数据驱动的单个测试。 数据驱动的测试方法用于测试多个小于 2（即最小质数）的值：
 

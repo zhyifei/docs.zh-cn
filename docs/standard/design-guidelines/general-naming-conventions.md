@@ -52,7 +52,7 @@ ms.locfileid: "53147276"
 ## <a name="avoiding-language-specific-names"></a>避免特定于语言的名称  
  **✓ 务必**使用在语义上有意义的名称而不是特定于语言的关键字作为类型名称。  
   
- 例如，`GetLength`是一个合适的名称`GetInt`。  
+ 例如，`GetLength` 比 `GetInt` 更适合用作名称。  
   
  **✓ 务必**在标识符不具有超出其类型以外的语义时（这是极少见的情况），使用泛型 CLR 类型名称，而不是特定于语言的名称。  
   

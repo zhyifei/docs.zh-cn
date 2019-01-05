@@ -1,16 +1,17 @@
 ---
-title: 使用 dotnet test 和 NUnit 在 .NET Core 中进行 Visual Basic 单元测试
+title: 使用 dotnet test 和 NUnit 对 .NET Core 中的 Visual Basic 进行单元测试
 description: 使用 NUnit 分步构建一个 Visual Basic 示例解决方案，在此交互式体验中学习 .NET Core 中的单元测试概念。
 author: rprouse
 ms.date: 10/04/2018
 dev_langs:
 - vb
-ms.openlocfilehash: 1cfca0939d4c4055aece69cae066c365cd2a1dc0
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.custom: seodec18
+ms.openlocfilehash: 84f4b828bd1418f511b2bd82ef959002bc11ad0f
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53143555"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53239143"
 ---
 # <a name="unit-testing-visual-basic-net-core-libraries-using-dotnet-test-and-nunit"></a>使用 dotnet test 和 NUnit 进行 Visual Basic .NET Core 库的单元测试
 
@@ -153,7 +154,7 @@ End Function
 
 ## <a name="adding-more-features"></a>添加更多功能
 
-你已经通过了一个测试，现在可以编写更多测试。 质数有其他几种简单情况：0，-1。 可以将这些情况添加为具有 `<Test>` 属性的新测试，但这很快就会变得枯燥乏味。 还有其他 xUnit 属性，可使你编写类似测试套件。  `<TestCase>` 属性表示执行相同代码，但具有不同输入参数一系列测试。 可以使用 `<TestCase>` 属性来指定这些输入的值。
+你已经通过了一个测试，现在可以编写更多测试。 质数有其他几种简单情况：0、-1。 可以将这些情况添加为具有 `<Test>` 属性的新测试，但这很快就会变得枯燥乏味。 还有其他 xUnit 属性，可使你编写类似测试套件。  `<TestCase>` 属性表示执行相同代码，但具有不同输入参数一系列测试。 可以使用 `<TestCase>` 属性来指定这些输入的值。
 
 无需创建新测试，而是应用这两个属性来创建一系列测试，用于测试小于 2（最小质数）的几个值：
 

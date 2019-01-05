@@ -19,10 +19,10 @@ ms.locfileid: "33556635"
 # <a name="how-to-convert-bound-data"></a>如何：转换绑定的数据
 此示例演示如何将转换应用于在绑定中使用的数据。  
   
- 若要在绑定期间转换数据，必须创建一个类以实现<xref:System.Windows.Data.IValueConverter>接口，其中包括<xref:System.Windows.Data.IValueConverter.Convert%2A>和<xref:System.Windows.Data.IValueConverter.ConvertBack%2A>方法。  
+ 若要在绑定期间转换数据，必须创建一个类以实现 <xref:System.Windows.Data.IValueConverter> 接口，其中包括 <xref:System.Windows.Data.IValueConverter.Convert%2A> 和 <xref:System.Windows.Data.IValueConverter.ConvertBack%2A> 方法。  
   
 ## <a name="example"></a>示例  
- 下面的示例显示将转换中传递，以便它仅显示年、 月和日的日期值的日期转换器的实现。 在实现时<xref:System.Windows.Data.IValueConverter>接口，它是一个好办法修饰与实现<xref:System.Windows.Data.ValueConversionAttribute>属性以指示开发工具涉及在转换中，如以下示例所示的数据类型：  
+ 下面的示例演示了一个日期转换器的实现，该转换器将转换传入的日期值，使其仅显示年、月、日。 实现 <xref:System.Windows.Data.IValueConverter> 接口时，使用 <xref:System.Windows.Data.ValueConversionAttribute> 属性修饰该实现以向开发工具表明转换中涉及的数据类型，这是一个非常好的做法，如以下示例所示：  
   
  [!code-csharp[DataBindingLab#18](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DataBindingLab/CSharp/DateConverter.cs#18)]
  [!code-vb[DataBindingLab#18](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DataBindingLab/VisualBasic/DateConverter.vb#18)]  
@@ -35,7 +35,7 @@ ms.locfileid: "33556635"
   
  [!code-xaml[DataBindingLab#17](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DataBindingLab/CSharp/DataBindingLabApp.xaml#17)]  
   
- 在上面的示例所引用的样式资源定义中未显示在此主题的资源节中。  
+ 上面的示例引用的样式资源在一个未在此主题中列出的资源部分中定义。  
   
 ## <a name="see-also"></a>请参阅  
  [实现绑定验证](../../../../docs/framework/wpf/data/how-to-implement-binding-validation.md)  

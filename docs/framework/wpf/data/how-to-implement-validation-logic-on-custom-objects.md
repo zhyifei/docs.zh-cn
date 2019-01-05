@@ -21,16 +21,16 @@ ms.locfileid: "33555959"
 此示例演示如何自定义对象上实现验证逻辑，然后绑定到它。  
   
 ## <a name="example"></a>示例  
- 可以在业务层上提供验证逻辑，如果源对象实现<xref:System.ComponentModel.IDataErrorInfo>，如以下示例中，它定义`Person`对象，它实现<xref:System.ComponentModel.IDataErrorInfo>:  
+ 如果源对象实现了 <xref:System.ComponentModel.IDataErrorInfo> 接口，就可以在业务层上提供验证逻辑，如以下示例所示，其中定义了一个 `Person` 对象，它实现了 <xref:System.ComponentModel.IDataErrorInfo>:  
   
  [!code-csharp[BusinessLayerValidation#IDataErrorInfo](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BusinessLayerValidation/CSharp/Data.cs#idataerrorinfo)]
  [!code-vb[BusinessLayerValidation#IDataErrorInfo](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/BusinessLayerValidation/VisualBasic/Data.vb#idataerrorinfo)]  
   
- 以下示例中，在文本框中的 text 属性绑定到`Person.Age`属性，它变得可用于通过给定的资源声明绑定`x:Key` `data`。 <xref:System.Windows.Controls.DataErrorValidationRule>检查引起验证错误<xref:System.ComponentModel.IDataErrorInfo>实现。  
+ 以下示例中，文本框的 text 属性绑定到 `Person.Age` 属性，已通过一个（给定 `x:Key` `data`的）资源声明来使得该属性对象可用于绑定。 <xref:System.Windows.Controls.DataErrorValidationRule> 检查 <xref:System.ComponentModel.IDataErrorInfo> 实现引发的验证错误。  
   
  [!code-xaml[BusinessLayerValidation#BoundTextBox](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BusinessLayerValidation/CSharp/Window1.xaml?highlight=8,11-19,25-42)]  
   
- 或者，而不是使用<xref:System.Windows.Controls.DataErrorValidationRule>，可以设置<xref:System.Windows.Data.Binding.ValidatesOnDataErrors%2A>属性设置为`true`。  
+ 或者，也可以将 <xref:System.Windows.Data.Binding.ValidatesOnDataErrors%2A> 属性设置为`true`，而不是使用 <xref:System.Windows.Controls.DataErrorValidationRule>。  
   
 ## <a name="see-also"></a>请参阅  
  <xref:System.Windows.Controls.ExceptionValidationRule>  

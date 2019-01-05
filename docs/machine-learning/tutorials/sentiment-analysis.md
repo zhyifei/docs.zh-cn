@@ -1,15 +1,15 @@
 ---
 title: 在情绪分析二元分类方案中使用 ML.NET
 description: 了解如何在二元分类方案中使用 ML.NET，以了解如何使用情绪预测来采取相应措施。
-ms.date: 11/06/2018
+ms.date: 12/20/2018
 ms.topic: tutorial
 ms.custom: mvc, seodec18
-ms.openlocfilehash: cffce6258685502191e1dd33ef8282d664ea2d4c
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 90f3b79226b16ac1ea4cbbe49ce07d95a138323b
+ms.sourcegitcommit: 0888d7b24f475c346a3f444de8d83ec1ca7cd234
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53149648"
+ms.lasthandoff: 12/22/2018
+ms.locfileid: "53779129"
 ---
 # <a name="tutorial-use-mlnet-in-a-sentiment-analysis-binary-classification-scenario"></a>教程：在情绪分析二元分类方案中使用 ML.NET
 
@@ -107,7 +107,7 @@ ms.locfileid: "53149648"
 
 ### <a name="prepare-your-data"></a>准备数据
 
-1. 下载 [WikiPedia detox-250-line-data.tsv](https://github.com/dotnet/machinelearning/blob/master/test/data/wikipedia-detox-250-line-data.tsv) 和 [wikipedia-detox-250-line-test.tsv](https://github.com/dotnet/machinelearning/blob/master/test/data/wikipedia-detox-250-line-test.tsv) 数据集并将它们保存到先前创建的“数据”文件夹。 第一个数据集定型机器学习模型，第二个数据集可用来评估模型的准确度。
+1. 下载 [WikiPedia detox-250-line-data.tsv](https://github.com/dotnet/machinelearning/blob/master/test/data/wikipedia-detox-250-line-data.tsv) 和 [wikipedia-detox-250-line-test.tsv](https://github.com/dotnet/machinelearning/blob/master/test/data/wikipedia-detox-250-line-test.tsv) 数据集并将它们保存到先前创建的“Data”文件夹。 第一个数据集定型机器学习模型，第二个数据集可用来评估模型的准确度。
 
 2. 在“解决方案资源管理器”中，右键单击每个 \*.tsv 文件，然后选择“属性”。 在“高级”下，将“复制到输出目录”的值更改为“如果较新则复制”。
 
@@ -122,7 +122,7 @@ ms.locfileid: "53149648"
 * `_trainDataPath` 具有用于定型模型的数据集路径。
 * `_testDataPath` 具有用于评估模型的数据集路径。
 * `_modelPath` 具有在其中保存定型模型的路径。
-* `_reader` 是用于加载和转换数据集的 <xref:Microsoft.ML.Runtime.Data.TextLoader>。
+* `_textLoader` 是用于加载和转换数据集的 <xref:Microsoft.ML.Runtime.Data.TextLoader>。
 
 将以下代码添加到 `Main` 方法上方的行中，以指定这些路径和 `_textLoader` 变量：
 
@@ -216,7 +216,7 @@ ML.NET 的转换管道撰写一组自定义转换，在定型或测试数据之�
 
 ## <a name="train-the-model"></a>定型模型
 
-根据已加载和转换的数据集定型模型 <xref:Microsoft.ML.Runtime.Data.TransformerChain%601>。 一旦定义了估算器，将使用 <xref:Microsoft.ML.Runtime.Data.EstimatorChain%601.Fit%2A> 定型模型，同时提供已经加载的定型数据。 这将返回要用于预测的模型。 `pipeline.Fit()` 定型管道，并返回基于传入的 `DataView` 的 `Transformer`。 在发生这种情况之前不会执行此试验。
+根据已加载和转换的数据集定型模型 <xref:Microsoft.ML.Data.TransformerChain%601>。 一旦定义了估算器，将使用 <xref:Microsoft.ML.Runtime.Data.EstimatorChain%601.Fit%2A> 定型模型，同时提供已经加载的定型数据。 这将返回要用于预测的模型。 `pipeline.Fit()` 定型管道，并返回基于传入的 `DataView` 的 `Transformer`。 在发生这种情况之前不会执行此试验。
 
 将以下代码添加到 `Train` 方法中：
 

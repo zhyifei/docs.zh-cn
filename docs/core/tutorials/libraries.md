@@ -2,15 +2,14 @@
 title: 使用跨平台工具开发库
 description: 了解如何使用 .NET Core CLI 工具创建 .NET Core 库。 将创建一个支持多个框架的库。
 author: cartermp
-ms.author: mairaw
 ms.date: 05/01/2017
 ms.custom: seodec18
-ms.openlocfilehash: a8028883b3424588d0fb926dcb73f400a8c620dc
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: f93c39d6225eef180634b238414fcda99750189f
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 12/10/2018
-ms.locfileid: "53148530"
+ms.locfileid: "53169360"
 ---
 # <a name="developing-libraries-with-cross-platform-tools"></a>使用跨平台工具开发库
 
