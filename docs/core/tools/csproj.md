@@ -103,7 +103,7 @@ ms.locfileid: "53286567"
 <PackageReference Include="<package-id>" Version="" PrivateAssets="" IncludeAssets="" ExcludeAssets="" />
 ```
 
-#### <a name="version"></a>版本
+#### <a name="version"></a>Version
 `Version` 指定要还原的包的版本。 此属性遵循 [NuGet 版本控制](/nuget/create-packages/dependency-versions#version-ranges)方案规则。 默认行为是精确的版本匹配。 例如，指定 `Version="1.2.3"` 等效于包的 1.2.3 版本的 NuGet 表示法 `[1.2.3]`。
 
 #### <a name="includeassets-excludeassets-and-privateassets"></a>IncludeAssets、ExcludeAssets 和 PrivateAssets
@@ -137,7 +137,7 @@ ms.locfileid: "53286567"
 <DotNetCliToolReference Include="<package-id>" Version="" />
 ```
 
-#### <a name="version"></a>版本
+#### <a name="version"></a>Version
 `Version` 指定要还原的包的版本。 此属性遵循 [NuGet 版本控制](/nuget/create-packages/dependency-versions#version-ranges)方案规则。 默认行为是精确的版本匹配。 例如，指定 `Version="1.2.3"` 等效于包的 1.2.3 版本的 NuGet 表示法 `[1.2.3]`。
 
 ### <a name="runtimeidentifiers"></a>RuntimeIdentifiers
@@ -173,7 +173,7 @@ ms.locfileid: "53286567"
 </PackageTargetFallback >
 ```
 
-## <a name="nuget-metadata-properties"></a>NuGet 元数据属性
+## <a name="nuget-metadata-properties"></a>NugetMetadataProperties
 迁移到 MSBuild 后，我们已将在打包 NuGet 包时使用的输入元数据从 project.json 移到 .csproj 文件中。 输入为 MSBuild 属性，因此它们必须转到 `<PropertyGroup>` 组中。 下面列出了在使用 `dotnet pack` 命令或属于 SDK 的 `Pack` MSBuild 目标时，用作打包进程的输入的属性。 
 
 ### <a name="ispackable"></a>IsPackable
@@ -185,17 +185,17 @@ ms.locfileid: "53286567"
 ### <a name="packageid"></a>PackageId
 指定生成的包的名称。 如果未指定，`pack` 操作将默认使用 `AssemblyName` 或目录名称作为包的名称。 
 
-### <a name="title"></a>标题
+### <a name="title"></a>Title
 明了易用的包标题，通常用在 UI 显示中，如 nuget.org 上和 Visual Studio 中包管理器上的那样。 如果未指定，则改为使用包 ID。
 
-### <a name="authors"></a>作者
+### <a name="authors"></a>Authors
 其中名称以分号分隔的包作者列表，其中名称与 nuget.org 上的配置文件名称匹配。这些信息显示在 nuget.org 上的 NuGet 库中，并用于交叉引用同一作者的包。
 
 ### <a name="packagedescription"></a>PackageDescription
 
 用于 UI 显示的包的详细说明。
 
-### <a name="description"></a>说明
+### <a name="description"></a>Description
 程序集的详细说明。 如果未指定 `PackageDescription`，则此属性还可用作程序包的说明。
 
 ### <a name="copyright"></a>Copyright
@@ -267,10 +267,10 @@ ms.locfileid: "53286567"
 ### <a name="nuspecproperties"></a>NuspecProperties
 键=值对的分号分隔列表。
 
-## <a name="assemblyinfo-properties"></a>AssemblyInfo 属性
+## <a name="assemblyinfo-properties"></a>AssemblyInfoProperties
 现在，*AssemblyInfo* 文件中通常存在的[程序集特性](../../framework/app-domains/set-assembly-attributes.md)将自动从属性生成。
 
-### <a name="properties-per-attribute"></a>每个特性的属性
+### <a name="properties-per-attribute"></a>PropertiesPerAttribute
 
 每个特性都有一个可控制其内容的属性，还有一个可以禁用其生成的属性，如下表所示：
 
