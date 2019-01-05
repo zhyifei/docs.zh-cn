@@ -19,20 +19,20 @@ ms.lasthandoff: 05/04/2018
 ms.locfileid: "33555823"
 ---
 # <a name="how-to-sort-and-group-data-using-a-view-in-xaml"></a>如何：在 XAML 中使用视图对数据进行排序和分组
-此示例演示如何创建数据集合中的视图[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]。 视图允许分组、 排序、 筛选、 功能和当前项的概念。  
+此示例演示如何在[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]中创建数据集合的视图。 视图提供分组、排序、筛选功能和当前项的概念。  
   
 ## <a name="example"></a>示例  
- 在下面的示例中，静态资源名为*放置*指一套*位置*对象，其中的每个*位置*对象包含的城市名称和状态。 前缀*src*映射到命名空间中的数据源*位置*定义。 前缀*scm*映射到`"clr-namespace:System.ComponentModel;assembly=WindowsBase"`和*dat*映射到`"clr-namespace:System.Windows.Data;assembly=PresentationFramework"`。  
+ 在下面的示例中，名为 *places* 的静态资源被定义为 *Place* 对象的集合，其中每个 *Place* 对象包含城市名和州。 前缀 *src* 映射到定义 *Places* 数据源的命名空间。 前缀 *scm* 映射到`"clr-namespace:System.ComponentModel;assembly=WindowsBase"`，*dat* 映射到`"clr-namespace:System.Windows.Data;assembly=PresentationFramework"`。  
   
- 下面的示例创建数据集合，它按状态分组并按城市名称排序的视图。  
+ 下面的示例创建数据集合的视图，它按城市名称排序，并按州分组。  
   
  [!code-xaml[CollectionViewSource#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/CollectionViewSource/CS/window1.xaml#1)]  
   
- 视图随后可以绑定源，如以下示例所示：  
+ 随后视图可以作为绑定源，如以下示例所示：  
   
  [!code-xaml[CollectionViewSource#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/CollectionViewSource/CS/window1.xaml#2)]  
   
- 对于到 XML 数据中定义的绑定<xref:System.Windows.Data.XmlDataProvider>资源，XML 名称前面加上 @ 符号。  
+ 绑定到 <xref:System.Windows.Data.XmlDataProvider> 资源中定义的 XML 数据时，XML 名称前面要加上 @ 符号。  
   
  [!code-xaml[CollectionViewSource#XDPChunk](../../../../samples/snippets/csharp/VS_Snippets_Wpf/CollectionViewSource/CS/window1.xaml#xdpchunk)]  
   
