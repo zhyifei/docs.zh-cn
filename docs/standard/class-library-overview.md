@@ -39,12 +39,12 @@ helpviewer_keywords:
 ms.assetid: 7e4c5921-955d-4b06-8709-101873acf157
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: acc51287a8c670da63d0ec421aa232864ea91c2b
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: b00d08f43874518e117739d4a9502bf9463db5c1
+ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50185844"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "54029865"
 ---
 # <a name="net-class-library-overview"></a>.NET 类库概述
 
@@ -86,7 +86,7 @@ ms.locfileid: "50185844"
   
  下表列出了 .NET 提供的基类型，并对每种类型进行了简单描述，同时指出了 Visual Basic、C#、C++ 和 F# 中的相应类型。  
   
-|类别|类名|描述|Visual Basic 数据类型|C# 数据类型|C++/CLI 数据类型|F# 数据类型|  
+|类别|类名|说明|Visual Basic 数据类型|C# 数据类型|C++/CLI 数据类型|F# 数据类型|  
 |--------------|----------------|-----------------|----------------------------|-------------------|---------------------|-----------------------|  
 |整数|<xref:System.Byte>|8 位无符号整数。|**Byte**|**byte**|**unsigned char**|**byte**|  
 ||<xref:System.SByte>|8 位有符号整数。<br /><br /> 不符合 CLS。|**SByte**|**sbyte**|**char**<br /> 或<br /> signed char|**sbyte**|  
@@ -113,5 +113,5 @@ ms.locfileid: "50185844"
 ## <a name="see-also"></a>请参阅
 
 - [常规类型系统](../../docs/standard/base-types/common-type-system.md)  
-- [.NET API 浏览器](https://docs.microsoft.com/dotnet/api)  
+- [.NET API 浏览器](../../api/index.md)  
 - [概述](../../docs/framework/get-started/overview.md)

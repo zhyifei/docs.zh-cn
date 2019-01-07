@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 930653a6-95d2-4697-9d5a-52d11bb6fd4c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 77a9863b4fb44bbe8142175a032bb052ee99cdae
-ms.sourcegitcommit: 0888d7b24f475c346a3f444de8d83ec1ca7cd234
+ms.openlocfilehash: 09f2886173bd3a80691b78a6e3ea71b034ebe34a
+ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2018
-ms.locfileid: "53779381"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "54030394"
 ---
 # <a name="regular-expression-language---quick-reference"></a>正则表达式语言 - 快速参考
 <a name="top"></a> 正则表达式是正则表达式引擎尝试匹配输入文本的一种模式。 模式由一个或多个字符文本、运算符或构造组成。  有关简要介绍，请参阅 [.NET 正则表达式](../../../docs/standard/base-types/regular-expressions.md)。  
@@ -93,10 +93,10 @@ ms.locfileid: "53779381"
 |断言|说明|模式|匹配|  
 |---------------|-----------------|-------------|-------------|  
 |`^`|默认情况下，必须从字符串的开头开始匹配；在多行模式中，必须从该行的开头开始。|`^\d{3}`|“901-333-”中的<br /><br /> “901”|  
-|`$`|默认情况下，匹配必须出现在字符串的末尾，或在字符串末尾的 `\n` 之前；在多行模式中，必须出现在该行的末尾之前，或在该行末尾的 `\n` 之前。|`-\d{3}$`|“-333-333”中的<br /><br /> “-333”|  
+|`$`|默认情况下，匹配必须出现在字符串的末尾，或在字符串末尾的 `\n` 之前；在多行模式中，必须出现在该行的末尾之前，或在该行末尾的 `\n` 之前。|`-\d{3}$`|“-333-333”中的<br /><br /> “-901-333”|  
 |`\A`|匹配必须出现在字符串的开头。|`\A\d{3}`|“901-333-”中的<br /><br /> “901-”|  
 |`\Z`|匹配必须出现在字符串的末尾或出现在字符串末尾的 `\n` 之前。|`-\d{3}\Z`|“-333-333”中的<br /><br /> “-901-333”|  
-|`\z`|匹配必须出现在字符串的末尾。|`-\d{3}\z`|“-333”<br /><br /> “-901-333”|  
+|`\z`|匹配必须出现在字符串的末尾。|`-\d{3}\z`|“-333-333”中的<br /><br /> “-901-333”|  
 |`\G`|匹配必须出现在上一个匹配结束的地方。|`\G\(\d\)`|“(1)(3)(5)[7](9\)”中的“(1)”、“(3)”、“(5)”|  
 |`\b`|匹配必须出现在 `\w`（字母数字）和 `\W`（非字母数字）字符之间的边界上。|`\b\w+\s\w+\b`|“them theme them them”中的“them theme”、“them them”|  
 |`\B`|匹配不得出现在 `\b` 边界上。|`\Bend\w*\b`|“end sends endure lender”中的“ends”和“ender”|  
@@ -176,7 +176,7 @@ ms.locfileid: "53779381"
 |`${` *name* `}`|替换按命名组 *name*匹配的子字符串。|`\b(?<word1>\w+)(\s)(?<word2>\w+)\b`|`${word2} ${word1}`|"one two"|"two one"|  
 |`$$`|替换字符“$”。|`\b(\d+)\s?USD`|`$$$1`|“103 USD”|“$103”|  
 |`$&`|替换整个匹配项的一个副本。|`\$?\d*\.?\d+`|`**$&**`|"$1.30"|"\*\*$1.30\*\*"|  
-|<code>$`</code>|替换匹配前的输入字符串的所有文本。|`B+`|<code>$`</code>|“AABBCC”|“AAAACC”|  
+|``$` ``|替换匹配前的输入字符串的所有文本。|`B+`|``$` ``|“AABBCC”|“AAAACC”|  
 |`$'`|替换匹配后的输入字符串的所有文本。|`B+`|`$'`|“AABBCC”|“AACCCC”|  
 |`$+`|替换最后捕获的组。|`B+(C+)`|`$+`|“AABBCCDD”|“AACCDD”|  
 |`$_`|替换整个输入字符串。|`B+`|`$_`|“AABBCC”|“AAAABBCCCC”|  
