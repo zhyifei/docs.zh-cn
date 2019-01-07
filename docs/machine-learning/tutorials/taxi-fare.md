@@ -6,12 +6,12 @@ ms.author: johalex
 ms.date: 11/06/2018
 ms.topic: tutorial
 ms.custom: mvc, seodec18
-ms.openlocfilehash: 36da24f0cd2d2b9c4884101d97026307174f4130
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 630cbcac954b9fcda67eef38f54241a81b831fc3
+ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53236344"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "54030251"
 ---
 # <a name="tutorial-predict-new-york-taxi-fares-using-a-regression-learner-with-mlnet"></a>教程：在 ML.NET 中使用回归学习器预测纽约出租车费用
 
@@ -99,7 +99,9 @@ ms.locfileid: "53236344"
 
 ## <a name="define-data-and-model-paths"></a>定义数据和模型路径
 
-将以下附加的 `using` 语句添加到“Program.cs”文件顶部：[!code-csharp[AddUsings](../../../samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#1 "Add necessary usings")]
+将以下附加的 `using` 语句添加到“Program.cs”文件顶部：
+
+[!code-csharp[AddUsings](../../../samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#1 "Add necessary usings")]
 
 需要创建三个字段，以保存具有数据集的文件的路径以及用于保存模型的文件的路径，以及一个 `TextLoader` 全局变量：
 
