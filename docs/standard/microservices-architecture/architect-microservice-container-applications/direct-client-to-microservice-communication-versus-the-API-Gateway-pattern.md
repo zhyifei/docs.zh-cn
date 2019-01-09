@@ -4,12 +4,12 @@ description: 了解 API 网关模式与客户端到微服务直接通信之间�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/20/2018
-ms.openlocfilehash: c0c98733271e74e119373fe359b9aa6121930a40
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: eebbfa6579de4cd24f58371ed1c7ab9a5f2e1c00
+ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53152638"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "54030537"
 ---
 # <a name="the-api-gateway-pattern-versus-the-direct-client-to-microservice-communication"></a>API 网关模式与客户端到微服务直接通信
 
@@ -55,11 +55,11 @@ ms.locfileid: "53152638"
 
 因此，对于基于微服务的应用程序来说，有一个间接的中间级别或中间层（网关）将非常方便。 如果没有 API 网关，则客户端应用必须将请求直接发送给微服务，这会引发问题，如以下问题：
 
-- 耦合：如果没有 API 网关模式，客户端应用将与内部微服务相耦合。 客户端应用需要知道如何在微服务中分解应用程序的多个区域。 在演进和重构内部微服务时，这些操作会对维护造成很大的影响，因为它们会导致客户端应用的中断性变更，原因在于直接引用来自客户端应用的内部微服务。 客户端应用需要频繁更新，这使得解决方案更难发展。
+- **耦合**：如果没有 API 网关模式，客户端应用将与内部微服务相耦合。 客户端应用需要知道如何在微服务中分解应用程序的多个区域。 在演进和重构内部微服务时，这些操作会对维护造成很大的影响，因为它们会导致客户端应用的中断性变更，原因在于直接引用来自客户端应用的内部微服务。 客户端应用需要频繁更新，这使得解决方案更难发展。
 
-- 过多的往返行程：在客户端应用中，单个页面/屏幕可能需要多次调用多个服务。 这可能导致客户端和服务器之间的多次网络往返，从而显著增加了延迟时间。 在中级水平处理的聚合可以提高客户端应用的性能和用户体验。
+- 过多的往返：在客户端应用中，单个页面/屏幕可能需要多次调用多个服务。 这可能导致客户端和服务器之间的多次网络往返，从而显著增加了延迟时间。 在中级水平处理的聚合可以提高客户端应用的性能和用户体验。
 
-- **安全问题**：如果没有网关，所有微服务必定会暴露在“外部世界”中，如此，相较于隐藏客户端应用不直接使用的内部微服务，这种情况下攻击面更大。 攻击面越小，应用程序越安全。
+- 安全性问题：如果没有网关，所有微服务必定会暴露在“外部世界”中，如此，相较于隐藏客户端应用不直接使用的内部微服务，这种情况下攻击面更大。 攻击面越小，应用程序越安全。
 
 - 跨领域问题：每个公开发布的微服务都必须处理授权、SSL 等问题。在许多情况下，这些问题可以在一个单独的层次上处理，以便简化内部微服务。
 
@@ -172,7 +172,7 @@ API 管理系统中提供的见解有助于理解 API 的使用方式与性能�
 
 ## <a name="additional-resources"></a>其他资源
 
-- **Charles Richardson。Pattern: API Gateway / Backend for Front-End** \（模式：API 网关/用于前端的后端）
+- **Charles Richardson。模式：API 网关/用于前端的后端** \
   [*https://microservices.io/patterns/apigateway.html*](https://microservices.io/patterns/apigateway.html)
 
 - **API 网关模式** \
