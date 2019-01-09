@@ -1,15 +1,15 @@
 ---
-title: '&lt;ServicePrincipalName&gt;'
+title: '&lt;servicePrincipalName&gt;'
 ms.date: 03/30/2017
 ms.assetid: 3f3b85d3-20f2-4cd8-8a6a-ee18befbd165
-ms.openlocfilehash: e5c1f5a6986d57d20180560b12f5c7c5540a590d
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: a22a905744980d0b370023e6236734a9bb0d6357
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32750721"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54150630"
 ---
-# <a name="ltserviceprincipalnamegt"></a>&lt;ServicePrincipalName&gt;
+# <a name="ltserviceprincipalnamegt"></a>&lt;servicePrincipalName&gt;
 利用对应的服务主体名称 (SPN) 指定服务的标识。  
   
  有关设置 SPN 的详细信息，请参阅[服务标识和身份验证](../../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)。  
@@ -20,7 +20,7 @@ ms.locfileid: "32750721"
 ## <a name="syntax"></a>语法  
   
 ```xml  
-<servicePrincipalName value = "String" />  
+<servicePrincipalName value="String" />
 ```  
   
 ## <a name="attributes-and-elements"></a>特性和元素  
@@ -42,7 +42,7 @@ ms.locfileid: "32750721"
 |[\<标识 >](../../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)|指定要由客户端进行身份验证的服务的标识。|  
   
 ## <a name="remarks"></a>备注  
- 执行与终结点的 SSPI 身份验证时，连接到通过此标识终结点的安全的 Windows Communication Foundation (WCF) 客户端使用 SPN。  
+ 执行使用该终结点进行 SSPI 身份验证时，连接到此标识的终结点的安全 Windows Communication Foundation (WCF) 客户端使用 SPN。  
   
 ## <a name="see-also"></a>请参阅  
  <xref:System.ServiceModel.Configuration.IdentityElement>  

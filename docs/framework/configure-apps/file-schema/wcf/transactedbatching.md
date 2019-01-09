@@ -2,12 +2,12 @@
 title: '&lt;transactedBatching&gt;'
 ms.date: 03/30/2017
 ms.assetid: 2f790a0d-8f03-4b86-81b5-ce1bc1a6c575
-ms.openlocfilehash: f0cf0b78ddcbd3214e30a36ce7641d115275a265
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: f56751ea3f8bdc9ecbeff57db835e5fc2edbb73e
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32749707"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54148443"
 ---
 # <a name="lttransactedbatchinggt"></a>&lt;transactedBatching&gt;
 指定接收操作是否支持事务批处理。  
@@ -21,7 +21,7 @@ ms.locfileid: "32749707"
 ## <a name="syntax"></a>语法  
   
 ```xml  
-<transactedBatching maxBatchSize="Integer" />  
+<transactedBatching maxBatchSize="Integer" />
 ```  
   
 ## <a name="attributes-and-elements"></a>特性和元素  
@@ -49,41 +49,38 @@ ms.locfileid: "32749707"
  下面的示例演示如何将事务处理批处理行为添加到配置文件中的服务。  
   
 ```xml  
-<system.serviceModel>  
-  <services>  
-    <service name="Microsoft.ServiceModel.Samples.CalculatorService"  
-             behaviorConfiguration="CalculatorServiceBehavior">  
-      <host>  
-        <baseAddresses>  
-          <add baseAddress="http://localhost:8000/ServiceModelSamples/service"/>  
-        </baseAddresses>  
-      </host>  
-  
-      <!-- Define NetMsmqEndpoint -->  
-      <endpoint address="net.msmq://localhost/private/ServiceModelSamples"  
-                binding="netMsmqBinding"  
-                contract="Microsoft.ServiceModel.Samples.IQueueCalculator" />  
-  
-      <!-- the mex endpoint is explosed at http://localhost:8000/ServiceModelSamples/service/mex -->  
-      <endpoint address="mex"  
-                binding="mexHttpBinding"  
-                contract="IMetadataExchange" />  
-    </service>  
-  </services>  
-  
-  <behaviors>  
-    <endpointBehaviors>  
-      <behavior name="endpointBehavior">  
-        <transactedBatching maxBatchSize="10" />  
-      </behavior>  
-    </endpointBehaviors>  
-    <serviceBehaviors>  
-      <behavior name="CalculatorServiceBehavior">  
-        <serviceMetadata httpGetEnabled="true" />  
-      </behavior>  
-    </serviceBehaviors>  
-  </behaviors>  
-</system.serviceModel>  
+<system.serviceModel>
+  <services>
+    <service name="Microsoft.ServiceModel.Samples.CalculatorService"
+             behaviorConfiguration="CalculatorServiceBehavior">
+      <host>
+        <baseAddresses>
+          <add baseAddress="http://localhost:8000/ServiceModelSamples/service" />
+        </baseAddresses>
+      </host>
+      <!-- Define NetMsmqEndpoint -->
+      <endpoint address="net.msmq://localhost/private/ServiceModelSamples"
+                binding="netMsmqBinding"
+                contract="Microsoft.ServiceModel.Samples.IQueueCalculator" />
+      <!-- the mex endpoint is explosed at http://localhost:8000/ServiceModelSamples/service/mex -->
+      <endpoint address="mex"
+                binding="mexHttpBinding"
+                contract="IMetadataExchange" />
+    </service>
+  </services>
+  <behaviors>
+    <endpointBehaviors>
+      <behavior name="endpointBehavior">
+        <transactedBatching maxBatchSize="10" />
+      </behavior>
+    </endpointBehaviors>
+    <serviceBehaviors>
+      <behavior name="CalculatorServiceBehavior">
+        <serviceMetadata httpGetEnabled="true" />
+      </behavior>
+    </serviceBehaviors>
+  </behaviors>
+</system.serviceModel>
 ```  
   
 ## <a name="see-also"></a>请参阅  
