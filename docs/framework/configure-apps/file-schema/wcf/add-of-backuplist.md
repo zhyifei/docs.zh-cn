@@ -2,12 +2,12 @@
 title: '&lt;backupList&gt; 的 &lt;add&gt;'
 ms.date: 03/30/2017
 ms.assetid: bc5939fc-314a-4ea4-a533-c96958da7173
-ms.openlocfilehash: 7e7361b24c0444b5f3d51a6f5bf079d5eb2dee18
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 4a8eb3df9be6b6b5bfe43aee330f3174ddca66ab
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32745547"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54151470"
 ---
 # <a name="ltaddgt-of-ltbackuplistgt"></a>&lt;backupList&gt; 的 &lt;add&gt;
 表示定义备份终结点元素的配置元素。  
@@ -21,7 +21,13 @@ ms.locfileid: "32745547"
 ## <a name="syntax"></a>语法  
   
 ```xml  
-   <routing>  <backupLists>    <backupList name="String">      <add endpointName="String" />    </backupList>    </backupLists></routing>  
+<routing>
+  <backupLists>
+    <backupList name="String">
+      <add endpointName="String" />
+    </backupList>
+  </backupLists>
+</routing>
 ```  
   
 ```csharp  
@@ -43,7 +49,7 @@ ms.locfileid: "32745547"
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<路由 >](../../../../../docs/framework/configure-apps/file-schema/wcf/routing.md)|包含你想要用于在的情况下无法访问主终结点的路由服务的终结点的列表。|  
+|[\<路由 >](../../../../../docs/framework/configure-apps/file-schema/wcf/routing.md)|包含你想要使用在的情况下无法访问主终结点的路由服务的终结点的列表。|  
   
 ## <a name="see-also"></a>请参阅  
  <xref:System.ServiceModel.Routing.Configuration.BackupEndpointElement?displayProperty=nameWithType> 

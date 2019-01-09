@@ -2,12 +2,12 @@
 title: WCF 的 &lt;activityStateQuery&gt;
 ms.date: 03/30/2017
 ms.assetid: d6cdc04b-6f3a-4097-a623-ee4a1be3b5c4
-ms.openlocfilehash: a0dae6b90659bd3f53386459513abf92f25b005b
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: 6d55a53a6344922cee0d42c26102d5f0bbf46f67
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/13/2018
-ms.locfileid: "49308304"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54151783"
 ---
 # <a name="ltactivitystatequerygt-of-wcf"></a>WCF 的 &lt;activityStateQuery&gt;
 
@@ -31,20 +31,20 @@ ms.locfileid: "49308304"
         <activityStateQueries>
           <activityStateQuery activityName="String">
             <arguments>
-              <argument name="String"/>
+              <argument name="String" />
             </arguments>
             <states>
-              <state name="String"/>
+              <state name="String" />
             </states>
             <variables>
-              <variable name="String"/>
+              <variable name="String" />
             </variables>
           </activityStateQuery>
         </activityStateQueries>
       </workflow>
     </trackingProfile>
   </profiles>
-</tracking>  
+</tracking>
 ```  
   
 ## <a name="attributes-and-elements"></a>特性和元素  
@@ -76,17 +76,17 @@ ms.locfileid: "49308304"
 ActivityStateQuery 的一项独特功能是能够在跟踪工作流的执行时提取数据。 这在访问跟踪记录后续执行时可提供其他上下文。 可以使用[\<自变量 >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/arguments.md)， [\<状态 >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/states.md)并[\<状态 >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/states.md)元素提取任何变量或参数从工作流中的任何活动。下面的示例演示提取变量和参数的活动状态查询时活动的`Closed`发出跟踪记录。 变量和自变量只能使用 ActivityStateRecord 可以提取并因此内进行订阅跟踪配置文件使用[ \<activityStateQuery >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/activitystatequery.md)。  
   
 ```xml  
-<activityStateQuery activityName="SendEmailActivity">  
-  <states>  
-    <state name="Closed"/>  
-  </states>  
-  <variables>  
-    <variable name="FromAddress"/>  
-  </variables>  
-  <arguments>  
-    <argument name="Result"/>  
-  </arguments>  
-</activityStateQuery>  
+<activityStateQuery activityName="SendEmailActivity">
+  <states>
+    <state name="Closed" />
+  </states>
+  <variables>
+    <variable name="FromAddress" />
+  </variables>
+  <arguments>
+    <argument name="Result" />
+  </arguments>
+</activityStateQuery>
 ```  
   
 ## <a name="see-also"></a>请参阅

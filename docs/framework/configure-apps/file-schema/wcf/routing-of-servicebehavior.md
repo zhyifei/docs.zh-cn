@@ -2,12 +2,12 @@
 title: '&lt;serviceBehavior&gt; 的 &lt;routing&gt;'
 ms.date: 03/30/2017
 ms.assetid: d8f9c844-4629-4a45-9599-856dc8f01794
-ms.openlocfilehash: 5fb7febe365f73acf09ba74b07215fe9cc659efb
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 0a007eb33063f8f44098a8c63708255b884b5fdc
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32750747"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54146844"
 ---
 # <a name="ltroutinggt-of-ltservicebehaviorgt"></a>&lt;serviceBehavior&gt; 的 &lt;routing&gt;
 提供对路由服务的运行时访问以允许对路由配置进行动态修改。  
@@ -24,12 +24,12 @@ ms.locfileid: "32750747"
 <behaviors>
   <serviceBehaviors>
     <behavior name="String">
-      <routing filterTable="String" 
-               routeOnHeadersOnly="Boolean" 
+      <routing filterTable="String"
+               routeOnHeadersOnly="Boolean"
                SoapProcessingEnabled="Boolean" />
     </behavior>
   </serviceBehaviors>
-</behaviors>  
+</behaviors>
 ```  
   
 ## <a name="attributes-and-elements"></a>特性和元素  
@@ -39,7 +39,7 @@ ms.locfileid: "32750747"
   
 |特性|描述|  
 |---------------|-----------------|  
-|filterTable|一个字符串，指定路由服务要计算的筛选器所在的路由表的名称。 此值必须匹配`name`属性[ \<filterTable >](../../../../../docs/framework/configure-apps/file-schema/wcf/filtertable.md)中的元素[ \<filterTables >](../../../../../docs/framework/configure-apps/file-schema/wcf/filtertables.md)部分。|  
+|filterTable|一个字符串，指定路由服务要计算的筛选器所在的路由表的名称。 此值必须匹配`name`的属性[ \<filterTable >](../../../../../docs/framework/configure-apps/file-schema/wcf/filtertable.md)中的元素[ \<filterTables >](../../../../../docs/framework/configure-apps/file-schema/wcf/filtertables.md)部分。|  
 |routeOnHeaderOnly|一个布尔值，指定筛选器将同时检查消息正文和标头，还是仅检查标头。 默认值为 `true`。|  
 |soapProcessingEnabled|一个布尔值，指定是否应进行 SOAP 处理。|  
   

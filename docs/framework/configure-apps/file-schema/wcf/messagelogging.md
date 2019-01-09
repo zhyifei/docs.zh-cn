@@ -2,12 +2,12 @@
 title: '&lt;messageLogging&gt;'
 ms.date: 03/30/2017
 ms.assetid: 1d06a7e6-9633-4a12-8c5d-123adbbc19c5
-ms.openlocfilehash: e137070b71cf8a481eef3ea16260c135e29b4932
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: cfc5f23e58c5a428ecb4541ccfc0ada5b190fb36
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32750682"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54150443"
 ---
 # <a name="ltmessagelogginggt"></a>&lt;messageLogging&gt;
 该元素定义 Windows Communication Foundation (WCF) 的消息日志记录功能的设置。  
@@ -19,20 +19,20 @@ ms.locfileid: "32750682"
 ## <a name="syntax"></a>语法  
   
 ```xml  
-<system.serviceModel>  
-   <diagnostics>  
-       <messageLogging logEntireMessage="Boolean"  
-          logMalformedMessages="Boolean"  
-          logMessagesAtServiceLevel="Boolean"  
-          logMessagesAtTransportLevel="Boolean"  
-                    maxMessagesToLog="Integer"  
-          maxSizeOfMessageToLog="Integer" >  
-          <filters>  
-                            <clear />  
-          </filters>  
-       </messageLogging>  
-   </diagnostics>  
-</system.serviceModel>  
+<system.serviceModel>
+  <diagnostics>
+    <messageLogging logEntireMessage="Boolean"
+                    logMalformedMessages="Boolean"
+                    logMessagesAtServiceLevel="Boolean"
+                    logMessagesAtTransportLevel="Boolean"
+                    maxMessagesToLog="Integer"
+                    maxSizeOfMessageToLog="Integer">
+      <filters>
+        <clear />
+      </filters>
+    </messageLogging>
+  </diagnostics>
+</system.serviceModel>
 ```  
   
 ## <a name="attributes-and-elements"></a>特性和元素  
@@ -69,51 +69,56 @@ ms.locfileid: "32750682"
  您需要创建一个跟踪侦听器以激活消息跟踪。 侦听器本身可以是使用 <xref:System.Diagnostics> 跟踪体系结构的任何侦听器。 下面的示例演示如何创建此类侦听器。  
   
 ```xml  
-<system.diagnostics>  
-    <sources>  
-          <source name="System.ServiceModel" switchValue="Verbose">  
-              <listeners>  
-                    <clear />  
-                    <add type="System.Diagnostics.DefaultTraceListener" name="Default"  
-                        traceOutputOptions="None" />  
-                    <add name="ServiceModel Listener" traceOutputOptions="None" />  
-               </listeners>  
-        </source>  
-            <source name="System.ServiceModel.MessageLogging">  
-                <listeners>  
-                    <clear />  
-                    <add type="System.Diagnostics.DefaultTraceListener" name="Default"  
-                        traceOutputOptions="None" />  
-                    <add name="MessageLogging Listener" traceOutputOptions="None"/>  
-               </listeners>  
-        </source>  
-    </sources>  
-     <sharedListeners>  
-            <add initializeData="C:\ItProTools\TraceLog.xml"  
-                    type="System.Diagnostics.XmlWriterTraceListener, System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"  
-                    name="ServiceModel Listener"  
-                    traceOutputOptions="LogicalOperationStack, DateTime, Timestamp, ProcessId, ThreadId, Callstack" />  
-            <add initializeData="C:\ItProTools\MessageLog.log"  
-                    type="System.Diagnostics.XmlWriterTraceListener, System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"  
-                   name="MessageLogging Listener"  
-                   traceOutputOptions="LogicalOperationStack, DateTime, Timestamp, ProcessId, ThreadId, Callstack" />  
-    </sharedListeners>  
-</system.diagnostics>  
+<system.diagnostics>
+  <sources>
+    <source name="System.ServiceModel"
+            switchValue="Verbose">
+      <listeners>
+        <clear />
+        <add type="System.Diagnostics.DefaultTraceListener"
+             name="Default"
+             traceOutputOptions="None" />
+        <add name="ServiceModel Listener"
+             traceOutputOptions="None" />
+      </listeners>
+    </source>
+    <source name="System.ServiceModel.MessageLogging">
+      <listeners>
+        <clear />
+        <add type="System.Diagnostics.DefaultTraceListener"
+             name="Default"
+             traceOutputOptions="None" />
+        <add name="MessageLogging Listener"
+             traceOutputOptions="None" />
+      </listeners>
+    </source>
+  </sources>
+  <sharedListeners>
+    <add initializeData="C:\ItProTools\TraceLog.xml"
+         type="System.Diagnostics.XmlWriterTraceListener, System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"
+         name="ServiceModel Listener"
+         traceOutputOptions="LogicalOperationStack, DateTime, Timestamp, ProcessId, ThreadId, Callstack" />
+    <add initializeData="C:\ItProTools\MessageLog.log"
+         type="System.Diagnostics.XmlWriterTraceListener, System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"
+         name="MessageLogging Listener"
+         traceOutputOptions="LogicalOperationStack, DateTime, Timestamp, ProcessId, ThreadId, Callstack" />
+  </sharedListeners>
+</system.diagnostics>
 ```  
   
 ## <a name="example"></a>示例  
   
 ```xml  
-<messageLogging logEntireMessage="true"  
-    logMalformedMessages="true"  
-    logMessagesAtServiceLevel="true"  
-    logMessagesAtTransportLevel="true"  
-    maxMessagesToLog="42"  
-    maxSizeOfMessageToLog="42">  
-     <filters>  
-         <clear />  
-     </filters>  
- </messageLogging>  
+<messageLogging logEntireMessage="true"
+                logMalformedMessages="true"
+                logMessagesAtServiceLevel="true"
+                logMessagesAtTransportLevel="true"
+                maxMessagesToLog="42"
+                maxSizeOfMessageToLog="42">
+  <filters>
+    <clear />
+  </filters>
+</messageLogging>
 ```  
   
 ## <a name="see-also"></a>请参阅  

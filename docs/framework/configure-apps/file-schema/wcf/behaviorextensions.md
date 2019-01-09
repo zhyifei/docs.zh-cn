@@ -2,25 +2,26 @@
 title: '&lt;behaviorExtensions&gt;'
 ms.date: 03/30/2017
 ms.assetid: 59f2791a-c78f-40d7-aa80-0d9cd10135d9
-ms.openlocfilehash: d025497956715913923e839cb6c482f44f96babb
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.openlocfilehash: 363b5862b4d7677acdf37595ae9c6eeb6c38efa2
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/22/2018
-ms.locfileid: "46576848"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54145635"
 ---
 # <a name="ltbehaviorextensionsgt"></a>&lt;behaviorExtensions&gt;
 用户可以使用行为扩展来创建用户定义的行为元素。 这些元素可与标准的 Windows Communication Foundation (WCF) 行为元素一起使用。 `behaviorExtensions` 节定义了元素，使其可用于配置中。 下面是一个典型的行为扩展示例。  
   
 ```xml  
-<system.serviceModel>  
-    <extensions>  
-        <behaviorExtensions>  
-            <add name="myBehavior" type="Microsoft.ServiceModel.Samples.MyBehaviorSection, MyBehavior,  
-                Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" />  
-       </behaviorExtensions>  
-    </extensions>  
-</system.serviceModel>  
+<system.serviceModel>
+  <extensions>
+    <behaviorExtensions>
+      <add name="myBehavior"
+           type="Microsoft.ServiceModel.Samples.MyBehaviorSection, MyBehavior,
+                 Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" />
+    </behaviorExtensions>
+  </extensions>
+</system.serviceModel>
 ```  
   
  若要向元素添加配置功能，需要编写和注册配置元素。 有关这方面的更多信息，请参见 <xref:System.Configuration> 文档。  
@@ -28,13 +29,17 @@ ms.locfileid: "46576848"
  在定义元素及其配置类型之后，可以使用扩展，如以下示例所示。  
   
 ```xml  
-<behaviors>  
-    <behavior configurationName="testChannelBehavior">  
-        <myBehavior />  
-        <channelSecurity cacheCookies="false" detectReplays="false" maxCachedNonces="9"  
-            maxClockSkew="00:00:03" maxCookieCachingTime="00:07:24" replayWindow="00:07:22.2190000" />  
-    </behavior>  
-</behaviors>  
+<behaviors>
+  <behavior configurationName="testChannelBehavior">
+    <myBehavior />
+    <channelSecurity cacheCookies="false"
+                     detectReplays="false"
+                     maxCachedNonces="9"
+                     maxClockSkew="00:00:03"
+                     maxCookieCachingTime="00:07:24"
+                     replayWindow="00:07:22.2190000" />
+  </behavior>
+</behaviors>
 ```  
   
 ## <a name="security"></a>安全性  

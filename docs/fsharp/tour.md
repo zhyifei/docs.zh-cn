@@ -2,12 +2,12 @@
 title: F# 概览
 description: 通过示例来介绍 F# 语言中的一些主要特性。
 ms.date: 11/06/2018
-ms.openlocfilehash: 32bf892e97b29fcaf426791ef9ada15c9c35b5ae
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 72ecb9e71e5d039f5a62f74ad594fac82269f304
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53143735"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54145518"
 ---
 # <a name="tour-of-f"></a>F# 概览 #
 
@@ -17,7 +17,7 @@ F# 中有两个主要概念：函数和类型。  本文主要介绍该语言中
 
 ## <a name="executing-the-code-online"></a>在线执行代码
 
-如果你没有F#安装在计算机上，你可以执行所有的示例使用联机[Fable REPL](http://fable.io/repl/)。 Fable 是一种F#用于直接在浏览器中执行。 若要在 REPL 中查看以下示例，请查看**示例 > 了解 > 概览F#**  Fable 复制事务的左侧菜单栏中
+如果你没有F#安装在计算机上，你可以执行所有的示例使用联机[Fable REPL](https://fable.io/repl/)。 Fable 是一种F#用于直接在浏览器中执行。 若要在 REPL 中查看以下示例，请查看**示例 > 了解 > 概览F#**  Fable 复制事务的左侧菜单栏中
 
 ## <a name="functions-and-modules"></a>函数和模块
 
