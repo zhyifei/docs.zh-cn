@@ -2,89 +2,87 @@
 title: '&lt;claimTypeRequirements&gt; 的 &lt;add&gt;'
 ms.date: 03/30/2017
 ms.assetid: c68e83c9-39e8-4264-b1ce-b6a9eb5b98aa
-ms.openlocfilehash: b4f9275fdc36ea3c7ba79c6609f039c3b1f4c3ed
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 5d4f0cd71ab9bf69921704300018207c9f7af107
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32750591"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54145206"
 ---
-# <a name="ltaddgt-of-ltclaimtyperequirementsgt"></a><span data-ttu-id="321d3-102">&lt;claimTypeRequirements&gt; 的 &lt;add&gt;</span><span class="sxs-lookup"><span data-stu-id="321d3-102">&lt;add&gt; of &lt;claimTypeRequirements&gt;</span></span>
-<span data-ttu-id="321d3-103">指定希望出现在联合凭据中的必选和可选的声明类型。</span><span class="sxs-lookup"><span data-stu-id="321d3-103">Specifies the types of required and optional claims expected to appear in the federated credential.</span></span> <span data-ttu-id="321d3-104">例如，服务规定有关传入凭据的要求，传入凭据必须具有某组声明类型。</span><span class="sxs-lookup"><span data-stu-id="321d3-104">For example, services state the requirements on incoming credentials, which must possess a certain set of claim types.</span></span>  
+# <a name="ltaddgt-of-ltclaimtyperequirementsgt"></a><span data-ttu-id="46180-102">&lt;claimTypeRequirements&gt; 的 &lt;add&gt;</span><span class="sxs-lookup"><span data-stu-id="46180-102">&lt;add&gt; of &lt;claimTypeRequirements&gt;</span></span>
+<span data-ttu-id="46180-103">指定希望出现在联合凭据中的必选和可选的声明类型。</span><span class="sxs-lookup"><span data-stu-id="46180-103">Specifies the types of required and optional claims expected to appear in the federated credential.</span></span> <span data-ttu-id="46180-104">例如，服务规定有关传入凭据的要求，传入凭据必须具有某组声明类型。</span><span class="sxs-lookup"><span data-stu-id="46180-104">For example, services state the requirements on incoming credentials, which must possess a certain set of claim types.</span></span>  
   
- <span data-ttu-id="321d3-105">\<system.serviceModel></span><span class="sxs-lookup"><span data-stu-id="321d3-105">\<system.serviceModel></span></span>  
-<span data-ttu-id="321d3-106">\<绑定 ></span><span class="sxs-lookup"><span data-stu-id="321d3-106">\<bindings></span></span>  
-<span data-ttu-id="321d3-107">\<customBinding></span><span class="sxs-lookup"><span data-stu-id="321d3-107">\<customBinding></span></span>  
-<span data-ttu-id="321d3-108">\<绑定 ></span><span class="sxs-lookup"><span data-stu-id="321d3-108">\<binding></span></span>  
-<span data-ttu-id="321d3-109">\<安全 ></span><span class="sxs-lookup"><span data-stu-id="321d3-109">\<security></span></span>  
-<span data-ttu-id="321d3-110">\<issuedTokenParameters ></span><span class="sxs-lookup"><span data-stu-id="321d3-110">\<issuedTokenParameters></span></span>  
-<span data-ttu-id="321d3-111">\<claimTypeRequirements ></span><span class="sxs-lookup"><span data-stu-id="321d3-111">\<claimTypeRequirements></span></span>  
+ <span data-ttu-id="46180-105">\<system.serviceModel></span><span class="sxs-lookup"><span data-stu-id="46180-105">\<system.serviceModel></span></span>  
+<span data-ttu-id="46180-106">\<绑定 ></span><span class="sxs-lookup"><span data-stu-id="46180-106">\<bindings></span></span>  
+<span data-ttu-id="46180-107">\<customBinding></span><span class="sxs-lookup"><span data-stu-id="46180-107">\<customBinding></span></span>  
+<span data-ttu-id="46180-108">\<绑定 ></span><span class="sxs-lookup"><span data-stu-id="46180-108">\<binding></span></span>  
+<span data-ttu-id="46180-109">\<安全 ></span><span class="sxs-lookup"><span data-stu-id="46180-109">\<security></span></span>  
+<span data-ttu-id="46180-110">\<issuedTokenParameters ></span><span class="sxs-lookup"><span data-stu-id="46180-110">\<issuedTokenParameters></span></span>  
+<span data-ttu-id="46180-111">\<claimTypeRequirements ></span><span class="sxs-lookup"><span data-stu-id="46180-111">\<claimTypeRequirements></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="321d3-112">语法</span><span class="sxs-lookup"><span data-stu-id="321d3-112">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="46180-112">语法</span><span class="sxs-lookup"><span data-stu-id="46180-112">Syntax</span></span>  
   
 ```xml  
-<claimTypeRequirements>  
-      <add claimType="URI"  
-           isOptional="Boolean" />  
-</claimTypeRequirements>  
+<claimTypeRequirements>
+  <add claimType="URI"
+       isOptional="Boolean" />
+</claimTypeRequirements>
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="321d3-113">特性和元素</span><span class="sxs-lookup"><span data-stu-id="321d3-113">Attributes and Elements</span></span>  
- <span data-ttu-id="321d3-114">下列各节描述了特性、子元素和父元素。</span><span class="sxs-lookup"><span data-stu-id="321d3-114">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="46180-113">特性和元素</span><span class="sxs-lookup"><span data-stu-id="46180-113">Attributes and Elements</span></span>  
+ <span data-ttu-id="46180-114">下列各节描述了特性、子元素和父元素。</span><span class="sxs-lookup"><span data-stu-id="46180-114">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="321d3-115">特性</span><span class="sxs-lookup"><span data-stu-id="321d3-115">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="46180-115">特性</span><span class="sxs-lookup"><span data-stu-id="46180-115">Attributes</span></span>  
   
-|<span data-ttu-id="321d3-116">特性</span><span class="sxs-lookup"><span data-stu-id="321d3-116">Attribute</span></span>|<span data-ttu-id="321d3-117">描述</span><span class="sxs-lookup"><span data-stu-id="321d3-117">Description</span></span>|  
+|<span data-ttu-id="46180-116">特性</span><span class="sxs-lookup"><span data-stu-id="46180-116">Attribute</span></span>|<span data-ttu-id="46180-117">描述</span><span class="sxs-lookup"><span data-stu-id="46180-117">Description</span></span>|  
 |---------------|-----------------|  
-|<span data-ttu-id="321d3-118">claimType</span><span class="sxs-lookup"><span data-stu-id="321d3-118">claimType</span></span>|<span data-ttu-id="321d3-119">一个 URI，定义声明类型。</span><span class="sxs-lookup"><span data-stu-id="321d3-119">A URI that defines the type of a claim.</span></span> <span data-ttu-id="321d3-120">例如，若要从网站上购买产品，用户必须提供具有足够信用额度的有效信用卡。</span><span class="sxs-lookup"><span data-stu-id="321d3-120">For example, to purchase a product from a Web site, the user must present a valid credit card with sufficient credit limit.</span></span> <span data-ttu-id="321d3-121">声明类型将为信用卡 URI。</span><span class="sxs-lookup"><span data-stu-id="321d3-121">The claim type would be the credit card URI.</span></span>|  
-|<span data-ttu-id="321d3-122">isOptional</span><span class="sxs-lookup"><span data-stu-id="321d3-122">isOptional</span></span>|<span data-ttu-id="321d3-123">一个布尔值，指定声明是否为可选的。</span><span class="sxs-lookup"><span data-stu-id="321d3-123">A Boolean value that specifies if this is for an optional claim.</span></span> <span data-ttu-id="321d3-124">如果声明是必选的，则将此属性设置为 `false`。</span><span class="sxs-lookup"><span data-stu-id="321d3-124">Set this attribute to `false` if this is a required claim.</span></span><br /><br /> <span data-ttu-id="321d3-125">当服务请求一些并非必要的信息时，可以使用此属性。</span><span class="sxs-lookup"><span data-stu-id="321d3-125">You can use this attribute when the service asks for some information but does not require it.</span></span> <span data-ttu-id="321d3-126">例如，您可以要求用户输入其名、姓和地址，但决定其电话号码是可选的。</span><span class="sxs-lookup"><span data-stu-id="321d3-126">For example, if you require the user to enter his/her first name, last name and address, but decide that phone number is optional.</span></span>|  
+|<span data-ttu-id="46180-118">claimType</span><span class="sxs-lookup"><span data-stu-id="46180-118">claimType</span></span>|<span data-ttu-id="46180-119">一个 URI，定义声明类型。</span><span class="sxs-lookup"><span data-stu-id="46180-119">A URI that defines the type of a claim.</span></span> <span data-ttu-id="46180-120">例如，若要从网站上购买产品，用户必须提供具有足够信用额度的有效信用卡。</span><span class="sxs-lookup"><span data-stu-id="46180-120">For example, to purchase a product from a Web site, the user must present a valid credit card with sufficient credit limit.</span></span> <span data-ttu-id="46180-121">声明类型将为信用卡 URI。</span><span class="sxs-lookup"><span data-stu-id="46180-121">The claim type would be the credit card URI.</span></span>|  
+|<span data-ttu-id="46180-122">isOptional</span><span class="sxs-lookup"><span data-stu-id="46180-122">isOptional</span></span>|<span data-ttu-id="46180-123">一个布尔值，指定声明是否为可选的。</span><span class="sxs-lookup"><span data-stu-id="46180-123">A Boolean value that specifies if this is for an optional claim.</span></span> <span data-ttu-id="46180-124">如果声明是必选的，则将此属性设置为 `false`。</span><span class="sxs-lookup"><span data-stu-id="46180-124">Set this attribute to `false` if this is a required claim.</span></span><br /><br /> <span data-ttu-id="46180-125">当服务请求一些并非必要的信息时，可以使用此属性。</span><span class="sxs-lookup"><span data-stu-id="46180-125">You can use this attribute when the service asks for some information but does not require it.</span></span> <span data-ttu-id="46180-126">例如，您可以要求用户输入其名、姓和地址，但决定其电话号码是可选的。</span><span class="sxs-lookup"><span data-stu-id="46180-126">For example, if you require the user to enter his/her first name, last name and address, but decide that phone number is optional.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="321d3-127">子元素</span><span class="sxs-lookup"><span data-stu-id="321d3-127">Child Elements</span></span>  
- <span data-ttu-id="321d3-128">无。</span><span class="sxs-lookup"><span data-stu-id="321d3-128">None.</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="46180-127">子元素</span><span class="sxs-lookup"><span data-stu-id="46180-127">Child Elements</span></span>  
+ <span data-ttu-id="46180-128">无。</span><span class="sxs-lookup"><span data-stu-id="46180-128">None.</span></span>  
   
-### <a name="parent-elements"></a><span data-ttu-id="321d3-129">父元素</span><span class="sxs-lookup"><span data-stu-id="321d3-129">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="46180-129">父元素</span><span class="sxs-lookup"><span data-stu-id="46180-129">Parent Elements</span></span>  
   
-|<span data-ttu-id="321d3-130">元素</span><span class="sxs-lookup"><span data-stu-id="321d3-130">Element</span></span>|<span data-ttu-id="321d3-131">描述</span><span class="sxs-lookup"><span data-stu-id="321d3-131">Description</span></span>|  
+|<span data-ttu-id="46180-130">元素</span><span class="sxs-lookup"><span data-stu-id="46180-130">Element</span></span>|<span data-ttu-id="46180-131">描述</span><span class="sxs-lookup"><span data-stu-id="46180-131">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="321d3-132">\<claimTypeRequirements></span><span class="sxs-lookup"><span data-stu-id="321d3-132">\<claimTypeRequirements></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/claimtyperequirements-element.md)|<span data-ttu-id="321d3-133">指定所需声明类型的集合。</span><span class="sxs-lookup"><span data-stu-id="321d3-133">Specifies a collection of required claim types.</span></span><br /><br /> <span data-ttu-id="321d3-134">在联合方案中，服务规定有关传入凭据的要求。</span><span class="sxs-lookup"><span data-stu-id="321d3-134">In a federated scenario, services state the requirements on incoming credentials.</span></span> <span data-ttu-id="321d3-135">例如，传入凭据必须具有某组声明类型。</span><span class="sxs-lookup"><span data-stu-id="321d3-135">For example, the incoming credentials must possess a certain set of claim types.</span></span> <span data-ttu-id="321d3-136">此集合中的每个元素都指定希望出现在联合凭据中的必选和可选的声明类型。</span><span class="sxs-lookup"><span data-stu-id="321d3-136">Each element in this collection specifies the types of required and optional claims expected to appear in a federated credential.</span></span>|  
+|[<span data-ttu-id="46180-132">\<claimTypeRequirements></span><span class="sxs-lookup"><span data-stu-id="46180-132">\<claimTypeRequirements></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/claimtyperequirements-element.md)|<span data-ttu-id="46180-133">指定所需声明类型的集合。</span><span class="sxs-lookup"><span data-stu-id="46180-133">Specifies a collection of required claim types.</span></span><br /><br /> <span data-ttu-id="46180-134">在联合方案中，服务规定有关传入凭据的要求。</span><span class="sxs-lookup"><span data-stu-id="46180-134">In a federated scenario, services state the requirements on incoming credentials.</span></span> <span data-ttu-id="46180-135">例如，传入凭据必须具有某组声明类型。</span><span class="sxs-lookup"><span data-stu-id="46180-135">For example, the incoming credentials must possess a certain set of claim types.</span></span> <span data-ttu-id="46180-136">此集合中的每个元素都指定希望出现在联合凭据中的必选和可选的声明类型。</span><span class="sxs-lookup"><span data-stu-id="46180-136">Each element in this collection specifies the types of required and optional claims expected to appear in a federated credential.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="321d3-137">备注</span><span class="sxs-lookup"><span data-stu-id="321d3-137">Remarks</span></span>  
- <span data-ttu-id="321d3-138">在联合方案中，服务规定有关传入凭据的要求。</span><span class="sxs-lookup"><span data-stu-id="321d3-138">In a federated scenario, services state the requirements on incoming credentials.</span></span> <span data-ttu-id="321d3-139">例如，传入凭据必须具有某组声明类型。</span><span class="sxs-lookup"><span data-stu-id="321d3-139">For example, the incoming credentials must possess a certain set of claim types.</span></span> <span data-ttu-id="321d3-140">此要求出现在安全策略中。</span><span class="sxs-lookup"><span data-stu-id="321d3-140">This requirement is manifested in a security policy.</span></span> <span data-ttu-id="321d3-141">当客户端请求来自联合服务（例如 CardSpace）的凭据时，它会将需求放置在令牌请求 (RequestSecurityToken) 中，以便联合服务能够相应地颁发符合需求的凭据。</span><span class="sxs-lookup"><span data-stu-id="321d3-141">When a client requests credentials from a federated service (for example, CardSpace), it puts the requirements into a token request (RequestSecurityToken) so that the federated service can issue the credentials that satisfy the requirements accordingly.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="46180-137">备注</span><span class="sxs-lookup"><span data-stu-id="46180-137">Remarks</span></span>  
+ <span data-ttu-id="46180-138">在联合方案中，服务规定有关传入凭据的要求。</span><span class="sxs-lookup"><span data-stu-id="46180-138">In a federated scenario, services state the requirements on incoming credentials.</span></span> <span data-ttu-id="46180-139">例如，传入凭据必须具有某组声明类型。</span><span class="sxs-lookup"><span data-stu-id="46180-139">For example, the incoming credentials must possess a certain set of claim types.</span></span> <span data-ttu-id="46180-140">此要求出现在安全策略中。</span><span class="sxs-lookup"><span data-stu-id="46180-140">This requirement is manifested in a security policy.</span></span> <span data-ttu-id="46180-141">当客户端请求来自联合服务（例如 CardSpace）的凭据时，它会将需求放置在令牌请求 (RequestSecurityToken) 中，以便联合服务能够相应地颁发符合需求的凭据。</span><span class="sxs-lookup"><span data-stu-id="46180-141">When a client requests credentials from a federated service (for example, CardSpace), it puts the requirements into a token request (RequestSecurityToken) so that the federated service can issue the credentials that satisfy the requirements accordingly.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="321d3-142">示例</span><span class="sxs-lookup"><span data-stu-id="321d3-142">Example</span></span>  
- <span data-ttu-id="321d3-143">下面的配置将两个声明类型需求添加到安全绑定。</span><span class="sxs-lookup"><span data-stu-id="321d3-143">The following configuration adds two claim type requirements to a security binding.</span></span>  
+## <a name="example"></a><span data-ttu-id="46180-142">示例</span><span class="sxs-lookup"><span data-stu-id="46180-142">Example</span></span>  
+ <span data-ttu-id="46180-143">下面的配置将两个声明类型需求添加到安全绑定。</span><span class="sxs-lookup"><span data-stu-id="46180-143">The following configuration adds two claim type requirements to a security binding.</span></span>  
   
 ```xml  
-<bindings>  
-    <wsFederationHttpBinding>  
-      <binding name="myFederatedBinding">  
-        <security mode="Message">  
-          <message issuedTokenType="urn:oasis:names:tc:SAML:1.0:assertion">  
-            <claimTypeRequirements>  
-              <add claimType=  
-"http://schemas.microsoft.com/ws/2005/05/identity/claims/EmailAddress"/>  
-              <add claimType=  
-"http://schemas.microsoft.com/ws/2005/05/identity/claims/UserName"    
-optional="true" />  
-            </claims>  
-          </message>  
-        </security>  
-      </binding>  
-    </wsFederationHttpBinding>  
-</bindings>  
+<bindings>
+  <wsFederationHttpBinding>
+    <binding name="myFederatedBinding">
+      <security mode="Message">
+        <message issuedTokenType="urn:oasis:names:tc:SAML:1.0:assertion">
+          <claimTypeRequirements>
+            <add claimType="http://schemas.microsoft.com/ws/2005/05/identity/claims/EmailAddress" />
+            <add claimType="http://schemas.microsoft.com/ws/2005/05/identity/claims/UserName"
+                 optional="true" />
+          </claimTypeRequirements>
+        </message>
+      </security>
+    </binding>
+  </wsFederationHttpBinding>
+</bindings>
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="321d3-144">请参阅</span><span class="sxs-lookup"><span data-stu-id="321d3-144">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="46180-144">请参阅</span><span class="sxs-lookup"><span data-stu-id="46180-144">See Also</span></span>  
  <xref:System.ServiceModel.Security.Tokens.ClaimTypeRequirement>  
  <xref:System.ServiceModel.Security.Tokens.IssuedSecurityTokenParameters.ClaimTypeRequirements%2A>  
  <xref:System.ServiceModel.Configuration.IssuedTokenParametersElement.ClaimTypeRequirements%2A>  
  <xref:System.ServiceModel.Configuration.ClaimTypeElementCollection>  
  <xref:System.ServiceModel.Configuration.ClaimTypeElement>  
  <xref:System.ServiceModel.Channels.CustomBinding>  
- [<span data-ttu-id="321d3-145">\<claimTypeRequirements></span><span class="sxs-lookup"><span data-stu-id="321d3-145">\<claimTypeRequirements></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/claimtyperequirements-element.md)  
- [<span data-ttu-id="321d3-146">绑定</span><span class="sxs-lookup"><span data-stu-id="321d3-146">Bindings</span></span>](../../../../../docs/framework/wcf/bindings.md)  
- [<span data-ttu-id="321d3-147">扩展绑定</span><span class="sxs-lookup"><span data-stu-id="321d3-147">Extending Bindings</span></span>](../../../../../docs/framework/wcf/extending/extending-bindings.md)  
- [<span data-ttu-id="321d3-148">自定义绑定</span><span class="sxs-lookup"><span data-stu-id="321d3-148">Custom Bindings</span></span>](../../../../../docs/framework/wcf/extending/custom-bindings.md)  
- [<span data-ttu-id="321d3-149">\<customBinding></span><span class="sxs-lookup"><span data-stu-id="321d3-149">\<customBinding></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)  
- [<span data-ttu-id="321d3-150">如何：使用 SecurityBindingElement 创建自定义绑定</span><span class="sxs-lookup"><span data-stu-id="321d3-150">How to: Create a Custom Binding Using the SecurityBindingElement</span></span>](../../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)  
- [<span data-ttu-id="321d3-151">自定义绑定安全性</span><span class="sxs-lookup"><span data-stu-id="321d3-151">Custom Binding Security</span></span>](../../../../../docs/framework/wcf/samples/custom-binding-security.md)
+ [<span data-ttu-id="46180-145">\<claimTypeRequirements></span><span class="sxs-lookup"><span data-stu-id="46180-145">\<claimTypeRequirements></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/claimtyperequirements-element.md)  
+ [<span data-ttu-id="46180-146">绑定</span><span class="sxs-lookup"><span data-stu-id="46180-146">Bindings</span></span>](../../../../../docs/framework/wcf/bindings.md)  
+ [<span data-ttu-id="46180-147">扩展绑定</span><span class="sxs-lookup"><span data-stu-id="46180-147">Extending Bindings</span></span>](../../../../../docs/framework/wcf/extending/extending-bindings.md)  
+ [<span data-ttu-id="46180-148">自定义绑定</span><span class="sxs-lookup"><span data-stu-id="46180-148">Custom Bindings</span></span>](../../../../../docs/framework/wcf/extending/custom-bindings.md)  
+ [<span data-ttu-id="46180-149">\<customBinding></span><span class="sxs-lookup"><span data-stu-id="46180-149">\<customBinding></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)  
+ [<span data-ttu-id="46180-150">如何：创建自定义绑定使用 SecurityBindingElement</span><span class="sxs-lookup"><span data-stu-id="46180-150">How to: Create a Custom Binding Using the SecurityBindingElement</span></span>](../../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)  
+ [<span data-ttu-id="46180-151">自定义绑定安全性</span><span class="sxs-lookup"><span data-stu-id="46180-151">Custom Binding Security</span></span>](../../../../../docs/framework/wcf/samples/custom-binding-security.md)
