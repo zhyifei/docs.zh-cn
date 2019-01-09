@@ -4,30 +4,30 @@ ms.date: 03/30/2017
 ms.assetid: 52961ffc-d1c7-4f83-832c-786444b951ba
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 187bff7c75ba2a0887e3c5728a484a9231936511
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 202737692bae14ada229ee2c92a6630a3ed71344
+ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33392741"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "54030069"
 ---
-# <a name="how-to-migrate-managed-code-dcom-to-wcf"></a><span data-ttu-id="0f7a1-102">如何：将托管代码 DCOM 迁移到 WCF</span><span class="sxs-lookup"><span data-stu-id="0f7a1-102">How to: Migrate Managed-Code DCOM to WCF</span></span>
-<span data-ttu-id="0f7a1-103">Windows Communication Foundation (WCF) 是针对分布式组件对象模型 (DCOM) 建议的安全选择，可用于处理分布式环境中服务器和客户端间的托管代码调用。</span><span class="sxs-lookup"><span data-stu-id="0f7a1-103">Windows Communication Foundation (WCF) is the recommended and secure choice over Distributed Component Object Model (DCOM) for managed code calls between servers and clients in a distributed environment.</span></span> <span data-ttu-id="0f7a1-104">本文介绍在以下情景中，如何将代码从 DCOM 迁移到 WCF。</span><span class="sxs-lookup"><span data-stu-id="0f7a1-104">This article shows how you to migrate code from DCOM to WCF for the following scenarios.</span></span>  
+# <a name="how-to-migrate-managed-code-dcom-to-wcf"></a><span data-ttu-id="7996d-102">如何：将托管代码 DCOM 迁移到 WCF</span><span class="sxs-lookup"><span data-stu-id="7996d-102">How to: Migrate Managed-Code DCOM to WCF</span></span>
+<span data-ttu-id="7996d-103">Windows Communication Foundation (WCF) 是针对分布式组件对象模型 (DCOM) 建议的安全选择，可用于处理分布式环境中服务器和客户端间的托管代码调用。</span><span class="sxs-lookup"><span data-stu-id="7996d-103">Windows Communication Foundation (WCF) is the recommended and secure choice over Distributed Component Object Model (DCOM) for managed code calls between servers and clients in a distributed environment.</span></span> <span data-ttu-id="7996d-104">本文介绍在以下情景中，如何将代码从 DCOM 迁移到 WCF。</span><span class="sxs-lookup"><span data-stu-id="7996d-104">This article shows how you to migrate code from DCOM to WCF for the following scenarios.</span></span>  
   
--   <span data-ttu-id="0f7a1-105">远程服务将对象按值返回到客户端</span><span class="sxs-lookup"><span data-stu-id="0f7a1-105">The remote service returns an object by-value to the client</span></span>  
+-   <span data-ttu-id="7996d-105">远程服务将对象按值返回到客户端</span><span class="sxs-lookup"><span data-stu-id="7996d-105">The remote service returns an object by-value to the client</span></span>  
   
--   <span data-ttu-id="0f7a1-106">客户端将对象按值返回到远程服务</span><span class="sxs-lookup"><span data-stu-id="0f7a1-106">The client sends an object by-value to the remote service</span></span>  
+-   <span data-ttu-id="7996d-106">客户端将对象按值返回到远程服务</span><span class="sxs-lookup"><span data-stu-id="7996d-106">The client sends an object by-value to the remote service</span></span>  
   
--   <span data-ttu-id="0f7a1-107">远程服务将对象按引用返回到客户端</span><span class="sxs-lookup"><span data-stu-id="0f7a1-107">The remote service returns an object by-reference to the client</span></span>  
+-   <span data-ttu-id="7996d-107">远程服务将对象按引用返回到客户端</span><span class="sxs-lookup"><span data-stu-id="7996d-107">The remote service returns an object by-reference to the client</span></span>  
   
- <span data-ttu-id="0f7a1-108">出于安全原因，WCF 中不允许将对象按引用从客户端发送到服务。</span><span class="sxs-lookup"><span data-stu-id="0f7a1-108">For security reasons, sending an object by-reference from the client to the service is not allowed in WCF.</span></span> <span data-ttu-id="0f7a1-109">在 WCF 中使用双工服务可实现需要在客户端和服务器间来回会话的方案。</span><span class="sxs-lookup"><span data-stu-id="0f7a1-109">A scenario that requires a conversation back and forth between client and server can be achieved in WCF using a duplex service.</span></span>  <span data-ttu-id="0f7a1-110">有关双工服务的详细信息，请参阅[双工服务](../../../docs/framework/wcf/feature-details/duplex-services.md)</span><span class="sxs-lookup"><span data-stu-id="0f7a1-110">For more information about duplex services, see [Duplex Services](../../../docs/framework/wcf/feature-details/duplex-services.md).</span></span>  
+ <span data-ttu-id="7996d-108">出于安全原因，WCF 中不允许将对象按引用从客户端发送到服务。</span><span class="sxs-lookup"><span data-stu-id="7996d-108">For security reasons, sending an object by-reference from the client to the service is not allowed in WCF.</span></span> <span data-ttu-id="7996d-109">在 WCF 中使用双工服务可实现需要在客户端和服务器间来回会话的方案。</span><span class="sxs-lookup"><span data-stu-id="7996d-109">A scenario that requires a conversation back and forth between client and server can be achieved in WCF using a duplex service.</span></span>  <span data-ttu-id="7996d-110">有关双工服务的详细信息，请参阅[双工服务](../../../docs/framework/wcf/feature-details/duplex-services.md)</span><span class="sxs-lookup"><span data-stu-id="7996d-110">For more information about duplex services, see [Duplex Services](../../../docs/framework/wcf/feature-details/duplex-services.md).</span></span>  
   
- <span data-ttu-id="0f7a1-111">有关创建 WCF 服务和这些服务的客户端的详细信息，请参阅[基本 WCF 编程](../../../docs/framework/wcf/basic-wcf-programming.md)、[设计和实现服务](../../../docs/framework/wcf/designing-and-implementing-services.md)以及[生成客户端](../../../docs/framework/wcf/building-clients.md)。</span><span class="sxs-lookup"><span data-stu-id="0f7a1-111">For more details about creating WCF services and clients for those services, see [Basic WCF Programming](../../../docs/framework/wcf/basic-wcf-programming.md), [Designing and Implementing Services](../../../docs/framework/wcf/designing-and-implementing-services.md), and [Building Clients](../../../docs/framework/wcf/building-clients.md).</span></span>  
+ <span data-ttu-id="7996d-111">有关创建 WCF 服务和这些服务的客户端的详细信息，请参阅[基本 WCF 编程](../../../docs/framework/wcf/basic-wcf-programming.md)、[设计和实现服务](../../../docs/framework/wcf/designing-and-implementing-services.md)以及[生成客户端](../../../docs/framework/wcf/building-clients.md)。</span><span class="sxs-lookup"><span data-stu-id="7996d-111">For more details about creating WCF services and clients for those services, see [Basic WCF Programming](../../../docs/framework/wcf/basic-wcf-programming.md), [Designing and Implementing Services](../../../docs/framework/wcf/designing-and-implementing-services.md), and [Building Clients](../../../docs/framework/wcf/building-clients.md).</span></span>  
   
-## <a name="dcom-example-code"></a><span data-ttu-id="0f7a1-112">DCOM 代码示例</span><span class="sxs-lookup"><span data-stu-id="0f7a1-112">DCOM example code</span></span>  
- <span data-ttu-id="0f7a1-113">对于这些方案，使用 WCF 所示的 DCOM 接口具有以下结构：</span><span class="sxs-lookup"><span data-stu-id="0f7a1-113">For these scenarios, the DCOM interfaces that are illustrated using WCF have the following structure:</span></span>  
+## <a name="dcom-example-code"></a><span data-ttu-id="7996d-112">DCOM 代码示例</span><span class="sxs-lookup"><span data-stu-id="7996d-112">DCOM example code</span></span>  
+ <span data-ttu-id="7996d-113">对于这些方案，使用 WCF 所示的 DCOM 接口具有以下结构：</span><span class="sxs-lookup"><span data-stu-id="7996d-113">For these scenarios, the DCOM interfaces that are illustrated using WCF have the following structure:</span></span>  
   
-```  
+```csharp  
 [ComVisible(true)]  
 [Guid("AA9C4CDB-55EA-4413-90D2-843F1A49E6E6")]  
 public interface IRemoteService  
@@ -48,22 +48,22 @@ public class Customer
 }  
 ```  
   
-## <a name="the-service-returns-an-object-by-value"></a><span data-ttu-id="0f7a1-114">此服务返回对象按值</span><span class="sxs-lookup"><span data-stu-id="0f7a1-114">The service returns an object by-value</span></span>  
- <span data-ttu-id="0f7a1-115">对于此方案，可调用服务并且此服务的方法将返回对象，此对象按值从服务器传递到客户端对象。</span><span class="sxs-lookup"><span data-stu-id="0f7a1-115">For this scenario, you make a call to a service and it method returns an object, which is passed by-value from the server to the client.</span></span> <span data-ttu-id="0f7a1-116">这种方案表示以下 COM 调用：</span><span class="sxs-lookup"><span data-stu-id="0f7a1-116">This scenario represents the following COM call:</span></span>  
+## <a name="the-service-returns-an-object-by-value"></a><span data-ttu-id="7996d-114">此服务返回对象按值</span><span class="sxs-lookup"><span data-stu-id="7996d-114">The service returns an object by-value</span></span>  
+ <span data-ttu-id="7996d-115">对于此方案，可调用服务并且此服务的方法将返回对象，此对象按值从服务器传递到客户端对象。</span><span class="sxs-lookup"><span data-stu-id="7996d-115">For this scenario, you make a call to a service and it method returns an object, which is passed by-value from the server to the client.</span></span> <span data-ttu-id="7996d-116">这种方案表示以下 COM 调用：</span><span class="sxs-lookup"><span data-stu-id="7996d-116">This scenario represents the following COM call:</span></span>  
   
-```  
+```csharp  
 public interface IRemoteService  
 {  
     Customer GetObjectByValue();  
 }  
 ```  
   
- <span data-ttu-id="0f7a1-117">在此方案中，客户端从远程服务接收对象的反序列化副本。</span><span class="sxs-lookup"><span data-stu-id="0f7a1-117">In this scenario, the client receives a deserialized copy of an object from the remote service.</span></span> <span data-ttu-id="0f7a1-118">客户端与此本地副本可进行交互，而无需调用返回到服务。</span><span class="sxs-lookup"><span data-stu-id="0f7a1-118">The client can interact with this local copy without calling back to the service.</span></span>  <span data-ttu-id="0f7a1-119">换言之，客户端会得到保证，在调用本地副本的方法时，无论如何都不会涉及到该服务。</span><span class="sxs-lookup"><span data-stu-id="0f7a1-119">In other words, the client is guaranteed the service will not be involved in any way when methods on the local copy are called.</span></span> <span data-ttu-id="0f7a1-120">WCF 始终按值从服务返回对象，因此以下步骤描述了创建常规 WCF 服务。</span><span class="sxs-lookup"><span data-stu-id="0f7a1-120">WCF always returns objects from the service by value, so the following steps describe creating a regular WCF service.</span></span>  
+ <span data-ttu-id="7996d-117">在此方案中，客户端从远程服务接收对象的反序列化副本。</span><span class="sxs-lookup"><span data-stu-id="7996d-117">In this scenario, the client receives a deserialized copy of an object from the remote service.</span></span> <span data-ttu-id="7996d-118">客户端与此本地副本可进行交互，而无需调用返回到服务。</span><span class="sxs-lookup"><span data-stu-id="7996d-118">The client can interact with this local copy without calling back to the service.</span></span>  <span data-ttu-id="7996d-119">换言之，客户端会得到保证，在调用本地副本的方法时，无论如何都不会涉及到该服务。</span><span class="sxs-lookup"><span data-stu-id="7996d-119">In other words, the client is guaranteed the service will not be involved in any way when methods on the local copy are called.</span></span> <span data-ttu-id="7996d-120">WCF 始终按值从服务返回对象，因此以下步骤描述了创建常规 WCF 服务。</span><span class="sxs-lookup"><span data-stu-id="7996d-120">WCF always returns objects from the service by value, so the following steps describe creating a regular WCF service.</span></span>  
   
-### <a name="step-1-define-the-wcf-service-interface"></a><span data-ttu-id="0f7a1-121">步骤 1：定义 WCF 服务接口</span><span class="sxs-lookup"><span data-stu-id="0f7a1-121">Step 1: Define the WCF service interface</span></span>  
- <span data-ttu-id="0f7a1-122">定义 WCF 服务的公共接口并标记 [<xref:System.ServiceModel.ServiceContractAttribute>] 属性。</span><span class="sxs-lookup"><span data-stu-id="0f7a1-122">Define a public interface for the WCF service and mark it with the [<xref:System.ServiceModel.ServiceContractAttribute>] attribute.</span></span>  <span data-ttu-id="0f7a1-123">为需要对客户端公开的方法标记 [<xref:System.ServiceModel.OperationContractAttribute>] 属性。</span><span class="sxs-lookup"><span data-stu-id="0f7a1-123">Mark the methods you want to expose to clients with the [<xref:System.ServiceModel.OperationContractAttribute>] attribute.</span></span> <span data-ttu-id="0f7a1-124">以下示例演示了如何使用这些属性标识客户端可以调用的服务器端接口和接口方法。</span><span class="sxs-lookup"><span data-stu-id="0f7a1-124">The following example shows using these attributes to identify the server-side interface and interface methods a client can call.</span></span> <span data-ttu-id="0f7a1-125">此方案中使用的方法用粗体显示。</span><span class="sxs-lookup"><span data-stu-id="0f7a1-125">The method used for this scenario is shown in bold.</span></span>  
+### <a name="step-1-define-the-wcf-service-interface"></a><span data-ttu-id="7996d-121">步骤 1：定义 WCF 服务接口</span><span class="sxs-lookup"><span data-stu-id="7996d-121">Step 1: Define the WCF service interface</span></span>  
+ <span data-ttu-id="7996d-122">定义 WCF 服务的公共接口并标记 [<xref:System.ServiceModel.ServiceContractAttribute>] 属性。</span><span class="sxs-lookup"><span data-stu-id="7996d-122">Define a public interface for the WCF service and mark it with the [<xref:System.ServiceModel.ServiceContractAttribute>] attribute.</span></span>  <span data-ttu-id="7996d-123">为需要对客户端公开的方法标记 [<xref:System.ServiceModel.OperationContractAttribute>] 属性。</span><span class="sxs-lookup"><span data-stu-id="7996d-123">Mark the methods you want to expose to clients with the [<xref:System.ServiceModel.OperationContractAttribute>] attribute.</span></span> <span data-ttu-id="7996d-124">以下示例演示了如何使用这些属性标识客户端可以调用的服务器端接口和接口方法。</span><span class="sxs-lookup"><span data-stu-id="7996d-124">The following example shows using these attributes to identify the server-side interface and interface methods a client can call.</span></span> <span data-ttu-id="7996d-125">此方案中使用的方法用粗体显示。</span><span class="sxs-lookup"><span data-stu-id="7996d-125">The method used for this scenario is shown in bold.</span></span>  
   
-```  
+```csharp  
 using System.Runtime.Serialization;  
 using System.ServiceModel;  
 using System.ServiceModel.Web;   
@@ -79,12 +79,12 @@ public interface ICustomerManager
 }  
 ```  
   
-### <a name="step-2-define-the-data-contract"></a><span data-ttu-id="0f7a1-126">步骤 2：定义数据协定</span><span class="sxs-lookup"><span data-stu-id="0f7a1-126">Step 2: Define the data contract</span></span>  
- <span data-ttu-id="0f7a1-127">下一步，你应该创建服务的数据协定，此协定将描述服务及其客户端间将如何交换数据。</span><span class="sxs-lookup"><span data-stu-id="0f7a1-127">Next you should create a data contract for the service, which will describe how the data will be exchanged between the service and its clients.</span></span>  <span data-ttu-id="0f7a1-128">应为数据协定中描述的类标记 [<xref:System.Runtime.Serialization.DataContractAttribute>] 属性。</span><span class="sxs-lookup"><span data-stu-id="0f7a1-128">Classes described in the data contract should be marked with the [<xref:System.Runtime.Serialization.DataContractAttribute>] attribute.</span></span> <span data-ttu-id="0f7a1-129">应为需要对客户端和服务器可见的单个属性或字段标记 [<xref:System.Runtime.Serialization.DataMemberAttribute>] 属性。如果需要允许数据协定中的类所派生的类型，则必须将为它们标记 [<xref:System.Runtime.Serialization.KnownTypeAttribute>] 属性。</span><span class="sxs-lookup"><span data-stu-id="0f7a1-129">The individual properties or fields you want visible to both client and server should be marked with the [<xref:System.Runtime.Serialization.DataMemberAttribute>] attribute.If you want types derived from a class in the data contract to be allowed, you must identify them with the [<xref:System.Runtime.Serialization.KnownTypeAttribute>] attribute.</span></span> <span data-ttu-id="0f7a1-130">WCF 将仅序列化或反序列化服务接口中的类型和标识为已知类型的类型。</span><span class="sxs-lookup"><span data-stu-id="0f7a1-130">WCF will only serialize or deserialize types in the service interface and types identified as known types.</span></span> <span data-ttu-id="0f7a1-131">如果尝试使用不是已知类型的类型，则将发生异常。</span><span class="sxs-lookup"><span data-stu-id="0f7a1-131">If you attempt to use a type that is not a known type, an exception will occur.</span></span>  
+### <a name="step-2-define-the-data-contract"></a><span data-ttu-id="7996d-126">步骤 2：定义数据协定</span><span class="sxs-lookup"><span data-stu-id="7996d-126">Step 2: Define the data contract</span></span>  
+ <span data-ttu-id="7996d-127">下一步，你应该创建服务的数据协定，此协定将描述服务及其客户端间将如何交换数据。</span><span class="sxs-lookup"><span data-stu-id="7996d-127">Next you should create a data contract for the service, which will describe how the data will be exchanged between the service and its clients.</span></span>  <span data-ttu-id="7996d-128">应为数据协定中描述的类标记 [<xref:System.Runtime.Serialization.DataContractAttribute>] 属性。</span><span class="sxs-lookup"><span data-stu-id="7996d-128">Classes described in the data contract should be marked with the [<xref:System.Runtime.Serialization.DataContractAttribute>] attribute.</span></span> <span data-ttu-id="7996d-129">希望对客户端和服务器可见的单独属性或字段标记为 [<xref:System.Runtime.Serialization.DataMemberAttribute>] 属性。</span><span class="sxs-lookup"><span data-stu-id="7996d-129">The individual properties or fields you want visible to both client and server should be marked with the [<xref:System.Runtime.Serialization.DataMemberAttribute>] attribute.</span></span> <span data-ttu-id="7996d-130">要允许从数据协定的类派生的类型，必须使用 [<xref:System.Runtime.Serialization.KnownTypeAttribute>] 属性标识它们。</span><span class="sxs-lookup"><span data-stu-id="7996d-130">If you want types derived from a class in the data contract to be allowed, you must identify them with the [<xref:System.Runtime.Serialization.KnownTypeAttribute>] attribute.</span></span> <span data-ttu-id="7996d-131">WCF 将仅序列化或反序列化服务接口中的类型和标识为已知类型的类型。</span><span class="sxs-lookup"><span data-stu-id="7996d-131">WCF will only serialize or deserialize types in the service interface and types identified as known types.</span></span> <span data-ttu-id="7996d-132">如果尝试使用不是已知类型的类型，则将发生异常。</span><span class="sxs-lookup"><span data-stu-id="7996d-132">If you attempt to use a type that is not a known type, an exception will occur.</span></span>  
   
- <span data-ttu-id="0f7a1-132">有关数据协定的详细信息，请参阅[数据协定](../../../docs/framework/wcf/samples/data-contracts.md)</span><span class="sxs-lookup"><span data-stu-id="0f7a1-132">For more information about data contracts, see [Data Contracts](../../../docs/framework/wcf/samples/data-contracts.md).</span></span>  
+ <span data-ttu-id="7996d-133">有关数据协定的详细信息，请参阅[数据协定](../../../docs/framework/wcf/samples/data-contracts.md)</span><span class="sxs-lookup"><span data-stu-id="7996d-133">For more information about data contracts, see [Data Contracts](../../../docs/framework/wcf/samples/data-contracts.md).</span></span>  
   
-```  
+```csharp  
 [DataContract]  
 [KnownType(typeof(PremiumCustomer))]  
 public class Customer  
@@ -121,10 +121,10 @@ public class Address
 }  
 ```  
   
-### <a name="step-3-implement-the-wcf-service"></a><span data-ttu-id="0f7a1-133">步骤 3：实现 WCF 服务</span><span class="sxs-lookup"><span data-stu-id="0f7a1-133">Step 3: Implement the WCF service</span></span>  
- <span data-ttu-id="0f7a1-134">下一步，你应该实现 WCF 服务类，此服务类将实现你在上一步中所定义的接口。</span><span class="sxs-lookup"><span data-stu-id="0f7a1-134">Next, you should implement the WCF service class that implements the interface you defined in the previous step.</span></span>  
+### <a name="step-3-implement-the-wcf-service"></a><span data-ttu-id="7996d-134">步骤 3：实现 WCF 服务</span><span class="sxs-lookup"><span data-stu-id="7996d-134">Step 3: Implement the WCF service</span></span>  
+ <span data-ttu-id="7996d-135">下一步，你应该实现 WCF 服务类，此服务类将实现你在上一步中所定义的接口。</span><span class="sxs-lookup"><span data-stu-id="7996d-135">Next, you should implement the WCF service class that implements the interface you defined in the previous step.</span></span>  
   
-```  
+```csharp  
 public class CustomerService: ICustomerManager    
 {  
     public void StoreCustomer(Customer customer)  
@@ -138,8 +138,8 @@ public class CustomerService: ICustomerManager
 }  
 ```  
   
-### <a name="step-4-configure-the-service-and-the-client"></a><span data-ttu-id="0f7a1-135">步骤 4：配置服务和客户端</span><span class="sxs-lookup"><span data-stu-id="0f7a1-135">Step 4: Configure the service and the client</span></span>  
- <span data-ttu-id="0f7a1-136">若要运行 WCF 服务，则需要声明公开特定 URL 中使用特定 WCF 绑定的服务接口的终结点。</span><span class="sxs-lookup"><span data-stu-id="0f7a1-136">To run a WCF service, you need to declare an endpoint that exposes that service interface at a specific URL using a specific WCF binding.</span></span> <span data-ttu-id="0f7a1-137">绑定指定传输、编码和协议的详细信息，以便客户端和服务器进行通信。</span><span class="sxs-lookup"><span data-stu-id="0f7a1-137">A binding specifies the transport, encoding and protocol details for the clients and server to communicate.</span></span> <span data-ttu-id="0f7a1-138">通常将绑定添加到服务项目的配置文件 (web.config) 中。</span><span class="sxs-lookup"><span data-stu-id="0f7a1-138">You typically add bindings to the service project’s configuration file (web.config).</span></span> <span data-ttu-id="0f7a1-139">下面内容显示了服务示例的绑定项：</span><span class="sxs-lookup"><span data-stu-id="0f7a1-139">The following shows a binding entry for the example service:</span></span>  
+### <a name="step-4-configure-the-service-and-the-client"></a><span data-ttu-id="7996d-136">步骤 4：配置服务和客户端</span><span class="sxs-lookup"><span data-stu-id="7996d-136">Step 4: Configure the service and the client</span></span>  
+ <span data-ttu-id="7996d-137">若要运行 WCF 服务，则需要声明公开特定 URL 中使用特定 WCF 绑定的服务接口的终结点。</span><span class="sxs-lookup"><span data-stu-id="7996d-137">To run a WCF service, you need to declare an endpoint that exposes that service interface at a specific URL using a specific WCF binding.</span></span> <span data-ttu-id="7996d-138">绑定指定传输、编码和协议的详细信息，以便客户端和服务器进行通信。</span><span class="sxs-lookup"><span data-stu-id="7996d-138">A binding specifies the transport, encoding and protocol details for the clients and server to communicate.</span></span> <span data-ttu-id="7996d-139">通常将绑定添加到服务项目的配置文件 (web.config) 中。</span><span class="sxs-lookup"><span data-stu-id="7996d-139">You typically add bindings to the service project’s configuration file (web.config).</span></span> <span data-ttu-id="7996d-140">下面内容显示了服务示例的绑定项：</span><span class="sxs-lookup"><span data-stu-id="7996d-140">The following shows a binding entry for the example service:</span></span>  
   
 ```xml  
 <configuration>  
@@ -155,7 +155,7 @@ public class CustomerService: ICustomerManager
 </configuration>  
 ```  
   
- <span data-ttu-id="0f7a1-140">下一步，需要配置客户端，以匹配由服务所指定的绑定信息。</span><span class="sxs-lookup"><span data-stu-id="0f7a1-140">Next, you need to configure the client to match the binding information specified by the service.</span></span> <span data-ttu-id="0f7a1-141">为此，请将以下代码添加到客户端的应用程序配置 (app.config) 文件中。</span><span class="sxs-lookup"><span data-stu-id="0f7a1-141">To do so, add the following to the client’s application configuration (app.config) file.</span></span>  
+ <span data-ttu-id="7996d-141">下一步，需要配置客户端，以匹配由服务所指定的绑定信息。</span><span class="sxs-lookup"><span data-stu-id="7996d-141">Next, you need to configure the client to match the binding information specified by the service.</span></span> <span data-ttu-id="7996d-142">为此，请将以下代码添加到客户端的应用程序配置 (app.config) 文件中。</span><span class="sxs-lookup"><span data-stu-id="7996d-142">To do so, add the following to the client’s application configuration (app.config) file.</span></span>  
   
 ```xml  
 <configuration>  
@@ -169,39 +169,39 @@ public class CustomerService: ICustomerManager
 </configuration>  
 ```  
   
-### <a name="step-5-run-the-service"></a><span data-ttu-id="0f7a1-142">步骤 5：运行服务</span><span class="sxs-lookup"><span data-stu-id="0f7a1-142">Step 5: Run the service</span></span>  
- <span data-ttu-id="0f7a1-143">最后，通过向服务应用程序添加以下行并启动此应用程序，你可以在控制台应用程序中自承载服务。</span><span class="sxs-lookup"><span data-stu-id="0f7a1-143">Finally, you can self-host it in a console application by adding the following lines to the service app, and starting the app.</span></span> <span data-ttu-id="0f7a1-144">有关托管 WCF 服务应用程序的其他方式的详细信息，请参阅[托管服务](../../../docs/framework/wcf/hosting-services.md)。</span><span class="sxs-lookup"><span data-stu-id="0f7a1-144">For more information about other ways to host a WCF service application, [Hosting Services](../../../docs/framework/wcf/hosting-services.md).</span></span>  
+### <a name="step-5-run-the-service"></a><span data-ttu-id="7996d-143">步骤 5：运行服务</span><span class="sxs-lookup"><span data-stu-id="7996d-143">Step 5: Run the service</span></span>  
+ <span data-ttu-id="7996d-144">最后，通过向服务应用程序添加以下行并启动此应用程序，你可以在控制台应用程序中自承载服务。</span><span class="sxs-lookup"><span data-stu-id="7996d-144">Finally, you can self-host it in a console application by adding the following lines to the service app, and starting the app.</span></span> <span data-ttu-id="7996d-145">有关托管 WCF 服务应用程序的其他方式的详细信息，请参阅[托管服务](../../../docs/framework/wcf/hosting-services.md)。</span><span class="sxs-lookup"><span data-stu-id="7996d-145">For more information about other ways to host a WCF service application, [Hosting Services](../../../docs/framework/wcf/hosting-services.md).</span></span>  
   
-```  
+```csharp  
 ServiceHost customerServiceHost = new ServiceHost(typeof(CustomerService));  
 customerServiceHost.Open();  
 ```  
   
-### <a name="step-6-call-the-service-from-the-client"></a><span data-ttu-id="0f7a1-145">步骤 6：从客户端调用服务</span><span class="sxs-lookup"><span data-stu-id="0f7a1-145">Step 6: Call the service from the client</span></span>  
- <span data-ttu-id="0f7a1-146">若要从客户端调用服务，则需要创建服务的通道工厂，并请求一个通道，这将使你能够直接从客户端调用 `GetCustomer` 方法。</span><span class="sxs-lookup"><span data-stu-id="0f7a1-146">To call the service from the client, you need to create a channel factory for the service, and request a channel, which will enable you to directly call the `GetCustomer` method directly from the client.</span></span> <span data-ttu-id="0f7a1-147">通道可实现服务接口，并为你处理基础的请求/答复逻辑。</span><span class="sxs-lookup"><span data-stu-id="0f7a1-147">The channel implements the service’s interface and handles the underlying request/reply logic for you.</span></span>  <span data-ttu-id="0f7a1-148">此方法调用的返回值是服务响应的反序列化的副本。</span><span class="sxs-lookup"><span data-stu-id="0f7a1-148">The return value from that method call is the deserialized copy of the service response.</span></span>  
+### <a name="step-6-call-the-service-from-the-client"></a><span data-ttu-id="7996d-146">步骤 6：从客户端调用服务</span><span class="sxs-lookup"><span data-stu-id="7996d-146">Step 6: Call the service from the client</span></span>  
+ <span data-ttu-id="7996d-147">若要从客户端调用服务，则需要创建服务的通道工厂，并请求一个通道，这将使你能够直接从客户端调用 `GetCustomer` 方法。</span><span class="sxs-lookup"><span data-stu-id="7996d-147">To call the service from the client, you need to create a channel factory for the service, and request a channel, which will enable you to directly call the `GetCustomer` method directly from the client.</span></span> <span data-ttu-id="7996d-148">通道可实现服务接口，并为你处理基础的请求/答复逻辑。</span><span class="sxs-lookup"><span data-stu-id="7996d-148">The channel implements the service’s interface and handles the underlying request/reply logic for you.</span></span>  <span data-ttu-id="7996d-149">此方法调用的返回值是服务响应的反序列化的副本。</span><span class="sxs-lookup"><span data-stu-id="7996d-149">The return value from that method call is the deserialized copy of the service response.</span></span>  
   
-```  
+```csharp  
 ChannelFactory<ICustomerManager> factory =   
      new ChannelFactory<ICustomerManager>("customermanager");  
 ICustomerManager service = factory.CreateChannel();  
 Customer customer = service.GetCustomer("Mary", "Smith");  
 ```  
   
-## <a name="the-client-sends-a-by-value-object-to-the-server"></a><span data-ttu-id="0f7a1-149">客户端按值向服务器发送对象</span><span class="sxs-lookup"><span data-stu-id="0f7a1-149">The client sends a by-value object to the server</span></span>  
- <span data-ttu-id="0f7a1-150">在此方案中，客户端将对象按值发送到服务器。</span><span class="sxs-lookup"><span data-stu-id="0f7a1-150">In this scenario, the client sends an object to the server, by-value.</span></span> <span data-ttu-id="0f7a1-151">这意味着服务器将接收对象的反序列化副本。</span><span class="sxs-lookup"><span data-stu-id="0f7a1-151">This means that the server will receive a deserialized copy of the object.</span></span>  <span data-ttu-id="0f7a1-152">服务器可对此副本调用方法，并确保客户端代码中没有回调。</span><span class="sxs-lookup"><span data-stu-id="0f7a1-152">The server can call methods on that copy and be guaranteed there is no callback into client code.</span></span> <span data-ttu-id="0f7a1-153">如前所述，正常的 WCF 数据交换是按值进行的。</span><span class="sxs-lookup"><span data-stu-id="0f7a1-153">As mentioned previously, normal WCF exchanges of data are by-value.</span></span>  <span data-ttu-id="0f7a1-154">这可确保对其中一个对象的调用方法仅在本地执行 – 它将不会调用客户端上的代码。</span><span class="sxs-lookup"><span data-stu-id="0f7a1-154">This guarantees that calling methods on one of these objects executes locally only – it will not invoke code on the client.</span></span>  
+## <a name="the-client-sends-a-by-value-object-to-the-server"></a><span data-ttu-id="7996d-150">客户端按值向服务器发送对象</span><span class="sxs-lookup"><span data-stu-id="7996d-150">The client sends a by-value object to the server</span></span>  
+ <span data-ttu-id="7996d-151">在此方案中，客户端将对象按值发送到服务器。</span><span class="sxs-lookup"><span data-stu-id="7996d-151">In this scenario, the client sends an object to the server, by-value.</span></span> <span data-ttu-id="7996d-152">这意味着服务器将接收对象的反序列化副本。</span><span class="sxs-lookup"><span data-stu-id="7996d-152">This means that the server will receive a deserialized copy of the object.</span></span>  <span data-ttu-id="7996d-153">服务器可对此副本调用方法，并确保客户端代码中没有回调。</span><span class="sxs-lookup"><span data-stu-id="7996d-153">The server can call methods on that copy and be guaranteed there is no callback into client code.</span></span> <span data-ttu-id="7996d-154">如前所述，正常的 WCF 数据交换是按值进行的。</span><span class="sxs-lookup"><span data-stu-id="7996d-154">As mentioned previously, normal WCF exchanges of data are by-value.</span></span>  <span data-ttu-id="7996d-155">这可确保对其中一个对象的调用方法仅在本地执行 – 它将不会调用客户端上的代码。</span><span class="sxs-lookup"><span data-stu-id="7996d-155">This guarantees that calling methods on one of these objects executes locally only – it will not invoke code on the client.</span></span>  
   
- <span data-ttu-id="0f7a1-155">这种方案表示以下 COM 方法调用：</span><span class="sxs-lookup"><span data-stu-id="0f7a1-155">This scenario represents the following COM method call:</span></span>  
+ <span data-ttu-id="7996d-156">这种方案表示以下 COM 方法调用：</span><span class="sxs-lookup"><span data-stu-id="7996d-156">This scenario represents the following COM method call:</span></span>  
   
-```  
+```csharp  
 public interface IRemoteService  
 {  
     void SendObjectByValue(Customer customer);  
 }  
 ```  
   
- <span data-ttu-id="0f7a1-156">此方案使用与第一个示例中所示相同的服务接口和数据协定。</span><span class="sxs-lookup"><span data-stu-id="0f7a1-156">This scenario uses the same service interface and data contract as shown in the first example.</span></span> <span data-ttu-id="0f7a1-157">此外，客户端和服务将按相同的方法进行配置。</span><span class="sxs-lookup"><span data-stu-id="0f7a1-157">In addition, the client and service will be configured in the same way.</span></span> <span data-ttu-id="0f7a1-158">在此示例中，建立了一个信道，以发送对象并按相同的方式运行。</span><span class="sxs-lookup"><span data-stu-id="0f7a1-158">In this example, a channel is created to send the object and run the same way.</span></span> <span data-ttu-id="0f7a1-159">但是，对于此示例，将创建一个客户端，此客户端可调用服务，并按值传递对象。</span><span class="sxs-lookup"><span data-stu-id="0f7a1-159">However, for this example, you will create a client that calls the service, passing an object by-value.</span></span> <span data-ttu-id="0f7a1-160">客户端将在服务协定中调用的服务方法用粗体显示：</span><span class="sxs-lookup"><span data-stu-id="0f7a1-160">The service method the client will call in the service contract is shown in bold:</span></span>  
+ <span data-ttu-id="7996d-157">此方案使用与第一个示例中所示相同的服务接口和数据协定。</span><span class="sxs-lookup"><span data-stu-id="7996d-157">This scenario uses the same service interface and data contract as shown in the first example.</span></span> <span data-ttu-id="7996d-158">此外，客户端和服务将按相同的方法进行配置。</span><span class="sxs-lookup"><span data-stu-id="7996d-158">In addition, the client and service will be configured in the same way.</span></span> <span data-ttu-id="7996d-159">在此示例中，建立了一个信道，以发送对象并按相同的方式运行。</span><span class="sxs-lookup"><span data-stu-id="7996d-159">In this example, a channel is created to send the object and run the same way.</span></span> <span data-ttu-id="7996d-160">但是，对于此示例，将创建一个客户端，此客户端可调用服务，并按值传递对象。</span><span class="sxs-lookup"><span data-stu-id="7996d-160">However, for this example, you will create a client that calls the service, passing an object by-value.</span></span> <span data-ttu-id="7996d-161">客户端将在服务协定中调用的服务方法用粗体显示：</span><span class="sxs-lookup"><span data-stu-id="7996d-161">The service method the client will call in the service contract is shown in bold:</span></span>  
   
-```  
+```csharp  
 [ServiceContract]  
 public interface ICustomerManager  
 {  
@@ -212,12 +212,12 @@ public interface ICustomerManager
 }  
 ```  
   
-### <a name="add-code-to-the-client-that-sends-a-by-value-object"></a><span data-ttu-id="0f7a1-161">将代码添加到发送按值对象的客户端</span><span class="sxs-lookup"><span data-stu-id="0f7a1-161">Add code to the client that sends a by-value object</span></span>  
- <span data-ttu-id="0f7a1-162">以下代码演示了客户端如何创建一个新的按值客户对象、如何创建与 `ICustomerManager` 服务进行通信的通道以及如何其发送客户对象。</span><span class="sxs-lookup"><span data-stu-id="0f7a1-162">The following code shows how the client creates a new by-value customer object, creates a channel to communicate with the `ICustomerManager` service, and sends the customer object to it.</span></span>  
+### <a name="add-code-to-the-client-that-sends-a-by-value-object"></a><span data-ttu-id="7996d-162">将代码添加到发送按值对象的客户端</span><span class="sxs-lookup"><span data-stu-id="7996d-162">Add code to the client that sends a by-value object</span></span>  
+ <span data-ttu-id="7996d-163">以下代码演示了客户端如何创建一个新的按值客户对象、如何创建与 `ICustomerManager` 服务进行通信的通道以及如何其发送客户对象。</span><span class="sxs-lookup"><span data-stu-id="7996d-163">The following code shows how the client creates a new by-value customer object, creates a channel to communicate with the `ICustomerManager` service, and sends the customer object to it.</span></span>  
   
- <span data-ttu-id="0f7a1-163">将序列化客户对象，并将其发送到服务，由服务将其反序列化为对象的新副本。</span><span class="sxs-lookup"><span data-stu-id="0f7a1-163">The customer object will be serialized, and sent to the service, where it is deserialized by the service into a new copy of that object.</span></span>  <span data-ttu-id="0f7a1-164">服务对此对象调用的任何方法将仅在本地服务器上执行。务必注意以下代码说明了发送派生的类型 (`PremiumCustomer`)。</span><span class="sxs-lookup"><span data-stu-id="0f7a1-164">Any methods the service calls on this object will execute only locally on the server.It’s important to note that this code illustrates sending a derived type (`PremiumCustomer`).</span></span>  <span data-ttu-id="0f7a1-165">服务协定期望 `Customer` 对象，但服务数据协定使用 [<xref:System.Runtime.Serialization.KnownTypeAttribute>] 属性以表示同样允许 `PremiumCustomer`。</span><span class="sxs-lookup"><span data-stu-id="0f7a1-165">The service contract expects a `Customer` object, but the service data contract uses the [<xref:System.Runtime.Serialization.KnownTypeAttribute>] attribute to indicate that `PremiumCustomer` is also allowed.</span></span>  <span data-ttu-id="0f7a1-166">WCF 通过此服务接口序列化或反序列化任何其他类型的尝试将失败。</span><span class="sxs-lookup"><span data-stu-id="0f7a1-166">WCF will fail attempts to serialize or deserialize any other type via this service interface.</span></span>  
+ <span data-ttu-id="7996d-164">将序列化客户对象，并将其发送到服务，由服务将其反序列化为对象的新副本。</span><span class="sxs-lookup"><span data-stu-id="7996d-164">The customer object will be serialized, and sent to the service, where it is deserialized by the service into a new copy of that object.</span></span>  <span data-ttu-id="7996d-165">服务对此对象调用的任何方法将仅对服务器本地执行。</span><span class="sxs-lookup"><span data-stu-id="7996d-165">Any methods the service calls on this object will execute only locally on the server.</span></span> <span data-ttu-id="7996d-166">请注意，此代码说明发送派生的类型 (`PremiumCustomer`)。</span><span class="sxs-lookup"><span data-stu-id="7996d-166">It’s important to note that this code illustrates sending a derived type (`PremiumCustomer`).</span></span>  <span data-ttu-id="7996d-167">服务协定期望 `Customer` 对象，但服务数据协定使用 [<xref:System.Runtime.Serialization.KnownTypeAttribute>] 属性以表示同样允许 `PremiumCustomer`。</span><span class="sxs-lookup"><span data-stu-id="7996d-167">The service contract expects a `Customer` object, but the service data contract uses the [<xref:System.Runtime.Serialization.KnownTypeAttribute>] attribute to indicate that `PremiumCustomer` is also allowed.</span></span>  <span data-ttu-id="7996d-168">WCF 通过此服务接口序列化或反序列化任何其他类型的尝试将失败。</span><span class="sxs-lookup"><span data-stu-id="7996d-168">WCF will fail attempts to serialize or deserialize any other type via this service interface.</span></span>  
   
-```  
+```csharp  
 PremiumCustomer customer = new PremiumCustomer();  
 customer.Firstname = "John";  
 customer.Lastname = "Doe";  
@@ -232,30 +232,30 @@ ICustomerManager customerManager = factory.CreateChannel();
 customerManager.StoreCustomer(customer);  
 ```  
   
-## <a name="the-service-returns-an-object-by-reference"></a><span data-ttu-id="0f7a1-167">服务按引用返回对象</span><span class="sxs-lookup"><span data-stu-id="0f7a1-167">The service returns an object by reference</span></span>  
- <span data-ttu-id="0f7a1-168">对于此方案，客户端应用调用远程服务，此方法将返回一个对象，此对象由引用从服务到传递到客户端。</span><span class="sxs-lookup"><span data-stu-id="0f7a1-168">For this scenario, the client app makes a call to the remote service and the method returns an object, which is passed by reference from the service to the client.</span></span>  
+## <a name="the-service-returns-an-object-by-reference"></a><span data-ttu-id="7996d-169">服务按引用返回对象</span><span class="sxs-lookup"><span data-stu-id="7996d-169">The service returns an object by reference</span></span>  
+ <span data-ttu-id="7996d-170">对于此方案，客户端应用调用远程服务，此方法将返回一个对象，此对象由引用从服务到传递到客户端。</span><span class="sxs-lookup"><span data-stu-id="7996d-170">For this scenario, the client app makes a call to the remote service and the method returns an object, which is passed by reference from the service to the client.</span></span>  
   
- <span data-ttu-id="0f7a1-169">如前所述，WCF 服务将始终按值返回对象。</span><span class="sxs-lookup"><span data-stu-id="0f7a1-169">As mentioned previously, WCF services always return object by value.</span></span>  <span data-ttu-id="0f7a1-170">但是，可以通过使用 <xref:System.ServiceModel.EndpointAddress10> 类，实现类似的效果。</span><span class="sxs-lookup"><span data-stu-id="0f7a1-170">However, you can achieve a similar result by using the <xref:System.ServiceModel.EndpointAddress10> class.</span></span>  <span data-ttu-id="0f7a1-171"><xref:System.ServiceModel.EndpointAddress10> 是客户端可用于获取服务器上会话按引用对象的可序列化的按值对象。</span><span class="sxs-lookup"><span data-stu-id="0f7a1-171">The <xref:System.ServiceModel.EndpointAddress10> is a serializable by-value object that can be used by the client to obtain a sessionful by-reference object on the server.</span></span>  
+ <span data-ttu-id="7996d-171">如前所述，WCF 服务将始终按值返回对象。</span><span class="sxs-lookup"><span data-stu-id="7996d-171">As mentioned previously, WCF services always return object by value.</span></span>  <span data-ttu-id="7996d-172">但是，可以通过使用 <xref:System.ServiceModel.EndpointAddress10> 类，实现类似的效果。</span><span class="sxs-lookup"><span data-stu-id="7996d-172">However, you can achieve a similar result by using the <xref:System.ServiceModel.EndpointAddress10> class.</span></span>  <span data-ttu-id="7996d-173"><xref:System.ServiceModel.EndpointAddress10> 是客户端可用于获取服务器上会话按引用对象的可序列化的按值对象。</span><span class="sxs-lookup"><span data-stu-id="7996d-173">The <xref:System.ServiceModel.EndpointAddress10> is a serializable by-value object that can be used by the client to obtain a sessionful by-reference object on the server.</span></span>  
   
- <span data-ttu-id="0f7a1-172">此方案所示的 WCF 中按引用对象的行为不同于 DCOM。</span><span class="sxs-lookup"><span data-stu-id="0f7a1-172">The behavior of the by-reference object in WCF shown in this scenario is different than DCOM.</span></span>  <span data-ttu-id="0f7a1-173">在 DCOM 中，服务器可直接返回按引用对象到客户端，而客户端可调用此对象的方法，并在服务器上执行。</span><span class="sxs-lookup"><span data-stu-id="0f7a1-173">In DCOM, the server can return a by-reference object to the client directly, and the client can call that object’s methods, which execute on the server.</span></span>  <span data-ttu-id="0f7a1-174">但是在 WCF 中，始终按值返回对象。</span><span class="sxs-lookup"><span data-stu-id="0f7a1-174">In WCF, however, the object returned is always by-value.</span></span>  <span data-ttu-id="0f7a1-175">客户端必须取得由 <xref:System.ServiceModel.EndpointAddress10> 表示的按值对象，并用将其用于创建自己的会话按引用对象。</span><span class="sxs-lookup"><span data-stu-id="0f7a1-175">The client must take that by-value object, represented by <xref:System.ServiceModel.EndpointAddress10> and use it to create its own sessionful by-reference object.</span></span>  <span data-ttu-id="0f7a1-176">客户端方法对服务器上的会话对象执行进行调用。换言之，WCF 中的按引用对象是配置为会话的普通 WCF 服务。</span><span class="sxs-lookup"><span data-stu-id="0f7a1-176">The client method calls on the sessionful object execute on the server.In other words, this by-reference object in WCF is a normal WCF service that is configured to be sessionful.</span></span>  
+ <span data-ttu-id="7996d-174">此方案所示的 WCF 中按引用对象的行为不同于 DCOM。</span><span class="sxs-lookup"><span data-stu-id="7996d-174">The behavior of the by-reference object in WCF shown in this scenario is different than DCOM.</span></span>  <span data-ttu-id="7996d-175">在 DCOM 中，服务器可直接返回按引用对象到客户端，而客户端可调用此对象的方法，并在服务器上执行。</span><span class="sxs-lookup"><span data-stu-id="7996d-175">In DCOM, the server can return a by-reference object to the client directly, and the client can call that object’s methods, which execute on the server.</span></span>  <span data-ttu-id="7996d-176">但是在 WCF 中，始终按值返回对象。</span><span class="sxs-lookup"><span data-stu-id="7996d-176">In WCF, however, the object returned is always by-value.</span></span>  <span data-ttu-id="7996d-177">客户端必须取得由 <xref:System.ServiceModel.EndpointAddress10> 表示的按值对象，并用将其用于创建自己的会话按引用对象。</span><span class="sxs-lookup"><span data-stu-id="7996d-177">The client must take that by-value object, represented by <xref:System.ServiceModel.EndpointAddress10> and use it to create its own sessionful by-reference object.</span></span>  <span data-ttu-id="7996d-178">客户端方法对服务器上的会话对象执行进行调用。换言之，WCF 中的按引用对象是配置为会话的普通 WCF 服务。</span><span class="sxs-lookup"><span data-stu-id="7996d-178">The client method calls on the sessionful object execute on the server.In other words, this by-reference object in WCF is a normal WCF service that is configured to be sessionful.</span></span>  
   
- <span data-ttu-id="0f7a1-177">在 WCF 中，会话是使两个终结点之间发送的多个消息关联的一种方法。</span><span class="sxs-lookup"><span data-stu-id="0f7a1-177">In WCF, a session is a way of correlating multiple messages sent between two endpoints.</span></span>  <span data-ttu-id="0f7a1-178">这意味着一旦客户端获取与此服务的连接，将会建立客户端和服务器之间的会话。</span><span class="sxs-lookup"><span data-stu-id="0f7a1-178">This means that once a client obtains a connection to this service, a session will be established between the client and the server.</span></span>  <span data-ttu-id="0f7a1-179">对于此单个会话中的所有交互，客户端都将使用服务器端对象的单个唯一实例。</span><span class="sxs-lookup"><span data-stu-id="0f7a1-179">The client will use a single unique instance of the server-side object for all its interactions within this single session.</span></span> <span data-ttu-id="0f7a1-180">会话 WCF 协定与面向连接的网络请求/响应模式类似。</span><span class="sxs-lookup"><span data-stu-id="0f7a1-180">Sessionful WCF contracts are similar to connection-oriented network request/response patterns.</span></span>  
+ <span data-ttu-id="7996d-179">在 WCF 中，会话是使两个终结点之间发送的多个消息关联的一种方法。</span><span class="sxs-lookup"><span data-stu-id="7996d-179">In WCF, a session is a way of correlating multiple messages sent between two endpoints.</span></span>  <span data-ttu-id="7996d-180">这意味着一旦客户端获取与此服务的连接，将会建立客户端和服务器之间的会话。</span><span class="sxs-lookup"><span data-stu-id="7996d-180">This means that once a client obtains a connection to this service, a session will be established between the client and the server.</span></span>  <span data-ttu-id="7996d-181">对于此单个会话中的所有交互，客户端都将使用服务器端对象的单个唯一实例。</span><span class="sxs-lookup"><span data-stu-id="7996d-181">The client will use a single unique instance of the server-side object for all its interactions within this single session.</span></span> <span data-ttu-id="7996d-182">会话 WCF 协定与面向连接的网络请求/响应模式类似。</span><span class="sxs-lookup"><span data-stu-id="7996d-182">Sessionful WCF contracts are similar to connection-oriented network request/response patterns.</span></span>  
   
- <span data-ttu-id="0f7a1-181">此方案由以下的 DCOM 方法表示。</span><span class="sxs-lookup"><span data-stu-id="0f7a1-181">This scenario is represented by the following DCOM method.</span></span>  
+ <span data-ttu-id="7996d-183">此方案由以下的 DCOM 方法表示。</span><span class="sxs-lookup"><span data-stu-id="7996d-183">This scenario is represented by the following DCOM method.</span></span>  
   
-```  
+```csharp  
 public interface IRemoteService  
 {  
     IRemoteObject GetObjectByReference();  
 }  
 ```  
   
-### <a name="step-1-define-the-sessionful-wcf-service-interface-and-implementation"></a><span data-ttu-id="0f7a1-182">步骤 1：定义会话 WCF 服务接口与实现</span><span class="sxs-lookup"><span data-stu-id="0f7a1-182">Step 1: Define the Sessionful WCF service interface and implementation</span></span>  
- <span data-ttu-id="0f7a1-183">首先，定义包含会话对象的 WCF 服务接口。</span><span class="sxs-lookup"><span data-stu-id="0f7a1-183">First, define a WCF service interface that contains the sessionful object.</span></span>  
+### <a name="step-1-define-the-sessionful-wcf-service-interface-and-implementation"></a><span data-ttu-id="7996d-184">步骤 1：定义会话 WCF 服务接口与实现</span><span class="sxs-lookup"><span data-stu-id="7996d-184">Step 1: Define the Sessionful WCF service interface and implementation</span></span>  
+ <span data-ttu-id="7996d-185">首先，定义包含会话对象的 WCF 服务接口。</span><span class="sxs-lookup"><span data-stu-id="7996d-185">First, define a WCF service interface that contains the sessionful object.</span></span>  
   
- <span data-ttu-id="0f7a1-184">在此代码中，为会话对象标记 `ServiceContract` 属性，从而将其识别为常规的 WCF 服务接口。</span><span class="sxs-lookup"><span data-stu-id="0f7a1-184">In this code, the sessionful object is marked with the `ServiceContract` attribute, which identifies it as a regular WCF service interface.</span></span>  <span data-ttu-id="0f7a1-185">此外，设置 <xref:System.ServiceModel.ServiceContractAttribute.SessionMode%2A> 属性，以指示它将成为会话服务。</span><span class="sxs-lookup"><span data-stu-id="0f7a1-185">In addition, the <xref:System.ServiceModel.ServiceContractAttribute.SessionMode%2A> property is set to indicate it will be a sessionful service.</span></span>  
+ <span data-ttu-id="7996d-186">在此代码中，为会话对象标记 `ServiceContract` 属性，从而将其识别为常规的 WCF 服务接口。</span><span class="sxs-lookup"><span data-stu-id="7996d-186">In this code, the sessionful object is marked with the `ServiceContract` attribute, which identifies it as a regular WCF service interface.</span></span>  <span data-ttu-id="7996d-187">此外，设置 <xref:System.ServiceModel.ServiceContractAttribute.SessionMode%2A> 属性，以指示它将成为会话服务。</span><span class="sxs-lookup"><span data-stu-id="7996d-187">In addition, the <xref:System.ServiceModel.ServiceContractAttribute.SessionMode%2A> property is set to indicate it will be a sessionful service.</span></span>  
   
-```  
+```csharp  
 [ServiceContract(SessionMode = SessionMode.Allowed)]  
 public interface ISessionBoundObject  
 {  
@@ -267,11 +267,11 @@ public interface ISessionBoundObject
 }  
 ```  
   
- <span data-ttu-id="0f7a1-186">以下代码演示服务实现。</span><span class="sxs-lookup"><span data-stu-id="0f7a1-186">The following code shows the service implementation.</span></span>  
+ <span data-ttu-id="7996d-188">以下代码演示服务实现。</span><span class="sxs-lookup"><span data-stu-id="7996d-188">The following code shows the service implementation.</span></span>  
   
- <span data-ttu-id="0f7a1-187">为此服务标记 [ServiceBehavior] 属性，并且将其 InstanceContextMode 属性设置为 InstanceContextMode.PerSessions，以指示应为每个会话创建这种类型的唯一实例。</span><span class="sxs-lookup"><span data-stu-id="0f7a1-187">The service is marked with the [ServiceBehavior] attribute, and its InstanceContextMode property set to InstanceContextMode.PerSessions to indicate that a unique instance of this type should be created for each session.</span></span>  
+ <span data-ttu-id="7996d-189">为此服务标记 [ServiceBehavior] 属性，并且将其 InstanceContextMode 属性设置为 InstanceContextMode.PerSessions，以指示应为每个会话创建这种类型的唯一实例。</span><span class="sxs-lookup"><span data-stu-id="7996d-189">The service is marked with the [ServiceBehavior] attribute, and its InstanceContextMode property set to InstanceContextMode.PerSessions to indicate that a unique instance of this type should be created for each session.</span></span>  
   
-```  
+```csharp  
 [ServiceBehavior(InstanceContextMode = InstanceContextMode.PerSession)]  
     public class MySessionBoundObject : ISessionBoundObject  
     {  
@@ -290,10 +290,10 @@ public interface ISessionBoundObject
     }  
 ```  
   
-### <a name="step-2-define-the-wcf-factory-service-for-the-sessionful-object"></a><span data-ttu-id="0f7a1-188">步骤 2：定义会话对象的 WCF 工厂服务</span><span class="sxs-lookup"><span data-stu-id="0f7a1-188">Step 2: Define the WCF factory service for the sessionful object</span></span>  
- <span data-ttu-id="0f7a1-189">必须定义并实现创建会话对象的服务。</span><span class="sxs-lookup"><span data-stu-id="0f7a1-189">The service that creates the sessionful object must be defined and implemented.</span></span> <span data-ttu-id="0f7a1-190">下面的代码演示如何执行此操作。</span><span class="sxs-lookup"><span data-stu-id="0f7a1-190">The following code shows how to do this.</span></span> <span data-ttu-id="0f7a1-191">此代码将创建另一种返回 <xref:System.ServiceModel.EndpointAddress10> 对象的 WCF 服务。</span><span class="sxs-lookup"><span data-stu-id="0f7a1-191">This code creates another WCF service that returns an <xref:System.ServiceModel.EndpointAddress10> object.</span></span>  <span data-ttu-id="0f7a1-192">这是一种可用于创建会话对象的终结点的可序列化形式。</span><span class="sxs-lookup"><span data-stu-id="0f7a1-192">This is a serializable form of an endpoint the can use to create the session-full object.</span></span>  
+### <a name="step-2-define-the-wcf-factory-service-for-the-sessionful-object"></a><span data-ttu-id="7996d-190">步骤 2：定义会话对象的 WCF 工厂服务</span><span class="sxs-lookup"><span data-stu-id="7996d-190">Step 2: Define the WCF factory service for the sessionful object</span></span>  
+ <span data-ttu-id="7996d-191">必须定义并实现创建会话对象的服务。</span><span class="sxs-lookup"><span data-stu-id="7996d-191">The service that creates the sessionful object must be defined and implemented.</span></span> <span data-ttu-id="7996d-192">下面的代码演示如何执行此操作。</span><span class="sxs-lookup"><span data-stu-id="7996d-192">The following code shows how to do this.</span></span> <span data-ttu-id="7996d-193">此代码将创建另一种返回 <xref:System.ServiceModel.EndpointAddress10> 对象的 WCF 服务。</span><span class="sxs-lookup"><span data-stu-id="7996d-193">This code creates another WCF service that returns an <xref:System.ServiceModel.EndpointAddress10> object.</span></span>  <span data-ttu-id="7996d-194">这是一种可用于创建会话对象的终结点的可序列化形式。</span><span class="sxs-lookup"><span data-stu-id="7996d-194">This is a serializable form of an endpoint the can use to create the session-full object.</span></span>  
   
-```  
+```csharp  
 [ServiceContract]  
     public interface ISessionBoundFactory  
     {  
@@ -302,9 +302,9 @@ public interface ISessionBoundObject
     }  
 ```  
   
- <span data-ttu-id="0f7a1-193">以下是此服务的实现：</span><span class="sxs-lookup"><span data-stu-id="0f7a1-193">Following is the implementation of this service.</span></span> <span data-ttu-id="0f7a1-194">此实现维护单一实例通道工厂以创建会话对象。</span><span class="sxs-lookup"><span data-stu-id="0f7a1-194">This implementation maintains a singleton channel factory to create sessionful objects.</span></span>  <span data-ttu-id="0f7a1-195">当调用 `GetInstanceAddress` 时，它会创建一个通道，并创建一个指向与此通道关联的远程地址的 <xref:System.ServiceModel.EndpointAddress10> 对象。</span><span class="sxs-lookup"><span data-stu-id="0f7a1-195">When `GetInstanceAddress` is called, it creates a channel and creates an <xref:System.ServiceModel.EndpointAddress10> object that points to the remote address associated with this channel.</span></span>   <span data-ttu-id="0f7a1-196"><xref:System.ServiceModel.EndpointAddress10> 是一种可按值返回到客户端的数据类型。</span><span class="sxs-lookup"><span data-stu-id="0f7a1-196"><xref:System.ServiceModel.EndpointAddress10> is a data type that can be returned to the client by-value.</span></span>  
+ <span data-ttu-id="7996d-195">以下是此服务的实现：</span><span class="sxs-lookup"><span data-stu-id="7996d-195">Following is the implementation of this service.</span></span> <span data-ttu-id="7996d-196">此实现维护单一实例通道工厂以创建会话对象。</span><span class="sxs-lookup"><span data-stu-id="7996d-196">This implementation maintains a singleton channel factory to create sessionful objects.</span></span>  <span data-ttu-id="7996d-197">当调用 `GetInstanceAddress` 时，它会创建一个通道，并创建一个指向与此通道关联的远程地址的 <xref:System.ServiceModel.EndpointAddress10> 对象。</span><span class="sxs-lookup"><span data-stu-id="7996d-197">When `GetInstanceAddress` is called, it creates a channel and creates an <xref:System.ServiceModel.EndpointAddress10> object that points to the remote address associated with this channel.</span></span>   <span data-ttu-id="7996d-198"><xref:System.ServiceModel.EndpointAddress10> 是一种可按值返回到客户端的数据类型。</span><span class="sxs-lookup"><span data-stu-id="7996d-198"><xref:System.ServiceModel.EndpointAddress10> is a data type that can be returned to the client by-value.</span></span>  
   
-```  
+```csharp  
 public class SessionBoundFactory : ISessionBoundFactory  
     {  
         public static ChannelFactory<ISessionBoundObject> _factory =   
@@ -322,14 +322,14 @@ public class SessionBoundFactory : ISessionBoundFactory
     }  
 ```  
   
-### <a name="step-3-configure-and-start-the-wcf-services"></a><span data-ttu-id="0f7a1-197">步骤 3：配置并启动 WCF 服务</span><span class="sxs-lookup"><span data-stu-id="0f7a1-197">Step 3: Configure and start the WCF services</span></span>  
- <span data-ttu-id="0f7a1-198">若要承载这些服务，将需要添加以下内容到服务器的配置文件 (web.config) 中。</span><span class="sxs-lookup"><span data-stu-id="0f7a1-198">To host these services, you will need to make the following additions to the server’s configuration file (web.config).</span></span>  
+### <a name="step-3-configure-and-start-the-wcf-services"></a><span data-ttu-id="7996d-199">步骤 3：配置并启动 WCF 服务</span><span class="sxs-lookup"><span data-stu-id="7996d-199">Step 3: Configure and start the WCF services</span></span>  
+ <span data-ttu-id="7996d-200">若要承载这些服务，将需要添加以下内容到服务器的配置文件 (web.config) 中。</span><span class="sxs-lookup"><span data-stu-id="7996d-200">To host these services, you will need to make the following additions to the server’s configuration file (web.config).</span></span>  
   
-1.  <span data-ttu-id="0f7a1-199">添加描述会话对象终结点的 `<client>` 节。</span><span class="sxs-lookup"><span data-stu-id="0f7a1-199">Add a `<client>` section that describes the endpoint for the sessionful object.</span></span>  <span data-ttu-id="0f7a1-200">在此方案中，服务器还充当客户端，并必须配置为启用此功能。</span><span class="sxs-lookup"><span data-stu-id="0f7a1-200">In this scenario, the server also acts as a client and must be configured to enable this.</span></span>  
+1.  <span data-ttu-id="7996d-201">添加描述会话对象终结点的 `<client>` 节。</span><span class="sxs-lookup"><span data-stu-id="7996d-201">Add a `<client>` section that describes the endpoint for the sessionful object.</span></span>  <span data-ttu-id="7996d-202">在此方案中，服务器还充当客户端，并必须配置为启用此功能。</span><span class="sxs-lookup"><span data-stu-id="7996d-202">In this scenario, the server also acts as a client and must be configured to enable this.</span></span>  
   
-2.  <span data-ttu-id="0f7a1-201">在 `<services>` 节中，声明工厂和会话对象的服务终结点。</span><span class="sxs-lookup"><span data-stu-id="0f7a1-201">In the `<services>` section, declare service endpoints for the factory and sessionful object.</span></span>  <span data-ttu-id="0f7a1-202">这使客户端可与服务终结点通信，可获取 <xref:System.ServiceModel.EndpointAddress10> 并可创建会话通道。</span><span class="sxs-lookup"><span data-stu-id="0f7a1-202">This enables the client to communicate with the service endpoints, acquire the <xref:System.ServiceModel.EndpointAddress10> and create the sessionful channel.</span></span>  
+2.  <span data-ttu-id="7996d-203">在 `<services>` 节中，声明工厂和会话对象的服务终结点。</span><span class="sxs-lookup"><span data-stu-id="7996d-203">In the `<services>` section, declare service endpoints for the factory and sessionful object.</span></span>  <span data-ttu-id="7996d-204">这使客户端可与服务终结点通信，可获取 <xref:System.ServiceModel.EndpointAddress10> 并可创建会话通道。</span><span class="sxs-lookup"><span data-stu-id="7996d-204">This enables the client to communicate with the service endpoints, acquire the <xref:System.ServiceModel.EndpointAddress10> and create the sessionful channel.</span></span>  
   
- <span data-ttu-id="0f7a1-203">以下是使用这些设置的配置文件示例：</span><span class="sxs-lookup"><span data-stu-id="0f7a1-203">Following is an example configuration file with these settings:</span></span>  
+ <span data-ttu-id="7996d-205">以下是使用这些设置的配置文件示例：</span><span class="sxs-lookup"><span data-stu-id="7996d-205">Following is an example configuration file with these settings:</span></span>  
   
 ```xml  
 <configuration>  
@@ -357,9 +357,9 @@ public class SessionBoundFactory : ISessionBoundFactory
 </configuration>  
 ```  
   
- <span data-ttu-id="0f7a1-204">将以下行添加到控制台应用程序中，从而自承载服务并启动应用程序。</span><span class="sxs-lookup"><span data-stu-id="0f7a1-204">Add the following lines to a console application, to self-host the service, and start the app.</span></span>  
+ <span data-ttu-id="7996d-206">将以下行添加到控制台应用程序中，从而自承载服务并启动应用程序。</span><span class="sxs-lookup"><span data-stu-id="7996d-206">Add the following lines to a console application, to self-host the service, and start the app.</span></span>  
   
-```  
+```csharp  
 ServiceHost factoryHost = new ServiceHost(typeof(SessionBoundFactory));  
 factoryHost.Open();  
   
@@ -368,8 +368,8 @@ typeof(MySessionBoundObject));
 sessionBoundServiceHost.Open();  
 ```  
   
-### <a name="step-4-configure-the-client-and-call-the-service"></a><span data-ttu-id="0f7a1-205">步骤 4：配置客户端并调用服务</span><span class="sxs-lookup"><span data-stu-id="0f7a1-205">Step 4: Configure the client and call the service</span></span>  
- <span data-ttu-id="0f7a1-206">通过在项目的应用程序配置文件 (app.config) 中进行以下项，配置客户端与 WCF 服务进行通信。</span><span class="sxs-lookup"><span data-stu-id="0f7a1-206">Configure the client to communicate with the WCF services by making the following entries in the project’s application configuration file (app.config).</span></span>  
+### <a name="step-4-configure-the-client-and-call-the-service"></a><span data-ttu-id="7996d-207">步骤 4：配置客户端并调用服务</span><span class="sxs-lookup"><span data-stu-id="7996d-207">Step 4: Configure the client and call the service</span></span>  
+ <span data-ttu-id="7996d-208">通过在项目的应用程序配置文件 (app.config) 中进行以下项，配置客户端与 WCF 服务进行通信。</span><span class="sxs-lookup"><span data-stu-id="7996d-208">Configure the client to communicate with the WCF services by making the following entries in the project’s application configuration file (app.config).</span></span>  
   
 ```xml  
 <configuration>  
@@ -388,17 +388,17 @@ sessionBoundServiceHost.Open();
 </configuration>  
 ```  
   
- <span data-ttu-id="0f7a1-207">若要调用此服务，请将代码添加到客户端，以执行以下操作：</span><span class="sxs-lookup"><span data-stu-id="0f7a1-207">To call the service, add the code to the client to do the following:</span></span>  
+ <span data-ttu-id="7996d-209">若要调用此服务，请将代码添加到客户端，以执行以下操作：</span><span class="sxs-lookup"><span data-stu-id="7996d-209">To call the service, add the code to the client to do the following:</span></span>  
   
-1.  <span data-ttu-id="0f7a1-208">创建 `ISessionBoundFactory` 服务通道。</span><span class="sxs-lookup"><span data-stu-id="0f7a1-208">Create a channel to the `ISessionBoundFactory` service.</span></span>  
+1.  <span data-ttu-id="7996d-210">创建 `ISessionBoundFactory` 服务通道。</span><span class="sxs-lookup"><span data-stu-id="7996d-210">Create a channel to the `ISessionBoundFactory` service.</span></span>  
   
-2.  <span data-ttu-id="0f7a1-209">使用此通道调用 `ISessionBoundFactory` 服务并获取 <xref:System.ServiceModel.EndpointAddress10> 对象。</span><span class="sxs-lookup"><span data-stu-id="0f7a1-209">Use the channel to invoke the `ISessionBoundFactory` service an obtain an <xref:System.ServiceModel.EndpointAddress10> bbject.</span></span>  
+2.  <span data-ttu-id="7996d-211">使用此通道调用 `ISessionBoundFactory` 服务并获取 <xref:System.ServiceModel.EndpointAddress10> 对象。</span><span class="sxs-lookup"><span data-stu-id="7996d-211">Use the channel to invoke the `ISessionBoundFactory` service an obtain an <xref:System.ServiceModel.EndpointAddress10> object.</span></span>  
   
-3.  <span data-ttu-id="0f7a1-210">使用 <xref:System.ServiceModel.EndpointAddress10> 创建通道，以获取会话对象。</span><span class="sxs-lookup"><span data-stu-id="0f7a1-210">Use the <xref:System.ServiceModel.EndpointAddress10> to create a channel to obtain a sessionful object.</span></span>  
+3.  <span data-ttu-id="7996d-212">使用 <xref:System.ServiceModel.EndpointAddress10> 创建通道，以获取会话对象。</span><span class="sxs-lookup"><span data-stu-id="7996d-212">Use the <xref:System.ServiceModel.EndpointAddress10> to create a channel to obtain a sessionful object.</span></span>  
   
-4.  <span data-ttu-id="0f7a1-211">调用 `SetCurrentValue` 和 `GetCurrentValue` 方法，演示它与跨多个调用的对象实例相同。</span><span class="sxs-lookup"><span data-stu-id="0f7a1-211">Call the `SetCurrentValue` and `GetCurrentValue` methods to demonstrate it remains the same object instance is used across multiple calls.</span></span>  
+4.  <span data-ttu-id="7996d-213">调用 `SetCurrentValue` 和 `GetCurrentValue` 方法，演示它与跨多个调用的对象实例相同。</span><span class="sxs-lookup"><span data-stu-id="7996d-213">Call the `SetCurrentValue` and `GetCurrentValue` methods to demonstrate it remains the same object instance is used across multiple calls.</span></span>  
   
-```  
+```csharp  
 ChannelFactory<ISessionBoundFactory> factory =  
         new ChannelFactory<ISessionBoundFactory>("factory");  
   
@@ -421,8 +421,8 @@ if (sessionBoundObject.GetCurrentValue() == "Hello")
 }  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="0f7a1-212">请参阅</span><span class="sxs-lookup"><span data-stu-id="0f7a1-212">See Also</span></span>  
- [<span data-ttu-id="0f7a1-213">基本 WCF 编程</span><span class="sxs-lookup"><span data-stu-id="0f7a1-213">Basic WCF Programming</span></span>](../../../docs/framework/wcf/basic-wcf-programming.md)  
- [<span data-ttu-id="0f7a1-214">设计和实现服务</span><span class="sxs-lookup"><span data-stu-id="0f7a1-214">Designing and Implementing Services</span></span>](../../../docs/framework/wcf/designing-and-implementing-services.md)  
- [<span data-ttu-id="0f7a1-215">生成客户端</span><span class="sxs-lookup"><span data-stu-id="0f7a1-215">Building Clients</span></span>](../../../docs/framework/wcf/building-clients.md)  
- [<span data-ttu-id="0f7a1-216">双工服务</span><span class="sxs-lookup"><span data-stu-id="0f7a1-216">Duplex Services</span></span>](../../../docs/framework/wcf/feature-details/duplex-services.md)
+## <a name="see-also"></a><span data-ttu-id="7996d-214">请参阅</span><span class="sxs-lookup"><span data-stu-id="7996d-214">See Also</span></span>  
+ [<span data-ttu-id="7996d-215">基本 WCF 编程</span><span class="sxs-lookup"><span data-stu-id="7996d-215">Basic WCF Programming</span></span>](../../../docs/framework/wcf/basic-wcf-programming.md)  
+ [<span data-ttu-id="7996d-216">设计和实现服务</span><span class="sxs-lookup"><span data-stu-id="7996d-216">Designing and Implementing Services</span></span>](../../../docs/framework/wcf/designing-and-implementing-services.md)  
+ [<span data-ttu-id="7996d-217">生成客户端</span><span class="sxs-lookup"><span data-stu-id="7996d-217">Building Clients</span></span>](../../../docs/framework/wcf/building-clients.md)  
+ [<span data-ttu-id="7996d-218">双工服务</span><span class="sxs-lookup"><span data-stu-id="7996d-218">Duplex Services</span></span>](../../../docs/framework/wcf/feature-details/duplex-services.md)
