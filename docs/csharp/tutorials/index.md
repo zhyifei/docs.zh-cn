@@ -2,12 +2,12 @@
 title: C# 教程
 description: 查看这些 C# 教程，了解生成 C# 程序的方式以及 C# 语言功能。
 ms.date: 10/25/2018
-ms.openlocfilehash: 2e7981c0b958e6ff4682dc502b83766f56d6c528
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: f49754a9d6fa7523d88fa5ce3a7f57501f434878
+ms.sourcegitcommit: d09c77414e9e4fc72c79b04deee7a756a120674e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50195120"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54084662"
 ---
 # <a name="c-tutorials"></a>C# 教程
 
@@ -47,20 +47,18 @@ ms.locfileid: "50195120"
 
 可以在自己的本地开发环境中学习 Hello World 课程之后的所有入门教程。 每个教程结束时，可以决定是继续在线学习还是在自己的计算机上学习下一节课程。 可以访问相关链接设置自己的环境并继续在自己的计算机上学习下一个教程。
 
+## <a name="explore-new-features-in-c"></a>探索 C# 中的新增功能 #
+
+在此[交互式探索](exploration/csharp-6.yml)中尝试 [C# 6](../whats-new/csharp-6.md) 中的新增功能。
+
 ## <a name="general-tutorials"></a>常规教程
 
 下面各教程介绍了如何使用 [.NET Core](../../core/index.md) 生成 C# 程序：
 
 * [控制台应用程序](console-teleprompter.md)：介绍了控制台 I/O、控制台应用程序的结构，以及基于任务的异步编程模型的基础知识。
-
 * [REST 客户端](console-webapiclient.md)：介绍了 Web 通信、JSON 序列化和面向对象的 C# 语言功能。
-
 * [C# 和 .NET 中的继承](inheritance.md)：介绍了 C# 中的继承，包括使用继承来定义基类、抽象基类和派生类。
-
 * [使用 LINQ](working-with-linq.md)：介绍了许多 LINQ 功能和支持 LINQ 的语言元素。
-
-* [Docker 中托管的微服务](microservices.md)：介绍了如何生成 ASP.NET Core 微服务，并将其托管在 Docker 中。
-
 * [字符串内插](string-interpolation.md)：介绍了如何借助 C# 使用字符串内插创建格式化字符串。
-
 * [使用特性](attributes.md)：介绍了如何借助 C# 创建和使用特性。
+* [可为空引用类型](nullable-reference-types.md)：演示如何使用可为空引用类型来表示空引用的意图。
