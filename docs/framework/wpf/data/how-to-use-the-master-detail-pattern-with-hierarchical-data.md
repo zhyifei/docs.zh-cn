@@ -16,20 +16,20 @@ ms.locfileid: "33556791"
 此示例演示如何实现主 / 从方案。  
   
 ## <a name="example"></a>示例  
- 在此示例中，`LeagueList` 是 `League` 的集合。 每个 `League` 有 `Name` 和一些 `Division`，每个 `Division` 有名称和一些 `Team`。 每个 `Team` 有团队名称。  
+ 在此示例中，`LeagueList` 是 `League` 的集合。 每个 `League` 有一个 `Name` 和一个 `Division` 的集合，每个 `Division` 有一个名称和一个 `Team` 的集合。 每个 `Team` 有一个团队名称。 
   
- [!code-xaml[MasterDetail#HowTo1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/MasterDetail/VisualBasic/Page1.xaml#howto1)]  
+[!code-xaml[MasterDetail#HowTo1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/MasterDetail/VisualBasic/Page1.xaml#howto1)]  
 [!code-xaml[MasterDetail#HowTo2](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/MasterDetail/VisualBasic/Page1.xaml#howto2)]  
   
- 下面是该示例的一个屏幕快照。 `Divisions` <xref:System.Windows.Controls.ListBox> 自动跟踪 `Leagues` <xref:System.Windows.Controls.ListBox> 中的选择并显示相应的数据。 `Teams` <xref:System.Windows.Controls.ListBox> 跟踪其他两个<xref:System.Windows.Controls.ListBox> 控件的选择。  
+ 下面是该示例的一个屏幕快照。 `Divisions` 列表框<xref:System.Windows.Controls.ListBox>自动跟踪 `Leagues` 列表框<xref:System.Windows.Controls.ListBox>中的选择并显示相应的数据。`Teams` 列表框<xref:System.Windows.Controls.ListBox>跟踪其他两个列表框<xref:System.Windows.Controls.ListBox>控件中的选择。 
   
  ![Master&#45;详细信息示例](../../../../docs/framework/wpf/data/media/databindingmasterdetailsample.png "DataBindingMasterDetailSample")  
   
-在此示例中，需要注意的两个事项为：  
+在此示例中，有两点需要注意： 
   
-1.  这三个 <xref:System.Windows.Controls.ListBox> 控件绑定到相同的源。 设置绑定的 <xref:System.Windows.Data.Binding.Path%2A> 属性来指定 <xref:System.Windows.Controls.ListBox> 显示哪个级别的数据。  
+1. 这三个 <xref:System.Windows.Controls.ListBox> 控件绑定到相同的源。需设置绑定的 <xref:System.Windows.Data.Binding.Path%2A> 属性，用于指定 <xref:System.Windows.Controls.ListBox> 显示哪个级别的数据。 
   
-2.  对于被跟踪选中项的 <xref:System.Windows.Controls.ListBox> 控件, 必须设置 <xref:System.Windows.Controls.Primitives.Selector.IsSynchronizedWithCurrentItem%2A> 属性为 `true`。 设置此属性以确保所选的项始终被设置为 <xref:System.Windows.Controls.ItemCollection.CurrentItem%2A>。 或者，如果 <xref:System.Windows.Controls.ListBox> 从 <xref:System.Windows.Data.CollectionViewSource> 获取数据，它会自动同步所选内容和货币。  
+2. 对于要跟踪其选择内容的 <xref:System.Windows.Controls.ListBox> 控件, 须将其 <xref:System.Windows.Controls.Primitives.Selector.IsSynchronizedWithCurrentItem%2A> 属性设置为 `true`。 设置此属性可确保所选的项始终设置为 <xref:System.Windows.Controls.ItemCollection.CurrentItem%2A>。或者，如果 <xref:System.Windows.Controls.ListBox> 从 <xref:System.Windows.Data.CollectionViewSource> 获取数据，它会自动同步所选内容和货币。  
   
  使用[!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)]数据时，采用的方法略有不同。 有关示例，请参阅[对分层 XML 数据使用主-从模式](../../../../docs/framework/wpf/data/how-to-use-the-master-detail-pattern-with-hierarchical-xml-data.md)。  
   
