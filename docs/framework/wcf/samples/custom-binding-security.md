@@ -2,12 +2,12 @@
 title: 自定义绑定安全性
 ms.date: 03/30/2017
 ms.assetid: a6383dff-4308-46d2-bc6d-acd4e18b4b8d
-ms.openlocfilehash: 72812c23bca5cd5c61f906cfd98f1929b0edee1a
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 56c3ed4be894a265635c747373e0b79599ce129d
+ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50192884"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54221695"
 ---
 # <a name="custom-binding-security"></a>自定义绑定安全性
 本示例演示如何使用自定义绑定配置安全性。 并演示如何使用自定义绑定实现消息级安全性和安全传输。 如果在客户端和服务之间传输消息时需要进行安全的传输，同时消息必须在消息级别上保持安全，这非常有用。 系统提供的绑定不支持此配置。
@@ -113,7 +113,7 @@ Equation(0 + 100 - 50 * 17.65 / 2 = 441.25)
 
 ### <a name="to-run-the-sample-on-the-same-computer"></a>在同一计算机上运行示例
 
-1.  使用管理员特权打开 Visual Studio 命令提示窗口，并运行示例安装文件夹中的 Setup.bat。 这将安装运行示例所需的所有证书。
+1.  使用管理员特权打开 Visual Studio 窗口开发人员命令提示并从示例安装文件夹运行 Setup.bat。 这将安装运行示例所需的所有证书。
 
     > [!NOTE]
     >  Setup.bat 批处理文件旨在为从 Visual Studio 2012 命令提示运行。 在 Visual Studio 2012 命令提示符点设置为包含 Setup.bat 脚本所需的可执行文件的目录路径环境变量。  
@@ -134,7 +134,7 @@ Equation(0 + 100 - 50 * 17.65 / 2 = 441.25)
   
     3.  将 Setup.bat 和 Cleanup.bat 文件复制到服务计算机上。  
   
-    4.  使用管理员特权打开 Visual Studio 命令提示中的以下命令运行： `Setup.bat service`。 这会用与运行批处理文件的计算机的名称匹配的主题名称创建服务证书。  
+    4.  对于使用管理员特权打开 Visual Studio 中开发人员命令提示符处运行以下命令： `Setup.bat service`。 这会用与运行批处理文件的计算机的名称匹配的主题名称创建服务证书。  
   
         > [!NOTE]
         >  Setup.bat 批处理文件设计为通过 Visual Studio 2010 命令提示运行。 这要求路径环境变量指向 SDK 的安装目录。 将在 Visual Studio 2010 命令提示中自动设置此环境变量。
@@ -149,7 +149,7 @@ Equation(0 + 100 - 50 * 17.65 / 2 = 441.25)
 
     2.  运行 Cleanup.bat 以移除先前示例中使用的所有旧证书。
 
-    3.  通过使用管理特权打开 Visual Studio 命令提示并在服务计算机上运行以下命令，来导出服务的证书（用运行服务的计算机的完全限定名称替换 `%SERVER_NAME%`）：
+    3.  使用管理特权打开 Visual Studio 开发人员命令提示，在服务计算机上运行以下命令来导出服务的证书 (替换`%SERVER_NAME%`提供计算机的完全限定的名称，该服务正在运行）：
 
         ```
         certmgr -put -r LocalMachine -s My -c -n %SERVER_NAME% %SERVER_NAME%.cer
@@ -157,7 +157,7 @@ Equation(0 + 100 - 50 * 17.65 / 2 = 441.25)
 
     4.  将 %SERVER_NAME%.cer 复制到客户端计算机（用运行服务的计算机的完全限定名称替换 %SERVER_NAME%）。
 
-    5.  通过使用管理特权打开 Visual Studio 命令提示并在服务计算机上运行以下命令，来导入服务的证书（用运行服务的计算机的完全限定名称替换 %SERVER_NAME%）：
+    5.  通过使用管理特权打开 Visual Studio 开发人员命令提示和客户端计算机上运行以下命令导入服务的证书 (替换 %server_name%的完全限定名称的计算机的位置服务正在运行）：
 
         ```
         certmgr.exe -add -c %SERVER_NAME%.cer -s -r CurrentUser TrustedPeople

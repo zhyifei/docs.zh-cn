@@ -2,12 +2,12 @@
 title: 发现安全示例
 ms.date: 03/30/2017
 ms.assetid: b8db01f4-b4a1-43fe-8e31-26d4e9304a65
-ms.openlocfilehash: 09b7bad2e0b6b68a00d5ad2ed18e6ec831b04416
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 9435afa7324ad9e0f2bf994b2f3ed5e54e5e2e7e
+ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53129345"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54223099"
 ---
 # <a name="discovery-security-sample"></a>发现安全示例
 Discovery 规范不要求参与发现过程的终结点是安全的。 增强发现消息的安全性可缓解各种类型的攻击（消息更改、拒绝服务、重播、欺骗）。 本示例实现自定义通道，这些通道计算和验证使用精简签名格式（在 WS-Discovery 规范的第 8.2 节中进行了介绍）的消息签名。 本示例支持[2005 Discovery 规范](https://go.microsoft.com/fwlink/?LinkId=177912)并[1.1 版](https://go.microsoft.com/fwlink/?LinkId=179677)。  
@@ -49,7 +49,7 @@ Discovery 规范不要求参与发现过程的终结点是安全的。 增强发
   
 -   **DiscoverySecurityChannels**:公开安全绑定库。 该库计算并验证传出/传入消息的精简签名。  
   
--   **服务**:公开 ICalculatorService 协定，自承载服务。 该服务标记为可发现。 用户通过指定证书的存储位置、名称和主题名称或其他唯一标识符来指定用于对消息签名的证书的详细信息，并指定客户端证书（用于检查传入消息的签名的证书）所处的存储区。 基于这些详细信息，生成并使用增加了安全性的 UdpDiscoveryEndpoint。  
+-   **服务**：公开 ICalculatorService 协定，自承载服务。 该服务标记为可发现。 用户通过指定证书的存储位置、名称和主题名称或其他唯一标识符来指定用于对消息签名的证书的详细信息，并指定客户端证书（用于检查传入消息的签名的证书）所处的存储区。 基于这些详细信息，生成并使用增加了安全性的 UdpDiscoveryEndpoint。  
   
 -   **客户端**:此类会尝试发现 ICalculatorService 并在服务上调用方法。 同样，生成增加了安全性的 <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint>，并用于对消息进行签名和验证。  
   
@@ -60,7 +60,7 @@ Discovery 规范不要求参与发现过程的终结点是安全的。 增强发
   
 #### <a name="to-use-this-sample"></a>使用此示例  
   
-1.  从 Visual Studio 命令提示执行 Setup.bat 脚本。 本示例使用证书对消息进行签名和验证。 该脚本使用 Makecert.exe 创建证书，然后使用 Certmgr.exe 安装这些证书。 该脚本必须使用管理员特权运行。  
+1.  Visual Studio 通过开发人员命令提示执行 Setup.bat 脚本。 本示例使用证书对消息进行签名和验证。 该脚本使用 Makecert.exe 创建证书，然后使用 Certmgr.exe 安装这些证书。 该脚本必须使用管理员特权运行。  
   
 2.  若要生成并运行示例，在 Visual Studio 中打开 Security.sln 文件，然后选择**全部重新生成**。 更新解决方案属性以启动多个项目： 选择**启动**对除 discoverysecurechannels 以外的所有项目。 正常运行解决方案。  
   
