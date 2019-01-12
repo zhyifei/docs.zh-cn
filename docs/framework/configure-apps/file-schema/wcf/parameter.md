@@ -2,28 +2,28 @@
 title: '&lt;parameter&gt;'
 ms.date: 03/30/2017
 ms.assetid: 0fb41e2d-64f7-44ab-993e-05892eac6d82
-ms.openlocfilehash: b9cccfe37e7658afbf2e49555e6c505497598fbb
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 82a2f5c46c698508695fe5f13f67059860a50713
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32754049"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54148287"
 ---
 # <a name="ltparametergt"></a>&lt;parameter&gt;
 指定当声明类型是泛型类型时的泛型参数。  
   
  \<system.runtime.serialization >  
 \<dataContractSerializer >  
-\<d d > 元素  
-\<添加 > 元素\<d d >  
+\<declaredTypes > 元素  
+\<添加 > 元素\<declaredTypes >  
 \<knownType > 元素  
 \<参数 > 元素  
   
 ## <a name="syntax"></a>语法  
   
 ```xml  
-<parameter index="integer"  
-                      type=String" />  
+<parameter index="Integer"
+           type="String" />
 ```  
   
 ## <a name="attributes-and-elements"></a>特性和元素  
@@ -53,7 +53,7 @@ ms.locfileid: "32754049"
 |[\<knownType >](../../../../../docs/framework/configure-apps/file-schema/wcf/knowntype.md)|指定一个可由声明类型的字段或属性返回的已知类型。|  
   
 ## <a name="remarks"></a>备注  
- 有关已知类型的详细信息，请参阅[数据协定已知类型](../../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)和<xref:System.Runtime.Serialization.DataContractSerializer>。  
+ 有关已知类型的详细信息，请参阅[Data Contract Known Types](../../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)和<xref:System.Runtime.Serialization.DataContractSerializer>。  
   
  请参阅[ \<dataContractSerializer >](../../../../../docs/framework/configure-apps/file-schema/wcf/datacontractserializer-element.md)有关使用此元素的示例。  
   

@@ -16,12 +16,12 @@ helpviewer_keywords:
 - UI literal type characters [Visual Basic]
 - data types [Visual Basic], integral
 ms.assetid: db7ddd34-4f23-46f5-84dd-8b0f83bb8729
-ms.openlocfilehash: c63b9a25c1830f142002e9854e9ce275f55ef54b
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 929197d8e8f9ab031e72e7d332422b388a22ea95
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53154813"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54146051"
 ---
 # <a name="uinteger-data-type"></a>UInteger 数据类型
 
@@ -68,7 +68,7 @@ Dim number = &H_0FAC_14D7ui
   
 -   **负号。** 因为`UInteger`是无符号的类型，它不能表示为负数。 如果使用一元负 (`-`) 运算符的表达式的计算结果为类型`UInteger`，Visual Basic 将转换为表达式`Long`第一个。  
   
--   **CLS 遵从性。** `UInteger`数据类型不属于[公共语言规范](http://www.ecma-international.org/publications/standards/Ecma-335.htm)(CLS)，因此符合 cls 的代码不能使用使用它的组件。
+-   **CLS 遵从性。** `UInteger`数据类型不属于[公共语言规范](https://www.ecma-international.org/publications/standards/Ecma-335.htm)(CLS)，因此符合 cls 的代码不能使用使用它的组件。
   
 -   **互操作注意事项。** 如果你与不是为.NET Framework 中，如自动化或 COM 对象，编写组件交互请记住，类型，如`uint`可以在其他环境中具有不同的数据宽度 （16 位）。 如果您将 16 位自变量传递给此类组件，将其作为声明`UShort`而不是`UInteger`中托管的 Visual Basic 代码。  
   
@@ -83,5 +83,5 @@ Dim number = &H_0FAC_14D7ui
  [数据类型](../../../visual-basic/language-reference/data-types/index.md)  
  [类型转换函数](../../../visual-basic/language-reference/functions/type-conversion-functions.md)  
  [转换摘要](../../../visual-basic/language-reference/keywords/conversion-summary.md)  
- [如何：调用采用无符号的类型的 Windows 函数](../../../visual-basic/programming-guide/com-interop/how-to-call-a-windows-function-that-takes-unsigned-types.md)  
+ [如何：调用需要使用无符号类型的 Windows 函数](../../../visual-basic/programming-guide/com-interop/how-to-call-a-windows-function-that-takes-unsigned-types.md)  
  [有效使用数据类型](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)

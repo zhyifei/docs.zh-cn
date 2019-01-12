@@ -2,12 +2,12 @@
 title: '&lt;httpDigest&gt; 元素'
 ms.date: 03/30/2017
 ms.assetid: 3da4f276-dfd9-4247-8c07-01d83618727c
-ms.openlocfilehash: 4f3edb4a525429bfc55c4e4cfaffbfc5726dcef8
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 2211c593090d697ae07350fcf7ac491b9d23e2d0
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43521982"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54150133"
 ---
 # <a name="lthttpdigestgt-element"></a>&lt;httpDigest&gt; 元素
 指定一个在向服务证明客户端身份时使用的摘要类型凭据。  
@@ -22,7 +22,7 @@ ms.locfileid: "43521982"
 ## <a name="syntax"></a>语法  
   
 ```xml  
-<digest impersonationLevel="Identification/Impersonation/Delegation/Anonymous/None" />  
+<digest impersonationLevel="Identification/Impersonation/Delegation/Anonymous/None" />
 ```  
   
 ## <a name="attributes-and-elements"></a>特性和元素  
@@ -32,7 +32,7 @@ ms.locfileid: "43521982"
   
 |特性|描述|  
 |---------------|-----------------|  
-|`impersonationLevel`|设置客户端用于与服务器进行通信的模拟首选项。 服务器上不强制使用客户端所选择的模拟模式。 包括以下有效值：<br /><br /> -标识： 服务器可以获取标识和权限的客户端，但不能模拟客户端。<br />模拟： 服务器可以模拟客户端的本地系统上的安全上下文。<br />-Delegation： 服务器可以模拟远程系统上的客户端的安全上下文。<br />-Anonymous： 服务器无法模拟或标识客户端。<br />-None： 模拟级别不会分配。<br /><br /> 默认值为 Identification。 此属性的类型为 <xref:System.Security.Principal.TokenImpersonationLevel>。|  
+|`impersonationLevel`|设置客户端用于与服务器进行通信的模拟首选项。 服务器上不强制使用客户端所选择的模拟模式。 包括以下有效值：<br /><br /> -标识：服务器可以获取标识和权限的客户端，但不能模拟客户端。<br />模拟：服务器可以模拟客户端的本地系统上的安全上下文。<br />-委托：服务器可以模拟远程系统上的客户端的安全上下文。<br />匿名：服务器无法模拟或标识客户端。<br />-None:未分配模拟级别。<br /><br /> 默认值为 Identification。 此属性的类型为 <xref:System.Security.Principal.TokenImpersonationLevel>。|  
   
 ### <a name="child-elements"></a>子元素  
  无  

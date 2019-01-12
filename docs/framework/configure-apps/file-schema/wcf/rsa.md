@@ -2,12 +2,12 @@
 title: '&lt;rsa&gt;'
 ms.date: 03/30/2017
 ms.assetid: ae1f2267-e40d-42ff-8abf-06ab7067bdb9
-ms.openlocfilehash: dbeb08e6475d4825ad442b0b264e9003bb6fc53d
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 8005fd67b92cb14d82b525e7c990f9d58aef7b58
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32749925"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54145336"
 ---
 # <a name="ltrsagt"></a>&lt;rsa&gt;
 通过此标识连接到终结点的安全 WCF 客户端将验证在服务器提供的众多声明中是否具有一个包含用于构建此标识的 RSA 公钥的声明。  
@@ -18,7 +18,7 @@ ms.locfileid: "32749925"
 ## <a name="syntax"></a>语法  
   
 ```xml  
-<rsa value = "String" />  
+<rsa value="String" />
 ```  
   
 ## <a name="attributes-and-elements"></a>特性和元素  
@@ -42,15 +42,15 @@ ms.locfileid: "32749925"
 ## <a name="remarks"></a>备注  
  您可以通过 RSA 检查将身份验证明确限制为单个基于其 RSA 密钥或生成的个人的 RSA 密钥值的证书。 这样将启用更为严格的特定 RSA 密钥身份验证，不过与此对应的代价是，如果更改 RSA 密钥值，则该服务不可再用于现有客户端。  
   
- 有关使用身份验证服务进行客户端的详细信息，请参阅[服务标识和身份验证](../../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)。  
+ 有关使用标识来验证客户端到服务的详细信息，请参阅[服务标识和身份验证](../../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)。  
   
 ## <a name="example"></a>示例  
  下面的配置代码指定用于对服务器进行身份验证的 X.509 证书的公钥值。  
   
 ```xml  
-<identity>  
-  <rsa value = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"/>  
-</identity>  
+<identity>
+  <rsa value="0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000" />
+</identity>
 ```  
   
 ## <a name="see-also"></a>请参阅  

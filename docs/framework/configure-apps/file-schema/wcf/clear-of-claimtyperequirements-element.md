@@ -2,12 +2,12 @@
 title: '&lt;claimTypeRequirements&gt; 的 &lt;clear&gt; 元素'
 ms.date: 03/30/2017
 ms.assetid: ef42fde7-f292-4610-9111-9fea382c3b5f
-ms.openlocfilehash: ca8ea91f5806a6cedc98729de1c45ab6b5de6afb
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 1e77e3c978c1e385aec983d5e2d4bea64697c43e
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32747120"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54145284"
 ---
 # <a name="ltcleargt-of-ltclaimtyperequirementsgt-element"></a>&lt;claimTypeRequirements&gt; 的 &lt;clear&gt; 元素
 指定所有声明类型都将从联合凭据中移除。 这样可以确保集合最初为空。  
@@ -23,9 +23,9 @@ ms.locfileid: "32747120"
 ## <a name="syntax"></a>语法  
   
 ```xml  
-<claimTypeRequirements>  
-      <clear />  
-</claimTypeRequirements>  
+<claimTypeRequirements>
+  <clear />
+</claimTypeRequirements>
 ```  
   
 ## <a name="attributes-and-elements"></a>特性和元素  

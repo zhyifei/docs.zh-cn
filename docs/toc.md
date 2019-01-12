@@ -245,6 +245,7 @@
 ##### [字符串内插](csharp/tutorials/intro-to-csharp/interpolated-strings-local.md)
 ##### [列表集合](csharp/tutorials/intro-to-csharp/arrays-and-collections.md)
 ##### [类简介](csharp/tutorials/intro-to-csharp/introduction-to-classes.md)
+### [探索 C# 6](csharp/tutorials/exploration/csharp-6.yml)
 ### [使用可为空引用类型](csharp/tutorials/nullable-reference-types.md)
 ### [控制台应用程序](csharp/tutorials/console-teleprompter.md)
 ### [REST 客户端](csharp/tutorials/console-webapiclient.md)

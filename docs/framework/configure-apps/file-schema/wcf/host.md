@@ -2,12 +2,12 @@
 title: '&lt;主机&gt;'
 ms.date: 03/30/2017
 ms.assetid: be566d55-9d50-4b2e-985d-52a5cc26cbbb
-ms.openlocfilehash: ec53568e9d1df9ebb04bc299f491e80674950c63
-ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
+ms.openlocfilehash: afa9d65223ab3a7730a55bc41ed98458707b32db
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34233725"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54145219"
 ---
 # <a name="lthostgt"></a>&lt;主机&gt;
 指定服务主机的设置。  
@@ -21,11 +21,12 @@ ms.locfileid: "34233725"
   
 ```xml  
 <host>
-    <baseAddresses>  
-        <add baseAddress="string" />  
-    </baseAddresses>  
-    <timeOuts closeTimeout="TimeSpan" openTimeout="TimeSpan">  
-</host>  
+  <baseAddresses>
+    <add baseAddress="string" />
+  </baseAddresses>
+  <timeOuts closeTimeout="TimeSpan"
+            openTimeout="TimeSpan" />
+</host>
 ```  
   
 ## <a name="type"></a>类型  
@@ -41,7 +42,7 @@ ms.locfileid: "34233725"
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<基址 >](../../../../../docs/framework/configure-apps/file-schema/wcf/baseaddresses.md)|`baseAddress` 元素的集合，指定服务主机所使用的基址。|  
+|[\<baseAddresses >](../../../../../docs/framework/configure-apps/file-schema/wcf/baseaddresses.md)|`baseAddress` 元素的集合，指定服务主机所使用的基址。|  
 |[\<超时 >](../../../../../docs/framework/configure-apps/file-schema/wcf/timeouts.md)|一个配置元素，指定为打开或关闭服务主机预留的时间间隔。|  
   
 ### <a name="parent-elements"></a>父元素  

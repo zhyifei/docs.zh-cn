@@ -4,12 +4,12 @@ description: 了解特性在 C# 中的工作方式。
 author: mgroves
 ms.date: 03/06/2017
 ms.assetid: b152cf36-76e4-43a5-b805-1a1952e53b79
-ms.openlocfilehash: db6db50ac59e804225bdc11c435fef3d53fa685e
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 38d22e707dd8c9877183feb8446407c20a21b416
+ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43390514"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "54029822"
 ---
 # <a name="using-attributes-in-c"></a>在 C# 中使用特性 #
 
@@ -92,7 +92,7 @@ ms.locfileid: "43390514"
 * 方法
 * 模块
 * 参数
-* 属性
+* Property
 * 返回值
 * 结构
 
@@ -110,7 +110,7 @@ ms.locfileid: "43390514"
 
 若要查找并使用特性，通常需要使用[反射](../programming-guide/concepts/reflection.md)。 我不会在此教程中深入介绍反射，但基本概念就是借助反射，可以在 C# 中编写用于检查其他代码的代码。
 
-例如，可以使用反射获取类的相关信息： 
+例如，可以使用反射获取类的相关信息（在代码开始处添加 `using System.Reflection;`）： 
 
 [!code-csharp[Getting type information with Reflection](../../../samples/snippets/csharp/tutorials/attributes/Program.cs#ReflectionExample1)]
 

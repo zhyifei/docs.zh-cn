@@ -2,12 +2,12 @@
 title: '&lt;serviceCredentials&gt; 的 &lt;windowsAuthentication&gt;'
 ms.date: 03/30/2017
 ms.assetid: e0709473-0997-4de3-8f49-783527309a48
-ms.openlocfilehash: 9872b1f2520661ff3f31cef94b6822bb345ebfdf
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: acbb4f788d805d72dedcc7be711a38d1f1e82687
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32767539"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54148339"
 ---
 # <a name="ltwindowsauthenticationgt-of-ltservicecredentialsgt"></a>&lt;serviceCredentials&gt; 的 &lt;windowsAuthentication&gt;
 指定 Windows 服务凭据的设置。  
@@ -17,14 +17,13 @@ ms.locfileid: "32767539"
 \<serviceBehaviors>  
 \<行为 >  
 \<serviceCredentials>  
-\<windows 身份验证 >  
+\<windowsAuthentication >  
   
 ## <a name="syntax"></a>语法  
   
 ```xml  
-<windowsAuthentication  
-      allowAnonymousLogons="Boolean"  
-      includeWindowsGroups="Boolean" />  
+<windowsAuthentication allowAnonymousLogons="Boolean"
+                       includeWindowsGroups="Boolean" />
 ```  
   
 ## <a name="attributes-and-elements"></a>特性和元素  

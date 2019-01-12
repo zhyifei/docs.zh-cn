@@ -17,7 +17,7 @@ ms.locfileid: "43510447"
 此示例演示如何在用户输入无效值后，基于自定义验证规则使用 <xref:System.Windows.Controls.Validation.ErrorTemplate%2A> 和样式触发器来提供视觉反馈，以便通知用户。  
   
 ## <a name="example"></a>示例  
- 文本内容<xref:System.Windows.Controls.TextBox>在下面的示例绑定到`Age`属性 （类型为 int) 的一个名为的绑定源对象`ods`。 该绑定设置为使用名为 `AgeRangeRule` 的验证规则，以便当用户输入了非数值字符或输入的值小于 21 或者大于 130 时，文本框旁边将显示一个红色感叹号，并且当用户将鼠标移动到该文本框上时，将显示包含错误消息的工具提示。  
+ 在下面的示例中，<xref:System.Windows.Controls.TextBox> 的文本内容绑定到一个名为 `ods` 的绑定源对象的 `Age` 属性（类型为 int) 。 该绑定已设置为使用名为 `AgeRangeRule` 的验证规则。因此，当用户输入了非数值字符或输入的值小于 21 或者大于 130 时，文本框旁边会显示一个红色感叹号，而当用户将鼠标移动到该文本框上时，会显示包含错误消息的工具提示。  
   
  [!code-xaml[BindValidation#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BindValidation/CSharp/Window1.xaml#2)]  
   

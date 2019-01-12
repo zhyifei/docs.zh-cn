@@ -2,12 +2,12 @@
 title: '&lt;netMsmqBinding&gt; 的 &lt;transport&gt;'
 ms.date: 03/30/2017
 ms.assetid: 72e1b338-39f0-4af1-a5d9-7a2fb79f6a0b
-ms.openlocfilehash: 06114990f931eb06d064fcec425e9ab42507c932
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: 678f3fd34f368abae11404fcbb1546b2135a75d2
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48582302"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54147026"
 ---
 # <a name="lttransportgt-of-ltnetmsmqbindinggt"></a>&lt;netMsmqBinding&gt; 的 &lt;transport&gt;
 定义传输安全设置。  
@@ -22,16 +22,16 @@ ms.locfileid: "48582302"
 ## <a name="syntax"></a>语法  
   
 ```xml  
-<netMsmqBinding>  
-    <binding>  
-    <security>  
-         <transport msmqAuthenticationMode="None/WindowsDomain/Certificate"  
-            msmqEncryptionAlgorithm="RC4Stream/AES"  
-            msmqProtectionLevel="None/Sign/EncryptAndSign"  
-            msmqSecureHashAlgorithm="MD5/SHA1/SHA256/SHA512" />  
-    </security>  
-   </binding>  
-</netMsmqBinding>  
+<netMsmqBinding>
+  <binding>
+    <security>
+      <transport msmqAuthenticationMode="None/WindowsDomain/Certificate"
+                 msmqEncryptionAlgorithm="RC4Stream/AES"
+                 msmqProtectionLevel="None/Sign/EncryptAndSign"
+                 msmqSecureHashAlgorithm="MD5/SHA1/SHA256/SHA512" />
+    </security>
+  </binding>
+</netMsmqBinding>
 ```  
   
 ## <a name="attributes-and-elements"></a>特性和元素  
@@ -41,9 +41,9 @@ ms.locfileid: "48582302"
   
 |特性|描述|  
 |---------------|-----------------|  
-|msmqAuthenticationMode|指定 MSMQ 传输必须采用什么方式对消息进行身份验证。 包括以下有效值：<br /><br /> -None： 无身份验证。<br />-WindowsDomain： 身份验证机制使用 Active Directory 检索与消息关联的安全标识符的 X.509 证书。 然后使用它来检查队列的 ACL 以确保用户具有队列写权限。<br />-证书： 通道从证书存储检索证书。<br /><br /> 默认值为 `WindowsDomain`。<br /><br /> 如果将此属性设置为 `None`，则 `msmqProtectionLevel` 属性也必须设置为 `None`。 此特性的类型为 <xref:System.ServiceModel.MsmqAuthenticationMode>|  
+|msmqAuthenticationMode|指定 MSMQ 传输必须采用什么方式对消息进行身份验证。 包括以下有效值：<br /><br /> -None:无身份验证。<br />-WindowsDomain:身份验证机制使用 Active Directory 检索与消息关联的安全标识符的 X.509 证书。 然后使用它来检查队列的 ACL 以确保用户具有队列写权限。<br />-证书：通道从证书存储检索证书。<br /><br /> 默认值为 `WindowsDomain`。<br /><br /> 如果将此属性设置为 `None`，则 `msmqProtectionLevel` 属性也必须设置为 `None`。 此特性的类型为 <xref:System.ServiceModel.MsmqAuthenticationMode>|  
 |msmqEncryptionAlgorithm|指定在消息队列管理器之间传输消息时用于在网络上对消息进行加密的算法。 包括以下有效值：<br /><br /> -RC4Stream<br />-AES<br />-默认值是`RC4Stream`。 此属性的类型为 <xref:System.ServiceModel.MsmqEncryptionAlgorithm>。|  
-|msmqProtectionLevel|指定在 MSMQ 传输级别采用什么方式来保护消息。 加密可确保消息的完整性，而签名和加密不仅可以确保消息的完整性，还可以确保消息的不可否认性。 也就是说，消息确实来自发送者，发送者与他所声称的身份一致。 包括以下有效值：<br /><br /> -None： 无保护。<br />登录： 对消息进行签名。<br />-EncryptAndSign： 消息进行加密和签名。<br />-默认值是`Sign`。|  
+|msmqProtectionLevel|指定在 MSMQ 传输级别采用什么方式来保护消息。 加密可确保消息的完整性，而签名和加密不仅可以确保消息的完整性，还可以确保消息的不可否认性。 也就是说，消息确实来自发送者，发送者与他所声称的身份一致。 包括以下有效值：<br /><br /> -None:无保护。<br />登录：对消息进行签名。<br />-EncryptAndSign:对消息进行加密和签名。<br />-默认值是`Sign`。|  
 |msmqSecureHashAlgorithm|指定用于计算消息摘要的哈希算法。 包括以下有效值：<br /><br /> -   MD5<br />-   SHA1<br />-   SHA256<br />-   SHA512<br /><br /> 默认值为 `SHA1`。 此属性的类型为 <xref:System.ServiceModel.MsmqSecureHashAlgorithm>。|  
   
 ### <a name="child-elements"></a>子元素  

@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 88fb1a17-6ac9-4b57-8028-193aec1f727c
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: 67c94eeaa295b19e99f870780f555baff936889f
-ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
+ms.openlocfilehash: f6e139a4e10ca10fac45510715110d156ddf82ff
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54030122"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54145960"
 ---
 # <a name="redirecting-assembly-versions"></a>重定向程序集版本
 
@@ -163,7 +163,6 @@ ms.locfileid: "54030122"
 - [使用程序集编程](../../../docs/framework/app-domains/programming-with-assemblies.md)
 - [运行时如何定位程序集](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)
 - [配置应用程序](../../../docs/framework/configure-apps/index.md)
-- [配置.NET Framework 应用](http://msdn.microsoft.com/library/d789b592-fcb5-4e3d-8ac9-e0299adaaa42)
 - [运行时设置架构](../../../docs/framework/configure-apps/file-schema/runtime/index.md)
 - [配置文件架构](../../../docs/framework/configure-apps/file-schema/index.md)
 - [如何：创建发布服务器策略](../../../docs/framework/configure-apps/how-to-create-a-publisher-policy.md)

@@ -4,12 +4,12 @@ description: 适用于容器化 .NET 应用程序的 .NET 微服务体系结构 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/08/2018
-ms.openlocfilehash: 31f4807c956a8b4fb9381145f8e9b5eaffafe698
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 72a3e7ef8043e0016cefb45a4182b5c2e3061753
+ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53149492"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "54029705"
 ---
 # <a name="use-enumeration-classes-instead-of-enum-types"></a>使用枚举类（而不是枚举类型）
 
@@ -17,7 +17,7 @@ ms.locfileid: "53149492"
 
 相反，你可以创建枚举类，启动面向对象语言的所有丰富功能。
 
-但这不是关键点，在许多情况下，为了简便起见，如果喜欢，仍然可以使用常规[枚举类型](https://docs.microsoft.com/dotnet/csharp/language-reference/keywords/enum)。 总之，枚举类的使用与业务相关概念的关系更密切。
+但这不是关键点，在许多情况下，为了简便起见，如果喜欢，仍然可以使用常规[枚举类型](../../../csharp/language-reference/keywords/enum.md)。 总之，枚举类的使用与业务相关概念的关系更密切。
 
 ## <a name="implement-an-enumeration-base-class"></a>实现枚举基类
 

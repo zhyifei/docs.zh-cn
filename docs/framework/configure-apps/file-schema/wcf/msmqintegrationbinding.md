@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - msmqIntegrationBinding Element
 ms.assetid: edf277f3-e3bf-4ed8-9f55-83b5788430a7
-ms.openlocfilehash: 1493cb6f9588ee618b085186b3bb63476a9a8930
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 09ac3fe2ea86745b9c88ffe9ec999a4978b343fe
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48841013"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54145860"
 ---
 # <a name="ltmsmqintegrationbindinggt"></a>&lt;msmqIntegrationBinding&gt;
 定义一个绑定，此绑定通过利用 MSMQ 路由消息来提供队列支持。  
@@ -21,28 +21,28 @@ msmqIntegrationBinding
 ## <a name="syntax"></a>语法  
   
 ```xml  
-<msmqIntegrationBinding>  
-   <binding   
-       closeTimeout="TimeSpan"   
-       customDeadLetterQueue="Uri"  
-       deadLetterQueue="Uri"  
-       durable="Boolean"  
-       exactlyOnce="Boolean"   
-       maxReceivedMessageSize"Integer"  
-       maxRetryCycles="Integer"   
-       name="string"   
-       openTimeout="TimeSpan"        receiveContextEnabled="Boolean"  
-       receiveErrorHandling="Drop/Fault/Move/Reject"  
-       receiveTimeout="TimeSpan"   
-       receiveRetryCount="Integer"  
-       retryCycleDelay="TimeSpan"    
-       sendTimeout="TimeSpan"   
-       serializationFormat="XML/Binary/ActiveX/ByteArray/Stream">  
-       timeToLive="TimeSpan"    
-       useMsmqTracing="Boolean  
-       useSourceJournal="Boolean"  
-   </binding>  
-</msmqIntegrationBinding>   
+<msmqIntegrationBinding>
+  <binding closeTimeout="TimeSpan"
+           customDeadLetterQueue="Uri"
+           deadLetterQueue="Uri"
+           durable="Boolean"
+           exactlyOnce="Boolean"
+           maxReceivedMessageSize="Integer"
+           maxRetryCycles="Integer"
+           name="String"
+           openTimeout="TimeSpan"
+           receiveContextEnabled="Boolean"
+           receiveErrorHandling="Drop/Fault/Move/Reject"
+           receiveTimeout="TimeSpan"
+           receiveRetryCount="Integer"
+           retryCycleDelay="TimeSpan"
+           sendTimeout="TimeSpan"
+           serializationFormat="XML/Binary/ActiveX/ByteArray/Stream"
+           timeToLive="TimeSpan"
+           useMsmqTracing="Boolean"
+           useSourceJournal="Boolean">
+  </binding>
+</msmqIntegrationBinding>
 ```  
   
 ## <a name="attributes-and-elements"></a>特性和元素  
@@ -95,39 +95,38 @@ msmqIntegrationBinding
 |[\<绑定 >](../../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)|此元素包含标准绑定和自定义绑定的集合。|  
   
 ## <a name="remarks"></a>备注  
- 此绑定元素可用于使 Windows Communication Foundation (WCF) 应用程序能够将消息发送到和来自使用 COM、 MSMQ 本机 Api 或中定义的类型的现有 MSMQ 应用程序接收消息<xref:System.Messaging?displayProperty=nameWithType>命名空间，可以使用此配置元素来指定如何处理队列传输保证、 是否必须持久存储消息，以及如何保护和身份验证消息。 有关详细信息，请参阅[如何： 使用 WCF 终结点和消息队列应用程序交换消息](../../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md)。  
+ 此绑定元素可用于使 Windows Communication Foundation (WCF) 应用程序能够将消息发送到和来自使用 COM、 MSMQ 本机 Api 或中定义的类型的现有 MSMQ 应用程序接收消息<xref:System.Messaging?displayProperty=nameWithType>命名空间，可以使用此配置元素来指定如何处理队列传输保证、 是否必须持久存储消息，以及如何保护和身份验证消息。 有关更多信息，请参见[如何：与 WCF 终结点交换消息和消息队列应用程序](../../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md)。  
   
 ## <a name="example"></a>示例  
   
 ```xml  
-<configuration>  
-<system.ServiceModel>  
-    <bindings>  
-       <msmqIntegrationBinding>  
-           <binding   
-                    closeTimeout="00:00:10"   
-                    openTimeout="00:00:20"   
-                    receiveTimeout="00:00:30"   
-                    sendTimeout="00:00:40"   
-                    deadLetterQueue="net.msmq://localhost/blah"   
-                    durable="true"   
-                    exactlyOnce="true"   
-                    maxReceivedMessageSize="1000"   
-                    maxImmediateRetries="11"   
-                    maxRetryCycles="12"  
-                    poisonMessageHandling="Disabled"   
-                    rejectAfterLastRetry="false"   
-                    retryCycleDelay="00:05:55"   
-                    timeToLive="00:11:11"   
-                    useSourceJournal="true"   
-                    useMsmqTracing="true"   
-                    serializationFormat="Binary">  
-                    <security mode="None" />  
-           </binding>  
-       </msmqIntegrationBinding  
-   </bindings>  
-</system.ServiceModel>  
-</configuration>  
+<configuration>
+  <system.ServiceModel>
+    <bindings>
+      <msmqIntegrationBinding>
+        <binding closeTimeout="00:00:10"
+                 openTimeout="00:00:20"
+                 receiveTimeout="00:00:30"
+                 sendTimeout="00:00:40"
+                 deadLetterQueue="net.msmq://localhost/blah"
+                 durable="true"
+                 exactlyOnce="true"
+                 maxReceivedMessageSize="1000"
+                 maxImmediateRetries="11"
+                 maxRetryCycles="12"
+                 poisonMessageHandling="Disabled"
+                 rejectAfterLastRetry="false"
+                 retryCycleDelay="00:05:55"
+                 timeToLive="00:11:11"
+                 useSourceJournal="true"
+                 useMsmqTracing="true"
+                 serializationFormat="Binary">
+          <security mode="None" />
+        </binding>
+      </msmqIntegrationBinding>
+    </bindings>
+  </system.ServiceModel>
+</configuration>
 ```  
   
 ## <a name="see-also"></a>请参阅  
