@@ -4,12 +4,12 @@ description: 了解在 ML.NET 中受支持的特征工程组件。
 author: JRAlexander
 ms.custom: seodec18
 ms.date: 12/14/2018
-ms.openlocfilehash: 72e4077151d35b9bff661c28c9a20626098a5c69
-ms.sourcegitcommit: 882a2f56bf6afdcb40d468e4ae9371296822b68c
+ms.openlocfilehash: c311aa59426b716ffcd2c53e890d2e3e380360a7
+ms.sourcegitcommit: 81bd16c7435a8c9183d2a7e878a2a5eff7d04584
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/17/2018
-ms.locfileid: "53451087"
+ms.lasthandoff: 01/12/2019
+ms.locfileid: "54249120"
 ---
 # <a name="machine-learning-data-transforms---mlnet"></a>机器学习数据转换 - ML.NET
 
@@ -103,7 +103,6 @@ ms.locfileid: "53451087"
 | <xref:Microsoft.ML.Transforms.MissingValueDroppingTransformer> | 删除列中的缺失值。 |
 | <xref:Microsoft.ML.Transforms.MissingValueIndicatorTransform> | 创建一个布尔值输出列，其槽数与输入列相同，如果缺少输入列中的值，则输出值为 true。 |
 | <xref:Microsoft.ML.Transforms.MissingValueReplacingTransformer> | 通过将缺失值替换为默认值或平均值/最小值/最大值（仅适用于非文本列）来处理缺失值。 |
-| <xref:Microsoft.ML.Transforms.MissingValueIndicatorTransform> | 创建一个布尔值输出列，其槽数与输入列相同，如果缺少输入列中的值，则输出值为 true。 |
 
 ## <a name="normalization"></a>标准化
 

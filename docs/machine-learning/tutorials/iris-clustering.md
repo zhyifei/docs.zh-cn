@@ -3,15 +3,15 @@ title: 使用聚类分析学习器对鸢尾花分类 - ML.NET
 description: 了解如何在聚类分析方案中使用 ML.NET
 author: pkulikov
 ms.author: johalex
-ms.date: 12/17/2018
+ms.date: 01/11/2019
 ms.topic: tutorial
 ms.custom: mvc, seodec18
-ms.openlocfilehash: 012cea471c69f66ad9a61db858b4575606b31f74
-ms.sourcegitcommit: 3d0c29b878f00caec288dfecb3a5c959de5aa629
+ms.openlocfilehash: ab888a2cd9469d5ce0131ba2b17f7c134cf2855c
+ms.sourcegitcommit: 81bd16c7435a8c9183d2a7e878a2a5eff7d04584
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53656318"
+ms.lasthandoff: 01/12/2019
+ms.locfileid: "54249068"
 ---
 # <a name="tutorial-cluster-iris-flowers-using-a-clustering-learner-with-mlnet"></a>教程：借助 ML.NET 使用聚类分析学习器对鸢尾花分类
 
@@ -56,7 +56,7 @@ ms.locfileid: "53656318"
 
 ## <a name="prepare-the-data"></a>准备数据
 
-1. 下载 [iris.data](https://github.com/dotnet/machinelearning/blob/master/test/data/iris.data) 数据集并将其保存至在上一步中创建的“数据”文件夹。 若要详细了解鸢尾花数据集，请参阅[鸢尾花数据集](https://en.wikipedia.org/wiki/Iris_flower_data_set)维基百科页面，以及该数据集的源[鸢尾花数据集](http://archive.ics.uci.edu/ml/datasets/Iris)页面。
+1. 下载 [iris.data](https://github.com/dotnet/machinelearning/blob/master/test/data/iris.data) 数据集并将其保存至在上一步中创建的“数据”文件夹。 若要详细了解鸢尾花数据集，请参阅[鸢尾花数据集](https://en.wikipedia.org/wiki/Iris_flower_data_set)维基百科页面，以及该数据集的源[鸢尾花数据集](https://archive.ics.uci.edu/ml/datasets/Iris)页面。
 
 1. 在“解决方案资源管理器”中，右键单击“iris.data”文件并选择“属性”。 在“高级”下，将“复制到输出目录”的值更改为“如果较新则复制”。
 
@@ -84,9 +84,9 @@ ms.locfileid: "53656318"
 
 [!code-csharp[Define data classes](~/samples/machine-learning/tutorials/IrisFlowerClustering/IrisData.cs#ClassDefinitions)]
 
-`IrisData` 是输入数据类，并且具有针对数据集每个特征的定义。 使用 [Column](xref:Microsoft.ML.Runtime.Api.ColumnAttribute) 属性在数据集文件中指定源列的索引。
+`IrisData` 是输入数据类，并且具有针对数据集每个特征的定义。 使用 [Column](xref:Microsoft.ML.Data.ColumnAttribute) 属性在数据集文件中指定源列的索引。
 
-`ClusterPrediction` 类表示应用到 `IrisData` 实例的聚类分析模型的输出。 使用 [ColumnName](xref:Microsoft.ML.Runtime.Api.ColumnNameAttribute) 属性将 `PredictedClusterId` 和 `Distances` 字段分别绑定至 PredictedLabel 和 Score 列。 在聚类分析任务中，这些列具有以下含义：
+`ClusterPrediction` 类表示应用到 `IrisData` 实例的聚类分析模型的输出。 使用 [ColumnName](xref:Microsoft.ML.Data.ColumnNameAttribute) 属性将 `PredictedClusterId` 和 `Distances` 字段分别绑定至 PredictedLabel 和 Score 列。 在聚类分析任务中，这些列具有以下含义：
 
 - **PredictedLabel** 列包含所预测的群集的 ID。
 - **Score** 列包含一个数组，该数组中的数与群集形心之间的距离为欧氏距离的平方。 该数组的长度等于群集数。
@@ -127,9 +127,9 @@ ms.locfileid: "53656318"
 
 [!code-csharp[Create text loader](~/samples/machine-learning/tutorials/IrisFlowerClustering/Program.cs#SetupTextLoader)]
 
-请注意，列名和索引与 `IrisData` 类定义的模式匹配。 <xref:Microsoft.ML.Runtime.Data.DataKind.R4?displayProperty=nameWithType> 值指定 `float` 类型。
+请注意，列名和索引与 `IrisData` 类定义的模式匹配。 <xref:Microsoft.ML.Data.DataKind.R4?displayProperty=nameWithType> 值指定 `float` 类型。
 
-使用实例化 <xref:Microsoft.ML.Runtime.Data.TextLoader> 实例创建 <xref:Microsoft.ML.Runtime.Data.IDataView> 实例，这表示定型数据集的数据源：
+使用实例化 <xref:Microsoft.ML.Data.TextLoader> 实例创建 <xref:Microsoft.ML.Data.IDataView> 实例，这表示定型数据集的数据源：
 
 [!code-csharp[Create IDataView](~/samples/machine-learning/tutorials/IrisFlowerClustering/Program.cs#CreateDataView)]
 
@@ -160,7 +160,7 @@ ms.locfileid: "53656318"
 
 ## <a name="use-the-model-for-predictions"></a>使用预测模型
 
-要进行预测，请使用通过转换器管道获取输入类型实例和生成输出类型实例的 <xref:Microsoft.ML.Runtime.Data.PredictionFunction%602> 类。 将以下行添加到 `Main` 方法以创建该类的实例：
+要进行预测，请使用通过转换器管道获取输入类型实例和生成输出类型实例的 <xref:Microsoft.ML.PredictionEngine%602> 类。 将以下行添加到 `Main` 方法以创建该类的实例：
 
 [!code-csharp[Create predictor](~/samples/machine-learning/tutorials/IrisFlowerClustering/Program.cs#Predictor)]
 

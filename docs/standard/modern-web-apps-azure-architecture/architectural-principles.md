@@ -3,13 +3,13 @@ title: 体系结构原则
 description: 使用 ASP.NET Core 和 Azure 构建新式 Web 应用程序 | 体系结构原则
 author: ardalis
 ms.author: wiwagn
-ms.date: 6/28/2018
-ms.openlocfilehash: 675ecc0dc6a90f3a4ab42861d850ed43a6c10bad
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.date: 06/28/2018
+ms.openlocfilehash: fb854b89b9f8e425d594545b9ad61cbd334b7b2f
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53146597"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54151878"
 ---
 # <a name="architectural-principles"></a>体系结构原则
 
