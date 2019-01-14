@@ -4,24 +4,24 @@ description: 适用于容器化 .NET 应用程序的 .NET 微服务体系结构 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/08/2018
-ms.openlocfilehash: 72a3e7ef8043e0016cefb45a4182b5c2e3061753
-ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
+ms.openlocfilehash: b8f19fc55437d3a3b89c8a131c47813751b4d8bc
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54029705"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54147832"
 ---
-# <a name="use-enumeration-classes-instead-of-enum-types"></a><span data-ttu-id="d3d96-103">使用枚举类（而不是枚举类型）</span><span class="sxs-lookup"><span data-stu-id="d3d96-103">Use enumeration classes instead of enum types</span></span>
+# <a name="use-enumeration-classes-instead-of-enum-types"></a><span data-ttu-id="dc42a-103">使用枚举类（而不是枚举类型）</span><span class="sxs-lookup"><span data-stu-id="dc42a-103">Use enumeration classes instead of enum types</span></span>
 
-<span data-ttu-id="d3d96-104">[枚举](../../../../docs/csharp/language-reference/keywords/enum.md)（或枚举类型）是围绕整型类型的精简语言包装器。</span><span class="sxs-lookup"><span data-stu-id="d3d96-104">[Enumerations](../../../../docs/csharp/language-reference/keywords/enum.md) (or *enum types* for short) are a thin language wrapper around an integral type.</span></span> <span data-ttu-id="d3d96-105">建议在存储一组封闭值中的一个值时，限制对它们的使用。</span><span class="sxs-lookup"><span data-stu-id="d3d96-105">You might want to limit their use to when you are storing one value from a closed set of values.</span></span> <span data-ttu-id="d3d96-106">基于大小（小、中、大）的分类是一个很好的示例。</span><span class="sxs-lookup"><span data-stu-id="d3d96-106">Classification based on sizes (small, medium, large) is a good example.</span></span> <span data-ttu-id="d3d96-107">对控制流或更强健的抽象使用枚举可成为[代码气味](http://deviq.com/code-smells/)。</span><span class="sxs-lookup"><span data-stu-id="d3d96-107">Using enums for control flow or more robust abstractions can be a [code smell](http://deviq.com/code-smells/).</span></span> <span data-ttu-id="d3d96-108">这种使用方式会使代码很脆弱，并且会使许多控制流语句检查枚举值。</span><span class="sxs-lookup"><span data-stu-id="d3d96-108">This type of usage leads to fragile code with many control flow statements checking values of the enum.</span></span>
+<span data-ttu-id="dc42a-104">[枚举](../../../../docs/csharp/language-reference/keywords/enum.md)（或枚举类型）是围绕整型类型的精简语言包装器。</span><span class="sxs-lookup"><span data-stu-id="dc42a-104">[Enumerations](../../../../docs/csharp/language-reference/keywords/enum.md) (or *enum types* for short) are a thin language wrapper around an integral type.</span></span> <span data-ttu-id="dc42a-105">建议在存储一组封闭值中的一个值时，限制对它们的使用。</span><span class="sxs-lookup"><span data-stu-id="dc42a-105">You might want to limit their use to when you are storing one value from a closed set of values.</span></span> <span data-ttu-id="dc42a-106">基于大小（小、中、大）的分类是一个很好的示例。</span><span class="sxs-lookup"><span data-stu-id="dc42a-106">Classification based on sizes (small, medium, large) is a good example.</span></span> <span data-ttu-id="dc42a-107">对控制流或更强健的抽象使用枚举可成为[代码气味](https://deviq.com/code-smells/)。</span><span class="sxs-lookup"><span data-stu-id="dc42a-107">Using enums for control flow or more robust abstractions can be a [code smell](https://deviq.com/code-smells/).</span></span> <span data-ttu-id="dc42a-108">这种使用方式会使代码很脆弱，并且会使许多控制流语句检查枚举值。</span><span class="sxs-lookup"><span data-stu-id="dc42a-108">This type of usage leads to fragile code with many control flow statements checking values of the enum.</span></span>
 
-<span data-ttu-id="d3d96-109">相反，你可以创建枚举类，启动面向对象语言的所有丰富功能。</span><span class="sxs-lookup"><span data-stu-id="d3d96-109">Instead, you can create Enumeration classes that enable all the rich features of an object-oriented language.</span></span>
+<span data-ttu-id="dc42a-109">相反，你可以创建枚举类，启动面向对象语言的所有丰富功能。</span><span class="sxs-lookup"><span data-stu-id="dc42a-109">Instead, you can create Enumeration classes that enable all the rich features of an object-oriented language.</span></span>
 
-<span data-ttu-id="d3d96-110">但这不是关键点，在许多情况下，为了简便起见，如果喜欢，仍然可以使用常规[枚举类型](../../../csharp/language-reference/keywords/enum.md)。</span><span class="sxs-lookup"><span data-stu-id="d3d96-110">However, this isn't a critical topic and in many cases, for simplicity, you can still use regular [enum types](../../../csharp/language-reference/keywords/enum.md) if that's your preference.</span></span> <span data-ttu-id="d3d96-111">总之，枚举类的使用与业务相关概念的关系更密切。</span><span class="sxs-lookup"><span data-stu-id="d3d96-111">Anyway, the use of enumeration classes is more related to business-related concepts.</span></span>
+<span data-ttu-id="dc42a-110">但这不是关键点，在许多情况下，为了简便起见，如果喜欢，仍然可以使用常规[枚举类型](../../../csharp/language-reference/keywords/enum.md)。</span><span class="sxs-lookup"><span data-stu-id="dc42a-110">However, this isn't a critical topic and in many cases, for simplicity, you can still use regular [enum types](../../../csharp/language-reference/keywords/enum.md) if that's your preference.</span></span> <span data-ttu-id="dc42a-111">总之，枚举类的使用与业务相关概念的关系更密切。</span><span class="sxs-lookup"><span data-stu-id="dc42a-111">Anyway, the use of enumeration classes is more related to business-related concepts.</span></span>
 
-## <a name="implement-an-enumeration-base-class"></a><span data-ttu-id="d3d96-112">实现枚举基类</span><span class="sxs-lookup"><span data-stu-id="d3d96-112">Implement an Enumeration base class</span></span>
+## <a name="implement-an-enumeration-base-class"></a><span data-ttu-id="dc42a-112">实现枚举基类</span><span class="sxs-lookup"><span data-stu-id="dc42a-112">Implement an Enumeration base class</span></span>
 
-<span data-ttu-id="d3d96-113">eShopOnContainers 中的订购微服务提供了一个示例枚举基类实现，如下例所示：</span><span class="sxs-lookup"><span data-stu-id="d3d96-113">The ordering microservice in eShopOnContainers provides a sample Enumeration base class implementation, as shown in the following example:</span></span>
+<span data-ttu-id="dc42a-113">eShopOnContainers 中的订购微服务提供了一个示例枚举基类实现，如下例所示：</span><span class="sxs-lookup"><span data-stu-id="dc42a-113">The ordering microservice in eShopOnContainers provides a sample Enumeration base class implementation, as shown in the following example:</span></span>
 
 ```csharp
 public abstract class Enumeration : IComparable
@@ -69,7 +69,7 @@ public abstract class Enumeration : IComparable
 }
 ```
 
-<span data-ttu-id="d3d96-114">可将此类用作任何实体或值对象中的类型，如以下 `CardType` : `Enumeration` 类：</span><span class="sxs-lookup"><span data-stu-id="d3d96-114">You can use this class as a type in any entity or value object, as for the following `CardType` : `Enumeration` class:</span></span>
+<span data-ttu-id="dc42a-114">可将此类用作任何实体或值对象中的类型，如以下 `CardType` : `Enumeration` 类：</span><span class="sxs-lookup"><span data-stu-id="dc42a-114">You can use this class as a type in any entity or value object, as for the following `CardType` : `Enumeration` class:</span></span>
 
 ```csharp
 public abstract class CardType : Enumeration
@@ -102,30 +102,30 @@ public abstract class CardType : Enumeration
 }
 ```
 
-## <a name="additional-resources"></a><span data-ttu-id="d3d96-115">其他资源</span><span class="sxs-lookup"><span data-stu-id="d3d96-115">Additional resources</span></span>
+## <a name="additional-resources"></a><span data-ttu-id="dc42a-115">其他资源</span><span class="sxs-lookup"><span data-stu-id="dc42a-115">Additional resources</span></span>
 
-- <span data-ttu-id="d3d96-116">**Enum’s are evil—update** \（枚举有弊无利：更新）</span><span class="sxs-lookup"><span data-stu-id="d3d96-116">**Enum’s are evil—update** \\</span></span>
+- <span data-ttu-id="dc42a-116">**Enum’s are evil—update** \（枚举有弊无利：更新）</span><span class="sxs-lookup"><span data-stu-id="dc42a-116">**Enum’s are evil—update** \\</span></span>
   [*https://www.planetgeek.ch/2009/07/01/enums-are-evil/*](https://www.planetgeek.ch/2009/07/01/enums-are-evil/)
 
-- <span data-ttu-id="d3d96-117">**Daniel Hardman.How Enums Spread Disease — And How To Cure It** \（枚举如何扩大问题以及如何应对）</span><span class="sxs-lookup"><span data-stu-id="d3d96-117">**Daniel Hardman. How Enums Spread Disease — And How To Cure It** \\</span></span>
+- <span data-ttu-id="dc42a-117">**Daniel Hardman.How Enums Spread Disease — And How To Cure It** \（枚举如何扩大问题以及如何应对）</span><span class="sxs-lookup"><span data-stu-id="dc42a-117">**Daniel Hardman. How Enums Spread Disease — And How To Cure It** \\</span></span>
   [*https://codecraft.co/2012/10/29/how-enums-spread-disease-and-how-to-cure-it/*](https://codecraft.co/2012/10/29/how-enums-spread-disease-and-how-to-cure-it/)
 
-- <span data-ttu-id="d3d96-118">**Jimmy Bogard。Enumeration classes** \（枚举类）</span><span class="sxs-lookup"><span data-stu-id="d3d96-118">**Jimmy Bogard. Enumeration classes** \\</span></span>
+- <span data-ttu-id="dc42a-118">**Jimmy Bogard。Enumeration classes** \（枚举类）</span><span class="sxs-lookup"><span data-stu-id="dc42a-118">**Jimmy Bogard. Enumeration classes** \\</span></span>
   [*https://lostechies.com/jimmybogard/2008/08/12/enumeration-classes/*](https://lostechies.com/jimmybogard/2008/08/12/enumeration-classes/)
 
-- <span data-ttu-id="d3d96-119">**Steve Smith.Enum Alternatives in C#** \（C# 中枚举的替代方案）</span><span class="sxs-lookup"><span data-stu-id="d3d96-119">**Steve Smith. Enum Alternatives in C#** \\</span></span>
+- <span data-ttu-id="dc42a-119">**Steve Smith.Enum Alternatives in C#** \（C# 中枚举的替代方案）</span><span class="sxs-lookup"><span data-stu-id="dc42a-119">**Steve Smith. Enum Alternatives in C#** \\</span></span>
   [*https://ardalis.com/enum-alternatives-in-c*](https://ardalis.com/enum-alternatives-in-c)
 
-- <span data-ttu-id="d3d96-120">**Enumeration.cs.**</span><span class="sxs-lookup"><span data-stu-id="d3d96-120">**Enumeration.cs.**</span></span> <span data-ttu-id="d3d96-121">eShopOnContainers 中的基础枚举类</span><span class="sxs-lookup"><span data-stu-id="d3d96-121">Base Enumeration class in eShopOnContainers \\</span></span>
+- <span data-ttu-id="dc42a-120">**Enumeration.cs.**</span><span class="sxs-lookup"><span data-stu-id="dc42a-120">**Enumeration.cs.**</span></span> <span data-ttu-id="dc42a-121">eShopOnContainers 中的基础枚举类</span><span class="sxs-lookup"><span data-stu-id="dc42a-121">Base Enumeration class in eShopOnContainers \\</span></span>
   [*https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.Domain/SeedWork/Enumeration.cs*](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.Domain/SeedWork/Enumeration.cs)
 
-- <span data-ttu-id="d3d96-122">**CardType.cs**.</span><span class="sxs-lookup"><span data-stu-id="d3d96-122">**CardType.cs**.</span></span> <span data-ttu-id="d3d96-123">eShopOnContainers 中的枚举类示例。</span><span class="sxs-lookup"><span data-stu-id="d3d96-123">Sample Enumeration class in eShopOnContainers.</span></span> \
+- <span data-ttu-id="dc42a-122">**CardType.cs**.</span><span class="sxs-lookup"><span data-stu-id="dc42a-122">**CardType.cs**.</span></span> <span data-ttu-id="dc42a-123">eShopOnContainers 中的枚举类示例。</span><span class="sxs-lookup"><span data-stu-id="dc42a-123">Sample Enumeration class in eShopOnContainers.</span></span> \
   [*https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.Domain/AggregatesModel/BuyerAggregate/CardType.cs*](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.Domain/AggregatesModel/BuyerAggregate/CardType.cs)
     
-- <span data-ttu-id="d3d96-124">**SmartEnum**。</span><span class="sxs-lookup"><span data-stu-id="d3d96-124">**SmartEnum**.</span></span> <span data-ttu-id="d3d96-125">Ardalis - 帮助在 .NET 中生成强类型智能枚举的类。</span><span class="sxs-lookup"><span data-stu-id="d3d96-125">Ardalis - Classes to help produce strongly typed smarter enums in .NET.</span></span> \
+- <span data-ttu-id="dc42a-124">**SmartEnum**。</span><span class="sxs-lookup"><span data-stu-id="dc42a-124">**SmartEnum**.</span></span> <span data-ttu-id="dc42a-125">Ardalis - 帮助在 .NET 中生成强类型智能枚举的类。</span><span class="sxs-lookup"><span data-stu-id="dc42a-125">Ardalis - Classes to help produce strongly typed smarter enums in .NET.</span></span> \
   [*https://www.nuget.org/packages/Ardalis.SmartEnum/*](https://www.nuget.org/packages/Ardalis.SmartEnum/)
 
 >[!div class="step-by-step"]
-><span data-ttu-id="d3d96-126">[上一页](implement-value-objects.md)
->[下一页](domain-model-layer-validations.md)</span><span class="sxs-lookup"><span data-stu-id="d3d96-126">[Previous](implement-value-objects.md)
+><span data-ttu-id="dc42a-126">[上一页](implement-value-objects.md)
+>[下一页](domain-model-layer-validations.md)</span><span class="sxs-lookup"><span data-stu-id="dc42a-126">[Previous](implement-value-objects.md)
 [Next](domain-model-layer-validations.md)</span></span>
