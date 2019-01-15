@@ -205,7 +205,6 @@
 ### [辅助功能](framework/ui-automation/)
 ### [数据和建模](framework/data/)
 ### [客户端应用程序](framework/develop-client-apps.md)
-#### [常用的客户端技术](framework/common-client-technologies/)
 #### [Windows Presentation Foundation](framework/wpf/)
 #### [Windows 窗体](framework/winforms/)
 ### [使用 WCF 的面向服务的应用程序](framework/wcf/)
