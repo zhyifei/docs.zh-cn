@@ -16,12 +16,12 @@ helpviewer_keywords:
 - UShort data type
 - US literal type characters [Visual Basic]
 ms.assetid: 138db892-665d-4ba8-9cae-d8d91c4a8f39
-ms.openlocfilehash: f1ccb2f2e297ecac8f5ac96c0af42ff6bfb9363b
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 21d3b31fe19db7abf1a78d0c6d33abfbc2882089
+ms.sourcegitcommit: 75567a3cb437009db55949c6092f4e77ed1a9da4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54146038"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54307391"
 ---
 # <a name="ushort-data-type-visual-basic"></a>UShort 数据类型 (Visual Basic)
 
@@ -33,7 +33,7 @@ ms.locfileid: "54146038"
   
  `UShort` 的默认值为 0。  
 
-# <a name="literal-assignments"></a>文本分配
+## <a name="literal-assignments"></a>文本分配
 
 您可以声明并初始化`UShort`变量由将其分配十进制文本、 十六进制文本八进制文本，或 （Visual Basic 从 2017年开始） 二进制文本。 如果整数文本在 `UShort` 范围之外（即，如果它小于 <xref:System.UInt16.MinValue?displayProperty=nameWithType> 或大于 <xref:System.UInt16.MaxValue?displayProperty=nameWithType>），会发生编译错误。
 
