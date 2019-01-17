@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 94fcf524-9045-4993-bfb2-e2d8bad44219
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: cded8ce271ea0f3d1dbb8fc3d9a072ee4a23d1ee
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 6e648cdadb567919d320ea8a12d30b7be306e67a
+ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53149167"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54221227"
 ---
 # <a name="developer-command-prompt-for-visual-studio"></a>Visual Studio 开发人员命令提示
 
@@ -34,7 +34,7 @@ Visual Studio 的开发人员命令提示符使你可以更轻松地使用 .NET 
 
 1. 在任务栏的搜索框中，开始键入工具的名称，例如 `dev` 或 `developer command prompt`。 然后显示一个列表，其中包含与搜索模式匹配的已安装应用。 如果要查找不同的命令提示，请尝试输入不同的搜索词，例如 `prompt`。
 
-2. 选择“开发人员命令提示”（或者你想使用的命令提示）。
+2. 选择“Visual Studio 开发人员命令提示”（或者你想使用的命令提示）。
 
 ### <a name="in-windows-81"></a>在 Windows 8.1 中
 

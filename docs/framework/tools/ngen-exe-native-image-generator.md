@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 44bf97aa-a9a4-4eba-9a0d-cfaa6fc53a66
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 463e31ff286b0022ac55f4f9f8e2a4478cceadc9
-ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
+ms.openlocfilehash: 7f086c5b6bf1d45f3f711112c618e2398c3a39ed
+ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "49400471"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54222163"
 ---
 # <a name="ngenexe-native-image-generator"></a>Ngen.exe（本机映像生成器）
 本机映像生成器 (Ngen.exe) 是一种提高托管应用程序性能的工具。 Ngen.exe 创建本机映像（包含经编译的特定于处理器的机器代码的文件），并将它们安装到本地计算机上的本机映像缓存中。 运行时可从缓存中使用本机映像，而不必使用实时 (JIT) 编译器编译原始程序集。  
@@ -55,7 +55,7 @@ ms.locfileid: "49400471"
 > [!NOTE]
 >  在[本机映像生成器 (Ngen.exe) 旧式语法](https://msdn.microsoft.com/library/5a69fc7a-103f-4afc-8ab4-606adcb46324)中可以找到 .NET Framework 1.0 和 1.1 版的 Ngen.exe 语法。  
   
- 此工具会自动随 Visual Studio 一起安装。 若要运行此工具，请使用开发人员命令提示（或 Windows 7 中的 Visual Studio 命令提示）。 有关详细信息，请参阅[命令提示](../../../docs/framework/tools/developer-command-prompt-for-vs.md)。  
+ 此工具会自动随 Visual Studio 一起安装。 若要运行此工具，请使用 Visual Studio 开发人员命令提示（或 Windows 7 中的 Visual Studio 命令提示）。 有关详细信息，请参阅[命令提示](../../../docs/framework/tools/developer-command-prompt-for-vs.md)。  
   
  在命令提示符处，键入以下内容：  
   
@@ -72,7 +72,7 @@ ngen /? | /help
 ## <a name="actions"></a>操作  
  下表显示了每个 `action` 的语法。 有关 `action` 的各个部分的说明，请参见[参数](#ArgumentTable)、[优先级别](#PriorityTable)、[方案](#ScenarioTable)和[配置](#ConfigTable)表。 [选项`options`表描述了 ](#OptionTable) 和帮助开关。  
   
-|操作|描述|  
+|操作|说明|  
 |------------|-----------------|  
 |`install` [`assemblyName` &#124; `assemblyPath`] [`scenarios`] [`config`] [`/queue`[`:`{`1`&#124;`2`&#124;`3`}]]|生成程序集及其依赖项的本机映像，并在本机映像缓存中安装这些映像。<br /><br /> 如果指定了 `/queue`，则操作将排队等待本机映像服务。 默认优先级是 3。 请参见[优先级级别](#PriorityTable)表。|  
 |`uninstall` [`assemblyName` &#124; `assemblyPath`] [`scenarios`] [`config`]|从本机映像缓存中删除程序集及其依赖项的本机映像。<br /><br /> 若要卸载单个映像及其依赖项，可使用与安装此映像时相同的命令行自变量。 **注意：** 从 [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] 开始，不再支持操作 `uninstall` *。|  
@@ -84,15 +84,15 @@ ngen /? | /help
 <a name="ArgumentTable"></a>   
 ## <a name="arguments"></a>自变量  
   
-|参数|描述|  
+|参数|说明|  
 |--------------|-----------------|  
-|`assemblyName`|程序集的完整显示名称。 例如 `"myAssembly, Version=2.0.0.0, Culture=neutral, PublicKeyToken=0038abc9deabfle5"`。 **注意：** 可以为 `display` 和 `uninstall` 操作提供部分程序集名称（如 `myAssembly`）。 <br /><br /> 每个 Ngen.exe 命令行只能指定一个程序集。|  
+|`assemblyName`|程序集的完整显示名称。 例如 `"myAssembly, Version=2.0.0.0, Culture=neutral, PublicKeyToken=0038abc9deabfle5"`。 **注意：** 可以为 `myAssembly` 和 `display` 操作提供部分程序集名称（如 `uninstall`）。 <br /><br /> 每个 Ngen.exe 命令行只能指定一个程序集。|  
 |`assemblyPath`|程序集的显式路径。 可指定完整路径或相对路径。<br /><br /> 如果指定文件名而不指定路径，则程序集必须位于当前目录中。<br /><br /> 每个 Ngen.exe 命令行只能指定一个程序集。|  
   
 <a name="PriorityTable"></a>   
 ## <a name="priority-levels"></a>优先级级别  
   
-|优先级|描述|  
+|优先级|说明|  
 |--------------|-----------------|  
 |`1`|生成本机映像，并立即进行安装，而无需等待空闲时间。|  
 |`2`|生成本机映像，并立即进行安装，而无需等待空闲时间，但是在所有优先级为 1 的操作（及其依赖项）完成后。|  
@@ -101,7 +101,7 @@ ngen /? | /help
 <a name="ScenarioTable"></a>   
 ## <a name="scenarios"></a>方案  
   
-|方案|描述|  
+|方案|说明|  
 |--------------|-----------------|  
 |`/Debug`|生成可在调试器下使用的本机映像。|  
 |`/Profile`|生成可在探查器下使用的本机映像。|  
@@ -110,7 +110,7 @@ ngen /? | /help
 <a name="ConfigTable"></a>   
 ## <a name="config"></a>配置  
   
-|配置|描述|  
+|配置|说明|  
 |-------------------|-----------------|  
 |`/ExeConfig:` `exePath`|使用指定的可执行程序集的配置。<br /><br /> 绑定到依赖项时，Ngen.exe 需要做出与加载程序相同的决策。 如果在运行时使用 <xref:System.Reflection.Assembly.Load%2A> 方法加载共享组件，则应用程序的配置文件将决定为该共享组件加载的依赖项 - 例如，所加载依赖项的版本。 `/ExeConfig` 开关就运行时将加载哪些依赖项为 Ngen.exe 提供了指导。|  
 |`/AppBase:` `directoryPath`|查找依赖项时，使用指定目录作为应用程序基础。|  
@@ -118,7 +118,7 @@ ngen /? | /help
 <a name="OptionTable"></a>   
 ## <a name="options"></a>选项  
   
-|选项|描述|  
+|选项|说明|  
 |------------|-----------------|  
 |`/nologo`|禁止显示 Microsoft 启动版权标志。|  
 |`/silent`|禁止显示成功消息。|  
@@ -521,7 +521,7 @@ ngen uninstall "ClientApp, Version=1.0.0.0, Culture=neutral,
 |任务名称|32 位计算机|64 位计算机|  
 |---------------|----------------------|----------------------|  
 |NET Framework NGEN v4.0.30319|是|是|  
-|NET Framework NGEN v4.0.30319 64|否|是|  
+|NET Framework NGEN v4.0.30319 64|No|是|  
   
  在运行 Windows 8 或更高版本时，本机映像任务在 .NET Framework 4.5 和更高版本中可用。 在 Windows 早期版本中，.NET Framework 使用 [本机映像服务][Native Image Service]。  
   

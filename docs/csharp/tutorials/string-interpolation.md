@@ -3,12 +3,12 @@ title: C# 中的字符串内插
 description: 了解如何在 C# 中使用字符串插值将有格式的表达式结果包括在结果字符串中。
 author: pkulikov
 ms.date: 05/09/2018
-ms.openlocfilehash: 1a5d451f6fef926f0f142c7f09f564ce95618b39
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: ef4358ff61cde43998fc0dc4ba174dc0f06bc2bd
+ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50188633"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54222488"
 ---
 # <a name="string-interpolation-in-c"></a>C# 中的字符串内插 #
 
@@ -31,6 +31,8 @@ ms.locfileid: "50188633"
 ```
 
 在编译时间，内插字符串通常会转换为一个 <xref:System.String.Format%2A?displayProperty=nameWithType> 方法调用。 这样即可使用[字符串复合格式设置](../../standard/base-types/composite-formatting.md)功能的所有功能，又可将其与内插字符串结合使用。
+
+如果所分析的行为等效于串联，那么编译器可以用 <xref:System.String.Format%2A?displayProperty=nameWithType> 替换 <xref:System.String.Concat%2A?displayProperty=nameWithType>。
 
 ## <a name="how-to-specify-a-format-string-for-an-interpolated-expression"></a>如何为内插表达式指定格式字符串
 
