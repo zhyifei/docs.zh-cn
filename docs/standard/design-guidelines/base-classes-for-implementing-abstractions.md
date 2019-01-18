@@ -1,4 +1,4 @@
----
+﻿---
 title: 用于实现抽象的基类
 ms.date: 10/22/2008
 ms.technology: dotnet-standard
@@ -24,13 +24,13 @@ ms.locfileid: "53148662"
  如前所述，基类可以为需要实现抽象的用户提供宝贵的帮助，但同时它们可能是一个重大的不利因素。 它们增加了继承层次结构的广度和深度，因此在概念上使框架更加复杂。 因此，只有在为框架用户提供巨大价值的时候才应使用基类。 如果它们仅对框架的实现者有用，则应该避免使用它们，在这种情况下，应该考虑委托到内部实现而不是从基类继承。  
   
  **✓ 考虑** 使基类抽象，即使它们不包含任何抽象成员。 这会清楚地告知用户该类根据设计只能用于继承。  
-  
+
  **✓ 考虑** 将基类放在与主线场景类型不同的命名空间中。 根据定义，基类用于高级可扩展性场景，因此对大多数用户来说并没有意义。  
-  
- **X AVOID** 命名为"基本"后缀的基类，如果类旨在用于在公共 Api 中使用。  
-  
- *部分版权 © 2005, 2009 Microsoft Corporation。保留所有权利。*  
-  
+
+**X 避免** 使用 “Base” 后缀来命名基类（如果该类旨在用于公共 API 中）。
+
+*部分版权 © 2005, 2009 Microsoft Corporation。保留所有权利。*
+
  *通过从 Pearson Education，Inc.的权限重新打印[Framework 设计准则：约定、 语法和模式的可重用.NET 库，第 2 版](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619)Krzysztof Cwalina 和 Brad Abrams，作为 Microsoft Windows 开发系列的一部分发布 2008 年 10 月 22 日由 Addison-wesley 专业人员。*  
   
 ## <a name="see-also"></a>请参阅

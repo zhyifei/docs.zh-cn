@@ -1,4 +1,4 @@
----
+﻿---
 title: 抽象（抽象类型和接口）
 ms.date: 10/22/2008
 ms.technology: dotnet-standard
@@ -28,13 +28,13 @@ ms.locfileid: "53149908"
  但是，抽象提供了非常强大的可扩展性，其他可扩展性机制通常无法与其匹敌。 它们是许多架构模式（例如插件、控制反转 (IoC)、管道等）的核心。 它们对于框架的可测试性也非常重要。 良好的抽象能够为单元测试消除严重的依赖。 总之，抽象让现代的面向对象的框架具有更受欢迎的丰富内涵。  
   
  **X 切忌** 提供抽象，除非通过开发几个使用抽象的具体实现和 API 来测试它们。  
-  
+
  **✓ 务必** 在设计抽象时，仔细选择使用抽象类还是接口。  
-  
+
  **✓ 考虑** 为抽象的具体实现提供参考测试。 此类测试应允许用户测试其实现是否正确实现了协定。  
   
- *部分版权 © 2005, 2009 Microsoft Corporation。保留所有权利。*  
-  
+*部分版权 © 2005, 2009 Microsoft Corporation。保留所有权利。*  
+
  *通过从 Pearson Education，Inc.的权限重新打印[Framework 设计准则：约定、 语法和模式的可重用.NET 库，第 2 版](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619)Krzysztof Cwalina 和 Brad Abrams，作为 Microsoft Windows 开发系列的一部分发布 2008 年 10 月 22 日由 Addison-wesley 专业人员。*  
   
 ## <a name="see-also"></a>请参阅
