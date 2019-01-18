@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 3f9d0533-f895-4897-b4ea-528284e0241d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ec7e498e0f0634d4f0e104247b430fb591f702ac
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8cd7826581a8750d0c5bc87b6223d51eb2b6cce2
+ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33410142"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54221942"
 ---
 # <a name="installutilexe-installer-tool"></a>Installutil.exe（安装程序工具）
 安装程序工具是一个命令行实用工具，你可以通过此工具执行指定程序集中的安装程序组件，从而安装和卸载服务器资源。 此工具与 <xref:System.Configuration.Install> 命名空间中的类配合使用。  
   
- 此工具会自动随 Visual Studio 一起安装。 若要运行此工具，请使用开发人员命令提示（或 Windows 7 中的 Visual Studio 命令提示）。 有关详细信息，请参阅[命令提示](../../../docs/framework/tools/developer-command-prompt-for-vs.md)。  
+ 此工具会自动随 Visual Studio 一起安装。 若要运行此工具，请使用 Visual Studio 开发人员命令提示（或 Windows 7 中的 Visual Studio 命令提示）。 有关详细信息，请参阅[命令提示](../../../docs/framework/tools/developer-command-prompt-for-vs.md)。  
   
  在命令提示符处，键入以下内容：  
   
@@ -37,14 +37,14 @@ installutil [/u[ninstall]] [options] assembly [[options] assembly] ...
   
 #### <a name="parameters"></a>参数  
   
-|参数|描述|  
+|参数|说明|  
 |--------------|-----------------|  
 |`assembly`|要在其中执行安装程序组件的程序集的文件名称。 如果你要通过使用 `/AssemblyName` 选项指定程序集的强名称，则忽略此参数。|  
   
 <a name="options"></a>   
 ## <a name="options"></a>选项  
   
-|选项|描述|  
+|选项|说明|  
 |------------|-----------------|  
 |`/h[elp]`<br /><br /> 或<br /><br /> `/?`|显示该工具的命令语法和选项。|  
 |`/help` *assembly*<br /><br /> 或<br /><br /> `/?` *assembly*|显示由指定的程序集中的个别安装程序识别的其他选项，以及 InstallUtil.exe 的命令语法和选项。 此选项将各安装程序组件的 <xref:System.Configuration.Install.Installer.HelpText%2A?displayProperty=nameWithType> 属性返回的文本添加到 InstallUtil.exe 的帮助文本。|  
@@ -57,7 +57,7 @@ installutil [/u[ninstall]] [options] assembly [[options] assembly] ...
   
 <a name="cmdline"></a>   
 ## <a name="additional-installer-options"></a>其他安装程序选项  
- 程序集中使用的独立安装程序可识别除[“选项”](#options)部分列出的选项之外的选项。 要了解有关这些选项的信息，可以在命令行中运行带有程序集路径的 InstallUtil.exe 以及 `/?` 或 `/help` 选项。 要指定这些选项，请将它们与 InstallUtil.exe 可识别的选项一起包含在命令行中。  
+ 程序集中使用的独立安装程序可识别除[选项](#options)部分列出的选项之外的选项。 要了解有关这些选项的信息，可以在命令行中运行带有程序集路径的 InstallUtil.exe 以及 `/?` 或 `/help` 选项。 要指定这些选项，请将它们与 InstallUtil.exe 可识别的选项一起包含在命令行中。  
   
 > [!NOTE]
 >  由单独的安装程序组件所支持的选项的帮助文本由 <xref:System.Configuration.Install.Installer.HelpText%2A?displayProperty=nameWithType> 属性返回。 已经在命令行中输入的单个选项可通过编程方式从 <xref:System.Configuration.Install.Installer.Context%2A?displayProperty=nameWithType> 属性进行访问。  
