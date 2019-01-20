@@ -2,12 +2,12 @@
 title: 从 .NET 远程处理迁移到 WCF
 ms.date: 03/30/2017
 ms.assetid: 16902a42-ef80-40e9-8c4c-90e61ddfdfe5
-ms.openlocfilehash: cca303cf9b906fd395e594111fae808ae4ab6435
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 1ebab76d63ae3328b158f1c03a61d2e2b3cbd8f9
+ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53245673"
+ms.lasthandoff: 01/19/2019
+ms.locfileid: "54415970"
 ---
 # <a name="migrating-from-net-remoting-to-wcf"></a>从 .NET 远程处理迁移到 WCF
 本文介绍如何迁移借助 .NET 远程处理来使用 Windows Communication Foundation (WCF) 的应用程序。 本文对这些产品之间的相似概念进行比较，并介绍如何在 WCF 中完成若干常见的远程处理方案。  
@@ -307,9 +307,9 @@ catch (FaultException<CustomerServiceFault> fault)
   
  将远程处理应用程序迁移到 WCF 后，删除 .NET 远程处理中的依赖仍然很重要。 这可确保删除应用程序中的任何远程处理漏洞。 这些步骤包括：  
   
--   **停止使用 MarshalByRefObject。** MarshalByRefObject 类型仅因远程处理而存在并且 WCF 并不使用此类型。 应删除或更改子类 MarshalByRefObject 的任何应用程序类型。 MarshalByRefObject 类型仅因远程处理而存在并且 WCF 并不使用此类型。 应删除或更改子类 MarshalByRefObject 的任何应用程序类型。  
+-   **停止使用 MarshalByRefObject。** MarshalByRefObject 类型仅因远程处理而存在并且 WCF 并不使用此类型。 应删除或更改子类 MarshalByRefObject 的任何应用程序类型。  
   
--   **停止使用 [Serializable] 和 ISerializable。** [Serializable] 属性和 ISerializable 接口最初用于在受信任的环境中序列化类型，并为远程处理所用。 WCF 序列化依赖于标记为 [DataContract] 和 [DataMember] 的类型。 若要使用 [DataContract]，而不是使用 ISerializable 或 [Serializable]，则应修改应用程序使用的数据类型。 [Serializable] 属性和 ISerializable 接口最初用于在受信任的环境中序列化类型，并为远程处理所用。 WCF 序列化依赖于标记为 [DataContract] 和 [DataMember] 的类型。 若要使用 [DataContract]，而不是使用 ISerializable 或 [Serializable]，则应修改应用程序使用的数据类型。  
+-   **停止使用 [Serializable] 和 ISerializable。** [Serializable] 属性和 ISerializable 接口最初用于在受信任的环境中序列化类型，并为远程处理所用。 WCF 序列化依赖于标记为 [DataContract] 和 [DataMember] 的类型。 若要使用 [DataContract]，而不是使用 ISerializable 或 [Serializable]，则应修改应用程序使用的数据类型。  
   
 ### <a name="migration-scenarios"></a>迁移方案  
  现在让我们了解如何完成以下 WCF 中的常见远程处理方案：  

@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 173ba2c2-ab34-49ae-b6a8-e5c49882bf05
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6c7415920d34fc231bf82dd00199c7e01eec7a73
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 23aa619d666f2e0b9eb67ab4cf8d4f92761865d3
+ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33408107"
+ms.lasthandoff: 01/19/2019
+ms.locfileid: "54415320"
 ---
 # <a name="debugging-structures"></a>调试结构
 本节描述调试 API 使用的非托管结构。  
@@ -35,7 +35,7 @@ ms.locfileid: "33408107"
  表示异常对象中的堆栈帧信息。  
   
  [CorDebugExceptionObjectStackFrame 结构](../../../../docs/framework/unmanaged-api/debugging/cordebugexceptionobjectstackframe-structure.md)  
- 地图[!INCLUDE[wrt](../../../../includes/wrt-md.md)]到其对应的 GUID [ICorDebugType](../../../../docs/framework/unmanaged-api/debugging/icordebugtype-interface.md)对象。  
+ 地图[!INCLUDE[wrt](../../../../includes/wrt-md.md)]GUID 传递给其对应[ICorDebugType](../../../../docs/framework/unmanaged-api/debugging/icordebugtype-interface.md)对象。  
   
  COR_ACTIVE_FUNCTION  
  包含有关在线程框架中当前处于活动状态的函数的信息。  
@@ -77,7 +77,14 @@ ms.locfileid: "33408107"
  存储由四个部分组成的公共语言运行时标准版本号。  
   
  [StackTrace_SimpleContext 结构](../../../../docs/framework/unmanaged-api/debugging/stacktrace-simplecontext-structure.md)  
- 提供可用于代替完整的 `CONTEXT` 结构的简单上下文。  
+ 提供可用于代替完整的 `CONTEXT` 结构的简单上下文。
+
+ [CLRDATA_ADDRESS_RANGE 结构](../../../../docs/framework/unmanaged-api/debugging/clrdata-address-range-structure.md)定义的地址范围。
+ 
+ [CLRDATA_IL_ADDRESS_MAP 结构](../../../../docs/framework/unmanaged-api/debugging/clrdata-il-address-map-structure.md)定义 IL 到地址映射
+ 
+ [DacpGetModuleAddress 结构](../../../../docs/framework/unmanaged-api/debugging/dacpgetmoduleaddress-structure.md)定义模块地址请求的容器。
+
   
 ## <a name="related-sections"></a>相关章节  
  [调试组件类](../../../../docs/framework/unmanaged-api/debugging/debugging-coclasses.md)  
