@@ -1,32 +1,32 @@
 ---
-title: 'How to: Create a Workflow'
+title: 如何：创建工作流
 ms.date: 03/30/2017
 ms.assetid: 87234108-8e21-4cb3-9340-4a1a13f3f98c
-ms.openlocfilehash: adaa322d4129f56abcad4fd848204ee373e907bd
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: e54dcc240a12100650bacbc355895a043c68c117
+ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43502479"
+ms.lasthandoff: 01/19/2019
+ms.locfileid: "54415658"
 ---
-# <a name="how-to-create-a-workflow"></a><span data-ttu-id="150db-102">How to: Create a Workflow</span><span class="sxs-lookup"><span data-stu-id="150db-102">How to: Create a Workflow</span></span>
-<span data-ttu-id="150db-103">工作流可基于内置活动以及自定义活动来构造。</span><span class="sxs-lookup"><span data-stu-id="150db-103">Workflows can be constructed from built-in activities as well as from custom activities.</span></span> <span data-ttu-id="150db-104">此部分分步介绍如何创建使用内置活动，如工作流中的本主题<xref:System.Activities.Statements.Flowchart>活动，并从以前的自定义活动[如何： 创建活动](../../../docs/framework/windows-workflow-foundation/how-to-create-an-activity.md)主题。</span><span class="sxs-lookup"><span data-stu-id="150db-104">This topics in this section step through creating a workflow that uses both built-in activities such as the <xref:System.Activities.Statements.Flowchart> activity, and the custom activities from the previous [How to: Create an Activity](../../../docs/framework/windows-workflow-foundation/how-to-create-an-activity.md) topic.</span></span> <span data-ttu-id="150db-105">该工作流模拟猜数游戏。</span><span class="sxs-lookup"><span data-stu-id="150db-105">The workflow models a number guessing game.</span></span> <span data-ttu-id="150db-106">本节中只有一个主题是完成本教程所必需的；您应该选择感兴趣的样式并按照该步骤执行。</span><span class="sxs-lookup"><span data-stu-id="150db-106">Only one of the topics in this section is required to complete the tutorial; you should pick the style that interests you and follow that step.</span></span> <span data-ttu-id="150db-107">但是，您可以完成所有主题（如果需要）。</span><span class="sxs-lookup"><span data-stu-id="150db-107">However, you may complete all of the topics if desired.</span></span>  
+# <a name="how-to-create-a-workflow"></a><span data-ttu-id="2d32f-102">如何：创建工作流</span><span class="sxs-lookup"><span data-stu-id="2d32f-102">How to: Create a Workflow</span></span>
+<span data-ttu-id="2d32f-103">工作流可基于内置活动以及自定义活动来构造。</span><span class="sxs-lookup"><span data-stu-id="2d32f-103">Workflows can be constructed from built-in activities as well as from custom activities.</span></span> <span data-ttu-id="2d32f-104">在本部分中的主题逐步介绍创建使用内置活动，如工作流<xref:System.Activities.Statements.Flowchart>活动，并从以前的自定义活动[如何：创建活动](../../../docs/framework/windows-workflow-foundation/how-to-create-an-activity.md)主题。</span><span class="sxs-lookup"><span data-stu-id="2d32f-104">The topics in this section step through creating a workflow that uses both built-in activities such as the <xref:System.Activities.Statements.Flowchart> activity, and the custom activities from the previous [How to: Create an Activity](../../../docs/framework/windows-workflow-foundation/how-to-create-an-activity.md) topic.</span></span> <span data-ttu-id="2d32f-105">该工作流模拟猜数游戏。</span><span class="sxs-lookup"><span data-stu-id="2d32f-105">The workflow models a number guessing game.</span></span> <span data-ttu-id="2d32f-106">本节中只有一个主题是完成本教程所必需的；您应该选择感兴趣的样式并按照该步骤执行。</span><span class="sxs-lookup"><span data-stu-id="2d32f-106">Only one of the topics in this section is required to complete the tutorial; you should pick the style that interests you and follow that step.</span></span> <span data-ttu-id="2d32f-107">但是，您可以完成所有主题（如果需要）。</span><span class="sxs-lookup"><span data-stu-id="2d32f-107">However, you may complete all of the topics if desired.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="150db-108">入门教程中的每个主题都依赖于前面的主题。</span><span class="sxs-lookup"><span data-stu-id="150db-108">Each topic in the Getting Started tutorial depends on the previous topics.</span></span> <span data-ttu-id="150db-109">若要完成本主题，必须先完成[如何： 创建活动](../../../docs/framework/windows-workflow-foundation/how-to-create-an-activity.md)。</span><span class="sxs-lookup"><span data-stu-id="150db-109">To complete this topic, you must first complete [How to: Create an Activity](../../../docs/framework/windows-workflow-foundation/how-to-create-an-activity.md).</span></span>  
+>  <span data-ttu-id="2d32f-108">入门教程中的每个主题都依赖于前面的主题。</span><span class="sxs-lookup"><span data-stu-id="2d32f-108">Each topic in the Getting Started tutorial depends on the previous topics.</span></span> <span data-ttu-id="2d32f-109">若要完成本主题，必须先完成[如何：创建活动](../../../docs/framework/windows-workflow-foundation/how-to-create-an-activity.md)。</span><span class="sxs-lookup"><span data-stu-id="2d32f-109">To complete this topic, you must first complete [How to: Create an Activity](../../../docs/framework/windows-workflow-foundation/how-to-create-an-activity.md).</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="150db-110">若要下载本教程的完整的版本，请参阅[Windows Workflow Foundation (WF45)-入门教程](https://go.microsoft.com/fwlink/?LinkID=248976)。</span><span class="sxs-lookup"><span data-stu-id="150db-110">To download a completed version of the tutorial, see [Windows Workflow Foundation (WF45) - Getting Started Tutorial](https://go.microsoft.com/fwlink/?LinkID=248976).</span></span>  
+>  <span data-ttu-id="2d32f-110">若要下载完整版教程，请参阅 [Windows Workflow Foundation (WF45) — 入门教程](https://go.microsoft.com/fwlink/?LinkID=248976)。</span><span class="sxs-lookup"><span data-stu-id="2d32f-110">To download a completed version of the tutorial, see [Windows Workflow Foundation (WF45) - Getting Started Tutorial](https://go.microsoft.com/fwlink/?LinkID=248976).</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="150db-111">本节内容</span><span class="sxs-lookup"><span data-stu-id="150db-111">In This Section</span></span>  
- [<span data-ttu-id="150db-112">如何：创建顺序工作流</span><span class="sxs-lookup"><span data-stu-id="150db-112">How to: Create a Sequential Workflow</span></span>](../../../docs/framework/windows-workflow-foundation/how-to-create-a-sequential-workflow.md)  
- <span data-ttu-id="150db-113">介绍如何使用 <xref:System.Activities.Statements.Sequence> 活动创建顺序工作流。</span><span class="sxs-lookup"><span data-stu-id="150db-113">Describes how to create a sequential workflow using the <xref:System.Activities.Statements.Sequence> activity.</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="2d32f-111">本节内容</span><span class="sxs-lookup"><span data-stu-id="2d32f-111">In This Section</span></span>  
+ [<span data-ttu-id="2d32f-112">如何：创建顺序工作流</span><span class="sxs-lookup"><span data-stu-id="2d32f-112">How to: Create a Sequential Workflow</span></span>](../../../docs/framework/windows-workflow-foundation/how-to-create-a-sequential-workflow.md)  
+ <span data-ttu-id="2d32f-113">介绍如何使用 <xref:System.Activities.Statements.Sequence> 活动创建顺序工作流。</span><span class="sxs-lookup"><span data-stu-id="2d32f-113">Describes how to create a sequential workflow using the <xref:System.Activities.Statements.Sequence> activity.</span></span>  
   
- [<span data-ttu-id="150db-114">如何：创建流程图工作流</span><span class="sxs-lookup"><span data-stu-id="150db-114">How to: Create a Flowchart Workflow</span></span>](../../../docs/framework/windows-workflow-foundation/how-to-create-a-flowchart-workflow.md)  
- <span data-ttu-id="150db-115">介绍如何使用 <xref:System.Activities.Statements.Flowchart> 活动创建流程图工作流。</span><span class="sxs-lookup"><span data-stu-id="150db-115">Describes how to create a flowchart workflow using the <xref:System.Activities.Statements.Flowchart> activity.</span></span>  
+ [<span data-ttu-id="2d32f-114">如何：创建一个流程图工作流</span><span class="sxs-lookup"><span data-stu-id="2d32f-114">How to: Create a Flowchart Workflow</span></span>](../../../docs/framework/windows-workflow-foundation/how-to-create-a-flowchart-workflow.md)  
+ <span data-ttu-id="2d32f-115">介绍如何使用 <xref:System.Activities.Statements.Flowchart> 活动创建流程图工作流。</span><span class="sxs-lookup"><span data-stu-id="2d32f-115">Describes how to create a flowchart workflow using the <xref:System.Activities.Statements.Flowchart> activity.</span></span>  
   
- [<span data-ttu-id="150db-116">如何：创建状态机工作流</span><span class="sxs-lookup"><span data-stu-id="150db-116">How to: Create a State Machine Workflow</span></span>](../../../docs/framework/windows-workflow-foundation/how-to-create-a-state-machine-workflow.md)  
- <span data-ttu-id="150db-117">介绍如何使用 <xref:System.Activities.Statements.StateMachine> 活动创建状态机工作流。</span><span class="sxs-lookup"><span data-stu-id="150db-117">Describes how to create a state machine workflow using the <xref:System.Activities.Statements.StateMachine> activity.</span></span>  
+ [<span data-ttu-id="2d32f-116">如何：创建状态机工作流</span><span class="sxs-lookup"><span data-stu-id="2d32f-116">How to: Create a State Machine Workflow</span></span>](../../../docs/framework/windows-workflow-foundation/how-to-create-a-state-machine-workflow.md)  
+ <span data-ttu-id="2d32f-117">介绍如何使用 <xref:System.Activities.Statements.StateMachine> 活动创建状态机工作流。</span><span class="sxs-lookup"><span data-stu-id="2d32f-117">Describes how to create a state machine workflow using the <xref:System.Activities.Statements.StateMachine> activity.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="150db-118">请参阅</span><span class="sxs-lookup"><span data-stu-id="150db-118">See Also</span></span>  
- [<span data-ttu-id="150db-119">Windows Workflow Foundation 编程</span><span class="sxs-lookup"><span data-stu-id="150db-119">Windows Workflow Foundation Programming</span></span>](../../../docs/framework/windows-workflow-foundation/programming.md)
+## <a name="see-also"></a><span data-ttu-id="2d32f-118">请参阅</span><span class="sxs-lookup"><span data-stu-id="2d32f-118">See Also</span></span>  
+ [<span data-ttu-id="2d32f-119">Windows Workflow Foundation 编程</span><span class="sxs-lookup"><span data-stu-id="2d32f-119">Windows Workflow Foundation Programming</span></span>](../../../docs/framework/windows-workflow-foundation/programming.md)
