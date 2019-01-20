@@ -5,12 +5,12 @@ author: rpetrusha
 ms.author: ronpet
 ms.date: 12/03/2018
 ms.custom: seodec18
-ms.openlocfilehash: bba4a76364f2951cabc3dde9866019459e9b3f06
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: bb520d852462b0bc12df46fd178d09da36b7ccfe
+ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53144710"
+ms.lasthandoff: 01/19/2019
+ms.locfileid: "54415684"
 ---
 # <a name="net-core-application-deployment"></a>.NET Core 应用程序部署
 
@@ -94,12 +94,7 @@ FDD 和 SCD 部署使用单独的主机可执行文件，使你可以使用发�
 
 ## <a name="step-by-step-examples"></a>分步示例
 
-有关使用 CLI 工具部署 .NET Core 应用的分步示例，请参阅[使用 CLI 工具部署 .NET Core 应用](deploy-with-cli.md)。 有关使用 Visual Studio 部署 .NET Core 应用的分步示例，请参阅 [使用 Visual Studio 部署 .NET Core 应用](deploy-with-vs.md)。 每篇文章都包括以下部署示例：
-
-- 依赖框架的部署
-- 包含第三方依赖项的依赖框架的部署
-- 独立部署
-- 包含第三方依赖项的独立部署
+有关使用 CLI 工具部署 .NET Core 应用的分步示例，请参阅[使用 CLI 工具部署 .NET Core 应用](deploy-with-cli.md)。 有关使用 Visual Studio 部署 .NET Core 应用的分步示例，请参阅 [使用 Visual Studio 部署 .NET Core 应用](deploy-with-vs.md)。 
 
 ## <a name="see-also"></a>请参阅
 
