@@ -4,12 +4,12 @@ description: 适用于容器化 .NET 应用程序的 .NET 微服务体系结构 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/08/2018
-ms.openlocfilehash: f348e1dbb65f37f625c1dec243364af683c99b8a
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: d48c78e6ea63ea1a2f3dbfea6b9fec646493c751
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53153678"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54148066"
 ---
 # <a name="design-validations-in-the-domain-model-layer"></a>在域模型层中设计验证
 
@@ -63,7 +63,7 @@ public void SetAddress(string line1, string line2,
 
 你仍然可以通过重写 DbContext 的 SaveChanges 方法，在实体类中使用数据注释和 `IValidatableObject.Validate` 方法来实现自定义验证。
 
-在 GitHub 上的此注释中，可以看到用于验证 `IValidatableObject` 实体的示例实现。 该示例不执行基于属性的验证，但应该可以在同一替代机制中使用反射来轻松实现此类验证。
+在 [GitHub 上的此注释](https://github.com/aspnet/EntityFrameworkCore/issues/3680#issuecomment-155502539)中，可以看到用于验证 `IValidatableObject` 实体的示例实现。 该示例不执行基于属性的验证，但应该可以在同一替代机制中使用反射来轻松实现此类验证。
 
 但是，从 DDD 的角度来看，最好通过在实体行为方法中使用异常，或者通过实现规范和通知模式来执行验证规则，从而使域模型保持精简。
 
@@ -103,7 +103,7 @@ public void SetAddress(string line1, string line2,
   [*http://gorodinski.com/blog/2012/05/19/validation-in-domain-driven-design-ddd/*](http://gorodinski.com/blog/2012/05/19/validation-in-domain-driven-design-ddd/)
 
 - **Colin Jack。Domain Model Validation** \（域模型验证）
-  [*http://colinjack.blogspot.com/2008/03/domain-model-validation.html*](http://colinjack.blogspot.com/2008/03/domain-model-validation.html)
+  [*https://colinjack.blogspot.com/2008/03/domain-model-validation.html*](https://colinjack.blogspot.com/2008/03/domain-model-validation.html)
 
 - **Jimmy Bogard。Validation in a DDD world** \（DDD 中的验证）
   [*https://lostechies.com/jimmybogard/2009/02/15/validation-in-a-ddd-world/*](https://lostechies.com/jimmybogard/2009/02/15/validation-in-a-ddd-world/)

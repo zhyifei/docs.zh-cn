@@ -7,19 +7,19 @@ helpviewer_keywords:
 ms.assetid: d2ce0683-343d-403e-bb8d-209186f7a19d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 44a21426bd4fea8bbb42801d59c6590f2ee0aee8
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: 434d5dd002124033f6d7cf5104d87264ee9c0388
+ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49121384"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54222215"
 ---
 # <a name="winmdexpexe-windows-runtime-metadata-export-tool"></a>Winmdexp.exe（Windows 运行时元数据导出工具）
 [!INCLUDE[wrt](../../../includes/wrt-md.md)]元数据导出工具 (Winmdexp.exe) 可将 .NET Framework 模块转换为包含 [!INCLUDE[wrt](../../../includes/wrt-md.md)]元数据的文件。 尽管 .NET Framework 程序集和 [!INCLUDE[wrt](../../../includes/wrt-md.md)]元数据文件使用相同的物理格式，但元数据表的内容有差别，这意味着 .NET Framework 程序集不可自动用作 [!INCLUDE[wrt](../../../includes/wrt-md.md)]组件。 将 .NET Framework 模块转换为 [!INCLUDE[wrt](../../../includes/wrt-md.md)] 组件的过程称为*导出*。 在 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 和 [!INCLUDE[net_v451](../../../includes/net-v451-md.md)] 中，生成的 Windows 元数据 (.winmd) 文件同时包含元数据和实现。  
   
  使用 [!INCLUDE[wrt](../../../includes/wrt-md.md)] 组件模板（在 C# 中，位于“Windows 应用商店”下；在 Visual Basic 中，位于 Visual Studio 2013 或 Visual Studio 2012 中）时，编译器目标是 .winmdobj 文件，后续生成步骤将调用 Winmdexp.exe 以将 .winmdobj 文件导出到 .winmd 文件。 这是生成 [!INCLUDE[wrt](../../../includes/wrt-md.md)]组件的推荐方法。 当你对生成过程需要的控制超过 Visual Studio 所能提供的控制时，请直接使用 Winmdexp.exe。  
   
- 此工具会自动随 Visual Studio 一起安装。 若要运行此工具，请使用开发人员命令提示（或 Windows 7 中的 Visual Studio 命令提示）。 有关详细信息，请参阅[命令提示](../../../docs/framework/tools/developer-command-prompt-for-vs.md)。  
+ 此工具会自动随 Visual Studio 一起安装。 若要运行此工具，请使用 Visual Studio 开发人员命令提示（或 Windows 7 中的 Visual Studio 命令提示）。 有关详细信息，请参阅[命令提示](../../../docs/framework/tools/developer-command-prompt-for-vs.md)。  
   
  在命令提示符处，键入以下内容：  
   
@@ -31,7 +31,7 @@ winmdexp [options] winmdmodule
   
 #### <a name="parameters"></a>参数  
   
-|自变量或选项|描述|  
+|自变量或选项|说明|  
 |------------------------|-----------------|  
 |`winmdmodule`|指定要导出的模块 (.winmdobj)。 仅允许一个模块。 若要创建此模块，请将 `/target` 编译器选项与 `winmdobj` 目标一起使用。 请参阅 [/target:winmdobj（C# 编译器选项）](~/docs/csharp/language-reference/compiler-options/target-winmdobj-compiler-option.md)或 [/target (Visual Basic)](~/docs/visual-basic/reference/command-line-compiler/target.md)。|  
 |`/docfile:` `docfile`<br /><br /> `/d:` `docfile`|指定 Winmdexp.exe 将生成的输出 XML 文档文件。 在 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 中，输出文件实质上与输入 XML 文档文件相同。|  

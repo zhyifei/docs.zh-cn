@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: e4ab2c4c-9433-4eba-9e9a-096de406cafb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 561a6a5a8e778ab59a0d0f1f7f5327104ead2c79
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: e0d3a9039c6dc5d72ca740d6eaaf8a4d565e2647
+ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50185529"
+ms.lasthandoff: 01/19/2019
+ms.locfileid: "54415268"
 ---
 # <a name="common-data-types-unmanaged-api-reference"></a>常见数据类型（非托管 API 参考）
 本主题列出了由 C/C++ `typedef` 语句定义的 .NET Framework 的非托管 API 所使用的简单数据类型。 这些数据类型通常是 C/C++ 基元数据类型的别名。 通常，这些数据类型的值是不透明的；即它们由特定的函数或方法返回，以便可以将它们传递给其他函数或方法，而无需修改。  
@@ -18,14 +18,15 @@ ms.locfileid: "50185529"
 |---------------|----------------|----------------|-----------------|  
 |AppDomainID|`typedef UINT_PTR AppDomainID;`|corprof.h|应用程序域的标识符。|  
 |AssemblyID|`typedef UINT_PTR AssemblyID;`|corprof.h|程序集的标识符。|  
-|ClassID|`typedef UINT_PTR ClassID;`|corprof.h|托管类的标识符。|  
+|ClassID|`typedef UINT_PTR ClassID;`|corprof.h|托管类的标识符。|
+|CLRDATA_ENUM|`typedef ULONG64 CLRDATA_ADDRESS;`|不可用|一个 64 位内存地址。|
 |CONNID|`typedef DWORD CONNID;`|cordebug.h、mscoree.h|已连接到 Microsoft SQL Server 实例的线程的连接标识符。|  
 |ContextID|`typedef UINT_PTR ContextID;`|corprof.h|与特定托管线程关联的上下文的标识符。|  
 |COR_PRF_ELT_INFO|`typedef UINT_PTR COR_PRF_ELT_INFO;`|corprof.h|表示有关特定堆栈帧的信息的不透明的句柄。|  
 |COR_PRF_FRAME_INFO|`typedef UINT_PTR COR_PRF_FRAME_INFO;`|corprof.h|指向堆栈帧的不透明的句柄。 此句柄仅在其传递到的回调过程中有效。|  
 |CORDB_ADDRESS|`typedef ULONG64 CORDB_ADDRESS;`|cordebug.h|内存中的地址。|  
 |CORDB_CONTINUE_STATUS|`typedef DWORD CORDB_CONTINUE_STATUS;`|cordebug.h|继续状态。|  
-|CORDB_REGISTER|`typedef ULONG64 CORDB_REGISTER;`|cordebug.h|CPU 寄存器的值。|  
+|CORDB_REGISTER|`typedef ULONG64 CORDB_REGISTER;`|cordebug.h|CPU 寄存器的值。|
 |FunctionID|`typedef UINT_PTR FunctionID;`|corprof.h|函数或方法的标识符。|  
 |GCHandleID|`typedef UINT_PTR GCHandleID;`|corprof.h|垃圾回收句柄。|  
 |mdToken|`typedef UINT32 mdToken;`|corprof.h|元数据标记（元数据表中的某行）。|  

@@ -4,12 +4,12 @@ description: 每个微服务的数据主权是微服务的核心内容之一。 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/20/2018
-ms.openlocfilehash: 136f8d173042ab235e5fa3c8478f4aa5659a9787
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 4900c294f94f4b4d604ba841595fc5c6d7952c10
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53126843"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54144897"
 ---
 # <a name="data-sovereignty-per-microservice"></a>每个微服务的数据主权
 
@@ -27,7 +27,7 @@ ms.locfileid: "53126843"
 
 集中式数据库方法初看来比较简单，似乎能够在不同的子系统中重复使用实体，从而保持所有对象的一致性。 但实际上，你最终会得到为许多不同的子系统提供服务的大型表格，其中包括大多数情况下不需要的属性和列。 这相当于在进行短途徒步旅行、一天自驾游和学习地理知识时使用同一张自然地图。
 
-通常具有单个关系数据库的整体式应用程序有两个重要的好处：[ACID 事务](https://en.wikipedia.org/wiki/ACID)和 SQL 语言，它们均可跨应用程序相关的所有表格和数据进行工作。 此方法可轻松编写从多张表格合并数据的查询。
+通常具有一个关系数据库的单片式应用程序可提供两个重要的优势：[ACID 事务](https://en.wikipedia.org/wiki/ACID)和 SQL 语言，它们均可以用于所有与应用程序相关的表和数据。 此方法可轻松编写从多张表格合并数据的查询。
 
 但转到微服务体系结构时，数据访问变得更为复杂。 然而，即使 ACID 事务可以或者应该用于微服务或界定上下文，每个微服务拥有的数据专用于该微服务，且仅能通过其微服务 API 进行访问。 封装该数据可确保微服务松散耦合，且可彼此独立地进行演变。 如果多个服务访问相同的数据，架构更新将需要针对所有服务的协调更新。 这会破坏微服务生命周期自治。 但分布式的数据结构意味着无法跨微服务进行单个 ACID 事务。 这反过来意味着当业务流程跨多个微服务时，必须使用最终一致性。 这比简单的 SQL 联接更难实现，因为无法在不同的数据库之间创建完整性约束或使用分布式事务，我们稍后会对此进行解释。 同样，许多其他关系数据库功能在多个微服务间将不可用。
 
@@ -37,7 +37,7 @@ ms.locfileid: "53126843"
 
 ## <a name="the-relationship-between-microservices-and-the-bounded-context-pattern"></a>微服务和界定上下文模式之间的关系
 
-微服务的概念源自[域驱动设计 (DDD)](https://en.wikipedia.org/wiki/Domain-driven_design) 中的[界定上下文 (BC) 模式](http://martinfowler.com/bliki/BoundedContext.html)。 DDD 将大模型划分为多个 BC 并对其边界十分明确，以此处理大模型。 每个 BC 必须具有其自己的模型和数据库；同样，每个微服务拥有其相关的数据。 此外，每个 BC 通常具有其自己的[通用语言](http://martinfowler.com/bliki/UbiquitousLanguage.html)，从而帮助软件开发人员和域专业人员之间进行通信。
+微服务的概念源自[域驱动设计 (DDD)](https://en.wikipedia.org/wiki/Domain-driven_design) 中的[界定上下文 (BC) 模式](https://martinfowler.com/bliki/BoundedContext.html)。 DDD 将大模型划分为多个 BC 并对其边界十分明确，以此处理大模型。 每个 BC 必须具有其自己的模型和数据库；同样，每个微服务拥有其相关的数据。 此外，每个 BC 通常具有其自己的[通用语言](https://martinfowler.com/bliki/UbiquitousLanguage.html)，从而帮助软件开发人员和域专业人员之间进行通信。
 
 通用语言中的这些术语（主要是域实体）在不同的界定上下文中具有不同的名称，即使不同域实体共享相同的标识（即，用于从存储读取实体的唯一 ID）也是如此。 例如，在用户配置文件界定上下文中，用户域实体可能与买家域实体在订购界定上下文中共享标识。
 
@@ -49,7 +49,7 @@ DDD 通过获取分布式微服务形式的实际边界而从微服务中获益�
 
 ### <a name="additional-resources"></a>其他资源
 
-- **Chris Richardson.Pattern: Database per service** \（模式：每个服务一个数据库）
+- **Chris Richardson.模式：每个服务一个数据库 \**
   [*https://microservices.io/patterns/data/database-per-service.html*](https://microservices.io/patterns/data/database-per-service.html)
 
 - **Martin Fowler。BoundedContext** \

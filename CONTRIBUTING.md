@@ -140,7 +140,7 @@ C# 交互式体验改变了我们使用示例的方式。 访问者可以运行�
 
 ## <a name="contributor-license-agreement"></a>贡献者许可协议
 
-在合并 PR 前，必须签署 [.NET Foundation 贡献许可协议 (CLA)](https://cla.dotnetfoundation.org)。 对于 .NET Foundation 中的项目，只需签署一次即可。 可在维基百科上详细了解[贡献许可协议 (CLA)](http://en.wikipedia.org/wiki/Contributor_License_Agreement)。
+在合并 PR 前，必须签署 [.NET Foundation 贡献许可协议 (CLA)](https://cla.dotnetfoundation.org)。 对于 .NET Foundation 中的项目，只需签署一次即可。 可在维基百科上详细了解[贡献许可协议 (CLA)](https://en.wikipedia.org/wiki/Contributor_License_Agreement)。
 
 协议：[net-foundation-contribution-license-agreement.pdf](https://github.com/dotnet/home/blob/master/guidance/net-foundation-contribution-license-agreement.pdf)
 

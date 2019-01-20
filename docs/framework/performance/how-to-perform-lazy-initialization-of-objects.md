@@ -1,5 +1,5 @@
 ---
-title: 如何：执行对象的延迟初始化
+title: 如何：执行对象的迟缓初始化
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 ms.assetid: 8cd68620-dcc3-4f20-8835-c728a6820e71
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9d33dcb2b060d1d453ae17a48d2765d489de0038
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f3bcdbfacf02d84848934e21d58ed6fff7d37d52
+ms.sourcegitcommit: 542aa405b295955eb055765f33723cb8b588d0d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33394470"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "54362881"
 ---
-# <a name="how-to-perform-lazy-initialization-of-objects"></a>如何：执行对象的延迟初始化
+# <a name="how-to-perform-lazy-initialization-of-objects"></a>如何：执行对象的迟缓初始化
 <xref:System.Lazy%601?displayProperty=nameWithType> 类可简化执行迟缓初始化和对象实例化的工作。 通过以迟缓方式初始化对象，可在不需要对象的情况下避免创建所有对象，或可在首次访问对象之后再进行迟缓初始化。 若要了解详细信息，请参阅[迟缓初始化](../../../docs/framework/performance/lazy-initialization.md)  
   
 ## <a name="example"></a>示例  
@@ -62,12 +62,12 @@ End Sub
   //  ...  
   // Initialize the data only if necessary  
   if (someCondition)  
-{  
+  {  
     if (_data.Value > 100)  
       {  
           Console.WriteLine("Good data");  
       }  
-}  
+  }  
 ```  
   
 ## <a name="example"></a>示例  

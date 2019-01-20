@@ -19,17 +19,17 @@ helpviewer_keywords:
 ms.assetid: 4c7be9c8-72ae-481f-a01c-1a4716806e99
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 806ccb1d33d9a7b66c740099864decd651c9213f
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: f1dac8aec7f565b82797ba179fc01968e00bf36b
+ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53144879"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54223073"
 ---
 # <a name="gacutilexe-global-assembly-cache-tool"></a>Gacutil.exe（全局程序集缓存工具）
 全局程序集缓存工具使你可以查看和操作全局程序集缓存和下载缓存的内容。  
   
- 此工具会自动随 Visual Studio 一起安装。 若要运行此工具，请使用开发人员命令提示（或 Windows 7 中的 Visual Studio 命令提示）。 有关详细信息，请参阅[命令提示](../../../docs/framework/tools/developer-command-prompt-for-vs.md)。  
+ 此工具会自动随 Visual Studio 一起安装。 若要运行此工具，请使用 Visual Studio 开发人员命令提示（或 Windows 7 中的 Visual Studio 命令提示）。 有关详细信息，请参阅[命令提示](../../../docs/framework/tools/developer-command-prompt-for-vs.md)。  
   
  在命令提示符处，键入以下内容：  
   
@@ -63,9 +63,9 @@ gacutil [options] [assemblyName | assemblyPath | assemblyListFile]
 |/r [assemblyName &#124; assemblyPath]<br /><br /> scheme<br /><br /> *id*<br /><br /> description|指定对要安装或卸载的一个或多个程序集的跟踪引用。 使用 /i、/il、/u 或 /ul 选项来指定此选项。<br /><br /> 若要安装程序集，请使用此选项来指定 assemblyPath、scheme、id 和 description 参数。 若要卸载程序集，请指定 assemblyPath、scheme、id 和 description 参数。<br /><br /> 若要移除对程序集的引用，指定的 scheme、id 和 description 参数必须与安装程序集时使用 /i 和 /r（或者 /ir）选项指定的参数相同。 如果卸载某个程序集，则在下列情况下，全局程序集缓存工具还会从全局程序集缓存中移除该程序集：该程序集是最后一个要移除的引用，并且 Windows Installer 没有对该程序集的未处理引用。<br /><br /> scheme 参数指定安装方案的类型。 可以指定以下值之一：<br /><br /> -   UNINSTALL_KEY：如果安装程序将应用程序添加到 Microsoft Windows 中的“添加/删除程序”，则指定此值。 应用程序通过将注册表项添加到 HKLM\Software\Microsoft\Windows\CurrentVersion 来将自己添加到“添加/删除程序”。<br />-   FILEPATH：如果安装程序没有将应用程序添加到“添加/删除程序”中，则指定此值。<br />-   OPAQUE：如果提供的注册表项或文件路径不适于你的安装方案，则指定此值。 通过此值可以为 id 参数指定自定义信息。<br /><br /> 为 id 参数指定的值取决于为 scheme 参数指定的值：<br /><br /> -   如果为 scheme 参数指定 UNINSTALL_KEY，请在 HKLM\Software\Microsoft\Windows\CurrentVersion 注册表项中指定应用程序集的名称。 例如，如果注册表项是 HKLM\Software\Microsoft\Windows\CurrentVersion\MyApp，请为 id 参数指定 MyApp。<br />-   如果为 scheme 参数指定 FILEPATH，请指定安装程序集的可执行文件的完整路径作为 id 参数。<br />-   如果为 scheme 参数指定 OPAQUE，则可以将任何一段数据作为 id 参数提供。 所指定的数据必须用引号 ("") 括起来。<br /><br /> description 参数可用于指定有关要安装的应用程序的描述性文本。 此信息在枚举引用时显示。|  
 |**/Silent**|取消所有输出的显示。|  
 |/u assemblyName|将某个程序集从全局程序集缓存卸载。|  
-|/uf assemblyName|通过移除对程序集的所有引用来强制卸载指定的程序集。<br /><br /> 指定此选项相当于同时指定 /u 和 /f 选项。 注意：不能使用此选项移除使用 Microsoft Windows Installer 安装的程序集。 如果尝试此操作，则全局程序集缓存工具会显示错误消息。|  
+|/uf assemblyName|通过移除对程序集的所有引用来强制卸载指定的程序集。<br /><br /> 指定此选项相当于同时指定 /u 和 /f 选项。 **注意：** 不能使用此选项移除使用 Microsoft Windows Installer 安装的程序集。 如果尝试此操作，则全局程序集缓存工具会显示错误消息。|  
 |/ul assemblyListFile|从全局程序集缓存中卸载 assemblyListFile 中指定的一个或多个程序集。|  
-|/u[ngen] assemblyName|从全局程序集缓存中卸载指定的程序集。 如果指定的程序集具有现有引用计数，则全局程序集缓存工具会显示引用计数，而且不会从全局程序集缓存中移除该程序集。 注意：在 .NET Framework 2.0 版中不支持 `/ungen`。 请改为使用 [Ngen.exe（本机映像生成器）](../../../docs/framework/tools/ngen-exe-native-image-generator.md)的 `uninstall` 命令。 <br /><br /> 在 .NET Framework 1.0 和 1.1 版中，指定 /ungen 会导致 Gacutil.exe 从本机映像缓存中移除该程序集。 此缓存存储了使用 [Ngen.exe（本机映像生成器）](../../../docs/framework/tools/ngen-exe-native-image-generator.md) 创建的程序集的本机印象。|  
+|/u[ngen] assemblyName|从全局程序集缓存中卸载指定的程序集。 如果指定的程序集具有现有引用计数，则全局程序集缓存工具会显示引用计数，而且不会从全局程序集缓存中移除该程序集。 **注意：** 在 .NET Framework 2.0 版中，不支持 `/ungen`。 请改为使用 [Ngen.exe（本机映像生成器）](../../../docs/framework/tools/ngen-exe-native-image-generator.md)的 `uninstall` 命令。 <br /><br /> 在 .NET Framework 1.0 和 1.1 版中，指定 /ungen 会导致 Gacutil.exe 从本机映像缓存中移除该程序集。 此缓存存储了使用 [Ngen.exe（本机映像生成器）](../../../docs/framework/tools/ngen-exe-native-image-generator.md) 创建的程序集的本机印象。|  
 |/ur assemblyName<br /><br /> scheme<br /><br /> *id*<br /><br /> description|从全局程序集缓存中卸载对指定程序集的引用。 若要移除对程序集的引用，指定的 scheme、id 和 description 参数必须与安装程序集时使用 /i 和 /r（或者 /ir）选项指定的参数相同。 有关可为这些参数指定的有效值的说明，请从参阅 /r 选项。<br /><br /> 指定此选项相当于同时指定 /u 和 /r 选项。|  
 |**/?**|显示该工具的命令语法和选项。|  
   

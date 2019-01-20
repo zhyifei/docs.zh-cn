@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: b6297c26-7624-4431-8af4-14112d07bcd5
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 991e333c53101a2be2a8a19d3960c3d0879619be
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 8b6d00d17615769a5d03d58e0eda5af62ca58368
+ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33409927"
+ms.lasthandoff: 01/19/2019
+ms.locfileid: "54415957"
 ---
 # <a name="debugging-interfaces"></a>调试接口
 本节描述进行程序调试处理的非托管接口，所调试的程序在公共语言运行时 (CLR) 中执行。  
@@ -32,13 +32,13 @@ ms.locfileid: "33409927"
  数据访问服务层在目标进程中操作虚拟内存区域时所用的 `ICLRDataTarget` 的子类。  
   
  [ICLRDataTarget3 接口](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget3-interface.md)  
- 一个子类[ICLRDataTarget2](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget2-interface.md) ，可提供对异常信息的访问。  
+ 子类[ICLRDataTarget2](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget2-interface.md)提供对异常信息的访问。  
   
  [ICLRDebugging 接口](../../../../docs/framework/unmanaged-api/debugging/iclrdebugging-interface.md)  
  提供一些方法，用于处理模块的加载和卸载以进行调试。  
   
  [ICLRDebuggingLibraryProvider 方法](../../../../docs/framework/unmanaged-api/debugging/iclrdebugginglibraryprovider-interface.md)  
- 包括[ProvideLibrary 方法](../../../../docs/framework/unmanaged-api/debugging/iclrdebugginglibraryprovider-providelibrary-method.md)方法，后者将获取一个库提供程序允许公共语言运行时特定于版本的调试库需要定位和加载上的回调接口。  
+ 包括[ProvideLibrary 方法](../../../../docs/framework/unmanaged-api/debugging/iclrdebugginglibraryprovider-providelibrary-method.md)方法，获取一个库提供程序允许公共语言运行时特定于版本的调试库定位和加载根据需要的回调接口。  
   
  [ICLRMetadataLocator 接口](../../../../docs/framework/unmanaged-api/debugging/iclrmetadatalocator-interface.md)  
  数据访问服务层用于在目标进程中定位程序集的元数据的接口。  
@@ -56,7 +56,7 @@ ms.locfileid: "33409927"
  提供用于处理应用程序域中的 [!INCLUDE[wrt](../../../../includes/wrt-md.md)]类型的方法。 此接口是 `ICorDebugAppDomain` 和 `ICorDebugAppDomain2` 接口的扩展。  
   
  [ICorDebugAppDomain4 接口](../../../../docs/framework/unmanaged-api/debugging/icordebugappdomain4-interface.md)  
- 合理扩展[ICorDebugAppDomain](../../../../docs/framework/unmanaged-api/debugging/icordebugappdomain-interface.md)接口以从 COM 可调用包装器获取托管的对象。  
+ 进行逻辑扩展[ICorDebugAppDomain](../../../../docs/framework/unmanaged-api/debugging/icordebugappdomain-interface.md)接口，用于从 COM 可调用包装器获取托管的对象。  
   
  [ICorDebugAppDomainEnum Interface1](../../../../docs/framework/unmanaged-api/debugging/icordebugappdomainenum-interface.md)  
  提供一种方法，此方法从枚举中的下一个位置开始，返回指定数目的 `ICorDebugAppDomain` 值。  
@@ -71,13 +71,13 @@ ms.locfileid: "33409927"
  表示一个程序集。 此接口是 `ICorDebugAssembly` 接口的扩展。  
   
  [ICorDebugAssembly3 接口](../../../../docs/framework/unmanaged-api/debugging/icordebugassembly3-interface.md)  
- 合理扩展[ICorDebugAssembly](../../../../docs/framework/unmanaged-api/debugging/icordebugassembly-interface.md)接口，从而为容器程序集及其包含的程序集提供支持。 **在仅.NET Native 上可用。**  
+ 进行逻辑扩展[icor 调试程序集](../../../../docs/framework/unmanaged-api/debugging/icordebugassembly-interface.md)接口以便为容器程序集和其包含的程序集提供支持。 **仅.NET Native 上可用。**  
   
  [ICorDebugAssemblyEnum Interface1](../../../../docs/framework/unmanaged-api/debugging/icordebugassemblyenum-interface.md)  
  实现 `ICorDebugEnum` 方法，并枚举 `ICorDebugAssembly` 数组。  
   
  [ICorDebugBlockingObjectEnum 接口](../../../../docs/framework/unmanaged-api/debugging/icordebugblockingobjectenum-interface.md)  
- 有关的列表中提供的枚举器[CorDebugBlockingObject](../../../../docs/framework/unmanaged-api/debugging/cordebugblockingobject-structure.md)结构。  
+ 提供的枚举器的列表[CorDebugBlockingObject](../../../../docs/framework/unmanaged-api/debugging/cordebugblockingobject-structure.md)结构。  
   
  [ICorDebugBoxValue Interface1](../../../../docs/framework/unmanaged-api/debugging/icordebugboxvalue-interface.md)  
  表示装箱的值类对象的 `ICorDebugHeapValue` 的子类。  
@@ -107,10 +107,10 @@ ms.locfileid: "33409927"
  提供扩展 `ICorDebugCode` 的功能的方法。  
   
  [ICorDebugCode3 接口](../../../../docs/framework/unmanaged-api/debugging/icordebugcode3-interface.md)  
- 提供的扩展的方法[ICorDebugCode](../../../../docs/framework/unmanaged-api/debugging/icordebugcode-interface1.md)和[ICorDebugCode2](../../../../docs/framework/unmanaged-api/debugging/icordebugcode2-interface.md)以提供有关托管返回值的信息。  
+ 提供扩展方法[ICorDebugCode](../../../../docs/framework/unmanaged-api/debugging/icordebugcode-interface1.md)并[ICorDebugCode2](../../../../docs/framework/unmanaged-api/debugging/icordebugcode2-interface.md)以提供有关托管返回值信息。  
   
  [ICorDebugCode4 接口](../../../../docs/framework/unmanaged-api/debugging/icordebugcode4-interface.md)  
- 提供使调试器能够枚举的本地变量和函数中的自变量的方法。  
+ 提供使调试器能够枚举本地变量和函数中的参数的方法。  
   
  [ICorDebugCodeEnum Interface1](../../../../docs/framework/unmanaged-api/debugging/icordebugcodeenum-interface.md)  
  实现 `ICorDebugEnum` 方法，并枚举 `ICorDebugCode` 数组。  
@@ -128,13 +128,13 @@ ms.locfileid: "33409927"
  提供一个回调接口，该接口可提供对特定目标进程的访问。  
   
  [ICorDebugDataTarget2 接口](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget2-interface.md)  
- 合理扩展[ICorDebugDataTarget](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget-interface.md)接口。 **在仅.NET Native 上可用。**  
+ 进行逻辑扩展[ICorDebugDataTarget](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget-interface.md)接口。 **仅.NET Native 上可用。**  
   
  [ICorDebugDataTarget3 接口](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget3-interface.md)  
- 合理扩展[ICorDebugDataTarget](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget-interface.md)接口以提供有关已加载模块的信息。 **在仅.NET Native 上可用。**  
+ 进行逻辑扩展[ICorDebugDataTarget](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget-interface.md)接口以提供有关已加载模块的信息。 **仅.NET Native 上可用。**  
   
  [ICorDebugDebugEvent 接口](../../../../docs/framework/unmanaged-api/debugging/icordebugdebugevent-interface.md)  
- 定义所有 `ICorDebug` 调试事件派生的基接口。 **在仅.NET Native 上可用。**  
+ 定义所有 `ICorDebug` 调试事件派生的基接口。 **仅.NET Native 上可用。**  
   
  [ICorDebugEditAndContinueErrorInfo 接口](../../../../docs/framework/unmanaged-api/debugging/icordebugeditandcontinueerrorinfo-interface.md)  
  已过时。 不要使用此接口。  
@@ -155,13 +155,13 @@ ms.locfileid: "33409927"
  扩展 `ICorDebugEval` 以对泛型类型提供支持。  
   
  [ICorDebugExceptionDebugEvent 接口](../../../../docs/framework/unmanaged-api/debugging/icordebugexceptiondebugevent-interface.md)  
- 扩展[icor 调试调试事件](../../../../docs/framework/unmanaged-api/debugging/icordebugdebugevent-interface.md)接口以支持异常事件。 **在仅.NET Native 上可用。**  
+ 扩展了[icor 调试调试事件](../../../../docs/framework/unmanaged-api/debugging/icordebugdebugevent-interface.md)接口以支持异常事件。 **仅.NET Native 上可用。**  
   
  [ICorDebugExceptionObjectCallStackEnum 接口](../../../../docs/framework/unmanaged-api/debugging/icordebugexceptionobjectcallstackenum-interface.md)  
  为嵌入在异常对象中的调用堆栈信息提供枚举器。  
   
  [ICorDebugExceptionObjectValue 接口](../../../../docs/framework/unmanaged-api/debugging/icordebugexceptionobjectvalue-interface.md)  
- 扩展[ICorDebugObjectValue](../../../../docs/framework/unmanaged-api/debugging/icordebugobjectvalue-interface.md)接口以提供来自托管的异常对象的堆栈跟踪信息。  
+ 扩展了[ICorDebugObjectValue](../../../../docs/framework/unmanaged-api/debugging/icordebugobjectvalue-interface.md)接口，以提供从托管的异常对象的堆栈跟踪信息。  
   
  [ICorDebugFrame Interface1](../../../../docs/framework/unmanaged-api/debugging/icordebugframe-interface.md)  
  表示当前堆栈上的帧。  
@@ -176,7 +176,7 @@ ms.locfileid: "33409927"
  对 `ICorDebugFunction` 进行逻辑扩展，以支持“仅我的代码”的单步执行调试。  
   
  [ICorDebugFunction3 接口](../../../../docs/framework/unmanaged-api/debugging/icordebugfunction3-interface.md)  
- 合理扩展[ICorDebugFunction](../../../../docs/framework/unmanaged-api/debugging/icordebugfunction-interface1.md)接口以提供对代码的访问，ReJIT 请求中。  
+ 进行逻辑扩展[ICorDebugFunction](../../../../docs/framework/unmanaged-api/debugging/icordebugfunction-interface1.md)接口以提供对代码访问权限，ReJIT 请求中。  
   
  [ICorDebugFunctionBreakpoint Interface1](../../../../docs/framework/unmanaged-api/debugging/icordebugfunctionbreakpoint-interface.md)  
  扩展 `ICorDebugBreakpoint` 以支持函数中的断点。  
@@ -212,7 +212,7 @@ ms.locfileid: "33409927"
  表示中间语言 (IL) 代码段。  
   
  [ICorDebugILCode2 接口](../../../../docs/framework/unmanaged-api/debugging/icordebugilcode2-interface.md)  
- 合理扩展[ICorDebugILCode](../../../../docs/framework/unmanaged-api/debugging/icordebugilcode-interface.md)接口，以提供的方法，返回的标记的函数的局部变量签名，并将探查器检测到的中间语言 (IL) 偏移量到原始方法的 IL偏移量。  
+ 进行逻辑扩展[ICorDebugILCode](../../../../docs/framework/unmanaged-api/debugging/icordebugilcode-interface.md)接口，以提供的方法的返回函数的局部变量签名，该标记和映射将探查器检测中间语言 (IL) 偏移量到原始方法的 IL偏移量。  
   
  [ICorDebugILFrame Interface1](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe-interface.md)  
  表示 MSIL 代码的堆栈帧。  
@@ -227,7 +227,7 @@ ms.locfileid: "33409927"
  提供使你能够访问中间语言 (IL) 代码的堆栈帧中的局部变量和代码的方法。 一个用于指定调试器是否可以访问在探查器 ReJIT 检测中添加的变量和代码的参数。  
   
  [ICorDebugInstanceFieldSymbol 接口](../../../../docs/framework/unmanaged-api/debugging/icordebuginstancefieldsymbol-interface.md)  
- 表示某一实例字段的调试符号信息。 **在仅.NET Native 上可用。**  
+ 表示某一实例字段的调试符号信息。 **仅.NET Native 上可用。**  
   
  [ICorDebugInternalFrame Interface1](../../../../docs/framework/unmanaged-api/debugging/icordebuginternalframe-interface.md)  
  标识调试器的帧类型。  
@@ -236,7 +236,7 @@ ms.locfileid: "33409927"
  提供有关内部帧，包括堆栈地址和相对于位置的信息[ICorDebugFrame](../../../../docs/framework/unmanaged-api/debugging/icordebugframe-interface.md)对象。  
   
  [ICorDebugLoadedModule 接口](../../../../docs/framework/unmanaged-api/debugging/icordebugloadedmodule-interface.md)  
- 提供有关已加载模块的信息。 **在仅.NET Native 上可用。**  
+ 提供有关已加载模块的信息。 **仅.NET Native 上可用。**  
   
  [ICorDebugManagedCallback 接口](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)  
  提供用于处理调试器回调的方法。  
@@ -251,10 +251,10 @@ ms.locfileid: "33409927"
  表示托管调试助手 (MDA) 消息。  
   
  [ICorDebugMemoryBuffer 接口](../../../../docs/framework/unmanaged-api/debugging/icordebugmemorybuffer-interface.md)  
- 表示内存中缓冲区。 **在仅.NET Native 上可用。**  
+ 表示内存中缓冲区。 **仅.NET Native 上可用。**  
   
  [ICorDebugMergedAssemblyRecord 接口](../../../../docs/framework/unmanaged-api/debugging/icordebugmergedassemblyrecord-interface.md)  
- 提供有关合并的程序集的信息。 **在仅.NET Native 上可用。**  
+ 提供有关合并的程序集的信息。 **仅.NET Native 上可用。**  
   
  [ICorDebugMetaDataLocator 接口](../../../../docs/framework/unmanaged-api/debugging/icordebugmetadatalocator-interface.md)  
  向调试器提供元数据信息。  
@@ -272,13 +272,13 @@ ms.locfileid: "33409927"
  扩展 `ICorDebugBreakpoint` 以提供对特定模块的访问。  
   
  [ICorDebugModuleDebugEvent 接口](../../../../docs/framework/unmanaged-api/debugging/icordebugmoduledebugevent-interface.md)  
- 扩展[icor 调试调试事件](../../../../docs/framework/unmanaged-api/debugging/icordebugdebugevent-interface.md)接口以支持模块级事件。 **在仅.NET Native 上可用。**  
+ 扩展了[icor 调试调试事件](../../../../docs/framework/unmanaged-api/debugging/icordebugdebugevent-interface.md)接口以支持模块级事件。 **仅.NET Native 上可用。**  
   
  [ICorDebugModuleEnum Interface1](../../../../docs/framework/unmanaged-api/debugging/icordebugmoduleenum-interface.md)  
  实现 `ICorDebugEnum` 方法，并枚举 `ICorDebugModule` 数组。  
   
  [ICorDebugMutableDataTarget 接口](../../../../docs/framework/unmanaged-api/debugging/icordebugmutabledatatarget-interface.md)  
- 扩展[ICorDebugDataTarget](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget-interface.md)接口以支持可变数据目标。  
+ 扩展了[ICorDebugDataTarget](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget-interface.md)接口以支持可变数据目标。  
   
  [ICorDebugNativeFrame Interface1](../../../../docs/framework/unmanaged-api/debugging/icordebugnativeframe-interface.md)  
  用于本机帧的 `ICorDebugFrame` 的专用实现。  
@@ -305,16 +305,16 @@ ms.locfileid: "33409927"
  控制自定义调试器通知。  
   
  [ICorDebugProcess5 接口](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-interface.md)  
- 扩展[ICorDebugProcess](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess-interface.md)接口以支持对托管堆，提供有关垃圾回收的托管对象的信息并确定调试器是否从应用程序加载映像的访问的本地本机映像缓存中。  
+ 扩展了[ICorDebugProcess](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess-interface.md)接口以支持对托管堆，以提供有关垃圾回收的托管对象的信息并确定调试器是否加载图像从应用程序访问的本地本机映像缓存。  
   
  [ICorDebugProcess6 接口](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess6-interface.md)  
- 合理扩展[ICorDebugProcess](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess-interface.md)接口以启用解码托管的调试事件的编码在本机异常调试事件和虚拟模块拆分等功能。 **在仅.NET Native 上可用。**  
+ 进行逻辑扩展[ICorDebugProcess](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess-interface.md)接口以启用解码托管的调试事件的本机异常调试事件和虚拟模块拆分中编码等功能。 **仅.NET Native 上可用。**  
   
  [ICorDebugProcess7 接口](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess7-interface.md)  
  提供了一种方法，用于配置调试器以处理目标进程中的内存中元数据更新。  
   
  [ICorDebugProcess8 接口](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess8-interface.md)  
- 合理扩展[ICorDebugProcess](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess-interface.md)接口以启用或禁用某些类型的[ICorDebugManagedCallback2](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-interface.md)异常回调。  
+ 进行逻辑扩展[ICorDebugProcess](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess-interface.md)接口以启用或禁用某些类型的[ICorDebugManagedCallback2](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-interface.md)异常回调。  
   
  [ICorDebugProcessEnum Interface1](../../../../docs/framework/unmanaged-api/debugging/icordebugprocessenum-interface.md)  
  实现 `ICorDebugEnum` 方法，并枚举 `ICorDebugProcess` 数组。  
@@ -341,7 +341,7 @@ ms.locfileid: "33409927"
  提供用于获取线程堆栈上的托管方法或帧的方法。  
   
  [ICorDebugStaticFieldSymbol 接口](../../../../docs/framework/unmanaged-api/debugging/icordebugstaticfieldsymbol-interface.md)  
- 表示某个静态字段的调试符号信息。 **在仅.NET Native 上可用。**  
+ 表示某个静态字段的调试符号信息。 **仅.NET Native 上可用。**  
   
  [ICorDebugStepper Interface1](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-interface.md)  
  表示在代码执行过程中由调试器执行的一个步骤。此步骤作为命令颁发和完成之间的标识符使用，可以实现取消对某个步骤的执行。  
@@ -356,10 +356,10 @@ ms.locfileid: "33409927"
  应用于字符串值的 `ICorDebugHeapValue` 的子类。  
   
  [ICorDebugSymbolProvider 接口](../../../../docs/framework/unmanaged-api/debugging/icordebugsymbolprovider-interface.md)  
- 提供可用于检索调试符号信息的方法。 **在仅.NET Native 上可用。**  
+ 提供可用于检索调试符号信息的方法。 **仅.NET Native 上可用。**  
   
  [ICorDebugSymbolProvider2 接口](../../../../docs/framework/unmanaged-api/debugging/icordebugsymbolprovider2-interface.md)  
- 合理扩展[ICorDebugSymbolProvider](../../../../docs/framework/unmanaged-api/debugging/icordebugsymbolprovider-interface.md)接口以检索其他调试符号信息。 **在仅.NET Native 上可用。**  
+ 进行逻辑扩展[ICorDebugSymbolProvider](../../../../docs/framework/unmanaged-api/debugging/icordebugsymbolprovider-interface.md)接口来检索其他调试符号信息。 **仅.NET Native 上可用。**  
   
  [ICorDebugThread Interface1](../../../../docs/framework/unmanaged-api/debugging/icordebugthread-interface.md)  
  表示进程中的线程。 `ICorDebugThread` 实例的生存期与它表示的线程的生存期相同。  
@@ -368,7 +368,7 @@ ms.locfileid: "33409927"
  用作 `ICorDebugThread` 的逻辑扩展。  
   
  [ICorDebugThread3 接口](../../../../docs/framework/unmanaged-api/debugging/icordebugthread3-interface.md)  
- 提供的入口点[ICorDebugStackWalk](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-interface.md)和相应接口。  
+ 提供的入口点[ICorDebugStackWalk](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-interface.md)和相应的接口。  
   
  [ICorDebugThread4 接口](../../../../docs/framework/unmanaged-api/debugging/icordebugthread4-interface.md)  
  提供线程阻塞信息。  
@@ -380,7 +380,7 @@ ms.locfileid: "33409927"
  表示基类型或复杂类型（即用户定义的类型）。 如果该类型是泛型类型，则 `ICorDebugType` 表示未实例化的泛型类型。  
   
  [ICorDebugType2 接口](../../../../docs/framework/unmanaged-api/debugging/icordebugtype2-interface.md)  
- 扩展[ICorDebugType](../../../../docs/framework/unmanaged-api/debugging/icordebugtype-interface.md)接口以检索的基类型或复杂 （用户定义的） 类型的类型标识符。  
+ 扩展了[ICorDebugType](../../../../docs/framework/unmanaged-api/debugging/icordebugtype-interface.md)接口来检索的基类型或复杂 （用户定义的） 类型的类型标识符。  
   
  [ICorDebugTypeEnum Interface1](../../../../docs/framework/unmanaged-api/debugging/icordebugtypeenum-interface.md)  
  实现 `ICorDebugEnum` 方法，并枚举 `ICorDebugType` 数组。  
@@ -395,7 +395,7 @@ ms.locfileid: "33409927"
  扩展 `ICorDebugValue` 以提供对 `ICorDebugType` 的支持。  
   
  [ICorDebugValue3 接口](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue3-interface.md)  
- 扩展"ICorDebugValue"和"ICorDebugValue2"接口，以支持大于 2 GB 的数组。  
+ 扩展了"ICorDebugValue"和"ICorDebugValue2"的接口以支持大于 2 GB 的数组。  
   
  "ICorDebugValueBreakpoint"  
  扩展 `ICorDebugBreakpoint` 以提供对特定值的访问。  
@@ -404,16 +404,16 @@ ms.locfileid: "33409927"
  实现 `ICorDebugEnum` 方法，并枚举 `ICorDebugValue` 数组。  
   
  [ICorDebugVariableHome 接口](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md)  
- 表示本地变量或函数参数。  
+ 表示本地变量或函数的参数。  
   
  [ICorDebugVariableHomeEnum 接口](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehomeenum-interface.md)  
- 提供对本地变量和函数中的参数的枚举器。  
+ 提供对本地变量和函数的参数个数的枚举器。  
   
  [ICorDebugVariableSymbol 接口](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablesymbol-interface.md)  
- 检索变量的调试符号信息。 **在仅.NET Native 上可用。**  
+ 检索变量的调试符号信息。 **仅.NET Native 上可用。**  
   
  [ICorDebugVirtualUnwinder 接口](../../../../docs/framework/unmanaged-api/debugging/icordebugvirtualunwinder-interface.md)  
- 提供帮助堆栈展开的方法。 **在仅.NET Native 上可用。**  
+ 提供帮助堆栈展开的方法。 **仅.NET Native 上可用。**  
   
  [ICorPublish 接口](../../../../docs/framework/unmanaged-api/debugging/icorpublish-interface.md)  
  用作发布进程的常规接口。  
@@ -432,6 +432,16 @@ ms.locfileid: "33409927"
   
  [ICorPublishProcessEnum 接口](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocessenum-interface.md)  
  提供遍历 `ICorPublishProcess` 对象的集合的方法。  
+
+ [ISOSDacInterface 接口](../../../../docs/framework/unmanaged-api/debugging/isosdacinterface-interface.md)访问的数据提供帮助器方法`SOS`。
+
+ [IXCLRDataMethodDefinition 接口](../../../../docs/framework/unmanaged-api/debugging/ixclrdatamethoddefinition-interface.md)提供了用于查询方法定义的有关信息的方法。
+ 
+ [IXCLRDataMethodInstance 接口](../../../../docs/framework/unmanaged-api/debugging/ixclrdatamethodinstance-interface.md)提供了用于查询方法实例的信息的方法。
+ 
+ [IXCLRDataModule 接口](../../../../docs/framework/unmanaged-api/debugging/ixclrdatamodule-interface.md)提供用于查询有关已加载模块的信息的方法。
+ 
+ [IXCLRDataProcess 接口](../../../../docs/framework/unmanaged-api/debugging/ixclrdataprocess-interface.md)提供了用于查询有关进程的信息的方法。
   
 ## <a name="related-sections"></a>相关章节  
  [调试组件类](../../../../docs/framework/unmanaged-api/debugging/debugging-coclasses.md)  

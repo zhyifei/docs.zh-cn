@@ -34,7 +34,7 @@ ms.locfileid: "53168880"
 
    ![Visual Studio“添加新项目”对话框 - C#](./media/consuming-library-with-visual-studio/add-new-project-dialog.png)
 
-1. 在“解决方案资源管理器”****中，右键单击“ShowCase”**** 项目，在上下文菜单中选择“设为启动项目”。
+1. 在“**解决方案资源管理器**”中，右键单击“**ShowCase**”项目，在上下文菜单中选择“**设为启动项目**”。
 
    ![Visual Studio 中用于设置启动项目的项目上下文菜单 - C#](./media/consuming-library-with-visual-studio/set-startup-project-context-menu.png)
 
@@ -64,7 +64,7 @@ ms.locfileid: "53168880"
 
    ![Visual Studio“添加新项目”对话框 - Visual Basic](./media/consuming-library-with-visual-studio/add-new-vb-project-dialog.png)
 
-1. 在“解决方案资源管理器”****中，右键单击“ShowCase”**** 项目，在上下文菜单中选择“设为启动项目”。 
+1. 在“**解决方案资源管理器**”中，右键单击“**ShowCase**”项目，在上下文菜单中选择“**设为启动项目**”。 
 
    ![Visual Studio 中用于设置启动项目的项目上下文菜单 - Visual Basic](./media/consuming-library-with-visual-studio/set-startup-project-context-menu.png)
 

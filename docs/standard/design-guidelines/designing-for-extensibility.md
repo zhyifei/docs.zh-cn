@@ -1,4 +1,4 @@
----
+﻿---
 title: 扩展性设计
 ms.date: 10/22/2008
 ms.technology: dotnet-standard

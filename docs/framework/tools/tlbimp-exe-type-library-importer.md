@@ -12,17 +12,17 @@ helpviewer_keywords:
 ms.assetid: ec0a8d63-11b3-4acd-b398-da1e37e97382
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d28c5e817e415e08c3a58c840e52cdfcbe286997
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: dfb73f6637be96d7994a808b8d9a2c77c2896838
+ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33409823"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54221721"
 ---
 # <a name="tlbimpexe-type-library-importer"></a>Tlbimp.exe（类型库导入程序）
 类型库导入程序将 COM 类型库中的类型定义转换为公共语言运行时程序集中的等效定义。 Tlbimp.exe 的输出是一个二进制文件（程序集），其中包含在原始类型库中定义的类型的运行时元数据。 可以使用 [Ildasm.exe](ildasm-exe-il-disassembler.md) 这样的工具检查此文件。  
   
- 此工具会自动随 Visual Studio 一起安装。 若要运行此工具，请使用开发人员命令提示（或 Windows 7 中的 Visual Studio 命令提示）。 有关详细信息，请参阅[命令提示](developer-command-prompt-for-vs.md)。  
+ 此工具会自动随 Visual Studio 一起安装。 若要运行此工具，请使用 Visual Studio 开发人员命令提示（或 Windows 7 中的 Visual Studio 命令提示）。 有关详细信息，请参阅[命令提示](developer-command-prompt-for-vs.md)。  
   
  在命令提示符处，键入以下内容：  
   
@@ -34,11 +34,11 @@ tlbimp tlbFile [options]
   
 #### <a name="parameters"></a>参数  
   
-|参数|描述|  
+|参数|说明|  
 |--------------|-----------------|  
 |*tlbFile*|任何包含 COM 类型库的文件的名称。|  
   
-|选项|描述|  
+|选项|说明|  
 |------------|-----------------|  
 |**/asmversion:** *versionnumber*|指定要生成的程序集的版本号。 以 *major.minor.build.revision* 格式指定 *versionnumber*。|  
 |**/company:** `companyinformation`|将公司信息添加到输出程序集。|  
