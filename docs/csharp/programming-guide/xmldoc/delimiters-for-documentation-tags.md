@@ -7,12 +7,12 @@ helpviewer_keywords:
 - /** */ delimiters for C# documentation tags
 - /// delimiter for C# documentation
 ms.assetid: 9b2bdd18-4f5c-4c0b-988e-fb992e0d233e
-ms.openlocfilehash: ce6b23edb10733de3134b5233413de8b535c11ac
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: c14b0470f7ea488fcb813b68174b5d1cb0d95786
+ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53235288"
+ms.lasthandoff: 01/19/2019
+ms.locfileid: "54415580"
 ---
 # <a name="delimiters-for-documentation-tags-c-programming-guide"></a>文档标记的分隔符（C# 编程指南）
 XML 文档注释需要使用分隔符，用来向编译器指示文档注释开始和结束的位置。 可以使用以下采用 XML 文档标记的分隔符：  
@@ -38,7 +38,7 @@ XML 文档注释需要使用分隔符，用来向编译器指示文档注释开�
   
 -   以下注释中将被处理的唯一部分是以 `<summary>` 开头的行。 三种标记格式产生的注释相同。  
   
-    ```  
+    ```csharp  
     /** <summary>text</summary> */   
   
     /**   
@@ -52,7 +52,7 @@ XML 文档注释需要使用分隔符，用来向编译器指示文档注释开�
   
 -   编译器识别出第二和第三行开头的共同模式“*”。 此模式不包括在输出中。  
   
-    ```  
+    ```csharp  
     /**   
      * <summary>   
      * text </summary>*/   
@@ -60,7 +60,7 @@ XML 文档注释需要使用分隔符，用来向编译器指示文档注释开�
   
 -   编译器在下面的注释中未找到共同模式，因为第三行的第二个字符不是一个星号。 因此，第二和第三行上的所有文本将处理为注释的一部分。  
   
-    ```  
+    ```csharp  
     /**   
      * <summary>   
        text </summary>  
@@ -69,7 +69,7 @@ XML 文档注释需要使用分隔符，用来向编译器指示文档注释开�
   
 -   编译器在以下注释中未找到模式，原因有两个。 首先，星号前的空格数不一致。 其次，第 5 行以制表符开头，这与空格不匹配。 因此，第二到第五行的所有文本都作为注释的一部分进行处理。  
   
-    ```  
+    ```csharp  
     /**   
       * <summary>   
       * text   

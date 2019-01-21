@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 1d971dd7-10fc-4692-8dac-30ca308fc0fa
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e9c40b68a67219cd8f24874780281023974886e4
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: de919789c369c66c52a137bde811c56bf07a6ec9
+ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50201013"
+ms.lasthandoff: 01/19/2019
+ms.locfileid: "54416022"
 ---
 # .NET Framework 中的新增功能<a name="introduction"></a>
 
@@ -242,9 +242,9 @@ Public GetOrAdd(Of TArg)(key As TKey, valueFactory As Func(Of TKey, TArg, TValue
 
 [依赖项注入 (DI)](/aspnet/core/fundamentals/dependency-injection#overview-of-dependency-injection) 分离对象和它们的依赖项，使得对象的代码不再仅因依赖项更改而需要进行更改。 在开发面向 .NET Framework 4.7.2 的 ASP.NET 应用程序时，可以：
 
-- 在[处理程序和模块](https://msdn.microsoft.com/en-us/library/bb398986.aspx)、[页面实例](xref:System.Web.UI.Page)和 ASP.NET Web 应用程序项目的[用户控件](https://msdn.microsoft.com/en-us/library/y6wb1a0e.aspx)中使用基于资源库、基于接口和基于构造函数的注入。
+- 在[处理程序和模块](https://docs.microsoft.com/previous-versions/aspnet/bb398986(v=vs.100))、[页面实例](xref:System.Web.UI.Page)和 ASP.NET Web 应用程序项目的[用户控件](https://docs.microsoft.com/previous-versions/aspnet/y6wb1a0e(v=vs.100))中使用基于资源库、基于接口和基于构造函数的注入。
 
-- 在[处理程序和模块](https://msdn.microsoft.com/en-us/library/bb398986.aspx)、[页面实例](xref:System.Web.UI.Page)和 ASP.NET 网站项目的[用户控件](https://msdn.microsoft.com/en-us/library/y6wb1a0e.aspx)中使用基于资源库和基于接口的注入。
+- 在[处理程序和模块](https://docs.microsoft.com/previous-versions/aspnet/bb398986(v=vs.100))、[页面实例](xref:System.Web.UI.Page)和 ASP.NET 网站项目的[用户控件](https://docs.microsoft.com/previous-versions/aspnet/y6wb1a0e(v=vs.100))中使用基于资源库和基于接口的注入。
 
 - 插入不同的依赖关系注入框架。
 
@@ -787,7 +787,7 @@ End Function
 
  为解决 [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] 中的这一问题，已将以下三种方法添加到了 <xref:System.Security.Cryptography.ECDiffieHellman> 基类，以更清楚地表示这些 KDF 例程及其输入：
 
-|ECDiffieHellman 方法|描述|
+|ECDiffieHellman 方法|说明|
 |----------------------------|-----------------|
 |<xref:System.Security.Cryptography.ECDiffieHellman.DeriveKeyFromHash%28System.Security.Cryptography.ECDiffieHellmanPublicKey%2CSystem.Security.Cryptography.HashAlgorithmName%2CSystem.Byte%5B%5D%2CSystem.Byte%5B%5D%29>|使用下面的公式派生密钥材料<br /><br /> HASH(secretPrepend &#124;&#124; *x* &#124;&#124; secretAppend)<br /><br /> HASH(secretPrepend OrElse *x* OrElse secretAppend)<br /><br /> 其中 *x* 是 EC Diffie-Hellman 算法的计算结果。|
 |<xref:System.Security.Cryptography.ECDiffieHellman.DeriveKeyFromHmac%28System.Security.Cryptography.ECDiffieHellmanPublicKey%2CSystem.Security.Cryptography.HashAlgorithmName%2CSystem.Byte%5B%5D%2CSystem.Byte%5B%5D%2CSystem.Byte%5B%5D%29>|使用下面的公式派生密钥材料<br /><br /> HMAC(hmacKey, secretPrepend &#124;&#124; *x* &#124;&#124; secretAppend)<br /><br /> HMAC(hmacKey, secretPrepend OrElse *x* OrElse secretAppend)<br /><br /> 其中 *x* 是 EC Diffie-Hellman 算法的计算结果。|

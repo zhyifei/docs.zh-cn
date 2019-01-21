@@ -8,18 +8,18 @@ helpviewer_keywords:
 - lambda operator [C#]
 - => operator [C#]
 - lambda expressions [C#], => operator
-ms.openlocfilehash: c193a91eaffe2e56a5df2afa8d66989981123a48
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 8641757d9252c88cf30595cec06d27b964e4d95c
+ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53238788"
+ms.lasthandoff: 01/19/2019
+ms.locfileid: "54415281"
 ---
 # <a name="gt-operator-c-reference"></a>=&gt; 运算符（C# 参考）
 
 在 C# 中，`=>` 运算符有两种用法：
 
-- 作为 [Lambda 表达式](../../lambda-expressions.md)中的 [lambda 运算符](#lamba-operator)，它可将输入变量从 lambda 体中隔离出来。
+- 作为 [Lambda 表达式](../../lambda-expressions.md)中的 [lambda 运算符](#lambda-operator)，它可将输入变量从 lambda 体中隔离出来。
  
 - 在[表达式主体定义](#expression-body-definition)中，它可将成员名称从成员实现中隔离出来。 
 
