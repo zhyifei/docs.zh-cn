@@ -2,12 +2,12 @@
 title: XML Schema Definition Tool (Xsd.exe)
 ms.date: 03/30/2017
 ms.assetid: a6e6e65c-347f-4494-9457-653bf29baac2
-ms.openlocfilehash: ebbbe763ecfc4aeac338d0eb88ee785a4f637456
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: a7824f0f39820b186b654aa4369dc068134d6a0d
+ms.sourcegitcommit: 42522983167b52852e1a20c87d57a1f63215f9bd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54148599"
+ms.lasthandoff: 01/22/2019
+ms.locfileid: "54443650"
 ---
 # <a name="xml-schema-definition-tool-xsdexe"></a>XML Schema Definition Tool (Xsd.exe)
 XML 架构定义 (Xsd.exe) 工具从 XDR、XML 和 XSD 文件或者从运行时程序集中的类生成 XML 架构或公共语言运行时类。  
@@ -35,9 +35,9 @@ xsd {file.dll | file.exe} [/outputdir:directory] [/type:typename [...]][/paramet
 |选项|描述|  
 |------------|-----------------|  
 |**/h\[elp\]**|显示该工具的命令语法和选项。|  
-|**/o\[utputdir\]:**_目录_|指定输出文件的目录。 此参数只能出现一次。 默认为当前目录。|  
+|**/o\[utputdir\]:**_directory_|指定输出文件的目录。 此参数只能出现一次。 默认为当前目录。|  
 |**/?**|显示该工具的命令语法和选项。|  
-|**/ p\[arameters\]:**_file.xml_|从指定的 .xml 文件读取各种操作模式的选项。 缩写形式为 `/p:`。 有关详细信息，请参阅[备注](#remarks)部分。|  
+|**/p\[arameters\]:**_file.xml_|从指定的 .xml 文件读取各种操作模式的选项。 缩写形式为 `/p:`。 有关详细信息，请参阅[备注](#remarks)部分。|  
   
 ## <a name="xsd-file-options"></a>XSD 文件选项  
  必须为 xsd 文件仅指定下列选项中的一个。  
@@ -45,28 +45,28 @@ xsd {file.dll | file.exe} [/outputdir:directory] [/type:typename [...]][/paramet
 |选项|描述|  
 |------------|-----------------|  
 |**/c\[lasses\]**|生成与指定架构相对应的类。 若要将 XML 数据读入对象中，请使用 <xref:System.Xml.Serialization.XmlSerializer.Deserialize%2A?displayProperty=nameWithType> 方法。|  
-|**/d**[**ataset**]|生成一个从 <xref:System.Data.DataSet> 派生的类，该类与指定的架构相对应。 若要将 XML 数据读入派生类中，请使用 <xref:System.Data.DataSet.ReadXml%2A?displayProperty=nameWithType> 方法。|  
+|**/d[ataset]**|生成一个从 <xref:System.Data.DataSet> 派生的类，该类与指定的架构相对应。 若要将 XML 数据读入派生类中，请使用 <xref:System.Data.DataSet.ReadXml%2A?displayProperty=nameWithType> 方法。|  
   
  还可以为 .xsd 文件指定下列任何选项。  
   
 |选项|描述|  
 |------------|-----------------|  
-|**/e\[lement\]:**_元素_|指定架构中要为其生成代码的元素。 默认情况下，键入所有元素。 可以多次指定该参数。|  
+|**/e\[lement\]:**_element_|指定架构中要为其生成代码的元素。 默认情况下，键入所有元素。 可以多次指定该参数。|  
 |**/enableDataBinding**|在所有生成的类型上实现 <xref:System.ComponentModel.INotifyPropertyChanged> 接口以启用数据绑定。 缩写形式为 `/edb`。|  
 |**/enableLinqDataSet**|（缩写形式：`/eld`。）指定可使用 LINQ to DataSet 查询的生成的数据集。 此选项在同时指定 /dataset 选项的情况下使用。 有关详细信息，请参阅 [LINQ to DataSet 概述](../../../docs/framework/data/adonet/linq-to-dataset-overview.md)和[查询类型化数据集](../../../docs/framework/data/adonet/querying-typed-datasets.md)。 有关使用 LINQ 的一般信息，请参阅 [LINQ（语言集成查询）](https://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d)。|  
 |**/f\[ields\]**|生成字段，而不是生成属性。 默认情况下生成属性。|  
-|**/l\[言\]:**_语言_|指定要使用的编程语言。 从 `CS`（默认情况下为 C#）、`VB` (Visual Basic)、`JS` (JScript) 或 `VJS` (Visual J#) 中进行选择。 也可指定实现 <xref:System.CodeDom.Compiler.CodeDomProvider?displayProperty=nameWithType> 的类的完全限定名|  
-|**/n\[amespace\]:**_命名空间_|为生成的类型指定运行时命名空间。 默认命名空间为 `Schemas`。|  
+|**/l\[anguage\]:**_language_|指定要使用的编程语言。 从 `CS`（默认情况下为 C#）、`VB` (Visual Basic)、`JS` (JScript) 或 `VJS` (Visual J#) 中进行选择。 也可指定实现 <xref:System.CodeDom.Compiler.CodeDomProvider?displayProperty=nameWithType> 的类的完全限定名|  
+|**/n\[amespace\]:**_namespace_|为生成的类型指定运行时命名空间。 默认命名空间为 `Schemas`。|  
 |**/nologo**|取消显示版权标志。|  
 |**/order**|在所有粒子成员上生成显式顺序标识符。|  
-|**/o\[ut\]:**_目录名称_|指定用来放置文件的输出目录。 默认为当前目录。|  
+|**/o\[ut\]:**_directoryName_|指定用来放置文件的输出目录。 默认为当前目录。|  
 |**/u\[ri\]:**_uri_|为架构中要为其生成代码的元素指定 URI。 该 URI（如果存在）应用于使用 `/element` 选项指定的所有元素。|  
   
 ## <a name="dll-and-exe-file-options"></a>DLL 和 EXE 文件选项  
   
 |选项|描述|  
 |------------|-----------------|  
-|**/t\[类型\]:**_typename_|指定要为其创建架构的类型的名称。 可以指定多个类型参数。 如果 typename 不指定一个命名空间，则 Xsd.exe 将程序集中的所有类型与指定类型相匹配。 如果 typename 指定一个命名空间，则仅匹配那个类型。 如果 typename 以星号字符 (\*) 结尾，则此工具匹配所有以 \* 前的字符串开头的类型。 如果省略 `/type` 选项，则 Xsd.exe 为程序集中的所有类型生成架构。|  
+|**/t\[ype\]:**_typename_|指定要为其创建架构的类型的名称。 可以指定多个类型参数。 如果 typename 不指定一个命名空间，则 Xsd.exe 将程序集中的所有类型与指定类型相匹配。 如果 typename 指定一个命名空间，则仅匹配那个类型。 如果 typename 以星号字符 (\*) 结尾，则此工具匹配所有以 \* 前的字符串开头的类型。 如果省略 `/type` 选项，则 Xsd.exe 为程序集中的所有类型生成架构。|  
   
 ## <a name="remarks"></a>备注  
  下表显示了 Xsd.exe 执行的操作。  
