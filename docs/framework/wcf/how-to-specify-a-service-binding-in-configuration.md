@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 885037f7-1c2b-4d7a-90d9-06b89be172f2
-ms.openlocfilehash: 1d9a6d0a556613576a14c600aa72d3f4524cdc3e
-ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
+ms.openlocfilehash: 2152398cecccdf1f949baf30217b7f5ac19ae22f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54029627"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54527128"
 ---
 # <a name="how-to-specify-a-service-binding-in-configuration"></a>如何：在配置中指定服务绑定
 在本示例中，为基本计算器服务定义 `ICalculator` 协定，在 `CalculatorService` 类中实现该服务，然后在 Web.config 文件中配置其终结点，该文件中指定此服务使用 <xref:System.ServiceModel.BasicHttpBinding>。 有关如何使用代码而不配置此服务配置的说明，请参阅[如何：在代码中指定服务绑定](../../../docs/framework/wcf/how-to-specify-a-service-binding-in-code.md)。  
@@ -92,6 +92,6 @@ ms.locfileid: "54029627"
     </wsHttpBinding>  
     ```  
   
-## <a name="see-also"></a>请参阅  
- [使用绑定配置服务和客户端](../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)  
- [指定终结点地址](../../../docs/framework/wcf/specifying-an-endpoint-address.md)
+## <a name="see-also"></a>请参阅
+- [使用绑定配置服务和客户端](../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
+- [指定终结点地址](../../../docs/framework/wcf/specifying-an-endpoint-address.md)

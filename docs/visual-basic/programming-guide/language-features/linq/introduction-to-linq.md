@@ -12,12 +12,12 @@ helpviewer_keywords:
 - deferred execution
 - iteration variables [Visual Basic]
 ms.assetid: 3047d86e-0d49-40e2-928b-dc02e46c7984
-ms.openlocfilehash: 0b163ac4af4e487ccab4c18b7907eba5a31e5779
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 0642a67a6550109ffe1068e6c6ce4605b14c25af
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43509047"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54524048"
 ---
 # <a name="introduction-to-linq-in-visual-basic"></a>Visual Basic 中的 LINQ 简介
 语言集成查询 (LINQ) 将查询功能添加到 Visual Basic，并提供了简单而强大的功能用于与所有种类的数据处理。 而不是将查询发送到数据库进行处理，或使用你要搜索的数据的每种类型的不同的查询语法，LINQ 引入了查询作为 Visual Basic 语言的一部分。 它使用统一语法，而不考虑数据的类型。  
@@ -177,7 +177,7 @@ ms.locfileid: "43509047"
   
  在您具有有效的连接到 SQL Server 数据库，你可以添加**LINQ to SQL 类**到你的项目项模板。 此操作将显示对象关系设计器（O/R 设计器）。 O/R 设计器可以将您要从代码中访问这些项拖**服务器资源管理器**/**数据库资源管理器**到设计器图面上。 LINQ to SQL 文件可向项目添加 <xref:System.Data.Linq.DataContext> 对象。 此对象包括你希望访问的表和视图的属性和集合，以及希望调用的存储过程的方法。 保存对 LINQ to SQL (.dbml) 文件所作的更改后，即可通过引用由 O/R 设计器定义的 <xref:System.Data.Linq.DataContext> 对象，在代码中访问这些对象。 项目的 <xref:System.Data.Linq.DataContext> 对象根据 LINQ to SQL 文件的名称进行命名。 例如，名为 Northwind.dbml 的 LINQ to SQL 文件将创建名为 `NorthwindDataContext` 的 <xref:System.Data.Linq.DataContext> 对象。  
   
- 有关分步说明的示例，请参阅[如何： 查询数据库](how-to-query-a-database-by-using-linq.md)并[如何： 调用存储过程](how-to-call-a-stored-procedure-by-using-linq.md)。  
+ 有关分步说明的示例，请参阅[如何：查询数据库](how-to-query-a-database-by-using-linq.md)和[如何：调用存储的过程](how-to-call-a-stored-procedure-by-using-linq.md)。  
   
 ## <a name="visual-basic-features-that-support-linq"></a>支持 LINQ 的 Visual Basic 功能  
  Visual Basic 包括其他值得注意的功能，使 LINQ 使用简单和减少必须编写执行 LINQ 查询的代码量。 其中包括：  
@@ -226,7 +226,7 @@ ms.locfileid: "43509047"
 ## <a name="how-to-and-walkthrough-topics"></a>如何和演练主题
  [如何：查询数据库](how-to-query-a-database-by-using-linq.md)  
   
- [如何：调用存储过程](how-to-call-a-stored-procedure-by-using-linq.md)  
+ [如何：调用存储的过程](how-to-call-a-stored-procedure-by-using-linq.md)  
   
  [如何：修改数据库中的数据](how-to-modify-data-in-a-database-by-using-linq.md)  
   
@@ -236,20 +236,20 @@ ms.locfileid: "43509047"
   
  [如何：筛选查询结果](how-to-filter-query-results-by-using-linq.md)  
   
- [如何：对数据进行计数、求和与求平均值计算](how-to-count-sum-or-average-data-by-using-linq.md)  
+ [如何：计数、 求和或平均数据](how-to-count-sum-or-average-data-by-using-linq.md)  
   
  [如何：查找查询结果中的最小值或最大值](how-to-find-the-minimum-or-maximum-value-in-a-query-result.md)  
   
  [如何：分配存储过程以便执行更新、插入和删除操作（O/R 设计器）](https://msdn.microsoft.com/library/e88224ab-ff61-4a3a-b6b8-6f3694546cac)  
   
 ## <a name="featured-book-chapters"></a>重要的章节  
- [第 17 章： LINQ](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/ff652502(v=orm.10))在[Visual Basic 2008 编程](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/ff652504(v=orm.10))  
+ [第 17 章：LINQ](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/ff652502(v=orm.10))在[Visual Basic 2008 编程](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/ff652504(v=orm.10))  
   
 ## <a name="see-also"></a>请参阅
 
-- [LINQ（语言集成查询）](../../concepts/linq/index.md)  
-- [Visual Basic 中的 LINQ to XML 概述](../../language-features/xml/overview-of-linq-to-xml.md)  
-- [LINQ to DataSet 概述](~/docs/framework/data/adonet/linq-to-dataset-overview.md)  
-- [LINQ to SQL](~/docs/framework/data/adonet/sql/linq/index.md)  
-- [Visual Studio 中的 LINQ to SQL 工具](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2)  
+- [LINQ（语言集成查询）](../../concepts/linq/index.md)
+- [Visual Basic 中的 LINQ to XML 概述](../../language-features/xml/overview-of-linq-to-xml.md)
+- [LINQ to DataSet 概述](~/docs/framework/data/adonet/linq-to-dataset-overview.md)
+- [LINQ to SQL](~/docs/framework/data/adonet/sql/linq/index.md)
+- [Visual Studio 中的 LINQ to SQL 工具](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2)
 - [DataContext 方法（O/R 设计器）](/visualstudio/data-tools/datacontext-methods-o-r-designer)

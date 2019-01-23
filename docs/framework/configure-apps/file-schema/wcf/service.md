@@ -1,20 +1,20 @@
 ---
-title: '&lt;服务&gt;'
+title: '&lt;service&gt;'
 ms.date: 03/30/2017
 ms.assetid: 13123dd6-c4a9-4a04-a984-df184b851788
-ms.openlocfilehash: ef0ae70440323c1ede5deca60e88f29861760e68
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: e91e04c602fd867e329477015fc0a8354ae26a05
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54145505"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54535003"
 ---
-# <a name="ltservicegt"></a>&lt;服务&gt;
+# <a name="ltservicegt"></a>&lt;service&gt;
 `service` 元素包含 Windows Communication Foundation (WCF) 服务的设置。 它还包含公开此服务的终结点。  
   
  \<system.ServiceModel>  
 \<services>  
-\<服务 >  
+\<service>  
   
 ## <a name="syntax"></a>语法  
   
@@ -38,8 +38,8 @@ ms.locfileid: "54145505"
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<终结点 >](../../../../../docs/framework/configure-apps/file-schema/wcf/endpoint-element.md)|公开此服务的 `endpoint` 元素的集合。|  
-|[\<主机 >](../../../../../docs/framework/configure-apps/file-schema/wcf/host.md)|指定此服务实例的主机。 此元素的类型为 <xref:System.ServiceModel.Configuration.HostElement>。|  
+|[\<endpoint>](../../../../../docs/framework/configure-apps/file-schema/wcf/endpoint-element.md)|公开此服务的 `endpoint` 元素的集合。|  
+|[\<host>](../../../../../docs/framework/configure-apps/file-schema/wcf/host.md)|指定此服务实例的主机。 此元素的类型为 <xref:System.ServiceModel.Configuration.HostElement>。|  
   
 ### <a name="parent-elements"></a>父元素  
   
@@ -68,6 +68,6 @@ ms.locfileid: "54145505"
 </service>
 ```  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.ServiceModel.Configuration.ServiceElement>  
- [配置服务](../../../../../docs/framework/wcf/configuring-services.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.ServiceModel.Configuration.ServiceElement>
+- [配置服务](../../../../../docs/framework/wcf/configuring-services.md)

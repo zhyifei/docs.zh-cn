@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9aef8c40be2456532bd6df6feb8d286cdaeefa7f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 1beb76012d5f0351ee644c8dea89cabdbe2c8970
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33445626"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54555019"
 ---
 # <a name="imetadataassemblyimportenumexportedtypes-method"></a>IMetaDataAssemblyImport::EnumExportedTypes 方法
-枚举当前元数据范围内的程序集清单引用的导出的类型。  
+枚举当前元数据范围中的程序集清单中引用的导出的类型。  
   
 ## <a name="syntax"></a>语法  
   
@@ -40,16 +40,16 @@ HRESULT EnumExportedTypes (
   
 #### <a name="parameters"></a>参数  
  `phEnum`  
- [在中，out]枚举数指向的指针。 这必须是一个为 null 的值时`EnumExportedTypes`首次调用方法。  
+ [in、 out]一个指向枚举器。 这必须是一个 null 值时`EnumExportedTypes`第一次调用方法。  
   
  `rExportedTypes`  
  [out]枚举`mdExportedType`元数据标记。  
   
  `cMax`  
- [in]最大数`mdExportedType`可以放置在令牌`rExportedTypes`数组。  
+ [in]最大数目`mdExportedType`令牌可以置于`rExportedTypes`数组。  
   
  `pcTokens`  
- [out]数`mdExportedType`令牌实际放入`rExportedTypes`。  
+ [out]数`mdExportedType`令牌实际置于`rExportedTypes`。  
   
 ## <a name="return-value"></a>返回值  
   
@@ -59,13 +59,13 @@ HRESULT EnumExportedTypes (
 |`S_FALSE`|没有要枚举的标记。 在这种情况下，`pcTokens`设置为零。|  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** Cor.h  
   
  **库：** 用作 MsCorEE.dll 中的资源  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>请参阅  
- [IMetaDataAssemblyImport 接口](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)
+## <a name="see-also"></a>请参阅
+- [IMetaDataAssemblyImport 接口](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)

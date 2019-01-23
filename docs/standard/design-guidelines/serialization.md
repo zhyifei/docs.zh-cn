@@ -4,12 +4,12 @@ ms.date: 10/22/2008
 ms.technology: dotnet-standard
 ms.assetid: bebb27ac-9712-4196-9931-de19fc04dbac
 author: KrzysztofCwalina
-ms.openlocfilehash: 3e21251710a44764bd06fbce83f97288b6925bc2
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: c2a5a69186e41642abf77357db8b04e2611a43f4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53155101"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54513124"
 ---
 # <a name="serialization"></a>序列化
 序列化是将对象转换为可以轻松地保持或传输的格式的过程。 例如，可以将对象序列化，使用 HTTP 在 Internet 上传输它，并在目标计算机上对其进行反序列化。  
@@ -46,7 +46,7 @@ ms.locfileid: "53155101"
   
  **✓ 考虑**使用序列化回调来初始化反序列化的实例。  
   
- 反序列化对象时，不调用任何构造函数。 （有规则的例外情况。 集合的构造函数标有<xref:System.Runtime.Serialization.CollectionDataContractAttribute>反序列化期间调用。)因此，在正常构造期间执行的任何逻辑需要作为一个序列化回调实现。  
+ 反序列化对象时，不调用任何构造函数。 （该规则有例外。 以 <xref:System.Runtime.Serialization.CollectionDataContractAttribute>标记的集合的构造函数在反序列化期间会被调用。)因此，在正常构造期间执行的任何逻辑都需要实现为序列化回调之一。  
   
  `OnDeserializedAttribute` 是最常使用的回调特性。 此系列中的其他特性还有 <xref:System.Runtime.Serialization.OnDeserializingAttribute>、<xref:System.Runtime.Serialization.OnSerializingAttribute> 和 <xref:System.Runtime.Serialization.OnSerializedAttribute>。 这些特性可分别用来标记在反序列化之前、序列化之前以及序列化之后执行的回调。  
   
@@ -99,9 +99,9 @@ public class Person : ISerializable {
   
  *部分版权 © 2005, 2009 Microsoft Corporation。保留所有权利。*  
   
- *通过从 Pearson Education，Inc.的权限重新打印[Framework 设计准则：约定、 语法和模式的可重用.NET 库，第 2 版](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619)Krzysztof Cwalina 和 Brad Abrams，作为 Microsoft Windows 开发系列的一部分发布 2008 年 10 月 22 日由 Addison-wesley 专业人员。*  
+ *经 Pearson Education, Inc 授权，转载自[框架设计准则：可重用的 .NET 库的约定、习惯用语和模式，第 2 版](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) 作者：Krzysztof Cwalina 和 Brad Abrams，由 Addison Wesley Professional 于 2008 年 10 月 22 日印发，作为 Microsoft Windows 开发系列的一部分。*  
   
 ## <a name="see-also"></a>请参阅
 
-- [框架设计指南](../../../docs/standard/design-guidelines/index.md)  
+- [框架设计指南](../../../docs/standard/design-guidelines/index.md)
 - [使用准则](../../../docs/standard/design-guidelines/usage-guidelines.md)
