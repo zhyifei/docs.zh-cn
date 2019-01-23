@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9ae5c16f9f508511e4a15b2eae2c28d68238f1d7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: f7bfdcc3c8328d71146732fc4ba5664ebee9bea2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33415888"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54574867"
 ---
 # <a name="icordebugmoduleisinmemory-method"></a>ICorDebugModule::IsInMemory 方法
-获取一个值，该值指示仅在内存中是否存在此模块。  
+获取一个值，指示仅在内存中是否存在此模块。  
   
 ## <a name="syntax"></a>语法  
   
@@ -40,17 +40,17 @@ HRESULT IsInMemory(
  [out]`true`如果此模块只存在于内存; 否则为`false`。  
   
 ## <a name="remarks"></a>备注  
- 公共语言运行时 (CLR) 支持原始字节流中的模块加载。 进行此类模块称为*内存中模块*和磁盘上不存在。  
+ 公共语言运行时 (CLR) 支持原始字节流中的模块的加载。 进行此类模块称为*内存中模块*和磁盘上不存在。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** CorDebug.idl、 CorDebug.h  
   
  **库：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>请参阅  
-    
- 
+## <a name="see-also"></a>请参阅
+
+

@@ -2,12 +2,12 @@
 title: 修改 SQL 生成
 ms.date: 03/30/2017
 ms.assetid: 2188a39d-46ed-4a8b-906a-c9f15e6fefd1
-ms.openlocfilehash: bfeb4f826022d39b2a45132a5b2bf344ef4c99c6
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 0bacd974c4eb9bc98851d35d574a184fde4d9468
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53127064"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54580052"
 ---
 # <a name="modification-sql-generation"></a>修改 SQL 生成
 本节讨论如何开发用于（符合 SQL:1999 的数据库）提供程序的修改 SQL 生成模块。 此模块负责将修改命令目录树转换成适当的 SQL INSERT、UPDATE 或 DELETE 语句。  
@@ -27,7 +27,7 @@ ms.locfileid: "53127064"
   
  DbModificationCommandTree 及其实现所产生的[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]始终表示单行操作。 本节将介绍这些类型及其在 .NET Framework 版本 3.5 中的约束。  
   
- ![关系图](../../../../../docs/framework/data/adonet/ef/media/558ba7b3-dd19-48d0-b91e-30a76415bf5f.gif "558ba7b3-dd19-48d0-b91e-30a76415bf5f")  
+ ![Diagram](../../../../../docs/framework/data/adonet/ef/media/558ba7b3-dd19-48d0-b91e-30a76415bf5f.gif "558ba7b3-dd19-48d0-b91e-30a76415bf5f")  
   
  DbModificationCommandTree 具有 Target 属性，该属性表示修改操作的目标集。 Target 的 Expression 属性定义输入集，始终为 DbScanExpression。  DbScanExpression 可以表示表或视图，或一组数据使用查询定义如果元数据属性"Defining Query"其目标的非 null。  
   
@@ -286,5 +286,5 @@ delete [dbo].[Categories]
 where ([CategoryID] = @p0)  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [编写实体框架数据提供程序](../../../../../docs/framework/data/adonet/ef/writing-an-ef-data-provider.md)
+## <a name="see-also"></a>请参阅
+- [编写实体框架数据提供程序](../../../../../docs/framework/data/adonet/ef/writing-an-ef-data-provider.md)

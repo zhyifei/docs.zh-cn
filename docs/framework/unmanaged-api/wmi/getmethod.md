@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 133e056663b208f2a0d12f05f31daaca95676dc5
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 5a405c5e245558e6b8d1b389bfc143faae4550a5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53152313"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54577584"
 ---
 # <a name="getmethod-function"></a>GetMethod 函数
 检索有关指定方法的信息。
@@ -86,5 +86,5 @@ Windows 管理可以设置[IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbe
   
  **.NET Framework 版本：**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
-## <a name="see-also"></a>请参阅  
-[WMI 和性能计数器 （非托管 API 参考）](index.md)
+## <a name="see-also"></a>请参阅
+- [WMI 和性能计数器 （非托管 API 参考）](index.md)

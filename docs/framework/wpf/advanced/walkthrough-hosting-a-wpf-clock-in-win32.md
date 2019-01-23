@@ -1,19 +1,19 @@
 ---
-title: 演练：在 Win32 中承载 WPF 时钟
+title: 演练：承载 WPF 时钟在 Win32 中
 ms.date: 03/30/2017
 helpviewer_keywords:
 - interoperability [WPF], tutorials
 - Win32 code [WPF], WPF interoperation
 - interoperability [WPF], Win32
 ms.assetid: 555e55a7-0851-4ec8-b1c6-0acba7e9b648
-ms.openlocfilehash: ce8209c89430988f57c211d388c6e73b2dc17004
-ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
+ms.openlocfilehash: 5cccc89c8346358bc4f719e1b089a181dd81f970
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46562250"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54579766"
 ---
-# <a name="walkthrough-hosting-a-wpf-clock-in-win32"></a>演练：在 Win32 中承载 WPF 时钟
+# <a name="walkthrough-hosting-a-wpf-clock-in-win32"></a>演练：承载 WPF 时钟在 Win32 中
 若要将放[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]内[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]应用程序，使用<xref:System.Windows.Interop.HwndSource>，其中提供了包含的 HWND 你[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]内容。 首先创建<xref:System.Windows.Interop.HwndSource>，为其赋予类似于 CreateWindow 的参数。  然后，通知<xref:System.Windows.Interop.HwndSource>有关[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]您要在其中包含内容。  最后，获取共 HWND <xref:System.Windows.Interop.HwndSource>。 本演练演示如何创建混合[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]内[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]重新实现操作系统的应用程序**日期和时间属性**对话框。  
   
 ## <a name="prerequisites"></a>系统必备  
@@ -48,9 +48,9 @@ ms.locfileid: "46562250"
 ## <a name="clr"></a>/clr  
  第一步是将此非托管[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]项目转换成了一可调用托管代码。  使用 /clr 编译器选项，它将链接到你想要使用，并调整与一起使用的 Main 方法所需的 Dll [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]。  
   
- 若要启用的托管代码的 c + + 项目： 右键单击 win32clock 项目，然后选择**属性**。  上**常规**属性页 （默认值），更改到的公共语言运行时支持`/clr`。  
+ 若要启用 c + + 项目内的托管代码使用：右键单击 win32clock 项目，然后选择**属性**。  上**常规**属性页 （默认值），更改到的公共语言运行时支持`/clr`。  
   
- 接下来，添加对所需的 Dll 的引用[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]: PresentationCore.dll、 PresentationFramework.dll、 System.dll、 WindowsBase.dll、 UIAutomationProvider.dll 和 UIAutomationTypes.dll。 （以下说明假定操作系统安装在 C: 驱动器上。）  
+ 接下来，添加对所需的 Dll 的引用[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]:PresentationCore.dll、 PresentationFramework.dll、 System.dll、 WindowsBase.dll、 UIAutomationProvider.dll 和 UIAutomationTypes.dll。 （以下说明假定操作系统安装在 C: 驱动器上。）  
   
 1.  右键单击 win32clock 项目，然后选择**引用...**，并在该对话框：  
   
@@ -58,13 +58,13 @@ ms.locfileid: "46562250"
   
 3.  单击**添加新引用**、 单击浏览选项卡中，输入 C:\Program Files\Reference Assemblies\Microsoft\Framework\v3.0\PresentationCore.dll，并单击确定。  
   
-4.  对 PresentationFramework.dll 重复相同步骤：C:\Program Files\Reference Assemblies\Microsoft\Framework\v3.0\PresentationFramework.dll。  
+4.  对 PresentationFramework.dll 重复：C:\Program Files\Reference Assemblies\Microsoft\Framework\v3.0\PresentationFramework.dll.  
   
-5.  对 WindowsBase.dll 重复相同步骤：C:\Program Files\Reference Assemblies\Microsoft\Framework\v3.0\WindowsBase.dll。  
+5.  对 WindowsBase.dll 重复：C:\Program Files\Reference Assemblies\Microsoft\Framework\v3.0\WindowsBase.dll。  
   
-6.  对 UIAutomationTypes.dll 重复相同步骤：C:\Program Files\Reference Assemblies\Microsoft\Framework\v3.0\UIAutomationTypes.dll。  
+6.  对 UIAutomationTypes.dll 重复：C:\Program Files\Reference Assemblies\Microsoft\Framework\v3.0\UIAutomationTypes.dll.  
   
-7.  对 UIAutomationProvider.dll 重复相同步骤：C:\Program Files\Reference Assemblies\Microsoft\Framework\v3.0\UIAutomationProvider.dll。  
+7.  对 UIAutomationProvider.dll 重复：C:\Program Files\Reference Assemblies\Microsoft\Framework\v3.0\UIAutomationProvider.dll.  
   
 8.  单击**添加新引用**，选择 System.dll，然后单击**确定**。  
   
@@ -225,7 +225,7 @@ HWND clock = ManagedCode::GetHwnd(hDlg, point.x, point.y, width, height);
   
  若要进行比较将最终结果与生成此屏幕截图中的代码，请参阅[Win32 时钟互操作示例](https://go.microsoft.com/fwlink/?LinkID=160051)。  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Windows.Interop.HwndSource>  
- [WPF 和 Win32 互操作](../../../../docs/framework/wpf/advanced/wpf-and-win32-interoperation.md)  
- [Win32 时钟互操作示例](https://go.microsoft.com/fwlink/?LinkID=160051)
+## <a name="see-also"></a>请参阅
+- <xref:System.Windows.Interop.HwndSource>
+- [WPF 和 Win32 互操作](../../../../docs/framework/wpf/advanced/wpf-and-win32-interoperation.md)
+- [Win32 时钟互操作示例](https://go.microsoft.com/fwlink/?LinkID=160051)
