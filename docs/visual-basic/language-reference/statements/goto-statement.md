@@ -13,12 +13,12 @@ helpviewer_keywords:
 - conditional statements [Visual Basic], GoTo statement
 - GoTo statement [Visual Basic], syntax
 ms.assetid: 313274c2-8ab3-4b9c-9ba3-0fd6798e4f6d
-ms.openlocfilehash: adb7668b6a818b2042a38f9458685a6f93085dc8
-ms.sourcegitcommit: 869b5832b667915ac4a5dd8c86b1109ed26b6c08
+ms.openlocfilehash: 729ff2a9cbeacaefdf0452a6c5868c229a8d05b7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/28/2018
-ms.locfileid: "39332982"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54582521"
 ---
 # <a name="goto-statement"></a>GoTo 语句
 无条件地分支到过程中指定的行。  
@@ -31,10 +31,10 @@ GoTo line
   
 ## <a name="part"></a>部件  
  `line`  
- 必须的。 所有行标签。  
+ 必需。 所有行标签。  
   
 ## <a name="remarks"></a>备注  
- `GoTo`语句只能跳转到它在其中出现的过程中的行。 在行必须具有的行标签`GoTo`可以引用。 有关详细信息，请参阅[如何： 标签语句](../../../visual-basic/programming-guide/program-structure/how-to-label-statements.md)。  
+ `GoTo`语句只能跳转到它在其中出现的过程中的行。 在行必须具有的行标签`GoTo`可以引用。 有关详细信息，请参阅[如何：标记语句](../../../visual-basic/programming-guide/program-structure/how-to-label-statements.md)。  
   
 > [!NOTE]
 >  `GoTo` 语句可以使代码难以阅读和维护。 只要有可能，请改为使用控制结构。 有关详细信息，请参阅[控制流](../../../visual-basic/programming-guide/language-features/control-flow/index.md)。  
@@ -62,12 +62,12 @@ Try 构造中的有效和无效的分支
   
  [!code-vb[VbVbalrStatements#31](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/goto-statement_1.vb)]  
   
-## <a name="see-also"></a>请参阅  
- [Do...Loop 语句](../../../visual-basic/language-reference/statements/do-loop-statement.md)  
- [For...Next 语句](../../../visual-basic/language-reference/statements/for-next-statement.md)  
- [For Each...Next 语句](../../../visual-basic/language-reference/statements/for-each-next-statement.md)  
- [If...Then...Else 语句](../../../visual-basic/language-reference/statements/if-then-else-statement.md)  
- [Select...Case 语句](../../../visual-basic/language-reference/statements/select-case-statement.md)  
- [Try...Catch...Finally 语句](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)  
- [While...End While 语句](../../../visual-basic/language-reference/statements/while-end-while-statement.md)  
- [With...End With 语句](../../../visual-basic/language-reference/statements/with-end-with-statement.md)
+## <a name="see-also"></a>请参阅
+- [Do...Loop 语句](../../../visual-basic/language-reference/statements/do-loop-statement.md)
+- [For...Next 语句](../../../visual-basic/language-reference/statements/for-next-statement.md)
+- [For Each...Next 语句](../../../visual-basic/language-reference/statements/for-each-next-statement.md)
+- [If...Then...Else 语句](../../../visual-basic/language-reference/statements/if-then-else-statement.md)
+- [Select...Case 语句](../../../visual-basic/language-reference/statements/select-case-statement.md)
+- [Try...Catch...Finally 语句](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)
+- [While...End While 语句](../../../visual-basic/language-reference/statements/while-end-while-statement.md)
+- [With...End With 语句](../../../visual-basic/language-reference/statements/with-end-with-statement.md)
