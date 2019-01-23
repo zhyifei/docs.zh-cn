@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3c46e85309f1e6867899a3b0fb123f4a3e535493
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: a0fcd03fde49622a8c388bb821549cec2cf3a154
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33411760"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54531010"
 ---
-# <a name="icordebugeditandcontinuesnapshotgetrodatarva-method"></a><span data-ttu-id="d6b56-102">ICorDebugEditAndContinueSnapshot::GetRoDataRVA 方法</span><span class="sxs-lookup"><span data-stu-id="d6b56-102">ICorDebugEditAndContinueSnapshot::GetRoDataRVA Method</span></span>
-<span data-ttu-id="d6b56-103">`GetRoDataRVA` 已过时。</span><span class="sxs-lookup"><span data-stu-id="d6b56-103">`GetRoDataRVA` is obsolete.</span></span> <span data-ttu-id="d6b56-104">请勿调用此方法。</span><span class="sxs-lookup"><span data-stu-id="d6b56-104">Do not call this method.</span></span>  
+# <a name="icordebugeditandcontinuesnapshotgetrodatarva-method"></a><span data-ttu-id="cb26d-102">ICorDebugEditAndContinueSnapshot::GetRoDataRVA 方法</span><span class="sxs-lookup"><span data-stu-id="cb26d-102">ICorDebugEditAndContinueSnapshot::GetRoDataRVA Method</span></span>
+<span data-ttu-id="cb26d-103">`GetRoDataRVA` 已过时。</span><span class="sxs-lookup"><span data-stu-id="cb26d-103">`GetRoDataRVA` is obsolete.</span></span> <span data-ttu-id="cb26d-104">请勿调用此方法。</span><span class="sxs-lookup"><span data-stu-id="cb26d-104">Do not call this method.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="d6b56-105">请参阅</span><span class="sxs-lookup"><span data-stu-id="d6b56-105">See Also</span></span>  
- [<span data-ttu-id="d6b56-106">调试接口</span><span class="sxs-lookup"><span data-stu-id="d6b56-106">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a><span data-ttu-id="cb26d-105">请参阅</span><span class="sxs-lookup"><span data-stu-id="cb26d-105">See also</span></span>
+- [<span data-ttu-id="cb26d-106">调试接口</span><span class="sxs-lookup"><span data-stu-id="cb26d-106">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

@@ -1,5 +1,5 @@
 ---
-title: 如何：创建发行者策略
+title: 如何：创建发布服务器策略
 ms.date: 03/30/2017
 helpviewer_keywords:
 - publisher policy assembly
@@ -9,25 +9,25 @@ helpviewer_keywords:
 ms.assetid: 8046bc5d-2fa9-4277-8a5e-6dcc96c281d9
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: e7cac3c7e6c588a82e9dfff169ba7b7aa72c35f8
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 3969f066c0a17424d2c4527d2b4661b30f5bb6d4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48838463"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54530520"
 ---
-# <a name="how-to-create-a-publisher-policy"></a><span data-ttu-id="38a13-102">如何：创建发行者策略</span><span class="sxs-lookup"><span data-stu-id="38a13-102">How to: Create a Publisher Policy</span></span>
-<span data-ttu-id="38a13-103">程序集的供应商可以声明应用程序应通过包括发布服务器策略文件与升级后的程序集使用的程序集的较新版本。</span><span class="sxs-lookup"><span data-stu-id="38a13-103">Vendors of assemblies can state that applications should use a newer version of an assembly by including a publisher policy file with the upgraded assembly.</span></span> <span data-ttu-id="38a13-104">发布服务器策略文件指定程序集重定向和基本代码设置，并为应用程序配置文件使用相同的格式。</span><span class="sxs-lookup"><span data-stu-id="38a13-104">The publisher policy file specifies assembly redirection and code base settings, and uses the same format as an application configuration file.</span></span> <span data-ttu-id="38a13-105">发布服务器策略文件编译到程序集中，放置在全局程序集缓存中。</span><span class="sxs-lookup"><span data-stu-id="38a13-105">The publisher policy file is compiled into an assembly and placed in the global assembly cache.</span></span>  
+# <a name="how-to-create-a-publisher-policy"></a><span data-ttu-id="2900d-102">如何：创建发布服务器策略</span><span class="sxs-lookup"><span data-stu-id="2900d-102">How to: Create a Publisher Policy</span></span>
+<span data-ttu-id="2900d-103">程序集的供应商可以声明应用程序应通过包括发布服务器策略文件与升级后的程序集使用的程序集的较新版本。</span><span class="sxs-lookup"><span data-stu-id="2900d-103">Vendors of assemblies can state that applications should use a newer version of an assembly by including a publisher policy file with the upgraded assembly.</span></span> <span data-ttu-id="2900d-104">发布服务器策略文件指定程序集重定向和基本代码设置，并为应用程序配置文件使用相同的格式。</span><span class="sxs-lookup"><span data-stu-id="2900d-104">The publisher policy file specifies assembly redirection and code base settings, and uses the same format as an application configuration file.</span></span> <span data-ttu-id="2900d-105">发布服务器策略文件编译到程序集中，放置在全局程序集缓存中。</span><span class="sxs-lookup"><span data-stu-id="2900d-105">The publisher policy file is compiled into an assembly and placed in the global assembly cache.</span></span>  
   
- <span data-ttu-id="38a13-106">创建发布者策略时涉及的是三个步骤：</span><span class="sxs-lookup"><span data-stu-id="38a13-106">There are three steps involved in creating a publisher policy:</span></span>  
+ <span data-ttu-id="2900d-106">创建发布者策略时涉及的是三个步骤：</span><span class="sxs-lookup"><span data-stu-id="2900d-106">There are three steps involved in creating a publisher policy:</span></span>  
   
-1.  <span data-ttu-id="38a13-107">创建发布服务器策略文件。</span><span class="sxs-lookup"><span data-stu-id="38a13-107">Create a publisher policy file.</span></span>  
+1.  <span data-ttu-id="2900d-107">创建发布服务器策略文件。</span><span class="sxs-lookup"><span data-stu-id="2900d-107">Create a publisher policy file.</span></span>  
   
-2.  <span data-ttu-id="38a13-108">创建发行者策略程序集。</span><span class="sxs-lookup"><span data-stu-id="38a13-108">Create a publisher policy assembly.</span></span>  
+2.  <span data-ttu-id="2900d-108">创建发行者策略程序集。</span><span class="sxs-lookup"><span data-stu-id="2900d-108">Create a publisher policy assembly.</span></span>  
   
-3.  <span data-ttu-id="38a13-109">将发行者策略程序集添加到全局程序集缓存中。</span><span class="sxs-lookup"><span data-stu-id="38a13-109">Add the publisher policy assembly to the global assembly cache.</span></span>  
+3.  <span data-ttu-id="2900d-109">将发行者策略程序集添加到全局程序集缓存中。</span><span class="sxs-lookup"><span data-stu-id="2900d-109">Add the publisher policy assembly to the global assembly cache.</span></span>  
   
- <span data-ttu-id="38a13-110">发布服务器策略的架构所述[重定向程序集版本](../../../docs/framework/configure-apps/redirect-assembly-versions.md)。</span><span class="sxs-lookup"><span data-stu-id="38a13-110">The schema for publisher policy is described in [Redirecting Assembly Versions](../../../docs/framework/configure-apps/redirect-assembly-versions.md).</span></span> <span data-ttu-id="38a13-111">下面的示例显示了发布服务器策略文件，将重定向的一个版本`myAssembly`到另一个。</span><span class="sxs-lookup"><span data-stu-id="38a13-111">The following example shows a publisher policy file that redirects one version of `myAssembly` to another.</span></span>  
+ <span data-ttu-id="2900d-110">发布服务器策略的架构所述[重定向程序集版本](../../../docs/framework/configure-apps/redirect-assembly-versions.md)。</span><span class="sxs-lookup"><span data-stu-id="2900d-110">The schema for publisher policy is described in [Redirecting Assembly Versions](../../../docs/framework/configure-apps/redirect-assembly-versions.md).</span></span> <span data-ttu-id="2900d-111">下面的示例显示了发布服务器策略文件，将重定向的一个版本`myAssembly`到另一个。</span><span class="sxs-lookup"><span data-stu-id="2900d-111">The following example shows a publisher policy file that redirects one version of `myAssembly` to another.</span></span>  
   
 ```xml  
 <configuration>  
@@ -46,67 +46,67 @@ ms.locfileid: "48838463"
 </configuration>  
 ```  
   
- <span data-ttu-id="38a13-112">若要了解如何指定基本代码，请参阅[指定程序集位置](../../../docs/framework/configure-apps/specify-assembly-location.md)。</span><span class="sxs-lookup"><span data-stu-id="38a13-112">To learn how to specify a code base, see [Specifying an Assembly's Location](../../../docs/framework/configure-apps/specify-assembly-location.md).</span></span>  
+ <span data-ttu-id="2900d-112">若要了解如何指定基本代码，请参阅[指定程序集位置](../../../docs/framework/configure-apps/specify-assembly-location.md)。</span><span class="sxs-lookup"><span data-stu-id="2900d-112">To learn how to specify a code base, see [Specifying an Assembly's Location](../../../docs/framework/configure-apps/specify-assembly-location.md).</span></span>  
   
-## <a name="creating-the-publisher-policy-assembly"></a><span data-ttu-id="38a13-113">创建发行者策略程序集</span><span class="sxs-lookup"><span data-stu-id="38a13-113">Creating the Publisher Policy Assembly</span></span>  
- <span data-ttu-id="38a13-114">使用[程序集链接器 (Al.exe)](../../../docs/framework/tools/al-exe-assembly-linker.md)创建发行者策略程序集。</span><span class="sxs-lookup"><span data-stu-id="38a13-114">Use the [Assembly Linker (Al.exe)](../../../docs/framework/tools/al-exe-assembly-linker.md) to create the publisher policy assembly.</span></span>  
+## <a name="creating-the-publisher-policy-assembly"></a><span data-ttu-id="2900d-113">创建发行者策略程序集</span><span class="sxs-lookup"><span data-stu-id="2900d-113">Creating the Publisher Policy Assembly</span></span>  
+ <span data-ttu-id="2900d-114">使用[程序集链接器 (Al.exe)](../../../docs/framework/tools/al-exe-assembly-linker.md)创建发行者策略程序集。</span><span class="sxs-lookup"><span data-stu-id="2900d-114">Use the [Assembly Linker (Al.exe)](../../../docs/framework/tools/al-exe-assembly-linker.md) to create the publisher policy assembly.</span></span>  
   
-#### <a name="to-create-a-publisher-policy-assembly"></a><span data-ttu-id="38a13-115">若要创建发行者策略程序集</span><span class="sxs-lookup"><span data-stu-id="38a13-115">To create a publisher policy assembly</span></span>  
+#### <a name="to-create-a-publisher-policy-assembly"></a><span data-ttu-id="2900d-115">若要创建发行者策略程序集</span><span class="sxs-lookup"><span data-stu-id="2900d-115">To create a publisher policy assembly</span></span>  
   
-1.  <span data-ttu-id="38a13-116">在命令提示符下键入以下命令：</span><span class="sxs-lookup"><span data-stu-id="38a13-116">Type the following command at the command prompt:</span></span>  
+1.  <span data-ttu-id="2900d-116">在命令提示符下键入以下命令：</span><span class="sxs-lookup"><span data-stu-id="2900d-116">Type the following command at the command prompt:</span></span>  
   
-     <span data-ttu-id="38a13-117">**al /link:** *publisherPolicyFile* **/out:** *publisherPolicyAssemblyFile* **/keyfile:** *keyPairFile* **/platform:** *processorArchitecture*</span><span class="sxs-lookup"><span data-stu-id="38a13-117">**al /link:** *publisherPolicyFile* **/out:** *publisherPolicyAssemblyFile* **/keyfile:** *keyPairFile* **/platform:** *processorArchitecture*</span></span>  
+     <span data-ttu-id="2900d-117">**al /link:** *publisherPolicyFile* **/out:** *publisherPolicyAssemblyFile* **/keyfile:** *keyPairFile* **/platform:** *processorArchitecture*</span><span class="sxs-lookup"><span data-stu-id="2900d-117">**al /link:** *publisherPolicyFile* **/out:** *publisherPolicyAssemblyFile* **/keyfile:** *keyPairFile* **/platform:** *processorArchitecture*</span></span>  
   
-     <span data-ttu-id="38a13-118">在此命令：</span><span class="sxs-lookup"><span data-stu-id="38a13-118">In this command:</span></span>  
+     <span data-ttu-id="2900d-118">在此命令：</span><span class="sxs-lookup"><span data-stu-id="2900d-118">In this command:</span></span>  
   
-    -   <span data-ttu-id="38a13-119">*PublisherPolicyFile*参数是发布服务器策略文件的名称。</span><span class="sxs-lookup"><span data-stu-id="38a13-119">The *publisherPolicyFile* argument is the name of the publisher policy file.</span></span>  
+    -   <span data-ttu-id="2900d-119">*PublisherPolicyFile*参数是发布服务器策略文件的名称。</span><span class="sxs-lookup"><span data-stu-id="2900d-119">The *publisherPolicyFile* argument is the name of the publisher policy file.</span></span>  
   
-    -   <span data-ttu-id="38a13-120">*PublisherPolicyAssemblyFile*参数是此命令生成的发布服务器策略程序集的名称。</span><span class="sxs-lookup"><span data-stu-id="38a13-120">The *publisherPolicyAssemblyFile* argument is the name of the publisher policy assembly that results from this command.</span></span> <span data-ttu-id="38a13-121">程序集文件名称必须遵循格式：</span><span class="sxs-lookup"><span data-stu-id="38a13-121">The assembly file name must follow the format:</span></span>  
+    -   <span data-ttu-id="2900d-120">*PublisherPolicyAssemblyFile*参数是此命令生成的发布服务器策略程序集的名称。</span><span class="sxs-lookup"><span data-stu-id="2900d-120">The *publisherPolicyAssemblyFile* argument is the name of the publisher policy assembly that results from this command.</span></span> <span data-ttu-id="2900d-121">程序集文件名称必须遵循格式：</span><span class="sxs-lookup"><span data-stu-id="2900d-121">The assembly file name must follow the format:</span></span>  
   
-         <span data-ttu-id="38a13-122">**策略。**</span><span class="sxs-lookup"><span data-stu-id="38a13-122">**policy.**</span></span> <span data-ttu-id="38a13-123">*majorNumber* **。**</span><span class="sxs-lookup"><span data-stu-id="38a13-123">*majorNumber* **.**</span></span> <span data-ttu-id="38a13-124">*minorNumber* **。**</span><span class="sxs-lookup"><span data-stu-id="38a13-124">*minorNumber* **.**</span></span> <span data-ttu-id="38a13-125">*mainAssemblyName* **.dll**</span><span class="sxs-lookup"><span data-stu-id="38a13-125">*mainAssemblyName* **.dll**</span></span>  
+         <span data-ttu-id="2900d-122">**策略。**</span><span class="sxs-lookup"><span data-stu-id="2900d-122">**policy.**</span></span> <span data-ttu-id="2900d-123">*majorNumber* **。**</span><span class="sxs-lookup"><span data-stu-id="2900d-123">*majorNumber* **.**</span></span> <span data-ttu-id="2900d-124">*minorNumber* **。**</span><span class="sxs-lookup"><span data-stu-id="2900d-124">*minorNumber* **.**</span></span> <span data-ttu-id="2900d-125">*mainAssemblyName* **.dll**</span><span class="sxs-lookup"><span data-stu-id="2900d-125">*mainAssemblyName* **.dll**</span></span>  
   
-    -   <span data-ttu-id="38a13-126">*KeyPairFile*参数是包含密钥对的文件的名称。</span><span class="sxs-lookup"><span data-stu-id="38a13-126">The *keyPairFile* argument is the name of the file containing the key pair.</span></span> <span data-ttu-id="38a13-127">您必须签署的程序集和发行者策略程序集具有相同的密钥对。</span><span class="sxs-lookup"><span data-stu-id="38a13-127">You must sign the assembly and publisher policy assembly with the same key pair.</span></span>  
+    -   <span data-ttu-id="2900d-126">*KeyPairFile*参数是包含密钥对的文件的名称。</span><span class="sxs-lookup"><span data-stu-id="2900d-126">The *keyPairFile* argument is the name of the file containing the key pair.</span></span> <span data-ttu-id="2900d-127">您必须签署的程序集和发行者策略程序集具有相同的密钥对。</span><span class="sxs-lookup"><span data-stu-id="2900d-127">You must sign the assembly and publisher policy assembly with the same key pair.</span></span>  
   
-    -   <span data-ttu-id="38a13-128">*ProcessorArchitecture*参数标识的特定于处理器的程序集的目标平台。</span><span class="sxs-lookup"><span data-stu-id="38a13-128">The *processorArchitecture* argument identifies the platform targeted by a processor-specific assembly.</span></span>  
+    -   <span data-ttu-id="2900d-128">*ProcessorArchitecture*参数标识的特定于处理器的程序集的目标平台。</span><span class="sxs-lookup"><span data-stu-id="2900d-128">The *processorArchitecture* argument identifies the platform targeted by a processor-specific assembly.</span></span>  
   
         > [!NOTE]
-        >  <span data-ttu-id="38a13-129">面向特定的处理器体系结构的功能是.NET Framework 2.0 版中的新增功能。</span><span class="sxs-lookup"><span data-stu-id="38a13-129">The ability to target a specific processor architecture is new in the .NET Framework version 2.0.</span></span>  
+        >  <span data-ttu-id="2900d-129">面向特定的处理器体系结构的功能是.NET Framework 2.0 版中的新增功能。</span><span class="sxs-lookup"><span data-stu-id="2900d-129">The ability to target a specific processor architecture is new in the .NET Framework version 2.0.</span></span>  
   
-     <span data-ttu-id="38a13-130">以下命令创建名为的发行者策略程序集`policy.1.0.myAssembly`发布服务器策略文件中名为`pub.config`，为使用的密钥对中的程序集分配强名称`sgKey.snk`文件，并指定该程序集针对 x86处理器体系结构。</span><span class="sxs-lookup"><span data-stu-id="38a13-130">The following command creates a publisher policy assembly called `policy.1.0.myAssembly` from a publisher policy file called `pub.config`, assigns a strong name to the assembly using the key pair in the `sgKey.snk` file, and specifies that the assembly targets the x86 processor architecture.</span></span>  
+     <span data-ttu-id="2900d-130">以下命令创建名为的发行者策略程序集`policy.1.0.myAssembly`发布服务器策略文件中名为`pub.config`，为使用的密钥对中的程序集分配强名称`sgKey.snk`文件，并指定该程序集针对 x86处理器体系结构。</span><span class="sxs-lookup"><span data-stu-id="2900d-130">The following command creates a publisher policy assembly called `policy.1.0.myAssembly` from a publisher policy file called `pub.config`, assigns a strong name to the assembly using the key pair in the `sgKey.snk` file, and specifies that the assembly targets the x86 processor architecture.</span></span>  
   
     ```  
     al /link:pub.config /out:policy.1.0.myAssembly.dll /keyfile:sgKey.snk /platform:x86  
     ```  
   
-     <span data-ttu-id="38a13-131">发行者策略程序集必须与它适用于该程序集的处理器体系结构匹配。</span><span class="sxs-lookup"><span data-stu-id="38a13-131">The publisher policy assembly must match the processor architecture of the assembly that it applies to.</span></span> <span data-ttu-id="38a13-132">因此，如果您的程序集具有<xref:System.Reflection.AssemblyName.ProcessorArchitecture%2A>的值<xref:System.Reflection.ProcessorArchitecture.MSIL>，该程序集的发布服务器策略程序集必须使用创建`/platform:anycpu`。</span><span class="sxs-lookup"><span data-stu-id="38a13-132">Thus, if your assembly has a <xref:System.Reflection.AssemblyName.ProcessorArchitecture%2A> value of <xref:System.Reflection.ProcessorArchitecture.MSIL>, the publisher policy assembly for that assembly must be created with `/platform:anycpu`.</span></span> <span data-ttu-id="38a13-133">必须提供一个单独的每个特定于处理器的程序集的发行者策略程序集。</span><span class="sxs-lookup"><span data-stu-id="38a13-133">You must provide a separate publisher policy assembly for each processor-specific assembly.</span></span>  
+     <span data-ttu-id="2900d-131">发行者策略程序集必须与它适用于该程序集的处理器体系结构匹配。</span><span class="sxs-lookup"><span data-stu-id="2900d-131">The publisher policy assembly must match the processor architecture of the assembly that it applies to.</span></span> <span data-ttu-id="2900d-132">因此，如果您的程序集具有<xref:System.Reflection.AssemblyName.ProcessorArchitecture%2A>的值<xref:System.Reflection.ProcessorArchitecture.MSIL>，该程序集的发布服务器策略程序集必须使用创建`/platform:anycpu`。</span><span class="sxs-lookup"><span data-stu-id="2900d-132">Thus, if your assembly has a <xref:System.Reflection.AssemblyName.ProcessorArchitecture%2A> value of <xref:System.Reflection.ProcessorArchitecture.MSIL>, the publisher policy assembly for that assembly must be created with `/platform:anycpu`.</span></span> <span data-ttu-id="2900d-133">必须提供一个单独的每个特定于处理器的程序集的发行者策略程序集。</span><span class="sxs-lookup"><span data-stu-id="2900d-133">You must provide a separate publisher policy assembly for each processor-specific assembly.</span></span>  
   
-     <span data-ttu-id="38a13-134">此规则的结果是版本号的，若要更改的程序集的处理器体系结构，必须更改的主要或次要组成部分，以便你可以提供具有正确的处理器体系结构的新发布服务器策略程序集。</span><span class="sxs-lookup"><span data-stu-id="38a13-134">A consequence of this rule is that in order to change the processor architecture for an assembly, you must change the major or minor component of the version number, so that you can supply a new publisher policy assembly with the correct processor architecture.</span></span> <span data-ttu-id="38a13-135">一旦您的程序集具有不同处理器体系结构，旧的发行者策略程序集不能处理该程序集。</span><span class="sxs-lookup"><span data-stu-id="38a13-135">The old publisher policy assembly cannot service your assembly once your assembly has a different processor architecture.</span></span>  
+     <span data-ttu-id="2900d-134">此规则的结果是版本号的，若要更改的程序集的处理器体系结构，必须更改的主要或次要组成部分，以便你可以提供具有正确的处理器体系结构的新发布服务器策略程序集。</span><span class="sxs-lookup"><span data-stu-id="2900d-134">A consequence of this rule is that in order to change the processor architecture for an assembly, you must change the major or minor component of the version number, so that you can supply a new publisher policy assembly with the correct processor architecture.</span></span> <span data-ttu-id="2900d-135">一旦您的程序集具有不同处理器体系结构，旧的发行者策略程序集不能处理该程序集。</span><span class="sxs-lookup"><span data-stu-id="2900d-135">The old publisher policy assembly cannot service your assembly once your assembly has a different processor architecture.</span></span>  
   
-     <span data-ttu-id="38a13-136">另一个后果是版本 2.0 链接器不能用于创建编译使用早期版本的.NET Framework 中，因为它始终指定处理器体系结构的程序集的发行者策略程序集。</span><span class="sxs-lookup"><span data-stu-id="38a13-136">Another consequence is that the version 2.0 linker cannot be used to create a publisher policy assembly for an assembly compiled using earlier versions of the .NET Framework, because it always specifies processor architecture.</span></span>  
+     <span data-ttu-id="2900d-136">另一个后果是版本 2.0 链接器不能用于创建编译使用早期版本的.NET Framework 中，因为它始终指定处理器体系结构的程序集的发行者策略程序集。</span><span class="sxs-lookup"><span data-stu-id="2900d-136">Another consequence is that the version 2.0 linker cannot be used to create a publisher policy assembly for an assembly compiled using earlier versions of the .NET Framework, because it always specifies processor architecture.</span></span>  
   
-## <a name="adding-the-publisher-policy-assembly-to-the-global-assembly-cache"></a><span data-ttu-id="38a13-137">将发行者策略程序集添加到全局程序集缓存</span><span class="sxs-lookup"><span data-stu-id="38a13-137">Adding the Publisher Policy Assembly to the Global Assembly Cache</span></span>  
- <span data-ttu-id="38a13-138">使用[全局程序集缓存工具 (Gacutil.exe)](../../../docs/framework/tools/gacutil-exe-gac-tool.md)将发行者策略程序集添加到全局程序集缓存。</span><span class="sxs-lookup"><span data-stu-id="38a13-138">Use the [Global Assembly Cache tool (Gacutil.exe)](../../../docs/framework/tools/gacutil-exe-gac-tool.md) to add the publisher policy assembly to the global assembly cache.</span></span>  
+## <a name="adding-the-publisher-policy-assembly-to-the-global-assembly-cache"></a><span data-ttu-id="2900d-137">将发行者策略程序集添加到全局程序集缓存</span><span class="sxs-lookup"><span data-stu-id="2900d-137">Adding the Publisher Policy Assembly to the Global Assembly Cache</span></span>  
+ <span data-ttu-id="2900d-138">使用[全局程序集缓存工具 (Gacutil.exe)](../../../docs/framework/tools/gacutil-exe-gac-tool.md)将发行者策略程序集添加到全局程序集缓存。</span><span class="sxs-lookup"><span data-stu-id="2900d-138">Use the [Global Assembly Cache tool (Gacutil.exe)](../../../docs/framework/tools/gacutil-exe-gac-tool.md) to add the publisher policy assembly to the global assembly cache.</span></span>  
   
-#### <a name="to-add-the-publisher-policy-assembly-to-the-global-assembly-cache"></a><span data-ttu-id="38a13-139">若要将发行者策略程序集添加到全局程序集缓存</span><span class="sxs-lookup"><span data-stu-id="38a13-139">To add the publisher policy assembly to the global assembly cache</span></span>  
+#### <a name="to-add-the-publisher-policy-assembly-to-the-global-assembly-cache"></a><span data-ttu-id="2900d-139">若要将发行者策略程序集添加到全局程序集缓存</span><span class="sxs-lookup"><span data-stu-id="2900d-139">To add the publisher policy assembly to the global assembly cache</span></span>  
   
-1.  <span data-ttu-id="38a13-140">在命令提示符下键入以下命令：</span><span class="sxs-lookup"><span data-stu-id="38a13-140">Type the following command at the command prompt:</span></span>  
+1.  <span data-ttu-id="2900d-140">在命令提示符下键入以下命令：</span><span class="sxs-lookup"><span data-stu-id="2900d-140">Type the following command at the command prompt:</span></span>  
   
-     <span data-ttu-id="38a13-141">\**gacutil /i\*\*\*publisherPolicyAssemblyFile*</span><span class="sxs-lookup"><span data-stu-id="38a13-141">**gacutil /i**  *publisherPolicyAssemblyFile*</span></span>  
+     <span data-ttu-id="2900d-141">**gacutil /i**  *publisherPolicyAssemblyFile*</span><span class="sxs-lookup"><span data-stu-id="2900d-141">**gacutil /i**  *publisherPolicyAssemblyFile*</span></span>  
   
-     <span data-ttu-id="38a13-142">以下命令将添加`policy.1.0.myAssembly.dll`到全局程序集缓存。</span><span class="sxs-lookup"><span data-stu-id="38a13-142">The following command adds `policy.1.0.myAssembly.dll` to the global assembly cache.</span></span>  
+     <span data-ttu-id="2900d-142">以下命令将添加`policy.1.0.myAssembly.dll`到全局程序集缓存。</span><span class="sxs-lookup"><span data-stu-id="2900d-142">The following command adds `policy.1.0.myAssembly.dll` to the global assembly cache.</span></span>  
   
     ```  
     gacutil /i policy.1.0.myAssembly.dll  
     ```  
   
     > [!IMPORTANT]
-    >  <span data-ttu-id="38a13-143">发行者策略程序集不能添加到全局程序集缓存中，除非原始发布服务器策略文件位于与该程序集相同的目录中。</span><span class="sxs-lookup"><span data-stu-id="38a13-143">The publisher policy assembly cannot be added to the global assembly cache unless the original publisher policy file is located in the same directory as the assembly.</span></span>  
+    >  <span data-ttu-id="2900d-143">发行者策略程序集不能添加到全局程序集缓存中，除非原始发布服务器策略文件位于与该程序集相同的目录中。</span><span class="sxs-lookup"><span data-stu-id="2900d-143">The publisher policy assembly cannot be added to the global assembly cache unless the original publisher policy file is located in the same directory as the assembly.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="38a13-144">请参阅</span><span class="sxs-lookup"><span data-stu-id="38a13-144">See Also</span></span>  
- [<span data-ttu-id="38a13-145">使用程序集编程</span><span class="sxs-lookup"><span data-stu-id="38a13-145">Programming with Assemblies</span></span>](../../../docs/framework/app-domains/programming-with-assemblies.md)  
- [<span data-ttu-id="38a13-146">运行时如何定位程序集</span><span class="sxs-lookup"><span data-stu-id="38a13-146">How the Runtime Locates Assemblies</span></span>](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)  
- [<span data-ttu-id="38a13-147">配置应用程序</span><span class="sxs-lookup"><span data-stu-id="38a13-147">Configuring Apps</span></span>](../../../docs/framework/configure-apps/index.md)  
- [<span data-ttu-id="38a13-148">配置.NET Framework 应用</span><span class="sxs-lookup"><span data-stu-id="38a13-148">Configuring .NET Framework Apps</span></span>](https://msdn.microsoft.com/library/d789b592-fcb5-4e3d-8ac9-e0299adaaa42)  
- [<span data-ttu-id="38a13-149">运行时设置架构</span><span class="sxs-lookup"><span data-stu-id="38a13-149">Runtime Settings Schema</span></span>](../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
- [<span data-ttu-id="38a13-150">配置文件架构</span><span class="sxs-lookup"><span data-stu-id="38a13-150">Configuration File Schema</span></span>](../../../docs/framework/configure-apps/file-schema/index.md)  
- [<span data-ttu-id="38a13-151">重定向程序集版本</span><span class="sxs-lookup"><span data-stu-id="38a13-151">Redirecting Assembly Versions</span></span>](../../../docs/framework/configure-apps/redirect-assembly-versions.md)
+## <a name="see-also"></a><span data-ttu-id="2900d-144">请参阅</span><span class="sxs-lookup"><span data-stu-id="2900d-144">See also</span></span>
+- [<span data-ttu-id="2900d-145">使用程序集编程</span><span class="sxs-lookup"><span data-stu-id="2900d-145">Programming with Assemblies</span></span>](../../../docs/framework/app-domains/programming-with-assemblies.md)
+- [<span data-ttu-id="2900d-146">运行时如何定位程序集</span><span class="sxs-lookup"><span data-stu-id="2900d-146">How the Runtime Locates Assemblies</span></span>](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)
+- [<span data-ttu-id="2900d-147">配置应用程序</span><span class="sxs-lookup"><span data-stu-id="2900d-147">Configuring Apps</span></span>](../../../docs/framework/configure-apps/index.md)
+- [<span data-ttu-id="2900d-148">配置.NET Framework 应用</span><span class="sxs-lookup"><span data-stu-id="2900d-148">Configuring .NET Framework Apps</span></span>](https://msdn.microsoft.com/library/d789b592-fcb5-4e3d-8ac9-e0299adaaa42)
+- [<span data-ttu-id="2900d-149">运行时设置架构</span><span class="sxs-lookup"><span data-stu-id="2900d-149">Runtime Settings Schema</span></span>](../../../docs/framework/configure-apps/file-schema/runtime/index.md)
+- [<span data-ttu-id="2900d-150">配置文件架构</span><span class="sxs-lookup"><span data-stu-id="2900d-150">Configuration File Schema</span></span>](../../../docs/framework/configure-apps/file-schema/index.md)
+- [<span data-ttu-id="2900d-151">重定向程序集版本</span><span class="sxs-lookup"><span data-stu-id="2900d-151">Redirecting Assembly Versions</span></span>](../../../docs/framework/configure-apps/redirect-assembly-versions.md)
