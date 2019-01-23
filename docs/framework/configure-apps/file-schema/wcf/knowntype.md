@@ -2,18 +2,18 @@
 title: '&lt;knownType&gt;'
 ms.date: 03/30/2017
 ms.assetid: ee2b7be3-7148-4a3a-b861-48e7330615e5
-ms.openlocfilehash: 6156f102573333ec0d5533b8f1a8506d91215f47
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: cb36a0d1d1ceb13a6db902904783ee15b14e673b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54151925"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54541061"
 ---
 # <a name="ltknowntypegt"></a>&lt;knownType&gt;
 指定在反序列化过程中将由 <xref:System.Runtime.Serialization.DataContractSerializer> 使用的类型。 该元素指定由某个“声明的类型”的字段或属性返回到“已知类型”。 有关详细信息，请参阅[Data Contract Known Types](../../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)。  
   
- \<system.runtime.serialization >  
-\<dataContractSerializer >  
+ \<system.runtime.serialization>  
+\<dataContractSerializer>  
 \<declaredTypes > 元素  
 \<添加 > 的\<declaredTypes >  
 \<knownType > 元素  
@@ -43,7 +43,7 @@ ms.locfileid: "54151925"
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<参数 >](../../../../../docs/framework/configure-apps/file-schema/wcf/parameter.md)|当声明类型为泛型类型时指定参数索引。|  
+|[\<parameter>](../../../../../docs/framework/configure-apps/file-schema/wcf/parameter.md)|当声明类型为泛型类型时指定参数索引。|  
   
 ### <a name="parent-elements"></a>父元素  
   
@@ -69,8 +69,8 @@ ms.locfileid: "54151925"
 </add>
 ```  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Runtime.Serialization.DataContractSerializer>  
- [数据协定已知类型](../../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)  
- [\<dataContractSerializer >](../../../../../docs/framework/configure-apps/file-schema/wcf/datacontractserializer-element.md)  
- [\<add>](../../../../../docs/framework/configure-apps/file-schema/wcf/add-of-declaredtypes-element.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.Runtime.Serialization.DataContractSerializer>
+- [数据协定已知类型](../../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)
+- [\<dataContractSerializer>](../../../../../docs/framework/configure-apps/file-schema/wcf/datacontractserializer-element.md)
+- [\<add>](../../../../../docs/framework/configure-apps/file-schema/wcf/add-of-declaredtypes-element.md)
