@@ -24,11 +24,11 @@ ms.locfileid: "33555823"
 ## <a name="example"></a>示例  
  在下面的示例中，名为 *places* 的静态资源被定义为 *Place* 对象的集合，其中每个 *Place* 对象包含城市名和州。 前缀 *src* 映射到定义 *Places* 数据源的命名空间。 前缀 *scm* 映射到`"clr-namespace:System.ComponentModel;assembly=WindowsBase"`，*dat* 映射到`"clr-namespace:System.Windows.Data;assembly=PresentationFramework"`。  
   
- 下面的示例创建数据集合的视图，数据按城市名称排序，并按州分组。  
+ 下面的示例创建数据集合的视图，数据按城市名称排序，并按州分组。
   
  [!code-xaml[CollectionViewSource#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/CollectionViewSource/CS/window1.xaml#1)]  
   
- 视图随后可以绑定源，如以下示例所示：  
+ 随后视图可用作绑定源，如下例所示： 
   
  [!code-xaml[CollectionViewSource#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/CollectionViewSource/CS/window1.xaml#2)]  
   

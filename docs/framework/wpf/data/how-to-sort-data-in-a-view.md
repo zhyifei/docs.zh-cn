@@ -20,7 +20,7 @@ ms.lasthandoff: 05/04/2018
 ms.locfileid: "33556752"
 ---
 # <a name="how-to-sort-data-in-a-view"></a>如何：在视图中对数据进行排序
-本示例介绍如何在视图中对数据进行排序。  
+本示例介绍如何在视图中对数据进行排序。 
   
 ## <a name="example"></a>示例  
  下面的示例创建了一个简单的 <xref:System.Windows.Controls.ListBox> 和一个 <xref:System.Windows.Controls.Button>:  

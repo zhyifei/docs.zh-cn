@@ -16,9 +16,9 @@ ms.locfileid: "33556791"
 此示例演示如何实现主 / 从方案。  
   
 ## <a name="example"></a>示例  
- 在此示例中，`LeagueList` 是 `Leagues` 的集合。 每个 `League` 有一个 `Name` 和一个 `Divisions` 的集合，每个 `Division` 有一个名称和一个 `Teams` 的集合。 每个 `Team` 有一个团队名称。  
+ 在此示例中，`LeagueList` 是 `League` 的集合。 每个 `League` 有一个 `Name` 和一个 `Division` 的集合，每个 `Division` 有一个名称和一个 `Team` 的集合。 每个 `Team` 有一个团队名称。 
   
- [!code-xaml[MasterDetail#HowTo1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/MasterDetail/VisualBasic/Page1.xaml#howto1)]  
+[!code-xaml[MasterDetail#HowTo1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/MasterDetail/VisualBasic/Page1.xaml#howto1)]  
 [!code-xaml[MasterDetail#HowTo2](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/MasterDetail/VisualBasic/Page1.xaml#howto2)]  
   
  下面是该示例的一个屏幕快照。 `Divisions` 列表框<xref:System.Windows.Controls.ListBox>自动跟踪 `Leagues` 列表框<xref:System.Windows.Controls.ListBox>中的选择并显示相应的数据。 `Teams` 列表框<xref:System.Windows.Controls.ListBox>跟踪其他两个列表框<xref:System.Windows.Controls.ListBox>控件中的选择。  
