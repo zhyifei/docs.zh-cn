@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8efcd62f39a7de397ef93231fd125a17c7e513e9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: cd294037774721839b0c4f1f09bdc2a6e3b87841
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33425072"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54562669"
 ---
-# <a name="isymencunmanagedmethodgetdocumentsformethod-method"></a><span data-ttu-id="6b32a-102">ISymENCUnmanagedMethod::GetDocumentsForMethod 方法</span><span class="sxs-lookup"><span data-stu-id="6b32a-102">ISymENCUnmanagedMethod::GetDocumentsForMethod Method</span></span>
-<span data-ttu-id="6b32a-103">获取此方法的行中的文档。</span><span class="sxs-lookup"><span data-stu-id="6b32a-103">Gets the documents that this method has lines in.</span></span>  
+# <a name="isymencunmanagedmethodgetdocumentsformethod-method"></a><span data-ttu-id="2e8d7-102">ISymENCUnmanagedMethod::GetDocumentsForMethod 方法</span><span class="sxs-lookup"><span data-stu-id="2e8d7-102">ISymENCUnmanagedMethod::GetDocumentsForMethod Method</span></span>
+<span data-ttu-id="2e8d7-103">获取此方法中的行的文档。</span><span class="sxs-lookup"><span data-stu-id="2e8d7-103">Gets the documents that this method has lines in.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="6b32a-104">语法</span><span class="sxs-lookup"><span data-stu-id="6b32a-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="2e8d7-104">语法</span><span class="sxs-lookup"><span data-stu-id="2e8d7-104">Syntax</span></span>  
   
 ```  
 HRESULT GetDocumentsForMethod(  
@@ -36,21 +36,21 @@ HRESULT GetDocumentsForMethod(
     [in, size_is(cDocs)] ISymUnmanagedDocument* documents[]);  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="6b32a-105">参数</span><span class="sxs-lookup"><span data-stu-id="6b32a-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="2e8d7-105">参数</span><span class="sxs-lookup"><span data-stu-id="2e8d7-105">Parameters</span></span>  
  `cDocs`  
- <span data-ttu-id="6b32a-106">[in]指向缓冲区的长度`pcDocs`。</span><span class="sxs-lookup"><span data-stu-id="6b32a-106">[in] The length of the buffer pointed to by `pcDocs`.</span></span>  
+ <span data-ttu-id="2e8d7-106">[in]指向缓冲区的长度`pcDocs`。</span><span class="sxs-lookup"><span data-stu-id="2e8d7-106">[in] The length of the buffer pointed to by `pcDocs`.</span></span>  
   
  `pcDocs`  
- <span data-ttu-id="6b32a-107">[out]指向的指针`ULONG32`接收大小，以字符为单位，包含文档所需的缓冲区。</span><span class="sxs-lookup"><span data-stu-id="6b32a-107">[out] A pointer to a `ULONG32` that receives the size, in characters, of the buffer required to contain the documents.</span></span>  
+ <span data-ttu-id="2e8d7-107">[out]一个指向`ULONG32`用于接收大小，以字符为单位，包含文档所需的缓冲区。</span><span class="sxs-lookup"><span data-stu-id="2e8d7-107">[out] A pointer to a `ULONG32` that receives the size, in characters, of the buffer required to contain the documents.</span></span>  
   
  `documents`  
- <span data-ttu-id="6b32a-108">[in]包含文档的缓冲区。</span><span class="sxs-lookup"><span data-stu-id="6b32a-108">[in] The buffer that contains the documents.</span></span>  
+ <span data-ttu-id="2e8d7-108">[in]包含文档的缓冲区。</span><span class="sxs-lookup"><span data-stu-id="2e8d7-108">[in] The buffer that contains the documents.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="6b32a-109">返回值</span><span class="sxs-lookup"><span data-stu-id="6b32a-109">Return Value</span></span>  
- <span data-ttu-id="6b32a-110">如果该方法成功; 则为 S_OK否则为错误代码。</span><span class="sxs-lookup"><span data-stu-id="6b32a-110">S_OK if the method succeeds; otherwise, an error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="2e8d7-109">返回值</span><span class="sxs-lookup"><span data-stu-id="2e8d7-109">Return Value</span></span>  
+ <span data-ttu-id="2e8d7-110">如果方法成功，则为 S_OK否则为错误代码。</span><span class="sxs-lookup"><span data-stu-id="2e8d7-110">S_OK if the method succeeds; otherwise, an error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="6b32a-111">要求</span><span class="sxs-lookup"><span data-stu-id="6b32a-111">Requirements</span></span>  
- <span data-ttu-id="6b32a-112">**标头：** CorSym.idl、 CorSym.h</span><span class="sxs-lookup"><span data-stu-id="6b32a-112">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="2e8d7-111">要求</span><span class="sxs-lookup"><span data-stu-id="2e8d7-111">Requirements</span></span>  
+ <span data-ttu-id="2e8d7-112">**标头：** CorSym.idl CorSym.h</span><span class="sxs-lookup"><span data-stu-id="2e8d7-112">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="6b32a-113">请参阅</span><span class="sxs-lookup"><span data-stu-id="6b32a-113">See Also</span></span>  
- [<span data-ttu-id="6b32a-114">ISymENCUnmanagedMethod 接口</span><span class="sxs-lookup"><span data-stu-id="6b32a-114">ISymENCUnmanagedMethod Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymencunmanagedmethod-interface.md)
+## <a name="see-also"></a><span data-ttu-id="2e8d7-113">请参阅</span><span class="sxs-lookup"><span data-stu-id="2e8d7-113">See also</span></span>
+- [<span data-ttu-id="2e8d7-114">ISymENCUnmanagedMethod 接口</span><span class="sxs-lookup"><span data-stu-id="2e8d7-114">ISymENCUnmanagedMethod Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymencunmanagedmethod-interface.md)
