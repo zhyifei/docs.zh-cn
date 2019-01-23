@@ -7,19 +7,19 @@ helpviewer_keywords:
 ms.assetid: 24211ea5-163e-4fe5-aed8-004d8499760c
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: d31caf88e1376025484ed6d65d5277c015e70b5e
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: 7e183a624b95e207d34697c906cc3f278c967ae9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53613734"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54499758"
 ---
 # <a name="ltremovegt-element-for-ltnamedcachesgt"></a>&lt;删除&gt;元素&lt;namedCaches&gt;
 从内存缓存的 `namedCaches` 集合中删除一个命名的缓存条目。  
   
  \<system.runtime.caching>  
 \<memoryCache>  
-\<namedCaches >  
+\<namedCaches>  
 \<remove>  
   
 ## <a name="syntax"></a>语法  
@@ -52,5 +52,5 @@ ms.locfileid: "53613734"
 ## <a name="remarks"></a>备注  
  `remove`元素中移除`namedCache`内存缓存的命名的缓存集合中的条目。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>请参阅
 - [\<namedCaches > 元素 （缓存设置）](../../../../../docs/framework/configure-apps/file-schema/runtime/namedcaches-element-cache-settings.md)

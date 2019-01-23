@@ -5,12 +5,12 @@ helpviewer_keywords:
 - scaling [WPF], elements
 - graphics [WPF], scaling elements
 ms.assetid: 18158d94-bbe7-4f6a-814e-84d27fa748bf
-ms.openlocfilehash: 44c638b58d828e5beb0b9de5c7bb0b67c8e82d87
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: e95a5ed091621d27a462bc691e62a5f00bab49ef
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45609117"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54504309"
 ---
 # <a name="how-to-scale-an-element"></a>如何：缩放元素
 此示例演示如何使用<xref:System.Windows.Media.ScaleTransform>缩放元素。  
@@ -37,8 +37,8 @@ ms.locfileid: "45609117"
   
  有关完整示例，请参阅 [2D 转换示例](https://go.microsoft.com/fwlink/?LinkID=158252)。  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Windows.Media.Transform>  
- <xref:System.Windows.Media.ScaleTransform>  
- [转换概述](../../../../docs/framework/wpf/graphics-multimedia/transforms-overview.md)  
- [帮助主题](../../../../docs/framework/wpf/graphics-multimedia/transformations-how-to-topics.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.Windows.Media.Transform>
+- <xref:System.Windows.Media.ScaleTransform>
+- [转换概述](../../../../docs/framework/wpf/graphics-multimedia/transforms-overview.md)
+- [帮助主题](../../../../docs/framework/wpf/graphics-multimedia/transformations-how-to-topics.md)

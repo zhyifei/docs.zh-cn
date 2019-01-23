@@ -1,23 +1,23 @@
 ---
-title: '&lt;IssuedToken&gt;'
+title: '&lt;issuedToken&gt;'
 ms.date: 03/30/2017
 ms.assetid: b6eae4b7-a6cd-4e1a-b0f6-f407022550b0
-ms.openlocfilehash: a06d59c5dfb14e5f3346ff2424339659568a369a
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: ca2e1db2c9894163c113541ac4366c638d0e1df0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54150183"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54501524"
 ---
-# <a name="ltissuedtokengt"></a>&lt;IssuedToken&gt;
+# <a name="ltissuedtokengt"></a>&lt;issuedToken&gt;
 指定用于向服务验证客户端身份的自定义令牌。  
   
  \<system.ServiceModel>  
-\<行为 >  
+\<behaviors>  
 endpointBehaviors 部分  
-\<行为 >  
+\<behavior>  
 \<clientCredentials>  
-\<issuedToken >  
+\<issuedToken>  
   
 ## <a name="syntax"></a>语法  
   
@@ -50,7 +50,7 @@ endpointBehaviors 部分
 |元素|描述|  
 |-------------|-----------------|  
 |[\<localIssuer>](../../../../../docs/framework/configure-apps/file-schema/wcf/localissuer.md)|指定令牌的本地颁发者地址以及用于与终结点进行通信的绑定。|  
-|[\<issuerChannelBehaviors >](../../../../../docs/framework/configure-apps/file-schema/wcf/issuerchannelbehaviors-element.md)|指定当联系本地颁发者时所使用的终结点行为。|  
+|[\<issuerChannelBehaviors>](../../../../../docs/framework/configure-apps/file-schema/wcf/issuerchannelbehaviors-element.md)|指定当联系本地颁发者时所使用的终结点行为。|  
   
 ### <a name="parent-elements"></a>父元素  
   
@@ -63,17 +63,17 @@ endpointBehaviors 部分
   
  本节包含用于配置本地令牌颁发者的元素，或者与安全令牌服务一起使用的行为。 有关配置客户端以使用本地颁发者的说明，请参阅[如何：配置本地颁发者](../../../../../docs/framework/wcf/feature-details/how-to-configure-a-local-issuer.md)。  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.ServiceModel.Configuration.IssuedTokenClientElement>  
- <xref:System.ServiceModel.Configuration.ClientCredentialsElement>  
- <xref:System.ServiceModel.Description.ClientCredentials>  
- <xref:System.ServiceModel.Configuration.ClientCredentialsElement.IssuedToken%2A>  
- <xref:System.ServiceModel.Description.ClientCredentials.IssuedToken%2A>  
- <xref:System.ServiceModel.Security.IssuedTokenClientCredential>  
- [安全行为](../../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)  
- [保护服务和客户端的安全](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
- [联合令牌与颁发的令牌](../../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)  
- [保护客户端](../../../../../docs/framework/wcf/securing-clients.md)  
- [如何：创建联合客户端](../../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)  
- [如何：配置本地颁发者](../../../../../docs/framework/wcf/feature-details/how-to-configure-a-local-issuer.md)  
- [联合令牌与颁发的令牌](../../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.ServiceModel.Configuration.IssuedTokenClientElement>
+- <xref:System.ServiceModel.Configuration.ClientCredentialsElement>
+- <xref:System.ServiceModel.Description.ClientCredentials>
+- <xref:System.ServiceModel.Configuration.ClientCredentialsElement.IssuedToken%2A>
+- <xref:System.ServiceModel.Description.ClientCredentials.IssuedToken%2A>
+- <xref:System.ServiceModel.Security.IssuedTokenClientCredential>
+- [安全行为](../../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)
+- [保护服务和客户端的安全](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+- [联合令牌与颁发的令牌](../../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)
+- [保护客户端](../../../../../docs/framework/wcf/securing-clients.md)
+- [如何：创建联合客户端](../../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)
+- [如何：配置本地颁发者](../../../../../docs/framework/wcf/feature-details/how-to-configure-a-local-issuer.md)
+- [联合令牌与颁发的令牌](../../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)
