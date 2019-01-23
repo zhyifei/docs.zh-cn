@@ -7,12 +7,12 @@ helpviewer_keywords:
 - BindingSource component [Windows Forms], creating a lookup table
 - BindingSource component [Windows Forms], examples
 ms.assetid: 622fce80-879d-44be-abbf-8350ec22ca2b
-ms.openlocfilehash: 83a34c9d1a4b3d1c2e9950d3c5427567022326b5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 79459364fba51e8e10194a5e3681d6384beb16a7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33535579"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54539891"
 ---
 # <a name="how-to-create-a-lookup-table-with-the-windows-forms-bindingsource-component"></a>如何：使用 Windows 窗体 BindingSource 组件创建查找表
 查找表是一种数据表，其中有一列显示另一个相关表的记录数据。 在以下过程中，<xref:System.Windows.Forms.ComboBox> 控件可用于显示具有从父表到子表的外键关系的字段。  
@@ -91,8 +91,8 @@ ms.locfileid: "33535579"
   
 8.  从想要显示的子表的 <xref:System.Windows.Forms.ComboBox>（例如，<xref:System.Windows.Forms.BindingNavigator>）中，将除了 <xref:System.Windows.Forms.BindingSource> 和 `OrdersBindingSource` 外的控件绑定到详细信息字段上。  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Windows.Forms.BindingSource>  
- [BindingSource 组件](../../../../docs/framework/winforms/controls/bindingsource-component.md)  
- [ComboBox 控件](../../../../docs/framework/winforms/controls/combobox-control-windows-forms.md)  
- [在 Visual Studio 中将控件绑定到数据](/visualstudio/data-tools/bind-controls-to-data-in-visual-studio)
+## <a name="see-also"></a>请参阅
+- <xref:System.Windows.Forms.BindingSource>
+- [BindingSource 组件](../../../../docs/framework/winforms/controls/bindingsource-component.md)
+- [ComboBox 控件](../../../../docs/framework/winforms/controls/combobox-control-windows-forms.md)
+- [在 Visual Studio 中将控件绑定到数据](/visualstudio/data-tools/bind-controls-to-data-in-visual-studio)

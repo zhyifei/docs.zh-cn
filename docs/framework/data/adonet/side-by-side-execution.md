@@ -2,12 +2,12 @@
 title: ADO.NET 中的并行执行
 ms.date: 03/30/2017
 ms.assetid: 9f9ba96d-9f89-4f65-bb2f-6860879f4393
-ms.openlocfilehash: f69a269e5f6370cf7c5a60920b3d5a47ce1079cb
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 122cb33f4cca203f09104c5a40a1ad5d13326c57
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53126609"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54538630"
 ---
 # <a name="side-by-side-execution-in-adonet"></a>ADO.NET 中的并行执行
 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 中的并行执行是指在安装了 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 的多个版本的计算机上以独占方式使用编译的应用程序所针对的版本执行该应用程序的能力。 有关配置通过并行执行的详细信息，请参阅[-并行执行](../../../../docs/framework/deployment/side-by-side-execution.md)。  
@@ -64,7 +64,7 @@ SELECT * FROM dbo.Customers;
 SET NOCOUNT OFF;  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [ADO.NET 概述](../../../../docs/framework/data/adonet/ado-net-overview.md)  
- [在 ADO.NET 中检索和修改数据](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)  
- [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>请参阅
+- [ADO.NET 概述](../../../../docs/framework/data/adonet/ado-net-overview.md)
+- [在 ADO.NET 中检索和修改数据](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)
+- [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)
