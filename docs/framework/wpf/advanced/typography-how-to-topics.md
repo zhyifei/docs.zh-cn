@@ -6,28 +6,28 @@ f1_keywords:
 helpviewer_keywords:
 - typography [WPF], how-to topics
 ms.assetid: 82d50325-7cb2-4975-aea3-027c00e6bbfc
-ms.openlocfilehash: af5bd998840e87a4e13f5865c26aea57dcd24426
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0f7fdea1aa399e6f967bdfad1cd19067a7f5761b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33546310"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54543573"
 ---
-# <a name="typography-how-to-topics"></a><span data-ttu-id="2419d-102">版式帮助主题</span><span class="sxs-lookup"><span data-stu-id="2419d-102">Typography How-to Topics</span></span>
-<span data-ttu-id="2419d-103">本部分中的主题介绍如何使用[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]支持你的应用程序中的文本的丰富呈现。</span><span class="sxs-lookup"><span data-stu-id="2419d-103">The topics in this section describe how to use [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] support for rich presentation of text in your applications.</span></span>  
+# <a name="typography-how-to-topics"></a><span data-ttu-id="4d45a-102">版式帮助主题</span><span class="sxs-lookup"><span data-stu-id="4d45a-102">Typography How-to Topics</span></span>
+<span data-ttu-id="4d45a-103">在本部分中的主题介绍如何使用[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]丰富应用程序中的文本表示的支持。</span><span class="sxs-lookup"><span data-stu-id="4d45a-103">The topics in this section describe how to use [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] support for rich presentation of text in your applications.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="2419d-104">本节内容</span><span class="sxs-lookup"><span data-stu-id="2419d-104">In This Section</span></span>  
- [<span data-ttu-id="2419d-105">创建文本效果</span><span class="sxs-lookup"><span data-stu-id="2419d-105">Create a Text Decoration</span></span>](../../../../docs/framework/wpf/advanced/how-to-create-a-text-decoration.md)  
- [<span data-ttu-id="2419d-106">指定是否为超链接添加下划线</span><span class="sxs-lookup"><span data-stu-id="2419d-106">Specify Whether a Hyperlink is Underlined</span></span>](../../../../docs/framework/wpf/advanced/how-to-specify-whether-a-hyperlink-is-underlined.md)  
- [<span data-ttu-id="2419d-107">向文本应用转换</span><span class="sxs-lookup"><span data-stu-id="2419d-107">Apply Transforms to Text</span></span>](../../../../docs/framework/wpf/advanced/how-to-apply-transforms-to-text.md)  
- [<span data-ttu-id="2419d-108">向文本应用动画</span><span class="sxs-lookup"><span data-stu-id="2419d-108">Apply Animations to Text</span></span>](../../../../docs/framework/wpf/advanced/how-to-apply-animations-to-text.md)  
- [<span data-ttu-id="2419d-109">创建有阴影的文本</span><span class="sxs-lookup"><span data-stu-id="2419d-109">Create Text with a Shadow</span></span>](../../../../docs/framework/wpf/advanced/how-to-create-text-with-a-shadow.md)  
- [<span data-ttu-id="2419d-110">创建空心文本</span><span class="sxs-lookup"><span data-stu-id="2419d-110">Create Outlined Text</span></span>](../../../../docs/framework/wpf/advanced/how-to-create-outlined-text.md)  
- [<span data-ttu-id="2419d-111">在控件背景上绘制文本</span><span class="sxs-lookup"><span data-stu-id="2419d-111">Draw Text to a Control's Background</span></span>](../../../../docs/framework/wpf/advanced/how-to-draw-text-to-a-control-background.md)  
- [<span data-ttu-id="2419d-112">在视觉对象中绘制文本</span><span class="sxs-lookup"><span data-stu-id="2419d-112">Draw Text to a Visual</span></span>](../../../../docs/framework/wpf/advanced/how-to-draw-text-to-a-visual.md)  
- [<span data-ttu-id="2419d-113">在 XAML 中使用特殊字符</span><span class="sxs-lookup"><span data-stu-id="2419d-113">Use Special Characters in XAML</span></span>](../../../../docs/framework/wpf/advanced/how-to-use-special-characters-in-xaml.md)  
+## <a name="in-this-section"></a><span data-ttu-id="4d45a-104">本节内容</span><span class="sxs-lookup"><span data-stu-id="4d45a-104">In This Section</span></span>  
+ [<span data-ttu-id="4d45a-105">创建文本效果</span><span class="sxs-lookup"><span data-stu-id="4d45a-105">Create a Text Decoration</span></span>](../../../../docs/framework/wpf/advanced/how-to-create-a-text-decoration.md)  
+ [<span data-ttu-id="4d45a-106">指定是否为超链接添加下划线</span><span class="sxs-lookup"><span data-stu-id="4d45a-106">Specify Whether a Hyperlink is Underlined</span></span>](../../../../docs/framework/wpf/advanced/how-to-specify-whether-a-hyperlink-is-underlined.md)  
+ [<span data-ttu-id="4d45a-107">向文本应用转换</span><span class="sxs-lookup"><span data-stu-id="4d45a-107">Apply Transforms to Text</span></span>](../../../../docs/framework/wpf/advanced/how-to-apply-transforms-to-text.md)  
+ [<span data-ttu-id="4d45a-108">向文本应用动画</span><span class="sxs-lookup"><span data-stu-id="4d45a-108">Apply Animations to Text</span></span>](../../../../docs/framework/wpf/advanced/how-to-apply-animations-to-text.md)  
+ [<span data-ttu-id="4d45a-109">创建有阴影的文本</span><span class="sxs-lookup"><span data-stu-id="4d45a-109">Create Text with a Shadow</span></span>](../../../../docs/framework/wpf/advanced/how-to-create-text-with-a-shadow.md)  
+ [<span data-ttu-id="4d45a-110">创建空心文本</span><span class="sxs-lookup"><span data-stu-id="4d45a-110">Create Outlined Text</span></span>](../../../../docs/framework/wpf/advanced/how-to-create-outlined-text.md)  
+ [<span data-ttu-id="4d45a-111">在控件背景上绘制文本</span><span class="sxs-lookup"><span data-stu-id="4d45a-111">Draw Text to a Control's Background</span></span>](../../../../docs/framework/wpf/advanced/how-to-draw-text-to-a-control-background.md)  
+ [<span data-ttu-id="4d45a-112">在视觉对象中绘制文本</span><span class="sxs-lookup"><span data-stu-id="4d45a-112">Draw Text to a Visual</span></span>](../../../../docs/framework/wpf/advanced/how-to-draw-text-to-a-visual.md)  
+ [<span data-ttu-id="4d45a-113">在 XAML 中使用特殊字符</span><span class="sxs-lookup"><span data-stu-id="4d45a-113">Use Special Characters in XAML</span></span>](../../../../docs/framework/wpf/advanced/how-to-use-special-characters-in-xaml.md)  
   
-## <a name="see-also"></a><span data-ttu-id="2419d-114">请参阅</span><span class="sxs-lookup"><span data-stu-id="2419d-114">See Also</span></span>  
- <xref:System.Windows.Documents.Typography>  
- [<span data-ttu-id="2419d-115">WPF 中的文档</span><span class="sxs-lookup"><span data-stu-id="2419d-115">Documents in WPF</span></span>](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)  
- [<span data-ttu-id="2419d-116">OpenType 字体功能</span><span class="sxs-lookup"><span data-stu-id="2419d-116">OpenType Font Features</span></span>](../../../../docs/framework/wpf/advanced/opentype-font-features.md)
+## <a name="see-also"></a><span data-ttu-id="4d45a-114">请参阅</span><span class="sxs-lookup"><span data-stu-id="4d45a-114">See also</span></span>
+- <xref:System.Windows.Documents.Typography>
+- [<span data-ttu-id="4d45a-115">WPF 中的文档</span><span class="sxs-lookup"><span data-stu-id="4d45a-115">Documents in WPF</span></span>](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)
+- [<span data-ttu-id="4d45a-116">OpenType 字体功能</span><span class="sxs-lookup"><span data-stu-id="4d45a-116">OpenType Font Features</span></span>](../../../../docs/framework/wpf/advanced/opentype-font-features.md)
