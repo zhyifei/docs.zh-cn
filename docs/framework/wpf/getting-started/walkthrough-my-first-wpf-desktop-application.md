@@ -156,7 +156,7 @@ ms.locfileid: "53150740"
 
 5. 设置<xref:System.Windows.Navigation.NavigationWindow.Source%2A>上的属性<xref:System.Windows.Navigation.NavigationWindow>到"`ExpenseItHome.xaml`"。
 
-    这将设置*`ExpenseItHome.xaml`* 的第一页时打开应用程序启动。 在 XAML 应在 Visual Basic 中如下所示：
+    这将设置 *`ExpenseItHome.xaml`* 的第一页时打开应用程序启动。 在 XAML 应在 Visual Basic 中如下所示：
 
     [!code-xaml[ExpenseIt#7_A](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ExpenseIt/VB/ExpenseIt1_A/MainWindow.xaml#7_a)]
 
@@ -235,7 +235,7 @@ ms.locfileid: "53150740"
 > [!TIP]
 > 有关详细信息<xref:System.Windows.Controls.Panel>元素，请参阅[面板概述](../../../../docs/framework/wpf/controls/panels-overview.md)。 有关布局的详细信息，请参阅[布局](../../../../docs/framework/wpf/advanced/layout.md)。
 
-在部分中，您创建的单列表包含三个行和 10 像素边距添加到的列和行定义<xref:System.Windows.Controls.Grid>中*`ExpenseItHome.xaml`*。
+在部分中，您创建的单列表包含三个行和 10 像素边距添加到的列和行定义<xref:System.Windows.Controls.Grid>中 *`ExpenseItHome.xaml`* 。
 
 1. 打开 *`ExpenseItHome.xaml`* 。
 
@@ -264,7 +264,7 @@ ms.locfileid: "53150740"
 
 在本部分中，将更新主页 UI 以显示一个用户可以选择从以显示费用报表的人员列表。 控件是允许用户与应用程序交互的 UI 对象。 有关详细信息，请参阅 [控件](../../../../docs/framework/wpf/controls/index.md)。
 
-若要创建此 UI，将添加到以下元素*`ExpenseItHome.xaml`*:
+若要创建此 UI，将添加到以下元素 *`ExpenseItHome.xaml`* :
 
 - <xref:System.Windows.Controls.ListBox> （用于人员列表）。
 - <xref:System.Windows.Controls.Label> （用于列表标题）。
@@ -331,7 +331,7 @@ ms.locfileid: "53150740"
 
     [!code-xaml[ExpenseIt#15](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ExpenseIt/CSharp/ExpenseIt6/ExpenseItHome.xaml#15)]
 
-3. 打开*`ExpenseItHome.xaml.vb`* 或*`ExpenseItHome.xaml.cs`*。
+3. 打开 *`ExpenseItHome.xaml.vb`* 或 *`ExpenseItHome.xaml.cs`* 。
 
 4. 将以下代码添加到`ExpenseItHome`类添加一个按钮单击事件处理程序。 事件处理程序打开**ExpenseReportPage**页。
 
