@@ -5,27 +5,27 @@ helpviewer_keywords:
 - binary serialization, steps
 - serialization, steps
 ms.assetid: 4bcbc883-2a91-418f-b968-6c86a25e9737
-ms.openlocfilehash: ef81ecc7ca177fa9360f53a6b66015412d282065
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: b697e8c590d0865b26eaa9f66a333504a5faece2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44084905"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54517352"
 ---
-# <a name="steps-in-the-serialization-process"></a><span data-ttu-id="c5e9d-102">序列化过程中的步骤</span><span class="sxs-lookup"><span data-stu-id="c5e9d-102">Steps in the serialization process</span></span>
-<span data-ttu-id="c5e9d-103">对[格式化程序](xref:System.Runtime.Serialization.Formatter)调用 <xref:System.Runtime.Serialization.Formatter.Serialize*> 方法时，将按照以下规则顺序进行对象序列化：</span><span class="sxs-lookup"><span data-stu-id="c5e9d-103">When the <xref:System.Runtime.Serialization.Formatter.Serialize*> method is called on a [formatter](xref:System.Runtime.Serialization.Formatter), object serialization proceeds according to the following sequence of rules:</span></span>
+# <a name="steps-in-the-serialization-process"></a><span data-ttu-id="b9405-102">序列化过程中的步骤</span><span class="sxs-lookup"><span data-stu-id="b9405-102">Steps in the serialization process</span></span>
+<span data-ttu-id="b9405-103">对[格式化程序](xref:System.Runtime.Serialization.Formatter)调用 <xref:System.Runtime.Serialization.Formatter.Serialize*> 方法时，将按照以下规则顺序进行对象序列化：</span><span class="sxs-lookup"><span data-stu-id="b9405-103">When the <xref:System.Runtime.Serialization.Formatter.Serialize*> method is called on a [formatter](xref:System.Runtime.Serialization.Formatter), object serialization proceeds according to the following sequence of rules:</span></span>
 
-- <span data-ttu-id="c5e9d-104">进行检查以确定格式化程序是否具有代理项选择器。</span><span class="sxs-lookup"><span data-stu-id="c5e9d-104">A check is made to determine whether the formatter has a surrogate selector.</span></span> <span data-ttu-id="c5e9d-105">如果有，则检查代理项选择器是否处理给定类型的对象。</span><span class="sxs-lookup"><span data-stu-id="c5e9d-105">If the formatter does, check whether the surrogate selector handles objects of the given type.</span></span> <span data-ttu-id="c5e9d-106">如果选择器处理该对象类型，则在代理项选择器上调用 <xref:System.Runtime.Serialization.ISerializable.GetObjectData*?displayProperty=nameWithType>。</span><span class="sxs-lookup"><span data-stu-id="c5e9d-106">If the selector handles the object type, <xref:System.Runtime.Serialization.ISerializable.GetObjectData*?displayProperty=nameWithType> is called on the surrogate selector.</span></span>
+- <span data-ttu-id="b9405-104">进行检查以确定格式化程序是否具有代理项选择器。</span><span class="sxs-lookup"><span data-stu-id="b9405-104">A check is made to determine whether the formatter has a surrogate selector.</span></span> <span data-ttu-id="b9405-105">如果有，则检查代理项选择器是否处理给定类型的对象。</span><span class="sxs-lookup"><span data-stu-id="b9405-105">If the formatter does, check whether the surrogate selector handles objects of the given type.</span></span> <span data-ttu-id="b9405-106">如果选择器处理该对象类型，则在代理项选择器上调用 <xref:System.Runtime.Serialization.ISerializable.GetObjectData*?displayProperty=nameWithType>。</span><span class="sxs-lookup"><span data-stu-id="b9405-106">If the selector handles the object type, <xref:System.Runtime.Serialization.ISerializable.GetObjectData*?displayProperty=nameWithType> is called on the surrogate selector.</span></span>
 
-- <span data-ttu-id="c5e9d-107">如果没有代理项选择器，或者代理项选择器不处理该对象类型，则进行检查以确定是否用 [Serializable](xref:System.SerializableAttribute) 属性标记了该对象。</span><span class="sxs-lookup"><span data-stu-id="c5e9d-107">If there is no surrogate selector or if it does not handle the object type, a check is made to determine whether the object is marked with the [Serializable](xref:System.SerializableAttribute) attribute.</span></span> <span data-ttu-id="c5e9d-108">如果未标记该对象，则会引发 <xref:System.Runtime.Serialization.SerializationException>。</span><span class="sxs-lookup"><span data-stu-id="c5e9d-108">If the object is not, a <xref:System.Runtime.Serialization.SerializationException> is thrown.</span></span>
+- <span data-ttu-id="b9405-107">如果没有代理项选择器，或者代理项选择器不处理该对象类型，则进行检查以确定是否用 [Serializable](xref:System.SerializableAttribute) 属性标记了该对象。</span><span class="sxs-lookup"><span data-stu-id="b9405-107">If there is no surrogate selector or if it does not handle the object type, a check is made to determine whether the object is marked with the [Serializable](xref:System.SerializableAttribute) attribute.</span></span> <span data-ttu-id="b9405-108">如果未标记该对象，则会引发 <xref:System.Runtime.Serialization.SerializationException>。</span><span class="sxs-lookup"><span data-stu-id="b9405-108">If the object is not, a <xref:System.Runtime.Serialization.SerializationException> is thrown.</span></span>
 
-- <span data-ttu-id="c5e9d-109">如果已相应地标记了对象，则检查该对象是否实现 <xref:System.Runtime.Serialization.ISerializable> 接口。</span><span class="sxs-lookup"><span data-stu-id="c5e9d-109">If the object is marked appropriately, check whether the object implements the <xref:System.Runtime.Serialization.ISerializable> interface.</span></span> <span data-ttu-id="c5e9d-110">如果对象实现接口，则对该对象调用 <xref:System.Runtime.Serialization.ISerializable.GetObjectData*>。</span><span class="sxs-lookup"><span data-stu-id="c5e9d-110">If the object does, <xref:System.Runtime.Serialization.ISerializable.GetObjectData*> is called on the object.</span></span>
+- <span data-ttu-id="b9405-109">如果已相应地标记了对象，则检查该对象是否实现 <xref:System.Runtime.Serialization.ISerializable> 接口。</span><span class="sxs-lookup"><span data-stu-id="b9405-109">If the object is marked appropriately, check whether the object implements the <xref:System.Runtime.Serialization.ISerializable> interface.</span></span> <span data-ttu-id="b9405-110">如果对象实现接口，则对该对象调用 <xref:System.Runtime.Serialization.ISerializable.GetObjectData*>。</span><span class="sxs-lookup"><span data-stu-id="b9405-110">If the object does, <xref:System.Runtime.Serialization.ISerializable.GetObjectData*> is called on the object.</span></span>
   
-- <span data-ttu-id="c5e9d-111">如果对象未实现 <xref:System.Runtime.Serialization.ISerializable>，则使用默认序列化策略，从而序列化所有未标记为 [NonSerialized](xref:System.NonSerializedAttribute) 的字段。</span><span class="sxs-lookup"><span data-stu-id="c5e9d-111">If the object does not implement <xref:System.Runtime.Serialization.ISerializable>, the default serialization policy is used, serializing all fields not marked as [NonSerialized](xref:System.NonSerializedAttribute).</span></span>
+- <span data-ttu-id="b9405-111">如果对象未实现 <xref:System.Runtime.Serialization.ISerializable>，则使用默认序列化策略，从而序列化所有未标记为 [NonSerialized](xref:System.NonSerializedAttribute) 的字段。</span><span class="sxs-lookup"><span data-stu-id="b9405-111">If the object does not implement <xref:System.Runtime.Serialization.ISerializable>, the default serialization policy is used, serializing all fields not marked as [NonSerialized](xref:System.NonSerializedAttribute).</span></span>
 
 [!INCLUDE [binary-serialization-warning](../../../includes/binary-serialization-warning.md)]
   
-## <a name="see-also"></a><span data-ttu-id="c5e9d-112">请参阅</span><span class="sxs-lookup"><span data-stu-id="c5e9d-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="b9405-112">请参阅</span><span class="sxs-lookup"><span data-stu-id="b9405-112">See also</span></span>
 
-- [<span data-ttu-id="c5e9d-113">二进制序列化</span><span class="sxs-lookup"><span data-stu-id="c5e9d-113">Binary Serialization</span></span>](binary-serialization.md)  
-- [<span data-ttu-id="c5e9d-114">XML 和 SOAP 序列化</span><span class="sxs-lookup"><span data-stu-id="c5e9d-114">XML and SOAP Serialization</span></span>](xml-and-soap-serialization.md)
+- [<span data-ttu-id="b9405-113">二进制序列化</span><span class="sxs-lookup"><span data-stu-id="b9405-113">Binary Serialization</span></span>](binary-serialization.md)
+- [<span data-ttu-id="b9405-114">XML 和 SOAP 序列化</span><span class="sxs-lookup"><span data-stu-id="b9405-114">XML and SOAP Serialization</span></span>](xml-and-soap-serialization.md)
