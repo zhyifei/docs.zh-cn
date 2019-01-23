@@ -2,12 +2,12 @@
 title: '&lt;扩展插件&gt;'
 ms.date: 03/30/2017
 ms.assetid: bcfe5c44-04ef-4a20-96a5-90bfadf39623
-ms.openlocfilehash: 1110c9790b3afd1af5c5947b4976cbaca88fd324
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 9589eaf8ee133f0be670782574dfd30272f29b45
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54146857"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54556345"
 ---
 # <a name="ltextensionsgt"></a>&lt;扩展插件&gt;
 此配置元素包含一个 XML 元素集合，该集合包含随可检测到的标准元数据（EPR、ContractTypeName、BindingName、Scope 和 ListenURI）一起发布的自定义元数据。 下面是使用此配置元素的示例。  
@@ -45,5 +45,5 @@ ms.locfileid: "54146857"
 </behaviors>
 ```  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior>
+## <a name="see-also"></a>请参阅
+- <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior>

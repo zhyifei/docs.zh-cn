@@ -2,21 +2,21 @@
 title: '&lt;endpointDiscovery&gt;'
 ms.date: 03/30/2017
 ms.assetid: 70812717-888a-4748-9640-0df6715ff029
-ms.openlocfilehash: 58bab9aef2e20d762c303e8b698214125531a136
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 4611d529c1854ee456585ad3f7aac339ff771bce
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54150911"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54556439"
 ---
 # <a name="ltendpointdiscoverygt"></a>&lt;endpointDiscovery&gt;
 指定终结点的各种发现设置，例如终结点的可发现性、范围以及对终结点元数据的任何自定义扩展。  
   
 \<system.ServiceModel>  
-\<行为 >  
+\<behaviors>  
 \<endpointBehaviors>  
-\<行为 >  
-\<endpointDiscovery >  
+\<behavior>  
+\<endpointDiscovery>  
   
 ## <a name="syntax"></a>语法  
   
@@ -48,15 +48,15 @@ ms.locfileid: "54150911"
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<作用域 >](../../../../../docs/framework/configure-apps/file-schema/wcf/scopes.md)|终结点的范围 URI 集合。 一个终结点可以与多个范围 URI 关联。|  
-|[\<扩展 >](../../../../../docs/framework/configure-apps/file-schema/wcf/extensions.md) [的\<endpointDiscovery >]|一个 XML 元素集合，用于指定要对终结点发布的自定义元数据。|  
-|\<类型 >|要搜索的接口集合。|  
+|[\<scopes>](../../../../../docs/framework/configure-apps/file-schema/wcf/scopes.md)|终结点的范围 URI 集合。 一个终结点可以与多个范围 URI 关联。|  
+|[\<extensions>](../../../../../docs/framework/configure-apps/file-schema/wcf/extensions.md) [of \<endpointDiscovery>]|一个 XML 元素集合，用于指定要对终结点发布的自定义元数据。|  
+|\<types>|要搜索的接口集合。|  
   
 ### <a name="parent-elements"></a>父元素  
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<行为 >](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)|指定行为元素。|  
+|[\<behavior>](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)|指定行为元素。|  
 |||  
   
 ## <a name="remarks"></a>备注  
@@ -104,5 +104,5 @@ ms.locfileid: "54150911"
 </behaviors>
 ```  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior>
+## <a name="see-also"></a>请参阅
+- <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior>
