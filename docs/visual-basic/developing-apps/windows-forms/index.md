@@ -2,15 +2,9 @@
 title: Windows 窗体应用程序基础知识 (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
-- Windows applications
-- Windows Forms, Visual Basic
+  - Windows applications
+  - 'Windows Forms, Visual Basic'
 ms.assetid: 0b919d30-7fd6-42db-85c8-543d15312441
-ms.openlocfilehash: 59b21bf9bbe3e78a1ac8cedd3812863cbcae7382
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
-ms.translationtype: MT
-ms.contentlocale: zh-CN
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48582564"
 ---
 # <a name="windows-forms-application-basics-visual-basic"></a>Windows 窗体应用程序基础知识 (Visual Basic)
 Visual Basic 的一个重要部分是能够创建用户的计算机本地运行的 Windows 窗体应用程序。 可以使用 Visual Studio 来创建使用 Windows 窗体的应用程序和用户界面。 Windows 窗体应用程序基于类从<xref:System.Windows.Forms>命名空间。  
@@ -32,7 +26,7 @@ Visual Basic 的一个重要部分是能够创建用户的计算机本地运行�
 ### <a name="events"></a>事件  
  当用户执行某项操作窗体或其中一个控件时，则会生成事件。 你的应用程序通过使用代码对这些事件做出反应，并在事件发生时对其进行处理。 有关详细信息，请参阅[在 Windows 窗体中创建事件处理程序](../../../framework/winforms/creating-event-handlers-in-windows-forms.md)。  
   
-### <a name="controls"></a>控件  
+### <a name="controls"></a>Controls  
  Windows 窗体包含各种可以放置在窗体的控件： 显示文本框、 按钮、 下拉列表框、 单选按钮和甚至是网页的控件。 有关可在窗体上使用的所有控件的列表，请参阅[在 Windows 窗体上使用的控件](../../../framework/winforms/controls/controls-to-use-on-windows-forms.md)。 如果某个现有控件不满足你的需要，Windows 窗体还支持使用 <xref:System.Windows.Forms.UserControl> 类创建自己的自定义控件。  
   
  Windows 窗体具有丰富的 UI 控件，这些控件可模拟 Microsoft Office 等高端应用程序中的功能。 使用<xref:System.Windows.Forms.ToolStrip>和<xref:System.Windows.Forms.MenuStrip>控件，可以创建包含文本和图像、 显示子菜单和托管其他控件如文本框和组合框的工具栏和菜单。  
@@ -46,7 +40,7 @@ Visual Basic 的一个重要部分是能够创建用户的计算机本地运行�
   
 |到|查看|  
 |--------|---------|  
-|使用 Visual Studio 创建新的 Windows 窗体应用程序|[演练： 创建简单 Windows 窗体](https://msdn.microsoft.com/library/2d9daec0-0543-41d0-acb1-964f685bddbb)|  
+|使用 Visual Studio 创建新的 Windows 窗体应用程序|[演练：创建简单 Windows 窗体](https://msdn.microsoft.com/library/2d9daec0-0543-41d0-acb1-964f685bddbb)|  
 |使用窗体上控件|[如何：向 Windows 窗体添加控件](../../../framework/winforms/controls/how-to-add-controls-to-windows-forms.md)|   
 |创建使用图形 <xref:System.Drawing>|[图形编程入门](../../../framework/winforms/advanced/getting-started-with-graphics-programming.md)|  
 |创建自定义控件|[如何：从 UserControl 类继承](../../../framework/winforms/controls/how-to-inherit-from-the-usercontrol-class.md)|  
@@ -66,9 +60,9 @@ Visual Basic 的一个重要部分是能够创建用户的计算机本地运行�
   
 |到|查看|  
 |--------|---------|  
-|使用<xref:System.Windows.Forms.BindingSource>组件|[如何：使用设计器将 Windows 窗体控件与 BindingSource 组件进行绑定](../../../framework/winforms/controls/bind-wf-controls-with-the-bindingsource.md)|  
-|使用[!INCLUDE[vstecado](~/includes/vstecado-md.md)]数据源|[如何：使用 Windows 窗体 BindingSource 组件对 ADO.NET 数据进行排序和筛选](../../../framework/winforms/controls/sort-and-filter-ado-net-data-with-wf-bindingsource-component.md)|
-|使用数据源窗口|[演练：在 Windows 窗体上显示数据](/visualstudio/data-tools/accessing-data-in-visual-studio)|  
+|使用<xref:System.Windows.Forms.BindingSource>组件|[如何：将 Windows 窗体控件与 BindingSource 组件使用设计器绑定](../../../framework/winforms/controls/bind-wf-controls-with-the-bindingsource.md)|  
+|使用[!INCLUDE[vstecado](~/includes/vstecado-md.md)]数据源|[如何：排序和筛选 ADO.NET 数据与 Windows 窗体 BindingSource 组件](../../../framework/winforms/controls/sort-and-filter-ado-net-data-with-wf-bindingsource-component.md)|
+|使用数据源窗口|[演练：Windows 窗体上显示数据](/visualstudio/data-tools/accessing-data-in-visual-studio)|  
   
 ## <a name="deploying-applications-to-client-computers"></a>将应用程序部署到客户端计算机  
  一旦您编写的应用程序，以便他们可以安装并运行其自己的客户端计算机上必须将它发送到你的用户。 使用[!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)]技术，您可以使用几次单击部署您的应用程序从 Visual Studio 中并向用户提供指向 Web 上的应用程序的 URL。 [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)] 管理的所有元素和你的应用程序中的依赖关系，并确保客户端计算机上正确安装该应用程序。  
@@ -97,6 +91,6 @@ Visual Basic 的一个重要部分是能够创建用户的计算机本地运行�
   
 ## <a name="see-also"></a>请参阅
 
-- <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase>  
-- [Windows 窗体概述](../../../framework/winforms/windows-forms-overview.md)  
+- <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase>
+- [Windows 窗体概述](../../../framework/winforms/windows-forms-overview.md)
 - [My.Forms 对象](../../../visual-basic/language-reference/objects/my-forms-object.md)

@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 86d48461c601b53d4461331a11a0e0ac7ddc6e7c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 493b4850436b3724287210878992d1d8ce8fe168
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33412540"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54589394"
 ---
 # <a name="icordebugevalcallfunction-method"></a>ICorDebugEval::CallFunction 方法
 设置了对指定函数的调用。  
   
- 此方法是.NET Framework 2.0 版中过时。 使用[icordebugeval2:: Callparameterizedfunction](../../../../docs/framework/unmanaged-api/debugging/icordebugeval2-callparameterizedfunction-method.md)相反。  
+ 此方法是在.NET Framework 2.0 版中已过时。 使用[ICorDebugEval2::CallParameterizedFunction](../../../../docs/framework/unmanaged-api/debugging/icordebugeval2-callparameterizedfunction-method.md)相反。  
   
 ## <a name="syntax"></a>语法  
   
@@ -41,16 +41,16 @@ HRESULT CallFunction (
   
 #### <a name="parameters"></a>参数  
  `pFunction`  
- [in]指向 ICorDebugFunction 对象指定要调用的函数的指针。  
+ [in]指向一个 ICorDebugFunction 对象，指定要调用的函数指针。  
   
  `nArgs`  
- [in]函数的参数的数目。  
+ [in]函数的参数数目。  
   
  `ppArgs`  
- [in]一个指针数组，其中每个指向 ICorDebugValue 对象，它指定要传递给函数的参数。  
+ [in]一个指针数组，其中每个指向一个 ICorDebugValue 对象，指定要传递给函数的参数。  
   
 ## <a name="remarks"></a>备注  
- 如果该函数是虚拟的`CallFunction`将执行虚拟调度。 如果函数是在不同的应用程序域中，转换将发生，只要所有参数也都是该应用程序域中。  
+ 如果该函数是虚拟的`CallFunction`将执行虚拟调度。 如果函数是在不同的应用程序域中，将发生转换，前提是所有参数也都是该应用程序域中。  
   
 ## <a name="requirements"></a>要求  
  **平台：** WindowSee[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
@@ -59,7 +59,7 @@ HRESULT CallFunction (
   
  **库：** CorGuids.lib  
   
- **.NET framework 版本：** 1.1、 1.0  
+ **.NET framework 版本：** 1.1, 1.0  
   
-## <a name="see-also"></a>请参阅  
- [CallParameterizedFunction 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugeval2-callparameterizedfunction-method.md)
+## <a name="see-also"></a>请参阅
+- [CallParameterizedFunction 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugeval2-callparameterizedfunction-method.md)

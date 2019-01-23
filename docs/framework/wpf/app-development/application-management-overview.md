@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - application management [WPF]
 ms.assetid: 32b1c054-5aca-423b-b4b5-ed8dc4dc637d
-ms.openlocfilehash: ba8d07a26b7e6abc511e5b24db26162b46a2b0a1
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 39e78be4806a58d8e274d1e6ce58a1f1ee46ce1a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44042252"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54592028"
 ---
 # <a name="application-management-overview"></a>应用程序管理概述
 所有应用程序都可能会共享一组适用于实现和管理应用程序的常见功能。 本主题概述中的功能的<xref:System.Windows.Application>类用于创建和管理应用程序。  
@@ -321,7 +321,7 @@ ms.locfileid: "44042252"
  [!code-csharp[ApplicationExitSnippets#AppExitCODE](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ApplicationExitSnippets/CSharp/MainWindow.xaml.cs#appexitcode)]
  [!code-vb[ApplicationExitSnippets#AppExitCODE](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ApplicationExitSnippets/visualbasic/mainwindow.xaml.vb#appexitcode)]  
   
- 可以检测的退出代码值和其进行更改，通过处理<xref:System.Windows.Application.Exit>事件。 <xref:System.Windows.Application.Exit>事件处理程序传递<xref:System.Windows.ExitEventArgs>以便进行访问的退出代码与<xref:System.Windows.ExitEventArgs.ApplicationExitCode%2A>属性。 有关详细信息，请参阅<xref:System.Windows.Application.Exit>。  
+ 可以检测的退出代码值和其进行更改，通过处理<xref:System.Windows.Application.Exit>事件。 <xref:System.Windows.Application.Exit>事件处理程序传递<xref:System.Windows.ExitEventArgs>以便进行访问的退出代码与<xref:System.Windows.ExitEventArgs.ApplicationExitCode%2A>属性。 有关详细信息，请参阅 <xref:System.Windows.Application.Exit>。  
   
 > [!NOTE]
 >  可以在这两个独立应用程序中设置退出代码和[!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)]。 但是，退出代码值被忽略的[!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)]。  
@@ -365,11 +365,11 @@ ms.locfileid: "44042252"
   
  ![XBAP &#45; 应用程序对象事件](../../../../docs/framework/wpf/app-development/media/applicationmodeloverview-applicationobjectevents-xbap.png "ApplicationModelOverview_ApplicationObjectEvents_xbap")  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Windows.Application>  
- [WPF 窗口概述](../../../../docs/framework/wpf/app-development/wpf-windows-overview.md)  
- [导航概述](../../../../docs/framework/wpf/app-development/navigation-overview.md)  
- [WPF 应用程序资源、内容和数据文件](../../../../docs/framework/wpf/app-development/wpf-application-resource-content-and-data-files.md)  
- [WPF 中的 Pack URI](../../../../docs/framework/wpf/app-development/pack-uris-in-wpf.md)  
- [应用程序模型： 操作指南主题](https://msdn.microsoft.com/library/76771b09-3688-4d1c-8818-9b3f4cf39a30)  
- [应用程序开发](../../../../docs/framework/wpf/app-development/index.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.Windows.Application>
+- [WPF 窗口概述](../../../../docs/framework/wpf/app-development/wpf-windows-overview.md)
+- [导航概述](../../../../docs/framework/wpf/app-development/navigation-overview.md)
+- [WPF 应用程序资源、内容和数据文件](../../../../docs/framework/wpf/app-development/wpf-application-resource-content-and-data-files.md)
+- [WPF 中的 Pack URI](../../../../docs/framework/wpf/app-development/pack-uris-in-wpf.md)
+- [应用程序模型：操作指南主题](https://msdn.microsoft.com/library/76771b09-3688-4d1c-8818-9b3f4cf39a30)
+- [应用程序开发](../../../../docs/framework/wpf/app-development/index.md)
