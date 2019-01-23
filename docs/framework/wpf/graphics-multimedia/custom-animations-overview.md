@@ -8,12 +8,12 @@ helpviewer_keywords:
 - animation [WPF], custom classes
 - custom animation classes [WPF]
 ms.assetid: 9be69d50-3384-4938-886f-08ce00e4a7a6
-ms.openlocfilehash: a18898f340c68b7890c56b586c87870c50fd4686
-ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
+ms.openlocfilehash: 20bf15040d22d334800d6a163937c22928499f3d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "44511888"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54527635"
 ---
 # <a name="custom-animations-overview"></a>自定义动画概述
 本主题介绍如何以及何时通过以下方法来扩展 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 动画系统：创建自定义关键帧、动画类或者使用每帧回叫来绕过它。  
@@ -123,13 +123,13 @@ ms.locfileid: "44511888"
   
  有关详细信息，请参阅<xref:System.Windows.Media.CompositionTarget.Rendering>页。  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Windows.Media.Animation.AnimationTimeline>  
- <xref:System.Windows.Media.Animation.IKeyFrame>  
- [属性动画技术概述](../../../../docs/framework/wpf/graphics-multimedia/property-animation-techniques-overview.md)  
- [Freezable 对象概述](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md)  
- [关键帧动画概述](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)  
- [路径动画概述](../../../../docs/framework/wpf/graphics-multimedia/path-animations-overview.md)  
- [动画概述](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)  
- [动画和计时系统概述](../../../../docs/framework/wpf/graphics-multimedia/animation-and-timing-system-overview.md)  
- [自定义动画示例](https://go.microsoft.com/fwlink/?LinkID=159981)
+## <a name="see-also"></a>请参阅
+- <xref:System.Windows.Media.Animation.AnimationTimeline>
+- <xref:System.Windows.Media.Animation.IKeyFrame>
+- [属性动画技术概述](../../../../docs/framework/wpf/graphics-multimedia/property-animation-techniques-overview.md)
+- [Freezable 对象概述](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md)
+- [关键帧动画概述](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)
+- [路径动画概述](../../../../docs/framework/wpf/graphics-multimedia/path-animations-overview.md)
+- [动画概述](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)
+- [动画和计时系统概述](../../../../docs/framework/wpf/graphics-multimedia/animation-and-timing-system-overview.md)
+- [自定义动画示例](https://go.microsoft.com/fwlink/?LinkID=159981)

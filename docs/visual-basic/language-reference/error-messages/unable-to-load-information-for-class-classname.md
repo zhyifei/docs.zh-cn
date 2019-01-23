@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - BC30712
 ms.assetid: c7ffbd6d-05c6-4261-b44b-1bcd521bb350
-ms.openlocfilehash: 4ee58b02965bef680731f6911d8b5121fd890eb3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 368484d9138d1ae10efb8c63f6cfaa6bcefa6ed8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33604167"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54528951"
 ---
 # <a name="unable-to-load-information-for-class-39ltclassnamegt39"></a>无法加载类的信息&#39;&lt;类名&gt;&#39;
-到不可用的类，已引用。  
+引用了不可用的类。  
   
  **错误 ID:** BC30712  
   
 ## <a name="to-correct-this-error"></a>更正此错误  
   
-1.  验证定义类并且名称拼写正确。  
+1.  验证定义了类和名称拼写正确。  
   
 2.  尝试访问该模块中声明的其中一个成员。 在某些情况下，调试环境找不到成员，因为尚未加载在其中声明成员的模块。  
   
-## <a name="see-also"></a>请参阅  
- [在 Visual Studio 中进行调试](/visualstudio/debugger/debugging-in-visual-studio)
+## <a name="see-also"></a>请参阅
+- [在 Visual Studio 中进行调试](/visualstudio/debugger/debugging-in-visual-studio)

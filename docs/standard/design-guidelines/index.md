@@ -3,17 +3,11 @@ title: 框架设计准则
 ms.date: 10/22/2008
 ms.technology: dotnet-standard
 helpviewer_keywords:
-- libraries, .NET Framework class library
-- class library design guidelines [.NET Framework], about
-- class library design guidelines [.NET Framework]
+  - 'libraries, .NET Framework class library'
+  - 'class library design guidelines [.NET Framework], about'
+  - 'class library design guidelines [.NET Framework]'
 ms.assetid: 5fbcaf4f-ea2a-4d20-b0d6-e61dee202b4b
 author: KrzysztofCwalina
-ms.openlocfilehash: 2317ed0dbe8a6e69452ac0721ffed1b9da50a907
-ms.sourcegitcommit: 49af435bfdd41faf26d38c20c5b0cc07e87bea60
-ms.translationtype: MT
-ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53396924"
 ---
 # <a name="framework-design-guidelines"></a>框架设计准则
 本部分提供的准则适用于设计那些可扩展 .NET Framework 并与之交互的库。 目的是通过提供独立于开发所用编程语言的统一编程模型，帮助库设计者确保 API 的一致性和易用性。 建议在开发可扩展 .NET Framework 的类和组件时遵循这些设计准则。 不一致的库设计会对开发人员的工作效率产生负面影响，影响用户采用它。  
@@ -46,10 +40,10 @@ ms.locfileid: "53396924"
   
  *部分版权 © 2005, 2009 Microsoft Corporation。保留所有权利。*  
   
- *通过从 Pearson Education，Inc.的权限重新打印[Framework 设计准则：约定、 语法和模式的可重用.NET 库，第 2 版](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619)Krzysztof Cwalina 和 Brad Abrams，作为 Microsoft Windows 开发系列的一部分发布 2008 年 10 月 22 日由 Addison-wesley 专业人员。*   
+ *经 Pearson Education, Inc 授权，转载自[框架设计准则：可重用的 .NET 库的约定、习惯用语和模式，第 2 版](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) 作者：Krzysztof Cwalina 和 Brad Abrams，由 Addison Wesley Professional 于 2008 年 10 月 22 日印发，作为 Microsoft Windows 开发系列的一部分。*  
   
 ## <a name="see-also"></a>请参阅
 
-- [概述](../../../docs/framework/get-started/overview.md)  
-- [.NET Framework 的路线图](https://msdn.microsoft.com/library/0b46b7c6-9163-4f99-8e58-0d1ee7da8c67)  
+- [概述](../../../docs/framework/get-started/overview.md)
+- [.NET Framework 的路线图](https://msdn.microsoft.com/library/0b46b7c6-9163-4f99-8e58-0d1ee7da8c67)
 - [开发指南](../../../docs/framework/development-guide.md)
