@@ -16,26 +16,26 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 924708957f02055d1cf20739f8642f0e924d6210
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: c428143fa11f15a974d5b4e86327230cf78e3e6f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33440653"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54495359"
 ---
-# <a name="itypename-interface"></a><span data-ttu-id="30733-102">ITypeName 接口</span><span class="sxs-lookup"><span data-stu-id="30733-102">ITypeName Interface</span></span>
-<span data-ttu-id="30733-103">提供用于获取类型名称信息的方法。</span><span class="sxs-lookup"><span data-stu-id="30733-103">Provides methods for obtaining type name information.</span></span>  
+# <a name="itypename-interface"></a><span data-ttu-id="dd587-102">ITypeName 接口</span><span class="sxs-lookup"><span data-stu-id="dd587-102">ITypeName Interface</span></span>
+<span data-ttu-id="dd587-103">提供用于获取类型名称信息的方法。</span><span class="sxs-lookup"><span data-stu-id="dd587-103">Provides methods for obtaining type name information.</span></span>  
   
- <span data-ttu-id="30733-104">此接口支持 .NET Framework 基础结构，但不适合直接在代码中使用。</span><span class="sxs-lookup"><span data-stu-id="30733-104">This interface supports the .NET Framework infrastructure and is not intended to be used directly from your code.</span></span>  
+ <span data-ttu-id="dd587-104">此接口支持 .NET Framework 基础结构，但不适合直接在代码中使用。</span><span class="sxs-lookup"><span data-stu-id="dd587-104">This interface supports the .NET Framework infrastructure and is not intended to be used directly from your code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="30733-105">要求</span><span class="sxs-lookup"><span data-stu-id="30733-105">Requirements</span></span>  
- <span data-ttu-id="30733-106">**平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="30733-106">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="dd587-105">要求</span><span class="sxs-lookup"><span data-stu-id="dd587-105">Requirements</span></span>  
+ <span data-ttu-id="dd587-106">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="dd587-106">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="30733-107">**标头：** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="30733-107">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="dd587-107">**标头：** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="dd587-107">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="30733-108">**库：** 作为 MSCorEE.dll 中的资源</span><span class="sxs-lookup"><span data-stu-id="30733-108">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="dd587-108">**库：** 包含为 MSCorEE.dll 中的资源</span><span class="sxs-lookup"><span data-stu-id="dd587-108">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="30733-109">**.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="30733-109">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="dd587-109">**.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="dd587-109">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="30733-110">请参阅</span><span class="sxs-lookup"><span data-stu-id="30733-110">See Also</span></span>  
- [<span data-ttu-id="30733-111">承载接口</span><span class="sxs-lookup"><span data-stu-id="30733-111">Hosting Interfaces</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+## <a name="see-also"></a><span data-ttu-id="dd587-110">请参阅</span><span class="sxs-lookup"><span data-stu-id="dd587-110">See also</span></span>
+- [<span data-ttu-id="dd587-111">承载接口</span><span class="sxs-lookup"><span data-stu-id="dd587-111">Hosting Interfaces</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
