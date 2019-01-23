@@ -2,12 +2,12 @@
 title: XML Schema Definition Tool (Xsd.exe)
 ms.date: 03/30/2017
 ms.assetid: a6e6e65c-347f-4494-9457-653bf29baac2
-ms.openlocfilehash: a7824f0f39820b186b654aa4369dc068134d6a0d
-ms.sourcegitcommit: 42522983167b52852e1a20c87d57a1f63215f9bd
+ms.openlocfilehash: c7a2cdd9fe0be020584ab87216a9d1322be185f6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/22/2019
-ms.locfileid: "54443650"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54606804"
 ---
 # <a name="xml-schema-definition-tool-xsdexe"></a>XML Schema Definition Tool (Xsd.exe)
 XML 架构定义 (Xsd.exe) 工具从 XDR、XML 和 XSD 文件或者从运行时程序集中的类生成 XML 架构或公共语言运行时类。  
@@ -218,10 +218,10 @@ xsd myAssembly.dll
   
 ## <a name="see-also"></a>请参阅
 
-- <xref:System.Data.DataSet>  
-- <xref:System.Xml.Serialization.XmlSerializer?displayProperty=nameWithType>  
-- [工具](../../../docs/framework/tools/index.md)      
-- [命令提示](../../../docs/framework/tools/developer-command-prompt-for-vs.md)  
-- [LINQ to DataSet 概述](../../../docs/framework/data/adonet/linq-to-dataset-overview.md)  
-- [查询类型化数据集](../../../docs/framework/data/adonet/querying-typed-datasets.md)  
+- <xref:System.Data.DataSet>
+- <xref:System.Xml.Serialization.XmlSerializer?displayProperty=nameWithType>
+- [工具](../../../docs/framework/tools/index.md)
+- [命令提示](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
+- [LINQ to DataSet 概述](../../../docs/framework/data/adonet/linq-to-dataset-overview.md)
+- [查询类型化数据集](../../../docs/framework/data/adonet/querying-typed-datasets.md)
 - [LINQ（语言集成查询）](https://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d)

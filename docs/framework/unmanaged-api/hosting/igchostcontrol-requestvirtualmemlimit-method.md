@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2df33e3edebbf558bf78986e737c4f7bb9b2f0f3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: db1572c035242a4a143ee435957409e5d16fca1f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33437152"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54607168"
 ---
 # <a name="igchostcontrolrequestvirtualmemlimit-method"></a>IGCHostControl::RequestVirtualMemLimit 方法
-请求主机后，若要更改的虚拟内存限制。  
+请求主机后，若要更改虚拟内存的限制。  
   
 ## <a name="syntax"></a>语法  
   
@@ -41,16 +41,16 @@ HRESULT RequestVirtualMemLimit (
  [in]要分配的内存请求的大小。  
   
  `psztNewMaxVirtualMemMB`  
- [在中，out]指向分配的内存的实际大小的指针。  
+ [in、 out]指向分配的内存的实际大小的指针。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** MSCorEE.h  
   
- **库：** 作为 MSCorEE.dll 中的资源  
+ **库：** 包含为 MSCorEE.dll 中的资源  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>请参阅  
- [IGCHostControl 接口](../../../../docs/framework/unmanaged-api/hosting/igchostcontrol-interface.md)
+## <a name="see-also"></a>请参阅
+- [IGCHostControl 接口](../../../../docs/framework/unmanaged-api/hosting/igchostcontrol-interface.md)

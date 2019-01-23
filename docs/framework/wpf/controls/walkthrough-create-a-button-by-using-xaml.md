@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - buttons [WPF]
 ms.assetid: 138c41c4-1759-4bbf-8d77-77031a06a8a0
-ms.openlocfilehash: a28a027e3b804de8e40d8c7831e7556cc7f55188
-ms.sourcegitcommit: 81bd16c7435a8c9183d2a7e878a2a5eff7d04584
+ms.openlocfilehash: d88eca573d09c0c40575718a125a65b2d13593d8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54249146"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54606778"
 ---
 # <a name="walkthrough-create-a-button-by-using-xaml"></a>演练：使用 XAML 创建按钮
 本演练的目的是了解如何创建 Windows Presentation Foundation (WPF) 应用程序中使用的动画的按钮。 本演练使用样式和模板来创建自定义的按钮资源允许重用代码和从按钮声明按钮逻辑的分离。 本演练完全在编写[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]。  
@@ -361,7 +361,7 @@ ms.locfileid: "54249146"
   
      按 F5 以运行该应用程序并单击其中一个按钮。 请注意，在单击因为它仍然具有焦点的按钮始终保持突出显示。 如果单击另一个按钮，新建按钮获得焦点，而最后一个失去它。  
   
-4.  **添加动画**<xref:System.Windows.UIElement.MouseEnter> **并** <xref:System.Windows.UIElement.MouseLeave> **:  **接下来我们将某些动画添加到触发器。 添加以下标记内部的任意位置`ControlTemplate.Triggers`块。  
+4.  **添加动画**<xref:System.Windows.UIElement.MouseEnter> **并** <xref:System.Windows.UIElement.MouseLeave> **:** 接下来我们将某些动画添加到触发器。 添加以下标记内部的任意位置`ControlTemplate.Triggers`块。  
   
     ```xaml
     <!-- Animations that start when mouse enters and leaves button. -->  
@@ -431,9 +431,9 @@ ms.locfileid: "54249146"
   
 -   自定义行为响应用户操作中的按钮 (如<xref:System.Windows.UIElement.MouseEnter>， <xref:System.Windows.UIElement.MouseLeave>，和<xref:System.Windows.Controls.Primitives.ButtonBase.Click>) 包含的动画效果。  
   
-## <a name="see-also"></a>请参阅  
- [使用 Microsoft Expression Blend 创建按钮](../../../../docs/framework/wpf/controls/walkthrough-create-a-button-by-using-microsoft-expression-blend.md)  
- [样式设置和模板化](../../../../docs/framework/wpf/controls/styling-and-templating.md)  
- [动画概述](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)  
- [使用纯色和渐变进行绘制概述](../../../../docs/framework/wpf/graphics-multimedia/painting-with-solid-colors-and-gradients-overview.md)  
- [位图效果概述](../../../../docs/framework/wpf/graphics-multimedia/bitmap-effects-overview.md)
+## <a name="see-also"></a>请参阅
+- [使用 Microsoft Expression Blend 创建按钮](../../../../docs/framework/wpf/controls/walkthrough-create-a-button-by-using-microsoft-expression-blend.md)
+- [样式设置和模板化](../../../../docs/framework/wpf/controls/styling-and-templating.md)
+- [动画概述](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)
+- [使用纯色和渐变进行绘制概述](../../../../docs/framework/wpf/graphics-multimedia/painting-with-solid-colors-and-gradients-overview.md)
+- [位图效果概述](../../../../docs/framework/wpf/graphics-multimedia/bitmap-effects-overview.md)

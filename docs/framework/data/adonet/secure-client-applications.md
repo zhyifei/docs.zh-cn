@@ -2,12 +2,12 @@
 title: 保证客户端应用程序的安全
 ms.date: 03/30/2017
 ms.assetid: 6239592e-fa7d-4dea-9f00-d296d0048b01
-ms.openlocfilehash: a3b035d59a39ca20f6a81fbd40d39069a7cc43c2
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 4233ce4edc788f3129043c5a1ef1acb26dd1d899
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47397889"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54599591"
 ---
 # <a name="secure-client-applications"></a>保证客户端应用程序的安全
 应用程序通常由多个部件组成，所有这些部件均不能包含漏洞，否则可能导致数据丢失或以其他方式危害系统。 在攻击者可访问数据或系统资源之前将其阻止，以此可创建安全的用户界面来防止出现许多问题。  
@@ -36,7 +36,7 @@ ms.locfileid: "47397889"
  [Windows 窗体安全](../../../../docs/framework/winforms/windows-forms-security.md)  
  讨论如何保证 Windows 窗体应用程序的安全并提供相关主题的链接。  
   
- [Windows 窗体和非托管应用程序](../../../../docs/framework/winforms/advanced/windows-forms-and-unmanaged-applications.md)  
+ [Windows Forms and Unmanaged Applications](../../../../docs/framework/winforms/advanced/windows-forms-and-unmanaged-applications.md)  
  描述如何与 Windows 窗体应用程序中的非托管应用程序进行交互。  
   
  [ClickOnce 部署的 Windows 窗体应用程序](https://msdn.microsoft.com/library/34d8c770-48f2-460c-8d67-4ea5684511df)  
@@ -51,7 +51,7 @@ ms.locfileid: "47397889"
   
 |资源|描述|  
 |--------------|-----------------|  
-|[NIB: ASP.NET 的安全性](https://msdn.microsoft.com/library/04b37532-18d9-40b4-8e5f-ee09a70b311d)|讨论如何保证 ASP.NET 应用程序的安全。|  
+|[NIB:ASP.NET 的安全性](https://msdn.microsoft.com/library/04b37532-18d9-40b4-8e5f-ee09a70b311d)|讨论如何保证 ASP.NET 应用程序的安全。|  
 |[保护使用 ASP.NET 创建的 XML Web Services](https://msdn.microsoft.com/library/354b2ab1-2782-4542-b32a-dc560178b90c)|讨论如何实现 ASP.NET Web 服务的安全性。|  
 |[脚本侵入概述](https://msdn.microsoft.com/library/772c7312-211a-4eb3-8d6e-eec0aa1dcc07)|讨论如何抵御脚本攻击，该攻击会尝试将恶意字符插入网页。|  
 |[NIB： 基本的 ASP.NET Web 应用程序的安全方案](https://msdn.microsoft.com/library/94a52ab8-731d-417e-b997-721baf43df38)|常规安全信息和指向更多讨论的链接，|  
@@ -65,9 +65,9 @@ ms.locfileid: "47397889"
 |[远程处理中的安全性](https://msdn.microsoft.com/library/9574262c-d4b1-41c5-8600-24ff147c0add)|描述身份验证和加密以及与远程处理相关的其他安全主题。|  
 |[安全性和远程处理注意事项](../../../../docs/framework/misc/security-and-remoting-considerations.md)|描述与受保护对象和应用程序域交叉相关的安全问题。|  
   
-## <a name="see-also"></a>请参阅  
- [保证 ADO.NET 应用程序的安全](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
- [有关数据访问策略建议](https://msdn.microsoft.com/library/72411f32-d12a-4de8-b961-e54fca7faaf5)  
- [保护应用程序](/visualstudio/ide/securing-applications)  
- [保护连接信息](../../../../docs/framework/data/adonet/protecting-connection-information.md)  
- [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>请参阅
+- [保证 ADO.NET 应用程序的安全](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
+- [有关数据访问策略建议](https://msdn.microsoft.com/library/72411f32-d12a-4de8-b961-e54fca7faaf5)
+- [保护应用程序](/visualstudio/ide/securing-applications)
+- [保护连接信息](../../../../docs/framework/data/adonet/protecting-connection-information.md)
+- [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)

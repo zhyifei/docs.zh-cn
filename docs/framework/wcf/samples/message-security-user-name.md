@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - WS Security
 ms.assetid: c63cfc87-6b20-4949-93b3-bcd4b732b0a2
-ms.openlocfilehash: 6b2c041be62a274323411e6faceb86c3fa666869
-ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
+ms.openlocfilehash: 791c77999b246c1a63767a937189fc6cb970e08f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54223125"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54607967"
 ---
 # <a name="message-security-user-name"></a>用户名消息安全
 本示例演示如何实现一个应用程序，该应用程序对客户端使用具有用户名身份验证的 WS-Security，并要求使用服务器的 X.509v3 证书对服务器进行身份验证。 客户端与服务器之间的所有应用程序消息均已进行签名和加密。 默认情况下，使用客户端提供的用户名和密码登录有效的 Windows 帐户。 此示例基于[WSHttpBinding](../../../../docs/framework/wcf/samples/wshttpbinding.md)。 本示例由客户端控制台程序 (Client.exe) 和 Internet 信息服务 (IIS) 所承载的服务库 (Service.dll) 组成。 该服务实现定义“请求-答复”通信模式的协定。  

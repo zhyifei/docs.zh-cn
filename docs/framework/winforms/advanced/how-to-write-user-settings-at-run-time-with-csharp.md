@@ -1,21 +1,22 @@
 ---
-title: 如何：在运行时编写用户设置 (C#)
+title: 如何：在运行时编写用户设置C#
 ms.date: 03/30/2017
 helpviewer_keywords:
 - application settings [Windows Forms], run time
 - application settings [Windows Forms], writing user settings
 - application settings [Windows Forms], C#
 ms.assetid: 9d061c7d-b33b-470f-a36d-edccb1d6f9a3
-ms.openlocfilehash: f289b6a6a4a726ffa6bb2c9df99c665e2872e8d5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a62bf540ebdc383f26bd4aed760b2562437047aa
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54560929"
 ---
-# <a name="how-to-write-user-settings-at-run-time-with-c"></a>如何：在运行时编写用户设置 (C#) #
+# <a name="how-to-write-user-settings-at-run-time-with-c"></a>如何：在运行时编写用户设置C# #
 应用程序范围的设置是只读的，只能在设计时更改，或通过在应用程序会话之间更改 .config 文件进行更改。 但用户范围的设置可以在运行时写入，就像更改任何属性值一样。 新值在应用程序会话的持续时间内始终存在。 可以通过调用 Save 方法在应用程序会话之间保留对设置的更改。  
   
-### <a name="how-to-write-and-persist-user-settings-at-run-time-with-c"></a>如何：在运行时编写和保留用户设置 (C#)  
+### <a name="how-to-write-and-persist-user-settings-at-run-time-with-c"></a>如何：编写并在运行时保存用户设置C#  
   
 1.  访问设置并向其分配新值，如本示例中所示：  
   
@@ -33,7 +34,7 @@ ms.lasthandoff: 05/04/2018
   
      用户设置保存在用户的本地应用程序数据文件夹（隐藏）中子文件夹下的文件内。  
   
-## <a name="see-also"></a>请参阅  
- [使用应用程序设置和用户设置](../../../../docs/framework/winforms/advanced/using-application-settings-and-user-settings.md)  
- [如何：在运行时使用 C# 读取设置](../../../../docs/framework/winforms/advanced/how-to-read-settings-at-run-time-with-csharp.md)  
- [应用程序设置概述](../../../../docs/framework/winforms/advanced/application-settings-overview.md)
+## <a name="see-also"></a>请参阅
+- [使用应用程序设置和用户设置](../../../../docs/framework/winforms/advanced/using-application-settings-and-user-settings.md)
+- [如何：在运行时读取设置C#](../../../../docs/framework/winforms/advanced/how-to-read-settings-at-run-time-with-csharp.md)
+- [应用程序设置概述](../../../../docs/framework/winforms/advanced/application-settings-overview.md)
