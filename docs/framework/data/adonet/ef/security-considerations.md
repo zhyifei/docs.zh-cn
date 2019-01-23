@@ -2,12 +2,12 @@
 title: 安全注意事项（实体框架）
 ms.date: 03/30/2017
 ms.assetid: 84758642-9b72-4447-86f9-f831fef46962
-ms.openlocfilehash: 25d313f9c6f71d946ed8d9cc5db2e99dc84983b3
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 41812dab1f92e20e3742661d13c9f0e4fb81b46e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45591941"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54612818"
 ---
 # <a name="security-considerations-entity-framework"></a>安全注意事项（实体框架）
 本主题介绍有关开发、部署和运行[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]应用程序的特定安全注意事项。 除此之外，您还应遵循有关创建安全的 [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] 应用程序的建议。 有关详细信息，请参阅[安全性概述](../../../../../docs/framework/data/adonet/security-overview.md)。  
@@ -46,7 +46,7 @@ ms.locfileid: "45591941"
   
 -   动态创建连接时使用连接字符串生成器。  
   
-     如果必须在运行时构造连接字符串，请使用 <xref:System.Data.EntityClient.EntityConnectionStringBuilder> 类。 此字符串生成器类可以验证并转义无效的输入信息，从而有助于防止连接字符串注入式攻击。 有关详细信息，请参阅[如何： 生成 EntityConnection 连接字符串](../../../../../docs/framework/data/adonet/ef/how-to-build-an-entityconnection-connection-string.md)。 另外，应使用适当的字符串生成器类构造作为[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]连接字符串一部分的数据源连接字符串。 有关 ADO.NET 提供程序的连接字符串生成器的信息，请参阅[连接字符串生成器](../../../../../docs/framework/data/adonet/connection-string-builders.md)。  
+     如果必须在运行时构造连接字符串，请使用 <xref:System.Data.EntityClient.EntityConnectionStringBuilder> 类。 此字符串生成器类可以验证并转义无效的输入信息，从而有助于防止连接字符串注入式攻击。 有关详细信息，请参阅[如何：生成 EntityConnection 连接字符串](../../../../../docs/framework/data/adonet/ef/how-to-build-an-entityconnection-connection-string.md)。 另外，应使用适当的字符串生成器类构造作为[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]连接字符串一部分的数据源连接字符串。 有关 ADO.NET 提供程序的连接字符串生成器的信息，请参阅[连接字符串生成器](../../../../../docs/framework/data/adonet/connection-string-builders.md)。  
   
  有关详细信息，请参阅[保护连接信息](../../../../../docs/framework/data/adonet/protecting-connection-information.md)。  
   
@@ -75,7 +75,7 @@ ms.locfileid: "45591941"
   
 -   打开数据库连接和执行针对数据库中，命令如权限<xref:System.Data.SqlClient.SqlClientPermission>为 SQL Server 数据库。  
   
- 有关详细信息，请参阅[代码访问安全性和 ADO.NET](../../../../../docs/framework/data/adonet/code-access-security.md)。  
+ 有关更多信息，请参见 [Code Access Security and ADO.NET](../../../../../docs/framework/data/adonet/code-access-security.md)。  
   
 #### <a name="do-not-install-untrusted-applications"></a>不要安装不可信的应用程序。  
  [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]不强制实施任何安全权限，并且会调用用户提供的任何进程中的数据对象代码，而不管这些代码可信与否。 确保数据存储和应用程序执行客户端身份验证和授权。  
@@ -161,7 +161,7 @@ ms.locfileid: "45591941"
 #### <a name="do-not-accept-metadataworkspace-objects-from-untrusted-sources"></a>不要接受来自不可信源的 MetadataWorkspace 对象。  
  应用程序不应接受来自不可信源的 <xref:System.Data.Metadata.Edm.MetadataWorkspace> 类的实例。 正确的做法是从这样的源显式构造并填充工作区。  
   
-## <a name="see-also"></a>请参阅  
- [保证 ADO.NET 应用程序的安全](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
- [部署注意事项](../../../../../docs/framework/data/adonet/ef/deployment-considerations.md)  
- [迁移注意事项](../../../../../docs/framework/data/adonet/ef/migration-considerations.md)
+## <a name="see-also"></a>请参阅
+- [保证 ADO.NET 应用程序的安全](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
+- [部署注意事项](../../../../../docs/framework/data/adonet/ef/deployment-considerations.md)
+- [迁移注意事项](../../../../../docs/framework/data/adonet/ef/migration-considerations.md)
