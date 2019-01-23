@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Key attribute in XAML [XAML Services]
 - XAML [XAML Services], x:Key attribute
 ms.assetid: 1985cd45-f197-42d5-b75e-886add64b248
-ms.openlocfilehash: f77f0a952224f79ee95a755cb848a4f8b68c9602
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 23c483daed0156dd29134b255e9da2f7922980ba
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47232763"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54492777"
 ---
 # <a name="xkey-directive"></a>x:Key 指令
 唯一标识创建和引用 XAML 定义的字典中的元素。 添加`x:Key`XAML 对象元素的值是标识资源字典，例如在 WPF 中的资源的最常见方法<xref:System.Windows.ResourceDictionary>。  
@@ -110,7 +110,7 @@ keyObject
 ## <a name="silverlight-usage-notes"></a>Silverlight Usage 备注。  
  `x:Key` 适用于 Silverlight 单独说明了。 有关详细信息，请参阅[XAML Namespace （x:）语言功能 (Silverlight)](https://go.microsoft.com/fwlink/?LinkId=199081)。  
   
-## <a name="see-also"></a>请参阅  
- [XAML 资源](../../../docs/framework/wpf/advanced/xaml-resources.md)  
- [资源和代码](../../../docs/framework/wpf/advanced/resources-and-code.md)  
- [StaticResource 标记扩展](../../../docs/framework/wpf/advanced/staticresource-markup-extension.md)
+## <a name="see-also"></a>请参阅
+- [XAML 资源](../../../docs/framework/wpf/advanced/xaml-resources.md)
+- [资源和代码](../../../docs/framework/wpf/advanced/resources-and-code.md)
+- [StaticResource 标记扩展](../../../docs/framework/wpf/advanced/staticresource-markup-extension.md)
