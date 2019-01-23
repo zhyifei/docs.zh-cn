@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ee8fa8feebba7258fc84ee7ba00ce2ab1977faa4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 216779ab03b426ceb8003accfbdd182f583b77cc
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33420399"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54557339"
 ---
-# <a name="icordebugvariablehomegetcode-method"></a><span data-ttu-id="9e831-102">ICorDebugVariableHome::GetCode 方法</span><span class="sxs-lookup"><span data-stu-id="9e831-102">ICorDebugVariableHome::GetCode Method</span></span>
-<span data-ttu-id="9e831-103">获取包含此"icor 调试代码"实例[ICorDebugVariableHome](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md)对象。</span><span class="sxs-lookup"><span data-stu-id="9e831-103">Gets the "ICorDebugCode" instance that contains this [ICorDebugVariableHome](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md) object.</span></span>  
+# <a name="icordebugvariablehomegetcode-method"></a><span data-ttu-id="fe344-102">ICorDebugVariableHome::GetCode 方法</span><span class="sxs-lookup"><span data-stu-id="fe344-102">ICorDebugVariableHome::GetCode Method</span></span>
+<span data-ttu-id="fe344-103">获取包含此"ICorDebugCode"实例[ICorDebugVariableHome](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md)对象。</span><span class="sxs-lookup"><span data-stu-id="fe344-103">Gets the "ICorDebugCode" instance that contains this [ICorDebugVariableHome](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md) object.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="9e831-104">语法</span><span class="sxs-lookup"><span data-stu-id="9e831-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="fe344-104">语法</span><span class="sxs-lookup"><span data-stu-id="fe344-104">Syntax</span></span>  
   
 ```  
 HRESULT GetCode(  
@@ -35,19 +35,19 @@ HRESULT GetCode(
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="9e831-105">参数</span><span class="sxs-lookup"><span data-stu-id="9e831-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="fe344-105">参数</span><span class="sxs-lookup"><span data-stu-id="fe344-105">Parameters</span></span>  
  `ppCode`  
- <span data-ttu-id="9e831-106">[out]指向包含此"icor 调试代码"实例的地址的指针[ICorDebugVariableHome](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md)对象。</span><span class="sxs-lookup"><span data-stu-id="9e831-106">[out] A pointer to the address of the "ICorDebugCode" instance that contains this [ICorDebugVariableHome](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md) object.</span></span>  
+ <span data-ttu-id="fe344-106">[out]指向包含此"ICorDebugCode"实例的地址的指针[ICorDebugVariableHome](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md)对象。</span><span class="sxs-lookup"><span data-stu-id="fe344-106">[out] A pointer to the address of the "ICorDebugCode" instance that contains this [ICorDebugVariableHome](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md) object.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="9e831-107">要求</span><span class="sxs-lookup"><span data-stu-id="9e831-107">Requirements</span></span>  
- <span data-ttu-id="9e831-108">**平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="9e831-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="fe344-107">要求</span><span class="sxs-lookup"><span data-stu-id="fe344-107">Requirements</span></span>  
+ <span data-ttu-id="fe344-108">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="fe344-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="9e831-109">**标头：** CorDebug.idl、 CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="9e831-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="fe344-109">**标头：** CorDebug.idl、 CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="fe344-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="9e831-110">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="9e831-110">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="fe344-110">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="fe344-110">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="9e831-111">**.NET framework 版本：** [!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="9e831-111">**.NET Framework Versions:** [!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]</span></span>  
+ <span data-ttu-id="fe344-111">**.NET Framework 版本：**[!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="fe344-111">**.NET Framework Versions:** [!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="9e831-112">请参阅</span><span class="sxs-lookup"><span data-stu-id="9e831-112">See Also</span></span>  
- [<span data-ttu-id="9e831-113">ICorDebugVariableHome 接口</span><span class="sxs-lookup"><span data-stu-id="9e831-113">ICorDebugVariableHome Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md)  
- 
+## <a name="see-also"></a><span data-ttu-id="fe344-112">请参阅</span><span class="sxs-lookup"><span data-stu-id="fe344-112">See also</span></span>
+- [<span data-ttu-id="fe344-113">ICorDebugVariableHome 接口</span><span class="sxs-lookup"><span data-stu-id="fe344-113">ICorDebugVariableHome Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md)
+
