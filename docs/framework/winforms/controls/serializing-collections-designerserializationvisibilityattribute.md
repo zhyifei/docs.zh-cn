@@ -11,17 +11,17 @@ helpviewer_keywords:
 - collections [Windows Forms], serializing
 - collections [Windows Forms], standard types
 ms.assetid: 020c9df4-fdc5-4dae-815a-963ecae5668c
-ms.openlocfilehash: 54859b3065e8e9bb9680d8b6bf7946b393f73b9f
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 5c9bb0bc16517ba3ffe6621cdf53b1685e8730e1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43788076"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54533541"
 ---
 # <a name="walkthrough-serializing-collections-of-standard-types-with-the-designerserializationvisibilityattribute"></a>演练：使用 DesignerSerializationVisibilityAttribute 序列化标准类型的集合
 自定义控件有时将公开为属性的集合。 本演练演示如何使用<xref:System.ComponentModel.DesignerSerializationVisibilityAttribute>类来控制在设计时序列化集合的方式。 将应用<xref:System.ComponentModel.DesignerSerializationVisibilityAttribute.Content>到集合属性的值可确保将序列化属性。  
   
- 若要将代码复制本主题中的一个列表，请参阅[如何： 序列化集合的标准类型使用 DesignerSerializationVisibilityAttribute](https://msdn.microsoft.com/library/7829fcdd-8205-405f-8231-a1282a9835c9)。  
+ 若要将代码复制本主题中的一个列表，请参阅[如何：序列化使用 DesignerSerializationVisibilityAttribute 标准类型的集合](https://msdn.microsoft.com/library/7829fcdd-8205-405f-8231-a1282a9835c9)。  
   
 > [!NOTE]
 >  显示的对话框和菜单命令可能会与“帮助”中的描述不同，具体取决于你现用的设置或版本。 若要更改设置，请在 **“工具”** 菜单上选择 **“导入和导出设置”** 。 有关详细信息，请参阅[个性化设置 Visual Studio IDE](/visualstudio/ide/personalizing-the-visual-studio-ide)。  
@@ -38,7 +38,7 @@ ms.locfileid: "43788076"
   
 1.  创建一个名为 Windows 控件库项目`SerializationDemoControlLib`。 有关详细信息，请参阅[Windows 控件库模板](https://msdn.microsoft.com/library/722f4e2d-1310-4ed5-8f33-593337ab66b4)。  
   
-2.  重命名`UserControl1`到`SerializationDemoControl`。 有关详细信息，请参阅[如何： 重命名标识符](https://msdn.microsoft.com/library/2430f732-2b70-4516-8cf6-a7bb71cc9724)。  
+2.  重命名`UserControl1`到`SerializationDemoControl`。 有关详细信息，请参阅[如何：重命名标识符](https://msdn.microsoft.com/library/2430f732-2b70-4516-8cf6-a7bb71cc9724)。  
   
 3.  在中**属性**窗口中，设置的值<xref:System.Windows.Forms.Padding.All%2A?displayProperty=nameWithType>属性设置为`10`。  
   
@@ -49,8 +49,8 @@ ms.locfileid: "43788076"
     |属性|更改为|  
     |--------------|---------------|  
     |**多行**|`true`|  
-    |**停靠**|<xref:System.Windows.Forms.DockStyle.Fill>|  
-    |**滚动条**|<xref:System.Windows.Forms.ScrollBars.Vertical>|  
+    |**Dock**|<xref:System.Windows.Forms.DockStyle.Fill>|  
+    |**ScrollBars**|<xref:System.Windows.Forms.ScrollBars.Vertical>|  
     |**ReadOnly**|`true`|  
   
 6.  在中**代码编辑器**，声明一个名为的字符串数组字段`stringsValue`中`SerializationDemoControl`。  
@@ -84,7 +84,7 @@ ms.locfileid: "43788076"
   
 1.  向解决方案添加一个 Windows 应用程序项目。 将项目命名为 `SerializationDemoControlTest`。  
   
-2.  在中**工具箱**，找到名为选项卡**SerializationDemoControlLib 组件**。 在此选项卡上，您会发现`SerializationDemoControl`。 有关详细信息，请参阅[演练：使用自定义组件自动填充工具箱](../../../../docs/framework/winforms/controls/walkthrough-automatically-populating-the-toolbox-with-custom-components.md)。  
+2.  在中**工具箱**，找到名为选项卡**SerializationDemoControlLib 组件**。 在此选项卡上，您会发现`SerializationDemoControl`。 有关详细信息，请参见[演练：自动填充工具箱与自定义组件](../../../../docs/framework/winforms/controls/walkthrough-automatically-populating-the-toolbox-with-custom-components.md)。  
   
 3.  位置`SerializationDemoControl`窗体上。  
   
@@ -137,8 +137,8 @@ ms.locfileid: "43788076"
   
 -   [演练：创建利用 Visual Studio 设计时功能的 Windows 窗体控件](../../../../docs/framework/winforms/controls/creating-a-wf-control-design-time-features.md)  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.ComponentModel.DesignerSerializationVisibilityAttribute>  
- [设计器序列化概述](https://msdn.microsoft.com/library/c342635a-aa5f-4281-915b-b013738af15a)  
- [如何： 使用 DesignerSerializationVisibilityAttribute 标准类型的集合进行序列化](https://msdn.microsoft.com/library/7829fcdd-8205-405f-8231-a1282a9835c9)  
- [演练：使用自定义组件自动填充工具箱](../../../../docs/framework/winforms/controls/walkthrough-automatically-populating-the-toolbox-with-custom-components.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.ComponentModel.DesignerSerializationVisibilityAttribute>
+- [设计器序列化概述](https://msdn.microsoft.com/library/c342635a-aa5f-4281-915b-b013738af15a)
+- [如何：序列化使用 DesignerSerializationVisibilityAttribute 标准类型的集合](https://msdn.microsoft.com/library/7829fcdd-8205-405f-8231-a1282a9835c9)
+- [演练：自动填充工具箱与自定义组件](../../../../docs/framework/winforms/controls/walkthrough-automatically-populating-the-toolbox-with-custom-components.md)

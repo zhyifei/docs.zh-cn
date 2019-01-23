@@ -2,12 +2,12 @@
 title: 处理异步应用程序 (Visual Basic 中) 中的重新进入
 ms.date: 07/20/2015
 ms.assetid: ef3dc73d-13fb-4c5f-a686-6b84148bbffe
-ms.openlocfilehash: 3cbdd5ddc6f742846542e508d1dc0165cd6fde22
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 6187b3a519da2930136aab8df9451f757079c2a5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50183784"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54535614"
 ---
 # <a name="handling-reentrancy-in-async-apps-visual-basic"></a>处理异步应用程序 (Visual Basic 中) 中的重新进入
 在应用中包含异步代码时，应考虑并且可以阻止重新进入（指在异步操作完成之前重新进入它）。 如果不识别并处理重新进入的可能性，则它可能会导致意外结果。  
@@ -104,7 +104,7 @@ TOTAL bytes returned:  890591
 ###  <a name="BKMK_DisableTheStartButton"></a>禁用“开始”按钮  
  可以通过在 `StartButton_Click` 事件处理程序顶部禁用“开始”按钮，在操作运行期间阻止该按钮。 随后可以在操作完成时从 `Finally` 块中重新启用中该按钮，以便用户可以再次运行应用。  
   
- 下面的代码演示了这些更改（使用星号标记）。 可以将更改添加到本主题末尾的代码中，或从[异步示例：.NET 桌面应用中的重新进入](https://code.msdn.microsoft.com/Async-Sample-Preventing-a8489f06)下载已完成的应用。 项目名是 DisableStartButton。  
+ 下面的代码演示了这些更改（使用星号标记）。 可以将所做的更改添加到本主题末尾的代码也可以下载完成的应用程序从[异步示例：.NET 桌面应用程序中的重新进入](https://code.msdn.microsoft.com/Async-Sample-Preventing-a8489f06)。 项目名是 DisableStartButton。  
   
 ```vb  
 Private Async Sub StartButton_Click(sender As Object, e As RoutedEventArgs)  
@@ -134,7 +134,7 @@ End Sub
   
  有关取消的详细信息，请参阅[微调异步应用程序 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/fine-tuning-your-async-application.md)。  
   
- 若要设置此方案，请对[检查并运行示例应用](#BKMD_SettingUpTheExample)中提供的基本代码进行以下更改。 还可以从[异步示例：.NET 桌面应用中的重新进入](https://code.msdn.microsoft.com/Async-Sample-Preventing-a8489f06)下载已完成的应用。 此项目的名称是 CancelAndRestart。  
+ 若要设置此方案，请对[检查并运行示例应用](#BKMD_SettingUpTheExample)中提供的基本代码进行以下更改。 您还可以下载完成的应用程序从[异步示例：.NET 桌面应用程序中的重新进入](https://code.msdn.microsoft.com/Async-Sample-Preventing-a8489f06)。 此项目的名称是 CancelAndRestart。  
   
 1.  声明 <xref:System.Threading.CancellationTokenSource> 变量 `cts`，它处于所有方法的范围内。  
   
@@ -535,7 +535,7 @@ End Function
   
 ###  <a name="BKMK_DownloadingTheApp"></a>下载应用  
   
-1.  从[异步示例：.NET 桌面应用中的重新进入](https://code.msdn.microsoft.com/Async-Sample-Preventing-a8489f06)下载压缩文件。  
+1.  下载压缩的文件[异步示例：.NET 桌面应用程序中的重新进入](https://code.msdn.microsoft.com/Async-Sample-Preventing-a8489f06)。  
   
 2.  解压缩下载的文件，然后启动 Visual Studio。  
   
@@ -678,5 +678,5 @@ End Function
   
 ## <a name="see-also"></a>请参阅
 
-- [演练：使用 Async 和 Await 访问 Web (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)  
+- [演练：访问 Web 使用 Async 和 Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)
 - [使用 Async 和 Await 的异步编程 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md)
