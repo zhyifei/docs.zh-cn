@@ -16,30 +16,30 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a6761ff204d299bc2db84e2e80d988306125a110
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 4be027238d676d78a3ec29e4f2696f765291f29b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33430816"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54504426"
 ---
-# <a name="iappdomainbinding-interface"></a><span data-ttu-id="bfcf3-102">IAppDomainBinding 接口</span><span class="sxs-lookup"><span data-stu-id="bfcf3-102">IAppDomainBinding Interface</span></span>
-<span data-ttu-id="bfcf3-103">提供由公共语言运行时 (CLR)，用于通知主机应用程序已创建应用程序域调用的方法。</span><span class="sxs-lookup"><span data-stu-id="bfcf3-103">Provides a method that is called by the common language runtime (CLR) to notify the host application that an application domain has been created.</span></span>  
+# <a name="iappdomainbinding-interface"></a><span data-ttu-id="74037-102">IAppDomainBinding 接口</span><span class="sxs-lookup"><span data-stu-id="74037-102">IAppDomainBinding Interface</span></span>
+<span data-ttu-id="74037-103">提供由公共语言运行时 (CLR) 以通知主机应用程序已创建的应用程序域调用的方法。</span><span class="sxs-lookup"><span data-stu-id="74037-103">Provides a method that is called by the common language runtime (CLR) to notify the host application that an application domain has been created.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="bfcf3-104">方法</span><span class="sxs-lookup"><span data-stu-id="bfcf3-104">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="74037-104">方法</span><span class="sxs-lookup"><span data-stu-id="74037-104">Methods</span></span>  
   
-|<span data-ttu-id="bfcf3-105">方法</span><span class="sxs-lookup"><span data-stu-id="bfcf3-105">Method</span></span>|<span data-ttu-id="bfcf3-106">描述</span><span class="sxs-lookup"><span data-stu-id="bfcf3-106">Description</span></span>|  
+|<span data-ttu-id="74037-105">方法</span><span class="sxs-lookup"><span data-stu-id="74037-105">Method</span></span>|<span data-ttu-id="74037-106">描述</span><span class="sxs-lookup"><span data-stu-id="74037-106">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="bfcf3-107">OnAppDomain 方法</span><span class="sxs-lookup"><span data-stu-id="bfcf3-107">OnAppDomain Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iappdomainbinding-onappdomain-method.md)|<span data-ttu-id="bfcf3-108">由公共语言运行时 (CLR)，用于通知宿主已创建应用程序域调用。</span><span class="sxs-lookup"><span data-stu-id="bfcf3-108">Called by the common language runtime (CLR) to notify the host that an application domain has been created.</span></span>|  
+|[<span data-ttu-id="74037-107">OnAppDomain 方法</span><span class="sxs-lookup"><span data-stu-id="74037-107">OnAppDomain Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iappdomainbinding-onappdomain-method.md)|<span data-ttu-id="74037-108">由公共语言运行时 (CLR)，用于通知宿主已创建的应用程序域调用。</span><span class="sxs-lookup"><span data-stu-id="74037-108">Called by the common language runtime (CLR) to notify the host that an application domain has been created.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="bfcf3-109">要求</span><span class="sxs-lookup"><span data-stu-id="bfcf3-109">Requirements</span></span>  
- <span data-ttu-id="bfcf3-110">**平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="bfcf3-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="74037-109">要求</span><span class="sxs-lookup"><span data-stu-id="74037-109">Requirements</span></span>  
+ <span data-ttu-id="74037-110">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="74037-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="bfcf3-111">**标头：** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="bfcf3-111">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="74037-111">**标头：** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="74037-111">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="bfcf3-112">**库：** 作为 MSCorEE.dll 中的资源</span><span class="sxs-lookup"><span data-stu-id="bfcf3-112">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="74037-112">**库：** 包含为 MSCorEE.dll 中的资源</span><span class="sxs-lookup"><span data-stu-id="74037-112">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="bfcf3-113">**.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="bfcf3-113">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="74037-113">**.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="74037-113">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="bfcf3-114">请参阅</span><span class="sxs-lookup"><span data-stu-id="bfcf3-114">See Also</span></span>  
- [<span data-ttu-id="bfcf3-115">承载接口</span><span class="sxs-lookup"><span data-stu-id="bfcf3-115">Hosting Interfaces</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+## <a name="see-also"></a><span data-ttu-id="74037-114">请参阅</span><span class="sxs-lookup"><span data-stu-id="74037-114">See also</span></span>
+- [<span data-ttu-id="74037-115">承载接口</span><span class="sxs-lookup"><span data-stu-id="74037-115">Hosting Interfaces</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)

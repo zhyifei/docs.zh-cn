@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: de120516655c1a0578e88ecc2890701ed9fc2f6d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: b31df454c49ddccc74a7e877c09efa4f45b69d9e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33443695"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54491789"
 ---
-# <a name="assemblyrefflags-enumeration"></a><span data-ttu-id="e37af-102">AssemblyRefFlags 枚举</span><span class="sxs-lookup"><span data-stu-id="e37af-102">AssemblyRefFlags Enumeration</span></span>
-<span data-ttu-id="e37af-103">包含值，用于描述程序集引用的功能。</span><span class="sxs-lookup"><span data-stu-id="e37af-103">Contains values that describe features of an assembly reference.</span></span>  
+# <a name="assemblyrefflags-enumeration"></a><span data-ttu-id="cef4c-102">AssemblyRefFlags 枚举</span><span class="sxs-lookup"><span data-stu-id="cef4c-102">AssemblyRefFlags Enumeration</span></span>
+<span data-ttu-id="cef4c-103">包含值，用于描述程序集引用的功能。</span><span class="sxs-lookup"><span data-stu-id="cef4c-103">Contains values that describe features of an assembly reference.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="e37af-104">语法</span><span class="sxs-lookup"><span data-stu-id="e37af-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="cef4c-104">语法</span><span class="sxs-lookup"><span data-stu-id="cef4c-104">Syntax</span></span>  
   
 ```  
 typedef enum {  
@@ -34,20 +34,20 @@ typedef enum {
 } AssemblyRefFlags;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="e37af-105">成员</span><span class="sxs-lookup"><span data-stu-id="e37af-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="cef4c-105">成员</span><span class="sxs-lookup"><span data-stu-id="cef4c-105">Members</span></span>  
   
-|<span data-ttu-id="e37af-106">成员</span><span class="sxs-lookup"><span data-stu-id="e37af-106">Member</span></span>|<span data-ttu-id="e37af-107">描述</span><span class="sxs-lookup"><span data-stu-id="e37af-107">Description</span></span>|  
+|<span data-ttu-id="cef4c-106">成员</span><span class="sxs-lookup"><span data-stu-id="cef4c-106">Member</span></span>|<span data-ttu-id="cef4c-107">描述</span><span class="sxs-lookup"><span data-stu-id="cef4c-107">Description</span></span>|  
 |------------|-----------------|  
-|`arfFullOriginator`|<span data-ttu-id="e37af-108">指定程序集引用包含完整的未经哈希的发布服务器信息的程序集。</span><span class="sxs-lookup"><span data-stu-id="e37af-108">Specifies that the assembly reference contains full, unhashed information about the publisher of the assembly.</span></span>|  
+|`arfFullOriginator`|<span data-ttu-id="cef4c-108">指定程序集引用包含完整的、 未经哈希的发布服务器信息的程序集。</span><span class="sxs-lookup"><span data-stu-id="cef4c-108">Specifies that the assembly reference contains full, unhashed information about the publisher of the assembly.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="e37af-109">要求</span><span class="sxs-lookup"><span data-stu-id="e37af-109">Requirements</span></span>  
- <span data-ttu-id="e37af-110">**平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="e37af-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="cef4c-109">要求</span><span class="sxs-lookup"><span data-stu-id="cef4c-109">Requirements</span></span>  
+ <span data-ttu-id="cef4c-110">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="cef4c-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="e37af-111">**标头：** Cor.h</span><span class="sxs-lookup"><span data-stu-id="e37af-111">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="cef4c-111">**标头：** Cor.h</span><span class="sxs-lookup"><span data-stu-id="cef4c-111">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="e37af-112">**.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="e37af-112">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="cef4c-112">**.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="cef4c-112">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="e37af-113">请参阅</span><span class="sxs-lookup"><span data-stu-id="e37af-113">See Also</span></span>  
- [<span data-ttu-id="e37af-114">Metadata 枚举</span><span class="sxs-lookup"><span data-stu-id="e37af-114">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)  
- [<span data-ttu-id="e37af-115">IMetaDataAssemblyEmit 接口</span><span class="sxs-lookup"><span data-stu-id="e37af-115">IMetaDataAssemblyEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)  
- [<span data-ttu-id="e37af-116">DefineAssemblyRef 方法</span><span class="sxs-lookup"><span data-stu-id="e37af-116">DefineAssemblyRef Method</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-defineassemblyref-method.md)
+## <a name="see-also"></a><span data-ttu-id="cef4c-113">请参阅</span><span class="sxs-lookup"><span data-stu-id="cef4c-113">See also</span></span>
+- [<span data-ttu-id="cef4c-114">Metadata 枚举</span><span class="sxs-lookup"><span data-stu-id="cef4c-114">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+- [<span data-ttu-id="cef4c-115">IMetaDataAssemblyEmit 接口</span><span class="sxs-lookup"><span data-stu-id="cef4c-115">IMetaDataAssemblyEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)
+- [<span data-ttu-id="cef4c-116">DefineAssemblyRef 方法</span><span class="sxs-lookup"><span data-stu-id="cef4c-116">DefineAssemblyRef Method</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-defineassemblyref-method.md)

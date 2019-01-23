@@ -9,24 +9,24 @@ helpviewer_keywords:
 - Shape objects [WPF]
 - Shape types [WPF]
 ms.assetid: 91a371f1-81e4-40da-ad61-ec24167152e6
-ms.openlocfilehash: d3b14881cc1366cefb4d11c9d14654c15952624b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0a218df17412f713eec272e49c13956b2efb71b5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33562865"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54620222"
 ---
-# <a name="shapes-how-to-topics"></a><span data-ttu-id="e354f-102">形状帮助主题</span><span class="sxs-lookup"><span data-stu-id="e354f-102">Shapes How-to Topics</span></span>
-<span data-ttu-id="e354f-103">此部分中的主题演示如何使用<xref:System.Windows.Shapes.Shape>屏幕绘制基本形状的对象。</span><span class="sxs-lookup"><span data-stu-id="e354f-103">The topics in this section demonstrate how to use <xref:System.Windows.Shapes.Shape> objects to draw basic shapes to the screen.</span></span>  
+# <a name="shapes-how-to-topics"></a><span data-ttu-id="2e962-102">形状帮助主题</span><span class="sxs-lookup"><span data-stu-id="2e962-102">Shapes How-to Topics</span></span>
+<span data-ttu-id="2e962-103">在本部分中的主题演示如何使用<xref:System.Windows.Shapes.Shape>要在屏幕上绘制基本形状的对象。</span><span class="sxs-lookup"><span data-stu-id="2e962-103">The topics in this section demonstrate how to use <xref:System.Windows.Shapes.Shape> objects to draw basic shapes to the screen.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="e354f-104">本节内容</span><span class="sxs-lookup"><span data-stu-id="e354f-104">In This Section</span></span>  
- [<span data-ttu-id="e354f-105">使用多边形元素绘制闭合形状</span><span class="sxs-lookup"><span data-stu-id="e354f-105">Draw a Closed Shape by Using the Polygon Element</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-draw-a-closed-shape-by-using-the-polygon-element.md)  
- [<span data-ttu-id="e354f-106">绘制椭圆形或圆形</span><span class="sxs-lookup"><span data-stu-id="e354f-106">Draw an Ellipse or a Circle</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-draw-an-ellipse-or-a-circle.md)  
- [<span data-ttu-id="e354f-107">绘制直线</span><span class="sxs-lookup"><span data-stu-id="e354f-107">Draw a Line</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-draw-a-line.md)  
- [<span data-ttu-id="e354f-108">使用 Polyline 元素绘制折线</span><span class="sxs-lookup"><span data-stu-id="e354f-108">Draw a Polyline by Using the Polyline Element</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-draw-a-polyline-by-using-the-polyline-element.md)  
- [<span data-ttu-id="e354f-109">绘制矩形</span><span class="sxs-lookup"><span data-stu-id="e354f-109">Draw a Rectangle</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-draw-a-rectangle.md)  
- [<span data-ttu-id="e354f-110">修改直线或线段末端的线帽</span><span class="sxs-lookup"><span data-stu-id="e354f-110">Modify the Cap at the End of a Line or Segment</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-modify-the-cap-at-the-end-of-a-line-or-segment.md)  
+## <a name="in-this-section"></a><span data-ttu-id="2e962-104">本节内容</span><span class="sxs-lookup"><span data-stu-id="2e962-104">In This Section</span></span>  
+ [<span data-ttu-id="2e962-105">使用多边形元素绘制闭合形状</span><span class="sxs-lookup"><span data-stu-id="2e962-105">Draw a Closed Shape by Using the Polygon Element</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-draw-a-closed-shape-by-using-the-polygon-element.md)  
+ [<span data-ttu-id="2e962-106">绘制椭圆形或圆形</span><span class="sxs-lookup"><span data-stu-id="2e962-106">Draw an Ellipse or a Circle</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-draw-an-ellipse-or-a-circle.md)  
+ [<span data-ttu-id="2e962-107">绘制直线</span><span class="sxs-lookup"><span data-stu-id="2e962-107">Draw a Line</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-draw-a-line.md)  
+ [<span data-ttu-id="2e962-108">使用 Polyline 元素绘制折线</span><span class="sxs-lookup"><span data-stu-id="2e962-108">Draw a Polyline by Using the Polyline Element</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-draw-a-polyline-by-using-the-polyline-element.md)  
+ [<span data-ttu-id="2e962-109">绘制矩形</span><span class="sxs-lookup"><span data-stu-id="2e962-109">Draw a Rectangle</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-draw-a-rectangle.md)  
+ [<span data-ttu-id="2e962-110">修改直线或线段末端的线帽</span><span class="sxs-lookup"><span data-stu-id="2e962-110">Modify the Cap at the End of a Line or Segment</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-modify-the-cap-at-the-end-of-a-line-or-segment.md)  
   
-## <a name="see-also"></a><span data-ttu-id="e354f-111">请参阅</span><span class="sxs-lookup"><span data-stu-id="e354f-111">See Also</span></span>  
- <xref:System.Windows.Shapes.Shape>  
- [<span data-ttu-id="e354f-112">图形和多媒体</span><span class="sxs-lookup"><span data-stu-id="e354f-112">Graphics and Multimedia</span></span>](../../../../docs/framework/wpf/graphics-multimedia/index.md)
+## <a name="see-also"></a><span data-ttu-id="2e962-111">请参阅</span><span class="sxs-lookup"><span data-stu-id="2e962-111">See also</span></span>
+- <xref:System.Windows.Shapes.Shape>
+- [<span data-ttu-id="2e962-112">图形和多媒体</span><span class="sxs-lookup"><span data-stu-id="2e962-112">Graphics and Multimedia</span></span>](../../../../docs/framework/wpf/graphics-multimedia/index.md)

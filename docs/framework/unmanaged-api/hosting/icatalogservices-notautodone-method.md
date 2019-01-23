@@ -17,21 +17,21 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3c872f8e1316c735d3b717cbea6e995b14ca0133
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: fc9633f7518aee233634bb7fbfac74c24b306eac
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33431244"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54515597"
 ---
-# <a name="icatalogservicesnotautodone-method"></a><span data-ttu-id="ccae6-102">ICatalogServices::NotAutodone 方法</span><span class="sxs-lookup"><span data-stu-id="ccae6-102">ICatalogServices::NotAutodone Method</span></span>
-<span data-ttu-id="ccae6-103">此方法支持 .NET Framework 基础结构，但不适合直接在代码中使用。</span><span class="sxs-lookup"><span data-stu-id="ccae6-103">This method supports the .NET Framework infrastructure and is not intended to be used directly from your code.</span></span>  
+# <a name="icatalogservicesnotautodone-method"></a><span data-ttu-id="330e7-102">ICatalogServices::NotAutodone 方法</span><span class="sxs-lookup"><span data-stu-id="330e7-102">ICatalogServices::NotAutodone Method</span></span>
+<span data-ttu-id="330e7-103">此方法支持 .NET Framework 基础结构，但不适合直接在代码中使用。</span><span class="sxs-lookup"><span data-stu-id="330e7-103">This method supports the .NET Framework infrastructure and is not intended to be used directly from your code.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="ccae6-104">语法</span><span class="sxs-lookup"><span data-stu-id="ccae6-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="330e7-104">语法</span><span class="sxs-lookup"><span data-stu-id="330e7-104">Syntax</span></span>  
   
 ```  
 HRESULT NotAutodone ( );  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="ccae6-105">请参阅</span><span class="sxs-lookup"><span data-stu-id="ccae6-105">See Also</span></span>  
- [<span data-ttu-id="ccae6-106">承载接口</span><span class="sxs-lookup"><span data-stu-id="ccae6-106">Hosting Interfaces</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+## <a name="see-also"></a><span data-ttu-id="330e7-105">请参阅</span><span class="sxs-lookup"><span data-stu-id="330e7-105">See also</span></span>
+- [<span data-ttu-id="330e7-106">承载接口</span><span class="sxs-lookup"><span data-stu-id="330e7-106">Hosting Interfaces</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
