@@ -1,21 +1,21 @@
 ---
-title: 如何： 筛选元素名称 (LINQ to XML) (Visual Basic)
+title: 如何：筛选元素名称 (LINQ to XML) (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: b1437b4a-48aa-4546-834a-d6d3ab015fe1
-ms.openlocfilehash: 3c7ee9ceb2accef34e852396137107fb1f36350c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6b685da79f149298df14db0d0793130325aa95d9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33643324"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54578692"
 ---
-# <a name="how-to-filter-on-element-names-linq-to-xml-visual-basic"></a><span data-ttu-id="6c138-102">如何： 筛选元素名称 (LINQ to XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="6c138-102">How to: Filter on Element Names (LINQ to XML) (Visual Basic)</span></span>
-<span data-ttu-id="6c138-103">当调用返回 <xref:System.Collections.Generic.IEnumerable%601> 的 <xref:System.Xml.Linq.XElement> 的方法之一时，可以根据元素名称进行筛选。</span><span class="sxs-lookup"><span data-stu-id="6c138-103">When you call one of the methods that return <xref:System.Collections.Generic.IEnumerable%601> of <xref:System.Xml.Linq.XElement>, you can filter on the element name.</span></span>  
+# <a name="how-to-filter-on-element-names-linq-to-xml-visual-basic"></a><span data-ttu-id="26eb4-102">如何：筛选元素名称 (LINQ to XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="26eb4-102">How to: Filter on Element Names (LINQ to XML) (Visual Basic)</span></span>
+<span data-ttu-id="26eb4-103">当调用返回 <xref:System.Collections.Generic.IEnumerable%601> 的 <xref:System.Xml.Linq.XElement> 的方法之一时，可以根据元素名称进行筛选。</span><span class="sxs-lookup"><span data-stu-id="26eb4-103">When you call one of the methods that return <xref:System.Collections.Generic.IEnumerable%601> of <xref:System.Xml.Linq.XElement>, you can filter on the element name.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="6c138-104">示例</span><span class="sxs-lookup"><span data-stu-id="6c138-104">Example</span></span>  
- <span data-ttu-id="6c138-105">本示例说明如何检索经过筛选仅包含具有指定名称的子代的集合。</span><span class="sxs-lookup"><span data-stu-id="6c138-105">This example retrieves a collection of descendants that is filtered to contain only descendants with the specified name.</span></span>  
+## <a name="example"></a><span data-ttu-id="26eb4-104">示例</span><span class="sxs-lookup"><span data-stu-id="26eb4-104">Example</span></span>  
+ <span data-ttu-id="26eb4-105">本示例说明如何检索经过筛选仅包含具有指定名称的子代的集合。</span><span class="sxs-lookup"><span data-stu-id="26eb4-105">This example retrieves a collection of descendants that is filtered to contain only descendants with the specified name.</span></span>  
   
- <span data-ttu-id="6c138-106">本示例使用以下 XML 文档：[示例 XML 文件：典型采购订单 (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-linq-to-xml.md)。</span><span class="sxs-lookup"><span data-stu-id="6c138-106">This example uses the following XML document: [Sample XML File: Typical Purchase Order (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-linq-to-xml.md).</span></span>  
+ <span data-ttu-id="26eb4-106">本示例使用下面的 XML 文档：[示例 XML 文件：典型采购订单 (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-linq-to-xml.md)。</span><span class="sxs-lookup"><span data-stu-id="26eb4-106">This example uses the following XML document: [Sample XML File: Typical Purchase Order (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-linq-to-xml.md).</span></span>  
   
 ```vb  
 Dim po As XElement = XElement.Load("PurchaseOrder.xml")  
@@ -27,14 +27,14 @@ For Each prdName As XElement In items
 Next  
 ```  
   
- <span data-ttu-id="6c138-107">此代码生成以下输出：</span><span class="sxs-lookup"><span data-stu-id="6c138-107">This code produces the following output:</span></span>  
+ <span data-ttu-id="26eb4-107">此代码生成以下输出：</span><span class="sxs-lookup"><span data-stu-id="26eb4-107">This code produces the following output:</span></span>  
   
 ```  
 ProductName:Lawnmower  
 ProductName:Baby Monitor  
 ```  
   
- <span data-ttu-id="6c138-108">其他返回 <xref:System.Collections.Generic.IEnumerable%601> 集合的 <xref:System.Xml.Linq.XElement> 的方法都遵循相同的模式。</span><span class="sxs-lookup"><span data-stu-id="6c138-108">The other methods that return <xref:System.Collections.Generic.IEnumerable%601> of <xref:System.Xml.Linq.XElement> collections follow the same pattern.</span></span> <span data-ttu-id="6c138-109">它们的签名类似于 <xref:System.Xml.Linq.XContainer.Elements%2A> 和 <xref:System.Xml.Linq.XContainer.Descendants%2A>。</span><span class="sxs-lookup"><span data-stu-id="6c138-109">Their signatures are similar to <xref:System.Xml.Linq.XContainer.Elements%2A> and <xref:System.Xml.Linq.XContainer.Descendants%2A>.</span></span> <span data-ttu-id="6c138-110">以下是具有相似方法签名的完整方法列表：</span><span class="sxs-lookup"><span data-stu-id="6c138-110">The following is the complete list of methods that have similar method signatures:</span></span>  
+ <span data-ttu-id="26eb4-108">其他返回 <xref:System.Collections.Generic.IEnumerable%601> 集合的 <xref:System.Xml.Linq.XElement> 的方法都遵循相同的模式。</span><span class="sxs-lookup"><span data-stu-id="26eb4-108">The other methods that return <xref:System.Collections.Generic.IEnumerable%601> of <xref:System.Xml.Linq.XElement> collections follow the same pattern.</span></span> <span data-ttu-id="26eb4-109">它们的签名类似于 <xref:System.Xml.Linq.XContainer.Elements%2A> 和 <xref:System.Xml.Linq.XContainer.Descendants%2A>。</span><span class="sxs-lookup"><span data-stu-id="26eb4-109">Their signatures are similar to <xref:System.Xml.Linq.XContainer.Elements%2A> and <xref:System.Xml.Linq.XContainer.Descendants%2A>.</span></span> <span data-ttu-id="26eb4-110">以下是具有相似方法签名的完整方法列表：</span><span class="sxs-lookup"><span data-stu-id="26eb4-110">The following is the complete list of methods that have similar method signatures:</span></span>  
   
 -   <xref:System.Xml.Linq.XNode.Ancestors%2A>  
   
@@ -50,10 +50,10 @@ ProductName:Baby Monitor
   
 -   <xref:System.Xml.Linq.XElement.DescendantsAndSelf%2A>  
   
-## <a name="example"></a><span data-ttu-id="6c138-111">示例</span><span class="sxs-lookup"><span data-stu-id="6c138-111">Example</span></span>  
- <span data-ttu-id="6c138-112">下面的示例演示如何对命名空间中的 XML 进行同样的查询。</span><span class="sxs-lookup"><span data-stu-id="6c138-112">The following example shows the same query for XML that is in a namespace.</span></span> <span data-ttu-id="6c138-113">有关详细信息，请参阅[处理 XML 命名空间 (Visual Basic 中)](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md)。</span><span class="sxs-lookup"><span data-stu-id="6c138-113">For more information, see [Working with XML Namespaces (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md).</span></span>  
+## <a name="example"></a><span data-ttu-id="26eb4-111">示例</span><span class="sxs-lookup"><span data-stu-id="26eb4-111">Example</span></span>  
+ <span data-ttu-id="26eb4-112">下面的示例演示如何对命名空间中的 XML 进行同样的查询。</span><span class="sxs-lookup"><span data-stu-id="26eb4-112">The following example shows the same query for XML that is in a namespace.</span></span> <span data-ttu-id="26eb4-113">有关详细信息，请参阅[使用 XML 命名空间 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md)。</span><span class="sxs-lookup"><span data-stu-id="26eb4-113">For more information, see [Working with XML Namespaces (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md).</span></span>  
   
- <span data-ttu-id="6c138-114">本示例使用以下 XML 文档：[示例 XML 文件：命名空间中的典型采购订单](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-in-a-namespace.md)。</span><span class="sxs-lookup"><span data-stu-id="6c138-114">This example uses the following XML document: [Sample XML File: Typical Purchase Order in a Namespace](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-in-a-namespace.md).</span></span>  
+ <span data-ttu-id="26eb4-114">本示例使用下面的 XML 文档：[示例 XML 文件：在 Namespace 中的典型采购订单](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-in-a-namespace.md)。</span><span class="sxs-lookup"><span data-stu-id="26eb4-114">This example uses the following XML document: [Sample XML File: Typical Purchase Order in a Namespace](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-in-a-namespace.md).</span></span>  
   
 ```vb  
 Imports <xmlns:aw="http://www.adventure-works.com">  
@@ -71,12 +71,12 @@ Module Module1
 End Module  
 ```  
   
- <span data-ttu-id="6c138-115">此代码生成以下输出：</span><span class="sxs-lookup"><span data-stu-id="6c138-115">This code produces the following output:</span></span>  
+ <span data-ttu-id="26eb4-115">此代码生成以下输出：</span><span class="sxs-lookup"><span data-stu-id="26eb4-115">This code produces the following output:</span></span>  
   
 ```  
 {http://www.adventure-works.com}ProductName:Lawnmower  
 {http://www.adventure-works.com}ProductName:Baby Monitor  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="6c138-116">请参阅</span><span class="sxs-lookup"><span data-stu-id="6c138-116">See Also</span></span>  
- [<span data-ttu-id="6c138-117">LINQ to XML 轴 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="6c138-117">LINQ to XML Axes (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-axes.md)
+## <a name="see-also"></a><span data-ttu-id="26eb4-116">请参阅</span><span class="sxs-lookup"><span data-stu-id="26eb4-116">See also</span></span>
+- [<span data-ttu-id="26eb4-117">LINQ to XML 轴 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="26eb4-117">LINQ to XML Axes (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-axes.md)
