@@ -9,56 +9,56 @@ helpviewer_keywords:
 ms.assetid: 76796bb2-9c0b-4526-8135-8bf18b16d8d9
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: 3674b5e8f54735010da901c76b77bd617218891e
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 0d1db0e3d2a423c4ba21311b6b9deb0d2565c103
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47209176"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54523150"
 ---
-# <a name="ltcleargt-element-for-ltlistenersgt-for-ltsourcegt"></a><span data-ttu-id="bdfa3-102">&lt;清除&gt;的元素&lt;侦听器&gt;为&lt;源&gt;</span><span class="sxs-lookup"><span data-stu-id="bdfa3-102">&lt;clear&gt; Element for &lt;listeners&gt; for &lt;source&gt;</span></span>
-<span data-ttu-id="bdfa3-103">清除跟踪源的 `Listeners` 集合。</span><span class="sxs-lookup"><span data-stu-id="bdfa3-103">Clears the `Listeners` collection for a trace source.</span></span>  
+# <a name="ltcleargt-element-for-ltlistenersgt-for-ltsourcegt"></a><span data-ttu-id="e9d17-102">&lt;清除&gt;的元素&lt;侦听器&gt;为&lt;源&gt;</span><span class="sxs-lookup"><span data-stu-id="e9d17-102">&lt;clear&gt; Element for &lt;listeners&gt; for &lt;source&gt;</span></span>
+<span data-ttu-id="e9d17-103">清除跟踪源的 `Listeners` 集合。</span><span class="sxs-lookup"><span data-stu-id="e9d17-103">Clears the `Listeners` collection for a trace source.</span></span>  
   
- <span data-ttu-id="bdfa3-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="bdfa3-104">\<configuration></span></span>  
-<span data-ttu-id="bdfa3-105">\<system.diagnostics ></span><span class="sxs-lookup"><span data-stu-id="bdfa3-105">\<system.diagnostics></span></span>  
-<span data-ttu-id="bdfa3-106">\<源 ></span><span class="sxs-lookup"><span data-stu-id="bdfa3-106">\<sources></span></span>  
-<span data-ttu-id="bdfa3-107">\<源 ></span><span class="sxs-lookup"><span data-stu-id="bdfa3-107">\<source></span></span>  
-<span data-ttu-id="bdfa3-108">\<侦听器 ></span><span class="sxs-lookup"><span data-stu-id="bdfa3-108">\<listeners></span></span>  
-<span data-ttu-id="bdfa3-109">\<清除 ></span><span class="sxs-lookup"><span data-stu-id="bdfa3-109">\<clear></span></span>  
+ <span data-ttu-id="e9d17-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="e9d17-104">\<configuration></span></span>  
+<span data-ttu-id="e9d17-105">\<system.diagnostics></span><span class="sxs-lookup"><span data-stu-id="e9d17-105">\<system.diagnostics></span></span>  
+<span data-ttu-id="e9d17-106">\<sources></span><span class="sxs-lookup"><span data-stu-id="e9d17-106">\<sources></span></span>  
+<span data-ttu-id="e9d17-107">\<source></span><span class="sxs-lookup"><span data-stu-id="e9d17-107">\<source></span></span>  
+<span data-ttu-id="e9d17-108">\<listeners></span><span class="sxs-lookup"><span data-stu-id="e9d17-108">\<listeners></span></span>  
+<span data-ttu-id="e9d17-109">\<clear></span><span class="sxs-lookup"><span data-stu-id="e9d17-109">\<clear></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="bdfa3-110">语法</span><span class="sxs-lookup"><span data-stu-id="bdfa3-110">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="e9d17-110">语法</span><span class="sxs-lookup"><span data-stu-id="e9d17-110">Syntax</span></span>  
   
 ```xml  
 <clear/>  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="bdfa3-111">特性和元素</span><span class="sxs-lookup"><span data-stu-id="bdfa3-111">Attributes and Elements</span></span>  
- <span data-ttu-id="bdfa3-112">下列各节描述了特性、子元素和父元素。</span><span class="sxs-lookup"><span data-stu-id="bdfa3-112">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="e9d17-111">特性和元素</span><span class="sxs-lookup"><span data-stu-id="e9d17-111">Attributes and Elements</span></span>  
+ <span data-ttu-id="e9d17-112">下列各节描述了特性、子元素和父元素。</span><span class="sxs-lookup"><span data-stu-id="e9d17-112">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="bdfa3-113">特性</span><span class="sxs-lookup"><span data-stu-id="bdfa3-113">Attributes</span></span>  
- <span data-ttu-id="bdfa3-114">无。</span><span class="sxs-lookup"><span data-stu-id="bdfa3-114">None.</span></span>  
+### <a name="attributes"></a><span data-ttu-id="e9d17-113">特性</span><span class="sxs-lookup"><span data-stu-id="e9d17-113">Attributes</span></span>  
+ <span data-ttu-id="e9d17-114">无。</span><span class="sxs-lookup"><span data-stu-id="e9d17-114">None.</span></span>  
   
-### <a name="child-elements"></a><span data-ttu-id="bdfa3-115">子元素</span><span class="sxs-lookup"><span data-stu-id="bdfa3-115">Child Elements</span></span>  
- <span data-ttu-id="bdfa3-116">无。</span><span class="sxs-lookup"><span data-stu-id="bdfa3-116">None.</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="e9d17-115">子元素</span><span class="sxs-lookup"><span data-stu-id="e9d17-115">Child Elements</span></span>  
+ <span data-ttu-id="e9d17-116">无。</span><span class="sxs-lookup"><span data-stu-id="e9d17-116">None.</span></span>  
   
-### <a name="parent-elements"></a><span data-ttu-id="bdfa3-117">父元素</span><span class="sxs-lookup"><span data-stu-id="bdfa3-117">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="e9d17-117">父元素</span><span class="sxs-lookup"><span data-stu-id="e9d17-117">Parent Elements</span></span>  
   
-|<span data-ttu-id="bdfa3-118">元素</span><span class="sxs-lookup"><span data-stu-id="bdfa3-118">Element</span></span>|<span data-ttu-id="bdfa3-119">描述</span><span class="sxs-lookup"><span data-stu-id="bdfa3-119">Description</span></span>|  
+|<span data-ttu-id="e9d17-118">元素</span><span class="sxs-lookup"><span data-stu-id="e9d17-118">Element</span></span>|<span data-ttu-id="e9d17-119">描述</span><span class="sxs-lookup"><span data-stu-id="e9d17-119">Description</span></span>|  
 |-------------|-----------------|  
-|`configuration`|<span data-ttu-id="bdfa3-120">公共语言运行时和 .NET Framework 应用程序所使用的每个配置文件中的根元素。</span><span class="sxs-lookup"><span data-stu-id="bdfa3-120">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
-|`system.diagnostics`|<span data-ttu-id="bdfa3-121">指定用于收集、存储和路由消息的跟踪侦听器以及对跟踪开关设置的级别。</span><span class="sxs-lookup"><span data-stu-id="bdfa3-121">Specifies trace listeners that collect, store, and route messages and the level where a trace switch is set.</span></span>|  
-|`sources`|<span data-ttu-id="bdfa3-122">包含用于启动跟踪消息的跟踪源。</span><span class="sxs-lookup"><span data-stu-id="bdfa3-122">Contains trace sources that initiate tracing messages.</span></span>|  
-|`source`|<span data-ttu-id="bdfa3-123">指定用于启动跟踪消息的跟踪源。</span><span class="sxs-lookup"><span data-stu-id="bdfa3-123">Specifies a trace source that initiates tracing messages.</span></span>|  
-|`listeners`|<span data-ttu-id="bdfa3-124">指定侦听器，用于收集、 存储和路由消息。</span><span class="sxs-lookup"><span data-stu-id="bdfa3-124">Specifies listeners that collect, store, and route messages.</span></span>|  
+|`configuration`|<span data-ttu-id="e9d17-120">公共语言运行时和 .NET Framework 应用程序所使用的每个配置文件中的根元素。</span><span class="sxs-lookup"><span data-stu-id="e9d17-120">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
+|`system.diagnostics`|<span data-ttu-id="e9d17-121">指定用于收集、存储和路由消息的跟踪侦听器以及对跟踪开关设置的级别。</span><span class="sxs-lookup"><span data-stu-id="e9d17-121">Specifies trace listeners that collect, store, and route messages and the level where a trace switch is set.</span></span>|  
+|`sources`|<span data-ttu-id="e9d17-122">包含用于启动跟踪消息的跟踪源。</span><span class="sxs-lookup"><span data-stu-id="e9d17-122">Contains trace sources that initiate tracing messages.</span></span>|  
+|`source`|<span data-ttu-id="e9d17-123">指定用于启动跟踪消息的跟踪源。</span><span class="sxs-lookup"><span data-stu-id="e9d17-123">Specifies a trace source that initiates tracing messages.</span></span>|  
+|`listeners`|<span data-ttu-id="e9d17-124">指定侦听器，用于收集、 存储和路由消息。</span><span class="sxs-lookup"><span data-stu-id="e9d17-124">Specifies listeners that collect, store, and route messages.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="bdfa3-125">备注</span><span class="sxs-lookup"><span data-stu-id="bdfa3-125">Remarks</span></span>  
- <span data-ttu-id="bdfa3-126">`<clear>`元素中移除所有侦听器`Listeners`集合跟踪源，包括<xref:System.Diagnostics.DefaultTraceListener>。</span><span class="sxs-lookup"><span data-stu-id="bdfa3-126">The `<clear>` element removes all listeners from the `Listeners` collection for a trace source, including the <xref:System.Diagnostics.DefaultTraceListener>.</span></span> <span data-ttu-id="bdfa3-127">可以使用`<clear>`元素之前使用`<add>`元素为特定集合中没有任何其他活动的侦听器。</span><span class="sxs-lookup"><span data-stu-id="bdfa3-127">You can use the `<clear>` element before using the `<add>` element to be certain there are no other active listeners in the collection.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="e9d17-125">备注</span><span class="sxs-lookup"><span data-stu-id="e9d17-125">Remarks</span></span>  
+ <span data-ttu-id="e9d17-126">`<clear>`元素中移除所有侦听器`Listeners`集合跟踪源，包括<xref:System.Diagnostics.DefaultTraceListener>。</span><span class="sxs-lookup"><span data-stu-id="e9d17-126">The `<clear>` element removes all listeners from the `Listeners` collection for a trace source, including the <xref:System.Diagnostics.DefaultTraceListener>.</span></span> <span data-ttu-id="e9d17-127">可以使用`<clear>`元素之前使用`<add>`元素为特定集合中没有任何其他活动的侦听器。</span><span class="sxs-lookup"><span data-stu-id="e9d17-127">You can use the `<clear>` element before using the `<add>` element to be certain there are no other active listeners in the collection.</span></span>  
   
-## <a name="configuration-file"></a><span data-ttu-id="bdfa3-128">配置文件</span><span class="sxs-lookup"><span data-stu-id="bdfa3-128">Configuration File</span></span>  
- <span data-ttu-id="bdfa3-129">计算机配置文件 (Machine.config) 和应用程序配置文件中，可以使用此元素。</span><span class="sxs-lookup"><span data-stu-id="bdfa3-129">This element can be used in the machine configuration file (Machine.config) and the application configuration file.</span></span>  
+## <a name="configuration-file"></a><span data-ttu-id="e9d17-128">配置文件</span><span class="sxs-lookup"><span data-stu-id="e9d17-128">Configuration File</span></span>  
+ <span data-ttu-id="e9d17-129">计算机配置文件 (Machine.config) 和应用程序配置文件中，可以使用此元素。</span><span class="sxs-lookup"><span data-stu-id="e9d17-129">This element can be used in the machine configuration file (Machine.config) and the application configuration file.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="bdfa3-130">示例</span><span class="sxs-lookup"><span data-stu-id="bdfa3-130">Example</span></span>  
- <span data-ttu-id="bdfa3-131">下面的示例演示如何使用`<clear>`之前使用的元素`<add>`元素添加侦听器`console`并`textListener`到`Listeners`跟踪源集合`TraceSourceApp`。</span><span class="sxs-lookup"><span data-stu-id="bdfa3-131">The following example shows how to use the `<clear>` element before using the `<add>` elements to add the listeners `console` and `textListener` to the `Listeners` collection for the trace source `TraceSourceApp`.</span></span>  
+## <a name="example"></a><span data-ttu-id="e9d17-130">示例</span><span class="sxs-lookup"><span data-stu-id="e9d17-130">Example</span></span>  
+ <span data-ttu-id="e9d17-131">下面的示例演示如何使用`<clear>`之前使用的元素`<add>`元素添加侦听器`console`并`textListener`到`Listeners`跟踪源集合`TraceSourceApp`。</span><span class="sxs-lookup"><span data-stu-id="e9d17-131">The following example shows how to use the `<clear>` element before using the `<add>` elements to add the listeners `console` and `textListener` to the `Listeners` collection for the trace source `TraceSourceApp`.</span></span>  
   
 ```xml  
 <configuration>  
@@ -86,8 +86,8 @@ ms.locfileid: "47209176"
 </configuration>   
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="bdfa3-132">请参阅</span><span class="sxs-lookup"><span data-stu-id="bdfa3-132">See Also</span></span>  
- <xref:System.Diagnostics.TraceSource>  
- <xref:System.Diagnostics.TraceListener>  
- [<span data-ttu-id="bdfa3-133">跟踪和调试设置架构</span><span class="sxs-lookup"><span data-stu-id="bdfa3-133">Trace and Debug Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)  
- [<span data-ttu-id="bdfa3-134">跟踪侦听器</span><span class="sxs-lookup"><span data-stu-id="bdfa3-134">Trace Listeners</span></span>](../../../../../docs/framework/debug-trace-profile/trace-listeners.md)
+## <a name="see-also"></a><span data-ttu-id="e9d17-132">请参阅</span><span class="sxs-lookup"><span data-stu-id="e9d17-132">See also</span></span>
+- <xref:System.Diagnostics.TraceSource>
+- <xref:System.Diagnostics.TraceListener>
+- [<span data-ttu-id="e9d17-133">跟踪和调试设置架构</span><span class="sxs-lookup"><span data-stu-id="e9d17-133">Trace and Debug Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)
+- [<span data-ttu-id="e9d17-134">跟踪侦听器</span><span class="sxs-lookup"><span data-stu-id="e9d17-134">Trace Listeners</span></span>](../../../../../docs/framework/debug-trace-profile/trace-listeners.md)
