@@ -8,12 +8,12 @@ helpviewer_keywords:
 - UserControl Test Container
 - UserControl class [Windows Forms], run-time behavior
 ms.assetid: 4e4d5c49-1346-40ac-9d96-40211b573583
-ms.openlocfilehash: 40ec136a86b52dcb007d15d5a2917212745961f2
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: fece6fda33ddb86e0aff0584af97ba085dfa9e1b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43512204"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54506363"
 ---
 # <a name="how-to-test-the-run-time-behavior-of-a-usercontrol"></a>如何：测试 UserControl 的运行时行为
 开发时<xref:System.Windows.Forms.UserControl>，您需要测试其运行时行为。 可以创建一个单独的基于 Windows 的应用程序项目，并将你窗体控件的测试，但此过程是不方便。 更快、 更轻松的方法是使用**UserControl 测试容器**Visual Studio 提供的。 此测试容器开始直接从 Windows 控件库项目。  
@@ -41,7 +41,7 @@ ms.locfileid: "43512204"
   
 6.  关闭测试容器。  
   
-7.  另一个用户控件添加到**TestContainerExample**项目。 有关详细信息，请参阅[NIB： 如何： 添加现有项添加至项目](https://msdn.microsoft.com/library/15f4cfb7-78ab-457f-9f14-099a25a6a2d3)。  
+7.  另一个用户控件添加到**TestContainerExample**项目。 有关详细信息，请参阅[NIB： 如何：向项目添加现有项](https://msdn.microsoft.com/library/15f4cfb7-78ab-457f-9f14-099a25a6a2d3)。  
   
 8.  在中**Windows 窗体设计器**，拖动<xref:System.Windows.Forms.Button>控件从**工具箱**到控件的设计图面。  
   
@@ -66,9 +66,9 @@ ms.locfileid: "43512204"
   
 6.  使用**选择用户控件**<xref:System.Windows.Forms.ComboBox>若要从两个用户控件之间切换**TestContainerExample**项目。  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Windows.Forms.UserControl>  
- [如何：创作复合控件](../../../../docs/framework/winforms/controls/how-to-author-composite-controls.md)  
- [演练：使用 Visual Basic 创作复合控件](../../../../docs/framework/winforms/controls/walkthrough-authoring-a-composite-control-with-visual-basic.md)  
- [演练：使用 Visual C# 创作复合控件](../../../../docs/framework/winforms/controls/walkthrough-authoring-a-composite-control-with-visual-csharp.md)  
- [用户控件设计器](https://msdn.microsoft.com/library/2abb9eec-ba32-45cb-b73d-8b52a8bd6bf1)
+## <a name="see-also"></a>请参阅
+- <xref:System.Windows.Forms.UserControl>
+- [如何：创作复合控件](../../../../docs/framework/winforms/controls/how-to-author-composite-controls.md)
+- [演练：创作复合控件使用 Visual Basic](../../../../docs/framework/winforms/controls/walkthrough-authoring-a-composite-control-with-visual-basic.md)
+- [演练：创作复合控件通过视觉对象C#](../../../../docs/framework/winforms/controls/walkthrough-authoring-a-composite-control-with-visual-csharp.md)
+- [用户控件设计器](https://msdn.microsoft.com/library/2abb9eec-ba32-45cb-b73d-8b52a8bd6bf1)

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Drawing objects [WPF]
 - DrawingGroup objects [WPF]
 ms.assetid: 9b5ce5c0-e204-4320-a7a8-0b2210d62f88
-ms.openlocfilehash: 92cf4e7099c7880eb9bde9af765970abac698310
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 4be6f3b06a0e9ab16469ad9a7f9e78799cc2e637
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43525571"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54513667"
 ---
 # <a name="drawing-objects-overview"></a>Drawing 对象概述
 本主题介绍<xref:System.Windows.Media.Drawing>对象，并说明如何使用它们来有效地绘制形状、 位图、 文本和媒体。 使用<xref:System.Windows.Media.Drawing>对象在创建剪贴画时绘制<xref:System.Windows.Media.DrawingBrush>，或使用<xref:System.Windows.Media.Visual>对象。  
@@ -180,12 +180,12 @@ DrawingGroup 操作的顺序
   
 |属性|描述|图示|  
 |--------------|-----------------|------------------|  
-|<xref:System.Windows.Media.DrawingGroup.OpacityMask%2A>|更改选定部分的不透明度<xref:System.Windows.Media.DrawingGroup>内容。 有关示例，请参阅[如何：控制绘图的不透明度](https://msdn.microsoft.com/library/68580652-7d32-4d27-93cc-a5148cf4d5ee)。|![具有不透明蒙版的 DrawingGroup](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-opmask.png "graphicsmm_opmask")|  
-|<xref:System.Windows.Media.DrawingGroup.Opacity%2A>|统一更改的不透明度<xref:System.Windows.Media.DrawingGroup>内容。 使用此属性可以使<xref:System.Windows.Media.Drawing>透明或部分透明。 有关示例，请参阅[如何：向绘图应用不透明蒙板](https://msdn.microsoft.com/library/d77b420b-9be2-479c-a45e-82f4da30eb9f)。|![具有不同不透明度设置的 DrawingGroup](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-opacity.png "graphicsmm_opacity")|  
-|<xref:System.Windows.Media.DrawingGroup.BitmapEffect%2A>|适用<xref:System.Windows.Media.Effects.BitmapEffect>到<xref:System.Windows.Media.DrawingGroup>内容。 有关示例，请参阅[如何：向绘图应用 BitmapEffect](https://msdn.microsoft.com/library/c5b1de83-8d09-47fb-96db-5f174471f4b5)。|![具有 BlurBitmapEffect 的 DrawingGroup](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-bitmap.png "graphicsmm_bitmap")|  
-|<xref:System.Windows.Media.DrawingGroup.ClipGeometry%2A>|剪辑<xref:System.Windows.Media.DrawingGroup>内容区域向您介绍如何使用<xref:System.Windows.Media.Geometry>。 有关示例，请参阅[如何：剪裁绘图](https://msdn.microsoft.com/library/1f7d8a2c-c3c2-42cb-a542-e6796f9fb058)。|![具有定义的剪裁区域的 DrawingGroup](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-clipgeom.png "graphicsmm_clipgeom")|  
+|<xref:System.Windows.Media.DrawingGroup.OpacityMask%2A>|更改选定部分的不透明度<xref:System.Windows.Media.DrawingGroup>内容。 有关示例，请参见 [如何：控制绘图的不透明度](https://msdn.microsoft.com/library/68580652-7d32-4d27-93cc-a5148cf4d5ee)。|![具有不透明蒙版的 DrawingGroup](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-opmask.png "graphicsmm_opmask")|  
+|<xref:System.Windows.Media.DrawingGroup.Opacity%2A>|统一更改的不透明度<xref:System.Windows.Media.DrawingGroup>内容。 使用此属性可以使<xref:System.Windows.Media.Drawing>透明或部分透明。 有关示例，请参见 [如何：向绘图应用不透明蒙板](https://msdn.microsoft.com/library/d77b420b-9be2-479c-a45e-82f4da30eb9f)。|![具有不同不透明度设置的 DrawingGroup](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-opacity.png "graphicsmm_opacity")|  
+|<xref:System.Windows.Media.DrawingGroup.BitmapEffect%2A>|适用<xref:System.Windows.Media.Effects.BitmapEffect>到<xref:System.Windows.Media.DrawingGroup>内容。 有关示例，请参见 [如何：向绘图应用 BitmapEffect](https://msdn.microsoft.com/library/c5b1de83-8d09-47fb-96db-5f174471f4b5)。|![具有 BlurBitmapEffect 的 DrawingGroup](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-bitmap.png "graphicsmm_bitmap")|  
+|<xref:System.Windows.Media.DrawingGroup.ClipGeometry%2A>|剪辑<xref:System.Windows.Media.DrawingGroup>内容区域向您介绍如何使用<xref:System.Windows.Media.Geometry>。 有关示例，请参见 [如何：剪裁绘图](https://msdn.microsoft.com/library/1f7d8a2c-c3c2-42cb-a542-e6796f9fb058)。|![具有定义的剪裁区域的 DrawingGroup](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-clipgeom.png "graphicsmm_clipgeom")|  
 |<xref:System.Windows.Media.DrawingGroup.GuidelineSet%2A>|根据指定的基准将与设备无关的像素与设备像素对齐。 此属性对于确保细节丰富的图形在低 DPI 屏幕上清晰地呈现很有用。 有关示例，请参阅[向绘图应用 GuidelineSet](../../../../docs/framework/wpf/graphics-multimedia/how-to-apply-a-guidelineset-to-a-drawing.md)。|![具有和没有 GuidelineSet 的 DrawingGroup](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-drawinggroup-guidelineset.png "graphicsmm_drawinggroup_guidelineset")|  
-|<xref:System.Windows.Media.DrawingGroup.Transform%2A>|转换<xref:System.Windows.Media.DrawingGroup>内容。 有关示例，请参阅[如何：向绘图应用转换](https://msdn.microsoft.com/library/0d525f2b-682d-4d67-9660-cf46929fbabd)。|![旋转后的 DrawingGroup](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-rotate.png "graphicsmm_rotate")|  
+|<xref:System.Windows.Media.DrawingGroup.Transform%2A>|转换<xref:System.Windows.Media.DrawingGroup>内容。 有关示例，请参见 [如何：向绘图应用转换](https://msdn.microsoft.com/library/0d525f2b-682d-4d67-9660-cf46929fbabd)。|![旋转后的 DrawingGroup](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-rotate.png "graphicsmm_rotate")|  
   
 <a name="usingimagedrawing"></a>   
 ## <a name="display-a-drawing-as-an-image"></a>将绘图显示为图像  
@@ -233,13 +233,13 @@ DrawingGroup 操作的顺序
   
  [!code-csharp[DrawingMiscSnippets_snip#GraphicsMMRetrieveDrawings](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DrawingMiscSnippets_snip/CSharp/EnumerateDrawingsExample.xaml.cs#graphicsmmretrievedrawings)]  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Windows.Media.Drawing>  
- <xref:System.Windows.Media.DrawingGroup>  
- [2D 图形和图像处理](../../../../docs/framework/wpf/advanced/optimizing-performance-2d-graphics-and-imaging.md)  
- [使用图像、绘图和视觉对象进行绘制](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md)  
- [Geometry 概述](../../../../docs/framework/wpf/graphics-multimedia/geometry-overview.md)  
- [WPF 中的形状和基本绘图概述](../../../../docs/framework/wpf/graphics-multimedia/shapes-and-basic-drawing-in-wpf-overview.md)  
- [WPF 图形呈现概述](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)  
- [Freezable 对象概述](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md)  
- [帮助主题](../../../../docs/framework/wpf/graphics-multimedia/drawings-how-to-topics.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.Windows.Media.Drawing>
+- <xref:System.Windows.Media.DrawingGroup>
+- [2D 图形和图像处理](../../../../docs/framework/wpf/advanced/optimizing-performance-2d-graphics-and-imaging.md)
+- [使用图像、绘图和视觉对象进行绘制](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md)
+- [Geometry 概述](../../../../docs/framework/wpf/graphics-multimedia/geometry-overview.md)
+- [WPF 中的形状和基本绘图概述](../../../../docs/framework/wpf/graphics-multimedia/shapes-and-basic-drawing-in-wpf-overview.md)
+- [WPF 图形呈现概述](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)
+- [Freezable 对象概述](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md)
+- [帮助主题](../../../../docs/framework/wpf/graphics-multimedia/drawings-how-to-topics.md)
