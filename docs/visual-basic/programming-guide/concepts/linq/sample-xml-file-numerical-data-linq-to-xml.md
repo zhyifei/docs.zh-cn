@@ -2,17 +2,17 @@
 title: 示例 XML 文件：数值数据 (LINQ to XML)
 ms.date: 07/20/2015
 ms.assetid: 5faef812-0006-4d84-9cf2-5746070e7fbf
-ms.openlocfilehash: fb7bdb93aa63d430ba9371ed754616e39ea03487
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 23f5388aeb5cdd97d33423d2d150ccefbae25a52
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43483601"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54495781"
 ---
-# <a name="sample-xml-file-numerical-data-linq-to-xml"></a><span data-ttu-id="8d09b-102">示例 XML 文件：数值数据 (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="8d09b-102">Sample XML File: Numerical Data (LINQ to XML)</span></span>
-<span data-ttu-id="8d09b-103">下面的 XML 文件用在 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 文档的很多示例中。</span><span class="sxs-lookup"><span data-stu-id="8d09b-103">The following XML file is used in various examples in the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] documentation.</span></span> <span data-ttu-id="8d09b-104">此文件包含数值数据，用于求和、求平均值和分组。</span><span class="sxs-lookup"><span data-stu-id="8d09b-104">This file contains numerical data for summing, averaging, and grouping.</span></span>  
+# <a name="sample-xml-file-numerical-data-linq-to-xml"></a><span data-ttu-id="c86de-102">示例 XML 文件：数值数据 (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="c86de-102">Sample XML File: Numerical Data (LINQ to XML)</span></span>
+<span data-ttu-id="c86de-103">下面的 XML 文件用在 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 文档的很多示例中。</span><span class="sxs-lookup"><span data-stu-id="c86de-103">The following XML file is used in various examples in the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] documentation.</span></span> <span data-ttu-id="c86de-104">此文件包含数值数据，用于求和、求平均值和分组。</span><span class="sxs-lookup"><span data-stu-id="c86de-104">This file contains numerical data for summing, averaging, and grouping.</span></span>  
   
-## <a name="dataxml"></a><span data-ttu-id="8d09b-105">Data.xml</span><span class="sxs-lookup"><span data-stu-id="8d09b-105">Data.xml</span></span>  
+## <a name="dataxml"></a><span data-ttu-id="c86de-105">Data.xml</span><span class="sxs-lookup"><span data-stu-id="c86de-105">Data.xml</span></span>  
   
 ```xml  
 <Root>  
@@ -55,5 +55,5 @@ ms.locfileid: "43483601"
 </Root>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="8d09b-106">请参阅</span><span class="sxs-lookup"><span data-stu-id="8d09b-106">See Also</span></span>  
- [<span data-ttu-id="8d09b-107">示例 XML 文档 (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="8d09b-107">Sample XML Documents (LINQ to XML)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)
+## <a name="see-also"></a><span data-ttu-id="c86de-106">请参阅</span><span class="sxs-lookup"><span data-stu-id="c86de-106">See also</span></span>
+- [<span data-ttu-id="c86de-107">示例 XML 文档 (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="c86de-107">Sample XML Documents (LINQ to XML)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)

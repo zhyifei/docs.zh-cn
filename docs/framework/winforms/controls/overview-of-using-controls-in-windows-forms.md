@@ -9,24 +9,24 @@ helpviewer_keywords:
 - controls [Windows Forms]
 - custom controls [Windows Forms]
 ms.assetid: fddbe951-4485-459d-a5fd-665ea346dbc1
-ms.openlocfilehash: 629a08a090178ffb1df1e9905182c9f246537533
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8ab1fa9ccbffc7ca9621e32e00455a9b75a91126
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33537357"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54533083"
 ---
-# <a name="overview-of-using-controls-in-windows-forms"></a><span data-ttu-id="529f4-102">在“Windows 窗体”中使用控件的概述</span><span class="sxs-lookup"><span data-stu-id="529f4-102">Overview of Using Controls in Windows Forms</span></span>
-<span data-ttu-id="529f4-103">本主题介绍 Windows 窗体应用程序的重要元素，并提供一个简单的示例使用控件并处理在 Windows 窗体应用程序中的事件。</span><span class="sxs-lookup"><span data-stu-id="529f4-103">This topic describes the essential elements of a Windows Forms application and provides a simple example that uses controls and handles events in a Windows Forms application.</span></span>  
+# <a name="overview-of-using-controls-in-windows-forms"></a><span data-ttu-id="19db7-102">在“Windows 窗体”中使用控件的概述</span><span class="sxs-lookup"><span data-stu-id="19db7-102">Overview of Using Controls in Windows Forms</span></span>
+<span data-ttu-id="19db7-103">本主题描述 Windows 窗体应用程序的基本元素，并提供一个简单示例，使用控件以及处理 Windows 窗体应用程序中的事件。</span><span class="sxs-lookup"><span data-stu-id="19db7-103">This topic describes the essential elements of a Windows Forms application and provides a simple example that uses controls and handles events in a Windows Forms application.</span></span>  
   
-## <a name="simple-windows-forms-applications"></a><span data-ttu-id="529f4-104">简单的 Windows 窗体应用程序</span><span class="sxs-lookup"><span data-stu-id="529f4-104">Simple Windows Forms Applications</span></span>  
- <span data-ttu-id="529f4-105">在最低限度上，Windows 窗体应用程序由以下元素组成：</span><span class="sxs-lookup"><span data-stu-id="529f4-105">At a minimum, a Windows Forms application consists of the following elements:</span></span>  
+## <a name="simple-windows-forms-applications"></a><span data-ttu-id="19db7-104">简单 Windows 窗体应用程序</span><span class="sxs-lookup"><span data-stu-id="19db7-104">Simple Windows Forms Applications</span></span>  
+ <span data-ttu-id="19db7-105">至少，Windows 窗体应用程序由以下元素组成：</span><span class="sxs-lookup"><span data-stu-id="19db7-105">At a minimum, a Windows Forms application consists of the following elements:</span></span>  
   
--   <span data-ttu-id="529f4-106">一个或多个派生自的类<xref:System.Windows.Forms.Form?displayProperty=nameWithType>。</span><span class="sxs-lookup"><span data-stu-id="529f4-106">One or more classes that derive from <xref:System.Windows.Forms.Form?displayProperty=nameWithType>.</span></span>  
+-   <span data-ttu-id="19db7-106">派生的一个或多个类<xref:System.Windows.Forms.Form?displayProperty=nameWithType>。</span><span class="sxs-lookup"><span data-stu-id="19db7-106">One or more classes that derive from <xref:System.Windows.Forms.Form?displayProperty=nameWithType>.</span></span>  
   
--   <span data-ttu-id="529f4-107">A`Main`时，将调用的方法`static`(`shared`在 Visual Basic 中)<xref:System.Windows.Forms.Application.Run%2A>方法并传递<xref:System.Windows.Forms.Form>到它的实例。</span><span class="sxs-lookup"><span data-stu-id="529f4-107">A `Main` method that invokes the `static` (`shared` in Visual Basic) <xref:System.Windows.Forms.Application.Run%2A> method and passes a <xref:System.Windows.Forms.Form> instance to it.</span></span> <span data-ttu-id="529f4-108"><xref:System.Windows.Forms.Application.Run%2A>方法处理来自操作系统到应用程序的消息。</span><span class="sxs-lookup"><span data-stu-id="529f4-108">The <xref:System.Windows.Forms.Application.Run%2A> method processes messages from the operating system to the application.</span></span>  
+-   <span data-ttu-id="19db7-107">一个`Main`调用的方法`static`(`shared`在 Visual Basic 中)<xref:System.Windows.Forms.Application.Run%2A>方法，并传递<xref:System.Windows.Forms.Form>到它的实例。</span><span class="sxs-lookup"><span data-stu-id="19db7-107">A `Main` method that invokes the `static` (`shared` in Visual Basic) <xref:System.Windows.Forms.Application.Run%2A> method and passes a <xref:System.Windows.Forms.Form> instance to it.</span></span> <span data-ttu-id="19db7-108"><xref:System.Windows.Forms.Application.Run%2A>方法处理从操作系统到应用程序的消息。</span><span class="sxs-lookup"><span data-stu-id="19db7-108">The <xref:System.Windows.Forms.Application.Run%2A> method processes messages from the operating system to the application.</span></span>  
   
- <span data-ttu-id="529f4-109">下面的代码示例演示 Windows 窗体应用程序的重要元素。</span><span class="sxs-lookup"><span data-stu-id="529f4-109">The following code example shows the essential elements of a Windows Forms application.</span></span>  
+ <span data-ttu-id="19db7-109">下面的代码示例显示了 Windows 窗体应用程序的必备要素。</span><span class="sxs-lookup"><span data-stu-id="19db7-109">The following code example shows the essential elements of a Windows Forms application.</span></span>  
   
 ```vb  
 Option Explicit  
@@ -74,8 +74,8 @@ public class MyForm : Form {
 }  
 ```  
   
-## <a name="using-controls-in-a-windows-forms-application"></a><span data-ttu-id="529f4-110">在 Windows 窗体应用程序中使用控件</span><span class="sxs-lookup"><span data-stu-id="529f4-110">Using Controls in a Windows Forms Application</span></span>  
- <span data-ttu-id="529f4-111">下面的代码示例演示的简单应用程序演示了 Windows 窗体应用程序如何使用控件和处理事件。</span><span class="sxs-lookup"><span data-stu-id="529f4-111">The following code example shows a simple application that illustrates how Windows Forms applications use controls and handle events.</span></span> <span data-ttu-id="529f4-112">此示例由窗体; 上的三个按钮组成每个按钮更改单击时的背景色。</span><span class="sxs-lookup"><span data-stu-id="529f4-112">The example consists of three buttons on a form; each button changes the background color when clicked.</span></span>  
+## <a name="using-controls-in-a-windows-forms-application"></a><span data-ttu-id="19db7-110">在 Windows 窗体应用程序中使用控件</span><span class="sxs-lookup"><span data-stu-id="19db7-110">Using Controls in a Windows Forms Application</span></span>  
+ <span data-ttu-id="19db7-111">下面的代码示例显示了简单的应用程序说明了 Windows 窗体应用程序如何使用控件和处理事件。</span><span class="sxs-lookup"><span data-stu-id="19db7-111">The following code example shows a simple application that illustrates how Windows Forms applications use controls and handle events.</span></span> <span data-ttu-id="19db7-112">示例包含三个按钮在窗体;每个按钮更改背景色在单击时。</span><span class="sxs-lookup"><span data-stu-id="19db7-112">The example consists of three buttons on a form; each button changes the background color when clicked.</span></span>  
   
 ```vb  
 Option Explicit  
@@ -223,6 +223,6 @@ public class MyForm : Form {
 }  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="529f4-113">请参阅</span><span class="sxs-lookup"><span data-stu-id="529f4-113">See Also</span></span>  
- [<span data-ttu-id="529f4-114">使用 .NET Framework 开发自定义 Windows 窗体控件</span><span class="sxs-lookup"><span data-stu-id="529f4-114">Developing Custom Windows Forms Controls with the .NET Framework</span></span>](../../../../docs/framework/winforms/controls/developing-custom-windows-forms-controls.md)  
- [<span data-ttu-id="529f4-115">Windows 窗体控件开发基础知识</span><span class="sxs-lookup"><span data-stu-id="529f4-115">Windows Forms Control Development Basics</span></span>](../../../../docs/framework/winforms/controls/windows-forms-control-development-basics.md)
+## <a name="see-also"></a><span data-ttu-id="19db7-113">请参阅</span><span class="sxs-lookup"><span data-stu-id="19db7-113">See also</span></span>
+- [<span data-ttu-id="19db7-114">使用 .NET Framework 开发自定义 Windows 窗体控件</span><span class="sxs-lookup"><span data-stu-id="19db7-114">Developing Custom Windows Forms Controls with the .NET Framework</span></span>](../../../../docs/framework/winforms/controls/developing-custom-windows-forms-controls.md)
+- [<span data-ttu-id="19db7-115">Windows 窗体控件开发基础知识</span><span class="sxs-lookup"><span data-stu-id="19db7-115">Windows Forms Control Development Basics</span></span>](../../../../docs/framework/winforms/controls/windows-forms-control-development-basics.md)

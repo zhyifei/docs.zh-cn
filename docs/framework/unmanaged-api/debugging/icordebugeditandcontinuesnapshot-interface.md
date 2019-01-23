@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 27bec505df1db4ccbba862e81d9407d11245d449
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: adb06ec558f2d5f823d2040422a82e8b20d926a8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33412368"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54537889"
 ---
-# <a name="icordebugeditandcontinuesnapshot-interface1"></a><span data-ttu-id="2bbcd-102">ICorDebugEditAndContinueSnapshot 接口 1</span><span class="sxs-lookup"><span data-stu-id="2bbcd-102">ICorDebugEditAndContinueSnapshot Interface1</span></span>
-<span data-ttu-id="2bbcd-103">`ICorDebugEditAndContinueSnapshot` 已过时。</span><span class="sxs-lookup"><span data-stu-id="2bbcd-103">`ICorDebugEditAndContinueSnapshot` is obsolete.</span></span> <span data-ttu-id="2bbcd-104">不要使用此接口。</span><span class="sxs-lookup"><span data-stu-id="2bbcd-104">Do not use this interface.</span></span>  
+# <a name="icordebugeditandcontinuesnapshot-interface1"></a><span data-ttu-id="4582f-102">ICorDebugEditAndContinueSnapshot 接口 1</span><span class="sxs-lookup"><span data-stu-id="4582f-102">ICorDebugEditAndContinueSnapshot Interface1</span></span>
+<span data-ttu-id="4582f-103">`ICorDebugEditAndContinueSnapshot` 已过时。</span><span class="sxs-lookup"><span data-stu-id="4582f-103">`ICorDebugEditAndContinueSnapshot` is obsolete.</span></span> <span data-ttu-id="4582f-104">不要使用此接口。</span><span class="sxs-lookup"><span data-stu-id="4582f-104">Do not use this interface.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="2bbcd-105">请参阅</span><span class="sxs-lookup"><span data-stu-id="2bbcd-105">See Also</span></span>  
- [<span data-ttu-id="2bbcd-106">调试接口</span><span class="sxs-lookup"><span data-stu-id="2bbcd-106">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a><span data-ttu-id="4582f-105">请参阅</span><span class="sxs-lookup"><span data-stu-id="4582f-105">See also</span></span>
+- [<span data-ttu-id="4582f-106">调试接口</span><span class="sxs-lookup"><span data-stu-id="4582f-106">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

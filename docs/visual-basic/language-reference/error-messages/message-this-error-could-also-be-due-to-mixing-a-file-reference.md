@@ -7,31 +7,31 @@ f1_keywords:
 helpviewer_keywords:
 - BC30971
 ms.assetid: 75d2e8b5-2fdc-4623-8b32-cba805dab7db
-ms.openlocfilehash: 498ca74497077e3268aa8cb25ce5121f3c9ea59d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d4fb2a8985a21ecea5056b83d2766e8dc468180d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33588332"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54528987"
 ---
-# <a name="ltmessagegt-this-error-could-also-be-due-to-mixing-a-file-reference-with-a-project-reference-to-assembly-39ltassemblynamegt39"></a><span data-ttu-id="b1c26-102">&lt;消息&gt;此错误也可能是由于文件引用与程序集的项目引用混合使用&#39;&lt;程序集名称&gt;&#39;</span><span class="sxs-lookup"><span data-stu-id="b1c26-102">&lt;message&gt; This error could also be due to mixing a file reference with a project reference to assembly &#39;&lt;assemblyname&gt;&#39;</span></span>
-<span data-ttu-id="b1c26-103">\<消息 > 此错误也可能是由于混合文件引用与程序集的项目引用\<程序集名称 >。</span><span class="sxs-lookup"><span data-stu-id="b1c26-103">\<message> This error could also be due to mixing a file reference with a project reference to assembly '\<assemblyname>.</span></span> <span data-ttu-id="b1c26-104">在这种情况下，请尝试替换为对的文件引用\<assemblyfilename > 项目中\<projectname1 > 的项目引用与\<项目名称 2> >。</span><span class="sxs-lookup"><span data-stu-id="b1c26-104">In this case, try replacing the file reference to '\<assemblyfilename>' in project '\<projectname1>' with a project reference to '\<projectname2>'.</span></span>  
+# <a name="ltmessagegt-this-error-could-also-be-due-to-mixing-a-file-reference-with-a-project-reference-to-assembly-39ltassemblynamegt39"></a><span data-ttu-id="e655a-102">&lt;消息&gt;此错误也可能是由于文件引用与程序集的项目引用混合使用&#39;&lt;程序集名称&gt;&#39;</span><span class="sxs-lookup"><span data-stu-id="e655a-102">&lt;message&gt; This error could also be due to mixing a file reference with a project reference to assembly &#39;&lt;assemblyname&gt;&#39;</span></span>
+<span data-ttu-id="e655a-103">\<消息 > 此错误也可能是由于文件引用与程序集的项目引用混合使用\<程序集名称 >。</span><span class="sxs-lookup"><span data-stu-id="e655a-103">\<message> This error could also be due to mixing a file reference with a project reference to assembly '\<assemblyname>.</span></span> <span data-ttu-id="e655a-104">在这种情况下，请尝试更换的文件引用 '\<assemblyfilename > 项目中\<projectname1 > 项目引用\<项目名称 2> >。</span><span class="sxs-lookup"><span data-stu-id="e655a-104">In this case, try replacing the file reference to '\<assemblyfilename>' in project '\<projectname1>' with a project reference to '\<projectname2>'.</span></span>  
   
- <span data-ttu-id="b1c26-105">你的项目中的代码访问了另一个项目的成员，但你的解决方案配置不允许 Visual Basic 编译器来解析引用。</span><span class="sxs-lookup"><span data-stu-id="b1c26-105">Code in your project accesses a member of another project, but the configuration of your solution does not allow the Visual Basic compiler to resolve the reference.</span></span>  
+ <span data-ttu-id="e655a-105">你的项目中的代码访问另一个项目的成员，但您的解决方案配置不允许 Visual Basic 编译器来解析引用。</span><span class="sxs-lookup"><span data-stu-id="e655a-105">Code in your project accesses a member of another project, but the configuration of your solution does not allow the Visual Basic compiler to resolve the reference.</span></span>  
   
- <span data-ttu-id="b1c26-106">若要访问另一个程序集中定义的类型，Visual Basic 编译器必须具有对该程序集的引用。</span><span class="sxs-lookup"><span data-stu-id="b1c26-106">To access a type defined in another assembly, the Visual Basic compiler must have a reference to that assembly.</span></span> <span data-ttu-id="b1c26-107">此引用必须单一、明确，不会导致项目之间循环引用。</span><span class="sxs-lookup"><span data-stu-id="b1c26-107">This must be a single, unambiguous reference that does not cause circular references among projects.</span></span>  
+ <span data-ttu-id="e655a-106">若要访问另一个程序集中定义的类型，Visual Basic 编译器必须具有对该程序集的引用。</span><span class="sxs-lookup"><span data-stu-id="e655a-106">To access a type defined in another assembly, the Visual Basic compiler must have a reference to that assembly.</span></span> <span data-ttu-id="e655a-107">此引用必须单一、明确，不会导致项目之间循环引用。</span><span class="sxs-lookup"><span data-stu-id="e655a-107">This must be a single, unambiguous reference that does not cause circular references among projects.</span></span>  
   
- <span data-ttu-id="b1c26-108">**错误 ID：** BC30971</span><span class="sxs-lookup"><span data-stu-id="b1c26-108">**Error ID:** BC30971</span></span>  
+ <span data-ttu-id="e655a-108">**错误 ID:** BC30971</span><span class="sxs-lookup"><span data-stu-id="e655a-108">**Error ID:** BC30971</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="b1c26-109">更正此错误</span><span class="sxs-lookup"><span data-stu-id="b1c26-109">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="e655a-109">更正此错误</span><span class="sxs-lookup"><span data-stu-id="e655a-109">To correct this error</span></span>  
   
-1.  <span data-ttu-id="b1c26-110">确定产生最佳程序集引用的项目。</span><span class="sxs-lookup"><span data-stu-id="b1c26-110">Determine which project produces the best assembly for your project to reference.</span></span> <span data-ttu-id="b1c26-111">为便于确定，你可以使用文件访问轻松程度和更新频率等条件。</span><span class="sxs-lookup"><span data-stu-id="b1c26-111">For this decision, you might use criteria such as ease of file access and frequency of updates.</span></span>  
+1.  <span data-ttu-id="e655a-110">确定产生最佳程序集引用的项目。</span><span class="sxs-lookup"><span data-stu-id="e655a-110">Determine which project produces the best assembly for your project to reference.</span></span> <span data-ttu-id="e655a-111">为便于确定，你可以使用文件访问轻松程度和更新频率等条件。</span><span class="sxs-lookup"><span data-stu-id="e655a-111">For this decision, you might use criteria such as ease of file access and frequency of updates.</span></span>  
   
-2.  <span data-ttu-id="b1c26-112">在项目属性中，添加对包含某程序集的项目的引用，该程序集定义正在使用的类型。</span><span class="sxs-lookup"><span data-stu-id="b1c26-112">In your project properties, add a reference to the project that contains the assembly that defines the type you are using.</span></span>  
+2.  <span data-ttu-id="e655a-112">在项目属性中，添加对包含某程序集的项目的引用，该程序集定义正在使用的类型。</span><span class="sxs-lookup"><span data-stu-id="e655a-112">In your project properties, add a reference to the project that contains the assembly that defines the type you are using.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="b1c26-113">请参阅</span><span class="sxs-lookup"><span data-stu-id="b1c26-113">See Also</span></span>  
- [<span data-ttu-id="b1c26-114">管理项目中的引用</span><span class="sxs-lookup"><span data-stu-id="b1c26-114">Managing references in a project</span></span>](/visualstudio/ide/managing-references-in-a-project)  
- [<span data-ttu-id="b1c26-115">对已声明元素的引用</span><span class="sxs-lookup"><span data-stu-id="b1c26-115">References to Declared Elements</span></span>](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)  
-   
- [<span data-ttu-id="b1c26-116">管理项目和解决方案属性</span><span class="sxs-lookup"><span data-stu-id="b1c26-116">Managing Project and Solution Properties</span></span>](/visualstudio/ide/managing-project-and-solution-properties)  
- [<span data-ttu-id="b1c26-117">有关无效的引用的疑难解答</span><span class="sxs-lookup"><span data-stu-id="b1c26-117">Troubleshooting Broken References</span></span>](/visualstudio/ide/troubleshooting-broken-references)
+## <a name="see-also"></a><span data-ttu-id="e655a-113">请参阅</span><span class="sxs-lookup"><span data-stu-id="e655a-113">See also</span></span>
+- [<span data-ttu-id="e655a-114">管理项目中的引用</span><span class="sxs-lookup"><span data-stu-id="e655a-114">Managing references in a project</span></span>](/visualstudio/ide/managing-references-in-a-project)
+- [<span data-ttu-id="e655a-115">对已声明元素的引用</span><span class="sxs-lookup"><span data-stu-id="e655a-115">References to Declared Elements</span></span>](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)
+
+- [<span data-ttu-id="e655a-116">管理项目和解决方案属性</span><span class="sxs-lookup"><span data-stu-id="e655a-116">Managing Project and Solution Properties</span></span>](/visualstudio/ide/managing-project-and-solution-properties)
+- [<span data-ttu-id="e655a-117">有关无效的引用的疑难解答</span><span class="sxs-lookup"><span data-stu-id="e655a-117">Troubleshooting Broken References</span></span>](/visualstudio/ide/troubleshooting-broken-references)

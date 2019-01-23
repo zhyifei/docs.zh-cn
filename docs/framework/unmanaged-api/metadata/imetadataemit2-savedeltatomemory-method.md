@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 38d0d794cdedfd058b93785f4f444b4dd3196195
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 84972388f90ea23032ed0524723d59077c732e59
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33444765"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54498890"
 ---
-# <a name="imetadataemit2savedeltatomemory-method"></a><span data-ttu-id="509e4-102">IMetaDataEmit2::SaveDeltaToMemory 方法</span><span class="sxs-lookup"><span data-stu-id="509e4-102">IMetaDataEmit2::SaveDeltaToMemory Method</span></span>
-<span data-ttu-id="509e4-103">将更改从当前的编辑并继续会话保存到内存中。</span><span class="sxs-lookup"><span data-stu-id="509e4-103">Saves changes from the current edit-and-continue session to memory.</span></span>  
+# <a name="imetadataemit2savedeltatomemory-method"></a><span data-ttu-id="e61f4-102">IMetaDataEmit2::SaveDeltaToMemory 方法</span><span class="sxs-lookup"><span data-stu-id="e61f4-102">IMetaDataEmit2::SaveDeltaToMemory Method</span></span>
+<span data-ttu-id="e61f4-103">将更改从当前会话中编辑和继续保存到内存中。</span><span class="sxs-lookup"><span data-stu-id="e61f4-103">Saves changes from the current edit-and-continue session to memory.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="509e4-104">语法</span><span class="sxs-lookup"><span data-stu-id="509e4-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="e61f4-104">语法</span><span class="sxs-lookup"><span data-stu-id="e61f4-104">Syntax</span></span>  
   
 ```  
 HRESULT SaveDeltaToMemory (  
@@ -36,22 +36,22 @@ HRESULT SaveDeltaToMemory (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="509e4-105">参数</span><span class="sxs-lookup"><span data-stu-id="509e4-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="e61f4-105">参数</span><span class="sxs-lookup"><span data-stu-id="e61f4-105">Parameters</span></span>  
  `pbData`  
- <span data-ttu-id="509e4-106">[out]从此处开始写入的元数据增量地址。</span><span class="sxs-lookup"><span data-stu-id="509e4-106">[out] The address at which to begin writing the metadata delta.</span></span>  
+ <span data-ttu-id="e61f4-106">[out]开始写入的元数据增量的地址。</span><span class="sxs-lookup"><span data-stu-id="e61f4-106">[out] The address at which to begin writing the metadata delta.</span></span>  
   
  `cbData`  
- <span data-ttu-id="509e4-107">[in]所做的更改的大小。</span><span class="sxs-lookup"><span data-stu-id="509e4-107">[in] The size of the changes.</span></span> <span data-ttu-id="509e4-108">使用[imetadataemit2:: Getdeltasavesize](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-getdeltasavesize-method.md)来确定的大小。</span><span class="sxs-lookup"><span data-stu-id="509e4-108">Use [IMetaDataEmit2::GetDeltaSaveSize](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-getdeltasavesize-method.md) to determine the size.</span></span>  
+ <span data-ttu-id="e61f4-107">[in]所做的更改的大小。</span><span class="sxs-lookup"><span data-stu-id="e61f4-107">[in] The size of the changes.</span></span> <span data-ttu-id="e61f4-108">使用[IMetaDataEmit2::GetDeltaSaveSize](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-getdeltasavesize-method.md)确定的大小。</span><span class="sxs-lookup"><span data-stu-id="e61f4-108">Use [IMetaDataEmit2::GetDeltaSaveSize](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-getdeltasavesize-method.md) to determine the size.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="509e4-109">要求</span><span class="sxs-lookup"><span data-stu-id="509e4-109">Requirements</span></span>  
- <span data-ttu-id="509e4-110">**平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="509e4-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="e61f4-109">要求</span><span class="sxs-lookup"><span data-stu-id="e61f4-109">Requirements</span></span>  
+ <span data-ttu-id="e61f4-110">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="e61f4-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="509e4-111">**标头：** Cor.h</span><span class="sxs-lookup"><span data-stu-id="509e4-111">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="e61f4-111">**标头：** Cor.h</span><span class="sxs-lookup"><span data-stu-id="e61f4-111">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="509e4-112">**库：** 用作 MsCorEE.dll 中的资源</span><span class="sxs-lookup"><span data-stu-id="509e4-112">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="e61f4-112">**库：** 用作 MsCorEE.dll 中的资源</span><span class="sxs-lookup"><span data-stu-id="e61f4-112">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="509e4-113">**.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="509e4-113">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="e61f4-113">**.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="e61f4-113">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="509e4-114">请参阅</span><span class="sxs-lookup"><span data-stu-id="509e4-114">See Also</span></span>  
- [<span data-ttu-id="509e4-115">IMetaDataEmit2 Interface</span><span class="sxs-lookup"><span data-stu-id="509e4-115">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)  
- [<span data-ttu-id="509e4-116">IMetaDataEmit Interface</span><span class="sxs-lookup"><span data-stu-id="509e4-116">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+## <a name="see-also"></a><span data-ttu-id="e61f4-114">请参阅</span><span class="sxs-lookup"><span data-stu-id="e61f4-114">See also</span></span>
+- [<span data-ttu-id="e61f4-115">IMetaDataEmit2 Interface</span><span class="sxs-lookup"><span data-stu-id="e61f4-115">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+- [<span data-ttu-id="e61f4-116">IMetaDataEmit Interface</span><span class="sxs-lookup"><span data-stu-id="e61f4-116">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)

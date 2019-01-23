@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4bd1d098f21a3d5ba43b6251c87c36df4347a924
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 5e92a59e42674c184209e9c912e9bb2ead07bdaa
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33457556"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54515701"
 ---
-# <a name="strongnamecompareassemblies-function"></a><span data-ttu-id="83539-102">StrongNameCompareAssemblies 函数</span><span class="sxs-lookup"><span data-stu-id="83539-102">StrongNameCompareAssemblies Function</span></span>
-<span data-ttu-id="83539-103">确定是否两个程序集的差异仅在于其强名称签名。</span><span class="sxs-lookup"><span data-stu-id="83539-103">Determines whether two assemblies differ only by their strong name signatures.</span></span>  
+# <a name="strongnamecompareassemblies-function"></a><span data-ttu-id="77dd2-102">StrongNameCompareAssemblies 函数</span><span class="sxs-lookup"><span data-stu-id="77dd2-102">StrongNameCompareAssemblies Function</span></span>
+<span data-ttu-id="77dd2-103">确定两个程序集是否仅是强名称签名不同。</span><span class="sxs-lookup"><span data-stu-id="77dd2-103">Determines whether two assemblies differ only by their strong name signatures.</span></span>  
   
- <span data-ttu-id="83539-104">此函数已弃用。</span><span class="sxs-lookup"><span data-stu-id="83539-104">This function has been deprecated.</span></span> <span data-ttu-id="83539-105">使用[iclrstrongname:: Strongnamecompareassemblies](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamecompareassemblies-method.md)方法相反。</span><span class="sxs-lookup"><span data-stu-id="83539-105">Use the [ICLRStrongName::StrongNameCompareAssemblies](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamecompareassemblies-method.md) method instead.</span></span>  
+ <span data-ttu-id="77dd2-104">此函数已弃用。</span><span class="sxs-lookup"><span data-stu-id="77dd2-104">This function has been deprecated.</span></span> <span data-ttu-id="77dd2-105">使用[iclrstrongname:: Strongnamecompareassemblies](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamecompareassemblies-method.md)方法相反。</span><span class="sxs-lookup"><span data-stu-id="77dd2-105">Use the [ICLRStrongName::StrongNameCompareAssemblies](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamecompareassemblies-method.md) method instead.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="83539-106">语法</span><span class="sxs-lookup"><span data-stu-id="83539-106">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="77dd2-106">语法</span><span class="sxs-lookup"><span data-stu-id="77dd2-106">Syntax</span></span>  
   
 ```  
 BOOLEAN StrongNameCompareAssemblies (  
@@ -38,39 +38,39 @@ BOOLEAN StrongNameCompareAssemblies (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="83539-107">参数</span><span class="sxs-lookup"><span data-stu-id="83539-107">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="77dd2-107">参数</span><span class="sxs-lookup"><span data-stu-id="77dd2-107">Parameters</span></span>  
  `wszAssembly1`  
- <span data-ttu-id="83539-108">[in]第一个程序集的路径。</span><span class="sxs-lookup"><span data-stu-id="83539-108">[in] The path to the first assembly.</span></span>  
+ <span data-ttu-id="77dd2-108">[in]第一个程序集的路径。</span><span class="sxs-lookup"><span data-stu-id="77dd2-108">[in] The path to the first assembly.</span></span>  
   
  `wszAssembly2`  
- <span data-ttu-id="83539-109">[in]第二个程序集的路径。</span><span class="sxs-lookup"><span data-stu-id="83539-109">[in] The path to the second assembly.</span></span>  
+ <span data-ttu-id="77dd2-109">[in]第二个程序集的路径。</span><span class="sxs-lookup"><span data-stu-id="77dd2-109">[in] The path to the second assembly.</span></span>  
   
  `pdwResult`  
- <span data-ttu-id="83539-110">[out]以下值之一：</span><span class="sxs-lookup"><span data-stu-id="83539-110">[out] One of the following values:</span></span>  
+ <span data-ttu-id="77dd2-110">[out]以下值之一：</span><span class="sxs-lookup"><span data-stu-id="77dd2-110">[out] One of the following values:</span></span>  
   
--   <span data-ttu-id="83539-111">`SN_CMP_DIFFERENT` (0)-指定程序集包含不同的数据。</span><span class="sxs-lookup"><span data-stu-id="83539-111">`SN_CMP_DIFFERENT` (0) - Specifies that the assemblies contain different data.</span></span>  
+-   <span data-ttu-id="77dd2-111">`SN_CMP_DIFFERENT` (0)-指定程序集包含不同的数据。</span><span class="sxs-lookup"><span data-stu-id="77dd2-111">`SN_CMP_DIFFERENT` (0) - Specifies that the assemblies contain different data.</span></span>  
   
--   <span data-ttu-id="83539-112">`SN_CMP_IDENTICAL` (1)-指定程序程序集完全相同，包括其签名和校验和。</span><span class="sxs-lookup"><span data-stu-id="83539-112">`SN_CMP_IDENTICAL` (1) - Specifies that the assemblies are exactly the same, including their signatures and checksum.</span></span>  
+-   <span data-ttu-id="77dd2-112">`SN_CMP_IDENTICAL` (1)-指定程序的程序集完全相同，包括其签名和校验和。</span><span class="sxs-lookup"><span data-stu-id="77dd2-112">`SN_CMP_IDENTICAL` (1) - Specifies that the assemblies are exactly the same, including their signatures and checksum.</span></span>  
   
--   <span data-ttu-id="83539-113">`SN_CMP_SIGONLY` (2)-指定程序集不同只能由签名和校验和。</span><span class="sxs-lookup"><span data-stu-id="83539-113">`SN_CMP_SIGONLY` (2) - Specifies that the assemblies differ only by signature and checksum.</span></span>  
+-   <span data-ttu-id="77dd2-113">`SN_CMP_SIGONLY` (2)-指定程序集仅签名和校验和不同。</span><span class="sxs-lookup"><span data-stu-id="77dd2-113">`SN_CMP_SIGONLY` (2) - Specifies that the assemblies differ only by signature and checksum.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="83539-114">返回值</span><span class="sxs-lookup"><span data-stu-id="83539-114">Return Value</span></span>  
- <span data-ttu-id="83539-115">`true` 在成功完成;否则为`false`。</span><span class="sxs-lookup"><span data-stu-id="83539-115">`true` on successful completion; otherwise, `false`.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="77dd2-114">返回值</span><span class="sxs-lookup"><span data-stu-id="77dd2-114">Return Value</span></span>  
+ <span data-ttu-id="77dd2-115">`true` 在成功完成;否则为`false`。</span><span class="sxs-lookup"><span data-stu-id="77dd2-115">`true` on successful completion; otherwise, `false`.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="83539-116">要求</span><span class="sxs-lookup"><span data-stu-id="83539-116">Requirements</span></span>  
- <span data-ttu-id="83539-117">**平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="83539-117">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="77dd2-116">要求</span><span class="sxs-lookup"><span data-stu-id="77dd2-116">Requirements</span></span>  
+ <span data-ttu-id="77dd2-117">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="77dd2-117">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="83539-118">**标头：** StrongName.h</span><span class="sxs-lookup"><span data-stu-id="83539-118">**Header:** StrongName.h</span></span>  
+ <span data-ttu-id="77dd2-118">**标头：** StrongName.h</span><span class="sxs-lookup"><span data-stu-id="77dd2-118">**Header:** StrongName.h</span></span>  
   
- <span data-ttu-id="83539-119">**库：** 作为 MsCorEE.dll 中的资源</span><span class="sxs-lookup"><span data-stu-id="83539-119">**Library:** Included as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="77dd2-119">**库：** 包含为 MsCorEE.dll 中的资源</span><span class="sxs-lookup"><span data-stu-id="77dd2-119">**Library:** Included as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="83539-120">**.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="83539-120">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="77dd2-120">**.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="77dd2-120">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="83539-121">备注</span><span class="sxs-lookup"><span data-stu-id="83539-121">Remarks</span></span>  
- <span data-ttu-id="83539-122">程序集的强名称签名组成程序集的文本名称、 版本、 区域性和公钥标记。</span><span class="sxs-lookup"><span data-stu-id="83539-122">The strong name signature of an assembly consists of the assembly's text name, version, culture, and public key token.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="77dd2-121">备注</span><span class="sxs-lookup"><span data-stu-id="77dd2-121">Remarks</span></span>  
+ <span data-ttu-id="77dd2-122">程序集的强名称签名包含程序集的文本名称、 版本、 区域性和公钥标记。</span><span class="sxs-lookup"><span data-stu-id="77dd2-122">The strong name signature of an assembly consists of the assembly's text name, version, culture, and public key token.</span></span>  
   
- <span data-ttu-id="83539-123">如果`StrongNameCompareAssemblies`函数未成功完成，请调用[StrongNameErrorInfo](../../../../docs/framework/unmanaged-api/strong-naming/strongnameerrorinfo-function.md)函数可检索的最后一个生成的错误。</span><span class="sxs-lookup"><span data-stu-id="83539-123">If the `StrongNameCompareAssemblies` function does not complete successfully, call the [StrongNameErrorInfo](../../../../docs/framework/unmanaged-api/strong-naming/strongnameerrorinfo-function.md) function to retrieve the last generated error.</span></span>  
+ <span data-ttu-id="77dd2-123">如果`StrongNameCompareAssemblies`函数不成功完成，则调用[StrongNameErrorInfo](../../../../docs/framework/unmanaged-api/strong-naming/strongnameerrorinfo-function.md)函数检索最后一个生成的错误。</span><span class="sxs-lookup"><span data-stu-id="77dd2-123">If the `StrongNameCompareAssemblies` function does not complete successfully, call the [StrongNameErrorInfo](../../../../docs/framework/unmanaged-api/strong-naming/strongnameerrorinfo-function.md) function to retrieve the last generated error.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="83539-124">请参阅</span><span class="sxs-lookup"><span data-stu-id="83539-124">See Also</span></span>  
- [<span data-ttu-id="83539-125">StrongNameCompareAssemblies 方法</span><span class="sxs-lookup"><span data-stu-id="83539-125">StrongNameCompareAssemblies Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamecompareassemblies-method.md)  
- [<span data-ttu-id="83539-126">ICLRStrongName 接口</span><span class="sxs-lookup"><span data-stu-id="83539-126">ICLRStrongName Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)
+## <a name="see-also"></a><span data-ttu-id="77dd2-124">请参阅</span><span class="sxs-lookup"><span data-stu-id="77dd2-124">See also</span></span>
+- [<span data-ttu-id="77dd2-125">StrongNameCompareAssemblies 方法</span><span class="sxs-lookup"><span data-stu-id="77dd2-125">StrongNameCompareAssemblies Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamecompareassemblies-method.md)
+- [<span data-ttu-id="77dd2-126">ICLRStrongName 接口</span><span class="sxs-lookup"><span data-stu-id="77dd2-126">ICLRStrongName Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)
