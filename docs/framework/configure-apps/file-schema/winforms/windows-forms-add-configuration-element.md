@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 3e3e04de-99d1-4658-b716-44cb669d9589
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5cb0d058cd1ade65bfdc966819c0c41d9c1a9750
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 3e9b8b6325900214865e31492b129e381de5c1c2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53155088"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54507364"
 ---
 # <a name="windows-forms-add-configuration-element"></a>Windows 窗体添加配置元素
 
@@ -109,6 +109,6 @@ Windows 窗体高 DPI 支持的概述，请参阅[在 Windows 窗体中的高 DP
 单个或多通路缩放影响感知的响应性的用户界面和用户界面元素的可视外观，因为它们缩放。 从.NET Framework 4.7 开始，使用单个传递缩放 Windows 窗体。 在以前版本的.NET Framework 中，通过多个通过，这导致一些控件，以扩展超过需要执行缩放。 如果您的应用程序依赖旧行为应仅禁用单次传递缩放。  
 
 ## <a name="see-also"></a>请参阅
- 
-[Windows 窗体配置节](../../../../../docs/framework/configure-apps/file-schema/winforms/index.md)   
-[Windows 窗体中的高 DPI 支持](../../../../../docs/framework/winforms/high-dpi-support-in-windows-forms.md)
+
+- [Windows 窗体配置节](../../../../../docs/framework/configure-apps/file-schema/winforms/index.md)
+- [Windows 窗体中的高 DPI 支持](../../../../../docs/framework/winforms/high-dpi-support-in-windows-forms.md)

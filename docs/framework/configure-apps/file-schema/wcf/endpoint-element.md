@@ -2,19 +2,19 @@
 title: '&lt;endpoint&gt; 元素'
 ms.date: 03/30/2017
 ms.assetid: 2fc8fedc-78d0-4e87-8142-fbfd26c15a4e
-ms.openlocfilehash: ea95e2d16027869778e99cb217d5ea4f7ba7d21a
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: f0701f522874e9e77ba8cb8f013016dd66fbfa30
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54147481"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54509696"
 ---
 # <a name="ltendpointgt-element"></a>&lt;endpoint&gt; 元素
 指定用于公开服务的服务终结点的绑定、协定和地址属性。  
   
  \<system.ServiceModel>  
-\<服务 >  
-\<终结点 >  
+\<service>  
+\<endpoint>  
   
 ## <a name="syntax"></a>语法  
   
@@ -51,7 +51,7 @@ ms.locfileid: "54147481"
 |endpointConfiguration|一个字符串，指定由 `kind` 特性设置的标准终结点的名称，此名称引用此标准终结点的其他配置信息。 必须在 `<standardEndpoints>` 节中定义相同的名称。|  
 |isSystemEndpoint|一个布尔值，指定终结点是否是基础结构终结点。|  
 |kind|一个字符串，指定应用的标准终结点的类型。 此类型必须在 `<extensions>` 节或 machine.config 中进行注册。如果未指定任何值，则创建常规服务终结点。|  
-|listenUriMode|指定传输如何处理供服务侦听的 `ListenUri`。 有效值为<br /><br /> 显式<br />唯一<br /><br /> 默认值为 Explicit。|  
+|listenUriMode|指定传输如何处理供服务侦听的 `ListenUri`。 有效值为<br /><br /> -   Explicit<br />唯一<br /><br /> 默认值为 Explicit。|  
 |listenUri|一个字符串，指定服务终结点侦听的 URI。 默认值为一个空字符串。|  
 |name|可选特性。 一个指定服务终结点名称的字符串。 默认值为绑定名称和协定说明名称的串联。 服务可能有多个终结点，因此终结点的 `name` 特性是通过服务名称区分的。|  
   
@@ -60,7 +60,7 @@ ms.locfileid: "54147481"
 |元素|描述|  
 |-------------|-----------------|  
 |[\<headers>](../../../../../docs/framework/configure-apps/file-schema/wcf/headers.md)|一个地址标头集合。|  
-|[\<标识 >](../../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)|一个标识，与某个终结点交换消息的其他终结点可以使用该标识对该终结点进行身份验证。|  
+|[\<identity>](../../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)|一个标识，与某个终结点交换消息的其他终结点可以使用该标识对该终结点进行身份验证。|  
   
 ### <a name="parent-elements"></a>父元素  
   
@@ -84,9 +84,9 @@ ms.locfileid: "54147481"
 </endpoint>
 ```  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.ServiceModel.Configuration.ServiceEndpointElement>  
- <xref:System.ServiceModel.EndpointAddress>  
- <xref:System.ServiceModel.Description.ServiceEndpoint>  
- [终结点：地址、 绑定和协定](../../../../../docs/framework/wcf/feature-details/endpoints-addresses-bindings-and-contracts.md)  
- [如何：在配置中创建的服务终结点](../../../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-configuration.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.ServiceModel.Configuration.ServiceEndpointElement>
+- <xref:System.ServiceModel.EndpointAddress>
+- <xref:System.ServiceModel.Description.ServiceEndpoint>
+- [终结点：地址、 绑定和协定](../../../../../docs/framework/wcf/feature-details/endpoints-addresses-bindings-and-contracts.md)
+- [如何：在配置中创建的服务终结点](../../../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-configuration.md)

@@ -7,14 +7,15 @@ helpviewer_keywords:
 - Imaging API [WPF]
 - images [WPF], how-to topics
 ms.assetid: 96834ee4-a5fc-4dd0-9948-b9bbc9437a5c
-ms.openlocfilehash: 28df9bd2f313165f233c90149d26c60856b3926b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 872eb510e3e85046818987fc6aaf761fca21b320
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54493607"
 ---
 # <a name="imaging-how-to-topics"></a>图像处理帮助主题
-此部分中的主题演示如何使用[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]以显示或 alter 位图图像。  
+在本部分中的主题演示如何使用[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]来显示或改变位图图像。  
   
 ## <a name="in-this-section"></a>本节内容  
  [在 XAML 中使用 BitmapImage](../../../../docs/framework/wpf/graphics-multimedia/how-to-use-a-bitmapimage.md)  
@@ -42,5 +43,5 @@ ms.lasthandoff: 05/04/2018
   
  <xref:System.Windows.Media.Imaging.BitmapSource>  
   
-## <a name="see-also"></a>请参阅  
- [图像处理概述](../../../../docs/framework/wpf/graphics-multimedia/imaging-overview.md)
+## <a name="see-also"></a>请参阅
+- [图像处理概述](../../../../docs/framework/wpf/graphics-multimedia/imaging-overview.md)
