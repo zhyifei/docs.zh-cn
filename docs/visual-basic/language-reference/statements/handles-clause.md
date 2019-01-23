@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - Handles keyword [Visual Basic]
 ms.assetid: 1b051c0e-f499-42f6-acb5-6f4f27824b40
-ms.openlocfilehash: 15ce6a25aa5f403a2e55beb57b3693095743e52f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 45fa54d7f7a3e167ffe0545cc3edf6a24900b2b3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33603712"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54492957"
 ---
 # <a name="handles-clause-visual-basic"></a>Handles 子句 (Visual Basic)
 声明某一过程可处理指定的事件。  
@@ -35,7 +35,7 @@ proceduredeclaration Handles eventlist
   
  `Handles` 关键字和 `AddHandler` 语句都允许你指定特定过程处理特定事件，但存在差异。 定义过程时使用 `Handles` 关键字，以指定它处理特定事件。 `AddHandler` 语句在运行时将过程连接到事件。 有关详细信息，请参阅[AddHandler 语句](../../../visual-basic/language-reference/statements/addhandler-statement.md)。  
   
- 对于自定义事件，应用程序会在添加过程作为事件处理程序时，调用事件的 `AddHandler` 取值函数。 有关自定义事件的详细信息，请参阅[Event 语句](../../../visual-basic/language-reference/statements/event-statement.md)。  
+ 对于自定义事件，应用程序会在添加过程作为事件处理程序时，调用事件的 `AddHandler` 访问器。 自定义事件的详细信息，请参阅[Event 语句](../../../visual-basic/language-reference/statements/event-statement.md)。  
   
 ## <a name="example"></a>示例  
  [!code-vb[VbVbalrEvents#2](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/handles-clause_1.vb)]  
@@ -45,7 +45,7 @@ proceduredeclaration Handles eventlist
  [!code-vb[VbVbalrEvents#3](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/handles-clause_2.vb)]  
   
 ## <a name="example"></a>示例  
- 下面的示例包含两个按钮事件处理程序**WPF 应用程序**项目。  
+ 下面的示例包含两个按钮的事件处理程序**WPF 应用程序**项目。  
   
  [!code-vb[VbVbalrEvents#41](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/handles-clause_3.vb)]  
   
@@ -54,10 +54,10 @@ proceduredeclaration Handles eventlist
   
  [!code-vb[VbVbalrEvents#42](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/handles-clause_4.vb)]  
   
-## <a name="see-also"></a>请参阅  
- [WithEvents](../../../visual-basic/language-reference/modifiers/withevents.md)  
- [AddHandler 语句](../../../visual-basic/language-reference/statements/addhandler-statement.md)  
- [RemoveHandler 语句](../../../visual-basic/language-reference/statements/removehandler-statement.md)  
- [Event 语句](../../../visual-basic/language-reference/statements/event-statement.md)  
- [RaiseEvent 语句](../../../visual-basic/language-reference/statements/raiseevent-statement.md)  
- [事件](../../../visual-basic/programming-guide/language-features/events/index.md)
+## <a name="see-also"></a>请参阅
+- [WithEvents](../../../visual-basic/language-reference/modifiers/withevents.md)
+- [AddHandler 语句](../../../visual-basic/language-reference/statements/addhandler-statement.md)
+- [RemoveHandler 语句](../../../visual-basic/language-reference/statements/removehandler-statement.md)
+- [Event 语句](../../../visual-basic/language-reference/statements/event-statement.md)
+- [RaiseEvent 语句](../../../visual-basic/language-reference/statements/raiseevent-statement.md)
+- [事件](../../../visual-basic/programming-guide/language-features/events/index.md)

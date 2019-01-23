@@ -11,12 +11,12 @@ helpviewer_keywords:
 - components [Windows Forms], troubleshooting
 - Windows Forms controls, debugging
 ms.assetid: e9c8c099-2271-4737-882f-50f336c7a55e
-ms.openlocfilehash: caad6a76b52a970e133425c484602deb8801d252
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: b49100ee2ba9ac3f86bff8c646c185f26b5c96f6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47078404"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54620300"
 ---
 # <a name="troubleshooting-control-and-component-authoring"></a>控件和组件创作疑难解答
 本主题列出了开发组件和控件时遇到的常见问题。 有关详细信息，请参阅[使用组件编程](https://msdn.microsoft.com/library/d4d4fcb4-e0b8-46b3-b679-7ee0026eb9e3)。  
@@ -27,14 +27,14 @@ ms.locfileid: "47078404"
   
 -   在继承的控件或组件中引发了两次事件  
   
--   设计时错误：“创建组件‘组件名称’失败”  
+-   设计时错误："无法创建组件 '*组件名称*'"  
   
 -   STAThreadAttribute  
   
 -   组件图标未出现在工具箱中  
   
 ## <a name="cannot-add-control-to-toolbox"></a>无法将控件添加到工具箱  
- 如果要将在另一项目中创建的自定义控件或第三方控件添加到“工具箱”中，必须手动操作。 如果当前项目中包含控件或组件，它应自动显示在“工具箱”中。 有关详细信息，请参阅[演练：使用自定义组件自动填充工具箱](../../../../docs/framework/winforms/controls/walkthrough-automatically-populating-the-toolbox-with-custom-components.md)。  
+ 如果要将在另一项目中创建的自定义控件或第三方控件添加到“工具箱”中，必须手动操作。 如果当前项目中包含控件或组件，它应自动显示在“工具箱”中。 有关详细信息，请参见[演练：自动填充工具箱与自定义组件](../../../../docs/framework/winforms/controls/walkthrough-automatically-populating-the-toolbox-with-custom-components.md)。  
   
 #### <a name="to-add-a-control-to-the-toolbox"></a>将控件添加到工具箱  
   
@@ -93,12 +93,12 @@ ms.locfileid: "47078404"
   
      现在即可像平常一样调试控件或组件。  
   
- 有关调试的详细信息，请参阅[在 Visual Studio 中进行调试](/visualstudio/debugger/debugging-in-visual-studio)和[演练：在设计时调试自定义 Windows 窗体控件](../../../../docs/framework/winforms/controls/walkthrough-debugging-custom-windows-forms-controls-at-design-time.md)。  
+ 有关调试的详细信息，请参阅[Visual Studio 中调试](/visualstudio/debugger/debugging-in-visual-studio)和[演练：在设计时调试自定义 Windows 窗体的控件](../../../../docs/framework/winforms/controls/walkthrough-debugging-custom-windows-forms-controls-at-design-time.md)。  
   
 ## <a name="event-is-raised-twice-in-inherited-control-or-component"></a>在继承的控件或组件中引发了两次事件  
  这可能是由于重复的 `Handles` 子句引起的。 有关详细信息，请参阅[有关 Visual Basic 中继承的事件处理程序的疑难解答](~/docs/visual-basic/programming-guide/language-features/events/troubleshooting-inherited-event-handlers.md)。  
   
-## <a name="design-time-error-failed-to-create-component-component-name"></a>设计时错误：“创建组件‘组件名称’失败”  
+## <a name="design-time-error-failed-to-create-component-component-name"></a>设计时错误："无法创建组件 '组件名称'"  
  组件或控件必须提供一个不带参数的默认构造函数。 设计环境创建组件或控件的实例时，不会尝试为使用参数的构造函数重载提供任何参数。  
   
 ## <a name="stathreadattribute"></a>STAThreadAttribute  
@@ -107,11 +107,11 @@ ms.locfileid: "47078404"
 ## <a name="component-icon-does-not-appear-in-toolbox"></a>组件图标未出现在工具箱中  
  当你使用<xref:System.Drawing.ToolboxBitmapAttribute>将图标与自定义组件相关联，位图将不会出现在工具箱中自动生成的组件。 若要查看位图，请使用“选择工具箱项”对话框重载控件。 有关详细信息，请参阅[如何：为控件提供工具箱位图](../../../../docs/framework/winforms/controls/how-to-provide-a-toolbox-bitmap-for-a-control.md)。  
   
-## <a name="see-also"></a>请参阅  
- [设计时开发 Windows 窗体控件](../../../../docs/framework/winforms/controls/developing-windows-forms-controls-at-design-time.md)  
- [演练：使用自定义组件自动填充工具箱](../../../../docs/framework/winforms/controls/walkthrough-automatically-populating-the-toolbox-with-custom-components.md)  
- [如何：测试 UserControl 的运行时行为](../../../../docs/framework/winforms/controls/how-to-test-the-run-time-behavior-of-a-usercontrol.md)  
- [演练：设计时调试自定义 Windows 窗体控件](../../../../docs/framework/winforms/controls/walkthrough-debugging-custom-windows-forms-controls-at-design-time.md)  
- [组件创作](https://msdn.microsoft.com/library/4a5a5e49-0378-4a31-83bc-24da0f1a727d)  
- [设计时开发故障排除](https://msdn.microsoft.com/library/e048d08e-fa7c-4be8-b238-4abaa199a0a6)  
- [使用组件编程](https://msdn.microsoft.com/library/d4d4fcb4-e0b8-46b3-b679-7ee0026eb9e3)
+## <a name="see-also"></a>请参阅
+- [设计时开发 Windows 窗体控件](../../../../docs/framework/winforms/controls/developing-windows-forms-controls-at-design-time.md)
+- [演练：自动填充工具箱与自定义组件](../../../../docs/framework/winforms/controls/walkthrough-automatically-populating-the-toolbox-with-custom-components.md)
+- [如何：测试 UserControl 的运行时行为](../../../../docs/framework/winforms/controls/how-to-test-the-run-time-behavior-of-a-usercontrol.md)
+- [演练：在设计时调试自定义 Windows 窗体控件](../../../../docs/framework/winforms/controls/walkthrough-debugging-custom-windows-forms-controls-at-design-time.md)
+- [组件创作](https://msdn.microsoft.com/library/4a5a5e49-0378-4a31-83bc-24da0f1a727d)
+- [设计时开发故障排除](https://msdn.microsoft.com/library/e048d08e-fa7c-4be8-b238-4abaa199a0a6)
+- [使用组件编程](https://msdn.microsoft.com/library/d4d4fcb4-e0b8-46b3-b679-7ee0026eb9e3)

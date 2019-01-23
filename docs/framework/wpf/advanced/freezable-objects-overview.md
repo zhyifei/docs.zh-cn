@@ -9,12 +9,12 @@ helpviewer_keywords:
 - unfreezing Freezable objects [WPF]
 - classes [WPF], Freezable
 ms.assetid: 89c71692-4f43-4057-b611-67c6a8a863a2
-ms.openlocfilehash: a4c0a137da74b276b1238d500057ce96756a1ae1
-ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
+ms.openlocfilehash: 281c1c9556773446808f7bd4b4ef558805503cea
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54030368"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54499309"
 ---
 # <a name="freezable-objects-overview"></a>Freezable 对象概述
 本主题介绍如何有效地使用和创建<xref:System.Windows.Freezable>对象，它们提供特殊功能，可帮助提高应用程序性能。 Freezable 对象的示例包括画笔、 笔、 转换、 几何和动画。  
@@ -161,8 +161,8 @@ mc:Ignorable="PresentationOptions"
   
  有关自定义的示例<xref:System.Windows.Freezable>类，请参阅[自定义动画示例](https://go.microsoft.com/fwlink/?LinkID=159981)。  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Windows.Freezable>  
- [自定义动画示例](https://go.microsoft.com/fwlink/?LinkID=159981)  
- [依赖项属性概述](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)  
- [自定义依赖属性](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.Windows.Freezable>
+- [自定义动画示例](https://go.microsoft.com/fwlink/?LinkID=159981)
+- [依赖项属性概述](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)
+- [自定义依赖属性](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md)

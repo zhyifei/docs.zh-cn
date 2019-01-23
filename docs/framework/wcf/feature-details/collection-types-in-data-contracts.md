@@ -9,12 +9,12 @@ helpviewer_keywords:
 - data contracts [WCF], collection types
 - collection types [WCF]
 ms.assetid: 9b45b28e-0a82-4ea3-8c33-ec0094aff9d5
-ms.openlocfilehash: 0399c89e926611b076072e6475c52bf31ae83637
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: c0e65a6286ef4756bba305d41dce6ef2a85401dd
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53155179"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54516120"
 ---
 # <a name="collection-types-in-data-contracts"></a>数据协定中的集合类型
  “集合”指特定类型的项的列表。 在 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]中，可以使用数组或者其他各种类型（泛型列表、泛型 <xref:System.ComponentModel.BindingList%601>、 <xref:System.Collections.Specialized.StringCollection>或 <xref:System.Collections.ArrayList>）来表示此类列表。 例如，集合可以容纳给定客户的地址列表。 无论这些集合的实际类型是什么，这些集合都称为“列表集合” 。  
@@ -262,7 +262,7 @@ svcutil.exe MyService.wsdl MyServiceSchema.xsd /r:C:\full_path_to_system_dll\Sys
   
  您可以将集合接口类型指定为引用的集合类型的一部分，但不能指定无效的集合类型（例如，没有 `Add` 方法或公共构造函数的类型）。  
   
- 封闭式泛型被视为最佳匹配 （非泛型类型被视为与 `Object` 的封闭式泛型等效）。 例如，如果 <xref:System.Collections.Generic.List%601> 的泛型 <xref:System.DateTime>、泛型 <xref:System.ComponentModel.BindingList%601> （开放式泛型）和 <xref:System.Collections.ArrayList> 类型是引用的集合类型，则会生成以下代码：  
+ 封闭式泛型被视为最佳匹配 （非泛型类型被视为与 `Object`的封闭式泛型等效）。 例如，如果 <xref:System.Collections.Generic.List%601> 的泛型 <xref:System.DateTime>、泛型 <xref:System.ComponentModel.BindingList%601> （开放式泛型）和 <xref:System.Collections.ArrayList> 类型是引用的集合类型，则会生成以下代码：  
   
  [!code-csharp[c_collection_types_in_data_contracts#10](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_collection_types_in_data_contracts/cs/program.cs#10)]
  [!code-vb[c_collection_types_in_data_contracts#10](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_collection_types_in_data_contracts/vb/program.vb#10)]  
@@ -348,7 +348,7 @@ svcutil.exe MyService.wsdl MyServiceSchema.xsd /r:C:\full_path_to_system_dll\Sys
   
 -   列表集合数据协定的默认名称如果未使用 Name 重写，则是“ArrayOf”字符串与集合中包含类型的数据协定名称的组合。 例如，某个整数泛型列表的数据协定名称是“ArrayOfint”。 请记住， `Object` 的数据协定名称是“anyType”，因此诸如 <xref:System.Collections.ArrayList> 这样的非泛型列表的数据协定名称是“ArrayOfanyType”。  
   
- 字典集合数据协定的默认名称如果未使用 `Name` 重写，则是“ArrayOfKeyValueOf”字符串与键类型的数据协定名称以及值类型的数据协定名称（按此顺序）的组合。 例如，String 和 Integer 的泛型字典的数据协定名称是“ArrayOfKeyValueOfstringint”。 此外，如果键或值类型不是基元类型，则键和值类型的数据协定命名空间的命名空间哈希将会追加到名称的末尾。 有关命名空间哈希值的详细信息，请参阅[数据协定名称](../../../../docs/framework/wcf/feature-details/data-contract-names.md)。  
+ 字典集合数据协定的默认名称如果未使用 `Name`重写，则是“ArrayOfKeyValueOf”字符串与键类型的数据协定名称以及值类型的数据协定名称（按此顺序）的组合。 例如，String 和 Integer 的泛型字典的数据协定名称是“ArrayOfKeyValueOfstringint”。 此外，如果键或值类型不是基元类型，则键和值类型的数据协定命名空间的命名空间哈希将会追加到名称的末尾。 有关命名空间哈希值的详细信息，请参阅[数据协定名称](../../../../docs/framework/wcf/feature-details/data-contract-names.md)。  
   
  每个字典集合数据协定都有一个表示字典中的一项的伴随数据协定。 除“ArrayOf”前缀外，它的名称与字典数据协定相同，并且命名空间也与字典数据协定相同。 例如，对于“ArrayOfKeyValueOfstringint”字典数据协定，“KeyValueofstringint”数据协定表示字典中的一项。 您可以使用 `ItemName` 属性来自定义该数据协定的名称，具体说明请见下一部分。  
   
@@ -395,5 +395,5 @@ svcutil.exe MyService.wsdl MyServiceSchema.xsd /r:C:\full_path_to_system_dll\Sys
 ## <a name="collections-and-object-reference-preservation"></a>集合和对象引用保存  
  当序列化程序在保存对象引用的模式下工作时，对象引用保存也适用于集合。 具体而言，会为整个集合以及集合中包含的各个项保存对象标识。 对于字典，会为键/值对对象以及各个键和值对象保存对象标识。  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Runtime.Serialization.CollectionDataContractAttribute>
+## <a name="see-also"></a>请参阅
+- <xref:System.Runtime.Serialization.CollectionDataContractAttribute>
