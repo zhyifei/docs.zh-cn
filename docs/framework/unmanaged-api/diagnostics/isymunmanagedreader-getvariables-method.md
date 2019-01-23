@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 74df7ee71fc541c35bc393f637ad1d7b9f7aa2a0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: ec1e2b59c15c956a4657b224a937829dbd3b14cb
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33425521"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54549897"
 ---
-# <a name="isymunmanagedreadergetvariables-method"></a><span data-ttu-id="407f8-102">ISymUnmanagedReader::GetVariables 方法</span><span class="sxs-lookup"><span data-stu-id="407f8-102">ISymUnmanagedReader::GetVariables Method</span></span>
-<span data-ttu-id="407f8-103">返回一个非本地变量，给定的父级和名称。</span><span class="sxs-lookup"><span data-stu-id="407f8-103">Returns a non-local variable, given its parent and name.</span></span>  
+# <a name="isymunmanagedreadergetvariables-method"></a><span data-ttu-id="3ce00-102">ISymUnmanagedReader::GetVariables 方法</span><span class="sxs-lookup"><span data-stu-id="3ce00-102">ISymUnmanagedReader::GetVariables Method</span></span>
+<span data-ttu-id="3ce00-103">返回一个非本地变量，给定的父级和名称。</span><span class="sxs-lookup"><span data-stu-id="3ce00-103">Returns a non-local variable, given its parent and name.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="407f8-104">语法</span><span class="sxs-lookup"><span data-stu-id="407f8-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="3ce00-104">语法</span><span class="sxs-lookup"><span data-stu-id="3ce00-104">Syntax</span></span>  
   
 ```  
 HRESULT GetVariables (  
@@ -38,24 +38,24 @@ HRESULT GetVariables (
         length_is (*pcVars)] ISymUnmanagedVariable *pVars[]);  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="407f8-105">参数</span><span class="sxs-lookup"><span data-stu-id="407f8-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="3ce00-105">参数</span><span class="sxs-lookup"><span data-stu-id="3ce00-105">Parameters</span></span>  
  `parent`  
- <span data-ttu-id="407f8-106">[in]变量的父级。</span><span class="sxs-lookup"><span data-stu-id="407f8-106">[in] The parent of the variable.</span></span>  
+ <span data-ttu-id="3ce00-106">[in]变量的父级。</span><span class="sxs-lookup"><span data-stu-id="3ce00-106">[in] The parent of the variable.</span></span>  
   
  `cVars`  
- <span data-ttu-id="407f8-107">[in] `pVars` 数组的大小。</span><span class="sxs-lookup"><span data-stu-id="407f8-107">[in] The size of the `pVars` array.</span></span>  
+ <span data-ttu-id="3ce00-107">[in] `pVars` 数组的大小。</span><span class="sxs-lookup"><span data-stu-id="3ce00-107">[in] The size of the `pVars` array.</span></span>  
   
  `pcVars`  
- <span data-ttu-id="407f8-108">[out]指向接收的变量中返回数的变量的指针`pVars`。</span><span class="sxs-lookup"><span data-stu-id="407f8-108">[out] A pointer to the variable that receives the number of variables returned in `pVars`.</span></span>  
+ <span data-ttu-id="3ce00-108">[out]指向接收的变量中返回数的变量的指针`pVars`。</span><span class="sxs-lookup"><span data-stu-id="3ce00-108">[out] A pointer to the variable that receives the number of variables returned in `pVars`.</span></span>  
   
  `pVars`  
- <span data-ttu-id="407f8-109">[out]指向接收这些变量的变量的指针。</span><span class="sxs-lookup"><span data-stu-id="407f8-109">[out] A pointer to the variable that receives the variables.</span></span>  
+ <span data-ttu-id="3ce00-109">[out]指向接收变量的变量的指针。</span><span class="sxs-lookup"><span data-stu-id="3ce00-109">[out] A pointer to the variable that receives the variables.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="407f8-110">返回值</span><span class="sxs-lookup"><span data-stu-id="407f8-110">Return Value</span></span>  
- <span data-ttu-id="407f8-111">如果该方法成功; 则为 S_OK否则为 E_FAIL 或某些其他错误代码。</span><span class="sxs-lookup"><span data-stu-id="407f8-111">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="3ce00-110">返回值</span><span class="sxs-lookup"><span data-stu-id="3ce00-110">Return Value</span></span>  
+ <span data-ttu-id="3ce00-111">如果方法成功，则为 S_OK否则为 E_FAIL 或某些其他错误代码。</span><span class="sxs-lookup"><span data-stu-id="3ce00-111">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="407f8-112">要求</span><span class="sxs-lookup"><span data-stu-id="407f8-112">Requirements</span></span>  
- <span data-ttu-id="407f8-113">**标头：** CorSym.idl、 CorSym.h</span><span class="sxs-lookup"><span data-stu-id="407f8-113">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="3ce00-112">要求</span><span class="sxs-lookup"><span data-stu-id="3ce00-112">Requirements</span></span>  
+ <span data-ttu-id="3ce00-113">**标头：** CorSym.idl CorSym.h</span><span class="sxs-lookup"><span data-stu-id="3ce00-113">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="407f8-114">请参阅</span><span class="sxs-lookup"><span data-stu-id="407f8-114">See Also</span></span>  
- [<span data-ttu-id="407f8-115">ISymUnmanagedReader 接口</span><span class="sxs-lookup"><span data-stu-id="407f8-115">ISymUnmanagedReader Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)
+## <a name="see-also"></a><span data-ttu-id="3ce00-114">请参阅</span><span class="sxs-lookup"><span data-stu-id="3ce00-114">See also</span></span>
+- [<span data-ttu-id="3ce00-115">ISymUnmanagedReader 接口</span><span class="sxs-lookup"><span data-stu-id="3ce00-115">ISymUnmanagedReader Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)
