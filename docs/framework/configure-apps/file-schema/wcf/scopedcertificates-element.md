@@ -2,24 +2,24 @@
 title: '&lt;scopedCertificates&gt; 元素'
 ms.date: 03/30/2017
 ms.assetid: c7b6fc35-d4b2-4c18-98bd-83e09591f1d3
-ms.openlocfilehash: 6f2acd1078090f7680f1909d68afbcaa09d080fd
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: c6236093eada1b7be5244d98eabd99482017a395
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54150716"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54556491"
 ---
 # <a name="ltscopedcertificatesgt-element"></a>&lt;scopedCertificates&gt; 元素
 表示特定服务为身份验证提供的 X.509（作用域）证书的集合。 此集合通常用于指定联合方案中安全令牌服务的服务证书。  
   
  \<system.ServiceModel>  
-\<行为 >  
+\<behaviors>  
 endpointBehaviors 部分  
-\<行为 >  
+\<behavior>  
 \<clientCredentials>  
-\<serviceCertificate >  
+\<serviceCertificate>  
 \<scopedCertificates > 元素  
-\<添加 > 元素\<scopedCertificates >  
+\<add> element for \<scopedCertificates>  
   
 ## <a name="syntax"></a>语法  
   
@@ -49,7 +49,7 @@ endpointBehaviors 部分
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<serviceCertificate >](../../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md)|指定客户端对服务进行身份验证时使用的证书。|  
+|[\<serviceCertificate>](../../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md)|指定客户端对服务进行身份验证时使用的证书。|  
   
 ## <a name="remarks"></a>备注  
  此集合使客户端能够根据与它通信的服务的 URL 来配置要使用的服务证书。 这在已颁发令牌的方案中尤其有用，在这些方案中，客户端可与多个服务（终端服务以及中间的安全令牌服务）进行通信。 对于使用基于证书的消息安全的绑定，此证书用于加密发送给服务的消息，并期望服务用它来对客户端的应答进行签名。  
@@ -73,14 +73,14 @@ endpointBehaviors 部分
 </serviceCertificate>
 ```  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.ServiceModel.Configuration.X509RecipientCertificateClientElement.ScopedCertificates%2A>  
- <xref:System.ServiceModel.Configuration.X509ScopedServiceCertificateElementCollection>  
- <xref:System.ServiceModel.Configuration.X509ScopedServiceCertificateElement>  
- <xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential>  
- <xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential.ScopedCertificates%2A>  
- [使用证书](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)  
- [如何：创建联合客户端](../../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)  
- [\<add>](../../../../../docs/framework/configure-apps/file-schema/wcf/add-of-scopedcertificates-element.md)  
- [保护客户端](../../../../../docs/framework/wcf/securing-clients.md)  
- [保护服务和客户端的安全](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.ServiceModel.Configuration.X509RecipientCertificateClientElement.ScopedCertificates%2A>
+- <xref:System.ServiceModel.Configuration.X509ScopedServiceCertificateElementCollection>
+- <xref:System.ServiceModel.Configuration.X509ScopedServiceCertificateElement>
+- <xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential>
+- <xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential.ScopedCertificates%2A>
+- [使用证书](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
+- [如何：创建联合客户端](../../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)
+- [\<add>](../../../../../docs/framework/configure-apps/file-schema/wcf/add-of-scopedcertificates-element.md)
+- [保护客户端](../../../../../docs/framework/wcf/securing-clients.md)
+- [保护服务和客户端的安全](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
