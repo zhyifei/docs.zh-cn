@@ -7,12 +7,12 @@ helpviewer_keywords:
 - xml:space attribute [XAML Services]
 - white-space processing [XAML Services]
 ms.assetid: 5e1814f0-5b30-43d5-8c88-dede335a89d7
-ms.openlocfilehash: 051cb6b3a314509e9593ee570fd659098670e88b
-ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
+ms.openlocfilehash: a7c3775f2e49a80eabc61f24d086a94fcadfd574
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2018
-ms.locfileid: "42925852"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54617572"
 ---
 # <a name="xmlspace-handling-in-xaml"></a>XAML 中的 xml:space 处理
 `xml:space`属性是声明了大量空白处理行为对象元素中的 XML 定义的属性。 此行为是相关的所有内容 （内部文本） 元素中包含其中`xml:space`声明和范围也限于子元素。  
@@ -40,6 +40,6 @@ ms.locfileid: "42925852"
   
  在 XAML 中处理空白的完整讨论，请参阅[空格处理在 XAML 中](../../../docs/framework/xaml-services/whitespace-processing-in-xaml.md)。  
   
-## <a name="see-also"></a>请参阅  
- [在 XAML 中处理空白](../../../docs/framework/xaml-services/whitespace-processing-in-xaml.md)  
- [XAML 概述 (WPF)](../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)
+## <a name="see-also"></a>请参阅
+- [在 XAML 中处理空白](../../../docs/framework/xaml-services/whitespace-processing-in-xaml.md)
+- [XAML 概述 (WPF)](../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)

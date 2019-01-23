@@ -8,12 +8,12 @@ helpviewer_keywords:
 - animation [WPF], paths
 - path animations [WPF]
 ms.assetid: 979c732c-df74-47a6-be96-8e07b3707d53
-ms.openlocfilehash: 0f795ad00823e7b1c37221f7417b09d3982c4c18
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: 610ef2721bef18e1cb1e87500a9dc9cf2729c867
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48266820"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54614234"
 ---
 # <a name="path-animations-overview"></a>路径动画概述
 <a name="introduction"></a>本主题介绍了路径动画，使你能够使用几何路径来生成输出值。 路径动画可用于沿着复杂路径移动和旋转对象。  
@@ -89,9 +89,9 @@ ms.locfileid: "48266820"
   
  有关详细信息中使用的路径语法[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]示例中，请参阅[路径标记语法](../../../../docs/framework/wpf/graphics-multimedia/path-markup-syntax.md)概述。  
   
-## <a name="see-also"></a>请参阅  
- [路径动画示例](https://go.microsoft.com/fwlink/?LinkID=160028)  
- [路径标记语法](../../../../docs/framework/wpf/graphics-multimedia/path-markup-syntax.md)  
- [路径动画操作说明主题](../../../../docs/framework/wpf/graphics-multimedia/path-animation-how-to-topics.md)  
- [动画概述](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)  
- [属性动画技术概述](../../../../docs/framework/wpf/graphics-multimedia/property-animation-techniques-overview.md)
+## <a name="see-also"></a>请参阅
+- [路径动画示例](https://go.microsoft.com/fwlink/?LinkID=160028)
+- [路径标记语法](../../../../docs/framework/wpf/graphics-multimedia/path-markup-syntax.md)
+- [路径动画操作说明主题](../../../../docs/framework/wpf/graphics-multimedia/path-animation-how-to-topics.md)
+- [动画概述](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)
+- [属性动画技术概述](../../../../docs/framework/wpf/graphics-multimedia/property-animation-techniques-overview.md)

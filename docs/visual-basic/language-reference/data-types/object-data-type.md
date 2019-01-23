@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Object data type
 - Object data type [Visual Basic], reference
 ms.assetid: 61ea4a7c-3b3d-48d4-adc4-eacfa91779b2
-ms.openlocfilehash: 94d3ddcf71194eb69a2d26bcdf549aaf693e46e6
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 5a37b571e0600927e0e50fdb1a63bcf8ef194d72
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43485555"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54617533"
 ---
 # <a name="object-data-type"></a>Object Data Type
 保存引用的对象的地址。 可以将任何引用类型 （字符串、 数组、 类或接口） 分配给`Object`变量。 `Object`变量还可以指任何值类型的数据 (数字`Boolean`， `Char`， `Date`，结构或枚举)。  
@@ -66,11 +66,11 @@ Dim myCollection As New Collection()
 objDb = myCollection.Item(1)  
 ```  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Object>  
- [数据类型](../../../visual-basic/language-reference/data-types/index.md)  
- [类型转换函数](../../../visual-basic/language-reference/functions/type-conversion-functions.md)  
- [转换摘要](../../../visual-basic/language-reference/keywords/conversion-summary.md)  
- [有效使用数据类型](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)  
- [如何：确定两个对象是否相关](../../../visual-basic/programming-guide/language-features/variables/how-to-determine-whether-two-objects-are-related.md)  
- [如何：确定两个对象是否相同](../../../visual-basic/programming-guide/language-features/variables/how-to-determine-whether-two-objects-are-identical.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.Object>
+- [数据类型](../../../visual-basic/language-reference/data-types/index.md)
+- [类型转换函数](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
+- [转换摘要](../../../visual-basic/language-reference/keywords/conversion-summary.md)
+- [有效使用数据类型](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)
+- [如何：确定两个对象是否相关](../../../visual-basic/programming-guide/language-features/variables/how-to-determine-whether-two-objects-are-related.md)
+- [如何：确定两个对象是否相同](../../../visual-basic/programming-guide/language-features/variables/how-to-determine-whether-two-objects-are-identical.md)

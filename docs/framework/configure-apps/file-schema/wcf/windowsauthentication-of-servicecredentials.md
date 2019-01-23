@@ -2,22 +2,22 @@
 title: '&lt;serviceCredentials&gt; 的 &lt;windowsAuthentication&gt;'
 ms.date: 03/30/2017
 ms.assetid: e0709473-0997-4de3-8f49-783527309a48
-ms.openlocfilehash: acbb4f788d805d72dedcc7be711a38d1f1e82687
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 3077baf49c13c91c6293823aa841525bf07ca7f4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54148339"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54616259"
 ---
 # <a name="ltwindowsauthenticationgt-of-ltservicecredentialsgt"></a>&lt;serviceCredentials&gt; 的 &lt;windowsAuthentication&gt;
 指定 Windows 服务凭据的设置。  
   
  \<system.ServiceModel>  
-\<行为 >  
+\<behaviors>  
 \<serviceBehaviors>  
-\<行为 >  
+\<behavior>  
 \<serviceCredentials>  
-\<windowsAuthentication >  
+\<windowsAuthentication>  
   
 ## <a name="syntax"></a>语法  
   
@@ -48,8 +48,8 @@ ms.locfileid: "54148339"
 ## <a name="remarks"></a>备注  
  通过设置 `allowAnonymousLogons` 属性，使用此元素可指定是否允许匿名 Windows 用户访问。 此外，通过设置 `includeWindowsGroups` 属性还可以指定是否在 AuthorizationContext 中包含用户所属的组信息。 如果将它设置为 `true`（默认设置），服务就可以确定客户端所属的 Windows 组。  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.ServiceModel.Configuration.WindowsServiceElement>  
- <xref:System.ServiceModel.Configuration.ServiceCredentialsElement.WindowsAuthentication%2A>  
- <xref:System.ServiceModel.Description.ServiceCredentials.WindowsAuthentication%2A>  
- <xref:System.ServiceModel.Security.WindowsServiceCredential>
+## <a name="see-also"></a>请参阅
+- <xref:System.ServiceModel.Configuration.WindowsServiceElement>
+- <xref:System.ServiceModel.Configuration.ServiceCredentialsElement.WindowsAuthentication%2A>
+- <xref:System.ServiceModel.Description.ServiceCredentials.WindowsAuthentication%2A>
+- <xref:System.ServiceModel.Security.WindowsServiceCredential>

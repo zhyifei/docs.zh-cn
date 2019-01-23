@@ -1,5 +1,5 @@
 ---
-title: 如何：在混合应用程序中启用视觉样式
+title: 如何：混合应用程序中启用视觉样式
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - hybrid applications [WPF interoperability]
 - visual styles [Windows Forms]
 ms.assetid: 95de9b9c-d804-405c-b2d1-49a88c1e0fe1
-ms.openlocfilehash: f4684e277335a119d41d5bd79d504ed37a76d6fc
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 03ac17816e071299307c03ffebb363fe0ddde9c7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45750227"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54616181"
 ---
-# <a name="how-to-enable-visual-styles-in-a-hybrid-application"></a>如何：在混合应用程序中启用视觉样式
+# <a name="how-to-enable-visual-styles-in-a-hybrid-application"></a>如何：混合应用程序中启用视觉样式
 本主题演示如何启用[!INCLUDE[TLA#tla_winxp](../../../../includes/tlasharptla-winxp-md.md)]上的视觉样式[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]控件中托管[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-基于应用程序。  
   
  如果你的应用程序调用<xref:System.Windows.Forms.Application.EnableVisualStyles%2A>方法中，大部分你[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]控件将自动使用视觉样式时上运行你的应用程序[!INCLUDE[TLA#tla_winxp](../../../../includes/tlasharptla-winxp-md.md)]。 有关详细信息，请参阅[以视觉样式呈现控件](../../../../docs/framework/winforms/controls/rendering-controls-with-visual-styles.md)。  
@@ -66,9 +66,9 @@ ms.locfileid: "45750227"
   
      [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]控件变为默认系统样式。  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Windows.Forms.Application.EnableVisualStyles%2A>  
- <xref:System.Windows.Forms.VisualStyles>  
- <xref:System.Windows.Forms.Integration.WindowsFormsHost>  
- [使用视觉样式呈现控件](../../../../docs/framework/winforms/controls/rendering-controls-with-visual-styles.md)  
- [演练：在 WPF 中承载 Windows 窗体控件](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-windows-forms-control-in-wpf.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.Windows.Forms.Application.EnableVisualStyles%2A>
+- <xref:System.Windows.Forms.VisualStyles>
+- <xref:System.Windows.Forms.Integration.WindowsFormsHost>
+- [使用视觉样式呈现控件](../../../../docs/framework/winforms/controls/rendering-controls-with-visual-styles.md)
+- [演练：承载在 WPF 中的 Windows 窗体控件](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-windows-forms-control-in-wpf.md)
