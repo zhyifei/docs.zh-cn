@@ -7,19 +7,19 @@ helpviewer_keywords:
 - DataContractSerializer
 - DataContractAttribute
 ms.assetid: c3d37ae4-8f1c-463f-b195-658c5a7e90a1
-ms.openlocfilehash: 587c70a7b583c99e66eebac4055415e1e6a635b2
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: dd5972c2bb25367f2566bcf77e53e7a3341d89b4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54146103"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54519458"
 ---
 # <a name="ltaddgt-of-ltdeclaredtypesgt-element"></a>&lt;declaredTypes&gt; 的 &lt;add&gt; 元素
 添加在反序列化过程中由 <xref:System.Runtime.Serialization.DataContractSerializer> 使用的类型。 每个声明类型都包含一些将作为声明类型的字段或属性返回的已知类型。  
   
  system.runtime.serialization  
-\<dataContractSerializer >  
-\<declaredTypes >  
+\<dataContractSerializer>  
+\<declaredTypes>  
 \<添加 > 的\<declaredTypes >  
   
 ## <a name="syntax"></a>语法  
@@ -46,13 +46,13 @@ ms.locfileid: "54146103"
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<knownType >](../../../../../docs/framework/configure-apps/file-schema/wcf/knowntype.md)|指定要添加的声明类型的已知类型。 如果声明类型是泛型类型，则还必须向 `<knownType>` 元素添加一个参数元素，以指定用于返回已知类型的泛型参数。|  
+|[\<knownType>](../../../../../docs/framework/configure-apps/file-schema/wcf/knowntype.md)|指定要添加的声明类型的已知类型。 如果声明类型是泛型类型，则还必须向 `<knownType>` 元素添加一个参数元素，以指定用于返回已知类型的泛型参数。|  
   
 ### <a name="parent-elements"></a>父元素  
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<declaredTypes >](../../../../../docs/framework/configure-apps/file-schema/wcf/declaredtypes.md)|包含在 <xref:System.Runtime.Serialization.DataContractSerializer> 进行反序列化过程中需要已知类型的类型。|  
+|[\<declaredTypes>](../../../../../docs/framework/configure-apps/file-schema/wcf/declaredtypes.md)|包含在 <xref:System.Runtime.Serialization.DataContractSerializer> 进行反序列化过程中需要已知类型的类型。|  
   
 ## <a name="remarks"></a>备注  
  有关已知类型的详细信息，请参阅[Data Contract Known Types](../../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)和<xref:System.Runtime.Serialization.DataContractSerializer>。  
@@ -75,8 +75,8 @@ ms.locfileid: "54146103"
 </add>
 ```  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Runtime.Serialization.DataContractSerializer>  
- [数据协定已知类型](../../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)  
- [\<dataContractSerializer >](../../../../../docs/framework/configure-apps/file-schema/wcf/datacontractserializer-element.md)  
- [\<添加 > 的\<declaredTypes >](../../../../../docs/framework/configure-apps/file-schema/wcf/add-of-declaredtypes-element.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.Runtime.Serialization.DataContractSerializer>
+- [数据协定已知类型](../../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)
+- [\<dataContractSerializer>](../../../../../docs/framework/configure-apps/file-schema/wcf/datacontractserializer-element.md)
+- [\<add> of \<declaredTypes>](../../../../../docs/framework/configure-apps/file-schema/wcf/add-of-declaredtypes-element.md)

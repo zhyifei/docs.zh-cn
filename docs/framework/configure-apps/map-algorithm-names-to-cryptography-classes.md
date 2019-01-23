@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 01327c69-c5e1-4ef6-b73f-0a58351f0492
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: cd57cc7bbe39b042e11d0dad3fd54373bcaae98b
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 87b428fffac98b4490a67e4713b56ec6e8fdcfe9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47196234"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54569188"
 ---
 # <a name="mapping-algorithm-names-to-cryptography-classes"></a>将算法名称映射到加密类
 有四种方法，开发人员可以创建加密对象使用[!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)]:  
@@ -69,6 +69,6 @@ ms.locfileid: "47196234"
   
  默认名称和它们映射到的类的列表，请参阅<xref:System.Security.Cryptography.CryptoConfig>。  
   
-## <a name="see-also"></a>请参阅  
- [Cryptographic Services](../../../docs/standard/security/cryptographic-services.md)  
- [配置加密类](../../../docs/framework/configure-apps/configure-cryptography-classes.md)
+## <a name="see-also"></a>请参阅
+- [Cryptographic Services](../../../docs/standard/security/cryptographic-services.md)
+- [配置加密类](../../../docs/framework/configure-apps/configure-cryptography-classes.md)

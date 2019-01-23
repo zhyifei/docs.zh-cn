@@ -2,18 +2,18 @@
 title: '&lt;serviceHostingEnvironment&gt;'
 ms.date: 03/30/2017
 ms.assetid: 4f8a7c4f-e735-4987-979a-b74fcdae2652
-ms.openlocfilehash: eee81f774382bf9bac3caaada0ae144e933cb630
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 47e683969a62541dd48a3c7211e1edf3bb7b4038
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54150313"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54493841"
 ---
 # <a name="ltservicehostingenvironmentgt"></a>&lt;serviceHostingEnvironment&gt;
 此元素定义服务主机环境要为特定传输实例化的类型。 如果此元素为空，则使用默认类型。 此元素只能在应用程序或计算机级别的配置文件中使用。  
   
  \<system.ServiceModel>  
-\<serviceHostingEnvironment >  
+\<ServiceHostingEnvironment>  
   
 ## <a name="syntax"></a>语法  
   
@@ -50,9 +50,9 @@ ms.locfileid: "54150313"
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<Baseaddressprefixfilter >](../../../../../docs/framework/configure-apps/file-schema/wcf/baseaddressprefixfilters.md)|一个配置元素的集合，这些元素指定服务主机所使用的基址的前缀筛选器。|  
-|[\<serviceActivations >](../../../../../docs/framework/configure-apps/file-schema/wcf/serviceactivations.md)|一个描述激活设置的配置节。|  
-|[\<transportConfigurationTypes >](../../../../../docs/framework/configure-apps/file-schema/wcf/transportconfigurationtypes.md)|一个配置元素的集合，这些元素标识特定传输的类型。|  
+|[\<baseAddressPrefixFilters>](../../../../../docs/framework/configure-apps/file-schema/wcf/baseaddressprefixfilters.md)|一个配置元素的集合，这些元素指定服务主机所使用的基址的前缀筛选器。|  
+|[\<serviceActivations>](../../../../../docs/framework/configure-apps/file-schema/wcf/serviceactivations.md)|一个描述激活设置的配置节。|  
+|[\<transportConfigurationTypes>](../../../../../docs/framework/configure-apps/file-schema/wcf/transportconfigurationtypes.md)|一个配置元素的集合，这些元素标识特定传输的类型。|  
   
 ### <a name="parent-elements"></a>父元素  
   
@@ -92,8 +92,8 @@ ms.locfileid: "54150313"
 <serviceHostingEnvironment aspNetCompatibilityEnabled="true"/>
 ```  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.ServiceModel.Configuration.ServiceHostingEnvironmentSection>  
- <xref:System.ServiceModel.ServiceHostingEnvironment>  
- [承载](../../../../../docs/framework/wcf/feature-details/hosting.md)  
- [WCF 服务和 ASP.NET](../../../../../docs/framework/wcf/feature-details/wcf-services-and-aspnet.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.ServiceModel.Configuration.ServiceHostingEnvironmentSection>
+- <xref:System.ServiceModel.ServiceHostingEnvironment>
+- [承载](../../../../../docs/framework/wcf/feature-details/hosting.md)
+- [WCF 服务和 ASP.NET](../../../../../docs/framework/wcf/feature-details/wcf-services-and-aspnet.md)

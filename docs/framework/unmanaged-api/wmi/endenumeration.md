@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 33c73e58be39a7f1ffa9300947c3ee552231adab
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: f80503277d6a5d748dffa7783a19c6353b2e7f8d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43786344"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54505115"
 ---
 # <a name="endenumeration-function"></a>EndEnumeration 函数
 终止通过调用开始枚举序列[BeginEnumeration 函数](beginenumeration.md)。  
@@ -50,7 +50,7 @@ HRESULT EndEnumeration (
 
 此函数返回以下值中定义*WbemCli.h*标头文件，也可以在定义它们为常量在代码中：
 
-|返回的常量  |“值”  |描述  |
+|返回的常量  |值  |描述  |
 |---------|---------|---------|
 |`WBEM_E_FAILED` | 0x80041001 | 已存在时的常见错误。 |
 |`WBEM_S_NO_ERROR` | 0 | 函数调用成功。  |
@@ -62,11 +62,11 @@ HRESULT EndEnumeration (
 调用`EndEnumeration`函数不是必需的但它建议，因为它释放与枚举关联的资源。 但是，资源将释放自动启动下一步枚举或释放的对象时。
 
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** WMINet_Utils.idl  
   
  **.NET Framework 版本：**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
-## <a name="see-also"></a>请参阅  
-[WMI 和性能计数器 （非托管 API 参考）](index.md)
+## <a name="see-also"></a>请参阅
+- [WMI 和性能计数器 （非托管 API 参考）](index.md)

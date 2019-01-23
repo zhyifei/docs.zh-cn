@@ -1,19 +1,19 @@
 ---
-title: '&lt;为 UdpDiscoveryEndpoint&gt;'
+title: '&lt;udpDiscoveryEndpoint&gt;'
 ms.date: 03/30/2017
 ms.assetid: 1f485329-2771-43bc-88de-df8f2faa3bb7
-ms.openlocfilehash: 6508f73de7920a339e40284c86b0d1d649e7eabe
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: b46da83a175c2a9cff38abc211d462f3d43c1b9e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54145427"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54569214"
 ---
-# <a name="ltudpdiscoveryendpointgt"></a>&lt;为 UdpDiscoveryEndpoint&gt;
+# <a name="ltudpdiscoveryendpointgt"></a>&lt;udpDiscoveryEndpoint&gt;
 此配置元素定义一个通过 UDP 多播绑定为发现操作预先配置的标准终结点。 此终结点具有固定协定并支持两个 WS-Discovery 协议版本。 此外，根据 WS-Discovery 规范（WS-Discovery 2005 年 4 月版或 WS-Discovery 1.1 版）中的规定，它还具有固定 UDP 绑定和默认地址。  
   
  \<system.ServiceModel>  
-\<standardEndpoints >  
+\<standardEndpoints>  
   
 ## <a name="syntax"></a>语法  
   
@@ -48,13 +48,13 @@ ms.locfileid: "54145427"
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<u d >](../../../../../docs/framework/configure-apps/file-schema/wcf/udptransportsettings.md)|一个设置集合，用于为 UDP 终结点配置 UDP 传输。|  
+|[\<udpTransportSettings>](../../../../../docs/framework/configure-apps/file-schema/wcf/udptransportsettings.md)|一个设置集合，用于为 UDP 终结点配置 UDP 传输。|  
   
 ### <a name="parent-elements"></a>父元素  
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<standardEndpoints >](../../../../../docs/framework/configure-apps/file-schema/wcf/standardendpoints.md)|具有一个或多个固定属性（地址、绑定和协定）的预定义终结点的标准终结点集合。|  
+|[\<standardEndpoints>](../../../../../docs/framework/configure-apps/file-schema/wcf/standardendpoints.md)|具有一个或多个固定属性（地址、绑定和协定）的预定义终结点的标准终结点集合。|  
   
 ## <a name="example"></a>示例  
  下面的示例演示通过 UDP 多播传输侦听发现消息的服务。  
@@ -78,5 +78,5 @@ ms.locfileid: "54145427"
 </services>
 ```  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.ServiceModel.Discovery.DiscoveryEndpoint>
+## <a name="see-also"></a>请参阅
+- <xref:System.ServiceModel.Discovery.DiscoveryEndpoint>

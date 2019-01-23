@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Join statement [Visual Basic]
 - Join clause [Visual Basic]
 ms.assetid: 6dd37936-b27c-4e00-98ad-154b23f4de64
-ms.openlocfilehash: b1551583079c66d1bf5f6963a42d5d24e518fff3
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 2017e8edbb4d1bd25a3669b92553f2905b567594
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46003316"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54514677"
 ---
 # <a name="join-clause-visual-basic"></a>Join 子句 (Visual Basic)
 将两个集合合并为单个集合。 联接运算基于匹配键，并使用`Equals`运算符。  
@@ -31,10 +31,10 @@ On key1 Equals key2 [ And key3 Equals key4 [... ]
   
 ## <a name="parts"></a>部件  
  `element`  
- 必须的。 要联接的集合控制变量。  
+ 必需。 要联接的集合控制变量。  
   
  `collection`  
- 必须的。 要结合上左侧和右侧的标识的集合的集合`Join`运算符。 一个`Join`子句可以嵌套在另一个`Join`子句，或在`Group Join`子句。  
+ 必需。 要结合上左侧和右侧的标识的集合的集合`Join`运算符。 一个`Join`子句可以嵌套在另一个`Join`子句，或在`Group Join`子句。  
   
  `joinClause`  
  可选。 一个或多个其他`Join`进一步优化查询。  
@@ -43,7 +43,7 @@ On key1 Equals key2 [ And key3 Equals key4 [... ]
  可选。 一个或多个其他`Group Join`进一步优化查询。  
   
  `key1` `Equals` `key2`  
- 必须的。 标识要联接的集合的键。 必须使用`Equals`运算符比较要联接的集合中的密钥。 您可以通过使用组合联接条件`And`运算符来标识多个密钥。 `key1` 在左侧和右侧的集合中必须是`Join`运算符。 `key2` 从集合中的右侧必须是`Join`运算符。  
+ 必需。 标识要联接的集合的键。 必须使用`Equals`运算符比较要联接的集合中的密钥。 您可以通过使用组合联接条件`And`运算符来标识多个密钥。 `key1` 在左侧和右侧的集合中必须是`Join`运算符。 `key2` 从集合中的右侧必须是`Join`运算符。  
   
  联接条件中使用的密钥可以包含多个集合中的项的表达式。 但是，每个键的表达式可以包含仅从其各自的集合的项。  
   
@@ -87,10 +87,10 @@ On key1 Equals key2 [ And key3 Equals key4 [... ]
   
  `explorer (2424), File Explorer, Priority = 8`  
   
-## <a name="see-also"></a>请参阅  
- [Visual Basic 中的 LINQ 简介](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)  
- [查询](../../../visual-basic/language-reference/queries/index.md)  
- [Select 子句](../../../visual-basic/language-reference/queries/select-clause.md)  
- [From 子句](../../../visual-basic/language-reference/queries/from-clause.md)  
- [Group Join 子句](../../../visual-basic/language-reference/queries/group-join-clause.md)  
- [Where 子句](../../../visual-basic/language-reference/queries/where-clause.md)
+## <a name="see-also"></a>请参阅
+- [Visual Basic 中的 LINQ 简介](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
+- [查询](../../../visual-basic/language-reference/queries/index.md)
+- [Select 子句](../../../visual-basic/language-reference/queries/select-clause.md)
+- [From 子句](../../../visual-basic/language-reference/queries/from-clause.md)
+- [Group Join 子句](../../../visual-basic/language-reference/queries/group-join-clause.md)
+- [Where 子句](../../../visual-basic/language-reference/queries/where-clause.md)
