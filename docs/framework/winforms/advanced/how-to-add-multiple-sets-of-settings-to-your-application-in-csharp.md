@@ -1,30 +1,30 @@
 ---
-title: 如何：向应用程序添加多个设置组 (C#)
+title: 如何：向应用程序中添加多组设置C#
 ms.date: 03/30/2017
 helpviewer_keywords:
 - application settings [Windows Forms], multiple sets
 - application settings [Windows Forms], C#
 ms.assetid: 45007ac6-cf07-4be7-bc38-3f0ef962faf9
-ms.openlocfilehash: 029dffc878c62613e291620a2bd86971f369d15a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5496d370890e019ae2b31835c95a9988f8d9bc18
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33520804"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54559406"
 ---
-# <a name="how-to-add-multiple-sets-of-settings-to-your-application-in-c"></a><span data-ttu-id="f8204-102">如何：向应用程序添加多个设置组 (C#)</span><span class="sxs-lookup"><span data-stu-id="f8204-102">How To: Add Multiple Sets of Settings To Your Application in C#</span></span> #
-<span data-ttu-id="f8204-103">在某些情况下，你可能想要在应用程序具有多个集的设置。</span><span class="sxs-lookup"><span data-stu-id="f8204-103">In some cases, you might want to have multiple sets of settings in an application.</span></span> <span data-ttu-id="f8204-104">例如，如果你正在开发的应用一组特定的设置需要经常更改，它可能是明智的做法是将它们分开所有导入到单个文件，以便该文件可以替换整个，使其他设置不受影响。</span><span class="sxs-lookup"><span data-stu-id="f8204-104">For example, if you are developing an application where a particular group of settings is expected to change frequently, it might be wise to separate them all into a single file so that the file can be replaced wholesale, leaving other settings unaffected.</span></span> <span data-ttu-id="f8204-105">Visual Studio 允许你将多组设置添加到你的项目。</span><span class="sxs-lookup"><span data-stu-id="f8204-105">Visual Studio allows you to add multiple sets of settings to your project.</span></span> <span data-ttu-id="f8204-106">可以通过 Properties.Settings 对象访问设置的其他集。</span><span class="sxs-lookup"><span data-stu-id="f8204-106">Additional sets of settings can be accessed via the Properties.Settings object.</span></span>  
+# <a name="how-to-add-multiple-sets-of-settings-to-your-application-in-c"></a><span data-ttu-id="3331d-102">如何：向应用程序中添加多组设置C#</span><span class="sxs-lookup"><span data-stu-id="3331d-102">How To: Add Multiple Sets of Settings To Your Application in C#</span></span> #
+<span data-ttu-id="3331d-103">在某些情况下，你可能想要的应用程序中有多组设置。</span><span class="sxs-lookup"><span data-stu-id="3331d-103">In some cases, you might want to have multiple sets of settings in an application.</span></span> <span data-ttu-id="3331d-104">例如，如果你正在开发的应用设置的特定组的地方频繁进行更改，可能会比较明智的做法其全都分成单个文件，以便可以成批，替换该文件保持不受影响的其他设置。</span><span class="sxs-lookup"><span data-stu-id="3331d-104">For example, if you are developing an application where a particular group of settings is expected to change frequently, it might be wise to separate them all into a single file so that the file can be replaced wholesale, leaving other settings unaffected.</span></span> <span data-ttu-id="3331d-105">Visual Studio，可将多组设置添加到你的项目。</span><span class="sxs-lookup"><span data-stu-id="3331d-105">Visual Studio allows you to add multiple sets of settings to your project.</span></span> <span data-ttu-id="3331d-106">可以通过 Properties.Settings 对象访问更多组设置。</span><span class="sxs-lookup"><span data-stu-id="3331d-106">Additional sets of settings can be accessed via the Properties.Settings object.</span></span>  
   
-### <a name="to-add-an-additional-set-of-setting-to-your-application"></a><span data-ttu-id="f8204-107">将一组额外的设置添加到你的应用程序</span><span class="sxs-lookup"><span data-stu-id="f8204-107">To Add an Additional Set of Setting to your Application</span></span>  
+### <a name="to-add-an-additional-set-of-setting-to-your-application"></a><span data-ttu-id="3331d-107">若要将一组额外的设置添加到你的应用程序</span><span class="sxs-lookup"><span data-stu-id="3331d-107">To Add an Additional Set of Setting to your Application</span></span>  
   
-1.  <span data-ttu-id="f8204-108">从“项目”菜单中选择“添加新项”。</span><span class="sxs-lookup"><span data-stu-id="f8204-108">From the **Project** menu, choose **Add New Item**.</span></span> <span data-ttu-id="f8204-109">此时将打开“添加新项”对话框。</span><span class="sxs-lookup"><span data-stu-id="f8204-109">The **Add New Item** dialog box opens.</span></span>  
+1.  <span data-ttu-id="3331d-108">从“项目”菜单中选择“添加新项”。</span><span class="sxs-lookup"><span data-stu-id="3331d-108">From the **Project** menu, choose **Add New Item**.</span></span> <span data-ttu-id="3331d-109">此时将打开“添加新项”对话框。</span><span class="sxs-lookup"><span data-stu-id="3331d-109">The **Add New Item** dialog box opens.</span></span>  
   
-2.  <span data-ttu-id="f8204-110">在**添加新项**对话框中，选择**设置文件**，键入，为文件的名称，然后单击**添加**将新的设置文件添加到你的解决方案。</span><span class="sxs-lookup"><span data-stu-id="f8204-110">In the **Add New Item** dialog box, select **Settings File**, type in a name for the file, and click **Add** to add a new settings file to your solution.</span></span>  
+2.  <span data-ttu-id="3331d-110">在中**添加新项**对话框中，选择**设置文件**，键入该文件的名称，然后单击**添加**将新的设置文件添加到你的解决方案。</span><span class="sxs-lookup"><span data-stu-id="3331d-110">In the **Add New Item** dialog box, select **Settings File**, type in a name for the file, and click **Add** to add a new settings file to your solution.</span></span>  
   
-3.  <span data-ttu-id="f8204-111">在**解决方案资源管理器**，拖动到新的设置文件**属性**文件夹。</span><span class="sxs-lookup"><span data-stu-id="f8204-111">In **Solution Explorer**, drag the new Settings file into the **Properties** folder.</span></span> <span data-ttu-id="f8204-112">这允许你设置可在代码中使用新设置。</span><span class="sxs-lookup"><span data-stu-id="f8204-112">This allows your new settings to be available in code.</span></span>  
+3.  <span data-ttu-id="3331d-111">在中**解决方案资源管理器**，将为新的设置文件拖放**属性**文件夹。</span><span class="sxs-lookup"><span data-stu-id="3331d-111">In **Solution Explorer**, drag the new Settings file into the **Properties** folder.</span></span> <span data-ttu-id="3331d-112">这允许你设置可在代码中使用新设置。</span><span class="sxs-lookup"><span data-stu-id="3331d-112">This allows your new settings to be available in code.</span></span>  
   
-4.  <span data-ttu-id="f8204-113">添加和使用此文件中的设置，就像任何其他设置文件。</span><span class="sxs-lookup"><span data-stu-id="f8204-113">Add and use settings in this file as you would any other settings file.</span></span> <span data-ttu-id="f8204-114">你可以访问此组通过 Properties.Settings 对象的设置。</span><span class="sxs-lookup"><span data-stu-id="f8204-114">You can access this group of settings via the Properties.Settings object.</span></span>  
+4.  <span data-ttu-id="3331d-113">添加和使用此文件中的设置，也可以是任何其他设置文件。</span><span class="sxs-lookup"><span data-stu-id="3331d-113">Add and use settings in this file as you would any other settings file.</span></span> <span data-ttu-id="3331d-114">您可以访问此组通过 Properties.Settings 对象的设置。</span><span class="sxs-lookup"><span data-stu-id="3331d-114">You can access this group of settings via the Properties.Settings object.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="f8204-115">请参阅</span><span class="sxs-lookup"><span data-stu-id="f8204-115">See Also</span></span>  
- [<span data-ttu-id="f8204-116">使用应用程序设置和用户设置</span><span class="sxs-lookup"><span data-stu-id="f8204-116">Using Application Settings and User Settings</span></span>](../../../../docs/framework/winforms/advanced/using-application-settings-and-user-settings.md)  
- [<span data-ttu-id="f8204-117">应用程序设置概述</span><span class="sxs-lookup"><span data-stu-id="f8204-117">Application Settings Overview</span></span>](../../../../docs/framework/winforms/advanced/application-settings-overview.md)
+## <a name="see-also"></a><span data-ttu-id="3331d-115">请参阅</span><span class="sxs-lookup"><span data-stu-id="3331d-115">See also</span></span>
+- [<span data-ttu-id="3331d-116">使用应用程序设置和用户设置</span><span class="sxs-lookup"><span data-stu-id="3331d-116">Using Application Settings and User Settings</span></span>](../../../../docs/framework/winforms/advanced/using-application-settings-and-user-settings.md)
+- [<span data-ttu-id="3331d-117">应用程序设置概述</span><span class="sxs-lookup"><span data-stu-id="3331d-117">Application Settings Overview</span></span>](../../../../docs/framework/winforms/advanced/application-settings-overview.md)
