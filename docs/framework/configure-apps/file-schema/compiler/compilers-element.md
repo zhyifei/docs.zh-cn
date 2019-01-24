@@ -11,18 +11,18 @@ helpviewer_keywords:
 ms.assetid: d40fba59-98f9-4783-ae0c-2ebea27ce77b
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: a73c3e8f554d2c78252ca763a620d05c5b494884
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: e51298e86c1b3167f822e060693d0a2ee4193b67
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50192923"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54723467"
 ---
 # <a name="ltcompilersgt-element"></a>&lt;编译器&gt;元素
 编译器配置元素的容器；包含零个或多个 [\<compiler>](../../../../../docs/framework/configure-apps/file-schema/compiler/compiler-element.md) 元素。  
   
  \<configuration>  
-\<system.codedom >  
+\<system.codedom>  
 \<编译器 > 元素  
   
 ## <a name="syntax"></a>语法  
@@ -79,9 +79,9 @@ ms.locfileid: "50192923"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>请参阅  
-- <xref:System.CodeDom.Compiler.CompilerInfo>  
-- <xref:System.CodeDom.Compiler.CodeDomProvider>  
-- [配置文件架构](../../../../../docs/framework/configure-apps/file-schema/index.md)  
-- [编译器和语言提供程序设置架构](../../../../../docs/framework/configure-apps/file-schema/compiler/index.md)  
+## <a name="see-also"></a>请参阅
+- <xref:System.CodeDom.Compiler.CompilerInfo>
+- <xref:System.CodeDom.Compiler.CodeDomProvider>
+- [配置文件架构](../../../../../docs/framework/configure-apps/file-schema/index.md)
+- [编译器和语言提供程序设置架构](../../../../../docs/framework/configure-apps/file-schema/compiler/index.md)
 - [\<compiler> Element](../../../../../docs/framework/configure-apps/file-schema/compiler/compiler-element.md)

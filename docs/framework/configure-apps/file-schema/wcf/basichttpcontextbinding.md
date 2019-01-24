@@ -2,18 +2,18 @@
 title: '&lt;basicHttpContextBinding&gt;'
 ms.date: 03/30/2017
 ms.assetid: 39b16b82-4ec6-4eff-8031-67e026870961
-ms.openlocfilehash: ed115a736b9dc98164537269cb4e49d66e46ad6c
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 1b21d7e9dcca886ce0f34c12407d2e3a0856113b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54147195"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54720461"
 ---
 # <a name="ltbasichttpcontextbindinggt"></a>&lt;basicHttpContextBinding&gt;
 指定一个绑定，该绑定为将通过启用 HTTP Cookie 作为交换机制来进行交换的 <xref:System.ServiceModel.BasicHttpBinding> 提供上下文。  
   
  \<system.ServiceModel>  
-\<绑定 >  
+\<bindings>  
 \<basicHttpContextBinding>  
   
 ## <a name="syntax"></a>语法  
@@ -91,18 +91,18 @@ ms.locfileid: "54147195"
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<绑定 >](../../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)|此元素包含标准绑定和自定义绑定的集合。|  
+|[\<bindings>](../../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)|此元素包含标准绑定和自定义绑定的集合。|  
   
 ## <a name="remarks"></a>备注  
  此绑定元素提供一个保护级别和一种交换机制，作为 `BasicHttpBinding` 的上下文的一部分。  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.ServiceModel.BasicHttpBinding>  
- <xref:System.ServiceModel.BasicHttpContextBinding>  
- <xref:System.ServiceModel.Configuration.BasicHttpContextBindingElement>  
- <xref:System.ServiceModel.Channels.ContextBindingElement>  
- [绑定](../../../../../docs/framework/wcf/bindings.md)  
- [配置系统提供的绑定](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [使用绑定配置服务和客户端](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)  
- [\<绑定 >](../../../../../docs/framework/misc/binding.md)  
- [\<basicHttpBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.ServiceModel.BasicHttpBinding>
+- <xref:System.ServiceModel.BasicHttpContextBinding>
+- <xref:System.ServiceModel.Configuration.BasicHttpContextBindingElement>
+- <xref:System.ServiceModel.Channels.ContextBindingElement>
+- [绑定](../../../../../docs/framework/wcf/bindings.md)
+- [配置系统提供的绑定](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)
+- [使用绑定配置服务和客户端](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
+- [\<binding>](../../../../../docs/framework/misc/binding.md)
+- [\<basicHttpBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md)

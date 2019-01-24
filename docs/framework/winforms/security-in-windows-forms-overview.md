@@ -8,12 +8,12 @@ helpviewer_keywords:
 - security [Windows Forms], about security
 - access control [Windows Forms], Windows Forms
 ms.assetid: 4810dc9f-ea23-4ce1-8ea1-657f0ff1d820
-ms.openlocfilehash: 36d38756f7df88ec04aca781525f0f6b0a48b768
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: a19e6d2ed39c21301b3409cdeb55a569f0d2eff4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48839126"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54703375"
 ---
 # <a name="security-in-windows-forms-overview"></a>Windows 窗体中的安全性概述
 在发布 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 之前，用户计算机上运行的所有代码都有相同的权利或权限来访问该计算机的用户所拥有的资源。 例如，如果允许用户访问文件系统，则会允许代码访问文件系统；如果允许用户访问数据库，则会允许代码访问数据库。 尽管这些权利或权限对用户显式安装在本地计算机上的可执行文件中的代码来说是可接受的，但对来自 Internet 或本地 Intranet 的恶意代码来说可能是不可接受的。 此代码没有权限时应不能访问用户的计算机资源。  
@@ -75,17 +75,17 @@ ms.locfileid: "48839126"
   
  选择哪种技术将取决于你的部署环境。 有关详细信息，请参阅[选择 ClickOnce 部署策略](/visualstudio/deployment/choosing-a-clickonce-deployment-strategy)。  
   
- 默认情况下[!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)]部署使用 Visual Studio 的应用程序或[!INCLUDE[dnprdnlong](../../../includes/dnprdnlong-md.md)]SDK 工具 （Mage.exe 和 MageUI.exe） 配置为具有完全信任的客户端计算机上运行。 如果你正在使用部分信任或仅使用某些其他权限部署应用程序，则必须更改此默认设置。 可以使用 Visual Studio 来执行此操作或[!INCLUDE[dnprdnlong](../../../includes/dnprdnlong-md.md)]SDK 工具 MageUI.exe 配置你的部署时。 有关如何使用 MageUI.exe 的详细信息，请参阅“演示：从命令行部署 ClickOnce 应用程序”。  另请参阅[如何：设置 ClickOnce 应用程序的自定义权限](https://msdn.microsoft.com/library/hafybdaa\(v=vs.110\))或[如何：设置 ClickOnce 应用程序的自定义权限](https://msdn.microsoft.com/library/hafybdaa\(v=vs.120\))。  
+ 默认情况下[!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)]部署使用 Visual Studio 的应用程序或[!INCLUDE[dnprdnlong](../../../includes/dnprdnlong-md.md)]SDK 工具 （Mage.exe 和 MageUI.exe） 配置为具有完全信任的客户端计算机上运行。 如果你正在使用部分信任或仅使用某些其他权限部署应用程序，则必须更改此默认设置。 可以使用 Visual Studio 来执行此操作或[!INCLUDE[dnprdnlong](../../../includes/dnprdnlong-md.md)]SDK 工具 MageUI.exe 配置你的部署时。 有关如何使用 MageUI.exe 的详细信息，请参阅演练：部署 ClickOnce 应用程序从命令行。  另请参阅[如何：设置 ClickOnce 应用程序的自定义权限](https://msdn.microsoft.com/library/hafybdaa\(v=vs.110\))或[如何：设置 ClickOnce 应用程序的自定义权限](https://msdn.microsoft.com/library/hafybdaa\(v=vs.120\))。  
   
  若要深入了解 [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] 的安全方面和权限提升，请参阅[保护 ClickOnce 应用程序](/visualstudio/deployment/securing-clickonce-applications)。 若要深入了解受信任的应用程序部署，请参阅[受信任的应用程序部署概述](/visualstudio/deployment/trusted-application-deployment-overview)。  
   
 ### <a name="testing-the-application"></a>测试应用程序  
- 如果已通过使用 Visual Studio 部署 Windows 窗体应用程序，可以启用在部分信任或受限的权限集从开发环境中进行调试。  另请参阅[如何：使用受限权限对 ClickOnce 应用程序进行调试](https://msdn.microsoft.com/library/593zkfdf\(v=vs.110\))或[如何：使用受限权限对 ClickOnce 应用程序进行调试](https://msdn.microsoft.com/library/593zkfdf\(v=vs.120\))。  
+ 如果已通过使用 Visual Studio 部署 Windows 窗体应用程序，可以启用在部分信任或受限的权限集从开发环境中进行调试。  另请参阅[如何：调试具有受限权限的 ClickOnce 应用程序](https://msdn.microsoft.com/library/593zkfdf\(v=vs.110\))或[如何：使用受限权限调试 ClickOnce 应用程序](https://msdn.microsoft.com/library/593zkfdf\(v=vs.120\))。  
   
-## <a name="see-also"></a>请参阅  
- [Windows 窗体安全](../../../docs/framework/winforms/windows-forms-security.md)  
- [代码访问安全性基础知识](../../../docs/framework/misc/code-access-security-basics.md)  
- [ClickOnce 安全和部署](/visualstudio/deployment/clickonce-security-and-deployment)  
- [受信任的应用程序部署概述](/visualstudio/deployment/trusted-application-deployment-overview)  
- [Mage.exe（清单生成和编辑工具）](../../../docs/framework/tools/mage-exe-manifest-generation-and-editing-tool.md)  
- [MageUI.exe（图形化客户端中的清单生成和编辑工具）](../../../docs/framework/tools/mageui-exe-manifest-generation-and-editing-tool-graphical-client.md)
+## <a name="see-also"></a>请参阅
+- [Windows 窗体安全](../../../docs/framework/winforms/windows-forms-security.md)
+- [代码访问安全性基础知识](../../../docs/framework/misc/code-access-security-basics.md)
+- [ClickOnce 安全和部署](/visualstudio/deployment/clickonce-security-and-deployment)
+- [受信任的应用程序部署概述](/visualstudio/deployment/trusted-application-deployment-overview)
+- [Mage.exe（清单生成和编辑工具）](../../../docs/framework/tools/mage-exe-manifest-generation-and-editing-tool.md)
+- [MageUI.exe（图形化客户端中的清单生成和编辑工具）](../../../docs/framework/tools/mageui-exe-manifest-generation-and-editing-tool-graphical-client.md)

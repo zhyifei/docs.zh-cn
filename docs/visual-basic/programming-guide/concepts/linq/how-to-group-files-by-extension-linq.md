@@ -1,15 +1,15 @@
 ---
-title: 如何： 文件分组依据扩展 (LINQ) (Visual Basic)
+title: 如何：文件分组依据扩展 (LINQ) (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 904dc6d7-7162-4655-a7f4-5785d669bc5a
-ms.openlocfilehash: 61b4ebee03511df8bb06b792ecfd700959d0696b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c52debf2e40c6ed6da2d7f3c7dbdb16e1f7396f5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33640997"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54728221"
 ---
-# <a name="how-to-group-files-by-extension-linq-visual-basic"></a>如何： 文件分组依据扩展 (LINQ) (Visual Basic)
+# <a name="how-to-group-files-by-extension-linq-visual-basic"></a>如何：文件分组依据扩展 (LINQ) (Visual Basic)
 本示例演示如何使用 LINQ 来执行高级分组和对文件或文件夹列表执行排序操作。 它还演示如何使用 <xref:System.Linq.Enumerable.Skip%2A> 和 <xref:System.Linq.Enumerable.Take%2A> 方法在控制台窗口中对输出进行分页。  
   
 ## <a name="example"></a>示例  
@@ -94,8 +94,8 @@ End Module
  此程序的输出可能很长，具体取决于本地文件系统的详细信息和 `startFolder` 的设置。 为了能够查看所有结果，此示例演示如何对结果进行分页。 相同的方法适用于 Windows 和 Web 应用程序。 请注意，由于代码对组中的项进行分页，因此需要使用 `For Each` 循环。 此外，还有一些其他逻辑用于计算列表中的当前位置，以及使用户能够停止分页并退出程序。 在此特定情况下，根据原始查询的缓存结果运行分页查询。 在其他上下文中，如 LINQ to SQL，则不需要此类缓存。  
   
 ## <a name="compiling-the-code"></a>编译代码  
- 创建面向.NET Framework 版本 3.5 或更高版本使用对 System.Core.dll 的引用的项目和`Imports`System.Linq 命名空间的语句。  
+ 创建面向.NET Framework 版本 3.5 或更高版本包含对 System.Core.dll 的引用的项目和一个`Imports`System.Linq 命名空间的语句。  
   
-## <a name="see-also"></a>请参阅  
- [LINQ to Objects (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)  
- [LINQ 和文件目录 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)
+## <a name="see-also"></a>请参阅
+- [LINQ to Objects (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)
+- [LINQ 和文件目录 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)

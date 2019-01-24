@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4ee3c3302d77bcc7b807c01ccb5bab172153ddda
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: ad192f753cd1977c9ca68e147d23375ce092b66f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33459946"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54708228"
 ---
 # <a name="icorprofilercallback5conditionalweaktableelementreferences-method"></a>ICorProfilerCallback5::ConditionalWeakTableElementReferences 方法
 标识这些根通过直接成员字段引用和 `ConditionalWeakTable` 依赖关系引用的对象的传递闭包。  
@@ -41,7 +41,7 @@ HRESULT ConditionalWeakTableElementReferences(     [in]                     ULON
  [in] 一个包含对象 ID 的数组，其中每个对象 ID 都包含相关句柄对中主要元素的 `ObjectID`。  
   
  `valueRefIds`  
- [in] 一个包含对象 ID 的数组，其中每个对象 ID 都包含相关句柄对中次要元素的 `ObjectID`。 (`keyRefIds[i]`保留`valueRefIds[i]`处于活动状态。)  
+ [in] 一个包含对象 ID 的数组，其中每个对象 ID 都包含相关句柄对中次要元素的 `ObjectID`。 (`keyRefIds[i]`保留`valueRefIds[i]`保持活动状态。)  
   
  `rootIds`  
  [in] 一个包含 `GCHandleID` 值的数组，这些值指向包含有关垃圾回收根的附加信息的整数。  
@@ -49,7 +49,7 @@ HRESULT ConditionalWeakTableElementReferences(     [in]                     ULON
  在该回调本身中，由 `ObjectID` 方法返回的任何 `ConditionalWeakTableElementReferences` 值都无效，因为垃圾回收器可能正处于将对象从旧位置移到新位置的过程中。 因此，探查器不应在 `ConditionalWeakTableElementReferences` 调用期间尝试检查对象。 在 `GarbageCollectionFinished` 时，已经将所有对象都移动到其新位置，并且检查可能已完成。  
   
 ## <a name="example"></a>示例  
- 下面的代码示例演示如何实现[ICorProfilerCallback5](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback5-interface.md)以及使用此方法。  
+ 下面的代码示例演示如何实现[ICorProfilerCallback5](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback5-interface.md) ，并使用此方法。  
   
 ```  
 HRESULT Callback5Impl::ConditionalWeakTableElementReferences(  
@@ -73,14 +73,14 @@ HRESULT Callback5Impl::ConditionalWeakTableElementReferences(
 ```  
   
 ## <a name="remarks"></a>备注  
- 探查器以[!INCLUDE[net_v45](../../../../includes/net-v45-md.md)]或更高版本实现[ICorProfilerCallback5](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback5-interface.md)接口并记录由指定的依赖关系`ConditionalWeakTableElementReferences`方法。 `ICorProfilerCallback5` 提供所表示的活动对象之间的依赖项的完整集`ConditionalWeakTable`条目。 这些依赖关系和成员字段引用指定[icorprofilercallback:: Objectreferences](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-objectreferences-method.md)方法启用托管的探查器以生成活动对象的完整对象图。  
+ 探查器[!INCLUDE[net_v45](../../../../includes/net-v45-md.md)]或更高版本实现[ICorProfilerCallback5](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback5-interface.md)接口并记录由指定的依赖项`ConditionalWeakTableElementReferences`方法。 `ICorProfilerCallback5` 提供所表示的活动对象之间的依赖关系的一组完整`ConditionalWeakTable`条目。 这些依赖关系和成员字段所指定的引用[icorprofilercallback:: Objectreferences](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-objectreferences-method.md)方法启用托管的探查器生成的活动对象的完整对象图。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **头文件：** CorProf.idl、CorProf.h  
+ **标头：** CorProf.idl, CorProf.h  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>请参阅  
- [ICorProfilerCallback5 接口](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback5-interface.md)
+## <a name="see-also"></a>请参阅
+- [ICorProfilerCallback5 接口](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback5-interface.md)

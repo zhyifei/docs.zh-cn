@@ -8,16 +8,16 @@ helpviewer_keywords:
 ms.assetid: 016323cb-f800-4938-b77b-2eb25d646090
 author: Xansky
 ms.author: mhopkins
-ms.openlocfilehash: f9c00619cf39fa16164c8a3a1fef671744613079
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 4cd467e06672b2fad6b977bb12dc4731b3a09ace
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47193824"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54729898"
 ---
 # <a name="ui-automation-support-for-the-menu-control-type"></a>UI 自动化对 Menu 控件类型的支持
 > [!NOTE]
->  本文档适用于想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空间中定义的托管 <xref:System.Windows.Automation> 类的 .NET Framework 开发人员。 有关最新信息[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]，请参阅[Windows 自动化 API: UI 自动化](https://go.microsoft.com/fwlink/?LinkID=156746)。  
+>  本文档适用于想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空间中定义的托管 <xref:System.Windows.Automation> 类的 .NET Framework 开发人员。 有关最新信息[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]，请参阅[Windows 自动化 API:UI 自动化](https://go.microsoft.com/fwlink/?LinkID=156746)。  
   
  本主题介绍 [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] 对 Menu 控件类型的支持。 本主题描述控件的 [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] 树结构并为特定的控件方案提供属性和控件模式。  
   
@@ -67,8 +67,8 @@ ms.locfileid: "47193824"
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationFocusChangedEvent>|必需|无|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.StructureChangedEvent>|必需|无|  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Windows.Automation.ControlType.Menu>  
- [UI 自动化控件模式概述](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)  
- [UI 自动化控件类型概述](../../../docs/framework/ui-automation/ui-automation-control-types-overview.md)  
- [UI 自动化概述](../../../docs/framework/ui-automation/ui-automation-overview.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.Windows.Automation.ControlType.Menu>
+- [UI 自动化控件模式概述](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)
+- [UI 自动化控件类型概述](../../../docs/framework/ui-automation/ui-automation-control-types-overview.md)
+- [UI 自动化概述](../../../docs/framework/ui-automation/ui-automation-overview.md)

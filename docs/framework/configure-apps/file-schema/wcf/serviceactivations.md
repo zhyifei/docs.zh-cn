@@ -2,19 +2,19 @@
 title: '&lt;serviceActivations&gt;'
 ms.date: 03/30/2017
 ms.assetid: 97e665b6-1c51-410b-928a-9bb42c954ddb
-ms.openlocfilehash: 82422716482eafe996534e3bf1a94b4c7a604a6d
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 5da05c7b6a9685b9e34b3181ce8e0bd31ccd052b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54145115"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54704951"
 ---
 # <a name="ltserviceactivationsgt"></a>&lt;serviceActivations&gt;
 一个配置元素，您可以添加用于定义虚拟服务激活设置映射到 Windows Communication Foundation (WCF) 服务类型。 使用此配置元素可以在不使用 .svc 文件的情况下激活承载在 WAS/IIS 中的服务。  
   
  \<system.ServiceModel>  
-\<serviceHostingEnvironment >  
-\<serviceActivations >  
+\<serviceHostingEnvironment>  
+\<serviceActivations>  
   
 ## <a name="syntax"></a>语法  
   
@@ -43,7 +43,7 @@ ms.locfileid: "54145115"
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<serviceHostingEnvironment >](../../../../../docs/framework/configure-apps/file-schema/wcf/servicehostingenvironment.md)|定义服务承载环境要为特定传输实例化的类型。|  
+|[\<serviceHostingEnvironment>](../../../../../docs/framework/configure-apps/file-schema/wcf/servicehostingenvironment.md)|定义服务承载环境要为特定传输实例化的类型。|  
   
 ## <a name="remarks"></a>备注  
  下面的示例演示如何在 web.config 文件中配置激活设置。  
@@ -66,7 +66,7 @@ ms.locfileid: "54145115"
   
  基于配置的激活支持通过 http 协议和非 http 协议进行激活。 它要求在 relatativeAddress 中使用扩展名，即 .svc、.xoml 或 .xamlx。 您可以将自己的扩展名映射到已知的 buildProviders，然后就可以通过任意扩展名激活服务。 如果发生冲突，`<serviceActivations>` 节将重写 .svc 注册。  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.ServiceModel.Configuration.ServiceActivationElementCollection>  
- <xref:System.ServiceModel.Configuration.ServiceHostingEnvironmentSection>  
- <xref:System.ServiceModel.ServiceHostingEnvironment>
+## <a name="see-also"></a>请参阅
+- <xref:System.ServiceModel.Configuration.ServiceActivationElementCollection>
+- <xref:System.ServiceModel.Configuration.ServiceHostingEnvironmentSection>
+- <xref:System.ServiceModel.ServiceHostingEnvironment>

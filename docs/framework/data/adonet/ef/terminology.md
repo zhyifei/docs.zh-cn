@@ -2,12 +2,12 @@
 title: 实体框架术语
 ms.date: 03/30/2017
 ms.assetid: fa2a1bd1-6118-487b-8673-eebc66b92945
-ms.openlocfilehash: 4c0497f3c8069dc7d77bc742b1a7848716a5f4d2
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 3b46a695f5984ec23f4a5ef28bd871d6d651c6ea
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43857370"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54684560"
 ---
 # <a name="entity-framework-terminology"></a>实体框架术语
 本主题定义中经常引用的术语[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]文档。 如果有其他可用信息，则会提供指向相关主题的链接。  
@@ -22,7 +22,7 @@ ms.locfileid: "43857370"
 |ComplexType|数据类型的规范，表示没有键属性的实体类型的非标量属性。<br /><br /> 有关详细信息，请参阅[ComplexType 元素 (CSDL)](https://msdn.microsoft.com/library/f1c2f311-9889-4b87-abd8-a94f322052e3)并[复杂类型](../../../../../docs/framework/data/adonet/complex-type.md)。|  
 |Conceptual Model — 概念模型|[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]的应用程序域中实体类型、复杂类型、关联、实体容器、实体集和关联集的抽象规范。 概念模型在 .csdl 文件中采用 CSDL 定义。<br /><br /> 有关详细信息，请参阅[建模和映射](../../../../../docs/framework/data/adonet/ef/modeling-and-mapping.md)。|  
 |.csdl 文件|一种 XML 文件，该文件包含以 CSDL 表示的概念模型。|  
-|概念性架构定义语言 (CSDL)|一种基于 XML 的语言，可用于定义概念模型的实体类型、关联、实体容器、实体集和关联集。<br /><br /> 有关详细信息，请参阅[CSDL 规范](../../../../../docs/framework/data/adonet/ef/language-reference/csdl-specification.md)。|  
+|概念性架构定义语言 (CSDL)|一种基于 XML 的语言，可用于定义概念模型的实体类型、关联、实体容器、实体集和关联集。<br /><br /> 有关详细信息，请参阅 [CSDL Specification](../../../../../docs/framework/data/adonet/ef/language-reference/csdl-specification.md)。|  
 |Container — 容器|实体集和关联集的逻辑分组。<br /><br /> 有关详细信息，请参阅[EntityContainer 元素 (CSDL)](https://msdn.microsoft.com/library/06d03ecb-3b7a-4e7f-95d5-b95307d47a27)并[实体容器](../../../../../docs/framework/data/adonet/entity-container.md)。|  
 |并发|允许多个用户同时访问和更改共享数据的进程。 默认情况下，[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]实现开放式并发模型。|  
 |方向|指某些关联的非对称性。 方向是通过架构中的 `FromRole` 或 `ToRole` 元素的 `NavigationProperty` 和 `ReferentialConstraint` 属性指定的。<br /><br /> 有关详细信息，请参阅[NavigationProperty 元素 (CSDL)](https://msdn.microsoft.com/library/5829a238-a50e-4c81-901d-7b54fc00f27e)并[导航属性](../../../../../docs/framework/data/adonet/navigation-property.md)。|  
@@ -50,7 +50,7 @@ ms.locfileid: "43857370"
 |映射规范语言 (MSL)|一种基于 XML 的语言，可用于将概念模型中定义的项映射到存储模型中的项。<br /><br /> 有关详细信息，请参阅[MSL 规范](../../../../../docs/framework/data/adonet/ef/language-reference/msl-specification.md)。|  
 |Modification Functions — 修改函数|用于插入、更新和删除数据源中的数据的存储过程。 这类函数可用来替代[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]生成的命令。 修改函数是由存储模型中的 `Function` 元素定义的。 [ModificationFunctionMapping](https://msdn.microsoft.com/library/b44b5b13-9937-448b-ba36-7a0cfefea782)元素映射这些修改函数来插入、 更新和删除对概念模型中定义的实体执行的操作。|  
 |重数|关系每一方可以存在的实体数量，由关联进行定义。 也称为基数。<br /><br /> 有关详细信息，请参阅[最终元素 (CSDL)](https://msdn.microsoft.com/library/04f3c141-95bc-424b-989b-1c071b449e7c)并[关联端](../../../../../docs/framework/data/adonet/association-end.md)。|  
-|Multiple Entity Sets Per Type — 每种类型多个实体集|在多个实体集中定义一个实体类型的功能。<br /><br /> 有关详细信息，请参阅[EntitySet 元素 (CSDL)](https://msdn.microsoft.com/library/ec56db77-718d-4c0e-adc9-f1d33c896287)并[如何： 定义具有每种类型的多个实体集的模型](https://msdn.microsoft.com/library/61aa4fca-5ac0-4f47-9bc8-46e8c2965ef7)。|  
+|Multiple Entity Sets Per Type — 每种类型多个实体集|在多个实体集中定义一个实体类型的功能。<br /><br /> 有关详细信息，请参阅[EntitySet 元素 (CSDL)](https://msdn.microsoft.com/library/ec56db77-718d-4c0e-adc9-f1d33c896287)和[如何：定义具有每种类型的多个实体集的模型](https://msdn.microsoft.com/library/61aa4fca-5ac0-4f47-9bc8-46e8c2965ef7)。|  
 |Navigation Property — 导航属性|实体类型的属性，表示与其他实体类型的关系，由关联定义。 导航属性用于根据关联另一端的重数返回相关对象，如 <xref:System.Data.Objects.DataClasses.EntityCollection%601> 或 <xref:System.Data.Objects.DataClasses.EntityReference%601>。<br /><br /> 有关详细信息，请参阅[NavigationProperty 元素 (CSDL)](https://msdn.microsoft.com/library/5829a238-a50e-4c81-901d-7b54fc00f27e)并[导航属性](../../../../../docs/framework/data/adonet/navigation-property.md)。|  
 |Query Path — 查询路径|路径的字符串表示形式，用于指定执行对象查询时要返回的相关对象。 查询路径是通过调用 <xref:System.Data.Objects.ObjectQuery%601.Include%2A> 的 <xref:System.Data.Objects.ObjectQuery%601> 方法定义的。<br /><br /> 有关详细信息，请参阅[加载相关对象](https://msdn.microsoft.com/library/452347d2-7b3b-44cd-9001-231299a28cb1)。|  
 |对象上下文|表示概念模型中定义的实体容器。 它包含与基础数据源的连接，并提供更改跟踪和标识解析等服务。 对象上下文由 <xref:System.Data.Objects.ObjectContext> 或 `DbContext` 类的实例表示。<br /><br /> `DbContext` 是的一部分[实体框架 5.0](https://go.microsoft.com/fwlink/?LinkId=234900)。 Entity Framework 5.0 不是 .NET Framework 的一部分，但基于 .NET Framework 4.5 构建。 实体框架 5.0 还可用作[实体框架](https://go.microsoft.com/fwlink/?LinkID=215714)[NuGet](https://go.microsoft.com/fwlink/?LinkId=232488)包。 有关详细信息，请参阅[实体框架发行和版本控制](https://go.microsoft.com/fwlink/?LinkId=234899)。|  
@@ -67,16 +67,16 @@ ms.locfileid: "43857370"
 |Role — 角色|为关联的每个 `End` 提供的名称，用于明确关系的语义。<br /><br /> 有关详细信息，请参阅[最终元素 (CSDL)](https://msdn.microsoft.com/library/04f3c141-95bc-424b-989b-1c071b449e7c)并[关联端](../../../../../docs/framework/data/adonet/association-end.md)。|  
 |标量属性|实体的属性，它映射到存储模型中的单个字段。|  
 |自跟踪实体|从文本模板转换工具包 (T4) 中生成的一种实体，该实体可以将更改记录到标量属性、复杂属性以及导航属性中。|  
-|Simple Type — 简单类型|一种基元类型，用于定义概念模型中的属性。<br /><br /> 有关详细信息，请参阅[概念模型类型 (CSDL)](https://msdn.microsoft.com/library/987b995f-e429-4569-9559-b4146744def4)并[实体数据模型： 基元数据类型](../../../../../docs/framework/data/adonet/entity-data-model-primitive-data-types.md)。|  
-|Split Type — 拆分实体|一种实体类型，它映射到存储模型中的两个不同类型。<br /><br /> 有关详细信息，请参阅[如何： 定义模型的单个实体映射到两个表](https://msdn.microsoft.com/library/01762517-e4ab-439d-99e6-564ab7d6f3ed)。|  
+|Simple Type — 简单类型|一种基元类型，用于定义概念模型中的属性。<br /><br /> 有关详细信息，请参阅[概念模型类型 (CSDL)](https://msdn.microsoft.com/library/987b995f-e429-4569-9559-b4146744def4)和[实体数据模型：基元数据类型](../../../../../docs/framework/data/adonet/entity-data-model-primitive-data-types.md)。|  
+|Split Type — 拆分实体|一种实体类型，它映射到存储模型中的两个不同类型。<br /><br /> 有关详细信息，请参阅[如何：定义具有单个实体映射到两个表的模型](https://msdn.microsoft.com/library/01762517-e4ab-439d-99e6-564ab7d6f3ed)。|  
 |存储模型|受支持的数据源（例如关系数据库）的数据逻辑模型定义。 存储模型在 .ssdl 文件中采用 SSDL 定义。<br /><br /> 有关详细信息，请参阅[建模和映射](../../../../../docs/framework/data/adonet/ef/modeling-and-mapping.md)并[SSDL 规范](../../../../../docs/framework/data/adonet/ef/language-reference/ssdl-specification.md)。|  
 |.ssdl 文件|一种 XML 文件，该文件包含以 SSDL 表示的存储模型。|  
 |存储架构定义语言 (SSDL)|一种基于 XML 的语言，用于定义存储模型（常常对应于数据库架构）的实体类型、关联、实体容器、实体集和关联集。<br /><br /> 有关详细信息，请参阅[SSDL 规范](../../../../../docs/framework/data/adonet/ef/language-reference/ssdl-specification.md)。|  
 |每个层次结构一个表|在数据库中对类型层次结构建模的方法，此方法将层次结构中的所有类型的特性包含在一个表中。|  
 |每个类型一个表|在数据库中对类型层次结构建模的方法，此方法使用具有一对一关系的多个表来对各种类型建模。|  
   
-## <a name="see-also"></a>请参阅  
- [ADO.NET 实体框架](../../../../../docs/framework/data/adonet/ef/index.md)  
- [实体框架概述](../../../../../docs/framework/data/adonet/ef/overview.md)  
- [入门](../../../../../docs/framework/data/adonet/ef/getting-started.md)  
- [实体框架资源](../../../../../docs/framework/data/adonet/ef/resources.md)
+## <a name="see-also"></a>请参阅
+- [ADO.NET 实体框架](../../../../../docs/framework/data/adonet/ef/index.md)
+- [实体框架概述](../../../../../docs/framework/data/adonet/ef/overview.md)
+- [入门](../../../../../docs/framework/data/adonet/ef/getting-started.md)
+- [实体框架资源](../../../../../docs/framework/data/adonet/ef/resources.md)

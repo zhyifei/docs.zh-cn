@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - drag-and-drop [WPF], how-to topics
 ms.assetid: 559c0804-c62a-4640-b6b9-cbd2aa9fb99c
-ms.openlocfilehash: 72dae52c6d6b570831aefb54ca2843a92c5ad35a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 48f846329d8463f9519a2a7654f9a42f6bca5384
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33542869"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54721856"
 ---
 # <a name="drag-and-drop-how-to-topics"></a>拖放帮助主题
 下面的示例演示如何完成常见任务使用[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]拖放框架。  
@@ -24,5 +24,5 @@ ms.locfileid: "33542869"
  [以特定数据格式检索数据](../../../../docs/framework/wpf/advanced/how-to-retrieve-data-in-a-particular-data-format.md)  
  [在数据对象中存储多种数据格式](../../../../docs/framework/wpf/advanced/how-to-store-multiple-data-formats-in-a-data-object.md)  
   
-## <a name="see-also"></a>请参阅  
- [拖放概述](../../../../docs/framework/wpf/advanced/drag-and-drop-overview.md)
+## <a name="see-also"></a>请参阅
+- [拖放概述](../../../../docs/framework/wpf/advanced/drag-and-drop-overview.md)

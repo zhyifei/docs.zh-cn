@@ -2,20 +2,20 @@
 title: '&lt;netMsmqBinding&gt; 的 &lt;message&gt;'
 ms.date: 03/30/2017
 ms.assetid: 6ebf0240-d7be-4493-b0fe-f00fd5989d77
-ms.openlocfilehash: 06346ba50b68f43cb2c3f9c92a37a432339126d1
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: b636a22fe7c6bcfae5b8f81c1566ea39c9f8ced5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54151015"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54683737"
 ---
 # <a name="ltmessagegt-of-ltnetmsmqbindinggt"></a>&lt;netMsmqBinding&gt; 的 &lt;message&gt;
 在此 `netMsmqBinding` 绑定上定义 SOAP 消息安全设置。  
   
  \<system.ServiceModel>  
-\<绑定 >  
+\<bindings>  
 \<netMsmqBinding>  
-\<绑定 >  
+\<binding>  
 \<安全 >  
 \<message>  
   
@@ -51,14 +51,14 @@ ms.locfileid: "54151015"
 |-------------|-----------------|  
 |[\<security>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-netmsmqbinding.md)|定义绑定的安全设置。|  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.ServiceModel.Configuration.MessageSecurityOverMsmqElement>  
- <xref:System.ServiceModel.Configuration.NetMsmqSecurityElement.Message%2A>  
- <xref:System.ServiceModel.NetMsmqSecurity.Message%2A>  
- <xref:System.ServiceModel.MessageSecurityOverMsmq>  
- [WCF 中的队列](../../../../../docs/framework/wcf/feature-details/queues-in-wcf.md)  
- [保护服务和客户端的安全](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
- [绑定](../../../../../docs/framework/wcf/bindings.md)  
- [配置系统提供的绑定](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [使用绑定配置服务和客户端](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)  
- [\<绑定 >](../../../../../docs/framework/misc/binding.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.ServiceModel.Configuration.MessageSecurityOverMsmqElement>
+- <xref:System.ServiceModel.Configuration.NetMsmqSecurityElement.Message%2A>
+- <xref:System.ServiceModel.NetMsmqSecurity.Message%2A>
+- <xref:System.ServiceModel.MessageSecurityOverMsmq>
+- [WCF 中的队列](../../../../../docs/framework/wcf/feature-details/queues-in-wcf.md)
+- [保护服务和客户端的安全](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+- [绑定](../../../../../docs/framework/wcf/bindings.md)
+- [配置系统提供的绑定](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)
+- [使用绑定配置服务和客户端](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
+- [\<binding>](../../../../../docs/framework/misc/binding.md)

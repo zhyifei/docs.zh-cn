@@ -8,16 +8,16 @@ helpviewer_keywords:
 ms.assetid: d2e48891-2dbe-409e-8655-2f753908e29b
 author: Xansky
 ms.author: mhopkins
-ms.openlocfilehash: 2803f297225319a5512c7e24cedd9440d44c1f7d
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 8ded3804950867288408fa77d0ff6dede9ee006e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47236393"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54718827"
 ---
 # <a name="ui-automation-support-for-the-header-control-type"></a>UI 自动化对 Header 控件类型的支持
 > [!NOTE]
->  本文档适用于想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空间中定义的托管 <xref:System.Windows.Automation> 类的 .NET Framework 开发人员。 有关最新信息[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]，请参阅[Windows 自动化 API: UI 自动化](https://go.microsoft.com/fwlink/?LinkID=156746)。  
+>  本文档适用于想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空间中定义的托管 <xref:System.Windows.Automation> 类的 .NET Framework 开发人员。 有关最新信息[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]，请参阅[Windows 自动化 API:UI 自动化](https://go.microsoft.com/fwlink/?LinkID=156746)。  
   
  本主题提供有关针对标头控件类型的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 支持的信息。 在 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]中，控件类型是一组条件，控件必须满足这些条件才能使用 <xref:System.Windows.Automation.AutomationElement.ControlTypeProperty> 属性。 这些条件包括针对 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 树结构、 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 属性值和控件模式的特定准则。  
   
@@ -75,7 +75,7 @@ ms.locfileid: "47236393"
 |<xref:System.Windows.Automation.AutomationElement.AutomationFocusChangedEvent>|必需|无|  
 |<xref:System.Windows.Automation.AutomationElement.StructureChangedEvent>|必需|无|  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Windows.Automation.ControlType.Header>  
- [UI 自动化控件类型概述](../../../docs/framework/ui-automation/ui-automation-control-types-overview.md)  
- [UI 自动化概述](../../../docs/framework/ui-automation/ui-automation-overview.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.Windows.Automation.ControlType.Header>
+- [UI 自动化控件类型概述](../../../docs/framework/ui-automation/ui-automation-control-types-overview.md)
+- [UI 自动化概述](../../../docs/framework/ui-automation/ui-automation-overview.md)

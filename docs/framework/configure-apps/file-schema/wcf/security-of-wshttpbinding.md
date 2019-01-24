@@ -2,20 +2,20 @@
 title: '&lt;wsHttpBinding&gt; 的 &lt;security&gt;'
 ms.date: 03/30/2017
 ms.assetid: 8658b162-2ddf-4162-a869-aa517a42288a
-ms.openlocfilehash: 2260a64b53f2ff2ace11f78c392ffc0a69c187bd
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: dd3ff1b1b00be376abc5f8d3c44cb0aabc49a230
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54145622"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54688813"
 ---
 # <a name="ltsecuritygt-of-ltwshttpbindinggt"></a>&lt;wsHttpBinding&gt; 的 &lt;security&gt;
 表示的安全功能[ \<wsHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)。  
   
  \<system.ServiceModel>  
-\<绑定 >  
+\<bindings>  
 \<wsHttpBinding>  
-\<绑定 >  
+\<binding>  
 \<安全 >  
   
 ## <a name="syntax"></a>语法  
@@ -69,13 +69,13 @@ ms.locfileid: "54145622"
 ## <a name="remarks"></a>备注  
  WSHttpBinding 类专用于与实现 WS-* 规范的服务进行互操作。 此绑定的传输安全为 HTTP 上的安全套接字层 (SSL)，即 HTTPS。  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.ServiceModel.WSHttpSecurity>  
- <xref:System.ServiceModel.WSHttpBinding.Security%2A>  
- <xref:System.ServiceModel.Configuration.WSHttpBindingElement.Security%2A>  
- <xref:System.ServiceModel.Configuration.WSHttpSecurityElement>  
- [保护服务和客户端的安全](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
- [绑定](../../../../../docs/framework/wcf/bindings.md)  
- [配置系统提供的绑定](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [使用绑定配置服务和客户端](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)  
- [\<绑定 >](../../../../../docs/framework/misc/binding.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.ServiceModel.WSHttpSecurity>
+- <xref:System.ServiceModel.WSHttpBinding.Security%2A>
+- <xref:System.ServiceModel.Configuration.WSHttpBindingElement.Security%2A>
+- <xref:System.ServiceModel.Configuration.WSHttpSecurityElement>
+- [保护服务和客户端的安全](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+- [绑定](../../../../../docs/framework/wcf/bindings.md)
+- [配置系统提供的绑定](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)
+- [使用绑定配置服务和客户端](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
+- [\<binding>](../../../../../docs/framework/misc/binding.md)

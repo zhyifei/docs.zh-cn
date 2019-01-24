@@ -10,12 +10,12 @@ helpviewer_keywords:
 - toolbars [Windows Forms], walkthroughs
 - ToolStrip control [Windows Forms], creating professionally styled controls
 ms.assetid: b52339ae-f1d3-494e-996e-eb455614098a
-ms.openlocfilehash: 6435f33489be1355313e43a046b0e3169e1eaea3
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 36f34fad49ed76293a83d3c018eea48fcdb2944a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43861968"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54714888"
 ---
 # <a name="walkthrough-creating-a-professionally-styled-toolstrip-control"></a>演练：创建具有专业样式的 ToolStrip 控件
 可以为应用程序的<xref:System.Windows.Forms.ToolStrip>控制专业的外观和行为，通过编写自己的类派生自<xref:System.Windows.Forms.ToolStripProfessionalRenderer>类型。  
@@ -30,7 +30,7 @@ ms.locfileid: "43861968"
   
  完成后，必须具有专业外观的 Microsoft Office® XP 控件的可重用的自定义客户端控件。  
   
- 若要将代码复制本主题中的一个列表，请参阅[如何： 创建具有专业样式的 ToolStrip 控件](../../../../docs/framework/winforms/controls/how-to-create-a-professionally-styled-toolstrip-control.md)。  
+ 若要将代码复制本主题中的一个列表，请参阅[如何：创建具有专业样式的 ToolStrip 控件](../../../../docs/framework/winforms/controls/how-to-create-a-professionally-styled-toolstrip-control.md)。  
   
 > [!NOTE]
 >  显示的对话框和菜单命令可能会与“帮助”中的描述不同，具体取决于你现用的设置或版本。 若要更改设置，请在 **“工具”** 菜单上选择 **“导入和导出设置”** 。 有关详细信息，请参阅[个性化设置 Visual Studio IDE](/visualstudio/ide/personalizing-the-visual-studio-ide)。  
@@ -49,7 +49,7 @@ ms.locfileid: "43861968"
   
 2.  在中**解决方案资源管理器**，通过删除源文件，具体取决于你选择的语言中名为"UserControl1.cs"或"UserControl1.vb"来删除项目的默认控件。  
   
-     有关详细信息，请参阅[NIB： 如何： 删除、 删除和排除项](https://msdn.microsoft.com/library/6dffdc86-29c8-4eff-bcd8-e3a0dd9e9a73)。  
+     有关详细信息，请参阅[NIB： 如何：移除、 删除和排除项](https://msdn.microsoft.com/library/6dffdc86-29c8-4eff-bcd8-e3a0dd9e9a73)。  
   
 3.  添加一个新<xref:System.Windows.Forms.UserControl>项**StackViewLibrary**项目。 新的源文件基名称指定为`StackView`。  
   
@@ -102,7 +102,7 @@ ms.locfileid: "43861968"
   
 1.  在 Windows 窗体设计器中，选择`StackView`控件。  
   
-2.  在中**属性**窗口中，单击**事件**。  
+2.  在“属性”窗口中，单击“事件”。  
   
 3.  双击要生成的负载事件`StackView_Load`事件处理程序。  
   
@@ -113,7 +113,7 @@ ms.locfileid: "43861968"
   
 5.  在 Windows 窗体设计器中，选择`mailStackButton`控件。  
   
-6.  在中**属性**窗口中，单击**事件**。  
+6.  在“属性”窗口中，单击“事件”。  
   
 7.  双击 Click 事件。  
   
@@ -121,7 +121,7 @@ ms.locfileid: "43861968"
   
 8.  重命名`mailStackButton_Click`事件处理程序`stackButton_Click`。  
   
-     有关详细信息，请参阅[如何： 重命名标识符 (Visual Basic)](https://msdn.microsoft.com/library/e5a5edf8-3dba-4119-81f4-fc2aba180e0c)。  
+     有关详细信息，请参阅[如何：重命名标识符 (Visual Basic)](https://msdn.microsoft.com/library/e5a5edf8-3dba-4119-81f4-fc2aba180e0c)。  
   
 9. 将以下代码插入`stackButton_Click`事件处理程序。  
   
@@ -135,7 +135,7 @@ ms.locfileid: "43861968"
 12. 重复步骤 10 和 11 for`contactsStackButton`和`tasksStackButton`控件。  
   
 ## <a name="defining-icons"></a>定义图标  
- 每个`StackView`按钮都有一个关联的图标。 为方便起见，每个图标表示为 Base64 编码的字符串，其中进行反序列化之前<xref:System.Drawing.Bitmap>从它创建的。 在生产环境中，将位图数据存储为一种资源，并图标将显示在 Windows 窗体设计器。 有关详细信息，请参阅[如何： 向 Windows 窗体添加背景图像](https://msdn.microsoft.com/library/7a509ba2-055c-4ae6-b88a-54625c6d9aff)。  
+ 每个`StackView`按钮都有一个关联的图标。 为方便起见，每个图标表示为 Base64 编码的字符串，其中进行反序列化之前<xref:System.Drawing.Bitmap>从它创建的。 在生产环境中，将位图数据存储为一种资源，并图标将显示在 Windows 窗体设计器。 有关详细信息，请参阅[如何：向 Windows 窗体添加背景图像](https://msdn.microsoft.com/library/7a509ba2-055c-4ae6-b88a-54625c6d9aff)。  
   
 #### <a name="to-define-icons"></a>若要定义的图标  
   
@@ -180,13 +180,13 @@ ms.locfileid: "43861968"
   
 -   创建与控件的快捷菜单<xref:System.Windows.Forms.ContextMenuStrip>。 有关详细信息，请参阅[ContextMenu 组件概述](../../../../docs/framework/winforms/controls/contextmenu-component-overview-windows-forms.md)。  
   
--   创建一个自动填充的标准菜单的窗体。 有关详细信息，请参阅[演练： 向窗体提供标准菜单项](../../../../docs/framework/winforms/controls/walkthrough-providing-standard-menu-items-to-a-form.md)。  
+-   创建一个自动填充的标准菜单的窗体。 有关详细信息，请参见[演练：向窗体提供标准菜单项](../../../../docs/framework/winforms/controls/walkthrough-providing-standard-menu-items-to-a-form.md)。  
   
--   创建多文档界面 (MDI) 窗体通过停靠<xref:System.Windows.Forms.ToolStrip>控件。 有关详细信息，请参阅[如何： 创建具有菜单合并功能和 ToolStrip 控件的 MDI 窗体](../../../../docs/framework/winforms/controls/how-to-create-an-mdi-form-with-menu-merging-and-toolstrip-controls.md)。  
+-   创建多文档界面 (MDI) 窗体通过停靠<xref:System.Windows.Forms.ToolStrip>控件。 有关详细信息，请参阅[如何：创建具有菜单合并功能和 ToolStrip 控件的 MDI 窗体](../../../../docs/framework/winforms/controls/how-to-create-an-mdi-form-with-menu-merging-and-toolstrip-controls.md)。  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Windows.Forms.MenuStrip>  
- <xref:System.Windows.Forms.ToolStrip>  
- <xref:System.Windows.Forms.StatusStrip>  
- [ToolStrip 控件](../../../../docs/framework/winforms/controls/toolstrip-control-windows-forms.md)  
- [如何：向窗体提供标准菜单项](../../../../docs/framework/winforms/controls/how-to-provide-standard-menu-items-to-a-form.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.Windows.Forms.MenuStrip>
+- <xref:System.Windows.Forms.ToolStrip>
+- <xref:System.Windows.Forms.StatusStrip>
+- [ToolStrip 控件](../../../../docs/framework/winforms/controls/toolstrip-control-windows-forms.md)
+- [如何：向窗体提供标准菜单项](../../../../docs/framework/winforms/controls/how-to-provide-standard-menu-items-to-a-form.md)

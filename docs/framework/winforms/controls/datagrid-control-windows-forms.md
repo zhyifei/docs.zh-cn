@@ -8,12 +8,12 @@ helpviewer_keywords:
 - displaying data [Windows Forms], on forms
 - data [Windows Forms], displaying on Windows Forms
 ms.assetid: 1d9d5683-43d2-42dd-b6c3-e43f4cf0de99
-ms.openlocfilehash: 8618bfc691e86e8c609a6205ab44a891cc7e9f80
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7e54e44af64d793417adde88cfe2050e200bd80e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33529946"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54695434"
 ---
 # <a name="datagrid-control-windows-forms"></a>DataGrid 控件（Windows 窗体）
 > [!NOTE]
@@ -27,31 +27,31 @@ ms.locfileid: "33529946"
  [DataGrid 控件概述](../../../../docs/framework/winforms/controls/datagrid-control-overview-windows-forms.md)  
  描述 `DataGrid` 控件的基本功能。  
   
- [如何：使用设计器向 Windows 窗体 DataGrid 控件添加表和列](../../../../docs/framework/winforms/controls/add-tables-and-columns-to-wf-datagrid-control-using-the-designer.md)  
+ [如何：向使用设计器在 Windows 窗体 DataGrid 控件添加表和列](../../../../docs/framework/winforms/controls/add-tables-and-columns-to-wf-datagrid-control-using-the-designer.md)  
  描述如何使用设计器向 `DataGrid` 控件添加表和列。  
   
  [如何：向 Windows 窗体 DataGrid 控件添加表和列](../../../../docs/framework/winforms/controls/how-to-add-tables-and-columns-to-the-windows-forms-datagrid-control.md)  
  描述如何以编程方式向 `DataGrid` 控件添加表和列。  
   
- [如何：使用设计器将 Windows 窗体 DataGrid 控件绑定到数据源](../../../../docs/framework/winforms/controls/bind-wf-datagrid-control-to-a-data-source-using-the-designer.md)  
+ [如何：将 Windows 窗体 DataGrid 控件绑定到数据源使用设计器](../../../../docs/framework/winforms/controls/bind-wf-datagrid-control-to-a-data-source-using-the-designer.md)  
  描述如何使用设计器将 [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 数据集绑定到 `DataGrid` 控件。  
   
  [如何：将 Windows 窗体 DataGrid 控件绑定到数据源](../../../../docs/framework/winforms/controls/how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md)  
  描述如何将 [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 数据集绑定到 `DataGrid` 控件。  
   
- [如何：在运行时更改 Windows 窗体 DataGrid 控件中显示的数据](../../../../docs/framework/winforms/controls/change-displayed-data-at-run-time-wf-datagrid-control.md)  
+ [如何：更改在运行时在 Windows 窗体 DataGrid 控件中显示的数据](../../../../docs/framework/winforms/controls/change-displayed-data-at-run-time-wf-datagrid-control.md)  
  描述如何在 `DataGrid` 控件中以编程方式更改数据。  
   
- [如何：使用设计器用 Windows 窗体 DataGrid 控件创建主/从列表](../../../../docs/framework/winforms/controls/create-master-details-lists-with-wf-datagrid-control-using-the-designer.md)  
+ [如何：与使用设计器在 Windows 窗体 DataGrid 控件创建主-详细信息列表](../../../../docs/framework/winforms/controls/create-master-details-lists-with-wf-datagrid-control-using-the-designer.md)  
  描述如何使用设计器在两个独立的 `DataGrid` 控件中显示以父/子关系关联在一起的两个表。  
   
- 如何：使用 Windows 窗体 DataGrid 控件创建主/从列表  
+ 如何：使用 Windows 窗体 DataGrid 控件创建主-详细信息列表  
  描述如何在两个独立的 `DataGrid` 控件中显示以父/子关系关联在一起的两个表。  
   
- [如何：在 Windows 窗体 DataGrid 控件中删除或隐藏列](../../../../docs/framework/winforms/controls/how-to-delete-or-hide-columns-in-the-windows-forms-datagrid-control.md)  
+ [如何：删除或隐藏 Windows 窗体 DataGrid 控件中的列](../../../../docs/framework/winforms/controls/how-to-delete-or-hide-columns-in-the-windows-forms-datagrid-control.md)  
  描述如何在 `DataGrid` 控件中删除列。  
   
- [如何：使用设计器设置 Windows 窗体 DataGrid 控件的格式](../../../../docs/framework/winforms/controls/how-to-format-the-windows-forms-datagrid-control-using-the-designer.md)  
+ [如何：设置 Windows 窗体 DataGrid 控件使用设计器的格式](../../../../docs/framework/winforms/controls/how-to-format-the-windows-forms-datagrid-control-using-the-designer.md)  
  描述如何使用设计器更改 `DataGrid` 控件与外观相关的属性。  
   
  [如何：设置 Windows 窗体 DataGrid 控件的格式](../../../../docs/framework/winforms/controls/how-to-format-the-windows-forms-datagrid-control.md)  
@@ -77,6 +77,6 @@ ms.locfileid: "33529946"
  [Windows 窗体数据绑定](../../../../docs/framework/winforms/windows-forms-data-binding.md)  
  提供有关 Windows 窗体中数据绑定的主题的链接。  
   
-## <a name="see-also"></a>请参阅  
- [DataGridView 控件](../../../../docs/framework/winforms/controls/datagridview-control-windows-forms.md)  
- [Windows 窗体 DataGridView 控件和 DataGrid 控件之间的区别](../../../../docs/framework/winforms/controls/differences-between-the-windows-forms-datagridview-and-datagrid-controls.md)
+## <a name="see-also"></a>请参阅
+- [DataGridView 控件](../../../../docs/framework/winforms/controls/datagridview-control-windows-forms.md)
+- [Windows 窗体 DataGridView 控件和 DataGrid 控件之间的区别](../../../../docs/framework/winforms/controls/differences-between-the-windows-forms-datagridview-and-datagrid-controls.md)

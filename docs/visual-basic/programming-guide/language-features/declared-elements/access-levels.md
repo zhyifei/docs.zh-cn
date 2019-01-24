@@ -14,12 +14,12 @@ helpviewer_keywords:
 - Private access modifier
 - declared elements [Visual Basic], access level
 ms.assetid: 6e06c1ab-fd78-47f0-83a8-1152780b5e1a
-ms.openlocfilehash: 433d5dfd4bb3af9b6fbd0dfc951bb0448eb7efcd
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: df65749156543f72d07a464b50a7934908cd533a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50183127"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54704649"
 ---
 # <a name="access-levels-in-visual-basic"></a>Visual Basic 中的访问级别
 *访问级别*已声明元素的是能够对其进行访问的程度，哪些代码，即有权读取或写入到它。 这确定不仅元素本身; 的声明方式，还通过元素的容器的访问级别。 无法访问包含元素的代码无法访问任何其包含的元素，甚至包括那些声明为`Public`。 例如，`Public`变量中`Private`结构可以从访问，在类中包含的结构，但不能从该类的外部。  
@@ -106,21 +106,21 @@ Private Protected internalValue As Integer
   
 |访问修饰符|授予的访问级别|您可以使用此访问级别声明的元素|可以在其中使用此修饰符声明上下文|  
 |---------------------|--------------------------|-----------------------------------------------------|----------------------------------------------------------------|  
-|`Public`|不受限制:<br /><br /> 任何可以看到公共元素的代码可以访问它|接口<br /><br /> 模块<br /><br /> 类<br /><br /> 结构<br /><br /> 结构成员<br /><br /> 过程<br /><br /> 属性<br /><br /> 成员变量<br /><br /> 常量<br /><br /> 枚举<br /><br /> 事件<br /><br /> 外部声明<br /><br /> 委托|源文件<br /><br /> 命名空间<br /><br /> 接口<br /><br /> 模块<br /><br /> 类<br /><br /> 结构|  
-|`Protected`|追溯时派生：<br /><br /> 声明为受保护的元素或由其派生的类可以访问的元素的类中的代码|接口<br /><br /> 类<br /><br /> 结构<br /><br /> 过程<br /><br /> 属性<br /><br /> 成员变量<br /><br /> 常量<br /><br /> 枚举<br /><br /> 事件<br /><br /> 外部声明<br /><br /> 委托|类|  
-|`Friend`|程序集：<br /><br /> 代码中声明的友元元素可以访问它的程序集|接口<br /><br /> 模块<br /><br /> 类<br /><br /> 结构<br /><br /> 结构成员<br /><br /> 过程<br /><br /> 属性<br /><br /> 成员变量<br /><br /> 常量<br /><br /> 枚举<br /><br /> 事件<br /><br /> 外部声明<br /><br /> 委托|源文件<br /><br /> 命名空间<br /><br /> 接口<br /><br /> 模块<br /><br /> 类<br /><br /> 结构|  
-|`Protected` `Friend`|联合的`Protected`和`Friend`:<br /><br /> 在同一个类或作为受保护的友元元素或元素的类派生的任何类中的相同程序集代码中，可以访问它|接口<br /><br /> 类<br /><br /> 结构<br /><br /> 过程<br /><br /> 属性<br /><br /> 成员变量<br /><br /> 常量<br /><br /> 枚举<br /><br /> 事件<br /><br /> 外部声明<br /><br /> 委托|类|  
-|`Private`|声明上下文：<br /><br /> 声明一个私有元素，包括代码中包含的类型，可以访问的元素的类型中的代码|接口<br /><br /> 类<br /><br /> 结构<br /><br /> 结构成员<br /><br /> 过程<br /><br /> 属性<br /><br /> 成员变量<br /><br /> 常量<br /><br /> 枚举<br /><br /> 事件<br /><br /> 外部声明<br /><br /> 委托|模块<br /><br /> 类<br /><br /> 结构|
-|`Private Protected`|声明一个私有受保护的元素，在类中的代码或作为 bas 类在同一程序集中找到的派生类中的代码。|接口<br /><br /> 类<br /><br /> 结构<br /><br /> 过程<br /><br /> 属性<br /><br /> 成员变量<br /><br /> 常量<br /><br /> 枚举<br /><br /> 事件<br /><br /> 外部声明<br /><br /> 委托|类|
+|`Public`|不受限制:<br /><br /> 任何可以看到公共元素的代码可以访问它|接口<br /><br /> 模块<br /><br /> 类<br /><br /> 结构<br /><br /> 结构成员<br /><br /> 过程<br /><br /> Properties<br /><br /> 成员变量<br /><br /> 常量<br /><br /> 枚举<br /><br /> 事件<br /><br /> 外部声明<br /><br /> 委托|源文件<br /><br /> 命名空间<br /><br /> 接口<br /><br /> 模块<br /><br /> 类<br /><br /> 结构|  
+|`Protected`|追溯时派生：<br /><br /> 声明为受保护的元素或由其派生的类可以访问的元素的类中的代码|接口<br /><br /> 类<br /><br /> 结构<br /><br /> 过程<br /><br /> Properties<br /><br /> 成员变量<br /><br /> 常量<br /><br /> 枚举<br /><br /> 事件<br /><br /> 外部声明<br /><br /> 委托|类|  
+|`Friend`|程序集：<br /><br /> 代码中声明的友元元素可以访问它的程序集|接口<br /><br /> 模块<br /><br /> 类<br /><br /> 结构<br /><br /> 结构成员<br /><br /> 过程<br /><br /> Properties<br /><br /> 成员变量<br /><br /> 常量<br /><br /> 枚举<br /><br /> 事件<br /><br /> 外部声明<br /><br /> 委托|源文件<br /><br /> 命名空间<br /><br /> 接口<br /><br /> 模块<br /><br /> 类<br /><br /> 结构|  
+|`Protected` `Friend`|联合的`Protected`和`Friend`:<br /><br /> 在同一个类或作为受保护的友元元素或元素的类派生的任何类中的相同程序集代码中，可以访问它|接口<br /><br /> 类<br /><br /> 结构<br /><br /> 过程<br /><br /> Properties<br /><br /> 成员变量<br /><br /> 常量<br /><br /> 枚举<br /><br /> 事件<br /><br /> 外部声明<br /><br /> 委托|类|  
+|`Private`|声明上下文：<br /><br /> 声明一个私有元素，包括代码中包含的类型，可以访问的元素的类型中的代码|接口<br /><br /> 类<br /><br /> 结构<br /><br /> 结构成员<br /><br /> 过程<br /><br /> Properties<br /><br /> 成员变量<br /><br /> 常量<br /><br /> 枚举<br /><br /> 事件<br /><br /> 外部声明<br /><br /> 委托|模块<br /><br /> 类<br /><br /> 结构|
+|`Private Protected`|声明一个私有受保护的元素，在类中的代码或作为 bas 类在同一程序集中找到的派生类中的代码。|接口<br /><br /> 类<br /><br /> 结构<br /><br /> 过程<br /><br /> Properties<br /><br /> 成员变量<br /><br /> 常量<br /><br /> 枚举<br /><br /> 事件<br /><br /> 外部声明<br /><br /> 委托|类|
   
-## <a name="see-also"></a>请参阅  
- [Dim 语句](../../../../visual-basic/language-reference/statements/dim-statement.md)  
- [Static](../../../../visual-basic/language-reference/modifiers/static.md)  
- [已声明的元素名称](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)  
- [对已声明元素的引用](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)  
- [已声明元素的特性](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-characteristics.md)  
- [在 Visual Basic 中的生存期](../../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md)  
- [在 Visual Basic 中的作用域](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)  
- [如何：控制变量的可用性](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-control-the-availability-of-a-variable.md)  
- [变量](../../../../visual-basic/programming-guide/language-features/variables/index.md)  
- [变量声明](../../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)
+## <a name="see-also"></a>请参阅
+- [Dim 语句](../../../../visual-basic/language-reference/statements/dim-statement.md)
+- [Static](../../../../visual-basic/language-reference/modifiers/static.md)
+- [已声明的元素名称](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)
+- [对已声明元素的引用](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)
+- [已声明元素的特性](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-characteristics.md)
+- [在 Visual Basic 中的生存期](../../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md)
+- [在 Visual Basic 中的作用域](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)
+- [如何：控制变量的可用性](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-control-the-availability-of-a-variable.md)
+- [变量](../../../../visual-basic/programming-guide/language-features/variables/index.md)
+- [变量声明](../../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)

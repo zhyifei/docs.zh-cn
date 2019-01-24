@@ -2,23 +2,23 @@
 title: '&lt;knownCertificates&gt;'
 ms.date: 03/30/2017
 ms.assetid: 678e21b4-6493-47c3-8359-fcf0d37e2138
-ms.openlocfilehash: ed2bd5ec5b3a2a3e7b929b954df1c00be0849d71
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 49e5236abdc82fb4ca004c611e706e74fa99bf7d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54149754"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54687344"
 ---
 # <a name="ltknowncertificatesgt"></a>&lt;knownCertificates&gt;
 表示所提供的 X.509 证书的集合，这些证书用于对安全令牌服务 (STS) 颁发的安全凭据进行身份验证。  
   
  \<system.ServiceModel>  
-\<行为 >  
+\<behaviors>  
 \<serviceBehaviors>  
-\<行为 >  
+\<behavior>  
 \<serviceCredentials>  
-\<issuedTokenAuthentication >  
-\<knownCertificates >  
+\<issuedTokenAuthentication>  
+\<knownCertificates>  
   
 ## <a name="syntax"></a>语法  
   
@@ -47,7 +47,7 @@ ms.locfileid: "54149754"
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<issuedTokenAuthentication >](../../../../../docs/framework/configure-apps/file-schema/wcf/issuedtokenauthentication-of-servicecredentials.md)|将颁发的令牌指定为服务凭据。|  
+|[\<issuedTokenAuthentication>](../../../../../docs/framework/configure-apps/file-schema/wcf/issuedtokenauthentication-of-servicecredentials.md)|将颁发的令牌指定为服务凭据。|  
   
 ## <a name="remarks"></a>备注  
  颁发的令牌方案包含三个阶段。 在第一阶段，尝试访问服务的客户端被指引到*安全令牌服务*。 然后，安全令牌服务对该客户端进行身份验证，随后向该客户端颁发一个令牌（通常是一个安全断言标记语言 (SAML) 令牌）。 接下来，客户端携带此令牌返回服务。 服务检查该令牌，以获取使其可以对该令牌并进而对该客户端进行身份验证的数据。 若要对令牌进行身份验证，安全令牌服务所使用的证书必须为该服务所知。  
@@ -71,19 +71,19 @@ ms.locfileid: "54149754"
   
  有关演示如何填充配置中的集合的示例，请参阅[\<添加 >](../../../../../docs/framework/configure-apps/file-schema/wcf/add-of-knowncertificates.md)。  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator>  
- <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator.AllowedAudienceUris%2A>  
- <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator.AudienceUriMode%2A>  
- <xref:System.ServiceModel.Configuration.IssuedTokenServiceElement.KnownCertificates%2A>  
- <xref:System.ServiceModel.Configuration.X509CertificateTrustedIssuerElementCollection>  
- <xref:System.ServiceModel.Configuration.X509CertificateTrustedIssuerElement>  
- <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.KnownCertificates%2A>  
- [\<add>](../../../../../docs/framework/configure-apps/file-schema/wcf/add-of-knowncertificates.md)  
- [\<issuedTokenAuthentication >](../../../../../docs/framework/configure-apps/file-schema/wcf/issuedtokenauthentication-of-servicecredentials.md)  
- [安全行为](../../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)  
- [如何：联合身份验证服务上配置凭据](../../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)  
- [使用证书](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)  
- [联合令牌与颁发的令牌](../../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)  
- [\<add>](../../../../../docs/framework/configure-apps/file-schema/wcf/add-of-knowncertificates.md)  
- [保护服务和客户端的安全](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator>
+- <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator.AllowedAudienceUris%2A>
+- <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator.AudienceUriMode%2A>
+- <xref:System.ServiceModel.Configuration.IssuedTokenServiceElement.KnownCertificates%2A>
+- <xref:System.ServiceModel.Configuration.X509CertificateTrustedIssuerElementCollection>
+- <xref:System.ServiceModel.Configuration.X509CertificateTrustedIssuerElement>
+- <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.KnownCertificates%2A>
+- [\<add>](../../../../../docs/framework/configure-apps/file-schema/wcf/add-of-knowncertificates.md)
+- [\<issuedTokenAuthentication>](../../../../../docs/framework/configure-apps/file-schema/wcf/issuedtokenauthentication-of-servicecredentials.md)
+- [安全行为](../../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)
+- [如何：联合身份验证服务上配置凭据](../../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)
+- [使用证书](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
+- [联合令牌与颁发的令牌](../../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)
+- [\<add>](../../../../../docs/framework/configure-apps/file-schema/wcf/add-of-knowncertificates.md)
+- [保护服务和客户端的安全](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)

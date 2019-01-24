@@ -1,5 +1,5 @@
 ---
-title: 演练：设计时调试自定义 Windows 窗体控件
+title: 演练：在设计时调试自定义 Windows 窗体控件
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -15,15 +15,15 @@ helpviewer_keywords:
 - walkthroughs [Windows Forms], debugging
 - design-time debugging
 ms.assetid: 1fd83ccd-3798-42fc-85a3-6cba99467387
-ms.openlocfilehash: 824c1e47cf50dc13a3a986e48a49158b15dbb935
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: ceee83c9deb318f5912eb724cbd237c3d7b73152
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45964826"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54733332"
 ---
-# <a name="walkthrough-debugging-custom-windows-forms-controls-at-design-time"></a>演练：设计时调试自定义 Windows 窗体控件
-时创建自定义控件，您通常会发现它需要调试其设计时行为。 这是如果自定义设计器创作自定义控件尤其如此。 有关详细信息，请参阅[演练： 创建 Windows 窗体控件，将利用 Visual Studio 设计时功能](../../../../docs/framework/winforms/controls/creating-a-wf-control-design-time-features.md)。  
+# <a name="walkthrough-debugging-custom-windows-forms-controls-at-design-time"></a>演练：在设计时调试自定义 Windows 窗体控件
+时创建自定义控件，您通常会发现它需要调试其设计时行为。 这是如果自定义设计器创作自定义控件尤其如此。 有关详细信息，请参阅[演练：创建 Windows 窗体控件都使用了 Visual Studio 设计时功能](../../../../docs/framework/winforms/controls/creating-a-wf-control-design-time-features.md)。  
   
  您可以调试使用 Visual Studio 中，您自定义控件，就像就像调试任何其他.NET Framework 类。 不同之处是待调试正在运行自定义控件的代码的 Visual Studio 的单独实例  
   
@@ -60,9 +60,9 @@ ms.locfileid: "45964826"
   
 1.  添加**Windows 控件库**到解决方案。  
   
-2.  添加一个新**UserControl** DebugControlLibrary 项目项。 有关详细信息，请参阅[NIB： 如何： 添加新项目项](https://msdn.microsoft.com/library/63d3e16b-de6e-4bb5-a0e3-ecec762201ce)。 新的源文件基名称指定为"DebugControl"。  
+2.  添加一个新**UserControl** DebugControlLibrary 项目项。 有关详细信息，请参阅[NIB： 如何：添加新项目项](https://msdn.microsoft.com/library/63d3e16b-de6e-4bb5-a0e3-ecec762201ce)。 新的源文件基名称指定为"DebugControl"。  
   
-3.  使用**解决方案资源管理器**，通过删除代码文件的基名称中删除项目的默认控件"`UserControl1`"。 有关详细信息，请参阅[NIB： 如何： 删除、 删除和排除项](https://msdn.microsoft.com/library/6dffdc86-29c8-4eff-bcd8-e3a0dd9e9a73)。  
+3.  使用**解决方案资源管理器**，通过删除代码文件的基名称中删除项目的默认控件"`UserControl1`"。 有关详细信息，请参阅[NIB： 如何：移除、 删除和排除项](https://msdn.microsoft.com/library/6dffdc86-29c8-4eff-bcd8-e3a0dd9e9a73)。  
   
 4.  生成解决方案。  
   
@@ -159,7 +159,7 @@ ms.locfileid: "45964826"
   
 4.  打开在 Form1**窗体设计器**，然后选择**DebugControl**控件。  
   
-5.  值更改`DemoString`属性。 请注意，当提交更改时，Visual Studio 的调试实例获取焦点并且执行在断点处停止。 你可以单步执行属性访问器就像在任何其他代码一样。  
+5.  更改 `DemoString` 属性的值。 请注意，当提交更改时，Visual Studio 的调试实例获取焦点并且执行在断点处停止。 你可以单步执行属性访问器就像在任何其他代码一样。  
   
 6.  在您完成与调试会话，请可以退出，请关闭 Visual Studio 的托管的实例，或单击**停止调试**调试实例中的按钮。  
   
@@ -170,9 +170,9 @@ ms.locfileid: "45964826"
   
 -   有几个特性可应用于控件的属性，以处理与设计器的自定义控件的交互。 您可以找到这些属性在<xref:System.ComponentModel?displayProperty=nameWithType>命名空间。  
   
--   自定义控件，可以编写自定义设计器。 这样，您对使用由 Visual Studio 公开可扩展设计器基础结构的设计体验的完全控制。 有关详细信息，请参阅[演练： 创建 Windows 窗体控件，将利用 Visual Studio 设计时功能](../../../../docs/framework/winforms/controls/creating-a-wf-control-design-time-features.md)。  
+-   自定义控件，可以编写自定义设计器。 这样，您对使用由 Visual Studio 公开可扩展设计器基础结构的设计体验的完全控制。 有关详细信息，请参阅[演练：创建 Windows 窗体控件都使用了 Visual Studio 设计时功能](../../../../docs/framework/winforms/controls/creating-a-wf-control-design-time-features.md)。  
   
-## <a name="see-also"></a>请参阅  
- [演练：创建利用 Visual Studio 设计时功能的 Windows 窗体控件](../../../../docs/framework/winforms/controls/creating-a-wf-control-design-time-features.md)  
- [如何： 访问设计时服务](https://msdn.microsoft.com/library/c186c4b6-076c-438d-9ed3-f13da29c8c1f)  
- [如何：在 Windows 窗体中访问设计时支持](https://msdn.microsoft.com/library/a84f8579-1f47-41b9-ba37-69030b0aff09)
+## <a name="see-also"></a>请参阅
+- [演练：创建利用 Visual Studio 设计时功能的 Windows 窗体控件](../../../../docs/framework/winforms/controls/creating-a-wf-control-design-time-features.md)
+- [如何：访问设计时服务](https://msdn.microsoft.com/library/c186c4b6-076c-438d-9ed3-f13da29c8c1f)
+- [如何：在 Windows 窗体中访问设计时支持](https://msdn.microsoft.com/library/a84f8579-1f47-41b9-ba37-69030b0aff09)

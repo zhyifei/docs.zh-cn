@@ -7,24 +7,24 @@ f1_keywords:
 helpviewer_keywords:
 - BC30481
 ms.assetid: 583f3029-bc3a-4e06-866f-92dbecc46f19
-ms.openlocfilehash: 7c9051b15f6d9cf37d7d0245f758905467d5bbc5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4e80ce58048bfa7f2fecc65e7167479df07bf57c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33585510"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54715082"
 ---
 # <a name="39class39-statement-must-end-with-a-matching-39end-class39"></a>&#39;类&#39;语句必须以匹配结束&#39;结束类&#39;
-`Class` 用于启动`Class`块; 因此它只能出现在块中，以匹配开头`End Class`语句结束块。 有冗余`Class`语句，或你有未结束你`Class`块`End Class`。  
+`Class` 用于启动`Class`块; 因此它可以仅出现在块中，以匹配的开头`End Class`语句结束块。 也有冗余`Class`语句，或你有未结束您`Class`块`End Class`。  
   
  **错误 ID:** BC30481  
   
 ## <a name="to-correct-this-error"></a>更正此错误  
   
--   找到并删除不必要`Class`语句。  
+-   找到并删除不必要的 `Class` 语句。  
   
--   结束`Class`块以匹配`End Class`。  
+-   得出的结论`Class`块以匹配的`End Class`。  
   
-## <a name="see-also"></a>请参阅  
- [结束\<关键字 > 语句](../../../visual-basic/language-reference/statements/end-keyword-statement.md)  
- [Class 语句](../../../visual-basic/language-reference/statements/class-statement.md)
+## <a name="see-also"></a>请参阅
+- [结束\<关键字 > 语句](../../../visual-basic/language-reference/statements/end-keyword-statement.md)
+- [Class 语句](../../../visual-basic/language-reference/statements/class-statement.md)

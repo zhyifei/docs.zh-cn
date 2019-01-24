@@ -8,18 +8,18 @@ helpviewer_keywords:
 - data binding [WPF], MultiBinding
 - Multibinding [WPF]
 ms.assetid: b3d06378-b511-4181-95aa-316d60c9229b
-ms.openlocfilehash: d61631949382c177000b85aa8f4e093c3532c7ec
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8f4e5b7767e475128b61080ca87e38ee311f4a3a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33556830"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54706425"
 ---
 # <a name="how-to-produce-a-value-based-on-a-list-of-bound-items"></a>如何：根据绑定项列表生成值
-<xref:System.Windows.Data.MultiBinding> 可以将绑定目标属性绑定到源属性的列表，然后应用逻辑，从而生成使用给定的输入值。 此示例演示如何使用<xref:System.Windows.Data.MultiBinding>。  
+<xref:System.Windows.Data.MultiBinding> 可以将绑定目标属性绑定到的源属性列表，然后应用逻辑以生成使用给定的输入值。 此示例演示如何使用<xref:System.Windows.Data.MultiBinding>。  
   
 ## <a name="example"></a>示例  
- 在下面的示例中，`NameListData` 引用包含 `firstName` 和 `lastName` 这两个属性的 `PersonName` 对象的集合。 下面的示例生成<xref:System.Windows.Controls.TextBlock>，显示的第一个和最后一个名称人员的最后一个名称与第一个。  
+ 在下面的示例中，`NameListData` 引用包含 `firstName` 和 `lastName` 这两个属性的 `PersonName` 对象的集合。 下面的示例生成<xref:System.Windows.Controls.TextBlock>，显示的第一个和最后一个名称的人员的姓氏第一个。  
   
  [!code-xaml[MultiBinding#Resources1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/MultiBinding/CSharp/Window1.xaml#resources1)]  
 [!code-xaml[MultiBinding#Resources2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/MultiBinding/CSharp/Window1.xaml#resources2)]  
@@ -31,9 +31,9 @@ ms.locfileid: "33556830"
  [!code-csharp[MultiBinding#3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/MultiBinding/CSharp/NameConverter.cs#3)]
  [!code-vb[MultiBinding#3](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/MultiBinding/VisualBasic/NameConverter.vb#3)]  
   
- `NameConverter` 实现 <xref:System.Windows.Data.IMultiValueConverter> 接口。 `NameConverter` 从个别绑定获取值并将其存储在值对象数组中。 顺序<xref:System.Windows.Data.Binding>元素出现在<xref:System.Windows.Data.MultiBinding>元素是在其中这些值存储在数组中的顺序。 值<xref:System.Windows.Data.MultiBinding.ConverterParameter%2A>属性引用的参数进行传递的<xref:System.Windows.Data.MultiBinding.Converter%2A>方法，用于执行交换机上的参数来确定如何的名称的格式。  
+ `NameConverter` 实现 <xref:System.Windows.Data.IMultiValueConverter> 接口。 `NameConverter` 从个别绑定获取值并将其存储在值对象数组中。 依据的顺序<xref:System.Windows.Data.Binding>元素出现在<xref:System.Windows.Data.MultiBinding>元素是在其中这些值存储在数组中的顺序。 值<xref:System.Windows.Data.MultiBinding.ConverterParameter%2A>属性引用的参数自变量的<xref:System.Windows.Data.MultiBinding.Converter%2A>方法，后者将执行一个开关参数以确定如何设置名称格式。  
   
-## <a name="see-also"></a>请参阅  
- [转换已绑定的数据](../../../../docs/framework/wpf/data/how-to-convert-bound-data.md)  
- [数据绑定概述](../../../../docs/framework/wpf/data/data-binding-overview.md)  
- [帮助主题](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)
+## <a name="see-also"></a>请参阅
+- [转换已绑定的数据](../../../../docs/framework/wpf/data/how-to-convert-bound-data.md)
+- [数据绑定概述](../../../../docs/framework/wpf/data/data-binding-overview.md)
+- [帮助主题](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)

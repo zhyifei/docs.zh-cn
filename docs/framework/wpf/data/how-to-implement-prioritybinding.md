@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - data binding [WPF], PriorityBinding class
 ms.assetid: d63b65ab-b3e9-4322-9aa8-1450f8d89532
-ms.openlocfilehash: a7729ec3d06ec701cf2194bed5d90b5bed76573a
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: c239cb3005d2748f9cba55a5bb0b5d564828f51b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47398805"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54717881"
 ---
 # <a name="how-to-implement-prioritybinding"></a>如何：实现 PriorityBinding
 <xref:System.Windows.Data.PriorityBinding> 在[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]的工作原理是指定的绑定的列表。 绑定的列表按从最高优先级到最低优先级排序。 如果最高优先级绑定返回一个值成功时对其进行处理然后则永远不需要处理列表中的其他绑定。 这是最高优先级的绑定需要很长的时间要计算的情况下，将使用成功返回值的下一步最高优先级，直到较高优先级的绑定会成功返回一个值。  
@@ -27,7 +27,7 @@ ms.locfileid: "47398805"
  Get 访问器的`SlowestDP`等待 5 秒钟之后返回的值`_slowestDP`数据成员。  
   
 > [!NOTE]
->  此示例只为了方便本文演示。 [!INCLUDE[TLA#tla_net](../../../../includes/tlasharptla-net-md.md)]准则不建议将定义所数量级字段集相比，速度较慢的属性。 有关详细信息，请参阅[NIB： 选择属性和方法](https://msdn.microsoft.com/library/55825e8f-7e2e-448a-9505-7217cc91b1af)。  
+>  此示例只为了方便本文演示。 [!INCLUDE[TLA#tla_net](../../../../includes/tlasharptla-net-md.md)]准则不建议将定义所数量级字段集相比，速度较慢的属性。 有关详细信息，请参阅[NIB:属性和方法之间进行选择](https://msdn.microsoft.com/library/55825e8f-7e2e-448a-9505-7217cc91b1af)。  
   
  [!code-csharp[PriorityBinding#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PriorityBinding/CSharp/Window1.xaml.cs#1)]
  [!code-vb[PriorityBinding#1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/PriorityBinding/VisualBasic/AsyncDataSource.vb#1)]  
@@ -44,7 +44,7 @@ ms.locfileid: "47398805"
   
  请参阅<xref:System.Windows.Data.PriorityBinding>有关被视为成功的返回值从绑定信息。  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Windows.Data.Binding.IsAsync%2A?displayProperty=nameWithType>  
- [数据绑定概述](../../../../docs/framework/wpf/data/data-binding-overview.md)  
- [帮助主题](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.Windows.Data.Binding.IsAsync%2A?displayProperty=nameWithType>
+- [数据绑定概述](../../../../docs/framework/wpf/data/data-binding-overview.md)
+- [帮助主题](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)

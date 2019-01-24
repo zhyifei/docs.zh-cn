@@ -2,12 +2,12 @@
 title: 在 ASP.NET 中使用 System.Transactions
 ms.date: 03/30/2017
 ms.assetid: 1982c300-7ea6-4242-95ed-dc28ccfacac9
-ms.openlocfilehash: 7b73ec970776f39a0c056e2a706d4818cda6cd72
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 7c83532de42faff06594305b01137fd8fd63674e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45698362"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54711822"
 ---
 # <a name="using-systemtransactions-in-aspnet"></a>在 ASP.NET 中使用 System.Transactions
 本主题介绍如何才能在 <xref:System.Transactions> 应用程序中成功使用 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 。  
@@ -59,7 +59,7 @@ ms.locfileid: "45698362"
   
  有关详细信息，请参阅[（ASP.NET 设置架构） compilation 的 assemblies 的 add 元素](https://msdn.microsoft.com/library/602197e8-108d-4249-b752-ba2a318f75e4)。  
   
-## <a name="see-also"></a>请参阅  
- [ASP.NET 信任级别和策略文件](https://msdn.microsoft.com/library/f897c794-10d3-414c-86b7-59b66564bbf1)  
- [securityPolicy 元素 （ASP.NET 设置架构）](https://msdn.microsoft.com/library/469d8d22-d263-46bb-8400-40d8d027faba)  
- [事务管理升级](../../../../docs/framework/data/transactions/transaction-management-escalation.md)
+## <a name="see-also"></a>请参阅
+- [ASP.NET 信任级别和策略文件](https://msdn.microsoft.com/library/f897c794-10d3-414c-86b7-59b66564bbf1)
+- [securityPolicy 元素 （ASP.NET 设置架构）](https://msdn.microsoft.com/library/469d8d22-d263-46bb-8400-40d8d027faba)
+- [事务管理升级](../../../../docs/framework/data/transactions/transaction-management-escalation.md)

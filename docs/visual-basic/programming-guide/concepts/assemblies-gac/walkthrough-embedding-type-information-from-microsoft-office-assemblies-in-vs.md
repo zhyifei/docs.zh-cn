@@ -1,15 +1,15 @@
 ---
-title: 演练： 在 Visual Studio (Visual Basic 中) 中嵌入 Microsoft Office 程序集中的类型信息
+title: 演练：在 Visual Studio (Visual Basic 中) 中嵌入 Microsoft Office 程序集中的类型信息
 ms.date: 07/20/2015
 ms.assetid: 26b44286-5066-4ad4-8e6a-c24902be347c
-ms.openlocfilehash: bc8f7585964bdd60bac5d5a466f6276fab288c78
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: e5b94c190a77f6877c9a3d37f310aa527083a26a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46002965"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54722772"
 ---
-# <a name="walkthrough-embedding-type-information-from-microsoft-office-assemblies-in-visual-studio-visual-basic"></a>演练： 在 Visual Studio (Visual Basic 中) 中嵌入 Microsoft Office 程序集中的类型信息
+# <a name="walkthrough-embedding-type-information-from-microsoft-office-assemblies-in-visual-studio-visual-basic"></a>演练：在 Visual Studio (Visual Basic 中) 中嵌入 Microsoft Office 程序集中的类型信息
 如果在引用 COM 对象的应用程序中嵌入类型信息，则无需使用主互操作程序集 (PIA)。 此外，利用嵌入的类型信息可实现应用程序的版本独立性。 也就是说，可将程序编写为使用多个 COM 库版本中的类型，而无需使用每个版本的特定 PIA。 对于使用 Microsoft Office 库中对象的应用程序，这是一种常用方案。 通过嵌入类型信息，程序的同一个生成可以使用不同计算机上的不同 Microsoft Office 版本，而无需为 Microsoft Office 的每个版本重新部署该程序或 PIA。  
   
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
@@ -95,7 +95,7 @@ ms.locfileid: "46002965"
   
 8.  保存项目。  
   
-9. 按 Ctrl+F5 生成并运行项目。 验证是否已在示例代码中指定的位置创建 Excel 工作簿：C:\SampleFolder\SampleWorkbook.xls。  
+9. 按 Ctrl+F5 生成并运行项目。 验证已在示例代码中指定的位置创建 Excel 工作簿：C:\SampleFolder\SampleWorkbook.xls.  
   
 ##  <a name="BKMK_publishapp"></a> 将应用程序发布到安装有不同 Microsoft Office 版本的计算机  
   
@@ -107,9 +107,9 @@ ms.locfileid: "46002965"
   
 4.  完成安装后，运行安装的程序。  
   
-5.  验证是否已在示例代码中指定的位置创建了 Excel 工作簿：C:\SampleFolder\SampleWorkbook.xls。  
+5.  验证已在示例代码中指定的位置创建 Excel 工作簿：C:\SampleFolder\SampleWorkbook.xls.  
   
 ## <a name="see-also"></a>请参阅
 
-- [演练： 在 Visual Studio (Visual Basic 中) 中嵌入托管程序集中的类型](../../../../visual-basic/programming-guide/concepts/assemblies-gac/walkthrough-embedding-types-from-managed-assemblies-in-vs.md)  
+- [演练：在 Visual Studio (Visual Basic 中) 中嵌入托管程序集中的类型](../../../../visual-basic/programming-guide/concepts/assemblies-gac/walkthrough-embedding-types-from-managed-assemblies-in-vs.md)
 - [/link (Visual Basic)](../../../../visual-basic/reference/command-line-compiler/link.md)

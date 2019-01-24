@@ -2,19 +2,19 @@
 title: '&lt;baseAddressPrefixFilter&gt; 的 &lt;add&gt;'
 ms.date: 03/30/2017
 ms.assetid: b226bede-8459-4de9-b2ac-3d39604ce2bc
-ms.openlocfilehash: ece3178c48c84c609ab959a5cfc426062de9255f
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: cc9ef6c8712ff764240c4c2f0322bd94b1aaccc8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54145596"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54698435"
 ---
 # <a name="ltaddgt-of-ltbaseaddressprefixfiltergt"></a>&lt;baseAddressPrefixFilter&gt; 的 &lt;add&gt;
 表示一个配置元素，指定传递筛选器，它提供一种机制，托管在 IIS 中的 Windows Communication Foundation (WCF) 应用程序时可选取适当的 Internet 信息服务 (IIS) 绑定。  
   
  \<system.ServiceModel>  
-\<serviceHostingEnvironment >  
-\<Baseaddressprefixfilter >  
+\<ServiceHostingEnvironment>  
+\<baseAddressPrefixFilters>  
 \<add>  
   
 ## <a name="syntax"></a>语法  
@@ -43,7 +43,7 @@ ms.locfileid: "54145596"
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<Baseaddressprefixfilter >](../../../../../docs/framework/configure-apps/file-schema/wcf/baseaddressprefixfilters.md)|指定传递筛选器提供了一种机制来承载在 IIS 中的 Windows Communication Foundation (WCF) 应用程序时选择适当的 IIS 绑定的配置元素的集合。|  
+|[\<baseAddressPrefixFilters>](../../../../../docs/framework/configure-apps/file-schema/wcf/baseaddressprefixfilters.md)|指定传递筛选器提供了一种机制来承载在 IIS 中的 Windows Communication Foundation (WCF) 应用程序时选择适当的 IIS 绑定的配置元素的集合。|  
   
 ## <a name="remarks"></a>备注  
  前缀筛选器为共享的宿主提供程序提供一种指定服务要使用的 URI 的方法。 它使得共享主机可以在同一站点上通过同一方案的不同基址承载多个应用程序。  
@@ -79,8 +79,8 @@ http://test2.fabrikam.com/Service.svc
 > [!NOTE]
 >  筛选器不支持任何通配符。 此外，IIS 提供的基址可能有绑定到在 `baseAddressPrefixFilters` 列表中未列出的其他方案的地址。 不会筛选出这些地址。  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.ServiceModel.Configuration.BaseAddressPrefixFilterElement>  
- <xref:System.ServiceModel.Configuration.ServiceHostingEnvironmentSection>  
- <xref:System.ServiceModel.ServiceHostingEnvironment>  
- [承载](../../../../../docs/framework/wcf/feature-details/hosting.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.ServiceModel.Configuration.BaseAddressPrefixFilterElement>
+- <xref:System.ServiceModel.Configuration.ServiceHostingEnvironmentSection>
+- <xref:System.ServiceModel.ServiceHostingEnvironment>
+- [承载](../../../../../docs/framework/wcf/feature-details/hosting.md)

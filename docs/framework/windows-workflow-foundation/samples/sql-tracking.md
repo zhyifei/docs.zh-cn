@@ -2,12 +2,12 @@
 title: SQL 跟踪
 ms.date: 03/30/2017
 ms.assetid: bcaebeb1-b9e5-49e8-881b-e49af66fd341
-ms.openlocfilehash: 741df337187b2a5fffe63052c9fafbd430f7c2fc
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 240e6ab750b4ef82d2afcf1c2ab26c08369926d6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48836376"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54690598"
 ---
 # <a name="sql-tracking"></a>SQL 跟踪
 此示例演示如何编写一个自定义 SQL 跟踪参与者，该参与者将跟踪记录写入到一个 SQL 数据库。 Windows Workflow Foundation (WF) 提供了工作流跟踪来深入了解工作流实例的执行。 跟踪运行时在工作流执行过程中会发出工作流跟踪记录。 有关工作流跟踪的详细信息，请参阅[工作流跟踪](../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)。
@@ -59,5 +59,5 @@ ms.locfileid: "48836376"
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Tracking\SqlTracking`  
   
-## <a name="see-also"></a>请参阅  
- [AppFabric 监视示例](https://go.microsoft.com/fwlink/?LinkId=193959)
+## <a name="see-also"></a>请参阅
+- [AppFabric 监视示例](https://go.microsoft.com/fwlink/?LinkId=193959)

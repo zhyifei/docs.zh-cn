@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 08406f7d93671b406b3c7cd8719a7a0e5e423184
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 65e1ed604084fa61c8e47f0bb468b6a6d100778c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43523497"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54695720"
 ---
 # <a name="beginenumeration-function"></a>BeginEnumeration 函数
 将枚举数重置到枚举的起点。  
@@ -52,7 +52,7 @@ HRESULT BeginEnumeration (
 
 此函数返回以下值中定义*WbemCli.h*标头文件，也可以在定义它们为常量在代码中：
 
-|返回的常量  |“值”  |描述  |
+|返回的常量  |值  |描述  |
 |---------|---------|---------|
 |`WBEM_E_INVALID_PARAMETER` | 0x80041008 | 中的标志的组合`lEnumFlags`无效，或一个无效的指定的参数。 |
 |`WBEM_E_UNEXPECTED` | 0x8004101d | 第二次调用`BeginEnumeration`而无需对的干预调用进行[ `EndEnumeration` ](endenumeration.md)。 |
@@ -67,21 +67,21 @@ HRESULT BeginEnumeration (
 
 **组 1**
 
-|返回的常量  |“值”  |描述  |
+|返回的常量  |值  |描述  |
 |---------|---------|---------|
 |`WBEM_FLAG_KEYS_ONLY` | 0x4 | 包含构成仅密钥的属性。 |
 |`WBEM_FLAG_REFS_ONLY` | 0x8 | 包括仅限对象引用的属性。 |
 
 **组 2**
 
-返回的常量  |“值”  |描述  |
+返回的常量  |值  |描述  |
 |---------|---------|---------|
 |`WBEM_FLAG_SYSTEM_ONLY` | 0x30 | 限制为仅系统属性的枚举。 |
 |`WBEM_FLAG_NONSYSTEM_ONLY` | 0x40 | 包括本地和传播属性但不枚举中的系统属性。 |
 
 对于类：
 
-返回的常量  |“值”  |描述  |
+返回的常量  |值  |描述  |
 |---------|---------|---------|
 |`WBEM_FLAG_CLASS_OVERRIDES_ONLY` | 0x100 | 限制到类定义中被重写的属性的枚举。 |
 |`WBEM_FLAG_CLASS_LOCAL_AND_OVERRIDES` | 0x100 | 限制到当前的类定义中被重写的属性和新的类中定义的属性的枚举。 |
@@ -91,18 +91,18 @@ HRESULT BeginEnumeration (
 
 实例：
 
-返回的常量  |“值”  |描述  |
+返回的常量  |值  |描述  |
 |---------|---------|---------|
 | `WBEM_FLAG_LOCAL_ONLY` | 0x10 | 限制到定义的或在类本身中修改属性的枚举。 |
 | `WBEM_FLAG_PROPAGATED_ONLY` |  0x20 | 限制对从基类继承的属性的枚举。 |
 
 
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** WMINet_Utils.idl  
   
  **.NET Framework 版本：**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
-## <a name="see-also"></a>请参阅  
-[WMI 和性能计数器 （非托管 API 参考）](index.md)
+## <a name="see-also"></a>请参阅
+- [WMI 和性能计数器 （非托管 API 参考）](index.md)

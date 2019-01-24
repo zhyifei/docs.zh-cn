@@ -1,15 +1,15 @@
 ---
-title: 如何：在可靠会话内交换消息
+title: 如何：可靠会话内交换消息
 ms.date: 03/30/2017
 ms.assetid: 87cd0e75-dd2c-44c1-8da0-7b494bbdeaea
-ms.openlocfilehash: 53e5661bf140540cd0fc7a9fcb739b67488b8491
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 0b03845f9638a3646c72b1210de12dd94cf4cc9f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50195731"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54720049"
 ---
-# <a name="how-to-exchange-messages-within-a-reliable-session"></a>如何：在可靠会话内交换消息
+# <a name="how-to-exchange-messages-within-a-reliable-session"></a>如何：可靠会话内交换消息
 
 本主题概述了使用系统提供的绑定之一来启用可靠会话所需的步骤。这些绑定支持可靠会话，但默认情况下不支持。 启用可靠会话使用代码以强制方式或配置文件中以声明方式。 此过程使用客户端和服务配置文件来启用可靠会话并规定消息到达其中发送顺序相同。
 
@@ -67,7 +67,7 @@ ms.locfileid: "50195731"
 
 ## <a name="example"></a>示例
 
-默认情况下，有多种系统提供的绑定支持可靠会话。 这些方法包括：
+默认情况下，有多种系统提供的绑定支持可靠会话。 这些问题包括：
 
 - <xref:System.ServiceModel.WSDualHttpBinding>
 
@@ -75,8 +75,8 @@ ms.locfileid: "50195731"
 
 - <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding>
 
-有关如何创建支持可靠会话的自定义绑定的示例，请参阅[如何： 使用 HTTPS 创建自定义可靠会话绑定](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-reliable-session-binding-with-https.md)。
+有关如何创建支持可靠会话的自定义绑定的示例，请参阅[如何：使用 HTTPS 创建自定义可靠会话绑定](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-reliable-session-binding-with-https.md)。
 
 ## <a name="see-also"></a>请参阅
 
-[可靠会话](../../../../docs/framework/wcf/feature-details/reliable-sessions.md)
+- [可靠会话](../../../../docs/framework/wcf/feature-details/reliable-sessions.md)

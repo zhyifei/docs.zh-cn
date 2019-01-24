@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - My.Forms object
 ms.assetid: f6bff4e6-6769-4294-956b-037aa6106d2a
-ms.openlocfilehash: d15765b7673f321d4362ceea0adb73959a7e7726
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: 17042f60eb27c41640ef5d8c927c7acc5bc73183
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48582653"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54712611"
 ---
 # <a name="myforms-object"></a>My.Forms 对象
 提供用于访问当前项目中声明每个 Windows 窗体的实例的属性。  
@@ -28,7 +28,7 @@ ms.locfileid: "48582653"
   
  仅适用于 Windows 应用程序对象和其属性。  
   
-## <a name="properties"></a>属性  
+## <a name="properties"></a>Properties  
  每个属性`My.Forms`对象提供对当前项目中的窗体的实例访问。 属性的名称的窗体的属性访问，名称相同，属性类型是窗体的类型相同。  
   
 > [!NOTE]
@@ -66,11 +66,11 @@ ms.locfileid: "48582653"
 |Windows 服务|否|  
 |网站|否|  
   
-## <a name="see-also"></a>请参阅  
- <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OpenForms%2A>  
- <xref:System.Windows.Forms.Form>  
- <xref:System.Windows.Forms.Form.Close%2A>  
- [对象](../../../visual-basic/language-reference/objects/index.md)  
- [Is 运算符](../../../visual-basic/language-reference/operators/is-operator.md)  
- [IsNot 运算符](../../../visual-basic/language-reference/operators/isnot-operator.md)  
- [访问应用程序窗体](../../../visual-basic/developing-apps/programming/accessing-application-forms.md)
+## <a name="see-also"></a>请参阅
+- <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OpenForms%2A>
+- <xref:System.Windows.Forms.Form>
+- <xref:System.Windows.Forms.Form.Close%2A>
+- [对象](../../../visual-basic/language-reference/objects/index.md)
+- [Is 运算符](../../../visual-basic/language-reference/operators/is-operator.md)
+- [IsNot 运算符](../../../visual-basic/language-reference/operators/isnot-operator.md)
+- [访问应用程序窗体](../../../visual-basic/developing-apps/programming/accessing-application-forms.md)

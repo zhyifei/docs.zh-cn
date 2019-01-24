@@ -1,16 +1,16 @@
 ---
-title: '&lt;绑定&gt;'
+title: '&lt;bindings&gt;'
 ms.date: 03/30/2017
 ms.assetid: b62cd369-5409-4030-8490-9759a462dd3a
-ms.openlocfilehash: 76ebd7c317bf5f0aa1ec02d4014235df232314f0
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: b7ef15f768e3eb5484bbc75eeaf988fd36fc155b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32747816"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54690223"
 ---
-# <a name="ltbindingsgt"></a>&lt;绑定&gt;
-此节包含标准绑定和自定义绑定的集合。 每一项都是一个可由其唯一 `binding` 进行标识的 `name` 元素。 服务通过用 `name` 与绑定进行链接来使用绑定。 从 [!INCLUDE[netfx40_short](../../../../../includes/netfx40-short-md.md)] 开始，不要求绑定和行为具有名称。 有关默认配置和无名称的绑定和行为的详细信息，请参阅[简化配置](../../../../../docs/framework/wcf/simplified-configuration.md)和[简化配置 WCF 服务](../../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md)。  
+# <a name="ltbindingsgt"></a>&lt;bindings&gt;
+此节包含标准绑定和自定义绑定的集合。 每一项都是一个可由其唯一 `binding` 进行标识的 `name` 元素。 服务通过用 `name` 与绑定进行链接来使用绑定。 从 [!INCLUDE[netfx40_short](../../../../../includes/netfx40-short-md.md)] 开始，不要求绑定和行为具有名称。 有关默认配置以及无名称绑定和行为的详细信息，请参阅[Simplified Configuration](../../../../../docs/framework/wcf/simplified-configuration.md)并[WCF 服务的简化配置](../../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md)。  
   
 ## <a name="system-provided-binding"></a>系统提供的绑定  
  系统提供的绑定可以消除 WCF 消息堆栈的复杂性。 使用系统提供的绑定的应用程序不需要对堆栈的完全控制权限。 在每个系统提供的绑定上公开的属性最适合绑定所针对的使用方案。  
@@ -19,7 +19,7 @@ ms.locfileid: "32747816"
   
  无法向系统提供的绑定添加元素或属性。 为此，应该按照本主题的“自定义绑定”节中的描述来实现自定义绑定。 可以定义一个自定义绑定，该自定义绑定将完全模仿系统提供的绑定，并添加用户应用程序希望获得其控制权限的一些设置。  
   
- 系统提供的绑定的列表，请参阅[系统提供的绑定](../../../../../docs/framework/wcf/system-provided-bindings.md)。  
+ 有关系统提供的绑定的列表，请参阅[System-Provided Bindings](../../../../../docs/framework/wcf/system-provided-bindings.md)。  
   
 ## <a name="custom-binding"></a>自定义绑定  
  自定义绑定提供了对 WCF 消息堆栈的完全控制。 单个绑定按照堆栈元素在堆栈上出现的顺序来指定它们的配置元素，从而定义消息堆栈。 每个元素都定义和配置了该堆栈的一个元素。 在每个自定义绑定中，必须有且只能有一个 `transport` 元素。 如果没有该元素，消息堆栈将是不完整的。  
@@ -36,13 +36,13 @@ ms.locfileid: "32747816"
   
 5.  传输  
   
- 自定义绑定由其 `name` 特性来标识。 有关自定义绑定的详细信息，请参阅[自定义绑定](../../../../../docs/framework/wcf/extending/custom-bindings.md)。  
+ 自定义绑定由其 `name` 特性来标识。 自定义绑定的详细信息，请参阅[自定义绑定](../../../../../docs/framework/wcf/extending/custom-bindings.md)。  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.ServiceModel.Configuration.BindingsSection>  
- <xref:System.ServiceModel.Channels.Binding>  
- <xref:System.ServiceModel.Channels.BindingElement>  
- [绑定](../../../../../docs/framework/wcf/bindings.md)  
- [自定义绑定](../../../../../docs/framework/wcf/extending/custom-bindings.md)  
- [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)  
- [\<绑定 >](../../../../../docs/framework/misc/binding.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.ServiceModel.Configuration.BindingsSection>
+- <xref:System.ServiceModel.Channels.Binding>
+- <xref:System.ServiceModel.Channels.BindingElement>
+- [绑定](../../../../../docs/framework/wcf/bindings.md)
+- [自定义绑定](../../../../../docs/framework/wcf/extending/custom-bindings.md)
+- [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
+- [\<binding>](../../../../../docs/framework/misc/binding.md)

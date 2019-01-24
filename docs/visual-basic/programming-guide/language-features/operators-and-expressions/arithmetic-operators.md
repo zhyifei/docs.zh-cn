@@ -13,12 +13,12 @@ helpviewer_keywords:
 - Visual Basic code, operators
 - arithmetic operators [Visual Basic], about arithmetic operators
 ms.assetid: 325dac7a-ea4f-41d5-8b48-f6e904211569
-ms.openlocfilehash: cd66d08eba973a796472fcbd40a6a84edbbb62ae
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: ff0532c87e03e4b502367313e33ddb9bd12ad8cf
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43499258"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54730732"
 ---
 # <a name="arithmetic-operators-in-visual-basic"></a>算术运算符 (Visual Basic)
 算术运算符用于执行许多熟悉涉及计算的数字表示的文本、 变量、 其他表达式、 函数和属性调用和常量的值的算术运算。 此外属于算术运算符将移位运算符，它在操作数的单个位级别上执行操作并向左或向右移动其位模式。  
@@ -94,10 +94,10 @@ ms.locfileid: "43499258"
   
  如果您设置`Option Strict Off`，但是，Visual Basic 允许隐式收缩转换才能开始，但是它们可能会导致意外丢失数据或精度。 出于此原因，我们建议你使用`Option Strict On`编写生产代码时。 有关详细信息，请参阅 [Widening and Narrowing Conversions](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)。  
   
-## <a name="see-also"></a>请参阅  
- [算术运算符](../../../../visual-basic/language-reference/operators/arithmetic-operators.md)  
- [移位运算符](../../../../visual-basic/language-reference/operators/bit-shift-operators.md)  
- [在 Visual Basic 中的比较运算符](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md)  
- [在 Visual Basic 中的串联运算符](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/concatenation-operators.md)  
- [在 Visual Basic 中的逻辑和位运算符](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/logical-and-bitwise-operators.md)  
- [运算符的有效组合](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/efficient-combination-of-operators.md)
+## <a name="see-also"></a>请参阅
+- [算术运算符](../../../../visual-basic/language-reference/operators/arithmetic-operators.md)
+- [移位运算符](../../../../visual-basic/language-reference/operators/bit-shift-operators.md)
+- [在 Visual Basic 中的比较运算符](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md)
+- [在 Visual Basic 中的串联运算符](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/concatenation-operators.md)
+- [在 Visual Basic 中的逻辑和位运算符](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/logical-and-bitwise-operators.md)
+- [运算符的有效组合](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/efficient-combination-of-operators.md)

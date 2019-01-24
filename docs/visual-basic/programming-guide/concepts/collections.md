@@ -2,12 +2,12 @@
 title: 集合 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 5f7749f3-aaf2-4319-b63c-bfa72e1e2b7a
-ms.openlocfilehash: 60519de1f580bf1cfa4aa067d4a999b20ea8d54d
-ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
+ms.openlocfilehash: 734eeba001c243fa3466ac608feb766d6d94c394
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49087370"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54698760"
 ---
 # <a name="collections-visual-basic"></a>集合 (Visual Basic)
 对于许多应用程序，你会想要创建和管理相关对象的组。 有两种方法对对象进行分组：通过创建对象的数组，以及通过创建对象的集合。  
@@ -236,7 +236,7 @@ End Class
   
  只要可能，则应使用 <xref:System.Collections.Generic?displayProperty=nameWithType> 命名空间或 <xref:System.Collections.Concurrent> 命名空间中的泛型集合而不是 Visual Basic `Collection` 类。  
   
- 有关详细信息，请参阅 <xref:Microsoft.VisualBasic.Collection> 。  
+ 有关详细信息，请参阅 <xref:Microsoft.VisualBasic.Collection>。  
   
 <a name="BKMK_KeyValuePairs"></a>
 ## <a name="implementing-a-collection-of-keyvalue-pairs"></a>实现键/值对集合   
@@ -539,7 +539,7 @@ End Class
 ```  
   
 <a name="BKMK_Iterators"></a>
-##  <a name="iterators"></a>迭代器  
+##  <a name="iterators"></a>Iterators  
  迭代器用于对集合执行自定义迭代。 迭代器可以是一种方法，或是一个 `get` 访问器。 迭代器使用[产生](../../../visual-basic/language-reference/statements/yield-statement.md)语句返回一次的集合的每个元素。  
   
  通过使用调用迭代器[为每个...下一步](../../../visual-basic/language-reference/statements/for-each-next-statement.md)语句。 `For Each` 循环的每次迭代都会调用迭代器。 迭代器中到达 `Yield` 语句时，会返回一个表达式，并保留当前在代码中的位置。 下次调用迭代器时，将从该位置重新开始执行。  
@@ -572,13 +572,13 @@ End Function
   
 ## <a name="see-also"></a>请参阅
 
-- [集合初始值设定项](../../../visual-basic/programming-guide/language-features/collection-initializers/index.md)  
-- [编程概念 (Visual Basic)](../../../visual-basic/programming-guide/concepts/index.md)  
-- [Option Strict 语句](../../../visual-basic/language-reference/statements/option-strict-statement.md)  
-- [LINQ to Objects (Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)  
-- [并行 LINQ (PLINQ)](../../../standard/parallel-programming/parallel-linq-plinq.md)  
-- [集合和数据结构](../../../standard/collections/index.md)  
-- [创建和操作集合](https://msdn.microsoft.com/library/2065398e-eb1a-4821-9188-75f16e42e069)  
-- [选择集合类](../../../standard/collections/selecting-a-collection-class.md)  
-- [集合内的比较和排序](../../../standard/collections/comparisons-and-sorts-within-collections.md)  
+- [集合初始值设定项](../../../visual-basic/programming-guide/language-features/collection-initializers/index.md)
+- [编程概念 (Visual Basic)](../../../visual-basic/programming-guide/concepts/index.md)
+- [Option Strict 语句](../../../visual-basic/language-reference/statements/option-strict-statement.md)
+- [LINQ to Objects (Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)
+- [并行 LINQ (PLINQ)](../../../standard/parallel-programming/parallel-linq-plinq.md)
+- [集合和数据结构](../../../standard/collections/index.md)
+- [创建和操作集合](https://msdn.microsoft.com/library/2065398e-eb1a-4821-9188-75f16e42e069)
+- [选择集合类](../../../standard/collections/selecting-a-collection-class.md)
+- [集合内的比较和排序](../../../standard/collections/comparisons-and-sorts-within-collections.md)
 - [何时使用泛型集合](../../../standard/collections/when-to-use-generic-collections.md)

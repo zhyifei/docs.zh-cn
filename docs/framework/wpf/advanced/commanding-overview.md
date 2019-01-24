@@ -13,12 +13,12 @@ helpviewer_keywords:
 - commanding [WPF]
 - CommandManager [WPF]
 ms.assetid: bc208dfe-367d-426a-99de-52b7e7511e81
-ms.openlocfilehash: d41613ce2488fa572fa11def06350ab1e564df6c
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 7358cc97f5b6b822be592c9e78aebbf9078fdd25
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44086214"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54723532"
 ---
 # <a name="commanding-overview"></a>命令概述
 <a name="introduction"></a>命令是 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 中的一种输出机制，与设备输出相比，其提供的输出处理更侧重于语义级别。 示例命令如许多应用程序均具有的“复制”、“剪切”和“粘贴”操作。  
@@ -183,13 +183,13 @@ ms.locfileid: "44086214"
   
  有关创建自定义 <xref:System.Windows.Input.RoutedCommand> 的示例，请参阅[创建自定义 RoutedCommand 示例](https://github.com/Microsoft/WPF-Samples/tree/master/Input%20and%20Commands/CustomRoutedCommand)。  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Windows.Input.RoutedCommand>  
- <xref:System.Windows.Input.CommandBinding>  
- <xref:System.Windows.Input.InputBinding>  
- <xref:System.Windows.Input.CommandManager>  
- [输入概述](../../../../docs/framework/wpf/advanced/input-overview.md)  
- [路由事件概述](../../../../docs/framework/wpf/advanced/routed-events-overview.md)  
- [实现 ICommandSource](../../../../docs/framework/wpf/advanced/how-to-implement-icommandsource.md)  
- [如何：将命令添加到菜单项](https://msdn.microsoft.com/library/013d68a0-5373-4a68-bd91-5de574307370)  
- [创建自定义 RoutedCommand 示例](https://github.com/Microsoft/WPF-Samples/tree/master/Input%20and%20Commands/CustomRoutedCommand)
+## <a name="see-also"></a>请参阅
+- <xref:System.Windows.Input.RoutedCommand>
+- <xref:System.Windows.Input.CommandBinding>
+- <xref:System.Windows.Input.InputBinding>
+- <xref:System.Windows.Input.CommandManager>
+- [输入概述](../../../../docs/framework/wpf/advanced/input-overview.md)
+- [路由事件概述](../../../../docs/framework/wpf/advanced/routed-events-overview.md)
+- [实现 ICommandSource](../../../../docs/framework/wpf/advanced/how-to-implement-icommandsource.md)
+- [如何：将命令添加到菜单项](https://msdn.microsoft.com/library/013d68a0-5373-4a68-bd91-5de574307370)
+- [创建自定义 RoutedCommand 示例](https://github.com/Microsoft/WPF-Samples/tree/master/Input%20and%20Commands/CustomRoutedCommand)

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - XAML [XAML Services], x:Class attribute
 - x:Class attribute [XAML Services]
 ms.assetid: bc4a3d8e-76e2-423e-a5d1-159a023e82ec
-ms.openlocfilehash: a29a645a05f0d3b0e8611dd722c5018f295f3070
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 2913782d8179fb882f8e916ed25feafcb5740a3a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43856187"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54690041"
 ---
 # <a name="xclass-directive"></a>x:Class 指令
 配置 XAML 标记编译加入之间标记和代码隐藏的分部类。 代码的分部类定义在单独的代码文件中[!INCLUDE[TLA#tla_cls](../../../includes/tlasharptla-cls-md.md)]语言中，而在 XAML 编译的代码生成通常创建标记分部类。  
@@ -33,7 +33,7 @@ ms.locfileid: "43856187"
 |||  
 |-|-|  
 |`namespace`|可选。 指定[!INCLUDE[TLA2#tla_clr](../../../includes/tla2sharptla-clr-md.md)]命名空间包含由标识的分部类`classname`。 如果`namespace`指定一个点 （.） 分隔`namespace`和`classname`。 请参阅“备注”。|  
-|`classname`|必须的。 指定[!INCLUDE[TLA2#tla_clr](../../../includes/tla2sharptla-clr-md.md)]连接加载的 XAML 和代码隐藏中为该 XAML 的分部类的名称。|  
+|`classname`|必需。 指定[!INCLUDE[TLA2#tla_clr](../../../includes/tla2sharptla-clr-md.md)]连接加载的 XAML 和代码隐藏中为该 XAML 的分部类的名称。|  
   
 ## <a name="dependencies"></a>依赖项  
  `x:Class` 只能指定 XAML 生产的根元素上。 `x:Class` 无效的任何对象，在 XAML 生产环境中具有一个父级。 有关详细信息，请参阅[ \[MS XAML\]部分 4.3.1.6](https://go.microsoft.com/fwlink/?LinkId=114525)。  
@@ -60,8 +60,8 @@ ms.locfileid: "43856187"
 ## <a name="silverlight-usage-notes"></a>Silverlight Usage 备注。  
  `x:Class` 适用于 Silverlight 单独说明了。 有关详细信息，请参阅[XAML Namespace （x:）语言功能 (Silverlight)](https://go.microsoft.com/fwlink/?LinkId=199081)。  
   
-## <a name="see-also"></a>请参阅  
- [x:Subclass 指令](../../../docs/framework/xaml-services/x-subclass-directive.md)  
- [XAML 及 WPF 的自定义类](../../../docs/framework/wpf/advanced/xaml-and-custom-classes-for-wpf.md)  
- [x:ClassModifier 指令](../../../docs/framework/xaml-services/x-classmodifier-directive.md)  
- [从 WPF 迁移到 System.Xaml 的类型](../../../docs/framework/xaml-services/types-migrated-from-wpf-to-system-xaml.md)
+## <a name="see-also"></a>请参阅
+- [x:Subclass 指令](../../../docs/framework/xaml-services/x-subclass-directive.md)
+- [XAML 及 WPF 的自定义类](../../../docs/framework/wpf/advanced/xaml-and-custom-classes-for-wpf.md)
+- [x:ClassModifier 指令](../../../docs/framework/xaml-services/x-classmodifier-directive.md)
+- [从 WPF 迁移到 System.Xaml 的类型](../../../docs/framework/xaml-services/types-migrated-from-wpf-to-system-xaml.md)
