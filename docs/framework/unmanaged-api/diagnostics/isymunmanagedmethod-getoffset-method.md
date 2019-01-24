@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6d88e9279f70c36fd8a9c626972e33305cded5fb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 6485688c2964d477f0c5f68a3da714f084fa308f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33424386"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54515296"
 ---
-# <a name="isymunmanagedmethodgetoffset-method"></a><span data-ttu-id="dd734-102">ISymUnmanagedMethod::GetOffset 方法</span><span class="sxs-lookup"><span data-stu-id="dd734-102">ISymUnmanagedMethod::GetOffset Method</span></span>
-<span data-ttu-id="dd734-103">返回到文档内的给定位置在此方法的相对应的偏移量。</span><span class="sxs-lookup"><span data-stu-id="dd734-103">Returns the offset within this method that corresponds to a given position within a document.</span></span>  
+# <a name="isymunmanagedmethodgetoffset-method"></a><span data-ttu-id="7d960-102">ISymUnmanagedMethod::GetOffset 方法</span><span class="sxs-lookup"><span data-stu-id="7d960-102">ISymUnmanagedMethod::GetOffset Method</span></span>
+<span data-ttu-id="7d960-103">返回到文档中的给定位置中此方法相对应的偏移量。</span><span class="sxs-lookup"><span data-stu-id="7d960-103">Returns the offset within this method that corresponds to a given position within a document.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="dd734-104">语法</span><span class="sxs-lookup"><span data-stu-id="dd734-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="7d960-104">语法</span><span class="sxs-lookup"><span data-stu-id="7d960-104">Syntax</span></span>  
   
 ```  
 HRESULT GetOffset(  
@@ -37,24 +37,24 @@ HRESULT GetOffset(
     [out, retval] ULONG32*        pRetVal);  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="dd734-105">参数</span><span class="sxs-lookup"><span data-stu-id="dd734-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="7d960-105">参数</span><span class="sxs-lookup"><span data-stu-id="7d960-105">Parameters</span></span>  
  `document`  
- <span data-ttu-id="dd734-106">[in]指向为其请求偏移量的文档的指针。</span><span class="sxs-lookup"><span data-stu-id="dd734-106">[in] A pointer to the document for which the offset is requested.</span></span>  
+ <span data-ttu-id="7d960-106">[in]指向为其请求偏移量的文档的指针。</span><span class="sxs-lookup"><span data-stu-id="7d960-106">[in] A pointer to the document for which the offset is requested.</span></span>  
   
  `line`  
- <span data-ttu-id="dd734-107">[in]为其请求偏移量的文档行。</span><span class="sxs-lookup"><span data-stu-id="dd734-107">[in] The document line for which the offset is requested.</span></span>  
+ <span data-ttu-id="7d960-107">[in]为其请求偏移量的文档行。</span><span class="sxs-lookup"><span data-stu-id="7d960-107">[in] The document line for which the offset is requested.</span></span>  
   
  `column`  
- <span data-ttu-id="dd734-108">[in]为其请求偏移量的文档列。</span><span class="sxs-lookup"><span data-stu-id="dd734-108">[in] The document column for which the offset is requested.</span></span>  
+ <span data-ttu-id="7d960-108">[in]为其请求偏移量的文档列。</span><span class="sxs-lookup"><span data-stu-id="7d960-108">[in] The document column for which the offset is requested.</span></span>  
   
  `pRetVal`  
- <span data-ttu-id="dd734-109">[out]指向的指针`ULONG32`接收偏移量。</span><span class="sxs-lookup"><span data-stu-id="dd734-109">[out] A pointer to a `ULONG32` that receives the offsets.</span></span>  
+ <span data-ttu-id="7d960-109">[out]一个指向`ULONG32`，它接收的偏移量。</span><span class="sxs-lookup"><span data-stu-id="7d960-109">[out] A pointer to a `ULONG32` that receives the offsets.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="dd734-110">返回值</span><span class="sxs-lookup"><span data-stu-id="dd734-110">Return Value</span></span>  
- <span data-ttu-id="dd734-111">如果该方法成功; 则为 S_OK否则为 E_FAIL 或某些其他错误代码。</span><span class="sxs-lookup"><span data-stu-id="dd734-111">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="7d960-110">返回值</span><span class="sxs-lookup"><span data-stu-id="7d960-110">Return Value</span></span>  
+ <span data-ttu-id="7d960-111">如果方法成功，则为 S_OK否则为 E_FAIL 或某些其他错误代码。</span><span class="sxs-lookup"><span data-stu-id="7d960-111">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="dd734-112">要求</span><span class="sxs-lookup"><span data-stu-id="dd734-112">Requirements</span></span>  
- <span data-ttu-id="dd734-113">**标头：** CorSym.idl、 CorSym.h</span><span class="sxs-lookup"><span data-stu-id="dd734-113">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="7d960-112">要求</span><span class="sxs-lookup"><span data-stu-id="7d960-112">Requirements</span></span>  
+ <span data-ttu-id="7d960-113">**标头：** CorSym.idl CorSym.h</span><span class="sxs-lookup"><span data-stu-id="7d960-113">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="dd734-114">请参阅</span><span class="sxs-lookup"><span data-stu-id="dd734-114">See Also</span></span>  
- [<span data-ttu-id="dd734-115">ISymUnmanagedMethod 接口</span><span class="sxs-lookup"><span data-stu-id="dd734-115">ISymUnmanagedMethod Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md)
+## <a name="see-also"></a><span data-ttu-id="7d960-114">请参阅</span><span class="sxs-lookup"><span data-stu-id="7d960-114">See also</span></span>
+- [<span data-ttu-id="7d960-115">ISymUnmanagedMethod 接口</span><span class="sxs-lookup"><span data-stu-id="7d960-115">ISymUnmanagedMethod Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md)

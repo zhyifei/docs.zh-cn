@@ -1,23 +1,23 @@
 ---
-title: 在委托 (Visual Basic 中) 中使用变体
+title: 使用委托 (Visual Basic 中) 中的方差
 ms.date: 07/20/2015
 ms.assetid: 7b5c20f1-6416-46a3-94b6-f109c31c842c
-ms.openlocfilehash: c2390d95bd6bab9f5625c6ec08c374f469f1fc55
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e0b0df354c6c31eed41ead2bb0b2a1aaa4ac9922
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33644129"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54690821"
 ---
-# <a name="using-variance-in-delegates-visual-basic"></a><span data-ttu-id="0ca7b-102">在委托 (Visual Basic 中) 中使用变体</span><span class="sxs-lookup"><span data-stu-id="0ca7b-102">Using Variance in Delegates (Visual Basic)</span></span>
-<span data-ttu-id="0ca7b-103">向委托分配方法时，协变和逆变为匹配委托类型和方法签名提供了灵活性。</span><span class="sxs-lookup"><span data-stu-id="0ca7b-103">When you assign a method to a delegate, *covariance* and *contravariance* provide flexibility for matching a delegate type with a method signature.</span></span> <span data-ttu-id="0ca7b-104">协变允许方法具有的派生返回类型多于委托中定义的类型。</span><span class="sxs-lookup"><span data-stu-id="0ca7b-104">Covariance permits a method to have return type that is more derived than that defined in the delegate.</span></span> <span data-ttu-id="0ca7b-105">逆变允许方法具有的派生参数类型少于委托类型中的类型。</span><span class="sxs-lookup"><span data-stu-id="0ca7b-105">Contravariance permits a method that has parameter types that are less derived than those in the delegate type.</span></span>  
+# <a name="using-variance-in-delegates-visual-basic"></a><span data-ttu-id="a2470-102">使用委托 (Visual Basic 中) 中的方差</span><span class="sxs-lookup"><span data-stu-id="a2470-102">Using Variance in Delegates (Visual Basic)</span></span>
+<span data-ttu-id="a2470-103">向委托分配方法时，协变和逆变为匹配委托类型和方法签名提供了灵活性。</span><span class="sxs-lookup"><span data-stu-id="a2470-103">When you assign a method to a delegate, *covariance* and *contravariance* provide flexibility for matching a delegate type with a method signature.</span></span> <span data-ttu-id="a2470-104">协变允许方法具有的派生返回类型多于委托中定义的类型。</span><span class="sxs-lookup"><span data-stu-id="a2470-104">Covariance permits a method to have return type that is more derived than that defined in the delegate.</span></span> <span data-ttu-id="a2470-105">逆变允许方法具有的派生参数类型少于委托类型中的类型。</span><span class="sxs-lookup"><span data-stu-id="a2470-105">Contravariance permits a method that has parameter types that are less derived than those in the delegate type.</span></span>  
   
-## <a name="example-1-covariance"></a><span data-ttu-id="0ca7b-106">示例 1：协变</span><span class="sxs-lookup"><span data-stu-id="0ca7b-106">Example 1: Covariance</span></span>  
+## <a name="example-1-covariance"></a><span data-ttu-id="a2470-106">示例 1:协变</span><span class="sxs-lookup"><span data-stu-id="a2470-106">Example 1: Covariance</span></span>  
   
-### <a name="description"></a><span data-ttu-id="0ca7b-107">描述</span><span class="sxs-lookup"><span data-stu-id="0ca7b-107">Description</span></span>  
- <span data-ttu-id="0ca7b-108">本示例演示如何将委托与具有返回类型的方法一起使用，这些返回类型派生自委托签名中的返回类型。</span><span class="sxs-lookup"><span data-stu-id="0ca7b-108">This example demonstrates how delegates can be used with methods that have return types that are derived from the return type in the delegate signature.</span></span> <span data-ttu-id="0ca7b-109">`DogsHandler` 返回的数据类型属于 `Dogs` 类型，它派生自委托中定义的 `Mammals` 类型。</span><span class="sxs-lookup"><span data-stu-id="0ca7b-109">The data type returned by `DogsHandler` is of type `Dogs`, which derives from the `Mammals` type that is defined in the delegate.</span></span>  
+### <a name="description"></a><span data-ttu-id="a2470-107">描述</span><span class="sxs-lookup"><span data-stu-id="a2470-107">Description</span></span>  
+ <span data-ttu-id="a2470-108">本示例演示如何将委托与具有返回类型的方法一起使用，这些返回类型派生自委托签名中的返回类型。</span><span class="sxs-lookup"><span data-stu-id="a2470-108">This example demonstrates how delegates can be used with methods that have return types that are derived from the return type in the delegate signature.</span></span> <span data-ttu-id="a2470-109">`DogsHandler` 返回的数据类型属于 `Dogs` 类型，它派生自委托中定义的 `Mammals` 类型。</span><span class="sxs-lookup"><span data-stu-id="a2470-109">The data type returned by `DogsHandler` is of type `Dogs`, which derives from the `Mammals` type that is defined in the delegate.</span></span>  
   
-### <a name="code"></a><span data-ttu-id="0ca7b-110">代码</span><span class="sxs-lookup"><span data-stu-id="0ca7b-110">Code</span></span>  
+### <a name="code"></a><span data-ttu-id="a2470-110">代码</span><span class="sxs-lookup"><span data-stu-id="a2470-110">Code</span></span>  
   
 ```vb  
 Class Mammals  
@@ -42,12 +42,12 @@ Class Test
 End Class  
 ```  
   
-## <a name="example-2-contravariance"></a><span data-ttu-id="0ca7b-111">示例 2：逆变</span><span class="sxs-lookup"><span data-stu-id="0ca7b-111">Example 2: Contravariance</span></span>  
+## <a name="example-2-contravariance"></a><span data-ttu-id="a2470-111">示例 2：逆变</span><span class="sxs-lookup"><span data-stu-id="a2470-111">Example 2: Contravariance</span></span>  
   
-### <a name="description"></a><span data-ttu-id="0ca7b-112">描述</span><span class="sxs-lookup"><span data-stu-id="0ca7b-112">Description</span></span>  
- <span data-ttu-id="0ca7b-113">本示例演示如何将委托与具有某个类型的参数的方法一起使用，这些返回类型是委托签名参数类型的基类型。</span><span class="sxs-lookup"><span data-stu-id="0ca7b-113">This example demonstrates how delegates can be used with methods that have parameters of a type that are base types of the delegate signature parameter type.</span></span> <span data-ttu-id="0ca7b-114">通过逆变可以使用一个事件处理程序而不是多个单独的处理程序。</span><span class="sxs-lookup"><span data-stu-id="0ca7b-114">With contravariance, you can use one event handler instead of separate handlers.</span></span> <span data-ttu-id="0ca7b-115">例如，可以创建接受 `EventArgs` 输入参数的事件处理程序，并将其与将 `MouseEventArgs` 类型作为参数发送的 `Button.MouseClick` 事件一起使用，也可以将其与发送 `KeyEventArgs` 参数的 `TextBox.KeyDown` 事件一起使用。</span><span class="sxs-lookup"><span data-stu-id="0ca7b-115">For example, you can create an event handler that accepts an `EventArgs` input parameter and use it with a `Button.MouseClick` event that sends a `MouseEventArgs` type as a parameter, and also with a `TextBox.KeyDown` event that sends a `KeyEventArgs` parameter.</span></span>  
+### <a name="description"></a><span data-ttu-id="a2470-112">描述</span><span class="sxs-lookup"><span data-stu-id="a2470-112">Description</span></span>  
+ <span data-ttu-id="a2470-113">本示例演示如何将委托与具有某个类型的参数的方法一起使用，这些返回类型是委托签名参数类型的基类型。</span><span class="sxs-lookup"><span data-stu-id="a2470-113">This example demonstrates how delegates can be used with methods that have parameters of a type that are base types of the delegate signature parameter type.</span></span> <span data-ttu-id="a2470-114">通过逆变可以使用一个事件处理程序而不是多个单独的处理程序。</span><span class="sxs-lookup"><span data-stu-id="a2470-114">With contravariance, you can use one event handler instead of separate handlers.</span></span> <span data-ttu-id="a2470-115">例如，可以创建接受 `EventArgs` 输入参数的事件处理程序，并将其与将 `MouseEventArgs` 类型作为参数发送的 `Button.MouseClick` 事件一起使用，也可以将其与发送 `KeyEventArgs` 参数的 `TextBox.KeyDown` 事件一起使用。</span><span class="sxs-lookup"><span data-stu-id="a2470-115">For example, you can create an event handler that accepts an `EventArgs` input parameter and use it with a `Button.MouseClick` event that sends a `MouseEventArgs` type as a parameter, and also with a `TextBox.KeyDown` event that sends a `KeyEventArgs` parameter.</span></span>  
   
-### <a name="code"></a><span data-ttu-id="0ca7b-116">代码</span><span class="sxs-lookup"><span data-stu-id="0ca7b-116">Code</span></span>  
+### <a name="code"></a><span data-ttu-id="a2470-116">代码</span><span class="sxs-lookup"><span data-stu-id="a2470-116">Code</span></span>  
   
 ```vb  
 ' Event hander that accepts a parameter of the EventArgs type.  
@@ -69,6 +69,6 @@ Private Sub Form1_Load(ByVal sender As System.Object,
 End Sub  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="0ca7b-117">请参阅</span><span class="sxs-lookup"><span data-stu-id="0ca7b-117">See Also</span></span>  
- [<span data-ttu-id="0ca7b-118">委托中的变体 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="0ca7b-118">Variance in Delegates (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-delegates.md)  
- [<span data-ttu-id="0ca7b-119">对 Func 和 Action 泛型委托使用变体 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="0ca7b-119">Using Variance for Func and Action Generic Delegates (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md)
+## <a name="see-also"></a><span data-ttu-id="a2470-117">请参阅</span><span class="sxs-lookup"><span data-stu-id="a2470-117">See also</span></span>
+- [<span data-ttu-id="a2470-118">委托中的变体 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="a2470-118">Variance in Delegates (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-delegates.md)
+- [<span data-ttu-id="a2470-119">对 Func 和 Action 泛型委托使用变体 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="a2470-119">Using Variance for Func and Action Generic Delegates (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md)
