@@ -1,17 +1,11 @@
 ---
-title: 接口 - C# 编程指南
+title: '接口 - C# 编程指南'
 ms.custom: seodec18
 ms.date: 08/21/2018
 helpviewer_keywords:
-- interfaces [C#]
-- C# language, interfaces
+  - 'interfaces [C#]'
+  - 'C# language, interfaces'
 ms.assetid: 2feda177-ce11-432d-81b4-d50f5f35fd37
-ms.openlocfilehash: 33e3feb874b8ddb13788a2a3a2bb69a199335e54
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
-ms.translationtype: HT
-ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53245436"
 ---
 # <a name="interfaces-c-programming-guide"></a>接口（C# 编程指南）
 

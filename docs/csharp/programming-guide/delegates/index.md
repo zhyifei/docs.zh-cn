@@ -1,17 +1,11 @@
 ---
-title: 委托 - C# 编程指南
+title: '委托 - C# 编程指南'
 ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
-- C# language, delegates
-- delegates [C#]
+  - 'C# language, delegates'
+  - 'delegates [C#]'
 ms.assetid: 97de039b-c76b-4b9c-a27d-8c1e1c8d93da
-ms.openlocfilehash: 1352b7b6d2146f4cf043034b8b24d7a737f93c3b
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
-ms.translationtype: HT
-ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53240432"
 ---
 # <a name="delegates-c-programming-guide"></a>委托（C# 编程指南）
 [委托](../../../csharp/language-reference/keywords/delegate.md)是一种引用类型，表示对具有特定参数列表和返回类型的方法的引用。 在实例化委托时，你可以将其实例与任何具有兼容签名和返回类型的方法相关联。 你可以通过委托实例调用方法。  
@@ -70,6 +64,6 @@ ms.locfileid: "53240432"
   
 ## <a name="see-also"></a>请参阅
 
-- <xref:System.Delegate>  
-- [C# 编程指南](../../../csharp/programming-guide/index.md)  
+- <xref:System.Delegate>
+- [C# 编程指南](../../../csharp/programming-guide/index.md)
 - [事件](../../../csharp/programming-guide/events/index.md)
