@@ -3,18 +3,13 @@ title: .NET Framework 入门
 ms.custom: updateeachrelease
 ms.date: 04/10/2018
 helpviewer_keywords:
-- .NET Framework, getting started
-- getting started [.NET Framework]
+  - '.NET Framework, getting started'
+  - 'getting started [.NET Framework]'
 ms.assetid: c693fd34-88fe-4d90-b332-19eeadf3b7e7
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6d241f0f0c10be4a73c7ac55930e5dd24ef0b1e2
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
-ms.translationtype: HT
-ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49453130"
 ---
+
 # <a name="get-started-with-the-net-framework"></a>.NET Framework 入门
 
 .NET Framework 是管理面向 .NET Framework 的应用的运行时执行环境。 它包括公共语言运行时（提供内存管理和其他系统服务）和一个全面的类库（使程序员能利用强大可靠的代码实现所有主要领域的应用开发）。
@@ -77,7 +72,7 @@ ms.locfileid: "49453130"
 
 ## <a name="related-topics"></a>相关主题
 
-| 标题 | 描述 |
+| Title | 说明 |
 | ----- |------------ |
 | [概述](../../../docs/framework/get-started/overview.md) | 为构建面向 .NET Framework 的应用的开发人员提供详细信息。 |
 | [安装指南](../../../docs/framework/install/index.md) | 提供有关安装 .NET Framework 的信息。 |  
@@ -89,7 +84,7 @@ ms.locfileid: "49453130"
 
 ## <a name="see-also"></a>请参阅
 
-- [.NET Framework 指南](../../../docs/framework/index.md)   
-- [新增功能](../../../docs/framework/whats-new/index.md)   
-- [.NET API 浏览器](/dotnet/api/)   
+- [.NET Framework 指南](../../../docs/framework/index.md)
+- [新增功能](../../../docs/framework/whats-new/index.md)
+- [.NET API 浏览器](/dotnet/api/)
 - [开发指南](../../../docs/framework/development-guide.md)
