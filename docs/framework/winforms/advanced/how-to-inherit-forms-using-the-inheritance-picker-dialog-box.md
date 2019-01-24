@@ -1,19 +1,19 @@
 ---
-title: 如何：使用“继承选择器”对话框继承窗体
+title: 如何：使用继承选择器对话框继承窗体
 ms.date: 03/30/2017
 helpviewer_keywords:
 - inheritance [Windows Forms], forms
 - Inheritance Picker dialog box
 - inherited forms [Windows Forms], creating
 ms.assetid: 969b4c04-12aa-4297-93a2-0ae747447823
-ms.openlocfilehash: 7a6de60ec7621792b4f19857a2743f64cbdc686c
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 94fe3d551e8f846d8deec6f2b6ab9e96d91e8335
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48837292"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54601826"
 ---
-# <a name="how-to-inherit-forms-using-the-inheritance-picker-dialog-box"></a>如何：使用“继承选择器”对话框继承窗体
+# <a name="how-to-inherit-forms-using-the-inheritance-picker-dialog-box"></a>如何：使用继承选择器对话框继承窗体
 继承窗体或其他对象最简单的方法是使用“继承选择器”对话框。 通过该对话框，可以充分利用在其他解决方案中创建的代码或用户界面 (UI)。  
   
 > [!NOTE]
@@ -54,10 +54,10 @@ ms.locfileid: "48837292"
      若要了解如何更改基窗体的外观，请参阅[修改基窗体外观的效果](../../../../docs/framework/winforms/advanced/effects-of-modifying-base-form-appearance.md)。  
   
     > [!NOTE]
-    >  将继承的控件和组件与 Windows 窗体上的标准控件和组件组合到一起时，可能会与 Z 排序发生冲突。 可通过修改 z 顺序纠正冲突，方法是单击“格式”菜单，指向“排序”，然后单击“置于顶层”或“置于底层”。 若要详细了解控件的 z 顺序，请参阅[如何：对 Windows 窗体上的对象分层](../../../../docs/framework/winforms/controls/how-to-layer-objects-on-windows-forms.md)。  
+    >  将继承的控件和组件与 Windows 窗体上的标准控件和组件组合到一起时，可能会与 Z 排序发生冲突。 可通过修改 z 顺序纠正冲突，方法是单击“格式”菜单，指向“排序”，然后单击“置于顶层”或“置于底层”。 控件的 z 顺序的详细信息，请参阅[如何：在 Windows 窗体上的对象分层](../../../../docs/framework/winforms/controls/how-to-layer-objects-on-windows-forms.md)。  
   
-## <a name="see-also"></a>请参阅  
- [Inherits 语句](~/docs/visual-basic/language-reference/statements/inherits-statement.md)  
- [using](~/docs/csharp/language-reference/keywords/using.md)  
- [修改基窗体的外观的效果](../../../../docs/framework/winforms/advanced/effects-of-modifying-base-form-appearance.md)  
- [Windows 窗体可视化继承](../../../../docs/framework/winforms/advanced/windows-forms-visual-inheritance.md)
+## <a name="see-also"></a>请参阅
+- [Inherits 语句](~/docs/visual-basic/language-reference/statements/inherits-statement.md)
+- [using](~/docs/csharp/language-reference/keywords/using.md)
+- [修改基窗体的外观的效果](../../../../docs/framework/winforms/advanced/effects-of-modifying-base-form-appearance.md)
+- [Windows 窗体可视化继承](../../../../docs/framework/winforms/advanced/windows-forms-visual-inheritance.md)

@@ -1,20 +1,20 @@
 ---
-title: '&lt;DiscoveryEndpoint&gt;'
+title: '&lt;discoveryEndpoint&gt;'
 ms.date: 03/30/2017
 ms.assetid: fae2f48b-a635-4e4b-859d-a1432ac37e1c
-ms.openlocfilehash: ab00a80904cdcd2844a44c154edb2e424633427b
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: b3254a1c3d7fa581b4f7573d693261f5a224515d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54145375"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54524164"
 ---
-# <a name="ltdiscoveryendpointgt"></a>&lt;DiscoveryEndpoint&gt;
+# <a name="ltdiscoveryendpointgt"></a>&lt;discoveryEndpoint&gt;
 
 此配置元素定义具有固定发现协定的标准终结点。 将此元素添加到服务配置后，该元素将指定侦听发现消息的位置。 将此元素添加到客户端配置后，该元素将指定发送发现查询的位置。  
   
 \<system.serviceModel>  
-\<standardEndpoints >  
+\<standardEndpoints>  
   
 ## <a name="syntax"></a>语法  
   
@@ -52,7 +52,7 @@ ms.locfileid: "54145375"
 
 | 元素 | 描述 |  
 | ------- | ----------- |  
-| [\<standardEndpoints >](../../../../../docs/framework/configure-apps/file-schema/wcf/standardendpoints.md) | 具有一个或多个固定属性（地址、绑定和协定）的预定义终结点的标准终结点集合。 |  
+| [\<standardEndpoints>](../../../../../docs/framework/configure-apps/file-schema/wcf/standardendpoints.md) | 具有一个或多个固定属性（地址、绑定和协定）的预定义终结点的标准终结点集合。 |  
   
 ## <a name="example"></a>示例
 
@@ -85,4 +85,4 @@ ms.locfileid: "54145375"
   
 ## <a name="see-also"></a>请参阅
 
-<xref:System.ServiceModel.Discovery.DiscoveryEndpoint>
+- <xref:System.ServiceModel.Discovery.DiscoveryEndpoint>

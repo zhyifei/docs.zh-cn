@@ -2,12 +2,12 @@
 title: 联接操作 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 39ab4854-ac84-4738-9d0b-3cb79be84db4
-ms.openlocfilehash: 660b6d04e0a807a3072cff51d885999545052018
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 6113949986aafdcaa2afa55d0a56d8e2186811b7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48025329"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54527856"
 ---
 # <a name="join-operations-visual-basic"></a>联接操作 (Visual Basic)
 联接两个数据源就是将一个数据源中的对象与另一个数据源中具有相同公共属性的对象相关联。  
@@ -29,10 +29,10 @@ ms.locfileid: "48025329"
   
 ## <a name="see-also"></a>请参阅
 
-- <xref:System.Linq>  
-- [标准查询运算符概述 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)  
-- [匿名类型](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)  
-- [构建联接和叉积查询](../../../../framework/data/adonet/sql/linq/formulate-joins-and-cross-product-queries.md)  
-- [Join 子句](../../../../visual-basic/language-reference/queries/join-clause.md)  
-- [如何： 联接不同文件 (LINQ) (Visual Basic 中) 的内容](../../../../visual-basic/programming-guide/concepts/linq/how-to-join-content-from-dissimilar-files-linq.md)  
-- [如何： 从多个源 (LINQ) (Visual Basic) 填充对象集合](../../../../visual-basic/programming-guide/concepts/linq/how-to-populate-object-collections-from-multiple-sources-linq.md)
+- <xref:System.Linq>
+- [标准查询运算符概述 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)
+- [匿名类型](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)
+- [构建联接和叉积查询](../../../../framework/data/adonet/sql/linq/formulate-joins-and-cross-product-queries.md)
+- [Join 子句](../../../../visual-basic/language-reference/queries/join-clause.md)
+- [如何：联接不同文件 (LINQ) (Visual Basic 中) 的内容](../../../../visual-basic/programming-guide/concepts/linq/how-to-join-content-from-dissimilar-files-linq.md)
+- [如何：从多个源 (LINQ) (Visual Basic) 填充对象集合](../../../../visual-basic/programming-guide/concepts/linq/how-to-populate-object-collections-from-multiple-sources-linq.md)

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 755c64aa00b82bf2d8213217787f4dc1916c0898
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: d92129bd7c51ba2fa574f8337ba2b3727ab7b172
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33443295"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54599044"
 ---
 # <a name="imetadataassemblyemitsetmanifestresourceprops-method"></a>IMetaDataAssemblyEmit::SetManifestResourceProps 方法
 修改指定的 `ManifestResource` 元数据结构。  
@@ -43,10 +43,10 @@ HRESULT SetManifestResourceProps (
  [in]指定的令牌`ManifestResource`要修改的元数据结构。  
   
  `tkImplementation`  
- [in]类型的标记，`File`或`AssemblyRef`，映射到资源提供程序。  
+ [in]类型的标记`File`或`AssemblyRef`，映射到资源提供程序。  
   
  `dwOffset`  
- [in]到文件中的资源的开头的偏移量。  
+ [in]到文件中资源的开头的偏移量。  
   
  `dwResourceFlags`  
  [in]指定资源的属性的标志值的按位组合。  
@@ -55,13 +55,13 @@ HRESULT SetManifestResourceProps (
  若要创建`ManifestResource`元数据结构，使用[imetadataassemblyemit:: Definemanifestresource](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-definemanifestresource-method.md)方法。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** Cor.h  
   
  **库：** 用作 MsCorEE.dll 中的资源  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>请参阅  
- [IMetaDataAssemblyEmit 接口](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)
+## <a name="see-also"></a>请参阅
+- [IMetaDataAssemblyEmit 接口](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)

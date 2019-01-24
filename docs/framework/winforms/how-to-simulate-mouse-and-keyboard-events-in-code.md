@@ -1,5 +1,5 @@
 ---
-title: 如何：在代码中模拟鼠标和键盘事件
+title: 如何：模拟鼠标和键盘事件中的代码
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - mouse clicks [Windows Forms], simulating
 - mouse [Windows Forms], event simulation
 ms.assetid: 6abcb67e-3766-4af2-9590-bf5dabd17e41
-ms.openlocfilehash: 56c7d534d5428ff116c6de1aeffd9a31bd7a5063
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 56291df0db8daf6d166800c0b9638c43e6b545f6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43798108"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54610569"
 ---
-# <a name="how-to-simulate-mouse-and-keyboard-events-in-code"></a>如何：在代码中模拟鼠标和键盘事件
+# <a name="how-to-simulate-mouse-and-keyboard-events-in-code"></a>如何：模拟鼠标和键盘事件中的代码
 Windows 窗体提供多个选项，用于以编程方式模拟鼠标和键盘输入。 本主题将简要阐述这些选项。  
   
 ## <a name="simulating-mouse-input"></a>模拟鼠标输入  
@@ -87,7 +87,7 @@ Windows 窗体提供多个选项，用于以编程方式模拟鼠标和键盘输
   
 -   对 System、System.Drawing 和 System.Windows.Forms 程序集的引用。  
   
- Visual Basic 或 Visual C# 生成命令行中的此示例的信息，请参阅[从命令行生成](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md)或[命令行上使用 csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)。 也可以通过将代码粘贴到新的项目中生成此示例在 Visual Studio 中。  另请参阅[如何：使用 Visual Studio 编译和运行完整的 Windows 窗体代码示例](https://msdn.microsoft.com/library/Bb129228\(v=vs.110\))。  
+ Visual Basic 或 Visual C# 生成命令行中的此示例的信息，请参阅[从命令行生成](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md)或[命令行上使用 csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)。 也可以通过将代码粘贴到新的项目中生成此示例在 Visual Studio 中。  另请参阅[如何：编译和运行完整的 Windows 窗体代码示例使用 Visual Studio](https://msdn.microsoft.com/library/Bb129228\(v=vs.110\))。  
   
-## <a name="see-also"></a>请参阅  
- [Windows 窗体中的用户输入](../../../docs/framework/winforms/user-input-in-windows-forms.md)
+## <a name="see-also"></a>请参阅
+- [Windows 窗体中的用户输入](../../../docs/framework/winforms/user-input-in-windows-forms.md)

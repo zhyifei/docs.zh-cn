@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a1239546072192d6ff9497013ad7b7140ea13085
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 496082bbf89ceb93ba3dceef9a9222425db71784
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33443237"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54522409"
 ---
 # <a name="iceegencomputepointer-method"></a>ICeeGen::ComputePointer 方法
 确定指定的代码部分的缓冲区。  
@@ -41,22 +41,22 @@ HRESULT ComputePointer (
   
 #### <a name="parameters"></a>参数  
  `section`  
- [in]为其返回缓冲区的代码部分。  
+ [in]要为其返回缓冲区在代码部分。  
   
  `RVA`  
- [in]若要获取的指针的方法相对虚拟地址。  
+ [in]要为其获取一个指针，该方法相对虚拟地址。  
   
  `lpBuffer`  
  [out]指向返回的缓冲区的指针。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** Cor.h  
   
  **库：** 用作 MsCorEE.dll 中的资源  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>请参阅  
- [ICeeGen 接口](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)
+## <a name="see-also"></a>请参阅
+- [ICeeGen 接口](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)

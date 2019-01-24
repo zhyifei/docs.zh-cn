@@ -2,12 +2,12 @@
 title: SQL Server 中的身份验证
 ms.date: 05/22/2018
 ms.assetid: 646ddbf5-dd4e-4285-8e4a-f565f666c5cc
-ms.openlocfilehash: 0172259446724e0be85bd7ca2d15cf299db04e27
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: 060d756306226ef34fb968a87425bc0d4ea545f6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53613097"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54630926"
 ---
 # <a name="authentication-in-sql-server"></a>SQL Server 中的身份验证
 SQL Server 支持两种身份验证模式，Windows 身份验证模式和混合模式。  
@@ -78,9 +78,9 @@ SQL Server 支持两种身份验证模式，Windows 身份验证模式和混合�
 |--------------|-----------------|  
 |[主体](/sql/relational-databases/security/authentication-access/principals-database-engine)|描述登录和其他 SQL Server 中的安全主体。|  
   
-## <a name="see-also"></a>请参阅  
- [保证 ADO.NET 应用程序的安全](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
- [SQL Server 中的应用程序安全性方案](../../../../../docs/framework/data/adonet/sql/application-security-scenarios-in-sql-server.md)  
- [连接到数据源](../../../../../docs/framework/data/adonet/connecting-to-a-data-source.md)  
- [连接字符串](../../../../../docs/framework/data/adonet/connection-strings.md)  
- [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>请参阅
+- [保证 ADO.NET 应用程序的安全](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
+- [SQL Server 中的应用程序安全性方案](../../../../../docs/framework/data/adonet/sql/application-security-scenarios-in-sql-server.md)
+- [连接到数据源](../../../../../docs/framework/data/adonet/connecting-to-a-data-source.md)
+- [连接字符串](../../../../../docs/framework/data/adonet/connection-strings.md)
+- [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)

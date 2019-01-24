@@ -2,18 +2,18 @@
 title: '&lt;rsa&gt;'
 ms.date: 03/30/2017
 ms.assetid: ae1f2267-e40d-42ff-8abf-06ab7067bdb9
-ms.openlocfilehash: 8005fd67b92cb14d82b525e7c990f9d58aef7b58
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 74da1e2ae02f151f928afec24d6af3adf703bdcd
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54145336"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54612779"
 ---
 # <a name="ltrsagt"></a>&lt;rsa&gt;
 通过此标识连接到终结点的安全 WCF 客户端将验证在服务器提供的众多声明中是否具有一个包含用于构建此标识的 RSA 公钥的声明。  
   
- \<标识 >  
-\<rsa >  
+ \<identity>  
+\<rsa>  
   
 ## <a name="syntax"></a>语法  
   
@@ -37,7 +37,7 @@ ms.locfileid: "54145336"
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<标识 >](../../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)|指定要由客户端进行身份验证的服务的标识。|  
+|[\<identity>](../../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)|指定要由客户端进行身份验证的服务的标识。|  
   
 ## <a name="remarks"></a>备注  
  您可以通过 RSA 检查将身份验证明确限制为单个基于其 RSA 密钥或生成的个人的 RSA 密钥值的证书。 这样将启用更为严格的特定 RSA 密钥身份验证，不过与此对应的代价是，如果更改 RSA 密钥值，则该服务不可再用于现有客户端。  
@@ -53,10 +53,10 @@ ms.locfileid: "54145336"
 </identity>
 ```  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.ServiceModel.Configuration.IdentityElement>  
- <xref:System.ServiceModel.EndpointAddress>  
- <xref:System.ServiceModel.EndpointAddress.Identity%2A>  
- <xref:System.ServiceModel.RsaEndpointIdentity>  
- [服务标识和身份验证](../../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)  
- [\<标识 >](../../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.ServiceModel.Configuration.IdentityElement>
+- <xref:System.ServiceModel.EndpointAddress>
+- <xref:System.ServiceModel.EndpointAddress.Identity%2A>
+- <xref:System.ServiceModel.RsaEndpointIdentity>
+- [服务标识和身份验证](../../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)
+- [\<identity>](../../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)

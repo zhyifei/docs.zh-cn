@@ -2,20 +2,20 @@
 title: '&lt;localServiceSettings&gt; 元素'
 ms.date: 03/30/2017
 ms.assetid: 0658549c-3f65-46dd-8c5c-9895441ed734
-ms.openlocfilehash: 5d5150590bc0a8a0d21662eadc7dda67aad872ef
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 6427f28bfbaa38df20696911f5f72c73d992c971
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54150274"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54535224"
 ---
 # <a name="ltlocalservicesettingsgt-element"></a>&lt;localServiceSettings&gt; 元素
 指定此绑定的本地服务安全设置。  
   
  \<system.serviceModel>  
-\<绑定 >  
+\<bindings>  
 \<customBinding>  
-\<绑定 >  
+\<binding>  
 \<安全 >  
   
 ## <a name="syntax"></a>语法  
@@ -69,7 +69,7 @@ ms.locfileid: "54150274"
 |元素|描述|  
 |-------------|-----------------|  
 |[\<security>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md)|指定自定义绑定的安全选项。|  
-|[\<secureConversationBootstrap >](../../../../../docs/framework/configure-apps/file-schema/wcf/secureconversationbootstrap.md)|指定用于启动安全对话服务的默认值。|  
+|[\<secureConversationBootstrap>](../../../../../docs/framework/configure-apps/file-schema/wcf/secureconversationbootstrap.md)|指定用于启动安全对话服务的默认值。|  
   
 ## <a name="remarks"></a>备注  
  这些设置并非作为安全策略的组成部分而发布，而且不影响客户端绑定，因此是本地的。  
@@ -86,15 +86,15 @@ ms.locfileid: "54150274"
   
  请注意，在安全对话会话中，绑定上的 `inactivityTimeout` 和 `receiveTimeout` 属性将影响会话超时。 两个属性中时间较短者将确定何时发生超时。  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.ServiceModel.Configuration.LocalServiceSecuritySettingsElement>  
- <xref:System.ServiceModel.Configuration.SecurityElementBase.LocalServiceSettings%2A>  
- <xref:System.ServiceModel.Channels.SecurityBindingElement.LocalServiceSettings%2A>  
- <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings>  
- <xref:System.ServiceModel.Channels.CustomBinding>  
- [绑定](../../../../../docs/framework/wcf/bindings.md)  
- [扩展绑定](../../../../../docs/framework/wcf/extending/extending-bindings.md)  
- [自定义绑定](../../../../../docs/framework/wcf/extending/custom-bindings.md)  
- [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)  
- [如何：创建自定义绑定使用 SecurityBindingElement](../../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)  
- [自定义绑定安全性](../../../../../docs/framework/wcf/samples/custom-binding-security.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.ServiceModel.Configuration.LocalServiceSecuritySettingsElement>
+- <xref:System.ServiceModel.Configuration.SecurityElementBase.LocalServiceSettings%2A>
+- <xref:System.ServiceModel.Channels.SecurityBindingElement.LocalServiceSettings%2A>
+- <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings>
+- <xref:System.ServiceModel.Channels.CustomBinding>
+- [绑定](../../../../../docs/framework/wcf/bindings.md)
+- [扩展绑定](../../../../../docs/framework/wcf/extending/extending-bindings.md)
+- [自定义绑定](../../../../../docs/framework/wcf/extending/custom-bindings.md)
+- [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
+- [如何：创建自定义绑定使用 SecurityBindingElement](../../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)
+- [自定义绑定安全性](../../../../../docs/framework/wcf/samples/custom-binding-security.md)

@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f50a5cb1f16be44b03cd94b69fdf32efa9e9007b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 5227de340bec85620f8c8d45538ad9a9d7f688fb
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33425137"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54630952"
 ---
 # <a name="isymunmanagedreadergetnamespaces-method"></a>ISymUnmanagedReader::GetNamespaces 方法
-获取在此符号存储区中的全局范围内定义的命名空间。  
+获取全局范围内此符号存储区定义的命名空间。  
   
 ## <a name="syntax"></a>语法  
   
@@ -43,16 +43,16 @@ HRESULT GetNamespaces (
  [in]命名空间数组的大小。  
   
  `pcNameSpaces`  
- [out]指向接收命名空间列表的长度的变量的指针。  
+ [out]指向一个变量来接收该命名空间列表的长度的指针。  
   
  `namespaces`  
- [out]指向接收的命名空间列表的变量的指针。  
+ [out]指向一个变量来接收命名空间列表的指针。  
   
 ## <a name="return-value"></a>返回值  
- 如果该方法成功; 则为 S_OK否则为 E_FAIL 或某些其他错误代码。  
+ 如果方法成功，则为 S_OK否则为 E_FAIL 或某些其他错误代码。  
   
 ## <a name="requirements"></a>要求  
- **标头：** CorSym.idl、 CorSym.h  
+ **标头：** CorSym.idl CorSym.h  
   
-## <a name="see-also"></a>请参阅  
- [ISymUnmanagedReader 接口](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)
+## <a name="see-also"></a>请参阅
+- [ISymUnmanagedReader 接口](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)

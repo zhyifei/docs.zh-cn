@@ -2,21 +2,21 @@
 title: '&lt;serviceDebug&gt;'
 ms.date: 03/30/2017
 ms.assetid: 6d7ea986-f232-49fe-842c-f934d9966889
-ms.openlocfilehash: e4f929e5c847c1f8db3a3ab5a8e72ec198c7d223
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 26a84f035246c02898deacfb8fcb2c2101fddf7d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54145804"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54524268"
 ---
 # <a name="ltservicedebuggt"></a>&lt;serviceDebug&gt;
 指定 Windows Communication Foundation (WCF) 服务的调试和帮助信息功能。  
   
  \<system.ServiceModel>  
-\<行为 >  
+\<behaviors>  
 \<serviceBehaviors>  
-\<行为 >  
-\<serviceDebug >  
+\<behavior>  
+\<serviceDebug>  
   
 ## <a name="syntax"></a>语法  
   
@@ -56,7 +56,7 @@ ms.locfileid: "54145804"
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<行为 >](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)|指定行为元素。|  
+|[\<behavior>](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)|指定行为元素。|  
   
 ## <a name="remarks"></a>备注  
  设置`includeExceptionDetailInFaults`到`true`使服务可以返回任何异常，即使未使用声明的异常由应用程序代码引发<xref:System.ServiceModel.FaultContractAttribute>。 此设置在调试服务器引发意外异常的事例时很有用。 通过使用此属性，可以返回未知异常的序列化形式，从而可以检查该异常的更多详细信息。  
@@ -70,9 +70,9 @@ ms.locfileid: "54145804"
   
  可以利用可选的 `httpHelpPageBinding` 和 `httpHelpPageBinding`属性来配置用于访问服务网页的绑定。 如果未指定这两个属性，则根据情况使用相应的默认绑定（采用 HTTP 时为 `HttpTransportBindingElement`，采用 HTTPS 时为 `HttpsTransportBindingElement`）来访问服务帮助页。 请注意：不能将这些属性用于内置 WCF 绑定。 唯一的内部绑定元素支持 xref:System.ServiceModel.Channels.IReplyChannel 绑定 > 将支持。 此外，绑定的 <xref:System.ServiceModel.Channels.MessageVersion?displayProperty=nameWithType> 属性必须为 <xref:System.ServiceModel.Channels.MessageVersion.None?displayProperty=nameWithType>。  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.ServiceModel.Configuration.ServiceDebugElement>  
- <xref:System.ServiceModel.Description.ServiceDebugBehavior>  
- [在协定和服务中指定并处理错误](../../../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)  
- [处理异常和错误](../../../../../docs/framework/wcf/extending/handling-exceptions-and-faults.md)  
- [服务调试行为](../../../../../docs/framework/wcf/samples/service-debug-behavior.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.ServiceModel.Configuration.ServiceDebugElement>
+- <xref:System.ServiceModel.Description.ServiceDebugBehavior>
+- [在协定和服务中指定并处理错误](../../../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)
+- [处理异常和错误](../../../../../docs/framework/wcf/extending/handling-exceptions-and-faults.md)
+- [服务调试行为](../../../../../docs/framework/wcf/samples/service-debug-behavior.md)

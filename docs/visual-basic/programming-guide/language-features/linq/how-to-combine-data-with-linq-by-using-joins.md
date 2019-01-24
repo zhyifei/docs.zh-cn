@@ -1,5 +1,5 @@
 ---
-title: 如何：通过 LINQ 使用联接合并数据 (Visual Basic)
+title: 如何：通过合并数据 LINQ 使用联接 (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
 - queries [LINQ in Visual Basic], joins
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - joining [LINQ in Visual Basic]
 - queries [LINQ in Visual Basic], how-to topics
 ms.assetid: 5b00a478-035b-41c6-8918-be1a97728396
-ms.openlocfilehash: 4db5d288d79379b677bb19b2eba0d094e0d71bc8
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: fd1025d056dfb11d2253a39defb384c1d05efa32
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44177800"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54553693"
 ---
-# <a name="how-to-combine-data-with-linq-by-using-joins-visual-basic"></a>如何：通过 LINQ 使用联接合并数据 (Visual Basic)
+# <a name="how-to-combine-data-with-linq-by-using-joins-visual-basic"></a>如何：通过合并数据 LINQ 使用联接 (Visual Basic)
 Visual Basic 提供了一些`Join`和`Group Join`查询子句以使您能够合并多个集合根据集合之间的常见值的内容。 这些值称为*密钥*值。 开发人员熟悉关系数据库的概念将识别`Join`INNER JOIN 子句和`Group Join`作为，实际上，左外部联接子句。  
   
  本主题中的示例演示了几种方法使用合并数据`Join`和`Group Join`查询子句。  
@@ -79,12 +79,12 @@ Visual Basic 提供了一些`Join`和`Group Join`查询子句以使您能够合�
   
 2.  按 F5 以运行示例。  
   
-## <a name="see-also"></a>请参阅  
- [LINQ](../../../../visual-basic/programming-guide/language-features/linq/index.md)  
- [Visual Basic 中的 LINQ 简介](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)  
- [Join 子句](../../../../visual-basic/language-reference/queries/join-clause.md)  
- [Group Join 子句](../../../../visual-basic/language-reference/queries/group-join-clause.md)  
- [From 子句](../../../../visual-basic/language-reference/queries/from-clause.md)  
- [Where 子句](../../../../visual-basic/language-reference/queries/where-clause.md)  
- [查询](../../../../visual-basic/language-reference/queries/index.md)  
- [使用 LINQ 进行数据转换 (C#)](../../../../csharp/programming-guide/concepts/linq/data-transformations-with-linq.md)
+## <a name="see-also"></a>请参阅
+- [LINQ](../../../../visual-basic/programming-guide/language-features/linq/index.md)
+- [Visual Basic 中的 LINQ 简介](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
+- [Join 子句](../../../../visual-basic/language-reference/queries/join-clause.md)
+- [Group Join 子句](../../../../visual-basic/language-reference/queries/group-join-clause.md)
+- [From 子句](../../../../visual-basic/language-reference/queries/from-clause.md)
+- [Where 子句](../../../../visual-basic/language-reference/queries/where-clause.md)
+- [查询](../../../../visual-basic/language-reference/queries/index.md)
+- [使用 LINQ 进行数据转换 (C#)](../../../../csharp/programming-guide/concepts/linq/data-transformations-with-linq.md)

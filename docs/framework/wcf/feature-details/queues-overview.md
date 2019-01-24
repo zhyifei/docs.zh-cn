@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - queues [WCF], MSMQ integration
 ms.assetid: b8757992-ffce-40ad-9e9b-3243f6d0fce1
-ms.openlocfilehash: c181a415c8702c3032077728139b23e86d85d1f0
-ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
+ms.openlocfilehash: a387627e95ce3bf5cfb095412c7100e1bfbe836d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46562130"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54600422"
 ---
 # <a name="queues-overview"></a>队列概述
 本节介绍与排队通信相关的一般概念和核心概念。 后续各节将有关此处所述的队列概念中如何显示在 Windows Communication Foundation (WCF) 的详细信息。  
@@ -73,14 +73,14 @@ ms.locfileid: "46562130"
 ## <a name="poison-message-queue-programming"></a>病毒消息队列编程  
  在将消息传送到目标队列后，服务在处理该消息时可能会反复出现故障。 例如，从事务的队列中读取消息和更新数据库的应用程序可能会发现数据库暂时已断开连接。 在这种情况下，事务将回滚，会创建一个新的事务，并从队列中重新读取消息。 第二次尝试可能成功，也可能失败。 在某些情况下，根据错误产生的原因，消息传送到应用程序时可能会反复出现故障。 在这种情况下，该消息被认为是“病毒”。 这些消息将移动到可以通过病毒处理应用程序读取的病毒队列中。  
   
-## <a name="see-also"></a>请参阅  
- [在 WCF 中排队](../../../../docs/framework/wcf/feature-details/queuing-in-wcf.md)  
- [在 WCF 中排队](../../../../docs/framework/wcf/feature-details/queuing-in-wcf.md)  
- [会话和队列](../../../../docs/framework/wcf/samples/sessions-and-queues.md)  
- [死信队列](../../../../docs/framework/wcf/samples/dead-letter-queues.md)  
- [可变排队通信](../../../../docs/framework/wcf/samples/volatile-queued-communication.md)  
- [Windows Communication Foundation 到消息队列](../../../../docs/framework/wcf/samples/wcf-to-message-queuing.md)  
- [安装消息队列 (MSMQ)](../../../../docs/framework/wcf/samples/installing-message-queuing-msmq.md)  
- [消息队列集成绑定示例](https://msdn.microsoft.com/library/997d11cb-f2c5-4ba0-9209-92843d4d0e1a)  
- [到 Windows Communication Foundation 的消息队列](../../../../docs/framework/wcf/samples/message-queuing-to-wcf.md)  
- [基于消息队列的消息安全性](../../../../docs/framework/wcf/samples/message-security-over-message-queuing.md)
+## <a name="see-also"></a>请参阅
+- [在 WCF 中排队](../../../../docs/framework/wcf/feature-details/queuing-in-wcf.md)
+- [在 WCF 中排队](../../../../docs/framework/wcf/feature-details/queuing-in-wcf.md)
+- [会话和队列](../../../../docs/framework/wcf/samples/sessions-and-queues.md)
+- [死信队列](../../../../docs/framework/wcf/samples/dead-letter-queues.md)
+- [可变排队通信](../../../../docs/framework/wcf/samples/volatile-queued-communication.md)
+- [Windows Communication Foundation 到消息队列](../../../../docs/framework/wcf/samples/wcf-to-message-queuing.md)
+- [安装消息队列 (MSMQ)](../../../../docs/framework/wcf/samples/installing-message-queuing-msmq.md)
+- [消息队列集成绑定示例](https://msdn.microsoft.com/library/997d11cb-f2c5-4ba0-9209-92843d4d0e1a)
+- [到 Windows Communication Foundation 的消息队列](../../../../docs/framework/wcf/samples/message-queuing-to-wcf.md)
+- [基于消息队列的消息安全性](../../../../docs/framework/wcf/samples/message-security-over-message-queuing.md)

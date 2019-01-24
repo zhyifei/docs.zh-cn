@@ -2,21 +2,21 @@
 title: '&lt;transactedBatching&gt;'
 ms.date: 03/30/2017
 ms.assetid: 2f790a0d-8f03-4b86-81b5-ce1bc1a6c575
-ms.openlocfilehash: f56751ea3f8bdc9ecbeff57db835e5fc2edbb73e
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 2f89a1a6c2cc110a4695b792c5aa801b516393be
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54148443"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54565990"
 ---
 # <a name="lttransactedbatchinggt"></a>&lt;transactedBatching&gt;
 指定接收操作是否支持事务批处理。  
   
  \<system.ServiceModel>  
-\<行为 >  
+\<behaviors>  
 \<endpointBehaviors>  
-\<行为 >  
-\<transactedBatching >  
+\<behavior>  
+\<transactedBatching>  
   
 ## <a name="syntax"></a>语法  
   
@@ -40,7 +40,7 @@ ms.locfileid: "54148443"
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<行为 >](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)|指定终结点行为。|  
+|[\<behavior>](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)|指定终结点行为。|  
   
 ## <a name="remarks"></a>备注  
  采用事务批处理配置的传输尝试将若干接收操作成批归入到一个事务中。 这样做可以避免因创建事务以及在每个接收操作中提交事务所产生的相对较高的成本。  
@@ -83,6 +83,6 @@ ms.locfileid: "54148443"
 </system.serviceModel>
 ```  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.ServiceModel.Configuration.TransactedBatchingElement>  
- <xref:System.ServiceModel.Description.TransactedBatchingBehavior>
+## <a name="see-also"></a>请参阅
+- <xref:System.ServiceModel.Configuration.TransactedBatchingElement>
+- <xref:System.ServiceModel.Description.TransactedBatchingBehavior>

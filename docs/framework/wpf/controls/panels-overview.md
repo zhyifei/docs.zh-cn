@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Panel control [WPF], about Panel control
 - controls [WPF], Panel
 ms.assetid: f73644af-9941-4611-8754-6d4cef03fc44
-ms.openlocfilehash: f8fd3237d71bc1960678565192c7ef9ddcb2c366
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 77f8fc5057b8f31e684941b742f2cf696afd6b07
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47196624"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54525204"
 ---
 # <a name="panels-overview"></a>面板概述
 <xref:System.Windows.Controls.Panel> 元素是控制呈现元素的组件，其大小和维度，其位置和子内容的排列方式。 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]提供了许多预定义<xref:System.Windows.Controls.Panel>元素，以及构造自定义的功能<xref:System.Windows.Controls.Panel>元素。  
@@ -174,7 +174,7 @@ ms.locfileid: "47196624"
   
  通过此图像可以看到呈现行为的区别。  
   
- ![屏幕截图：StackPanel 与 DockPanel 屏幕截图](../../../../docs/framework/wpf/controls/media/layout-smiley-stackpanel.PNG "layout_smiley_stackpanel")  
+ ![屏幕快照：StackPanel 与 DockPanel 屏幕截图](../../../../docs/framework/wpf/controls/media/layout-smiley-stackpanel.PNG "layout_smiley_stackpanel")  
   
 #### <a name="defining-and-using-a-stackpanel"></a>定义和使用 StackPanel  
  下面的示例演示如何使用<xref:System.Windows.Controls.StackPanel>创建一组垂直定位的按钮。 对于水平定位，设置<xref:System.Windows.Controls.StackPanel.Orientation%2A>属性设置为<xref:System.Windows.Controls.Orientation.Horizontal>。  
@@ -244,7 +244,7 @@ ms.locfileid: "47196624"
 ## <a name="localizationglobalization-support"></a>本地化/全球化支持  
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 支持多种有助于创建可本地化的 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 的功能。  
   
- 所有面板元素本身都支持<xref:System.Windows.FrameworkElement.FlowDirection%2A>属性，可用于动态地重排内容基于用户的区域设置或语言设置。 有关详细信息，请参阅<xref:System.Windows.FrameworkElement.FlowDirection%2A>。  
+ 所有面板元素本身都支持<xref:System.Windows.FrameworkElement.FlowDirection%2A>属性，可用于动态地重排内容基于用户的区域设置或语言设置。 有关详细信息，请参阅 <xref:System.Windows.FrameworkElement.FlowDirection%2A>。  
   
  <xref:System.Windows.Window.SizeToContent%2A>属性提供了一种机制，使应用程序开发人员要预测的需求本地化[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]。 使用<xref:System.Windows.SizeToContent.WidthAndHeight>此属性，父值<xref:System.Windows.Window>始终动态调整大小以适应内容和不受人为的高度或宽度限制。  
   
@@ -252,13 +252,13 @@ ms.locfileid: "47196624"
   
  有关创建带有可本地化 [!INCLUDE[TLA#tla_ui#plural](../../../../includes/tlasharptla-uisharpplural-md.md)] 的 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 应用程序的其他信息，请参阅[使用自动布局概述](../../../../docs/framework/wpf/advanced/use-automatic-layout-overview.md)。  
   
-## <a name="see-also"></a>请参阅  
- [演练：我的第一个 WPF 桌面应用程序](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md)  
- [WPF 布局库示例](https://go.microsoft.com/fwlink/?LinkID=160054)  
- [布局](../../../../docs/framework/wpf/advanced/layout.md)  
- [WPF 控件库示例](https://go.microsoft.com/fwlink/?LinkID=160053)  
- [对齐、边距和填充概述](../../../../docs/framework/wpf/advanced/alignment-margins-and-padding-overview.md)  
- [创建自定义内容换行面板示例](https://go.microsoft.com/fwlink/?LinkID=159979)  
- [附加属性概述](../../../../docs/framework/wpf/advanced/attached-properties-overview.md)  
- [使用自动布局概述](../../../../docs/framework/wpf/advanced/use-automatic-layout-overview.md)  
- [布局和示例](../../../../docs/framework/wpf/advanced/optimizing-performance-layout-and-design.md)
+## <a name="see-also"></a>请参阅
+- [演练：我的第一个 WPF 桌面应用程序](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md)
+- [WPF 布局库示例](https://go.microsoft.com/fwlink/?LinkID=160054)
+- [布局](../../../../docs/framework/wpf/advanced/layout.md)
+- [WPF 控件库示例](https://go.microsoft.com/fwlink/?LinkID=160053)
+- [对齐、边距和填充概述](../../../../docs/framework/wpf/advanced/alignment-margins-and-padding-overview.md)
+- [创建自定义内容换行面板示例](https://go.microsoft.com/fwlink/?LinkID=159979)
+- [附加属性概述](../../../../docs/framework/wpf/advanced/attached-properties-overview.md)
+- [使用自动布局概述](../../../../docs/framework/wpf/advanced/use-automatic-layout-overview.md)
+- [布局和示例](../../../../docs/framework/wpf/advanced/optimizing-performance-layout-and-design.md)

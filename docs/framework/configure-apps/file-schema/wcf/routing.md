@@ -1,20 +1,20 @@
 ---
-title: '&lt;路由&gt;'
+title: '&lt;routing&gt;'
 ms.date: 03/30/2017
 ms.assetid: a210c209-3940-4288-9a8e-39b1e62606bc
-ms.openlocfilehash: 220c18ab8ea6222fcf7d9fb8a93950281c9de796
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 855faedfd2e9523e939174441b0cfa50e052b375
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54145141"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54565873"
 ---
-# <a name="ltroutinggt"></a>&lt;路由&gt;
+# <a name="ltroutinggt"></a>&lt;routing&gt;
 
 表示一个配置节，用于定义一组路由筛选器，确定类型的 Windows Communication Foundation (WCF)<xref:System.ServiceModel.Dispatcher.MessageFilter>用于计算传入消息，以及路由表定义到的目标终结点将消息发送到筛选器匹配时。
 
-[**\<system.serviceModel >**](system-servicemodel.md)   
-&nbsp;&nbsp;**\<路由 >**
+[**\<system.serviceModel>**](system-servicemodel.md)   
+&nbsp;&nbsp;**\<routing>**
   
 ## <a name="syntax"></a>语法  
   
@@ -52,15 +52,15 @@ ms.locfileid: "54145141"
 
 |     | 描述 |
 | --- | ----------- |
-| [**\<筛选器 >**](../../../../../docs/framework/configure-apps/file-schema/wcf/filters-of-routing.md) | 包含一组路由筛选器确定计算传入消息时，将使用 Windows Communication Foundation (WCF) MessageFilter 的类型。 |
-| [**\<filterTables >**](../../../../../docs/framework/configure-apps/file-schema/wcf/filtertables.md) | 包含路由筛选器和目标终结点之间的映射，以便指定在筛选器匹配时使用的终结点。 |
+| [**\<filters>**](../../../../../docs/framework/configure-apps/file-schema/wcf/filters-of-routing.md) | 包含一组路由筛选器确定计算传入消息时，将使用 Windows Communication Foundation (WCF) MessageFilter 的类型。 |
+| [**\<filterTables>**](../../../../../docs/framework/configure-apps/file-schema/wcf/filtertables.md) | 包含路由筛选器和目标终结点之间的映射，以便指定在筛选器匹配时使用的终结点。 |
 
 ### <a name="parent-elements"></a>父元素
 
 |     | 描述 |
 | --- | ----------- |
-| **\<系统。ServiceModel >** | 所有 WCF 配置元素的根元素。 |
+| **\<system.ServiceModel>** | 所有 WCF 配置元素的根元素。 |
 
 ## <a name="see-also"></a>请参阅
 
-<xref:System.ServiceModel.Routing.Configuration.RoutingSection?displayProperty=nameWithType>
+- <xref:System.ServiceModel.Routing.Configuration.RoutingSection?displayProperty=nameWithType>

@@ -2,21 +2,21 @@
 title: '&lt;synchronousReceive&gt; 元素'
 ms.date: 03/30/2017
 ms.assetid: cc070387-3d11-4b02-a952-bc08ad2df05a
-ms.openlocfilehash: bc89470900e50e4d3e522682b39b20e21a66b284
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: dedbe156dea79c78f05acdb3a044c9080665675a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54147377"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54598890"
 ---
 # <a name="ltsynchronousreceivegt-element"></a>&lt;synchronousReceive&gt; 元素
 此配置元素用于指定服务或客户端应用程序中用来接收消息的运行时行为。 它不具有任何属性或子元素。  
   
  \<system.ServiceModel>  
-\<行为 >  
+\<behaviors>  
 \<endpointBehaviors>  
-\<行为 >  
-\<synchronousReceive >  
+\<behavior>  
+\<synchronousReceive>  
   
 ## <a name="syntax"></a>语法  
   
@@ -37,11 +37,11 @@ ms.locfileid: "54147377"
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<行为 >](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)|指定终结点行为。|  
+|[\<behavior>](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)|指定终结点行为。|  
   
 ## <a name="remarks"></a>备注  
  使用此行为可指示通道侦听器使用同步接收，而非默认的异步接受。 Windows Communication Foundation (WCF) 发出一个新线程，以为每个接受通道进行抽取。 如果有许多通道，则可能出现线程溢出的情况。  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.ServiceModel.Configuration.SynchronousReceiveElement>  
- <xref:System.ServiceModel.Description.SynchronousReceiveBehavior>
+## <a name="see-also"></a>请参阅
+- <xref:System.ServiceModel.Configuration.SynchronousReceiveElement>
+- <xref:System.ServiceModel.Description.SynchronousReceiveBehavior>

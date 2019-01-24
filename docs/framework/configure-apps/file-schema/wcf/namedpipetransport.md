@@ -2,21 +2,21 @@
 title: '&lt;namedPipeTransport&gt;'
 ms.date: 03/30/2017
 ms.assetid: 9fc3f42f-43e2-4ab1-8bc7-3c95a9220df1
-ms.openlocfilehash: bf9229411143345847247f36de07b5c014d3f259
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: cdb2863ff376a92f7c4b679f4812b895ac3f2234
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54149595"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54518834"
 ---
 # <a name="ltnamedpipetransportgt"></a>&lt;namedPipeTransport&gt;
 定义传输，使通道在被包括到自定义绑定中时使用命名管道来传输消息。  
   
 \<system.serviceModel>  
-\<绑定 >  
+\<bindings>  
 \<customBinding>  
-\<绑定 >  
-\<namePipeTransport >  
+\<binding>  
+\<namePipeTransport>  
   
 ## <a name="syntax"></a>语法  
   
@@ -59,27 +59,27 @@ ms.locfileid: "54149595"
 |maxPendingConnections|获取或设置在服务上等待调度的最大连接数。|  
 |maxReceivedMessageSize|获取和设置最大消息大小，以字节为单位，可以接收。|  
 |transferMode|获取或设置一个值，该值指示通过面向连接的传输对消息进行缓冲还是流处理。|  
-|[\<connectionPoolSettings > 的\<namedPipeTransport >](../../../../../docs/framework/configure-apps/file-schema/wcf/connectionpoolsettings.md)|指定命名管道绑定的其他连接池设置。|  
+|[\<connectionPoolSettings> of \<namedPipeTransport>](../../../../../docs/framework/configure-apps/file-schema/wcf/connectionpoolsettings.md)|指定命名管道绑定的其他连接池设置。|  
   
 ### <a name="parent-elements"></a>父元素  
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<绑定 >](../../../../../docs/framework/misc/binding.md)|定义自定义绑定的所有绑定功能。|  
+|[\<binding>](../../../../../docs/framework/misc/binding.md)|定义自定义绑定的所有绑定功能。|  
   
 ## <a name="remarks"></a>备注  
 此传输使用“net.pipe://hostname/path”形式的 URI。 其他 URI 组件是可选的。  
   
 `namedPipeTransport` 元素是创建实现命名管道传输协议的自定义绑定的起始点。 此传输用于计算机上的 WCF (Windows Communication Foundation) 到 WCF 的通信。  
   
-## <a name="see-also"></a>请参阅  
-<xref:System.ServiceModel.Configuration.NamedPipeTransportElement>   
-<xref:System.ServiceModel.Channels.NamedPipeTransportBindingElement>   
-<xref:System.ServiceModel.Channels.TransportBindingElement>   
-<xref:System.ServiceModel.Channels.CustomBinding>   
-[传输](../../../../../docs/framework/wcf/feature-details/transports.md)   
-[选择传输](../../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)   
-[绑定](../../../../../docs/framework/wcf/bindings.md)   
-[扩展绑定](../../../../../docs/framework/wcf/extending/extending-bindings.md)   
-[自定义绑定](../../../../../docs/framework/wcf/extending/custom-bindings.md)   
-[\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.ServiceModel.Configuration.NamedPipeTransportElement>
+- <xref:System.ServiceModel.Channels.NamedPipeTransportBindingElement>
+- <xref:System.ServiceModel.Channels.TransportBindingElement>
+- <xref:System.ServiceModel.Channels.CustomBinding>
+- [传输](../../../../../docs/framework/wcf/feature-details/transports.md)
+- [选择传输](../../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)
+- [绑定](../../../../../docs/framework/wcf/bindings.md)
+- [扩展绑定](../../../../../docs/framework/wcf/extending/extending-bindings.md)
+- [自定义绑定](../../../../../docs/framework/wcf/extending/custom-bindings.md)
+- [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)

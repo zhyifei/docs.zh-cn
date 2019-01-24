@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: e6a58316-f005-4477-92e1-45cc2eb8c5b4
-ms.openlocfilehash: 63d6a17e5aaf3e5d39ed0eda288e75c071be4d73
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 36c95d3eb0a79a4a2dbe0d930b646aa35ffc89e4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/15/2018
-ms.locfileid: "45649941"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54533476"
 ---
 # <a name="detecting-changes-with-sqldependency"></a>使用 SqlDependency 检测更改
 <xref:System.Data.SqlClient.SqlDependency> 对象可以与 <xref:System.Data.SqlClient.SqlCommand> 关联，以便检测查询结果何时与最初检索的结果不同。 也可以向 `OnChange` 事件分配一个委托，当关联命令的结果更改时，将会触发该委托。 在执行命令前，必须将 <xref:System.Data.SqlClient.SqlDependency> 与该命令关联。 也可以使用 `HasChanges` 的 <xref:System.Data.SqlClient.SqlDependency> 属性来确定自从首次检索数据以来查询结果是否已经更改。  
@@ -122,6 +122,6 @@ void Termination()
 }  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [SQL Server 中的查询通知](../../../../../docs/framework/data/adonet/sql/query-notifications-in-sql-server.md)  
- [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>请参阅
+- [SQL Server 中的查询通知](../../../../../docs/framework/data/adonet/sql/query-notifications-in-sql-server.md)
+- [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: f82aaa62-321e-4c8a-b51b-9d1114700170
-ms.openlocfilehash: c66a11e0662cd007797243c136ec0617ce5be47c
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 737f98dd11d6172bb79aaa925ac153c64728e9ff
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43513142"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54629601"
 ---
 # <a name="annotating-typed-datasets"></a>为类型化的数据集进行批注
 批注使您能够在不修改基础架构的情况下修改类型化 <xref:System.Data.DataSet> 中元素的名称。 如果修改基础架构中的元素的名称会使类型化**数据集**要引用的对象执行不存在于数据源，并且会丢失对存在于数据源中的对象的引用。  
@@ -222,9 +222,9 @@ protected static void OnCustomerChanged(object sender, CustomerDataSet.CustomerC
     }  
 ```  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Data.DataColumnCollection>  
- <xref:System.Data.DataSet>  
- [类型化数据集](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/typed-datasets.md)  
- [数据集、数据表和数据视图](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
- [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>请参阅
+- <xref:System.Data.DataColumnCollection>
+- <xref:System.Data.DataSet>
+- [类型化数据集](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/typed-datasets.md)
+- [数据集、数据表和数据视图](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)
+- [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)
