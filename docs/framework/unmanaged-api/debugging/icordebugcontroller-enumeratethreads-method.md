@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6f8276e2a8fd1bdc546add2ae1ca5d96298186c7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: d73a82ddbb15ba7895f1e5e10f7066909a3c7e43
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33412826"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54697137"
 ---
-# <a name="icordebugcontrollerenumeratethreads-method"></a><span data-ttu-id="efeb0-102">ICorDebugController::EnumerateThreads 方法</span><span class="sxs-lookup"><span data-stu-id="efeb0-102">ICorDebugController::EnumerateThreads Method</span></span>
-<span data-ttu-id="efeb0-103">在过程中获取活动的托管线程的枚举数。</span><span class="sxs-lookup"><span data-stu-id="efeb0-103">Gets an enumerator for the active managed threads in the process.</span></span>  
+# <a name="icordebugcontrollerenumeratethreads-method"></a><span data-ttu-id="624f5-102">ICorDebugController::EnumerateThreads 方法</span><span class="sxs-lookup"><span data-stu-id="624f5-102">ICorDebugController::EnumerateThreads Method</span></span>
+<span data-ttu-id="624f5-103">获取进程中活动的托管线程的枚举数。</span><span class="sxs-lookup"><span data-stu-id="624f5-103">Gets an enumerator for the active managed threads in the process.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="efeb0-104">语法</span><span class="sxs-lookup"><span data-stu-id="efeb0-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="624f5-104">语法</span><span class="sxs-lookup"><span data-stu-id="624f5-104">Syntax</span></span>  
   
 ```  
 HRESULT EnumerateThreads (  
@@ -35,21 +35,21 @@ HRESULT EnumerateThreads (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="efeb0-105">参数</span><span class="sxs-lookup"><span data-stu-id="efeb0-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="624f5-105">参数</span><span class="sxs-lookup"><span data-stu-id="624f5-105">Parameters</span></span>  
  `ppThreads`  
- <span data-ttu-id="efeb0-106">[out]指向一个表示进程中处于活动状态的所有托管线程的枚举数"ICorDebugThreadEnum"对象的地址的指针。</span><span class="sxs-lookup"><span data-stu-id="efeb0-106">[out] A pointer to the address of an "ICorDebugThreadEnum" object that represents an enumerator for all managed threads that are active in the process.</span></span>  
+ <span data-ttu-id="624f5-106">[out]指向一个"ICorDebugThreadEnum"对象，表示进程中处于活动状态的所有托管线程的枚举器的地址的指针。</span><span class="sxs-lookup"><span data-stu-id="624f5-106">[out] A pointer to the address of an "ICorDebugThreadEnum" object that represents an enumerator for all managed threads that are active in the process.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="efeb0-107">备注</span><span class="sxs-lookup"><span data-stu-id="efeb0-107">Remarks</span></span>  
- <span data-ttu-id="efeb0-108">线程将被视为活动后[icordebugmanagedcallback:: Createthread](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-createthread-method.md)调度回调和之前[icordebugmanagedcallback:: Exitthread](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-exitthread-method.md)调度回调.</span><span class="sxs-lookup"><span data-stu-id="efeb0-108">A thread is considered active after the [ICorDebugManagedCallback::CreateThread](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-createthread-method.md) callback has been dispatched and before the [ICorDebugManagedCallback::ExitThread](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-exitthread-method.md) callback has been dispatched.</span></span> <span data-ttu-id="efeb0-109">托管的线程不一定要包含任何托管的帧的堆栈上。</span><span class="sxs-lookup"><span data-stu-id="efeb0-109">A managed thread may not necessarily have any managed frames on its stack.</span></span> <span data-ttu-id="efeb0-110">线程可以甚至之前枚举[icordebugmanagedcallback:: Createprocess](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-createprocess-method.md)回调。</span><span class="sxs-lookup"><span data-stu-id="efeb0-110">Threads can be enumerated even before the [ICorDebugManagedCallback::CreateProcess](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-createprocess-method.md) callback.</span></span> <span data-ttu-id="efeb0-111">在枚举自然地将为空。</span><span class="sxs-lookup"><span data-stu-id="efeb0-111">The enumeration will naturally be empty.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="624f5-107">备注</span><span class="sxs-lookup"><span data-stu-id="624f5-107">Remarks</span></span>  
+ <span data-ttu-id="624f5-108">一个线程被视为活动后[icordebugmanagedcallback:: Createthread](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-createthread-method.md)调度回调之前[icordebugmanagedcallback:: Exitthread](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-exitthread-method.md)调度回调.</span><span class="sxs-lookup"><span data-stu-id="624f5-108">A thread is considered active after the [ICorDebugManagedCallback::CreateThread](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-createthread-method.md) callback has been dispatched and before the [ICorDebugManagedCallback::ExitThread](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-exitthread-method.md) callback has been dispatched.</span></span> <span data-ttu-id="624f5-109">托管的线程可能不一定包含任何托管的帧的堆栈上。</span><span class="sxs-lookup"><span data-stu-id="624f5-109">A managed thread may not necessarily have any managed frames on its stack.</span></span> <span data-ttu-id="624f5-110">即使之前枚举线程[icordebugmanagedcallback:: Createprocess](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-createprocess-method.md)回调。</span><span class="sxs-lookup"><span data-stu-id="624f5-110">Threads can be enumerated even before the [ICorDebugManagedCallback::CreateProcess](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-createprocess-method.md) callback.</span></span> <span data-ttu-id="624f5-111">枚举自然地将为空。</span><span class="sxs-lookup"><span data-stu-id="624f5-111">The enumeration will naturally be empty.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="efeb0-112">要求</span><span class="sxs-lookup"><span data-stu-id="efeb0-112">Requirements</span></span>  
- <span data-ttu-id="efeb0-113">**平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="efeb0-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="624f5-112">要求</span><span class="sxs-lookup"><span data-stu-id="624f5-112">Requirements</span></span>  
+ <span data-ttu-id="624f5-113">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="624f5-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="efeb0-114">**标头：** CorDebug.idl、 CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="efeb0-114">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="624f5-114">**标头：** CorDebug.idl、 CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="624f5-114">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="efeb0-115">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="efeb0-115">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="624f5-115">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="624f5-115">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="efeb0-116">**.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="efeb0-116">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="624f5-116">**.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="624f5-116">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="efeb0-117">请参阅</span><span class="sxs-lookup"><span data-stu-id="efeb0-117">See Also</span></span>  
- 
+## <a name="see-also"></a><span data-ttu-id="624f5-117">请参阅</span><span class="sxs-lookup"><span data-stu-id="624f5-117">See also</span></span>
+

@@ -9,27 +9,27 @@ helpviewer_keywords:
 - images [WPF]
 - graphics [WPF], images
 ms.assetid: 2fe21d59-b444-4786-b68d-35d94e18ce0d
-ms.openlocfilehash: dbb8b9511b05c5df228a463d82efb17b7cd6f23a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 64d5ede4dcbe50beeec22ca7782d1dc8c24a27f5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33561694"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54687214"
 ---
-# <a name="images"></a><span data-ttu-id="74a47-102">图像</span><span class="sxs-lookup"><span data-stu-id="74a47-102">Images</span></span>
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]<span data-ttu-id="74a47-103"> 提供对多种图像格式、高保真图像呈现以及编解码器扩展性的内置支持。</span><span class="sxs-lookup"><span data-stu-id="74a47-103"> provides built-in support for multiple image formats, high fidelity image rendering, and codec extensibility.</span></span>  
+# <a name="images"></a><span data-ttu-id="31f14-102">图像</span><span class="sxs-lookup"><span data-stu-id="31f14-102">Images</span></span>
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] <span data-ttu-id="31f14-103">提供对多种图像格式、高保真图像呈现以及编解码器扩展性的内置支持。</span><span class="sxs-lookup"><span data-stu-id="31f14-103">provides built-in support for multiple image formats, high fidelity image rendering, and codec extensibility.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="74a47-104">本节内容</span><span class="sxs-lookup"><span data-stu-id="74a47-104">In This Section</span></span>  
- [<span data-ttu-id="74a47-105">图像处理概述</span><span class="sxs-lookup"><span data-stu-id="74a47-105">Imaging Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/imaging-overview.md)  
- [<span data-ttu-id="74a47-106">帮助主题</span><span class="sxs-lookup"><span data-stu-id="74a47-106">How-to Topics</span></span>](../../../../docs/framework/wpf/graphics-multimedia/imaging-how-to-topics.md)  
+## <a name="in-this-section"></a><span data-ttu-id="31f14-104">本节内容</span><span class="sxs-lookup"><span data-stu-id="31f14-104">In This Section</span></span>  
+ [<span data-ttu-id="31f14-105">图像处理概述</span><span class="sxs-lookup"><span data-stu-id="31f14-105">Imaging Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/imaging-overview.md)  
+ [<span data-ttu-id="31f14-106">帮助主题</span><span class="sxs-lookup"><span data-stu-id="31f14-106">How-to Topics</span></span>](../../../../docs/framework/wpf/graphics-multimedia/imaging-how-to-topics.md)  
   
-## <a name="reference"></a><span data-ttu-id="74a47-107">参考</span><span class="sxs-lookup"><span data-stu-id="74a47-107">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="31f14-107">参考</span><span class="sxs-lookup"><span data-stu-id="31f14-107">Reference</span></span>  
  <xref:System.Windows.Controls.Image>  
   
  <xref:System.Windows.Media.Imaging.BitmapImage>  
   
  <xref:System.Windows.Media.Imaging.BitmapSource>  
   
-## <a name="see-also"></a><span data-ttu-id="74a47-108">请参阅</span><span class="sxs-lookup"><span data-stu-id="74a47-108">See Also</span></span>  
- [<span data-ttu-id="74a47-109">2D 图形和图像处理</span><span class="sxs-lookup"><span data-stu-id="74a47-109">2D Graphics and Imaging</span></span>](../../../../docs/framework/wpf/advanced/optimizing-performance-2d-graphics-and-imaging.md)  
- [<span data-ttu-id="74a47-110">图形和多媒体</span><span class="sxs-lookup"><span data-stu-id="74a47-110">Graphics and Multimedia</span></span>](../../../../docs/framework/wpf/graphics-multimedia/index.md)
+## <a name="see-also"></a><span data-ttu-id="31f14-108">请参阅</span><span class="sxs-lookup"><span data-stu-id="31f14-108">See also</span></span>
+- [<span data-ttu-id="31f14-109">2D 图形和图像处理</span><span class="sxs-lookup"><span data-stu-id="31f14-109">2D Graphics and Imaging</span></span>](../../../../docs/framework/wpf/advanced/optimizing-performance-2d-graphics-and-imaging.md)
+- [<span data-ttu-id="31f14-110">图形和多媒体</span><span class="sxs-lookup"><span data-stu-id="31f14-110">Graphics and Multimedia</span></span>](../../../../docs/framework/wpf/graphics-multimedia/index.md)
