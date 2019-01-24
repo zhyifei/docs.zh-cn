@@ -1,14 +1,6 @@
 ---
-title: "ISymUnmanagedMethod::GetRanges 方法"
-ms.custom: 
+title: ISymUnmanagedMethod::GetRanges 方法
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ISymUnmanagedMethod.GetRanges
 api_location:
@@ -23,22 +15,19 @@ helpviewer_keywords:
 ms.assetid: a85283d8-379c-417a-9736-ddeeef9bcf50
 topic_type:
 - apiref
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 1e17b411e39e522006092d79380566484f8fab67
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: b6afe0f0d8780a93a7d98f24a11bb67ef65ebf63
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54604270"
 ---
-# <a name="isymunmanagedmethodgetranges-method"></a><span data-ttu-id="8a5e6-102">ISymUnmanagedMethod::GetRanges 方法</span><span class="sxs-lookup"><span data-stu-id="8a5e6-102">ISymUnmanagedMethod::GetRanges Method</span></span>
-<span data-ttu-id="8a5e6-103">给定文档中的一个位置，返回到的 Microsoft 中间语言 (MSIL) 的位置在此方法内包括的范围对应的开始和结束偏移量对的数组。</span><span class="sxs-lookup"><span data-stu-id="8a5e6-103">Given a position in a document, returns an array of start and end offset pairs that correspond to the ranges of Microsoft intermediate language (MSIL) that the position covers within this method.</span></span> <span data-ttu-id="8a5e6-104">数组为整数的数组，其格式 [开始、 结束、 开始、 结束]。</span><span class="sxs-lookup"><span data-stu-id="8a5e6-104">The array is an array of integers and has the format [start, end, start, end].</span></span> <span data-ttu-id="8a5e6-105">范围对的数目是数组的除以 2 的长度。</span><span class="sxs-lookup"><span data-stu-id="8a5e6-105">The number of range pairs is the length of the array divided by 2.</span></span>  
+# <a name="isymunmanagedmethodgetranges-method"></a><span data-ttu-id="6f606-102">ISymUnmanagedMethod::GetRanges 方法</span><span class="sxs-lookup"><span data-stu-id="6f606-102">ISymUnmanagedMethod::GetRanges Method</span></span>
+<span data-ttu-id="6f606-103">给定文档中的一个位置，返回到 Microsoft 中间语言 (MSIL) 的位置在此方法内包括的范围对应的开始和结束偏移量对的数组。</span><span class="sxs-lookup"><span data-stu-id="6f606-103">Given a position in a document, returns an array of start and end offset pairs that correspond to the ranges of Microsoft intermediate language (MSIL) that the position covers within this method.</span></span> <span data-ttu-id="6f606-104">数组是一个整数数组，具有 [开始、 结束、 开始和结束] 的格式。</span><span class="sxs-lookup"><span data-stu-id="6f606-104">The array is an array of integers and has the format [start, end, start, end].</span></span> <span data-ttu-id="6f606-105">区域对的数目是数组除以 2 的长度。</span><span class="sxs-lookup"><span data-stu-id="6f606-105">The number of range pairs is the length of the array divided by 2.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="8a5e6-106">语法</span><span class="sxs-lookup"><span data-stu-id="8a5e6-106">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="6f606-106">语法</span><span class="sxs-lookup"><span data-stu-id="6f606-106">Syntax</span></span>  
   
 ```  
 HRESULT GetRanges(  
@@ -51,30 +40,30 @@ HRESULT GetRanges(
         length_is(*pcRanges)] ULONG32 ranges[]);  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="8a5e6-107">参数</span><span class="sxs-lookup"><span data-stu-id="8a5e6-107">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="6f606-107">参数</span><span class="sxs-lookup"><span data-stu-id="6f606-107">Parameters</span></span>  
  `document`  
- <span data-ttu-id="8a5e6-108">[in]为其请求偏移量的文档。</span><span class="sxs-lookup"><span data-stu-id="8a5e6-108">[in] The document for which the offset is requested.</span></span>  
+ <span data-ttu-id="6f606-108">[in]为其请求偏移量的文档。</span><span class="sxs-lookup"><span data-stu-id="6f606-108">[in] The document for which the offset is requested.</span></span>  
   
  `line`  
- <span data-ttu-id="8a5e6-109">[in]与范围对应的文档行。</span><span class="sxs-lookup"><span data-stu-id="8a5e6-109">[in] The document line corresponding to the ranges.</span></span>  
+ <span data-ttu-id="6f606-109">[in]与范围对应的文档行。</span><span class="sxs-lookup"><span data-stu-id="6f606-109">[in] The document line corresponding to the ranges.</span></span>  
   
  `column`  
- <span data-ttu-id="8a5e6-110">[in]与范围对应的文档列。</span><span class="sxs-lookup"><span data-stu-id="8a5e6-110">[in] The document column corresponding to the ranges.</span></span>  
+ <span data-ttu-id="6f606-110">[in]与范围对应的文档列。</span><span class="sxs-lookup"><span data-stu-id="6f606-110">[in] The document column corresponding to the ranges.</span></span>  
   
  `cRanges`  
- <span data-ttu-id="8a5e6-111">[in] `ranges` 数组的大小。</span><span class="sxs-lookup"><span data-stu-id="8a5e6-111">[in] The size of the `ranges` array.</span></span>  
+ <span data-ttu-id="6f606-111">[in] `ranges` 数组的大小。</span><span class="sxs-lookup"><span data-stu-id="6f606-111">[in] The size of the `ranges` array.</span></span>  
   
  `pcRanges`  
- <span data-ttu-id="8a5e6-112">[out]指向的指针`ULONG32`接收包含范围所需的缓冲区的大小。</span><span class="sxs-lookup"><span data-stu-id="8a5e6-112">[out] A pointer to a `ULONG32` that receives the size of the buffer required to contain the ranges.</span></span>  
+ <span data-ttu-id="6f606-112">[out]一个指向`ULONG32`接收包含多个范围所需的缓冲区的大小。</span><span class="sxs-lookup"><span data-stu-id="6f606-112">[out] A pointer to a `ULONG32` that receives the size of the buffer required to contain the ranges.</span></span>  
   
  `ranges`  
- <span data-ttu-id="8a5e6-113">[out]指向接收范围的缓冲区的指针。</span><span class="sxs-lookup"><span data-stu-id="8a5e6-113">[out] A pointer to the buffer that receives the ranges.</span></span>  
+ <span data-ttu-id="6f606-113">[out]指向接收范围的缓冲区的指针。</span><span class="sxs-lookup"><span data-stu-id="6f606-113">[out] A pointer to the buffer that receives the ranges.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="8a5e6-114">返回值</span><span class="sxs-lookup"><span data-stu-id="8a5e6-114">Return Value</span></span>  
- <span data-ttu-id="8a5e6-115">如果该方法成功; 则为 S_OK否则为 E_FAIL 或某些其他错误代码。</span><span class="sxs-lookup"><span data-stu-id="8a5e6-115">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="6f606-114">返回值</span><span class="sxs-lookup"><span data-stu-id="6f606-114">Return Value</span></span>  
+ <span data-ttu-id="6f606-115">如果方法成功，则为 S_OK否则为 E_FAIL 或某些其他错误代码。</span><span class="sxs-lookup"><span data-stu-id="6f606-115">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="8a5e6-116">惠?</span><span class="sxs-lookup"><span data-stu-id="8a5e6-116">Requirements</span></span>  
- <span data-ttu-id="8a5e6-117">**标头：** CorSym.idl、 CorSym.h</span><span class="sxs-lookup"><span data-stu-id="8a5e6-117">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="6f606-116">要求</span><span class="sxs-lookup"><span data-stu-id="6f606-116">Requirements</span></span>  
+ <span data-ttu-id="6f606-117">**标头：** CorSym.idl CorSym.h</span><span class="sxs-lookup"><span data-stu-id="6f606-117">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="8a5e6-118">请参阅</span><span class="sxs-lookup"><span data-stu-id="8a5e6-118">See Also</span></span>  
- [<span data-ttu-id="8a5e6-119">ISymUnmanagedMethod 接口</span><span class="sxs-lookup"><span data-stu-id="8a5e6-119">ISymUnmanagedMethod Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md)
+## <a name="see-also"></a><span data-ttu-id="6f606-118">请参阅</span><span class="sxs-lookup"><span data-stu-id="6f606-118">See also</span></span>
+- [<span data-ttu-id="6f606-119">ISymUnmanagedMethod 接口</span><span class="sxs-lookup"><span data-stu-id="6f606-119">ISymUnmanagedMethod Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md)
