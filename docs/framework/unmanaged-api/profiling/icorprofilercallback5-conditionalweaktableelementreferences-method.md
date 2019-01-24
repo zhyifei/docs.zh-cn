@@ -17,39 +17,39 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4ee3c3302d77bcc7b807c01ccb5bab172153ddda
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: ad192f753cd1977c9ca68e147d23375ce092b66f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33459946"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54708228"
 ---
-# <a name="icorprofilercallback5conditionalweaktableelementreferences-method"></a><span data-ttu-id="ff1fc-102">ICorProfilerCallback5::ConditionalWeakTableElementReferences 方法</span><span class="sxs-lookup"><span data-stu-id="ff1fc-102">ICorProfilerCallback5::ConditionalWeakTableElementReferences Method</span></span>
-<span data-ttu-id="ff1fc-103">标识这些根通过直接成员字段引用和 `ConditionalWeakTable` 依赖关系引用的对象的传递闭包。</span><span class="sxs-lookup"><span data-stu-id="ff1fc-103">Identifies the transitive closure of objects referenced by those roots through both direct member field references and through `ConditionalWeakTable` dependencies.</span></span>  
+# <a name="icorprofilercallback5conditionalweaktableelementreferences-method"></a><span data-ttu-id="ad5f1-102">ICorProfilerCallback5::ConditionalWeakTableElementReferences 方法</span><span class="sxs-lookup"><span data-stu-id="ad5f1-102">ICorProfilerCallback5::ConditionalWeakTableElementReferences Method</span></span>
+<span data-ttu-id="ad5f1-103">标识这些根通过直接成员字段引用和 `ConditionalWeakTable` 依赖关系引用的对象的传递闭包。</span><span class="sxs-lookup"><span data-stu-id="ad5f1-103">Identifies the transitive closure of objects referenced by those roots through both direct member field references and through `ConditionalWeakTable` dependencies.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="ff1fc-104">语法</span><span class="sxs-lookup"><span data-stu-id="ff1fc-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="ad5f1-104">语法</span><span class="sxs-lookup"><span data-stu-id="ad5f1-104">Syntax</span></span>  
   
 ```  
 HRESULT ConditionalWeakTableElementReferences(     [in]                     ULONG    cRootRefs,     [in, size_is(cRootRefs)] ObjectID keyRefIds[],     [in, size_is(cRootRefs)] ObjectID valueRefIds[],     [in, size_is(cRootRefs)] GCHandleID rootIds[]);};  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="ff1fc-105">参数</span><span class="sxs-lookup"><span data-stu-id="ff1fc-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="ad5f1-105">参数</span><span class="sxs-lookup"><span data-stu-id="ad5f1-105">Parameters</span></span>  
  `cRootRefs`  
- <span data-ttu-id="ff1fc-106">[in] `keyRefIds`、`valueRefIds` 和 `rootIds` 数组中的元素数。</span><span class="sxs-lookup"><span data-stu-id="ff1fc-106">[in] The number of elements in the `keyRefIds`, `valueRefIds`, and `rootIds` arrays.</span></span>  
+ <span data-ttu-id="ad5f1-106">[in] `keyRefIds`、`valueRefIds` 和 `rootIds` 数组中的元素数。</span><span class="sxs-lookup"><span data-stu-id="ad5f1-106">[in] The number of elements in the `keyRefIds`, `valueRefIds`, and `rootIds` arrays.</span></span>  
   
  `keyRefIds`  
- <span data-ttu-id="ff1fc-107">[in] 一个包含对象 ID 的数组，其中每个对象 ID 都包含相关句柄对中主要元素的 `ObjectID`。</span><span class="sxs-lookup"><span data-stu-id="ff1fc-107">[in] An array of object IDs, each of which contains the `ObjectID` for the primary element in the dependent handle pair.</span></span>  
+ <span data-ttu-id="ad5f1-107">[in] 一个包含对象 ID 的数组，其中每个对象 ID 都包含相关句柄对中主要元素的 `ObjectID`。</span><span class="sxs-lookup"><span data-stu-id="ad5f1-107">[in] An array of object IDs, each of which contains the `ObjectID` for the primary element in the dependent handle pair.</span></span>  
   
  `valueRefIds`  
- <span data-ttu-id="ff1fc-108">[in] 一个包含对象 ID 的数组，其中每个对象 ID 都包含相关句柄对中次要元素的 `ObjectID`。</span><span class="sxs-lookup"><span data-stu-id="ff1fc-108">[in] An array of object IDs, each of which contains the `ObjectID` for the secondary element in the dependent handle pair.</span></span> <span data-ttu-id="ff1fc-109">(`keyRefIds[i]`保留`valueRefIds[i]`处于活动状态。)</span><span class="sxs-lookup"><span data-stu-id="ff1fc-109">(`keyRefIds[i]` keeps `valueRefIds[i]` alive.)</span></span>  
+ <span data-ttu-id="ad5f1-108">[in] 一个包含对象 ID 的数组，其中每个对象 ID 都包含相关句柄对中次要元素的 `ObjectID`。</span><span class="sxs-lookup"><span data-stu-id="ad5f1-108">[in] An array of object IDs, each of which contains the `ObjectID` for the secondary element in the dependent handle pair.</span></span> <span data-ttu-id="ad5f1-109">(`keyRefIds[i]`保留`valueRefIds[i]`保持活动状态。)</span><span class="sxs-lookup"><span data-stu-id="ad5f1-109">(`keyRefIds[i]` keeps `valueRefIds[i]` alive.)</span></span>  
   
  `rootIds`  
- <span data-ttu-id="ff1fc-110">[in] 一个包含 `GCHandleID` 值的数组，这些值指向包含有关垃圾回收根的附加信息的整数。</span><span class="sxs-lookup"><span data-stu-id="ff1fc-110">[in] An array of `GCHandleID` values that point to an integer that contains additional information about the garbage collection root.</span></span>  
+ <span data-ttu-id="ad5f1-110">[in] 一个包含 `GCHandleID` 值的数组，这些值指向包含有关垃圾回收根的附加信息的整数。</span><span class="sxs-lookup"><span data-stu-id="ad5f1-110">[in] An array of `GCHandleID` values that point to an integer that contains additional information about the garbage collection root.</span></span>  
   
- <span data-ttu-id="ff1fc-111">在该回调本身中，由 `ObjectID` 方法返回的任何 `ConditionalWeakTableElementReferences` 值都无效，因为垃圾回收器可能正处于将对象从旧位置移到新位置的过程中。</span><span class="sxs-lookup"><span data-stu-id="ff1fc-111">None of the `ObjectID` values returned by the `ConditionalWeakTableElementReferences` method are valid during the callback itself, because the garbage collector may be in the process of moving objects from old to new locations.</span></span> <span data-ttu-id="ff1fc-112">因此，探查器不应在 `ConditionalWeakTableElementReferences` 调用期间尝试检查对象。</span><span class="sxs-lookup"><span data-stu-id="ff1fc-112">Therefore, profilers should not attempt to inspect objects during a `ConditionalWeakTableElementReferences` call.</span></span> <span data-ttu-id="ff1fc-113">在 `GarbageCollectionFinished` 时，已经将所有对象都移动到其新位置，并且检查可能已完成。</span><span class="sxs-lookup"><span data-stu-id="ff1fc-113">At `GarbageCollectionFinished`, all objects have been moved to their new locations, and inspection may be done.</span></span>  
+ <span data-ttu-id="ad5f1-111">在该回调本身中，由 `ObjectID` 方法返回的任何 `ConditionalWeakTableElementReferences` 值都无效，因为垃圾回收器可能正处于将对象从旧位置移到新位置的过程中。</span><span class="sxs-lookup"><span data-stu-id="ad5f1-111">None of the `ObjectID` values returned by the `ConditionalWeakTableElementReferences` method are valid during the callback itself, because the garbage collector may be in the process of moving objects from old to new locations.</span></span> <span data-ttu-id="ad5f1-112">因此，探查器不应在 `ConditionalWeakTableElementReferences` 调用期间尝试检查对象。</span><span class="sxs-lookup"><span data-stu-id="ad5f1-112">Therefore, profilers should not attempt to inspect objects during a `ConditionalWeakTableElementReferences` call.</span></span> <span data-ttu-id="ad5f1-113">在 `GarbageCollectionFinished` 时，已经将所有对象都移动到其新位置，并且检查可能已完成。</span><span class="sxs-lookup"><span data-stu-id="ad5f1-113">At `GarbageCollectionFinished`, all objects have been moved to their new locations, and inspection may be done.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="ff1fc-114">示例</span><span class="sxs-lookup"><span data-stu-id="ff1fc-114">Example</span></span>  
- <span data-ttu-id="ff1fc-115">下面的代码示例演示如何实现[ICorProfilerCallback5](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback5-interface.md)以及使用此方法。</span><span class="sxs-lookup"><span data-stu-id="ff1fc-115">The following code example demonstrates how to implement [ICorProfilerCallback5](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback5-interface.md) and use this method.</span></span>  
+## <a name="example"></a><span data-ttu-id="ad5f1-114">示例</span><span class="sxs-lookup"><span data-stu-id="ad5f1-114">Example</span></span>  
+ <span data-ttu-id="ad5f1-115">下面的代码示例演示如何实现[ICorProfilerCallback5](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback5-interface.md) ，并使用此方法。</span><span class="sxs-lookup"><span data-stu-id="ad5f1-115">The following code example demonstrates how to implement [ICorProfilerCallback5](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback5-interface.md) and use this method.</span></span>  
   
 ```  
 HRESULT Callback5Impl::ConditionalWeakTableElementReferences(  
@@ -72,15 +72,15 @@ HRESULT Callback5Impl::ConditionalWeakTableElementReferences(
 }  
 ```  
   
-## <a name="remarks"></a><span data-ttu-id="ff1fc-116">备注</span><span class="sxs-lookup"><span data-stu-id="ff1fc-116">Remarks</span></span>  
- <span data-ttu-id="ff1fc-117">探查器以[!INCLUDE[net_v45](../../../../includes/net-v45-md.md)]或更高版本实现[ICorProfilerCallback5](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback5-interface.md)接口并记录由指定的依赖关系`ConditionalWeakTableElementReferences`方法。</span><span class="sxs-lookup"><span data-stu-id="ff1fc-117">A profiler for the [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)] or later versions implements the [ICorProfilerCallback5](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback5-interface.md) interface and records the dependencies specified by the `ConditionalWeakTableElementReferences` method.</span></span> <span data-ttu-id="ff1fc-118">`ICorProfilerCallback5` 提供所表示的活动对象之间的依赖项的完整集`ConditionalWeakTable`条目。</span><span class="sxs-lookup"><span data-stu-id="ff1fc-118">`ICorProfilerCallback5` provides the complete set of dependencies among live objects represented by `ConditionalWeakTable` entries.</span></span> <span data-ttu-id="ff1fc-119">这些依赖关系和成员字段引用指定[icorprofilercallback:: Objectreferences](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-objectreferences-method.md)方法启用托管的探查器以生成活动对象的完整对象图。</span><span class="sxs-lookup"><span data-stu-id="ff1fc-119">These dependencies and the member field references specified by the [ICorProfilerCallback::ObjectReferences](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-objectreferences-method.md) method enable a managed profiler to generate the full object graph of live objects.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="ad5f1-116">备注</span><span class="sxs-lookup"><span data-stu-id="ad5f1-116">Remarks</span></span>  
+ <span data-ttu-id="ad5f1-117">探查器[!INCLUDE[net_v45](../../../../includes/net-v45-md.md)]或更高版本实现[ICorProfilerCallback5](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback5-interface.md)接口并记录由指定的依赖项`ConditionalWeakTableElementReferences`方法。</span><span class="sxs-lookup"><span data-stu-id="ad5f1-117">A profiler for the [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)] or later versions implements the [ICorProfilerCallback5](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback5-interface.md) interface and records the dependencies specified by the `ConditionalWeakTableElementReferences` method.</span></span> <span data-ttu-id="ad5f1-118">`ICorProfilerCallback5` 提供所表示的活动对象之间的依赖关系的一组完整`ConditionalWeakTable`条目。</span><span class="sxs-lookup"><span data-stu-id="ad5f1-118">`ICorProfilerCallback5` provides the complete set of dependencies among live objects represented by `ConditionalWeakTable` entries.</span></span> <span data-ttu-id="ad5f1-119">这些依赖关系和成员字段所指定的引用[icorprofilercallback:: Objectreferences](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-objectreferences-method.md)方法启用托管的探查器生成的活动对象的完整对象图。</span><span class="sxs-lookup"><span data-stu-id="ad5f1-119">These dependencies and the member field references specified by the [ICorProfilerCallback::ObjectReferences](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-objectreferences-method.md) method enable a managed profiler to generate the full object graph of live objects.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="ff1fc-120">要求</span><span class="sxs-lookup"><span data-stu-id="ff1fc-120">Requirements</span></span>  
- <span data-ttu-id="ff1fc-121">**平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="ff1fc-121">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="ad5f1-120">要求</span><span class="sxs-lookup"><span data-stu-id="ad5f1-120">Requirements</span></span>  
+ <span data-ttu-id="ad5f1-121">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="ad5f1-121">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="ff1fc-122">**头文件：** CorProf.idl、CorProf.h</span><span class="sxs-lookup"><span data-stu-id="ff1fc-122">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="ad5f1-122">**标头：** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="ad5f1-122">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="ff1fc-123">**.NET framework 版本：** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="ff1fc-123">**.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span></span>  
+ <span data-ttu-id="ad5f1-123">**.NET Framework 版本：**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="ad5f1-123">**.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="ff1fc-124">请参阅</span><span class="sxs-lookup"><span data-stu-id="ff1fc-124">See Also</span></span>  
- [<span data-ttu-id="ff1fc-125">ICorProfilerCallback5 接口</span><span class="sxs-lookup"><span data-stu-id="ff1fc-125">ICorProfilerCallback5 Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback5-interface.md)
+## <a name="see-also"></a><span data-ttu-id="ad5f1-124">请参阅</span><span class="sxs-lookup"><span data-stu-id="ad5f1-124">See also</span></span>
+- [<span data-ttu-id="ad5f1-125">ICorProfilerCallback5 接口</span><span class="sxs-lookup"><span data-stu-id="ad5f1-125">ICorProfilerCallback5 Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback5-interface.md)

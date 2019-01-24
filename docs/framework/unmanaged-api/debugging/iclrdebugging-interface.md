@@ -16,35 +16,35 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 12b7fa5e61ba6f967544d8ebeee2f1c6a8d3a7b6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: a0357b5b072216173546a1aafc03e1a347c48c57
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33405988"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54730043"
 ---
-# <a name="iclrdebugging-interface"></a><span data-ttu-id="25c57-102">ICLRDebugging 接口</span><span class="sxs-lookup"><span data-stu-id="25c57-102">ICLRDebugging Interface</span></span>
-<span data-ttu-id="25c57-103">提供一些方法，用于处理模块的加载和卸载以进行调试。</span><span class="sxs-lookup"><span data-stu-id="25c57-103">Provides methods that handle loading and unloading modules for debugging.</span></span>  
+# <a name="iclrdebugging-interface"></a><span data-ttu-id="ba357-102">ICLRDebugging 接口</span><span class="sxs-lookup"><span data-stu-id="ba357-102">ICLRDebugging Interface</span></span>
+<span data-ttu-id="ba357-103">提供一些方法，用于处理模块的加载和卸载以进行调试。</span><span class="sxs-lookup"><span data-stu-id="ba357-103">Provides methods that handle loading and unloading modules for debugging.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="25c57-104">方法</span><span class="sxs-lookup"><span data-stu-id="25c57-104">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="ba357-104">方法</span><span class="sxs-lookup"><span data-stu-id="ba357-104">Methods</span></span>  
   
-|<span data-ttu-id="25c57-105">方法</span><span class="sxs-lookup"><span data-stu-id="25c57-105">Method</span></span>|<span data-ttu-id="25c57-106">描述</span><span class="sxs-lookup"><span data-stu-id="25c57-106">Description</span></span>|  
+|<span data-ttu-id="ba357-105">方法</span><span class="sxs-lookup"><span data-stu-id="ba357-105">Method</span></span>|<span data-ttu-id="ba357-106">描述</span><span class="sxs-lookup"><span data-stu-id="ba357-106">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="25c57-107">OpenVirtualProcess 方法</span><span class="sxs-lookup"><span data-stu-id="25c57-107">OpenVirtualProcess Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/iclrdebugging-openvirtualprocess-method.md)|<span data-ttu-id="25c57-108">获取对应于进程中加载了公共语言运行时 (CLR) 模块的"ICorDebugProcess"接口。</span><span class="sxs-lookup"><span data-stu-id="25c57-108">Gets the "ICorDebugProcess" interface that corresponds to a common language runtime (CLR) module loaded in the process.</span></span>|  
-|[<span data-ttu-id="25c57-109">CanUnloadNow 方法</span><span class="sxs-lookup"><span data-stu-id="25c57-109">CanUnloadNow Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/iclrdebugging-canunloadnow-method.md)|<span data-ttu-id="25c57-110">确定是否由库[ICLRDebuggingLibraryProvider](../../../../docs/framework/unmanaged-api/debugging/iclrdebugginglibraryprovider-interface.md)接口仍在使用或可以卸载。</span><span class="sxs-lookup"><span data-stu-id="25c57-110">Determines whether a library that was provided by an [ICLRDebuggingLibraryProvider](../../../../docs/framework/unmanaged-api/debugging/iclrdebugginglibraryprovider-interface.md) interface is still in use or can be unloaded.</span></span>|  
+|[<span data-ttu-id="ba357-107">OpenVirtualProcess 方法</span><span class="sxs-lookup"><span data-stu-id="ba357-107">OpenVirtualProcess Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/iclrdebugging-openvirtualprocess-method.md)|<span data-ttu-id="ba357-108">获取对应于在进程中加载了公共语言运行时 (CLR) 模块的"ICorDebugProcess"接口。</span><span class="sxs-lookup"><span data-stu-id="ba357-108">Gets the "ICorDebugProcess" interface that corresponds to a common language runtime (CLR) module loaded in the process.</span></span>|  
+|[<span data-ttu-id="ba357-109">CanUnloadNow 方法</span><span class="sxs-lookup"><span data-stu-id="ba357-109">CanUnloadNow Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/iclrdebugging-canunloadnow-method.md)|<span data-ttu-id="ba357-110">确定是否通过提供的库[ICLRDebuggingLibraryProvider](../../../../docs/framework/unmanaged-api/debugging/iclrdebugginglibraryprovider-interface.md)接口仍在使用或可被卸载。</span><span class="sxs-lookup"><span data-stu-id="ba357-110">Determines whether a library that was provided by an [ICLRDebuggingLibraryProvider](../../../../docs/framework/unmanaged-api/debugging/iclrdebugginglibraryprovider-interface.md) interface is still in use or can be unloaded.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="25c57-111">备注</span><span class="sxs-lookup"><span data-stu-id="25c57-111">Remarks</span></span>  
- <span data-ttu-id="25c57-112">你可以获取的实例`ICLRDebugging`接口使用[CLRCreateInstance](../../../../docs/framework/unmanaged-api/hosting/clrcreateinstance-function.md)函数。</span><span class="sxs-lookup"><span data-stu-id="25c57-112">You can obtain an instance of the `ICLRDebugging` interface by using the [CLRCreateInstance](../../../../docs/framework/unmanaged-api/hosting/clrcreateinstance-function.md) function.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="ba357-111">备注</span><span class="sxs-lookup"><span data-stu-id="ba357-111">Remarks</span></span>  
+ <span data-ttu-id="ba357-112">你可以获取的实例`ICLRDebugging`通过使用接口[CLRCreateInstance](../../../../docs/framework/unmanaged-api/hosting/clrcreateinstance-function.md)函数。</span><span class="sxs-lookup"><span data-stu-id="ba357-112">You can obtain an instance of the `ICLRDebugging` interface by using the [CLRCreateInstance](../../../../docs/framework/unmanaged-api/hosting/clrcreateinstance-function.md) function.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="25c57-113">要求</span><span class="sxs-lookup"><span data-stu-id="25c57-113">Requirements</span></span>  
- <span data-ttu-id="25c57-114">**平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="25c57-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="ba357-113">要求</span><span class="sxs-lookup"><span data-stu-id="ba357-113">Requirements</span></span>  
+ <span data-ttu-id="ba357-114">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="ba357-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="25c57-115">**标头：** CorDebug.idl、 CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="25c57-115">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="ba357-115">**标头：** CorDebug.idl、 CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="ba357-115">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="25c57-116">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="25c57-116">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="ba357-116">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="ba357-116">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="25c57-117">**.NET framework 版本：** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="25c57-117">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
+ <span data-ttu-id="ba357-117">**.NET Framework 版本：**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="ba357-117">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="25c57-118">请参阅</span><span class="sxs-lookup"><span data-stu-id="25c57-118">See Also</span></span>  
- [<span data-ttu-id="25c57-119">调试接口</span><span class="sxs-lookup"><span data-stu-id="25c57-119">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)  
- [<span data-ttu-id="25c57-120">调试</span><span class="sxs-lookup"><span data-stu-id="25c57-120">Debugging</span></span>](../../../../docs/framework/unmanaged-api/debugging/index.md)
+## <a name="see-also"></a><span data-ttu-id="ba357-118">请参阅</span><span class="sxs-lookup"><span data-stu-id="ba357-118">See also</span></span>
+- [<span data-ttu-id="ba357-119">调试接口</span><span class="sxs-lookup"><span data-stu-id="ba357-119">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [<span data-ttu-id="ba357-120">调试</span><span class="sxs-lookup"><span data-stu-id="ba357-120">Debugging</span></span>](../../../../docs/framework/unmanaged-api/debugging/index.md)

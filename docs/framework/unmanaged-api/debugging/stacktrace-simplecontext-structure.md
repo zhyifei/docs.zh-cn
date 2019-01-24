@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: acf2ba752ace49ae288857dc22819a8e7e429a34
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 510ef77f217cdd6e3441e3d6684d431fc31307fd
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33424048"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54698916"
 ---
-# <a name="stacktracesimplecontext-structure"></a><span data-ttu-id="caf12-102">StackTrace_SimpleContext 结构</span><span class="sxs-lookup"><span data-stu-id="caf12-102">StackTrace_SimpleContext Structure</span></span>
-<span data-ttu-id="caf12-103">提供可用于代替完整的 `CONTEXT` 结构的简单上下文。</span><span class="sxs-lookup"><span data-stu-id="caf12-103">Provides a simple context that can be used in place of a full `CONTEXT` structure.</span></span>  
+# <a name="stacktracesimplecontext-structure"></a><span data-ttu-id="063c0-102">StackTrace_SimpleContext 结构</span><span class="sxs-lookup"><span data-stu-id="063c0-102">StackTrace_SimpleContext Structure</span></span>
+<span data-ttu-id="063c0-103">提供可用于代替完整的 `CONTEXT` 结构的简单上下文。</span><span class="sxs-lookup"><span data-stu-id="063c0-103">Provides a simple context that can be used in place of a full `CONTEXT` structure.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="caf12-104">语法</span><span class="sxs-lookup"><span data-stu-id="caf12-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="063c0-104">语法</span><span class="sxs-lookup"><span data-stu-id="063c0-104">Syntax</span></span>  
   
 ```  
 struct StackTrace_SimpleContext  
@@ -38,24 +38,24 @@ struct StackTrace_SimpleContext
 };  
 ```  
   
-## <a name="members"></a><span data-ttu-id="caf12-105">成员</span><span class="sxs-lookup"><span data-stu-id="caf12-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="063c0-105">成员</span><span class="sxs-lookup"><span data-stu-id="063c0-105">Members</span></span>  
   
-|<span data-ttu-id="caf12-106">成员</span><span class="sxs-lookup"><span data-stu-id="caf12-106">Member</span></span>|<span data-ttu-id="caf12-107">描述</span><span class="sxs-lookup"><span data-stu-id="caf12-107">Description</span></span>|  
+|<span data-ttu-id="063c0-106">成员</span><span class="sxs-lookup"><span data-stu-id="063c0-106">Member</span></span>|<span data-ttu-id="063c0-107">描述</span><span class="sxs-lookup"><span data-stu-id="063c0-107">Description</span></span>|  
 |------------|-----------------|  
-|`StackOffset`|<span data-ttu-id="caf12-108">堆栈指针或在 x86 上的输入堆栈指针 (ESP) 平台。</span><span class="sxs-lookup"><span data-stu-id="caf12-108">The stack pointer, or the enter stack pointer (ESP) on x86 platforms.</span></span>|  
-|`FrameOffset`|<span data-ttu-id="caf12-109">帧偏移量或在 x86 上的 EBP 寄存器平台。</span><span class="sxs-lookup"><span data-stu-id="caf12-109">The frame offset, or the EBP register on x86 platforms.</span></span>|  
-|`InstructionOffset`|<span data-ttu-id="caf12-110">指令指针或输入指令指针 (EIP) 在 x86 平台。</span><span class="sxs-lookup"><span data-stu-id="caf12-110">The instruction pointer, or the enter instruction pointer (EIP) on x86 platforms.</span></span>|  
+|`StackOffset`|<span data-ttu-id="063c0-108">堆栈指针或在 x86 上的 enter 堆栈指针 (ESP) 平台。</span><span class="sxs-lookup"><span data-stu-id="063c0-108">The stack pointer, or the enter stack pointer (ESP) on x86 platforms.</span></span>|  
+|`FrameOffset`|<span data-ttu-id="063c0-109">帧偏移量或在 x86 上的 EBP 寄存器平台。</span><span class="sxs-lookup"><span data-stu-id="063c0-109">The frame offset, or the EBP register on x86 platforms.</span></span>|  
+|`InstructionOffset`|<span data-ttu-id="063c0-110">指令指针或在 x86 上的输入指令指针 (EIP) 平台。</span><span class="sxs-lookup"><span data-stu-id="063c0-110">The instruction pointer, or the enter instruction pointer (EIP) on x86 platforms.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="caf12-111">备注</span><span class="sxs-lookup"><span data-stu-id="caf12-111">Remarks</span></span>  
- <span data-ttu-id="caf12-112">因为堆栈跟踪函数通常需要返回地址、 帧偏移量和堆栈地址，你可以选择使用`SimpleContext`而不是较大的结构`CONTEXT`结构。</span><span class="sxs-lookup"><span data-stu-id="caf12-112">Because stack trace functions typically need to return only the address, frame offset, and stack address, you can optionally use the `SimpleContext` structure instead of a large `CONTEXT` structure.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="063c0-111">备注</span><span class="sxs-lookup"><span data-stu-id="063c0-111">Remarks</span></span>  
+ <span data-ttu-id="063c0-112">由于堆栈跟踪函数通常需要返回地址、 帧偏移量和堆栈地址，因此你可以选择使用`SimpleContext`而不是一个较大的结构`CONTEXT`结构。</span><span class="sxs-lookup"><span data-stu-id="063c0-112">Because stack trace functions typically need to return only the address, frame offset, and stack address, you can optionally use the `SimpleContext` structure instead of a large `CONTEXT` structure.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="caf12-113">要求</span><span class="sxs-lookup"><span data-stu-id="caf12-113">Requirements</span></span>  
- <span data-ttu-id="caf12-114">**平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="caf12-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="063c0-113">要求</span><span class="sxs-lookup"><span data-stu-id="063c0-113">Requirements</span></span>  
+ <span data-ttu-id="063c0-114">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="063c0-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="caf12-115">**标头：** SOS_Stacktrace.h</span><span class="sxs-lookup"><span data-stu-id="caf12-115">**Header:** SOS_Stacktrace.h</span></span>  
+ <span data-ttu-id="063c0-115">**标头：** SOS_Stacktrace.h</span><span class="sxs-lookup"><span data-stu-id="063c0-115">**Header:** SOS_Stacktrace.h</span></span>  
   
- <span data-ttu-id="caf12-116">**.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="caf12-116">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="063c0-116">**.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="063c0-116">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="caf12-117">请参阅</span><span class="sxs-lookup"><span data-stu-id="caf12-117">See Also</span></span>  
- [<span data-ttu-id="caf12-118">调试结构</span><span class="sxs-lookup"><span data-stu-id="caf12-118">Debugging Structures</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)  
- [<span data-ttu-id="caf12-119">调试</span><span class="sxs-lookup"><span data-stu-id="caf12-119">Debugging</span></span>](../../../../docs/framework/unmanaged-api/debugging/index.md)
+## <a name="see-also"></a><span data-ttu-id="063c0-117">请参阅</span><span class="sxs-lookup"><span data-stu-id="063c0-117">See also</span></span>
+- [<span data-ttu-id="063c0-118">调试结构</span><span class="sxs-lookup"><span data-stu-id="063c0-118">Debugging Structures</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
+- [<span data-ttu-id="063c0-119">调试</span><span class="sxs-lookup"><span data-stu-id="063c0-119">Debugging</span></span>](../../../../docs/framework/unmanaged-api/debugging/index.md)

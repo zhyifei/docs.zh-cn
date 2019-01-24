@@ -9,43 +9,43 @@ helpviewer_keywords:
 - -win32resource compiler option [Visual Basic]
 - win32resource compiler option [Visual Basic]
 ms.assetid: e226946d-19ce-4cc9-91f5-aed24f77aa2b
-ms.openlocfilehash: 4ecac4ffe665d724d625aaeb7cc1e008eb13ca54
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 05dcaa18d799912d1b92685338a269a050db3f1a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50186078"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54703479"
 ---
-# <a name="-win32resource"></a><span data-ttu-id="697a2-102">-win32resource</span><span class="sxs-lookup"><span data-stu-id="697a2-102">-win32resource</span></span>
-<span data-ttu-id="697a2-103">在输出文件中插入 Win32 资源文件。</span><span class="sxs-lookup"><span data-stu-id="697a2-103">Inserts a Win32 resource file in the output file.</span></span>  
+# <a name="-win32resource"></a><span data-ttu-id="53239-102">-win32resource</span><span class="sxs-lookup"><span data-stu-id="53239-102">-win32resource</span></span>
+<span data-ttu-id="53239-103">在输出文件中插入 Win32 资源文件。</span><span class="sxs-lookup"><span data-stu-id="53239-103">Inserts a Win32 resource file in the output file.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="697a2-104">语法</span><span class="sxs-lookup"><span data-stu-id="697a2-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="53239-104">语法</span><span class="sxs-lookup"><span data-stu-id="53239-104">Syntax</span></span>  
   
 ```  
 -win32resource:filename  
 ```  
   
-## <a name="arguments"></a><span data-ttu-id="697a2-105">自变量</span><span class="sxs-lookup"><span data-stu-id="697a2-105">Arguments</span></span>  
+## <a name="arguments"></a><span data-ttu-id="53239-105">自变量</span><span class="sxs-lookup"><span data-stu-id="53239-105">Arguments</span></span>  
  `filename`  
- <span data-ttu-id="697a2-106">要添加到输出文件的资源文件的名称。</span><span class="sxs-lookup"><span data-stu-id="697a2-106">The name of the resource file to add to your output file.</span></span> <span data-ttu-id="697a2-107">将文件名括在引号 ("") 如果包含空格。</span><span class="sxs-lookup"><span data-stu-id="697a2-107">Enclose the file name in quotation marks (" ") if it contains a space.</span></span>  
+ <span data-ttu-id="53239-106">要添加到输出文件的资源文件的名称。</span><span class="sxs-lookup"><span data-stu-id="53239-106">The name of the resource file to add to your output file.</span></span> <span data-ttu-id="53239-107">将文件名括在引号 ("") 如果包含空格。</span><span class="sxs-lookup"><span data-stu-id="53239-107">Enclose the file name in quotation marks (" ") if it contains a space.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="697a2-108">备注</span><span class="sxs-lookup"><span data-stu-id="697a2-108">Remarks</span></span>  
- <span data-ttu-id="697a2-109">您可以创建 Win32 资源文件与 Microsoft Windows 资源编译器 (RC)。</span><span class="sxs-lookup"><span data-stu-id="697a2-109">You can create a Win32 resource file with the Microsoft Windows Resource Compiler (RC).</span></span>  
+## <a name="remarks"></a><span data-ttu-id="53239-108">备注</span><span class="sxs-lookup"><span data-stu-id="53239-108">Remarks</span></span>  
+ <span data-ttu-id="53239-109">您可以创建 Win32 资源文件与 Microsoft Windows 资源编译器 (RC)。</span><span class="sxs-lookup"><span data-stu-id="53239-109">You can create a Win32 resource file with the Microsoft Windows Resource Compiler (RC).</span></span>  
   
- <span data-ttu-id="697a2-110">Win32 资源可以包含版本或位图 （图标） 信息，以帮助标识中的应用程序**文件资源管理器**。</span><span class="sxs-lookup"><span data-stu-id="697a2-110">A Win32 resource can contain version or bitmap (icon) information that helps identify your application in **File Explorer**.</span></span> <span data-ttu-id="697a2-111">如果未指定`-win32resource`，编译器将生成基于程序集版本的版本信息。</span><span class="sxs-lookup"><span data-stu-id="697a2-111">If you do not specify `-win32resource`, the compiler generates version information based on the assembly version.</span></span> <span data-ttu-id="697a2-112">`-win32resource`和`-win32icon`选项互斥。</span><span class="sxs-lookup"><span data-stu-id="697a2-112">The `-win32resource` and `-win32icon` options are mutually exclusive.</span></span>  
+ <span data-ttu-id="53239-110">Win32 资源可以包含版本或位图 （图标） 信息，以帮助标识中的应用程序**文件资源管理器**。</span><span class="sxs-lookup"><span data-stu-id="53239-110">A Win32 resource can contain version or bitmap (icon) information that helps identify your application in **File Explorer**.</span></span> <span data-ttu-id="53239-111">如果未指定`-win32resource`，编译器将生成基于程序集版本的版本信息。</span><span class="sxs-lookup"><span data-stu-id="53239-111">If you do not specify `-win32resource`, the compiler generates version information based on the assembly version.</span></span> <span data-ttu-id="53239-112">`-win32resource`和`-win32icon`选项互斥。</span><span class="sxs-lookup"><span data-stu-id="53239-112">The `-win32resource` and `-win32icon` options are mutually exclusive.</span></span>  
   
- <span data-ttu-id="697a2-113">请参阅[-linkresource (Visual Basic)](../../../visual-basic/reference/command-line-compiler/linkresource.md)为引用[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]资源文件，或[-资源 (Visual Basic)](../../../visual-basic/reference/command-line-compiler/resource.md)附加[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]资源文件。</span><span class="sxs-lookup"><span data-stu-id="697a2-113">See [-linkresource (Visual Basic)](../../../visual-basic/reference/command-line-compiler/linkresource.md) to reference a [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] resource file, or [-resource (Visual Basic)](../../../visual-basic/reference/command-line-compiler/resource.md) to attach a [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] resource file.</span></span>  
+ <span data-ttu-id="53239-113">请参阅[-linkresource (Visual Basic)](../../../visual-basic/reference/command-line-compiler/linkresource.md)为引用[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]资源文件，或[-资源 (Visual Basic)](../../../visual-basic/reference/command-line-compiler/resource.md)附加[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]资源文件。</span><span class="sxs-lookup"><span data-stu-id="53239-113">See [-linkresource (Visual Basic)](../../../visual-basic/reference/command-line-compiler/linkresource.md) to reference a [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] resource file, or [-resource (Visual Basic)](../../../visual-basic/reference/command-line-compiler/resource.md) to attach a [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] resource file.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="697a2-114">`-win32resource`选项不适用于从 Visual Studio 开发环境中，仅当从命令行编译时便可。</span><span class="sxs-lookup"><span data-stu-id="697a2-114">The `-win32resource` option is not available from within the Visual Studio development environment; it is available only when compiling from the command line.</span></span>  
+>  <span data-ttu-id="53239-114">`-win32resource`选项不适用于从 Visual Studio 开发环境中，仅当从命令行编译时便可。</span><span class="sxs-lookup"><span data-stu-id="53239-114">The `-win32resource` option is not available from within the Visual Studio development environment; it is available only when compiling from the command line.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="697a2-115">示例</span><span class="sxs-lookup"><span data-stu-id="697a2-115">Example</span></span>  
- <span data-ttu-id="697a2-116">下面的代码编译`In.vb`并附加 Win32 资源文件， `Rf.res`:</span><span class="sxs-lookup"><span data-stu-id="697a2-116">The following code compiles `In.vb` and attaches a Win32 resource file, `Rf.res`:</span></span>  
+## <a name="example"></a><span data-ttu-id="53239-115">示例</span><span class="sxs-lookup"><span data-stu-id="53239-115">Example</span></span>  
+ <span data-ttu-id="53239-116">下面的代码编译`In.vb`并附加 Win32 资源文件， `Rf.res`:</span><span class="sxs-lookup"><span data-stu-id="53239-116">The following code compiles `In.vb` and attaches a Win32 resource file, `Rf.res`:</span></span>  
   
 ```console  
 vbc -win32resource:rf.res in.vb  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="697a2-117">请参阅</span><span class="sxs-lookup"><span data-stu-id="697a2-117">See Also</span></span>  
- [<span data-ttu-id="697a2-118">Visual Basic 命令行编译器</span><span class="sxs-lookup"><span data-stu-id="697a2-118">Visual Basic Command-Line Compiler</span></span>](../../../visual-basic/reference/command-line-compiler/index.md)  
- [<span data-ttu-id="697a2-119">示例编译命令行</span><span class="sxs-lookup"><span data-stu-id="697a2-119">Sample Compilation Command Lines</span></span>](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
+## <a name="see-also"></a><span data-ttu-id="53239-117">请参阅</span><span class="sxs-lookup"><span data-stu-id="53239-117">See also</span></span>
+- [<span data-ttu-id="53239-118">Visual Basic 命令行编译器</span><span class="sxs-lookup"><span data-stu-id="53239-118">Visual Basic Command-Line Compiler</span></span>](../../../visual-basic/reference/command-line-compiler/index.md)
+- [<span data-ttu-id="53239-119">示例编译命令行</span><span class="sxs-lookup"><span data-stu-id="53239-119">Sample Compilation Command Lines</span></span>](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)

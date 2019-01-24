@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1408c3aa064cf6db641c2f14b61e4a93bca34b1d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 5a5a7fcc495914090450c7fabad60b230c144517
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33411501"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54713884"
 ---
-# <a name="icordebugeditandcontinuesnapshotsetpebytes-method"></a><span data-ttu-id="19221-102">ICorDebugEditAndContinueSnapshot::SetPEBytes 方法</span><span class="sxs-lookup"><span data-stu-id="19221-102">ICorDebugEditAndContinueSnapshot::SetPEBytes Method</span></span>
-<span data-ttu-id="19221-103">`SetPEBytes` 已过时。</span><span class="sxs-lookup"><span data-stu-id="19221-103">`SetPEBytes` is obsolete.</span></span> <span data-ttu-id="19221-104">请勿调用此方法。</span><span class="sxs-lookup"><span data-stu-id="19221-104">Do not call this method.</span></span>  
+# <a name="icordebugeditandcontinuesnapshotsetpebytes-method"></a><span data-ttu-id="8d07a-102">ICorDebugEditAndContinueSnapshot::SetPEBytes 方法</span><span class="sxs-lookup"><span data-stu-id="8d07a-102">ICorDebugEditAndContinueSnapshot::SetPEBytes Method</span></span>
+<span data-ttu-id="8d07a-103">`SetPEBytes` 已过时。</span><span class="sxs-lookup"><span data-stu-id="8d07a-103">`SetPEBytes` is obsolete.</span></span> <span data-ttu-id="8d07a-104">请勿调用此方法。</span><span class="sxs-lookup"><span data-stu-id="8d07a-104">Do not call this method.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="19221-105">请参阅</span><span class="sxs-lookup"><span data-stu-id="19221-105">See Also</span></span>  
- [<span data-ttu-id="19221-106">调试接口</span><span class="sxs-lookup"><span data-stu-id="19221-106">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a><span data-ttu-id="8d07a-105">请参阅</span><span class="sxs-lookup"><span data-stu-id="8d07a-105">See also</span></span>
+- [<span data-ttu-id="8d07a-106">调试接口</span><span class="sxs-lookup"><span data-stu-id="8d07a-106">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

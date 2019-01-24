@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 71881fe8c4b883bb91468033a3c17c8d77c35f3c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: cffbf01cb8098f30fb026491e0153ac9a651756a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33445417"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54692385"
 ---
-# <a name="imetadataemitsetmethodimplflags-method"></a><span data-ttu-id="54c82-102">IMetaDataEmit::SetMethodImplFlags 方法</span><span class="sxs-lookup"><span data-stu-id="54c82-102">IMetaDataEmit::SetMethodImplFlags Method</span></span>
-<span data-ttu-id="54c82-103">设置或更新由指定标记引用的继承的方法实现的元数据签名。</span><span class="sxs-lookup"><span data-stu-id="54c82-103">Sets or updates the metadata signature of the inherited method implementation that is referenced by the specified token.</span></span>  
+# <a name="imetadataemitsetmethodimplflags-method"></a><span data-ttu-id="2562a-102">IMetaDataEmit::SetMethodImplFlags 方法</span><span class="sxs-lookup"><span data-stu-id="2562a-102">IMetaDataEmit::SetMethodImplFlags Method</span></span>
+<span data-ttu-id="2562a-103">设置或更新指定的标记所引用的继承的方法实现的元数据签名。</span><span class="sxs-lookup"><span data-stu-id="2562a-103">Sets or updates the metadata signature of the inherited method implementation that is referenced by the specified token.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="54c82-104">语法</span><span class="sxs-lookup"><span data-stu-id="54c82-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="2562a-104">语法</span><span class="sxs-lookup"><span data-stu-id="2562a-104">Syntax</span></span>  
   
 ```  
 HRESULT SetMethodImplFlags (   
@@ -36,22 +36,22 @@ HRESULT SetMethodImplFlags (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="54c82-105">参数</span><span class="sxs-lookup"><span data-stu-id="54c82-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="2562a-105">参数</span><span class="sxs-lookup"><span data-stu-id="2562a-105">Parameters</span></span>  
  `md`  
- <span data-ttu-id="54c82-106">[in]要更改方法的标记。</span><span class="sxs-lookup"><span data-stu-id="54c82-106">[in] The token for the method to be changed.</span></span>  
+ <span data-ttu-id="2562a-106">[in]若要更改方法的标记。</span><span class="sxs-lookup"><span data-stu-id="2562a-106">[in] The token for the method to be changed.</span></span>  
   
  `dwImplFlags`  
- <span data-ttu-id="54c82-107">[in]值的组合[CorMethodImpl](../../../../docs/framework/unmanaged-api/metadata/cormethodimpl-enumeration.md)枚举，指定方法实现功能。</span><span class="sxs-lookup"><span data-stu-id="54c82-107">[in] A combination of the values of the [CorMethodImpl](../../../../docs/framework/unmanaged-api/metadata/cormethodimpl-enumeration.md) enumeration that specifies the method implementation features.</span></span>  
+ <span data-ttu-id="2562a-107">[in]值的组合[CorMethodImpl](../../../../docs/framework/unmanaged-api/metadata/cormethodimpl-enumeration.md)枚举，用于指定方法实现功能。</span><span class="sxs-lookup"><span data-stu-id="2562a-107">[in] A combination of the values of the [CorMethodImpl](../../../../docs/framework/unmanaged-api/metadata/cormethodimpl-enumeration.md) enumeration that specifies the method implementation features.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="54c82-108">要求</span><span class="sxs-lookup"><span data-stu-id="54c82-108">Requirements</span></span>  
- <span data-ttu-id="54c82-109">**平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="54c82-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="2562a-108">要求</span><span class="sxs-lookup"><span data-stu-id="2562a-108">Requirements</span></span>  
+ <span data-ttu-id="2562a-109">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="2562a-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="54c82-110">**标头：** Cor.h</span><span class="sxs-lookup"><span data-stu-id="54c82-110">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="2562a-110">**标头：** Cor.h</span><span class="sxs-lookup"><span data-stu-id="2562a-110">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="54c82-111">**库：** 用作 MSCorEE.dll 中的资源</span><span class="sxs-lookup"><span data-stu-id="54c82-111">**Library:** Used as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="2562a-111">**库：** 用作 MSCorEE.dll 中的资源</span><span class="sxs-lookup"><span data-stu-id="2562a-111">**Library:** Used as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="54c82-112">**.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="54c82-112">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="2562a-112">**.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="2562a-112">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="54c82-113">请参阅</span><span class="sxs-lookup"><span data-stu-id="54c82-113">See Also</span></span>  
- [<span data-ttu-id="54c82-114">IMetaDataEmit Interface</span><span class="sxs-lookup"><span data-stu-id="54c82-114">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)  
- [<span data-ttu-id="54c82-115">IMetaDataEmit2 Interface</span><span class="sxs-lookup"><span data-stu-id="54c82-115">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+## <a name="see-also"></a><span data-ttu-id="2562a-113">请参阅</span><span class="sxs-lookup"><span data-stu-id="2562a-113">See also</span></span>
+- [<span data-ttu-id="2562a-114">IMetaDataEmit Interface</span><span class="sxs-lookup"><span data-stu-id="2562a-114">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+- [<span data-ttu-id="2562a-115">IMetaDataEmit2 Interface</span><span class="sxs-lookup"><span data-stu-id="2562a-115">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

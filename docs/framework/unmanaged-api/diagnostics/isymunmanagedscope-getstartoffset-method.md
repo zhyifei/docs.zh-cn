@@ -17,33 +17,33 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 19d116825efc4eb2ec1de22f232f46f8fb0fdf18
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 2b81ac93c67d59c294f22eb825527fa9982d9124
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33425906"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54721092"
 ---
-# <a name="isymunmanagedscopegetstartoffset-method"></a><span data-ttu-id="d7897-102">ISymUnmanagedScope::GetStartOffset 方法</span><span class="sxs-lookup"><span data-stu-id="d7897-102">ISymUnmanagedScope::GetStartOffset Method</span></span>
-<span data-ttu-id="d7897-103">获取此范围的起始偏移量。</span><span class="sxs-lookup"><span data-stu-id="d7897-103">Gets the start offset for this scope.</span></span>  
+# <a name="isymunmanagedscopegetstartoffset-method"></a><span data-ttu-id="8eb89-102">ISymUnmanagedScope::GetStartOffset 方法</span><span class="sxs-lookup"><span data-stu-id="8eb89-102">ISymUnmanagedScope::GetStartOffset Method</span></span>
+<span data-ttu-id="8eb89-103">获取此范围的起始偏移量。</span><span class="sxs-lookup"><span data-stu-id="8eb89-103">Gets the start offset for this scope.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="d7897-104">语法</span><span class="sxs-lookup"><span data-stu-id="d7897-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="8eb89-104">语法</span><span class="sxs-lookup"><span data-stu-id="8eb89-104">Syntax</span></span>  
   
 ```  
 HRESULT GetStartOffset(  
     [out, retval] ULONG32* pRetVal);  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="d7897-105">参数</span><span class="sxs-lookup"><span data-stu-id="d7897-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="8eb89-105">参数</span><span class="sxs-lookup"><span data-stu-id="8eb89-105">Parameters</span></span>  
  `pRetVal`  
- <span data-ttu-id="d7897-106">[out]指向的指针`ULONG32`，其中包含的起始偏移量。</span><span class="sxs-lookup"><span data-stu-id="d7897-106">[out] A pointer to a `ULONG32` that contains the starting offset.</span></span>  
+ <span data-ttu-id="8eb89-106">[out]一个指向`ULONG32`，其中包含的起始偏移量。</span><span class="sxs-lookup"><span data-stu-id="8eb89-106">[out] A pointer to a `ULONG32` that contains the starting offset.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="d7897-107">返回值</span><span class="sxs-lookup"><span data-stu-id="d7897-107">Return Value</span></span>  
- <span data-ttu-id="d7897-108">如果该方法成功; 则为 S_OK否则为 E_FAIL 或某些其他错误代码。</span><span class="sxs-lookup"><span data-stu-id="d7897-108">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="8eb89-107">返回值</span><span class="sxs-lookup"><span data-stu-id="8eb89-107">Return Value</span></span>  
+ <span data-ttu-id="8eb89-108">如果方法成功，则为 S_OK否则为 E_FAIL 或某些其他错误代码。</span><span class="sxs-lookup"><span data-stu-id="8eb89-108">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="d7897-109">要求</span><span class="sxs-lookup"><span data-stu-id="d7897-109">Requirements</span></span>  
- <span data-ttu-id="d7897-110">**标头：** CorSym.idl、 CorSym.h</span><span class="sxs-lookup"><span data-stu-id="d7897-110">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="8eb89-109">要求</span><span class="sxs-lookup"><span data-stu-id="8eb89-109">Requirements</span></span>  
+ <span data-ttu-id="8eb89-110">**标头：** CorSym.idl CorSym.h</span><span class="sxs-lookup"><span data-stu-id="8eb89-110">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="d7897-111">请参阅</span><span class="sxs-lookup"><span data-stu-id="d7897-111">See Also</span></span>  
- [<span data-ttu-id="d7897-112">ISymUnmanagedScope 接口</span><span class="sxs-lookup"><span data-stu-id="d7897-112">ISymUnmanagedScope Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope-interface.md)  
- [<span data-ttu-id="d7897-113">GetEndOffset 方法</span><span class="sxs-lookup"><span data-stu-id="d7897-113">GetEndOffset Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope-getendoffset-method.md)
+## <a name="see-also"></a><span data-ttu-id="8eb89-111">请参阅</span><span class="sxs-lookup"><span data-stu-id="8eb89-111">See also</span></span>
+- [<span data-ttu-id="8eb89-112">ISymUnmanagedScope 接口</span><span class="sxs-lookup"><span data-stu-id="8eb89-112">ISymUnmanagedScope Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope-interface.md)
+- [<span data-ttu-id="8eb89-113">GetEndOffset 方法</span><span class="sxs-lookup"><span data-stu-id="8eb89-113">GetEndOffset Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope-getendoffset-method.md)
