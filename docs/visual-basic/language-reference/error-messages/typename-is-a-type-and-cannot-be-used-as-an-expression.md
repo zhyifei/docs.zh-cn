@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30108
 ms.assetid: 7931361d-78e2-40ca-ac69-e3374273b248
-ms.openlocfilehash: eeba33626310ed4963550d7522c0051367752580
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7e13173bee9db776f1c85f8a0f5da4cd4c24f96a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33597404"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54642332"
 ---
 # <a name="39lttypenamegt39-is-a-type-and-cannot-be-used-as-an-expression"></a>&#39;&lt;typename&gt; &#39;是一种类型，不能用作表达式
 类型名称出现在要求表达式的位置。 表达式必须包含某些变量、常量、文本、属性和 `Function` 过程调用的组合。  
@@ -23,5 +23,5 @@ ms.locfileid: "33597404"
   
 -   删除类型名称，并使用有效的元素构造表达式。  
   
-## <a name="see-also"></a>请参阅  
- [运算符和表达式](../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)
+## <a name="see-also"></a>请参阅
+- [运算符和表达式](../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)

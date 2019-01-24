@@ -7,17 +7,17 @@ helpviewer_keywords:
 - LINQ to XML [Visual Basic], XML literals
 - literals [Visual Basic], XML
 ms.assetid: 37987c15-4ab8-471b-bd45-399816bfb57f
-ms.openlocfilehash: 03fc8c11b5553c9c3a63bdcb69bf6135050e2c89
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: c6d2600b590e01fff062828f8e0f48d9cfad0190
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43507643"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54681386"
 ---
 # <a name="xml-literals-overview-visual-basic"></a>XML 文本概述 (Visual Basic)
 *XML 文本*允许您将 XML 直接并入您的 Visual Basic 代码。 使用 XML 文本语法表示[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]对象，它是类似于 XML 1.0 语法。 这使得更轻松地以编程方式创建 XML 元素和文档，因为你的代码具有相同的结构与最终的 XML。  
   
- Visual Basic 编译 XML 文本转换[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]对象。 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 提供用于创建和操作 XML，简单对象模型和此模型完美集成[!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)]。 有关详细信息，请参阅<xref:System.Xml.Linq.XElement>。  
+ Visual Basic 编译 XML 文本转换[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]对象。 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 提供用于创建和操作 XML，简单对象模型和此模型完美集成[!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)]。 有关详细信息，请参阅 <xref:System.Xml.Linq.XElement>。  
   
  可以在 XML 文本中嵌入的 Visual Basic 表达式。 在运行时，应用程序创建[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]为每个文本合并嵌入表达式的值的对象。 这允许您指定在 XML 文本内的动态内容。 有关详细信息，请参阅[XML 中的嵌入式表达式](../../../../visual-basic/programming-guide/language-features/xml/embedded-expressions-in-xml.md)。  
   
@@ -54,10 +54,10 @@ ms.locfileid: "43507643"
   
  [!code-vb[VbXMLSamples#6](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/xml-literals-overview_2.vb)]  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Xml.Linq.XElement>  
- [在 Visual Basic 中创建 XML](../../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)  
- [XML 中的嵌入式表达式](../../../../visual-basic/programming-guide/language-features/xml/embedded-expressions-in-xml.md)  
- [XML 文档文本](../../../../visual-basic/language-reference/xml-literals/xml-document-literal.md)  
- [XML 元素文本](../../../../visual-basic/language-reference/xml-literals/xml-element-literal.md)  
- [XML 文本](../../../../visual-basic/language-reference/xml-literals/index.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.Xml.Linq.XElement>
+- [在 Visual Basic 中创建 XML](../../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)
+- [XML 中的嵌入式表达式](../../../../visual-basic/programming-guide/language-features/xml/embedded-expressions-in-xml.md)
+- [XML 文档文本](../../../../visual-basic/language-reference/xml-literals/xml-document-literal.md)
+- [XML 元素文本](../../../../visual-basic/language-reference/xml-literals/xml-element-literal.md)
+- [XML 文本](../../../../visual-basic/language-reference/xml-literals/index.md)

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - RaiseEvent statement [Visual Basic]
 - event handlers, connecting events to
 ms.assetid: f82e380a-1e6b-4047-bea8-c853f4d2c742
-ms.openlocfilehash: ba4c05b3ef69d180f43ac3b90aa8fd6dee9c80fb
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: ccefe07c847c7a356e9ff8da301257bf6a90d1ed
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53143293"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54655001"
 ---
 # <a name="raiseevent-statement"></a>RaiseEvent 语句
 触发器在类、 窗体或文档中的模块级声明的事件。  
@@ -75,9 +75,9 @@ RaiseEvent eventname[( argumentlist )]
 > [!NOTE]
 >  `My.Application.DoEvents`窗体一样方法不会完全相同的方式处理事件。 若要使表单能够直接处理事件，可以使用多线程处理。 有关详细信息，请参阅[托管线程处理](../../../standard/threading/index.md)。  
   
-## <a name="see-also"></a>请参阅  
- [事件](../../../visual-basic/programming-guide/language-features/events/index.md)  
- [Event 语句](../../../visual-basic/language-reference/statements/event-statement.md)  
- [AddHandler 语句](../../../visual-basic/language-reference/statements/addhandler-statement.md)  
- [RemoveHandler 语句](../../../visual-basic/language-reference/statements/removehandler-statement.md)  
- [Handles](../../../visual-basic/language-reference/statements/handles-clause.md)
+## <a name="see-also"></a>请参阅
+- [事件](../../../visual-basic/programming-guide/language-features/events/index.md)
+- [Event 语句](../../../visual-basic/language-reference/statements/event-statement.md)
+- [AddHandler 语句](../../../visual-basic/language-reference/statements/addhandler-statement.md)
+- [RemoveHandler 语句](../../../visual-basic/language-reference/statements/removehandler-statement.md)
+- [Handles](../../../visual-basic/language-reference/statements/handles-clause.md)

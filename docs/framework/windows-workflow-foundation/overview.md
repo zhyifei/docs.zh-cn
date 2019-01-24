@@ -2,12 +2,12 @@
 title: Windows 工作流概述
 ms.date: 03/30/2017
 ms.assetid: fc44adbe-1412-49ae-81af-0298be44aae6
-ms.openlocfilehash: a516f454abc81ae8f6f1c15c815fe2b671ecd98f
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: af5ccd47dd7b3ff35dd283f8fe659ebef912d441
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47195441"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54665157"
 ---
 # <a name="windows-workflow-overview"></a>Windows 工作流概述
 工作流是一组的名为的基本单元*活动*作为描述实际过程的模型存储的。 工作流提供了一种方法，用于描述多项短期运行或长期运行的工作之间的执行顺序和依赖关系。 此工作从头到尾地贯穿模型，并且活动可以人工执行或由系统功能执行。  
@@ -41,5 +41,5 @@ ms.locfileid: "47195441"
   
 -   一个派生自 <xref:System.Activities.CodeActivity> 抽象类的自定义活动。 <xref:System.Activities.CodeActivity> 可以使用作为 <xref:System.Activities.CodeActivityContext> 方法的参数提供的 <xref:System.Activities.CodeActivity.Execute%2A> 访问运行时功能（如跟踪和属性）。 有关这些运行时功能的详细信息，请参阅[工作流跟踪](../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)并[工作流执行属性](../../../docs/framework/windows-workflow-foundation/workflow-execution-properties.md)。  
   
-## <a name="see-also"></a>请参阅  
- [BizTalk Server 2006 还是 WF？为你的项目选择正确的工作流工具](https://go.microsoft.com/fwlink/?LinkId=154901)
+## <a name="see-also"></a>请参阅
+- [BizTalk Server 2006 还是 WF？为你的项目选择正确的工作流工具](https://go.microsoft.com/fwlink/?LinkId=154901)

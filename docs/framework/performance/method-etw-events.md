@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 167a4459-bb6e-476c-9046-7920880f2bb5
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 578aed02d5d44ae94763b6a254420a4976320f13
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1e18d64bdc67bfa5dce01c9125ee2e8585ab7db9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33398100"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54671949"
 ---
 # <a name="method-etw-events"></a>方法 ETW 事件
 <a name="top"></a> 这些事件收集特定于方法的信息。 符号解析需要这些事件的负载。 此外，这些事件还提供如调用方法的次数等有用信息。  
@@ -60,7 +60,7 @@ ms.locfileid: "33398100"
 |MethodStartAddress|win:UInt64|方法的起始地址。|  
 |MethodSize|win:UInt32|方法的大小。|  
 |MethodToken|win:UInt32|0 代表动态方法和 JIT 帮助器。|  
-|MethodFlags|win:UInt32|0x1：动态方法。<br /><br /> 0x2：泛型方法。<br /><br /> 0x4：JIT 编译的代码方法（否则为 NGEN 本机映像代码）。<br /><br /> 0x8：帮助器方法。|  
+|MethodFlags|win:UInt32|0x1:动态方法。<br /><br /> 0x2:泛型方法。<br /><br /> 0x4:JIT 编译的代码方法 （否则为 NGEN 本机映像代码）。<br /><br /> 0x8:帮助器方法。|  
 |ClrInstanceID|win:UInt16|CLR 或 CoreCLR 的实例的唯一 ID。|  
   
  [返回页首](#top)  
@@ -123,7 +123,7 @@ ms.locfileid: "33398100"
 |MethodStartAddress|win:UInt64|起始地址。|  
 |MethodSize|win:UInt32|方法长度。|  
 |MethodToken|win:UInt32|0 代表动态方法和 JIT 帮助器。|  
-|MethodFlags|win:UInt32|0x1：动态方法。<br /><br /> 0x2：泛型方法。<br /><br /> 0x4：JIT 编译的方法（否则由 NGen.exe 生成）<br /><br /> 0x8：帮助器方法。|  
+|MethodFlags|win:UInt32|0x1:动态方法。<br /><br /> 0x2:泛型方法。<br /><br /> 0x4:JIT 编译的方法 （否则为由 NGen.exe 生成)<br /><br /> 0x8:帮助器方法。|  
 |MethodNameSpace|win:UnicodeString|与该方法关联的完整命名空间名称。|  
 |MethodName|win:UnicodeString|与该方法关联的完整类名称。|  
 |MethodSignature|win:UnicodeString|方法的签名（以逗号分隔的类型名称列表）。|  
@@ -161,5 +161,5 @@ ms.locfileid: "33398100"
 |MethodSignature|win:UnicodeString|方法的签名（以逗号分隔的类型名称列表）。|  
 |ClrInstanceID|win:UInt16|CLR 或 CoreCLR 的实例的唯一 ID。|  
   
-## <a name="see-also"></a>请参阅  
- [CLR ETW 事件](../../../docs/framework/performance/clr-etw-events.md)
+## <a name="see-also"></a>请参阅
+- [CLR ETW 事件](../../../docs/framework/performance/clr-etw-events.md)

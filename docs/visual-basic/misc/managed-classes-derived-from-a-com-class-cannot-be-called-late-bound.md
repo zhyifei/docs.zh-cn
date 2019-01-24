@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrLateboundCallToInheritedComClass
 ms.assetid: 7bc16e84-8d29-4f8e-bc4f-002c65c71099
-ms.openlocfilehash: e302402d7c7b376afcb2d292e8796bc6248edb3f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1b12efa0d7f48cb9936cecfc8492c0c2e4eac5fa
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33636723"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54642330"
 ---
 # <a name="managed-classes-derived-from-a-com-class-cannot-be-called-late-bound"></a>不能以后期绑定方式调用从 COM 类派生的托管类。
 尝试对从 COM 类派生的托管类进行后期绑定调用，但不支持这种调用。  
@@ -18,5 +18,5 @@ ms.locfileid: "33636723"
   
 -   进行早期绑定调用。  
   
-## <a name="see-also"></a>请参阅  
- [错误类型](../../visual-basic/programming-guide/language-features/error-types.md)
+## <a name="see-also"></a>请参阅
+- [错误类型](../../visual-basic/programming-guide/language-features/error-types.md)
