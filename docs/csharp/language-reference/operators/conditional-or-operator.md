@@ -9,12 +9,12 @@ helpviewer_keywords:
 - conditional-OR operator (||) [C#]
 - '|| operator [C#]'
 ms.assetid: 7d442d8e-400d-421f-b4d2-034bf82bcbdc
-ms.openlocfilehash: f4bb7ada12fbcebcb90fb7cd22d6e6bccad5fb57
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 079c021eb68ece097c7f644416f1e9469a82dcea
+ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53244565"
+ms.lasthandoff: 01/19/2019
+ms.locfileid: "54415424"
 ---
 # <a name="-operator-c-reference"></a>|| 运算符（C# 参考）
 
@@ -38,5 +38,5 @@ ms.locfileid: "53244565"
 - [C# 编程指南](../../programming-guide/index.md)
 - [C# 运算符](index.md)
 - [&& 运算符](conditional-and-operator.md)
-- [! 运算符](logical-negation-operator.md)
+- [\! 运算符](logical-negation-operator.md)
 - [| 运算符](or-operator.md)

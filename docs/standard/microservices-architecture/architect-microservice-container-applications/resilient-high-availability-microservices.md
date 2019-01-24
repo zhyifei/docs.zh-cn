@@ -4,12 +4,12 @@ description: 微服务必须能够承受暂时的网络和依赖项故障，必�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/20/2018
-ms.openlocfilehash: cbfff525c977c8dc11503a9f230c3ede6f0d6f37
-ms.sourcegitcommit: 82a3f7882bc03ed733af91fc2a0b113195bf5dc7
+ms.openlocfilehash: 174e9881be50b8c2f8220960e93dce626e776b65
+ms.sourcegitcommit: 542aa405b295955eb055765f33723cb8b588d0d0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52745324"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "54362231"
 ---
 # <a name="resiliency-and-high-availability-in-microservices"></a>微服务中的复原和高可用性
 
@@ -29,12 +29,12 @@ ms.locfileid: "52745324"
 
 运行状况不同于诊断。 运行状况是微服务报告其当前状态以采取适当的措施。 一个很好的例子就是使用升级和部署机制来保证可用性。 即使可能由于进程崩溃或计算机重启导致当前服务不正常，仍可对服务器进行操作。 最不需要做的就是执行升级，那样会让情况变得更糟。 最佳方法是先调查或给微服务恢复的时间。 微服务的运行状况事件能帮助做出明智的决定，实际上是帮助创建自愈服务。
 
-本指南的[在 ASP.NET Core 服务中实现运行状况检查](../implement-resilient-applications/monitor-app-health.md#implementing-health-checks-in-aspnet-core-services)一节介绍了如何在微服务中使用新 ASP.NET 运行状况检查库，使微服务可向监视器服务报告它们的状态，以执行适当的操作。
+本指南的[在 ASP.NET Core 服务中实现运行状况检查](../implement-resilient-applications/monitor-app-health.md#implement-health-checks-in-aspnet-core-services)一节介绍了如何在微服务中使用新 ASP.NET 运行状况检查库，使微服务可向监视器服务报告它们的状态，以执行适当的操作。
 
 还可以使用出色的开源库 Beat Pulse，该库可通过 [GitHub](https://github.com/Xabaril/BeatPulse) 作为 [NuGet 包](https://www.nuget.org/packages/BeatPulse/) 获取。 此库还执行经过改进的运行状况检查，它可以处理两种类型的检查：
 
-- 活跃度：检查微服务是否处于活动状态，即微服务是否接受请求并作出响应。 
-- 就绪性：检查微服务的依赖项（数据库、查询服务等）是否已就绪，以便微服务可以执行预期操作。 
+- **运行情况**：检查微服务是否处于活动状态，即微服务是否接受请求并作出响应。 
+- **就绪情况**：检查微服务的依赖项（数据库、查询服务等）是否已就绪，以便微服务可以执行预期操作。 
 
 ### <a name="using-diagnostics-and-logs-event-streams"></a>使用诊断和日志事件流
 
@@ -70,7 +70,7 @@ ms.locfileid: "52745324"
 - 将 Windows 计算机连接到 Azure 中的 Log Analytics 服务 \
   [*https://docs.microsoft.com/azure/log-analytics/log-analytics-windows-agents*](https://docs.microsoft.com/azure/log-analytics/log-analytics-windows-agents)
 
-- 记录你的想法：使用语义日志记录应用程序块 \
+- **记录你的想法：使用语义日志记录应用程序块** \
   [*https://msdn.microsoft.com/library/dn440729(v=pandp.60).aspx*](https://msdn.microsoft.com/library/dn440729(v=pandp.60).aspx)
 
 - Splunk 官方网站。 \

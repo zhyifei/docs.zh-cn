@@ -1,5 +1,5 @@
 ---
-title: 演练：实现一个使用后台操作的窗体
+title: 演练：实现使用后台操作的窗体
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -15,14 +15,14 @@ helpviewer_keywords:
 - threading [Windows Forms], background operations
 - background operations
 ms.assetid: 4691b796-9200-471a-89c3-ba4c7cc78c03
-ms.openlocfilehash: 81c7f21e7e331b60d41330c8239893332dbea5a1
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: fa9f35fd5ecd1c6761f363ea2a1e1a67996ecb77
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44253125"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54543521"
 ---
-# <a name="walkthrough-implementing-a-form-that-uses-a-background-operation"></a>演练：实现一个使用后台操作的窗体
+# <a name="walkthrough-implementing-a-form-that-uses-a-background-operation"></a>演练：实现使用后台操作的窗体
 如果某项操作需要很长时间才能完成，并且您不希望用户界面 (UI) 停止响应或"挂起，可以使用<xref:System.ComponentModel.BackgroundWorker>类，以另一个线程上执行此操作。  
   
  本演练演示了如何使用<xref:System.ComponentModel.BackgroundWorker>类来执行耗时的计算，"在后台，"尽管用户界面保持响应。  演练时，将有一个异步计算 Fibonacci 数列的应用程序。 即使计算大型 Fibonacci 数列需要花费大量时间，但主 UI 线程不会被这种延时中断，并且在计算期间窗体仍会响应。  
@@ -37,7 +37,7 @@ ms.locfileid: "44253125"
   
 -   添加进度报告和取消支持  
   
- 若要了解此示例中使用的代码的完整列表，请参阅[如何：实现使用后台操作的窗体](../../../../docs/framework/winforms/controls/how-to-implement-a-form-that-uses-a-background-operation.md)。  
+ 在此示例中使用的代码的完整列表，请参阅[如何：实现使用后台操作的窗体](../../../../docs/framework/winforms/controls/how-to-implement-a-form-that-uses-a-background-operation.md)。  
   
 > [!NOTE]
 >  显示的对话框和菜单命令可能会与“帮助”中的描述不同，具体取决于你现用的设置或版本。 若要更改设置，请在 **“工具”** 菜单上选择 **“导入和导出设置”** 。 有关详细信息，请参阅[个性化设置 Visual Studio IDE](/visualstudio/ide/personalizing-the-visual-studio-ide)。  
@@ -57,7 +57,7 @@ ms.locfileid: "44253125"
   
 5.  重命名第一个<xref:System.Windows.Forms.Button>控制`startAsyncButton`并设置<xref:System.Windows.Forms.Control.Text%2A>属性设置为`Start Async`。 重命名第二个<xref:System.Windows.Forms.Button>控制`cancelAsyncButton`，并设置<xref:System.Windows.Forms.Control.Text%2A>属性设置为`Cancel Async`。 设置其<xref:System.Windows.Forms.Control.Enabled%2A>属性设置为`false`。  
   
-6.  创建事件处理程序的两个<xref:System.Windows.Forms.Button>控件的<xref:System.Windows.Forms.Control.Click>事件。 有关详细信息，请参阅[如何：使用设计器创建事件处理程序](https://msdn.microsoft.com/library/8461e9b8-14e8-406f-936e-3726732b23d2)。  
+6.  创建事件处理程序的两个<xref:System.Windows.Forms.Button>控件的<xref:System.Windows.Forms.Control.Click>事件。 有关详细信息，请参阅[如何：创建事件处理程序使用设计器](https://msdn.microsoft.com/library/8461e9b8-14e8-406f-936e-3726732b23d2)。  
   
 7.  拖动<xref:System.Windows.Forms.Label>控件从**工具箱**拖到窗体并将其重命名`resultLabel`。  
   
@@ -75,7 +75,7 @@ ms.locfileid: "44253125"
   
 #### <a name="to-implement-asynchronous-event-handlers"></a>实现异步事件处理程序  
   
-1.  在中**属性**窗口中，使用<xref:System.ComponentModel.BackgroundWorker>组件仍处于选中状态，单击**事件**按钮。 双击<xref:System.ComponentModel.BackgroundWorker.DoWork>和<xref:System.ComponentModel.BackgroundWorker.RunWorkerCompleted>事件创建事件处理程序。 若要深入了解如何使用事件处理程序，请参阅[如何：使用设计器创建事件处理程序](https://msdn.microsoft.com/library/8461e9b8-14e8-406f-936e-3726732b23d2)。  
+1.  在中**属性**窗口中，使用<xref:System.ComponentModel.BackgroundWorker>组件仍处于选中状态，单击**事件**按钮。 双击<xref:System.ComponentModel.BackgroundWorker.DoWork>和<xref:System.ComponentModel.BackgroundWorker.RunWorkerCompleted>事件创建事件处理程序。 有关如何使用事件处理程序的详细信息，请参阅[如何：创建事件处理程序使用设计器](https://msdn.microsoft.com/library/8461e9b8-14e8-406f-936e-3726732b23d2)。  
   
 2.  在窗体中新建一个名为 `ComputeFibonacci` 的新方法。 此方法完成实际的工作，并在后台运行。 这些代码演示了 Fibonacci 算法的递归实现，这种算法的效率非常低，对于较大的数值花费的时间按指数增长。 在这里使用是出于演示的目的，为了说明在应用程序中某项操作可能带来长时间的延迟。  
   
@@ -156,7 +156,7 @@ ms.locfileid: "44253125"
   
 -   使用多个<xref:System.ComponentModel.BackgroundWorker>多个同时操作的对象。  
   
--   若要调试多线程应用程序，请参阅[如何：使用“线程”窗口](/visualstudio/debugger/how-to-use-the-threads-window)。  
+-   若要调试多线程应用程序，请参阅[如何：使用线程窗口](/visualstudio/debugger/how-to-use-the-threads-window)。  
   
 -   实现自己的支持异步编程模式的组件。 有关详细信息，请参阅[基于事件的异步模式概述](../../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)。  
   
@@ -169,6 +169,6 @@ ms.locfileid: "44253125"
 - [托管线程](../../../../docs/standard/threading/index.md)
 - [托管线程处理的最佳做法](../../../../docs/standard/threading/managed-threading-best-practices.md)
 - [基于事件的异步模式概述](../../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)
-- [如何：实现使用后台操作的窗体](how-to-implement-a-form-that-uses-a-background-operation.md)  
+- [如何：实现使用后台操作的窗体](how-to-implement-a-form-that-uses-a-background-operation.md)
 - [演练：在后台运行操作](walkthrough-running-an-operation-in-the-background.md)
 - [BackgroundWorker 组件](backgroundworker-component.md)

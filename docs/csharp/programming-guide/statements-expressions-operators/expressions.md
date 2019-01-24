@@ -6,12 +6,12 @@ helpviewer_keywords:
 - expressions [C#]
 - C# language, expressions
 ms.assetid: c7d8feb0-0e58-4f94-8bf6-4d070550a832
-ms.openlocfilehash: b2975403c38dbb2b73c10b147a6903013a1e5573
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 1a9b80d90c8f5089744e9cd5a126f7730afbed44
+ms.sourcegitcommit: 542aa405b295955eb055765f33723cb8b588d0d0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53239285"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "54362309"
 ---
 # <a name="expressions-c-programming-guide"></a>表达式（C# 编程指南）
 表达式是由一个或多个操作数以及零个或多个运算符组成的序列，其计算结果为一个值、对象、方法或命名空间。 表达式可以包含文本值、方法调用、运算符及其操作数，或简单名称。 简单名称可以是变量名、类型成员名、方法参数名、命名空间名或类型名。  
@@ -25,7 +25,7 @@ System.Convert.ToInt32("35");
 ```  
   
 ## <a name="expression-values"></a>表达式值  
- 在大部分使用表达式的上下文中（例如在语句或方法参数中），表达式的计算结果应为某个值。 如果 x 和 y 是整数，表达式 `x + y` 的计算结果为一个数值。 表达式 `new MyClass()` 的计算结果为对 `MyClass` 对象的新实例的引用。 表达式 `myClass.ToString()` 的计算结果为一个字符串，因为字符串是该方法的返回类型。 然而，虽然命名空间名称归类为表达式，但它的计算结果不是一个值，因此绝不会作为任何表达式的最终结果。 命名空间名称不得传递给方法参数，不能用在新表达式中，也不能赋给变量。 命名空间名称只能用作较大表达式的子表达式。 同样如此的还有类型（与 <xref:System.Type?displayProperty=nameWithType> 对象不同）、方法组名称（与特定方法不同）以及事件 [add](../../../csharp/language-reference/keywords/add.md) 和 [remove](../../../csharp/language-reference/keywords/remove.md) 访问器。  
+ 在大部分使用表达式的上下文中（例如在语句或方法参数中），表达式的计算结果应为某个值。 如果 x 和 y 是整数，表达式 `x + y` 的计算结果为一个数值。 表达式 `new MyClass()` 的计算结果为对 `MyClass` 类的新实例的引用。 表达式 `myClass.ToString()` 的计算结果为一个字符串，因为字符串是该方法的返回类型。 然而，虽然命名空间名称归类为表达式，但它的计算结果不是一个值，因此绝不会作为任何表达式的最终结果。 命名空间名称不得传递给方法参数，不能用在新表达式中，也不能赋给变量。 命名空间名称只能用作较大表达式的子表达式。 同样如此的还有类型（与 <xref:System.Type?displayProperty=nameWithType> 对象不同）、方法组名称（与特定方法不同）以及事件 [add](../../../csharp/language-reference/keywords/add.md) 和 [remove](../../../csharp/language-reference/keywords/remove.md) 访问器。  
   
  每个值都有关联的类型。 例如，如果 x 和 y 都是 `int` 类型的变量，则表达式 `x + y` 的值也属于 `int` 类型。 如果将该值赋给不同类型的变量，或者如果 x 和 y 是不同的类型，则应用类型转换规则。 若要详细了解如何进行这种转换，请参阅[强制转换和类型转换](../../../csharp/programming-guide/types/casting-and-type-conversions.md)。  
   

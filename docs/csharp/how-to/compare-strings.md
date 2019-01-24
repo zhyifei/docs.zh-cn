@@ -1,16 +1,16 @@
 ---
 title: 如何：比较字符串 - C# 指南
 description: 了解在区分或不区分大小写以及使用或不使用区域性特定的排序情况下，如何对字符串值进行比较和排序
-ms.date: 03/20/2018
+ms.date: 10/03/2018
 helpviewer_keywords:
 - strings [C#], comparison
 - comparing strings [C#]
-ms.openlocfilehash: 5b62dd37474dc0afb186c65d1f55f7ccaf7266ec
-ms.sourcegitcommit: 8598d446303b545eed2d520a6ccd061c1a7d00cb
+ms.openlocfilehash: 0eb8669e52099e35553d9e7842371045bd88a643
+ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53334829"
+ms.lasthandoff: 01/19/2019
+ms.locfileid: "54415879"
 ---
 # <a name="how-to-compare-strings-in-c"></a>如何：比较 C\# 中的字符串
 
@@ -29,7 +29,13 @@ ms.locfileid: "53334829"
 
 ## <a name="default-ordinal-comparisons"></a>默认的序号比较
 
-测试相等性的最常见方法 <xref:System.String.Equals%2A?displayProperty=nameWithType> 和 <xref:System.String.op_Equality%2A?displayProperty=nameWithType> 使用区分大小写的序号比较。 结果如下例所示。
+最常见的操作：
+
+- <xref:System.String.CompareTo%2A?displayProperty=nameWithType>
+- <xref:System.String.Equals%2A?displayProperty=nameWithType>
+- <xref:System.String.op_Equality%2A?displayProperty=nameWithType> 
+
+使用序号比较（一种区分大小写的比较）并使用当前区域性。 结果如下例所示：
 
 [!code-csharp-interactive[Comparing strings using an ordinal comparison](../../../samples/snippets/csharp/how-to/strings/CompareStrings.cs#1)]
 

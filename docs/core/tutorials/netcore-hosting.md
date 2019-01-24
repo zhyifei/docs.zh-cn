@@ -4,12 +4,12 @@ description: 了解从本机代码托管 .NET Core 运行时，以支持需要�
 author: mjrousos
 ms.date: 12/21/2018
 ms.custom: seodec18
-ms.openlocfilehash: d6ad3bc1b8f1795bfa3d83fbb83cb07120758f11
-ms.sourcegitcommit: 81bd16c7435a8c9183d2a7e878a2a5eff7d04584
+ms.openlocfilehash: deeda8b166d8a22aac88be313d2555e4b9fa5a1c
+ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54249094"
+ms.lasthandoff: 01/19/2019
+ms.locfileid: "54415515"
 ---
 # <a name="write-a-custom-net-core-host-to-control-the-net-runtime-from-your-native-code"></a>编写自定义 .NET Core 主机以从本机代码控制 .NET 运行时
 
@@ -90,7 +90,7 @@ CoreClrHost 有几个可用于承载 .NET Core 的重要方法：
 
 ### <a name="step-5---run-managed-code"></a>步骤 5 - 运行托管代码！
 
-启动运行时之后，主机可以调用托管代码。 这可以通过两种不同的方法实现。 与本教程相关的示例代码使用 `coreclr_create_delegate` 函数创建静态托管方法的委托。 此 API 采用程序集名称、符合命名空间条件的类型名称和方法名称作为输入，并返回可用于调用该方法的委托。
+启动运行时之后，主机可以调用托管代码。 这可以通过两种不同的方法实现。 与本教程相关的示例代码使用 `coreclr_create_delegate` 函数创建静态托管方法的委托。 此 API 采用[程序集名称](../../framework/app-domains/assembly-names.md)、符合命名空间条件的类型名称和方法名称作为输入，并返回可用于调用该方法的委托。
 
 [!code-cpp[CoreClrHost#5](~/samples/core/hosting/HostWithCoreClrHost/src/SampleHost.cpp#5)]
 
@@ -184,7 +184,7 @@ AppDomain 标志指定与安全性和互操作性相关的 AppDomain 行为。 �
 
 [!code-cpp[NetCoreHost#8](~/samples/core/hosting/HostWithMscoree/host.cpp#8)]
 
-如果 `ExecuteAssembly` 不满足主机的需要，那么另一种方法是使用 `CreateDelegate` 创建指向静态托管方法的函数指针。 这要求主机知道要调用的方法的签名（以创建函数指针类型），但允许主机调用代码而不是程序集的入口点。
+如果 `ExecuteAssembly` 不满足主机的需要，那么另一种方法是使用 `CreateDelegate` 创建指向静态托管方法的函数指针。 这要求主机知道要调用的方法的签名（以创建函数指针类型），但允许主机调用代码而不是程序集的入口点。 第二个参数中提供的程序集名称是要加载的库的[完全托管程序集名称](../../framework/app-domains/assembly-names.md)。
 
 ```C++
 void *pfnDelegate = NULL;

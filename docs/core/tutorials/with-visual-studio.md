@@ -1,16 +1,16 @@
 ---
-title: 在 Visual Studio 2017 中使用 .NET Core 生成 C# Hello World 应用程序
+title: 使用 Visual Studio 2017 生成 C# .NET Core Hello World 应用程序
 description: 了解如何使用 Visual Studio 2017 生成简单的 C# .NET Core 控制台应用程序。
 author: BillWagner
 ms.author: wiwagn
 ms.date: 09/13/2017
 ms.custom: vs-dotnet, seodec18
-ms.openlocfilehash: 455058ad0a9155b8c6d2a267259783c2a7cc9815
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: 7a2a7b251f38a2f1add39e50e32a832adaedc965
+ms.sourcegitcommit: 542aa405b295955eb055765f33723cb8b588d0d0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53168918"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "54362790"
 ---
 # <a name="build-a-c-hello-world-application-with-the-net-core-sdk-in-visual-studio-2017"></a>在 Visual Studio 2017 中使用 .NET Core SDK 生成 C# Hello World 应用程序
 
@@ -76,9 +76,9 @@ ms.locfileid: "53168918"
 
 现已创建并运行应用程序。 若要开发专业应用程序，仍需要执行一些其他步骤，才可发布应用程序：
 
-- 有关调试应用程序的信息，请参阅[使用 Visual Studio 2017 调试 C# Hello World 应用程序](debugging-with-visual-studio.md)。
+- 有关调试应用程序的信息，请参阅[使用 Visual Studio 2017 调试 .NET Core Hello World 应用程序](debugging-with-visual-studio.md)。
 
-- 若要了解如何开发和发布可发行版应用程序，请参阅[使用 Visual Studio 2017 发布 C# Hello World 应用程序](publishing-with-visual-studio.md)。
+- 若要了解如何开发和发布可发行版应用程序，请参阅[使用 Visual Studio 2017 发布 NET Core Hello World 应用程序](publishing-with-visual-studio.md)。
 
 ## <a name="related-topics"></a>相关主题
 

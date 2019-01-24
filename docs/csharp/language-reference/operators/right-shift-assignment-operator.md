@@ -8,38 +8,41 @@ helpviewer_keywords:
 - right shift assignment operator (>>=) [C#]
 - '>>= operator (right-shift assignment) [C#]'
 ms.assetid: b593778c-b9b4-440d-8b29-c1ac22cb81c0
-ms.openlocfilehash: aebc92ffb007db7b4950313874ebc2bf3c40615f
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 02a9559a5c4086eeed09094c15c3620366ffad8c
+ms.sourcegitcommit: 5c36aaa8299a2437c155700c810585aff19edbec
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53239441"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54333678"
 ---
 # <a name="gtgt-operator-c-reference"></a>&gt;&gt;= 运算符（C# 参考）
-右移赋值运算符。  
-  
-## <a name="remarks"></a>备注  
- 形式如下的表达式  
-  
-```csharp  
-x >>= y  
-```  
-  
- 计算结果为  
-  
-```csharp  
-x = x >> y  
-```  
-  
- 不同的是 `x` 只计算一次。 [>> 运算符](../../../csharp/language-reference/operators/right-shift-operator.md) 将 `x` 右移 `y` 指定的量。  
-  
- 不能直接重载 >>= 运算符，但用户定义的类型可重载 [>> 运算符](../../../csharp/language-reference/operators/right-shift-operator.md)（参阅[运算符](../../../csharp/language-reference/keywords/operator.md)）。  
-  
-## <a name="example"></a>示例  
- [!code-csharp[csRefOperators#11](../../../csharp/language-reference/operators/codesnippet/CSharp/right-shift-assignment-operator_1.cs)]  
-  
+
+右移赋值运算符。
+
+## <a name="remarks"></a>备注
+
+形式如下的表达式
+
+```csharp
+x >>= y
+```
+
+计算结果为
+
+```csharp
+x = x >> y
+```
+
+不同的是 `x` 只计算一次。 [>> 运算符](right-shift-operator.md) 将 `x` 右移 `y` 指定的量。
+
+不能直接重载 >>= 运算符，但用户定义的类型可重载 [>> 运算符](right-shift-operator.md)（参阅[运算符](../keywords/operator.md)）。
+
+## <a name="example"></a>示例
+
+[!code-csharp[csRefOperators#11](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefOperators/CS/csrefOperators.cs#11)]
+
 ## <a name="see-also"></a>请参阅
 
-- [C# 参考](../../../csharp/language-reference/index.md)  
-- [C# 编程指南](../../../csharp/programming-guide/index.md)  
-- [C# 运算符](../../../csharp/language-reference/operators/index.md)
+- [C# 参考](../index.md)
+- [C# 编程指南](../../programming-guide/index.md)
+- [C# 运算符](index.md)

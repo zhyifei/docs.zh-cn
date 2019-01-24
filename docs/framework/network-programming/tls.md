@@ -12,12 +12,12 @@ helpviewer_keywords:
 - Internet, security
 - security [.NET Framework], Internet
 - permissions [.NET Framework], Internet
-ms.openlocfilehash: 9cb7dbdfb1ad221e00823d8d55e7fd3c52cabe8b
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 2d7555d39b3aa92ca49368ca5ad59750e3603606
+ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50194132"
+ms.lasthandoff: 01/19/2019
+ms.locfileid: "54415892"
 ---
 # <a name="transport-layer-security-tls-best-practices-with-the-net-framework"></a>.NET Framework 中的传输层安全性 (TLS) 最佳做法
 
@@ -56,7 +56,7 @@ WCF 支持 TLS1.0、1.1 和 1.2 作为 .NET Framework 4.7 中的默认设置。 
 
 对于 ASP.NET 应用程序，检查 _web.config_ 的 `<system.web><httpRuntime targetFramework>` 元素，以验证你所使用的是 .NET Framework 的目标版本。
 
-对于 Windows 窗体和其他应用程序，请参阅[如何：面向 .NET Framework 版本](/visualstudio/ide/how-to-target-a-version-of-the-dotnet-framework)。
+有关 Windows 窗体和其他应用程序，请参阅[如何：面向 .NET Framework 的某个版本](/visualstudio/ide/how-to-target-a-version-of-the-dotnet-framework)。
 
 使用以下部分验证你未使用特定 TLS 或 SSL 版本。
 
@@ -150,7 +150,7 @@ WCF 框架的这些版本被硬编码为使用值 SSL 3.0 和 TLS 1.0。 这些�
 
 ### <a name="switchsystemnetdontenableschusestrongcrypto"></a>Switch.System.Net.DontEnableSchUseStrongCrypto
 
-`Switch.System.Net.DontEnableSchUseStrongCrypto` 的值为 `false` 将导致你的应用使用强加密。 `DontEnableSchUseStrongCrypto` 的值为 `false` 将使用更为安全的网络协议（TLS 1.2、TLS 1.1 和 TLS 1.0），并阻止不安全的协议。 有关详细信息，请参阅 [SCH_USE_STRONG_CRYPTO 标志](#the-schusestrongcrypto-flag)。 值为 `true` 将为你的应用禁用强加密。
+`Switch.System.Net.DontEnableSchUseStrongCrypto` 的值为 `false` 将导致你的应用使用强加密。 `DontEnableSchUseStrongCrypto` 的值为 `false` 将使用更为安全的网络协议（TLS 1.2、TLS 1.1 和 TLS 1.0），并阻止不安全的协议。 有关详细信息，请参阅 [SCH_USE_STRONG_CRYPTO 标志](#the-sch_use_strong_crypto-flag)。 值为 `true` 将为你的应用禁用强加密。
 
 如果你的应用面向 .NET Framework 4.6 或更高版本，则该开关默认为 `false`。 这是我们建议使用的安全默认值。 如果你的应用在 .NET Framework 4.6 上运行，但面向早期版本，则开关默认为 `true`。 在这种情况下，应显式将其设置为 `false`。
 
@@ -174,7 +174,7 @@ WCF 框架的这些版本被硬编码为使用值 SSL 3.0 和 TLS 1.0。 这些�
 
 对于面向 .NET Framework 4.7.1 和更高版本的应用程序，此值默认为 `false`。 对于面向 .NET Framework 4.7 和早期版本的应用程序，此值默认为 `true`。
 
-有关 TLS 协议的详细信息，请参阅[缓解：TLS 协议](../migration-guide/mitigation-tls-protocols.md)。 有关 `AppContext` 开关的详细信息，请参阅 [`<AppContextSwitchOverrides> Element`](../configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md)。
+有关 TLS 协议的详细信息，请参阅[缓解措施：TLS 协议](../migration-guide/mitigation-tls-protocols.md)。 有关 `AppContext` 开关的详细信息，请参阅 [`<AppContextSwitchOverrides> Element`](../configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md)。
 
 ## <a name="configuring-security-via-the-windows-registry"></a>通过 Windows 注册表配置安全性
 
@@ -191,7 +191,7 @@ WCF 框架的这些版本被硬编码为使用值 SSL 3.0 和 TLS 1.0。 这些�
 
 ### <a name="schusestrongcrypto"></a>SchUseStrongCrypto
 
-`HKEY_LOCAL_MACHINE\SOFTWARE\[Wow6432Node\]Microsoft\.NETFramework\<VERSION>: SchUseStrongCrypto` 注册表项具有类型为 DWORD 的值。 值为 1 将导致你的应用使用强加密。 强加密会使用更为安全的网络协议（TLS 1.2、TLS 1.1 和 TLS 1.0），并阻止不安全的协议。 值为 0 将禁用强加密。 有关详细信息，请参阅 [SCH_USE_STRONG_CRYPTO 标志](#the-schusestrongcrypto-flag)。
+`HKEY_LOCAL_MACHINE\SOFTWARE\[Wow6432Node\]Microsoft\.NETFramework\<VERSION>: SchUseStrongCrypto` 注册表项具有类型为 DWORD 的值。 值为 1 将导致你的应用使用强加密。 强加密会使用更为安全的网络协议（TLS 1.2、TLS 1.1 和 TLS 1.0），并阻止不安全的协议。 值为 0 将禁用强加密。 有关详细信息，请参阅 [SCH_USE_STRONG_CRYPTO 标志](#the-sch_use_strong_crypto-flag)。
 
 如果你的应用面向 .NET Framework 4.6 或更高版本，则此注册表项默认值为 1。 这是我们建议使用的安全默认值。 如果你的应用在 .NET Framework 4.6 上运行，但面向早期版本，则注册表项默认为 0。 在这种情况下，应显式将其值设置为 1。
 
@@ -258,7 +258,7 @@ Windows Registry Editor Version 5.00
 另请参阅：
 
 - [.NET Framework 版本和依赖关系](../migration-guide/versions-and-dependencies.md)
-- [如何：确定安装了哪些 .NET Framework 版本](../migration-guide/how-to-determine-which-versions-are-installed.md)。
+- [如何：确定已安装的 .NET Framework 版本](../migration-guide/how-to-determine-which-versions-are-installed.md)。
 
 ## <a name="support-for-tls-12"></a>支持 TLS 1.2
 

@@ -7,12 +7,12 @@ dev_langs:
 author: thraka
 ms.author: adegeo
 ms.date: 12/04/2018
-ms.openlocfilehash: 3ca833031eb8bb0f43a334f833f2e0075842d57d
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 26fb7cb25b9bf7f00f87059fbe1848763f7f175d
+ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53156665"
+ms.lasthandoff: 01/19/2019
+ms.locfileid: "54415541"
 ---
 # <a name="whats-new-in-net-core-30-preview-1"></a>.NET Core 3.0（预览版 1）的新增功能
 
@@ -30,15 +30,12 @@ ms.locfileid: "53156665"
 
 ## <a name="default-executables"></a>默认可执行文件
 
-.NET Core 不会默认生成可执行文件。 对于使用全局安装的 .NET Core 版本的应用程序而言，这是一项新功能。 到目前为止，仅[自包含部署](../deploying/index.md#self-contained-deployments-scd)拥有可执行文件。
+.NET Core 现在将默认生成[依赖于框架的可执行文件](../deploying/index.md#framework-dependent-executables-fde)。 对于使用全局安装的 .NET Core 版本的应用程序而言，这是一项新功能。 到目前为止，仅[自包含部署](../deploying/index.md#self-contained-deployments-scd)会生成可执行文件。
 
 在 `dotnet build` 或 `dotnet publish` 期间，将创建一个假设与你使用的 SDK 的环境和平台相匹配的可执行文件。 和其他本机可执行文件一样，可以使用这些可执行文件执行相同操作，例如：
 
 * 可以双击可执行文件。
 * 可以直接从命令提示符启用应用程序，如 Windows 上的 `myapp.exe`，以及 Linux 和 macOS 上的 `./myapp`。
-
-> [!NOTE]
-> 为特定运行时指定 `dotnet publish -r` 或 `dotnet build -r` 参数，因为不支持其他运行时环境。
 
 ## <a name="build-copies-dependencies"></a>生成副本依赖项
 

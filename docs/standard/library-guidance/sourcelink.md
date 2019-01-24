@@ -3,13 +3,13 @@ title: SourceLink 和 .NET 库
 description: 有关使用 SourceLink 改进 .NET 库调试的最佳做法建议。
 author: jamesnk
 ms.author: mairaw
-ms.date: 10/02/2018
-ms.openlocfilehash: 3bc72e158a5773b656095f9ce58b442469f91e67
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.date: 01/15/2019
+ms.openlocfilehash: be97f868e2fcfc6c45e4bbac45b033f8914f4d99
+ms.sourcegitcommit: 5c36aaa8299a2437c155700c810585aff19edbec
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53128918"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54333533"
 ---
 # <a name="sourcelink"></a>SourceLink
 
@@ -35,9 +35,9 @@ SourceLink 是一种使开发人员可以从 NuGet 对 .NET 程序集进行源�
 > * <xref:System.Diagnostics.DebuggerStepThroughAttribute> 指示调试器逐行执行代码，而不是单步执行代码。
 > * <xref:System.Diagnostics.DebuggerBrowsableAttribute> 控制成员是否会显示在调试器变量窗口中以及其显示方式。
 
-✔️ 请考虑将符号文件 (`*.pdb`) 包含在 NuGet 包中。
+✔️ 请考虑发布符号文件 (`*.pdb`)。
 
-> 通常会在[符号包](./nuget.md#symbol-packages)中发布符号文件。 目前，符号包的主要公共主机不支持由 SDK 样式项目创建的可移植符号文件 (`*.pdb`)，并且符号包没有用处。
+> 有关符号文件和符号包的详细信息，请参阅[符号包](./nuget.md#symbol-packages)。
 
 >[!div class="step-by-step"]
 >[上一页](dependencies.md)

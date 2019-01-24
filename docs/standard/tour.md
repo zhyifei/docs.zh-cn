@@ -6,12 +6,12 @@ ms.author: wiwagn
 ms.date: 05/22/2017
 ms.technology: dotnet-standard
 ms.assetid: bbfe6465-329d-4982-869d-472e7ef85d93
-ms.openlocfilehash: f9b4e3d885725afc4181256e02e3b174318e3ece
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: acd8e14e1d000f55f03017a4fee43347f50df3a7
+ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47232841"
+ms.lasthandoff: 01/19/2019
+ms.locfileid: "54415918"
 ---
 # <a name="tour-of-net"></a>.NET 教程
 
@@ -64,7 +64,7 @@ Microsoft 积极开发和支持三种 .NET 语言：C#、F# 和 Visual Basic (VB
 有关更多详细信息，请参阅下列主题：
 
 * 对于 C#，请参阅 [using 语句（C# 参考）](../csharp/language-reference/keywords/using-statement.md)主题。
-* 对于 F#，请参阅[资源管理：use 关键字](../fsharp/language-reference/resource-management-the-use-keyword.md)。
+* 有关 F#，请参阅[资源管理：使用关键字](../fsharp/language-reference/resource-management-the-use-keyword.md)。
 * 对于 VB，请参阅 [Using 语句 (Visual Basic)](../visual-basic/language-reference/statements/using-statement.md) 主题。
 
 ## <a name="type-safety"></a>类型安全
@@ -125,7 +125,7 @@ LINQ 是适用于 C# 和 VB 的强大功能集，可用于编写简单的声明�
 
 针对 Java 和 Objective-C 的 Mono（以及 Xamarin）互操作性支持基本上以类似的方式构建，也就是说，它们运用相同的原理。
 
-有关本机互操作性的的详细信息，请参阅[本机互操作性](native-interop.md)主题。
+有关本机互操作性的详细信息，请参阅[本机互操作性](native-interop/index.md)一文。
 
 ## <a name="unsafe-code"></a>不安全代码
 
