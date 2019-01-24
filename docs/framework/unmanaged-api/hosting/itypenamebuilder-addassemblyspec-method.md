@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4019f180ad97e170bf5b0e3f2e92185a3b35ff38
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 6e85570be7a957c94d16c8f08e2d66f596587821
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33440237"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54546460"
 ---
-# <a name="itypenamebuilderaddassemblyspec-method"></a><span data-ttu-id="e8fca-102">ITypeNameBuilder::AddAssemblySpec 方法</span><span class="sxs-lookup"><span data-stu-id="e8fca-102">ITypeNameBuilder::AddAssemblySpec Method</span></span>
-<span data-ttu-id="e8fca-103">此方法支持 .NET Framework 基础结构，但不适合直接在代码中使用。</span><span class="sxs-lookup"><span data-stu-id="e8fca-103">This method supports the .NET Framework infrastructure and is not intended to be used directly from your code.</span></span>  
+# <a name="itypenamebuilderaddassemblyspec-method"></a><span data-ttu-id="e6b45-102">ITypeNameBuilder::AddAssemblySpec 方法</span><span class="sxs-lookup"><span data-stu-id="e6b45-102">ITypeNameBuilder::AddAssemblySpec Method</span></span>
+<span data-ttu-id="e6b45-103">此方法支持 .NET Framework 基础结构，但不适合直接在代码中使用。</span><span class="sxs-lookup"><span data-stu-id="e6b45-103">This method supports the .NET Framework infrastructure and is not intended to be used directly from your code.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="e8fca-104">语法</span><span class="sxs-lookup"><span data-stu-id="e8fca-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="e6b45-104">语法</span><span class="sxs-lookup"><span data-stu-id="e6b45-104">Syntax</span></span>  
   
 ```  
 HRESULT AddAssemblySpec (  
@@ -35,14 +35,14 @@ HRESULT AddAssemblySpec (
 );  
 ```  
   
-## <a name="requirements"></a><span data-ttu-id="e8fca-105">要求</span><span class="sxs-lookup"><span data-stu-id="e8fca-105">Requirements</span></span>  
- <span data-ttu-id="e8fca-106">**平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="e8fca-106">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="e6b45-105">要求</span><span class="sxs-lookup"><span data-stu-id="e6b45-105">Requirements</span></span>  
+ <span data-ttu-id="e6b45-106">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="e6b45-106">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="e8fca-107">**标头：** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="e8fca-107">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="e6b45-107">**标头：** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="e6b45-107">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="e8fca-108">**库：** 作为 MSCorEE.dll 中的资源</span><span class="sxs-lookup"><span data-stu-id="e8fca-108">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="e6b45-108">**库：** 包含为 MSCorEE.dll 中的资源</span><span class="sxs-lookup"><span data-stu-id="e6b45-108">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="e8fca-109">**.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="e8fca-109">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="e6b45-109">**.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="e6b45-109">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="e8fca-110">请参阅</span><span class="sxs-lookup"><span data-stu-id="e8fca-110">See Also</span></span>  
- [<span data-ttu-id="e8fca-111">承载接口</span><span class="sxs-lookup"><span data-stu-id="e8fca-111">Hosting Interfaces</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+## <a name="see-also"></a><span data-ttu-id="e6b45-110">请参阅</span><span class="sxs-lookup"><span data-stu-id="e6b45-110">See also</span></span>
+- [<span data-ttu-id="e6b45-111">承载接口</span><span class="sxs-lookup"><span data-stu-id="e6b45-111">Hosting Interfaces</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)

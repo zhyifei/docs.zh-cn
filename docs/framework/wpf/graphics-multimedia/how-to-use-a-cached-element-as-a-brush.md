@@ -1,5 +1,5 @@
 ---
-title: 如何：使用缓存的元素作为画笔
+title: 如何：缓存的元素用作画笔
 ms.date: 03/30/2017
 helpviewer_keywords:
 - BitmapCache [WPF], using
@@ -7,23 +7,23 @@ helpviewer_keywords:
 - BitmapCacheBrush [WPF], using
 - CacheMode [WPF], using
 ms.assetid: d36e944a-866e-4baf-98c4-fd6a75f6fdd0
-ms.openlocfilehash: c43c4ecbefe99d6e38766705378d85d92ecc5729
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7ff0e9eb131faaed3874995ee137126eac31f43d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33561519"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54597926"
 ---
-# <a name="how-to-use-a-cached-element-as-a-brush"></a><span data-ttu-id="d621b-102">如何：使用缓存的元素作为画笔</span><span class="sxs-lookup"><span data-stu-id="d621b-102">How to: Use a Cached Element as a Brush</span></span>
-<span data-ttu-id="d621b-103">使用<xref:System.Windows.Media.BitmapCacheBrush>类，以有效地重用缓存的元素。</span><span class="sxs-lookup"><span data-stu-id="d621b-103">Use the <xref:System.Windows.Media.BitmapCacheBrush> class to reuse a cached element efficiently.</span></span> <span data-ttu-id="d621b-104">若要缓存的元素，创建的新实例<xref:System.Windows.Media.BitmapCache>类并将其分配给元素的<xref:System.Windows.UIElement.CacheMode%2A>属性。</span><span class="sxs-lookup"><span data-stu-id="d621b-104">To cache an element, create a new instance of the <xref:System.Windows.Media.BitmapCache> class and assign it to the element's <xref:System.Windows.UIElement.CacheMode%2A> property.</span></span>  
+# <a name="how-to-use-a-cached-element-as-a-brush"></a><span data-ttu-id="dbae1-102">如何：缓存的元素用作画笔</span><span class="sxs-lookup"><span data-stu-id="dbae1-102">How to: Use a Cached Element as a Brush</span></span>
+<span data-ttu-id="dbae1-103">使用<xref:System.Windows.Media.BitmapCacheBrush>类，以有效地重复使用缓存的元素。</span><span class="sxs-lookup"><span data-stu-id="dbae1-103">Use the <xref:System.Windows.Media.BitmapCacheBrush> class to reuse a cached element efficiently.</span></span> <span data-ttu-id="dbae1-104">若要缓存的元素，创建的新实例<xref:System.Windows.Media.BitmapCache>类，并将其分配给元素的<xref:System.Windows.UIElement.CacheMode%2A>属性。</span><span class="sxs-lookup"><span data-stu-id="dbae1-104">To cache an element, create a new instance of the <xref:System.Windows.Media.BitmapCache> class and assign it to the element's <xref:System.Windows.UIElement.CacheMode%2A> property.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="d621b-105">示例</span><span class="sxs-lookup"><span data-stu-id="d621b-105">Example</span></span>  
- <span data-ttu-id="d621b-106">下面的代码示例演示如何重用缓存的元素。</span><span class="sxs-lookup"><span data-stu-id="d621b-106">The following code example shows how to reuse a cached element.</span></span> <span data-ttu-id="d621b-107">缓存的元素是<xref:System.Windows.Controls.Image>显示较大的图像的控件。</span><span class="sxs-lookup"><span data-stu-id="d621b-107">The cached element is an <xref:System.Windows.Controls.Image> control that displays a large image.</span></span> <span data-ttu-id="d621b-108"><xref:System.Windows.Controls.Image>控件使用的缓存以位图格式<xref:System.Windows.Media.BitmapCache>类，且缓存可以通过将其分配给重用<xref:System.Windows.Media.BitmapCacheBrush>。</span><span class="sxs-lookup"><span data-stu-id="d621b-108">The <xref:System.Windows.Controls.Image> control is cached as a bitmap by using the <xref:System.Windows.Media.BitmapCache> class, and the cache is reused by assigning it to a <xref:System.Windows.Media.BitmapCacheBrush>.</span></span> <span data-ttu-id="d621b-109">画笔分配给 25 个按钮的背景以显示高效的重用。</span><span class="sxs-lookup"><span data-stu-id="d621b-109">The brush is assigned to the background of twenty-five buttons to show efficient reuse.</span></span>  
+## <a name="example"></a><span data-ttu-id="dbae1-105">示例</span><span class="sxs-lookup"><span data-stu-id="dbae1-105">Example</span></span>  
+ <span data-ttu-id="dbae1-106">下面的代码示例显示如何重复使用缓存的元素。</span><span class="sxs-lookup"><span data-stu-id="dbae1-106">The following code example shows how to reuse a cached element.</span></span> <span data-ttu-id="dbae1-107">缓存的元素是<xref:System.Windows.Controls.Image>控件，用于显示大图像。</span><span class="sxs-lookup"><span data-stu-id="dbae1-107">The cached element is an <xref:System.Windows.Controls.Image> control that displays a large image.</span></span> <span data-ttu-id="dbae1-108"><xref:System.Windows.Controls.Image>控件通过使用缓存作为位图<xref:System.Windows.Media.BitmapCache>类，并在缓存重新分配到使用<xref:System.Windows.Media.BitmapCacheBrush>。</span><span class="sxs-lookup"><span data-stu-id="dbae1-108">The <xref:System.Windows.Controls.Image> control is cached as a bitmap by using the <xref:System.Windows.Media.BitmapCache> class, and the cache is reused by assigning it to a <xref:System.Windows.Media.BitmapCacheBrush>.</span></span> <span data-ttu-id="dbae1-109">画笔分配到 25 个按钮的背景以显示有效重用。</span><span class="sxs-lookup"><span data-stu-id="dbae1-109">The brush is assigned to the background of twenty-five buttons to show efficient reuse.</span></span>  
   
  [!code-xaml[System.Windows.Media.BitmapCacheBrush#_BitmapCacheBrushXAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/system.windows.media.bitmapcachebrush/cs/window1.xaml#_bitmapcachebrushxaml)]  
   
-## <a name="see-also"></a><span data-ttu-id="d621b-110">请参阅</span><span class="sxs-lookup"><span data-stu-id="d621b-110">See Also</span></span>  
- <xref:System.Windows.Media.BitmapCache>  
- <xref:System.Windows.Media.BitmapCacheBrush>  
- <xref:System.Windows.UIElement.CacheMode%2A>  
- [<span data-ttu-id="d621b-111">如何：通过缓存元素来提升呈现性能</span><span class="sxs-lookup"><span data-stu-id="d621b-111">How to: Improve Rendering Performance by Caching an Element</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-improve-rendering-performance-by-caching-an-element.md)
+## <a name="see-also"></a><span data-ttu-id="dbae1-110">请参阅</span><span class="sxs-lookup"><span data-stu-id="dbae1-110">See also</span></span>
+- <xref:System.Windows.Media.BitmapCache>
+- <xref:System.Windows.Media.BitmapCacheBrush>
+- <xref:System.Windows.UIElement.CacheMode%2A>
+- [<span data-ttu-id="dbae1-111">如何：改善呈现性能，通过缓存元素</span><span class="sxs-lookup"><span data-stu-id="dbae1-111">How to: Improve Rendering Performance by Caching an Element</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-improve-rendering-performance-by-caching-an-element.md)

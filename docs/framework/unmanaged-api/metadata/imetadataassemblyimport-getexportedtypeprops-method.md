@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c76e46c75680d9fc0ad70e94da288f0c6b5e5ee1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 6e222f1a39276b6debc348bfb25e8db65cb648ba
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33446315"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54544635"
 ---
-# <a name="imetadataassemblyimportgetexportedtypeprops-method"></a><span data-ttu-id="87790-102">IMetaDataAssemblyImport::GetExportedTypeProps 方法</span><span class="sxs-lookup"><span data-stu-id="87790-102">IMetaDataAssemblyImport::GetExportedTypeProps Method</span></span>
-<span data-ttu-id="87790-103">获取具有指定的元数据签名的导出类型的属性集。</span><span class="sxs-lookup"><span data-stu-id="87790-103">Gets the set of properties of the exported type with the specified metadata signature.</span></span>  
+# <a name="imetadataassemblyimportgetexportedtypeprops-method"></a><span data-ttu-id="ff07e-102">IMetaDataAssemblyImport::GetExportedTypeProps 方法</span><span class="sxs-lookup"><span data-stu-id="ff07e-102">IMetaDataAssemblyImport::GetExportedTypeProps Method</span></span>
+<span data-ttu-id="ff07e-103">获取具有指定的元数据签名的导出类型的属性集。</span><span class="sxs-lookup"><span data-stu-id="ff07e-103">Gets the set of properties of the exported type with the specified metadata signature.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="87790-104">语法</span><span class="sxs-lookup"><span data-stu-id="87790-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="ff07e-104">语法</span><span class="sxs-lookup"><span data-stu-id="ff07e-104">Syntax</span></span>  
   
 ```  
 HRESULT GetExportedTypeProps (  
@@ -41,36 +41,36 @@ HRESULT GetExportedTypeProps (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="87790-105">参数</span><span class="sxs-lookup"><span data-stu-id="87790-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="ff07e-105">参数</span><span class="sxs-lookup"><span data-stu-id="ff07e-105">Parameters</span></span>  
  `mdct`  
- <span data-ttu-id="87790-106">[in]`mdExportedType`表示导出的类型的元数据标记。</span><span class="sxs-lookup"><span data-stu-id="87790-106">[in] An `mdExportedType` metadata token that represents the exported type.</span></span>  
+ <span data-ttu-id="ff07e-106">[in]`mdExportedType`表示导出的类型的元数据标记。</span><span class="sxs-lookup"><span data-stu-id="ff07e-106">[in] An `mdExportedType` metadata token that represents the exported type.</span></span>  
   
  `szName`  
- <span data-ttu-id="87790-107">[out]导出的类型的名称。</span><span class="sxs-lookup"><span data-stu-id="87790-107">[out] The name of the exported type.</span></span>  
+ <span data-ttu-id="ff07e-107">[out]导出的类型的名称。</span><span class="sxs-lookup"><span data-stu-id="ff07e-107">[out] The name of the exported type.</span></span>  
   
  `cchName`  
- <span data-ttu-id="87790-108">[in]大小，以宽字符为单位的`szName`。</span><span class="sxs-lookup"><span data-stu-id="87790-108">[in] The size, in wide characters, of `szName`.</span></span>  
+ <span data-ttu-id="ff07e-108">[in]大小，以宽字符为单位的`szName`。</span><span class="sxs-lookup"><span data-stu-id="ff07e-108">[in] The size, in wide characters, of `szName`.</span></span>  
   
  `pchName`  
- <span data-ttu-id="87790-109">[out]中实际返回的宽字符数 `szName`</span><span class="sxs-lookup"><span data-stu-id="87790-109">[out] The number of wide characters actually returned in `szName`</span></span>  
+ <span data-ttu-id="ff07e-109">[out]中实际返回宽字符数 `szName`</span><span class="sxs-lookup"><span data-stu-id="ff07e-109">[out] The number of wide characters actually returned in `szName`</span></span>  
   
  `ptkImplementation`  
- <span data-ttu-id="87790-110">[out]`mdFile`， `mdAssemblyRef`，或`mdExportedType`包含或允许访问导出的类型的属性的元数据标记。</span><span class="sxs-lookup"><span data-stu-id="87790-110">[out] An `mdFile`, `mdAssemblyRef`, or `mdExportedType` metadata token that contains or allows access to the properties of the exported type.</span></span>  
+ <span data-ttu-id="ff07e-110">[out]`mdFile`， `mdAssemblyRef`，或`mdExportedType`包含或允许访问的导出的类型属性的元数据标记。</span><span class="sxs-lookup"><span data-stu-id="ff07e-110">[out] An `mdFile`, `mdAssemblyRef`, or `mdExportedType` metadata token that contains or allows access to the properties of the exported type.</span></span>  
   
  `ptkTypeDef`  
- <span data-ttu-id="87790-111">[out]指向的指针`mdTypeDef`表示文件中的类型的令牌。</span><span class="sxs-lookup"><span data-stu-id="87790-111">[out] A pointer to an `mdTypeDef` token that represents a type in the file.</span></span>  
+ <span data-ttu-id="ff07e-111">[out]一个指向`mdTypeDef`表示该文件中的类型的令牌。</span><span class="sxs-lookup"><span data-stu-id="ff07e-111">[out] A pointer to an `mdTypeDef` token that represents a type in the file.</span></span>  
   
  `pdwExportedTypeFlags`  
- <span data-ttu-id="87790-112">[out]指向描述应用于导出的类型的元数据的标志的指针。</span><span class="sxs-lookup"><span data-stu-id="87790-112">[out] A pointer to the flags that describe the metadata applied to the exported type.</span></span> <span data-ttu-id="87790-113">标志值可以是一个或多个[CorTypeAttr](../../../../docs/framework/unmanaged-api/metadata/cortypeattr-enumeration.md)值。</span><span class="sxs-lookup"><span data-stu-id="87790-113">The flags value can be one or more [CorTypeAttr](../../../../docs/framework/unmanaged-api/metadata/cortypeattr-enumeration.md) values.</span></span>  
+ <span data-ttu-id="ff07e-112">[out]指向描述应用于导出的类型的元数据的标志的指针。</span><span class="sxs-lookup"><span data-stu-id="ff07e-112">[out] A pointer to the flags that describe the metadata applied to the exported type.</span></span> <span data-ttu-id="ff07e-113">标志值可以是一个或多个[CorTypeAttr](../../../../docs/framework/unmanaged-api/metadata/cortypeattr-enumeration.md)值。</span><span class="sxs-lookup"><span data-stu-id="ff07e-113">The flags value can be one or more [CorTypeAttr](../../../../docs/framework/unmanaged-api/metadata/cortypeattr-enumeration.md) values.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="87790-114">要求</span><span class="sxs-lookup"><span data-stu-id="87790-114">Requirements</span></span>  
- <span data-ttu-id="87790-115">**平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="87790-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="ff07e-114">要求</span><span class="sxs-lookup"><span data-stu-id="ff07e-114">Requirements</span></span>  
+ <span data-ttu-id="ff07e-115">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="ff07e-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="87790-116">**标头：** Cor.h</span><span class="sxs-lookup"><span data-stu-id="87790-116">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="ff07e-116">**标头：** Cor.h</span><span class="sxs-lookup"><span data-stu-id="ff07e-116">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="87790-117">**库：** 用作 MsCorEE.dll 中的资源</span><span class="sxs-lookup"><span data-stu-id="87790-117">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="ff07e-117">**库：** 用作 MsCorEE.dll 中的资源</span><span class="sxs-lookup"><span data-stu-id="ff07e-117">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="87790-118">**.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="87790-118">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="ff07e-118">**.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="ff07e-118">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="87790-119">请参阅</span><span class="sxs-lookup"><span data-stu-id="87790-119">See Also</span></span>  
- [<span data-ttu-id="87790-120">IMetaDataAssemblyImport 接口</span><span class="sxs-lookup"><span data-stu-id="87790-120">IMetaDataAssemblyImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)
+## <a name="see-also"></a><span data-ttu-id="ff07e-119">请参阅</span><span class="sxs-lookup"><span data-stu-id="ff07e-119">See also</span></span>
+- [<span data-ttu-id="ff07e-120">IMetaDataAssemblyImport 接口</span><span class="sxs-lookup"><span data-stu-id="ff07e-120">IMetaDataAssemblyImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)

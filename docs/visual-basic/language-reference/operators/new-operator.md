@@ -11,45 +11,45 @@ helpviewer_keywords:
 - New constraint
 - New keyword [Visual Basic]
 ms.assetid: d7d566d7-fe0e-4336-91f7-641a542de4d0
-ms.openlocfilehash: 0fe511b2c16681d7bab7eeda7c121fcbbaa2f5dd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0e8ec5877cba5f5cf97e1677460da06fd87cce1c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33603634"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54587549"
 ---
-# <a name="new-operator-visual-basic"></a><span data-ttu-id="b1197-102">New 运算符 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="b1197-102">New Operator (Visual Basic)</span></span>
-<span data-ttu-id="b1197-103">引入了`New`子句创建一个新的对象实例，指定类型参数的构造函数约束或标识`Sub`作为类构造函数的过程。</span><span class="sxs-lookup"><span data-stu-id="b1197-103">Introduces a `New` clause to create a new object instance, specifies a constructor constraint on a type parameter, or identifies a `Sub` procedure as a class constructor.</span></span>  
+# <a name="new-operator-visual-basic"></a><span data-ttu-id="7afe7-102">New 运算符 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="7afe7-102">New Operator (Visual Basic)</span></span>
+<span data-ttu-id="7afe7-103">引入了`New`子句，以创建新的对象实例，指定类型参数的构造函数约束或标识`Sub`作为类构造函数的过程。</span><span class="sxs-lookup"><span data-stu-id="7afe7-103">Introduces a `New` clause to create a new object instance, specifies a constructor constraint on a type parameter, or identifies a `Sub` procedure as a class constructor.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="b1197-104">备注</span><span class="sxs-lookup"><span data-stu-id="b1197-104">Remarks</span></span>  
- <span data-ttu-id="b1197-105">声明或赋值语句中`New`子句必须指定可从中创建实例定义的类。</span><span class="sxs-lookup"><span data-stu-id="b1197-105">In a declaration or assignment statement, a `New` clause must specify a defined class from which the instance can be created.</span></span> <span data-ttu-id="b1197-106">这意味着类必须公开一个或多个构造函数调用的代码可访问。</span><span class="sxs-lookup"><span data-stu-id="b1197-106">This means that the class must expose one or more constructors that the calling code can access.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="7afe7-104">备注</span><span class="sxs-lookup"><span data-stu-id="7afe7-104">Remarks</span></span>  
+ <span data-ttu-id="7afe7-105">声明或赋值语句中`New`子句必须指定将从其创建实例定义的类。</span><span class="sxs-lookup"><span data-stu-id="7afe7-105">In a declaration or assignment statement, a `New` clause must specify a defined class from which the instance can be created.</span></span> <span data-ttu-id="7afe7-106">这意味着类必须公开一个或多个构造函数的调用代码可以访问。</span><span class="sxs-lookup"><span data-stu-id="7afe7-106">This means that the class must expose one or more constructors that the calling code can access.</span></span>  
   
- <span data-ttu-id="b1197-107">你可以使用`New`声明语句或赋值语句中的子句。</span><span class="sxs-lookup"><span data-stu-id="b1197-107">You can use a `New` clause in a declaration statement or an assignment statement.</span></span> <span data-ttu-id="b1197-108">当该语句在运行时，它将调用适当的构造函数指定的类，并传递你提供任何参数。</span><span class="sxs-lookup"><span data-stu-id="b1197-108">When the statement runs, it calls the appropriate constructor of the specified class, passing any arguments you have supplied.</span></span> <span data-ttu-id="b1197-109">下面的示例演示这通过创建的实例`Customer`具有两个构造函数的类、 一个不带任何参数，另一个采用字符串参数。</span><span class="sxs-lookup"><span data-stu-id="b1197-109">The following example demonstrates this by creating instances of a `Customer` class that has two constructors, one that takes no parameters and one that takes a string parameter.</span></span>  
+ <span data-ttu-id="7afe7-107">可以使用`New`声明语句或赋值语句中的子句。</span><span class="sxs-lookup"><span data-stu-id="7afe7-107">You can use a `New` clause in a declaration statement or an assignment statement.</span></span> <span data-ttu-id="7afe7-108">该语句在运行时将调用相应的构造函数的指定的类，并传入具有提供的所有参数。</span><span class="sxs-lookup"><span data-stu-id="7afe7-108">When the statement runs, it calls the appropriate constructor of the specified class, passing any arguments you have supplied.</span></span> <span data-ttu-id="7afe7-109">下面的示例演示这通过创建的实例`Customer`类具有两个构造函数，一个不带参数，一个采用字符串参数。</span><span class="sxs-lookup"><span data-stu-id="7afe7-109">The following example demonstrates this by creating instances of a `Customer` class that has two constructors, one that takes no parameters and one that takes a string parameter.</span></span>  
   
  [!code-vb[VbVbalrKeywords#11](../../../visual-basic/language-reference/codesnippet/VisualBasic/new-operator_1.vb)]  
   
- <span data-ttu-id="b1197-110">由于数组是类，`New`可以创建新的数组实例，如下面的示例中所示。</span><span class="sxs-lookup"><span data-stu-id="b1197-110">Since arrays are classes, `New` can create a new array instance, as shown in the following examples.</span></span>  
+ <span data-ttu-id="7afe7-110">由于数组是类，`New`可以创建一个新数组实例，如以下示例所示。</span><span class="sxs-lookup"><span data-stu-id="7afe7-110">Since arrays are classes, `New` can create a new array instance, as shown in the following examples.</span></span>  
   
  [!code-vb[VbVbalrKeywords#12](../../../visual-basic/language-reference/codesnippet/VisualBasic/new-operator_2.vb)]  
   
- <span data-ttu-id="b1197-111">公共语言运行时 (CLR) 引发<xref:System.OutOfMemoryException>错误是否存在内存不足，无法创建新实例。</span><span class="sxs-lookup"><span data-stu-id="b1197-111">The common language runtime (CLR) throws an <xref:System.OutOfMemoryException> error if there is insufficient memory to create the new instance.</span></span>  
+ <span data-ttu-id="7afe7-111">公共语言运行时 (CLR) 会引发<xref:System.OutOfMemoryException>错误是否存在内存不足，无法创建新实例。</span><span class="sxs-lookup"><span data-stu-id="7afe7-111">The common language runtime (CLR) throws an <xref:System.OutOfMemoryException> error if there is insufficient memory to create the new instance.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="b1197-112">`New`关键字还用于在类型参数列表中指定所提供的类型必须公开可访问的无参数构造函数。</span><span class="sxs-lookup"><span data-stu-id="b1197-112">The `New` keyword is also used in type parameter lists to specify that the supplied type must expose an accessible parameterless constructor.</span></span> <span data-ttu-id="b1197-113">有关类型参数和约束的详细信息，请参阅[类型列表](../../../visual-basic/language-reference/statements/type-list.md)。</span><span class="sxs-lookup"><span data-stu-id="b1197-113">For more information about type parameters and constraints, see [Type List](../../../visual-basic/language-reference/statements/type-list.md).</span></span>  
+>  <span data-ttu-id="7afe7-112">`New`关键字还用于在类型形参列表中指定所提供的类型必须公开一个可访问的无参数构造函数。</span><span class="sxs-lookup"><span data-stu-id="7afe7-112">The `New` keyword is also used in type parameter lists to specify that the supplied type must expose an accessible parameterless constructor.</span></span> <span data-ttu-id="7afe7-113">有关类型参数和约束的详细信息，请参阅[类型列表](../../../visual-basic/language-reference/statements/type-list.md)。</span><span class="sxs-lookup"><span data-stu-id="7afe7-113">For more information about type parameters and constraints, see [Type List](../../../visual-basic/language-reference/statements/type-list.md).</span></span>  
   
- <span data-ttu-id="b1197-114">若要创建一个类的构造函数过程，设置的名称`Sub`过程`New`关键字。</span><span class="sxs-lookup"><span data-stu-id="b1197-114">To create a constructor procedure for a class, set the name of a `Sub` procedure to the `New` keyword.</span></span> <span data-ttu-id="b1197-115">有关详细信息，请参阅[对象生存期： 对象的创建和破坏的方式](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-lifetime-how-objects-are-created-and-destroyed.md)。</span><span class="sxs-lookup"><span data-stu-id="b1197-115">For more information, see [Object Lifetime: How Objects Are Created and Destroyed](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-lifetime-how-objects-are-created-and-destroyed.md).</span></span>  
+ <span data-ttu-id="7afe7-114">若要创建一个类的构造函数过程，请设置的名称`Sub`过程`New`关键字。</span><span class="sxs-lookup"><span data-stu-id="7afe7-114">To create a constructor procedure for a class, set the name of a `Sub` procedure to the `New` keyword.</span></span> <span data-ttu-id="7afe7-115">有关详细信息，请参阅[对象生存期：如何创建和销毁对象](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-lifetime-how-objects-are-created-and-destroyed.md)。</span><span class="sxs-lookup"><span data-stu-id="7afe7-115">For more information, see [Object Lifetime: How Objects Are Created and Destroyed](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-lifetime-how-objects-are-created-and-destroyed.md).</span></span>  
   
- <span data-ttu-id="b1197-116">`New` 关键字可用于以下上下文中：</span><span class="sxs-lookup"><span data-stu-id="b1197-116">The `New` keyword can be used in these contexts:</span></span>  
+ <span data-ttu-id="7afe7-116">`New` 关键字可用于以下上下文中：</span><span class="sxs-lookup"><span data-stu-id="7afe7-116">The `New` keyword can be used in these contexts:</span></span>  
   
- [<span data-ttu-id="b1197-117">Dim 语句</span><span class="sxs-lookup"><span data-stu-id="b1197-117">Dim Statement</span></span>](../../../visual-basic/language-reference/statements/dim-statement.md)  
+ [<span data-ttu-id="7afe7-117">Dim 语句</span><span class="sxs-lookup"><span data-stu-id="7afe7-117">Dim Statement</span></span>](../../../visual-basic/language-reference/statements/dim-statement.md)  
   
- [<span data-ttu-id="b1197-118">Of</span><span class="sxs-lookup"><span data-stu-id="b1197-118">Of</span></span>](../../../visual-basic/language-reference/statements/of-clause.md)  
+ [<span data-ttu-id="7afe7-118">Of</span><span class="sxs-lookup"><span data-stu-id="7afe7-118">Of</span></span>](../../../visual-basic/language-reference/statements/of-clause.md)  
   
- [<span data-ttu-id="b1197-119">Sub 语句</span><span class="sxs-lookup"><span data-stu-id="b1197-119">Sub Statement</span></span>](../../../visual-basic/language-reference/statements/sub-statement.md)  
+ [<span data-ttu-id="7afe7-119">Sub 语句</span><span class="sxs-lookup"><span data-stu-id="7afe7-119">Sub Statement</span></span>](../../../visual-basic/language-reference/statements/sub-statement.md)  
   
-## <a name="see-also"></a><span data-ttu-id="b1197-120">请参阅</span><span class="sxs-lookup"><span data-stu-id="b1197-120">See Also</span></span>  
- <xref:System.OutOfMemoryException>  
- [<span data-ttu-id="b1197-121">关键字</span><span class="sxs-lookup"><span data-stu-id="b1197-121">Keywords</span></span>](../../../visual-basic/language-reference/keywords/index.md)  
- [<span data-ttu-id="b1197-122">类型列表</span><span class="sxs-lookup"><span data-stu-id="b1197-122">Type List</span></span>](../../../visual-basic/language-reference/statements/type-list.md)  
- [<span data-ttu-id="b1197-123">Visual Basic 中的泛型类型</span><span class="sxs-lookup"><span data-stu-id="b1197-123">Generic Types in Visual Basic</span></span>](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)  
- [<span data-ttu-id="b1197-124">对象生存期：如何创建和销毁对象</span><span class="sxs-lookup"><span data-stu-id="b1197-124">Object Lifetime: How Objects Are Created and Destroyed</span></span>](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-lifetime-how-objects-are-created-and-destroyed.md)
+## <a name="see-also"></a><span data-ttu-id="7afe7-120">请参阅</span><span class="sxs-lookup"><span data-stu-id="7afe7-120">See also</span></span>
+- <xref:System.OutOfMemoryException>
+- [<span data-ttu-id="7afe7-121">关键字</span><span class="sxs-lookup"><span data-stu-id="7afe7-121">Keywords</span></span>](../../../visual-basic/language-reference/keywords/index.md)
+- [<span data-ttu-id="7afe7-122">类型列表</span><span class="sxs-lookup"><span data-stu-id="7afe7-122">Type List</span></span>](../../../visual-basic/language-reference/statements/type-list.md)
+- [<span data-ttu-id="7afe7-123">Visual Basic 中的泛型类型</span><span class="sxs-lookup"><span data-stu-id="7afe7-123">Generic Types in Visual Basic</span></span>](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
+- [<span data-ttu-id="7afe7-124">对象生存期：如何创建和销毁对象</span><span class="sxs-lookup"><span data-stu-id="7afe7-124">Object Lifetime: How Objects Are Created and Destroyed</span></span>](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-lifetime-how-objects-are-created-and-destroyed.md)

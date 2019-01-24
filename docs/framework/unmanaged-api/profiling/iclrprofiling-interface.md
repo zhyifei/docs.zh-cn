@@ -16,33 +16,33 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 23582369b701126a38aae461d34ea754cf151b0d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: e2da802d410dd16381a86c8fdc358949eefe1d78
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33450468"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54593948"
 ---
-# <a name="iclrprofiling-interface"></a><span data-ttu-id="c3c75-102">ICLRProfiling 接口</span><span class="sxs-lookup"><span data-stu-id="c3c75-102">ICLRProfiling Interface</span></span>
-<span data-ttu-id="c3c75-103">提供[iclrprofiling:: Attachprofiler](../../../../docs/framework/unmanaged-api/profiling/iclrprofiling-attachprofiler-method.md)方法，使探查器附加到正在运行的进程。</span><span class="sxs-lookup"><span data-stu-id="c3c75-103">Provides the [ICLRProfiling::AttachProfiler](../../../../docs/framework/unmanaged-api/profiling/iclrprofiling-attachprofiler-method.md) method, which enables a profiler to attach to a running process.</span></span>  
+# <a name="iclrprofiling-interface"></a><span data-ttu-id="f30ec-102">ICLRProfiling 接口</span><span class="sxs-lookup"><span data-stu-id="f30ec-102">ICLRProfiling Interface</span></span>
+<span data-ttu-id="f30ec-103">提供了[iclrprofiling:: Attachprofiler](../../../../docs/framework/unmanaged-api/profiling/iclrprofiling-attachprofiler-method.md)方法，可将探查器附加到正在运行的进程。</span><span class="sxs-lookup"><span data-stu-id="f30ec-103">Provides the [ICLRProfiling::AttachProfiler](../../../../docs/framework/unmanaged-api/profiling/iclrprofiling-attachprofiler-method.md) method, which enables a profiler to attach to a running process.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="c3c75-104">方法</span><span class="sxs-lookup"><span data-stu-id="c3c75-104">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="f30ec-104">方法</span><span class="sxs-lookup"><span data-stu-id="f30ec-104">Methods</span></span>  
   
-|<span data-ttu-id="c3c75-105">方法</span><span class="sxs-lookup"><span data-stu-id="c3c75-105">Method</span></span>|<span data-ttu-id="c3c75-106">描述</span><span class="sxs-lookup"><span data-stu-id="c3c75-106">Description</span></span>|  
+|<span data-ttu-id="f30ec-105">方法</span><span class="sxs-lookup"><span data-stu-id="f30ec-105">Method</span></span>|<span data-ttu-id="f30ec-106">描述</span><span class="sxs-lookup"><span data-stu-id="f30ec-106">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="c3c75-107">AttachProfiler 方法</span><span class="sxs-lookup"><span data-stu-id="c3c75-107">AttachProfiler Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/iclrprofiling-attachprofiler-method.md)|<span data-ttu-id="c3c75-108">将指定的探查器附加到指定的进程中。</span><span class="sxs-lookup"><span data-stu-id="c3c75-108">Attaches the specified profiler to the specified process.</span></span>|  
+|[<span data-ttu-id="f30ec-107">AttachProfiler 方法</span><span class="sxs-lookup"><span data-stu-id="f30ec-107">AttachProfiler Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/iclrprofiling-attachprofiler-method.md)|<span data-ttu-id="f30ec-108">将指定的探查器附加到指定的进程中。</span><span class="sxs-lookup"><span data-stu-id="f30ec-108">Attaches the specified profiler to the specified process.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="c3c75-109">备注</span><span class="sxs-lookup"><span data-stu-id="c3c75-109">Remarks</span></span>  
+## <a name="remarks"></a><span data-ttu-id="f30ec-109">备注</span><span class="sxs-lookup"><span data-stu-id="f30ec-109">Remarks</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="c3c75-110">要求</span><span class="sxs-lookup"><span data-stu-id="c3c75-110">Requirements</span></span>  
- <span data-ttu-id="c3c75-111">**平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="c3c75-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="f30ec-110">要求</span><span class="sxs-lookup"><span data-stu-id="f30ec-110">Requirements</span></span>  
+ <span data-ttu-id="f30ec-111">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="f30ec-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="c3c75-112">**头文件：** CorProf.idl、CorProf.h</span><span class="sxs-lookup"><span data-stu-id="c3c75-112">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="f30ec-112">**标头：** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="f30ec-112">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="c3c75-113">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="c3c75-113">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="f30ec-113">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="f30ec-113">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="c3c75-114">**.NET framework 版本：** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="c3c75-114">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
+ <span data-ttu-id="f30ec-114">**.NET Framework 版本：**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="f30ec-114">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="c3c75-115">请参阅</span><span class="sxs-lookup"><span data-stu-id="c3c75-115">See Also</span></span>  
- [<span data-ttu-id="c3c75-116">Profiling 接口</span><span class="sxs-lookup"><span data-stu-id="c3c75-116">Profiling Interfaces</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)  
- [<span data-ttu-id="c3c75-117">ICorProfilerInfo 接口</span><span class="sxs-lookup"><span data-stu-id="c3c75-117">ICorProfilerInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
+## <a name="see-also"></a><span data-ttu-id="f30ec-115">请参阅</span><span class="sxs-lookup"><span data-stu-id="f30ec-115">See also</span></span>
+- [<span data-ttu-id="f30ec-116">Profiling 接口</span><span class="sxs-lookup"><span data-stu-id="f30ec-116">Profiling Interfaces</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
+- [<span data-ttu-id="f30ec-117">ICorProfilerInfo 接口</span><span class="sxs-lookup"><span data-stu-id="f30ec-117">ICorProfilerInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
