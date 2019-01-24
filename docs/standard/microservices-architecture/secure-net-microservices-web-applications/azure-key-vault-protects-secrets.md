@@ -1,84 +1,58 @@
 ---
 title: 在生产时使用 Azure Key Vault 保护机密
-description: 适用于容器化 .NET 应用程序的 .NET 微服务体系结构 | 在生产时使用 Azure Key Vault 保护机密
+description: .NET 微服务和 Web 应用程序中的安全性 - Azure Key Vault 是处理完全由管理员控制的应用程序机密的绝佳方式。 管理员甚至可以在不需要开发人员处理的情况下分配和撤销开发值。
 author: mjrousos
 ms.author: wiwagn
-ms.date: 05/26/2017
-ms.openlocfilehash: cbe893dcdd71f0ce8bf8a26a8502d6c0b3a0dedb
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.date: 10/19/2018
+ms.openlocfilehash: 291d60f941e4280ff120296ce1c392df3300dc44
+ms.sourcegitcommit: 542aa405b295955eb055765f33723cb8b588d0d0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53151140"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "54362414"
 ---
-# <a name="using-azure-key-vault-to-protect-secrets-at-production-time"></a><span data-ttu-id="ecac3-103">在生产时使用 Azure Key Vault 保护机密</span><span class="sxs-lookup"><span data-stu-id="ecac3-103">Using Azure Key Vault to protect secrets at production time</span></span>
+# <a name="use-azure-key-vault-to-protect-secrets-at-production-time"></a><span data-ttu-id="e5ed3-104">在生产时使用 Azure Key Vault 保护机密</span><span class="sxs-lookup"><span data-stu-id="e5ed3-104">Use Azure Key Vault to protect secrets at production time</span></span>
 
-<span data-ttu-id="ecac3-104">存储为环境变量的机密或由机密管理器工具存储的机密仍在本地存储并在计算机上解密。</span><span class="sxs-lookup"><span data-stu-id="ecac3-104">Secrets stored as environment variables or stored by the Secret Manager tool are still stored locally and unencrypted on the machine.</span></span> <span data-ttu-id="ecac3-105">用于存储机密更加安全的选项是使用 [Azure Key Vault](https://azure.microsoft.com/services/key-vault/)，它为存储密钥和机密提供安全的中央位置。</span><span class="sxs-lookup"><span data-stu-id="ecac3-105">A more secure option for storing secrets is [Azure Key Vault](https://azure.microsoft.com/services/key-vault/), which provides a secure, central location for storing keys and secrets.</span></span>
+<span data-ttu-id="e5ed3-105">存储为环境变量的机密或由机密管理器工具存储的机密仍在本地存储并在计算机上解密。</span><span class="sxs-lookup"><span data-stu-id="e5ed3-105">Secrets stored as environment variables or stored by the Secret Manager tool are still stored locally and unencrypted on the machine.</span></span> <span data-ttu-id="e5ed3-106">用于存储机密更加安全的选项是使用 [Azure Key Vault](https://azure.microsoft.com/services/key-vault/)，它为存储密钥和机密提供安全的中央位置。</span><span class="sxs-lookup"><span data-stu-id="e5ed3-106">A more secure option for storing secrets is [Azure Key Vault](https://azure.microsoft.com/services/key-vault/), which provides a secure, central location for storing keys and secrets.</span></span>
 
-<span data-ttu-id="ecac3-106">Microsoft.Extensions.Configuration.AzureKeyVault 包允许 ASP.NET Core 应用程序从 Azure Key Vault 中读取配置信息。</span><span class="sxs-lookup"><span data-stu-id="ecac3-106">The Microsoft.Extensions.Configuration.AzureKeyVault package allows an ASP.NET Core application to read configuration information from Azure Key Vault.</span></span> <span data-ttu-id="ecac3-107">若要开始通过 Azure Key Vault 使用机密，请按照下列步骤操作：</span><span class="sxs-lookup"><span data-stu-id="ecac3-107">To start using secrets from an Azure Key Vault, you follow these steps:</span></span>
+<span data-ttu-id="e5ed3-107">Microsoft.Extensions.Configuration.AzureKeyVault 包允许 ASP.NET Core 应用程序从 Azure Key Vault 中读取配置信息。</span><span class="sxs-lookup"><span data-stu-id="e5ed3-107">The **Microsoft.Extensions.Configuration.AzureKeyVault** package allows an ASP.NET Core application to read configuration information from Azure Key Vault.</span></span> <span data-ttu-id="e5ed3-108">若要开始通过 Azure Key Vault 使用机密，请按照下列步骤操作：</span><span class="sxs-lookup"><span data-stu-id="e5ed3-108">To start using secrets from an Azure Key Vault, you follow these steps:</span></span>
 
-<span data-ttu-id="ecac3-108">首先，将你的应用程序注册为 Azure AD 应用程序。</span><span class="sxs-lookup"><span data-stu-id="ecac3-108">First, register your application as an Azure AD application.</span></span> <span data-ttu-id="ecac3-109">（对密钥保管库的访问由 Azure AD 管理。）可以通过 Azure 管理门户完成此操作。</span><span class="sxs-lookup"><span data-stu-id="ecac3-109">(Access to key vaults is managed by Azure AD.) This can be done through the Azure management portal.</span></span>
+1. <span data-ttu-id="e5ed3-109">将应用程序注册为 Azure AD 应用程序。</span><span class="sxs-lookup"><span data-stu-id="e5ed3-109">Register your application as an Azure AD application.</span></span> <span data-ttu-id="e5ed3-110">（对密钥保管库的访问由 Azure AD 管理。）可以通过 Azure 管理门户完成此操作。\\</span><span class="sxs-lookup"><span data-stu-id="e5ed3-110">(Access to key vaults is managed by Azure AD.) This can be done through the Azure management portal.\\</span></span>
 
-<span data-ttu-id="ecac3-110">或者，如果希望应用程序使用凭据而非密码或客户端密码进行身份验证，则可以使用 [New-AzureRmADApplication](https://docs.microsoft.com/powershell/module/azurerm.resources/new-azurermadapplication) PowerShell cmdlet。</span><span class="sxs-lookup"><span data-stu-id="ecac3-110">Alternatively, if you want your application to authenticate using a certificate instead of a password or client secret, you can use the [New-AzureRmADApplication](https://docs.microsoft.com/powershell/module/azurerm.resources/new-azurermadapplication) PowerShell cmdlet.</span></span> <span data-ttu-id="ecac3-111">向 Azure Key Vault 注册的证书仅需要公钥。</span><span class="sxs-lookup"><span data-stu-id="ecac3-111">The certificate that you register with Azure Key Vault needs only your public key.</span></span> <span data-ttu-id="ecac3-112">（你的应用程序将使用私钥。）</span><span class="sxs-lookup"><span data-stu-id="ecac3-112">(Your application will use the private key.)</span></span>
+   <span data-ttu-id="e5ed3-111">或者，如果希望应用程序使用凭据而非密码或客户端密码进行身份验证，则可以使用 [New-AzureRmADApplication](/powershell/module/azurerm.resources/new-azurermadapplication) PowerShell cmdlet。</span><span class="sxs-lookup"><span data-stu-id="e5ed3-111">Alternatively, if you want your application to authenticate using a certificate instead of a password or client secret, you can use the [New-AzureRmADApplication](/powershell/module/azurerm.resources/new-azurermadapplication) PowerShell cmdlet.</span></span> <span data-ttu-id="e5ed3-112">向 Azure Key Vault 注册的证书仅需要公钥。</span><span class="sxs-lookup"><span data-stu-id="e5ed3-112">The certificate that you register with Azure Key Vault needs only your public key.</span></span> <span data-ttu-id="e5ed3-113">（你的应用程序将使用私钥。）</span><span class="sxs-lookup"><span data-stu-id="e5ed3-113">(Your application will use the private key.)</span></span>
 
-<span data-ttu-id="ecac3-113">其次，通过创建新的服务主体授予已注册应用程序访问密钥保管库权限。</span><span class="sxs-lookup"><span data-stu-id="ecac3-113">Second, give the registered application access to the key vault by creating a new service principal.</span></span> <span data-ttu-id="ecac3-114">可以使用以下 PowerShell 命令来执行此操作：</span><span class="sxs-lookup"><span data-stu-id="ecac3-114">You can do this using the following PowerShell commands:</span></span>
+2. <span data-ttu-id="e5ed3-114">通过创建新的服务主体授予已注册应用程序访问密钥保管库的权限。</span><span class="sxs-lookup"><span data-stu-id="e5ed3-114">Give the registered application access to the key vault by creating a new service principal.</span></span> <span data-ttu-id="e5ed3-115">可以使用以下 PowerShell 命令来执行此操作：</span><span class="sxs-lookup"><span data-stu-id="e5ed3-115">You can do this using the following PowerShell commands:</span></span>
 
-```powershell
-$sp = New-AzureRmADServicePrincipal -ApplicationId "<Application ID guid>"
-Set-AzureRmKeyVaultAccessPolicy -VaultName "<VaultName>" -ServicePrincipalName $sp.ServicePrincipalNames[0] -PermissionsToSecrets all -ResourceGroupName "<KeyVault Resource Group>"
-```
+   ```powershell
+   $sp = New-AzureRmADServicePrincipal -ApplicationId "<Application ID guid>"
+   Set-AzureRmKeyVaultAccessPolicy -VaultName "<VaultName>" -ServicePrincipalName $sp.ServicePrincipalNames[0] -PermissionsToSecrets all -ResourceGroupName "<KeyVault Resource Group>"
+   ```
 
-<span data-ttu-id="ecac3-115">第三，创建 IConfigurationRoot 实例时通过调用 IConfigurationBuilder.AddAzureKeyVault 扩展方法将密钥保管库作为配置源包括在应用程序中。</span><span class="sxs-lookup"><span data-stu-id="ecac3-115">Third, include the key vault as a configuration source in your application by calling the IConfigurationBuilder.AddAzureKeyVault extension method when you create an IConfigurationRoot instance.</span></span> <span data-ttu-id="ecac3-116">请注意，调用 AddAzureKeyVault 将需要前面步骤中已注册并已获取密钥保管库访问权限的应用程序 ID。</span><span class="sxs-lookup"><span data-stu-id="ecac3-116">Note that calling AddAzureKeyVault will require the application ID that was registered and given access to the key vault in the previous steps.</span></span>
+3. <span data-ttu-id="e5ed3-116">创建 <xref:Microsoft.Extensions.Configuration.IConfigurationRoot> 实例时通过调用 <xref:Microsoft.Extensions.Configuration.AzureKeyVaultConfigurationExtensions.AddAzureKeyVault%2A?displayProperty=nameWithType> 扩展方法将密钥保管库作为配置源包括在应用程序中。</span><span class="sxs-lookup"><span data-stu-id="e5ed3-116">Include the key vault as a configuration source in your application by calling the <xref:Microsoft.Extensions.Configuration.AzureKeyVaultConfigurationExtensions.AddAzureKeyVault%2A?displayProperty=nameWithType> extension method when you create an <xref:Microsoft.Extensions.Configuration.IConfigurationRoot> instance.</span></span> <span data-ttu-id="e5ed3-117">请注意，调用 `AddAzureKeyVault` 将需要前面步骤中已注册并已获取密钥保管库访问权限的应用程序 ID。</span><span class="sxs-lookup"><span data-stu-id="e5ed3-117">Note that calling `AddAzureKeyVault` requires the application ID that was registered and given access to the key vault in the previous steps.</span></span>
 
-  <span data-ttu-id="ecac3-117">目前，.NET Standard 和 .NET Core 支持使用客户端 ID 和客户端密码从 Azure Key Vault 获取配置信息。</span><span class="sxs-lookup"><span data-stu-id="ecac3-117">Currently, .NET Standard and .NET Core support getting configuration information from an Azure Key Vault using a client ID and client secret.</span></span> <span data-ttu-id="ecac3-118">.NET framework 应用程序可以使用采用证书代替客户端密码的 IConfigurationBuilder.AddAzureKeyVault 的重载。</span><span class="sxs-lookup"><span data-stu-id="ecac3-118">.NET Framework applications can use an overload of IConfigurationBuilder.AddAzureKeyVault that takes a certificate in place of the client secret.</span></span> <span data-ttu-id="ecac3-119">截至撰写本文时，我们[仍在](https://github.com/aspnet/Configuration/issues/605)努力使该重载在 .NET Standard 和 .NET Core 中可用。</span><span class="sxs-lookup"><span data-stu-id="ecac3-119">As of this writing, work is [in progress](https://github.com/aspnet/Configuration/issues/605) to make that overload available in .NET Standard and .NET Core.</span></span> <span data-ttu-id="ecac3-120">直到接受证书的 AddAzureKeyVault 重载可用之前，ASP.NET Core 应用程序可以通过显式创建 KeyVaultClient 对象使用基于证书的身份验证来访问 Azure Key Vault，如下面的示例中所示：</span><span class="sxs-lookup"><span data-stu-id="ecac3-120">Until the AddAzureKeyVault overload that accepts a certificate is available, ASP.NET Core applications can access an Azure Key Vault with certificate-based authentication by explicitly creating a KeyVaultClient object, as shown in the following example:</span></span>
+   <span data-ttu-id="e5ed3-118">还可以使用 `AddAzureKeyVault` 重载，该重载通过包含对 [Microsoft.IdentityModel.Clients.ActiveDirectory](https://www.nuget.org/packages/Microsoft.IdentityModel.Clients.ActiveDirectory) 包的引用来用证书代替客户端机密。</span><span class="sxs-lookup"><span data-stu-id="e5ed3-118">You can also use an overload of `AddAzureKeyVault` that takes a certificate in place of the client secret by just including a reference to the [Microsoft.IdentityModel.Clients.ActiveDirectory](https://www.nuget.org/packages/Microsoft.IdentityModel.Clients.ActiveDirectory) package.</span></span>
 
-```csharp
-// Configure Key Vault client
-var kvClient = new KeyVaultClient(new KeyVaultClient.AuthenticationCallback(async
-    (authority, resource, scope) =>
-    {
-        var cert = // Get certificate from local store/file/key vault etc. as needed
-        // From the Microsoft.IdentityModel.Clients.ActiveDirectory pacakge
-        var authContext = new AuthenticationContext(authority,
-            TokenCache.DefaultShared);
-        var result = await authContext.AcquireTokenAsync(resource,
-            // From the Microsoft.Rest.ClientRuntime.Azure.Authentication pacakge
-            new ClientAssertionCertificate("{Application ID}", cert));
-        return result.AccessToken;
-    }));
+> [!IMPORTANT]
+> <span data-ttu-id="e5ed3-119">建议将 Azure Key Vault 注册为最后一个配置提供程序，这样它就可以覆盖之前提供程序的配置值。</span><span class="sxs-lookup"><span data-stu-id="e5ed3-119">We recommend you to register Azure Key Vault as the last configuration provider, so it can override configuration values from previous providers.</span></span>
 
-    // Get configuration values from Key Vault
-    var builder = new ConfigurationBuilder()
-        .SetBasePath(env.ContentRootPath)
-        // Other configuration providers go here.
-        .AddAzureKeyVault("{KeyValueUri}", kvClient,
-        new DefaultKeyVaultSecretManager());
-```
+## <a name="additional-resources"></a><span data-ttu-id="e5ed3-120">其他资源</span><span class="sxs-lookup"><span data-stu-id="e5ed3-120">Additional resources</span></span>
 
-<span data-ttu-id="ecac3-121">在此示例中，在配置提供程序注册的最后调用 AddAzureKeyVault。</span><span class="sxs-lookup"><span data-stu-id="ecac3-121">In this example, the call to AddAzureKeyVault comes at the end of configuration provider registration.</span></span> <span data-ttu-id="ecac3-122">最好将 Azure Key Vault 注册为最后一个配置提供程序，使其有机会重写具有之前提供程序的配置值，这样就没有其他源的配置值重写密钥保管库中的值。</span><span class="sxs-lookup"><span data-stu-id="ecac3-122">It is a best practice to register Azure Key Vault as the last configuration provider so that it has an opportunity to override configuration values from previous providers, and so that no configuration values from other sources override those from the key vault.</span></span>
+- <span data-ttu-id="e5ed3-121">**使用 Azure Key Vault 保护应用程序机密** \\</span><span class="sxs-lookup"><span data-stu-id="e5ed3-121">**Using Azure Key Vault to protect application secrets** \\</span></span>
+  [*https://docs.microsoft.com/azure/guidance/guidance-multitenant-identity-keyvault*](/azure/guidance/guidance-multitenant-identity-keyvault)
 
-## <a name="additional-resources"></a><span data-ttu-id="ecac3-123">其他资源</span><span class="sxs-lookup"><span data-stu-id="ecac3-123">Additional resources</span></span>
+- <span data-ttu-id="e5ed3-122">**在开发期间安全存储应用机密** \\</span><span class="sxs-lookup"><span data-stu-id="e5ed3-122">**Safe storage of app secrets during development** \\</span></span>
+  [*https://docs.microsoft.com/aspnet/core/security/app-secrets*](/aspnet/core/security/app-secrets)
 
--   <span data-ttu-id="ecac3-124">**使用 Azure Key Vault 保护应用程序密码**
-    [*https://docs.microsoft.com/azure/guidance/guidance-multitenant-identity-keyvault*](https://docs.microsoft.com/azure/guidance/guidance-multitenant-identity-keyvault)</span><span class="sxs-lookup"><span data-stu-id="ecac3-124">**Using Azure Key Vault to protect application secrets**
-[*https://docs.microsoft.com/azure/guidance/guidance-multitenant-identity-keyvault*](https://docs.microsoft.com/azure/guidance/guidance-multitenant-identity-keyvault)</span></span>
+- <span data-ttu-id="e5ed3-123">**配置数据保护** \\</span><span class="sxs-lookup"><span data-stu-id="e5ed3-123">**Configuring data protection** \\</span></span>
+  [*https://docs.microsoft.com/aspnet/core/security/data-protection/configuration/overview*](/aspnet/core/security/data-protection/configuration/overview)
 
--   <span data-ttu-id="ecac3-125">**在开发期间安全存储应用密码**
-    [*https://docs.microsoft.com/aspnet/core/security/app-secrets*](https://docs.microsoft.com/aspnet/core/security/app-secrets)</span><span class="sxs-lookup"><span data-stu-id="ecac3-125">**Safe storage of app secrets during development**
-[*https://docs.microsoft.com/aspnet/core/security/app-secrets*](https://docs.microsoft.com/aspnet/core/security/app-secrets)</span></span>
+- <span data-ttu-id="e5ed3-124">**密钥管理和生存期** \\</span><span class="sxs-lookup"><span data-stu-id="e5ed3-124">**Key management and lifetime** \\</span></span>
+  [*https://docs.microsoft.com/aspnet/core/security/data-protection/configuration/default-settings\#data-protection-default-settings*](/aspnet/core/security/data-protection/configuration/default-settings#data-protection-default-settings)
 
--   <span data-ttu-id="ecac3-126">**配置数据保护**
-    [*https://docs.microsoft.com/aspnet/core/security/data-protection/configuration/overview*](https://docs.microsoft.com/aspnet/core/security/data-protection/configuration/overview)</span><span class="sxs-lookup"><span data-stu-id="ecac3-126">**Configuring data protection**
-[*https://docs.microsoft.com/aspnet/core/security/data-protection/configuration/overview*](https://docs.microsoft.com/aspnet/core/security/data-protection/configuration/overview)</span></span>
-
--   <span data-ttu-id="ecac3-127">**密钥管理和生存期**
-    [*https://docs.microsoft.com/aspnet/core/security/data-protection/configuration/default-settings\#data-protection-default-settings*](https://docs.microsoft.com/aspnet/core/security/data-protection/configuration/default-settings#data-protection-default-settings)</span><span class="sxs-lookup"><span data-stu-id="ecac3-127">**Key management and lifetime**
-[*https://docs.microsoft.com/aspnet/core/security/data-protection/configuration/default-settings\#data-protection-default-settings*](https://docs.microsoft.com/aspnet/core/security/data-protection/configuration/default-settings#data-protection-default-settings)</span></span>
-
--   <span data-ttu-id="ecac3-128">Microsoft.Extensions.Configuration.KeyPerFile GitHub 存储库。</span><span class="sxs-lookup"><span data-stu-id="ecac3-128">**Microsoft.Extensions.Configuration.KeyPerFile** GitHub repo.</span></span>
-    [*https://github.com/aspnet/Configuration/tree/master/src/Config.KeyPerFile*](https://github.com/aspnet/Configuration/tree/master/src/Config.KeyPerFile)
+- <span data-ttu-id="e5ed3-125">Microsoft.Extensions.Configuration.KeyPerFile GitHub 存储库。</span><span class="sxs-lookup"><span data-stu-id="e5ed3-125">**Microsoft.Extensions.Configuration.KeyPerFile** GitHub repo.</span></span> \
+  [*https://github.com/aspnet/Configuration/tree/master/src/Config.KeyPerFile*](https://github.com/aspnet/Configuration/tree/master/src/Config.KeyPerFile)
 
 >[!div class="step-by-step"]
-><span data-ttu-id="ecac3-129">[上一页](developer-app-secrets-storage.md)
->[下一页](../key-takeaways.md)</span><span class="sxs-lookup"><span data-stu-id="ecac3-129">[Previous](developer-app-secrets-storage.md)
+><span data-ttu-id="e5ed3-126">[上一页](developer-app-secrets-storage.md)
+>[下一页](../key-takeaways.md)</span><span class="sxs-lookup"><span data-stu-id="e5ed3-126">[Previous](developer-app-secrets-storage.md)
 [Next](../key-takeaways.md)</span></span>
