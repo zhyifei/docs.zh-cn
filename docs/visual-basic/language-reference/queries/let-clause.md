@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Let clause [Visual Basic]
 - Let statement [Visual Basic]
 ms.assetid: 981aa516-16eb-4c53-b1f1-5aa3e82f316e
-ms.openlocfilehash: 34c0fd239d9e08dab4a107cb8447941e7ab3ecbe
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: de7ef8aa456235b4fd3003230645db4f5a813a9c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43516758"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54634059"
 ---
 # <a name="let-clause-visual-basic"></a>Let 子句 (Visual Basic)
 计算一个值，并将其分配给在查询中的新变量。  
@@ -28,8 +28,8 @@ Let variable = expression [, ...]
   
 |术语|定义|  
 |---|---|  
-|`variable`|必须的。 别名可用于引用提供的表达式的结果。|  
-|`expression`|必须的。 一个表达式，将计算并分配给指定的变量。|  
+|`variable`|必需。 别名可用于引用提供的表达式的结果。|  
+|`expression`|必需。 一个表达式，将计算并分配给指定的变量。|  
   
 ## <a name="remarks"></a>备注  
  `Let`子句，可计算每个值的查询结果，可以使用别名来引用它们。 别名可在其他子句，如`Where`子句。 `Let`子句，可创建的查询语句，从而更易于进行读取，因为可以为包含在查询表达式子句指定别名，并将每次使用该表达式子句的别名。  
@@ -41,9 +41,9 @@ Let variable = expression [, ...]
   
  [!code-vb[VbSimpleQuerySamples#16](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/let-clause_1.vb)]  
   
-## <a name="see-also"></a>请参阅  
- [Visual Basic 中的 LINQ 简介](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)  
- [查询](../../../visual-basic/language-reference/queries/index.md)  
- [Select 子句](../../../visual-basic/language-reference/queries/select-clause.md)  
- [From 子句](../../../visual-basic/language-reference/queries/from-clause.md)  
- [Where 子句](../../../visual-basic/language-reference/queries/where-clause.md)
+## <a name="see-also"></a>请参阅
+- [Visual Basic 中的 LINQ 简介](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
+- [查询](../../../visual-basic/language-reference/queries/index.md)
+- [Select 子句](../../../visual-basic/language-reference/queries/select-clause.md)
+- [From 子句](../../../visual-basic/language-reference/queries/from-clause.md)
+- [Where 子句](../../../visual-basic/language-reference/queries/where-clause.md)

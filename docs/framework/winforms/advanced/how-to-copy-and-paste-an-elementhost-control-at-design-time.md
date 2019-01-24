@@ -1,5 +1,5 @@
 ---
-title: 如何：在设计时复制并粘贴 ElementHost 控件
+title: 如何：复制并粘贴 ElementHost 控件在设计时
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Windows Forms, content copying and pasting
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - ElementHost control [Windows Forms], copying and pasting at design time
 - WPF user control [Windows Forms], hosting in Windows Forms
 ms.assetid: e570375d-2a68-44ba-b4f7-c781af2d20e8
-ms.openlocfilehash: a61a8538fb9b4245e3f3705c5d5cbb1b45ed0b72
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: 6ff1ccc5e8f188bdec2e09048974fdc20a785920
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48872913"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54572625"
 ---
-# <a name="how-to-copy-and-paste-an-elementhost-control-at-design-time"></a>如何：在设计时复制并粘贴 ElementHost 控件
+# <a name="how-to-copy-and-paste-an-elementhost-control-at-design-time"></a>如何：复制并粘贴 ElementHost 控件在设计时
 此过程演示如何将复制在 Windows 窗体上的 Windows Presentation Foundation (WPF) 控件。  
   
 > [!NOTE]
@@ -22,7 +22,7 @@ ms.locfileid: "48872913"
   
 ### <a name="to-copy-and-paste-an-elementhost-control-at-design-time"></a>若要复制并粘贴 ElementHost 控件在设计时  
   
-1.  添加新的 WPF<xref:System.Windows.Controls.UserControl>到 Windows 窗体项目。 使用控件类型的默认名称，`UserControl1.xaml`。 有关详细信息，请参阅[演练： 创建新 WPF 内容在设计时的 Windows 窗体上](../../../../docs/framework/winforms/advanced/walkthrough-creating-new-wpf-content-on-windows-forms-at-design-time.md)。  
+1.  添加新的 WPF<xref:System.Windows.Controls.UserControl>到 Windows 窗体项目。 使用控件类型的默认名称，`UserControl1.xaml`。 有关详细信息，请参见[演练：在设计时在 Windows 窗体上创建新的 WPF 内容](../../../../docs/framework/winforms/advanced/walkthrough-creating-new-wpf-content-on-windows-forms-at-design-time.md)。  
   
 2.  在中**属性**窗口中，设置的值<xref:System.Windows.FrameworkElement.Width%2A>并<xref:System.Windows.FrameworkElement.Height%2A>的属性`UserControl1`到`200`。  
   
@@ -42,10 +42,10 @@ ms.locfileid: "48872913"
   
      一个新<xref:System.Windows.Forms.Integration.ElementHost>名为控件`elementHost2`窗体上创建。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>请参阅
 
-- <xref:System.Windows.Forms.Integration.ElementHost>  
-- <xref:System.Windows.Forms.Integration.WindowsFormsHost>   
-- [迁移和互操作性](../../../../docs/framework/wpf/advanced/migration-and-interoperability.md)  
-- [使用 WPF 控件](../../../../docs/framework/winforms/advanced/using-wpf-controls.md)  
+- <xref:System.Windows.Forms.Integration.ElementHost>
+- <xref:System.Windows.Forms.Integration.WindowsFormsHost>
+- [迁移和互操作性](../../../../docs/framework/wpf/advanced/migration-and-interoperability.md)
+- [使用 WPF 控件](../../../../docs/framework/winforms/advanced/using-wpf-controls.md)
 - [在 Visual Studio 中设计 XAML](/visualstudio/designers/designing-xaml-in-visual-studio)

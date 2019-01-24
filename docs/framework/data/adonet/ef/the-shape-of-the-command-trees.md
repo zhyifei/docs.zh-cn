@@ -2,12 +2,12 @@
 title: 命令目录树的形状
 ms.date: 03/30/2017
 ms.assetid: 2215585e-ca47-45f8-98d4-8cb982f8c1d3
-ms.openlocfilehash: 9084e2616ac4ea540bdf755afd011d67a5c991fa
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: b859dfaa6350341b4b90753fd5dda3339e6bb584
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32766031"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54573017"
 ---
 # <a name="the-shape-of-the-command-trees"></a>命令目录树的形状
 SQL 生成模块负责生成基于给定输入查询命令目录树表达式的后端特定 SQL 查询。 本节讨论查询命令目录树的特征、属性和结构。  
@@ -23,7 +23,7 @@ SQL 生成模块负责生成基于给定输入查询命令目录树表达式的�
   
  DBQueryCommandTree.Query 属性是用于描述查询逻辑的表达式树的根。 DBQueryCommandTree.Parameters 属性包含查询中使用的参数的列表。 表达式树由 DbExpression 对象组成。  
   
- DbExpression 对象表示某个计算。 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]提供了用于编写查询表达式的多种表达式，包括常量、变量、函数、构造函数和标准关系运算符（例如筛选和联接）。 每个 DbExpression 对象都有一个 ResultType 属性，表示该表达式生成的结果的类型。 此类型表示为 TypeUsage。  
+ DbExpression 对象表示某个计算。 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]提供了用于编写查询表达式的多种表达式，包括常量、变量、函数、构造函数和标准关系运算符（例如筛选和联接）。 每个 DbExpression 对象都有一个 ResultType 属性，表示由该表达式生成的结果的类型。 此类型表示为 TypeUsage。  
   
 ## <a name="shapes-of-the-output-query-command-tree"></a>输出查询命令目录树的形状  
  输出查询命令目录树紧密表示关系 (SQL) 查询，并遵循比应用于查询命令目录树的规则更严格的规则。 它们通常包含易于转换为 SQL 的构造。  
@@ -69,7 +69,7 @@ SQL 生成模块负责生成基于给定输入查询命令目录树表达式的�
   
 -   用户定义的函数。  
   
- 规范函数 (请参阅[规范函数](../../../../../docs/framework/data/adonet/ef/language-reference/canonical-functions.md)有关详细信息) 的一部分指定[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]，并提供程序应提供基于这些规范的规范函数的实现。 存储函数基于相应的提供程序清单中的规范。 用户定义的函数基于 SSDL 中的规范。  
+ 规范函数 (请参阅[规范函数](../../../../../docs/framework/data/adonet/ef/language-reference/canonical-functions.md)有关详细信息) 的一部分指定[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]，和提供程序应提供的基于这些规范的规范函数的实现。 存储函数基于相应的提供程序清单中的规范。 用户定义的函数基于 SSDL 中的规范。  
   
  另外，具有 NiladicFunction 特性的函数没有任何自变量，并且此类函数在转换时末尾不应有括号。  它是到 *\<functionName >* 而不是 *\<functionName > （)*。  
   
@@ -96,14 +96,14 @@ SQL 生成模块负责生成基于给定输入查询命令目录树表达式的�
 #### <a name="dbscanexpression"></a>DbScanExpression  
  在输出命令目录树中使用 DbScanExpression 时，它可以有效表示对表、视图或存储查询的扫描（由 EnitySetBase::Target 表示）。  
   
- 如果元数据属性"Defining Query"的目标为非 null，则它表示一个查询，该元数据属性中存储架构定义中指定的提供程序特定语言 （或方言） 提供的查询文本。  
+ 如果元数据属性"Defining Query"的目标为非 null，则它表示一个查询，该元数据属性中存储架构定义中指定的提供程序的特定语言 （或方言） 提供的查询文本。  
   
- 否则，目标表示一个表或视图。 其架构前缀位于"Schema"元数据属性中，如果不是 null，则为的实体容器名称。  表或视图名称位于"Table"元数据属性，如果不为 null，则集基实体的名称属性。  
+ 否则，目标表示一个表或视图。 其架构前缀位于"Schema"元数据属性，如果不为 null，否则实体容器名称。  表或视图名称是"Table"元数据属性，如果不为 null，否则为该实体的名称属性设置基。  
   
  所有这些属性源自存储架构定义文件 (SSDL) 中对应的 EntitySet 的定义。  
   
 ### <a name="using-primitive-types"></a>使用基元类型  
  在输出命令目录树中引用基元类型时，通常会在概念模型的基元类型中引用它们。 不过，对于某些表达式，提供程序需要相应的存储基元类型。 此类表达式包括 DbCastExpression 且可能包括 DbNullExpression（如果提供程序需要将 null 强制转换为相应类型）等。 在这些情况下，提供程序应基于基元类型的类别和 facet 对提供程序类型进行映射。  
   
-## <a name="see-also"></a>请参阅  
- [SQL 生成](../../../../../docs/framework/data/adonet/ef/sql-generation.md)
+## <a name="see-also"></a>请参阅
+- [SQL 生成](../../../../../docs/framework/data/adonet/ef/sql-generation.md)
