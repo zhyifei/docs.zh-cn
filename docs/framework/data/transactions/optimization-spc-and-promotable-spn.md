@@ -2,12 +2,12 @@
 title: 使用单阶段提交和可提升的单阶段通知进行优化
 ms.date: 03/30/2017
 ms.assetid: 57beaf1a-fb4d-441a-ab1d-bc0c14ce7899
-ms.openlocfilehash: 093dfb793d5a8c8dc59eaabab09f2e5b6c81c352
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b63c0a54fda54306891bdec0edd8d2e3dc65b595
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33363281"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54553056"
 ---
 # <a name="optimization-using-single-phase-commit-and-promotable-single-phase-notification"></a>使用单阶段提交和可提升的单阶段通知进行优化
 本主题描述 <xref:System.Transactions> 基础结构所提供的用于优化性能的机制。  
@@ -30,9 +30,9 @@ ms.locfileid: "33363281"
  如果需要升级 <xref:System.Transactions> 事务（例如，要支持多个 RM），则 <xref:System.Transactions> 会通过在 <xref:System.Transactions.ITransactionPromoter.Promote%2A> 接口（从其派生 <xref:System.Transactions.ITransactionPromoter> 接口）上调用 <xref:System.Transactions.IPromotableSinglePhaseNotification> 方法，向资源管理器发出通知。 然后，资源管理器在内部将该事务从本地事务（不要求进行日志记录）转换为能够参与 DTC 事务的事务对象，并将其与已执行的工作关联。 在请求提交该事务时，事务管理器仍会将 <xref:System.Transactions.IPromotableSinglePhaseNotification.SinglePhaseCommit%2A> 通知发送给资源管理器，而后者会提交在升级期间创建的分布式事务。  
   
 > [!NOTE]
->  **TransactionCommitted** （即升级的事务调用提交时，生成） 的跟踪包含 DTC 事务的活动 ID。  
+>  **TransactionCommitted**跟踪 （即上升级的事务调用 Commit 时生成） 包含 DTC 事务的活动 ID。  
   
- 有关管理升级的详细信息，请参阅[事务管理升级](../../../../docs/framework/data/transactions/transaction-management-escalation.md)。  
+ 有关管理升级的详细信息，请参阅[Transaction Management Escalation](../../../../docs/framework/data/transactions/transaction-management-escalation.md)。  
   
 ## <a name="transaction-management-escalation-scenario"></a>事务管理升级方案  
  下面的方案演示如何将一个事务升级为分布式事务，该方案将 <xref:System.Data> 命名空间用作资源管理器的“代理”。 该方案假定该事务中已包含一个至数据库的 <xref:System.Data> 连接 CN1，并且应用程序希望包含另一个 <xref:System.Data> 连接 CN2。 该事务必须作为完全分布式的两阶段提交事务升级到 DTC。  
@@ -58,8 +58,8 @@ ms.locfileid: "33363281"
   
  由于 <xref:System.Transactions.ISinglePhaseNotification> 接口是从 <xref:System.Transactions.IEnlistmentNotification> 接口派生的，因此如果 RM 不适合执行单阶段提交，它仍可接收两阶段提交通知。  如果 RM 从 TM 接收到 <xref:System.Transactions.ISinglePhaseNotification.SinglePhaseCommit%2A> 通知，它应尝试完成提交所需的工作，并在 <xref:System.Transactions.SinglePhaseEnlistment.Committed%2A> 参数上调用 <xref:System.Transactions.SinglePhaseEnlistment.Aborted%2A>、<xref:System.Transactions.SinglePhaseEnlistment.InDoubt%2A> 或 <xref:System.Transactions.SinglePhaseEnlistment> 方法，来相应地通知事务管理器是提交还是回滚事务。 在此阶段中，登记时的 <xref:System.Transactions.Enlistment.Done%2A> 响应表示 ReadOnly 语义。 因此，不应答复 <xref:System.Transactions.Enlistment.Done%2A> 以及任何其他方法。  
   
- 如果只有一个可变参与者和任何持久登记，可变参与者接收 SPC 通知。  如果有任何易失性的登记和只有一个持久登记，易失性登记接收 2PC。 完成提交后，持久登记会接收到 SPC 通知。  
+ 如果只有一个可变登记而没有持久登记，则可变登记会接收 SPC 通知。  如果有一些可变登记且只有一个持久登记，则可变登记会接收到 2PC。 完成提交后，持久登记会接收到 SPC 通知。  
   
-## <a name="see-also"></a>请参阅  
- [在事务中将资源登记为参与者](../../../../docs/framework/data/transactions/enlisting-resources-as-participants-in-a-transaction.md)  
- [单阶段和多阶段确认事务](../../../../docs/framework/data/transactions/committing-a-transaction-in-single-phase-and-multi-phase.md)
+## <a name="see-also"></a>请参阅
+- [在事务中将资源登记为参与者](../../../../docs/framework/data/transactions/enlisting-resources-as-participants-in-a-transaction.md)
+- [单阶段和多阶段确认事务](../../../../docs/framework/data/transactions/committing-a-transaction-in-single-phase-and-multi-phase.md)

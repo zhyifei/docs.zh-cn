@@ -7,16 +7,16 @@ helpviewer_keywords:
 ms.assetid: 8b81645b-8be3-4e26-9c98-4fb0fceca06b
 author: Xansky
 ms.author: mhopkins
-ms.openlocfilehash: 6beeec86ba8bf16be432bc2ae2de20aa08a0d2d9
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: 7552db2b0d1f9063733ddac29612057e0475570e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47113116"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54597188"
 ---
 # <a name="control-pattern-mapping-for-ui-automation-clients"></a>UI 自动化客户端的控件模式映射
 > [!NOTE]
->  本文档适用于想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空间中定义的托管 <xref:System.Windows.Automation> 类的 .NET Framework 开发人员。 有关最新信息[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]，请参阅[Windows 自动化 API: UI 自动化](https://go.microsoft.com/fwlink/?LinkID=156746)。  
+>  本文档适用于想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空间中定义的托管 <xref:System.Windows.Automation> 类的 .NET Framework 开发人员。 有关最新信息[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]，请参阅[Windows 自动化 API:UI 自动化](https://go.microsoft.com/fwlink/?LinkID=156746)。  
   
  本主题列出了控件类型及其关联的控件模式。  
   
@@ -47,7 +47,7 @@ ms.locfileid: "47113116"
 |Group|无|展开/折叠|无|  
 |Header|无|Transform|无|  
 |标头项|无|转换、调用|无|  
-|超链接|调用|“值”|无|  
+|超链接|调用|值|无|  
 |图像|无|网格项、表项|调用、选择项|  
 |列表|无|网格、多个视图、滚动、选择|表|  
 |列表项|选择项|展开折叠、网格项、调用、滚动项、切换、值|无|  
@@ -66,7 +66,7 @@ ms.locfileid: "47113116"
 |Tab|选择|Scroll|无|  
 |选项卡项|选择项|无|调用|  
 |表|网格、网格项、表、表项|无|无|  
-|Text|无|网格项、表项、文本|“值”|  
+|Text|无|网格项、表项、文本|值|  
 |Thumb|Transform|无|无|  
 |标题栏|无|无|无|  
 |工具栏|无|停靠、展开折叠、转换|无|  
@@ -78,5 +78,5 @@ ms.locfileid: "47113116"
 > [!NOTE]
 >  如果控件类型没有可列出的受支持的控件模式，但具有一个或多个有条件支持的控件模式，则将始终支持这些有条件控件模式之一。  
   
-## <a name="see-also"></a>请参阅  
- [UI 自动化概述](../../../docs/framework/ui-automation/ui-automation-overview.md)
+## <a name="see-also"></a>请参阅
+- [UI 自动化概述](../../../docs/framework/ui-automation/ui-automation-overview.md)

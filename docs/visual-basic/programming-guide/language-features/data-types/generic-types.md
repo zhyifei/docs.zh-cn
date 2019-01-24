@@ -36,12 +36,12 @@ helpviewer_keywords:
 - type arguments [Visual Basic], defining
 - arguments [Visual Basic], type
 ms.assetid: 89f771d9-ecbb-4737-88b8-116b63c6cf4d
-ms.openlocfilehash: 3a419fb38d3b97b08c8aaa094265d8b426429ae4
-ms.sourcegitcommit: 700b9003ea6bdd83a53458bbc436c9b5778344f1
+ms.openlocfilehash: b69fc668a63d1b4f834d5aa65ae8e27854d73e63
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48266571"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54595573"
 ---
 # <a name="generic-types-in-visual-basic-visual-basic"></a>Visual Basic 中的泛型类型 (Visual Basic)
 *泛型类型* 是可适应对多种数据类型执行相同功能的单个编程元素。 定义泛型类或过程时，无需为可能需要对其执行该功能的每个数据类型定义单独版本。  
@@ -53,13 +53,13 @@ ms.locfileid: "48266571"
   
  定义泛型类型时，即使用一个或多个数据类型将其参数化。 这样可允许使用代码定制数据类型以满足其要求。 代码可以通过泛型元素声明若干个不同的编程元素，每个元素可使用一组不同的数据类型。 但是，无论声明的元素使用哪些数据类型，它们均执行相同的逻辑。  
   
- 例如，你可能想创建并使用一个处理特定数据类型（例如 `String`）的队列类。 您可以声明这样的类从<xref:System.Collections.Generic.Queue%601?displayProperty=nameWithType>，如下面的示例所示。  
+ 例如，你可能想创建并使用一个处理特定数据类型（例如 `String`）的队列类。 可以通过 <xref:System.Collections.Generic.Queue%601?displayProperty=nameWithType>声明这样的类，如下例所示。  
   
  [!code-vb[VbVbalrDataTypes#1](../../../../visual-basic/language-reference/data-types/codesnippet/VisualBasic/generic-types_1.vb)]  
   
  现在，可以使用 `stringQ` 来专门处理 `String` 值。 由于 `stringQ` 专用于 `String` 而未针对 `Object` 值进行泛型化，因此，不会有晚期绑定或类型转换。 从而节省了执行时间并减少了运行时错误。  
   
- 有关使用泛型类型的更多信息，请参阅 [How to: Use a Generic Class](../../../../visual-basic/programming-guide/language-features/data-types/how-to-use-a-generic-class.md)。  
+ 使用泛型类型的详细信息，请参阅[如何：使用泛型类](../../../../visual-basic/programming-guide/language-features/data-types/how-to-use-a-generic-class.md)。  
   
 ## <a name="example-of-a-generic-class"></a>泛型类的示例。  
  下面的示例演示了泛型类的主干定义。  
@@ -74,10 +74,10 @@ ms.locfileid: "48266571"
   
  [!code-vb[VbVbalrDataTypes#4](../../../../visual-basic/language-reference/data-types/codesnippet/VisualBasic/generic-types_4.vb)]  
   
- 有关更完整的示例，请参阅[如何： 对不同数据类型定义类，可以提供相同的功能](../../../../visual-basic/programming-guide/language-features/data-types/how-to-define-a-class-that-can-provide-identical-functionality.md)。  
+ 有关更完整的示例，请参阅[如何：定义一个类，可对不同数据类型提供相同功能](../../../../visual-basic/programming-guide/language-features/data-types/how-to-define-a-class-that-can-provide-identical-functionality.md)。  
   
 ## <a name="eligible-programming-elements"></a>合格的编程元素  
- 你可以定义并使用泛型类、结构、接口、过程和委托。 请注意， [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 定义了几个代表常用泛型元素的泛型类、结构和接口。 <xref:System.Collections.Generic?displayProperty=nameWithType>命名空间提供字典、 列表、 队列和堆栈。 在定义您自己的泛型元素之前, 查看它是否已推出<xref:System.Collections.Generic?displayProperty=nameWithType>。  
+ 你可以定义并使用泛型类、结构、接口、过程和委托。 请注意， [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 定义了几个代表常用泛型元素的泛型类、结构和接口。 <xref:System.Collections.Generic?displayProperty=nameWithType> 命名空间提供字典、列表、队列和堆栈。 在定义自己的泛型元素之前，请查看 <xref:System.Collections.Generic?displayProperty=nameWithType>中是否已提供了此元素。  
   
  过程不是类型，但可以定义并使用泛型过程。 请参阅 [Generic Procedures in Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/generic-procedures.md)。  
   
@@ -149,14 +149,14 @@ ms.locfileid: "48266571"
   
 ## <a name="see-also"></a>请参阅
 
-- [数据类型](../../../../visual-basic/programming-guide/language-features/data-types/index.md)  
-- [类型字符](../../../../visual-basic/programming-guide/language-features/data-types/type-characters.md)  
-- [值类型和引用类型](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)  
-- [在 Visual Basic 中的类型转换](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)  
-- [数据类型疑难解答](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)  
-- [数据类型](../../../../visual-basic/language-reference/data-types/index.md)  
-- [Of](../../../../visual-basic/language-reference/statements/of-clause.md)  
-- [As](../../../../visual-basic/language-reference/statements/as-clause.md)  
-- [Object 数据类型](../../../../visual-basic/language-reference/data-types/object-data-type.md)  
-- [协变和逆变](../../concepts/covariance-contravariance/index.md)  
+- [数据类型](../../../../visual-basic/programming-guide/language-features/data-types/index.md)
+- [类型字符](../../../../visual-basic/programming-guide/language-features/data-types/type-characters.md)
+- [值类型和引用类型](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)
+- [在 Visual Basic 中的类型转换](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)
+- [数据类型疑难解答](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)
+- [数据类型](../../../../visual-basic/language-reference/data-types/index.md)
+- [Of](../../../../visual-basic/language-reference/statements/of-clause.md)
+- [As](../../../../visual-basic/language-reference/statements/as-clause.md)
+- [Object 数据类型](../../../../visual-basic/language-reference/data-types/object-data-type.md)
+- [协变和逆变](../../concepts/covariance-contravariance/index.md)
 - [迭代器](../../../../visual-basic/programming-guide/concepts/iterators.md)

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: dc79277c75118b11766e66137284bd5655eed091
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 77bd3bc239d0101f02cd515b0ec2a8bec3372882
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33405367"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54596899"
 ---
 # <a name="iclrdatatargetrequest-method"></a>ICLRDataTarget::Request 方法
 调用由公共语言运行时 (CLR) 数据访问服务以请求操作，如由实现定义。  
@@ -46,30 +46,30 @@ HRESULT Request (
  [in]用户定义。  
   
  `inBufferSize`  
- [in]输入缓冲区，用于传入请求的大小。  
+ [in]用于传入请求的输入缓冲区的大小。  
   
  `inBuffer`  
  [in]包含请求的缓冲区。  
   
  `outBufferSize`  
- [in]输出缓冲区，用于响应的大小。  
+ [in]用于响应的输出缓冲区的大小。  
   
  `outBuffer`  
  [out]包含响应的缓冲区。  
   
 ## <a name="remarks"></a>备注  
- `Request`方法方便了添加的未指定自定义操作。 也就是说，此方法还提供扩展性而无需的接口定义的修订版本。  
+ `Request`方法方便了添加的未指定自定义操作。 也就是说，此方法提供可扩展性而不需要的接口定义的修订版本。  
   
  此方法由调试应用程序的编写器实现。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** ClrData.idl、 ClrData.h  
+ **标头：** ClrData.idl, ClrData.h  
   
  **库：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>请参阅  
- [ICLRDataTarget 接口](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-interface.md)
+## <a name="see-also"></a>请参阅
+- [ICLRDataTarget 接口](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-interface.md)

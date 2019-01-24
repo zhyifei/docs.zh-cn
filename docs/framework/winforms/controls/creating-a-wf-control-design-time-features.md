@@ -10,12 +10,12 @@ helpviewer_keywords:
 - DocumentDesigner class [Windows Forms]
 - walkthroughs [Windows Forms], controls
 ms.assetid: 6f487c59-cb38-4afa-ad2e-95edacb1d626
-ms.openlocfilehash: cb102ec9b3a7eb4673f42c2ca5ad876e049ff59c
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 8c5ab9ac832ebf98584273bb8c4a7de12b3b8085
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54146272"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54595274"
 ---
 # <a name="walkthrough-creating-a-windows-forms-control-that-takes-advantage-of-visual-studio-design-time-features"></a>演练：创建利用 Visual Studio 设计时功能的 Windows 窗体控件
 可以通过创作的关联的自定义设计器增强自定义控件的设计时体验。  
@@ -84,11 +84,11 @@ ms.locfileid: "54146272"
   
 1.  向解决方案添加 Windows 窗体控件库项目。 命名项目"MarqueeControlLibrary。"  
   
-2.  使用**解决方案资源管理器**，通过删除源文件，具体取决于你选择的语言中名为"UserControl1.cs"或"UserControl1.vb"来删除项目的默认控件。 有关更多信息，请参见[如何：移除、 删除和排除项](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/0ebzhwsk(v=vs.100))。  
+2.  使用**解决方案资源管理器**，通过删除源文件，具体取决于你选择的语言中名为"UserControl1.cs"或"UserControl1.vb"来删除项目的默认控件。 有关详细信息，请参阅[如何：移除、 删除和排除项](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/0ebzhwsk(v=vs.100))。  
   
 3.  添加一个新<xref:System.Windows.Forms.UserControl>项`MarqueeControlLibrary`项目。 新的源文件基名称指定为"MarqueeControl。"  
   
-4.  使用**解决方案资源管理器**，创建一个新文件夹中的`MarqueeControlLibrary`项目。 有关更多信息，请参见[如何：添加新项目项](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/w0572c5b(v=vs.100))。 将新文件夹命名为"设计"。  
+4.  使用**解决方案资源管理器**，创建一个新文件夹中的`MarqueeControlLibrary`项目。 有关详细信息，请参阅[如何：添加新项目项](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/w0572c5b(v=vs.100))。 将新文件夹命名为"设计"。  
   
 5.  右键单击**设计**文件夹并添加新类。 源文件基名称指定为"MarqueeControlRootDesigner。"  
   
@@ -476,7 +476,7 @@ using MarqueeControlLibrary;
      [!code-vb[System.Windows.Forms.Design.DocumentDesigner#590](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/VB/marqueecontrolrootdesigner.vb#590)]  
   
 ## <a name="creating-a-custom-uitypeeditor"></a>创建自定义 UITypeEditor  
- 时创建用户提供自定义设计时体验，它通常是需要创建与属性窗口的自定义式交互。 您可以完成此操作通过创建<xref:System.Drawing.Design.UITypeEditor>。 有关更多信息，请参见[如何：创建 UI 类型编辑器](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/fd3kt7d5(v=vs.120))。  
+ 时创建用户提供自定义设计时体验，它通常是需要创建与属性窗口的自定义式交互。 您可以完成此操作通过创建<xref:System.Drawing.Design.UITypeEditor>。 有关详细信息，请参阅[如何：创建 UI 类型编辑器](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/fd3kt7d5(v=vs.120))。  
   
  `MarqueeBorder`控件公开多个属性在属性窗口中的。 这些属性的两个`MarqueeSpinDirection`和`MarqueeLightShape`枚举表示。 举例说明的 UI 类型编辑器，使用`MarqueeLightShape`属性将具有一个关联<xref:System.Drawing.Design.UITypeEditor>类。  
   
@@ -583,7 +583,7 @@ private IWindowsFormsEditorService editorService;
   
 6.  右键单击`DemoMarqueeControl`并从快捷菜单选择**运行测试**选项来启动动画。 单击**停止测试**停止动画。  
   
-7.  打开**Form1**在设计视图中。  
+7.  在设计视图中打开“Form1”。  
   
 8.  放置两个<xref:System.Windows.Forms.Button>窗体控件。 命名它们`startButton`和`stopButton`，并将更改<xref:System.Windows.Forms.Control.Text%2A>属性值复制到**启动**并**停止**分别。  
   
@@ -628,7 +628,7 @@ private void stopButton_Click(object sender, System.EventArgs e)
   
 -   进一步自定义设计时体验。 您可以尝试隐藏更多属性比<xref:System.Windows.Forms.Control.Enabled%2A>和<xref:System.Windows.Forms.Control.Visible%2A>，可以添加新属性。 添加新的设计器谓词来简化常见任务，例如停靠子控件。  
   
--   许可证`MarqueeControl`。 有关更多信息，请参见[如何：授予组件和控件许可](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/fe8b1eh9(v=vs.120))。  
+-   许可证`MarqueeControl`。 有关详细信息，请参阅[如何：授予组件和控件许可](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/fe8b1eh9(v=vs.120))。  
   
 -   控制如何序列化您的控件以及如何为其生成代码。 有关详细信息，请参阅[动态源代码生成和编译](../../../../docs/framework/reflection-and-codedom/dynamic-source-code-generation-and-compilation.md)。  
   
@@ -638,9 +638,9 @@ private void stopButton_Click(object sender, System.EventArgs e)
 - <xref:System.Windows.Forms.Design.ParentControlDesigner>
 - <xref:System.Windows.Forms.Design.DocumentDesigner>
 - <xref:System.ComponentModel.Design.IRootDesigner>
-- <xref:System.ComponentModel.Design.DesignerVerb> 
+- <xref:System.ComponentModel.Design.DesignerVerb>
 - <xref:System.Drawing.Design.UITypeEditor>
 - <xref:System.ComponentModel.BackgroundWorker>
 - [如何：创建利用设计时功能的 Windows 窗体控件](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/307hck25(v=vs.120))
-- [扩展设计时支持](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/37899azc(v=vs.120)) 
+- [扩展设计时支持](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/37899azc(v=vs.120))
 - [自定义设计器](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/h51z5c0x(v=vs.120))

@@ -2,19 +2,19 @@
 title: '&lt;client&gt; 的 &lt;endpoint&gt;'
 ms.date: 03/30/2017
 ms.assetid: de6238ae-bbf8-48e9-a1b5-e24c0bea8afa
-ms.openlocfilehash: 47b3599ed2d0868fcbc4a04a28936bcfe1c9c3f1
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: a7d95ee819c911d80178e38a37aeaccc5b1f1764
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54147000"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54598300"
 ---
 # <a name="ltendpointgt-of-ltclientgt"></a>&lt;client&gt; 的 &lt;endpoint&gt;
 指定通道终结点的协定、绑定和地址属性，客户端使用通道终结点与服务器上的服务终结点连接。  
   
  \<system.ServiceModel>  
-\<客户端 >  
-\<终结点 >  
+\<client>  
+\<endpoint>  
   
 ## <a name="syntax"></a>语法  
   
@@ -51,13 +51,13 @@ ms.locfileid: "54147000"
 |元素|描述|  
 |-------------|-----------------|  
 |[\<headers>](../../../../../docs/framework/configure-apps/file-schema/wcf/headers.md)|一个地址标头集合。|  
-|[\<标识 >](../../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)|一个标识，与某个终结点交换消息的其他终结点可以使用该标识对该终结点进行身份验证。|  
+|[\<identity>](../../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)|一个标识，与某个终结点交换消息的其他终结点可以使用该标识对该终结点进行身份验证。|  
   
 ### <a name="parent-elements"></a>父元素  
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<客户端 >](../../../../../docs/framework/configure-apps/file-schema/wcf/client.md)|一个配置节，定义客户端可以连接的终结点的列表。|  
+|[\<client>](../../../../../docs/framework/configure-apps/file-schema/wcf/client.md)|一个配置节，定义客户端可以连接的终结点的列表。|  
   
 ## <a name="example"></a>示例  
  这是通道终结点配置的一个示例。  
@@ -71,11 +71,11 @@ ms.locfileid: "54147000"
 </endpoint>
 ```  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.ServiceModel.Configuration.ChannelEndpointElement>  
- <xref:System.ServiceModel.Configuration.ClientSection>  
- <xref:System.ServiceModel.Configuration.ChannelEndpointElementCollection>  
- <xref:System.ServiceModel.Configuration.ClientSection.Endpoints%2A>  
- <xref:System.ServiceModel.Configuration.ChannelEndpointElement>  
- [WCF 客户端配置](../../../../../docs/framework/wcf/feature-details/client-configuration.md)  
- [客户端](../../../../../docs/framework/wcf/feature-details/clients.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.ServiceModel.Configuration.ChannelEndpointElement>
+- <xref:System.ServiceModel.Configuration.ClientSection>
+- <xref:System.ServiceModel.Configuration.ChannelEndpointElementCollection>
+- <xref:System.ServiceModel.Configuration.ClientSection.Endpoints%2A>
+- <xref:System.ServiceModel.Configuration.ChannelEndpointElement>
+- [WCF 客户端配置](../../../../../docs/framework/wcf/feature-details/client-configuration.md)
+- [客户端](../../../../../docs/framework/wcf/feature-details/clients.md)

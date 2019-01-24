@@ -12,12 +12,12 @@ helpviewer_keywords:
 - Transforms [WPF], about Transforms
 - FrameworkElement objects [WPF], scaling
 ms.assetid: 8f153d5e-ed61-4aa5-a7cd-286f0c427a13
-ms.openlocfilehash: 4fd846502fd348222bc1da1c8746f037e9f237fe
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 9e28f95b58481a5cb7b2fbf92fd20545a3f0fdc5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43864571"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54503113"
 ---
 # <a name="transforms-overview"></a>变换概述
 本主题介绍如何使用[!INCLUDE[TLA#tla_2d](../../../../includes/tlasharptla-2d-md.md)]<xref:System.Windows.Media.Transform>类来旋转、 缩放、 移动 （转换） 和倾斜<xref:System.Windows.FrameworkElement>对象。  
@@ -36,9 +36,9 @@ ms.locfileid: "43864571"
   
 ||||  
 |-|-|-|  
-|<xref:System.Windows.Media.Matrix.M11%2A><br /><br /> 默认值：1.0|<xref:System.Windows.Media.Matrix.M12%2A><br /><br /> 默认值：0.0|0.0|  
-|<xref:System.Windows.Media.Matrix.M21%2A><br /><br /> 默认值：0.0|<xref:System.Windows.Media.Matrix.M22%2A><br /><br /> 默认值：1.0|0.0|  
-|<xref:System.Windows.Media.Matrix.OffsetX%2A><br /><br /> 默认值：0.0|<xref:System.Windows.Media.Matrix.OffsetY%2A><br /><br /> 默认值：0.0|1.0|  
+|<xref:System.Windows.Media.Matrix.M11%2A><br /><br /> 默认：1.0|<xref:System.Windows.Media.Matrix.M12%2A><br /><br /> 默认：0.0|0.0|  
+|<xref:System.Windows.Media.Matrix.M21%2A><br /><br /> 默认：0.0|<xref:System.Windows.Media.Matrix.M22%2A><br /><br /> 默认：1.0|0.0|  
+|<xref:System.Windows.Media.Matrix.OffsetX%2A><br /><br /> 默认：0.0|<xref:System.Windows.Media.Matrix.OffsetY%2A><br /><br /> 默认：0.0|1.0|  
   
  通过操作矩阵值，可以旋转、缩放、倾斜和移动（转换）对象。 例如，如果更改第三行的第一列中的值 (<xref:System.Windows.Media.Matrix.OffsetX%2A>值) 为 100，可用它来将移动沿 x 轴对象 100 单位。 如果将第二行第二列中的值更改为 3，可使用它来将对象的当前高度拉伸三倍。 如果同时更改这两个值，将使对象沿 x 轴移动 100 个单位，并将其高度拉伸 3 倍。 因为 Windows Presentation Foundation (WPF) 仅支持仿射转换，右侧的列中的值始终是 0，0，1。  
   
@@ -70,17 +70,17 @@ ms.locfileid: "43864571"
   
 |类型|转换属性|  
 |----------|-------------------------------|  
-|<xref:System.Windows.Media.Brush>|<xref:System.Windows.Media.Brush.Transform%2A>, <xref:System.Windows.Media.Brush.RelativeTransform%2A>|  
+|<xref:System.Windows.Media.Brush>|<xref:System.Windows.Media.Brush.Transform%2A>， <xref:System.Windows.Media.Brush.RelativeTransform%2A>|  
 |<xref:System.Windows.Media.ContainerVisual>|<xref:System.Windows.Media.ContainerVisual.Transform%2A>|  
 |<xref:System.Windows.Media.DrawingGroup>|<xref:System.Windows.Media.DrawingGroup.Transform%2A>|  
-|<xref:System.Windows.FrameworkElement>|<xref:System.Windows.UIElement.RenderTransform%2A>, <xref:System.Windows.FrameworkElement.LayoutTransform%2A>|  
+|<xref:System.Windows.FrameworkElement>|<xref:System.Windows.UIElement.RenderTransform%2A>， <xref:System.Windows.FrameworkElement.LayoutTransform%2A>|  
 |<xref:System.Windows.Media.Geometry>|<xref:System.Windows.Media.Geometry.Transform%2A>|  
 |<xref:System.Windows.Media.TextEffect>|<xref:System.Windows.Media.TextEffect.Transform%2A>|  
 |<xref:System.Windows.UIElement>|<xref:System.Windows.UIElement.RenderTransform%2A>|  
   
 <a name="transformcenter"></a>   
 ## <a name="transformations-and-coordinate-systems"></a>转换和坐标系  
- 转换对象时，不只是转换对象，还会转换该对象所在的坐标空间。 默认情况下，转换基于目标对象坐标系的原点 (0,0) 居中。 唯一的例外是<xref:System.Windows.Media.TranslateTransform>;<xref:System.Windows.Media.TranslateTransform>没有中心属性可供设置，因为转换效果无论是相同的居中位置。  
+ 转换对象时，不只是转换对象，还会转换该对象所在的坐标空间。 默认情况下，转换以在目标对象的坐标系统的原点为中心：(0,0). 唯一的例外是<xref:System.Windows.Media.TranslateTransform>;<xref:System.Windows.Media.TranslateTransform>没有中心属性可供设置，因为转换效果无论是相同的居中位置。  
   
  下面的示例使用<xref:System.Windows.Media.RotateTransform>旋转<xref:System.Windows.Shapes.Rectangle>元素中，一种类型的<xref:System.Windows.FrameworkElement>，旋转 45 度围绕默认中心 （0，0）。 下图显示了旋转效果。  
   
@@ -111,7 +111,7 @@ ms.locfileid: "43864571"
  有关 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 中布局的其他信息，请参阅[布局](../../../../docs/framework/wpf/advanced/layout.md)概述。  
   
 <a name="exampleRotateAnElement45degSection"></a>   
-## <a name="example-rotate-a-frameworkelement-45-degrees"></a>示例：将 FrameworkElement 旋转 45 度  
+## <a name="example-rotate-a-frameworkelement-45-degrees"></a>示例:将 FrameworkElement 旋转 45 度  
  下面的示例使用<xref:System.Windows.Media.RotateTransform>若要将按钮顺时针旋转 45 度。 按钮包含在<xref:System.Windows.Controls.StackPanel>，有两个其他按钮。  
   
  默认情况下，<xref:System.Windows.Media.RotateTransform>将围绕点 （0，0） 旋转。 由于示例未指定中心点值，按钮将围绕点 (0, 0) 旋转，即其左上角。 <xref:System.Windows.Media.RotateTransform>应用于<xref:System.Windows.UIElement.RenderTransform%2A>属性。 下图显示转换的结果。  
@@ -149,8 +149,8 @@ ms.locfileid: "43864571"
 ## <a name="freezable-features"></a>Freezable 功能  
  因为它继承自<xref:System.Windows.Freezable>类，<xref:System.Windows.Media.Transform>类提供多种特殊功能：<xref:System.Windows.Media.Transform>对象可声明为[资源](../../../../docs/framework/wpf/advanced/xaml-resources.md)、 在多个对象，变为只读以提高共享性能、 克隆以及变为线程安全。 有关由提供的不同功能的详细信息<xref:System.Windows.Freezable>对象，请参阅[Freezable 对象概述](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md)。  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Windows.Media.Transform>  
- <xref:System.Windows.Media.Matrix>  
- [帮助主题](../../../../docs/framework/wpf/graphics-multimedia/transformations-how-to-topics.md)  
- [2D 转换示例](https://go.microsoft.com/fwlink/?LinkID=158252)
+## <a name="see-also"></a>请参阅
+- <xref:System.Windows.Media.Transform>
+- <xref:System.Windows.Media.Matrix>
+- [帮助主题](../../../../docs/framework/wpf/graphics-multimedia/transformations-how-to-topics.md)
+- [2D 转换示例](https://go.microsoft.com/fwlink/?LinkID=158252)
