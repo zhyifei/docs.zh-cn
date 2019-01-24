@@ -1,5 +1,5 @@
 ---
-title: 如何：在运行时在控件集合中进行添加或移除
+title: 如何：添加或删除从控件集合在运行时
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,28 +12,28 @@ helpviewer_keywords:
 - run time [Windows Forms], adding controls
 - controls [Windows Forms], removing using collections
 ms.assetid: 771bf895-3d5f-469b-a324-3528f343657e
-ms.openlocfilehash: cd903558fdb0e01b5ba55e0007fc78315408fa13
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 88a743cc6d0a1e90d2912c9ec610fae326ff5770
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33525991"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54744903"
 ---
-# <a name="how-to-add-to-or-remove-from-a-collection-of-controls-at-run-time"></a><span data-ttu-id="b192e-102">如何：在运行时在控件集合中进行添加或移除</span><span class="sxs-lookup"><span data-stu-id="b192e-102">How to: Add to or Remove from a Collection of Controls at Run Time</span></span>
-<span data-ttu-id="b192e-103">应用程序开发中的常见任务是将控件添加到和从窗体上任何容器控件中删除控件 (如<xref:System.Windows.Forms.Panel>或<xref:System.Windows.Forms.GroupBox>控件或甚至窗体本身)。</span><span class="sxs-lookup"><span data-stu-id="b192e-103">Common tasks in application development are adding controls to and removing controls from any container control on your forms (such as the <xref:System.Windows.Forms.Panel> or <xref:System.Windows.Forms.GroupBox> control, or even the form itself).</span></span> <span data-ttu-id="b192e-104">在设计时，可直接将控件拖到面板或分组框上。</span><span class="sxs-lookup"><span data-stu-id="b192e-104">At design time, controls can be dragged directly onto a panel or group box.</span></span> <span data-ttu-id="b192e-105">在运行时，这些控件维护一个 `Controls` 集合，该集合会跟踪集合中放置了哪些控件。</span><span class="sxs-lookup"><span data-stu-id="b192e-105">At run time, these controls maintain a `Controls` collection, which keeps track of what controls are placed on them.</span></span>  
+# <a name="how-to-add-to-or-remove-from-a-collection-of-controls-at-run-time"></a><span data-ttu-id="2762c-102">如何：添加或删除从控件集合在运行时</span><span class="sxs-lookup"><span data-stu-id="2762c-102">How to: Add to or Remove from a Collection of Controls at Run Time</span></span>
+<span data-ttu-id="2762c-103">应用程序开发中的常见任务是添加到控件和窗体上任何容器控件中移除控件 (如<xref:System.Windows.Forms.Panel>或<xref:System.Windows.Forms.GroupBox>控件或甚至窗体本身)。</span><span class="sxs-lookup"><span data-stu-id="2762c-103">Common tasks in application development are adding controls to and removing controls from any container control on your forms (such as the <xref:System.Windows.Forms.Panel> or <xref:System.Windows.Forms.GroupBox> control, or even the form itself).</span></span> <span data-ttu-id="2762c-104">在设计时，可直接将控件拖到面板或分组框上。</span><span class="sxs-lookup"><span data-stu-id="2762c-104">At design time, controls can be dragged directly onto a panel or group box.</span></span> <span data-ttu-id="2762c-105">在运行时，这些控件维护一个 `Controls` 集合，该集合会跟踪集合中放置了哪些控件。</span><span class="sxs-lookup"><span data-stu-id="2762c-105">At run time, these controls maintain a `Controls` collection, which keeps track of what controls are placed on them.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="b192e-106">以下代码示例适用于其中维护了一个控件集合的任何控件。</span><span class="sxs-lookup"><span data-stu-id="b192e-106">The following code example applies to any control that maintains a collection of controls within it.</span></span>  
+>  <span data-ttu-id="2762c-106">以下代码示例适用于其中维护了一个控件集合的任何控件。</span><span class="sxs-lookup"><span data-stu-id="2762c-106">The following code example applies to any control that maintains a collection of controls within it.</span></span>  
   
-### <a name="to-add-a-control-to-a-collection-programmatically"></a><span data-ttu-id="b192e-107">以编程方式向集合添加控件</span><span class="sxs-lookup"><span data-stu-id="b192e-107">To add a control to a collection programmatically</span></span>  
+### <a name="to-add-a-control-to-a-collection-programmatically"></a><span data-ttu-id="2762c-107">以编程方式向集合添加控件</span><span class="sxs-lookup"><span data-stu-id="2762c-107">To add a control to a collection programmatically</span></span>  
   
-1.  <span data-ttu-id="b192e-108">创建要添加的控件实例。</span><span class="sxs-lookup"><span data-stu-id="b192e-108">Create an instance of the control to be added.</span></span>  
+1.  <span data-ttu-id="2762c-108">创建要添加的控件实例。</span><span class="sxs-lookup"><span data-stu-id="2762c-108">Create an instance of the control to be added.</span></span>  
   
-2.  <span data-ttu-id="b192e-109">设置新控件的属性。</span><span class="sxs-lookup"><span data-stu-id="b192e-109">Set properties of the new control.</span></span>  
+2.  <span data-ttu-id="2762c-109">设置新控件的属性。</span><span class="sxs-lookup"><span data-stu-id="2762c-109">Set properties of the new control.</span></span>  
   
-3.  <span data-ttu-id="b192e-110">将控件添加到父控件的 `Controls` 集合。</span><span class="sxs-lookup"><span data-stu-id="b192e-110">Add the control to the `Controls` collection of the parent control.</span></span>  
+3.  <span data-ttu-id="2762c-110">将控件添加到父控件的 `Controls` 集合。</span><span class="sxs-lookup"><span data-stu-id="2762c-110">Add the control to the `Controls` collection of the parent control.</span></span>  
   
-     <span data-ttu-id="b192e-111">下面的代码示例演示如何创建的实例<xref:System.Windows.Forms.Button>控件。</span><span class="sxs-lookup"><span data-stu-id="b192e-111">The following code example shows how to create an instance of the <xref:System.Windows.Forms.Button> control.</span></span> <span data-ttu-id="b192e-112">它需要的窗体具有<xref:System.Windows.Forms.Panel>控制的和要创建的按钮的事件处理方法， `NewPanelButton_Click`，已存在。</span><span class="sxs-lookup"><span data-stu-id="b192e-112">It requires a form with a <xref:System.Windows.Forms.Panel> control and that the event-handling method for the button being created, `NewPanelButton_Click`, already exists.</span></span>  
+     <span data-ttu-id="2762c-111">下面的代码示例演示如何创建的实例<xref:System.Windows.Forms.Button>控件。</span><span class="sxs-lookup"><span data-stu-id="2762c-111">The following code example shows how to create an instance of the <xref:System.Windows.Forms.Button> control.</span></span> <span data-ttu-id="2762c-112">它需要一个具有窗体<xref:System.Windows.Forms.Panel>控制的和要创建的按钮的事件处理方法， `NewPanelButton_Click`，已存在。</span><span class="sxs-lookup"><span data-stu-id="2762c-112">It requires a form with a <xref:System.Windows.Forms.Panel> control and that the event-handling method for the button being created, `NewPanelButton_Click`, already exists.</span></span>  
   
     ```vb  
     Public NewPanelButton As New Button()  
@@ -64,13 +64,13 @@ ms.locfileid: "33525991"
     }  
     ```  
   
-### <a name="to-remove-controls-from-a-collection-programmatically"></a><span data-ttu-id="b192e-113">以编程方式从集合移除控件</span><span class="sxs-lookup"><span data-stu-id="b192e-113">To remove controls from a collection programmatically</span></span>  
+### <a name="to-remove-controls-from-a-collection-programmatically"></a><span data-ttu-id="2762c-113">以编程方式从集合移除控件</span><span class="sxs-lookup"><span data-stu-id="2762c-113">To remove controls from a collection programmatically</span></span>  
   
-1.  <span data-ttu-id="b192e-114">从事件中移除事件处理程序。</span><span class="sxs-lookup"><span data-stu-id="b192e-114">Remove the event handler from the event.</span></span> <span data-ttu-id="b192e-115">在 Visual Basic 中，使用[RemoveHandler 语句](~/docs/visual-basic/language-reference/statements/removehandler-statement.md)关键字; 在 Visual C# 中，使用[-= 运算符 （C# 参考）](~/docs/csharp/language-reference/operators/subtraction-assignment-operator.md)。</span><span class="sxs-lookup"><span data-stu-id="b192e-115">In Visual Basic, use the [RemoveHandler Statement](~/docs/visual-basic/language-reference/statements/removehandler-statement.md) keyword; in Visual C#, use the [-= Operator (C# Reference)](~/docs/csharp/language-reference/operators/subtraction-assignment-operator.md).</span></span>  
+1.  <span data-ttu-id="2762c-114">从事件中移除事件处理程序。</span><span class="sxs-lookup"><span data-stu-id="2762c-114">Remove the event handler from the event.</span></span> <span data-ttu-id="2762c-115">在 Visual Basic 中，使用[RemoveHandler 语句](~/docs/visual-basic/language-reference/statements/removehandler-statement.md)关键字; 在视觉对象中C#，使用[-= 运算符 (C#引用)](~/docs/csharp/language-reference/operators/subtraction-assignment-operator.md)。</span><span class="sxs-lookup"><span data-stu-id="2762c-115">In Visual Basic, use the [RemoveHandler Statement](~/docs/visual-basic/language-reference/statements/removehandler-statement.md) keyword; in Visual C#, use the [-= Operator (C# Reference)](~/docs/csharp/language-reference/operators/subtraction-assignment-operator.md).</span></span>  
   
-2.  <span data-ttu-id="b192e-116">使用 `Remove` 方法，从面板的 `Controls` 集合中删除所需控件。</span><span class="sxs-lookup"><span data-stu-id="b192e-116">Use the `Remove` method to delete the desired control from the panel's `Controls` collection.</span></span>  
+2.  <span data-ttu-id="2762c-116">使用 `Remove` 方法，从面板的 `Controls` 集合中删除所需控件。</span><span class="sxs-lookup"><span data-stu-id="2762c-116">Use the `Remove` method to delete the desired control from the panel's `Controls` collection.</span></span>  
   
-3.  <span data-ttu-id="b192e-117">调用<xref:System.Windows.Forms.Control.Dispose%2A>方法来释放控件使用的所有资源。</span><span class="sxs-lookup"><span data-stu-id="b192e-117">Call the <xref:System.Windows.Forms.Control.Dispose%2A> method to release all the resources used by the control.</span></span>  
+3.  <span data-ttu-id="2762c-117">调用<xref:System.Windows.Forms.Control.Dispose%2A>方法来释放控件使用的所有资源。</span><span class="sxs-lookup"><span data-stu-id="2762c-117">Call the <xref:System.Windows.Forms.Control.Dispose%2A> method to release all the resources used by the control.</span></span>  
   
     ```vb  
     Public Sub RemoveControl()  
@@ -100,6 +100,6 @@ ms.locfileid: "33525991"
     }  
     ```  
   
-## <a name="see-also"></a><span data-ttu-id="b192e-118">请参阅</span><span class="sxs-lookup"><span data-stu-id="b192e-118">See Also</span></span>  
- <xref:System.Windows.Forms.Panel>  
- [<span data-ttu-id="b192e-119">Panel 控件</span><span class="sxs-lookup"><span data-stu-id="b192e-119">Panel Control</span></span>](../../../../docs/framework/winforms/controls/panel-control-windows-forms.md)
+## <a name="see-also"></a><span data-ttu-id="2762c-118">请参阅</span><span class="sxs-lookup"><span data-stu-id="2762c-118">See also</span></span>
+- <xref:System.Windows.Forms.Panel>
+- [<span data-ttu-id="2762c-119">Panel 控件</span><span class="sxs-lookup"><span data-stu-id="2762c-119">Panel Control</span></span>](../../../../docs/framework/winforms/controls/panel-control-windows-forms.md)
