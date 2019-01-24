@@ -9,15 +9,15 @@ helpviewer_keywords:
 - properties [Visual Basic], auto-implemented
 - auto-implemented properties [Visual Basic]
 ms.assetid: 5c669f0b-cf95-4b4e-ae84-9cc55212ca87
-ms.openlocfilehash: bc83163a024bd50d3e256b4eb49861669f8c02c3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: fdf5b8bcc53a49b31fa0fb2b71dc2702a4900503
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33656305"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54495456"
 ---
 # <a name="auto-implemented-properties-visual-basic"></a>自动实现的属性 (Visual Basic)
-*自动实现的属性*使你可以快速指定类的属性，而无需编写代码`Get`和`Set`属性。 为自动实现的属性编写代码时，Visual Basic 编译器会自动创建私有字段以存储属性变量，并且会创建关联的 `Get` 和 `Set` 过程。  
+*自动实现的属性*使您能够快速指定类的属性，而无需编写代码以`Get`和`Set`属性。 为自动实现的属性编写代码时，Visual Basic 编译器会自动创建私有字段以存储属性变量，并且会创建关联的 `Get` 和 `Set` 过程。  
   
  使用自动实现的属性，可以在单行中声明一个属性（包括默认值）。 下面的示例演示三个属性声明。  
   
@@ -48,7 +48,7 @@ End Class
  可以使用初始化表达式分配给属性（如示例中所示），也可以在包含类型的构造函数中分配给属性。  可以随时分配给只读属性的支持字段。  
   
 ## <a name="backing-field"></a>支持字段  
- 在声明一个自动实现的属性时，Visual Basic 会自动创建隐藏的私有字段调用*支持字段*包含属性值。 支持字段名是前面带下划线 (_) 的自动实现的属性名。 例如，如果声明一个名为 `ID` 的自动实现的属性，则支持字段名为 `_ID`。 如果包含一个也名为 `_ID` 的类成员，则会形成命名冲突，Visual Basic 会报告编译器错误。  
+ 声明自动实现的属性时，Visual Basic 会自动创建一个名为隐藏的私有字段*支持字段*包含属性值。 支持字段名是前面带下划线 (_) 的自动实现的属性名。 例如，如果声明一个名为 `ID` 的自动实现的属性，则支持字段名为 `_ID`。 如果包含一个也名为 `_ID` 的类成员，则会形成命名冲突，Visual Basic 会报告编译器错误。  
   
  支持字段还具有下列特征：  
   
@@ -74,7 +74,7 @@ End Class
  [!code-vb[VbVbalrAutoImplementedProperties#4](./codesnippet/VisualBasic/auto-implemented-properties_5.vb)]  
   
 ## <a name="property-definitions-that-require-standard-syntax"></a>需要标准语法的属性定义  
- 自动实现的属性十分方便，支持很多编程方案。 但是，有情况下无法使用自动实现的属性，必须改用标准或*展开*，属性语法。  
+ 自动实现的属性十分方便，支持很多编程方案。 但是，有些情况下，不能使用自动实现的属性并必须改为使用标准，或者*展开*，属性语法。  
   
  如果要执行以下任一操作，则必须使用扩展属性定义语法：  
   
@@ -91,12 +91,12 @@ End Class
 -   为支持字段提供 XML 注释。  
   
 ## <a name="expanding-an-auto-implemented-property"></a>扩展自动实现的属性  
- 如果需要将自动实现的属性转换为包含 `Get` 或 `Set` 过程的扩展属性，则 Visual Basic 代码编辑器可以为属性自动生成 `Get` 和 `Set` 过程以及 `End Property` 语句。 如果将光标置于后的空白行上，则生成的代码`Property`语句中，键入一个`G`(有关`Get`) 或`S`(有关`Set`)，然后按 enter 键。 在 `Property` 语句末尾按 Enter 时，Visual Basic 代码编辑器会为只读和只写属性自动生成 `Get` 或 `Set` 过程。  
+ 如果需要将自动实现的属性转换为包含 `Get` 或 `Set` 过程的扩展属性，则 Visual Basic 代码编辑器可以为属性自动生成 `Get` 和 `Set` 过程以及 `End Property` 语句。 如果将光标置于后的空白行上生成的代码`Property`语句中，键入一个`G`(对于`Get`) 或`S`(为`Set`) 并按 ENTER。 在 `Property` 语句末尾按 Enter 时，Visual Basic 代码编辑器会为只读和只写属性自动生成 `Get` 或 `Set` 过程。  
   
-## <a name="see-also"></a>请参阅  
- [如何： 声明和 Visual Basic 中调用默认属性](./how-to-declare-and-call-a-default-property.md)  
- [如何：声明具有混合访问级别的属性](./how-to-declare-a-property-with-mixed-access-levels.md)  
- [Property 语句](../../../../visual-basic/language-reference/statements/property-statement.md)  
- [ReadOnly](../../../../visual-basic/language-reference/modifiers/readonly.md)  
- [WriteOnly](../../../../visual-basic/language-reference/modifiers/writeonly.md)  
- [对象和类](../../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)
+## <a name="see-also"></a>请参阅
+- [如何：声明并在 Visual Basic 中调用默认属性](./how-to-declare-and-call-a-default-property.md)
+- [如何：声明具有混合的访问级别的属性](./how-to-declare-a-property-with-mixed-access-levels.md)
+- [Property 语句](../../../../visual-basic/language-reference/statements/property-statement.md)
+- [ReadOnly](../../../../visual-basic/language-reference/modifiers/readonly.md)
+- [WriteOnly](../../../../visual-basic/language-reference/modifiers/writeonly.md)
+- [对象和类](../../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)

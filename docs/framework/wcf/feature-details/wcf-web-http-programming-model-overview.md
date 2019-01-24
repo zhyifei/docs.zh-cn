@@ -2,12 +2,12 @@
 title: WCF Web HTTP 编程模型概述
 ms.date: 03/30/2017
 ms.assetid: 381fdc3a-6e6c-4890-87fe-91cca6f4b476
-ms.openlocfilehash: 03bfa53ac8e2a6cf7b252a8d0ea4683727134e4a
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 64428eb209d8ab4e708640ed1418765e16b4577a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54152081"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54577732"
 ---
 # <a name="wcf-web-http-programming-model-overview"></a>WCF Web HTTP 编程模型概述
 Windows Communication Foundation (WCF) WEB HTTP 编程模型提供了构建使用 WCF WEB HTTP 服务所需的基本元素。 WCF WEB HTTP 服务旨在最大范围的可能客户端，包括 Web 浏览器访问，并且具有以下独特要求：  
@@ -117,7 +117,7 @@ interface ICustomer
 |<xref:System.Decimal>|使用标准表示法的任何小数（无指数）|  
 |<xref:System.Boolean>|True 或 False（不区分大小写）|  
 |<xref:System.String>|任何字符串（不支持空字符串，且不进行转义）|  
-|<xref:System.DateTime>|MM/DD/YYYY<br /><br /> MM/DD/YYYY HH: MM: [AM&AMP;#124;PM]<br /><br /> 月、日、年<br /><br /> 月日年 hh: mm: [AM&#124;PM]|  
+|<xref:System.DateTime>|MM/DD/YYYY<br /><br /> MM/DD/YYYY HH:MM:SS [AM&#124;PM]<br /><br /> 月、日、年<br /><br /> 月日年 hh: mm: [AM&#124;PM]|  
 |<xref:System.TimeSpan>|DD.HH:MM:SS<br /><br /> 此处，DD = 天、HH = 小时、MM = 分钟、SS = 秒钟|  
 |<xref:System.Guid>|一个 GUID，例如：<br /><br /> 936DA01F-9ABD-4d9d-80C7-02AF85C822A8|  
 |<xref:System.DateTimeOffset>|MM/DD/YYYY HH:MM:SS MM:SS<br /><br /> 此处，DD = 天、HH = 小时、MM = 分钟、SS = 秒钟|  
@@ -143,7 +143,7 @@ interface ICustomer
 ## <a name="troubleshooting-the-wcf-web-http-programming-model"></a>WCF WEB HTTP 编程模型疑难解答  
  当使用 <xref:System.ServiceModel.Channels.ChannelFactoryBase%601> 调用 WCF WEB HTTP 服务以创建通道时，即使将其他 <xref:System.ServiceModel.Description.WebHttpBehavior> 传递给 <xref:System.ServiceModel.EndpointAddress>，<xref:System.ServiceModel.EndpointAddress> 也会使用配置文件中设置的 <xref:System.ServiceModel.Channels.ChannelFactoryBase%601>。  
   
-## <a name="see-also"></a>请参阅  
- [WCF 联合](../../../../docs/framework/wcf/feature-details/wcf-syndication.md)  
- [WCF Web HTTP 编程对象模型](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-object-model.md)  
- [WCF Web HTTP 编程模型](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)
+## <a name="see-also"></a>请参阅
+- [WCF 联合](../../../../docs/framework/wcf/feature-details/wcf-syndication.md)
+- [WCF Web HTTP 编程对象模型](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-object-model.md)
+- [WCF Web HTTP 编程模型](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)

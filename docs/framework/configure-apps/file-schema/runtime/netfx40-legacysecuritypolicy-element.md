@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 07132b9c-4a72-4710-99d7-e702405e02d4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7045623872364160d76f4bc0c1522b0450a81bd2
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: 44120491756d467da94ce1f8557d9f71f70b306e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53611589"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54500322"
 ---
 # <a name="ltnetfx40legacysecuritypolicygt-element"></a>&lt;NetFx40_LegacySecurityPolicy&gt;元素
 指定运行时是否使用旧版代码访问安全性 (CAS) 策略。  
@@ -84,6 +84,6 @@ ms.locfileid: "53611589"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>请参阅  
-- [运行时设置架构](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
+## <a name="see-also"></a>请参阅
+- [运行时设置架构](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
 - [配置文件架构](../../../../../docs/framework/configure-apps/file-schema/index.md)

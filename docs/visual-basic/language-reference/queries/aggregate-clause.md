@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Aggregate statement [Visual Basic]
 - queries [Visual Basic], Aggregate
 ms.assetid: 1315a814-5db6-4077-b34b-b141e11cc0eb
-ms.openlocfilehash: e3ce8ff7da647120e5fd9e3b4cd44cc603eb797d
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: a26ea220a807d3158d6874e2127db9a2f280a10c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43519481"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54547087"
 ---
 # <a name="aggregate-clause-visual-basic"></a>Aggregate 子句 (Visual Basic)
 适用于集合的一个或多个聚合函数。  
@@ -33,11 +33,11 @@ Aggregate element [As type] In collection _
   
 |术语|定义|  
 |---|---|  
-|`element`|必须的。 用于循环访问集合的元素的变量。|  
+|`element`|必需。 用于循环访问集合的元素的变量。|  
 |`type`|可选。 `element` 的类型。 如果指定没有类型，则类型`element`从推断`collection`。|  
-|`collection`|必须的。 表示要操作的集合。|  
+|`collection`|必需。 表示要操作的集合。|  
 |`clause`|可选。 一个或多个查询子句，如`Where`子句，以优化要向其应用聚合子句的查询结果。|  
-|`expressionList`|必须的。 一个或多个以逗号分隔的表达式用于标识要应用于集合的聚合函数。 您可以应用于聚合函数指定为查询结果的成员名称的别名。 如果不提供别名，则使用的聚合函数的名称。 有关示例，请参阅有关本主题后面的聚合函数的部分。|  
+|`expressionList`|必需。 一个或多个以逗号分隔的表达式用于标识要应用于集合的聚合函数。 您可以应用于聚合函数指定为查询结果的成员名称的别名。 如果不提供别名，则使用的聚合函数的名称。 有关示例，请参阅有关本主题后面的聚合函数的部分。|  
   
 ## <a name="remarks"></a>备注  
  `Aggregate`子句可用于在查询中包含聚合函数。 聚合函数对一组值执行检查和计算并返回单个值。 可以通过使用查询结果类型的成员访问计算的值。 可以使用标准聚合函数都`All`， `Any`， `Average`， `Count`， `LongCount`， `Max`， `Min`，和`Sum`函数。 这些函数是熟悉的开发人员熟悉的与 SQL 中的聚合函数。 它们是本主题的以下部分中所述。  
@@ -120,9 +120,9 @@ Aggregate element [As type] In collection _
   
 ## <a name="see-also"></a>请参阅
 
-- [Visual Basic 中的 LINQ 简介](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)  
-- [查询](../../../visual-basic/language-reference/queries/index.md)  
-- [Select 子句](../../../visual-basic/language-reference/queries/select-clause.md)  
-- [From 子句](../../../visual-basic/language-reference/queries/from-clause.md)  
-- [Where 子句](../../../visual-basic/language-reference/queries/where-clause.md)  
+- [Visual Basic 中的 LINQ 简介](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
+- [查询](../../../visual-basic/language-reference/queries/index.md)
+- [Select 子句](../../../visual-basic/language-reference/queries/select-clause.md)
+- [From 子句](../../../visual-basic/language-reference/queries/from-clause.md)
+- [Where 子句](../../../visual-basic/language-reference/queries/where-clause.md)
 - [Group By 子句](../../../visual-basic/language-reference/queries/group-by-clause.md)

@@ -12,15 +12,15 @@ helpviewer_keywords:
 - views [WPF], grouping data
 - sorting data in views [WPF]
 ms.assetid: f4c43578-01b7-4774-a953-acb95a13b94a
-ms.openlocfilehash: 5c79261983fcf6200120bcfbf180d155aca3c3c9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 50e1426f2a220c7d947f7feb9c3ec7e1c4de7643
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33556752"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54522669"
 ---
 # <a name="how-to-sort-data-in-a-view"></a>如何：在视图中对数据进行排序
-本示例介绍如何在视图中对数据进行排序。 
+本示例介绍如何在视图中对数据进行排序。  
   
 ## <a name="example"></a>示例  
  下面的示例创建了一个简单的 <xref:System.Windows.Controls.ListBox> 和一个 <xref:System.Windows.Controls.Button>:  
@@ -36,9 +36,9 @@ ms.locfileid: "33556752"
   
  有关如何在[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]中应用排序逻辑的示例，请参阅[在 XAML 中使用视图对数据进行排序和分组](../../../../docs/framework/wpf/data/how-to-sort-and-group-data-using-a-view-in-xaml.md)。  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Windows.Data.ListCollectionView.CustomSort%2A>  
- [在单击标题时对 GridView 列进行排序](../../../../docs/framework/wpf/controls/how-to-sort-a-gridview-column-when-a-header-is-clicked.md)  
- [数据绑定概述](../../../../docs/framework/wpf/data/data-binding-overview.md)  
- [在视图中筛选数据](../../../../docs/framework/wpf/data/how-to-filter-data-in-a-view.md)  
- [帮助主题](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.Windows.Data.ListCollectionView.CustomSort%2A>
+- [在单击标题时对 GridView 列进行排序](../../../../docs/framework/wpf/controls/how-to-sort-a-gridview-column-when-a-header-is-clicked.md)
+- [数据绑定概述](../../../../docs/framework/wpf/data/data-binding-overview.md)
+- [在视图中筛选数据](../../../../docs/framework/wpf/data/how-to-filter-data-in-a-view.md)
+- [帮助主题](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)
