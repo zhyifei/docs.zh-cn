@@ -2,18 +2,18 @@
 title: '&lt;webHttpEndpoint&gt;'
 ms.date: 03/30/2017
 ms.assetid: ecaaeb6f-ebd0-411d-8b53-92477cd45347
-ms.openlocfilehash: ee14ce23370675782f4c25385c1786fdce11eba0
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: b69ace451e90c824cdf8b911d596fdd158eb3f73
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54151964"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54491714"
 ---
 # <a name="ltwebhttpendpointgt"></a>&lt;webHttpEndpoint&gt;
 此配置元素定义具有固定的标准终结点[ \<webHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/webhttpbinding.md)自动绑定，它将添加[ \<webHttp >](../../../../../docs/framework/configure-apps/file-schema/wcf/webhttp.md)行为。 在编写 REST 服务时，请使用此终结点。  
   
 \<system.ServiceModel>  
-\<standardEndpoints >  
+\<standardEndpoints>  
   
 ## <a name="syntax"></a>语法  
   
@@ -49,8 +49,8 @@ ms.locfileid: "54151964"
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<standardEndpoints >](../../../../../docs/framework/configure-apps/file-schema/wcf/standardendpoints.md)|具有一个或多个固定属性（地址、绑定和协定）的预定义终结点的标准终结点集合。|  
+|[\<standardEndpoints>](../../../../../docs/framework/configure-apps/file-schema/wcf/standardendpoints.md)|具有一个或多个固定属性（地址、绑定和协定）的预定义终结点的标准终结点集合。|  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.ServiceModel.Description.WebHttpEndpoint>  
- <xref:System.ServiceModel.Configuration.WebHttpEndpointElement>
+## <a name="see-also"></a>请参阅
+- <xref:System.ServiceModel.Description.WebHttpEndpoint>
+- <xref:System.ServiceModel.Configuration.WebHttpEndpointElement>

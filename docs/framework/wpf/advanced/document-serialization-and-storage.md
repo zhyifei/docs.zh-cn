@@ -6,12 +6,12 @@ helpviewer_keywords:
 - documents [WPF], storage
 - documents [WPF], serialization
 ms.assetid: 4839cd87-e206-4571-803f-0200098ad37b
-ms.openlocfilehash: 39466eb528003e36bfa05751f83619d86b78a2a7
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 028f7e8f2be2aa0718eebc133ebd9d35717c824d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45988231"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54630848"
 ---
 # <a name="document-serialization-and-storage"></a>文档序列化和存储
 Microsoft.NET Framework 提供了功能强大的环境，用于创建和显示高质量的文档。  增强的功能，支持固定文档和流文档以及高级查看控件，结合功能强大的二维和三维图形功能需要.NET Framework 应用程序到新的质量和用户体验级别。  能够灵活地管理文档的内存中表示形式是.NET Framework 中，一项主要功能并能够高效保存和加载数据存储区中的文档是几乎每个应用程序的需求。  将文档从内部的内存中表示形式转换为外部数据存储的过程称为序列化。  反之，读取数据存储并重新创建原始内存中实例的过程则称为反序列化。  
@@ -73,10 +73,10 @@ Microsoft.NET Framework 提供了功能强大的环境，用于创建和显示�
   
 3.  创建插件序列化程序之后，实现安装脚本以分发和安装（以及卸载）插件（请参阅上面的“[安装插件序列化程序](#InstallingPluginSerializers)”）。  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Windows.Documents.Serialization>  
- <xref:System.Windows.Xps.XpsDocumentWriter>  
- <xref:System.Windows.Xps.Packaging.XpsDocument>  
- [WPF 中的文档](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)  
- [打印概述](../../../../docs/framework/wpf/advanced/printing-overview.md)  
- [XML 纸张规范：概述](https://go.microsoft.com/fwlink?LinkID=106246)
+## <a name="see-also"></a>请参阅
+- <xref:System.Windows.Documents.Serialization>
+- <xref:System.Windows.Xps.XpsDocumentWriter>
+- <xref:System.Windows.Xps.Packaging.XpsDocument>
+- [WPF 中的文档](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)
+- [打印概述](../../../../docs/framework/wpf/advanced/printing-overview.md)
+- [XML 纸张规范：概述](https://go.microsoft.com/fwlink?LinkID=106246)

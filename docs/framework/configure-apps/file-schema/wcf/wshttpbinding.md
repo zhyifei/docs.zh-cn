@@ -4,18 +4,18 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - wsHttpBinding Element
 ms.assetid: 0eee8ced-ad68-427d-b95a-97260e98deed
-ms.openlocfilehash: 05eb8d43e137c8dfc78dc3d7c0b145ce7a4e95ef
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: d60e8990dcc20e99409e5d55fdca11d2dce03c7f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54150937"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54583649"
 ---
 # <a name="ltwshttpbindinggt"></a>&lt;wsHttpBinding&gt;
 定义一个适合于非双工服务约定的安全、可靠且可互操作的绑定。 绑定将实现下列规范：WS 可靠消息传送的可靠性和 Ws-security 的消息安全性和身份验证。 传输协议是 HTTP，消息编码方式是 Text/XML 编码。  
   
  \<system.ServiceModel>  
-\<绑定 >  
+\<bindings>  
 \<wsHttpBinding>  
   
 ## <a name="syntax"></a>语法  
@@ -93,7 +93,7 @@ ms.locfileid: "54150937"
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<绑定 >](../../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)|此元素包含标准绑定和自定义绑定的集合。|  
+|[\<bindings>](../../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)|此元素包含标准绑定和自定义绑定的集合。|  
   
 ## <a name="remarks"></a>备注  
  `WSHttpBinding` 与 `BasicHttpBinding` 相似，但是会提供更多的 Web 服务功能。 与 BasicHttpBinding 一样，它也使用 HTTP 传输并提供消息安全，但它还提供事务、可靠消息传递和 WS-Addressing，这些功能要么在默认情况下已启用，要么通过单一控制设置来提供。  
@@ -136,10 +136,10 @@ ms.locfileid: "54150937"
 </configuration>
 ```  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.ServiceModel.WSHttpBinding>  
- <xref:System.ServiceModel.Configuration.WSHttpBindingElement>  
- [绑定](../../../../../docs/framework/wcf/bindings.md)  
- [配置系统提供的绑定](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [使用绑定配置服务和客户端](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)  
- [\<绑定 >](../../../../../docs/framework/misc/binding.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.ServiceModel.WSHttpBinding>
+- <xref:System.ServiceModel.Configuration.WSHttpBindingElement>
+- [绑定](../../../../../docs/framework/wcf/bindings.md)
+- [配置系统提供的绑定](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)
+- [使用绑定配置服务和客户端](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
+- [\<binding>](../../../../../docs/framework/misc/binding.md)

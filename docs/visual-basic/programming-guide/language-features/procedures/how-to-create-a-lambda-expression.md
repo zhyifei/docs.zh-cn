@@ -1,18 +1,18 @@
 ---
-title: 如何：创建 Lambda 表达式 (Visual Basic)
+title: 如何：创建一个 Lambda 表达式 (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
 - lambda expressions [Visual Basic]
 - expressions [Visual Basic], lambda
 ms.assetid: 3279bd5c-80f7-410a-a7ba-f7085ed36aa5
-ms.openlocfilehash: f437166bc5206b4145d6508aa2131ec94d6eca95
-ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
+ms.openlocfilehash: e7302304fe6c44b0143d7f12ec272d597b313fdd
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "39244886"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54492399"
 ---
-# <a name="how-to-create-a-lambda-expression-visual-basic"></a>如何：创建 Lambda 表达式 (Visual Basic)
+# <a name="how-to-create-a-lambda-expression-visual-basic"></a>如何：创建一个 Lambda 表达式 (Visual Basic)
 一个*lambda 表达式*是函数或不具有名称的子例程。 委托类型有效的任何地方，可以使用 lambda 表达式。  
   
 ### <a name="to-create-a-single-line-lambda-expression-function"></a>若要创建的单行 lambda 表达式函数  
@@ -104,12 +104,12 @@ ms.locfileid: "39244886"
   
  [!code-vb[VbVbalrLambdas#11](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-create-a-lambda-expression_11.vb)]  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Linq.Enumerable>  
- [Lambda 表达式](./lambda-expressions.md)  
- [Function 语句](../../../../visual-basic/language-reference/statements/function-statement.md)  
- [Sub 语句](../../../../visual-basic/language-reference/statements/sub-statement.md)  
- [委托](../../../../visual-basic/programming-guide/language-features/delegates/index.md)  
- [如何：在 Visual Basic 中将过程传递给另一过程](../../../../visual-basic/programming-guide/language-features/delegates/how-to-pass-procedures-to-another-procedure.md)  
- [Delegate 语句](../../../../visual-basic/language-reference/statements/delegate-statement.md)  
- [Visual Basic 中的 LINQ 简介](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.Linq.Enumerable>
+- [Lambda 表达式](./lambda-expressions.md)
+- [Function 语句](../../../../visual-basic/language-reference/statements/function-statement.md)
+- [Sub 语句](../../../../visual-basic/language-reference/statements/sub-statement.md)
+- [委托](../../../../visual-basic/programming-guide/language-features/delegates/index.md)
+- [如何：将过程传递给 Visual Basic 中的另一个过程](../../../../visual-basic/programming-guide/language-features/delegates/how-to-pass-procedures-to-another-procedure.md)
+- [Delegate 语句](../../../../visual-basic/language-reference/statements/delegate-statement.md)
+- [Visual Basic 中的 LINQ 简介](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
