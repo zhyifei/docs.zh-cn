@@ -17,35 +17,35 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: beb0e4d3e22ffc3619a6c5281ab5d72efeda921d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 2fca83d952e139b0f141dcd75362f31c5235644d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33450598"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54678728"
 ---
-# <a name="icorprofilercallbackexceptionsearchcatcherfound-method"></a><span data-ttu-id="0b6e7-102">ICorProfilerCallback::ExceptionSearchCatcherFound 方法</span><span class="sxs-lookup"><span data-stu-id="0b6e7-102">ICorProfilerCallback::ExceptionSearchCatcherFound Method</span></span>
-<span data-ttu-id="0b6e7-103">通知探查器异常处理的搜索阶段已找到的处理程序已引发的异常。</span><span class="sxs-lookup"><span data-stu-id="0b6e7-103">Notifies the profiler that the search phase of exception handling has located a handler for the exception that was thrown.</span></span>  
+# <a name="icorprofilercallbackexceptionsearchcatcherfound-method"></a><span data-ttu-id="41ce5-102">ICorProfilerCallback::ExceptionSearchCatcherFound 方法</span><span class="sxs-lookup"><span data-stu-id="41ce5-102">ICorProfilerCallback::ExceptionSearchCatcherFound Method</span></span>
+<span data-ttu-id="41ce5-103">通知探查器的异常处理的搜索阶段已找到的处理程序引发的异常。</span><span class="sxs-lookup"><span data-stu-id="41ce5-103">Notifies the profiler that the search phase of exception handling has located a handler for the exception that was thrown.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="0b6e7-104">语法</span><span class="sxs-lookup"><span data-stu-id="0b6e7-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="41ce5-104">语法</span><span class="sxs-lookup"><span data-stu-id="41ce5-104">Syntax</span></span>  
   
 ```  
 RESULT ExceptionSearchCatcherFound(  
     [in] FunctionID functionId);  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="0b6e7-105">参数</span><span class="sxs-lookup"><span data-stu-id="0b6e7-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="41ce5-105">参数</span><span class="sxs-lookup"><span data-stu-id="41ce5-105">Parameters</span></span>  
  `functionId`  
- <span data-ttu-id="0b6e7-106">[in]包含异常处理程序函数的 ID。</span><span class="sxs-lookup"><span data-stu-id="0b6e7-106">[in] The ID of the function that contains the exception handler.</span></span>  
+ <span data-ttu-id="41ce5-106">[in]包含异常处理程序函数的 ID。</span><span class="sxs-lookup"><span data-stu-id="41ce5-106">[in] The ID of the function that contains the exception handler.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="0b6e7-107">要求</span><span class="sxs-lookup"><span data-stu-id="0b6e7-107">Requirements</span></span>  
- <span data-ttu-id="0b6e7-108">**平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="0b6e7-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="41ce5-107">要求</span><span class="sxs-lookup"><span data-stu-id="41ce5-107">Requirements</span></span>  
+ <span data-ttu-id="41ce5-108">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="41ce5-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="0b6e7-109">**头文件：** CorProf.idl、CorProf.h</span><span class="sxs-lookup"><span data-stu-id="0b6e7-109">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="41ce5-109">**标头：** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="41ce5-109">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="0b6e7-110">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="0b6e7-110">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="41ce5-110">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="41ce5-110">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="0b6e7-111">**.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="0b6e7-111">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="41ce5-111">**.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="41ce5-111">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="0b6e7-112">请参阅</span><span class="sxs-lookup"><span data-stu-id="0b6e7-112">See Also</span></span>  
- [<span data-ttu-id="0b6e7-113">ICorProfilerCallback 接口</span><span class="sxs-lookup"><span data-stu-id="0b6e7-113">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+## <a name="see-also"></a><span data-ttu-id="41ce5-112">请参阅</span><span class="sxs-lookup"><span data-stu-id="41ce5-112">See also</span></span>
+- [<span data-ttu-id="41ce5-113">ICorProfilerCallback 接口</span><span class="sxs-lookup"><span data-stu-id="41ce5-113">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
