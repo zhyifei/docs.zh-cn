@@ -2,12 +2,12 @@
 title: 体系结构和设计
 ms.date: 03/30/2017
 ms.assetid: bd738d39-00e2-4bab-b387-90aac1a014bd
-ms.openlocfilehash: 281f321e45b019178aa82946eb451e56f5c04841
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 8b3515fac9ae7f9302ba607fcf842719718f6c55
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53154255"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54576325"
 ---
 # <a name="architecture-and-design"></a>体系结构和设计
 中的 SQL 生成模块[示例提供程序](https://code.msdn.microsoft.com/windowsdesktop/Entity-Framework-Sample-6a9801d0)作为表示命令目录树的表达式树的访问者实现。 通过表达式树上的单个传递来执行生成。  
@@ -52,7 +52,7 @@ internal sealed class SqlBuilder : ISqlFragment {
 ```  
   
 #### <a name="sqlselectstatement"></a>SqlSelectStatement  
- SqlSelectStatement 表示形状"SELECT...的规范 SQL SELECT 语句 从... WHERE... 分组依据... ORDER BY"。  
+ SqlSelectStatement 表示形状"SELECT...的规范 SQL SELECT 语句 从。 WHERE... 分组依据... ORDER BY"。  
   
  每个 SQL 子句均由一个 StringBuilder 表示。 此外，它跟踪是否已指定 Distinct 以及语句是否位于最顶层。 如果语句未位于最顶层，则除非语句也具有 TOP 子句，否则将忽略 ORDER BY 子句。  
   
@@ -414,5 +414,5 @@ IsEmpty(inut) = Not Exists(input)
   
  若要同时为范围别名和列生成唯一名称，请使用 <existing_name>_n，其中 n 是尚未使用的最小别名。 所有别名的全局列表加大了对层叠重命名的需要。  
   
-## <a name="see-also"></a>请参阅  
- [示例提供程序中的 SQL 生成](../../../../../docs/framework/data/adonet/ef/sql-generation-in-the-sample-provider.md)
+## <a name="see-also"></a>请参阅
+- [示例提供程序中的 SQL 生成](../../../../../docs/framework/data/adonet/ef/sql-generation-in-the-sample-provider.md)

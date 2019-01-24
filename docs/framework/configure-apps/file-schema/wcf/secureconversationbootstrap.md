@@ -2,22 +2,22 @@
 title: '&lt;secureConversationBootstrap&gt;'
 ms.date: 03/30/2017
 ms.assetid: 66b46f95-fa2d-4b5b-b6ce-0572ab0cdd50
-ms.openlocfilehash: a923ca5d695b1b0b8f5362320b11f39f5153e9c8
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: dae0d6c24e50884cf044464209f3a3b9a50079aa
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54148508"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54744890"
 ---
 # <a name="ltsecureconversationbootstrapgt"></a>&lt;secureConversationBootstrap&gt;
 指定用于启动安全对话服务的默认值。  
   
  \<system.serviceModel>  
-\<绑定 >  
+\<bindings>  
 \<customBinding>  
-\<绑定 >  
+\<binding>  
 \<安全 >  
-\<secureConversationBootstrap >  
+\<secureConversationBootstrap>  
   
 ## <a name="syntax"></a>语法  
   
@@ -53,7 +53,7 @@ ms.locfileid: "54148508"
 |`includeTimestamp`|一个布尔值，指定是否每个消息都包含时间戳。 默认值为 `true`。|  
 |`keyEntropyMode`|指定用于保护消息的密钥的计算方法。 密钥只能基于客户端密钥材料、服务密钥材料或两者的组合。 有效值为：<br /><br /> -ClientEntropy:会话密钥基于客户端提供的密钥材料。<br />-ServerEntropy:会话密钥基于服务提供的密钥材料。<br />-CombinedEntropy:会话密钥基于客户端和服务提供的密钥材料。<br /><br /> 默认值为 CombinedEntropy。<br /><br /> 此属性的类型为 <xref:System.ServiceModel.Security.SecurityKeyEntropyMode>。|  
 |`messageProtectionOrder`|设置对消息应用消息级安全算法的顺序。 包括以下有效值：<br /><br /> -SignBeforeEncrypt:先签名，然后加密。<br />-为 SignBeforeEncryptAndEncryptSignature:签名、 加密和加密签名。<br />-EncryptBeforeSign:先加密，然后登录。<br /><br /> 相互证书与 WS-Security 1.1 一起使用时，默认值为 SignBeforeEncryptAndEncryptSignature。  使用 WS-Security 1.0 时，默认值为 SignBeforeEncrypt。<br /><br /> 此属性的类型为 <xref:System.ServiceModel.Security.MessageProtectionOrder>。|  
-|`messageSecurityVersion`|设置所使用的 WS-Security 的版本。 包括以下有效值：<br /><br /> -WSSecurityJan2004<br />-WSSecurityXXX2005<br /><br /> 默认值为 WSSecurityXXX2005。 此属性的类型为 <xref:System.ServiceModel.MessageSecurityVersion>。|  
+|`messageSecurityVersion`|设置所使用的 WS-Security 的版本。 包括以下有效值：<br /><br /> -   WSSecurityJan2004<br />-   WSSecurityXXX2005<br /><br /> 默认值为 WSSecurityXXX2005。 此属性的类型为 <xref:System.ServiceModel.MessageSecurityVersion>。|  
 |`requireDerivedKeys`|一个布尔值，指定是否可以从原始校验密钥中派生密钥。 默认值为 `true`。|  
 |`requireSecurityContextCancellation`|一个布尔值，指定当不再需要安全上下文时是否应将其取消和终止。 默认值为 `true`。|  
 |`requireSignatureConfirmation`|一个布尔值，指定是否启用 WS-Security 签名确认。 当设置为 `true` 时，消息签名由响应方进行确认。 默认值为 `false`。<br /><br /> 签名确认用于确认服务正在完全知晓请求的情况下做出响应。|  
@@ -64,8 +64,8 @@ ms.locfileid: "54148508"
 |元素|描述|  
 |-------------|-----------------|  
 |[\<issuedTokenParameters>](../../../../../docs/framework/configure-apps/file-schema/wcf/issuedtokenparameters.md)|指定一个当前颁发的令牌。 此元素的类型为 <xref:System.ServiceModel.Configuration.IssuedTokenParametersElement>。|  
-|[\<localClientSettings >](../../../../../docs/framework/configure-apps/file-schema/wcf/localclientsettings-element.md)|指定此绑定的本地客户端安全设置。 此元素的类型为 <xref:System.ServiceModel.Configuration.LocalClientSecuritySettingsElement>。|  
-|[\<localServiceSettings >](../../../../../docs/framework/configure-apps/file-schema/wcf/localservicesettings-element.md)|指定此绑定的本地服务安全设置。 此元素的类型为 <xref:System.ServiceModel.Configuration.LocalServiceSecuritySettingsElement>。|  
+|[\<localClientSettings>](../../../../../docs/framework/configure-apps/file-schema/wcf/localclientsettings-element.md)|指定此绑定的本地客户端安全设置。 此元素的类型为 <xref:System.ServiceModel.Configuration.LocalClientSecuritySettingsElement>。|  
+|[\<localServiceSettings>](../../../../../docs/framework/configure-apps/file-schema/wcf/localservicesettings-element.md)|指定此绑定的本地服务安全设置。 此元素的类型为 <xref:System.ServiceModel.Configuration.LocalServiceSecuritySettingsElement>。|  
   
 ### <a name="parent-elements"></a>父元素  
   
@@ -73,14 +73,14 @@ ms.locfileid: "54148508"
 |-------------|-----------------|  
 |[\<security>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md)|指定自定义绑定的安全选项。|  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.ServiceModel.Configuration.LocalServiceSecuritySettingsElement>  
- <xref:System.ServiceModel.Channels.SecurityBindingElement.LocalServiceSettings%2A>  
- <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings>  
- <xref:System.ServiceModel.Channels.CustomBinding>  
- [绑定](../../../../../docs/framework/wcf/bindings.md)  
- [扩展绑定](../../../../../docs/framework/wcf/extending/extending-bindings.md)  
- [自定义绑定](../../../../../docs/framework/wcf/extending/custom-bindings.md)  
- [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)  
- [如何：创建自定义绑定使用 SecurityBindingElement](../../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)  
- [自定义绑定安全性](../../../../../docs/framework/wcf/samples/custom-binding-security.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.ServiceModel.Configuration.LocalServiceSecuritySettingsElement>
+- <xref:System.ServiceModel.Channels.SecurityBindingElement.LocalServiceSettings%2A>
+- <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings>
+- <xref:System.ServiceModel.Channels.CustomBinding>
+- [绑定](../../../../../docs/framework/wcf/bindings.md)
+- [扩展绑定](../../../../../docs/framework/wcf/extending/extending-bindings.md)
+- [自定义绑定](../../../../../docs/framework/wcf/extending/custom-bindings.md)
+- [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
+- [如何：创建自定义绑定使用 SecurityBindingElement](../../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)
+- [自定义绑定安全性](../../../../../docs/framework/wcf/samples/custom-binding-security.md)

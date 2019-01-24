@@ -9,19 +9,19 @@ helpviewer_keywords:
 ms.assetid: 6cc55983-b894-449b-8e26-b258e53939cd
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: 5693b92ac35a357ff1f8643d0eb9ec2105acecb4
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 64985d4ed2c6a82c54a7623df4b13d7ec54bff33
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47193351"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54599343"
 ---
 # <a name="assemblybinding-element-for-configuration"></a>\<assemblyBinding > 元素\<配置 >
 
 指定配置级的程序集绑定策略。
 
 [**\<configuration>**](~/docs/framework/configure-apps/file-schema/configuration-element.md)   
-&nbsp;&nbsp;**\<assemblyBinding >**
+&nbsp;&nbsp;**\<assemblyBinding>**
 
 ## <a name="syntax"></a>语法
 
@@ -47,14 +47,14 @@ ms.locfileid: "47193351"
 
 |     | 描述 |
 | --- | ----------- |
-| [**\<linkedConfiguration >**](~/docs/framework/configure-apps/file-schema/linkedconfiguration-element.md) | 指定要包含的配置文件。 |
+| [**\<linkedConfiguration>**](~/docs/framework/configure-apps/file-schema/linkedconfiguration-element.md) | 指定要包含的配置文件。 |
 
 ## <a name="remarks"></a>备注
 
 [  **\<LinkedConfiguration >** ](~/docs/framework/configure-apps/file-schema/linkedconfiguration-element.md)元素中的配置文件允许应用程序配置文件包含程序集，从而简化管理的组件程序集已知位置，而不是复制的程序集配置设置。
 
 > [!NOTE]
-> **\<LinkedConfiguration >** 元素不支持使用 Windows 通过并行清单的应用程序。
+>  **\<LinkedConfiguration >** 元素不支持使用 Windows 通过并行清单的应用程序。
 
 ## <a name="example"></a>示例
 
@@ -70,4 +70,4 @@ ms.locfileid: "47193351"
 
 ## <a name="see-also"></a>请参阅
 
-[.NET Framework 的配置文件架构](~/docs/framework/configure-apps/file-schema/index.md)
+- [.NET Framework 的配置文件架构](~/docs/framework/configure-apps/file-schema/index.md)

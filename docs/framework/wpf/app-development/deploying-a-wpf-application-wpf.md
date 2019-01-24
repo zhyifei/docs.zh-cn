@@ -5,12 +5,12 @@ helpviewer_keywords:
 - WPF applications [WPF], deployment
 - deployment [WPF], applications
 ms.assetid: 12cadca0-b32c-4064-9a56-e6a306dcc76d
-ms.openlocfilehash: 800e8a1e8400a11a7eadd0c352f5bfab334c9fbb
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 2079d4b4f6bedcc30c4826f8798729c5c9263751
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43511703"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54648085"
 ---
 # <a name="deploying-a-wpf-application-wpf"></a>部署 WPF 应用程序 (WPF)
 Windows Presentation Foundation (WPF) 应用程序构建后，它们需要部署。 [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] 和.NET Framework 包括多项部署技术。 用于部署 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 应用程序的部署技术取决于应用程序的类型。 本主题将简要概述各项部署技术，以及如何使用这些技术来满足各类 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 应用程序的部署要求。  
@@ -90,11 +90,11 @@ Windows Presentation Foundation (WPF) 应用程序构建后，它们需要部署
 ### <a name="deploying-xaml-browser-applications"></a>部署 XAML 浏览器应用程序  
  [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] 是需要部署以下三个文件的编译型应用程序：  
   
--   *应用程序名称*.exe：可执行的程序集应用程序文件。  
+-   *ApplicationName*.exe:可执行程序集应用程序文件。  
   
--   *应用程序名称*.xbap：部署清单。  
+-   *ApplicationName*.xbap:部署清单。  
   
--   *应用程序名称*.exe.manifest：应用程序清单。  
+-   *ApplicationName*.exe.manifest 的清单：应用程序清单。  
   
 > [!NOTE]
 >  有关部署和应用程序清单的详细信息，请参阅[生成 WPF 应用程序](../../../../docs/framework/wpf/app-development/building-a-wpf-application-wpf.md)。  
@@ -123,6 +123,6 @@ Windows Presentation Foundation (WPF) 应用程序构建后，它们需要部署
   
  有关详细信息，请参阅[部署 .NET Framework 和应用程序](../../../../docs/framework/deployment/index.md)。  
   
-## <a name="see-also"></a>请参阅  
- [生成 WPF 应用程序](../../../../docs/framework/wpf/app-development/building-a-wpf-application-wpf.md)  
- [安全性](../../../../docs/framework/wpf/security-wpf.md)
+## <a name="see-also"></a>请参阅
+- [生成 WPF 应用程序](../../../../docs/framework/wpf/app-development/building-a-wpf-application-wpf.md)
+- [安全性](../../../../docs/framework/wpf/security-wpf.md)

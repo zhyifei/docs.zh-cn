@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 1cb92bd7-6bab-44cf-8fd3-36303ce84fea
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: 8fedec60b6152e77d6f99bf55cf11ec909fa8f80
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: f15111fbd65896cc42ab3d1462dc567133a7b4ea
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/07/2018
-ms.locfileid: "48848044"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54566341"
 ---
 # <a name="specifying-an-assembly39s-location"></a>指定程序集&#39;的位置
 有两种方法来指定程序集的位置：  
@@ -45,7 +45,7 @@ ms.locfileid: "48848044"
 </configuration>  
 ```  
   
- **版本**属性是必需的所有强名称的程序集，但不是具有强名称的程序集，应省略。 **\<B a s e >** 元素需要**href**属性。 不能指定版本范围 **\<b a s e >** 元素。  
+ **版本**属性是必需的所有强名称的程序集，但不是具有强名称的程序集，应省略。  **\<B a s e >** 元素需要**href**属性。 不能指定版本范围 **\<b a s e >** 元素。  
   
 > [!NOTE]
 >  如果你所提供的不是强名称的程序集的基本代码的提示，提示必须指向应用程序基控件或应用程序基目录的子目录。  
@@ -67,8 +67,8 @@ ms.locfileid: "48848044"
   
  **PrivatePath**属性包含运行时应搜索程序集的目录。 如果应用程序位于 C:\Program Files\MyApp，运行时将查找 C:\Program Files\MyApp\Bin、 C:\Program Files\MyApp\Bin2\Subbin 和 C:\Program Files\MyApp\Bin3 中未指定基本代码的程序集。 中指定的目录**privatePath**必须是应用程序基目录的子目录。  
   
-## <a name="see-also"></a>请参阅  
- [Assemblies in the Common Language Runtime](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)（公共语言运行时中的程序集）  
- [使用程序集编程](../../../docs/framework/app-domains/programming-with-assemblies.md)  
- [运行时如何定位程序集](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)  
- [配置.NET Framework 应用](https://msdn.microsoft.com/library/d789b592-fcb5-4e3d-8ac9-e0299adaaa42)
+## <a name="see-also"></a>请参阅
+- [Assemblies in the Common Language Runtime](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)（公共语言运行时中的程序集）
+- [使用程序集编程](../../../docs/framework/app-domains/programming-with-assemblies.md)
+- [运行时如何定位程序集](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)
+- [配置.NET Framework 应用](https://msdn.microsoft.com/library/d789b592-fcb5-4e3d-8ac9-e0299adaaa42)
