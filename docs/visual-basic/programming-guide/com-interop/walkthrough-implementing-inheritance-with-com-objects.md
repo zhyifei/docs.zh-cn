@@ -1,5 +1,5 @@
 ---
-title: 演练：用 COM 对象实现继承 (Visual Basic)
+title: 演练：使用 COM 对象 (Visual Basic 中) 实现继承
 ms.date: 07/20/2015
 helpviewer_keywords:
 - inheritance [Visual Basic], COM reusability
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - inheritance [Visual Basic], walkthroughs
 - derived classes [Visual Basic], COM reusability
 ms.assetid: f8e7263a-de13-48d1-b67c-ca1adf3544d9
-ms.openlocfilehash: a1c1b7c247d3277c6614a4774395650c4c069c2f
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.openlocfilehash: e99deb2ea5e8acd5e1e07adffe29d35e2624b27e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42929993"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54648201"
 ---
-# <a name="walkthrough-implementing-inheritance-with-com-objects-visual-basic"></a>演练：用 COM 对象实现继承 (Visual Basic)
+# <a name="walkthrough-implementing-inheritance-with-com-objects-visual-basic"></a>演练：使用 COM 对象 (Visual Basic 中) 实现继承
 您可以从 Visual Basic 类进行派生`Public`中 COM 对象，即使这些早期版本的 Visual Basic 中创建的类。 可以重写或重载只是作为属性的属性和方法从 COM 对象继承的类和任何其他基类的方法可以重写或重载。 具有不希望重新编译现有类库时，从 COM 对象的继承非常有用。  
   
  以下过程说明如何使用 Visual Basic 6.0 创建包含的类的 COM 对象，然后将其用作基类。  
@@ -129,7 +129,7 @@ ms.locfileid: "42929993"
   
 -   使用属性`ByRef`参数不能重写。  
   
-## <a name="see-also"></a>请参阅  
- [.NET Framework 应用程序中的 COM 互操作性](../../../visual-basic/programming-guide/com-interop/com-interoperability-in-net-framework-applications.md)  
- [Inherits 语句](../../../visual-basic/language-reference/statements/inherits-statement.md)  
- [Short 数据类型](../../../visual-basic/language-reference/data-types/short-data-type.md)
+## <a name="see-also"></a>请参阅
+- [.NET Framework 应用程序中的 COM 互操作性](../../../visual-basic/programming-guide/com-interop/com-interoperability-in-net-framework-applications.md)
+- [Inherits 语句](../../../visual-basic/language-reference/statements/inherits-statement.md)
+- [Short 数据类型](../../../visual-basic/language-reference/data-types/short-data-type.md)

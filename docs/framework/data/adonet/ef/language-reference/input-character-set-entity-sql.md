@@ -2,12 +2,12 @@
 title: 输入字符集 (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 13d291d3-e6bc-4719-b953-758b61a590b6
-ms.openlocfilehash: 5e7886215cac2d9363a9ed68cd03a0fce4374055
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: dce967ea8853f81fedaa53ea706fab4839b9f474
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32764692"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54641195"
 ---
 # <a name="input-character-set-entity-sql"></a>输入字符集 (Entity SQL)
 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 接受使用 UTF-16 进行编码的 UNICODE 字符。  
@@ -28,5 +28,5 @@ ms.locfileid: "32764692"
   
  简单标识符只能为拉丁字符。 这可以避免比较时的不确定性，因为比较时使用的是原始值。 例如，ABC 在日语代码页和拉丁语代码页中是不同的。  
   
-## <a name="see-also"></a>请参阅  
- [实体 SQL 概述](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)
+## <a name="see-also"></a>请参阅
+- [实体 SQL 概述](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)

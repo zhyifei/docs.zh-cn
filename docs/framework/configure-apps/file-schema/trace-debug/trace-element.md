@@ -12,19 +12,19 @@ helpviewer_keywords:
 ms.assetid: 7931c942-63c1-47c3-a045-9d9de3cacdbf
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: 55a7eb431432b67b3252853d14bf93be304ee883
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: 86cd4e7db5aa79ff85e5079813844d2af1598f4f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48845432"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54642800"
 ---
 # <a name="lttracegt-element"></a>&lt;跟踪&gt;元素
 包含用于收集、存储和路由跟踪消息的侦听器。  
   
  \<configuration>  
-\<system.diagnostics >  
-\<跟踪 >  
+\<system.diagnostics>  
+\<trace>  
   
 ## <a name="syntax"></a>语法  
   
@@ -47,14 +47,14 @@ ms.locfileid: "48845432"
   
 ## <a name="autoflush-attribute"></a>自动刷新属性  
   
-|“值”|描述|  
+|值|描述|  
 |-----------|-----------------|  
 |`false`|不自动刷新输出缓冲区。 这是默认设置。|  
 |`true`|自动刷新输出缓冲区。|  
   
-## <a name="usegloballock-attribute"></a>useGlobalLock 属性  
+## <a name="usegloballock-attribute"></a>useGlobalLock Attribute  
   
-|“值”|描述|  
+|值|描述|  
 |-----------|-----------------|  
 |`false`|侦听器是线程安全; 如果不使用全局锁否则，将使用全局锁。|  
 |`true`|使用全局锁，而不管侦听器是线程安全。 这是默认设置。|  
@@ -87,9 +87,9 @@ ms.locfileid: "48845432"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Diagnostics.TraceListener>  
- <xref:System.Diagnostics.DefaultTraceListener>  
- <xref:System.Diagnostics.TextWriterTraceListener>  
- <xref:System.Diagnostics.EventLogTraceListener>  
- [跟踪和调试设置架构](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.Diagnostics.TraceListener>
+- <xref:System.Diagnostics.DefaultTraceListener>
+- <xref:System.Diagnostics.TextWriterTraceListener>
+- <xref:System.Diagnostics.EventLogTraceListener>
+- [跟踪和调试设置架构](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)

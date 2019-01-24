@@ -1,5 +1,5 @@
 ---
-title: 如何：使用 Windows 窗体计时器组件以设置的间隔运行过程
+title: 如何：使用 Windows 窗体 Timer 组件的设定间隔运行过程
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,14 +13,14 @@ helpviewer_keywords:
 - Timer component [Windows Forms], initializing
 - procedures [Windows Forms], specific time intervals
 ms.assetid: 8025247a-2de4-4d86-b8ab-a8cb8aeab2ea
-ms.openlocfilehash: bf0e22eab3b6517521dbe06a73f63af232746df1
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 6d1149e6a0c8fdb04b37af15feabfd965b5cc993
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/15/2018
-ms.locfileid: "45638449"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54642264"
 ---
-# <a name="how-to-run-procedures-at-set-intervals-with-the-windows-forms-timer-component"></a>如何：使用 Windows 窗体计时器组件以设置的间隔运行过程
+# <a name="how-to-run-procedures-at-set-intervals-with-the-windows-forms-timer-component"></a>如何：使用 Windows 窗体 Timer 组件的设定间隔运行过程
 有时可能需要创建一个在循环完成之前以特定时间间隔运行或者在设定时间间隔之后运行的过程。 <xref:System.Windows.Forms.Timer> 组件可实现此过程。  
   
  此组件专为 Windows 窗体环境设计。 如果需要适合服务器环境的计时器，请参阅[基于服务器的计时器介绍](https://msdn.microsoft.com/library/adc0bc0a-a519-4812-bafc-fb9d1a5801fc)。  
@@ -30,7 +30,7 @@ ms.locfileid: "45638449"
   
 ### <a name="to-run-a-procedure-at-set-intervals-with-the-timer-component"></a>若要使用 Timer 组件以设定间隔运行过程  
   
-1.  在窗体中添加 <xref:System.Windows.Forms.Timer>。 请参阅下图中的示例，了解如何以编程方式执行此操作。 Visual Studio 还具有支持将组件添加到窗体。 另请参阅[如何： 添加控件无用户界面向 Windows 窗体](https://msdn.microsoft.com/library/becyw7bz\(v=vs.110\))。  
+1.  在窗体中添加 <xref:System.Windows.Forms.Timer>。 请参阅下图中的示例，了解如何以编程方式执行此操作。 Visual Studio 还具有支持将组件添加到窗体。 另请参阅[如何：向 Windows 窗体添加无用户界面控件](https://msdn.microsoft.com/library/becyw7bz\(v=vs.110\))。  
   
 2.  设置计时器的 <xref:System.Windows.Forms.Timer.Interval%2A> 属性（以毫秒计）。 此属性确定过程再次运行之前的时间间隔。  
   
@@ -242,7 +242,7 @@ private:
    }  
 ```  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Windows.Forms.Timer>  
- [Timer 组件](../../../../docs/framework/winforms/controls/timer-component-windows-forms.md)  
- [Timer 组件概述](../../../../docs/framework/winforms/controls/timer-component-overview-windows-forms.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.Windows.Forms.Timer>
+- [Timer 组件](../../../../docs/framework/winforms/controls/timer-component-windows-forms.md)
+- [Timer 组件概述](../../../../docs/framework/winforms/controls/timer-component-overview-windows-forms.md)

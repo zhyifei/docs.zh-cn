@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Static markup extension in XAML [XAML Services]
 - XAML [XAML Services], x:Static markup extension
 ms.assetid: 056aee79-7cdd-434f-8174-dfc856cad343
-ms.openlocfilehash: 8a14b00fe762d325028072cd0ea3eecf9b9206e3
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 5dd454cb323d4dc2ab9b4ebd8b233ffda3e77820
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50181272"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54619314"
 ---
 # <a name="xstatic-markup-extension"></a>x:Static 标记扩展
 引用中定义的任何静态的值的代码实体[!INCLUDE[TLA#tla_cls](../../../includes/tlasharptla-cls-md.md)]– 合规的方式。 引用的静态属性可以用于提供在 XAML 中属性的值。  
@@ -31,8 +31,8 @@ ms.locfileid: "50181272"
 | | |  
 |-|-|  
 |`prefix`|可选。 指的是一个映射的非默认的 XAML 命名空间前缀。 `prefix` 所示显式使用因为很少引用来自默认 XAML 命名空间的静态属性。 请参阅“备注”。|  
-|`typeName`|必须的。 定义的所需的静态成员的类型的名称。|  
-|`staticMemberName`|必须的。 所需的静态值成员 （一个常量、 静态属性、 字段或枚举值） 的名称。|  
+|`typeName`|必需。 定义的所需的静态成员的类型的名称。|  
+|`staticMemberName`|必需。 所需的静态值成员 （一个常量、 静态属性、 字段或枚举值） 的名称。|  
   
 ## <a name="remarks"></a>备注  
 
@@ -82,6 +82,6 @@ ms.locfileid: "50181272"
   
  有关如何为 WPF 使用前缀和 XAML 命名空间的详细信息，请参阅[XAML 命名空间和 WPF XAML Namespace 映射](../../../docs/framework/wpf/advanced/xaml-namespaces-and-namespace-mapping-for-wpf-xaml.md)。  
   
-## <a name="see-also"></a>请参阅  
- [x:Type 标记扩展](../../../docs/framework/xaml-services/x-type-markup-extension.md)  
- [从 WPF 迁移到 System.Xaml 的类型](../../../docs/framework/xaml-services/types-migrated-from-wpf-to-system-xaml.md)
+## <a name="see-also"></a>请参阅
+- [x:Type 标记扩展](../../../docs/framework/xaml-services/x-type-markup-extension.md)
+- [从 WPF 迁移到 System.Xaml 的类型](../../../docs/framework/xaml-services/types-migrated-from-wpf-to-system-xaml.md)
