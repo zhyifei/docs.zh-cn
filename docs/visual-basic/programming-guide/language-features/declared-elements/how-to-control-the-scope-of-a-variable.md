@@ -1,5 +1,5 @@
 ---
-title: 如何：控制变量的范围 (Visual Basic)
+title: 如何：控制变量 (Visual Basic 中) 的作用域
 ms.date: 07/20/2015
 helpviewer_keywords:
 - variables [Visual Basic], scope
@@ -12,53 +12,53 @@ helpviewer_keywords:
 - declared elements [Visual Basic], visibility
 - visibility [Visual Basic], variables
 ms.assetid: 44b7f62a-cb5c-4d50-bce9-60ae68f87072
-ms.openlocfilehash: 6e8d1178398711226b88fee7e6defd5162b91fcb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 656bfa6fa9b3445d91cd8ac39b83bccf3e44758e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33649186"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54521404"
 ---
-# <a name="how-to-control-the-scope-of-a-variable-visual-basic"></a><span data-ttu-id="311da-102">如何：控制变量的范围 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="311da-102">How to: Control the Scope of a Variable (Visual Basic)</span></span>
-<span data-ttu-id="311da-103">通常情况下，变量位于*作用域*，或作为参考，整个声明它的区域可见。</span><span class="sxs-lookup"><span data-stu-id="311da-103">Normally, a variable is in *scope*, or visible for reference, throughout the region in which you declare it.</span></span> <span data-ttu-id="311da-104">在某些情况下，该变量的*访问级别*可影响其范围。</span><span class="sxs-lookup"><span data-stu-id="311da-104">In some cases, the variable's *access level* can influence its scope.</span></span>  
+# <a name="how-to-control-the-scope-of-a-variable-visual-basic"></a><span data-ttu-id="8c1c7-102">如何：控制变量 (Visual Basic 中) 的作用域</span><span class="sxs-lookup"><span data-stu-id="8c1c7-102">How to: Control the Scope of a Variable (Visual Basic)</span></span>
+<span data-ttu-id="8c1c7-103">通常情况下，变量位于*作用域*，或作为参考，整个声明它的区域可见。</span><span class="sxs-lookup"><span data-stu-id="8c1c7-103">Normally, a variable is in *scope*, or visible for reference, throughout the region in which you declare it.</span></span> <span data-ttu-id="8c1c7-104">在某些情况下，该变量的*访问级别*可能会影响其作用域。</span><span class="sxs-lookup"><span data-stu-id="8c1c7-104">In some cases, the variable's *access level* can influence its scope.</span></span>  
   
- <span data-ttu-id="311da-105">有关详细信息，请参阅[在 Visual Basic 中的作用域](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)。</span><span class="sxs-lookup"><span data-stu-id="311da-105">For more information, see [Scope in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md).</span></span>  
+ <span data-ttu-id="8c1c7-105">有关详细信息，请参阅 [Scope in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)。</span><span class="sxs-lookup"><span data-stu-id="8c1c7-105">For more information, see [Scope in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md).</span></span>  
   
-## <a name="scope-at-block-or-procedure-level"></a><span data-ttu-id="311da-106">在块或过程级别的作用域</span><span class="sxs-lookup"><span data-stu-id="311da-106">Scope at Block or Procedure Level</span></span>  
+## <a name="scope-at-block-or-procedure-level"></a><span data-ttu-id="8c1c7-106">在块或过程级别的作用域</span><span class="sxs-lookup"><span data-stu-id="8c1c7-106">Scope at Block or Procedure Level</span></span>  
   
-#### <a name="to-make-a-variable-visible-only-within-a-block"></a><span data-ttu-id="311da-107">若要使变量仅在块内可见</span><span class="sxs-lookup"><span data-stu-id="311da-107">To make a variable visible only within a block</span></span>  
+#### <a name="to-make-a-variable-visible-only-within-a-block"></a><span data-ttu-id="8c1c7-107">若要使变量仅在一个块中可见</span><span class="sxs-lookup"><span data-stu-id="8c1c7-107">To make a variable visible only within a block</span></span>  
   
--   <span data-ttu-id="311da-108">位置[Dim 语句](../../../../visual-basic/language-reference/statements/dim-statement.md)变量之间的起始和终止声明语句的该块中，例如之间`For`和`Next`的语句`For`循环。</span><span class="sxs-lookup"><span data-stu-id="311da-108">Place the [Dim Statement](../../../../visual-basic/language-reference/statements/dim-statement.md) for the variable between the initiating and terminating declaration statements of that block, for example between the `For` and `Next` statements of a `For` loop.</span></span>  
+-   <span data-ttu-id="8c1c7-108">位置[Dim 语句](../../../../visual-basic/language-reference/statements/dim-statement.md)变量之间的起始和终止声明语句的该块中，例如之间`For`并`Next`语句的`For`循环。</span><span class="sxs-lookup"><span data-stu-id="8c1c7-108">Place the [Dim Statement](../../../../visual-basic/language-reference/statements/dim-statement.md) for the variable between the initiating and terminating declaration statements of that block, for example between the `For` and `Next` statements of a `For` loop.</span></span>  
   
-     <span data-ttu-id="311da-109">你可以引用该变量只能在块中。</span><span class="sxs-lookup"><span data-stu-id="311da-109">You can refer to the variable only from within the block.</span></span>  
+     <span data-ttu-id="8c1c7-109">您可以引用该变量只能在块中。</span><span class="sxs-lookup"><span data-stu-id="8c1c7-109">You can refer to the variable only from within the block.</span></span>  
   
-#### <a name="to-make-a-variable-visible-only-within-a-procedure"></a><span data-ttu-id="311da-110">若要使变量仅在过程内可见</span><span class="sxs-lookup"><span data-stu-id="311da-110">To make a variable visible only within a procedure</span></span>  
+#### <a name="to-make-a-variable-visible-only-within-a-procedure"></a><span data-ttu-id="8c1c7-110">若要使变量仅在一个过程中可见</span><span class="sxs-lookup"><span data-stu-id="8c1c7-110">To make a variable visible only within a procedure</span></span>  
   
--   <span data-ttu-id="311da-111">位置`Dim`变量过程中但在任何块外部语句 (如`With`...`End With`块)。</span><span class="sxs-lookup"><span data-stu-id="311da-111">Place the `Dim` statement for the variable inside the procedure but outside any block (such as a `With`...`End With` block).</span></span>  
+-   <span data-ttu-id="8c1c7-111">位置`Dim`在过程内但在任何块外部变量的语句 (如`With`...`End With`块)。</span><span class="sxs-lookup"><span data-stu-id="8c1c7-111">Place the `Dim` statement for the variable inside the procedure but outside any block (such as a `With`...`End With` block).</span></span>  
   
-     <span data-ttu-id="311da-112">你可以引用只能从在过程中，包括在该过程中包含任何块内的变量。</span><span class="sxs-lookup"><span data-stu-id="311da-112">You can refer to the variable only from within the procedure, including inside any block contained in the procedure.</span></span>  
+     <span data-ttu-id="8c1c7-112">您可以参考中的过程，包括在过程中包含的所有块内仅从变量。</span><span class="sxs-lookup"><span data-stu-id="8c1c7-112">You can refer to the variable only from within the procedure, including inside any block contained in the procedure.</span></span>  
   
-## <a name="scope-at-module-or-namespace-level"></a><span data-ttu-id="311da-113">在模块或 Namespace 级别的作用域</span><span class="sxs-lookup"><span data-stu-id="311da-113">Scope at Module or Namespace Level</span></span>  
- <span data-ttu-id="311da-114">为方便起见，单个字词*模块级别*同样适用于模块、 类和结构。</span><span class="sxs-lookup"><span data-stu-id="311da-114">For convenience, the single term *module level* applies equally to modules, classes, and structures.</span></span> <span data-ttu-id="311da-115">模块级变量的访问级别确定其作用域。</span><span class="sxs-lookup"><span data-stu-id="311da-115">The access level of a module level variable determines its scope.</span></span> <span data-ttu-id="311da-116">包含模块、 类或结构的命名空间也会影响范围。</span><span class="sxs-lookup"><span data-stu-id="311da-116">The namespace that contains the module, class, or structure also influences the scope.</span></span>  
+## <a name="scope-at-module-or-namespace-level"></a><span data-ttu-id="8c1c7-113">在模块或 Namespace 级别的作用域</span><span class="sxs-lookup"><span data-stu-id="8c1c7-113">Scope at Module or Namespace Level</span></span>  
+ <span data-ttu-id="8c1c7-114">为方便起见，单个字词*模块级别*同样适用于模块、 类和结构。</span><span class="sxs-lookup"><span data-stu-id="8c1c7-114">For convenience, the single term *module level* applies equally to modules, classes, and structures.</span></span> <span data-ttu-id="8c1c7-115">模块级变量的访问级别确定其作用域。</span><span class="sxs-lookup"><span data-stu-id="8c1c7-115">The access level of a module level variable determines its scope.</span></span> <span data-ttu-id="8c1c7-116">包含模块、 类或结构的命名空间还会影响作用域。</span><span class="sxs-lookup"><span data-stu-id="8c1c7-116">The namespace that contains the module, class, or structure also influences the scope.</span></span>  
   
-#### <a name="to-make-a-variable-visible-throughout-a-module-class-or-structure"></a><span data-ttu-id="311da-117">若要使变量在整个模块、 类或结构可见</span><span class="sxs-lookup"><span data-stu-id="311da-117">To make a variable visible throughout a module, class, or structure</span></span>  
+#### <a name="to-make-a-variable-visible-throughout-a-module-class-or-structure"></a><span data-ttu-id="8c1c7-117">若要使变量在整个模块、 类或结构可见</span><span class="sxs-lookup"><span data-stu-id="8c1c7-117">To make a variable visible throughout a module, class, or structure</span></span>  
   
-1.  <span data-ttu-id="311da-118">位置`Dim`内部模块、 类或结构，但在任何过程外部变量的语句。</span><span class="sxs-lookup"><span data-stu-id="311da-118">Place the `Dim` statement for the variable inside the module, class, or structure, but outside any procedure.</span></span>  
+1.  <span data-ttu-id="8c1c7-118">位置`Dim`内部模块、 类或结构，但在任何过程外部变量的语句。</span><span class="sxs-lookup"><span data-stu-id="8c1c7-118">Place the `Dim` statement for the variable inside the module, class, or structure, but outside any procedure.</span></span>  
   
-2.  <span data-ttu-id="311da-119">包括[私有](../../../../visual-basic/language-reference/modifiers/private.md)中的关键字`Dim`语句。</span><span class="sxs-lookup"><span data-stu-id="311da-119">Include the [Private](../../../../visual-basic/language-reference/modifiers/private.md) keyword in the `Dim` statement.</span></span>  
+2.  <span data-ttu-id="8c1c7-119">包括[私有](../../../../visual-basic/language-reference/modifiers/private.md)中的关键字`Dim`语句。</span><span class="sxs-lookup"><span data-stu-id="8c1c7-119">Include the [Private](../../../../visual-basic/language-reference/modifiers/private.md) keyword in the `Dim` statement.</span></span>  
   
-3.  <span data-ttu-id="311da-120">您可以参考内任意位置模块、 类或结构，但不是能从变量之外。</span><span class="sxs-lookup"><span data-stu-id="311da-120">You can refer to the variable from anywhere within the module, class, or structure, but not from outside it.</span></span>  
+3.  <span data-ttu-id="8c1c7-120">您可以参考中的变量中的模块、 类或结构的任意位置，但不能从其外部。</span><span class="sxs-lookup"><span data-stu-id="8c1c7-120">You can refer to the variable from anywhere within the module, class, or structure, but not from outside it.</span></span>  
   
-#### <a name="to-make-a-variable-visible-throughout-a-namespace"></a><span data-ttu-id="311da-121">若要使变量在一个命名空间整个可见</span><span class="sxs-lookup"><span data-stu-id="311da-121">To make a variable visible throughout a namespace</span></span>  
+#### <a name="to-make-a-variable-visible-throughout-a-namespace"></a><span data-ttu-id="8c1c7-121">若要使变量在整个命名空间内可见</span><span class="sxs-lookup"><span data-stu-id="8c1c7-121">To make a variable visible throughout a namespace</span></span>  
   
-1.  <span data-ttu-id="311da-122">位置`Dim`内部模块、 类或结构，但在任何过程外部变量的语句。</span><span class="sxs-lookup"><span data-stu-id="311da-122">Place the `Dim` statement for the variable inside the module, class, or structure, but outside any procedure.</span></span>  
+1.  <span data-ttu-id="8c1c7-122">位置`Dim`内部模块、 类或结构，但在任何过程外部变量的语句。</span><span class="sxs-lookup"><span data-stu-id="8c1c7-122">Place the `Dim` statement for the variable inside the module, class, or structure, but outside any procedure.</span></span>  
   
-2.  <span data-ttu-id="311da-123">包括[友元](../../../../visual-basic/language-reference/modifiers/friend.md)或[公共](../../../../visual-basic/language-reference/modifiers/public.md)中的关键字`Dim`语句。</span><span class="sxs-lookup"><span data-stu-id="311da-123">Include the [Friend](../../../../visual-basic/language-reference/modifiers/friend.md) or [Public](../../../../visual-basic/language-reference/modifiers/public.md) keyword in the `Dim` statement.</span></span>  
+2.  <span data-ttu-id="8c1c7-123">包括[友元](../../../../visual-basic/language-reference/modifiers/friend.md)或[公共](../../../../visual-basic/language-reference/modifiers/public.md)中的关键字`Dim`语句。</span><span class="sxs-lookup"><span data-stu-id="8c1c7-123">Include the [Friend](../../../../visual-basic/language-reference/modifiers/friend.md) or [Public](../../../../visual-basic/language-reference/modifiers/public.md) keyword in the `Dim` statement.</span></span>  
   
-3.  <span data-ttu-id="311da-124">你可以引用的变量从任意位置包含模块、 类或结构的命名空间中。</span><span class="sxs-lookup"><span data-stu-id="311da-124">You can refer to the variable from anywhere within the namespace containing the module, class, or structure.</span></span>  
+3.  <span data-ttu-id="8c1c7-124">可以引用从任何位置的变量中包含模块、 类或结构的命名空间。</span><span class="sxs-lookup"><span data-stu-id="8c1c7-124">You can refer to the variable from anywhere within the namespace containing the module, class, or structure.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="311da-125">示例</span><span class="sxs-lookup"><span data-stu-id="311da-125">Example</span></span>  
- <span data-ttu-id="311da-126">下面的示例声明了一个在模块级别的变量，并限制到模块中的代码其可见性。</span><span class="sxs-lookup"><span data-stu-id="311da-126">The following example declares a variable at module level and limits its visibility to code within the module.</span></span>  
+## <a name="example"></a><span data-ttu-id="8c1c7-125">示例</span><span class="sxs-lookup"><span data-stu-id="8c1c7-125">Example</span></span>  
+ <span data-ttu-id="8c1c7-126">以下示例声明在模块级别的变量，并限制其对模块中的代码的可见性。</span><span class="sxs-lookup"><span data-stu-id="8c1c7-126">The following example declares a variable at module level and limits its visibility to code within the module.</span></span>  
   
 ```  
 Module demonstrateScope  
@@ -72,24 +72,24 @@ Module demonstrateScope
 End Module  
 ```  
   
- <span data-ttu-id="311da-127">在前面的示例中，在模块中定义的所有过程`demonstrateScope`可以指`String`变量`strMsg`。</span><span class="sxs-lookup"><span data-stu-id="311da-127">In the preceding example, all the procedures defined in module `demonstrateScope` can refer to the `String` variable `strMsg`.</span></span> <span data-ttu-id="311da-128">当`usePrivateVariable`调用过程时，它将显示的字符串变量的内容`strMsg`在对话框中。</span><span class="sxs-lookup"><span data-stu-id="311da-128">When the `usePrivateVariable` procedure is called, it displays the contents of the string variable `strMsg` in a dialog box.</span></span>  
+ <span data-ttu-id="8c1c7-127">在前面的示例中，在模块中定义的所有过程`demonstrateScope`可以指`String`变量`strMsg`。</span><span class="sxs-lookup"><span data-stu-id="8c1c7-127">In the preceding example, all the procedures defined in module `demonstrateScope` can refer to the `String` variable `strMsg`.</span></span> <span data-ttu-id="8c1c7-128">当`usePrivateVariable`调用过程，它显示的字符串变量内容`strMsg`对话框框中。</span><span class="sxs-lookup"><span data-stu-id="8c1c7-128">When the `usePrivateVariable` procedure is called, it displays the contents of the string variable `strMsg` in a dialog box.</span></span>  
   
- <span data-ttu-id="311da-129">与前面的示例中，字符串变量到以下内容有变更`strMsg`可以通过其声明的命名空间中的任意位置的代码引用。</span><span class="sxs-lookup"><span data-stu-id="311da-129">With the following alteration to the preceding example, the string variable `strMsg` can be referred to by code anywhere in the namespace of its declaration.</span></span>  
+ <span data-ttu-id="8c1c7-129">与前面的示例中，字符串变量进行如下更改`strMsg`可以由其声明的命名空间中的任意位置的代码引用。</span><span class="sxs-lookup"><span data-stu-id="8c1c7-129">With the following alteration to the preceding example, the string variable `strMsg` can be referred to by code anywhere in the namespace of its declaration.</span></span>  
   
 ```  
 Public strMsg As String  
 ```  
   
-## <a name="robust-programming"></a><span data-ttu-id="311da-130">可靠编程</span><span class="sxs-lookup"><span data-stu-id="311da-130">Robust Programming</span></span>  
- <span data-ttu-id="311da-131">变量中，你有针对意外引用它来替换另一个变量具有相同名称的可能性更小的范围越窄。</span><span class="sxs-lookup"><span data-stu-id="311da-131">The narrower the scope of a variable, the fewer opportunities you have for accidentally referring to it in place of another variable with the same name.</span></span> <span data-ttu-id="311da-132">你还可以尽量减少引用匹配的问题。</span><span class="sxs-lookup"><span data-stu-id="311da-132">You can also minimize problems of reference matching.</span></span>  
+## <a name="robust-programming"></a><span data-ttu-id="8c1c7-130">可靠编程</span><span class="sxs-lookup"><span data-stu-id="8c1c7-130">Robust Programming</span></span>  
+ <span data-ttu-id="8c1c7-131">变量，减少了必须为意外引用它来替换具有相同名称的另一个变量的范围越窄。</span><span class="sxs-lookup"><span data-stu-id="8c1c7-131">The narrower the scope of a variable, the fewer opportunities you have for accidentally referring to it in place of another variable with the same name.</span></span> <span data-ttu-id="8c1c7-132">此外可以尽量减少引用匹配的问题。</span><span class="sxs-lookup"><span data-stu-id="8c1c7-132">You can also minimize problems of reference matching.</span></span>  
   
-## <a name="net-framework-security"></a><span data-ttu-id="311da-133">.NET Framework 安全性</span><span class="sxs-lookup"><span data-stu-id="311da-133">.NET Framework Security</span></span>  
- <span data-ttu-id="311da-134">变量的范围越窄，它的使用变量越小的恶意代码可以不正确的机会。</span><span class="sxs-lookup"><span data-stu-id="311da-134">The narrower the scope of a variable, the smaller the chances that malicious code can make improper use of it.</span></span>  
+## <a name="net-framework-security"></a><span data-ttu-id="8c1c7-133">.NET Framework 安全性</span><span class="sxs-lookup"><span data-stu-id="8c1c7-133">.NET Framework Security</span></span>  
+ <span data-ttu-id="8c1c7-134">变量的范围越窄，它使用恶意代码可以进行不正确的较小的可能性。</span><span class="sxs-lookup"><span data-stu-id="8c1c7-134">The narrower the scope of a variable, the smaller the chances that malicious code can make improper use of it.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="311da-135">请参阅</span><span class="sxs-lookup"><span data-stu-id="311da-135">See Also</span></span>  
- [<span data-ttu-id="311da-136">在 Visual Basic 中的作用域</span><span class="sxs-lookup"><span data-stu-id="311da-136">Scope in Visual Basic</span></span>](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)  
- [<span data-ttu-id="311da-137">在 Visual Basic 中的生存期</span><span class="sxs-lookup"><span data-stu-id="311da-137">Lifetime in Visual Basic</span></span>](../../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md)  
- [<span data-ttu-id="311da-138">在 Visual Basic 中的访问级别</span><span class="sxs-lookup"><span data-stu-id="311da-138">Access levels in Visual Basic</span></span>](../../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)  
- [<span data-ttu-id="311da-139">变量</span><span class="sxs-lookup"><span data-stu-id="311da-139">Variables</span></span>](../../../../visual-basic/programming-guide/language-features/variables/index.md)  
- [<span data-ttu-id="311da-140">变量声明</span><span class="sxs-lookup"><span data-stu-id="311da-140">Variable Declaration</span></span>](../../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)  
- [<span data-ttu-id="311da-141">Dim 语句</span><span class="sxs-lookup"><span data-stu-id="311da-141">Dim Statement</span></span>](../../../../visual-basic/language-reference/statements/dim-statement.md)
+## <a name="see-also"></a><span data-ttu-id="8c1c7-135">请参阅</span><span class="sxs-lookup"><span data-stu-id="8c1c7-135">See also</span></span>
+- [<span data-ttu-id="8c1c7-136">在 Visual Basic 中的作用域</span><span class="sxs-lookup"><span data-stu-id="8c1c7-136">Scope in Visual Basic</span></span>](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)
+- [<span data-ttu-id="8c1c7-137">在 Visual Basic 中的生存期</span><span class="sxs-lookup"><span data-stu-id="8c1c7-137">Lifetime in Visual Basic</span></span>](../../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md)
+- [<span data-ttu-id="8c1c7-138">在 Visual Basic 中的访问级别</span><span class="sxs-lookup"><span data-stu-id="8c1c7-138">Access levels in Visual Basic</span></span>](../../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)
+- [<span data-ttu-id="8c1c7-139">变量</span><span class="sxs-lookup"><span data-stu-id="8c1c7-139">Variables</span></span>](../../../../visual-basic/programming-guide/language-features/variables/index.md)
+- [<span data-ttu-id="8c1c7-140">变量声明</span><span class="sxs-lookup"><span data-stu-id="8c1c7-140">Variable Declaration</span></span>](../../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)
+- [<span data-ttu-id="8c1c7-141">Dim 语句</span><span class="sxs-lookup"><span data-stu-id="8c1c7-141">Dim Statement</span></span>](../../../../visual-basic/language-reference/statements/dim-statement.md)

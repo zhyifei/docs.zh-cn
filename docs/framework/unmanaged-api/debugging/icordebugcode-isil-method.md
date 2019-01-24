@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ccebe01c853677f7c78731e757ef7a5f090d6919
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 2086b12cac75af1c75a13997784e04113630c4f7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33415186"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54496161"
 ---
-# <a name="icordebugcodeisil-method"></a><span data-ttu-id="f6a87-102">ICorDebugCode::IsIL 方法</span><span class="sxs-lookup"><span data-stu-id="f6a87-102">ICorDebugCode::IsIL Method</span></span>
-<span data-ttu-id="f6a87-103">获取一个值，该值指示此"icor 调试代码"是表示在 Microsoft 中间语言 (MSIL) 中编译的代码。</span><span class="sxs-lookup"><span data-stu-id="f6a87-103">Gets a value that indicates whether this "ICorDebugCode" represents code that was compiled in Microsoft intermediate language (MSIL).</span></span>  
+# <a name="icordebugcodeisil-method"></a><span data-ttu-id="1d499-102">ICorDebugCode::IsIL 方法</span><span class="sxs-lookup"><span data-stu-id="1d499-102">ICorDebugCode::IsIL Method</span></span>
+<span data-ttu-id="1d499-103">获取一个值，该值指示是否此"ICorDebugCode"表示 Microsoft 中间语言 (MSIL) 编译的代码。</span><span class="sxs-lookup"><span data-stu-id="1d499-103">Gets a value that indicates whether this "ICorDebugCode" represents code that was compiled in Microsoft intermediate language (MSIL).</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="f6a87-104">语法</span><span class="sxs-lookup"><span data-stu-id="f6a87-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="1d499-104">语法</span><span class="sxs-lookup"><span data-stu-id="1d499-104">Syntax</span></span>  
   
 ```  
 HRESULT IsIL (  
@@ -35,18 +35,18 @@ HRESULT IsIL (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="f6a87-105">参数</span><span class="sxs-lookup"><span data-stu-id="f6a87-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="1d499-105">参数</span><span class="sxs-lookup"><span data-stu-id="1d499-105">Parameters</span></span>  
  `pbIL`  
- <span data-ttu-id="f6a87-106">[out]`true`如果此`ICorDebugCode`表示代码编译在 MSIL 中; 否则为`false`。</span><span class="sxs-lookup"><span data-stu-id="f6a87-106">[out] `true` if this `ICorDebugCode` represents code that was compiled in MSIL; otherwise, `false`.</span></span>  
+ <span data-ttu-id="1d499-106">[out]`true`如果此`ICorDebugCode`表示的代码在 MSIL 中编译; 否则为`false`。</span><span class="sxs-lookup"><span data-stu-id="1d499-106">[out] `true` if this `ICorDebugCode` represents code that was compiled in MSIL; otherwise, `false`.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="f6a87-107">要求</span><span class="sxs-lookup"><span data-stu-id="f6a87-107">Requirements</span></span>  
- <span data-ttu-id="f6a87-108">**平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="f6a87-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="1d499-107">要求</span><span class="sxs-lookup"><span data-stu-id="1d499-107">Requirements</span></span>  
+ <span data-ttu-id="1d499-108">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="1d499-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="f6a87-109">**标头：** CorDebug.idl、 CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="f6a87-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="1d499-109">**标头：** CorDebug.idl、 CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="1d499-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="f6a87-110">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="f6a87-110">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="1d499-110">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="1d499-110">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="f6a87-111">**.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="f6a87-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="1d499-111">**.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="1d499-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="f6a87-112">请参阅</span><span class="sxs-lookup"><span data-stu-id="f6a87-112">See Also</span></span>  
- 
+## <a name="see-also"></a><span data-ttu-id="1d499-112">请参阅</span><span class="sxs-lookup"><span data-stu-id="1d499-112">See also</span></span>
+
