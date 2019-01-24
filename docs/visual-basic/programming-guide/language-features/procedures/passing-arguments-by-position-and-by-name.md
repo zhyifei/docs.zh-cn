@@ -22,12 +22,12 @@ helpviewer_keywords:
 - argument passing [Visual Basic], by position
 - arguments [Visual Basic], listing by name
 ms.assetid: 1ad7358f-1da9-48da-a95b-f3c7ed41eff3
-ms.openlocfilehash: bdaa0351e288b85a3e35818c0f53ef4d772932e5
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 78c5303461ecf25a1487e072f4f6be25bde98dca
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53151301"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54587458"
 ---
 # <a name="passing-arguments-by-position-and-by-name-visual-basic"></a>按位置和名称传递自变量 (Visual Basic)
 当您调用`Sub`或`Function`过程中，您可以将参数传递*按位置*— 过程的定义中出现的顺序，或将它们传递*按名称*，而无需考虑位置。  
@@ -94,12 +94,12 @@ ms.locfileid: "53151301"
   
 不能按名称传递参数数组。 这是因为时调用该过程，你会提供以逗号分隔参数数组的参数数量不确定，编译器不能将多个自变量关联与单个名称。  
   
-## <a name="see-also"></a>请参阅  
- [过程](./index.md)  
- [过程参数和自变量](./procedure-parameters-and-arguments.md)  
- [如何：将参数传递给过程](./how-to-pass-arguments-to-a-procedure.md)  
- [按值和按引用传递自变量](./passing-arguments-by-value-and-by-reference.md)  
- [可选参数](./optional-parameters.md)  
- [参数数组](./parameter-arrays.md)  
- [Optional](../../../../visual-basic/language-reference/modifiers/optional.md)  
- [ParamArray](../../../../visual-basic/language-reference/modifiers/paramarray.md)
+## <a name="see-also"></a>请参阅
+- [过程](./index.md)
+- [过程参数和自变量](./procedure-parameters-and-arguments.md)
+- [如何：将参数传递给过程](./how-to-pass-arguments-to-a-procedure.md)
+- [按值和按引用传递自变量](./passing-arguments-by-value-and-by-reference.md)
+- [可选参数](./optional-parameters.md)
+- [参数数组](./parameter-arrays.md)
+- [Optional](../../../../visual-basic/language-reference/modifiers/optional.md)
+- [ParamArray](../../../../visual-basic/language-reference/modifiers/paramarray.md)
