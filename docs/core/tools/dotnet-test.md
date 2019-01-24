@@ -276,8 +276,8 @@ dotnet test [-h|--help]
 
 | 测试框架 | 支持的属性                                                                                      |
 | -------------- | --------------------------------------------------------------------------------------------------------- |
-| MSTest         | <ul><li>FullyQualifiedName</li><li>name</li><li>ClassName</li><li>优先级</li><li>TestCategory</li></ul> |
-| xUnit          | <ul><li>FullyQualifiedName</li><li>DisplayName</li><li>特征</li></ul>                                   |
+| MSTest         | <ul><li>FullyQualifiedName</li><li>name</li><li>ClassName</li><li>Priority</li><li>TestCategory</li></ul> |
+| xUnit          | <ul><li>FullyQualifiedName</li><li>DisplayName</li><li>Traits</li></ul>                                   |
 
 `<operator>` 说明了属性和值之间的关系：
 
