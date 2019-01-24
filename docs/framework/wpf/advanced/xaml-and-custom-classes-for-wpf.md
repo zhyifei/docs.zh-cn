@@ -6,12 +6,12 @@ helpviewer_keywords:
 - XAML [WPF], custom classes
 - classes [WPF], custom classes in XAML
 ms.assetid: e7313137-581e-4a64-8453-d44e15a6164a
-ms.openlocfilehash: acf3ba12a9a7e6ba9a8e378892098f5f265a23d9
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: f6709cad76ff05c3134c8430b36d5f34019b03ca
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43779755"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54606577"
 ---
 # <a name="xaml-and-custom-classes-for-wpf"></a>XAML 及 WPF 的自定义类
 [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] 框架中实现的 XAML 支持定义任何 [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] 语言的自定义类或结构，然后使用 XAML 标记访问类。 通常通过将自定义类型映射到 XAML 命名空间前缀，可在同一标记文件中混合使用 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 定义类型和自定义类型。 本主题讨论将自定义类用作 XAML 元素必须满足的要求。  
@@ -79,7 +79,7 @@ ms.locfileid: "43779755"
   
 -   无需在对象元素语法中指定作为集合对象的对象。 无论何时在采用集合类型的 XAML 中指定属性，该集合类型的状态总是隐式。  
   
--   标记中集合属性的子元素经处理后变成集合的成员。 对集合成员的代码访问通常通过列表/字典方法（例如 `Add`）或通过索引器执行。 但是，XAML 语法不支持方法和索引器（例外：XAML 2009 可支持这些方法，但使用 XAML 2009 会限制可能的 WPF 用法；请参阅 [XAML 2009 语言功能](../../../../docs/framework/xaml-services/xaml-2009-language-features.md)）。 对生成元素树而言，集合显然是非常常见的要求，并且你需要某种方法来填充声明 XAML 中的这些集合。 因此，通过将集合属性的子元素添加到作为集合属性类型值的集合中来对其进行处理。  
+-   标记中集合属性的子元素经处理后变成集合的成员。 对集合成员的代码访问通常通过列表/字典方法（例如 `Add`）或通过索引器执行。 但 XAML 语法不支持方法和索引器 (异常：XAML 2009 可以支持这些方法，但使用 XAML 2009 会限制可能的 WPF 用法;请参阅[XAML 2009 语言功能](../../../../docs/framework/xaml-services/xaml-2009-language-features.md))。 对生成元素树而言，集合显然是非常常见的要求，并且你需要某种方法来填充声明 XAML 中的这些集合。 因此，通过将集合属性的子元素添加到作为集合属性类型值的集合中来对其进行处理。  
   
  .NET Framework XAML 服务实现和 WPF XAML 处理器将以下定义用于组成集合属性的项。 属性的属性类型必须实现以下项之一：  
   
@@ -112,9 +112,9 @@ ms.locfileid: "43779755"
 ## <a name="serializing-xaml"></a>序列化 XAML  
  某些情况下（例如对于控件作者），可能还需要确保任何可在 XAML 中实例化的对象演示文稿也可被序列化到等效的 XAML 标记。 本主题中未介绍序列化要求。 请参阅[控件创作概述](../../../../docs/framework/wpf/controls/control-authoring-overview.md)和[元素树和序列化](../../../../docs/framework/wpf/advanced/element-tree-and-serialization.md)。  
   
-## <a name="see-also"></a>请参阅  
- [XAML 概述 (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)  
- [自定义依赖属性](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md)  
- [控件创作概述](../../../../docs/framework/wpf/controls/control-authoring-overview.md)  
- [基元素概述](../../../../docs/framework/wpf/advanced/base-elements-overview.md)  
- [XAML 加载和依赖项属性](../../../../docs/framework/wpf/advanced/xaml-loading-and-dependency-properties.md)
+## <a name="see-also"></a>请参阅
+- [XAML 概述 (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)
+- [自定义依赖属性](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md)
+- [控件创作概述](../../../../docs/framework/wpf/controls/control-authoring-overview.md)
+- [基元素概述](../../../../docs/framework/wpf/advanced/base-elements-overview.md)
+- [XAML 加载和依赖项属性](../../../../docs/framework/wpf/advanced/xaml-loading-and-dependency-properties.md)

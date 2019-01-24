@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 8241523f-d8e1-4fb6-bf6a-b29bfe07b38a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 009d70423a3eb29c97f3279a288c37623dac927e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: fed8097c472be487256840f289c1d8252d978a93
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33397268"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54637096"
 ---
 # <a name="runtime-directives-rdxml-configuration-file-reference"></a>运行时指令 (rd.xml) 配置文件引用
 运行时指令 (.rd.xml) 文件是一个 XML 配置文件，它指定了指定程序元素是否适用于反射。 运行时指令文件的示例如下所示：  
@@ -459,6 +459,6 @@ ms.locfileid: "33397268"
   
  有关详细信息，请参阅[将 Windows 应用商店应用迁移到 .NET Native](../../../docs/framework/net-native/migrating-your-windows-store-app-to-net-native.md) 中的“序列化程序的差异”一节。  
   
-## <a name="see-also"></a>请参阅  
- [运行时指令元素](../../../docs/framework/net-native/runtime-directive-elements.md)  
- [反射和 .NET Native](../../../docs/framework/net-native/reflection-and-net-native.md)
+## <a name="see-also"></a>请参阅
+- [运行时指令元素](../../../docs/framework/net-native/runtime-directive-elements.md)
+- [反射和 .NET Native](../../../docs/framework/net-native/reflection-and-net-native.md)

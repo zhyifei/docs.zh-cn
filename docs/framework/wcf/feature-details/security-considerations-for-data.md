@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: a7eb98da-4a93-4692-8b59-9d670c79ffb2
-ms.openlocfilehash: 6471a8a8e257ea3bb6f26a8041694ef25151ad1a
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 5c7451e5e914c372c8631922001cfec5e84a586c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50195939"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54527947"
 ---
 # <a name="security-considerations-for-data"></a>数据的安全考虑事项
 在处理时 Windows Communication Foundation (WCF) 中的数据，必须考虑许多种类的威胁。 下表列出了与数据处理相关的最重要的威胁类。 WCF 提供了缓解这些威胁的工具。  
@@ -201,7 +201,7 @@ ms.locfileid: "50195939"
   
  始终允许 <xref:System.Runtime.Serialization.DataContractSerializer> 加载按照协定当前预计加载的类型。 例如，如果数据协定具有一个 `Customer`类型的数据成员，则允许 <xref:System.Runtime.Serialization.DataContractSerializer> 在反序列化该数据成员时加载 `Customer` 类型。  
   
- 此外， <xref:System.Runtime.Serialization.DataContractSerializer> 还支持多态性。 一个数据成员可能声明为 <xref:System.Object>，但传入的数据可能包含一个 `Customer` 实例。 只有当已通过下面某种机制使反序列化程序“知晓”`Customer` 类型时，这种情况才是可能的。  
+ 此外， <xref:System.Runtime.Serialization.DataContractSerializer> 还支持多态性。 一个数据成员可能声明为 <xref:System.Object>，但传入的数据可能包含一个 `Customer` 实例。 只有当已通过下面某种机制使反序列化程序“知晓” `Customer` 类型时，这种情况才是可能的。  
   
 -   应用于类型的<xref:System.Runtime.Serialization.KnownTypeAttribute> 属性。  
   
@@ -223,9 +223,9 @@ ms.locfileid: "50195939"
   
  当编写返回已知类型列表的方法时，或者将一个列表直接传递给 <xref:System.Runtime.Serialization.DataContractSerializer> 构造函数时，应确保准备该列表的代码是安全的，并仅仅作用于受信任的数据。  
   
- 如果在配置中指定已知类型，应确保配置文件是安全的。 应始终在配置中使用强名称（通过指定该类型所在的已签名程序集的公钥），但不要指定要加载的类型的版本。 类型加载程序在可能的情况下会自动选取最新版本。 如果您在配置中指定特定版本，将面临以下风险：类型可能具有一个可在将来的版本中修复的安全漏洞，但仍然加载有漏洞的版本，因为在配置中显式指定了它。  
+ 如果在配置中指定已知类型，应确保配置文件是安全的。 应始终在配置中使用强名称（通过指定该类型所在的已签名程序集的公钥），但不要指定要加载的类型的版本。 类型加载程序在可能的情况下会自动选取最新版本。 如果在配置中指定的特定版本，则运行以下风险：类型可能具有可能的未来版本中修复的安全漏洞，但显式指定配置中的因此，仍将加载的易受攻击的版本。  
   
- 具有过多的已知类型有另一个后果： <xref:System.Runtime.Serialization.DataContractSerializer> 将在应用程序域中创建序列化/反序列化代码的缓存，其中对于每个必须序列化和反序列化的类型，都有一个相应的项。 只要应用程序域在运行，就绝不会清除这一缓存。 因此，知道应用程序使用许多已知类型的攻击者可能导致所有这些类型都反序列化，从而导致缓存消耗了极大的内存量。  
+ 具有过多的已知的类型有另一个后果：<xref:System.Runtime.Serialization.DataContractSerializer>应用程序域，它必须序列化和反序列化每种类型的条目中创建的序列化/反序列化代码缓存。 只要应用程序域在运行，就绝不会清除这一缓存。 因此，知道应用程序使用许多已知类型的攻击者可能导致所有这些类型都反序列化，从而导致缓存消耗了极大的内存量。  
   
 ### <a name="preventing-types-from-being-in-an-unintended-state"></a>防止类型处于意外状态  
  类型可能具有必须强制执行的内部一致性约束。 在反序列化期间，必须小心，以避免破坏这些约束。  
@@ -254,7 +254,7 @@ ms.locfileid: "50195939"
   
 -   使用标有 <xref:System.SerializableAttribute> 属性的旧式类型时应小心。 它们中的许多都设计用于 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 远程处理以便仅使用受信任的数据。 标有此属性的现有类型在设计时可能并未考虑状态安全性。  
   
--   考虑到状态安全性，不要依赖 <xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A> 属性 (Attribute) 的 `DataMemberAttribute` 属性 (Property) 来保证数据的存在。 数据可能总是 `null`、`zero` 或 `invalid`。  
+-   考虑到状态安全性，不要依赖 <xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A> 属性 (Attribute) 的 `DataMemberAttribute` 属性 (Property) 来保证数据的存在。 数据可能总是 `null`、 `zero`或 `invalid`。  
   
 -   在未首先验证的情况下，绝不要信任从不受信任的数据源反序列化的对象图。 每个单独的对象可能都处于一致状态，但对象图整体有可能处于不一致状态。 此外，即使禁用对象图保存模式，反序列化的对象图也可能具有对同一对象的多个引用或者具有循环引用。 有关详细信息，请参阅[序列化和反序列化](../../../../docs/framework/wcf/feature-details/serialization-and-deserialization.md)。  
   
@@ -353,8 +353,8 @@ ms.locfileid: "50195939"
   
 -   通常，当使用接受配额的任何组件时，都应了解它的安全含义并将它设置为一个安全值。  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Runtime.Serialization.DataContractSerializer>  
- <xref:System.Xml.XmlDictionaryReader>  
- <xref:System.Xml.Serialization.XmlSerializer>  
- [数据协定已知类型](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.Runtime.Serialization.DataContractSerializer>
+- <xref:System.Xml.XmlDictionaryReader>
+- <xref:System.Xml.Serialization.XmlSerializer>
+- [数据协定已知类型](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)

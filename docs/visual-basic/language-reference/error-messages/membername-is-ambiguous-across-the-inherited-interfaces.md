@@ -7,21 +7,21 @@ f1_keywords:
 helpviewer_keywords:
 - BC30685
 ms.assetid: 756add7a-23d5-4b4f-a48d-8297d6459c73
-ms.openlocfilehash: 23d1a11bcee2a4faae40f2683d109d5820ee5f9c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e6d6a82331185060d6f08c3375dc5a628b65df1a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33585296"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54506278"
 ---
 # <a name="39ltmembernamegt39-is-ambiguous-across-the-inherited-interfaces-39ltinterfacename1gt39-and-39ltinterfacename2gt39"></a>&#39;&lt;membername&gt; &#39;继承的接口之间不明确&#39; &lt;interfacename1&gt; &#39;和&#39; &lt;interfacename2&gt;&#39;
-接口继承自多个接口具有相同名称的两个或多个成员。  
+接口从多个接口继承具有相同名称的两个或多个成员。  
   
  **错误 ID:** BC30685  
   
 ## <a name="to-correct-this-error"></a>更正此错误  
   
--   你想要使用; 的基接口将值强制转换例如：  
+-   将值转换为你想要使用; 的基接口例如：  
   
     ```  
     Interface Left  
@@ -46,5 +46,5 @@ ms.locfileid: "33585296"
     End Module  
     ```  
   
-## <a name="see-also"></a>请参阅  
- [接口](../../../visual-basic/programming-guide/language-features/interfaces/index.md)
+## <a name="see-also"></a>请参阅
+- [接口](../../../visual-basic/programming-guide/language-features/interfaces/index.md)
