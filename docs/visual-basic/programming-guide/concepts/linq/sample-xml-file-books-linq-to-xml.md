@@ -1,18 +1,18 @@
 ---
-title: 示例 XML 文件：书籍 (LINQ to XML)
+title: 示例 XML 文件：图书 (LINQ to XML)
 ms.date: 07/20/2015
 ms.assetid: 27ca5847-2289-40c0-8331-ede67ec59d1c
-ms.openlocfilehash: 5d68b7830994bdd51f59725d20ffcab9b3769b2b
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 3f99541f9c0aaafe25fe1fd09510b93c8e815eaf
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43394342"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54525750"
 ---
-# <a name="sample-xml-file-books-linq-to-xml"></a><span data-ttu-id="8b8a3-102">示例 XML 文件：书籍 (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="8b8a3-102">Sample XML File: Books (LINQ to XML)</span></span>
-<span data-ttu-id="8b8a3-103">下面的 XML 文件用在 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 文档的很多示例中。</span><span class="sxs-lookup"><span data-stu-id="8b8a3-103">The following XML file is used in various examples in the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] documentation.</span></span> <span data-ttu-id="8b8a3-104">该文件包含有关图书的信息。</span><span class="sxs-lookup"><span data-stu-id="8b8a3-104">The file contains information about books.</span></span>  
+# <a name="sample-xml-file-books-linq-to-xml"></a><span data-ttu-id="5e58a-102">示例 XML 文件：图书 (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="5e58a-102">Sample XML File: Books (LINQ to XML)</span></span>
+<span data-ttu-id="5e58a-103">下面的 XML 文件用在 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 文档的很多示例中。</span><span class="sxs-lookup"><span data-stu-id="5e58a-103">The following XML file is used in various examples in the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] documentation.</span></span> <span data-ttu-id="5e58a-104">该文件包含有关图书的信息。</span><span class="sxs-lookup"><span data-stu-id="5e58a-104">The file contains information about books.</span></span>  
   
-## <a name="booksxml"></a><span data-ttu-id="8b8a3-105">books.xml</span><span class="sxs-lookup"><span data-stu-id="8b8a3-105">books.xml</span></span>  
+## <a name="booksxml"></a><span data-ttu-id="5e58a-105">books.xml</span><span class="sxs-lookup"><span data-stu-id="5e58a-105">books.xml</span></span>  
   
 ```xml  
 <?xml version="1.0"?>  
@@ -39,5 +39,5 @@ ms.locfileid: "43394342"
 </Catalog>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="8b8a3-106">请参阅</span><span class="sxs-lookup"><span data-stu-id="8b8a3-106">See Also</span></span>  
- [<span data-ttu-id="8b8a3-107">示例 XML 文档 (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="8b8a3-107">Sample XML Documents (LINQ to XML)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)
+## <a name="see-also"></a><span data-ttu-id="5e58a-106">请参阅</span><span class="sxs-lookup"><span data-stu-id="5e58a-106">See also</span></span>
+- [<span data-ttu-id="5e58a-107">示例 XML 文档 (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="5e58a-107">Sample XML Documents (LINQ to XML)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)

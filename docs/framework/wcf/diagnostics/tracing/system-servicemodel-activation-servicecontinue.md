@@ -2,20 +2,20 @@
 title: System.ServiceModel.Activation.ServiceContinue
 ms.date: 03/30/2017
 ms.assetid: 37a43c8e-493d-4e35-a24f-ab0d4c6d5ce7
-ms.openlocfilehash: 6340bec52c06e57d90fb7e024c07b66fd4704ba7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: cf1605cdc13b8d5a8af74aa8e37117b754094e66
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33476195"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54686291"
 ---
-# <a name="systemservicemodelactivationservicecontinue"></a><span data-ttu-id="23319-102">System.ServiceModel.Activation.ServiceContinue</span><span class="sxs-lookup"><span data-stu-id="23319-102">System.ServiceModel.Activation.ServiceContinue</span></span>
-<span data-ttu-id="23319-103">System.ServiceModel.Activation.ServiceContinue</span><span class="sxs-lookup"><span data-stu-id="23319-103">System.ServiceModel.Activation.ServiceContinue</span></span>  
+# <a name="systemservicemodelactivationservicecontinue"></a><span data-ttu-id="1f2f9-102">System.ServiceModel.Activation.ServiceContinue</span><span class="sxs-lookup"><span data-stu-id="1f2f9-102">System.ServiceModel.Activation.ServiceContinue</span></span>
+<span data-ttu-id="1f2f9-103">System.ServiceModel.Activation.ServiceContinue</span><span class="sxs-lookup"><span data-stu-id="1f2f9-103">System.ServiceModel.Activation.ServiceContinue</span></span>  
   
-## <a name="description"></a><span data-ttu-id="23319-104">描述</span><span class="sxs-lookup"><span data-stu-id="23319-104">Description</span></span>  
- <span data-ttu-id="23319-105">接收到继续服务的请求。</span><span class="sxs-lookup"><span data-stu-id="23319-105">A request to continue the service was received.</span></span>  
+## <a name="description"></a><span data-ttu-id="1f2f9-104">描述</span><span class="sxs-lookup"><span data-stu-id="1f2f9-104">Description</span></span>  
+ <span data-ttu-id="1f2f9-105">接收到继续服务的请求。</span><span class="sxs-lookup"><span data-stu-id="1f2f9-105">A request to continue the service was received.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="23319-106">请参阅</span><span class="sxs-lookup"><span data-stu-id="23319-106">See Also</span></span>  
- [<span data-ttu-id="23319-107">跟踪</span><span class="sxs-lookup"><span data-stu-id="23319-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [<span data-ttu-id="23319-108">使用跟踪来排除应用程序故障</span><span class="sxs-lookup"><span data-stu-id="23319-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- [<span data-ttu-id="23319-109">管理和诊断</span><span class="sxs-lookup"><span data-stu-id="23319-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="1f2f9-106">请参阅</span><span class="sxs-lookup"><span data-stu-id="1f2f9-106">See also</span></span>
+- [<span data-ttu-id="1f2f9-107">跟踪</span><span class="sxs-lookup"><span data-stu-id="1f2f9-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
+- [<span data-ttu-id="1f2f9-108">使用跟踪来排除应用程序故障</span><span class="sxs-lookup"><span data-stu-id="1f2f9-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
+- [<span data-ttu-id="1f2f9-109">管理和诊断</span><span class="sxs-lookup"><span data-stu-id="1f2f9-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
