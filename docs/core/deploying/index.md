@@ -5,12 +5,6 @@ author: rpetrusha
 ms.author: ronpet
 ms.date: 12/03/2018
 ms.custom: seodec18
-ms.openlocfilehash: bb520d852462b0bc12df46fd178d09da36b7ccfe
-ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
-ms.translationtype: HT
-ms.contentlocale: zh-CN
-ms.lasthandoff: 01/19/2019
-ms.locfileid: "54415684"
 ---
 # <a name="net-core-application-deployment"></a>.NET Core 应用程序部署
 
@@ -98,7 +92,7 @@ FDD 和 SCD 部署使用单独的主机可执行文件，使你可以使用发�
 
 ## <a name="see-also"></a>请参阅
 
-* [使用 CLI 工具部署 .NET Core 应用程序](deploy-with-cli.md)
-* [使用 Visual Studio 部署 .NET Core 应用程序](deploy-with-vs.md)
-* [包、元包和框架](../packages.md)
-* [.NET Core 运行时标识符 (RID) 目录](../rid-catalog.md)
+- [使用 CLI 工具部署 .NET Core 应用程序](deploy-with-cli.md)
+- [使用 Visual Studio 部署 .NET Core 应用程序](deploy-with-vs.md)
+- [包、元包和框架](../packages.md)
+- [.NET Core 运行时标识符 (RID) 目录](../rid-catalog.md)

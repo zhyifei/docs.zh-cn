@@ -1,13 +1,7 @@
 ---
-title: 使用 Async 和 Await 的异步编程 (C#)
+title: '使用 Async 和 Await 的异步编程 (C#)'
 ms.date: 05/22/2017
 ms.assetid: 9bcf896a-5826-4189-8c1a-3e35fa08243a
-ms.openlocfilehash: d46e499abb14964407773eca176ba0de7b43ffe2
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
-ms.translationtype: HT
-ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53236331"
 ---
 # <a name="asynchronous-programming-with-async-and-await-c"></a>使用 Async 和 Await 的异步编程 (C#)
 通过使用异步编程，你可以避免性能瓶颈并增强应用程序的总体响应能力。 但是，编写异步应用程序的传统技术可能比较复杂，使它们难以编写、调试和维护。  
@@ -335,7 +329,7 @@ namespace AsyncFirstExample
   
 ## <a name="see-also"></a>请参阅
 
-- [async](../../../../csharp/language-reference/keywords/async.md)  
-- [await](../../../../csharp/language-reference/keywords/await.md)  
-- [异步编程](../../../../csharp/async.md)  
-- [异步概述](../../../../standard/async.md)  
+- [async](../../../../csharp/language-reference/keywords/async.md)
+- [await](../../../../csharp/language-reference/keywords/await.md)
+- [异步编程](../../../../csharp/async.md)
+- [异步概述](../../../../standard/async.md)

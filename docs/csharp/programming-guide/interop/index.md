@@ -1,19 +1,13 @@
 ---
-title: 互操作性 - C# 编程指南
+title: '互操作性 - C# 编程指南'
 ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
-- COM interop
-- interoperability
-- platform invoke, accessing APIs with C#
-- C# language, interoperability
+  - COM interop
+  - interoperability
+  - 'platform invoke, accessing APIs with C#'
+  - 'C# language, interoperability'
 ms.assetid: 238bb95a-e962-4026-bbd5-197055bdb8ee
-ms.openlocfilehash: f3cbfe564fb5820c9e0fa77b75f76be36dd718a4
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
-ms.translationtype: HT
-ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53235002"
 ---
 # <a name="interoperability-c-programming-guide"></a>互操作性（C# 编程指南）
 借助互操作性，可以保留和利用对非托管代码的现有投资工作。 在公共语言运行时 (CLR) 控制下运行的代码称为*托管代码*，不在 CLR 控制下运行的代码称为*非托管代码*。 例如，COM、COM+、C++ 组件、ActiveX 组件和 Microsoft Win32 API 都是非托管代码。  
@@ -45,7 +39,7 @@ ms.locfileid: "53235002"
   
 ## <a name="see-also"></a>请参阅
 
-- <xref:System.Runtime.InteropServices.Marshal.ReleaseComObject%2A?displayProperty=nameWithType>  
-- [C# 编程指南](../../../csharp/programming-guide/index.md)  
-- [与非托管代码交互操作](../../../../docs/framework/interop/index.md)  
+- <xref:System.Runtime.InteropServices.Marshal.ReleaseComObject%2A?displayProperty=nameWithType>
+- [C# 编程指南](../../../csharp/programming-guide/index.md)
+- [与非托管代码交互操作](../../../../docs/framework/interop/index.md)
 - [演练：Office 编程](../../../csharp/programming-guide/interop/walkthrough-office-programming.md)

@@ -1,19 +1,13 @@
 ---
-title: C# 6.0 草稿语言规范
+title: 'C# 6.0 草稿语言规范'
 ms.date: 05/22/2018
 ms.topic: language-reference
 helpviewer_keywords:
-- C# language, specification
-- what's new [C#], language specification
-- Visual C#, C# language specification
-- language specification [C#]
+  - 'C# language, specification'
+  - 'what''s new [C#], language specification'
+  - 'Visual C#, C# language specification'
+  - 'language specification [C#]'
 ms.assetid: e5d5a5cc-636b-4bff-b9c8-a8edc6207c22
-ms.openlocfilehash: 0a108e9e625fed3801c283c84a58ea0b503101ff
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
-ms.translationtype: HT
-ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53147940"
 ---
 # <a name="c-60-draft-language-specification"></a>C# 6.0 草稿语言规范
 
@@ -27,7 +21,7 @@ C# 语言规范是 C# 语法和用法的权威来源。 此规范包含有关语
 
 ## <a name="see-also"></a>请参阅
 
-- [C# 参考](../index.md)  
+- [C# 参考](../index.md)
 - [C# 编程指南](../../programming-guide/index.md)
 
 >[!div class="step-by-step"]

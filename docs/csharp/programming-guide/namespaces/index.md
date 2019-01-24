@@ -1,17 +1,11 @@
 ---
-title: 命名空间 - C# 编程指南
+title: '命名空间 - C# 编程指南'
 ms.custom: seodec18
 ms.date: 08/21/2018
 helpviewer_keywords:
-- C# language, namespaces
-- namespaces [C#]
+  - 'C# language, namespaces'
+  - 'namespaces [C#]'
 ms.assetid: b1c4ab46-3fad-4ffa-9deb-dd50a2d8c65a
-ms.openlocfilehash: 4abdf8a0008ce50a89eb5f3ad3512a9579dc832a
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
-ms.translationtype: HT
-ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53236747"
 ---
 # <a name="namespaces-c-programming-guide"></a>命名空间（C# 编程指南）
 
@@ -51,9 +45,9 @@ ms.locfileid: "53236747"
 - [使用命名空间](using-namespaces.md)
 - [如何：使用全局命名空间别名](how-to-use-the-global-namespace-alias.md)
 - [如何：使用 My 命名空间](how-to-use-the-my-namespace.md)
-- [C# 编程指南](../index.md)  
+- [C# 编程指南](../index.md)
 - [标识符名称](../inside-a-program/identifier-names.md)
-- [命名空间关键字](../../language-reference/keywords/namespace-keywords.md)  
-- [using 指令](../../language-reference/keywords/using-directive.md)  
-- [::运算符](../../language-reference/operators/namespace-alias-qualifer.md)  
+- [命名空间关键字](../../language-reference/keywords/namespace-keywords.md)
+- [using 指令](../../language-reference/keywords/using-directive.md)
+- [::运算符](../../language-reference/operators/namespace-alias-qualifer.md)
 - [。运算符](../../language-reference/operators/member-access-operator.md)

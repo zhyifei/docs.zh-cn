@@ -2,23 +2,17 @@
 title: .NET 应用中的资源
 ms.date: 07/25/2018
 helpviewer_keywords:
-- deploying applications [.NET Framework], resources
-- deploying applications [.NET Core], resources
-- application resources
-- resource files
-- satellite assemblies
-- localization
-- packaging application resources
-- localizing resources
+  - 'deploying applications [.NET Framework], resources'
+  - 'deploying applications [.NET Core], resources'
+  - application resources
+  - resource files
+  - satellite assemblies
+  - localization
+  - packaging application resources
+  - localizing resources
 ms.assetid: 8ad495d4-2941-40cf-bf64-e82e85825890
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4bc91f5f3872ee5f4a55f3e3cd9e0e9de9bcc422
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
-ms.translationtype: HT
-ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43524724"
 ---
 # <a name="resources-in-net-apps"></a>.NET 应用中的资源
 几乎每一个生产性应用都需要使用资源。 资源是在逻辑上随应用部署的任何不可执行的数据。 资源可以在应用中作为错误消息显示，或者作为用户界面的一部分显示。 资源可以包含多种形式的数据，包括字符串、图像和持久的对象。 （若要将持久对象写入资源文件，这些对象必须是可序列化的。）通过在资源文件中存储数据，无需重新编译整个应用即可更改这些数据。 还可以将数据存储在一个位置，而无需依赖存储在多个位置的硬编码数据。  
@@ -60,11 +54,11 @@ ms.locfileid: "43524724"
   
 -   <xref:System.Resources.ResXResourceSet> 类 - 可用于将 XML 资源文件中的所有项目都检索到内存中。  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Globalization.CultureInfo>  
- <xref:System.Globalization.CultureInfo.CurrentUICulture%2A?displayProperty=nameWithType>  
- [应用程序要点](../../../docs/standard/application-essentials.md)  
- [创建资源文件](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md)  
- [打包和部署资源](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md)  
- [创建附属程序集](../../../docs/framework/resources/creating-satellite-assemblies-for-desktop-apps.md)  
- [检索资源](../../../docs/framework/resources/retrieving-resources-in-desktop-apps.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.Globalization.CultureInfo>
+- <xref:System.Globalization.CultureInfo.CurrentUICulture%2A?displayProperty=nameWithType>
+- [应用程序要点](../../../docs/standard/application-essentials.md)
+- [创建资源文件](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md)
+- [打包和部署资源](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md)
+- [创建附属程序集](../../../docs/framework/resources/creating-satellite-assemblies-for-desktop-apps.md)
+- [检索资源](../../../docs/framework/resources/retrieving-resources-in-desktop-apps.md)

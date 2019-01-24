@@ -1,20 +1,14 @@
 ---
-title: C# 编程指南
+title: 'C# 编程指南'
 ms.date: 05/02/2017
 f1_keywords:
-- cs.langref
+  - cs.langref
 helpviewer_keywords:
-- reference tables [C#]
-- C# language, programming guide
-- Visual C#, programming concepts
-- C# language, concepts
+  - 'reference tables [C#]'
+  - 'C# language, programming guide'
+  - 'Visual C#, programming concepts'
+  - 'C# language, concepts'
 ms.assetid: ac0f23a2-6bf3-4077-be99-538ae5fd3bc5
-ms.openlocfilehash: 3827ebfe401938e4fa1b530672352123ae2ac826
-ms.sourcegitcommit: 0fbd677fcdc5bf46c4d827f492eaaa970edc07b6
-ms.translationtype: HT
-ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2018
-ms.locfileid: "50235734"
 ---
 # <a name="c-programming-guide"></a>C# 编程指南
 此部分详细介绍了 C# 语言主要功能，以及通过 .NET Framework 可以在 C# 中使用的功能。  
@@ -87,5 +81,5 @@ ms.locfileid: "50235734"
   
 ## <a name="see-also"></a>请参阅
 
-- [C# 参考](../../csharp/language-reference/index.md)  
+- [C# 参考](../../csharp/language-reference/index.md)
 - [C#](../../csharp/index.md)

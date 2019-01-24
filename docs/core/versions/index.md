@@ -4,13 +4,8 @@ description: 本文介绍了 .NET Core SDK 和运行时的版本控制方式（�
 author: bleroy
 ms.date: 07/26/2018
 ms.custom: seodec18
-ms.openlocfilehash: e4ab5e3a6dd487437e267aec042639c70fdc61ad
-ms.sourcegitcommit: 8598d446303b545eed2d520a6ccd061c1a7d00cb
-ms.translationtype: HT
-ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53334803"
 ---
+
 # <a name="overview-of-how-net-core-is-versioned"></a>.NET Core 的版本控制方式概述
 
 .NET Core 是指 .NET Core 运行时和 .NET Core SDK，它包含开发应用程序所需的工具。 .NET Core SDK 可与任何以前版本的 .NET Core 运行时一起使用。 本文介绍运行时和 SDK 版本策略。 有关 .NET Standard 版本号的说明，请参阅介绍 [.NET Standar](../../standard/net-standard.md#net-implementation-support) 的文章。
@@ -106,8 +101,8 @@ MAJOR.MINOR.PATCH[-PRERELEASE-BUILDNUMBER]
 
 ## <a name="see-also"></a>请参阅
 
-* [目标框架](../../standard/frameworks.md)  
-* [.NET Core 分发打包](../build/distribution-packaging.md)  
-* [.NET Core 支持生命周期简报](https://www.microsoft.com/net/core/support)  
-* [.NET Core 2 和版本绑定](https://github.com/dotnet/designs/issues/3)  
-* [.NET Core 的 Docker 映像](https://hub.docker.com/r/microsoft/dotnet/)
+- [目标框架](../../standard/frameworks.md)
+- [.NET Core 分发打包](../build/distribution-packaging.md)
+- [.NET Core 支持生命周期简报](https://www.microsoft.com/net/core/support)
+- [.NET Core 2 和版本绑定](https://github.com/dotnet/designs/issues/3)
+- [.NET Core 的 Docker 映像](https://hub.docker.com/r/microsoft/dotnet/)
