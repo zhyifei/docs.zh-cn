@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - configuring services [WCF]
 ms.assetid: c9c8cd32-2c9d-4541-ad0d-16dff6bd2a00
-ms.openlocfilehash: a38b4202ba3402c2dff3884c1560752d0353e0ba
-ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
+ms.openlocfilehash: 8d138bae794cac00b1542f63153f343fb95a24c7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54029666"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54717397"
 ---
 # <a name="configuring-services-using-configuration-files"></a>使用配置文件配置服务
 使用配置文件配置 Windows Communication Foundation (WCF) 服务使你能够灵活提供终结点，并设计时在部署时而非在服务行为数据。 本主题概述了当前可用的主要技术。  
@@ -96,24 +96,24 @@ ms.locfileid: "54029666"
 ### <a name="the-bindings-element"></a>\<绑定 > 元素  
  `bindings` 元素包含可由任何服务中定义的任何终结点使用的所有绑定的规范。  
   
- [\<绑定 >](../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)  
+ [\<bindings>](../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)  
   
 ### <a name="the-binding-element"></a>\<绑定 > 元素  
  在 `binding` 元素中包含的 `bindings` 元素可以是系统提供的绑定之一（请参阅 [System-Provided Bindings](../../../docs/framework/wcf/system-provided-bindings.md)），也可以是自定义绑定（请参阅 [Custom Bindings](../../../docs/framework/wcf/extending/custom-bindings.md)）。 `binding` 元素具有 `name` 属性，此属性将绑定与 `bindingConfiguration` 元素的 `endpoint` 属性中指定的终结点相关联。 如果未指定任何名称，则该绑定对应于该绑定类型的默认值。  
   
  有关配置服务和客户端的详细信息，请参阅[配置 Windows Communication Foundation 应用程序](https://msdn.microsoft.com/library/13cb368e-88d4-4c61-8eed-2af0361c6d7a)。  
   
- [\<绑定 >](../../../docs/framework/misc/binding.md)  
+ [\<binding>](../../../docs/framework/misc/binding.md)  
   
 ### <a name="the-behaviors-element"></a>\<行为 > 元素  
  这是定义服务行为的 `behavior` 元素的容器元素。  
   
- [\<行为 >](../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md)  
+ [\<behaviors>](../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md)  
   
 ### <a name="the-behavior-element"></a>\<行为 > 元素  
  每个 `behavior` 元素均由 `name` 属性进行标识，并提供系统提供的行为（例如 <`throttling`>）或自定义行为。 如果未提供任何名称，则该行为元素对应于默认服务或终结点行为。  
   
- [\<行为 >](../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-servicebehaviors.md)  
+ [\<behavior>](../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-servicebehaviors.md)  
   
 ## <a name="how-to-use-binding-and-behavior-configurations"></a>如何使用绑定和行为配置  
  WCF 更便于使用的参考系统配置中的终结点之间共享配置。 与绑定相关的配置值在 `bindingConfiguration` 部分的 `<binding>` 元素中进行分组，而不是直接将配置值分配到终结点。 绑定配置是一组命名的绑定设置。 然后，终结点可以通过名称来引用 `bindingConfiguration` 。  
@@ -262,8 +262,8 @@ ms.locfileid: "54029666"
   
  如果子行为集合包含一个已显示在父行为集合中的行为，则子行为将重写父行为。 因此，如果父行为集合具有`<serviceMetadata httpGetEnabled="False" />`和子行为集合具有`<serviceMetadata httpGetEnabled="True" />`、 子行为将重写行为集合中的父行为并且 httpGetEnabled 将为"true"。  
   
-## <a name="see-also"></a>请参阅  
- [简化配置](../../../docs/framework/wcf/simplified-configuration.md)  
- [配置 Windows Communication Foundation 应用程序](https://msdn.microsoft.com/library/13cb368e-88d4-4c61-8eed-2af0361c6d7a)  
- [\<service>](../../../docs/framework/configure-apps/file-schema/wcf/service.md)  
- [\<绑定 >](../../../docs/framework/misc/binding.md)
+## <a name="see-also"></a>请参阅
+- [简化配置](../../../docs/framework/wcf/simplified-configuration.md)
+- [配置 Windows Communication Foundation 应用程序](https://msdn.microsoft.com/library/13cb368e-88d4-4c61-8eed-2af0361c6d7a)
+- [\<service>](../../../docs/framework/configure-apps/file-schema/wcf/service.md)
+- [\<binding>](../../../docs/framework/misc/binding.md)

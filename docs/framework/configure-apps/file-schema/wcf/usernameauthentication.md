@@ -1,23 +1,23 @@
 ---
-title: '&lt;UserNameAuthentication&gt;'
+title: '&lt;userNameAuthentication&gt;'
 ms.date: 03/30/2017
 ms.assetid: 24d8b398-770f-418f-ba23-c4325419cfa6
-ms.openlocfilehash: 3ade257a81e218fa123a08624123af614df84956
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 1b8a85a3b2699aa88db24d1f7afee3de67dbf39b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54150040"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54656625"
 ---
-# <a name="ltusernameauthenticationgt"></a>&lt;UserNameAuthentication&gt;
+# <a name="ltusernameauthenticationgt"></a>&lt;userNameAuthentication&gt;
 指定基于用户名和密码的服务凭据。  
   
  \<system.ServiceModel>  
-\<行为 >  
+\<behaviors>  
 \<serviceBehaviors>  
-\<行为 >  
+\<behavior>  
 \<serviceCredentials>  
-\<userNameAuthentication >  
+\<userNameAuthentication>  
   
 ## <a name="syntax"></a>语法  
   
@@ -44,7 +44,7 @@ ms.locfileid: "54150040"
 |`includeWindowsGroups`|一个布尔值，指定 Windows 组是否包含在安全上下文中。 默认值为 `true`。<br /><br /> 将此属性设置为 `true` 会影响性能，因为这会导致完全组扩展。 如果不需要建立用户所属组的列表，请将此属性设置为 `false`。|  
 |`maxCacheLogonTokens`|一个整数，指定要缓存的最大登录令牌数。 此值应大于零。 默认值为 128。|  
 |`membershipProviderName`|如果将绑定的 `clientCredentialType` 属性设置为 `username`，则用户名将映射到 Windows 帐户。 可以使用此属性重写此行为，此属性是一个包含 <xref:System.Web.Security.MembershipProvider> 值的名称的字符串，该值提供相关的密码验证机制。|  
-|`userNamePasswordValidationMode`|指定对用户名密码进行验证的方式。 有效值为：<br /><br /> -Windows<br />-MembershipProvider<br />自定义<br /><br /> 默认值为 Windows。 此属性的类型为 <xref:System.ServiceModel.Security.UserNamePasswordValidationMode>。|  
+|`userNamePasswordValidationMode`|指定对用户名密码进行验证的方式。 有效值为：<br /><br /> -   Windows<br />-   MembershipProvider<br />自定义<br /><br /> 默认值为 Windows。 此属性的类型为 <xref:System.ServiceModel.Security.UserNamePasswordValidationMode>。|  
   
 ### <a name="child-elements"></a>子元素  
  无。  
@@ -60,8 +60,8 @@ ms.locfileid: "54150040"
   
  如果没有配置服务所用的绑定，以使用 Windows 用户名/密码身份验证，则忽略与登录令牌的缓存相关的设置。 这些设置包括 `cacheLogonTokenLifetime`、`cacheLogonTokens` 和 `maxCacheLogonTokens`。  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.ServiceModel.Configuration.UserNameServiceElement>  
- <xref:System.ServiceModel.Description.ServiceCredentials.UserNameAuthentication%2A>  
- <xref:System.ServiceModel.Security.UserNamePasswordServiceCredential>  
- <xref:System.ServiceModel.Configuration.ServiceCredentialsElement.UserNameAuthentication%2A>
+## <a name="see-also"></a>请参阅
+- <xref:System.ServiceModel.Configuration.UserNameServiceElement>
+- <xref:System.ServiceModel.Description.ServiceCredentials.UserNameAuthentication%2A>
+- <xref:System.ServiceModel.Security.UserNamePasswordServiceCredential>
+- <xref:System.ServiceModel.Configuration.ServiceCredentialsElement.UserNameAuthentication%2A>

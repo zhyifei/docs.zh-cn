@@ -9,15 +9,15 @@ helpviewer_keywords:
 - data binding [WPF], converting bound data
 - binding data [WPF], converting bound data
 ms.assetid: b00aaa19-c6df-4c3b-a9fd-88a0b488df2b
-ms.openlocfilehash: 526305f32280fb75e95538b9014c34c11ed8bffa
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5069b6d6b7ded52011ec4c65ca2c47e41bba2ece
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33556635"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54705713"
 ---
 # <a name="how-to-convert-bound-data"></a>如何：转换绑定的数据
-此示例演示如何将转换应用于在绑定中使用的数据。  
+此示例演示如何将应用到绑定中使用的数据转换。  
   
  若要在绑定期间转换数据，必须创建一个类以实现 <xref:System.Windows.Data.IValueConverter> 接口，其中包括 <xref:System.Windows.Data.IValueConverter.Convert%2A> 和 <xref:System.Windows.Data.IValueConverter.ConvertBack%2A> 方法。  
   
@@ -27,17 +27,17 @@ ms.locfileid: "33556635"
  [!code-csharp[DataBindingLab#18](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DataBindingLab/CSharp/DateConverter.cs#18)]
  [!code-vb[DataBindingLab#18](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DataBindingLab/VisualBasic/DateConverter.vb#18)]  
   
- 一旦创建了转换器后，可以将其添加为中的资源你[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]文件。 在下面的示例中， *src*映射到的命名空间*DateConverter*定义。  
+ 创建一个转换器后，可以将其添加为中的资源在[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]文件。 在以下示例中， *src*映射到在其中命名空间*DateConverter*定义。  
   
  [!code-xaml[DataBindingLab#15](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DataBindingLab/CSharp/DataBindingLabApp.xaml#15)]  
   
- 最后，你可以使用以下语法你绑定中使用转换器。 在下面的示例中的文本内容<xref:System.Windows.Controls.TextBlock>绑定到*StartDate*，这是外部数据源的属性。  
+ 最后，您可以使用以下语法在绑定中使用转换器。 在下面的示例中，文本的内容<xref:System.Windows.Controls.TextBlock>绑定到*StartDate*，这是外部数据源属性。  
   
  [!code-xaml[DataBindingLab#17](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DataBindingLab/CSharp/DataBindingLabApp.xaml#17)]  
   
  上面的示例引用的样式资源在一个未在此主题中列出的资源部分中定义。  
   
-## <a name="see-also"></a>请参阅  
- [实现绑定验证](../../../../docs/framework/wpf/data/how-to-implement-binding-validation.md)  
- [数据绑定概述](../../../../docs/framework/wpf/data/data-binding-overview.md)  
- [帮助主题](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)
+## <a name="see-also"></a>请参阅
+- [实现绑定验证](../../../../docs/framework/wpf/data/how-to-implement-binding-validation.md)
+- [数据绑定概述](../../../../docs/framework/wpf/data/data-binding-overview.md)
+- [帮助主题](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)

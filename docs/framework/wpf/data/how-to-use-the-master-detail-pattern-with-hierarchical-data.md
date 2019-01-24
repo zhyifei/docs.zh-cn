@@ -5,20 +5,20 @@ helpviewer_keywords:
 - data binding [WPF], Master-Detail data paradigm
 - Master-Detail data paradigm
 ms.assetid: 11429b9e-058d-4084-bfb6-2cf209c8ddf7
-ms.openlocfilehash: 46733b462861bdac3381cdacb8f2fbe0536d12eb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 36eded28085aec3aaea1a2351ae3babc6ad6c700
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33556791"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54689635"
 ---
 # <a name="how-to-use-the-master-detail-pattern-with-hierarchical-data"></a>如何：对分层数据使用主-从模式
-此示例演示如何实现主 / 从方案。  
+此示例演示如何实现母版-详细信息方案。  
   
 ## <a name="example"></a>示例  
- 在此示例中，`LeagueList` 是 `League` 的集合。 每个 `League` 有一个 `Name` 和一个 `Division` 的集合，每个 `Division` 有一个名称和一个 `Team` 的集合。 每个 `Team` 有一个团队名称。 
+ 在此示例中，`LeagueList` 是 `Leagues` 的集合。 每个 `League` 有一个 `Name` 和一个 `Divisions` 的集合，每个 `Division` 有一个名称和一个 `Teams` 的集合。 每个 `Team` 有一个团队名称。  
   
-[!code-xaml[MasterDetail#HowTo1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/MasterDetail/VisualBasic/Page1.xaml#howto1)]  
+ [!code-xaml[MasterDetail#HowTo1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/MasterDetail/VisualBasic/Page1.xaml#howto1)]  
 [!code-xaml[MasterDetail#HowTo2](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/MasterDetail/VisualBasic/Page1.xaml#howto2)]  
   
  下面是该示例的一个屏幕快照。 `Divisions` 列表框<xref:System.Windows.Controls.ListBox>自动跟踪 `Leagues` 列表框<xref:System.Windows.Controls.ListBox>中的选择并显示相应的数据。 `Teams` 列表框<xref:System.Windows.Controls.ListBox>跟踪其他两个列表框<xref:System.Windows.Controls.ListBox>控件中的选择。  
@@ -33,9 +33,9 @@ ms.locfileid: "33556791"
   
  使用[!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)]数据时，采用的方法略有不同。 有关示例，请参阅[对分层 XML 数据使用主-从模式](../../../../docs/framework/wpf/data/how-to-use-the-master-detail-pattern-with-hierarchical-xml-data.md)。  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Windows.HierarchicalDataTemplate>  
- [绑定到集合并根据选择的内容显示信息](../../../../docs/framework/wpf/data/how-to-bind-to-a-collection-and-display-information-based-on-selection.md)  
- [数据绑定概述](../../../../docs/framework/wpf/data/data-binding-overview.md)  
- [数据模板化概述](../../../../docs/framework/wpf/data/data-templating-overview.md)  
- [帮助主题](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.Windows.HierarchicalDataTemplate>
+- [绑定到集合并根据选择的内容显示信息](../../../../docs/framework/wpf/data/how-to-bind-to-a-collection-and-display-information-based-on-selection.md)
+- [数据绑定概述](../../../../docs/framework/wpf/data/data-binding-overview.md)
+- [数据模板化概述](../../../../docs/framework/wpf/data/data-templating-overview.md)
+- [帮助主题](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)

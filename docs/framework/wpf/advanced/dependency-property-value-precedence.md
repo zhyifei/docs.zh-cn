@@ -7,12 +7,12 @@ helpviewer_keywords:
 - classes [WPF], owners of dependency properties
 - metadata [WPF], dependency properties
 ms.assetid: 1fbada8e-4867-4ed1-8d97-62c07dad7ebc
-ms.openlocfilehash: 25dfe63a65c3044837beb26ec6c4eaa772c1df1b
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.openlocfilehash: ad5bd74388ab1d4a20e496271fd992b1562587d6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/22/2018
-ms.locfileid: "46696779"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54711270"
 ---
 # <a name="dependency-property-value-precedence"></a>依赖项属性值优先级
 <a name="introduction"></a> 本主题说明 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 属性系统的工作机制如何影响依赖属性的值，并介绍应用于属性有效值的属性系统的各方面所依据的优先级。  
@@ -126,9 +126,9 @@ ms.locfileid: "46696779"
 ## <a name="clearvalue-and-value-precedence"></a>ClearValue 和值优先级  
  <xref:System.Windows.DependencyObject.ClearValue%2A>方法提供了一个有利的途径来清除任何本地应用的值从一个元素设置的依赖项属性。 但是，调用<xref:System.Windows.DependencyObject.ClearValue%2A>并不保证数据的默认值为元数据中建立在注册过程，是的新生效值。 值优先级中的所有其他参与者仍然有效。 只有在本地设置的值才会从优先级序列中删除。 例如，如果您调用<xref:System.Windows.DependencyObject.ClearValue%2A>属性也由主题样式中，设置该属性，然后为新值而不是基于元数据的默认应用的主题值上。 如果你想要获取进程外的所有属性值参与者并将值设置为已注册的元数据默认值，则可以获取默认值明确通过查询依赖属性元数据，然后可以本地使用的默认值将通过调用属性设置<xref:System.Windows.DependencyObject.SetValue%2A>。  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Windows.DependencyObject>  
- <xref:System.Windows.DependencyProperty>  
- [依赖项属性概述](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)  
- [自定义依赖属性](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md)  
- [依赖属性回调和验证](../../../../docs/framework/wpf/advanced/dependency-property-callbacks-and-validation.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.Windows.DependencyObject>
+- <xref:System.Windows.DependencyProperty>
+- [依赖项属性概述](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)
+- [自定义依赖属性](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md)
+- [依赖属性回调和验证](../../../../docs/framework/wpf/advanced/dependency-property-callbacks-and-validation.md)

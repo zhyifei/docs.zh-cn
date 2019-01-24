@@ -8,31 +8,31 @@ helpviewer_keywords:
 - requestCaching element
 - <requestCaching> element
 ms.assetid: 9962a2fe-cbda-41a6-9377-571811eaea84
-ms.openlocfilehash: fecb3c71e0686a557b8a4b0c85b7d91a9846204f
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: e5d74a033b14d5f1b523422d0afd360206c0cb48
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50194964"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54685008"
 ---
 # <a name="ltrequestcachinggt-element-network-settings"></a>&lt;requestCaching&gt;元素 （网络设置）
 控制网络请求的缓存机制。  
   
  \<configuration>  
 \<system.net>  
-\<requestCaching >  
+\<requestCaching>  
   
 ## <a name="syntax"></a>语法  
   
 ```xml  
-      <requestCaching>  
-        isPrivateCache ="true|false"  
-        disableAllCaching="true|false"  
-        defaultPolicyLevel="BypassCache|Default|CacheOnly|CacheIfAvailable|Revalidate|Reload|NoCacheNoStore|Revalidate"  
-        unspecifiedMaximumAge= "d.hh.mm.ss">  
-          <defaultHttpCachePolicy> … </defaultHttpCachePolicy>  
-          <defaultFtpCachePolicy> … </defaultFtpCachePolicy>  
-      </requestCaching>
+<requestCaching  
+  isPrivateCache ="true|false"  
+  disableAllCaching="true|false"  
+  defaultPolicyLevel="BypassCache|Default|CacheOnly|CacheIfAvailable|Revalidate|Reload|NoCacheNoStore|Revalidate"  
+  unspecifiedMaximumAge= "d.hh.mm.ss">  
+    <defaultHttpCachePolicy>...</defaultHttpCachePolicy>  
+    <defaultFtpCachePolicy>...</defaultFtpCachePolicy>  
+</requestCaching>
 ```  
   
 ## <a name="attributes-and-elements"></a>特性和元素  
@@ -49,7 +49,7 @@ ms.locfileid: "50194964"
   
 ## <a name="policylevel-attribute"></a>policyLevel 属性  
   
-|“值”|描述|  
+|值|描述|  
 |-----------|-----------------|  
 |`Default`|如果资源是最新、 内容长度是准确的并且存在过期、 修改和内容长度属性将，返回缓存的资源。|  
 |`BypassCache`|从服务器返回的资源。|  
@@ -86,6 +86,6 @@ ms.locfileid: "50194964"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>请参阅  
-- <xref:System.Net.Cache?displayProperty=nameWithType>  
+## <a name="see-also"></a>请参阅
+- <xref:System.Net.Cache?displayProperty=nameWithType>
 - [网络设置架构](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 781111db30ae664c9dd45744f88387e161f2716f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 8d0e1b764691fd2582e1225cb90003e2a644061f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33426794"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54643684"
 ---
 # <a name="isymunmanagedscopegetlocals-method"></a>ISymUnmanagedScope::GetLocals 方法
 获取此范围内定义的本地变量。  
@@ -39,19 +39,19 @@ HRESULT GetLocals(
   
 #### <a name="parameters"></a>参数  
  `cLocals`  
- [in]A `ULONG32` ，该值指示的大小`locals`数组。  
+ [in]一个`ULONG32`指示的大小`locals`数组。  
   
  `pcLocals`  
- [out]指向的指针`ULONG32`接收包含本地变量所需的缓冲区的大小。  
+ [out]一个指向`ULONG32`接收包含本地变量所需的缓冲区的大小。  
   
  `locals`  
- [out]接收的本地变量的数组。  
+ [out]接收本地变量的数组。  
   
 ## <a name="return-value"></a>返回值  
- 如果该方法成功; 则为 S_OK否则为 E_FAIL 或某些其他错误代码。  
+ 如果方法成功，则为 S_OK否则为 E_FAIL 或某些其他错误代码。  
   
 ## <a name="requirements"></a>要求  
- **标头：** CorSym.idl、 CorSym.h  
+ **标头：** CorSym.idl CorSym.h  
   
-## <a name="see-also"></a>请参阅  
- [ISymUnmanagedScope 接口](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope-interface.md)
+## <a name="see-also"></a>请参阅
+- [ISymUnmanagedScope 接口](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope-interface.md)
