@@ -2,12 +2,12 @@
 title: '&lt;messageSenderAuthentication&gt; 元素'
 ms.date: 03/30/2017
 ms.assetid: 8d979dfc-a6f9-42ec-96d5-7fbc13a48118
-ms.openlocfilehash: d543e5ac436e181c76e2954db7a3eaa8e1b8d6a3
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 9b5155e579973555db1fefb6b22bd6c1ff38ea70
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54145863"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54579896"
 ---
 # <a name="ltmessagesenderauthenticationgt-element"></a>&lt;messageSenderAuthentication&gt; 元素
 指定用于对等消息发送方的身份验证选项。  
@@ -15,11 +15,11 @@ ms.locfileid: "54145863"
  有关对等编程的详细信息，请参阅[对等网络](../../../../../docs/framework/wcf/feature-details/peer-to-peer-networking.md)。  
   
  \<system.ServiceModel>  
-\<行为 >  
+\<behaviors>  
 \<endpointBehaviors>  
-\<行为 >  
+\<behavior>  
 \<clientCredentials>  
-\<对等 >  
+\<peer>  
 \<messageSenderAuthentication>  
   
 ## <a name="syntax"></a>语法  
@@ -100,13 +100,13 @@ ms.locfileid: "54145863"
 </behaviors>
 ```  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.ServiceModel.Security.X509PeerCertificateAuthentication>  
- <xref:System.ServiceModel.Security.PeerCredential.MessageSenderAuthentication%2A>  
- <xref:System.ServiceModel.Configuration.PeerCredentialElement.MessageSenderAuthentication%2A>  
- <xref:System.ServiceModel.Configuration.X509PeerCertificateAuthenticationElement>  
- [使用证书](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)  
- [对等网络](../../../../../docs/framework/wcf/feature-details/peer-to-peer-networking.md)  
- [对等通道消息身份验证](https://msdn.microsoft.com/library/80e73386-514e-4c30-9e4a-b9ca8c173a95)  
- [对等通道自定义身份验证](https://msdn.microsoft.com/library/4aa8a82e-41a8-48e2-8621-7e1cbabdca7c)  
- [保护对等通道应用程序](../../../../../docs/framework/wcf/feature-details/securing-peer-channel-applications.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.ServiceModel.Security.X509PeerCertificateAuthentication>
+- <xref:System.ServiceModel.Security.PeerCredential.MessageSenderAuthentication%2A>
+- <xref:System.ServiceModel.Configuration.PeerCredentialElement.MessageSenderAuthentication%2A>
+- <xref:System.ServiceModel.Configuration.X509PeerCertificateAuthenticationElement>
+- [使用证书](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
+- [对等网络](../../../../../docs/framework/wcf/feature-details/peer-to-peer-networking.md)
+- [对等通道消息身份验证](https://msdn.microsoft.com/library/80e73386-514e-4c30-9e4a-b9ca8c173a95)
+- [对等通道自定义身份验证](https://msdn.microsoft.com/library/4aa8a82e-41a8-48e2-8621-7e1cbabdca7c)
+- [保护对等通道应用程序](../../../../../docs/framework/wcf/feature-details/securing-peer-channel-applications.md)

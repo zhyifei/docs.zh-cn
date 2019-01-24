@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c08b1f6be41de63886115e5aed6bcad901658bb5
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 4b63615e6a54ca6a07e26ebf33b613f2a27d7ac3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43509215"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54683609"
 ---
 # <a name="coropenflags-enumeration"></a>CorOpenFlags 枚举
 包含一些标志值，用于控制打开清单文件时的元数据行为。  
@@ -67,11 +67,11 @@ typedef enum CorOpenFlags
 |`ofReserved`|保留以供内部使用。|  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** CorHdr.h  
   
  **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>请参阅  
- [Metadata 枚举](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+## <a name="see-also"></a>请参阅
+- [Metadata 枚举](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

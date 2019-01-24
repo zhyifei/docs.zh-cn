@@ -2,19 +2,19 @@
 title: '&lt;identity&gt;'
 ms.date: 03/30/2017
 ms.assetid: c1d2ae56-e231-4a07-9c3f-9f13381dc0d8
-ms.openlocfilehash: 8d4074319a10abc1ce4aafe15e3b51381398c39c
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 03e73f64090e0851b06ee67fe70c157b6145966c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54146506"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54677341"
 ---
 # <a name="ltidentitygt"></a>&lt;identity&gt;
 标识元素允许客户端开发人员在设计时指定服务的期望标识。 在客户端和服务之间的握手过程中，Windows Communication Foundation (WCF) 基础结构将确保预期的服务匹配此元素的值的标识，因此可以进行身份验证。 有关详细信息，请参阅[服务标识和身份验证](../../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)。  
   
  \<system.ServiceModel>  
-\<客户端 >  
-\<终结点 >  
+\<client>  
+\<endpoint>  
   
 ## <a name="syntax"></a>语法  
   
@@ -55,15 +55,15 @@ ms.locfileid: "54146506"
 |元素|描述|  
 |-------------|-----------------|  
 |[\<custom>](../../../../../docs/framework/configure-apps/file-schema/wcf/custom.md)|指定 netPeerTcpBinding 的自定义对等解析程序。|  
-|[\<终结点 >](https://msdn.microsoft.com/library/13aa23b7-2f08-4add-8dbf-a99f8127c017)|配置不同类型的终结点。|  
+|[\<endpoint>](https://msdn.microsoft.com/library/13aa23b7-2f08-4add-8dbf-a99f8127c017)|配置不同类型的终结点。|  
 |[\<issuer>](../../../../../docs/framework/configure-apps/file-schema/wcf/issuer.md)|指定联合服务的安全令牌服务 (STS)。|  
 |[\<issuerMetadata>](../../../../../docs/framework/configure-apps/file-schema/wcf/issuermetadata.md)|指定联合服务的安全令牌服务 (STS) 的元数据终结点。|  
 |[\<issuedTokenParameters>](../../../../../docs/framework/configure-apps/file-schema/wcf/issuedtokenparameters.md)|定义自定义绑定中的已颁发令牌的参数。|  
 |[\<localIssuer>](../../../../../docs/framework/configure-apps/file-schema/wcf/localissuer.md)|指定本地安全令牌服务 (STS)。|  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.ServiceModel.Configuration.IdentityElement>  
- <xref:System.ServiceModel.EndpointAddress>  
- <xref:System.ServiceModel.EndpointAddress.Identity%2A>  
- [服务标识和身份验证](../../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)  
- [终结点：地址、 绑定和协定](../../../../../docs/framework/wcf/feature-details/endpoints-addresses-bindings-and-contracts.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.ServiceModel.Configuration.IdentityElement>
+- <xref:System.ServiceModel.EndpointAddress>
+- <xref:System.ServiceModel.EndpointAddress.Identity%2A>
+- [服务标识和身份验证](../../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)
+- [终结点：地址、 绑定和协定](../../../../../docs/framework/wcf/feature-details/endpoints-addresses-bindings-and-contracts.md)

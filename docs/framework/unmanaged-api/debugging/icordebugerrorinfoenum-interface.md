@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7872a13dea7746b40d5525e4d758c1d8cd7117a5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 8f60387f9e327246ce5bfa9f92b7c7e00ceda8b9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33411065"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54737502"
 ---
 # <a name="icordebugerrorinfoenum-interface1"></a>ICorDebugErrorInfoEnum 接口 1
 `ICorDebugErrorInfoEnum` 已过时。 不要使用此接口。  
   
-## <a name="see-also"></a>请参阅  
- [调试接口](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a>请参阅
+- [调试接口](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Authorizing Access To Service Operations Sample [Windows Communication Foundation]
 - authorization, Windows Communication Foundation sample
 ms.assetid: ddcfdaa5-8b2e-4e13-bd85-887209dc6328
-ms.openlocfilehash: 17148f9f1f8f197963ea97f18548d7e2f0826a8a
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: b38134c901e1058e966d217e9b673083e45803c7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50182107"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54716606"
 ---
 # <a name="authorizing-access-to-service-operations"></a>授予对服务操作的访问权限
 此示例演示如何使用[ \<serviceAuthorization >](../../../../docs/framework/configure-apps/file-schema/wcf/serviceauthorization-element.md)若要启用使用<xref:System.Security.Permissions.PrincipalPermissionAttribute>属性来授予对服务操作的访问。 此示例基于[Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md)示例。 使用配置了服务和客户端[ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)。 `mode`的属性[\<安全 >](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md)已设置为`Message`并`clientCredentialType`已设置为`Windows`。 <xref:System.Security.Permissions.PrincipalPermissionAttribute> 应用到每个服务方法并用于限制对每个操作的访问。 调用方必须是 Windows 管理员才能访问每项操作。  

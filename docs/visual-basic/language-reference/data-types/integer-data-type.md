@@ -21,12 +21,12 @@ helpviewer_keywords:
 - I literal type character [Visual Basic]
 - Integer data type
 ms.assetid: a8f233b4-4be3-455c-861b-05af2fbb6c60
-ms.openlocfilehash: 8c349104ed566e9a663afe01da3838f0167dc74e
-ms.sourcegitcommit: 296183dbe35077b5c5e5e74d5fbe7f399bc507ee
+ms.openlocfilehash: 2eb1afb1400b8770c4c1ddb0ec90bb44979e702f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "50982758"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54662798"
 ---
 # <a name="integer-data-type-visual-basic"></a>整数数据类型 (Visual Basic)
 保存 32 位（4 字节）带符号整数，值的范围为 -2,147,483,648 到 2,147,483,647。  
@@ -95,10 +95,10 @@ k = 5.5
 
 ## <a name="see-also"></a>请参阅
 
-<xref:System.Int32?displayProperty=nameWithType>   
- [数据类型](../../../visual-basic/language-reference/data-types/index.md)  
- [Long 数据类型](../../../visual-basic/language-reference/data-types/long-data-type.md)  
- [Short 数据类型](../../../visual-basic/language-reference/data-types/short-data-type.md)  
- [类型转换函数](../../../visual-basic/language-reference/functions/type-conversion-functions.md)  
- [转换摘要](../../../visual-basic/language-reference/keywords/conversion-summary.md)  
- [有效使用数据类型](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)
+- <xref:System.Int32?displayProperty=nameWithType>
+- [数据类型](../../../visual-basic/language-reference/data-types/index.md)
+- [Long 数据类型](../../../visual-basic/language-reference/data-types/long-data-type.md)
+- [Short 数据类型](../../../visual-basic/language-reference/data-types/short-data-type.md)
+- [类型转换函数](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
+- [转换摘要](../../../visual-basic/language-reference/keywords/conversion-summary.md)
+- [有效使用数据类型](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)

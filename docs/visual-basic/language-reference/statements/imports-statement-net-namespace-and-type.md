@@ -16,12 +16,12 @@ helpviewer_keywords:
 - aliases [Visual Basic], import
 - declared elements [Visual Basic], container elements
 ms.assetid: 7062f8aa-d890-4232-9eed-92836e13fb6e
-ms.openlocfilehash: 0211438e8b4c02fead910dd7a32e0df9ed73ddc5
-ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
+ms.openlocfilehash: ecb75e71225d2b6705d6235a941ecd83b3aab75b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2018
-ms.locfileid: "42925593"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54699800"
 ---
 # <a name="imports-statement-net-namespace-and-type"></a>Imports 语句（.NET 命名空间和类型）
 使类型名称而无需命名空间限定引用。  
@@ -38,8 +38,8 @@ Imports [ aliasname = ] namespace.element
   
 |术语|定义|  
 |---|---|  
-|`aliasname`|可选。 *导入别名*或名称的代码可以指`namespace`而不是完全限定字符串。 请参阅[声明的元素名称](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)。|  
-|`namespace`|必须的。 正在导入的命名空间完全限定的名称。 可以命名空间的字符串嵌套到任意级别。|  
+|`aliasname`|可选。 *导入别名*或名称的代码可以指`namespace`而不是完全限定字符串。 请参阅 [Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)。|  
+|`namespace`|必需。 正在导入的命名空间完全限定的名称。 可以命名空间的字符串嵌套到任意级别。|  
 |`element`|可选。 命名空间中声明的编程元素的名称。 可以是任何容器元素。|  
   
 ## <a name="remarks"></a>备注  
@@ -56,7 +56,7 @@ Imports [ aliasname = ] namespace.element
  请注意，`Imports`语句不会将元素从其他项目和程序集提供给你的项目。 导入不会替代设置的引用。 而只会删除需要限定已可供你的项目的名称。 详细信息，请参阅"导入包含元素"中[References to Declared Elements](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)。  
   
 > [!NOTE]
->  您可以定义隐式`Imports`通过使用语句[引用页上，项目设计器 (Visual Basic)](/visualstudio/ide/reference/references-page-project-designer-visual-basic)。 有关详细信息，请参阅[如何： 添加或删除已导入命名空间 (Visual Basic)](/visualstudio/ide/how-to-add-or-remove-imported-namespaces-visual-basic)。  
+>  您可以定义隐式`Imports`通过使用语句[引用页上，项目设计器 (Visual Basic)](/visualstudio/ide/reference/references-page-project-designer-visual-basic)。 有关详细信息，请参阅[如何：添加或删除导入命名空间 (Visual Basic)](/visualstudio/ide/how-to-add-or-remove-imported-namespaces-visual-basic)。  
   
 ## <a name="import-aliases"></a>导入别名  
  *导入别名*定义命名空间或类型的别名。 需要使用一个或多个命名空间中声明了一个同名的项时，导入别名是非常有用。 详细信息和示例，请参阅"符合条件的元素名称"中[References to Declared Elements](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)。  
@@ -98,9 +98,9 @@ Imports [ aliasname = ] namespace.element
   
  [!code-vb[VbVbalrStatements#158](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/imports-statement-net-namespace-and-type_7.vb)]  
   
-## <a name="see-also"></a>请参阅  
- [Namespace 语句](../../../visual-basic/language-reference/statements/namespace-statement.md)  
- [在 Visual Basic 中的命名空间](../../../visual-basic/programming-guide/program-structure/namespaces.md)  
- [引用和 Imports 语句](../../../visual-basic/programming-guide/program-structure/references-and-the-imports-statement.md)  
- [Imports 语句（XML 命名空间）](../../../visual-basic/language-reference/statements/imports-statement-xml-namespace.md)  
- [对已声明元素的引用](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)
+## <a name="see-also"></a>请参阅
+- [Namespace 语句](../../../visual-basic/language-reference/statements/namespace-statement.md)
+- [在 Visual Basic 中的命名空间](../../../visual-basic/programming-guide/program-structure/namespaces.md)
+- [引用和 Imports 语句](../../../visual-basic/programming-guide/program-structure/references-and-the-imports-statement.md)
+- [Imports 语句（XML 命名空间）](../../../visual-basic/language-reference/statements/imports-statement-xml-namespace.md)
+- [对已声明元素的引用](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)

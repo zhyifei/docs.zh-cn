@@ -10,12 +10,12 @@ api_type:
 ms.assetid: fb626b41-b888-4625-84c3-2c02b5e3866f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 408b71bf38427d12418e05f8b509fe841bc95ef1
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 170961e366e9788e92fc484514bb349332419aea
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44191854"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54678612"
 ---
 # <a name="axlgetissuerpublickeyhash-function"></a>_AxlGetIssuerPublicKeyHash 函数
 检索与用于对指定证书进行签名的私钥关联的公钥的 SHA-1 哈希。  
@@ -39,5 +39,5 @@ HRESULT _AxlGetIssuerPublicKeyHash (
 ## <a name="return-value"></a>返回值  
  如果函数成功，则为 `S_OK`；否则为 `S_FALSE`。  
   
-## <a name="see-also"></a>请参阅  
- [验证码](../../../../docs/framework/unmanaged-api/authenticode/index.md)
+## <a name="see-also"></a>请参阅
+- [验证码](../../../../docs/framework/unmanaged-api/authenticode/index.md)

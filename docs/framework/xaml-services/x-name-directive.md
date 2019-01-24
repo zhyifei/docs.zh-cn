@@ -10,12 +10,12 @@ helpviewer_keywords:
 - XAML [XAML Services], x:Name attribute
 - Name attribute in XAML [XAML Services]
 ms.assetid: b7e61222-e8cf-48d2-acd0-6df3b7685d48
-ms.openlocfilehash: 08594d9757596eed470ffba8b5b63a01c493c358
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: 164b0283864cdeb60ef7b8e19c9d457f80ee4eb9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48583915"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54696459"
 ---
 # <a name="xname-directive"></a>x:Name 指令
 唯一地标识 XAML 定义 XAML 名称范围中的元素。 XAML 名称范围和其唯一性模型可以应用于实例化的对象，框架提供的 Api 或实现在运行时访问 XAML 创建对象图的行为时。  
@@ -66,7 +66,7 @@ ms.locfileid: "48583915"
 ## <a name="silverlight-usage-notes"></a>Silverlight Usage 备注。  
  `x:Name` 适用于 Silverlight 单独说明了。 有关详细信息，请参阅[XAML Namespace （x:）语言功能 (Silverlight)](https://go.microsoft.com/fwlink/?LinkId=199081)。  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Windows.FrameworkElement.Name%2A?displayProperty=nameWithType>  
- <xref:System.Windows.FrameworkContentElement.Name%2A?displayProperty=nameWithType>  
- [WPF 中的树](../../../docs/framework/wpf/advanced/trees-in-wpf.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.Windows.FrameworkElement.Name%2A?displayProperty=nameWithType>
+- <xref:System.Windows.FrameworkContentElement.Name%2A?displayProperty=nameWithType>
+- [WPF 中的树](../../../docs/framework/wpf/advanced/trees-in-wpf.md)

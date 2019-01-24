@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 3e5efbc5-92e4-4229-b31f-ce368a1adb96
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1bfc3aa2bb7d1819f5f6221154ba1d276e0c202c
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 3cfbc1439be457987c058ee6d0298e93aa37f5d4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53149362"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54716008"
 ---
 # <a name="dangerousthreadingapi-mda"></a>dangerousThreadingAPI MDA
 如果在当前线程以外的线程上调用 <xref:System.Threading.Thread.Suspend%2A?displayProperty=nameWithType> 方法，将激活 `dangerousThreadingAPI` 托管调试助手 (MDA)。  
@@ -67,7 +67,7 @@ Thread t = new Thread(delegate() { Thread.Sleep(1000); });
 }  
 ```  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Threading.Thread>  
- [使用托管调试助手诊断错误](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)  
- [lock 语句](~/docs/csharp/language-reference/keywords/lock-statement.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.Threading.Thread>
+- [使用托管调试助手诊断错误](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
+- [lock 语句](~/docs/csharp/language-reference/keywords/lock-statement.md)

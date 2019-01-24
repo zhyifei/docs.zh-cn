@@ -2,18 +2,18 @@
 title: '&lt;netHttpBinding&gt;'
 ms.date: 03/30/2017
 ms.assetid: b0d81ca0-87c5-4090-8baa-e390fd3656d2
-ms.openlocfilehash: a72880b0078c78ce3fdbad1243390237159056ac
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 97df2a9863bb4c1f31b24f0dbe370efaef0991a7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54145965"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54715278"
 ---
 # <a name="ltnethttpbindinggt"></a>&lt;netHttpBinding&gt;
 表示 Windows Communication Foundation (WCF) 服务可用于配置和公开能够通过 HTTP 进行通信的终结点的绑定。 如果用于双工协定，将使用 Web Sockets，否则将使用 HTTP。  
   
  \<system.ServiceModel>  
-\<绑定 >  
+\<bindings>  
 \<netHttpBinding>  
   
 ## <a name="syntax"></a>语法  
@@ -92,7 +92,7 @@ ms.locfileid: "54145965"
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<绑定 >](../../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)|此元素包含标准绑定和自定义绑定的集合。|  
+|[\<bindings>](../../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)|此元素包含标准绑定和自定义绑定的集合。|  
   
 ## <a name="remarks"></a>备注  
  NetHttpBinding 使用 HTTP 作为传输协议来发送消息。 如果用于双工协定，将使用 Web Sockets。  如果用于请求-答复协定，则 NetHttpBinding 的行为将类似于具有二进制编码器的 BasicHttpBinding。  
@@ -173,12 +173,12 @@ ms.locfileid: "54145965"
   
  有关默认配置以及无名称绑定和行为的详细信息，请参阅[Simplified Configuration](../../../../../docs/framework/wcf/simplified-configuration.md)并[WCF 服务的简化配置](../../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md)。  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.ServiceModel.Channels.Binding>  
- <xref:System.ServiceModel.Channels.BindingElement>  
- <xref:System.ServiceModel.BasicHttpBinding>  
- <xref:System.ServiceModel.Configuration.BasicHttpBindingElement>  
- [绑定](../../../../../docs/framework/wcf/bindings.md)  
- [配置系统提供的绑定](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [使用绑定配置服务和客户端](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)  
- [\<绑定 >](../../../../../docs/framework/misc/binding.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.ServiceModel.Channels.Binding>
+- <xref:System.ServiceModel.Channels.BindingElement>
+- <xref:System.ServiceModel.BasicHttpBinding>
+- <xref:System.ServiceModel.Configuration.BasicHttpBindingElement>
+- [绑定](../../../../../docs/framework/wcf/bindings.md)
+- [配置系统提供的绑定](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)
+- [使用绑定配置服务和客户端](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
+- [\<binding>](../../../../../docs/framework/misc/binding.md)

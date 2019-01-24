@@ -2,12 +2,12 @@
 title: TOP (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 4a4a0954-82e2-4eae-bcaf-7c4552f3532d
-ms.openlocfilehash: 25afda64aafcd5a97dee7ad4cee25b152ef55907
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 6ed20ea372314421e4855b1c1ad761c87bf461b9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32764653"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54702556"
 ---
 # <a name="top-entity-sql"></a>TOP (Entity SQL)
 SELECT 子句可以在可选的 ALL/DISTINCT 修饰符之后具有可选的 TOP 子子句。 TOP 子子句指定查询结果中将只返回第一组行。  
@@ -38,15 +38,15 @@ SELECT 子句可以在可选的 ALL/DISTINCT 修饰符之后具有可选的 TOP 
 ## <a name="example"></a>示例  
  以下 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 查询使用 TOP 指定要从查询结果中返回的最上面一行。 此查询基于 AdventureWorks 销售模型。 若要编译并运行此查询，请执行下列步骤：  
   
-1.  执行 [如何：执行返回 StructuralType 结果的查询](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md)中的过程。  
+1.  按照中的过程[如何：执行返回 StructuralType 结果的查询](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md)。  
   
 2.  将以下查询作为参数传递给 `ExecuteStructuralTypeQuery` 方法：  
   
  [!code-csharp[DP EntityServices Concepts 2#TOP](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#top)]  
   
-## <a name="see-also"></a>请参阅  
- [SELECT](../../../../../../docs/framework/data/adonet/ef/language-reference/select-entity-sql.md)  
- [SKIP](../../../../../../docs/framework/data/adonet/ef/language-reference/skip-entity-sql.md)  
- [LIMIT](../../../../../../docs/framework/data/adonet/ef/language-reference/limit-entity-sql.md)  
- [ORDER BY](../../../../../../docs/framework/data/adonet/ef/language-reference/order-by-entity-sql.md)  
- [实体 SQL 引用](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
+## <a name="see-also"></a>请参阅
+- [SELECT](../../../../../../docs/framework/data/adonet/ef/language-reference/select-entity-sql.md)
+- [SKIP](../../../../../../docs/framework/data/adonet/ef/language-reference/skip-entity-sql.md)
+- [LIMIT](../../../../../../docs/framework/data/adonet/ef/language-reference/limit-entity-sql.md)
+- [ORDER BY](../../../../../../docs/framework/data/adonet/ef/language-reference/order-by-entity-sql.md)
+- [实体 SQL 引用](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
