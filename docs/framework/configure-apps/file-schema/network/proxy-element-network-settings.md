@@ -8,12 +8,12 @@ helpviewer_keywords:
 - <proxy> element
 - proxy element
 ms.assetid: 37a548d8-fade-4ac5-82ec-b49b6c6cb22a
-ms.openlocfilehash: 3a6d5b080c74fbd3f6ebca9882c1667951cfcb91
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 4bec5422165a1795fd2442d95b2dd27ac1b4bc8b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50183668"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54685953"
 ---
 # <a name="ltproxygt-element-network-settings"></a>&lt;代理&gt;元素 （网络设置）
 定义代理服务器。  
@@ -21,7 +21,7 @@ ms.locfileid: "50183668"
  \<configuration>  
 \<system.net>  
 \<defaultProxy >  
-\<代理 >  
+\<proxy>  
   
 ## <a name="syntax"></a>语法  
   
@@ -90,6 +90,6 @@ ms.locfileid: "50183668"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>请参阅  
-- <xref:System.Net.WebProxy?displayProperty=nameWithType>  
+## <a name="see-also"></a>请参阅
+- <xref:System.Net.WebProxy?displayProperty=nameWithType>
 - [网络设置架构](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

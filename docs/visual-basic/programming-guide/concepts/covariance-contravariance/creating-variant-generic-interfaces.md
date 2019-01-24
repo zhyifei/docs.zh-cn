@@ -2,12 +2,12 @@
 title: 创建变体泛型接口 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: d4037dd2-dfe9-4811-9150-93d4e8b20113
-ms.openlocfilehash: 9e79183cd75e3e222cfa82c6b8ca651eb99ffc02
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d6afddf018b4608418f82fa851d018f2c3e1d0fb
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33643875"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54663253"
 ---
 # <a name="creating-variant-generic-interfaces-visual-basic"></a>创建变体泛型接口 (Visual Basic)
 接口中的泛型类型参数可以声明为协变或逆变。 协变允许接口方法具有与泛型类型参数定义的返回类型相比，派生程度更大的返回类型。 逆变允许接口方法具有与泛型形参指定的实参类型相比，派生程度更小的实参类型。 具有协变或逆变泛型类型参数的泛型接口称为“变体”。  
@@ -33,7 +33,7 @@ ms.locfileid: "33643875"
     End Interface  
     ```  
   
-     此规则有一个例外。 如果具有用作方法参数的逆变泛型委托，则可将类型用作该委托的泛型类型参数。 下例中的类型 `R` 演示了此情形。 有关详细信息，请参阅[委托 (Visual Basic 中) 中的变体](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-delegates.md)和[使用对 Func 和 Action 泛型委托 (Visual Basic 中) 的方差](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md)。  
+     此规则有一个例外。 如果具有用作方法参数的逆变泛型委托，则可将类型用作该委托的泛型类型参数。 下例中的类型 `R` 演示了此情形。 有关详细信息，请参阅[委托 (Visual Basic) 中的变体](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-delegates.md)并[对 Func 和 Action 泛型委托 (Visual Basic 中) 使用变体](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md)。  
   
     ```vb  
     Interface ICovariant(Of Out R)  
@@ -73,7 +73,7 @@ Interface IVariant(Of Out R, In A)
 End Interface  
 ```  
   
- 在 Visual Basic 中，不能声明变体接口中的事件，而不指定委托类型。 此外，变体接口不能有嵌套类、 枚举或结构，但它可以有嵌套接口。 下面的代码阐释了这一点。  
+ 在 Visual Basic 中，不能声明变体接口中的事件，而不指定委托类型。 此外，不能包含嵌套变体接口，类、 枚举或结构，但它可以具有嵌套接口。 下面的代码阐释了这一点。  
   
 ```vb  
 Interface ICovariant(Of Out R)  
@@ -145,7 +145,7 @@ Interface IExtCovariant(Of Out T)
 End Interface  
 ```  
   
- 在`Invariant(Of T)`接口，泛型类型参数`T`不变，而在`IExtCovariant (Of Out T)`该类型参数是协变，尽管这两个接口扩展相同的接口。 此规则也适用于逆变泛型类型参数。  
+ 在中`Invariant(Of T)`接口，泛型类型参数`T`是不变，而在`IExtCovariant (Of Out T)`类型参数是协变的尽管这两个接口扩展相同的接口。 此规则也适用于逆变泛型类型参数。  
   
  无论泛型类型参数 `T` 在接口中是协变还是逆变，都可以创建一个接口来扩展这两类接口，只要在扩展接口中，该 `T` 泛型类型参数为固定参数。 以下代码示例阐释了这一点。  
   
@@ -179,7 +179,7 @@ End Interface
  例如，如果在一个类中使用不同的泛型类型参数来显式实现同一变体泛型接口，便会产生多义性。 在这种情况下，编译器不会产生错误，但未指定将在运行时选择哪个接口实现。 这可能导致代码中出现微妙的 bug。 请考虑以下代码示例。  
   
 > [!NOTE]
->  与`Option Strict Off`，Visual Basic 会生成编译器警告，当存在是不明确的接口的实现。 与`Option Strict On`，Visual Basic 生成一个编译器错误。  
+>  使用`Option Strict Off`，Visual Basic 会生成一条编译器警告时的不明确的接口实现。 使用`Option Strict On`，Visual Basic 会生成编译器错误。  
   
 ```vb  
 ' Simple class hierarchy.  
@@ -225,6 +225,6 @@ End Sub
   
  在此示例中，没有指定 `pets.GetEnumerator` 方法如何在 `Cat` 和 `Dog` 之间选择。 这可能导致代码中出现问题。  
   
-## <a name="see-also"></a>请参阅  
- [泛型接口中的变体 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md)  
- [对 Func 和 Action 泛型委托使用变体 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md)
+## <a name="see-also"></a>请参阅
+- [泛型接口中的变体 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md)
+- [对 Func 和 Action 泛型委托使用变体 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md)

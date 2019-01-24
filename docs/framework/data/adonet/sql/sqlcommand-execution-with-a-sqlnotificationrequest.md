@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 1776f48f-9bea-41f6-83a4-c990c7a2c991
-ms.openlocfilehash: 83450e6ace33e89ddd263a1514f74f4d4e231cf7
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 1380d06b54980456080d9891013d0d8de6b4110f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44213324"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54664091"
 ---
 # <a name="sqlcommand-execution-with-a-sqlnotificationrequest"></a>使用 SqlNotificationRequest 执行 SqlCommand
-可以配置 <xref:System.Data.SqlClient.SqlCommand>，以便在从服务器获取的数据发生更改时生成通知，且再次执行查询时结果集会不同。 如果要在服务器上使用自定义通知队列或不希望维护实时对象，此功能非常有用。  
+可以配置 <xref:System.Data.SqlClient.SqlCommand>，以便在从服务器提取的数据发生更改时生成通知，且再次执行查询时结果集会不同。 如果要在服务器上使用自定义通知队列或不希望维护实时对象，此功能非常有用。  
   
 ## <a name="creating-the-notification-request"></a>创建通知请求  
  您可以使用 <xref:System.Data.Sql.SqlNotificationRequest> 对象来创建通知请求，方法是将其绑定到 `SqlCommand` 对象上。 创建完请求后，将不再需要 `SqlNotificationRequest` 对象。 您可以在队列中查询任何通知，并相应地对找到的通知进行响应。 即使应用程序关闭后再重新启动，也会出现通知。  
@@ -70,6 +70,6 @@ command.ExecuteReader();
 // SQL Server queue to see if you have a new message.  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [SQL Server 中的查询通知](../../../../../docs/framework/data/adonet/sql/query-notifications-in-sql-server.md)  
- [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>请参阅
+- [SQL Server 中的查询通知](../../../../../docs/framework/data/adonet/sql/query-notifications-in-sql-server.md)
+- [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)

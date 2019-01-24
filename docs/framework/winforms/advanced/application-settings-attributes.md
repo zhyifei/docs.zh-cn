@@ -6,12 +6,12 @@ helpviewer_keywords:
 - attributes [Windows Forms], application settings
 - wrapper classes [Windows Forms], application settings
 ms.assetid: 53caa66c-a9fb-43a5-953c-ad092590098d
-ms.openlocfilehash: 9ed549cb1e10b22c4fa34d984133a6be11dfab44
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 09fb5c26f7ecccd427155836c3864773153dddfa
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43525107"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54668946"
 ---
 # <a name="application-settings-attributes"></a>应用程序设置特性
 应用程序设置体系结构提供可应用到应用程序设置包装类或其各个属性的多个属性。 这些属性将检查在运行时由应用程序设置基础结构通常专门设置提供程序，以便使其正常运行的自定义包装器所述的需求。  
@@ -19,7 +19,7 @@ ms.locfileid: "43525107"
  下表列出了可以应用于应用程序设置包装类，此类的各个属性，或两者的属性。 根据定义，只有单个作用域属性 —**UserScopedSettingAttribute**或**ApplicationScopedSettingAttribute**— 必须应用于每个设置属性。  
   
 > [!NOTE]
->  自定义设置提供程序，派生自<xref:System.Configuration.SettingsProvider>类中，只需识别以下三个属性： **ApplicationScopedSettingAttribute**， **UserScopedSettingAttribute**，并**DefaultSettingValueAttribute**。  
+>  自定义设置提供程序，派生自<xref:System.Configuration.SettingsProvider>类中，只需识别以下三个属性：**ApplicationScopedSettingAttribute**， **UserScopedSettingAttribute**，和**DefaultSettingValueAttribute**。  
   
 |特性|目标|描述|  
 |---------------|------------|-----------------|  
@@ -37,8 +37,8 @@ ms.locfileid: "43525107"
   
  *类*指示特性可以应用到应用程序设置包装器类。 *属性*指示该属性可以应用到仅设置属性。 *同时*指示该特性可以应用到任何一级。  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Configuration.ApplicationSettingsBase>  
- <xref:System.Configuration.SettingsProvider>  
- [应用程序设置体系结构](../../../../docs/framework/winforms/advanced/application-settings-architecture.md)  
- [如何：创建应用程序设置](https://msdn.microsoft.com/library/53b3af80-1c02-4e35-99c6-787663148945)
+## <a name="see-also"></a>请参阅
+- <xref:System.Configuration.ApplicationSettingsBase>
+- <xref:System.Configuration.SettingsProvider>
+- [应用程序设置体系结构](../../../../docs/framework/winforms/advanced/application-settings-architecture.md)
+- [如何：创建应用程序设置](https://msdn.microsoft.com/library/53b3af80-1c02-4e35-99c6-787663148945)

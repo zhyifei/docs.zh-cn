@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - sounds [Windows Forms], playing
 ms.assetid: f3945af9-045c-4e2d-b251-377c37ca2d77
-ms.openlocfilehash: 29399beebef3de3e7b4ae8ce7f3611e3d158296f
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: a93519cbc320def91c030e7344b33be2a10b4351
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48835576"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54674331"
 ---
 # <a name="soundplayer-class"></a>SoundPlayer 类
 `SoundPlayer` 类使你能够轻松地将声音纳入应用程序。  
@@ -25,19 +25,19 @@ ms.locfileid: "48835576"
  [如何：从 Windows 窗体播放声音](../../../../docs/framework/winforms/controls/how-to-play-a-sound-from-a-windows-form.md)  
  提供用于通过文件路径、UNC 路径或 HTTP 路径播放指定声音的代码。  
   
- [如何：通过 Windows 窗体播放提示音](../../../../docs/framework/winforms/controls/how-to-play-a-beep-from-a-windows-form.md)  
+ [如何：从 Windows 窗体中播放提示音](../../../../docs/framework/winforms/controls/how-to-play-a-beep-from-a-windows-form.md)  
  提供用于播放计算机提示音的代码。  
   
- [如何：通过 Windows 窗体播放资源中嵌入的声音](../../../../docs/framework/winforms/controls/how-to-play-a-sound-embedded-in-a-resource-from-a-windows-form.md)  
+ [如何：播放从 Windows 窗体资源中嵌入的声音](../../../../docs/framework/winforms/controls/how-to-play-a-sound-embedded-in-a-resource-from-a-windows-form.md)  
  提供用于从资源播放声音的代码。  
   
- [如何：通过 Windows 窗体播放系统提示音](../../../../docs/framework/winforms/controls/how-to-play-a-system-sound-from-a-windows-form.md)  
+ [如何：从 Windows 窗体播放系统声音](../../../../docs/framework/winforms/controls/how-to-play-a-system-sound-from-a-windows-form.md)  
  提供用于播放一种系统声音的代码。  
   
- [如何：在 Windows 窗体内异步加载声音](../../../../docs/framework/winforms/controls/how-to-load-a-sound-asynchronously-within-a-windows-form.md)  
+ [如何：加载声音以异步方式在 Windows 窗体](../../../../docs/framework/winforms/controls/how-to-load-a-sound-asynchronously-within-a-windows-form.md)  
  提供用于从 URL 异步加载声音并进行播放的代码。  
   
- [如何：在 Windows 窗体上循环播放声音](../../../../docs/framework/winforms/controls/how-to-loop-a-sound-playing-on-a-windows-form.md)  
+ [如何：循环上的 Windows 窗体播放声音](../../../../docs/framework/winforms/controls/how-to-loop-a-sound-playing-on-a-windows-form.md)  
  提供用于重复播放声音的代码。  
   
 ## <a name="reference"></a>参考  
@@ -51,6 +51,6 @@ ms.locfileid: "48835576"
  [在 Windows 窗体上使用的控件](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
  提供 Windows 窗体控件的完整列表，附带其使用情况相关信息的链接。  
   
-## <a name="see-also"></a>请参阅 
+## <a name="see-also"></a>请参阅
 
 - [My.Computer 对象](../../../visual-basic/language-reference/objects/my-computer-object.md)

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 04b6c04868efff31253b2d723c5783060382212b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: fc4e8140485902e4677bca0228bc125c64b497f2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33448968"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54671850"
 ---
 # <a name="imetadataimportgetfieldprops-method"></a>IMetaDataImport::GetFieldProps 方法
 获取与指定 FieldDef 标记引用的字段关联的元数据。  
@@ -62,7 +62,7 @@ HRESULT GetFieldProps (
  [out]返回缓冲区的实际大小。  
   
  `pdwAttr`  
- [out]字段的元数据与关联的标志。  
+ [out]与该字段的元数据关联的标志。  
   
  `ppvSigBlob`  
  [in]指向描述字段的二进制元数据值的指针。  
@@ -71,7 +71,7 @@ HRESULT GetFieldProps (
  [out]以字节为单位的大小`ppvSigBlob`。  
   
  `pdwCPlusTypeFlag`  
- [out]用于指定该字段的值类型的标志。  
+ [out]一个标志，指定该字段的值类型。  
   
  `ppValue`  
  [out]字段的常量值。  
@@ -80,14 +80,14 @@ HRESULT GetFieldProps (
  [out]以字符为单位的大小`ppValue`，或如果不存在任何字符串则为零。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** Cor.h  
   
- **库：** 作为 MsCorEE.dll 中的资源  
+ **库：** 包含为 MsCorEE.dll 中的资源  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>请参阅  
- [IMetaDataImport 接口](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)  
- [IMetaDataImport2 接口](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+## <a name="see-also"></a>请参阅
+- [IMetaDataImport 接口](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [IMetaDataImport2 接口](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

@@ -11,19 +11,19 @@ helpviewer_keywords:
 ms.assetid: 60e79a8c-415a-497d-be29-b9d0fd9bdee3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 982bc04e362f82760226b1cd2b8b3febe9cc7107
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: 2f6a48a055d98a2f0b379df612da4e8fd49f3987
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53612044"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54669089"
 ---
 # <a name="ltdevelopmentmodegt-element"></a>&lt;developmentMode&gt;元素
 指定运行时是否搜索由 DEVPATH 环境变量指定的目录中的程序集。  
   
  \<configuration>  
 \<运行时 >  
-\<developmentMode >  
+\<developmentMode>  
   
 ## <a name="syntax"></a>语法  
   
@@ -42,7 +42,7 @@ ms.locfileid: "53612044"
   
 ## <a name="developerinstallation-attribute"></a>developerInstallation 属性  
   
-|值|描述|  
+|“值”|描述|  
 |-----------|-----------------|  
 |**true**|搜索由 DEVPATH 环境变量指定的目录中的程序集。|  
 |**false**|不会搜索由 DEVPATH 环境变量指定的目录中的程序集。 这是默认值|  
@@ -71,7 +71,7 @@ ms.locfileid: "53612044"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>请参阅  
-- [运行时设置架构](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
-- [配置文件架构](../../../../../docs/framework/configure-apps/file-schema/index.md)  
+## <a name="see-also"></a>请参阅
+- [运行时设置架构](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
+- [配置文件架构](../../../../../docs/framework/configure-apps/file-schema/index.md)
 - [如何：通过使用 devpath 查找程序集查找程序集](../../../../../docs/framework/configure-apps/how-to-locate-assemblies-by-using-devpath.md)

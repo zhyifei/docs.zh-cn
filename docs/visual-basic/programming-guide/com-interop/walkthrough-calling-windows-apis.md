@@ -1,5 +1,5 @@
 ---
-title: 演练：调用 Windows API (Visual Basic)
+title: 演练：调用 Windows Api (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
 - DLLs, calling
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - DllImport attribute, calling Windows API
 - Declare statement [Visual Basic], declaring DLL functions
 ms.assetid: 9280ca96-7a93-47a3-8d01-6d01be0657cb
-ms.openlocfilehash: bb98d842bfe65bdf637a789fc9a8319a70cb2bc8
-ms.sourcegitcommit: 869b5832b667915ac4a5dd8c86b1109ed26b6c08
+ms.openlocfilehash: 59c316ccb3a35a650ac11b96717a3ad729e777a3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/28/2018
-ms.locfileid: "39332855"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54657969"
 ---
-# <a name="walkthrough-calling-windows-apis-visual-basic"></a>演练：调用 Windows API (Visual Basic)
+# <a name="walkthrough-calling-windows-apis-visual-basic"></a>演练：调用 Windows Api (Visual Basic)
 Windows Api 是动态链接库 (Dll) 的 Windows 操作系统的一部分。 您可以使用它们来执行任务时很难编写你自己的等效过程。 例如，Windows 提供了一个名为函数`FlashWindowEx`允许您进行应用程序的标题栏在浅色和深色阴影之间切换。  
   
  在代码中使用 Windows Api 的优点是它们可以节省开发时间，因为它们包含大量有用的功能，已编写并等待使用。 缺点是 Windows Api 可能很难处理和铁面无私时出现问题。  
@@ -39,7 +39,7 @@ Windows Api 是动态链接库 (Dll) 的 Windows 操作系统的一部分。 您
     > [!NOTE]
     >  有关 Windows Api 的完整信息，请参阅平台 SDK Windows API 中的 Win32 SDK 文档。 有关 Windows Api 使用的常量的详细信息，检查如 Windows.h Platform SDK 中包含的标头文件。  
   
-2.  通过单击打开一个新的 Windows 应用程序项目**新建**上**文件**菜单中，然后单击**项目**。 此时将出现 “新建项目” 对话框。  
+2.  通过单击打开一个新的 Windows 应用程序项目**新建**上**文件**菜单中，然后单击**项目**。 此时将出现“新建项目”对话框。  
   
 3.  选择**Windows 应用程序**从 Visual Basic 项目模板的列表。 显示新的项目。  
   
@@ -113,7 +113,7 @@ Windows Api 是动态链接库 (Dll) 的 Windows 操作系统的一部分。 您
   
 #### <a name="to-call-a-windows-api-using-the-dllimport-attribute"></a>若要调用 Windows API 使用 DllImport 特性  
   
-1.  通过单击打开一个新的 Windows 应用程序项目**新建**上**文件**菜单中，然后单击**项目**。 此时将出现 “新建项目” 对话框。  
+1.  通过单击打开一个新的 Windows 应用程序项目**新建**上**文件**菜单中，然后单击**项目**。 此时将出现“新建项目”对话框。  
   
 2.  选择**Windows 应用程序**从 Visual Basic 项目模板的列表。 显示新的项目。  
   
@@ -147,12 +147,12 @@ Windows Api 是动态链接库 (Dll) 的 Windows 操作系统的一部分。 您
   
 12. 单击**Button2**。 如果可以移动该文件，则会显示"文件已移动已成功"消息。  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Runtime.InteropServices.DllImportAttribute>  
- <xref:System.Runtime.InteropServices.MarshalAsAttribute>  
- [Declare 语句](../../../visual-basic/language-reference/statements/declare-statement.md)  
- [Auto](../../../visual-basic/language-reference/modifiers/auto.md)  
- [Alias](../../../visual-basic/language-reference/statements/alias-clause.md)  
- [COM 互操作](../../../visual-basic/programming-guide/com-interop/index.md)  
- [在托管代码中创建原型](../../../framework/interop/creating-prototypes-in-managed-code.md)  
- [将委托作为回调方法进行封送](../../../framework/interop/marshaling-a-delegate-as-a-callback-method.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.Runtime.InteropServices.DllImportAttribute>
+- <xref:System.Runtime.InteropServices.MarshalAsAttribute>
+- [Declare 语句](../../../visual-basic/language-reference/statements/declare-statement.md)
+- [Auto](../../../visual-basic/language-reference/modifiers/auto.md)
+- [Alias](../../../visual-basic/language-reference/statements/alias-clause.md)
+- [COM 互操作](../../../visual-basic/programming-guide/com-interop/index.md)
+- [在托管代码中创建原型](../../../framework/interop/creating-prototypes-in-managed-code.md)
+- [将委托作为回调方法进行封送](../../../framework/interop/marshaling-a-delegate-as-a-callback-method.md)

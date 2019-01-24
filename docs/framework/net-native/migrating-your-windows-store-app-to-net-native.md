@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 4153aa18-6f56-4a0a-865b-d3da743a1d05
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 27903899ca31166e160f32ca0175e353e54676cc
-ms.sourcegitcommit: 75567a3cb437009db55949c6092f4e77ed1a9da4
+ms.openlocfilehash: 9b04465d9141cdf595c4055ba64eb49083c1c514
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54307560"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54667893"
 ---
 # <a name="migrating-your-windows-store-app-to-net-native"></a>将 Windows 应用商店应用迁移到 .NET Native
 .NET 本机提供应用在 Windows 应用商店中或开发人员的计算机上的静态的编译。 这不同于及时生成 (JIT) 编译器或 [本地映像生成器 (Ngen.exe)](../../../docs/framework/tools/ngen-exe-native-image-generator.md) 在该设备上为 Windows 应用商店应用执行的动态编译。 尽管存在不同，.NET Native 尝试保持与兼容性[.NET for Windows Store 应用](https://docs.microsoft.com/previous-versions/windows/apps/br230302%28v=vs.140%29)。 大多数情况下，用于.NET for Windows Store 应用的内容也适用于.NET Native。  然而，在某些情况下，你可能会遇到行为变更。 本文档介绍了以下几个方面之间的标准.NET for Windows Store 应用和.NET Native 的这些差异：  
@@ -652,8 +652,8 @@ ms.locfileid: "54307560"
   
  启用.NET Native 上的 Windows 应用商店应用项目单元测试库不支持，并且会导致项目无法生成。  
   
-## <a name="see-also"></a>请参阅  
- [入门](../../../docs/framework/net-native/getting-started-with-net-native.md)  
- [运行时指令 (rd.xml) 配置文件参考](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)  
- [.NET for Windows Store 应用概述](https://docs.microsoft.com/previous-versions/windows/apps/br230302%28v=vs.140%29)  
- [.NET Framework 对 Windows 应用商店应用和 Windows 运行时的支持情况](../../../docs/standard/cross-platform/support-for-windows-store-apps-and-windows-runtime.md)
+## <a name="see-also"></a>请参阅
+- [入门](../../../docs/framework/net-native/getting-started-with-net-native.md)
+- [运行时指令 (rd.xml) 配置文件参考](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
+- [.NET for Windows Store 应用概述](https://docs.microsoft.com/previous-versions/windows/apps/br230302%28v=vs.140%29)
+- [.NET Framework 对 Windows 应用商店应用和 Windows 运行时的支持情况](../../../docs/standard/cross-platform/support-for-windows-store-apps-and-windows-runtime.md)
