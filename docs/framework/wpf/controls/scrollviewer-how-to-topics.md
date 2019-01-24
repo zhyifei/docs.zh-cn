@@ -7,26 +7,26 @@ helpviewer_keywords:
 - controls [WPF], ScrollViewer
 - ScrollViewer control [WPF], how-to topics
 ms.assetid: 1e20804b-1d80-4b54-af41-76b3e10a6f89
-ms.openlocfilehash: ab8b416afb03b5ce0a64f46c3d7ca5d363d4fd34
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2b5bea779888342062c6ff2ab3d258ee84cb97b7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33555343"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54672092"
 ---
-# <a name="scrollviewer-how-to-topics"></a><span data-ttu-id="26084-102">ScrollViewer 帮助主题</span><span class="sxs-lookup"><span data-stu-id="26084-102">ScrollViewer How-to Topics</span></span>
-<span data-ttu-id="26084-103">此部分中的主题演示如何使用<xref:System.Windows.Controls.ScrollViewer>元素以在你的应用程序中创建可滚动区域。</span><span class="sxs-lookup"><span data-stu-id="26084-103">The topics in this section demonstrate how to use the <xref:System.Windows.Controls.ScrollViewer> element to create scrollable regions in your applications.</span></span>  
+# <a name="scrollviewer-how-to-topics"></a><span data-ttu-id="25286-102">ScrollViewer 帮助主题</span><span class="sxs-lookup"><span data-stu-id="25286-102">ScrollViewer How-to Topics</span></span>
+<span data-ttu-id="25286-103">在本部分中的主题演示如何使用<xref:System.Windows.Controls.ScrollViewer>元素来创建应用程序中的可滚动区域。</span><span class="sxs-lookup"><span data-stu-id="25286-103">The topics in this section demonstrate how to use the <xref:System.Windows.Controls.ScrollViewer> element to create scrollable regions in your applications.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="26084-104">本节内容</span><span class="sxs-lookup"><span data-stu-id="26084-104">In This Section</span></span>  
- [<span data-ttu-id="26084-105">处理 ScrollChanged 事件</span><span class="sxs-lookup"><span data-stu-id="26084-105">Handle the ScrollChanged Event</span></span>](../../../../docs/framework/wpf/controls/how-to-handle-the-scrollchanged-event.md)  
- [<span data-ttu-id="26084-106">使用 IScrollInfo 接口滚动内容</span><span class="sxs-lookup"><span data-stu-id="26084-106">Scroll Content by Using the IScrollInfo Interface</span></span>](../../../../docs/framework/wpf/controls/how-to-scroll-content-by-using-the-iscrollinfo-interface.md)  
- [<span data-ttu-id="26084-107">使用 ScrollViewer 的内容滚动方法</span><span class="sxs-lookup"><span data-stu-id="26084-107">Use the Content-Scrolling Methods of ScrollViewer</span></span>](../../../../docs/framework/wpf/controls/how-to-use-the-content-scrolling-methods-of-scrollviewer.md)  
+## <a name="in-this-section"></a><span data-ttu-id="25286-104">本节内容</span><span class="sxs-lookup"><span data-stu-id="25286-104">In This Section</span></span>  
+ [<span data-ttu-id="25286-105">处理 ScrollChanged 事件</span><span class="sxs-lookup"><span data-stu-id="25286-105">Handle the ScrollChanged Event</span></span>](../../../../docs/framework/wpf/controls/how-to-handle-the-scrollchanged-event.md)  
+ [<span data-ttu-id="25286-106">使用 IScrollInfo 接口滚动内容</span><span class="sxs-lookup"><span data-stu-id="25286-106">Scroll Content by Using the IScrollInfo Interface</span></span>](../../../../docs/framework/wpf/controls/how-to-scroll-content-by-using-the-iscrollinfo-interface.md)  
+ [<span data-ttu-id="25286-107">使用 ScrollViewer 的内容滚动方法</span><span class="sxs-lookup"><span data-stu-id="25286-107">Use the Content-Scrolling Methods of ScrollViewer</span></span>](../../../../docs/framework/wpf/controls/how-to-use-the-content-scrolling-methods-of-scrollviewer.md)  
   
-## <a name="reference"></a><span data-ttu-id="26084-108">参考</span><span class="sxs-lookup"><span data-stu-id="26084-108">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="25286-108">参考</span><span class="sxs-lookup"><span data-stu-id="25286-108">Reference</span></span>  
  <xref:System.Windows.Controls.Primitives.ScrollBar>  
   
  <xref:System.Windows.Controls.ScrollViewer>  
   
-## <a name="see-also"></a><span data-ttu-id="26084-109">请参阅</span><span class="sxs-lookup"><span data-stu-id="26084-109">See Also</span></span>  
- [<span data-ttu-id="26084-110">面板概述</span><span class="sxs-lookup"><span data-stu-id="26084-110">Panels Overview</span></span>](../../../../docs/framework/wpf/controls/panels-overview.md)  
- [<span data-ttu-id="26084-111">布局</span><span class="sxs-lookup"><span data-stu-id="26084-111">Layout</span></span>](../../../../docs/framework/wpf/advanced/layout.md)
+## <a name="see-also"></a><span data-ttu-id="25286-109">请参阅</span><span class="sxs-lookup"><span data-stu-id="25286-109">See also</span></span>
+- [<span data-ttu-id="25286-110">面板概述</span><span class="sxs-lookup"><span data-stu-id="25286-110">Panels Overview</span></span>](../../../../docs/framework/wpf/controls/panels-overview.md)
+- [<span data-ttu-id="25286-111">布局</span><span class="sxs-lookup"><span data-stu-id="25286-111">Layout</span></span>](../../../../docs/framework/wpf/advanced/layout.md)

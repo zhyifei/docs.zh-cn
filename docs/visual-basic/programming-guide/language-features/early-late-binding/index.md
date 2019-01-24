@@ -2,42 +2,36 @@
 title: 早期绑定和后期绑定 (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
-- early binding [Visual Basic]
-- objects [Visual Basic], late-bound
-- objects [Visual Basic], early-bound
-- objects [Visual Basic], late bound
-- early binding [Visual Basic], Visual Basic compiler
-- binding [Visual Basic], late and early
-- objects [Visual Basic], early bound
-- Visual Basic compiler, early and late binding
-- late binding [Visual Basic]
-- late binding [Visual Basic], Visual Basic compiler
+  - 'early binding [Visual Basic]'
+  - 'objects [Visual Basic], late-bound'
+  - 'objects [Visual Basic], early-bound'
+  - 'objects [Visual Basic], late bound'
+  - 'early binding [Visual Basic], Visual Basic compiler'
+  - 'binding [Visual Basic], late and early'
+  - 'objects [Visual Basic], early bound'
+  - 'Visual Basic compiler, early and late binding'
+  - 'late binding [Visual Basic]'
+  - 'late binding [Visual Basic], Visual Basic compiler'
 ms.assetid: d6ff7f1e-b94f-4205-ab8d-5cfa91758724
-ms.openlocfilehash: 8426899b0c0d3649f47cbd6ad5383dd3c95b9499
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
-ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33647246"
 ---
-# <a name="early-and-late-binding-visual-basic"></a><span data-ttu-id="df160-102">早期绑定和后期绑定 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="df160-102">Early and Late Binding (Visual Basic)</span></span>
-<span data-ttu-id="df160-103">Visual Basic 编译器会执行一个过程调用`binding`当一个对象分配给对象变量。</span><span class="sxs-lookup"><span data-stu-id="df160-103">The Visual Basic compiler performs a process called `binding` when an object is assigned to an object variable.</span></span> <span data-ttu-id="df160-104">如果对象被分配给声明为特定对象类型的变量，就是*早期绑定*对象。</span><span class="sxs-lookup"><span data-stu-id="df160-104">An object is *early bound* when it is assigned to a variable declared to be of a specific object type.</span></span> <span data-ttu-id="df160-105">借助早期绑定对象，编译器可以在应用程序执行前分配内存并执行其他优化。</span><span class="sxs-lookup"><span data-stu-id="df160-105">Early bound objects allow the compiler to allocate memory and perform other optimizations before an application executes.</span></span> <span data-ttu-id="df160-106">例如，下面的代码片段将变量声明为类型 <xref:System.IO.FileStream>：</span><span class="sxs-lookup"><span data-stu-id="df160-106">For example, the following code fragment declares a variable to be of type <xref:System.IO.FileStream>:</span></span>  
+# <a name="early-and-late-binding-visual-basic"></a><span data-ttu-id="41fa7-102">早期绑定和后期绑定 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="41fa7-102">Early and Late Binding (Visual Basic)</span></span>
+<span data-ttu-id="41fa7-103">Visual Basic 编译器会执行名为的进程`binding`对象分配给对象变量时。</span><span class="sxs-lookup"><span data-stu-id="41fa7-103">The Visual Basic compiler performs a process called `binding` when an object is assigned to an object variable.</span></span> <span data-ttu-id="41fa7-104">如果对象被分配给声明为特定对象类型的变量，就是*早期绑定*对象。</span><span class="sxs-lookup"><span data-stu-id="41fa7-104">An object is *early bound* when it is assigned to a variable declared to be of a specific object type.</span></span> <span data-ttu-id="41fa7-105">借助早期绑定对象，编译器可以在应用程序执行前分配内存并执行其他优化。</span><span class="sxs-lookup"><span data-stu-id="41fa7-105">Early bound objects allow the compiler to allocate memory and perform other optimizations before an application executes.</span></span> <span data-ttu-id="41fa7-106">例如，下面的代码片段将变量声明为类型 <xref:System.IO.FileStream>：</span><span class="sxs-lookup"><span data-stu-id="41fa7-106">For example, the following code fragment declares a variable to be of type <xref:System.IO.FileStream>:</span></span>  
   
  [!code-vb[VbVbalrOOP#90](../../../../visual-basic/misc/codesnippet/VisualBasic/early-and-late-binding_1.vb)]  
   
- <span data-ttu-id="df160-107">由于 <xref:System.IO.FileStream> 是特定对象类型，因此分配给 `FS` 的实例就是早期绑定对象。</span><span class="sxs-lookup"><span data-stu-id="df160-107">Because <xref:System.IO.FileStream> is a specific object type, the instance assigned to `FS` is early bound.</span></span>  
+ <span data-ttu-id="41fa7-107">由于 <xref:System.IO.FileStream> 是特定对象类型，因此分配给 `FS` 的实例就是早期绑定对象。</span><span class="sxs-lookup"><span data-stu-id="41fa7-107">Because <xref:System.IO.FileStream> is a specific object type, the instance assigned to `FS` is early bound.</span></span>  
   
- <span data-ttu-id="df160-108">相反，如果对象被分配给声明为 `Object` 类型的变量，就是*晚期绑定*对象。</span><span class="sxs-lookup"><span data-stu-id="df160-108">By contrast, an object is *late bound* when it is assigned to a variable declared to be of type `Object`.</span></span> <span data-ttu-id="df160-109">虽然这种类型的对象可保留对任何对象的引用，但却没有早期绑定对象的诸多优点。</span><span class="sxs-lookup"><span data-stu-id="df160-109">Objects of this type can hold references to any object, but lack many of the advantages of early-bound objects.</span></span> <span data-ttu-id="df160-110">例如，下面的代码片段将对象变量声明为保留 `CreateObject` 函数返回的对象：</span><span class="sxs-lookup"><span data-stu-id="df160-110">For example, the following code fragment declares an object variable to hold an object returned by the `CreateObject` function:</span></span>  
+ <span data-ttu-id="41fa7-108">相反，如果对象被分配给声明为 `Object` 类型的变量，就是*晚期绑定*对象。</span><span class="sxs-lookup"><span data-stu-id="41fa7-108">By contrast, an object is *late bound* when it is assigned to a variable declared to be of type `Object`.</span></span> <span data-ttu-id="41fa7-109">虽然这种类型的对象可保留对任何对象的引用，但却没有早期绑定对象的诸多优点。</span><span class="sxs-lookup"><span data-stu-id="41fa7-109">Objects of this type can hold references to any object, but lack many of the advantages of early-bound objects.</span></span> <span data-ttu-id="41fa7-110">例如，下面的代码片段将对象变量声明为保留 `CreateObject` 函数返回的对象：</span><span class="sxs-lookup"><span data-stu-id="41fa7-110">For example, the following code fragment declares an object variable to hold an object returned by the `CreateObject` function:</span></span>  
   
  [!code-vb[VbVbalrOOP#91](../../../../visual-basic/misc/codesnippet/VisualBasic/early-and-late-binding_2.vb)]  
   
-## <a name="advantages-of-early-binding"></a><span data-ttu-id="df160-111">早期绑定的优点</span><span class="sxs-lookup"><span data-stu-id="df160-111">Advantages of Early Binding</span></span>  
- <span data-ttu-id="df160-112">应尽量使用早期绑定对象，因为这样编译器可以执行重要优化，从而大大提升应用程序的工作效率。</span><span class="sxs-lookup"><span data-stu-id="df160-112">You should use early-bound objects whenever possible, because they allow the compiler to make important optimizations that yield more efficient applications.</span></span> <span data-ttu-id="df160-113">早期绑定对象的速度远超晚期绑定对象，并明确指出在使用的对象类型，使得代码更易于阅读和维护。</span><span class="sxs-lookup"><span data-stu-id="df160-113">Early-bound objects are significantly faster than late-bound objects and make your code easier to read and maintain by stating exactly what kind of objects are being used.</span></span> <span data-ttu-id="df160-114">早期绑定到另一个优点是它启用有用的功能，例如自动代码完成和动态帮助，因为 Visual Studio 集成的开发环境 (IDE) 可以确定完全什么类型的对象使用当您编辑代码。</span><span class="sxs-lookup"><span data-stu-id="df160-114">Another advantage to early binding is that it enables useful features such as automatic code completion and Dynamic Help because the Visual Studio integrated development environment (IDE) can determine exactly what type of object you are working with as you edit the code.</span></span> <span data-ttu-id="df160-115">早期绑定降低了运行时错误的数量和严重性，因为它允许编译器在编译程序时报告错误。</span><span class="sxs-lookup"><span data-stu-id="df160-115">Early binding reduces the number and severity of run-time errors because it allows the compiler to report errors when a program is compiled.</span></span>  
+## <a name="advantages-of-early-binding"></a><span data-ttu-id="41fa7-111">早期绑定的优点</span><span class="sxs-lookup"><span data-stu-id="41fa7-111">Advantages of Early Binding</span></span>  
+ <span data-ttu-id="41fa7-112">应尽量使用早期绑定对象，因为这样编译器可以执行重要优化，从而大大提升应用程序的工作效率。</span><span class="sxs-lookup"><span data-stu-id="41fa7-112">You should use early-bound objects whenever possible, because they allow the compiler to make important optimizations that yield more efficient applications.</span></span> <span data-ttu-id="41fa7-113">早期绑定对象的速度远超晚期绑定对象，并明确指出在使用的对象类型，使得代码更易于阅读和维护。</span><span class="sxs-lookup"><span data-stu-id="41fa7-113">Early-bound objects are significantly faster than late-bound objects and make your code easier to read and maintain by stating exactly what kind of objects are being used.</span></span> <span data-ttu-id="41fa7-114">早期绑定的另一个优点是它允许自动代码填充和动态帮助等实用功能，因为 Visual Studio 集成的开发环境 (IDE) 可以确定完全什么类型的对象使用你在编辑代码。</span><span class="sxs-lookup"><span data-stu-id="41fa7-114">Another advantage to early binding is that it enables useful features such as automatic code completion and Dynamic Help because the Visual Studio integrated development environment (IDE) can determine exactly what type of object you are working with as you edit the code.</span></span> <span data-ttu-id="41fa7-115">早期绑定降低了运行时错误的数量和严重性，因为它允许编译器在编译程序时报告错误。</span><span class="sxs-lookup"><span data-stu-id="41fa7-115">Early binding reduces the number and severity of run-time errors because it allows the compiler to report errors when a program is compiled.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="df160-116">晚期绑定只能用于访问声明为 `Public` 的类型成员。</span><span class="sxs-lookup"><span data-stu-id="df160-116">Late binding can only be used to access type members that are declared as `Public`.</span></span> <span data-ttu-id="df160-117">访问声明为 `Friend` 或 `Protected Friend` 的成员会导致生成运行时错误。</span><span class="sxs-lookup"><span data-stu-id="df160-117">Accessing members declared as `Friend` or `Protected Friend` results in a run-time error.</span></span>  
+>  <span data-ttu-id="41fa7-116">晚期绑定只能用于访问声明为 `Public` 的类型成员。</span><span class="sxs-lookup"><span data-stu-id="41fa7-116">Late binding can only be used to access type members that are declared as `Public`.</span></span> <span data-ttu-id="41fa7-117">访问声明为 `Friend` 或 `Protected Friend` 的成员会导致生成运行时错误。</span><span class="sxs-lookup"><span data-stu-id="41fa7-117">Accessing members declared as `Friend` or `Protected Friend` results in a run-time error.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="df160-118">请参阅</span><span class="sxs-lookup"><span data-stu-id="df160-118">See Also</span></span>  
- <xref:Microsoft.VisualBasic.Interaction.CreateObject%2A>  
- [<span data-ttu-id="df160-119">对象生存期：如何创建和销毁对象</span><span class="sxs-lookup"><span data-stu-id="df160-119">Object Lifetime: How Objects Are Created and Destroyed</span></span>](../../../../visual-basic/programming-guide/language-features/objects-and-classes/object-lifetime-how-objects-are-created-and-destroyed.md)  
- [<span data-ttu-id="df160-120">Object 数据类型</span><span class="sxs-lookup"><span data-stu-id="df160-120">Object Data Type</span></span>](../../../../visual-basic/language-reference/data-types/object-data-type.md)
+## <a name="see-also"></a><span data-ttu-id="41fa7-118">请参阅</span><span class="sxs-lookup"><span data-stu-id="41fa7-118">See also</span></span>
+- <xref:Microsoft.VisualBasic.Interaction.CreateObject%2A>
+- [<span data-ttu-id="41fa7-119">对象生存期：如何创建和销毁对象</span><span class="sxs-lookup"><span data-stu-id="41fa7-119">Object Lifetime: How Objects Are Created and Destroyed</span></span>](../../../../visual-basic/programming-guide/language-features/objects-and-classes/object-lifetime-how-objects-are-created-and-destroyed.md)
+- [<span data-ttu-id="41fa7-120">Object 数据类型</span><span class="sxs-lookup"><span data-stu-id="41fa7-120">Object Data Type</span></span>](../../../../visual-basic/language-reference/data-types/object-data-type.md)

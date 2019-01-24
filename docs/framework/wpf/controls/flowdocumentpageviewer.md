@@ -7,18 +7,18 @@ helpviewer_keywords:
 - FlowDocumentPageViewer control [WPF]
 - controls [WPF], FlowDocumentPageViewer
 ms.assetid: 1ed5a30e-f415-4c26-a52f-9f028a68f66f
-ms.openlocfilehash: bad83378863cbc8b05fd3b74fe126e8147a20494
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4f58ebbb3f0876c8c1aa23bae04fb46573bc234f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33551219"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54653757"
 ---
-# <a name="flowdocumentpageviewer"></a><span data-ttu-id="10e6e-102">FlowDocumentPageViewer</span><span class="sxs-lookup"><span data-stu-id="10e6e-102">FlowDocumentPageViewer</span></span>
-<span data-ttu-id="10e6e-103"><xref:System.Windows.Controls.FlowDocumentPageViewer>控件用于查看<xref:System.Windows.Documents.FlowDocument>每页基础上的内容。</span><span class="sxs-lookup"><span data-stu-id="10e6e-103">The <xref:System.Windows.Controls.FlowDocumentPageViewer> control is used to view <xref:System.Windows.Documents.FlowDocument> content on a per page basis.</span></span> <span data-ttu-id="10e6e-104">与之相反<xref:System.Windows.Controls.FlowDocumentScrollViewer>，哪些显示<xref:System.Windows.Documents.FlowDocument>滚动查看器中的内容。</span><span class="sxs-lookup"><span data-stu-id="10e6e-104">Contrast with the <xref:System.Windows.Controls.FlowDocumentScrollViewer>, which presents <xref:System.Windows.Documents.FlowDocument> content in a scrolling viewer.</span></span>  
+# <a name="flowdocumentpageviewer"></a><span data-ttu-id="825f2-102">FlowDocumentPageViewer</span><span class="sxs-lookup"><span data-stu-id="825f2-102">FlowDocumentPageViewer</span></span>
+<span data-ttu-id="825f2-103"><xref:System.Windows.Controls.FlowDocumentPageViewer>控件用于查看<xref:System.Windows.Documents.FlowDocument>每每个页面上的内容。</span><span class="sxs-lookup"><span data-stu-id="825f2-103">The <xref:System.Windows.Controls.FlowDocumentPageViewer> control is used to view <xref:System.Windows.Documents.FlowDocument> content on a per page basis.</span></span> <span data-ttu-id="825f2-104">与之相反<xref:System.Windows.Controls.FlowDocumentScrollViewer>，其中介绍了<xref:System.Windows.Documents.FlowDocument>滚动查看器中的内容。</span><span class="sxs-lookup"><span data-stu-id="825f2-104">Contrast with the <xref:System.Windows.Controls.FlowDocumentScrollViewer>, which presents <xref:System.Windows.Documents.FlowDocument> content in a scrolling viewer.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="10e6e-105">请参阅</span><span class="sxs-lookup"><span data-stu-id="10e6e-105">See Also</span></span>  
- <xref:System.Windows.Documents.FlowDocument>  
- [<span data-ttu-id="10e6e-106">流文档概述</span><span class="sxs-lookup"><span data-stu-id="10e6e-106">Flow Document Overview</span></span>](../../../../docs/framework/wpf/advanced/flow-document-overview.md)  
- [<span data-ttu-id="10e6e-107">帮助主题</span><span class="sxs-lookup"><span data-stu-id="10e6e-107">How-to Topics</span></span>](../../../../docs/framework/wpf/advanced/flow-content-elements-how-to-topics.md)  
- [<span data-ttu-id="10e6e-108">WPF 中的文档</span><span class="sxs-lookup"><span data-stu-id="10e6e-108">Documents in WPF</span></span>](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)
+## <a name="see-also"></a><span data-ttu-id="825f2-105">请参阅</span><span class="sxs-lookup"><span data-stu-id="825f2-105">See also</span></span>
+- <xref:System.Windows.Documents.FlowDocument>
+- [<span data-ttu-id="825f2-106">流文档概述</span><span class="sxs-lookup"><span data-stu-id="825f2-106">Flow Document Overview</span></span>](../../../../docs/framework/wpf/advanced/flow-document-overview.md)
+- [<span data-ttu-id="825f2-107">帮助主题</span><span class="sxs-lookup"><span data-stu-id="825f2-107">How-to Topics</span></span>](../../../../docs/framework/wpf/advanced/flow-content-elements-how-to-topics.md)
+- [<span data-ttu-id="825f2-108">WPF 中的文档</span><span class="sxs-lookup"><span data-stu-id="825f2-108">Documents in WPF</span></span>](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)

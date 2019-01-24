@@ -16,32 +16,32 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3c6da86ce2d86a6842d2d7d8de860e9a8621bdaf
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: d89a531ad09e6865bd9c7dad00c1d8c1840fab8f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33429590"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54662161"
 ---
-# <a name="iassemblycacheitem-interface"></a><span data-ttu-id="10111-102">IAssemblyCacheItem 接口</span><span class="sxs-lookup"><span data-stu-id="10111-102">IAssemblyCacheItem Interface</span></span>
-<span data-ttu-id="10111-103">表示全局程序集缓存中的单个程序集。</span><span class="sxs-lookup"><span data-stu-id="10111-103">Represents a single assembly in the global assembly cache.</span></span>  
+# <a name="iassemblycacheitem-interface"></a><span data-ttu-id="d6e7e-102">IAssemblyCacheItem 接口</span><span class="sxs-lookup"><span data-stu-id="d6e7e-102">IAssemblyCacheItem Interface</span></span>
+<span data-ttu-id="d6e7e-103">表示全局程序集缓存中的单个程序集。</span><span class="sxs-lookup"><span data-stu-id="d6e7e-103">Represents a single assembly in the global assembly cache.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="10111-104">方法</span><span class="sxs-lookup"><span data-stu-id="10111-104">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="d6e7e-104">方法</span><span class="sxs-lookup"><span data-stu-id="d6e7e-104">Methods</span></span>  
   
-|<span data-ttu-id="10111-105">方法</span><span class="sxs-lookup"><span data-stu-id="10111-105">Method</span></span>|<span data-ttu-id="10111-106">描述</span><span class="sxs-lookup"><span data-stu-id="10111-106">Description</span></span>|  
+|<span data-ttu-id="d6e7e-105">方法</span><span class="sxs-lookup"><span data-stu-id="d6e7e-105">Method</span></span>|<span data-ttu-id="d6e7e-106">描述</span><span class="sxs-lookup"><span data-stu-id="d6e7e-106">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="10111-107">AbortItem 方法</span><span class="sxs-lookup"><span data-stu-id="10111-107">AbortItem Method</span></span>](../../../../docs/framework/unmanaged-api/fusion/iassemblycacheitem-abortitem-method.md)|<span data-ttu-id="10111-108">允许在全局程序集缓存中的程序集，它将被释放之前执行清理操作。</span><span class="sxs-lookup"><span data-stu-id="10111-108">Allows the assembly in the global assembly cache to perform cleanup operations before it is released.</span></span>|  
-|[<span data-ttu-id="10111-109">Commit 方法</span><span class="sxs-lookup"><span data-stu-id="10111-109">Commit Method</span></span>](../../../../docs/framework/unmanaged-api/fusion/iassemblycacheitem-commit-method.md)|<span data-ttu-id="10111-110">提交对内存的缓存的程序集引用。</span><span class="sxs-lookup"><span data-stu-id="10111-110">Commits the cached assembly reference to memory.</span></span>|  
-|[<span data-ttu-id="10111-111">CreateStream 方法</span><span class="sxs-lookup"><span data-stu-id="10111-111">CreateStream Method</span></span>](../../../../docs/framework/unmanaged-api/fusion/iassemblycacheitem-createstream-method.md)|<span data-ttu-id="10111-112">具有指定的名称和格式创建一个流。</span><span class="sxs-lookup"><span data-stu-id="10111-112">Creates a stream with the specified name and format.</span></span>|  
+|[<span data-ttu-id="d6e7e-107">AbortItem 方法</span><span class="sxs-lookup"><span data-stu-id="d6e7e-107">AbortItem Method</span></span>](../../../../docs/framework/unmanaged-api/fusion/iassemblycacheitem-abortitem-method.md)|<span data-ttu-id="d6e7e-108">允许在全局程序集缓存中的程序集以进行发布之前执行清理操作。</span><span class="sxs-lookup"><span data-stu-id="d6e7e-108">Allows the assembly in the global assembly cache to perform cleanup operations before it is released.</span></span>|  
+|[<span data-ttu-id="d6e7e-109">Commit 方法</span><span class="sxs-lookup"><span data-stu-id="d6e7e-109">Commit Method</span></span>](../../../../docs/framework/unmanaged-api/fusion/iassemblycacheitem-commit-method.md)|<span data-ttu-id="d6e7e-110">提交对内存的缓存程序集引用。</span><span class="sxs-lookup"><span data-stu-id="d6e7e-110">Commits the cached assembly reference to memory.</span></span>|  
+|[<span data-ttu-id="d6e7e-111">CreateStream 方法</span><span class="sxs-lookup"><span data-stu-id="d6e7e-111">CreateStream Method</span></span>](../../../../docs/framework/unmanaged-api/fusion/iassemblycacheitem-createstream-method.md)|<span data-ttu-id="d6e7e-112">创建具有指定的名称和格式的流。</span><span class="sxs-lookup"><span data-stu-id="d6e7e-112">Creates a stream with the specified name and format.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="10111-113">要求</span><span class="sxs-lookup"><span data-stu-id="10111-113">Requirements</span></span>  
- <span data-ttu-id="10111-114">**平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="10111-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="d6e7e-113">要求</span><span class="sxs-lookup"><span data-stu-id="d6e7e-113">Requirements</span></span>  
+ <span data-ttu-id="d6e7e-114">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="d6e7e-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="10111-115">**标头：** Fusion.h</span><span class="sxs-lookup"><span data-stu-id="10111-115">**Header:** Fusion.h</span></span>  
+ <span data-ttu-id="d6e7e-115">**标头：** Fusion.h</span><span class="sxs-lookup"><span data-stu-id="d6e7e-115">**Header:** Fusion.h</span></span>  
   
- <span data-ttu-id="10111-116">**.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="10111-116">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="d6e7e-116">**.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="d6e7e-116">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="10111-117">请参阅</span><span class="sxs-lookup"><span data-stu-id="10111-117">See Also</span></span>  
- [<span data-ttu-id="10111-118">合成接口</span><span class="sxs-lookup"><span data-stu-id="10111-118">Fusion Interfaces</span></span>](../../../../docs/framework/unmanaged-api/fusion/fusion-interfaces.md)  
- [<span data-ttu-id="10111-119">全局程序集缓存</span><span class="sxs-lookup"><span data-stu-id="10111-119">Global Assembly Cache</span></span>](../../../../docs/framework/app-domains/gac.md)  
- [<span data-ttu-id="10111-120">IAssemblyCache 接口</span><span class="sxs-lookup"><span data-stu-id="10111-120">IAssemblyCache Interface</span></span>](../../../../docs/framework/unmanaged-api/fusion/iassemblycache-interface.md)
+## <a name="see-also"></a><span data-ttu-id="d6e7e-117">请参阅</span><span class="sxs-lookup"><span data-stu-id="d6e7e-117">See also</span></span>
+- [<span data-ttu-id="d6e7e-118">合成接口</span><span class="sxs-lookup"><span data-stu-id="d6e7e-118">Fusion Interfaces</span></span>](../../../../docs/framework/unmanaged-api/fusion/fusion-interfaces.md)
+- [<span data-ttu-id="d6e7e-119">全局程序集缓存</span><span class="sxs-lookup"><span data-stu-id="d6e7e-119">Global Assembly Cache</span></span>](../../../../docs/framework/app-domains/gac.md)
+- [<span data-ttu-id="d6e7e-120">IAssemblyCache 接口</span><span class="sxs-lookup"><span data-stu-id="d6e7e-120">IAssemblyCache Interface</span></span>](../../../../docs/framework/unmanaged-api/fusion/iassemblycache-interface.md)

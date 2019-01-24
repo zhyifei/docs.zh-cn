@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 899f2ca5ef1b987687f5c065ad3e1965e142d103
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 7ebc86ad9c1f84156e7e228c1ddf3fe7b86b7e60
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44216101"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54576260"
 ---
-# <a name="imetadataemitmerge-method"></a><span data-ttu-id="669ef-102">IMetaDataEmit::Merge 方法</span><span class="sxs-lookup"><span data-stu-id="669ef-102">IMetaDataEmit::Merge Method</span></span>
-<span data-ttu-id="669ef-103">将指定的导入的范围添加到要合并的范围列表。</span><span class="sxs-lookup"><span data-stu-id="669ef-103">Adds the specified imported scope to the list of scopes to be merged.</span></span>  
+# <a name="imetadataemitmerge-method"></a><span data-ttu-id="76c61-102">IMetaDataEmit::Merge 方法</span><span class="sxs-lookup"><span data-stu-id="76c61-102">IMetaDataEmit::Merge Method</span></span>
+<span data-ttu-id="76c61-103">将指定的导入的范围添加到要合并的范围列表。</span><span class="sxs-lookup"><span data-stu-id="76c61-103">Adds the specified imported scope to the list of scopes to be merged.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="669ef-104">语法</span><span class="sxs-lookup"><span data-stu-id="669ef-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="76c61-104">语法</span><span class="sxs-lookup"><span data-stu-id="76c61-104">Syntax</span></span>  
   
 ```  
 HRESULT Merge (   
@@ -37,28 +37,28 @@ HRESULT Merge (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="669ef-105">参数</span><span class="sxs-lookup"><span data-stu-id="669ef-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="76c61-105">参数</span><span class="sxs-lookup"><span data-stu-id="76c61-105">Parameters</span></span>  
  `pImport`  
- <span data-ttu-id="669ef-106">[in]一个指向[IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)对象，用于标识要合并的导入的作用域。</span><span class="sxs-lookup"><span data-stu-id="669ef-106">[in] A pointer to an [IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md) object that identifies the imported scope to be merged.</span></span>  
+ <span data-ttu-id="76c61-106">[in]一个指向[IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)对象，用于标识要合并的导入的作用域。</span><span class="sxs-lookup"><span data-stu-id="76c61-106">[in] A pointer to an [IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md) object that identifies the imported scope to be merged.</span></span>  
   
  `pIMap`  
- <span data-ttu-id="669ef-107">[in]一个指向[IMapToken](../../../../docs/framework/unmanaged-api/metadata/imaptoken-interface.md)对象，它指定标记重新映射。</span><span class="sxs-lookup"><span data-stu-id="669ef-107">[in] A pointer to an [IMapToken](../../../../docs/framework/unmanaged-api/metadata/imaptoken-interface.md) object that specifies the token re-map.</span></span>  
+ <span data-ttu-id="76c61-107">[in]一个指向[IMapToken](../../../../docs/framework/unmanaged-api/metadata/imaptoken-interface.md)对象，它指定标记重新映射。</span><span class="sxs-lookup"><span data-stu-id="76c61-107">[in] A pointer to an [IMapToken](../../../../docs/framework/unmanaged-api/metadata/imaptoken-interface.md) object that specifies the token re-map.</span></span>  
   
  `pHandleer`  
- <span data-ttu-id="669ef-108">[in]一个指向[IUnknown](/cpp/atl/iunknown)对象，它指定了错误。</span><span class="sxs-lookup"><span data-stu-id="669ef-108">[in] A pointer to an [IUnknown](/cpp/atl/iunknown) object that specifies the errors.</span></span>  
+ <span data-ttu-id="76c61-108">[in]一个指向[IUnknown](/cpp/atl/iunknown)对象，它指定了错误。</span><span class="sxs-lookup"><span data-stu-id="76c61-108">[in] A pointer to an [IUnknown](/cpp/atl/iunknown) object that specifies the errors.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="669ef-109">备注</span><span class="sxs-lookup"><span data-stu-id="669ef-109">Remarks</span></span>  
- <span data-ttu-id="669ef-110">调用[imetadataemit:: Mergeend](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-mergeend-method.md)触发的元数据合并到单个作用域。</span><span class="sxs-lookup"><span data-stu-id="669ef-110">Call [IMetaDataEmit::MergeEnd](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-mergeend-method.md) to trigger the merger of metadata into a single scope.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="76c61-109">备注</span><span class="sxs-lookup"><span data-stu-id="76c61-109">Remarks</span></span>  
+ <span data-ttu-id="76c61-110">调用[imetadataemit:: Mergeend](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-mergeend-method.md)触发的元数据合并到单个作用域。</span><span class="sxs-lookup"><span data-stu-id="76c61-110">Call [IMetaDataEmit::MergeEnd](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-mergeend-method.md) to trigger the merger of metadata into a single scope.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="669ef-111">要求</span><span class="sxs-lookup"><span data-stu-id="669ef-111">Requirements</span></span>  
- <span data-ttu-id="669ef-112">**平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="669ef-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="76c61-111">要求</span><span class="sxs-lookup"><span data-stu-id="76c61-111">Requirements</span></span>  
+ <span data-ttu-id="76c61-112">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="76c61-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="669ef-113">**标头：** Cor.h</span><span class="sxs-lookup"><span data-stu-id="669ef-113">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="76c61-113">**标头：** Cor.h</span><span class="sxs-lookup"><span data-stu-id="76c61-113">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="669ef-114">**库：** 用作 MSCorEE.dll 中的资源</span><span class="sxs-lookup"><span data-stu-id="669ef-114">**Library:** Used as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="76c61-114">**库：** 用作 MSCorEE.dll 中的资源</span><span class="sxs-lookup"><span data-stu-id="76c61-114">**Library:** Used as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="669ef-115">**.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="669ef-115">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="76c61-115">**.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="76c61-115">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="669ef-116">请参阅</span><span class="sxs-lookup"><span data-stu-id="669ef-116">See Also</span></span>  
- [<span data-ttu-id="669ef-117">IMetaDataEmit Interface</span><span class="sxs-lookup"><span data-stu-id="669ef-117">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)  
- [<span data-ttu-id="669ef-118">IMetaDataEmit2 Interface</span><span class="sxs-lookup"><span data-stu-id="669ef-118">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+## <a name="see-also"></a><span data-ttu-id="76c61-116">请参阅</span><span class="sxs-lookup"><span data-stu-id="76c61-116">See also</span></span>
+- [<span data-ttu-id="76c61-117">IMetaDataEmit Interface</span><span class="sxs-lookup"><span data-stu-id="76c61-117">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+- [<span data-ttu-id="76c61-118">IMetaDataEmit2 Interface</span><span class="sxs-lookup"><span data-stu-id="76c61-118">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

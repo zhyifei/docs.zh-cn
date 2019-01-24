@@ -17,38 +17,38 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 761dd55d2ae48739f24a03b8ce81c571fb211a5a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 0c4e2a094f018b4f77423b6dbfe990925632edf9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33453152"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54683854"
 ---
-# <a name="icorprofilerinfogetinprocinspectioninterface-method"></a><span data-ttu-id="f31d2-102">ICorProfilerInfo::GetInprocInspectionInterface 方法</span><span class="sxs-lookup"><span data-stu-id="f31d2-102">ICorProfilerInfo::GetInprocInspectionInterface Method</span></span>
-<span data-ttu-id="f31d2-103">对于"ICorDebugProcess"接口获取可以查询的对象。</span><span class="sxs-lookup"><span data-stu-id="f31d2-103">Gets an object that can be queried for an "ICorDebugProcess" interface.</span></span> <span data-ttu-id="f31d2-104">此方法是.NET Framework 2.0 版中过时。</span><span class="sxs-lookup"><span data-stu-id="f31d2-104">This method is obsolete in the .NET Framework version 2.0.</span></span>  
+# <a name="icorprofilerinfogetinprocinspectioninterface-method"></a><span data-ttu-id="4bef2-102">ICorProfilerInfo::GetInprocInspectionInterface 方法</span><span class="sxs-lookup"><span data-stu-id="4bef2-102">ICorProfilerInfo::GetInprocInspectionInterface Method</span></span>
+<span data-ttu-id="4bef2-103">对于"ICorDebugProcess"接口获取可查询的对象。</span><span class="sxs-lookup"><span data-stu-id="4bef2-103">Gets an object that can be queried for an "ICorDebugProcess" interface.</span></span> <span data-ttu-id="4bef2-104">此方法是在.NET Framework 2.0 版中已过时。</span><span class="sxs-lookup"><span data-stu-id="4bef2-104">This method is obsolete in the .NET Framework version 2.0.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="f31d2-105">语法</span><span class="sxs-lookup"><span data-stu-id="f31d2-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="4bef2-105">语法</span><span class="sxs-lookup"><span data-stu-id="4bef2-105">Syntax</span></span>  
   
 ```  
 HRESULT GetInprocInspectionInterface(  
     [out] IUnknown **ppicd);  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="f31d2-106">参数</span><span class="sxs-lookup"><span data-stu-id="f31d2-106">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="4bef2-106">参数</span><span class="sxs-lookup"><span data-stu-id="4bef2-106">Parameters</span></span>  
  `ppicd`  
- <span data-ttu-id="f31d2-107">[out](/cpp/atl/iunknown)为查询的对象`ICorDebugProcess`接口。</span><span class="sxs-lookup"><span data-stu-id="f31d2-107">[out](/cpp/atl/iunknown) object that can be queried for an `ICorDebugProcess` interface.</span></span>  
+ <span data-ttu-id="4bef2-107">[out](/cpp/atl/iunknown)对象，可用于查询`ICorDebugProcess`接口。</span><span class="sxs-lookup"><span data-stu-id="4bef2-107">[out](/cpp/atl/iunknown) object that can be queried for an `ICorDebugProcess` interface.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="f31d2-108">备注</span><span class="sxs-lookup"><span data-stu-id="f31d2-108">Remarks</span></span>  
- <span data-ttu-id="f31d2-109">公共语言运行时 (CLR) 调试 API 支持.NET Framework 1.0 版中进程内调试的限制。</span><span class="sxs-lookup"><span data-stu-id="f31d2-109">The common language runtime (CLR) debugging API supported limited in-process debugging in the .NET Framework version 1.0.</span></span> <span data-ttu-id="f31d2-110">探查器使用了调试 API 的检查部分启用进程内调试。</span><span class="sxs-lookup"><span data-stu-id="f31d2-110">In-process debugging enabled a profiler to use the inspection portions of the debugging API.</span></span> <span data-ttu-id="f31d2-111">由于客户反馈，进程内调试已从.NET Framework 2.0 版中，在中删除和替换为一组是根据分析 API 的详细信息的功能。</span><span class="sxs-lookup"><span data-stu-id="f31d2-111">As a result of customer feedback, in-process debugging has been removed from the .NET Framework in version 2.0, and replaced with a set of functionality that is more in line with the profiling API.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="4bef2-108">备注</span><span class="sxs-lookup"><span data-stu-id="4bef2-108">Remarks</span></span>  
+ <span data-ttu-id="4bef2-109">公共语言运行时 (CLR) 调试 API 支持.NET Framework 1.0 版中的有限进程内调试。</span><span class="sxs-lookup"><span data-stu-id="4bef2-109">The common language runtime (CLR) debugging API supported limited in-process debugging in the .NET Framework version 1.0.</span></span> <span data-ttu-id="4bef2-110">探查器可以使用调试 API 的检查部分启用进程内调试。</span><span class="sxs-lookup"><span data-stu-id="4bef2-110">In-process debugging enabled a profiler to use the inspection portions of the debugging API.</span></span> <span data-ttu-id="4bef2-111">由于客户反馈，进程内调试已删除从.NET Framework 版本 2.0 中，并替换为一系列更加符合分析 API 的功能。</span><span class="sxs-lookup"><span data-stu-id="4bef2-111">As a result of customer feedback, in-process debugging has been removed from the .NET Framework in version 2.0, and replaced with a set of functionality that is more in line with the profiling API.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="f31d2-112">要求</span><span class="sxs-lookup"><span data-stu-id="f31d2-112">Requirements</span></span>  
- <span data-ttu-id="f31d2-113">**平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="f31d2-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="4bef2-112">要求</span><span class="sxs-lookup"><span data-stu-id="4bef2-112">Requirements</span></span>  
+ <span data-ttu-id="4bef2-113">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="4bef2-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="f31d2-114">**头文件：** CorProf.idl、CorProf.h</span><span class="sxs-lookup"><span data-stu-id="f31d2-114">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="4bef2-114">**标头：** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="4bef2-114">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="f31d2-115">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="f31d2-115">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="4bef2-115">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="4bef2-115">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="f31d2-116">**.NET framework 版本：** 1.0</span><span class="sxs-lookup"><span data-stu-id="f31d2-116">**.NET Framework Version:** 1.0</span></span>  
+ <span data-ttu-id="4bef2-116">**.NET framework 版本：** 1.0</span><span class="sxs-lookup"><span data-stu-id="4bef2-116">**.NET Framework Version:** 1.0</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="f31d2-117">请参阅</span><span class="sxs-lookup"><span data-stu-id="f31d2-117">See Also</span></span>  
- [<span data-ttu-id="f31d2-118">ICorProfilerInfo 接口</span><span class="sxs-lookup"><span data-stu-id="f31d2-118">ICorProfilerInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
+## <a name="see-also"></a><span data-ttu-id="4bef2-117">请参阅</span><span class="sxs-lookup"><span data-stu-id="4bef2-117">See also</span></span>
+- [<span data-ttu-id="4bef2-118">ICorProfilerInfo 接口</span><span class="sxs-lookup"><span data-stu-id="4bef2-118">ICorProfilerInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)

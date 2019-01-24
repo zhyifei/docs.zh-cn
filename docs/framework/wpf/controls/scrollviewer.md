@@ -9,25 +9,25 @@ helpviewer_keywords:
 - content [WPF], ScrollViewer control
 - controls [WPF], ScrollViewer
 ms.assetid: 2163666e-04da-4036-841f-40947c9c034d
-ms.openlocfilehash: b5417632c50924200390d0ec01048d8df3d393ca
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7e4bb04c3d339f01b97c09966e096ddd6de47fbe
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33556063"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54671975"
 ---
-# <a name="scrollviewer"></a><span data-ttu-id="4129e-102">ScrollViewer</span><span class="sxs-lookup"><span data-stu-id="4129e-102">ScrollViewer</span></span>
-<span data-ttu-id="4129e-103"><xref:System.Windows.Controls.ScrollViewer>控件创建其中可以水平或垂直滚动内容的可滚动区域。</span><span class="sxs-lookup"><span data-stu-id="4129e-103">The <xref:System.Windows.Controls.ScrollViewer> control creates a scrollable region wherein content can be scrolled horizontally or vertically.</span></span>  
+# <a name="scrollviewer"></a><span data-ttu-id="384ed-102">ScrollViewer</span><span class="sxs-lookup"><span data-stu-id="384ed-102">ScrollViewer</span></span>
+<span data-ttu-id="384ed-103"><xref:System.Windows.Controls.ScrollViewer>控件创建其中可以水平或垂直滚动内容的可滚动区域。</span><span class="sxs-lookup"><span data-stu-id="384ed-103">The <xref:System.Windows.Controls.ScrollViewer> control creates a scrollable region wherein content can be scrolled horizontally or vertically.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="4129e-104">本节内容</span><span class="sxs-lookup"><span data-stu-id="4129e-104">In This Section</span></span>  
- [<span data-ttu-id="4129e-105">ScrollViewer 概述</span><span class="sxs-lookup"><span data-stu-id="4129e-105">ScrollViewer Overview</span></span>](../../../../docs/framework/wpf/controls/scrollviewer-overview.md)  
- [<span data-ttu-id="4129e-106">帮助主题</span><span class="sxs-lookup"><span data-stu-id="4129e-106">How-to Topics</span></span>](../../../../docs/framework/wpf/controls/scrollviewer-how-to-topics.md)  
+## <a name="in-this-section"></a><span data-ttu-id="384ed-104">本节内容</span><span class="sxs-lookup"><span data-stu-id="384ed-104">In This Section</span></span>  
+ [<span data-ttu-id="384ed-105">ScrollViewer 概述</span><span class="sxs-lookup"><span data-stu-id="384ed-105">ScrollViewer Overview</span></span>](../../../../docs/framework/wpf/controls/scrollviewer-overview.md)  
+ [<span data-ttu-id="384ed-106">帮助主题</span><span class="sxs-lookup"><span data-stu-id="384ed-106">How-to Topics</span></span>](../../../../docs/framework/wpf/controls/scrollviewer-how-to-topics.md)  
   
-## <a name="reference"></a><span data-ttu-id="4129e-107">参考</span><span class="sxs-lookup"><span data-stu-id="4129e-107">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="384ed-107">参考</span><span class="sxs-lookup"><span data-stu-id="384ed-107">Reference</span></span>  
  <xref:System.Windows.Controls.Primitives.ScrollBar>  
   
  <xref:System.Windows.Controls.ScrollViewer>  
   
-## <a name="see-also"></a><span data-ttu-id="4129e-108">请参阅</span><span class="sxs-lookup"><span data-stu-id="4129e-108">See Also</span></span>  
- [<span data-ttu-id="4129e-109">面板概述</span><span class="sxs-lookup"><span data-stu-id="4129e-109">Panels Overview</span></span>](../../../../docs/framework/wpf/controls/panels-overview.md)  
- [<span data-ttu-id="4129e-110">布局</span><span class="sxs-lookup"><span data-stu-id="4129e-110">Layout</span></span>](../../../../docs/framework/wpf/advanced/layout.md)
+## <a name="see-also"></a><span data-ttu-id="384ed-108">请参阅</span><span class="sxs-lookup"><span data-stu-id="384ed-108">See also</span></span>
+- [<span data-ttu-id="384ed-109">面板概述</span><span class="sxs-lookup"><span data-stu-id="384ed-109">Panels Overview</span></span>](../../../../docs/framework/wpf/controls/panels-overview.md)
+- [<span data-ttu-id="384ed-110">布局</span><span class="sxs-lookup"><span data-stu-id="384ed-110">Layout</span></span>](../../../../docs/framework/wpf/advanced/layout.md)
