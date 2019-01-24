@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e6b5281e30c48471131fa12e5106f7d0a6826e1b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: ff819ab67b258dbc7b5cec937863753852b1fcc1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33452554"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54629314"
 ---
-# <a name="icorprofilercallbackmoduleattachedtoassembly-method"></a><span data-ttu-id="44fcb-102">ICorProfilerCallback::ModuleAttachedToAssembly 方法</span><span class="sxs-lookup"><span data-stu-id="44fcb-102">ICorProfilerCallback::ModuleAttachedToAssembly Method</span></span>
-<span data-ttu-id="44fcb-103">通知探查器正在模块附加到其父程序集。</span><span class="sxs-lookup"><span data-stu-id="44fcb-103">Notifies the profiler that a module is being attached to its parent assembly.</span></span>  
+# <a name="icorprofilercallbackmoduleattachedtoassembly-method"></a><span data-ttu-id="4f4dd-102">ICorProfilerCallback::ModuleAttachedToAssembly 方法</span><span class="sxs-lookup"><span data-stu-id="4f4dd-102">ICorProfilerCallback::ModuleAttachedToAssembly Method</span></span>
+<span data-ttu-id="4f4dd-103">通知探查器模块，已附加到其父程序集。</span><span class="sxs-lookup"><span data-stu-id="4f4dd-103">Notifies the profiler that a module is being attached to its parent assembly.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="44fcb-104">语法</span><span class="sxs-lookup"><span data-stu-id="44fcb-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="4f4dd-104">语法</span><span class="sxs-lookup"><span data-stu-id="4f4dd-104">Syntax</span></span>  
   
 ```  
 HRESULT ModuleAttachedToAssembly(  
@@ -35,24 +35,24 @@ HRESULT ModuleAttachedToAssembly(
     [in] AssemblyID AssemblyId);  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="44fcb-105">参数</span><span class="sxs-lookup"><span data-stu-id="44fcb-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="4f4dd-105">参数</span><span class="sxs-lookup"><span data-stu-id="4f4dd-105">Parameters</span></span>  
  `moduleId`  
- <span data-ttu-id="44fcb-106">[in]要附加的模块的 ID。</span><span class="sxs-lookup"><span data-stu-id="44fcb-106">[in] The ID of the module that is being attached.</span></span>  
+ <span data-ttu-id="4f4dd-106">[in]要附加的模块的 ID。</span><span class="sxs-lookup"><span data-stu-id="4f4dd-106">[in] The ID of the module that is being attached.</span></span>  
   
  `AssemblyId`  
- <span data-ttu-id="44fcb-107">[in]模块附加到父程序集的 ID。</span><span class="sxs-lookup"><span data-stu-id="44fcb-107">[in] The ID of the parent assembly to which the module is attached.</span></span>  
+ <span data-ttu-id="4f4dd-107">[in]该模块所附加到父程序集的 ID。</span><span class="sxs-lookup"><span data-stu-id="4f4dd-107">[in] The ID of the parent assembly to which the module is attached.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="44fcb-108">备注</span><span class="sxs-lookup"><span data-stu-id="44fcb-108">Remarks</span></span>  
- <span data-ttu-id="44fcb-109">通过调用，可以通过导入地址表 (IAT) 加载模块`LoadLibrary`，或通过的元数据引用。</span><span class="sxs-lookup"><span data-stu-id="44fcb-109">A module can be loaded through an import address table (IAT), through a call to `LoadLibrary`, or through a metadata reference.</span></span> <span data-ttu-id="44fcb-110">因此，公共语言运行时 (CLR) 加载程序具有用于确定在其中模块所在的程序集的多个代码路径。</span><span class="sxs-lookup"><span data-stu-id="44fcb-110">As a result, the common language runtime (CLR) loader has multiple code paths for determining the assembly in which a module lives.</span></span> <span data-ttu-id="44fcb-111">因此，可能会之后， [icorprofilercallback:: Moduleloadfinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-moduleloadfinished-method.md)模块不知道哪些程序集的调用其为，不可能获取父程序集 ID。</span><span class="sxs-lookup"><span data-stu-id="44fcb-111">Therefore, it is possible that after [ICorProfilerCallback::ModuleLoadFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-moduleloadfinished-method.md) is called, the module does not know what assembly it is in and getting the parent assembly ID is not possible.</span></span> <span data-ttu-id="44fcb-112">`ModuleAttachedToAssembly`模块附加到其父程序集和它可以获取 ID 的父程序集时，调用方法。</span><span class="sxs-lookup"><span data-stu-id="44fcb-112">The `ModuleAttachedToAssembly` method is called when the module is attached to its parent assembly and its parent assembly ID can be obtained.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="4f4dd-108">备注</span><span class="sxs-lookup"><span data-stu-id="4f4dd-108">Remarks</span></span>  
+ <span data-ttu-id="4f4dd-109">可以通过调用通过导入地址表 (IAT) 加载的模块`LoadLibrary`，或通过元数据引用。</span><span class="sxs-lookup"><span data-stu-id="4f4dd-109">A module can be loaded through an import address table (IAT), through a call to `LoadLibrary`, or through a metadata reference.</span></span> <span data-ttu-id="4f4dd-110">因此，公共语言运行时 (CLR) 加载程序具有多个代码路径用来确定在其中一个模块所在的程序集。</span><span class="sxs-lookup"><span data-stu-id="4f4dd-110">As a result, the common language runtime (CLR) loader has multiple code paths for determining the assembly in which a module lives.</span></span> <span data-ttu-id="4f4dd-111">因此，很可能之后[icorprofilercallback:: Moduleloadfinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-moduleloadfinished-method.md)调用时，该模块不知道哪些程序集是中，且不可能获取父程序集 ID。</span><span class="sxs-lookup"><span data-stu-id="4f4dd-111">Therefore, it is possible that after [ICorProfilerCallback::ModuleLoadFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-moduleloadfinished-method.md) is called, the module does not know what assembly it is in and getting the parent assembly ID is not possible.</span></span> <span data-ttu-id="4f4dd-112">`ModuleAttachedToAssembly`模块附加到其父程序集和它可以获取 ID 的父程序集时调用方法。</span><span class="sxs-lookup"><span data-stu-id="4f4dd-112">The `ModuleAttachedToAssembly` method is called when the module is attached to its parent assembly and its parent assembly ID can be obtained.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="44fcb-113">要求</span><span class="sxs-lookup"><span data-stu-id="44fcb-113">Requirements</span></span>  
- <span data-ttu-id="44fcb-114">**平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="44fcb-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="4f4dd-113">要求</span><span class="sxs-lookup"><span data-stu-id="4f4dd-113">Requirements</span></span>  
+ <span data-ttu-id="4f4dd-114">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="4f4dd-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="44fcb-115">**头文件：** CorProf.idl、CorProf.h</span><span class="sxs-lookup"><span data-stu-id="44fcb-115">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="4f4dd-115">**标头：** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="4f4dd-115">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="44fcb-116">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="44fcb-116">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="4f4dd-116">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="4f4dd-116">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="44fcb-117">**.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="44fcb-117">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="4f4dd-117">**.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="4f4dd-117">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="44fcb-118">请参阅</span><span class="sxs-lookup"><span data-stu-id="44fcb-118">See Also</span></span>  
- [<span data-ttu-id="44fcb-119">ICorProfilerCallback 接口</span><span class="sxs-lookup"><span data-stu-id="44fcb-119">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+## <a name="see-also"></a><span data-ttu-id="4f4dd-118">请参阅</span><span class="sxs-lookup"><span data-stu-id="4f4dd-118">See also</span></span>
+- [<span data-ttu-id="4f4dd-119">ICorProfilerCallback 接口</span><span class="sxs-lookup"><span data-stu-id="4f4dd-119">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)

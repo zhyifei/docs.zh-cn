@@ -16,32 +16,32 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: da6462a320b1f090940473f566ade91d36e74780
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 8ae940946c56cbc858690cccce61597d0016e40c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33431696"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54571803"
 ---
-# <a name="ienumidentityattribute-interface"></a><span data-ttu-id="7f764-102">IEnumIDENTITY_ATTRIBUTE 接口</span><span class="sxs-lookup"><span data-stu-id="7f764-102">IEnumIDENTITY_ATTRIBUTE Interface</span></span>
-<span data-ttu-id="7f764-103">用作当前范围中的代码对象的属性的枚举数。</span><span class="sxs-lookup"><span data-stu-id="7f764-103">Serves as an enumerator for the attributes of the code object in the current scope.</span></span>  
+# <a name="ienumidentityattribute-interface"></a><span data-ttu-id="f9548-102">IEnumIDENTITY_ATTRIBUTE 接口</span><span class="sxs-lookup"><span data-stu-id="f9548-102">IEnumIDENTITY_ATTRIBUTE Interface</span></span>
+<span data-ttu-id="f9548-103">用作当前作用域中的代码对象的属性的枚举器。</span><span class="sxs-lookup"><span data-stu-id="f9548-103">Serves as an enumerator for the attributes of the code object in the current scope.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="7f764-104">方法</span><span class="sxs-lookup"><span data-stu-id="7f764-104">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="f9548-104">方法</span><span class="sxs-lookup"><span data-stu-id="f9548-104">Methods</span></span>  
   
-|<span data-ttu-id="7f764-105">方法</span><span class="sxs-lookup"><span data-stu-id="7f764-105">Method</span></span>|<span data-ttu-id="7f764-106">描述</span><span class="sxs-lookup"><span data-stu-id="7f764-106">Description</span></span>|  
+|<span data-ttu-id="f9548-105">方法</span><span class="sxs-lookup"><span data-stu-id="f9548-105">Method</span></span>|<span data-ttu-id="f9548-106">描述</span><span class="sxs-lookup"><span data-stu-id="f9548-106">Description</span></span>|  
 |------------|-----------------|  
-|`IEnumIDENTITY_ATTRIBUTE::Clone`|<span data-ttu-id="7f764-107">到新获取的接口指针`IEnumIDENTITY_ATTRIBUTE`，其中包含与此相同的成员`IEnumIDENTITY_ATTRIBUTE`。</span><span class="sxs-lookup"><span data-stu-id="7f764-107">Gets an interface pointer to a new `IEnumIDENTITY_ATTRIBUTE` that contains the same members as this `IEnumIDENTITY_ATTRIBUTE`.</span></span>|  
-|`IEnumIDENTITY_ATTRIBUTE::CurrentIntoBuffer`|<span data-ttu-id="7f764-108">此元素中包含的数据写入`IEnumIDENTITY_ATTRIBUTE`到指定的数据缓冲区。</span><span class="sxs-lookup"><span data-stu-id="7f764-108">Writes the data contained in the elements of this `IEnumIDENTITY_ATTRIBUTE` to the specified data buffer.</span></span>|  
-|`IEnumIDENTITY_ATTRIBUTE::Next`|<span data-ttu-id="7f764-109">获取指定的数目的属性，从当前位置开始。</span><span class="sxs-lookup"><span data-stu-id="7f764-109">Gets the specified number of attributes, starting at the current position.</span></span>|  
-|`IEnumIDENTITY_ATTRIBUTE::Reset`|<span data-ttu-id="7f764-110">将指令指针移到此开头`IEnumIDENTITY_ATTRIBUTE`。</span><span class="sxs-lookup"><span data-stu-id="7f764-110">Moves the instruction pointer to the beginning of this `IEnumIDENTITY_ATTRIBUTE`.</span></span>|  
-|`IEnumIDENTITY_ATTRIBUTE::Skip`|<span data-ttu-id="7f764-111">将指令指针向前移动指定数量的元素，从当前位置开始。</span><span class="sxs-lookup"><span data-stu-id="7f764-111">Moves the instruction pointer forward by the specified number of elements, starting at the current position.</span></span>|  
+|`IEnumIDENTITY_ATTRIBUTE::Clone`|<span data-ttu-id="f9548-107">为新获取的接口指针`IEnumIDENTITY_ATTRIBUTE`，其中包含与此相同的成员`IEnumIDENTITY_ATTRIBUTE`。</span><span class="sxs-lookup"><span data-stu-id="f9548-107">Gets an interface pointer to a new `IEnumIDENTITY_ATTRIBUTE` that contains the same members as this `IEnumIDENTITY_ATTRIBUTE`.</span></span>|  
+|`IEnumIDENTITY_ATTRIBUTE::CurrentIntoBuffer`|<span data-ttu-id="f9548-108">此元素中包含的数据写入`IEnumIDENTITY_ATTRIBUTE`到指定的数据缓冲区。</span><span class="sxs-lookup"><span data-stu-id="f9548-108">Writes the data contained in the elements of this `IEnumIDENTITY_ATTRIBUTE` to the specified data buffer.</span></span>|  
+|`IEnumIDENTITY_ATTRIBUTE::Next`|<span data-ttu-id="f9548-109">获取指定的数目的属性，从当前位置开始。</span><span class="sxs-lookup"><span data-stu-id="f9548-109">Gets the specified number of attributes, starting at the current position.</span></span>|  
+|`IEnumIDENTITY_ATTRIBUTE::Reset`|<span data-ttu-id="f9548-110">将指令指针移到开头`IEnumIDENTITY_ATTRIBUTE`。</span><span class="sxs-lookup"><span data-stu-id="f9548-110">Moves the instruction pointer to the beginning of this `IEnumIDENTITY_ATTRIBUTE`.</span></span>|  
+|`IEnumIDENTITY_ATTRIBUTE::Skip`|<span data-ttu-id="f9548-111">按指定数量的元素，从当前位置开始移动指令指针前进。</span><span class="sxs-lookup"><span data-stu-id="f9548-111">Moves the instruction pointer forward by the specified number of elements, starting at the current position.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="7f764-112">要求</span><span class="sxs-lookup"><span data-stu-id="7f764-112">Requirements</span></span>  
- <span data-ttu-id="7f764-113">**平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="7f764-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="f9548-112">要求</span><span class="sxs-lookup"><span data-stu-id="f9548-112">Requirements</span></span>  
+ <span data-ttu-id="f9548-113">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="f9548-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="7f764-114">**标头：** Isolation.h</span><span class="sxs-lookup"><span data-stu-id="7f764-114">**Header:** Isolation.h</span></span>  
+ <span data-ttu-id="f9548-114">**标头：** Isolation.h</span><span class="sxs-lookup"><span data-stu-id="f9548-114">**Header:** Isolation.h</span></span>  
   
- <span data-ttu-id="7f764-115">**.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="7f764-115">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="f9548-115">**.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="f9548-115">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="7f764-116">请参阅</span><span class="sxs-lookup"><span data-stu-id="7f764-116">See Also</span></span>  
- [<span data-ttu-id="7f764-117">合成接口</span><span class="sxs-lookup"><span data-stu-id="7f764-117">Fusion Interfaces</span></span>](../../../../docs/framework/unmanaged-api/fusion/fusion-interfaces.md)
+## <a name="see-also"></a><span data-ttu-id="f9548-116">请参阅</span><span class="sxs-lookup"><span data-stu-id="f9548-116">See also</span></span>
+- [<span data-ttu-id="f9548-117">合成接口</span><span class="sxs-lookup"><span data-stu-id="f9548-117">Fusion Interfaces</span></span>](../../../../docs/framework/unmanaged-api/fusion/fusion-interfaces.md)

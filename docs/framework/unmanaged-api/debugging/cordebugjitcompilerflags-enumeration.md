@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5835da6ee20673c2662f1166d304a45ca3e9daeb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 512122d264e0817b89e8a371f57f11d31f7c4380
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33405315"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54639624"
 ---
-# <a name="cordebugjitcompilerflags-enumeration"></a><span data-ttu-id="3a70a-102">CorDebugJITCompilerFlags 枚举</span><span class="sxs-lookup"><span data-stu-id="3a70a-102">CorDebugJITCompilerFlags Enumeration</span></span>
-<span data-ttu-id="3a70a-103">包含影响托管的实时 (JIT) 编译器的行为的值。</span><span class="sxs-lookup"><span data-stu-id="3a70a-103">Contains values that influence the behavior of the managed just-in-time (JIT) compiler.</span></span>  
+# <a name="cordebugjitcompilerflags-enumeration"></a><span data-ttu-id="dee79-102">CorDebugJITCompilerFlags 枚举</span><span class="sxs-lookup"><span data-stu-id="dee79-102">CorDebugJITCompilerFlags Enumeration</span></span>
+<span data-ttu-id="dee79-103">包含影响托管的实时 (JIT) 编译器的行为的值。</span><span class="sxs-lookup"><span data-stu-id="dee79-103">Contains values that influence the behavior of the managed just-in-time (JIT) compiler.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="3a70a-104">语法</span><span class="sxs-lookup"><span data-stu-id="3a70a-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="dee79-104">语法</span><span class="sxs-lookup"><span data-stu-id="dee79-104">Syntax</span></span>  
   
 ```  
 typedef enum CorDebugJITCompilerFlags {  
@@ -38,22 +38,22 @@ typedef enum CorDebugJITCompilerFlags {
 } CorDebugJITCompilerFlags;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="3a70a-105">成员</span><span class="sxs-lookup"><span data-stu-id="3a70a-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="dee79-105">成员</span><span class="sxs-lookup"><span data-stu-id="dee79-105">Members</span></span>  
   
-|<span data-ttu-id="3a70a-106">成员</span><span class="sxs-lookup"><span data-stu-id="3a70a-106">Member</span></span>|<span data-ttu-id="3a70a-107">描述</span><span class="sxs-lookup"><span data-stu-id="3a70a-107">Description</span></span>|  
+|<span data-ttu-id="dee79-106">成员</span><span class="sxs-lookup"><span data-stu-id="dee79-106">Member</span></span>|<span data-ttu-id="dee79-107">描述</span><span class="sxs-lookup"><span data-stu-id="dee79-107">Description</span></span>|  
 |------------|-----------------|  
-|`CORDEBUG_JIT_DEFAULT`|<span data-ttu-id="3a70a-108">指定编译器应跟踪编译数据，并允许进行优化。</span><span class="sxs-lookup"><span data-stu-id="3a70a-108">Specifies that the compiler should track compilation data, and allows optimizations.</span></span>|  
-|`CORDEBUG_JIT_DISABLE_OPTIMIZATION`|<span data-ttu-id="3a70a-109">指定编译器应跟踪编译数据，但禁用优化。</span><span class="sxs-lookup"><span data-stu-id="3a70a-109">Specifies that the compiler should track compilation data, but disables optimizations.</span></span>|  
-|`CORDEBUG_JIT_ENABLE_ENC`|<span data-ttu-id="3a70a-110">指定编译器应跟踪编译数据，禁用优化，并启用编辑并继续技术。</span><span class="sxs-lookup"><span data-stu-id="3a70a-110">Specifies that the compiler should track compilation data, disables optimizations, and enables Edit and Continue technologies.</span></span>|  
+|`CORDEBUG_JIT_DEFAULT`|<span data-ttu-id="dee79-108">指定编译器应跟踪编译数据，并允许进行优化。</span><span class="sxs-lookup"><span data-stu-id="dee79-108">Specifies that the compiler should track compilation data, and allows optimizations.</span></span>|  
+|`CORDEBUG_JIT_DISABLE_OPTIMIZATION`|<span data-ttu-id="dee79-109">指定编译器应跟踪编译数据，但禁用优化。</span><span class="sxs-lookup"><span data-stu-id="dee79-109">Specifies that the compiler should track compilation data, but disables optimizations.</span></span>|  
+|`CORDEBUG_JIT_ENABLE_ENC`|<span data-ttu-id="dee79-110">指定编译器应跟踪编译数据，禁用优化并启用编辑并继续技术。</span><span class="sxs-lookup"><span data-stu-id="dee79-110">Specifies that the compiler should track compilation data, disables optimizations, and enables Edit and Continue technologies.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="3a70a-111">要求</span><span class="sxs-lookup"><span data-stu-id="3a70a-111">Requirements</span></span>  
- <span data-ttu-id="3a70a-112">**平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="3a70a-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="dee79-111">要求</span><span class="sxs-lookup"><span data-stu-id="dee79-111">Requirements</span></span>  
+ <span data-ttu-id="dee79-112">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="dee79-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="3a70a-113">**标头：** CorDebug.idl、 CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="3a70a-113">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="dee79-113">**标头：** CorDebug.idl、 CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="dee79-113">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="3a70a-114">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="3a70a-114">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="dee79-114">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="dee79-114">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="3a70a-115">**.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="3a70a-115">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="dee79-115">**.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="dee79-115">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="3a70a-116">请参阅</span><span class="sxs-lookup"><span data-stu-id="3a70a-116">See Also</span></span>  
- [<span data-ttu-id="3a70a-117">调试枚举</span><span class="sxs-lookup"><span data-stu-id="3a70a-117">Debugging Enumerations</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+## <a name="see-also"></a><span data-ttu-id="dee79-116">请参阅</span><span class="sxs-lookup"><span data-stu-id="dee79-116">See also</span></span>
+- [<span data-ttu-id="dee79-117">调试枚举</span><span class="sxs-lookup"><span data-stu-id="dee79-117">Debugging Enumerations</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
