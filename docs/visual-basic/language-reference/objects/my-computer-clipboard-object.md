@@ -5,18 +5,18 @@ helpviewer_keywords:
 - Clipboard
 - My.Computer.Clipboard object
 ms.assetid: 05d4ede9-1f9a-4495-87f0-77350b8d2e5d
-ms.openlocfilehash: 2f44908668fc48e8a45cd6f2dc686f3bb7ba4f67
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 3ef591844d16daac75abb36b3aa89c91a068fe1e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45745558"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54616155"
 ---
 # <a name="mycomputerclipboard-object"></a>My.Computer.Clipboard 对象
 提供了用于操控剪贴板的方法。  
   
 ## <a name="remarks"></a>备注  
- 有关方法和属性的信息`My.Computer.Clipboard`对象，请参阅<xref:Microsoft.VisualBasic.MyServices.ClipboardProxy>。  
+ 有关 `My.Computer.Clipboard` 对象所使用方法和属性的信息，请参阅 <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy>。  
   
  有关详细信息，请参阅[将数据存储到剪贴板以及从剪贴板读取](../../../visual-basic/developing-apps/programming/computer-resources/storing-data-to-and-reading-from-the-clipboard.md)。  
   
@@ -30,6 +30,6 @@ ms.locfileid: "45745558"
   
  **程序集：** [!INCLUDE[vbprvbruntime](~/includes/vbprvbruntime-md.md)]  
   
-## <a name="see-also"></a>请参阅  
- <xref:Microsoft.VisualBasic.Devices.Computer.Clipboard%2A>  
- [My.Computer 对象](../../../visual-basic/language-reference/objects/my-computer-object.md)
+## <a name="see-also"></a>请参阅
+- <xref:Microsoft.VisualBasic.Devices.Computer.Clipboard%2A>
+- [My.Computer 对象](../../../visual-basic/language-reference/objects/my-computer-object.md)

@@ -1,19 +1,19 @@
 ---
-title: '&lt;筛选器&gt;'
+title: '&lt;filter&gt;'
 ms.date: 03/30/2017
 ms.assetid: 3266700b-904b-44e4-93a7-e06a1a445100
-ms.openlocfilehash: f7224eab9f3c21bce9839298b50c52e9da08b6f7
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 9fae9a599299fdd8cf1e996593514fc0ef38b6ce
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54146402"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54645504"
 ---
-# <a name="ltfiltergt"></a>&lt;筛选器&gt;
+# <a name="ltfiltergt"></a>&lt;filter&gt;
 
 定义路由筛选器，确定类型的 Windows Communication Foundation (WCF)<xref:System.ServiceModel.Dispatcher.MessageFilter>若要在评估传入消息，以及任何支持的数据和所需的筛选器参数时使用。
 
-\<system.serviceModel >\<路由 >\<筛选器 >\<筛选器 >
+\<system.serviceModel> \<routing> \<filters> \<filter>
   
 ## <a name="syntax"></a>语法  
   
@@ -49,10 +49,10 @@ ms.locfileid: "54146402"
 
 | 元素 | 描述 |
 | ------- | ----------- |
-| [\<路由 >](../../../../../docs/framework/configure-apps/file-schema/wcf/routing.md) | 用于定义一组路由筛选器，确定类型的 Windows Communication Foundation (WCF) 的配置节<xref:System.ServiceModel.Dispatcher.MessageFilter>要评估传入消息时使用。 |
+| [\<routing>](../../../../../docs/framework/configure-apps/file-schema/wcf/routing.md) | 用于定义一组路由筛选器，确定类型的 Windows Communication Foundation (WCF) 的配置节<xref:System.ServiceModel.Dispatcher.MessageFilter>要评估传入消息时使用。 |
 
 ## <a name="see-also"></a>请参阅
 
-<xref:System.ServiceModel.Routing.Configuration.FilterElement?displayProperty=nameWithType>    
-<xref:System.ServiceModel.Routing.Configuration.FilterElement.FilterData%2A?displayProperty=nameWithType>   
-<xref:System.ServiceModel.Routing.Configuration.FilterType?displayProperty=nameWithType>   
+- <xref:System.ServiceModel.Routing.Configuration.FilterElement?displayProperty=nameWithType>
+- <xref:System.ServiceModel.Routing.Configuration.FilterElement.FilterData%2A?displayProperty=nameWithType>
+- <xref:System.ServiceModel.Routing.Configuration.FilterType?displayProperty=nameWithType>

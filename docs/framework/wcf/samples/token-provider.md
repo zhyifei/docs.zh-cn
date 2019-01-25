@@ -2,12 +2,12 @@
 title: 令牌提供程序
 ms.date: 03/30/2017
 ms.assetid: 947986cf-9946-4987-84e5-a14678d96edb
-ms.openlocfilehash: a5fc8708e94bd2aa820c2d558d33dad968b88ebd
-ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
+ms.openlocfilehash: ba611b3701c5bcd3ef073f43567d847a6d6dab64
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54222749"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54569487"
 ---
 # <a name="token-provider"></a>令牌提供程序
 此示例演示如何实现自定义令牌提供程序。 Windows Communication Foundation (WCF) 中的令牌提供程序来提供凭据的安全基础结构。 令牌提供程序一般检查目标并颁发相应的凭据，以使安全基础结构能够确保消息的安全。 WCF 附带了默认凭据管理器令牌提供程序。 WCF 还附带[!INCLUDE[infocard](../../../../includes/infocard-md.md)]令牌提供程序。 自定义令牌提供程序在下列情况下有用：

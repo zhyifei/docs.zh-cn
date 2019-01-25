@@ -13,23 +13,23 @@ helpviewer_keywords:
 - Drawing objects [WPF]
 - DrawingGroup objects [WPF]
 ms.assetid: 6ab1fe6b-3eed-4432-a248-b487e7234e5b
-ms.openlocfilehash: 8b142cfc65e39e48502cde263fea51378c47f43e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e70367d199ece207589d67ee38cb71f0cdda5b11
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33556026"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54684098"
 ---
 # <a name="drawings"></a>绘图
-<xref:System.Windows.Media.Drawing> 对象用于有效地绘制形状、 图像或文本。 绘图时绘制与使用<xref:System.Windows.Media.DrawingBrush>或编程与<xref:System.Windows.Media.Visual>对象。  
+<xref:System.Windows.Media.Drawing> 对象用于高效地绘制形状、 图像或文本。 当使用进行绘制时，可以使用 drawing<xref:System.Windows.Media.DrawingBrush>或编程与<xref:System.Windows.Media.Visual>对象。  
   
 ## <a name="in-this-section"></a>本节内容  
  [Drawing 对象概述](../../../../docs/framework/wpf/graphics-multimedia/drawing-objects-overview.md)  
   [帮助主题](../../../../docs/framework/wpf/graphics-multimedia/drawings-how-to-topics.md)  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Windows.Media.Drawing>  
- [2D 图形和图像处理](../../../../docs/framework/wpf/advanced/optimizing-performance-2d-graphics-and-imaging.md)  
- [WPF 图形呈现概述](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)  
- [WPF 中的形状和基本绘图概述](../../../../docs/framework/wpf/graphics-multimedia/shapes-and-basic-drawing-in-wpf-overview.md)  
- [图形和多媒体](../../../../docs/framework/wpf/graphics-multimedia/index.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.Windows.Media.Drawing>
+- [2D 图形和图像处理](../../../../docs/framework/wpf/advanced/optimizing-performance-2d-graphics-and-imaging.md)
+- [WPF 图形呈现概述](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)
+- [WPF 中的形状和基本绘图概述](../../../../docs/framework/wpf/graphics-multimedia/shapes-and-basic-drawing-in-wpf-overview.md)
+- [图形和多媒体](../../../../docs/framework/wpf/graphics-multimedia/index.md)

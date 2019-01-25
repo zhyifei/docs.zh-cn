@@ -8,24 +8,24 @@ helpviewer_keywords:
 - data binding [Windows Forms], checkbox controls
 - check boxes [Windows Forms], about check boxes
 ms.assetid: 085a4e0b-9046-473f-b141-d0edddfb2ebb
-ms.openlocfilehash: 54a0bba3923626398fb4d1b0af753177dfaa09a5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5e81ac9e8830333e5aadb195563b25fdd93895c9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33524139"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54733280"
 ---
 # <a name="checkbox-control-overview-windows-forms"></a>CheckBox 控件概述（Windows 窗体）
 Windows 窗体 <xref:System.Windows.Forms.CheckBox> 控件指示特定条件处于打开开始关闭状态。 通常用于向用户显示 Yes/No 或 True/False 选项。 可以使用组中的复选框控件来显示用户可从中选择一个或多选的多个选项。  
   
- 复选框控件的类似于单选按钮控件，在于每个用于指示用户所做的选择。 它们与组中的只有一个单选按钮在一次，可以选择的。 使用复选框控件，但是，任意数量的复选框可以选择。  
+ 复选框控件的单选按钮控件相似，在于每个用来指示用户所做的选择。 它们不同组中的只有一个单选按钮在一次，可以选择的。 与复选框控件，但是，任意数量的复选框可以选择。  
   
- 复选框可能连接到数据库使用简单数据绑定中的元素。 可使用组合多个复选框<xref:System.Windows.Forms.GroupBox>控件。 这很有用的可视外观以及用户界面设计的因为分组的控件可以一起移动窗体设计器上。 有关详细信息，请参阅[Windows 窗体数据绑定](../../../../docs/framework/winforms/windows-forms-data-binding.md)和[GroupBox 控件](../../../../docs/framework/winforms/controls/groupbox-control-windows-forms.md)。  
+ 复选框可能连接到数据库使用简单数据绑定中的元素。 可使用组合多个复选框<xref:System.Windows.Forms.GroupBox>控件。 这是用于可视外观和用户界面设计也有用，因为分组后的控件可以一起移动窗体设计器上。 有关详细信息，请参阅[Windows 窗体数据绑定](../../../../docs/framework/winforms/windows-forms-data-binding.md)并[GroupBox 控件](../../../../docs/framework/winforms/controls/groupbox-control-windows-forms.md)。  
   
- <xref:System.Windows.Forms.CheckBox>控件具有两个重要属性，<xref:System.Windows.Forms.CheckBox.Checked%2A>和<xref:System.Windows.Forms.CheckBox.CheckState%2A>。 <xref:System.Windows.Forms.CheckBox.Checked%2A>属性返回`true`或`false`。 <xref:System.Windows.Forms.CheckBox.CheckState%2A>属性返回<xref:System.Windows.Forms.CheckState.Checked>或<xref:System.Windows.Forms.CheckState.Unchecked>; 或者，如果<xref:System.Windows.Forms.CheckBox.ThreeState%2A>属性设置为`true`，<xref:System.Windows.Forms.CheckBox.CheckState%2A>也可能返回<xref:System.Windows.Forms.CheckState.Indeterminate>。 在不确定状态下，将显示带有框灰显的外观，以指示选项将不可用。  
+ <xref:System.Windows.Forms.CheckBox>控件具有两个重要属性<xref:System.Windows.Forms.CheckBox.Checked%2A>和<xref:System.Windows.Forms.CheckBox.CheckState%2A>。 <xref:System.Windows.Forms.CheckBox.Checked%2A>属性返回`true`或`false`。 <xref:System.Windows.Forms.CheckBox.CheckState%2A>属性返回<xref:System.Windows.Forms.CheckState.Checked>或<xref:System.Windows.Forms.CheckState.Unchecked>; 或者，如果<xref:System.Windows.Forms.CheckBox.ThreeState%2A>属性设置为`true`，<xref:System.Windows.Forms.CheckBox.CheckState%2A>也可能返回<xref:System.Windows.Forms.CheckState.Indeterminate>。 在不确定状态下，框中将显示为灰色的外观，以指示选项将不可用。  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Windows.Forms.CheckBox>  
- [如何：使用 Windows 窗体 CheckBox 控件设置选项](../../../../docs/framework/winforms/controls/how-to-set-options-with-windows-forms-checkbox-controls.md)  
- [如何：响应 Windows 窗体 CheckBox 控件单击](../../../../docs/framework/winforms/controls/how-to-respond-to-windows-forms-checkbox-clicks.md)  
- [CheckBox 控件](../../../../docs/framework/winforms/controls/checkbox-control-windows-forms.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.Windows.Forms.CheckBox>
+- [如何：使用 Windows 窗体 CheckBox 控件设置选项](../../../../docs/framework/winforms/controls/how-to-set-options-with-windows-forms-checkbox-controls.md)
+- [如何：响应 Windows 窗体 CheckBox 控件单击](../../../../docs/framework/winforms/controls/how-to-respond-to-windows-forms-checkbox-clicks.md)
+- [CheckBox 控件](../../../../docs/framework/winforms/controls/checkbox-control-windows-forms.md)

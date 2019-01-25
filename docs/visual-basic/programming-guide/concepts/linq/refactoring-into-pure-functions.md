@@ -1,15 +1,15 @@
 ---
-title: 重构到纯函数 (Visual Basic)
+title: 重构为纯函数 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 99e7d27b-a3ff-4577-bdb2-5a8278d6d7af
-ms.openlocfilehash: 207b77ff50cd2aaeede758db69b48c8f29a16ab1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9c4be0c3574f2bd3171b8f5a86359d3181fe8731
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33654251"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54644453"
 ---
-# <a name="refactoring-into-pure-functions-visual-basic"></a>重构到纯函数 (Visual Basic)
+# <a name="refactoring-into-pure-functions-visual-basic"></a>重构为纯函数 (Visual Basic)
 纯函数转换的一个重要方面是学习如何使用纯函数重构代码。  
   
  如本节前面所述，纯函数具有两个有用的特性：  
@@ -20,7 +20,7 @@ ms.locfileid: "33654251"
   
  转换为函数编程的一种方式是重构现有代码以消除不必要的副作用和外部依赖项。 这样，您可以创建现有代码的纯函数版本。  
   
- 本主题讨论什么是纯函数，什么不是纯函数。 [教程： 在 WordprocessingML 文档 (Visual Basic 中) 中使用内容](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)教程演示如何操作 WordprocessingML 文档，并包括两个示例说明了如何使用纯函数重构。  
+ 本主题讨论什么是纯函数，什么不是纯函数。 [教程：操作 WordprocessingML 文档 (Visual Basic 中) 中的内容](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)教程演示如何操作 WordprocessingML 文档，并包括两个有关如何的示例使用纯函数进行重构。  
   
 ## <a name="eliminating-side-effects-and-external-dependencies"></a>消除副作用和外部依赖项  
  下面的示例对比两个非纯函数和一个纯函数。  
@@ -49,7 +49,7 @@ End Module
 StringOne-StringTwo  
 ```  
   
- 请注意，它是不相关是否被修改的数据具有`public`或`private`访问或者是`shared`成员还是实例成员。 纯函数不会更改函数以外的任何数据。  
+ 请注意，它是不相关正在修改的数据具有`public`或`private`访问或者是`shared`成员还是实例成员。 纯函数不会更改函数以外的任何数据。  
   
 ### <a name="non-pure-function-that-changes-an-argument"></a>可更改参数的非纯函数  
  此外，此同一个函数的下面版本不是纯函数，因为它修改了其参数 `sb` 的内容。  
@@ -97,8 +97,8 @@ End Module
 ## <a name="standard-query-operators"></a>标准查询运算符  
  标准查询运算符的重要特性是它们以纯函数的形式实现。  
   
- 有关详细信息，请参阅[标准查询运算符概述 (Visual Basic 中)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)。  
+ 有关详细信息，请参阅[标准查询运算符概述 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)。  
   
-## <a name="see-also"></a>请参阅  
- [介绍纯函数转换 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/introduction-to-pure-functional-transformations.md)  
- [函数编程与命令性编程 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/functional-programming-vs-imperative-programming.md)
+## <a name="see-also"></a>请参阅
+- [纯功能转换 (Visual Basic) 简介](../../../../visual-basic/programming-guide/concepts/linq/introduction-to-pure-functional-transformations.md)
+- [函数编程与命令式编程 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/functional-programming-vs-imperative-programming.md)

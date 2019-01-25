@@ -2,21 +2,21 @@
 title: '&lt;webMessageEncoding&gt;'
 ms.date: 03/30/2017
 ms.assetid: 892ca485-e21a-4a44-8e40-633161ef6796
-ms.openlocfilehash: e8b45075c7c07efc49f84526382352a5b1a556b1
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 90102c25c1c5b83af8f629d18b790af9297fa88c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54148664"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54640246"
 ---
 # <a name="ltwebmessageencodinggt"></a>&lt;webMessageEncoding&gt;
 允许在 Windows Communication Foundation (WCF) 绑定中使用纯文本 XML、JavaScript 对象表示法 (JSON) 消息编码和“原始”二进制内容时对其进行读写。  
   
  \<system.serviceModel>  
-\<绑定 >  
+\<bindings>  
 \<customBinding>  
-\<绑定 >  
-\<webMessageEncoding >  
+\<binding>  
+\<webMessageEncoding>  
   
 ## <a name="syntax"></a>语法  
   
@@ -47,7 +47,7 @@ ms.locfileid: "54148664"
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<绑定 >](../../../../../docs/framework/misc/binding.md)|定义自定义绑定的所有绑定功能。|  
+|[\<binding>](../../../../../docs/framework/misc/binding.md)|定义自定义绑定的所有绑定功能。|  
   
 ## <a name="remarks"></a>备注  
  编码是将消息转换为一个字节序列的过程。 解码是反向过程。 这些过程都需要字符编码规范。  
@@ -71,14 +71,14 @@ ms.locfileid: "54148664"
                     textEncoding="utf-8" />
 ```  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.ServiceModel.Configuration.WebMessageEncodingElement>  
- <xref:System.ServiceModel.Channels.CustomBinding>  
- <xref:System.ServiceModel.Channels.MessageEncodingBindingElement>  
- <xref:System.ServiceModel.Channels.WebMessageEncodingBindingElement>  
- [消息编码](../../../../../docs/framework/configure-apps/file-schema/wcf/message-encoding.md)  
- [选择消息编码器](../../../../../docs/framework/wcf/feature-details/choosing-a-message-encoder.md)  
- [绑定](../../../../../docs/framework/wcf/bindings.md)  
- [扩展绑定](../../../../../docs/framework/wcf/extending/extending-bindings.md)  
- [自定义绑定](../../../../../docs/framework/wcf/extending/custom-bindings.md)  
- [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.ServiceModel.Configuration.WebMessageEncodingElement>
+- <xref:System.ServiceModel.Channels.CustomBinding>
+- <xref:System.ServiceModel.Channels.MessageEncodingBindingElement>
+- <xref:System.ServiceModel.Channels.WebMessageEncodingBindingElement>
+- [消息编码](../../../../../docs/framework/configure-apps/file-schema/wcf/message-encoding.md)
+- [选择消息编码器](../../../../../docs/framework/wcf/feature-details/choosing-a-message-encoder.md)
+- [绑定](../../../../../docs/framework/wcf/bindings.md)
+- [扩展绑定](../../../../../docs/framework/wcf/extending/extending-bindings.md)
+- [自定义绑定](../../../../../docs/framework/wcf/extending/custom-bindings.md)
+- [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)

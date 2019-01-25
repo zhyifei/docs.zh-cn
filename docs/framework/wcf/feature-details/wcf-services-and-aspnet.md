@@ -2,12 +2,12 @@
 title: WCF 服务和 ASP.NET
 ms.date: 03/30/2017
 ms.assetid: b980496a-f0b0-4319-8e55-a0f0fa32da70
-ms.openlocfilehash: c4d747787529ce6755a25cbd791886cf1999b699
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 58b5a09f63b6efb3c48fb3836da63c24650c5b21
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43401432"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54712280"
 ---
 # <a name="wcf-services-and-aspnet"></a>WCF 服务和 ASP.NET
 本主题讨论托管 Windows Communication Foundation (WCF) 服务的并排方案使用 ASP.NET 和在 ASP.NET 兼容模式中承载。  
@@ -29,13 +29,13 @@ ms.locfileid: "43401432"
   
     -   HttpContext:<xref:System.Web.HttpContext.Current%2A>始终是`null`时从 WCF 服务内部进行访问。 使用<!--zz <xref:System.ServiceModel.OperationContext.Current.RequestContext>-->`RequestContext`相反。  
   
-    -   基于文件的授权： WCF 安全模型不允许的访问控制列表 (ACL) 确定是否授权服务请求时应用于服务的.svc 文件。  
+    -   基于文件的授权：WCF 安全模型不允许的访问控制列表 (ACL) 确定是否授权服务请求时应用于服务的.svc 文件中。  
   
-    -   基于配置的 URL 授权： 同样，WCF 安全模型不符合 System.Web 的中指定的任何基于 URL 的授权规则\<授权 > 配置元素。 如果服务驻留在受保护的 ASP 的 URL 空间，用于 WCF 请求将忽略这些设置。NET 的 URL 授权规则。  
+    -   基于配置的 URL 授权：同样，WCF 安全模型不符合 System.Web 的中指定的任何基于 URL 的授权规则\<授权 > 配置元素。 如果服务驻留在受保护的 ASP 的 URL 空间，用于 WCF 请求将忽略这些设置。NET 的 URL 授权规则。  
   
-    -   HttpModule 扩展性： WCF 托管基础结构截获 WCF 请求时<xref:System.Web.HttpApplication.PostAuthenticateRequest>事件引发并不会返回到 ASP.NET HTTP 管道中处理。 编码为在管道的后期截获请求的模块不截获 WCF 请求。  
+    -   HttpModule 扩展性：WCF 托管基础结构截获 WCF 请求时<xref:System.Web.HttpApplication.PostAuthenticateRequest>事件引发并不会返回到 ASP.NET HTTP 管道中处理。 编码为在管道的后期截获请求的模块不截获 WCF 请求。  
   
-    -   ASP.NET 模拟： 默认情况下，WCF 请求总是作为运行 IIS 进程标识，即使 ASP.NET 设置来启用模拟使用 System.Web 的\<identity impersonate ="true"/ > 配置选项。  
+    -   ASP.NET 模拟：默认情况下，WCF 请求总是作为运行 IIS 进程标识，即使 ASP.NET 设置来启用模拟使用 System.Web 的\<identity impersonate ="true"/ > 配置选项。  
   
  这些限制仅适用于 IIS 应用程序中承载的 WCF 服务。 存在 WCF 不会影响 ASP.NET 内容的行为。  
   
@@ -56,15 +56,15 @@ ms.locfileid: "43401432"
   
  与不同的是默认的并行配置中，其中 WCF 托管基础结构截获 WCF 消息，并将其路由到 HTTP 管道之外，在 ASP.NET 兼容模式中运行的 WCF 服务完全参与 ASP.NET HTTP 请求生命周期。 在兼容性模式下，WCF 服务使用通过 HTTP 管道<xref:System.Web.IHttpHandler>实现中，类似于方法请求处理 ASPX 页和 ASMX Web 服务。 因此，WCF 的行为相同 ASMX 以下 ASP.NET 功能方面：  
   
--   <xref:System.Web.HttpContext>： 在 ASP.NET 兼容模式中运行的 WCF 服务可以访问<xref:System.Web.HttpContext.Current%2A>及其关联状态。  
+-   <xref:System.Web.HttpContext>：在 ASP.NET 兼容模式中运行的 WCF 服务可以访问<xref:System.Web.HttpContext.Current%2A>及其关联状态。  
   
--   基于文件的授权： 在 ASP.NET 兼容模式下运行的 WCF 服务可以通过将文件系统访问控制列表 (Acl) 附加到服务的.svc 文件安全。  
+-   基于文件的授权：在 ASP.NET 兼容模式下运行的 WCF 服务可以通过将文件系统访问控制列表 (Acl) 附加到服务的.svc 文件安全。  
   
--   可配置 URL 授权： ASP。在 ASP.NET 兼容模式中运行 WCF 服务时，NET 的 URL 授权规则是针对 WCF 请求强制执行。  
+-   可配置 URL 授权：ASP。在 ASP.NET 兼容模式中运行 WCF 服务时，NET 的 URL 授权规则是针对 WCF 请求强制执行。  
   
--   <xref:System.Web.HttpModuleCollection> 可扩展性： 在 ASP.NET 兼容模式中运行的因为 WCF 服务完全参与 ASP.NET HTTP 请求生命周期，在 HTTP 管道中配置的任何 HTTP 模块能够对 WCF 请求之前和之后服务调用。  
+-   <xref:System.Web.HttpModuleCollection> 可扩展性：在 ASP.NET 兼容模式中运行的 WCF 服务完全参与 ASP.NET HTTP 请求生命周期，因为 HTTP 管道中配置的任何 HTTP 模块是能够对 WCF 请求之前和之后服务调用。  
   
--   ASP.NET 模拟： WCF 服务使用当前的 asp.net 标识运行模拟线程，这可能会不同于 IIS 进程标识，如果对应用程序启用 ASP.NET 模拟。 如果 ASP.NET 模拟和 WCF 模拟启用特定服务操作，服务实现最终运行使用 WCF 从获得的标识。  
+-   ASP.NET 模拟：WCF 服务使用当前的 asp.net 标识运行模拟线程，这可能会不同于 IIS 进程标识，如果对应用程序启用 ASP.NET 模拟。 如果 ASP.NET 模拟和 WCF 模拟启用特定服务操作，服务实现最终运行使用 WCF 从获得的标识。  
   
  在通过以下配置 （位于应用程序的 Web.config 文件） 的应用程序级别启用 WCF 的 ASP.NET 兼容模式：  
   
@@ -88,18 +88,18 @@ ms.locfileid: "43401432"
   
 |应用程序范围的兼容模式设置|[AspNetCompatibilityRequirementsMode]<br /><br /> 设置|观察到的结果|  
 |--------------------------------------------------|---------------------------------------------------------|---------------------|  
-|aspNetCompatibilityEnabled ="`true`"|<xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.Required>|服务成功激活。|  
-|aspNetCompatibilityEnabled ="`true`"|<xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.Allowed>|服务成功激活。|  
-|aspNetCompatibilityEnabled ="`true`"|<xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.NotAllowed>|服务接收消息时发生激活错误。|  
-|aspNetCompatibilityEnabled ="`false`"|<xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.Required>|服务接收消息时发生激活错误。|  
-|aspNetCompatibilityEnabled ="`false`"|<xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.Allowed>|服务成功激活。|  
-|aspNetCompatibilityEnabled ="`false`"|<xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.NotAllowed>|服务成功激活。|  
+|aspNetCompatibilityEnabled = "`true`"|<xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.Required>|服务成功激活。|  
+|aspNetCompatibilityEnabled = "`true`"|<xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.Allowed>|服务成功激活。|  
+|aspNetCompatibilityEnabled = "`true`"|<xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.NotAllowed>|服务接收消息时发生激活错误。|  
+|aspNetCompatibilityEnabled = "`false`"|<xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.Required>|服务接收消息时发生激活错误。|  
+|aspNetCompatibilityEnabled = "`false`"|<xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.Allowed>|服务成功激活。|  
+|aspNetCompatibilityEnabled = "`false`"|<xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.NotAllowed>|服务成功激活。|  
   
 > [!NOTE]
 >  IIS 7.0 和 WAS 允许 WCF 服务通过 HTTP 之外的协议进行通信。 但是，不允许的应用程序已启用 ASP.NET 兼容模式中运行的 WCF 服务公开非 HTTP 终结点。 在服务接收其第一条消息时，这种配置会生成激活异常。  
   
  有关启用 ASP.NET 兼容模式的 WCF 服务的详细信息，请参阅<xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode>并[ASP.NET 兼容性](../../../../docs/framework/wcf/samples/aspnet-compatibility.md)示例。  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute>  
- [Windows Server App Fabric 承载功能](https://go.microsoft.com/fwlink/?LinkId=201276)
+## <a name="see-also"></a>请参阅
+- <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute>
+- [Windows Server App Fabric 承载功能](https://go.microsoft.com/fwlink/?LinkId=201276)

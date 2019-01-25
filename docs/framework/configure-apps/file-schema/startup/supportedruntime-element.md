@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 1ae16e23-afbe-4de4-b413-bc457f37b69f
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: b6303f765d1cc4a17fe19261c7326d8961ac1080
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 93084b34e5795ef35e8c433f50646e5da088adfd
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53129242"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54600513"
 ---
 # <a name="ltsupportedruntimegt-element"></a>&lt;supportedRuntime&gt;元素
 
@@ -43,7 +43,7 @@ ms.locfileid: "53129242"
 
 如果 **\<supportedRuntime>** 元素不存在应用程序配置文件，请使用用于生成应用程序的运行时的版本。  
 
-**\<SupportedRuntime>** 元素应由使用 1.1 版或更高版本的运行时版本生成的所有应用程序。 仅支持 1.0 版的运行时生成的应用程序必须使用[\<requiredRuntime >](../../../../../docs/framework/configure-apps/file-schema/startup/requiredruntime-element.md)元素。  
+**\<SupportedRuntime>** 元素应由使用 1.1 版或更高版本的运行时版本生成的所有应用程序。 仅支持 1.0 版的运行时生成的应用程序必须使用[ \<requiredRuntime >](../../../../../docs/framework/configure-apps/file-schema/startup/requiredruntime-element.md)元素。  
   
 > [!NOTE]
 >  如果您使用[CorBindToRuntimeByCfg](../../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimebycfg-function.md)函数以指定配置文件，则必须使用`<requiredRuntime>`所有版本的运行时的元素。 `<supportedRuntime>`使用时，将忽略元素[CorBindToRuntimeByCfg](../../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimebycfg-function.md)。  
@@ -66,7 +66,7 @@ ms.locfileid: "53129242"
 |2.0|"v2.0.50727"|  
 |3.0|"v2.0.50727"|  
 |3.5|"v2.0.50727"|  
-|4.0 4.7.2|"v4.0"|  
+|4.0-4.7.2|"v4.0"|  
 
 <a name="sku"></a>   
 ## <a name="sku-id-values"></a>“SKU ID”值
@@ -77,12 +77,12 @@ ms.locfileid: "53129242"
 |----------------------------|---------------------|  
 |4.0|".NETFramework,Version=v4.0"|  
 |4.0，客户端配置文件|".NETFramework,Version=v4.0,Profile=Client"|  
-|4.0，平台更新 1|".NETFramework，版本 = v4.0.1"|  
-|4.0，客户端配置文件，Update 1|".NETFramework，版本 = v4.0.1，配置文件 = 客户端"|  
-|4.0，平台更新 2|".NETFramework，版本 = v4.0.2"|  
-|4.0，客户端配置文件，Update 2|".NETFramework，版本 = v4.0.2，配置文件 = 客户端"|  
-|4.0，平台更新 3|".NETFramework，版本 = v4.0.3"|  
-|4.0，客户端配置文件，Update 3|".NETFramework，版本 = v4.0.3，配置文件 = 客户端"|  
+|4.0，平台更新 1|".NETFramework,Version=v4.0.1"|  
+|4.0，客户端配置文件，Update 1|".NETFramework,Version=v4.0.1,Profile=Client"|  
+|4.0，平台更新 2|".NETFramework,Version=v4.0.2"|  
+|4.0，客户端配置文件，Update 2|".NETFramework,Version=v4.0.2,Profile=Client"|  
+|4.0，平台更新 3|".NETFramework,Version=v4.0.3"|  
+|4.0，客户端配置文件，Update 3|".NETFramework,Version=v4.0.3,Profile=Client"|  
 |4.5|".NETFramework,Version=v4.5"|  
 |4.5.1|".NETFramework,Version=v4.5"|  
 |4.5.2|".NETFramework,Version=v4.5"|  
@@ -110,6 +110,6 @@ ms.locfileid: "53129242"
 
 ## <a name="see-also"></a>请参阅
 
- [启动设置架构](../../../../../docs/framework/configure-apps/file-schema/startup/index.md)  
- [配置文件架构](../../../../../docs/framework/configure-apps/file-schema/index.md)  
- [进程内并行执行](../../../../../docs/framework/deployment/in-process-side-by-side-execution.md)  
+- [启动设置架构](../../../../../docs/framework/configure-apps/file-schema/startup/index.md)
+- [配置文件架构](../../../../../docs/framework/configure-apps/file-schema/index.md)
+- [进程内并行执行](../../../../../docs/framework/deployment/in-process-side-by-side-execution.md)

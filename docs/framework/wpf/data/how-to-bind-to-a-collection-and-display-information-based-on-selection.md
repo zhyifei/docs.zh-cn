@@ -10,15 +10,15 @@ helpviewer_keywords:
 - data binding [WPF], selecting data for views
 - data binding [WPF], binding to collections
 ms.assetid: 952a7d76-dd29-49e5-86f5-32c4530e70eb
-ms.openlocfilehash: 154f4b9b6024d064e73d64c44e2398a5da47052c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 549f4e7af1a9aa623c7f8ff12b528f771a8ff806
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33557402"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54504766"
 ---
 # <a name="how-to-bind-to-a-collection-and-display-information-based-on-selection"></a>如何：绑定到集合并基于选择显示信息
-在简单的主 / 从方案中，具有数据绑定<xref:System.Windows.Controls.ItemsControl>如<xref:System.Windows.Controls.ListBox>。 基于用户选择，显示有关选定项的详细信息。 此示例演示如何实现这种情况。  
+在简单的母版-详细信息方案中，具有数据绑定<xref:System.Windows.Controls.ItemsControl>如<xref:System.Windows.Controls.ListBox>。 基于用户所选内容上，显示有关选定项的详细信息。 此示例演示如何实现此方案。  
   
 ## <a name="example"></a>示例  
  在此示例中，`People` 是 `Person` 类的 <xref:System.Collections.ObjectModel.ObservableCollection%601>。 `Person` 类包含三个属性：`FirstName`、`LastName` 和 `HomeTown`，类型均为 `string`。  
@@ -30,7 +30,7 @@ ms.locfileid: "33557402"
   
  [!code-xaml[CollectionBinding#DetailTemplate](../../../../samples/snippets/csharp/VS_Snippets_Wpf/CollectionBinding/CSharp/Window1.xaml#detailtemplate)]  
   
- 以下是该示例生成的屏幕快照。 <xref:System.Windows.Controls.ContentControl> 显示选中人员的其他属性。  
+ 下面是该示例生成的屏幕截图。 <xref:System.Windows.Controls.ContentControl> 显示选中人员的其他属性。  
   
  ![绑定到集合](../../../../docs/framework/wpf/data/media/databinding-collectionbindingsample.png "DataBinding_CollectionBindingSample")  
   
@@ -45,9 +45,9 @@ ms.locfileid: "33557402"
  [!code-csharp[CollectionBinding#ToString](../../../../samples/snippets/csharp/VS_Snippets_Wpf/CollectionBinding/CSharp/Data.cs#tostring)]
  [!code-vb[CollectionBinding#ToString](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/CollectionBinding/VisualBasic/Person.vb#tostring)]  
   
-## <a name="see-also"></a>请参阅  
- [将主-详细模式与分层数据结合使用](../../../../docs/framework/wpf/data/how-to-use-the-master-detail-pattern-with-hierarchical-data.md)  
- [将主-详细模式与分层 XML 数据结合使用](../../../../docs/framework/wpf/data/how-to-use-the-master-detail-pattern-with-hierarchical-xml-data.md)  
- [数据绑定概述](../../../../docs/framework/wpf/data/data-binding-overview.md)  
- [数据模板化概述](../../../../docs/framework/wpf/data/data-templating-overview.md)  
- [帮助主题](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)
+## <a name="see-also"></a>请参阅
+- [将主-详细模式与分层数据结合使用](../../../../docs/framework/wpf/data/how-to-use-the-master-detail-pattern-with-hierarchical-data.md)
+- [将主-详细模式与分层 XML 数据结合使用](../../../../docs/framework/wpf/data/how-to-use-the-master-detail-pattern-with-hierarchical-xml-data.md)
+- [数据绑定概述](../../../../docs/framework/wpf/data/data-binding-overview.md)
+- [数据模板化概述](../../../../docs/framework/wpf/data/data-templating-overview.md)
+- [帮助主题](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)
