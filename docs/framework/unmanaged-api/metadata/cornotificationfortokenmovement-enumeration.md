@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 96ab659e6ab6cc9601c0e9a1ab511da92905c242
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 745ba18fd1a36789f06bcd3dd4d183c9b28b9875
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33448251"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54650101"
 ---
-# <a name="cornotificationfortokenmovement-enumeration"></a><span data-ttu-id="09650-102">CorNotificationForTokenMovement 枚举</span><span class="sxs-lookup"><span data-stu-id="09650-102">CorNotificationForTokenMovement Enumeration</span></span>
-<span data-ttu-id="09650-103">指定令牌重新映射发生时将发送到元数据 API 客户端的通知。</span><span class="sxs-lookup"><span data-stu-id="09650-103">Specifies the notifications that will be sent to the metadata API client when a token remap occurs.</span></span>  
+# <a name="cornotificationfortokenmovement-enumeration"></a><span data-ttu-id="8700b-102">CorNotificationForTokenMovement 枚举</span><span class="sxs-lookup"><span data-stu-id="8700b-102">CorNotificationForTokenMovement Enumeration</span></span>
+<span data-ttu-id="8700b-103">指定标记重新映射发生时将发送到元数据 API 客户端的通知。</span><span class="sxs-lookup"><span data-stu-id="8700b-103">Specifies the notifications that will be sent to the metadata API client when a token remap occurs.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="09650-104">语法</span><span class="sxs-lookup"><span data-stu-id="09650-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="8700b-104">语法</span><span class="sxs-lookup"><span data-stu-id="8700b-104">Syntax</span></span>  
   
 ```  
 typedef enum CorNotificationForTokenMovement {  
@@ -61,43 +61,43 @@ typedef enum CorNotificationForTokenMovement {
 } CorNotificationForTokenMovement;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="09650-105">成员</span><span class="sxs-lookup"><span data-stu-id="09650-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="8700b-105">成员</span><span class="sxs-lookup"><span data-stu-id="8700b-105">Members</span></span>  
   
-|<span data-ttu-id="09650-106">成员</span><span class="sxs-lookup"><span data-stu-id="09650-106">Member</span></span>|<span data-ttu-id="09650-107">描述</span><span class="sxs-lookup"><span data-stu-id="09650-107">Description</span></span>|  
+|<span data-ttu-id="8700b-106">成员</span><span class="sxs-lookup"><span data-stu-id="8700b-106">Member</span></span>|<span data-ttu-id="8700b-107">描述</span><span class="sxs-lookup"><span data-stu-id="8700b-107">Description</span></span>|  
 |------------|-----------------|  
-|`MDNotifyDefault`|<span data-ttu-id="09650-108">通知时`mdTypeRef`， `mdMethodDef`， `mdMemberRef`，或`mdFieldDef`令牌移动。</span><span class="sxs-lookup"><span data-stu-id="09650-108">Notify when `mdTypeRef`, `mdMethodDef`, `mdMemberRef`, or `mdFieldDef` tokens move.</span></span>|  
-|`MDNotifyAll`|<span data-ttu-id="09650-109">在任何标记移动时通知。</span><span class="sxs-lookup"><span data-stu-id="09650-109">Notify when any token moves.</span></span>|  
-|`MDNotifyNone`|<span data-ttu-id="09650-110">不会通知标记移动时。</span><span class="sxs-lookup"><span data-stu-id="09650-110">Do not notify when tokens move.</span></span>|  
-|`MDNotifyMethodDef`|<span data-ttu-id="09650-111">通知时`mdMethodDef`标记移动。</span><span class="sxs-lookup"><span data-stu-id="09650-111">Notify when an `mdMethodDef` token moves.</span></span>|  
-|`MDNotifyMemberRef`|<span data-ttu-id="09650-112">通知时`mdMemberRef`标记移动。</span><span class="sxs-lookup"><span data-stu-id="09650-112">Notify when an `mdMemberRef` token moves.</span></span>|  
-|`MDNotifyFieldDef`|<span data-ttu-id="09650-113">通知时`mdFieldDef`标记移动。</span><span class="sxs-lookup"><span data-stu-id="09650-113">Notify when an `mdFieldDef` token moves.</span></span>|  
-|`MDNotifyTypeRef`|<span data-ttu-id="09650-114">通知时`mdTypeRef`标记移动。</span><span class="sxs-lookup"><span data-stu-id="09650-114">Notify when an `mdTypeRef` token moves.</span></span>|  
-|`MDNotifyTypeDef`|<span data-ttu-id="09650-115">通知时`mdTypeDef`标记移动。</span><span class="sxs-lookup"><span data-stu-id="09650-115">Notify when an `mdTypeDef` token moves.</span></span>|  
-|`MDNotifyParamDef`|<span data-ttu-id="09650-116">通知时`mdParamDef`标记移动。</span><span class="sxs-lookup"><span data-stu-id="09650-116">Notify when an `mdParamDef` token moves.</span></span>|  
-|`MDNotifyInterfaceImpl`|<span data-ttu-id="09650-117">通知时`mdInterfaceImpl`标记移动。</span><span class="sxs-lookup"><span data-stu-id="09650-117">Notify when an `mdInterfaceImpl` token moves.</span></span>|  
-|`MDNotifyProperty`|<span data-ttu-id="09650-118">通知时`mdProperty`标记移动。</span><span class="sxs-lookup"><span data-stu-id="09650-118">Notify when an `mdProperty` token moves.</span></span>|  
-|`MDNotifyEvent`|<span data-ttu-id="09650-119">通知时`mdEvent`标记移动。</span><span class="sxs-lookup"><span data-stu-id="09650-119">Notify when an `mdEvent` token moves.</span></span>|  
-|`MDNotifySignature`|<span data-ttu-id="09650-120">通知时`mdSignature`标记移动。</span><span class="sxs-lookup"><span data-stu-id="09650-120">Notify when an `mdSignature` token moves.</span></span>|  
-|`MDNotifyTypeSpec`|<span data-ttu-id="09650-121">通知时`mdTypeSpec`标记移动。</span><span class="sxs-lookup"><span data-stu-id="09650-121">Notify when an `mdTypeSpec` token moves.</span></span>|  
-|`MDNotifyCustomAttribute`|<span data-ttu-id="09650-122">通知时`mdCustomAttribute`标记移动。</span><span class="sxs-lookup"><span data-stu-id="09650-122">Notify when an `mdCustomAttribute` token moves.</span></span>|  
-|`MDNotifySecurityValue`|<span data-ttu-id="09650-123">通知时`mdSecurityValue`标记移动。</span><span class="sxs-lookup"><span data-stu-id="09650-123">Notify when an `mdSecurityValue` token moves.</span></span>|  
-|`MDNotifyPermission`|<span data-ttu-id="09650-124">通知时`mdPermission`标记移动。</span><span class="sxs-lookup"><span data-stu-id="09650-124">Notify when an `mdPermission` token moves.</span></span>|  
-|`MDNotifyModuleRef`|<span data-ttu-id="09650-125">通知时`mdModuleRef`标记移动。</span><span class="sxs-lookup"><span data-stu-id="09650-125">Notify when an `mdModuleRef` token moves.</span></span>|  
-|`MDNotifyNameSpace`|<span data-ttu-id="09650-126">通知时`mdNameSpace`标记移动。</span><span class="sxs-lookup"><span data-stu-id="09650-126">Notify when an `mdNameSpace` token moves.</span></span>|  
-|`MDNotifyAssemblyRef`|<span data-ttu-id="09650-127">通知时`mdAssemblyRef`标记移动。</span><span class="sxs-lookup"><span data-stu-id="09650-127">Notify when an `mdAssemblyRef` token moves.</span></span>|  
-|`MDNotifyFile`|<span data-ttu-id="09650-128">通知时`mdFile`标记移动。</span><span class="sxs-lookup"><span data-stu-id="09650-128">Notify when an `mdFile` token moves.</span></span>|  
-|`MDNotifyExportedType`|<span data-ttu-id="09650-129">通知时`mdExportedType`标记移动。</span><span class="sxs-lookup"><span data-stu-id="09650-129">Notify when an `mdExportedType` token moves.</span></span>|  
-|`MDNotifyResource`|<span data-ttu-id="09650-130">通知时`mdManifestResource`标记移动。</span><span class="sxs-lookup"><span data-stu-id="09650-130">Notify when an `mdManifestResource` token moves.</span></span>|  
+|`MDNotifyDefault`|<span data-ttu-id="8700b-108">通知时间`mdTypeRef`， `mdMethodDef`， `mdMemberRef`，或`mdFieldDef`令牌移动。</span><span class="sxs-lookup"><span data-stu-id="8700b-108">Notify when `mdTypeRef`, `mdMethodDef`, `mdMemberRef`, or `mdFieldDef` tokens move.</span></span>|  
+|`MDNotifyAll`|<span data-ttu-id="8700b-109">在任何标记移动时通知。</span><span class="sxs-lookup"><span data-stu-id="8700b-109">Notify when any token moves.</span></span>|  
+|`MDNotifyNone`|<span data-ttu-id="8700b-110">不会通知标记移动时。</span><span class="sxs-lookup"><span data-stu-id="8700b-110">Do not notify when tokens move.</span></span>|  
+|`MDNotifyMethodDef`|<span data-ttu-id="8700b-111">通知时间`mdMethodDef`标记移动。</span><span class="sxs-lookup"><span data-stu-id="8700b-111">Notify when an `mdMethodDef` token moves.</span></span>|  
+|`MDNotifyMemberRef`|<span data-ttu-id="8700b-112">通知时间`mdMemberRef`标记移动。</span><span class="sxs-lookup"><span data-stu-id="8700b-112">Notify when an `mdMemberRef` token moves.</span></span>|  
+|`MDNotifyFieldDef`|<span data-ttu-id="8700b-113">通知时间`mdFieldDef`标记移动。</span><span class="sxs-lookup"><span data-stu-id="8700b-113">Notify when an `mdFieldDef` token moves.</span></span>|  
+|`MDNotifyTypeRef`|<span data-ttu-id="8700b-114">通知时间`mdTypeRef`标记移动。</span><span class="sxs-lookup"><span data-stu-id="8700b-114">Notify when an `mdTypeRef` token moves.</span></span>|  
+|`MDNotifyTypeDef`|<span data-ttu-id="8700b-115">通知时间`mdTypeDef`标记移动。</span><span class="sxs-lookup"><span data-stu-id="8700b-115">Notify when an `mdTypeDef` token moves.</span></span>|  
+|`MDNotifyParamDef`|<span data-ttu-id="8700b-116">通知时间`mdParamDef`标记移动。</span><span class="sxs-lookup"><span data-stu-id="8700b-116">Notify when an `mdParamDef` token moves.</span></span>|  
+|`MDNotifyInterfaceImpl`|<span data-ttu-id="8700b-117">通知时间`mdInterfaceImpl`标记移动。</span><span class="sxs-lookup"><span data-stu-id="8700b-117">Notify when an `mdInterfaceImpl` token moves.</span></span>|  
+|`MDNotifyProperty`|<span data-ttu-id="8700b-118">通知时间`mdProperty`标记移动。</span><span class="sxs-lookup"><span data-stu-id="8700b-118">Notify when an `mdProperty` token moves.</span></span>|  
+|`MDNotifyEvent`|<span data-ttu-id="8700b-119">通知时间`mdEvent`标记移动。</span><span class="sxs-lookup"><span data-stu-id="8700b-119">Notify when an `mdEvent` token moves.</span></span>|  
+|`MDNotifySignature`|<span data-ttu-id="8700b-120">通知时间`mdSignature`标记移动。</span><span class="sxs-lookup"><span data-stu-id="8700b-120">Notify when an `mdSignature` token moves.</span></span>|  
+|`MDNotifyTypeSpec`|<span data-ttu-id="8700b-121">通知时间`mdTypeSpec`标记移动。</span><span class="sxs-lookup"><span data-stu-id="8700b-121">Notify when an `mdTypeSpec` token moves.</span></span>|  
+|`MDNotifyCustomAttribute`|<span data-ttu-id="8700b-122">通知时间`mdCustomAttribute`标记移动。</span><span class="sxs-lookup"><span data-stu-id="8700b-122">Notify when an `mdCustomAttribute` token moves.</span></span>|  
+|`MDNotifySecurityValue`|<span data-ttu-id="8700b-123">通知时间`mdSecurityValue`标记移动。</span><span class="sxs-lookup"><span data-stu-id="8700b-123">Notify when an `mdSecurityValue` token moves.</span></span>|  
+|`MDNotifyPermission`|<span data-ttu-id="8700b-124">通知时间`mdPermission`标记移动。</span><span class="sxs-lookup"><span data-stu-id="8700b-124">Notify when an `mdPermission` token moves.</span></span>|  
+|`MDNotifyModuleRef`|<span data-ttu-id="8700b-125">通知时间`mdModuleRef`标记移动。</span><span class="sxs-lookup"><span data-stu-id="8700b-125">Notify when an `mdModuleRef` token moves.</span></span>|  
+|`MDNotifyNameSpace`|<span data-ttu-id="8700b-126">通知时间`mdNameSpace`标记移动。</span><span class="sxs-lookup"><span data-stu-id="8700b-126">Notify when an `mdNameSpace` token moves.</span></span>|  
+|`MDNotifyAssemblyRef`|<span data-ttu-id="8700b-127">通知时间`mdAssemblyRef`标记移动。</span><span class="sxs-lookup"><span data-stu-id="8700b-127">Notify when an `mdAssemblyRef` token moves.</span></span>|  
+|`MDNotifyFile`|<span data-ttu-id="8700b-128">通知时间`mdFile`标记移动。</span><span class="sxs-lookup"><span data-stu-id="8700b-128">Notify when an `mdFile` token moves.</span></span>|  
+|`MDNotifyExportedType`|<span data-ttu-id="8700b-129">通知时间`mdExportedType`标记移动。</span><span class="sxs-lookup"><span data-stu-id="8700b-129">Notify when an `mdExportedType` token moves.</span></span>|  
+|`MDNotifyResource`|<span data-ttu-id="8700b-130">通知时间`mdManifestResource`标记移动。</span><span class="sxs-lookup"><span data-stu-id="8700b-130">Notify when an `mdManifestResource` token moves.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="09650-131">备注</span><span class="sxs-lookup"><span data-stu-id="09650-131">Remarks</span></span>  
- <span data-ttu-id="09650-132">令牌可能会重新映射 （即移动） 期间的元数据合并。</span><span class="sxs-lookup"><span data-stu-id="09650-132">A token may be re-mapped (that is, moved) during a metadata merge.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="8700b-131">备注</span><span class="sxs-lookup"><span data-stu-id="8700b-131">Remarks</span></span>  
+ <span data-ttu-id="8700b-132">令牌可能会重新映射 （即移动） 期间元数据合并。</span><span class="sxs-lookup"><span data-stu-id="8700b-132">A token may be re-mapped (that is, moved) during a metadata merge.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="09650-133">要求</span><span class="sxs-lookup"><span data-stu-id="09650-133">Requirements</span></span>  
- <span data-ttu-id="09650-134">**平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="09650-134">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="8700b-133">要求</span><span class="sxs-lookup"><span data-stu-id="8700b-133">Requirements</span></span>  
+ <span data-ttu-id="8700b-134">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="8700b-134">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="09650-135">**标头：** CorHdr.h</span><span class="sxs-lookup"><span data-stu-id="09650-135">**Header:** CorHdr.h</span></span>  
+ <span data-ttu-id="8700b-135">**标头：** CorHdr.h</span><span class="sxs-lookup"><span data-stu-id="8700b-135">**Header:** CorHdr.h</span></span>  
   
- <span data-ttu-id="09650-136">**.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="09650-136">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="8700b-136">**.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="8700b-136">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="09650-137">请参阅</span><span class="sxs-lookup"><span data-stu-id="09650-137">See Also</span></span>  
- [<span data-ttu-id="09650-138">Metadata 枚举</span><span class="sxs-lookup"><span data-stu-id="09650-138">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+## <a name="see-also"></a><span data-ttu-id="8700b-137">请参阅</span><span class="sxs-lookup"><span data-stu-id="8700b-137">See also</span></span>
+- [<span data-ttu-id="8700b-138">Metadata 枚举</span><span class="sxs-lookup"><span data-stu-id="8700b-138">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

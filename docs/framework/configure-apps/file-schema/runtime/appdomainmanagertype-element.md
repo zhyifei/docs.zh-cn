@@ -7,61 +7,61 @@ helpviewer_keywords:
 ms.assetid: ae8d5a7e-e7f7-47f7-98d9-455cc243a322
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5e7f37fd652ce98e24d2e2e99edcd3d59a0e597b
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: b5ce973abc92080ec24fe909948f03f58eb05dec
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53610420"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54679079"
 ---
-# <a name="ltappdomainmanagertypegt-element"></a><span data-ttu-id="83b7e-102">&lt;appDomainManagerType&gt;元素</span><span class="sxs-lookup"><span data-stu-id="83b7e-102">&lt;appDomainManagerType&gt; Element</span></span>
-<span data-ttu-id="83b7e-103">指定用作默认应用程序域的应用程序域管理器的类型。</span><span class="sxs-lookup"><span data-stu-id="83b7e-103">Specifies the type that serves as the application domain manager for the default application domain.</span></span>  
+# <a name="ltappdomainmanagertypegt-element"></a><span data-ttu-id="8c618-102">&lt;appDomainManagerType&gt;元素</span><span class="sxs-lookup"><span data-stu-id="8c618-102">&lt;appDomainManagerType&gt; Element</span></span>
+<span data-ttu-id="8c618-103">指定用作默认应用程序域的应用程序域管理器的类型。</span><span class="sxs-lookup"><span data-stu-id="8c618-103">Specifies the type that serves as the application domain manager for the default application domain.</span></span>  
   
- <span data-ttu-id="83b7e-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="83b7e-104">\<configuration></span></span>  
-<span data-ttu-id="83b7e-105">\<运行时 ></span><span class="sxs-lookup"><span data-stu-id="83b7e-105">\<runtime></span></span>  
-<span data-ttu-id="83b7e-106">\<appDomainManagerType ></span><span class="sxs-lookup"><span data-stu-id="83b7e-106">\<appDomainManagerType></span></span>  
+ <span data-ttu-id="8c618-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="8c618-104">\<configuration></span></span>  
+<span data-ttu-id="8c618-105">\<运行时 ></span><span class="sxs-lookup"><span data-stu-id="8c618-105">\<runtime></span></span>  
+<span data-ttu-id="8c618-106">\<appDomainManagerType></span><span class="sxs-lookup"><span data-stu-id="8c618-106">\<appDomainManagerType></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="83b7e-107">语法</span><span class="sxs-lookup"><span data-stu-id="83b7e-107">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="8c618-107">语法</span><span class="sxs-lookup"><span data-stu-id="8c618-107">Syntax</span></span>  
   
 ```xml  
 <appDomainManagerAssembly   
    value="type name" />  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="83b7e-108">特性和元素</span><span class="sxs-lookup"><span data-stu-id="83b7e-108">Attributes and Elements</span></span>  
- <span data-ttu-id="83b7e-109">下列各节描述了特性、子元素和父元素。</span><span class="sxs-lookup"><span data-stu-id="83b7e-109">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="8c618-108">特性和元素</span><span class="sxs-lookup"><span data-stu-id="8c618-108">Attributes and Elements</span></span>  
+ <span data-ttu-id="8c618-109">下列各节描述了特性、子元素和父元素。</span><span class="sxs-lookup"><span data-stu-id="8c618-109">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="83b7e-110">特性</span><span class="sxs-lookup"><span data-stu-id="83b7e-110">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="8c618-110">特性</span><span class="sxs-lookup"><span data-stu-id="8c618-110">Attributes</span></span>  
   
-|<span data-ttu-id="83b7e-111">特性</span><span class="sxs-lookup"><span data-stu-id="83b7e-111">Attribute</span></span>|<span data-ttu-id="83b7e-112">描述</span><span class="sxs-lookup"><span data-stu-id="83b7e-112">Description</span></span>|  
+|<span data-ttu-id="8c618-111">特性</span><span class="sxs-lookup"><span data-stu-id="8c618-111">Attribute</span></span>|<span data-ttu-id="8c618-112">描述</span><span class="sxs-lookup"><span data-stu-id="8c618-112">Description</span></span>|  
 |---------------|-----------------|  
-|`value`|<span data-ttu-id="83b7e-113">必需的特性。</span><span class="sxs-lookup"><span data-stu-id="83b7e-113">Required attribute.</span></span> <span data-ttu-id="83b7e-114">指定的类型，包括用作默认应用程序域过程中的应用程序域管理器的命名空间的名称。</span><span class="sxs-lookup"><span data-stu-id="83b7e-114">Specifies the name of the type, including the namespace, that serves as the application domain manager for the default application domain in the process.</span></span>|  
+|`value`|<span data-ttu-id="8c618-113">必需的特性。</span><span class="sxs-lookup"><span data-stu-id="8c618-113">Required attribute.</span></span> <span data-ttu-id="8c618-114">指定的类型，包括用作默认应用程序域过程中的应用程序域管理器的命名空间的名称。</span><span class="sxs-lookup"><span data-stu-id="8c618-114">Specifies the name of the type, including the namespace, that serves as the application domain manager for the default application domain in the process.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="83b7e-115">子元素</span><span class="sxs-lookup"><span data-stu-id="83b7e-115">Child Elements</span></span>  
- <span data-ttu-id="83b7e-116">无。</span><span class="sxs-lookup"><span data-stu-id="83b7e-116">None.</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="8c618-115">子元素</span><span class="sxs-lookup"><span data-stu-id="8c618-115">Child Elements</span></span>  
+ <span data-ttu-id="8c618-116">无。</span><span class="sxs-lookup"><span data-stu-id="8c618-116">None.</span></span>  
   
-### <a name="parent-elements"></a><span data-ttu-id="83b7e-117">父元素</span><span class="sxs-lookup"><span data-stu-id="83b7e-117">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="8c618-117">父元素</span><span class="sxs-lookup"><span data-stu-id="8c618-117">Parent Elements</span></span>  
   
-|<span data-ttu-id="83b7e-118">元素</span><span class="sxs-lookup"><span data-stu-id="83b7e-118">Element</span></span>|<span data-ttu-id="83b7e-119">描述</span><span class="sxs-lookup"><span data-stu-id="83b7e-119">Description</span></span>|  
+|<span data-ttu-id="8c618-118">元素</span><span class="sxs-lookup"><span data-stu-id="8c618-118">Element</span></span>|<span data-ttu-id="8c618-119">描述</span><span class="sxs-lookup"><span data-stu-id="8c618-119">Description</span></span>|  
 |-------------|-----------------|  
-|`configuration`|<span data-ttu-id="83b7e-120">公共语言运行时和 .NET Framework 应用程序所使用的每个配置文件中的根元素。</span><span class="sxs-lookup"><span data-stu-id="83b7e-120">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
-|`runtime`|<span data-ttu-id="83b7e-121">包含有关程序集绑定和垃圾回收的信息。</span><span class="sxs-lookup"><span data-stu-id="83b7e-121">Contains information about assembly binding and garbage collection.</span></span>|  
+|`configuration`|<span data-ttu-id="8c618-120">公共语言运行时和 .NET Framework 应用程序所使用的每个配置文件中的根元素。</span><span class="sxs-lookup"><span data-stu-id="8c618-120">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
+|`runtime`|<span data-ttu-id="8c618-121">包含有关程序集绑定和垃圾回收的信息。</span><span class="sxs-lookup"><span data-stu-id="8c618-121">Contains information about assembly binding and garbage collection.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="83b7e-122">备注</span><span class="sxs-lookup"><span data-stu-id="83b7e-122">Remarks</span></span>  
- <span data-ttu-id="83b7e-123">若要指定应用程序域管理器的类型，您必须同时指定此元素以及[ \<appDomainManagerAssembly >](../../../../../docs/framework/configure-apps/file-schema/runtime/appdomainmanagerassembly-element.md)元素。</span><span class="sxs-lookup"><span data-stu-id="83b7e-123">To specify the type of the application domain manager, you must specify both this element and the [\<appDomainManagerAssembly>](../../../../../docs/framework/configure-apps/file-schema/runtime/appdomainmanagerassembly-element.md) element.</span></span> <span data-ttu-id="83b7e-124">如果未指定这些元素之一，另一个被忽略。</span><span class="sxs-lookup"><span data-stu-id="83b7e-124">If either of these elements is not specified, the other is ignored.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="8c618-122">备注</span><span class="sxs-lookup"><span data-stu-id="8c618-122">Remarks</span></span>  
+ <span data-ttu-id="8c618-123">若要指定应用程序域管理器的类型，您必须同时指定此元素以及[ \<appDomainManagerAssembly >](../../../../../docs/framework/configure-apps/file-schema/runtime/appdomainmanagerassembly-element.md)元素。</span><span class="sxs-lookup"><span data-stu-id="8c618-123">To specify the type of the application domain manager, you must specify both this element and the [\<appDomainManagerAssembly>](../../../../../docs/framework/configure-apps/file-schema/runtime/appdomainmanagerassembly-element.md) element.</span></span> <span data-ttu-id="8c618-124">如果未指定这些元素之一，另一个被忽略。</span><span class="sxs-lookup"><span data-stu-id="8c618-124">If either of these elements is not specified, the other is ignored.</span></span>  
   
- <span data-ttu-id="83b7e-125">加载默认应用程序域时，<xref:System.TypeLoadException>如果中由指定的程序集不存在指定的类型，则引发[ \<appDomainManagerAssembly >](../../../../../docs/framework/configure-apps/file-schema/runtime/appdomainmanagerassembly-element.md)元素; 并且到进程失败开始日期。</span><span class="sxs-lookup"><span data-stu-id="83b7e-125">When the default application domain is loaded, <xref:System.TypeLoadException> is thrown if the specified type does not exist in the assembly that is specified by the [\<appDomainManagerAssembly>](../../../../../docs/framework/configure-apps/file-schema/runtime/appdomainmanagerassembly-element.md) element; and the process fails to start.</span></span>  
+ <span data-ttu-id="8c618-125">加载默认应用程序域时，<xref:System.TypeLoadException>如果中由指定的程序集不存在指定的类型，则引发[ \<appDomainManagerAssembly >](../../../../../docs/framework/configure-apps/file-schema/runtime/appdomainmanagerassembly-element.md)元素; 并且到进程失败开始日期。</span><span class="sxs-lookup"><span data-stu-id="8c618-125">When the default application domain is loaded, <xref:System.TypeLoadException> is thrown if the specified type does not exist in the assembly that is specified by the [\<appDomainManagerAssembly>](../../../../../docs/framework/configure-apps/file-schema/runtime/appdomainmanagerassembly-element.md) element; and the process fails to start.</span></span>  
   
- <span data-ttu-id="83b7e-126">指定默认应用程序域的应用程序域管理器类型，请从默认应用程序域创建其他应用程序域将继承的应用程序域管理器类型。</span><span class="sxs-lookup"><span data-stu-id="83b7e-126">When you specify the application domain manager type for the default application domain, other application domains created from the default application domain inherit the application domain manager type.</span></span> <span data-ttu-id="83b7e-127">使用<xref:System.AppDomainSetup.AppDomainManagerType%2A?displayProperty=nameWithType>和<xref:System.AppDomainSetup.AppDomainManagerAssembly%2A?displayProperty=nameWithType>属性以指定新的应用程序域是不同的应用程序域管理器类型。</span><span class="sxs-lookup"><span data-stu-id="83b7e-127">Use the <xref:System.AppDomainSetup.AppDomainManagerType%2A?displayProperty=nameWithType> and <xref:System.AppDomainSetup.AppDomainManagerAssembly%2A?displayProperty=nameWithType> properties to specify a different application domain manager type for a new application domain.</span></span>  
+ <span data-ttu-id="8c618-126">指定默认应用程序域的应用程序域管理器类型，请从默认应用程序域创建其他应用程序域将继承的应用程序域管理器类型。</span><span class="sxs-lookup"><span data-stu-id="8c618-126">When you specify the application domain manager type for the default application domain, other application domains created from the default application domain inherit the application domain manager type.</span></span> <span data-ttu-id="8c618-127">使用<xref:System.AppDomainSetup.AppDomainManagerType%2A?displayProperty=nameWithType>和<xref:System.AppDomainSetup.AppDomainManagerAssembly%2A?displayProperty=nameWithType>属性以指定新的应用程序域是不同的应用程序域管理器类型。</span><span class="sxs-lookup"><span data-stu-id="8c618-127">Use the <xref:System.AppDomainSetup.AppDomainManagerType%2A?displayProperty=nameWithType> and <xref:System.AppDomainSetup.AppDomainManagerAssembly%2A?displayProperty=nameWithType> properties to specify a different application domain manager type for a new application domain.</span></span>  
   
- <span data-ttu-id="83b7e-128">指定应用程序域管理器类型要求具有完全信任的应用程序。</span><span class="sxs-lookup"><span data-stu-id="83b7e-128">Specifying the application domain manager type requires the application to have full trust.</span></span> <span data-ttu-id="83b7e-129">（例如，在桌面上运行的应用程序具有完全信任。）如果应用程序不具有完全信任，<xref:System.TypeLoadException>引发。</span><span class="sxs-lookup"><span data-stu-id="83b7e-129">(For example, an application running on the desktop has full trust.) If the application does not have full trust, a <xref:System.TypeLoadException> is thrown.</span></span>  
+ <span data-ttu-id="8c618-128">指定应用程序域管理器类型要求具有完全信任的应用程序。</span><span class="sxs-lookup"><span data-stu-id="8c618-128">Specifying the application domain manager type requires the application to have full trust.</span></span> <span data-ttu-id="8c618-129">（例如，在桌面上运行的应用程序具有完全信任。）如果应用程序不具有完全信任，<xref:System.TypeLoadException>引发。</span><span class="sxs-lookup"><span data-stu-id="8c618-129">(For example, an application running on the desktop has full trust.) If the application does not have full trust, a <xref:System.TypeLoadException> is thrown.</span></span>  
   
- <span data-ttu-id="83b7e-130">类型和命名空间的格式是相同的格式用于<xref:System.Type.FullName%2A?displayProperty=nameWithType>属性。</span><span class="sxs-lookup"><span data-stu-id="83b7e-130">The format of the type and namespace is the same format that is used for the <xref:System.Type.FullName%2A?displayProperty=nameWithType> property.</span></span>  
+ <span data-ttu-id="8c618-130">类型和命名空间的格式是相同的格式用于<xref:System.Type.FullName%2A?displayProperty=nameWithType>属性。</span><span class="sxs-lookup"><span data-stu-id="8c618-130">The format of the type and namespace is the same format that is used for the <xref:System.Type.FullName%2A?displayProperty=nameWithType> property.</span></span>  
   
- <span data-ttu-id="83b7e-131">此配置元素是仅适用于[!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)]及更高版本。</span><span class="sxs-lookup"><span data-stu-id="83b7e-131">This configuration element is available only in the [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)] and later.</span></span>  
+ <span data-ttu-id="8c618-131">此配置元素是仅适用于[!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)]及更高版本。</span><span class="sxs-lookup"><span data-stu-id="8c618-131">This configuration element is available only in the [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)] and later.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="83b7e-132">示例</span><span class="sxs-lookup"><span data-stu-id="83b7e-132">Example</span></span>  
- <span data-ttu-id="83b7e-133">下面的示例演示如何指定进程的默认应用程序域的应用程序域管理器是`MyMgr`中键入`AdMgrExample`程序集。</span><span class="sxs-lookup"><span data-stu-id="83b7e-133">The following example shows how to specify that the application domain manager for the default application domain of a process is the `MyMgr` type in the `AdMgrExample` assembly.</span></span>  
+## <a name="example"></a><span data-ttu-id="8c618-132">示例</span><span class="sxs-lookup"><span data-stu-id="8c618-132">Example</span></span>  
+ <span data-ttu-id="8c618-133">下面的示例演示如何指定进程的默认应用程序域的应用程序域管理器是`MyMgr`中键入`AdMgrExample`程序集。</span><span class="sxs-lookup"><span data-stu-id="8c618-133">The following example shows how to specify that the application domain manager for the default application domain of a process is the `MyMgr` type in the `AdMgrExample` assembly.</span></span>  
   
 ```xml  
 <configuration>  
@@ -73,10 +73,10 @@ ms.locfileid: "53610420"
 </configuration>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="83b7e-134">请参阅</span><span class="sxs-lookup"><span data-stu-id="83b7e-134">See Also</span></span>  
-- <xref:System.AppDomainSetup.AppDomainManagerType%2A?displayProperty=nameWithType>  
-- <xref:System.AppDomainSetup.AppDomainManagerAssembly%2A?displayProperty=nameWithType>  
-- [<span data-ttu-id="83b7e-135">\<appDomainManagerAssembly > 元素</span><span class="sxs-lookup"><span data-stu-id="83b7e-135">\<appDomainManagerAssembly> Element</span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/appdomainmanagerassembly-element.md)  
-- [<span data-ttu-id="83b7e-136">运行时设置架构</span><span class="sxs-lookup"><span data-stu-id="83b7e-136">Runtime Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
-- [<span data-ttu-id="83b7e-137">配置文件架构</span><span class="sxs-lookup"><span data-stu-id="83b7e-137">Configuration File Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/index.md)  
-- [<span data-ttu-id="83b7e-138">SetAppDomainManagerType 方法</span><span class="sxs-lookup"><span data-stu-id="83b7e-138">SetAppDomainManagerType Method</span></span>](../../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-setappdomainmanagertype-method.md)
+## <a name="see-also"></a><span data-ttu-id="8c618-134">请参阅</span><span class="sxs-lookup"><span data-stu-id="8c618-134">See also</span></span>
+- <xref:System.AppDomainSetup.AppDomainManagerType%2A?displayProperty=nameWithType>
+- <xref:System.AppDomainSetup.AppDomainManagerAssembly%2A?displayProperty=nameWithType>
+- [<span data-ttu-id="8c618-135">\<appDomainManagerAssembly > 元素</span><span class="sxs-lookup"><span data-stu-id="8c618-135">\<appDomainManagerAssembly> Element</span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/appdomainmanagerassembly-element.md)
+- [<span data-ttu-id="8c618-136">运行时设置架构</span><span class="sxs-lookup"><span data-stu-id="8c618-136">Runtime Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
+- [<span data-ttu-id="8c618-137">配置文件架构</span><span class="sxs-lookup"><span data-stu-id="8c618-137">Configuration File Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/index.md)
+- [<span data-ttu-id="8c618-138">SetAppDomainManagerType 方法</span><span class="sxs-lookup"><span data-stu-id="8c618-138">SetAppDomainManagerType Method</span></span>](../../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-setappdomainmanagertype-method.md)
