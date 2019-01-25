@@ -2,15 +2,15 @@
 title: 关联集端
 ms.date: 03/30/2017
 ms.assetid: fe4bf1d3-047a-4a37-98c5-a66e70811346
-ms.openlocfilehash: 440cfdee4581496d9d131fbaf3d1796f38931532
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 9a71fd434bea87a75e259a3d5caa902fbecf8a57
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32756197"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54701633"
 ---
 # <a name="association-set-end"></a>关联集端
-*关联集端*标识[实体类型](../../../../docs/framework/data/adonet/entity-type.md)和[实体集](../../../../docs/framework/data/adonet/entity-set.md)末尾[关联集](../../../../docs/framework/data/adonet/association-set.md)。 关联集端定义为关联集的一部分；一个关联集必须有且只有两个关联集端。  
+*关联集端*标识[实体类型](../../../../docs/framework/data/adonet/entity-type.md)并[实体集](../../../../docs/framework/data/adonet/entity-set.md)末尾[关联集](../../../../docs/framework/data/adonet/association-set.md)。 关联集端定义为关联集的一部分；一个关联集必须有且只有两个关联集端。  
   
  关联集端定义包含以下信息：  
   
@@ -23,7 +23,7 @@ ms.locfileid: "32756197"
   
  ![示例模型](../../../../docs/framework/data/adonet/media/examplemodel.gif "ExampleModel")  
   
- 下图显示了基于上面所示的概念模型的一个关联集 (`PublishedBy`) 和两个实体集（`Books` 和 `Publishers`）。 关联集端是 `Books` 和 `Publishers` 实体集。 在 bi`Books`实体集表示的实例`Book`在运行时的实体类型。 同样，Pj 表示`Publisher`实例中`Publishers`实体集。 BiPj 表示的实例`PublishedBy`中的关联`PublishedBy`关联集。  
+ 下图显示了基于上面所示的概念模型的一个关联集 (`PublishedBy`) 和两个实体集（`Books` 和 `Publishers`）。 关联集端是 `Books` 和 `Publishers` 实体集。 在 bi`Books`实体集表示的实例`Book`实体类型，在运行时。 同样，表示 Pj`Publisher`实例中`Publishers`实体集。 BiPj 表示的实例`PublishedBy`中的关联`PublishedBy`关联集。  
   
  ![设置示例](../../../../docs/framework/data/adonet/media/setsexample.gif "SetsExample")  
   
@@ -31,6 +31,6 @@ ms.locfileid: "32756197"
   
  [!code-xml[EDM_Example_Model#EntityContainerExample](../../../../samples/snippets/xml/VS_Snippets_Data/edm_example_model/xml/books.edmx#entitycontainerexample)]  
   
-## <a name="see-also"></a>请参阅  
- [实体数据模型关键概念](../../../../docs/framework/data/adonet/entity-data-model-key-concepts.md)  
- [实体数据模型](../../../../docs/framework/data/adonet/entity-data-model.md)
+## <a name="see-also"></a>请参阅
+- [实体数据模型关键概念](../../../../docs/framework/data/adonet/entity-data-model-key-concepts.md)
+- [实体数据模型](../../../../docs/framework/data/adonet/entity-data-model.md)

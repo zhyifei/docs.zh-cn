@@ -3044,12 +3044,12 @@ f1_keywords:
 - bc30233
 - bc30829
 ms.assetid: 0938efc2-e205-450b-9314-99951fcbd702
-ms.openlocfilehash: a3af5e519b263b5b151640ac9c3d0576905eddb9
-ms.sourcegitcommit: 0888d7b24f475c346a3f444de8d83ec1ca7cd234
+ms.openlocfilehash: 5eb00854f27a195ac3121aea16e2889897e6ef3d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2018
-ms.locfileid: "53781734"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54667656"
 ---
 # <a name="sorry-we-dont-have-specifics-on-this-visual-basic-error"></a>很抱歉，我们没有关于此 Visual Basic 错误的具体信息
 很抱歉，我们没有关于此错误的任何具体信息。 你可以在 Web 中搜索错误号和消息文本，以找到相关信息。 或者，还可使用以下论坛之一咨询其他开发人员：  
@@ -3072,6 +3072,6 @@ ms.locfileid: "53781734"
  另请参见：  
  [为 Visual Basic 程序员提供的附加资源](../../visual-basic/getting-started/additional-resources.md)  
   
-## <a name="see-also"></a>请参阅  
- [Visual Basic 编程指南](../../visual-basic/programming-guide/index.md)  
- [Visual Basic 参考](../../visual-basic/reference/index.md)
+## <a name="see-also"></a>请参阅
+- [Visual Basic 编程指南](../../visual-basic/programming-guide/index.md)
+- [Visual Basic 参考](../../visual-basic/reference/index.md)

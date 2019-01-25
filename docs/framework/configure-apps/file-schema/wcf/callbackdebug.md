@@ -2,21 +2,21 @@
 title: '&lt;callbackDebug&gt;'
 ms.date: 03/30/2017
 ms.assetid: 4073feda-1857-4be4-9947-227afb847ced
-ms.openlocfilehash: 5bd2356c3bb798e948341cb3c4ba504ac886ed44
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 1aa292a3fe06af9cf1dbc53ebf5bbdf9841be8d9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54145076"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54687370"
 ---
 # <a name="ltcallbackdebuggt"></a>&lt;callbackDebug&gt;
 指定服务调试 Windows Communication Foundation (WCF) 回调对象。  
   
  \<system.ServiceModel>  
-\<行为 >  
+\<behaviors>  
 \<endpointBehaviors>  
-\<行为 >  
-\<callbackDebug >  
+\<behavior>  
+\<callbackDebug>  
   
 ## <a name="syntax"></a>语法  
   
@@ -43,8 +43,8 @@ ms.locfileid: "54145076"
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<行为 >](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)|指定终结点行为。|  
+|[\<behavior>](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)|指定终结点行为。|  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.ServiceModel.Configuration.CallbackDebugElement>  
- <xref:System.ServiceModel.Description.CallbackDebugBehavior>
+## <a name="see-also"></a>请参阅
+- <xref:System.ServiceModel.Configuration.CallbackDebugElement>
+- <xref:System.ServiceModel.Description.CallbackDebugBehavior>

@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1ec8fe889885b555cbf9a95cd34b7330efff27f2
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 3c37bae87f56745cf75031923db820ec2439fe04
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43518751"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54625765"
 ---
 # <a name="put-function"></a>Put 的函数
 将命名属性设置为新值。
@@ -50,10 +50,10 @@ HRESULT Put (
 [in]一个指向[IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject)实例。
 
 `wszName`  
-[in]属性的名称。 此参数不能为`null`。
+[in]属性的名称。 此参数不能为 `null`。
 
 `lFlags`  
-[in]保留。 此参数必须为 0。
+[in] 保留。 此参数必须为 0。
 
 `pVal`   
 [in]指向一个有效的指针`VARIANT`该按钮将变为新的属性值。 如果`pVal`是`null`或指向`VARIANT`类型的`VT_NULL`，该属性设置为`null`。 
@@ -72,7 +72,7 @@ HRESULT Put (
 |`WBEM_E_INVALID_PARAMETER` | 0x80041008 | 一个或多个参数是无效的。 |
 |`WBEM_E_INVALID_PROPERTY_TYPE` | 0x8004102a | 未识别属性类型。 创建类实例，如果该类已存在时返回此值。 |
 |`WBEM_E_OUT_OF_MEMORY` | 0x80041006 | 没有足够的内存是可用于完成该操作。 |
-| `WBEM_E_TYPE_MISMATCH` | 0x80041005 | 实例： 指示`pVal`指向`VARIANT`属性类型不正确。 <br/> 查找类定义： 属性已经存在于父类，而新的 COM 类型都不同于旧的 COM 类型。 |
+| `WBEM_E_TYPE_MISMATCH` | 0x80041005 | 实例：指示`pVal`指向`VARIANT`属性类型不正确。 <br/> 查找类定义：属性已存在的父类、 中和新的 COM 类型都不同于旧的 COM 类型。 |
 |`WBEM_S_NO_ERROR` | 0 | 函数调用成功。 |
   
 ## <a name="remarks"></a>备注
@@ -94,11 +94,11 @@ HRESULT Put (
 有关示例，请参阅[IWbemClassObject::Put](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-put)方法。
 
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** WMINet_Utils.idl  
   
  **.NET Framework 版本：**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
-## <a name="see-also"></a>请参阅  
-[WMI 和性能计数器 （非托管 API 参考）](index.md)
+## <a name="see-also"></a>请参阅
+- [WMI 和性能计数器 （非托管 API 参考）](index.md)

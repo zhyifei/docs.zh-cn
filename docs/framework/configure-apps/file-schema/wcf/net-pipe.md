@@ -2,18 +2,18 @@
 title: '&lt;net.pipe&gt;'
 ms.date: 03/30/2017
 ms.assetid: 6a0f0318-f8f6-466c-9fae-199d7274a82e
-ms.openlocfilehash: 8a525f0684902841a2be75823932935e7533ba8b
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 7997894bfad8d5bf874a7f52d2cade7526375b13
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54151145"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54715291"
 ---
 # <a name="ltnetpipegt"></a>&lt;net.pipe&gt;
 指定命名管道激活服务的配置设置，命名管道激活服务将管理命名管道连接的生存期，并处理通过命名管道到达的激活请求。  
   
  \<system.serviceModel.activation>  
-\<net.pipe >  
+\<net.pipe>  
   
 ## <a name="syntax"></a>语法  
   
@@ -66,5 +66,5 @@ ms.locfileid: "54151145"
 |-------------|-----------------|  
 |[\<system.serviceModel.activation>](../../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel-activation.md)|包含侦听器进程 SMSvcHost.exe 的配置设置。|  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.ServiceModel.Activation.Configuration.NetPipeSection>
+## <a name="see-also"></a>请参阅
+- <xref:System.ServiceModel.Activation.Configuration.NetPipeSection>

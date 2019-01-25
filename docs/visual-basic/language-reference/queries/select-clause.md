@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Select clause [Visual Basic]
 - queries [Visual Basic], Select
 ms.assetid: 27a3f61c-5960-4692-9b91-4d0c4b6178fe
-ms.openlocfilehash: 7d959c0717a3ef44dfc23c90d99ec7b83421efaa
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 0890068d192a137689d06eb081e1a0fc128aabcd
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43529796"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54519003"
 ---
 # <a name="select-clause-visual-basic"></a>Select 子句 (Visual Basic)
 定义查询的结果。  
@@ -29,7 +29,7 @@ Select [ var1 = ] fieldName1 [, [ var2 = ] fieldName2 [...] ]
  可选。 一个可用于引用的列表达式结果的别名。  
   
  `fieldName1`  
- 必须的。 要返回查询结果中的字段的名称。  
+ 必需。 要返回查询结果中的字段的名称。  
   
 ## <a name="remarks"></a>备注  
  可以使用`Select`子句定义要从查询返回的结果。 这使你可以定义的查询，创建的新匿名类型成员或目标的查询返回的命名类型的成员。 `Select`子句不是必需的查询。 如果没有`Select`指定子句，则查询将返回基于为当前作用域标识的范围变量的所有成员的类型。 有关详细信息，请参阅[匿名类型](../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)。 当查询创建一个已命名的类型时，它将返回类型的结果<xref:System.Collections.Generic.IEnumerable%601>其中`T`是创建的类型。  
@@ -51,10 +51,10 @@ Select [ var1 = ] fieldName1 [, [ var2 = ] fieldName2 [...] ]
   
  [!code-vb[VbSimpleQuerySamples#30](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/select-clause_4.vb)]  
   
-## <a name="see-also"></a>请参阅  
- [Visual Basic 中的 LINQ 简介](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)  
- [查询](../../../visual-basic/language-reference/queries/index.md)  
- [From 子句](../../../visual-basic/language-reference/queries/from-clause.md)  
- [Where 子句](../../../visual-basic/language-reference/queries/where-clause.md)  
- [Order By 子句](../../../visual-basic/language-reference/queries/order-by-clause.md)  
- [匿名类型](../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)
+## <a name="see-also"></a>请参阅
+- [Visual Basic 中的 LINQ 简介](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
+- [查询](../../../visual-basic/language-reference/queries/index.md)
+- [From 子句](../../../visual-basic/language-reference/queries/from-clause.md)
+- [Where 子句](../../../visual-basic/language-reference/queries/where-clause.md)
+- [Order By 子句](../../../visual-basic/language-reference/queries/order-by-clause.md)
+- [匿名类型](../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)

@@ -2,21 +2,21 @@
 title: '&lt;serviceAuthorization&gt; 元素'
 ms.date: 03/30/2017
 ms.assetid: 18cddad5-ddcb-4839-a0ac-1d6f6ab783ca
-ms.openlocfilehash: 6c69d10eb2f6cdf4546dd5895d196723417f5494
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 49b89c17f9858c111791276fe15e4a418845c8e8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54145999"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54622567"
 ---
 # <a name="ltserviceauthorizationgt-element"></a>&lt;serviceAuthorization&gt; 元素
 指定用于授予服务操作访问权限的设置。  
   
  \<system.ServiceModel>  
-\<行为 >  
+\<behaviors>  
 \<serviceBehaviors>  
-\<行为 >  
-\<serviceAuthorization >  
+\<behavior>  
+\<serviceAuthorization>  
   
 ## <a name="syntax"></a>语法  
   
@@ -39,7 +39,7 @@ ms.locfileid: "54145999"
 |特性|描述|  
 |---------------|-----------------|  
 |impersonateCallerForAllOperations|一个布尔值，指定是否服务中的所有操作都模拟调用方。 默认值为 `false`。<br /><br /> 当特定服务操作模拟调用方时，线程上下文会在执行指定服务前切换为调用方上下文。|  
-|principalPermissionMode|设置用于在服务器上执行操作的主体。 包括以下值：<br /><br /> -None<br />-UseWindowsGroups<br />-UseAspNetRoles<br />自定义<br /><br /> 默认值为 UseWindowsGroups。 此值的类型为 <xref:System.ServiceModel.Description.PrincipalPermissionMode>。 使用此属性的详细信息，请参阅[如何：使用 PrincipalPermissionAttribute 类限制访问](../../../../../docs/framework/wcf/how-to-restrict-access-with-the-principalpermissionattribute-class.md)。|  
+|principalPermissionMode|设置用于在服务器上执行操作的主体。 包括以下值：<br /><br /> -None<br />-   UseWindowsGroups<br />-   UseAspNetRoles<br />自定义<br /><br /> 默认值为 UseWindowsGroups。 此值的类型为 <xref:System.ServiceModel.Description.PrincipalPermissionMode>。 使用此属性的详细信息，请参阅[如何：使用 PrincipalPermissionAttribute 类限制访问](../../../../../docs/framework/wcf/how-to-restrict-access-with-the-principalpermissionattribute-class.md)。|  
 |roleProviderName|一个字符串，指定为 Windows Communication Foundation (WCF) 应用程序提供角色信息的角色提供程序的名称。 默认值为一个空字符串。|  
 |ServiceAuthorizationManagerType|一个包含服务授权管理器的类型的字符串。 有关详细信息，请参阅 <xref:System.ServiceModel.ServiceAuthorizationManager>。|  
   
@@ -53,7 +53,7 @@ ms.locfileid: "54145999"
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<行为 >](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)|包含服务行为的设置集合。|  
+|[\<behavior>](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)|包含服务行为的设置集合。|  
   
 ## <a name="remarks"></a>备注  
  本节包含一些影响授权、自定义角色提供程序和模拟的元素。  
@@ -95,11 +95,11 @@ ms.locfileid: "54145999"
   
  使用此配置元素的详细示例，请参阅[对服务操作的授权访问](../../../../../docs/framework/wcf/samples/authorizing-access-to-service-operations.md)并[授权策略](../../../../../docs/framework/wcf/samples/authorization-policy.md)。  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.ServiceModel.Configuration.ServiceAuthorizationElement>  
- <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior>  
- [安全行为](../../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)  
- [授予对服务操作的权限](../../../../../docs/framework/wcf/samples/authorizing-access-to-service-operations.md)  
- [如何：创建自定义授权管理器服务](../../../../../docs/framework/wcf/extending/how-to-create-a-custom-authorization-manager-for-a-service.md)  
- [如何：使用 PrincipalPermissionAttribute 类限制访问](../../../../../docs/framework/wcf/how-to-restrict-access-with-the-principalpermissionattribute-class.md)  
- [授权策略](../../../../../docs/framework/wcf/samples/authorization-policy.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.ServiceModel.Configuration.ServiceAuthorizationElement>
+- <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior>
+- [安全行为](../../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)
+- [授予对服务操作的权限](../../../../../docs/framework/wcf/samples/authorizing-access-to-service-operations.md)
+- [如何：创建自定义授权管理器服务](../../../../../docs/framework/wcf/extending/how-to-create-a-custom-authorization-manager-for-a-service.md)
+- [如何：使用 PrincipalPermissionAttribute 类限制访问](../../../../../docs/framework/wcf/how-to-restrict-access-with-the-principalpermissionattribute-class.md)
+- [授权策略](../../../../../docs/framework/wcf/samples/authorization-policy.md)

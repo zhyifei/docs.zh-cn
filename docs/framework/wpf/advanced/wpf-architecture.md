@@ -16,12 +16,12 @@ helpviewer_keywords:
 - data templates [WPF]
 - thread [WPF], affinity
 ms.assetid: 8579c10b-76ab-4c52-9691-195ce02333c8
-ms.openlocfilehash: 50a7e1b08c31b5d0fb779dabf617a08bbb4c6cf4
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 7214304d8575fb6ef8774d55eaf29ad714235123
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50195913"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54634579"
 ---
 # <a name="wpf-architecture"></a>WPF 体系结构
 本主题提供 Windows Presentation Foundation (WPF) 类层次结构的指导的教程。 本主题涵盖了 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 的大部分主要子系统，并说明它们的交互方式。 本主题还详细介绍了 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 架构师所做的一些选择。  
@@ -141,14 +141,14 @@ ms.locfileid: "50195913"
   
  当开始开发基于 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 的应用程序时，你应感到非常熟悉。 设置属性、使用对象和数据绑定的方式与使用 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 或 [!INCLUDE[TLA#tla_aspnet](../../../../includes/tlasharptla-aspnet-md.md)] 的方式极为相似。 如果对 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 体系结构有更深的了解，将能够创建更丰富的应用程序，这些应用程序在根本上会将数据视为应用程序的核心驱动要素。  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Windows.Media.Visual>  
- <xref:System.Windows.UIElement>  
- <xref:System.Windows.Input.ICommand>  
- <xref:System.Windows.FrameworkElement>  
- <xref:System.Windows.Threading.DispatcherObject>  
- <xref:System.Windows.Input.CommandBinding>  
- <xref:System.Windows.Controls.Control>  
- [数据绑定概述](../../../../docs/framework/wpf/data/data-binding-overview.md)  
- [布局](../../../../docs/framework/wpf/advanced/layout.md)  
- [动画概述](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.Windows.Media.Visual>
+- <xref:System.Windows.UIElement>
+- <xref:System.Windows.Input.ICommand>
+- <xref:System.Windows.FrameworkElement>
+- <xref:System.Windows.Threading.DispatcherObject>
+- <xref:System.Windows.Input.CommandBinding>
+- <xref:System.Windows.Controls.Control>
+- [数据绑定概述](../../../../docs/framework/wpf/data/data-binding-overview.md)
+- [布局](../../../../docs/framework/wpf/advanced/layout.md)
+- [动画概述](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)

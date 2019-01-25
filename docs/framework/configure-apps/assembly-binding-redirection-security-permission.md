@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 24a5cdff-7ed9-4195-93f3-edf6899019fc
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: e6690a4f11bb1a88e2d77c67ccb29056c8e03f96
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: d4483d11903d61135585a2b6c2c33eff48300151
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47088654"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54616009"
 ---
 # <a name="assembly-binding-redirection-security-permission"></a>程序集绑定重定向安全权限
 应用程序配置文件中的显式程序集绑定重定向需要安全权限。 这适用于对 .NET Framework 程序集和来自第三方的程序集的重定向。 通过设置授予权限<xref:System.Security.Permissions.SecurityPermissionFlag>标志<xref:System.Security.Permissions.SecurityPermission>。 托管程序集默认情况下没有任何权限。  
@@ -27,12 +27,12 @@ ms.locfileid: "47088654"
 |----------|-----------------------------------|  
 |受信任的区域 （本地计算机）|**ON**|  
 |Intranet 区域|**ON**|  
-|Internet 区域|**关闭**|  
-|不受信任的区域|**关闭**|  
+|Internet 区域|**OFF**|  
+|不受信任的区域|**OFF**|  
   
  管理员可以更改这些安全设置，以支持或限制给定计算机上的特定方案。 有工具可用于更改**BindingRedirects**标志设置从默认设置; 管理员必须手动编辑用户的计算机上的 Security.config 文件。  
   
-## <a name="see-also"></a>请参阅  
- [发布服务器策略文件和通过并行执行](https://msdn.microsoft.com/library/97a042be-4d72-40c3-91c0-76fd36bdf133)  
- [如何：启用和禁用自动绑定重定向](../../../docs/framework/configure-apps/how-to-enable-and-disable-automatic-binding-redirection.md)  
- [并行执行](../../../docs/framework/deployment/side-by-side-execution.md)
+## <a name="see-also"></a>请参阅
+- [发布服务器策略文件和通过并行执行](https://msdn.microsoft.com/library/97a042be-4d72-40c3-91c0-76fd36bdf133)
+- [如何：启用和禁用自动绑定重定向](../../../docs/framework/configure-apps/how-to-enable-and-disable-automatic-binding-redirection.md)
+- [并行执行](../../../docs/framework/deployment/side-by-side-execution.md)

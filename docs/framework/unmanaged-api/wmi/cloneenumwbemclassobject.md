@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 35bd458eb6046f57d37764e0a8e58616f2c2c3a1
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 52edc72e3714ceaf8cc92f272da6a374eb324dad
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43778527"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54661641"
 ---
 # <a name="cloneenumwbemclassobject-function"></a>CloneEnumWbemClassObject 函数
 制作枚举器的逻辑副本，并保留其在枚举中的当前位置。  
@@ -68,7 +68,7 @@ HRESULT CloneEnumWbemClassObject (
 
 此函数返回以下值中定义*WbemCli.h*标头文件，也可以在定义它们为常量在代码中：
 
-|返回的常量  |“值”  |描述  |
+|返回的常量  |值  |描述  |
 |---------|---------|---------|
 | `WBEM_E_FAILED` | 0x80041001 | 已存在时的常见错误。 |
 | `WBEM_E_INVALID_PARAMETER` | 0x80041008 | 参数无效。 |
@@ -89,11 +89,11 @@ HRESULT CloneEnumWbemClassObject (
 有关示例，请参阅[IEnumWbemClassObject::Clone](/windows/desktop/api/wbemcli/nf-wbemcli-ienumwbemclassobject-clone)方法。
 
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** WMINet_Utils.idl  
   
  **.NET Framework 版本：**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
-## <a name="see-also"></a>请参阅  
-[WMI 和性能计数器 （非托管 API 参考）](index.md)
+## <a name="see-also"></a>请参阅
+- [WMI 和性能计数器 （非托管 API 参考）](index.md)

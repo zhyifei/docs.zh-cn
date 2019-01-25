@@ -8,12 +8,12 @@ helpviewer_keywords:
 - visual layer [WPF], DrawingVisual objects
 - DrawingVisual objects in visual layer [WPF]
 ms.assetid: 0b4e711d-e640-40cb-81c3-8f5c59909b7d
-ms.openlocfilehash: 799892424f92782d71b9a35e76d722d1725815ea
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 0d4ba3939a95b665684713f3b1775bacd3d028b9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43861840"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54675062"
 ---
 # <a name="using-drawingvisual-objects"></a>使用 DrawingVisual 对象
 本主题概述了如何使用<xref:System.Windows.Media.DrawingVisual>中的对象[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]可视化层。  
@@ -51,9 +51,9 @@ ms.locfileid: "43861840"
   
  下表介绍了必须重写的两个成员：  
   
--   <xref:System.Windows.FrameworkElement.GetVisualChild%2A>： 返回的子元素的集合中的指定索引处的子级。  
+-   <xref:System.Windows.FrameworkElement.GetVisualChild%2A>：返回子元素的集合中的指定索引处的子级。  
   
--   <xref:System.Windows.FrameworkElement.VisualChildrenCount%2A>： 获取此元素内可视子元素数。  
+-   <xref:System.Windows.FrameworkElement.VisualChildrenCount%2A>：获取此元素内可视子元素的数目。  
   
  在以下示例中，重写为两个<xref:System.Windows.FrameworkElement>成员实现。  
   
@@ -69,8 +69,8 @@ ms.locfileid: "43861840"
  [!code-csharp[DrawingVisualSample#103](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DrawingVisualSample/CSharp/Window1.xaml.cs#103)]
  [!code-vb[DrawingVisualSample#103](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DrawingVisualSample/visualbasic/window1.xaml.vb#103)]  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Windows.Media.DrawingVisual>  
- <xref:System.Windows.Media.VisualTreeHelper.HitTest%2A>  
- [WPF 图形呈现概述](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)  
- [可视化层中的命中测试](../../../../docs/framework/wpf/graphics-multimedia/hit-testing-in-the-visual-layer.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.Windows.Media.DrawingVisual>
+- <xref:System.Windows.Media.VisualTreeHelper.HitTest%2A>
+- [WPF 图形呈现概述](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)
+- [可视化层中的命中测试](../../../../docs/framework/wpf/graphics-multimedia/hit-testing-in-the-visual-layer.md)

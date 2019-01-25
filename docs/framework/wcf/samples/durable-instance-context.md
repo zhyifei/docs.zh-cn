@@ -2,12 +2,12 @@
 title: 持久性实例上下文
 ms.date: 03/30/2017
 ms.assetid: 97bc2994-5a2c-47c7-927a-c4cd273153df
-ms.openlocfilehash: f5c066ae06e44f6cac4b9a7b98487aa6226b969f
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: ec01f83e25eb003e194424bbfa247011701dc1bd
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43524421"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54527480"
 ---
 # <a name="durable-instance-context"></a>持久性实例上下文
 此示例演示如何自定义 Windows Communication Foundation (WCF) 运行时以启用持久性实例上下文。 它使用 SQL Server 2005 作为其后备存储（在本例中为 SQL Server 2005 Express）。 但是，它还提供了一种访问自定义存储机制的方法。  

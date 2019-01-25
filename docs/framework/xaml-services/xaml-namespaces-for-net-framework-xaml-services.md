@@ -2,12 +2,12 @@
 title: .NET Framework XAML 服务的 XAML 命名空间
 ms.date: 03/30/2017
 ms.assetid: e4f15f13-c420-4c1e-aeab-9b6f50212047
-ms.openlocfilehash: ac6554cbdeb5bc6e0fe7fb96ea95d0143c293d22
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 2e9e2d9e2257e5e6059210b82a69d7a837254032
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48030861"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54736794"
 ---
 # <a name="xaml-namespaces-for-net-framework-xaml-services"></a>.NET Framework XAML 服务的 XAML 命名空间
 XAML 命名空间是扩展的定义中的 XML 命名空间的概念。 类似于 XML 命名空间，您可以定义 XAML 命名空间使用`xmlns`标记中的属性。 在 XAML 节点流和其他 XAML 服务 Api 中还表示 XAML 命名空间。 本主题定义 XAML 命名空间概念，并说明如何 XAML 命名空间可以定义和使用的 XAML 架构上下文和.NET Framework XAML 服务的其他方面。  
@@ -30,7 +30,7 @@ XAML 命名空间是扩展的定义中的 XML 命名空间的概念。 类似于
   
  使用 CLR 命名空间和程序集约定的标识符的最基本形式如下所示：  
   
- `clr-namespace:` *clrnsName* `; assembly=` *程序集短名称*  
+ `clr-namespace:` *clrnsName* `; assembly=` *assemblyShortName*  
   
  `clr-namespace:` 和`; assembly=`是文本的语法组件。  
   
@@ -40,7 +40,7 @@ XAML 命名空间是扩展的定义中的 XML 命名空间的概念。 类似于
   
  更完整的 CLR 命名空间和程序集约定的定义如下所示：  
   
- `clr-namespace:` *clrnsName* `; assembly=` *程序集名称*  
+ `clr-namespace:` *clrnsName* `; assembly=` *assemblyName*  
   
  *程序集名称*表示作为是合法的任何字符串<xref:System.Reflection.Assembly.Load%28System.String%29?displayProperty=nameWithType>输入。 此字符串可以包括区域性、 公钥或版本信息 (这些概念的定义中的参考主题定义<xref:System.Reflection.Assembly>)。 COFF 格式和证据 (由另一个重载<xref:System.Reflection.Assembly.Load%2A>) 不相关的 XAML 程序集加载目的; 所有负载信息必须都显示为字符串。  
   
@@ -63,5 +63,5 @@ XAML 命名空间是扩展的定义中的 XML 命名空间的概念。 类似于
   
  相关的.NET Framework XAML 服务中处理的 XAML 命名空间的两个其他 API 是属性<xref:System.Windows.Markup.XmlnsDefinitionAttribute>和<xref:System.Windows.Markup.XmlnsPrefixAttribute>。 这些属性适用于程序集。 <xref:System.Windows.Markup.XmlnsDefinitionAttribute> 可供 XAML 架构上下文来解释包含 URI 的任何 XAML 命名空间声明。 <xref:System.Windows.Markup.XmlnsPrefixAttribute> 使用发出 XAML，以便特定 XAML 命名空间可以使用可预测的前缀进行序列化的工具。 有关详细信息，请参阅[XAML-Related CLR 特性自定义类型和库的](../../../docs/framework/xaml-services/xaml-related-clr-attributes-for-custom-types-and-libraries.md)。  
   
-## <a name="see-also"></a>请参阅  
- [了解 XAML 节点流结构和概念](../../../docs/framework/xaml-services/understanding-xaml-node-stream-structures-and-concepts.md)
+## <a name="see-also"></a>请参阅
+- [了解 XAML 节点流结构和概念](../../../docs/framework/xaml-services/understanding-xaml-node-stream-structures-and-concepts.md)

@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bde25ae7455dd7fe35fe1a0a43bb2a6b560c0e3e
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: fa46cf1fde4306af562248b4c12b048e3d8e2a51
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47208411"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54717644"
 ---
 # <a name="compareto-function"></a>CompareTo 函数
 将对象与另一个 Windows 管理对象进行比较。  
@@ -73,7 +73,7 @@ HRESULT CompareTo (
 
 可以作为传递的标志`lEnumFlags`中定义参数*WbemCli.h*标头文件，也可以在定义它们为常量在代码中。 通过指定以下标志的按位组合，可以指定在比较中涉及的各个特征：
 
-|返回的常量  |“值”  |描述  |
+|返回的常量  |值  |描述  |
 |---------|---------|---------|
 | `WBEM_FLAG_IGNORE_OBJECT_SOURCE` | 2 | 忽略源 （在服务器和它们原来的位置的命名空间）。 |
 | `WBEM_FLAG_IGNORE_QUALIFIERS` | 1 | 忽略所有限定符 (包括**键**并**动态**) |
@@ -84,16 +84,16 @@ HRESULT CompareTo (
 
 也可以指定单个复合标志，如下所示：
 
-|返回的常量  |“值”  |描述  |
+|返回的常量  |值  |描述  |
 |---------|---------|---------|
 |`WBEM_COMPARISON_INCLUDE_ALL` | 0 | 请考虑在比较中的所有功能。 |
 
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** WMINet_Utils.idl  
   
  **.NET Framework 版本：**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
-## <a name="see-also"></a>请参阅  
-[WMI 和性能计数器 （非托管 API 参考）](index.md)
+## <a name="see-also"></a>请参阅
+- [WMI 和性能计数器 （非托管 API 参考）](index.md)
