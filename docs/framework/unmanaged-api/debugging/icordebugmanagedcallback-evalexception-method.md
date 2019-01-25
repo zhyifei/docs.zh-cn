@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4414bab535b63f55a580e93cc6de9cb0dedc073c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 1705b9d77d0d91196201d713cceb0ccf0f8635a8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33415511"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54728010"
 ---
-# <a name="icordebugmanagedcallbackevalexception-method"></a><span data-ttu-id="4d575-102">ICorDebugManagedCallback::EvalException 方法</span><span class="sxs-lookup"><span data-stu-id="4d575-102">ICorDebugManagedCallback::EvalException Method</span></span>
-<span data-ttu-id="4d575-103">通知调试器评估已终止与未经处理的异常。</span><span class="sxs-lookup"><span data-stu-id="4d575-103">Notifies the debugger that an evaluation has terminated with an unhandled exception.</span></span>  
+# <a name="icordebugmanagedcallbackevalexception-method"></a><span data-ttu-id="d9414-102">ICorDebugManagedCallback::EvalException 方法</span><span class="sxs-lookup"><span data-stu-id="d9414-102">ICorDebugManagedCallback::EvalException Method</span></span>
+<span data-ttu-id="d9414-103">通知调试器评估已终止，出现未经处理的异常。</span><span class="sxs-lookup"><span data-stu-id="d9414-103">Notifies the debugger that an evaluation has terminated with an unhandled exception.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="4d575-104">语法</span><span class="sxs-lookup"><span data-stu-id="4d575-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="d9414-104">语法</span><span class="sxs-lookup"><span data-stu-id="d9414-104">Syntax</span></span>  
   
 ```  
 HRESULT EvalException (  
@@ -37,24 +37,24 @@ HRESULT EvalException (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="4d575-105">参数</span><span class="sxs-lookup"><span data-stu-id="4d575-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="d9414-105">参数</span><span class="sxs-lookup"><span data-stu-id="d9414-105">Parameters</span></span>  
  `pAppDomain`  
- <span data-ttu-id="4d575-106">[in]指向一个表示在其中评估终止应用程序域的 ICorDebugAppDomain 对象的指针。</span><span class="sxs-lookup"><span data-stu-id="4d575-106">[in] A pointer to an ICorDebugAppDomain object that represents the application domain in which the evaluation terminated.</span></span>  
+ <span data-ttu-id="d9414-106">[in]指向表示应用程序域计算已终止的 ICorDebugAppDomain 对象的指针。</span><span class="sxs-lookup"><span data-stu-id="d9414-106">[in] A pointer to an ICorDebugAppDomain object that represents the application domain in which the evaluation terminated.</span></span>  
   
  `pThread`  
- <span data-ttu-id="4d575-107">[in]指向一个表示在其中评估终止线程 ICorDebugThread 对象的指针。</span><span class="sxs-lookup"><span data-stu-id="4d575-107">[in] A pointer to an ICorDebugThread object that represents the thread in which the evaluation terminated.</span></span>  
+ <span data-ttu-id="d9414-107">[in]指向一个 ICorDebugThread 对象，表示在其中计算终止的线程的指针。</span><span class="sxs-lookup"><span data-stu-id="d9414-107">[in] A pointer to an ICorDebugThread object that represents the thread in which the evaluation terminated.</span></span>  
   
  `pEval`  
- <span data-ttu-id="4d575-108">[in]指向表示执行计算的代码的 ICorDebugEval 对象的指针。</span><span class="sxs-lookup"><span data-stu-id="4d575-108">[in] A pointer to an ICorDebugEval object that represents the code that performed the evaluation.</span></span>  
+ <span data-ttu-id="d9414-108">[in]指向一个 ICorDebugEval 对象，表示执行计算的代码的指针。</span><span class="sxs-lookup"><span data-stu-id="d9414-108">[in] A pointer to an ICorDebugEval object that represents the code that performed the evaluation.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="4d575-109">要求</span><span class="sxs-lookup"><span data-stu-id="4d575-109">Requirements</span></span>  
- <span data-ttu-id="4d575-110">**平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="4d575-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="d9414-109">要求</span><span class="sxs-lookup"><span data-stu-id="d9414-109">Requirements</span></span>  
+ <span data-ttu-id="d9414-110">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="d9414-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="4d575-111">**标头：** CorDebug.idl、 CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="4d575-111">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="d9414-111">**标头：** CorDebug.idl、 CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="d9414-111">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="4d575-112">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="4d575-112">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="d9414-112">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="d9414-112">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="4d575-113">**.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="4d575-113">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="d9414-113">**.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="d9414-113">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="4d575-114">请参阅</span><span class="sxs-lookup"><span data-stu-id="4d575-114">See Also</span></span>  
- [<span data-ttu-id="4d575-115">ICorDebugManagedCallback 接口</span><span class="sxs-lookup"><span data-stu-id="4d575-115">ICorDebugManagedCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)
+## <a name="see-also"></a><span data-ttu-id="d9414-114">请参阅</span><span class="sxs-lookup"><span data-stu-id="d9414-114">See also</span></span>
+- [<span data-ttu-id="d9414-115">ICorDebugManagedCallback 接口</span><span class="sxs-lookup"><span data-stu-id="d9414-115">ICorDebugManagedCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)

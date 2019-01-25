@@ -11,25 +11,25 @@ helpviewer_keywords:
 ms.assetid: 55d419c0-2201-4101-90c9-2888df4dbb47
 author: Xansky
 ms.author: mhopkins
-ms.openlocfilehash: 247a353a3f68289a85e581fd9b9c308e442a9412
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 675d9c02503cd69c425a95cffabde053dd5cca59
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/29/2018
-ms.locfileid: "47455482"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54568811"
 ---
-# <a name="expose-a-server-side-ui-automation-provider"></a><span data-ttu-id="d8b6f-102">公开服务器端 UI 自动化提供程序</span><span class="sxs-lookup"><span data-stu-id="d8b6f-102">Expose a Server-side UI Automation Provider</span></span>
+# <a name="expose-a-server-side-ui-automation-provider"></a><span data-ttu-id="87f6a-102">公开服务器端 UI 自动化提供程序</span><span class="sxs-lookup"><span data-stu-id="87f6a-102">Expose a Server-side UI Automation Provider</span></span>
 > [!NOTE]
->  <span data-ttu-id="d8b6f-103">本文档适用于想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空间中定义的托管 <xref:System.Windows.Automation> 类的 .NET Framework 开发人员。</span><span class="sxs-lookup"><span data-stu-id="d8b6f-103">This documentation is intended for .NET Framework developers who want to use the managed [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] classes defined in the <xref:System.Windows.Automation> namespace.</span></span> <span data-ttu-id="d8b6f-104">有关最新信息[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]，请参阅[Windows 自动化 API: UI 自动化](https://go.microsoft.com/fwlink/?LinkID=156746)。</span><span class="sxs-lookup"><span data-stu-id="d8b6f-104">For the latest information about [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], see [Windows Automation API: UI Automation](https://go.microsoft.com/fwlink/?LinkID=156746).</span></span>  
+>  <span data-ttu-id="87f6a-103">本文档适用于想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空间中定义的托管 <xref:System.Windows.Automation> 类的 .NET Framework 开发人员。</span><span class="sxs-lookup"><span data-stu-id="87f6a-103">This documentation is intended for .NET Framework developers who want to use the managed [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] classes defined in the <xref:System.Windows.Automation> namespace.</span></span> <span data-ttu-id="87f6a-104">有关最新信息[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]，请参阅[Windows 自动化 API:UI 自动化](https://go.microsoft.com/fwlink/?LinkID=156746)。</span><span class="sxs-lookup"><span data-stu-id="87f6a-104">For the latest information about [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], see [Windows Automation API: UI Automation](https://go.microsoft.com/fwlink/?LinkID=156746).</span></span>  
   
- <span data-ttu-id="d8b6f-105">本主题包含代码示例演示如何公开服务器端 UI 自动化提供程序中托管的<xref:System.Windows.Forms.Control?displayProperty=nameWithType>窗口。</span><span class="sxs-lookup"><span data-stu-id="d8b6f-105">This topic contains example code that shows how to expose a server-side UI Automation provider that is hosted in a <xref:System.Windows.Forms.Control?displayProperty=nameWithType> window.</span></span>  
+ <span data-ttu-id="87f6a-105">本主题包含演示如何公开承载在 <xref:System.Windows.Forms.Control?displayProperty=nameWithType> 窗口中服务器端 UI 自动化提供程序的代码示例。</span><span class="sxs-lookup"><span data-stu-id="87f6a-105">This topic contains example code that shows how to expose a server-side UI Automation provider that is hosted in a <xref:System.Windows.Forms.Control?displayProperty=nameWithType> window.</span></span>  
   
- <span data-ttu-id="d8b6f-106">示例重写窗口过程以捕获 WM_GETOBJECT，这是客户端应用程序请求有关窗口的信息时， [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 核心服务发送的消息。</span><span class="sxs-lookup"><span data-stu-id="d8b6f-106">The example overrides the window procedure to trap WM_GETOBJECT, which is the message sent by the [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] core service when a client application requests information about the window.</span></span>  
+ <span data-ttu-id="87f6a-106">示例重写窗口过程以捕获 WM_GETOBJECT，这是客户端应用程序请求有关窗口的信息时， [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 核心服务发送的消息。</span><span class="sxs-lookup"><span data-stu-id="87f6a-106">The example overrides the window procedure to trap WM_GETOBJECT, which is the message sent by the [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] core service when a client application requests information about the window.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="d8b6f-107">示例</span><span class="sxs-lookup"><span data-stu-id="d8b6f-107">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="87f6a-107">示例</span><span class="sxs-lookup"><span data-stu-id="87f6a-107">Example</span></span>  
  [!code-csharp[UIAFragmentProvider_snip#116](../../../samples/snippets/csharp/VS_Snippets_Wpf/UIAFragmentProvider_snip/CSharp/ListFragment.cs#116)]
  [!code-vb[UIAFragmentProvider_snip#116](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/UIAFragmentProvider_snip/VisualBasic/ListFragment.vb#116)]  
   
-## <a name="see-also"></a><span data-ttu-id="d8b6f-108">请参阅</span><span class="sxs-lookup"><span data-stu-id="d8b6f-108">See Also</span></span>  
- [<span data-ttu-id="d8b6f-109">UI 自动化提供程序概述</span><span class="sxs-lookup"><span data-stu-id="d8b6f-109">UI Automation Providers Overview</span></span>](../../../docs/framework/ui-automation/ui-automation-providers-overview.md)  
- [<span data-ttu-id="d8b6f-110">服务器端 UI 自动化提供程序实现</span><span class="sxs-lookup"><span data-stu-id="d8b6f-110">Server-Side UI Automation Provider Implementation</span></span>](../../../docs/framework/ui-automation/server-side-ui-automation-provider-implementation.md)
+## <a name="see-also"></a><span data-ttu-id="87f6a-108">请参阅</span><span class="sxs-lookup"><span data-stu-id="87f6a-108">See also</span></span>
+- [<span data-ttu-id="87f6a-109">UI 自动化提供程序概述</span><span class="sxs-lookup"><span data-stu-id="87f6a-109">UI Automation Providers Overview</span></span>](../../../docs/framework/ui-automation/ui-automation-providers-overview.md)
+- [<span data-ttu-id="87f6a-110">服务器端 UI 自动化提供程序实现</span><span class="sxs-lookup"><span data-stu-id="87f6a-110">Server-Side UI Automation Provider Implementation</span></span>](../../../docs/framework/ui-automation/server-side-ui-automation-provider-implementation.md)

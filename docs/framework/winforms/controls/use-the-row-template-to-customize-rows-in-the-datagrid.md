@@ -9,42 +9,42 @@ helpviewer_keywords:
 - data grids [Windows Forms], customizing rows
 - DataGridView control [Windows Forms], customizing rows
 ms.assetid: 6db61607-7e57-4a84-8d63-9d6a7ed7f9ff
-ms.openlocfilehash: 2bde9b3f6934833804866e29c18f3636c65ba069
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 215b04ce47a393a0ec3ad01957a311bc5508d24f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33539173"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54580234"
 ---
-# <a name="how-to-use-the-row-template-to-customize-rows-in-the-windows-forms-datagridview-control"></a><span data-ttu-id="de3ed-102">如何：使用行模板自定义 Windows 窗体 DataGridView 控件中的行</span><span class="sxs-lookup"><span data-stu-id="de3ed-102">How to: Use the Row Template to Customize Rows in the Windows Forms DataGridView Control</span></span>
-<span data-ttu-id="de3ed-103"><xref:System.Windows.Forms.DataGridView>控件中使用行模板作为基础，它将添加到该控件可以通过数据绑定，或当你调用的所有行的<xref:System.Windows.Forms.DataGridViewRowCollection.Add%2A?displayProperty=nameWithType>而无需指定要使用的现有行的方法。</span><span class="sxs-lookup"><span data-stu-id="de3ed-103">The <xref:System.Windows.Forms.DataGridView> control uses the row template as a basis for all rows that it adds to the control either through data binding or when you call the <xref:System.Windows.Forms.DataGridViewRowCollection.Add%2A?displayProperty=nameWithType> method without specifying an existing row to use.</span></span>  
+# <a name="how-to-use-the-row-template-to-customize-rows-in-the-windows-forms-datagridview-control"></a><span data-ttu-id="4d007-102">如何：使用行模板自定义 Windows 窗体 DataGridView 控件中的行</span><span class="sxs-lookup"><span data-stu-id="4d007-102">How to: Use the Row Template to Customize Rows in the Windows Forms DataGridView Control</span></span>
+<span data-ttu-id="4d007-103"><xref:System.Windows.Forms.DataGridView>控件中使用行模板为基础，它将添加到该控件通过数据绑定或在调用时的所有行<xref:System.Windows.Forms.DataGridViewRowCollection.Add%2A?displayProperty=nameWithType>而无需指定要使用的现有行的方法。</span><span class="sxs-lookup"><span data-stu-id="4d007-103">The <xref:System.Windows.Forms.DataGridView> control uses the row template as a basis for all rows that it adds to the control either through data binding or when you call the <xref:System.Windows.Forms.DataGridViewRowCollection.Add%2A?displayProperty=nameWithType> method without specifying an existing row to use.</span></span>  
   
- <span data-ttu-id="de3ed-104">行模板向您提供更好地控制的外观和行为的行少于<xref:System.Windows.Forms.DataGridView.RowsDefaultCellStyle%2A>属性提供。</span><span class="sxs-lookup"><span data-stu-id="de3ed-104">The row template gives you greater control over the appearance and behavior of rows than the <xref:System.Windows.Forms.DataGridView.RowsDefaultCellStyle%2A> property provides.</span></span> <span data-ttu-id="de3ed-105">使用行模板中，可以设置任何<xref:System.Windows.Forms.DataGridViewRow>属性，包括<xref:System.Windows.Forms.DataGridViewRow.DefaultCellStyle%2A>。</span><span class="sxs-lookup"><span data-stu-id="de3ed-105">With the row template, you can set any <xref:System.Windows.Forms.DataGridViewRow> properties, including <xref:System.Windows.Forms.DataGridViewRow.DefaultCellStyle%2A>.</span></span>  
+ <span data-ttu-id="4d007-104">行模板向您提供更好地控制的外观和行为的行比<xref:System.Windows.Forms.DataGridView.RowsDefaultCellStyle%2A>属性提供。</span><span class="sxs-lookup"><span data-stu-id="4d007-104">The row template gives you greater control over the appearance and behavior of rows than the <xref:System.Windows.Forms.DataGridView.RowsDefaultCellStyle%2A> property provides.</span></span> <span data-ttu-id="4d007-105">使用行模板，可以设置任何<xref:System.Windows.Forms.DataGridViewRow>属性，包括<xref:System.Windows.Forms.DataGridViewRow.DefaultCellStyle%2A>。</span><span class="sxs-lookup"><span data-stu-id="4d007-105">With the row template, you can set any <xref:System.Windows.Forms.DataGridViewRow> properties, including <xref:System.Windows.Forms.DataGridViewRow.DefaultCellStyle%2A>.</span></span>  
   
- <span data-ttu-id="de3ed-106">在某些情况下，其中必须使用行模板可获得特定的效果。</span><span class="sxs-lookup"><span data-stu-id="de3ed-106">There are some situations where you must use the row template to achieve a particular effect.</span></span> <span data-ttu-id="de3ed-107">例如，行高度信息不能存储在<xref:System.Windows.Forms.DataGridViewCellStyle>，因此你必须使用行模板来更改所有行所都用的默认高度。</span><span class="sxs-lookup"><span data-stu-id="de3ed-107">For example, row height information cannot be stored in a <xref:System.Windows.Forms.DataGridViewCellStyle>, so you must use a row template to change the default height used by all rows.</span></span> <span data-ttu-id="de3ed-108">创建您自己派生自的类时，可能也是有用行模板<xref:System.Windows.Forms.DataGridViewRow>，并且你希望新行添加到控件时使用自定义类型。</span><span class="sxs-lookup"><span data-stu-id="de3ed-108">The row template is also useful when you create your own classes derived from <xref:System.Windows.Forms.DataGridViewRow> and you want your custom type used when new rows are added to the control.</span></span>  
+ <span data-ttu-id="4d007-106">有某些情况下，必须使用行模板来实现特定的效果。</span><span class="sxs-lookup"><span data-stu-id="4d007-106">There are some situations where you must use the row template to achieve a particular effect.</span></span> <span data-ttu-id="4d007-107">例如，不能行高度信息存储在<xref:System.Windows.Forms.DataGridViewCellStyle>，因此必须使用行模板来更改使用的所有行的默认高度。</span><span class="sxs-lookup"><span data-stu-id="4d007-107">For example, row height information cannot be stored in a <xref:System.Windows.Forms.DataGridViewCellStyle>, so you must use a row template to change the default height used by all rows.</span></span> <span data-ttu-id="4d007-108">行模板非常有用，当您创建您自己的类派生自<xref:System.Windows.Forms.DataGridViewRow>并且你想在新行添加到控件时所使用的自定义类型。</span><span class="sxs-lookup"><span data-stu-id="4d007-108">The row template is also useful when you create your own classes derived from <xref:System.Windows.Forms.DataGridViewRow> and you want your custom type used when new rows are added to the control.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="de3ed-109">添加行时，仅使用行模板。</span><span class="sxs-lookup"><span data-stu-id="de3ed-109">The row template is used only when rows are added.</span></span> <span data-ttu-id="de3ed-110">通过更改行模板，您不能更改现有行。</span><span class="sxs-lookup"><span data-stu-id="de3ed-110">You cannot change existing rows by changing the row template.</span></span>  
+>  <span data-ttu-id="4d007-109">添加行时仅使用行模板。</span><span class="sxs-lookup"><span data-stu-id="4d007-109">The row template is used only when rows are added.</span></span> <span data-ttu-id="4d007-110">通过更改行模板，您不能更改现有行。</span><span class="sxs-lookup"><span data-stu-id="4d007-110">You cannot change existing rows by changing the row template.</span></span>  
   
-### <a name="to-use-the-row-template"></a><span data-ttu-id="de3ed-111">若要使用行模板</span><span class="sxs-lookup"><span data-stu-id="de3ed-111">To use the row template</span></span>  
+### <a name="to-use-the-row-template"></a><span data-ttu-id="4d007-111">若要使用行模板</span><span class="sxs-lookup"><span data-stu-id="4d007-111">To use the row template</span></span>  
   
--   <span data-ttu-id="de3ed-112">在从检索到的对象上设置属性<xref:System.Windows.Forms.DataGridView.RowTemplate%2A?displayProperty=nameWithType>属性。</span><span class="sxs-lookup"><span data-stu-id="de3ed-112">Set properties on the object retrieved from the <xref:System.Windows.Forms.DataGridView.RowTemplate%2A?displayProperty=nameWithType> property.</span></span>  
+-   <span data-ttu-id="4d007-112">在从检索的对象上设置属性<xref:System.Windows.Forms.DataGridView.RowTemplate%2A?displayProperty=nameWithType>属性。</span><span class="sxs-lookup"><span data-stu-id="4d007-112">Set properties on the object retrieved from the <xref:System.Windows.Forms.DataGridView.RowTemplate%2A?displayProperty=nameWithType> property.</span></span>  
   
      [!code-cpp[System.Windows.Forms.DataGridView.RowTemplate#1](../../../../samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.RowTemplate/CPP/datagridviewrowtemplate.cpp#1)]
      [!code-csharp[System.Windows.Forms.DataGridView.RowTemplate#1](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.RowTemplate/CS/datagridviewrowtemplate.cs#1)]
      [!code-vb[System.Windows.Forms.DataGridView.RowTemplate#1](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.RowTemplate/VB/datagridviewrowtemplate.vb#1)]  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="de3ed-113">编译代码</span><span class="sxs-lookup"><span data-stu-id="de3ed-113">Compiling the Code</span></span>  
- <span data-ttu-id="de3ed-114">此示例需要：</span><span class="sxs-lookup"><span data-stu-id="de3ed-114">This example requires:</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="4d007-113">编译代码</span><span class="sxs-lookup"><span data-stu-id="4d007-113">Compiling the Code</span></span>  
+ <span data-ttu-id="4d007-114">此示例需要：</span><span class="sxs-lookup"><span data-stu-id="4d007-114">This example requires:</span></span>  
   
--   <span data-ttu-id="de3ed-115">名为 `dataGridView1` 的 <xref:System.Windows.Forms.DataGridView> 控件。</span><span class="sxs-lookup"><span data-stu-id="de3ed-115">A <xref:System.Windows.Forms.DataGridView> control named `dataGridView1`.</span></span>  
+-   <span data-ttu-id="4d007-115">名为 `dataGridView1` 的 <xref:System.Windows.Forms.DataGridView> 控件。</span><span class="sxs-lookup"><span data-stu-id="4d007-115">A <xref:System.Windows.Forms.DataGridView> control named `dataGridView1`.</span></span>  
   
--   <span data-ttu-id="de3ed-116">对 <xref:System?displayProperty=nameWithType><xref:System.Drawing?displayProperty=nameWithType> 和 <xref:System.Windows.Forms?displayProperty=nameWithType> 程序集的引用。</span><span class="sxs-lookup"><span data-stu-id="de3ed-116">References to the <xref:System?displayProperty=nameWithType>, <xref:System.Drawing?displayProperty=nameWithType>, and <xref:System.Windows.Forms?displayProperty=nameWithType> assemblies.</span></span>  
+-   <span data-ttu-id="4d007-116">对 <xref:System?displayProperty=nameWithType><xref:System.Drawing?displayProperty=nameWithType> 和 <xref:System.Windows.Forms?displayProperty=nameWithType> 程序集的引用。</span><span class="sxs-lookup"><span data-stu-id="4d007-116">References to the <xref:System?displayProperty=nameWithType>, <xref:System.Drawing?displayProperty=nameWithType>, and <xref:System.Windows.Forms?displayProperty=nameWithType> assemblies.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="de3ed-117">请参阅</span><span class="sxs-lookup"><span data-stu-id="de3ed-117">See Also</span></span>  
- <xref:System.Windows.Forms.DataGridView>  
- <xref:System.Windows.Forms.DataGridViewCellStyle>  
- <xref:System.Windows.Forms.DataGridViewRow>  
- <xref:System.Windows.Forms.DataGridView.RowTemplate%2A?displayProperty=nameWithType>  
- [<span data-ttu-id="de3ed-118">Windows 窗体 DataGridView 控件中的基本格式和样式设置</span><span class="sxs-lookup"><span data-stu-id="de3ed-118">Basic Formatting and Styling in the Windows Forms DataGridView Control</span></span>](../../../../docs/framework/winforms/controls/basic-formatting-and-styling-in-the-windows-forms-datagridview-control.md)  
- [<span data-ttu-id="de3ed-119">Windows 窗体 DataGridView 控件中的单元格样式</span><span class="sxs-lookup"><span data-stu-id="de3ed-119">Cell Styles in the Windows Forms DataGridView Control</span></span>](../../../../docs/framework/winforms/controls/cell-styles-in-the-windows-forms-datagridview-control.md)
+## <a name="see-also"></a><span data-ttu-id="4d007-117">请参阅</span><span class="sxs-lookup"><span data-stu-id="4d007-117">See also</span></span>
+- <xref:System.Windows.Forms.DataGridView>
+- <xref:System.Windows.Forms.DataGridViewCellStyle>
+- <xref:System.Windows.Forms.DataGridViewRow>
+- <xref:System.Windows.Forms.DataGridView.RowTemplate%2A?displayProperty=nameWithType>
+- [<span data-ttu-id="4d007-118">Windows 窗体 DataGridView 控件中的基本格式和样式设置</span><span class="sxs-lookup"><span data-stu-id="4d007-118">Basic Formatting and Styling in the Windows Forms DataGridView Control</span></span>](../../../../docs/framework/winforms/controls/basic-formatting-and-styling-in-the-windows-forms-datagridview-control.md)
+- [<span data-ttu-id="4d007-119">Windows 窗体 DataGridView 控件中的单元格样式</span><span class="sxs-lookup"><span data-stu-id="4d007-119">Cell Styles in the Windows Forms DataGridView Control</span></span>](../../../../docs/framework/winforms/controls/cell-styles-in-the-windows-forms-datagridview-control.md)

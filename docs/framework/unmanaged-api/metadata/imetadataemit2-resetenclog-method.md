@@ -17,34 +17,34 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 7c9ecabb53ace7ead95f64ed03244b9af12ed369
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: d18a3b7e309eb71cf37e77818a3181e33bf5ab7c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33449411"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54493439"
 ---
-# <a name="imetadataemit2resetenclog-method"></a><span data-ttu-id="1d0c7-102">IMetaDataEmit2::ResetENCLog 方法</span><span class="sxs-lookup"><span data-stu-id="1d0c7-102">IMetaDataEmit2::ResetENCLog Method</span></span>
-<span data-ttu-id="1d0c7-103">重置的编辑并继续日志并将启动新会话。</span><span class="sxs-lookup"><span data-stu-id="1d0c7-103">Resets the edit-and-continue log and starts a new session.</span></span>  
+# <a name="imetadataemit2resetenclog-method"></a><span data-ttu-id="92147-102">IMetaDataEmit2::ResetENCLog 方法</span><span class="sxs-lookup"><span data-stu-id="92147-102">IMetaDataEmit2::ResetENCLog Method</span></span>
+<span data-ttu-id="92147-103">重置编辑并继续日志并启动新会话。</span><span class="sxs-lookup"><span data-stu-id="92147-103">Resets the edit-and-continue log and starts a new session.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="1d0c7-104">语法</span><span class="sxs-lookup"><span data-stu-id="1d0c7-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="92147-104">语法</span><span class="sxs-lookup"><span data-stu-id="92147-104">Syntax</span></span>  
   
 ```  
 HRESULT ResetENCLog ();  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="1d0c7-105">参数</span><span class="sxs-lookup"><span data-stu-id="1d0c7-105">Parameters</span></span>  
- <span data-ttu-id="1d0c7-106">`ResetENCLog` 不带任何参数。</span><span class="sxs-lookup"><span data-stu-id="1d0c7-106">`ResetENCLog` takes no parameters.</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="92147-105">参数</span><span class="sxs-lookup"><span data-stu-id="92147-105">Parameters</span></span>  
+ <span data-ttu-id="92147-106">`ResetENCLog` 不带任何参数。</span><span class="sxs-lookup"><span data-stu-id="92147-106">`ResetENCLog` takes no parameters.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="1d0c7-107">要求</span><span class="sxs-lookup"><span data-stu-id="1d0c7-107">Requirements</span></span>  
- <span data-ttu-id="1d0c7-108">**平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="1d0c7-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="92147-107">要求</span><span class="sxs-lookup"><span data-stu-id="92147-107">Requirements</span></span>  
+ <span data-ttu-id="92147-108">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="92147-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="1d0c7-109">**标头：** Cor.h</span><span class="sxs-lookup"><span data-stu-id="1d0c7-109">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="92147-109">**标头：** Cor.h</span><span class="sxs-lookup"><span data-stu-id="92147-109">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="1d0c7-110">**库：** 用作 MsCorEE.dll 中的资源</span><span class="sxs-lookup"><span data-stu-id="1d0c7-110">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="92147-110">**库：** 用作 MsCorEE.dll 中的资源</span><span class="sxs-lookup"><span data-stu-id="92147-110">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="1d0c7-111">**.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="1d0c7-111">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="92147-111">**.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="92147-111">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="1d0c7-112">请参阅</span><span class="sxs-lookup"><span data-stu-id="1d0c7-112">See Also</span></span>  
- [<span data-ttu-id="1d0c7-113">IMetaDataEmit2 Interface</span><span class="sxs-lookup"><span data-stu-id="1d0c7-113">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)  
- [<span data-ttu-id="1d0c7-114">IMetaDataEmit Interface</span><span class="sxs-lookup"><span data-stu-id="1d0c7-114">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+## <a name="see-also"></a><span data-ttu-id="92147-112">请参阅</span><span class="sxs-lookup"><span data-stu-id="92147-112">See also</span></span>
+- [<span data-ttu-id="92147-113">IMetaDataEmit2 Interface</span><span class="sxs-lookup"><span data-stu-id="92147-113">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+- [<span data-ttu-id="92147-114">IMetaDataEmit Interface</span><span class="sxs-lookup"><span data-stu-id="92147-114">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)

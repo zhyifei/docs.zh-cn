@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: fba01c1dfdea83b2580f45b7dbcef91fb7b73fb2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 2b0859d2f6d4ea2abf72867f2a803132cbd04225
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33452899"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54568642"
 ---
-# <a name="icorprofilerinfogetfunctionfromip-method"></a><span data-ttu-id="87995-102">ICorProfilerInfo::GetFunctionFromIP 方法</span><span class="sxs-lookup"><span data-stu-id="87995-102">ICorProfilerInfo::GetFunctionFromIP Method</span></span>
-<span data-ttu-id="87995-103">映射到托管的代码指令指针`FunctionID`。</span><span class="sxs-lookup"><span data-stu-id="87995-103">Maps a managed code instruction pointer to a `FunctionID`.</span></span>  
+# <a name="icorprofilerinfogetfunctionfromip-method"></a><span data-ttu-id="896dd-102">ICorProfilerInfo::GetFunctionFromIP 方法</span><span class="sxs-lookup"><span data-stu-id="896dd-102">ICorProfilerInfo::GetFunctionFromIP Method</span></span>
+<span data-ttu-id="896dd-103">映射到的托管的代码指令指针`FunctionID`。</span><span class="sxs-lookup"><span data-stu-id="896dd-103">Maps a managed code instruction pointer to a `FunctionID`.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="87995-104">语法</span><span class="sxs-lookup"><span data-stu-id="87995-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="896dd-104">语法</span><span class="sxs-lookup"><span data-stu-id="896dd-104">Syntax</span></span>  
   
 ```  
 HRESULT GetFunctionFromIP(  
@@ -35,21 +35,21 @@ HRESULT GetFunctionFromIP(
     [out] FunctionID *pFunctionId);  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="87995-105">参数</span><span class="sxs-lookup"><span data-stu-id="87995-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="896dd-105">参数</span><span class="sxs-lookup"><span data-stu-id="896dd-105">Parameters</span></span>  
  `ip`  
- <span data-ttu-id="87995-106">[in]托管代码中的指令指针。</span><span class="sxs-lookup"><span data-stu-id="87995-106">[in] The instruction pointer in managed code.</span></span>  
+ <span data-ttu-id="896dd-106">[in]托管代码中的指令指针。</span><span class="sxs-lookup"><span data-stu-id="896dd-106">[in] The instruction pointer in managed code.</span></span>  
   
  `pFunctionId`  
- <span data-ttu-id="87995-107">[out]返回的函数 id。</span><span class="sxs-lookup"><span data-stu-id="87995-107">[out] The returned function ID.</span></span>  
+ <span data-ttu-id="896dd-107">[out]返回的函数 id。</span><span class="sxs-lookup"><span data-stu-id="896dd-107">[out] The returned function ID.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="87995-108">要求</span><span class="sxs-lookup"><span data-stu-id="87995-108">Requirements</span></span>  
- <span data-ttu-id="87995-109">**平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="87995-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="896dd-108">要求</span><span class="sxs-lookup"><span data-stu-id="896dd-108">Requirements</span></span>  
+ <span data-ttu-id="896dd-109">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="896dd-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="87995-110">**头文件：** CorProf.idl、CorProf.h</span><span class="sxs-lookup"><span data-stu-id="87995-110">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="896dd-110">**标头：** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="896dd-110">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="87995-111">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="87995-111">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="896dd-111">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="896dd-111">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="87995-112">**.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="87995-112">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="896dd-112">**.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="896dd-112">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="87995-113">请参阅</span><span class="sxs-lookup"><span data-stu-id="87995-113">See Also</span></span>  
- [<span data-ttu-id="87995-114">ICorProfilerInfo 接口</span><span class="sxs-lookup"><span data-stu-id="87995-114">ICorProfilerInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
+## <a name="see-also"></a><span data-ttu-id="896dd-113">请参阅</span><span class="sxs-lookup"><span data-stu-id="896dd-113">See also</span></span>
+- [<span data-ttu-id="896dd-114">ICorProfilerInfo 接口</span><span class="sxs-lookup"><span data-stu-id="896dd-114">ICorProfilerInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)

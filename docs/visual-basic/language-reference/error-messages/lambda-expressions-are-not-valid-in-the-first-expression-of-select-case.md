@@ -7,17 +7,17 @@ f1_keywords:
 helpviewer_keywords:
 - BC36635
 ms.assetid: 74609979-9c03-4864-bbce-f588aa2e0917
-ms.openlocfilehash: c492615850ec089fe35c1ae4eaba90a741e30f42
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: afefa821f9695dbbfe2a96aee5afd3171ae5b1db
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33588916"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54700216"
 ---
-# <a name="lambda-expressions-are-not-valid-in-the-first-expression-of-a-39select-case39-statement"></a><span data-ttu-id="8bbcb-102">Lambda 表达式不是有效的第一个表达式中&#39;Select Case&#39;语句</span><span class="sxs-lookup"><span data-stu-id="8bbcb-102">Lambda expressions are not valid in the first expression of a &#39;Select Case&#39; statement</span></span>
-<span data-ttu-id="8bbcb-103">不能使用 lambda 表达式中的测试表达式`Select Case`语句。</span><span class="sxs-lookup"><span data-stu-id="8bbcb-103">You cannot use a lambda expression for the test expression in a `Select Case` statement.</span></span> <span data-ttu-id="8bbcb-104">Lambda 表达式定义返回函数和的测试表达式`Select Case`语句必须是基本数据类型。</span><span class="sxs-lookup"><span data-stu-id="8bbcb-104">Lambda expression definitions return functions, and the test expression of a `Select Case` statement must be an elementary data type.</span></span>  
+# <a name="lambda-expressions-are-not-valid-in-the-first-expression-of-a-39select-case39-statement"></a><span data-ttu-id="1cbe4-102">Lambda 表达式不是有效的第一个表达式中&#39;Select Case&#39;语句</span><span class="sxs-lookup"><span data-stu-id="1cbe4-102">Lambda expressions are not valid in the first expression of a &#39;Select Case&#39; statement</span></span>
+<span data-ttu-id="1cbe4-103">不能使用 lambda 表达式中的测试表达式`Select Case`语句。</span><span class="sxs-lookup"><span data-stu-id="1cbe4-103">You cannot use a lambda expression for the test expression in a `Select Case` statement.</span></span> <span data-ttu-id="1cbe4-104">返回的函数，测试表达式的 lambda 表达式定义`Select Case`语句必须是基本数据类型。</span><span class="sxs-lookup"><span data-stu-id="1cbe4-104">Lambda expression definitions return functions, and the test expression of a `Select Case` statement must be an elementary data type.</span></span>  
   
- <span data-ttu-id="8bbcb-105">下面的代码会导致此错误：</span><span class="sxs-lookup"><span data-stu-id="8bbcb-105">The following code causes this error:</span></span>  
+ <span data-ttu-id="1cbe4-105">下面的代码会导致此错误：</span><span class="sxs-lookup"><span data-stu-id="1cbe4-105">The following code causes this error:</span></span>  
   
 ```vb  
 ' Select Case (Function(arg) arg Is Nothing)  
@@ -25,13 +25,13 @@ ms.locfileid: "33588916"
 ' End Select  
 ```  
   
- <span data-ttu-id="8bbcb-106">**错误 ID:** BC36635</span><span class="sxs-lookup"><span data-stu-id="8bbcb-106">**Error ID:** BC36635</span></span>  
+ <span data-ttu-id="1cbe4-106">**错误 ID:** BC36635</span><span class="sxs-lookup"><span data-stu-id="1cbe4-106">**Error ID:** BC36635</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="8bbcb-107">更正此错误</span><span class="sxs-lookup"><span data-stu-id="8bbcb-107">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="1cbe4-107">更正此错误</span><span class="sxs-lookup"><span data-stu-id="1cbe4-107">To correct this error</span></span>  
   
--   <span data-ttu-id="8bbcb-108">检查你的代码以确定是否可以使用其他条件构造，例如 `If...Then...Else` 语句。</span><span class="sxs-lookup"><span data-stu-id="8bbcb-108">Examine your code to determine whether a different conditional construction, such as an `If...Then...Else` statement, would work for you.</span></span>  
+-   <span data-ttu-id="1cbe4-108">检查你的代码以确定是否可以使用其他条件构造，例如 `If...Then...Else` 语句。</span><span class="sxs-lookup"><span data-stu-id="1cbe4-108">Examine your code to determine whether a different conditional construction, such as an `If...Then...Else` statement, would work for you.</span></span>  
   
--   <span data-ttu-id="8bbcb-109">你可能具有想要调用函数，如下面的代码中所示：</span><span class="sxs-lookup"><span data-stu-id="8bbcb-109">You may have intended to call the function, as shown in the following code:</span></span>  
+-   <span data-ttu-id="1cbe4-109">您可能打算调用该函数，如下面的代码中所示：</span><span class="sxs-lookup"><span data-stu-id="1cbe4-109">You may have intended to call the function, as shown in the following code:</span></span>  
   
 ```vb  
 Dim num? As Integer  
@@ -40,7 +40,7 @@ Select Case ((Function(arg? As Integer) arg Is Nothing)(num))
 End Select  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="8bbcb-110">请参阅</span><span class="sxs-lookup"><span data-stu-id="8bbcb-110">See Also</span></span>  
- [<span data-ttu-id="8bbcb-111">Lambda 表达式</span><span class="sxs-lookup"><span data-stu-id="8bbcb-111">Lambda Expressions</span></span>](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)  
- [<span data-ttu-id="8bbcb-112">If...Then...Else 语句</span><span class="sxs-lookup"><span data-stu-id="8bbcb-112">If...Then...Else Statement</span></span>](../../../visual-basic/language-reference/statements/if-then-else-statement.md)  
- [<span data-ttu-id="8bbcb-113">Select...Case 语句</span><span class="sxs-lookup"><span data-stu-id="8bbcb-113">Select...Case Statement</span></span>](../../../visual-basic/language-reference/statements/select-case-statement.md)
+## <a name="see-also"></a><span data-ttu-id="1cbe4-110">请参阅</span><span class="sxs-lookup"><span data-stu-id="1cbe4-110">See also</span></span>
+- [<span data-ttu-id="1cbe4-111">Lambda 表达式</span><span class="sxs-lookup"><span data-stu-id="1cbe4-111">Lambda Expressions</span></span>](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)
+- [<span data-ttu-id="1cbe4-112">If...Then...Else 语句</span><span class="sxs-lookup"><span data-stu-id="1cbe4-112">If...Then...Else Statement</span></span>](../../../visual-basic/language-reference/statements/if-then-else-statement.md)
+- [<span data-ttu-id="1cbe4-113">Select...Case 语句</span><span class="sxs-lookup"><span data-stu-id="1cbe4-113">Select...Case Statement</span></span>](../../../visual-basic/language-reference/statements/select-case-statement.md)

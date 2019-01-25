@@ -16,28 +16,28 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 575c732cf1b1caf4700568a9d168463359d1ad7a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: f46aeed0a303278fd67265e471bfa13b43cede12
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33425498"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54680175"
 ---
-# <a name="isymencunmanagedmethod-interface"></a><span data-ttu-id="d690a-102">ISymENCUnmanagedMethod 接口</span><span class="sxs-lookup"><span data-stu-id="d690a-102">ISymENCUnmanagedMethod Interface</span></span>
-<span data-ttu-id="d690a-103">提供的编辑并继续功能的信息。</span><span class="sxs-lookup"><span data-stu-id="d690a-103">Provides information for the Edit and Continue feature.</span></span>  
+# <a name="isymencunmanagedmethod-interface"></a><span data-ttu-id="010ca-102">ISymENCUnmanagedMethod 接口</span><span class="sxs-lookup"><span data-stu-id="010ca-102">ISymENCUnmanagedMethod Interface</span></span>
+<span data-ttu-id="010ca-103">提供有关编辑并继续功能的信息。</span><span class="sxs-lookup"><span data-stu-id="010ca-103">Provides information for the Edit and Continue feature.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="d690a-104">方法</span><span class="sxs-lookup"><span data-stu-id="d690a-104">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="010ca-104">方法</span><span class="sxs-lookup"><span data-stu-id="010ca-104">Methods</span></span>  
   
-|<span data-ttu-id="d690a-105">方法</span><span class="sxs-lookup"><span data-stu-id="d690a-105">Method</span></span>|<span data-ttu-id="d690a-106">描述</span><span class="sxs-lookup"><span data-stu-id="d690a-106">Description</span></span>|  
+|<span data-ttu-id="010ca-105">方法</span><span class="sxs-lookup"><span data-stu-id="010ca-105">Method</span></span>|<span data-ttu-id="010ca-106">描述</span><span class="sxs-lookup"><span data-stu-id="010ca-106">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="d690a-107">GetDocumentsForMethod 方法</span><span class="sxs-lookup"><span data-stu-id="d690a-107">GetDocumentsForMethod Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymencunmanagedmethod-getdocumentsformethod-method.md)|<span data-ttu-id="d690a-108">获取此方法的行中的文档。</span><span class="sxs-lookup"><span data-stu-id="d690a-108">Gets the documents that this method has lines in.</span></span>|  
-|[<span data-ttu-id="d690a-109">GetDocumentsForMethodCount 方法</span><span class="sxs-lookup"><span data-stu-id="d690a-109">GetDocumentsForMethodCount Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymencunmanagedmethod-getdocumentsformethodcount-method.md)|<span data-ttu-id="d690a-110">获取此方法的行中的文档数。</span><span class="sxs-lookup"><span data-stu-id="d690a-110">Gets the number of documents that this method has lines in.</span></span>|  
-|[<span data-ttu-id="d690a-111">GetFileNameFromOffset 方法</span><span class="sxs-lookup"><span data-stu-id="d690a-111">GetFileNameFromOffset Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymencunmanagedmethod-getfilenamefromoffset-method.md)|<span data-ttu-id="d690a-112">获取与偏移量关联的行的文件名称。</span><span class="sxs-lookup"><span data-stu-id="d690a-112">Gets the file name for the line associated with an offset.</span></span>|  
-|[<span data-ttu-id="d690a-113">GetLineFromOffset 方法</span><span class="sxs-lookup"><span data-stu-id="d690a-113">GetLineFromOffset Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymencunmanagedmethod-getlinefromoffset-method.md)|<span data-ttu-id="d690a-114">获取与某一偏移量关联的行信息。</span><span class="sxs-lookup"><span data-stu-id="d690a-114">Gets the line information associated with an offset.</span></span>|  
-|[<span data-ttu-id="d690a-115">GetSourceExtentInDocument 方法</span><span class="sxs-lookup"><span data-stu-id="d690a-115">GetSourceExtentInDocument Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymencunmanagedmethod-getsourceextentindocument-method.md)|<span data-ttu-id="d690a-116">获取最小值中特定文档开始行和方法的最大结束行。</span><span class="sxs-lookup"><span data-stu-id="d690a-116">Gets the smallest start line and largest end line for the method in a specific document.</span></span>|  
+|[<span data-ttu-id="010ca-107">GetDocumentsForMethod 方法</span><span class="sxs-lookup"><span data-stu-id="010ca-107">GetDocumentsForMethod Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymencunmanagedmethod-getdocumentsformethod-method.md)|<span data-ttu-id="010ca-108">获取此方法中的行的文档。</span><span class="sxs-lookup"><span data-stu-id="010ca-108">Gets the documents that this method has lines in.</span></span>|  
+|[<span data-ttu-id="010ca-109">GetDocumentsForMethodCount 方法</span><span class="sxs-lookup"><span data-stu-id="010ca-109">GetDocumentsForMethodCount Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymencunmanagedmethod-getdocumentsformethodcount-method.md)|<span data-ttu-id="010ca-110">获取此方法中的行的文档数。</span><span class="sxs-lookup"><span data-stu-id="010ca-110">Gets the number of documents that this method has lines in.</span></span>|  
+|[<span data-ttu-id="010ca-111">GetFileNameFromOffset 方法</span><span class="sxs-lookup"><span data-stu-id="010ca-111">GetFileNameFromOffset Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymencunmanagedmethod-getfilenamefromoffset-method.md)|<span data-ttu-id="010ca-112">获取与某一偏移量关联的行的文件名称。</span><span class="sxs-lookup"><span data-stu-id="010ca-112">Gets the file name for the line associated with an offset.</span></span>|  
+|[<span data-ttu-id="010ca-113">GetLineFromOffset 方法</span><span class="sxs-lookup"><span data-stu-id="010ca-113">GetLineFromOffset Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymencunmanagedmethod-getlinefromoffset-method.md)|<span data-ttu-id="010ca-114">获取与某一偏移量关联的行信息。</span><span class="sxs-lookup"><span data-stu-id="010ca-114">Gets the line information associated with an offset.</span></span>|  
+|[<span data-ttu-id="010ca-115">GetSourceExtentInDocument 方法</span><span class="sxs-lookup"><span data-stu-id="010ca-115">GetSourceExtentInDocument Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymencunmanagedmethod-getsourceextentindocument-method.md)|<span data-ttu-id="010ca-116">获取的最小起始行和方法的最大结束行中特定文档。</span><span class="sxs-lookup"><span data-stu-id="010ca-116">Gets the smallest start line and largest end line for the method in a specific document.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="d690a-117">要求</span><span class="sxs-lookup"><span data-stu-id="d690a-117">Requirements</span></span>  
- <span data-ttu-id="d690a-118">**标头：** CorSym.idl、 CorSym.h</span><span class="sxs-lookup"><span data-stu-id="d690a-118">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="010ca-117">要求</span><span class="sxs-lookup"><span data-stu-id="010ca-117">Requirements</span></span>  
+ <span data-ttu-id="010ca-118">**标头：** CorSym.idl CorSym.h</span><span class="sxs-lookup"><span data-stu-id="010ca-118">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="d690a-119">请参阅</span><span class="sxs-lookup"><span data-stu-id="d690a-119">See Also</span></span>  
- [<span data-ttu-id="d690a-120">诊断符号存储区接口</span><span class="sxs-lookup"><span data-stu-id="d690a-120">Diagnostics Symbol Store Interfaces</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)
+## <a name="see-also"></a><span data-ttu-id="010ca-119">请参阅</span><span class="sxs-lookup"><span data-stu-id="010ca-119">See also</span></span>
+- [<span data-ttu-id="010ca-120">诊断符号存储区接口</span><span class="sxs-lookup"><span data-stu-id="010ca-120">Diagnostics Symbol Store Interfaces</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)
