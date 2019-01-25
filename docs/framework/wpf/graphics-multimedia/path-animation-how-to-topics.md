@@ -7,15 +7,15 @@ helpviewer_keywords:
 - animation [WPF], paths
 - path animations [WPF]
 ms.assetid: e9b71017-bac4-40d7-858b-326939442cb1
-ms.openlocfilehash: 05568de863407b5d746c23ea0aff3139449a8f5d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d3904d4bedd1e73619b7918fa1519af492182de2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33562000"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54665846"
 ---
 # <a name="path-animation-how-to-topics"></a>路径动画帮助主题
-此部分中的主题演示如何对沿着路径对对象进行动画处理。  
+在本部分中的主题演示如何沿着路径针对对象进行动画处理。  
   
 ## <a name="in-this-section"></a>本节内容  
  [沿着路径针对对象进行动画处理（双重动画）](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-an-object-along-a-path-double-animation.md)  
@@ -30,7 +30,7 @@ ms.locfileid: "33562000"
   
  <xref:System.Windows.Media.Animation.Storyboard>  
   
-## <a name="see-also"></a>请参阅  
- [图形和多媒体](../../../../docs/framework/wpf/graphics-multimedia/index.md)  
- [动画概述](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)  
- [关键帧动画概述](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)
+## <a name="see-also"></a>请参阅
+- [图形和多媒体](../../../../docs/framework/wpf/graphics-multimedia/index.md)
+- [动画概述](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)
+- [关键帧动画概述](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)

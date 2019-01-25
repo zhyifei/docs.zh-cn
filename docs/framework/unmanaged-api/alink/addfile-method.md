@@ -1,5 +1,5 @@
 ---
-title: AddFile Method1
+title: AddFile 方法 1
 ms.date: 03/30/2017
 api_name:
 - IALink.AddFile
@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 57a350fadfa77fdad545ca7ccf2f63d28607c2ba
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 84b68638ed0f7a86156cf7e5fcc98d3c02cba18a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33403915"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54662603"
 ---
-# <a name="addfile-method1"></a>AddFile Method1
-将文件添加到程序集。 此外可以用于创建未绑定的模块。  
+# <a name="addfile-method1"></a>AddFile 方法 1
+将文件添加到该程序集。 此外可以用于创建未绑定的模块。  
   
 ## <a name="syntax"></a>语法  
   
@@ -50,18 +50,18 @@ HRESULT AddFile(
  COM + FileDef 标志，如`ffContainsNoMetaData`和`ffWriteable`。 `dwFlags` 传递给[DefineFile 方法](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-definefile-method.md)。  
   
  `pEmitter`  
- [IMetaDataEmit 接口](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)接口用于发出元数据，如有必要。  
+ [IMetaDataEmit 接口](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)要用来发出元数据，如有必要的接口。  
   
  `pFileToken`  
  指向将存储添加的文件的唯一 ID。  
   
 ## <a name="return-value"></a>返回值  
- 如果该方法成功，则返回，则为 S_OK。  
+ 如果该方法成功，返回，则为 S_OK。  
   
 ## <a name="requirements"></a>要求  
  需要 alink.h。  
   
-## <a name="see-also"></a>请参阅  
- [IALink 接口](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)  
- [IALink2 接口](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)  
- [ALink API](../../../../docs/framework/unmanaged-api/alink/index.md)
+## <a name="see-also"></a>请参阅
+- [IALink 接口](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
+- [IALink2 接口](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
+- [ALink API](../../../../docs/framework/unmanaged-api/alink/index.md)

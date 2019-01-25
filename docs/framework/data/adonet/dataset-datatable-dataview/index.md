@@ -2,12 +2,12 @@
 title: 数据集、数据表和数据视图
 ms.date: 03/30/2017
 ms.assetid: 6d4c4b69-8919-4224-8a65-6cca1c61b48f
-ms.openlocfilehash: 0f537ad8ff468de54adc8bc820a060eaca357be9
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: d712f82b0d776b671a8d8219276c32761d245047
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43506244"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54521278"
 ---
 # <a name="datasets-datatables-and-dataviews"></a>数据集、数据表和数据视图
 ADO.NET <xref:System.Data.DataSet> 是数据的一种内存驻留表示形式，无论它包含的数据来自什么数据源，都会提供一致的关系编程模型。 <xref:System.Data.DataSet> 表示整个数据集，其中包含对数据进行包含、排序和约束的表以及表间的关系。  
@@ -78,6 +78,6 @@ ADO.NET <xref:System.Data.DataSet> 是数据的一种内存驻留表示形式，
  [将现有约束添加到数据集](../../../../../docs/framework/data/adonet/adding-existing-constraints-to-a-dataset.md)  
  描述如何使用数据源中的主键信息填充**数据集**。  
   
-## <a name="see-also"></a>请参阅  
- [ADO.NET](../../../../../docs/framework/data/adonet/index.md)  
- [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>请参阅
+- [ADO.NET](../../../../../docs/framework/data/adonet/index.md)
+- [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)

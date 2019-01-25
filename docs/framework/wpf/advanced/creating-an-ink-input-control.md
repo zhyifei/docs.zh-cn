@@ -14,21 +14,21 @@ helpviewer_keywords:
 - DynamicRenderer objects [WPF]
 - StylusPlugIn objects [WPF]
 ms.assetid: c31f3a67-cb3f-4ded-af9e-ed21f6575b26
-ms.openlocfilehash: 3113b953c1c547035883a4f4b51f53e4aefdf0a6
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: c49dfb8eaf5a91c7ebdf10833b229c4b05a7ce56
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44085768"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54664806"
 ---
 # <a name="creating-an-ink-input-control"></a>创建墨迹输入控件
 您可以创建自定义控件的动态和静态呈现墨迹。 这就是，根据用户绘制笔划，从而导致出现"流"从 tablet 笔，并在其后显示墨迹添加到该控件，通过触笔从剪贴板粘贴数据或从文件加载的手写内容呈现墨迹。 若要动态呈现墨迹，控件必须使用<xref:System.Windows.Input.StylusPlugIns.DynamicRenderer>。 若要以静态方式呈现墨迹，您必须重写触笔事件方法 (<xref:System.Windows.UIElement.OnStylusDown%2A>， <xref:System.Windows.UIElement.OnStylusMove%2A>，并<xref:System.Windows.UIElement.OnStylusUp%2A>) 来收集<xref:System.Windows.Input.StylusPoint>数据，创建的笔画，并将其添加到<xref:System.Windows.Controls.InkPresenter>（它将呈现在控件上的墨迹）。  
   
  本主题包含以下小节：  
   
--   [如何： 收集触笔接触点数据并创建墨迹笔画](#CollectingStylusPointDataAndCreatingInkStrokes)  
+-   [如何：收集触笔接触点数据并创建墨迹笔画](#CollectingStylusPointDataAndCreatingInkStrokes)  
   
--   [如何： 使控件能够接受从鼠标输入](#EnablingYourControlToAcceptInputTromTheMouse)  
+-   [如何：使控件能够接受从鼠标输入](#EnablingYourControlToAcceptInputTromTheMouse)  
   
 -   [将它放在一起](#PuttingItTogether)  
   
@@ -37,7 +37,7 @@ ms.locfileid: "44085768"
 -   [结束语](#AdvancedInkHandling_Conclusion)  
   
 <a name="CollectingStylusPointDataAndCreatingInkStrokes"></a>   
-## <a name="how-to-collect-stylus-point-data-and-create-ink-strokes"></a>如何： 收集触笔接触点数据并创建墨迹笔画  
+## <a name="how-to-collect-stylus-point-data-and-create-ink-strokes"></a>如何：收集触笔接触点数据并创建墨迹笔画  
  若要创建的控件，可收集和管理墨迹笔画执行以下步骤：  
   
 1.  从派生类<xref:System.Windows.Controls.Control>或其中一个类派生自<xref:System.Windows.Controls.Control>，如<xref:System.Windows.Controls.Label>。  
@@ -68,7 +68,7 @@ ms.locfileid: "44085768"
      [!code-csharp[AdvancedInkTopicsSamples#10](../../../../samples/snippets/csharp/VS_Snippets_Wpf/AdvancedInkTopicsSamples/CSharp/StylusControl.cs#10)]  
   
 <a name="EnablingYourControlToAcceptInputTromTheMouse"></a>   
-## <a name="how-to-enable-your-control-to-accept-input-from-the-mouse"></a>如何： 使控件能够接受从鼠标输入  
+## <a name="how-to-enable-your-control-to-accept-input-from-the-mouse"></a>如何：使控件能够接受从鼠标输入  
  如果将前面的控件添加到你的应用程序、 运行它，并使用鼠标输入设备，你会注意到笔画不会保留。 若要持久保存的笔画鼠标用作输入的设备时执行以下步骤：  
   
 1.  重写<xref:System.Windows.UIElement.OnMouseLeftButtonDown%2A>并创建一个新<xref:System.Windows.Input.StylusPointCollection>在事件发生时获取鼠标的位置，并创建<xref:System.Windows.Input.StylusPoint>使用点数据，并添加<xref:System.Windows.Input.StylusPoint>到<xref:System.Windows.Input.StylusPointCollection>。  
@@ -98,6 +98,6 @@ ms.locfileid: "44085768"
 ## <a name="conclusion"></a>结束语  
  可以创建一个控件，可收集和通过重写的触笔事件方法呈现墨迹。 通过创建自己的控件，派生您自己<xref:System.Windows.Input.StylusPlugIns.StylusPlugIn>类，并将它们插入到<xref:System.Windows.Input.StylusPlugIns.StylusPlugInCollection>，可以实现与数字墨迹想象几乎任何行为。 你有权<xref:System.Windows.Input.StylusPoint>生成数据时，您可以自定义<xref:System.Windows.Input.Stylus>输入，并根据你的应用程序在屏幕上呈现它。 因为此类低级别访问<xref:System.Windows.Input.StylusPoint>数据，可以实现墨迹收集，并使其具有优化性能的应用程序。  
   
-## <a name="see-also"></a>请参阅  
- [高级墨迹处理](../../../../docs/framework/wpf/advanced/advanced-ink-handling.md)  
- [访问和操作笔输入](https://go.microsoft.com/fwlink/?LinkId=50752&clcid=0x409)
+## <a name="see-also"></a>请参阅
+- [高级墨迹处理](../../../../docs/framework/wpf/advanced/advanced-ink-handling.md)
+- [访问和操作笔输入](https://go.microsoft.com/fwlink/?LinkId=50752&clcid=0x409)

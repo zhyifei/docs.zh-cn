@@ -4,18 +4,18 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - msmqIntegrationBinding Element
 ms.assetid: edf277f3-e3bf-4ed8-9f55-83b5788430a7
-ms.openlocfilehash: 09ac3fe2ea86745b9c88ffe9ec999a4978b343fe
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 1517fcaf75ea24bd3bd4e6e90276753c4973d191
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54145860"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54744916"
 ---
 # <a name="ltmsmqintegrationbindinggt"></a>&lt;msmqIntegrationBinding&gt;
 定义一个绑定，此绑定通过利用 MSMQ 路由消息来提供队列支持。  
   
  \<system.ServiceModel>  
-\<绑定 >  
+\<bindings>  
 msmqIntegrationBinding  
   
 ## <a name="syntax"></a>语法  
@@ -92,10 +92,10 @@ msmqIntegrationBinding
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<绑定 >](../../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)|此元素包含标准绑定和自定义绑定的集合。|  
+|[\<bindings>](../../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)|此元素包含标准绑定和自定义绑定的集合。|  
   
 ## <a name="remarks"></a>备注  
- 此绑定元素可用于使 Windows Communication Foundation (WCF) 应用程序能够将消息发送到和来自使用 COM、 MSMQ 本机 Api 或中定义的类型的现有 MSMQ 应用程序接收消息<xref:System.Messaging?displayProperty=nameWithType>命名空间，可以使用此配置元素来指定如何处理队列传输保证、 是否必须持久存储消息，以及如何保护和身份验证消息。 有关更多信息，请参见[如何：与 WCF 终结点交换消息和消息队列应用程序](../../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md)。  
+ 此绑定元素可用于使 Windows Communication Foundation (WCF) 应用程序能够将消息发送到和来自使用 COM、 MSMQ 本机 Api 或中定义的类型的现有 MSMQ 应用程序接收消息<xref:System.Messaging?displayProperty=nameWithType>命名空间，可以使用此配置元素来指定如何处理队列传输保证、 是否必须持久存储消息，以及如何保护和身份验证消息。 有关详细信息，请参阅[如何：与 WCF 终结点交换消息和消息队列应用程序](../../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md)。  
   
 ## <a name="example"></a>示例  
   
@@ -129,12 +129,12 @@ msmqIntegrationBinding
 </configuration>
 ```  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.ServiceModel.Configuration.MsmqIntegrationBindingElement>  
- <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding>  
- <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBindingElement>  
- [\<绑定 >](../../../../../docs/framework/misc/binding.md)  
- [绑定](../../../../../docs/framework/wcf/bindings.md)  
- [配置系统提供的绑定](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [使用绑定配置服务和客户端](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)  
- [WCF 中的队列](../../../../../docs/framework/wcf/feature-details/queues-in-wcf.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.ServiceModel.Configuration.MsmqIntegrationBindingElement>
+- <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding>
+- <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBindingElement>
+- [\<binding>](../../../../../docs/framework/misc/binding.md)
+- [绑定](../../../../../docs/framework/wcf/bindings.md)
+- [配置系统提供的绑定](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)
+- [使用绑定配置服务和客户端](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
+- [WCF 中的队列](../../../../../docs/framework/wcf/feature-details/queues-in-wcf.md)
