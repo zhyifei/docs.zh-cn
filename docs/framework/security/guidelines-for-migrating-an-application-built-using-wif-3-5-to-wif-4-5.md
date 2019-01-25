@@ -3,12 +3,12 @@ title: 使用 WIF 3.5 至 WIF 4.5 构建的应用程序迁移指南
 ms.date: 03/30/2017
 ms.assetid: 7a32fe6e-5f68-4693-9371-19411fa8063c
 author: BrucePerlerMS
-ms.openlocfilehash: ec66803edc21f186fa9a8c5bcb91b5181789893d
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: d843f2d01072db8b848f4d6f26dba32b4e48f302
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48582510"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54696176"
 ---
 # <a name="guidelines-for-migrating-an-application-built-using-wif-35-to-wif-45"></a>使用 WIF 3.5 至 WIF 4.5 构建的应用程序迁移指南
 ## <a name="applies-to"></a>适用于  
@@ -94,7 +94,7 @@ ms.locfileid: "48582510"
 ### <a name="visual-studio-tooling-changes"></a>Visual Studio 工具更改  
  WIF 3.5 SDK 提供独立的 Federation Utility (FedUtil.exe (FedUtil))，用于将启用 WIF 的应用程序中的标识管理外包给安全令牌服务 (STS)。 此工具将 WIF 设置添加到应用程序配置文件，使应用程序能够从一个或多个 STS 获取安全令牌，并通过“添加 STS 服务引用”按钮出现在 Visual Studio 中。 FedUtil 不随附 WIF 4.5。 相反，WIF 4.5 支持名为用于 Visual Studio 2012 的标识和访问工具的新 Visual Studio 扩展，可用于通过将标识管理外包给 STS 所需的 WIF 设置修改应用程序的配置文件。 标识和访问工具也实现了名为本地 STS 的 STS，可用于测试启用 WIF 的应用程序。 在许多情况下，使用此功能便无需生成自定义 STS，通常需要在 WIF 3.5 中生成此 STS 以测试正在开发的解决方案。 因此，Visual Studio 2012 中不再支持此类 STS 模板；然而，支持 STS 开发的类仍然在 WIF 4.5 中可用。  
   
- 可以从 Visual Studio 中的扩展和更新管理器安装标识和访问工具，或者从代码库中的以下页面进行下载：[代码库上用于 Visual Studio 2012 的标识和访问工具](https://go.microsoft.com/fwlink/?LinkID=245849)。 下表中汇总了 Visual Studio 工具更改：  
+ 您可以从扩展和更新管理器在 Visual Studio 中安装标识和访问工具也可以从代码库上的以下页面下载：[标识和访问工具的代码库上的 Visual Studio 2012](https://go.microsoft.com/fwlink/?LinkID=245849)。 下表中汇总了 Visual Studio 工具更改：  
   
 -   删除了“添加 STS 服务引用”功能。 替换为了标识和访问工具。  
   
@@ -170,8 +170,8 @@ add-windowsfeature windows-identity-foundation
 > [!NOTE]
 >  由于 WIF 3.5 和 WIF 4.5 中有许多类共享相同的名称，所以在同时使用 WIF 3.5 和 WIF 4.5 时，请确保使用完全限定的类名或使用命名空间别名，以区分 WIF 3.5 和 WIF 4.5 中的类。  
   
-## <a name="see-also"></a>请参阅  
- [WIF 配置架构](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/index.md)  
- [WIF 3.5 和 WIF 4.5 之间的命名空间映射](../../../docs/framework/security/namespace-mapping-between-wif-3-5-and-wif-4-5.md)  
- [Windows Identity Foundation 4.5 中的新增功能](../../../docs/framework/security/whats-new-in-wif.md)  
- [Identity and Access Tool for Visual Studio 2012](../../../docs/framework/security/identity-and-access-tool-for-vs.md)
+## <a name="see-also"></a>请参阅
+- [WIF 配置架构](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/index.md)
+- [WIF 3.5 和 WIF 4.5 之间的命名空间映射](../../../docs/framework/security/namespace-mapping-between-wif-3-5-and-wif-4-5.md)
+- [Windows Identity Foundation 4.5 中的新增功能](../../../docs/framework/security/whats-new-in-wif.md)
+- [Identity and Access Tool for Visual Studio 2012](../../../docs/framework/security/identity-and-access-tool-for-vs.md)

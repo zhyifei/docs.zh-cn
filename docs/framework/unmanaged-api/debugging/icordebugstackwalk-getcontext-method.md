@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e1126842a30f19831cc845bcfccc0e08f4bf5f6f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 306eee3c0ce4689d1d6295aba1ef7584841dcc72
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33422667"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54731044"
 ---
 # <a name="icordebugstackwalkgetcontext-method"></a>ICorDebugStackWalk::GetContext 方法
-返回在当前帧的上下文[ICorDebugStackWalk](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-interface.md)对象。  
+返回的上下文中的当前帧[ICorDebugStackWalk](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-interface.md)对象。  
   
 ## <a name="syntax"></a>语法  
   
@@ -41,10 +41,10 @@ HRESULT GetContext([in]  ULONG32 contextFlags,
  [in]指示请求 （在 WinNT.h 中定义） 的上下文缓冲区的内容的标志。  
   
  `contextBufSize`  
- [in]上下文缓冲区分配的大小。  
+ [in]已分配的上下文缓冲区大小。  
   
  `contextSize`  
- [out]上下文的实际大小。 此值必须小于或等于的上下文缓冲区的大小。  
+ [out]上下文的实际大小。 此值必须小于或等于上下文缓冲区的大小。  
   
  `contextBuf`  
  [out]上下文缓冲区中。  
@@ -56,23 +56,23 @@ HRESULT GetContext([in]  ULONG32 contextFlags,
 |-------------|-----------------|  
 |S_OK|成功地返回当前帧的上下文。|  
 |E_FAIL|不会返回上下文。|  
-|HRESULT_FROM_WIN32(ERROR_INSUFFICIENT BUFFER)|太小的上下文缓冲区。|  
-|CORDBG_E_PAST_END_OF_STACK|帧指针是已在堆栈; 末尾因此，可以不访问任何其他帧。|  
+|HRESULT_FROM_WIN32(ERROR_INSUFFICIENT BUFFER)|上下文缓冲区因过小。|  
+|CORDBG_E_PAST_END_OF_STACK|帧指针已末尾的堆栈;因此，可以不访问任何其他帧。|  
   
-## <a name="exceptions"></a>异常  
+## <a name="exceptions"></a>Exceptions  
   
 ## <a name="remarks"></a>备注  
- 因为展开还原的寄存器，例如非易失寄存器的一个子集上下文在调用时可能不完全匹配的注册状态。  
+ 因为展开还原寄存器中，例如非易失寄存器的一个子集上下文在调用时可能不完全匹配的注册状态。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** CorDebug.idl、 CorDebug.h  
   
  **库：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>请参阅  
- [调试接口](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)  
- [调试](../../../../docs/framework/unmanaged-api/debugging/index.md)
+## <a name="see-also"></a>请参阅
+- [调试接口](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [调试](../../../../docs/framework/unmanaged-api/debugging/index.md)

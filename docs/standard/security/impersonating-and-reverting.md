@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: b93d402c-6c28-4f50-b2bc-d9607dc3e470
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 3bc5b4a9bef51ac1591bdeb21651cee624d552b2
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: bec065e2a78551b85fe766f1b81590b18f4679d7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45743017"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54516819"
 ---
 # <a name="impersonating-and-reverting"></a>模拟与恢复
 有时可能需要获取 Windows 帐户标记来模拟 Windows 帐户。 例如，基于 ASP.NET 的应用程序可能需要在不同时间代表多个用户进行工作。 应用程序可以从 Internet 信息服务 (IIS) 接受一个表示管理员的标记，模拟该用户，执行一项操作，然后还原到以前的身份。 然后，可以从 IIS 接受一个表示拥有较少权限的用户的标记，执行某项操作，并再次还原。  
@@ -36,7 +36,7 @@ ms.locfileid: "45743017"
     Dim ImpersonatedIdentity As New WindowsIdentity(hToken)  
     ```  
   
-3.  创建的新实例开始模拟<xref:System.Security.Principal.WindowsImpersonationContext>类并将其与初始化<xref:System.Security.Principal.WindowsIdentity.Impersonate%2A?displayProperty=nameWithType>初始化类，如下面的代码中所示的方法。  
+3.  创建 <xref:System.Security.Principal.WindowsImpersonationContext> 类的新实例，并用已初始化类的 <xref:System.Security.Principal.WindowsIdentity.Impersonate%2A?displayProperty=nameWithType> 方法对它进行初始化，以开始模拟，如以下代码所示。  
   
     ```csharp  
     WindowsImpersonationContext MyImpersonation = ImpersonatedIdentity.Impersonate();  
@@ -46,7 +46,7 @@ ms.locfileid: "45743017"
     WindowsImpersonationContext MyImpersonation = ImpersonatedIdentity.Impersonate()  
     ```  
   
-4.  当不再需要进行模拟时，调用<xref:System.Security.Principal.WindowsImpersonationContext.Undo%2A?displayProperty=nameWithType>方法还原模拟，如下面的代码中所示。  
+4.  当不再需要进行模拟时，调用 <xref:System.Security.Principal.WindowsImpersonationContext.Undo%2A?displayProperty=nameWithType> 方法还原模拟，如以下代码所示。  
   
     ```csharp  
     MyImpersonation.Undo();  
@@ -62,7 +62,7 @@ ms.locfileid: "45743017"
   
 ## <a name="see-also"></a>请参阅
 
-- <xref:System.Security.Principal.WindowsIdentity>  
-- <xref:System.Security.Principal.WindowsImpersonationContext>  
-- [主体和标识对象](../../../docs/standard/security/principal-and-identity-objects.md)  
+- <xref:System.Security.Principal.WindowsIdentity>
+- <xref:System.Security.Principal.WindowsImpersonationContext>
+- [主体和标识对象](../../../docs/standard/security/principal-and-identity-objects.md)
 - [与非托管代码交互操作](../../../docs/framework/interop/index.md)

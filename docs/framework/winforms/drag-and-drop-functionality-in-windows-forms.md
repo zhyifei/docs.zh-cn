@@ -5,12 +5,12 @@ helpviewer_keywords:
 - drag and drop [Windows Forms], Windows Forms
 - Windows Forms, drag and drop
 ms.assetid: 65cd2c03-8782-474e-b958-cbe43eeb902c
-ms.openlocfilehash: b1189da9fa0b76ede3261cf6da5305a09147bba5
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 29ed138f80705539b96f82898e50e80dd0e3cb16
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43865080"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54527024"
 ---
 # <a name="drag-and-drop-functionality-in-windows-forms"></a>Windows 窗体中的拖放功能
 Windows 窗体包含一组实现拖放行为的方法、事件和类。 本主题概述了 Windows 窗体对拖放功能的支持。  另请参阅[拖放操作和剪贴板支持](https://msdn.microsoft.com/library/fe5ebfwe\(v=vs.110\))。  
@@ -26,9 +26,9 @@ Windows 窗体包含一组实现拖放行为的方法、事件和类。 本主�
   
 |鼠标事件|描述|  
 |-----------------|-----------------|  
-|<xref:System.Windows.Forms.Control.DragEnter>|将对象拖入控件的边界时此事件发生。 此事件的处理程序接收类型为 <xref:System.Windows.Forms.DragEventArgs> 的参数。|  
-|<xref:System.Windows.Forms.Control.DragOver>|在鼠标指针位于控件的边界内时如果拖动对象则此事件发生。 此事件的处理程序接收类型为 <xref:System.Windows.Forms.DragEventArgs> 的参数。|  
-|<xref:System.Windows.Forms.Control.DragDrop>|拖放操作完成时此事件发生。 此事件的处理程序接收类型为 <xref:System.Windows.Forms.DragEventArgs> 的参数。|  
+|<xref:System.Windows.Forms.Control.DragEnter>|将对象拖入控件的边界时此事件发生。 此事件的处理程序接收类型为 <xref:System.Windows.Forms.DragEventArgs> 的自变量。|  
+|<xref:System.Windows.Forms.Control.DragOver>|在鼠标指针位于控件的边界内时如果拖动对象则此事件发生。 此事件的处理程序接收类型为 <xref:System.Windows.Forms.DragEventArgs> 的自变量。|  
+|<xref:System.Windows.Forms.Control.DragDrop>|拖放操作完成时此事件发生。 此事件的处理程序接收类型为 <xref:System.Windows.Forms.DragEventArgs> 的自变量。|  
 |<xref:System.Windows.Forms.Control.DragLeave>|将对象拖出控件的边界时此事件发生。 此事件的处理程序接收类型为 <xref:System.EventArgs> 的参数。|  
   
  <xref:System.Windows.Forms.DragEventArgs> 类提供鼠标指针的位置、鼠标按钮和键盘修改键的当前状态、正在拖动的数据以及 <xref:System.Windows.Forms.DragDropEffects> 值（指定拖动事件的源所允许的操作以及操作的目标放置效果）。  
@@ -38,10 +38,10 @@ Windows 窗体包含一组实现拖放行为的方法、事件和类。 本主�
   
 |鼠标事件|描述|  
 |-----------------|-----------------|  
-|<xref:System.Windows.Forms.Control.GiveFeedback>|此事件在执行拖动操作期间发生。 借助此事件，可向用户提供可视提示（例如更改鼠标指针），通知拖放操作正在发生。 此事件的处理程序接收类型为 <xref:System.Windows.Forms.GiveFeedbackEventArgs> 的参数。|  
+|<xref:System.Windows.Forms.Control.GiveFeedback>|此事件在执行拖动操作期间发生。 借助此事件，可向用户提供可视提示（例如更改鼠标指针），通知拖放操作正在发生。 此事件的处理程序接收类型为 <xref:System.Windows.Forms.GiveFeedbackEventArgs> 的自变量。|  
 |<xref:System.Windows.Forms.Control.QueryContinueDrag>|此事件在拖放操作期间引发，并使拖动源可以确定是否应取消拖放操作。 此事件的处理程序接收类型为 <xref:System.Windows.Forms.QueryContinueDragEventArgs> 的参数。|  
   
  <xref:System.Windows.Forms.QueryContinueDragEventArgs> 类提供鼠标按钮和键盘修改键的当前状态、指定是否按 ESC 键的值以及 <xref:System.Windows.Forms.DragAction> 值（可设置为指定是否应继续拖放操作）。  
   
-## <a name="see-also"></a>请参阅  
- [Windows 窗体应用程序中的鼠标输入](../../../docs/framework/winforms/mouse-input-in-a-windows-forms-application.md)
+## <a name="see-also"></a>请参阅
+- [Windows 窗体应用程序中的鼠标输入](../../../docs/framework/winforms/mouse-input-in-a-windows-forms-application.md)
