@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3d3e2535851d39be642de56a86b78c328ecaf446
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: ea34c4087014091b92d6227177a2f08209cc2e10
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33431996"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54570874"
 ---
-# <a name="prebindassemblyex-function"></a><span data-ttu-id="e30a8-102">PreBindAssemblyEx 函数</span><span class="sxs-lookup"><span data-stu-id="e30a8-102">PreBindAssemblyEx Function</span></span>
-<span data-ttu-id="e30a8-103">获取程序集的策略后的显示名称。</span><span class="sxs-lookup"><span data-stu-id="e30a8-103">Gets the post-policy display name for an assembly.</span></span>  
+# <a name="prebindassemblyex-function"></a><span data-ttu-id="89d7f-102">PreBindAssemblyEx 函数</span><span class="sxs-lookup"><span data-stu-id="89d7f-102">PreBindAssemblyEx Function</span></span>
+<span data-ttu-id="89d7f-103">获取程序集的策略后的显示名称。</span><span class="sxs-lookup"><span data-stu-id="89d7f-103">Gets the post-policy display name for an assembly.</span></span>  
   
- <span data-ttu-id="e30a8-104">此函数支持的.NET Framework 基础结构，不宜在代码中直接使用。</span><span class="sxs-lookup"><span data-stu-id="e30a8-104">This function supports the .NET Framework infrastructure and is not intended to be used directly from your code.</span></span>  
+ <span data-ttu-id="89d7f-104">此函数支持.NET Framework 基础结构，不应在代码中直接使用。</span><span class="sxs-lookup"><span data-stu-id="89d7f-104">This function supports the .NET Framework infrastructure and is not intended to be used directly from your code.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="e30a8-105">语法</span><span class="sxs-lookup"><span data-stu-id="e30a8-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="89d7f-105">语法</span><span class="sxs-lookup"><span data-stu-id="89d7f-105">Syntax</span></span>  
   
 ```  
 HRESULT PreBindAssemblyEx (  
@@ -41,36 +41,36 @@ HRESULT PreBindAssemblyEx (
  );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="e30a8-106">参数</span><span class="sxs-lookup"><span data-stu-id="e30a8-106">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="89d7f-106">参数</span><span class="sxs-lookup"><span data-stu-id="89d7f-106">Parameters</span></span>  
  `pAppCtx`  
- <span data-ttu-id="e30a8-107">[in]标识应用程序上下文。</span><span class="sxs-lookup"><span data-stu-id="e30a8-107">[in] Identifies the application context.</span></span>  
+ <span data-ttu-id="89d7f-107">[in]标识应用程序上下文。</span><span class="sxs-lookup"><span data-stu-id="89d7f-107">[in] Identifies the application context.</span></span>  
   
  `pName`  
- <span data-ttu-id="e30a8-108">[in]标识程序集名称。</span><span class="sxs-lookup"><span data-stu-id="e30a8-108">[in] Identifies the assembly name.</span></span>  
+ <span data-ttu-id="89d7f-108">[in]标识程序集名称。</span><span class="sxs-lookup"><span data-stu-id="89d7f-108">[in] Identifies the assembly name.</span></span>  
   
  `pAsmParent`  
- <span data-ttu-id="e30a8-109">[in]标识父程序集。</span><span class="sxs-lookup"><span data-stu-id="e30a8-109">[in] Identifies the parent assembly.</span></span> <span data-ttu-id="e30a8-110">忽略此参数。</span><span class="sxs-lookup"><span data-stu-id="e30a8-110">This parameter is ignored.</span></span>  
+ <span data-ttu-id="89d7f-109">[in]标识父程序集。</span><span class="sxs-lookup"><span data-stu-id="89d7f-109">[in] Identifies the parent assembly.</span></span> <span data-ttu-id="89d7f-110">忽略此参数。</span><span class="sxs-lookup"><span data-stu-id="89d7f-110">This parameter is ignored.</span></span>  
   
  `pwzRuntimeVersion`  
- <span data-ttu-id="e30a8-111">[in]标识运行时版本。</span><span class="sxs-lookup"><span data-stu-id="e30a8-111">[in] Identifies the runtime version.</span></span>  
+ <span data-ttu-id="89d7f-111">[in]标识运行时版本。</span><span class="sxs-lookup"><span data-stu-id="89d7f-111">[in] Identifies the runtime version.</span></span>  
   
  `ppNamePostPolicy`  
- <span data-ttu-id="e30a8-112">[out]包含的策略后的显示名称。</span><span class="sxs-lookup"><span data-stu-id="e30a8-112">[out] Contains the post-policy display name.</span></span>  
+ <span data-ttu-id="89d7f-112">[out]包含策略后的显示名称。</span><span class="sxs-lookup"><span data-stu-id="89d7f-112">[out] Contains the post-policy display name.</span></span>  
   
  `pvReserved`  
- <span data-ttu-id="e30a8-113">[in]留待将来扩展。</span><span class="sxs-lookup"><span data-stu-id="e30a8-113">[in] Reserved for future extensibility.</span></span> <span data-ttu-id="e30a8-114">`pvReserved` 必须是 null 引用。</span><span class="sxs-lookup"><span data-stu-id="e30a8-114">`pvReserved` must be a null reference.</span></span>  
+ <span data-ttu-id="89d7f-113">[in]保留供将来的扩展。</span><span class="sxs-lookup"><span data-stu-id="89d7f-113">[in] Reserved for future extensibility.</span></span> <span data-ttu-id="89d7f-114">`pvReserved` 必须是 null 引用。</span><span class="sxs-lookup"><span data-stu-id="89d7f-114">`pvReserved` must be a null reference.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="e30a8-115">备注</span><span class="sxs-lookup"><span data-stu-id="e30a8-115">Remarks</span></span>  
- <span data-ttu-id="e30a8-116">`ppNamePostPolicy`仅当该函数将返回 HRESULT FUSION_E_REF_DEF_MISMATCH 设置输出参数。</span><span class="sxs-lookup"><span data-stu-id="e30a8-116">The `ppNamePostPolicy` output parameter is set only if the function returns HRESULT FUSION_E_REF_DEF_MISMATCH.</span></span> <span data-ttu-id="e30a8-117">否则，它为 null。</span><span class="sxs-lookup"><span data-stu-id="e30a8-117">Otherwise, it is null.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="89d7f-115">备注</span><span class="sxs-lookup"><span data-stu-id="89d7f-115">Remarks</span></span>  
+ <span data-ttu-id="89d7f-116">`ppNamePostPolicy`仅当该函数将返回 HRESULT FUSION_E_REF_DEF_MISMATCH 设置输出参数。</span><span class="sxs-lookup"><span data-stu-id="89d7f-116">The `ppNamePostPolicy` output parameter is set only if the function returns HRESULT FUSION_E_REF_DEF_MISMATCH.</span></span> <span data-ttu-id="89d7f-117">否则，它为 null。</span><span class="sxs-lookup"><span data-stu-id="89d7f-117">Otherwise, it is null.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="e30a8-118">要求</span><span class="sxs-lookup"><span data-stu-id="e30a8-118">Requirements</span></span>  
- <span data-ttu-id="e30a8-119">**平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="e30a8-119">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="89d7f-118">要求</span><span class="sxs-lookup"><span data-stu-id="89d7f-118">Requirements</span></span>  
+ <span data-ttu-id="89d7f-119">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="89d7f-119">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="e30a8-120">**标头：** Fusion.h</span><span class="sxs-lookup"><span data-stu-id="e30a8-120">**Header:** Fusion.h</span></span>  
+ <span data-ttu-id="89d7f-120">**标头：** Fusion.h</span><span class="sxs-lookup"><span data-stu-id="89d7f-120">**Header:** Fusion.h</span></span>  
   
- <span data-ttu-id="e30a8-121">**库：** 作为 MsCorEE.dll 中的资源</span><span class="sxs-lookup"><span data-stu-id="e30a8-121">**Library:** Included as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="89d7f-121">**库：** 包含为 MsCorEE.dll 中的资源</span><span class="sxs-lookup"><span data-stu-id="89d7f-121">**Library:** Included as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="e30a8-122">**.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="e30a8-122">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="89d7f-122">**.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="89d7f-122">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="e30a8-123">请参阅</span><span class="sxs-lookup"><span data-stu-id="e30a8-123">See Also</span></span>  
- [<span data-ttu-id="e30a8-124">合成全局静态函数</span><span class="sxs-lookup"><span data-stu-id="e30a8-124">Fusion Global Static Functions</span></span>](../../../../docs/framework/unmanaged-api/fusion/fusion-global-static-functions.md)
+## <a name="see-also"></a><span data-ttu-id="89d7f-123">请参阅</span><span class="sxs-lookup"><span data-stu-id="89d7f-123">See also</span></span>
+- [<span data-ttu-id="89d7f-124">合成全局静态函数</span><span class="sxs-lookup"><span data-stu-id="89d7f-124">Fusion Global Static Functions</span></span>](../../../../docs/framework/unmanaged-api/fusion/fusion-global-static-functions.md)

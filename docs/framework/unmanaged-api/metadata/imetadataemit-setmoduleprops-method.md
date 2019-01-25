@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ce8be38f6e146b2a8669ea5c694353615f6f2d66
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 86cb99023c0abfc70d292427b14986dbcea1d333
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33445898"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54586158"
 ---
-# <a name="imetadataemitsetmoduleprops-method"></a><span data-ttu-id="c1279-102">IMetaDataEmit::SetModuleProps 方法</span><span class="sxs-lookup"><span data-stu-id="c1279-102">IMetaDataEmit::SetModuleProps Method</span></span>
-<span data-ttu-id="c1279-103">更新对由调用定义的模块引用[imetadataemit:: Definemoduleref](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definemoduleref-method.md)。</span><span class="sxs-lookup"><span data-stu-id="c1279-103">Updates references to a module defined by a prior call to [IMetaDataEmit::DefineModuleRef](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definemoduleref-method.md).</span></span>  
+# <a name="imetadataemitsetmoduleprops-method"></a><span data-ttu-id="c0eaa-102">IMetaDataEmit::SetModuleProps 方法</span><span class="sxs-lookup"><span data-stu-id="c0eaa-102">IMetaDataEmit::SetModuleProps Method</span></span>
+<span data-ttu-id="c0eaa-103">更新对由调用之前定义的模块的引用[imetadataemit:: Definemoduleref](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definemoduleref-method.md)。</span><span class="sxs-lookup"><span data-stu-id="c0eaa-103">Updates references to a module defined by a prior call to [IMetaDataEmit::DefineModuleRef](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definemoduleref-method.md).</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="c1279-104">语法</span><span class="sxs-lookup"><span data-stu-id="c1279-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="c0eaa-104">语法</span><span class="sxs-lookup"><span data-stu-id="c0eaa-104">Syntax</span></span>  
   
 ```  
 HRESULT SetModuleProps (   
@@ -35,19 +35,19 @@ HRESULT SetModuleProps (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="c1279-105">参数</span><span class="sxs-lookup"><span data-stu-id="c1279-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="c0eaa-105">参数</span><span class="sxs-lookup"><span data-stu-id="c0eaa-105">Parameters</span></span>  
  `szName`  
- <span data-ttu-id="c1279-106">[in]Unicode 中的模块名称。</span><span class="sxs-lookup"><span data-stu-id="c1279-106">[in] The module name in Unicode.</span></span> <span data-ttu-id="c1279-107">这是只是文件名而不是完整路径名称。</span><span class="sxs-lookup"><span data-stu-id="c1279-107">This is the file name only and not the full path name.</span></span>  
+ <span data-ttu-id="c0eaa-106">[in]Unicode 中的模块名称。</span><span class="sxs-lookup"><span data-stu-id="c0eaa-106">[in] The module name in Unicode.</span></span> <span data-ttu-id="c0eaa-107">这是只是文件名而不是完整路径名称。</span><span class="sxs-lookup"><span data-stu-id="c0eaa-107">This is the file name only and not the full path name.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="c1279-108">要求</span><span class="sxs-lookup"><span data-stu-id="c1279-108">Requirements</span></span>  
- <span data-ttu-id="c1279-109">**平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="c1279-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="c0eaa-108">要求</span><span class="sxs-lookup"><span data-stu-id="c0eaa-108">Requirements</span></span>  
+ <span data-ttu-id="c0eaa-109">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="c0eaa-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="c1279-110">**标头：** Cor.h</span><span class="sxs-lookup"><span data-stu-id="c1279-110">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="c0eaa-110">**标头：** Cor.h</span><span class="sxs-lookup"><span data-stu-id="c0eaa-110">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="c1279-111">**库：** 用作 MSCorEE.dll 中的资源</span><span class="sxs-lookup"><span data-stu-id="c1279-111">**Library:** Used as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="c0eaa-111">**库：** 用作 MSCorEE.dll 中的资源</span><span class="sxs-lookup"><span data-stu-id="c0eaa-111">**Library:** Used as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="c1279-112">**.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="c1279-112">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="c0eaa-112">**.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="c0eaa-112">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="c1279-113">请参阅</span><span class="sxs-lookup"><span data-stu-id="c1279-113">See Also</span></span>  
- [<span data-ttu-id="c1279-114">IMetaDataEmit Interface</span><span class="sxs-lookup"><span data-stu-id="c1279-114">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)  
- [<span data-ttu-id="c1279-115">IMetaDataEmit2 Interface</span><span class="sxs-lookup"><span data-stu-id="c1279-115">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+## <a name="see-also"></a><span data-ttu-id="c0eaa-113">请参阅</span><span class="sxs-lookup"><span data-stu-id="c0eaa-113">See also</span></span>
+- [<span data-ttu-id="c0eaa-114">IMetaDataEmit Interface</span><span class="sxs-lookup"><span data-stu-id="c0eaa-114">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+- [<span data-ttu-id="c0eaa-115">IMetaDataEmit2 Interface</span><span class="sxs-lookup"><span data-stu-id="c0eaa-115">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

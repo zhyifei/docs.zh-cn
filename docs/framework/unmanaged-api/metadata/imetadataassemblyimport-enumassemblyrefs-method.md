@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0a56d874e5e7ef491c24b0aef2ace700087de677
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 7d10fb391953e924feb553ae4516fb7674345ed3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33447406"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54592003"
 ---
-# <a name="imetadataassemblyimportenumassemblyrefs-method"></a><span data-ttu-id="05d57-102">IMetaDataAssemblyImport::EnumAssemblyRefs 方法</span><span class="sxs-lookup"><span data-stu-id="05d57-102">IMetaDataAssemblyImport::EnumAssemblyRefs Method</span></span>
-<span data-ttu-id="05d57-103">枚举`mdAssemblyRef`程序集清单中定义的实例。</span><span class="sxs-lookup"><span data-stu-id="05d57-103">Enumerates the `mdAssemblyRef` instances that are defined in the assembly manifest.</span></span>  
+# <a name="imetadataassemblyimportenumassemblyrefs-method"></a><span data-ttu-id="63b1f-102">IMetaDataAssemblyImport::EnumAssemblyRefs 方法</span><span class="sxs-lookup"><span data-stu-id="63b1f-102">IMetaDataAssemblyImport::EnumAssemblyRefs Method</span></span>
+<span data-ttu-id="63b1f-103">枚举`mdAssemblyRef`的程序集清单中定义的实例。</span><span class="sxs-lookup"><span data-stu-id="63b1f-103">Enumerates the `mdAssemblyRef` instances that are defined in the assembly manifest.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="05d57-104">语法</span><span class="sxs-lookup"><span data-stu-id="05d57-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="63b1f-104">语法</span><span class="sxs-lookup"><span data-stu-id="63b1f-104">Syntax</span></span>  
   
 ```  
 HRESULT EnumAssemblyRefs (  
@@ -38,34 +38,34 @@ HRESULT EnumAssemblyRefs (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="05d57-105">参数</span><span class="sxs-lookup"><span data-stu-id="05d57-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="63b1f-105">参数</span><span class="sxs-lookup"><span data-stu-id="63b1f-105">Parameters</span></span>  
  `phEnum`  
- <span data-ttu-id="05d57-106">[在中，out]枚举数指向的指针。</span><span class="sxs-lookup"><span data-stu-id="05d57-106">[in, out] A pointer to the enumerator.</span></span> <span data-ttu-id="05d57-107">这必须是一个为 null 的值时`EnumAssemblyRefs`首次调用方法。</span><span class="sxs-lookup"><span data-stu-id="05d57-107">This must be a null value when the `EnumAssemblyRefs` method is called for the first time.</span></span>  
+ <span data-ttu-id="63b1f-106">[in、 out]一个指向枚举器。</span><span class="sxs-lookup"><span data-stu-id="63b1f-106">[in, out] A pointer to the enumerator.</span></span> <span data-ttu-id="63b1f-107">这必须是一个 null 值时`EnumAssemblyRefs`第一次调用方法。</span><span class="sxs-lookup"><span data-stu-id="63b1f-107">This must be a null value when the `EnumAssemblyRefs` method is called for the first time.</span></span>  
   
  `rAssemblyRefs`  
- <span data-ttu-id="05d57-108">[out]枚举`mdAssemblyRef`元数据标记。</span><span class="sxs-lookup"><span data-stu-id="05d57-108">[out] The enumeration of `mdAssemblyRef` metadata tokens.</span></span>  
+ <span data-ttu-id="63b1f-108">[out]枚举`mdAssemblyRef`元数据标记。</span><span class="sxs-lookup"><span data-stu-id="63b1f-108">[out] The enumeration of `mdAssemblyRef` metadata tokens.</span></span>  
   
  `cMax`  
- <span data-ttu-id="05d57-109">[in]可以放置在的令牌的最大数目`rAssemblyRefs`数组。</span><span class="sxs-lookup"><span data-stu-id="05d57-109">[in] The maximum number of tokens that can be placed in the `rAssemblyRefs` array.</span></span>  
+ <span data-ttu-id="63b1f-109">[in]可以放置在令牌的最大数目`rAssemblyRefs`数组。</span><span class="sxs-lookup"><span data-stu-id="63b1f-109">[in] The maximum number of tokens that can be placed in the `rAssemblyRefs` array.</span></span>  
   
  `pcTokens`  
- <span data-ttu-id="05d57-110">[out]中实际放置的标记数`rAssemblyRefs`。</span><span class="sxs-lookup"><span data-stu-id="05d57-110">[out] The number of tokens actually placed in `rAssemblyRefs`.</span></span>  
+ <span data-ttu-id="63b1f-110">[out]中实际放置的标记数`rAssemblyRefs`。</span><span class="sxs-lookup"><span data-stu-id="63b1f-110">[out] The number of tokens actually placed in `rAssemblyRefs`.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="05d57-111">返回值</span><span class="sxs-lookup"><span data-stu-id="05d57-111">Return Value</span></span>  
+## <a name="return-value"></a><span data-ttu-id="63b1f-111">返回值</span><span class="sxs-lookup"><span data-stu-id="63b1f-111">Return Value</span></span>  
   
-|<span data-ttu-id="05d57-112">HRESULT</span><span class="sxs-lookup"><span data-stu-id="05d57-112">HRESULT</span></span>|<span data-ttu-id="05d57-113">描述</span><span class="sxs-lookup"><span data-stu-id="05d57-113">Description</span></span>|  
+|<span data-ttu-id="63b1f-112">HRESULT</span><span class="sxs-lookup"><span data-stu-id="63b1f-112">HRESULT</span></span>|<span data-ttu-id="63b1f-113">描述</span><span class="sxs-lookup"><span data-stu-id="63b1f-113">Description</span></span>|  
 |-------------|-----------------|  
-|`S_OK`|<span data-ttu-id="05d57-114">`EnumAssemblyRefs` 已成功返回。</span><span class="sxs-lookup"><span data-stu-id="05d57-114">`EnumAssemblyRefs` returned successfully.</span></span>|  
-|`S_FALSE`|<span data-ttu-id="05d57-115">没有要枚举的标记。</span><span class="sxs-lookup"><span data-stu-id="05d57-115">There are no tokens to enumerate.</span></span> <span data-ttu-id="05d57-116">在这种情况下，`pcTokens`设置为零。</span><span class="sxs-lookup"><span data-stu-id="05d57-116">In this case, `pcTokens` is set to zero.</span></span>|  
+|`S_OK`|<span data-ttu-id="63b1f-114">`EnumAssemblyRefs` 已成功返回。</span><span class="sxs-lookup"><span data-stu-id="63b1f-114">`EnumAssemblyRefs` returned successfully.</span></span>|  
+|`S_FALSE`|<span data-ttu-id="63b1f-115">没有要枚举的标记。</span><span class="sxs-lookup"><span data-stu-id="63b1f-115">There are no tokens to enumerate.</span></span> <span data-ttu-id="63b1f-116">在这种情况下，`pcTokens`设置为零。</span><span class="sxs-lookup"><span data-stu-id="63b1f-116">In this case, `pcTokens` is set to zero.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="05d57-117">要求</span><span class="sxs-lookup"><span data-stu-id="05d57-117">Requirements</span></span>  
- <span data-ttu-id="05d57-118">**平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="05d57-118">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="63b1f-117">要求</span><span class="sxs-lookup"><span data-stu-id="63b1f-117">Requirements</span></span>  
+ <span data-ttu-id="63b1f-118">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="63b1f-118">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="05d57-119">**标头：** Cor.h</span><span class="sxs-lookup"><span data-stu-id="05d57-119">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="63b1f-119">**标头：** Cor.h</span><span class="sxs-lookup"><span data-stu-id="63b1f-119">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="05d57-120">**库：** 用作 MsCorEE.dll 中的资源</span><span class="sxs-lookup"><span data-stu-id="05d57-120">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="63b1f-120">**库：** 用作 MsCorEE.dll 中的资源</span><span class="sxs-lookup"><span data-stu-id="63b1f-120">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="05d57-121">**.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="05d57-121">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="63b1f-121">**.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="63b1f-121">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="05d57-122">请参阅</span><span class="sxs-lookup"><span data-stu-id="05d57-122">See Also</span></span>  
- [<span data-ttu-id="05d57-123">IMetaDataAssemblyImport 接口</span><span class="sxs-lookup"><span data-stu-id="05d57-123">IMetaDataAssemblyImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)
+## <a name="see-also"></a><span data-ttu-id="63b1f-122">请参阅</span><span class="sxs-lookup"><span data-stu-id="63b1f-122">See also</span></span>
+- [<span data-ttu-id="63b1f-123">IMetaDataAssemblyImport 接口</span><span class="sxs-lookup"><span data-stu-id="63b1f-123">IMetaDataAssemblyImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)
