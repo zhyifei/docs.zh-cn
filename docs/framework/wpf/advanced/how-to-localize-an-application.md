@@ -9,12 +9,12 @@ helpviewer_keywords:
 - LocBaml tool [WPF]
 - applications [WPF], localizing
 ms.assetid: 5001227e-9326-48a4-9dcd-ba1b89ee6653
-ms.openlocfilehash: 1190fb739e7c1873532e96b50399ac0deb6bb51c
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: 1761fbf1cb8ec337ea5733e3ab693031b1934179
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/07/2018
-ms.locfileid: "48846274"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54725528"
 ---
 # <a name="how-to-localize-an-application"></a>如何：对应用程序进行本地化
 本教程介绍如何通过使用 LocBaml 工具创建本地化应用程序。  
@@ -46,11 +46,11 @@ ms.locfileid: "48846274"
   
 3.  将 Uid 添加到你的 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 文件。 Uid 用于跟踪对文件的更改并标识必须翻译的项。 若要将 Uid 添加到你的文件，请运行**updateuid**上你的项目文件：  
   
-     **msbuild t: updateuid helloapp.csproj**  
+     **msbuild -t:updateuid helloapp.csproj**  
   
      若要验证没有缺少或重复的 Uid，请运行**checkuid**:  
   
-     **msbuild t: checkuid helloapp.csproj**  
+     **msbuild -t:checkuid helloapp.csproj**  
   
      运行之后**updateuid**，你的文件应包含 Uid。 例如，在 HelloApp 的 Pane1.xaml 文件中，你应能找到下列内容：  
   
@@ -99,13 +99,13 @@ ms.locfileid: "48846274"
   
     -   **区域性**或 **-cul** {*区域性*] **:** 输出程序集的区域设置。  
   
-    -   **翻译**或 **-trans** {*translation.csv*] **:** 经过翻译或本地化的文件。  
+    -   **translation** or **-trans** {*translation.csv*] **:** 已翻译或本地化文件。  
   
     -   **asmpath**或 **-asmpath:** {*filedirectory*] **:** 如果你[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]代码包含自定义控件，必须提供**asmpath**对自定义控件程序集。  
   
-    -   **nologo：** 显示没有徽标或版权信息。  
+    -   **nologo:** 显示没有徽标或版权信息。  
   
-    -   **verbose：** 显示详细模式信息。  
+    -   **verbose:** 显示详细模式信息。  
   
     > [!NOTE]
     >  如果要在运行该工具时需要的选项的列表，请键入**LocBaml.exe**然后按 ENTER。  
@@ -209,6 +209,6 @@ ms.locfileid: "48846274"
 ## <a name="whats-next"></a>下一步  
  现在，你应该对如何使用 LocBaml 工具有了一个基本的了解。  你应该能够制作包含 Uid 的文件。 通过使用 LocBaml 工具，你应该能够分析文件以提取可本地化的内容，并且在内容翻译后，你应该能够生成一个合并已翻译内容的 resources.dll 文件。 本主题不包括每个可能的细节，但现在你已经掌握了使用 LocBaml 对应用程序进行本地化的必要知识。  
   
-## <a name="see-also"></a>请参阅  
- [WPF 全球化](../../../../docs/framework/wpf/advanced/globalization-for-wpf.md)  
- [使用自动布局概述](../../../../docs/framework/wpf/advanced/use-automatic-layout-overview.md)
+## <a name="see-also"></a>请参阅
+- [WPF 全球化](../../../../docs/framework/wpf/advanced/globalization-for-wpf.md)
+- [使用自动布局概述](../../../../docs/framework/wpf/advanced/use-automatic-layout-overview.md)
