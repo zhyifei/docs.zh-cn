@@ -8,22 +8,22 @@ helpviewer_keywords:
 - <ipv6> element
 - ipv6 element
 ms.assetid: 10b79aef-327b-4718-a892-e11f55e4d169
-ms.openlocfilehash: 5e1afdd372c2198c00bf8c02939d2167261b5d5c
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 1ca1bb6a0b1a9c3deab9cb3ba15e9b3b2c29f1f7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "50205134"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54531884"
 ---
-# <a name="ltipv6gt-element-network-settings"></a><span data-ttu-id="d231d-102">&lt;ipv6&gt;元素 （网络设置）</span><span class="sxs-lookup"><span data-stu-id="d231d-102">&lt;ipv6&gt; Element (Network Settings)</span></span>
-<span data-ttu-id="d231d-103">启用 Internet 协议版本 6 (IPv6) 的过时成员的响应<xref:System.Net.Dns>类。</span><span class="sxs-lookup"><span data-stu-id="d231d-103">Enables Internet Protocol version 6 (IPv6) responses from obsolete members of the <xref:System.Net.Dns> class.</span></span>  
+# <a name="ltipv6gt-element-network-settings"></a><span data-ttu-id="dae08-102">&lt;ipv6&gt;元素 （网络设置）</span><span class="sxs-lookup"><span data-stu-id="dae08-102">&lt;ipv6&gt; Element (Network Settings)</span></span>
+<span data-ttu-id="dae08-103">启用 Internet 协议版本 6 (IPv6) 的过时成员的响应<xref:System.Net.Dns>类。</span><span class="sxs-lookup"><span data-stu-id="dae08-103">Enables Internet Protocol version 6 (IPv6) responses from obsolete members of the <xref:System.Net.Dns> class.</span></span>  
   
- <span data-ttu-id="d231d-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="d231d-104">\<configuration></span></span>  
-<span data-ttu-id="d231d-105">\<system.net></span><span class="sxs-lookup"><span data-stu-id="d231d-105">\<system.net></span></span>  
-<span data-ttu-id="d231d-106">\<设置 ></span><span class="sxs-lookup"><span data-stu-id="d231d-106">\<settings></span></span>  
-<span data-ttu-id="d231d-107">\<ipv6 ></span><span class="sxs-lookup"><span data-stu-id="d231d-107">\<ipv6></span></span>  
+ <span data-ttu-id="dae08-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="dae08-104">\<configuration></span></span>  
+<span data-ttu-id="dae08-105">\<system.net></span><span class="sxs-lookup"><span data-stu-id="dae08-105">\<system.net></span></span>  
+<span data-ttu-id="dae08-106">\<settings></span><span class="sxs-lookup"><span data-stu-id="dae08-106">\<settings></span></span>  
+<span data-ttu-id="dae08-107">\<ipv6></span><span class="sxs-lookup"><span data-stu-id="dae08-107">\<ipv6></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="d231d-108">语法</span><span class="sxs-lookup"><span data-stu-id="d231d-108">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="dae08-108">语法</span><span class="sxs-lookup"><span data-stu-id="dae08-108">Syntax</span></span>  
   
 ```xml  
 <ipv6  
@@ -31,32 +31,32 @@ ms.locfileid: "50205134"
 />  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="d231d-109">特性和元素</span><span class="sxs-lookup"><span data-stu-id="d231d-109">Attributes and Elements</span></span>  
- <span data-ttu-id="d231d-110">下列各节描述了特性、子元素和父元素。</span><span class="sxs-lookup"><span data-stu-id="d231d-110">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="dae08-109">特性和元素</span><span class="sxs-lookup"><span data-stu-id="dae08-109">Attributes and Elements</span></span>  
+ <span data-ttu-id="dae08-110">下列各节描述了特性、子元素和父元素。</span><span class="sxs-lookup"><span data-stu-id="dae08-110">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="d231d-111">特性</span><span class="sxs-lookup"><span data-stu-id="d231d-111">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="dae08-111">特性</span><span class="sxs-lookup"><span data-stu-id="dae08-111">Attributes</span></span>  
   
-|<span data-ttu-id="d231d-112">**特性**</span><span class="sxs-lookup"><span data-stu-id="d231d-112">**Attribute**</span></span>|<span data-ttu-id="d231d-113">**说明**</span><span class="sxs-lookup"><span data-stu-id="d231d-113">**Description**</span></span>|  
+|<span data-ttu-id="dae08-112">**特性**</span><span class="sxs-lookup"><span data-stu-id="dae08-112">**Attribute**</span></span>|<span data-ttu-id="dae08-113">**说明**</span><span class="sxs-lookup"><span data-stu-id="dae08-113">**Description**</span></span>|  
 |-------------------|---------------------|  
-|`enabled`|<span data-ttu-id="d231d-114">指定是否隶属于<xref:System.Net.Dns>类返回 Internet 协议版本 6 (IPv6) 地址。</span><span class="sxs-lookup"><span data-stu-id="d231d-114">Specifies whether members of the <xref:System.Net.Dns> class return Internet Protocol version 6 (IPv6) addresses.</span></span> <span data-ttu-id="d231d-115">默认值为 `false`。</span><span class="sxs-lookup"><span data-stu-id="d231d-115">The default value is `false`.</span></span>|  
+|`enabled`|<span data-ttu-id="dae08-114">指定是否隶属于<xref:System.Net.Dns>类返回 Internet 协议版本 6 (IPv6) 地址。</span><span class="sxs-lookup"><span data-stu-id="dae08-114">Specifies whether members of the <xref:System.Net.Dns> class return Internet Protocol version 6 (IPv6) addresses.</span></span> <span data-ttu-id="dae08-115">默认值为 `false`。</span><span class="sxs-lookup"><span data-stu-id="dae08-115">The default value is `false`.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="d231d-116">子元素</span><span class="sxs-lookup"><span data-stu-id="d231d-116">Child Elements</span></span>  
- <span data-ttu-id="d231d-117">无。</span><span class="sxs-lookup"><span data-stu-id="d231d-117">None.</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="dae08-116">子元素</span><span class="sxs-lookup"><span data-stu-id="dae08-116">Child Elements</span></span>  
+ <span data-ttu-id="dae08-117">无。</span><span class="sxs-lookup"><span data-stu-id="dae08-117">None.</span></span>  
   
-### <a name="parent-elements"></a><span data-ttu-id="d231d-118">父元素</span><span class="sxs-lookup"><span data-stu-id="d231d-118">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="dae08-118">父元素</span><span class="sxs-lookup"><span data-stu-id="dae08-118">Parent Elements</span></span>  
   
-|<span data-ttu-id="d231d-119">**元素**</span><span class="sxs-lookup"><span data-stu-id="d231d-119">**Element**</span></span>|<span data-ttu-id="d231d-120">**说明**</span><span class="sxs-lookup"><span data-stu-id="d231d-120">**Description**</span></span>|  
+|<span data-ttu-id="dae08-119">**元素**</span><span class="sxs-lookup"><span data-stu-id="dae08-119">**Element**</span></span>|<span data-ttu-id="dae08-120">**说明**</span><span class="sxs-lookup"><span data-stu-id="dae08-120">**Description**</span></span>|  
 |-----------------|---------------------|  
-|[<span data-ttu-id="d231d-121">设置</span><span class="sxs-lookup"><span data-stu-id="d231d-121">settings</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/settings-element-network-settings.md)|<span data-ttu-id="d231d-122">配置 <xref:System.Net> 命名空间的基本网络选项。</span><span class="sxs-lookup"><span data-stu-id="d231d-122">Configures basic network options for the <xref:System.Net> namespace.</span></span>|  
+|[<span data-ttu-id="dae08-121">settings</span><span class="sxs-lookup"><span data-stu-id="dae08-121">settings</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/settings-element-network-settings.md)|<span data-ttu-id="dae08-122">配置 <xref:System.Net> 命名空间的基本网络选项。</span><span class="sxs-lookup"><span data-stu-id="dae08-122">Configures basic network options for the <xref:System.Net> namespace.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="d231d-123">备注</span><span class="sxs-lookup"><span data-stu-id="d231d-123">Remarks</span></span>  
- <span data-ttu-id="d231d-124">此设置启用 IPv6 支持的过时成员<xref:System.Net.Dns>类： <xref:System.Net.Dns.BeginGetHostByName%2A>， <xref:System.Net.Dns.BeginResolve%2A>， <xref:System.Net.Dns.EndGetHostByName%2A>， <xref:System.Net.Dns.EndResolve%2A>， <xref:System.Net.Dns.GetHostByAddress%2A>， <xref:System.Net.Dns.GetHostByName%2A>，和<xref:System.Net.Dns.Resolve%2A>。</span><span class="sxs-lookup"><span data-stu-id="d231d-124">This setting enables IPv6 support for the obsolete members of the <xref:System.Net.Dns> class: <xref:System.Net.Dns.BeginGetHostByName%2A>, <xref:System.Net.Dns.BeginResolve%2A>, <xref:System.Net.Dns.EndGetHostByName%2A>, <xref:System.Net.Dns.EndResolve%2A>, <xref:System.Net.Dns.GetHostByAddress%2A>, <xref:System.Net.Dns.GetHostByName%2A>, and <xref:System.Net.Dns.Resolve%2A>.</span></span> <span data-ttu-id="d231d-125">有关的其他成员<xref:System.Net?displayProperty=nameWithType>命名空间中，如果在操作系统中启用了 IPv6，则可能会返回 IPv6 地址。</span><span class="sxs-lookup"><span data-stu-id="d231d-125">For other members of the <xref:System.Net?displayProperty=nameWithType> namespace, IPv6 addresses may be returned if IPv6 is enabled in the operating system.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="dae08-123">备注</span><span class="sxs-lookup"><span data-stu-id="dae08-123">Remarks</span></span>  
+ <span data-ttu-id="dae08-124">此设置启用 IPv6 支持的过时成员<xref:System.Net.Dns>类： <xref:System.Net.Dns.BeginGetHostByName%2A>， <xref:System.Net.Dns.BeginResolve%2A>， <xref:System.Net.Dns.EndGetHostByName%2A>， <xref:System.Net.Dns.EndResolve%2A>， <xref:System.Net.Dns.GetHostByAddress%2A>， <xref:System.Net.Dns.GetHostByName%2A>，和<xref:System.Net.Dns.Resolve%2A>。</span><span class="sxs-lookup"><span data-stu-id="dae08-124">This setting enables IPv6 support for the obsolete members of the <xref:System.Net.Dns> class: <xref:System.Net.Dns.BeginGetHostByName%2A>, <xref:System.Net.Dns.BeginResolve%2A>, <xref:System.Net.Dns.EndGetHostByName%2A>, <xref:System.Net.Dns.EndResolve%2A>, <xref:System.Net.Dns.GetHostByAddress%2A>, <xref:System.Net.Dns.GetHostByName%2A>, and <xref:System.Net.Dns.Resolve%2A>.</span></span> <span data-ttu-id="dae08-125">有关的其他成员<xref:System.Net?displayProperty=nameWithType>命名空间中，如果在操作系统中启用了 IPv6，则可能会返回 IPv6 地址。</span><span class="sxs-lookup"><span data-stu-id="dae08-125">For other members of the <xref:System.Net?displayProperty=nameWithType> namespace, IPv6 addresses may be returned if IPv6 is enabled in the operating system.</span></span>  
   
-## <a name="configuration-files"></a><span data-ttu-id="d231d-126">配置文件</span><span class="sxs-lookup"><span data-stu-id="d231d-126">Configuration Files</span></span>  
- <span data-ttu-id="d231d-127">此元素可在应用程序配置文件或计算机配置文件 (Machine.config) 中使用。</span><span class="sxs-lookup"><span data-stu-id="d231d-127">This element can be used in the application configuration file or the machine configuration file (Machine.config).</span></span>  
+## <a name="configuration-files"></a><span data-ttu-id="dae08-126">配置文件</span><span class="sxs-lookup"><span data-stu-id="dae08-126">Configuration Files</span></span>  
+ <span data-ttu-id="dae08-127">此元素可在应用程序配置文件或计算机配置文件 (Machine.config) 中使用。</span><span class="sxs-lookup"><span data-stu-id="dae08-127">This element can be used in the application configuration file or the machine configuration file (Machine.config).</span></span>  
   
-## <a name="example"></a><span data-ttu-id="d231d-128">示例</span><span class="sxs-lookup"><span data-stu-id="d231d-128">Example</span></span>  
- <span data-ttu-id="d231d-129">下面的示例演示如何启用 IPv6 支持<xref:System.Net.Dns>类。</span><span class="sxs-lookup"><span data-stu-id="d231d-129">The following example shows how to enable IPv6 support for the <xref:System.Net.Dns> class.</span></span>  
+## <a name="example"></a><span data-ttu-id="dae08-128">示例</span><span class="sxs-lookup"><span data-stu-id="dae08-128">Example</span></span>  
+ <span data-ttu-id="dae08-129">下面的示例演示如何启用 IPv6 支持<xref:System.Net.Dns>类。</span><span class="sxs-lookup"><span data-stu-id="dae08-129">The following example shows how to enable IPv6 support for the <xref:System.Net.Dns> class.</span></span>  
   
 ```xml  
 <configuration>  
@@ -68,8 +68,8 @@ ms.locfileid: "50205134"
 </configuration>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="d231d-130">请参阅</span><span class="sxs-lookup"><span data-stu-id="d231d-130">See Also</span></span>  
-- <xref:System.Net?displayProperty=nameWithType>  
-- <xref:System.Net.Dns?displayProperty=nameWithType>  
-- <xref:System.Net.Sockets.Socket.OSSupportsIPv6%2A?displayProperty=nameWithType>  
-- [<span data-ttu-id="d231d-131">网络设置架构</span><span class="sxs-lookup"><span data-stu-id="d231d-131">Network Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+## <a name="see-also"></a><span data-ttu-id="dae08-130">请参阅</span><span class="sxs-lookup"><span data-stu-id="dae08-130">See also</span></span>
+- <xref:System.Net?displayProperty=nameWithType>
+- <xref:System.Net.Dns?displayProperty=nameWithType>
+- <xref:System.Net.Sockets.Socket.OSSupportsIPv6%2A?displayProperty=nameWithType>
+- [<span data-ttu-id="dae08-131">网络设置架构</span><span class="sxs-lookup"><span data-stu-id="dae08-131">Network Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

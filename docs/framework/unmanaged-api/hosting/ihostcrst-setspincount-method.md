@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4d90bce1f693f571a5d5c5d5dca981d09bce59b0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: ddae8f64eca348afa337b986ac81d59c37e51701
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33438842"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54504296"
 ---
-# <a name="ihostcrstsetspincount-method"></a><span data-ttu-id="c4c57-102">IHostCrst::SetSpinCount 方法</span><span class="sxs-lookup"><span data-stu-id="c4c57-102">IHostCrst::SetSpinCount Method</span></span>
-<span data-ttu-id="c4c57-103">设置当前的旋转计数[IHostCrst](../../../../docs/framework/unmanaged-api/hosting/ihostcrst-interface.md)实例。</span><span class="sxs-lookup"><span data-stu-id="c4c57-103">Sets the spin count for the current [IHostCrst](../../../../docs/framework/unmanaged-api/hosting/ihostcrst-interface.md) instance.</span></span>  
+# <a name="ihostcrstsetspincount-method"></a><span data-ttu-id="94a13-102">IHostCrst::SetSpinCount 方法</span><span class="sxs-lookup"><span data-stu-id="94a13-102">IHostCrst::SetSpinCount Method</span></span>
+<span data-ttu-id="94a13-103">设置当前的旋转计数[IHostCrst](../../../../docs/framework/unmanaged-api/hosting/ihostcrst-interface.md)实例。</span><span class="sxs-lookup"><span data-stu-id="94a13-103">Sets the spin count for the current [IHostCrst](../../../../docs/framework/unmanaged-api/hosting/ihostcrst-interface.md) instance.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="c4c57-104">语法</span><span class="sxs-lookup"><span data-stu-id="c4c57-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="94a13-104">语法</span><span class="sxs-lookup"><span data-stu-id="94a13-104">Syntax</span></span>  
   
 ```  
 HRESULT SetSpinCount (  
@@ -35,36 +35,36 @@ HRESULT SetSpinCount (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="c4c57-105">参数</span><span class="sxs-lookup"><span data-stu-id="c4c57-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="94a13-105">参数</span><span class="sxs-lookup"><span data-stu-id="94a13-105">Parameters</span></span>  
  `dwSpinCount`  
- <span data-ttu-id="c4c57-106">[in]当前的新旋转计数`IHostCrst`实例。</span><span class="sxs-lookup"><span data-stu-id="c4c57-106">[in] The new spin count for the current `IHostCrst` instance.</span></span>  
+ <span data-ttu-id="94a13-106">[in]当前新的旋转计数`IHostCrst`实例。</span><span class="sxs-lookup"><span data-stu-id="94a13-106">[in] The new spin count for the current `IHostCrst` instance.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="c4c57-107">返回值</span><span class="sxs-lookup"><span data-stu-id="c4c57-107">Return Value</span></span>  
+## <a name="return-value"></a><span data-ttu-id="94a13-107">返回值</span><span class="sxs-lookup"><span data-stu-id="94a13-107">Return Value</span></span>  
   
-|<span data-ttu-id="c4c57-108">HRESULT</span><span class="sxs-lookup"><span data-stu-id="c4c57-108">HRESULT</span></span>|<span data-ttu-id="c4c57-109">描述</span><span class="sxs-lookup"><span data-stu-id="c4c57-109">Description</span></span>|  
+|<span data-ttu-id="94a13-108">HRESULT</span><span class="sxs-lookup"><span data-stu-id="94a13-108">HRESULT</span></span>|<span data-ttu-id="94a13-109">描述</span><span class="sxs-lookup"><span data-stu-id="94a13-109">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="c4c57-110">S_OK</span><span class="sxs-lookup"><span data-stu-id="c4c57-110">S_OK</span></span>|<span data-ttu-id="c4c57-111">`SetSpinCount` 已成功返回。</span><span class="sxs-lookup"><span data-stu-id="c4c57-111">`SetSpinCount` returned successfully.</span></span>|  
-|<span data-ttu-id="c4c57-112">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="c4c57-112">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="c4c57-113">公共语言运行时 (CLR) 尚未加载到进程中，或 CLR 处于不能运行托管的代码或成功处理调用的状态。</span><span class="sxs-lookup"><span data-stu-id="c4c57-113">The common language runtime (CLR) has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
-|<span data-ttu-id="c4c57-114">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="c4c57-114">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="c4c57-115">调用操作已超时。</span><span class="sxs-lookup"><span data-stu-id="c4c57-115">The call timed out.</span></span>|  
-|<span data-ttu-id="c4c57-116">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="c4c57-116">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="c4c57-117">调用方不拥有该锁。</span><span class="sxs-lookup"><span data-stu-id="c4c57-117">The caller does not own the lock.</span></span>|  
-|<span data-ttu-id="c4c57-118">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="c4c57-118">HOST_E_ABANDONED</span></span>|<span data-ttu-id="c4c57-119">事件已被取消时被阻塞的线程，或者纤程正在等待它。</span><span class="sxs-lookup"><span data-stu-id="c4c57-119">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
-|<span data-ttu-id="c4c57-120">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="c4c57-120">E_FAIL</span></span>|<span data-ttu-id="c4c57-121">出现未知的灾难性故障。</span><span class="sxs-lookup"><span data-stu-id="c4c57-121">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="c4c57-122">如果某方法返回 E_FAIL，CLR 不再可用进程内。</span><span class="sxs-lookup"><span data-stu-id="c4c57-122">When a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="c4c57-123">到托管方法的后续调用会返回 HOST_E_CLRNOTAVAILABLE。</span><span class="sxs-lookup"><span data-stu-id="c4c57-123">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
+|<span data-ttu-id="94a13-110">S_OK</span><span class="sxs-lookup"><span data-stu-id="94a13-110">S_OK</span></span>|<span data-ttu-id="94a13-111">`SetSpinCount` 已成功返回。</span><span class="sxs-lookup"><span data-stu-id="94a13-111">`SetSpinCount` returned successfully.</span></span>|  
+|<span data-ttu-id="94a13-112">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="94a13-112">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="94a13-113">公共语言运行时 (CLR) 尚未加载到进程中，或处于不能运行托管的代码或已成功处理调用的状态。</span><span class="sxs-lookup"><span data-stu-id="94a13-113">The common language runtime (CLR) has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
+|<span data-ttu-id="94a13-114">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="94a13-114">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="94a13-115">呼叫已超时。</span><span class="sxs-lookup"><span data-stu-id="94a13-115">The call timed out.</span></span>|  
+|<span data-ttu-id="94a13-116">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="94a13-116">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="94a13-117">调用方不拥有该锁。</span><span class="sxs-lookup"><span data-stu-id="94a13-117">The caller does not own the lock.</span></span>|  
+|<span data-ttu-id="94a13-118">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="94a13-118">HOST_E_ABANDONED</span></span>|<span data-ttu-id="94a13-119">事件已取消时被阻塞的线程或纤程正在等待它。</span><span class="sxs-lookup"><span data-stu-id="94a13-119">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
+|<span data-ttu-id="94a13-120">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="94a13-120">E_FAIL</span></span>|<span data-ttu-id="94a13-121">发生未知的灾难性故障。</span><span class="sxs-lookup"><span data-stu-id="94a13-121">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="94a13-122">如果某方法返回 E_FAIL，CLR 不再在进程内可用。</span><span class="sxs-lookup"><span data-stu-id="94a13-122">When a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="94a13-123">对托管方法的后续调用返回 HOST_E_CLRNOTAVAILABLE。</span><span class="sxs-lookup"><span data-stu-id="94a13-123">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="c4c57-124">备注</span><span class="sxs-lookup"><span data-stu-id="c4c57-124">Remarks</span></span>  
- <span data-ttu-id="c4c57-125">在多处理器系统中，如果由当前的临界区表示`IHostCrst`实例不可用，则调用线程旋转`dwSpinCount`在调用之前的时间[ihostsemaphore:: Wait](../../../../docs/framework/unmanaged-api/hosting/ihostsemaphore-wait-method.md)上关联的信号量与关键部分。</span><span class="sxs-lookup"><span data-stu-id="c4c57-125">On multi-processor systems, if the critical section represented by the current `IHostCrst` instance is unavailable, a calling thread spins `dwSpinCount` times before calling [IHostSemaphore::Wait](../../../../docs/framework/unmanaged-api/hosting/ihostsemaphore-wait-method.md) on a semaphore associated with the critical section.</span></span> <span data-ttu-id="c4c57-126">如果数值调节钮操作期间，临界区变得可用，调用线程可避免等待操作。</span><span class="sxs-lookup"><span data-stu-id="c4c57-126">If the critical section becomes free during the spin operation, the calling thread avoids the wait operation.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="94a13-124">备注</span><span class="sxs-lookup"><span data-stu-id="94a13-124">Remarks</span></span>  
+ <span data-ttu-id="94a13-125">在多处理器系统中，如果关键节表示由当前`IHostCrst`实例不可用，调用线程旋转`dwSpinCount`调用之前的时间[ihostsemaphore:: Wait](../../../../docs/framework/unmanaged-api/hosting/ihostsemaphore-wait-method.md)上关联的信号量使用关键节。</span><span class="sxs-lookup"><span data-stu-id="94a13-125">On multi-processor systems, if the critical section represented by the current `IHostCrst` instance is unavailable, a calling thread spins `dwSpinCount` times before calling [IHostSemaphore::Wait](../../../../docs/framework/unmanaged-api/hosting/ihostsemaphore-wait-method.md) on a semaphore associated with the critical section.</span></span> <span data-ttu-id="94a13-126">如果数值调节钮操作期间，临界区变得可用，调用线程可以避免等待操作。</span><span class="sxs-lookup"><span data-stu-id="94a13-126">If the critical section becomes free during the spin operation, the calling thread avoids the wait operation.</span></span>  
   
- <span data-ttu-id="c4c57-127">使用情况`dwSpinCount`等同于 Win32 中的相同名称的参数的使用情况`InitializeCriticalSectionAndSpinCount`函数。</span><span class="sxs-lookup"><span data-stu-id="c4c57-127">The usage of `dwSpinCount` is identical to the usage of the parameter of the same name in the Win32 `InitializeCriticalSectionAndSpinCount` function.</span></span>  
+ <span data-ttu-id="94a13-127">使用情况`dwSpinCount`等同于 Win32 中的相同名称的参数的使用情况`InitializeCriticalSectionAndSpinCount`函数。</span><span class="sxs-lookup"><span data-stu-id="94a13-127">The usage of `dwSpinCount` is identical to the usage of the parameter of the same name in the Win32 `InitializeCriticalSectionAndSpinCount` function.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="c4c57-128">要求</span><span class="sxs-lookup"><span data-stu-id="c4c57-128">Requirements</span></span>  
- <span data-ttu-id="c4c57-129">**平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="c4c57-129">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="94a13-128">要求</span><span class="sxs-lookup"><span data-stu-id="94a13-128">Requirements</span></span>  
+ <span data-ttu-id="94a13-129">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="94a13-129">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="c4c57-130">**标头：** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="c4c57-130">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="94a13-130">**标头：** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="94a13-130">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="c4c57-131">**库：** 作为 MSCorEE.dll 中的资源</span><span class="sxs-lookup"><span data-stu-id="c4c57-131">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="94a13-131">**库：** 包含为 MSCorEE.dll 中的资源</span><span class="sxs-lookup"><span data-stu-id="94a13-131">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="c4c57-132">**.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="c4c57-132">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="94a13-132">**.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="94a13-132">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="c4c57-133">请参阅</span><span class="sxs-lookup"><span data-stu-id="c4c57-133">See Also</span></span>  
- [<span data-ttu-id="c4c57-134">ICLRSyncManager 接口</span><span class="sxs-lookup"><span data-stu-id="c4c57-134">ICLRSyncManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrsyncmanager-interface.md)  
- [<span data-ttu-id="c4c57-135">IHostCrst 接口</span><span class="sxs-lookup"><span data-stu-id="c4c57-135">IHostCrst Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostcrst-interface.md)  
- [<span data-ttu-id="c4c57-136">IHostSyncManager 接口</span><span class="sxs-lookup"><span data-stu-id="c4c57-136">IHostSyncManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostsyncmanager-interface.md)
+## <a name="see-also"></a><span data-ttu-id="94a13-133">请参阅</span><span class="sxs-lookup"><span data-stu-id="94a13-133">See also</span></span>
+- [<span data-ttu-id="94a13-134">ICLRSyncManager 接口</span><span class="sxs-lookup"><span data-stu-id="94a13-134">ICLRSyncManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrsyncmanager-interface.md)
+- [<span data-ttu-id="94a13-135">IHostCrst 接口</span><span class="sxs-lookup"><span data-stu-id="94a13-135">IHostCrst Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostcrst-interface.md)
+- [<span data-ttu-id="94a13-136">IHostSyncManager 接口</span><span class="sxs-lookup"><span data-stu-id="94a13-136">IHostSyncManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostsyncmanager-interface.md)

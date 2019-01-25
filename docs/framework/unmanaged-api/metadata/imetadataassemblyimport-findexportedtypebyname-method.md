@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 048c7234fcb2592ea0dade135a32341a6e0f404f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 1b2b7559c203e5d357dd6921ea6862fbb5ec90a1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33444914"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54576182"
 ---
-# <a name="imetadataassemblyimportfindexportedtypebyname-method"></a><span data-ttu-id="d4c5e-102">IMetaDataAssemblyImport::FindExportedTypeByName 方法</span><span class="sxs-lookup"><span data-stu-id="d4c5e-102">IMetaDataAssemblyImport::FindExportedTypeByName Method</span></span>
-<span data-ttu-id="d4c5e-103">获取一个指向导出的类型，在给定其名称和封闭类型。</span><span class="sxs-lookup"><span data-stu-id="d4c5e-103">Gets a pointer to an exported type, given its name and enclosing type.</span></span>  
+# <a name="imetadataassemblyimportfindexportedtypebyname-method"></a><span data-ttu-id="03e5a-102">IMetaDataAssemblyImport::FindExportedTypeByName 方法</span><span class="sxs-lookup"><span data-stu-id="03e5a-102">IMetaDataAssemblyImport::FindExportedTypeByName Method</span></span>
+<span data-ttu-id="03e5a-103">获取一个指针指向导出的类型，在给定其名称和封闭类型。</span><span class="sxs-lookup"><span data-stu-id="03e5a-103">Gets a pointer to an exported type, given its name and enclosing type.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="d4c5e-104">语法</span><span class="sxs-lookup"><span data-stu-id="d4c5e-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="03e5a-104">语法</span><span class="sxs-lookup"><span data-stu-id="03e5a-104">Syntax</span></span>  
   
 ```  
 HRESULT FindExportedTypeByName (  
@@ -37,28 +37,28 @@ HRESULT FindExportedTypeByName (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="d4c5e-105">参数</span><span class="sxs-lookup"><span data-stu-id="d4c5e-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="03e5a-105">参数</span><span class="sxs-lookup"><span data-stu-id="03e5a-105">Parameters</span></span>  
  `szName`  
- <span data-ttu-id="d4c5e-106">[in]导出的类型的名称。</span><span class="sxs-lookup"><span data-stu-id="d4c5e-106">[in] The name of the exported type.</span></span>  
+ <span data-ttu-id="03e5a-106">[in]导出的类型的名称。</span><span class="sxs-lookup"><span data-stu-id="03e5a-106">[in] The name of the exported type.</span></span>  
   
  `mdtExportedType`  
- <span data-ttu-id="d4c5e-107">[in]导出的类型的封闭类元数据标记。</span><span class="sxs-lookup"><span data-stu-id="d4c5e-107">[in] The metadata token for the enclosing class of the exported type.</span></span> <span data-ttu-id="d4c5e-108">此值是`mdExportedTypeNil`如果请求的导出类型不是嵌套的类型。</span><span class="sxs-lookup"><span data-stu-id="d4c5e-108">This value is `mdExportedTypeNil` if the requested exported type is not a nested type.</span></span>  
+ <span data-ttu-id="03e5a-107">[in]用于导出的类型在封闭类的元数据令牌。</span><span class="sxs-lookup"><span data-stu-id="03e5a-107">[in] The metadata token for the enclosing class of the exported type.</span></span> <span data-ttu-id="03e5a-108">此值是`mdExportedTypeNil`如果请求的导出类型不是嵌套的类型。</span><span class="sxs-lookup"><span data-stu-id="03e5a-108">This value is `mdExportedTypeNil` if the requested exported type is not a nested type.</span></span>  
   
  `ptkExportedType`  
- <span data-ttu-id="d4c5e-109">[out]指向的指针`mdExportedType`表示导出的类型的令牌。</span><span class="sxs-lookup"><span data-stu-id="d4c5e-109">[out] A pointer to the `mdExportedType` token that represents the exported type.</span></span>  
+ <span data-ttu-id="03e5a-109">[out]一个指向`mdExportedType`表示导出的类型的令牌。</span><span class="sxs-lookup"><span data-stu-id="03e5a-109">[out] A pointer to the `mdExportedType` token that represents the exported type.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="d4c5e-110">备注</span><span class="sxs-lookup"><span data-stu-id="d4c5e-110">Remarks</span></span>  
- <span data-ttu-id="d4c5e-111">`FindExportedTypeByName`方法使用由解析的引用的公共语言运行时的标准规则。</span><span class="sxs-lookup"><span data-stu-id="d4c5e-111">The `FindExportedTypeByName` method uses the standard rules employed by the common language runtime for resolving references.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="03e5a-110">备注</span><span class="sxs-lookup"><span data-stu-id="03e5a-110">Remarks</span></span>  
+ <span data-ttu-id="03e5a-111">`FindExportedTypeByName`方法使用由公共语言运行时解析引用的标准规则。</span><span class="sxs-lookup"><span data-stu-id="03e5a-111">The `FindExportedTypeByName` method uses the standard rules employed by the common language runtime for resolving references.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="d4c5e-112">要求</span><span class="sxs-lookup"><span data-stu-id="d4c5e-112">Requirements</span></span>  
- <span data-ttu-id="d4c5e-113">**平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="d4c5e-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="03e5a-112">要求</span><span class="sxs-lookup"><span data-stu-id="03e5a-112">Requirements</span></span>  
+ <span data-ttu-id="03e5a-113">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="03e5a-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="d4c5e-114">**标头：** Cor.h</span><span class="sxs-lookup"><span data-stu-id="d4c5e-114">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="03e5a-114">**标头：** Cor.h</span><span class="sxs-lookup"><span data-stu-id="03e5a-114">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="d4c5e-115">**库：** 用作 MsCorEE.dll 中的资源</span><span class="sxs-lookup"><span data-stu-id="d4c5e-115">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="03e5a-115">**库：** 用作 MsCorEE.dll 中的资源</span><span class="sxs-lookup"><span data-stu-id="03e5a-115">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="d4c5e-116">**.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="d4c5e-116">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="03e5a-116">**.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="03e5a-116">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="d4c5e-117">请参阅</span><span class="sxs-lookup"><span data-stu-id="d4c5e-117">See Also</span></span>  
- [<span data-ttu-id="d4c5e-118">IMetaDataAssemblyImport 接口</span><span class="sxs-lookup"><span data-stu-id="d4c5e-118">IMetaDataAssemblyImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)  
- [<span data-ttu-id="d4c5e-119">运行时如何定位程序集</span><span class="sxs-lookup"><span data-stu-id="d4c5e-119">How the Runtime Locates Assemblies</span></span>](../../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)
+## <a name="see-also"></a><span data-ttu-id="03e5a-117">请参阅</span><span class="sxs-lookup"><span data-stu-id="03e5a-117">See also</span></span>
+- [<span data-ttu-id="03e5a-118">IMetaDataAssemblyImport 接口</span><span class="sxs-lookup"><span data-stu-id="03e5a-118">IMetaDataAssemblyImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)
+- [<span data-ttu-id="03e5a-119">运行时如何定位程序集</span><span class="sxs-lookup"><span data-stu-id="03e5a-119">How the Runtime Locates Assemblies</span></span>](../../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)

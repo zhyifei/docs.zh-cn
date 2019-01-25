@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 193cbf3fe7ba99a70039c11983c6a203337290eb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 97465b5d39b3f6adbb6bccfc7b478ddad97066fc
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33453680"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54563725"
 ---
-# <a name="icorprofilerinfogetclassidinfo-method"></a><span data-ttu-id="72066-102">ICorProfilerInfo::GetClassIDInfo 方法</span><span class="sxs-lookup"><span data-stu-id="72066-102">ICorProfilerInfo::GetClassIDInfo Method</span></span>
-<span data-ttu-id="72066-103">获取指定的类的父模块和元数据标记。</span><span class="sxs-lookup"><span data-stu-id="72066-103">Gets the parent module and the metadata token for the specified class.</span></span>  
+# <a name="icorprofilerinfogetclassidinfo-method"></a><span data-ttu-id="97fea-102">ICorProfilerInfo::GetClassIDInfo 方法</span><span class="sxs-lookup"><span data-stu-id="97fea-102">ICorProfilerInfo::GetClassIDInfo Method</span></span>
+<span data-ttu-id="97fea-103">获取指定的类的父模块和元数据标记。</span><span class="sxs-lookup"><span data-stu-id="97fea-103">Gets the parent module and the metadata token for the specified class.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="72066-104">语法</span><span class="sxs-lookup"><span data-stu-id="72066-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="97fea-104">语法</span><span class="sxs-lookup"><span data-stu-id="97fea-104">Syntax</span></span>  
   
 ```  
 HRESULT GetClassIDInfo(  
@@ -36,29 +36,29 @@ HRESULT GetClassIDInfo(
     [out] mdTypeDef *pTypeDefToken);  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="72066-105">参数</span><span class="sxs-lookup"><span data-stu-id="72066-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="97fea-105">参数</span><span class="sxs-lookup"><span data-stu-id="97fea-105">Parameters</span></span>  
  `classId`  
- <span data-ttu-id="72066-106">[in]要为其获取信息的类 ID。</span><span class="sxs-lookup"><span data-stu-id="72066-106">[in] The ID of the class for which to get the information.</span></span>  
+ <span data-ttu-id="97fea-106">[in]若要获取的信息的类的 ID。</span><span class="sxs-lookup"><span data-stu-id="97fea-106">[in] The ID of the class for which to get the information.</span></span>  
   
  `pModuleId`  
- <span data-ttu-id="72066-107">[out]指向类的父模块 ID 的指针。</span><span class="sxs-lookup"><span data-stu-id="72066-107">[out] A pointer to the ID of the parent module of the class.</span></span>  
+ <span data-ttu-id="97fea-107">[out]指向类的父模块 ID 的指针。</span><span class="sxs-lookup"><span data-stu-id="97fea-107">[out] A pointer to the ID of the parent module of the class.</span></span>  
   
  `pTypeDefToken`  
- <span data-ttu-id="72066-108">[out]指向类的元数据标记的指针。</span><span class="sxs-lookup"><span data-stu-id="72066-108">[out] A pointer to the metadata token for the class.</span></span>  
+ <span data-ttu-id="97fea-108">[out]指向类的元数据标记的指针。</span><span class="sxs-lookup"><span data-stu-id="97fea-108">[out] A pointer to the metadata token for the class.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="72066-109">备注</span><span class="sxs-lookup"><span data-stu-id="72066-109">Remarks</span></span>  
- <span data-ttu-id="72066-110">探查器代码可以调用[icorprofilerinfo:: Getmodulemetadata](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getmodulemetadata-method.md)以获取给定模块的元数据接口。</span><span class="sxs-lookup"><span data-stu-id="72066-110">The profiler code can call [ICorProfilerInfo::GetModuleMetaData](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getmodulemetadata-method.md) to obtain a metadata interface for a given module.</span></span> <span data-ttu-id="72066-111">返回至 `pTypeDefToken` 所引用的位置的元数据标记可用于访问类的元数据。</span><span class="sxs-lookup"><span data-stu-id="72066-111">The metadata token that is returned to the location referenced by `pTypeDefToken` can then be used to access the metadata for the class.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="97fea-109">备注</span><span class="sxs-lookup"><span data-stu-id="97fea-109">Remarks</span></span>  
+ <span data-ttu-id="97fea-110">探查器代码可以调用[icorprofilerinfo:: Getmodulemetadata](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getmodulemetadata-method.md)以获取给定模块的元数据接口。</span><span class="sxs-lookup"><span data-stu-id="97fea-110">The profiler code can call [ICorProfilerInfo::GetModuleMetaData](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getmodulemetadata-method.md) to obtain a metadata interface for a given module.</span></span> <span data-ttu-id="97fea-111">返回至 `pTypeDefToken` 所引用的位置的元数据标记可用于访问类的元数据。</span><span class="sxs-lookup"><span data-stu-id="97fea-111">The metadata token that is returned to the location referenced by `pTypeDefToken` can then be used to access the metadata for the class.</span></span>  
   
- <span data-ttu-id="72066-112">若要获取泛型类型的详细信息，请使用[icorprofilerinfo2:: Getclassidinfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getclassidinfo2-method.md)。</span><span class="sxs-lookup"><span data-stu-id="72066-112">To get more information for generic types, use [ICorProfilerInfo2::GetClassIDInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getclassidinfo2-method.md).</span></span>  
+ <span data-ttu-id="97fea-112">若要获取泛型类型的详细信息，请使用[ICorProfilerInfo2::GetClassIDInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getclassidinfo2-method.md)。</span><span class="sxs-lookup"><span data-stu-id="97fea-112">To get more information for generic types, use [ICorProfilerInfo2::GetClassIDInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getclassidinfo2-method.md).</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="72066-113">要求</span><span class="sxs-lookup"><span data-stu-id="72066-113">Requirements</span></span>  
- <span data-ttu-id="72066-114">**平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="72066-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="97fea-113">要求</span><span class="sxs-lookup"><span data-stu-id="97fea-113">Requirements</span></span>  
+ <span data-ttu-id="97fea-114">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="97fea-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="72066-115">**头文件：** CorProf.idl、CorProf.h</span><span class="sxs-lookup"><span data-stu-id="72066-115">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="97fea-115">**标头：** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="97fea-115">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="72066-116">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="72066-116">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="97fea-116">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="97fea-116">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="72066-117">**.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="72066-117">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="97fea-117">**.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="97fea-117">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="72066-118">请参阅</span><span class="sxs-lookup"><span data-stu-id="72066-118">See Also</span></span>  
- [<span data-ttu-id="72066-119">ICorProfilerInfo 接口</span><span class="sxs-lookup"><span data-stu-id="72066-119">ICorProfilerInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
+## <a name="see-also"></a><span data-ttu-id="97fea-118">请参阅</span><span class="sxs-lookup"><span data-stu-id="97fea-118">See also</span></span>
+- [<span data-ttu-id="97fea-119">ICorProfilerInfo 接口</span><span class="sxs-lookup"><span data-stu-id="97fea-119">ICorProfilerInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
