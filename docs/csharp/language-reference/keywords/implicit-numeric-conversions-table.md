@@ -44,7 +44,7 @@ ms.locfileid: "54058459"
   
 - `decimal` 类型和 `float` 或 `double` 类型之间不存在隐式转换。  
   
-- 类型 `int` 的常量表达式的值（例如，由整数型字面量表示的值）可以转换为 `sbyte`、`byte`、`short``ushort`、`uint` 或 `ulong`，前提是它在目标类型的范围内：
+- 类型 `int` 的常量表达式的值（例如，由整数型字面量表示的值）可以转换为 `sbyte`、`byte`、`short`、`ushort`、`uint` 或 `ulong`，前提是它在目标类型的范围内：
 
   ```csharp
   byte a = 13;    // Compiles
