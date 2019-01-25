@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 573336b32040f44ff1b59fcbb75b59aa00976b5c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 70405d774d665e3add03c510f3b99a3280da4860
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33430174"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54625139"
 ---
 # <a name="corexemain2-function"></a>_CorExeMain2 函数
-在指定的内存映射代码中执行的入口点。 操作系统加载程序通过调用此函数。  
+在指定的内存映射代码中执行的入口点。 由操作系统加载程序调用此函数。  
   
 ## <a name="syntax"></a>语法  
   
@@ -43,7 +43,7 @@ __int32 STDMETHODCALLTYPE _CorExeMain2 (
  [in]指向内存映射代码的指针。  
   
  `cUnmappedPE`  
- [in]元素的数目`pUnmappedPE`可以保存。  
+ [in]元素数`pUnmappedPE`可以容纳。  
   
  `pImageNameIn`  
  [in]指向可执行映像的名称的指针。  
@@ -55,13 +55,13 @@ __int32 STDMETHODCALLTYPE _CorExeMain2 (
  [in]命令行参数，如果有的话。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** Cor.h  
   
- **库：** 作为 MsCorEE.dll 中的资源  
+ **库：** 包含为 MsCorEE.dll 中的资源  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>请参阅  
- [元数据全局静态函数](../../../../docs/framework/unmanaged-api/metadata/metadata-global-static-functions.md)
+## <a name="see-also"></a>请参阅
+- [元数据全局静态函数](../../../../docs/framework/unmanaged-api/metadata/metadata-global-static-functions.md)

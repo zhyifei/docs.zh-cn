@@ -3,21 +3,21 @@ title: '&lt;workflowUnhandledException&gt;'
 ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: 57adeab5-f06a-44b2-916b-0e177cf0f4a6
-ms.openlocfilehash: d9db6ecc2e95e0d1ec5738f1d2f4a09a89c57f21
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 5c5dddc6d126811d7fd1eaae2f85df1e42c1cd41
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32755131"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54700866"
 ---
 # <a name="ltworkflowunhandledexceptiongt"></a>&lt;workflowUnhandledException&gt;
 一种服务行为，可用于指定工作流服务中发生未经处理的异常时所采取的操作。  
   
 \<system.ServiceModel>  
-\<行为 >  
+\<behaviors>  
 \<serviceBehaviors>  
-\<行为 >  
-\<workflowUnhandledException >  
+\<behavior>  
+\<workflowUnhandledException>  
   
 ## <a name="syntax"></a>语法  
   
@@ -49,6 +49,6 @@ ms.locfileid: "32755131"
 |-------------|-----------------|  
 |[\<行为 > 的\<serviceBehaviors >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/behavior-of-servicebehaviors-of-workflow.md)|指定行为元素。|  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.ServiceModel.Activities.Description.WorkflowUnhandledExceptionBehavior>  
- <xref:System.ServiceModel.Activities.Configuration.WorkflowUnhandledExceptionElement>
+## <a name="see-also"></a>请参阅
+- <xref:System.ServiceModel.Activities.Description.WorkflowUnhandledExceptionBehavior>
+- <xref:System.ServiceModel.Activities.Configuration.WorkflowUnhandledExceptionElement>

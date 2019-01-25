@@ -6,12 +6,12 @@ helpviewer_keywords:
 - constants [Visual Basic]
 - constants [Visual Basic], list of
 ms.assetid: 309c0ad5-83e4-4f96-99ea-83cd95107417
-ms.openlocfilehash: fcc3329d6e02a77bf54b5b9f08fddba1bc95ff54
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 33327a8d5e7ce7676ffda6245f3e4f9cccc8b1fb
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43562628"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54573304"
 ---
 # <a name="constants-and-enumerations-visual-basic"></a>常量和枚举 (Visual Basic)
 Visual Basic 提供预定义的常量并为开发人员的枚举的数。 常量存储中保持不变的应用程序执行中的值。 枚举提供了使用相关常量集以及将常量值与名称相关联的一个便捷方法。  
@@ -77,8 +77,8 @@ Visual Basic 提供预定义的常量并为开发人员的枚举的数。 常量
 |<xref:Microsoft.VisualBasic.VariantType>|指示变量对象，返回的类型<xref:Microsoft.VisualBasic.Information.VarType%2A>函数。|  
 |<xref:Microsoft.VisualBasic.VbStrConv>|指示调用 <xref:Microsoft.VisualBasic.Strings.StrConv%2A> 函数时要执行的转换类型。|  
   
-## <a name="see-also"></a>请参阅  
- [Visual Basic 语言参考](../../visual-basic/language-reference/index.md)  
- [Visual Basic](../../visual-basic/index.md)  
- [常量概述](../../visual-basic/programming-guide/language-features/constants-enums/constants-overview.md)  
- [枚举概述](../../visual-basic/programming-guide/language-features/constants-enums/enumerations-overview.md)
+## <a name="see-also"></a>请参阅
+- [Visual Basic 语言参考](../../visual-basic/language-reference/index.md)
+- [Visual Basic](../../visual-basic/index.md)
+- [常量概述](../../visual-basic/programming-guide/language-features/constants-enums/constants-overview.md)
+- [枚举概述](../../visual-basic/programming-guide/language-features/constants-enums/enumerations-overview.md)
