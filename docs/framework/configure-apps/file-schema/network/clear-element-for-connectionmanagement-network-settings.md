@@ -10,20 +10,20 @@ helpviewer_keywords:
 - clear element, connectionManagement
 - <connectionManagement>, clear element
 ms.assetid: fb259282-84c4-4dc4-a226-78d904a6edc3
-ms.openlocfilehash: dba05128220b34bed34da4309a4994cbc4e1bd40
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 0816a334e751d609b9c0735884d9682f7c1a087d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "50205095"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54596405"
 ---
 # <a name="ltcleargt-element-for-connectionmanagement-network-settings"></a>&lt;清除&gt;connectionManagement （网络设置） 的元素
 清除连接管理列表。  
   
  \<configuration>  
 \<system.net>  
-\<connectionManagement >  
-\<清除 >  
+\<connectionManagement>  
+\<clear>  
   
 ## <a name="syntax"></a>语法  
   
@@ -67,7 +67,7 @@ ms.locfileid: "50205095"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>请参阅  
-- <xref:System.Net.ServicePoint>  
-- <xref:System.Net.ServicePointManager>  
+## <a name="see-also"></a>请参阅
+- <xref:System.Net.ServicePoint>
+- <xref:System.Net.ServicePointManager>
 - [网络设置架构](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

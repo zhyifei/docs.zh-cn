@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - typography [WPF], about typography
 ms.assetid: 06cbf17b-6eff-4fe5-949d-2dd533e4e1f4
-ms.openlocfilehash: 0ec1c227196e9118f9174feb103a3ecbf5bcb7c4
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: b4cfec6dd1b732729f32abd65c6e69ca53e2ad82
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43528079"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54547477"
 ---
 # <a name="typography-in-wpf"></a>WPF 中的版式
 本主题介绍 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 的主要版式功能。 这些功能包括改进的文本呈现质量和性能、[!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] 版式支持、增强的国际文本、增强的字体支持和新的文本应用程序编程接口 (API)。  
@@ -167,12 +167,12 @@ FlowDocumentReader 中承载的文本
   
  有关创建自定义文本布局的详细信息，请参阅[高级文本格式设置](../../../../docs/framework/wpf/advanced/advanced-text-formatting.md)。  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Windows.Media.FormattedText>  
- <xref:System.Windows.Media.TextFormatting.TextFormatter>  
- [ClearType 概述](../../../../docs/framework/wpf/advanced/cleartype-overview.md)  
- [OpenType 字体功能](../../../../docs/framework/wpf/advanced/opentype-font-features.md)  
- [绘制格式化文本](../../../../docs/framework/wpf/advanced/drawing-formatted-text.md)  
- [高级文本格式设置](../../../../docs/framework/wpf/advanced/advanced-text-formatting.md)  
- [文本](../../../../docs/framework/wpf/advanced/optimizing-performance-text.md)  
- [Microsoft 版式](https://www.microsoft.com/typography/default.mspx)
+## <a name="see-also"></a>请参阅
+- <xref:System.Windows.Media.FormattedText>
+- <xref:System.Windows.Media.TextFormatting.TextFormatter>
+- [ClearType 概述](../../../../docs/framework/wpf/advanced/cleartype-overview.md)
+- [OpenType 字体功能](../../../../docs/framework/wpf/advanced/opentype-font-features.md)
+- [绘制格式化文本](../../../../docs/framework/wpf/advanced/drawing-formatted-text.md)
+- [高级文本格式设置](../../../../docs/framework/wpf/advanced/advanced-text-formatting.md)
+- [文本](../../../../docs/framework/wpf/advanced/optimizing-performance-text.md)
+- [Microsoft 版式](https://www.microsoft.com/typography/default.mspx)

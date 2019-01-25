@@ -6,12 +6,12 @@ helpviewer_keywords:
 - strings [Visual Basic], Visual Basic
 - strings [Visual Basic], regular expressions
 ms.assetid: 5674418d-f00d-4f72-9f98-d15897793350
-ms.openlocfilehash: 7d2477070dce558aa932c822852ac8ac9c6721e4
-ms.sourcegitcommit: 869b5832b667915ac4a5dd8c86b1109ed26b6c08
+ms.openlocfilehash: 2a7dd80d141ff5945bcce71fead1bb5bc24ad737
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/28/2018
-ms.locfileid: "39332649"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54552370"
 ---
 # <a name="string-basics-in-visual-basic"></a>字符串基础 (Visual Basic)
 `String` 数据类型表示一系列字符（每个字符都进而表示 `Char` 数据类型的一个实例）。 本主题介绍在 Visual Basic 中的字符串的基本概念。  
@@ -71,8 +71,8 @@ World]]></xml>.Value
   
  与其他内部数据类型不同，`String` 是引用类型。 当引用类型的变量作为参数传递给函数或子例程时，会传递对数据存储位置的内存地址的引用（而不是字符串的实际值）。 因此在上面的示例中，变量的名称保持不变，但它会指向 `String` 类的另一个新实例（该实例会保存新值）。  
   
-## <a name="see-also"></a>请参阅  
- [Visual Basic 中的字符串简介](../../../../visual-basic/programming-guide/language-features/strings/introduction-to-strings.md)  
- [String 数据类型](../../../../visual-basic/language-reference/data-types/string-data-type.md)  
- [Char 数据类型](../../../../visual-basic/language-reference/data-types/char-data-type.md)  
- [基本字符串操作](../../../../standard/base-types/basic-string-operations.md)
+## <a name="see-also"></a>请参阅
+- [Visual Basic 中的字符串简介](../../../../visual-basic/programming-guide/language-features/strings/introduction-to-strings.md)
+- [String 数据类型](../../../../visual-basic/language-reference/data-types/string-data-type.md)
+- [Char 数据类型](../../../../visual-basic/language-reference/data-types/char-data-type.md)
+- [基本字符串操作](../../../../standard/base-types/basic-string-operations.md)

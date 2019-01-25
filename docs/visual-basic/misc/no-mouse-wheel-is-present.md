@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrMouse_NoWheelIsPresent
 ms.assetid: e924ffba-4af1-4247-9a6f-d19a03738f62
-ms.openlocfilehash: bfb8ea0d5d7a22bd66f477216129ff834023f4ba
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 61c8f3aa48bb5dd8b02ee8f6327fbde1f55bfe1a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43738193"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54595300"
 ---
 # <a name="no-mouse-wheel-is-present"></a>没有鼠标滚轮
 调用了 `My.Computer.Mouse.WheelScrollLines` 属性，但鼠标没有滚轮。  
@@ -22,7 +22,7 @@ ms.locfileid: "43738193"
   
 -   在计算机上安装带滚轮的鼠标。  
   
-## <a name="see-also"></a>请参阅  
- [My.Computer.Mouse.WheelScrollLines](xref:Microsoft.VisualBasic.Devices.Mouse.WheelScrollLines)  
- [My.Computer.Mouse.WheelExists](xref:Microsoft.VisualBasic.Devices.Mouse.WheelExists)  
- [异常和 Visual Basic 中的错误处理](https://msdn.microsoft.com/library/3e351e73-cf23-40ab-8b60-05794160529e)
+## <a name="see-also"></a>请参阅
+- [My.Computer.Mouse.WheelScrollLines](xref:Microsoft.VisualBasic.Devices.Mouse.WheelScrollLines)
+- [My.Computer.Mouse.WheelExists](xref:Microsoft.VisualBasic.Devices.Mouse.WheelExists)
+- [Visual Basic 中的异常与错误处理](https://msdn.microsoft.com/library/3e351e73-cf23-40ab-8b60-05794160529e)

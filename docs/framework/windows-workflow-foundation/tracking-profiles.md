@@ -2,12 +2,12 @@
 title: 跟踪配置文件
 ms.date: 03/30/2017
 ms.assetid: 22682566-1cd9-4672-9791-fb3523638e18
-ms.openlocfilehash: 6651b79a474125f57c1cad773ae858dc7654d58a
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 95f14cff9c60158f0ce188d031a94870c0b0ac5a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43861827"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54559250"
 ---
 # <a name="tracking-profiles"></a>跟踪配置文件
 跟踪配置文件包含跟踪查询，这些查询允许跟踪参与者订阅当工作流实例的状态在运行时发生更改时发出的工作流事件。  
@@ -380,7 +380,7 @@ TrackingProfile sampleTrackingProfile = new TrackingProfile()
 </trackingProfile>  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [SQL 跟踪](../../../docs/framework/windows-workflow-foundation/samples/sql-tracking.md)  
- [Windows Server App Fabric 监视](https://go.microsoft.com/fwlink/?LinkId=201273)  
- [使用 App Fabric 监视应用程序](https://go.microsoft.com/fwlink/?LinkId=201275)
+## <a name="see-also"></a>请参阅
+- [SQL 跟踪](../../../docs/framework/windows-workflow-foundation/samples/sql-tracking.md)
+- [Windows Server App Fabric 监视](https://go.microsoft.com/fwlink/?LinkId=201273)
+- [使用 App Fabric 监视应用程序](https://go.microsoft.com/fwlink/?LinkId=201275)

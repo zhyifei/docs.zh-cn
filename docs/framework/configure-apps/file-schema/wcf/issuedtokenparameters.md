@@ -2,22 +2,22 @@
 title: '&lt;issuedTokenParameters&gt;'
 ms.date: 03/30/2017
 ms.assetid: 120b3f37-7331-4816-b712-d6aab39655a4
-ms.openlocfilehash: 2060f98e94cec9e656420ac073204a82bc592b92
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: d3770764e75b3bfd1345ac6a44761861595309d1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54149236"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54627455"
 ---
 # <a name="ltissuedtokenparametersgt"></a>&lt;issuedTokenParameters&gt;
 指定在联合安全方案中颁发的安全令牌的参数。  
   
  \<system.serviceModel>  
-\<绑定 >  
+\<bindings>  
 \<customBinding>  
-\<绑定 >  
+\<binding>  
 \<安全 >  
-\<issuedTokenParameters >  
+\<issuedTokenParameters>  
   
 ## <a name="syntax"></a>语法  
   
@@ -58,7 +58,7 @@ ms.locfileid: "54149236"
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<additionalRequestParameters >](../../../../../docs/framework/configure-apps/file-schema/wcf/additionalrequestparameters-element.md)|一个用于指定附加请求参数的配置元素的集合。|  
+|[\<additionalRequestParameters>](../../../../../docs/framework/configure-apps/file-schema/wcf/additionalrequestparameters-element.md)|一个用于指定附加请求参数的配置元素的集合。|  
 |[\<claimTypeRequirements>](../../../../../docs/framework/configure-apps/file-schema/wcf/claimtyperequirements-element.md)|指定所需声明类型的集合。<br /><br /> 在联合方案中，服务规定有关传入凭据的要求。 例如，传入凭据必须具有某组声明类型。 此集合中的每个元素都指定希望出现在联合凭据中的必选和可选的声明类型。|  
 |[\<issuer>](../../../../../docs/framework/configure-apps/file-schema/wcf/issuer-of-issuedtokenparameters.md)|一个用于指定颁发当前令牌的终结点的配置元素。|  
 |[\<issuerMetadata>](../../../../../docs/framework/configure-apps/file-schema/wcf/issuermetadata-of-issuedtokenparameters.md)|一个用于指定令牌颁发者的元数据的终结点地址的配置元素。|  
@@ -67,21 +67,21 @@ ms.locfileid: "54149236"
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<secureConversationBootstrap >](../../../../../docs/framework/configure-apps/file-schema/wcf/secureconversationbootstrap.md)|指定用于启动安全对话服务的默认值。|  
+|[\<secureConversationBootstrap>](../../../../../docs/framework/configure-apps/file-schema/wcf/secureconversationbootstrap.md)|指定用于启动安全对话服务的默认值。|  
 |[\<security>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md)|指定自定义绑定的安全选项。|  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.ServiceModel.Security.Tokens.IssuedSecurityTokenParameters>  
- <xref:System.ServiceModel.Configuration.IssuedTokenParametersElement>  
- <xref:System.ServiceModel.Configuration.SecurityElementBase.IssuedTokenParameters%2A>  
- <xref:System.ServiceModel.Channels.CustomBinding>  
- [绑定](../../../../../docs/framework/wcf/bindings.md)  
- [扩展绑定](../../../../../docs/framework/wcf/extending/extending-bindings.md)  
- [自定义绑定](../../../../../docs/framework/wcf/extending/custom-bindings.md)  
- [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)  
- [如何：创建自定义绑定使用 SecurityBindingElement](../../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)  
- [自定义绑定安全性](../../../../../docs/framework/wcf/samples/custom-binding-security.md)  
- [服务标识和身份验证](../../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)  
- [联合令牌与颁发的令牌](../../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)  
- [使用自定义绑定的安全功能](../../../../../docs/framework/wcf/feature-details/security-capabilities-with-custom-bindings.md)  
- [联合令牌与颁发的令牌](../../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.ServiceModel.Security.Tokens.IssuedSecurityTokenParameters>
+- <xref:System.ServiceModel.Configuration.IssuedTokenParametersElement>
+- <xref:System.ServiceModel.Configuration.SecurityElementBase.IssuedTokenParameters%2A>
+- <xref:System.ServiceModel.Channels.CustomBinding>
+- [绑定](../../../../../docs/framework/wcf/bindings.md)
+- [扩展绑定](../../../../../docs/framework/wcf/extending/extending-bindings.md)
+- [自定义绑定](../../../../../docs/framework/wcf/extending/custom-bindings.md)
+- [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
+- [如何：创建自定义绑定使用 SecurityBindingElement](../../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)
+- [自定义绑定安全性](../../../../../docs/framework/wcf/samples/custom-binding-security.md)
+- [服务标识和身份验证](../../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)
+- [联合令牌与颁发的令牌](../../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)
+- [使用自定义绑定的安全功能](../../../../../docs/framework/wcf/feature-details/security-capabilities-with-custom-bindings.md)
+- [联合令牌与颁发的令牌](../../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)

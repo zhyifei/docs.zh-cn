@@ -2,12 +2,12 @@
 title: 调试 LINQ to DataSet 查询
 ms.date: 03/30/2017
 ms.assetid: f4c54015-8ce2-4c5c-8d18-7038144cc66d
-ms.openlocfilehash: c1014db4cad54420b917585becd2a2031638c1d9
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: 6c7b8c6cec39adfd5b7456d94cfae5622649e5a3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49123600"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54680502"
 ---
 # <a name="debugging-linq-to-dataset-queries"></a>调试 LINQ to DataSet 查询
 
@@ -27,6 +27,6 @@ Visual Studio 支持的调试[!INCLUDE[linq_dataset](../../../../includes/linq-d
   
  在 Visual Basic 在 Visual Studio 中，您可以使用编辑并继续对非[!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]代码，即使在包含的方法[!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]查询。 可以在 [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] 语句之前添加或移除代码，即使这些更改会影响 [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] 查询的行号。 Visual Basic 调试体验非[!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]代码保持不变，与以前[!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]引入了。 但是，您无法更改、添加或移除 [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] 查询，除非停止调试才能应用这些更改。  
   
-## <a name="see-also"></a>请参阅  
- [调试托管代码](/visualstudio/debugger/debugging-managed-code)  
- [编程指南](../../../../docs/framework/data/adonet/programming-guide-linq-to-dataset.md)
+## <a name="see-also"></a>请参阅
+- [调试托管代码](/visualstudio/debugger/debugging-managed-code)
+- [编程指南](../../../../docs/framework/data/adonet/programming-guide-linq-to-dataset.md)

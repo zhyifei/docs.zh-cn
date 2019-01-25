@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 6933e753-2f2a-425b-ae84-42138c957d76
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 3487b67ea49cecfd0da2b5b3f993ea54d562145d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.openlocfilehash: 90beb1487581ff4c031d6f10fb613430207dc026
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33397515"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54575562"
 ---
 # <a name="contention-etw-events"></a>争用 ETW 事件
 只要运行时使用的 <xref:System.Threading.Monitor?displayProperty=nameWithType> 锁或本机锁出现争用情况，就会引发争用事件。 一个线程等待的锁被另一线程占有时将发生争用。  
@@ -37,5 +37,5 @@ ms.locfileid: "33397515"
 |Flags|win:UInt8|0 表示托管；1 表示本机。|  
 |ClrInstanceID|win:UInt16|CLR 实例的唯一 ID。|  
   
-## <a name="see-also"></a>请参阅  
- [CLR ETW 事件](../../../docs/framework/performance/clr-etw-events.md)
+## <a name="see-also"></a>请参阅
+- [CLR ETW 事件](../../../docs/framework/performance/clr-etw-events.md)

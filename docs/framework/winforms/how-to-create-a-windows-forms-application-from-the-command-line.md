@@ -1,5 +1,5 @@
 ---
-title: 如何： 从命令行创建 Windows 窗体应用程序
+title: 如何：从命令行创建 Windows 窗体应用程序
 ms.date: 03/14/2018
 dev_langs:
 - csharp
@@ -11,15 +11,15 @@ helpviewer_keywords:
 ms.assetid: 45ad3f8b-1c26-4c9f-91a9-3bb0759a47a4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7cfd90c5d38be788125af3bafe1e9ba034e9b957
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: b37c57093662c94f5ad20bf9d01c63223b5901fb
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43804760"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54581972"
 ---
-# <a name="how-to-create-a-windows-forms-application-from-the-command-line"></a>如何： 从命令行创建 Windows 窗体应用程序
-下面的过程介绍从命令行创建和运行 Windows 窗体应用程序所必须完成的基本步骤。 在 Visual Studio 中没有对这些过程的扩展支持。  另请参阅[演练： 创建简单的 Windows 窗体](https://msdn.microsoft.com/library/z9w2f38k\(v=vs.100\))。  
+# <a name="how-to-create-a-windows-forms-application-from-the-command-line"></a>如何：从命令行创建 Windows 窗体应用程序
+下面的过程介绍从命令行创建和运行 Windows 窗体应用程序所必须完成的基本步骤。 在 Visual Studio 中没有对这些过程的扩展支持。  另请参阅[演练：创建简单 Windows 窗体](https://msdn.microsoft.com/library/z9w2f38k\(v=vs.100\))。  
   
 ## <a name="procedure"></a>过程  
   
@@ -113,9 +113,9 @@ ms.locfileid: "43804760"
   
 -   若要编译代码，请遵循处理过程中描述如何编译和运行应用程序的说明。  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Windows.Forms.Form>  
- <xref:System.Windows.Forms.Control>  
- [更改 Windows 窗体外观](../../../docs/framework/winforms/changing-the-appearance-of-windows-forms.md)  
- [增强 Windows 窗体应用程序](../../../docs/framework/winforms/advanced/index.md)  
- [Windows 窗体入门](../../../docs/framework/winforms/getting-started-with-windows-forms.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.Windows.Forms.Form>
+- <xref:System.Windows.Forms.Control>
+- [更改 Windows 窗体外观](../../../docs/framework/winforms/changing-the-appearance-of-windows-forms.md)
+- [增强 Windows 窗体应用程序](../../../docs/framework/winforms/advanced/index.md)
+- [Windows 窗体入门](../../../docs/framework/winforms/getting-started-with-windows-forms.md)

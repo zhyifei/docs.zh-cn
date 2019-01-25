@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ede896cdb93217fcfba9d66ed7102bcc1ba762e9
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 4b949466c5557415ec06bac601380675beed7fd1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53129317"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54549858"
 ---
 # <a name="iclrsyncmanager-interface"></a>ICLRSyncManager 接口
 定义允许主机以获取有关请求的任务的信息并在其同步实现检测死锁的方法。  
@@ -44,8 +44,8 @@ ms.locfileid: "53129317"
   
  **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Threading.Thread>  
- [IHostSyncManager 接口](ihostsyncmanager-interface.md)  
- [托管和非托管线程处理](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/5s8ee185(v=vs.100))  
- [承载接口](hosting-interfaces.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.Threading.Thread>
+- [IHostSyncManager 接口](ihostsyncmanager-interface.md)
+- [托管和非托管线程处理](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/5s8ee185(v=vs.100))
+- [承载接口](hosting-interfaces.md)

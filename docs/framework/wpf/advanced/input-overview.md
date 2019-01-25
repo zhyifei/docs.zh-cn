@@ -24,12 +24,12 @@ helpviewer_keywords:
 - focus [WPF]
 - mouse position [WPF]
 ms.assetid: ee5258b7-6567-415a-9b1c-c0cbe46e79ef
-ms.openlocfilehash: 4492b92268828943d222fbf624781bc0b9ce7901
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 481d19ca8a7222f26b8d22864c790031c14ffa8c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48842783"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54592583"
 ---
 # <a name="input-overview"></a>输入概述
 <a name="introduction"></a> [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]子系统提供了一个强大[!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)]用于获取输入不同的设备，包括鼠标、 键盘、 触控和触笔。 本主题介绍了 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 提供的服务，并说明了输入系统的体系结构。
@@ -243,7 +243,7 @@ ms.locfileid: "48842783"
 
  使对象响应操作时，可以让对象看起来具有惯性。 这样可以使对象模拟真实的世界。 例如，在桌子上推一本书时，如果你足够用力，书将在你松手后继续移动。 利用 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]，可以通过在用户的手指松开对象后引发操作事件来模拟这种行为。
 
- 如需深入了解如何创建使用户可以对对象进行移动、调整大小和旋转的应用程序，请参阅[演练：创建你的第一个触控应用程序](../../../../docs/framework/wpf/advanced/walkthrough-creating-your-first-touch-application.md)。
+ 有关如何创建使用户能够移动、 调整大小和旋转对象的应用程序的信息，请参阅[演练：创建第一个触控应用程序](../../../../docs/framework/wpf/advanced/walkthrough-creating-your-first-touch-application.md)。
 
  <xref:System.Windows.UIElement>定义了以下操作事件。
 
@@ -391,4 +391,8 @@ ms.locfileid: "48842783"
  也可以获取更详细说明 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 框架元素和事件路由的详细资源。 有关详细信息，请参阅以下概述：[命令概述](../../../../docs/framework/wpf/advanced/commanding-overview.md)、[焦点概述](../../../../docs/framework/wpf/advanced/focus-overview.md)、[基元素概述](../../../../docs/framework/wpf/advanced/base-elements-overview.md)、[WPF 中的树](../../../../docs/framework/wpf/advanced/trees-in-wpf.md)和[路由事件概述](../../../../docs/framework/wpf/advanced/routed-events-overview.md)。
 
 ## <a name="see-also"></a>请参阅
- [焦点概述](../../../../docs/framework/wpf/advanced/focus-overview.md)[命令概述](../../../../docs/framework/wpf/advanced/commanding-overview.md)[路由事件概述](../../../../docs/framework/wpf/advanced/routed-events-overview.md)[基元素概述](../../../../docs/framework/wpf/advanced/base-elements-overview.md)[属性](../../../../docs/framework/wpf/advanced/properties-wpf.md)
+- [焦点概述](../../../../docs/framework/wpf/advanced/focus-overview.md)
+- [命令概述](../../../../docs/framework/wpf/advanced/commanding-overview.md)
+- [路由事件概述](../../../../docs/framework/wpf/advanced/routed-events-overview.md)
+- [基元素概述](../../../../docs/framework/wpf/advanced/base-elements-overview.md)
+- [属性](../../../../docs/framework/wpf/advanced/properties-wpf.md)

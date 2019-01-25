@@ -14,19 +14,19 @@ helpviewer_keywords:
 - dependency properties [WPF]
 - resources [WPF], references to
 ms.assetid: d119d00c-3afb-48d6-87a0-c4da4f83dee5
-ms.openlocfilehash: 36370eb54e75df9bf2bf8eb9e073bbbee995e287
-ms.sourcegitcommit: d955cb4c681d68cf301d410925d83f25172ece86
+ms.openlocfilehash: 7a7a8cc13a48b453b157443039f11c548756b0fd
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34827002"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54588647"
 ---
 # <a name="dependency-properties-overview"></a>依赖属性概述
 
 Windows Presentation Foundation (WPF) 提供一组服务，这些服务可用于扩展类型的[属性](../../../standard/base-types/common-type-system.md#Properties)的功能。 这些服务通常统称为 WPF 属性系统。 由 WPF 属性系统支持的属性称为依赖属性。 本概述介绍 WPF 属性系统以及依赖属性的功能。 这包括如何在 XAML 和在代码中使用现有依赖属性。 本概述还介绍依赖属性所特有的方面（如依赖属性元数据），并说明如何在自定义类中创建自己的依赖属性。
 
 ## <a name="prerequisites"></a>系统必备
-本主题假设你在 .NET 类型系统和面向对象的编程方面有一些基础知识。 为了能理解本主题中的示例，还应了解 XAML 并知道如何编写 WPF 应用程序。 有关详细信息，请参阅[演练：我的第一个 WPF 桌面应用程序](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md)。  
+本主题假设你在 .NET 类型系统和面向对象的编程方面有一些基础知识。 为了能理解本主题中的示例，还应了解 XAML 并知道如何编写 WPF 应用程序。 有关详细信息，请参见[演练：我第一个 WPF 桌面应用程序](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md)。  
   
 ## <a name="dependency-properties-and-clr-properties"></a>依赖属性和 CLR 属性
  在 WPF 中，属性通常公开为标准 .NET [属性](../../../standard/base-types/common-type-system.md#Properties)。 在基本级别，可以直接与这些属性交互，而不必了解它们是以依赖属性的形式实现的。 但是，应当熟悉 WPF 属性系统的部分或全部功能，以便利用这些功能。
@@ -40,11 +40,11 @@ Windows Presentation Foundation (WPF) 提供一组服务，这些服务可用于
 
 下面列出了与依赖属性一起使用的术语：
 
-- **依赖属性：**<xref:System.Windows.DependencyProperty> 支持的属性。
+- **依赖项属性：** 一个属性，它由支持<xref:System.Windows.DependencyProperty>。
 
-- **依赖属性标识符：** 一个 <xref:System.Windows.DependencyProperty> 实例，在注册依赖属性时以返回值形式获取它，之后将其存储为类的静态成员。 对于与 WPF 属性系统交互的许多 API，此标识符用作一个参数。
+- **依赖项属性标识符：** 一个<xref:System.Windows.DependencyProperty>实例，这是注册依赖属性时，获取作为返回值，然后存储为类的静态成员。 对于与 WPF 属性系统交互的许多 API，此标识符用作一个参数。
 
-- **CLR“包装器”：** 属性的实际 get 和 set 实现。 这些实现通过在 <xref:System.Windows.DependencyObject.GetValue%2A> 和 <xref:System.Windows.DependencyObject.SetValue%2A> 调用中使用依赖属性标识符来并入依赖属性标识符，从而使用 WPF 属性系统为属性提供支持。
+- **CLR"包装器":** 实际 get 和 set 实现的属性。 这些实现通过在 <xref:System.Windows.DependencyObject.GetValue%2A> 和 <xref:System.Windows.DependencyObject.SetValue%2A> 调用中使用依赖属性标识符来并入依赖属性标识符，从而使用 WPF 属性系统为属性提供支持。
 
 下面的示例定义 `IsSpinning` 依赖属性，并说明 <xref:System.Windows.DependencyProperty> 标识符与它所支持的属性之间的关系。
 
@@ -136,7 +136,7 @@ XAML 支持多种设置属性的语法格式。 要对特定的属性使用哪�
 
 有关详细信息，请参阅[样式设置和模板化](../../../../docs/framework/wpf/controls/styling-and-templating.md)。
 
-### <a name="animations"></a>动画
+### <a name="animations"></a>Animations
 可以对依赖属性进行动画处理。 在应用和运行动画时，经过动画处理的值的操作优先级高于该属性以其他方式具有的任何值（如本地值）。
 
 以下示例在 <xref:System.Windows.Controls.Button> 属性上对 <xref:System.Windows.Controls.Control.Background%2A> 进行动画处理（从技术上讲，通过使用属性元素语法将空白 <xref:System.Windows.Media.SolidColorBrush> 指定为 <xref:System.Windows.Controls.Control.Background%2A> 来对 <xref:System.Windows.Controls.Control.Background%2A> 进行动画处理，然后该 <xref:System.Windows.Media.SolidColorBrush> 的 <xref:System.Windows.Media.SolidColorBrush.Color%2A> 属性就是直接动画处理过的属性）。
@@ -197,7 +197,7 @@ XAML 支持多种设置属性的语法格式。 要对特定的属性使用哪�
 - 通常，依赖属性应当被视为公共属性，这些公共属性可以由任何具有实例访问权限的调用方访问，或至少可被这样的调用方发现。 有关详细信息，请参阅[依赖属性的安全性](../../../../docs/framework/wpf/advanced/dependency-property-security.md)。
 
 ## <a name="see-also"></a>请参阅
- [自定义依赖属性](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md)  
- [只读依赖项属性](../../../../docs/framework/wpf/advanced/read-only-dependency-properties.md)  
- [XAML 概述 (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)  
- [WPF 体系结构](../../../../docs/framework/wpf/advanced/wpf-architecture.md)
+- [自定义依赖属性](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md)
+- [只读依赖项属性](../../../../docs/framework/wpf/advanced/read-only-dependency-properties.md)
+- [XAML 概述 (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)
+- [WPF 体系结构](../../../../docs/framework/wpf/advanced/wpf-architecture.md)

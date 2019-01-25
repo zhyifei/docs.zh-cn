@@ -1,15 +1,15 @@
 ---
-title: 调试 Visual Studio (Visual Basic 中) 中的表达式树
+title: Visual Studio (Visual Basic 中) 中调试表达式树
 ms.date: 07/20/2015
 ms.assetid: 492cc28f-b7a2-4c47-b582-b3c437b8a5d5
-ms.openlocfilehash: 2addba2654067eaaf6c621c927e0992308879ae4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b060a65a38c4ab295a54f972678f273ada218d06
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33644233"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54617351"
 ---
-# <a name="debugging-expression-trees-in-visual-studio-visual-basic"></a>调试 Visual Studio (Visual Basic 中) 中的表达式树
+# <a name="debugging-expression-trees-in-visual-studio-visual-basic"></a>Visual Studio (Visual Basic 中) 中调试表达式树
 可以在调试应用程序时分析表达式树的结构和内容。 若要快速了解表达式树结构，可以使用 `DebugView` 属性，该属性仅在调试模式下可用。 有关调试的详细信息，请参阅[在 Visual Studio 中进行调试](/visualstudio/debugger/debugging-in-visual-studio)。  
   
  为了更好地表示表达式树的内容，`DebugView` 属性使用 Visual Studio 可视化工具。 有关详细信息，请参阅[创建自定义可视化工具](/visualstudio/debugger/create-custom-visualizers-of-data)。  
@@ -230,7 +230,7 @@ ms.locfileid: "33644233"
   
      `#(System.Int32)10D`  
   
-## <a name="see-also"></a>请参阅  
- [表达式树 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/expression-trees/index.md)  
- [在 Visual Studio 中进行调试](/visualstudio/debugger/debugging-in-visual-studio)  
- [创建自定义可视化工具](/visualstudio/debugger/create-custom-visualizers-of-data)
+## <a name="see-also"></a>请参阅
+- [表达式树 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/expression-trees/index.md)
+- [在 Visual Studio 中进行调试](/visualstudio/debugger/debugging-in-visual-studio)
+- [创建自定义可视化工具](/visualstudio/debugger/create-custom-visualizers-of-data)

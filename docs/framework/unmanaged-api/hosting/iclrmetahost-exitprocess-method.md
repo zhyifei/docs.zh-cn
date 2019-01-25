@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fc71762fb4a660cf84814cdd46d09696a161f3c9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: bbf3c00eafe47556c6b46e1acb687a19df5a2b28
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33431592"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54601749"
 ---
 # <a name="iclrmetahostexitprocess-method"></a>ICLRMetaHost::ExitProcess 方法
-尝试正常关闭所有已加载的运行时，然后终止该进程。 取代[CorExitProcess](../../../../docs/framework/unmanaged-api/hosting/corexitprocess-function.md)函数。  
+尝试正常关闭所有已加载运行时，然后终止该进程。 取代[CorExitProcess](../../../../docs/framework/unmanaged-api/hosting/corexitprocess-function.md)函数。  
   
 ## <a name="syntax"></a>语法  
   
@@ -36,22 +36,22 @@ HRESULT ExitProcess (
   
 #### <a name="parameters"></a>参数  
  `iExitCode`  
- [in]进程的退出代码。  
+ [in]进程退出代码。  
   
 ## <a name="return-value"></a>返回值  
- 永远不会返回此方法，以便其返回值是不确定。  
+ 永远不会返回此方法，因此其返回值是未定义。  
   
 ## <a name="remarks"></a>备注  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** MetaHost.h  
   
- **库：** 作为 MSCorEE.dll 中的资源  
+ **库：** 包含为 MSCorEE.dll 中的资源  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>请参阅  
- [ICLRMetaHost 接口](../../../../docs/framework/unmanaged-api/hosting/iclrmetahost-interface.md)  
- [承载](../../../../docs/framework/unmanaged-api/hosting/index.md)
+## <a name="see-also"></a>请参阅
+- [ICLRMetaHost 接口](../../../../docs/framework/unmanaged-api/hosting/iclrmetahost-interface.md)
+- [承载](../../../../docs/framework/unmanaged-api/hosting/index.md)

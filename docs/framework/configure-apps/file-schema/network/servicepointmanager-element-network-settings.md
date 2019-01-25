@@ -8,20 +8,20 @@ helpviewer_keywords:
 - servicePointManager element
 - <servicePointManager> element
 ms.assetid: 6e5def51-3646-4ef6-a7bd-c69151321bec
-ms.openlocfilehash: fed2b39d92557f25c4f7427bccf28af616d1c0a3
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: e30d38e3b925283b6048730aef2acc865be755b6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50187269"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54651612"
 ---
 # <a name="ltservicepointmanagergt-element-network-settings"></a>&lt;servicePointManager&gt;元素 （网络设置）
 配置连接到网络资源。  
   
  \<configuration>  
 \<system.net>  
-\<设置 >  
-\<servicePointManager >  
+\<settings>  
+\<servicePointManager>  
   
 ## <a name="syntax"></a>语法  
   
@@ -66,7 +66,7 @@ ms.locfileid: "50187269"
 ## <a name="configuration-files"></a>配置文件  
  此元素可在应用程序配置文件或计算机配置文件 (Machine.config) 中使用。  
   
-## <a name="see-also"></a>请参阅  
-- <xref:System.Net.ServicePointManager>  
-- <xref:System.Net.Security.EncryptionPolicy>  
+## <a name="see-also"></a>请参阅
+- <xref:System.Net.ServicePointManager>
+- <xref:System.Net.Security.EncryptionPolicy>
 - [网络设置架构](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

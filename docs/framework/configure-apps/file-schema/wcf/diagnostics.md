@@ -1,19 +1,19 @@
 ---
-title: '&lt;诊断&gt;'
+title: '&lt;diagnostics&gt;'
 ms.date: 03/30/2017
 ms.assetid: 0c2f95c4-cc12-4fb5-a70c-7fc6fa95db58
-ms.openlocfilehash: 3ee611d3903ba36748837d2743cd03d54670befd
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: de11145620e8fdf96785908df85ab5ecdfd2e25e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54149340"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54524582"
 ---
-# <a name="ltdiagnosticsgt"></a>&lt;诊断&gt;
+# <a name="ltdiagnosticsgt"></a>&lt;diagnostics&gt;
 `diagnostics` 元素定义管理员可以用来进行运行时检查和控制的设置。  
   
  \<system.ServiceModel>  
-\<诊断 >  
+\<diagnostics>  
   
 ## <a name="syntax"></a>语法  
   
@@ -54,8 +54,8 @@ ms.locfileid: "54149340"
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<endToEndTracing >](../../../../../docs/framework/configure-apps/file-schema/wcf/endtoendtracing.md)|一个配置元素，用于启用和禁用服务应用程序运行过程中端对端跟踪的不同方面。|  
-|[\<messageLogging >](../../../../../docs/framework/configure-apps/file-schema/wcf/messagelogging.md)|描述 WCF 消息日志记录的设置。|  
+|[\<endToEndTracing>](../../../../../docs/framework/configure-apps/file-schema/wcf/endtoendtracing.md)|一个配置元素，用于启用和禁用服务应用程序运行过程中端对端跟踪的不同方面。|  
+|[\<messageLogging>](../../../../../docs/framework/configure-apps/file-schema/wcf/messagelogging.md)|描述 WCF 消息日志记录的设置。|  
   
 ### <a name="parent-elements"></a>父元素  
   
@@ -84,6 +84,6 @@ ms.locfileid: "54149340"
 </diagnostics>
 ```  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.ServiceModel.Configuration.DiagnosticSection>  
- <xref:System.ServiceModel.Diagnostics>
+## <a name="see-also"></a>请参阅
+- <xref:System.ServiceModel.Configuration.DiagnosticSection>
+- <xref:System.ServiceModel.Diagnostics>

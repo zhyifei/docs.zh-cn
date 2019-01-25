@@ -1,5 +1,5 @@
 ---
-title: ICorDebugAssembly2 接口 1
+title: ICorDebugAssembly2 Interface1
 ms.date: 03/30/2017
 api_name:
 - ICorDebugAssembly2
@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 90ad74a3b9dd26d0a6e390a777e862f4274f86d6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 3746717bdf62c59103374f74bbabdb3a7ae1ad61
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33403837"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54554014"
 ---
-# <a name="icordebugassembly2-interface1"></a>ICorDebugAssembly2 接口 1
-表示一个程序集。 此接口是 ICorDebugAssembly 接口的扩展。  
+# <a name="icordebugassembly2-interface1"></a>ICorDebugAssembly2 Interface1
+表示一个程序集。 此接口是 icor 调试程序集接口的扩展。  
   
 ## <a name="methods"></a>方法  
   
@@ -38,13 +38,13 @@ ms.locfileid: "33403837"
 >  此接口不支持跨计算机或跨进程远程调用。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** CorDebug.idl、 CorDebug.h  
   
  **库：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>请参阅  
- [调试接口](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a>请参阅
+- [调试接口](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

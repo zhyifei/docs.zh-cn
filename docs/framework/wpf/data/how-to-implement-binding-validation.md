@@ -6,12 +6,12 @@ helpviewer_keywords:
 - data binding [WPF], validation of binding
 - binding [WPF], validation of
 ms.assetid: eb98b33d-9866-49ae-b981-bc5ff20d607a
-ms.openlocfilehash: 5e91ab9fbd2fdeb0aa5d836a1eedfb5e0b45ecba
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: e752ad5c3160ac7b73adac55b02a06bf802190ed
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43510447"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54678351"
 ---
 # <a name="how-to-implement-binding-validation"></a>如何：实现绑定验证
 此示例演示如何在用户输入无效值后，基于自定义验证规则使用 <xref:System.Windows.Controls.Validation.ErrorTemplate%2A> 和样式触发器来提供视觉反馈，以便通知用户。  
@@ -37,6 +37,6 @@ ms.locfileid: "43510447"
   
  请注意，如果未提供自定义 <xref:System.Windows.Controls.Validation.ErrorTemplate%2A>，则当验证出错时,系统会使用默认错误模板向用户提供可视反馈。 有关详细信息，请参阅[数据绑定概述](../../../../docs/framework/wpf/data/data-binding-overview.md)中的“数据验证”。 另外，[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 还提供了内置验证规则，该规则捕获在更新绑定源属性期间引发的异常。 有关详细信息，请参阅 <xref:System.Windows.Controls.ExceptionValidationRule>。  
   
-## <a name="see-also"></a>请参阅  
- [数据绑定概述](../../../../docs/framework/wpf/data/data-binding-overview.md)  
- [帮助主题](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)
+## <a name="see-also"></a>请参阅
+- [数据绑定概述](../../../../docs/framework/wpf/data/data-binding-overview.md)
+- [帮助主题](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)

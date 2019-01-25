@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 19736d177639b00c9563462f10e33e4c122297c6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 00b20134c0134aa30d2056b634c8525f66ed8cf5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33456008"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54602451"
 ---
 # <a name="icorprofilerinfogetfunctioninfo-method"></a>ICorProfilerInfo::GetFunctionInfo 方法
-获取父类和元数据标记指定的函数。  
+获取父类和元数据令牌指定的函数。  
   
 ## <a name="syntax"></a>语法  
   
@@ -39,7 +39,7 @@ HRESULT GetFunctionInfo(
   
 #### <a name="parameters"></a>参数  
  `functionId`  
- [in]要为其获取令牌的父类和元数据函数的 ID。  
+ [in]若要获取的父类和元数据令牌的函数的 ID。  
   
  `pClassId`  
  [out] 一个指向函数的父类的指针。  
@@ -53,16 +53,16 @@ HRESULT GetFunctionInfo(
 ## <a name="remarks"></a>备注  
  探查器代码可以调用[icorprofilerinfo:: Getmodulemetadata](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getmodulemetadata-method.md)以获取给定模块的元数据接口。 然后，返回到 `pToken` 所引用位置的元数据标记便可用于访问该函数的元数据。  
   
- `ClassID`泛型类的函数可能无法获得不包含有关使用的函数的更多上下文的信息。 在这种情况下，`pClassId`将为 0。 探查器代码应使用[icorprofilerinfo2:: Getfunctioninfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getfunctioninfo2-method.md) COR_PRF_FRAME_INFO 值以提供更多上下文。  
+ `ClassID`的泛型类的一个函数可能无法获得而无需使用有关的函数的更多上下文的信息。 在这种情况下，`pClassId`将为 0。 Profiler 的代码应使用[ICorProfilerInfo2::GetFunctionInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getfunctioninfo2-method.md) COR_PRF_FRAME_INFO 值以提供更多上下文。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **头文件：** CorProf.idl、CorProf.h  
+ **标头：** CorProf.idl, CorProf.h  
   
  **库：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>请参阅  
- [ICorProfilerInfo 接口](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
+## <a name="see-also"></a>请参阅
+- [ICorProfilerInfo 接口](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
