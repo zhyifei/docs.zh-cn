@@ -9,18 +9,18 @@ helpviewer_keywords:
 - page functions [WPF], returning from
 - functions [WPF], returning from
 ms.assetid: 87804905-7e8f-417b-b0e3-5622da686396
-ms.openlocfilehash: 3251b373b11dc7682235251b6d82e22705456737
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 85ca9632a6f5b5df08fa6ac042d56ebbc70d427d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33545502"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54718541"
 ---
-# <a name="how-to-return-from-a-page-function"></a><span data-ttu-id="79f2a-102">如何：从页函数返回</span><span class="sxs-lookup"><span data-stu-id="79f2a-102">How to: Return from a Page Function</span></span>
-<span data-ttu-id="79f2a-103">本示例显示如何从页函数返回结果。</span><span class="sxs-lookup"><span data-stu-id="79f2a-103">This example shows how to return a result from a page function.</span></span>  
+# <a name="how-to-return-from-a-page-function"></a><span data-ttu-id="05b95-102">如何：从页函数返回</span><span class="sxs-lookup"><span data-stu-id="05b95-102">How to: Return from a Page Function</span></span>
+<span data-ttu-id="05b95-103">本示例显示如何从页函数返回结果。</span><span class="sxs-lookup"><span data-stu-id="05b95-103">This example shows how to return a result from a page function.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="79f2a-104">示例</span><span class="sxs-lookup"><span data-stu-id="79f2a-104">Example</span></span>  
- <span data-ttu-id="79f2a-105">若要从页函数返回，你需要调用<xref:System.Windows.Navigation.PageFunction%601.OnReturn%2A>和传递的实例<xref:System.Windows.Navigation.ReturnEventArgs%601>。</span><span class="sxs-lookup"><span data-stu-id="79f2a-105">To return from a page function, you need to call <xref:System.Windows.Navigation.PageFunction%601.OnReturn%2A> and pass an instance of <xref:System.Windows.Navigation.ReturnEventArgs%601>.</span></span>  
+## <a name="example"></a><span data-ttu-id="05b95-104">示例</span><span class="sxs-lookup"><span data-stu-id="05b95-104">Example</span></span>  
+ <span data-ttu-id="05b95-105">若要从页函数返回，需要调用<xref:System.Windows.Navigation.PageFunction%601.OnReturn%2A>的实例传递和<xref:System.Windows.Navigation.ReturnEventArgs%601>。</span><span class="sxs-lookup"><span data-stu-id="05b95-105">To return from a page function, you need to call <xref:System.Windows.Navigation.PageFunction%601.OnReturn%2A> and pass an instance of <xref:System.Windows.Navigation.ReturnEventArgs%601>.</span></span>  
   
  [!code-xaml[HOWTOPageFunctionSnippets#PageFunctionReturnAResultXAML1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/HOWTOPageFunctionSnippets/CSharp/GetStringPageFunction.xaml#pagefunctionreturnaresultxaml1)]  
 [!code-xaml[HOWTOPageFunctionSnippets#PageFunctionReturnAResultXAML2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/HOWTOPageFunctionSnippets/CSharp/GetStringPageFunction.xaml#pagefunctionreturnaresultxaml2)]  
@@ -28,5 +28,5 @@ ms.locfileid: "33545502"
  [!code-csharp[HOWTOPageFunctionSnippets#PageFunctionReturnAResultCODEBEHIND](../../../../samples/snippets/csharp/VS_Snippets_Wpf/HOWTOPageFunctionSnippets/CSharp/GetStringPageFunction.xaml.cs#pagefunctionreturnaresultcodebehind)]
  [!code-vb[HOWTOPageFunctionSnippets#PageFunctionReturnAResultCODEBEHIND](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/HOWTOPageFunctionSnippets/VisualBasic/GetStringPageFunction.xaml.vb#pagefunctionreturnaresultcodebehind)]  
   
-## <a name="see-also"></a><span data-ttu-id="79f2a-106">请参阅</span><span class="sxs-lookup"><span data-stu-id="79f2a-106">See Also</span></span>  
- <xref:System.Windows.Navigation.PageFunction%601>
+## <a name="see-also"></a><span data-ttu-id="05b95-106">请参阅</span><span class="sxs-lookup"><span data-stu-id="05b95-106">See also</span></span>
+- <xref:System.Windows.Navigation.PageFunction%601>
