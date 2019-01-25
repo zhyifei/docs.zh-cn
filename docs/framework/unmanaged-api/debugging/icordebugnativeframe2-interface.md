@@ -16,40 +16,40 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: dd8f1adee6bbcb3b57b87a2d6c85c01c624da9ec
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: cc664d308d4db3e97597d785eda159e32255fa54
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33421225"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54520368"
 ---
-# <a name="icordebugnativeframe2-interface"></a><span data-ttu-id="4d72e-102">ICorDebugNativeFrame2 接口</span><span class="sxs-lookup"><span data-stu-id="4d72e-102">ICorDebugNativeFrame2 Interface</span></span>
-<span data-ttu-id="4d72e-103">提供用于测试子帧与父帧关系的方法。</span><span class="sxs-lookup"><span data-stu-id="4d72e-103">Provides methods that test for child and parent frame relationships.</span></span>  
+# <a name="icordebugnativeframe2-interface"></a><span data-ttu-id="27c54-102">ICorDebugNativeFrame2 接口</span><span class="sxs-lookup"><span data-stu-id="27c54-102">ICorDebugNativeFrame2 Interface</span></span>
+<span data-ttu-id="27c54-103">提供用于测试子帧与父帧关系的方法。</span><span class="sxs-lookup"><span data-stu-id="27c54-103">Provides methods that test for child and parent frame relationships.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="4d72e-104">方法</span><span class="sxs-lookup"><span data-stu-id="4d72e-104">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="27c54-104">方法</span><span class="sxs-lookup"><span data-stu-id="27c54-104">Methods</span></span>  
   
-|<span data-ttu-id="4d72e-105">方法</span><span class="sxs-lookup"><span data-stu-id="4d72e-105">Method</span></span>|<span data-ttu-id="4d72e-106">描述</span><span class="sxs-lookup"><span data-stu-id="4d72e-106">Description</span></span>|  
+|<span data-ttu-id="27c54-105">方法</span><span class="sxs-lookup"><span data-stu-id="27c54-105">Method</span></span>|<span data-ttu-id="27c54-106">描述</span><span class="sxs-lookup"><span data-stu-id="27c54-106">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="4d72e-107">IsChild 方法</span><span class="sxs-lookup"><span data-stu-id="4d72e-107">IsChild Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugnativeframe2-ischild-method.md)|<span data-ttu-id="4d72e-108">确定当前帧是否子帧。</span><span class="sxs-lookup"><span data-stu-id="4d72e-108">Determines whether the current frame is a child frame.</span></span>|  
-|[<span data-ttu-id="4d72e-109">IsMatchingParentFrame 方法</span><span class="sxs-lookup"><span data-stu-id="4d72e-109">IsMatchingParentFrame Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugnativeframe2-ismatchingparentframe-method.md)|<span data-ttu-id="4d72e-110">确定是否为指定的框架为当前帧的父级。</span><span class="sxs-lookup"><span data-stu-id="4d72e-110">Determines whether the specified frame is the parent of the current frame.</span></span>|  
-|[<span data-ttu-id="4d72e-111">GetStackParameterSize 方法</span><span class="sxs-lookup"><span data-stu-id="4d72e-111">GetStackParameterSize Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugnativeframe2-getstackparametersize-method.md)|<span data-ttu-id="4d72e-112">在 x86 操作系统上的堆栈上返回参数的累积大小。</span><span class="sxs-lookup"><span data-stu-id="4d72e-112">Returns the cumulative size of the parameters on the stack on x86 operating systems.</span></span>|  
+|[<span data-ttu-id="27c54-107">IsChild 方法</span><span class="sxs-lookup"><span data-stu-id="27c54-107">IsChild Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugnativeframe2-ischild-method.md)|<span data-ttu-id="27c54-108">确定当前帧是否为子框架。</span><span class="sxs-lookup"><span data-stu-id="27c54-108">Determines whether the current frame is a child frame.</span></span>|  
+|[<span data-ttu-id="27c54-109">IsMatchingParentFrame 方法</span><span class="sxs-lookup"><span data-stu-id="27c54-109">IsMatchingParentFrame Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugnativeframe2-ismatchingparentframe-method.md)|<span data-ttu-id="27c54-110">确定指定的范围是否为当前帧的父级。</span><span class="sxs-lookup"><span data-stu-id="27c54-110">Determines whether the specified frame is the parent of the current frame.</span></span>|  
+|[<span data-ttu-id="27c54-111">GetStackParameterSize 方法</span><span class="sxs-lookup"><span data-stu-id="27c54-111">GetStackParameterSize Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugnativeframe2-getstackparametersize-method.md)|<span data-ttu-id="27c54-112">返回参数的累积大小 x86 操作系统上的堆栈上。</span><span class="sxs-lookup"><span data-stu-id="27c54-112">Returns the cumulative size of the parameters on the stack on x86 operating systems.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="4d72e-113">备注</span><span class="sxs-lookup"><span data-stu-id="4d72e-113">Remarks</span></span>  
- <span data-ttu-id="4d72e-114">此接口进行逻辑扩展"ICorDebugNativeFrame"接口。</span><span class="sxs-lookup"><span data-stu-id="4d72e-114">This interface logically extends the "ICorDebugNativeFrame" interface.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="27c54-113">备注</span><span class="sxs-lookup"><span data-stu-id="27c54-113">Remarks</span></span>  
+ <span data-ttu-id="27c54-114">此接口进行逻辑扩展"ICorDebugNativeFrame"接口。</span><span class="sxs-lookup"><span data-stu-id="27c54-114">This interface logically extends the "ICorDebugNativeFrame" interface.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="4d72e-115">此接口不支持跨计算机或跨进程远程调用。</span><span class="sxs-lookup"><span data-stu-id="4d72e-115">This interface does not support being called remotely, either cross-machine or cross-process.</span></span>  
+>  <span data-ttu-id="27c54-115">此接口不支持跨计算机或跨进程远程调用。</span><span class="sxs-lookup"><span data-stu-id="27c54-115">This interface does not support being called remotely, either cross-machine or cross-process.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="4d72e-116">要求</span><span class="sxs-lookup"><span data-stu-id="4d72e-116">Requirements</span></span>  
- <span data-ttu-id="4d72e-117">**平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="4d72e-117">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="27c54-116">要求</span><span class="sxs-lookup"><span data-stu-id="27c54-116">Requirements</span></span>  
+ <span data-ttu-id="27c54-117">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="27c54-117">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="4d72e-118">**标头：** CorDebug.idl、 CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="4d72e-118">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="27c54-118">**标头：** CorDebug.idl、 CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="27c54-118">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="4d72e-119">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="4d72e-119">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="27c54-119">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="27c54-119">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="4d72e-120">**.NET framework 版本：** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="4d72e-120">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
+ <span data-ttu-id="27c54-120">**.NET Framework 版本：**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="27c54-120">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="4d72e-121">请参阅</span><span class="sxs-lookup"><span data-stu-id="4d72e-121">See Also</span></span>  
-    
- [<span data-ttu-id="4d72e-122">调试接口</span><span class="sxs-lookup"><span data-stu-id="4d72e-122">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)  
- [<span data-ttu-id="4d72e-123">调试</span><span class="sxs-lookup"><span data-stu-id="4d72e-123">Debugging</span></span>](../../../../docs/framework/unmanaged-api/debugging/index.md)
+## <a name="see-also"></a><span data-ttu-id="27c54-121">请参阅</span><span class="sxs-lookup"><span data-stu-id="27c54-121">See also</span></span>
+
+- [<span data-ttu-id="27c54-122">调试接口</span><span class="sxs-lookup"><span data-stu-id="27c54-122">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [<span data-ttu-id="27c54-123">调试</span><span class="sxs-lookup"><span data-stu-id="27c54-123">Debugging</span></span>](../../../../docs/framework/unmanaged-api/debugging/index.md)

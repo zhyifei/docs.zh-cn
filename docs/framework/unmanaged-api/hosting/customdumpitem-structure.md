@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f742d219d603488bbade091f7a8192785d3e84f6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 930d56fcfe7cf0d2a128c2068e724b85a224b3fd
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33433091"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54568915"
 ---
-# <a name="customdumpitem-structure"></a><span data-ttu-id="87a61-102">CustomDumpItem 结构</span><span class="sxs-lookup"><span data-stu-id="87a61-102">CustomDumpItem Structure</span></span>
-<span data-ttu-id="87a61-103">描述要添加到自定义转储错误报告中的项。</span><span class="sxs-lookup"><span data-stu-id="87a61-103">Describes an item to be added to a custom dump in error reporting.</span></span>  
+# <a name="customdumpitem-structure"></a><span data-ttu-id="e8429-102">CustomDumpItem 结构</span><span class="sxs-lookup"><span data-stu-id="e8429-102">CustomDumpItem Structure</span></span>
+<span data-ttu-id="e8429-103">描述要添加到错误报告中的自定义转储的项。</span><span class="sxs-lookup"><span data-stu-id="e8429-103">Describes an item to be added to a custom dump in error reporting.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="87a61-104">语法</span><span class="sxs-lookup"><span data-stu-id="87a61-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="e8429-104">语法</span><span class="sxs-lookup"><span data-stu-id="e8429-104">Syntax</span></span>  
   
 ```  
 struct {  
@@ -37,24 +37,24 @@ struct {
 } CustomDumpItem;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="87a61-105">成员</span><span class="sxs-lookup"><span data-stu-id="87a61-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="e8429-105">成员</span><span class="sxs-lookup"><span data-stu-id="e8429-105">Members</span></span>  
   
-|<span data-ttu-id="87a61-106">成员</span><span class="sxs-lookup"><span data-stu-id="87a61-106">Member</span></span>|<span data-ttu-id="87a61-107">描述</span><span class="sxs-lookup"><span data-stu-id="87a61-107">Description</span></span>|  
+|<span data-ttu-id="e8429-106">成员</span><span class="sxs-lookup"><span data-stu-id="e8429-106">Member</span></span>|<span data-ttu-id="e8429-107">描述</span><span class="sxs-lookup"><span data-stu-id="e8429-107">Description</span></span>|  
 |------------|-----------------|  
-|`itemKind`|<span data-ttu-id="87a61-108">[ECustomDumpItemKind](../../../../docs/framework/unmanaged-api/hosting/ecustomdumpitemkind-enumeration.md)值，该值指示要添加项的种类。</span><span class="sxs-lookup"><span data-stu-id="87a61-108">An [ECustomDumpItemKind](../../../../docs/framework/unmanaged-api/hosting/ecustomdumpitemkind-enumeration.md) value that indicates the kind of item to be added.</span></span>|  
-|`pReserved`|<span data-ttu-id="87a61-109">当前未使用。</span><span class="sxs-lookup"><span data-stu-id="87a61-109">Not currently used.</span></span> <span data-ttu-id="87a61-110">任何项添加到联合必须不大于指针大小。</span><span class="sxs-lookup"><span data-stu-id="87a61-110">Any items added to the union must be no larger than pointer size.</span></span> <span data-ttu-id="87a61-111">如果`struct`是必需的必须单独分配，并指向它。</span><span class="sxs-lookup"><span data-stu-id="87a61-111">If a `struct` is required, you must allocate it separately and point to it.</span></span>|  
+|`itemKind`|<span data-ttu-id="e8429-108">[ECustomDumpItemKind](../../../../docs/framework/unmanaged-api/hosting/ecustomdumpitemkind-enumeration.md)值，该值指示要添加项的类型。</span><span class="sxs-lookup"><span data-stu-id="e8429-108">An [ECustomDumpItemKind](../../../../docs/framework/unmanaged-api/hosting/ecustomdumpitemkind-enumeration.md) value that indicates the kind of item to be added.</span></span>|  
+|`pReserved`|<span data-ttu-id="e8429-109">当前未使用。</span><span class="sxs-lookup"><span data-stu-id="e8429-109">Not currently used.</span></span> <span data-ttu-id="e8429-110">添加要联合的任何项必须是不大于指针大小。</span><span class="sxs-lookup"><span data-stu-id="e8429-110">Any items added to the union must be no larger than pointer size.</span></span> <span data-ttu-id="e8429-111">如果`struct`是必需的必须单独分配，并指向它。</span><span class="sxs-lookup"><span data-stu-id="e8429-111">If a `struct` is required, you must allocate it separately and point to it.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="87a61-112">备注</span><span class="sxs-lookup"><span data-stu-id="87a61-112">Remarks</span></span>  
- <span data-ttu-id="87a61-113">[Iclrerrorreportingmanager:: Begincustomdump](../../../../docs/framework/unmanaged-api/hosting/iclrerrorreportingmanager-begincustomdump-method.md)采用类型的参数`CustomDumpItem`。</span><span class="sxs-lookup"><span data-stu-id="87a61-113">[ICLRErrorReportingManager::BeginCustomDump](../../../../docs/framework/unmanaged-api/hosting/iclrerrorreportingmanager-begincustomdump-method.md) takes a parameter of type `CustomDumpItem`.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="e8429-112">备注</span><span class="sxs-lookup"><span data-stu-id="e8429-112">Remarks</span></span>  
+ <span data-ttu-id="e8429-113">[Iclrerrorreportingmanager:: Begincustomdump](../../../../docs/framework/unmanaged-api/hosting/iclrerrorreportingmanager-begincustomdump-method.md)采用的类型参数`CustomDumpItem`。</span><span class="sxs-lookup"><span data-stu-id="e8429-113">[ICLRErrorReportingManager::BeginCustomDump](../../../../docs/framework/unmanaged-api/hosting/iclrerrorreportingmanager-begincustomdump-method.md) takes a parameter of type `CustomDumpItem`.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="87a61-114">要求</span><span class="sxs-lookup"><span data-stu-id="87a61-114">Requirements</span></span>  
- <span data-ttu-id="87a61-115">**平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="87a61-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="e8429-114">要求</span><span class="sxs-lookup"><span data-stu-id="e8429-114">Requirements</span></span>  
+ <span data-ttu-id="e8429-115">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="e8429-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="87a61-116">**标头：** MSCorEE.idl</span><span class="sxs-lookup"><span data-stu-id="87a61-116">**Header:** MSCorEE.idl</span></span>  
+ <span data-ttu-id="e8429-116">**标头：** MSCorEE.idl</span><span class="sxs-lookup"><span data-stu-id="e8429-116">**Header:** MSCorEE.idl</span></span>  
   
- <span data-ttu-id="87a61-117">**库：** 作为 MSCorEE.dll 中的资源</span><span class="sxs-lookup"><span data-stu-id="87a61-117">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="e8429-117">**库：** 包含为 MSCorEE.dll 中的资源</span><span class="sxs-lookup"><span data-stu-id="e8429-117">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="87a61-118">**.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="87a61-118">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="e8429-118">**.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="e8429-118">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="87a61-119">请参阅</span><span class="sxs-lookup"><span data-stu-id="87a61-119">See Also</span></span>  
- [<span data-ttu-id="87a61-120">承载结构</span><span class="sxs-lookup"><span data-stu-id="87a61-120">Hosting Structures</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-structures.md)
+## <a name="see-also"></a><span data-ttu-id="e8429-119">请参阅</span><span class="sxs-lookup"><span data-stu-id="e8429-119">See also</span></span>
+- [<span data-ttu-id="e8429-120">承载结构</span><span class="sxs-lookup"><span data-stu-id="e8429-120">Hosting Structures</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-structures.md)
