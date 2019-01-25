@@ -1,14 +1,6 @@
 ---
-title: "ICatalogServices::Autodone 方法"
-ms.custom: 
+title: ICatalogServices::Autodone 方法
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICatalogServices.Autodone
 api_location:
@@ -23,26 +15,23 @@ helpviewer_keywords:
 ms.assetid: 3002f051-7aaa-4669-9314-cbc65b3a1772
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 3cd44c2f21771ccda9a656bfe66f865e181fcee1
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 63c00755c7d39160343d25f9fc83992b27719d29
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54678468"
 ---
-# <a name="icatalogservicesautodone-method"></a><span data-ttu-id="edd3f-102">ICatalogServices::Autodone 方法</span><span class="sxs-lookup"><span data-stu-id="edd3f-102">ICatalogServices::Autodone Method</span></span>
-<span data-ttu-id="edd3f-103">此方法支持 .NET Framework 基础结构，但不适合直接在代码中使用。</span><span class="sxs-lookup"><span data-stu-id="edd3f-103">This method supports the .NET Framework infrastructure and is not intended to be used directly from your code.</span></span>  
+# <a name="icatalogservicesautodone-method"></a><span data-ttu-id="fe3ac-102">ICatalogServices::Autodone 方法</span><span class="sxs-lookup"><span data-stu-id="fe3ac-102">ICatalogServices::Autodone Method</span></span>
+<span data-ttu-id="fe3ac-103">此方法支持 .NET Framework 基础结构，但不适合直接在代码中使用。</span><span class="sxs-lookup"><span data-stu-id="fe3ac-103">This method supports the .NET Framework infrastructure and is not intended to be used directly from your code.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="edd3f-104">语法</span><span class="sxs-lookup"><span data-stu-id="edd3f-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="fe3ac-104">语法</span><span class="sxs-lookup"><span data-stu-id="fe3ac-104">Syntax</span></span>  
   
 ```  
 HRESULT Autodone ( );  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="edd3f-105">请参阅</span><span class="sxs-lookup"><span data-stu-id="edd3f-105">See Also</span></span>  
- [<span data-ttu-id="edd3f-106">承载接口</span><span class="sxs-lookup"><span data-stu-id="edd3f-106">Hosting Interfaces</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+## <a name="see-also"></a><span data-ttu-id="fe3ac-105">请参阅</span><span class="sxs-lookup"><span data-stu-id="fe3ac-105">See also</span></span>
+- [<span data-ttu-id="fe3ac-106">承载接口</span><span class="sxs-lookup"><span data-stu-id="fe3ac-106">Hosting Interfaces</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
