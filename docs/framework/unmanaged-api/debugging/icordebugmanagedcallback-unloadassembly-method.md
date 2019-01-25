@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a892012e872dcf44512adbe0d6890812d84ed899
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 93d44006dd6652a8d34c23209eb957b23064f976
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33412589"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54703999"
 ---
-# <a name="icordebugmanagedcallbackunloadassembly-method"></a><span data-ttu-id="d2673-102">ICorDebugManagedCallback::UnloadAssembly 方法</span><span class="sxs-lookup"><span data-stu-id="d2673-102">ICorDebugManagedCallback::UnloadAssembly Method</span></span>
-<span data-ttu-id="d2673-103">通知调试器公共语言运行时程序集中已被卸载。</span><span class="sxs-lookup"><span data-stu-id="d2673-103">Notifies the debugger that a common language runtime assembly has been unloaded.</span></span>  
+# <a name="icordebugmanagedcallbackunloadassembly-method"></a><span data-ttu-id="03f20-102">ICorDebugManagedCallback::UnloadAssembly 方法</span><span class="sxs-lookup"><span data-stu-id="03f20-102">ICorDebugManagedCallback::UnloadAssembly Method</span></span>
+<span data-ttu-id="03f20-103">通知调试器公共语言运行时程序集已被卸载。</span><span class="sxs-lookup"><span data-stu-id="03f20-103">Notifies the debugger that a common language runtime assembly has been unloaded.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="d2673-104">语法</span><span class="sxs-lookup"><span data-stu-id="d2673-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="03f20-104">语法</span><span class="sxs-lookup"><span data-stu-id="03f20-104">Syntax</span></span>  
   
 ```  
 HRESULT UnloadAssembly (  
@@ -36,25 +36,25 @@ HRESULT UnloadAssembly (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="d2673-105">参数</span><span class="sxs-lookup"><span data-stu-id="d2673-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="03f20-105">参数</span><span class="sxs-lookup"><span data-stu-id="03f20-105">Parameters</span></span>  
  `pAppDomain`  
- <span data-ttu-id="d2673-106">[in]指向一个表示包含程序集的应用程序域的 ICorDebugAppDomain 对象的指针。</span><span class="sxs-lookup"><span data-stu-id="d2673-106">[in] A pointer to an ICorDebugAppDomain object that represents the application domain that contained the assembly.</span></span>  
+ <span data-ttu-id="03f20-106">[in]指向一个 ICorDebugAppDomain 对象，表示包含程序集的应用程序域的指针。</span><span class="sxs-lookup"><span data-stu-id="03f20-106">[in] A pointer to an ICorDebugAppDomain object that represents the application domain that contained the assembly.</span></span>  
   
  `pAssembly`  
- <span data-ttu-id="d2673-107">[in]指向表示程序集的 icor 调试程序集对象的指针。</span><span class="sxs-lookup"><span data-stu-id="d2673-107">[in] A pointer to an ICorDebugAssembly object that represents the assembly.</span></span>  
+ <span data-ttu-id="03f20-107">[in]指向表示程序集的 icor 调试程序集对象的指针。</span><span class="sxs-lookup"><span data-stu-id="03f20-107">[in] A pointer to an ICorDebugAssembly object that represents the assembly.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="d2673-108">备注</span><span class="sxs-lookup"><span data-stu-id="d2673-108">Remarks</span></span>  
- <span data-ttu-id="d2673-109">不应在此回调后使用该程序集。</span><span class="sxs-lookup"><span data-stu-id="d2673-109">The assembly should not be used after this callback.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="03f20-108">备注</span><span class="sxs-lookup"><span data-stu-id="03f20-108">Remarks</span></span>  
+ <span data-ttu-id="03f20-109">不应在此回调后使用该程序集。</span><span class="sxs-lookup"><span data-stu-id="03f20-109">The assembly should not be used after this callback.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="d2673-110">要求</span><span class="sxs-lookup"><span data-stu-id="d2673-110">Requirements</span></span>  
- <span data-ttu-id="d2673-111">**平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="d2673-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="03f20-110">要求</span><span class="sxs-lookup"><span data-stu-id="03f20-110">Requirements</span></span>  
+ <span data-ttu-id="03f20-111">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="03f20-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="d2673-112">**标头：** CorDebug.idl、 CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="d2673-112">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="03f20-112">**标头：** CorDebug.idl、 CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="03f20-112">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="d2673-113">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="d2673-113">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="03f20-113">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="03f20-113">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="d2673-114">**.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="d2673-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="03f20-114">**.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="03f20-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="d2673-115">请参阅</span><span class="sxs-lookup"><span data-stu-id="d2673-115">See Also</span></span>  
- [<span data-ttu-id="d2673-116">LoadAssembly 方法</span><span class="sxs-lookup"><span data-stu-id="d2673-116">LoadAssembly Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-loadassembly-method.md)  
- [<span data-ttu-id="d2673-117">ICorDebugManagedCallback 接口</span><span class="sxs-lookup"><span data-stu-id="d2673-117">ICorDebugManagedCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)
+## <a name="see-also"></a><span data-ttu-id="03f20-115">请参阅</span><span class="sxs-lookup"><span data-stu-id="03f20-115">See also</span></span>
+- [<span data-ttu-id="03f20-116">LoadAssembly 方法</span><span class="sxs-lookup"><span data-stu-id="03f20-116">LoadAssembly Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-loadassembly-method.md)
+- [<span data-ttu-id="03f20-117">ICorDebugManagedCallback 接口</span><span class="sxs-lookup"><span data-stu-id="03f20-117">ICorDebugManagedCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)

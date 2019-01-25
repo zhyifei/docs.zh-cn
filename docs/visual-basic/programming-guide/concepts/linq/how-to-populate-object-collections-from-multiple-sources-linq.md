@@ -1,28 +1,28 @@
 ---
-title: 如何： 从多个源 (LINQ) (Visual Basic) 填充对象集合
+title: 如何：从多个源 (LINQ) (Visual Basic) 填充对象集合
 ms.date: 06/22/2018
 ms.assetid: 63062a22-e6a9-42c0-b357-c7c965f58f33
-ms.openlocfilehash: 6560f853874f9b9a9aeb53bd0678540004fdfcc1
-ms.sourcegitcommit: 9e18e4a18284ae9e54c515e30d019c0bbff9cd37
+ms.openlocfilehash: 0228d152539abe3bf0db5a8e5bf4581eaf957b31
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37070856"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54638816"
 ---
-# <a name="how-to-populate-object-collections-from-multiple-sources-linq-visual-basic"></a><span data-ttu-id="ca5f4-102">如何： 从多个源 (LINQ) (Visual Basic) 填充对象集合</span><span class="sxs-lookup"><span data-stu-id="ca5f4-102">How to: Populate Object Collections from Multiple Sources (LINQ) (Visual Basic)</span></span>
+# <a name="how-to-populate-object-collections-from-multiple-sources-linq-visual-basic"></a><span data-ttu-id="d464b-102">如何：从多个源 (LINQ) (Visual Basic) 填充对象集合</span><span class="sxs-lookup"><span data-stu-id="d464b-102">How to: Populate Object Collections from Multiple Sources (LINQ) (Visual Basic)</span></span>
 
-<span data-ttu-id="ca5f4-103">本示例演示如何将来自不同源的数据合并到一系列新的类型。</span><span class="sxs-lookup"><span data-stu-id="ca5f4-103">This example shows how to merge data from different sources into a sequence of new types.</span></span>
+<span data-ttu-id="d464b-103">本示例演示如何将来自不同源的数据合并到一系列新的类型。</span><span class="sxs-lookup"><span data-stu-id="d464b-103">This example shows how to merge data from different sources into a sequence of new types.</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="ca5f4-104">请勿尝试加入仍在数据库的数据的文件系统中的内存中数据。</span><span class="sxs-lookup"><span data-stu-id="ca5f4-104">Don't try to join in-memory data or data in the file system with data that is still in a database.</span></span> <span data-ttu-id="ca5f4-105">这种跨域联接可能产生未定义的结果，因为可能为数据库查询和其他类型的源定义了联接操作的不同方式。</span><span class="sxs-lookup"><span data-stu-id="ca5f4-105">Such cross-domain joins can yield undefined results because of different ways in which join operations might be defined for database queries and other types of sources.</span></span> <span data-ttu-id="ca5f4-106">此外，如果数据库中的数据量足够大，这样的操作还存在可能导致内存不足的异常的风险。</span><span class="sxs-lookup"><span data-stu-id="ca5f4-106">Additionally, there is a risk that such an operation could cause an out-of-memory exception if the amount of data in the database is large enough.</span></span> <span data-ttu-id="ca5f4-107">若要将数据库中的数据联接到内存数据，首先对数据库查询调用 `ToList` 或 `ToArray`，然后对返回的集合执行联接。</span><span class="sxs-lookup"><span data-stu-id="ca5f4-107">To join data from a database to in-memory data, first call `ToList` or `ToArray` on the database query, and then perform the join on the returned collection.</span></span>
+> <span data-ttu-id="d464b-104">请勿尝试将内存中数据或文件系统中的数据与仍在数据库中的数据进行联接。</span><span class="sxs-lookup"><span data-stu-id="d464b-104">Don't try to join in-memory data or data in the file system with data that is still in a database.</span></span> <span data-ttu-id="d464b-105">这种跨域联接可能产生未定义的结果，因为可能为数据库查询和其他类型的源定义了联接操作的不同方式。</span><span class="sxs-lookup"><span data-stu-id="d464b-105">Such cross-domain joins can yield undefined results because of different ways in which join operations might be defined for database queries and other types of sources.</span></span> <span data-ttu-id="d464b-106">此外，如果数据库中的数据量足够大，这样的操作还存在可能导致内存不足的异常的风险。</span><span class="sxs-lookup"><span data-stu-id="d464b-106">Additionally, there is a risk that such an operation could cause an out-of-memory exception if the amount of data in the database is large enough.</span></span> <span data-ttu-id="d464b-107">若要将数据库中的数据联接到内存数据，首先对数据库查询调用 `ToList` 或 `ToArray`，然后对返回的集合执行联接。</span><span class="sxs-lookup"><span data-stu-id="d464b-107">To join data from a database to in-memory data, first call `ToList` or `ToArray` on the database query, and then perform the join on the returned collection.</span></span>
 
-## <a name="to-create-the-data-file"></a><span data-ttu-id="ca5f4-108">创建数据文件</span><span class="sxs-lookup"><span data-stu-id="ca5f4-108">To create the data file</span></span>
+## <a name="to-create-the-data-file"></a><span data-ttu-id="d464b-108">创建数据文件</span><span class="sxs-lookup"><span data-stu-id="d464b-108">To create the data file</span></span>
 
-- <span data-ttu-id="ca5f4-109">将的 names.csv 和 scores.csv 文件复制到你的项目文件夹中所述[How to： 内容加入从不同文件 (LINQ) (Visual Basic 中)](../../../../visual-basic/programming-guide/concepts/linq/how-to-join-content-from-dissimilar-files-linq.md)。</span><span class="sxs-lookup"><span data-stu-id="ca5f4-109">Copy the names.csv and scores.csv files into your project folder, as described in [How to: Join Content from Dissimilar Files (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-join-content-from-dissimilar-files-linq.md).</span></span>
+- <span data-ttu-id="d464b-109">将 names.csv 和 scores.csv 文件复制到项目文件夹，如中所述[如何：联接不同文件 (LINQ) (Visual Basic 中) 的内容](../../../../visual-basic/programming-guide/concepts/linq/how-to-join-content-from-dissimilar-files-linq.md)。</span><span class="sxs-lookup"><span data-stu-id="d464b-109">Copy the names.csv and scores.csv files into your project folder, as described in [How to: Join Content from Dissimilar Files (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-join-content-from-dissimilar-files-linq.md).</span></span>
 
-## <a name="example"></a><span data-ttu-id="ca5f4-110">示例</span><span class="sxs-lookup"><span data-stu-id="ca5f4-110">Example</span></span>
+## <a name="example"></a><span data-ttu-id="d464b-110">示例</span><span class="sxs-lookup"><span data-stu-id="d464b-110">Example</span></span>
 
-<span data-ttu-id="ca5f4-111">下面的示例演示如何使用命名类型 `Student` 存储来自两个内存字符串集合（模拟 .csv 格式的电子表格数据）的合并数据。</span><span class="sxs-lookup"><span data-stu-id="ca5f4-111">The following example shows how to use a named type `Student` to store merged data from two in-memory collections of strings that simulate spreadsheet data in .csv format.</span></span> <span data-ttu-id="ca5f4-112">第一个字符串集合代表学生姓名和 ID，第二个集合代表学生 ID（在第一列）和四次考试分数。</span><span class="sxs-lookup"><span data-stu-id="ca5f4-112">The first collection of strings represents the student names and IDs, and the second collection represents the student ID (in the first column) and four exam scores.</span></span> <span data-ttu-id="ca5f4-113">此 ID 用作外键。</span><span class="sxs-lookup"><span data-stu-id="ca5f4-113">The ID is used as the foreign key.</span></span>
+<span data-ttu-id="d464b-111">下面的示例演示如何使用命名类型 `Student` 存储来自两个内存字符串集合（模拟 .csv 格式的电子表格数据）的合并数据。</span><span class="sxs-lookup"><span data-stu-id="d464b-111">The following example shows how to use a named type `Student` to store merged data from two in-memory collections of strings that simulate spreadsheet data in .csv format.</span></span> <span data-ttu-id="d464b-112">第一个字符串集合代表学生姓名和 ID，第二个集合代表学生 ID（在第一列）和四次考试分数。</span><span class="sxs-lookup"><span data-stu-id="d464b-112">The first collection of strings represents the student names and IDs, and the second collection represents the student ID (in the first column) and four exam scores.</span></span> <span data-ttu-id="d464b-113">此 ID 用作外键。</span><span class="sxs-lookup"><span data-stu-id="d464b-113">The ID is used as the foreign key.</span></span>
 
 ```vb
 Imports System.Collections.Generic
@@ -100,9 +100,9 @@ End Class
 ' The average score of Tucker Michael is 92
 ```
 
-<span data-ttu-id="ca5f4-114">在[Select 子句](../../../../visual-basic/language-reference/queries/select-clause.md)子句，对象初始值设定项用于实例化每个新`Student`从两个源中使用的数据的对象。</span><span class="sxs-lookup"><span data-stu-id="ca5f4-114">In the [Select Clause](../../../../visual-basic/language-reference/queries/select-clause.md) clause, an object initializer is used to instantiate each new `Student` object by using the data from the two sources.</span></span>
+<span data-ttu-id="d464b-114">在中[Select 子句](../../../../visual-basic/language-reference/queries/select-clause.md)子句中，对象初始值设定项用于实例化每个新`Student`使用来自两个来源的数据的对象。</span><span class="sxs-lookup"><span data-stu-id="d464b-114">In the [Select Clause](../../../../visual-basic/language-reference/queries/select-clause.md) clause, an object initializer is used to instantiate each new `Student` object by using the data from the two sources.</span></span>
 
-<span data-ttu-id="ca5f4-115">如果你不需要存储查询的结果，匿名类型可以更方便比命名类型。</span><span class="sxs-lookup"><span data-stu-id="ca5f4-115">If you don't have to store the results of a query, anonymous types can be more convenient than named types.</span></span> <span data-ttu-id="ca5f4-116">如果在执行查询的方法外部传递查询结果，则需要使用命名类型。</span><span class="sxs-lookup"><span data-stu-id="ca5f4-116">Named types are required if you pass the query results outside the method in which the query is executed.</span></span> <span data-ttu-id="ca5f4-117">下面的示例执行与前面的示例相同的任务，但使用的是匿名类型，而不是命名类型：</span><span class="sxs-lookup"><span data-stu-id="ca5f4-117">The following example performs the same task as the previous example, but uses anonymous types instead of named types:</span></span>
+<span data-ttu-id="d464b-115">如果不需要存储查询的结果，那么和命名类型相比，匿名类型使用起来更方便。</span><span class="sxs-lookup"><span data-stu-id="d464b-115">If you don't have to store the results of a query, anonymous types can be more convenient than named types.</span></span> <span data-ttu-id="d464b-116">如果在执行查询的方法外部传递查询结果，则需要使用命名类型。</span><span class="sxs-lookup"><span data-stu-id="d464b-116">Named types are required if you pass the query results outside the method in which the query is executed.</span></span> <span data-ttu-id="d464b-117">下面的示例执行与前面的示例相同的任务，但使用的是匿名类型，而不是命名类型：</span><span class="sxs-lookup"><span data-stu-id="d464b-117">The following example performs the same task as the previous example, but uses anonymous types instead of named types:</span></span>
 
 ```vb
 ' Merge the data by using an anonymous type.
@@ -128,14 +128,14 @@ For Each s In queryNamesScores2
 Next
 ```
 
-## <a name="compiling-the-code"></a><span data-ttu-id="ca5f4-118">编译代码</span><span class="sxs-lookup"><span data-stu-id="ca5f4-118">Compiling the code</span></span>
+## <a name="compiling-the-code"></a><span data-ttu-id="d464b-118">编译代码</span><span class="sxs-lookup"><span data-stu-id="d464b-118">Compiling the code</span></span>
 
-<span data-ttu-id="ca5f4-119">创建和编译的项目是面向以下选项之一：</span><span class="sxs-lookup"><span data-stu-id="ca5f4-119">Create and compile a project that targets one of the following options:</span></span>
+<span data-ttu-id="d464b-119">创建并编译面向下列选项之一的项目：</span><span class="sxs-lookup"><span data-stu-id="d464b-119">Create and compile a project that targets one of the following options:</span></span>
 
-- <span data-ttu-id="ca5f4-120">.NET framework 版本 3.5 具有对 System.Core.dll 的引用。</span><span class="sxs-lookup"><span data-stu-id="ca5f4-120">.NET Framework version 3.5 with a reference to System.Core.dll.</span></span>
-- <span data-ttu-id="ca5f4-121">.NET framework 版本 4.0 或更高版本。</span><span class="sxs-lookup"><span data-stu-id="ca5f4-121">.NET Framework version 4.0 or higher.</span></span>
-- <span data-ttu-id="ca5f4-122">.NET core 版本 1.0 或更高版本。</span><span class="sxs-lookup"><span data-stu-id="ca5f4-122">.NET Core version 1.0 or higher.</span></span>
+- <span data-ttu-id="d464b-120">.NET Framework 版本 3.5，含对 System.Core.dll 的引用。</span><span class="sxs-lookup"><span data-stu-id="d464b-120">.NET Framework version 3.5 with a reference to System.Core.dll.</span></span>
+- <span data-ttu-id="d464b-121">.NET Framework 版本 4.0或更高版本。</span><span class="sxs-lookup"><span data-stu-id="d464b-121">.NET Framework version 4.0 or higher.</span></span>
+- <span data-ttu-id="d464b-122">.NET Core 版本 1.0 或更高版本。</span><span class="sxs-lookup"><span data-stu-id="d464b-122">.NET Core version 1.0 or higher.</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="ca5f4-123">请参阅</span><span class="sxs-lookup"><span data-stu-id="ca5f4-123">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="d464b-123">请参阅</span><span class="sxs-lookup"><span data-stu-id="d464b-123">See also</span></span>
 
-[<span data-ttu-id="ca5f4-124">LINQ 和字符串 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="ca5f4-124">LINQ and Strings (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)
+- [<span data-ttu-id="d464b-124">LINQ 和字符串 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="d464b-124">LINQ and Strings (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)

@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 74b0fc10b7d838265a6ccd9e2581f67a432f2c9e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 56273146670dc2f4efde06a2f96e755f6fb86d99
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33417792"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54712747"
 ---
-# <a name="icordebugeditandcontinueerrorinfogetstring-method"></a><span data-ttu-id="47c02-102">ICorDebugEditAndContinueErrorInfo::GetString 方法</span><span class="sxs-lookup"><span data-stu-id="47c02-102">ICorDebugEditAndContinueErrorInfo::GetString Method</span></span>
-<span data-ttu-id="47c02-103">`GetString` 已过时。</span><span class="sxs-lookup"><span data-stu-id="47c02-103">`GetString` is obsolete.</span></span> <span data-ttu-id="47c02-104">请勿调用此方法。</span><span class="sxs-lookup"><span data-stu-id="47c02-104">Do not call this method.</span></span>  
+# <a name="icordebugeditandcontinueerrorinfogetstring-method"></a><span data-ttu-id="ac71e-102">ICorDebugEditAndContinueErrorInfo::GetString 方法</span><span class="sxs-lookup"><span data-stu-id="ac71e-102">ICorDebugEditAndContinueErrorInfo::GetString Method</span></span>
+<span data-ttu-id="ac71e-103">`GetString` 已过时。</span><span class="sxs-lookup"><span data-stu-id="ac71e-103">`GetString` is obsolete.</span></span> <span data-ttu-id="ac71e-104">请勿调用此方法。</span><span class="sxs-lookup"><span data-stu-id="ac71e-104">Do not call this method.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="47c02-105">请参阅</span><span class="sxs-lookup"><span data-stu-id="47c02-105">See Also</span></span>  
- [<span data-ttu-id="47c02-106">调试接口</span><span class="sxs-lookup"><span data-stu-id="47c02-106">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a><span data-ttu-id="ac71e-105">请参阅</span><span class="sxs-lookup"><span data-stu-id="ac71e-105">See also</span></span>
+- [<span data-ttu-id="ac71e-106">调试接口</span><span class="sxs-lookup"><span data-stu-id="ac71e-106">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

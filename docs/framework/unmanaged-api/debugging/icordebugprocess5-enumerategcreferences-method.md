@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2b5f66099eb4b1cb84d9911567cac4255bf20480
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 44093f84ea644757a5f5c73da54ce5bcfa717a4e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33421391"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54728079"
 ---
-# <a name="icordebugprocess5enumerategcreferences-method"></a><span data-ttu-id="506dd-102">ICorDebugProcess5::EnumerateGCReferences 方法</span><span class="sxs-lookup"><span data-stu-id="506dd-102">ICorDebugProcess5::EnumerateGCReferences Method</span></span>
-<span data-ttu-id="506dd-103">获取要进行垃圾回收的过程中的所有对象的枚举数。</span><span class="sxs-lookup"><span data-stu-id="506dd-103">Gets an enumerator for all objects that are to be garbage-collected in a process.</span></span>  
+# <a name="icordebugprocess5enumerategcreferences-method"></a><span data-ttu-id="40d76-102">ICorDebugProcess5::EnumerateGCReferences 方法</span><span class="sxs-lookup"><span data-stu-id="40d76-102">ICorDebugProcess5::EnumerateGCReferences Method</span></span>
+<span data-ttu-id="40d76-103">获取要进行垃圾回收的过程中的所有对象的枚举器。</span><span class="sxs-lookup"><span data-stu-id="40d76-103">Gets an enumerator for all objects that are to be garbage-collected in a process.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="506dd-104">语法</span><span class="sxs-lookup"><span data-stu-id="506dd-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="40d76-104">语法</span><span class="sxs-lookup"><span data-stu-id="40d76-104">Syntax</span></span>  
   
 ```  
 HRESULT EnumerateGCReferences(  
@@ -36,25 +36,25 @@ HRESULT EnumerateGCReferences(
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="506dd-105">参数</span><span class="sxs-lookup"><span data-stu-id="506dd-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="40d76-105">参数</span><span class="sxs-lookup"><span data-stu-id="40d76-105">Parameters</span></span>  
  `enumerateWeakReferences`  
- <span data-ttu-id="506dd-106">[in]一个布尔值，该值指示弱引用是否也要进行枚举。</span><span class="sxs-lookup"><span data-stu-id="506dd-106">[in] A Boolean value that indicates whether weak references are also to be enumerated.</span></span> <span data-ttu-id="506dd-107">如果`enumerateWeakReferences`是`true`、`ppEnum`枚举器包括的强引用和弱引用。</span><span class="sxs-lookup"><span data-stu-id="506dd-107">If `enumerateWeakReferences` is `true`, the `ppEnum` enumerator includes both strong references and weak references.</span></span> <span data-ttu-id="506dd-108">如果`enumerateWeakReferences`是`false`，该枚举数包含仅的强引用。</span><span class="sxs-lookup"><span data-stu-id="506dd-108">If `enumerateWeakReferences` is `false`, the enumerator includes only strong references.</span></span>  
+ <span data-ttu-id="40d76-106">[in]一个布尔值，该值指示弱引用是否也要枚举。</span><span class="sxs-lookup"><span data-stu-id="40d76-106">[in] A Boolean value that indicates whether weak references are also to be enumerated.</span></span> <span data-ttu-id="40d76-107">如果`enumerateWeakReferences`是`true`，则`ppEnum`枚举器包括强引用和弱引用。</span><span class="sxs-lookup"><span data-stu-id="40d76-107">If `enumerateWeakReferences` is `true`, the `ppEnum` enumerator includes both strong references and weak references.</span></span> <span data-ttu-id="40d76-108">如果`enumerateWeakReferences`是`false`，该枚举数包含仅强引用。</span><span class="sxs-lookup"><span data-stu-id="40d76-108">If `enumerateWeakReferences` is `false`, the enumerator includes only strong references.</span></span>  
   
  `ppEnum`  
- <span data-ttu-id="506dd-109">[out]指向的地址的指针[ICorDebugGCReferenceEnum](../../../../docs/framework/unmanaged-api/debugging/icordebuggcreferenceenum-interface.md)即的枚举数对象要进行垃圾回收。</span><span class="sxs-lookup"><span data-stu-id="506dd-109">[out] A pointer to the address of an [ICorDebugGCReferenceEnum](../../../../docs/framework/unmanaged-api/debugging/icordebuggcreferenceenum-interface.md) that is an enumerator for the objects to be garbage-collected.</span></span>  
+ <span data-ttu-id="40d76-109">[out]指向的地址的指针[ICorDebugGCReferenceEnum](../../../../docs/framework/unmanaged-api/debugging/icordebuggcreferenceenum-interface.md) ，它是一个枚举器的对象进行垃圾回收。</span><span class="sxs-lookup"><span data-stu-id="40d76-109">[out] A pointer to the address of an [ICorDebugGCReferenceEnum](../../../../docs/framework/unmanaged-api/debugging/icordebuggcreferenceenum-interface.md) that is an enumerator for the objects to be garbage-collected.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="506dd-110">备注</span><span class="sxs-lookup"><span data-stu-id="506dd-110">Remarks</span></span>  
- <span data-ttu-id="506dd-111">此方法使您能够确定在进程中任何托管对象的完整根链，并且可以用于确定对象的仍处于活动状态的原因。</span><span class="sxs-lookup"><span data-stu-id="506dd-111">This method provides a way to determine the full rooting chain for any managed object in a process and can be used to determine why an object is still alive.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="40d76-110">备注</span><span class="sxs-lookup"><span data-stu-id="40d76-110">Remarks</span></span>  
+ <span data-ttu-id="40d76-111">此方法提供了一种方法来确定进程中的任何托管对象根的完整链，并可用于确定对象仍处于活动状态的原因。</span><span class="sxs-lookup"><span data-stu-id="40d76-111">This method provides a way to determine the full rooting chain for any managed object in a process and can be used to determine why an object is still alive.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="506dd-112">要求</span><span class="sxs-lookup"><span data-stu-id="506dd-112">Requirements</span></span>  
- <span data-ttu-id="506dd-113">**平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="506dd-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="40d76-112">要求</span><span class="sxs-lookup"><span data-stu-id="40d76-112">Requirements</span></span>  
+ <span data-ttu-id="40d76-113">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="40d76-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="506dd-114">**标头：** CorDebug.idl、 CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="506dd-114">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="40d76-114">**标头：** CorDebug.idl、 CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="40d76-114">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="506dd-115">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="506dd-115">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="40d76-115">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="40d76-115">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="506dd-116">**.NET framework 版本：** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="506dd-116">**.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span></span>  
+ <span data-ttu-id="40d76-116">**.NET Framework 版本：**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="40d76-116">**.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="506dd-117">请参阅</span><span class="sxs-lookup"><span data-stu-id="506dd-117">See Also</span></span>  
- [<span data-ttu-id="506dd-118">ICorDebugProcess5 接口</span><span class="sxs-lookup"><span data-stu-id="506dd-118">ICorDebugProcess5 Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-interface.md)  
- [<span data-ttu-id="506dd-119">调试接口</span><span class="sxs-lookup"><span data-stu-id="506dd-119">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a><span data-ttu-id="40d76-117">请参阅</span><span class="sxs-lookup"><span data-stu-id="40d76-117">See also</span></span>
+- [<span data-ttu-id="40d76-118">ICorDebugProcess5 接口</span><span class="sxs-lookup"><span data-stu-id="40d76-118">ICorDebugProcess5 Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-interface.md)
+- [<span data-ttu-id="40d76-119">调试接口</span><span class="sxs-lookup"><span data-stu-id="40d76-119">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
