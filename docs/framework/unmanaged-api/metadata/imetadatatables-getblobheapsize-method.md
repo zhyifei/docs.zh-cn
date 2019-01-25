@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 787ea506c6698925473175cf7fdac340c0c2eca8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 3f9f49219b810ac85b1f021c206bfab21d11a055
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33447268"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54745954"
 ---
-# <a name="imetadatatablesgetblobheapsize-method"></a><span data-ttu-id="3fa07-102">IMetaDataTables::GetBlobHeapSize 方法</span><span class="sxs-lookup"><span data-stu-id="3fa07-102">IMetaDataTables::GetBlobHeapSize Method</span></span>
-<span data-ttu-id="3fa07-103">获取用字节表示，二进制大型对象 (BLOB) 堆的大小。</span><span class="sxs-lookup"><span data-stu-id="3fa07-103">Gets the size, in bytes, of the binary large object (BLOB) heap.</span></span>  
+# <a name="imetadatatablesgetblobheapsize-method"></a><span data-ttu-id="ba5c5-102">IMetaDataTables::GetBlobHeapSize 方法</span><span class="sxs-lookup"><span data-stu-id="ba5c5-102">IMetaDataTables::GetBlobHeapSize Method</span></span>
+<span data-ttu-id="ba5c5-103">获取以字节为单位的二进制大型对象 (BLOB) 堆的大小。</span><span class="sxs-lookup"><span data-stu-id="ba5c5-103">Gets the size, in bytes, of the binary large object (BLOB) heap.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="3fa07-104">语法</span><span class="sxs-lookup"><span data-stu-id="3fa07-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="ba5c5-104">语法</span><span class="sxs-lookup"><span data-stu-id="ba5c5-104">Syntax</span></span>  
   
 ```  
 HRESULT GetBlobHeapSize (  
@@ -35,19 +35,19 @@ HRESULT GetBlobHeapSize (
 );   
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="3fa07-105">参数</span><span class="sxs-lookup"><span data-stu-id="3fa07-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="ba5c5-105">参数</span><span class="sxs-lookup"><span data-stu-id="ba5c5-105">Parameters</span></span>  
  `pcbBlobs`  
- <span data-ttu-id="3fa07-106">[out]指向以字节为单位的 BLOB 堆的大小的指针。</span><span class="sxs-lookup"><span data-stu-id="3fa07-106">[out] A pointer to the size, in bytes, of the BLOB heap.</span></span>  
+ <span data-ttu-id="ba5c5-106">[out]指向大小 （字节） 对在 BLOB 堆的指针。</span><span class="sxs-lookup"><span data-stu-id="ba5c5-106">[out] A pointer to the size, in bytes, of the BLOB heap.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="3fa07-107">要求</span><span class="sxs-lookup"><span data-stu-id="3fa07-107">Requirements</span></span>  
- <span data-ttu-id="3fa07-108">**平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="3fa07-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="ba5c5-107">要求</span><span class="sxs-lookup"><span data-stu-id="ba5c5-107">Requirements</span></span>  
+ <span data-ttu-id="ba5c5-108">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="ba5c5-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="3fa07-109">**标头：** Cor.h</span><span class="sxs-lookup"><span data-stu-id="3fa07-109">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="ba5c5-109">**标头：** Cor.h</span><span class="sxs-lookup"><span data-stu-id="ba5c5-109">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="3fa07-110">**库：** 用作 MsCorEE.dll 中的资源</span><span class="sxs-lookup"><span data-stu-id="3fa07-110">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="ba5c5-110">**库：** 用作 MsCorEE.dll 中的资源</span><span class="sxs-lookup"><span data-stu-id="ba5c5-110">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="3fa07-111">**.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="3fa07-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="ba5c5-111">**.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="ba5c5-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="3fa07-112">请参阅</span><span class="sxs-lookup"><span data-stu-id="3fa07-112">See Also</span></span>  
- [<span data-ttu-id="3fa07-113">IMetaDataTables 接口</span><span class="sxs-lookup"><span data-stu-id="3fa07-113">IMetaDataTables Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md)  
- [<span data-ttu-id="3fa07-114">IMetaDataTables2 接口</span><span class="sxs-lookup"><span data-stu-id="3fa07-114">IMetaDataTables2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-interface.md)
+## <a name="see-also"></a><span data-ttu-id="ba5c5-112">请参阅</span><span class="sxs-lookup"><span data-stu-id="ba5c5-112">See also</span></span>
+- [<span data-ttu-id="ba5c5-113">IMetaDataTables 接口</span><span class="sxs-lookup"><span data-stu-id="ba5c5-113">IMetaDataTables Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md)
+- [<span data-ttu-id="ba5c5-114">IMetaDataTables2 接口</span><span class="sxs-lookup"><span data-stu-id="ba5c5-114">IMetaDataTables2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-interface.md)

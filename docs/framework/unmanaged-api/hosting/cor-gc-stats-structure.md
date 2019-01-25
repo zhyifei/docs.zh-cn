@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 009f1482de6e1daea21766300b4fb6a3ab0ffc8c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 3fc212321b28545f62f0a1c2965281d02ac73e40
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33432283"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54638101"
 ---
-# <a name="corgcstats-structure"></a><span data-ttu-id="cb0f0-102">COR_GC_STATS 结构</span><span class="sxs-lookup"><span data-stu-id="cb0f0-102">COR_GC_STATS Structure</span></span>
-<span data-ttu-id="cb0f0-103">提供有关垃圾回收机制的公共语言运行时 (CLR) 的统计信息。</span><span class="sxs-lookup"><span data-stu-id="cb0f0-103">Provides statistics about the garbage collection mechanism of the common language runtime (CLR).</span></span>  
+# <a name="corgcstats-structure"></a><span data-ttu-id="198a3-102">COR_GC_STATS 结构</span><span class="sxs-lookup"><span data-stu-id="198a3-102">COR_GC_STATS Structure</span></span>
+<span data-ttu-id="198a3-103">提供有关垃圾回收机制的公共语言运行时 (CLR) 的统计信息。</span><span class="sxs-lookup"><span data-stu-id="198a3-103">Provides statistics about the garbage collection mechanism of the common language runtime (CLR).</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="cb0f0-104">语法</span><span class="sxs-lookup"><span data-stu-id="cb0f0-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="198a3-104">语法</span><span class="sxs-lookup"><span data-stu-id="198a3-104">Syntax</span></span>  
   
 ```  
 typedef struct _COR_GC_STATS {  
@@ -44,32 +44,32 @@ typedef struct _COR_GC_STATS {
 } COR_GC_STATS;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="cb0f0-105">成员</span><span class="sxs-lookup"><span data-stu-id="cb0f0-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="198a3-105">成员</span><span class="sxs-lookup"><span data-stu-id="198a3-105">Members</span></span>  
   
-|<span data-ttu-id="cb0f0-106">成员</span><span class="sxs-lookup"><span data-stu-id="cb0f0-106">Member</span></span>|<span data-ttu-id="cb0f0-107">描述</span><span class="sxs-lookup"><span data-stu-id="cb0f0-107">Description</span></span>|  
+|<span data-ttu-id="198a3-106">成员</span><span class="sxs-lookup"><span data-stu-id="198a3-106">Member</span></span>|<span data-ttu-id="198a3-107">描述</span><span class="sxs-lookup"><span data-stu-id="198a3-107">Description</span></span>|  
 |------------|-----------------|  
-|`Flags`|<span data-ttu-id="cb0f0-108">指示应计算并返回的字段值。</span><span class="sxs-lookup"><span data-stu-id="cb0f0-108">Indicates which field values should be calculated and returned.</span></span>|  
-|`ExplicitGCCount`|<span data-ttu-id="cb0f0-109">指示已强制外部请求进行的垃圾回收数。</span><span class="sxs-lookup"><span data-stu-id="cb0f0-109">Indicates the number of garbage collections that were forced by external request.</span></span>|  
-|`GenCollectionsTaken`|<span data-ttu-id="cb0f0-110">指示对于每个生成的执行的垃圾回收数。</span><span class="sxs-lookup"><span data-stu-id="cb0f0-110">Indicates the number of garbage collections performed for each generation.</span></span>|  
-|`CommittedKBytes`|<span data-ttu-id="cb0f0-111">总在所有的堆中提交的字节数。</span><span class="sxs-lookup"><span data-stu-id="cb0f0-111">The total number of kilobytes committed in all heaps.</span></span>|  
-|`ReservedKBytes`|<span data-ttu-id="cb0f0-112">总保留所有的堆中的字节数。</span><span class="sxs-lookup"><span data-stu-id="cb0f0-112">The total number of kilobytes reserved in all heaps.</span></span>|  
-|`Gen0HeapSizeKBytes`|<span data-ttu-id="cb0f0-113">大小，以千字节为单位，零代堆。</span><span class="sxs-lookup"><span data-stu-id="cb0f0-113">The size, in kilobytes, of the generation-zero heap.</span></span>|  
-|`Gen1HeapSizeKBytes`|<span data-ttu-id="cb0f0-114">大小，以千字节为单位，第一代堆。</span><span class="sxs-lookup"><span data-stu-id="cb0f0-114">The size, in kilobytes, of the generation-one heap.</span></span>|  
-|`Gen2HeapSizeKBytes`|<span data-ttu-id="cb0f0-115">大小，以千字节为单位，生成两个堆。</span><span class="sxs-lookup"><span data-stu-id="cb0f0-115">The size, in kilobytes, of the generation-two heap.</span></span>|  
-|`LargeObjectHeapSizeKBytes`|<span data-ttu-id="cb0f0-116">大小，以千字节为单位，大型对象堆。</span><span class="sxs-lookup"><span data-stu-id="cb0f0-116">The size, in kilobytes, of the large object heap.</span></span>|  
-|`KBytesPromotedFromGen0`|<span data-ttu-id="cb0f0-117">大小，以千字节为单位，从第 0 代提升到第一代的对象。</span><span class="sxs-lookup"><span data-stu-id="cb0f0-117">The size, in kilobytes, of the objects promoted from generation zero to generation one.</span></span>|  
-|`KBytesPromotedFromGen1`|<span data-ttu-id="cb0f0-118">大小，以千字节为单位，从第一代提升到第 2 代的对象。</span><span class="sxs-lookup"><span data-stu-id="cb0f0-118">The size, in kilobytes, of the objects promoted from generation one to generation two.</span></span>|  
+|`Flags`|<span data-ttu-id="198a3-108">指示应计算的字段值，并将其返回。</span><span class="sxs-lookup"><span data-stu-id="198a3-108">Indicates which field values should be calculated and returned.</span></span>|  
+|`ExplicitGCCount`|<span data-ttu-id="198a3-109">指示由外部请求已强制垃圾回收的数目。</span><span class="sxs-lookup"><span data-stu-id="198a3-109">Indicates the number of garbage collections that were forced by external request.</span></span>|  
+|`GenCollectionsTaken`|<span data-ttu-id="198a3-110">指示为每个代所执行的垃圾回收次数。</span><span class="sxs-lookup"><span data-stu-id="198a3-110">Indicates the number of garbage collections performed for each generation.</span></span>|  
+|`CommittedKBytes`|<span data-ttu-id="198a3-111">提交所有堆中的千字节为单位的总数。</span><span class="sxs-lookup"><span data-stu-id="198a3-111">The total number of kilobytes committed in all heaps.</span></span>|  
+|`ReservedKBytes`|<span data-ttu-id="198a3-112">保留所有堆中的千字节为单位的总数。</span><span class="sxs-lookup"><span data-stu-id="198a3-112">The total number of kilobytes reserved in all heaps.</span></span>|  
+|`Gen0HeapSizeKBytes`|<span data-ttu-id="198a3-113">以千字节单位零代堆大小。</span><span class="sxs-lookup"><span data-stu-id="198a3-113">The size, in kilobytes, of the generation-zero heap.</span></span>|  
+|`Gen1HeapSizeKBytes`|<span data-ttu-id="198a3-114">以千字节，第一代堆的大小。</span><span class="sxs-lookup"><span data-stu-id="198a3-114">The size, in kilobytes, of the generation-one heap.</span></span>|  
+|`Gen2HeapSizeKBytes`|<span data-ttu-id="198a3-115">以千字节，第 2 代堆的大小。</span><span class="sxs-lookup"><span data-stu-id="198a3-115">The size, in kilobytes, of the generation-two heap.</span></span>|  
+|`LargeObjectHeapSizeKBytes`|<span data-ttu-id="198a3-116">以千字节，大型对象堆的大小。</span><span class="sxs-lookup"><span data-stu-id="198a3-116">The size, in kilobytes, of the large object heap.</span></span>|  
+|`KBytesPromotedFromGen0`|<span data-ttu-id="198a3-117">大小，以千字节为单位，从第 0 代提升到第一代的对象。</span><span class="sxs-lookup"><span data-stu-id="198a3-117">The size, in kilobytes, of the objects promoted from generation zero to generation one.</span></span>|  
+|`KBytesPromotedFromGen1`|<span data-ttu-id="198a3-118">大小，以千字节为单位，从第一代提升到第 2 代的对象。</span><span class="sxs-lookup"><span data-stu-id="198a3-118">The size, in kilobytes, of the objects promoted from generation one to generation two.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="cb0f0-119">备注</span><span class="sxs-lookup"><span data-stu-id="cb0f0-119">Remarks</span></span>  
- <span data-ttu-id="cb0f0-120">[Iclrgcmanager:: Getstats](../../../../docs/framework/unmanaged-api/hosting/iclrgcmanager-getstats-method.md)方法需要`Flags`字段`COR_GC_STATS`结构将设置为一个或多个值的[COR_GC_STAT_TYPES](../../../../docs/framework/unmanaged-api/hosting/cor-gc-stat-types-enumeration.md)枚举，以指定的将统计信息设置。</span><span class="sxs-lookup"><span data-stu-id="cb0f0-120">The [ICLRGCManager::GetStats](../../../../docs/framework/unmanaged-api/hosting/iclrgcmanager-getstats-method.md) method requires the `Flags` field of the `COR_GC_STATS` structure to be set to one or more values of the [COR_GC_STAT_TYPES](../../../../docs/framework/unmanaged-api/hosting/cor-gc-stat-types-enumeration.md) enumeration to specify which statistics are to be set.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="198a3-119">备注</span><span class="sxs-lookup"><span data-stu-id="198a3-119">Remarks</span></span>  
+ <span data-ttu-id="198a3-120">[Iclrgcmanager:: Getstats](../../../../docs/framework/unmanaged-api/hosting/iclrgcmanager-getstats-method.md)方法需要`Flags`字段`COR_GC_STATS`设置为一个或多个值的结构[COR_GC_STAT_TYPES](../../../../docs/framework/unmanaged-api/hosting/cor-gc-stat-types-enumeration.md)枚举来指定该统计信息是设置。</span><span class="sxs-lookup"><span data-stu-id="198a3-120">The [ICLRGCManager::GetStats](../../../../docs/framework/unmanaged-api/hosting/iclrgcmanager-getstats-method.md) method requires the `Flags` field of the `COR_GC_STATS` structure to be set to one or more values of the [COR_GC_STAT_TYPES](../../../../docs/framework/unmanaged-api/hosting/cor-gc-stat-types-enumeration.md) enumeration to specify which statistics are to be set.</span></span>  
   
- <span data-ttu-id="cb0f0-121">下表将映射到两个此结构提供的统计信息[COR_GC_STAT_TYPES](../../../../docs/framework/unmanaged-api/hosting/cor-gc-stat-types-enumeration.md)枚举值`COR_GC_COUNTS`和`COR_GC_MEMORYUSAGE`。</span><span class="sxs-lookup"><span data-stu-id="cb0f0-121">The following table maps the statistics provided by this structure to the two [COR_GC_STAT_TYPES](../../../../docs/framework/unmanaged-api/hosting/cor-gc-stat-types-enumeration.md) enumeration values, `COR_GC_COUNTS` and `COR_GC_MEMORYUSAGE`.</span></span>  
+ <span data-ttu-id="198a3-121">下表将映射到两个此结构提供的统计信息[COR_GC_STAT_TYPES](../../../../docs/framework/unmanaged-api/hosting/cor-gc-stat-types-enumeration.md)枚举值`COR_GC_COUNTS`和`COR_GC_MEMORYUSAGE`。</span><span class="sxs-lookup"><span data-stu-id="198a3-121">The following table maps the statistics provided by this structure to the two [COR_GC_STAT_TYPES](../../../../docs/framework/unmanaged-api/hosting/cor-gc-stat-types-enumeration.md) enumeration values, `COR_GC_COUNTS` and `COR_GC_MEMORYUSAGE`.</span></span>  
   
-|<span data-ttu-id="cb0f0-122">指定 COR_GC_COUNTS</span><span class="sxs-lookup"><span data-stu-id="cb0f0-122">Specified by COR_GC_COUNTS</span></span>|<span data-ttu-id="cb0f0-123">指定 COR_GC_MEMORYUSAGE</span><span class="sxs-lookup"><span data-stu-id="cb0f0-123">Specified by COR_GC_MEMORYUSAGE</span></span>|  
+|<span data-ttu-id="198a3-122">指定的 COR_GC_COUNTS</span><span class="sxs-lookup"><span data-stu-id="198a3-122">Specified by COR_GC_COUNTS</span></span>|<span data-ttu-id="198a3-123">指定的 COR_GC_MEMORYUSAGE</span><span class="sxs-lookup"><span data-stu-id="198a3-123">Specified by COR_GC_MEMORYUSAGE</span></span>|  
 |----------------------------------|---------------------------------------|  
 |`ExplicitGCCount`<br /><br /> `GenCollectionsTaken`|`CommittedKBytes`<br /><br /> `ReservedKBytes`<br /><br /> `Gen0HeapSizeKBytes`<br /><br /> `Gen1HeapSizeKBytes`<br /><br /> `Gen2HeapSizeKBytes`<br /><br /> `LargeObjectHeapSizeKBytes`<br /><br /> `KBytesPromotedFromGen0`<br /><br /> `KBytesPromotedFromGen1`|  
   
- <span data-ttu-id="cb0f0-124">使用情况的一个示例是，如下所示：</span><span class="sxs-lookup"><span data-stu-id="cb0f0-124">An example of the usage is as follows:</span></span>  
+ <span data-ttu-id="198a3-124">该用法的示例如下所示：</span><span class="sxs-lookup"><span data-stu-id="198a3-124">An example of the usage is as follows:</span></span>  
   
 ```  
 COR_GC_STATS GCStats;  
@@ -77,16 +77,16 @@ GCStats.Flags = COR_GC_COUNTS | COR_GC_MEMORYUSAGE;
 pCLRGCManager->GetStats(&GCStats);  
 ```  
   
-## <a name="requirements"></a><span data-ttu-id="cb0f0-125">要求</span><span class="sxs-lookup"><span data-stu-id="cb0f0-125">Requirements</span></span>  
- <span data-ttu-id="cb0f0-126">**平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="cb0f0-126">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="198a3-125">要求</span><span class="sxs-lookup"><span data-stu-id="198a3-125">Requirements</span></span>  
+ <span data-ttu-id="198a3-126">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="198a3-126">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="cb0f0-127">**标头：** GCHost.idl</span><span class="sxs-lookup"><span data-stu-id="cb0f0-127">**Header:** GCHost.idl</span></span>  
+ <span data-ttu-id="198a3-127">**标头：** GCHost.idl</span><span class="sxs-lookup"><span data-stu-id="198a3-127">**Header:** GCHost.idl</span></span>  
   
- <span data-ttu-id="cb0f0-128">**库：** 作为 MSCorEE.dll 中的资源</span><span class="sxs-lookup"><span data-stu-id="cb0f0-128">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="198a3-128">**库：** 包含为 MSCorEE.dll 中的资源</span><span class="sxs-lookup"><span data-stu-id="198a3-128">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="cb0f0-129">**.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="cb0f0-129">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="198a3-129">**.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="198a3-129">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="cb0f0-130">请参阅</span><span class="sxs-lookup"><span data-stu-id="cb0f0-130">See Also</span></span>  
- [<span data-ttu-id="cb0f0-131">承载结构</span><span class="sxs-lookup"><span data-stu-id="cb0f0-131">Hosting Structures</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-structures.md)  
- [<span data-ttu-id="cb0f0-132">自动内存管理</span><span class="sxs-lookup"><span data-stu-id="cb0f0-132">Automatic Memory Management</span></span>](../../../../docs/standard/automatic-memory-management.md)  
- [<span data-ttu-id="cb0f0-133">垃圾回收</span><span class="sxs-lookup"><span data-stu-id="cb0f0-133">Garbage Collection</span></span>](../../../../docs/standard/garbage-collection/index.md)
+## <a name="see-also"></a><span data-ttu-id="198a3-130">请参阅</span><span class="sxs-lookup"><span data-stu-id="198a3-130">See also</span></span>
+- [<span data-ttu-id="198a3-131">承载结构</span><span class="sxs-lookup"><span data-stu-id="198a3-131">Hosting Structures</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-structures.md)
+- [<span data-ttu-id="198a3-132">自动内存管理</span><span class="sxs-lookup"><span data-stu-id="198a3-132">Automatic Memory Management</span></span>](../../../../docs/standard/automatic-memory-management.md)
+- [<span data-ttu-id="198a3-133">垃圾回收</span><span class="sxs-lookup"><span data-stu-id="198a3-133">Garbage Collection</span></span>](../../../../docs/standard/garbage-collection/index.md)

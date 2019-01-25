@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5a4637ac7466a575c94f8244168576c4a5542689
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: f7759b0815946301932ca60edaf731313d04a245
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33452083"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54743460"
 ---
-# <a name="icorprofilercallbackmoduleunloadfinished-method"></a><span data-ttu-id="f9fc6-102">ICorProfilerCallback::ModuleUnloadFinished 方法</span><span class="sxs-lookup"><span data-stu-id="f9fc6-102">ICorProfilerCallback::ModuleUnloadFinished Method</span></span>
-<span data-ttu-id="f9fc6-103">通知探查器已完成某个模块的卸载。</span><span class="sxs-lookup"><span data-stu-id="f9fc6-103">Notifies the profiler that a module has finished unloading.</span></span>  
+# <a name="icorprofilercallbackmoduleunloadfinished-method"></a><span data-ttu-id="c9730-102">ICorProfilerCallback::ModuleUnloadFinished 方法</span><span class="sxs-lookup"><span data-stu-id="c9730-102">ICorProfilerCallback::ModuleUnloadFinished Method</span></span>
+<span data-ttu-id="c9730-103">通知探查器模块已完成卸载。</span><span class="sxs-lookup"><span data-stu-id="c9730-103">Notifies the profiler that a module has finished unloading.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="f9fc6-104">语法</span><span class="sxs-lookup"><span data-stu-id="f9fc6-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="c9730-104">语法</span><span class="sxs-lookup"><span data-stu-id="c9730-104">Syntax</span></span>  
   
 ```  
 HRESULT ModuleUnloadFinished(  
@@ -35,26 +35,26 @@ HRESULT ModuleUnloadFinished(
     [in] HRESULT  hrStatus);  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="f9fc6-105">参数</span><span class="sxs-lookup"><span data-stu-id="f9fc6-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="c9730-105">参数</span><span class="sxs-lookup"><span data-stu-id="c9730-105">Parameters</span></span>  
  `moduleId`  
- <span data-ttu-id="f9fc6-106">[in]已卸载的模块的 ID。</span><span class="sxs-lookup"><span data-stu-id="f9fc6-106">[in] The ID of the module that was unloaded.</span></span>  
+ <span data-ttu-id="c9730-106">[in]已卸载的模块的 ID。</span><span class="sxs-lookup"><span data-stu-id="c9730-106">[in] The ID of the module that was unloaded.</span></span>  
   
  `hrStatus`  
- <span data-ttu-id="f9fc6-107">[in]一个 HRESULT，指示是否已成功模块已被卸载。</span><span class="sxs-lookup"><span data-stu-id="f9fc6-107">[in] An HRESULT that indicates whether the module was unloaded successfully.</span></span>  
+ <span data-ttu-id="c9730-107">[in]一个 HRESULT，指示是否已成功将模块已被卸载。</span><span class="sxs-lookup"><span data-stu-id="c9730-107">[in] An HRESULT that indicates whether the module was unloaded successfully.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="f9fc6-108">备注</span><span class="sxs-lookup"><span data-stu-id="f9fc6-108">Remarks</span></span>  
- <span data-ttu-id="f9fc6-109">值`moduleId`无效的信息请求后，不能[icorprofilercallback:: Moduleunloadstarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-moduleunloadstarted-method.md)方法返回。</span><span class="sxs-lookup"><span data-stu-id="f9fc6-109">The value of `moduleId` is not valid for an information request after the [ICorProfilerCallback::ModuleUnloadStarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-moduleunloadstarted-method.md) method returns.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="c9730-108">备注</span><span class="sxs-lookup"><span data-stu-id="c9730-108">Remarks</span></span>  
+ <span data-ttu-id="c9730-109">值`moduleId`不是有效的信息请求后[icorprofilercallback:: Moduleunloadstarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-moduleunloadstarted-method.md)方法返回。</span><span class="sxs-lookup"><span data-stu-id="c9730-109">The value of `moduleId` is not valid for an information request after the [ICorProfilerCallback::ModuleUnloadStarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-moduleunloadstarted-method.md) method returns.</span></span>  
   
- <span data-ttu-id="f9fc6-110">卸载类的某些部分可能会继续之后`ModuleUnloadFinished`回调。</span><span class="sxs-lookup"><span data-stu-id="f9fc6-110">Some parts of unloading the class might continue after the `ModuleUnloadFinished` callback.</span></span> <span data-ttu-id="f9fc6-111">失败的 HRESULT 在`hrStatus`指示失败。</span><span class="sxs-lookup"><span data-stu-id="f9fc6-111">A failure HRESULT in `hrStatus` indicates a failure.</span></span> <span data-ttu-id="f9fc6-112">但是，HRESULT 为成功，在`hrStatus`仅指示已成功卸载该模块的第一部分。</span><span class="sxs-lookup"><span data-stu-id="f9fc6-112">However, a success HRESULT in `hrStatus` indicates only that the first part of unloading the module has succeeded.</span></span>  
+ <span data-ttu-id="c9730-110">卸载类的某些部分可能会继续后`ModuleUnloadFinished`回调。</span><span class="sxs-lookup"><span data-stu-id="c9730-110">Some parts of unloading the class might continue after the `ModuleUnloadFinished` callback.</span></span> <span data-ttu-id="c9730-111">失败的 HRESULT 在`hrStatus`表明发生了故障。</span><span class="sxs-lookup"><span data-stu-id="c9730-111">A failure HRESULT in `hrStatus` indicates a failure.</span></span> <span data-ttu-id="c9730-112">但是，成功的 HRESULT 在`hrStatus`仅表示已成功卸载该模块的第一部分。</span><span class="sxs-lookup"><span data-stu-id="c9730-112">However, a success HRESULT in `hrStatus` indicates only that the first part of unloading the module has succeeded.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="f9fc6-113">要求</span><span class="sxs-lookup"><span data-stu-id="f9fc6-113">Requirements</span></span>  
- <span data-ttu-id="f9fc6-114">**平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="f9fc6-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="c9730-113">要求</span><span class="sxs-lookup"><span data-stu-id="c9730-113">Requirements</span></span>  
+ <span data-ttu-id="c9730-114">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="c9730-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="f9fc6-115">**头文件：** CorProf.idl、CorProf.h</span><span class="sxs-lookup"><span data-stu-id="f9fc6-115">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="c9730-115">**标头：** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="c9730-115">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="f9fc6-116">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="f9fc6-116">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="c9730-116">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="c9730-116">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="f9fc6-117">**.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="f9fc6-117">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="c9730-117">**.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="c9730-117">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="f9fc6-118">请参阅</span><span class="sxs-lookup"><span data-stu-id="f9fc6-118">See Also</span></span>  
- [<span data-ttu-id="f9fc6-119">ICorProfilerCallback 接口</span><span class="sxs-lookup"><span data-stu-id="f9fc6-119">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+## <a name="see-also"></a><span data-ttu-id="c9730-118">请参阅</span><span class="sxs-lookup"><span data-stu-id="c9730-118">See also</span></span>
+- [<span data-ttu-id="c9730-119">ICorProfilerCallback 接口</span><span class="sxs-lookup"><span data-stu-id="c9730-119">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)

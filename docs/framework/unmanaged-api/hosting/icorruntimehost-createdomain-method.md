@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ea2353f1375667619db47ac5e1f037ce68dbded5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: bf0a29222e8f5dfcfbbdfabc6c64d43e2e6a943a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33438137"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54694875"
 ---
-# <a name="icorruntimehostcreatedomain-method"></a><span data-ttu-id="38b8d-102">ICorRuntimeHost::CreateDomain 方法</span><span class="sxs-lookup"><span data-stu-id="38b8d-102">ICorRuntimeHost::CreateDomain Method</span></span>
-<span data-ttu-id="38b8d-103">创建应用程序域。</span><span class="sxs-lookup"><span data-stu-id="38b8d-103">Creates an application domain.</span></span> <span data-ttu-id="38b8d-104">调用方会收到类型的接口指针<xref:System._AppDomain>到类型的实例<xref:System.AppDomain?displayProperty=nameWithType>。</span><span class="sxs-lookup"><span data-stu-id="38b8d-104">The caller receives an interface pointer of type <xref:System._AppDomain> to an instance of type <xref:System.AppDomain?displayProperty=nameWithType>.</span></span>  
+# <a name="icorruntimehostcreatedomain-method"></a><span data-ttu-id="30e38-102">ICorRuntimeHost::CreateDomain 方法</span><span class="sxs-lookup"><span data-stu-id="30e38-102">ICorRuntimeHost::CreateDomain Method</span></span>
+<span data-ttu-id="30e38-103">创建应用程序域。</span><span class="sxs-lookup"><span data-stu-id="30e38-103">Creates an application domain.</span></span> <span data-ttu-id="30e38-104">调用方会接收类型的接口指针<xref:System._AppDomain>类型的实例到<xref:System.AppDomain?displayProperty=nameWithType>。</span><span class="sxs-lookup"><span data-stu-id="30e38-104">The caller receives an interface pointer of type <xref:System._AppDomain> to an instance of type <xref:System.AppDomain?displayProperty=nameWithType>.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="38b8d-105">语法</span><span class="sxs-lookup"><span data-stu-id="38b8d-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="30e38-105">语法</span><span class="sxs-lookup"><span data-stu-id="30e38-105">Syntax</span></span>  
   
 ```  
 HRESULT CreateDomain (  
@@ -37,35 +37,35 @@ HRESULT CreateDomain (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="38b8d-106">参数</span><span class="sxs-lookup"><span data-stu-id="38b8d-106">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="30e38-106">参数</span><span class="sxs-lookup"><span data-stu-id="30e38-106">Parameters</span></span>  
  `pwzFriendlyName`  
- <span data-ttu-id="38b8d-107">[in]一个可选参数，用于为域友好名称。</span><span class="sxs-lookup"><span data-stu-id="38b8d-107">[in] An optional parameter used to give a friendly name to the domain.</span></span> <span data-ttu-id="38b8d-108">此友好名称，可以显示在用户界面，例如调试器以标识域。</span><span class="sxs-lookup"><span data-stu-id="38b8d-108">This friendly name can be displayed in user interfaces such as debuggers to identify the domain.</span></span>  
+ <span data-ttu-id="30e38-107">[in]一个可选参数，用于为域提供一个友好名称。</span><span class="sxs-lookup"><span data-stu-id="30e38-107">[in] An optional parameter used to give a friendly name to the domain.</span></span> <span data-ttu-id="30e38-108">可以在调试器中以标识域等用户界面中显示此友好名称。</span><span class="sxs-lookup"><span data-stu-id="30e38-108">This friendly name can be displayed in user interfaces such as debuggers to identify the domain.</span></span>  
   
  `pIdentityArray`  
- <span data-ttu-id="38b8d-109">[in]指向的指针的可选数组`IIdentity`表示映射通过安全策略，以建立权限集的证据的实例。</span><span class="sxs-lookup"><span data-stu-id="38b8d-109">[in] An optional array of pointers to `IIdentity` instances that represent evidence mapped through security policy to establish a  permission set.</span></span> <span data-ttu-id="38b8d-110">`IIdentity`可以通过调用获取对象[CreateEvidence](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-createevidence-method.md)方法。</span><span class="sxs-lookup"><span data-stu-id="38b8d-110">An `IIdentity` object can be obtained by calling the [CreateEvidence](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-createevidence-method.md) method.</span></span>  
+ <span data-ttu-id="30e38-109">[in]一个指向指针的可选数组`IIdentity`表示映射通过安全策略，以建立一个权限集的证据的实例。</span><span class="sxs-lookup"><span data-stu-id="30e38-109">[in] An optional array of pointers to `IIdentity` instances that represent evidence mapped through security policy to establish a  permission set.</span></span> <span data-ttu-id="30e38-110">`IIdentity`对象可以通过调用来获取[CreateEvidence](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-createevidence-method.md)方法。</span><span class="sxs-lookup"><span data-stu-id="30e38-110">An `IIdentity` object can be obtained by calling the [CreateEvidence](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-createevidence-method.md) method.</span></span>  
   
  `pAppDomain`  
- <span data-ttu-id="38b8d-111">[out]类型的接口指针<xref:System._AppDomain>到实例<xref:System.AppDomain?displayProperty=nameWithType>可以用于进一步控制域。</span><span class="sxs-lookup"><span data-stu-id="38b8d-111">[out] An interface pointer of type <xref:System._AppDomain> to an instance of <xref:System.AppDomain?displayProperty=nameWithType> that can be used to further control the domain.</span></span>  
+ <span data-ttu-id="30e38-111">[out]类型的接口指针<xref:System._AppDomain>的实例<xref:System.AppDomain?displayProperty=nameWithType>可用于进一步控制域。</span><span class="sxs-lookup"><span data-stu-id="30e38-111">[out] An interface pointer of type <xref:System._AppDomain> to an instance of <xref:System.AppDomain?displayProperty=nameWithType> that can be used to further control the domain.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="38b8d-112">返回值</span><span class="sxs-lookup"><span data-stu-id="38b8d-112">Return Value</span></span>  
+## <a name="return-value"></a><span data-ttu-id="30e38-112">返回值</span><span class="sxs-lookup"><span data-stu-id="30e38-112">Return Value</span></span>  
   
-|<span data-ttu-id="38b8d-113">HRESULT</span><span class="sxs-lookup"><span data-stu-id="38b8d-113">HRESULT</span></span>|<span data-ttu-id="38b8d-114">描述</span><span class="sxs-lookup"><span data-stu-id="38b8d-114">Description</span></span>|  
+|<span data-ttu-id="30e38-113">HRESULT</span><span class="sxs-lookup"><span data-stu-id="30e38-113">HRESULT</span></span>|<span data-ttu-id="30e38-114">描述</span><span class="sxs-lookup"><span data-stu-id="30e38-114">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="38b8d-115">S_OK</span><span class="sxs-lookup"><span data-stu-id="38b8d-115">S_OK</span></span>|<span data-ttu-id="38b8d-116">该操作成功。</span><span class="sxs-lookup"><span data-stu-id="38b8d-116">The operation was successful.</span></span>|  
-|<span data-ttu-id="38b8d-117">S_FALSE</span><span class="sxs-lookup"><span data-stu-id="38b8d-117">S_FALSE</span></span>|<span data-ttu-id="38b8d-118">操作无法完成。</span><span class="sxs-lookup"><span data-stu-id="38b8d-118">The operation failed to complete.</span></span>|  
-|<span data-ttu-id="38b8d-119">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="38b8d-119">E_FAIL</span></span>|<span data-ttu-id="38b8d-120">发生了未知的灾难性故障。</span><span class="sxs-lookup"><span data-stu-id="38b8d-120">An unknown, catastrophic failure occurred.</span></span> <span data-ttu-id="38b8d-121">如果某方法返回 E_FAIL，公共语言运行时 (CLR) 不再可用进程中。</span><span class="sxs-lookup"><span data-stu-id="38b8d-121">If a method returns E_FAIL, the common language runtime (CLR) is no longer usable in the process.</span></span> <span data-ttu-id="38b8d-122">对任何托管 Api 的后续调用会返回 HOST_E_CLRNOTAVAILABLE。</span><span class="sxs-lookup"><span data-stu-id="38b8d-122">Subsequent calls to any hosting APIs return HOST_E_CLRNOTAVAILABLE.</span></span>|  
-|<span data-ttu-id="38b8d-123">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="38b8d-123">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="38b8d-124">CLR 尚未加载到进程中，或 CLR 处于不能运行托管的代码或成功处理调用的状态。</span><span class="sxs-lookup"><span data-stu-id="38b8d-124">The CLR has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
+|<span data-ttu-id="30e38-115">S_OK</span><span class="sxs-lookup"><span data-stu-id="30e38-115">S_OK</span></span>|<span data-ttu-id="30e38-116">操作成功。</span><span class="sxs-lookup"><span data-stu-id="30e38-116">The operation was successful.</span></span>|  
+|<span data-ttu-id="30e38-117">S_FALSE</span><span class="sxs-lookup"><span data-stu-id="30e38-117">S_FALSE</span></span>|<span data-ttu-id="30e38-118">该操作未能完成。</span><span class="sxs-lookup"><span data-stu-id="30e38-118">The operation failed to complete.</span></span>|  
+|<span data-ttu-id="30e38-119">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="30e38-119">E_FAIL</span></span>|<span data-ttu-id="30e38-120">发生了未知的灾难性故障。</span><span class="sxs-lookup"><span data-stu-id="30e38-120">An unknown, catastrophic failure occurred.</span></span> <span data-ttu-id="30e38-121">如果方法返回 E_FAIL，公共语言运行时 (CLR) 不再可在该过程中使用。</span><span class="sxs-lookup"><span data-stu-id="30e38-121">If a method returns E_FAIL, the common language runtime (CLR) is no longer usable in the process.</span></span> <span data-ttu-id="30e38-122">对任何托管 Api 的后续调用返回 HOST_E_CLRNOTAVAILABLE。</span><span class="sxs-lookup"><span data-stu-id="30e38-122">Subsequent calls to any hosting APIs return HOST_E_CLRNOTAVAILABLE.</span></span>|  
+|<span data-ttu-id="30e38-123">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="30e38-123">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="30e38-124">CLR 尚未加载到进程中，或处于不能运行托管的代码或已成功处理调用的状态。</span><span class="sxs-lookup"><span data-stu-id="30e38-124">The CLR has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="38b8d-125">要求</span><span class="sxs-lookup"><span data-stu-id="38b8d-125">Requirements</span></span>  
- <span data-ttu-id="38b8d-126">**平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="38b8d-126">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="30e38-125">要求</span><span class="sxs-lookup"><span data-stu-id="30e38-125">Requirements</span></span>  
+ <span data-ttu-id="30e38-126">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="30e38-126">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="38b8d-127">**标头：** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="38b8d-127">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="30e38-127">**标头：** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="30e38-127">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="38b8d-128">**库：** 作为 MSCorEE.dll 中的资源</span><span class="sxs-lookup"><span data-stu-id="38b8d-128">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="30e38-128">**库：** 包含为 MSCorEE.dll 中的资源</span><span class="sxs-lookup"><span data-stu-id="30e38-128">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="38b8d-129">**.NET framework 版本：** 1.0、 1.1</span><span class="sxs-lookup"><span data-stu-id="38b8d-129">**.NET Framework Versions:** 1.0, 1.1</span></span>  
+ <span data-ttu-id="30e38-129">**.NET framework 版本：** 1.0, 1.1</span><span class="sxs-lookup"><span data-stu-id="30e38-129">**.NET Framework Versions:** 1.0, 1.1</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="38b8d-130">请参阅</span><span class="sxs-lookup"><span data-stu-id="38b8d-130">See Also</span></span>  
- <xref:System._AppDomain>  
- <xref:System.AppDomain>  
- [<span data-ttu-id="38b8d-131">ICorRuntimeHost 接口</span><span class="sxs-lookup"><span data-stu-id="38b8d-131">ICorRuntimeHost Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md)
+## <a name="see-also"></a><span data-ttu-id="30e38-130">请参阅</span><span class="sxs-lookup"><span data-stu-id="30e38-130">See also</span></span>
+- <xref:System._AppDomain>
+- <xref:System.AppDomain>
+- [<span data-ttu-id="30e38-131">ICorRuntimeHost 接口</span><span class="sxs-lookup"><span data-stu-id="30e38-131">ICorRuntimeHost Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md)

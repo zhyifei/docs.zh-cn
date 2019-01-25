@@ -7,30 +7,30 @@ helpviewer_keywords:
 - animation [WPF], paths
 - path animations [WPF]
 ms.assetid: e9b71017-bac4-40d7-858b-326939442cb1
-ms.openlocfilehash: 05568de863407b5d746c23ea0aff3139449a8f5d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d3904d4bedd1e73619b7918fa1519af492182de2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33562000"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54665846"
 ---
-# <a name="path-animation-how-to-topics"></a><span data-ttu-id="c535b-102">路径动画帮助主题</span><span class="sxs-lookup"><span data-stu-id="c535b-102">Path Animation How-to Topics</span></span>
-<span data-ttu-id="c535b-103">此部分中的主题演示如何对沿着路径对对象进行动画处理。</span><span class="sxs-lookup"><span data-stu-id="c535b-103">The topics in this section demonstrate how to animate an object along a path.</span></span>  
+# <a name="path-animation-how-to-topics"></a><span data-ttu-id="a568f-102">路径动画帮助主题</span><span class="sxs-lookup"><span data-stu-id="a568f-102">Path Animation How-to Topics</span></span>
+<span data-ttu-id="a568f-103">在本部分中的主题演示如何沿着路径针对对象进行动画处理。</span><span class="sxs-lookup"><span data-stu-id="a568f-103">The topics in this section demonstrate how to animate an object along a path.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="c535b-104">本节内容</span><span class="sxs-lookup"><span data-stu-id="c535b-104">In This Section</span></span>  
- [<span data-ttu-id="c535b-105">沿着路径针对对象进行动画处理（双重动画）</span><span class="sxs-lookup"><span data-stu-id="c535b-105">Animate an Object Along a Path (Double Animation)</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-an-object-along-a-path-double-animation.md)  
- [<span data-ttu-id="c535b-106">沿着路径针对对象进行动画处理（点动画）</span><span class="sxs-lookup"><span data-stu-id="c535b-106">Animate an Object Along a Path (Point Animation)</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-an-object-along-a-path-point-animation.md)  
- [<span data-ttu-id="c535b-107">沿着路径针对对象进行动画处理（矩阵动画）</span><span class="sxs-lookup"><span data-stu-id="c535b-107">Animate an Object Along a Path (Matrix Animation)</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-an-object-along-a-path-matrix-animation.md)  
- [<span data-ttu-id="c535b-108">沿着路径为对象设置动画效果（累积偏移的矩阵动画）</span><span class="sxs-lookup"><span data-stu-id="c535b-108">Animate an Object Along a Path (Matrix Animation with Offset Accumulation)</span></span>](../../../../docs/framework/wpf/graphics-multimedia/animate-an-object-along-a-path-matrix-animation-with-offset.md)  
- [<span data-ttu-id="c535b-109">使用几何路径旋转对象（矩阵动画）</span><span class="sxs-lookup"><span data-stu-id="c535b-109">Rotate an Object by Using a Geometric Path (Matrix Animation)</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-rotate-an-object-by-using-a-geometric-path-matrix-animation.md)  
- [<span data-ttu-id="c535b-110">使用几何路径旋转对象</span><span class="sxs-lookup"><span data-stu-id="c535b-110">Rotate an Object by Using a Geometric Path</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-rotate-an-object-by-using-a-geometric-path.md)  
+## <a name="in-this-section"></a><span data-ttu-id="a568f-104">本节内容</span><span class="sxs-lookup"><span data-stu-id="a568f-104">In This Section</span></span>  
+ [<span data-ttu-id="a568f-105">沿着路径针对对象进行动画处理（双重动画）</span><span class="sxs-lookup"><span data-stu-id="a568f-105">Animate an Object Along a Path (Double Animation)</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-an-object-along-a-path-double-animation.md)  
+ [<span data-ttu-id="a568f-106">沿着路径针对对象进行动画处理（点动画）</span><span class="sxs-lookup"><span data-stu-id="a568f-106">Animate an Object Along a Path (Point Animation)</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-an-object-along-a-path-point-animation.md)  
+ [<span data-ttu-id="a568f-107">沿着路径针对对象进行动画处理（矩阵动画）</span><span class="sxs-lookup"><span data-stu-id="a568f-107">Animate an Object Along a Path (Matrix Animation)</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-an-object-along-a-path-matrix-animation.md)  
+ [<span data-ttu-id="a568f-108">沿着路径为对象设置动画效果（累积偏移的矩阵动画）</span><span class="sxs-lookup"><span data-stu-id="a568f-108">Animate an Object Along a Path (Matrix Animation with Offset Accumulation)</span></span>](../../../../docs/framework/wpf/graphics-multimedia/animate-an-object-along-a-path-matrix-animation-with-offset.md)  
+ [<span data-ttu-id="a568f-109">使用几何路径旋转对象（矩阵动画）</span><span class="sxs-lookup"><span data-stu-id="a568f-109">Rotate an Object by Using a Geometric Path (Matrix Animation)</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-rotate-an-object-by-using-a-geometric-path-matrix-animation.md)  
+ [<span data-ttu-id="a568f-110">使用几何路径旋转对象</span><span class="sxs-lookup"><span data-stu-id="a568f-110">Rotate an Object by Using a Geometric Path</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-rotate-an-object-by-using-a-geometric-path.md)  
   
-## <a name="reference"></a><span data-ttu-id="c535b-111">参考</span><span class="sxs-lookup"><span data-stu-id="c535b-111">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="a568f-111">参考</span><span class="sxs-lookup"><span data-stu-id="a568f-111">Reference</span></span>  
  <xref:System.Windows.Media.Animation.PathAnimationSource>  
   
  <xref:System.Windows.Media.Animation.Storyboard>  
   
-## <a name="see-also"></a><span data-ttu-id="c535b-112">请参阅</span><span class="sxs-lookup"><span data-stu-id="c535b-112">See Also</span></span>  
- [<span data-ttu-id="c535b-113">图形和多媒体</span><span class="sxs-lookup"><span data-stu-id="c535b-113">Graphics and Multimedia</span></span>](../../../../docs/framework/wpf/graphics-multimedia/index.md)  
- [<span data-ttu-id="c535b-114">动画概述</span><span class="sxs-lookup"><span data-stu-id="c535b-114">Animation Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)  
- [<span data-ttu-id="c535b-115">关键帧动画概述</span><span class="sxs-lookup"><span data-stu-id="c535b-115">Key-Frame Animations Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)
+## <a name="see-also"></a><span data-ttu-id="a568f-112">请参阅</span><span class="sxs-lookup"><span data-stu-id="a568f-112">See also</span></span>
+- [<span data-ttu-id="a568f-113">图形和多媒体</span><span class="sxs-lookup"><span data-stu-id="a568f-113">Graphics and Multimedia</span></span>](../../../../docs/framework/wpf/graphics-multimedia/index.md)
+- [<span data-ttu-id="a568f-114">动画概述</span><span class="sxs-lookup"><span data-stu-id="a568f-114">Animation Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)
+- [<span data-ttu-id="a568f-115">关键帧动画概述</span><span class="sxs-lookup"><span data-stu-id="a568f-115">Key-Frame Animations Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)

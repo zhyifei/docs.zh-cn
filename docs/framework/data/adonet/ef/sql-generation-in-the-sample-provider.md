@@ -2,24 +2,24 @@
 title: 示例提供程序中的 SQL 生成
 ms.date: 03/30/2017
 ms.assetid: e70f553d-4622-4627-928e-1aa2ee605d8e
-ms.openlocfilehash: 5aa6e31cfc93a4ae1871da63f466864b4ea6f5d9
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: b2397570bb5f312aa6a3955a76234bde508fcc6a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53149713"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54505494"
 ---
-# <a name="sql-generation-in-the-sample-provider"></a><span data-ttu-id="4da82-102">示例提供程序中的 SQL 生成</span><span class="sxs-lookup"><span data-stu-id="4da82-102">SQL Generation in the Sample Provider</span></span>
-<span data-ttu-id="4da82-103">[实体框架示例提供程序](https://code.msdn.microsoft.com/windowsdesktop/Entity-Framework-Sample-6a9801d0)演示了 ADO.NET 数据提供程序支持的新组件[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]。</span><span class="sxs-lookup"><span data-stu-id="4da82-103">The [Entity Framework Sample Provider](https://code.msdn.microsoft.com/windowsdesktop/Entity-Framework-Sample-6a9801d0) demonstrates the new components of ADO.NET Data Providers that support the [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)].</span></span>  <span data-ttu-id="4da82-104">它使用 SQL Server 2005 数据库，并实现为 System.Data.SqlClient ADO.NET 2.0 数据提供程序的一个包装。</span><span class="sxs-lookup"><span data-stu-id="4da82-104">It works with a SQL Server 2005 database and is implemented as a wrapper for the System.Data.SqlClient ADO.NET 2.0 Data Provider.</span></span>  
+# <a name="sql-generation-in-the-sample-provider"></a><span data-ttu-id="b60de-102">示例提供程序中的 SQL 生成</span><span class="sxs-lookup"><span data-stu-id="b60de-102">SQL Generation in the Sample Provider</span></span>
+<span data-ttu-id="b60de-103">[实体框架示例提供程序](https://code.msdn.microsoft.com/windowsdesktop/Entity-Framework-Sample-6a9801d0)演示了 ADO.NET 数据提供程序支持的新组件[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]。</span><span class="sxs-lookup"><span data-stu-id="b60de-103">The [Entity Framework Sample Provider](https://code.msdn.microsoft.com/windowsdesktop/Entity-Framework-Sample-6a9801d0) demonstrates the new components of ADO.NET Data Providers that support the [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)].</span></span>  <span data-ttu-id="b60de-104">它使用 SQL Server 2005 数据库，并实现为 System.Data.SqlClient ADO.NET 2.0 数据提供程序的一个包装。</span><span class="sxs-lookup"><span data-stu-id="b60de-104">It works with a SQL Server 2005 database and is implemented as a wrapper for the System.Data.SqlClient ADO.NET 2.0 Data Provider.</span></span>  
   
- <span data-ttu-id="4da82-105">该示例提供程序的 SQL 生成模块（位于 SQL Generation 文件夹下，不包括 DmlSqlGenerator.cs 文件）采用一个输入 DbQueryCommandTree，并且生成单个 SQL SELECT 语句。</span><span class="sxs-lookup"><span data-stu-id="4da82-105">The SQL Generation module of the Sample Provider (located under the SQL Generation folder, except for the file DmlSqlGenerator.cs) takes an input DbQueryCommandTree and produces a single SQL SELECT statement.</span></span>  
+ <span data-ttu-id="b60de-105">该示例提供程序的 SQL 生成模块（位于 SQL Generation 文件夹下，不包括 DmlSqlGenerator.cs 文件）采用一个输入 DbQueryCommandTree，并且生成单个 SQL SELECT 语句。</span><span class="sxs-lookup"><span data-stu-id="b60de-105">The SQL Generation module of the Sample Provider (located under the SQL Generation folder, except for the file DmlSqlGenerator.cs) takes an input DbQueryCommandTree and produces a single SQL SELECT statement.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="4da82-106">本节内容</span><span class="sxs-lookup"><span data-stu-id="4da82-106">In This Section</span></span>  
- <span data-ttu-id="4da82-107">本节包括下列主题：</span><span class="sxs-lookup"><span data-stu-id="4da82-107">This section includes the following topics:</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="b60de-106">本节内容</span><span class="sxs-lookup"><span data-stu-id="b60de-106">In This Section</span></span>  
+ <span data-ttu-id="b60de-107">本节包括下列主题：</span><span class="sxs-lookup"><span data-stu-id="b60de-107">This section includes the following topics:</span></span>  
   
- [<span data-ttu-id="4da82-108">体系结构和设计</span><span class="sxs-lookup"><span data-stu-id="4da82-108">Architecture and Design</span></span>](../../../../../docs/framework/data/adonet/ef/architecture-and-design.md)  
+ [<span data-ttu-id="b60de-108">体系结构和设计</span><span class="sxs-lookup"><span data-stu-id="b60de-108">Architecture and Design</span></span>](../../../../../docs/framework/data/adonet/ef/architecture-and-design.md)  
   
- [<span data-ttu-id="4da82-109">演练：SQL 生成</span><span class="sxs-lookup"><span data-stu-id="4da82-109">Walkthrough: SQL Generation</span></span>](../../../../../docs/framework/data/adonet/ef/walkthrough-sql-generation.md)  
+ [<span data-ttu-id="b60de-109">演练：SQL 生成</span><span class="sxs-lookup"><span data-stu-id="b60de-109">Walkthrough: SQL Generation</span></span>](../../../../../docs/framework/data/adonet/ef/walkthrough-sql-generation.md)  
   
-## <a name="see-also"></a><span data-ttu-id="4da82-110">请参阅</span><span class="sxs-lookup"><span data-stu-id="4da82-110">See Also</span></span>  
- [<span data-ttu-id="4da82-111">SQL 生成</span><span class="sxs-lookup"><span data-stu-id="4da82-111">SQL Generation</span></span>](../../../../../docs/framework/data/adonet/ef/sql-generation.md)
+## <a name="see-also"></a><span data-ttu-id="b60de-110">请参阅</span><span class="sxs-lookup"><span data-stu-id="b60de-110">See also</span></span>
+- [<span data-ttu-id="b60de-111">SQL 生成</span><span class="sxs-lookup"><span data-stu-id="b60de-111">SQL Generation</span></span>](../../../../../docs/framework/data/adonet/ef/sql-generation.md)
