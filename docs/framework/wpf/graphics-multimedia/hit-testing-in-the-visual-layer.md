@@ -8,12 +8,12 @@ helpviewer_keywords:
 - hit testing functionality [WPF]
 - visual layer [WPF], hit testing functionality
 ms.assetid: b1a64b61-14be-4d75-b89a-5c67bebb2c7b
-ms.openlocfilehash: fe54578407e881ec7d6782ec21100b29eded07a3
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 27e5e8c939cf95b6406c810c25940cc04420b22c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45988577"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54692410"
 ---
 # <a name="hit-testing-in-the-visual-layer"></a>可视化层中的命中测试
 本主题概述可视化层提供的命中测试功能。 命中测试支持，您可以确定几何或点值是否落在所呈现内容的<xref:System.Windows.Media.Visual>，从而可以实现用户界面行为，例如选择矩形来选择多个对象。  
@@ -24,13 +24,13 @@ ms.locfileid: "45988577"
 ## <a name="hit-testing-scenarios"></a>命中测试方案  
  <xref:System.Windows.UIElement>类提供了<xref:System.Windows.UIElement.InputHitTest%2A>方法，它允许你针对使用给定的坐标值对元素进行命中测试。 在许多情况下，<xref:System.Windows.UIElement.InputHitTest%2A>方法提供实现命中测试的元素的所需的功能。 但是，有多种方案可能需要在可视化层上实现命中测试。  
   
--   命中测试所针对非<xref:System.Windows.UIElement>对象： 适用于要执行命中测试非<xref:System.Windows.UIElement>对象，如<xref:System.Windows.Media.DrawingVisual>或图形对象。  
+-   命中测试所针对非<xref:System.Windows.UIElement>对象：如果要执行命中测试不是如此<xref:System.Windows.UIElement>对象，如<xref:System.Windows.Media.DrawingVisual>或图形对象。  
   
--   使用几何进行命中测试：适用于需要使用几何对象而不是点的坐标值进行命中测试。  
+-   命中测试几何图形的使用：如果你需要将 geometry 对象而不是一个点的坐标值的命中测试是如此。  
   
--   针对多个对象进行命中测试：适用于需要针对多个对象（如重叠的对象）进行命中测试。 可以获取与几何或点相交的所有视觉对象的结果，而不仅仅是第一个视觉对象的结果。  
+-   命中测试所针对多个对象：这适用于需要针对多个对象，如重叠的对象进行命中测试。 可以获取与几何或点相交的所有视觉对象的结果，而不仅仅是第一个视觉对象的结果。  
   
--   忽略<xref:System.Windows.UIElement>命中测试策略： 适用于需要忽略<xref:System.Windows.UIElement>命中测试策略，将考虑这些因素，如元素是否已被禁用或不可见。  
+-   忽略<xref:System.Windows.UIElement>命中测试策略：适用于需要忽略<xref:System.Windows.UIElement>命中测试策略，将考虑这些因素，如元素是否已被禁用或不可见。  
   
 > [!NOTE]
 >  有关演示在可视化层上进行命中测试的完整代码示例，请参阅[使用 DrawingVisuals 进行命中测试示例](https://go.microsoft.com/fwlink/?LinkID=159994)和[使用 Win32 互操作进行命中测试示例](https://go.microsoft.com/fwlink/?LinkID=159995)。  
@@ -138,13 +138,13 @@ ms.locfileid: "45988577"
  [!code-csharp[HitTestingOverview#108](../../../../samples/snippets/csharp/VS_Snippets_Wpf/HitTestingOverview/CSharp/Window1.xaml.cs#108)]
  [!code-vb[HitTestingOverview#108](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/HitTestingOverview/visualbasic/window1.xaml.vb#108)]  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Windows.Media.VisualTreeHelper.HitTest%2A>  
- <xref:System.Windows.Media.HitTestResult>  
- <xref:System.Windows.Media.HitTestResultCallback>  
- <xref:System.Windows.Media.HitTestFilterCallback>  
- <xref:System.Windows.UIElement.IsHitTestVisible%2A>  
- [命中测试使用 drawingvisuals 执行示例](https://go.microsoft.com/fwlink/?LinkID=159994)  
- [使用 Win32 互操作示例命中测试](https://go.microsoft.com/fwlink/?LinkID=159995)  
- [对视觉对象中的几何图形进行命中测试](../../../../docs/framework/wpf/graphics-multimedia/how-to-hit-test-geometry-in-a-visual.md)  
- [使用 Win32 宿主容器进行命中测试](../../../../docs/framework/wpf/graphics-multimedia/how-to-hit-test-using-a-win32-host-container.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.Windows.Media.VisualTreeHelper.HitTest%2A>
+- <xref:System.Windows.Media.HitTestResult>
+- <xref:System.Windows.Media.HitTestResultCallback>
+- <xref:System.Windows.Media.HitTestFilterCallback>
+- <xref:System.Windows.UIElement.IsHitTestVisible%2A>
+- [命中测试使用 drawingvisuals 执行示例](https://go.microsoft.com/fwlink/?LinkID=159994)
+- [使用 Win32 互操作示例命中测试](https://go.microsoft.com/fwlink/?LinkID=159995)
+- [对视觉对象中的几何图形进行命中测试](../../../../docs/framework/wpf/graphics-multimedia/how-to-hit-test-geometry-in-a-visual.md)
+- [使用 Win32 宿主容器进行命中测试](../../../../docs/framework/wpf/graphics-multimedia/how-to-hit-test-using-a-win32-host-container.md)

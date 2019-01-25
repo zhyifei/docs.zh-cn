@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 17ae761b2d48552aded8191ddbea26552d8da277
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 4bc91a90320967e625aab63fa17ae88ab284ea38
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33411013"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54689125"
 ---
 # <a name="icordebugdatatargetgetplatform-method"></a>ICorDebugDataTarget::GetPlatform 方法
-提供有关平台，包括处理器体系结构和目标进程正在其运行的操作系统的信息。  
+提供有关平台，包括处理器体系结构和操作系统，目标进程正在其运行的信息。  
   
 ## <a name="syntax"></a>语法  
   
@@ -35,29 +35,29 @@ HRESULT GetPlatform([out] CorDebugPlatform * pTargetPlatform);
   
 #### <a name="parameters"></a>参数  
  `pTargetPlatform`  
- [out]指向的指针[CorDebugPlatformEnum](../../../../docs/framework/unmanaged-api/debugging/cordebugplatform-enumeration.md)描述目标平台的枚举。  
+ [out]一个指向[CorDebugPlatformEnum](../../../../docs/framework/unmanaged-api/debugging/cordebugplatform-enumeration.md)枚举，用于描述目标平台。  
   
 ## <a name="remarks"></a>备注  
- `CorDebugPlatformEnum`枚举返回的值由[ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)接口来确定目标进程，如其指针大小、 地址空间布局、 注册设置、 指令格式、 上下文布局的详细信息和调用约定。  
+ `CorDebugPlatformEnum`通过使用枚举返回值[ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)接口，以确定目标进程，如其指针大小、 地址空间布局、 注册组、 指令格式、 上下文布局的详细信息和调用约定。  
   
- `pTargetPlatform`值可能引用而不是在使用指定实际硬件的目标模拟的平台。 例如，在 64 位版本的 Windows 操作系统在 Windows (WOW) 环境上的 Windows 中运行的进程应使用`CORDB_PLATFORM_WINDOWS_X86`值[CorDebugPlatformEnum](../../../../docs/framework/unmanaged-api/debugging/cordebugplatform-enumeration.md)枚举。  
+ `pTargetPlatform`值可能引用一个平台，而不是在使用指定实际硬件的目标进行模拟。 例如，在 64 位版本的 Windows 操作系统运行在 Windows 上 Windows (WOW) 环境中的进程应使用`CORDB_PLATFORM_WINDOWS_X86`的值[CorDebugPlatformEnum](../../../../docs/framework/unmanaged-api/debugging/cordebugplatform-enumeration.md)枚举。  
   
- 此方法必须成功。 如果失败，则目标平台是不可用。 该方法可能会出于以下原因失败：  
+ 此方法必须成功完成。 如果失败，目标平台是不可用。 该方法可能会出于以下原因失败：  
   
--   目标模拟该平台是不可用。  
+-   目标进行模拟的平台是不可用。  
   
--   目标平台上的实际硬件不可用。  
+-   目标平台上的实际硬件是不可用。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** CorDebug.idl、 CorDebug.h  
   
  **库：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>请参阅  
- [ICorDebugDataTarget 接口](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget-interface.md)  
- [调试接口](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)  
- [调试](../../../../docs/framework/unmanaged-api/debugging/index.md)
+## <a name="see-also"></a>请参阅
+- [ICorDebugDataTarget 接口](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget-interface.md)
+- [调试接口](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [调试](../../../../docs/framework/unmanaged-api/debugging/index.md)

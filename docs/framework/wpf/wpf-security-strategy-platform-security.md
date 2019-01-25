@@ -17,12 +17,12 @@ helpviewer_keywords:
 - Windows Presentation Foundation [WPF], about security model
 - security model [WPF], operating system
 ms.assetid: 2a39a054-3e2a-4659-bcb7-8bcea490ba31
-ms.openlocfilehash: 1b5bada61a9d6374a1b961603fcf575199dee591
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: 2252214a8ec217c30842995ea7d4d141e127d5f3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49121397"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54640441"
 ---
 # <a name="wpf-security-strategy---platform-security"></a>WPF 安全策略 - 平台安全性
 虽然 Windows Presentation Foundation (WPF) 提供了各种安全服务，它还利用基础平台 （包括操作系统） 的安全功能[!INCLUDE[TLA2#tla_clr](../../../includes/tla2sharptla-clr-md.md)]，和[!INCLUDE[TLA2#tla_ie](../../../includes/tla2sharptla-ie-md.md)]。 这些层组合在一起旨在提供 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 强大且深层防御的安全模型，尝试避免任何单点故障，如下图所示：  
@@ -128,7 +128,7 @@ ms.locfileid: "49121397"
   
 -   **不受信任的站点**。 由不受信任的用户标识的应用程序。 （不受信任）。  
   
- 对于这些区域中的任一一个，[!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)] 都会提供一个预定义的权限集，包括可匹配与之关联的信任级别的权限。 这些方法包括：  
+ 对于这些区域中的任一一个，[!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)] 都会提供一个预定义的权限集，包括可匹配与之关联的信任级别的权限。 这些问题包括：  
   
 -   **FullTrust**。 对于从启动应用程序**我的电脑**区域。 将授予全部可能的权限。  
   
@@ -208,12 +208,12 @@ ms.locfileid: "49121397"
   
  [!INCLUDE[TLA2#tla_ie7](../../../includes/tla2sharptla-ie7-md.md)]包含并扩展了作为持续提供安全承诺一部分的 [!INCLUDE[TLA2#tla_ie6sp2](../../../includes/tla2sharptla-ie6sp2-md.md)] 的安全功能。  
   
-## <a name="see-also"></a>请参阅  
- [了解 Windows XP SP2 中的 Microsoft Internet Explorer 6 中的安全性](https://www.microsoft.com/downloads/details.aspx?FamilyId=E550F940-37A0-4541-B5E2-704AB386C3ED&displaylang=en)  
- [Understanding and Working in Protected 的 Mode Internet Explorer](https://msdn.microsoft.com/library/bb250462.aspx)  
- [Windows XP Service Pack 3](https://www.microsoft.com/windows/products/windowsxp/sp3/default.mspx)  
- [Windows Vista 安全指南](https://www.microsoft.com/downloads/details.aspx?familyid=a3d1bbed-7f35-4e72-bfb5-b84a526c1565&displaylang=en)  
- [代码访问安全性](../../../docs/framework/misc/code-access-security.md)  
- [安全性](../../../docs/framework/wpf/security-wpf.md)  
- [WPF 部分信任安全](../../../docs/framework/wpf/wpf-partial-trust-security.md)  
- [WPF 安全策略 - 安全工程](../../../docs/framework/wpf/wpf-security-strategy-security-engineering.md)
+## <a name="see-also"></a>请参阅
+- [了解 Windows XP SP2 中的 Microsoft Internet Explorer 6 中的安全性](https://www.microsoft.com/downloads/details.aspx?FamilyId=E550F940-37A0-4541-B5E2-704AB386C3ED&displaylang=en)
+- [Understanding and Working in Protected 的 Mode Internet Explorer](https://msdn.microsoft.com/library/bb250462.aspx)
+- [Windows XP Service Pack 3](https://www.microsoft.com/windows/products/windowsxp/sp3/default.mspx)
+- [Windows Vista 安全指南](https://www.microsoft.com/downloads/details.aspx?familyid=a3d1bbed-7f35-4e72-bfb5-b84a526c1565&displaylang=en)
+- [代码访问安全性](../../../docs/framework/misc/code-access-security.md)
+- [安全性](../../../docs/framework/wpf/security-wpf.md)
+- [WPF 部分信任安全](../../../docs/framework/wpf/wpf-partial-trust-security.md)
+- [WPF 安全策略 - 安全工程](../../../docs/framework/wpf/wpf-security-strategy-security-engineering.md)

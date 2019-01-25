@@ -10,12 +10,12 @@ helpviewer_keywords:
 - XML axis [Visual Basic], attribute
 - XML [Visual Basic], accessing
 ms.assetid: 7a4777e1-0618-4de9-9510-fb9ace2bf4db
-ms.openlocfilehash: 9107b946394ab70980e4865364fc1ba9683e2025
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: cfc18df4487488bd90d7b0250a9053f55305d8a8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43785155"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54631487"
 ---
 # <a name="xml-attribute-axis-property-visual-basic"></a>XML 特性轴属性 (Visual Basic)
 提供访问的属性的值<xref:System.Xml.Linq.XElement>对象或集合中的第一个元素<xref:System.Xml.Linq.XElement>对象。  
@@ -30,21 +30,21 @@ object.@<attribute>
   
 ## <a name="parts"></a>部件  
  `object`  
- 必须的。 <xref:System.Xml.Linq.XElement>对象或一系列<xref:System.Xml.Linq.XElement>对象。  
+ 必需。 <xref:System.Xml.Linq.XElement>对象或一系列<xref:System.Xml.Linq.XElement>对象。  
   
  .@  
- 必须的。 表示特性轴属性的开头。  
+ 必需。 表示特性轴属性的开头。  
   
  <  
  可选。 表示的属性的名称的开头时`attribute`不是在 Visual Basic 中是有效的标识符。  
   
  `attribute`  
- 必须的。 若要访问的窗体的属性的名称 [`prefix`:]`name`。  
+ 必需。 若要访问的窗体的属性的名称 [`prefix`:]`name`。  
   
 |部件|描述|  
 |----------|-----------------|  
 |`prefix`|可选。 该属性的 XML 命名空间前缀。 必须是使用 `Imports` 语句定义的全局 XML 命名空间。|  
-|`name`|必须的。 本地属性名称。 请参阅[声明的 XML 元素和特性的名称](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md)。|  
+|`name`|必需。 本地属性名称。 请参阅[声明的 XML 元素和特性的名称](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md)。|  
   
  \>  
  可选。 表示属性的名称的末尾时`attribute`不是在 Visual Basic 中是有效的标识符。  
@@ -106,9 +106,9 @@ object.@<attribute>
   
  `Phone type: home`  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Xml.Linq.XElement>  
- [XML 轴属性](../../../visual-basic/language-reference/xml-axis/index.md)  
- [XML 文本](../../../visual-basic/language-reference/xml-literals/index.md)  
- [在 Visual Basic 中创建 XML](../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)  
- [已声明的 XML 元素和特性的名称](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.Xml.Linq.XElement>
+- [XML 轴属性](../../../visual-basic/language-reference/xml-axis/index.md)
+- [XML 文本](../../../visual-basic/language-reference/xml-literals/index.md)
+- [在 Visual Basic 中创建 XML](../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)
+- [已声明的 XML 元素和特性的名称](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md)

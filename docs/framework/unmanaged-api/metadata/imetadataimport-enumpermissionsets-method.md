@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: cdb9e91f5e7dfe8d54fb50c757684117465944df
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 759b2a9a419989cfec1020b1a6662bd6f8416739
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33448063"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54501186"
 ---
 # <a name="imetadataimportenumpermissionsets-method"></a>IMetaDataImport::EnumPermissionSets 方法
 枚举指定的元数据范围内的对象的权限。  
@@ -42,22 +42,22 @@ HRESULT EnumPermissionSets
   
 #### <a name="parameters"></a>参数  
  `phEnum`  
- [在中，out]枚举数指向的指针。 这必须在首次调用此方法为 NULL。  
+ [in、 out]一个指向枚举器。 对于首次调用此方法，这必须为 NULL。  
   
  `tk`  
- [in]元数据标记，用于限制搜索，或者为 NULL 以搜索可能提供给最大的作用域的作用域。  
+ [in]元数据标记，用于限制搜索，或者为 NULL 以搜索可能的范围最大作用域。  
   
  `dwActions`  
- [in]标志表示<xref:System.Security.Permissions.SecurityAction>值时要包含在`rPermission`，或为零，则返回所有操作。  
+ [in]标志表示<xref:System.Security.Permissions.SecurityAction>值时要包含在`rPermission`，或为零，则返回的所有操作。  
   
  `rPermission`  
- [out]用于存储权限标记数组。  
+ [out]用于存储权限令牌的数组。  
   
  `cMax`  
  [in] `rPermission` 数组的最大大小。  
   
  `pcTokens`  
- [out]权限标记中返回的数目`rPermission`。  
+ [out]权限令牌中返回的数`rPermission`。  
   
 ## <a name="return-value"></a>返回值  
   
@@ -67,14 +67,14 @@ HRESULT EnumPermissionSets
 |`S_FALSE`|没有要枚举的标记。 在这种情况下，`pcTokens`为零。|  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** Cor.h  
   
- **库：** 作为 MsCorEE.dll 中的资源  
+ **库：** 包含为 MsCorEE.dll 中的资源  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>请参阅  
- [IMetaDataImport 接口](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)  
- [IMetaDataImport2 接口](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+## <a name="see-also"></a>请参阅
+- [IMetaDataImport 接口](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [IMetaDataImport2 接口](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

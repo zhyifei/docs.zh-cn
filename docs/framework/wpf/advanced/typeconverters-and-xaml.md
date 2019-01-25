@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - XAML [WPF], TypeConverter class
 ms.assetid: f6313e4d-e89d-497d-ac87-b43511a1ae4b
-ms.openlocfilehash: 53e2d14cf331cf41b20300afbe8966538bf621ca
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 29286328c960707151fd5b6f2804346373000ad4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43407104"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54748072"
 ---
 # <a name="typeconverters-and-xaml"></a>TypeConverters 和 XAML
 本主题介绍将从字符串进行的类型转换作为常规 XAML 语言功能的用途。 在.NET Framework 中，<xref:System.ComponentModel.TypeConverter>类作为某种特定用途可以用作 XAML 特性用法中的属性值的托管自定义类的实现的一部分。 如果您编写的自定义类，并且你希望类用作 XAML 可设置属性值的实例，您可能需要应用<xref:System.ComponentModel.TypeConverterAttribute>到类，编写自定义<xref:System.ComponentModel.TypeConverter>类，或两者。  
@@ -106,16 +106,16 @@ ms.locfileid: "43407104"
  对于 <xref:System.ComponentModel.TypeConverter.CanConvertTo%2A> 类型的 `true` ， `destinationType` 实现应返回 <xref:System.String>，否则遵从基实现。  
   
 ### <a name="implementing-canconvertfrom"></a>实现 CanConvertFrom  
- 对于 <xref:System.String> 类型的 `sourceType`，<xref:System.ComponentModel.TypeConverter.CanConvertFrom%2A> 实现应返回 `true`，否则遵从基实现。  
+ 对于 <xref:System.ComponentModel.TypeConverter.CanConvertFrom%2A> 类型的 `true` ， `sourceType` 实现应返回 <xref:System.String>，否则遵从基实现。  
   
 <a name="Applying_the_TypeConverterAttribute"></a>   
 ## <a name="applying-the-typeconverterattribute"></a>应用 TypeConverterAttribute  
  为了使你的自定义类型转换器作为使用由 XAML 处理器的自定义类的类型转换器，必须应用[!INCLUDE[TLA#tla_netframewkattr](../../../../includes/tlasharptla-netframewkattr-md.md)]<xref:System.ComponentModel.TypeConverterAttribute>向类定义。 通过特性指定的 <xref:System.ComponentModel.TypeConverterAttribute.ConverterTypeName%2A> 必须是自定义类型转换器的类型名。 应用此特性后，当 XAML 处理器处理属性类型使用自定义类类型的值时，它可以输入字符串并返回对象实例。  
   
- 还可以基于每个属性提供类型转换器。 而不是应用[!INCLUDE[TLA#tla_netframewkattr](../../../../includes/tlasharptla-netframewkattr-md.md)]<xref:System.ComponentModel.TypeConverterAttribute>向类定义，请将其应用于属性定义 (主定义，不`get` / `set`实现)。 属性的类型必须与自定义类型转换器处理的类型匹配。 应用此特性后，当 XAML 处理器处理该属性的值时，它可以处理输入字符串并返回对象实例。 每个属性类型转换器方法会特别有用，如果您选择使用 Microsoft.NET Framework 中或某些其他库其中无法控制类定义并且无法应用的属性类型<xref:System.ComponentModel.TypeConverterAttribute>存在。  
+ 还可以基于每个属性提供类型转换器。 应将 [!INCLUDE[TLA#tla_netframewkattr](../../../../includes/tlasharptla-netframewkattr-md.md)] <xref:System.ComponentModel.TypeConverterAttribute> 应用于属性定义（主定义，不是它包含的 `get`/`set` 的实现），而不是将它应用于类定义。 属性的类型必须与自定义类型转换器处理的类型匹配。 应用此特性后，当 XAML 处理器处理该属性的值时，它可以处理输入字符串并返回对象实例。 每个属性类型转换器方法会特别有用，如果您选择使用 Microsoft.NET Framework 中或某些其他库其中无法控制类定义并且无法应用的属性类型<xref:System.ComponentModel.TypeConverterAttribute>存在。  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.ComponentModel.TypeConverter>  
- [XAML 概述 (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)  
- [标记扩展和 WPF XAML](../../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md)  
- [XAML 语法详述](../../../../docs/framework/wpf/advanced/xaml-syntax-in-detail.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.ComponentModel.TypeConverter>
+- [XAML 概述 (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)
+- [标记扩展和 WPF XAML](../../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md)
+- [XAML 语法详述](../../../../docs/framework/wpf/advanced/xaml-syntax-in-detail.md)

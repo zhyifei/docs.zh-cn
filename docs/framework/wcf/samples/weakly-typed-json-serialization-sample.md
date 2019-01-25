@@ -2,15 +2,15 @@
 title: 弱类型 JSON 序列化示例
 ms.date: 03/30/2017
 ms.assetid: 0b30e501-4ef5-474d-9fad-a9d559cf9c52
-ms.openlocfilehash: 07166b89729fed7911cb842313269e420ae401b7
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 212a5ea362600e833303711b750d1c7a0f7252b6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43857660"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54676050"
 ---
 # <a name="weakly-typed-json-serialization-sample"></a>弱类型 JSON 序列化示例
-将用户定义的类型序列化为给定的连网格式，或者将连网格式反序列为原来的用户定义的类型时，给定的用户定义的类型必须在服务和客户端上可用。 通常，为实现此目的，系统将 <xref:System.Runtime.Serialization.DataContractAttribute> 属性应用于这些用户定义的类型，并将 <xref:System.Runtime.Serialization.DataMemberAttribute> 属性应用于这些类型的成员。 处理 JavaScript 对象符号 (JSON) 对象时，该机制同样适用，如主题 [How to: Serialize and Deserialize JSON Data](../../../../docs/framework/wcf/feature-details/how-to-serialize-and-deserialize-json-data.md)中所述。  
+将用户定义的类型序列化为给定的连网格式，或者将连网格式反序列为原来的用户定义的类型时，给定的用户定义的类型必须在服务和客户端上可用。 通常，为实现此目的，系统将 <xref:System.Runtime.Serialization.DataContractAttribute> 属性应用于这些用户定义的类型，并将 <xref:System.Runtime.Serialization.DataMemberAttribute> 属性应用于这些类型的成员。 该机制同样适用时使用 JavaScript 对象表示法 (JSON) 对象，如本主题中所述[如何：序列化和反序列化 JSON 数据](../../../../docs/framework/wcf/feature-details/how-to-serialize-and-deserialize-json-data.md)。  
   
  在某些情况下，Windows Communication Foundation (WCF) 服务或客户端必须访问由服务或开发人员的控制之外的客户端生成的 JSON 对象。 随着更多 Web 服务公开 JSON Api，可能会不切实际 WCF 开发人员用来构造要任意 JSON 对象反序列化到其中的本地用户定义类型。 此示例提供了一种机制，使 WCF 开发人员能够使用反序列化的任意 JSON 对象，而无需创建用户定义类型。 这称为 JSON 对象的“弱类型序列化”  ，因为 JSON 对象反序列化为的类型在编译时是未知的。  
   
