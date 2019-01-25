@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Multiple EndPoints
 ms.assetid: 8f0c2e1f-9aee-41c2-8301-c72b7f664412
-ms.openlocfilehash: a9c395ffe4f715b6d6ea034c848cbb277d60d560
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 3b52583b8089efcee2a0251564c79e931a596bf8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43855901"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54678065"
 ---
 # <a name="multiple-endpoints"></a>多终结点
 此多终结点示例演示如何在服务上配置多个终结点，以及如何从客户端与每个终结点通信。 此示例基于[Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md)。 已经对服务配置进行了修改以定义两个支持 `ICalculator` 协定的终结点，但是这两个终结点位于使用不同绑定的不同地址。 已经对客户端配置和代码进行了修改，以便与这两个服务终结点均进行通信。  

@@ -17,11 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4156c3507ccbd21d59893c5e03e15fe9b7322e48
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 52a00496c3b4d5ccd96adaf569c25c64a5709a9a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54717581"
 ---
 # <a name="imetadataimportisglobal-method"></a>IMetaDataImport::IsGlobal 方法
 获取一个值，该值指示由指定的元数据标记表示的字段、方法或类型是否具有全局范围。  
@@ -40,17 +41,17 @@ HRESULT IsGlobal (
  [in]表示类型、 字段或方法的元数据标记。  
   
  `pbGlobal`  
- [out] 如果该对象具有全局作用域;否则为 0 （零）。  
+ [out] 1，如果该对象具有全局作用域;否则为 0 （零）。  
   
 ## <a name="requirements"></a>要求  
- **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** Cor.h  
   
- **库：**作为 MsCorEE.dll 中的资源  
+ **库：** 包含为 MsCorEE.dll 中的资源  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>请参阅  
- [IMetaDataImport 接口](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)  
- [IMetaDataImport2 接口](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+## <a name="see-also"></a>请参阅
+- [IMetaDataImport 接口](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [IMetaDataImport2 接口](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

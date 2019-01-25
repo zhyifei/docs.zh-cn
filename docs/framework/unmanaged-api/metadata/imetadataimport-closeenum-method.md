@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 3d81f9b0107fd927ddfda24cfd0ea3249e4c8651
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 724660cd5703ee9b893493df5d583d97b5bdfb3e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33448812"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54720517"
 ---
 # <a name="imetadataimportcloseenum-method"></a>IMetaDataImport::CloseEnum 方法
-关闭的枚举器由指定的句柄。  
+关闭由指定句柄的枚举器。  
   
 ## <a name="syntax"></a>语法  
   
@@ -37,20 +37,20 @@ void CloseEnum (
   
 #### <a name="parameters"></a>参数  
  `hEnum`  
- [in]枚举器，以关闭句柄。  
+ [in]枚举器来关闭句柄。  
   
 ## <a name="remarks"></a>备注  
- 指定的句柄`hEnum`从以前获取`Enum`*名称*调用 (例如， [imetadataimport:: Enumtypedefs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-enumtypedefs-method.md))。  
+ 通过指定的句柄`hEnum`获取从以前`Enum`*名称*调用 (例如， [imetadataimport:: Enumtypedefs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-enumtypedefs-method.md))。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** Cor.h  
   
- **库：** 作为 MsCorEE.dll 中的资源  
+ **库：** 包含为 MsCorEE.dll 中的资源  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>请参阅  
- [IMetaDataImport 接口](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)  
- [IMetaDataImport2 接口](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+## <a name="see-also"></a>请参阅
+- [IMetaDataImport 接口](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [IMetaDataImport2 接口](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

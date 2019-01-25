@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0afe4daa1c85f3e15addac55bdbe631d40e03f19
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 5c7ea671af5c6c725df136810bb8cf6610a6f83f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33407554"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54710334"
 ---
 # <a name="exportnestedtype-method"></a>ExportNestedType 方法
-为可导出指定嵌套的类型。 [ExportType 方法](../../../../docs/framework/unmanaged-api/alink/exporttype-method.md)还可以导出嵌套类型，但此方法也越快。  
+指定为可导出的嵌套的类型。 [ExportType 方法](../../../../docs/framework/unmanaged-api/alink/exporttype-method.md)还可以导出嵌套类型，但此方法速度更快。  
   
 ## <a name="syntax"></a>语法  
   
@@ -43,10 +43,10 @@ HRESULT ExportNestedType(
   
 #### <a name="parameters"></a>参数  
  `AssemblyID`  
- 要从导出程序集的 ID。  
+ 若要从导出的程序集的 ID。  
   
  `FileToken`  
- 文件的标记或定义的类型，要成为可导出的文件的程序集。  
+ 文件标记或程序集的文件，用于定义要成为可导出的类型。  
   
  `TypeToken`  
  键入要成为可导出的类型的令牌。  
@@ -55,21 +55,21 @@ HRESULT ExportNestedType(
  父类型的令牌。  
   
  `pszTypename`  
- 要导出的完全限定的类型名称。  
+ 若要导出的完全限定的类型名称。  
   
  `dwFlags`  
- `ComType` 标志，如`tdPublic`或`tdNested`。 此值可能会传递给[DefineExportedType 方法](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-defineexportedtype-method.md)。  
+ `ComType` 标志，如`tdPublic`或`tdNested`。 此值可能会传递到[DefineExportedType 方法](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-defineexportedtype-method.md)。  
   
  `pType`  
- 收到导出的类型的令牌。  
+ 接收导出的类型的令牌。  
   
 ## <a name="return-value"></a>返回值  
- 如果该方法成功，则返回，则为 S_OK。  
+ 如果该方法成功，返回，则为 S_OK。  
   
 ## <a name="requirements"></a>要求  
  需要 alink.h  
   
-## <a name="see-also"></a>请参阅  
- [IALink 接口](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)  
- [IALink2 接口](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)  
- [ALink API](../../../../docs/framework/unmanaged-api/alink/index.md)
+## <a name="see-also"></a>请参阅
+- [IALink 接口](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
+- [IALink2 接口](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
+- [ALink API](../../../../docs/framework/unmanaged-api/alink/index.md)

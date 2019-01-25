@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 19a10a527c37d93d00bec799fdaa12bb0ad3fdbd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: e427c3919e8b714146fbe630a7e151dff10703de
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33423866"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54582404"
 ---
 # <a name="icorpublishprocessenumnext-method"></a>ICorPublishProcessEnum::Next 方法
-从开始在当前光标位置处的集合获取指定的数目的进程。  
+从集合中，从当前光标位置开始获取指定的进程数。  
   
 ## <a name="syntax"></a>语法  
   
@@ -46,16 +46,16 @@ HRESULT Next (
  [out]检索到的数组的指针[ICorPublishProcess](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocess-interface.md)对象，其中每个表示的进程。  
   
  `pceltFetched`  
- [out]指向实际返回的进程数。 此值可能为 null 如果`celt`是之一。  
+ [out]指向实际返回的进程数。 此值可能为 null 如果`celt`是其中一个。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** CorPub.idl、 CorPub.h  
+ **标头：** CorPub.idl CorPub.h  
   
  **库：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>请参阅  
- [ICorPublishProcessEnum 接口](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocessenum-interface.md)
+## <a name="see-also"></a>请参阅
+- [ICorPublishProcessEnum 接口](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocessenum-interface.md)

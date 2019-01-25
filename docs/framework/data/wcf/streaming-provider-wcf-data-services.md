@@ -10,12 +10,12 @@ helpviewer_keywords:
 - streaming data provider [WCF Data Services]
 - WCF Data Services, streams
 ms.assetid: f0978fe4-5f9f-42aa-a5c2-df395d7c9495
-ms.openlocfilehash: 543d095c88670024a53fad7c865883ecaab1c6e0
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: b7a2cd6ec3be6d2a572e96e37032b3dec8a5a741
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45747045"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54697343"
 ---
 # <a name="streaming-provider-wcf-data-services"></a>流提供程序（WCF 数据服务）
 数据服务可公开二进制大型对象数据。 此二进制数据可以表示视频和音频流、图像、文档文件或其他类型的二进制媒体。 当数据模型中的某个实体包括一个或多个二进制属性时，数据服务会在响应源的入口内以 base-64 编码形式返回此二进制数据。 加载和序列化大型二进制数据，以这种方式会影响性能，因为[!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]定义用于检索独立于其所属的实体的二进制数据的机制。 这一点是通过将实体和二进制数据分隔到一个或多个数据流来实现的。  
@@ -38,7 +38,7 @@ ms.locfileid: "45747045"
   
 5.  启用对服务器上或数据源中的二进制资源的访问。  
   
- 本主题中的示例基于示例流照片服务，该文章中深入讨论[数据服务流提供程序系列： 实现流提供程序 (第 1 部分)](https://go.microsoft.com/fwlink/?LinkID=198989)。 此示例服务的源代码位于[流照片数据服务示例页](https://go.microsoft.com/fwlink/?LinkID=198988)MSDN 代码库。  
+ 本主题中的示例基于示例流照片服务，该文章中深入讨论服务[数据服务流提供程序系列：实现流提供程序 （第 1 部分）](https://go.microsoft.com/fwlink/?LinkID=198989)。 此示例服务的源代码位于[流照片数据服务示例页](https://go.microsoft.com/fwlink/?LinkID=198988)MSDN 代码库。  
   
 ## <a name="defining-a-media-link-entry-in-the-data-model"></a>在数据模型中定义媒体链接入口  
  数据源提供程序确定在数据模型中将某个实体定义为媒体链接入口的方式。  
@@ -50,7 +50,7 @@ ms.locfileid: "45747045"
   
  还必须将命名空间 `xmlns:m=http://schemas.microsoft.com/ado/2007/08/dataservices/metadata` 添加到实体，或添加到定义数据模型的 .edmx 或 .csdl 文件的根目录中。  
   
- 有关使用的数据服务的示例[!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)]提供程序，并公开媒体资源，请参阅博文[数据服务流提供程序系列： 实现流提供程序 (第 1 部分)](https://go.microsoft.com/fwlink/?LinkID=198989)。  
+ 有关使用的数据服务的示例[!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)]提供程序，并公开媒体资源，请参阅博文[数据服务流提供程序系列：实现流提供程序 （第 1 部分）](https://go.microsoft.com/fwlink/?LinkID=198989)。  
   
  **反射提供程序**  
  若要指示某个实体为媒体链接入口，需将 <xref:System.Data.Services.Common.HasStreamAttribute> 添加到在反射提供程序中定义相应实体类型的类中。  
@@ -129,7 +129,7 @@ ms.locfileid: "45747045"
   
  有关详细信息，请参阅[数据服务版本控制](../../../../docs/framework/data/wcf/data-service-versioning-wcf-data-services.md)。  
   
-## <a name="see-also"></a>请参阅  
- [数据服务提供程序](../../../../docs/framework/data/wcf/data-services-providers-wcf-data-services.md)  
- [自定义数据服务提供程序](../../../../docs/framework/data/wcf/custom-data-service-providers-wcf-data-services.md)  
- [处理二进制数据](../../../../docs/framework/data/wcf/working-with-binary-data-wcf-data-services.md)
+## <a name="see-also"></a>请参阅
+- [数据服务提供程序](../../../../docs/framework/data/wcf/data-services-providers-wcf-data-services.md)
+- [自定义数据服务提供程序](../../../../docs/framework/data/wcf/custom-data-service-providers-wcf-data-services.md)
+- [处理二进制数据](../../../../docs/framework/data/wcf/working-with-binary-data-wcf-data-services.md)

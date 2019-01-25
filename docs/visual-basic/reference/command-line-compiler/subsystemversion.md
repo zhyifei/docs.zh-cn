@@ -6,12 +6,12 @@ helpviewer_keywords:
 - -subsystemversion compiler option [Visual Basic]
 - subsystemversion compiler option [Visual Basic]
 ms.assetid: 08be22b2-f447-4cd3-8203-120b1b920b54
-ms.openlocfilehash: 9c4b4d66ba002e58af87ef39ea82a7a23caa15ca
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 7519bb648a92cab78b4e4594a9c68a85aa932863
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50185753"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54580911"
 ---
 # <a name="-subsystemversion-visual-basic"></a>-subsystemversion (Visual Basic)
 指定可以运行生成的可执行文件的子系统的最低版本，以此确定可以运行该可执行文件的 Windows 版本。 大多数情况下，此选项确保该可执行文件可以利用早期 Windows 版本中未提供的特定安全功能。  
@@ -64,7 +64,7 @@ ms.locfileid: "50185753"
   
 
   
-## <a name="see-also"></a>请参阅  
-[Visual Basic 命令行编译器](../../../visual-basic/reference/command-line-compiler/index.md)
+## <a name="see-also"></a>请参阅
+- [Visual Basic 命令行编译器](../../../visual-basic/reference/command-line-compiler/index.md)
 
-[MSBuild 属性](/visualstudio/msbuild/msbuild-properties)
+- [MSBuild 属性](/visualstudio/msbuild/msbuild-properties)

@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - Grid control [WPF], creating [WPF], grid instance
 ms.assetid: b2f07626-9df8-43b8-8d36-492f3cb42837
-ms.openlocfilehash: b93bb859c4a0df50da2fa00587a28fda3776fd09
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: b5bb9572b6a34b21208a8d8c0583068873772aae
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50185779"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54726593"
 ---
 # <a name="how-to-create-a-grid-element"></a>如何：创建网格元素
 ## <a name="example"></a>示例  
@@ -24,7 +24,7 @@ ms.locfileid: "50185779"
   
   这两种方法将生成一个用户界面，看起来都非常相同的如下所示。
 
-  ![屏幕截图描绘了一个 WPF 用户界面，其中包含一个网格，分成三个列。  它具有 2018年产品提供了跨顶部行的所有列的标题，并具有三列每个销售数字与特定季度。  底部行具有跨两个列并显示消息的文本总单位数： 300000](./media/how-to-create-a-grid-element/how-to-create-a-grid-element.png)
-## <a name="see-also"></a>请参阅  
- <xref:System.Windows.Controls.Grid>  
- [面板概述](../../../../docs/framework/wpf/controls/panels-overview.md)
+  ![屏幕截图描绘了一个 WPF 用户界面，其中包含一个网格，分成三个列。  它具有 2018年产品提供了跨顶部行的所有列的标题，并具有三列每个销售数字与特定季度。  底部行具有跨两个列并显示消息的文本总单位数：300,000'](./media/how-to-create-a-grid-element/how-to-create-a-grid-element.png)
+## <a name="see-also"></a>请参阅
+- <xref:System.Windows.Controls.Grid>
+- [面板概述](../../../../docs/framework/wpf/controls/panels-overview.md)

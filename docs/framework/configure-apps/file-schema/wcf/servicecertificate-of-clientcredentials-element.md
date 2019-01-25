@@ -2,22 +2,22 @@
 title: '&lt;clientCredentials&gt; 的 &lt;serviceCertificate&gt; 元素'
 ms.date: 03/30/2017
 ms.assetid: e50c0ac5-f0df-4c90-b54b-fc602c1f84ea
-ms.openlocfilehash: 82fb39f15ea0dbf38d9c9b41d7fbdd50daebb823
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 2f1d95238a16bfd286a64973c6e5cfb95fe02dc4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54151977"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54744867"
 ---
 # <a name="ltservicecertificategt-of-ltclientcredentialsgt-element"></a>&lt;clientCredentials&gt; 的 &lt;serviceCertificate&gt; 元素
 指定客户端对服务进行身份验证时使用的证书。  
   
  \<system.ServiceModel>  
-\<行为 >  
+\<behaviors>  
 \<endpointBehaviors>  
-\<行为 >  
+\<behavior>  
 \<clientCredentials>  
-\<serviceCertificate >  
+\<serviceCertificate>  
   
 ## <a name="syntax"></a>语法  
   
@@ -35,8 +35,8 @@ ms.locfileid: "54151977"
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<defaultCertificate >](../../../../../docs/framework/configure-apps/file-schema/wcf/defaultcertificate-element.md)|指定在服务或 STS 未通过协商协议提供证书时要使用的 X.509 证书。|  
-|[\<scopedCertificates >](../../../../../docs/framework/configure-apps/file-schema/wcf/scopedcertificates-element.md)|表示特定服务为身份验证提供的 X.509（作用域）证书的集合。 此集合通常用于指定联合方案中安全令牌服务的服务证书。|  
+|[\<defaultCertificate>](../../../../../docs/framework/configure-apps/file-schema/wcf/defaultcertificate-element.md)|指定在服务或 STS 未通过协商协议提供证书时要使用的 X.509 证书。|  
+|[\<scopedCertificates>](../../../../../docs/framework/configure-apps/file-schema/wcf/scopedcertificates-element.md)|表示特定服务为身份验证提供的 X.509（作用域）证书的集合。 此集合通常用于指定联合方案中安全令牌服务的服务证书。|  
 |[\<authentication>](../../../../../docs/framework/configure-apps/file-schema/wcf/authentication-of-servicecertificate-element.md)|指定客户端使用的服务证书的身份验证行为。|  
   
 ### <a name="parent-elements"></a>父元素  
@@ -50,14 +50,14 @@ ms.locfileid: "54151977"
   
  特性`serviceCertificate`元素的特性相等[ \<clientCertificate >](../../../../../docs/framework/configure-apps/file-schema/wcf/clientcertificate-of-clientcredentials-element.md)。  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.ServiceModel.Configuration.ClientCredentialsElement>  
- <xref:System.ServiceModel.Configuration.ClientCredentialsElement.ServiceCertificate%2A>  
- <xref:System.ServiceModel.Description.ClientCredentials>  
- <xref:System.ServiceModel.Description.ClientCredentials.ServiceCertificate%2A>  
- <xref:System.ServiceModel.Configuration.X509RecipientCertificateClientElement>  
- <xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential>  
- [安全行为](../../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)  
- [保护客户端](../../../../../docs/framework/wcf/securing-clients.md)  
- [使用证书](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)  
- [保护服务和客户端的安全](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.ServiceModel.Configuration.ClientCredentialsElement>
+- <xref:System.ServiceModel.Configuration.ClientCredentialsElement.ServiceCertificate%2A>
+- <xref:System.ServiceModel.Description.ClientCredentials>
+- <xref:System.ServiceModel.Description.ClientCredentials.ServiceCertificate%2A>
+- <xref:System.ServiceModel.Configuration.X509RecipientCertificateClientElement>
+- <xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential>
+- [安全行为](../../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)
+- [保护客户端](../../../../../docs/framework/wcf/securing-clients.md)
+- [使用证书](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
+- [保护服务和客户端的安全](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)

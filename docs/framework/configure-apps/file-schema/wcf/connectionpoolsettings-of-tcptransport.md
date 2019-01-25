@@ -2,22 +2,22 @@
 title: '&lt;tcpTransport&gt; 的 &lt;connectionPoolSettings&gt;'
 ms.date: 03/30/2017
 ms.assetid: 2fbc3aa7-fcc9-4193-99a3-85d31d60d3f7
-ms.openlocfilehash: 8780709a5713c0192d6be1139e3425747b0b07ca
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 188a71a0c270f5c0b28c22fb72b19e94376c5f1c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54145687"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54732058"
 ---
 # <a name="ltconnectionpoolsettingsgt-of-lttcptransportgt"></a>&lt;tcpTransport&gt; 的 &lt;connectionPoolSettings&gt;
 指定 TCP 传输的其他连接池设置。  
   
  \<system.serviceModel>  
-\<绑定 >  
+\<bindings>  
 \<customBinding>  
-\<绑定 >  
+\<binding>  
 \<tcpTransport>  
-\<connectionPoolSettings >  
+\<connectionPoolSettings>  
   
 ## <a name="syntax"></a>语法  
   
@@ -47,17 +47,17 @@ ms.locfileid: "54145687"
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<namedPipeTransport >](../../../../../docs/framework/configure-apps/file-schema/wcf/namedpipetransport.md)|定义传输，该传输使通道使用命名管道传输消息。|  
+|[\<namedPipeTransport>](../../../../../docs/framework/configure-apps/file-schema/wcf/namedpipetransport.md)|定义传输，该传输使通道使用命名管道传输消息。|  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.ServiceModel.Configuration.TcpConnectionPoolSettingsElement>  
- <xref:System.ServiceModel.Channels.TcpTransportBindingElement.ConnectionPoolSettings%2A>  
- <xref:System.ServiceModel.Channels.TcpConnectionPoolSettings>  
- <xref:System.ServiceModel.Channels.TransportBindingElement>  
- <xref:System.ServiceModel.Channels.CustomBinding>  
- [传输](../../../../../docs/framework/wcf/feature-details/transports.md)  
- [选择传输](../../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)  
- [绑定](../../../../../docs/framework/wcf/bindings.md)  
- [扩展绑定](../../../../../docs/framework/wcf/extending/extending-bindings.md)  
- [自定义绑定](../../../../../docs/framework/wcf/extending/custom-bindings.md)  
- [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.ServiceModel.Configuration.TcpConnectionPoolSettingsElement>
+- <xref:System.ServiceModel.Channels.TcpTransportBindingElement.ConnectionPoolSettings%2A>
+- <xref:System.ServiceModel.Channels.TcpConnectionPoolSettings>
+- <xref:System.ServiceModel.Channels.TransportBindingElement>
+- <xref:System.ServiceModel.Channels.CustomBinding>
+- [传输](../../../../../docs/framework/wcf/feature-details/transports.md)
+- [选择传输](../../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)
+- [绑定](../../../../../docs/framework/wcf/bindings.md)
+- [扩展绑定](../../../../../docs/framework/wcf/extending/extending-bindings.md)
+- [自定义绑定](../../../../../docs/framework/wcf/extending/custom-bindings.md)
+- [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)

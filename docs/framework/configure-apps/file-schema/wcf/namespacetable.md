@@ -2,20 +2,20 @@
 title: '&lt;namespaceTable&gt;'
 ms.date: 03/30/2017
 ms.assetid: 64801766-01b7-4c65-9ce6-70ad5af67689
-ms.openlocfilehash: 55b5565ffe9d3e9e7ea41d2a2e2f380490be1781
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: fb2b324a2c128b470f1a9a21343408280c5e1862
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54151418"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54743239"
 ---
 # <a name="ltnamespacetablegt"></a>&lt;namespaceTable&gt;
 
 表示用于定义一组元素的配置节，这些元素包含随后可在 XPath 筛选器中用于路由的前缀映射的命名空间。
 
-**\<system.serviceModel >**   
-&nbsp;&nbsp;**\<路由 >**   
-&nbsp;&nbsp;&nbsp;&nbsp;**\<namespaceTable >**
+**\<system.serviceModel>**   
+&nbsp;&nbsp;**\<routing>**   
+&nbsp;&nbsp;&nbsp;&nbsp;**\<namespaceTable>**
   
 ## <a name="syntax"></a>语法  
   
@@ -42,14 +42,14 @@ ms.locfileid: "54151418"
 
 |     | 描述 |
 | --- | ----------- |
-| [**\<筛选器 >**](../../../../../docs/framework/configure-apps/file-schema/wcf/filter.md) | 定义用于 XPath 表达式的命名空间前缀映射。 |
+| [**\<filter>**](../../../../../docs/framework/configure-apps/file-schema/wcf/filter.md) | 定义用于 XPath 表达式的命名空间前缀映射。 |
 
 ### <a name="parent-elements"></a>父元素
 
 |     | 描述 |
 | --- | ----------- |
-| [**\<路由 >**](../../../../../docs/framework/configure-apps/file-schema/wcf/routing.md) | 表示一个配置节，用于定义一组路由筛选器，确定类型的 Windows Communication Foundation (WCF)<xref:System.ServiceModel.Dispatcher.MessageFilter>用于计算传入消息，以及路由表定义到的目标终结点将消息发送到筛选器匹配时。 |
+| [**\<routing>**](../../../../../docs/framework/configure-apps/file-schema/wcf/routing.md) | 表示一个配置节，用于定义一组路由筛选器，确定类型的 Windows Communication Foundation (WCF)<xref:System.ServiceModel.Dispatcher.MessageFilter>用于计算传入消息，以及路由表定义到的目标终结点将消息发送到筛选器匹配时。 |
 
 ## <a name="see-also"></a>请参阅
 
-<xref:System.ServiceModel.Routing.Configuration.NamespaceElementCollection?displayProperty=nameWithType>
+- <xref:System.ServiceModel.Routing.Configuration.NamespaceElementCollection?displayProperty=nameWithType>

@@ -1,18 +1,18 @@
 ---
-title: 对 Func 和 Action 泛型委托 (Visual Basic 中) 中使用变体
+title: 对 Func 和 Action 泛型委托 (Visual Basic 中) 使用变体
 ms.date: 07/20/2015
 ms.assetid: 36c3012f-b39c-493b-b90f-079b5912ac1b
-ms.openlocfilehash: e4c878f65867c575a1691423df583662d72a257c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 134b3c0776e100a4bdc7e902bc8b41477a0ee264
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33642923"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54549452"
 ---
-# <a name="using-variance-for-func-and-action-generic-delegates-visual-basic"></a>对 Func 和 Action 泛型委托 (Visual Basic 中) 中使用变体
+# <a name="using-variance-for-func-and-action-generic-delegates-visual-basic"></a>对 Func 和 Action 泛型委托 (Visual Basic 中) 使用变体
 这些示例演示如何使用 `Func` 和 `Action` 泛型委托中的协变和逆变来启用重用方法并为代码中提供更多的灵活性。  
   
- 有关协变和逆变的详细信息，请参阅[委托 (Visual Basic 中) 中的变体](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-delegates.md)。  
+ 有关协变和逆变的详细信息，请参阅[委托 (Visual Basic) 中的变体](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-delegates.md)。  
   
 ## <a name="using-delegates-with-covariant-type-parameters"></a>使用具有协变类型参数的委托  
  下例阐释了泛型 `Func` 委托中的协变支持的益处。 `FindByTitle` 方法采用 `String` 类型的一个参数，并返回 `Employee` 类型的一个对象。 但是，可将此方法分配给 `Func(Of String, Person)` 委托，因为 `Employee` 继承 `Person`。  
@@ -89,6 +89,6 @@ Class AddressBook
 End Class  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [协变和逆变 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/index.md)  
- [泛型](~/docs/standard/generics/index.md)
+## <a name="see-also"></a>请参阅
+- [协变和逆变 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/index.md)
+- [泛型](~/docs/standard/generics/index.md)

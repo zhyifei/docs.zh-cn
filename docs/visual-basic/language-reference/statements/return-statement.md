@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Return statement [Visual Basic]
 - expressions [Visual Basic], returning control to
 ms.assetid: ac86e7f0-5a67-42c3-9834-0e0381efa3ec
-ms.openlocfilehash: fe200add4e29fe4bbe0fdf335dcd94107b8ff1eb
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: fb75409a2c26ca966469624de781015db621a825
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47210170"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54588388"
 ---
 # <a name="return-statement-visual-basic"></a>Return 语句 (Visual Basic)
 将控制返回给调用的代码`Function`， `Sub`， `Get`， `Set`，或`Operator`过程。  
@@ -46,12 +46,12 @@ Return expression
   
  [!code-vb[VbVbalrStatements#53](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/return-statement_1.vb)]  
   
-## <a name="see-also"></a>请参阅  
- [Function 语句](../../../visual-basic/language-reference/statements/function-statement.md)  
- [Sub 语句](../../../visual-basic/language-reference/statements/sub-statement.md)  
- [Get 语句](../../../visual-basic/language-reference/statements/get-statement.md)  
- [Set 语句](../../../visual-basic/language-reference/statements/set-statement.md)  
- [Operator Statement](../../../visual-basic/language-reference/statements/operator-statement.md)  
- [Property 语句](../../../visual-basic/language-reference/statements/property-statement.md)  
- [Exit 语句](../../../visual-basic/language-reference/statements/exit-statement.md)  
- [Try...Catch...Finally 语句](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)
+## <a name="see-also"></a>请参阅
+- [Function 语句](../../../visual-basic/language-reference/statements/function-statement.md)
+- [Sub 语句](../../../visual-basic/language-reference/statements/sub-statement.md)
+- [Get 语句](../../../visual-basic/language-reference/statements/get-statement.md)
+- [Set 语句](../../../visual-basic/language-reference/statements/set-statement.md)
+- [Operator Statement](../../../visual-basic/language-reference/statements/operator-statement.md)
+- [Property 语句](../../../visual-basic/language-reference/statements/property-statement.md)
+- [Exit 语句](../../../visual-basic/language-reference/statements/exit-statement.md)
+- [Try...Catch...Finally 语句](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)

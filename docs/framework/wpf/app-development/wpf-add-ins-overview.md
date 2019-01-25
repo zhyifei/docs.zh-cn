@@ -12,12 +12,12 @@ helpviewer_keywords:
 - add-ins [WPF], architecture
 - add-ins [WPF], limitations
 ms.assetid: 00b4c776-29a8-4dba-b603-280a0cdc2ade
-ms.openlocfilehash: 07c33aa49e6fc8f78acd86a92cf555ae389e200c
-ms.sourcegitcommit: 49af435bfdd41faf26d38c20c5b0cc07e87bea60
+ms.openlocfilehash: 48981a942461570c0ef822dba9b18cb9a41f59f8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53397028"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54662733"
 ---
 # <a name="wpf-add-ins-overview"></a>WPF 外接程序概述
 <a name="Introduction"></a> .NET Framework 包括开发人员可用于创建支持外接程序扩展性的应用程序的外接程序模型。 借助此外接程序模型，可以创建与应用程序功能集成并进行扩展的外接程序。 在某些情况下，应用程序还需要显示外接程序提供的用户界面。本主题介绍 WPF 增加.NET Framework 外接程序模型若要启用这些方案，它、 其优点和局限性的体系结构的内容。  
@@ -282,10 +282,10 @@ ms.locfileid: "53397028"
 ## <a name="performance-optimization"></a>性能优化  
  默认情况下，当使用多个应用程序域时，每个应用程序所需的各种.NET Framework 程序集是所有加载到该应用程序的域。 因此，创建新应用程序域和在应用程序域中启动应用程序所需的时间可能会影响性能。 但是，.NET Framework 提供了一种方法，从而减少启动时间即指示应用程序在应用程序域之间共享程序集，如果他们已加载。 执行此操作通过使用<xref:System.LoaderOptimizationAttribute>属性，必须应用于入口点方法 (`Main`)。 这种情况下，只能使用代码来实现应用程序定义（请参阅[应用程序管理概述](../../../../docs/framework/wpf/app-development/application-management-overview.md)）。  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.LoaderOptimizationAttribute>  
- [外接程序和扩展性](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100))  
- [应用程序域](../../../../docs/framework/app-domains/application-domains.md)  
- [.NET framework 远程处理概述](https://msdn.microsoft.com/library/eccb1d31-0a22-417a-97fd-f4f1f3aa4462)  
- [使对象可远程处理](https://msdn.microsoft.com/library/01197253-3f13-43b7-894d-9683e431192a)  
- [帮助主题](../../../../docs/framework/wpf/app-development/how-to-topics.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.LoaderOptimizationAttribute>
+- [外接程序和扩展性](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100))
+- [应用程序域](../../../../docs/framework/app-domains/application-domains.md)
+- [.NET framework 远程处理概述](https://msdn.microsoft.com/library/eccb1d31-0a22-417a-97fd-f4f1f3aa4462)
+- [使对象可远程处理](https://msdn.microsoft.com/library/01197253-3f13-43b7-894d-9683e431192a)
+- [帮助主题](../../../../docs/framework/wpf/app-development/how-to-topics.md)

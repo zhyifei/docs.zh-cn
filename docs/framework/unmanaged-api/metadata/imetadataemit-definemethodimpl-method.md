@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 2ab66fecfaa66b5c56690950f6b19ecfd7e85e33
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: a60d3bfc734480733f621c71a0141bb58a0eb71e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33443984"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54745285"
 ---
 # <a name="imetadataemitdefinemethodimpl-method"></a>IMetaDataEmit::DefineMethodImpl 方法
-创建实现接口，从继承的方法的定义，并返回到该方法实现定义的令牌。  
+创建继承自一个接口，方法的实现的定义，并将令牌返回到该方法实现定义。  
   
 ## <a name="syntax"></a>语法  
   
@@ -39,7 +39,7 @@ HRESULT DefineMethodImpl (
   
 #### <a name="parameters"></a>参数  
  `td`  
- [in]`mdTypedef`令牌的实现的类。  
+ [in]`mdTypedef`令牌的实现类。  
   
  `tkBody`  
  [in]`mdMethodDef`或`mdMethodRef`令牌的代码体。  
@@ -48,14 +48,14 @@ HRESULT DefineMethodImpl (
  [in]`mdMethodDef`或`mdMethodRef`正在实现的接口方法的令牌。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** Cor.h  
   
  **库：** 用作 MSCorEE.dll 中的资源  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>请参阅  
- [IMetaDataEmit Interface](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)  
- [IMetaDataEmit2 Interface](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+## <a name="see-also"></a>请参阅
+- [IMetaDataEmit Interface](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+- [IMetaDataEmit2 Interface](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

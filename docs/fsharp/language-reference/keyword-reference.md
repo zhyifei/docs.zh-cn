@@ -2,12 +2,12 @@
 title: 关键字参考
 description: 找到的所有信息的链接F#语言关键字。
 ms.date: 05/16/2016
-ms.openlocfilehash: 20592c57e09c6e0f09bb3acae021369ac5e511d6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5a94a30ca0f73538cc22e76fa75bd76741b70d99
+ms.sourcegitcommit: 5dcfeb59179e81071f54840d4902cbe00b184294
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54579831"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54857900"
 ---
 # <a name="keyword-reference"></a>关键字参考
 
@@ -73,7 +73,7 @@ ms.locfileid: "54579831"
 |`return!`|[计算表达式](computation-expressions.md)<br /><br />[异步工作流](asynchronous-workflows.md)|用于指示计算表达式，计算时，提供了包含的计算表达式的结果。|
 |`select`|[查询表达式](query-expressions.md)|在查询表达式中用于指定哪些字段或要提取的列。 请注意，这是上下文关键字，这意味着，它并不实际的保留的字，仅充当相应的上下文中的关键字。|
 |`static`|[成员](members/index.md)|用于指示方法或属性，可以调用而无需类型的实例或类型的所有实例之间共享的值成员。|
-|`struct`|[结构](structures.md)<br /><br />[约束](generics/constraints.md)|用于声明结构类型。<br /><br />此外用于泛型参数约束。<br /><br />用于实现 OCaml 模块定义中的兼容性。|
+|`struct`|[结构](structures.md)<br /><br /> [元组](tuples.md)<br/><br/>[约束](generics/constraints.md)|用于声明结构类型。<br /><br/>用于指定结构元组。<br/><br />此外用于泛型参数约束。<br /><br />用于实现 OCaml 模块定义中的兼容性。|
 |`then`|[条件表达式：`if...then...else`](conditional-expressions-if-then-else.md)<br /><br />[构造函数](members/constructors.md)|在条件表达式中使用。<br /><br />此外用于在对象构造后执行的负面影响。|
 |`to`|[循环：`for...to` 表达式](loops-for-to-expression.md)|在中使用`for`循环，以表示一个范围。|
 |`true`|[基元类型](primitive-types.md)|用作布尔值文字。|

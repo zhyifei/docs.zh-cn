@@ -5,12 +5,12 @@ helpviewer_keywords:
 - <permission> XML tag
 - permission XML tag
 ms.assetid: 0edf0500-5cd7-49c0-9255-64c48f972b77
-ms.openlocfilehash: bcec5d968f5d0c5400c28e772df151b164888a47
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 56b25955cf36598909176170235623b27da20867
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48838203"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54573187"
 ---
 # <a name="ltpermissiongt-visual-basic"></a>&lt;权限&gt;(Visual Basic)
 指定成员所需的权限。  
@@ -38,5 +38,5 @@ ms.locfileid: "48838203"
   
  [!code-vb[VbVbcnXmlDocComments#7](../../../visual-basic/language-reference/xmldoc/codesnippet/VisualBasic/permission_1.vb)]  
   
-## <a name="see-also"></a>请参阅  
- [XML 注释标记](../../../visual-basic/language-reference/xmldoc/index.md)
+## <a name="see-also"></a>请参阅
+- [XML 注释标记](../../../visual-basic/language-reference/xmldoc/index.md)
