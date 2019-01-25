@@ -2,12 +2,12 @@
 title: 持久性已颁发令牌提供程序
 ms.date: 03/30/2017
 ms.assetid: 76fb27f5-8787-4b6a-bf4c-99b4be1d2e8b
-ms.openlocfilehash: 7def23a00e42e134d8c0b9bd911710917681ad31
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 911c4928a179a6595c6ebec488055dd45ae91c36
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43504586"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54736216"
 ---
 # <a name="durable-issued-token-provider"></a>持久性已颁发令牌提供程序
 此示例演示如何实现一个自定义客户端已颁发令牌提供程序。  
@@ -135,7 +135,7 @@ ms.locfileid: "43504586"
   
 2.  编写自定义安全令牌管理器。  
   
-     <xref:System.IdentityModel.Selectors.SecurityTokenManager> 用于为在 <xref:System.IdentityModel.Selectors.SecurityTokenProvider> 方法中传递给它的特定 <xref:System.IdentityModel.Selectors.SecurityTokenRequirement> 创建 `CreateSecurityTokenProvider`。 安全令牌管理器还用于创建令牌身份验证器和令牌序列化程序，但本示例不涉及这些内容。 在此示例中，自定义安全令牌管理器从 <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager> 类集成，并重写 `CreateSecurityTokenProvider` 方法，以便在所传递的令牌要求指示需要一个已颁发的令牌时返回自定义令牌提供程序。  
+     <xref:System.IdentityModel.Selectors.SecurityTokenManager> 用于为在 <xref:System.IdentityModel.Selectors.SecurityTokenProvider> 方法中传递给它的特定 <xref:System.IdentityModel.Selectors.SecurityTokenRequirement> 创建 `CreateSecurityTokenProvider`。 安全令牌管理器还用于创建令牌身份验证器和令牌序列化程序，但本示例不涉及这些内容。 在此示例中，自定义安全令牌管理器从 <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager> 类集成，并重写 `CreateSecurityTokenProvider` 方法，以便在所传递的令牌需求指示需要一个已颁发的令牌时返回自定义令牌提供程序。  
   
     ```  
     class DurableIssuedTokenClientCredentialsTokenManager :  

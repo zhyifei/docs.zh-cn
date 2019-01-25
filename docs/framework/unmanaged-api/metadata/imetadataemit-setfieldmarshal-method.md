@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ee18cbdc821dc523e9012488f0c08d9211164e62
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: b65f3476da69249f449090e1f2d67c58ed5a427a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33445557"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54737291"
 ---
 # <a name="imetadataemitsetfieldmarshal-method"></a>IMetaDataEmit::SetFieldMarshal 方法
-设置 PInvoke 封送处理指定的标记所引用的字段、 方法返回或方法参数的信息。  
+设置 PInvoke 封送处理指定的标记所引用的字段、 方法将返回或方法参数的信息。  
   
 ## <a name="syntax"></a>语法  
   
@@ -39,7 +39,7 @@ HRESULT SetFieldMarshal (
   
 #### <a name="parameters"></a>参数  
  `tk`  
- [in]目标数据项的标记。 这可以是`mdFieldDef`或`mdParamDef`令牌。  
+ [in]目标数据的项的标记。 这可以是`mdFieldDef`或`mdParamDef`令牌。  
   
  `pvNativeType`  
  [in]非托管类型的签名。  
@@ -48,14 +48,14 @@ HRESULT SetFieldMarshal (
  [in]中的字节计数`pvNativeType`。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** Cor.h  
   
  **库：** 用作 MSCorEE.dll 中的资源  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>请参阅  
- [IMetaDataEmit Interface](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)  
- [IMetaDataEmit2 Interface](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+## <a name="see-also"></a>请参阅
+- [IMetaDataEmit Interface](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+- [IMetaDataEmit2 Interface](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

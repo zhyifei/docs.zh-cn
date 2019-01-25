@@ -12,15 +12,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 54d6535e2b2c4761eb3c67a990c62f2c311cf133
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 974abb123c4c11f6bb512431cea5cc6460a5c55a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33406859"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54654733"
 ---
 # <a name="iclrdatatarget3-interface"></a>ICLRDataTarget3 接口
-一个子类[ICLRDataTarget2](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget2-interface.md) ，可提供对异常信息的访问。  
+子类[ICLRDataTarget2](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget2-interface.md)提供对异常信息的访问。  
   
 ## <a name="methods"></a>方法  
   
@@ -34,15 +34,15 @@ ms.locfileid: "33406859"
  API 客户端（即调试器）必须针对特定的目标进程实现此接口。 例如，活动进程的实现将不同于内存转储的。 目标可能不支持对其内存区域的修改。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** ClrData.idl、 ClrData.h  
+ **标头：** ClrData.idl, ClrData.h  
   
  **库：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[v451_update](../../../../includes/v451-update-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[v451_update](../../../../includes/v451-update-md.md)]  
   
-## <a name="see-also"></a>请参阅  
- [ICLRDataTarget 接口](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-interface.md)  
- [ICLRDataTarget2 接口](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget2-interface.md)  
- [调试接口](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a>请参阅
+- [ICLRDataTarget 接口](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-interface.md)
+- [ICLRDataTarget2 接口](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget2-interface.md)
+- [调试接口](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

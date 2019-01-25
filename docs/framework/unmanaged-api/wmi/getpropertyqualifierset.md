@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fcddca2e435a3f5bf4b8d083784613254d9801a4
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.openlocfilehash: ec91a1f6fba70e3c9706541dc641ddd019d44841
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44259764"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54642199"
 ---
 # <a name="getpropertyqualifierset-function"></a>GetPropertyQualifierSet 函数
 检索特定属性的限定符集。
@@ -77,11 +77,11 @@ HRESULT GetPropertyQualifierSet (
 系统属性包含没有限定符，因为该函数将返回`WBEM_E_SYSTEM_PROPERTY`如果你尝试获取[IWbemQualifierSet](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemqualifierset)系统属性的指针。
 
 ## <a name="requirements"></a>要求  
-**平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** WMINet_Utils.idl  
   
  **.NET Framework 版本：**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
-## <a name="see-also"></a>请参阅  
-[WMI 和性能计数器 （非托管 API 参考）](index.md)
+## <a name="see-also"></a>请参阅
+- [WMI 和性能计数器 （非托管 API 参考）](index.md)

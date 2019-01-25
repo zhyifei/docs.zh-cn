@@ -6,12 +6,12 @@ helpviewer_keywords:
 - -doc compiler option [Visual Basic]
 - /doc compiler option [Visual Basic]
 ms.assetid: 5fc32ec9-a149-4648-994c-a8d0cccd0a65
-ms.openlocfilehash: d786a77a0f787515ce1ab2ca61cbc1251aa14563
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: eccd68d77eb9afabdc3bd4301f6258b80b7d7e7f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "50192455"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54736648"
 ---
 # <a name="-doc"></a>-doc
 将文档注释处理到一个 XML 文件中。  
@@ -53,6 +53,6 @@ ms.locfileid: "50192455"
 ## <a name="example"></a>示例  
  有关示例，请参阅[使用 XML 来记录代码](../../../visual-basic/programming-guide/program-structure/documenting-your-code-with-xml.md)。  
   
-## <a name="see-also"></a>请参阅  
- [Visual Basic 命令行编译器](../../../visual-basic/reference/command-line-compiler/index.md)  
- [使用 XML 记录代码](../../../visual-basic/programming-guide/program-structure/documenting-your-code-with-xml.md)
+## <a name="see-also"></a>请参阅
+- [Visual Basic 命令行编译器](../../../visual-basic/reference/command-line-compiler/index.md)
+- [使用 XML 记录代码](../../../visual-basic/programming-guide/program-structure/documenting-your-code-with-xml.md)

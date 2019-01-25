@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 03de6972-442a-4648-9f3e-efa654e3b949
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: 0a03438968f487f574606f415fb9d43223030038
-ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
+ms.openlocfilehash: 12f91a1c74e85cbce0c8f641f202a181beb7412c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54222150"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54728903"
 ---
 # <a name="startup-settings-schema"></a>启动设置架构
 
@@ -27,5 +27,5 @@ ms.locfileid: "54222150"
   
 ## <a name="see-also"></a>请参阅
 
-- [配置文件架构](../index.md)  
-- [如何：配置应用以支持.NET Framework 4 或更高版本](../../../migration-guide/how-to-configure-an-app-to-support-net-framework-4-or-4-5.md)
+- [配置文件架构](../index.md)
+- [如何：将应用配置为支持 .NET Framework 4 或更高版本](../../../migration-guide/how-to-configure-an-app-to-support-net-framework-4-or-4-5.md)

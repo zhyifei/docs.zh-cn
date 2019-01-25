@@ -8,12 +8,12 @@ helpviewer_keywords:
 - class library design guidelines [.NET Framework], interfaces
 ms.assetid: a016bd18-6710-4358-9438-9f190a295392
 author: KrzysztofCwalina
-ms.openlocfilehash: a017b34ab410824e3ddac4365e5711840fb50031
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 1f982aa37f92b7270725574d949989ca120297d5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53148725"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54660136"
 ---
 # <a name="interface-design"></a>接口设计
 虽然大多数 API 最好使用类和结构进行建模，但有些情况下接口更合适或是唯一的选择。  
@@ -46,9 +46,9 @@ ms.locfileid: "53148725"
   
  *部分版权 © 2005, 2009 Microsoft Corporation。保留所有权利。*  
   
- *通过从 Pearson Education，Inc.的权限重新打印[Framework 设计准则：约定、 语法和模式的可重用.NET 库，第 2 版](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619)Krzysztof Cwalina 和 Brad Abrams，作为 Microsoft Windows 开发系列的一部分发布 2008 年 10 月 22 日由 Addison-wesley 专业人员。*  
+ *经 Pearson Education, Inc 授权，转载自[框架设计准则：可重用的 .NET 库的约定、习惯用语和模式，第 2 版](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) 作者：Krzysztof Cwalina 和 Brad Abrams，由 Addison Wesley Professional 于 2008 年 10 月 22 日印发，作为 Microsoft Windows 开发系列的一部分。*  
   
 ## <a name="see-also"></a>请参阅
 
-- [类型设计准则](../../../docs/standard/design-guidelines/type.md)  
+- [类型设计准则](../../../docs/standard/design-guidelines/type.md)
 - [框架设计指南](../../../docs/standard/design-guidelines/index.md)

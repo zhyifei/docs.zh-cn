@@ -1,15 +1,15 @@
 ---
-title: 如何： 查找相关的元素 (XPATH-LINQ to XML) (Visual Basic)
+title: 如何：查找相关的元素 (XPATH-LINQ to XML) (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 6b0ef058-d704-48a5-98cd-33f00d088af9
-ms.openlocfilehash: 24a8f252d0c703cc7883ae1408120b8cae018331
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ced58274773b9a5c16331805f9a5513a5231c5ca
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33643138"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54655408"
 ---
-# <a name="how-to-find-related-elements-xpath-linq-to-xml-visual-basic"></a>如何： 查找相关的元素 (XPATH-LINQ to XML) (Visual Basic)
+# <a name="how-to-find-related-elements-xpath-linq-to-xml-visual-basic"></a>如何：查找相关的元素 (XPATH-LINQ to XML) (Visual Basic)
 本主题演示如何在由其他元素的值所引用的属性上获取元素选择。  
   
  XPath 表达式为：  
@@ -73,5 +73,5 @@ Results are identical
 </Customer>  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [LINQ to XML 针对 XPath 用户 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
+## <a name="see-also"></a>请参阅
+- [LINQ to XML 针对 XPath 用户 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)

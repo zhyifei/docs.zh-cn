@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 305a8d7b5a800c46ed814b1e654947859dc9bd03
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 349f6922c18a7745c8eff05b1786dc649f8bb70a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33427806"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54520979"
 ---
 # <a name="couninitializecor-function"></a>CoUninitializeCor 函数
 `CoUninitializeCor` 已过时。  
@@ -33,7 +33,7 @@ STDAPI_(void) CoUninitializeCor(void);
 ```  
   
 ## <a name="remarks"></a>备注  
- 公共语言运行时不能为从进程中卸载。 若要完全删除从正在运行的进程的运行时，必须关闭该进程。  
+ 公共语言运行时不能从进程中卸载。 若要从正在运行的进程中完全删除运行时，必须关闭该进程。  
   
-## <a name="see-also"></a>请参阅  
- [元数据全局静态函数](../../../../docs/framework/unmanaged-api/metadata/metadata-global-static-functions.md)
+## <a name="see-also"></a>请参阅
+- [元数据全局静态函数](../../../../docs/framework/unmanaged-api/metadata/metadata-global-static-functions.md)

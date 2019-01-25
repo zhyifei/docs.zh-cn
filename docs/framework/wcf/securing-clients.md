@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - clients [WCF], security considerations
 ms.assetid: 44c8578c-9a5b-4acd-8168-1c30a027c4c5
-ms.openlocfilehash: 7090d5e9cd4b44a6f894cc92ad69b34761356118
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: d76b7db8a3c8f2dcdc8bdbc325a1bb14b87229ab
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50188193"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54721105"
 ---
 # <a name="securing-clients"></a>保证客户端的安全
 在 Windows Communication Foundation (WCF)，由服务规定客户端的安全要求。 即，由服务指定要使用的安全模式以及客户端是否必须提供凭据。 因此，保证客户端安全的过程非常简单：使用从服务那里获得的元数据（如果已发布）来生成客户端。 元数据指定如何配置客户端。 如果服务要求客户端提供凭据，您必须获得能够满足要求的凭据。 本主题进一步详细讨论此过程。 有关创建安全服务的详细信息，请参阅[Securing Services](../../../docs/framework/wcf/securing-services.md)。  
@@ -134,7 +134,7 @@ ms.locfileid: "50188193"
 > [!NOTE]
 >  有些客户端凭据值无法使用应用程序配置文件来设置，例如，用户名和密码值或 Windows 用户和密码值。 这种凭据值只能在代码中指定。  
   
- 有关设置客户端凭据的详细信息，请参阅[How to: Specify Client Credential Values](../../../docs/framework/wcf/how-to-specify-client-credential-values.md)。  
+ 有关设置客户端凭据的详细信息，请参阅[如何：指定客户端凭据值](../../../docs/framework/wcf/how-to-specify-client-credential-values.md)。  
   
 > [!NOTE]
 >  当 `ClientCredentialType` 设置为 `SecurityMode` 时，`"TransportWithMessageCredential",` 将被忽略，如下面的示例配置所示。  
@@ -152,16 +152,16 @@ ms.locfileid: "50188193"
 </wsHttpBinding>  
 ```  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.ServiceModel.ClientBase%601.ClientCredentials%2A>  
- <xref:System.ServiceModel.ClientBase%601>  
- <xref:System.ServiceModel.Description.ClientCredentials>  
- <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpsGetEnabled%2A>  
- <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpsGetUrl%2A>  
- [\<绑定 >](../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)  
- [配置编辑器工具 (SvcConfigEditor.exe)](../../../docs/framework/wcf/configuration-editor-tool-svcconfigeditor-exe.md)  
- [保护服务](../../../docs/framework/wcf/securing-services.md)  
- [使用 WCF 客户端访问服务](../../../docs/framework/wcf/accessing-services-using-a-wcf-client.md)  
- [如何：指定客户端凭据值](../../../docs/framework/wcf/how-to-specify-client-credential-values.md)  
- [ServiceModel 元数据实用工具 (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)  
- [如何：指定客户端凭据类型](../../../docs/framework/wcf/how-to-specify-the-client-credential-type.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.ServiceModel.ClientBase%601.ClientCredentials%2A>
+- <xref:System.ServiceModel.ClientBase%601>
+- <xref:System.ServiceModel.Description.ClientCredentials>
+- <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpsGetEnabled%2A>
+- <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpsGetUrl%2A>
+- [\<bindings>](../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)
+- [配置编辑器工具 (SvcConfigEditor.exe)](../../../docs/framework/wcf/configuration-editor-tool-svcconfigeditor-exe.md)
+- [保护服务](../../../docs/framework/wcf/securing-services.md)
+- [使用 WCF 客户端访问服务](../../../docs/framework/wcf/accessing-services-using-a-wcf-client.md)
+- [如何：指定客户端凭据值](../../../docs/framework/wcf/how-to-specify-client-credential-values.md)
+- [ServiceModel 元数据实用工具 (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)
+- [如何：指定客户端凭据类型](../../../docs/framework/wcf/how-to-specify-the-client-credential-type.md)

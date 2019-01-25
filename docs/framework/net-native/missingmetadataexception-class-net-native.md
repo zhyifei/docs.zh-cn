@@ -4,19 +4,19 @@ ms.date: 03/30/2017
 ms.assetid: 408f25c4-6d60-475c-92b1-7b52b777c6db
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f68304b06c502672ae1aac9693a966ea546ee4dd
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: c0b882500b41080bc5998232b5afbce9d13157b4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53148312"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54641546"
 ---
 # <a name="missingmetadataexception-class-net-native"></a>丢失元数据异常类 (.NET Native)
 **适用于 Windows 10 的 .NET for Windows 应用，仅 [!INCLUDE[net_native](../../../includes/net-native-md.md)]**  
   
  当反射用于检索不存在的元数据时会引起此异常。  
   
- **Namespace:** System.Reflection  
+ **命名空间：** System.Reflection  
   
 > [!IMPORTANT]
 >  `MissingMetadataException` 类旨在仅供 [!INCLUDE[net_native](../../../includes/net-native-md.md)] 工具链内部使用。 它不用于在第三方代码中使用，也不应用它处理应用程序代码中的异常。 相反，你可以通过将条目添加到[运行时指令文件](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)来消除异常。 有关详细信息，请参阅“备注”部分。  
@@ -81,9 +81,9 @@ ms.locfileid: "53148312"
   
  `MissingMetadataException` 类不包括独有成员；它的所有成员都是从其基类即 <xref:System.TypeAccessException> 继承的。  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Exception?displayProperty=nameWithType>  
- <xref:System.TypeAccessException>  
- [MissingInteropDataException 类](../../../docs/framework/net-native/missinginteropdataexception-class-net-native.md)  
- [MissingRuntimeArtifactException 类](../../../docs/framework/net-native/missingruntimeartifactexception-class-net-native.md)  
- [运行时指令 (rd.xml) 配置文件参考](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.Exception?displayProperty=nameWithType>
+- <xref:System.TypeAccessException>
+- [MissingInteropDataException 类](../../../docs/framework/net-native/missinginteropdataexception-class-net-native.md)
+- [MissingRuntimeArtifactException 类](../../../docs/framework/net-native/missingruntimeartifactexception-class-net-native.md)
+- [运行时指令 (rd.xml) 配置文件参考](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)

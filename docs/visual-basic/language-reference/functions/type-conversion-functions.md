@@ -81,12 +81,12 @@ helpviewer_keywords:
 - rounding numbers [Visual Basic], banker's rounding
 - type conversion [Visual Basic], Visual Basic vs. .NET Framework
 ms.assetid: d9d8d165-f967-44ff-a6cd-598e4740a99e
-ms.openlocfilehash: cbc9891170cde4b993a5dc890ed71c07a6f59f9e
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: ea20569b207100886ddd4b40c8d4c86c55d5ddf1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53129553"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54743538"
 ---
 # <a name="type-conversion-functions-visual-basic"></a>类型转换函数 (Visual Basic)
 这些函数是代码的内联方式编译，这意味着转换代码计算表达式的值的一部分。 有时是没有调用过程，以完成转换，从而提高性能。 每个函数都强制转换为特定的数据类型的表达式。  
@@ -119,7 +119,7 @@ CUShort(expression)
 ## <a name="return-value-data-type"></a>返回值的数据类型  
  下表中所示，函数名称确定它返回的值的数据类型。  
   
-|函数名|返回数据类型|为范围`expression`参数|  
+|功能名称|返回数据类型|为范围`expression`参数|  
 |-------------------|----------------------|-------------------------------------|  
 |`CBool`|[Boolean 数据类型](../../../visual-basic/language-reference/data-types/boolean-data-type.md)|任何有效`Char`或`String`或数值表达式。|  
 |`CByte`|[Byte 数据类型](../../../visual-basic/language-reference/data-types/byte-data-type.md)|<xref:System.Byte.MinValue?displayProperty=nameWithType> (0) 通过<xref:System.Byte.MaxValue?displayProperty=nameWithType>(255) （无符号）; 小数部分舍入。<sup>1</sup><br/><br/>从 Visual Basic 15.8 开始，Visual Basic 可优化的性能与字节转换为浮点`CByte`函数; 请参阅[备注](#remarks)部分，了解详细信息。 请参阅[CInt 示例](#cint-example)有关示例。|  
@@ -285,17 +285,17 @@ Dim i3 As Integer = CInt(Math.Round(s))        ' Result: 174
   
  [!code-vb[VbVbalrFunctions#18](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/type-conversion-functions_18.vb)]  
   
-## <a name="see-also"></a>请参阅  
- <xref:Microsoft.VisualBasic.Strings.Asc%2A>  
- <xref:Microsoft.VisualBasic.Strings.AscW%2A>  
- <xref:Microsoft.VisualBasic.Strings.Chr%2A>  
- <xref:Microsoft.VisualBasic.Strings.ChrW%2A>  
- <xref:Microsoft.VisualBasic.Conversion.Int%2A>  
- <xref:Microsoft.VisualBasic.Conversion.Fix%2A>  
- <xref:Microsoft.VisualBasic.Strings.Format%2A>  
- <xref:Microsoft.VisualBasic.Conversion.Hex%2A>  
- <xref:Microsoft.VisualBasic.Conversion.Oct%2A>  
- <xref:Microsoft.VisualBasic.Conversion.Str%2A>  
- <xref:Microsoft.VisualBasic.Conversion.Val%2A>  
- [转换函数](../../../visual-basic/language-reference/functions/conversion-functions.md)  
- [在 Visual Basic 中的类型转换](../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)
+## <a name="see-also"></a>请参阅
+- <xref:Microsoft.VisualBasic.Strings.Asc%2A>
+- <xref:Microsoft.VisualBasic.Strings.AscW%2A>
+- <xref:Microsoft.VisualBasic.Strings.Chr%2A>
+- <xref:Microsoft.VisualBasic.Strings.ChrW%2A>
+- <xref:Microsoft.VisualBasic.Conversion.Int%2A>
+- <xref:Microsoft.VisualBasic.Conversion.Fix%2A>
+- <xref:Microsoft.VisualBasic.Strings.Format%2A>
+- <xref:Microsoft.VisualBasic.Conversion.Hex%2A>
+- <xref:Microsoft.VisualBasic.Conversion.Oct%2A>
+- <xref:Microsoft.VisualBasic.Conversion.Str%2A>
+- <xref:Microsoft.VisualBasic.Conversion.Val%2A>
+- [转换函数](../../../visual-basic/language-reference/functions/conversion-functions.md)
+- [在 Visual Basic 中的类型转换](../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)

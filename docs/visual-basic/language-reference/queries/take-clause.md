@@ -8,12 +8,12 @@ helpviewer_keywords:
 - queries [Visual Basic], Take
 - Take clause [Visual Basic]
 ms.assetid: 77bf87b2-1476-4456-957f-fee922fbad8c
-ms.openlocfilehash: bfaccf470d93a6a72451e7ad8b41e8dbb1171c71
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: bdd12340c5a0bd522c09a22e74c7b4f487cc5821
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43856566"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54626727"
 ---
 # <a name="take-clause-visual-basic"></a>Take 子句 (Visual Basic)
 从集合的开头返回指定数量的连续元素。  
@@ -26,7 +26,7 @@ Take count
   
 ## <a name="parts"></a>部件  
  `count`  
- 必须的。 一个值或表达式的计算结果为要返回的序列的元素数量。  
+ 必需。 一个值或表达式的计算结果为要返回的序列的元素数量。  
   
 ## <a name="remarks"></a>备注  
  `Take`子句会使查询，以便包括指定的数量的结果列表的开始的连续元素。 指定要包括的元素数`count`参数。  
@@ -42,11 +42,11 @@ Take count
   
  [!code-vb[VbSimpleQuerySamples#1](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/take-clause_1.vb)]  
   
-## <a name="see-also"></a>请参阅  
- [Visual Basic 中的 LINQ 简介](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)  
- [查询](../../../visual-basic/language-reference/queries/index.md)  
- [Select 子句](../../../visual-basic/language-reference/queries/select-clause.md)  
- [From 子句](../../../visual-basic/language-reference/queries/from-clause.md)  
- [Order By 子句](../../../visual-basic/language-reference/queries/order-by-clause.md)  
- [Take While 子句](../../../visual-basic/language-reference/queries/take-while-clause.md)  
- [Skip 子句](../../../visual-basic/language-reference/queries/skip-clause.md)
+## <a name="see-also"></a>请参阅
+- [Visual Basic 中的 LINQ 简介](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
+- [查询](../../../visual-basic/language-reference/queries/index.md)
+- [Select 子句](../../../visual-basic/language-reference/queries/select-clause.md)
+- [From 子句](../../../visual-basic/language-reference/queries/from-clause.md)
+- [Order By 子句](../../../visual-basic/language-reference/queries/order-by-clause.md)
+- [Take While 子句](../../../visual-basic/language-reference/queries/take-while-clause.md)
+- [Skip 子句](../../../visual-basic/language-reference/queries/skip-clause.md)

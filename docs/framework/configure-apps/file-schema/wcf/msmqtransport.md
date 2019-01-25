@@ -2,21 +2,21 @@
 title: '&lt;msmqTransport&gt;'
 ms.date: 03/30/2017
 ms.assetid: 19d89f35-76ac-49dc-832b-e8bec2d5e33b
-ms.openlocfilehash: a0406ae6e91755707656e10c75cbd25dd68d07c2
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 523f2fd030f40a6d55080a48773159ab4b5887ec
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54147910"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54660575"
 ---
 # <a name="ltmsmqtransportgt"></a>&lt;msmqTransport&gt;
 使通道在被包括到自定义绑定中时通过 MSMQ 传输来传送消息。  
   
  \<system.serviceModel>  
-\<绑定 >  
+\<bindings>  
 \<customBinding>  
-\<绑定 >  
-\<msmqIntegration >  
+\<binding>  
+\<msmqIntegration>  
   
 ## <a name="syntax"></a>语法  
   
@@ -73,28 +73,28 @@ ms.locfileid: "54147910"
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<msmqTransportSecurity >](../../../../../docs/framework/configure-apps/file-schema/wcf/msmqtransportsecurity.md)|指定此绑定的传输安全设置。 此元素的类型为 <xref:System.ServiceModel.Configuration.MsmqTransportSecurityElement>。|  
+|[\<msmqTransportSecurity>](../../../../../docs/framework/configure-apps/file-schema/wcf/msmqtransportsecurity.md)|指定此绑定的传输安全设置。 此元素的类型为 <xref:System.ServiceModel.Configuration.MsmqTransportSecurityElement>。|  
   
 ### <a name="parent-elements"></a>父元素  
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<绑定 >](../../../../../docs/framework/misc/binding.md)|定义自定义绑定的所有绑定功能。|  
+|[\<binding>](../../../../../docs/framework/misc/binding.md)|定义自定义绑定的所有绑定功能。|  
   
 ## <a name="remarks"></a>备注  
  使用 `msmqTransport` 元素，用户可以设置排队通信的属性。 排队信道使用消息队列进行传输。  
   
  此绑定元素是消息队列标准绑定 (`netMsmqBinding`) 所用的默认绑定元素。  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.ServiceModel.Configuration.MsmqTransportElement>  
- <xref:System.ServiceModel.Channels.MsmqTransportBindingElement>  
- <xref:System.ServiceModel.Channels.TransportBindingElement>  
- <xref:System.ServiceModel.Channels.CustomBinding>  
- [WCF 中的队列](../../../../../docs/framework/wcf/feature-details/queues-in-wcf.md)  
- [传输](../../../../../docs/framework/wcf/feature-details/transports.md)  
- [选择传输](../../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)  
- [绑定](../../../../../docs/framework/wcf/bindings.md)  
- [扩展绑定](../../../../../docs/framework/wcf/extending/extending-bindings.md)  
- [自定义绑定](../../../../../docs/framework/wcf/extending/custom-bindings.md)  
- [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.ServiceModel.Configuration.MsmqTransportElement>
+- <xref:System.ServiceModel.Channels.MsmqTransportBindingElement>
+- <xref:System.ServiceModel.Channels.TransportBindingElement>
+- <xref:System.ServiceModel.Channels.CustomBinding>
+- [WCF 中的队列](../../../../../docs/framework/wcf/feature-details/queues-in-wcf.md)
+- [传输](../../../../../docs/framework/wcf/feature-details/transports.md)
+- [选择传输](../../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)
+- [绑定](../../../../../docs/framework/wcf/bindings.md)
+- [扩展绑定](../../../../../docs/framework/wcf/extending/extending-bindings.md)
+- [自定义绑定](../../../../../docs/framework/wcf/extending/custom-bindings.md)
+- [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)

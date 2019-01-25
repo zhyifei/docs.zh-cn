@@ -2,12 +2,12 @@
 title: '&lt;comContracts&gt;'
 ms.date: 03/30/2017
 ms.assetid: 42e74148-223d-4888-a8ed-1d928527eb09
-ms.openlocfilehash: 26f17a331d69c38d720fcafe65c76f50c67def09
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 2374155011b98822d47998cd1e4b8935db234752
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54150781"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54731514"
 ---
 # <a name="ltcomcontractsgt"></a>&lt;comContracts&gt;
 `comContracts` 配置节所包含的元素允许指定 COM+ 集成服务协定的各个属性。  
@@ -33,12 +33,12 @@ ms.locfileid: "54150781"
   
  此外，还可以使用[ \<exposedMethod >](../../../../../docs/framework/configure-apps/file-schema/wcf/exposedmethod.md)元素来指定 COM + 组件上的接口作为 Web 服务公开时公开的 COM + 方法。 此外可以使用[ \<persistableTypes >](../../../../../docs/framework/configure-apps/file-schema/wcf/persistabletypes.md)指定持久类型在集成中使用。 最后，可以使用[ \<userDefinedType >](../../../../../docs/framework/configure-apps/file-schema/wcf/userdefinedtype.md)元素以包含用户定义类型 (UDT) 包括在服务协定中。  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.ServiceModel.Configuration.ComContractElementCollection>  
- <xref:System.ServiceModel.Configuration.ComContractElement>  
- [\<exposedMethod>](../../../../../docs/framework/configure-apps/file-schema/wcf/exposedmethod.md)  
- [\<persistableTypes>](../../../../../docs/framework/configure-apps/file-schema/wcf/persistabletypes.md)  
- [\<userDefinedType>](../../../../../docs/framework/configure-apps/file-schema/wcf/userdefinedtype.md)  
- [\<comContract>](../../../../../docs/framework/configure-apps/file-schema/wcf/comcontract.md)  
- [与 COM+ 应用程序集成](../../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications.md)  
- [如何：配置 COM + 服务设置](../../../../../docs/framework/wcf/feature-details/how-to-configure-com-service-settings.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.ServiceModel.Configuration.ComContractElementCollection>
+- <xref:System.ServiceModel.Configuration.ComContractElement>
+- [\<exposedMethod>](../../../../../docs/framework/configure-apps/file-schema/wcf/exposedmethod.md)
+- [\<persistableTypes>](../../../../../docs/framework/configure-apps/file-schema/wcf/persistabletypes.md)
+- [\<userDefinedType>](../../../../../docs/framework/configure-apps/file-schema/wcf/userdefinedtype.md)
+- [\<comContract>](../../../../../docs/framework/configure-apps/file-schema/wcf/comcontract.md)
+- [与 COM+ 应用程序集成](../../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications.md)
+- [如何：配置 COM + 服务设置](../../../../../docs/framework/wcf/feature-details/how-to-configure-com-service-settings.md)

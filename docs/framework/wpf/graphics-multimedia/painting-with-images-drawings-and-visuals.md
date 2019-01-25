@@ -12,12 +12,12 @@ helpviewer_keywords:
 - brushes [WPF], painting with images
 - brushes [WPF], painting with visuals
 ms.assetid: 779aac3f-8d41-49d8-8130-768244aa2240
-ms.openlocfilehash: 0d860062814a447830e1237f4fc2c1ae0d223e9e
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: d226ecb6e168a044cd9802b4278c25084d8c84fc
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43510019"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54537746"
 ---
 # <a name="painting-with-images-drawings-and-visuals"></a>使用图像、图形和视觉对象进行绘制
 本主题介绍如何使用<xref:System.Windows.Media.ImageBrush>， <xref:System.Windows.Media.DrawingBrush>，并<xref:System.Windows.Media.VisualBrush>对象，若要使用图像绘制区域<xref:System.Windows.Media.Drawing>，或<xref:System.Windows.Media.Visual>。  
@@ -41,7 +41,7 @@ ms.locfileid: "43510019"
  默认情况下，<xref:System.Windows.Media.ImageBrush>拉伸其图像以完全填充的区域正在绘制，很可能会扭曲图像绘制的区域是否与映像不同的纵横比。 可以通过更改来更改此行为<xref:System.Windows.Media.TileBrush.Stretch%2A>属性从其默认值<xref:System.Windows.Media.Stretch.Fill>到<xref:System.Windows.Media.Stretch.None>， <xref:System.Windows.Media.Stretch.Uniform>，或<xref:System.Windows.Media.Stretch.UniformToFill>。 因为<xref:System.Windows.Media.ImageBrush>是一种<xref:System.Windows.Media.TileBrush>，可以指定正好如何了图像画笔填充输出区域，甚至创建图案。 有关高级详细信息<xref:System.Windows.Media.TileBrush>功能，请参阅[TileBrush 概述](../../../../docs/framework/wpf/graphics-multimedia/tilebrush-overview.md)。  
   
 <a name="fillingpanelwithimage"></a>   
-## <a name="example-paint-an-object-with-a-bitmap-image"></a>示例：用位图图像绘制对象  
+## <a name="example-paint-an-object-with-a-bitmap-image"></a>示例:使用位图图像绘制对象  
  下面的示例使用<xref:System.Windows.Media.ImageBrush>绘制<xref:System.Windows.Controls.Panel.Background%2A>的<xref:System.Windows.Controls.Canvas>。  
   
  [!code-xaml[BrushOverviewExamples_snip#GraphicsMMImageBrushAsCanvasBackgroundExampleWholePage](../../../../samples/snippets/xaml/VS_Snippets_Wpf/BrushOverviewExamples_snip/XAML/ImageBrushExample.xaml#graphicsmmimagebrushascanvasbackgroundexamplewholepage)]  
@@ -73,7 +73,7 @@ ms.locfileid: "43510019"
  像<xref:System.Windows.Media.ImageBrush>、 一个<xref:System.Windows.Media.DrawingBrush>拉伸其<xref:System.Windows.Media.DrawingBrush.Drawing%2A>以填充输出区域。 可以通过更改重写此行为<xref:System.Windows.Media.TileBrush.Stretch%2A>属性从其默认设置为<xref:System.Windows.Media.Stretch.Fill>。 有关更多信息，请参见 <xref:System.Windows.Media.TileBrush.Stretch%2A> 属性。  
   
 <a name="fillingareawithdrawingbrushexample"></a>   
-## <a name="example-paint-an-object-with-a-drawing"></a>示例：使用图形绘制对象  
+## <a name="example-paint-an-object-with-a-drawing"></a>示例:使用 Drawing 绘制对象  
  下面的示例显示如何使用三个椭圆形的图形绘制对象。 一个<xref:System.Windows.Media.GeometryDrawing>用于描述椭圆形。  
   
  [!code-xaml[BrushOverviewExamples_snip#GraphicsMMDrawingBrushAsButtonBackgroundExample](../../../../samples/snippets/xaml/VS_Snippets_Wpf/BrushOverviewExamples_snip/XAML/DrawingBrushExample.xaml#graphicsmmdrawingbrushasbuttonbackgroundexample)]  
@@ -90,16 +90,16 @@ ms.locfileid: "43510019"
   
  有两种方法来指定<xref:System.Windows.Media.VisualBrush.Visual%2A>内容的<xref:System.Windows.Media.VisualBrush>。  
   
--   创建一个新<xref:System.Windows.Media.Visual>并使用它来设置<xref:System.Windows.Media.VisualBrush.Visual%2A>属性的<xref:System.Windows.Media.VisualBrush>。 有关示例，请参阅后面的[示例：使用视觉对象绘制对象](#examplevisualbrush1)一节。  
+-   创建一个新<xref:System.Windows.Media.Visual>并使用它来设置<xref:System.Windows.Media.VisualBrush.Visual%2A>属性的<xref:System.Windows.Media.VisualBrush>。 有关示例，请参阅[示例：使用视觉对象绘制对象](#examplevisualbrush1)下一节。  
   
--   使用现有<xref:System.Windows.Media.Visual>，这将创建目标的重复图像<xref:System.Windows.Media.Visual>。 然后，可以使用<xref:System.Windows.Media.VisualBrush>创建有趣的效果，例如反射和放大效果。 有关示例，请参阅[示例：创建反射](#examplevisualbrush2)一节。  
+-   使用现有<xref:System.Windows.Media.Visual>，这将创建目标的重复图像<xref:System.Windows.Media.Visual>。 然后，可以使用<xref:System.Windows.Media.VisualBrush>创建有趣的效果，例如反射和放大效果。 有关示例，请参阅[示例：创建反射](#examplevisualbrush2)部分。  
   
  定义一个新<xref:System.Windows.Media.VisualBrush.Visual%2A>有关<xref:System.Windows.Media.VisualBrush>并且<xref:System.Windows.Media.Visual>是<xref:System.Windows.UIElement>布局系统 （如面板或控件） 上运行<xref:System.Windows.UIElement>及其子元素时<xref:System.Windows.Media.VisualBrush.AutoLayoutContent%2A>属性设置为`true`。 但是，根<xref:System.Windows.UIElement>实质上独立于系统的其余部分： 样式和外部布局不能渗透此边界。 因此，应显式指定根的大小<xref:System.Windows.UIElement>，因为其唯一父级是<xref:System.Windows.Media.VisualBrush>，因此它不能自动调整自身大小到当前所绘制的区域。 有关 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 中的布局的更多信息，请参阅[布局](../../../../docs/framework/wpf/advanced/layout.md)。  
   
  像<xref:System.Windows.Media.ImageBrush>并<xref:System.Windows.Media.DrawingBrush>、<xref:System.Windows.Media.VisualBrush>拉伸其内容以填充输出区域。 可以通过更改重写此行为<xref:System.Windows.Media.TileBrush.Stretch%2A>属性从其默认设置为<xref:System.Windows.Media.Stretch.Fill>。 有关更多信息，请参见 <xref:System.Windows.Media.TileBrush.Stretch%2A> 属性。  
   
 <a name="examplevisualbrush1"></a>   
-## <a name="example-paint-an-object-with-a-visual"></a>示例：使用视觉对象绘制对象  
+## <a name="example-paint-an-object-with-a-visual"></a>示例:使用视觉对象绘制对象  
  在下面的示例中，许多控件和面板用于绘制矩形。  
   
  [!code-xaml[BrushOverviewExamples_snip#GraphicsMMVisualBrushAsRectangleBackgroundExample](../../../../samples/snippets/xaml/VS_Snippets_Wpf/BrushOverviewExamples_snip/XAML/VisualBrushExample.xaml#graphicsmmvisualbrushasrectanglebackgroundexample)]  
@@ -108,7 +108,7 @@ ms.locfileid: "43510019"
  [!code-vb[BrushOverviewExamples_procedural_snip#GraphicsMMVisualBrushAsRectangleBackgroundExample1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/BrushOverviewExamples_procedural_snip/visualbasic/visualbrushexample.vb#graphicsmmvisualbrushasrectanglebackgroundexample1)]  
   
 <a name="examplevisualbrush2"></a>   
-## <a name="example-create-a-reflection"></a>示例：创建反射  
+## <a name="example-create-a-reflection"></a>示例:创建反射  
  前面的示例介绍了如何创建一个新<xref:System.Windows.Media.Visual>用作背景。 此外可以使用<xref:System.Windows.Media.VisualBrush>显示现有视觉对象; 此功能使您能够生成有趣的视觉效果，例如反射和放大。 下面的示例使用<xref:System.Windows.Media.VisualBrush>若要创建的反射<xref:System.Windows.Controls.Border>包含多个元素。 下图显示了此示例生成的输出。  
   
  ![一个反映视觉对象](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-visualbrush-reflection-small.jpg "graphicsmm_visualbrush_reflection_small")  
@@ -134,16 +134,16 @@ ms.locfileid: "43510019"
   
  有关平铺功能的详细信息<xref:System.Windows.Media.TileBrush>对象，请参阅[TileBrush 概述](../../../../docs/framework/wpf/graphics-multimedia/tilebrush-overview.md)。  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Windows.Media.ImageBrush>  
- <xref:System.Windows.Media.DrawingBrush>  
- <xref:System.Windows.Media.VisualBrush>  
- <xref:System.Windows.Media.TileBrush>  
- [TileBrush 概述](../../../../docs/framework/wpf/graphics-multimedia/tilebrush-overview.md)  
- [WPF 画笔概述](../../../../docs/framework/wpf/graphics-multimedia/wpf-brushes-overview.md)  
- [图像处理概述](../../../../docs/framework/wpf/graphics-multimedia/imaging-overview.md)  
- [Drawing 对象概述](../../../../docs/framework/wpf/graphics-multimedia/drawing-objects-overview.md)  
- [不透明蒙板概述](../../../../docs/framework/wpf/graphics-multimedia/opacity-masks-overview.md)  
- [WPF 图形呈现概述](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)  
- [ImageBrush 示例](https://go.microsoft.com/fwlink/?LinkID=160005)  
- [VisualBrush 示例](https://go.microsoft.com/fwlink/?LinkID=160049)
+## <a name="see-also"></a>请参阅
+- <xref:System.Windows.Media.ImageBrush>
+- <xref:System.Windows.Media.DrawingBrush>
+- <xref:System.Windows.Media.VisualBrush>
+- <xref:System.Windows.Media.TileBrush>
+- [TileBrush 概述](../../../../docs/framework/wpf/graphics-multimedia/tilebrush-overview.md)
+- [WPF 画笔概述](../../../../docs/framework/wpf/graphics-multimedia/wpf-brushes-overview.md)
+- [图像处理概述](../../../../docs/framework/wpf/graphics-multimedia/imaging-overview.md)
+- [Drawing 对象概述](../../../../docs/framework/wpf/graphics-multimedia/drawing-objects-overview.md)
+- [不透明蒙板概述](../../../../docs/framework/wpf/graphics-multimedia/opacity-masks-overview.md)
+- [WPF 图形呈现概述](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)
+- [ImageBrush 示例](https://go.microsoft.com/fwlink/?LinkID=160005)
+- [VisualBrush 示例](https://go.microsoft.com/fwlink/?LinkID=160049)

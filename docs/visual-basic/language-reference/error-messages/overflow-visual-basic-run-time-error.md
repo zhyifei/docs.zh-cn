@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrERRID_Overflow
 ms.assetid: c6a23279-3086-412a-bcff-ff8ed2cb8c6f
-ms.openlocfilehash: 7546676b85465577b357b7ad0757b4db8d40dbe3
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: c45559042231b72ef1ba892cabbead03797df8e6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43863346"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54642500"
 ---
 # <a name="overflow-visual-basic-run-time-error"></a>溢出（Visual Basic 运行时错误）
 当你尝试赋值超出分配的目标的限制时，将导致溢出。  
@@ -22,8 +22,8 @@ ms.locfileid: "43863346"
   
 3.  请确保在强制转换为整数的计算中使用的数字不具有大于整数的结果。  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Int32.MaxValue?displayProperty=nameWithType>  
- <xref:System.Double.MaxValue?displayProperty=nameWithType>  
- [数据类型](../../../visual-basic/language-reference/data-types/index.md)  
- [错误类型](../../../visual-basic/programming-guide/language-features/error-types.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.Int32.MaxValue?displayProperty=nameWithType>
+- <xref:System.Double.MaxValue?displayProperty=nameWithType>
+- [数据类型](../../../visual-basic/language-reference/data-types/index.md)
+- [错误类型](../../../visual-basic/programming-guide/language-features/error-types.md)

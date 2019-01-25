@@ -1,5 +1,5 @@
 ---
-title: 如何：将 Windows 窗体控件绑定到 Factory 对象
+title: 如何：Windows 窗体控件绑定到 Factory 对象
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - BindingSource component [Windows Forms], binding to a factory object
 - BindingSource component [Windows Forms], examples
 ms.assetid: 7d59af89-ff82-41d8-a48a-f1fbae788b0d
-ms.openlocfilehash: f085e7b7d20f958a90777ddb820924a07a5e2d8d
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 0173a4ef19765a74df819640f134e782b89395a2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47199707"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54730004"
 ---
-# <a name="how-to-bind-a-windows-forms-control-to-a-factory-object"></a>如何：将 Windows 窗体控件绑定到 Factory 对象
+# <a name="how-to-bind-a-windows-forms-control-to-a-factory-object"></a>如何：Windows 窗体控件绑定到 Factory 对象
 生成与数据交互的控件时，有时需要将控件绑定到生成其他对象的对象或方法。 此类对象或方法被称为 Factory。 例如，数据源可能是方法调用的返回值，而不是内存中的对象或类型。 只要源返回集合，即可将控件绑定到此类数据源。  
   
  借助 <xref:System.Windows.Forms.BindingSource> 控件可轻松将控件绑定到工厂对象。  
@@ -35,11 +35,11 @@ ms.locfileid: "47199707"
   
 -   对 System、System.Data、System.Drawing 和 System.Windows.Forms 程序集的引用。  
   
- Visual Basic 或 Visual C# 生成命令行中的此示例的信息，请参阅[从命令行生成](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md)或[命令行上使用 csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)。 也可以通过将代码粘贴到新的项目中生成此示例在 Visual Studio 中。  另请参阅[如何：使用 Visual Studio 编译和运行完整的 Windows 窗体代码示例](https://msdn.microsoft.com/library/Bb129228\(v=vs.110\))。  
+ Visual Basic 或 Visual C# 生成命令行中的此示例的信息，请参阅[从命令行生成](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md)或[命令行上使用 csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)。 也可以通过将代码粘贴到新的项目中生成此示例在 Visual Studio 中。  另请参阅[如何：编译和运行完整的 Windows 窗体代码示例使用 Visual Studio](https://msdn.microsoft.com/library/Bb129228\(v=vs.110\))。  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Windows.Forms.BindingNavigator>  
- <xref:System.Windows.Forms.DataGridView>  
- <xref:System.Windows.Forms.BindingSource>  
- [BindingSource 组件](../../../../docs/framework/winforms/controls/bindingsource-component.md)  
- [如何：将 Windows 窗体控件绑定到类型](../../../../docs/framework/winforms/controls/how-to-bind-a-windows-forms-control-to-a-type.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.Windows.Forms.BindingNavigator>
+- <xref:System.Windows.Forms.DataGridView>
+- <xref:System.Windows.Forms.BindingSource>
+- [BindingSource 组件](../../../../docs/framework/winforms/controls/bindingsource-component.md)
+- [如何：将 Windows 窗体控件绑定到类型](../../../../docs/framework/winforms/controls/how-to-bind-a-windows-forms-control-to-a-type.md)
