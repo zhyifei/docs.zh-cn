@@ -2,12 +2,12 @@
 title: 数学函数
 ms.date: 03/30/2017
 ms.assetid: b040c7cb-156d-40f2-9152-61065b18148c
-ms.openlocfilehash: 63f83532c399f77e268913da3198327345b9c2ee
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: d8d766cb1416a9a07476175364fe568d81fd9b25
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53143670"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54652262"
 ---
 # <a name="mathematical-functions"></a>数学函数
 
@@ -221,7 +221,7 @@ SQL Server .NET Framework 数据提供程序 (SqlClient) 提供了各种数学�
 
 `SqlServer.LOG10(100)`
 
-## <a name="pi"></a>PI （)
+## <a name="pi"></a>PI()
 
 以 `Double` 格式返回 pi 的常量值。 
 
@@ -233,7 +233,7 @@ SQL Server .NET Framework 数据提供程序 (SqlClient) 提供了各种数学�
 
 `SqlServer.PI()`
 
-## <a name="powernumericexpression-powerexpression"></a>POWER （numeric_expression，power_expression）
+## <a name="powernumericexpression-powerexpression"></a>POWER(numeric_expression, power_expression)
 
 计算指定表达式的指定幂的值。
 
@@ -383,9 +383,9 @@ SQL Server .NET Framework 数据提供程序 (SqlClient) 提供了各种数学�
 ## <a name="see-also"></a>请参阅
 
 有关 SqlClient 支持的数学函数的更多信息，请参见 SqlClient 提供程序清单中所指定的 SQL Server 版本的相应文档：  
-  
+
 **SQL Server 2005:**[数学函数 (Transact SQL)](https://docs.microsoft.com/previous-versions/sql/sql-server-2005/ms177516(v=sql.90))  
 **SQL Server 2008:**[数学函数 (Transact SQL)](https://docs.microsoft.com/previous-versions/sql/sql-server-2008/ms177516(v=sql.100))  
 **SQL Server 2012 和更高版本：**[数学函数 (Transact SQL)](/sql/t-sql/functions/mathematical-functions-transact-sql?view=sql-server-2017)   
 
- [用于实体框架函数的 SqlClient](sqlclient-for-ef-functions.md)
+- [用于实体框架函数的 SqlClient](sqlclient-for-ef-functions.md)

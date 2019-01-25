@@ -2,12 +2,12 @@
 title: NAVIGATE (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: f107f29d-005f-4e39-a898-17f163abb1d0
-ms.openlocfilehash: c374261ad3702294f5720edb7881e21ba79d85bc
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: e66a09276f40ab6d9ff7c11bb160385b4c1efb48
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32764731"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54542552"
 ---
 # <a name="navigate-entity-sql"></a>NAVIGATE (Entity SQL)
 导航实体之间建立的关系。  
@@ -23,7 +23,7 @@ navigate(instance-expresssion, [relationship-type], [to-end [, from-end] ])
  一个实体的实例。  
   
  `relationship-type`  
- 关系的类型名称，取自概念架构定义语言 (CSDL) 文件。 `relationship-type`是限定为\<命名空间 >。\<关系类型名称 >。  
+ 关系的类型名称，取自概念架构定义语言 (CSDL) 文件。 `relationship-type`是作为限定\<命名空间 >。\<关系类型名称 >。  
   
  `to`  
  关系的结束端。  
@@ -50,7 +50,7 @@ Select o.Id, navigate(o, OrderCustomer, Customer, Order)
 From LOB.Orders as o  
 ```  
   
- 其中 OrderCustomer 为 `relationship`，Customer 和 Order 为关系的 `to-end` （客户）和 `from-end` （订单）。 如果 OrderCustomer 为 n:1 关系，则导航表达式的结果类型是 Ref\<客户 >。  
+ 其中 OrderCustomer 为 `relationship`，Customer 和 Order 为关系的 `to-end` （客户）和 `from-end` （订单）。 如果 ordercustomer 为 n:1 关系，则导航表达式的结果类型是 Ref\<客户 >。  
   
  此表达式的简单形式如下：  
   
@@ -59,7 +59,7 @@ Select o.Id, navigate(o, OrderCustomer)
 From LOB.Orders as o  
 ```  
   
- 同样，在以下形式的查询中，导航表达式将生成集合 < Ref\<顺序 >>。  
+ 同样，在以下形式的查询中，导航表达式将生成一组 < Ref\<顺序 >>。  
   
 ```  
 Select c.Id, navigate(c, OrderCustomer, Order, Customer)  
@@ -71,12 +71,12 @@ From LOB.Customers as c
 ## <a name="example"></a>示例  
  下面的 Entity SQL 查询使用 NAVIGATE 运算符来导航建立在 Address 和 SalesOrderHeader 实体类型之间的关系。 此查询基于 AdventureWorks 销售模型。 若要编译并运行此查询，请执行下列步骤：  
   
-1.  执行 [如何：执行返回 StructuralType 结果的查询](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md)中的过程。  
+1.  按照中的过程[如何：执行返回 StructuralType 结果的查询](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md)。  
   
 2.  将以下查询作为参数传递给 `ExecuteStructuralTypeQuery` 方法：  
   
  [!code-csharp[DP EntityServices Concepts 2#NAVIGATE](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#navigate)]  
   
-## <a name="see-also"></a>请参阅  
- [实体 SQL 引用](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)  
- [如何： 导航与关系导航运算符](../../../../../../docs/framework/data/adonet/ef/language-reference/navigate-entity-sql.md)
+## <a name="see-also"></a>请参阅
+- [实体 SQL 引用](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
+- [如何：导航与关系导航运算符](../../../../../../docs/framework/data/adonet/ef/language-reference/navigate-entity-sql.md)

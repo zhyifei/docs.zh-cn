@@ -6,12 +6,12 @@ helpviewer_keywords:
 - security glossary [WCF]
 - security terms [WCF]
 ms.assetid: 68dde024-8e51-40ba-804f-ec52d85e9ca9
-ms.openlocfilehash: 8b8f92697181c76710e75d6e5a07296b1fcf9188
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 53b6abc41dda0ebbbe28afc5b631efcfc0a60668
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53126817"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54620378"
 ---
 # <a name="wcf-security-terminology"></a>WCF 安全术语
 在讨论安全时使用的某些术语可能是您所不熟悉的。 本主题提供了一些安全术语的扼要解释，但并不试图提供每个术语的全面文档。  
@@ -181,7 +181,7 @@ ms.locfileid: "53126817"
  X.509  
  一种国际上认可的证书标准，用于定义证书的必需部分。  
   
-## <a name="see-also"></a>请参阅  
- [Windows Communication Foundation 基础概念](../../../../docs/framework/wcf/fundamental-concepts.md)  
- [安全性概念](../../../../docs/framework/wcf/feature-details/security-concepts.md)  
- [Windows Server App Fabric 的安全模型](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+## <a name="see-also"></a>请参阅
+- [Windows Communication Foundation 基础概念](../../../../docs/framework/wcf/fundamental-concepts.md)
+- [安全性概念](../../../../docs/framework/wcf/feature-details/security-concepts.md)
+- [Windows Server App Fabric 的安全模型](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

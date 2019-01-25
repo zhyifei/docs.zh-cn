@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 9b266b6c-a9b2-4d20-afd8-b3a0d8fd48a0
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b3e48d5a088fc6cff3dbdaaa77e6fa561c33f400
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 7f41a61fe929bb3eaf691deb75749777c0880aea
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43865516"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54530679"
 ---
 # <a name="decrypting-data"></a>解密数据
 解密是加密的反向操作。 对于私钥加密，必须知道用于加密数据的密钥和 IV。 对于公钥加密，必须知道公钥（如果使用了私钥来加密数据）或私钥（如果使用了公钥来加密数据）。  
@@ -174,7 +174,7 @@ class Class1
 ## <a name="asymmetric-decryption"></a>不对称解密  
  通常，一方（A 方）同时生成公钥和私钥，并将其存储在内存或加密密钥容器中。  然后 A 方将公钥发送到另一方（B 方）。  B 方使用此公钥将数据加密后发送回 A 方。接收到数据后，A 方使用对应的私钥将其解密。  A 方只有使用与 B 方用于加密数据的公钥相对应的私钥，解密才能成功。  
   
- 有关如何将非对称密钥存储在安全加密密钥容器中以及随后如何获取非对称密钥的信息，请参阅 [如何：将非对称密钥存储在密钥容器中](../../../docs/standard/security/how-to-store-asymmetric-keys-in-a-key-container.md)。  
+ 了解如何存储的非对称密钥在安全加密的密钥容器中以及随后如何获取非对称密钥，请参阅[如何：将非对称密钥存储在密钥容器](../../../docs/standard/security/how-to-store-asymmetric-keys-in-a-key-container.md)。  
   
  下面的示例阐释如何对表示一个对称密钥和 IV 的两个字节数组进行解密。  有关如何以可方便地发送到第三方的格式从 <xref:System.Security.Cryptography.RSACryptoServiceProvider> 对象提取非对称公钥的信息，请参阅 [Encrypting Data](../../../docs/standard/security/encrypting-data.md)的托管流的值。  
   
@@ -204,6 +204,6 @@ SymmetricIV = RSA.Decrypt( EncryptedSymmetricIV , false);
   
 ## <a name="see-also"></a>请参阅
 
-- [生成加密和解密密钥](../../../docs/standard/security/generating-keys-for-encryption-and-decryption.md)  
-- [加密数据](../../../docs/standard/security/encrypting-data.md)  
+- [生成加密和解密密钥](../../../docs/standard/security/generating-keys-for-encryption-and-decryption.md)
+- [加密数据](../../../docs/standard/security/encrypting-data.md)
 - [Cryptographic Services](../../../docs/standard/security/cryptographic-services.md)

@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0a56d874e5e7ef491c24b0aef2ace700087de677
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 7d10fb391953e924feb553ae4516fb7674345ed3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33447406"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54592003"
 ---
 # <a name="imetadataassemblyimportenumassemblyrefs-method"></a>IMetaDataAssemblyImport::EnumAssemblyRefs 方法
-枚举`mdAssemblyRef`程序集清单中定义的实例。  
+枚举`mdAssemblyRef`的程序集清单中定义的实例。  
   
 ## <a name="syntax"></a>语法  
   
@@ -40,13 +40,13 @@ HRESULT EnumAssemblyRefs (
   
 #### <a name="parameters"></a>参数  
  `phEnum`  
- [在中，out]枚举数指向的指针。 这必须是一个为 null 的值时`EnumAssemblyRefs`首次调用方法。  
+ [in、 out]一个指向枚举器。 这必须是一个 null 值时`EnumAssemblyRefs`第一次调用方法。  
   
  `rAssemblyRefs`  
  [out]枚举`mdAssemblyRef`元数据标记。  
   
  `cMax`  
- [in]可以放置在的令牌的最大数目`rAssemblyRefs`数组。  
+ [in]可以放置在令牌的最大数目`rAssemblyRefs`数组。  
   
  `pcTokens`  
  [out]中实际放置的标记数`rAssemblyRefs`。  
@@ -59,13 +59,13 @@ HRESULT EnumAssemblyRefs (
 |`S_FALSE`|没有要枚举的标记。 在这种情况下，`pcTokens`设置为零。|  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** Cor.h  
   
  **库：** 用作 MsCorEE.dll 中的资源  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>请参阅  
- [IMetaDataAssemblyImport 接口](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)
+## <a name="see-also"></a>请参阅
+- [IMetaDataAssemblyImport 接口](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)

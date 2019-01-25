@@ -4,12 +4,12 @@ ms.date: 04/26/2017
 ms.assetid: c2cf97f0-9262-4f1f-a754-5568b51110ad
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: dd4f9728338ecc66f84fe42b9bdbda9938ed518b
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: ecf4d805feeb27a7c3fa08d2ab6dd05b6fff693a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53612187"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54648175"
 ---
 # <a name="ltuselegacyjitgt-element"></a>&lt;useLegacyJit&gt;元素
 
@@ -17,7 +17,7 @@ ms.locfileid: "53612187"
   
 \<configuration>  
 \<运行时 >  
-\<useLegacyJit >
+\<useLegacyJit>
   
 ## <a name="syntax"></a>语法  
   
@@ -39,7 +39,7 @@ ms.locfileid: "53612187"
   
 ### <a name="enabled-attribute"></a>已启用的属性  
   
-| 值 | 描述                                                                                                         |  
+| “值” | 描述                                                                                                         |  
 | ----- | ------------------------------------------------------------------------------------------------------------------- |  
 | 0     | 公共语言运行时使用新的 64 位 JIT 编译器包含在.NET Framework 4.6 和更高版本。 |  
 | 1     | 公共语言运行时使用较旧的 64 位 JIT 编译器。                                                     |  
@@ -95,6 +95,6 @@ ms.locfileid: "53612187"
   
 ## <a name="see-also"></a>请参阅
 
-- [\<运行时 > 元素](../../../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md)   
-- [\<configuration> 元素](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)   
+- [\<运行时 > 元素](../../../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md)
+- [\<configuration> 元素](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)
 - [缓解：新的 64 位 JIT 编译器](../../../../../docs/framework/migration-guide/mitigation-new-64-bit-jit-compiler.md)

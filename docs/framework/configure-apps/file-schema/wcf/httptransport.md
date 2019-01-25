@@ -2,20 +2,20 @@
 title: '&lt;httpTransport&gt;'
 ms.date: 03/30/2017
 ms.assetid: 8b30c065-b32a-4fa3-8eb4-5537a9c6b897
-ms.openlocfilehash: d03b92dc1e7b53a182b8065a6d4ac652f76291ba
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 1e6cb812d68d5f26a837ff3e1124034a8a648be4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54147429"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54541074"
 ---
 # <a name="lthttptransportgt"></a>&lt;httpTransport&gt;
 为自定义绑定指定用于传输 SOAP 消息的 HTTP 传输。  
   
  \<system.serviceModel>  
-\<绑定 >  
+\<bindings>  
 \<customBinding>  
-\<绑定 >  
+\<binding>  
 \<httpTransport>  
   
 ## <a name="syntax"></a>语法  
@@ -28,7 +28,7 @@ ms.locfileid: "54147429"
                keepAliveEnabled="Boolean"
                maxBufferSize="Integer"
                proxyAddress="Uri"
-               proxyAuthenticationScheme="None/Digest/Negotiate/Ntlm/Basic/Anonymous/IntegratedWindowsAuthentication"
+               proxyAuthenticationScheme="None/Digest/Negotiate/Ntlm/Basic/Anonymous"
                realm="String"
                transferMode="Buffered/Streamed/StreamedRequest/StreamedResponse"
                unsafeConnectionNtlmAuthentication="Boolean"
@@ -49,7 +49,7 @@ ms.locfileid: "54147429"
 |keepAliveEnabled|一个布尔值，指定是否与 Internet 资源建立持久性连接。|  
 |maxBufferSize|一个正整数，指定缓冲区的最大大小。 默认值为 524288。|  
 |proxyAddress|一个指定 HTTP 代理的地址的 URI。 如果 `useSystemWebProxy` 为 `true`，则此设置必须为 `null`。 默认值为 `null`。|  
-|proxyAuthenticationScheme|指定用于验证 HTTP 代理正在处理的客户端请求的协议。 包括以下有效值：<br /><br /> -None:不执行任何身份验证。<br />-摘要：指定摘要式身份验证。<br />-Negotiate:使用客户端，以确定身份验证方案进行协商。 如果客户端和服务器均支持 Kerberos，则使用 Kerberos；否则使用 NTLM。<br />-Ntlm:指定 NTLM 身份验证。<br />-基本：指定基本身份验证。<br />匿名：指定匿名身份验证。<br />-IntegratedWindowsAuthentication:指定 Windows 身份验证。<br /><br /> 默认值为 Anonymous。 此属性的类型为 <xref:System.Net.AuthenticationSchemes>。|  
+|proxyAuthenticationScheme|指定用于验证 HTTP 代理正在处理的客户端请求的协议。 包括以下有效值：<br /><br /> -None:不执行任何身份验证。<br />-摘要：指定摘要式身份验证。<br />-Negotiate:使用客户端，以确定身份验证方案进行协商。 如果客户端和服务器均支持 Kerberos，则使用 Kerberos；否则使用 NTLM。<br />-Ntlm:指定 NTLM 身份验证。<br />-基本：指定基本身份验证。<br />匿名：指定匿名身份验证。<br /><br /> 默认值为 Anonymous。 此属性的类型为 <xref:System.Net.AuthenticationSchemes>。 请注意，`IntegratedWindowsAuthentication`不受支持。|  
 |realm|一个指定要在代理/服务器上使用的领域的字符串。 默认值为一个空字符串。<br /><br /> 服务器使用领域将受保护的资源分区。 每个分区都可以有自己的身份验证方案和/或授权数据库。 领域仅用于基本和摘要式身份验证。 在客户端成功进行身份验证之后，该身份验证对给定领域内的所有资源都有效。 有关领域的详细说明，请参阅在 RFC 2617 [IETF 网站](https://www.ietf.org)。|  
 |transferMode|指定对消息进行缓冲处理还是流式处理，或者指定消息是请求还是响应。 包括以下有效值：<br /><br /> 缓冲：请求和响应消息进行缓冲处理。<br />-流式传输：请求和响应消息进行流式处理。<br />-StreamedRequest:对请求消息进行流式处理，对响应消息进行缓冲处理。<br />-StreamedResponse:对请求消息进行缓冲处理，对响应消息进行流式处理。<br /><br /> 默认值为 Buffered。 此属性的类型为 <xref:System.ServiceModel.TransferMode>。|  
 |unsafeConnectionNtlmAuthentication|一个布尔值，指定是否在服务器上启用不安全连接共享。 默认值为 `false`。 如果启用，将对每个 TCP 连接执行一次 NTLM 身份验证。|  
@@ -62,19 +62,19 @@ ms.locfileid: "54147429"
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<绑定 >](../../../../../docs/framework/misc/binding.md)|定义自定义绑定的所有绑定功能。|  
+|[\<binding>](../../../../../docs/framework/misc/binding.md)|定义自定义绑定的所有绑定功能。|  
   
 ## <a name="remarks"></a>备注  
  `httpTransport` 元素是创建实现 HTTP 传输协议的自定义绑定的起始点。 HTTP 是用于互操作性用途的主要传输。 通过 Windows Communication Foundation (WCF) 以确保与其他非 WCF Web 服务堆栈的互操作性支持此传输。  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.ServiceModel.Configuration.HttpTransportElement>  
- <xref:System.ServiceModel.Channels.HttpTransportBindingElement>  
- <xref:System.ServiceModel.Channels.TransportBindingElement>  
- <xref:System.ServiceModel.Channels.CustomBinding>  
- [传输](../../../../../docs/framework/wcf/feature-details/transports.md)  
- [选择传输](../../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)  
- [绑定](../../../../../docs/framework/wcf/bindings.md)  
- [扩展绑定](../../../../../docs/framework/wcf/extending/extending-bindings.md)  
- [自定义绑定](../../../../../docs/framework/wcf/extending/custom-bindings.md)  
- [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.ServiceModel.Configuration.HttpTransportElement>
+- <xref:System.ServiceModel.Channels.HttpTransportBindingElement>
+- <xref:System.ServiceModel.Channels.TransportBindingElement>
+- <xref:System.ServiceModel.Channels.CustomBinding>
+- [传输](../../../../../docs/framework/wcf/feature-details/transports.md)
+- [选择传输](../../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)
+- [绑定](../../../../../docs/framework/wcf/bindings.md)
+- [扩展绑定](../../../../../docs/framework/wcf/extending/extending-bindings.md)
+- [自定义绑定](../../../../../docs/framework/wcf/extending/custom-bindings.md)
+- [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)

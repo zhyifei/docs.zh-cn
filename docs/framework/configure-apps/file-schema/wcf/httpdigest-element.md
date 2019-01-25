@@ -2,22 +2,22 @@
 title: '&lt;httpDigest&gt; 元素'
 ms.date: 03/30/2017
 ms.assetid: 3da4f276-dfd9-4247-8c07-01d83618727c
-ms.openlocfilehash: 2211c593090d697ae07350fcf7ac491b9d23e2d0
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 146260a8f4b51ec51e749408b8351c7e71debab1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54150133"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54510606"
 ---
 # <a name="lthttpdigestgt-element"></a>&lt;httpDigest&gt; 元素
 指定一个在向服务证明客户端身份时使用的摘要类型凭据。  
   
  \<system.ServiceModel>  
-\<行为 >  
+\<behaviors>  
 \<endpointBehaviors>  
-\<行为 >  
+\<behavior>  
 \<clientCredentials>  
-\<httpDigest >  
+\<httpDigest>  
   
 ## <a name="syntax"></a>语法  
   
@@ -48,14 +48,14 @@ ms.locfileid: "54150133"
   
  必须使用 Windows 上的 Active Directory 和 Internet 信息服务 (IIS) 启用此功能。 有关详细信息，请参阅[摘要式身份验证在 IIS 6.0 中](https://go.microsoft.com/fwlink/?LinkId=88443)。  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.ServiceModel.Configuration.ClientCredentialsElement>  
- <xref:System.ServiceModel.Configuration.ClientCredentialsElement.HttpDigest%2A>  
- <xref:System.ServiceModel.Description.ClientCredentials>  
- <xref:System.ServiceModel.Description.ClientCredentials.HttpDigest%2A>  
- <xref:System.ServiceModel.Configuration.HttpDigestClientElement>  
- <xref:System.ServiceModel.Security.HttpDigestClientCredential>  
- [安全行为](../../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)  
- [保护客户端](../../../../../docs/framework/wcf/securing-clients.md)  
- [使用证书](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)  
- [保护服务和客户端的安全](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.ServiceModel.Configuration.ClientCredentialsElement>
+- <xref:System.ServiceModel.Configuration.ClientCredentialsElement.HttpDigest%2A>
+- <xref:System.ServiceModel.Description.ClientCredentials>
+- <xref:System.ServiceModel.Description.ClientCredentials.HttpDigest%2A>
+- <xref:System.ServiceModel.Configuration.HttpDigestClientElement>
+- <xref:System.ServiceModel.Security.HttpDigestClientCredential>
+- [安全行为](../../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)
+- [保护客户端](../../../../../docs/framework/wcf/securing-clients.md)
+- [使用证书](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
+- [保护服务和客户端的安全](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
