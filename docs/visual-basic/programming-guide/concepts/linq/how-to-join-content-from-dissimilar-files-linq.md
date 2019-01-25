@@ -1,21 +1,21 @@
 ---
-title: 如何： 联接不同文件 (LINQ) (Visual Basic) 的内容
+title: 如何：联接不同文件 (LINQ) (Visual Basic 中) 的内容
 ms.date: 06/27/2018
 ms.assetid: e7530857-c467-41ea-9730-84e6b1065a4d
-ms.openlocfilehash: d82e43449651ead5f39ec9c9442d3087b34d10ef
-ms.sourcegitcommit: 9e18e4a18284ae9e54c515e30d019c0bbff9cd37
+ms.openlocfilehash: a3dbfc6593d838af0285d8dab73ceecf1b0340f0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37072041"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54655460"
 ---
-# <a name="how-to-join-content-from-dissimilar-files-linq-visual-basic"></a><span data-ttu-id="d541b-102">如何： 联接不同文件 (LINQ) (Visual Basic) 的内容</span><span class="sxs-lookup"><span data-stu-id="d541b-102">How to: Join Content from Dissimilar Files (LINQ) (Visual Basic)</span></span>
+# <a name="how-to-join-content-from-dissimilar-files-linq-visual-basic"></a><span data-ttu-id="cc6fe-102">如何：联接不同文件 (LINQ) (Visual Basic 中) 的内容</span><span class="sxs-lookup"><span data-stu-id="cc6fe-102">How to: Join Content from Dissimilar Files (LINQ) (Visual Basic)</span></span>
 
-<span data-ttu-id="d541b-103">本示例演示如何联接两个逗号分隔文件中的数据，这两个文件共享一个用作匹配键的公共值。</span><span class="sxs-lookup"><span data-stu-id="d541b-103">This example shows how to join data from two comma-delimited files that share a common value that is used as a matching key.</span></span> <span data-ttu-id="d541b-104">如果需要合并来自两个电子表格的数据，或者从一个电子表格和具有另一种格式的文件合并到一个新文件时，此技术很有用。</span><span class="sxs-lookup"><span data-stu-id="d541b-104">This technique can be useful if you have to combine data from two spreadsheets, or from a spreadsheet and from a file that has another format, into a new file.</span></span> <span data-ttu-id="d541b-105">可以修改此示例以用于任何类型的结构化文本。</span><span class="sxs-lookup"><span data-stu-id="d541b-105">You can modify the example to work with any kind of structured text.</span></span>  
+<span data-ttu-id="cc6fe-103">本示例演示如何联接两个逗号分隔文件中的数据，这两个文件共享一个用作匹配键的公共值。</span><span class="sxs-lookup"><span data-stu-id="cc6fe-103">This example shows how to join data from two comma-delimited files that share a common value that is used as a matching key.</span></span> <span data-ttu-id="cc6fe-104">如果需要合并来自两个电子表格的数据，或者从一个电子表格和具有另一种格式的文件合并到一个新文件时，此技术很有用。</span><span class="sxs-lookup"><span data-stu-id="cc6fe-104">This technique can be useful if you have to combine data from two spreadsheets, or from a spreadsheet and from a file that has another format, into a new file.</span></span> <span data-ttu-id="cc6fe-105">可以修改此示例以用于任何类型的结构化文本。</span><span class="sxs-lookup"><span data-stu-id="cc6fe-105">You can modify the example to work with any kind of structured text.</span></span>  
   
-## <a name="to-create-the-data-files"></a><span data-ttu-id="d541b-106">创建数据文件</span><span class="sxs-lookup"><span data-stu-id="d541b-106">To create the data files</span></span>
+## <a name="to-create-the-data-files"></a><span data-ttu-id="cc6fe-106">创建数据文件</span><span class="sxs-lookup"><span data-stu-id="cc6fe-106">To create the data files</span></span>
   
-1.  <span data-ttu-id="d541b-107">将以下行复制到名为 scores.csv 的文件，并将文件保存到项目文件夹。</span><span class="sxs-lookup"><span data-stu-id="d541b-107">Copy the following lines into a file that is named scores.csv and save it to your project folder.</span></span> <span data-ttu-id="d541b-108">此文件表示电子表格数据。</span><span class="sxs-lookup"><span data-stu-id="d541b-108">The file represents spreadsheet data.</span></span> <span data-ttu-id="d541b-109">第 1 列是学生的 ID，第 2 至 5 列是测验分数。</span><span class="sxs-lookup"><span data-stu-id="d541b-109">Column 1 is the student's ID, and columns 2 through 5 are test scores.</span></span>  
+1.  <span data-ttu-id="cc6fe-107">将以下行复制到名为 scores.csv 的文件，并将文件保存到项目文件夹。</span><span class="sxs-lookup"><span data-stu-id="cc6fe-107">Copy the following lines into a file that is named scores.csv and save it to your project folder.</span></span> <span data-ttu-id="cc6fe-108">此文件表示电子表格数据。</span><span class="sxs-lookup"><span data-stu-id="cc6fe-108">The file represents spreadsheet data.</span></span> <span data-ttu-id="cc6fe-109">第 1 列是学生的 ID，第 2 至 5 列是测验分数。</span><span class="sxs-lookup"><span data-stu-id="cc6fe-109">Column 1 is the student's ID, and columns 2 through 5 are test scores.</span></span>  
   
     ```  
     111, 97, 92, 81, 60  
@@ -32,7 +32,7 @@ ms.locfileid: "37072041"
     122, 94, 92, 91, 91  
     ```  
   
-2.  <span data-ttu-id="d541b-110">将以下行复制到名为 names.csv 的文件，并将文件保存到项目文件夹。</span><span class="sxs-lookup"><span data-stu-id="d541b-110">Copy the following lines into a file that is named names.csv and save it to your project folder.</span></span> <span data-ttu-id="d541b-111">此文件表示电子表格，其中包含学生的姓氏、名字和学生 ID。</span><span class="sxs-lookup"><span data-stu-id="d541b-111">The file represents a spreadsheet that contains the student's last name, first name, and student ID.</span></span>  
+2.  <span data-ttu-id="cc6fe-110">将以下行复制到名为 names.csv 的文件，并将文件保存到项目文件夹。</span><span class="sxs-lookup"><span data-stu-id="cc6fe-110">Copy the following lines into a file that is named names.csv and save it to your project folder.</span></span> <span data-ttu-id="cc6fe-111">此文件表示电子表格，其中包含学生的姓氏、名字和学生 ID。</span><span class="sxs-lookup"><span data-stu-id="cc6fe-111">The file represents a spreadsheet that contains the student's last name, first name, and student ID.</span></span>  
   
     ```  
     Omelchenko,Svetlana,111  
@@ -49,7 +49,7 @@ ms.locfileid: "37072041"
     Tucker,Michael,122  
     ```  
   
-## <a name="example"></a><span data-ttu-id="d541b-112">示例</span><span class="sxs-lookup"><span data-stu-id="d541b-112">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="cc6fe-112">示例</span><span class="sxs-lookup"><span data-stu-id="cc6fe-112">Example</span></span>  
 
 ```vb
 Imports System.Collections.Generic
@@ -121,15 +121,15 @@ End Class
 ' 12 total names in list 
 ```  
 
-## <a name="compiling-the-code"></a><span data-ttu-id="d541b-113">编译代码</span><span class="sxs-lookup"><span data-stu-id="d541b-113">Compiling the code</span></span>
+## <a name="compiling-the-code"></a><span data-ttu-id="cc6fe-113">编译代码</span><span class="sxs-lookup"><span data-stu-id="cc6fe-113">Compiling the code</span></span>
 
-<span data-ttu-id="d541b-114">创建和编译的项目是面向以下选项之一：</span><span class="sxs-lookup"><span data-stu-id="d541b-114">Create and compile a project that targets one of the following options:</span></span>
+<span data-ttu-id="cc6fe-114">创建并编译面向下列选项之一的项目：</span><span class="sxs-lookup"><span data-stu-id="cc6fe-114">Create and compile a project that targets one of the following options:</span></span>
 
-- <span data-ttu-id="d541b-115">.NET framework 版本 3.5 具有对 System.Core.dll 的引用。</span><span class="sxs-lookup"><span data-stu-id="d541b-115">.NET Framework version 3.5 with a reference to System.Core.dll.</span></span>
-- <span data-ttu-id="d541b-116">.NET framework 版本 4.0 或更高版本。</span><span class="sxs-lookup"><span data-stu-id="d541b-116">.NET Framework version 4.0 or higher.</span></span>
-- <span data-ttu-id="d541b-117">.NET core 版本 1.0 或更高版本。</span><span class="sxs-lookup"><span data-stu-id="d541b-117">.NET Core version 1.0 or higher.</span></span>
+- <span data-ttu-id="cc6fe-115">.NET Framework 版本 3.5，含对 System.Core.dll 的引用。</span><span class="sxs-lookup"><span data-stu-id="cc6fe-115">.NET Framework version 3.5 with a reference to System.Core.dll.</span></span>
+- <span data-ttu-id="cc6fe-116">.NET Framework 版本 4.0或更高版本。</span><span class="sxs-lookup"><span data-stu-id="cc6fe-116">.NET Framework version 4.0 or higher.</span></span>
+- <span data-ttu-id="cc6fe-117">.NET Core 版本 1.0 或更高版本。</span><span class="sxs-lookup"><span data-stu-id="cc6fe-117">.NET Core version 1.0 or higher.</span></span>
   
-## <a name="see-also"></a><span data-ttu-id="d541b-118">请参阅</span><span class="sxs-lookup"><span data-stu-id="d541b-118">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="cc6fe-118">请参阅</span><span class="sxs-lookup"><span data-stu-id="cc6fe-118">See also</span></span>
 
- [<span data-ttu-id="d541b-119">LINQ 和字符串 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="d541b-119">LINQ and Strings (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)  
- [<span data-ttu-id="d541b-120">LINQ 和文件目录 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="d541b-120">LINQ and File Directories (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)
+- [<span data-ttu-id="cc6fe-119">LINQ 和字符串 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="cc6fe-119">LINQ and Strings (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)
+- [<span data-ttu-id="cc6fe-120">LINQ 和文件目录 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="cc6fe-120">LINQ and File Directories (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)

@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 50fe7399896c35c1d6595b2d7214280e3009fab5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 4ebdd76655124922008667898e38f873ad93598e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33455796"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54555591"
 ---
-# <a name="icorprofilercallback3initializeforattach-method"></a><span data-ttu-id="e0920-102">ICorProfilerCallback3::InitializeForAttach 方法</span><span class="sxs-lookup"><span data-stu-id="e0920-102">ICorProfilerCallback3::InitializeForAttach Method</span></span>
-<span data-ttu-id="e0920-103">由公共语言运行时 (CLR) 调用，从而给予分析器一个在附加操作后可将其状态初始化的机会。</span><span class="sxs-lookup"><span data-stu-id="e0920-103">Called by the common language runtime (CLR) to give the profiler an opportunity to initialize its state after an attach operation.</span></span>  
+# <a name="icorprofilercallback3initializeforattach-method"></a><span data-ttu-id="c253f-102">ICorProfilerCallback3::InitializeForAttach 方法</span><span class="sxs-lookup"><span data-stu-id="c253f-102">ICorProfilerCallback3::InitializeForAttach Method</span></span>
+<span data-ttu-id="c253f-103">由公共语言运行时 (CLR) 调用，从而给予分析器一个在附加操作后可将其状态初始化的机会。</span><span class="sxs-lookup"><span data-stu-id="c253f-103">Called by the common language runtime (CLR) to give the profiler an opportunity to initialize its state after an attach operation.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="e0920-104">语法</span><span class="sxs-lookup"><span data-stu-id="e0920-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="c253f-104">语法</span><span class="sxs-lookup"><span data-stu-id="c253f-104">Syntax</span></span>  
   
 ```  
 HRESULT InitializeForAttach(  
@@ -36,30 +36,30 @@ HRESULT InitializeForAttach(
             [in] UINT cbClientData);  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="e0920-105">参数</span><span class="sxs-lookup"><span data-stu-id="e0920-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="c253f-105">参数</span><span class="sxs-lookup"><span data-stu-id="c253f-105">Parameters</span></span>  
  `pCorProfilerInfoUnk`  
- <span data-ttu-id="e0920-106">[in] `ICorProfilerInfo*` 接口的接口指针。</span><span class="sxs-lookup"><span data-stu-id="e0920-106">[in] An interface pointer for the `ICorProfilerInfo*` interface.</span></span>  
+ <span data-ttu-id="c253f-106">[in] `ICorProfilerInfo*` 接口的接口指针。</span><span class="sxs-lookup"><span data-stu-id="c253f-106">[in] An interface pointer for the `ICorProfilerInfo*` interface.</span></span>  
   
  `pvClientData`  
- <span data-ttu-id="e0920-107">[in]指向的数据传递给[iclrprofiling:: Attachprofiler](../../../../docs/framework/unmanaged-api/profiling/iclrprofiling-attachprofiler-method.md)方法在其`pvClientData`参数。</span><span class="sxs-lookup"><span data-stu-id="e0920-107">[in] A pointer to the data passed to the [IClrProfiling::AttachProfiler](../../../../docs/framework/unmanaged-api/profiling/iclrprofiling-attachprofiler-method.md) method in its `pvClientData` parameter.</span></span> <span data-ttu-id="e0920-108">如果此参数为 NULL，则 `cbClientData` 将为 0（零）。</span><span class="sxs-lookup"><span data-stu-id="e0920-108">If this parameter is null, `cbClientData` will be 0 (zero).</span></span> <span data-ttu-id="e0920-109">当 CLR 从 `InitializeForAttach` 返回时将释放此内存。</span><span class="sxs-lookup"><span data-stu-id="e0920-109">The CLR frees this memory when it returns from `InitializeForAttach`.</span></span>  
+ <span data-ttu-id="c253f-107">[in]对数据的指针传递到[iclrprofiling:: Attachprofiler](../../../../docs/framework/unmanaged-api/profiling/iclrprofiling-attachprofiler-method.md)中的方法及其`pvClientData`参数。</span><span class="sxs-lookup"><span data-stu-id="c253f-107">[in] A pointer to the data passed to the [IClrProfiling::AttachProfiler](../../../../docs/framework/unmanaged-api/profiling/iclrprofiling-attachprofiler-method.md) method in its `pvClientData` parameter.</span></span> <span data-ttu-id="c253f-108">如果此参数为 NULL，则 `cbClientData` 将为 0（零）。</span><span class="sxs-lookup"><span data-stu-id="c253f-108">If this parameter is null, `cbClientData` will be 0 (zero).</span></span> <span data-ttu-id="c253f-109">当 CLR 从 `InitializeForAttach` 返回时将释放此内存。</span><span class="sxs-lookup"><span data-stu-id="c253f-109">The CLR frees this memory when it returns from `InitializeForAttach`.</span></span>  
   
  `cbClientData`  
- <span data-ttu-id="e0920-110">[in] `pvClientData` 指向的数据的大小（以字节为单位）。</span><span class="sxs-lookup"><span data-stu-id="e0920-110">[in] The size, in bytes, of the data that `pvClientData` points to.</span></span>  
+ <span data-ttu-id="c253f-110">[in] `pvClientData` 指向的数据的大小（以字节为单位）。</span><span class="sxs-lookup"><span data-stu-id="c253f-110">[in] The size, in bytes, of the data that `pvClientData` points to.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="e0920-111">备注</span><span class="sxs-lookup"><span data-stu-id="e0920-111">Remarks</span></span>  
- <span data-ttu-id="e0920-112">CLR 调用 `InitializeForAttach` 以便给予分析器请求回调的机会。</span><span class="sxs-lookup"><span data-stu-id="e0920-112">The CLR calls `InitializeForAttach` to give the profiler an opportunity to request callbacks.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="c253f-111">备注</span><span class="sxs-lookup"><span data-stu-id="c253f-111">Remarks</span></span>  
+ <span data-ttu-id="c253f-112">CLR 调用 `InitializeForAttach` 以便给予分析器请求回调的机会。</span><span class="sxs-lookup"><span data-stu-id="c253f-112">The CLR calls `InitializeForAttach` to give the profiler an opportunity to request callbacks.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="e0920-113">要求</span><span class="sxs-lookup"><span data-stu-id="e0920-113">Requirements</span></span>  
- <span data-ttu-id="e0920-114">**平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="e0920-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="c253f-113">要求</span><span class="sxs-lookup"><span data-stu-id="c253f-113">Requirements</span></span>  
+ <span data-ttu-id="c253f-114">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="c253f-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="e0920-115">**头文件：** CorProf.idl、CorProf.h</span><span class="sxs-lookup"><span data-stu-id="e0920-115">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="c253f-115">**标头：** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="c253f-115">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="e0920-116">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="e0920-116">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="c253f-116">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="c253f-116">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="e0920-117">**.NET framework 版本：** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="e0920-117">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
+ <span data-ttu-id="c253f-117">**.NET Framework 版本：**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="c253f-117">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="e0920-118">请参阅</span><span class="sxs-lookup"><span data-stu-id="e0920-118">See Also</span></span>  
- [<span data-ttu-id="e0920-119">ICorProfilerCallback 接口</span><span class="sxs-lookup"><span data-stu-id="e0920-119">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)  
- [<span data-ttu-id="e0920-120">ICorProfilerInfo3 接口</span><span class="sxs-lookup"><span data-stu-id="e0920-120">ICorProfilerInfo3 Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-interface.md)  
- [<span data-ttu-id="e0920-121">Profiling 接口</span><span class="sxs-lookup"><span data-stu-id="e0920-121">Profiling Interfaces</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)  
- [<span data-ttu-id="e0920-122">分析</span><span class="sxs-lookup"><span data-stu-id="e0920-122">Profiling</span></span>](../../../../docs/framework/unmanaged-api/profiling/index.md)
+## <a name="see-also"></a><span data-ttu-id="c253f-118">请参阅</span><span class="sxs-lookup"><span data-stu-id="c253f-118">See also</span></span>
+- [<span data-ttu-id="c253f-119">ICorProfilerCallback 接口</span><span class="sxs-lookup"><span data-stu-id="c253f-119">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+- [<span data-ttu-id="c253f-120">ICorProfilerInfo3 接口</span><span class="sxs-lookup"><span data-stu-id="c253f-120">ICorProfilerInfo3 Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-interface.md)
+- [<span data-ttu-id="c253f-121">Profiling 接口</span><span class="sxs-lookup"><span data-stu-id="c253f-121">Profiling Interfaces</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
+- [<span data-ttu-id="c253f-122">分析</span><span class="sxs-lookup"><span data-stu-id="c253f-122">Profiling</span></span>](../../../../docs/framework/unmanaged-api/profiling/index.md)

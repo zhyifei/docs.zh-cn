@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8544466edcaca1198d7a7ca92a3f9b9a16847193
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 475ab110793eb0d5332090095555ebb9676ac3ba
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33442475"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54634007"
 ---
-# <a name="ihostiocompletionmanagergetmaxthreads-method"></a><span data-ttu-id="15680-102">IHostIoCompletionManager::GetMaxThreads 方法</span><span class="sxs-lookup"><span data-stu-id="15680-102">IHostIoCompletionManager::GetMaxThreads Method</span></span>
-<span data-ttu-id="15680-103">获取服务输入/输出请求的最大主机可以分配的线程数。</span><span class="sxs-lookup"><span data-stu-id="15680-103">Gets the maximum number of threads that the host can allot to service I/O requests.</span></span>  
+# <a name="ihostiocompletionmanagergetmaxthreads-method"></a><span data-ttu-id="53065-102">IHostIoCompletionManager::GetMaxThreads 方法</span><span class="sxs-lookup"><span data-stu-id="53065-102">IHostIoCompletionManager::GetMaxThreads Method</span></span>
+<span data-ttu-id="53065-103">获取为 I/O 请求提供服务的最大主机可以分配的线程数。</span><span class="sxs-lookup"><span data-stu-id="53065-103">Gets the maximum number of threads that the host can allot to service I/O requests.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="15680-104">语法</span><span class="sxs-lookup"><span data-stu-id="15680-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="53065-104">语法</span><span class="sxs-lookup"><span data-stu-id="53065-104">Syntax</span></span>  
   
 ```  
 HRESULT GetMaxThreads (  
@@ -35,34 +35,34 @@ HRESULT GetMaxThreads (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="15680-105">参数</span><span class="sxs-lookup"><span data-stu-id="15680-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="53065-105">参数</span><span class="sxs-lookup"><span data-stu-id="53065-105">Parameters</span></span>  
  `pdwMaxIoCompletionThreads`  
- <span data-ttu-id="15680-106">[out]最大主机可以分配给服务输入/输出请求线程池中的线程数指向的指针。</span><span class="sxs-lookup"><span data-stu-id="15680-106">[out] A pointer to the maximum number of threads in the thread pool that the host can allot to service I/O requests.</span></span>  
+ <span data-ttu-id="53065-106">[out]指向最大主机可以将分配给服务输入/输出请求线程池中的线程数的指针。</span><span class="sxs-lookup"><span data-stu-id="53065-106">[out] A pointer to the maximum number of threads in the thread pool that the host can allot to service I/O requests.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="15680-107">返回值</span><span class="sxs-lookup"><span data-stu-id="15680-107">Return Value</span></span>  
+## <a name="return-value"></a><span data-ttu-id="53065-107">返回值</span><span class="sxs-lookup"><span data-stu-id="53065-107">Return Value</span></span>  
   
-|<span data-ttu-id="15680-108">HRESULT</span><span class="sxs-lookup"><span data-stu-id="15680-108">HRESULT</span></span>|<span data-ttu-id="15680-109">描述</span><span class="sxs-lookup"><span data-stu-id="15680-109">Description</span></span>|  
+|<span data-ttu-id="53065-108">HRESULT</span><span class="sxs-lookup"><span data-stu-id="53065-108">HRESULT</span></span>|<span data-ttu-id="53065-109">描述</span><span class="sxs-lookup"><span data-stu-id="53065-109">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="15680-110">S_OK</span><span class="sxs-lookup"><span data-stu-id="15680-110">S_OK</span></span>|<span data-ttu-id="15680-111">`GetMaxThreads` 已成功返回。</span><span class="sxs-lookup"><span data-stu-id="15680-111">`GetMaxThreads` returned successfully.</span></span>|  
-|<span data-ttu-id="15680-112">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="15680-112">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="15680-113">公共语言运行时 (CLR) 尚未加载到进程中，或 CLR 处于不能运行托管的代码或成功处理调用的状态。</span><span class="sxs-lookup"><span data-stu-id="15680-113">The common language runtime (CLR) has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
-|<span data-ttu-id="15680-114">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="15680-114">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="15680-115">调用操作已超时。</span><span class="sxs-lookup"><span data-stu-id="15680-115">The call timed out.</span></span>|  
-|<span data-ttu-id="15680-116">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="15680-116">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="15680-117">调用方不拥有该锁。</span><span class="sxs-lookup"><span data-stu-id="15680-117">The caller does not own the lock.</span></span>|  
-|<span data-ttu-id="15680-118">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="15680-118">HOST_E_ABANDONED</span></span>|<span data-ttu-id="15680-119">事件已被取消时被阻塞的线程，或者纤程正在等待它。</span><span class="sxs-lookup"><span data-stu-id="15680-119">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
-|<span data-ttu-id="15680-120">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="15680-120">E_FAIL</span></span>|<span data-ttu-id="15680-121">出现未知的灾难性故障。</span><span class="sxs-lookup"><span data-stu-id="15680-121">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="15680-122">如果某方法返回 E_FAIL，CLR 不再可用进程内。</span><span class="sxs-lookup"><span data-stu-id="15680-122">When a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="15680-123">到托管方法的后续调用会返回 HOST_E_CLRNOTAVAILABLE。</span><span class="sxs-lookup"><span data-stu-id="15680-123">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
-|<span data-ttu-id="15680-124">E_NOTIMPL</span><span class="sxs-lookup"><span data-stu-id="15680-124">E_NOTIMPL</span></span>|<span data-ttu-id="15680-125">主机未提供的实现`GetMaxThreads`。</span><span class="sxs-lookup"><span data-stu-id="15680-125">The host does not provide an implementation of `GetMaxThreads`.</span></span>|  
+|<span data-ttu-id="53065-110">S_OK</span><span class="sxs-lookup"><span data-stu-id="53065-110">S_OK</span></span>|<span data-ttu-id="53065-111">`GetMaxThreads` 已成功返回。</span><span class="sxs-lookup"><span data-stu-id="53065-111">`GetMaxThreads` returned successfully.</span></span>|  
+|<span data-ttu-id="53065-112">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="53065-112">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="53065-113">公共语言运行时 (CLR) 尚未加载到进程中，或处于不能运行托管的代码或已成功处理调用的状态。</span><span class="sxs-lookup"><span data-stu-id="53065-113">The common language runtime (CLR) has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
+|<span data-ttu-id="53065-114">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="53065-114">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="53065-115">呼叫已超时。</span><span class="sxs-lookup"><span data-stu-id="53065-115">The call timed out.</span></span>|  
+|<span data-ttu-id="53065-116">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="53065-116">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="53065-117">调用方不拥有该锁。</span><span class="sxs-lookup"><span data-stu-id="53065-117">The caller does not own the lock.</span></span>|  
+|<span data-ttu-id="53065-118">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="53065-118">HOST_E_ABANDONED</span></span>|<span data-ttu-id="53065-119">事件已取消时被阻塞的线程或纤程正在等待它。</span><span class="sxs-lookup"><span data-stu-id="53065-119">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
+|<span data-ttu-id="53065-120">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="53065-120">E_FAIL</span></span>|<span data-ttu-id="53065-121">发生未知的灾难性故障。</span><span class="sxs-lookup"><span data-stu-id="53065-121">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="53065-122">如果某方法返回 E_FAIL，CLR 不再在进程内可用。</span><span class="sxs-lookup"><span data-stu-id="53065-122">When a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="53065-123">对托管方法的后续调用返回 HOST_E_CLRNOTAVAILABLE。</span><span class="sxs-lookup"><span data-stu-id="53065-123">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
+|<span data-ttu-id="53065-124">E_NOTIMPL</span><span class="sxs-lookup"><span data-stu-id="53065-124">E_NOTIMPL</span></span>|<span data-ttu-id="53065-125">主机未提供的实现`GetMaxThreads`。</span><span class="sxs-lookup"><span data-stu-id="53065-125">The host does not provide an implementation of `GetMaxThreads`.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="15680-126">备注</span><span class="sxs-lookup"><span data-stu-id="15680-126">Remarks</span></span>  
- <span data-ttu-id="15680-127">主机可能想对可以分配给来处理 I/O 请求，原因例如实现、 性能或可伸缩性的线程数的独有控制。</span><span class="sxs-lookup"><span data-stu-id="15680-127">A host might want exclusive control over the number of threads that can be allotted to process I/O requests, for reasons such as implementation, performance, or scalability.</span></span> <span data-ttu-id="15680-128">主机不为此，需要实现`GetMaxThreads`。</span><span class="sxs-lookup"><span data-stu-id="15680-128">For this reason, the host is not required to implement `GetMaxThreads`.</span></span> <span data-ttu-id="15680-129">在这种情况下，主机应通过此方法返回 E_NOTIMPL。</span><span class="sxs-lookup"><span data-stu-id="15680-129">In this case, the host should return E_NOTIMPL from this method.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="53065-126">备注</span><span class="sxs-lookup"><span data-stu-id="53065-126">Remarks</span></span>  
+ <span data-ttu-id="53065-127">主机可能要独占控制可以分配给处理 I/O 请求，原因如实现、 性能或可伸缩性的线程数。</span><span class="sxs-lookup"><span data-stu-id="53065-127">A host might want exclusive control over the number of threads that can be allotted to process I/O requests, for reasons such as implementation, performance, or scalability.</span></span> <span data-ttu-id="53065-128">出于此原因，该主机不需要实现`GetMaxThreads`。</span><span class="sxs-lookup"><span data-stu-id="53065-128">For this reason, the host is not required to implement `GetMaxThreads`.</span></span> <span data-ttu-id="53065-129">在这种情况下，主机应从此方法返回 E_NOTIMPL。</span><span class="sxs-lookup"><span data-stu-id="53065-129">In this case, the host should return E_NOTIMPL from this method.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="15680-130">要求</span><span class="sxs-lookup"><span data-stu-id="15680-130">Requirements</span></span>  
- <span data-ttu-id="15680-131">**平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="15680-131">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="53065-130">要求</span><span class="sxs-lookup"><span data-stu-id="53065-130">Requirements</span></span>  
+ <span data-ttu-id="53065-131">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="53065-131">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="15680-132">**标头：** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="15680-132">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="53065-132">**标头：** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="53065-132">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="15680-133">**库：** 作为 MSCorEE.dll 中的资源</span><span class="sxs-lookup"><span data-stu-id="15680-133">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="53065-133">**库：** 包含为 MSCorEE.dll 中的资源</span><span class="sxs-lookup"><span data-stu-id="53065-133">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="15680-134">**.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="15680-134">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="53065-134">**.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="53065-134">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="15680-135">请参阅</span><span class="sxs-lookup"><span data-stu-id="15680-135">See Also</span></span>  
- [<span data-ttu-id="15680-136">ICLRIoCompletionManager 接口</span><span class="sxs-lookup"><span data-stu-id="15680-136">ICLRIoCompletionManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclriocompletionmanager-interface.md)  
- [<span data-ttu-id="15680-137">IHostIoCompletionManager 接口</span><span class="sxs-lookup"><span data-stu-id="15680-137">IHostIoCompletionManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostiocompletionmanager-interface.md)
+## <a name="see-also"></a><span data-ttu-id="53065-135">请参阅</span><span class="sxs-lookup"><span data-stu-id="53065-135">See also</span></span>
+- [<span data-ttu-id="53065-136">ICLRIoCompletionManager 接口</span><span class="sxs-lookup"><span data-stu-id="53065-136">ICLRIoCompletionManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclriocompletionmanager-interface.md)
+- [<span data-ttu-id="53065-137">IHostIoCompletionManager 接口</span><span class="sxs-lookup"><span data-stu-id="53065-137">IHostIoCompletionManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostiocompletionmanager-interface.md)

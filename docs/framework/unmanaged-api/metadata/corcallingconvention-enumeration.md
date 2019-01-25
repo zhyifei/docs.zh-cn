@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 468ad1acf55c4d1b4fc2b53730f16ee8630cf19b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 4c27669c8473bd52d3b82a14d570340ac38d1e07
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33444010"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54523241"
 ---
-# <a name="corcallingconvention-enumeration"></a><span data-ttu-id="f4ee6-102">CorCallingConvention 枚举</span><span class="sxs-lookup"><span data-stu-id="f4ee6-102">CorCallingConvention Enumeration</span></span>
-<span data-ttu-id="f4ee6-103">包含一些值，用于描述托管代码中执行的调用约定类型。</span><span class="sxs-lookup"><span data-stu-id="f4ee6-103">Contains values that describe the types of calling conventions that are made in managed code.</span></span>  
+# <a name="corcallingconvention-enumeration"></a><span data-ttu-id="a2ad2-102">CorCallingConvention 枚举</span><span class="sxs-lookup"><span data-stu-id="a2ad2-102">CorCallingConvention Enumeration</span></span>
+<span data-ttu-id="a2ad2-103">包含一些值，用于描述托管代码中执行的调用约定类型。</span><span class="sxs-lookup"><span data-stu-id="a2ad2-103">Contains values that describe the types of calling conventions that are made in managed code.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="f4ee6-104">语法</span><span class="sxs-lookup"><span data-stu-id="f4ee6-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="a2ad2-104">语法</span><span class="sxs-lookup"><span data-stu-id="a2ad2-104">Syntax</span></span>  
   
 ```  
 typedef enum CorCallingConvention  
@@ -50,30 +50,30 @@ typedef enum CorCallingConvention
 } CorCallingConvention;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="f4ee6-105">成员</span><span class="sxs-lookup"><span data-stu-id="f4ee6-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="a2ad2-105">成员</span><span class="sxs-lookup"><span data-stu-id="a2ad2-105">Members</span></span>  
   
-|<span data-ttu-id="f4ee6-106">成员</span><span class="sxs-lookup"><span data-stu-id="f4ee6-106">Member</span></span>|<span data-ttu-id="f4ee6-107">描述</span><span class="sxs-lookup"><span data-stu-id="f4ee6-107">Description</span></span>|  
+|<span data-ttu-id="a2ad2-106">成员</span><span class="sxs-lookup"><span data-stu-id="a2ad2-106">Member</span></span>|<span data-ttu-id="a2ad2-107">描述</span><span class="sxs-lookup"><span data-stu-id="a2ad2-107">Description</span></span>|  
 |------------|-----------------|  
-|`IMAGE_CEE_CS_CALLCONV_DEFAULT`|<span data-ttu-id="f4ee6-108">指示默认调用约定。</span><span class="sxs-lookup"><span data-stu-id="f4ee6-108">Indicates a default calling convention.</span></span>|  
-|`IMAGE_CEE_CS_CALLCONV_VARARG`|<span data-ttu-id="f4ee6-109">指示该方法采用可变数目的参数。</span><span class="sxs-lookup"><span data-stu-id="f4ee6-109">Indicates that the method takes a variable number of parameters.</span></span>|  
-|`IMAGE_CEE_CS_CALLCONV_FIELD`|<span data-ttu-id="f4ee6-110">指示调用是对字段。</span><span class="sxs-lookup"><span data-stu-id="f4ee6-110">Indicates that the call is to a field.</span></span>|  
-|`IMAGE_CEE_CS_CALLCONV_LOCAL_SIG`|<span data-ttu-id="f4ee6-111">指示调用是对局部方法。</span><span class="sxs-lookup"><span data-stu-id="f4ee6-111">Indicates that the call is to a local method.</span></span>|  
-|`IMAGE_CEE_CS_CALLCONV_PROPERTY`|<span data-ttu-id="f4ee6-112">指示调用是对属性。</span><span class="sxs-lookup"><span data-stu-id="f4ee6-112">Indicates that the call is to a property.</span></span>|  
-|`IMAGE_CEE_CS_CALLCONV_UNMGD`|<span data-ttu-id="f4ee6-113">指示调用不受管理。</span><span class="sxs-lookup"><span data-stu-id="f4ee6-113">Indicates that the call is unmanaged.</span></span>|  
-|`IMAGE_CEE_CS_CALLCONV_GENERICINST`|<span data-ttu-id="f4ee6-114">指示泛型方法实例化。</span><span class="sxs-lookup"><span data-stu-id="f4ee6-114">Indicates a generic method instantiation.</span></span>|  
-|`IMAGE_CEE_CS_CALLCONV_NATIVEVARARG`|<span data-ttu-id="f4ee6-115">指示 64 位 PInvoke 调用采用可变数目的参数的方法。</span><span class="sxs-lookup"><span data-stu-id="f4ee6-115">Indicates a 64-bit PInvoke call to a method that takes a variable number of parameters.</span></span>|  
-|`IMAGE_CEE_CS_CALLCONV_MAX`|<span data-ttu-id="f4ee6-116">描述 4 位值无效。</span><span class="sxs-lookup"><span data-stu-id="f4ee6-116">Describes an invalid 4-bit value.</span></span>|  
-|`IMAGE_CEE_CS_CALLCONV_MASK`|<span data-ttu-id="f4ee6-117">指示底部四位所描述的调用约定。</span><span class="sxs-lookup"><span data-stu-id="f4ee6-117">Indicates that the calling convention is described by the bottom four bits.</span></span>|  
-|`IMAGE_CEE_CS_CALLCONV_HASTHIS`|<span data-ttu-id="f4ee6-118">指示高位描述`this`参数。</span><span class="sxs-lookup"><span data-stu-id="f4ee6-118">Indicates that the top bit describes a `this` parameter.</span></span>|  
-|`IMAGE_CEE_CS_CALLCONV_EXPLICITTHIS`|<span data-ttu-id="f4ee6-119">指示`this`参数描述是明确的签名中。</span><span class="sxs-lookup"><span data-stu-id="f4ee6-119">Indicates that a `this` parameter is explicitly described in the signature.</span></span>|  
-|`IMAGE_CEE_CS_CALLCONV_GENERIC`|<span data-ttu-id="f4ee6-120">指示与显式数目的类型参数的泛型方法签名。</span><span class="sxs-lookup"><span data-stu-id="f4ee6-120">Indicates a generic method signature with an explicit number of type arguments.</span></span> <span data-ttu-id="f4ee6-121">这位于之前的普通参数计数。</span><span class="sxs-lookup"><span data-stu-id="f4ee6-121">This precedes an ordinary parameter count.</span></span>|  
+|`IMAGE_CEE_CS_CALLCONV_DEFAULT`|<span data-ttu-id="a2ad2-108">指示默认调用约定。</span><span class="sxs-lookup"><span data-stu-id="a2ad2-108">Indicates a default calling convention.</span></span>|  
+|`IMAGE_CEE_CS_CALLCONV_VARARG`|<span data-ttu-id="a2ad2-109">指示该方法采用可变数目的参数。</span><span class="sxs-lookup"><span data-stu-id="a2ad2-109">Indicates that the method takes a variable number of parameters.</span></span>|  
+|`IMAGE_CEE_CS_CALLCONV_FIELD`|<span data-ttu-id="a2ad2-110">指示在调用到一个字段。</span><span class="sxs-lookup"><span data-stu-id="a2ad2-110">Indicates that the call is to a field.</span></span>|  
+|`IMAGE_CEE_CS_CALLCONV_LOCAL_SIG`|<span data-ttu-id="a2ad2-111">指示调用是对本地方法。</span><span class="sxs-lookup"><span data-stu-id="a2ad2-111">Indicates that the call is to a local method.</span></span>|  
+|`IMAGE_CEE_CS_CALLCONV_PROPERTY`|<span data-ttu-id="a2ad2-112">指示调用是对一个属性。</span><span class="sxs-lookup"><span data-stu-id="a2ad2-112">Indicates that the call is to a property.</span></span>|  
+|`IMAGE_CEE_CS_CALLCONV_UNMGD`|<span data-ttu-id="a2ad2-113">指示在调用非托管。</span><span class="sxs-lookup"><span data-stu-id="a2ad2-113">Indicates that the call is unmanaged.</span></span>|  
+|`IMAGE_CEE_CS_CALLCONV_GENERICINST`|<span data-ttu-id="a2ad2-114">指示泛型方法实例化。</span><span class="sxs-lookup"><span data-stu-id="a2ad2-114">Indicates a generic method instantiation.</span></span>|  
+|`IMAGE_CEE_CS_CALLCONV_NATIVEVARARG`|<span data-ttu-id="a2ad2-115">指示 64 位 PInvoke 调用采用可变数量的参数的方法。</span><span class="sxs-lookup"><span data-stu-id="a2ad2-115">Indicates a 64-bit PInvoke call to a method that takes a variable number of parameters.</span></span>|  
+|`IMAGE_CEE_CS_CALLCONV_MAX`|<span data-ttu-id="a2ad2-116">介绍 4 位值无效。</span><span class="sxs-lookup"><span data-stu-id="a2ad2-116">Describes an invalid 4-bit value.</span></span>|  
+|`IMAGE_CEE_CS_CALLCONV_MASK`|<span data-ttu-id="a2ad2-117">指示底部四位所描述的调用约定。</span><span class="sxs-lookup"><span data-stu-id="a2ad2-117">Indicates that the calling convention is described by the bottom four bits.</span></span>|  
+|`IMAGE_CEE_CS_CALLCONV_HASTHIS`|<span data-ttu-id="a2ad2-118">指示高位描述`this`参数。</span><span class="sxs-lookup"><span data-stu-id="a2ad2-118">Indicates that the top bit describes a `this` parameter.</span></span>|  
+|`IMAGE_CEE_CS_CALLCONV_EXPLICITTHIS`|<span data-ttu-id="a2ad2-119">指示`this`参数是在签名中明确描述。</span><span class="sxs-lookup"><span data-stu-id="a2ad2-119">Indicates that a `this` parameter is explicitly described in the signature.</span></span>|  
+|`IMAGE_CEE_CS_CALLCONV_GENERIC`|<span data-ttu-id="a2ad2-120">指示具有明确的数字的类型参数的泛型方法签名。</span><span class="sxs-lookup"><span data-stu-id="a2ad2-120">Indicates a generic method signature with an explicit number of type arguments.</span></span> <span data-ttu-id="a2ad2-121">这在之前发生的普通参数计数。</span><span class="sxs-lookup"><span data-stu-id="a2ad2-121">This precedes an ordinary parameter count.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="f4ee6-122">要求</span><span class="sxs-lookup"><span data-stu-id="f4ee6-122">Requirements</span></span>  
- <span data-ttu-id="f4ee6-123">**平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="f4ee6-123">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="a2ad2-122">要求</span><span class="sxs-lookup"><span data-stu-id="a2ad2-122">Requirements</span></span>  
+ <span data-ttu-id="a2ad2-123">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="a2ad2-123">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="f4ee6-124">**标头：** CorHdr.h</span><span class="sxs-lookup"><span data-stu-id="f4ee6-124">**Header:** CorHdr.h</span></span>  
+ <span data-ttu-id="a2ad2-124">**标头：** CorHdr.h</span><span class="sxs-lookup"><span data-stu-id="a2ad2-124">**Header:** CorHdr.h</span></span>  
   
- <span data-ttu-id="f4ee6-125">**.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="f4ee6-125">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="a2ad2-125">**.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="a2ad2-125">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="f4ee6-126">请参阅</span><span class="sxs-lookup"><span data-stu-id="f4ee6-126">See Also</span></span>  
- [<span data-ttu-id="f4ee6-127">Metadata 枚举</span><span class="sxs-lookup"><span data-stu-id="f4ee6-127">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+## <a name="see-also"></a><span data-ttu-id="a2ad2-126">请参阅</span><span class="sxs-lookup"><span data-stu-id="a2ad2-126">See also</span></span>
+- [<span data-ttu-id="a2ad2-127">Metadata 枚举</span><span class="sxs-lookup"><span data-stu-id="a2ad2-127">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

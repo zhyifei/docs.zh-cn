@@ -16,30 +16,30 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2b957642606cfcd43b6a02d64450d51174eb7768
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: d23a8d494c3f3e2e94bb309ab1c2141e527f2f48
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33439747"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54696472"
 ---
-# <a name="igchostcontrol-interface"></a><span data-ttu-id="d78ca-102">IGCHostControl 接口</span><span class="sxs-lookup"><span data-stu-id="d78ca-102">IGCHostControl Interface</span></span>
-<span data-ttu-id="d78ca-103">提供一个方法，以便垃圾回收器请求主机后，若要更改的虚拟内存限制。</span><span class="sxs-lookup"><span data-stu-id="d78ca-103">Provides a method that allows the garbage collector to request the host to change the limits of virtual memory.</span></span>  
+# <a name="igchostcontrol-interface"></a><span data-ttu-id="8fe68-102">IGCHostControl 接口</span><span class="sxs-lookup"><span data-stu-id="8fe68-102">IGCHostControl Interface</span></span>
+<span data-ttu-id="8fe68-103">提供允许垃圾回收器请求的主机，若要更改的虚拟内存限制的方法。</span><span class="sxs-lookup"><span data-stu-id="8fe68-103">Provides a method that allows the garbage collector to request the host to change the limits of virtual memory.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="d78ca-104">方法</span><span class="sxs-lookup"><span data-stu-id="d78ca-104">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="8fe68-104">方法</span><span class="sxs-lookup"><span data-stu-id="8fe68-104">Methods</span></span>  
   
-|<span data-ttu-id="d78ca-105">方法</span><span class="sxs-lookup"><span data-stu-id="d78ca-105">Method</span></span>|<span data-ttu-id="d78ca-106">描述</span><span class="sxs-lookup"><span data-stu-id="d78ca-106">Description</span></span>|  
+|<span data-ttu-id="8fe68-105">方法</span><span class="sxs-lookup"><span data-stu-id="8fe68-105">Method</span></span>|<span data-ttu-id="8fe68-106">描述</span><span class="sxs-lookup"><span data-stu-id="8fe68-106">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="d78ca-107">RequestVirtualMemLimit 方法</span><span class="sxs-lookup"><span data-stu-id="d78ca-107">RequestVirtualMemLimit Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/igchostcontrol-requestvirtualmemlimit-method.md)|<span data-ttu-id="d78ca-108">请求主机后，若要更改的虚拟内存限制。</span><span class="sxs-lookup"><span data-stu-id="d78ca-108">Requests the host to change the limits of virtual memory.</span></span>|  
+|[<span data-ttu-id="8fe68-107">RequestVirtualMemLimit 方法</span><span class="sxs-lookup"><span data-stu-id="8fe68-107">RequestVirtualMemLimit Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/igchostcontrol-requestvirtualmemlimit-method.md)|<span data-ttu-id="8fe68-108">请求主机后，若要更改虚拟内存的限制。</span><span class="sxs-lookup"><span data-stu-id="8fe68-108">Requests the host to change the limits of virtual memory.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="d78ca-109">要求</span><span class="sxs-lookup"><span data-stu-id="d78ca-109">Requirements</span></span>  
- <span data-ttu-id="d78ca-110">**平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="d78ca-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="8fe68-109">要求</span><span class="sxs-lookup"><span data-stu-id="8fe68-109">Requirements</span></span>  
+ <span data-ttu-id="8fe68-110">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="8fe68-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="d78ca-111">**标头：** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="d78ca-111">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="8fe68-111">**标头：** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="8fe68-111">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="d78ca-112">**库：** 作为 MSCorEE.dll 中的资源</span><span class="sxs-lookup"><span data-stu-id="d78ca-112">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="8fe68-112">**库：** 包含为 MSCorEE.dll 中的资源</span><span class="sxs-lookup"><span data-stu-id="8fe68-112">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="d78ca-113">**.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="d78ca-113">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="8fe68-113">**.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="8fe68-113">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="d78ca-114">请参阅</span><span class="sxs-lookup"><span data-stu-id="d78ca-114">See Also</span></span>  
- [<span data-ttu-id="d78ca-115">承载接口</span><span class="sxs-lookup"><span data-stu-id="d78ca-115">Hosting Interfaces</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+## <a name="see-also"></a><span data-ttu-id="8fe68-114">请参阅</span><span class="sxs-lookup"><span data-stu-id="8fe68-114">See also</span></span>
+- [<span data-ttu-id="8fe68-115">承载接口</span><span class="sxs-lookup"><span data-stu-id="8fe68-115">Hosting Interfaces</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)

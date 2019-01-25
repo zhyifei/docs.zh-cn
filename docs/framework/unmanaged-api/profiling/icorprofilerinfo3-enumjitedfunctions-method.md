@@ -17,42 +17,42 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6f35a712472887a928b1732f076b39ac08724c7f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 12f5930fb6d4e149653bc29d2f36b0df72c71447
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33456066"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54498825"
 ---
-# <a name="icorprofilerinfo3enumjitedfunctions-method"></a><span data-ttu-id="3f559-102">ICorProfilerInfo3::EnumJITedFunctions 方法</span><span class="sxs-lookup"><span data-stu-id="3f559-102">ICorProfilerInfo3::EnumJITedFunctions Method</span></span>
-<span data-ttu-id="3f559-103">返回已先前 JIT 编译的所有函数的枚举数。</span><span class="sxs-lookup"><span data-stu-id="3f559-103">Returns an enumerator for all functions that were previously JIT-compiled.</span></span>  
+# <a name="icorprofilerinfo3enumjitedfunctions-method"></a><span data-ttu-id="ac86c-102">ICorProfilerInfo3::EnumJITedFunctions 方法</span><span class="sxs-lookup"><span data-stu-id="ac86c-102">ICorProfilerInfo3::EnumJITedFunctions Method</span></span>
+<span data-ttu-id="ac86c-103">返回先前 JIT 编译的所有功能的枚举器。</span><span class="sxs-lookup"><span data-stu-id="ac86c-103">Returns an enumerator for all functions that were previously JIT-compiled.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="3f559-104">语法</span><span class="sxs-lookup"><span data-stu-id="3f559-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="ac86c-104">语法</span><span class="sxs-lookup"><span data-stu-id="ac86c-104">Syntax</span></span>  
   
 ```  
 HRESULT EnumJITedFunctions([out] ICorProfilerFunctionEnum** ppEnum);  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="3f559-105">参数</span><span class="sxs-lookup"><span data-stu-id="3f559-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="ac86c-105">参数</span><span class="sxs-lookup"><span data-stu-id="ac86c-105">Parameters</span></span>  
  `ppEnum`  
- <span data-ttu-id="3f559-106">[out]指向的指针[ICorProfilerFunctionEnum](../../../../docs/framework/unmanaged-api/profiling/icorprofilerfunctionenum-interface.md)枚举器。</span><span class="sxs-lookup"><span data-stu-id="3f559-106">[out] A pointer to the [ICorProfilerFunctionEnum](../../../../docs/framework/unmanaged-api/profiling/icorprofilerfunctionenum-interface.md) enumerator.</span></span>  
+ <span data-ttu-id="ac86c-106">[out]一个指向[ICorProfilerFunctionEnum](../../../../docs/framework/unmanaged-api/profiling/icorprofilerfunctionenum-interface.md)枚举器。</span><span class="sxs-lookup"><span data-stu-id="ac86c-106">[out] A pointer to the [ICorProfilerFunctionEnum](../../../../docs/framework/unmanaged-api/profiling/icorprofilerfunctionenum-interface.md) enumerator.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="3f559-107">备注</span><span class="sxs-lookup"><span data-stu-id="3f559-107">Remarks</span></span>  
- <span data-ttu-id="3f559-108">此方法可能会与重叠`JITCompilation`如回调[icorprofilercallback:: Jitcompilationstarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-jitcompilationstarted-method.md)方法。</span><span class="sxs-lookup"><span data-stu-id="3f559-108">This method may overlap with `JITCompilation` callbacks such as the [ICorProfilerCallback::JITCompilationStarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-jitcompilationstarted-method.md) method.</span></span> <span data-ttu-id="3f559-109">此方法返回的枚举器不包括从使用 Ngen.exe 生成的本机映像加载的函数。</span><span class="sxs-lookup"><span data-stu-id="3f559-109">The enumerator returned by this method does not include functions that are loaded from native images generated with Ngen.exe.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="ac86c-107">备注</span><span class="sxs-lookup"><span data-stu-id="ac86c-107">Remarks</span></span>  
+ <span data-ttu-id="ac86c-108">此方法可能会与重叠`JITCompilation`如回调[icorprofilercallback:: Jitcompilationstarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-jitcompilationstarted-method.md)方法。</span><span class="sxs-lookup"><span data-stu-id="ac86c-108">This method may overlap with `JITCompilation` callbacks such as the [ICorProfilerCallback::JITCompilationStarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-jitcompilationstarted-method.md) method.</span></span> <span data-ttu-id="ac86c-109">此方法返回的枚举器不包括从使用 Ngen.exe 生成本机映像加载的函数。</span><span class="sxs-lookup"><span data-stu-id="ac86c-109">The enumerator returned by this method does not include functions that are loaded from native images generated with Ngen.exe.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="3f559-110">返回的枚举包括仅"0"的值的`COR_PRF_FUNCTION::reJitId`字段。</span><span class="sxs-lookup"><span data-stu-id="3f559-110">The returned enumeration includes only "0" for the value of the `COR_PRF_FUNCTION::reJitId` field.</span></span>  <span data-ttu-id="3f559-111">如果你需要有效`COR_PRF_FUNCTION::reJitId`值，请使用[icorprofilerinfo4:: Enumjitedfunctions2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo4-enumjitedfunctions2-method.md)方法。</span><span class="sxs-lookup"><span data-stu-id="3f559-111">If you require valid `COR_PRF_FUNCTION::reJitId` values, use the [ICorProfilerInfo4::EnumJITedFunctions2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo4-enumjitedfunctions2-method.md) method.</span></span>  
+>  <span data-ttu-id="ac86c-110">返回的枚举包括仅"0"的值的`COR_PRF_FUNCTION::reJitId`字段。</span><span class="sxs-lookup"><span data-stu-id="ac86c-110">The returned enumeration includes only "0" for the value of the `COR_PRF_FUNCTION::reJitId` field.</span></span>  <span data-ttu-id="ac86c-111">如果您需要有效`COR_PRF_FUNCTION::reJitId`值，请使用[ICorProfilerInfo4::EnumJITedFunctions2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo4-enumjitedfunctions2-method.md)方法。</span><span class="sxs-lookup"><span data-stu-id="ac86c-111">If you require valid `COR_PRF_FUNCTION::reJitId` values, use the [ICorProfilerInfo4::EnumJITedFunctions2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo4-enumjitedfunctions2-method.md) method.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="3f559-112">要求</span><span class="sxs-lookup"><span data-stu-id="3f559-112">Requirements</span></span>  
- <span data-ttu-id="3f559-113">**平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="3f559-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="ac86c-112">要求</span><span class="sxs-lookup"><span data-stu-id="ac86c-112">Requirements</span></span>  
+ <span data-ttu-id="ac86c-113">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="ac86c-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="3f559-114">**头文件：** CorProf.idl、CorProf.h</span><span class="sxs-lookup"><span data-stu-id="3f559-114">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="ac86c-114">**标头：** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="ac86c-114">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="3f559-115">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="3f559-115">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="ac86c-115">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="ac86c-115">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="3f559-116">**.NET framework 版本：** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="3f559-116">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
+ <span data-ttu-id="ac86c-116">**.NET Framework 版本：**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="ac86c-116">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="3f559-117">请参阅</span><span class="sxs-lookup"><span data-stu-id="3f559-117">See Also</span></span>  
- [<span data-ttu-id="3f559-118">ICorProfilerInfo3 接口</span><span class="sxs-lookup"><span data-stu-id="3f559-118">ICorProfilerInfo3 Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-interface.md)  
- [<span data-ttu-id="3f559-119">Profiling 接口</span><span class="sxs-lookup"><span data-stu-id="3f559-119">Profiling Interfaces</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)  
- [<span data-ttu-id="3f559-120">分析</span><span class="sxs-lookup"><span data-stu-id="3f559-120">Profiling</span></span>](../../../../docs/framework/unmanaged-api/profiling/index.md)
+## <a name="see-also"></a><span data-ttu-id="ac86c-117">请参阅</span><span class="sxs-lookup"><span data-stu-id="ac86c-117">See also</span></span>
+- [<span data-ttu-id="ac86c-118">ICorProfilerInfo3 接口</span><span class="sxs-lookup"><span data-stu-id="ac86c-118">ICorProfilerInfo3 Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-interface.md)
+- [<span data-ttu-id="ac86c-119">Profiling 接口</span><span class="sxs-lookup"><span data-stu-id="ac86c-119">Profiling Interfaces</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
+- [<span data-ttu-id="ac86c-120">分析</span><span class="sxs-lookup"><span data-stu-id="ac86c-120">Profiling</span></span>](../../../../docs/framework/unmanaged-api/profiling/index.md)

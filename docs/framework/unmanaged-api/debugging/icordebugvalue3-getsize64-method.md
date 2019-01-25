@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c5d3925741e9777e4fcd1752d8e24bf71ad1579f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 0f56e9fef64a08be311d66845e42887a6aa821f6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33422632"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54719997"
 ---
-# <a name="icordebugvalue3getsize64-method"></a><span data-ttu-id="15dee-102">ICorDebugValue3::GetSize64 方法</span><span class="sxs-lookup"><span data-stu-id="15dee-102">ICorDebugValue3::GetSize64 Method</span></span>
-<span data-ttu-id="15dee-103">获取以字节为单位，此大小， [ICorDebugValue3](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue3-interface.md)对象。</span><span class="sxs-lookup"><span data-stu-id="15dee-103">Gets the size, in bytes, of this [ICorDebugValue3](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue3-interface.md) object.</span></span>  
+# <a name="icordebugvalue3getsize64-method"></a><span data-ttu-id="132a2-102">ICorDebugValue3::GetSize64 方法</span><span class="sxs-lookup"><span data-stu-id="132a2-102">ICorDebugValue3::GetSize64 Method</span></span>
+<span data-ttu-id="132a2-103">获取大小，以字节为单位，此[ICorDebugValue3](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue3-interface.md)对象。</span><span class="sxs-lookup"><span data-stu-id="132a2-103">Gets the size, in bytes, of this [ICorDebugValue3](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue3-interface.md) object.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="15dee-104">语法</span><span class="sxs-lookup"><span data-stu-id="15dee-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="132a2-104">语法</span><span class="sxs-lookup"><span data-stu-id="132a2-104">Syntax</span></span>  
   
 ```  
 HRESULT GetSize64(  
@@ -35,24 +35,24 @@ HRESULT GetSize64(
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="15dee-105">参数</span><span class="sxs-lookup"><span data-stu-id="15dee-105">Parameters</span></span>  
- <span data-ttu-id="15dee-106">pSize</span><span class="sxs-lookup"><span data-stu-id="15dee-106">pSize</span></span>  
- <span data-ttu-id="15dee-107">[out]指向的大小，以字节为单位，此对象的指针。</span><span class="sxs-lookup"><span data-stu-id="15dee-107">[out] A pointer to the size, in bytes, of this object.</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="132a2-105">参数</span><span class="sxs-lookup"><span data-stu-id="132a2-105">Parameters</span></span>  
+ <span data-ttu-id="132a2-106">pSize</span><span class="sxs-lookup"><span data-stu-id="132a2-106">pSize</span></span>  
+ <span data-ttu-id="132a2-107">[out]指向的大小，以字节为单位，此对象的指针。</span><span class="sxs-lookup"><span data-stu-id="132a2-107">[out] A pointer to the size, in bytes, of this object.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="15dee-108">备注</span><span class="sxs-lookup"><span data-stu-id="15dee-108">Remarks</span></span>  
- <span data-ttu-id="15dee-109">如果此值的类型是引用类型，此方法将返回指针的大小，而不是对象的大小。</span><span class="sxs-lookup"><span data-stu-id="15dee-109">If this value's type is a reference type, this method returns the size of the pointer rather than the size of the object.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="132a2-108">备注</span><span class="sxs-lookup"><span data-stu-id="132a2-108">Remarks</span></span>  
+ <span data-ttu-id="132a2-109">如果此值的类型是引用类型，此方法返回的指针的大小而不是对象的大小。</span><span class="sxs-lookup"><span data-stu-id="132a2-109">If this value's type is a reference type, this method returns the size of the pointer rather than the size of the object.</span></span>  
   
- <span data-ttu-id="15dee-110">`ICorDebugValue3::GetSize`方法不同于[icordebugvalue:: Getsize](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue-getsize-method.md)其输出参数的类型中的方法。</span><span class="sxs-lookup"><span data-stu-id="15dee-110">The `ICorDebugValue3::GetSize` method differs from the [ICorDebugValue::GetSize](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue-getsize-method.md) method in the type of its output parameter.</span></span> <span data-ttu-id="15dee-111">在[icordebugvalue:: Getsize](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue-getsize-method.md)，输出参数是`ULONG32`; 在`ICorDebugValue3::GetSize`，它是`ULONG64`。</span><span class="sxs-lookup"><span data-stu-id="15dee-111">In [ICorDebugValue::GetSize](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue-getsize-method.md), the output parameter is a `ULONG32`; in `ICorDebugValue3::GetSize`, it is a `ULONG64`.</span></span> <span data-ttu-id="15dee-112">这使[ICorDebugValue3](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue3-interface.md)接口报告的大小超过 2 GB 的数组。</span><span class="sxs-lookup"><span data-stu-id="15dee-112">This enables the [ICorDebugValue3](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue3-interface.md) interface to report the size of arrays that exceed 2GB.</span></span>  
+ <span data-ttu-id="132a2-110">`ICorDebugValue3::GetSize`方法不同于[icordebugvalue:: Getsize](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue-getsize-method.md)及其输出参数的类型中的方法。</span><span class="sxs-lookup"><span data-stu-id="132a2-110">The `ICorDebugValue3::GetSize` method differs from the [ICorDebugValue::GetSize](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue-getsize-method.md) method in the type of its output parameter.</span></span> <span data-ttu-id="132a2-111">在中[icordebugvalue:: Getsize](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue-getsize-method.md)，输出参数是`ULONG32`; 在`ICorDebugValue3::GetSize`，它是`ULONG64`。</span><span class="sxs-lookup"><span data-stu-id="132a2-111">In [ICorDebugValue::GetSize](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue-getsize-method.md), the output parameter is a `ULONG32`; in `ICorDebugValue3::GetSize`, it is a `ULONG64`.</span></span> <span data-ttu-id="132a2-112">这使得[ICorDebugValue3](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue3-interface.md)接口报告的大小超过 2 GB 的数组。</span><span class="sxs-lookup"><span data-stu-id="132a2-112">This enables the [ICorDebugValue3](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue3-interface.md) interface to report the size of arrays that exceed 2GB.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="15dee-113">要求</span><span class="sxs-lookup"><span data-stu-id="15dee-113">Requirements</span></span>  
- <span data-ttu-id="15dee-114">**平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="15dee-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="132a2-113">要求</span><span class="sxs-lookup"><span data-stu-id="132a2-113">Requirements</span></span>  
+ <span data-ttu-id="132a2-114">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="132a2-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="15dee-115">**标头：** CorDebug.idl、 CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="15dee-115">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="132a2-115">**标头：** CorDebug.idl、 CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="132a2-115">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="15dee-116">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="15dee-116">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="132a2-116">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="132a2-116">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="15dee-117">**.NET framework 版本：** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="15dee-117">**.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span></span>  
+ <span data-ttu-id="132a2-117">**.NET Framework 版本：**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="132a2-117">**.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="15dee-118">请参阅</span><span class="sxs-lookup"><span data-stu-id="15dee-118">See Also</span></span>  
- [<span data-ttu-id="15dee-119">ICorDebugValue3 接口</span><span class="sxs-lookup"><span data-stu-id="15dee-119">ICorDebugValue3 Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue3-interface.md)  
- [<span data-ttu-id="15dee-120">调试接口</span><span class="sxs-lookup"><span data-stu-id="15dee-120">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a><span data-ttu-id="132a2-118">请参阅</span><span class="sxs-lookup"><span data-stu-id="132a2-118">See also</span></span>
+- [<span data-ttu-id="132a2-119">ICorDebugValue3 接口</span><span class="sxs-lookup"><span data-stu-id="132a2-119">ICorDebugValue3 Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue3-interface.md)
+- [<span data-ttu-id="132a2-120">调试接口</span><span class="sxs-lookup"><span data-stu-id="132a2-120">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

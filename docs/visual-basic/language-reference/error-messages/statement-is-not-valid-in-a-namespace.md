@@ -7,22 +7,22 @@ f1_keywords:
 helpviewer_keywords:
 - BC30001
 ms.assetid: 43c1b509-15f9-4e91-bcad-90bcb5f6f191
-ms.openlocfilehash: 9143e84ab17711c08ff9b1eb241fe6b79426d0bb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 98a450fd92993506005268b54798bbc8547a60fc
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33594762"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54686304"
 ---
-# <a name="statement-is-not-valid-in-a-namespace"></a><span data-ttu-id="2a95d-102">语句在命名空间中无效</span><span class="sxs-lookup"><span data-stu-id="2a95d-102">Statement is not valid in a namespace</span></span>
-<span data-ttu-id="2a95d-103">语句不能出现在命名空间的级别。</span><span class="sxs-lookup"><span data-stu-id="2a95d-103">The statement cannot appear at the level of a namespace.</span></span> <span data-ttu-id="2a95d-104">允许在命名空间级别上的唯一声明是模块、 接口、 类、 委托、 枚举和结构声明。</span><span class="sxs-lookup"><span data-stu-id="2a95d-104">The only declarations allowed at namespace level are module, interface, class, delegate, enumeration, and structure declarations.</span></span>  
+# <a name="statement-is-not-valid-in-a-namespace"></a><span data-ttu-id="cfca8-102">语句在命名空间中无效</span><span class="sxs-lookup"><span data-stu-id="cfca8-102">Statement is not valid in a namespace</span></span>
+<span data-ttu-id="cfca8-103">语句不能出现在命名空间的级别。</span><span class="sxs-lookup"><span data-stu-id="cfca8-103">The statement cannot appear at the level of a namespace.</span></span> <span data-ttu-id="cfca8-104">允许在命名空间级别的唯一声明是模块、 接口、 类、 委托、 枚举和结构声明。</span><span class="sxs-lookup"><span data-stu-id="cfca8-104">The only declarations allowed at namespace level are module, interface, class, delegate, enumeration, and structure declarations.</span></span>  
   
- <span data-ttu-id="2a95d-105">**错误 ID:** BC30001</span><span class="sxs-lookup"><span data-stu-id="2a95d-105">**Error ID:** BC30001</span></span>  
+ <span data-ttu-id="cfca8-105">**错误 ID:** BC30001</span><span class="sxs-lookup"><span data-stu-id="cfca8-105">**Error ID:** BC30001</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="2a95d-106">更正此错误</span><span class="sxs-lookup"><span data-stu-id="2a95d-106">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="cfca8-106">更正此错误</span><span class="sxs-lookup"><span data-stu-id="cfca8-106">To correct this error</span></span>  
   
--   <span data-ttu-id="2a95d-107">将语句移动到模块、 类、 接口、 结构、 枚举或委托定义内的位置。</span><span class="sxs-lookup"><span data-stu-id="2a95d-107">Move the statement to a location within a module, class, interface, structure, enumeration, or delegate definition.</span></span>  
+-   <span data-ttu-id="cfca8-107">将语句移动到模块、 类、 接口、 结构、 枚举或委托定义内的位置。</span><span class="sxs-lookup"><span data-stu-id="cfca8-107">Move the statement to a location within a module, class, interface, structure, enumeration, or delegate definition.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="2a95d-108">请参阅</span><span class="sxs-lookup"><span data-stu-id="2a95d-108">See Also</span></span>  
- [<span data-ttu-id="2a95d-109">在 Visual Basic 中的作用域</span><span class="sxs-lookup"><span data-stu-id="2a95d-109">Scope in Visual Basic</span></span>](../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)  
- [<span data-ttu-id="2a95d-110">在 Visual Basic 中的命名空间</span><span class="sxs-lookup"><span data-stu-id="2a95d-110">Namespaces in Visual Basic</span></span>](../../../visual-basic/programming-guide/program-structure/namespaces.md)
+## <a name="see-also"></a><span data-ttu-id="cfca8-108">请参阅</span><span class="sxs-lookup"><span data-stu-id="cfca8-108">See also</span></span>
+- [<span data-ttu-id="cfca8-109">在 Visual Basic 中的作用域</span><span class="sxs-lookup"><span data-stu-id="cfca8-109">Scope in Visual Basic</span></span>](../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)
+- [<span data-ttu-id="cfca8-110">在 Visual Basic 中的命名空间</span><span class="sxs-lookup"><span data-stu-id="cfca8-110">Namespaces in Visual Basic</span></span>](../../../visual-basic/programming-guide/program-structure/namespaces.md)
