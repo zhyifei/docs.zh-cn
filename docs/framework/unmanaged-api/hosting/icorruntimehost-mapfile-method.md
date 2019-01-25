@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 45b88758c339cd77bc7e17e0c29969f8783555f4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 814073b766d5d562b414a566ae3f92abd664ce35
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33436619"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54707838"
 ---
-# <a name="icorruntimehostmapfile-method"></a><span data-ttu-id="2d4d9-102">ICorRuntimeHost::MapFile 方法</span><span class="sxs-lookup"><span data-stu-id="2d4d9-102">ICorRuntimeHost::MapFile Method</span></span>
-<span data-ttu-id="2d4d9-103">将指定的文件映射到内存中。</span><span class="sxs-lookup"><span data-stu-id="2d4d9-103">Maps the specified file into memory.</span></span> <span data-ttu-id="2d4d9-104">此方法已过时。</span><span class="sxs-lookup"><span data-stu-id="2d4d9-104">This method is obsolete.</span></span>  
+# <a name="icorruntimehostmapfile-method"></a><span data-ttu-id="4288b-102">ICorRuntimeHost::MapFile 方法</span><span class="sxs-lookup"><span data-stu-id="4288b-102">ICorRuntimeHost::MapFile Method</span></span>
+<span data-ttu-id="4288b-103">将指定的文件映射到内存中。</span><span class="sxs-lookup"><span data-stu-id="4288b-103">Maps the specified file into memory.</span></span> <span data-ttu-id="4288b-104">此方法已过时。</span><span class="sxs-lookup"><span data-stu-id="4288b-104">This method is obsolete.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="2d4d9-105">语法</span><span class="sxs-lookup"><span data-stu-id="2d4d9-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="4288b-105">语法</span><span class="sxs-lookup"><span data-stu-id="4288b-105">Syntax</span></span>  
   
 ```  
 HRESULT MapFile(  
@@ -36,21 +36,21 @@ HRESULT MapFile(
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="2d4d9-106">参数</span><span class="sxs-lookup"><span data-stu-id="2d4d9-106">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="4288b-106">参数</span><span class="sxs-lookup"><span data-stu-id="4288b-106">Parameters</span></span>  
  `hFile`  
- <span data-ttu-id="2d4d9-107">[in]要映射的文件句柄。</span><span class="sxs-lookup"><span data-stu-id="2d4d9-107">[in] The handle of the file to be mapped.</span></span>  
+ <span data-ttu-id="4288b-107">[in]要映射的文件句柄。</span><span class="sxs-lookup"><span data-stu-id="4288b-107">[in] The handle of the file to be mapped.</span></span>  
   
  `hMapAddress`  
- <span data-ttu-id="2d4d9-108">[out]从此处开始映射文件起始内存地址。</span><span class="sxs-lookup"><span data-stu-id="2d4d9-108">[out] The starting memory address at which to begin mapping the file.</span></span>  
+ <span data-ttu-id="4288b-108">[out]开始将文件映射的起始内存地址。</span><span class="sxs-lookup"><span data-stu-id="4288b-108">[out] The starting memory address at which to begin mapping the file.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="2d4d9-109">要求</span><span class="sxs-lookup"><span data-stu-id="2d4d9-109">Requirements</span></span>  
- <span data-ttu-id="2d4d9-110">**平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="2d4d9-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="4288b-109">要求</span><span class="sxs-lookup"><span data-stu-id="4288b-109">Requirements</span></span>  
+ <span data-ttu-id="4288b-110">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="4288b-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="2d4d9-111">**标头：** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="2d4d9-111">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="4288b-111">**标头：** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="4288b-111">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="2d4d9-112">**库：** 作为 MSCorEE.dll 中的资源</span><span class="sxs-lookup"><span data-stu-id="2d4d9-112">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="4288b-112">**库：** 包含为 MSCorEE.dll 中的资源</span><span class="sxs-lookup"><span data-stu-id="4288b-112">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="2d4d9-113">**.NET framework 版本：** 1.0、 1.1</span><span class="sxs-lookup"><span data-stu-id="2d4d9-113">**.NET Framework Version:** 1.0, 1.1</span></span>  
+ <span data-ttu-id="4288b-113">**.NET framework 版本：** 1.0, 1.1</span><span class="sxs-lookup"><span data-stu-id="4288b-113">**.NET Framework Version:** 1.0, 1.1</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="2d4d9-114">请参阅</span><span class="sxs-lookup"><span data-stu-id="2d4d9-114">See Also</span></span>  
- [<span data-ttu-id="2d4d9-115">ICorRuntimeHost 接口</span><span class="sxs-lookup"><span data-stu-id="2d4d9-115">ICorRuntimeHost Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md)
+## <a name="see-also"></a><span data-ttu-id="4288b-114">请参阅</span><span class="sxs-lookup"><span data-stu-id="4288b-114">See also</span></span>
+- [<span data-ttu-id="4288b-115">ICorRuntimeHost 接口</span><span class="sxs-lookup"><span data-stu-id="4288b-115">ICorRuntimeHost Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md)

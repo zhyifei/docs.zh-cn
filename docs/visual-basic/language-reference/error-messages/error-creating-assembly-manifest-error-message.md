@@ -7,28 +7,29 @@ f1_keywords:
 helpviewer_keywords:
 - BC30140
 ms.assetid: 1beb5aa0-7b79-4c85-946b-5c2d0a41d1d2
-ms.openlocfilehash: b3ea5b502abd318c34d957bf7f540602c53c9e6b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7efdfa09ad7bf58fc3ddc8f702377a4d41b2fed6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33588296"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54655382"
 ---
-# <a name="error-creating-assembly-manifest-lterror-messagegt"></a><span data-ttu-id="135f2-102">创建程序集清单时出错：&lt;错误消息&gt;</span><span class="sxs-lookup"><span data-stu-id="135f2-102">Error creating assembly manifest: &lt;error message&gt;</span></span>
-<span data-ttu-id="135f2-103">Visual Basic 编译器调用程序集链接器 (Al.exe，也称作 Alink) 生成包含清单的程序集。</span><span class="sxs-lookup"><span data-stu-id="135f2-103">The Visual Basic compiler calls the Assembly Linker (Al.exe, also known as Alink) to generate an assembly with a manifest.</span></span> <span data-ttu-id="135f2-104">该链接器已报告在创建程序集的预发出阶段中出错。</span><span class="sxs-lookup"><span data-stu-id="135f2-104">The linker has reported an error in the pre-emission stage of creating the assembly.</span></span>  
+# <a name="error-creating-assembly-manifest-lterror-messagegt"></a><span data-ttu-id="70eb1-102">创建程序集清单时出错：&lt;错误消息&gt;</span><span class="sxs-lookup"><span data-stu-id="70eb1-102">Error creating assembly manifest: &lt;error message&gt;</span></span>
+<span data-ttu-id="70eb1-103">Visual Basic 编译器调用程序集链接器 (Al.exe，也称作 Alink) 生成包含清单的程序集。</span><span class="sxs-lookup"><span data-stu-id="70eb1-103">The Visual Basic compiler calls the Assembly Linker (Al.exe, also known as Alink) to generate an assembly with a manifest.</span></span> <span data-ttu-id="70eb1-104">该链接器已报告在创建程序集的预发出阶段中出错。</span><span class="sxs-lookup"><span data-stu-id="70eb1-104">The linker has reported an error in the pre-emission stage of creating the assembly.</span></span>  
   
- <span data-ttu-id="135f2-105">如果指定的密钥文件或密钥容器有问题，就可能发生错误。</span><span class="sxs-lookup"><span data-stu-id="135f2-105">This can occur if there are problems with the key file or the key container specified.</span></span> <span data-ttu-id="135f2-106">若要对程序集进行完全签名，必须提供包含公钥和私钥信息的有效密钥文件。</span><span class="sxs-lookup"><span data-stu-id="135f2-106">To fully sign an assembly, you must provide a valid key file that contains information about the public and private keys.</span></span> <span data-ttu-id="135f2-107">若要延迟对程序集的签名，必须选择“仅延迟签名”复选框，并提供包含公钥信息的有效密钥文件。</span><span class="sxs-lookup"><span data-stu-id="135f2-107">To delay sign an assembly, you must select the **Delay sign only** check box and provide a valid key file that contains information about the public key information.</span></span> <span data-ttu-id="135f2-108">当程序集为延迟签名时，不需要使用私有密钥。</span><span class="sxs-lookup"><span data-stu-id="135f2-108">The private key is not necessary when an assembly is delay-signed.</span></span> <span data-ttu-id="135f2-109">有关详细信息，请参阅[如何：使用强名称为程序集签名](../../../framework/app-domains/how-to-sign-an-assembly-with-a-strong-name.md)。</span><span class="sxs-lookup"><span data-stu-id="135f2-109">For more information, see [How to: Sign an Assembly with a Strong Name](../../../framework/app-domains/how-to-sign-an-assembly-with-a-strong-name.md).</span></span>  
+ <span data-ttu-id="70eb1-105">如果指定的密钥文件或密钥容器有问题，就可能发生错误。</span><span class="sxs-lookup"><span data-stu-id="70eb1-105">This can occur if there are problems with the key file or the key container specified.</span></span> <span data-ttu-id="70eb1-106">若要对程序集进行完全签名，必须提供包含公钥和私钥信息的有效密钥文件。</span><span class="sxs-lookup"><span data-stu-id="70eb1-106">To fully sign an assembly, you must provide a valid key file that contains information about the public and private keys.</span></span> <span data-ttu-id="70eb1-107">若要延迟对程序集的签名，必须选择“仅延迟签名”复选框，并提供包含公钥信息的有效密钥文件。</span><span class="sxs-lookup"><span data-stu-id="70eb1-107">To delay sign an assembly, you must select the **Delay sign only** check box and provide a valid key file that contains information about the public key information.</span></span> <span data-ttu-id="70eb1-108">当程序集为延迟签名时，不需要使用私有密钥。</span><span class="sxs-lookup"><span data-stu-id="70eb1-108">The private key is not necessary when an assembly is delay-signed.</span></span> <span data-ttu-id="70eb1-109">有关详细信息，请参阅[如何：使用强名称为程序集签名](../../../framework/app-domains/how-to-sign-an-assembly-with-a-strong-name.md)。</span><span class="sxs-lookup"><span data-stu-id="70eb1-109">For more information, see [How to: Sign an Assembly with a Strong Name](../../../framework/app-domains/how-to-sign-an-assembly-with-a-strong-name.md).</span></span>  
   
- <span data-ttu-id="135f2-110">**错误 ID:** BC30140</span><span class="sxs-lookup"><span data-stu-id="135f2-110">**Error ID:** BC30140</span></span>  
+ <span data-ttu-id="70eb1-110">**错误 ID:** BC30140</span><span class="sxs-lookup"><span data-stu-id="70eb1-110">**Error ID:** BC30140</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="135f2-111">更正此错误</span><span class="sxs-lookup"><span data-stu-id="135f2-111">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="70eb1-111">更正此错误</span><span class="sxs-lookup"><span data-stu-id="70eb1-111">To correct this error</span></span>  
   
-1.  <span data-ttu-id="135f2-112">检查引用的错误信息并参考主题[Al.exe](../../../framework/tools/al-exe-assembly-linker.md)。</span><span class="sxs-lookup"><span data-stu-id="135f2-112">Examine the quoted error message and consult the topic [Al.exe](../../../framework/tools/al-exe-assembly-linker.md).</span></span> <span data-ttu-id="135f2-113">错误 AL1019 以获取更多的解释和建议</span><span class="sxs-lookup"><span data-stu-id="135f2-113">for error AL1019 further explanation and advice</span></span>  
+1.  <span data-ttu-id="70eb1-112">检查引用的错误信息并参考主题[Al.exe](../../../framework/tools/al-exe-assembly-linker.md)。</span><span class="sxs-lookup"><span data-stu-id="70eb1-112">Examine the quoted error message and consult the topic [Al.exe](../../../framework/tools/al-exe-assembly-linker.md).</span></span> <span data-ttu-id="70eb1-113">有关错误 AL1019 的进一步解释和建议</span><span class="sxs-lookup"><span data-stu-id="70eb1-113">for error AL1019 further explanation and advice</span></span>  
   
-2.  <span data-ttu-id="135f2-114">如果仍然出现错误，则收集有关该情况的信息并通知 Microsoft 产品支持服务。</span><span class="sxs-lookup"><span data-stu-id="135f2-114">If the error persists, gather information about the circumstances and notify Microsoft Product Support Services.</span></span>  
+2.  <span data-ttu-id="70eb1-114">如果仍然出现错误，则收集有关该情况的信息并通知 Microsoft 产品支持服务。</span><span class="sxs-lookup"><span data-stu-id="70eb1-114">If the error persists, gather information about the circumstances and notify Microsoft Product Support Services.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="135f2-115">请参阅</span><span class="sxs-lookup"><span data-stu-id="135f2-115">See Also</span></span>  
- [<span data-ttu-id="135f2-116">如何：使用强名称为程序集签名</span><span class="sxs-lookup"><span data-stu-id="135f2-116">How to: Sign an Assembly with a Strong Name</span></span>](../../../framework/app-domains/how-to-sign-an-assembly-with-a-strong-name.md)  
- [<span data-ttu-id="135f2-117">“项目设计器”->“签名”页</span><span class="sxs-lookup"><span data-stu-id="135f2-117">Signing Page, Project Designer</span></span>](/visualstudio/ide/reference/signing-page-project-designer)  
- <span data-ttu-id="135f2-118">[Al.exe](../../../framework/tools/al-exe-assembly-linker.md)。</span><span class="sxs-lookup"><span data-stu-id="135f2-118">[Al.exe](../../../framework/tools/al-exe-assembly-linker.md).</span></span>  
- [<span data-ttu-id="135f2-119">与我们交流</span><span class="sxs-lookup"><span data-stu-id="135f2-119">Talk to Us</span></span>](/visualstudio/ide/talk-to-us)
+## <a name="see-also"></a><span data-ttu-id="70eb1-115">请参阅</span><span class="sxs-lookup"><span data-stu-id="70eb1-115">See also</span></span>
+- [<span data-ttu-id="70eb1-116">如何：使用强名称为程序集签名</span><span class="sxs-lookup"><span data-stu-id="70eb1-116">How to: Sign an Assembly with a Strong Name</span></span>](../../../framework/app-domains/how-to-sign-an-assembly-with-a-strong-name.md)
+- <span data-ttu-id="70eb1-117">[签名页，项目设计器](/visualstudio/ide/reference/signing-page-project-designer)
+ [Al.exe](../../../framework/tools/al-exe-assembly-linker.md)。</span><span class="sxs-lookup"><span data-stu-id="70eb1-117">[Signing Page, Project Designer](/visualstudio/ide/reference/signing-page-project-designer)
+[Al.exe](../../../framework/tools/al-exe-assembly-linker.md).</span></span>  
+- [<span data-ttu-id="70eb1-118">与我们交流</span><span class="sxs-lookup"><span data-stu-id="70eb1-118">Talk to Us</span></span>](/visualstudio/ide/talk-to-us)
