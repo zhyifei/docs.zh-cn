@@ -14,27 +14,27 @@ helpviewer_keywords:
 - data types [Visual Basic], numeric
 - unsigned types [Visual Basic], using
 ms.assetid: c2c0e712-8dc2-43b9-b4c6-345fbb02e7ce
-ms.openlocfilehash: 092f1acf6e6a8468890a371836979db4e0692d1e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: dbe73ed5574261f1aab6134a15a5aeb5fbb8596c
+ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54669310"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55065851"
 ---
-# <a name="how-to-call-a-windows-function-that-takes-unsigned-types-visual-basic"></a><span data-ttu-id="d851e-102">如何：调用采用无符号的类型 (Visual Basic 中) 的 Windows 函数</span><span class="sxs-lookup"><span data-stu-id="d851e-102">How to: Call a Windows Function that Takes Unsigned Types (Visual Basic)</span></span>
-<span data-ttu-id="d851e-103">如果您正在使用类、 模块或结构，它具有无符号的整数类型的成员，可以访问这些成员与 Visual Basic。</span><span class="sxs-lookup"><span data-stu-id="d851e-103">If you are consuming a class, module, or structure that has members of unsigned integer types, you can access these members with Visual Basic.</span></span>  
+# <a name="how-to-call-a-windows-function-that-takes-unsigned-types-visual-basic"></a><span data-ttu-id="36692-102">如何：调用采用无符号的类型 (Visual Basic 中) 的 Windows 函数</span><span class="sxs-lookup"><span data-stu-id="36692-102">How to: Call a Windows Function that Takes Unsigned Types (Visual Basic)</span></span>
+<span data-ttu-id="36692-103">如果您正在使用类、 模块或结构，它具有无符号的整数类型的成员，可以访问这些成员与 Visual Basic。</span><span class="sxs-lookup"><span data-stu-id="36692-103">If you are consuming a class, module, or structure that has members of unsigned integer types, you can access these members with Visual Basic.</span></span>  
   
-### <a name="to-call-a-windows-function-that-takes-an-unsigned-type"></a><span data-ttu-id="d851e-104">若要调用采用无符号的类型的 Windows 函数</span><span class="sxs-lookup"><span data-stu-id="d851e-104">To call a Windows function that takes an unsigned type</span></span>  
+### <a name="to-call-a-windows-function-that-takes-an-unsigned-type"></a><span data-ttu-id="36692-104">若要调用采用无符号的类型的 Windows 函数</span><span class="sxs-lookup"><span data-stu-id="36692-104">To call a Windows function that takes an unsigned type</span></span>  
   
-1.  <span data-ttu-id="d851e-105">使用[Declare 语句](../../../visual-basic/language-reference/statements/declare-statement.md)来判断 Visual Basic 的库包含该函数的什么其名称是在该库中，其调用的序列是什么，以及如何将字符串转换调用它时。</span><span class="sxs-lookup"><span data-stu-id="d851e-105">Use a [Declare Statement](../../../visual-basic/language-reference/statements/declare-statement.md) to tell Visual Basic which library holds the function, what its name is in that library, what its calling sequence is, and how to convert strings when calling it.</span></span>  
+1.  <span data-ttu-id="36692-105">使用[Declare 语句](../../../visual-basic/language-reference/statements/declare-statement.md)来判断 Visual Basic 的库包含该函数的什么其名称是在该库中，其调用的序列是什么，以及如何将字符串转换调用它时。</span><span class="sxs-lookup"><span data-stu-id="36692-105">Use a [Declare Statement](../../../visual-basic/language-reference/statements/declare-statement.md) to tell Visual Basic which library holds the function, what its name is in that library, what its calling sequence is, and how to convert strings when calling it.</span></span>  
   
-2.  <span data-ttu-id="d851e-106">在中`Declare`语句，使用`UInteger`， `ULong`， `UShort`，或`Byte`根据需要为每个参数使用一个无符号类型。</span><span class="sxs-lookup"><span data-stu-id="d851e-106">In the `Declare` statement, use `UInteger`, `ULong`, `UShort`, or `Byte` as appropriate for each parameter with an unsigned type.</span></span>  
+2.  <span data-ttu-id="36692-106">在中`Declare`语句，使用`UInteger`， `ULong`， `UShort`，或`Byte`根据需要为每个参数使用一个无符号类型。</span><span class="sxs-lookup"><span data-stu-id="36692-106">In the `Declare` statement, use `UInteger`, `ULong`, `UShort`, or `Byte` as appropriate for each parameter with an unsigned type.</span></span>  
   
-3.  <span data-ttu-id="d851e-107">要调用若要查找的名称和值的常量，它使用的 Windows 函数，请参阅文档。</span><span class="sxs-lookup"><span data-stu-id="d851e-107">Consult the documentation for the Windows function you are calling to find the names and values of the constants it uses.</span></span> <span data-ttu-id="d851e-108">其中许多 WinUser.h 文件中定义。</span><span class="sxs-lookup"><span data-stu-id="d851e-108">Many of these are defined in the WinUser.h file.</span></span>  
+3.  <span data-ttu-id="36692-107">要调用若要查找的名称和值的常量，它使用的 Windows 函数，请参阅文档。</span><span class="sxs-lookup"><span data-stu-id="36692-107">Consult the documentation for the Windows function you are calling to find the names and values of the constants it uses.</span></span> <span data-ttu-id="36692-108">其中许多 WinUser.h 文件中定义。</span><span class="sxs-lookup"><span data-stu-id="36692-108">Many of these are defined in the WinUser.h file.</span></span>  
   
-4.  <span data-ttu-id="d851e-109">声明在代码中的必要常量。</span><span class="sxs-lookup"><span data-stu-id="d851e-109">Declare the necessary constants in your code.</span></span> <span data-ttu-id="d851e-110">许多 Windows 常量是 32 位无符号的值，并应声明这些`As``UInteger`。</span><span class="sxs-lookup"><span data-stu-id="d851e-110">Many Windows constants are 32-bit unsigned values, and you should declare these `As``UInteger`.</span></span>  
+4.  <span data-ttu-id="36692-109">声明在代码中的必要常量。</span><span class="sxs-lookup"><span data-stu-id="36692-109">Declare the necessary constants in your code.</span></span> <span data-ttu-id="36692-110">许多 Windows 常量是 32 位无符号的值，并应声明这些`As UInteger`。</span><span class="sxs-lookup"><span data-stu-id="36692-110">Many Windows constants are 32-bit unsigned values, and you should declare these `As UInteger`.</span></span>  
   
-5.  <span data-ttu-id="d851e-111">以正常方式调用函数。</span><span class="sxs-lookup"><span data-stu-id="d851e-111">Call the function in the normal way.</span></span> <span data-ttu-id="d851e-112">下面的示例调用 Windows 函数`MessageBox`，其将无符号的整数自变量。</span><span class="sxs-lookup"><span data-stu-id="d851e-112">The following example calls the Windows function `MessageBox`, which takes an unsigned integer argument.</span></span>  
+5.  <span data-ttu-id="36692-111">以正常方式调用函数。</span><span class="sxs-lookup"><span data-stu-id="36692-111">Call the function in the normal way.</span></span> <span data-ttu-id="36692-112">下面的示例调用 Windows 函数`MessageBox`，其将无符号的整数自变量。</span><span class="sxs-lookup"><span data-stu-id="36692-112">The following example calls the Windows function `MessageBox`, which takes an unsigned integer argument.</span></span>  
   
     ```  
     Public Class windowsMessage  
@@ -59,7 +59,7 @@ ms.locfileid: "54669310"
     End Class  
     ```  
   
-     <span data-ttu-id="d851e-113">你可以测试该函数`messageThroughWindows`用下面的代码。</span><span class="sxs-lookup"><span data-stu-id="d851e-113">You can test the function `messageThroughWindows` with the following code.</span></span>  
+     <span data-ttu-id="36692-113">你可以测试该函数`messageThroughWindows`用下面的代码。</span><span class="sxs-lookup"><span data-stu-id="36692-113">You can test the function `messageThroughWindows` with the following code.</span></span>  
   
     ```  
     Public Sub consumeWindowsMessage()  
@@ -69,17 +69,17 @@ ms.locfileid: "54669310"
     ```  
   
     > [!CAUTION]
-    >  <span data-ttu-id="d851e-114">`UInteger`， `ULong`， `UShort`，和`SByte`数据类型不属于[语言独立性和与语言无关的组件](../../../standard/language-independence-and-language-independent-components.md)(CLS)，因此符合 cls 的代码不能使用的组件，使用它们。</span><span class="sxs-lookup"><span data-stu-id="d851e-114">The `UInteger`, `ULong`, `UShort`, and `SByte` data types are not part of the [Language Independence and Language-Independent Components](../../../standard/language-independence-and-language-independent-components.md) (CLS), so CLS-compliant code cannot consume a component that uses them.</span></span>  
+    >  <span data-ttu-id="36692-114">`UInteger`， `ULong`， `UShort`，和`SByte`数据类型不属于[语言独立性和与语言无关的组件](../../../standard/language-independence-and-language-independent-components.md)(CLS)，因此符合 cls 的代码不能使用的组件，使用它们。</span><span class="sxs-lookup"><span data-stu-id="36692-114">The `UInteger`, `ULong`, `UShort`, and `SByte` data types are not part of the [Language Independence and Language-Independent Components](../../../standard/language-independence-and-language-independent-components.md) (CLS), so CLS-compliant code cannot consume a component that uses them.</span></span>  
   
     > [!IMPORTANT]
-    >  <span data-ttu-id="d851e-115">Windows 应用程序编程接口 (API)，如在非托管代码调用公开您的代码与潜在的安全风险。</span><span class="sxs-lookup"><span data-stu-id="d851e-115">Making a call to unmanaged code, such as the Windows application programming interface (API), exposes your code to potential security risks.</span></span>  
+    >  <span data-ttu-id="36692-115">Windows 应用程序编程接口 (API)，如在非托管代码调用公开您的代码与潜在的安全风险。</span><span class="sxs-lookup"><span data-stu-id="36692-115">Making a call to unmanaged code, such as the Windows application programming interface (API), exposes your code to potential security risks.</span></span>  
   
     > [!IMPORTANT]
-    >  <span data-ttu-id="d851e-116">调用 Windows API 要求非托管的代码的权限，这可能会影响在部分信任情况下执行。</span><span class="sxs-lookup"><span data-stu-id="d851e-116">Calling the Windows API requires unmanaged code permission, which might affect its execution in partial-trust situations.</span></span> <span data-ttu-id="d851e-117">有关详细信息，请参阅<xref:System.Security.Permissions.SecurityPermission>并[代码访问权限](https://msdn.microsoft.com/library/e5ae402f-6dda-4732-bbe8-77296630f675)。</span><span class="sxs-lookup"><span data-stu-id="d851e-117">For more information, see <xref:System.Security.Permissions.SecurityPermission> and [Code Access Permissions](https://msdn.microsoft.com/library/e5ae402f-6dda-4732-bbe8-77296630f675).</span></span>  
+    >  <span data-ttu-id="36692-116">调用 Windows API 要求非托管的代码的权限，这可能会影响在部分信任情况下执行。</span><span class="sxs-lookup"><span data-stu-id="36692-116">Calling the Windows API requires unmanaged code permission, which might affect its execution in partial-trust situations.</span></span> <span data-ttu-id="36692-117">有关详细信息，请参阅<xref:System.Security.Permissions.SecurityPermission>并[代码访问权限](https://msdn.microsoft.com/library/e5ae402f-6dda-4732-bbe8-77296630f675)。</span><span class="sxs-lookup"><span data-stu-id="36692-117">For more information, see <xref:System.Security.Permissions.SecurityPermission> and [Code Access Permissions](https://msdn.microsoft.com/library/e5ae402f-6dda-4732-bbe8-77296630f675).</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="d851e-118">请参阅</span><span class="sxs-lookup"><span data-stu-id="d851e-118">See also</span></span>
-- [<span data-ttu-id="d851e-119">数据类型</span><span class="sxs-lookup"><span data-stu-id="d851e-119">Data Types</span></span>](../../../visual-basic/language-reference/data-types/index.md)
-- [<span data-ttu-id="d851e-120">Integer 数据类型</span><span class="sxs-lookup"><span data-stu-id="d851e-120">Integer Data Type</span></span>](../../../visual-basic/language-reference/data-types/integer-data-type.md)
-- [<span data-ttu-id="d851e-121">UInteger 数据类型</span><span class="sxs-lookup"><span data-stu-id="d851e-121">UInteger Data Type</span></span>](../../../visual-basic/language-reference/data-types/uinteger-data-type.md)
-- [<span data-ttu-id="d851e-122">Declare 语句</span><span class="sxs-lookup"><span data-stu-id="d851e-122">Declare Statement</span></span>](../../../visual-basic/language-reference/statements/declare-statement.md)
-- [<span data-ttu-id="d851e-123">演练：调用 Windows API</span><span class="sxs-lookup"><span data-stu-id="d851e-123">Walkthrough: Calling Windows APIs</span></span>](../../../visual-basic/programming-guide/com-interop/walkthrough-calling-windows-apis.md)
+## <a name="see-also"></a><span data-ttu-id="36692-118">请参阅</span><span class="sxs-lookup"><span data-stu-id="36692-118">See also</span></span>
+- [<span data-ttu-id="36692-119">数据类型</span><span class="sxs-lookup"><span data-stu-id="36692-119">Data Types</span></span>](../../../visual-basic/language-reference/data-types/index.md)
+- [<span data-ttu-id="36692-120">Integer 数据类型</span><span class="sxs-lookup"><span data-stu-id="36692-120">Integer Data Type</span></span>](../../../visual-basic/language-reference/data-types/integer-data-type.md)
+- [<span data-ttu-id="36692-121">UInteger 数据类型</span><span class="sxs-lookup"><span data-stu-id="36692-121">UInteger Data Type</span></span>](../../../visual-basic/language-reference/data-types/uinteger-data-type.md)
+- [<span data-ttu-id="36692-122">Declare 语句</span><span class="sxs-lookup"><span data-stu-id="36692-122">Declare Statement</span></span>](../../../visual-basic/language-reference/statements/declare-statement.md)
+- [<span data-ttu-id="36692-123">演练：调用 Windows API</span><span class="sxs-lookup"><span data-stu-id="36692-123">Walkthrough: Calling Windows APIs</span></span>](../../../visual-basic/programming-guide/com-interop/walkthrough-calling-windows-apis.md)
