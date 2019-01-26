@@ -27,6 +27,6 @@ ML.NET是一个免费的，开源的，跨平台的机器学习框架，使您�
 
 * 视频 3: [提出一个可以用数据回答的问题](https://docs.microsoft.com/azure/machine-learning/studio/data-science-for-beginners-ask-a-question-you-can-answer-with-data) *(4 分 17 秒)*
 
-* 视频 4: [用简单的模型预测答案](https://docs.microsoft.com/azure/machine-learning/studio/data-science-for-beginners-predict-an-answer-with-a-simple-model) *(7 分 42 sec)*
+* 视频 4: [用简单的模型预测答案](https://docs.microsoft.com/azure/machine-learning/studio/data-science-for-beginners-predict-an-answer-with-a-simple-model) *(7 分 42 秒)*
 
 * 视频 5: [复制其他人的工作来做数据科学](https://docs.microsoft.com/azure/machine-learning/studio/data-science-for-beginners-copy-other-peoples-work-to-do-data-science) *(3 分 18 秒)*
