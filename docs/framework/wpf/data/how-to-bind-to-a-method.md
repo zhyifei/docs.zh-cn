@@ -17,19 +17,19 @@ ms.locfileid: "54732071"
 下面的示例演示如何将绑定到方法使用<xref:System.Windows.Data.ObjectDataProvider>。  
   
 ## <a name="example"></a>示例  
- 在本示例中，`TemperatureScale` 是一个具有方法 `ConvertTemp` 的类，该方法接收两个参数（分别为 `double` 和 `enum` 类型的 `TempType)`），并将给定值从一个温标转换为另一个温标。 在以下示例中，<xref:System.Windows.Data.ObjectDataProvider>用来实例化`TemperatureScale`对象。 将使用两个指定参数调用 `ConvertTemp` 方法。  
+ 在本示例中，`TemperatureScale` 是一个具有 `ConvertTemp` 方法的类，该方法接收两个参数（分别为 `double` 和 枚举类型 `TempType)`），将给定值从一个温标转换为另一个温标。 在以下示例中，<xref:System.Windows.Data.ObjectDataProvider> 用来实例化 `TemperatureScale` 对象。 将使用两个指定参数调用 `ConvertTemp` 方法。  
   
  [!code-xaml[BindToMethod#WindowResources](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BindToMethod/CS/Window1.xaml#windowresources)]  
   
- 现在方法可以作为资源使用，因此可绑定到其结果。 在以下示例中，<xref:System.Windows.Controls.TextBox.Text%2A>的属性<xref:System.Windows.Controls.TextBox>并<xref:System.Windows.Controls.Primitives.Selector.SelectedValue%2A>的<xref:System.Windows.Controls.ComboBox>绑定到该方法的两个参数。 这允许用户指定要转换的温度以及要转换自的温标。 请注意，<xref:System.Windows.Data.Binding.BindsDirectlyToSource%2A>设置为`true`因为我们要绑定到<xref:System.Windows.Data.ObjectDataProvider.MethodParameters%2A>的属性<xref:System.Windows.Data.ObjectDataProvider>实例，并不是由包装的对象的属性<xref:System.Windows.Data.ObjectDataProvider>(`TemperatureScale`对象)。  
+ 现在方法可以作为资源使用，因此可绑定到其结果。 在以下示例中，<xref:System.Windows.Controls.TextBox> 的 <xref:System.Windows.Controls.TextBox.Text%2A> 属性和 <xref:System.Windows.Controls.ComboBox> 的 <xref:System.Windows.Controls.Primitives.Selector.SelectedValue%2A> 绑定到该方法的两个参数。 这将允许用户指定要转换的温度以及要转换自哪个温标。 注意，<xref:System.Windows.Data.Binding.BindsDirectlyToSource%2A> 设置为 `true` 是因为我们要绑定到 <xref:System.Windows.Data.ObjectDataProvider> 实例的 <xref:System.Windows.Data.ObjectDataProvider.MethodParameters%2A> 属性，而不是由 <xref:System.Windows.Data.ObjectDataProvider> 包装的对象的属性（`TemperatureScale`对象）。  
   
- <xref:System.Windows.Controls.ContentControl.Content%2A>的最后<xref:System.Windows.Controls.Label>更新时，用户修改的内容<xref:System.Windows.Controls.TextBox>或选择的<xref:System.Windows.Controls.ComboBox>。  
+ 最后的 <xref:System.Windows.Controls.Label> 的 <xref:System.Windows.Controls.ContentControl.Content%2A> 会在用户修改 <xref:System.Windows.Controls.TextBox> 的内容或 <xref:System.Windows.Controls.ComboBox> 的选项时更新，。  
   
  [!code-xaml[BindToMethod#UI](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BindToMethod/CS/Window1.xaml#ui)]  
   
- 转换器`DoubleToString`采用一个双精度值并将其转换的字符串<xref:System.Windows.Data.IValueConverter.Convert%2A>方向 (从绑定源到绑定目标，即<xref:System.Windows.Controls.TextBox.Text%2A>属性)，并将转换`string`到`double`中<xref:System.Windows.Data.IValueConverter.ConvertBack%2A>方向。  
+`DoubleToString` 转换器在 <xref:System.Windows.Data.IValueConverter.Convert%2A> 方向接受一个双精度值并将其转换为字符串（从绑定源到绑定目标，即 <xref:System.Windows.Controls.TextBox.Text%2A> 属性），在<xref:System.Windows.Data.IValueConverter.ConvertBack%2A> 方向将 `string` 转换为 `double`。  
   
- `InvalidationCharacterRule`是<xref:System.Windows.Controls.ValidationRule>，用于检查无效字符。 默认错误模板，这是一个红色边框围绕<xref:System.Windows.Controls.TextBox>，向用户发出通知时输入的值不是一个双精度值。  
+ `InvalidationCharacterRule` 是一个 <xref:System.Windows.Controls.ValidationRule>，用于检查无效字符。 当输入的值不是一个 `double` 值时，默认错误模板（一个围绕 <xref:System.Windows.Controls.TextBox> 的红色边框）将出现，来通知用户。  
   
 ## <a name="see-also"></a>请参阅
 - [帮助主题](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)
