@@ -13,20 +13,20 @@ ms.lasthandoff: 01/23/2019
 ms.locfileid: "54583063"
 ---
 # <a name="how-to-bind-to-the-results-of-a-linq-query"></a>如何：绑定到 LINQ 查询的结果
-此示例演示如何运行 LINQ 查询，然后将绑定到结果。  
+此示例演示如何运行 LINQ 查询，然后绑定到结果。  
   
 ## <a name="example"></a>示例  
  以下示例创建两个列表框。 第一个列表框包含三个列表项。  
   
  [!code-xaml[LinqExample#UI](../../../../samples/snippets/csharp/VS_Snippets_Wpf/LinqExample/CSharp/Window1.xaml#ui)]  
   
- 从第一个列表框中选择一项调用以下事件处理程序。 在此示例中，`Tasks`是一系列`Task`对象。 `Task`类有一个名为`Priority`。 此事件处理程序会运行 LINQ 查询返回的集合`Task`对象的具有所选的优先级的值，并将其然后设置为<xref:System.Windows.FrameworkElement.DataContext%2A>:  
+ 从第一个列表框中选择一项，调用以下事件处理程序。 在此示例中，`Tasks` 是一系列 `Task` 对象。 `Task` 类有一个名为 `Priority` 的属性。 此事件处理程序会运行 LINQ 查询，返回具有所选优先级值的`Task`对象集合，并将其然后设置为 <xref:System.Windows.FrameworkElement.DataContext%2A>:  
   
  [!code-csharp[LinqExample#Using](../../../../samples/snippets/csharp/VS_Snippets_Wpf/LinqExample/CSharp/Window1.xaml.cs#using)]  
 [!code-csharp[LinqExample#Tasks](../../../../samples/snippets/csharp/VS_Snippets_Wpf/LinqExample/CSharp/Window1.xaml.cs#tasks)]  
 [!code-csharp[LinqExample#Handler](../../../../samples/snippets/csharp/VS_Snippets_Wpf/LinqExample/CSharp/Window1.xaml.cs#handler)]  
   
- 第二个列表框将绑定到该集合，因为其<xref:System.Windows.Controls.ItemsControl.ItemsSource%2A>值设置为`{Binding}`。 因此，它将显示返回的集合 (基于`myTaskTemplate` <xref:System.Windows.DataTemplate>)。  
+ 第二个列表框将绑定到该集合，因为其 <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A> 值设置为 `{Binding}`。 因此，它将显示返回的集合 (基于 `myTaskTemplate` <xref:System.Windows.DataTemplate>)。  
   
 ## <a name="see-also"></a>请参阅
 - [让数据可供 XAML 中的绑定使用](../../../../docs/framework/wpf/data/how-to-make-data-available-for-binding-in-xaml.md)
